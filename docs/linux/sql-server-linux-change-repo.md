@@ -3,17 +3,17 @@ title: 為 SQL Server 2017 和 2019 設定 Linux 存放庫
 description: 檢查並設定 Linux 上 SQL Server 2019 和 SQL Server 2017 的來源存放庫。 來源存放庫會影響安裝和升級期間所套用的 SQL Server 版本。
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: b71078e0d1d6af9bd35f248e8bbc324ac5c0e570
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: c1def0c2cfbdc4b3feed191e9eb2673b8e788f82
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531334"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776377"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>設定用於安裝和升級 Linux 上 SQL Server 的存放庫
 
@@ -38,7 +38,7 @@ ms.locfileid: "73531334"
 
 當您在 Linux 上安裝 SQL Server 時，您必須設定 Microsoft 存放庫。 此存放庫可用來取得資料庫引擎套件、**mssql-server** 及相關的 SQL Server 套件。 目前有五個主要存放庫：
 
-| Repository | [屬性] | Description |
+| Repository | 名稱 | 描述 |
 |---|---|---|
 | **2019** | **mssql-server-2019** | SQL Server 2019 累積更新 (CU) 存放庫。 |
 | **2019 GDR** | **mssql-server-2019-gdr** | 僅限重大更新的 SQL Server 2019 GDR 存放庫。 |
@@ -173,10 +173,15 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ::: zone pivot="ld2-rhel"
 設定要用於 SQL Server 安裝和升級的新存放庫。 使用下列其中一個命令，設定您所選擇的存放庫。
 
-| Repository | 版本 | 命令 |
+> [!NOTE]
+> 下列 SQL Server 2019 命令會指向 RHEL 8 存放庫。 SQL Server 需要使用 python2，但 RHEL 8 未預先安裝。 如需詳細資訊，請參閱下列說明如何安裝 python2 並將其設為預設解譯器的部落格： https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta 。
+>
+> 如果您使用的是 RHEL 7，請將下列路徑變更為 `/rhel/7`，而非 `/rhel/8`。
+
+| Repository | 版本 | Command |
 |---|---|---|
-| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo` |
-| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019-gdr.repo` |
+| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo` |
+| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019-gdr.repo` |
 | **2017 CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **2017 GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
@@ -186,7 +191,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ::: zone pivot="ld2-sles"
 設定要用於 SQL Server 安裝和升級的新存放庫。 使用下列其中一個命令，設定您所選擇的存放庫。
 
-| Repository | 版本 | 命令 |
+| Repository | 版本 | Command |
 |---|---|---|
 | **2019 CU** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo` |
 | **2019 GDR** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019-gdr.repo` |
@@ -207,7 +212,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 2. 使用下列其中一個命令，設定您所選擇的存放庫。
 
-   | Repository | 版本 | 命令 |
+   | Repository | 版本 | Command |
    |---|---|---|
    | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"` |
    | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019-gdr.list)"` |

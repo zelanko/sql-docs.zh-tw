@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ea6d737dcb45a1b300b53c0b232b2b6565e6e750
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d27c61576c3af432acfa6c791d25b1bbe9a51de
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012522"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776417"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>設定 max worker threads 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "68012522"
     |CPU 數|32 位元電腦|64 位元電腦|  
     |------------|------------|------------| 
     |\<= 4 個處理器|256|512|
-    |\> 4 個處理器和 \< 64 個處理器|256 + ((邏輯 CPU 數 - 4) * 8)|512 + ((邏輯 CPU 數目 - 4) * 16)|
+    |\> 4 個處理器和 \<= 64 個處理器|256 + ((邏輯 CPU 數 - 4) * 8)|512 + ((邏輯 CPU 數目 - 4) * 16)|
     |\>64 個處理器|256 + ((邏輯 CPU 數目 - 4) * 32)|512 + ((邏輯 CPU 數目 - 4) * 32)|
   
     > [!NOTE]  
@@ -100,7 +100,7 @@ ms.locfileid: "68012522"
  WHERE s.is_user_process = 0;  
  ```  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 `RECONFIGURE` 陳述式時，使用者必須取得 `ALTER SETTINGS` 伺服器層級權限。 **sysadmin** 和 **serveradmin** 固定伺服器角色隱含地持有 `ALTER SETTINGS` 權限。  

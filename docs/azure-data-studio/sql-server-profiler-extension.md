@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 26a448dc27ae2512256ffb1a2929dd8cacc3e31c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4fcb16d2ec3c267dc2927f22a029709a434416c9
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959111"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776509"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>SQL Server Profiler 延伸模組 (預覽)
 
-SQL Server Profiler 延伸模組 (預覽) 提供簡單 SQL Server 追蹤解決方案，類似 SQL Server Management Studio (SSMS) Profiler 但是使用 XEvent 所建置。 SQL Server Profiler 非常容易使用，並具有適合大多數常見追蹤設定的良好預設值。 其 UX 已針對瀏覽事件和檢視關聯的 Transact-SQL (T-SQL) 文字進行最佳化。 適用於 Azure Data Studio 的 SQL Server Profiler 也假設有良好的預設值，可透過便於使用的 UX 收集 T-SQL 執行活動。 此延伸模組目前為預覽狀態。
+SQL Server Profiler 延伸模組 (預覽) 提供簡單的 SQL Server 追蹤解決方案，其類似 SQL Server Management Studio (SSMS) Profiler 但是使用擴充事件所建置。 SQL Server Profiler 非常容易使用，並具有適合大多數常見追蹤設定的良好預設值。 其 UX 已針對瀏覽事件和檢視關聯的 Transact-SQL (T-SQL) 文字進行最佳化。 適用於 Azure Data Studio 的 SQL Server Profiler 也假設有良好的預設值，可透過便於使用的 UX 收集 T-SQL 執行活動。 此延伸模組目前為預覽狀態。
 
 **常見的 SQL Profiler 使用案例：**
 

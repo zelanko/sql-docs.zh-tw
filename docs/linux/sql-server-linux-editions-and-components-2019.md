@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 的版本及支援功能 - Linux
-ms.date: 10/23/2019
+ms.date: 01/08/2020
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 18ec5ca6700008bb2b1ebe3709db0c49123f4fec
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72954990"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776552"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Linux 上 SQL Server 2019 的版本及支援功能
 
@@ -68,7 +68,7 @@ ms.locfileid: "72954990"
 
 Linux 上的 SQL Server 2019 支援 SQL Server 資料庫引擎。 下表描述資料庫引擎的功能。   
   
-|伺服器元件|Description|  
+|伺服器元件|描述|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 包含 [!INCLUDE[ssDE](../includes/ssde-md.md)] (用來儲存、處理及保護資料安全的核心服務)、複寫、全文檢索搜尋功能、用來管理關聯式和 XML 資料的工具，以及資料庫內分析整合。|  
 
@@ -148,7 +148,7 @@ Developer Edition 只持續支援一個 [SQL Server Distributed Replay](../tools
 |功能|Enterprise|標準|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
 |資料列層級安全性|是|是|是|是|  
-|永遠加密|是|是|是|是| 
+|Always Encrypted|是|是|是|是| 
 |動態資料遮罩|是|是|是|是|   
 |基本稽核|是|是|是|是| 
 |細部稽核|是|是|是|是| 
@@ -192,7 +192,7 @@ Developer Edition 只持續支援一個 [SQL Server Distributed Replay](../tools
 |查詢中的語言規格|是|是|是|是|
 |Service Broker (訊息)|是|是|否 (僅限用戶端)|否 (僅限用戶端)|
 |Transact-SQL 端點|是|是|是|否|
-|圖表|是|是|是|是|  
+|圖形|是|是|是|是|  
 
 
 <sup>1</sup> 使用多個運算節點向外延展時需要標題節點。
@@ -226,7 +226,7 @@ Linux 上的 SQL Server 2019 不支援下列功能和服務。 這些功能的�
 | &nbsp; | 緩衝集區擴充 |
 | **SQL Server Agent** |  子系統：CmdExec、PowerShell、佇列讀取器、SSIS、SSAS、SSRS |
 | &nbsp; | 警示 |
-| &nbsp; | 受管理備份 |
+| &nbsp; | 受控備份 |
 | **高可用性** | 資料庫鏡像  |
 | **安全性** | 可延伸金鑰管理 |
 | &nbsp; | 適用於連結伺服器的 AD 驗證 | 

@@ -23,17 +23,17 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f0f45200e32fe61f9a8a19fd2cd3a6ff17fa9cd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 00f139a5fa608f40f7979f74b187efcb68bcf2ff
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903026"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776393"
 ---
 # <a name="create-a-login"></a>建立登入
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 中建立登入。 登入是連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的人員或程序的識別。  
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立登入。 登入是連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的人員或程序的識別。  
   
 ##  <a name="Background"></a> 背景  
  登入是安全性主體或可由安全系統驗證的實體。 使用者需要登入才能連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 您可以建立以 Windows 主體為基礎的登入 (例如網域使用者或 Windows 網域群組)，也可以建立不是以 Windows 主體為基礎的登入 (例如 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入)。  
@@ -75,7 +75,7 @@ ms.locfileid: "72903026"
   
 5.  若要建立儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫上的登入，請選取 **[SQL Server 驗證]** 。  
   
-    1.  在 **[密碼]** 方塊中，輸入新使用者的密碼。 在 **[確認密碼]** 方塊中重新輸入該密碼。  
+    1.  在 [密碼]  方塊中，輸入新使用者的密碼。 在 [確認密碼]  方塊中再次輸入密碼。  
   
     2.  變更現有密碼時，選取 **[指定舊密碼]** ，然後在 **[舊密碼]** 方塊中輸入舊密碼。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "72903026"
  [登入 - 新增]  對話方塊也在其他四個頁面上提供選項：[伺服器角色]  、[使用者對應]  、[安全性實體]  和 [狀態]  。  
   
 ### <a name="server-roles"></a>[伺服器角色]  
- **[伺服器角色]** 頁面列出所有可指派給新登入的可能角色。 下列是可以使用的選項：  
+ **[伺服器角色]** 頁面列出所有可指派給新登入的可能角色。 有下列選項可供使用：  
   
  [bulkadmin]  核取方塊  
  **bulkadmin** 固定伺服器角色的成員可以執行 BULK INSERT 陳述式。  
@@ -113,7 +113,7 @@ ms.locfileid: "72903026"
  **diskadmin** 固定伺服器角色的成員可以管理磁碟檔案。  
   
  [processadmin]  核取方塊  
- **processadmin** 固定伺服器角色的成員可以結束在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 執行個體中執行的處理序。  
+ **processadmin** 固定伺服器角色的成員可以結束在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]執行個體中執行的處理序。  
   
  [public]  核取方塊  
  所有 SQL Server 使用者、群組和角色預設都屬於 **public** 固定伺服器角色。  
@@ -128,18 +128,18 @@ ms.locfileid: "72903026"
  **setupadmin** 固定伺服器角色的成員可以加入和移除連結的伺服器，也可以執行一些系統預存程序。  
   
  [系統管理員]  核取方塊  
- **系統管理員**固定伺服器角色的成員可以執行 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中的所有活動。  
+ **系統管理員** 固定伺服器角色的成員可以執行 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]中的所有活動。  
   
 ### <a name="user-mapping"></a>[使用者對應]  
  **[使用者對應]** 頁面列出所有可能的資料庫和這些資料庫上可套用至此登入的資料庫角色成員資格。 所選的資料庫決定可供登入使用的角色成員資格。 此頁面提供下列選項：  
   
  **已對應到此登入的使用者**  
- 選取此登入可以存取的資料庫。 選取資料庫時，[資料庫角色成員資格對象: _資料庫名稱_]  窗格會顯示有效的資料庫角色。  
+ 選取此登入可以存取的資料庫。 選取資料庫時，[資料庫角色成員資格對象: <資料庫名稱>  ]  窗格會顯示有效的資料庫角色。  
   
- **對應**  
+ **地圖**  
  允許登入存取下列資料庫。  
   
- **[資料庫備份]**  
+ **Database**  
  列出伺服器上可用的資料庫。  
   
  **使用者**  
@@ -148,10 +148,10 @@ ms.locfileid: "72903026"
  **預設結構描述**  
  指定使用者的預設結構描述。 使用者最初建立時，預設結構描述為 **dbo**。 可以指定不存在的預設結構描述。 您無法為使用者指定對應至 Windows 群組、憑證或非對稱金鑰的預設結構描述。  
   
- **已啟用 _資料庫名稱_的 Guest 帳戶**  
+ **已啟用 <資料庫名稱>  的來賓帳戶**  
  唯讀屬性，表示選取的資料庫上是否啟用 Guest 帳戶。 使用 Guest 帳戶之 **[登入屬性]** 對話方塊的 **[狀態]** 頁面，啟用或停用 Guest 帳戶。  
   
- **資料庫角色成員資格對象: _資料庫名稱_**  
+ **資料庫角色成員資格對象: <資料庫名稱>**   
  在指定的資料庫中選取使用者的角色。 在每一個資料庫中，所有使用者都是 **public** 角色的成員，且無法移除。 如需資料庫角色的詳細資訊，請參閱 [資料庫層級角色](../../../relational-databases/security/authentication-access/database-level-roles.md)。  
   
 ### <a name="securables"></a>安全性實體  
@@ -191,7 +191,7 @@ ms.locfileid: "72903026"
  **明確索引標籤**  
  列出上方格中選取之安全性實體的可能權限。 並非所有選項都適用於所有明確權限。  
   
- **Permissions**  
+ **權限**  
  權限的名稱。  
   
  **授與者**  
@@ -206,7 +206,7 @@ ms.locfileid: "72903026"
  **拒絕**  
  選取此選項即可拒絕授與此權限給登入。 清除此選項即可撤銷這個權限。  
   
-### <a name="status"></a>[狀態]  
+### <a name="status"></a>狀態  
  **[狀態]** 頁面列出可在所選取之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入上設定的一些驗證和授權選項。  
   
  此頁面提供下列選項：  
@@ -223,7 +223,7 @@ ms.locfileid: "72903026"
   
  選取此選項可啟用或停用此登入。 此選項會搭配 ENABLE 或 DISABLE 選項來使用 ALTER LOGIN 陳述式。  
   
- **SQL Server Authentication**  
+ **SQL Server 驗證**  
  只有在選取的登入使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證進行連接，而且登入已經鎖定時，[登入已經鎖定]  核取方塊才可使用。此設定是唯讀的。 若要解除鎖定已經鎖定的登入，請搭配 UNLOCK 選項執行 ALTER LOGIN。  
   
 ##  <a name="TsqlProcedure"></a> 透過 T-SQL 建立使用 Windows 驗證的登入  
@@ -243,7 +243,7 @@ ms.locfileid: "72903026"
   
     ```  
   
-## <a name="create-a-login-using-sql-server-authentication-with-ssms"></a>透過 SSMS 建立使用 SQL Server 驗證的登入  
+## <a name="create-a-login-using-sql-server-authentication-using-t-sql"></a>透過 T-SQL 建立使用 SQL Server 驗證的登入
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
