@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 06f3568ac1bf3305628583934549d4334c4eedc4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 8d2e2cc75046d9da6ce3e4c8188136f6b6f03945
+ms.sourcegitcommit: 650a25eb54eeb9ddfe3c8f12b5f8804cc07bf5e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710478"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623243"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 向外延展群組
 
@@ -28,7 +28,7 @@ ms.locfileid: "71710478"
   
 請參閱 [開始使用 PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) 和 [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)。
   
-![PolyBase 向外延展群組](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase 向外延展群組")  
+![PolyBase 向外延展群組](../../relational-databases/polybase/media/polybase-scale-out-groups.png "|::ref1::|")  
   
 ## <a name="head-node"></a>前端節點  
 
@@ -47,7 +47,7 @@ ms.locfileid: "71710478"
 > [!NOTE]
 >  這與透過 Hadoop 進行的向外延展讀取不同。 
 
-![PolyBase 向外延展群組](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase 向外延展群組")
+![PolyBase 向外延展群組](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "|::ref2::|")
   
 ## <a name="distributed-query-processing"></a>分散式查詢處理  
 
@@ -66,3 +66,10 @@ PolyBase Data Movement Service 會接收來自 PolyBase Engine 的指示，並�
 若要設定 PolyBase 向外延展群組，請參閱下列指南：
 
 [Improve PolyBase scale-out groups on Windows](configure-scale-out-groups-windows.md) (在 Windows 上改進 PolyBase 向外延展群組)
+
+## <a name="see-also"></a>另請參閱
+
+ [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
+ [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
+
