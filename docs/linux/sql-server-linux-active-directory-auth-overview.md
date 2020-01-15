@@ -11,18 +11,18 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 9f2e5632b073f96faf530db56d052d71f4a143f4
-ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
+ms.openlocfilehash: 32ff23fe1ea7f0a892a19cc6be0eef8439ee907f
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "75329960"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831820"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>適用於 Linux 上 SQL Server 的 Active Directory 驗證
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文提供適用於 Linux 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Active Directory (AD) 驗證概觀。 AD 驗證在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 又稱為整合式驗證。 
+本文提供適用於 Linux 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Active Directory (AD) 驗證概觀。 AD 驗證在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 又稱為整合式驗證。
 
 ## <a name="ad-authentication-overview"></a>AD 驗證概觀
 
@@ -30,10 +30,10 @@ AD 驗證可讓 Windows 或 Linux 上加入網域的用戶端，使用其網域�
 
 AD 驗證與 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證相較下具有下列優點：
 
-- 使用者會透過單一登入進行驗證，而不是在出現輸入密碼的提示下進行驗證。   
+- 使用者會透過單一登入進行驗證，而不是在出現輸入密碼的提示下進行驗證。
 - 藉由建立 AD 群組的登入，您就能夠以 AD 群組成員資格，管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的存取和權限。  
 - 每位使用者在整個組織內只有一個身分識別，因此您不需要追蹤哪個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入對應到哪個人員。   
-- AD 可讓您在整個組織內實行集中式密碼原則。   
+- AD 可讓您在整個組織內實行集中式密碼原則。
 
 ## <a name="configuration-steps"></a>組態步驟
 

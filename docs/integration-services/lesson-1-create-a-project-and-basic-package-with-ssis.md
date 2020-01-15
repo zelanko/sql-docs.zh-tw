@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f7dbb0c4b512741f97dbce2794c83d3667142324
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: ff31579a425f9e86fed11811c9d0a42c3113ee15
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296071"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257076"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>第 1 課：使用 SSIS 來建立專案和基本套件
 
@@ -35,7 +35,7 @@ ms.locfileid: "71296071"
   
 * 下載本教學課程的所有課程套件：
 
-    1.  瀏覽至 [Integration Services 教學課程檔案](https://www.microsoft.com/en-us/download/details.aspx?id=56827) \(英文\)。
+    1.  瀏覽至 [Integration Services 教學課程檔案](https://www.microsoft.com/download/details.aspx?id=56827) \(英文\)。
 
     2.  選取 [Download] \(下載\)  按鈕。
 
@@ -66,7 +66,7 @@ ms.locfileid: "71296071"
 ## <a name="look-at-the-destination-data"></a>查看目的地資料
 來源資料的目的地是 **AdventureWorksDW** 中 **FactCurrencyRate** 事實資料表的複本。 **FactCurrencyRate** 事實資料表有四個資料行，且與兩個維度資料表之間有關聯性，如下表所示。  
   
-|資料行名稱|資料類型|查閱資料表|查閱資料行|  
+|資料行名稱|資料類型|查閱資料表|「查閱資料行」|  
 |---------------|-------------|----------------|-----------------|  
 |AverageRate|FLOAT|None|None|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
@@ -78,9 +78,9 @@ ms.locfileid: "71296071"
   
 |一般檔案資料行|資料表名稱|資料行名稱|資料類型|  
 |--------------------|--------------|---------------|-------------|  
-|0|FactCurrencyRate|AverageRate|float|  
+|0|FactCurrencyRate|AverageRate|FLOAT|  
 |1|DimCurrency|CurrencyAlternateKey|nchar(3)|  
-|2|DimDate|FullDateAlternateKey|日期|  
+|2|DimDate|FullDateAlternateKey|date|  
 |3|FactCurrencyRate|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>課程工作  

@@ -10,18 +10,16 @@ ms.custom: loading
 ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 43e8e235a00465b2f2bd6f30769ac173f620dcf5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 8d78ab5befe5f95c07b6cb539d2629fdd9d003ae
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295888"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924980"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料載入 SQL Server 或 Azure SQL Database
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-xxxx-xxx.md)]
 
 建立 SQL Server Integration Services (SSIS) 套件，將資料載入 SQL Server 或 [Azure SQL Database](/azure/sql-database/)。 您也可以選擇在資料通過 SSIS 資料流程時，對它們進行架構重組、轉換及清理。
 
@@ -30,7 +28,6 @@ ms.locfileid: "71295888"
 * 在 Visual Studio 中建立新的 Integration Services 專案。
 * 設計可將資料從來源載入至目的地的 SSIS 套件。
 * 執行 SSIS 套件以載入資料。
-
 
 ## <a name="basic-concepts"></a>基本概念
 
@@ -60,7 +57,7 @@ SSIS 的詳細簡介超出本文範圍。 如需詳細資訊，請參閱下列�
 3. **適用於 Visual Studio 的 SQL Server Data Tools (SSDT)** 。 若要取得適用於 Visual Studio 的 SQL Server Data Tools，請參閱[下載 SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)]。
 4. 本教學課程會連線到 SQL Server 或 SQL Database 執行個體，並將資料載入其中。 您必須具有連線、建立資料表以及對下列其中一項載入資料的權限：
    - **Azure SQL Database 資料庫**。 如需詳細資訊，請參閱 [Azure SQL Database](/azure/sql-database/)。  
-      中的多個
+      或
    - **SQL Server 執行個體**。 SQL Server 會在內部部署或 Azure 虛擬機器上執行。 若要下載免費評估或開發人員版本的 SQL Server，請參閱 [SQL Server 下載](https://www.microsoft.com/sql-server/sql-server-downloads)。
 
 5. **範例資料**。 本教學課程使用儲存在 SQL Server 的 AdventureWorks 範例資料庫內的範例資料，作為來源資料。 若要取得 AdventureWorks 範例資料庫，請參閱 [AdventureWorks 範例資料庫][AdventureWorks 2014 Sample Databases]。
@@ -140,8 +137,8 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
    2. 針對 [伺服器名稱]  ，輸入 SQL Server 或 SQL Database 伺服器的名稱。
    3. 在 [登入伺服器]  區段中，選取 [使用 SQL Server 驗證]  並輸入驗證資訊。
    4. 在 [連線至資料庫]  區段中，選取現有資料庫。
-    A. 按一下 **[測試連接]** 。
-    B. 在報告連線測試結果的對話方塊中，按一下 [確定]  以返回 [連線管理員]  對話方塊。
+    a. 按一下 **[測試連接]** 。
+    b. 在報告連線測試結果的對話方塊中，按一下 [確定]  以返回 [連線管理員]  對話方塊。
     c. 在 [連線管理員]  對話方塊中，按一下 [確定]  以返回 [設定 ADO.NET 連線管理員]  對話方塊。
 5. 在 [設定 ADO.NET 連線管理員]  對話方塊中，按一下 [確定]  以返回 [ADO.NET 目的地編輯器]  。
 6. 在 [ADO.NET 目的地編輯器]  中，按一下 [使用資料表或檢視]  清單旁的 [新增]  以開啟 [建立資料表]  對話方塊，並使用與來源資料表相符的資料行清單建立新的目的地資料表。
