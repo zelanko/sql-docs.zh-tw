@@ -22,22 +22,22 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c948c6e26655b8a450aee22f1ca6a6a178e0db76
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: e0e8d41e22efd3f51e1e0812d9476cce9b4b324d
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176331"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320495"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 資料庫的備份與還原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  此文章說明備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的優點、基本備份和還原詞彙，並介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份和還原策略，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原的安全性考量。 
+  本文描述備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的優點、基本備份和還原詞彙，並介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份和還原策略，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原的安全性考量。 
 
 > 此文章介紹 SQL Server 備份。 如需備份 SQL Server 資料庫的特定步驟，請參閱[建立備份](#creating-backups)。
   
- SQL Server 備份與還原元件提供基本的防護措施，可保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中所儲存的重要資料。 若要將重大資料遺失的風險降到最低，則需要定期備份資料庫，以保留對資料的修改。 計畫完善的備份和還原策略，可協助保護資料庫免於因各種失敗造成損毀而遺失資料。 藉由還原備份組再復原資料庫，以測試您的策略，讓您準備好有效因應損毀情況。
+ SQL Server 備份與還原元件提供基本的防護措施，可保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中所儲存的重要資料。 若要將重大資料遺失的風險降至最低，您必須備份資料庫，以定期保存您對資料所做的修改。 規劃完善的備份和還原策略有助於保護資料庫，以防止各種失敗所導致的資料遺失。 藉由還原一組備份並復原資料庫來測試您的策略，以做好有效因應災害的準備。
   
- 除了儲存備份的本機儲存體之外，SQL Server 也支援備份至與還原自 Azure Blob 儲存體服務。 如需詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 針對使用 Microsoft Azure Blob 儲存體服務儲存的資料庫檔案， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的 Azure 快照集選項，提供近乎即時的備份及更快速的還原。 如需詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
+ 除了儲存備份的本機儲存體之外，SQL Server 也支援備份至與還原自 Azure Blob 儲存體服務。 如需詳細資訊，請參閱 [SQL Server 備份及還原與 Microsoft Azure Blob 儲存體服務](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 針對使用 Microsoft Azure Blob 儲存體服務儲存的資料庫檔案， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的 Azure 快照集選項，提供近乎即時的備份及更快速的還原。 如需詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 ##  <a name="why-back-up"></a>備份原因  
 -   備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、針對備份執行測試還原程序，並將備份的複本儲存在安全的異地位置，即可避免可能發生的重大資料遺失。 **備份是保護資料的的唯一方法。**
@@ -59,7 +59,7 @@ ms.locfileid: "70176331"
  失敗後可用來還原和復原資料的資料複本。 資料庫備份也可用來將資料庫的複本還原到新位置。  
   
 **備份** 裝置  
- 寫入 SQL Server 備份並從中進行還原的磁碟或磁帶裝置。 SQL Server 備份也可以寫入 Azure Blob 儲存體服務，而且會使用 **URL** 格式來指定備份檔案的目的地和名稱。 如需詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+ 寫入 SQL Server 備份並從中進行還原的磁碟或磁帶裝置。 SQL Server 備份也可以寫入 Azure Blob 儲存體服務，而且會使用 **URL** 格式來指定備份檔案的目的地和名稱。 如需詳細資訊，請參閱 [SQL Server 備份及還原與 Microsoft Azure Blob 儲存體服務](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 **備份媒體**  
  已寫入一或多個備份的一或多個磁帶或磁碟檔案。  
@@ -79,7 +79,7 @@ ms.locfileid: "70176331"
 **記錄備份**  
  交易記錄的備份，包含先前的記錄備份中未備份的所有記錄。 (完整復原模式)  
   
-**復原 (recover)**  
+**recover**  
  將資料庫回復為穩定且一致的狀態。  
   
 **recovery**  
@@ -92,25 +92,28 @@ ms.locfileid: "70176331"
  一個多階段的程序，它會將指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份中的所有資料和記錄頁面複製到指定的資料庫中，然後藉由套用所記錄的變更取得前面時段的資料，向前復原備份中記錄的所有交易。  
   
  ##  <a name="backup-and-restore-strategies"></a>備份與還原策略  
- 備份和還原資料作業必須依特定環境自訂，而且也必須使用可用的資源。 因此，為了可靠地使用備份和還原作業進行復原，您需要擬定備份和還原策略。 設計良好的備份和還原策略可充分提高資料可用性，並使資料損失降至最少，同時考慮到您的特定業務需求。  
+ 備份和還原資料作業必須依特定環境自訂，而且也必須使用可用的資源。 因此，以可靠的方式使用備份和還原來進行復原，需要備份和還原策略。設計良好的備份和還原策略，可以在最大資料可用性和最少資料遺失的商務需求間取得平衡，同時也將維護和儲存備份的費用納入考量。  
+
+ 備份和還原策略包含備份部分與還原部分。 策略的備份部分定義備份的類型和頻率、所需硬體的本質和速度、測試備份的方法，以及儲存備份媒體的位置與方法 (包括安全性考量)。 策略的還原部分定義了誰負責執行還原、如何執行還原以達成資料庫可用性並將資料損失降到最低的目標，以及如何測試還原。 
   
-  > [!IMPORTANT] 
-  > 請將資料庫和備份放置於不同的裝置上。 否則，如果包含資料庫的裝置故障，備份將無法使用。 將資料和備份放置於不同的裝置，也可以針對寫入備份和資料庫生產使用強化 I/O 效能。**  
+ 設計有效的備份和還原策略需要仔細計畫、實作及測試。 測試是必要的：在利用還原策略中包含的所有備份組合順利完成還原，並測試還原的資料庫以取得實體一致性之後，您才算是擁有了備份策略。 您必須考慮各種因素。 其中包括：  
   
- 備份和還原策略包含備份部分與還原部分。 策略的備份部分定義備份的類型和頻率、所需硬體的本質和速度、測試備份的方法，以及儲存備份媒體的位置與方法 (包括安全性考量)。 策略的還原部分定義誰負責執行還原，以及應該如何執行還原，以達到資料庫可用性並將資料損失降到最低的目標。 建議您寫下備份和還原程序，並將文件的副本保留在執行書中。  
+- 您組織對於生產資料庫的目標，特別是對資料可用性以及保護資料免於遺失或損壞的需求。  
   
- 設計有效的備份和還原策略需要仔細計畫、實作及測試。 測試是必要的。 在利用還原策略中包含的所有備份組合順利完成還原之前，您還稱不上有備份策略。 您必須考慮各種因素。 這些選項包括：  
-  
--   您的組織對於資料庫的生產目標，特別是對資料可用性以及保護資料免於遺失的需求。  
-  
--   您的每一個資料庫的本質：其大小、使用模式、內容本質及資料需求等等。  
+-  每一個資料庫的本質：其大小、使用模式、內容本質及資料需求等等。  
   
 -   相關資源的限制，例如：硬體、人員、儲存備份媒體的空間、儲存媒體的實體安全性等等。  
 
-### <a name="impact-of-the-recovery-model-on-backup-and-restore"></a>復原模式對備份和還原的影響  
- 備份和還原作業是在復原模式的內容中發生。 復原模式是控制交易記錄管理方式的資料庫屬性。 此外，資料庫的復原模式也將決定資料庫所支援的備份類型與還原實例。 一般而言，資料庫會使用完整復原模式或簡單復原模式。 完整復原模式可以藉由在大量作業之前切換到大量記錄復原模式，補充其功能。 如需這些復原模式及其對交易記錄管理之影響的簡介，請參閱 [交易記錄 (SQL Server)](../logs/the-transaction-log-sql-server.md)  
+## <a name="best-practice-recommendations"></a>最佳做法建議
+
+### <a name="use-separate-storage"></a>使用個別的儲存體 
+> [!IMPORTANT] 
+> 請確認您將資料庫備份放置於與資料庫檔案不同的實體位置或裝置上。 當儲存資料庫的實體磁碟機故障或損毀時，復原能力取決於是否能存取儲存備份的個別磁碟機或遠端裝置以執行還原。 請記住，您可以在同一個實體磁碟機建立數個磁碟區或磁碟分割。 在選擇備份的儲存位置之前，請仔細了解磁碟分割和邏輯磁碟區配置。
+
+### <a name="choose-appropriate-recovery-model"></a>選擇適當的復原模式
+ 備份和還原作業是在[復原模式](../backup-restore/recovery-models-sql-server.md)的內容中進行。 復原模式是控制交易記錄管理方式的資料庫屬性。 因此，資料庫復原模式也將決定資料庫所支援的備份類型與還原案例，以及交易記錄備份的大小。 一般而言，資料庫會使用完整復原模式或簡單復原模式。 完整復原模式可以藉由在大量作業之前切換到大量記錄復原模式，來增強其功能。 如需這些復原模式及其對交易記錄管理之影響的簡介，請參閱 [交易記錄 (SQL Server)](../logs/the-transaction-log-sql-server.md)  
   
- 資料庫復原模式的最佳選擇視您的商務需求而定。 若要避免管理交易記錄，並簡化備份和還原，請使用簡單復原模式。 若要將遺失工作的風險降到最低 (但會耗用管理負擔成本)，請使用完整復原模式。 如需復原模式對備份與還原之影響的資訊，請參閱 [備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
+ 資料庫復原模式的最佳選擇視您的商務需求而定。 若要避免管理交易記錄，並簡化備份和還原，請使用簡單復原模式。 若要將遺失工作的風險降到最低 (但會耗用管理負擔成本)，請使用完整復原模式。 在大量記錄作業期間，若要將對記錄大小的影響降至最低，同時允許對這些作業的復原能力，請使用大量記錄復原模式。 如需復原模式對備份與還原之影響的資訊，請參閱 [備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
   
 ### <a name="design-your-backup-strategy"></a>設計備份策略  
  在為特定資料庫選擇符合商務需求的復原模式之後，您必須規劃並實作對應的備份策略。 最佳備份策略取決於各種因素，其中特別重要的是下列項目：  
@@ -132,6 +135,10 @@ ms.locfileid: "70176331"
      如果是大型資料庫，且其變更集中於檔案或檔案群組部分，則部分備份及 (或) 檔案備份可能十分有用。 如需詳細資訊，請參閱[部分備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md) 和[完整檔案備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)。  
   
 -   完整資料庫備份需要多少磁碟空間？  
+-   您的企業需要維護備份是多久以前的事了？ 
+
+    請確認您已根據應用程式需求和商務需求，建立適當的備份排程。 當備份已過久，除非您有方法重新產生到失敗點之前的所有資料，否則資料遺失的風險會提升。 在您決定處置舊的備份之前，由於儲存體資源有限，請考量那麼久以前是否具有復原能力
+
   
  ### <a name="estimate-the-size-of-a-full-database-backup"></a>估計完整資料庫備份的大小  
  在實作備份和還原策略前，您必須估計完整資料庫備份將使用多少磁碟空間。 備份作業會將資料庫中的資料複製到備份檔中。 備份僅包含資料庫中的實際資料，而不包含任何未使用的空間。 因此，備份通常會比資料庫本身還小。 您可以使用 **sp_spaceused** 系統預存程序來估計完整資料庫備份的大小。 如需詳細資訊，請參閱 [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)。  
@@ -144,9 +151,16 @@ ms.locfileid: "70176331"
  決定您需要的備份類型以及執行每一類型所需的頻率之後，建議您將一般備份排程為資料庫之資料庫維護計畫的一部分。 如需有關維護計畫以及如何為資料庫備份和記錄備份建立這些計畫的詳細資訊，請參閱＜ [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)＞。
   
 ### <a name="test-your-backups"></a>測試備份！  
- 在您完成備份的測試之前，還不能算是具備還原策略。 您務必要將資料庫副本還原到測試系統，以針對每個資料庫完整測試備份策略。 您必須測試還原您要使用的每個備份類型。
-  
- 建議您維護每個資料庫的作業手冊。 這份作業手冊應記載備份位置、備份裝置名稱 (如果有的話)，以及還原測試備份所需的時間量。
+ 在您完成備份的測試之前，還不能算是具備還原策略。 您務必要將資料庫副本還原到測試系統，以針對每個資料庫完整測試備份策略。 您必須測試還原您要使用的每個備份類型。 此外，也建議您在還原備份後透過資料庫的 DBCC CHECKDB 來執行資料庫一致性檢查，以確認備份媒體未損毀。 
+
+### <a name="verify-media-stability-and-consistency"></a>確認媒體穩定性和一致性
+使用由備份公用程式 (BACKUP T-SQL 命令、SQL Server 維護計劃、備份軟體或解決方案等等) 所提供的驗證選項。 如需範例，請參閱 [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md) 使用如備份總和檢查碼的進階功能，來偵測備份媒體本身的問題。 如需詳細資訊，請參閱 [](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)
+
+### <a name="document-backuprestore-strategy"></a>文件備份/還原策略 
+建議您寫下備份和還原程序，並將文件的副本保留在執行書中。
+我們也建議您維護每個資料庫的作業手冊。 這份作業手冊應記載備份位置、備份裝置名稱 (如果有的話)，以及還原測試備份所需的時間量。
+
+
 
 ## <a name="monitor-progress-with-xevent"></a>使用 xEvent 監視進度
 由於資料庫的大小和涉及作業的複雜度，備份和還原作業可能需要相當長的時間。 當任一項作業引發問題時，您可以使用 **backup_restore_progress_trace** 擴充事件來即時監視進度。 如需擴充事件的詳細資訊，請參閱[擴充事件](../extended-events/extended-events.md)。
@@ -221,7 +235,7 @@ GO
 -   [建立差異資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
  ### <a name="using-t-sql"></a>使用 T-SQL  
--   [使用資源管理員來限制備份壓縮的 CPU 使用量 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
+-   [使用資源管理員進行備份壓縮，以限制 CPU 使用率 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
 -   [資料庫損毀時備份交易記錄 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   

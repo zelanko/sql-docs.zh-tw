@@ -32,12 +32,12 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2ca8bd62bc1f05e655875c528efa8ea32b20ff5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b846628a77f6e11f864679d51fd62fc783fb2c7b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948422"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258295"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67948422"
   
 ## <a name="syntax"></a>語法  
 
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ```  
 -- Syntax for SQL Server and Azure SQL Database   
@@ -85,7 +85,7 @@ GROUP BY
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure SQL Data Warehouse 
   
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
@@ -93,8 +93,18 @@ GROUP BY {
     | ROLLUP ( <group_by_expression> [ ,...n ] ) 
 } [ ,...n ]
 
+```
+
 ```  
+-- Syntax for Parallel Data Warehouse  
   
+GROUP BY {
+      column-name [ WITH (DISTRIBUTED_AGG) ]  
+    | column-expression
+} [ ,...n ]
+
+```  
+    
 ## <a name="arguments"></a>引數 
  
 ### <a name="column-expression"></a>*column-expression*  
@@ -144,12 +154,12 @@ INSERT INTO sales VALUES (N'United States', N'Montana', 100);
 ```
 Sales 資料表包含以下資料列：
 
-| Country | Region | Sales |
+| Country | 區域 | Sales |
 |---------|--------|-------|
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 200 |
 | Canada | British Columbia | 300 |
-| United States | Montana | 100 |
+| 美國 | Montana | 100 |
 
 下一個查詢群組 Country 和 Region，並傳回每個值組合的彙總總和。  
  
@@ -160,11 +170,11 @@ GROUP BY Country, Region;
 ```
 查詢結果有 3 個資料列，因為 Country 和 Region 有 3 個值組合。 Canada 和 British Columbia 的 TotalSales 是兩個資料列的總和。 
 
-| Country | Region | TotalSales |
+| Country | 區域 | TotalSales |
 |---------|--------|-------|
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 500 |
-| United States | Montana | 100 |
+| 美國 | Montana | 100 |
 
 ### <a name="group-by-rollup"></a>GROUP BY ROLLUP
 
@@ -190,13 +200,13 @@ GROUP BY ROLLUP (Country, Region);
 
 查詢結果的彙總與簡單的 GROUP BY (沒有 ROLLUP) 的彙總相同。 此外，會為每個 Country 的值建立小計。 最後，提供所有資料列的總計。 結果如下所示：
 
-| Country | Region | TotalSales |
+| Country | 區域 | TotalSales |
 | :------ | :----- | ---------: |
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 500 |
 | Canada | NULL | 600 |
-| United States | Montana | 100 |
-| United States | NULL | 100 |
+| 美國 | Montana | 100 |
+| 美國 | NULL | 100 |
 | NULL | NULL | 700 |
 
 ### <a name="group-by-cube--"></a>GROUP BY CUBE ( )  
@@ -213,17 +223,17 @@ GROUP BY CUBE (Country, Region);
 
 查詢結果會有 (Country, Region)、(NULL, Region)、(Country, NULL) 和 (NULL, NULL) 這些唯一值的群組。 結果如下：
 
-| Country | Region | TotalSales |
+| Country | 區域 | TotalSales |
 |---------|--------|-------|
 | Canada | Alberta | 100 |
 | NULL | Alberta | 100 |
 | Canada | British Columbia | 500 |
 | NULL | British Columbia | 500 |
-| United States | Montana | 100 |
+| 美國 | Montana | 100 |
 | NULL | Montana | 100 |
 | NULL | NULL | 700
 | Canada | NULL | 600 |
-| United States | NULL | 100 |
+| 美國 | NULL | 100 |
    
  ### <a name="group-by-grouping-sets--"></a>GROUP BY GROUPING SETS ( )  
  
@@ -266,7 +276,7 @@ GROUP BY GROUPING SETS ( Country, () );
 
 適用於：SQL Server 和 Azure SQL Database
 
-附註：提供此語法，只是為了回溯相容性。 未來的版本將予以移除。 請避免在新的開發工作中使用這個語法，並規劃修改目前使用這個語法的應用程式。
+注意：提供此語法，只是為了回溯相容性。 未來的版本將予以移除。 請避免在新的開發工作中使用這個語法，並規劃修改目前使用這個語法的應用程式。
 
 指定在結果中包含所有群組，不論它們是否符合 WHERE 子句中的搜尋準則。 不符合搜尋準則的群組彙總會是 NULL。 
 
@@ -274,12 +284,12 @@ GROUP BY ALL：
 - 在存取遠端資料表的查詢中，如果查詢中也有 WHERE 子句，就不支援。
 - 在具有 FILESTREAM 屬性的資料行上將會失敗。
   
-### <a name="with-distributedagg"></a>WITH (DISTRIBUTED_AGG)
+### <a name="with-distributed_agg"></a>WITH (DISTRIBUTED_AGG)
 適用於：Azure SQL 資料倉儲與平行處理資料倉儲
 
 DISTRIBUTED_AGG 查詢提示會強制使用大量平行處理 (MPP) 系統，在執行彙總之前轉散發特定資料行上的資料表。 GROUP BY 子句中只有一個資料行可以有 DISTRIBUTED_AGG 查詢提示。 查詢完成後，轉散發的資料表就會卸除。 不會變更原始資料表。  
 
-附註：提供 DISTRIBUTED_AGG 查詢提示是為了舊版平行處理資料倉儲的回溯相容性，不會改善大部分查詢的效能。 根據預設，MPP 在需要時就已經轉散發資料，以增進彙總的效能。 
+注意：提供 DISTRIBUTED_AGG 查詢提示是為了舊版平行處理資料倉儲的回溯相容性，不會改善大部分查詢的效能。 根據預設，MPP 在需要時就已經轉散發資料，以增進彙總的效能。 
   
 ## <a name="general-remarks"></a>一般備註
 
@@ -403,7 +413,7 @@ HAVING DATEPART(yyyy,OrderDate) >= N'2003'
 ORDER BY DATEPART(yyyy,OrderDate);  
 ```  
   
-## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>範例:SQL 資料倉儲與平行處理資料倉儲  
+## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>範例：SQL 資料倉儲與平行處理資料倉儲  
   
 ### <a name="e-basic-use-of-the-group-by-clause"></a>E. GROUP BY 子句的基本使用  
  下列範例會尋找每天的所有銷售總額。 每天只會傳回一個包含所有銷售總和的資料列。  
@@ -415,7 +425,7 @@ SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales FROM FactInternetSales
 GROUP BY OrderDateKey ORDER BY OrderDateKey;  
 ```  
   
-### <a name="f-basic-use-of-the-distributedagg-hint"></a>F. DISTRIBUTED_AGG 提示的基本使用  
+### <a name="f-basic-use-of-the-distributed_agg-hint"></a>F. DISTRIBUTED_AGG 提示的基本使用  
  此範例使用 DISTRIBUTED_AGG 查詢提示在執行彙總之前，強制應用裝置輪換 `CustomerKey` 資料行上的資料表。  
   
 ```sql  
