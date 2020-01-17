@@ -1,6 +1,7 @@
 ---
-title: 如何設定 Linux 上的 SQL Server 持續性記憶體 (PMEM)
+title: 設定 Linux 上的 SQL Server 持續性記憶體 (PMEM)
 description: 本文提供在 Linux 上設定 PMEM 的逐步解說。
+ms.custom: seo-lt-2019
 author: briancarrig
 ms.author: brcarrig
 ms.reviewer: vanto
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9e6ef9592f980cab3e379fc27083ed34b8e94798
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 0b5f86dac62c371a9e4dda607cbd9ec7533a187a
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75243599"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558604"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>如何設定 Linux 上的 SQL Server 持續性記憶體 (PMEM)
 

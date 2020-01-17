@@ -1,5 +1,5 @@
 ---
-title: SQL Server Managed Backup to Microsoft Azure | Microsoft Docs
+title: SQL Server managed backup 至 Microsoft Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 10/18/2016
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8fb8654f89b11b848028e3b35dd971d80cfd4138
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041360"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245434"
 ---
-# <a name="sql-server-managed-backup-to-microsoft-azure"></a>SQL Server Managed Backup to Microsoft Azure
+# <a name="sql-server-managed-backup-to-microsoft-azure"></a>SQL Server managed backup 至 Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 會管理 SQL Server 備份，並自動備份到 Windows Azure Blob 儲存體。 您可以選擇讓 SQL Server 根據資料庫的交易工作負載來決定備份排程。 或者，您可以使用進階選項來定義排程。 保留設定可決定在 Azure Blob 儲存體中儲存備份的時間長度。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 支援指定保留時間週期的時間點還原。  
   
- 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]開始， [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的程序和基礎行為已變更。 如需詳細資訊，請參閱 [Migrate SQL Server 2014 Managed Backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md)。  
+ 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]開始， [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的程序和基礎行為已變更。 如需詳細資訊，請參閱[將 SQL Server 2014 managed backup 設定移轉至 SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md)。  
   
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 針對在 Windows Azure 虛擬機器上執行的 SQL Server 執行個體建議使用。  
@@ -35,9 +35,9 @@ ms.locfileid: "68041360"
  您也可以加密備份來提供額外的安全性，並在產生備份時，設定要控制的自訂排程。 如需如何針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份使用 Microsoft Azure Blob 儲存體之優點的詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 ##  <a name="Prereqs"></a> 必要條件  
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 會使用 Microsoft Azure 儲存體來儲存備份檔案。 下列必要條件是必備的：  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 會使用 Microsoft Azure 儲存體來儲存備份檔案。 需要下列必要條件：  
   
-|必要條件|Description|  
+|必要條件|描述|  
 |------------------|-----------------|  
 |**Microsoft Azure 帳戶**|您可以在瀏覽 [購買選項](https://azure.microsoft.com/pricing/free-trial/) 之前，利用 [免費試用版](https://azure.microsoft.com/pricing/purchase-options/)來開始。|  
 |**Azure 儲存體帳戶**|備份會儲存在與 Azure 儲存體帳戶相關聯的 Azure Blob 儲存體中。 如需建立儲存體帳戶的逐步指示，請參閱 [關於 Azure 儲存體帳戶](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。|  
@@ -45,14 +45,14 @@ ms.locfileid: "68041360"
 |**共用存取簽章 (SAS)**|目標容器的存取權是由共用存取簽章 (SAS) 所控制。 如需 SAS 概觀，請參閱 [共用存取簽章，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 您可以在程式碼中或使用 **New-AzureStorageContainerSASToken** PowerShell 命令，建立 SAS 權杖。 如需簡化此程序的 PowerShell 指令碼，請參閱 [在 Azure 儲存體上使用共用存取簽章 (SAS) 權杖搭配 Powershell 簡化 SQL 認證的建立](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)。 SAS 權杖可以儲存在 **SQL 認證** 中，搭配 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]一起使用。|  
 |**SQL Server Agent**|SQL Server Agent 必須針對 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 執行，才能運作。 請考慮將自動啟動選項設定為自動化。|  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>元件  
  Transact-SQL 是與 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]互動的主要介面。 系統預存程序可用來啟用、設定及監視 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 系統函數可用來擷取現有的組態設定、參數值和備份檔案資訊。 擴充事件可用來呈現錯誤和警告。 警示機制可透過 SQL Agent 作業和 SQL Server 原則式管理加以啟用。 以下是物件清單及其與 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]相關的功能描述。  
   
  PowerShell 指令程式也可用於設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 SQL Server Management Studio 可使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] [還原資料庫] **工作，還原** 所建立的備份  
   
 |||  
 |-|-|  
-|系統物件|Description|  
+|系統物件|描述|  
 |**MSDB**|儲存 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]所建立之所有備份的中繼資料與備份記錄。|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|  
 |[managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的進階設定，例如加密。|  
@@ -109,7 +109,7 @@ ms.locfileid: "68041360"
  如果排程超過 10 個並行完整資料庫備份，會透過擴充事件的偵錯通道發出警告。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 會維護其優先順序佇列，直到所有的備份均已排程並完成為止。  
 
 > [!NOTE]
-> SQL Server Managed Backup 不支援 Proxy 伺服器。
+> SQL Server managed backup 不支援 Proxy 伺服器。
 >
   
 ##  <a name="support_limits"></a> 可支援性  
@@ -128,9 +128,9 @@ ms.locfileid: "68041360"
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 時，可能會有一些限制。  
   
 ## <a name="see-also"></a>另請參閱  
-- [啟用 SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
-- [設定 Microsoft Azure 的 SQL Server 受管理備份進階選項](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
-- [停用 SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
+- [啟用 SQL Server managed backup 至 Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
+- [設定 SQL Server managed backup 至 Microsoft Azure 進階選項](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
+- [停用 SQL Server managed backup 至 Microsoft Azure](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
 - [系統資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
 - [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
   

@@ -1,7 +1,7 @@
 ---
-title: 變更哪個叢集管理可用性群組複本的中繼資料
+title: 變更中繼資料：跨叢集可用性群組移轉
 description: 進行跨叢集移轉時，藉由變更 SQL Server 執行個體的 HADR 叢集內容，即可變更由哪個叢集來管理 Always On 可用性群組內可用性複本的中繼資料。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a83f693905eb5a8b963875ea0e23e46d4e3eb55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c54c26c93d065f5b9d0beb741d9a7024ff8a2199
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988573"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241811"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>變更哪個叢集管理 Always On 可用性群組複本的中繼資料
 

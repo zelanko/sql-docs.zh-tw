@@ -1,6 +1,7 @@
 ---
-title: 指定交易式發行項變更的傳播方式 | Microsoft 文件
-ms.custom: ''
+title: 指定變更的傳播方式 (交易式)
+description: 了解如何在 SQL Server 中指定交易式發行集變更的傳播方式。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c7f499c813f31717e5932cf0b78b4699b72b2a85
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 0dc3afaa0492bc80b79bf72b695aec880d6808c7
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769336"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321385"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>交易式發行項 - 指定變更的傳播方式
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,11 +40,11 @@ ms.locfileid: "68769336"
 ## <a name="default-and-custom-stored-procedures"></a>預設與自訂預存程序  
  依預設，複寫為每個資料表發行項建立的三個程序為：  
   
--   處理插入的 **sp_MSins_\<** <資料表名稱>  **>** 。  
+-   處理插入的 **sp_MSins_\<** *tablename* **>** 。  
   
--   處理更新的 **sp_MSupd_\<** <資料表名稱>  **>** 。  
+-   處理更新的 **sp_MSupd_\<** *tablename* **>** 。  
   
--   處理刪除的 **sp_MSdel_\<** <資料表名稱>  **>** 。  
+-   處理刪除的 **sp_MSdel_\<** *tablename* **>** 。  
   
  程序中使用的 **\<** _tablename_ **>** 取決於發行項新增至發行集的方式，以及訂閱資料庫是否包含與不同擁有者具有相同名稱的資料表。  
   

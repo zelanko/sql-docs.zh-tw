@@ -1,6 +1,7 @@
 ---
-title: 在現有發行集中新增和卸除發行項 | Microsoft Docs
-ms.custom: ''
+title: 新增和卸除發行項 (現有發行集)
+description: 了解如何在 SQL Server 的現有發行集中新增和卸除發行項。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,12 +21,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5432d4456bf20f73a799726edd53e31f8707a067
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e996ccfd6f6930b4741f15b3da82c1f2856bd4db
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907794"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321320"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>在現有發行集中加入和卸除發行項
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,9 +52,9 @@ ms.locfileid: "72907794"
   
 3.  建立快照集後，同步處理訂閱，以複製新發行項的結構描述和資料。  
 
-    -   若要同步處理發送訂閱，請參閱[同步處理發送訂閱](../../../relational-databases/replication/synchronize-a-push-subscription.md)。  
+    -   若要同步處理發送訂閱，請參閱＜ [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md)＞。  
   
-    -   若要同步處理提取訂閱，請參閱[同步處理提取訂閱](../../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
+    -   若要同步處理提取訂閱，請參閱＜ [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)＞。  
   
 ## <a name="dropping-articles"></a>卸除發行項  
  發行項可以隨時從發行集中卸除，但必須考慮下列行為：  

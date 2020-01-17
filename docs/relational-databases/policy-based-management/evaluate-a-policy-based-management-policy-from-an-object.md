@@ -1,6 +1,7 @@
 ---
-title: 根據物件評估原則式管理原則 | Microsoft Docs
-ms.custom: ''
+title: 根據物件評估原則式管理原則
+description: 了解如何使用 SQL Server Management Studio (SSMS) 從 SQL Server 執行個體、資料庫或資料庫物件來評估原則。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b9e9d646-4894-4dee-a02a-0c71a8dc020e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e50d06fcd76950ff885a22af67534b5006b6a1e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6d57bbeca2d5393504192683bcf1738374fbc4c
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137872"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558288"
 ---
 # <a name="evaluate-a-policy-based-management-policy-from-an-object"></a>根據物件評估原則式管理原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "68137872"
   
 -   **[評估原則]** 對話方塊只會顯示適用於資料庫物件的原則。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 msdb 資料庫中 PolicyAdministratorRole 角色的成員資格。  

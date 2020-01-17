@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: aliceku
-ms.openlocfilehash: af336d2946dbb0b96d3ebdc64c14ce9e1eb6012e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.reviewer: jaszymas
+ms.openlocfilehash: 4d7b428534462779abeb72c65b05f551bfd4b0eb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127211"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246131"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>自主資料庫的安全性最佳做法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68127211"
   自主資料庫具有一些 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 系統管理員應該了解並降低的獨特威脅。 其中大部分威脅都與 **USER WITH PASSWORD** 驗證處理序相關，而這個處理序會將驗證界限從 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 層級移至資料庫層級。  
   
 ## <a name="threats-related-to-users"></a>與使用者相關的威脅  
- 在自主資料庫中，擁有 **ALTER ANY USER** 權限的使用者 (例如 **db_owner** 和 **db_securityadmin** 固定資料庫角色的成員) 可以在未經 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員認可或允許的情況下授與資料庫的存取權。 將自主資料庫的存取權授與使用者會針對整個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體增加潛在的攻擊面區域。 系統管理員應該了解此存取控制的委派，並且非常謹慎地將 **ALTER ANY USER** 權限授與自主資料庫中的使用者。 所有資料庫擁有者都擁有 **ALTER ANY USER** 權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員應定期稽核自主資料庫中的使用者。  
+ 在自主資料庫中，擁有 **ALTER ANY USER** 權限的使用者 (例如 **db_owner** 和 **db_accessadmin** 固定資料庫角色的成員)，可以在未經 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員認可或允許的情況下，授與資料庫的存取權。 將自主資料庫的存取權授與使用者會針對整個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體增加潛在的攻擊面區域。 系統管理員應該了解此存取控制的委派，並且非常謹慎地將 **ALTER ANY USER** 權限授與自主資料庫中的使用者。 所有資料庫擁有者都擁有 **ALTER ANY USER** 權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員應定期稽核自主資料庫中的使用者。  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>使用 Guest 帳戶來存取其他資料庫  
  擁有 **ALTER ANY USER** 權限的資料庫擁有者與資料庫使用者可以建立自主資料庫使用者。 連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上之自主資料庫之後，如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)]上的其他資料庫已啟用 **Guest** 帳戶，自主資料庫使用者就可以存取其他資料庫。  
@@ -84,7 +84,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ## <a name="escaping-a-contained-database"></a>逸出自主資料庫  
  如果資料庫處於部分自主狀態， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員就應該定期稽核自主資料庫中使用者和模組的功能。  
   
-## <a name="denial-of-service-through-autoclose"></a>透過 AUTO_CLOSE 阻斷服務  
+## <a name="denial-of-service-through-auto_close"></a>透過 AUTO_CLOSE 阻斷服務  
  請勿將自主資料庫設定為自動關閉。 如果已關閉，開啟資料庫來驗證使用者會耗用額外的資源，而且可能會導致阻斷服務攻擊。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,6 +1,6 @@
 ---
-title: 使用解譯的 Transact-SQL 存取記憶體最佳化資料表 | Microsoft Docs
-ms.custom: ''
+title: 使用解譯的 T-SQL 存取記憶體最佳化的資料表
+ms.custom: seo-dt-2019
 ms.date: 05/31/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd722c59384b1a7878ac2b940da9534ba5d1f7a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 402b945c68e68f73ba482c20b158f14aba2c818f
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951322"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412813"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>使用解譯的 Transact-SQL 存取記憶體最佳化的資料表
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "67951322"
   
 ## <a name="see-also"></a>另請參閱
 
-[記憶體中 OLTP 的 Transact-SQL 支援](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
+[記憶體內部 OLTP 的 Transact-SQL 支援](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
 
 [移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
 

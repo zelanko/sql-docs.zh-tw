@@ -1,22 +1,24 @@
 ---
-title: 在 Linux 上設定快照集資料夾共用 SQL Server 複寫
-description: 本文描述如何在 Linux 上設定快照集資料夾共用 SQL Server 複寫。
+title: 設定複寫快照集資料夾 (非預設連接埠)
+titleSuffix: SQL Server on Linux
+description: 了解如何在 Linux 上使用 SQL Server 複寫的非預設連接埠，設定快照集資料夾共用。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
-ms.author: mikeray
+ms.author: mikerayW
 ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6959b2073871f70fb33823b50419c208a23df2dd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: cb715e2a0a056c18352361b58ce8ffd67e3da78e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68093177"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558590"
 ---
-# <a name="configure-replication-with-non-default-ports"></a>使用非預設埠來設定複寫
+# <a name="configure-replication-with-non-default-ports-sql-server-linux"></a>使用非預設連接埠來設定複寫 (SQL Server Linux)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

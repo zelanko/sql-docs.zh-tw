@@ -1,6 +1,7 @@
 ---
-title: 教學課程：準備 SQL Server 進行複寫 (發行者、散發者、訂閱者) | Microsoft Docs
-ms.custom: ''
+title: 教學課程：準備進行複寫
+description: 在本教學課程中，了解如何藉由建立 Windows 帳戶、準備快照資料夾及設定散發，來準備您的發行者、散發者和訂閱者以進行複寫。
+ms.custom: seo-lt-2019
 ms.date: 04/02/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: beb0c68b86521ce9a5b3463e8c959970297519fe
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 09d68b763d967b6bcea4853f40bfc2ee2694421b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653826"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320395"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>教學課程：準備 SQL Server 進行複寫 (發行者、散發者、訂閱者)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +62,12 @@ ms.locfileid: "69653826"
 ## <a name="create-windows-accounts-for-replication"></a>建立用於複寫的 Windows 帳戶
 在這一節中，您會建立 Windows 帳戶，以執行複寫代理程式。 您會在本機伺服器上，另外為下列代理程式建立 Windows 帳戶：  
   
-|Agent|位置|帳戶名稱|  
+|代理程式|Location|帳戶名稱|  
 |---------|------------|----------------|  
 |快照集代理程式|發行者|<*電腦名稱*>\repl_snapshot|  
 |記錄讀取器代理程式|發行者|<*電腦名稱*>\repl_logreader|  
 |散發代理程式|發行者和訂閱者|<*電腦名稱*>\repl_distribution|  
-|[合併代理程式]|發行者和訂閱者|<*電腦名稱*>\repl_merge|  
+|合併代理程式|發行者和訂閱者|<*電腦名稱*>\repl_merge|  
   
 > [!NOTE]  
 > 在複寫教學課程中，發行者和散發者會共用相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (NODE1\SQL2016)。 訂閱者執行個體 (NODE2\SQL2016) 為遠端物件。 發行者和訂閱者可以共用相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，但這不是必要條件。 如果發行者和訂閱者共用相同的執行個體，則可略過在訂閱者上建立帳戶的步驟。  
@@ -116,9 +117,9 @@ ms.locfileid: "69653826"
   
 3. 以滑鼠右鍵按一下此資料夾，然後選取 [屬性]  。  
   
-   A. 在 [repldata Properties] \(複寫資料內容)  對話方塊的 [共用]  索引標籤上，選取 [進階共用]  。  
+   a. 在 [repldata Properties] \(複寫資料內容)  對話方塊的 [共用]  索引標籤上，選取 [進階共用]  。  
   
-   B. 在 [進階共用]  對話方塊中，選取 [Share this Folder] \(共用此資料夾\)  ，然後選取 [權限]  。  
+   b. 在 [進階共用]  對話方塊中，選取 [Share this Folder] \(共用此資料夾\)  ，然後選取 [權限]  。  
 
    ![共用 repldata 資料夾的選項](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
@@ -188,7 +189,7 @@ ms.locfileid: "69653826"
 
    ![讓伺服器扮演自身散發者的選項](media/tutorial-preparing-the-server-for-replication/serverdistributor.png)
   
-4. 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式未執行，請在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 啟動]  頁面上選取 [是，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為自動啟動]  。 選取 **[下一步]** 。  
+4. 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式未執行，請在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式啟動]  頁面上選取 [是，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式服務設定為自動啟動]  。 選取 [下一步]  。  
 
      
 5. 在 [快照集資料夾]  方塊中輸入路徑 \\\\<發行者電腦名稱  > **\repldata**，然後選取 [下一步]  。 這個路徑應該符合您之前在設定共用內容之後，在複寫資料內容資料夾下的 [網路路徑]  中所見。 
@@ -235,7 +236,7 @@ ms.locfileid: "69653826"
    ![檢視 [物件總管] 中的所有四個帳戶](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
    
   
-如需詳細資訊，請參閱：
+如需詳細資訊，請參閱
 - [設定散發](../../relational-databases/replication/configure-distribution.md) 
 - [複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)  
 

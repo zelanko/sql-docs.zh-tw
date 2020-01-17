@@ -1,5 +1,5 @@
 ---
-title: 範例線上還原唯讀檔案 (完整復原模式) | Microsoft Docs
+title: 線上還原：唯讀檔案 (完整復原模式)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 7ea2d2af-086f-48dc-9636-38dc194c7090
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a446bcd7c90c35176bd9853bec3780386e98310f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 545a3cfe319732ca7cb0f9d5a51b1e172072e636
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089798"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75227971"
 ---
-# <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>範例線上還原讀取/寫入檔案 (完整復原模式)
+# <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>範例：線上還原讀取/寫入檔案 (完整復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題是關於在完整復原模式下，包含多個檔案或檔案群組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  

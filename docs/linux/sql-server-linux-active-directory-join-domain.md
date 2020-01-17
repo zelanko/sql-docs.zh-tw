@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 90a2bcdac4fd1870adc4eeaa888b906857ef9854
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 9bc52bc1708d4ca6e06e5cc78399e12615860d27
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305284"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75224508"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>將 Linux 主機上的 SQL Server 加入 Active Directory 網域
 
@@ -178,7 +178,7 @@ ping contoso.com
 
    SQL Server 會使用 SSSD 和 NSS，將使用者帳戶和群組對應至安全性識別碼 (SID)。 您必須設定並執行 SSSD，SQL Server 才能成功建立 AD 登入。 **realmd** 通常會在加入網域的過程中自動執行此動作，但在某些情況下，您必須另外進行此作業。
 
-   如需詳細資訊，請參閱如何[手動設定 SSSD](https://access.redhat.com/articles/3023951) 和[設定 NSS 以使用 SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)。
+   如需詳細資訊，請參閱如何[手動設定 SSSD](https://access.redhat.com/articles/3023951) 和[設定 NSS 以使用 SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)。
 
 1. 確認您現在可以透過網域收集使用者的相關資訊，並取得該使用者的 Kerberos 票證。 下列範例會針對上述目的，使用 **id**、[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) 和 [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) 命令。
 
@@ -210,7 +210,7 @@ ping contoso.com
 SQL Server 不會使用協力廠商整合器的程式碼或程式庫來進行任何 AD 相關查詢。 SQL Server 一律會直接在此安裝程式中使用 OpenLDAP 程式庫呼叫來查詢 AD。 系統只會使用協力廠商整合器來將 Linux 主機加入 AD 網域，而 SQL Server 與這些公用程式沒有任何直接的通訊。
 
 > [!IMPORTANT]
-> 如需使用 **mssql-conf** `network.disablesssd` 設定選項的建議，請參閱[在 Linux 上搭配使用 Active Directory 驗證與 SQL Server](sql-server-linux-active-directory-authentication.md#additionalconfig) 一文的＜其他設定選項＞  一節。
+> 如需使用 **mssql-conf** `network.disablesssd`設定選項的建議，請參閱[在 Linux 上搭配使用 Active Directory 驗證與 SQL Server](sql-server-linux-active-directory-authentication.md#additionalconfig) 一文中的**其他設定選項**區段。
 
 確認您已正確設定 **/etc/krb5.conf**。 大多數協力廠商 Active Directory 提供者都會自動完成此設定。 不過，請檢查 **/etc/krb5.conf** 的下列值，以防止任何後續問題：
 

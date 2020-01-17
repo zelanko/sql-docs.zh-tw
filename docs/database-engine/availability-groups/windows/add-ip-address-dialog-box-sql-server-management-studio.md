@@ -1,7 +1,7 @@
 ---
-title: '[新增可用性群組接聽程式] 對話方塊中的 [新增 IP 位址]'
+title: 可用性群組精靈：新增 IP 位址
 description: '描述 SQL Server Management Studio [可用性群組精靈] 中 [指定複本] 頁面上找到的 [新增 IP 位址] 對話方塊選項。 '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 48b61a0f85d695f143f04f86387761170293a3b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 10ead33635c1fc1e263252ec3ae0a3f86b173679
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935026"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822097"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>[加入 IP 位址] 對話方塊 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  此 F1 說明主題描述 **[加入 IP 位址]** 對話方塊的選項。 可從 **[新增可用性群組接聽程式]** 對話方塊以及   或 **的** [指定複本] [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 頁面的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] [接聽程式] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]索引標籤存取此對話方塊。  
+  此 F1 說明主題描述 **[加入 IP 位址]** 對話方塊的選項。 可從 **[新增可用性群組接聽程式]** 對話方塊以及  或 **的** [指定複本] [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 頁面的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] [接聽程式] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]索引標籤存取此對話方塊。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  開始將子網路加入至可用性群組接聽程式之前，請務必知道每個子網路的 IP 位址，以及 IPv4 位址的子網路遮罩。  
@@ -44,7 +44,7 @@ ms.locfileid: "67935026"
  **IPv6 位址**  
  如果您選取了子網路的 IPv6 子網路位址，請在這裡輸入有效的 IPv6 靜態位址。  
   
- **[確定]**  
+ **確定**  
  按一下以加入所選位址的子網路，以及指定的靜態 IP 位址。 包含這些值的資料列就會加入至 **[新增可用性群組接聽程式]** 或 **[指定複本]** 對話方塊的子網路方格中。  
   
 > [!IMPORTANT]  

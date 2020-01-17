@@ -1,6 +1,5 @@
 ---
-title: 使用 system_health 工作階段 | Microsoft 文件
-ms.custom: ''
+title: 使用 system_health 工作階段
 ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,21 +15,21 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 262860781ba99abf8c4f6de783cd477db0e15d81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ab31461888588ee54f1715f5e98ddb0f3b9aa23b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009356"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246135"
 ---
-# <a name="use-the-systemhealth-session"></a>使用 system_health 工作階段
+# <a name="use-the-system_health-session"></a>使用 system_health 工作階段
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 system_health 工作階段是預設隨附於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的擴充事件工作階段。 當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 啟動時，這個工作階段就會自動啟動，並且在不造成任何明顯效能影響的情況下執行。 此工作階段會收集系統資料，讓您能夠用來協助疑難排解 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的效能問題。 
 
 > [!IMPORTANT]
-> 我們建議您不要停止、改變或刪除系統健康狀態工作階段。  
+> 我們建議您不要停止、改變或刪除 system_health 工作階段。 未來的產品更新，都可能會覆寫對 system_health 工作階段設定所做的任何變更。
   
 此工作階段所收集的資訊包括：  
   
@@ -82,7 +81,7 @@ WHERE xe.name = 'system_health'
   
 若要檢視事件檔案中的工作階段資料，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供的「擴充事件」使用者介面。 如需詳細資訊，請參閱 [進階檢視 SQL Server 中擴充事件的目標資料](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)。
   
-## <a name="restoring-the-systemhealth-session"></a>還原 system_health 工作階段  
+## <a name="restoring-the-system_health-session"></a>還原 system_health 工作階段  
 如果您刪除了 system_health 工作階段，可以在 [查詢編輯器] 中執行 **u_tables.sql** 檔案，藉以還原此工作階段。 這個檔案位於下列資料夾，其中 **C:** 代表您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式檔案的磁碟機，而 **MSSQL1x** 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的主要版本：  
   
  `C:\Program Files\Microsoft SQL Server\MSSQL1x.\<*instanceid*>\MSSQL\Install`  

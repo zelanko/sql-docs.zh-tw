@@ -1,6 +1,5 @@
 ---
-title: 範例指定 ELEMENT 指示詞及實體編碼 | Microsoft Docs
-ms.custom: ''
+title: 指定 ELEMENT 指示詞及實體編碼 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,14 +12,15 @@ helpviewer_keywords:
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ec0ad5a21100a99b80cca9df20e4b12bbfb58548
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 88294326610ac44a1166897fb3256d39e9015ee5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006739"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246583"
 ---
-# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>範例指定 ELEMENT 指示詞及實體編碼
+# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>範例：指定 ELEMENT 指示詞及實體編碼
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   此範例說明 **ELEMENT** 與 **XML** 指示詞之間的相異處。 **ELEMENT** 指示詞會將資料實體化，但 **XML** 指示詞則否。 已將 \<摘要> 項目指派給查詢中的 XML `<Summary>This is summary description</Summary>`。  
   

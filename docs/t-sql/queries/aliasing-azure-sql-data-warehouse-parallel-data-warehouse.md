@@ -1,6 +1,8 @@
 ---
-title: 別名功能 (Azure SQL 資料倉儲、平行處理資料倉儲) | Microsoft Docs
-ms.custom: ''
+title: 別名
+description: Azure SQL 資料倉儲和平行處理資料倉儲中的別名。
+titleSuffix: Azure SQL Data Warehouse
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,17 +12,17 @@ ms.assetid: 7b3a5c74-05cf-4385-8ee6-6176d003cb8a
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c9aee41091d2ca77d4fd23fb4997e49644360392
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b548dd789bc7e234eb527ffe5766f433a06d77e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031557"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244773"
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>別名功能 (Azure SQL 資料倉儲、平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  別名功能可允許暫時以簡短且易記的字串取代 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 查詢中的資料表或資料行名稱。 JOIN 查詢中經常使用資料表別名，因為在參考資料行時，JOIN 語法需要完整的物件名稱。  
+  別名功能可允許暫時以簡短且易記的字串取代 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)][!INCLUDE[DWsql](../../includes/dwsql-md.md)] 查詢中的資料表或資料行名稱。 JOIN 查詢中經常使用資料表別名，因為在參考資料行時，JOIN 語法需要完整的物件名稱。  
   
  別名必須是符合物件命名規則的單字。 如需詳細資訊，請參閱[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的＜Object Naming Rules＞(物件命名規則)。 物件不可包含空格，且不可以單引號或雙引號括住。  
   

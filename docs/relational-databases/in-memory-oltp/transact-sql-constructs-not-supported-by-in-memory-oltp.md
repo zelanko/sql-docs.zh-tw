@@ -1,6 +1,6 @@
 ---
-title: 記憶體內部 OLTP 不支援的 Transact-SQL 建構 | Microsoft 文件
-ms.custom: ''
+title: 記憶體內部 OLTP 不支援 T-SQL
+ms.custom: seo-dt-2019
 ms.date: 11/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e39f991982fbde13259039e8794218819f366b89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e1052544d1243dea4e6c3da377de2dbbe36d5af
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081828"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412492"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>記憶體中的 OLTP 不支援 Transact-SQL 建構
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68081828"
 ## <a name="databases-that-use-in-memory-oltp"></a>使用記憶體中 OLTP 的資料庫  
  下表列出不支援的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能，以及會出現在與記憶體內部 OLTP 資料庫有關之錯誤訊息文字中的關鍵字。 這個表格也會列出錯誤的解決方法。  
   
-|類型|[屬性]|解決方案|  
+|類型|名稱|解決方案|  
 |----------|----------|----------------|  
 |選項|AUTO_CLOSE|具有 MEMORY_OPTIMIZED_DATA 檔案群組的資料庫不支援資料庫選項 AUTO_CLOSE=ON。|  
 |選項|ATTACH_REBUILD_LOG|具有 MEMORY_OPTIMIZED_DATA 檔案群組的資料庫不支援 CREATE 資料庫選項 ATTACH_REBUILD_LOG。|  
@@ -49,9 +49,9 @@ ms.locfileid: "68081828"
 ## <a name="memory-optimized-tables"></a>記憶體最佳化的資料表  
  下表列出不支援的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能，和會出現在與記憶體最佳化資料表有關的錯誤訊息文字中的關鍵字。 這個表格也會列出錯誤的解決方法。  
   
-|類型|[屬性]|解決方案|  
+|類型|名稱|解決方案|  
 |----------|----------|----------------|  
-|功能|ON|記憶體最佳化資料表不可放置在檔案群組或分割區配置上。 請從 **CREATE TABLE** 陳述式中移除 ON 子句。<br /><br /> 所有記憶體最佳化資料表都會對應到記憶體最佳化檔案群組。|  
+|功能|開啟|記憶體最佳化資料表不可放置在檔案群組或分割區配置上。 請從 **CREATE TABLE** 陳述式中移除 ON 子句。<br /><br /> 所有記憶體最佳化資料表都會對應到記憶體最佳化檔案群組。|  
 |資料類型|*資料類型名稱*|不支援所指的資料類型。 請用其中一種支援的資料類型取代該類型。 如需詳細資訊，請參閱 [記憶體內部 OLTP 支援的資料類型](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)。|  
 |功能|計算資料行|**適用於：** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>記憶體最佳化資料表中不支援計算資料行。 請從 **CREATE TABLE** 陳述式中移除計算資料行。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和 SQL Server (從 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 起)，即開始支援經記憶體最佳化的資料表和索引中的計算資料行。|  
 |功能|複寫|記憶體最佳化資料表不支援複寫。|  
@@ -80,7 +80,7 @@ ms.locfileid: "68081828"
 ## <a name="indexes-on-memory-optimized-tables"></a>記憶體最佳化資料表上的索引  
  下表列出可能出現於涉及記憶體最佳化資料表上某個索引錯誤之訊息文字中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能和關鍵字，以及解決錯誤的更正動作。  
   
-|類型|[屬性]|解決方案|  
+|類型|名稱|解決方案|  
 |----------|----------|----------------|  
 |功能|已篩選的索引|記憶體最佳化資料表中不支援篩選的索引。 請從索引指定中省略 **WHERE** 子句。|  
 |功能|包含的資料行|記憶體最佳化資料表並不需要指定內含資料行。 記憶體最佳化資料表內所有的資料行都是隱含包含在每一個記憶體最佳化的索引中。|  
@@ -90,7 +90,7 @@ ms.locfileid: "68081828"
 ## <a name="nonclustered-hash-indexes"></a>非叢集雜湊索引  
  下表列出可能出現於涉及非叢集雜湊索引之錯誤訊息文字中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能和關鍵字，以及解決錯誤的更正動作。  
   
-|類型|[屬性]|解決方案|  
+|類型|名稱|解決方案|  
 |----------|----------|----------------|  
 |選項|ASC/DESC|非叢集雜湊索引不會排序。 請從索引鍵指定中移除關鍵字 **ASC** 和 **DESC** 。|  
   
@@ -109,7 +109,7 @@ ms.locfileid: "68081828"
 |功能|COMPUTE|不支援 **COMPUTE** 子句。 請從查詢中將它移除。|  
 |功能|SELECT INTO|不支援 **INTO** 子句與 **SELECT** 陳述式一起使用。 請將查詢重新撰寫為 **INSERT INTO** _Table_ **SELECT**。|  
 |功能|不完整的插入資料行清單|一般而言，在 INSERT 陳述式中，必須為資料表中的所有資料行指定值。<br /><br /> 不過，我們支援記憶體最佳化資料表上的 DEFAULT 條件約束和 IDENTITY(1,1) 資料行。 INSERT 資料行清單中可以省略這些資料行，但 IDENTITY 資料行必須省略這些資料行。|  
-|功能|*函數*|原生編譯預存程序中不支援某些內建函數。 請從預存程序中移除拒絕的函數。 如需所支援內建函數的詳細資訊，請參閱<br />[原生編譯的 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)，或<br />[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。|  
+|功能|*Function*|原生編譯預存程序中不支援某些內建函數。 請從預存程序中移除拒絕的函數。 如需所支援內建函數的詳細資訊，請參閱<br />[原生編譯的 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)，或<br />[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。|  
 |功能|CASE|**適用於：** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 起)<br/>原生編譯的預存程序不支援 **CASE** 運算式。 請為每個案例建立查詢。 如需詳細資訊，請參閱 [在原生編譯的預存程序中實作 CASE 運算式](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 起) 可支援 CASE 運算式。|  
 |功能|INSERT EXECUTE|移除參考。|  
 |功能|執行 CREATE 陳述式之前，請先執行|僅支援執行原生編譯預存程序和使用者定義函數。|  
@@ -159,7 +159,7 @@ ms.locfileid: "68081828"
 |選項|WITH TIES|**適用於：** [!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>**TOP** 子句不支援此選項。 請從原生編譯預存程序的查詢中移除 **WITH TIES** 。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 起) 可支援 **TOP WITH TIES**。|  
 |彙總函式|*彙總函式*|並非所有彙總函式都受支援。 如需原生編譯 T-SQL 模組中支援的彙總函式詳細資訊，請參閱[原生編譯 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。|  
 |排名函數|*次序函數*|原生編譯預存程序中不支援排名函數。 請從程序定義中將它們移除。|  
-|函數|*函數*|不支援此函數。 如需原生編譯 T-SQL 模組中支援的函式詳細資訊，請參閱[原生編譯 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。|  
+|函式|*Function*|不支援此函數。 如需原生編譯 T-SQL 模組中支援的函式詳細資訊，請參閱[原生編譯 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。|  
 |引數|*陳述式*|不支援此陳述式。 如需原生編譯 T-SQL 模組中支援的函式詳細資訊，請參閱[原生編譯 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。|  
 |功能|MIN 和 MAX 可與二進位和字元字串並用|彙總函式 **MIN** 和 **MAX** 不可用於原生編譯預存程序內的字元和二進位字串值。|  
 |功能|GROUP BY ALL|在原生編譯的預存程序中，ALL 不得與 GROUP BY 子句並用。 從 GROUP BY 子句中移除 ALL。|  
@@ -179,7 +179,7 @@ ms.locfileid: "68081828"
 ## <a name="transactions-that-access-memory-optimized-tables"></a>存取記憶體最佳化資料表的交易  
  下表列出可能出現於涉及存取記憶體最佳化資料表之交易錯誤的訊息文字中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能和關鍵字，以及解決錯誤的更正動作。  
   
-|類型|[屬性]|解決方案|  
+|類型|名稱|解決方案|  
 |----------|----------|----------------|  
 |功能|儲存點|不支援在存取記憶體最佳化資料表的交易中建立明確儲存點。|  
 |功能|繫結式交易|繫結工作階段無法參與存取記憶體最佳化資料表的交易。 在執行程序之前，請不要繫結工作階段。|  

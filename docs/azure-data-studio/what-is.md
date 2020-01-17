@@ -10,23 +10,22 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 10/15/2019
-ms.openlocfilehash: 9a82168afd82d4670521e1a84f87ae1bea57281e
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 9f6be7cbd673a98f8e8934860b0e26d427acac06
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545060"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241751"
 ---
 # <a name="what-is-azure-data-studio"></a>什麼是 Azure Data Studio？
 
 Azure Data Studio 是跨平台資料庫工具，適合在 Windows、macOS 和 Linux 上使用 Microsoft 系列內部部署和雲端資料平台的資料專業人員。
 
-Azure Data Studio 過去是以預覽名稱 SQL Operations Studio 發行，可提供新式編輯器體驗，其中包含 IntelliSense、程式碼片段、原始檔控制整合及整合式終端。 在工程設計時，考量到資料平台使用者，並內建查詢結果集的圖表和可自訂的儀表板。
+Azure Data Studio 提供新式編輯器體驗，其中包含 IntelliSense、程式碼片段、原始檔控制整合及整合式終端。 在工程設計時，考量到資料平台使用者，並內建查詢結果集的圖表和可自訂的儀表板。
 
 Azure Data Studio 及其提供者的原始程式碼根據原始程式碼 EULA 提供在 GitHub 上，該合約提供修改和使用軟體的權限，但不能在雲端服務中進行重新散發或裝載。 如需詳細資訊，請參閱 [Azure Data Studio 常見問題集](faq.md)。
 
 **[下載並安裝 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
-
 
 ## <a name="sql-code-editor-with-intellisense"></a>具備 IntelliSense 的 SQL 程式碼編輯器
 
@@ -37,7 +36,6 @@ Azure Data Studio 及其提供者的原始程式碼根據原始程式碼 EULA �
 SQL 程式碼片段會產生適當的 SQL 語法，以便建立資料庫、資料表、檢視、預存程序、使用者、登入、角色等，以及更新現有的資料庫物件。 使用智慧型程式碼片段，快速建立資料庫的複本以供進行開發或測試，以及產生和執行 CREATE 和 INSERT 指令碼。
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 也提供建立自訂 SQL 程式碼片段的功能。 若要深入了解，請參閱[建立和使用程式碼片段](code-snippets.md)。
-
 
 ## <a name="customizable-server-and-database-dashboards"></a>可自訂的伺服器和資料庫儀表板
 
@@ -61,6 +59,7 @@ SQL 程式碼片段會產生適當的 SQL 語法，以便建立資料庫、資�
 ## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>與 SQL Server Management Studio (SSMS) 的功能比較
 
 **在下列情況下使用 Azure Data Studio：**
+
 - 需要在 macOS 或 Linux 上執行
 - 正在連線到 SQL Server 2019 巨量資料叢集
 - 將大部分的時間花在編輯或執行查詢
@@ -68,9 +67,9 @@ SQL 程式碼片段會產生適當的 SQL 語法，以便建立資料庫、資�
 - 可以使用 sqlcmd 或 Powershell 透過整合式終端執行大部分的管理工作
 - 對精靈體驗的需求最少
 - 不需要深層管理設定
-- 希望 
 
 **在下列情況下使用 SQL Server Management Studio：**
+
 - 將大部分的時間花在資料庫管理工作
 - 正在執行深層管理設定
 - 正在執行安全性管理，包括使用者管理、弱點評定，以及安全性功能的設定
@@ -79,7 +78,7 @@ SQL 程式碼片段會產生適當的 SQL 語法，以便建立資料庫、資�
 - 正在執行 DACPAC 的匯入/匯出
 - 需要存取已註冊的伺服器，並想要控制 Windows 上的 SQL Server 服務
 
-### <a name="shell"></a>Shell
+### <a name="shell"></a>殼層
 
 |功能|Azure Data Studio|SSMS|
 |:---|:---|:---|
@@ -100,7 +99,6 @@ SQL 程式碼片段會產生適當的 SQL 語法，以便建立資料庫、資�
 |匯入\匯出 DACPAC||是|
 |物件屬性||是|
 |資料表設計工具||是|
-
 
 ### <a name="query-editor"></a>查詢編輯器
 
@@ -144,10 +142,10 @@ SQL 程式碼片段會產生適當的 SQL 語法，以便建立資料庫、資�
 |備份 / 還原|是|是|
 |巨量資料叢集支援|是||
 |一般檔案匯入|預覽|是|
-|SQL 代理程式|預覽|是|
+|SQL Agent|預覽|是|
 |SQL Profiler|預覽|是|
-|Always On||是|
-|永遠加密||是|
+|永遠開啟||是|
+|Always Encrypted||是|
 |複製資料精靈||是|
 |資料調整建議程式||是|
 |錯誤記錄檔檢視器||是|

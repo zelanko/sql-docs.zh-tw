@@ -1,6 +1,7 @@
 ---
-title: 重新產生自訂交易程序以反映結構描述變更 | Microsoft 文件
-ms.custom: ''
+title: 重新產生結構描述變更的自訂交易程序 (交易式)
+description: 重新產生自訂交易式預存程序，以反映異動複寫的結構描述變更。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ff1a4e5c9c185e97f3dd31c8c2ec96d10bceda42
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: e6a71e6591781f61560e4c997963571a49f816e5
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710701"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321424"
 ---
 # <a name="transactional-articles---regenerate-to-reflect-schema-changes"></a>交易式發行項 - 重新產生以反映結構描述變更
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

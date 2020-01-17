@@ -14,18 +14,18 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89b3ded4415983548402fa5ab955265b40a94f72
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f9cf01e13bc1fe278af9d68897a71c99003b37fc
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909879"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200491"
 ---
 # <a name="specify-default-values-for-columns"></a>指定資料行的預設值
 
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來指定將在資料表資料行中輸入的預設值。 您可以使用此使用者介面的 [物件總管]，也可以使用用於提交 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的一般控制項。
+您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來指定將在資料表資料行中輸入的預設值。 您可以透過使用者介面的 [物件總管] 或提交 [!INCLUDE[tsql](../../includes/tsql-md.md)]，設定預設值。
 
 如果您未將預設值指派給資料行，且使用者將資料行保留空白，則：
 
@@ -64,7 +64,7 @@ ms.locfileid: "72909879"
    > [!NOTE]
    > 若要輸入數字預設值，請輸入數字。 若為物件或函數，請輸入其名稱。 若為英數字元預設值，請在單引號內部輸入值。
 
-4. 在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。
+4. 在 [檔案]  功能表上，按一下 [儲存「資料表名稱」  ]  。
 
 ## <a name="TsqlProcedure"></a> 使用 Transact-SQL 來指定預設值
 

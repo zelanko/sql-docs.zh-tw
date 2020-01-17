@@ -1,6 +1,7 @@
 ---
-title: 使用容錯移轉可用性群組精靈 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 對可用性群組進行容錯移轉
+description: 說明如何使用 SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL) 或 SQL PowerShell，執行 Always On 可用性群組的強制手動容錯移轉。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3c4f93fcfb153c2e65f27fc85890382c2e93ae8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a98049201636bf521ae7162bd4ac0de71d74725
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013526"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821941"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>使用容錯移轉可用性群組精靈 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "68013526"
   
 -   您必須連接到裝載目前可用之可用性複本的伺服器執行個體。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
@@ -53,7 +54,7 @@ ms.locfileid: "68013526"
   
 1.  在 [物件總管] 中，連接到裝載需要容錯移轉之可用性群組次要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
   
-2.  依序展開 [AlwaysOn 高可用性]  節點和 [可用性群組]  節點。  
+2.  依序展開 [Always On 高可用性]  節點和 [可用性群組]  節點。  
   
 3.  若要啟動 [容錯移轉可用性群組精靈]，請以滑鼠右鍵按一下您要容錯移轉的可用性群組，然後選取 [容錯移轉]  。  
   
@@ -105,7 +106,7 @@ ms.locfileid: "68013526"
  **仲裁狀態**  
  對於叢集類型 WSFC，顯示可用性複本的仲裁狀態，可為下列其中一項：  
   
-   |ReplTest1|Description|  
+   |值|描述|  
    |-----------|-----------------|  
    |**一般仲裁**|叢集已經使用一般仲裁來啟動。|  
    |**強制仲裁**|叢集已經使用強制仲裁來啟動。|  
@@ -127,7 +128,7 @@ ms.locfileid: "68013526"
  **可用性模式**  
  顯示伺服器執行個體的可用性模式，它有下列幾種：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**同步認可**|在同步認可模式下認可交易之前，同步認可主要複本會等候同步認可次要複本確認它已完成強行寫入記錄。 同步認可模式可確定，一旦給定次要資料庫與主要資料庫同步處理之後，認可的交易就會受到完整保護。|  
 |**非同步認可**|在非同步認可模式下，主要複本會認可交易，而不等候確認非同步認可次要複本已經強行寫入記錄。 非同步認可模式會將次要資料庫上的交易延遲降至最低，但允許這些資料庫落後主要資料庫，因此可能會發生資料遺失。|  
@@ -137,22 +138,22 @@ ms.locfileid: "68013526"
  **容錯移轉模式**  
  顯示伺服器執行個體的容錯移轉模式，它有下列幾種：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|**Automatic**|每當次要複本與主要複本同步處理時，設定為自動容錯移轉的次要複本也支援規劃的手動容錯移轉。|  
-|**Manual**|手動容錯移轉的類型有兩種：規劃 (不會遺失資料) 和強制 (可能會遺失資料)。 給定的次要複本會根據次要複本的可用性模式和同步處理狀態 (同步認可模式)，僅支援其中一種類型。 若要判斷給定次要複本目前支援的手動容錯移轉形式，請查看此方格的 **[容錯移轉整備]** 資料行。|  
+|**自動**|每當次要複本與主要複本同步處理時，設定為自動容錯移轉的次要複本也支援規劃的手動容錯移轉。|  
+|**手動**|手動容錯移轉的類型有兩種：規劃 (不會遺失資料) 和強制 (可能會遺失資料)。 給定的次要複本會根據次要複本的可用性模式和同步處理狀態 (同步認可模式)，僅支援其中一種類型。 若要判斷給定次要複本目前支援的手動容錯移轉形式，請查看此方格的 **[容錯移轉整備]** 資料行。|  
   
- 如需詳細資訊，請參閱 [容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。  
+ 如需詳細資訊，請參閱本主題稍後的 [容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。  
   
  **[容錯移轉整備]**  
  顯示次要複本的容錯移轉整備，它有下列幾種：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**[無資料遺失]**|這個次要複本目前支援規劃的容錯移轉。 只有當同步認可模式的次要複本目前與主要複本同步處理時，才會出現此值。|  
 |**資料遺失，警告(** _#_ **)**|這個次要複本目前支援強制容錯移轉 (可能會遺失資料)。 每當次要複本並未與主要複本同步處理時，就會出現此值。 如需有關可能遺失資料的詳細資訊，請按一下資料遺失警告連結。|  
   
- **重新整理**  
+ **[重新整理]**  
  按一下可更新方格。  
   
  **取消**  

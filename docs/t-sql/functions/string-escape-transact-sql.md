@@ -18,18 +18,18 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: d845257313466caa21976feaf69598e404a03962
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e9b189d6b06aaf3b85815ed6d889756d466bff8
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906861"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325500"
 ---
-# <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
+# <a name="string_escape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  逸出文字中的特殊字元並傳回逸出之字元的文字。 **STRING_ESCAPE** 是決定性函數。  
+逸出文字中的特殊字元並傳回逸出之字元的文字。 **STRING_ESCAPE** 是在 SQL Server 2016 中引入的決定性函式。 
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +47,7 @@ STRING_ESCAPE( text , type )
  *type*  
  將套用的逸出規則。 目前支援的值是 `'json'`。  
   
-## <a name="return-types"></a>傳回類型
+## <a name="return-types"></a>傳回型別
 
  帶有逸出的特殊與控制字元的 **nvarchar(max)** 文字。 目前，**STRING_ESCAPE** 只能逸出下表中顯示的 JSON 特殊字元。  
   
@@ -69,7 +69,7 @@ STRING_ESCAPE( text , type )
 |...|...|  
 |CHAR(31)|\u001f|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 ## <a name="examples"></a>範例  
   

@@ -1,7 +1,8 @@
 ---
-title: 啟用 SQL Server 到 Azure 的受控備份 | Microsoft Docs
-ms.custom: ''
-ms.date: 10/03/2016
+title: 使用到 Azure 的受控備份」
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
+ms.description: Enable SQL Server managed backup to Azure
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,21 +11,22 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0b778c458852adc2c26d62eb9d7ef8066b9fbb89
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
+ms.openlocfilehash: 07bb9cf8f0fc697e1d31a80e22a72cd5a0ea484a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70238739"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257947"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>啟用 SQL Server 到 Azure 的受控備份
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題說明如何使用資料庫和執行個體層級的預設設定來啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 它也會說明啟用電子郵件通知以及監視備份活動的方式。  
   
  本教學課程使用 Azure PowerShell。 開始本教學課程之前，請 [下載並安裝 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
   
 > [!IMPORTANT]  
->  如果您也想要啟用進階選項或使用自訂排程，則在啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]之前，需先進行這些設定。 如需詳細資訊，請參閱[設定 SQL Server 到 Azure 的受控備份進階選項](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)。  
+>  如果您也想要啟用進階選項或使用自訂排程，則在啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]之前，需先進行這些設定。 如需詳細資訊，請參閱[設定到 Microsoft Azure 的 SQL Server 受管理備份進階選項](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)。  
   
 ## <a name="create-the-azure-blob-container"></a>建立 Azure Blob 容器
 
@@ -104,9 +106,9 @@ ms.locfileid: "70238739"
 |**SAS 權杖**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
-記下容器 URL 和 SAS，以便在建立 SQL 認證時使用。 如需 SAS 的詳細資訊，請參閱[共用存取簽章，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。  
+記下容器 URL 和 SAS，以便在建立 SQL 認證時使用。 如需關於 SAS 的詳細資訊，請參閱[共用存取簽章，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。  
   
-## <a name="enable-managed-backup-to-azure"></a>啟用 Azure 受控備份
+## <a name="enable-managed-backup-to-azure"></a>啟用到 Azure 的受控備份
   
 1.  **建立適用於 SAS URL 的 SQL 認證：** 使用 SAS 權杖來建立適用於 Blob 容器 URL 的 SQL 認證。 在 SQL Server Management Studio 中，使用下列 TRANSACT-SQL 查詢，根據下列範例來建立適用於 Blob 容器 URL 的認證：  
   

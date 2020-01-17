@@ -1,6 +1,7 @@
 ---
-title: 檢視散發資料庫中複寫的命令和資訊 | Microsoft 文件
-ms.custom: ''
+title: 檢視散發資料庫中複寫的命令和資訊
+description: 了解如何在 SQL Server 的散發資料庫中，檢視複寫的命令和其他複寫相關資訊。
+ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 16883d60e9c112141afa0a390555b06524bcf14c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 5ef4e316e27ddd77ee126549e21fc3e5efb988cd
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711006"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322209"
 ---
 # <a name="view-replicated-commands-and-information-in-distribution-database"></a>檢視散發資料庫中複寫的命令和資訊
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

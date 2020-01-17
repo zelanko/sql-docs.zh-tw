@@ -1,6 +1,7 @@
 ---
-title: 建立新原則或開啟原則對話方塊，描述頁面 | Microsoft Docs
-ms.custom: ''
+title: '[建立新原則] 或 [開啟原則] 對話方塊的 [描述] 頁面'
+description: 說明 [建立新原則] 或 [開啟原則] 對話方塊的 [描述] 頁面，用於 SQL Server 的原則式管理。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d95b4eaeb42f2f7a15de22b58a1e7c42a0893a1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3d8afca0504f34d2d78794e5fddb0ffbf1a6562
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940509"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558273"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>建立新原則或開啟原則對話方塊，描述頁面
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

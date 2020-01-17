@@ -1,7 +1,8 @@
 ---
-title: FILESTREAM 與其他 SQL Server 功能的相容性 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: FILESTREAM 相容性 | Microsoft Docs
+description: FILESTREAM 與其他 SQL Server 功能的相容性
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fd160a4149e69a28f27f72876121a9a0552abdd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4d32598cfab0cc08ece6721b0ff593c8577394d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085359"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245401"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM 與其他 SQL Server 功能的相容性
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   由於 FILESTREAM 資料位於檔案系統中，所以本主題提供了搭配下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能使用 FILESTREAM 的一些考量、指導方針和限制：  
   
@@ -66,7 +68,7 @@ ms.locfileid: "68085359"
   
  `Could not continue scan with NOLOCK due to data movement.`  
   
-##  <a name="Replication"></a> 複寫  
+##  <a name="Replication"></a> Replication  
  在簽發者上啟用 FILESTREAM 屬性的 **varbinary(max)** 資料行可以複寫到訂閱者上 (不論有沒有 FILESTREAM 屬性)。 若要指定複寫資料行的方式，請使用 [發行項屬性 - \<發行項>]  對話方塊或是 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 @schema_option 參數。 複寫到沒有 FILESTREAM 屬性之 **varbinary(max)** 資料行的資料不能超過該資料類型的 2-GB 限制，否則會產生執行階段錯誤。 我們建議您最好複寫 FILESTREAM 屬性，除非您要將資料複寫到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 不論所指定的結構描述選項為何，目前皆不支援將含有 FILESTREAM 資料行的資料表複寫至 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 訂閱者。  
   
 > [!NOTE]  

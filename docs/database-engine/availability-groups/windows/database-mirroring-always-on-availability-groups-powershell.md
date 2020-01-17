@@ -1,7 +1,7 @@
 ---
-title: 使用 PowerShell 針對可用性群組建立資料庫鏡像端點
+title: PowerShell：可用性群組資料庫鏡像端點
 description: 描述如何使用 PowerShell 針對 Always On 可用性群組建立資料庫鏡像端點。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4d4672d582242347240a0202a430f03f7ebd91b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8cc91d628c365d4f9092ca24a8b4df06f17adf2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968317"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252902"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>使用 PowerShell 針對可用性群組建立資料庫鏡像端點
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
 -   [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [在加入或修改可用性複本時指定端點 URL &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [在新增或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **若要檢視有關資料庫鏡像端點的資訊**  
   

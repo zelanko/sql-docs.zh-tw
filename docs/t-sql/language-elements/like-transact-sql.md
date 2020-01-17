@@ -31,12 +31,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad327f07e37778a7a3369f8fa3a7ecaa1504e6f2
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 7ff1197307cebb563fbb8cc173b0edbf1ef6aa76
+ms.sourcegitcommit: af078c0cdb42ac385d24496249e9b3609428f013
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816825"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74550211"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ match_expression [ NOT ] LIKE pattern
  *pattern*  
  這是要在 *match_expression* 中搜尋的特定字元字串，可包含下列有效的萬用字元。 *pattern* 最多可有 8,000 個位元組。  
   
-|萬用字元|Description|範例|  
+|萬用字元|描述|範例|  
 |------------------------|-----------------|-------------|  
 |%|任何含有零或多個字元的字串。|WHERE title LIKE '%computer%' 可找出書名中含有 'computer' 這個字的所有書名。|  
 |_ (底線)|任何單一字元。|WHERE au_fname LIKE '_ean' 可找出所有以 ean 結尾的四個字母的名字 (如 Dean、Sean 等)。|  
@@ -77,12 +77,12 @@ match_expression [ NOT ] LIKE pattern
  這是放在萬用字元前面的字元，指出應將萬用字元解譯成一般字元，而不是萬用字元。 *escape_character* 是沒有預設值的字元運算式，且只能得出一個字元。  
   
 ## <a name="result-types"></a>結果類型  
- **布林**  
+ **布林值**  
   
 ## <a name="result-value"></a>結果值  
  如果 *match_expression* 符合指定的 *pattern*，LIKE 就會傳回 TRUE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當您使用 LIKE 執行字串比較時，模式字串中的所有字元都很重要。 重要字元會包含任何前置或後置的空格。 如果查詢中某個比較會傳回具有字串 LIKE 'abc ' (abc 後面跟著一個空格) 的所有資料列，則不會傳回該資料行之值為 abc (abc 後面沒有空格) 的資料列。 不過，在要比對模式的運算式中，會忽略尾端空白。 如果查詢中的某個比較會傳回具有字串 LIKE 'abc' (abc 後面沒有空格) 的所有資料列，則開頭為 abc，不管是否有尾端空格的資料列都會被傳回。  
   
  使用模式包含 **char** 和 **varchar** 資料的字串比較，可能會因為每個資料類型的資料儲存方式而無法通過 LIKE 比較。 下列範例會將區域 **char** 變數傳遞給預存程序，然後使用模式比對來尋找姓氏開頭為一組指定字元的所有員工。  
@@ -128,10 +128,10 @@ David          Barber               Snohomish
 (2 row(s) affected)  
 ```
 
-## <a name="pattern-matching-by-using-like"></a>利用 LIKE 比對模式  
- LIKE 支援 ASCII 模式比對和 Unicode 模式比對。 當所有引數 (*match_expression*、*pattern* 與 *escape_character*，如果有的話) 都是 ASCII 字元資料類型時，就會執行 ASCII 模式比對。 如有任何一個引數是 Unicode 資料類型，所有引數都會轉換成 Unicode，並執行 Unicode 模式比對。 當您搭配 LIKE 使用 Unicode 資料 (**nchar** 或 **nvarchar** 資料類型) 時，尾端空白很重要；不過，針對非 Unicode 資料，尾端空白就不重要。 Unicode LIKE 與 ISO 標準相容。 ASCII LIKE 與舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相容。  
+## <a name="pattern-matching-by-using-like"></a>利用 LIKE 來進行模式比對  
+ LIKE 支援 ASCII 模式比對和 Unicode 模式比對。 當所有引數 (*match_expression*、*pattern* 與 *escape_character*，如果有的話) 都是 ASCII 字元資料類型時，就會執行 ASCII 模式比對。 如果有任何引數不是 Unicode 資料類型，所有引數都會轉換成 Unicode，且會執行 Unicode 模式比對。 當您搭配 LIKE 使用 Unicode 資料 (**nchar** 或 **nvarchar** 資料類型) 時，尾端空白很重要；不過，針對非 Unicode 資料，尾端空白就不重要。 Unicode LIKE 與 ISO 標準相容。 ASCII LIKE 與舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相容。  
   
- 下列範例會顯示 ASCII 和 Unicode LIKE 模式比對傳回的資料列差異。  
+ 下列範例會顯示 ASCII 和 Unicode LIKE 模式比對所傳回之資料列的差異。  
   
 ```sql  
 -- ASCII pattern matching with char column  
@@ -216,8 +216,8 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
- 
- ```
+
+```
  FirstName             LastName             Phone
  -----------------     -------------------  ------------
  Ruben                 Alonso               415-555-124  
@@ -232,10 +232,10 @@ GO
  Gabrielle              Russell             415-555-0197  
  Dalton                 Simmons             415-555-0115  
  (11 row(s) affected)  
- ``` 
- 
-### B. Using NOT LIKE with the % wildcard character  
- The following example finds all telephone numbers in the `PersonPhone` table that have area codes other than `415`.  
+```
+
+### <a name="b-using-not-like-with-the--wildcard-character"></a>B. 使用 NOT LIKE 搭配 % 萬用字元  
+ 下列範例會在 `PersonPhone` 資料表中，尋找所有區域碼不是 `415` 的電話號碼。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -250,8 +250,8 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
- 
- ```
+
+```
 FirstName              LastName            Phone
 ---------------------- -------------------- -------------------
 Gail                  Alexander            1 (11) 500 555-0120  
@@ -263,10 +263,10 @@ Gail                  Moore                155-555-0169
 Gail                  Russell              334-555-0170  
 Gail                  Westover             305-555-0100  
 (8 row(s) affected)  
-```  
+```
 
-### C. Using the ESCAPE clause  
- The following example uses the `ESCAPE` clause and the escape character to find the exact character string `10-15%` in column `c1` of the `mytbl2` table.  
+### <a name="c-using-the-escape-clause"></a>C. 使用 ESCAPE 子句  
+ 下列範例會利用 `ESCAPE` 子句和逸出字元來尋找 `mytbl2` 資料表 `c1` 資料行中完全相符的 `10-15%` 字元字串。  
   
 ```sql
 USE tempdb;  

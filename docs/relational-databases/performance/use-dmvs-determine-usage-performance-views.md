@@ -1,6 +1,7 @@
 ---
-title: 使用 DMV 來判斷檢視表的使用方式統計資料和效能
+title: DMV - 檢視表的使用方式統計資料和效能
 description: 使用 DMV 來判斷檢視表的使用方式統計資料和效能
+ms.custom: seo-dt-2019
 author: julieMSFT
 ms.author: jrasnick
 ms.date: 09/27/2018
@@ -8,17 +9,17 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 944ba06bc1ccf590e8d02a4fd6e44e6c57ec9001
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e80ba0a8252881b7447dda721f02fc9c3e545917
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986666"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165893"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>使用 DMV 來判斷檢視表的使用方式統計資料和效能
 本文涵蓋用來取得**使用檢視表的查詢效能**相關資訊的方法和指令碼。 這些指令碼的目的是提供資料庫內找到之各種檢視表的使用和效能指示器。 
 
-## <a name="sysdmexecqueryoptimizerinfo"></a>sys.dm_exec_query_optimizer_info
+## <a name="sysdm_exec_query_optimizer_info"></a>sys.dm_exec_query_optimizer_info
 DMV [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) 會公開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具所執行的最佳化統計資料。 這些值會累計，並且在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時開始錄製。 如需查詢最佳化工具的詳細資訊，請參閱[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)。   
 
 下面 common_table_expression (CTE) 使用此 DMV 提供工作負載的資訊 (例如參考檢視的查詢百分比)。 此查詢所傳回的結果不表示本身有效能問題，但可以在結合使用者對緩慢執行查詢的抱怨時公開基礎問題。 
@@ -164,7 +165,7 @@ CROSS APPLY
 GO
 ```
 
-## <a name="sysdmvexeccachedplans"></a>sys.dmv_exec_cached_plans
+## <a name="sysdmv_exec_cached_plans"></a>sys.dmv_exec_cached_plans
 最終查詢使用 DMV [sys.dmv_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) 來提供未使用檢視表的資訊。 不過，執行計畫快取是動態的，而且結果可能會不同。 因此，使用此查詢一段時間，來判斷是否實際使用檢視表。 
 
 ```sql

@@ -1,6 +1,7 @@
 ---
-title: 清除合併中繼資料 (複寫 Transact-SQL 程式設計) | Microsoft 文件
-ms.custom: ''
+title: 清除合併中繼資料 (複寫 SP)
+description: 使用複寫預存程序，以程式設計方式清除合併式複寫資料表中的資料
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b88baea-b7c6-4e5d-88f9-93d6a0ff0368
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 972e250e97e8f94b3de3a453137c21cc9fc099c2
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 50a5b71edd908c3c676f036e7f61197835e49360
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710439"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322085"
 ---
 # <a name="clean-up-merge-metadata-replication-transact-sql-programming"></a>清除合併中繼資料 (複寫 Transact-SQL 程式設計)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

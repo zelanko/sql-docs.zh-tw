@@ -1,6 +1,7 @@
 ---
-title: 第 1 課：建立和套用 Off By Default 原則 | Microsoft Docs
-ms.custom: ''
+title: 第 1 課：建立和套用 off-by-default 原則
+description: 本教學課程說明如何在 SQL Server 中建立和套用原則式管理的 off-by-default 原則。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: security
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d79c212b1bc960f46e816ad6d99ee4ee24722eac
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 1bff30a7270be7b47e5bf718d07d5386951042f1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251288"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557997"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>第 1 課：建立和套用 Off By Default 原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

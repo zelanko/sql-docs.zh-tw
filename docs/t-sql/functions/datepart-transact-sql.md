@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d3eda2a9f3f3756fd2fdc0095b999dcde189d83
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: ac0817f4dcbcefd3fc783d2cf0d0ae35afc0c546
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988433"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255809"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,8 +72,8 @@ DATEPART ( datepart , date )
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-|**TZoffset**|**tz**|  
-|**ISO_WEEK**|**isowk**、**isoww**|  
+|**tzoffset**|**tz**|  
+|**iso_week**|**isowk**、**isoww**|  
   
 *date*  
 可解析成下列其中一個資料類型的運算式： 
@@ -106,20 +106,21 @@ DATEPART ( datepart , date )
 |**month、mm、m**|10|  
 |**dayofyear、dy、y**|303|  
 |**day、dd、d**|30|  
-|**week、wk、ww**|45|  
-|**weekday、dw**|1|  
+|**week、wk、ww**|44|  
+|**weekday、dw**|3|  
 |**hour、hh**|12|  
 |**minute、n**|15|  
 |**second、ss、s**|32|  
 |**millisecond、ms**|123|  
 |**microsecond、mcs**|123456|  
 |**nanosecond、ns**|123456700|  
-|**TZoffset、tz**|310|  
+|**tzoffset、tz**|310|  
+|**iso_week、isowk、isoww**|44|  
   
 ## <a name="week-and-weekday-datepart-arguments"></a>Week 和 weekday datepart 引數
 針對 **week** (**wk**、**ww**) 或 **weekday** (**dw**) *datepart*，`DATEPART` 傳回值會取決於 [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) 所設定的值。
   
-任何一年的 1 月 1 日皆會定義 **week** _datepart_ 的起始數字。 例如：
+任何一年的 1 月 1 日皆定義 **week** _datepart_ 的起始數字。 例如：
 
 DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
 
@@ -133,7 +134,7 @@ DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
 
 `SELECT DATEPART(week, '2007-04-21 '), DATEPART(weekday, '2007-04-21 ')`
   
-|SET DATEFIRST<br /><br /> 引數 (argument)|week<br /><br /> 傳回|weekday<br /><br /> 傳回|  
+|SET DATEFIRST<br /><br /> 引數|week<br /><br /> 傳回|weekday<br /><br /> 傳回|  
 |---|---|---|
 |1|16|6|  
 |2|17|5|  
@@ -146,7 +147,7 @@ DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
 ## <a name="year-month-and-day-datepart-arguments"></a>year、month 和 day datepart 引數  
 針對 DATEPART (**year**、*date*)、DATEPART (**month**、*date*) 和 DATEPART (**day**、*date*) 所傳回的值分別與 [YEAR](../../t-sql/functions/year-transact-sql.md)、[MONTH](../../t-sql/functions/month-transact-sql.md) 和 [DAY](../../t-sql/functions/day-transact-sql.md) 函式傳回的值相同。
   
-## <a name="iso_week-datepart"></a>ISO_WEEK datepart  
+## <a name="iso_week-datepart"></a>iso_week datepart  
 ISO 8601 包含 ISO 週-日期系統 (週數的編號系統)。 每一週都與星期四所在的年份相關聯。 例如，2004 年第 1 週 (2004W01) 從 2003 年 12 月 29 日星期一到 2004 年 1 月 4 日星期日結束。 歐洲國家/地區通常會使用這種編號樣式。 非歐洲國家/地區通常不會使用。
 
 注意：一年的最高週數可能是 52 或 53。
@@ -155,21 +156,21 @@ ISO 8601 包含 ISO 週-日期系統 (週數的編號系統)。 每一週都與�
   
 |每週的第一天|一年第一週包含|週指派兩次|使用於|  
 |---|---|---|---|
-|星期日|1 月 1 日，<br /><br /> 第一個星期六，<br /><br /> 一年的第 1-7 天|是|United States|  
+|星期日|1 月 1 日，<br /><br /> 第一個星期六，<br /><br /> 一年的第 1-7 天|是|美國|  
 |星期一|1 月 1 日，<br /><br /> 第一個星期日，<br /><br /> 一年的第 1-7 天|是|大部分歐洲國家 (地區) 和英國|  
 |星期一|1 月 4 日，<br /><br /> 第一個星期四，<br /><br /> 一年的第 4-7 天|否|ISO 8601、挪威和瑞典|  
 |星期一|1 月 7 日，<br /><br /> 第一個星期一，<br /><br /> 一年的第 7 天|否||  
 |星期三|1 月 1 日，<br /><br /> 第一個星期二，<br /><br /> 一年的第 1-7 天|是||  
 |星期六|1 月 1 日，<br /><br /> 第一個星期五，<br /><br /> 一年的第 1-7 天|是||  
   
-## <a name="tzoffset"></a>TZoffset  
-`DATEPART` 會以分鐘數 (帶正負號) 傳回 **TZoffset** (**tz**) 值。 此陳述式會傳回 310 分鐘的時區位移：
+## <a name="tzoffset"></a>tzoffset  
+`DATEPART` 會以分鐘數 (帶正負號) 傳回 **tzoffset** (**tz**) 值。 此陳述式會傳回 310 分鐘的時區位移：
   
 ```sql
-SELECT DATEPART (TZoffset, '2007-05-10  00:00:01.1234567 +05:10');  
+SELECT DATEPART (tzoffset, '2007-05-10  00:00:01.1234567 +05:10');  
 ```  
-`DATEPART` 轉譯 TZoffset 值的方式如下：
-- 若是 datetimeoffset 和 datetime2，TZoffset 傳回的時間位移會以分鐘為單位，而 datetime2 的位移一律是 0 分鐘。
+`DATEPART` 轉譯 tzoffset 值的方式如下：
+- 針對 datetimeoffset 和 datetime2，tzoffset 傳回的時間位移會以分鐘為單位，而 datetime2 的位移一律是 0 分鐘。
 - 針對可以隱含轉換成 **datetimeoffset** 或 **datetime2** 的資料類型，`DATEPART` 會以分鐘數傳回時間位移。 例外：其他日期/時間資料類型。
 - 所有其他類型的參數都會導致錯誤。
   
@@ -206,7 +207,7 @@ SELECT DATEPART(microsecond, '00:00:01.1234567'); -- Returns 123456
 SELECT DATEPART(nanosecond,  '00:00:01.1234567'); -- Returns 123456700  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `DATEPART` 可用於 SELECT 清單、WHERE、HAVING、GROUP BY 和 ORDER BY 子句中。
   
 DATEPART 會隱含地將字串常值轉換為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的 **datetime2** 類型。 這表示，將日期當做字串傳遞時，DATENAME 不支援 YDM 格式。 您必須明確地將字串轉換為 **datetime** 或 **smalldatetime** 類型，才能使用 YDM 格式。

@@ -1,6 +1,7 @@
 ---
-title: 啟動及停止複寫代理程式 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 啟動及停止複寫代理程式 (SSMS)
+description: 了解如何在 SQL Server Management Studio 和複寫監視器中啟動及停止複寫代理程式。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,16 +15,16 @@ ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 339da4b5d9112aa10aa52e12c8a39f6a2adaa30b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 70f876d9152e836e12ad0c28e640362b23197190
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770697"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321620"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>啟動及停止複寫代理程式 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  從  中的 **[作業]** 資料夾和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and from [作業] Monitor. 啟動和停止下列代理程式和作業：  
+  從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 [作業]  資料夾和 [複寫]  資料夾，以及從複寫監視器啟動及停止代理程式。 啟動和停止下列代理程式和作業：  
   
 -   所有發行集所使用的快照集代理程式。  
   
@@ -70,6 +71,6 @@ ms.locfileid: "68770697"
 ## <a name="see-also"></a>另請參閱  
  [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication.md)   
  [複寫代理程式可執行檔概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [複寫代理程式概觀](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

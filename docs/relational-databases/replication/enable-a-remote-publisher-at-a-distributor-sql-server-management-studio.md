@@ -1,6 +1,7 @@
 ---
-title: 在散發者端啟用遠端發行者 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 在散發者端啟用遠端發行者 (SSMS)
+description: 了解如何使用 SQL Server Management Studio (SSMS) 在散發者端啟用遠端發行者。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7b6b87fef15f8d052542aa2d0ba2c05c815092bf
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2cc0b1cd3c395a1c603e2e2aa9a94521788f11ab
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908278"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321745"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>在散發者端啟用遠端發行者 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

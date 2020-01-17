@@ -1,6 +1,7 @@
 ---
-title: 為非 SQL Server 訂閱者建立訂閱 | Microsoft Docs
-ms.custom: ''
+title: 建立非 SQL 訂閱者的訂閱
+description: 說明如何使用 SQL Server Management Studio (SSMS) 或 Transact-SQL (T-SQL)，在 SQL Server 中建立非 SQL Server 訂閱者的訂閱。
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3f37431c1d8359eface4a5ad374ed8ba6717708a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710436"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322001"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>為非 SQL Server 訂閱者建立訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +131,7 @@ ms.locfileid: "71710436"
   
 #### <a name="to-retain-tables-at-the-subscriber"></a>將資料表保留在訂閱者端  
   
--   依預設，若啟用非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發行集，就會將 **pre_creation_cmd** 發行項屬性的值設定為 'drop'。 這項設定會指定當複寫符合發行項中的資料表名稱時，應該要卸除「訂閱者」端的資料表。 如果您在訂閱者端有想要保留的現有資料表，請針對每一個發行項使用 [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 預存程序，並為 **pre_creation_cmd**指定 'none' 值。 `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`。  
+-   依預設，若啟用非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發行集，就會將 **pre_creation_cmd** 發行項屬性的值設定為 'drop'。 這項設定會指定當複寫符合發行項中的資料表名稱時，應該要卸除「訂閱者」端的資料表。 如果您在訂閱者端有想要保留的現有資料表，請針對每一個發行項使用 [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 預存程序，並為 **pre_creation_cmd**指定 'none' 值。 第 1 課：建立 Windows Azure 儲存體物件`sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`。  
   
 #### <a name="to-generate-a-snapshot-for-the-publication"></a>產生發行集的快照集  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d61b7423bb39267fe4171d661e8fe7a74fbc6faa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: d3cf4e302df6e28d898a2790d928cf40085f7915
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294494"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687269"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 連接管理員
 
@@ -92,54 +92,40 @@ ms.locfileid: "71294494"
 
 若要使用 Azure SQL Database 的受控識別驗證，請遵循下列步驟來設定您的資料庫：
 
-1. 在 Azure AD 中建立群組。 將受控識別新增為群組的成員。
-    
-   1. [從 Azure 入口網站尋找資料處理站受控識別](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)。 前往您資料處理站的**屬性**。 複製**受控識別物件識別碼**。
-    
-   1. 安裝 [Azure AD PowerShell](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2) 模組。 使用 `Connect-AzureAD` 命令登入。 執行下列命令來建立群組，並將受控識別新增為成員。
-      ```powershell
-      $Group = New-AzureADGroup -DisplayName "<your group name>" -MailEnabled $false -SecurityEnabled $true -MailNickName "NotSet"
-      Add-AzureAdGroupMember -ObjectId $Group.ObjectId -RefObjectId "<your data factory managed identity object ID>"
-      ```
-    
-1. 在 Azure 入口網站為您的 Azure SQL Server [佈建 Azure Active Directory 系統管理員](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) \(部分機器翻譯\)，如果您尚未這麼做。 Azure AD 系統管理員可以是 Azure AD 使用者或 Azure AD 群組。 如果您授與受控識別系統管理員角色，請略過步驟 3 和 4。 系統管理員將擁有資料庫的完整存取權。
+1. 在 Azure 入口網站為您的 Azure SQL Server [佈建 Azure Active Directory 系統管理員](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) \(部分機器翻譯\)，如果您尚未這麼做。 Azure AD 系統管理員可以是 Azure AD 使用者或 Azure AD 群組。 如果您將系統管理員角色授與受控識別群組，請略過步驟 2 和 3。 系統管理員將擁有資料庫的完整存取權。
 
-1. 為 Azure AD 群組[建立自主資料庫使用者](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) \(部分機器翻譯\)。 使用至少具有 ALTER ANY USER 權限的 Azure AD 身分識別，使用 SSMS 等工具連線至您要複製資料的資料庫。 執行下列 T-SQL： 
+1. 為 Data Factory 受控識別[建立自主資料庫使用者](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)。 使用至少具有 ALTER ANY USER 權限的 Azure AD 身分識別，使用 SSMS 等工具連線至您要複製資料的資料庫。 執行下列 T-SQL： 
     
     ```sql
-    CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
+    CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. 依照您平常為 SQL 使用者和其他人所進行的操作一樣授與 Azure AD 群組所需權限。 如需適當的角色，請參閱[資料庫層級角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)。 例如，執行下列程式碼：
+1. 依照您平常為 SQL 使用者和其他人所進行的操作一樣，授與 Data Factory 受控識別所需的權限。 如需適當的角色，請參閱[資料庫層級角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)。 執行下列程式碼。 如需更多選項，請參閱[此文件](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)。
 
     ```sql
-    ALTER ROLE [role name] ADD MEMBER [your AAD group name];
+    EXEC sp_addrolemember [role name], [your data factory name];
     ```
 
 若要使用 Azure SQL Database 受控執行個體的受控識別驗證，請遵循這些步驟來設定您的資料庫：
     
-1. 在 Azure 入口網站為您的受控執行個體[佈建 Azure Active Directory 系統管理員](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) \(部分機器翻譯\)，如果您尚未這麼做。 Azure AD 系統管理員可以是 Azure AD 使用者或 Azure AD 群組。 如果您授與受控識別系統管理員角色，請略過步驟 2-5。 系統管理員將擁有資料庫的完整存取權。
+1. 在 Azure 入口網站為您的受控執行個體[佈建 Azure Active Directory 系統管理員](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) \(部分機器翻譯\)，如果您尚未這麼做。 Azure AD 系統管理員可以是 Azure AD 使用者或 Azure AD 群組。 如果您將系統管理員角色授與受控識別群組，請略過步驟 2-4。 系統管理員將擁有資料庫的完整存取權。
 
-1. [從 Azure 入口網站尋找資料處理站受控識別](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)。 前往您資料處理站的**屬性**。 複製 [受控識別應用程式識別碼]  (不是 [受控識別物件識別碼]  )。
+1. 為 Data Factory 受控識別[建立登入](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current)。 在 SQL Server Management Studio (SSMS) 中，以**系統管理員**身分的 SQL Server 帳戶連線到您的受控執行個體。 在 **master** 資料庫中執行下列 T-SQL：
 
-1. 將資料處理站受控識別轉換成二進位類型。 使用您的 SQL 或 Active Directory 系統管理員帳戶，使用 SSMS 等工具連線至您受控執行個體的 **master** 資料庫。 對 **master** 資料庫執行下列 T-SQL，以二進位格式取得您的受控識別應用程式識別碼：
-    
     ```sql
-    DECLARE @applicationId uniqueidentifier = '{your managed identity application ID}'
-    select CAST(@applicationId AS varbinary)
+    CREATE LOGIN [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. 在 Azure SQL Database 受控執行個體中，將資料處理站受控識別新增為使用者。 對 **master** 資料庫執行下列 T-SQL：
-    
+1. 為 Data Factory 受控識別[建立自主資料庫使用者](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)。 連線到您想要從中複製資料的資料庫，然後執行下列 T-SQL： 
+  
     ```sql
-    CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
+    CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. 授與資料處理站受控識別所需的權限。 如需適當的角色，請參閱[資料庫層級角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)。 對您要複製資料的資料庫執行下列 T-SQL：
+1. 依照您平常為 SQL 使用者和其他人所進行的操作一樣，授與 Data Factory 受控識別所需的權限。 執行下列程式碼。 如需更多選項，請參閱[此文件](https://docs.microsoft.com/sql/t-sql/statements/alter-role-transact-sql?view=azuresqldb-mi-current)。
 
     ```sql
-    CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
-    ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
+    ALTER ROLE [role name e.g., db_owner] ADD MEMBER [your data factory name];
     ```
 
 最後，為 ADO.NET 連線管理員設定受控識別驗證。 有兩個選項可以執行此操作：

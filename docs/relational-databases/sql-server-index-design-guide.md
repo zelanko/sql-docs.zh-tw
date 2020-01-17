@@ -22,12 +22,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 663e4bca1dc607cbdf4b19849701bea24461b600
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4cf6e85cef8d95e2b1bb167d482f36ec540196f6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081543"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255926"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引架構和設計指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68081543"
 -   叢集
 -   非叢集
 -   唯一
--   已篩選
+-   Filtered
 -   columnstore
 -   雜湊
 -   記憶體最佳化的非叢集
@@ -53,9 +53,11 @@ ms.locfileid: "68081543"
 如需全文檢索索引的資訊，請參閱[擴展全文檢索索引](../relational-databases/search/populate-full-text-indexes.md)。
   
 ##  <a name="Basics"></a> 索引設計基本概念  
- 索引是一種與資料表或檢視有關的磁碟內存或記憶體內部結構，它會加快從該資料表或檢視中擷取資料列的速度。 索引中包含從資料表或檢視中一或多個資料行建出的索引鍵。 若為磁碟內存索引，這些索引鍵儲存在結構 (B 型樹狀結構) 中，讓 SQL Server 可以快速有效地尋找與索引鍵值相關的一或多個資料列。  
+ 思考一下一般的書籍：書的結尾會有索引，可協助您快速找到書籍內的資訊。 索引是排序的關鍵字清單，每個關鍵字旁會有頁碼，指出可以在哪些頁面找到這些關鍵字。 SQL Server 索引也一樣，此索引是值的排序清單，並且每個值都有指向這些值所在的資料[頁面](../relational-databases/pages-and-extents-architecture-guide.md)指標。 索引本身會儲存在頁面上，並在 SQL Server 中組成索引頁。 在一般書籍中，如果您要尋找所有包含 "SQL" 這個字的頁面指標，但索引橫跨多個頁面，您就必須翻頁直到您找到包含關鍵字 "SQL" 的索引頁面。 找到後，您就會遵循指向所有頁面的指標。  如果您在索引的開頭建立一個頁面，包含可在哪裡找到每個字母的字母順序清單，就可以讓過程更有效率。 例如：「A 到 D - 第 121 頁」、「E 到 G - 第 122 頁」等。 這個額外的頁面，可以免除翻閱索引來找出開始位置的步驟。 這類頁面不存在於一般書籍，但存在於 SQL Server 的索引中。 此單一頁面稱為索引的根頁面。 根頁面是 SQL Server 索引所使用的樹狀結構起始頁。 在樹狀結構下，包含實際資料指標的結尾頁面，稱為樹狀結構的「分葉頁面」。 
 
- 索引會將資料儲存為以資料列和資料行按邏輯組織的資料表，實際儲存為*資料列存放區* <sup>1</sup>　的資料列取向資料格式，或 *[資料行存放區](#columnstore_index)* 的資料行取向資料格式。  
+ SQL Server 索引是一種與資料表或檢視相關聯的磁碟上或記憶體內部結構，可加快從該資料表或檢視中擷取資料列的速度。 索引中包含從資料表或檢視中一或多個資料行建出的索引鍵。 針對磁碟上的索引，這些索引鍵儲存在樹狀結構 (B 型樹狀結構) 中，可讓 SQL Server 快速並有效地尋找與索引鍵值相關聯的一或多個資料列。  
+
+ 索引會將資料儲存為以資料列和資料行按邏輯組織的資料表，以實體方式儲存為「資料列存放區」  <sup>1</sup> 的資料列取向資料格式，或「[資料行存放區](#columnstore_index)」  的資料行取向資料格式。  
     
  為資料庫選擇正確的索引及工作負載時，往往很難在查詢速度與更新成本之間取得平衡。 範圍較小的索引，或是索引的索引鍵中包含較少的資料行，所需的磁碟空間與維護負擔相對較小。 相反的，如果索引範圍較大，能涵蓋的查詢就更多。 在找到最有效率的索引之前，可能需要先試過數種不同的設計。 索引可以新增、修改和卸除，不會影響資料庫結構描述或應用程式的設計。 所以，不要吝於嘗試各種不同的索引。  
   
@@ -79,7 +81,7 @@ ms.locfileid: "68081543"
 4.  建立或維護索引時，決定可能會提升效能的索引選項。 例如，`ONLINE` 索引選項對於在現有的大型資料表上建立叢集索引就有幫助。 ONLINE 選項會在建立或重建索引的同時，允許繼續進行基礎資料上的並行活動。 如需詳細資訊，請參閱 [設定索引選項](../relational-databases/indexes/set-index-options.md)。  
   
 5.  決定最理想的索引儲存位置。 非叢集索引可以作為基礎資料表儲存在相同的檔案群組中，或儲存在不同的檔案群組中。 藉由增加磁碟 I/O 效能，索引的儲存位置可提升查詢效能。 例如，將非叢集索引儲存在不同磁碟機上 (與資料表檔案群組不同的磁碟機) 的檔案群組中，可以同時讀取多部磁碟機，所以可提升效能。  
-     此外，叢集和非叢集索引可跨多個檔案群組使用資料分割結構描述。 資料分割使大型資料表或索引的管理更為容易，這是因為您可以快速有效地存取或管理資料的子集，同時維持整體集合的完整性。 如需相關資訊，請參閱 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)。 當您考慮使用分割時，請決定是否應該校準索引，也就是說，使用分割資料表相同的方法進行分割，或獨立進行分割。   
+     此外，叢集和非叢集索引可跨多個檔案群組使用資料分割結構描述。 資料分割使大型資料表或索引的管理更為容易，這是因為您可以快速有效地存取或管理資料的子集，同時維持整體集合的完整性。 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。 當您考慮使用分割時，請決定是否應該校準索引，也就是說，使用分割資料表相同的方法進行分割，或獨立進行分割。   
 
 ##  <a name="General_Design"></a> 一般索引設計指導方針  
  經驗豐富的資料庫管理員可以設計出一組數量適中的索引，但即使是普通複雜的資料庫與工作量，這都是一件非常複雜、費時，且容易出錯的工作。 了解資料庫、查詢和資料行的特性可以協助您設計最佳化的索引。  
@@ -512,7 +514,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
      在不需要全資料表索引時，建立篩選索引可以縮減非叢集索引的磁碟儲存量。 您可以使用多個篩選索引來取代全資料表的非叢集索引，而不會大幅增加儲存需求。  
   
- 當資料行包含定義良好的資料子集且查詢在 SELECT 陳述式中會參考這些資料時，篩選索引很有用。 範例如下：  
+ 當資料行包含定義良好的資料子集且查詢在 SELECT 陳述式中會參考這些資料時，篩選索引很有用。 範例包括：  
   
 -   僅包含一些非 NULL 值的疏鬆資料行。  
   
@@ -646,7 +648,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 #### <a name="data-storage-uses-columnstore-and-rowstore-compression"></a>使用資料行存放區和資料列存放區壓縮的資料儲存
 討論資料行存放區索引時，我們使用「資料列存放區」  和「資料行存放區」  等字詞強調資料儲存格式。 資料行存放區索引會使用這兩種儲存類型。
 
- ![Clustered Columnstore Index](../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")
+ ![叢集資料行存放區索引](../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "叢集資料行存放區索引")
 
 - 「資料行存放區」  是以邏輯方式組織成資料表的資料，其中包含資料列和資料行，並且會以資料行取向的資料格式實際儲存。
   
@@ -673,7 +675,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 在每個資料列群組中，每個資料行都有一些資料行值。 這些值稱為**資料行區段**。 每一個資料列群組會針對資料表中的每一個資料行包含一個資料行區段。 在每個資料列群組中，每個資料行都有一個資料行區段。
 
-![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment") 
+![資料行區段](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "資料行區段") 
  
 當資料行存放區索引壓縮資料列群組時，它會個別壓縮每一個資料行區段。 若要解壓縮整個資料行，資料行存放區索引只需要解壓縮每個資料列群組中的一個資料行區段。   
 

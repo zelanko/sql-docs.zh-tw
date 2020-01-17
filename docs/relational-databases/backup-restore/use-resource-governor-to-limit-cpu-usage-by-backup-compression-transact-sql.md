@@ -1,7 +1,7 @@
 ---
-title: 使用資源管理員進行備份壓縮，以限制 CPU 使用率 (Transact-SQL) | Microsoft 文件
-ms.custom: ''
-ms.date: 03/16/2017
+title: 限制 CPU 負載：使用 Resource Governor 進行備份壓縮
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: be8d6f23c880d96f46aecc433d46b0971995278d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73fd6d47d3108fbfc46e1d1a6189ac21892a3eb9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041306"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245406"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>使用資源管理員進行備份壓縮，以限制 CPU 使用率 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ GO
   
 ```  
   
- [&#91;回到頁首&#93;](#Top)  
+ [[頁首]](#Top)  
   
 ##  <a name="configure_RG"></a> 設定資源管理員來限制 CPU 使用量  
   
@@ -126,7 +126,7 @@ GO
   
  **設定資源管理員 (SQL Server Management Studio)**  
   
--   [使用範本來設定資源管理員](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)  
+-   [使用範本設定資源管理員](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)  
   
 -   [建立資源集區](../../relational-databases/resource-governor/create-a-resource-pool.md)  
   
@@ -238,7 +238,7 @@ GO
   
 ```  
   
- [&#91;回到頁首&#93;](#Top)  
+ [[頁首]](#Top)  
   
 ##  <a name="verifying"></a> 確認目前工作階段的分類 (Transact-SQL)  
  (選擇性) 以您在分類函數中指定之使用者的身分登入，然後在 [物件總管] 中發出下列 [SELECT](../../t-sql/queries/select-transact-sql.md) 陳述式，藉以確認工作階段分類：  
@@ -258,7 +258,7 @@ GO
 > [!NOTE]  
 >  如需此 SELECT 陳述式呼叫的動態管理檢視相關資訊，請參閱 [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 和 [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)。  
   
- [&#91;頁首&#93;](#Top)  
+ [[頁首]](#Top)  
   
 ##  <a name="creating_compressed_backup"></a> 使用含有限制 CPU 的工作階段來壓縮備份  
  若要在含有限制最大 CPU 的工作階段中建立壓縮備份，請以您在分類函數中指定之使用者的身分登入。 在備份命令中，指定 WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 或選取 [壓縮備份]  ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])。 若要建立壓縮的資料庫備份，請參閱[建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  

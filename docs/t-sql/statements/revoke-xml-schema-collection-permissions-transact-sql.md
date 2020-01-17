@@ -1,6 +1,7 @@
 ---
-title: REVOKE XML 結構描述集合權限 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: REVOKE XML 結構描述集合權限
+description: 使用 Transact-SQL 進行 REVOKE XML 結構描述集合權限。
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: pdw, sql-database
@@ -17,12 +18,12 @@ ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db84729a448ce1d90c016696aef85d2580ede913
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df4f6cb9ed29d5efb5c943d140591c5c97bf124d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913959"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255457"
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE XML 結構描述集合權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -101,7 +102,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *Database_user_with_no_login*  
  指定不含對應伺服器層級主體的資料庫使用者。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  您可以在 [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) 目錄檢視中，看到有關 XML 結構描述集合的資訊。  
   
  從被授與指定了 GRANT OPTION 之權限的主體撤銷權限時，如果未指定 CASCADE，陳述式便會失敗。  

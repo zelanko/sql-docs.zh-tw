@@ -1,6 +1,7 @@
 ---
-title: 檢視並解決合併式發行集的資料衝突 | Microsoft 文件
-ms.custom: ''
+title: 檢視並解決資料衝突 (合併式)
+description: 了解如何檢視並解決 SQL Server 合併式發行集的資料衝突。
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db445d9c80c6a6e2552160dcff721c06d5c107e6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 79dc4b26ee543aa99b9fc90e29f7bb6c7d571555
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907792"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321885"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>合併式複寫的衝突解決
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "72907792"
   
 ## <a name="resolve-conflicts"></a>解決衝突  
   
-1.  連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的「發行者」(或「訂閱者」，如果適用)，然後展開伺服器節點。  
+1.  連線至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的「發行者」(或「訂閱者」，如果適用)，然後展開伺服器節點。  
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
   
@@ -89,7 +90,7 @@ ms.locfileid: "72907792"
   
     |@conflict_logging 值|centralized_conflicts|decentralized_conflicts|  
     |------------------------------|----------------------------|------------------------------|  
-    |**發行者**|1|0|  
+    |**publisher**|1|0|  
     |**訂閱者**|0|1|  
     |**兩者**|1|1|  
   

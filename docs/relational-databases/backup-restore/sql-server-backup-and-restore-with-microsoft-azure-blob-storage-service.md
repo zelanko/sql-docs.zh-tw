@@ -1,7 +1,7 @@
 ---
-title: 使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/25/2019
+title: 使用 Azure Blob 儲存體備份及還原
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 169e437c141d379401b7a3294f0ae852d756374f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041376"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251129"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  ![備份至 Azure Blob 圖形](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "備份至 Azure Blob 圖形")  
+  ![備份至 Azure Blob 儲存體的圖形](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "備份至 Azure Blob 儲存體的圖形")  
   
  本主題說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何備份到 [Microsoft Azure BLOB 儲存體服務](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)，以及如何從該服務進行還原。 本主題也會提供使用 Microsoft Azure Blob 服務來儲存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份的優點摘要。  
   
  SQL Server 可以下列方式將備份儲存到 Microsoft Azure BLOB 儲存體服務：  
   
--   **管理針對 Microsoft Azure 所進行的備份：** 相同的方式也可用於備份到磁碟和磁帶。現在只要指定 URL 作為備份目的地，即可備份至 Microsoft Azure 儲存體。 一如您對於本機儲存體或其他異地選項的處理方式，您可以使用此功能手動備份或設定您自己的備份策略。 此功能又稱為 **SQL Server 備份至 URL**。 如需詳細資訊，請參閱＜ [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)＞。 SQL Server 2012 SP1 CU2 或更新版本皆提供此功能。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 已增強這項功能，透過使用區塊 Blob、共用存取簽章和等量配置，提升效能和功能。  
+-   **管理針對 Microsoft Azure 所進行的備份：** 相同的方式也可用於備份到磁碟和磁帶。現在只要指定 URL 作為備份目的地，即可備份至 Microsoft Azure 儲存體。 一如您對於本機儲存體或其他異地選項的處理方式，您可以使用此功能手動備份或設定您自己的備份策略。 此功能又稱為 **SQL Server 備份至 URL**。 如需詳細資訊，請參閱 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。 SQL Server 2012 SP1 CU2 或更新版本皆提供此功能。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 已增強這項功能，透過使用區塊 Blob、共用存取簽章和等量配置，提升效能和功能。  
   
     > [!NOTE]  
     >  若是使用 SQL Server 2012 SP1 CU2 之前的 SQL Server 版本，則可使用 Microsoft Azure 工具的 SQL Server 備份增益集，快速而輕鬆地建立要儲存到 Microsoft Azure 儲存體的備份。 如需詳細資訊，請參閱＜ [下載中心](https://go.microsoft.com/fwlink/?LinkID=324399)＞。  
@@ -63,7 +63,7 @@ ms.locfileid: "68041376"
   
 ## <a name="see-also"></a>另請參閱  
 
-[SQL Server 備份至 URL 的最佳作法和疑難排解](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+[SQL Server 備份至 URL 的最佳做法和疑難排解](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
 
 [系統資料庫的備份與還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
 

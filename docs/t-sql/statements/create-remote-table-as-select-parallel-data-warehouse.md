@@ -1,6 +1,6 @@
 ---
-title: CREATE REMOTE TABLE AS SELECT (平行處理資料倉儲) | Microsoft Docs
-ms.custom: ''
+title: CREATE REMOTE TABLE AS SELECT (平行處理資料倉儲)
+ms.custom: seo-dt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -10,12 +10,12 @@ ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fbebdf4b35b10e584c023e0d34eb8a652d15c1cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117321"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401698"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "68117321"
   
  若要設定遠端伺服器，請參閱[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的＜Remote Table Copy＞(遠端資料表複製)。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -73,10 +73,10 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 >  建議您使用 IP 位址來連線到遠端伺服器。 視您的網路組態而定，使用電腦名稱來進行連線可能需要額外的步驟，才能使用您的非應用裝置 DNS 伺服器將名稱解析成正確的伺服器。 使用 IP 位址來進行連線時，則不需要此步驟。 如需詳細資訊，請參閱[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的＜Use a DNS Forwarder to Resolve Non-Appliance DNS Names (Analytics Platform System)＞(使用 DNS 轉寄站來解析非應用裝置 DNS 名稱 (Analytics Platform System))。  
   
  *user_name*  
- 有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入名稱。 字元數上限為 128。  
+ 有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入名稱。 字元數目上限是 128。  
   
  *password*  
- 登入密碼。 字元數上限為 128。  
+ 登入密碼。 字元數目上限是 128。  
   
  *batch_size*  
  每個批次的資料列數目上限。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會將資料列分批傳送至目的地伺服器。 *Batch_size* 是一個大於等於 0 的正整數。 預設值為 0。  
@@ -123,7 +123,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 ## <a name="metadata"></a>中繼資料  
  請使用 [sys.dm_pdw_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md) 來檢視將所選資料複製到遠端 SMP 伺服器的進度。 類型為 PARALLEL_COPY_READER 的資料列會包含此資訊。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  CREATE REMOTE TABLE 會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來連線到遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體；不會使用 Windows 驗證。  
   
  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]對外網路必須使用防火牆，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接埠、系統管理連接埠及管理連接埠除外。  
@@ -143,7 +143,7 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 AS SELECT <select_criteria>;  
 ```  
   
-### <a name="b-querying-the-sysdmpdwdmsworkers-dmv-for-remote-table-copy-status"></a>B. 查詢 sys.dm_pdw_dms_workers DMV 以了解遠端資料表複製狀態  
+### <a name="b-querying-the-sysdm_pdw_dms_workers-dmv-for-remote-table-copy-status"></a>B. 查詢 sys.dm_pdw_dms_workers DMV 以了解遠端資料表複製狀態  
  此查詢示範如何檢視遠端資料表複製的複製狀態。  
   
 ```  

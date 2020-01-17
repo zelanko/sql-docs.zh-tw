@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: daa68b80718903051fdb2cfd9dd8b15b64b68b23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2346c770c5fec742d7c5805f028bd87bebaf71b1
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014590"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822489"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>執行 Always On 可用性群組的已規劃手動容錯移轉 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68014590"
 > [!NOTE]  
 >  如果次要和主要複本都設定成自動容錯移轉模式，在次要複本同步完畢之後，其也可作為自動容錯移轉的目標。 如需詳細資訊，請參閱[可用性模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  
    
-##  <a name="BeforeYouBegin"></a> 開始之前 
+##  <a name="BeforeYouBegin"></a>開始之前 
 
 >[!IMPORTANT]
 >若要在不使用叢集管理員的情況下容錯移轉讀取級別可用性群組，須遵循特定程序。 當可用性群組的 CLUSTER_TYPE = NONE 時，請遵循[容錯移轉讀取級別可用性群組上的主要複本](#fail-over-the-primary-replica-on-a-read-scale-availability-group)下的程序。
@@ -50,10 +50,10 @@ ms.locfileid: "68014590"
 -   目標次要複本目前必須與主要複本同步。 該次要複本上的所有次要資料庫皆必須聯結至可用性群組。 其也必須與其對應的主要資料庫同步 (亦即，本機次要資料庫必須為 SYNCHRONIZED)。 
   
     > [!TIP] 
-    >  若要判斷次要複本的容錯移轉整備，請查詢 [sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 動態管理檢視中的 **is_failover_ready** 資料行。 或者，您可以查看 [AlwaysOn 群組儀表板](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)的**容錯移轉整備**資料行。 
+    >  若要判斷次要複本的容錯移轉整備，請查詢 [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 動態管理檢視中的 **is_failover_ready** 資料行。 或者，您可以查看 [AlwaysOn 群組儀表板](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)的**容錯移轉整備**資料行。 
 -   只有在目標次要複本上才支援這個工作。 您必須連接到裝載目標次要複本的伺服器執行個體。 
   
-###  <a name="Security"></a> 安全性 
+###  <a name="Security"></a> Security 
   
 ####  <a name="Permissions"></a> 權限 
  可用性群組需要 ALTER AVAILABILITY GROUP 權限。 同時也需要 CONTROL AVAILABILITY GROUP、ALTER ANY AVAILABILITY GROUP 或 CONTROL SERVER 權限。 

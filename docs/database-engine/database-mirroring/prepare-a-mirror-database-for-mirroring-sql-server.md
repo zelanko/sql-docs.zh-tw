@@ -1,6 +1,7 @@
 ---
-title: 準備鏡像資料庫以進行鏡像 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 準備資料庫以進行鏡像
+description: 了解如何準備 SQL Server 資料庫，進行資料庫鏡像。
+ms.custom: seo-lt-2019
 ms.date: 11/10/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 33c9db8ae95807f0b95141945bddaef8560608b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f93ea5a9b37abcfac0310619b971e3ec5f1e625f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009963"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255984"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>準備鏡像資料庫以進行鏡像 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +87,7 @@ ms.locfileid: "68009963"
   
 -   對於實際執行的資料庫，您一定要備份至其他裝置。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  備份資料庫時，TRUSTWORTHY 設為 OFF。 因此，新鏡像資料庫上的 TRUSTWORTHY 一律為 OFF。 您必須採取額外的設定步驟，以確保資料庫在容錯移轉之後的可信度。 如需詳細資訊，請參閱 [設定鏡像資料庫以使用 Trustworthy 屬性 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)中準備鏡像資料庫。  
   
  如需啟用鏡像資料庫的資料庫主要金鑰之自動解密的相關資訊，請參閱 [設定加密鏡像資料庫](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)。  
@@ -97,7 +98,7 @@ ms.locfileid: "68009963"
 ##  <a name="PrepareToRestartMirroring"></a> 若要準備現有的鏡像資料庫以重新啟動鏡像  
  如果鏡像已經移除，而且鏡像資料庫仍處於 RECOVERING 狀態，您就可以重新啟動鏡像。  
   
-1.  至少取得主體資料庫上的一個記錄備份。 如需詳細資訊，請參閱 [備份交易記錄 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)中準備鏡像資料庫。  
+1.  至少取得主體資料庫上的一個記錄備份。 如需詳細資訊，請參閱 [備份交易記錄 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)資料庫還原至新位置，並選擇性地重新命名資料庫。  
   
 2.  在鏡像資料庫上，使用 RESTORE WITH NORECOVERY 來還原自從移除鏡像之後對主體資料庫進行的所有記錄備份。 如需詳細資訊，請參閱 [還原交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)中準備鏡像資料庫。  
   
@@ -139,7 +140,7 @@ ms.locfileid: "68009963"
 ###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  開始進行資料鏡像工作階段之前，您必須先建立鏡像資料庫。 您應該在開始鏡像工作階段之前完成此動作。  
   
- 這個範例會使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫，依預設採用簡單復原模式。  
+ 此範例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫，依預設採用簡單復原模式。  
   
 1.  若要以 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫來使用資料庫鏡像，請將它修改為使用完整復原模式：  
   
@@ -262,7 +263,7 @@ ms.locfileid: "68009963"
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
+ [資料庫鏡像和 Always On 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [設定資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [備份並還原全文檢索目錄與索引。](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [資料庫鏡像和全文檢索目錄 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)   

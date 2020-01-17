@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd0efece05be169ce220d6e16a4bebf10b5ca36d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082927"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257662"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "68082927"
 ##  <a name="view"></a> 檢視全文檢索索引的屬性
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>使用 Transact-SQL 檢視全文檢索索引的屬性
 
-|目錄或動態管理檢視|Description|  
+|目錄或動態管理檢視|描述|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|針對通往全文檢索索引參考的每個全文檢索目錄，各傳回一個資料列。|  
 |[sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)|屬於全文檢索索引一部分的每個資料行各有一個資料列。|  
@@ -62,7 +62,7 @@ ms.locfileid: "68082927"
 |[sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)|傳回有關目前進行中之全文檢索索引母體擴展的資訊。|  
  
 ### <a name="view-the-properties-of-a-full-text-index-with-management-studio"></a>使用 Management Studio 檢視全文檢索索引的屬性 
-1.  在 Management Studio 中，於物件總管中展開伺服器。  
+1.  在 Management Studio 中，於 [物件總管] 中展開伺服器。  
   
 2.  展開 [資料庫]  ，然後展開包含全文檢索索引的資料庫。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68082927"
   
 5.  在 **[選取頁面]** 窗格中，您可以選取下列任何頁面：  
   
-    |頁面|Description|  
+    |頁面|描述|  
     |----------|-----------------|  
     |**一般**|顯示全文檢索索引的基本屬性。 這些屬性包括許多可修改的屬性和一些無法變更的屬性，例如資料庫名稱、資料表名稱，以及全文檢索索引鍵資料行的名稱。 可修改的屬性包括：<br /><br /> **全文檢索索引停用字詞表**<br /><br /> **全文檢索索引已啟用**<br /><br /> **變更追蹤**<br /><br /> **搜尋屬性清單**|  
     |**資料行**|顯示可用於全文檢索索引的資料表資料行。 系統會針對選取的資料行建立全文檢索索引。 您可以選取任意數目的可用資料行，以便包含在全文檢索索引中。 如需詳細資訊，請參閱[擴展全文檢索索引](populate-full-text-indexes.md)。|
@@ -85,7 +85,7 @@ ms.locfileid: "68082927"
   
  下表列出索引資料表和資料行的相關全文檢索屬性及其相關的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數。  
   
-|屬性|Description|函數|  
+|屬性|描述|函式|  
 |--------------|-----------------|--------------|  
 |**FullTextTypeColumn**|在資料表中，用來保存資料行文件類型資訊的 TYPE COLUMN。|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
 |**IsFulltextIndexed**|資料行是否已啟用全文檢索索引。|COLUMNPROPERTY|  

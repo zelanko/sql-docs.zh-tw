@@ -1,6 +1,5 @@
 ---
-title: 範例使用 ELEMENTS 指示詞來指定 XSINIL | Microsoft Docs
-ms.custom: ''
+title: 使用 ELEMENTS 指示詞來指定 XSINIL | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,14 +11,15 @@ helpviewer_keywords:
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b93c7b9acfc5a3e197709cf71ec0c7923fe7d91c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 98b28f2115634c8dd173adb22e76ec6a92cd8928
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943485"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254122"
 ---
-# <a name="example-specifying-xsinil-with-the-elements-directive"></a>範例使用 ELEMENTS 指示詞指定 XSINIL
+# <a name="example-specifying-xsinil-with-the-elements-directive"></a>範例：使用 ELEMENTS 指示詞指定 XSINIL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   下列查詢會指定 `ELEMENTS` 指示詞，從查詢結果產生元素中心的 XML。  
   
@@ -76,6 +76,6 @@ FOR XML RAW, ELEMENTS XSINIL ;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 FOR XML 的 RAW 模式](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
+ [搭配 FOR XML 使用 RAW 模式](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

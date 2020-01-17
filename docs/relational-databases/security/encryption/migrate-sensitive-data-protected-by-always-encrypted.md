@@ -1,6 +1,7 @@
 ---
-title: 使用 Always Encrypted 將大量的加密資料載入資料行 | Microsoft Docs
-ms.custom: ''
+title: 使用 Always Encrypted 將大量的加密資料載入資料行
+description: 了解如何使用 Always Encrypted 與 SQL Server 將大量資料載入資料行。
+ms.custom: seo-lt-2019
 ms.date: 11/04/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9faa58382c1916d6691c790e955e1dbc409bb119
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 4c76c8896d19bed29bd8e71f6726b05cc0526e91
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594160"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558198"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>使用 Always Encrypted 將大量的加密資料載入資料行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,12 +72,12 @@ ms.locfileid: "73594160"
  
 不要使用此選項來開發新的應用程式。 請改用可提供 API 隱藏單一工作階段之密碼編譯中繼資料檢查的用戶端驅動程式，例如適用於 SQL Server 之 .NET Framework Data Provider 中的 [AllowEncryptedValueModifications] 選項。請參閱 [使用 SqlBulkCopy 複製加密的資料](develop-using-always-encrypted-with-net-framework-data-provider.md#copying-encrypted-data-using-sqlbulkcopy)。 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 - [使用 Always Encrypted 與 SQL Server Management Studio 查詢資料行](always-encrypted-query-columns-ssms.md)
 - [使用 Always Encrypted 開發應用程式](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>另請參閱  
-- [永遠加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [一律加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [使用 Always Encrypted 與 SQL Server [匯入及匯出精靈]，將資料移轉進或移轉出資料行](always-encrypted-migrate-using-import-export-wizard.md)
 - [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
 - [ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   

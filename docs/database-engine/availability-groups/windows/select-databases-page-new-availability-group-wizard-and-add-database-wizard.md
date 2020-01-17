@@ -1,6 +1,7 @@
 ---
-title: 選取資料庫頁面 (新增可用性群組精靈和新增資料庫精靈) | Microsoft Docs
-ms.custom: ''
+title: 選取資料庫頁面 (新增可用性群組精靈 & 新增資料庫精靈)
+description: 說明在 SQL Server Management Studio GUI 中新增可用性群組和新增資料庫精靈的 [選取資料庫] 頁面。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 04836a29531c1eaab61277891e22e31b669d9ffd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0560e17a7ab582b52b4f0a5db822dbd2ab5fa5f5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014195"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235381"
 ---
 # <a name="select-databases-page-new-availability-group-wizard-and-add-database-wizard"></a>選取資料庫頁面 (新增可用性群組精靈和加入資料庫精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

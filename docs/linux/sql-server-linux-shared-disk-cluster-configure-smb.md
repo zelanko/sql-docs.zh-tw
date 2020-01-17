@@ -1,6 +1,6 @@
 ---
-title: 設定容錯移轉叢集執行個體儲存體 SMB - Linux 上的 SQL Server
-description: ''
+title: 設定 SMB 儲存體 FCI - Linux 上的 SQL Server
+description: 了解如何使用 Linux 上的 SQL Server SMB 儲存體，設定容錯移轉叢集執行個體 (FCI)。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +8,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e93b7fac2f75758a0a95a4053ee0a989e410c70e
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 498518fbc119629d2e7da7717b1f6e41c68984ce
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032319"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558575"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>設定容錯移轉叢集執行個體 - SMB - Linux 上的 SQL Server
 
@@ -88,9 +88,9 @@ ms.locfileid: "68032319"
       cp /var/opt/mssql/data/* <TempDir>
       ```
       
-      \<TempDir> 是上一個步驟中資料夾的名稱。
+      \<TempDir> 是上一個步驟中的資料夾名稱。
       
-   1. 驗證檔案位於目錄中。
+   1. 確認檔案位於目錄中。
       
       ```bash
       ls <TempDir>
@@ -98,13 +98,13 @@ ms.locfileid: "68032319"
       
       \<TempDir> 是步驟 d 中資料夾的名稱。
       
-   1. 將檔案從現有 SQL Server 資料目錄中刪除。 如果成功，您將不會收到任何通知。
+   1. 將檔案從現有的 SQL Server 資料目錄中刪除。 如果成功，您將不會收到任何通知。
       
       ```bash
       rm - f /var/opt/mssql/data/*
       ```
       
-   1. 驗證檔案已刪除。 
+   1. 確認檔案已被刪除。 
       
       ```bash
       ls /var/opt/mssql/data
@@ -144,7 +144,7 @@ ms.locfileid: "68032319"
       su mssql
       ```
       
-   1. 將暫存目錄中的檔案複製到 /var/opt/mssql/data。 如果成功，您將不會收到任何通知。
+   1. 複製暫存目錄 /var/opt/mssql/data 中的檔案。 如果成功，您將不會收到任何通知。
       
       ```bash
       cp /var/opt/mssql/tmp/* /var/opt/mssql/data
@@ -234,7 +234,7 @@ ms.locfileid: "68032319"
    
    1. 輸入 exit 來退出超級使用者。
    
-   1. 若要測試，請在該資料夾中建立資料庫。 下列範例使用 sqlcmd 來建立資料庫，將內容切換至它，驗證檔案存在於 OS 層級，然後刪除暫存位置。 您可以使用 SSMS。
+   1. 若要進行測試，請在該資料夾中建立資料庫。 下列範例使用 sqlcmd 來建立資料庫，將內容切換至它，驗證檔案存在於 OS 層級，然後刪除暫存位置。 您可以使用 SSMS。
    
    1. 將共用取消掛接 
       
@@ -250,7 +250,7 @@ ms.locfileid: "68032319"
    
 1. 對其他節點重複這些步驟。
 
-您現在可以設定 FCI。
+您現在已準備好設定 FCI。
 
 ## <a name="next-steps"></a>後續步驟
 

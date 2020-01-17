@@ -1,6 +1,7 @@
 ---
-title: 教學課程：使用以原則為基礎的管理來管理伺服器 | Microsoft Docs
-ms.custom: ''
+title: 教學課程：使用原則式管理來管理伺服器
+description: 本教學課程將說明如何建立和套用 off-by-default 原則，以及命名標準原則。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d98e1f1332d75514887858a11087e94bca4caf32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed0fc25f704624e740b1c3d1c1a8d2671c692f03
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021487"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558227"
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>教學課程：使用原則式管理來管理伺服器
+# <a name="tutorial-managing-servers-using-policy-based-management"></a>教學課程：使用原則式管理來管理伺服器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 歡迎使用「使用以原則為基礎的管理原則來管理伺服器」教學課程。 本教學課程的主要對象是熟悉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 但剛接觸以原則為基礎之管理的使用者。  
   

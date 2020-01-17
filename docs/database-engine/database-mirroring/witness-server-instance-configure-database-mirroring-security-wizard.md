@@ -1,6 +1,7 @@
 ---
-title: 見證伺服器執行個體 (設定資料庫鏡像安全性精靈) | Microsoft Docs
-ms.custom: ''
+title: 設定安全性精靈：見證伺服器執行個體
+description: '說明「設定資料庫鏡像安全性精靈」的 [見證伺服器執行個體] 頁面。 '
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e50362e86273f00c6bcfe13a3d6c2120ee36e33d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 56cf4c9c993e088e8e51981399c87a4cb9a56047
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050584"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822508"
 ---
 # <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>見證伺服器執行個體 (設定資料庫鏡像安全性精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "68050584"
 > [!NOTE]  
 >  連接到伺服器執行個體時，「設定資料庫鏡像安全性精靈」會使用 **[連接到伺服器]** 對話方塊中提供的認證。 這些認證與鏡像工作階段的認證不同，後者會使用以服務方式執行伺服器執行個體之啟動帳戶的認證。  
   
- **接聽程式通訊埠**  
+ **接聽程式連接埠**  
  此選項的行為會視此伺服器執行個體的鏡像端點是否存在，如下：  
   
 -   如果伺服器執行個體沒有接聽程式通訊埠，在 [通訊埠]  文字方塊中就會顯示通訊埠編號 5022。 您可以輸入任何可用的通訊埠編號，例如 7022。  

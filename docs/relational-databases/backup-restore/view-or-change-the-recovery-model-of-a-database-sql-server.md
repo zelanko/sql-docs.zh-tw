@@ -1,7 +1,7 @@
 ---
-title: 檢視或變更資料庫的復原模式 (SQL Server) | Microsoft 文件
-ms.custom: ''
-ms.date: 05/10/2019
+title: 設定資料庫復原模式
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bbf6d7f547c0030512a00a46a335a32cfe95f994
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908804"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254047"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>檢視或變更資料庫的復原模式 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "72908804"
   如需更深入的解釋，請參閱[復原模式](recovery-models-sql-server.md)。
   
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="BeforeYouBegin"></a>開始之前  
   
 
--   從[完整復原模式或大量記錄復原模式](back-up-a-transaction-log-sql-server.md) **before** switching from the [full recovery or bulk-logged recovery model](recovery-models-sql-server.md).  
+-   從[完整復原模式或大量記錄復原模式](back-up-a-transaction-log-sql-server.md)切換**之前**，請先[備份交易記錄](recovery-models-sql-server.md)。  
   
 -   在大量記錄模式下無法使用時間點復原。 在需要交易記錄還原的大量記錄復原模式下執行交易，可能會有資料遺失的風險。 若要在災害復原的情況下獲得最佳資料復原能力，請只在下列情況下切換到大量記錄復原模式：  
   
@@ -50,7 +50,7 @@ ms.locfileid: "72908804"
   
 **注意！** 如果您在大量作業期間切換到完整復原模式，大量作業記錄將從最小記錄變成完整記錄，反之亦然。  
   
-###  <a name="Security"></a> 必要權限  
+###  <a name="Security"></a>必要權限  
    需要資料庫的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -136,7 +136,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
 -   [建立作業](../../ssms/agent/create-a-job.md)  
   
--   [啟用或停用作業](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> 相關內容  
   

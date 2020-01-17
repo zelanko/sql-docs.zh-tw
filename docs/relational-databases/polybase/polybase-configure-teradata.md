@@ -1,6 +1,7 @@
 ---
-title: 設定 PolyBase 存取 Teradata 中的外部資料 | Microsoft Docs
-ms.date: 04/23/2019
+title: 存取外部資料：Teradata - PolyBase
+ms.date: 12/13/2019
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 25912e5d68f03c98c4148f295a7fba76236892e2
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 2ade016ec88f6f26655fea8ab5249e1f846ee74a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710542"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75225969"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>設定 PolyBase 存取 Teradata 中的外部資料
 

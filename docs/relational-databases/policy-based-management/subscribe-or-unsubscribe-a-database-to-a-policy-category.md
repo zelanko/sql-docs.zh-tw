@@ -1,6 +1,7 @@
 ---
-title: 訂閱或取消訂閱原則類別目錄資料庫 | Microsoft Docs
-ms.custom: ''
+title: 讓資料庫訂閱或取消訂閱原則類別目錄
+description: 說明如何使用 SQL Server Management Studio 和 Transact-SQL (T-SQL) 讓資料庫訂閱或取消訂閱原則類別目錄，以進行原則式管理。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d653db8d1fcc6b2344763ed6f3988a33a297fd69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6425834958f88e86726f1ec2137bc6917a889671
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021556"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558223"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>讓資料庫訂閱或取消訂閱原則類別目錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中讓資料庫訂閱或取消訂閱原則類別目錄。  
+  本主題說明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中讓資料庫訂閱或取消訂閱原則類別目錄。  
   
  **本主題內容**  
   
@@ -37,7 +38,7 @@ ms.locfileid: "68021556"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 db_owner 固定資料庫角色中的成員資格。  
@@ -72,7 +73,7 @@ ms.locfileid: "68021556"
      **執行模式**  
      顯示原則的執行模式。  
   
-     **記錄**  
+     **History**  
      按一下 [檢視記錄] 超連結可開啟記錄檔檢視器，以查看原則記錄。  
   
 4.  若要訂閱原則式管理類別目錄，請選取 [已訂閱]  資料行下類別目錄的對話方塊。 若要取消訂閱類別目錄，請清除核取方塊。  
