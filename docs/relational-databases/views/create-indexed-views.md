@@ -18,12 +18,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9db1b4b1e08bae56a65a45d6c096f701f4172203
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123514"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325510"
 ---
 # <a name="create-indexed-views"></a>建立索引檢視表
 
@@ -54,19 +54,19 @@ ms.locfileid: "68123514"
 若要確定檢視表可以正確地維護並傳回一致的結果，索引檢視表需要數個 SET 選項的固定值。 發生下列狀況時，必須將下表中的 SET 選項設為 [必要值]  欄中所顯示的值：
 
 - 建立檢視表和檢視表的後續索引。
-- 建立資料表時檢視中所參考的基底資料表。
+- 建立檢視時，檢視中所參考的基底資料表。
 - 有在任何參與索引檢視表的資料表上執行的任何插入、更新或刪除作業。 這項需求包括大量複製、複寫及分散式查詢等作業。
 - 查詢最佳化工具會利用索引檢視表來產生查詢計劃。
 
 |Set 選項|必要值|預設伺服器值|預設<br /><br /> OLE DB 與 ODBC 值|預設<br /><br /> DB-Library 值|
 |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|
-|ANSI_NULLS|ON|ON|ON|OFF|
-|ANSI_PADDING|ON|ON|ON|OFF|
-|ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|
-|ARITHABORT|ON|ON|OFF|OFF|
-|CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|
+|ANSI_NULLS|開啟|開啟|開啟|OFF|
+|ANSI_PADDING|開啟|開啟|開啟|OFF|
+|ANSI_WARNINGS<sup>1</sup>|開啟|開啟|開啟|OFF|
+|ARITHABORT|開啟|開啟|OFF|OFF|
+|CONCAT_NULL_YIELDS_NULL|開啟|開啟|開啟|OFF|
 |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|
+|QUOTED_IDENTIFIER|開啟|開啟|開啟|OFF|
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 
 <sup>1</sup> 將 `ANSI_WARNINGS` 設為 ON 會隱含地將 `ARITHABORT` 設為 ON。
@@ -151,7 +151,7 @@ ms.locfileid: "68123514"
 
 <a name="nondeterministic"></a> 牽涉到將字元字串隱含轉換成 **datetime** 或 **smalldatetime** 的運算式被視為非決定性的。 如需詳細資訊，請參閱[將常值日期字串轉換成 DATE 值的非決定性轉換](../../t-sql/data-types/nondeterministic-convert-date-literals.md)。
 
-### <a name="Security"></a> 安全性
+### <a name="Security"></a> Security
 
 #### <a name="Permissions"></a> 權限
 

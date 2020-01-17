@@ -1,6 +1,5 @@
 ---
-title: 進階檢視 SQL Server 中擴充事件的目標資料 | Microsoft Docs
-ms.custom: ''
+title: 進階檢視擴充事件的目標資料
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,13 +9,14 @@ ms.topic: tutorial
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0070948697c7aaed76330da233bdf3739f5b3e3a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f5bf55c020e773e8d724a3c84bcee4dd78307a4f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909418"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255764"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>進階檢視 SQL Server 中擴充事件的目標資料
 
@@ -91,7 +91,7 @@ ms.locfileid: "72909418"
 
 
 - 每次啟動事件工作階段時，系統會將大整數內嵌至新的檔案名稱，讓檔案名稱設為唯一，而且與啟動工作階段的上述情況不同。
-  - *範例：* Checkpoint_Begins_ES_0_131103935140400000.xel
+  - *範例︰* Checkpoint_Begins_ES_0_131103935140400000.xel
 
 
 - .XEL 內的內容不是可使用 Notepad.exe 檢視的純文字。

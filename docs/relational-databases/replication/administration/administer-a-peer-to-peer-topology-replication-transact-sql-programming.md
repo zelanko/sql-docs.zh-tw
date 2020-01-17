@@ -1,6 +1,7 @@
 ---
-title: 管理點對點拓撲 (複寫 Transact-SQL 程式設計) | Microsoft Docs
-ms.custom: ''
+title: 管理點對點拓撲 (複寫 SP)
+description: 了解如何使用複寫預存程序來管理點對點拓撲，例如新增發行項或進行結構描述變更。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 633e1a3cc6db676065d588c570d75c6b5a376f6d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 712a0514bf4fb9e4c66e0d6f7b0475ec5a957dde
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908072"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322195"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>管理點對點拓撲 (複寫 Transact-SQL 程式設計)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +39,10 @@ ms.locfileid: "72908072"
   
 4.  使用 [bcp 公用程式](../../../tools/bcp-utility.md)，以手動方式在所有節點大量複製新資料表的資料。  
   
-5.  執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)，在拓撲中的每個節點建立新發行項。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
+5.  執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) ，在拓撲中的每個節點建立新發行項。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
     > [!NOTE]  
-    >  在執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 之後，複寫會將發行項自動新增至拓撲中的訂閱。  
+    >  在執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 之後，複寫會將發行項自動加入至拓撲中的訂閱。  
   
 6.  重新啟動拓撲中每個節點的「散發代理程式」。  
 
@@ -65,6 +66,6 @@ ms.locfileid: "72908072"
 ## <a name="see-also"></a>另請參閱  
  [複寫管理常見問題集](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [SQL Server 資料庫的備份與還原](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [點對點異動複寫](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [@loopback_detection](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

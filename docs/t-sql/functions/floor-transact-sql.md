@@ -20,15 +20,15 @@ ms.assetid: 4f26c784-9240-491f-b854-754be3fccae4
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21a350c7f033d7d80ccf64a3fd894ee81fea231b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e366876c5b71f410f05b7ed4483347b1f754686
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116467"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249803"
 ---
 # <a name="floor-transact-sql"></a>FLOOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回小於或等於指定數值運算式的最大整數。  
   
@@ -44,7 +44,7 @@ FLOOR ( numeric_expression )
  *numeric_expression*  
  為精確數值或近似數值資料類型類別目錄的運算式，但 **bit** 資料類型除外。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  傳回與 *numeric_expression*相同的類型。  
   
 ## <a name="examples"></a>範例  

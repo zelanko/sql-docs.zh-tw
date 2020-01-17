@@ -1,6 +1,7 @@
 ---
-title: 從資料庫鏡像工作階段移除見證 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 移除資料庫鏡像見證
+description: 描述如何使用 SQL Server Management Studio (SSMS) 或 Transact-SQL (T-SQL) 從資料庫鏡像工作階段移除見證。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 75a0363d376a16a19fa0c4a07dd0ed2ad0e71fd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d4ecd428d8d9d76ff4e9a543321d461b3983708
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025267"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822528"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>從資料庫鏡像工作階段移除見證 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "68025267"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
@@ -71,7 +72,7 @@ ms.locfileid: "68025267"
   
 3.  發出下列陳述式：  
   
-     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) *database_name* SET WITNESS OFF  
+     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) 資料庫名稱  SET WITNESS OFF  
   
      其中 *database_name* 是鏡像資料庫的名稱。  
   
@@ -89,7 +90,7 @@ ms.locfileid: "68025267"
 -   如果交易安全性設定為 OFF，則工作階段會以非同步方式作業 (以高效能模式)，而且不需要仲裁。 每當交易安全性關閉時，我們也強烈建議您關閉見證。  
   
 > [!TIP]  
->  資料庫的交易安全性設定會記錄在每個夥伴之 [mirroring_safety_level](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) 和 **mirroring_safety_level_desc** 資料行的 **sys.database_mirroring** 目錄檢視中。  
+>  資料庫的交易安全性設定會記錄在每個夥伴之 **mirroring_safety_level** 和 **mirroring_safety_level_desc** 資料行的 [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) 目錄檢視中。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   

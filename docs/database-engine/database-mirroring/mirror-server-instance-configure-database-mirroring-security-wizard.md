@@ -1,6 +1,7 @@
 ---
-title: 鏡像伺服器執行個體 (設定資料庫鏡像安全性精靈) | Microsoft Docs
-ms.custom: ''
+title: 設定安全性精靈：鏡像伺服器執行個體
+description: 描述 SQL Server Management Studio 中 [設定資料庫鏡像安全性精靈] 的 [鏡像伺服器執行個體] 頁面。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,14 +13,14 @@ f1_keywords:
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d8a311d8792468909fe00f02a051e33326f2483
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d52fa3912bffd084a8f95e79963abcd99158cdd4
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045634"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822392"
 ---
-# <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>鏡像伺服器執行個體 (設定資料庫鏡像安全性精靈)
+# <a name="configure-database-mirrroing-security-wizard-mirror-server-instance"></a>設定資料庫鏡像安全性精靈：鏡像伺服器執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用此頁面來指定有關使用鏡像資料庫之伺服器執行個體的資訊。  
   
@@ -46,7 +47,7 @@ ms.locfileid: "68045634"
 > [!NOTE]  
 >  連接到伺服器執行個體時，「設定資料庫鏡像安全性精靈」會使用 **[連接到伺服器]** 對話方塊中提供的認證。 這些認證與鏡像工作階段的認證不同，後者會使用以服務方式執行伺服器執行個體之啟動帳戶的認證。  
   
- **接聽程式通訊埠**  
+ **接聽程式連接埠**  
  此選項的行為會視此伺服器執行個體的鏡像端點是否存在，如下：  
   
 -   如果伺服器執行個體沒有接聽程式通訊埠，在 **[通訊埠]** 文字方塊中就會顯示通訊埠編號 5022。 您可以使用任何可用的通訊埠編號，例如 7022。  

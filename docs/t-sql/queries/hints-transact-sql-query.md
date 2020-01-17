@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: c86ace5f903befc27e9348201332274e84877299
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ca998b57715b874d6bc9b851f4710bb3c3e749d4
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982285"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75002333"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "73982285"
 > [!CAUTION]  
 > 由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具通常會選取最好的查詢執行計劃；因此，我們建議資深開發人員和資料庫管理員將它當作最後的解決辦法。  
   
-**適用於：**  
+**適用範圍：**  
   
 [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
@@ -92,7 +92,8 @@ ms.locfileid: "73982285"
   | EXPAND VIEWS   
   | FAST number_rows   
   | FORCE ORDER   
-  | { FORCE | DISABLE } EXTERNALPUSHDOWN  
+  | { FORCE | DISABLE } EXTERNALPUSHDOWN
+  | { FORCE | DISABLE } SCALEOUTEXECUTION
   | IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
   | KEEP PLAN   
   | KEEPFIXED PLAN  
@@ -168,7 +169,9 @@ FORCE ORDER
   
 { FORCE | DISABLE } EXTERNALPUSHDOWN  
 強制或停用在 Hadoop 中下推合格運算式的計算。 僅適用於使用 PolyBase 的查詢。 將不會下推到 Azure 儲存體。  
-  
+
+{ FORCE | DISABLE } SCALEOUTEXECUTION 強制或停用 SQL Server 2019 巨量資料叢集中 PolyBase 查詢 (使用外部資表) 的相應放大執行。 只有使用 SQL 巨量資料叢集主要執行個體的查詢才會接受此提示。 相應放大會在巨量資料叢集的計算集區中發生。 
+
 KEEP PLAN  
 強制查詢最佳化工具放寬查詢的估計重新編譯臨界值。 所預估重新編譯臨界值是資料表因執行下列其中一個陳述式而變更預估數目的索引資料行時，即會啟動查詢的自動重新編譯：
 
@@ -275,7 +278,7 @@ ROBUST PLAN
    停用批次模式記憶體授與意見反應。 如需詳細資訊，請參閱[批次模式記憶體授與意見反應](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback)。     
    **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
-  停用資料表變數延後編譯。 如需詳細資訊，請參閱[資料表變數延遲編譯](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).     
+  停用資料表變數延後編譯。 如需詳細資訊，請參閱[資料表變數延遲編譯](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation).     
   **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
    停用交錯執行多重陳述式資料表值函式。 如需詳細資訊，請參閱[交錯執行多重陳述式資料表值函式](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs)。     
@@ -340,7 +343,7 @@ ROBUST PLAN
 <a name="use-plan"></a> USE PLAN N'_xml\_plan_'  
  強制查詢最佳化工具針對 **'** _xml\_plan_ **'** 所指定的查詢使用現有查詢計劃。 USE PLAN 無法搭配 INSERT、UPDATE、MERGE 或 DELETE 陳述式一起使用。  
   
-TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** 將指定資料表提示套用到與 _exposed\_object\_name_ 對應的資料表或檢視。 我們建議您只在 [計劃指南](../../relational-databases/performance/plan-guides.md)的內容中，才將資料表提示當做查詢提示使用。  
+TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** 將資料表提示套用至與 _exposed\_object\_name_相對應的資料表或檢視表。 我們建議您只在 [計劃指南](../../relational-databases/performance/plan-guides.md)的內容中，才將資料表提示當做查詢提示使用。  
   
  _exposed\_object\_name_ 可以是下列其中一個參考：  
   
@@ -357,7 +360,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
 > [!CAUTION] 
 > 使用參數指定 FORCESEEK，會限制最佳化工具所能使用的計畫數目，其限制幅度將大於指定 FORCESEEK 而不指定參數時的限制。 這可能會導致在許多狀況下發生「無法產生計畫」錯誤。 在後續版本中，將會從內部修改最佳化工具，以擴大可使用的計畫範圍。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  除非是在陳述式內使用 SELECT 子句，否則無法在 INSERT 陳述式中指定查詢提示。  
   
  您只能在最上層查詢中指定查詢提示，不能在子查詢中指定查詢提示。 當資料表提示指定為查詢提示時，可以在最上層查詢或子查詢中指定提示。 不過，在 TABLE HINT 子句中針對 _exposed\_object\_name_ 指定之值必須完全符合查詢或子查詢中的公開名稱。  

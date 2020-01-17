@@ -1,6 +1,7 @@
 ---
-title: 使用 SQL Server Management Studio 設定 Always Encrypted | Microsoft Docs
-ms.custom: ''
+title: 使用 SSMS 設定永遠加密
+description: 描述搭配 SQL Server Management Studio (SSMS) 來設定及管理 Always Encrypted 資料庫的工作。
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -12,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ff7ef354fdf3118f68c22bf2ad927070bf8e4b6
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 7c033cf8200103fe6198661f7ed0e3e2a6c3966a
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594427"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557863"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 設定永遠加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,15 +35,15 @@ SSMS 不支援下列兩者之間的角色隔離：管理資料庫的人員 (DBA)
 
 - [使用 SQL Server Management Studio 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-ssms.md)
 - [使用 SQL Server Management Studio 輪替 Always Encrypted 金鑰](rotate-always-encrypted-keys-using-ssms.md)
-- [使用 Always Encrypted 精靈設定資料行加密](always-encrypted-wizard.md)
+- [使用 [Always Encrypted 精靈] 設定資料行加密](always-encrypted-wizard.md)
 - [使用 Always Encrypted 與 DAC 套件設定資料行加密](configure-always-encrypted-using-dacpac.md)
 - [使用 Always Encrypted 與 SQL Server Management Studio 查詢資料行](always-encrypted-query-columns-ssms.md)
 - [使用 Always Encrypted 匯出和匯入資料庫](always-encrypted-migrate-using-bacpac.md)
 - [使用 Always Encrypted 備份和還原資料庫](always-encrypted-migrate-using-backup-restore.md)
-- [使用 Always Encrypted 與 [SQL Server 匯入和匯出精靈] 將資料移轉到資料行或從中移轉](always-encrypted-migrate-using-import-export-wizard.md)
+- [使用 Always Encrypted 與 SQL Server [匯入及匯出精靈]，將資料移轉進或移轉出資料行](always-encrypted-migrate-using-import-export-wizard.md)
 
 ## <a name="see-also"></a>另請參閱
-- [永遠加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [一律加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted 的金鑰管理概觀](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [使用 PowerShell 設定 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 - [使用 Always Encrypted 開發應用程式](always-encrypted-client-development.md)

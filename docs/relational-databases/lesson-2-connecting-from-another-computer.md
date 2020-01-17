@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d1bffd38e1c604d5002f00cae0bcda9e4becf21
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 8389d11868108725a676e9196861c7302241a407
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909705"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546556"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 課：從另一部電腦連線
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +46,18 @@ ms.locfileid: "72909705"
     > 您必須同時能夠使用 32 位元和 64 位元選項。  
   
     > [!NOTE]  
-    > 由於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是獨立的程式，因此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員在較新版本的 Windows 中不會作為應用程式出現。 檔案名稱中包含代表 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本號碼的數字。 若要從執行命令開啟組態管理員，以下是 Windows 安裝於 C 磁碟機時的最後四個版本路徑。  
+    > 因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理主控台程式的嵌入式管理單元，而不是獨立的程式，所以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員在較新版本的 Windows 中不會作為應用程式出現。 檔案名稱中包含代表 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本號碼的數字。 若要從執行命令開啟組態管理員，以下是 Windows 安裝於 C 磁碟機時的最後四個版本路徑。  
   
     |||  
-    |-|-|  
-    |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
+    |-|-|
+    |[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]|C:\Windows\SysWOW64\SQLServerManager14.msc|
+    |[!INCLUDE[ssSQL16](../includes/sssql16-md.md)]|C:\Windows\SysWOW64\SQLServerManager13.msc|  
     |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
-    |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
-    |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
+    |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
   
 2.  在 [SQL Server 組態管理員]  中，展開 [SQL Server 網路組態]  ，然後按一下 [ _<InstanceName>_ 的通訊協定]  。  
   
-    預設執行個體 (未命名的執行個體) 是以 **MSSQLSERVER** 列出。 如果您安裝了具名執行個體，則會列出您所提供的名稱。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] 會安裝成 **SQLEXPRESS**，除非您在安裝期間變更其名稱。  
+    預設執行個體 (未命名的執行個體) 是以 **MSSQLSERVER**列出。 如果您安裝了具名執行個體，則會列出您所提供的名稱。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] 會安裝成 **SQLEXPRESS**，除非您在安裝期間變更其名稱。  
   
 3.  在通訊協定清單中，以滑鼠右鍵按一下要啟用的通訊協定 ([TCP/IP]  )，然後按一下 [啟用]  。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "72909705"
   
 6.  在 **[設定檔]** 對話方塊中，選取您想要連線至 [!INCLUDE[ssDE](../includes/ssde-md.md)]時，描述電腦連線環境的設定檔，然後按 **[下一步]** 。  
   
-7.  在 **[名稱]** 對話方塊中，輸入此規則的名稱和描述，然後按一下 **[完成]** 。  
+7.  在 [名稱]  對話方塊中輸入此規則的名稱和描述，然後按一下 [完成]  。  
   
 如需防火牆設定 (包括 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]的指示) 的詳細資訊，請參閱 [設定用於 Database Engine 存取的 Windows 防火牆](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。 如需預設 Windows 防火牆設定的詳細資訊以及影響 Database Engine、Analysis Services、Reporting Services 和 Integration Services 之 TCP 通訊埠的描述，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "72909705"
   
 #### <a name="to-connect-to-the-database-engine-from-another-computer"></a>若要從另一部電腦連接到 Database Engine  
   
-1.  在包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用戶端工具的第二部電腦上，使用經授權連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的帳戶登入，並開啟 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
+1.  在包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用戶端工具的第二部電腦上，使用經授權連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的帳戶登入，並開啟 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
   
 2.  在 [連接到伺服器]  對話方塊中，確認 [伺服器類型]  方塊中的 [Database Engine]  。  
   

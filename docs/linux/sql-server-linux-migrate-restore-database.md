@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: f5eebdbedb548c28db6a83038a6f6b84c5bad336
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 148b887497cf9411aad72936a201805000c717ec
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68025929"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558557"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>使用備份與還原將 SQL Server 資料庫從 Windows 移轉至 Linux
 
@@ -33,7 +33,7 @@ SQL Server 的備份與還原功能是將資料庫從 Windows 上的 SQL Server 
 
 ## <a name="prerequisites"></a>Prerequisites
 
-必須擁有下列必要條件，才能完成本教學課程：
+必須擁有下列先決條件，才能完成本教學課程：
 
 * 具有下列各項的 Windows 電腦：
   * 已安裝 [SQL Server](https://www.microsoft.com/sql-server/sql-server-2016-editions)。
@@ -221,7 +221,7 @@ SQL Server 的備份與還原功能是將資料庫從 Windows 上的 SQL Server 
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您已了解如何在 Windows 上備份資料庫，並將其移至執行 SQL Server 的 Linux 伺服器。 您已了解如何：
+在本教學課程中，您已了解如何在 Windows 上備份資料庫，並將其移至執行 SQL Server 的 Linux 伺服器。 您已了解如何︰
 > [!div class="checklist"]
 > * 使用 SSMS 和 Transact-SQL 在 Windows 上建立備份檔案
 > * 在 Windows 上安裝 Bash Shell

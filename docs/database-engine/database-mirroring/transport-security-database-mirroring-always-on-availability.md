@@ -1,6 +1,7 @@
 ---
-title: 傳輸安全性 - 資料庫鏡像 - AlwaysOn 可用性 | Microsoft Docs
-ms.custom: ''
+title: 傳輸安全性：可用性群組和資料庫鏡像
+description: 了解如何保護在參與裝載於 SQL Server 上的 Always On 可用性群組或資料庫鏡像工作階段的資料庫之間所交換訊息的傳輸。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f360f60727e91407c1993c18d9548dbefd46a388
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047986"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252753"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>傳輸安全性 - 資料庫鏡像 - AlwaysOn 可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +72,7 @@ ms.locfileid: "68047986"
   
  (選擇性) 您可以對 CREATE ENDPOINT 陳述式或 ALTER ENDPOINT 陳述式中的 ALGORITHM 選項指定下列其中一值，來控制端點可使用的加密演算法：  
   
-|ALGORITHM 值|Description|  
+|ALGORITHM 值|描述|  
 |---------------------|-----------------|  
 |RC4|指定端點必須使用 RC4 演算法。 這是預設值。<br /><br /> <strong>\*\* 警告 \*\*</strong> RC4 演算法已被取代。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我們建議您改用 AES。|  
 |AES|指定端點必須使用 AES 演算法。|  
@@ -107,7 +108,7 @@ ms.locfileid: "68047986"
  [資料庫鏡像端點 &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)   
- [為資料庫鏡像組態疑難排解 &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [為 AlwaysOn 可用性群組組態進行疑難排解 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [為資料庫鏡像組態進行疑難排解 &#40;SQL Server&#41; &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
+ [疑難排解 AlwaysOn 可用性群組組態 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

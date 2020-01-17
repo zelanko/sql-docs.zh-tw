@@ -1,6 +1,6 @@
 ---
-title: T-SQL 教學課程：設定資料庫物件的權限 | Microsoft Docs
-ms.custom: ''
+title: 教學課程：設定資料庫物件的權限
+ms.custom: seo-lt-2019
 ms.date: 07/31/2018
 ms.prod: sql
 ms.technology: t-sql
@@ -12,12 +12,12 @@ ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 791517685f4204f87f9c0cb96f48fe48d6828c53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 991bdef702b1ed298bb492172ef65c6d25d5d0ab
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122874"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244751"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>第 2 課：設定資料庫物件的權限
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

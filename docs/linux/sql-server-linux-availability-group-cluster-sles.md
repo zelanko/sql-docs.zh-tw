@@ -1,7 +1,7 @@
 ---
-title: 設定 SQL Server 可用性群組的 SLES 叢集
+title: SUSE：在 Linux 上設定 SQL Server 的可用性群組
 titleSuffix: SQL Server
-description: 了解如何在 SUSE Linux Enterprise Server (SLES) 上設定 SQL Server 可用性群組叢集
+description: 了解如何在 SUSE Linux Enterprise Server (SLES) 上設定 SQL Server 可用性群組叢集。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: a14ad2d77b21dba2fd14ea7856aa7199bc081bbe
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 89f8616b13f80642a62922d9a1e1023f153b23cb
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809824"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558440"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 SLES 叢集
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本指南提供在 SUSE Linux Enterprise Server (SLES) 12 SP2 上，為 SQL Server 建立三個節點之叢集的指示。 為了提供高可用性，Linux 上的可用性群組需要三個節點，請參閱[可用性群組設定的高可用性和資料保護](sql-server-linux-availability-group-ha.md)。 叢集層會以建置於 [Pacemaker](https://clusterlabs.org/) \(英文\) 之上的 SUSE [高可用性延伸模組 (HAE)](https://www.suse.com/products/highavailability) \(英文\) 為基礎。 
+本指南提供在 SUSE Linux Enterprise Server (SLES) 12 SP2 上，為 SQL Server 建立三個節點之叢集的指示。 為了提供高可用性，Linux 上的可用性群組需要三個節點，請參閱[可用性群組設定的高可用性和資料保護](sql-server-linux-availability-group-ha.md)。 叢集層會以建置於 [Pacemaker](https://clusterlabs.org/) \(英文\) 之上的 SUSE [高可用性擴充功能 (HAE)](https://www.suse.com/products/highavailability) \(英文\) 為基礎。 
 
-如需叢集設定、資源代理程式選項、管理、最佳做法和建議的詳細資訊，請參閱 [SUSE Linux Enterprise 高可用性延伸模組 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html) \(英文\)。
+如需叢集設定、資源代理程式選項、管理、最佳做法和建議的詳細資訊，請參閱 [SUSE Linux Enterprise 高可用性擴充功能 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html) \(英文\)。
 
 >[!NOTE]
->目前，SQL Server 與 Linux 上的 Pacemaker 整合程度尚不如 Windows 與 WSFC 的結合。 Linux 上的 SQL Server 服務不是叢集感知的。 Pacemaker 會控制叢集資源的所有協調流程，包括可用性群組資源。 在 Linux 上，您不應該依賴 Always On 可用性群組動態管理檢視 (DMV)，其會提供 sys.dm_hadr_cluster 之類的叢集資訊。 此外，虛擬網路名稱是 WSFC 特有的，Pacemaker 中沒有相同的對應項。 您仍然可以建立接聽程式，在容錯移轉之後用它來進行透明重新連線，但您將必須在 DNS 伺服器中，使用建立虛擬 IP 資源所用的 IP，手動註冊接聽程式名稱 (如下列各節所述)。
+>目前，SQL Server 與 Linux 上的 Pacemaker 之間的整合程度，尚不如 Windows 上的 WSFC。 Linux 上的 SQL Server 服務不是叢集感知的。 Pacemaker 會控制叢集資源的所有協調流程，包括可用性群組資源。 在 Linux 上，您不應該依賴 Always On 可用性群組動態管理檢視 (DMV)，其會提供 sys.dm_hadr_cluster 之類的叢集資訊。 此外，虛擬網路名稱為 WSFC 特定，Pacemaker 中沒有相同的對應項。 您仍然可以建立接聽程式，在容錯移轉之後用它來進行透明重新連線，但您將必須在 DNS 伺服器中，使用建立虛擬 IP 資源所用的 IP，手動註冊接聽程式名稱 (如下列各節所述)。
 
 
 ## <a name="roadmap"></a>藍圖
@@ -58,7 +58,7 @@ ms.locfileid: "70809824"
 
 ### <a name="install-and-configure-sql-server-service-on-each-cluster-node"></a>在每個叢集節點上安裝和設定 SQL Server 服務
 
-1. 在所有節點上，安裝和設定 SQL Server 服務。 如需詳細指示，請參閱[在 Linux 上安裝 SQL Server](sql-server-linux-setup.md)。
+1. 在所有節點上，安裝和設定 SQL Server 服務。 如需詳細指示，請參閱[安裝 Linux 上的 SQL Server](sql-server-linux-setup.md)。
 
 1. 將一個節點指定為主要，並將其他節點指定為次要。 請在這整份指南中使用這些字詞。
 
@@ -73,7 +73,7 @@ ms.locfileid: "70809824"
    10.128.16.22 SLES3
    ```
 
-   所有叢集節點都必須能夠透過 SSH 彼此存取。 `hb_report` 或 `crm_report` 之類的工具 (用於疑難排解) 和 Hawk 的 History Explorer 都要求節點之間的無密碼 SSH 存取，否則它們只能從目前的節點收集資料。 如果您使用非標準的 SSH 連接埠，請使用 -X 選項 (請參閱 `man` 頁面)。 例如，如果您的 SSH 連接埠是 3479，則以下列方式叫用 `crm_report`：
+   所有叢集節點都必須能夠透過 SSH 互相存取。 `hb_report` 或 `crm_report` 之類的工具 (用於疑難排解) 和 Hawk 的 History Explorer 都要求節點之間的無密碼 SSH 存取，否則它們只能從目前的節點收集資料。 如果您使用非標準的 SSH 連接埠，請使用 -X 選項 (請參閱 `man` 頁面)。 例如，如果您的 SSH 連接埠是 3479，則以下列方式叫用 `crm_report`：
 
    ```bash
    sudo crm_report -X "-p 3479" [...]
@@ -118,9 +118,9 @@ ms.locfileid: "70809824"
 
 3. 設定叢集通訊層 (Corosync)： 
 
-   A. 輸入要繫結的網路位址。 根據預設，指令碼會建議使用 eth0 的網路位址。 或者，輸入不同的網路位址，例如 bond0 的位址。 
+   a. 輸入要繫結的網路位址。 根據預設，指令碼會建議使用 eth0 的網路位址。 或者，輸入不同的網路位址，例如 bond0 的位址。 
 
-   B. 輸入多點傳送位址。 指令碼會建議一個隨機位址，讓您可用來作為預設值。 
+   b. 輸入多點傳送位址。 指令碼會建議一個隨機位址，讓您可用來作為預設值。 
 
    c. 輸入多點傳送連接埠。 指令碼會建議 5405 作為預設值。 
 
@@ -218,9 +218,9 @@ Pacemaker 叢集廠商必須啟用 STONITH，並針對支援的叢集設定設�
 
 資源層級隔離主要可透過設定資源，確保在發生中斷時不會有資料損毀。 舉例來說，您可以搭配使用資源層級隔離與 DRBD (分散式複寫區塊裝置)，將節點上的磁碟標示為在通訊連結中斷時過期。
 
-節點層級隔離可確保節點不會執行任何資源。 這會藉由重設節點來完成，而且其 Pacemaker 的實作名稱為 STONITH ("shoot the other node in the head" 的簡稱)。 Pacemaker 支援各種隔離裝置，例如不斷電系統或伺服器的管理介面卡。
+節點層級隔離可確保節點不會執行任何資源。 這是藉由重設節點來完成，且其 Pacemaker 的實作名稱為 STONITH ("shoot the other node in the head" 的簡稱)。 Pacemaker 支援各種隔離裝置，例如不斷電系統或伺服器的管理介面卡。
 
-如需詳細資訊，請參閱：
+如需詳細資訊，請參閱
 
 - [從頭開始 Pacemaker 叢集](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/) \(英文\)
 - [Fencing and Stonith](https://clusterlabs.org/doc/crm_fencing.html) (隔離和 STONITH)
@@ -330,7 +330,7 @@ crm crm configure \
 使用 `crm` 手動容錯移轉可用性群組。 請勿使用 Transact-SQL 來起始容錯移轉。 如需詳細資訊，請參閱[容錯移轉](sql-server-linux-availability-group-failover-ha.md#failover)。
 
 
-如需詳細資訊，請參閱：
+如需詳細資訊，請參閱
 - [管理叢集資源](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm) \(英文\)   
 - [HA 概念](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts) \(英文\)
 - [Pacemaker 快速參考](https://github.com/ClusterLabs/pacemaker/blob/master/doc/pcs-crmsh-quick-ref.md) \(英文\) 

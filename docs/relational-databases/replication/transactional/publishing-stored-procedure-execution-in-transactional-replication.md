@@ -1,6 +1,7 @@
 ---
-title: 在異動複寫中發行預存程序執行 | Microsoft Docs
-ms.custom: ''
+title: 發行預存程序執行 (交易式)
+description: 了解如何在交易式發行集中包含在「發行者」端執行並影響到已發行的資料表的預存程序，以作為預存程序執行發行項。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 93377a86d55086f2f3af501a962c6973f0d66234
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: ad8e489d753587912eb7369316c1413bd1eaf1c9
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710737"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321403"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>在異動複寫中發行預存程序執行
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

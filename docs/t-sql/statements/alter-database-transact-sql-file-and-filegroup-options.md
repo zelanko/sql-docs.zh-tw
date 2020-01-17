@@ -1,6 +1,8 @@
 ---
-title: ALTER DATABASE 檔案及檔案群組選項 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: ALTER DATABASE 檔案與檔案群組
+description: 使用 Transact-SQL 更新資料庫的檔案與檔案群組。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: sql-database
@@ -42,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9c8c9e59e0234dc81fb9de9ded733d369dbdda4d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 0eae7e7f1a0a673138b58440ee9c5c8d0b6f20bc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982841"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244432"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 檔案及檔案群組選項
 
@@ -63,7 +65,7 @@ ms.locfileid: "73982841"
 
 |||
 |-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -124,7 +126,7 @@ ALTER DATABASE database_name
 
 指定要新增、移除或修改的檔案。
 
-*database_name* 這是要修改的資料庫名稱。
+*database_name*：這是要修改的資料庫名稱。
 
 ADD FILE 將檔案新增至資料庫。
 
@@ -137,7 +139,7 @@ REMOVE FILE *logical_file_name* 從 [!INCLUDE[ssNoVersion](../../includes/ssnove
 *logical_file_name* 這是在參考檔案時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的邏輯名稱。
 
 > [!WARNING]
-> 移除具有與其建立關聯之 `FILE_SNAPSHOT` 備份的資料庫會成功，但將不會刪除任何相關聯的快照集，以避免使備份參考資料庫檔案不正確。 檔案將會被截斷，但實體不會被刪除，以保存完整的 FILE_SNAPSHOT 備份。 如需詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)。
+> 移除具有與其建立關聯之 `FILE_SNAPSHOT` 備份的資料庫會成功，但將不會刪除任何相關聯的快照集，以避免使備份參考資料庫檔案不正確。 檔案將會被截斷，但實體不會被刪除，以保存完整的 FILE_SNAPSHOT 備份。 如需詳細資訊，請參閱 [SQL Server 備份及還原與 Microsoft Azure Blob 儲存體服務](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)。
 
 MODIFY FILE 指定應該修改的檔案。 每次只能變更一個 \<filespec> 屬性。 您必須在 \<filespec> 中指定 NAME，以識別要修改的檔案。 如果指定了 SIZE，新的大小必須大於目前檔案大小。
 
@@ -189,12 +191,12 @@ FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** | **'**
 
 如果檔案在原始磁碟分割中，*os_file_name* 只能指定現有原始磁碟分割的磁碟機代號。 每個原始分割區只能放置一個檔案。
 
-**'** *filestream_path* **'** 如果是 FILESTREAM 檔案群組，FILENAME 會參考將儲存 FILESTREAM 資料的路徑。 到最後一個資料夾為止的路徑必須存在，而最後一個資料夾則不得存在。 例如，如果您指定 `C:\MyFiles\MyFilestreamData` 路徑，則在您執行 ALTER DATABASE 之前，`C:\MyFiles` 必須存在；但是 `MyFilestreamData` 資料夾不得存在。
+**'** *filestream_path* **'** 針對 FILESTREAM 檔案群組，FILENAME 會參考將儲存 FILESTREAM 資料的路徑。 到最後一個資料夾為止的路徑必須存在，而最後一個資料夾則不得存在。 例如，如果您指定 `C:\MyFiles\MyFilestreamData` 路徑，則在您執行 ALTER DATABASE 之前，`C:\MyFiles` 必須存在；但是 `MyFilestreamData` 資料夾不得存在。
 
 > [!NOTE]
 > SIZE 和 FILEGROWTH 屬性不會套用到 FILESTREAM 檔案群組。
 
-**'** *memory_optimized_data_path* **'** 如果是記憶體最佳化的檔案群組，FILENAME 會參考將儲存記憶體最佳化資料的路徑。 到最後一個資料夾為止的路徑必須存在，而最後一個資料夾則不得存在。 例如，如果您指定 `C:\MyFiles\MyData` 路徑，則在您執行 ALTER DATABASE 之前，`C:\MyFiles` 必須存在；但是 `MyData` 資料夾不得存在。
+**'** *memory_optimized_data_path* **'** 針對記憶體最佳化的檔案群組，FILENAME 會參考將儲存記憶體最佳化資料的路徑。 到最後一個資料夾為止的路徑必須存在，而最後一個資料夾則不得存在。 例如，如果您指定 `C:\MyFiles\MyData` 路徑，則在您執行 ALTER DATABASE 之前，`C:\MyFiles` 必須存在；但是 `MyData` 資料夾不得存在。
 
 檔案群組和檔案 (`<filespec>`) 必須在相同的陳述式中建立。
 
@@ -310,7 +312,7 @@ READ_ONLY | READONLY 將檔案群組指定成唯讀狀態。 不允許更新其�
 - 唯讀資料庫不會出現鎖定。 因此，查詢效能會比較快。
 
 > [!NOTE]
-> 在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READONLY` 關鍵字。 請避免在新的開發工作中使用 `READONLY`，並規劃修改目前使用 `READONLY` 的應用程式。 請改用 `READ_ONLY` 。
+> 在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READONLY` 關鍵字。 請避免在新的開發工作中使用 `READONLY`，並規劃修改目前使用 `READONLY` 的應用程式。 請改用 `READ_ONLY`。
 
 READ_WRITE | READWRITE 將群組指定成 READ_WRITE 狀態。 檔案群組中的物件可以更新。 若要變更這個狀態，您必須具有資料庫的獨佔存取權。 如需詳細資訊，請參閱 SINGLE_USER 子句。
 
@@ -319,7 +321,7 @@ READ_WRITE | READWRITE 將群組指定成 READ_WRITE 狀態。 檔案群組中�
 > [!TIP]
 > 您可以檢查 **sys.databases** 目錄檢視中的 **is_read_only** 資料行或 `DATABASEPROPERTYEX` 函數的 **Updateability** 屬性來判斷這些選項的狀態。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 若要縮小資料庫大小，請使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。
 
@@ -336,7 +338,7 @@ READ_WRITE | READWRITE 將群組指定成 READ_WRITE 狀態。 檔案群組中�
 
 無法為記憶體最佳化檔案群組設定 SIZE 和 FILEGROWTH 參數。
 
-在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READONLY` 關鍵字。 請避免在新的開發工作中使用 `READONLY`，並規劃修改目前使用 READONLY 的應用程式。 請改用 `READ_ONLY` 。
+在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READONLY` 關鍵字。 請避免在新的開發工作中使用 `READONLY`，並規劃修改目前使用 READONLY 的應用程式。 請改用 `READ_ONLY`。
 
 在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READWRITE` 關鍵字。 請避免在新的開發工作中使用 `READWRITE`，並規劃修改目前在使用 `READWRITE` 的應用程式，改為使用 `READ_WRITE`。
 
@@ -740,7 +742,7 @@ ALTER DATABASE database_name
 
 指定要新增、移除或修改的檔案。
 
-*database_name* 這是要修改的資料庫名稱。
+*database_name*：這是要修改的資料庫名稱。
 
 ADD FILE 將檔案新增至資料庫。
 
@@ -847,7 +849,7 @@ READ_WRITE | READWRITE 將群組指定成 READ_WRITE 狀態。 檔案群組中�
 
 您可以檢查 **sys.databases** 目錄檢視中的 **is_read_only** 資料行或 `DATABASEPROPERTYEX` 函數的 **Updateability** 屬性來判斷這些選項的狀態。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 若要縮小資料庫大小，請使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。
 

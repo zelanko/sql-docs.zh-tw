@@ -1,7 +1,7 @@
 ---
-title: 將支援的備份卸載至可用性群組的次要複本
+title: 將備份卸載到次要可用性群組複本
 description: 了解將備份卸載至 Always On 可用性群組次要複本時的各種支援備份類型。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 09/01/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a93e00b590dfd6f9dc083f5443e6074894184afd
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 19118cde56109895213a733127b202c49feb23c1
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807423"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822409"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>將支援的備份卸載至可用性群組次要複本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 使用中次要功能包含對次要複本執行備份作業的支援。 備份作業可能會對 I/O 和 CPU 造成相當大的壓力 (備份壓縮已啟用時)。 將備份卸載至已同步處理或正在同步處理的次要複本，可讓裝載主要複本的伺服器執行個體上的資源用於第 1 層工作負載。  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的作用中次要功能包含對次要複本進行備份的支援。 備份作業可能會對 I/O 和 CPU 造成相當大的壓力 (備份壓縮已啟用時)。 將備份卸載至已同步處理或正在同步處理的次要複本，可讓裝載主要複本的伺服器執行個體上的資源用於第 1 層工作負載。  
 
 > [!NOTE]  
 >  不可對可用性群組的主要或次要資料庫執行 RESTORE 陳述式。  
@@ -36,7 +36,7 @@ ms.locfileid: "72807423"
  
 ##  <a name="SupportedBuTypes"></a> 次要複本支援的備份類型  
   
--   **BACKUP DATABASE** 只有在次要複本上執行時，才支援資料庫、檔案或檔案群組的只複製完整備份。 請注意，只複製備份不會影響記錄檔鏈結或清除差異式點陣圖。  
+-   **BACKUP DATABASE** 只有在次要複本上執行時，才支援資料庫、檔案或檔案群組的只複製完整備份。 只複製備份不會影響記錄鏈結或清除差異式點陣圖。  
   
 -   次要複本不支援差異備份。
 

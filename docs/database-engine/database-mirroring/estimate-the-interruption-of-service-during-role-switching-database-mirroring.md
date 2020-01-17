@@ -1,6 +1,7 @@
 ---
-title: 預估角色切換的服務中斷時間 (資料庫鏡像) | Microsoft Docs
-ms.custom: ''
+title: 預估鏡像容錯移轉期間的服務中斷
+description: 預估將資料庫鏡像從主要角色容錯移轉至次要角色時的服務中斷情形。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 44f6a8966ef2da55ffd43830677f52398b356399
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: a0301a6cdfd1381e3fdc6baa8189cc8fbf4739a1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874186"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253573"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>預估角色切換期間的服務中斷時間 (資料庫鏡像)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

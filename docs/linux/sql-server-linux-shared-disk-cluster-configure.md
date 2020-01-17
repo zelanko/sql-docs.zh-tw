@@ -1,6 +1,7 @@
 ---
-title: 設定容錯移轉叢集執行個體 - Linux 上的 SQL Server (RHEL)
-description: ''
+title: 設定 FCI - Linux 上的 SQL Server (RHEL)
+description: 了解如何為 SQL Server 在 Red Hat Enterprise Linux (RHEL) 上設定容錯移轉叢集執行個體 (FCI)。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 83c25db6f0915aae9cf210d2b749df970da40590
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032306"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558323"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>設定容錯移轉叢集執行個體 - Linux 上的 SQL Server (RHEL)
 
@@ -56,9 +57,9 @@ SQL Server 雙節點共用磁碟容錯移轉叢集執行個體能提供伺服器
     ```
 
     > [!NOTE] 
-    > 在安裝期間，系統會針對 SQL Server 執行個體產生伺服器主要金鑰，並將其置於 `var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 一律會以名為 mssql 的本機帳戶執行。 因為它是本機帳戶，所以不會在節點之間共用其身分識別。 因此，您需要將加密金鑰從主要節點複製到每個次要節點，讓每個本機 mssql 帳戶可以存取它來解密伺服器主要金鑰。 
+    > 在安裝期間，系統會針對 SQL Server 執行個體產生伺服器主要金鑰，並將其置於 `var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 一律會以名為 mssql 的本機帳戶執行。 因為它是本機帳戶，所以不會在節點之間共用其身分識別。 因此，您需要將加密金鑰從主要節點複製到每個次要節點，讓每個本機 mssql 帳戶可以存取它來將伺服器主要金鑰解密。 
 
-1.  在主要節點上，建立 Pacemaker 的 SQL Server 登入，並授與該登入執行 `sp_server_diagnostics` 的權限。 Pacemaker 會使用此帳戶來確認哪個節點正在執行 SQL Server。 
+1.  在主要節點上，建立 Pacemaker 的 SQL Server 登入，並授與該登入執行 `sp_server_diagnostics` 的權限。 Pacemaker 會使用此帳戶來驗證哪個節點正在執行 SQL Server。 
 
     ```bash
     sudo systemctl start mssql-server
@@ -92,7 +93,7 @@ SQL Server 雙節點共用磁碟容錯移轉叢集執行個體能提供伺服器
    ```bash
    sudo vi /etc/hosts
    ```
-   下列範例顯示 `/etc/hosts`，並搭配名為 `sqlfcivm1` 和 `sqlfcivm2` 的兩個額外節點。
+   下列範例顯示 `/etc/hosts`，其中包含名為 `sqlfcivm1` 和 `sqlfcivm2` 的兩個額外節點。
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -218,7 +219,7 @@ SQL Server 雙節點共用磁碟容錯移轉叢集執行個體能提供伺服器
 
     \<ShareName> 是共用的名稱
 
-    \<FolderName> 是在最後的步驟中所建立之資料夾的名稱
+    \<FolderName> 是在最後步驟中所建立之資料夾的名稱
     
     \<UserName> 是要存取共用之使用者的名稱
 

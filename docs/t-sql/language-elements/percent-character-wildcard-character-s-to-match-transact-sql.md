@@ -1,6 +1,6 @@
 ---
-title: 百分比字元 (萬用字元 - 相符的字元) (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 萬用字元搜尋 (%)
+ms.custom: seo-lt-2019
 ms.date: 12/06/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d4cbc1a9-37e1-4101-97fb-e6ac30c1223e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af956b153aadc660de4a0b440bc07467888e136b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f171e73836331971becefd8a2aa8ccebfbc1445
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121864"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253596"
 ---
 # <a name="percent-character-wildcard---characters-to-match-transact-sql"></a>百分比字元 (萬用字元 - 相符的字元) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

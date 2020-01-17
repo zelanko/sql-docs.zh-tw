@@ -1,6 +1,7 @@
 ---
-title: 在合併同步處理期間執行商務邏輯 | Microsoft Docs
-ms.custom: ''
+title: 合併同步處理的商務邏輯
+description: 了解如何針對合併式複寫同步處理所使用之商務邏輯撰寫受控組件程式碼。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 713348f8b6370dfe9762cc1f3a7280b19dedee41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3f1e7f07b95c71eeddc65fed6db3f10cc31ee32
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033307"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321476"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>在合併同步處理期間執行商務邏輯
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "68033307"
      這對於需要覆寫特定資料值或作業的應用程式非常有用。 例如，應用程式可以將資料列刪除轉換至資料列之 **status** 資料行設定為「已刪除」值的特殊更新，然後追蹤執行刪除的用戶端識別。 可用於稽核或工作流程。  
   
 ### <a name="custom-conflict-resolution"></a>自訂衝突解決方案  
- 合併式複寫提供了衝突偵測和解決，可讓您接受預設解決策略或選取自訂的衝突解決方案。 如需詳細資訊，請參閱 [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)中指定合併發行項解析程式。 商務邏輯處理常式可以在處理衝突的資料變更期間叫用，並可執行下列兩個動作之一：  
+ 合併式複寫提供了衝突偵測和解決，可讓您接受預設解決策略或選取自訂的衝突解決方案。 如需詳細資訊，請參閱 [進階合併式複寫衝突偵測與解決](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。 商務邏輯處理常式可以在處理衝突的資料變更期間叫用，並可執行下列兩個動作之一：  
   
 -   接受預設解決方案  
   
@@ -94,6 +95,6 @@ ms.locfileid: "68033307"
  [合併式複寫](../../../relational-databases/replication/merge/merge-replication.md)   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
  [同步處理資料](../../../relational-databases/replication/synchronize-data.md)   
- [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
+ [合併式複寫的 Web 同步處理](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

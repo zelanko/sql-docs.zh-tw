@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (預覽)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: 在 Azure SQL 資料倉儲中使用 COPY 陳述式，從外部儲存體帳戶載入。
-ms.date: 11/07/2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 24cfced04b8d2d0366d2058c81bcedfd9b00d2f9
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 4cdfba4070e8788687c453435b4a6d525aeb44fe
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74055138"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321829"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (預覽)
 
@@ -65,7 +65,7 @@ WITH
 如果執行作業之使用者的預設結構描述是指定之資料表的結構描述，則是選擇性的。 如果未指定*結構描述*，且執行 COPY 作業之使用者的預設結構描述與指定的資料表不同，則會取消 COPY，而且會傳回錯誤訊息。  
 
 *table_name*  
-這是要將資料 COPY 到其中之資料表的名稱。 目標資料表可以是暫存資料表或永久資料表。
+這是要將資料 COPY 到其中之資料表的名稱。 目標資料表可以是臨時或永久資料表，而且必須已經存在於資料庫中。 
 
 *(column_list)*  
 這是一或多個資料行的選擇性清單，可用來將來源資料欄位對應至目標資料表資料行，以載入資料。 *column_list* 必須以括弧括住，並以逗號分隔。 資料行清單採用以下格式：
@@ -131,7 +131,7 @@ WITH
 使用 AAD 或公用儲存體帳戶進行驗證時，不需要指定 CREDENTIAL。 
 
 - 使用共用存取簽章 (SAS) 進行驗證*IDENTITY：值為「共用存取簽章」的常數*
-  *SECRET：* [*共用存取簽章*](/azure/storage/common/storage-sas-overview)*會提供您儲存體帳戶中資源的委派存取權。*
+  *SECRET：* [*共用存取簽章*](/azure/storage/common/storage-sas-overview)*可提供您儲存體帳戶中資源的委派存取。*
   所需最小權限：READ 和 LIST
 
 - 使用[*服務主體*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)進行驗證
@@ -164,7 +164,7 @@ WITH
   
 - 使用共用存取簽章 (SAS) 進行驗證
   - *IDENTITY：值為「共用存取簽章」的常數*
-  - *SECRET：* [*共用存取簽章*](/azure/storage/common/storage-sas-overview)*會提供您儲存體帳戶中資源的委派存取權。*
+  - *SECRET：* [*共用存取簽章*](/azure/storage/common/storage-sas-overview)*可提供您儲存體帳戶中資源的委派存取。*
   - 所需最小權限：READ、LIST、WRITE、CREATE、DELETE
   
 - 使用[*服務主體*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)進行驗證
@@ -214,13 +214,13 @@ WITH
 > FIELDQUOTE 字元會在有雙 FIELDQUOTE (分隔符號) 存在的字串資料行中逸出。 
 
 *FIELDTERMINATOR = 'field_terminator’*</br>
-*FIELDTERMINATOR* 僅適用於 CSV。 指定將在 CSV 檔案中使用的欄位結束字元。 欄位結束字元可以是多個字元。 預設的欄位結束字元為 (,)。
+*FIELDTERMINATOR* 僅適用於 CSV。 指定將在 CSV 檔案中使用的欄位結束字元。 您可以使用十六進位標記法來指定欄位結束字元。 欄位結束字元可以是多個字元。 預設的欄位結束字元為 (,)。
 如需詳細資訊，請參閱[指定欄位與資料列結束字元 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017)。
 
 ROW TERMINATOR = 'row_terminator'</br>
-*ROW TERMINATOR* 僅適用於 CSV。 指定將在 CSV 檔案中使用的資料列結束字元。 資料列結束字元可以是多個字元。 根據預設，資料列結束字元為 \r\n。 
+*ROW TERMINATOR* 僅適用於 CSV。 指定將在 CSV 檔案中使用的資料列結束字元。 您可以使用十六進位標記法來指定資料列結束字元。 資料列結束字元可以是多個字元。 根據預設，資料列結束字元為 \r\n。 
 
-指定 \n (新行) 時，COPY 命令會加上 \r 字元前置詞，而導致 \r\n。 若只要指定 \n 字元，請使用十六進位 (0x0A)。 使用十六進位指定多字元資料列結束字元時，請不要在每個字元之間指定 0x。
+指定 \n (新行) 時，COPY 命令會加上 \r 字元前置詞，而導致 \r\n。 若只要指定 \n 字元，請使用十六進位標記法 (0x0A)。 使用十六進位指定多字元資料列結束字元時，請不要在每個字元之間指定 0x。
 
 如需有關指定資料列結束字元的其他指引，請參閱下列[文件](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators)。
 
@@ -259,7 +259,7 @@ IDENTITY_INSERT 會指定所匯入資料檔案中的一或多個識別值是否�
 下列範例是 COPY 命令的最簡單形式，它會從公用儲存體帳戶載入資料。 在此範例中，COPY 陳述式的預設值符合行項目 csv 檔案的格式。
 
 ```sql
-COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv’
+COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv'
 ```
 
 COPY 命令的預設值為：
@@ -306,7 +306,7 @@ WITH (
     DATEFORMAT = 'ymd',
     MAXERRORS = 10,
     ERRORFILE = '/errorsfolder/',--path starting from the storage container
-    IDENTITY_INSERT = ‘ON’
+    IDENTITY_INSERT = 'ON'
 )
 ```
 
@@ -357,6 +357,46 @@ WITH (
     FIELDTERMINATOR = '|'
 )
 ```
+
+## <a name="faq"></a>常見問題集
+
+### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>相較於 PolyBase，COPY 命令的效能為何？
+在此功能公開推出時，COPY 命令會有更好的效能。 為了在公開預覽期間獲得最佳的載入效能，請考慮在載入 CSV 時，將您的輸入分割成多個檔案。 使用 INSERT SELECT 時，目前的 COPY 在校能方面與 PolyBase 一樣重要。 
+
+### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>COPY 命令載入 CSV 檔案的檔案分割指導方針為何？
+下表列出檔案數目的指導方針。 一旦達到建議的檔案數目，檔案越大，您的效能就會越好。 當 COPY 命令公開推出時，您不需要分割非壓縮檔案。 
+
+| **DWU** | **#Files** |
+| :-----: | :--------: |
+|   100   |     60     |
+|   200   |     60     |
+|   300   |     60     |
+|   400   |     60     |
+|   500   |     60     |
+|  1,000  |    120     |
+|  1,500  |    180     |
+|  2,000  |    240     |
+|  2,500  |    300     |
+|  3,000  |    360     |
+|  5,000  |    600     |
+|  6,000  |    720     |
+|  7,500  |    900     |
+| 10,000  |    1200    |
+| 15,000  |    1800    |
+| 30,000  |    3600    |
+
+
+### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-parquet-or-orc-files"></a>COPY 命令載入 Parquet 或 ORC 檔案的檔案分割指導方針為何？
+不需要分割 Parquet 與 ORC 檔案，因為 COPY 命令將會自動分割檔案。 Azure 儲存體帳戶中的 Parquet 與 ORC 檔案應為 256MB 以上，以達到最佳效能。 
+
+### <a name="when-will-the-copy-command-be-generally-available"></a>COPY 命令何時會公開推出？
+COPY 命令將會在下一個日曆年度 (2020) 公開推出。 
+
+### <a name="are-there-any-known-issues-with-the-copy-command"></a>COPY 命令是否有任何已知問題？
+
+- 在 COPY 陳述式中無法使用 LOB 支援，例如 (n)varchar(max)。 這將在明年年初推出。
+
+請將任何意見反應或問題傳送至下列通訊群組清單： sqldwcopypreview@service.microsoft.com
 
 ## <a name="see-also"></a>另請參閱  
 

@@ -17,17 +17,17 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a24105ff8deb7e3b2dea54d6c1cb859736ae6f5f
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593991"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254826"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  ![永遠加密](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
+  ![一律加密](../../../relational-databases/security/encryption/media/always-encrypted.png "|::ref1::|")  
   
  Always Encrypted 是一個設計來保護儲存於 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中之敏感性資料的功能，像是信用卡號碼或全國性的身分證字號 (例如美國社會安全號碼)。 Always Encrypted 可讓用戶端將用戶端應用程式內的敏感性資料進行加密，且絕不會顯示 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) 的加密金鑰。 如此一來，Always Encrypted 在資料擁有者 (且可以檢視資料) 和資料管理者 (但應該不具備存取權) 之間做出區隔。 透過確定內部部署資料庫系統管理員，雲端資料庫操作員，或其他高權限未經授權的使用者則無法存取加密資料，Always Encrypted 可讓客戶有信心地將機密資料存放在他們無法直接控制的位置。 這讓組織能夠將其資料儲存在 Azure 中，並將內部部署資料庫管理委派給第三方，或是降低組織本身 DBA 人員的安全性許可需求。
 
@@ -36,7 +36,7 @@ ms.locfileid: "73593991"
   > [!NOTE] 
   > 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中，安全記憶體保護區會利用模式比對、其他比較運算子和就地加密，大幅擴充 Always Encrypted 的機密計算功能。 請參閱[具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves.md)。
 
- 永遠加密讓應用程式加密變得透明化。 安裝在用戶端電腦上且啟用永遠加密的驅動程式，透過自動將用戶端應用程式中的機密資料進行加密與解密，進而達成此目的。 驅動程式會先將敏感資料行中的資料進行加密，才會將資料傳遞至 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，並自動重寫查詢以保留應用程式的語意。 同樣地，驅動程式會以透明的方式，將查詢結果中加密資料庫資料行所儲存的資料進行解密。  
+ 永遠加密讓應用程式加密變得透明化。 安裝在用戶端電腦上且啟用永遠加密的驅動程式，透過自動將用戶端應用程式中的機密資料進行加密與解密，進而達成此目的。 驅動程式會先將敏感資料行中的資料進行加密，才會將資料傳遞至 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，並自動重寫查詢以保留應用程式的語意。 同樣地，驅動程式會將儲存在加密資料庫資料行並包含在查詢結果中的資料明確解密。  
   
  Always Encrypted 在 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 所有的版本中都有提供，從 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的所有服務層級開始。 (在 [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 之前，Always Encrypted 僅限於 Enterprise Edition 中使用)。如需包含「永遠加密」的 Channel 9 簡報，請參閱 [使用 [永遠加密] 保護機密資料安全性](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)。  
 
@@ -68,11 +68,11 @@ Database Engine 會將每個資料行的加密設定儲存在資料庫中繼資�
 
 如需如何使用特定用戶端驅動程式與 Always Encrypted 來開發應用程式的詳細資訊，請參閱[使用 Always Encrypted 開發應用程式](always-encrypted-client-development.md)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
-解密會透過用戶端進行。 這表示使用 Always Encrypted 時，僅出現在伺服器端的某些動作將無法運作。 
+加密和解密會透過用戶端驅動程式發生。 這表示使用 Always Encrypted 時，僅出現在伺服器端的某些動作將無法運作。 範例包括透過 UPDATE、BULK INSERT(T-SQL)、SELECT INTO、INSERT SELECT 將某個資料行的資料複製到另一個資料行。 
 
-下列 update 範例嘗試將資料從加密的資料行移至未加密的資料行，而不傳回結果集給用戶端： 
+下列 UPDATE 範例會嘗試將資料從加密的資料行移至未加密的資料行，而不傳回結果集給用戶端： 
 
 ```sql
 update dbo.Patients set testssn = SSN
@@ -107,7 +107,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 
  資料庫中的 [永遠加密] 初始設定包括：產生 [永遠加密] 金鑰、建立金鑰中繼資料、設定所選資料庫資料行的加密屬性，及/或針對需要加密之資料行中可能已存在的資料進行加密。 請注意，其中有些工作並不支援 Transact-SQL，而需要使用用戶端工具。 由於 Always Encrypted 金鑰和受保護的敏感性資料絕不會以純文字形式顯示給伺服器，因此 Database Engine 無法佈建金鑰和執行資料加密或解密作業。 您可以使用 SQL Server Management Studio 或 PowerShell 來完成這類工作。 
 
-|工作|SSMS|PowerShell|T-SQL|
+|Task|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
 |搭配相對應的資料行主要金鑰，佈建資料行主要金鑰、資料行加密金鑰和加密的資料行加密金鑰。|是|是|否|
 |在資料庫中建立金鑰中繼資料。|是|是|是|
@@ -268,7 +268,7 @@ GO
 - [使用 SSMS 設定 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)   
 - [使用 PowerShell 設定 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   
 - [使用 Always Encrypted 開發應用程式](always-encrypted-client-development.md) 
-- [使用 Always Encrypted 精靈設定資料行加密](always-encrypted-wizard.md)
+- [使用 [Always Encrypted 精靈] 設定資料行加密](always-encrypted-wizard.md)
 - [Always Encrypted 密碼編譯](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
 - [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
 - [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   

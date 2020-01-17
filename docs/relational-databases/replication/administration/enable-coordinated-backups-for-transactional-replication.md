@@ -1,6 +1,7 @@
 ---
-title: 為異動複寫啟用協調備份 | Microsoft Docs
-ms.custom: ''
+title: 啟用協調備份 (交易式)
+description: 了解在散發資料庫上啟用協調備份，如此在傳播到「散發者」的交易進行備份之前，異動複寫發行集資料庫的交易記錄都不會遭到截斷。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 73a914ba-8b2d-4f4d-ac1b-db9bac676a30
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a436351752045c742d21892c304b0ecad7b8f591
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 96fa2e96021f0390fcc1cf15eb3aba2fd6b55e42
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661259"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322047"
 ---
 # <a name="enable-coordinated-backups-for-transactional-replication"></a>為異動複寫啟用協調備份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

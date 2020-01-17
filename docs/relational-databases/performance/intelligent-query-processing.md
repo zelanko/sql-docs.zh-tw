@@ -1,8 +1,8 @@
 ---
-title: Microsoft SQL 資料庫中的智慧查詢處理 | Microsoft Docs
+title: 智慧查詢處理
 description: 可改善 SQL Server 和 Azure SQL Database 查詢效能的智慧查詢處理功能。
-ms.custom: ''
-ms.date: 11/12/2019
+ms.custom: seo-dt-2019
+ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f18367446b3d36e4e95373f1789509e08082a403
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.openlocfilehash: 65b88c890dc16adf1a1b626dd0ddc91ad359505b
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73962424"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821972"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 資料庫中的智慧查詢處理
 
@@ -26,6 +26,10 @@ ms.locfileid: "73962424"
 智慧查詢處理 (IQP) 功能系列包含具有廣泛影響的功能，能夠以最少的實作投入量來採用，以改善現有工作負載的效能。 
 
 ![智慧查詢處理](./media/iqp-feature-family.png)
+
+觀看這段 6 分鐘的影片，以取得智慧型查詢處理的概觀：
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Intelligent-Query-processing-in-SQL-Server-2019/player?WT.mc_id=dataexposed-c9-niner]
+
 
 您可以為資料庫啟用適用的資料庫相容性層級，讓工作負載能自動滿足智慧查詢處理的資格。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 設定此項目。 例如：  
 
@@ -123,7 +127,7 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 
 ## <a name="row-mode-memory-grant-feedback"></a>資料列模式記憶體授與意見反應
 
-**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**適用範圍：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 調整批次和資料列模式運算子的記憶體授與大小，藉此在批次模式記憶體授與意見反應功能上展開資料列模式記憶體授與意見反應。  
 
@@ -135,7 +139,7 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 
 *LastRequestedMemory* 會在查詢執行之前，顯示授與的記憶體 (KB)。 *IsMemoryGrantFeedbackAdjusted* 屬性可讓您針對實際查詢執行計劃內的陳述式，檢查記憶體授與意見反應的狀態。 此屬性中顯示的值如下：
 
-| IsMemoryGrantFeedbackAdjusted 值 | Description |
+| IsMemoryGrantFeedbackAdjusted 值 | 描述 |
 |---|---|
 | 否：第一次執行 | 記憶體授與意見反應不會針對第一次編譯和相關聯的執行，調整記憶體。  |
 | 否：精確授與 | 如果沒有溢出到磁碟，而且陳述式使用至少 50% 的授與的記憶體，則不會觸發記憶體授與意見反應。 |
@@ -208,14 +212,14 @@ MSTVF 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始具有固定�
 ### <a name="tracking-interleaved-execution-activity"></a>追蹤交錯執行活動
 您可以在實際的查詢執行計劃中看到使用方式屬性：
 
-| 執行計劃屬性 | Description |
+| 執行計劃屬性 | 描述 |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | 適用於 *QueryPlan* 節點。 為 *true* 時，表示計劃包含交錯執行候選項目。 |
 | IsInterleavedExecuted | 位於 TVF 節點 RelOp 之下 *RuntimeInformation* 元素的屬性。 為 *true* 時，這表示作業已具體化為交錯執行作業的一部分。 |
 
 您也可以透過下列 xEvent 追蹤交錯執行項目：
 
-| xEvent | Description |
+| xEvent | 描述 |
 | ---- | --- |
 | interleaved_exec_status | 交錯執行進行時會引發這個事件。 |
 | interleaved_exec_stats_update | 此事件會描述由交錯執行更新的基數估計值。 |
@@ -274,19 +278,61 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 
 ## <a name="table-variable-deferred-compilation"></a>資料表變數延後編譯
 
-**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**適用範圍：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
-資料表變數延後編譯可針對參考資料表變數的查詢，提升計畫品質和整體效能。 在最佳化和初始編譯期間，此功能會根據實際資料表變數的資料列計數，傳播基數估計值。 這項精確的資料列計數資訊會最佳化下游計畫作業。
+**資料表變數延遲編譯**可針對參考資料表變數的查詢，提升計劃品質和整體效能。 在最佳化和初始計劃編譯期間，此功能將會根據實際資料表變數的資料列計數，傳播基數估計值。 這個確切的資料列計數資訊接著將用於最佳化下游計畫作業。
 
-資料表變數延後編譯會延後編譯參考資料表變數的陳述式，直到第一次實際執行陳述式為止。 此延後編譯行為與暫存資料表相同。 這項變更會導致使用實際基數，而不使用原始的單一資料列猜測。 
+使用資料表變數延後編譯時，會延遲編譯參考資料表變數的陳述式，直到第一次實際執行陳述式為止。 此延後編譯行為與暫存資料表的行為相同。 這項變更會導致使用實際基數，而不使用原始的單一資料列猜測。 
 
-您可在 Azure SQL Database 中啟用資料表變數延後編譯。 若要這樣做，請啟用執行查詢時所連線資料庫的相容性層級 150。
+若要啟用資料表變數延遲編譯，請在查詢執行時，針對您所連線的資料庫，啟用資料庫相容性層級 150。
 
-如需詳細資訊，請參閱[資料表變數延遲編譯](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
+資料表變數延遲編譯**不**會變更資料表變數的任何其他特性。 例如，此功能不會在資料表變數中新增資料行統計資料。
+
+資料表變數延遲編譯**不會增加重新編譯頻率**， 而是會在初始編譯的位置移位。 產生的快取計畫是根據初始延遲編譯資料表變數的資料列計數所產生。 快取計畫是由連續查詢重複使用。 將會重複使用計畫，直到該計畫被收回或重新編譯為止。 
+
+用於初始計畫編譯的資料表變數資料列計數，代表一個可能不同於固定資料列計數猜測的一般值。 如果不同，則下游作業將會受益。 若資料表變數資料列計數在每次執行時都大幅相異，則此功能可能無法改善效能。
+
+### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>停用資料表變數的延遲編譯，而無須變更相容性層級
+請在資料庫或陳述式的範圍停用資料表變數延遲編譯，同時仍將資料庫相容性層級維持在 150 以上。 若要針對源自資料庫的所有查詢執行停用資料表變數延遲編譯，請在適用資料庫的內容中執行下列程式碼：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
+```
+
+若要針對源自資料庫的所有查詢執行重新啟用資料表變數延遲編譯，請在適用資料庫的內容中執行下列程式碼：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
+```
+
+您也可以透過將 DISABLE_DEFERRED_COMPILATION_TV 指派為 USE HINT 查詢提示，為特定查詢停用資料表變數延遲編譯。  例如：
+
+```sql
+DECLARE @LINEITEMS TABLE 
+    (L_OrderKey INT NOT NULL,
+     L_Quantity INT NOT NULL
+    );
+
+INSERT @LINEITEMS
+SELECT L_OrderKey, L_Quantity
+FROM dbo.lineitem
+WHERE L_Quantity = 5;
+
+SELECT  O_OrderKey,
+    O_CustKey,
+    O_OrderStatus,
+    L_QUANTITY
+FROM    
+    ORDERS,
+    @LINEITEMS
+WHERE   O_ORDERKEY  =   L_ORDERKEY
+    AND O_OrderStatus = 'O'
+OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
+```
 
 ## <a name="scalar-udf-inlining"></a>純量 UDF 內嵌
 
-**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)
+**適用範圍：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)
 
 純量 UDF 內嵌會自動將[純量 UDF](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) 轉換成關聯運算式。 將它們內嵌在呼叫的 SQL 查詢中。 此轉換可改善利用純量 UDF 的工作負載效能。 純量 UDF 內嵌有益於 UDF 內的成本型最佳化作業。 其結果會是有效率、集合導向的平行處理，而不是效率不彰、反覆執行的序列執行計畫。 根據預設，資料庫相容性層級 150 會啟用此功能。
 
@@ -294,7 +340,7 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 
 ## <a name="approximate-query-processing"></a>近似查詢處理
 
-**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**適用範圍：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 近似查詢處理是新的功能系列。 它會在回應性比絕對精確度更重要的大型資料集間執行彙總作業。 例如，在 10 億筆資料列中計算 **COUNT(DISTINCT())** ，以顯示在儀表板上。 在此情況下，絕對精確度不重要，但回應性非常重要。 新的 **APPROX_COUNT_DISTINCT** 彙總函式會傳回群組中唯一非 Null 值的近似數目。
 
@@ -302,7 +348,7 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 
 ## <a name="batch-mode-on-rowstore"></a>資料列存放區上的批次模式 
 
-**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**適用範圍：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 資料列存放區上的批次模式可針對分析工作負載啟用批次模式執行功能，而不需要資料行存放區索引。  這項功能支援用於磁碟上堆積和 B 型樹狀結構索引的批次模式執行和點陣圖篩選。 資料列存放區上的批次模式可支援所有現有具備批次模式功能的運算子。
 
@@ -312,40 +358,44 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 - 使用**批次模式**處理，查詢運算子處理資料更有效率。 它們會批次處理資料列，而不是一次處理一筆資料列。 其他數項延展性改善也與批次模式處理繫結。 如需批次模式的詳細資訊，請參閱[執行模式](../../relational-databases/query-processing-architecture-guide.md#execution-modes)。
 
 這兩組功能一同使用，改善輸入/輸出 (I/O) 和 CPU 使用率：
-- 使用資料行存放區索引，可在記憶體中放置更多資料。 減少 I/O 的需要。
+- 使用資料行存放區索引，可在記憶體中放置更多資料。 這會減少 I/O 工作負載。
 - 批次模式處理可更有效率的使用 CPU。
 
-這兩項技術會盡可能地利用彼此的優勢。 例如，批次模式彙總可作為資料行存放區索引的一部分進行評估。 我們也會更有效率的搭配批次模式聯結和批次模式彙總，使用執行長度限制編碼來處理壓縮過的資料行存放區資料。 
+這兩項技術會盡可能地利用彼此的優勢。 例如，批次模式彙總可作為資料行存放區索引的一部分進行評估。 壓縮過的資料行存放區資料也會透過更有效率地搭配批次模式聯結和批次模式彙總，使用執行長度限制編碼來處理。 
  
-這兩項功能可獨立使用：
-* 您取得使用資料行存放區索引的資料列模式計畫。
-* 您取得只使用資料列存放區索引的批次模式計畫。 
+但是，重要的是要了解這兩個功能是獨立的：
+* 您可以取得使用資料行存放區索引的資料列模式計畫。
+* 您可以取得只使用資料列存放區索引的批次模式計畫。 
 
 兩種功能一起使用，通常會取得最佳結果。 因此到目前為止，SQL Server 查詢最佳化工具仍認為批次模式處理只適用於包含至少一個具有資料行存放區索引的資料表查詢。
 
-資料行存放區索引不適合某些應用程式。 應用程式可能使用資料行存放區索引不支援的一些其他功能。 例如，就地修改與資料行存放區壓縮不相容。 因此，具有叢集資料行存放區索引的資料表不支援觸發程序。 更重要的是，資料行存放區索引會增加 **DELETE** 和 **UPDATE** 陳述式的額外負荷。 
+某些應用程式可能不適合資料行存放區索引。 應用程式可能使用資料行存放區索引不支援的一些其他功能。 例如，就地修改與資料行存放區壓縮不相容。 因此，具有叢集資料行存放區索引的資料表不支援觸發程序。 更重要的是，資料行存放區索引會增加 **DELETE** 和 **UPDATE** 陳述式的額外負荷。 
 
-針對某些混合式交易分析工作負載，工作負載交易部分所帶來額外負荷仍超過資料行存放區索引的好處。 這種狀況可以改善只使用批次模式處理的 CPU 使用量。 這就是為什麼資料列存放區功能的批次模式會考慮用批次模式處理所有查詢。 涉及哪些索引並不重要。
+針對某些混合式交易分析工作負載，交易工作負載的額外負荷仍超過資料行存放區索引的好處。 此類情節可以透過單獨採用批次模式處理，而受益於改善的 CPU 使用率。 這就是為什麼資料列存放區上的批次模式功能考慮所有查詢的批次模式，而不管涉及哪種索引類型。
 
 ### <a name="workloads-that-might-benefit-from-batch-mode-on-rowstore"></a>可從資料列存放區批次模式受益的工作負載
 下列工作負載可從資料列存放區的批次模式受益：
-* 工作負載有很大部分是由分析查詢構成。 通常，這些查詢會有例如聯結或彙總的運算子，可處理數十萬筆或更多的資料列。
-* CPU 繫結的工作負載。 如果瓶頸為 I/O，我們仍建議您盡可能考慮資料行存放區索引。
+* 工作負載有很大部分是由分析查詢構成。 通常，這些查詢會使用例如聯結或彙總的運算子，可處理數十萬筆或更多的資料列。
+* CPU 繫結的工作負載。 如果瓶頸為 I/O，仍建議您盡可能考慮資料行存放區索引。
 * 建立資料行存放區索引會將過多的額外負荷新增至您工作負載的交易式部分。 或者，建立資料行存放區索引不可行，因為您應用程式的相依功能尚不支援資料行存放區索引。
 
+
 > [!NOTE]
-> 資料列存放區上的批次模式僅協助減少 CPU 使用量。 瓶頸若與 IO 相關，且資料尚未快取 (「冷」快取)，則資料列存放區上的批次模式將無法改善已耗用時間。 同樣的，若電腦上沒有足夠記憶體可供快取所有資料，則效能也不太可能獲得改善。
+> 資料列存放區上的批次模式僅協助減少 CPU 使用量。 瓶頸若與 I/O 相關，且資料尚未快取 (「冷」快取)，則資料列存放區上的批次模式將無法改善查詢已耗用時間。 同樣的，若電腦上沒有足夠記憶體可供快取所有資料，則效能也不太可能獲得改善。
 
 ### <a name="what-changes-with-batch-mode-on-rowstore"></a>資料列存放區上的批次模式有哪些變更？
-除了將相容性層級移動到 150 級之外，您無須變更任何項目，也能為候選工作負載啟用資料列存放區上的批次模式。
 
-即使查詢並未涉及任何具有資料行存放區索引的資料表，查詢處理器現在也會使用啟發學習法來決定是否要考慮使用批次模式。 啟發學習法包含下列檢查：
+將資料庫設定為相容性層級 150。 不需要進行其他變更。
+
+即使查詢並未存取任何具有資料行存放區索引的資料表，查詢處理器現在也會使用啟發學習法來決定是否要考慮使用批次模式。 啟發學習法包含下列檢查：
 1. 對資料表大小、使用的運算子，以及輸入查詢中估計基數的初始檢查。
 2. 最佳化工具為查詢探索更便宜的新計劃時所帶來的額外檢查點。 若這些替代方案並未大量使用批次模式，則最佳化工具會停止探索批次模式的替代項目。
 
+
 如果使用資料列存放區上的批次模式，您在查詢計畫中看到的實際執行模式如同**批次模式**。 掃描運算子會使用批次模式處理磁碟上的堆積和 B 型樹狀結構索引。 此批次模式掃描可評估批次模式點陣圖篩選。 您也可能會在計畫中看到其他批次模式運算子。 例如雜湊聯結、雜湊式彙總、排序、Window 彙總、篩選、串連和計算純量運算子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>備註
+
 查詢計畫並非一律使用批次模式。 查詢最佳化工具可能會判定批次模式對查詢沒有幫助。 
 
 查詢最佳化工具的搜尋空間正在變更。 因此，如果收到資料列模式計畫，它可能和您在較低相容性層級中取得的計畫不一樣。 而如果您收到批次模式計畫，它可能和您以資料行存放區索引取得的計畫不一樣。 

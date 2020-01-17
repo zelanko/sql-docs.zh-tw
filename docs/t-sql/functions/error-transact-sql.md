@@ -20,12 +20,12 @@ ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5260e1204f834b3ccb89703dba94be4dec760d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8834e05acdbb3a38fb8688e96c75935da6778563
+ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094592"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74762855"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,10 +40,10 @@ ms.locfileid: "68094592"
 @@ERROR  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  integer  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果先前的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式沒有發現任何錯誤，便傳回 0。  
   
  如果先前的陳述式發現錯誤，便傳回錯誤號碼。 如果錯誤是 sys.messages 目錄檢視中的錯誤之一，@@ERROR 會包含這項錯誤在 sys.messages.message_id 資料行中的值。 您可以在 sys.messages 中檢視 @@ERROR 錯誤號碼的相關聯文字。  
@@ -63,8 +63,10 @@ GO
 UPDATE HumanResources.EmployeePayHistory  
     SET PayFrequency = 4  
     WHERE BusinessEntityID = 1;  
-IF @@ERROR = 547  
-    PRINT N'A check constraint violation occurred.';  
+IF @@ERROR = 547
+    BEGIN
+    PRINT N'A check constraint violation occurred.';
+    END
 GO  
 ```  
   

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - SQL Server Connector, using
 - EKM, with SQL Server Connector
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 76b3d714f1522cfecd5c61eb028b59f3bbeaa09d
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 1cd734f44f9cf6a984fac569a2cd2114d57c26bd
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929740"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957303"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>搭配使用 SQL Server 連接器與 SQL 加密功能
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "70929740"
  
 您需要建立認證和登入，並建立資料庫加密金鑰來加密資料和資料庫中的記錄檔。 若要加密資料庫，則需要資料庫的 **CONTROL** 權限。 下圖顯示使用 Azure 金鑰保存庫時的加密金鑰階層。  
   
- ![含有 AKV 的 EKM 金鑰階層](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "含有 AKV 的 EKM 金鑰階層")  
+ ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
   
 1.  **建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認證來供 Database Engine 用於 TDE**  
   
@@ -115,11 +115,11 @@ ms.locfileid: "70929740"
   
      使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]，透過使用物件總管連接到您的資料庫，來確認已開啟 TDE。 以滑鼠右鍵按一下您的資料庫，指向 [工作]  ，然後按一下 [管理資料庫加密]  。  
   
-     ![EKM TDE 物件總管](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "EKM TDE 物件總管")  
+     ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
   
      在 **[管理資料庫加密]** 對話方塊中，確認已開啟 TDE，以及哪個非對稱金鑰正在加密 DEK。  
   
-     ![EKM TDE 對話方塊](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "EKM TDE 對話方塊")  
+     ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
   
      或者，您可以執行下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼。 加密狀態 3 表示加密的資料庫。  
   
@@ -195,7 +195,7 @@ ms.locfileid: "70929740"
   
 3.  **備份資料庫**  
   
-     請使用儲存在金鑰保存庫中的非對稱金鑰指定加密，並備份資料庫。
+     備份資料庫會指定加密，具有儲存在金鑰保存庫中的非對稱金鑰。
      
      在下列範例中，請注意，若資料庫已使用 TDE 加密，且非對稱金鑰 `CONTOSO_KEY_BACKUP` 不同於 TDE 的非對稱金鑰，則備份將透過 TDE 非對稱金鑰和 `CONTOSO_KEY_BACKUP` 這兩者加密。 目標 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體需要這兩個金鑰來解密備份。
   

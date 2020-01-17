@@ -1,6 +1,6 @@
 ---
-title: 設定具有 NVDIMM-N 回寫式快取的儲存空間 | Microsoft Docs
-ms.custom: ''
+title: 設定儲存空間 - NVDIMM-N 回寫式快取
+ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 050182836ecaa013ffe45ff9d5f78d2cdd60a1a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e19b164b0efe6d92a9bae0e6f7362ac5fd56f202
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137985"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165990"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>設定具有 NVDIMM-N 回寫式快取的儲存空間
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyNam
   
  您現在可以檢視伺服器中顯示的這個新磁碟區。 您現在可以使用此磁碟機來儲存 SQL Server 交易記錄。  
   
- ![Log_Space 磁碟](../../relational-databases/performance/media/log-space-drive.png "Log_Space 磁碟")  
+ ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
   
 ## <a name="see-also"></a>另請參閱  
  [Windows 10 中的 Windows 儲存空間](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   

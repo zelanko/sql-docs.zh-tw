@@ -1,7 +1,7 @@
 ---
-title: 開始在 Docker 上使用 SQL Server Linux 容器
-titleSuffix: SQL Server
+title: Docker：安裝 Linux 上的 SQL Server 容器
 description: 本快速入門會示範如何使用 Docker 來執行 SQL Server 2017 和 2019 容器映像。 您隨後便可使用 sqlcmd 來建立及查詢資料庫。
+ms.custom: seo-lt-2019
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
@@ -9,17 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.custom: sqlfreshmay19
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 29a7905f70446f79d27e9766488e536ccd1c0c91
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 40c1573fb16bbf6d7cdbb98a168dcda064b59087
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531381"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558669"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入門：使用 Docker 執行 SQL Server 容器映像
 
@@ -124,7 +123,7 @@ any changes to one section should be duplicated in the other-->
 
    下表提供了前述 `docker run` 範例的參數描述：
 
-   | 參數 | Description |
+   | 參數 | 描述 |
    |-----|-----|
    | **-e "ACCEPT_EULA=Y"** |  將 **ACCEPT_EULA** 變數設為任意值可確認您接受[終端使用者授權合約](https://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | 指定您自己的強式密碼，該密碼長度至少需為 8 個字元且符合 [SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 此為 SQL Server 映像的必要設定。 |
@@ -243,7 +242,7 @@ SELECT @@SERVERNAME,
 
    下表提供了前述 `docker run` 範例的參數描述：
 
-   | 參數 | Description |
+   | 參數 | 描述 |
    |-----|-----|
    | **-e "ACCEPT_EULA=Y"** |  將 **ACCEPT_EULA** 變數設為任意值可確認您接受[終端使用者授權合約](https://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | 指定您自己的強式密碼，該密碼長度至少需為 8 個字元且符合 [SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 此為 SQL Server 映像的必要設定。 |
@@ -364,7 +363,7 @@ SELECT @@SERVERNAME,
 
 下列各節將逐步引導您使用 **sqlcmd** 和 Transact-SQL，來建立新的資料庫、新增資料及執行簡單的查詢。
 
-### <a name="create-a-new-database"></a>建立新的資料庫
+### <a name="create-a-new-database"></a>建立新資料庫
 
 下列步驟會建立名為 `TestDB` 的新資料庫。
 
@@ -424,7 +423,7 @@ SELECT @@SERVERNAME,
    SELECT * FROM Inventory WHERE quantity > 152;
    ```
 
-2. 執行命令：
+2. 執行命令︰
 
    ```sql
    GO

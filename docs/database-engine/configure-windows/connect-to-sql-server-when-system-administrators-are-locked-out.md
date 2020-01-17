@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 573ddefa33c1e021c16359f0164f0eda49d329fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ebaa078fc3be919a6114ad275b0ef5ece6f0d0d7
+ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012110"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761181"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>當系統管理員遭到鎖定時連接到 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "68012110"
     > [!NOTE]  
     >  如果是某些舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則沒有 [啟動參數]  索引標籤。在該情況下，請在 [進階]  索引標籤上，按兩下 [啟動參數]  。 這些參數就會在非常小的視窗中開啟。 移除您先前加入的 `;-m`，然後按一下 [確定]  。  
   
-12. 以滑鼠右鍵按一下您的伺服器名稱，然後按一下 [重新啟動]  。  
+12. 以滑鼠右鍵按一下您的伺服器名稱，然後按一下 [重新啟動]  。 務必再次啟動 SQL Server Agent。
   
  現在，您應該能夠使用其中一個目前屬於**系統管理員**固定伺服器角色成員的帳戶進行正常連接。  
   

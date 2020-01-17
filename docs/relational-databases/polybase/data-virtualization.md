@@ -1,24 +1,30 @@
 ---
-title: 在 SQL Server 2019 中虛擬化外部資料 | Microsoft Docs
+title: 虛擬化外部資料
 description: 此頁面詳述針對關聯式資料來源使用 [建立外部資料表精靈] 的步驟
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 719584bda1a289694c6e5ff7483e320073323be4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.metadata: seo-lt-2019
+ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710598"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75227507"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>搭配使用外部資料表精靈與關聯式資料來源
 
 其中一個 SQL Server 2019 重要情節是可以虛擬化資料。 此程序允許將資料保留在其原始位置。 您可以在 SQL Server 執行個體中「虛擬化」  資料，以在該處查詢它，如同 SQL Server 中的任何其他資料表。 此程序會將 ETL 程序的需求降到最低。 此程序只要使用 PolyBase 連接器就能達成。 如需資料虛擬化的詳細資訊，請參閱[開始使用 PolyBase](polybase-guide.md)。
+
+這段影片提供資料虛擬化的簡介：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-Data-Virtualization/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="start-the-external-table-wizard"></a>啟動外部資料表精靈
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4af840298c0e17b61dd073c982e6dec440ec67d7
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: ae6e3b08b3a29afb9282d28f33ec9406ab418b2c
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "68419598"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721923"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ COLUMNS_UPDATED ( )
 ## <a name="return-types"></a>傳回類型
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `COLUMNS_UPDATED` 會測試多個資料行所執行的 UPDATE 或 INSERT 動作。 若要在一個資料行上測試 UPDATE 或 INSERT 作業，請使用 [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md)。
   
 `COLUMNS_UPDATED` 會傳回從左到右排序的一或多個位元組。 每個位元組的最右邊位元都是最不重要的位元。 最左邊位元組的最右邊位元代表資料表的第一個資料表資料行，而左邊的下一個位元代表第二個資料行，依此類推。 如果建立觸發程序的資料表包含超出八個資料行，則 `COLUMNS_UPDATED` 會傳回多個位元組，而最不重要的位元組在最左邊。 `COLUMNS_UPDATED` 會針對 INSERT 動作中的所有資料行傳回 TRUE，因為資料行已插入明確值或隱含 (NULL) 值。
@@ -116,7 +116,7 @@ AFTER UPDATE AS
 /* Check whether columns 2, 3 or 4 have been updated. If any or all  
 columns 2, 3 or 4 have been changed, create an audit record.
 The bitmask is: power(2, (2-1)) + power(2, (3-1)) + power(2, (4-1)) = 14.
-This bitmask translates into base_10 as: 1 + 4 + 9 = 14.
+This bitmask translates into base_10 as: 2 + 4 + 8 = 14.
 To test whether all columns 2, 3, and 4 are updated, use = 14 instead of > 0  
 (below). */
   

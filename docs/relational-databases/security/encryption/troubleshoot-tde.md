@@ -1,29 +1,30 @@
 ---
-title: 在 Azure Key Vault 中使用客戶受控金鑰進行透明資料加密的常見錯誤 | Microsoft Docs
-description: 針對使用 Azure Key Vault 設定的透明資料加密 (TDE) 進行疑難排解。
+title: Azure Key Vault 中客戶管理金鑰的常見錯誤
+description: 對 Azure Key Vault 中的透明資料加密 (TDE) 和客戶管理金鑰的常見錯誤進行疑難排解。
+ms.custom: seo-lt-2019
 helpviewer_keywords:
 - troublshooting, tde akv
 - tde akv configuration, troubleshooting
 - tde troubleshooting
-author: aliceku
+author: jaszymas
 ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
-ms.author: aliceku
+ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 308cc4189361c795115c061b871238aaba430279
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 40584dda23d36af385b9cae5457377838694be6e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727772"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558463"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>在 Azure Key Vault 中使用客戶受控金鑰進行透明資料加密的常見錯誤
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-此文章說明如何找出並解決造成資料庫 (設定為使用 [Azure Key Vault 中的透明資料加密 (TDE) 搭配客戶管理金鑰](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql)) 變得無法存取的 Azure Key Vault 金鑰存取問題。
+此文章說明如何找出並解決造成資料庫 (設定為使用 [Azure Key Vault 中的透明資料加密 (TDE) 搭配客戶管理金鑰](/azure/sql-database/transparent-data-encryption-byok-azure-sql)) 變得無法存取的 Azure Key Vault 金鑰存取問題。
 
 ## <a name="introduction"></a>簡介
 當 TDE 設定為在 Azure Key Vault 中使用客戶管理金鑰時，資料庫必須持續存取此 TDE 保護裝置才能保持在線上。  如果邏輯 SQL Server 無法存取 Azure Key Vault 中的客戶管理 TDE 保護裝置，資料庫將會開始拒絕所有連線，而不會出現相應的錯誤訊息，並在 Azure 入口網站中將其狀態變更為*無法存取*。
@@ -83,7 +84,7 @@ ms.locfileid: "73727772"
  1. 使用 [新增]  按鈕，為上一個步驟中建立的伺服器新增 AppId。 
  1. 指派下列金鑰權限：取得、包裝及解除包裝 
 
-若要深入了解，請參閱[將 Azure AD 身分識別指派給您的伺服器](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server) \(部分機器翻譯\)。
+若要深入了解，請參閱[將 Azure AD 身分識別指派給您的伺服器](/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure#assign-an-azure-ad-identity-to-your-server) \(部分機器翻譯\)。
 
 > [!IMPORTANT]
 > 如果在初始設定搭配 Key Vault 的 TDE 之後，邏輯 SQL Server 執行個體已移至新的租用戶，就必須重複設定 Azure AD 身分識別的步驟以建立新的 AppId。 然後，將 AppId 新增至金鑰保存庫，並為金鑰指派正確的權限。 

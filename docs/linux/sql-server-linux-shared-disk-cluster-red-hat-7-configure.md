@@ -1,6 +1,7 @@
 ---
-title: 設定適用於 SQL Server 的 Red Hat Enterprise Linux 共用叢集
-description: 透過設定適用於 SQL Server 的 Red Hat Enterprise Linux 共用磁碟叢集來實作高可用性。
+title: 在 Linux 上設定 SQL Server 的 RHEL FCI
+description: 了解如何在 Linux 上設定 SQL Server 的高可用性 Red Hat Enterprise Linux (RHEL) 共用磁碟容錯移轉叢集執行個體 (FCI)。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 052bb7455c952600390a0960e9d7618ab0a315fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 3ff0c862e93cd3b552b29c4eec8ab91931c809c7
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75252235"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656625"
 ---
-# <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定適用於 SQL Server 的 Red Hat Enterprise Linux 共用磁碟叢集
+# <a name="configure-rhel-failover-cluster-instance-fci-cluster-for-sql-server"></a>設定 SQL Server 的 RHEL 容錯移轉叢集執行個體 (FCI) 叢集
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本指南提供在 Red Hat Enterprise Linux 上，為 SQL Server 建立兩個節點共用磁碟叢集的指示。 叢集層是以建置於 [Pacemaker](https://clusterlabs.org/) 之上的 Red Hat Enterprise Linux (RHEL) [HA 附加元件](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)為基礎。 SQL Server 執行個體在其中一個節點上為作用中狀態。
+本指南提供在 Red Hat Enterprise Linux 上，為 SQL Server 建立雙節點共用磁碟容錯移轉叢集的指示。 叢集層是以建置於 [Pacemaker](https://clusterlabs.org/) 之上的 Red Hat Enterprise Linux (RHEL) [HA 附加元件](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)為基礎。 SQL Server 執行個體在其中一個節點上為作用中狀態。
 
 > [!NOTE] 
 > 存取 Red Hat HA 附加元件與文件皆需要訂用帳戶。 
@@ -202,7 +203,7 @@ ms.locfileid: "75252235"
 
 * [NFS 伺服器和 firewalld | 堆疊交換](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld) \(英文\)
 * [裝載 NFS 磁碟區 | Linux 網路系統管理員指南](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html) \(英文\)
-* [NFS 伺服器設定 | Red Hat 客戶入口網站](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig) \(英文\)
+* [NFS 伺服器設定 | Red Hat 客戶入口網站](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig) \(英文\)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>裝載資料庫檔案目錄以指向共用儲存體
 

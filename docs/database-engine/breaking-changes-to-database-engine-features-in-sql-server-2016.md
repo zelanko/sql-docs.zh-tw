@@ -1,7 +1,9 @@
 ---
-title: SQL Server 2016 資料庫引擎功能的重大變更 | Microsoft Docs
-ms.custom: ''
-ms.date: 11/27/2016
+title: 資料庫引擎：重大變更 | Microsoft Docs
+titleSuffix: SQL Server 2016
+description: SQL Server 2016 資料庫引擎功能的重大變更
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -13,19 +15,20 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 875e78cee077ec902dc1f845a330148e93f9edb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 67a37dd07810facf3e18e94dc0f9e552ea05778a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013346"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244715"
 ---
-# <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中對於 Database Engine 的重大變更
+# <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 資料庫引擎功能的重大變更
+
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  本主題描述 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 及舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的重大變更。 這些變更可能會中斷以舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]為根據的應用程式、指令碼或功能。 當您升級時可能會遇到這些問題。  
+  此主題描述 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 及舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的重大變更。 這些變更可能會中斷以舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]為根據的應用程式、指令碼或功能。 當您升級時可能會遇到這些問題。  
   
-##  <a name="SQL15"></a> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 的重大變更  
+##  <a name="SQL15"></a>[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 的重大變更  
   
 -   `sys.dm_io_virtual_file_stats` 的 *sample_ms* 資料行已經從 **int** 擴充到 **bigint** 資料類型。  
   

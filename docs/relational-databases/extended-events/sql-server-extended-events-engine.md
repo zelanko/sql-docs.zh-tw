@@ -1,6 +1,5 @@
 ---
-title: SQL Server 擴充的事件引擎 | Microsoft Docs
-ms.custom: ''
+title: SQL Server 擴充的事件引擎
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +12,12 @@ ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: febe2e0e7964d550f0b154188281f3c7bd3f2281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eeaa1cbae803e3f4eedef3231f9ab9bbbe31deba
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009398"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242957"
 ---
 # <a name="sql-server-extended-events-engine"></a>SQL Server 擴充的事件引擎
 
@@ -40,11 +39,11 @@ ms.locfileid: "68009398"
   
  ![詳細的擴充事件架構](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "詳細的擴充事件架構")  
   
- 請注意下列事項：  
+ 請注意：  
   
--   每一個 Windows 處理序都可以有一或多個模組 (**Win32 處理序**、**Win32 模組**)。 這些也稱為「二進位檔」  或「可執行模組」  。  
+-   每一個 Windows 處理序都可以有一或多個模組 (**Win32 處理序**、 **Win32 模組**)。 這些也稱為「二進位檔」  或「可執行模組」  。  
   
--   每一個 Windows 處理序模組都可包含一或多個擴充的事件封裝 (**Package**)，其中包含一或多個擴充的事件物件 (**Type**、**Target**、**Action**、**Map**、**Predicate** 和 **Event**)。  
+-   每一個 Windows 處理序模組都可包含一或多個擴充的事件封裝 (**Package**)，其中包含一或多個擴充的事件物件 (**Type**、 **Target**、 **Action**、 **Map**、 **Predicate**和 **Event**)。  
   
 -   在主機處理序內，只能有一個擴充的事件引擎執行個體 (**擴充的事件引擎**)，此執行個體會執行以下作業：  
   
