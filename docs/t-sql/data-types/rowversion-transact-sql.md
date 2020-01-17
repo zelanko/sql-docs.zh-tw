@@ -26,19 +26,19 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b08c5653243bce5852bab54bee267a43cc3b16e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0129999e61e1df1c61c3a0fb58eab1b3a1cca7b6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000590"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245297"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 此資料類型會公開在資料庫中自動產生的唯一二進位數字。 **rowversion** 通常用來作為版本戳記資料表資料列的機制。 儲存體大小是 8 位元組。 **rowversion** 資料類型只是會遞增的數字，因此不會保留日期或時間。 若要記錄日期或時間，請使用 **datetime2** 資料類型。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 每個資料庫都有一個計數器，會針對在資料庫內包含 **rowversion** 資料行的資料表所執行的每個插入或更新作業而遞增。 這個計數器是資料庫資料列版本。 這會追蹤資料庫內的相對時間，而不是可關聯於時鐘的實際時間。 資料表只能有一個 **rowversion** 資料行。 每次修改或插入含 **rowversion** 資料行的資料列時，都會在 **rowversion** 資料行中插入遞增的資料庫資料列版本值。 這個屬性會使 **rowversion** 資料行不適合作為索引鍵 (尤其是主索引鍵) 的候選項。 資料列的任何更新都會變更資料列版本值，因而會變更索引鍵值。 如果資料行在主索引鍵中，舊的索引鍵值便不再有效，參考舊值的外部索引鍵也不再有效。 如果動態資料指標參考資料表，所有更新都會變更資料列在資料指標中的位置。 如果資料行在索引鍵中，資料列的所有更新也會產生索引的更新。  **rowversion** 值會隨著任何 update 陳述式而遞增，即使沒有變更任何資料列值。 (例如，若資料行值為 5，而 update 陳述式將該值設為 5，即使沒有任何變更，此動作仍然會被視為更新；因此 **rowversion** 便會遞增。)
   
 **timestamp** 是 **rowversion** 資料類型的同義字，遵照資料類型同義字的行為。 在 DDL 陳述式中，請盡可能的使用 **rowversion** 而非 **timestamp**。 如需詳細資訊，請參閱[資料類型同義字 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md)。
@@ -65,7 +65,7 @@ CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;
   
 不可為 Null 的**rowversion** 資料行，語意等於 **binary(8)** 資料行。 可為 Null 的 **rowversion** 資料行，語意等於 **varbinary(8)** 資料行。
   
-您可以使用資料列的 **rowversion** 資料行來輕鬆的判斷該資料列自上一次讀取以來是否已執行過 update 陳述式。 若已針對該資料列執行 update 陳述式，則 rowversion 值便會更新。 若沒有針對該資料列執行 update 陳述式，則 rowversion 值便會與先前讀取時相同。 若要傳回資料庫目前的 rowversion 值，請使用 [@@DBTS](../../t-sql/functions/dbts-transact-sql.md)。
+您可以使用資料列的 **rowversion** 資料行來輕鬆地判斷自上一次讀取以來，是否已對該資料列執行過 update 陳述式。 若已針對該資料列執行 update 陳述式，則 rowversion 值便會更新。 若沒有針對該資料列執行 update 陳述式，則 rowversion 值便會與先前讀取時相同。 若要傳回資料庫目前的 rowversion 值，請使用 [@@DBTS](../../t-sql/functions/dbts-transact-sql.md)。
   
 您可以將 **rowversion** 資料行新增至資料表，以確保能在多個使用者同時更新資料列時維護資料庫的完整性。 您可能也想在不必重新查詢資料表的情況下，知道更新了多少資料列以及更新了哪些資料列。
   

@@ -1,6 +1,7 @@
 ---
-title: AlwaysOn 可用性群組的 Transact-SQL 陳述式 | Microsoft Docs
-ms.custom: ''
+title: 可用性群組的 Transact-SQL 陳述式
+description: 介紹支援部署、建立及管理 Always On 可用性群組的 Transact-SQL (T-SQL) 陳述式。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b96b5d6921875aab92236475f4f6b66281a31599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5ef8cd17f7a6db5058fd10d26de9f8674846ed03
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013836"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822208"
 ---
-# <a name="transact-sql-statements-for-always-on-availability-groups"></a>AlwaysOn 可用性群組的 Transact-SQL 陳述式
+# <a name="transact-sql-statements-for-always-on-availability-groups"></a>Always On 可用性群組的 Transact-SQL 陳述式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題介紹支援部署 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 以及建立及管理給定可用性群組、可用性複本及可用性資料庫的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 陳述式。  

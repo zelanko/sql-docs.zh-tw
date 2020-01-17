@@ -1,6 +1,7 @@
 ---
-title: 使用原則式管理來管理伺服器 | Microsoft Docs
-ms.custom: ''
+title: 使用原則式管理來管理伺服器
+description: 了解如何使用原則式管理來管理一或多個 SQL Server 執行個體。
+ms.custom: seo-lt-2019
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c62c2372b0a61d0a09a0e15998f2340b995fc919
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e0abb97eddddc65103bfaad7c2e1996423a4919
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109929"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558665"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>使用原則式管理來管理伺服器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

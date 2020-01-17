@@ -1,6 +1,7 @@
 ---
-title: 在合併發行項之間自動產生聯結篩選 | Microsoft Docs
-ms.custom: ''
+title: 自動產生聯結篩選 (合併式)
+description: 描述如何在 SQL Server Management Studio (SSMS) 中「合併式發行集」之 [新增發行集精靈] 的 [篩選資料表的資料列] 頁面上，自動產生一組聯結篩選。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4b3d21e2dcecf965e82ea5a88a51d6eb64ebfb88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8bc0ae6764d96b03088cb05eb72dc5ab4f3a0d6
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907969"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321275"
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>在合併發行項之間自動產生聯結篩選
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  您可以在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - \<發行集>]  對話方塊的 [篩選資料列]  頁面上，自動產生一組聯結篩選。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+  您可以在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - \<發行集>]  對話方塊的 [篩選資料列]  頁面上，自動產生一組聯結篩選。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 > [!NOTE]  
 >  如果在初始化發行集的訂閱之後，在 [發行集屬性 - \<發行集>]  對話方塊中自動產生了一組聯結篩選，則您必須在經過變更之後，產生一個新的快照集並重新初始化所有的訂閱。 如需屬性變更需求的詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
@@ -58,7 +59,7 @@ ms.locfileid: "67907969"
   
     3.  指定篩選選項。  
   
-         選取符合資料在訂閱者之間共用資料方式的選項：[這個資料表中的一個資料列會提供給多個訂閱]  或 [這個資料表中的一個資料列只會提供給一個訂閱]  。 若您選取 **[這個資料表中的一個資料列只會提供給一個訂閱]** ，合併式複寫可藉由儲存和處理較少中繼資料來將效能最佳化。 不過您必須確定資料分割方式不會將資料列複寫至多個訂閱者。 如需進一步資訊，請參閱主題＜ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞中的「設定資料分割選項」。  
+         選取符合資料在訂閱者之間共用資料方式的選項：[這個資料表中的一個資料列會提供給多個訂閱]  或 [這個資料表中的一個資料列只會提供給一個訂閱]  。 若您選取 **[這個資料表中的一個資料列只會提供給一個訂閱]** ，合併式複寫可藉由儲存和處理較少中繼資料來將效能最佳化。 不過您必須確定資料分割方式不會將資料列複寫至多個訂閱者。 如需進一步資訊，請參閱主題＜ [參數化資料列篩選器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞中的「設定資料分割選項」。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -82,6 +83,6 @@ ms.locfileid: "67907969"
   
 ## <a name="see-also"></a>另請參閱  
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [參數化資料列篩選器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

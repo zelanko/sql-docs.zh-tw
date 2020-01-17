@@ -1,6 +1,7 @@
 ---
-title: 備份與還原合併式複寫的策略 | Microsoft Docs
-ms.custom: ''
+title: 備份與還原的策略 (合併式)
+description: 備份與還原合併式複寫中使用之資料的策略。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a965da708880fc3411dbdd33e372e197afc9dff8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 448688a54a245cadffa4c0c916d146e7c3e7e115
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948740"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321985"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>備份與還原合併式複寫的策略
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "67948740"
   
 -   發行者、散發者及所有訂閱者端的 **master** 與 **msdb** 系統資料庫。 這些資料庫應與其他每個及相關的複寫資料庫同時備份。 例如，在您備份發行集資料庫的同時，在發行者端備份 **master** 與 **msdb** 資料庫。 還原發行集資料庫時，請確定 **master** 與 **msdb** 資料庫的複寫組態與設定和發行集資料庫一致。  
   
- 如果您執行一般記錄備份，就必須在記錄備份中擷取任何複寫相關的變更。 如果您沒有執行記錄備份，每當與複寫相關的設定有所變更，就應該執行備份。 如需相關資訊，請參閱 [需要更新之備份的常見動作](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md)。  
+ 如果您執行一般記錄備份，就必須在記錄備份中擷取任何複寫相關的變更。 如果您沒有執行記錄備份，每當與複寫相關的設定有所變更，就應該執行備份。 如需相關資訊，請參閱 [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md)。  
   
  選擇下面詳述的方法之一，以備份與還原發行集資料庫，然後遵循為散發資料庫與訂閱資料庫列出的建議。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "67948740"
 > [!IMPORTANT]  
 >  同步處理發行集資料庫與訂閱資料庫，可能會導致發行的資料表還原到的時間點比從備份處還原的其他未發行的資料表的時間點要新。  
   
- 如果同步處理的「訂閱者」執行的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本早於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，則訂閱不可是匿名的，而必須是客訂閱或主訂閱 (在之前的版本中稱為本機訂閱與全域訂閱)。  
+ 如果同步處理的「訂閱者」所執行的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本早於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，則訂閱不可是匿名的，而必須是客訂閱或主訂閱 (在之前的版本中稱為本機訂閱與全域訂閱)。  
   
  若要同步處理訂閱，請參閱＜ [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) ＞和＜ [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)＞。  
   
@@ -87,7 +88,7 @@ ms.locfileid: "67948740"
   
  若要設定發行集保留期限，請參閱[設定訂閱的逾期期限](../../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)。  
   
- 若要同步處理訂閱，請參閱＜ [同步處理發送訂閱](../../../relational-databases/replication/synchronize-a-push-subscription.md) ＞和＜ [同步處理提取訂閱](../../../relational-databases/replication/synchronize-a-pull-subscription.md) ＞。  
+ 若要同步處理訂閱，請參閱＜ [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) ＞和＜ [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)＞。  
   
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>備份與還原重新發行資料庫  
  當資料庫從「發行者」來訂閱資料並轉而將相同的資料發行至其他訂閱資料庫時，該資料庫便是一個重新發行集資料庫。 還原重新發行的資料庫時，請遵循本主題中＜備份與還原發行集資料庫＞以及＜備份與還原訂閱資料庫＞兩節所描述的指導方針。  

@@ -1,6 +1,6 @@
 ---
-title: 在記憶體最佳化資料表中實作 SQL_VARIANT | Microsoft Docs
-ms.custom: ''
+title: 記憶體最佳化資料表中的 SQL_VARIANT
+ms.custom: seo-dt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,14 +11,14 @@ ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fee7c55c95d60329ca7b3721416569d83902a6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e156de3313889fd29d0745e0cf5cdf23d5192c59
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050329"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412613"
 ---
-# <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>在記憶體最佳化資料表中實作 SQL_VARIANT
+# <a name="implementing-sql_variant-in-a-memory-optimized-table"></a>在記憶體最佳化資料表中實作 SQL_VARIANT
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   考慮包含 **SQL_VARIANT** 資料行的資料表範例：  

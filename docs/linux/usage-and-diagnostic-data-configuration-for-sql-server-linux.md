@@ -1,20 +1,21 @@
 ---
-title: 設定 Linux 上的 SQL Server 使用狀況和診斷資料收集
+title: 設定 Linux 上 SQL Server 的使用狀況與診斷資料收集
 description: 描述如何收集和設定 Linux 上的 SQL Server 客戶使用狀況和診斷資料。
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: effc3ad0b693752eedc0f5dc478d17fbfdd5b35e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: d7fc5a14a9da000b69db804a5439fb62985f59b8
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531294"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558533"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>設定 Linux 上的 SQL Server 使用狀況和診斷資料收集
+# <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>設定 Linux 上 SQL Server 的使用狀況與診斷資料收集
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -60,7 +61,7 @@ SQL Server 2017 一律會收集並傳送與安裝程序中安裝體驗相關的�
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-1. 在主機目錄中新增具有行 `[telemetry]` 和 `customerfeedback = false` 的 `mssql.conf` 檔案：
+1. 在主機目錄中新增具有 `[telemetry]` 和 `customerfeedback = false` 這二行的 `mssql.conf` 檔案：
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -84,7 +85,7 @@ SQL Server 2017 一律會收集並傳送與安裝程序中安裝體驗相關的�
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-1. 在主機目錄中新增具有行 `[telemetry]` 和 `customerfeedback = false` 的 `mssql.conf` 檔案：
+1. 在主機目錄中新增具有 `[telemetry]` 和 `customerfeedback = false` 這二行的 `mssql.conf` 檔案：
 
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf

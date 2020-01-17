@@ -1,6 +1,7 @@
 ---
-title: 資料庫鏡像 - 使用傳入連接的憑證 | Microsoft Docs
-ms.custom: ''
+title: 針對連入連線使用憑證
+description: 描述設定伺服器執行個體，以使用憑證來驗證資料庫鏡像之傳入連線的步驟。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 274260c382eea20a3adb2fc61c1bde27e02469a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 145c182323d3de702ce1e7d4bfcc4e966c5928c2
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997912"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822276"
 ---
 # <a name="database-mirroring---use-certificates-for-inbound-connections"></a>資料庫鏡像 - 使用傳入連接的憑證
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  此主題描述設定伺服器執行個體，以使用憑證來驗證資料庫鏡像之傳入連接的步驟。 在設定傳入連接之前，您必須先在每一個伺服器執行個體上設定傳出連接。 如需詳細資訊，請參閱[允許資料庫鏡像端點使用傳出連接的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)。  
+  此主題描述設定伺服器執行個體，以使用憑證來驗證資料庫鏡像之傳入連接的步驟。 在設定傳入連接之前，您必須先在每一個伺服器執行個體上設定傳出連接。 如需詳細資訊，請參閱 [允許資料庫鏡像端點使用輸出連線的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)。  
   
  設定傳入連接的程序，包括下列一般步驟：  
   
@@ -41,7 +42,7 @@ ms.locfileid: "67997912"
   
  下列程序將詳細說明這些步驟。 對於每個步驟，此程序會提供在名為 HOST_A 的系統上設定伺服器執行個體的範例。 隨附的「範例」部分則針對名為 HOST_B 系統上的另一個伺服器執行個體示範相同的步驟。  
   
-### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-hosta"></a>設定 (HOST_A 上) 傳入鏡像連接的伺服器執行個體  
+### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-host_a"></a>設定 (HOST_A 上) 傳入鏡像連接的伺服器執行個體  
   
 1.  為其他系統建立登入。  
   
@@ -164,10 +165,10 @@ GO
  將憑證複製到另一個系統時，請使用安全複製方法。 務必將您所有的憑證小心保管。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
+ [資料庫鏡像和 Always On 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [GRANT 端點權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
  [設定加密鏡像資料庫](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [資料庫鏡像端點 &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [為資料庫鏡像組態疑難排解 &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
+ [疑難排解資料庫鏡像組態 &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   

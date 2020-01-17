@@ -1,7 +1,7 @@
 ---
-title: 可用性群組的動態管理檢視與系統目錄檢視
-description: 動態管理和目錄檢視集合可協助您監視並診斷 Always On 可用性群組的健全狀況。
-ms.custom: ag-guide, seodec18
+title: 可用性群組的 DMV 與系統目錄檢視
+description: 動態管理和目錄檢視集合可協助您監視並診斷 Always On 可用性群組的健康情況。
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 591365dfd1aff7e4c4dc8811ea640cc3885dfeb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0389f613d9b7a26aa14c5a8388ee8cd34036ddf8
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000182"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822329"
 ---
 # <a name="dynamic-management-views-and-system-catalog-views-always-on-availability-groups"></a>動態管理檢視與系統目錄檢視 (Always On 可用性群組)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

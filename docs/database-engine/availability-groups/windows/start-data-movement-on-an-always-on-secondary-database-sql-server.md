@@ -1,6 +1,7 @@
 ---
-title: 於 AlwaysOn 次要資料庫啟動資料移動 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 在次要資料庫上啟動資料移動
+description: 了解如何針對參與 SQL Server 上 Always On 可用性群組的次要資料庫啟動資料移動。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db3c0311bc45c0969e1b6f34882b0b5fc61021a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 639322e277bddc8a7d71c994600c32cfbcd78449
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013908"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251238"
 ---
 # <a name="start-data-movement-on-an-always-on-secondary-database-sql-server"></a>於 AlwaysOn 次要資料庫啟動資料移動 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

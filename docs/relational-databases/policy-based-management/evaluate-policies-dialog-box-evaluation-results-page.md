@@ -1,5 +1,6 @@
 ---
-title: 評估原則對話方塊，評估結果頁面 | Microsoft Docs
+title: '[評估原則] 對話方塊的 [評估結果] 頁面'
+description: 說明 SQL Server Management Studio (SSMS) 中原則式管理之 [評估原則] 對話方塊的 [評估結果] 頁面。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0e6d5c9d558b65e091dfb9ef0901d15ffb0ac282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36ff10e317259547c03e6ee9e939229d68569b2e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137804"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558248"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>評估原則對話方塊，評估結果頁面
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

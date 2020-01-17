@@ -1,20 +1,21 @@
 ---
-title: 開始使用 Red Hat Enterprise Linux 上的 SQL Server
+title: RHEL：在 Linux 上安裝 SQL Server
 titleSuffix: SQL Server
-description: 本快速入門說明如何在 Red Hat Enterprise Linux 上安裝 SQL Server 2017 或 SQL Server 2019，然後使用 sqlcmd 建立及查詢資料庫。
+description: 此快速入門說明如何在 Red Hat Enterprise Linux (RHEL) 上安裝 SQL Server 2017 或 SQL Server 2019，然後使用 sqlcmd 建立及查詢資料庫。
 author: VanMSFT
+ms.custom: seo-lt-2019
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: b94ea0ef8956e7807f075da548ae817dc6a205df
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: b93ea834e890981d3fd45fd999a05ae5b2b68042
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531367"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558433"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入門：在 Red Hat 上安裝 SQL Server 並建立資料庫
 
@@ -60,7 +61,7 @@ ms.locfileid: "73531367"
    ```
 
    > [!TIP]
-   > 如果您想要安裝 SQL Server 2019，您必須改為註冊 SQL Server 2019 存放庫。 請使用下列命令安裝 SQL Server 2019：
+   > 如果您想要安裝 SQL Server 2019，則必須改為註冊 SQL Server 2019 存放庫。 請使用下列命令安裝 SQL Server 2019：
    >
    > ```bash
    > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo

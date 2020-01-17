@@ -18,12 +18,12 @@ ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37da86b825ee68be83d0aa653005a1ea12db5ed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 56e1f566b5ac6addfab3811c8430ce9c19e61636
+ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050816"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74762653"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT 結構描述權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
  指定正在授與權限的結構描述。 範圍限定詞 **::** 為必要項目。  
   
  *database_principal*  
- 指定要對其授與權限的主體。 它有下列幾種：  
+ 指定要對其授與權限的主體。 下列其中之一：  
   
 -   資料庫使用者  
 -   資料庫角色  
@@ -64,7 +64,7 @@ GRANT OPTION
  指出主體也有權授與指定權限給其他主體。  
   
 AS *granting_principal*  
- 指定主體，執行這項查詢的主體就是從這個主體衍生權限來授與權限。 它有下列幾種：  
+ 指定主體，執行這項查詢的主體就是從這個主體衍生權限來授與權限。 下列其中之一：  
   
 -   資料庫使用者  
 -   資料庫角色  
@@ -75,7 +75,7 @@ AS *granting_principal*
 -   對應至非對稱金鑰的資料庫使用者  
 -   未對應至伺服器主體的資料庫使用者  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]  
 >  在某些情況下，ALTER 與 REFERENCE 權限的結合可允許被授與者檢視資料或執行未經授權的函數。 例如：擁有資料表 ALTER 權限和函式 REFERENCE 權限的使用者，可以透過函式建立並執行計算資料行。 在此情況下，使用者也必須擁有計算資料行的 SELECT 權限。  
@@ -87,7 +87,7 @@ AS *granting_principal*
 |ALTER|CONTROL|ALTER ANY SCHEMA|  
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
-|Delete|CONTROL|Delete|  
+|刪除|CONTROL|刪除|  
 |執行 CREATE 陳述式之前，請先執行|CONTROL|執行 CREATE 陳述式之前，請先執行|  
 |Insert|CONTROL|Insert|  
 |REFERENCES|CONTROL|REFERENCES|  
@@ -106,9 +106,7 @@ AS *granting_principal*
   
  U1 使用者在資料庫上具有 CREATE SYNONYM 權限，在 S1 結構描述上則具有 SELECT 權限。 因此，U1 使用者可以針對遭拒的物件 T1 在 S1 結構描述中建立同義字，然後使用該同義字存取遭拒的物件 T1。  
   
- U1 使用者在資料庫上具有 CREATE VIEW 權限，在 S1 結構描述上則具有 SELECT 權限。 因此，U1 使用者可以在 S1 結構描述中建立檢視從遭拒的物件 T1 查詢資料，然後使用該檢視存取遭拒的物件 T1。  
-  
- 如需詳細資訊，請參閱 Microsoft 知識庫文件編號 914847。  
+ U1 使用者在資料庫上具有 CREATE VIEW 權限，在 S1 結構描述上則具有 SELECT 權限。 因此，U1 使用者可以在 S1 結構描述中建立檢視從遭拒的物件 T1 查詢資料，然後使用該檢視存取遭拒的物件 T1。
   
 ## <a name="permissions"></a>權限  
  同意授權者 (或是指定了 AS 選項的主體) 必須具有指定了 GRANT OPTION 的權限本身，或是具有隱含目前正在授與權限的更高權限。  

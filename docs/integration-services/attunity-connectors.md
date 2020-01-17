@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 031659b2a5578eea2bb786e42267c92862579db7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 255c526a1de285dcf23c10fb97a6f6bb75a9ae2c
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71299109"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542238"
 ---
 # <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>適用於 Integration Services (SSIS) 的 Microsoft Connectors for Oracle and Teradata by Attunity
 
@@ -24,7 +24,9 @@ ms.locfileid: "71299109"
 > [!NOTE]
 > 適用於 Oracle 與 Teradata 的 Atunity 連接器支援 SQL Server 2017 與較舊版本。
 >
-> 從 SQL Server 2019 開始，在這裡取得 Oracle 與 Teradata 的最新連接器：[Microsoft Connector for Oracle](data-flow/oracle-connector.md)
+> 從 SQL Server 2019 開始，在這裡取得 Oracle 與 Teradata 的最新連接器：
+> - [Microsoft Connector for Oracle](data-flow/oracle-connector.md)
+> - [Microsoft Connector for Teradata](data-flow/teradata-connector.md)
 
 當您將 SSIS 套件中的資料載入或載出 Oracle 或 Teradata 時，您可以下載適用於 Integration Services 的 Attunity 連接器來最佳化效能。
 

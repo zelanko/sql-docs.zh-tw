@@ -1,6 +1,7 @@
 ---
-title: 對進行疑難排解有助益的工具 (Always On 可用性群組-SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 可用性群組疑難排解工具 (內容索引)
+description: 描述可用來對可用性群組的問題進行監視及疑難排解之工具的參考文章。
+ms.custom: seo-lt-2019
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 57801bcc-4d51-4ffc-8454-b9cb6eddbfe0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 435a20941a6827aea7e6e3709b5123b059d8735a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73f7781503aa82b8b0692191a69dac5c2890f8d8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013466"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244734"
 ---
 # <a name="useful-tools-for-troubleshooting"></a>對進行疑難排解有助益的工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

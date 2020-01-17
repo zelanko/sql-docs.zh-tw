@@ -1,7 +1,7 @@
 ---
-title: 使用 Transact-SQL (T-SQL) 建立可用性群組
+title: 搭配 Transact-SQL (T-SQL) 建立可用性群組
 description: '使用 Transact-SQL (T-SQL) 建立 Always On 可用性群組的步驟。 '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 543ef7ec0cefa9a47f88fdc5811961315b33e2b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1a9f888f651a7c5471014b151d60b0ad3844578b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988406"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252968"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>使用 Transact-SQL (T-SQL) 建立 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,17 @@ ms.locfileid: "67988406"
 ###  <a name="SummaryTsqlStatements"></a> 工作和對應 Transact-SQL 陳述式的摘要  
  下表列出與建立和設定可用性群組有關的基本工作，並指出哪些 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式要用於這些工作。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 工作必須依照其出現在表格中的順序來執行。  
   
-|工作|Transact-SQL 陳述式|在何處執行工作 **&#42;**|  
+|Task|Transact-SQL 陳述式|在何處執行工作 **&#42;**|  
 |----------|----------------------------------|---------------------------------|  
-|建立資料庫鏡像端點 (每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體一次)|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* ...FOR DATABASE_MIRRORING|在缺少資料庫鏡像端點的每一個伺服器執行個體上執行。|  
+|建立資料庫鏡像端點 (每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體一次)|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) 端點名稱  ...FOR DATABASE_MIRRORING|在缺少資料庫鏡像端點的每一個伺服器執行個體上執行。|  
 |建立可用性群組|[CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)|於裝載初始主要複本的伺服器執行個體上執行。|  
-|將次要複本加入可用性群組|[ALTER AVAILABILITY GROUP](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* JOIN|在裝載次要複本的每一個伺服器執行個體上執行。|  
+|將次要複本加入可用性群組|[ALTER AVAILABILITY GROUP](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md) 群組名稱  JOIN|在裝載次要複本的每一個伺服器執行個體上執行。|  
 |準備次要資料庫|[BACKUP](../../../t-sql/statements/backup-transact-sql.md) 和 [RESTORE](../../../t-sql/statements/restore-statements-transact-sql.md)。|在裝載主要複本的伺服器執行個體上建立備份。<br /><br /> 使用 RESTORE WITH NORECOVERY，還原裝載次要複本之每個伺服器執行個體上的備份。|  
-|將每一個次要資料庫加入可用性群組來啟動資料同步處理。|[ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) *database_name* SET HADR AVAILABILITY GROUP = *group_name*|在裝載次要複本的每一個伺服器執行個體上執行。|  
+|將每一個次要資料庫加入可用性群組來啟動資料同步處理。|[ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 資料庫名稱  SET HADR AVAILABILITY GROUP = 群組名稱 |在裝載次要複本的每一個伺服器執行個體上執行。|  
   
  \* 若要執行指定的工作，請連接到指定的伺服器執行個體。   
  
-### <a name="using-transact-sql"></a>使用 Transact-SQL 
+### <a name="using-transact-sql"></a>使用 TRANSACT-SQL 
 > [!NOTE]  
 >  如需包含每一個這類 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式之程式碼範例的範例設定程序，請參閱[範例：設定使用 Windows 驗證的可用性群組](#ExampleConfigAGWinAuth)。  
   
@@ -293,7 +293,7 @@ ms.locfileid: "67988406"
 ###  <a name="CompleteCodeExample"></a> 範例組態程序的完整程式碼範例  
  下列範例會合併範例組態程序之所有步驟的程式碼範例。 下表摘要說明此程式碼範例中所使用的預留位置值。 如需有關此程式碼範例中步驟的詳細資訊，請參閱本主題稍早的 [使用範例組態程序的必要條件](#PrerequisitesForExample) 和 [範例組態程序](#SampleProcedure)。  
   
-|預留位置|Description|  
+|預留位置|描述|  
 |-----------------|-----------------|  
 |\\\\*FILESERVER*\\*SQLbackups*|虛構的備份共用。|  
 |\\\\*FILESERVER*\\*SQLbackups\MyDb1.bak*|MyDb1 的備份檔案。|  
@@ -497,7 +497,7 @@ GO
   
 -   [使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [在加入或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [在新增或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **疑難排解 AlwaysOn 可用性群組組態**  
   

@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 709a0060d948b4c2979c858a0d51bd9740eb0e28
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e8acc3ef73c51ccbbf195f9d18dc5f12d661931f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729845"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75226738"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -88,7 +88,7 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 *select_statement*   
 具體化檢視定義中的 SELECT 清單必須符合下列兩個條件的至少其中一個：
 - SELECT 清單包含彙總函式。
-- GROUP BY 用於具體化檢視定義中，而且 GROUP BY 中的所有資料行都包括在 SELECT 清單中。  
+- GROUP BY 用於具體化檢視定義中，而且 GROUP BY 中的所有資料行都包括在 SELECT 清單中。  GROUP BY 子句中最多可以使用 32 個資料行。
 
 具體化檢視定義的 SELECT 清單中需要彙總函式。  支援的彙總包括 MAX、MIN、AVG、COUNT、COUNT_BIG、SUM、VAR、STDEV。
 
@@ -106,7 +106,7 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 
 - 當參考的基底資料表中發生 UPDATE 或 DELETE 時，將停用具體化檢視。  此限制不適用於 INSERT。  若要重新啟用具體化檢視，請搭配 REBUILD 執行 ALTER MATERIALIZED。
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 Azure 資料倉儲中的具體化檢視非常類似 SQL Server 中的索引檢視表。  它的限制幾乎與索引檢視表相同 (請參閱[建立索引檢視表](/sql/relational-databases/views/create-indexed-views)以取得詳資訊)，不過具體化檢視支援彙總函式。   具體化檢視有其他考量事項。  
  

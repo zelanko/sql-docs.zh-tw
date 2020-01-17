@@ -1,7 +1,7 @@
 ---
 title: 產生可用性群組的 CLUSTER.LOG 並進行分析
 description: '描述如何產生 Always On 可用性群組的叢集記錄檔並進行分析。 '
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2e2f782673f1f11ad42e7de09f137291e1bfdf3
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240761"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244377"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>產生 Always On 可用性群組的 CLUSTER.LOG 並進行分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 3.  在詳細資料窗格中，以滑鼠右鍵按一下可用性群組資源並按一下 [屬性]  。  
   
-4.  按一下 **[屬性]** 索引標籤。  
+4.  按一下 [屬性]  索引標籤。  
   
 5.  修改 **VerboseLogging** 屬性。 根據預設，**VerboseLogging** 是設為 `0`，這會報告資訊、警告和錯誤。 **VerboseLogging** 的設定範圍可從 `0` 到 `2`。  
   

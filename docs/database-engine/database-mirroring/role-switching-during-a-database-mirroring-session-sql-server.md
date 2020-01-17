@@ -1,6 +1,7 @@
 ---
-title: 資料庫鏡像工作階段期間的角色切換 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 切換資料庫鏡像角色
+description: 了解切換資料庫鏡像角色。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 662510b04b9bc5be9b94a5ffe149bf9eebcbf13a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025280"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252787"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>資料庫鏡像工作階段期間的角色切換 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "68025280"
   
      手動容錯移轉是為管理用途而設計， 如需詳細資訊，請參閱本主題稍後的 [手動容錯移轉](#ManualFailover)。  
   
--   **自動容錯移轉**  
+-   **Automatic failover**  
   
      如果見證存在的話，高安全性模式就支援自動容錯移轉。 當見證和鏡像伺服器仍然彼此連接而且資料庫已經同步處理時，自動容錯移轉只會在主體伺服器失效時進行。 如需詳細資訊，請參閱本主題稍後的 [自動容錯移轉](#AutomaticFailover)。  
   
@@ -95,7 +96,7 @@ ms.locfileid: "68025280"
   
  下圖說明在升級資料庫伺服器執行個體的同時，使用手動容錯移轉來維護資料庫可用性的範例。 升級完成時，系統管理員可以選擇性地容錯移轉回原始的伺服器執行個體。 如果系統管理員想要停止鏡像工作階段，轉而使用別處的鏡像伺服器，這個方法便很有用。 使用這個方法，更新一連串的資料庫伺服器執行個體時，就可以重複使用單一的伺服器執行個體。  
   
- ![規劃的手動容錯移轉](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "規劃的手動容錯移轉")  
+ ![規劃的手動容錯移轉](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "|::ref2::|")  
   
 ###  <a name="ConditionsForManualFo"></a> 手動容錯移轉所需的條件  
  手動容錯移轉需要將交易安全性設定為 FULL (即為高安全性模式)。 當夥伴已連接而且資料庫已經同步處理後，就會支援手動容錯移轉。  
@@ -124,7 +125,7 @@ ms.locfileid: "68025280"
     > [!NOTE]  
     >  新鏡像伺服器重新同步處理資料庫後，就可以再次容錯移轉，但是方向會相反。  
   
- 容錯移轉之後，用戶端必須重新連接到目前的主體資料庫。 如需詳細資訊，請參閱 [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)的程序交換。  
+ 容錯移轉之後，用戶端必須重新連接到目前的主體資料庫。 如需詳細資訊，請參閱本主題稍後的 [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
  **若要初始化手動容錯移轉**  
   
@@ -182,11 +183,11 @@ ms.locfileid: "68025280"
   
  下圖顯示自動容錯移轉的單一執行個體。  
   
- ![自動容錯移轉](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "自動容錯移轉")  
+ ![Automatic failover](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "|::ref3::|")  
   
  一開始，三部伺服器都已連接 (也就是工作階段具有完整的仲裁)。 **Partner_A** 是主體伺服器， **Partner_B** 是鏡像伺服器。 **Partner_A** (或 **Partner_A**上的主體資料庫) 變得無法使用。 見證與 **Partner_B** 兩者皆認定主體已無法使用，且工作階段會重新取得仲裁。 **Partner_B** 會成為主體伺服器，並使其資料庫副本成為新的主體資料庫。 最後， **Partner_A** 重新連接到工作階段，並發現 **Partner_B** 此時已擁有主體角色。 **Partner_A** 會接替鏡像角色。  
   
- 容錯移轉之後，用戶端必須重新連接到目前的主體資料庫。 如需詳細資訊，請參閱 [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)的程序交換。  
+ 容錯移轉之後，用戶端必須重新連接到目前的主體資料庫。 如需詳細資訊，請參閱本主題稍後的 [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
 > [!NOTE]  
 >  在容錯移轉發生時，凡是已利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器準備好但尚未認可的交易，都會在資料庫完成容錯移轉後被視為已中止。  
@@ -241,7 +242,7 @@ ms.locfileid: "68025280"
 ###  <a name="TypicalCaseFS"></a> 強制服務的一般情況  
  下圖將說明強制服務的一般情況 (可能遺失資料)。  
   
- ![強制可能遺失資料的服務](../../database-engine/database-mirroring/media/dbm-forced-service.gif "強制可能遺失資料的服務")  
+ ![在可能遺失資料的情況下強制服務](../../database-engine/database-mirroring/media/dbm-forced-service.gif "在可能遺失資料的情況下強制服務")  
   
  在該圖中，原始的主體伺服器 **Partner_A**無法讓鏡像伺服器 **Partner_B**使用，進而導致鏡像資料庫中斷連接。 在確定用戶端無法使用 **Partner_A** 後，資料庫管理員便在 **Partner_B** 上進行強制服務 (可能遺失資料)。 **Partner_B** 成為主體伺服器，並「公開」  資料庫執行 (亦即未鏡像)。 此時，用戶端可以重新連接至 **Partner_B**。  
   

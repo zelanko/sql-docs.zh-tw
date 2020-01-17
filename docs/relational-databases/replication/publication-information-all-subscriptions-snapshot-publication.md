@@ -1,6 +1,7 @@
 ---
-title: 發行集資訊，所有訂閱 (快照式發行集) | Microsoft Docs
-ms.custom: ''
+title: 所有訂閱 (快照集 - SSMS)
+description: 說明 SQL Server Management Studio (SSMS) 中所選快照式發行集的 [所有訂閱] 索引標籤。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f0ef9094c1e7d6a7396ee946dd9b4e7e3b3587b8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 37f5359dfa1fe4f127012256c724cb208768fd34
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769997"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321361"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>發行集資訊，所有訂閱 (快照式發行集)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,14 +32,14 @@ ms.locfileid: "68769997"
   
 -   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及這些資料行在 [選擇資料行]  對話方塊中的顯示順序。  
   
--   **篩選**：根據 [篩選設定]  對話方塊中的資料行值，篩選方格中的資料列。  
+-   **篩選條件**：根據 [篩選設定]  對話方塊中的資料行值，篩選方格中的資料列。  
   
 -   **清除篩選**：清除方格的所有篩選設定。  
   
  篩選設定是每個方格特有的設定。 資料行選取和排序會套用至所有相同類型的方格，例如每個發行者的發行集方格。  
   
  **顯示**  
- 僅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 針對選取之訂閱類型，選取要顯示的訂閱狀態。 例如，您可以選取只顯示有錯誤的訂閱。  
+ 僅限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 針對選取之訂閱類型，選取要顯示的訂閱狀態。 例如，您可以選取只顯示有錯誤的訂閱。  
   
  **狀態**  
  每個訂閱的狀態，這是由快照集代理程式或散發代理程式的狀態所決定 (會顯示優先權較高的狀態)。  
@@ -59,11 +60,11 @@ ms.locfileid: "68769997"
   
  當給定訂閱有一個以上的狀態時，排序順序也會決定要顯示哪一個值。 例如，若訂閱有錯誤而且即將過期，則 **[狀態]** 資料行會顯示 **[錯誤]** 。  
   
- **[即將過期/已過期]** 和 **[未初始化的訂閱]** 狀態值均為警告。 顯示警告時，如果代理程式正在執行，則 [狀態]  資料行也會顯示。 例如，狀態可能是 **[執行中，即將過期/已過期]** 。  
+ **[即將過期/已過期]** 和 **[未初始化的訂閱]** 狀態值均為警告。 顯示警告時，如果代理程式正在執行，則 **[狀態]** 資料行也會顯示。 例如，狀態可能是 **[執行中，即將過期/已過期]** 。  
   
  唯有設定了臨界值時，才會顯示 **[即將過期/已過期]** 狀態值。 如需設定閾值的資訊，請參閱[在複寫監視器中設定閾值和警告](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
- **訂閱**  
+ **訂用帳戶**  
  每一個訂閱的名稱，格式為：*SubscriberName:SubscriptionDatabaseName*。  
   
  **上次同步處理日期**  

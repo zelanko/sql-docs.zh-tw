@@ -1,6 +1,7 @@
 ---
-title: SQL Server 複寫訂閱屬性對話方塊 | Microsoft Docs
-ms.custom: ''
+title: '[訂閱屬性] 對話方塊'
+description: 描述 SQL Server Management Studio (SSMS) 內的 [訂閱屬性] 對話方塊。
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7793c64a6c7d5dc404c24f502a45067d2e95fcca
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: fab938acf112a047ed6aeb089093f815a4861a0c
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769457"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321515"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>SQL Server 複寫訂閱屬性對話方塊 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,7 +87,7 @@ ms.locfileid: "68769457"
   
 -   **[替代資料夾]** ：可在 **[發行集屬性]** 對話方塊中指定的替代位置。 如需詳細資訊，請參閱 [指定快照集選項](../../relational-databases/replication/snapshot-options.md)。  
   
--   **[動態快照集資料夾]** ：使用參數化資料列篩選器之合併式發行集的快照集位置。 如需相關資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
+-   **[動態快照集資料夾]** ：使用參數化資料列篩選器之合併式發行集的快照集位置。 如需詳細資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 -   **[FTP 資料夾]** ：可讓檔案傳輸通訊協定 (FTP) 伺服器存取的資料夾。 如需詳細資訊，請參閱[透過 FTP 傳遞快照集](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)。  
   

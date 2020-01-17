@@ -1,6 +1,7 @@
 ---
-title: SQL Server 複寫發行者屬性對話方塊 | Microsoft Docs
-ms.custom: ''
+title: '[發行者屬性] 對話方塊 (SSMS)'
+description: 描述 SQL Server Management Studio (SSMS) 內特定發行集的 [發行者屬性] 對話方塊。
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f157f541cae6fed5613f95df8d883044f8e09ff5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 12c7a8482561e6ab608501158a05a275763ab74a
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908310"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320645"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>SQL Server 複寫發行者屬性對話方塊
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,7 +73,7 @@ ms.locfileid: "72908310"
  **[發行者屬性]**  
  **[訂閱者]** 屬性方格，會顯示已啟用來接收此發行者之發行集資料的訂閱者。 按一下訂閱者旁的屬性按鈕 ( **...** )，即可檢視和設定其他屬性。  
   
- **[加入]**  
+ **加入**  
  按一下 **[加入]** 即可加入訂閱者，然後按一下 **[加入 SQL Server 訂閱者]** 或 **[加入非 SQL Server 訂閱者]** 。  
   
 ## <a name="see-also"></a>另請參閱  

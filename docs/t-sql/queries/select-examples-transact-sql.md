@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 17ae607e02838e4598dce82f6f022208238aefaa
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: e3d7c9b661a69f4a575a18aae03f9eb5e601b69b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119211"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191081"
 ---
 # <a name="select-examples-transact-sql"></a>SELECT 範例 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "74119211"
 ## <a name="e-using-correlated-subqueries"></a>E. 使用相互關聯的子查詢
 這是一項相依於外部查詢來取得其值的相互關聯子查詢。 這項查詢可以重複執行，針對外部查詢可選取的每個資料列各執行一次。
 
- 下列範例會顯示語意相等的查詢，且說明使用 `EXISTS` 關鍵字和 `IN` 關鍵字之間的差異。 兩者都是有效子查詢，擷取產品模型是長袖標誌緊身內衣之各項產品名稱的單一執行個體的，`ProductModelID` 和 `Product` 資料表的 `ProductModel` 號碼相符。  
+第一個範例顯示語意相等的查詢，以說明使用 `EXISTS` 關鍵字和 `IN` 關鍵字之間的差異。 兩者都是有效子查詢，擷取產品模型是長袖標誌緊身內衣之各項產品名稱的單一執行個體的，`ProductModelID` 和 `Product` 資料表的 `ProductModel` 號碼相符。  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
@@ -158,7 +158,7 @@ GO
   
  [!code-sql[Select#SelectExamples23](../../t-sql/queries/codesnippet/tsql/select-examples-transact_21.sql)]  
   
- 如果您要確定每項產品的計算都至少包含了一千五百個項目，請利用 `HAVING COUNT(*) > 1500` 來刪除傳回銷售總計小於 `1500` 項的產品。 查詢內容如下所示：  
+ 如果您要確定每項產品的計算都至少包含了一千五百個項目，請利用 `HAVING COUNT(*) > 1500` 來刪除傳回銷售總計小於 `1500` 項的產品。 此查詢看起來像這樣：  
   
  [!code-sql[Select#SelectExamples24](../../t-sql/queries/codesnippet/tsql/select-examples-transact_22.sql)]  
   

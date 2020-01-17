@@ -1,6 +1,7 @@
 ---
-title: 設定容錯移轉叢集執行個體儲存體 iSCSI - Linux 上的 SQL Server
-description: ''
+title: 設定 iSCSI FCI 儲存體 - Linux 上的 SQL Server
+description: 了解如何使用 Linux 上的 SQL Server iSCSI 來設定容錯移轉叢集執行個體 (FCI)。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0d52038d3e556ecc2202fd1066dc2638bfe14183
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e10f354a8f0af2467a9519a794995043864a4cd6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032400"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558576"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>設定容錯移轉叢集執行個體 - iSCSI - Linux 上的 SQL Server
 
@@ -235,7 +236,7 @@ iSCSI 會使用網路將磁碟從一部已知為目標的伺服器呈現給其�
     cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
     ``` 
 
-   *    確認檔案是否存在。
+   *    驗證檔案存在。
 
     ```bash
     ls /var/opt/mssql/data
@@ -252,14 +253,14 @@ iSCSI 會使用網路將磁碟從一部已知為目標的伺服器呈現給其�
     sudo systemctl status mssql-server
     ``` 
  
-   *    停止 SQL Server 並確認它已關閉。
+   *    停止 SQL Server 並驗證它已關閉。
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ``` 
 
-13. 針對系統資料庫以外的其他內容 (例如使用者資料庫或備份)，請遵循這些步驟。 如果僅使用預設位置，請跳到步驟 14。
+13. 針對系統資料庫以外的其他內容 (例如，使用者資料庫或備份)，請遵循這些步驟。 如果僅使用預設位置，請跳到步驟 14。
 
    *    切換成超級使用者。 如果成功，您將不會收到任何通知。
 
@@ -297,7 +298,7 @@ iSCSI 會使用網路將磁碟從一部已知為目標的伺服器呈現給其�
     chown mssql <FolderName>
     ```
 
-    \<FolderName> 是所建立之資料夾的名稱。 下列為範例。
+    \<FolderName> 是所建立之資料夾的名稱。 範例如下所示。
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -309,7 +310,7 @@ iSCSI 會使用網路將磁碟從一部已知為目標的伺服器呈現給其�
     chown mssql <FolderName>
     ```
 
-    \<FolderName> 是所建立之資料夾的名稱。 下列為範例。
+    \<FolderName> 是所建立之資料夾的名稱。 範例如下所示。
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -321,7 +322,7 @@ iSCSI 會使用網路將磁碟從一部已知為目標的伺服器呈現給其�
   
     ![50-ExampleCreateSSMS][9]
 
-   *    取消掛接共用 
+   *    將共用取消掛接 
 
     ```bash
     sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
@@ -351,7 +352,7 @@ iSCSI 會使用網路將磁碟從一部已知為目標的伺服器呈現給其�
     volume_list = [ <ListOfVGsNotUsedByPacemaker> ]
     ```
 
-    \<ListOfVGsNotUsedByPacemaker> 是步驟 20 的輸出中，FCI 將不會使用的磁碟區群組清單。 將每一個放在引號中，並以逗號分隔。 下列為範例。
+    \<ListOfVGsNotUsedByPacemaker> 是步驟 20 的輸出中，FCI 將不會使用的磁碟區群組清單。 將每一個放在引號中，並以逗號分隔。 範例如下所示。
 
     ![55-ListOfVGs][11]
  
@@ -390,7 +391,7 @@ iSCSI 會使用網路將磁碟從一部已知為目標的伺服器呈現給其�
 
 您現在已準備好設定 FCI。
 
-|Distribution |主題 
+|散發 |主題 
 |----- |-----
 |**Red Hat Enterprise Linux (包含 HA 附加元件)** |[設定](sql-server-linux-shared-disk-cluster-configure.md)<br/>[操作](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 |**SUSE Linux Enterprise Server (包含 HA 附加元件)** |[設定](sql-server-linux-shared-disk-cluster-sles-configure.md)

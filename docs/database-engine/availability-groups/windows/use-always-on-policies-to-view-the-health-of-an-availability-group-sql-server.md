@@ -1,6 +1,7 @@
 ---
-title: 使用 AlwaysOn 原則檢視可用性群組的健全狀況 | Microsoft Docs
-ms.custom: ''
+title: 檢視可用性群組健康情況的原則
+description: 使用 Always On 原則或 PowerShell 來判斷 Always On 可用性群組的作業健康情況。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a25f06a464fe8ba44347b4f1f117cbde64ceab76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13f43e5f66ca7700e9dd4732e9cf45ee1921548d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013643"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244738"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>使用 AlwaysOn 原則檢視可用性群組的健全狀況 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "68013643"
   
 1.  將目錄切換到 (**cd**) 裝載其中一個可用性複本的伺服器執行個體。 若要檢視可用性群組中所有可用性複本的相關資訊，請用於裝載主要複本的伺服器執行個體。  
   
-2.  使用下列指令程式：  
+2.  使用下列 Cmdlet：  
   
      **Test-SqlAvailabilityGroup**  
      透過評估 SQL Server 原則式管理 (PBM) 原則，評估可用性群組的健全狀況。 您必須擁有 CONNECT、VIEW SERVER STATE 和 VIEW ANY DEFINITION 權限，才能執行這個 Cmdlet。  
@@ -85,7 +86,7 @@ ms.locfileid: "68013643"
   
      這些指令程式接受下列選項：  
   
-    |選項|Description|  
+    |選項|描述|  
     |------------|-----------------|  
     |**AllowUserPolicies**|執行 AlwaysOn 原則類別目錄中的使用者原則。|  
     |**InputObject**|表示可用性群組、可用性複本或可用性資料庫狀態的物件集合 (依據使用的指令程式而定)。 指令程式會計算指定之物件的健全狀況。|  

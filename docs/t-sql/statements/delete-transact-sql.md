@@ -1,9 +1,8 @@
 ---
 title: DELETE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/10/2017
+ms.date: 12/30/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -26,14 +25,15 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca3a44c1829cc05eac5a412a2b2292e84d3d1bc1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
+ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983244"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548280"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料表或檢視移除一或多個資料列。  
@@ -82,7 +82,8 @@ DELETE
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DELETE FROM [database_name . [ schema ] . | schema. ] table_name    
+DELETE 
+    [ FROM [database_name . [ schema ] . | schema. ] table_name ]   
     [ WHERE <search_condition> ]   
     [ OPTION ( <query_options> [ ,...n ]  ) ]  
 [; ]  
@@ -166,7 +167,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  關鍵字，它們會指出要使用哪一個最佳化工具提示來自訂 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理陳述式的方式。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
-## <a name="best-practices"></a>最佳作法  
+## <a name="best-practices"></a>最佳做法  
  若要刪除資料表中的所有資料列，請使用 TRUNCATE TABLE。 TRUNCATE TABLE 的速度比 DELETE 快，使用的系統資源和交易記錄資源也比較少。 TRUNCATE TABLE 有一些限制，例如，資料表不能參與複寫。 如需詳細資訊，請參閱 [TRUNCATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/truncate-table-transact-sql.md)  
   
  您可以使用 @@ROWCOUNT 函式，將刪除的資料列數目傳回用戶端應用程式。 如需詳細資訊，請參閱 [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)。  
@@ -209,7 +210,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ## <a name="logging-behavior"></a>記錄行為  
  DELETE 陳述式一律會完整記錄。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>權限  
  需要目標資料表的 DELETE 權限。 如果陳述式包含 WHERE 子句，也需要 SELECT 權限。  
@@ -218,7 +219,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
 ## <a name="examples"></a>範例  
   
-|類別目錄|代表性語法元素|  
+|類別|代表性語法元素|  
 |--------------|------------------------------|  
 |[基本語法](#BasicSyntax)|刪除|  
 |[限制刪除的資料列](#LimitRows)|WHERE • FROM • 資料指標 •|  
@@ -240,7 +241,7 @@ GO
  本節中的範例會顯示如何限制將會遭到刪除的資料列數目。  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. 使用 WHERE 子句刪除一組資料列  
- 以下範例會刪除 `ProductCostHistory` 資料庫的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中，所有 `StandardCost` 資料行值超出 `1000.00`的資料列。  
+ 以下範例會刪除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `ProductCostHistory` 資料表中，所有 `StandardCost` 資料行值超過 `1000.00` 的資料列。  
   
 ```sql
 DELETE FROM Production.ProductCostHistory  
@@ -258,7 +259,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. 使用資料指標來判斷要刪除的資料列  
- 以下範例會使用名為 `my_cursor` 的資料指標，從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `EmployeePayHistory` 資料表中刪除單一資料列。 刪除作業只會影響目前從資料指標中提取的單一資料列。  
+ 以下範例會使用名為 `complex_cursor` 的資料指標，從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `EmployeePayHistory` 資料表中刪除單一資料列。 刪除作業只會影響目前從資料指標中提取的單一資料列。  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -366,7 +367,7 @@ GO
 ```  
   
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>G. 使用 OPENQUERY 函數刪除遠端資料表的資料  
- 下列範例會藉由指定 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 資料列集函數來刪除遠端資料表的資料列。 上一個範例所建立之連結的伺服器名稱會用於這個範例。  
+ 下列範例會藉由指定 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 資料列集函式來刪除遠端資料表的資料列。 上一個範例所建立之連結的伺服器名稱會用於這個範例。  
   
 ```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
@@ -470,6 +471,16 @@ WHERE ProductKey IN (
     WHERE T2.EnglishProductSubcategoryName = 'Road Bikes' )  
 OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;  
 ```  
+
+### <a name="o-delete-using-a-where-clause"></a>O. 使用 WHERE 子句刪除
+
+此查詢會顯示如何使用 WHERE 子句刪除，而不是 使用 FROM 子句。
+
+```sql
+DELETE tableA WHERE EXISTS (
+SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
+)
+```
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

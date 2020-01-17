@@ -1,7 +1,7 @@
 ---
-title: 將唯讀工作負載卸載至可用性群組的次要複本
+title: 將工作負載卸載到次要可用性群組複本
 description: 深入了解將唯讀查詢和報表卸載至 SQL Server 上的 Always On 可用性群組次要複本。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/06/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9608383d132dbb670d8a852101dd074d4f285a79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991664"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822399"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>將唯讀工作負載卸載至 Always On 可用性群組的次要複本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "67991664"
      如需詳細資訊，請參閱本主題稍後的 [設定可用性群組的唯讀路由 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md))。  
   
 > [!NOTE]  
->  如需可用性群組接聽程式的相關資訊，以及唯讀路由的詳細資訊，請參閱 [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md))。  
+>  如需可用性群組接聽程式的相關資訊，以及唯讀路由的詳細資訊，請參閱 [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
   
 ##  <a name="bkmk_LimitationsRestrictions"></a> 限制事項  
  某些作業未完全受到支援，如下所示：  
@@ -118,7 +118,7 @@ ms.locfileid: "67991664"
   
 -   [唯讀工作負載的影響](#ReadOnlyWorkloadImpact)  
   
--   [索引](#bkmk_Indexing)  
+-   [編製索引](#bkmk_Indexing)  
   
 -   [唯讀存取資料庫的統計資料](#Read-OnlyStats)  
   
@@ -183,7 +183,7 @@ ms.locfileid: "67991664"
   
 -   因為暫時統計資料會儲存在 **tempdb**中，所以重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務會導致所有暫時統計資料消失。  
   
--   後置詞 _readonly_database_statistic 會保留給 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]產生的統計資料使用。 當您在主要資料庫上建立統計資料時，將無法使用這個後置詞。 如需詳細資訊，請參閱 [Statistics](../../../relational-databases/statistics/statistics.md)。  
+-   後置詞 _readonly_database_statistic 會保留給 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]產生的統計資料使用。 當您在主要資料庫上建立統計資料時，將無法使用這個後置詞。 如需詳細資訊，請參閱[統計資料](../../../relational-databases/statistics/statistics.md)。  
   
 ##  <a name="bkmk_AccessInMemTables"></a> 存取次要複本上的記憶體最佳化資料表  
  次要複本上可與記憶體最佳化資料表搭配使用的交易隔離層級，與主要複本上相同。 建議將工作階段層級的隔離層級設定成 READ COMMITTED，並將資料庫層級選項 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 設定成 ON。 例如：  
@@ -240,7 +240,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [關於可用性複本的用戶端連接存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
+ [關於可用性複本的用戶端連線存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [統計資料](../../../relational-databases/statistics/statistics.md)  
   

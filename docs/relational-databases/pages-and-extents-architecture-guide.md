@@ -14,12 +14,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bc8b582effc2ba96a03a2a7b76e33118c0222ee
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586773"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325490"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>分頁與範圍架構指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "72586773"
 
 下表顯示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫資料檔案中使用的分頁類型。
 
-|分頁類型 | 目錄 |
+|分頁類型 | 內容 |
 |-------|-------|
-|data |當 text in row 設為 ON 時，具有所有資料的資料列 (text, ntext、image、nvarchar(max)、varchar(max)、varbinary(max) 與 xml 資料除外)。 |
+|資料 |當 text in row 設為 ON 時，具有所有資料的資料列 (text, ntext、image、nvarchar(max)、varchar(max)、varbinary(max) 與 xml 資料除外)。 |
 |索引 |索引項目 |
 |文字/影像 |大型物件資料類型：(text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max) 與 xml 資料) <br> 資料列超過 8 KB 時可變長度資料行：(varchar、nvarchar、varbinary 與 sql_variant) |
 |整體配置對應、共用整體配置對應 |有關是否配置範圍的資訊。 |
@@ -54,7 +54,7 @@ ms.locfileid: "72586773"
 > [!NOTE]
 > 記錄檔並沒有包含分頁，它們包含的是一系列的記錄檔資料錄。
 
-資料列將循序地放置於緊接在前置資料後的分頁中。 資料列位移資料表從頁面結尾開始，而且每個資料表分別為分頁上每一列包含一個項目。 每個項目記錄資料列的第一個位元組與分頁的開頭有多遠。 資料列位移資料表的項目順序與分頁中的資料列順序是相反的。
+資料列將循序地放置於緊接在前置資料後的分頁中。 資料列位移資料表從頁面結尾開始，而且每個資料表分別為分頁上每一列包含一個項目。 每個資料列位移項目，都記錄資料列第一個位元組距離分頁開頭多遠。 因此，資料列位移資料表的功能是協助 SQL Server 以非常快速的速度在分頁上找出資料列。 資料列位移資料表的項目順序與分頁中的資料列順序是相反的。
 
 ![page_architecture](../relational-databases/media/page-architecture.gif)
 
@@ -68,7 +68,7 @@ ms.locfileid: "72586773"
 
 ##### <a name="row-overflow-considerations"></a>資料列溢位考量 
 
-當您將 varchar、nvarchar、varbinary、sql_variant 或 CLR 使用者定義型別資料行結合在一起，因而超過每個資料列 8,060 個位元組的限制時，請考慮下列情況： 
+如先前所述，資料列不能位於多個分頁上，而且如果可變長度資料類型欄位的合併大小超過 8060 位元組的限制，可能會溢位。 為了說明，您可以使用兩個數據行來建立資料表：一個 Varchar(7000) 和另一個 Varchar (2000)。 資料行各自都不會超過 8060 個位元組，但是如果每個資料行的整個寬度都已填滿，則結合它們就會超過限制。 SQL Server 可以動態地將 Varchar(7000) 可變長度資料行移至 ROW_OVERFLOW_DATA 配置單位中的分頁。 當您將 varchar、nvarchar、varbinary、sql_variant 或 CLR 使用者定義型別資料行結合在一起，因而超過每個資料列 8,060 個位元組的限制時，請考慮下列情況：
 -  當記錄因更新作業而加長時，這些大型記錄會動態地移到另一個分頁上。 當更新作業將記錄縮短時，則會造成這些記錄移回 IN_ROW_DATA 配置單位中的原始分頁。 查詢與執行其他選取作業 (例如在包含資料列溢位資料的大型記錄上執行排序或聯結) 時，處理速度將會變慢，這是因為這些記錄會以同步而不是非同步的方式來處理。   
    因此，當您設計具有多個 varchar、nvarchar、varbinary、sql_variant 或 CLR 使用者定義型別資料行的資料表時，請考慮可能會溢位的資料列百分比，以及可能會查詢此溢位資料的頻率。 如果可能會經常在許多資料列溢位資料的資料列上執行查詢，請考慮將資料表正規化，以便將一些資料行移到另一個資料表。 然後便可以用非同步 JOIN 作業進行查詢。 
 -  對於 varchar、nvarchar、varbinary、sql_variant 和 CLR 使用者定義型別資料行而言，個別資料行長度仍必須符合 8,000 個位元組的限制。 只有它們合起來的長度才可以超過資料表的每個資料列 8,060 個位元組的限制。
@@ -98,7 +98,7 @@ ms.locfileid: "72586773"
 
 ## <a name="managing-extent-allocations-and-free-space"></a>管理範圍配置與可用空間 
 
-管理範圍配置與追蹤可用空間的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料結構相當簡單。 其優點如下： 
+管理範圍配置與追蹤可用空間的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料結構相當簡單。 具有下列好處： 
 
 * 可用空間的資訊是緊密壓縮的，因此只有少數的分頁包含此資訊。   
   如此可降低擷取配置資訊時所需的磁碟讀取量，進而提升速度。 此外，還可以增加配置頁保存於記憶體中的機會，而不需額外的讀取。 
@@ -136,7 +136,7 @@ ms.locfileid: "72586773"
 
 當範圍配置給物件之後，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會使用 PFS 分頁，來記錄範圍中哪些分頁是已配置或可用的。 當 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 必須配置新分頁時，就會使用此資訊。 分頁中的可用空間量只會針對堆積與 Text/Image 分頁而保留。 當 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 必須尋找具有可用空間的分頁來存放新插入的資料列時，就會用到它。 因為插入新資料列的點由索引鍵值所設定，所以使用索引時不需追蹤分頁可用空間。
 
-PFS 分頁是資料檔案中檔案標頭分頁之後的第一頁 (分頁識別碼為 1)。 其後依序為 GAM 分頁 (分頁識別碼為 2) 與 SGAM 分頁 (分頁識別碼為 3)。 在第一個 PFS 分頁之後大約有 8,000 個分頁的新 PFS 分頁，而後續 8,000 個分頁間隔中會有額外的 PFS 分頁。 在第 2 頁的第一個 GAM 分頁之後，每 64,000 個範圍之後會有另一個 GAM 分頁。在第 3 頁的第一個 SGAM 分頁之後，每 64,000 個範圍會有另一個 SGAM 分頁， 而後續 64,000 範圍間隔中會有額外的 GAM 和 SGAM 分頁。 下圖顯示 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 用來配置及管理範圍的頁面順序。
+它會針對追蹤的每個額外範圍，在資料檔案中新增 PFS、GAM 或 SGAM 分頁。 在第一個 PFS 分頁之後 8,088 個分頁，有新的 PFS 分頁，而後續的其他 PFS 分頁以 8,088 個分頁為間隔。 為了說明，分頁識別碼 1 是 PFS 分頁，分頁識別碼 8088 是 PFS 分頁，分頁識別碼 16176 是 PFS 分頁，以此類推。 在第一個 GAM 分頁之後 64,000 個範圍，有新的 GAM 分頁，它會追蹤其後的 64,000 個範圍；順序會以 64,000 個範圍為間隔繼續。 同樣地，在第一個 SGAM 分頁之後 64,000 個範圍，有新的 SGAM 分頁，而後續的其他 SGAM 分頁以 64,000 個範圍為間隔。 下圖顯示 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 用來配置及管理範圍的頁面順序。
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
@@ -172,7 +172,7 @@ IAM 頁面是視需要配置給每個配置單位，而且在檔案中的位置�
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 只在它無法在現有的範圍中找到一個擁有足夠空間來保存插入之資料列的頁面時，才會配置新的範圍給配置單位。 
 
-<a name="ProportionalFill"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將使用**比例式填滿配置演算法**，從檔案群組中的可用範圍來配置範圍。 若在相同的檔案群組有兩個檔案，其中一個檔案的可用空間是另一個檔案的兩倍，系統將從擁有可用空間的檔案中配置兩個頁面，而從另一個檔案中配置一個頁面。 這代表檔案群組中的每個檔案都擁有類似的空間使用百分比。 
+<a name="ProportionalFill"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將使用**比例式填滿配置演算法**，從檔案群組中的可用範圍來配置範圍。 若在相同的檔案群組有兩個檔案，其中一個檔案的可用空間是另一個檔案的兩倍，系統將從擁有可用空間的檔案中配置兩個頁面，而從另一個檔案中配置一個頁面。 這代表檔案群組中的每個檔案都擁有類似的空間使用百分比。 
 
 ## <a name="tracking-modified-extents"></a>追蹤修改的範圍 
 

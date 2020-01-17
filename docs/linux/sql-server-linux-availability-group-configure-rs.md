@@ -1,7 +1,7 @@
 ---
-title: 設定 SQL Server 可用性群組供 Linux 上的讀取級別使用
-titleSuffix: SQL Server
+title: 設定讀取級別可用性群組 (Linux 上的 SQL Server)
 description: 了解如何設定 SQL Server Always On 可用性群組 (AG)，供 Linux 上的讀取級別工作負載使用。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: fcfa4510c9f33ee3aa6fc33cafb43cb627b0f53c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 1ce63521989edfccc1fc9fc085b0a9c476cde2ee
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027266"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558392"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>設定 SQL Server 可用性群組供 Linux 上的讀取級別使用
 

@@ -1,7 +1,7 @@
 ---
 title: CREATE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/11/2017
+ms.date: 12/05/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,17 +26,17 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b851fcc4a06567ce013b8bc0d062ccf15587d806
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: e7cf36879a08f50095a158311179b9ae303d4ebc
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982722"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901879"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的目前資料庫中建立別名資料類型或使用者定義型別。 別名資料類型的實作是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生系統類型為基礎。 使用者定義型別是使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 通用語言執行平台 (CLR) 中之組件的類別來實作的。 若要將使用者定義型別繫結到它的實作，必須先在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) 來註冊內含該型別之實作的 CLR 組件。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的目前資料庫中建立別名資料類型或使用者定義型別。 別名資料類型的實作是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生系統類型為基礎。 使用者定義型別是使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 通用語言執行平台 (CLR) 中之組件的類別來實作的。 若要將使用者定義型別繫結到它的實作，必須先在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) 來註冊內含該型別之實作的 CLR 組件。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，依預設，執行 CLR 程式碼的功能是關閉。 您可以建立、修改及卸除參考受控碼模組的資料庫物件，但除非您使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 來啟用 [clr enabled 選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)；否則，這些參考就不會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行。  
  
@@ -251,7 +251,7 @@ column_name <data_type>
   
  表示已建立雜湊索引。 只有記憶體最佳化的資料表才支援雜湊索引。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  *assembly_name* 中參考的組件類別及其方法，應符合在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中實作使用者定義型別的所有需求。 如需這些需求的詳細資訊，請參閱 [CLR 使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。  
   
  其他考量包括以下各項：  
@@ -268,7 +268,7 @@ column_name <data_type>
   
  **public** 資料庫角色與使用 **sp_addtype** 建立的使用者定義型別不同，前者不會在使用 CREATE TYPE 建立的類型上自動被授與 REFERENCES 權限。 這個權限必須另外授與。  
   
- 在使用者定義的資料表類型中，*column_name* \<資料類型> 中使用的結構化使用者定義型別屬於資料表類型定義所在之資料庫結構描述範圍的一部分。 若要在資料庫中存取不同範圍內的結構化使用者定義型別，請使用兩部分的名稱。  
+ 在使用者定義的資料表類型中，*column_name* \<資料類型> 中使用的結構化使用者定義類型屬於資料表類型定義所在之資料庫結構描述範圍的一部分。 若要在資料庫中存取不同範圍內的結構化使用者定義型別，請使用兩部分的名稱。  
   
  在使用者定義的資料表類型中，計算資料行的主索引鍵必須是 PERSISTED 和 NOT NULL。  
   
@@ -289,7 +289,7 @@ column_name <data_type>
 ### <a name="a-creating-an-alias-type-based-on-the-varchar-data-type"></a>A. 根據 varchar 資料類型建立別名類型  
  下列範例根據系統提供的 `varchar` 資料類型建立別名資料類型。  
   
-```  
+```sql  
 CREATE TYPE SSN  
 FROM varchar(11) NOT NULL ;  
 ```  
@@ -299,7 +299,7 @@ FROM varchar(11) NOT NULL ;
   
 **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
-```  
+```sql  
 CREATE ASSEMBLY utf8string  
 AUTHORIZATION [dbi]   
 FROM 0x4D... ;  
@@ -312,7 +312,7 @@ GO
 ### <a name="c-creating-a-user-defined-table-type"></a>C. 建立使用者自訂資料表類型  
  下列範例會建立有兩個資料行的使用者定義資料表類型。 如需如何建立及使用資料表值參數的詳細資訊，請參閱[使用資料表值參數 &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
   
-```  
+```sql  
 CREATE TYPE LocationTableType AS TABLE   
     ( LocationName VARCHAR(50)  
     , CostRate INT );  
@@ -341,6 +341,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [DROP TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-type-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
+ [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)    
+ [CLR 使用者定義類型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)     
+ [在 SQL Server 中使用使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)     
   

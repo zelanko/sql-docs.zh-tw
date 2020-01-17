@@ -1,7 +1,7 @@
 ---
-title: 復原包含標記之異動的相關資料庫 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 使用標示的交易復原相關資料庫
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 31ef04cc1aa02985fe699b0192c25bfbc4e88ca1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 002b5e92c94abece7ea935cb06985a51b78e98c4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033517"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75238894"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>復原包含標記之異動的相關資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
  如需如何將標示插入跨越多個資料庫之交易的相關資訊，請參閱 [使用標示的異動以一致的方式復原相關資料庫 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)。  
   
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>復原標示的 Transact-SQL 語法  
- 針對標示的交易使用 [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式時，您可以使用下列其中一個子句，以在標示上或標示當前停止：  
+ 針對標示的交易使用[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md)陳述式時，您可以使用下列其中一個子句，以在標示上或標示當前停止：  
   
 -   使用 WITH STOPATMARK = **'** _<mark_name>_ **'** 子句，以指定標示的交易為復原點。  
   

@@ -1,7 +1,7 @@
 ---
 title: GROUPING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 12/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3f5d3a1e3b6ac5b6e5d8ec46e03de9f757a4651b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a5ecfbcd49712ce22f5e48aa5643d90414f78fae
+ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048186"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74833785"
 ---
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   指出是否彙總 GROUP BY 清單中指定的資料行運算式。 GROUPING 傳回 1 時，表示會在結果集中彙總，傳回 0 則不會。 當指定 GROUP BY 時，GROUPING 只能在 SELECT \<select> 清單、HAVING 和 ORDER BY 子句中使用。  
   
@@ -47,10 +47,10 @@ GROUPING ( <column_expression> )
  \<column_expression>  
  為包含 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 子句中資料行的資料行或運算式。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **tinyint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  GROUPING 是用來區別 ROLLUP、CUBE 或 GROUPING SETS 傳回的 null 值與標準 null 值。 因 ROLLUP、CUBE 或 GROUPING SETS 運算之結果而傳回的 NULL 是 NULL 的特殊使用。 這用來作為結果集中的資料行預留位置，代表全部。  
   
 ## <a name="examples"></a>範例  

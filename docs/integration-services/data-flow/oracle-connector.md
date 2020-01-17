@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ee00232a1c1e64d31b7b6360666bdeebba756db9
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 92aaf7c04d7a5e176fce4448b9d4f6172b541647
+ms.sourcegitcommit: a02727aab143541794e9cfe923770d019f323116
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75246946"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755845"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
@@ -27,7 +27,7 @@ Microsoft Connector for Oracle 能讓您以 SSIS 套件將資料從 Oracle 資�
 Microsoft Connector for Oracle 支援下列 Microsoft SQL Server 產品：
 
 - 自 SQL Server 2019 起
-- SQL Server Data Tools (SSDT)
+- 從 15.9.3 版開始的 SQL Server Data Tools (SSDT)
 
 以下是支援的資料來源 Oracle 資料庫版本：
 
@@ -43,28 +43,20 @@ Microsoft Connector for Oracle 支援下列 Microsoft SQL Server 產品：
 
 ## <a name="installation"></a>安裝
 
-如果您需要在 SQL Server 中執行套件，您可以從[這裡](https://www.microsoft.com/download/details.aspx?id=58228) \(英文\) 取得 Microsoft Connector for Oracle Database 安裝程式。 然後，遵循安裝精靈中的指示進行。
+若要安裝 Oracle 資料庫的連接器，請從[最新版本的 Microsoft Connector for Oracle](https://www.microsoft.com/download/details.aspx?id=58228) 下載並執行安裝程式。 然後，遵循安裝精靈中的指示進行。
 
-安裝連接器之後，您必須重新啟動 SQL Server Integration Service，以確保 Oracle 來源和目的地能正常運作。
+安裝連接器之後，您必須重新啟動 SQL Server Integration Service，以確保 Oracle 來源和目的地可以正常運作。
 
-如果您需要使用連接器來設計套件，則不需要下載連接器。 SQL Server Data Tools (SSDT) 自 15.9.0 版以來已包含該檔案。
-
-## <a name="uninstallation"></a>解除安裝
-
-您可以執行解除安裝精靈來將 Microsoft Connector for Oracle Database 從 SQL Server 移除。
-
-## <a name="design-ssis-package-with-previous-version"></a>使用舊版來設計 SSIS 套件
-
-自 15.9.0 版以來，SSDT 已經包含 Microsoft Connector for Oracle Database，因此在設計以 SQL Server 2019 為目標的 SSIS 套件時，您不需要進行任何安裝。
-
-若要設計以 SQL Server 2017 和以下版本為目標的 SSIS 套件，您需要安裝相對應版本的 Connector for Oracle by Attunity。
-
-**下載連結：**
+若要執行以 SQL Server 2017 和以下版本為目標的 SSIS 套件，除了 **Microsoft Connector for Oracle** 以外，您還需要從下列連結安裝 **Oracle 用戶端**和相對應版本的 **Microsoft Connector for Oracle by Attunity**：
 
 - [SQL Server 2017：Microsoft Connector Version 5.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=55179) \(英文\)
 - [SQL Server 2016：Microsoft Connector Version 4.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=52950) \(英文\)
 - [SQL Server 2014：Microsoft Connector Version 3.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=44582) \(英文\)
 - [SQL Server 2012：Microsoft Connector Version 2.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=29283) \(英文\)
+
+## <a name="uninstallation"></a>解除安裝
+
+您可以執行解除安裝精靈來將 Microsoft Connector for Oracle Database 從 SQL Server 移除。
 
 ## <a name="next-steps"></a>後續步驟
 

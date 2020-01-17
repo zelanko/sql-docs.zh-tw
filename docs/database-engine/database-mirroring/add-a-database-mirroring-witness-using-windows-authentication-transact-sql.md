@@ -1,6 +1,7 @@
 ---
-title: 使用 Windows 驗證新增資料庫鏡像見證 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 設定見證
+description: '描述如何使用 Transact-SQL 搭配 Windows 驗證設定資料庫鏡像見證。 '
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: df8fe05e66c50b6bdee8e6bdfd792a2b481d1e02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4616e2c10657e1af8db9c706c518fdf690618303
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945657"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822305"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>使用 Windows 驗證加入資料庫鏡像見證 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "67945657"
 > [!IMPORTANT]  
 >  我們建議您在離峰時間設定資料庫鏡像，因為組態會影響效能。  
   
-### <a name="to-establish-a-witness"></a>若要建立見證  
+## <a name="establish-a-witness"></a>建立見證  
   
 1.  在見證伺服器執行個體上，確定資料庫鏡像有端點存在。 不管要支援的鏡像工作階段有多少個，伺服器執行個體都必須只有一個資料庫鏡像端點。 如果您打算將這個伺服器執行個體專門作為資料庫鏡像工作階段中的見證，請指派見證角色給端點 (ROLE **=** WITNESS)。 如果您打算使用這個伺服器執行個體，作為一或多個其他資料庫鏡像工作階段中的夥伴，請將端點的角色指派為 ALL。  
   

@@ -1,6 +1,5 @@
 ---
-title: 指定選擇性 XML 索引的路徑和最佳化提示 | Microsoft Docs
-ms.custom: ''
+title: 選擇性 XML 索引的路徑與最佳化提示 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +9,13 @@ ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: acea8d44048de35ecbc3214712f699217838e60d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: e4ffb1cc9a2b63047c6ade58d82001a2e0ebea4c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905240"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257608"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>指定選擇性 XML 索引的路徑和最佳化提示
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -377,7 +377,7 @@ WHERE T.xmldata.exist('
   
  您可以使用 node() 最佳化指定評估一般查詢時不需要其值的節點。 這個提示可在一般查詢只需評估節點是否存在時，減少儲存需求 (根據預設，選擇性 XML 索引會儲存所有已升級節點的值，但是不包括複雜的節點類型)。  
   
- 請設想下列範例：  
+ 請考慮下列範例：  
   
 ```sql  
 SELECT T.record FROM myXMLTable T  

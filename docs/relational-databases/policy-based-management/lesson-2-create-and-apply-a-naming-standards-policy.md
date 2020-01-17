@@ -1,6 +1,7 @@
 ---
-title: 第 2 課：建立和套用命名標準原則 | Microsoft Docs
-ms.custom: ''
+title: 第 2 課：建立與套用命名標準原則
+description: 此教學課程說明如何在 SQL Server 中建立和套用原則式管理的命名標準原則。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: security
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bd3b1b4d07b68ae693cd741e471dd5f53efae6e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ac5510320783c35c83f84118e9679da4fd351415
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907054"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558693"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>第 2 課：建立和套用命名標準原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,7 +154,7 @@ ms.locfileid: "72907054"
 ## <a name="summary"></a>摘要  
 這個教學課程已經示範了如何建立以原則為基礎的管理條件、原則和原則群組，以及如何套用篩選和檢查以原則為基礎的管理目標是否符合。  
   
-## <a name="next"></a>下一個  
+## <a name="next"></a>下一頁  
 本教學課程已完成。 若要返回起始處，請瀏覽[教學課程：使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)。  
   
 如需教學課程清單，請參閱 [適用於 SQL Server 2016 的教學課程](../../sql-server/tutorials-for-sql-server-2016.md)。  

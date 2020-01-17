@@ -1,6 +1,7 @@
 ---
-title: 檢視鏡像資料庫的狀態 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 檢視鏡像資料庫狀態
+description: 了解如何在 SQL Server Management Studio (SSMS) GUI 內檢視針對資料庫鏡像所設定之資料庫的狀態。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9ef1c67955944277c7a8b6dd7ec1289fb8a2d280
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a52cf852edc4a03a72ba9cb71a4ccd50a3963ada
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050590"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245454"
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>檢視鏡像資料庫的狀態 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68050590"
   
 2.  展開 **[資料庫]** ，然後選取要鏡像的資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，選取 **[工作]** ，然後按一下 **[鏡像]** 。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
+3.  以滑鼠右鍵按一下資料庫，選取 [工作]  ，然後按一下 [鏡像]  。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
   
 4.  在鏡像開始後，[狀態]  面板便會顯示資料庫鏡像工作階段的狀態 (此狀態是從您選取 [鏡像]  頁面或按了 [重新整理]  按鈕後的狀態)。 可能的狀態如下：  
   

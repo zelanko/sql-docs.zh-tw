@@ -1,7 +1,7 @@
 ---
-title: 設定 SQL Server 可用性群組的 RHEL 叢集
-titleSuffix: SQL Server
-description: 了解執行 Red Hat Enterprise Linux (RHEL) 時的可用性群組叢集
+title: RHEL：在 Linux 中設定 SQL Server 的可用性群組
+description: 了解如何在執行 Red Hat Enterprise Linux (RHEL) 時，為 SQL Server 設定可用性群組叢集。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 7e401a53b07d5a71ccafb38f6edb2f80bcf1e274
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: 6976d81994dbc8db154b285da03bed2397e9fee1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70910804"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558491"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 RHEL 叢集
 
@@ -46,9 +46,9 @@ ms.locfileid: "70910804"
    設定叢集資源管理員的方式取決於特定 Linux 發行版本。 
 
    >[!IMPORTANT]
-   >生產環境需要 STONITH 這類隔離代理程式以提供高可用性。 此文件的示範不會使用隔離代理程式。 這些示範僅適用於測試和驗證。
+   >生產環境需要 STONITH 這類隔離代理程式來取得高可用性。 此文件的示範不會使用隔離代理程式。 這些示範僅適用於測試和驗證。
    
-   >Linux 叢集會使用隔離功能將叢集回復為已知的狀態。 設定隔離的方式取決於發行版本和環境。 目前，有些雲端環境無法使用隔離。 如需詳細資訊，請參閱 [RHEL 高可用性叢集的支援原則 - 虛擬化平台](https://access.redhat.com/articles/29440) \(英文\)。
+   >Linux 叢集會使用隔離功能將叢集回復為已知的狀態。 設定隔離的方式取決於發行版本和環境。 目前，有些雲端環境無法使用隔離。 如需詳細資訊，請參閱 [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440) (RHEL 高可用性叢集的支援原則 - 虛擬化平台)。
 
 5. [將可用性群組新增為叢集中的資源](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)。  
 
@@ -177,7 +177,7 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeou
 sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
-Pacemaker 中沒有對等的虛擬伺服器名稱。 若要使用指向字串伺服器名稱而非 IP 位址的連接字串，請在 DNS 中註冊虛擬 IP 資源位址和所需的虛擬伺服器名稱。 針對 DR 設定，在主要和 DR 網站上，向 DNS 伺服器註冊所需的虛擬伺服器名稱和 IP 位址。
+Pacemaker 中沒有對等的虛擬伺服器名稱。 若要使用指向字串伺服器名稱而非 IP 位址的連接字串，請在 DNS 中註冊虛擬 IP 資源位址和所需的虛擬伺服器名稱。 針對 DR 設定，請在主要和 DR 網站上，向 DNS 伺服器註冊所需的虛擬伺服器名稱和 IP 位址。
 
 ## <a name="add-colocation-constraint"></a>新增共置限制式
 
@@ -195,7 +195,7 @@ sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc
 
 共置限制式具有隱含的排序限制式。 它會先移動虛擬 IP 資源，再移動可用性群組資源。 根據預設，事件的順序如下：
 
-1. 使用者會對可用性群組主要複本發出從節點 1 到節點 2 的 `pcs resource move`。
+1. 使用者會從 node1 到 node2 對可用性群組主要複本發出 `pcs resource move`。
 1. 虛擬 IP 資源會在節點 1 上停止。
 1. 虛擬 IP 資源會在節點 2 上啟動。
   
@@ -205,7 +205,7 @@ sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc
 1. 節點 1 上的可用性群組主要複本會降級為次要複本。
 1. 節點 2 上的可用性群組次要複本會升級為主要複本。 
 
-為了防止 IP 位址暫時指向含容錯移轉前次要複本的節點，請新增排序限制式。 
+為了防止 IP 位址暫時指向含容錯移轉前之次要複本的節點，請新增排序限制式。 
 
 若要新增排序限制式，請在一個節點上執行下列命令：
 

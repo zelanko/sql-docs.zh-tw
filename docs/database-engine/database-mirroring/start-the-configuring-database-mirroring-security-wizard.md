@@ -1,6 +1,7 @@
 ---
-title: 啟動設定資料庫鏡像安全性精靈 | Microsoft Docs
-ms.custom: ''
+title: 設定資料庫鏡像安全性精靈
+description: SQL Server Management Studio 中 [設定資料庫鏡像安全性] 精靈的描述。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1858a76625e4caaaa913c4d1bf91a466e04ef712
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dff35ab1603e3fa1d620914d8ac4afbe669a2be5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048017"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252740"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard"></a>啟動設定資料庫鏡像安全性精靈
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68048017"
   
 2.  展開 **[資料庫]** ，然後選取要鏡像的資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，並選取 [工作]  ，然後按一下 [鏡像]  。 這將會開啟 [[資料庫屬性]](../../relational-databases/databases/database-properties-mirroring-page.md) 對話方塊中的 **[鏡像]** 頁面。  
+3.  以滑鼠右鍵按一下資料庫，選取 [工作]  ，然後按一下 [鏡像]  。 這將會開啟 [[資料庫屬性]](../../relational-databases/databases/database-properties-mirroring-page.md) 對話方塊中的 **[鏡像]** 頁面。  
   
 4.  按一下 **[設定安全性]** 。  
   

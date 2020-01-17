@@ -1,6 +1,5 @@
 ---
-title: 開始使用 SUSE Linux Enterprise Server 上的 SQL Server
-titleSuffix: SQL Server
+title: SUSE：在 Linux 上安裝 SQL Server
 description: 本快速入門說明如何在 SUSE Linux Enterprise Server 上安裝 SQL Server 2017 或 SQL Server 2019，然後使用 sqlcmd 建立及查詢資料庫。
 author: VanMSFT
 ms.author: vanto
@@ -9,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 143ec74ea2941c25c23a41396dc9cdc40d445715
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 811438987106a5eb73a914e5d7bbceb139cd5c37
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594539"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558626"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>快速入門：在 SUSE Linux Enterprise Server 上安裝 SQL Server 並建立資料庫
 
@@ -69,7 +68,7 @@ ms.locfileid: "73594539"
 
 ## <a id="install"></a>安裝 SQL Server
 
-若要在 SLES 上設定 SQL Server，請從終端執行下列命令來安裝 **mssql-server** 套件：
+若要在 SLES 上設定 SQL Server，請從終端執行下列命令，安裝 **mssql-server** 套件：
 
 1. 下載 Microsoft SQL Server 2017 SLES 存放庫組態檔：
 

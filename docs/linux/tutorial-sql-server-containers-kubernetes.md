@@ -1,20 +1,20 @@
 ---
-title: 使用 Azure Kubernetes Service (AKS) 在 Kubernetes 中部署 SQL Server 容器
+title: 使用 Azure Kubernetes Service (AKS) 部署 SQL Server 容器
 description: 本教學課程說明如何使用 Azure Kubernetes Service 中的 Kubernetes 部署 SQL Server 高可用性解決方案。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: fbf13520696d75ec851949e4b4b0e56272881779
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 91607fd8a7bc7b3b104de6d0ba3e6ce97cab8137
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653702"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558343"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>使用 Azure Kubernetes Service (AKS) 在 Kubernetes 中部署 SQL Server 容器
 
@@ -255,7 +255,7 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
    >[!NOTE]
    >建立部署之後，可能需要幾分鐘的時間才能顯示 Pod。 因為叢集是從 Docker Hub 提取 [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) 映像，所以會導致這個延遲。 第一次提取映像之後，如果部署抵達的節點中已經快取映像，則後續部署可能會更快速。 
 
-1. 驗證服務是否正在執行。 執行下列命令：
+1. 驗證服務是否正在執行。 執行以下命令：
 
    ```azurecli
    kubectl get services 

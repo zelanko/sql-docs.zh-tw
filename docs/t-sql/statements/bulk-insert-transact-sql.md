@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c48c045b65b554533a8824ec0ea967ed8fae884
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 6b6534e887f890700b69a11b4515d4cf1af4d86a
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252008"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249844"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -96,11 +96,11 @@ BULK INSERT Sales.Orders
 FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 ```
 
-**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 和 Azure SQL Database。
+**適用範圍：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 和 Azure SQL Database。
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，data_file 可位於 Azure Blob 儲存體中。 在此情況下，您必須指定 **data_source_name** 選項。 如需範例，請參閱[從 Azure Blob 儲存體中的檔案匯入資料](#f-importing-data-from-a-file-in-azure-blob-storage)。
 
 > [!IMPORTANT]
-> Azure SQL Database 不支援從 Windows 檔案讀取。
+> Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
 
 **'** _data_source_name_ **'** 
 **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 和 Azure SQL Database。
@@ -128,7 +128,7 @@ CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'
 > [!NOTE]
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您在[格式檔案](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)中，針對每一個資料行各指定一個定序名稱。
 
-|CODEPAGE 值|Description|
+|CODEPAGE 值|描述|
 |--------------------|-----------------|
 |ACP|將 **char**、**varchar** 或 **text** 資料類型的資料行，從 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 字碼頁 (ISO 1252) 轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字碼頁。|
 |OEM (預設值)|將 **char**、**varchar** 或 **text** 資料類型的資料行，從系統 OEM 字碼頁轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字碼頁。|
@@ -151,7 +151,7 @@ DATAFILETYPE **=** { **'char'**  |  **'native'**  |  **'widechar'**  |  **'widen
 ERRORFILE **='** _file_name_ **'** 指定用來收集格式錯誤且無法轉換成 OLE DB 資料列集之資料列的檔案。 這些資料列會「依照原狀」，從資料檔複製到這個錯誤檔中。
 
 當執行命令時，便會建立這個錯誤檔。 如果檔案已經存在，會發生一則錯誤。 另外，還會建立一個副檔名為 .ERROR.txt 的控制檔。 這會參考錯誤檔中的每個資料列，且會提供錯誤診斷。 錯誤更正之後，就能夠載入資料。
-**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
+**適用範圍：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 開始，`error_file_path` 可以位於 Azure Blob 儲存體中。
 
 'errorfile_data_source_name' **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
@@ -177,7 +177,7 @@ KEEPNULLS 指定在大量匯入作業期間，空白資料行應該保留 Null �
 
 KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_ 以 *kilobytes_per_batch* 指定每一批資料的大約 KB 數。 依預設，KILOBYTES_PER_BATCH 是未知的。 如需有關效能考量的詳細資訊，請參閱本主題稍後的「備註」。
 
-LASTROW **=** _last_row_ 指定要載入之最後一個資料列的號碼。 預設值是 0，表示指定之資料檔案中的最後一個資料列。
+LASTROW **=** _last_row_ 指定所要載入最後一個資料列的號碼。 預設值是 0，表示指定之資料檔案中的最後一個資料列。
 
 MAXERRORS **=** _max_errors_ 指定取消大量匯入作業之前所允許的資料語法錯誤數目上限。 大量匯入作業所無法匯入的每個資料列都會被忽略，且會當做一項錯誤來計算。 如果未指定 *max_errors*，則預設值為 10。
 
@@ -217,7 +217,7 @@ FORMATFILE **=** '_format_file_path_' 指定格式檔案的完整路徑。 格�
 - 資料行分隔符號不同。
 - 資料格式有其他變更。 格式檔通常是利用 **bcp** 公用程式來建立的，您可以視需要利用文字編輯器來修改它。 如需詳細資訊，請參閱 [bcp 公用程式](../../tools/bcp-utility.md)和[建立格式檔案](../../relational-databases/import-export/create-a-format-file-sql-server.md)。
 
-**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 和 Azure SQL Database。
+**適用範圍：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 和 Azure SQL Database。
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，format_file_path 可位於 Azure Blob 儲存體中。
 
 FIELDTERMINATOR **='** _field_terminator_ **'** 指定要用於 **char** 和 **widechar** 資料檔案的欄位結束字元。 預設欄位結束字元是 \t (定位字元)。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。
@@ -231,11 +231,11 @@ ROWTERMINATOR **='** _row_terminator_ **'** 指定要用於 **char** 和 **widec
 - **float** 或 **real** 資料類型的原生表示法是否有效。
 - Unicode 資料的長度是否為偶數位元組。
 
-## <a name="data-types"></a>資料型別
+## <a name="data-types"></a>資料類型
 
 ### <a name="string-to-decimal-data-type-conversions"></a>字串到十進位資料類型轉換
 
-BULK INSERT 中使用的字串到十進位資料類型轉換遵守與 [!INCLUDE[tsql](../../includes/tsql-md.md)] [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) 函式相同的規則，會拒絕代表使用科學記號標記法之數值的字串。 因此，BULK INSERT 會將這類字串視為無效的值，並報告轉換錯誤。
+BULK INSERT 中使用的字串到十進位資料類型轉換遵守與 [!INCLUDE[tsql](../../includes/tsql-md.md)][CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) 函式相同的規則，會拒絕代表使用科學記號標記法之數值的字串。 因此，BULK INSERT 會將這類字串視為無效的值，並報告轉換錯誤。
 
 若要因應這種行為，請使用格式檔案，將科學記號標記法 **float** 資料大量匯入至十進位資料行。 在格式檔案中，請將此資料行明確描述為 **real** 或 **float** 資料。 如需有關這些資料類型的詳細資訊，請參閱 [float 和 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)。
 
@@ -278,7 +278,7 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database 不支援從 Windows 檔案讀取，但可從 Azure Blob 儲存體中讀取。
+> Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
 
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>大量匯出或匯入 SQLXML 文件的資料類型
 
@@ -322,7 +322,7 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 
 使用 Azure SQL Database 時，如果您要匯入大量資料，請考慮在匯入之前暫時增加資料庫或執行個體的效能層級。
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 
 ### <a name="security-account-delegation-impersonation"></a>委派安全性帳戶 (模擬)
 
@@ -369,7 +369,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database 不支援從 Windows 檔案讀取。
+> Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
 
 ### <a name="b-using-the-fire_triggers-argument"></a>B. 使用 FIRE_TRIGGERS 觸發程序
 
@@ -387,7 +387,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database 不支援從 Windows 檔案讀取。
+> Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
 
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>C. 利用換行字元做為資料列結束字元
 
@@ -405,7 +405,7 @@ EXEC(@bulk_cmd);
 > 由於 Microsoft Windows 處理文字檔的方式， **(\n** 會自動被取代為 **\r\n)** 。
 
 > [!IMPORTANT]
-> Azure SQL Database 不支援從 Windows 檔案讀取。
+> Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
 
 ### <a name="d-specifying-a-code-page"></a>D. 指定字碼頁
 
@@ -422,7 +422,7 @@ WITH
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database 不支援從 Windows 檔案讀取。
+> Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
 
 ### <a name="e-importing-data-from-a-csv-file"></a>E. 從 CSV 檔案匯入資料
 
@@ -439,7 +439,7 @@ WITH (FORMAT = 'CSV'
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database 不支援從 Windows 檔案讀取。
+> Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. 從 Azure Blob 儲存體中的檔案匯入資料
 
@@ -470,7 +470,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database 不支援從 Windows 檔案讀取。
+> Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. 從 Azure Blob 儲存體中的檔案匯入資料並指定錯誤檔
 

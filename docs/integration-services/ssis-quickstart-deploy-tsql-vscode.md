@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc11ccdee25331ad4d3758e4ebdff2da9e420900
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: befa64e6c79a1f1e4fe0604014dbb7c583bf830e
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281551"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947170"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>使用 Transact-SQL 從 Visual Studio Code 部署 SSIS 專案
 
@@ -50,6 +50,10 @@ Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式�
  
 3. 在開啟的 [選取語言模式]  下拉式功能表中，選取或輸入 **SQL**，然後按 **ENTER** 將語言模式設定為 SQL。 
 
+## <a name="supported-authentication-method"></a>支援的驗證方法
+
+請參閱[適用於部署的驗證方法](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment)。
+
 ## <a name="connect-to-the-ssis-catalog-database"></a>連線至 SSIS 目錄資料庫
 
 使用 Visual Studio Code，以建立與 SSIS 目錄的連線。
@@ -62,12 +66,12 @@ Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式�
 
 4. 遵循提示來指定新連線設定檔的連線屬性。 指定每個值之後，請按 **ENTER** 繼續。 
 
-   | 設定       | 建議值 | 其他資訊 |
+   | 設定       | 建議的值 | 其他資訊 |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **伺服器名稱** | 完整伺服器名稱 |  |
    | **資料庫名稱** | **SSISDB** | 要連線之資料庫的名稱。 |
    | **驗證** | SQL 登入 | |
-   | **User name** | 伺服器系統管理員帳戶 | 這個帳戶是您在建立伺服器時指定的帳戶。 |
+   | **使用者名稱** | 伺服器系統管理員帳戶 | 這個帳戶是您在建立伺服器時指定的帳戶。 |
    | **密碼 (SQL 登入)** | 伺服器系統管理員帳戶的密碼 | 這個密碼是您在建立伺服器時指定的密碼。 |
    | **儲存密碼嗎？** | [是] 或 [否] | 如果您不想要每次都輸入密碼，請選取 [是]。 |
    | **輸入此設定檔的名稱** | 設定檔名稱，例如 **mySSISServer** | 儲存的設定檔名稱可在後續的登入中加速您的連線。 | 
@@ -107,6 +111,6 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
     - [使用 SSMS 執行 SSIS 套件](./ssis-quickstart-run-ssms.md)
     - [使用 Transact-SQL 執行 SSIS 套件 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [使用 Transact-SQL 執行 SSIS 套件 (VS Code)](ssis-quickstart-run-tsql-vscode.md)
-    - [從命令提示字元中執行 SSIS 套件](./ssis-quickstart-run-cmdline.md)
+    - [從命令提示字元執行 SSIS 套件](./ssis-quickstart-run-cmdline.md)
     - [使用 PowerShell 執行 SSIS 套件](ssis-quickstart-run-powershell.md)
     - [使用 C# 執行 SSIS 套件](./ssis-quickstart-run-dotnet.md) 

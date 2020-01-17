@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cfbd77901ab2a8a834fe5a9efc4c272845e02c87
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: caee3b1fab893e456a5a781641b6cf70222b16ff
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903147"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721353"
 ---
 # <a name="choose-an-authentication-mode"></a>選擇驗證模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "72903147"
   
 ### <a name="disadvantages-of-sql-server-authentication"></a>SQL Server 驗證的缺點  
   
--   如果某位使用者是擁有 Windows 登入和密碼的 Windows 網域使用者，則仍然必須提供其他 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 登入和密碼才能連接。 追蹤多個名稱和密碼對於許多使用者而言很困難。 此外，每次連接至資料庫就必須提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證可能會造成困擾。  
+-   如果某個使用者是擁有 Windows 登入和密碼的 Windows 網域使用者，則他們仍然必須提供其他 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 登入和密碼才能連線。 追蹤多個名稱和密碼對於許多使用者而言很困難。 此外，每次連接至資料庫就必須提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證可能會造成困擾。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證無法使用 Kerberos 安全性通訊協定。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "72903147"
   
 -   可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援具有混合作業系統的環境，其中 Windows 網域無法驗證所有使用者。  
   
--   可讓使用者從未知或未受信任的網域連接。 例如，既有客戶使用所指派 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入連接來接收訂單狀態的應用程式。  
+-   可讓使用者從未知或未受信任的網域進行連線。 例如，既有客戶使用所指派 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入連接來接收訂單狀態的應用程式。  
   
 -   可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 Web 架構應用程式，其中使用者會建立自己的識別。  
   

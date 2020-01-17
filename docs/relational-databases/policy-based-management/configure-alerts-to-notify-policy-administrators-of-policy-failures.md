@@ -1,6 +1,7 @@
 ---
-title: 設定警示以便向原則管理員通知原則失敗 | Microsoft Docs
-ms.custom: ''
+title: 設定警示以向管理員通知原則失敗
+description: 了解如何設定警示，以在 SQL Server 原則評估失敗時通知原則管理員。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8e60159-d5b0-49d5-91f3-af8e9cb994c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ef46a36296da926f2cb62599b41774b1d29f5ba1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1562a1799e442292d61857d4598da69b4c11c70f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109824"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557813"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>設定警示以便向原則管理員通知原則失敗
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

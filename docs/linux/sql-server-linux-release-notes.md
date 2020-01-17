@@ -3,17 +3,17 @@ title: Linux 上的 SQL Server 2017 版本資訊
 description: 此文章包含在 Linux 上執行之 SQL Server 2017 的版本資訊和支援功能。 其中包含最新版本和數個先前版本的版本資訊。
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/10/2019
+ms.date: 12/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 839d789e633e8f8794ec6fde70980e6c1a43ce91
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: 35a9e15162119c043e1d9ce31c9b5020241dc079
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72930491"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258405"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 版本資訊
 
@@ -31,7 +31,7 @@ ms.locfileid: "72930491"
 | Red Hat Enterprise Linux 7.3、7.4、7.5 或 7.6 伺服器 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Windows、Mac 或 Linux 上的 Docker Engine 1.8+ | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
+| Windows、Mac 或 Linux 上的 Docker Engine 1.8+ | N/A | [安裝指南](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
 > 如需詳細資訊，請檢閱適用於 Linux 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的[系統需求](sql-server-linux-setup.md#system)。 如需適用於 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的最新支援原則，請參閱 [Microsoft SQL Server 的技術支援原則](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)。
@@ -46,6 +46,7 @@ ms.locfileid: "72930491"
 
 | 版本               | 版本       | 發行日期 |
 |-----------------------|---------------|--------------|
+| [CU18](#CU18)         | 14.0.3257.3   | 2019-12-09   |
 | [CU17](#CU17)         | 14.0.3238.1   | 2019-10-08   |
 | [CU16](#CU16)         | 14.0.3223.3   | 2019-08-01   |
 | [CU15](#CU15)         | 14.0.3162.1   | 2019-05-23   |
@@ -79,15 +80,55 @@ ms.locfileid: "72930491"
 - [安裝 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [啟用 SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
-## <a id="CU17"></a> CU17 (2019 年 10 月)
+## <a id="CU18"></a> CU18 (2019 年 12 月)
 
-這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 17 (CU17) 版本。 此版本 (Release) 的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本 (Version) 是 14.0.3238.1。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/en-us/help/4498951](https://support.microsoft.com/en-us/help/4515579)。
+這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 18 (CU18) 版本。 此版本 (Release) 的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本 (Version) 是 14.0.3257.3。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4527377](https://support.microsoft.com/help/4527377)。
 
 ### <a name="package-details"></a>套件詳細資料
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
+|-----|-----|-----|
+| Red Hat RPM 套件 | 14.0.3257.3-13 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3257.3-13.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3257.3-13.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3257.3-13.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 套件 | 14.0.3257.3-13 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3257.3-13.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3257.3-13.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3257.3-13.x86_64.rpm) | 
+| Ubuntu 16.04 Debian 套件 | 14.0.3257.3-13 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3257.3-13_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3257.3-13_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3257.3-13_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+### <a name="remarks"></a>備註
+
+SQL Server 2017 容器現在有新的標記模式，如下所述，其中包含範例。
+
+- `mcr.microsoft.com/mssql/server:<SQL Server Version>-<update>-<Linux Distribution>-<Linux Distribution Version>`
+
+  這會使用標記中所述的組合來提取容器映像。
+
+- `mcr.microsoft.com/mssql/server:<SQL Server Version>-latest`
+
+    這會在最新支援的 Ubuntu 版本上提取最新的 SQL Server 版本。
+
+**範例：**
+
+`mcr.microsoft.com/mssql/server:2017-CU18-ubuntu-16.04`
+
+這會根據 Ubuntu 16.04 容器提取 SQL Server 2017 CU18。
+
+`mcr.microsoft.com/mssql/server:2017-latest`
+
+這會根據 Ubuntu 16.04 容器，提取最新的 SQL Server 2017 版本 (撰寫此文章時為 CU18)。
+
+> [!NOTE]
+> 未來，我們將不再針對 SQL Server 2017 容器的其他標記模式發佈容器。
+
+
+## <a id="CU17"></a> CU17 (2019 年 10 月)
+
+這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 17 (CU17) 版本。 此版本 (Release) 的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本 (Version) 是 14.0.3238.1。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4515579](https://support.microsoft.com/help/4515579)。
+
+### <a name="package-details"></a>套件詳細資料
+
+針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
+
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.3238.1-19 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3238.1-19.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3238.1-19.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3238.1-19.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.3238.1-19 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3238.1-19.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3238.1-19.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3238.1-19.x86_64.rpm) | 
@@ -95,7 +136,7 @@ ms.locfileid: "72930491"
 
 ## <a id="CU16"></a> CU16 (2019 年 8 月)
 
-這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 16 (CU16) 版本。 此版本 (Release) 的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本 (Version) 是 14.0.3223.3。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/en-us/help/4508218](https://support.microsoft.com/en-us/help/4508218)。
+這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 16 (CU16) 版本。 此版本 (Release) 的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本 (Version) 是 14.0.3223.3。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4508218](https://support.microsoft.com/help/4508218)。
 
 ### <a name="whats-new"></a>新功能
 
@@ -107,7 +148,7 @@ ms.locfileid: "72930491"
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.3223.3-15 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3223.3-15.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3223.3-15.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3223.3-15.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.3223.3-15 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3223.3-15.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3223.3-15.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3223.3-15.x86_64.rpm) | 
@@ -115,13 +156,13 @@ ms.locfileid: "72930491"
 
 ## <a id="CU15"></a> CU15 (2019 年 5 月)
 
-這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 15 (CU15) 版。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.3162.1。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/en-us/help/4498951](https://support.microsoft.com/en-us/help/4498951)。
+這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 15 (CU15) 版。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.3162.1。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4498951](https://support.microsoft.com/help/4498951)。
 
 ### <a name="package-details"></a>套件詳細資料
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.3162.1-1 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3162.1-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3162.1-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3162.1-1.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.3162.1-1 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3162.1-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3162.1-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3162.1-1.x86_64.rpm) | 
@@ -135,7 +176,7 @@ ms.locfileid: "72930491"
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.3076.1-2 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3076.1-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3076.1-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3076.1-2.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.3076.1-2 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3076.1-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3076.1-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3076.1-2.x86_64.rpm) | 
@@ -149,7 +190,7 @@ ms.locfileid: "72930491"
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.3048.4-1 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3048.4-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3048.4-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3048.4-1.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.3048.4-1 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3048.4-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3048.4-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3048.4-1.x86_64.rpm) | 
@@ -163,7 +204,7 @@ ms.locfileid: "72930491"
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.3045.24-1 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3045.24-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3045.24-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3045.24-1.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.3045.24-1 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3045.24-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3045.24-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3045.24-1.x86_64.rpm) | 
@@ -177,7 +218,7 @@ ms.locfileid: "72930491"
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.3038.14-2 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3038.14-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3038.14-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3038.14-2.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.3038.14-2 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3038.14-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3038.14-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3038.14-2.x86_64.rpm) | 
@@ -191,7 +232,7 @@ ms.locfileid: "72930491"
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.3037.1-2 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3037.1-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3037.1-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3037.1-2.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.3037.1-2 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3037.1-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3037.1-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3037.1-2.x86_64.rpm) | 
@@ -205,7 +246,7 @@ ms.locfileid: "72930491"
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.3035.2-1 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3035.2-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3035.2-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3035.2-1.x86_64.rpm)| 
 | SLES RPM 套件 | 14.0.3035.2-1 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3035.2-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3035.2-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3035.2-1.x86_64.rpm) | 
@@ -219,7 +260,7 @@ ms.locfileid: "72930491"
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.2002.14-1 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-14.0.2002.14-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-ha-14.0.2002.14-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-fts-14.0.2002.14-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.2002.14-1 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2002.14-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2002.14-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2002.14-1.x86_64.rpm) | 
@@ -233,7 +274,7 @@ ms.locfileid: "72930491"
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.3030.27-1 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3030.27-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3030.27-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3030.27-1.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.3030.27-1 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3030.27-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3030.27-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3030.27-1.x86_64.rpm) | 
@@ -247,7 +288,7 @@ ms.locfileid: "72930491"
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.3029.16-1 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3029.16-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3029.16-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3029.16-1.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.3029.16-1 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3029.16-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3029.16-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3029.16-1.x86_64.rpm) | 
@@ -261,7 +302,7 @@ ms.locfileid: "72930491"
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.3026.27-2 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3026.27-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3026.27-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3026.27-2.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.3026.27-2 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3026.27-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3026.27-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3026.27-2.x86_64.rpm) | 
@@ -275,7 +316,7 @@ ms.locfileid: "72930491"
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.3025.34-3 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.3025.34-3 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) | 
@@ -307,7 +348,7 @@ sudo systemctl start mssql-server
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.3023.8-5 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3023.8-5.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3023.8-5.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3023.8-5.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.3023.8-5 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3023.8-5.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3023.8-5.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3023.8-5.x86_64.rpm) | 
@@ -324,7 +365,7 @@ sudo systemctl start mssql-server
 > [!NOTE]
 > 從 CU4 開始，已不再將 SQL Server Agent 當作個別套件來安裝。 它會隨引擎套件一起安裝，且必須啟用才能使用。
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.3022.28-2 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3022.28-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3022.28-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3022.28-2.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.3022.28-2 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3022.28-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3022.28-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3022.28-2.x86_64.rpm) | 
@@ -338,7 +379,7 @@ sudo systemctl start mssql-server
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.2000.63-3 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-14.0.2000.63-3.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-ha-14.0.2000.63-3.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-fts-14.0.2000.63-3.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.2000.63-3 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2000.63-3.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2000.63-3.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2000.63-3.x86_64.rpm) | 
@@ -352,7 +393,7 @@ sudo systemctl start mssql-server
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.3015.40-1 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[SQL Server Agent RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.3015.40-1 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[SQL Server Agent RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm) | 
@@ -366,7 +407,7 @@ sudo systemctl start mssql-server
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.3008.27-1 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[SQL Server Agent RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.3008.27-1 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[SQL Server Agent RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm) | 
@@ -380,7 +421,7 @@ sudo systemctl start mssql-server
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.3006.16-3 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3006.16-3.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3006.16-3.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3006.16-3.x86_64.rpm)</br>[SQL Server Agent RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3006.16-3.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.3006.16-3 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3006.16-3.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3006.16-3.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3006.16-3.x86_64.rpm)</br>[SQL Server Agent RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3006.16-3.x86_64.rpm) | 
@@ -399,7 +440,7 @@ sudo systemctl start mssql-server
 - [安裝 SQL Server Agent 套件](sql-server-linux-setup-sql-agent.md)
 - [安裝 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 14.0.1000.169-2 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[SQL Server Agent RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.1000.169-2 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[SQL Server Agent RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
@@ -459,7 +500,7 @@ sudo systemctl start mssql-server
 
 - Linux 上目前不支援 **ADMINISTER BULK OPERATIONS** 使用者權限。
 
-#### <a name="networking"></a>網路
+#### <a name="networking"></a>網路功能
 
 下列兩個條件都成立時，涉及來自 sqlservr 程序之連出 TCP 連線的功能 (例如連結的伺服器或可用性群組) 可能無法運作：
 

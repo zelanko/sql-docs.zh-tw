@@ -1,6 +1,7 @@
 ---
-title: 控制同步處理中觸發程序和條件約束的行為 |Microsoft 文件
-ms.custom: ''
+title: 控制同步處理中觸發程序和條件約束的行為
+description: 了解如何防止在 SQL Server 複寫發行集的同步處理期間，強制執行觸發程式或條件約束。
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -21,12 +22,12 @@ ms.assetid: 7c4e0f0e-cadc-4c99-98f4-69799b9b356b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 076a28e4fac4c8c64c44e0df3c10fbc8e075eafb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 816bda09c547345f5d05cd511d51c72135f15029
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768605"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321799"
 ---
 # <a name="control-behavior-of-triggers-and-constraints-in-synchronization"></a>控制同步處理中觸發程序和條件約束的行為
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

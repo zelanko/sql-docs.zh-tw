@@ -1,6 +1,7 @@
 ---
-title: 針對合併發行項定義及修改參數化資料列篩選 | Microsoft 文件
-ms.custom: ''
+title: 定義與修改參數化資料列篩選 (合併式)
+description: 了解如何針對 SQL Server 定義和修改合併發行項的參數化資料列篩選器。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d24b967821310876cfff00c257c1024dac512588
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 5ce5f0625cf4a57e974fe7faf9eac677a2c629db
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846764"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321203"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>針對合併發行項定義及修改參數化資料列篩選
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +132,7 @@ ms.locfileid: "70846764"
   
     -   **3** - 發行項的篩選會產生對每項訂閱而言都是唯一的非重疊資料分割。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  此範例會在合併式發行集中定義一組發行項，其中的發行項會使用一系列的聯結篩選來針對 `Employee` 資料表進行篩選 (此資料表本身是使用 **LoginID** 資料行上的參數化資料列篩選來進行篩選)。 在同步處理期間，會覆寫 [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md) 函數傳回的值。 如需詳細資訊，請參閱＜ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞主題中的「覆寫 HOST_NAME() 值」。  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-para_1.sql)]  
@@ -140,6 +141,6 @@ ms.locfileid: "70846764"
  [定義和修改合併發行項之間的聯結篩選](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [參數化資料列篩選器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

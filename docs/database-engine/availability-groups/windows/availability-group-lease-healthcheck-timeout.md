@@ -1,7 +1,7 @@
 ---
-title: 可用性群組租用健全情況檢查逾時的機制
+title: 可用性群組租用健康情況檢查逾時
 description: Always On 可用性群組租用、叢集和健全狀況檢查時間的機制和方針。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bd476cbcf375b4c54f7831908e43ea5872da8dcb
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 78db83e29b7fe8671d1cf048275f379592bd0d95
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874367"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254062"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 可用性群組租用、叢集和健全狀況檢查逾時的機制和方針 
 
@@ -95,7 +95,7 @@ WSFC 組態中有四個值，負責決定叢集逾時值
 
 延遲值會決定叢集服務活動訊號之間的等候時間，而閾值會設定從目標節點或資源未收到任何認可的活動訊號數目，之後叢集會將物件宣告為無法使用。 如果相同子網路中的節點之間沒有成功的活動訊號超過 `SameSubnetDelay \* SameSubnetThreshold` 毫秒，則會判定節點無法使用。 這也適用於使用跨子網路值的跨子網路通訊。 
 
-若要列出所有目前的叢集值，請在目標叢集中的任何節點上，開啟提升權限的 PowerShell 終端機。 執行下列命令：
+若要列出所有目前的叢集值，請在目標叢集中的任何節點上，開啟提升權限的 PowerShell 終端機。 執行以下命令：
 
 ```PowerShell
  Get-Cluster | fl \
@@ -136,7 +136,7 @@ WSFC 組態中有四個值，負責決定叢集逾時值
 ALTER AVAILABILITY GROUP AG1 SET (FAILURE_CONDITION_LEVEL = 1); 
 ```
 
-若要設定健全狀況檢查逾時，請使用 `CREATE` 或 `ALTER` `AVAILABILITY GROUP` 陳述式的 `HEALTH_CHECK_TIMEOUT` 選項。 下列命令會將 AG AG1 的健全狀況檢查逾時設定為 60000 毫秒： 
+若要設定健康情況檢查逾時，請使用 `CREATE` 或 `ALTER` `AVAILABILITY GROUP` 陳述式的 `HEALTH_CHECK_TIMEOUT` 選項。 下列命令會將 AG AG1 的健全狀況檢查逾時設定為 60000 毫秒： 
 
 
 ```sql
@@ -153,7 +153,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
   - SameSubnetDelay \<= CrossSubnetDelay 
   
- | 逾時設定 | 目的 | 介於 | 使用 | IsAlive 與 LooksAlive | 原因 | 結果 
+ | 逾時設定 | 目的 | 介於 | 使用 | IsAlive 與 LooksAlive | 原因 | 成果 
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
  | 租用逾時 </br> **預設值：20000** | 防止核心分裂 | 主要至叢集 </br> (HADR) | [Windows 事件物件](/windows/desktop/Sync/event-objects)| 用於兩者 | OS 沒有回應、虛擬記憶體不足、工作集分頁、正在產生傾印、限制的 CPU、WSFC 關閉 (遺失仲裁) | AG 資源離線/連線、容錯移轉 |  
  | 工作階段逾時 </br> **預設值：10000** | 通知主要與次要之間發生通訊問題 | 次要至主要 </br> (HADR) | [TCP 通訊端 (透過 DBM 端點傳送訊息)](/windows/desktop/WinSock/windows-sockets-start-page-2) | 不用於兩者 | 網路通訊、 </br> 次要相關問題 - 關閉、OS 沒有回應、資源爭用 | 次要 - 已中斷連線 | 

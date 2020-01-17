@@ -1,7 +1,7 @@
 ---
-title: 檢查 System Configuration Checker 的參數 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/05/2017
+title: 檢查參數 System Configuration Checker
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -22,12 +22,12 @@ ms.assetid: 8e712c15-6bfa-4d71-b303-9526101e5594
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e3f6682dab001ac01ad811a4b15a989b91ef81ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 09f7ccbaf84f035b882f56a6dc32f1233686db4d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052290"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251554"
 ---
 # <a name="check-parameters-for-the-system-configuration-checker"></a>檢查 System Configuration Checker 的參數
 

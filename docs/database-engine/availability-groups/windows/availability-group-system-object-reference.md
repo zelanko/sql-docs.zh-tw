@@ -1,6 +1,7 @@
 ---
-title: AlwaysOn 可用性群組系統物件參考 | Microsoft Docs
-ms.custom: ''
+title: 可用性群組系統物件參考
+description: 可以在使用 Always On 可用性群組時所使用之各種系統物件的參考。
+ms.custom: seo-lt-2019
 ms.date: 04/03/2010
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2014||=sqlallproducts-allversions'
-ms.openlocfilehash: b9bdf352a566917678294c6c63ac52bd0d27de8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 140953484006d33e7814c19b9eb5bd6abcd29009
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991389"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822462"
 ---
 # <a name="always-on-availability-group-system-object-reference"></a>AlwaysOn 可用性群組系統物件參考
 
@@ -24,7 +25,7 @@ ms.locfileid: "67991389"
 
 ## <a name="system-catalog-views"></a>系統目錄檢視
 
-| 系統目錄檢視 | Description|
+| 系統目錄檢視 | 描述|
 | :------ | :----------------------------- |
 | [監視可用性資料庫](../../../relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md)   | 針對 SQL Server 執行個體上的每一個可用性資料庫各包含一個資料列，該執行個體會針對 Windows Server 容錯移轉叢集 (WSFC) 叢集中的任何 Always On 可用性群組來裝載可用性複本，不論本機資料庫複本是否已聯結可用性群組。 |
 | [sys.availability_group_listener_ip_addresses](../../../relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql.md)  | 針對 Windows Server 容錯移轉叢集 (WSFC) 叢集中與任何 Always On 可用性群組接聽程式相關聯的每一個 IP 位址，各傳回一個資料列。 |
@@ -38,7 +39,7 @@ ms.locfileid: "67991389"
 ## <a name="system-dynamic-management-views"></a>系統動態管理檢視
 
 
-| 系統動態管理檢視 | Description|
+| 系統動態管理檢視 | 描述|
 | :------ | :----------------------------- |
 | [sys.dm_hadr_auto_page_repair](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md)   | 針對可用性複本上的任何可用性資料庫進行的每個自動修復頁面嘗試行為，各傳回一個資料列，該可用性複本是針對伺服器執行個體的任何可用性群組所裝載。  |
 | [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)    | 針對擁有 SQL Server 本機執行個體之可用性複本的每一個 Always On 可用性群組，各傳回一個資料列。 每個資料列會顯示定義給定之可用性群組健全狀況的狀態。 |
@@ -55,10 +56,10 @@ ms.locfileid: "67991389"
 | [sys.dm_tcp_listener_states](../../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)    | 針對每個 TCP 接聽程式傳回一個包含動態狀態資訊的資料列。 |
 | &nbsp; | &nbsp; |
 
-## <a name="system-functions"></a>系統函數
+## <a name="system-functions"></a>系統函式
 
 
-| 系統功能 | Description|
+| 系統函式 | 描述|
 | :------ | :----------------------------- |
 | [sys.fn_hadr_is_primary_replica](../../../relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql.md)  | 用於判斷目前的複本是否為主要複本。 |
 | [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)    | 用於判斷目前的複本是否為慣用的備份複本。 |

@@ -1,19 +1,20 @@
 ---
-title: 在 Red Hat Enterprise Linux 上自動安裝 SQL Server
+title: 在 RHEL 上自動安裝 SQL Server
 titleSuffix: SQL Server
-description: SQL Server 指令碼範例 - 在 Red Hat Enterprise Linux 上自動安裝
+description: SQL Server 指令碼範例 - 在 Red Hat Enterprise Linux 上自動安裝 (RHEL)
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 696ba88a9f2d5f29de8dc3afb45af8c392f2de68
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: dc37a110b82113f2a96bd46be914c06a43c1a0ea
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67910441"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558636"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>範例：Red Hat Enterprise Linux 的 SQL Server 自動安裝指令碼
 
@@ -28,7 +29,7 @@ ms.locfileid: "67910441"
 
 - 您需要至少 2 GB 的記憶體才能在 Linux 上執行 SQL Server。
 - 檔案系統必須是 **XFS** 或 **EXT4**。 不支援其他檔案系統 (例如 **BTRFS**)。
-- 如需其他系統需求，請參閱 [Linux 上的 SQL Server 系統需求](sql-server-linux-setup.md#system)。
+- 如需其他系統需求，請參閱 [SQL Server 在 Linux 上的系統需求](sql-server-linux-setup.md#system)。
 
 ## <a name="sample-script"></a>範例指令碼
 將範例指令碼儲存至檔案，然後進行自訂，並取代指令碼中的變數值。 您也可以將每個指令碼變數設定為環境變數，只要將它們從指令檔中移除即可。
@@ -171,7 +172,7 @@ echo Done!
 
 ## <a name="understanding-the-script"></a>了解指令碼
 
-Bash 指令碼的第一個工作就是設定一些變數。  這些變數可以是指令碼變數 (如範例所示) 或環境變數。  SQL Server 安裝**需要** `MSSQL_SA_PASSWORD` 變數，其他變數是針對指令碼所建立的自訂變數。  範例指令碼會執行下列步驟：
+Bash 指令碼的第一個工作就是設定一些變數。  這些變數可以是指令碼變數 (如範例所示) 或環境變數。  SQL Server 安裝**需要**`MSSQL_SA_PASSWORD` 變數，其他變數是針對指令碼所建立的自訂變數。  範例指令碼會執行下列步驟：
 
 1. 匯入公開 Microsoft GPG 金鑰。
 

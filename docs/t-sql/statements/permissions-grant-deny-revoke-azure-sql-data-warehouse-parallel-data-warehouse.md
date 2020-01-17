@@ -1,6 +1,7 @@
 ---
-title: GRANT-DENY-REVOKE 權限 - Azure SQL 資料倉儲和平行處理資料倉儲 | Microsoft Docs
-ms.custom: ''
+title: GRANT-DENY-REVOKE 權限
+titleSuffix: Azure SQL Data Warehouse
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
@@ -13,14 +14,14 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7e2245de7cf96e7635098fff57013010e143e6a9
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 43292a665583962694974f524786356c747b7e9d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095581"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255472"
 ---
-# <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>權限:GRANT、DENY、REVOKE (Azure SQL 資料倉儲、平行處理資料倉儲)
+# <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>權限：GRANT、DENY、REVOKE (Azure SQL 資料倉儲、平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   使用 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]的 **GRANT** 和 **DENY** 陳述式，以針對安全性主體 (登入、資料庫使用者或資料庫角色) 授與或拒絕對安全性實體 (例如資料庫、資料表、檢視等) 的權限 (例如 **UPDATE**)。 使用 **REVOKE** 來移除某個權限的授與或拒絕。  
@@ -35,7 +36,7 @@ ms.locfileid: "74095581"
   
 -   **REVOKE** 會移除現有的 **GRANT** 或 **DENY** 權限。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -80,7 +81,7 @@ REVOKE
  \<permission>[ **,** ...*n* ]  
  一或多個要授與、拒絕或撤銷的權限。  
   
- ON [ \<class_type> :: ] *securable* **ON** 子句描述要作為授與、拒絕或撤銷權限時之執行對象的 securable 參數。  
+ ON [ \<class_type> :: ] *securable***ON** 子句描述要作為授與、拒絕或撤銷權限時之執行對象的 securable 參數。  
   
  \<class_type> 安全性實體的類別類型。 這可以是 **LOGIN**、**DATABASE**、**OBJECT**、**SCHEMA**、**ROLE** 或 **USER**。 您也可以將權限授與 **SERVER**_class\_type_，但針對這些權限不需指定 **SERVER**。 當權限包含 **DATABASE** 一字 (例如 **ALTER ANY DATABASE**) 時，不需指定 **DATABASE**。 未指定任何 *class_type* 且權限類型未限制為伺服器或資料庫類別時，會假設類別為 **OBJECT**。  
   
@@ -241,7 +242,7 @@ REVOKE
 ### <a name="chart-of-permissions"></a>權限圖表  
  這張海報以圖形方式顯示所有權限。 這是了解權限巢狀階層的最簡單方式。 例如，**ALTER ON LOGIN** 權限可藉由本身授與，但如果登入被授與該登入的 **CONTROL** 權限，或如果登入被授與 **ALTER ANY LOGIN** 權限，則也會包含此權限。  
   
- ![APS 安全性權限海報](../../t-sql/statements/media/aps-security-perms-poster.png "APS 安全性權限海報")  
+ ![APS 安全性權限海報](../../t-sql/statements/media/aps-security-perms-poster.png "|::ref2::|")  
   
  若要下載這張海報的完整大小版本，請參閱 APS Yammer 網站檔案區段中的 [SQL Server PDW 權限](https://go.microsoft.com/fwlink/?LinkId=244249) (或透過電子郵件向 **apsdoc\@microsoft.com** 索取)。  
   

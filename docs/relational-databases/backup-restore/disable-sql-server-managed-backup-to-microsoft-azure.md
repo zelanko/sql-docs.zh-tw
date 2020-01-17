@@ -1,5 +1,5 @@
 ---
-title: 啟用 SQL Server Managed Backup to Microsoft Azure | Microsoft Docs
+title: 停用 Azure Blob 儲存體受控備份
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 423ad16effc6d4ed216b8b1f295731ded432a8fe
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: d85df8c4d07a61c75dcb42eadbc9c7cdae4faad6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846539"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257969"
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>停用 SQL Server Managed Backup to Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

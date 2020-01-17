@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: bda4d41d4f2a9c92dca2d41b959ad4c4b32a1c79
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 568944db62ca94048c45450500d3060daa957680
+ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594471"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74317935"
 ---
 # <a name="configure-and-use-always-encrypted-with-secure-enclaves"></a>設定和使用具有安全記憶體保護區的 Always Encrypted 
 
@@ -27,7 +27,9 @@ ms.locfileid: "73594471"
 
 ## <a name="set-up-your-environment-to-support-enclaves-and-attestation"></a>設定您的環境以支援記憶體保護區和證明
 如需詳細資料，請參閱下文：
-- [在 SQL Server 中設定 Always Encrypted 的主機守護者服務](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)。
+- [規劃主機守護者服務證明](./always-encrypted-enclaves-host-guardian-service-plan.md)
+- [針對 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 部署主機守護者服務](./always-encrypted-enclaves-host-guardian-service-deploy.md)
+- [向主機守護者服務註冊您的電腦](./always-encrypted-enclaves-host-guardian-service-register.md)
 
 ## <a name="manage-keys-for-always-encrypted-with-secure-enclaves"></a>針對具有安全記憶體保護區的 Always Encrypted 管理金鑰
 如需詳細資料，請參閱下文：

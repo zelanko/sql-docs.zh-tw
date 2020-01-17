@@ -12,12 +12,12 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54e282e7d68c23837c1865f1257ba7e159644d26
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 7ec032a9a6bd6d02372d77d8844d5e4938fbe945
+ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73595533"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74492010"
 ---
 # <a name="develop-applications-using-always-encrypted-with-secure-enclaves"></a>使用具有安全記憶體保護區的 Always Encrypted 開發應用程式
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -40,6 +40,9 @@ ms.locfileid: "73595533"
 - .NET Framework 4.7.2 或更新版本中的 .NET Framework Data Provider for SQL Server。 
     - 如需詳細資訊，請參閱[搭配 .NET Framework Data Provider for SQL Server 使用 Always Encrypted](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)。
     - 如需逐步教學課程，請參閱[教學課程：使用具有安全記憶體保護區的 Always Encrypted 開發 .NET Framework 應用程式](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+- .NET Framework 4.6 或更新版本，以及 .NET Core 2.1 或更新版本中的 Microsoft .NET Data Provider for SQL Server。 
+    - 如需詳細資訊，請參閱[搭配 Microsoft .NET Data Provider for SQL Server 使用 Always Encrypted](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md)。
+    - 如需逐步教學課程，請參閱[教學課程：使用具有安全記憶體保護區的 Always Encrypted 開發 .NET 應用程式](../../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
 - Microsoft ODBC Driver for SQL Server 版本 17.4 或更新版本。 
     - 如需詳細資訊，請參閱[搭配 ODBC 驅動程式使用 Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)。 
     - 如需如何為使用 ODBC 之資料庫連接啟用記憶體保護區計算的資訊，請參閱[啟用具有安全記憶體保護區的 Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) 一節。

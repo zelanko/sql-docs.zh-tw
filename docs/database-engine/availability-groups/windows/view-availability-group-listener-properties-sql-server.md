@@ -1,6 +1,7 @@
 ---
-title: 檢視可用性群組接聽程式屬性 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 檢視可用性群組接聽程式屬性
+description: '說明如何使用 SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL) 或 SQL PowerShell，檢視 Always On 可用性群組接聽程式的屬性。 '
+ms.custom: seo-lt-2019
 ms.date: 07/11/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 55603d6dba2a5f688ce07d1f071019f101d9e955
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 74f8a0823f281a9260ba2d8ba322ac97c0e7056b
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013385"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821778"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>檢視可用性群組接聽程式屬性 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.locfileid: "68013385"
  [sys.dm_tcp_listener_states](../../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)  
  針對每個 TCP 接聽程式傳回一個包含動態狀態資訊的資料列。  
   
- **資料行名稱** ：listener_id、ip_address、is_ipv4、port、type、type_desc、state、state_desc、start_time  
+ **資料行名稱：** listener_id、ip_address、is_ipv4、port、type、type_desc、state、state_desc、start_time  
   
 > [!NOTE]  
 >  如需使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 監視 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 環境的詳細資訊，請參閱 [監視可用性群組 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)(Availability Group Listener) 的屬性。  

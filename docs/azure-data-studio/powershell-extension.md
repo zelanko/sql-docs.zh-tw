@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: c7a2dbdccf92a52d5733a04915acc3f76dc3f033
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 72c4d64cc93ab564b9b8b04a838f8226982890f0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "65105952"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257583"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Azure Data Studio 的 PowerShell 編輯器支援
 
@@ -26,7 +26,7 @@ ms.locfileid: "65105952"
 ![PowerShell 延伸模組](media/powershell-extension/powershell-extension.png)
 
 
-## <a name="features"></a>功能
+## <a name="features"></a>特性
 
 - 語法醒目提示
 - 程式碼片段
@@ -264,7 +264,6 @@ WideWorldImporters   Normal         3.2 GB     2.6 GB Simple       130 sa
 此專案採用了 [Microsoft 開放原始碼管理辦法][conduct-code]。
 如需詳細資訊，請參閱[管理辦法常見問題集][conduct-FAQ]，如有其他問題或意見，請連絡 [opencode@microsoft.com][conduct-email]。
 
-[conduct-code]: http://opensource.microsoft.com/codeofconduct/
-[conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/
+[conduct-code]: https://opensource.microsoft.com/codeofconduct/
+[conduct-FAQ]: https://opensource.microsoft.com/codeofconduct/faq/
 [conduct-email]: mailto:opencode@microsoft.com
-[conduct-md]: https://github.com/PowerShell/vscode-powershell/blob/master/CODE_OF_CONDUCT.md

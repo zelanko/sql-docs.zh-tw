@@ -13,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a643d35b6f9c31060e2c0404a6042be8b1c87abb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 39499e36568d64f92d3608f610d64193c93389e6
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298452"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542178"
 ---
 # <a name="odata-connection-manager"></a>OData 連接管理員
 
@@ -51,7 +51,7 @@ ms.locfileid: "71298452"
   
 如果是匿名存取，請選取 [Windows 驗證] 選項。  
 
-若要連線至 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，您不能使用 [Microsoft Online Services]  驗證選項。 您也無法使用針對多重要素驗證設定的任何選項。
+若要連線至 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，您不能使用 [Microsoft Online Services]  驗證選項。 您也無法使用針對多重要素驗證設定的任何選項。 目前不支援新式驗證。 
   
 ### <a name="specifying-and-securing-credentials"></a>指定認證及維護認證安全  
  如果 OData 服務需要基本驗證，您可以在 [OData 連線管理員編輯器](../../integration-services/connection-manager/odata-connection-manager-editor.md)中指定使用者名稱和密碼。 您在編輯器中輸入的值會保存在封裝中。 密碼值會根據封裝保護等級進行加密。  
@@ -63,10 +63,10 @@ ms.locfileid: "71298452"
   
 |||  
 |-|-|  
-|屬性|Description|  
+|屬性|描述|  
 |Url|服務文件的 URL。|  
 |UserName|如有必要，驗證使用使用者名稱。|  
-|[密碼]|如有必要，驗證使用密碼。|  
+|密碼|如有必要，驗證使用密碼。|  
 |ConnectionString|包括連線管理員的其他屬性。|  
   
 ## <a name="odata-connection-manager-editor"></a>OData 連線管理員編輯器
@@ -77,7 +77,7 @@ ms.locfileid: "71298452"
  連接管理員的名稱。  
   
  **服務文件位置**  
- OData 服務的 URL。 例如： https://services.odata.org/V3/Northwind/Northwind.svc/ ＞。  
+ OData 服務的 URL。 例如： https://services.odata.org/V3/Northwind/Northwind.svc/ 。  
   
  **驗證**  
 選取下列其中一個選項：

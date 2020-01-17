@@ -13,20 +13,20 @@ ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 013efa03767302144e7c54967b6aee8b9230d661
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4f9ee8851ce00c429ba277dd6e0be3286284f548
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136657"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74307986"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>從預存程序傳回資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   將資料從程序傳回至呼叫端程式的方式有三種：結果集、輸出參數和傳回碼。 本主題提供有關這三種方法的資訊。  
   
-  ## <a name="returning-data-using-result-sets"></a>使用結果集傳回資料
- 如果您的預存程序主體中包含 SELECT 陳述式 (但不是 SELECT ...INTO 或 INSERT...SELECT)，SELECT 陳述式所指定的資料列會直接傳送到用戶端。  如果是大型結果集，在結果集完全傳送至用戶端之前，預存程序執行將不會繼續到下一個陳述式。  如果是小型結果集，結果會進行多工緩衝處理以傳回至用戶端，而執行則會繼續進行。  如果在預存程序執行期間執行多個這類 SELECT 陳述式，則會將多個結果集傳送至用戶端。  此行為也適用於巢狀 TSQL 批次、巢狀預存程序和最上層 TSQL 批次。
+## <a name="returning-data-using-result-sets"></a>使用結果集傳回資料
+如果您的預存程序主體中包含 SELECT 陳述式 (但不是 SELECT ...INTO 或 INSERT...SELECT)，SELECT 陳述式所指定的資料列會直接傳送到用戶端。  針對大型結果集，在結果集完全傳送至用戶端之前，預存程序執行將不會繼續到下一個陳述式。  針對小型結果集，結果會進行多工緩衝處理以傳回至用戶端，而執行則會繼續進行。  如果在預存程序執行期間執行多個此類 SELECT 陳述式，則會將多個結果集傳送至用戶端。  此行為也適用於巢狀 TSQL 批次、巢狀預存程序和最上層 TSQL 批次。
  
  
  ### <a name="examples-of-returning-data-using-a-result-set"></a>使用結果傳回資料的範例 

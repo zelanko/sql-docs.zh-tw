@@ -1,7 +1,7 @@
 ---
-title: 備份記錄與標頭資訊 (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/17/2017
+title: 備份歷程記錄與標頭 |Microsoft Docs
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 9d88540aa6c4d3ada8af6808713405829a3e352e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2b04fb3c35f810e37e1646446f7ebdfb8915ee1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081458"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242593"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>備份記錄與標頭資訊 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "68081458"
 ##  <a name="BnRHistoryTables"></a> 備份與還原記錄資料表  
  此章節介紹儲存 **msdb** 系統資料庫中的備份及還原中繼資料的歷史記錄資料表。  
   
-|記錄資料表|Description|  
+|記錄資料表|描述|  
 |-------------------|-----------------|  
 |[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|包含備份的每一個資料檔或記錄檔的資料行。|  
 |[backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)|包含備份組中每一個檔案群組的資料列。|  
@@ -88,7 +88,7 @@ ms.locfileid: "68081458"
 > [!IMPORTANT]  
 >  RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY 和 RESTORE VERIFYONLY Transact-SQL 陳述式需要 CREATE DATABASE 權限。 與舊版相較，這項需求更能完整地保障備份檔案及備份資訊的安全。 如需這個權限的相關資訊，請參閱 [GRANT 資料庫權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
   
-|資訊陳述式|備份記錄資料表|Description|  
+|資訊陳述式|備份記錄資料表|描述|  
 |---------------------------|--------------------------|-----------------|  
 |[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|傳回結果集，其中會有資料庫清單與包含在指定備份組中的記錄。<br /><br /> 如需詳細資訊，請參閱本主題稍後的「列出資料庫與交易記錄檔」。|  
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|擷取特定備份裝置上，所有備份組的所有備份前置資料。 執行 RESTORE HEADERONLY 的結果是結果集。<br /><br /> 如需詳細資訊，請參閱本主題稍後的「檢視備份標頭資訊」。|  

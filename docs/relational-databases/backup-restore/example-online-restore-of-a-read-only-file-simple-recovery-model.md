@@ -1,5 +1,5 @@
 ---
-title: 範例線上還原唯讀檔案 (簡單復原模式) | Microsoft Docs
+title: 線上還原：唯讀檔案 (簡單復原模式)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 0c691fc6-9865-46a7-b055-8097424492d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4756dca201870e501645865518115ce6b48267d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4a3f311cc870331db030b5caf7191c9b6f91a28
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140181"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243721"
 ---
-# <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>範例線上還原讀取/寫入檔案 (簡單復原模式)
+# <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>範例：線上還原讀取/寫入檔案 (簡單復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題是關於在簡單復原模式下，包含唯讀檔案群組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 在簡單復原模式下，如果有檔案成為唯讀後保留的備份檔案，就可以線上還原唯讀檔案。  

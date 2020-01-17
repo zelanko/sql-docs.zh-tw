@@ -1,6 +1,7 @@
 ---
-title: 將記錄傳送升級至 SQL Server 2016 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 將記錄傳送升級為 SQL Server 2016 和更新版本
+description: 了解從舊版升級至 SQL Server 2016 和更新版本時，保留記錄傳送災害復原解決方案的適當順序。
+ms.custom: seo-lt-2019
 ms.date: 02/01/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8608d91495ca255a0205247a557687ad32ac46df
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: c3ebe7da68b057e9f84d2b83572a337ede278401
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227138"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258573"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>將記錄傳送升級至 SQL Server 2016 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄傳送設定升級至新的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本、新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 累積更新時，以適當順序升級您的記錄傳送伺服器將會保留記錄傳送災害復原解決方案。  
   
 > [!NOTE]  
->  [中所導入的＜](../../relational-databases/backup-restore/backup-compression-sql-server.md) 備份壓縮 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]＞。 升級的記錄傳送組態會使用 **備份壓縮預設** 伺服器層級組態選項，來控制備份壓縮是否會用於交易記錄備份檔案。 可以針對每一個記錄傳送組態來指定記錄備份的備份壓縮行為。 如需詳細資訊，請參閱 [設定記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)＞。  
+>  [中所導入的＜](../../relational-databases/backup-restore/backup-compression-sql-server.md) 備份壓縮 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]＞。 升級的記錄傳送組態會使用 **備份壓縮預設** 伺服器層級組態選項，來控制備份壓縮是否會用於交易記錄備份檔案。 可以針對每一個記錄傳送組態來指定記錄備份的備份壓縮行為。 如需詳細資訊，請參閱[設定記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)。  
   
  **本主題內容：**  
   
--   [必要條件](#Prerequisites)  
+-   [先決條件](#Prerequisites)  
   
 -   [在升級之前保護資料](#ProtectData)  
   

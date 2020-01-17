@@ -1,6 +1,8 @@
 ---
-title: '[^] (萬用字元 - 不相符的字元) (Transact-SQL) | Microsoft Docs'
-ms.custom: ''
+title: '[^] 萬用字元排除字元'
+description: 用於不比對字元的 T-SQL 萬用字元
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 12/06/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b970038f-f4e7-4a5d-96f6-51e3248c6aef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eedf1db97477788489dd9b7c9c1789804ca064a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a55abc5a9554ec68df33310f4f041e9605961c7e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086096"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245281"
 ---
 # <a name="-wildcard---characters-not-to-match-transact-sql"></a>\[^\] (萬用字元 - 不相符的字元) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

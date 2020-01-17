@@ -1,6 +1,6 @@
 ---
-title: 選項 (SQL Server AlwaysOn、儀表板頁面) | Microsoft Docs
-description: 描述 SQL Server Always On 儀表板上找到的 [選項] 頁面。
+title: SSMS 中的可用性群組儀表板
+description: 描述可在 SQL Server Management Studio 中的 [SQL Server Always On 儀表板] 上找到的 [選項] 頁面。
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 887ed12836ca3581e40c6c6831906def6c0d0e5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae4c5aae76c41b642d445e92844efa2ddf36fdcc
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014640"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822539"
 ---
 # <a name="options-sql-server-always-on-dashboard-page"></a>選項 (SQL Server AlwaysOn、儀表板頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68014640"
   
 ## <a name="on-this-page"></a>在此頁面上  
  **開啟自動重新整理**  
- 按一下以啟用自動重新整理。 選項包括：  
+ 按一下以啟用自動重新整理。 可用選項包括：  
   
 -   [重新整理間隔 (秒)]  欄位顯示儀表板將會重新整理的間隔秒數。 預設值是 30。 已啟用自動重新整理時，您可以編輯此欄位變更重新整理間隔。  
   

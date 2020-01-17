@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: e5dc5cb87bcadda9600768d0840699f683492a54
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: a0fdd3c8be7e9cbe128d01736e465ae95a120d0f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594017"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258412"
 ---
 # <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>適用於 Azure Data Studio 的 Azure SQL Database 受控執行個體儀表板 (預覽)
 
@@ -65,7 +65,7 @@ Azure SQL Database 受控執行個體延伸模組會提供一個儀表板，以�
 
 請定期檢閱這些建議、調查根本原因，並採取矯正問題的措施。 Azure SQL Database 受控執行個體延伸模組提供指令碼讓您執行，以減輕一些回報的問題。
 
-## <a name="replicas"></a>複本
+## <a name="replicas"></a>複本數
 
 [受控執行個體]  索引標籤中的第三個窗格會顯示您受控執行個體中的資料庫複本狀態。
 
@@ -73,7 +73,7 @@ Azure SQL Database 受控執行個體延伸模組會提供一個儀表板，以�
 
 在一般用途服務層級上，每個資料庫都有單一 (主要) 複本。 在業務關鍵層級執行個體上，每個資料庫都有一個主要複本和三個次要複本，其中一個是用於唯讀工作負載。 在 [複本]  窗格上，您可以監視同步程序並確認所有次要複本都與主要複本同步。
 
-## <a name="logs"></a>記錄檔
+## <a name="logs"></a>記錄
 
 [受控執行個體]  的第四個窗格會顯示最新和最相關的 SQL 錯誤記錄檔項目。
 
@@ -97,7 +97,6 @@ Azure SQL Database 受控執行個體延伸模組會根據 [Dimitri Furman 方�
 
 如需詳細資訊，請造訪 [GitHub 專案](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/)。
 
-[conduct-code]: http://opensource.microsoft.com/codeofconduct/
-[conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/
+[conduct-code]: https://opensource.microsoft.com/codeofconduct/
+[conduct-FAQ]: https://opensource.microsoft.com/codeofconduct/faq/
 [conduct-email]: mailto:opencode@microsoft.com
-[conduct-md]: https://github.com/PowerShell/vscode-powershell/blob/master/CODE_OF_CONDUCT.md

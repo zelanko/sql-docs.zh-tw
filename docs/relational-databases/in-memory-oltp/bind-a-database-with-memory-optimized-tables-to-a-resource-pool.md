@@ -1,6 +1,6 @@
 ---
-title: 將包含記憶體最佳化資料表的資料庫繫結至資源集區 | Microsoft Docs
-ms.custom: ''
+title: 將包含記憶體最佳化資料表的資料庫繫結至資源集區
+ms.custom: seo-dt-2019
 ms.date: 08/29/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a0a0eec6d8a700fe35df358b35ce756dc700a2f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8bc12c4ef792fe1df3d9855df72e025a2dafa6ac
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951146"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412758"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>將包含記憶體最佳化資料表的資料庫繫結至資源集區
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -211,7 +211,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)   
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
- [Resource Governor 資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
+ [資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [建立資源集區](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [變更資源集區設定](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
  [刪除資源集區](../../relational-databases/resource-governor/delete-a-resource-pool.md)  

@@ -1,6 +1,7 @@
 ---
-title: 資料庫健全狀況偵測容錯移轉選項 | Microsoft Docs
-ms.custom: ''
+title: 資料庫層級健康情況偵測
+description: 了解可供 SQL Server Always On 可用性群組使用的資料庫層級健康情況偵測功能。
+ms.custom: seo-lt-2019
 ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 357d99a61f226162433f7d5fb1bbdfd41990cc8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fa77fa3ac4733d9672b5bc72523d72abe640fc8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013970"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251258"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性群組資料庫層級健全狀況偵測容錯移轉選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +126,7 @@ select name, db_failover from sys.availability_groups
 >
 >2016-04-25 12:20:21.21 spid75      在可用性群組 'ag' 中，本機可用性複本的狀態已經從 'PRIMARY_NORMAL' 變更為 'RESOLVING_NORMAL'。  狀態因可用性群組即將離線而變更。  複本即將離線，因為已刪除相關聯的可用性群組，或使用者讓 Windows Server 容錯移轉叢集 (WSFC) 管理主控台中的相關聯可用性群組離線，或者可用性群組會容錯移轉至另一個 SQL Server 執行個體。  如需詳細資訊，請參閱 SQL Server 錯誤記錄檔、Windows Server 容錯移轉叢集 (WSFC) 管理主控台或 WSFC 記錄檔。
 
-### <a name="extended-event-sqlserveravailabilityreplicadatabasefaultreporting"></a>擴充事件 sqlserver.availability_replica_database_fault_reporting
+### <a name="extended-event-sqlserveravailability_replica_database_fault_reporting"></a>擴充事件 sqlserver.availability_replica_database_fault_reporting
 
 有從 SQL Server 2016 開始定義的新擴充事件，且其是由資料庫層級健全狀況偵測所觸發。  事件名稱是 **sqlserver.availability_replica_database_fault_reporting**
 
@@ -151,7 +152,7 @@ GO
 
 欄位的說明：
 
-|資料行資料 | Description|
+|資料行資料 | 描述|
 |---------|---------|
 |availability_group_id |可用性群組的識別碼。|
 |availability_group_name |可用性群組的名稱。|
@@ -160,13 +161,13 @@ GO
 |database_name |報告錯誤的資料庫名稱。|
 |database_replica_id |可用性複本資料庫的識別碼。|
 |failover_ready_replicas |已同步處理的自動容錯移轉次要複本數目。|
-|fault_type  | 所報告的錯誤識別碼。 可能的值如下：  <br/> 0 - 無 <br/>1 - 未知<br/>2 - 關機|
+|fault_type  | 所報告的錯誤識別碼。 可能的值：  <br/> 0 - 無 <br/>1 - 未知<br/>2 - 關機|
 |is_critical | 從 SQL Server 2016 開始，XEvent 的這個值應該一律傳回 True。|
 
 
 在此範例輸出中，fault_type 會因資料庫名稱 AutoHa-Sample2 而顯示可用性群組 Contoso-ag、名為 SQLSERVER-1 之複本上發生的嚴重事件，錯誤類型為「2- 關機」。
 
-|欄位  | ReplTest1|
+|欄位  | 值|
 |---------|---------|
 |availability_group_id | 24E6FE58-5EE8-4C4E-9746-491CFBB208C1|
 |availability_group_name | Contoso-ag|

@@ -1,7 +1,8 @@
 ---
-title: SQL Server 2017 中已取代的資料庫引擎功能 | Microsoft Docs
-ms.custom: ''
-ms.date: 05/09/2018
+title: 已淘汰的資料庫引擎功能 | Microsoft Docs
+titleSuffix: SQL Server 2019
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -15,12 +16,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d2451e1f9927de941c8b0aef12f81a6edb11c8e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e9616620b0d8683d0158bfb76b5145f1bff52054
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050563"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258012"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 中已取代的資料庫引擎功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>下一版的 SQL Server 中已淘汰的功能  
 下列 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 功能將在下一版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中淘汰。 請勿在新的開發工作中使用這些功能，並且儘速修改使用這些功能的應用程式。 **功能名稱**值會作為 ObjectName 出現在追蹤事件中，並在效能計數器與 `sys.dm_os_performance_counters` 中作為執行個體名稱。 [功能識別碼]  值會出現在追蹤事件中當做 ObjectId。  
   
-|類別目錄|已被取代的功能|取代|功能名稱|功能識別碼|  
+|類別|已被取代的功能|取代|功能名稱|功能識別碼|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |備份與還原|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD 繼續被取代。 BACKUP { DATABASE &#124; LOG } WITH PASSWORD 和 BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD 已停用。|無。|BACKUP DATABASE 或 LOG WITH PASSWORD<br /><br /> BACKUP DATABASE 或 LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
 |相容性層級|從 100 版升級 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)])。|當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本不再受到[支援](https://aka.ms/sqllifecycle)時，相關聯的資料庫相容性層級會標示為已淘汰。 不過，為了讓升級更容易，我們會盡可能繼續支援任何支援資料庫相容性層級上已認證的應用程式。 如需相容性層級的詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|資料庫相容性層級 100|108|  
@@ -63,7 +64,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>SQL Server 的未來版本中已淘汰的功能  
  下一版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可支援下列 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 功能，但會在更新的版本中淘汰。 確實的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本尚未決定。  
   
-|類別目錄|已被取代的功能|取代|功能名稱|功能識別碼|  
+|類別|已被取代的功能|取代|功能名稱|功能識別碼|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |相容性層級|sp_dbcmptlevel|ALTER DATABASE ...SET COMPATIBILITY_LEVEL。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|sp_dbcmptlevel|80|  
 |相容性層級|資料庫相容性層級 110 和 120。|請針對將來的版本規劃升級資料庫和應用程式。 不過，為了讓升級更容易，我們會盡可能繼續支援任何支援資料庫相容性層級上已認證的應用程式。 如需相容性層級的詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|資料庫相容性層級 110<br /><br /> 資料庫相容性層級 120||  
@@ -72,13 +73,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |備份與還原|sp_addumpdevice '**tape**'|sp_addumpdevice '**disk**'|ADDING TAPE DEVICE|236|  
 |備份與還原|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
 |定序|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|無。 這些定序存在於 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]，但無法透過 fn_helpcollations 顯示出來。|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|191<br /><br /> 192<br /><br /> 194|  
-|定序|Hindi<br /><br /> Macedonian|這些定序存在於 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 和更高的版本中，但無法透過 fn_helpcollations 顯示出來。 請改用 Macedonian_FYROM_90 和 Indic_General_90。|Hindi<br /><br /> Macedonian|190<br /><br /> 193|  
+|定序|Hindi<br /><br /> 馬其頓文|這些定序存在於 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 和更高的版本中，但無法透過 fn_helpcollations 顯示出來。 請改用 Macedonian_FYROM_90 和 Indic_General_90。|Hindi<br /><br /> 馬其頓文|190<br /><br /> 193|  
 |定序|Azeri_Latin_90<br /><br /> Azeri_Cyrilllic_90|Azeri_Latin_100<br /><br /> Azeri_Cyrilllic_100|Azeri_Latin_90<br /><br /> Azeri_Cyrilllic_90|232<br /><br /> 233|  
 |組態|SET ANSI_NULLS OFF 和 ANSI_NULLS OFF 資料庫選項<br /><br /> SET ANSI_PADDING OFF 和 ANSI_PADDING OFF 資料庫選項<br /><br /> SET CONCAT_NULL_YIELDS_NULL OFF 和 CONCAT_NULL_YIELDS_NULL OFF 資料庫選項<br /><br /> SET OFFSETS|無。<br /><br /> ANSI_NULLS、ANSI_PADDING 和 CONCAT_NULLS_YIELDS_NULL 一定會設定為 ON。 SET OFFSETS 將無法使用。|SET ANSI_NULLS OFF<br /><br /> SET ANSI_PADDING OFF<br /><br /> SET CONCAT_NULL_YIELDS_NULL OFF<br /><br /> SET OFFSETS<br /><br /> ALTER DATABASE SET ANSI_NULLS OFF<br /><br /> ALTER DATABASE SET ANSI_PADDING OFF<br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF|111<br /><br /> 113<br /><br /> 112<br /><br /> 36<br /><br /> 111<br /><br /> 113<br /><br /> 112|  
 |資料類型|sp_addtype<br /><br /> sp_droptype|CREATE TYPE<br /><br /> DROP TYPE|sp_addtype<br /><br /> sp_droptype|62<br /><br /> 63|  
 |資料類型|**timestamp** 資料類型的 **rowversion** 語法|**rowversion** 資料類型語法|timestamp|158|  
 |資料類型|能夠將 null 值插入 **timestamp** 資料行中。|請改用 DEFAULT。|INSERT NULL 到 TIMESTAMP 資料行中|179|  
-|資料類型|'text in row' 資料表選項|使用 **varchar(max)** 、**nvarchar(max)** 和 **varbinary(max)** 資料類型。 如需詳細資訊，請參閱 [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。|Text in row 資料表選項|9|  
+|資料類型|'text in row' 資料表選項|使用 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 資料類型。 如需詳細資訊，請參閱 [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。|Text in row 資料表選項|9|  
 |資料類型|資料類型：<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|使用 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 資料類型。|資料類型： **text**、 **ntext** 或 **image**|4|  
 |資料庫管理|sp_attach_db<br /><br /> sp_attach_single_file_db|具有 FOR ATTACH 選項的 CREATE DATABASE 陳述式。 當一個或多個記錄檔有新位置時，若要重建多個記錄檔，請使用 FOR ATTACH_REBUILD_LOG 選項。|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |資料庫物件|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|CREATE TABLE 和 ALTER TABLE 中的 DEFAULT 關鍵字|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
@@ -98,7 +99,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |擴充預存程序程式設計|srv_alloc<br /><br /> srv_convert<br /><br /> srv_describe<br /><br /> srv_getbindtoken<br /><br /> srv_got_attention<br /><br /> srv_message_handler<br /><br /> srv_paramdata<br /><br /> srv_paraminfo<br /><br /> srv_paramlen<br /><br /> srv_parammaxlen<br /><br /> srv_paramname<br /><br /> srv_paramnumber<br /><br /> srv_paramset<br /><br /> srv_paramsetoutput<br /><br /> srv_paramstatus<br /><br /> srv_paramtype<br /><br /> srv_pfield<br /><br /> srv_pfieldex<br /><br /> srv_rpcdb<br /><br /> srv_rpcname<br /><br /> srv_rpcnumber<br /><br /> srv_rpcoptions<br /><br /> srv_rpcowner<br /><br /> srv_rpcparams<br /><br /> srv_senddone<br /><br /> srv_sendmsg<br /><br /> srv_sendrow<br /><br /> srv_setcoldata<br /><br /> srv_setcollen<br /><br /> srv_setutype<br /><br /> srv_willconvert<br /><br /> srv_wsendmsg|請改用 CLR 整合。|XP_API|20|  
 |擴充預存程序程式設計|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|請改用 CLR 整合。|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|94<br /><br /> 95<br /><br /> 96|  
 |擴充預存程序|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|使用 CREATE LOGIN<br /><br /> 使用 SERVERPROPERTY 的 DROP LOGIN IsIntegratedSecurityOnly 引數|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|44<br /><br /> 45<br /><br /> 59|  
-|函數|fn_get_sql|sys.dm_exec_sql_text|fn_get_sql|151|  
+|Functions|fn_get_sql|sys.dm_exec_sql_text|fn_get_sql|151|  
 |高可用性|資料庫鏡像|[!INCLUDE[ssHADR](../includes/sshadr-md.md)]<br /><br /> 如果您的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本不支援 [!INCLUDE[ssHADR](../includes/sshadr-md.md)]，請使用記錄傳送。|DATABASE_MIRRORING|267|  
 |索引選項|sp_indexoption|ALTER INDEX|sp_indexoption|78|  
 |索引選項|CREATE TABLE、ALTER TABLE 或 CREATE INDEX 語法，但是選項周圍沒有括號。|請重寫陳述式來使用目前的語法。|INDEX_OPTION|33|  
@@ -112,23 +113,23 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |原生 XML Web Service|具有 FOR SOAP 選項的 CREATE ENDPOINT 或 ALTER ENDPOINT 陳述式。<br /><br /> sys.endpoint_webmethods<br /><br /> sys.soap_endpoints|請改用 Windows Communications Foundation (WCF) 或 ASP.NET。|CREATE/ALTER ENDPOINT<br /><br /> sys.endpoint_webmethods<br /><br /> EXT_soap_endpoints<br /><br /> sys.soap_endpoints|21<br /><br /> 22<br /><br /> 23|  
 |可移式資料庫|sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable|74<br /><br /> 75|  
 |可移式資料庫|sp_dbremove|DROP DATABASE|sp_dbremove|76|  
-|Security|ALTER LOGIN WITH SET CREDENTIAL 語法|以新的 ALTER LOGIN ADD 和 DROP CREDENTIAL 語法取代|ALTER LOGIN WITH SET CREDENTIAL|230|  
-|Security|sp_addapprole<br /><br /> sp_dropapprole|CREATE APPLICATION ROLE<br /><br /> DROP APPLICATION ROLE|sp_addapprole<br /><br /> sp_dropapprole|53<br /><br /> 54|  
-|Security|sp_addlogin<br /><br /> sp_droplogin|CREATE LOGIN<br /><br /> DROP LOGIN|sp_addlogin<br /><br /> sp_droplogin|39<br /><br /> 40|  
-|Security|sp_adduser<br /><br /> sp_dropuser|CREATE USER<br /><br /> DROP USER|sp_adduser<br /><br /> sp_dropuser|49<br /><br /> 50|  
-|Security|sp_grantdbaccess<br /><br /> sp_revokedbaccess|CREATE USER<br /><br /> DROP USER|sp_grantdbaccess<br /><br /> sp_revokedbaccess|51<br /><br /> 52|  
-|Security|sp_addrole<br /><br /> sp_droprole|CREATE ROLE<br /><br /> DROP ROLE|sp_addrole<br /><br /> sp_droprole|56<br /><br /> 57|  
-|Security|sp_approlepassword<br /><br /> sp_password|ALTER APPLICATION ROLE<br /><br /> ALTER LOGIN|sp_approlepassword<br /><br /> sp_password|55<br /><br /> 46|  
-|Security|sp_changeobjectowner|ALTER SCHEMA 或 ALTER AUTHORIZATION|sp_changeobjectowner|58|  
-|Security|sp_control_dbmasterkey_password|主要金鑰必須存在且密碼必須正確。|sp_control_dbmasterkey_password|274|  
-|Security|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
-|Security|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
-|Security|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
-|Security|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|這些預存程序會傳回 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]中的正確資訊。 這項輸出未反映 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]中實作之權限階層的變更。 如需詳細資訊，請參閱 [固定伺服器角色的權限](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx)。|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
-|Security|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|GRANT、DENY 和 REVOKE 等特定權限。|ALL 權限|35|  
-|Security|PERMISSIONS 內建函數|請改為查詢 sys.fn_my_permissions。|PERMISSIONS|170|  
-|Security|SETUSER|EXECUTE AS|SETUSER|165|  
-|Security|RC4 和 DESX 加密演算法|請使用其他演算法，例如 AES。|DESX 演算法|238|  
+|安全性|ALTER LOGIN WITH SET CREDENTIAL 語法|以新的 ALTER LOGIN ADD 和 DROP CREDENTIAL 語法取代|ALTER LOGIN WITH SET CREDENTIAL|230|  
+|安全性|sp_addapprole<br /><br /> sp_dropapprole|CREATE APPLICATION ROLE<br /><br /> DROP APPLICATION ROLE|sp_addapprole<br /><br /> sp_dropapprole|53<br /><br /> 54|  
+|安全性|sp_addlogin<br /><br /> sp_droplogin|CREATE LOGIN<br /><br /> DROP LOGIN|sp_addlogin<br /><br /> sp_droplogin|39<br /><br /> 40|  
+|安全性|sp_adduser<br /><br /> sp_dropuser|CREATE USER<br /><br /> DROP USER|sp_adduser<br /><br /> sp_dropuser|49<br /><br /> 50|  
+|安全性|sp_grantdbaccess<br /><br /> sp_revokedbaccess|CREATE USER<br /><br /> DROP USER|sp_grantdbaccess<br /><br /> sp_revokedbaccess|51<br /><br /> 52|  
+|安全性|sp_addrole<br /><br /> sp_droprole|CREATE ROLE<br /><br /> DROP ROLE|sp_addrole<br /><br /> sp_droprole|56<br /><br /> 57|  
+|安全性|sp_approlepassword<br /><br /> sp_password|ALTER APPLICATION ROLE<br /><br /> ALTER LOGIN|sp_approlepassword<br /><br /> sp_password|55<br /><br /> 46|  
+|安全性|sp_changeobjectowner|ALTER SCHEMA 或 ALTER AUTHORIZATION|sp_changeobjectowner|58|  
+|安全性|sp_control_dbmasterkey_password|主要金鑰必須存在且密碼必須正確。|sp_control_dbmasterkey_password|274|  
+|安全性|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
+|安全性|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
+|安全性|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
+|安全性|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|這些預存程序會傳回 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]中的正確資訊。 這項輸出未反映 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]中實作之權限階層的變更。 如需詳細資訊，請參閱 [固定伺服器角色的權限](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx)。|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
+|安全性|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|GRANT、DENY 和 REVOKE 等特定權限。|ALL 權限|35|  
+|安全性|PERMISSIONS 內建函數|請改為查詢 sys.fn_my_permissions。|PERMISSIONS|170|  
+|安全性|SETUSER|EXECUTE AS|SETUSER|165|  
+|安全性|RC4 和 DESX 加密演算法|請使用其他演算法，例如 AES。|DESX 演算法|238|  
 |Set 選項|SET FMTONLY|[sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)、[sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)、[sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 和 [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)。|SET FMTONLY|250|  
 |伺服器組態選項|c2 audit 選項<br /><br /> default trace enabled 選項|[通用條件符合已啟用伺服器組態選項](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [擴充事件](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |SMO 類別|**Microsoft.SQLServer.Management.Smo.Information** 類別<br /><br /> **Microsoft.SQLServer.Management.Smo.Settings** 類別<br /><br /> **Microsoft.SQLServer.Management.Smo.DatabaseOptions** 類別<br /><br /> **Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication** 屬性|**Microsoft.SqlServer.Management.Smo.Server** 類別<br /><br /> **Microsoft.SqlServer.Management.Smo.Server** 類別<br /><br /> **Microsoft.SqlServer.Management.Smo.Database** 類別<br /><br /> None|None|None|  
@@ -137,7 +138,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |系統預存程序|sp_db_increased_partitions|無。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]預設可支援增加的分割區。|sp_db_increased_partitions|253|  
 |系統資料表|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|相容性檢視。 如需詳細資訊，請參閱[相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)。<br /><br /> **重要：** 相容性檢視不會公開 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 中所導入之功能的中繼資料。 我們建議您升級應用程式來使用目錄檢視。 如需詳細資訊，請參閱[目錄檢視 &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> None<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
 |系統資料表|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|None|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
-|系統函數|fn_virtualservernodes<br /><br /> fn_servershareddrives|sys.dm_os_cluster_nodes<br /><br /> sys.dm_io_cluster_shared_drives|fn_virtualservernodes<br /><br /> fn_servershareddrives|155<br /><br /> 156|  
+|系統函式|fn_virtualservernodes<br /><br /> fn_servershareddrives|sys.dm_os_cluster_nodes<br /><br /> sys.dm_io_cluster_shared_drives|fn_virtualservernodes<br /><br /> fn_servershareddrives|155<br /><br /> 156|  
 |系統檢視表|sys.sql_dependencies|sys.sql_expression_dependencies|sys.sql_dependencies|198|  
 |資料表壓縮|使用 Vardecimal 儲存格式。|Vardecimal 儲存格式已被取代。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 資料壓縮會壓縮十進位值及其他資料類型。 我們建議您使用資料壓縮，而不要使用 Vardecimal 儲存格式。|Vardecimal 儲存格式|200|  
 |資料表壓縮|使用 sp_db_vardecimal_storage_format 程序。|Vardecimal 儲存格式已被取代。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 資料壓縮會壓縮十進位值及其他資料類型。 我們建議您使用資料壓縮，而不要使用 Vardecimal 儲存格式。|sp_db_vardecimal_storage_format|201|  

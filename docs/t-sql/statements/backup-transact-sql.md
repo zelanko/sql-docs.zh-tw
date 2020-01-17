@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1c6385fc578bfa1f9d688e9819690e72a3090ce4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c1065c56e3f07f1381e5056d1b2eca3a20ed0cd2
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982853"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249734"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -69,7 +69,7 @@ ms.locfileid: "73982853"
 
 ||||
 |---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -190,7 +190,7 @@ DATABASE 指定完整的資料庫備份。 如果指定了檔案和檔案群組�
 > [!NOTE]
 > **master** 資料庫上只能執行完整資料庫備份。
 
-LOG
+記錄
 
 指定只備份交易記錄。 記錄的備份是從最後執行成功的記錄備份至目前的記錄結尾。 您必須先建立完整備份，才能建立第一個記錄備份。
 
@@ -206,7 +206,7 @@ LOG
 
 \<file_or_filegroup> [ **,** ...*n* ] 只能搭配 BACKUP DATABASE 使用，可用來指定要包含在檔案備份中的資料庫檔案或檔案群組，或是指定要包含在部分備份中的唯讀檔案或檔案群組。
 
-FILE **=** { *logical_file_name* | **@** _logical\_file\_name\_var_ } 這是指要包含在備份中的檔案邏輯名稱，或是其值等於該檔案邏輯名稱的變數。
+FILE **=** { *logical_file_name* | **@** _logical\_file\_name\_var_ } 這是要包含在備份中的檔案邏輯名稱，或是其值等於該檔案邏輯名稱的變數。
 
 FILEGROUP **=** { _logical\_filegroup\_name_ |  **@** _logical\_filegroup\_name\_var_ } 這是指要包含在備份中的檔案群組邏輯名稱，或是其值等於該檔案群組邏輯名稱的變數。 在簡單復原模式之下，只允許唯讀檔案群組使用檔案群組備份。
 
@@ -400,14 +400,14 @@ INIT 指定應該覆寫所有備份組，但保留媒體標頭。 如果指定 I
 > [!NOTE]
 > 如需 { **NOINIT** | INIT } 與 { **NOSKIP** | SKIP } 間之互動的相關資訊，請參閱本主題稍後的＜備註＞。
 
-NOSKIP 指示 BACKUP 陳述式先檢查媒體中所有備份組的到期日，才允許覆寫它們。 這是預設行為。
+NOSKIP 指示 BACKUP 陳述式先檢查媒體中所有備份組的到期日，才允許覆寫它們。 此為預設行為。
 
 SKIP 停用通常是由 BACKUP 陳述式所執行備份組期限和名稱的檢查，以防止覆寫備份組。 如需有關 { INIT | NOINIT } 和 { NOSKIP | SKIP } 之間互動的詳細資訊，請參閱本主題稍後的＜備註＞一節。
 若要檢視備份組的到期日，請查詢 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 記錄資料表的 **expiration_date** 資料行。
 
 { **NOFORMAT** | FORMAT } 指定是否要將媒體標頭寫入這項備份作業所使用的磁碟區，以覆寫任何現有的媒體標頭和備份組。
 
-NOFORMAT 指定備份作業保留這項備份作業所使用媒體磁碟區上的現有媒體標頭和備份組。 這是預設行為。
+NOFORMAT 指定備份作業保留這項備份作業所使用媒體磁碟區上的現有媒體標頭和備份組。 此為預設行為。
 
 FORMAT 指定建立新的媒體集。 FORMAT 會導致備份作業在備份作業使用的所有媒體磁碟區中寫入新的媒體標頭。 磁碟區的現有內容會變成無效，因為任何現有的媒體標頭和備份組都會遭到覆寫。
 
@@ -451,7 +451,7 @@ MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ }
 
 { **NO_CHECKSUM** | CHECKSUM } 控制是否要啟用備份總和檢查碼。
 
-NO_CHECKSUM 明確地停用產生備份總和檢查碼 (以及驗證頁面總和檢查碼)。 這是預設行為。
+NO_CHECKSUM 明確地停用產生備份總和檢查碼 (以及驗證頁面總和檢查碼)。 此為預設行為。
 
 CHECKSUM 如果備份作業已啟用且可供使用，則指定備份作業要驗證每個頁面的總和檢查碼及損毀頁，並產生整個備份的總和檢查碼。
 
@@ -461,7 +461,7 @@ CHECKSUM 如果備份作業已啟用且可供使用，則指定備份作業要�
 
 { **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR } 控制備份作業在發生頁面總和檢查碼錯誤之後要停止或繼續。
 
-STOP_ON_ERROR 指示 BACKUP 在頁面總和檢查碼未驗證時便失敗。 這是預設行為。
+STOP_ON_ERROR 指示 BACKUP 在頁面總和檢查碼未驗證時便失敗。 此為預設行為。
 
 CONTINUE_AFTER_ERROR 指示儘管發生總和檢查碼無效或損毀頁之類的錯誤，BACKUP 仍繼續作業。
 
@@ -727,7 +727,7 @@ BACKUP 支援 `RESTART` 選項，以提供與舊版 [!INCLUDE[ssNoVersion](../..
 
 執行還原時，如果備份組尚未記錄於 **msdb** 資料庫，就表示備份記錄資料表可能已修改過。
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 
 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，建立備份的 `PASSWORD` 和 `MEDIAPASSWORD` 選項已遭到停用。 仍然可以還原以密碼建立的備份。
 
@@ -739,7 +739,7 @@ BACKUP DATABASE 和 BACKUP LOG 權限預設為 **sysadmin** 固定伺服器角�
 
 ## <a name="examples"></a> 範例
 
-本節包含下列範例：
+本區段包含下列範例：
 
 - A. [備份完整資料庫](#backing_up_db)
 - B. [備份資料庫和記錄](#backing_up_db_and_log)
@@ -1055,7 +1055,7 @@ MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ }
 
 { **NO_CHECKSUM** | CHECKSUM } 控制是否要啟用備份總和檢查碼。
 
-NO_CHECKSUM 明確地停用產生備份總和檢查碼 (以及驗證頁面總和檢查碼)。 這是預設行為。
+NO_CHECKSUM 明確地停用產生備份總和檢查碼 (以及驗證頁面總和檢查碼)。 此為預設行為。
 
 CHECKSUM 如果備份作業已啟用且可供使用，則指定備份作業要驗證每個頁面的總和檢查碼及損毀頁，並產生整個備份的總和檢查碼。
 
@@ -1065,7 +1065,7 @@ CHECKSUM 如果備份作業已啟用且可供使用，則指定備份作業要�
 
 { **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR } 控制備份作業在發生頁面總和檢查碼錯誤之後要停止或繼續。
 
-STOP_ON_ERROR 指示 BACKUP 在頁面總和檢查碼未驗證時便失敗。 這是預設行為。
+STOP_ON_ERROR 指示 BACKUP 在頁面總和檢查碼未驗證時便失敗。 此為預設行為。
 
 CONTINUE_AFTER_ERROR 指示儘管發生總和檢查碼無效或損毀頁之類的錯誤，BACKUP 仍繼續作業。
 
@@ -1087,7 +1087,7 @@ STATS 選項報告到達下一個間隔之報告臨界值的完成百分比。 �
 
 備份等量磁碟區大小上限為 195 GB (最大 Blob 大小)。 在備份命令中增加等量磁碟區的數目，以減少個別的等量磁碟區大小並維持在這項限制內。
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 
 ### <a name="permissions"></a>權限
 
@@ -1114,7 +1114,7 @@ WITH STATS = 5, COPY_ONLY;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />受控執行個體](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />受控執行個體](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* 分析<br />平台系統 (PDW) \*_** &nbsp;|
 
 &nbsp;
 
@@ -1254,13 +1254,13 @@ DIFFERENTIAL 指定執行使用者資料庫的差異備份。 如果省略，預
 
 在 DATABASE 物件上採用 ExclusiveUpdate 鎖定。
 
-## <a name="Security"></a> 安全性
+## <a name="Security"></a> Security
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]備份不會儲存在應用裝置上。 因此，您的 IT 小組需負責管理備份安全性的所有層面。 例如，這包括管理備份資料的安全性、用來儲存備份之伺服器的安全性、以及將備份伺服器連線至[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]之網路基礎結構的安全性。
 
 **管理網路認證**
 
-對備份目錄的網路存取權是根據標準 Windows 檔案共用安全性。 在執行備份之前，您必須建立或指定一個將用來向備份目錄驗證[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]的 Windows 帳戶。 此 Windows 帳戶必須具備備份目錄之存取、建立及寫入權限。
+對備份目錄的網路存取權是以標準作業系統檔案共用安全性為基礎。 在執行備份之前，您必須建立或指定一個將用來向備份目錄驗證[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]的 Windows 帳戶。 此 Windows 帳戶必須具備備份目錄之存取、建立及寫入權限。
 
 > [!IMPORTANT]
 > 為了降低您資料的安全性風險，建議您指定一個專門用來執行備份和還原作業的 Windows 帳戶。 請讓此帳戶僅擁有備份位置的權限。

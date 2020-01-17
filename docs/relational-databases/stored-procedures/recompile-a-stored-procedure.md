@@ -1,7 +1,7 @@
 ---
 title: 重新編譯預存程序 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 10/28/2019
 ms.prod: sql
 ms.technology: stored-procedures
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 115516dec13c971d774d0848cf39f847f6db0d6c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2a701e31e53b1d540c3fd586f10f34543895dfde
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909007"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564796"
 ---
 # <a name="recompile-a-stored-procedure"></a>重新編譯預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "72909007"
   
 -   如果程序中的特定查詢固定使用非典型或暫存值，則可在這些查詢中使用 RECOMPILE 查詢提示來改善程序效能。 由於只會重新編譯使用查詢提示的查詢，而非完整程序，因此會模仿 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的陳述式層級重新編譯行為。 不過，除了使用程序目前的參數值之外，RECOMPILE 查詢提示也會在您編譯陳述式時，使用預存程序內任何區域變數的值。 如需詳細資訊，請參閱 [查詢提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  **WITH RECOMPILE** 選項  
@@ -67,69 +67,52 @@ ms.locfileid: "72909007"
  需要指定之程序的 ALTER 權限。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
-  
-#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>若要使用 WITH RECOMPILE 選項重新編譯預存程序  
-  
-1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
-  
-2.  在標準列中，按一下 **[新增查詢]** 。  
-  
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會建立程序定義。  
 
-```  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
-    DROP PROCEDURE dbo.uspProductByVendor;  
-GO  
-CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
-WITH RECOMPILE  
-AS  
-    SET NOCOUNT ON;  
-    SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
-    FROM Purchasing.Vendor AS v   
-    JOIN Purchasing.ProductVendor AS pv   
-      ON v.BusinessEntityID = pv.BusinessEntityID   
-    JOIN Production.Product AS p   
-      ON pv.ProductID = p.ProductID  
-    WHERE v.Name LIKE @Name;  
+1. 連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-```  
+1. 在標準列中，按一下 **[新增查詢]** 。  
   
-#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>若要使用 WITH RECOMPILE 選項重新編譯預存程序  
+1. 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會建立程序定義。  
+
+   ```sql
+   USE AdventureWorks2012;  
+   GO  
+   IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
+       DROP PROCEDURE dbo.uspProductByVendor;  
+   GO  
+   CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
+   WITH RECOMPILE  
+   AS  
+       SET NOCOUNT ON;  
+       SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
+       FROM Purchasing.Vendor AS v   
+       JOIN Purchasing.ProductVendor AS pv   
+         ON v.BusinessEntityID = pv.BusinessEntityID   
+       JOIN Production.Product AS p   
+         ON pv.ProductID = p.ProductID  
+       WHERE v.Name LIKE @Name;  
+   ```  
   
-1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>若要使用 WITH RECOMPILE 選項重新編譯預存程序   
   
-2.  在標準列中，按一下 **[新增查詢]** 。  
-  
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例所建立的簡單程序會從檢視表傳回所有員工 (所提供的姓氏和名字)、工作職稱及部門名稱。  
-  
-     接著將第二個程式碼範例複製並貼到查詢視窗中，然後按一下 **[執行]** 。 這樣就會執行程序，並重新編譯程序的查詢計劃。  
-  
-```sql  
-USE AdventureWorks2012;  
-GO  
-EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
-GO  
-  
-```  
-  
-#### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>若要使用 sp_recompile 重新編譯預存程序  
-  
-1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
-  
-2.  在標準列中，按一下 **[新增查詢]** 。  
-  
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例所建立的簡單程序會從檢視表傳回所有員工 (所提供的姓氏和名字)、工作職稱及部門名稱。  
-  
-     接著將下列範例複製並貼到查詢視窗中，並按一下 **[執行]** 。 這樣並不會執行程序，但會標示要重新編譯的程序，以便在下一次執行程序時更新其查詢計畫。  
+選取 [新增查詢]  ，然後將下列程式碼範例複製並貼到查詢視窗中，並按一下 [執行]  。 這樣就會執行程序，並重新編譯程序的查詢計劃。  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  
-GO  
+EXECUTE HumanResources.uspProductByVendor WITH RECOMPILE;  
+GO
+```  
   
+### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>若要使用 sp_recompile 重新編譯預存程序  
+
+選取 [新增查詢]  ，然後將下列範例複製並貼到查詢視窗中，並按一下 [執行]  。 這樣並不會執行程序，但會標示要重新編譯的程序，以便在下一次執行程序時更新其查詢計畫。  
+
+```sql  
+USE AdventureWorks2012;  
+GO  
+EXEC sp_recompile N'dbo.uspProductByVendor';   
+GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  

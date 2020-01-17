@@ -1,7 +1,8 @@
 ---
-title: 設定 Microsoft Azure 的 SQL Server 受管理備份進階選項 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/05/2017
+title: 受控備份 - 設定進階選項
+titleSuffix: to Microsoft Azure
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7487f89c6868555c6e3e27a217bce12123b16642
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4bd21bac561a34e6dab779f1db0656dcc8e3175e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908982"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242565"
 ---
-# <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>設定 Microsoft Azure 的 SQL Server 受管理備份進階選項
+# <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>設定 Microsoft Azure 的 SQL Server 受控備份進階選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   下列教學課程說明如何設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的進階選項。 這些程序只有在您需要它們所提供的功能時才有必要。 否則，您可以啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 並依據預設行為。  
   
  每個案例中都是使用 `database_name` 參數指定備份。 當 `database_name` 是 NULL 或 * 時，這些變更就會影響執行個體層級的預設設定。 執行個體層級設定也會影響在變更之後所建立的新資料庫。  
   
- 一旦指定這些設定，您就可以使用 [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) 系統預存程序，來啟用資料庫或執行個體的受管理備份。 如需詳細資訊，請參閱 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)。  
+ 一旦指定這些設定，您就可以使用 [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) 系統預存程序，來啟用資料庫或執行個體的受管理備份。 如需詳細資訊，請參閱[啟用 Microsoft Azure 的 SQL Server 受控備份](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)。  
   
 > [!WARNING]  
 >  請一律先設定進階選項和自訂排程選項，再啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 與 [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)。 否則，在啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 和設定這些設定的時間裡，便可能發生不想要的備份作業。  
@@ -110,10 +111,10 @@ ms.locfileid: "72908982"
   
     ```  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
  設定進階選項和自訂排程之後，您必須啟用目標資料庫或 SQL Server 執行個體上的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 如需詳細資訊，請參閱 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [SQL Server 受控備份到 Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

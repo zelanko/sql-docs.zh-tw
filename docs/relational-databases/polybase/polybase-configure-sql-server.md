@@ -1,6 +1,7 @@
 ---
-title: 設定 PolyBase 存取 SQL Server 中的外部資料 | Microsoft Docs
-ms.date: 04/23/2019
+title: 存取外部資料：SQL Server - PolyBase
+ms.date: 12/13/2019
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: df3b8fb47e232b62bfd485c366f6b1e3acf7dcca
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: fa0a133e7a2c966798c168a74841350702b54295
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907584"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252320"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>設定 PolyBase 存取 SQL Server 中的外部資料
 

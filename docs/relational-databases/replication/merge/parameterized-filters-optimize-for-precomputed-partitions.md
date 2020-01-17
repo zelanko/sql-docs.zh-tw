@@ -1,6 +1,7 @@
 ---
-title: 使用預先計算的資料分割最佳化參數化篩選效能 | Microsoft Docs
-ms.custom: ''
+title: 使用預先計算的資料分割最佳化參數化篩選 (合併式)
+description: 了解如何使用預先計算的資料分割來最佳化合併式發行集之參數化篩選的效能。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d4c2062662e07e35366d5bdccbf544d893568ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ab9ed7c6c404f9e8f57dd658f20e9e5b8f0d34f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018693"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321455"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>參數化篩選 - 針對預先計算的資料分割最佳化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68018693"
   
  但是，如果「發行者」和「訂閱者」正在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本上執行並使用預先計算的資料分割，則在進行變更時，「發行者」端所有變更的資料分割成員資格會被預先計算並保存。 如此一來，訂閱者與發行者同步處理時，它可以立即啟動來下載與其資料分割相關的變更，不必再經過資料分割評估處理。 當發行集內有大量的變更、訂閱者或發行項時，如此就可以大幅提高效能。  
   
- 除了使用預先計算的資料分割之外，請預先產生快照集並/或允許「訂閱者」在第一次進行同步處理時要求產生並套用快照集。 使用上述一或兩個選項為使用參數化篩選的發行集提供快照集。 如果不指定任何選項，訂閱會使用一系列 SELECT 與 INSERT 陳述式進行初始化，而非使用 **bcp** 公用程式；此處理要慢很多。 如需詳細資訊，請參閱＜ [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。  
+ 除了使用預先計算的資料分割之外，請預先產生快照集並/或允許「訂閱者」在第一次進行同步處理時要求產生並套用快照集。 使用上述一或兩個選項為使用參數化篩選的發行集提供快照集。 如果不指定任何選項，訂閱會使用一系列 SELECT 與 INSERT 陳述式進行初始化，而非使用 **bcp** 公用程式；此處理要慢很多。 如需詳細資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
  **使用預先計算的資料分割**  
   

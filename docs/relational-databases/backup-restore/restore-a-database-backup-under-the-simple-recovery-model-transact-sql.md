@@ -1,7 +1,7 @@
 ---
-title: 在簡單復原模式下還原資料庫備份 (Transact-SQL) | Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
+title: 還原資料庫：簡單復原模式 (Transact-SQL)
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e130868d8df6537bef9c969cfa860b95242f185b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 835f5c6a4571359f750862d3487817a7e11f6503
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937656"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244231"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>在簡單復原模式下還原資料庫備份 (Transact-SQL)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題說明如何還原完整資料庫備份。  
@@ -31,7 +32,7 @@ ms.locfileid: "67937656"
 > [!IMPORTANT]  
 >  負責還原完整資料庫備份的系統管理員，必須是目前唯一正在使用即將還原之資料庫的人員。  
   
-## <a name="prerequisites-and-recommendations"></a>必要條件和建議  
+## <a name="prerequisites-and-recommendations"></a>先決條件和建議  
   
 -   若要還原加密的資料庫，您必須能夠存取之前用來加密資料庫的憑證或非對稱金鑰。 如果沒有該憑證或非對稱金鑰，就無法還原資料庫。 因此，只要需要備份，就必須保留用來加密資料庫加密金鑰的憑證。 如需詳細資訊，請參閱 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。  
   
@@ -69,7 +70,7 @@ ms.locfileid: "67937656"
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  此範例會從磁帶還原 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 完整資料庫備份。  
   
 ### <a name="example"></a>範例  

@@ -1,7 +1,7 @@
 ---
-title: 結合容錯移轉叢集執行個體與可用性群組
+title: 搭配可用性群組的容錯移轉叢集執行個體
 description: 藉由結合 SQL Server 容錯移轉叢集執行個體與 Always On 可用性群組的功能，來增強您的高可用性和災害復原能力。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 07/02/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3a1e9f29db3c9aec7dc86520c502cc3fdbea7a86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 62b5f1d23608ce6337befa1e4888ad2cda543dc9
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988395"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822249"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)
 
@@ -62,12 +62,12 @@ ms.locfileid: "67988395"
 ||FCI 內的節點|可用性群組內的複本|  
 |-|-------------------------|-------------------------------------------|  
 |**使用 WSFC**|是|是|  
-|**保護等級**|執行個體|[資料庫]|  
-|**儲存類型**|共用|非共用<br /><br /> 可用性群組中的複本不會共用儲存體，而 FCI 裝載的複本則會使用該 FCI 所需的共用儲存方案。 只有 FCI 內的節點共用儲存方案，可用性群組的複本之間不共用儲存方案。|  
+|**保護等級**|執行個體|資料庫|  
+|**儲存體類型**|共用|非共用<br /><br /> 可用性群組中的複本不會共用儲存體，而 FCI 裝載的複本則會使用該 FCI 所需的共用儲存方案。 只有 FCI 內的節點共用儲存方案，可用性群組的複本之間不共用儲存方案。|  
 |**儲存方案**|直接附加、SAN、掛接點、SMB|取決於節點類型|  
 |**可讀取次要**|否*|是|  
 |**適用的容錯移轉原則設定**|WSFC 仲裁<br /><br /> FCI 特定<br /><br /> 可用性群組設定**|WSFC 仲裁<br /><br /> 可用性群組設定|  
-|**容錯移轉資源**|伺服器、執行個體和資料庫|僅資料庫|  
+|**容錯移轉資源**|伺服器、執行個體和資料庫|僅限資料庫|  
   
  *可用性群組中的同步次要複本一律在其各自的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上執行，而 FCI 中的次要節點實際上尚未啟動其各自的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，因此不可讀取。 在 FCI 中，次要節點只在 FCI 容錯移轉期間資源群組擁有權轉移到它自己時才會啟動其 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 不過，在使用中 FCI 節點上，當 FCI 裝載的資料庫屬於可用性群組時，如果本機可用性複本以可讀取的次要複本方式執行，資料庫就是可讀取的。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "67988395"
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI 裝載可用性複本的考量  
   
 > [!IMPORTANT]  
->  如果您計劃在 SQL Server 容錯移轉叢集執行個體 (FCI) 裝載可用性複本，請確定 Windows Server 2008 主機節點符合容錯移轉叢集執行個體 (FCI) 的 AlwaysOn 必要條件和限制。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)設定伺服器執行個體時常見的問題。  
+>  如果您計劃在 SQL Server 容錯移轉叢集執行個體 (FCI) 裝載可用性複本，請確定 Windows Server 2008 主機節點符合容錯移轉叢集執行個體 (FCI) 的 AlwaysOn 必要條件和限制。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 不支援依照可用性群組進行自動容錯移轉，因此任何由 FCI 裝載的可用性複本只能設定為手動容錯移轉。  
   

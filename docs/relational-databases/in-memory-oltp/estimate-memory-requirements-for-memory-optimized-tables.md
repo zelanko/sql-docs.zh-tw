@@ -1,6 +1,6 @@
 ---
-title: 估計記憶體最佳化資料表的記憶體需求 | Microsoft Docs
-ms.custom: ''
+title: 記憶體需求 - 記憶體最佳化資料表
+ms.custom: seo-dt-2019
 ms.date: 12/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2597aa470eea7e69c649b7ce207dffadab81edc3
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: eb553ecf259e6733da143428cd6474debd8215f3
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811169"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412694"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估計記憶體最佳化資料表的記憶體需求
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

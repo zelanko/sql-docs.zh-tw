@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3572c6f9476fb450e0090e88019412c03af145ac
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 53ca4d2631e41e0a815dbf240fc0a7006ec8ce8b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708513"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252855"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>啟用資料庫引擎的加密連接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ TLS 使用的加密層級 (40 位元或 128 位元) 視應用程式和資料庫�
 > 使用 40 位元加密層級會被視為不安全。
 
 > [!WARNING]
-> 使用自我簽署憑證來加密的 TLS 連線不提供增強式安全性。 此方式可能遭受攔截式攻擊 (man-in-the-middle attack) 的威脅。 在生產環境或連線到網際網路的伺服器上，您不應該仰賴使用自我簽署憑證的 TLS。
+> 使用自我簽署憑證來加密的 TLS 連線不提供增強式安全性。 這種連線容易受到攔截式攻擊。 在生產環境或連線到網際網路的伺服器上，您不應該仰賴使用自我簽署憑證的 TLS。
 
 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體與應用程式之間網路上傳輸的資料，啟用 TLS 加密可提高其安全性。 不過，使用 TLS 加密 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與用戶端應用程式之間的所有流量時，需要下列額外的處理：
 -  在連線時需要額外的網路往返作業。
 -  從應用程式傳送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的封包必須利用用戶端 TLS 堆疊來加密，並使用伺服器 TLS 堆疊來解密。
 -  從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體傳送到應用程式的封包必須利用伺服器 TLS 堆疊來加密，並使用用戶端 TLS 堆疊來解密。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
  您必須針對 **伺服器驗證**發出此憑證。 憑證的名稱必須是電腦的完整網域名稱 (FQDN)。  
   
  電腦上之使用者的憑證會儲存在本機中。 若要安裝憑證以供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用，您必須搭配執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員與具有本機系統管理員權限的帳戶。
@@ -82,7 +82,7 @@ TLS 使用的加密層級 (40 位元或 128 位元) 視應用程式和資料庫�
 
 - 憑證的 [主旨]  屬性必須指出一般名稱 (CN) 與伺服器電腦的主機名稱或完整網域名稱 (FQDN) 是相同的。 使用主機名稱時，必須在憑證中指定 DNS 尾碼。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是在容錯移轉叢集上執行，則一般名稱必須符合虛擬伺服器的主機名稱或 FQDN，且容錯移轉叢集中的所有節點都必須提供憑證。
 
-- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 的原生用戶端 (SNAC) 支援萬用字元憑證。 SNAC 已淘汰，並已替換成 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) 和 [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。 其他用戶端可能不支援萬用字元憑證。 如需詳細資訊，請參閱用戶端文件和 [KB 258858](http://support.microsoft.com/kb/258858)。       
+- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 的原生用戶端 (SNAC) 支援萬用字元憑證。 SNAC 已淘汰，並已替換成 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) 和 [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。 其他用戶端可能不支援萬用字元憑證。 如需詳細資訊，請參閱用戶端文件和 [KB 258858](https://support.microsoft.com/kb/258858)。       
   使用 SQL Server 組態管理員不能選取萬用字元憑證。 若要使用萬用字元憑證，您必須編輯 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` 登錄機碼，在 [憑證]  值輸入不含空格的憑證指紋。  
 
   > [!WARNING]  
@@ -129,9 +129,9 @@ TLS 使用的加密層級 (40 位元或 128 位元) 視應用程式和資料庫�
 > [!IMPORTANT]
 > SQL Server 服務帳戶必須擁有用來在 SQL Server 上強制加密的憑證讀取權限。 針對不具有特殊權限的服務帳戶，則必須將讀取權限新增至憑證。 若不進行此操作，可能會導致 SQL Server 服務重新啟動失敗。
   
-1. 在 [SQL Server 組態管理員]  中，展開 [SQL Server 網路組態]  ，並以滑鼠右鍵按一下 [\<伺服器執行個體> 的通訊協定]   ，然後選取 [屬性]  。  
+1. 在 [SQL Server 組態管理員]  中，展開 [SQL Server 網路組態]  ，並以滑鼠右鍵按一下 [\<伺服器執行個體>  的通訊協定]  ，然後選取 [屬性]  。  
   
-2. 在 [\<執行個體名稱> 屬性的通訊協定]    對話方塊的 [憑證]  索引標籤上，從 [憑證]  方塊的下拉式清單中選取所需的憑證，然後按一下 [確定]  。  
+2. 在 [\<執行個體名稱>  屬性的通訊協定]   對話方塊的 [憑證]  索引標籤上，從 [憑證]  方塊的下拉式清單中選取所需的憑證，然後按一下 [確定]  。  
   
 3. 在 **[旗標]** 索引標籤的 **[ForceEncryption]** 方塊中選取 **[是]** ，然後按一下 **[確定]** 以關閉對話方塊。  
   
@@ -164,4 +164,3 @@ TLS 使用的加密層級 (40 位元或 128 位元) 視應用程式和資料庫�
 ## <a name="see-also"></a>另請參閱
 [Microsoft SQL Server 的 TLS 1.2 支援](https://support.microsoft.com/kb/3135244)     
 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
-[SQL Server 加密](../../relational-databases/security/encryption/sql-server-encryption.md)

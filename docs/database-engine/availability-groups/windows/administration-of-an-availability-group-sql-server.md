@@ -1,7 +1,7 @@
 ---
-title: 可用性群組的管理參考
-description: 此參考頁面可將您連結至 Always On 可用性群組的管理基本概念，例如改變屬性、新增或移除複本、新增或移除資料庫、容錯移轉、設定接聽程式等。
-ms.custom: seodec18
+title: 可用性群組的管理 (內容索引)
+description: 此參考索引可將您連結至描述 Always On 可用性群組管理基本概念的文章，例如改變屬性、新增或移除複本、新增或移除資料庫、容錯移轉、設定接聽程式等。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b25b7ae6396c32e3b3698c57010b9d043adb97c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 515ca03f795901327b59871b1f6d78ef81a17d92
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014848"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241984"
 ---
 # <a name="administration-of-an-availability-group"></a>可用性群組的管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

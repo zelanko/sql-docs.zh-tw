@@ -1,6 +1,7 @@
 ---
-title: 操作適用於 SQL Server 的 Red Hat Enterprise Linux 共用叢集
-description: 透過設定適用於 SQL Server 的 Red Hat Enterprise Linux 共用磁碟叢集來實作高可用性。
+title: 在 Linux 上操作 SQL Server 的 RHEL FCI
+description: 了解如何操作 SQL Server 的 Red Hat Enterprise Linux (RHEL) 共用磁碟容錯移轉叢集執行個體 (FCI) 以確保高可用性，例如手動容錯移轉 FCI，以及在叢集新增或移除節點。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: e7b81a97ab186ef79f27ee3456a5761157c02f3f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032239"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558523"
 ---
-# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>操作適用於 SQL Server 的 Red Hat Enterprise Linux 共用磁碟叢集
+# <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>操作 SQL Server 的 RHEL 容錯移轉叢集執行個體 (FCI)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -78,7 +79,7 @@ sudo crm_mon
    ip addr show
    ```
 
-3. 新節點需要一個不超過 15 個字元的唯一名稱。 根據預設，在 Red Hat Linux 中，電腦名稱是 `localhost.localdomain`。 這個預設名稱可能不是唯一的，而且太長。 將電腦名稱稱設定為新的節點。 透過將電腦名稱新增至 `/etc/hosts` 來設定電腦名稱。 下列指令碼可讓您使用 `vi` 編輯 `/etc/hosts`。 
+3. 新節點需要一個不超過 15 個字元的唯一名稱。 根據預設，在 Red Hat Linux 中，電腦名稱是 `localhost.localdomain`。 這個預設名稱可能不是唯一的，而且太長。 將電腦名稱稱設定為新的節點。 將電腦名稱新增至 `/etc/hosts` 來設定電腦名稱。 下列指令碼可讓您使用 `vi` 編輯 `/etc/hosts`。 
 
    ```bash
    sudo vi /etc/hosts
@@ -209,7 +210,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 在對叢集進行疑難排解時，可能有助於了解三個守護程式如何共同合作來管理叢集資源。 
 
-| 精靈 | Description 
+| 精靈 | 描述 
 | ----- | -----
 | Corosync | 提供叢集節點之間的仲裁成員資格和訊息傳遞。
 | Pacemaker | 位於 Corosync 頂端，並針對資源提供狀態機器。 

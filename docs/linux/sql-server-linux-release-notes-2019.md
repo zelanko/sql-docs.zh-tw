@@ -7,12 +7,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8edcbf91c827ea2afafa0830aad5a26423102f17
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: b16c753b5640baacadc9a13b75ebb7a9d48a74fe
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594543"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822141"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Linux 上 SQL Server 2019 的版本資訊
 
@@ -30,14 +30,14 @@ ms.locfileid: "73594543"
 | Red Hat Enterprise Linux 7.3、7.4、7.5 或 7.6 伺服器 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2、SP3 或 SP4 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Windows、Mac 或 Linux 上的 Docker Engine 1.8+ | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
+| Windows、Mac 或 Linux 上的 Docker Engine 1.8+ | N/A | [安裝指南](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
 > 如需詳細資訊，請檢閱適用於 Linux 上的 SQL Server 的[系統需求](sql-server-linux-setup.md#system)。 如需適用於 SQL Server 2017 的最新支援原則，請參閱 [Microsoft SQL Server 的技術支援原則](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)。
 
 ## <a name="tools"></a>工具
 
-以 SQL Server 為目標的大部分現有用戶端工具，都可以順暢地以在 Linux 上執行的 SQL Server 為目標。 某些工具可能具有特定版本需求以和 Linux 搭配運作。 如需 SQL Server 工具的完整清單，請參閱[適用於 SQL Server 的 SQL 工具和公用程式](../tools/overview-sql-tools.md)。
+以 SQL Server 為目標的大部分現有用戶端工具，都可以順暢地以在 Linux 上執行的 SQL Server 為目標。 某些工具可能需要特定版本，才能與 Linux 良好搭配運作。 如需 SQL Server 工具的完整清單，請參閱[適用於 SQL Server 的 SQL 工具和公用程式](../tools/overview-sql-tools.md)。
 
 ## <a name="release-history"></a>版本歷程記錄
 
@@ -50,9 +50,9 @@ ms.locfileid: "73594543"
 
 ## <a id="cuinstall"></a> 如何安裝更新
 
-若您已設定 CU 存放庫 (mssql-server-2019)，則將會在執行新安裝時取得 SQL Server 套件的最新 CU。 如果您需要 Docker 容器映像，請參閱[適用於 Docker 引擎之 Linux 上的 Microsoft SQL Server](https://hub.docker.com/r/microsoft/mssql-server/) \(英文\) 的官方映像。 如需存放庫設定的詳細資訊，請參閱[針對 Linux 上的 SQL Server 設定存放庫](sql-server-linux-change-repo.md)。
+若您已設定 CU 存放庫 (mssql-server-2019)，則將會在執行新安裝時取得 SQL Server 套件的最新 CU。 如果您需要 Docker 容器映像，請參閱[適用於 Docker 引擎之 Linux 上的 Microsoft SQL Server](https://hub.docker.com/r/microsoft/mssql-server/) \(英文\) 的官方映像。 如需有關存放庫設定的詳細資訊，請參閱[針對 Linux 上的 SQL Server 設定存放庫](sql-server-linux-change-repo.md)。
 
-如果您正在更新現有的 SQL Server 套件，請針對每個套件執行適當的更新命令以取得最新的 CU。 針對每個套件的特定更新指示，請參閱下列安裝指南：
+如果您正在更新現有的 SQL Server 套件，請針對每個套件執行適當的更新命令以取得最新的 CU。 如需每個套件的特定更新指示，請參閱下列安裝指南：
 
 - [安裝 SQL Server 套件](sql-server-linux-setup.md#upgrade)
 - [安裝全文檢索搜尋套件](sql-server-linux-setup-full-text-search.md)
@@ -69,7 +69,7 @@ ms.locfileid: "73594543"
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 15.0.2000.5-5 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-15.0.2000.5-5.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-ha-15.0.2000.5-5.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-fts-15.0.2000.5-5.x86_64.rpm)</br>[擴充性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-extensibility-15.0.2000.5-5.x86_64.rpm)</br>[Java 擴充性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-extensibility-java-15.0.2000.5-5.x86_64.rpm)</br>[PolyBase RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-polybase-15.0.2000.5-5.x86_64.rpm)|
 | SLES RPM 套件 | 15.0.2000.5-5 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.2000.5-5.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.2000.5-5.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.2000.5-5.x86_64.rpm)</br>[擴充性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.2000.5-5.x86_64.rpm)</br>[Java 擴充性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.2000.5-5.x86_64.rpm)</br>[PolyBase RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.2000.5-5.x86_64.rpm)|
@@ -83,7 +83,7 @@ ms.locfileid: "73594543"
 
 針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
 
-| 封裝 | 套件版本 | 下載 |
+| Package | 套件版本 | 下載 |
 |-----|-----|-----|
 | Red Hat RPM 套件 | 15.0.1900.25-1 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1900.25-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1900.25-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1900.25-1.x86_64.rpm)</br>[擴充性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1900.25-1.x86_64.rpm)</br>[Java 擴充性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1900.25-1.x86_64.rpm)</br>[PolyBase RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1900.25-1.x86_64.rpm)|
 | SLES RPM 套件 | 15.0.1900.25-1 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1900.25-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1900.25-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1900.25-1.x86_64.rpm)</br>[擴充性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1900.25-1.x86_64.rpm)</br>[Java 擴充性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1900.25-1.x86_64.rpm)</br>[PolyBase RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1900.25-1.x86_64.rpm)|
@@ -93,7 +93,7 @@ ms.locfileid: "73594543"
 
 下列各節描述 Linux 上 SQL Server 2019 (15.x) 正式運作 (GA) 版本的已知問題。
 
-#### <a name="general"></a>一般
+### <a name="general"></a>一般
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝位置的主機名稱長度必須等於或少於 15 個字元。 
 
@@ -113,7 +113,11 @@ ms.locfileid: "73594543"
 
     - **解決方法**：使用 **ALTER LOGIN**陳述式來變更 **sa** 登入的語言。
 
-#### <a name="databases"></a>資料庫
+- OLEDB 提供者會記錄下列警告：`Failed to verify the Authenticode signature of 'C:\binn\msoledbsql.dll'. Signature verification of SQL Server DLLs will be skipped. Genuine copies of SQL Server are signed. Failure to verify the Authenticode signature might indicate that this is not an authentic release of SQL Server. Install a genuine copy of SQL Server or contact customer support.`
+
+   - **解決方法**：您不需要執行任何動作。 OLEDB 提供者是使用 SHA256 簽署的。 SQL Server 資料庫引擎未正確地驗證已簽署的 .dll。
+
+### <a name="databases"></a>資料庫
 
 - 無法使用 mssql-conf 公用程式來移動 master 資料庫。 可以使用 mssql-conf 來移動其他系統資料庫。
 
@@ -143,7 +147,7 @@ ms.locfileid: "73594543"
 
 - Linux 上目前不支援 **ADMINISTER BULK OPERATIONS** 使用者權限。
 
-#### <a name="networking"></a>網路
+### <a name="networking"></a>網路功能
 
 下列兩個條件都成立時，涉及來自 sqlservr 程序之連出 TCP 連線的功能 (例如連結的伺服器或可用性群組) 可能無法運作：
 
@@ -170,7 +174,7 @@ ms.locfileid: "73594543"
 - 僅尋找 NFS 掛接上的 **/var/opt/mssql** 目錄。 其他檔案 (例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系統二進位檔案) 並不受支援。
 - 確定 NFS 用戶端在裝載遠端共用時使用 'nolock' 選項。
 
-#### <a name="localization"></a>當地語系化
+### <a name="localization"></a>當地語系化
 
 - 如果在設定期間您的地區設定不是英文 (en_us)，您就必須在 bash 工作階段/終端機中使用 UTF-8 編碼。 如果您使用 ASCII 編碼，可能會看到類似以下的錯誤：
 
@@ -190,7 +194,7 @@ ms.locfileid: "73594543"
 
 - 此版本並未提供所有篩選，包括適用於 Office 文件的篩選。 如需所支援篩選的清單，請參閱[在 Linux 上安裝 SQL Server 全文檢索搜尋](sql-server-linux-setup-full-text-search.md#filters)。
 
-#### <a id="ssis"></a> SQL Server Integration Services (SSIS)
+### <a id="ssis"></a> SQL Server Integration Services (SSIS)
 
 - 此版本中在 SUSE 上不支援 **mssql-server-is** 套件。 目前在 Ubuntu 和 Red Hat Enterprise Linux (RHEL) 上有支援此套件。
 
@@ -214,7 +218,7 @@ ms.locfileid: "73594543"
 -   [在 Linux 上安裝 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
 -   [使用 SSIS 在 Linux 上擷取、轉換和載入資料](sql-server-linux-migrate-ssis.md)
 
-#### <a id="ssms"></a> SQL Server Management Studio (SSMS)
+### <a id="ssms"></a> SQL Server Management Studio (SSMS)
 
 以下限制適用於 Windows 上連線至 Linux 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。
 

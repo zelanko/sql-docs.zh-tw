@@ -1,6 +1,7 @@
 ---
-title: 自主資料庫使用者 - 使資料庫可攜 | Microsoft 文件
-ms.custom: ''
+title: 針對自主資料庫的自主使用者存取
+description: 了解如何針對自主資料庫設定自主使用者存取，以及與傳統的登入/使用者模型之間的差異。
+ms.custom: seo-lt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f568d57f84397f0ebc4b636c4911cc51b197ebf8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 028ab6917a8d41a2231e94253ff353910e65b865
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116744"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557883"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>自主的資料庫使用者 - 使資料庫可攜
 
@@ -40,7 +41,7 @@ ms.locfileid: "68116744"
 
  在自主的資料庫使用者模型中，master 資料庫中的登入不存在。 相反地，使用者資料庫中就會發生驗證程序，而且使用者資料庫中的資料庫使用者在 master 資料庫中沒有相關聯的登入。 自主資料庫使用者模型支援 Windows 驗證和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]兩者中使用。 若要以自主資料庫使用者身分連接，連接字串必須永遠包含使用者資料庫的參數，讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 知道哪一個資料庫負責管理驗證程序。 自主資料庫使用者的活動僅限於驗證資料庫，因此，當以自主資料庫使用者身分連接時，必須在使用者所需的每個資料庫中獨立建立資料庫使用者帳戶。 若要變更資料庫， [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 使用者必須建立新的連接。 如果另一個資料庫中有相同的使用者， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的自主資料庫使用者可以變更資料庫。  
   
-**Azure** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 支援以 Azure Active Directory 身分識別作為自主資料庫使用者。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 支援使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 驗證的自主資料庫使用者，但 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 則不支援。 如需詳細資訊，請參閱 [使用 Azure Active Directory 驗證連線到 SQL 資料庫](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 使用 Azure Active Directory 驗證時，可以使用 Active Directory 通用驗證建立來自 SSMS 的連接。  系統管理員可以將通用驗證設定為需要 Multi-Factor Authentication，以透過撥打電話、簡訊、智慧卡和 PIN 碼或	行動裝置應用程式通知，來驗證身分識別。 如需詳細資訊，請參閱 [適用於 Azure AD MFA 與 SQL Database 和 SQL 資料倉儲的 SSMS 支援](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。  
+**Azure：** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]支援以 Azure Active Directory 身分識別作為自主資料庫使用者。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 支援使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 驗證的自主資料庫使用者，但 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 則不支援。 如需詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 使用 Azure Active Directory 驗證時，可以使用 Active Directory 通用驗證建立來自 SSMS 的連接。  系統管理員可以將通用驗證設定為需要 Multi-Factor Authentication，以透過撥打電話、簡訊、智慧卡和 PIN 碼或	行動裝置應用程式通知，來驗證身分識別。 如需詳細資訊，請參閱 [適用於與 SQL Database 和 SQL 資料倉儲搭配使用之 Azure AD MFA 的 SSMS 支援](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。  
   
  針對 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]，由於連接字串中一律要有資料庫名稱，因此從傳統模式切換至自主資料庫使用者模型時，不需要對連接字串進行變更。 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接，資料庫的名稱必須加入至連接字串 (如果尚不存在)。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "68116744"
  如需 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 防火牆規則的詳細資訊，請參閱下列主題：  
   
 - [Azure SQL Database 防火牆](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
-- [如何：設定防火牆設定 (Azure SQL Database)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
+- [操作說明：設定防火牆設定 (Azure SQL Database)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
 - [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
 - [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
   
@@ -74,9 +75,9 @@ ms.locfileid: "68116744"
 |-----------------------|-----------------------------------|  
 |若要變更密碼，在 master 資料庫的內容中：<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|若要變更密碼，在使用者資料庫的內容中：<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
-- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，必須對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體啟用自主資料庫使用者。 如需詳細資訊，請參閱＜ [contained database authentication Server Configuration Option](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)＞。  
+- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，必須對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體啟用自主資料庫使用者。 如需詳細資訊，請參閱[自主資料庫驗證伺服器組態選項](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)。  
 - 自主的資料庫使用者與登入具有非重疊的名稱，可以共存於您的應用程式。  
 - 若以 **name1** 名稱在 master 資料庫中登入，並且您建立了名為 **name1**的自主資料庫使用者，當連接字串中提供資料庫名稱時，連接到資料庫時會優先挑選資料庫使用者的內容，而非登入內容。 也就是說，自主資料庫使用者的優先順序將高於具有相同名稱的登入。  
 - 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，自主的資料庫使用者名稱不能同於伺服器系統管理員帳戶的名稱。  

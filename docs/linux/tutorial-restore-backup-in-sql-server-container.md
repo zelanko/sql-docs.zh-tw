@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 28c2bbd60b5a1565e2920968e40bb1dc4e75db22
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 2b34fb6b368f042e39776a25628472c336e21392
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531191"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721791"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>在 Linux Docker 容器中還原 SQL Server 資料庫
 
@@ -84,8 +84,8 @@ ms.locfileid: "73531191"
 
    此命令會建立具有 Developer 版本 (預設值) 的 SQL Server 2017 容器。 SQL Server 連接埠 **1433** 在主機上會公開為連接埠 **1401**。 選擇性的 `-v sql1data:/var/opt/mssql` 參數會建立名為 **sql1ddata** 的資料磁碟區容器。 這會用來保存 SQL Server 所建立的資料。
 
-   > [!NOTE]
-   > 在容器中執行生產環境 SQL Server 版本的程序會稍有不同。 如需詳細資訊，請參閱[執行生產容器映像](sql-server-linux-configure-docker.md#production)。 如果您使用相同的容器名稱和連接埠，則本逐步解說的其餘部分仍適用於生產環境容器。
+   > [!IMPORTANT]
+   > 此範例使用 Docker 中的資料磁碟區容器。 請注意，如果您改為選擇對應主機目錄，此方法在 Mac 和 Windows 上的 Docker 有限制。 如需詳細資訊，請參閱[在 Docker 上設定 SQL Server 容器映像](sql-server-linux-configure-docker.md#persist)。
 
 1. 若要檢視 Docker 容器，請使用 `docker ps` 命令。
 
@@ -525,13 +525,13 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-在本教學課程中，您已了解如何在 Windows 上備份資料庫，然後將其移至執行 SQL Server 2017 的 Linux 伺服器。 您已了解如何：
+在本教學課程中，您已了解如何在 Windows 上備份資料庫，然後將其移至執行 SQL Server 2017 的 Linux 伺服器。 您已了解如何︰
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-在本教學課程中，您已了解如何在 Windows 上備份資料庫，然後將其移至執行 SQL Server 2019 的 Linux 伺服器。 您已了解如何：
+在本教學課程中，您已了解如何在 Windows 上備份資料庫，然後將其移至執行 SQL Server 2019 的 Linux 伺服器。 您已了解如何︰
 
 ::: moniker-end
 

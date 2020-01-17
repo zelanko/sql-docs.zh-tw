@@ -1,6 +1,7 @@
 ---
-title: 手動容錯移轉資料庫鏡像工作階段 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 手動將資料庫鏡像容錯移轉至夥伴
+description: 使用 Transact-SQL (T-SQL) 手動將主體資料庫鏡像容錯移轉至次要夥伴的指示。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36218d61-b5f5-4194-905a-608e0e903db4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ddfaec9f9192af98f8b3580554f8c89d757af566
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92f9040cdc8181b1546d7a04e9b0eaf265fc7012
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041737"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822102"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-transact-sql"></a>手動容錯移轉資料庫鏡像工作階段 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68041737"
   
 3.  在主體伺服器上發出下列陳述式：  
   
-     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) *database_name* SET PARTNER FAILOVER，其中 *database_name* 是鏡像資料庫。  
+     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) 資料庫名稱  SET PARTNER FAILOVER，其中「資料庫名稱」  是鏡像資料庫。  
   
      如此可將鏡像伺服器立即轉換為主體角色。  
   

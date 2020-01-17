@@ -1,5 +1,6 @@
 ---
-title: 結果頁面 (AlwaysOn 可用性群組精靈) | Microsoft Docs
+title: 結果頁面 (Always On 可用性群組精靈)
+description: 描述 SQL Server Management Studio GUI 內 [Always On 可用性群組精靈] 之 [結果] 頁面的選項。
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1d3a91ba05d58c2741d49c96bf108263caf899cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb4a661110d91f73f45152b84dcfb63f8763d018
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014246"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235451"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>結果頁面 (Always On 可用性群組精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +36,10 @@ ms.locfileid: "68014246"
  **結果**  
  針對每個完成的步驟，顯示下列其中一個超連結文字。  
   
-|結果|Description|  
+|結果|描述|  
 |------------|-----------------|  
 |**錯誤**|表示驗證步驟失敗。 按一下連結可檢視錯誤訊息。|  
-|**成功**|表示驗證步驟已順利完成。|  
+|「成功」 |表示驗證步驟已順利完成。|  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
@@ -46,7 +47,7 @@ ms.locfileid: "68014246"
   
 -   [使用 [將複本加入可用性群組中精靈] &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [使用 [將資料庫加入可用性群組中精靈] &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
+-   [使用將資料庫加入至可用性群組精靈 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
 -   [使用容錯移轉可用性群組精靈 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   

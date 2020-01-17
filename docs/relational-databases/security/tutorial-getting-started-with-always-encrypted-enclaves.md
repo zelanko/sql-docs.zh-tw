@@ -1,6 +1,7 @@
 ---
-title: 教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted | Microsoft Docs
-ms.custom: ''
+title: 教學課程：使用 SSMS 提供安全記憶體保護區的 Always Encrypted
+description: 此教學課程能指導您如何使用 SQL Server Management Studio (SSMS) 建立基本的具有安全記憶體保護區的 Always Encrypted 環境、如何就地加密資料，以及針對加密資料行發出豐富的查詢。
+ms.custom: seo-lt-2019
 ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,14 +13,14 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d5912e7cca2ceeba1fe0db95743b4d29e1154a86
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: a01b55cb67332617ea2e326756fb8ad6fc7bcf42
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592339"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557462"
 ---
-# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted
+# <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>教學課程：使用 SSMS 提供安全記憶體保護區的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 本教學課程將教導您如何開始使用[具有安全記憶體保護區的 Always Encrypted](encryption/always-encrypted-enclaves.md)。 它會顯示：
@@ -38,13 +39,13 @@ ms.locfileid: "73592339"
 - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 或更新版本。
 - Windows 10 企業版 1809 版或更新版本；或 Windows Server 2019 Datacenter Edition。 其他版本的 Windows 10 和 Windows Server 不支援使用 HGS 進行證明。
 - 虛擬化技術的 CPU 支援：
-  - 搭載「延伸分頁表」的 Intel VT-x。
-  - 搭載「快速虛擬化索引處理」的 AMD-V。
+  - 搭載延伸分頁表的 Intel VT-x。
+  - 搭載快速虛擬化索引處理的 AMD-V。
   - 如果您是在 VM 中執行 [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]，則 Hypervisor 和實體 CPU 必須提供巢狀虛擬化功能。 
     - 在 Hyper-V 2016 或更新版本上，[於 VM 處理器上啟用巢狀虛擬化延伸模組](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)。
     - 在 Azure 中，選取支援巢狀虛擬化的 VM 大小。 這包括所有 v3 系列 VM，例如 Dv3 和 Ev3。 請參閱[建立可使用巢狀功能的 Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm) \(部分機器翻譯\)。
     - 在 VMWare vSphere 6.7 或更新版本上，針對 VM 啟用虛擬化型安全性支援，如 [VMware 文件](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html) \(英文\) 所述。
-    - 其他 Hypervisor 和公用雲端可能還支援巢狀虛擬化功能，該功能可啟用具有 VBS 記憶體保護區的 Always Encrypted。 如需相容性和設定指示，請參閱虛擬化解決方案文件。
+    - 其他 Hypervisor 和公用雲端可能還支援啟用具有 VBS 記憶體保護區的 Always Encrypted 巢狀虛擬化功能。 如需相容性和設定指示，請參閱虛擬化解決方案文件。
 - [SQL Server Management Studio (SSMS) 18.3 或更新版本](../../ssms/download-sql-server-management-studio-ssms.md)。
 
 或者，您也可以在另一部電腦上安裝 SSMS。
@@ -280,7 +281,7 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
 
 在此步驟中，您會加密儲存在伺服器端記憶體保護區內 **SSN** 和 **Salary** 資料行中的資料，然後對資料測試 SELECT 查詢。
 
-1. 開啟新的 SSMS 執行個體，連線到**已**針對資料庫連接啟用 [Always Encrypted] 的 SQL Server 執行個體。
+1. 開啟新的 SSMS 執行個體，並在**已**針對資料庫連接啟用 Always Encrypted 的情況下連線到 SQL Server 執行個體。
     1. 啟動新的 SSMS 執行個體。
     1. 在 [連線到伺服器]  對話方塊中，指定您的伺服器名稱，然後選取驗證方法並指定認證。
     1. 按一下 [選項 >>]  ，然後選取 [Always Encrypted]  索引標籤。
@@ -323,7 +324,7 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
 現在，您可以針對加密的資料行執行豐富查詢。 在伺服器端記憶體保護區內，將會執行一些查詢處理。 
 
 1. 在**已**啟用 Always Encrypted 的 SSMS 執行個體中，請確定也已啟用 Always Encrypted 的參數化。
-    1. 從 SSMS 主功能表選取 [工具]  。
+    1. 從 SSMS 的主功能表選取 [工具]  。
     2. 選取 [選項]  。
     3. 瀏覽至 [查詢執行]   > [SQL Server]   > [進階]  。
     4. 確定已選取 [啟用 Always Encrypted 的參數化]  。
@@ -339,7 +340,7 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
 
 3. 在未啟用 Always Encrypted 的 SSMS 執行個體中再次嘗試相同查詢，並留意發生的失敗。
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 完成本教學課程之後，您可以移至下列其中一個教學課程：
 - [教學課程：使用具有安全記憶體保護區的 Always Encrypted 開發 .NET Framework 應用程式](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 - [教學課程：使用隨機化加密在已啟用記憶體保護區的資料行上建立及使用索引](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

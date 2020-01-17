@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 903ff234d0e29f6f9c8f6d1acb5c5ce658c59338
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 938a6d8ba779d1cef37b5fab767e609d00b4f022
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71285708"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74308008"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>連線至 SQL Server 資料來源 (SQL Server 匯入和匯出精靈)
 
@@ -27,13 +27,14 @@ ms.locfileid: "71285708"
 > 如果您的網路具有多部伺服器，則輸入伺服器名稱會比展開伺服器下拉式清單更為簡單。 如果您按一下下拉式清單，查詢網路中所有可用的伺服器可能需要很多時間。
 
 ## <a name="connect-to-sql-server-with-the-net-framework-data-provider-for-sql-server"></a>使用 .NET Framework Data Provider for SQL Server 連接到 SQL Server 
-在您選取精靈的 [選擇資料來源]  或 [選擇目的地]  頁面上的 [.NET Framework Data Provider for SQL Server]  之後，頁面會顯示提供者的分組選項清單。 其中有許多是不友善的名稱和不熟悉的設定。 幸運的是，若要連線至任何企業資料庫，您通常只需要提供幾項資訊。 您可以忽略其他設定的預設值。
+在您選取精靈的 [選擇資料來源]  或 [選擇目的地]  頁面上的 [.NET Framework Data Provider for SQL Server]  之後，頁面會顯示提供者的分組選項清單。 其中有許多是不易記的名稱和不熟悉的設定。 幸運的是，若要連線至任何企業資料庫，您通常只需要提供幾項資訊。 您可以忽略其他設定的預設值。
 
 > [!NOTE]
 > 不論 SQL Server 是您的來源還是目的地，此資料提供者的連線選項都會相同。 也就是，您在精靈的 [選擇資料來源]  和 [選擇目的地]  頁面上看到的選項會相同。
 
 |必要資訊|.Net Framework Data Provider for SQL Server 屬性|
 |---|---|
+|驗證|預設 **NotSpecified** 為「整合式安全性」，或選擇其他驗證模式。 不支援「互動式 Active Directory 驗證」。 |
 |伺服器名稱|**資料來源**|
 |驗證 (登入) 資訊|[整合式安全性]  ；或 [使用者識別碼]  和 [密碼] <br/>如果您想要在伺服器上看到資料庫下拉式清單，則需要先提供有效的登入資訊。|
 |資料庫名稱|**初始目錄**|
@@ -63,12 +64,12 @@ ms.locfileid: "71285708"
  如果您要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請輸入密碼。  
 
 ## <a name="connect-to-sql-server-with-the-odbc-driver-for-sql-server"></a>使用 SQL Server 的 ODBC 驅動程式連線至 SQL Server 
-ODBC 驅動程式未列在下拉式資料來源清單中。 若要使用 ODBC 驅動程式連線，請從選取 **.NET Framework Data Provider for ODBC** 作為資料來源開始。 此提供者用作為 ODBC 驅動程式的包裝函式。
+ODBC 驅動程式未列在資料來源的下拉式清單中。 若要使用 ODBC 驅動程式連線，請從選取 **.NET Framework Data Provider for ODBC** 作為資料來源開始。 此提供者作用為 ODBC 驅動程式的包裝函式。
 
 > [!TIP]
 > **取得最新的驅動程式**. 下載 [Microsoft ODBC Driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339)。
 
-以下是您選取 .NET Framework Data Provider for ODBC 之後立即看到的泛型畫面。
+以下是您選取 .NET Framework Data Provider for ODBC 之後立即看到的一般畫面。
 
 ![之前使用 ODBC 連線至 SQL](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
@@ -88,7 +89,7 @@ ODBC 驅動程式的名稱。 針對不同版本的驅動程式，名稱會不�
 **Server**  
 SQL Server 的名稱。
 
-**[資料庫備份]**  
+**Database**  
 資料庫的名稱。  
 
 **Trusted_Connection**；或 **Uid** 和 **Pwd**  
@@ -104,7 +105,7 @@ SQL Server 的名稱。
      `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;`
 
 ### <a name="enter-the-connection-string"></a>輸入連接字串
-在 [選擇資料來源]  或 [選擇目的地]  頁面上，於 [ConnectionString]  欄位中輸入連接字串，或在 [Dsn]  欄位中輸入 DSN 名稱。 輸入連接字串之後，精靈會剖析字串，並在清單中顯示個別屬性和其值。
+在 [選擇資料來源]  或 [選擇目的地]  頁面上，於 [ConnectionString]  欄位中輸入連接字串，或在 [Dsn]  欄位中輸入 DSN 名稱。 輸入連接字串之後，精靈會剖析字串，並在清單中顯示個別屬性和屬性值。
 
 下列範例使用此連接字串。
 

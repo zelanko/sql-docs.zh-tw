@@ -16,17 +16,19 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d7ef8b52e3ee31e688e51454a72c0f359bcb68b
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: f7dd020c0ec7f68dbd589b6e07026adfab86c890
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632132"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75720789"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
-能串連字串運算式的值，並在這些值之間放置分隔符號值。 系統不會在字串結尾處加入分隔符號。
+能串連字串運算式的值，並在這些值之間放置分隔符號值。 系統不會在字串結尾處加入分隔符號。 
+
+在 SQL Server 2017 中導入。
  
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,7 +59,7 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
  
   非常數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)的清單，可用來排序結果。 每個查詢只允許一個 `order_by_expression`。 預設排序順序為遞增。   
   
-## <a name="return-types"></a>傳回類型
+## <a name="return-types"></a>傳回型別
 
 傳回類型取決於第一個引數 (運算式)。 如果輸入引數是字串類型 (`NVARCHAR`、`VARCHAR`)，結果類型將會與輸入類型相同。 下表列出自動轉換：  
 
@@ -69,7 +71,7 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 |VARCHAR(1...8000) |VARCHAR(8000) |
 |int、bigint、smallint、tinyint、numeric、float、real、bit、decimal、smallmoney、money、datetime、datetime2 |NVARCHAR(4000) |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 `STRING_AGG` 是一種彙總函式，此函數可擷取資料列中的所有運算式，並將它們串連成單一字串。 運算式值會以隱含方式轉換為字串類型，然後再行串連。 隱含轉換成字串會遵循現有的資料類型轉換規則。 如需有關資料類型轉換的詳細資訊，請參閱 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。 
 
@@ -144,7 +146,7 @@ GROUP BY a.articleId, title;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|articleId |title |標記 |
+|articleId |title |tags |
 |--- |--- |--- |
 |172 |Polls indicate close election results |politics,polls,city council |
 |176 |New highway expected to reduce congestion |NULL |

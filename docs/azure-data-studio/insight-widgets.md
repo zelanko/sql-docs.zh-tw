@@ -1,8 +1,8 @@
 ---
-title: 使用 Azure Data Studio 中的深入解析小工具監視伺服器和資料庫
+title: 使用見解小工具來監視伺服器和資料庫
 titleSuffix: Azure Data Studio
 description: 了解 Azure Data Studio 中的深入解析小工具
-ms.custom: seodec18, sqlfreshmay19
+ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c1ab90efa97878676b1adc2a62579527407d6ba6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959528"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957052"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中使用深入解析小工具，管理伺服器和資料庫
 
@@ -27,14 +27,12 @@ ms.locfileid: "67959528"
 
 ![資料庫儀表板](media/insight-widgets/database-dashboard.png)
 
-
 若要立即開始建立不同類型的深入解析小工具，請參閱下列教學課程：
 
 - [建置自訂深入解析小工具](tutorial-build-custom-insight-sql-server.md)
 - 啟用內建深入解析小工具 
   - [啟用效能監視深入解析](tutorial-qds-sql-server.md)
   - [啟用資料表空間使用量深入解析](tutorial-table-space-sql-server.md)
-
 
 ## <a name="sql-queries"></a>SQL 查詢
 

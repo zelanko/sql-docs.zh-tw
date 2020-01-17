@@ -1,6 +1,6 @@
 ---
-title: 連結的伺服器
-ms.date: 05/29/2019
+title: 連結的伺服器 (Database Engine) | Microsoft Docs
+ms.date: 10/14/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -19,12 +19,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ed882119c2589dbec4209523e5bc66b896316ec8
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74094771"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165339"
 ---
 # <a name="linked-servers-database-engine"></a>連結的伺服器 (Database Engine)
 
@@ -56,7 +56,7 @@ ms.locfileid: "74094771"
   
 「OLE DB 提供者」  是一種 DLL，可管理特定資料來源並與其互動。 「OLE DB 資料來源」  則識別可透過 OLE DB 存取的特定資料庫。 雖然透過連結伺服器定義來查詢的資料來源通常都是資料庫，不過，各種檔案及檔案格式都有 OLE DB 提供者的存在。 其中包括文字檔、工作表資料，以及全文檢索內容搜尋的結果。  
   
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者 (PROGID：SQLNCLI11) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的官方 OLE DB 提供者。  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者 (PROGID：SQLNCLI11) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的官方 OLE DB 提供者。  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散式查詢是專為處理任何實作必要 OLE DB 介面的 OLE DB 提供者而設計； 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只有針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native OLE DB 提供者以及某些其他提供者測試過。  
@@ -67,13 +67,16 @@ ms.locfileid: "74094771"
  ![用戶端層、伺服器層和資料庫伺服器層](../../relational-databases/linked-servers/media/lsvr.gif "用戶端層、伺服器層和資料庫伺服器層")  
   
 連結伺服器通常用於處理分散式查詢。 當用戶端應用程式透過連結伺服器來執行分散式查詢時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會剖析命令，並將要求傳送至 OLE DB。 資料列集要求可能是採用對提供者執行查詢的形式，也可能是開啟提供者的基底資料表 (Base Table)。  
-  
+
 > [!NOTE]
 > 若要讓資料來源透過連結伺服器來傳回資料，該資料來源的 OLE DB 提供者 (DLL) 必須與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體位在同一部伺服器上。  
-  
-> [!IMPORTANT] 
-> 當使用 OLE DB 提供者時，用來執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶，必須要有該提供者安裝位置之目錄及其所有子目錄的讀取和執行權限。 這包括 Microsoft 發行的提供者，以及任何第三方提供者。 
-  
+ 
+> [!IMPORTANT]
+> 當使用 OLE DB 提供者時，用來執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶，必須要有該提供者安裝位置之目錄及其所有子目錄的讀取和執行權限。 這包括 Microsoft 發行的提供者，以及任何第三方提供者。
+
+> [!NOTE]
+> 使用完整委派時，連結的伺服器支援 Active Directory 傳遞驗證。 從 SQL Server 2017 CU17 開始，也支援具有限制委派的傳遞驗證；不過，不支援[以資源為基礎的限制委派](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) \(部分機器翻譯\)。
+
 ## <a name="managing-providers"></a>管理提供者  
 有一組選項可用來控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何載入及使用登錄中所指定的 OLE DB 提供者。  
   
@@ -88,7 +91,7 @@ ms.locfileid: "74094771"
   
 -   藉由執行 **sp_dropserver**來刪除連結伺服器的定義。 您也可以使用這個預存程序來移除遠端伺服器。  
   
-您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來定義連結伺服器。 在物件總管中，以滑鼠右鍵按一下 [伺服器物件]  ，選取 [新增]  ，然後選取 [連結伺服器]  。 您可以用滑鼠右鍵按一下連結伺服器名稱，並選取 [刪除]  ，以刪除連結伺服器定義。  
+您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來定義連結伺服器。 在物件總管中，以滑鼠右鍵按一下 [伺服器物件]  ，選取 [新增]  ，然後選取 [連結伺服器]  。 您可以用滑鼠右鍵按一下連結伺服器名稱，並選取 [刪除]  ，以刪除連結伺服器定義。  
   
  當您對連結伺服器執行分散式查詢時，所要查詢的每個資料來源均需包含完整的四部分資料表名稱。 這個四部分名稱格式應該為 _linked\_server\_name.catalog_ **.** _schema_ **.** _object\_name_。  
   

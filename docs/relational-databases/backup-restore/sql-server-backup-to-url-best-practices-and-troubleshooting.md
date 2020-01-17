@@ -1,7 +1,7 @@
 ---
-title: SQL Server 備份至 URL 的最佳做法和疑難排解 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/25/2019
+title: 備份至 URL 的最佳做法與疑難排解
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,14 +10,15 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a31d11a469411e13f357f87d1112d608c94f5aa4
-ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
+ms.openlocfilehash: 149c351796af7741c4bd3ef512fe27ebcbdcf35a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72717233"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245437"
 ---
-# <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 備份至 URL 的最佳作法和疑難排解
+# <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 備份至 URL 的最佳做法和疑難排解
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   本主題包含從 SQL Server 備份及還原至 Azure Blob 服務的最佳做法和疑難排解提示。  
@@ -28,12 +29,12 @@ ms.locfileid: "72717233"
   
 -   [教學課程：SQL Server 備份及還原至 Azure Blob 儲存體服務](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## <a name="managing-backups"></a>管理備份  
+## <a name="managing-backups-mb1"></a> 管理備份  
  下列清單包含管理備份的一般建議：  
   
 -   建議針對每個備份使用唯一的檔案名稱，避免不小心覆寫 Blob。  
   
--   建立容器時，建議您將存取層級設定為 [私用]，如此只有能夠提供必要驗證資訊的使用者或帳戶才能讀取或寫入容器中的 Blob。  
+-   建立容器時，建議您將存取層級設定為 [私用]  ，如此只有能夠提供必要驗證資訊的使用者或帳戶才能讀取或寫入容器中的 Blob。  
   
 -   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫位於在 Azure 虛擬機器中執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上，請使用與虛擬機器位於相同地區的儲存體帳戶，避免產生不同地區之間的資料傳輸成本。 使用相同的地區也可以確保備份與還原作業達到最佳效能。  
   
@@ -47,7 +48,7 @@ ms.locfileid: "72717233"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份作業會使用多個執行緒來最佳化 Azure Blob 儲存體服務的資料傳輸。  不過，其效能取決於各種因素，例如 ISV 頻寬和資料庫的大小。 如果您計畫要備份內部部署 SQL Server 資料庫中的大型資料庫或檔案群組，建議您先進行一些輸送量測試。 Azure [儲存體 SLA](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) 具有最大的 Blob 處理時間，您可以參考使用。  
   
--   備份大型檔案時，務必遵循[管理備份](##managing-backups)一節中的建議使用 `WITH COMPRESSION` 選項。  
+-   備份大型檔案時，務必遵循[管理備份](#managing-backups-mb1)一節中的建議使用 `WITH COMPRESSION` 選項。  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>疑難排解備份至 URL 或從中還原  
  以下是對備份至 Azure Blob 儲存體服務或從中還原時發生的錯誤，進行疑難排解的一些快速方法。  
@@ -74,7 +75,7 @@ ms.locfileid: "72717233"
   
  **備份錯誤/失敗：**  
   
--   相同 Blob 的平行備份會導致其中一個備份失敗並出現 [初始化失敗] 錯誤。  
+-   相同 Blob 的平行備份會導致其中一個備份失敗並出現 [初始化失敗]  錯誤。  
   
 -   若您正在使用分頁 Blob (例如 `BACKUP... TO URL... WITH CREDENTIAL`)，請使用下列錯誤記錄來協助針對備份錯誤進行疑難排解：  
   
@@ -92,7 +93,7 @@ ms.locfileid: "72717233"
 
     -   備份大型資料庫時，請考慮 COMPRESSION、MAXTRANSFERSIZE、BLOCKSIZE 和多個 URL 引數。  請參閱[將 VLDB 備份至 Azure Blob 儲存體](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/)
   
-        ```
+        ```console
         Msg 3202, Level 16, State 1, Line 1
         Write on "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" failed: 1117(The request could not be performed because of an I/O device error.)
         Msg 3013, Level 16, State 1, Line 1
@@ -133,11 +134,11 @@ ms.locfileid: "72717233"
   
  Proxy 伺服器可能有限制每分鐘連接數目的設定。 備份至 URL 處理序是一個多執行緒處理序，因此可能會超出此限制。 如果發生這種情況，Proxy 伺服器會清除該連接。 若要解決這個問題，請變更 Proxy 設定，讓 SQL Server 不使用 Proxy。 以下是您可能在錯誤記錄檔中看到的類型或錯誤訊息的部分範例：  
   
-```
+```console
 Write on "https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" failed: Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
 ```  
   
-```
+```console
 A nonrecoverable I/O error occurred on file "https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Error could not be gathered from Remote Endpoint.  
   
 Msg 3013, Level 16, State 1, Line 2  
@@ -145,7 +146,7 @@ Msg 3013, Level 16, State 1, Line 2
 BACKUP DATABASE is terminating abnormally.  
 ```
 
-```
+```console
 BackupIoRequest::ReportIoError: write failure on backup device https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Operating system error Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
 ```  
   

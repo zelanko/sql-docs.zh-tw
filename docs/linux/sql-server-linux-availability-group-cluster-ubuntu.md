@@ -1,7 +1,8 @@
 ---
-title: 設定 SQL Server 可用性群組的 Ubuntu 叢集
-titleSuffix: SQL Server
-description: 了解如何建立適用於 Ubuntu 的可用性群組叢集
+title: 設定可用性群組的 Ubuntu 叢集
+titleSuffix: SQL Server on Linux
+description: 了解如何在 Ubuntu 上建立三節點叢集，並將先前建立的可用性群組資源新增至叢集。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,40 +11,42 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 85391418d74ac81b0857e705c1dc250add1143b4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8dd55f8cb9546c7ec91632d40d2eb6b46ffd4d90
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027307"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558483"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>設定 Ubuntu 叢集和可用性群組資源
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文件說明如何在 Ubuntu 上建立三個節點的叢集，並將先前建立的可用性群組新增為叢集中資源。 為了確保高可用性，Linux 上的可用性群組需要三個節點，請參閱[可用性群組設定的高可用性和資料保護](sql-server-linux-availability-group-ha.md)。
+本文件說明如何在 Ubuntu 上建立三個節點的叢集，並將先前建立的可用性群組新增為叢集中資源。 為了提供高可用性，Linux 上的可用性群組需要三個節點，請參閱[可用性群組設定的高可用性和資料保護](sql-server-linux-availability-group-ha.md)。
 
 > [!NOTE] 
-> 目前，SQL Server 與 Linux 上 Pacemaker 整合程度尚不如 Windows 與 WSFC 的結合。 SQL 不會知道叢集是否存在，所有協調流程都是從外而入，且 Pacemaker 會以獨立執行個體形式來控制服務。 此外，虛擬網路名稱為 WSFC 特定的，Pacemaker 中沒有相同的對應項。 查詢叢集資訊的 Always On 動態管理檢視會傳回空的資料列。 您仍然可以建立接聽程式，在容錯移轉之後用它來進行透明重新連線，但您必須在 DNS 伺服器中使用建立虛擬 IP 資源所用的 IP 來手動註冊接聽程式名稱 (如下列各節所述)。
+> 目前，SQL Server 與 Linux 上的 Pacemaker 之間的整合程度，尚不如 Windows 上的 WSFC。 SQL 不會知道叢集是否存在，所有協調流程都是從外而入，且 Pacemaker 會以獨立執行個體形式來控制服務。 此外，虛擬網路名稱為 WSFC 特定，Pacemaker 中沒有相同的對應項。 查詢叢集資訊的 Always On 動態管理檢視會傳回空的資料列。 您仍然可以建立接聽程式，在容錯移轉之後用它來進行透明重新連線，但您必須在 DNS 伺服器中使用建立虛擬 IP 資源所用的 IP 來手動註冊接聽程式名稱 (如下列各節所述)。
 
 下列各節將逐步解說設定容錯移轉叢集解決方案的步驟。 
 
 ## <a name="roadmap"></a>藍圖
 
-在 Linux 伺服器上建立可用性群組以確保高可用性的步驟，與 Windows Server 容錯移轉叢集上的步驟不同。 下列清單描述高階步驟： 
+在 Linux 伺服器上建立可用性群組以提供高可用性的步驟，與 Windows Server 容錯移轉叢集上的步驟不同。 下列清單描述高階步驟： 
 
 1. [在叢集節點上設定 SQL Server](sql-server-linux-setup.md)。
 
 2. [建立可用性群組](sql-server-linux-availability-group-configure-ha.md)。 
 
-3. 設定叢集資源管理員，例如 Pacemaker。 本文件包含這些指示。
+3. 設定叢集資源管理員，例如 Pacemaker。 此文件包含這些指示。
    
    設定叢集資源管理員的方式取決於特定 Linux 發行版本。 
 
    >[!IMPORTANT]
-   >生產環境需要 STONITH 這類隔離代理程式，以確保高可用性。 本文件中的示範不會使用隔離代理程式。 這些示範僅適用於測試和驗證。 
-   
-   >Linux 叢集會使用隔離功能將叢集回復為已知的狀態。 設定隔離功能的方式取決於發行版本和環境。 目前，有些雲端環境無法使用隔離功能。 如需詳細資訊，請參閱 [RHEL 高可用性叢集的支援原則 - 虛擬化平台](https://access.redhat.com/articles/29440)。
+   >生產環境需要 STONITH 這類隔離代理程式來取得高可用性。 此文件的示範不會使用隔離代理程式。 這些示範僅適用於測試和驗證。 
+   >
+   >Linux 叢集會使用隔離功能將叢集回復為已知的狀態。 設定隔離的方式取決於發行版本和環境。 目前，有些雲端環境中無法使用隔離。 如需詳細資訊，請參閱 [RHEL 高可用性叢集的支援原則 - 虛擬化平台](https://access.redhat.com/articles/29440)。
+   >
+   >隔離通常是在作業系統上實作且相依於環境。 在作業系統散發者文件中尋找隔離的指示。
 
 5.  [將可用性群組新增為叢集中的資源](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource)。 
 
@@ -134,7 +137,7 @@ sudo systemctl enable pacemaker
 
 ## <a name="configure-fencing-stonith"></a>設定隔離 (STONITH)
 
-Pacemaker 叢集廠商必須啟用 STONITH，並針對支援的叢集設定設好隔離裝置。 當叢集資源管理員無法判斷節點或節點上的資源狀態時，即會使用隔離功能讓叢集再次進入已知狀態。 資源層級隔離主要可透過設定資源，確保在發生中斷時不會有資料損毀。 舉例來說，您可以搭配使用資源層級隔離與 DRBD (分散式複寫區塊裝置)，將節點上的磁碟標示為在通訊連結中斷時過期。 節點層級隔離可確保節點不會執行任何資源。 這是藉由重設節點來完成，且其 Pacemaker 的實作名稱為 STONITH ("shoot the other node in the head" 的簡稱)。 Pacemaker 支援各種隔離裝置，例如不斷電系統或伺服器的管理介面卡。 如需詳細資訊，請參閱 [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/) (從頭開始使用 Pacemaker 叢集) 和 [Fencing and Stonith](https://clusterlabs.org/doc/crm_fencing.html) (隔離與 Stonith) 
+Pacemaker 叢集廠商必須啟用 STONITH，並針對支援的叢集設定設好隔離裝置。 當叢集資源管理員無法判斷節點或節點上的資源狀態時，即會使用隔離來讓叢集再次進入已知狀態。 資源層級隔離主要可透過設定資源，確保在發生中斷時不會有資料損毀。 舉例來說，您可以搭配使用資源層級隔離與 DRBD (分散式複寫區塊裝置)，將節點上的磁碟標示為在通訊連結中斷時過期。 節點層級隔離可確保節點不會執行任何資源。 這是藉由重設節點來完成，且其 Pacemaker 的實作名稱為 STONITH ("shoot the other node in the head" 的簡稱)。 Pacemaker 支援各種隔離裝置，例如不斷電系統或伺服器的管理介面卡。 如需詳細資訊，請參閱 [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/) (從頭開始使用 Pacemaker 叢集) 和 [Fencing and Stonith](https://clusterlabs.org/doc/crm_fencing.html) (隔離與 Stonith) 
 
 由於節點層級隔離設定主要取決於您的環境，所以我們會在本教學課程中將其停用 (可在稍後設定)。 在主要節點上執行下列指令碼： 
 
@@ -143,11 +146,11 @@ sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->停用 STONITH 只是為了測試用途。 如果您打算在生產環境中使用 Pacemaker，則應該根據您的環境規劃 STONITH 實作，並讓它保持啟用狀態。 請注意，目前沒有任何雲端環境 (包括 Azure) 或 Hyper-V 的隔離代理程式。 因此，叢集廠商並不支援在這些環境中執行生產叢集。 
+>停用 STONITH 僅基於測試目的。 如果您打算在生產環境中使用 Pacemaker，則應該根據您的環境規劃 STONITH 實作，並讓它保持啟用狀態。 如需任何特定散發的隔離代理程式相關資訊，請連絡作業系統廠商。 
 
 ## <a name="set-cluster-property-cluster-recheck-interval"></a>設定 cluster-recheck-interval 叢集屬性
 
-`cluster-recheck-interval` 表示輪詢間隔；叢集會依此間隔檢查資源參數、限制式或其他叢集選項中的變更。 如果複本中斷，叢集會嘗試以 `failure-timeout` 值和 `cluster-recheck-interval` 值所界定的間隔重新啟動複本。 例如，如果 `failure-timeout` 設為 60 秒，而 `cluster-recheck-interval` 設為 120 秒，則會以大於 60 秒但小於 120 秒的間隔嘗試重新啟動。 建議您將 failure-timeout 設為 60 秒，並將 cluster-recheck-interval 設為大於 60 秒的值。 不建議將 cluster-recheck-interval 設為較小的值。
+`cluster-recheck-interval` 表示輪詢間隔，叢集會依此間隔檢查資源參數、限制式或其他叢集選項中的變更。 如果複本中斷，叢集會嘗試以 `failure-timeout` 值和 `cluster-recheck-interval` 值所繫結的間隔重新啟動複本。 例如，如果 `failure-timeout` 設為 60 秒，而 `cluster-recheck-interval` 設為 120 秒，則會以大於 60 秒但小於 120 秒的間隔嘗試重新啟動。 建議您將 failure-timeout 設為 60 秒，並將 cluster-recheck-interval 設為大於 60 秒的值。 不建議將 cluster-recheck-interval 設為較小的值。
 
 若要將屬性值更新為 `2 minutes`，請執行：
 
@@ -156,7 +159,7 @@ sudo pcs property set cluster-recheck-interval=2min
 ```
 
 > [!IMPORTANT] 
-> 如果您已具備由 Pacemaker 叢集管理的可用性群組資源，請注意，所有使用最新可用 Pacemaker 套件 1.1.18-11.el7 的發行版本，其在 start-failure-is-fatal 叢集設定值為 false 時的行為有所變更。 這種變更會影響容錯移轉工作流程。 如果主要複本發生中斷，則叢集應該要容錯移轉至其中一個可用的次要複本。 但是，使用者卻發現叢集繼續嘗試啟動失敗的主要複本。 如果該主要複本永遠無法上線 (因為永久中斷)，則叢集永遠不會容錯移轉至其他可用的次要複本。 此變更導致先前建議作為 start-failure-is-fatal 的設定不再有效，且必須將此設定還原回其預設值 `true`。 此外，您必須更新 AG 資源以包含 `failover-timeout` 屬性。 
+> 如果您已具備由 Pacemaker 叢集管理的可用性群組資源，請注意，所有使用最新可用 Pacemaker 套件 1.1.18-11.el7 的發行版本，都會在 start-failure-is-fatal 叢集設定值為 false 時，採用其行為變更。 此變更會影響容錯移轉工作流程。 如果主要複本發生中斷，則叢集應該要容錯移轉至其中一個可用的次要複本。 但是，使用者卻發現叢集繼續嘗試啟動失敗的主要複本。 如果該主要複本永遠無法上線 (因為永久中斷)，則叢集永遠不會容錯移轉至其他可用的次要複本。 此變更導致先前建議作為 start-failure-is-fatal 的設定不再有效，且必須將此設定還原回其預設值 `true`。 此外，您必須更新 AG 資源以包含 `failover-timeout` 屬性。 
 >
 >若要將屬性值更新為 `true`，請執行：
 >
@@ -164,7 +167,7 @@ sudo pcs property set cluster-recheck-interval=2min
 >sudo pcs property set start-failure-is-fatal=true
 >```
 >
->將您現有的 AG 資源屬性 `failure-timeout` 更新為 `60s` 回合 (將 `ag1` 取代為您的可用性群組資源名稱)：
+>將您現有的 AG 資源屬性 `failure-timeout` 更新為 `60s` 執行 (將 `ag1` 取代為您的可用性群組資源名稱)：
 >
 >```bash
 >pcs resource update ag1 meta failure-timeout=60s
@@ -225,7 +228,7 @@ sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc
 1. node1 上的可用性群組主要複本會降級為次要複本。
 1. node2 上的可用性群組次要複本會升級為主要複本。 
 
-為了防止 IP 位址暫時指向含容錯移轉前次要複本的節點，請新增排序限制式。 
+為了防止 IP 位址暫時指向含容錯移轉前之次要複本的節點，請新增排序限制式。 
 
 若要新增排序限制式，請在一個節點上執行下列命令：
 

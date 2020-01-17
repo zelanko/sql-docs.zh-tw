@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: db961211295a83b61478f0849feb1cd6b3fa6c7c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907892"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190121"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署資料層應用程式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "72907892"
 ## <a name="deploy-the-same-dac-package-multiple-times"></a>多次部署相同的 DAC 封裝 
  您可以將相同的 DAC 封裝部署到單一 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體多次，但是一次只能執行一個部署。 針對每個部署指定的 DAC 執行個體名稱在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體中必須是唯一的。  
   
- 如果您將 DAC 部署至資料庫引擎執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，部署的 DAC 就會合併至 **SQL Server 公用程式**。 然後 DAC 會出現在  [公用程式總管] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[部署的資料層應用程式]** 節點中，並在  詳細資料頁面中報告。  
+ 如果您將 DAC 部署至資料庫引擎執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，部署的 DAC 就會合併至 **SQL Server 公用程式**。 然後 DAC 會出現在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [公用程式總管]  的 [部署的資料層應用程式]  節點中，並在 [部署的資料層應用程式]  詳細資料頁面中報告。  
   
 ###  <a name="database-options-and-settings"></a>資料庫選項和設定  
  根據預設，部署期間建立的資料庫將會擁有 CREATE DATABASE 陳述式中的所有預設值，但是以下項目除外：  
@@ -104,7 +104,7 @@ ms.locfileid: "72907892"
   
  資料庫名稱也會當做 DAC 執行個體的名稱使用。 執行個體名稱會顯示在**物件總管**中 [資料層應用程式]  節點或是**公用程式總管**中 [部署的資料層應用程式]  節點底下的 DAC 節點上。  
   
- 下列選項不適用於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，也不會在部署至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 時顯示。  
+ 下列選項不適用於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，也不會在部署至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]時顯示。  
   
  **使用預設資料庫位置** - 選取此選項，可在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的預設位置中建立資料庫資料檔和記錄檔。 檔案名稱將會使用資料庫名稱來建置。  
   
@@ -145,6 +145,10 @@ ms.locfileid: "72907892"
 
 下列範例使用 MyApplication.dacpac 封裝中 DAC 定義來部署 [!INCLUDE[ssDE](../../includes/ssde-md.md)]之預設執行個體上名為 MyApplication 的 DAC。  
   
+## <a name="powershell-examples"></a>PowerShell 範例  
+
+下列範例使用 MyApplication.dacpac 封裝中 DAC 定義來部署 [!INCLUDE[ssDE](../../includes/ssde-md.md)]之預設執行個體上名為 MyApplication 的 DAC。  
+
 ```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  

@@ -1,7 +1,8 @@
 ---
-title: 避免與 FILESTREAM 應用程式中的資料庫作業相衝突 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 避免衝突 - FILESTREAM 資料庫選項 | Microsoft Docs
+description: 避免與 FILESTREAM 應用程式中的資料庫作業相衝突
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 22c0c0771c3e4566ba2f3f1cef6e2dd4d921f44d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b347a140c07436553945555e52d212e4751fcc4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018870"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255585"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>避免與 FILESTREAM 應用程式中的資料庫作業相衝突
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,9 +28,9 @@ ms.locfileid: "68018870"
   
 |Transact-SQL 陳述式|開啟以便讀取|開啟以便寫入|  
 |------------------------------|---------------------|----------------------|  
-|使用資料庫中繼資料的 DDL 陳述式，例如 CREATE TABLE、CREATE INDEX、DROP TABLE 和 ALTER TABLE。|Allowed|封鎖並且因逾時而失敗。|  
-|使用資料庫所儲存之資料的 DML 陳述式，例如 UPDATE、DELETE 和 INSERT。|Allowed|拒絕|  
-|SELECT|Allowed|Allowed|  
+|使用資料庫中繼資料的 DDL 陳述式，例如 CREATE TABLE、CREATE INDEX、DROP TABLE 和 ALTER TABLE。|允許|封鎖並且因逾時而失敗。|  
+|使用資料庫所儲存之資料的 DML 陳述式，例如 UPDATE、DELETE 和 INSERT。|允許|拒絕|  
+|SELECT|允許|允許|  
 |COMMIT TRANSACTION|拒絕*|拒絕*|  
 |SAVE TRANSACTION|拒絕*|拒絕*|  
 |ROLLBACK|允許*|允許*|  

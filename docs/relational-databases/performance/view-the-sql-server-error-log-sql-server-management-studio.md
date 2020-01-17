@@ -1,6 +1,7 @@
 ---
-title: 檢視 SQL Server 錯誤記錄檔 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 檢視 SQL Server 錯誤記錄檔 (SSMS)
+description: 在 SQL Server Management Studio (SSMS) 中檢視 SQL Server 錯誤記錄檔。
+ms.custom: seo-dt-2019
 ms.date: 09/29/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -15,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6b626bb278025eb08cbbfdcc81724d8c82dd36ed
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f6410575af0d05b8d407ba9f52cc116fbe2ac733
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907851"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165470"
 ---
-# <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>檢視 SQL Server 錯誤記錄檔 (SQL Server Management Studio)
+# <a name="view-the-sql-server-error-log-in-sql-server-management-studio-ssms"></a>在 SQL Server Management Studio (SSMS) 中檢視 SQL Server 錯誤記錄檔
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔包含使用者定義事件和特定系統事件，以用於進行疑難排解。 
 

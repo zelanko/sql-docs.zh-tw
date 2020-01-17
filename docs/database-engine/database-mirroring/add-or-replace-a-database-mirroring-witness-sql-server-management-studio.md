@@ -1,6 +1,7 @@
 ---
-title: 新增或取代資料庫鏡像見證 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 新增或取代鏡像見證 (SSMS)
+description: 了解如何使用 SQL Server Management Studio (SSMS) 來新增或取代資料庫鏡像見證。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 74bbb2b7b066d106aa82f36669de6b4704537e72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61e7be7b4e1f61f243d896d5073ae469bebe6940
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947964"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247499"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>加入或取代資料庫鏡像見證 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "67947964"
   
 9. 在 **[見證伺服器執行個體]** 對話方塊中，按一下 **[連接]** 。  
   
-10. 在 [連接到伺服器]  對話方塊的 [伺服器名稱]  欄位中，指定見證伺服器執行個體，並使用 Windows 驗證 (預設值)。 按一下 **[連接]** 。  
+10. 在 [連接到伺服器]  對話方塊的 [伺服器名稱]  欄位中，指定見證伺服器執行個體，並使用 Windows 驗證 (預設值)。 按一下 [ **連接**]。  
   
 11. 一旦連接建立後， **[見證伺服器執行個體]** 對話方塊中就會顯示見證伺服器執行個體的接聽程式通訊埠和資料庫鏡像端點。 按 [下一步]  。  
   
@@ -57,7 +58,7 @@ ms.locfileid: "67947964"
   
     -   如果見證伺服器執行個體與其中一個夥伴使用不同的服務帳戶，請在 **[主體]** 、 **[鏡像]** 及 **[見證]** 欄位中填入帳戶名稱：  
   
-         *DOMAINNAME* **\\** *username*  
+         網域名稱  **\\** 使用者名稱   
   
          網域名稱必須使用大寫。  
   

@@ -1,7 +1,8 @@
 ---
-title: 支援的版本與版本升級 - SQL Server 2017 | Microsoft Docs
-ms.custom: ''
-ms.date: 07/18/2017
+title: 支援的版本與版本升級
+titleSuffix: SQL Server 2017
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,14 +16,14 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3b8e9f5f6682b8d44785d9b2600f15013a2f615c
-ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
+ms.openlocfilehash: 4dba820ec4e353fff15b0695b97f940441caf802
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72717223"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258828"
 ---
-# <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>支援的版本與版本升級 - SQL Server 2017
+# <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>適用於 SQL Server 2017 之支援的版本與版本升級
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -111,7 +112,7 @@ ms.locfileid: "72717223"
  \* Microsoft 對於從候選版軟體升級的支援是專門針對參與 Technology Adoption Program (TAP) 的客戶。 
 
    
-###  <a name="SupportFor2005"></a> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+###  <a name="SupportFor2005"></a> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的支援  
  本節將討論 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的支援。 在 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 中，您將能夠進行下列作業：  
   
 -   將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫 (mdf/ldf 檔案) 附加到 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 的 Database Engine 執行個體。  

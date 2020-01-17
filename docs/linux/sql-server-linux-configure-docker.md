@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 18401bda78dcf50e4060f053fed604d0dc1bf9be
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 74168c8cd846f48fdaa87568b85c124ff755489a
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531335"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721543"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>在 Docker 上設定 SQL Server 容器映像
 
@@ -23,7 +23,7 @@ ms.locfileid: "73531335"
 
 此文章說明如何以 Docker 設定和使用 [mssql-server-linux 容器映像](https://hub.docker.com/_/microsoft-mssql-server) \(英文\)。 
 
-如需其他部署案例，請參閱：
+如需了解其他部署案例，請參閱：
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
 - [Linux](../linux/sql-server-linux-setup.md)
@@ -35,7 +35,12 @@ ms.locfileid: "73531335"
 > 此文章特別著重於 mssql-server-linux 映像的使用。 Windows 映像並未涵蓋其中，但您可以在 [mssql-server-windows Docker Hub 頁面](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/) \(英文\) 上深入了解。
 
 > [!IMPORTANT]
-> 為產品使用案例選擇執行 SQL Server 容器之前，請檢閱我們的 [SQL Server 容器支援原則](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server) \(部分機器翻譯\) 以確定您是以支援的設定執行。
+> 為產品使用案例選擇執行 SQL Server 容器之前，請檢閱我們的 [SQL Server 容器支援原則](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) \(部分機器翻譯\) 以確定您是以支援的設定執行。
+
+這段 6 分鐘的影片會介紹如何在容器上執行 SQL Server：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2019-in-Containers/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="pull-and-run-the-container-image"></a>提取及執行容器映像
 
@@ -257,7 +262,10 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 此技術也可讓您在 Docker 外部共用和檢視主機上的檔案。
 
 > [!IMPORTANT]
-> 目前不支援使用 Linux 上的 SQL Server 映像，針對 Mac 上的 Docker 進行主機磁碟區對應。 請改用資料磁碟區容器。 此限制是 `/var/opt/mssql` 目錄特有的。 從裝載的目錄讀取可以正常運作。 例如，您可以在 Mac 上使用 -v 來裝載主機目錄，並從位於主機的 .bak 檔案還原備份。
+> **Windows 上的 Docker** 的主機磁碟區對應，目前不支援對應完整 `/var/opt/mssql` 目錄。 不過，您可以將子目錄 (例如 `/var/opt/mssql/data`) 對應到您的主機電腦。
+
+> [!IMPORTANT]
+> 目前不支援使用 Linux 上的 SQL Server 映像，針對 **Mac 上的 Docker** 進行主機磁碟區對應。 請改用資料磁碟區容器。 此限制是 `/var/opt/mssql` 目錄特有的。 從裝載的目錄讀取可以正常運作。 例如，您可以在 Mac 上使用 -v 來裝載主機目錄，並從位於主機的 .bak 檔案還原備份。
 
 ### <a name="use-data-volume-containers"></a>使用資料磁碟區容器
 
@@ -336,7 +344,7 @@ docker exec -it <Container ID> /bin/bash
 docker cp <Container ID>:<Container path> <host path>
 ```
 
-**範例：**
+**範例︰**
 
 ```bash
 docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
@@ -354,7 +362,7 @@ docker cp d6b75213ef80:/var/opt/mssql/log/errorlog C:\Temp\errorlog
 docker cp <Host path> <Container ID>:<Container path>
 ```
 
-**範例：**
+**範例︰**
 
 ```bash
 docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
@@ -615,7 +623,7 @@ ls -ll <database file dir>
 授與根群組存取下列目錄的權限，讓非根 SQL Server 容器能夠存取資料庫檔案。
 
 ```bash
-chgroup -R 0 <database file dir>
+chgrp -R 0 <database file dir>
 chmod -R g=u <database file dir>
 ```
 

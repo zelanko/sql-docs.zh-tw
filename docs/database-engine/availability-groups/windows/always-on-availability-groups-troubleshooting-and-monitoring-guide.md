@@ -1,7 +1,7 @@
 ---
-title: Always On 可用性群組監視和疑難排解參考
-description: 本指南可作為協助您開始監視 Always On 可用性群組，並針對其中所發現某些常見問題進行疑難排解的參考頁面。
-ms.custom: ag-guide, seodec18
+title: 可用性群組的監視及疑難排解指南
+description: 本內容索引可協助您開始監視 Always On 可用性群組，並針對其中所發現的某些常見問題進行疑難排解。
+ms.custom: seo-lt-2019
 ms.date: 05/10/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94430d6b32567f7f185f1a515f8391d4ee01b3a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa4b3ae0ef918b0d7706a7f4e47eceb50d380c0b
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991575"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822041"
 ---
-# <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Always On 可用性群組疑難排解和監視指南
+# <a name="monitor-and-troubleshoot-availability-groups"></a>可用性群組的監視及疑難排解
  本指南將協助您開始監視 Always On 可用性群組，並且對可用性群組中的某些常見的問題進行疑難排解。 本指南將提供在其他位置已發佈的有用資訊的原始內容和登陸頁面。 雖然本指南無法完整討論在可用性群組大範圍中發生的所有問題，但是可以為您指出根本原因分析和問題解決的正確方向。 
  
  因為可用性群組是一種整合式的技術，所以您遇到的許多問題可能是資料庫系統中其他問題的徵兆。 某些問題可能是可用性群組內的設定造成，例如某個可用性資料庫正處於暫止狀態。 其他則可能包含 SQL Server 其他方面的問題，例如 SQL Server 設定、資料庫檔案部署，以及與可用性不相關的系統性效能問題。 也有可能是因為 SQL Server 外部的其他問題，例如網路 I/O、TCP/IP、Active Directory 及 Windows Server 容錯移轉叢集 (WSFC) 問題。 通常，在可用性群組、複本或資料庫中顯露出來的問題，需要您對多種技術進行疑難排解才能識別根本原因。  
@@ -26,7 +26,7 @@ ms.locfileid: "67991575"
 ##  <a name="BKMK_SCENARIOS"></a> 疑難排解案例  
  下表包含可用性群組的常見疑難排解案例的連結。 這些案例依案例類型分類，例如設定、用戶端連接性、容錯移轉及效能。  
   
-|狀況|案例類型|Description|  
+|狀況|案例類型|描述|  
 |--------------|-------------------|-----------------|  
 |[疑難排解 Always On 可用性群組組態 &#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md)|組態|提供資訊以協助您針對設定可用性群組的伺服器執行個體時常遇到的問題進行疑難排解。 一般組態問題包含可用性群組未啟用、不正確地設定帳戶、資料庫鏡像端點不存在、端點無法存取 (SQL Server 錯誤 1418)、網路存取不存在，以及聯結資料庫命令失敗 (SQL Server 錯誤 35250)。|  
 |[疑難排解失敗的加入檔案作業 &#40;Always On 可用性群組&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|組態|加入檔案作業會造成次要資料庫暫止並處於 NOT SYNCHRONIZING 狀態。|  
@@ -35,12 +35,12 @@ ms.locfileid: "67991575"
 |[疑難排解：可用性群組已超過 RTO](troubleshoot-availability-group-exceeded-rto.md)|效能|在自動容錯移轉或規劃的手動容錯移轉之後若未遺失資料，容錯移轉時間會超過您的 RTO。 或者，當您評估同步認可次要複本 (例如自動容錯移轉夥伴) 的容錯移轉時間時，發現它超過您的 RTO。|  
 |[疑難排解：可用性群組已超過 RPO](troubleshoot-availability-group-exceeded-rpo.md)|效能|在您執行強制手動容錯移轉之後，遺失的資料超過您的 RPO。 或者，當您計算非同步認可次要複本的潛在資料遺失時，發現它超過您的 RPO。|  
 |[疑難排解：對主要複本的變更未反映在次要複本上](troubleshoot-primary-changes-not-reflected-on-secondary.md)|效能|用戶端應用程式在主要複本上成功完成更新，但是查詢次要複本卻顯示未反映變更。|  
-|[Troubleshoot:High HADR_SYNC_COMMIT wait type with Always On Availability Groups](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/) (疑難排解：Always On 可用性群組的高 HADR_SYNC_COMMIT 等候類型)|效能|如果 HADR_SYNC_COMMIT 超乎尋常地長，表示資料移動程序或次要複本記錄強化可能有效能問題。|  
+|[疑難排解：High HADR_SYNC_COMMIT wait type with Always On Availability Groups](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/) (疑難排解：Always On 可用性群組的高 HADR_SYNC_COMMIT 等候類型)|效能|如果 HADR_SYNC_COMMIT 超乎尋常地長，表示資料移動程序或次要複本記錄強化可能有效能問題。|  
 
 ##  <a name="BKMK_TOOLS"></a> 對疑難排解有助益的工具  
  設定或執行可用性群組時，不同的工具可協助您診斷不同類型的問題。 下表提供與工具相關的有用資訊連結。  
   
-|工具|Description|  
+|工具|描述|  
 |----------|-----------------|  
 |[使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)|在方便使用的介面中，報告可用性群組健康情況的摘要檢視。|  
 |[Always On 原則](always-on-policies.md)|由 Always On 儀表板使用。|  
@@ -60,7 +60,7 @@ ms.locfileid: "67991575"
   
  下表會將您導向至可協助您監視可用性群組解決方案健康情況的主題。  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[監視 Always On 可用性群組的效能](monitor-performance-for-always-on-availability-groups.md)|描述可用性群組的資料同步處理程序、流量控制閘道，以及監視可用性群組時的實用計量，同時也顯示如何收集 RTO 和 RPO 計量。|  
 |[監視可用性群組 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|提供監視可用性群組的工具資訊。|  

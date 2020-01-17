@@ -1,7 +1,7 @@
 ---
 title: 使用自動植入將可用性群組初始化
-description: 使用自動植入，自動為 Always On 可用性群組中的每個資料庫建立次要複本。
-ms.custom: seodec18
+description: 使用自動植入來自動為 Always On 可用性群組中的每個資料庫建立次要複本，而不需要手動備份及還原。
+ms.custom: seo-lt-2019
 ms.date: 03/26/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fde90e8f64194265a74f866e27e4b2ef4a406d14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 38bbab7ea9ae6aa7ddd70ede2161988c01431573
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991576"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254095"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>使用自動植入將 Always On 可用性群組初始化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -216,7 +216,7 @@ GO
 
 下表列出與自動植入相關的擴充事件： 
 
-| [屬性] | Description|
+| 名稱 | 描述|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  正在植入要求訊息。
 |hadr_physical_seeding_backup_state_change |    實體植入備份端的狀態變更。

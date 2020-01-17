@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7a1f692abdb5f9ce1b9fd69c494f719b9027c22
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909543"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190145"
 ---
 # <a name="tempdb-database"></a>TempDB 資料庫
 
@@ -80,9 +80,9 @@ ms.locfileid: "72909543"
 |ANSI_WARNINGS|OFF|是|  
 |ARITHABORT|OFF|是|  
 |AUTO_CLOSE|OFF|否|  
-|AUTO_CREATE_STATISTICS|ON|是|  
+|AUTO_CREATE_STATISTICS|開啟|是|  
 |AUTO_SHRINK|OFF|否|  
-|AUTO_UPDATE_STATISTICS|ON|是|  
+|AUTO_UPDATE_STATISTICS|開啟|是|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|是|  
 |CHANGE_TRACKING|OFF|否|  
 |CONCAT_NULL_YIELDS_NULL|OFF|是|  
@@ -90,15 +90,15 @@ ms.locfileid: "72909543"
 |CURSOR_DEFAULT|GLOBAL|是|  
 |資料庫可用性選項|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|否<br /><br /> 否<br /><br /> 否|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|是|  
-|DB_CHAINING|ON|否|  
+|DB_CHAINING|開啟|否|  
 |ENCRYPTION|OFF|否|  
 |MIXED_PAGE_ALLOCATION|OFF|否|  
 |NUMERIC_ROUNDABORT|OFF|是|  
 |PAGE_VERIFY|CHECKSUM (新安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。<br /><br /> NONE (升級的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。|是|  
-|PARAMETERIZATION|SIMPLE|是|  
+|PARAMETERIZATION|簡單|是|  
 |QUOTED_IDENTIFIER|OFF|是|  
 |READ_COMMITTED_SNAPSHOT|OFF|否|  
-|RECOVERY|SIMPLE|否|  
+|RECOVERY|簡單|否|  
 |RECURSIVE_TRIGGERS|OFF|是|  
 |Service Broker 選項|ENABLE_BROKER|是|  
 |TRUSTWORTHY|OFF|否|  
@@ -111,7 +111,7 @@ ms.locfileid: "72909543"
 
 |SLO|TempDB 資料檔案大小上限 (GB)|TempDB 資料檔案數|TempDB 資料檔案大小上限 (GB)|
 |---|---:|---:|---:|
-|[基本]|13|1|13|
+|基本|13|1|13|
 |S0|13|1|13|
 |S1|13|1|13|
 |S2|13|1|13|
@@ -214,7 +214,14 @@ GO
 [TEMPDB - 檔案與追蹤旗標及更新，太棒了！](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
 
 ## <a name="memory-optimized-tempdb-metadata"></a>記憶體最佳化 TempDB 中繼資料
-TempDB 中繼資料競爭一直以來都是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上執行之許多工作負載的延展性瓶頸。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引進的新功能是[記憶體內部資料庫](../in-memory-database.md)功能系列的一部分，記憶體最佳化的 TempDB 中繼資料能有效移除此瓶頸，並解除鎖定大量 TempDB 工作負載的新層級延展性。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，涉及管理暫存資料表中繼資料的系統資料表，可以移至不需閂鎖之非持久性經記憶體最佳化的資料表。 請使用下列指令碼，選擇加入這項新功能：
+TempDB 中繼資料競爭一直以來都是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上執行之許多工作負載的延展性瓶頸。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引進的新功能是[記憶體內部資料庫](../in-memory-database.md)功能系列的一部分，記憶體最佳化的 TempDB 中繼資料能有效移除此瓶頸，並解除鎖定大量 TempDB 工作負載的新層級延展性。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，涉及管理暫存資料表中繼資料的系統資料表，可以移至不需閂鎖之非持久性經記憶體最佳化的資料表。
+
+觀看這段 7 分鐘的影片，概略了解如何及何時使用記憶體最佳化的 TempDB 中繼資料：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
+
+
+請使用下列指令碼，選擇加入這項新功能：
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 

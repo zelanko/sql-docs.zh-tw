@@ -1,6 +1,7 @@
 ---
-title: 針對合併發行項實作自訂衝突解析程式 | Microsoft Docs
-ms.custom: ''
+title: 實作自訂衝突解析程式 (合併式)
+description: 了解如何在 SQL Server 中，針對合併式發行集實作自訂衝突解析程式。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b7e530386a2c0a6dae21b370b89d4f5542faa8d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a71c7c83afe2fcb8b0192f6dfd12c8072ccdc392
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905119"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322155"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>針對合併發行項實作自訂衝突解析程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "72905119"
   
 1.  在發行集或 **msdb** 資料庫的發行者上，建立新的系統預存程序，以實作下列必要的參數：  
   
-    |參數|資料類型|Description|  
+    |參數|資料類型|描述|  
     |---------------|---------------|-----------------|  
     |**\@tableowner**|**sysname**|解決衝突所針對之資料表的擁有者名稱。 這是發行集資料庫中資料表的擁有者。|  
     |**\@tablename**|**sysname**|解決衝突所針對之資料表的名稱。|  
@@ -70,7 +71,7 @@ ms.locfileid: "72905119"
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>搭配現有的資料表發行項使用自訂衝突解決器  
   
-1.  執行 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，針對 **\@property** 指定 **\@publication**、 **\@article** 及 **article_resolver** 值，並為 **\@value** 指定 [Microsoft SQL 伺服器預存程序]   值。  
+1.  執行 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 **\@publication**、 **\@article**，並針對 **\@property** 指定 **article_resolver** 的值及針對 **\@value** 指定 **MicrosoftSQL** **伺服器預存程序解析程式**的值。  
   
 2.  執行 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，針對 **\@property** 指定 **\@publication**、 **\@article** 以及 **resolver_info** 值，並針對 **\@value** 命名實作衝突解析程式邏輯的預存程序名稱。  
   

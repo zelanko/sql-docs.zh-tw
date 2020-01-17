@@ -1,6 +1,7 @@
 ---
-title: Linux 上 SQL Server 的 Always On 可用性群組
-description: ''
+title: Linux 上的 SQL Server 可用性群組
+description: 了解 Linux 上的 SQL Server Always On 可用性群組的特性。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 4da9f5118b77fc389e08ddb3c2b351aaaa0fb3b2
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.openlocfilehash: e4979fbb4e2dbbccf7ed11b744051373b0750d1f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794987"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558625"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Linux 上的 Always On 可用性群組
 
@@ -144,9 +145,9 @@ Linux 底下的接聽程式是以不同方式設定的，但其功能相同。 P
 
 叢集類型「無」的 AG 可以讓其複本跨越 OS 界限，因此，相同 AG 中可能同時有 Linux 型和 Windows 型的複本。 這裡顯示一個範例，其中主要複本是 Windows 型，而次要複本位於其中一個 Linux 發行版本上。
 
-![混合式「無」](./media/sql-server-linux-availability-group-overview/image1.png)
+![混合式 NONE](./media/sql-server-linux-availability-group-overview/image1.png)
 
-分散式 AG 也可以跨越 OS 界限。 基礎 AG 會由適用於其設定方式的規則所繫結，例如，已設定為「外部」的是僅限 Linux，但已聯結的 AG 可以使用 WSFC 進行設定。 請設想下列範例：
+分散式 AG 也可以跨越 OS 界限。 基礎 AG 會由適用於其設定方式的規則所繫結，例如，已設定為「外部」的是僅限 Linux，但已聯結的 AG 可以使用 WSFC 進行設定。 請考慮下列範例：
 
 ![混合式 Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 

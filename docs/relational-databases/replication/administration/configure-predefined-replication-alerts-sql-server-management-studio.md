@@ -1,6 +1,7 @@
 ---
-title: 設定預先定義的複寫警示 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 設定預先定義的複寫警示 (SSMS)
+description: 了解如何使用 SQL Server Management Studio (SSMS) 設定預先定義的複寫警示
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d5ff652d5817242ad5e77ed42b5839d97389056c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 9bf49c5892dd22b417df7aeec50f20c0f81b410b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906821"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322065"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>設定預先定義的複寫警示 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "72906821"
   
 -   **複寫: 代理程式自訂關閉**  
   
- 在  中的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or the **Warnings** tab in Replication Monitor. 如需有關存取此索引標籤的詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+ 從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 [警示]  資料夾或複寫監視器中的 [警告]  索引標籤設定這些警示。 如需有關存取此索引標籤的詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
  除了這些警示外，複寫監視器還提供與狀態和效能相關的警告與警示集合。 如需相關資訊，請參閱 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。 您也可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警示基礎結構，為其他複寫事件定義警示。 如需詳細資訊，請參閱[建立使用者定義的事件](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)。  
   
@@ -83,9 +84,9 @@ ms.locfileid: "72906821"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  按一下 [ **關閉**]。  
+5.  按一下 [關閉]  。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用複寫代理程式事件的警示](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)  
+ [使用針對複寫代理程式事件的警示](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)  
   
   

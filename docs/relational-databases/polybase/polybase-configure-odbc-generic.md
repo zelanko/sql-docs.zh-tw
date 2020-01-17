@@ -1,6 +1,7 @@
 ---
-title: 設定 PolyBase 存取具有 ODBC 泛型類型的外部資料 | Microsoft Docs
-ms.date: 04/23/2019
+title: 存取外部資料：ODBC 泛型型別 - PolyBase
+ms.date: 12/13/2019
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 735d43f224fcfb8438f8fed9bdc6c3b254071195
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5017dc54a1e7858786413b2fcc164e4949f77646
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907600"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255416"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>設定 PolyBase 存取 SQL Server 中的外部資料
 

@@ -1,7 +1,7 @@
 ---
-title: 可用性群組之可用性模式間的差異
+title: 可用性群組的可用性模式
 description: Always On 可用性群組之不同可用性模式的描述。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 10/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8764ffb829f684b996d22c6ea604fad970a1a30f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df39ac4151bb5860db970d423edcbe7064178a08
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934848"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241784"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Always On 可用性群組之可用性模式間的差異
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "67934848"
   
  下圖顯示包含五個可用性複本的可用性群組。 主要複本和一個次要複本設定為包含自動容錯移轉的同步認可模式。 另一個次要複本則設定為僅包含規劃的手動容錯移轉的同步認可模式，而且兩個次要複本設定為非同步認可模式 (僅支援強制手動容錯移轉，一般稱為「強制容錯移轉」  )。  
   
- ![複本的可用性和容錯移轉模式](../../../database-engine/availability-groups/windows/media/aoag-availabilityandfailovermodes.gif "複本的可用性和容錯移轉模式")  
+ ![複本的可用性與容錯移轉模式](../../../database-engine/availability-groups/windows/media/aoag-availabilityandfailovermodes.gif "複本的可用性與容錯移轉模式")  
   
  兩個可用性複本之間的同步處理和容錯移轉行為取決於兩個複本的可用性模式。 例如，如果要發生同步認可，目前相關的主要複本和次要複本都必須設定成同步認可。 同樣地，若要發生自動容錯移轉，兩個複本都必須設定為自動容錯移轉。 因此，上面所示的部署案例行為可摘要於下表中，該表會探索每個可能主要複本的行為：  
   

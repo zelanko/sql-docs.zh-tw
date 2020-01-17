@@ -1,6 +1,7 @@
 ---
-title: 變更資料庫鏡像工作階段中的交易安全性 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 變更交易安全性 (鏡像資料庫)
+description: 使用 Transact-SQL 來變更 SQL Server 資料庫鏡像工作階段的交易安全性屬性。
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d37d47983dd7c98338f20df1157cd45d88411b74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ba0b574fea1974ab93c5cecf4346942df6c4a2c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952069"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247487"
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>變更資料庫鏡像工作階段中的異動安全性 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,6 +52,6 @@ ms.locfileid: "67952069"
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE 資料庫鏡像 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
- [資料庫鏡像作業模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   

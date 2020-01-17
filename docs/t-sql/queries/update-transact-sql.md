@@ -1,7 +1,7 @@
 ---
 title: UPDATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/06/2017
+ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b856ee0218f7b4909ad9c62a42b95dfd96c93abc
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: a7bf485ec7f6295ed3ee0f9ca04e3f088e5d9cb5
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68317100"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687381"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "68317100"
   
 ## <a name="syntax"></a>語法  
   
-```sql  
+```  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  
@@ -140,7 +140,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  這是資料表或檢視表所屬的結構描述名稱。  
   
  *table_or_view_name*  
- 這是要更新資料列之資料表或檢視表的名稱。 *table_or_view_name* 所參考的檢視必須能夠更新，而且只能參考該檢視 FROM 子句中的單一基底資料表。 如需有關可更新檢視的詳細資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)。  
+ 這是要更新資料列之資料表或檢視表的名稱。 *table_or_view_name* 所參考的檢視必須能夠更新，而且只能參考該檢視 FROM 子句中的單一基底資料表。 如需可更新檢視的詳細資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)。  
   
  *rowset_function_limited*  
  依提供者功能而定，這是 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函數。  
@@ -191,11 +191,11 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  *expression* 是複製到 *column_name* 的值。 *expression* 必須評估為或能夠隱含轉換成 *column_name* 類型。 如果 *expression* 設定為 NULL，系統就會忽略 @*Length*，且會在所指定 @*Offset* 上截斷 *column_name* 中的值。  
   
- @*Offset* 是 *column_name* 值中寫入 *expression* 的起點。 @*Offset* 是以零為基底的序數位置，也是 **bigint**，且不能是負數。 如果 @*Offset* 是 NULL，則更新作業會在現有 *column_name* 值的結尾附加 *expression*，且會忽略 @*Length*。 如果 @Offset 大於 *column_name* 值的長度，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會傳回錯誤。 如果 @*Offset* 加上 @*Length* 超出資料行基礎值的結尾，就會刪除到值的最後一個字元。 如果 @*Offset* 加上 LEN(*expression*) 大於基礎的宣告大小，就會引發錯誤。  
+ @*Offset* 是儲存在 *column_name* 中的值，*expression* 要寫入的起點。 @*Offset* 是以零為基底的序數位元組位置，也是 **bigint**，且不能是負數。 如果 @*Offset* 是 NULL，則更新作業會在現有 *column_name* 值的結尾附加 *expression*，且會忽略 @*Length*。 如果 @*Offset* 大於 *column_name* 值的位元組長度，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會傳回錯誤。 如果 @*Offset* 加上 @*Length* 超出資料行基礎值的結尾，就會刪除到值的最後一個字元。  
   
  @*Length* 是資料行中的區段長度，開頭為 @*Offset*，它會由 *expression* 所取代。 @*Length* 是 **bigint**，且不能是負數。 如果 @*Length* 是 NULL，則更新作業會移除從 @*Offset* 到 *column_name* 值結尾的所有資料。  
   
- 如需詳細資訊，請參閱＜備註＞。  
+ 如需詳細資訊，請參閱[更新大數值資料類型](#updating-lobs)。  
   
  **@** *variable*  
  這是設定為 *expression* 傳回之值的宣告變數。  
@@ -243,7 +243,7 @@ OPTION **(** \<query_hint> [ **,** ... *n* ] **)**
  指定利用最佳化工具提示來自訂 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理陳述式的方式。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="best-practices"></a>最佳作法  
- 您可以使用 @@ROWCOUNT 函式，將插入的資料列數目傳回給用戶端應用程式。 如需詳細資訊，請參閱 [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)。  
+ 您可以使用 `@@ROWCOUNT` 函數，將插入的資料列數目傳回給用戶端應用程式。 如需詳細資訊，請參閱 [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)。  
   
  UPDATE 陳述式可以利用變數名稱來顯示受影響的舊值和新值，但這只適用於 UPDATE 陳述式會影響單一記錄的情況。 如果 UPDATE 陳述式會影響多筆記錄，若要傳回各個記錄的舊值和新值，請使用 [OUTPUT 子句](../../t-sql/queries/output-clause-transact-sql.md)。  
   
@@ -277,7 +277,7 @@ SELECT ColA, ColB
 FROM dbo.Table2;  
 ```  
   
- 當組合 FROM 和 WHERE CURRENT OF 子句時，也會出現相同的問題。 在下列範例中，`Table2` 中的兩個資料列都符合 `FROM` 陳述式中的 `UPDATE` 子句識別資格。 利用 `Table2` 中的哪個資料列來更新 `Table1` 中的資料列，並未定義。  
+ 當組合 `FROM` 和 `WHERE CURRENT OF` 子句時，也會出現相同的問題。 在下列範例中，`Table2` 中的兩個資料列都符合 `FROM` 陳述式中的 `UPDATE` 子句識別資格。 利用 `Table2` 中的哪個資料列來更新 `Table1` 中的資料列，並未定義。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -314,7 +314,7 @@ GO
 ## <a name="compatibility-support"></a>相容性支援  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未來版本將移除套用到 UPDATE 或 DELETE 陳述式目標資料表的 FROM 子句中 READUNCOMMITTED 和 NOLOCK 提示的使用支援。 請避免在新的開發工作中使用此內容中的這些提示，並規劃修改目前在使用這些提示的應用程式。  
   
-## <a name="data-types"></a>資料型別  
+## <a name="data-types"></a>資料類型  
  所有 **char** 和 **nchar** 資料行都會向右填補到定義的長度。  
   
  如果 ANSI_PADDING 設為 OFF，便會從插入 **varchar** 和 **nvarchar** 資料行的資料中移除所有尾端空格，但只含有空格的字串除外。 這些字串會截斷成空字串。 如果 ANSI_PADDING 設為 ON，便會插入尾端空格。 Microsoft SQL Server ODBC 驅動程式和 OLE DB Provider for SQL Server 提供者會自動設定每項連接的 ANSI_PADDING ON。 您可以在 ODBC 資料來源中設定這個項目，也可以設定連接屬性來設定這個項目。 如需詳細資訊，請參閱 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  
@@ -329,8 +329,10 @@ GO
 > [!IMPORTANT]
 >  未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本將會移除 **ntext**、**text** 和 **image** 資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。  
   
-### <a name="updating-large-value-data-types"></a>更新大數值資料類型  
- 使用 **.** WRITE **(** _expression_ **,** @_Offset_ **,** @_Length_ **)** 子句可執行 **varchar(max)** 、**nvarchar(max)** 和 **varbinary(max)** 資料類型的部分或完整更新。 例如，部分更新 **varchar(max)** 資料行可能只刪除或修改資料行的前 200 個字元，完整更新則會刪除或修改資料行中的所有資料。 如果資料庫復原模式設為大量記錄或簡單模式，則插入或附加新資料的 **.WRITE** 更新就會採用最低限度記錄。 當更新現有的值時，不會使用最低限度記錄。 如需詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+### <a name="updating-lobs"></a> 更新大數值資料類型  
+ 使用 **.** WRITE **(** _expression_ **,** @_Offset_ **,** @_Length_ **)** 子句可執行 **varchar(max)** 、**nvarchar(max)** 和 **varbinary(max)** 資料類型的部分或完整更新。 
+ 
+ 例如，部分更新 **varchar(max)** 資料行可能只刪除或修改資料行的前 200 個位元組 (如果使用 ASCII 字元為 200 個字元)，完整更新則會刪除或修改資料行中的所有資料。 如果資料庫復原模式設為大量記錄或簡單模式，則插入或附加新資料的 **.WRITE** 更新就會採用最低限度記錄。 當更新現有的值時，不會使用最低限度記錄。 如需詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
  當 UPDATE 陳述式造成下列情況時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將部分更新轉換成完整更新：  
 -   變更資料分割檢視或資料表的索引鍵資料行。  
@@ -338,7 +340,7 @@ GO
   
 您不能使用 **.WRITE** 子句來更新 NULL 資料行，或將 *column_name* 的值設成 NULL。  
   
-**varbinary** 和 **varchar** 資料類型的 @*Offset* 和 @*Length* 是以位元組來指定，**nvarchar** 資料類型則是以字元來指定。 雙位元組字集 (DBCS) 定序會計算適當的位移。  
+**Varbinary** 和 **Varchar** 資料類型的 @*Offset* 和 @*Length* 是以位元組來指定，**Nvarchar** 資料類型則是以位元組來指定。 如需字串資料類型長度的詳細資訊，請參閱 [Char 和 Varchar (Transact-SQL)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 和 [Nchar 和 Nvarchar (Transact-sql)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)。
   
 若要有最佳效能，建議您以 8040 個位元組倍數的片段大小來插入或更新資料。  
   
@@ -346,7 +348,7 @@ GO
   
 若要使用其他字元或二進位資料類型來完成 **\.WRITE** 的相同功能，請使用 [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)。  
   
-### <a name="updating-user-defined-type-columns"></a>更新使用者定義型別資料行  
+### <a name="updating-user-defined-type-columns"></a>更新使用者定義類型資料行  
  您可以利用下列方式之一來完成使用者定義型別資料行值的更新：  
   
 -   只要使用者定義型別支援從這個類型進行隱含或明確的轉換，便在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型中提供一個值。 下列範例會顯示如何從字串進行明確的轉換，以便在使用者定義型別 `Point` 的資料行中更新值。  
@@ -366,7 +368,7 @@ GO
     ```  
   
     > [!NOTE]  
-    >  如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Null 值上呼叫了 mutator 方法，或是 mutator 方法所產生的新值是 Null，[!INCLUDE[tsql](../../includes/tsql-md.md)] 就會傳回錯誤。  
+    > 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Null 值上呼叫了 mutator 方法，或是 mutator 方法所產生的新值是 Null，[!INCLUDE[tsql](../../includes/tsql-md.md)] 就會傳回錯誤。  
   
 -   修改使用者定義型別的登錄屬性值或公用資料成員值。 提供值的運算式必須可隱含地轉換成屬性的類型。 下列範例會修改使用者定義型別 `X` 的 `Point` 屬性值。  
   
@@ -391,10 +393,10 @@ GO
 ## <a name="interoperability"></a>互通性  
  只有當所修改的資料表是一個資料表變數時，才能在使用者定義函數的主體中使用 UPDATE 陳述式。  
   
- 當定義資料表之 UPDATE 動作的 INSTEAD OF 觸發程序時，會執行觸發程序，而不是 UPDATE 陳述式。 舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只支援 UPDATE 及其他資料修改陳述式所定義的 AFTER 觸發程序。 在直接或間接參考定義了 INSTEAD OF 觸發程序的檢視表之 UPDATE 陳述式中，不能指定 FROM 子句。 如需 INSTEAD OF 觸發程序的詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
+ 當定義資料表之 UPDATE 動作的 `INSTEAD OF` 觸發程序時，會執行觸發程序，而不是 UPDATE 陳述式。 舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只支援 UPDATE 及其他資料修改陳述式所定義的 AFTER 觸發程序。 在直接或間接參考定義了 `INSTEAD OF` 觸發程序的檢視表之 UPDATE 陳述式中，不能指定 FROM 子句。 如需 INSTEAD OF 觸發程序的詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
- 在直接或間接參考定義了 INSTEAD OF 觸發程序之檢視表的 UPDATE 陳述式中，不能指定 FROM 子句。 如需 INSTEAD OF 觸發程序的詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
+ 在直接或間接參考定義了 `INSTEAD OF` 觸發程序的檢視表之 UPDATE 陳述式中，不能指定 FROM 子句。 如需 `INSTEAD OF` 觸發程序的詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
  當通用資料表運算式 (CTE) 是 UPDATE 陳述式的目標時，陳述式中所有 CTE 的參考都必須相符。 例如，如果 CTE 被指派 FROM 子句中的別名，此別名就必須用於 CTE 的所有其他參考。 因為 CTE 沒有物件識別碼，可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用來辨識物件與其別名之間的隱含關聯性，所以需要使用不模稜兩可的 CTE 參考。 如果沒有這個關聯性，查詢計畫可能會產生無法預期的聯結行為和不想要的查詢結果。 下列範例將示範當 CTE 是更新作業的目標物件時，指定 CTE 的正確與不正確方法。  
   
@@ -427,6 +429,7 @@ GO
 ```  
 
 CTE 參考未正確相符的 UPDATE 陳述式。  
+
 ```sql  
 USE tempdb;  
 GO  
@@ -460,16 +463,16 @@ ID     Value
 ## <a name="logging-behavior"></a>記錄行為  
  記錄 UPDATE 陳述式；不過，利用 **.** WRITE 子句來進行大數值資料類型的部分更新，只會有最低限度記錄。 如需詳細資訊，請參閱前面＜資料類型＞一節中的＜更新大數值資料類型＞。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>權限  
- 需要目標資料表的 UPDATE 權限。 如果 UPDATE 陳述式包含 WHERE 子句，或 SET 子句中的 *expression* 使用資料表中的資料行，則需要所更新之資料表的 SELECT 權限。  
+ 需要目標資料表的 `UPDATE` 權限。 如果 UPDATE 陳述式包含 WHERE 子句，或 SET 子句中的 *expression* 使用資料表中的資料行，則需要所更新之資料表的 `SELECT` 權限。  
   
- UPDATE 權限預設會授與 **sysadmin** 固定伺服器角色、**db_owner** 和 **db_datawriter** 固定資料庫角色的成員，以及資料表擁有者。 **sysadmin**、**db_owner** 和 **db_securityadmin** 角色的成員，以及資料表擁有者，可以將權限轉移給其他使用者。  
+ UPDATE 權限預設為 `sysadmin` 固定伺服器角色、`db_owner` 和 `db_datawriter` 固定資料庫角色的成員，以及資料表擁有者。 `sysadmin`、`db_owner` 和 `db_securityadmin` 角色的成員及資料表擁有者可將權限移轉給其他使用者。  
   
 ##  <a name="UpdateExamples"></a> 範例  
   
-|類別目錄|代表性語法元素|  
+|類別|代表性語法元素|  
 |--------------|------------------------------|  
 |[基本語法](#BasicSyntax)|UPDATE|  
 |[限制更新的資料列](#LimitingValues)|WHERE • TOP • WITH 通用資料表運算式 • WHERE CURRENT OF|  
@@ -544,7 +547,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-#### <a name="e-using-the-with-commontableexpression-clause"></a>E. 使用 WITH common_table_expression 子句  
+#### <a name="e-using-the-with-common_table_expression-clause"></a>E. 使用 WITH common_table_expression 子句  
  下列範例會更新直接或間接使用之所有組件和元件的 `PerAssemblyQty` 值以建立 `ProductAssemblyID 800`。 通用資料表運算式會傳回一份階層式清單，其中包含直接用來建立 `ProductAssemblyID 800` 的組件、用來建立這些元件的組件等等。 只會修改通用資料表運算式所傳回的資料列。  
   
 ```sql  
@@ -953,7 +956,7 @@ WHERE ProductNumber LIKE 'BK-%';
 GO  
 ```  
   
-#### <a name="z-specifying-a-query-hint"></a>Z. 指定查詢提示  
+#### <a name="z-specifying-a-query-hint"></a>Z 採取行動。 指定查詢提示  
  下列範例在 UPDATE 陳述式中指定[查詢提示](../../t-sql/queries/hints-transact-sql-query.md)`OPTIMIZE FOR (@variable)`。 這個提示會指示查詢最佳化工具在查詢進行編譯和最佳化時，使用特定的區域變數值。 只有在查詢最佳化期間，才使用這個值，在查詢執行期間，不使用這個值。  
   
 ```sql  
@@ -1221,5 +1224,6 @@ DROP TABLE CTAS_acs
  [Text 和 Image 函數 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
-  
-  
+ [定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [單位元組和多位元組字元集](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)  
+ 

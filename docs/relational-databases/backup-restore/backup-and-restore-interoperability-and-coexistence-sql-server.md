@@ -1,7 +1,7 @@
 ---
-title: 備份與還原：互通性與共存性 (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 08/05/2016
+title: 備份與還原：功能互通性
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d22aaa5ec3eba14931c5af22f68152bf7b19ad84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5af79e93104530b3027133ba68026cfd914f5fe5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940874"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247445"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>備份與還原：互通性與共存性 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "67940874"
  本節僅與包含多個檔案群組的完整模式資料庫有關。  
   
 > [!NOTE]  
->  未來的 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本將移除資料庫鏡像功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 。  
+>  未來的 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本將移除資料庫鏡像功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。  
   
  資料庫鏡像是增加資料庫可用性的軟體方案。 鏡像是以每個資料庫為基準實作，只適用於使用完整復原模式的資料庫。 如需詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "67940874"
 >  若要散發資料庫中檔案群組子集的副本，請使用複寫：請只複寫檔案群組中您要複製到其他伺服器的物件。 如需複寫的詳細資訊，請參閱 [SQL Server 複寫](../../relational-databases/replication/sql-server-replication.md)。  
   
 ### <a name="creating-the-mirror-database"></a>建立鏡像資料庫  
- 鏡像資料庫是透過在鏡像伺服器上還原 (但不復原) 主體資料庫備份的方式所建立。 還原必須保留相同的資料庫名稱。 如需詳細資訊，請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)中數個功能的備份和還原考量。  
+ 鏡像資料庫是透過在鏡像伺服器上還原 (但不復原) 主體資料庫備份的方式所建立。 還原必須保留相同的資料庫名稱。 如需詳細資訊，請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
  您可以使用分次還原順序來建立鏡像資料庫 (只要有支援)。 不過，要等到還原了所有檔案群組，而且通常還要在時間點上將記錄備份還原到夠接近主體資料庫的時間點之後，才能開始進行鏡像。 如需詳細資訊，請參閱[分次還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)。  
   

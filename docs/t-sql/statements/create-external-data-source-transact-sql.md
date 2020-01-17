@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91711ce160dcb653d9e05e8b0a445214a247d337
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ec1bd01ae5f92efbbbe08ebee3da3484ce387e29
+ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981880"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681779"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -42,7 +42,7 @@ ms.locfileid: "73981880"
 
 |                               |                                                              |                                                              |                                                              |      |
 | ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| **\* _SQL Server \*_** &nbsp; | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL 資料<br />倉儲](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| **_\* SQL Server \*_** &nbsp; | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL 資料<br />倉儲](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                               |                                                              |                                                              |                                                              |      |
 
 &nbsp;
@@ -138,7 +138,7 @@ WITH
   - 至少擁有應載入檔案的讀取權限 (例如 `srt=o&sp=r`)
   - 使用有效的到期時間 (所有日期都是 UTC 時間)。
 
-如需使用具有 `SHARED ACCESS SIGNATURE` 之 `CREDENTIAL` 且 `TYPE` = `BLOB_STORAGE` 的範例，請參閱[建立外部資料來源以執行大量作業並將資料從 Azure Blob 儲存體擷取到 SQL Database](#f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+如需使用具有 `SHARED ACCESS SIGNATURE` 之 `CREDENTIAL` 且 `TYPE` =`BLOB_STORAGE` 的範例，請參閱[建立外部資料來源以執行大量作業並將資料從 Azure Blob 儲存體擷取到 SQL Database](#g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
 
 若要建立資料庫範圍認證，請參閱 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]。
 
@@ -152,7 +152,7 @@ WITH
 > [!IMPORTANT]
 > 如果使用任何其他外部資料來源，請不要設定 `TYPE`。
 
-如需使用 `TYPE` = `HADOOP` 從 Azure Blob 儲存體載入資料的範例，請參閱[建立參考 Azure Blob 儲存體的外部資料來源](#e-create-external-data-source-to-reference-azure-blob-storage)。
+如需使用 `TYPE` =`HADOOP` 從 Azure Blob 儲存體載入資料的範例，請參閱[建立參考 Azure Blob 儲存體的外部資料來源](#e-create-external-data-source-to-reference-azure-blob-storage)。
 
 ### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -189,7 +189,7 @@ WITH
 
 在 EXTERNAL DATA SOURCE 物件上取得共用鎖定。  
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 
 PolyBase 支援大多數外部資料來源的 Proxy 驗證。 建立資料庫範圍認證以建立 Proxy 帳戶。
 
@@ -199,7 +199,7 @@ PolyBase 支援大多數外部資料來源的 Proxy 驗證。 建立資料庫範
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 
-## <a name="examples-sql-server-2016"></a>範例:SQL Server (2016+)
+## <a name="examples-sql-server-2016"></a>範例：SQL Server (2016+)
 
 ### <a name="a-create-external-data-source-in-sql-2019-to-reference-oracle"></a>A. 在 SQL 2019 中建立參考 Oracle 的外部資料來源
 
@@ -311,12 +311,36 @@ WITH
 ;
 ```
 
-## <a name="examples-bulk-operations"></a>範例:大量作業
+### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-2019"></a>F. 建立外部資料來源，以透過 Polybase 連線參考 SQL Server 具名執行個體 (SQL 2019)
+
+若要建立參考 SQL Server 具名執行個體的外部資料來源，您可以使用 CONNECTION_OPTIONS 來指定執行個體名稱。 在下列範例中，WINSQL2019 是主機名稱，而 SQL2019 是執行個體名稱。
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH ( 
+  LOCATION = 'sqlserver://WINSQL2019',
+  CONNECTION_OPTIONS = 'Server=%s\SQL2019',
+  CREDENTIAL = SQLServerCredentials
+);
+
+```
+或者，您可以使用連接埠來連線到 SQL Server 執行個體。
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH ( 
+  LOCATION = 'sqlserver://WINSQL2019:58137',
+  CREDENTIAL = SQLServerCredentials
+);
+
+```
+
+## <a name="examples-bulk-operations"></a>範例：大量作業
 
 > [!NOTE]
 > 針對大量作業設定外部資料來源時，請不要將後置 **/** 、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。
 
-### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. 針對從 Azure Blob 儲存體擷取資料的大量作業，建立外部資料來源
+### <a name="g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>G. 針對從 Azure Blob 儲存體擷取資料的大量作業，建立外部資料來源
 
 **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
 針對使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 的大量作業，請使用下列資料來源。 認證必須將 `SHARED ACCESS SIGNATURE` 設定為身分識別、不得在 SAS 權杖中有前置 `?`、必須至少擁有應載入檔案的讀取權限 (例如 `srt=o&sp=r`)，且到期時間應該有效 (所有日期都是 UTC 時間)。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)][sas_token]。
@@ -444,7 +468,7 @@ WITH
   - 至少擁有應載入檔案的讀取權限 (例如 `srt=o&sp=r`)
   - 使用有效的到期時間 (所有日期都是 UTC 時間)。
 
-如需使用具有 `SHARED ACCESS SIGNATURE` 之 `CREDENTIAL` 且 `TYPE` = `BLOB_STORAGE` 的範例，請參閱[建立外部資料來源以執行大量作業並將資料從 Azure Blob 儲存體擷取到 SQL Database](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+如需使用具有 `SHARED ACCESS SIGNATURE` 之 `CREDENTIAL` 且 `TYPE` =`BLOB_STORAGE` 的範例，請參閱[建立外部資料來源以執行大量作業並將資料從 Azure Blob 儲存體擷取到 SQL Database](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
 
 若要建立資料庫範圍認證，請參閱 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]。
 
@@ -468,13 +492,13 @@ WITH
 | RDBMS             | 使用 `LOCATION` 所提供伺服器上的遠端資料庫名稱 |
 | SHARD_MAP_MANAGER | 以分區對應管理員運作的資料庫名稱      |
 
-如需示範如何建立外部資料來源 (其中 `TYPE` = `RDBMS`) 的範例，請參閱[建立 RDBMS 外部資料來源](#b-create-an-rdbms-external-data-source)
+如需示範如何建立外部資料來源 (其中 `TYPE` =`RDBMS`) 的範例，請參閱[建立 RDBMS 外部資料來源](#b-create-an-rdbms-external-data-source)
 
 ### <a name="shard_map_name--shard_map_name"></a>SHARD_MAP_NAME = *shard_map_name*
 
 僅限在 `TYPE` 引數設定為 `SHARD_MAP_MANAGER` 時用於設定分區對應的名稱。
 
-如需示範如何建立外部資料來源 (其中 `TYPE` = `SHARD_MAP_MANAGER`) 的範例，請參閱[建立分區對應管理員外部資料來源](#a-create-a-shard-map-manager-external-data-source)
+如需示範如何建立外部資料來源 (其中 `TYPE` =`SHARD_MAP_MANAGER`) 的範例，請參閱[建立分區對應管理員外部資料來源](#a-create-a-shard-map-manager-external-data-source)
 
 ## <a name="permissions"></a>權限
 
@@ -484,7 +508,7 @@ WITH
 
 在 EXTERNAL DATA SOURCE 物件上取得共用鎖定。  
 
-## <a name="examples"></a>範例:
+## <a name="examples"></a>範例：
 
 ### <a name="a-create-a-shard-map-manager-external-data-source"></a>A. 建立分區對應管理員外部資料來源
 
@@ -539,7 +563,7 @@ WITH
 
 如需有關 RDBMS 的逐步教學課程，請參閱[跨資料庫查詢入門 (垂直資料分割)][remote_eq_tutorial]。
 
-## <a name="examples-bulk-operations"></a>範例:大量作業
+## <a name="examples-bulk-operations"></a>範例：大量作業
 
 > [!NOTE]
 > 針對大量作業設定外部資料來源時，請不要將後置 **/** 、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。
@@ -653,7 +677,7 @@ WITH
 
 設定位置時的其他注意事項和指引：
 
-- 預設選項是在佈建 Azure Data Lake Storage Gen 2 時，使用 [啟用安全 SSL 連線]。 當此項啟用時，您必須在選取了安全 SSL 連線時使用 `abfss`。 請注意，`abfss` 也適用於不安全的 SSL 連線。 
+- 預設選項是在佈建 Azure Data Lake Storage Gen 2 時使用 `enable secure SSL connections`。 當此項啟用時，您必須在選取了安全 SSL 連線時使用 `abfss`。 請注意，`abfss` 也適用於不安全的 SSL 連線。 
 - 在建立物件時，SQL 資料倉儲引擎不會驗證外部資料來源是否存在。 若要驗證，請使用外部資料來源建立外部資料表。
 - 查詢 Hadoop 時，請針對所有資料表使用相同的外部資料來源，以確保查詢語意一致。
 - `wasb` 是 Azure Blob 儲存體的預設通訊協定。 `wasbs` 為選擇性，但由於資料會使用安全的 SSL 連線傳送，因此建議使用。
@@ -678,7 +702,7 @@ WITH
 > [!IMPORTANT]
 > 如果使用任何其他外部資料來源，請不要設定 `TYPE`。
 
-如需使用 `TYPE` = `HADOOP` 從 Azure Blob 儲存體載入資料的範例，請參閱[建立參考 Azure Blob 儲存體的外部資料來源](#a-create-external-data-source-to-reference-azure-blob-storage)。
+如需使用 `TYPE` =`HADOOP` 從 Azure Blob 儲存體載入資料的範例，請參閱[建立參考 Azure Blob 儲存體的外部資料來源](#a-create-external-data-source-to-reference-azure-blob-storage)。
 
 ## <a name="permissions"></a>權限
 
@@ -688,7 +712,7 @@ WITH
 
 在 EXTERNAL DATA SOURCE 物件上取得共用鎖定。  
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 
 PolyBase 支援大多數外部資料來源的 Proxy 驗證。 建立資料庫範圍認證以建立 Proxy 帳戶。
 
@@ -698,7 +722,7 @@ PolyBase 支援大多數外部資料來源的 Proxy 驗證。 建立資料庫範
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 
-## <a name="examples"></a>範例:
+## <a name="examples"></a>範例：
 
 ### <a name="a-create-external-data-source-to-reference-azure-blob-storage"></a>A. 建立參考 Azure Blob 儲存體的外部資料來源
 
@@ -861,7 +885,7 @@ CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCAT
 
 |                                                              |                                                              |                                                              |                                                         |      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------- | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL 資料<br />倉儲](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | **_\* Analytics<br />Platform System (PDW) \*_** &nbsp; |      |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL 資料<br />倉儲](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | **_\* 分析<br />平台系統 (PDW) \*_** &nbsp; |      |
 |                                                              |                                                              |                                                              |                                                         |      |
 
 &nbsp;
@@ -970,7 +994,7 @@ WITH
 
 在 EXTERNAL DATA SOURCE 物件上取得共用鎖定。  
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 
 PolyBase 支援大多數外部資料來源的 Proxy 驗證。 建立資料庫範圍認證以建立 Proxy 帳戶。
 
@@ -978,7 +1002,7 @@ PolyBase 支援大多數外部資料來源的 Proxy 驗證。 建立資料庫範
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 
-## <a name="examples"></a>範例:
+## <a name="examples"></a>範例：
 
 ### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. 建立參考 Hadoop 的外部資料來源
 

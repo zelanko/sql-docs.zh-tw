@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3972714722b800cdd4400739f40d8eb8c6c3eff7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 2177b4d1c4454aca803f11980340407362236c8c
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298222"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546532"
 ---
 # <a name="odata-source"></a>OData 來源
 
@@ -41,13 +41,15 @@ ms.locfileid: "71298222"
 
 OData 來源包含下列資料來源的支援：
 -   Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online
--   SharePoint 清單。 若要查看 SharePoint 伺服器上的所有清單，請使用下列 URL： https://\<伺服器>/_vti_bin/ListData.svc。 如需 SharePoint URL 慣例的詳細資訊，請參閱 [SharePoint Foundation REST 介面](https://msdn.microsoft.com/library/ff521587.aspx)。
+-   SharePoint 清單。 若要查看 SharePoint 伺服器上的所有清單，請使用下列 URL：`https://<server>/_vti_bin/ListData.svc`。 如需 SharePoint URL 慣例的詳細資訊，請參閱 [SharePoint Foundation REST 介面](https://msdn.microsoft.com/library/ff521587.aspx)。
 
 ## <a name="supported-data-types"></a>支援的資料類型
 
 OData 來源支援下列簡單資料類型：int、byte[]、bool、byte、DateTime、DateTimeOffset、decimal、double、Guid、Int16、Int32、Int64、sbyte、float、string 和 TimeSpan。
 
 若要探索您資料來源中資料行的資料類型，請檢查 `https://<OData feed endpoint>/$metadata` 頁面。
+
+針對 **Decimal** 資料類型，有效位數和小數位數是由來源中繼資料所決定。 如果來源中繼資料未指定 **Precision** 和 **Scale** 屬性，則資料可能會被截斷。
 
 > [!IMPORTANT]
 > OData 來源元件不支援 SharePoint 清單中的複雜類型，例如多重選擇項目。
@@ -83,9 +85,9 @@ OData 來源支援下列簡單資料類型：int、byte[]、bool、byte、DateTi
  **使用集合或資源路徑**  
  從來源中指定選取資料的方法。  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
-|Collection|使用集合名稱從 OData 來源擷取資料。|  
+|集合|使用集合名稱從 OData 來源擷取資料。|  
 |資源路徑|使用資源路徑從 OData 來源擷取資料。|  
   
  **查詢選項**  
@@ -100,7 +102,7 @@ OData 來源支援下列簡單資料類型：int、byte[]、bool、byte、DateTi
 ### <a name="dynamic-options"></a>動態選項  
   
 #### <a name="use-collection-or-resource-path--collection"></a>使用集合或資源路徑 = 集合  
- **Collection**  
+ **集合**  
  從下拉式清單中選取集合。  
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>使用集合或資源路徑 = 資源路徑  

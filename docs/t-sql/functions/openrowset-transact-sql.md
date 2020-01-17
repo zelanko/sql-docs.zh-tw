@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2c74dff8b6e2f64c49f4092eb2c2f892f6c02c55
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d50c8c83ebba970a847c5a2db70ca0268637d3e8
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711072"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542279"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -96,7 +96,7 @@ OPENROWSET
 BULK 使用 BULK 資料列集提供者，讓 OPENROWSET 讀取檔案資料。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，OPENROWSET 可以從資料檔讀取，而不必將資料載入到目標資料表中。 此舉可讓您搭配簡單的 SELECT 陳述式來使用 OPENROWSET。
 
 > [!IMPORTANT]
-> Azure SQL Database 不支援從 Windows 檔案讀取。
+> Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
 
 BULK 選項的引數可讓您全力控制在哪裡開始和結束資料讀取、如何處理錯誤以及如何解譯資料。 例如，您可以指定讓資料檔當做 **varbinary**、**varchar** 或 **nvarchar** 類型的單一資料列、單一資料行資料列集加以讀取。 預設行為將在接下來的引數描述中加以描述。
 
@@ -108,11 +108,11 @@ BULK 選項的引數可讓您全力控制在哪裡開始和結束資料讀取、
 如需準備資料進行大量匯入的資訊，請參閱[準備大量匯出或匯入的資料 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md) 方面的知識。
 
 '*data_file*' 這是要將資料複製到目標資料表的資料檔完整路徑。
-**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
+**適用範圍：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，data_file 就可以保留在 Azure Blob 儲存體中。 例如，請參閱[大量存取 Azure Blob 儲存體資料的範例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。
 
 > [!IMPORTANT]
-> Azure SQL Database 不支援從 Windows 檔案讀取。
+> Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
 
 \<bulk_options> 會針對 BULK 選項指定一或多個引數。
 
@@ -124,17 +124,17 @@ CODEPAGE = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' } 指定資料檔中資料的字
 > [!NOTE]
 > 除非您希望 65001 選項的優先順序高於定序/字碼頁指定值，否則建議您在格式檔案中指定每個資料行的定序名稱。
 
-|CODEPAGE 值|Description|
+|CODEPAGE 值|描述|
 |--------------------|-----------------|
 |ACP|將 **char**、**varchar** 或 **text** 資料類型的資料行，從 ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 字碼頁 (ISO 1252) 轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字碼頁。|
 |OEM (預設值)|將 **char**、**varchar** 或 **text** 資料類型的資料行，從系統 OEM 字碼頁轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字碼頁。|
 |RAW|不進行字碼頁之間的轉換。 這是最快的選項。|
-|*code_page*|指出在哪一個來源字碼頁，將資料檔中的字元資料加以編碼；例如 850。<br /><br /> **重要** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的版本不支援字碼頁 65001 (UTF-8 編碼)。|
+|*code_page*|指出在哪一個來源字碼頁，將資料檔中的字元資料加以編碼；例如 850。<br /><br /> **重要**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的版本不支援字碼頁 65001 (UTF-8 編碼)。|
 
 ERRORFILE ='*file_name*' 指定用來收集格式錯誤且無法轉換成 OLE DB 資料列集之資料列的檔案。 這些資料列會「依照原狀」，從資料檔複製到這個錯誤檔中。
 
 錯誤檔是在開始執行命令時建立。 如果檔案已經存在，就會引發錯誤。 另外，還會建立一個副檔名為 .ERROR.txt 的控制檔。 這個檔案會參考錯誤檔中的每個資料列，且會提供錯誤診斷。 錯誤更正之後，就能夠載入資料。
-**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
+**適用範圍：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 開始，`error_file_path` 可以位於 Azure Blob 儲存體中。
 
 'errorfile_data_source_name' **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
@@ -192,13 +192,13 @@ FORMATFILE ='*format_file_path*' 指定格式檔案的完整路徑。 [!INCLUDE[
 
 如需格式檔案的詳細資訊，請參閱[使用格式檔案大量匯入資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)。
 
-**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
+**適用範圍：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，format_file_path 可位於 Azure Blob 儲存體中。 例如，請參閱[大量存取 Azure Blob 儲存體資料的範例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。
 
 FIELDQUOTE **=** 'field_quote' **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 指定將用來當作 CSV 檔案中引號字元的字元。 如果未指定，則會使用引號字元 (") 當作引號字元，如 [RFC 4180](https://tools.ietf.org/html/rfc4180) 標準中所定義的。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 唯有針對指定的提供者將 **DisallowAdhocAccess** 登錄選項明確設定為 0，且已啟用 [隨選分散式查詢] 進階設定選項時，才能使用 `OPENROWSET` 來存取 OLE DB 資料來源的遠端資料。 若未設定這些選項，預設行為便不允許特定存取。
 
@@ -283,7 +283,7 @@ SELECT CustomerID, CompanyName
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database 不支援從 Windows 檔案讀取。
+> Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
 
 ### <a name="c-using-openrowset-and-another-table-in-an-inner-join"></a>C. 使用 OPENROWSET 和 INNER JOIN 中的另一份資料表
 
@@ -304,7 +304,7 @@ FROM Northwind.dbo.Customers AS c
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支援從 Windows 檔案讀取。
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 僅支援從 Azure Blob 儲存體讀取。
 
 ### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>D. 使用 OPENROWSET 將檔案資料大量插入到 varbinary(max) 資料行中
 
@@ -325,7 +325,7 @@ GO
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database 不支援從 Windows 檔案讀取。
+> Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
 
 ### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>E. 搭配一個格式檔來使用 OPENROWSET BULK 提供者，從文字檔擷取資料列
 
@@ -354,7 +354,7 @@ SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database 不支援從 Windows 檔案讀取。
+> Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
 
 ### <a name="f-specifying-a-format-file-and-code-page"></a>F. 指定格式檔案和字碼頁
 
@@ -368,7 +368,7 @@ OPENROWSET (BULK N'D:\data.csv', FORMATFILE =
 
 ### <a name="g-accessing-data-from-a-csv-file-with-a-format-file"></a>G. 從具有格式檔案的 CSV 檔案存取資料
 
-**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
+**適用範圍：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 
 ```sql
 SELECT *
@@ -379,7 +379,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支援從 Windows 檔案讀取。
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 僅支援從 Azure Blob 儲存體讀取。
 
 ### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>H. 從沒有格式檔案的 CSV 檔案存取資料
 
@@ -401,11 +401,11 @@ from openrowset
 > [!IMPORTANT]
 >
 > - ODBC 驅動程式應該是 64 位元。 在 Windows 中，開啟 [OBDC 資料來源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) 應用程式的 [驅動程式]  索引標籤來確認這一點。 32 位元的 `Microsoft Text Driver (*.txt, *.csv)` 將無法與 64 位元版本的 sqlservr.exe 一起運作。
-> - Azure SQL Database 不支援從 Windows 檔案讀取。
+> - Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
 
 ### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>I. 從儲存在 Azure Blob 儲存體上的檔案存取資料
 
-**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
+**適用範圍：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 下列範例使用指向 Azure 儲存體帳戶中的容器和針對共用存取簽章而建立的資料庫範圍認證的外部資料來源。
 
 ```sql
@@ -419,7 +419,7 @@ SELECT * FROM OPENROWSET(
 
 ### <a name="j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage"></a>J. 從儲存在 Azure Blob 儲存體上的檔案匯入資料表
 
-下列範例說明如何使用 OPENROWSET 命令，從已建立 SAS 金鑰的 Azure Blob 儲存體位置中 CSV 檔案載入資料。 Azure Blob 儲存體位置已設定為外部資料來源。 這需要使用在使用者資料庫中以主要金鑰加密的共用存取簽章，來進行資料庫範圍認證。
+下列範例說明如何使用 OPENROWSET 命令，從已建立 SAS 金鑰的 Azure Blob 儲存體位置中 CSV 檔案載入資料。 Azure Blob 儲存體位置已設定為外部資料來源。 這需要使用在使用者資料庫中以主要金鑰加密的共用存取簽章來進行資料庫範圍認證。
 
 ```sql
 --> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -451,7 +451,7 @@ SELECT * FROM OPENROWSET(
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database 不支援從 Windows 檔案讀取。
+> Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
 
 ### <a name="additional-examples"></a>其他範例
 
@@ -474,7 +474,6 @@ SELECT * FROM OPENROWSET(
 - [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
 - [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)
 - [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)
-- [資料列集函數 &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)
 - [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
 - [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
 - [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)

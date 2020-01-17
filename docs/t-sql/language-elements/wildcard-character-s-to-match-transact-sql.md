@@ -1,6 +1,8 @@
 ---
-title: '[ ] (萬用字元 - 相符的字元) (Transact-SQL) | Microsoft Docs'
-ms.custom: ''
+title: '[ ] 用於比對字元的萬用字元'
+description: 使用萬用字元來比對一或多個字元。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 12/06/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,14 +23,14 @@ ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 838777ff87f9d6d7f2584642fcaa82b08a3266b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2fa9c7a4ea14154315ef30ae8b193360b34ffda9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000320"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257037"
 ---
-# <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (萬用字元 - 相符的字元) (Transact-SQL)
+# <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (萬用字元 - 要比對的字元) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 符合方括號 `[ ]` 之間所指定之指定範圍或集合內的任何單一字元。 這些萬用字元可用於包含模式比對 (如 `LIKE` 和 `PATINDEX`) 的字串比較中。  

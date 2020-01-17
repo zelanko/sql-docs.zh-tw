@@ -1,7 +1,7 @@
 ---
-title: 設定可用性群組的接聽程式
+title: 設定可用性群組接聽程式
 description: '描述使用 PowerShell 或 SQL Server Management Studio 設定 Always On 可用性群組接聽程式時所要採取的步驟。 '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f97f9814192077dfbe8d361c34b3cf7424f19920
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 918619afd0b07c6d7b8e5d3ccef526da5f4d8fad
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264693"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822127"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的接聽程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "68264693"
   
 ##  <a name="SqlPermissions"></a> SQL Server 權限  
   
-|工作|權限|  
+|Task|權限|  
 |----------|-----------------|  
 |建立可用性群組接聽程式|需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 |修改現有的可用性群組接聽程式|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
@@ -90,7 +90,7 @@ ms.locfileid: "68264693"
   
 1.  在 [物件總管] 中，連接到裝載可用性群組之主要複本的伺服器執行個體，然後按一下伺服器名稱以展開伺服器樹狀目錄。  
   
-2.  依序展開 [AlwaysOn 高可用性]  節點和 [可用性群組]  節點。  
+2.  依序展開 [Always On 高可用性]  節點和 [可用性群組]  節點。  
   
 3.  按一下您要設定其接聽程式的可用性群組，然後選擇下列其中一個替代方式：  
   
@@ -129,13 +129,13 @@ ms.locfileid: "68264693"
  **IP 位址**  
  顯示給定子網路的 IP 位址。  對於給定的子網路，IP 位址是 IPv4 位址或 IPv6 位址。  
   
- **[加入]**  
+ **加入**  
  按一下可將靜態 IP 位址加入至選取的子網路或此接聽程式的其他子網路。 這會開啟 **[加入 IP 位址]** 對話方塊。 如需詳細資訊，請參閱[加入 IP 位址對話方塊 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio.md) 說明主題。  
   
  **移除**  
  按一下可從此接聽程式中移除選取的子網路。  
   
- **[確定]**  
+ **確定**  
  按一下可建立指定的可用性群組接聽程式。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
@@ -205,7 +205,7 @@ ms.locfileid: "68264693"
 ## <a name="troubleshooting"></a>疑難排解  
   
 ###  <a name="ADQuotas"></a> 由於 Active Directory 配額而無法建立可用性群組接聽程式  
- 新可用性群組接聽程式的建立作業可能會在建立時失敗，因為您已達到參與叢集節點電腦帳戶的 Active Directory 配額。  如需詳細資訊，請參閱下列文件：  
+ 新可用性群組接聽程式的建立作業可能會在建立時失敗，因為您已達到參與叢集節點電腦帳戶的 Active Directory 配額。  如需詳細資訊，請參閱下列文章：  
   
 -   [如何排解叢集服務帳戶修改電腦物件時所遇到的疑難](https://support.microsoft.com/kb/307532)  
   

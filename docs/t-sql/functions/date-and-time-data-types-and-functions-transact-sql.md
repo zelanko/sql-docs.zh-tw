@@ -1,6 +1,8 @@
 ---
-title: 日期和時間資料類型與函式 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 日期與時間資料類型與函數
+description: 日期與時間資料類型與函數文章的連結。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 09/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -21,12 +23,12 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 5a478288ef82764c5dc6d044132fb66dc7e3f9bf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a7beec472b0f4b70662c364081641b6ea91be507
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982962"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256088"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>日期和時間資料類型與函數 (Transact-SQL)
 
@@ -68,7 +70,7 @@ ms.locfileid: "73982962"
 #### <a name="higher-precision-system-date-and-time-functions"></a>較高精確度的系統日期和時間函數  
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 會透過使用 GetSystemTimeAsFileTime() Windows API 來衍生日期和時間值。 精確度取決於執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的電腦硬體和 Windows 版本。 此 API 的精確度是固定於 100 奈秒。 請使用 GetSystemTimeAdjustment() Windows API 來判斷正確性。
   
-|函數|語法|傳回值|傳回資料類型|決定性|  
+|函式|語法|傳回值|傳回資料類型|決定性|  
 |---|---|---|---|---|
 |[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ()|傳回 **datetime2(7)** 值，此值包含執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的日期和時間。 傳回的值不包含時區時差。|**datetime2(7)**|不具決定性|  
 |[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|傳回 **datetimeoffset(7)** 值，此值包含執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的日期和時間。 傳回的值包含時區時差。|**datetimeoffset(7)**|不具決定性|  
@@ -76,7 +78,7 @@ ms.locfileid: "73982962"
   
 #### <a name="lower-precision-system-date-and-time-functions"></a>較低精確度的系統日期和時間函數
   
-|函數|語法|傳回值|傳回資料類型|決定性|  
+|函式|語法|傳回值|傳回資料類型|決定性|  
 |---|---|---|---|---|
 |[CURRENT_TIMESTAMP](../../t-sql/functions/current-timestamp-transact-sql.md)|CURRENT_TIMESTAMP|傳回 **datetime** 值，此值包含執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的日期和時間。 傳回的值不包含時區時差。|**datetime**|不具決定性|  
 |[GETDATE](../../t-sql/functions/getdate-transact-sql.md)|GETDATE ( )|傳回 **datetime** 值，此值包含執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的日期和時間。 傳回的值不包含時區時差。|**datetime**|不具決定性|  
@@ -84,7 +86,7 @@ ms.locfileid: "73982962"
   
 ###  <a name="GetDateandTimeParts"></a> 傳回日期和時間部分的函式
   
-|函數|語法|傳回值|傳回資料類型|決定性|  
+|函式|語法|傳回值|傳回資料類型|決定性|  
 |--------------|------------|------------------|----------------------|-----------------|  
 |[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *date* )|傳回字元字串，代表指定日期的指定 *datepart*。|**nvarchar**|不具決定性|   
 |[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|傳回一個整數，代表指定 *date* 的指定 *datepart*。|**int**|不具決定性|  
@@ -94,7 +96,7 @@ ms.locfileid: "73982962"
   
 ###  <a name="fromParts"></a> 從各自部分取得日期和時間值的函式
   
-|函數|語法|傳回值|傳回資料類型|決定性|  
+|函式|語法|傳回值|傳回資料類型|決定性|  
 |---|---|---|---|---|
 |[DATEFROMPARTS](../../t-sql/functions/datefromparts-transact-sql.md)|DATEFROMPARTS  ( *year*, *month*, *day* )|傳回指定之年、月、日的 **date** 值。|**date**|具決定性|  
 |[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|以指定的精確度傳回指定日期與時間的 **datetime2** 值。|**datetime2(** _precision_ **)**|具決定性|  
@@ -105,14 +107,14 @@ ms.locfileid: "73982962"
   
 ###  <a name="GetDateandTimeDifference"></a> 傳回日期和時間差異值的函式
   
-|函數|語法|傳回值|傳回資料類型|決定性|  
+|函式|語法|傳回值|傳回資料類型|決定性|  
 |---|---|---|---|---|
 |[DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|傳回跨越兩個指定日期的日期或時間 *datepart* 界限數字。|**int**|具決定性|  
 |[DATEDIFF_BIG](../../t-sql/functions/datediff-big-transact-sql.md)|DATEDIFF_BIG ( *datepart* , *startdate* , *enddate* )|傳回跨越兩個指定日期的日期或時間 *datepart* 界限數字。|**bigint**|具決定性|  
   
 ###  <a name="ModifyDateandTimeValues"></a> 修改日期和時間值的函式
   
-|函數|語法|傳回值|傳回資料類型|決定性|  
+|函式|語法|傳回值|傳回資料類型|決定性|  
 |---|---|---|---|---|
 |[DATEADD](../../t-sql/functions/dateadd-transact-sql.md)|DATEADD (*datepart* , *number* , *date* )|透過在指定 *date* 的指定 *datepart* 中新增間隔，傳回新的 **datetime** 值。|*date* 引數的資料類型|具決定性|  
 |[EOMONTH](../../t-sql/functions/eomonth-transact-sql.md)|EOMONTH  ( *start_date* [, *month_to_add* ] )|以選擇性位移，傳回包含指定日期的當月最後一天。|傳回類型是 *start_date* 引數的類型，或者是 **date** 資料類型。|具決定性|  
@@ -121,7 +123,7 @@ ms.locfileid: "73982962"
   
 ###  <a name="SetorGetSessionFormatFunctions"></a> 設定或傳回工作階段格式函式的函式
   
-|函數|語法|傳回值|傳回資料類型|決定性|  
+|函式|語法|傳回值|傳回資料類型|決定性|  
 |---|---|---|---|---|
 |[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|傳回 SET DATEFIRST 之工作階段的目前值。|**tinyint**|不具決定性|  
 |[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; **\@** _number_var_ }|將一週的第一天設為 1-7 其中一個數字。|不適用|不適用|  
@@ -132,13 +134,13 @@ ms.locfileid: "73982962"
   
 ###  <a name="ValidateDateandTimeValues"></a> 驗證日期和時間值的函式
   
-|函數|語法|傳回值|傳回資料類型|決定性|  
+|函式|語法|傳回值|傳回資料類型|決定性|  
 |---|---|---|---|---|
 |[ISDATE](../../t-sql/functions/isdate-transact-sql.md)|ISDATE ( *expression* )|判斷 **datetime** 或 **smalldatetime** 輸入運算式是否具有有效的日期或時間值。|**int**|只有在搭配 CONVERT 函數使用、已指定 CONVERT 樣式參數，而且樣式不等於 0、100、9 或 109 時，ISDATE 才具有決定性。|  
   
 ##  <a name="DateandTimeRelatedTopics"></a> 與日期和時間相關的主題 
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)|提供將日期和時間值在字串常值與其他日期和時間格式之間來回轉換的相關資訊。|  
 |[撰寫國際通用的 Transact-SQL 陳述式](../../relational-databases/collations/write-international-transact-sql-statements.md)|提供一些指導方針，讓使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的資料庫與資料庫應用程式能從某種語言移植至另一種語言，或可支援多種語言。|  

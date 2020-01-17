@@ -1,6 +1,7 @@
 ---
-title: 教學課程：設定兩個已完全連線伺服器之間的複寫 (異動) | Microsoft Docs
-ms.custom: ''
+title: 教學課程：設定異動複寫
+description: 此教學課程會教您如何在兩個完全連線的 SQL Server 之間設定異動複寫。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f85dfc4a05b8affad4ef814c1871f504d619cdb8
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 603846718e4e21c7af8ee81d94210d12242c35c7
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907708"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321925"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>教學課程：設定兩個已完全連線伺服器之間的複寫 (異動)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,13 +74,13 @@ ms.locfileid: "72907708"
    ![啟動 [新增發行集精靈] 的選取範圍](media/tutorial-replicating-data-between-continuously-connected-servers/newpublication.png)
   
   
-3. 在 [發行集資料庫]  頁面上，選取 [[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]]，然後選取 [下一步]  。  
+3. 在 [發行集資料庫]  頁面上，選取 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]，然後選取 [下一步]  。  
   
 4. 在 [發行集類型]  頁面上，選取 [交易式發行集]  ，然後選取 [下一步]  ：  
 
    ![已選取發行集類型的「發行集類型」頁面](media/tutorial-replicating-data-between-continuously-connected-servers/tranrepl.png)
   
-5. 在 [發行項]  頁面中展開 [資料表]  節點，選取 [產品]  核取方塊。 然後展開 [產品]  並清除 [ListPrice]  和 [StandardCost]  旁的核取方塊。 選取 **[下一步]** 。  
+5. 在 [發行項]  頁面中展開 [資料表]  節點，選取 [產品]  核取方塊。 然後展開 [產品]  並清除 [ListPrice]  和 [StandardCost]  旁的核取方塊。 選取 [下一步]  。  
 
    ![「發行項」頁面，已選取要發行的發行項](media/tutorial-replicating-data-between-continuously-connected-servers/replarticles.png)
   
@@ -101,7 +102,7 @@ ms.locfileid: "72907708"
   
 10. 在 [代理程式安全性]  頁面上，清除 [Use the security settings from the Snapshot Agent] \(使用快照集代理程式的安全性設定\)  核取方塊。   
   
-    選取快照集代理程式的 [安全性設定]  。 在 [Process account] \(處理帳戶\)  方塊中輸入 <*Publisher_Machine_Name*> **\repl_snapshot**，提供此帳戶的密碼並選取 [確定]  。  
+    選取快照集代理程式的 [安全性設定]  。 在 [處理帳戶]  方塊中輸入 <發行者電腦名稱  > **\repl_snapshot**，提供此帳戶的密碼並選取 [確定]  。  
 
     ![「代理程式安全性」頁面與「快照集代理程式安全性」對話方塊](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
   
@@ -144,8 +145,8 @@ ms.locfileid: "72907708"
   
 2. 在 [本機發行集]  資料夾中，以滑鼠右鍵按一下 [AdvWorksProductTrans]  ，然後選取 [屬性]  。  [發行集屬性]  對話方塊會隨即顯示。    
   
-   A. 選取 [發行集存取清單]  頁面，然後選取 [新增]  。  
-   B. 在 [新增發行集存取]  對話方塊中，選取 <*Publisher_Machine_Name*> **\repl_distribution**，然後選取 [確定]  。
+   a. 選取 [發行集存取清單]  頁面，然後選取 [新增]  。  
+   b. 在 [新增發行集存取]  對話方塊中，選取 <*Publisher_Machine_Name*> **\repl_distribution**，然後選取 [確定]  。
    
    ![將登入新增至發行集存取清單的選取範圍](media/tutorial-replicating-data-between-continuously-connected-servers/tranreplproperties.png)
 
@@ -155,13 +156,13 @@ ms.locfileid: "72907708"
 ## <a name="create-a-subscription-to-the-transactional-publication"></a>建立交易式發行集的訂閱
 在本節中，您會將訂閱者新增至先前建立的發行集。 本教學課程使用了遠端訂閱者 (NODE2\SQL2016)，但您也可在本機將訂閱新增至發行者。 
 
-### <a name="create-the-subscription"></a>建立訂閱  
+### <a name="create-the-subscription"></a>建立訂用帳戶  
   
 1. 連線到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的發行者，展開伺服器節點，然後展開 [複寫]  資料夾。  
   
 2. 在 [本機發行集]  資料夾中，以滑鼠右鍵按一下 **AdvWorksProductTrans** 發行集，然後選取 [新增訂閱]  。 [新增訂閱精靈] 會隨即啟動： 
  
-   ![啟動 [新增訂閱精靈] 的選取範圍](media/tutorial-replicating-data-between-continuously-connected-servers/newsub.png)     
+   ![啟動 [新增訂閱精靈] 的選項](media/tutorial-replicating-data-between-continuously-connected-servers/newsub.png)     
   
 3. 在 [發行集]  頁面上，選取 [AdvWorksProductTrans]  ，然後選取 [下一步]  ：  
 
@@ -189,11 +190,11 @@ ms.locfileid: "72907708"
   
 ### <a name="set-database-permissions-at-the-subscriber"></a>在訂閱者端設定資料庫權限  
   
-1. 連線至 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的訂閱者。 展開 [安全性]  並以滑鼠右鍵按一下 [登入]  ，然後選取 [新增登入]  。     
+1. 連線到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的訂閱者。 展開 [安全性]  並以滑鼠右鍵按一下 [登入]  ，然後選取 [新增登入]  。     
   
-   A. 在 [一般]  頁面的 [登入名稱]  下，選取 [搜尋]  並新增 <*Subscriber_Machine_Name*> **\repl_distribution** 的登入。
+   a. 在 [一般]  頁面的 [登入名稱]  下，選取 [搜尋]  並新增 <*Subscriber_Machine_Name*> **\repl_distribution** 的登入。
 
-   B. 在 [使用者對應]  頁面上，授與 **ProductReplica** 資料庫的登入 **db_owner**。 
+   b. 在 [使用者對應]  頁面上，授與 **ProductReplica** 資料庫的登入 **db_owner**。 
 
    ![設定訂閱者登入的選取範圍](media/tutorial-replicating-data-between-continuously-connected-servers/loginforsub.png)
 
@@ -209,7 +210,7 @@ ms.locfileid: "72907708"
    ![開啟 [檢視同步處理狀態] 對話方塊的選取範圍](media/tutorial-replicating-data-between-continuously-connected-servers/viewsyncstatus.png)
 3. 若在 [AdvWorksProductTrans]  下看不到訂閱，請選取 F5 鍵重新整理清單。  
   
-如需詳細資訊，請參閱：  
+如需詳細資訊，請參閱  
 - [使用快照集初始化訂閱](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [建立發送訂閱](../../relational-databases/replication/create-a-push-subscription.md)  
 - [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)  
@@ -223,14 +224,14 @@ ms.locfileid: "72907708"
 
 2. 在左窗格中展開發行者群組，展開發行者執行個體，然後選取 **AdvWorksProductTrans** 發行集。  
   
-   A. 選取 [追蹤 Token]  索引標籤。  
-   B. 選取 [插入追蹤]  。    
+   a. 選取 [追蹤 Token]  索引標籤。  
+   b. 選取 [插入追蹤]  。    
    c. 在下列資料行中檢視追蹤權杖的經過時間：[發行者到散發者]  、[散發者到訂閱者]  、[延遲總計]  。 [Pending] \(暫止\)  值表示 Token 尚未到達指定點。
 
    ![追蹤 Token 的資訊](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 
 
-如需詳細資訊，請參閱： 
+如需詳細資訊，請參閱 
 - [針對異動複寫測量延遲及驗證連線](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
 - [尋找具有異動複寫代理程式的錯誤](troubleshoot-tran-repl-errors.md)
 

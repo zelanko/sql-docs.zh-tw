@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/11/2018
+ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d4a36b287554332589f11a352233eaffe972ac06
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a3ff2605e0c872bd5e544d618c88dc179e3c3b43
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981735"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564803"
 ---
 # <a name="table-transact-sql"></a>資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ table_type_definition ::=
 *collation_definition*  
 為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 地區設定和比較樣式、Windows 地區設定和二進位標記，或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序所組成的資料行定序。 若未指定 *collation_definition*，資料行就會繼承目前資料庫的定序。 如果將資料行定義為 Common Language Runtime (CLR) 使用者定義型別，此資料行便會繼承使用者定義型別的定序。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 **table** 在批次的 FROM 子句中依名稱來參考變數，如下列範例所示：
   
 ```sql
@@ -100,6 +100,10 @@ SELECT select_list INTO table_variable;
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最佳化工具的成本考量推論模型不支援 **table** 變數。 因此，需要成本考量選擇來達成有效率的查詢計畫時，就不應該使用這些變數。 需要成本考量選擇時，最好使用暫存資料表。 這種計畫通常會包含具有聯結的查詢、平行處理原則決定，以及索引選取範圍選擇。
   
 修改 **table** 變數的查詢不會產生平行查詢執行計畫。 修改大型 **table** 變數或複雜查詢中的 **table** 變數時，可能會影響效能。 在 **table** 變數遭修改的情況下，請考慮改為使用暫存資料表。 如需詳細資訊，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。 讀取但不修改 **table** 變數的查詢仍然可以平行處理。
+
+> [!IMPORTANT]
+> 資料庫相容性層級 150 藉由引進**資料表變數延後編譯**，改善資料表變數的效能。  如需詳細資訊，請參閱[資料表變數延遲編譯](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation).
+>
   
 您無法明確建立 **table** 變數的索引，也無法保留 **table** 變數的任何統計資料。 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始， 已引進新的語法，允許您建立某些內嵌資料表定義的索引類型。  您可以使用這個新的語法在 **table** 變數上建立索引，作為資料表定義的一部分。 在某些情況下，改用完整索引支援和統計資料的暫存資料表可以提升效能。 如需暫存資料表和建立內嵌索引的詳細資訊，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。
 
@@ -110,61 +114,6 @@ SELECT select_list INTO table_variable;
 由於 **table** 變數的範圍受到限制，且不是持續性資料庫的一部分；因此，交易回復不會影響它們。
   
 資料表變數在建立之後無法修改。
-
-## <a name="table-variable-deferred-compilation"></a>資料表變數延後編譯
-**資料表變數延遲編譯**可針對參考資料表變數的查詢，提升計劃品質和整體效能。 在最佳化和初始計劃編譯期間，此功能將會根據實際資料表變數的資料列計數，傳播基數估計值。 這個確切的資料列計數資訊接著將用於最佳化下游計畫作業。
-
-> [!NOTE]
-> 資料表變數延後編譯是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 的公開預覽功能。
-
-使用資料表變數延後編譯時，會延遲編譯參考資料表變數的陳述式，直到第一次實際執行陳述式為止。 此延後編譯行為與暫存資料表的行為相同。 這項變更會導致使用實際基數，而不使用原始的單一資料列猜測。 
-
-若要啟用資料表變數延遲編譯的公開預覽功能，請在查詢執行時，針對您所連線的資料庫，啟用資料庫相容性層級 150。
-
-資料表變數延遲編譯**不**會變更資料表變數的任何其他特性。 例如，此功能不會在資料表變數中新增資料行統計資料。
-
-資料表變數延遲編譯**不會增加重新編譯頻率**， 而是會在初始編譯的位置移位。 產生的快取計畫是根據初始延遲編譯資料表變數的資料列計數所產生。 快取計畫是由連續查詢重複使用。 將會重複使用計畫，直到該計畫被收回或重新編譯為止。 
-
-用於初始計畫編譯的資料表變數資料列計數，代表一個可能不同於固定資料列計數猜測的一般值。 如果不同，則下游作業將會受益。 若資料表變數資料列計數在每次執行時都大幅相異，則此功能可能無法改善效能。
-
-### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>停用資料表變數的延遲編譯，而無須變更相容性層級
-請在資料庫或陳述式的範圍停用資料表變數延遲編譯，同時仍將資料庫相容性層級維持在 150 以上。 若要針對源自資料庫的所有查詢執行停用資料表變數延遲編譯，請在適用資料庫的內容中執行下列程式碼：
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
-```
-
-若要針對源自資料庫的所有查詢執行重新啟用資料表變數延遲編譯，請在適用資料庫的內容中執行下列程式碼：
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
-```
-
-您也可以透過將 DISABLE_DEFERRED_COMPILATION_TV 指派為 USE HINT 查詢提示，為特定查詢停用資料表變數延遲編譯。  例如：
-
-```sql
-DECLARE @LINEITEMS TABLE 
-    (L_OrderKey INT NOT NULL,
-     L_Quantity INT NOT NULL
-    );
-
-INSERT @LINEITEMS
-SELECT L_OrderKey, L_Quantity
-FROM dbo.lineitem
-WHERE L_Quantity = 5;
-
-SELECT  O_OrderKey,
-    O_CustKey,
-    O_OrderStatus,
-    L_QUANTITY
-FROM    
-    ORDERS,
-    @LINEITEMS
-WHERE   O_ORDERKEY  =   L_ORDERKEY
-    AND O_OrderStatus = 'O'
-OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
-```
-
   
 ## <a name="examples"></a>範例  
   

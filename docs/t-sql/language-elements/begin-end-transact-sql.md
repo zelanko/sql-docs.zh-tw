@@ -24,12 +24,12 @@ ms.assetid: fc2c7f76-f1f9-4f91-beef-bc8ef0da2feb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe87e41f31ff7c85152138015c3ba3649cacda50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e278e41fa2f27684b1ce249bb45b1dc78356753
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130136"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325560"
 ---
 # <a name="beginend-transact-sql"></a>BEGIN...END (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ END
  { *sql_statement* | *statement_block* }  
  這是藉由使用陳述式區塊所定義的任何有效 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或陳述式分組。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  BEGIN...END 區塊可以有巢狀結構。  
   
  雖然 BEGIN...END 區塊中所有的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式都是有效的陳述式，但某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式不應在同一批次或陳述式區塊中分成一組。  
@@ -89,7 +89,7 @@ WHILE @Iteration <10
 BEGIN  
     SELECT FirstName, MiddleName   
     FROM dbo.DimCustomer WHERE LastName = 'Adams';  
-SET @Iteration += 1  
+    SET @Iteration += 1  
 END;  
   
 ```  

@@ -1,6 +1,7 @@
 ---
-title: 發行者資訊，訂閱監看清單 (合併式發行集) | Microsoft Docs
-ms.custom: ''
+title: 訂閱監看清單 (合併式 - SSMS)
+description: 說明 SQL Server Management Studio (SSMS) 中複寫監視器內的 [訂閱監看清單] 索引標籤。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0f6caf3862d42d4245e4b2657448b2d5beb22667
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 39c036c354716118fc4df791084f9838c6af5fea
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710790"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320617"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication"></a>發行者資訊，訂閱監看清單 (合併式發行集)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "71710790"
   
 -   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及這些資料行在 [選擇資料行]  對話方塊中的顯示順序。  
   
--   **篩選**：根據 [篩選設定]  對話方塊中的資料行值，篩選方格中的資料列。  
+-   **篩選條件**：根據 [篩選設定]  對話方塊中的資料行值，篩選方格中的資料列。  
   
 -   **清除篩選**：清除方格的所有篩選設定。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "71710790"
  **顯示合併訂閱**  
  針對選取之發行者，選取要顯示的訂閱類型 (交易式、快照式或合併式)。  
   
- **[顯示]**  
+ **顯示**  
  針對選取之訂閱類型，選取要顯示的訂閱狀態。 例如，您可以選取只顯示有錯誤的訂閱。  
   
  **狀態**  
@@ -63,17 +64,17 @@ ms.locfileid: "71710790"
   
 -   未進行同步處理  
   
- 當給定訂閱有一個以上的狀態時，排序順序也會決定要顯示哪一個值。 例如，若訂閱有錯誤而且即將過期，則 [狀態]  資料行會顯示 [錯誤]  。  
+ 當給定訂閱有一個以上的狀態時，排序順序也會決定要顯示哪一個值。 例如，若訂閱有錯誤而且即將過期，則 **[狀態]** 資料行會顯示 **[錯誤]** 。  
   
  **[效能嚴重不足]** 、 **[長時間執行的合併]** 、 **[即將過期/已過期]** 和 **[未初始化的訂閱]** 等狀態值均為警告。 如果有顯示警告，則 **[狀態]** 資料行也會顯示代理程式是否為同步處理。 例如，狀態可能是 **[正在同步處理，效能嚴重不足]** 。  
   
  只有設定臨界值時，才會顯示 **[即將過期/已過期]** 和 **[長時間執行的合併]** 狀態值。 只有在相同連接類型 (撥號或 LAN) 的訂閱經過五次同步處理之後，才會顯示 **[效能嚴重不足]** 的狀態值。 如需效能測量和設定閾值的資訊，請參閱[使用複寫監視器監視效能](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)和[在複寫監視器中設定閾值和警告](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
- **訂閱**  
+ **訂用帳戶**  
  每一個訂閱的名稱，格式為：*SubscriberName:SubscriptionDatabaseName*。  
   
  **易記名稱**  
- 每一個訂閱的描述。 此描述輸入於 [訂閱屬性]  對話方塊或以 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 的 `@description` 參數或 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) 指定。 使用者通常使用描述作為訂閱的「易記名稱」或暱稱。  
+ 每一個訂閱的描述。 此描述輸入於 [訂閱屬性]  對話方塊中或以 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 的 `@description` 參數或 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) 來指定。 使用者通常使用描述作為訂閱的「易記名稱」或暱稱。  
   
  **發行集**  
  與訂閱同步處理的發行集名稱，格式為：*PublicationDatabaseName:PublicationName*。  

@@ -1,34 +1,51 @@
 ---
-title: 在 Linux 上安裝 SQL Server Agent
-description: 此文章說明如何在 Linux 上安裝 SQL Server Agent。
+title: 在 Linux 上設定 SQL Server Agent
+description: 此文章描述如何在 Linux 上啟用或安裝 SQL Server Agent。
 author: VanMSFT
 ms.author: vanto
-ms.date: 02/20/2018
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: c27a31a5e6b9ed771df82e942087d7be88270038
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b281c60248d86daba36a2cf5628e1ae729d227fe
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032475"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258394"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>在 Linux 上安裝 SQL Server Agent
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
- [SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) 會執行已排程的 SQL Server 作業。 從 SQL Server 2017 CU4 開始，SQL Server Agent 隨附於 **mssql-server** 套件，而且預設為停用。 如需此 SQL Server Agent 版本所支援功能的相關資訊及版本資訊，請參閱[版本資訊](sql-server-linux-release-notes.md)。
+此文章描述如何在 Linux 上啟用或安裝 SQL Server Agent。
 
- 安裝/啟用 SQL Server Agent：
-- [針對版本 2017 CU4 和更新版本，啟用 SQL Server Agent](#EnableAgentAfterCU4)
-- [針對版本 2017 CU3 和較低版本，安裝 SQL Server Agent](#InstallAgentBelowCU4)
+[SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) 會執行已排程的 SQL Server 作業。 從 SQL Server 2017 CU4 開始，SQL Server Agent 已隨附於 **mssql-server** 套件，而且預設為停用。 如需此 SQL Server Agent 版本所支援功能的相關資訊及版本資訊，請參閱[版本資訊](sql-server-linux-release-notes.md)。
 
+## <a name="instructions"></a>Instructions
 
-## <a name="EnableAgentAfterCU4">針對版本 2017 CU4 和更新版本，啟用 SQL Server Agent</a>
+在 Linux 上使用 SQL Server Agent 之前，請使用下列步驟來啟用或安裝它。
 
- 若要啟用 SQL Server Agent，請遵循下列步驟。
+1. 在 `/etc/hosts` 檔案中新增您的主機名稱 (包含和不包含網域)。 下列行顯示這些項目格式的範例：
+
+   ```bash
+   "IP Address" "hostname"
+   "IP Address" "hostname.domain.com"
+   ```
+
+1. 請根據您的 SQL Server 版本遵循下列其中一小節的指示：
+
+   | 版本 | Instructions |
+   |---|---|
+   | SQL Server 2017 CU4 和更高版本</br>SQL Server 2019 | [啟用 SQL Server Agent](#EnableAgentAfterCU4) |
+   | SQL Server 2017 CU3 和更低版本 | [安裝 SQL Server Agent](#InstallAgentBelowCU4) |
+
+## <a id="EnableAgentAfterCU4"></a>啟用 SQL Server Agent
+
+針對 SQL Server 2019 和 SQL Server 2017 CU4 和更高版本，您只需要啟用 SQL Server Agent。 您不需要安裝個別套件。
+
+若要啟用 SQL Server Agent，請遵循下列步驟。
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
@@ -38,7 +55,9 @@ sudo systemctl restart mssql-server
 > [!NOTE]
 > 如果您從已安裝 Agent 的 2017 CU3 或較低版本升級，將自動啟用 SQL Server Agent，並將解除安裝先前的 Agent 套件。  
 
-## <a name="InstallAgentBelowCU4">針對版本 2017 CU3 和較低版本，安裝 SQL Server Agent</a>
+## <a name="InstallAgentBelowCU4"></a>安裝 SQL Server Agent
+
+針對 SQL Server 2017 CU3 和更早版本，您必須安裝 SQL Server Agent 套件。
 
 > [!NOTE]
 > 以下的安裝指示適用於 SQL Server 版本 2017 CU3 和較低版本。 安裝 SQL Server Agent 之前，請先[安裝 SQL Server](sql-server-linux-setup.md#platforms)。 這會設定您在安裝 **mssql-server-agent** 套件時所使用的金鑰和存放庫。

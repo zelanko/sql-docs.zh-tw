@@ -18,16 +18,16 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f69d57fd4d81e150df3694386ebe44650a13a9a8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 3d0d6fd90b9ec4c933da13d2a3780213095de721
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769866"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542062"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>對發行集資料庫進行結構描述變更
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  複寫支援對已發行物件進行大範圍的結構描述變更。 當您在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行者端針對適當已發行物件，進行下列任何一種結構描述變更時，該變更也預設傳播到所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者：  
+  複寫支援對已發行物件進行大範圍的結構描述變更。 當您對「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行者」端適當的已發行物件進行下列任何結構描述變更時，依預設，該變更會傳播給所有的「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」：  
   
 -   ALTER TABLE  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68769866"
   
 -   新增外部索引鍵時所參考之「訂閱者」上所有物件的名稱和擁有者，必須與「發行者」上對應的物件相同。  
   
--   不支援明確地新增、卸除或改變索引。 支援為條件約束 (例如主索引鍵條件約束) 隱含建立的索引。  
+-   明確新增、卸載或改變索引不會複寫，而且任何涉及明確索引的變更，都必須在每個複本集上個別執行。 支援為條件約束 (例如主索引鍵條件約束) 隱含建立的索引。  
   
 -   不支援改變或卸除由複寫管理的識別欄位。 如需自動管理識別欄位的詳細資訊，請參閱[複寫識別欄位](../../../relational-databases/replication/publish/replicate-identity-columns.md)。  
   

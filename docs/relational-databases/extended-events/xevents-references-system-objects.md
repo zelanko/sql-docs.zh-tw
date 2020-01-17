@@ -1,6 +1,5 @@
 ---
-title: XEvent 相關系統物件 | Microsoft Docs
-ms.custom: ''
+title: XEvent 相關系統物件
 ms.date: 03/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +9,12 @@ ms.topic: reference
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8be742db65127eaeac24c54fbcf9386d49453c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 38982119f9c4485d99263a53c73d1e1c1e4404dc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903388"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246114"
 ---
 # <a name="system-objects-that-support-extended-events"></a>支援擴充事件的系統物件
 

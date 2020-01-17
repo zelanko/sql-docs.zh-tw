@@ -11,26 +11,27 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: mibar
 author: barmichal
-ms.openlocfilehash: ef05b068c016cdea00e813f5dbff174494440a19
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: 077a9a6be533ec05f9c062100d04bf02562f6066
+ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929791"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548402"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 資料探索與分類
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-資料探索與分類引進內建至 SQL Server Management Studio (SSMS) 的新工具，以**探索**、**分類**、**標示**和 & **報告**您資料庫中的敏感性資料。
+資料探索與分類引進內建至 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 的新工具，可用來**探索**、**分類**、**標記** & **報告**您資料庫中的敏感性資料。
 探索和分類最敏感的資料 (商務、財務、醫療等等) 可以扮演組織資訊保護成長的關鍵角色。 它可以作為下列的基礎結構：
 * 協助符合資料隱私權標準。
 * 控制存取以及強化包含高敏感性資料之資料庫/資料行的安全性。
 
 > [!NOTE]
-> 資料探索與分類受 **SQL Server 2008 和更新版本支援，且可搭配 SSMS 17.5 或更新版本使用**。 針對 Azure SQL Database，請參閱 [Azure SQL Database 的資料探索與分類](https://go.microsoft.com/fwlink/?linkid=866265)。
+> 資料探索與分類由 **SQL Server 2012 和更新版本所支援，且可搭配 [SSMS 17.5](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或更新版本使用**。 針對 Azure SQL Database，請參閱 [Azure SQL Database 的資料探索與分類](/azure/sql-database/sql-database-data-discovery-and-classification/)。
 
 ## <a id="subheading-1"></a>概觀
 資料探索與分類引進一組進階服務，形成目標為保護資料的新 SQL Information Protection 範例，而不只是資料庫：
+
 * **探索與建議** - 分類引擎會掃描您的資料庫，並識別包含潛在敏感性資料的資料行。 它接著可讓您輕鬆地檢閱並套用適當的分類建議，以及手動分類資料行。
 * **標記** - 在資料行上可以持續標示敏感度分類標籤。
 * **可見性** - 資料庫分類狀態可以在詳細報表中進行檢視，而詳細報表可以進行列印/匯出，以用於合規性和稽核用途，以及其他需要。
@@ -46,9 +47,9 @@ ms.locfileid: "70929791"
 
 1. 在 SQL Server Management Studio (SSMS) 中，連線至 SQL Server。
 
-2. 在 SSMS 物件總管中，以滑鼠右鍵按一下您想要分類的資料庫，然後選擇 [工作]   > [分類資料...]  。
+2. 在 SSMS 物件總管中，以滑鼠右鍵按一下您想要分類的資料庫，然後選擇 [工作]   > [資料探索與分類]   > [分類資料]  。
 
-    ![瀏覽窗格][1]
+   ![瀏覽窗格][0]
 
 3. 分類引擎會掃描您資料庫中是否有資料行包含潛在敏感度資料，並提供**建議的資料行分類**清單：
 
@@ -84,22 +85,63 @@ ms.locfileid: "70929791"
     ![瀏覽窗格][8]
 
 
-6. 若要產生具有完整資料庫分類狀態摘要的報表，請按一下視窗上方功能表中的 [檢視報告]  。
+6. 若要產生具有完整資料庫分類狀態摘要的報表，請按一下視窗上方功能表中的 [檢視報告]  。 (您也可以使用 SSMS 產生報告。 以滑鼠右鍵按一下您想要產生報告的資料庫，然後選擇 [工作]   > [資料探索與分類]   > [產生報告]  )
 
     ![瀏覽窗格][9]
 
     ![瀏覽窗格][10]
 
+## <a id="subheading-3"></a>搭配 SSMS 管理資訊保護原則
 
-## <a id="subheading-3"></a>存取分類中繼資料
+您可以使用 [SSMS 18.4](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或更新版本來管理資訊保護原則：
 
-「資訊類型」  和「敏感度標籤」  的分類中繼資料會儲存在下列擴充屬性中： 
-* sys_information_type_name
-* sys_sensitivity_label_name
+1. 在 SQL Server Management Studio (SSMS) 中，連線至 SQL Server。
 
-您可以使用擴充屬性目錄檢視 [sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties) 來存取中繼資料。
+2. 在 SSMS 物件總管中，以滑鼠右鍵按一下您的其中一個資料庫，然後選擇 [工作]   > [資料探索與分類]  。
 
-針對 SQL Server 2017，下列程式碼範例會傳回所有分類資料行，以及其對應的分類：
+   下列功能表選項可讓您管理資訊保護原則：
+
+* **設定資訊保護原則檔案**：使用在所選取 JSON 檔案中所定義的資訊保護原則。
+
+* **匯出資訊保護原則**：將資訊保護原則匯出為 JSON 檔案。
+
+* **重設資訊保護原則**：將資訊保護原則重設為預設資訊保護原則。
+
+> [!IMPORTANT]
+> 資訊保護原則檔案不會儲存在 SQL Server 中。
+> SSMS 會使用預設資訊保護原則。 如果自訂的資訊保護原則失敗，SSMS 便無法使用預設原則。 資料分類失敗。 若要解決此問題，請按一下 [重設資訊保護原則]  以使用預設原則，然後重新啟用資料分類。
+
+## <a id="subheading-4"></a>存取分類中繼資料
+
+SQL Server 2019 引進 [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) 系統目錄檢視。 此檢視會傳回資訊類型和敏感度標籤。 
+
+> [!NOTE]
+> 此檢視需要 **VIEW ANY SENSITIVITY CLASSIFICATION** 權限。 如需相關資訊，請參閱 [Metadata Visibility Configuration](https://docs.microsoft.com/sql/relational-databases/security/metadata-visibility-configuration?view=sql-server-ver15)。
+
+在 SQL Server 2019 執行個體上，查詢 `sys.sensitivity_classifications` 以檢閱所有分類資料行，以及其對應的分類。 例如： 
+
+```sql
+SELECT 
+    schema_name(O.schema_id) AS schema_name,
+    O.NAME AS table_name,
+    C.NAME AS column_name,
+    information_type,
+    label
+FROM sys.sensitivity_classifications sc
+    JOIN sys.objects O
+    ON  sc.major_id = O.object_id
+    JOIN sys.columns C 
+    ON  sc.major_id = C.object_id  AND sc.minor_id = C.column_id
+```
+
+在 SQL Server 2019 之前，資訊類型和敏感度標籤的分類中繼資料位於下列擴充屬性中： 
+
+* `sys_information_type_name`
+* `sys_sensitivity_label_name`
+
+您可以使用擴充屬性目錄檢視 [`sys.extended_properties`](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md) 來存取中繼資料。
+
+針對 SQL Server 2017 及較舊版本的執行個體，下列範例會傳回所有分類資料行，以及其對應的分類：
 
 ```sql
 SELECT
@@ -141,22 +183,25 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
-在 SQL Server 2019 上：
-```sql
-SELECT 
-    schema_name(O.schema_id) AS schema_name,
-    O.NAME AS table_name,
-    C.NAME AS column_name,
-    information_type,
-    label
-FROM sys.sensitivity_classifications sc
-    JOIN sys.objects O
-    ON  sc.major_id = O.object_id
-    JOIN sys.columns C 
-    ON  sc.major_id = C.object_id  AND sc.minor_id = C.column_id
-```
+## <a id="subheading-5"></a>管理分類
 
-## <a id="subheading-4"></a>後續步驟
+# <a name="t-sqltabt-sql"></a>[T-SQL](#tab/t-sql)
+您可以使用 T-SQL 新增/移除資料行分類，以及擷取整個資料庫的所有分類。
+
+- 新增/更新一或多個資料行的分類：[新增敏感度分類](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)
+- 移除一或多個資料行的分類：[卸除敏感度分類](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
+
+# <a name="powershell-cmdlettabsql-powelshell"></a>[PowerShell Cmdlet](#tab/sql-powelshell)
+您可以使用 PowerShell Cmdlet 來新增/移除資料行分類，以及擷取所有分類並取得整個資料庫的建議。
+
+- [Get-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps) \(英文\)
+- [Get-SqlSensitivityRecommendations](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps) \(英文\)
+- [Set-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps) \(英文\)
+- [Remove-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps) \(英文\)
+
+---
+
+## <a id="subheading-6"></a>後續步驟
 
 針對 Azure SQL Database，請參閱 [Azure SQL Database 的資料探索與分類](https://go.microsoft.com/fwlink/?linkid=866265)。
 
@@ -168,17 +213,20 @@ FROM sys.sensitivity_classifications sc
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1
 [Discovering, classifying & labeling sensitive columns]: #subheading-2
-[Accessing the classification metadata]: #subheading-3
-[Next Steps]: #subheading-4
+[Manage information protection policy with SSMS]: #subheading-3
+[Accessing the classification metadata]: #subheading-4
+[Manage classifications]: #subheading-5
+[Next Steps]: #subheading-6
 
 <!--Image references-->
-[1]: ./media/sql-data-discovery-and-classification/1_data_classification_explorer_menu.png
-[2]: ./media/sql-data-discovery-and-classification/2_recommendations_notification_box.png
-[3]: ./media/sql-data-discovery-and-classification/3_recommendations_panel.png
-[4]: ./media/sql-data-discovery-and-classification/4_recommendations.png
-[5]: ./media/sql-data-discovery-and-classification/5_accept_recommendations_button.png
-[6]: ./media/sql-data-discovery-and-classification/6_add_classification_button.png
-[7]: ./media/sql-data-discovery-and-classification/7_manual_classification.png
-[8]: ./media/sql-data-discovery-and-classification/8_save.png
-[9]: ./media/sql-data-discovery-and-classification/9_view_report.png
-[10]: ./media/sql-data-discovery-and-classification/10_report.png
+
+[0]: ./media/sql-data-discovery-and-classification/0-data-classification-explorer.png
+[2]: ./media/sql-data-discovery-and-classification/2-recommendations-notification-box.png
+[3]: ./media/sql-data-discovery-and-classification/3-recommendations-panel.png
+[4]: ./media/sql-data-discovery-and-classification/4-recommendations.png
+[5]: ./media/sql-data-discovery-and-classification/5-accept-recommendations-button.png
+[6]: ./media/sql-data-discovery-and-classification/6-add-classification-button.png
+[7]: ./media/sql-data-discovery-and-classification/7-manual-classification.png
+[8]: ./media/sql-data-discovery-and-classification/8-save.png
+[9]: ./media/sql-data-discovery-and-classification/9-view-report.png
+[10]: ./media/sql-data-discovery-and-classification/10-report.png

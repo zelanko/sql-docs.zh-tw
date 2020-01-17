@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f265d2af5ad6fc30708d57f162c8d6395858673f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 0478e345f388b3f4246bf33fdaba29a47a6ec0f6
+ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71284824"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491961"
 ---
 # <a name="install-integration-services-ssis"></a>安裝 Integration Services (SSIS)
 
@@ -133,7 +133,7 @@ ms.locfileid: "71284824"
 
   - Microsoft Connector Version 5.0 for Oracle by Attunity 和 Microsoft Connector Version 5.0 for Teradata by Attunity。 若要取得這些元件，請參閱 [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179)。
 
-## <a name="nest-steps"></a>後續步驟
+## <a name="next-steps"></a>後續步驟
 
 - [並存安裝 Integration Services 版本](installing-integration-services-versions-side-by-side.md)
 

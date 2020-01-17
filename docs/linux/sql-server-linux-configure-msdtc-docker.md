@@ -1,18 +1,19 @@
 ---
-title: 如何在 Docker 上搭配 SQL Server 使用分散式交易
-description: 本文說明如何針對 Docker 上 SQL Server 容器中的分散式交易使用 Microsoft Distributed Transaction Coordinator (MSDTC)。
+title: 在 Docker 上搭配 SQL Server 使用分散式交易 (MSDTC)
+description: 了解如何針對 Docker 上 SQL Server 容器中的分散式交易使用 Microsoft Distributed Transaction Coordinator (MSDTC)。
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1e30b6d2426cfca4e776ca738e2dc7000fe936ab
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 99c17e04e4352df91ad3c6028b3ec88fc5022c50
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531307"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558388"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>如何在 Docker 上搭配 SQL Server 使用分散式交易
 

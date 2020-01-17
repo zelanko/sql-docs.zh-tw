@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 20285fed8ca477eb95d04ee60b6a3283d2028b97
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b854e6c7db8bb042ced1c883e17fb4ac6d484fe7
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281494"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947090"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>使用 Transact-SQL 從 SSMS 部署 SSIS 專案
 
@@ -39,6 +39,10 @@ SQL Server Management Studio 是整合式環境，用於管理任何 SQL 基礎�
 
 您無法使用本快速入門中的資訊，將 SSIS 套件部署到 Linux 上的 SQL Server。 如需在 Linux 上執行套件的詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../linux/sql-server-linux-migrate-ssis.md)。
 
+## <a name="supported-authentication-method"></a>支援的驗證方法
+
+請參閱[適用於部署的驗證方法](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment)。
+
 ## <a name="connect-to-the-ssis-catalog-database"></a>連線至 SSIS 目錄資料庫
 
 使用 SQL Server Management Studio，以建立與 SSIS 目錄的連線。 
@@ -47,7 +51,7 @@ SQL Server Management Studio 是整合式環境，用於管理任何 SQL 基礎�
 
 2. 在 [連線至伺服器]  對話方塊中，輸入下列資訊：
 
-   | 設定       | 建議值 | 其他資訊 | 
+   | 設定       | 建議的值 | 其他資訊 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **伺服器類型** | 資料庫引擎 | 這是必要的值。 |
    | **伺服器名稱** | 完整伺服器名稱 |  |
@@ -55,9 +59,10 @@ SQL Server Management Studio 是整合式環境，用於管理任何 SQL 基礎�
    | **登入** | 伺服器系統管理員帳戶 | 這個帳戶是您在建立伺服器時指定的帳戶。 |
    | **密碼** | 伺服器系統管理員帳戶的密碼 | 這個密碼是您在建立伺服器時指定的密碼。 |
 
-3. 按一下 **[連接]** 。 [物件總管] 視窗會在 SSMS 中開啟。 
+3. 按一下 [ **連接**]。 [物件總管] 視窗會在 SSMS 中開啟。 
 
 4. 在 [物件總管] 中，展開 [Integration Services 目錄]  ，然後展開 [SSISDB]  以檢視 SSIS 目錄資料庫中的物件。
+
 
 ## <a name="run-the-t-sql-code"></a>執行 T-SQL 程式碼
 執行下列 Transact-SQL 程式碼來部署 SSIS 專案。
@@ -95,6 +100,6 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
     - [使用 SSMS 執行 SSIS 套件](./ssis-quickstart-run-ssms.md)
     - [使用 Transact-SQL 執行 SSIS 套件 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [使用 Transact-SQL 執行 SSIS 套件 (VS Code)](ssis-quickstart-run-tsql-vscode.md)
-    - [從命令提示字元中執行 SSIS 套件](./ssis-quickstart-run-cmdline.md)
+    - [從命令提示字元執行 SSIS 套件](./ssis-quickstart-run-cmdline.md)
     - [使用 PowerShell 執行 SSIS 套件](ssis-quickstart-run-powershell.md)
     - [使用 C# 執行 SSIS 套件](./ssis-quickstart-run-dotnet.md) 

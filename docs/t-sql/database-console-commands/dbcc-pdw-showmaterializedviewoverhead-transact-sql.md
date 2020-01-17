@@ -1,6 +1,6 @@
 ---
-title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD  (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD  (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,12 +12,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c2ab2a5ff60abbd098cb93d5c85cd75527f49805
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 669c6274301c09f260badfb354c8add67ae86791
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729872"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401628"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  
 
@@ -25,7 +25,7 @@ ms.locfileid: "73729872"
 
 在針對 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中具體化檢視保存的基底資料表中顯示增量變更。 額外負荷率的計算方式為 TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS)。
 
-![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>語法
 
@@ -42,7 +42,7 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 *materialized_view_name*   
 是具體化檢視的名稱。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 資料倉儲引擎會將追蹤資料列新增至每個受影響檢視以反映所做的變更，以便隨即重新整理具體化檢視。 從具體化檢視選取包括掃描檢視的叢集資料行存放區索引，以及套用這些增量變更。  追蹤資料列 (TOTAL_ROWS-BASE_VIEW_ROWS) 在使用者 REBUILD 具體化檢視之前不會被刪除。  
 

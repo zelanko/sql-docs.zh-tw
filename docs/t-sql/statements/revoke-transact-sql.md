@@ -29,12 +29,12 @@ ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ef120c0899a14669d8f7f92f42da72d139599aa
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 84271c14e5768728c877b78b63b599d5ef352ecd
+ms.sourcegitcommit: 9b8b11961b33e66fc9f433d094fc5c0f9b473772
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982886"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74909032"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -136,11 +136,11 @@ REVOKE
 >  獲得授與 WITH GRANT OPTION 之權限的串聯撤銷，會同時撤銷該權限的 GRANT 和 DENY。  
   
  AS *principal*  
- 您可使用 AS principal 子句，來表示要撤銷由您以外的主體所授與的權限。 例如，假設使用者 Mary 是 principal_id 12；使用者 Raul 是 principal 15。 Mary 和 Raul 都授與 Steven 這個使用者相同的權限。 sys.database_permissions 資料表會指出權限兩次，但每個權限都各有不同的 grantor_prinicpal_id 值。 Mary 可以使用 `AS RAUL` 子句撤銷權限，以移除 Raul 的授權。
+ 您可使用 AS principal 子句，來表示要撤銷由您以外的主體所授與的權限。 例如，假設使用者 Mary 是 principal_id 12；使用者 Raul 是 principal_id 15。 Mary 和 Raul 都授與 Steven 這個使用者相同的權限。 sys.database_permissions 資料表會指出權限兩次，但每個權限都各有不同的 grantor_principal_id 值。 Mary 可以使用 `AS RAUL` 子句撤銷權限，以移除 Raul 的授權。
  
 在此陳述式中使用 AS 不代表能模擬其他使用者。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  REVOKE 陳述式的完整語法相當複雜。 上方的語法圖已簡化，以強調其結構。 本主題稍後[安全性實體特定語法](#securable)所列的幾個主題，會描述撤銷特定安全性實體權限的完整語法。  
   
  REVOKE 陳述式可用來移除授與的權限，而 DENY 陳述式可用來避免主體透過 GRANT 取得特定權限。  
@@ -175,7 +175,7 @@ REVOKE
 |資料庫範圍認證|[REVOKE 資料庫範圍認證 (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)|  
 |全文檢索目錄|[REVOKE 全文檢索權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
 |全文檢索停用字詞表|[REVOKE 全文檢索權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
-|函數|[REVOKE 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|函式|[REVOKE 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |登入|[REVOKE 伺服器主體權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
 |訊息類型|[REVOKE Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |Object|[REVOKE 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
@@ -185,7 +185,7 @@ REVOKE
 |路由|[REVOKE Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |結構描述|[REVOKE 結構描述權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)|  
 |搜尋屬性清單|[REVOKE 搜尋屬性清單權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)|  
-|[伺服器]|[REVOKE 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
+|伺服器|[REVOKE 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
 |服務|[REVOKE Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |預存程序|[REVOKE 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |對稱金鑰|[REVOKE 對稱金鑰權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)|  

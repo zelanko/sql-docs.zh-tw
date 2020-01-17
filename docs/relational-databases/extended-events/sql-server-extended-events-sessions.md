@@ -1,6 +1,5 @@
 ---
-title: SQL Server 擴充的事件工作階段 | Microsoft Docs
-ms.custom: ''
+title: SQL Server 擴充的事件工作階段
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ea63b8d8b417f829bda722297d0c69a0b5c5fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0352441798ddffc96b057876768f66f0c9d4a10a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009327"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242905"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server 擴充的事件工作階段
 
@@ -35,16 +34,16 @@ ms.locfileid: "68009327"
 ## <a name="session-states"></a>工作階段狀態  
  下圖顯示擴充事件工作階段的各個狀態。  
   
- ![擴充的事件工作階段狀態](../../relational-databases/extended-events/media/xesessionstate.gif "擴充的事件工作階段狀態")  
+ ![擴充事件工作階段狀態](../../relational-databases/extended-events/media/xesessionstate.gif "擴充事件工作階段狀態")  
   
  在上圖中，請注意在針對事件工作階段發出不同的 DDL 命令時，該工作階段狀態就會變更。 下表說明這些狀態變更所代表的意義。  
   
-|圖例標籤|DDL 陳述式|Description|  
+|圖例標籤|DDL 陳述式|描述|  
 |------------------------|-------------------|-----------------|  
 |建立|CREATE EVENT SESSION|主機處理序會建立工作階段物件，此物件包含由 CREATE EVENT SESSION 所提供的中繼資料。 主機處理序會驗證工作階段定義、驗證使用者權限等級，並將中繼資料儲存在 master 資料庫內。 此時，工作階段不在使用中。|  
-|Alter|ALTER EVENT SESSION, STATE=START|主機處理序會啟動工作階段。 主機處理序會讀取儲存的中繼資料、驗證工作階段定義、驗證使用者權限等級，並建立工作階段。 會載入工作階段物件 (如事件和目標)，且事件處理為使用中。|  
-|Alter|ALTER EVENT SESSION, STATE=STOP|主機處理序會停止使用中工作階段，並保留中繼資料。|  
-|Drop|DROP EVENT SESSION|根據工作階段是否在使用中，Drop (DROP SESSION) 將會刪除中繼資料並關閉使用中工作階段，或是刪除工作階段中繼資料。|  
+|變更|ALTER EVENT SESSION, STATE=START|主機處理序會啟動工作階段。 主機處理序會讀取儲存的中繼資料、驗證工作階段定義、驗證使用者權限等級，並建立工作階段。 會載入工作階段物件 (如事件和目標)，且事件處理為使用中。|  
+|變更|ALTER EVENT SESSION, STATE=STOP|主機處理序會停止使用中工作階段，並保留中繼資料。|  
+|卸除|DROP EVENT SESSION|根據工作階段是否在使用中，Drop (DROP SESSION) 將會刪除中繼資料並關閉使用中工作階段，或是刪除工作階段中繼資料。|  
   
 > [!NOTE]  
 >  ALTER EVENT SESSION 和 DROP EVENT SESSION 都可以套用到中繼資料或是使用中工作階段和中繼資料。  
@@ -54,7 +53,7 @@ ms.locfileid: "68009327"
   
  下圖顯示工作階段內容以及封裝與工作階段之間的關聯性。  
   
- ![工作階段中物件並存和共用。](../../relational-databases/extended-events/media/xesessions.gif "工作階段中物件並存和共用。")  
+ ![工作階段中的物件並存和共用。](../../relational-databases/extended-events/media/xesessions.gif "工作階段中的物件並存和共用。")  
   
  在上圖中，請注意：  
   

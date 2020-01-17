@@ -1,7 +1,7 @@
 ---
 title: 定序與 Unicode 支援 | Microsoft 文件
 ms.custom: ''
-ms.date: 09/18/2019
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5713ab6b86675b5fbdcd450f1617445ea7bfd2f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 862147cfb7620999bf3e56a90fae0e90fbb1be45
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982815"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901947"
 ---
 # <a name="collation-and-unicode-support"></a>定序與 Unicode 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "73982815"
 
 下表描述與這些不同選項建立關聯的行為：    
     
-|選項|Description|    
+|選項|描述|    
 |------------|-----------------|    
 |區分大小寫 (\_CS)|區分大寫和小寫字母。 如果選取此選項，小寫字母會排序在大寫字母的前面。 如果未選取此選項，定序就不會區分大小寫。 亦即，在排序用途上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將大寫和小寫字母視為相同。 指定 \_CI，就可以明確地選取不區分大小寫。|   
 |區分腔調字 (\_AS)|區分有腔調和無腔調的字元。 例如，"a" 不等於 "ấ"。 如果未選取此選項，定序就不會區分腔調。 亦即，在排序用途上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將有腔調和無腔調字母視為相同。 指定 \_AI，就可以明確地選取不區分腔調字。|    
@@ -463,7 +463,7 @@ Unicode 是將字碼指標對應到字元的標準用法。 由於 Unicode 主�
 > [!NOTE]
 > 針對 Unicode 資料類型，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 可以使用 UCS-2 表示最多 65,535 個字元，或是在使用增補字元的情況下，使用完整的 Unicode 範圍 (1,114,111 個字元)。 如需啟用增補字元的詳細資訊，請參閱[增補字元](#Supplementary_Characters)。
 
-或者，從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，如果使用啟用 UTF-8 的定序 (\_UTF8)，則先前非 Unicode 資料類型 (**char** 和 **varchar**) 會變成 Unicode (UTF-8) 資料類型。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 不會變更先前現有 Unicode (UTF-16) 資料類型 (**nchar**、**nvarchar** 和 **ntext**) 的行為。 如需詳細資訊，請參閱 [UTF-8 和 UTF-16 間的儲存差異](#storage_differences)。
+或者，從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，如果使用支援 UTF-8 的定序 (\_UTF8)，則先前非 Unicode 資料類型 (**char** 和 **varchar**) 會變成使用 UTF-8 編碼的 Unicode 資料類型。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 不會變更先前現有 Unicode 資料類型 (**Nchar**、**Nvarchar** 和 **Ntext**) 的行為，它們會繼續使用 UCS-2 或 UTF-16 編碼。 如需詳細資訊，請參閱 [UTF-8 和 UTF-16 間的儲存差異](#storage_differences)。
 
 ### <a name="unicode-considerations"></a>Unicode 考量事項
 重要限制會與非 Unicode 資料類型相關聯。 這是因為非 Unicode 電腦受限於使用單一字碼頁。 透過使用 Unicode，您可能會發現效能獲得明顯改善，因為所需要的字碼頁轉換減少。 您必須在資料庫、資料行或運算式層級個別選取 Unicode 定序，因為伺服器層級不支援這些定序。    
@@ -502,7 +502,7 @@ Unicode 是將字碼指標對應到字元的標準用法。 由於 Unicode 主�
     
 下表將提供搭配 Unicode 和非 Unicode 伺服器之不同組合來使用多國語言資料的相關資訊：    
     
-|[伺服器]|用戶端|優點或限制|    
+|伺服器|Client|優點或限制|    
 |------------|------------|-----------------------------|    
 |Unicode|Unicode|因為 Unicode 資料會在整個系統中使用，所以這個狀況可提供最佳效能，並防止所擷取的資料遭到損毀。 這是 ActiveX Data Objects (ADO)、OLE DB 和 ODBC 3.7 版或更新版本的情況。|    
 |Unicode|非 Unicode|在此狀況中，特別是執行新版作業系統的伺服器與執行舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或在舊版作業系統上執行的用戶端之間存在連線，當您將資料移至用戶端電腦時，可能會有一些限制或錯誤。 伺服器上的 Unicode 資料會嘗試對應至非 Unicode 用戶端上的對應字碼頁，以便轉換資料。|    
@@ -603,9 +603,9 @@ Unicode Consortium 會為每個字元配置唯一的字碼指碼，其值介於 
 |000800–003FFF<br />004000–00FFFF|2,048–16,383<br />16,384–65,535|3|2|
 |010000–03FFFF<sup>2</sup><br /><br />040000–10FFFF<sup>2</sup>|65,536–262,143<sup>2</sup><br /><br />262,144–1,114,111<sup>2</sup>|4|4|
 
-<sup>1</sup> 「儲存體位元組」  意指編碼的位元組長度，而非資料類型在磁碟上的儲存大小。 如需磁碟上儲存大小的詳細資訊，請參閱 [nchar 與 nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 和 [char 與 varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)。
+<sup>1</sup>「儲存體位元組」  意指編碼的位元組長度，而非資料類型在磁碟上的儲存大小。 如需磁碟上儲存大小的詳細資訊，請參閱 [nchar 與 nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 和 [char 與 varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)。
 
-<sup>2</sup> [增補字元](#Supplementary_Characters)的字碼指碼範圍。
+<sup>2</sup>[增補字元](#Supplementary_Characters)的字碼指碼範圍。
 
 > [!TIP]   
 > 一般認為在 [CHAR(*n*) 和 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 中，或在 [NCHAR(*n*) 和 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，*n* 會定義字元數。 這是因為在 CHAR(10) 資料行的範例中，可以使用定序 (例如 **Latin1_General_100_CI_AI**) 來儲存範圍 0-127 中的 10 個 ASCII 字元，因為此範圍內的每個字元只會使用 1 個位元組。
@@ -622,12 +622,23 @@ Unicode Consortium 會為每個字元配置唯一的字碼指碼，其值介於 
 
 針對其它考量事項，請參閱[撰寫國際 Transact-SQL 陳述式](../../relational-databases/collations/write-international-transact-sql-statements.md)。
 
+### <a name="converting"></a> 正在轉換為 UTF-8
+因為在 [CHAR(*n*) 和 VARCHAR(*n*) 中](../../t-sql/data-types/char-and-varchar-transact-sql.md)，或在 [NCHAR(*n*) 和 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，*n* 定義的是儲存體位元組大小，而不是可儲存的字元數，因此請務必判斷您必須轉換成的資料類型大小，以避免資料截斷。 
+
+例如，假設有一個資料行定義為 **NVARCHAR(100)** ，其中儲存 180 個位元組的日文字元。 在此範例中，資料行資料目前是使用 UCS-2 或 UTF-16 編碼，每個字元是使用 2 個位元組。 將資料行類型轉換成 **VARCHAR(200)** 不足以防止資料截斷，因為新的資料類型只能儲存 200 個位元組，但日文字元以 UTF-8 編碼時需要 3 個位元組。 因此，必須將資料行定義為 **VARCHAR(270)** 以避免資料因資料截斷而遺失。
+
+因此，在將現有資料轉換為 UTF-8 之前，必須事先知道資料行定義的預估位元組大小，並據此調整新資料類型大小。 請參閱[資料範例 GitHub](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/unicode) \(英文\) 中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼或 SQL Notebook，該範例使用 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) 函數和 [COLLATE](../../t-sql/statements/collations.md) 陳述式，來判斷現有資料庫中 UTF-8 轉換作業的正確資料長度需求。
+
+若要變更現有資料表中的資料行定序和資料類型，請使用[設定或變更資料行定序](../../relational-databases/collations/set-or-change-the-column-collation.md)中所述的其中一個方法。
+
+若要變更資料庫定序，讓新物件根據預設繼承資料庫定序，或變更伺服器定序，讓新資料庫根據預設繼承系統定序，請參閱此文章的[相關工作](#Related_Tasks)一節。 
+
 ##  <a name="Related_Tasks"></a> Related tasks    
     
-|工作|主題|    
+|Task|主題|    
 |----------|-----------|    
-|描述如何設定或變更 SQL Server 執行個體的定序|[設定或變更伺服器定序](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
-|描述如何設定或變更使用者資料庫的定序|[設定或變更資料庫定序](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
+|描述如何設定或變更 SQL Server 執行個體的定序。 請注意，變更伺服器定序並不會變更現有資料庫的定序。|[設定或變更伺服器定序](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
+|描述如何設定或變更使用者資料庫的定序。 請注意，變更資料庫定序並不會變更現有資料表資料行的定序。|[設定或變更資料庫定序](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
 |描述如何設定或變更資料庫中資料行的定序|[設定或變更資料行定序](../../relational-databases/collations/set-or-change-the-column-collation.md)|    
 |描述如何傳回伺服器、資料庫或資料行層級的定序資訊|[檢視定序資訊](../../relational-databases/collations/view-collation-information.md)|    
 |描述如何撰寫 Transact-SQL 陳述式，讓它們可以從某種語言攜至另一種語言，或更輕鬆地支援多種語言|[撰寫國際通用的 Transact-SQL 陳述式](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
@@ -649,6 +660,6 @@ Unicode Consortium 會為每個字元配置唯一的字碼指碼，其值介於 
 ## <a name="see-also"></a>另請參閱    
 [自主資料庫定序](../../relational-databases/databases/contained-database-collations.md)     
 [選擇建立全文檢索索引時的語言](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
-[sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
-    
+[sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
+[單位元組和多位元組字元集](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
  

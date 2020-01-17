@@ -1,22 +1,22 @@
 ---
-title: 快速入門：備份與還原內部部署的 SQL Server 資料庫
+title: 快速入門：備份與還原資料庫
 titleSuffix: SQL Server
-description: 本快速入門示範如何在您選擇的雲端中的 Linux 上執行 SQL Server。
+description: 此快速入門說明如何備份和還原內部部署 SQL Server 資料庫。
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 05/25/2019
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: ''
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: dedadc89cd10da6f00ac768c3e15e151d0028e23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97993d621de9b10d930feb2fc54f53bc83f00293
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033625"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258637"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>快速入門：備份與還原內部部署的 SQL Server 資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68033625"
 ## <a name="prerequisites"></a>Prerequisites
 若要完成本快速入門，您需要下列項目： 
 
-- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
 ## <a name="create-a-test-database"></a>建立測試資料庫 

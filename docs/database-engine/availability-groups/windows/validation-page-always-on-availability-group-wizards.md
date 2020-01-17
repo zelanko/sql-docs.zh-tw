@@ -1,6 +1,7 @@
 ---
-title: 驗證頁面 (AlwaysOn 可用性群組精靈) | Microsoft Docs
-ms.custom: ''
+title: 可用性群組精靈：驗證頁面
+description: 此主題描述可在 [Always On 可用性群組精靈] 的 [驗證] 頁面上找到的選項。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 243109e2c9d93db71c59a852a594a411c40c47dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f22ac0e249e693b7bcd102f6d9242c601e14331f
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013451"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821845"
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>驗證頁面 (AlwaysOn 可用性群組精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +38,11 @@ ms.locfileid: "68013451"
  **結果**  
  顯示下列其中一個超連結文字。 如需有關給定驗證步驟之結果的詳細資訊，請按一下超連結。  
   
-|結果|Description|  
+|結果|描述|  
 |------------|-----------------|  
 |**錯誤**|表示驗證步驟失敗。 按一下連結可檢視錯誤訊息。|  
 |**已略過**|表示已略過驗證步驟，因為您的選項不需要驗證。 按一下連結可檢視略過步驟的原因。|  
-|**成功**|表示驗證步驟已順利完成。|  
+|「成功」 |表示驗證步驟已順利完成。|  
 |**警告**|表示可用性群組組態可能有問題。  按一下連結可檢視警告訊息。|  
   
  **重新執行驗證**  

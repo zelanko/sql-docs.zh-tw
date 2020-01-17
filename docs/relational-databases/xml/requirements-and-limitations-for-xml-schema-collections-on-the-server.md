@@ -1,6 +1,5 @@
 ---
-title: 伺服器上 XML 結構描述集合的需求與限制 | Microsoft 文件
-ms.custom: ''
+title: 需求與限制 (XML 結構描述集合) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -24,18 +23,19 @@ helpviewer_keywords:
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6514ea6acdb2fee96604656ae8f9179570eab35a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fe65ba7995dc21b4bb5f5889c8667e9c8dfb6c10
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093190"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257625"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>伺服器上 XML 結構描述集合的需求與限制
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   XML 結構描述定義語言 (XSD) 驗證對於使用 **xml** 資料類型的 SQL 資料行具有某些相關限制。 下表提供這些限制的詳細資料以及修改 XSD 結構描述以便讓它可以搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的指導方針。 本章節的主題提供有關特定限制的其他資訊，以及處理這些限制的指導方針。  
   
-|項目|限制|  
+|Item|限制|  
 |----------|----------------|  
 |**minOccurs** 與 **maxOccurs**|**minOccurs** 與 **maxOccurs** 屬性值必須符合 4 位元組的整數。 伺服器將會拒絕不符合的結構描述。|  
 |**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕沒有子系的 **\<xsd:choice>** 物件之結構描述，除非以零的 **minOccurs** 屬性值定義該物件。|  
@@ -63,15 +63,15 @@ ms.locfileid: "68093190"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
-|[Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|說明標準格式與模式限制。|  
+|[標準格式與模式限制](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|說明標準格式與模式限制。|  
 |[萬用字元元件和內容驗證](../../relational-databases/xml/wildcard-components-and-content-validation.md)|描述搭配 XML 結構描述集合使用萬用字元、Lax 驗證和 anyType 元素的限制。|  
 |[&#60;xsd:redefine&#62; 元素](../../relational-databases/xml/the-xsd-redefine-element.md)|說明使用 \<xsd:redefine> 項目的限制及描述因應措施。|  
 |[xs:QName 類型](../../relational-databases/xml/the-xs-qname-type.md)|描述有關 xs:QName 類型的限制。|  
 |[&#60;xsd:simpleType&#62; 宣告的值](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)|描述適用於 \<xsd:simpleType> 宣告的限制。|  
-|[Enumeration Facets](../../relational-databases/xml/enumeration-facets.md)|描述有關列舉 Facet 的限制。|  
-|[Mixed Type and Simple Content](../../relational-databases/xml/mixed-type-and-simple-content.md)|描述將混合類型限制為簡單內容的限制。|  
+|[列舉 Facet](../../relational-databases/xml/enumeration-facets.md)|描述有關列舉 Facet 的限制。|  
+|[混合的類型與簡單的內容](../../relational-databases/xml/mixed-type-and-simple-content.md)|描述將混合類型限制為簡單內容的限制。|  
 |[大型的 XML 結構描述集合與記憶體不足的情況](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)|提供有時在處理大型結構描述集合時，可能發生之記憶體不足狀況的解決方案。|  
 |[不具決定性的內容模型](../../relational-databases/xml/non-deterministic-content-models.md)|描述有關不具決定性之內容模型的限制。|  
   

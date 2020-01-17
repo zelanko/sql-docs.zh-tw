@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b1dae9c92172e857c29e08bb04efc3ca323961fa
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: ebf82ec10f01b52b606a1250266884bbcd0a4497
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251024"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557772"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>從命令提示字元安裝 SQL Server
 
@@ -151,7 +151,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 -   /PARAMETER (範例：`/INDICATEPROGRESS`)
 -   /PARAMETER=true/false  (範例：`/SQLSVCINSTANTFILEINIT=True`)
 -   /PARAMETER=1/0 (適用於布林值類型)   (範例：`/TCPENABLED=1`)
--   /PARAMETER="value" (針對所有單一值參數)。 (範例：`/PID="PID" /SQLSVCSTARTUPTYP="Automatic"`)
+-   /PARAMETER="value" (針對所有單一值參數)。 (範例：`/PID="PID" /SQLSVCSTARTUPTYPE="Automatic"`)
     - 針對需要路徑的參數：支援 `/INSTANCEDIR=c:\Path` 或 `/INSTANCEDIR="c:\Path"`。  
 -   /PARAMETER="value1" "value2" "value3" (針對所有多重值參數)。 (範例：`/SQLSYSADMINACCOUNTS="Contoso\John" "Contoso\Mary"`)
     - **例外狀況**：`/FEATURES`，這是多重值參數，但其格式為 `/FEATURES=AS,RS,IS` (不含空格且以逗號分隔)。 
@@ -171,7 +171,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 ##  <a name="Install"></a> 安裝參數  
  您可以使用下表中參數來開發安裝的命令列指令碼。  
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出安裝工作流程的必要參數。<br /><br /> 支援的值：**Install**。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/SUPPRESSPRIVACYSTATEMENTNOTICE<br /><br /> **只有當您針對自動安裝指定了 /Q 或 /QS 參數時，才需要使用此參數。**|隱藏隱私權注意事項聲明。 藉由使用這個旗標，表示您同意[隱私權注意事項](../../sql-server/sql-server-privacy.md)。  |  
@@ -182,7 +182,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/UpdateEnabled<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式是否應該探索及包含產品更新。 有效值為 True 和 False 或 1 和 0。 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會包含找到的更新。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/UpdateSource<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將取得產品更新的位置。 有效值為 "MU"，表示搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新、有效資料夾路徑、相對路徑 (例如 `.\MyUpdates`) 或 UNC 共用。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update 或透過 Windows Server Update Services 搜尋 Windows Update Service。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ERRORREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/> 若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的錯誤報告。<br /><br /> 如需詳細資訊，請參閱＜ [Microsoft 錯誤報告服務隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)＞。<br /><br /> 支援的值：<br /><br /> 0=停用<br /><br /> 1=啟用|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ERRORREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本中沒有任何作用。 <br/><br/> 若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 SQL Server 2016 和更新版本以將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的錯誤報告。<br /><br /> 如需詳細資訊，請參閱＜ [Microsoft 錯誤報告服務隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)＞。<br /><br /> 支援的值：<br /><br /> 0=停用<br /><br /> 1=啟用|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/FEATURES<br /><br /> - 或 -<br /><br /> /ROLE<br /><br /> **必要**|指定要安裝的元件。<br /><br /> 選擇 **/FEATURES** 來指定要安裝的個別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件。 如需詳細資訊，請參閱＜ [功能參數](#Feature) ＞。<br /><br /> 選擇 **/ROLE** 來指定安裝程式角色。 安裝程式角色會使用預先決定的組態安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/HELP、?<br /><br /> **選擇性**|顯示安裝參數的使用方式選項。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/INDICATEPROGRESS<br /><br /> **選擇性**|指定要將詳細安裝程式記錄檔送到主控台。|  
@@ -192,9 +192,9 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/INSTANCEID<br /><br /> **選擇性**|指定 [InstanceID](#InstanceID)的非預設值。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/INSTANCENAME<br /><br /> **必要**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。<br /><br /> 如需詳細資訊，請參閱＜ [Instance Configuration](../../sql-server/install/instance-configuration.md)＞。|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **選擇性**|指定引擎服務的帳戶。 預設是 **NT Authority\NETWORK SERVICE**。|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **選擇性**|指定引擎服務帳戶的密碼。|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **選擇性**|指定引擎服務帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 PolyBase 引擎服務的啟動模式：自動 (預設)、停用及手動。|  
-|PolyBase|/PBPORTRANGE<br /><br /> **選擇性**|為 PolyBase 服務指定含至少 6 個連接埠的連接埠範圍。 範例<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|/PBPORTRANGE<br /><br /> **選擇性**|為 PolyBase 服務指定含至少 6 個連接埠的連接埠範圍。 範例：<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **選擇性**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體是否會用作 PolyBase 向外延展計算群組的一部分。 如果您要設定 PolyBase 向外延展計算群組 (包括前端節點)，請使用此選項。 支援的值：**True**、**False**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/PID<br /><br /> **選擇性**|指定 SQL Server 版的產品金鑰。 如果沒有指定這個參數，就會使用 Evaluation。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/Q 或 /QUIET<br /><br /> **選擇性**|指定安裝程式會在不含任何使用者介面的無訊息模式中執行。 這是自動安裝所使用的參數。 /Q 參數會覆寫 /QS 參數的輸入。|  
@@ -203,25 +203,25 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/SQMREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/>若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的功能使用狀況報告。<br /><br />支援的值：<br /><br /> 0=停用<br /><br /> 1=啟用|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/HIDECONSOLE<br /><br /> **選擇性**|指定要隱藏或關閉主控台視窗。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCACCOUNT<br /><br /> **必要**|指定 SQL Server Agent 服務的帳戶。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQL Server Agent 服務帳戶的密碼。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 SQL Server Agent 服務的 [啟動](#Accounts) 帳戶。<br /><br /> 支援的值：<br /><br /> **自動**<br /><br /> **已停用**<br /><br /> **手動**|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQL Server Agent 服務帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 SQL Server Agent 服務的 [啟動](#Accounts) 帳戶。<br /><br /> 支援的值：<br /><br /> **自動**<br /><br /> **Disabled**<br /><br /> **手動**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 備份檔案的目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的定序設定。<br /><br /> 預設值︰**Latin1_General_CI_AS**|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的定序設定。<br /><br /> 預設值：**Latin1_General_CI_AS**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態檔的目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料檔案的目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 記錄檔的目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的伺服器模式。 有效的值為 MULTIDIMENSIONAL、POWERPIVOT 或 TABULAR。 **ASSERVERMODE** 區分大小寫。 所有值都必須以大寫形式表示。 如需有關有效值的詳細資訊，請參閱 [安裝 Analysis Services](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的帳戶。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的密碼。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 [服務的](#Accounts) 啟動 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模式。 支援的值：<br /><br /> **自動**<br /><br /> **已停用**<br /><br /> **手動**|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 [服務的](#Accounts) 啟動 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模式。 支援的值：<br /><br /> **自動**<br /><br /> **Disabled**<br /><br /> **手動**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSYSADMINACCOUNTS<br /><br /> **必要**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的系統管理員認證。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 暫存檔的目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server \<INSTANCEDIR>\<ASInstanceID>\OLAP\Temp`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Temp`|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **選擇性**|指定 MSOLAP 提供者是否可以在處理序中執行。<br /><br /> 預設值︰1=啟用|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **選擇性**|指定 MSOLAP 提供者是否可以在處理序中執行。<br /><br /> 預設值：1=啟用|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMACCOUNT<br /><br /> **SPI_AS_NewFarm 的必要參數**|指定執行中 SharePoint 管理中心服務與伺服陣列中其他必要服務的網域使用者帳戶。<br /><br /> 此參數僅用於透過 /ROLE = SPI_AS_NEWFARM 安裝的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMPASSWORD<br /><br /> **SPI_AS_NewFarm 的必要參數**|指定伺服陣列帳戶的密碼。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMPASSWORD<br /><br /> **SPI_AS_NewFarm 的必要參數**|指定伺服陣列帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/PASSPHRASE<br /><br /> **SPI_AS_NewFarm 的必要參數**|指定用來將其他應用程式伺服器或前端網頁伺服器新增至 SharePoint 伺服器陣列的複雜密碼。<br /><br /> 此參數僅用於透過 /ROLE = SPI_AS_NEWFARM 安裝的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMADMINIPORT<br /><br /> **SPI_AS_NewFarm 的必要參數**|指定用來連接至 SharePoint 管理中心 Web 應用程式的通訊埠。<br /><br /> 此參數僅用於透過 /ROLE = SPI_AS_NEWFARM 安裝的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。|  
-|SQL Server Browser|/BROWSERSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 SQL Server Browser 服務的 [啟動](#Accounts) 模式。 支援的值：<br /><br /> **自動**<br /><br /> **已停用**<br /><br /> **手動**|  
+|SQL Server Browser|/BROWSERSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 SQL Server Browser 服務的 [啟動](#Accounts) 模式。 支援的值：<br /><br /> **自動**<br /><br /> **Disabled**<br /><br /> **手動**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENABLERANU<br /><br /> **選擇性**|啟用 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 安裝的執行身分認證。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料檔案的資料目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **當 /SECURITYMODE=SQL 時則為必要參數**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** 帳戶的密碼。|  
@@ -230,37 +230,37 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的定序設定。<br /><br /> 預設安裝設定會由作業系統 (OS) 的地區設定決定。 您可以在安裝期間變更伺服器層級的定序，也可以在安裝之前變更 OS 地區設定。 預設定序會設定為與每個特定地區設定建立關聯的最舊可用版本。 這樣做是為了與舊版相容。 因此，此定序不一定是建議的定序。 若要完全利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能，請變更預設安裝設定以使用 Windows 定序。 例如，針對 OS 地區設定 [英文 (美國)]  (字碼頁 1252)，安裝期間的預設定序是 **SQL_Latin1_General_CP1_CI_AS**，且可以變更為與其最接近的 Windows 定序對應項目 **Latin1_General_100_CI_AS_SC**。 <br /><br />如需詳細資訊，請參閱[定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **選擇性**|將目前的使用者加入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 固定伺服器角色。 安裝 Express 版本或使用 /Role=ALLFeatures_WithDefaults is used 時，可以使用 /ADDCURRENTUSERASSQLADMIN 參數。 如需詳細資訊，請參閱以下的 /ROLE。<br /><br /> /ADDCURRENTUSERASSQLADMIN 的使用是選擇性的，但使用 /ADDCURRENTUSERASSQLADMIN 或 /SQLSYSADMINACCOUNTS 則是必要的。 預設值：<br /><br /> **True** True [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 對於其他所有版本為**False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的啟動帳戶。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQLSVCACCOUNT 的密碼。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 [服務的](#Accounts) 啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 模式。 支援的值：<br /><br /> **自動**<br /><br /> **已停用**<br /><br /> **手動**|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必要**|您可以使用這個參數來提供登入，以便成為系統管理員 (sysadmin) 角色的成員。<br /><br /> 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之外的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本，需要 /SQLSYSADMINACCOUNTS。 對於 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的版本，/SQLSYSADMINACCOUNTS 的使用是選擇性的，但使用 /SQLSYSADMINACCOUNTS 或 /ADDCURRENTUSERASSQLADMIN 則是必要的。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **選擇性**|指定 tempdb 資料檔案的目錄。 指定多個目錄時，請以空格隔開這些目錄。 若指定多個目錄，tempdb 資料檔案將以循環配置資源方式跨多個目錄存放。<br /><br /> 預設值︰`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> **注意：** 此參數也會新增至 RebuildDatabase 案例。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **選擇性**|指定 tempdb 記錄檔的目錄。<br /><br /> 預設值︰`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> 注意:此參數也會新增至 RebuildDatabase 案例。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **選擇性**|指定安裝程式要新增的 tempdb 資料檔案數目。 此值可以增加到與核心數目相同為止。 預設值︰<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 1 個<br /><br /> 所有其他版本為 8 個或與核心數目相同 (兩者取其較低者)<br /><br /> **重要：** tempdb 的主要資料庫檔案仍為 tempdb.mdf。 其他的 tempdb 檔案會命名為 tempdb_mssql_#.ndf，其中 # 代表唯一的數字，該數字是在安裝期間替每個額外的 tempdb 資料庫檔案所建立。 此命名慣例旨在使其為唯一。 解除安裝 SQL Server 的執行個體會刪除命名慣例為 tempdb_mssql_ #.ndf 的檔案。 請勿將 tempdb_mssql_\*.ndf 命名慣例用於使用者資料庫檔案。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQLSVCACCOUNT 的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。 |  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 [服務的](#Accounts) 啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 模式。 支援的值：<br /><br /> **自動**<br /><br /> **Disabled**<br /><br /> **手動**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必要**|您可以使用這個參數來提供登入，以便成為系統管理員 (sysadmin) 角色的成員。<br /><br /> 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之外的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本，需要 /SQLSYSADMINACCOUNTS。 對於 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的版本，/SQLSYSADMINACCOUNTS 的使用是選擇性的，但使用 /SQLSYSADMINACCOUNTS 或 /ADDCURRENTUSERASSQLADMIN 則是必要的。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **選擇性**|指定 tempdb 資料檔案的目錄。 指定多個目錄時，請以空格隔開這些目錄。 若指定多個目錄，tempdb 資料檔案將以循環配置資源方式跨多個目錄存放。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> **注意：** 此參數也會新增至 RebuildDatabase 案例。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **選擇性**|指定 tempdb 記錄檔的目錄。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> 注意:此參數也會新增至 RebuildDatabase 案例。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **選擇性**|指定安裝程式要新增的 tempdb 資料檔案數目。 此值可以增加到與核心數目相同為止。 預設值：<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 1 個<br /><br /> 所有其他版本為 8 個或與核心數目相同 (兩者取其較低者)<br /><br /> **重要：** tempdb 的主要資料庫檔案仍為 tempdb.mdf。 其他的 tempdb 檔案會命名為 tempdb_mssql_#.ndf，其中 # 代表唯一的數字，該數字是在安裝期間替每個額外的 tempdb 資料庫檔案所建立。 此命名慣例旨在使其為唯一。 解除安裝 SQL Server 的執行個體會刪除命名慣例為 tempdb_mssql_ #.ndf 的檔案。 請勿將 tempdb_mssql_\*.ndf 命名慣例用於使用者資料庫檔案。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引進。 指定每個 tempdb 資料檔案的初始大小。<br/><br/>預設值 = [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 4 MB，所有其他版本為 8 MB。<br/><br/>最小值= (4 MB 或 8 MB)。<br/><br/>最大值 = 1024 MB ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 為 262,144 MB)。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **選擇性**|指定每個 tempdb 資料檔案的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024。<br /><br /> 預設值︰64。 允許的範圍：最小值 = 0，最大值 = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **選擇性**|指定每個 tempdb 資料檔案的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024。<br /><br /> 預設值：64。 允許的範圍：最小值 = 0，最大值 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引進。 指定每個 tempdb 記錄檔的初始大小。<br/><br/>預設值 = [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 4 MB，所有其他版本為 8 MB。<br/><br/>最小值= (4 MB 或 8 MB)。<br/><br/>最大值 = 1024 MB ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 為 262,144 MB)。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **選擇性**|指定每個 tempdb 資料檔案的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024。<br /><br /> 預設值︰64。 允許的範圍：最小值 = 0，最大值 = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **選擇性**|指定每個 tempdb 資料檔案的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024。<br /><br /> 預設值：64。 允許的範圍：最小值 = 0，最大值 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **選擇性**|指定使用者資料庫之資料檔案的目錄。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCINSTANTFILEINIT<br /><br /> **選擇性**|為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶啟用檔案立即初始化。 如需安全性和效能考量，請參閱 [資料庫立即檔案初始化](../../relational-databases/databases/database-instant-file-initialization.md)。<br /><br /> 預設值︰"False"<br /><br /> 選擇性的值："True"|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCINSTANTFILEINIT<br /><br /> **選擇性**|為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶啟用檔案立即初始化。 如需安全性和效能考量，請參閱 [資料庫立即檔案初始化](../../relational-databases/databases/database-instant-file-initialization.md)。<br /><br /> 預設值："False"<br /><br /> 選擇性的值："True"|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **選擇性**|指定使用者資料庫之記錄檔的目錄。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMAXDOP=parameter <br /><br /> **選擇性** <br /> 若在自動 (無訊息) 安裝時省略，MAXDOP 會配合[平行處理原則的最大程度指導方針](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)。 |指定平行處理原則的最大程度，這會決定在執行單一陳述式期間可以利用的處理器數目。 僅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始提供。 <br /><br /> 預設值會配合[平行處理原則的最大程度指導方針](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/USESQLRECOMMENDEDMEMORYLIMITS<br /><br /> **選擇性** <br /> 若在自動 (無訊息) 安裝時省略 /USESQLRECOMMENDEDMEMORYLIMITS、/SQLMINMEMORY 與 /SQLMAXMEMORY，則 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會使用預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體設定。|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 將使用與獨立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之[伺服器記憶體設定指導方針](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)一致的計算建議值。 僅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始提供。<br /><br /> **注意：** 此參數無法搭配 /SQLMINMEMORY 和 /SQLMAXMEMORY 使用。 |  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMINMEMORY<br /><br /> **選擇性** <br /> 若在自動 (無訊息) 安裝時省略 /USESQLRECOMMENDEDMEMORYLIMITS、/SQLMINMEMORY 與 /SQLMAXMEMORY，則 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會使用預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體設定。|指定最小的伺服器記憶體設定 (以 MB 為單位)。 僅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始提供。<br /><br /> 預設值︰0.<br /><br /> **注意：** 這個參數無法搭配 /USESQLRECOMMENDEDMEMORYLIMITS 使用。 |  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMINMEMORY<br /><br /> **選擇性** <br /> 若在自動 (無訊息) 安裝時省略 /USESQLRECOMMENDEDMEMORYLIMITS、/SQLMINMEMORY 與 /SQLMAXMEMORY，則 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會使用預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體設定。|指定最小的伺服器記憶體設定 (以 MB 為單位)。 僅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始提供。<br /><br /> 預設值：0.<br /><br /> **注意：** 這個參數無法搭配 /USESQLRECOMMENDEDMEMORYLIMITS 使用。 |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMAXMEMORY<br /><br /> **選擇性** <br /> 若在自動 (無訊息) 安裝時省略 /USESQLRECOMMENDEDMEMORYLIMITS、/SQLMINMEMORY 與 /SQLMAXMEMORY，則 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會使用預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體設定。|指定最大的伺服器記憶體設定 (以 MB 為單位)。 僅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始提供。<br /><br /> 預設值：計算的建議值，與獨立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的[伺服器記憶體設定指導方針](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)一致。<br /><br /> **注意：** 這個參數無法搭配 /USESQLRECOMMENDEDMEMORYLIMITS 使用。 |  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **選擇性**|指定 FILESTREAM 功能的存取層級。 支援的值：<br /><br /> 0=針對這個執行個體停用 FILESTREAM 支援 (預設值)。<br /><br /> 1=針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取啟用 FILESTREAM。<br /><br /> 2=針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和檔案 I/O 資料流存取啟用 FILESTREAM (不適用於叢集狀況)。<br /><br /> 3=允許遠端用戶端具有 FILESTREAM 資料的資料流存取權。|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **選擇性**<br /><br /> **當 FILESTREAMLEVEL 大於 1 時則為必要參數。**|指定即將儲存 FILESTREAM 資料之 Windows 共用的名稱。|  
-|SQL Server 全文檢索|/FTSVCACCOUNT<br /><br /> **選擇性**|指定全文檢索篩選啟動器服務的帳戶。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本中會忽略此參數。 ServiceSID 是用來協助保護 SQL Server 與全文檢索篩選背景程式之間的通訊。 如果沒有提供這些值，就會停用全文檢索篩選啟動器服務。 您必須使用 SQL Server 控制管理員來變更服務帳戶並啟用全文檢索功能。<br /><br /> 預設值︰本機服務帳戶|  
-|SQL Server 全文檢索|/FTSVCPASSWORD<br /><br /> **選擇性**|指定全文檢索篩選啟動器服務的密碼。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本中會忽略此參數。|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的帳戶。<br /><br /> 預設值︰NT AUTHORITY\NETWORK SERVICE|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密碼。|  
+|SQL Server 全文檢索|/FTSVCACCOUNT<br /><br /> **選擇性**|指定全文檢索篩選啟動器服務的帳戶。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本中會忽略此參數。 ServiceSID 是用來協助保護 SQL Server 與全文檢索篩選背景程式之間的通訊。 如果沒有提供這些值，就會停用全文檢索篩選啟動器服務。 您必須使用 SQL Server 控制管理員來變更服務帳戶並啟用全文檢索功能。<br /><br /> 預設值：本機服務帳戶|  
+|SQL Server 全文檢索|/FTSVCPASSWORD<br /><br /> **選擇性**|指定全文檢索篩選啟動器服務的密碼。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本中會忽略此參數。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的帳戶。<br /><br /> 預設值：NT AUTHORITY\NETWORK SERVICE|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **選擇性**|指定 [服務的](#Accounts) 啟動 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 模式。|  
 |SQL Server 網路組態|/NPENABLED<br /><br /> **選擇性**|指定 SQL Server 服務的具名管道通訊協定狀態。 支援的值：<br /><br /> 0=停用具名管道通訊協定<br /><br /> 1=啟用具名管道通訊協定|  
 |SQL Server 網路組態|/TCPENABLED<br /><br /> **選擇性**|指定 SQL Server 服務的 TCP 通訊協定狀態。 支援的值：<br /><br /> 0=停用 TCP 通訊協定<br /><br /> 1=啟用 TCP 通訊協定|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **選擇性**| 從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的安裝模式。 支援的值：<br /><br /> **SharePointFilesOnlyMode**<br /><br /> **DefaultNativeMode**<br /><br /> **FilesOnlyMode**<br /><br /> <br /><br /> 注意:如果安裝包含 SQL Server[!INCLUDE[ssDE](../../includes/ssde-md.md)]，則預設 RSINSTALLMODE 為 DefaultNativeMode。<br /><br /> 注意：如果安裝不包含 SQL Server[!INCLUDE[ssDE](../../includes/ssde-md.md)]，則預設 RSINSTALLMODE 為 FilesOnlyMode。<br /><br /> 如果您選擇 DefaultNativeMode，但是安裝不包含 SQL Server[!INCLUDE[ssDE](../../includes/ssde-md.md)]，則安裝作業會自動將 RSINSTALLMODE 變更為 FilesOnlyMode。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **必要**| 從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的啟動帳戶。 |  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必要](#Accounts)|從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務之啟動帳戶的密碼。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **選擇性**|從 SQL Server 2017 開始不再適用。  指定 [的](#Accounts) 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。 支援的值：<br /><br /> **自動**<br /><br /> **已停用**<br /><br /> **手動**|  
-|Python/機器學習服務 (資料庫內)|/MPYCACHEDIRECTORY|保留供日後使用。 請使用 %TEMP% 來儲存 Python .CAB 檔案，以便在沒有網際網路連線的電腦上進行安裝。 |  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必要](#Accounts)|從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務之啟動帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **選擇性**|從 SQL Server 2017 開始不再適用。  指定 [的](#Accounts) 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。 支援的值：<br /><br /> **自動**<br /><br /> **Disabled**<br /><br /> **手動**|  
+|Python/機器學習服務 (資料庫內)|/MPYCACHEDIRECTORY|保留供未來使用。 請使用 %TEMP% 來儲存 Python .CAB 檔案，以便在沒有網際網路連線的電腦上進行安裝。 |  
 |R/機器學習服務 (資料庫內)|/MRCACHEDIRECTORY|使用此參數來指定 SQL Server 2017 機器學習服務或 Machine Learning Server (獨立式) 中的 Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server (獨立式) 或 R 功能支援的快取目錄。 此設定通常用於[在電腦上從命令列安裝 R 元件，而沒有網際網路存取](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access)時。|  
 |Java/語言延伸模組| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **選擇性** | 從 SQL Server 2019 開始，會指定使用語言延伸模組來安裝 Java。 如果在未使用 /SQLJAVADIR 參數的情況下提供 /SQL_INST_JAVA，系統會假設您希望安裝由安裝媒體提供的 Zulu Open JRE。 <br /><br /> 提供 /SQLJAVADIR 的路徑，表示您希望使用已安裝的 JRE 或 JDK。 |
   
@@ -279,7 +279,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 #### <a name="prepare-image-parameters"></a>準備圖像參數  
  使用下表中的參數開發命令列指令碼，以便準備 SQL Server 的執行個體而不必加以設定。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出安裝工作流程的必要參數。<br /><br /> 支援的值：**PrepareImage**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **只有當您針對自動安裝指定了 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。|  
@@ -295,9 +295,9 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ INSTANCEDIR<br /><br /> **選擇性**|指定執行個體特有元件的非預設安裝目錄。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/INSTANCEID<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 (2013 年 1 月) 之前為**必要項**<br /><br /> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 開始，為執行個體功能的**必要項**。|指定要準備之執行個體的 InstanceID。|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **選擇性**|指定引擎服務的帳戶。 預設是 **NT Authority\NETWORK SERVICE**。|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **選擇性**|指定引擎服務帳戶的密碼。|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **選擇性**|指定引擎服務帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 PolyBase 引擎服務的啟動模式：自動 (預設)、停用及手動。|  
-|PolyBase|/PBPORTRANGE<br /><br /> **選擇性**|為 PolyBase 服務指定含至少 6 個連接埠的連接埠範圍。 範例<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|/PBPORTRANGE<br /><br /> **選擇性**|為 PolyBase 服務指定含至少 6 個連接埠的連接埠範圍。 範例：<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **選擇性**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體是否會用作 PolyBase 向外延展計算群組的一部分。 支援的值：**True**、**False**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/Q 或 /QUIET <br /><br /> **選擇性**|指定安裝程式會在不含任何使用者介面的無訊息模式中執行。 這是自動安裝所使用的參數。 /Q 參數會覆寫 /QS 參數的輸入。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/QS 或 /QUIETSIMPLE<br /><br /> **選擇性**|指定安裝程式會執行並透過 UI 顯示進度，但是不接受任何輸入或顯示任何錯誤訊息。|  
@@ -312,7 +312,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 #### <a name="complete-image-parameters"></a>完成圖像參數  
  使用下表中的參數開發命令列指令碼，以便完成與設定準備好的 SQL Server 執行個體。 
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件|參數|Description|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件|參數|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出安裝工作流程的必要參數。<br /><br /> 支援的值：**CompleteImage**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **只有當您針對自動安裝指定了 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。|  
@@ -324,9 +324,9 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/INSTANCEID<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 (2013 年 1 月) 之前為**必要項**<br /><br /> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 開始為**選用項**|使用準備圖像步驟期間指定的執行個體識別碼。<br /><br /> 支援的值：準備之執行個體的 InstanceID。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/INSTANCENAME<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 (2013 年 1 月) 之前為**必要項**<br /><br /> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 開始為**選用項**|指定要完成之執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。<br /><br /> 如需詳細資訊，請參閱＜ [Instance Configuration](../../sql-server/install/instance-configuration.md)＞。|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **選擇性**|指定引擎服務的帳戶。 預設是 **NT Authority\NETWORK SERVICE**。|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **選擇性**|指定引擎服務帳戶的密碼。|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **選擇性**|指定引擎服務帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 PolyBase 引擎服務的啟動模式：自動 (預設)、停用及手動。|  
-|PolyBase|/PBPORTRANGE<br /><br /> **選擇性**|為 PolyBase 服務指定含至少 6 個連接埠的連接埠範圍。 範例<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|/PBPORTRANGE<br /><br /> **選擇性**|為 PolyBase 服務指定含至少 6 個連接埠的連接埠範圍。 範例：<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **選擇性**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體是否會用作 PolyBase 向外延展計算群組的一部分。 支援的值：**True**、**False**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/PID<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版的產品金鑰。 如果沒有指定這個參數，就會使用 Evaluation。<br /><br /> **注意：** 如果您要安裝 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Tools 或 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services，則會預先定義 PID。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/Q 或 /QUIET <br /><br /> **選擇性**|指定安裝程式會在不含任何使用者介面的無訊息模式中執行。 這是自動安裝所使用的參數。 /Q 參數會覆寫 /QS 參數的輸入。 |  
@@ -334,38 +334,38 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/SQMREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/>若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的功能使用狀況報告。<br /><br />支援的值：<br /><br /> 0=停用<br /><br /> 1=啟用|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/HIDECONSOLE<br /><br /> **選擇性**|指定要隱藏或關閉主控台視窗。|  
 |SQL Server Agent|/AGTSVCACCOUNT<br /><br /> **必要**|指定 SQL Server Agent 服務的帳戶。|  
-|SQL Server Agent|/AGTSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQL Server Agent 服務帳戶的密碼。|  
-|SQL Server Agent|/AGTSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 SQL Server Agent 服務的 [啟動](#Accounts) 帳戶。 支援的值：<br /><br /> **自動**<br /><br /> **已停用**<br /><br /> **手動**|  
-|SQL Server Browser|/BROWSERSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 SQL Server Browser 服務的 [啟動](#Accounts) 模式。 支援的值：<br /><br /> **自動**<br /><br /> **已停用**<br /><br /> **手動**|  
+|SQL Server Agent|/AGTSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQL Server Agent 服務帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
+|SQL Server Agent|/AGTSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 SQL Server Agent 服務的 [啟動](#Accounts) 帳戶。 支援的值：<br /><br /> **自動**<br /><br /> **Disabled**<br /><br /> **手動**|  
+|SQL Server Browser|/BROWSERSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 SQL Server Browser 服務的 [啟動](#Accounts) 模式。 支援的值：<br /><br /> **自動**<br /><br /> **Disabled**<br /><br /> **手動**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENABLERANU<br /><br /> **選擇性**|啟用 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 安裝的執行身分認證。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料檔案的資料目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **當 /SECURITYMODE=SQL 時則為必要參數**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** 帳戶的密碼。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全性模式。<br /><br /> 如果沒有提供這個參數，就會支援僅限 Windows 驗證模式。<br /><br /> 支援的值：**SQL**|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **選擇性**|指定備份檔的目錄。<br /><br /> 預設值︰<br /><br /> `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **選擇性**|指定備份檔的目錄。<br /><br /> 預設值：<br /><br /> `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的定序設定。<br /><br /> 預設值會根據您 Windows 作業系統的地區設定而異。 如需詳細資訊，請參閱＜ [安裝程式中的定序設定](../../relational-databases/collations/collation-and-unicode-support.md)＞。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的啟動帳戶。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQLSVCACCOUNT 的密碼。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 [服務的](#Accounts) 啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 模式。 支援的值：<br /><br /> **自動**<br /><br /> **已停用**<br /><br /> **手動**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQLSVCACCOUNT 的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 [服務的](#Accounts) 啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 模式。 支援的值：<br /><br /> **自動**<br /><br /> **Disabled**<br /><br /> **手動**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必要**|您可以使用這個參數來提供登入，以便成為系統管理員 (sysadmin) 角色的成員。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **選擇性**|指定 tempdb 資料檔案的目錄。 指定多個目錄時，請以空格隔開這些目錄。 若指定多個目錄，tempdb 資料檔案將以循環配置資源方式跨多個目錄存放。<br /><br /> 預設值︰`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> 附註：此參數也會新增至 RebuildDatabase 案例。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **選擇性**|指定 tempdb 記錄檔的目錄。<br /><br /> 預設值︰`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> 注意:此參數也會新增至 RebuildDatabase 案例。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **選擇性**|指定 tempdb 資料檔案的目錄。 指定多個目錄時，請以空格隔開這些目錄。 若指定多個目錄，tempdb 資料檔案將以循環配置資源方式跨多個目錄存放。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> 注意：此參數也會新增至 RebuildDatabase 案例。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **選擇性**|指定 tempdb 記錄檔的目錄。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> 注意:此參數也會新增至 RebuildDatabase 案例。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引進。 指定每個 tempdb 資料檔案的初始大小。<br/><br/>預設值 = [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 4 MB，所有其他版本為 8 MB。<br/><br/>最小值= (4 MB 或 8 MB)。<br/><br/>最大值 = 1024 MB ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 為 262,144 MB)。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **選擇性**|指定每個 tempdb 資料檔案的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024。<br /><br /> 預設值︰64<br /><br /> 允許的範圍：最小值 = 0，最大值 = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **選擇性**|指定 tempdb 記錄檔的初始大小 (MB)。 安裝程式允許的大小上限為 1024。<br /><br /> 預設值︰<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 4 個<br /><br /> 所有其他版本為 8 個<br /><br /> 允許的範圍：最小值 = 預設值 (4 或 8)，最大值 = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **選擇性**|指定每個 tempdb 資料檔案的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024。<br /><br /> 預設值：64<br /><br /> 允許的範圍：最小值 = 0，最大值 = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **選擇性**|指定 tempdb 記錄檔的初始大小 (MB)。 安裝程式允許的大小上限為 1024。<br /><br /> 預設值：<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 4 個<br /><br /> 所有其他版本為 8 個<br /><br /> 允許的範圍：最小值 = 預設值 (4 或 8)，最大值 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引進。 指定每個 tempdb 記錄檔的初始大小。<br/><br/>預設值 = [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 4 MB，所有其他版本為 8 MB。<br/><br/>最小值= (4 MB 或 8 MB)。<br/><br/>最大值 = 1024 MB ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 為 262,144 MB)。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **選擇性**|指定安裝程式要新增的 tempdb 資料檔案數目。 此值可以增加到與核心數目相同為止。 預設值︰<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 1 個<br /><br /> 所有其他版本為 8 個或與核心數目相同 (兩者取其較低者)<br /><br /> **重要：** tempdb 的主要資料庫檔案仍為 tempdb.mdf。 其他的 tempdb 檔案會命名為 tempdb_mssql_#.ndf，其中 # 代表唯一的數字，該數字是在安裝期間替每個額外的 tempdb 資料庫檔案所建立。 此命名慣例旨在使其為唯一。 解除安裝 SQL Server 的執行個體會刪除命名慣例為 tempdb_mssql_ #.ndf 的檔案。 請勿將 tempdb_mssql_\*.ndf 命名慣例用於使用者資料庫檔案。<br /><br /> **警告：** [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支援設定此參數。 安裝程式只會安裝 1 個 tempdb 資料檔案。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **選擇性**|指定安裝程式要新增的 tempdb 資料檔案數目。 此值可以增加到與核心數目相同為止。 預設值：<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 1 個<br /><br /> 所有其他版本為 8 個或與核心數目相同 (兩者取其較低者)<br /><br /> **重要：** tempdb 的主要資料庫檔案仍為 tempdb.mdf。 其他的 tempdb 檔案會命名為 tempdb_mssql_#.ndf，其中 # 代表唯一的數字，該數字是在安裝期間替每個額外的 tempdb 資料庫檔案所建立。 此命名慣例旨在使其為唯一。 解除安裝 SQL Server 的執行個體會刪除命名慣例為 tempdb_mssql_ #.ndf 的檔案。 請勿將 tempdb_mssql_\*.ndf 命名慣例用於使用者資料庫檔案。<br /><br /> **警告：** [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支援設定此參數。 安裝程式只會安裝 1 個 tempdb 資料檔案。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **選擇性**|指定使用者資料庫之資料檔案的目錄。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **選擇性**|指定使用者資料庫之記錄檔的目錄。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **選擇性**|指定 FILESTREAM 功能的存取層級。 支援的值：<br /><br /> 0=針對這個執行個體停用 FILESTREAM 支援 (預設值)。<br /><br /> 1=針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取啟用 FILESTREAM。<br /><br /> 2=針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和檔案 I/O 資料流存取啟用 FILESTREAM (不適用於叢集狀況)。<br /><br /> 3=允許遠端用戶端具有 FILESTREAM 資料的資料流存取權。|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **選擇性**<br /><br /> **當 FILESTREAMLEVEL 大於 1 時則為必要參數。**|指定即將儲存 FILESTREAM 資料之 Windows 共用的名稱。|  
-|SQL Server 全文檢索|/FTSVCACCOUNT<br /><br /> **選擇性**|指定全文檢索篩選啟動器服務的帳戶。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本中會忽略此參數。 ServiceSID 是用來協助保護 SQL Server 與全文檢索篩選背景程式之間的通訊。 如果沒有提供這些值，就會停用全文檢索篩選啟動器服務。 您必須使用 SQL Server 控制管理員來變更服務帳戶並啟用全文檢索功能。<br /><br /> 預設值︰本機服務帳戶|  
-|SQL Server 全文檢索|/FTSVCPASSWORD<br /><br /> **選擇性**|指定全文檢索篩選啟動器服務的密碼。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本中會忽略此參數。|  
+|SQL Server 全文檢索|/FTSVCACCOUNT<br /><br /> **選擇性**|指定全文檢索篩選啟動器服務的帳戶。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本中會忽略此參數。 ServiceSID 是用來協助保護 SQL Server 與全文檢索篩選背景程式之間的通訊。 如果沒有提供這些值，就會停用全文檢索篩選啟動器服務。 您必須使用 SQL Server 控制管理員來變更服務帳戶並啟用全文檢索功能。<br /><br /> 預設值：本機服務帳戶|  
+|SQL Server 全文檢索|/FTSVCPASSWORD<br /><br /> **選擇性**|指定全文檢索篩選啟動器服務的密碼。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本中會忽略此參數。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。 |  
 |SQL Server 網路組態|/NPENABLED<br /><br /> **選擇性**|指定 SQL Server 服務的具名管道通訊協定狀態。 支援的值：<br /><br /> 0=停用具名管道通訊協定<br /><br /> 1=啟用具名管道通訊協定|  
 |SQL Server 網路組態|/TCPENABLED<br /><br /> **選擇性**|指定 SQL Server 服務的 TCP 通訊協定狀態。 支援的值：<br /><br /> 0=停用 TCP 通訊協定<br /><br /> 1=啟用 TCP 通訊協定|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **選擇性**|從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的安裝模式。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **必要**|從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的啟動帳戶。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必要](#Accounts)| 從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務之啟動帳戶的密碼。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **選擇性**|從 SQL Server 2017 開始不再適用。  指定 [的](#Accounts) 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。 支援的值：<br /><br /> **自動**<br /><br /> **已停用**<br /><br /> **手動**|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必要](#Accounts)| 從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務之啟動帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **選擇性**|從 SQL Server 2017 開始不再適用。  指定 [的](#Accounts) 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。 支援的值：<br /><br /> **自動**<br /><br /> **Disabled**<br /><br /> **手動**|  
   
 ###### <a name="sample-syntax"></a>範例語法：  
  完成準備好並包含 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、複寫和全文檢索搜尋元件的獨立執行個體。 
@@ -377,7 +377,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 ##  <a name="Upgrade"></a> 升級參數  
  您可以使用下表中的參數來開發升級的命令列指令碼。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出安裝工作流程的必要參數。 支援的值：<br /><br /> **升級**<br /><br /> **EditionUpgrade**<br /><br /> <br /><br /> **EditionUpgrade** 值是用來將現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本升級為不同的版本。 如需有關支援之版本與版別升級的詳細資訊，請參閱＜ [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)＞。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **只有當您針對自動安裝指定了 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。|  
@@ -396,13 +396,13 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/UIMODE<br /><br /> **選擇性**|指定在安裝期間是否只要顯示最少數目的對話方塊。 <br />                **/UIMode** 僅能搭配 **/ACTION=INSTALL** 和 **UPGRADE** 參數使用。 支援的值：<br /><br /> **/UIMODE=Normal** 是非 Express 版本的預設，而且會針對選取的功能顯示所有安裝對話方塊。<br /><br /> **/UIMODE=AutoAdvance** 是 Express 版本的預設，而且會略過不重要的對話方塊。<br /><br /> 請注意， **UIMode** 設定無法搭配 **/Q** 或 **/QS** 參數使用。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/SQMREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/>若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的功能使用狀況報告。<br /><br />支援的值：<br /><br /> 1=啟用<br /><br /> 0=停用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/HIDECONSOLE<br /><br /> **選擇性**|指定要隱藏或關閉主控台視窗。|  
-|SQL Server Browser 服務|/BROWSERSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 SQL Server Browser 服務的 [啟動](#Accounts) 模式。 支援的值：<br /><br /> **自動**<br /><br /> **已停用**<br /><br /> **手動**|  
+|SQL Server Browser 服務|/BROWSERSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 SQL Server Browser 服務的 [啟動](#Accounts) 模式。 支援的值：<br /><br /> **自動**<br /><br /> **Disabled**<br /><br /> **手動**|  
 |SQL Server 全文檢索|/FTUPGRADEOPTION<br /><br /> **選擇性**|指定全文檢索目錄升級選項。 支援的值：<br /><br /> **REBUILD**<br /><br /> **RESET**<br /><br /> **IMPORT**|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的帳戶。<br /><br /> 預設值︰NT AUTHORITY\NETWORK SERVICE|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密碼。|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的帳戶。<br /><br /> 預設值：NT AUTHORITY\NETWORK SERVICE|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **選擇性**|指定 [服務的](#Accounts) 啟動 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 模式。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEDATABASEACCOUNT<br /><br /> **選擇性**|只有在升級 2008 R2 或更早版本的 SharePoint 模式報表伺服器時，才會使用此屬性。 針對使用舊版 SharePoint 模式架構 (在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中已變更) 的報表伺服器，會執行其他升級作業。 如果此選項未隨附於命令列安裝，則會使用舊報表伺服器執行個體的預設服務帳戶。 如果使用這個屬性，請使用 **/RSUPGRADEPASSWORD** 屬性提供此帳戶的密碼。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEPASSWORD<br /><br /> **選擇性**|現有報表伺服器服務帳戶的密碼。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEDATABASEACCOUNT<br /><br /> **選擇性**|只有在升級 2008 R2 或更早版本的 SharePoint 模式報表伺服器時，才會使用此屬性。 針對使用舊版 SharePoint 模式架構 (此架構已在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中變更) 的報表伺服器，會執行其他升級作業。 如果此選項未隨附於命令列安裝，則會使用舊報表伺服器執行個體的預設服務帳戶。 如果使用這個屬性，請使用 **/RSUPGRADEPASSWORD** 屬性提供此帳戶的密碼。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEPASSWORD<br /><br /> **選擇性**|現有報表伺服器服務帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/ALLOWUPGRADEFORSSRSSHAREPOINTMODE|升級以 SharePoint 共用服務架構為基礎的 SharePoint 模式安裝時，需要切換。 升級非共用服務版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，則不需要切換。|  
   
 ###### <a name="sample-syntax"></a>範例語法：  
@@ -415,16 +415,16 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 ##  <a name="Repair"></a> 修復參數  
  您可以使用下表中的參數來開發修復的命令列指令碼。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出修復工作流程的必要參數。<br /><br /> 支援的值：**Repair**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ENU<br /><br /> **選擇性**|當安裝媒體包含英文以及與作業系統對應之語言的語言套件時，使用此參數在當地語系化的作業系統上安裝英文版的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FEATURES<br /><br /> **必要**|指定要修復的 [元件](#Feature) 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/INSTANCENAME<br /><br /> **必要**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體名稱。<br /><br /> 如需詳細資訊，請參閱＜ [Instance Configuration](../../sql-server/install/instance-configuration.md)＞。|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **選擇性**|指定引擎服務的帳戶。 預設是 **NT Authority\NETWORK SERVICE**。|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **選擇性**|指定引擎服務帳戶的密碼。|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **選擇性**|指定引擎服務帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 PolyBase 引擎服務的啟動模式：自動 (預設)、停用及手動。|  
-|PolyBase|/PBPORTRANGE<br /><br /> **選擇性**|為 PolyBase 服務指定含至少 6 個連接埠的連接埠範圍。 範例<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|/PBPORTRANGE<br /><br /> **選擇性**|為 PolyBase 服務指定含至少 6 個連接埠的連接埠範圍。 範例：<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **選擇性**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體是否會用作 PolyBase 向外延展計算群組的一部分。 支援的值：**True**、**False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/Q 或 /QUIET <br /><br /> **選擇性**|指定安裝程式會在不含任何使用者介面的無訊息模式中執行。 這是自動安裝所使用的參數。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/HIDECONSOLE<br /><br /> **選擇性**|指定要隱藏或關閉主控台視窗。|  
@@ -439,7 +439,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Rebuild"></a> 重建系統資料庫參數  
  您可以使用下表中的參數開發命令列指令碼，以重建 master、model、msdb 與 tempdb 系統資料庫。 如需詳細資訊，請參閱 [重建系統資料庫](../../relational-databases/databases/rebuild-system-databases.md)。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出重建資料庫工作流程的必要參數。<br /><br /> 支援的值：**Rebuilddatabase**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/INSTANCENAME<br /><br /> **必要**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體名稱。<br /><br /> 如需詳細資訊，請參閱＜ [Instance Configuration](../../sql-server/install/instance-configuration.md)＞。|  
@@ -447,18 +447,18 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **選擇性**|指定新的伺服器層級定序。<br /><br /> 預設值會根據您 Windows 作業系統的地區設定而異。 如需詳細資訊，請參閱＜ [安裝程式中的定序設定](../../relational-databases/collations/collation-and-unicode-support.md)＞。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **在執行個體安裝期間指定了 /SECURITYMODE=SQL 時則為必要參數。**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** 帳戶的密碼。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必要**|您可以使用這個參數來提供登入，以便成為系統管理員 (sysadmin) 角色的成員。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **選擇性**|指定 tempdb 資料檔案的目錄。 指定多個目錄時，請以空格隔開這些目錄。 若指定多個目錄，tempdb 資料檔案將以循環配置資源方式跨多個目錄存放。<br /><br /> 預設值︰`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> 附註：此參數也會新增至 RebuildDatabase 案例。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **選擇性**|指定 tempdb 記錄檔的目錄。<br /><br /> 預設值︰`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> **注意：** 此參數也會新增至 RebuildDatabase 案例。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **選擇性**|指定安裝程式要新增的 tempdb 資料檔案數目。 此值可以增加到與核心數目相同為止。 預設值︰<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 1 個<br /><br /> 所有其他版本為 8 個或與核心數目相同 (兩者取其較低者)<br /><br /> **重要：** tempdb 的主要資料庫檔案仍為 tempdb.mdf。 其他的 tempdb 檔案會命名為 tempdb_mssql_#.ndf，其中 # 代表唯一的數字，該數字是在安裝期間替每個額外的 tempdb 資料庫檔案所建立。 此命名慣例旨在使其為唯一。 解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體會刪除命名慣例為 tempdb_mssql_#.ndf 的檔案。 請勿將 tempdb_mssql_\*.ndf 命名慣例用於使用者資料庫檔案。<br /><br /> **警告：** [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支援設定此參數。 安裝程式只會安裝 1 個 tempdb 資料檔案。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **選擇性**|指定 tempdb 資料檔案的目錄。 指定多個目錄時，請以空格隔開這些目錄。 若指定多個目錄，tempdb 資料檔案將以循環配置資源方式跨多個目錄存放。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> 注意：此參數也會新增至 RebuildDatabase 案例。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **選擇性**|指定 tempdb 記錄檔的目錄。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> **注意：** 此參數也會新增至 RebuildDatabase 案例。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **選擇性**|指定安裝程式要新增的 tempdb 資料檔案數目。 此值可以增加到與核心數目相同為止。 預設值：<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 1 個<br /><br /> 所有其他版本為 8 個或與核心數目相同 (兩者取其較低者)<br /><br /> **重要：** tempdb 的主要資料庫檔案仍為 tempdb.mdf。 其他的 tempdb 檔案會命名為 tempdb_mssql_#.ndf，其中 # 代表唯一的數字，該數字是在安裝期間替每個額外的 tempdb 資料庫檔案所建立。 此命名慣例旨在使其為唯一。 解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體會刪除命名慣例為 tempdb_mssql_#.ndf 的檔案。 請勿將 tempdb_mssql_\*.ndf 命名慣例用於使用者資料庫檔案。<br /><br /> **警告：** [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支援設定此參數。 安裝程式只會安裝 1 個 tempdb 資料檔案。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引進。 指定每個 tempdb 資料檔案的初始大小。<br/><br/>預設值 = [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 4 MB，所有其他版本為 8 MB。<br/><br/>最小值= (4 MB 或 8 MB)。<br/><br/>最大值 = 1024 MB ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 為 262,144 MB)。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **選擇性**|指定每個 tempdb 資料檔案的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024。<br /><br /> 預設值︰64<br /><br /> 允許的範圍：最小值 = 0，最大值 = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **選擇性**|指定 tempdb 記錄檔的初始大小 (MB)。 安裝程式允許的大小上限為 1024。 預設值︰<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 4 個<br /><br /> 所有其他版本為 8 個<br /><br /> 允許的範圍：最小值 = 預設值 (4 或 8)，最大值 = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **選擇性**|指定每個 tempdb 資料檔案的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024。<br /><br /> 預設值：64<br /><br /> 允許的範圍：最小值 = 0，最大值 = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **選擇性**|指定 tempdb 記錄檔的初始大小 (MB)。 安裝程式允許的大小上限為 1024。 預設值：<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 4 個<br /><br /> 所有其他版本為 8 個<br /><br /> 允許的範圍：最小值 = 預設值 (4 或 8)，最大值 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引進。 指定每個 tempdb 記錄檔的初始大小。<br/><br/>預設值 = [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 4 MB，所有其他版本為 8 MB。<br/><br/>最小值= (4 MB 或 8 MB)。<br/><br/>最大值 = 1024 MB ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 為 262,144 MB)。|  
   
 ##  <a name="Uninstall"></a> 解除安裝參數  
  您可以使用下表中的參數來開發解除安裝的命令列指令碼。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出解除安裝工作流程的必要參數。<br /><br /> 支援的值：**解除安裝**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
@@ -507,11 +507,11 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出容錯移轉叢集安裝工作流程的必要參數。<br /><br /> 支援的值：**InstallFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **只有當您針對自動安裝指定了 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ENU<br /><br /> **選擇性**|當安裝媒體包含英文以及與作業系統對應之語言的語言套件時，使用此參數在當地語系化的作業系統上安裝英文版的 SQL Server。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERGROUP<br /><br /> **選擇性**|指定要用於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集之資源群組的名稱。 它可以是現有叢集群組的名稱或新資源群組的名稱。<br /><br /> 預設值︰<br /><br /> SQL Server (\<執行個體名稱>)|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERGROUP<br /><br /> **選擇性**|指定要用於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集之資源群組的名稱。 它可以是現有叢集群組的名稱或新資源群組的名稱。<br /><br /> 預設值：<br /><br /> SQL Server (\<執行個體名稱>)|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **選擇性**|指定引擎服務的帳戶。 預設是 **NT Authority\NETWORK SERVICE**。|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **選擇性**|指定引擎服務帳戶的密碼。|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **選擇性**|指定引擎服務帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。 |  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 PolyBase 引擎服務的啟動模式：自動 (預設)、停用及手動。|  
-|PolyBase|/PBPORTRANGE<br /><br /> **選擇性**|為 PolyBase 服務指定含至少 6 個連接埠的連接埠範圍。 範例<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|/PBPORTRANGE<br /><br /> **選擇性**|為 PolyBase 服務指定含至少 6 個連接埠的連接埠範圍。 範例：<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **選擇性**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體是否會用作 PolyBase 向外延展計算群組的一部分。 支援的值：**True**、**False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/*UpdateEnabled*<br /><br /> **選擇性**|指定 SQL Server 安裝程式是否應探索及包含產品更新。 有效值為 True 和 False 或 1 和 0。 根據預設，SQL Server 安裝程式會包含找到的更新。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/*UpdateSource*<br /><br /> **選擇性**|指定 SQL Server 安裝程式將取得產品更新的位置。 有效值為 "MU"，表示搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新、有效資料夾路徑、相對路徑 (例如 .\MyUpdates) 或 UNC 共用。 根據預設，SQL Server 安裝程式會搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update 或透過 Windows Server Update Services 搜尋 Windows Update Service。|  
@@ -534,15 +534,15 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必要**|指定編碼的 IP 位址。 編碼都以分號分隔 (;) 並遵循以下格式：\<IP 類型>;\<位址>;\<網路名稱>;\<子網路遮罩>。 支援的 IP 類型包括 DHCP、IPv4 和 IPv6。<br />您可以指定多個容錯移轉叢集 IP 位址，每個位址之間隔一個空格。 請參閱下列範例：<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **必要**|針對新的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集指定網路名稱。 這個名稱是用來在網路上識別新的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集執行個體。|  
 |SQL Server Agent|/AGTSVCACCOUNT<br /><br /> **必要**|指定 SQL Server Agent 服務的帳戶。|  
-|SQL Server Agent|/AGTSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQL Server Agent 服務帳戶的密碼。|  
+|SQL Server Agent|/AGTSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQL Server Agent 服務帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 備份檔案的目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的定序設定。<br /><br /> 預設值︰**Latin1_General_CI_AS**|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的定序設定。<br /><br /> 預設值：**Latin1_General_CI_AS**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態檔的目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料檔案的目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 記錄檔的目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSYSADMINACCOUNTS<br /><br /> **必要**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的系統管理員認證。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 暫存檔的目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Temp`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Temp`|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **選擇性**|指定 MSOLAP 提供者是否可以在處理序中執行。<br /><br /> 預設值︰1=啟用|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **選擇性**|指定 MSOLAP 提供者是否可以在處理序中執行。<br /><br /> 預設值：1=啟用|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的伺服器模式。 叢集情況中的有效值為 MULTIDIMENSIONAL 或 TABULAR。 **ASSERVERMODE** 區分大小寫。 所有值都必須以大寫形式表示。 如需有關有效值的詳細資訊，請參閱＜以表格模式安裝 Analysis Services＞。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **必要**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料檔案的資料目錄。<br /><br /> 您必須指定此資料目錄，且它必須位於共用叢集磁碟上。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **當 /SECURITYMODE=SQL 時則為必要參數**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** 帳戶的密碼。|  
@@ -550,28 +550,28 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **選擇性**|指定備份檔的目錄。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的定序設定。<br /><br /> 預設值會根據您 Windows 作業系統的地區設定而異。 如需詳細資訊，請參閱＜ [安裝程式中的定序設定](../../relational-databases/collations/collation-and-unicode-support.md)＞。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的啟動帳戶。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQLSVCACCOUNT 的密碼。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQLSVCACCOUNT 的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必要**|您可以使用這個參數來提供登入，以便成為**系統管理員**角色的成員。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **選擇性**|指定使用者資料庫之資料檔案的目錄。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **選擇性**|指定 tempdb 資料檔案的目錄。 指定多個目錄時，請以空格隔開這些目錄。 若指定多個目錄，tempdb 資料檔案將以循環配置資源方式跨多個目錄存放。<br /><br /> 預設值︰`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> 附註：此參數也會新增至 RebuildDatabase 案例。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **選擇性**|指定 tempdb 記錄檔的目錄。<br /><br /> 預設值︰`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> 注意:此參數也會新增至 RebuildDatabase 案例。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **選擇性**|指定安裝程式要新增的 tempdb 資料檔案數目。 此值可以增加到與核心數目相同為止。 預設值︰<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 1 個<br /><br /> 所有其他版本為 8 個或與核心數目相同 (兩者取其較低者)<br /><br /> **重要：** tempdb 的主要資料庫檔案仍為 tempdb.mdf。 其他的 tempdb 檔案會命名為 tempdb_mssql_#.ndf，其中 # 代表唯一的數字，該數字是在安裝期間替每個額外的 tempdb 資料庫檔案所建立。 此命名慣例旨在使其為唯一。 解除安裝 SQL Server 的執行個體會刪除命名慣例為 tempdb_mssql_ #.ndf 的檔案。 請勿將 tempdb_mssql_\*.ndf 命名慣例用於使用者資料庫檔案。<br /><br /> **警告：** [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支援設定此參數。 安裝程式只會安裝 1 個 tempdb 資料檔案。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **選擇性**|指定 tempdb 資料檔案的目錄。 指定多個目錄時，請以空格隔開這些目錄。 若指定多個目錄，tempdb 資料檔案將以循環配置資源方式跨多個目錄存放。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> 注意：此參數也會新增至 RebuildDatabase 案例。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **選擇性**|指定 tempdb 記錄檔的目錄。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> 注意:此參數也會新增至 RebuildDatabase 案例。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **選擇性**|指定安裝程式要新增的 tempdb 資料檔案數目。 此值可以增加到與核心數目相同為止。 預設值：<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 1 個<br /><br /> 所有其他版本為 8 個或與核心數目相同 (兩者取其較低者)<br /><br /> **重要：** tempdb 的主要資料庫檔案仍為 tempdb.mdf。 其他的 tempdb 檔案會命名為 tempdb_mssql_#.ndf，其中 # 代表唯一的數字，該數字是在安裝期間替每個額外的 tempdb 資料庫檔案所建立。 此命名慣例旨在使其為唯一。 解除安裝 SQL Server 的執行個體會刪除命名慣例為 tempdb_mssql_ #.ndf 的檔案。 請勿將 tempdb_mssql_\*.ndf 命名慣例用於使用者資料庫檔案。<br /><br /> **警告：** [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支援設定此參數。 安裝程式只會安裝 1 個 tempdb 資料檔案。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引進。 指定每個 tempdb 資料檔案的初始大小。<br/><br/>預設值 =  8 MB。<br/><br/>最小值 =  8 MB。<br/><br/>最大值 = 1024 MB ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 為 262,144 MB)。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **選擇性**|指定每個 tempdb 資料檔案的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024。<br /><br /> 預設值︰64<br /><br /> 允許的範圍：最小值 = 0，最大值 = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **選擇性**|指定 tempdb 記錄檔的初始大小 (MB)。 安裝程式允許的大小上限為 1024。 <br /> 預設值︰<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 4 個<br /><br /> 所有其他版本為 8 個<br /><br /> 允許的範圍：最小值 = 預設值 (4 或 8)，最大值 = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **選擇性**|指定每個 tempdb 資料檔案的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024。<br /><br /> 預設值：64<br /><br /> 允許的範圍：最小值 = 0，最大值 = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **選擇性**|指定 tempdb 記錄檔的初始大小 (MB)。 安裝程式允許的大小上限為 1024。 <br /> 預設值：<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 4 個<br /><br /> 所有其他版本為 8 個<br /><br /> 允許的範圍：最小值 = 預設值 (4 或 8)，最大值 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引進。 指定每個 tempdb 記錄檔的初始大小。<br/><br/>預設值 = [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 4 MB，所有其他版本為 8 MB。<br/><br/>最小值= (4 MB 或 8 MB)。<br/><br/>最大值 = 1024 MB ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 為 262,144 MB)。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **選擇性**|指定使用者資料庫之記錄檔的目錄。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **選擇性**|指定 FILESTREAM 功能的存取層級。 支援的值：<br /><br /> 0=針對這個執行個體停用 FILESTREAM 支援 (預設值)。<br /><br /> 1=針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取啟用 FILESTREAM。<br /><br /> 2=針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和檔案 I/O 資料流存取啟用 FILESTREAM (不適用於叢集狀況)。<br /><br /> 3=允許遠端用戶端具有 FILESTREAM 資料的資料流存取權。|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **選擇性**<br /><br /> **當 FILESTREAMLEVEL 大於 1 時則為必要參數。**|指定即將儲存 FILESTREAM 資料之 Windows 共用的名稱。|  
-|SQL Server 全文檢索|/FTSVCACCOUNT<br /><br /> **選擇性**|指定全文檢索篩選啟動器服務的帳戶。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本中會忽略此參數。 ServiceSID 是用來協助保護 SQL Server 與全文檢索篩選背景程式之間的通訊。<br /><br /> 如果沒有提供這些值，就會停用全文檢索篩選啟動器服務。 您必須使用 SQL Server 控制管理員來變更服務帳戶並啟用全文檢索功能。<br /><br /> 預設值︰本機服務帳戶|  
-|SQL Server 全文檢索|/FTSVCPASSWORD<br /><br /> **選擇性**|指定全文檢索篩選啟動器服務的密碼。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本中會忽略此參數。|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的帳戶。<br /><br /> 預設值︰NT AUTHORITY\NETWORK SERVICE|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密碼。|  
+|SQL Server 全文檢索|/FTSVCACCOUNT<br /><br /> **選擇性**|指定全文檢索篩選啟動器服務的帳戶。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本中會忽略此參數。 ServiceSID 是用來協助保護 SQL Server 與全文檢索篩選背景程式之間的通訊。<br /><br /> 如果沒有提供這些值，就會停用全文檢索篩選啟動器服務。 您必須使用 SQL Server 控制管理員來變更服務帳戶並啟用全文檢索功能。<br /><br /> 預設值：本機服務帳戶|  
+|SQL Server 全文檢索|/FTSVCPASSWORD<br /><br /> **選擇性**|指定全文檢索篩選啟動器服務的密碼。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本中會忽略此參數。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的帳戶。<br /><br /> 預設值：NT AUTHORITY\NETWORK SERVICE|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **選擇性**|指定 [服務的](#Accounts) 啟動 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 模式。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **選擇性**|從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的安裝模式。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **必要**|從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的啟動帳戶。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必要](#Accounts)| 從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務之啟動帳戶的密碼。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **選擇性**|從 SQL Server 2017 開始不再適用。  指定 [的](#Accounts) 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。 支援的值：<br /><br /> **自動**<br /><br /> **已停用**<br /><br /> **手動**|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必要](#Accounts)| 從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務之啟動帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **選擇性**|從 SQL Server 2017 開始不再適用。  指定 [的](#Accounts) 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。 支援的值：<br /><br /> **自動**<br /><br /> **Disabled**<br /><br /> **手動**|  
   
  建議您改用 Service SID，而非網域群組。 
   
@@ -588,7 +588,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 #### <a name="prepare-failover-cluster-parameters"></a>準備容錯移轉叢集參數  
  您可以使用下表中的參數來開發容錯移轉叢集準備的命令列指令碼。 這是進階叢集安裝的第一個步驟。在此步驟中，您必須在容錯移轉叢集的所有節點上準備容錯移轉叢集執行個體。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出容錯移轉叢集準備工作流程的必要參數。<br /><br /> 支援的值：**PrepareFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **只有當您針對自動安裝指定了 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。|  
@@ -606,9 +606,9 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/INSTANCEID<br /><br /> **選擇性**|指定 [InstanceID](#InstanceID)的非預設值。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/INSTANCENAME<br /><br /> **必要**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體名稱。<br /><br /> 如需詳細資訊，請參閱＜ [Instance Configuration](../../sql-server/install/instance-configuration.md)＞。|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **選擇性**|指定引擎服務的帳戶。 預設是 **NT Authority\NETWORK SERVICE**。|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **選擇性**|指定引擎服務帳戶的密碼。|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **選擇性**|指定引擎服務帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 PolyBase 引擎服務的啟動模式：自動 (預設)、停用及手動。|  
-|PolyBase|/PBPORTRANGE<br /><br /> **選擇性**|為 PolyBase 服務指定含至少 6 個連接埠的連接埠範圍。 範例<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|/PBPORTRANGE<br /><br /> **選擇性**|為 PolyBase 服務指定含至少 6 個連接埠的連接埠範圍。 範例：<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **選擇性**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體是否會用作 PolyBase 向外延展計算群組的一部分。 支援的值：**True**、**False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/PID<br /><br /> **選擇性**|指定 SQL Server 版的產品金鑰。 若未指定這個參數，<br /><br /> 會使用 Evaluation。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/Q 或 /QUIET <br /><br /> **選擇性**|指定安裝程式會在不含任何使用者介面的無訊息模式中執行。 這是自動安裝所使用的參數。 /Q 參數會覆寫 /QS 參數的輸入。|  
@@ -616,22 +616,22 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/SQMREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/>若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的功能使用狀況報告。<br /><br />支援的值：<br /><br /> 0=停用<br /><br /> 1=啟用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/HIDECONSOLE<br /><br /> **選擇性**|指定要隱藏或關閉主控台視窗。|  
 |SQL Server Agent|/AGTSVCACCOUNT<br /><br /> **必要**|指定 SQL Server Agent 服務的帳戶。|  
-|SQL Server Agent|/AGTSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQL Server Agent 服務帳戶的密碼。|  
+|SQL Server Agent|/AGTSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQL Server Agent 服務帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。 |  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的帳戶。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的密碼。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必要**|指定 SQL Server 服務的啟動帳戶。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQLSVCACCOUNT 的密碼。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQLSVCACCOUNT 的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **選擇性**|指定 FILESTREAM 功能的存取層級。 支援的值：<br /><br /> 0=針對這個執行個體停用 FILESTREAM 支援 (預設值)。<br /><br /> 1=針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取啟用 FILESTREAM。<br /><br /> 2=針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和檔案 I/O 資料流存取啟用 FILESTREAM (不適用於叢集狀況)。<br /><br /> 3=允許遠端用戶端具有 FILESTREAM 資料的資料流存取權。|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **選擇性**<br /><br /> 當 FILESTREAMLEVEL 大於 1 時則為**必要參數** 。|指定即將儲存 FILESTREAM 資料之 Windows 共用的名稱。|  
-|SQL Server 全文檢索|/FTSVCACCOUNT<br /><br /> **選擇性**|指定全文檢索篩選啟動器服務的帳戶。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本中會忽略此參數。 ServiceSID 是用來協助保護 SQL Server 與全文檢索篩選背景程式之間的通訊。<br /><br /> 如果沒有提供這些值，就會停用全文檢索篩選啟動器服務。 您必須使用 SQL Server 控制管理員來變更服務帳戶並啟用全文檢索功能。<br /><br /> 預設值︰本機服務帳戶|  
-|SQL Server 全文檢索|/FTSVCPASSWORD<br /><br /> **選擇性**|指定全文檢索篩選啟動器服務的密碼。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本中會忽略此參數。|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的帳戶。<br /><br /> 預設值︰NT AUTHORITY\NETWORK SERVICE|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密碼。|  
+|SQL Server 全文檢索|/FTSVCACCOUNT<br /><br /> **選擇性**|指定全文檢索篩選啟動器服務的帳戶。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本中會忽略此參數。 ServiceSID 是用來協助保護 SQL Server 與全文檢索篩選背景程式之間的通訊。<br /><br /> 如果沒有提供這些值，就會停用全文檢索篩選啟動器服務。 您必須使用 SQL Server 控制管理員來變更服務帳戶並啟用全文檢索功能。<br /><br /> 預設值：本機服務帳戶|  
+|SQL Server 全文檢索|/FTSVCPASSWORD<br /><br /> **選擇性**|指定全文檢索篩選啟動器服務的密碼。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本中會忽略此參數。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的帳戶。<br /><br /> 預設值：NT AUTHORITY\NETWORK SERVICE|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **選擇性**|指定 [服務的](#Accounts) 啟動 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 模式。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **只適用於僅限檔案模式。**| 從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的安裝模式。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **必要**| 從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的啟動帳戶。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必要](#Accounts)| 從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務之啟動帳戶的密碼。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **選擇性**| 從 SQL Server 2017 開始不再適用。 指定 [的](#Accounts) 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。 支援的值：<br /><br /> **自動**<br /><br /> **已停用**<br /><br /> **手動**|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必要](#Accounts)| 從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務之啟動帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **選擇性**| 從 SQL Server 2017 開始不再適用。 指定 [的](#Accounts) 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。 支援的值：<br /><br /> **自動**<br /><br /> **Disabled**<br /><br /> **手動**|  
   
  建議您改用 Service SID，而非網域群組。 
   
@@ -653,11 +653,11 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 #### <a name="complete-failover-cluster-parameters"></a>完成容錯移轉叢集參數  
  您可以使用下表中的參數來開發容錯移轉叢集完成的命令列指令碼。 這是進階容錯移轉叢集安裝選項中的第二個步驟。 在所有容錯移轉叢集節點上執行準備作業之後，您就可以在擁有共用磁碟的節點上執行這個命令。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出容錯移轉叢集完成工作流程的必要參數。<br /><br /> 支援的值：**CompleteFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ENU<br /><br /> **選擇性**|當安裝媒體包含英文以及與作業系統對應之語言的語言套件時，使用此參數在當地語系化的作業系統上安裝英文版的 SQL Server。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERGROUP<br /><br /> **選擇性**|指定要用於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集之資源群組的名稱。 它可以是現有叢集群組的名稱或新資源群組的名稱。<br /><br /> 預設值︰<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<執行個體名稱>)|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERGROUP<br /><br /> **選擇性**|指定要用於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集之資源群組的名稱。 它可以是現有叢集群組的名稱或新資源群組的名稱。<br /><br /> 預設值：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<執行個體名稱>)|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ERRORREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/>若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的錯誤報告。<br /><br /> 如需詳細資訊，請參閱＜ [Microsoft 錯誤報告服務隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)＞。 支援的值：<br /><br /> 1=啟用<br /><br /> 0=停用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/HELP、?<br /><br /> **選擇性**|顯示參數的使用方式選項。|  
@@ -673,14 +673,14 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **必要**|針對新的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集指定網路名稱。 這個名稱是用來在網路上識別新的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集執行個體。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIRMIPDEPENDENCYCHANGE|表示同意將 IP 位址資源相依性設定為 OR，以使用多重子網路容錯移轉叢集。 如需詳細資訊，請參閱[建立新的 SQL Server 容錯移轉叢集 &#40;安裝程式&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)。 支援的值：<br /><br /> 0 = False (預設值)<br /><br /> 1 = True|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 備份檔案的目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的定序設定。<br /><br /> 預設值︰**Latin1_General_CI_AS**|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的定序設定。<br /><br /> 預設值：**Latin1_General_CI_AS**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態檔的目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料檔案的目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 記錄檔的目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **選擇性**|指定 Analysis Services 執行個體的伺服器模式。 叢集情況中的有效值為 MULTIDIMENSIONAL 或 TABULAR。 **ASSERVERMODE** 區分大小寫。 所有值都必須以大寫形式表示。 如需有關有效值的詳細資訊，請參閱＜以表格模式安裝 Analysis Services＞。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSYSADMINACCOUNTS<br /><br /> **必要**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的系統管理員認證。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 暫存檔的目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Temp`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Temp`|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **選擇性**|指定 MSOLAP 提供者是否可以在處理序中執行。<br /><br /> 預設值︰1=啟用|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **選擇性**|指定 MSOLAP 提供者是否可以在處理序中執行。<br /><br /> 預設值：1=啟用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **必要**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料檔案的資料目錄。<br /><br /> 您必須指定此資料目錄，而且它必須位於共用叢集磁碟上。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **當 /SECURITYMODE=SQL 時則為必要參數**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** 帳戶的密碼。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全性模式。<br /><br /> 如果沒有提供這個參數，就會支援僅限 Windows 驗證模式<br /><br /> 支援的值：**SQL**|  
@@ -690,12 +690,12 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **選擇性**|指定使用者資料庫之資料檔案的目錄。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **選擇性**|指定使用者資料庫之記錄檔的目錄。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **適用於僅限檔案模式。**| 從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的安裝模式。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **選擇性**|指定 tempdb 資料檔案的目錄。 指定多個目錄時，請以空格隔開這些目錄。 若指定多個目錄，tempdb 資料檔案將以循環配置資源方式跨多個目錄存放。<br /><br /> 預設值︰`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> 附註：此參數也會新增至 RebuildDatabase 案例。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **選擇性**|指定 tempdb 記錄檔的目錄。<br /><br /> 預設值︰`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> 注意:此參數也會新增至 RebuildDatabase 案例。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **選擇性**|指定安裝程式要新增的 tempdb 資料檔案數目。 此值可以增加到與核心數目相同為止。 預設值︰<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 1 個<br /><br /> 所有其他版本為 8 個或與核心數目相同 (兩者取其較低者)。<br /><br /> **重要：** tempdb 的主要資料庫檔案仍為 tempdb.mdf。 其他的 tempdb 檔案會命名為 tempdb_mssql_#.ndf，其中 # 代表唯一的數字，該數字是在安裝期間替每個額外的 tempdb 資料庫檔案所建立。 此命名慣例旨在使其為唯一。 解除安裝 SQL Server 的執行個體會刪除命名慣例為 tempdb_mssql_ #.ndf 的檔案。 請勿將 tempdb_mssql_\*.ndf 命名慣例用於使用者資料庫檔案。<br /><br /> **警告：** [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支援設定此參數。 安裝程式只會安裝 1 個 tempdb 資料檔案。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **選擇性**|指定 tempdb 資料檔案的目錄。 指定多個目錄時，請以空格隔開這些目錄。 若指定多個目錄，tempdb 資料檔案將以循環配置資源方式跨多個目錄存放。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> 注意：此參數也會新增至 RebuildDatabase 案例。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **選擇性**|指定 tempdb 記錄檔的目錄。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> 注意:此參數也會新增至 RebuildDatabase 案例。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **選擇性**|指定安裝程式要新增的 tempdb 資料檔案數目。 此值可以增加到與核心數目相同為止。 預設值：<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 1 個<br /><br /> 所有其他版本為 8 個或與核心數目相同 (兩者取其較低者)。<br /><br /> **重要：** tempdb 的主要資料庫檔案仍為 tempdb.mdf。 其他的 tempdb 檔案會命名為 tempdb_mssql_#.ndf，其中 # 代表唯一的數字，該數字是在安裝期間替每個額外的 tempdb 資料庫檔案所建立。 此命名慣例旨在使其為唯一。 解除安裝 SQL Server 的執行個體會刪除命名慣例為 tempdb_mssql_ #.ndf 的檔案。 請勿將 tempdb_mssql_\*.ndf 命名慣例用於使用者資料庫檔案。<br /><br /> **警告：** [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支援設定此參數。 安裝程式只會安裝 1 個 tempdb 資料檔案。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引進。 指定每個 tempdb 資料檔案的初始大小。<br/><br/>預設值 = 8 MB。<br/><br/>最小值 = 8 MB。<br/><br/>最大值 = 1024 MB ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 為 262,144 MB)。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **選擇性**|指定每個 tempdb 資料檔案的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024。<br /><br /> 預設值︰64<br /><br /> 允許的範圍：最小值 = 0，最大值 = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **選擇性**|指定 tempdb 記錄檔的初始大小 (MB)。 安裝程式允許的大小上限為 1024。 <br /> 預設值︰<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 4 個<br /><br /> 所有其他版本為 8 個<br /><br /> 允許的範圍：最小值 = 預設值 (4 或 8)，最大值 = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **選擇性**|指定每個 tempdb 資料檔案的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024。<br /><br /> 預設值：64<br /><br /> 允許的範圍：最小值 = 0，最大值 = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **選擇性**|指定 tempdb 記錄檔的初始大小 (MB)。 安裝程式允許的大小上限為 1024。 <br /> 預設值：<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 4 個<br /><br /> 所有其他版本為 8 個<br /><br /> 允許的範圍：最小值 = 預設值 (4 或 8)，最大值 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引進。 指定每個 tempdb 記錄檔的初始大小。<br/><br/>預設值 = [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 4 MB，所有其他版本為 8 MB。<br/><br/>最小值= (4 MB 或 8 MB)。<br/><br/>最大值 = 1024 MB ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 為 262,144 MB)。|  
   
 ###### <a name="sample-syntax"></a>範例語法：  
@@ -716,7 +716,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 #### <a name="upgrade-failover-cluster-parameters"></a>升級容錯移轉叢集參數  
  您可以使用下表中的參數來開發容錯移轉叢集升級的命令列指令碼。 如需詳細資訊，請參閱[升級 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集執行個體 &#40;安裝程式&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) 和 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出安裝工作流程的必要參數。<br /><br /> 支援的值：**升級**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **只有當您針對自動安裝指定了 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。|  
@@ -735,18 +735,18 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/SQMREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 在較舊版本中，這會指定 SQL Server 的功能使用狀況報告。<br /><br />支援的值：<br /><br /> 0=停用<br /><br /> 1=啟用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/HIDECONSOLE<br /><br /> **選擇性**|指定要隱藏或關閉主控台視窗。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERROLLOWNERSHIP|指定升級期間的 [容錯移轉行為](#RollOwnership) 。|  
-|SQL Server Browser 服務|/BROWSERSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 SQL Server Browser 服務的 [啟動](#Accounts) 模式。 支援的值：<br /><br /> **自動**<br /><br /> **已停用**<br /><br /> **手動**|  
+|SQL Server Browser 服務|/BROWSERSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 SQL Server Browser 服務的 [啟動](#Accounts) 模式。 支援的值：<br /><br /> **自動**<br /><br /> **Disabled**<br /><br /> **手動**|  
 |SQL Server 全文檢索|/FTUPGRADEOPTION<br /><br /> **選擇性**|指定全文檢索目錄升級選項。 支援的值：<br /><br /> **REBUILD**<br /><br /> **RESET**<br /><br /> **IMPORT**|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的帳戶。<br /><br /> 預設值︰NT AUTHORITY\NETWORK SERVICE|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密碼。|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的帳戶。<br /><br /> 預設值：NT AUTHORITY\NETWORK SERVICE|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **選擇性**|指定 [服務的](#Accounts) 啟動 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 模式。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEDATABASEACCOUNT<br /><br /> **選擇性**|只有在升級 2008 R2 或更早版本的 SharePoint 模式報表伺服器時，才會使用此屬性。 針對使用舊版 SharePoint 模式架構 (在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中已變更) 的報表伺服器，會執行其他升級作業。 如果此選項未隨附於命令列安裝，則會使用舊報表伺服器執行個體的預設服務帳戶。 如果使用這個屬性，請使用 **/RSUPGRADEPASSWORD** 屬性提供此帳戶的密碼。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEDATABASEACCOUNT<br /><br /> **選擇性**|只有在升級 2008 R2 或更早版本的 SharePoint 模式報表伺服器時，才會使用此屬性。 針對使用舊版 SharePoint 模式架構 (此架構已在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中變更) 的報表伺服器，會執行其他升級作業。 如果此選項未隨附於命令列安裝，則會使用舊報表伺服器執行個體的預設服務帳戶。 如果使用這個屬性，請使用 **/RSUPGRADEPASSWORD** 屬性提供此帳戶的密碼。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEPASSWORD<br /><br /> **選擇性**|現有報表伺服器服務帳戶的密碼。|  
   
 ####  <a name="AddNode"></a> 加入節點參數  
  您可以使用下表中的參數來開發 AddNode 的命令列指令碼。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出 AddNode 工作流程的必要參數。<br /><br /> 支援的值：**AddNode**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **只有當您針對自動安裝指定了 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。|  
@@ -758,9 +758,9 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/INDICATEPROGRESS<br /><br /> **選擇性**|指定要將詳細安裝程式記錄檔送到主控台。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/INSTANCENAME<br /><br /> **必要**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體名稱。<br /><br /> 如需詳細資訊，請參閱＜ [Instance Configuration](../../sql-server/install/instance-configuration.md)＞。|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **選擇性**|指定引擎服務的帳戶。 預設是 **NT Authority\NETWORK SERVICE**。|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **選擇性**|指定引擎服務帳戶的密碼。|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **選擇性**|指定引擎服務帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 PolyBase 引擎服務的啟動模式：自動 (預設)、停用及手動。|  
-|PolyBase|/PBPORTRANGE<br /><br /> **選擇性**|為 PolyBase 服務指定含至少 6 個連接埠的連接埠範圍。 範例<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|/PBPORTRANGE<br /><br /> **選擇性**|為 PolyBase 服務指定含至少 6 個連接埠的連接埠範圍。 範例：<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **選擇性**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體是否會用作 PolyBase 向外延展計算群組的一部分。 支援的值：**True**、**False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/PID<br /><br /> **選擇性**|指定 SQL Server 版的產品金鑰。 如果沒有指定這個參數，就會使用 Evaluation。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/Q 或 /QUIET <br /><br /> **選擇性**|指定安裝程式會在不含任何使用者介面的無訊息模式中執行。 這是自動安裝所使用的參數。 /Q 參數會覆寫 /QS 參數的輸入。|  
@@ -769,14 +769,14 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必要**|指定編碼的 IP 位址。 編碼都以分號分隔 (;) 並遵循以下格式：\<IP 類型>;\<位址>;\<網路名稱>;\<子網路遮罩>。 支援的 IP 類型包括 DHCP、IPv4 和 IPv6。<br />您可以指定多個容錯移轉叢集 IP 位址，每個位址之間隔一個空格。 請參閱下列範例：<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`<br /><br /> <br /><br /> 如需詳細資訊，請參閱[在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIRMIPDEPENDENCYCHANGE<br /><br /> **必要**|表示同意將 IP 位址資源相依性設定為 OR，以使用多重子網路容錯移轉叢集。 如需詳細資訊，請參閱[在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。 支援的值：<br /><br /> 0 = False (預設值)<br /><br /> 1 = True|  
 |SQL Server Agent|/AGTSVCACCOUNT<br /><br /> **必要**|指定 SQL Server Agent 服務的帳戶。|  
-|SQL Server Agent|/AGTSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQL Server Agent 服務帳戶的密碼。|  
+|SQL Server Agent|/AGTSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQL Server Agent 服務帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的帳戶。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的密碼。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必要**|指定 SQL Server 服務的啟動帳戶。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQLSVCACCOUNT 的密碼。|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密碼。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQLSVCACCOUNT 的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **適用於僅限檔案模式**| 從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的安裝模式。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必要](#Accounts)|從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務的啟動帳戶密碼。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必要](#Accounts)|從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務的啟動帳戶密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
   
 ##### <a name="additional-notes"></a>其他注意事項：  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是唯一可感知叢集的元件。 其他功能無法感知叢集而且無法透過容錯移轉提供高可用性。 
@@ -791,7 +791,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 #### <a name="remove-node-parameters"></a>移除節點參數  
  您可以使用下表中的參數來開發 若要解除安裝容錯移轉叢集，您必須在每個容錯移轉叢集節點上執行 RemoveNode。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出 RemoveNode 工作流程的必要參數。<br /><br /> 支援的值：**RemoveNode**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
@@ -833,7 +833,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ##  <a name="Feature"></a> 功能參數  
  若要安裝特定功能，請使用 /FEATURES 參數，然後指定下表中的父功能或功能值。 如需 SQL Server 版本支援的功能清單，請參閱 [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 
   
-|父功能參數|功能參數|Description|  
+|父功能參數|功能參數|描述|  
 |:---|:---|:---|  
 |SQL||安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、複寫、全文檢索和 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]。|  
 ||SQLEngine|只安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。|  
@@ -873,7 +873,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 ### <a name="feature-parameter-examples"></a>功能參數範例：  
   
-|參數和值|Description| 
+|參數和值|描述| 
 |---------------|-----------------|  
 |/FEATURES=SQLEngine|安裝不含複寫和全文檢索的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。|  
 |/FEATURES=SQLEngine,FullText|安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和全文檢索。|  
@@ -886,7 +886,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
  AllFeatures_WithDefaults 角色是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本的預設行為，而且會減少向使用者顯示的對話方塊數目。 安裝非 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的 SQL Server 版本時，可以從命令列指定該角色。 
   
-|角色|Description|安裝...|  
+|角色|描述|安裝...|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|在現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服陣列或獨立伺服器上，將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安裝為 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 具名執行個體。|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計算引擎已針對記憶體內部資料儲存和處理進行預先設定。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案套件<br /><br /> [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 的安裝程式<br /><br /> SQL Server 線上叢書|  
 |SPI_AS_NewFarm|在全新且未設定的 Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 伺服陣列或獨立伺服器上，將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 安裝為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 具名執行個體。 SQL Server 安裝程式將會在功能角色安裝期間設定伺服陣列。|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計算引擎已針對記憶體內部資料儲存和處理進行預先設定。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案套件<br /><br /> SQL Server 線上叢書<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> 組態工具<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  

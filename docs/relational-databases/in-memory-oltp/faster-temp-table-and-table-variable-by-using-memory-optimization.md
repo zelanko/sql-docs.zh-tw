@@ -1,6 +1,6 @@
 ---
-title: 使用記憶體最佳化加快暫存資料表與資料表變數的速度 | Microsoft Docs
-ms.custom: ''
+title: 記憶體最佳化加快暫存資料表與資料表變數的速度
+ms.custom: seo-dt-2019
 ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb1c7dc1571371b12f759e31cfb508f63f05a530
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 833108cfc5e8a11f72e8b7cb7b628690b0050c58
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713255"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412683"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>使用記憶體最佳化加快暫存資料表與資料表變數的速度
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "71713255"
   
 如果您使用暫存資料表、資料表變數或資料表值參數，請考慮進行轉換，以便利用記憶體最佳化資料表和資料表變數來提升效能。 對程式碼所做的變更通常很少。  
   
-本文說明：  
+本文章說明：  
   
 - 有利於轉換成記憶體內部的案例。  
 - 實作轉換成記憶體內部的技術性步驟。  
@@ -57,7 +57,7 @@ ms.locfileid: "71713255"
 - 記憶體最佳化資料表變數  
   - 必須分兩個步驟 (而非內嵌) 宣告：  
     - `CREATE TYPE my_type AS TABLE ...;` ，則  
-    - `DECLARE @mytablevariable my_type;`。  
+    - 第 1 課：建立 Windows Azure 儲存體物件`DECLARE @mytablevariable my_type;`。  
   
   
 ## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. 案例：取代全域 tempdb &#x23;&#x23;table  
@@ -124,7 +124,7 @@ CREATE TABLE #tempSessionC
   
   
   
-第一步，建立下列資料表值函式，對 **@@spid** 進行篩選。 此函數將可供轉換自工作階段暫存資料表的所有 SCHEMA_ONLY 資料表使用。  
+第一步，建立下列資料表值函數，對 **\@\@spid** 進行篩選。 此函數將可供轉換自工作階段暫存資料表的所有 SCHEMA_ONLY 資料表使用。  
   
   
   

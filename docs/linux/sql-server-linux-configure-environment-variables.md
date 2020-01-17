@@ -1,6 +1,7 @@
 ---
-title: 使用環境變數來設定 SQL Server 設定
+title: 在 Linux 上設定 SQL Server 的環境變數
 description: 此文章說明如何使用環境變數在 Linux 上設定特定的 SQL Server 2017 設定。
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 11f8926ede3c4bcd1f0350be79add16c5ae52249
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f768a79512059025ebd6dfe6a6f339175b6149f3
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531315"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558368"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>使用環境變數在 Linux 上設定 SQL Server 設定
 
@@ -43,11 +44,11 @@ ms.locfileid: "73531315"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| 環境變數 | Description |
+| 環境變數 | 描述 |
 |-----|-----|
 | **ACCEPT_EULA** | 將 **ACCEPT_EULA** 變數設為任意值可確認您接受[終端使用者授權合約](https://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
 | **MSSQL_SA_PASSWORD** | 設定 SA 使用者密碼。 |
-| **MSSQL_PID** | 設定 SQL Server 版本或產品金鑰。 可能的值包括： </br></br>**Evaluation**</br>**開發人員**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**產品金鑰**</br></br>如果指定產品金鑰，則其格式必須為 #####-#####-#####-#####-#####，其中 '#' 是數字或字母。|
+| **MSSQL_PID** | 設定 SQL Server 版本或產品金鑰。 可能的值包括： </br></br>**評估**</br>**開發人員**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**產品金鑰**</br></br>如果指定產品金鑰，則其格式必須為 #####-#####-#####-#####-#####，其中 '#' 是數字或字母。|
 | **MSSQL_LCID** | 為 SQL Server 設定要使用的語言識別碼。 例如 1036 是法文。 |
 | **MSSQL_COLLATION** | 設定 SQL Server 的預設定序。 這會覆寫語言識別碼 (LCID) 與定序的預設對應。 |
 | **MSSQL_MEMORY_LIMIT_MB** | 設定 SQL Server 可使用的記憶體數量上限 (MB)。 預設為實體記憶體總計的 80%。 |
@@ -67,11 +68,11 @@ ms.locfileid: "73531315"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| 環境變數 | Description |
+| 環境變數 | 描述 |
 |-----|-----|
 | **ACCEPT_EULA** | 將 **ACCEPT_EULA** 變數設為任意值可確認您接受[終端使用者授權合約](https://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
 | **MSSQL_SA_PASSWORD** | 設定 SA 使用者密碼。 |
-| **MSSQL_PID** | 設定 SQL Server 版本或產品金鑰。 可能的值包括： </br></br>**Evaluation**</br>**開發人員**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**產品金鑰**</br></br>如果指定產品金鑰，則其格式必須為 #####-#####-#####-#####-#####，其中 '#' 是數字或字母。|
+| **MSSQL_PID** | 設定 SQL Server 版本或產品金鑰。 可能的值包括： </br></br>**評估**</br>**開發人員**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**產品金鑰**</br></br>如果指定產品金鑰，則其格式必須為 #####-#####-#####-#####-#####，其中 '#' 是數字或字母。|
 | **MSSQL_LCID** | 為 SQL Server 設定要使用的語言識別碼。 例如 1036 是法文。 |
 | **MSSQL_COLLATION** | 設定 SQL Server 的預設定序。 這會覆寫語言識別碼 (LCID) 與定序的預設對應。 |
 | **MSSQL_MEMORY_LIMIT_MB** | 設定 SQL Server 可使用的記憶體數量上限 (MB)。 預設為實體記憶體總計的 80%。 |

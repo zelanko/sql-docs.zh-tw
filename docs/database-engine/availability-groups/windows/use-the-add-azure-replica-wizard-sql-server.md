@@ -1,6 +1,7 @@
 ---
-title: 使用新增 Azure 複本精靈 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 將 Azure VM 設定為可用性群組中的次要複本
+description: 使用 [新增 Azure 複本精靈] 可以協助您在混合式 IT 中建立新的 Azure VM，並且將它設定為全新或現有 AlwaysOn 可用性群組的次要複本。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +12,14 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ed09ad0f6325ab2ed8ee1d89d7c36f19584a3475
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 2eb45257f2641b1e4e9f94865784f8910ebf27fd
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176211"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822667"
 ---
-# <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用加入 Azure 複本精靈 (SQL Server)
+# <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>將 Azure VM 設定為可用性群組中的次要複本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用 [新增 Azure 複本精靈] 可以協助您在混合式 IT 中建立新的 Azure VM，並且將它設定為全新或現有 AlwaysOn 可用性群組的次要複本。  
   
@@ -50,25 +51,25 @@ ms.locfileid: "70176211"
   
 -   [使用可用性群組精靈 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [使用將複本加入至可用性群組精靈 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [使用 [將複本加入可用性群組中精靈] &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
  一旦您啟動 [加入 Azure 複本精靈] 之後，請遵循下列步驟進行：  
   
-1.  首先，下載您的 Azure 訂用帳戶的管理憑證。 按一下 [下載] 開啟登入頁面。  
+1.  首先，下載您的 Azure 訂用帳戶的管理憑證。 按一下 [下載]  開啟登入頁面。  
   
 2.  使用您的 Microsoft 帳戶或您的組織帳戶登入 Microsoft Azure。 您的 Microsoft 或組織帳戶是電子郵件地址格式，例如 HYPERLINK "mailto:patc@contoso.com" patc@contoso.com。 如需 Azure 認證的詳細資訊，請參閱 [Microsoft Account for Organizations FAQ](https://technet.microsoft.com/jj592903) (組織的 Microsoft 帳戶常見問題集) 和 [疑難排解使用您的組織帳戶登入的問題](https://support.microsoft.com/kb/2756852)。  
   
-3.  接著，按一下 **[連接]**，連接到您的訂用帳戶。 一旦您連線之後，下拉式清單就會填入您的 Azure 參數，例如 [虛擬網路] 和 [虛擬網路子網路]。  
+3.  接著，按一下 **[連接]** ，連接到您的訂用帳戶。 一旦您連線之後，下拉式清單就會填入您的 Azure 參數，例如 [虛擬網路]  和 [虛擬網路子網路]  。  
   
 4.  針對將裝載新次要複本的 Azure VM 指定設定：  
   
-     image  
+     影像  
      要用於 Azure VM 的 SQL Server 映像名稱  
   
      VM 大小  
      Azure VM 的大小  
   
-     VM 名稱  
+     虛擬機器名稱  
      Azure VM 的 DNS 名稱  
   
      VM 使用者名稱  
@@ -89,7 +90,7 @@ ms.locfileid: "70176211"
      網域使用者名稱  
      用來將 Azure VM 加入至網域的 AD 使用者名稱  
   
-     [密碼]  
+     密碼  
      用來將 Azure VM 加入至網域的密碼  
   
 5.  按一下 **[確定]** 認可您的設定並結束 [加入 Azure 複本精靈]。  

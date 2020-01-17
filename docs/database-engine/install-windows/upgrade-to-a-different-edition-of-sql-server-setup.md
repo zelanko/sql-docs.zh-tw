@@ -1,7 +1,7 @@
 ---
-title: 升級為不同的 SQL Server 2016 版本 (安裝程式) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/24/2017
+title: 升級為不同的版本
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +10,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2e224e5949fd3f166789e72f7f70d8ca44392179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 996d0f90a76760c4c02a7a3d2bbf08f8c7ba6981
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934670"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258789"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>升級為不同的 SQL Server 版本 (安裝程式)
 
@@ -63,7 +63,7 @@ ms.locfileid: "67934670"
   
 11. [完成] 頁面會提供安裝和其他重要注意事項之摘要記錄檔的連結。  
   
-12. 如果指示您重新啟動電腦，請立刻執行。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需安裝程式記錄檔的詳細資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
+12. 如果指示您重新啟動電腦，請立刻執行。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需安裝程式記錄檔的資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
 13. 如果您是從 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]升級，就必須執行一些額外的步驟，然後才能使用升級的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體：  
   
@@ -73,7 +73,7 @@ ms.locfileid: "67934670"
   
  除了上述步驟以外，如果您是從 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]升級，可能必須進行下列動作：  
   
--   在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中提供的使用者會在升級之後維持已提供的狀態。 更明確地說，BUILTIN\Users 群組會維持已提供的狀態。 您可以視需要停用、移除或重新提供這些帳戶。 如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+-   在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中提供的使用者會在升級之後維持已提供的狀態。 更明確地說，BUILTIN\Users 群組會維持已提供的狀態。 您可以視需要停用、移除或重新提供這些帳戶。 如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)預覽版本升級問題的解答。  
   
 -   tempdb 和 model 系統資料庫的大小和復原模式在升級之後會維持不變。 您可以視需要重新設定這些設定。 如需詳細資訊，請參閱[系統資料庫的備份與還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。  
   

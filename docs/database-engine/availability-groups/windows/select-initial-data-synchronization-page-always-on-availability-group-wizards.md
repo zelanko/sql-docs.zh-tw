@@ -1,6 +1,7 @@
 ---
-title: 選取初始資料同步頁面 (AlwaysOn 可用性群組精靈) | Microsoft Docs
-ms.custom: ''
+title: 選取初始資料同步頁面 (可用性群組精靈)
+description: 描述 SQL Server Management Studio (SSMS) 中 [Always On 可用性群組精靈] 的 [選取初始資料同步處理] 頁面。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9521577c4fd6fac3f683ca69fabd6226944a6bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8a6a14a6efc6a9d5f96144364f1532c14b0c1c0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014184"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235336"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>選取初始資料同步頁面 (Always On 可用性群組精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +84,7 @@ ms.locfileid: "68014184"
  只有在您要對每個主要資料庫執行您自己的資料庫和記錄備份、將它們手動還原到裝載次要複本的每個伺服器執行個體時，才選取此選項。 結束精靈之後，您需要聯結每個次要複本上的每個次要資料庫。  
   
 > [!NOTE]  
->  如需詳細資訊，請參閱本主題稍後的 [於 AlwaysOn 次要資料庫啟動資料移動 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
+>  如需詳細資訊，請參閱 [於 AlwaysOn 次要資料庫啟動資料移動 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
 ##  <a name="PrepareSecondaryDbs"></a> 手動準備次要資料庫  
  若要在任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 精靈之外獨立準備次要資料庫，可以使用下列方法之一：  
@@ -115,7 +116,7 @@ ms.locfileid: "68014184"
   
 -   [使用 [將複本加入可用性群組中精靈] &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [使用 [將資料庫加入可用性群組中精靈] &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
+-   [使用將資料庫加入至可用性群組精靈 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
 -   [使用容錯移轉可用性群組精靈 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   

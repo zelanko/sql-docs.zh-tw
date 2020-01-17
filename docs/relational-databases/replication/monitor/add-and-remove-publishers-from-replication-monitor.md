@@ -1,6 +1,7 @@
 ---
-title: 從複寫監視器新增及移除發行者 | Microsoft Docs
-ms.custom: ''
+title: 從複寫監視器 (SSMS) 新增及移除發行者
+description: 了解如何在 SQL Server Management Studio (SSMS) 中從複寫監視器新增和移除發行者。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 28d0a979e6cf4d76dd338f139f5c48887aed988e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d46f710bfae73527f414017108954bf4e9129f8f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770692"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320755"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>從複寫監視器加入及移除發行者
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "68770692"
   
 3.  在 **[連接到伺服器]** 對話方塊中，輸入「發行者」的名稱，然後選取驗證類型。 如果您選取 **[SQL Server 驗證]** ，請輸入登入與密碼。 複寫監視器會儲存您指定的認證，在未來連接到這個伺服器時使用。 指定的 Windows 帳戶或 SQL Server 登入必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員，或者散發資料庫中 **replmonitor** 固定資料庫角色的成員。  
   
-4.  按一下 **[連接]** 。 如果「發行者」使用遠端「散發者」，將會提示您在 **[連接到伺服器]** 對話方塊中連接到「散發者」。 複寫監視器會儲存您指定的認證，在未來連接到這個伺服器時使用。 指定的 Windows 帳戶或 SQL Server 登入必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員，或者散發資料庫中 **replmonitor** 固定資料庫角色的成員。  
+4.  按一下 [ **連接**]。 如果「發行者」使用遠端「散發者」，將會提示您在 **[連接到伺服器]** 對話方塊中連接到「散發者」。 複寫監視器會儲存您指定的認證，在未來連接到這個伺服器時使用。 指定的 Windows 帳戶或 SQL Server 登入必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員，或者散發資料庫中 **replmonitor** 固定資料庫角色的成員。  
   
 5.  發行者與散發者的名稱會在 **[開始監視下列發行者]** 方格中顯示。  
   
@@ -48,9 +49,9 @@ ms.locfileid: "68770692"
   
 2.  在 **[加入發行者]** 對話方塊中，按一下 **[加入]** ，然後按一下 **[加入 Oracle 發行者]** 。  
   
-3.  在 **[連接到伺服器]** 對話方塊中，輸入與「Oracle 發行者」關聯的「 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」的名稱，然後選取驗證類型。 如果您選取 **[SQL Server 驗證]** ，請輸入登入與密碼。 複寫監視器會儲存您指定的認證，在未來連接到這個伺服器時使用。 指定的 Windows 帳戶或 SQL Server 登入必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員，或者散發資料庫中 **replmonitor** 固定資料庫角色的成員。  
+3.  在 [連接到伺服器]  對話方塊中，輸入與「Oracle 發行者」關聯的「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」的名稱，然後選取驗證類型。 如果您選取 **[SQL Server 驗證]** ，請輸入登入與密碼。 複寫監視器會儲存您指定的認證，在未來連接到這個伺服器時使用。 指定的 Windows 帳戶或 SQL Server 登入必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員，或者散發資料庫中 **replmonitor** 固定資料庫角色的成員。  
   
-4.  按一下 **[連接]** 。  
+4.  按一下 [ **連接**]。  
   
 5.  發行者與散發者的名稱會在 **[開始監視下列發行者]** 方格中顯示。  
   
@@ -68,7 +69,7 @@ ms.locfileid: "68770692"
   
 3.  在 **[連接到伺服器]** 對話方塊中，輸入「散發者」的名稱，然後選取驗證類型。 如果您選取 **[SQL Server 驗證]** ，請輸入登入與密碼。 複寫監視器會儲存您指定的認證，在未來連接到這個伺服器時使用。 指定的 Windows 帳戶或 SQL Server 登入必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員，或者散發資料庫中 **replmonitor** 固定資料庫角色的成員。  
   
-4.  按一下 **[連接]** 。  
+4.  按一下 [ **連接**]。  
   
 5.  「散發者」與每個「發行者」的名稱顯示在 **[開始監視下列發行者]** 方格中。 如果「發行者」已新增至「複寫監視器」，則不會顯示在方格中。  
   

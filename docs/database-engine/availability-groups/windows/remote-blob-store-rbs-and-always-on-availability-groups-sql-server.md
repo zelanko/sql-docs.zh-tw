@@ -1,5 +1,5 @@
 ---
-title: 搭配使用遠端 Blob 存放區 (RBS) 與可用性群組
+title: 搭配可用性群組的遠端 Blob 存放區 (RBS)
 description: '描述如何搭配使用遠端 Blob 存放區 (RBS) 與 Always On 可用性群組所屬一部分的資料庫。 '
 ms.custom: seodec18
 ms.date: 05/17/2016
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2d98c64e94904ddf883f5f7f1a4ce22d3f81c88b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 864ed8080c3978ec272f5212fa0a5e8dc40c2350
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014436"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822488"
 ---
 # <a name="use-remote-blob-store-rbs-with-always-on-availability-groups"></a>搭配使用遠端 Blob 存放區 (RBS) 與 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

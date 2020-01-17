@@ -1,6 +1,7 @@
 ---
-title: 開啟條件對話方塊，相依原則頁面 | Microsoft Docs
-ms.custom: ''
+title: '[開啟條件] 對話方塊的 [相依原則] 頁面'
+description: 說明 SQL Server Management Studio (SSMS) 中 [開啟條件] 對話方塊的 [相依原則] 頁面，用於原則式管理。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f1f89570284ecee36ea998a82f7b9dbb966d2683
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3d732c555ad470ff01d469f44d27a264abb2f891
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087046"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557771"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>開啟條件對話方塊，相依原則頁面
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68087046"
  **已啟用**  
  指出此原則目前是否已啟用的核取記號。 如果此原則未啟用，則為空白。  
   
- **記錄**  
+ **History**  
  按一下 [檢視記錄] 超連結可顯示執行記錄報表。  
   
  **建立日期**  

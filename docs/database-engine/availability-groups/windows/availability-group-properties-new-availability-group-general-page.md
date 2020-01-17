@@ -1,8 +1,8 @@
 ---
-title: 可用性群組屬性：新增可用性群組 (一般頁面)
+title: 一般頁面 ([新增可用性群組] 與 [屬性] 對話方塊)
 titleSuffix: SQL Server
-description: 描述 SQL Server Management Studio [新增可用性群組精靈] 中 [一般] 頁面上找到的各種選項。
-ms.custom: seodec18
+description: 描述可在 SQL Server Management Studio (SSMS) 中的 [新增可用性群組] 和 [可用性群組屬性] 對話方塊的 [一般] 頁面上找到的各種屬性。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0f5e7c7ad7fe916b2203b2d1815e50602d30e2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f379d55d2728d19a3321e99b342d8597622a6fc0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934873"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254084"
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>可用性群組屬性：新增可用性群組 (一般頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "67934873"
   
 -   [檢視可用性群組屬性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)  
   
--   [使用 Always On 儀表板 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **可用性群組名稱**  
@@ -38,7 +38,7 @@ ms.locfileid: "67934873"
  **Database Name**  
  已經加入至可用性群組的資料庫名稱。  
   
- **[加入]**  
+ **加入**  
  按一下可將資料庫加入至可用性群組。  
   
  **移除**  
@@ -49,7 +49,7 @@ ms.locfileid: "67934873"
  裝載這個複本之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的伺服器名稱，如果是非預設執行個體，則是它的執行個體名稱。  
   
  **角色**  
- **Primary**  
+ **主要**  
  目前的主要複本。  
   
  **次要**  
@@ -105,7 +105,7 @@ ms.locfileid: "67934873"
  **端點 URL**  
  端點的 URL。 如需這些 URL 格式的資訊，請參閱[在加入或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)。  
   
- **[加入]**  
+ **加入**  
  按一下可將次要複本加入至可用性群組。  
   
  **移除**  

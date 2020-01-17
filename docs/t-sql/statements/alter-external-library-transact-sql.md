@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 13c306c1fbd83b2fde5783daeba4201cf5d862d9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9da237047e7b42b83cc8aa039d6bd04aaca9549a
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532845"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191078"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -169,7 +169,7 @@ WITH ( LANGUAGE = 'R' )
 您可以改為以二進位格式的變數來傳遞套件內容。
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
-**PLATFORM = WINDOWS**
+**platform = WINDOWS**
 
 指定程式庫內容的平台。 修改現有程式庫以加入不同平台時，需要此值。
 在 SQL Server 2017 中，Windows 是唯一支援的平台。
@@ -200,7 +200,7 @@ WITH ( LANGUAGE = 'R' )
 指定套件的語言。 此值可以是 **R**、**Python** 或外部語言的名稱 (請參閱[建立外部語言](create-external-language-transact-sql.md))。
 ::: moniker-end
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 對於 R 語言，必須先針對 Windows，以具備 .ZIP 副檔名的 ZIP 壓縮封存檔案形式備妥套件。 在 SQL Server 2017 中僅支援 Windows 平台。  

@@ -1,23 +1,23 @@
 ---
 title: 教學課程：將 AD 驗證用於 Linux 上的 SQL Server
 titleSuffix: SQL Server
-description: 本教學課程提供 Linux 上 SQL Server 的 AD 驗證設定步驟。
+description: 此教學課程提供 Linux 上的 SQL Server 的 Active Directory (AD) 驗證設定步驟。
 author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
-ms.date: 04/01/2019
+ms.date: 12/18/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 69bbeb31f8da4023bd0630ae0d944165407e2dec
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 72a1a554203349e9e6bd8cee43d2a6fe9d093ad8
+ms.sourcegitcommit: a02727aab143541794e9cfe923770d019f323116
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027336"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755858"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教學課程：透過 Linux 上的 SQL Server 使用 Active Directory 驗證
 
@@ -48,7 +48,7 @@ ms.locfileid: "68027336"
 
 ## <a id="join"></a> 將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 主機加入 AD 網域
 
-您必須將 SQL Server Linux 主機加入 Active Directory 網域控制站。 如需如何加入 Active Directory 網域的資訊，請參閱[將 Linux 主機上的 SQL Server 加入 Active Directory 網域](sql-server-linux-active-directory-join-domain.md)。
+將 SQL Server Linux 主機加入 Active Directory 網域控制站。 如需如何加入 Active Directory 網域的資訊，請參閱[將 Linux 主機上的 SQL Server 加入 Active Directory 網域](sql-server-linux-active-directory-join-domain.md)。
 
 ## <a id="createuser"></a> 建立用於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 AD 使用者並設定 SPN
 
@@ -74,7 +74,7 @@ ms.locfileid: "68027336"
    ```
 
    > [!NOTE]
-   > 如果您收到錯誤 `Insufficient access rights`，請洽詢您的網域系統管理員，確定您有足夠的權限可在此帳戶上設定 SPN。
+   > 如果您收到錯誤 `Insufficient access rights`，請洽詢您的網域系統管理員，確定您有足夠的權限可在此帳戶上設定 SPN。 用來註冊 SPN 的帳戶將會需要 **Write servicePrincipalName** 權限。 如需詳細資訊，請參閱 [註冊 Kerberos 連接的服務主體名稱](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。
    >
    > 如果您日後變更 TCP 通訊埠，則必須使用新的連接埠號碼再次執行 **setspn** 命令。 您還需要遵循下一節中的步驟，將新的 SPN 新增至 SQL Server 服務 Keytab。
 
@@ -82,174 +82,86 @@ ms.locfileid: "68027336"
 
 ## <a id="configurekeytab"></a> 設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務 Keytab
 
-有兩種不同的方式可設定 SQL Server 服務 Keytab 檔案。 第一個選項是使用電腦帳戶 (UPN)，而第二個選項則使用 Keytab 設定中受控服務帳戶 (MSA)。 這兩種機制都具有相同的功能，您可以選擇最適合您環境的方法。
-
-在這兩種情況下，在先前步驟中建立的 SPN 都是必要項目，且必須在 Keytab 中註冊 SPN。
-
-設定 SQL Server 服務 Keytab 檔案：
-
-1. 在下一節中設定 [SPN Keytab 項目](#spn)。
-
-1. 然後，遵循其各自章節中的步驟，在 Keytab 檔案中[新增UPN](#upn) (選項 1) 或 [MSA](#msa) (選項 2) 項目。
+設定 Linux 上的 SQL Server 的 AD 驗證需要 AD 帳戶 (MSA 或 AD 使用者帳戶)，以及在上一節中建立的 SPN。
 
 > [!IMPORTANT]
-> 如果 UPN/MSA 的密碼已變更，或 SPN 指派目標帳戶的密碼已變更，您就必須使用新的密碼和金鑰版本號碼 (KVNO) 來更新 Keytab。 某些服務也可能會自動輪替密碼。 請檢閱前述帳戶的任何密碼輪替原則，並將它們與排程的維護活動配合，以避免產生非預期的停機時間。
+> 如果 AD 帳戶的密碼已變更，或受派 SPN 帳戶的密碼已變更，您就必須使用新的密碼和金鑰版本號碼 (KVNO) 來更新 Keytab。 某些服務也可能會自動輪替密碼。 請檢閱前述帳戶的任何密碼輪替原則，並將它們與排程的維護活動配合，以避免產生非預期的停機時間。
 
 ### <a id="spn"></a> SPN Keytab 項目
 
 1. 檢查上一個步驟中所建立的 AD 帳戶金鑰版本號碼 (KVNO)。 通常是 2，但如果您多次變更帳戶的密碼，則可能是另一個整數。 在 SQL Server 主機電腦上，請執行下列命令：
 
+    - 以下範例假設 `user` 位於 `@CONTOSO.COM` 網域中。 將使用者和網域名稱修改為您的使用者和網域名稱。
+
    ```bash
    kinit user@CONTOSO.COM
+   kvno user@CONTOSO.COM
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM
    ```
 
    > [!NOTE]
-   > SPN 可能需要幾分鐘的時間才能傳播到您的網域，特別是當網域很大時。 如果您收到錯誤 (`kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM`)，請稍候幾分鐘，然後再試一次。  
+   > SPN 可能需要幾分鐘的時間才能傳播到您的網域，特別是當網域很大時。 如果您收到錯誤 (`kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM`)，請稍候幾分鐘，然後再試一次。</br></br> 只有在伺服器已加入 AD 網域 (涵蓋在上一節中) 時，上述命令才會生效。
 
-1. 啟動 **ktutil**：
+1. 在 Windows 機器命令提示字元中，使用下列命令，以 [**ktpass**](/windows-server/administration/windows-commands/ktpass) 為每個 SPN 新增 Keytab 項目：
 
-   ```bash
-   sudo ktutil
-   ```
-
-1. 使用下列命令，為每個 SPN 新增 Keytab 項目：
-
-   ```bash
-   addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
-   addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
-   addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
-   addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
-   ```
-
-1. 將 Keytab 寫入檔案，然後結束 ktutil：
+    - `<DomainName>\<UserName>` - 可以是 MSA 或 AD 使用者帳戶
+    - `@CONTOSO.COM` - 使用您的網域名稱
+    - `/kvno <#>` - 將 `<#>` 取代為先前步驟中取得的 KVNO
+    - `<StrongPassword>` - 使用強式密碼
 
    ```bash
-   wkt /var/opt/mssql/secrets/mssql.keytab
-   quit
-   ```
+   ktpass /princ MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-   > [!NOTE]
-   > **ktutil** 工具不會驗證密碼，因此請務必在出現提示時正確輸入密碼。
+   ktpass /princ MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-### <a id="upn"></a> 選項 1：使用 UPN 來設定 Keytab
+   ktpass /princ MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-使用 **ktutil** 將電腦帳戶新增至您的 Keytab。 電腦帳戶 (也稱為 UPN) 會以 `<hostname>$@<realm.com>` 的格式 (例如 `sqlhost$@CONTOSO.COM`) 出現在 **/etc/krb5.keytab** 中。 請將這些項目從 **/etc/krb5.keytab** 複製到 **mssql.keytab**。
+   ktpass /princ MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-1. 使用下列命令來啟動 **ktuil**：
+   ktpass /princ <UserName>@<DomainName.com> /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-   ```bash
-   sudo ktutil
-   ```
-
-1. 使用 **rkt** 命令來讀取 **/etc/krb5.keytab** 中的所有項目。
-
-   ```bash
-   rkt /etc/krb5.keytab
-   ```
-
-1. 接下來，列出這些項目。
-
-   ```bash
-   list
-   ```
-
-1. 依照不是 UPN 的位置編號來刪除所有項目。 請重複下列命令，一次刪除一個項目：
-
-   ```bash
-   delent <slot num>
-   ```
-
-   > [!IMPORTANT]
-   > 當刪除項目 (例如位置 1) 時，所有值都會上移一個位置以取代其位置。 這表示在刪除位置 1 的項目時，位置 2 中的項目會移至位置 1。
-
-1. 再次列出項目，直到只剩下 UPN 項目為止。
-
-   ```bash
-   list
-   ```
-
-1. 在只剩下 UPN 項目時，請將這些值附加到 **mssql.keytab**：
-
-   ```bash
-   wkt /var/opt/mssql/secrets/mssql.keytab
-   ```
-
-1. 結束 **ktutil**。
-
-   ```bash
-   quit
-   ```
-
-### <a id="msa"></a> 選項 2：使用 MSA 來設定 Keytab
-
-針對 MSA 選項，您必須建立 SQL Server 的 Kerberos Keytab。 它應該包含[第一個步驟中註冊的所有 SPN](#spn)，以及 SPN 註冊目標 MSA 的認證。 
-
-1. 建立 SPN Keytab 項目之後，請從已加入網域的 Linux 電腦執行下列命令：
-
-   ```bash
-   kinit <AD user>
-   kvno <any SPN registered in step 1>
-      <spn>@CONTOSO.COM: kvno = <KVNO>
-   ```
-
-   此步驟會顯示已指派 SPN 擁有權之使用者帳戶的 KVNO。 為了讓此步驟正常執行，您必須在建立 SPN 時將其指派給 MSA 帳戶。 如果 SPN 未指派給 MSA，則顯示的 KVNO 將會是目前 SPN 擁有者帳戶，無法正確用於設定。  
-
-1. 啟動 **ktutil**：
-
-   ```bash
-   sudo ktutil
-   ```
-
-1. 使用下列兩個命令來新增 MSA：
-
-   ```bash
-   addent -password -p <MSA> -k <kvno from command above> -e aes256-cts-hmac-sha1-96
-   addent -password -p <MSA> -k <kvno from command above> -e rc4-hmac
-   ```
-
-1. 將 Keytab 寫入檔案，然後結束 ktutil：
-
-   ```bash
-   wkt /var/opt/mssql/secrets/mssql.keytab
-   quit
-   ```
-
-1. 使用 MSA 方法時，必須使用 **mssql-conf** 工具來為設定選項進行設定，以指定在存取 Keytab 檔案時所要使用的 MSA。 請確定下列值位在 **/var/opt/mssql/mssql.conf** 中。
-
-   ```bash
-   sudo mssql-conf set network.privilegedadaccount <MSA_Name>
+   ktpass /princ <UserName>@<DomainName.com> /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
    ```
 
    > [!NOTE]
-   > 只包含 MSA 名稱，而不包含網域\帳戶名稱。
+   > 上述命令允許 AES 和 RC4 加密編碼器進行 AD 驗證。 RC4 是較舊的加密編碼器，如果需要較高的安全性等級，您可以選擇只使用 AES 加密編碼器來建立 Keytab 項目。
 
-## <a id="securekeytab"></a> 保護 Keytab 檔案
+1. 執行上述命令之後，您應該會有名為 mssql.keytab 的 Keytab 檔案。 將檔案複製到 SQL Server 機器的 `/var/opt/mssql/secrets` 資料夾下。
 
-有權存取此 Keytab 檔案的任何人都可以在網域上模擬 SQL Server，因此請務必限制檔案的存取權，只讓 mssql 帳戶具有讀取權限：
+1. 保護 Keytab 檔案。
 
-```bash
-sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
-sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
-```
+    有權存取此 Keytab 檔案的任何人都可以在網域上模擬 SQL Server，因此請務必限制檔案的存取權，只讓 mssql 帳戶具有讀取權限：
 
-## <a id="keytabkerberos"></a> 設定 SQL Server 以使用 Keytab 檔案進行 Kerberos 驗證
+    ```bash
+    sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
+    sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
+    ```
 
-使用下列步驟來設定 SQL Server，以開始使用 Keytab 檔案進行 Kerberos 驗證。
+1. 必須使用 **mssql-conf** 工具來設定下列設定選項，以指定存取 Keytab 檔案時要使用的帳戶。
 
-```bash
-sudo mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
-sudo systemctl restart mssql-server
-```
+   ```bash
+   sudo mssql-conf set network.privilegedadaccount <username>
+   ```
 
-選擇性地停用對網域控制站的 UDP 連線，以改善效能。 在許多情況下，連線到網域控制站時，UDP 連線會一直失敗，因此您可以在 **/etc/krb5.conf** 中針對設定選項進行設定以略過 UDP 呼叫。 請編輯 **/etc/krb5.conf** 並設定下列選項：
+   > [!NOTE]
+   > 只包含使用者名稱，而非 domainname\username 或 username@domain。 使用此使用者名稱時，SQL Server 會在內部連同此使用者名稱，視需要新增網域名稱。
 
-```/etc/krb5.conf
-[libdefaults]
-udp_preference_limit=0
-```
+1. 使用下列步驟來設定 SQL Server，以開始使用 Keytab 檔案進行 Kerberos 驗證。
 
-此時，您已準備好在 SQL Server 中使用以 AD 為基礎的登入，如下所示。
+    ```bash
+    sudo mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
+    sudo systemctl restart mssql-server
+    ```
+
+    > [!TIP]
+    > 選擇性地停用對網域控制站的 UDP 連線，以改善效能。 在許多情況下，連線到網域控制站時，UDP 連線會一直失敗，因此您可以在 **/etc/krb5.conf** 中針對設定選項進行設定以略過 UDP 呼叫。 請編輯 **/etc/krb5.conf** 並設定下列選項：
+    > ```bash
+    > /etc/krb5.conf
+    > [libdefaults]
+    > udp_preference_limit=0
+    > ```
+
+此時，您已準備好在 SQL Server 中使用 AD 型登入。
 
 ## <a id="createsqllogins"></a> 在 Transact-SQL 中建立以 AD 為基礎的登入
 
@@ -284,6 +196,7 @@ ssh -l user@contoso.com client.contoso.com
 ```bash
 sqlcmd -S mssql-host.contoso.com
 ```
+不同於 SQL Windows，Kerberos 驗證適用於 SQL Linux 中的本機連線。 不過，您仍然需要提供 SQL Linux 主機的 FQDN，如果您嘗試連線到 '.'、'localhost'、'127.0.0.1' 等等，則無法使用 AD 驗證。
 
 ### <a name="ssms-on-a-domain-joined-windows-client"></a>已加入網域的 Windows 用戶端上 SSMS
 
@@ -326,7 +239,7 @@ systemctl restart mssql-server
 
 當您想要手動設定 SQL Server 嘗試與其通訊的網域控制站時，這可能會很有用。 而且您可以使用 openldap 程式庫機制，方法是在 **krb5.conf** 中使用 KDC 清單。
 
-首先，將 **disablessd** 和 **enablekdcfromkrb5conf** 設定為 true，然後重新啟動 SQL Server：
+首先，將 **disablesssd** 和 **enablekdcfromkrb5conf** 設定為 true，然後重新啟動 SQL Server：
 
 ```bash
 sudo mssql-conf set network.disablesssd true
@@ -349,7 +262,7 @@ CONTOSO.COM = {
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，我們已逐步解說如何利用 Linux 上的 SQL Server 設定 Active Directory 驗證。 您已了解如何：
+在本教學課程中，我們已逐步解說如何利用 Linux 上的 SQL Server 設定 Active Directory 驗證。 您已了解如何︰
 > [!div class="checklist"]
 > * 將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 主機加入 AD 網域
 > * 建立用於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 AD 使用者並設定 SPN

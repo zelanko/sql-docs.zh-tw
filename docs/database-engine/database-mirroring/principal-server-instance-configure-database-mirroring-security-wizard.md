@@ -1,6 +1,7 @@
 ---
-title: 主體伺服器執行個體 (設定資料庫鏡像安全性精靈) | Microsoft Docs
-ms.custom: ''
+title: 主體伺服器執行個體 (設定資料庫鏡像安全性精靈)
+description: SQL Server Management Studio 中 [設定資料庫鏡像安全性] 精靈的 [主體伺服器執行個體] 頁面的描述。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 58af27d7-c5dd-4669-be6b-b472bc2c8ef4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c06c2b5a747855a7b0e5db70a9628c4a443ed121
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d48c59b06202f898fdf61746aee9f62ca155da6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025426"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255957"
 ---
 # <a name="principal-server-instance-configure-database-mirroring-security-wizard"></a>主體伺服器執行個體 (設定資料庫鏡像安全性精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "68025426"
  **主體伺服器執行個體**  
  因為 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的資料庫鏡像一律從主體伺服器設定，所以目前的伺服器執行個體一律為主體伺服器執行個體。  
   
- **接聽程式通訊埠**  
+ **接聽程式連接埠**  
  此選項的行為會視此伺服器執行個體的鏡像端點是否存在，如下：  
   
 -   如果這個伺服器執行個體沒有接聽程式通訊埠，在 **[通訊埠]** 文字方塊中就會顯示通訊埠編號 5022。 您可以使用任何可用的通訊埠編號，例如 7022。  

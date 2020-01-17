@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2019
+ms.date: 01/03/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7db5211191f714b977c8d103328fdb48882df6a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 362111a7e0bf74c9732ea79582fdee34019f7536
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057658"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656635"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "74057658"
 
 ||||||
 |---|---|---|---|---|
-|**\*_ SQL Server \*_** &nbsp;|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL 資料<br />倉儲](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL 資料<br />倉儲](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -91,7 +91,7 @@ column_name <data_type>
 
 ## <a name="arguments"></a>引數
 
-*{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 要建立資料表的名稱，由一到三個部分組成。 針對外部資料表，SQL 只會儲存資料表中繼資料，以及 Hadoop 或 Azure Blob 儲存體中所參考檔案或資料夾的基本統計資料。 實際上不會有任何資料會移至或儲存於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。
+*{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 所要建立資料表的名稱，由一到三個部分組成。 針對外部資料表，SQL 只會儲存資料表中繼資料，以及 Hadoop 或 Azure Blob 儲存體中所參考檔案或資料夾的基本統計資料。 實際上不會有任何資料會移至或儲存於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。
 
 \<欄位定義> [ ,...*n* ] CREATE EXTERNAL TABLE 支援設定資料行名稱、資料類型、可 NULL 性和定序功能。 您無法在外部資料表上使用 DEFAULT CONSTRAINT。
 
@@ -107,13 +107,13 @@ LOCATION = '*folder_or_filepath*' 指定 Hadoop 或 Azure Blob 儲存體中實�
 
 ![外部資料表的遞迴資料](../../t-sql/statements/media/aps-polybase-folder-traversal.png "外部資料表的遞迴資料")
 
-若要變更預設設定並僅從根資料夾讀取，請在 core-site.xml 設定檔中將 \<polybase.recursive.traversal> 屬性設為 'false'。 此檔案位於 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`。 例如， `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`。
+若要變更預設設定並僅從根資料夾讀取，請在 core-site.xml 設定檔中將 \<polybase.recursive.traversal> 屬性設為 'false'。 此檔案位於 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`。 例如： `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn` 。
 
-DATA_SOURCE = *external_data_source_name* 指定包含外部資料位置的外部資料來源名稱。 此位置可為 Hadoop 或 Azure Blob 儲存體。 若要建立外部資料來源，請使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
+DATA_SOURCE = *external_data_source_name* 指定包含外部資料位置的外部資料來源名稱。 此位置是 Hadoop 檔案系統 (HDFS)、Azure 儲存體 Blob 容器或 Azure Data Lake Store。 若要建立外部資料來源，請使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
 
 FILE_FORMAT = *external_file_format_name* 指定儲存外部資料檔案類型和壓縮方法的外部檔案格式物件名稱。 若要建立外部檔案格式，請使用 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
 
-拒絕選項：您可以指定拒絕參數，決定 PolyBase 處理從外部資料來源所擷取「已變更」記錄的方式。 若資料記錄的實際資料類型或資料行數目，與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。
+拒絕選項：您可以指定拒絕參數，決定 PolyBase 處理從外部資料來源所擷取「已變更」  記錄的方式。 若資料記錄的實際資料類型或資料行數目，與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。
 
 當您不指定或變更拒絕值時，PolyBase 就會使用預設值。 拒絕參數的相關資訊會在您搭配 CREATE EXTERNAL TABLE 陳述式建立外部資料表時，以額外中繼資料的形式儲存。 當未來有 SELECT 陳述式或 SELECT INTO SELECT 陳述式從外部資料表中選取資料時，PolyBase 將會使用拒絕選項來判斷在實際的查詢失敗之前，可以拒絕的資料列數目或百分比。 查詢將會傳回 (部分) 結果，直到超過拒絕閾值為止。 接著它便會失敗並顯示適當的錯誤訊息。
 
@@ -149,8 +149,6 @@ REJECT_SAMPLE_VALUE = *reject_sample_value* 在您指定 REJECT_TYPE = percentag
 - PolyBase 會嘗試載入接下來的 100 個資料列；這次有 25 個資料列成功，75 個資料列失敗。
 - 失敗資料列的百分比在重新計算後為 50%。 失敗資料列的百分比已超出 30% 的拒絕值。
 - PolyBase 查詢在嘗試傳回前 200 個資料列後，會因被拒絕的資料列達 50% 而失敗。 請注意，相符的資料列會在 PolyBase 查詢偵測到超出拒絕閾值之前傳回。
-
-DATA_SOURCE：外部資料來源，例如儲存在 Hadoop 檔案系統、Azure Blob 儲存體或[分區對應管理員](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/)中的資料。
 
 SCHEMA_NAME：SCHEMA_NAME 子句能讓您將外部資料表定義對應至位於遠端資料庫上不同結構描述的資料表。 使用此子句來區分同時存在於本機和遠端資料庫上的結構描述。
 
@@ -216,7 +214,7 @@ SQL Server 2016 中的 PolyBase 具有 32 KB 的資料列寬度限制，這是�
 
 SCHEMARESOLUTION 物件上的共用鎖定。
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 
 外部資料表的資料檔案會儲存在 Hadoop 或 Azure Blob 儲存體中。 這些資料檔案是由您自己的處理程序所建立及管理。 因此您應負責管理外部資料的安全性。
 
@@ -367,8 +365,8 @@ WITH
 (
   DATA_SOURCE = MyExtSrc,
   SCHEMA_NAME = 'sys',
-  OBJECT_NAME = 'dm_exec_requests',  
-  DISTRIBUTION=  
+  OBJECT_NAME = 'dm_exec_requests',
+  DISTRIBUTION=ROUND_ROBIN
 );
 ```
 
@@ -621,30 +619,21 @@ column_name <data_type>
 
 分區外部資料表選項
 
-針對[彈性資料庫查詢](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)指定外部資料來源 (非 SQL Server 資料來源) 及發佈方法。
+針對[彈性查詢](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)指定外部資料來源 (非 SQL Server 資料來源) 及發佈方法。
 
-DATA_SOURCE：外部資料來源，例如儲存在 Hadoop 檔案系統、Azure Blob 儲存體或[分區對應管理員](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/)中的資料。
+DATA_SOURCE DATA_SOURCE 子句定義用於外部資料表的外部資料來源 (分區對應)。 如需範例，請參閱[建立外部資料表](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)。
 
-SCHEMA_NAME：SCHEMA_NAME 子句能讓您將外部資料表定義對應至位於遠端資料庫上不同結構描述的資料表。 使用此子句來區分同時存在於本機和遠端資料庫上的結構描述。
+SCHEMA_NAME 和 OBJECT_NAME SCHEMA_NAME 和 OBJECT_NAME 子句會將外部資料表定義對應至不同結構描述中的資料表。 如果省略，即會假設遠端物件的結構描述為 "dbo" 並假設其名稱與所定義的外部資料表名稱相同。 如果您的遠端資料表名稱已存在於您要建立外部資料表的資料庫中，這會很有用。 例如，您想要定義外部資料表以取得相應放大的資料層上目錄檢視或 DMV 的彙總檢視。 由於目錄檢視和 DMV 已經存在於本機，所以您無法將其名稱使用於外部資料表定義。 您需改為在 SCHEMA_NAME 和/或 OBJECT_NAME 子句中，使用不同的名稱以及使用目錄檢視名稱或 DMV 名稱。 如需範例，請參閱[建立外部資料表](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)。
 
-OBJECT_NAME：OBJECT_NAME 子句能讓您將外部資料表定義對應至位於遠端資料庫上具有不同名稱的資料表。 使用此子句來區分同時存在於本機和遠端資料庫上的物件名稱。
+DISTRIBUTION DISTRIBUTION 子句指定用於此資料表的資料散發。 查詢處理器會利用 DISTRIBUTION 子句中提供的資訊來建置最有效率的查詢計劃。
 
-DISTRIBUTION：選擇性。 只有類型為 SHARD_MAP_MANAGER 的資料庫才需要這個引數。 這個引數能控制資料表是否會被視為分區資料表或複寫資料表。 使用 **SHARDED** (*column name*) 資料表，來自不同資料表的資料便不會彼此重疊。 **REPLICATED** 指定資料表在每個分區上都有相同的資料。 **ROUND_ROBIN** 指出系統會使用應用程式特定的方法來散發資料。
+- SHARDED 表示跨資料庫水平分割資料。 用於資料散發的分割索引鍵是 <sharding_column_name> 參數。
+- REPLICATED 表示資料表的相同複本存在於每個資料庫上。 您必須負責確保複本在所有資料庫上都相同。
+- ROUND_ROBIN 表示使用應用程式相依的散發方法，以水平方式分割資料表。
 
 ## <a name="permissions"></a>權限
 
-需要下列使用者權限：
-
-- **CREATE TABLE**
-- **ALTER ANY SCHEMA**
-- **ALTER ANY EXTERNAL DATA SOURCE**
-- **ALTER ANY EXTERNAL FILE FORMAT**
-- **CONTROL DATABASE**
-
-請注意，建立外部資料來源的登入，必須具有讀取和寫入位於 Hadoop 或 Azure Blob 儲存體上之外部資料來源的權限。
-
-> [!IMPORTANT]
-> ALTER ANY EXTERNAL DATA SOURCE 權限可授與任何主體建立及修改任何外部資料來源物件的能力，因此也能讓主體存取資料庫上的所有資料庫範圍認證。 必須將此權限視為具高度權限，因此必須僅授與系統中受信任的主體。
+可存取外部資料表的使用者可以在外部資料來源定義中所提供的認證下，自動取得基礎遠端資料表的存取權。 避免透過外部資料來源認證提高不想提高的權限。 對外部資料表使用「授與」或「撤銷」，就像它是一般的資料表一樣。 一旦您已定義外部資料來源和外部資料表，現在您可以對外部資料表使用完整的 T-SQL。
 
 ## <a name="error-handling"></a>錯誤處理
 
@@ -674,7 +663,7 @@ DISTRIBUTION：選擇性。 只有類型為 SHARD_MAP_MANAGER 的資料庫才需
 - 外部資料表資料行上的 DEFAULT 限制式
 - 刪除、插入及更新的資料操作語言 (DML) 作業
 
-只有在查詢中定義的常值述詞可以向下推送到外部資料來源。 這不同於連結的伺服器，而且可以使用存取查詢執行期間決定的述詞，也就是在查詢計劃中搭配巢狀迴圈使用時。 這通常會導致整個外部資料表複製到本機，然後加入。    
+只有在查詢中定義的常值述詞可以向下推送到外部資料來源。 這不同於連結的伺服器，而且可以使用存取查詢執行期間決定的述詞，也就是在查詢計劃中搭配巢狀迴圈使用時。 這通常會導致整個外部資料表複製到本機，然後加入。
 
 ```sql
   \\ Assuming External.Orders is an external table and Customer is a local table. 
@@ -711,7 +700,9 @@ WITH
 
 ## <a name="see-also"></a>另請參閱
 
-[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
+- [Azure SQL Database 彈性查詢概觀](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-overview) \(部分機器翻譯\)
+- [跨相應放大的雲端資料庫報告](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
+- [開始使用跨資料庫查詢 (垂直資料分割)](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-getting-started-vertical) \(部分機器翻譯\)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -780,13 +771,13 @@ LOCATION = '*folder_or_filepath*' 指定 Azure Data Lake、Hadoop 或 Azure Blob
 
 ![外部資料表的遞迴資料](../../t-sql/statements/media/aps-polybase-folder-traversal.png "外部資料表的遞迴資料")
 
-若要變更預設設定並僅從根資料夾讀取，請在 core-site.xml 設定檔中將 \<polybase.recursive.traversal> 屬性設為 'false'。 此檔案位於 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`。 例如， `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`。
+若要變更預設設定並僅從根資料夾讀取，請在 core-site.xml 設定檔中將 \<polybase.recursive.traversal> 屬性設為 'false'。 此檔案位於 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`。 例如： `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn` 。
 
 DATA_SOURCE = *external_data_source_name* 指定包含外部資料位置的外部資料來源名稱。 此位置位於 Azure Data Lake 中。 若要建立外部資料來源，請使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
 
 FILE_FORMAT = *external_file_format_name* 指定儲存外部資料檔案類型和壓縮方法的外部檔案格式物件名稱。 若要建立外部檔案格式，請使用 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
 
-拒絕選項：您可以指定拒絕參數，決定 PolyBase 處理從外部資料來源所擷取「已變更」記錄的方式。 若資料記錄的實際資料類型或資料行數目，與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。
+拒絕選項：您可以指定拒絕參數，決定 PolyBase 處理從外部資料來源所擷取「已變更」  記錄的方式。 若資料記錄的實際資料類型或資料行數目，與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。
 
 當您不指定或變更拒絕值時，PolyBase 就會使用預設值。 拒絕參數的相關資訊會在您搭配 CREATE EXTERNAL TABLE 陳述式建立外部資料表時，以額外中繼資料的形式儲存。 當未來有 SELECT 陳述式或 SELECT INTO SELECT 陳述式從外部資料表中選取資料時，PolyBase 將會使用拒絕選項來判斷在實際的查詢失敗之前，可以拒絕的資料列數目或百分比。 查詢將會傳回 (部分) 結果，直到超過拒絕閾值為止。 接著它便會失敗並顯示適當的錯誤訊息。
 
@@ -826,7 +817,7 @@ REJECT_SAMPLE_VALUE = *reject_sample_value* 在您指定 REJECT_TYPE = percentag
 REJECTED_ROW_LOCATION = *Directory Location*
 
 指定外部資料來源中，已拒絕資料列和相應錯誤檔案應寫入的目錄。
-若指定的路徑不存在，PolyBase 會為您建立一個目錄。 會建立名稱為 "_rejectedrows" 的子目錄。"_" 字元可確保該目錄從其他資料處理逸出，除非已明確在位置參數中指名。 在此目錄中，會有一個根據載入提交時間建立的資料夾，格式為 YearMonthDay -HourMinuteSecond (例如 20180330-173205)。 在此資料中寫入了兩種類型的檔案，分別是 _reason 檔案與資料檔案。
+若指定的路徑不存在，PolyBase 會為您建立一個目錄。 會建立名稱為 "_rejectedrows" 的子目錄。"_ " 字元可確保該目錄從其他資料處理逸出，除非已明確在位置參數中指名。 在此目錄中，會有一個根據載入提交時間建立的資料夾，格式為 YearMonthDay -HourMinuteSecond (例如 20180330-173205)。 在此資料中寫入了兩種類型的檔案，分別是 _reason 檔案與資料檔案。
 
 原因檔案與資料檔案均具有與 CTAS 陳述式相關的 queryID。 因為資料與原因檔案在不同的檔案中，所以對應的檔案會具有相符尾碼。
 
@@ -946,7 +937,7 @@ AS SELECT * FROM
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL 資料<br />倉儲](create-external-table-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL 資料<br />倉儲](create-external-table-transact-sql.md?view=azure-sqldw-latest)|**_\* 分析<br />平台系統 (PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;
@@ -1005,13 +996,13 @@ LOCATION = '*folder_or_filepath*' 指定 Hadoop 或 Azure Blob 儲存體中實�
 
 ![外部資料表的遞迴資料](../../t-sql/statements/media/aps-polybase-folder-traversal.png "外部資料表的遞迴資料")
 
-若要變更預設設定並僅從根資料夾讀取，請在 core-site.xml 設定檔中將 \<polybase.recursive.traversal> 屬性設為 'false'。 此檔案位於 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`。 例如， `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`。
+若要變更預設設定並僅從根資料夾讀取，請在 core-site.xml 設定檔中將 \<polybase.recursive.traversal> 屬性設為 'false'。 此檔案位於 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`。 例如： `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn` 。
 
 DATA_SOURCE = *external_data_source_name* 指定包含外部資料位置的外部資料來源名稱。 此位置可為 Hadoop 或 Azure Blob 儲存體。 若要建立外部資料來源，請使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
 
 FILE_FORMAT = *external_file_format_name* 指定儲存外部資料檔案類型和壓縮方法的外部檔案格式物件名稱。 若要建立外部檔案格式，請使用 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
 
-拒絕選項：您可以指定拒絕參數，決定 PolyBase 處理從外部資料來源所擷取「已變更」記錄的方式。 若資料記錄的實際資料類型或資料行數目，與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。
+拒絕選項：您可以指定拒絕參數，決定 PolyBase 處理從外部資料來源所擷取「已變更」  記錄的方式。 若資料記錄的實際資料類型或資料行數目，與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。
 
 當您不指定或變更拒絕值時，PolyBase 就會使用預設值。 拒絕參數的相關資訊會在您搭配 CREATE EXTERNAL TABLE 陳述式建立外部資料表時，以額外中繼資料的形式儲存。 當未來有 SELECT 陳述式或 SELECT INTO SELECT 陳述式從外部資料表中選取資料時，PolyBase 將會使用拒絕選項來判斷在實際的查詢失敗之前，可以拒絕的資料列數目或百分比。 查詢將會傳回 (部分) 結果，直到超過拒絕閾值為止。 接著它便會失敗並顯示適當的錯誤訊息。
 
@@ -1108,7 +1099,7 @@ SQL Server 2016 中的 PolyBase 具有 32 KB 的資料列寬度限制，這是�
 
 SCHEMARESOLUTION 物件上的共用鎖定。
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 
 外部資料表的資料檔案會儲存在 Hadoop 或 Azure Blob 儲存體中。 這些資料檔案是由您自己的處理程序所建立及管理。 因此您應負責管理外部資料的安全性。
 

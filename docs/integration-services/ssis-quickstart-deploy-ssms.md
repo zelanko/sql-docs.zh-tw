@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d22df5141535e5ebfdb8120161a1776db616aef1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 04f7231dc4781b3c7194a7a34002b67087c9eaf2
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281681"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947104"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 部署 SSIS 專案
 
@@ -40,7 +40,7 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 
 -   Azure SQL Database。 如需在 Azure 中部署和執行套件的詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
 
-您無法使用本快速入門中的資訊，將 SSIS 套件部署到 Linux 上的 SQL Server。 如需在 Linux 上執行套件詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../linux/sql-server-linux-migrate-ssis.md)。
+您無法使用本快速入門中的資訊，將 SSIS 套件部署到 Linux 上的 SQL Server。 如需在 Linux 上執行套件的詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../linux/sql-server-linux-migrate-ssis.md)。
 
 ## <a name="for-azure-sql-database-get-the-connection-info"></a>針對 Azure SQL Database，請取得連線資訊
 
@@ -51,7 +51,7 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 3. 在您資料庫的 [概觀]  頁面上，檢閱完整伺服器名稱。 若要顯示 [按一下以複製]  選項，請將滑鼠指標暫留在伺服器名稱上。 
 4. 如果您忘記 Azure SQL Database 伺服器登入資訊，請巡覽至 [SQL Database 伺服器] 頁面來檢視伺服器管理員名稱。 如有需要，您可以重設密碼。
 
-## <a name="wizard_auth"></a> [部署精靈] 中的驗證方法
+## <a name="authentication-methods-for-deployment"></a>適用於部署的驗證方法
 
 如果您要使用 [部署精靈] 部署到 SQL Server，則必須使用 Windows 驗證；您無法使用 SQL Server 驗證。
 
@@ -65,15 +65,15 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 
 2. 在 [連線至伺服器]  對話方塊中，輸入下列資訊：
 
-   | 設定       | 建議值 | 其他資訊 | 
+   | 設定       | 建議的值 | 其他資訊 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **伺服器類型** | 資料庫引擎 | 這是必要的值。 |
    | **伺服器名稱** | 完整伺服器名稱 | 如果您要連線至 Azure SQL Database 伺服器，則名稱的格式如下：`<server_name>.database.windows.net`。 |
-   | **驗證** | SQL Server 驗證 | 使用 SQL Server 驗證時，您可以連線到 SQL Server 或 Azure SQL Database。 請參閱本文中的 [[部署精靈] 中的驗證方法](#wizard_auth)。 |
+   | **驗證** | SQL Server 驗證 | 使用 SQL Server 驗證時，您可以連線到 SQL Server 或 Azure SQL Database。 請參閱此文章中的[部署中的驗證方法](#authentication-methods-for-deployment)。 |
    | **登入** | 伺服器系統管理員帳戶 | 這個帳戶是您在建立伺服器時指定的帳戶。 |
    | **密碼** | 伺服器系統管理員帳戶的密碼 | 這個密碼是您在建立伺服器時指定的密碼。 |
 
-3. 按一下 **[連接]** 。 [物件總管] 視窗會在 SSMS 中開啟。 
+3. 按一下 [ **連接**]。 [物件總管] 視窗會在 SSMS 中開啟。 
 
 4. 在 [物件總管] 中，展開 [Integration Services 目錄]  ，然後展開 [SSISDB]  以檢視 SSIS 目錄資料庫中的物件。
 
@@ -94,7 +94,7 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
   
 3.  在 [選取目的地]  頁面上，選取專案目的地。
     -   輸入完整伺服器名稱。 如果目標伺服器是 Azure SQL Database 伺服器，則名稱的格式如下：`<server_name>.database.windows.net`。
-    -   提供驗證資訊，然後選取 [連線]  。 請參閱本文中的 [[部署精靈] 中的驗證方法](#wizard_auth)。
+    -   提供驗證資訊，然後選取 [連線]  。 請參閱此文章中的[部署中的驗證方法](#authentication-methods-for-deployment)。
     -   然後選取 [瀏覽]  在 SSISDB 中選取目標資料夾。
     -   然後選取 [下一步]  開啟 [檢閱]  頁面。 (只有在您選取 [連線]  之後，才會啟用 [下一步]  按鈕。)
   
@@ -120,6 +120,6 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
     - [使用 SSMS 執行 SSIS 套件](./ssis-quickstart-run-ssms.md)
     - [使用 Transact-SQL 執行 SSIS 套件 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [使用 Transact-SQL 執行 SSIS 套件 (VS Code)](ssis-quickstart-run-tsql-vscode.md)
-    - [從命令提示字元中執行 SSIS 套件](./ssis-quickstart-run-cmdline.md)
+    - [從命令提示字元執行 SSIS 套件](./ssis-quickstart-run-cmdline.md)
     - [使用 PowerShell 執行 SSIS 套件](ssis-quickstart-run-powershell.md)
     - [使用 C# 執行 SSIS 套件](./ssis-quickstart-run-dotnet.md) 

@@ -1,5 +1,5 @@
 ---
-title: 啟用可用性群組的增強型資料庫容錯移轉
+title: 可用性群組的增強容錯移轉
 description: 啟用增強型資料庫容錯移轉的步驟，如果 Always On 可用性群組中的資料庫無法再寫入交易，則這會觸發容錯移轉。
 ms.custom: seodec18
 ms.date: 09/25/2017
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 91246775b917cf7c56218482b5c7b0c86264d612
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9acd444e1ded8ab0530f605280e7aaa5c5dec907
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947951"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822242"
 ---
 # <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>啟用增強型資料庫容錯移轉至 Always On 可用性群組中的資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ SQL Server 2016 引進名為「增強資料庫容錯移轉」  的新選擇性�
 
 可用性群組設定於執行個體 A 與執行個體 B 之間，包含兩個資料庫：DB1 和 DB2。 可用性模式設定為具有自動容錯移轉模式的同步認可，並啟用增強資料庫容錯移轉。 遺失包含 DB2 資料和交易記錄檔之磁碟的存取權。 偵測到問題時，可用性群組會自動容錯移轉至執行個體 B。
 
-## <a name="configure-and-view-the-enhanced-database-failover-option"></a>設定和檢視增強資料庫容錯移轉選項
+## <a name="configure-enhanced-failover"></a>設定增強容錯移轉
 
 增強資料庫容錯移轉可以使用 SQL Server Management Studio 或 Transact-SQL 進行設定。 PowerShell Cmdlet 目前沒有這項功能。 預設會停用增強資料庫容錯移轉。
 

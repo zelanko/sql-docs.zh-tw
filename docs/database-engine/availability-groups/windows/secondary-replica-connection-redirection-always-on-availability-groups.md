@@ -1,6 +1,7 @@
 ---
-title: SQL Server 次要到主要複本讀取/寫入連線重新導向 (Always On 可用性群組) | Microsoft Docs
-ms.custom: ''
+title: 將讀取/寫入連線重新導向至主要複本
+description: 了解如何一律將讀取/寫入連線重新導向至 Always On 可用性群組的主要複本，無論連接字串中所指定的目標伺服器為何。
+ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 181dd36096daacc5a1c3787cdd21cb9619d87491
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8bf76e0929dea69758b1f9152af0df8f3170227d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014205"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235198"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>次要到主要複本讀取/寫入連線重新導向 (Always On 可用性群組)
 
@@ -47,7 +48,7 @@ ms.locfileid: "68014205"
 * 複本規格 `PRIMARY_ROLE` 必須包含 `READ_WRITE_ROUTING_URL`。
 * 連接字串必須將 `ApplicationIntent` 定義為 `ReadWrite`；這是預設值。
 
-## <a name="set-readwriteroutingurl-option"></a>設定 READ_WRITE_ROUTING_URL 選項
+## <a name="set-read_write_routing_url-option"></a>設定 READ_WRITE_ROUTING_URL 選項
 
 若要設定讀取/寫入連線重新導向，請在建立 AG 時設定主要複本的 `READ_WRITE_ROUTING_URL`。 
 
@@ -57,7 +58,7 @@ ms.locfileid: "68014205"
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
-### <a name="primaryrolereadwriteroutingurl-not-set-default"></a>未設定 PRIMARY_ROLE(READ_WRITE_ROUTING_URL) (預設) 
+### <a name="primary_roleread_write_routing_url-not-set-default"></a>未設定 PRIMARY_ROLE(READ_WRITE_ROUTING_URL) (預設) 
 
 根據預設，未設定複本的讀取/寫入複本連線重新導向。 次要複本處理連線要求的方式取決於次要複本是否設定為允許連線，以及連接字串中的 `ApplicationIntent` 設定是否設定為允許連線。 下表顯示次要複本如何根據 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 和 `ApplicationIntent` 來處理連線。
 
@@ -68,7 +69,7 @@ ms.locfileid: "68014205"
 
 上表顯示預設行為，其與 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] 之前的 SQL Server 版本相同。 
 
-### <a name="primaryrolereadwriteroutingurl-set"></a>設定 PRIMARY_ROLE(READ_WRITE_ROUTING_URL) 
+### <a name="primary_roleread_write_routing_url-set"></a>設定 PRIMARY_ROLE(READ_WRITE_ROUTING_URL) 
 
 在您設定讀取/寫入連線重新導向之後，複本處理連線要求的方式可能會不同。 連線行為仍然取決於 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 和 `ApplicationIntent` 設定。 下表顯示已設定 `READ_WRITE_ROUTING` 的次要複本如何根據 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 和 `ApplicationIntent` 來處理連線。
 
@@ -84,7 +85,7 @@ ms.locfileid: "68014205"
 在此範例中，可用性群組會有三個複本：
 * COMPUTER01 上的主要複本
 * COMPUTER02 上的同步次要複本
-* COMPUTER03 上的同步次要複本
+* COMPUTER03 上的非同步次要複本
 
 下圖代表可用性群組。
 
@@ -124,7 +125,7 @@ CREATE AVAILABILITY GROUP MyAg
       'COMPUTER03' WITH   
          (  
          ENDPOINT_URL = 'TCP://COMPUTER03.<domain>.<tld>:5022',  
-         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = MANUAL,  
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),  
@@ -136,7 +137,7 @@ CREATE AVAILABILITY GROUP MyAg
 GO  
 ```
    - `<domain>.<tld>`
-      - 完整網域名稱的網域和頂層網域。 例如， `corporation.com`。
+      - 完整網域名稱的網域和頂層網域。 例如： `corporation.com` 。
 
 
 ### <a name="connection-behaviors"></a>連線行為

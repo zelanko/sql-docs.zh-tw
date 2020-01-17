@@ -1,6 +1,6 @@
 ---
-title: 為記憶體最佳化資料表的雜湊索引進行疑難排解 | Microsoft Docs
-ms.custom: ''
+title: 針對雜湊索引進行疑難排解 - 記憶體最佳化資料表
+ms.custom: seo-dt-2019
 ms.date: 12/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16e3ab81700ca9fed1870a6a98d0aab704b2c1db
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 6216e8e008bff92ce502aa6dda8025c5ef63f0ba
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909282"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412664"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>為記憶體最佳化資料表的雜湊索引進行疑難排解
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -113,8 +113,8 @@ ORDER BY [table], [index];
   
 1. 建立含有數個雜湊索引的記憶體最佳化資料表。  
 2. 在資料表中填入數千個資料列。  
-    A. 模數運算子可用來設定 StatusCode 資料行中重複值的比率。  
-    B. 迴圈大約會在 1 分鐘內插入 262,144 個資料列。  
+    a. 模數運算子可用來設定 StatusCode 資料行中重複值的比率。  
+    b. 迴圈大約會在 1 分鐘內插入 262,144 個資料列。  
 3. 列印 (PRINT) 訊息會要求您執行先前來自 **sys.dm_db_xtp_hash_index_stats**的 SELECT。  
 
 ```sql

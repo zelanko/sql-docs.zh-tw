@@ -1,7 +1,8 @@
 ---
-title: 教學課程：使用隨機化加密在已啟用記憶體保護區的資料行上建立及使用索引 | Microsoft Docs
-ms.custom: ''
-ms.date: 10/15/2019
+title: 搭配隨機加密的已啟用記憶體保護區之資料行上的索引 (教學課程)
+description: 此教學課程會指導您使用 SQL Server 具有安全記憶體保護區的 Always Encrypted 中所支援的隨機化加密，在已啟用記憶體保護區的資料行上建立及使用索引的方式。
+ms.custom: seo-lt-2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ae44a28c5a4c426ffe225d8d80a545f6722c4c1
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 636b304d99ee244ef7a367fb8a474ebe8df312a0
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592337"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557750"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>教學課程：使用隨機化加密在已啟用記憶體保護區的資料行上建立及使用索引
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "73592337"
 
 ## <a name="step-1-enable-accelerated-database-recovery-adr-in-your-database"></a>步驟 1:在您的資料庫中啟用加速資料庫復原 (ADR)
 
-Microsoft 強烈建議先在您的資料庫中啟用 ADR，再使用隨機化加密於已啟用記憶體保護區的資料行上建立第一個索引。 請參閱[具有安全記憶體保護區的 Always Encrypted](./encryption/always-encrypted-enclaves.md) 中的[＜資料庫復原＞](./encryption/always-encrypted-enclaves.md##database-recovery)一節。
+Microsoft 強烈建議先在您的資料庫中啟用 ADR，再使用隨機化加密於已啟用記憶體保護區的資料行上建立第一個索引。 請參閱[具有安全記憶體保護區的 Always Encrypted](./encryption/always-encrypted-enclaves.md) 中的[＜資料庫復原＞](./encryption/always-encrypted-enclaves.md#database-recovery)一節。
 
 1. 關閉您在上一個教學課程中所使用的任何 SSMS 執行個體。 這將會關閉您已開啟的資料庫連接；此為啟用 ADR 的必要條件。
 1. 開啟新的 SSMS 執行個體，並在**未**針對資料庫連接啟用 Always Encrypted 的情況下，以 sysadmin 身分連線到 SQL Server 執行個體。

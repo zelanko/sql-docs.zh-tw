@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77572a417836683e10ba3c7736fe4cdd0db4e129
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708145"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245274"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>將 Excel 中的資料匯入到 SQL Server 或 Azure SQL Database
 
@@ -49,7 +49,7 @@ ms.locfileid: "71708145"
 
 逐步執行 [SQL Server 匯入和匯出精靈] 的頁面，以從 Excel 檔案直接匯入資料。 您也可以將設定儲存為 SQL Server Integration Services (SSIS) 套件，以便日後自訂及重複使用。
 
-1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。
+1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。
 
 2. 展開 **[資料庫]** 。
 3. 以滑鼠右鍵按一下資料庫。
@@ -263,7 +263,7 @@ bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 如需使用這些 Data Factory 來源與接收的詳細資訊，請參閱下列主題：
 
 - [檔案系統](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
-- [[SQL Server]](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
+- [SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
 - [Azure SQL Database](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
 
 若要開始學習如何使用 Azure Data Factory 複製資料，請參閱下列主題：
@@ -275,7 +275,7 @@ bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 
 ### <a name="microsoftaceoledb120-has-not-been-registered"></a>Microsoft.ACE.OLEDB.12.0 尚未註冊
 
-此錯誤的發生原因為未安裝 OLEDB 提供者。 請從 [Microsoft Access Database Engine 2010 可轉散發套件](https://www.microsoft.com/en-us/download/details.aspx?id=13255)安裝它。 如果 Windows 和 SQL Server 都是 64 位元，請務必安裝 64 位元版本。
+此錯誤的發生原因為未安裝 OLEDB 提供者。 請從 [Microsoft Access Database Engine 2010 可轉散發套件](https://www.microsoft.com/download/details.aspx?id=13255)安裝它。 如果 Windows 和 SQL Server 都是 64 位元，請務必安裝 64 位元版本。
 
 完整錯誤如下：
 
@@ -284,7 +284,7 @@ Msg 7403, Level 16, State 1, Line 3
 The OLE DB provider "Microsoft.ACE.OLEDB.12.0" has not been registered.
 ```
 
-## <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>無法建立連結伺服器 "(null)" OLE DB 提供者 "Microsoft.ACE.OLEDB.12.0" 的執行個體
+### <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>無法建立連結伺服器 "(null)" OLE DB 提供者 "Microsoft.ACE.OLEDB.12.0" 的執行個體
 
 這表示 Microsoft OLEDB 並未正確設定。 執行下列 Transact-SQL 程式碼來解決此問題：
 

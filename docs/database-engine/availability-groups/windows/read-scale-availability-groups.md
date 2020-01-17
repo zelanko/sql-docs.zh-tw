@@ -10,17 +10,19 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edf98113b435cafd9f6552643e6a8a1ba4316982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2decc7e78b599ebcd0c16e3373a0b62401d09428
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014466"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75720822"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>在 Always On 可用性群組使用讀取級別
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-可用性群組是全面的解決方案，可將高可用性功能整合到 SQL Server，同時也可提供整合式調整解決方案。 在常見的資料庫應用程式中，多個用戶端會執行各種工作負載。 有時可能會因資源限制而產生瓶頸。 您可以釋出資源，讓 OLTP 工作負載達到更高的輸送量， 也可提供更高的唯讀工作負載效能和唯讀工作負載級別。 利用 SQL Server 最快的複寫技術建立一組複寫的資料庫，將報告和分析工作負載卸載至唯讀複本。
+可用性群組是全面的解決方案，可將高可用性功能整合到 SQL Server，同時也可提供整合式調整解決方案。 在常見的資料庫應用程式中，多個用戶端會執行各種工作負載。 有時可能會因資源限制而產生瓶頸。 
+
+在可用性群組的內容中，讀取級別會將讀取工作負載卸載至次要複本。 您可以釋出資源，讓 OLTP 工作負載達到更高的輸送量， 也可提供更高的唯讀工作負載效能和唯讀工作負載級別。 利用 SQL Server 最快的複寫技術建立一組複寫的資料庫，將報告和分析工作負載卸載至唯讀複本。
 
 透過可用性群組就能設定一或多個次要複本，以支援次要資料庫的唯讀存取。
 

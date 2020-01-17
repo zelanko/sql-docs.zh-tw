@@ -1,7 +1,7 @@
 ---
-title: SQL Server 中已中止的資料庫引擎功能 | Microsoft Docs
-ms.custom: ''
-ms.date: 11/13/2019
+title: 已中止的資料庫引擎功能 | Microsoft Docs
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -35,12 +35,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0cafdaecf454d3726538f3f297d05566f6cb5b4a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: db10b57b5eda73cb2bb2105f4f99fb6e5cbed733
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095213"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258123"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>SQL Server 中已中止的資料庫引擎功能
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "74095213"
 
 - 已中止安全通訊端層 (SSL) 加密。 請改用傳輸層安全性 (TLS)。 如需詳細資訊，請參閱[啟用資料庫引擎的加密連線](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。
 
-## <a name="previous-versions"></a>先前版本
+## <a name="previous-versions"></a>舊版
 
 - [SQL Server 2014 中已停止的 Database Engine 功能](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
 
