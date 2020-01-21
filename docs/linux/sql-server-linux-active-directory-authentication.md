@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 72a1a554203349e9e6bd8cee43d2a6fe9d093ad8
-ms.sourcegitcommit: a02727aab143541794e9cfe923770d019f323116
+ms.openlocfilehash: 90c0023c0de69c03f64d33ff64866b0e5ff4f5ba
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755858"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924947"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教學課程：透過 Linux 上的 SQL Server 使用 Active Directory 驗證
 
@@ -64,7 +64,7 @@ ms.locfileid: "75755858"
    ```
 
    > [!NOTE]
-   > 安全性最佳做法是針對 SQL Server 使用專用的 AD 帳戶，讓 SQL Server 認證不會與使用相同帳戶的其他服務共用。 不過，如果您知道帳戶的密碼 (在下一個步驟中產生 Keytab 檔案所需的項目)，則可以選擇性地重複使用現有的 AD 帳戶。
+   > 安全性最佳做法是針對 SQL Server 使用專用的 AD 帳戶，讓 SQL Server 認證不會與使用相同帳戶的其他服務共用。 不過，如果您知道帳戶的密碼 (在下一個步驟中產生 Keytab 檔案所需的項目)，則可以選擇性地重複使用現有的 AD 帳戶。 此外，該帳戶須能夠支援使用者帳戶上的 128 位元與 256 位元 Kerberos AES 加密 (**msDS-SupportedEncryptionTypes** 屬性)。
 
 2. 使用 **setspn.exe** 工具來設定此帳戶的 ServicePrincipalName (SPN)。 SPN 必須與下列範例中所指定的格式完全相同。 您可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 主機上執行 `hostname --all-fqdns`，以尋找 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 主機電腦的完整網域名稱。 除非您已將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 設定為使用不同的連接埠號碼，否則 TCP 通訊埠應為 1433。
 
@@ -114,13 +114,13 @@ ms.locfileid: "75755858"
 
    ktpass /princ MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-   ktpass /princ MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
+   ktpass /princ MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
    ktpass /princ MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-   ktpass /princ <UserName>@<DomainName.com> /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
+   ktpass /princ <UserName>@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-   ktpass /princ <UserName>@<DomainName.com> /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
+   ktpass /princ <UserName>@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
    ```
 
    > [!NOTE]

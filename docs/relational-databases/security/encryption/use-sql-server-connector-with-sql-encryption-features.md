@@ -1,6 +1,7 @@
 ---
-title: 搭配使用 SQL Server 連接器與 SQL 加密功能 | Microsoft 文件
-ms.custom: ''
+title: 搭配 Azure Key Vault 使用 SQL Server 連接器加密
+description: 了解如何搭配一般加密功能使用 SQL Server 連接器，例如 TDE、加密備份以及使用 Azure Key Vault 的資料行層級加密。
+ms.custom: seo-lt-2019
 ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 1cd734f44f9cf6a984fac569a2cd2114d57c26bd
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74957303"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558505"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>搭配使用 SQL Server 連接器與 SQL 加密功能
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

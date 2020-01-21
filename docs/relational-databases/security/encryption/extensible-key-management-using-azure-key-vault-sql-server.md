@@ -1,6 +1,7 @@
 ---
-title: 使用 Azure Key Vault 進行可延伸金鑰管理 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 使用 Azure Key Vault 進行可延伸金鑰管理
+description: 搭配適用於 SQL Server 的 Azure Key Vault，使用 SQL Server 連接器進行可延伸金鑰管理。
+ms.custom: seo-lt-2019
 ms.date: 07/22/2016
 ms.prod: sql
 ms.reviewer: vanto
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 07e94cac581ec419915e2861c2ce436fb6304109
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.openlocfilehash: df42a2d0f7dea2e32df61670aff88374a6fcff54
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74957363"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558043"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 進行可延伸金鑰管理 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

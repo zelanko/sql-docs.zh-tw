@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 862147cfb7620999bf3e56a90fae0e90fbb1be45
-ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
+ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74901947"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831818"
 ---
 # <a name="collation-and-unicode-support"></a>定序與 Unicode 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -478,16 +478,12 @@ Unicode 是將字碼指標對應到字元的標準用法。 由於 Unicode 主�
 若要使用 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中提供的 UTF-8 定序，以及改善一些 Unicode 字元的排序和搜尋 (僅限 Windows 定序)，您必須選取啟用 UTF-8 編碼的定序 (\_UTF8)。
  
 -   UTF8 旗標可套用至：    
-    -   版本 90 定序 
-        > [!NOTE]
-        > 只有在增補字元 (\_SC) 或區分變化選取器 (\_VSS) 感知定序已存在於此版本時。
-    -   版本 100 定序    
-    -   版本 140 定序   
+    -   已支援補充字元 (\_SC) 或區分變化選取器 (\_VSS) 感知的語言定序
     -   BIN2<sup>1</sup> 二進位定序
     
 -   UTF8 旗標無法套用至：    
-    -   不支援增補字元 (\_SC) 或區分變化選取器 (\_VSS) 的 90 版定序    
-    -   BIN 或 BIN2<sup>2</sup> 二進位定序    
+    -   不支援補充字元 (\_SC) 或區分變化選取器 (\_VSS) 感知的語言定序
+    -   BIN 或 BIN2<sup>2</sup> 二進位定序
     -   SQL\_* 定序  
     
 <sup>1</sup> 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 開始。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 已將定序 **UTF8_BIN2** 替換成 **Latin1_General_100_BIN2_UTF8**。        
@@ -528,8 +524,6 @@ Unicode Consortium 會為每個字元配置唯一的字碼指碼，其值介於 
 -   增補字元可用於 90 (含) 以上定序版本的排序及比較作業。    
 -   所有版本 100 定序都支援含有增補字元的語言排序。    
 -   不支援在中繼資料內使用增補字元，例如資料庫物件的名稱。    
--   無法啟用搭配使用定序與增補字元 (\_SC) 的資料庫來進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫。 這是因為針對複寫所建立的某些系統資料表和預存程序使用舊版 **ntext** 資料類型，其不支援增補字元。  
-
 -   SC 旗標可套用至：    
     -   版本 90 定序    
     -   版本 100 定序    

@@ -1,6 +1,7 @@
 ---
-title: 在 Linux 上設定 SQL Server 複寫
-description: 本教學課程會示範如何在 Linux 上設定 SQL Server 快照式複寫。
+title: 教學課程：設定複寫 (T-SQL)
+description: 本教學課程會示範如何使用 T-SQL 在 Linux 上設定 SQL Server 快照式複寫。
+ms.custom: seo-dt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,13 +9,14 @@ ms.date: 12/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
+titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: acc3f556371c52d02789a03813a28606435d86cd
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.openlocfilehash: 00ae6ecf66bd52d5415c630dd2b66a1a9ecaebd6
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75001964"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952505"
 ---
 # <a name="configure-replication-with-t-sql"></a>搭配 T-SQL 設定複寫
 

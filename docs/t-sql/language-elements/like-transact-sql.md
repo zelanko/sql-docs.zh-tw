@@ -31,12 +31,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ff1197307cebb563fbb8cc173b0edbf1ef6aa76
-ms.sourcegitcommit: af078c0cdb42ac385d24496249e9b3609428f013
+ms.openlocfilehash: f13bbee1fdde92c55c98a0c2478d0dec4db5e96a
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74550211"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884000"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,9 @@ match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]
   
 match_expression [ NOT ] LIKE pattern  
 ```  
-  
+>[!NOTE]
+> Azure SQL 資料倉儲或平行處理資料倉儲中目前不支援 ESCAPE 和 STRING_ESCAPE。
+
 ## <a name="arguments"></a>引數  
  *match_expression*  
  這是字元資料類型的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  

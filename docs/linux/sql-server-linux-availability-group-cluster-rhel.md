@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 03/12/2019
+ms.date: 01/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 6976d81994dbc8db154b285da03bed2397e9fee1
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: bf888d42215f3a4ee7c44b782b82c55f85afa041
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558491"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884029"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 RHEL 叢集
 
@@ -163,7 +163,10 @@ pcs resource update ag_cluster meta failure-timeout=60s
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
-``` 
+```
+
+> [!NOTE]
+> 在 **RHEL 8** 推出之後，CREATE 語法也隨之改變。 如果您使用 **RHEL 8**，術語 `master` 現在已變更為 `promotable`。 請使用下列 CREATE 命令，而非上述的命令：`sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true`
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
@@ -187,8 +190,20 @@ Pacemaker 中沒有對等的虛擬伺服器名稱。 若要使用指向字串伺
 
 若要確保該主要複本和虛擬 IP 資源都在相同主機上執行，定義分數為 INFINITY 的共置限制式。 若要新增共置限制式，請在一個節點上執行下列命令。
 
+### <a name="rhel-7"></a>RHEL 7
+
+當您在 RHEL 7 中建立資源 `ag_cluster` 時，其會將資源建立為 `ag_cluster-master`。 針對 RHEL 7，請使用下列命令：
+
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
+```
+
+### <a name="rhel-8"></a>RHEL 8
+
+當您在 RHEL 8 中建立資源 `ag_cluster` 時，其會將資源建立為 `ag_cluster-clone`。 針對 RHEL 8，請使用下列命令：
+
+```bash
+sudo pcs constraint colocation add virtualip with master ag_cluster-clone INFINITY with-rsc-role=Master
 ```
 
 ## <a name="add-ordering-constraint"></a>新增排序限制式
@@ -209,8 +224,16 @@ sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc
 
 若要新增排序限制式，請在一個節點上執行下列命令：
 
+### <a name="rhel-7"></a>RHEL 7
+
 ```bash
 sudo pcs constraint order promote ag_cluster-master then start virtualip
+```
+
+### <a name="rhel-8"></a>RHEL 8
+
+```bash
+sudo pcs constraint order promote ag_cluster-clone then start virtualip
 ```
 
 >[!IMPORTANT]

@@ -5,17 +5,17 @@ description: 此快速入門說明如何在 Red Hat Enterprise Linux (RHEL) 上�
 author: VanMSFT
 ms.custom: seo-lt-2019
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 01/08/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: b93ea834e890981d3fd45fd999a05ae5b2b68042
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: d94e90e67814ec2dd1541abdbd52b04152681d84
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558433"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776398"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入門：在 Red Hat 上安裝 SQL Server 並建立資料庫
 
@@ -30,7 +30,7 @@ ms.locfileid: "75558433"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-在本快速入門中，您會在 Red Hat Enterprise Linux (RHEL) 7.3+ 上安裝 SQL Server 2019。 然後與 **sqlcmd** 連線，建立您的第一個資料庫並執行查詢。
+在本快速入門中，您會在 Red Hat Enterprise Linux (RHEL) 8 上安裝 SQL Server 2019。 然後與 **sqlcmd** 連線，建立您的第一個資料庫並執行查詢。
 
 ::: moniker-end
 
@@ -39,7 +39,19 @@ ms.locfileid: "75558433"
 
 ## <a name="prerequisites"></a>Prerequisites
 
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+RHEL 7.3、7.4、7.5、7.6 或 8 機器必須**至少有 2 GB** 的記憶體。
+
+::: moniker-end
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 您的 RHEL 7.3、7.4、7.5 或 7.6 機器必須**至少有 2 GB** 的記憶體。
+
+::: moniker-end
 
 若您要在自己的機器上安裝 Red Hat Enterprise Linux，請前往 [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)。 您也可以在 Azure 中建立 RHEL 虛擬機器。 請參閱[使用 Azure CLI 建立和管理 Linux VM](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，並於呼叫 `az vm create`時使用 `--image RHEL`。
 
@@ -64,7 +76,7 @@ ms.locfileid: "75558433"
    > 如果您想要安裝 SQL Server 2019，則必須改為註冊 SQL Server 2019 存放庫。 請使用下列命令安裝 SQL Server 2019：
    >
    > ```bash
-   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
    > ```
 
 2. 執行下列命令安裝 SQL Server：
@@ -111,7 +123,7 @@ ms.locfileid: "75558433"
 1. 下載 Microsoft SQL Server 2019 Red Hat 存放庫設定檔：
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
    ```
 
 2. 執行下列命令安裝 SQL Server：
@@ -146,6 +158,9 @@ ms.locfileid: "75558433"
 
 ::: moniker-end
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 ## <a id="tools"></a>安裝 SQL Server 命令列工具
 
 若要建立資料庫，您必須與可在 SQL Server 上執行 Transact-SQL 陳述式的工具連線。 下列步驟會安裝 SQL Server 命令列工具：[sqlcmd](../tools/sqlcmd-utility.md) 和 [bcp](../tools/bcp-utility.md)。
@@ -175,5 +190,42 @@ ms.locfileid: "75558433"
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
+
+::: moniker-end
+
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+## <a id="tools"></a>安裝 SQL Server 命令列工具
+
+若要建立資料庫，您必須與可在 SQL Server 上執行 Transact-SQL 陳述式的工具連線。 下列步驟會安裝 SQL Server 命令列工具：[sqlcmd](../tools/sqlcmd-utility.md) 和 [bcp](../tools/bcp-utility.md)。
+
+1. 下載 Microsoft Red Hat 存放庫組態檔。
+
+   ```bash
+   sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
+   ```
+
+1. 如果您已安裝舊版的 **mssql-tools**，請移除所有舊版的 unixODBC 套件。
+
+   ```bash
+   sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
+   ```
+
+1. 執行下列命令，使用 unixODBC 開發人員套件安裝 **mssql-tools**。
+
+   ```bash
+   sudo yum install -y mssql-tools unixODBC-devel
+   ```
+
+1. 方便起見，請將 `/opt/mssql-tools/bin/` 新增至您的 **PATH** 環境變數。 這可讓您不需要指定完整路徑，即可執行工具。 執行下列命令，修改登入工作階段和互動式/非登入工作階段的 **PATH**：
+
+   ```bash
+   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+   source ~/.bashrc
+   ```
+
+::: moniker-end
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

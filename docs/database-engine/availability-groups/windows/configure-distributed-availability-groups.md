@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c54ec57756ca2f840ac3f15771143cf697798e9f
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.openlocfilehash: c49fb6ad9ad1d824a91f2a91c399770f3032b8aa
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75002023"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952490"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>設定 Always On 分散式可用性群組  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -180,7 +180,8 @@ GO
 >  **LISTENER_URL** 會指定每個可用性群組的接聽程式，以及可用性群組的資料庫鏡像端點。 在此範例中，其為通訊埠 `5022` (非用於建立接聽程式的通訊埠 `60173` )。 如果您要使用負載平衡器 (例如在 Azure 中)，則請[新增分散式可用性群組連接埠的負載平衡規則](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group)。 除了 SQL Server 執行個體連接埠之外，還需要新增接聽程式連接埠的規則。 
 
 ### <a name="cancel-automatic-seeding-to-forwarder"></a>取消自動植入轉寄站
-若在同步兩個可用性群組前必須取消轉寄站的初始化，請透過將轉寄站的 SEEDING_MODE 參數設為 MANUAL 並立即取消植入，來 ALTER 分散式可用性群組。 在全域主要上執行命令： 
+
+無論出於什麼原因，若在同步兩個可用性群組「之前」  必須取消轉寄站的初始化，請透過將轉寄站的 SEEDING_MODE 參數設為 MANUAL 並立即取消植入來 ALTER 分散式可用性群組。 在全域主要上執行命令： 
 
 ```sql
 -- Cancel automatic seeding.  Connect to global primary but specify DAG AG2

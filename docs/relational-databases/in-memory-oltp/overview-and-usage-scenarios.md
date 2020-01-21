@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5af707d0d07ce754b57eb18048c52db5921693ee
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.openlocfilehash: 0b6fdfbbdd70ad0abf95c3860c2349cc55b5e12b
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74165594"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831850"
 ---
 # <a name="overview-and-usage-scenarios"></a>概觀和使用案例
 
@@ -32,7 +32,7 @@ ms.locfileid: "74165594"
 
 現在，這個效能提升來自何處？ 在本質上，記憶體內部 OLTP 是藉由讓資料存取和交易執行更有效率，以及移除並行執行交易之間的鎖定和閂鎖競爭，來提升交易處理的效能︰因為它在記憶體內部，所以速度不快；因為它已針對記憶體內部的資料進行最佳化，所以速度很快。 資料儲存體、存取和處理演算法均已重新設計，可充分利用關於記憶體內部與高度並行運算的最新增強功能。
 
-現在，只是因為資料存留於記憶體內部，不代表您會在發生失敗時遺失資料。 根據預設，所有交易都是完全持久的，表示您具有針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中任何其他資料表所取得的相同持久性保證︰在交易認可時，所有變更都會寫入磁碟上的交易記錄檔。 如果在交易認可之後的任何時間發生失敗，當資料庫重新上線時，您的資料還是會在原處。 此外，記憶體內部 OLTP 會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有高可用性和災害復原功能 (例如 AlwaysOn、備份/還原等) 一同運作。
+現在，只是因為資料存留於記憶體內部，不代表您會在發生失敗時遺失資料。 根據預設，所有交易都有完全持久性，表示您對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中任何其他資料表所取得的持久性保證皆相同︰在交易認可時，所有變更都會寫入磁碟上的交易記錄。 如果在交易認可之後的任何時間發生失敗，當資料庫重新上線時，您的資料還是會在原處。 此外，記憶體內部 OLTP 會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有高可用性和災害復原功能 (例如 AlwaysOn、備份/還原等) 一同運作。
 
 若要在資料庫中利用記憶體內部 OLTP，您可以使用一或多個下列類型的物件：
 
