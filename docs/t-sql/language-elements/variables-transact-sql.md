@@ -13,12 +13,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0904966eb334b182646818b98449472122741f6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d452d0e342d9b8241ee79882970e65c74a26d77
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086133"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325476"
 ---
 # <a name="variables-transact-sql"></a>變數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -31,6 +31,9 @@ Transact-SQL 區域變數是一種物件，可保存特定類型的單一資料�
 
 > [!NOTE]
 > 有些 Transact-SQL 系統函式的名稱開頭是兩個 *at* 符號 (\@\@)。 雖然在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，\@\@ 函式是當作全域變數，但他們並不是變數，行為也和變數不一樣。 \@\@ 函式是系統函式，他們的語法是遵循函式的規則。
+
+> [!NOTE]
+> 無法在檢視中使用變數。
 
 以下指令碼建立一個小型測試資料表，並於其中填入 26 個資料列。 指令碼將使用變數進行三個用途： 
 

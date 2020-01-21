@@ -1,6 +1,7 @@
 ---
-title: 使用 Always On 可用性群組儀表板 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 使用 SSMS 中的可用性群組儀表板
+description: 描述如何在 SQL Server Management Studio (SSMS) 中，使用 Always On 可用性群組儀表板來監視可用性群組的健康情況。
+ms.custom: seo-lt-2019
 ms.date: 08/09/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 802fcd6ad0bead99a56f3bd5f8c71639a42a0cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013527"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822672"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>使用 Always On 可用性群組儀表板 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +124,7 @@ ms.locfileid: "68013527"
 -   **手動**： 表示沒有任何複本處於自動容錯移轉模式。  
   
  **同步處理狀態**  
- 指出次要複本目前是否與主要複本進行同步處理。 預設顯示此資料行。 可能的值為：  
+ 指出次要複本目前是否與主要複本進行同步處理。 預設顯示此資料行。 可能的值包括：  
   
 -   **未同步處理**： 複本中的一個或多個資料庫尚未同步處理，或者尚未聯結至可用性群組。  
   
@@ -140,7 +141,7 @@ ms.locfileid: "68013527"
  列出問題名稱。 預設顯示此值。 如需所有 AlwaysOn 原則問題的清單，請參閱[AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)。  
   
  **可用性模式**  
- 指出您個別針對每個可用性複本所設定的複本屬性。 預設隱藏此值。 可能的值為：  
+ 指出您個別針對每個可用性複本所設定的複本屬性。 預設隱藏此值。 可能的值包括：  
   
 -   **非同步**： 次要複本永遠不會變成與主要複本進行同步處理。  
   
@@ -153,7 +154,7 @@ ms.locfileid: "68013527"
  指出用來連接到次要複本的模式。  預設隱藏此值。  
   
  **連接狀態**  
- 指出次要複本目前是否已連接到主要複本。 預設隱藏此資料行。 可能的值為：  
+ 指出次要複本目前是否已連接到主要複本。 預設隱藏此資料行。 可能的值包括：  
   
 -   **已中斷連接**： 若為遠端可用性複本，表示它與本機可用性複本已中斷連接。 本機複本對 [已中斷連接] 狀態的回應取決於其角色，如下所示：  
   
@@ -164,11 +165,11 @@ ms.locfileid: "68013527"
 -   **Connected**。 目前連接到本機複本的遠端可用性複本。  
   
  **操作狀態**  
- 指出次要複本的目前操作狀態。 預設隱藏此值。 可能的值為：  
+ 指出次要複本的目前操作狀態。 預設隱藏此值。 可能的值包括：  
   
  **0**.暫止容錯移轉    
- **1**.暫止    
- **2**.線上存取    
+ **1**。Pending    
+ **2**.線上    
  **3**.離線   
  **4**.失敗    
  **5**.失敗，無仲裁  
@@ -237,14 +238,14 @@ ms.locfileid: "68013527"
     > [!CAUTION]  
     >  當資料庫處於 INITIALIZING 狀態時，強制容錯移轉至次要複本一定會將資料庫保留在無法啟動的狀態。  
   
- **Failover Readiness**  
- 指出哪個可用性複本可能會在遺失資料或不遺失資料的情況下容錯移轉。 預設顯示此資料行。 可能的值為：  
+ **[容錯移轉整備]**  
+ 指出哪個可用性複本可能會在遺失資料或不遺失資料的情況下容錯移轉。 預設顯示此資料行。 可能的值包括：  
   
 -   **資料遺失**   
 -   **不遺失資料**  
   
  **問題**  
- 列出問題名稱。 預設顯示此資料行。 可能的值為：  
+ 列出問題名稱。 預設顯示此資料行。 可能的值包括：  
   
 -   **警告**： 按一下可顯示臨界值和警告問題。   
 -   **關鍵**： 按一下可顯示關鍵問題。  

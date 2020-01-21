@@ -1,6 +1,7 @@
 ---
-title: SQL Server 連接器維護和疑難排解 | Microsoft Docs
-ms.custom: ''
+title: SQL Server 連接器維護和疑難排解
+description: 了解適用於 SQL Server 連接器的維護指示和常見疑難排解步驟。
+ms.custom: seo-lt-2019
 ms.date: 07/25/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -9,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Connector, appendix
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: d24f4e86f59e91537886480b26248c683665850a
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70148784"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557926"
 ---
-# <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 連接器維護和疑難排解
+# <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server 連接器維護和疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的補充資訊。 如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的詳細資訊，請參閱[使用 Azure 金鑰保存庫進行可延伸金鑰管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)、[使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)和[搭配使用 SQL Server 連接器與 SQL 加密功能](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)。  
@@ -169,7 +170,10 @@ ms.locfileid: "70148784"
 **SQL Server 連接器需要存取哪些端點？** 連接器會與兩個需要設為允許清單的端點通訊。 針對 HTTPS，這些其他服務之輸出通訊所需的唯一連接埠是 443：
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/* :443
-  
+
+**如何透過 HTTP(S) Proxy 伺服器連線至 Azure Key Vault？**
+連接器會使用 Internet Explorer 的 Proxy 組態設定。 這些設定可以透過[群組原則](https://blogs.msdn.microsoft.com/askie/2015/10/12/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available/) \(英文\) 或登錄來控制，但請務必注意，它們不是全系統設定，因此必須以執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的服務帳戶作為目標。 如果資料庫管理員在 Internet Explorer 中檢視或編輯這些設定，它們將只會影響該資料庫管理員的帳戶，而非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎。 不建議使用服務帳戶以互動方式登入伺服器，且有許多安全環境都會封鎖此做法。 對已設定的 Proxy 設定所做的變更，可能會需要重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體才會生效，因為系統會在連接器首次嘗試連線至金鑰保存庫時對這些變更進行快取。
+
 **什麼是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中每個組態步驟所需的最低權限等級？**  
  雖然您能以 sysadmin 固定伺服器角色的成員身分執行所有設定步驟，但是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 鼓勵您將自己所使用的權限降至最低。 下列清單定義每個動作的最小權限層級。  
   
@@ -202,7 +206,7 @@ ms.locfileid: "70148784"
 ##  <a name="AppendixC"></a> C. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的錯誤碼說明  
  **提供者錯誤碼：**  
   
-錯誤碼  |符號  |Description    
+錯誤碼  |符號  |描述    
 ---------|---------|---------  
 0 | scp_err_Success | 此作業已成功。    
 1 | scp_err_Failure | 作業失敗。    
@@ -211,7 +215,9 @@ ms.locfileid: "70148784"
 4 | scp_err_NotFound | EKM 提供者找不到指定的金鑰或演算法。    
 5 | scp_err_AuthFailure | 向 EKM 提供者驗證失敗。    
 6 | scp_err_InvalidArgument | 提供的引數無效。    
-7 | scp_err_ProviderError | 在 SQL 引擎捕捉到的 EKM 提供者中發生未指定的錯誤。    
+7 | scp_err_ProviderError | 在 SQL 引擎捕捉到的 EKM 提供者中發生未指定的錯誤。   
+401 | acquireToken | 伺服器已針對要求回應 401。 請確定用戶端識別碼和祕密皆正確，且認證字串是 AAD 用戶端識別碼和祕密去除連字號之後的串連。
+404 | getKeyByName | 伺服器回應 404，因為找不到索引鍵名稱。 請確定保存庫中有索引鍵名稱。
 2049 | scp_err_KeyNameDoesNotFitThumbprint | 金鑰名稱太長，而無法放入 SQL 引擎的指紋。 金鑰名稱不得超過 26 個字元。    
 2050 | scp_err_PasswordTooShort | AAD 用戶端識別碼和祕密串連成的祕密字串小於 32 個字元。    
 2051 | scp_err_OutOfMemory | SQL 引擎已用盡記憶體，且無法配置 EKM 提供者的記憶體。    
@@ -249,6 +255,8 @@ ms.locfileid: "70148784"
 -   您可能已經從 Azure 金鑰保存庫或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]卸除非對稱金鑰。 請還原金鑰。  
   
 -   如果收到「無法載入程式庫」錯誤，請確定您已根據所執行之 SQL Server 版本安裝正確版本的 Visual Studio C++ 可轉散發套件。 下表會指定要從 Microsoft 下載中心安裝的版本。   
+
+Windows 事件記錄檔也會記錄與 SQL Server 連接器相關聯的錯誤，這可以協助提供錯誤實際發生原因的額外內容。 Windows 應用程式事件記錄檔中的來源將會是「適用於 Microsoft Azure Key Vault 的 SQL Server 連接器」。
   
 SQL Server 版本  |可轉散發套件的安裝連結    
 ---------|--------- 
@@ -287,7 +295,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
   
  Azure 金鑰保存庫文件：  
   
--   [何謂 Azure Key Vault？](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)  
+-   [什麼是 Azure 金鑰保存庫？](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)  
   
 -   [開始使用 Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)  
   

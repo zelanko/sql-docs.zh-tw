@@ -1,6 +1,7 @@
 ---
-title: 定義合併資料表發行項之間的邏輯記錄關聯性 | Microsoft 文件
-ms.custom: ''
+title: 定義合併資料表發行項之間的邏輯記錄關聯性
+description: 了解如何定義相關資料表 (用於合併式複寫發行項) 之間的邏輯記錄關聯性。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74d9d0bec559dbc618e5487fea647461bc967db3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 8df94f31b6a036677f5d62ae60ffb4cf53a082be
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846608"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321221"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>定義合併資料表發行項之間的邏輯記錄關聯性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +106,7 @@ ms.locfileid: "70846608"
   
     -   若要使用標準資料列層級或資料行層級的衝突偵測與解決方法，請為 **\@logical_record_level_conflict_detection** 和 **\@logical_record_level_conflict_resolution** 指定 **false** 值 (這是預設值)。  
   
-3.  針對組成此邏輯記錄的每一個發行項重複步驟 2。 您必須針對此邏輯記錄中的每一個發行項使用相同的衝突偵測和解決選項。 如需詳細資訊，請參閱 [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)。  
+3.  針對組成此邏輯記錄的每一個發行項重複步驟 2。 您必須針對此邏輯記錄中的每一個發行項使用相同的衝突偵測和解決選項。 如需詳細資訊，請參閱 [偵測和解決邏輯記錄中的衝突](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)。  
   
 4.  在發行集資料庫的發行者上，執行 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)。 指定 **\@publication**、 **\@article** 關聯性中的一個發行項名稱、 **\@join_articlename** 的第二個發行項名稱、 **\@filtername** 的關聯性名稱、為 **\@join_filterclause** 定義兩個發行項之間的關聯性子句、 **\@join_unique_key** 的聯結類型，並為 **\@filter_type** 指定下列其中一個值：  
   

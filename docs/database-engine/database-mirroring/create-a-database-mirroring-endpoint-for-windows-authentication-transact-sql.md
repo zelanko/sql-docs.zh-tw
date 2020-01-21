@@ -1,6 +1,7 @@
 ---
-title: 建立 Windows 驗證的資料庫鏡像端點 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 建立資料庫鏡像端點 (Transact-SQL)
+description: 使用 Transact-SQL 建立使用 Windows 驗證的資料庫鏡像端點。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2fbe4c5188bc728b8b8b58872ca805e1460c3a04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11b3c1d06c74f8d5c19aa95ba8de20fbce67d3dd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951990"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75259038"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>建立 Windows 驗證的資料庫鏡像端點 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "67951990"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  伺服器執行個體的驗證及加密方法是由系統管理員所建立。  
   
 > [!IMPORTANT]  
@@ -111,7 +112,7 @@ ms.locfileid: "67951990"
   
     -   依預設，ENCRYPTION 是設定為 REQUIRED。 這表示此端點的所有連接都必須使用加密。 不過，您可以停用加密或使其在端點上為選擇性的。 替代方案如下所示：  
   
-        |ReplTest1|定義|  
+        |值|定義|  
         |-----------|----------------|  
         |DISABLED|指定透過連接傳送的資料不加密。|  
         |SUPPORTED|指定只有在相對端點指定為 SUPPORTED 或 REQUIRED 時才加密資料。|  
@@ -145,7 +146,7 @@ ms.locfileid: "67951990"
 |-----------------------------|---------------------------|  
 |夥伴 (一開始為主體角色)|`SQLHOST01\.`|  
 |夥伴 (一開始為鏡像角色)|`SQLHOST02\.`|  
-|Witness|`SQLHOST03\.`|  
+|見證|`SQLHOST03\.`|  
   
  在此範例中，雖然任何可用的通訊埠編號都可以使用，不過三個終止點都會使用通訊埠編號 7022。 AUTHENTICATION 選項是不必要的，因為終止點會使用預設類型「Windows 驗證」。 ENCRYPTION 選項也沒有必要，因為終止點隨時會交涉連線的驗證方法，這是「Windows 驗證」的預設行為。 另外，所有終止點都需要加密，這也是預設行為。  
   
@@ -191,7 +192,7 @@ GO
   
 -   [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [在加入或修改可用性複本時指定端點 URL &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [在新增或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **若要檢視有關資料庫鏡像端點的資訊**  
   

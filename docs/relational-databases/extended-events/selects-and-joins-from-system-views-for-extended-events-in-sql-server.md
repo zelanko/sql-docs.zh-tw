@@ -1,6 +1,5 @@
 ---
-title: SQL Server 擴充事件系統檢視表中的 SELECT 和 JOIN | Microsoft Docs
-ms.custom: ''
+title: 擴充事件系統檢視表中的 SELECT 和 JOIN
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,20 +9,21 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4194c869574812d9035a9b51ed44b6aa62efdbcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3bcb7e272c1a5120b65018aab781546ba8d0f2b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903450"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242904"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 擴充事件系統檢視表中的 SELECT 和 JOIN
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-本文說明 Microsoft SQL Server 與 Azure SQL Database 雲端服務中與擴充事件相關的這兩組系統檢視表。 本文說明︰
+此文章說明 SQL Server 與 Azure SQL Database 中與擴充事件相關的兩組系統檢視表。 本文說明︰
 
 - 如何「聯結」不同的系統檢視表。
 - 如何從系統檢視表 SELECT 特定類型的資訊。
@@ -55,7 +55,7 @@ ms.locfileid: "67903450"
 
 - 儲存執行事件工作階段的「目前活動」  相關資訊。 但是這些 DMV 對工作階段定義卻知之甚少。
     - 即使所有的事件工作階段目前皆已停止，因為伺服器啟動時會將各種封裝載入到使用中的記憶體，所以從 *sys.dm_xe_packages* 檢視 SELECT 仍會傳回資料列。
-    - 因為同樣的原因， *sys.dm_xe_objects* *sys.dm_xe_object_columns* would also still return rows.
+    - 因為同樣的原因，*sys.dm_xe_objects* *sys.dm_xe_object_columns* 也會傳回資料列。
 
 
 - 擴充事件 DMV 的名稱前置詞是︰
@@ -63,7 +63,7 @@ ms.locfileid: "67903450"
     - *sys.dm\_xe\_database\_\** 通常是 SQL Database 的名稱前置詞。
 
 
-#### <a name="permissions"></a>權限:
+#### <a name="permissions"></a>權限：
 
 
 若要從系統檢視表 SELECT，必須有下列權限︰
@@ -79,7 +79,7 @@ ms.locfileid: "67903450"
 
 本節會比對同一已定義事件工作階段的三種不同技術檢視方塊，並建立其關聯。 工作階段已定義並顯示在 SQL Server Management Studio (SSMS.exe) 的 [物件總管]  中，但此工作階段目前未執行。
 
-最好每個月[安裝最新的 SSMS 更新](https://msdn.microsoft.com/library/mt238290.aspx)，以避免發生意外的失敗。
+最好每個月 [安裝最新的 SSMS 更新](https://msdn.microsoft.com/library/mt238290.aspx)，以避免發生意外的失敗。
 
 
 擴充事件目錄檢視的相關參考文件位於 [擴充事件目錄檢視 (TRANSACT-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)。
@@ -644,7 +644,7 @@ sqlserver   lock_deadlock   transaction_id
 
 <a name="section_C_5_map_values_fields"></a>
 
-### <a name="c5-sysdmxemapvalues-and-event-fields"></a>C.5 *sys.dm_xe_map_values* 和事件欄位
+### <a name="c5-sysdm_xe_map_values-and-event-fields"></a>C.5 *sys.dm_xe_map_values* 和事件欄位
 
 
 下列 SELECT 包含名為 *sys.dm_xe_map_values*之複雜檢視的 JOIN。
@@ -786,7 +786,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 
 <a name="section_C_7_dmv_select_target_data_column"></a>
 
-### <a name="c7-dmv-select-casting-targetdata-column-to-xml"></a>C.7 DMV SELECT 將 target_data 資料行轉換成 XML
+### <a name="c7-dmv-select-casting-target_data-column-to-xml"></a>C.7 DMV SELECT 將 target_data 資料行轉換成 XML
 
 
 這個 DMV SELECT 從作用中事件工作階段的目標傳回資料列。 資料會轉換成 XML，使其傳回的資料格為可按式項目，輕鬆以 SSMS 顯示。
@@ -854,7 +854,7 @@ checkpoint_session_ring_buffer2   ring_buffer   <RingBufferTarget truncated="0" 
 
 <a name="section_C_8_select_function_disk"></a>
 
-### <a name="c8-select-from-a-function-to-retrieve-eventfile-data-from-disk-drive"></a>C.8 函數的 SELECT 從磁碟機擷取 event_file 資料
+### <a name="c8-select-from-a-function-to-retrieve-event_file-data-from-disk-drive"></a>C.8 函數的 SELECT 從磁碟機擷取 event_file 資料
 
 
 假設事件工作階段在收集了某些資料後停止。 如果您的工作階段已定義為使用 event_file 目標，您仍然可以呼叫 *sys.fn_xe_target_read_file*函數以擷取資料。

@@ -1,6 +1,7 @@
 ---
-title: 使用複寫監視器來檢視資訊及執行工作 | Microsoft Docs
-ms.custom: ''
+title: 檢視資訊與執行工作 (複寫監視器)
+description: 了解如何在 SQL Server Management Studio (SSMS) 中使用複寫監視器來檢視資訊及執行各種工作。
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 836a286c5852a9822835977c47d9cd204a3724ce
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 1a71ef96c559857e739b074915b219c38f036ff3
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766904"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322207"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>使用複寫監視器來檢視資訊及執行工作
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "68766904"
 ### <a name="view-information"></a>檢視資訊
 「複寫監視器」提供下列顯示所選取「發行者」之資訊的索引標籤：   
 -   **發行集** - 顯示與所選「發行者」的所有發行集相關的資訊。   
--   **訂閱監看清單** - 顯示與所選「發行者」之所有可用發行集內有錯誤、警告或效能最差的訂閱相關的資訊。 執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]之前版本的散發者不會顯示這個索引標籤。    
+-   **訂閱監看清單** - 顯示與所選「發行者」之所有可用發行集內有錯誤、警告或效能最差的訂閱相關的資訊。 執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前版本的散發者不會顯示這個索引標籤。    
 -   **代理程式**索引標籤 - 顯示與所有複寫類型所使用的代理程式和作業相關的詳細資訊。 您也可以用這個索引標籤來啟動和停止每個代理程式和工作。 若要檢視每一索引標籤上選項的詳細資訊，請按一下右窗格中的索引標籤，然後按一下功能表列上的 **[說明]** 。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 ### <a name="perform-tasks"></a>執行工作
@@ -84,7 +85,7 @@ ms.locfileid: "68766904"
 ### <a name="view-information"></a>檢視資訊
   複寫監視器提供下列包含有訂閱資訊的索引標籤：    
 -   **所有訂閱** - 顯示與所選發行集的所有訂閱相關的資訊。   
--   **訂閱監看清單** - 顯示與所選「發行者」之所有可用發行集內有錯誤、警告或效能最差的訂閱相關的資訊。 執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]之前版本的散發者不會顯示這個索引標籤。 如需有關各索引標籤選項的資訊，請按一下右窗格的索引標籤，然後按一下功能表上的 **[說明]** 。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+-   **訂閱監看清單** - 顯示與所選「發行者」之所有可用發行集內有錯誤、警告或效能最差的訂閱相關的資訊。 執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前版本的散發者不會顯示這個索引標籤。 如需有關各索引標籤選項的資訊，請按一下右窗格的索引標籤，然後按一下功能表上的 **[說明]** 。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 ### <a name="perform-tasks"></a>執行工作
   
@@ -127,7 +128,7 @@ ms.locfileid: "68766904"
 ### <a name="view-information"></a>檢視資訊
 -   **所有訂閱** - 顯示與所選發行集的所有訂閱相關的資訊。  
   
--   **訂閱監看清單** - 用來顯示與所選「發行者」之所有可用發行集內有錯誤、警告或效能最差的訂閱相關的資訊。 執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]之前版本的散發者不會顯示這個索引標籤。 如需有關各索引標籤選項的資訊，請按一下右窗格的索引標籤，然後按一下功能表上的 **[說明]** 。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+-   **訂閱監看清單** - 用來顯示與所選「發行者」之所有可用發行集內有錯誤、警告或效能最差的訂閱相關的資訊。 執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前版本的散發者不會顯示這個索引標籤。 如需有關各索引標籤選項的資訊，請按一下右窗格的索引標籤，然後按一下功能表上的 **[說明]** 。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 ### <a name="perform-tasks"></a>執行工作
   

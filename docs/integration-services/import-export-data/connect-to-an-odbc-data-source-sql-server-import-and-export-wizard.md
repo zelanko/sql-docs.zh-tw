@@ -1,20 +1,21 @@
 ---
 title: 連線至 ODBC 資料來源 (SQL Server 匯入和匯出精靈) | Microsoft Docs
+description: 如何設定 ODBC DSN，或建立要與 SQL Server 匯入和匯出精靈搭配使用的 ODBC 連接字串
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 12/31/2019
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd4dbec9e08b19a0c06c991a7007b449dff02485
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
+ms.sourcegitcommit: ab7209b5856537bfef0a6e9d0527d9002bd0a528
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71285497"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75608027"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>連線至 ODBC 資料來源 (SQL Server 匯入和匯出精靈)
 
@@ -28,7 +29,7 @@ ms.locfileid: "71285497"
 也可能需要查閱您必須提供的必要連接資訊。 [The Connection Strings Reference](https://www.connectionstrings.com/) (連接字串參考) 這個協力廠商網站包含範例連接字串、資料提供者的詳細資訊以及其所需的連接資訊。
 
 ## <a name="make-sure-the-driver-you-want-is-installed"></a>請確定已安裝您想要的驅動程式
-1.  在控制台中搜尋或瀏覽至 [ODBC 資料來源 (64 位元)]  小程式。 如果您只有 32 位元驅動程式，或者了解您必須使用 32 位元驅動程式，請改為搜尋或瀏覽至 [ODBC 資料來源 (32 位元)]  。
+1.  在 [開始] 功能表或 [控制台] 中搜尋或瀏覽至 [ODBC 資料來源 (64 位元)]  小程式。 如果您只有 32 位元驅動程式，或者了解您必須使用 32 位元驅動程式，請改為搜尋或瀏覽至 [ODBC 資料來源 (32 位元)]  。
 2.  啟動小程式。 即會開啟 [ODBC 資料來源管理員]  視窗。
 3.  在 [驅動程式]  索引標籤上，您可以找到電腦上安裝的所有 ODBC 驅動程式的清單。 (部分驅動程式的名稱可能會以多種語言列出。)
 
@@ -50,7 +51,7 @@ ms.locfileid: "71285497"
 
 ## <a name="step-2---provide-the-connection-info"></a>步驟 2 - 提供連接資訊
 下一個步驟是針對 ODBC 驅動程式與資料來源提供連接資訊。 您有兩個選項。
-1.  提供已經存在，或是在控制台中使用 [ODBC 資料來源管理員]  小程式建立的 **DSN** (資料來源名稱)。 DSN 是連線至 ODBC 資料來源所需的已儲存設定集合。
+1.  提供已經存在，或是使用 [ODBC 資料來源管理員]  小程式建立的 **DSN** (資料來源名稱)。 DSN 是連線至 ODBC 資料來源所需的已儲存設定集合。
 
     如果您已經知道 DSN 名稱，或了解現在要如何建立新的 DSN，則可以略過此頁面的其餘部分。 在 [選擇資料來源]  或 [選擇目的地]  頁面上的 [Dsn]  欄位中輸入 DSN 名稱，然後繼續精靈的下一個步驟。
 
@@ -66,7 +67,7 @@ ms.locfileid: "71285497"
 
 ## <a name="odbc_dsn"></a> 選項 1 - 提供 DSN
 如果您想要提供含有 DSN (資料來源名稱) 的連接資訊，請使用 [ODBC 資料來源管理員]  小程式來尋找現有 DSN 的名稱，或建立新的 DSN。
-1.  在控制台中搜尋或瀏覽至 [ODBC 資料來源 (64 位元)]  小程式。 如果您只有 32 位元驅動程式，或者必須使用 32 位元驅動程式，請改為搜尋或瀏覽至 [ODBC 資料來源 (32 位元)]  。
+1.  在 [開始] 功能表或 [控制台] 中搜尋或瀏覽至 [ODBC 資料來源 (64 位元)]  小程式。 如果您只有 32 位元驅動程式，或者必須使用 32 位元驅動程式，請改為搜尋或瀏覽至 [ODBC 資料來源 (32 位元)]  。
 2.  啟動小程式。 即會開啟 [ODBC 資料來源管理員]  視窗。 以下是小程式的外觀。
 
     ![ODBC 管理員控制台小程式](../../integration-services/import-export-data/media/odbc-administrator-control-panel-applet.png)
@@ -90,7 +91,7 @@ ms.locfileid: "71285497"
 ## <a name="odbc_connstring"></a> 選項 2 - 提供連接字串
 如果您想要提供含有連接字串的連接資訊，本主題的其餘部分可協助您取得所需的連接字串。
 
-此範例將使用下列連接字串，以連線至 Microsoft SQL Server。
+此範例將使用下列連接字串，以連線至 Microsoft SQL Server。 使用的資料庫範例是 **WideWorldImporters**，而且我們會連接到本機電腦上的 SQL Server。
 
     ```
     Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
@@ -106,14 +107,14 @@ ms.locfileid: "71285497"
 > 不論您設定的是來源還是目的地，此ODBC 驅動程式的連線選項都會相同。 也就是，您在精靈的 [選擇資料來源]  和 [選擇目的地]  頁面上看到的選項會相同。
 
 ## <a name="get-the-connection-string-online"></a>線上取得連接字串
-若要線上尋找 ODBC 驅動程式的連接字串，請參閱 [The Connection Strings Reference](https://www.connectionstrings.com/)(連接字串參考)。 這個協力廠商網站包含範例連接字串、資料提供者的詳細資訊以及其所需的連接資訊。
+若要線上尋找 ODBC 驅動程式的連接字串，請參閱 [The Connection Strings Reference](https://www.connectionstrings.com/)(連接字串參考)。 此第三方網站包含範例連接字串，以及資料提供者及其所需連線資訊的更多資訊。
 
 ## <a name="get-the-connection-string-with-an-app"></a>使用應用程式取得連接字串
 若要在您自己的電腦上建置並測試 ODBC 驅動程式的連接字串，您可以使用控制台中的 [ODBC 資料來源管理員]  小程式。 建立連線的檔案 DSN，然後從檔案 DSN 中複製出設定以組合連接字串。 這需要數個步驟，但可協助確認您具有有效的連接字串。
 
-1.  在控制台中搜尋或瀏覽至 [ODBC 資料來源 (64 位元)]  小程式。 如果您只有 32 位元驅動程式，或者必須使用 32 位元驅動程式，請改為搜尋或瀏覽至 [ODBC 資料來源 (32 位元)]  。
+1.  在 [開始] 功能表或 [控制台] 中搜尋或瀏覽至 [ODBC 資料來源 (64 位元)]  小程式。 如果您只有 32 位元驅動程式，或者必須使用 32 位元驅動程式，請改為搜尋或瀏覽至 [ODBC 資料來源 (32 位元)]  。
 2.  啟動小程式。 即會開啟 [ODBC 資料來源管理員]  視窗。
-3.  現在移至小程式的 [檔案 DSN]  索引標籤。 按一下 **[加入]** 。
+3.  現在移至小程式的 [檔案 DSN]  索引標籤。 按一下 [新增]  。
 
     在此範例中，請建立檔案 DSN，而非使用者 DSN 或系統 DSN，因為檔案 DSN 會以連接字串所需的特定格式儲存名稱/值對。
 
@@ -160,7 +161,7 @@ ms.locfileid: "71285497"
 
     建立有效的連接字串時，通常不需要 [ODBC 資料來源管理員] 所建立之 DSN 的所有設定。  
     -   您一定要指定 ODBC 驅動程式。
-    -   若是 SQL Server 等伺服器架構資料來源，您通常需要伺服器、資料庫和登入資訊。 因此在此範例 DSN 中，您不需要 TrustServerCertificate、WSID 或 APP。
+    -   若是 SQL Server 等伺服器架構資料來源，您通常需要伺服器、資料庫和登入資訊。 在此範例 DSN 中，您不需要 TrustServerCertificate、WSID 或 APP。
     -   若是檔案式資料來源，您至少需要檔案名稱和位置。
     
 12. 將此連接字串貼入精靈的 [選擇資料來源]  或 [選擇目的地]  頁面上的 [ConnectionString]  欄位。 精靈即會剖析字串，現在您已準備好繼續進行！

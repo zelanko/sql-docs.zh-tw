@@ -1,6 +1,5 @@
 ---
-title: XEvent 概觀 - SQL Server | Microsoft Docs
-ms.custom: ''
+title: XEvents 概觀 - SQL Server
 ms.date: 07/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d829b32941ad1bc64df4e2e86cddb26d7468281
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: 34ebcae99f096d095839cb533fb6efe58b113050
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313703"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75234603"
 ---
 # <a name="extended-events-overview"></a>擴充事件概觀
 
@@ -42,7 +41,7 @@ ms.locfileid: "72313703"
   
  下表描述擴充事件的概念。  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[SQL Server 擴充的事件套件](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|描述包含物件的「擴充事件」套件。 當「擴充事件」工作階段在執行時，系統會使用這些物件來取得和處理資料。|  
 |[SQL Server 擴充的事件目標](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|描述事件工作階段期間可以接收資料的事件取用者。|  

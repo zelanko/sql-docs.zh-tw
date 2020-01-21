@@ -1,6 +1,7 @@
 ---
-title: 使用原則式管理來監視和強制最佳做法 |Microsoft Docs
-ms.custom: ''
+title: 使用原則式管理來監視及強制執行最佳做法
+description: 原則式管理會提供一組原則檔讓您當作最佳做法原則匯入，然後為包含執行個體、物件、資料庫或資料庫物件的目標集評估原則。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d261f84f23131ab9bce11081e1c9d6d1c8dda8d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54fdfe36da0d590fa2225ab7cc99af640727b000
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087090"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557603"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>使用原則式管理來監視和強制最佳做法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "68087090"
 |SQL Server 登入模式|[選擇驗證模式](../../relational-databases/security/choose-an-authentication-mode.md)|  
 |SQL Server 平行處理原則的最大程度|[設定平行處理原則的最大程度選項來取得最佳效能](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)|  
 |32 位元 SQL Server 2000 的 SQL Server 最大工作者執行緒|[確認最大工作者執行緒設定](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
-|64 位元 SQL Server 2000 的 SQL Server 最大工作者執行緒|[驗證最大工作者執行緒設定](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
+|64 位元 SQL Server 2000 的 SQL Server 最大工作者執行緒|[確認最大工作者執行緒設定](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
 |SQL Server 2005 和更新版本的 SQL Server 最大工作者執行緒|[確認最大工作者執行緒設定](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
 |SQL Server 網路封包大小|[網路封包大小不應超過 8060 個位元組](../../relational-databases/policy-based-management/network-packet-size-should-not-exceed-8060-bytes.md)|  
 |SQL Server 密碼逾期|[SQL Server 登入密碼逾期](../../relational-databases/policy-based-management/sql-server-login-password-expiration.md)|  

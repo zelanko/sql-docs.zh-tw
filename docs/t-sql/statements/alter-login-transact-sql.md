@@ -1,7 +1,7 @@
 ---
 title: ALTER LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2019
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2eeec689116946d99b348cadf0b41bca829848b1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 6523da9177f15673461880cbad0fc0a751a4391d
+ms.sourcegitcommit: cc20a148c785ac43832f47d096fe53508a4b1940
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982097"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75871128"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -45,7 +45,7 @@ ms.locfileid: "73982097"
 
 ||||||
 |-|-|-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -129,7 +129,7 @@ ADD CREDENTIAL 將可延伸金鑰管理 (EKM) 提供者認證新增到登入中�
 
 DROP CREDENTIAL 將可延伸金鑰管理 (EKM) 提供者認證從登入移除。 如需詳細資訊，請參閱[可延伸金鑰管理 (EKM)] (../.. /relational-databases/security/encryption/extensible-key-management-ekm.md)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 當 CHECK_POLICY 設定為 ON 時，無法使用 HASHED 引數。
 
@@ -266,7 +266,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />單一資料庫/彈性集區 \*_**|[SQL Database<br />受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />單一資料庫/彈性集區 \*_**|[SQL Database<br />受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -277,7 +277,7 @@ GO
 ## <a name="syntax"></a>語法
 
 ```
--- Syntax for Azure SQL Database and Azure SQL Data Warehouse
+-- Syntax for Azure SQL Database
 
 ALTER LOGIN login_name
   {
@@ -314,7 +314,7 @@ OLD_PASSWORD **='** _oldpassword_ **'** 僅適用於 [!INCLUDE[ssNoVersion](../.
 
 NAME = *login_name* 正在重新命名的登入新名稱。 如果這是 Windows 登入，則對應到新名稱的 Windows 主體 SID 必須與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中之登入相關聯的 SID 相同。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的新名稱，不能包含反斜線字元 (\\)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
@@ -424,7 +424,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />受控執行個體 \*_**|[SQL 資料<br />倉儲](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />受控執行個體 \*_**|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -469,7 +469,7 @@ ALTER LOGIN login_name
 ```
 
 > [!NOTE]
-> 受控執行個體功能的 Azure AD 系統管理員已在建立後變更。 如需詳細資訊，請參閱 [MI 的新 Azure AD 系統管理員功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
+> 建立完成後的受控執行個體 Azure AD 管理員已變更。 如需詳細資訊，請參閱 [MI 的新 Azure AD 管理員功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
 
 ```
 -- Syntax for Azure SQL Database managed instance using Azure AD logins
@@ -532,7 +532,7 @@ ADD CREDENTIAL 將可延伸金鑰管理 (EKM) 提供者認證新增到登入中�
 
 DROP CREDENTIAL 將可延伸金鑰管理 (EKM) 提供者認證從登入移除。 如需詳細資訊，請參閱[可延伸金鑰管理 (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 當 CHECK_POLICY 設定為 ON 時，無法使用 HASHED 引數。
 
@@ -675,16 +675,16 @@ ALTER LOGIN [joe@contoso.com] DISABLE
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL 資料<br />倉儲 \*_**|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_**|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-data-warehouse"></a>Azure SQL 資料倉儲
+## <a name="azure-synapse-analytics"></a>Azure Synapse Analytics
 
 ## <a name="syntax"></a>語法
 
 ```
--- Syntax for Azure SQL Database and Azure SQL Data Warehouse
+-- Syntax for Azure Synapse
 
 ALTER LOGIN login_name
   {
@@ -721,7 +721,7 @@ OLD_PASSWORD **='** _oldpassword_ **'** 僅適用於 [!INCLUDE[ssNoVersion](../.
 
 NAME = *login_name* 正在重新命名的登入新名稱。 如果這是 Windows 登入，則對應到新名稱的 Windows 主體 SID 必須與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中之登入相關聯的 SID 相同。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的新名稱，不能包含反斜線字元 (\\)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
@@ -830,7 +830,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
 
 &nbsp;
 
@@ -886,7 +886,7 @@ CHECK_POLICY **=** { **ON** | OFF } 僅適用於 [!INCLUDE[ssNoVersion](../../in
 
 UNLOCK 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定應該將鎖定的登入解除鎖定。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 當 CHECK_POLICY 設定為 ON 時，無法使用 HASHED 引數。
 

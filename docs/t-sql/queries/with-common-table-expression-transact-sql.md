@@ -27,14 +27,14 @@ ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a62fe54a6bbdd7287c46f103f9963302727a1077
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948086"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564816"
 ---
-# <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
+# <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 指定稱為通用資料表運算式 (CTE) 的暫存具名結果集。 這是從簡單查詢衍生而來，定義在單一 SELECT、INSERT、UPDATE、DELETE 或 MERGE 陳述式的執行範圍內。 您也可以在 CREATE VIEW 陳述式中使用這個子句，作為用來定義 SELECT 陳述式的一部分。 通用資料表運算式可以包括指向本身的參考。 這稱為遞迴通用資料表運算式。  
@@ -64,7 +64,7 @@ ms.locfileid: "67948086"
   
  如果定義了多個 *CTE_query_definition*，就必須由下列設定運算子來聯結查詢定義：UNION ALL、UNION、EXCEPT 或 INTERSECT。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 ## <a name="guidelines-for-creating-and-using-common-table-expressions"></a>建立和使用通用資料表運算式的方針  
 下列方針適用於非遞迴的通用資料表運算式。 如需適用於遞迴通用資料表運算式的方針，請參閱下面的[定義和使用遞迴通用資料表運算式的方針](#guidelines-for-defining-and-using-recursive-common-table-expressions)。  
@@ -288,9 +288,7 @@ INSERT INTO dbo.MyEmployees VALUES
 ,(23,  N'Mary', N'Gibson', N'Marketing Specialist', 4, 16);  
 ```  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
 (  
     SELECT ManagerID, EmployeeID, Title, 0 AS EmployeeLevel  
@@ -307,12 +305,10 @@ FROM DirectReports
 ORDER BY ManagerID;   
 ```  
   
-### <a name="e-using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>E. 利用遞迴通用資料表運算式來顯示兩個層級的遞迴  
+#### <a name="using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>利用遞迴通用資料表運算式來顯示兩個層級的遞迴  
  下列範例會顯示經理及向經理提出報告的員工。 傳回的層級數目只限兩個。  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
 (  
     SELECT ManagerID, EmployeeID, Title, 0 AS EmployeeLevel  
@@ -329,12 +325,10 @@ FROM DirectReports
 WHERE EmployeeLevel <= 2 ;  
 ```  
   
-### <a name="f-using-a-recursive-common-table-expression-to-display-a-hierarchical-list"></a>F. 利用遞迴通用資料表運算式來顯示階層式清單  
- 下列範例是以範例 D 為基礎所建立，它加入了經理和員工的姓名及其職稱。 各個層級會進行縮排，更明顯地強調經理和員工的階層。  
+#### <a name="using-a-recursive-common-table-expression-to-display-a-hierarchical-list"></a>利用遞迴通用資料表運算式來顯示階層式清單  
+ 下列範例會新增經理和員工的姓名及其職稱。 各個層級會進行縮排，更明顯地強調經理和員工的階層。  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(Name, Title, EmployeeID, EmployeeLevel, Sort)  
 AS (SELECT CONVERT(varchar(255), e.FirstName + ' ' + e.LastName),  
         e.Title,  
@@ -359,12 +353,10 @@ FROM DirectReports
 ORDER BY Sort;  
 ```  
   
-### <a name="g-using-maxrecursion-to-cancel-a-statement"></a>G. 利用 MAXRECURSION 來取消陳述式  
+#### <a name="using-maxrecursion-to-cancel-a-statement"></a>利用 MAXRECURSION 來取消陳述式  
  您可以利用 `MAXRECURSION` 來防止形式不良的遞迴 CTE 進入無限迴圈。 下列範例會刻意建立無限迴圈，然後利用 `MAXRECURSION` 提示，將遞迴層級限制為 2。  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 --Creates an infinite loop  
 WITH cte (EmployeeID, ManagerID, Title) as  
 (  
@@ -385,9 +377,7 @@ OPTION (MAXRECURSION 2);
   
  更正編碼錯誤之後，就不再需要 MAXRECURSION。 下列範例會顯示更正的程式碼。  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH cte (EmployeeID, ManagerID, Title)  
 AS  
 (  
@@ -403,7 +393,7 @@ SELECT EmployeeID, ManagerID, Title
 FROM cte;  
 ```  
   
-### <a name="h-using-a-common-table-expression-to-selectively-step-through-a-recursive-relationship-in-a-select-statement"></a>H. 利用通用資料表運算式，在 SELECT 陳述式中選擇性地逐步執行遞迴關聯性  
+### <a name="e-using-a-common-table-expression-to-selectively-step-through-a-recursive-relationship-in-a-select-statement"></a>E. 利用通用資料表運算式，在 SELECT 陳述式中選擇性地逐步執行遞迴關聯性  
  下列範例會顯示建立 `ProductAssemblyID = 800` 的自行車時，所需要之產品組件和元件的階層。  
   
 ```sql  
@@ -432,7 +422,7 @@ FROM Parts AS p
 ORDER BY ComponentLevel, AssemblyID, ComponentID;  
 ```  
   
-### <a name="i-using-a-recursive-cte-in-an-update-statement"></a>I. 在 UPDATE 陳述式中使用遞迴 CTE  
+### <a name="f-using-a-recursive-cte-in-an-update-statement"></a>F. 在 UPDATE 陳述式中使用遞迴 CTE  
  下列範例會為用來建置產品 'Road-550-W Yellow, 44' `(ProductAssemblyID``800`) 的所有組件更新 `PerAssemblyQty` 值。 通用資料表運算式會傳回一份階層式清單，其中包含用來建立 `ProductAssemblyID 800` 的組件、用來建立這些組件的元件等等。 只會修改通用資料表運算式所傳回的資料列。  
   
 ```sql  
@@ -460,7 +450,7 @@ JOIN Parts AS d ON c.ProductAssemblyID = d.AssemblyID
 WHERE d.ComponentLevel = 0;  
 ```  
   
-### <a name="j-using-multiple-anchor-and-recursive-members"></a>J. 使用多個錨點和遞迴成員  
+### <a name="h-using-multiple-anchor-and-recursive-members"></a>H. 使用多個錨點和遞迴成員  
  下列範例會利用多個錨點和遞迴成員來傳回指定人員的所有上階。 它會建立一份資料表，且會插入值來建立遞迴 CTE 所傳回的家族族譜。  
   
 ```sql  
@@ -507,7 +497,7 @@ WHERE Generation.ID = Person.ID;
 GO  
 ```  
   
-###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> K. 在遞迴 CTE 中使用分析函數  
+###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> I. 在遞迴 CTE 中使用分析函數  
  下列範例顯示在 CTE 遞迴部分中使用分析或彙總函式時可能會發生的錯誤。  
   
 ```sql  
@@ -580,7 +570,7 @@ Lvl  N
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>L. 在 CTAS 陳述式內使用通用資料表運算式  
+### <a name="j-using-a-common-table-expression-within-a-ctas-statement"></a>J. 在 CTAS 陳述式內使用通用資料表運算式  
  下列範例會建立一個新的資料表，其中包含 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 每個業務代表的每年銷售訂單總數。  
   
 ```sql  
@@ -609,7 +599,7 @@ AS
 GO  
 ```  
   
-### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>M. 在 CETAS 陳述式內使用通用資料表運算式  
+### <a name="k-using-a-common-table-expression-within-a-cetas-statement"></a>K. 在 CETAS 陳述式內使用通用資料表運算式  
  下列範例會建立一個新的外部資料表，其中包含 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 每個業務代表的每年銷售訂單總數。  
   
 ```sql  
@@ -639,7 +629,7 @@ AS
 GO  
 ```  
   
-### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N. 在陳述式中使用多個以逗號分隔的 CTE  
+### <a name="l-using-multiple-comma-separated-ctes-in-a-statement"></a>L. 在陳述式中使用多個以逗號分隔的 CTE  
  下列範例示範如何在單一陳述式中包含兩個 CTE。 CTE 不能位於巢狀結構中 (不可遞迴)。  
   
 ```sql  

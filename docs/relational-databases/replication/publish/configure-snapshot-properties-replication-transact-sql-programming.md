@@ -1,6 +1,7 @@
 ---
-title: 設定快照集屬性 (複寫 Transact-SQL 程式設計) | Microsoft Docs
-ms.custom: ''
+title: 設定快照集屬性 (複寫 SP)
+description: 使用複寫預存程序為快照式或交易式發行集設定快照集屬性。
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ec6f229ded9e9a77b6164ba9c91bee9cf8070fd7
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0152abb24a1bb94f02ebc3f5a4bc6a7c1092acfa
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710927"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321265"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>設定快照集屬性 (複寫 Transact-SQL 程式設計)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "71710927"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-snapshot-or-transactional-publication"></a>修改現有快照式或交易式發行集的快照集屬性  
   
-1.  在發行集資料庫的發行者上，執行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 針對 `@force_invalidate_snapshot` 指定 **1** 的值、針對 `@property` 指定下列其中一個值：  
+1.  在發行集資料庫的發行者上，執行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 針對 `@force_invalidate_snapshot` 指定 **1** 的值，並針對 `@property` 指定下列其中一個值：  
   
     -   **alt_snapshot_folder** - 也針對 `@value` 指定替代快照集資料夾的新路徑。    
     -   **compress_snapshot** - 也針對 `@value` 指定 **true** 或 **false** 的值，以指示替代快照集資料夾中的快照集檔案是否壓縮成 CAB 檔案格式。    
@@ -65,7 +66,7 @@ ms.locfileid: "71710927"
     > [!IMPORTANT]  
     >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
-3.  從命令提示字元執行 [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) 或是啟動快照集代理程式作業來產生新的快照集。 如需詳細資訊，請參閱 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
+3.  從命令提示字元執行 [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) 或是啟動快照集代理程式作業來產生新的快照集。 如需詳細資訊，請參閱 [建立和套用初始快照集](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-merge-publication"></a>修改現有合併式發行集的快照集屬性  
   

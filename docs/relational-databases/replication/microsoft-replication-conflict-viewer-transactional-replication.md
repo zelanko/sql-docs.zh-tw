@@ -1,6 +1,7 @@
 ---
-title: Microsoft 複寫衝突檢視器 (異動複寫) | Microsoft Docs
-ms.custom: ''
+title: 複寫衝突檢視器 (點對點)
+description: 了解複寫衝突檢視器，以及如何使用它來檢視點對點異動複寫和具有佇列更新訂閱之異動複寫的衝突。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,14 +14,14 @@ ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 61d78e20a51d3a2c28af9cb19a845248d73b5a28
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 39be2638f1d85e610e5898f9a4c33c7129764424
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770585"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321519"
 ---
-# <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Microsoft 複寫衝突檢視器 (異動複寫)
+# <a name="replication-conflict-viewer-transactional-replication"></a>複寫衝突檢視器 (異動複寫)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   「複寫衝突檢視器」可讓您檢視在點對點異動複寫和具有佇列更新訂閱之異動複寫的同步處理期間發生的衝突。 如需詳細資訊，請參閱[檢視交易式發行集的資料衝突 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)。  
   
@@ -32,7 +33,7 @@ ms.locfileid: "68770585"
   
  下半段中的衝突資料，會在兩個對應的資料行 ( **[衝突成功者]** 和 **[衝突失敗者]** ) 中顯示。 如果衝突是發生在已更新和已刪除的資料之間，那麼衝突中已刪除的一方可能沒有資料可以顯示。 在此情況下，複寫衝突檢視器會在其中一個資料行裡顯示訊息，這表示資料列在一處已遭刪除，而在另一處已被更新。 它也會指出建議的解決方式。  
   
- **[資料庫備份]**  
+ **Database**  
  選擇包含有衝突之發行集的資料庫。  
   
  **發行集**  

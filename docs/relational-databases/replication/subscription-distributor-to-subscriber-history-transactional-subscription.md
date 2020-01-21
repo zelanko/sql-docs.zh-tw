@@ -1,6 +1,7 @@
 ---
-title: 訂閱，散發者到訂閱者記錄 (交易式訂閱) | Microsoft Docs
-ms.custom: ''
+title: 散發者到訂閱者記錄
+description: 描述 SQL Server Management Studio (SSMS) 內 [散發者到訂閱者記錄] 索引標籤中顯示的選項。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 88199fd5a84fbfbc04f4dacf32d5694bb2f9323b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 56ecf351e60237e099b4c498ba56ae1a956d142a
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769448"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321685"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>訂閱，散發者到訂閱者記錄 (交易式訂閱)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68769448"
 ## <a name="options"></a>選項。  
  從 **[檢視]** 功能表中選取要檢視的散發代理程式工作階段，再於 **[散發代理程式的工作階段]** 的方格中選取特定的工作階段。 有關這個工作階段的詳細資訊，會顯示在標示為 **[所選取工作階段中的動作]** 之方格中。 如果選取的工作階段結束時發生錯誤， **[所選取之工作階段的錯誤詳細資料或訊息]** 的文字區域也會顯示。  
   
- **[檢視]**  
+ **檢視**  
  選取要檢視的散發代理程式工作階段。 散發代理程式通常會連續執行，因此可能只有一個工作階段可檢視。  
   
  **狀態**  
@@ -35,7 +36,7 @@ ms.locfileid: "68769448"
   
 -   錯誤  
   
--   已完成  
+-   Completed  
   
 -   正在重試  
   

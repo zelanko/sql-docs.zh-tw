@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 01/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -26,12 +26,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3627e62bafefaa33eee4b238e1e33cd1ea127137
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 5acb6181d1878d7d657c8115f78e293427a037f0
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982151"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952453"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -49,7 +49,7 @@ ms.locfileid: "73982151"
 
 ||||||
 |---|---|---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -122,7 +122,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>引數
 
-*database_name* 此為要修改的資料庫名稱。
+*database_name*：這是要修改的資料庫名稱。
 
 > [!NOTE]
 > 自主資料庫無法使用這個選項。
@@ -149,7 +149,8 @@ COLLATE *collation_name* 指定資料庫的定序。 *collation_name* 可以是 
 
 **\<file_and_filegroup_options>::=** 如需詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
+
 若要移除資料庫，請使用 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)。
 
 若要縮小資料庫大小，請使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。
@@ -272,7 +273,7 @@ GO
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />單一資料庫/彈性集區 \*_** &nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />單一資料庫/彈性集區 \*_** &nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -406,22 +407,22 @@ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB) 指定資料庫的
 |500 MB|√|√|√|√|√|
 |1 GB|√|√|√|√|√|
 |2 GB|√ (D)|√|√|√|√|
-|5 GB|不適用|√|√|√|√|
-|10 GB|不適用|√|√|√|√|
-|20 GB|不適用|√|√|√|√|
-|30 GB|不適用|√|√|√|√|
-|40 GB|不適用|√|√|√|√|
-|50 GB|不適用|√|√|√|√|
-|100 GB|不適用|√|√|√|√|
-|150 GB|不適用|√|√|√|√|
-|200 GB|不適用|√|√|√|√|
-|250 GB|不適用|√ (D)|√ (D)|√|√|
-|300 GB|不適用|√|√|√|√|
-|400 GB|不適用|√|√|√|√|
-|500 GB|不適用|√|√|√ (D)|√|
-|750 GB|不適用|√|√|√|√|
-|1024 GB|不適用|√|√|√|√ (D)|
-|從 1024 GB 至最大 4096 GB (以每 256 GB 的大小遞增)*|不適用|不適用|不適用|不適用|√|
+|5 GB|N/A|√|√|√|√|
+|10 GB|N/A|√|√|√|√|
+|20 GB|N/A|√|√|√|√|
+|30 GB|N/A|√|√|√|√|
+|40 GB|N/A|√|√|√|√|
+|50 GB|N/A|√|√|√|√|
+|100 GB|N/A|√|√|√|√|
+|150 GB|N/A|√|√|√|√|
+|200 GB|N/A|√|√|√|√|
+|250 GB|N/A|√ (D)|√ (D)|√|√|
+|300 GB|N/A|√|√|√|√|
+|400 GB|N/A|√|√|√|√|
+|500 GB|N/A|√|√|√ (D)|√|
+|750 GB|N/A|√|√|√|√|
+|1024 GB|N/A|√|√|√|√ (D)|
+|從 1024 GB 至最大 4096 GB (以每 256 GB 的大小遞增)*|N/A|N/A|N/A|N/A|√|
 
 \* P11 和 P15 允許 MAXSIZE 最大至 4 TB，並以 1024 GB 作為預設大小。 P11 和 P15 最多可使用 4 TB 的隨附儲存體，且不另收費。 在進階層中，大於 1 TB 的 MAXSIZE 目前可用於下列區域：美國東部 2、美國西部、US Gov 維吉尼亞州、西歐、德國中部、東南亞、日本東部、澳大利亞東部、加拿大中部和加拿大東部。 如需 DTU 模型的資源限制的額外詳細資訊，請參閱 [DTU 資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) \(部分機器翻譯\)。
 
@@ -501,7 +502,6 @@ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB) 指定資料庫的
 |:----- | -------: |
 |資料大小上限 (GB)|4096|
 
-
 當使用 vCore 模型時，如果未設定 `MAXSIZE` 值，預設值為 32 GB。 如需有關虛擬核心模型資源限制的其他詳細資訊，請參閱[虛擬核心資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。
 
 以下規則會套用到 MAXSIZE 和 EDITION 引數：
@@ -522,11 +522,9 @@ SERVICE_OBJECTIVE
 
   - 指定效能等級。 服務目標的可用值為：`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_3`、`GP_GEN4_4`、`GP_GEN4_5`、`GP_GEN4_6`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_9`、`GP_GEN4_10`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_3`、`BC_GEN4_4`、`BC_GEN4_5`、`BC_GEN4_6`、`BC_GEN4_7`、`BC_GEN4_8`、`BC_GEN4_9`、`BC_GEN4_10`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_6`、`GP_Gen5_8`、`GP_Gen5_10`、`GP_Gen5_12`、`GP_Gen5_14`、`GP_Gen5_16`、`GP_Gen5_18`、`GP_Gen5_20`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_40`、`GP_Gen5_80`、`GP_Fsv2_72`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_6`、`BC_Gen5_8`、`BC_Gen5_10`、`BC_Gen5_12`、`BC_Gen5_14`、`BC_Gen5_16`、`BC_Gen5_18`、`BC_Gen5_20`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_40`、`BC_Gen5_80`、`BC_M_128`。
 
-
 - **適用於無伺服器資料庫**
 
   - 指定效能等級。 服務目標的可用值為：`GP_S_Gen5_1`、`GP_S_Gen5_2`、`GP_S_Gen5_4`、`GP_S_Gen5_6`、`GP_S_Gen5_8`、`GP_S_Gen5_10`、`GP_S_Gen5_12`、`GP_S_Gen5_14`、`GP_S_Gen5_16`。
-
 
 - **針對超大規模服務層中的單一資料庫**
 
@@ -585,7 +583,7 @@ FORCE_FAILOVER_ALLOW_DATA_LOSS 將異地複寫合作關係中用來執行命令�
 > [!IMPORTANT]
 > 執行 `FORCE_FAILOVER_ALLOW_DATA_LOSS` 命令的使用者必須同時是主要伺服器和次要伺服器上的 `dbmanager` 角色。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 若要移除資料庫，請使用 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)。
 若要縮小資料庫大小，請使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。
@@ -692,7 +690,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />受控執行個體 \*_** &nbsp;|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />受控執行個體 \*_** &nbsp;|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -758,7 +756,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 CURRENT：指定應該改變正在使用中的目前資料庫。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 若要移除資料庫，請使用 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)。
 若要縮小資料庫大小，請使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。
@@ -813,14 +811,14 @@ ALTER DATABASE WideWorldImporters
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL 資料<br />倉儲 \*_** &nbsp;|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>概觀：Azure SQL 資料倉儲
+## <a name="overview-azure-synapse-analytics"></a>概觀：Azure Synapse Analytics
 
-在 Azure 資料倉儲中，'ALTER DATABASE' 可修改資料庫的名稱、大小上限或服務目標。
+在 Azure Synapse 中，'ALTER DATABASE' 會修改資料庫的名稱、大小上限或服務目標。
 
 由於長度的關係，ALTER DATABASE 語法會分成多篇文章。
 
@@ -860,15 +858,15 @@ MODIFY NAME = *new_database_name* 使用指定為 *new_database_name* 的名稱�
 
 MAXSIZE 預設為 245,760 GB (240 TB)。
 
-**適用於：** 針對「計算第 1 代」最佳化
+**適用範圍：** 針對「計算第 1 代」最佳化
 
 資料庫的允許大小上限。 資料庫不可增大超過 MAXSIZE。
 
-**適用於：** 針對「計算第 2 代」最佳化
+**適用範圍：** 針對「計算第 2 代」最佳化
 
 資料庫中資料列存放區資料的允許大小上限。 儲存在資料列存放區資料表的資料、資料行存放區索引的差異存放區，或叢集資料行存放區索引的非叢集索引，不可增大超過 MAXSIZE。 壓縮成資料行存放區格式的資料大小沒有大小限制，因此不受 MAXSIZE 限制。
 
-SERVICE_OBJECTIVE 指定效能等級。 如需適用於 SQL 資料倉儲之服務目標的詳細資訊，請參閱[資料倉儲單位 (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu) \(機器翻譯\)。
+SERVICE_OBJECTIVE 指定效能等級。 如需適用於 Azure Synapse 之服務目標的詳細資訊，請參閱[資料倉儲單位 (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu) \(部分機器翻譯\)。
 
 ## <a name="permissions"></a>權限
 
@@ -883,7 +881,10 @@ SERVICE_OBJECTIVE 指定效能等級。 如需適用於 SQL 資料倉儲之服�
 
 目前資料庫必須是與您變更的資料庫不同的資料庫，因此**必須在連線至 master 資料庫時執行 ALTER**。
 
-SQL 資料倉儲設定為 COMPATIBILITY_LEVEL 130，而且不可變更。 如需詳細資料，請參閱 [Azure SQL Database 中改善的查詢效能與相容性層級 130](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。
+SQL Analytics 中的 COMPATIBILITY_LEVEL 預設已設定為 130 且無法變更。 如需詳細資料，請參閱 [Azure SQL Database 中改善的查詢效能與相容性層級 130](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。
+
+> [!NOTE]
+> COMPATIBILITY_LEVEL 僅適用於已佈建資源 (集區)。
 
 ## <a name="limitations-and-restrictions"></a>限制事項
 
@@ -926,15 +927,15 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 ## <a name="see-also"></a>另請參閱
 
-- [CREATE DATABASE (Azure SQL 資料倉儲)](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
-- [SQL 資料倉儲的參考文章清單](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/)
+- [CREATE DATABASE (Azure Synapse Analytics)](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
+- [Azure Synapse Analytics 參考文章清單](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/) \(部分機器翻譯\)
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;

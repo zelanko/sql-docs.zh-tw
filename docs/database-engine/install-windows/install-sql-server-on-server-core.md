@@ -1,5 +1,5 @@
 ---
-title: 在 Server Core 上安裝 SQL Server 2016 | Microsoft Docs
+title: 在 Server Core 上安裝 SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6054c8a7f7fc4c9c6580d2d84f438d376b4bd61b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991077"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325454"
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安裝 SQL Server
 
@@ -31,13 +31,13 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
   
 |需求|安裝方式|  
 |-----------------|--------------------|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |若是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 以外的所有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本，則安裝程式需要 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile。 如果尚未安裝這個項目，則 SQL Server 安裝程式會自動進行安裝。 安裝需要重新開機。 您可以先安裝 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，再執行安裝程式，以避免重新開機。|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |若是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 以外的所有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 版本，則安裝程式需要 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile。 如果尚未安裝這個項目，則 SQL Server 安裝程式會自動進行安裝。 安裝需要重新開機。 您可以先安裝 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，再執行安裝程式，以避免重新開機。|  
 |Windows Installer 4.5|隨附於 Server Core 安裝。|  
 |Windows PowerShell|隨附於 Server Core 安裝。|  
 |Java Runtime |若要使用 PolyBase，您需要安裝適當的 Java Runtime。 如需詳細資訊，請參閱 [PolyBase 安裝](../../relational-databases/polybase/polybase-installation.md)。|
   
 ##  <a name="BK_SupportedFeatures"></a> 支援的功能  
- 您可以使用下表來尋找 Server Core 安裝上 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所支援的功能。  
+ 您可以使用下表來尋找 Server Core 安裝上 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 所支援的功能。  
   
 |功能|支援|其他資訊|  
 |-------------|---------------|----------------------------|  
@@ -58,25 +58,25 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
 |Distributed Replay Controller|否||  
 |Distributed Replay Client|僅限遠端|不支援在 Server Core 上安裝這些功能。 這些元件可以安裝在與 Server Core 不同的伺服器上，並連接至安裝在 Server Core 上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Services。|  
 |SQL 用戶端連接性 SDK|是||  
-|Microsoft Sync Framework|是|Microsoft Sync Framework 未包含在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝套件中。 您可以從這個 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) 頁面下載適當的 Sync Framework 版本，並將它安裝至執行 Server Core 的電腦上。|  
+|Microsoft Sync Framework|是|Microsoft Sync Framework 未包含在 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 安裝套件中。 您可以從這個 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) 頁面下載適當的 Sync Framework 版本，並將它安裝至執行 Server Core 的電腦上。|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|否||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|否||  
   
 ## <a name="supported-scenarios"></a>支援的案例  
- 下表顯示在 Server Core 上安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的支援案例矩陣。  
+ 下表顯示在 Server Core 上安裝 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 的支援案例矩陣。  
   
 |||  
 |-|-|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|所有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 64 位元版本 |  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|所有 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 64 位元版本 |  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 語言|所有語言|  
 |作業系統語言/地區設定上的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 語言 (組合)|JPN (日文) Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> GER (德文) Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> CHS (簡體中文) Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> ARA (阿拉伯文 (SA)) Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> THA (泰文) Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> TRK (土耳其文) Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> pt-PT (葡萄牙文 - 葡萄牙) Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> ENG (英文) Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Windows 版本|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
   
-## <a name="upgrade"></a>UPGRADE 
+## <a name="upgrade"></a>升級 
  在 Server Core 安裝中，可支援從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 升級至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。  
   
 ## <a name="install"></a>安裝  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不支援在 Server Core 作業系統上使用 [安裝精靈] 進行安裝。 在 Server Core 上安裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援使用 /Q 參數的完整無訊息模式或使用 /QS 參數的簡單無訊息模式。 如需詳細資訊，請參閱 [從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
+ [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 不支援在 Server Core 作業系統上使用 [安裝精靈] 進行安裝。 在 Server Core 上安裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援使用 /Q 參數的完整無訊息模式或使用 /QS 參數的簡單無訊息模式。 如需詳細資訊，請參閱 [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
   
  除非軟體的使用方式受到個別的合約 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 大量授權合約或與 ISV 或 OEM 簽訂的協力廠商合約) 所管制，否則不論安裝方法為何，您都必須確認以個人身分或代表實體接受軟體授權條款。  
   
@@ -89,7 +89,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
   
 ### <a name="feature-parameters"></a>功能參數  
   
-|功能參數|Description|  
+|功能參數|描述|  
 |-----------------------|-----------------|  
 |SQLENGINE|只安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。|  
 |複寫|安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)]時一併安裝複寫元件。|  
@@ -102,7 +102,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
 
  請參閱下列功能參數用法的範例：  
   
-|參數和值|Description|  
+|參數和值|描述|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|只安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。|  
 |/FEATURES=SQLEngine,FullText|安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和全文檢索。|  
@@ -112,7 +112,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
 
   
 ### <a name="installation-options"></a>安裝選項  
- 在 Server Core 作業系統上安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 時，安裝程式支援下列安裝選項：  
+ 在 Server Core 作業系統上安裝 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 時，安裝程式支援下列安裝選項：  
   
 1.  **從命令列安裝**  
   
@@ -186,7 +186,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
   
     -   安裝所有支援的功能  
   
-        下列範例示範如何在 Server Core 上安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援的所有功能：  
+        下列範例示範如何在 Server Core 上安裝 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 支援的所有功能：  
   
         ```  
         ; SQL Server Configuration File  
@@ -259,7 +259,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
          如果 DefaultSetup.ini 檔案不存在，請建立檔案並將其複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來源媒體根層級的 \x86 和 \x64 資料夾中。  
   
 ## <a name="configure-remote-access-of-includessnoversionincludesssnoversion-mdmd-on-server-core"></a>設定 Server Core 上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的遠端存取  
- 您可以執行下面描述的動作，設定在 Server Core 上執行之 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體的遠端存取。  
+ 您可以執行下面描述的動作，設定在 Server Core 上執行之 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 執行個體的遠端存取。  
   
 ### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體上啟用遠端連接  
 
@@ -306,9 +306,9 @@ $Tcp.Alter()
 $Tcp  
 ```  
   
-## <a name="uninstall"></a>Uninstall
+## <a name="uninstall"></a>解除安裝
 
- 在登入執行 Server Core 的電腦之後，即可透過系統管理員命令提示字元使用有限的桌面環境。 您可以使用這個命令提示字元啟動 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的解除安裝。 若要解除安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的執行個體，請在使用 /Q 參數的完整無訊息模式或使用 /QS 參數的簡單無訊息模式中，從命令提示字元啟動解除安裝。 /QS 參數透過 UI 顯示進度，但是不接受任何輸入。 /Q 會在不含任何使用者介面的無訊息模式中執行。  
+ 在登入執行 Server Core 的電腦之後，即可透過系統管理員命令提示字元使用有限的桌面環境。 您可以使用這個命令提示字元啟動 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 的解除安裝。 若要解除安裝 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]的執行個體，請在使用 /Q 參數的完整無訊息模式或使用 /QS 參數的簡單無訊息模式中，從命令提示字元啟動解除安裝。 /QS 參數透過 UI 顯示進度，但是不接受任何輸入。 /Q 會在不含任何使用者介面的無訊息模式中執行。  
   
  解除安裝現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體：  
   

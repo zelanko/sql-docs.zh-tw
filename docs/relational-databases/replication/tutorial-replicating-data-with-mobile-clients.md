@@ -1,6 +1,7 @@
 ---
-title: 教學課程：設定伺服器和行動用戶端之間的複寫 (合併式) | Microsoft Docs
-ms.custom: ''
+title: 教學課程：設定合併式複寫
+description: 此教學課程教您如何設定 SQL Server 和行動用戶端之間的合併式複寫。
+ms.custom: seo-lt-2019
 ms.date: 04/03/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 062e84a5ff0874353a40236ea6ce56c325dfa6ab
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 84a07ef89bc42538a5043a46ed3bcd23bc588caf
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517973"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321849"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>教學課程：設定伺服器和行動用戶端之間的複寫 (合併式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +82,7 @@ ms.locfileid: "72517973"
     ![[發行集類型] 和 [訂閱者類型] 頁面](media/tutorial-replicating-data-with-mobile-clients/mergerpl.png)
   
    
-6. 在 [發行項]  頁面上，展開 [資料表]  節點。 選取下列三個資料表：**Employee**、**SalesOrderHeader** 和 **SalesOrderDetail**。 選取 **[下一步]** 。  
+6. 在 [發行項]  頁面上，展開 [資料表]  節點。 選取下列三個資料表：**Employee**、**SalesOrderHeader** 和 **SalesOrderDetail**。 選取 [下一步]  。  
 
    ![[發行項] 頁面上的 [資料表] 選項](media/tutorial-replicating-data-with-mobile-clients/mergearticles.png)
 
@@ -109,28 +110,28 @@ ms.locfileid: "72517973"
   
 10. 在 [篩選資料表的資料列]  頁面上，依序選取 [Employee (Human Resources)]  、[新增]  和 [Add Join to Extend the Selected Filter] \(新增聯結以展開選取的篩選\)  。  
   
-    A. 在 [新增聯結]  對話方塊中，選取 [聯結的資料表]  下的 [Sales.SalesOrderHeader]  。 選取 [手動寫入聯結陳述式]  並完成聯結陳述式，如下所示：  
+    a. 在 [新增聯結]  對話方塊中，選取 [聯結的資料表]  下的 [Sales.SalesOrderHeader]  。 選取 [手動寫入聯結陳述式]  並完成聯結陳述式，如下所示：  
   
     ```sql  
     ON [Employee].[BusinessEntityID] =  [SalesOrderHeader].[SalesPersonID] 
     ```  
   
-    B. 在 [指定聯結選項]  中，選取 [唯一索引鍵]  ，然後選取 [確定]  。
+    b. 在 [指定聯結選項]  中，選取 [唯一索引鍵]  ，然後選取 [確定]  。
 
     ![將聯結新增至篩選的選項](media/tutorial-replicating-data-with-mobile-clients/mergeaddjoin.png)
 
   
 13. 在 [篩選資料表的資料列]  頁面上，依序選取 [SalesOrderHeader]  、[新增]  和 [Add Join to Extend the Selected Filter] \(新增聯結以展開選取的篩選\)  。  
   
-    A. 在 [加入聯結]  對話方塊中，選取 [聯結的資料表]  之下的 [Sales.SalesOrderDetail]  。    
-    B. 選取 [使用產生器建立陳述式]  。  
+    a. 在 [加入聯結]  對話方塊中，選取 [聯結的資料表]  之下的 [Sales.SalesOrderDetail]  。    
+    b. 選取 [使用產生器建立陳述式]  。  
     c. 在 [預覽]  方塊中確認聯結陳述式，如下所示：  
   
     ```sql  
     ON [SalesOrderHeader].[SalesOrderID] = [SalesOrderDetail].[SalesOrderID] 
     ```  
   
-    d. 在 [指定聯結選項]  中，選取 [唯一索引鍵]  ，然後選取 [確定]  。 選取 **[下一步]** 。 
+    d. 在 [指定聯結選項]  中，選取 [唯一索引鍵]  ，然後選取 [確定]  。 選取 [下一步]  。 
 
     ![為銷售訂單新增另一個聯結的選項](media/tutorial-replicating-data-with-mobile-clients/joinsalestables.png)
   
@@ -138,7 +139,7 @@ ms.locfileid: "72517973"
 
     ![立即建立快照集的選項](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
   
-22. 在 [代理程式安全性]  頁面上，選取 [安全性設定]  。 在 [處理帳戶]  方塊中輸入 <發行者電腦名稱  > **\repl_snapshot**，提供此帳戶的密碼並選取 [確定]  。 選取 **[下一步]** 。  
+22. 在 [代理程式安全性]  頁面上，選取 [安全性設定]  。 在 [處理帳戶]  方塊中輸入 <發行者電腦名稱  > **\repl_snapshot**，提供此帳戶的密碼並選取 [確定]  。 選取 [下一步]  。  
 
     ![設定快照集代理程式安全性的選項](media/tutorial-replicating-data-with-mobile-clients/snapshotagentsecurity.png)
   
@@ -164,14 +165,14 @@ ms.locfileid: "72517973"
   
 2. 在 [本機發行集]  資料夾中，以滑鼠右鍵按一下 **AdvWorksSalesOrdersMerge**，然後選取 [屬性]  。  
   
-   A. 選取 [發行集存取清單]  頁面，然後選取 [新增]  。 
+   a. 選取 [發行集存取清單]  頁面，然後選取 [新增]  。 
   
-   B. 在 [新增發行集存取]  對話方塊中，選取 <發行者電腦名稱  > **\repl_merge**，然後選取 [確定]  。 再次選取 [確定]  。 
+   b. 在 [新增發行集存取]  對話方塊中，選取 <發行者電腦名稱  > **\repl_merge**，然後選取 [確定]  。 再次選取 [確定]  。 
 
    ![新增合併代理程式登入的選項](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
 
   
-如需詳細資訊，請參閱：  
+如需詳細資訊，請參閱  
 - [篩選發行的資料](../../relational-databases/replication/publish/filter-published-data.md) 
 - [參數化資料列篩選](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
 - [定義發行項](../../relational-databases/replication/publish/define-an-article.md)  
@@ -208,7 +209,7 @@ ms.locfileid: "72517973"
 
    ![[合併代理程式安全性] 的選項](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 
-9. 在 [同步處理排程]  頁面上，將 [代理程式排程]  設為 [視需要執行]  。 選取 **[下一步]** 。  
+9. 在 [同步處理排程]  頁面上，將 [代理程式排程]  設為 [視需要執行]  。 選取 [下一步]  。  
 
    ![代理程式的 [視需要執行] 選項](media/tutorial-replicating-data-with-mobile-clients/mergesyncschedule.png)
   
@@ -240,14 +241,14 @@ ms.locfileid: "72517973"
   
 2. 在 [本機發行集]  資料夾中，以滑鼠右鍵按一下 [AdvWorksSalesOrdersMerge]  發行集，然後選取 [屬性]  。  
    
-   A. 選取 [資料分割]  頁面，然後選取 [新增]  。   
-   B. 在 [新增資料分割]  對話方塊的 [HOST_NAME 值]  方塊中，輸入 **adventure-works\pamela0**，然後選取 [確定]  。  
+   a. 選取 [資料分割]  頁面，然後選取 [新增]  。   
+   b. 在 [新增資料分割]  對話方塊的 [HOST_NAME 值]  方塊中，輸入 **adventure-works\pamela0**，然後選取 [確定]  。  
    c. 選取最近新增的資料分割，選取 [立即產生選取的快照集]  ，然後選取 [確定]  。 
 
    ![新增資料分割的選項](media/tutorial-replicating-data-with-mobile-clients/partition.png)
   
   
-如需詳細資訊，請參閱：  
+如需詳細資訊，請參閱  
 - [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)  
 - [建立提取訂閱](../../relational-databases/replication/create-a-pull-subscription.md)  
 - [含參數化篩選之合併式發行集的快照集](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
@@ -276,7 +277,7 @@ ms.locfileid: "72517973"
 2. 在可以使用網路連線來同步處理發行者與訂閱者之間的資料時，重複此程序。
 3. 在其他伺服器上查詢 **SalesOrderHeader** 或 **SalesOrderDetail** 資料表，以檢視複寫的變更。  
   
-如需詳細資訊，請參閱：   
+如需詳細資訊，請參閱   
 - [使用快照集初始化訂閱](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [同步處理資料](../../relational-databases/replication/synchronize-data.md)  
 - [同步處理提取訂閱](../../relational-databases/replication/synchronize-a-pull-subscription.md)  

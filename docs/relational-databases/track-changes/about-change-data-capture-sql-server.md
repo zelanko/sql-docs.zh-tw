@@ -1,10 +1,10 @@
 ---
 title: 關於異動資料擷取
 ms.custom: seo-dt-2019
-ms.date: 01/02/2019
+ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,15 +14,19 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 876de84a811ad7b4eb5bad3260258acc4abd05fc
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 7e360df3a5e29aae987b90c97c0c983af6cd0f8a
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095323"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952462"
 ---
 # <a name="about-change-data-capture-sql-server"></a>關於異動資料擷取 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+
+> [!NOTE]
+> Linux 上的 SQL Server 2017 (從 CU18 開始)，以及 Linux 上的 SQL Server 2019 現已支援 CDC。
+
   異動資料擷取會記錄套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的插入、更新和刪除活動。 這樣會以方便取用的關聯式格式提供變更的詳細資料。 系統會針對修改的資料列擷取資料行資訊以及將變更套用至目標環境所需的中繼資料，並且將它們儲存在鏡像追蹤來源資料表之資料行結構的變更資料表中。 此外，系統會提供資料表值函式，讓取用者以有系統的方式存取異動資料。  
   
  此技術之目標資料取用者的理想範例為擷取、轉換和下載 (ETL) 應用程式。 ETL 應用程式會將變更資料從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來源資料表累加地載入資料倉儲或資料超市。 雖然在資料倉儲內的來源資料表表示法必須反映來源資料表中的變更，但是重新整理來源複本的端對端技術並不適用。 您需要的是結構化變更資料的可靠資料流，讓取用者可以將其套用到不同的資料目標表示法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 異動資料擷取提供這種技術。  
@@ -30,7 +34,7 @@ ms.locfileid: "74095323"
 ## <a name="change-data-capture-data-flow"></a>異動資料擷取資料流程  
  下圖顯示異動資料擷取的主要資料流程。  
   
- ![異動資料擷取資料流程](../../relational-databases/track-changes/media/cdcdataflow.gif "異動資料擷取資料流程")  
+ ![異動資料擷取資料流程](../../relational-databases/track-changes/media/cdcdataflow.gif "|::ref1::|")  
   
  異動資料擷取的變更資料來源是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄。 當插入、更新和刪除作業套用至追蹤來源資料表時，描述這些變更的項目就會加入記錄。 此記錄會當做擷取程序的輸入。 這樣就會讀取記錄並將變更之相關資訊新增至追蹤資料表的相關聯變更資料表。 系統會提供一些函數，以便列舉指定之範圍內出現在變更資料表中的變更，並以篩選結果集的形式傳回此資訊。 應用程式處理序通常會使用篩選結果集，在某些外部環境中更新來源的表示法。  
   

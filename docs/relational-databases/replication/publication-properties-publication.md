@@ -1,6 +1,7 @@
 ---
-title: SQL Server 複寫 [發行集屬性] 對話方塊 | Microsoft Docs
-ms.custom: ''
+title: 發行集屬性 - 對話方塊
+description: 描述 SQL Server Management Studio (SSMS) 內 [發行集屬性] 對話方塊中顯示的頁面。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -21,12 +22,12 @@ ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4edfe83d19a0db5c15c767e5d94cf7de993d1fe8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 0124efa2f34cc0c329376d7e3dc3f83b3d38cf85
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769977"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321346"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>SQL Server 複寫 [發行集屬性] 對話方塊
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "68769977"
  **名稱**  
  發行集的名稱 (唯讀)。  
   
- **[資料庫備份]**  
+ **Database**  
  發行集資料庫的名稱 (唯讀)。  
   
  **說明**  
@@ -59,7 +60,7 @@ ms.locfileid: "68769977"
  如需詳細資訊，請參閱 [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)。  
   
  **相容性層級**  
- 僅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本，而且僅限合併式發行集。 選取與此發行集同步處理之訂閱者所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最低版本。 決定相容性層級的相關規則有數個。  
+ 僅限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本，而且僅限合併式發行集。 選取與此發行集同步處理之訂閱者所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最低版本。 決定相容性層級的相關規則有數個。  
 
 ## <a name="filter-rows"></a>篩選資料列
   **[發行集屬性]** 對話方塊的 **[篩選資料列]** 頁面，可以讓您進行加入、編輯或刪除：  
@@ -83,7 +84,7 @@ ms.locfileid: "68769977"
  **已篩選的資料表**  
  當您在發行集的資料表發行項中加入篩選時，這些篩選就會擴展到窗格中。 含有資料列篩選的資料表，會顯示為窗格中的最上層節點。 若為合併式發行集，則透過聯結篩選而擴充篩選的資料表，就會顯示為子節點。  
   
- **[加入]**  
+ **加入**  
  按一下 **[加入]** 即可啟動一個可讓您篩選資料表發行項的對話方塊。 在快照集或交易式發行集按一下 **[加入]** 會立即啟動對話方塊。 針對合併式發行集按一下 [加入]  會顯示三個選項：[加入篩選]  、[加入聯結以擴充選取的篩選]  ，以及 [自動產生篩選]  。  
   
 -   選取 **[加入篩選]** 即可啟動 **[加入篩選]** 對話方塊。 這個對話方塊可以讓您套用資料列篩選至資料表發行項。 例如，在 **[加入篩選]** 對話方塊中，您可以指定含有客戶資料的資料表在複寫到訂閱者時，只能包含法國客戶的資料。  
@@ -111,7 +112,7 @@ ms.locfileid: "68769977"
   
  在窗格中選取捷徑節點，然後按一下 **[尋找資料表]** ，窗格就會展開並反白該資料表。 如果您按一下 **[尋找資料表]** 但未選取捷徑節點，則會啟動 **[尋找資料表]** 對話方塊。  
   
- **篩選**  
+ **Filter**  
  包含在篩選窗格中選取之篩選的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定義。  
 
 ## <a name="publication-access-list"></a>發行集存取清單
@@ -120,7 +121,7 @@ ms.locfileid: "68769977"
  當訂閱者連接到發行者或散發者並要求存取發行集時，訂閱者的登入會與 PAL 的驗證資訊比較。 如此可以為發行者提供額外的安全性，因為這會防止用戶端工具利用發行者與散發者的登入直接在發行者上進行修改。 如需詳細資訊，請參閱[保護發行者](../../relational-databases/replication/security/secure-the-publisher.md)。  
   
 ### <a name="options"></a>選項。  
- **[加入]**  
+ **加入**  
  加入一個新項目到清單中。 您只能加入在發行者端和散發者端都已經定義的登入、帳戶或群組。 如果您使用網域帳戶或在兩個伺服器上都已經建立本機帳戶，則它們就已同時在兩個伺服器上定義完成。  
   
  **移除**  
@@ -199,7 +200,7 @@ ms.locfileid: "68769977"
  **快照集格式**  
  為快照集格式選取原生模式或字元模式。  
   
--   如果所有的訂閱者都是  的執行個體，而非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 原生快照集格式可以提供最佳的效能。    
+-   如果所有的訂閱者都是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，而非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 的執行個體，請選取 [原生 SQL Server - 所有訂閱者都必須是執行 SQL Server 的伺服器]  。 原生快照集格式可以提供最佳的效能。    
 -   如果有任何訂閱者正在執行 **，或為非** 訂閱者，請選取 [!INCLUDE[ssEW](../../includes/ssew-md.md)] [字元 - 如果發行者或訂閱者沒有執行 SQL Server 則需要][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。    
  **快照集檔案的位置**  
  選取儲存快照集檔案的位置。 這些檔案可以儲存在預設位置；也可以儲存在取代預設位置的替代位置，或除了預設位置以外的替代位置。 儲存在替代位置的檔案可以壓縮。  

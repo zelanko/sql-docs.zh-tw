@@ -1,6 +1,5 @@
 ---
-title: SQL Server 擴充的事件套件 | Microsoft Docs
-ms.custom: ''
+title: SQL Server 擴充事件封裝
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +13,12 @@ ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19797e4f886a28662c9dce5df34fc9c2978b3098
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37c4b2c9972dbd8e236f8a8e64f312a15a3353ac
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009391"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242934"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 擴充事件封裝
 
@@ -81,7 +80,7 @@ ms.locfileid: "68009391"
 |詞彙|定義|  
 |----------|----------------|  
 |管理|管理事件所針對的主要目標是使用者、管理員和支援人員。 在管理通道中找到的事件會指出問題，並列出定義完善的方案，供管理員做為採取動作之依據。 管理事件的一個範例就是應用程式無法連接到印表機。 這些事件不是會完善記載下來，就是有與其相關的訊息來告訴讀者該做什麼事情來修正問題。|  
-|作業|作業事件是用來分析及診斷問題或出現次數， 這些事件可用來觸發以問題或出現次數為根據的工具或工作。 在系統中新增或移除印表機時即為作業事件的一個範例。|  
+|運作|作業事件是用來分析及診斷問題或出現次數， 這些事件可用來觸發以問題或出現次數為根據的工具或工作。 在系統中新增或移除印表機時即為作業事件的一個範例。|  
 |分析|分析事件的發行量很大， 這些事件會描述程式作業，而且通常用於效能調查。|  
 |偵錯|偵錯事件只能由開發人員使用，以便診斷問題進行偵錯。<br /><br /> 偵錯通道中的事件會傳回內部實作特定狀態資料。 事件所傳回的結構描述和資料在 SQL Server 的未來版本中可能會改變或變得無效。 因此，偵錯通道中的事件在 SQL Server 的未來版本中可能會改變或被移除，恕不另行通知。|  
   
@@ -143,7 +142,7 @@ where name = 'keyword_map'
   
 -   event  
   
--   action  
+-   動作  
   
 -   目標  
   
@@ -151,7 +150,7 @@ where name = 'keyword_map'
   
 -   pred_compare  
   
--   型別  
+-   type  
   
  如需詳細資訊，請參閱 [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)。  
   
@@ -220,6 +219,6 @@ where name = 'lock_mode'
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 擴充的事件工作階段](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [SQL Server 擴充的事件引擎](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
+ [SQL Server 擴充的事件目標](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

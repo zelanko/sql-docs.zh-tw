@@ -1,6 +1,7 @@
 ---
-title: 檢查磁碟輸入輸出子系統的 IO 延遲問題 | Microsoft Docs
-ms.custom: ''
+title: 檢查磁碟 IO 子系統的 IO 延遲問題
+description: 了解如何透過檢查事件記錄檔中是否存在錯誤訊息 833 (SQL Server 進行原則式管理)，來啟用原則以檢查磁碟 IO 子系統中是否存在 IO 延遲問題。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23863340-d8e0-48d6-928b-462745885d37
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 269ab9f9028ad1ff4ec4b336e45e9ecbb87bc0f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0cf1dc8196ef8e248da485b01efc4bf192d4248c
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109890"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558167"
 ---
 # <a name="check-disk-input-and-output-subsystem-for-io-delay-problems"></a>檢查磁碟輸入輸出子系統的 IO 延遲問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

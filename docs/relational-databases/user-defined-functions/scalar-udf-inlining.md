@@ -2,7 +2,7 @@
 title: Microsoft SQL 資料庫中的純量 UDF 內嵌 | Microsoft Docs
 description: 純量 UDF 內嵌功能可針對在 SQL Server (從 SQL Server 2019 開始) 及 Azure SQL Database 中叫用純量 UDF 的查詢改善其效能。
 ms.custom: ''
-ms.date: 09/13/2019
+ms.date: 01/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 90aa97c7a5dc2f21007c52ac8ebfc6d100e6d178
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926043"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831773"
 ---
 # <a name="scalar-udf-inlining"></a>純量 UDF 內嵌
 
@@ -154,6 +154,7 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 - UDF 不會參考使用者定義型別。
 - UDF 中沒有新增任何簽章。
 - UDF 不是資料分割函式。
+- UDF 不包含對通用資料表運算式 (CTE) 的參考
 
 <sup>1</sup> 內嵌不支援具有變數累積/彙總的 `SELECT` (例如 `SELECT @val += col1 FROM table1`)。
 
@@ -248,7 +249,7 @@ END
 ```
 
 > [!NOTE]
-> `INLINE` 子句非為強制性。 如果未指定 `INLINE` 子句，它會根據是否可以內嵌 UDF 自動設為 `ON`/`OFF`。 如果指定了 `INLINE = ON`，但發現 UDF 不適合進行內嵌，則會擲回錯誤。
+> `INLINE` 子句非為強制。 如果未指定 `INLINE` 子句，它會根據是否可以內嵌 UDF 自動設為 `ON`/`OFF`。 如果指定了 `INLINE = ON`，但發現 UDF 不適合進行內嵌，則會擲回錯誤。
 
 ## <a name="important-notes"></a>重要事項
 如本文所述，純量 UDF 內嵌會將具有純量 UDF 的查詢轉換成具有對等純量子查詢的查詢。 由於此轉換之故，使用者可能會注意到下列案例中的一些行為差異：

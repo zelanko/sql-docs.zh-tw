@@ -1,7 +1,7 @@
 ---
-title: 從安裝精靈安裝 SQL Server 2016 (安裝程式) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/26/2019
+title: 使用圖形化使用者介面來安裝
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 32f7c238a08a7da31d455421ca9fc00d0f8d6bdb
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.openlocfilehash: c183b1830bc5625171cfbb3372b0dbbb6c99e236
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73962368"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75259033"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server 2016 (安裝程式)
 
@@ -27,7 +27,7 @@ ms.locfileid: "73962368"
 
 本文說明如何使用安裝精靈安裝 SQL Server。 它會套用至 [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] 和 [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]。
 
-本文提供的逐步程序，可讓您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的安裝精靈來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新執行個體。 安裝精靈會提供單一功能樹狀目錄以供安裝所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，所以您不必個別安裝它們。 如需個別安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，請參閱[安裝 SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components)。  
+本文提供的逐步程序，可讓您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的安裝精靈來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新執行個體。 安裝精靈會提供單一功能樹狀目錄以供安裝所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，所以您不必個別安裝它們。 如需個別安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，請參閱[安裝 SQL Server](../../database-engine/install-windows/install-sql-server.md#individual-component-installation)。  
 
 如需其他安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的方式，請參閱：  
 
@@ -83,7 +83,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
 
 1. 如果這是您第一次在電腦上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，安裝程式會略過 [安裝類型]  頁面，直接前往 [特徵選取]  頁面。 如果系統上已經安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以使用 [安裝類型]  頁面，選取執行新安裝，或將功能新增至現有的安裝。 若要繼續，請選取 [下一步]  。
   
-1. 在 [特徵選取]  頁面上，選取要安裝的元件。 例如，若要安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的新執行個體，請選取 [資料庫引擎服務]  。
+1. 在 [特徵選取]  頁面上，選取要安裝的元件。 例如，若要安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]的新執行個體，請選取 [資料庫引擎服務]  。
 
     當您選取功能名稱之後，每一個元件群組的描述就會出現在 [功能描述]  窗格中。 您可以選取核取方塊的任何組合。 如需詳細資訊，請參閱 [SQL Server 2016 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2016.md)或 [SQL Server 2017 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2017.md)。
   
@@ -106,12 +106,12 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
 1. 在 [執行個體設定]  頁面上，請指定要安裝預設執行個體還是具名執行個體。 如需詳細資訊，請參閱[執行個體設定](../../sql-server/install/instance-configuration.md#instance-configuration-page)。  
   
-     * **執行個體識別碼**：根據預設，此執行個體名稱會作為執行個體識別碼使用。 此識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的安裝目錄和登錄機碼。 預設執行個體和具名執行個體有相同的行為。 若是預設執行個體，則執行個體名稱和執行個體識別碼是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請在 [執行個體識別碼]  文字方塊中指定其他值。  
+     * **執行個體識別碼**：根據預設，執行個體名稱會作為執行個體識別碼使用。 此識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的安裝目錄和登錄機碼。 預設執行個體和具名執行個體有相同的行為。 針對預設執行個體，執行個體名稱和執行個體識別碼是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請在 [執行個體識別碼]  文字方塊中指定其他值。  
   
        > [!NOTE]  
        > 一般的 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 獨立執行個體，無論是預設還是具名執行個體，執行個體識別碼都不會使用非預設值。  
   
-       所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的每一個元件。  
+       所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的每一個元件。  
   
      * **已安裝的執行個體**：方格內會顯示正在執行安裝程式電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果預設執行個體已經安裝在電腦上，您就必須安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]的具名執行個體。  
   
@@ -149,7 +149,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
      使用 [資料庫引擎設定 - 資料目錄]  頁面來指定非預設的安裝目錄。 若要安裝到預設目錄，請選取 [下一步]  。  
   
     > [!IMPORTANT]  
-    > 如果您要指定非預設的安裝目錄，請確定安裝資料夾對此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的目錄共用。  
+    > 如果您要指定非預設的安裝目錄，請確定安裝資料夾對於此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的目錄共用。  
   
      如需詳細資訊，請參閱 [[資料庫引擎設定 - 資料目錄] 頁面](../../sql-server/install/instance-configuration.md#datadir)。
 
@@ -175,7 +175,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
     > [!IMPORTANT]  
     > 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，若您為 INSTANCEDIR 和 SQLUSERDBDIR 指定相同的目錄路徑，SQL Server Agent 和全文檢索搜尋會因為遺漏權限而無法啟動。  
     >  
-    > 如果您要指定非預設的安裝目錄，請確定安裝資料夾對此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的目錄共用。  
+    > 如果您要指定非預設的安裝目錄，請確定安裝資料夾對於此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的目錄共用。  
 
     如需詳細資訊，請參閱 [[Analysis Services 設定 - 資料目錄] 頁面](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories-page)。  
 
@@ -249,7 +249,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
 
 1. 如果這是您第一次在電腦上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，安裝程式會略過 [安裝類型]  頁面，直接前往 [特徵選取]  頁面。 如果系統上已經安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以使用 [安裝類型]  頁面，選取執行新安裝，或將功能新增至現有的安裝。 若要繼續，請選取 [下一步]  。
   
-1. 在 [特徵選取]  頁面上，選取要安裝的元件。 例如，若要安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的新執行個體，請選取 [資料庫引擎服務]  。
+1. 在 [特徵選取]  頁面上，選取要安裝的元件。 例如，若要安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]的新執行個體，請選取 [資料庫引擎服務]  。
 
     當您選取功能名稱之後，每一個元件群組的描述就會出現在 [功能描述]  窗格中。 您可以選取核取方塊的任何組合。 如需詳細資訊，請參閱 [SQL Server 2016 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2016.md)或 [SQL Server 2017 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2017.md)。
   
@@ -272,12 +272,12 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
 1. 在 [執行個體設定]  頁面上，請指定要安裝預設執行個體還是具名執行個體。 如需詳細資訊，請參閱[執行個體設定](../../sql-server/install/instance-configuration.md#instance-configuration-page)。  
   
-     * **執行個體識別碼**：根據預設，此執行個體名稱會作為執行個體識別碼使用。 此識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的安裝目錄和登錄機碼。 預設執行個體和具名執行個體有相同的行為。 若是預設執行個體，則執行個體名稱和執行個體識別碼是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請在 [執行個體識別碼]  文字方塊中指定其他值。  
+     * **執行個體識別碼**：根據預設，執行個體名稱會作為執行個體識別碼使用。 此識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的安裝目錄和登錄機碼。 預設執行個體和具名執行個體有相同的行為。 針對預設執行個體，執行個體名稱和執行個體識別碼是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請在 [執行個體識別碼]  文字方塊中指定其他值。  
   
        > [!NOTE]  
        > 一般的 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 獨立執行個體，無論是預設還是具名執行個體，執行個體識別碼都不會使用非預設值。  
   
-       所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的每一個元件。  
+       所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的每一個元件。  
   
      * **已安裝的執行個體**：方格內會顯示正在執行安裝程式電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果預設執行個體已經安裝在電腦上，您就必須安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]的具名執行個體。  
   
@@ -312,7 +312,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
      使用 [資料庫引擎設定 - 資料目錄]  頁面來指定非預設的安裝目錄。 若要安裝到預設目錄，請選取 [下一步]  。  
   
     > [!IMPORTANT]  
-    > 如果您要指定非預設的安裝目錄，請確定安裝資料夾對此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的目錄共用。  
+    > 如果您要指定非預設的安裝目錄，請確定安裝資料夾對於此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的目錄共用。  
   
      如需詳細資訊，請參閱 [[資料庫引擎設定 - 資料目錄] 頁面](../../sql-server/install/instance-configuration.md#datadir)。
 
@@ -351,7 +351,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
     > [!IMPORTANT]  
     > 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，若您為 INSTANCEDIR 和 SQLUSERDBDIR 指定相同的目錄路徑，SQL Server Agent 和全文檢索搜尋會因為遺漏權限而無法啟動。  
     >  
-    > 如果您要指定非預設的安裝目錄，請確定安裝資料夾對此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的目錄共用。  
+    > 如果您要指定非預設的安裝目錄，請確定安裝資料夾對於此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的目錄共用。  
 
     如需詳細資訊，請參閱 [[Analysis Services 設定 - 資料目錄] 頁面](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories-page)。  
 

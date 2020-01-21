@@ -1,6 +1,7 @@
 ---
-title: 將原則式管理 Facet 狀態複製到 XML 檔案 | Microsoft 文件
-ms.custom: ''
+title: 將原則式管理 Facet 狀態複製到 XML 檔案
+description: 描述如何使用 SQL Server Management Studio (SSMS)，將原則式管理 Facet 的狀態複製到 XML 檔案。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7d604ab1-6dd6-4f8e-a79c-eba99ab106fd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c0e3d197f8cb6b7b5bd05ed037fd32e938b5ad4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa0ee70601b11af3341483aff177ef6a7a389ba6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109730"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558186"
 ---
 # <a name="copy-a-policy-based-management-facet-state-to-an-xml-file"></a>將原則式管理 Facet 狀態複製到 XML 檔案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68109730"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  本主題中的程序需要 msdb 資料庫的 PolicyAdministratorRole 角色成員資格。  

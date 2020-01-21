@@ -1,6 +1,7 @@
 ---
-title: 使用 Azure Key Vault 進行 SQL Server TDE 可延伸金鑰管理 - 設定步驟 | Microsoft Docs
-ms.custom: ''
+title: 使用 Azure Key Vault 設定 TDE 可延伸金鑰管理
+description: 安裝及設定適用於 Azure Key Vault 之 SQL Server 連接器的步驟。
+ms.custom: seo-lt-2019
 ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -11,19 +12,19 @@ helpviewer_keywords:
 - SQL Server Connector, setup
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 5d767f8257395368cf3ceeba45b9b9d7cadcfa80
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 1ccffc653225645de94355707ae2116982d2deb4
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929715"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557434"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>使用 Azure Key Vault 進行 SQL Server TDE 可延伸金鑰管理 - 設定步驟
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  下列步驟會逐步解說適用於 Microsoft Azure Key Vault 之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的安裝和設定。  
+  下列步驟會逐步解說適用於 Azure Key Vault 之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的安裝和設定。  
   
 ## <a name="before-you-start"></a>開始之前  
  若要搭配使用 Azure 金鑰保存庫與 SQL Server，有幾個先決條件︰  
@@ -44,7 +45,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
 2016 | [適用於 Visual Studio 2015 的 Visual C++ 可轉散發套件](https://www.microsoft.com/download/details.aspx?id=48145)    
  
   
-## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>第 I 部分：設定 Azure Active Directory 服務主體  
+## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>第一部分：設定 Azure Active Directory 服務主體  
  若要將 SQL Server 存取權限授與 Azure 金鑰保存庫，您需要 Azure Active Directory (AAD) 中的服務主體帳戶。  
   
 1.  移至 [Azure 入口網站](https://ms.portal.azure.com/)，並登入。  
@@ -53,11 +54,11 @@ SQL Server 版本  |可轉散發套件的安裝連結
   
 3.  複製 **用戶端識別碼** 和 **用戶端機密** 以供後面的步驟使用；在其中，它們將用來授與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 對您金鑰保存庫的存取。  
   
- ![EKM 用戶端識別碼](../../../relational-databases/security/encryption/media/ekm-client-id.png "EKM 用戶端識別碼")  
+ ![ekm-client-id](../../../relational-databases/security/encryption/media/ekm-client-id.png "ekm-client-id")  
   
- ![EKM 金鑰識別碼](../../../relational-databases/security/encryption/media/ekm-key-id.png "EKM 金鑰識別碼")  
+ ![ekm-key-id](../../../relational-databases/security/encryption/media/ekm-key-id.png "ekm-key-id")  
   
-## <a name="part-ii-create-a-key-vault-and-key"></a>第 II 部分：建立金鑰保存庫和金鑰  
+## <a name="part-ii-create-a-key-vault-and-key"></a>第二部分：建立金鑰保存庫和金鑰  
  SQL Server Database Engine 將使用此處所建立的金鑰保存庫和金鑰來進行加密金鑰保護。  
   
 > [!IMPORTANT]  
@@ -106,7 +107,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
     > [!NOTE]  
     >  針對 `-Location parameter`，請使用命令 `Get-AzureLocation` 以識別將這個範例中的位置指定至替代位置的方法。 如需詳細資訊，請輸入： `Get-Help Get-AzureLocation`  
   
-3.  **建立金鑰保存庫**  
+3.  **建立 Key Vault**  
   
      `New-AzKeyVault` Cmdlet 需要資源群組名稱、金鑰保存庫名稱和地理位置。 例如，針對名為 `ContosoDevKeyVault`的金鑰保存庫，輸入：  
   
@@ -173,7 +174,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
     
     若要確保快速修復金鑰，並且能夠在 Azure 之外存取資料，我們建議下列最佳作法︰
  
-    1. 在本機 HSM 裝置上，本機建立加密金鑰。 (請確定這是對稱的 RSA 2048 金鑰，以便獲得 SQL Server 支援。)
+    1. 在本機 HSM 裝置上建立加密金鑰。 (請確定這是對稱的 RSA 2048 金鑰，以便獲得 SQL Server 支援。)
     2. 將加密金鑰匯入至 Azure 金鑰保存庫。 請參閱下面步驟以了解如何做到。
     3. 第一次使用 Azure 金鑰保存庫中的金鑰之前，請先備份 Azure 金鑰保存庫金鑰。 深入了解 [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) 命令。
     4. 每當對金鑰進行任何變更時 (例如新增 ACL、新增標籤、新增金鑰屬性)，請務必先另行備份 Azure Key Vault 金鑰。
@@ -213,7 +214,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
     > 強烈建議在生產案例中匯入非對稱金鑰，因為這樣做可讓系統管理員在金鑰委付系統中委付金鑰。 如果非對稱金鑰是在保存庫中建立，由於私密金鑰永遠不會離開保存庫，因此無法委付金鑰。 您應該委付用來保護重要資料的金鑰。 遺失非對稱金鑰會導致資料永久遺失。  
 
     ### <a name="create-a-new-key"></a>建立新的金鑰
-    #### <a name="example"></a>範例  
+    #### <a name="example"></a>範例：  
     或者，您可以直接在 Azure Key Vault 中建立新的加密金鑰，並以軟體或 HSM 保護它。  在此範例中，我們會使用 `Add-AzureKeyVaultKey cmdlet` 建立受軟體保護金鑰：  
 
     ``` powershell  
@@ -246,7 +247,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
 > [!NOTE]  
 > 1\.0.5.0 版中的憑證指紋演算法有重大變更。 您在升級至 1.0.5.0 版之後可能會遇到資料庫還原失敗。 請參閱知識庫文章 [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0)。
   
- ![EKM 連接器安裝](../../../relational-databases/security/encryption/media/ekm-connector-install.png "EKM 連接器安裝")  
+ ![ekm-connector-install](../../../relational-databases/security/encryption/media/ekm-connector-install.png "ekm-connector-install")  
   
  連接器預設會安裝在 C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault。 這個位置可以在安裝期間變更。 (如果變更，請調整下列指令碼)。  
   
@@ -354,7 +355,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  
     CREATION_DISPOSITION = OPEN_EXISTING;  
     ```  
-## <a name="next-step"></a>下一個步驟  
+## <a name="next-step"></a>後續步驟  
   
 現在您已完成基本組態，請參閱如何 [搭配使用 SQL Server 連接器與 SQL 加密功能](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
   

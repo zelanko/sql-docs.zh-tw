@@ -1,6 +1,7 @@
 ---
-title: SQL Server 和資料庫加密金鑰 (Database Engine) | Microsoft Docs
-ms.custom: ''
+title: SQL Server 與資料庫加密金鑰
+description: 了解 SQL Server 資料庫引擎用來加密及保護資料的服務主要金鑰與資料庫主要金鑰。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: vanto
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: b035af17631253ea01e6ca79ba7702a378df1df9
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.openlocfilehash: 1c5e618d1116dfc464bcea781cdab8469e735b32
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74957342"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558103"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 和資料庫加密金鑰 (Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1afd61f86bf6b7f7f93fdbcade77fd3118ff7781
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 35ce03a8619eada5480d0cd656f20946bb11a11c
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517934"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924959"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -184,12 +184,12 @@ ALTER INDEX { index_name | ALL }
   
 |搭配此作業使用關鍵字 ALL|如果資料表有一個或多個下列項目，便告失敗|  
 |----------------------------------------|----------------------------------------|  
-|REBUILD WITH ONLINE = ON|XML 索引<br /><br /> 空間索引<br /><br /> 資料行存放區索引：**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|REBUILD WITH ONLINE = ON|XML 索引<br /><br /> 空間索引<br /><br /> 資料行存放區索引：**適用範圍：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |REBUILD PARTITION = *partition_number*|未分割索引、XML 索引、空間索引或停用的索引|  
 |REORGANIZE|ALLOW_PAGE_LOCKS 設定為 OFF 的索引|  
 |REORGANIZE PARTITION = *partition_number*|未分割索引、XML 索引、空間索引或停用的索引|  
-|IGNORE_DUP_KEY = ON|XML 索引<br /><br /> 空間索引<br /><br /> 資料行存放區索引：**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|ONLINE = ON|XML 索引<br /><br /> 空間索引<br /><br /> 資料行存放區索引：**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|IGNORE_DUP_KEY = ON|XML 索引<br /><br /> 空間索引<br /><br /> 資料行存放區索引：**適用範圍：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|ONLINE = ON|XML 索引<br /><br /> 空間索引<br /><br /> 資料行存放區索引：**適用範圍：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |RESUMABLE = ON| **All** 關鍵字不支援可繼續的索引。 <br /><br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |   
   
 > [!WARNING]
@@ -297,7 +297,7 @@ LOB_COMPACTION = OFF
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
  適用資於料行存放區索引。 
 
- **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ **適用範圍：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 COMPRESS_ALL_ROW_GROUPS 可用來將開啟或關閉的差異資料列群組強制移動到資料行存放區中。 使用此選項時，不需要重建資料行存放區索引來清空差異資料列群組。  此功能和其他移除與合併重組功能結合之後，可讓它在大部分情況下都不再需要重建索引。    
 
@@ -315,7 +315,7 @@ PAD_INDEX = { ON | OFF }
 
  指定索引填補。 預設值為 OFF。  
   
- ON  
+ 開啟  
  FILLFACTOR 指定的可用空間百分比會套用到索引的中繼層級頁面上。 如果 PAD_INDEX 設為 ON 時，並未指定 FILLFACTOR，就會使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)中所儲存的填滿因數值。  
   
  OFF 或未指定 *fillfactor*  
@@ -342,7 +342,7 @@ FILLFACTOR = *fillfactor*
   
  指定是否將排序結果儲存在 **tempdb** 中。 預設值是關閉，但 Azure SQL Database 超大規模資料庫例外。 針對超大規模資料庫中的所有索引重建作業，不論指定的選項為何，除非使用可繼續的索引重建，否則 SORT_IN_TEMPDB 一律會是 ON。  
   
- ON  
+ 開啟  
  用來建置索引的中繼排序結果會儲存在 **tempdb** 中。 如果 **tempdb** 是在使用者資料庫以外的磁碟組中，這可能會縮短建立索引所需要的時間。 不過，這會增加建立索引時所使用的磁碟空間量。  
   
  OFF  
@@ -355,7 +355,7 @@ FILLFACTOR = *fillfactor*
  IGNORE_DUP_KEY **=** { ON | OFF }  
  指定當插入作業嘗試將重複的索引鍵值插入唯一索引時所產生的錯誤回應。 IGNORE_DUP_KEY 選項只適用於在建立或重建索引之後所發生的插入作業。 預設值為 OFF。  
   
- ON  
+ 開啟  
  當重複的索引鍵值插入唯一索引時，就會出現警告訊息。 只有違反唯一性條件約束的資料列才會失敗。  
   
  OFF  
@@ -370,7 +370,7 @@ FILLFACTOR = *fillfactor*
  STATISTICS_NORECOMPUTE **=** { ON | OFF }  
  指定是否要重新計算散發統計資料。 預設值為 OFF。  
   
- ON  
+ 開啟  
  不會自動重新計算過期的統計資料。  
   
  OFF  
@@ -385,7 +385,7 @@ STATISTICS_INCREMENTAL = { ON | **OFF** }
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-若設定為 **ON**，所建立的統計資料會以每個資料分割統計資料為依據。 若設定為 **OFF**，則會卸除統計資料樹狀結構，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會重新計算統計資料。 預設值為 **OFF**。  
+若設定為 **ON**，所建立的統計資料會以每個資料分割統計資料為依據。 若為 **OFF**，則會卸除統計資料樹狀結構，且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會重新計算統計資料。 預設值為 **OFF**。  
   
  如果不支援每個分割區區的統計資料，則會忽略該選項，並產生警告。 針對下列統計資料類型，不支援累加統計資料：  
   
@@ -403,9 +403,9 @@ STATISTICS_INCREMENTAL = { ON | **OFF** }
  如果是 XML 索引或空間索引，則只支援 `ONLINE = OFF`，而如果將 ONLINE 設定為 ON，將會引發錯誤。  
   
 > [!IMPORTANT]
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)和 [SQL Server 2017 版本和支援的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
+> 並非所有版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都可以使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)和 [SQL Server 2017 版本和支援的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
- ON  
+ 開啟  
  索引作業持續期間不會保留長期資料表鎖定。 在索引作業的主要階段期間，來源資料表上只保留意圖共用 (IS) 鎖定。 這使得基礎資料表和索引的查詢或更新能夠繼續運作。 在作業開始時，共用 (S) 鎖定會在來源物件上保留一段很短的時間。 在作業結束時，如果建立非叢集索引，S (共用) 鎖定會在來源上保留一段很短的時間；在線上建立或卸除叢集索引時，以及重建叢集或非叢集索引時，將會取得 SCH-M (結構描述修改) 鎖定。 建立本機暫存資料表的索引時，ONLINE 不可設為 ON。  
   
  OFF  
@@ -433,7 +433,7 @@ RESUMABLE **=** { ON | **OFF**}
 
  OFF 索引作業不是可繼續的作業。
 
-MAX_DURATION **=** *time* [**MINUTES**] 與 **RESUMABLE = ON** (需要 **ONLINE = ON**) 搭配使用。
+MAX_DURATION **=** *time* [**MINUTES**] 與 **RESUMABLE = ON** 搭配使用 (需要 **ONLINE = ON**)。
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
@@ -451,7 +451,7 @@ ALLOW_ROW_LOCKS **=** { **ON** | OFF }
   
  指定是否允許資料列鎖定。 預設值是 ON。  
   
- ON  
+ 開啟  
  當存取索引時，允許資料列鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會決定使用資料列鎖定的時機。  
   
  OFF  
@@ -463,7 +463,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
  指定是否允許頁面鎖定。 預設值是 ON。  
   
- ON  
+ 開啟  
  當您存取索引時，允許頁面鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會決定使用頁面鎖定的時機。  
   
  OFF  
@@ -474,7 +474,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
 
  OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)。
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 指定是否要最佳化最後一頁的插入競爭。 預設值為 OFF。 請參閱 CREATE INDEX 頁面的[循序索引鍵](./create-index-transact-sql.md#sequential-keys)一節以取得詳細資訊。
 
@@ -505,7 +505,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
 COMPRESSION_DELAY **=** { **0** |*持續時間 [分鐘]* }  
 
-**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始)  
+**適用範圍：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始)  
   
  至於磁碟資料表，延遲會指定關閉 狀態下的差異資料列群組，必須在差異資料列群組中至少保留多少分鐘的時間，然後 SQL Server 才能將它壓縮到壓縮的資料列群組。 因為磁碟資料表不會追蹤個別資料列的插入和更新時間，因此 SQL Server 會將這段延遲時間套用於關閉狀態下的差異資料列群組。  
 預設值是 0 分鐘。  
@@ -568,7 +568,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  ONLINE **=** { ON  | **OFF** } \<在套用至 single_partition_rebuild_index_option 時>  
  指定基礎資料表的索引或索引分割區可以在線上重建或離線重建。 如果 **REBUILD** 是在線上執行 (**ON**)，這個資料表中的資料可以在索引作業期間用於查詢和資料修改。  預設值為 **OFF**。  
   
- ON  
+ 開啟  
  索引作業持續期間不會保留長期資料表鎖定。 在索引作業的主要階段期間，來源資料表上只保留意圖共用 (IS) 鎖定。 在索引重建開始時，資料表上需要 S 鎖定，而在線上索引重建結束時，資料表上需要 Sch-M 鎖定。 雖然這兩個鎖定是短暫的中繼資料鎖定，尤其是 Sch-M 鎖定必須等候所有封鎖交易完成。 在等候期間，Sch-M 鎖定會在存取相同資料表時，封鎖等待在這個鎖定之後的所有其他交易。  
   
 > [!NOTE]
@@ -632,7 +632,7 @@ ABORT
 
 中止已宣告為可繼續的執行中或已暫停的索引作業。 您必須明確地執行 **ABORT** 命令，以終止可繼續的索引重建作業。 失敗或暫停可繼續的索引作業不會終止其執行；相反地，它會使作業進入無限期暫停狀態。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 ALTER INDEX 無法用來重新進行索引的分割區，或將它移到另一個檔案群組。 您不能利用這個陳述式來修改索引定義，例如新增或刪除資料行，或變更資料行順序。 請搭配 DROP_EXISTING 子句來使用 CREATE INDEX，以執行這些作業。  
   
 未明確指定選項時，會套用目前的設定。 例如，如果 REBUILD 子句並未指定 FILLFACTOR 設定，在重建過程中，會使用系統目錄中所儲存的填滿因數值。 若要檢視目前的索引選項設定，請使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。  
@@ -775,7 +775,7 @@ ALTER INDEX ALL ON table1 REBUILD;
 ALTER INDEX ALL ON dbo.table1 REBUILD;  
 ```
 
-## <a name="examples-columnstore-indexes"></a>範例:資料行存放區索引  
+## <a name="examples-columnstore-indexes"></a>範例：資料行存放區索引  
  這些範例適用於資料行存放區索引。  
   
 ### <a name="a-reorganize-demo"></a>A. REORGANIZE 示範  
@@ -869,7 +869,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. 將所有開啟和關閉的差異資料列群組壓縮到資料行存放區中  
- **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+ **適用範圍：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) 命令會以壓縮的資料列群組方式，將每個 OPEN 和 CLOSED 的差異資料列群組壓縮到資料行存放區中。 這會清空差異存放區，並將所有資料列強制壓縮到資料行存放區。 這在執行許多插入作業之後特別有用，因為這些作業會將資料列儲存在一或多個差異資料行群組中。  
   
@@ -982,7 +982,7 @@ WITH (DATA_COMPRESSION = COLUMNSTORE);
 GO  
 ```  
   
-## <a name="examples-rowstore-indexes"></a>範例:資料列存放區索引  
+## <a name="examples-rowstore-indexes"></a>範例：資料列存放區索引  
   
 ### <a name="a-rebuilding-an-index"></a>A. 重建索引  
  下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `Employee` 資料表上重建單一索引。  

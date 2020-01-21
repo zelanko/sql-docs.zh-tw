@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5b9f57b15f1a46aefad2387eb63b0d2cb14dbe38
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
+ms.sourcegitcommit: 93012fddda7b778be414f31a50c0f81fe42674f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916025"
+ms.lasthandoff: 12/26/2019
+ms.locfileid: "75493581"
 ---
 # <a name="the-transaction-log-sql-server"></a>交易記錄 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ ms.locfileid: "72916025"
   
  實際上，記錄截斷可能會因為各種原因而延遲。 查詢 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視的 **log_reuse_wait** 和 **log_reuse_wait_desc** 資料行，了解是否有任何原因導致無法進行記錄截斷。 下表描述這些資料行的值。  
   
-|log_reuse_wait 值|log_reuse_wait_desc 值|Description|  
+|log_reuse_wait 值|log_reuse_wait_desc 值|描述|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|目前有一或多個可重複使用的[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|  
 |1|CHECKPOINT|自從上次記錄截斷後尚未出現任何檢查點，或是記錄標頭尚未移到[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 的範圍之外。 (所有復原模式)<br /><br /> 這是延遲記錄截斷的一般原因。 如需詳細資訊，請參閱[資料庫檢查點 &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)。|  
@@ -111,7 +111,7 @@ ms.locfileid: "72916025"
 |3|ACTIVE_BACKUP_OR_RESTORE|正在進行資料備份或還原 (所有復原模式)。<br /><br /> 如果資料備份阻礙截斷記錄，則取消備份作業可能有助於化解眼前的問題。|  
 |4|ACTIVE_TRANSACTION|交易在使用中 (所有復原模式)：<br /><br /> 長時間執行的交易可能存在於記錄備份的開頭。 在此情況下，釋出空間可能需要另一個記錄備份。 請注意，長時間執行的交易會避免所有復原模式下的記錄截斷，包括簡單復原模式，在該模式下，通常會在每一個自動檢查點截斷交易記錄。<br /><br /> 延遲交易。 *「延遲交易」* 實際上是回復遭到封鎖的使用中交易 (因為某些無法使用的資源所造成)。 如需有關延遲交易的原因以及如何將延遲交易移出延遲狀態的詳細資訊，請參閱[延遲交易 &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)。<br /> <br /> 長時間執行的交易可能也會填滿 tempdb 的交易記錄。 內部物件的使用者交易會隱含地使用 tempdb，例如進行排序的工作資料表、進行雜湊處理的工作檔案、資料指標工作資料表，以及資料列版本設定。 即使使用者交易只包括讀取資料 (`SELECT` 查詢)，還是可以在使用者交易下建立和使用內部物件。 因此，可能會填滿 tempdb 交易記錄。|  
 |5|DATABASE_MIRRORING|資料庫鏡像已暫停，或者在高效能模式下，鏡像資料庫已大幅落後主體資料庫。 (僅限完整復原模式)<br /><br /> 如需詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。|  
-|6|REPLICATION|進行異動複寫期間，與發行集相關的交易仍然未傳遞至散發資料庫。 (僅限完整復原模式)<br /><br /> 如需有關異動複寫的詳細資訊，請參閱＜ [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)＞。|  
+|6|複寫|進行異動複寫期間，與發行集相關的交易仍然未傳遞至散發資料庫。 (僅限完整復原模式)<br /><br /> 如需有關異動複寫的詳細資訊，請參閱＜ [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)＞。|  
 |7|DATABASE_SNAPSHOT_CREATION|正在建立資料庫快照集。 (所有復原模式)<br /><br /> 這是延遲記錄截斷的一般原因 (通常也是暫時的原因)。|  
 |8|LOG_SCAN|正在進行記錄掃描。 (所有復原模式)<br /><br /> 這是延遲記錄截斷的一般原因 (通常也是暫時的原因)。|  
 |9|AVAILABILITY_REPLICA|可用性群組的次要複本正在將這個資料庫的交易記錄檔記錄套用到對應的次要資料庫。 (完整復原模式)<br /><br /> 如需詳細資訊，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。|  
@@ -120,9 +120,10 @@ ms.locfileid: "72916025"
 |12|-|僅供內部使用|  
 |13|OLDEST_PAGE|如果將資料庫設定為使用間接檢查點，資料庫中最舊的頁面可能會比檢查點[記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 更舊。 在此情況下，最舊的頁面可能會延遲記錄截斷。 (所有復原模式)<br /><br /> 如需間接檢查點的相關資訊，請參閱 [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)。|  
 |14|OTHER_TRANSIENT|這個值目前尚未使用。|  
+|16|XTP_CHECKPOINT|必須執行記憶體內部 OLTP 檢查點。針對經記憶體最佳化的資料表，當交易記錄檔自上一個檢查點之後變得大於 1.5 GB (同時包含磁碟型和經記憶體最佳化的資料表) 時，就會執行自動檢查點<br /> 如需詳細資訊，請參閱[經記憶體最佳化的資料表的檢查點作業](../../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md)與 [記憶體內部最佳化資料表的記錄和檢查點處理] (https://blogs.msdn.microsoft.com/sqlcat/2016/05/20/logging-and-checkpoint-process-for-memory-optimized-tables-2/)
   
 ##  <a name="MinimallyLogged"></a> 可以進行最低限度記錄的作業  
-「最低限度記錄」 包含僅記錄復原交易所需的資訊，不支援時間點復原。 這個主題將識別在大量記錄 [復原模式](../backup-restore/recovery-models-sql-server.md) 下 (以及簡單復原模式下，但備份正在執行時除外) 會進行最低限度記錄的作業。  
+「最低限度記錄」  包含僅記錄復原交易所需的資訊，不支援時間點復原。 這個主題將識別在大量記錄 [復原模式](../backup-restore/recovery-models-sql-server.md) 下 (以及簡單復原模式下，但備份正在執行時除外) 會進行最低限度記錄的作業。  
   
 > [!NOTE]
 > 記憶體最佳化資料表不支援最低限度記錄。  
@@ -142,7 +143,7 @@ ms.locfileid: "72916025"
   
 -   插入或附加新資料時，在 [UPDATE](../../t-sql/queries/update-transact-sql.md) 陳述式中使用 `.WRITE` 子句，對大數值資料類型執行的部分更新。 請注意，更新現有值時不使用最低限度記錄。 如需有關大數值資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。  
   
--   將新的資料插入或附加至[UPDATETEXT](../../t-sql/queries/writetext-transact-sql.md) 、 [nUPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 和 **UPDATETEXT**, **nUPDATETEXT**, 、 **UPDATETEXT** 陳述式。 請注意，更新現有值時不使用最低限度記錄。  
+-   將新的資料插入或附加至[nUPDATETEXT](../../t-sql/queries/writetext-transact-sql.md) 、 [nUPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 和 **UPDATETEXT**, **nUPDATETEXT**, 、 **UPDATETEXT** 陳述式。 請注意，更新現有值時不使用最低限度記錄。  
   
     > [!WARNING]
     > `WRITETEXT` 與 `UPDATETEXT` 陳述式**已被取代**，所以您應該避免在新的應用程式中加以使用。  

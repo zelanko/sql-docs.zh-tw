@@ -1,6 +1,7 @@
 ---
-title: Oracle 發行者的設計考量與限制 | Microsoft Docs
-ms.custom: ''
+title: 考量與限制 (Oracle 發行者)
+description: 描述使用 Oracle 發行者設定 SQL Server 訂閱者時的設計考量與限制。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a2bf159b42298a2b1fc031383dffe7218f55aabd
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 9b45f787bf590eb3d4b29aa3d02f9ba8a2fd2934
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710930"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321902"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 發行者的設計考量與限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "71710930"
   
 -   功能型索引  
   
--   預設值  
+-   Defaults  
   
 -   檢查條件約束  
   
@@ -143,7 +144,7 @@ ms.locfileid: "71710930"
 -   不支援已發行 Oracle 資料表的結構描述變更。 若要進行結構描述變更，請先卸除發行集，進行變更，然後再重新建立發行集和所有訂閱。  
   
     > [!NOTE]  
-    >  如果在發行資料表未發生任何活動時，執行結構描述的變更以及發行集和訂閱的後續卸除及重新建立，則可為訂閱指定 [僅支援複寫] 選項。 此選項可讓上述操作同步進行，無需將快照集複製到每個「訂閱者」端。 如需詳細資訊，請參閱[不使用快照集初始化交易式訂閱](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)。  
+    >  如果在發行資料表未發生任何活動時，執行結構描述的變更以及發行集和訂閱的後續卸除及重新建立，則可為訂閱指定 [僅支援複寫] 選項。 此選項可讓上述操作同步進行，無需將快照集複製到每個「訂閱者」端。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
   
 ### <a name="replication-security-model"></a>複寫安全性模型  
  Oracle 發行的安全性模型與標準異動複寫的安全性模型相同，但有下列例外狀況：  

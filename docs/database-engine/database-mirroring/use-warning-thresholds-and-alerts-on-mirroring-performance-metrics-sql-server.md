@@ -1,6 +1,7 @@
 ---
-title: 使用鏡像效能標準的警告臨界值與警示 | Microsoft Docs
-ms.custom: ''
+title: 設定資料庫鏡像效能計量的警示
+description: '針對由資料庫鏡像所使用的效能計量設定警告閾值與警示的指導方針。 '
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5e1ff85e22911cf632ef2a2f6bea9fda85f9ece4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad44ae43a33a132fc2b5170a8ff4d3e6b3572ded
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050606"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74820899"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用鏡像效能標準的警告臨界值與警示 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,15 +31,6 @@ ms.locfileid: "68050606"
   
  建立鏡像資料庫的監視作業後，系統管理員就可以設定許多項關鍵效能標準的警告臨界值。 此外，管理員還可以設定這些和其他資料庫鏡像事件的警示。  
   
- **本主題內容：**  
-  
--   [效能標準和警告臨界值](#PerfMetricsAndWarningThresholds)  
-  
--   [設定和管理警告臨界值](#SetUpManageWarningThresholds)  
-  
--   [針對鏡像資料庫使用警示](#UseAlerts)  
-  
--   [相關工作](#RelatedTasks)  
   
 ##  <a name="PerfMetricsAndWarningThresholds"></a> 效能標準和警告臨界值  
  下表將列出可設定警告的效能標準、描述對應的警告臨界值，並列出對應的 [資料庫鏡像監視器] 標籤。  
@@ -67,7 +59,7 @@ ms.locfileid: "68050606"
   
      下列系統預存程序集可讓管理員一次設定並管理一個夥伴之鏡像資料庫的警告臨界值。  
   
-    |程序|Description|  
+    |程序|描述|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)|加入或變更指定之鏡像效能標準的警告臨界值。|  
     |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|傳回有關其中一個或所有關鍵資料庫鏡像監視器效能標準之警告臨界值的資訊。|  

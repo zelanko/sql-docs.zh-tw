@@ -1,6 +1,7 @@
 ---
-title: 散發代理程式安全性 (點對點複寫) | Microsoft Docs
-ms.custom: ''
+title: 散發代理程式安全性 (點對點)
+description: 描述 SQL Server Management Studio 中點對點複寫拓撲的 [散發代理程式安全性] 頁面。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: def6bf26-c640-4caf-ad30-05d1e649541d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1d870649e763cd9baceba45fa80159635558a0bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1329f2b432727731565da796baf021328b9b606
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128376"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321785"
 ---
 # <a name="distribution-agent-security-peer-to-peer-replication"></a>散發代理程式安全性 (點對點複寫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

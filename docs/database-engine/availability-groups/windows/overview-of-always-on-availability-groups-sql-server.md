@@ -1,7 +1,7 @@
 ---
-title: AlwaysOn 可用性群組概觀
+title: 什麼是 Always On 可用性群組？
 description: 設定與管理 Always On 可用性群組的中心概念簡介。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 702b0423e54258f8afe49f5c7a39734d5570f8df
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 994d7f21df09f49329e7547c4330aa95b5745873
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974382"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75236304"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組概觀 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- 此主題介紹在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中設定與管理一個或多個可用性群組的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中心概念。 如需可用性群組所提供的優點摘要以及 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 術語的概觀，請參閱 [AlwaysOn 可用性群組 &#40;SQL Server &#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
+ 此主題介紹在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中設定與管理一個或多個可用性群組的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中心概念。 如需可用性群組所提供的優點摘要以及 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 術語的概觀，請參閱 [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
   
  「可用性群組」  支援一組離散使用者資料庫 (稱為「可用性資料庫」  ) 的複寫環境。 您可以建立可用性群組的高可用性 (HA) 或讀取級別。 HA 可用性群組是一組可一起進行容錯移轉的資料庫。 讀取級別可用性群組是針對唯讀工作負載複製至其他 SQL Server 執行個體的一組資料庫。 可用性群組支援一組主要資料庫，以及一到八組對應的次要資料庫。 次要資料庫「並非」  備份。 請持續定期備份您的資料庫及其交易記錄。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "71974382"
   
      使用此可用性模式的可用性複本就是所謂的「同步認可複本」  。 在同步認可模式下認可交易之前，同步認可主要複本會等候同步認可次要複本確認它已完成強行寫入記錄。 同步認可模式可確定，一旦給定次要資料庫與主要資料庫同步處理之後，認可的交易就會受到完整保護。 這種保護是以增加交易延遲做為代價。  
   
- 如需詳細資訊，請參閱 [可用性模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)中心概念。  
+ 如需詳細資訊，請參閱 [可用性模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。  
   
 ##  <a name="FormsOfFailover"></a> 容錯移轉的類型  
  在主要複本與次要複本之間的工作階段內容中，主要和次要角色在程序中可能可以互換，稱為 *「容錯移轉」* (Failover)。 在容錯移轉期間，目標次要複本會轉換到主要角色，變成新的主要複本。 新的主要複本會將其資料庫變成線上狀態做為主要資料庫，而且用戶端應用程式可以連接至這些資料庫。 當先前的主要複本可以使用時，會轉換到次要角色，變成次要複本。 先前的主要資料庫就會變成次要資料庫，而且資料同步處理會繼續。  
@@ -109,7 +109,7 @@ ms.locfileid: "71974382"
   
 -   在非同步認可模式下，容錯移轉的唯一形式為強制手動容錯移轉 (可能會遺失資料)，通常稱為「強制容錯移轉」  。 強制容錯移轉只能手動起始，因此視為一種手動容錯移轉。 強制容錯移轉是一個災難復原選項。 它是目標次要複本沒有與主要複本同步處理時，唯一可行的容錯移轉形式。  
   
- 如需詳細資訊，請參閱 [容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)中心概念。  
+ 如需詳細資訊，請參閱本主題稍後的 [容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。  
   
 ##  <a name="ClientConnections"></a> 用戶端連接  
  您可以建立可用性群組接聽程式，以便將用戶端連接提供給給定可用性群組的主要複本。 *「可用性群組接聽程式」* (Availability Group Listener) 會將連接至給定可用性群組的一組資源提供給適當可用性複本的直接用戶端連接。  
@@ -130,7 +130,7 @@ ms.locfileid: "71974382"
   
      您可以將任何可用性複本設定為允許對其本機資料庫進行唯讀存取，但不一定支援某些作業。 這會防止對次要複本的讀寫連線嘗試。 您也可以只允許讀寫存取以防止「主要」  複本上的唯讀工作負載。 這會防止對主要複本進行唯讀連線。 如需詳細資訊，請參閱[使用中次要：可讀取的次要複本 &#40;Always On 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
-     若可用性群組目前擁有可用性群組接聽程式及一或多個可讀取的次要複本，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會將讀取意圖的連接要求路由至其中一個複本 (「唯讀路由」  )。 如需詳細資訊，請參閱 [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)中心概念。  
+     若可用性群組目前擁有可用性群組接聽程式及一或多個可讀取的次要複本，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會將讀取意圖的連接要求路由至其中一個複本 (「唯讀路由」  )。 如需詳細資訊，請參閱[可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
   
 ##  <a name="SessionTimeoutPerios"></a> 工作階段逾時期限  
  工作階段逾時期限是可用性複本屬性，它決定在連接關閉之前，與另一個可用性複本的連接保持非使用中的時間。 主要與次要複本會彼此 Ping，表示它們仍在使用中。 在逾時期限內從另一個複本接收到 Ping，表示連接仍為開啟狀態，且伺服器執行個體正在進行通訊。 接收到 Ping 時，可用性複本會重設它在該連接上的工作階段逾時計數器。  

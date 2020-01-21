@@ -1,6 +1,7 @@
 ---
-title: 疑難排解員：尋找 SQL Server 異動複寫的錯誤 | Microsoft Docs
-ms.custom: ''
+title: 尋找具有異動複寫的錯誤
+description: 描述如何找出並識別異動複寫的錯誤，以及解決複寫問題的疑難排解方法。
+ms.custom: seo-lt-2019
 ms.date: 04/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7c9924d2062b3c4fa41c8731df17b49fe9a86b07
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: c8b363be7cd8f160cb7317e6a90d109cc1ad3ccb
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907283"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321935"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>疑難排解員：尋找 SQL Server 異動複寫的錯誤 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "72907283"
 2. 哪個代理程式發生錯誤？
 1. 上次複寫成功執行是什麼時候？ 自那時起有任何變更嗎？  
 
-### <a name="steps-to-take"></a>要採取的步驟
+### <a name="steps-to-take"></a>需採取的步驟
 1. 使用複寫監視器來找出複寫發生錯誤的時間點 (哪個代理程式？)：
    - 如果在**發行者到散發者**區段中發生錯誤，則問題出自記錄讀取器代理程式。 
    - 如果在**散發者到訂閱者**區段中發生錯誤，則問題出自散發代理程式。  
@@ -56,17 +57,17 @@ ms.locfileid: "72907283"
 
 1. 檢視快照集代理程式的狀態：
 
-    A. 在 [物件總管] 中，展開 [複寫]  下的 [本機發行集]  節點。
+    a. 在 [物件總管] 中，展開 [複寫]  下的 [本機發行集]  節點。
 
-    B. 以滑鼠右鍵按一下您的發行集 **AdvWorksProductTrans** > [檢視快照集代理程式的狀態]  。 
+    b. 以滑鼠右鍵按一下您的發行集 **AdvWorksProductTrans** > [檢視快照集代理程式的狀態]  。 
 
     ![捷徑功能表上的 [檢視快照集代理程式的狀態] 命令](media/troubleshooting-tran-repl-errors/view-snapshot-agent-status.png)
 
 1. 如果快照集代理程式狀態回報錯誤，您可在快照集代理程式的作業記錄中找到更多詳細資料：
 
-    A. 展開 [物件總管] 中的 [SQL Server Agent]  ，然後開啟 [作業活動監視器]。 
+    a. 展開 [物件總管] 中的 [SQL Server Agent]  ，然後開啟 [作業活動監視器]。 
 
-    B. 依據 [分類]  排序，並依分類 **REPL-Snapshot** 找出快照集代理程式。
+    b. 依據 [分類]  排序，並依分類 **REPL-Snapshot** 找出快照集代理程式。
 
     c. 以滑鼠右鍵按一下快照集代理程式，然後選取 [檢視記錄]  。 
 
@@ -114,9 +115,9 @@ ms.locfileid: "72907283"
 
 6. 若未正確設定發行者資料庫的擁有者，通常會發生這個錯誤。 還原資料庫時也可能會發生此錯誤。 若要驗證這一點，請：
 
-    A. 在 [物件總管] 中展開 [資料庫]  。
+    a. 在 [物件總管] 中展開 [資料庫]  。
 
-    B. 以滑鼠右鍵按一下 **AdventureWorks2012** > [屬性]  。 
+    b. 以滑鼠右鍵按一下 **AdventureWorks2012** > [屬性]  。 
 
     c. 確認擁有者位在 [檔案]  頁面之下。 如果此方塊為空白，這可能就是問題的原因。 
 
@@ -133,9 +134,9 @@ ms.locfileid: "72907283"
 
 8. 您可能需要重新啟動記錄讀取器代理程式：
 
-    A. 展開 [物件總管] 的 [SQL Server Agent]  節點，然後開啟 [作業活動監視器]。
+    a. 展開 [物件總管] 的 [SQL Server Agent]  節點，然後開啟 [作業活動監視器]。
 
-    B. 依據 [分類]  排序，並依 **REPL-LogReader** 分類找出記錄讀取器代理程式。 
+    b. 依據 [分類]  排序，並依 **REPL-LogReader** 分類找出記錄讀取器代理程式。 
 
     c. 以滑鼠右鍵按一下 [記錄讀取器代理程式]  作業，然後選取 [從下列步驟啟動作業]  。 
 
@@ -163,9 +164,9 @@ ms.locfileid: "72907283"
 
 3. 此錯誤指出散發代理程式正在重試。 若要尋找更多詳細資訊，請檢查散發代理程式作業記錄： 
 
-    A. 展開 [物件總管] 中的 [SQL Server Agent]  > [作業活動監視器]  。 
+    a. 展開 [物件總管] 中的 [SQL Server Agent]  > [作業活動監視器]  。 
     
-    B. 依**分類**排序作業。 
+    b. 依**分類**排序作業。 
 
     c. 依分類 **REPL-Distribution** 找出散發代理程式。 以滑鼠右鍵按一下代理程式，然後選取 [檢視記錄]  。
 
@@ -180,9 +181,9 @@ ms.locfileid: "72907283"
 
 6. 這個錯誤指出散發代理程式所使用的密碼不正確。 若要解決此問題，請：
 
-    A. 展開 [物件總管] 中的 [複寫]  節點。
+    a. 展開 [物件總管] 中的 [複寫]  節點。
     
-    B. 以滑鼠右鍵按一下訂閱 > [屬性]  。
+    b. 以滑鼠右鍵按一下訂閱 > [屬性]  。
     
     c. 選取**代理程式處理帳戶**旁的省略符號 (...) 並修改密碼。
 

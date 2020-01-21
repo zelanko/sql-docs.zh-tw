@@ -1,6 +1,7 @@
 ---
-title: 複寫、變更追蹤和異動資料擷取 - 可用性群組 | Microsoft Docs
-ms.custom: ''
+title: 複寫、變更追蹤、異動資料擷取和可用性群組
+description: 了解與 SQL Server Always On 可用性群組搭配使用時，複寫、變更追蹤和異動資料擷取的互通性。
+ms.custom: seo-lt-2019
 ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2faa46529ea44ce348c382877d39d780cb22572b
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 2e2a794a7e5bdafe4e07b5e7deb9a1007e4a7e73
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251959"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235385"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>複寫、變更追蹤和異動資料擷取 - AlwaysOn 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +142,7 @@ ms.locfileid: "72251959"
   
      雖然在許多情況下用戶端應用程式一定會要連接到目前的主要複本，但這不是利用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的唯一方法。 如果可用性群組設定為支援可讀取的次要複本，則也可以從次要節點收集變更資料。  
   
-     已設定可用性群組時，與 SECONDARY_ROLE 關聯的 ALLOW_CONNECTIONS 屬性會用來指定支援的次要存取類型。 如果設定為 ALL，則會允許次要的所有連線，但只有需要唯讀存取的連線會成功。 如果設定為 READ_ONLY，則需要在建立次要資料庫的連接時指定唯讀意圖，連接才會成功。 如需詳細資訊，請參閱[設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
+     已設定可用性群組時，與 SECONDARY_ROLE 關聯的 ALLOW_CONNECTIONS 屬性會用來指定支援的次要存取類型。 如果設定為 ALL，則會允許次要的所有連線，但只有需要唯讀存取的連線會成功。 如果設定為 READ_ONLY，則需要在建立次要資料庫的連接時指定唯讀意圖，連接才會成功。 如需詳細資訊，請參閱 [設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
   
      您可以使用下列查詢，以判斷是否需要唯讀意圖以連接到可讀取次要複本。  
   
@@ -177,7 +178,7 @@ ms.locfileid: "72251959"
     - 或者從可用性群組的所有次要複本執行個體中移除資料庫，並使用自動或手動植入，將它新增至可用性群組複本執行個體。
   
 ###  <a name="CT"></a> 變更追蹤  
- 啟用變更追蹤 (CT) 的資料庫可以屬於 AlwaysOn 可用性群組的一部分。 不需要進行其他組態設定。 使用 CDC 資料表值函式 (TVF) 存取變更資料表資料的變更追蹤用戶端應用程式，需要在容錯移轉後找出主要複本的功能。 如果用戶端應用程式透過可用性群組接聽程式名稱進行連接，連接要求一律會適當導向至目前的主要複本。  
+ 啟用變更追蹤 (CT) 的資料庫可以屬於 AlwaysOn 可用性群組的一部分。 不需要任何其他設定。 使用 CDC 資料表值函式 (TVF) 存取變更資料表資料的變更追蹤用戶端應用程式，需要在容錯移轉後找出主要複本的功能。 如果用戶端應用程式透過可用性群組接聽程式名稱進行連接，連接要求一律會適當導向至目前的主要複本。  
   
 > [!NOTE]  
 >  變更追蹤資料必須一律從主要複本取得。 嘗試存取次要複本的變更資料會導致下列錯誤：  
@@ -216,7 +217,7 @@ ms.locfileid: "72251959"
   
 ### <a name="considerations"></a>考量  
   
--   散發資料庫不支援搭配 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或資料庫鏡像使用。 複寫組態會結合至設定散發者所在的 SQL Server 執行個體。因此，無法鏡像或複寫散發資料庫。 若要針對散發者提供高可用性，請使用 SQL Server 容錯移轉叢集。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)支援複寫、異動資料擷取 (CDC) 和變更追蹤 (CT)。  
+-   散發資料庫不支援搭配 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或資料庫鏡像使用。 複寫組態會結合至設定散發者所在的 SQL Server 執行個體。因此，無法鏡像或複寫散發資料庫。 若要針對散發者提供高可用性，請使用 SQL Server 容錯移轉叢集。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
 -   雖然支援訂閱者容錯移轉至次要資料庫，不過這是合併式複寫訂閱者的手動程序。 此程序基本上與用來容錯移轉鏡像訂閱者資料庫的方法完全相同。 異動複寫訂閱者不需要特殊處理就能參與 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 訂閱者必須執行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 或更新版本，才能參與可用性群組。  如需詳細資訊，請參閱 [複寫訂閱者及 AlwaysOn 可用性群組 (SQL Server)](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)
   
@@ -231,7 +232,7 @@ ms.locfileid: "72251959"
   
 -   [複寫管理常見問題集](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
- **Change data capture**  
+ **變更資料擷取**  
   
 -   [啟用和停用異動資料擷取 &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)  
   

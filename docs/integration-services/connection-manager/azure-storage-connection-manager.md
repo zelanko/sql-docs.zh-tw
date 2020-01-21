@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8fd8b9b94d809a304e2f9347edba67d5ff7d9b85
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 6d3912e2b5cbf8051348191cf3efb6ed2d20d551
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294456"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687197"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 儲存體連線管理員
 
@@ -64,6 +64,9 @@ Azure 儲存體連線管理員可讓 SQL Server Integration Services (SSIS) 套�
 
 > [!NOTE]
 >  若要在現有套件上設定受控識別驗證，建議您使用[最新的 SSIS 設計工具](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)，重建您的 SSIS 專案至少一次。 將該 SSIS 專案重新部署到您的 Azure-SSIS 整合執行階段，以便將新的連線管理員屬性 `ConnectUsingManagedIdentity` 自動加入至 SSIS 專案中的所有 Azure 儲存體連線管理員。 替代方式是在執行階段直接搭配屬性路徑 **\Package.Connections[{您的連線管理員名稱}].Properties[ConnectUsingManagedIdentity]** 使用屬性覆寫。
+
+## <a name="secure-network-traffic-to-your-storage-account"></a>保護目標為您儲存體帳戶的網路流量
+Azure Data Factory 現在是 Azure 儲存體的[受信任的 Microsoft 服務](https://docs.microsoft.com/azure/storage/common/storage-network-security#trusted-microsoft-services)。 當您使用受控識別驗證時，可以透過[限制對所選網路的存取](https://docs.microsoft.com/azure/storage/common/storage-network-security#change-the-default-network-access-rule)來保護您的儲存體帳戶，同時仍允許您的資料處理站存取您的儲存體帳戶。 如需指示，請參閱[管理例外狀況](https://docs.microsoft.com/azure/storage/common/storage-network-security#managing-exceptions) \(部分機器翻譯\)。
 
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)

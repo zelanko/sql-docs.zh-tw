@@ -1,6 +1,7 @@
 ---
-title: 檢視及修改散發者和發行者屬性 | Microsoft 文件
-ms.custom: ''
+title: 檢視及修改散發者和發行者屬性
+description: 了解如何使用 SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL) 或 Replication Management Objects (RMO) 來修改「散發者」和「發行者」的屬性。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a2d9e5b04164b3e8aab8c8d0a2fa50d154b10345
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5fcc1f21654fedc935a604fac37c7a3ca591b3d5
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769256"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321552"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>檢視及修改散發者和發行者屬性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,9 +48,9 @@ ms.locfileid: "68769256"
   
 ###  <a name="Recommendations"></a> 建議  
   
--   對於執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]之前版本的「發行者」， **sysadmin** 固定伺服器角色中的使用者可在 **[訂閱者]** 頁面上註冊「訂閱者」。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]開始，它不再需要明確註冊複寫的「訂閱者」。  
+-   對於執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前版本的「發行者」，**sysadmin** 固定伺服器角色中的使用者可在 [訂閱者]  頁面上註冊「訂閱者」。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]開始，它不再需要明確註冊複寫的「訂閱者」。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  可能的話，會在執行階段提示使用者輸入安全性認證。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -66,7 +67,7 @@ ms.locfileid: "68769256"
   
     -   若要檢視和修改與「散發者」相關聯的「發行者」屬性，請按一下對話方塊中 **[發行者]** 頁面上「發行者」的屬性按鈕 ( **[...]** )。  
   
-    -   若要存取複寫代理程式的設定檔，請按一下對話方塊中 **[一般]** 頁面上的 **[設定檔預設值]** 按鈕。 如需詳細資訊，請參閱 [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)。  
+    -   若要存取複寫代理程式的設定檔，請按一下對話方塊中 **[一般]** 頁面上的 **[設定檔預設值]** 按鈕。 如需相關資訊，請參閱 [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
     -   若要變更在「發行者」端執行管理預存程序以及在「散發者」端更新資訊時所使用之帳戶的密碼，請在對話方塊中 **[發行者]** 頁面上的 **[密碼]** 和 **[確認密碼]** 方塊內輸入新的密碼。 如需詳細資訊，請參閱[保護散發者](../../relational-databases/replication/security/secure-the-distributor.md)。  
   

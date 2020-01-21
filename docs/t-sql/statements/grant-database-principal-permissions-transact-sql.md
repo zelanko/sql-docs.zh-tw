@@ -1,6 +1,8 @@
 ---
-title: GRANT 資料庫主體權限 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: GRANT 資料庫主體權限
+description: 授與資料庫使用者、資料庫角色或應用程式角色的權限。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 03/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -25,12 +27,12 @@ ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34e027d2b4ff16412031c6b00c0aca5a8078c1ba
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: f67acd0d94ed59a45c8e8d2cbeff0b8cfd9bd68d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982240"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246164"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT 資料庫主體權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -113,7 +115,7 @@ GRANT permission [ ,...n ]
  *Database_user_with_no_login*  
  指定不含對應伺服器層級主體的資料庫使用者。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  您可以在 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 目錄檢視中，看到有關資料庫主體的資訊。 您可以在 [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 目錄檢視中，看到有關資料庫層級權限的資訊。  
   
 ## <a name="database-user-permissions"></a>資料庫使用者權限  

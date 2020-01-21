@@ -1,6 +1,7 @@
 ---
-title: 檢視並修改複寫代理程式命令提示字元參數 | Microsoft 文件
-ms.custom: ''
+title: 檢視與修改代理程式命令提示字元參數
+description: 了解如何在 SQL Server 中，檢視與修改不同複寫代理程式所使用的命令提示字元參數。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 38d86590da144386077b170433c52dcd1cc18d7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c72c58b0a23f8215d303addfbb2ec9fb65c4489
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085914"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321631"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>檢視並修改複寫代理程式命令提示字元參數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,11 +27,11 @@ ms.locfileid: "68085914"
 > [!NOTE]  
 >  代理程式參數變更會在代理程式下次啟動時生效。 如果代理程式連續執行，則必須停止代理程式，然後重新啟動它。  
   
- 雖然可以直接修改參數，但是在更多的情形下透過代理程式設定檔來對其進行修改。 如需詳細資訊，請參閱 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
+ 雖然可以直接修改參數，但是在更多的情形下透過代理程式設定檔來對其進行修改。 如需相關資訊，請參閱 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
  如果您從 **[作業]** 資料夾存取代理程式作業，則使用下表來決定可用於各代理程式的代理程式作業名稱與參數。  
   
-|Agent|作業名稱|如需參數表，請參閱...|  
+|代理程式|作業名稱|如需參數表，請參閱...|  
 |-----------|--------------|------------------------------------|  
 |快照集代理程式|**\<發行者>-\<發行集資料庫>-\<發行集>-\<整數>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
 |合併式發行集分割區的快照集代理程式|**Dyn_\<發行者>-\<發行集資料庫>-\<發行集>-\<GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
@@ -97,6 +98,6 @@ ms.locfileid: "68085914"
 ## <a name="see-also"></a>另請參閱  
  [複寫代理程式管理](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [複寫代理程式可執行檔概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [複寫代理程式概觀](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

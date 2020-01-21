@@ -1,6 +1,7 @@
 ---
-title: 建立伺服器稽核與伺服器稽核規格 | Microsoft Docs
-ms.custom: ''
+title: 建立伺服器稽核與伺服器稽核規格
+description: 了解如何使用 SQL Server Management Studio (SSMS) 或 Transact-SQL (T-SQL) 建立 SQL Server 稽核和伺服器稽核規格。
+ms.custom: seo-lt-2019
 ms.date: 10/16/2019
 ms.prod: sql
 ms.prod_service: security
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b237b2d5511ef1547687289e00b4a695375e3754
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: dff79a428833e365d0ca55b287da6154f66d9966
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517982"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952473"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>建立伺服器稽核與伺服器稽核規格
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "72517982"
   
 -   CREATE SERVER AUDIT 陳述式位於交易的範圍內。 如果回復交易，也會回復此陳述式。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
   
@@ -77,7 +78,7 @@ ms.locfileid: "72517982"
      指定在強制處理稽核動作之前經過的時間長度 (以毫秒為單位)。  值為 0 表示同步傳遞。 預設的最小值為 **1000** (1 秒鐘)。 最大值為 2,147,483,647 (2,147,483.647 秒鐘或是 24 天 20 小時 31 分鐘又 23.647 秒鐘)。  
   
      **於稽核記錄失敗時:**  
-     **Continue**  
+     **繼續**  
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 作業繼續進行。 系統不會保留稽核記錄。 稽核會繼續嘗試記錄事件，而且如果失敗狀況已解決，就會恢復稽核。 選取 **[繼續]** 選項會允許可能違反安全性原則的未稽核活動。 當繼續進行 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 作業比維持完整稽核更重要時，請選取此選項。 這是預設選項。  
   
      **關閉伺服器**  
@@ -153,7 +154,7 @@ ms.locfileid: "72517982"
      **省略符號 (...)**  
      開啟 **[選取物件]** 對話方塊來瀏覽及選取可用的物件 (根據指定的 **[物件名稱]** )。  
   
-3.  完成後，請按一下 **[確定]** 。  
+3.  完成時，請按一下 [確定]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

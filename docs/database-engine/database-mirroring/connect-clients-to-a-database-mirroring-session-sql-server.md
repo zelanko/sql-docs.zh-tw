@@ -1,6 +1,7 @@
 ---
-title: 將用戶端連接至資料庫鏡像工作階段 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 將用戶端連線至資料庫鏡像
+description: 使用 Native Client 或 .NET Framework Provider for SQL Server 設定用戶端連線到資料庫鏡像。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f9916aba4640deab8dcb8764934ddd3d917256e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b43cbcb051a1c6be2d26288a427d7a75e89a7f70
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952002"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258886"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>將用戶端連接至資料庫鏡像工作階段 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "67952002"
   
  下圖說明用戶端連接到名為 **Db_1**之鏡像資料庫的初始夥伴 **Partner_A**。 此圖將顯示用戶端提供的初始夥伴名稱可正確識別目前主體伺服器 **Partner_A**。 初始連線嘗試成功，而且資料存取提供者將鏡像伺服器的名稱 (目前是 **Partner_B**) 當作容錯移轉夥伴名稱儲存在本機快取中。 最後，用戶端連接到 **Db_1** 資料庫的主體複本。  
   
- ![如果初始夥伴為主體則連接用戶端](../../database-engine/database-mirroring/media/dbm-initial-connection.gif "如果初始夥伴為主體則連接用戶端")  
+ ![初始夥伴為主體時的用戶端連線](../../database-engine/database-mirroring/media/dbm-initial-connection.gif "初始夥伴為主體時的用戶端連線")  
   
  例如，初始連接嘗試可能會由於網路錯誤或非使用中的伺服器執行個體而失敗。 由於初始夥伴無法使用，資料存取提供者若嘗試連接到容錯移轉夥伴，則用戶端必須在連接字串中提供容錯移轉夥伴名稱。  
   
@@ -91,7 +92,7 @@ Network=dbnmpntw;
   
  `Server=Partner_A;`  
   
- 中的多個  
+ 或  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -172,9 +173,9 @@ Server=123.34.45.56,4724;
   
  其中 *PreviousRetryTime* 最初是 0。  
   
- 例如，如果使用預設登入逾時期限 15 秒， *LoginTimeout* *= 15*。 在此情況下，前三個重試回合中分配的重試時間如下：  
+ 例如，如果使用預設登入逾時期限 15 秒，*LoginTimeout* *= 15*。 在此情況下，前三個重試回合中分配的重試時間如下：  
   
-|捨入|*RetryTime* 計算|每次嘗試的重試時間|  
+|Round|*RetryTime* 計算|每次嘗試的重試時間|  
 |-----------|-----------------------------|----------------------------|  
 |1|0 **+(** 0.08 **&#42;** 15 **)**|1.2 秒|  
 |2|1.2 **+(** 0.08 **&#42;** 15 **)**|2.4 秒|  

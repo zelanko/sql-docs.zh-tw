@@ -1,6 +1,7 @@
 ---
-title: 發行集資訊，代理程式 (快照式發行集) | Microsoft Docs
-ms.custom: ''
+title: 代理程式 (快照集 - SSMS)
+description: 描述 SQL Server Management Studio (SSMS) 內 [快照集代理程式] 頁面中的 [代理程式] 索引標籤。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 47b334cf08e126308544ec2126c96f7da0bed932
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9dd77881ddcc235966333c95e4a5a18180926f8c
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770019"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321875"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>發行集資訊，代理程式 (快照式發行集)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68770019"
   
 -   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及這些資料行在 [選擇資料行]  對話方塊中的顯示順序。  
   
--   **篩選**：根據 [篩選設定]  對話方塊中的資料行值，篩選方格中的資料列。  
+-   **篩選條件**：根據 [篩選設定]  對話方塊中的資料行值，篩選方格中的資料列。  
   
 -   **清除篩選**：清除方格的所有篩選設定。  
   
@@ -46,7 +47,7 @@ ms.locfileid: "68770019"
   
 -   未執行  
   
--   已完成  
+-   Completed  
   
  **代理程式**  
  快照集代理程式。 這是唯一與快照式發行集相關聯的代理程式。 散發代理程式與這個發行集的訂閱相關聯。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  

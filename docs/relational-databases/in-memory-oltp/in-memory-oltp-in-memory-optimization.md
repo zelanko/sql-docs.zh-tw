@@ -1,7 +1,7 @@
 ---
 title: 記憶體內部 OLTP (記憶體內部最佳化) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 11/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581397e01991ef1fb23b8c4bbfa9de879bc39ac3
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 87ad093d5be6f4fa394e934e6c0d88796a22e196
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494102"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401657"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>記憶體內部 OLTP 與記憶體最佳化
 
@@ -47,7 +47,7 @@ ms.locfileid: "69494102"
 ## <a name="in-this-section"></a>本節內容  
  本節包含下列主題：  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[快速入門 1：可讓 Transact-SQL 擁有更快效能的記憶體內部 OLTP 技術](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|適當探討記憶體內部 OLTP|
 |[概觀和使用案例](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|記憶體內部 OLTP 是什麼，以及有哪些效能案例可看到效能效益的概觀。|
@@ -62,8 +62,8 @@ ms.locfileid: "69494102"
 |[備份、還原及復原記憶體最佳化資料表](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|討論記憶體最佳化資料表的備份、還原及復原。|  
 |[記憶體內部 OLTP 的 Transact-SQL 支援](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)|討論適用於 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]支援。|  
 |[記憶體內部 OLTP 資料庫的高可用性支援](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|討論可用性群組與 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]中的容錯移轉叢集。|  
-|[記憶體內部 OLTP 的 SQL Server 支援](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|列出為支援記憶體最佳化資料表新增和更新的語法和功能。|  
-|[移轉至記憶體內部 OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)|討論如何將以磁碟為基礎的資料表移轉到記憶體最佳化的資料表。|  
+|[記憶體中 OLTP 的 SQL Server 支援](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|列出為支援記憶體最佳化資料表新增和更新的語法和功能。|  
+|[移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)|討論如何將以磁碟為基礎的資料表移轉到記憶體最佳化的資料表。|  
 | &nbsp; | &nbsp; |
 
 ## <a name="links-to-other-websites"></a>其他網站的連結
@@ -78,7 +78,7 @@ ms.locfileid: "69494102"
 
 -   [SQL Server 記憶體內部 OLTP 和資料行存放區功能的比較](https://download.microsoft.com/download/D/0/0/D0075580-6D72-403D-8B4D-C3BD88D58CE4/SQL_Server_2016_In_Memory_OLTP_and_Columnstore_Comparison_White_Paper.pdf)
 
--   SQL Server 2016 中記憶體內部 OLTP 的新功能 [第 1 部分](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/11/12/in-memory-oltp-whats-new-in-sql2016-ctp3/) 和 [第 2 部分](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3/)
+-   SQL Server 2016 中記憶體內部 OLTP 的新功能，[第 1 部分](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/11/12/in-memory-oltp-whats-new-in-sql2016-ctp3/) \(英文\) 和[第 2 部分](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3/) \(英文\)
   
 -   [記憶體內部 OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)  
   
@@ -86,16 +86,16 @@ ms.locfileid: "69494102"
 
 ## <a name="anchorname-17minute-video"></a>17 分鐘的影片，已建立索引
 
-- _影片標題：_ **SQL Server 2016 中的記憶體內部 OLTP**
-- _發佈日期：_ 2019-03-10
-- _影片長度：_ 17:32
-- _主持人：_ SQL Server 資深方案經理 Jos de Bruijn
+- _影片標題：_ &nbsp; **SQL Server 2016 中的記憶體內部 OLTP**
+- _發佈日期：_ &nbsp; 2019-03-10，`YouTube.com` 上。
+- _影片長度：_ &nbsp; 17:32 &nbsp; &nbsp; (請參閱下列[**索引**](#anchorname-index-17minute-video)以取得影片的連結)。
+- _主持人：_ &nbsp; SQL Server 資深方案經理 Jos de Bruijn
 
 ### <a name="demo-can-be-downloaded"></a>您可以下載示範內容
 
-在時間標記 08:09 處，影片會執行示範兩次。 您可以在下列連結下載影片中所使用的可執行效能示範：
+在時間標記 08:09 處，影片會執行示範兩次。 您可以在下列連結下載影片中所使用的可執行效能示範的原始程式碼：
 
-- [記憶體內部 OLTP 效能示範 v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
+- [記憶體內部 OLTP 效能示範 v1.0，原始程式碼](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 
 影片中所見到的一般步驟如下：
 
@@ -103,7 +103,7 @@ ms.locfileid: "69494102"
 2. 接下來我們會看到正在建立資料表記憶體最佳化版本，並在 SQL Server Management Studio (SSMS.exe) 中按幾下以進行填入的過程。
 3. 接著，會使用經記憶體最佳化的資料表再次執行示範。 我們可以測量到速度上的大幅改善。
 
-### <a name="index-to-each-section-in-the-video"></a>編制影片中各區段的索引
+### <a name="anchorname-index-17minute-video"></a>影片中各區段的索引
 
 | 時間標記連結 | 區段標題 |
 | :------------- | :------------ |
@@ -119,13 +119,13 @@ ms.locfileid: "69494102"
 | &nbsp; &nbsp; [07:22](https://www.youtube.com/watch?v=l5l5eophmK4&t=442) | 在 SQL Server 2014 中首次發行，但在 2016 中有了大幅度的改善。 |
 | &nbsp; &nbsp; [07:58](https://www.youtube.com/watch?v=l5l5eophmK4&t=558) | 也在 Azure SQL Database 中提供使用 (雲端)。 |
 | <br/>D.&nbsp;[08:09](https://www.youtube.com/watch?v=l5l5eophmK4&t=489) | <br/>效能示範。<br/> 使用一般資料表執行示範。 |
-| &nbsp; &nbsp; [09:11](https://www.youtube.com/watch?v=l5l5eophmK4&t=551) | SSMS 操作功能表：[報告]  &gt;[交易效能分析]  |
-| &nbsp; &nbsp; [10:38](https://www.youtube.com/watch?v=l5l5eophmK4&t=638) | SSMS 操作功能表：**記憶體最佳化 Advisor**<br/> &nbsp;&nbsp;從一般資料表實際建立記憶體最佳化資料表並移轉資料。 |
+| &nbsp; &nbsp; [09:11](https://www.youtube.com/watch?v=l5l5eophmK4&t=551) | SSMS 操作功能表：**報表** &gt; **交易效能分析** |
+| &nbsp; &nbsp; [10:38](https://www.youtube.com/watch?v=l5l5eophmK4&t=638) | SSMS 操作功能表：**記憶體最佳化 Advisor**<br/> &nbsp; &nbsp; 從一般資料表實際建立經記憶體最佳化的資料表並移轉資料。 |
 | &nbsp; &nbsp; [11:28](https://www.youtube.com/watch?v=l5l5eophmK4&t=688) | 重新執行示範，看到 45 倍的速度改善。 |
 | <br/>E.&nbsp;[12:17](https://www.youtube.com/watch?v=l5l5eophmK4&t=737) | <br/>在 SQL Server 2016 中更易於使用記憶體內部 OLTP (相較於 2014)。 |
 | &nbsp; &nbsp; [12:43](https://www.youtube.com/watch?v=l5l5eophmK4&t=763) | 簡化分析以協助應用程式移轉。 |
 | &nbsp; &nbsp; [13:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=783) | 透過增加 Transact-SQL 語言支援來減少應用程式移轉的複雜度 (例如包含外部索引鍵及觸發程序)。 |
-| &nbsp; &nbsp; [13:56](https://www.youtube.com/watch?v=l5l5eophmK4&t=836) | 改善管理性。<br/> &nbsp;&nbsp; 例如變更結構描述及索引、自動更新統計資料。 |
+| &nbsp; &nbsp; [13:56](https://www.youtube.com/watch?v=l5l5eophmK4&t=836) | 改善管理性。<br/> &nbsp; &nbsp; 例如變更結構描述及索引、自動更新統計資料。 |
 | <br/>F.&nbsp;[14:46](https://www.youtube.com/watch?v=l5l5eophmK4&t=886) | <br/>改善延展性。 |
 | &nbsp; &nbsp; [15:12](https://www.youtube.com/watch?v=l5l5eophmK4&t=912) | 大型記憶體最佳化資料表 (每個資料庫最高可達 2 TB)。 |
 | &nbsp; &nbsp; [15:34](https://www.youtube.com/watch?v=l5l5eophmK4&t=934) | 更佳的縮放。 |

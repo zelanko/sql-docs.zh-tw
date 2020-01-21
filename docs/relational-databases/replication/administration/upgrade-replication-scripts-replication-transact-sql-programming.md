@@ -1,6 +1,7 @@
 ---
-title: 升級複寫指令碼 (複寫 Transact-SQL 程式設計) | Microsoft 文件
-ms.custom: ''
+title: 升級複寫指令碼 (複寫 SP)
+description: 了解如何使用複寫預存程序來升級用於以程式設計方式設定複寫拓撲的指令碼。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,12 +21,12 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7a7104b2ecf2b74b9ad6a2521d7fff9fe09b500f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0d582af912f94fe0e0755340eb4d5ace892e72da
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710366"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320040"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>升級複寫指令碼 (複寫 Transact-SQL 程式設計)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -93,7 +94,7 @@ ms.locfileid: "71710366"
   
     -   如果是提取訂閱，則請更新 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) 的執行，以提供 Windows 認證，在訂閱者端執行的散發代理程式會將該認證用於 `@job_name` 和 `@job_password`。 此項作業會在執行 [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)之後完成。 如需詳細資訊，請參閱 [建立提取訂閱](../../../relational-databases/replication/create-a-pull-subscription.md)。  
   
-    -   如果是發送訂閱，請在發行者端執行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)。 指定 `@subscriber`、`@subscriber_db`、`@publication`，在散發者端執行的散發代理程式用於 `@job_name` 和 `@job_password` 的 Windows 認證，以及此代理程式作業的排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)。 此項作業會在執行 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)之後完成。 如需詳細資訊，請參閱 [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)。  
+    -   如果是發送訂閱，請在發行者端執行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)。 指定 `@subscriber`、`@subscriber_db`、`@publication`，在散發者端執行的散發代理程式用於 `@job_name` 和 `@job_password` 的 Windows 認證，以及此代理程式作業的排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)。 此項作業會在執行 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)之後完成。 如需詳細資訊，請參閱 [建立發送訂閱](../../../relational-databases/replication/create-a-push-subscription.md)。  
   
 ### <a name="to-upgrade-scripts-that-configure-a-merge-publication"></a>若要升級設定合併式發行集的指令碼  
   

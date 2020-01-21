@@ -1,6 +1,7 @@
 ---
-title: 建立及儲存 Always Encrypted 的資料行主要金鑰 |Microsoft Docs
-ms.custom: ''
+title: 建立及儲存 Always Encrypted 的資料行主要金鑰
+description: 了解如何針對 SQL Server Always Encrypted 選取金鑰存放區並建立資料行主要金鑰。
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
@@ -11,12 +12,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a090adbfbaae886ef11e848c1296d1d4e300521a
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 63be7df50b6dd590d0ec90346d27f6601e15cf45
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594430"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557831"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>建立及儲存 Always Encrypted 的資料行主要金鑰
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -220,10 +221,10 @@ Windows 包含下列以軟體為基礎 (不受 HSM 支援 HSM) 的 CSP，它們�
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>讓 CNG 金鑰可供應用程式和使用者使用
 請參閱 HSM 和 CSP 文件，以了解如何在電腦上設定 CSP，以及如何將應用程式和使用者的存取權授與 HSM。
  
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
 - [使用 SQL Server Management Studio 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-ssms.md)
-- [使用 Provision 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-powershell.md)
+- [使用 PowerShell 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-powershell.md)
   
 ## <a name="see-also"></a>另請參閱 
-- [永遠加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [一律加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted 的金鑰管理概觀](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  

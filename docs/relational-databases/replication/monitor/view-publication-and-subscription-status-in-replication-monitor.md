@@ -1,6 +1,7 @@
 ---
-title: 在複寫監視器中檢視發行集和訂閱狀態 | Microsoft 文件
-ms.custom: ''
+title: 檢視發行集與訂閱狀態 (複寫監視器)
+description: 了解如何在 SQL Server Management Studio (SSMS) 中使用複寫監視器來檢視發行集和訂閱狀態。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -22,16 +23,16 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 51dafccba54e66ff9f6ed9d7fd6c7e4159c8ef19
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: bc233524eed394001b0b3fb087d7273c8ead8009
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770545"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322255"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在複寫監視器中檢視發行集和訂閱狀態
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器」會顯示發行集和訂閱的狀態資訊：  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器會顯示發行集和訂閱的狀態資訊：  
   
 -   發行集的狀態是由其訂閱的最高優先權狀態所決定。 例如，如果發行集的某個訂閱發生錯誤，而另一個訂閱發生效能問題，則會針對該發行集顯示錯誤狀態。  
   
@@ -64,11 +65,11 @@ ms.locfileid: "68770545"
 ## <a name="publication-status-values"></a>發行集狀態值  
  下表按優先權順序顯示發行集狀態值及其對應的圖示。  
   
-|[狀態]|圖示|  
+|狀態|圖示|  
 |------------|----------|  
-|錯誤|![UI 圖示︰錯誤](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 圖示︰錯誤")|  
-|效能嚴重不足|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|正在重試失敗的命令|![UI 圖示︰複寫代理程式重試](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI 圖示︰複寫代理程式重試")|  
+|錯誤|![UI 圖示：錯誤](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 圖示：錯誤")|  
+|效能嚴重不足|![UI 圖示：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示：警告")|  
+|正在重試失敗的命令|![UI 圖示：複寫代理程式重試](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI 圖示：複寫代理程式重試")|  
 |[確定]|無|  
   
 ## <a name="subscription-status-values"></a>訂閱狀態值  
@@ -78,39 +79,39 @@ ms.locfileid: "68770545"
   
 ### <a name="transactional-subscriptions"></a>交易式訂閱  
   
-|[狀態]|圖示|  
+|狀態|圖示|  
 |------------|----------|  
-|錯誤|![UI 圖示︰錯誤](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 圖示︰錯誤")|  
-|效能嚴重不足|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|「即將過期/已過期」|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|未初始化的訂閱|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|正在重試失敗的命令|![UI 圖示︰複寫代理程式重試](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI 圖示︰複寫代理程式重試")|  
-|未執行|![UI 圖示︰複寫代理程式已停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI 圖示︰複寫代理程式已停止")|  
-|執行中|![UI 圖示︰複寫代理程式執行中](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI 圖示︰複寫代理程式執行中")|  
+|錯誤|![UI 圖示：錯誤](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 圖示：錯誤")|  
+|效能嚴重不足|![UI 圖示：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示：警告")|  
+|「即將過期/已過期」|![UI 圖示：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示：警告")|  
+|未初始化的訂閱|![UI 圖示：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示：警告")|  
+|正在重試失敗的命令|![UI 圖示：複寫代理程式重試](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI 圖示：複寫代理程式重試")|  
+|未執行|![UI 圖示：複寫代理程式已停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI 圖示：複寫代理程式已停止")|  
+|執行中|![UI 圖示：複寫代理程式執行中](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI 圖示：複寫代理程式執行中")|  
   
 ### <a name="merge-subscriptions"></a>合併訂閱  
   
-|[狀態]|圖示|  
+|狀態|圖示|  
 |------------|----------|  
-|錯誤|![UI 圖示︰錯誤](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 圖示︰錯誤")|  
-|效能嚴重不足|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|長期執行合併|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|「即將過期/已過期」|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|未初始化的訂閱|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|正在重試失敗的命令|![UI 圖示︰複寫代理程式重試](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI 圖示︰複寫代理程式重試")|  
-|正在同步處理|![UI 圖示︰複寫代理程式執行中](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI 圖示︰複寫代理程式執行中")|  
-|未進行同步處理|![UI 圖示︰複寫代理程式已停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI 圖示︰複寫代理程式已停止")|  
+|錯誤|![UI 圖示：錯誤](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 圖示：錯誤")|  
+|效能嚴重不足|![UI 圖示：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示：警告")|  
+|長期執行合併|![UI 圖示：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示：警告")|  
+|「即將過期/已過期」|![UI 圖示：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示：警告")|  
+|未初始化的訂閱|![UI 圖示：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示：警告")|  
+|正在重試失敗的命令|![UI 圖示：複寫代理程式重試](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI 圖示：複寫代理程式重試")|  
+|正在同步處理|![UI 圖示：複寫代理程式執行中](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI 圖示：複寫代理程式執行中")|  
+|未進行同步處理|![UI 圖示：複寫代理程式已停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI 圖示：複寫代理程式已停止")|  
   
 ### <a name="snapshot-subscriptions"></a>快照集訂閱  
   
-|[狀態]|圖示|  
+|狀態|圖示|  
 |------------|----------|  
-|錯誤|![UI 圖示︰錯誤](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 圖示︰錯誤")|  
-|即將過期/已過期|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|未初始化的訂閱|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|正在重試失敗的命令|![UI 圖示︰複寫代理程式重試](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI 圖示︰複寫代理程式重試")|  
-|正在同步處理|![UI 圖示︰複寫代理程式執行中](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI 圖示︰複寫代理程式執行中")|  
-|未進行同步處理|![UI 圖示︰複寫代理程式已停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI 圖示︰複寫代理程式已停止")|  
+|錯誤|![UI 圖示：錯誤](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 圖示：錯誤")|  
+|「即將過期/已過期」|![UI 圖示：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示：警告")|  
+|未初始化的訂閱|![UI 圖示：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示：警告")|  
+|正在重試失敗的命令|![UI 圖示：複寫代理程式重試](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI 圖示：複寫代理程式重試")|  
+|正在同步處理|![UI 圖示：複寫代理程式執行中](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI 圖示：複寫代理程式執行中")|  
+|未進行同步處理|![UI 圖示：複寫代理程式已停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI 圖示：複寫代理程式已停止")|  
   
 ## <a name="see-also"></a>另請參閱  
  [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication.md)  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 58b73e5bd1f82d619f00e50d554d2043196d7884
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: f9ce3042bedd23c5ee173b1df7669a09cce35351
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298542"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831756"
 ---
 # <a name="excel-connection-manager"></a>Excel 連接管理員
 
@@ -68,7 +68,35 @@ ms.locfileid: "71298542"
   
  **第一個資料列有資料行名稱**  
  指定選取之工作表中資料的第一個資料列是否包含資料行名稱。 此選項的預設值是 **[True]** 。  
+
+## <a name="solution-to-import-data-with-mixed-data-types-from-excel"></a>從 Excel 匯入包含混合資料類型資料的解決方案
+
+根據預設，如果您使用的資料包含混合資料類型，Excel 驅動程式會讀取前 8 列 (由 **TypeGuessRows** 登錄機碼設定)。 Excel 驅動程式會嘗試根據前 8 列，猜測每欄的資料類型。 例如，如果您的 Excel 資料來源在一欄中有數字與文字，若前 8 欄包含數字，則驅動程式可能會根據前 8 列，判斷欄中的資料是整數類型。 在此情況下，SSIS 會略過文字值，並將它們作為 NULL 匯入到目的地中。
+
+若要解決此問題，請嘗試下列其中一個解決方案：
+
+* 將 Excel 欄類型變更為 Excel 檔案中的**文字**。
+* 將 IMEX 擴充屬性新增至連接字串，以覆寫驅動程式的預設行為。 當您將 ";IMEX = 1" 擴充屬性加入至連接字串的結尾時，Excel 會將所有資料視為文字。 請參閱下列範例：
+    
+  ```ACE OLEDB connection string:
+  Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\ExcelFileName.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES;IMEX=1";
+  ```
+
+   為了讓此解決方案可靠地運作，您可能還必須修改登錄設定。 main.cmd 檔案如下所示：
   
+   ```cmd
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\12.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\12.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\15.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\16.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   ```
+
+* 以 CSV 格式儲存檔案，並變更 SSIS 套件以支援 CSV 匯入。
+
 ## <a name="related-tasks"></a>相關工作  
 [使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../load-data-to-from-excel-with-ssis.md)  
 [Excel 來源](../data-flow/excel-source.md)  

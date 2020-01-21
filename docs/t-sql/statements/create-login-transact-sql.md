@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2019
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,16 +27,16 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df02e167ae5014564357d42d7cbbf06a5937845a
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: f91edadf5e33c0938a6af0be0244fec7635dd36d
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983197"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952344"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
-建立 SQL Server、SQL Database、SQL 資料倉儲或 Analytics Platform System 資料庫的登入。 按一下下列其中一個索引標籤，以查看特定版本的語法、引數、備註、權限和範例。
+建立適用於 SQL Server、SQL Database、Azure Synapse Analytics，或 Analytics Platform System 資料庫的登入。 按一下下列其中一個索引標籤，以查看特定版本的語法、引數、備註、權限和範例。
 
 CREATE LOGIN 會參與交易。 如果在交易內執行 CREATE LOGIN 並復原交易，將會復原建立登入作業。 如果在交易內執行，則在認可交易之前，無法使用建立的登入。
 
@@ -50,7 +50,7 @@ CREATE LOGIN 會參與交易。 如果在交易內執行 CREATE LOGIN 並復原�
 
 ||||||
 |-|-|-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -101,7 +101,7 @@ MUST_CHANGE 只適用於 SQL Server 登入。 如果有包含這個選項，第�
 
 CREDENTIAL **=** _credential\_name_ 對應到新 SQL Server 登入的認證名稱。 認證必須已存在於伺服器中。 目前這個選項只會將認證連結到登入。 認證無法對應至系統管理員 (sa) 登入。
 
-SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，不適用於 Windows 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 SQL Server 登入 SID：以 GUID 為基礎的 16 位元組 (**binary(16)** ) 常值。 例如， `SID = 0x14585E90117152449347750164BA00A7`。
+SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，不適用於 Windows 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 SQL Server 登入 SID：以 GUID 為基礎的 16 位元組 (**binary(16)** ) 常值。 例如： `SID = 0x14585E90117152449347750164BA00A7` 。
 
 DEFAULT_DATABASE **=** _database_ 指定要指派給登入的預設資料庫。 如果不包括這個選項，預設資料庫將設為 master。
 
@@ -124,7 +124,7 @@ CERTIFICATE *certname* 指定與這項登入建立關聯的憑證名稱。 這�
 
 ASYMMETRIC KEY *asym_key_name* 指定與這項登入建立關聯的非對稱金鑰名稱。 這個金鑰必須已存在於 master 資料庫中。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 - 密碼會區分大小寫。
 - 只有當您建立 SQL Server 登入時，才支援預先雜湊處理密碼。
@@ -258,7 +258,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />單一資料庫/彈性集區 \*_**|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />單一資料庫/彈性集區 \*_**|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -278,15 +278,15 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>引數
 
-*login_name* 指定建立的登入名稱。 Azure SQL Database 單一資料庫/彈性集區只支援 SQL 登入。
+*login_name* 指定建立的登入名稱。 Azure SQL Database 單一資料庫/彈性集區只支援 SQL 登入。 若要為 Azure Active Directory 使用者建立帳戶，請使用 [CREATE USER](create-user-transact-sql.md) 陳述式。
 
 PASSWORD **='** password* *'* 指定要建立的 SQL 登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
 
 密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name*。
 
-SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，不適用於 Windows 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 對於 SQL Database，這通常是由 `0x01060000000000640000000000000000` 再加上代表 GUID 的 16 位元組組成的 32 位元組 (**binary(32)** ) 常值。 例如， `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`。
+SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，不適用於 Windows 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 對於 SQL Database，這通常是由 `0x01060000000000640000000000000000` 再加上代表 GUID 的 16 位元組組成的 32 位元組 (**binary(32)** ) 常值。 例如： `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` 。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 - 密碼會區分大小寫。
 - 如需傳送登入的指令碼，請參閱 [如何在 SQL Server 2005 和 SQL Server 2008 的執行個體之間傳送登入和密碼](https://support.microsoft.com/kb/918992)。
@@ -378,7 +378,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />受控執行個體 \*_**|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />受控執行個體 \*_**|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -408,9 +408,9 @@ PASSWORD **=** '*password*' 指定要建立的 SQL 登入密碼。 請使用增�
 
 密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name*。
 
-SID **=** *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 對於 SQL Database，這通常是由 `0x01060000000000640000000000000000` 再加上代表 GUID 的 16 位元組組成的 32 位元組 (**binary(32)** ) 常值。 例如， `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`。
+SID **=** *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 對於 SQL Database，這通常是由 `0x01060000000000640000000000000000` 再加上代表 GUID 的 16 位元組組成的 32 位元組 (**binary(32)** ) 常值。 例如： `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` 。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 - 密碼會區分大小寫。
 - 已引入新語法，用來建立對應至 Azure AD 帳戶的伺服器層級主體 (**FROM EXTERNAL PROVIDER**)
@@ -434,13 +434,13 @@ SID **=** *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入
 ### <a name="sql-database-managed-instance-logins"></a>SQL Database 受控執行個體登入
 
 - 必須具有伺服器的 **ALTER ANY LOGIN** 權限，或是 `securityadmin` 或 `sysadmin` 固定伺服器角色之一的成員資格。 只有具備伺服器的 **ALTER ANY LOGIN** 權限或其中一個角色成員資格的 Azure Active Directory (Azure AD) 帳戶，才能執行 Create 命令。
-- 如果登入是 SQL 主體，則只有屬於 `sysadmin` 角色成員的登入，才能使用 Create 命令來建立 Azure AD 帳戶的登入。
+- 如果登入是 SQL 主體，只有屬於 `sysadmin` 角色一部分的登入可以使用 create 命令來為 Azure AD 帳戶建立登入。
 - 必須是用於 Azure SQL 受控執行個體之相同目錄中的 Azure AD 成員。
 
 ## <a name="after-creating-a-login"></a>建立登入之後
 
 > [!NOTE]
-> 受控執行個體功能的 Azure AD 系統管理員已在建立後變更。 如需詳細資訊，請參閱 [MI 的新 Azure AD 系統管理員功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
+> 建立完成後的受控執行個體 Azure AD 管理員已變更。 如需詳細資訊，請參閱 [MI 的新 Azure AD 管理員功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
 
 建立登入之後，登入就可以連線至 SQL Database 受控執行個體，但只有授與 **public** 角色的權限。 請考慮執行下列其中一些活動。
 
@@ -453,7 +453,7 @@ SID **=** *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入
 ## <a name="limitations"></a>限制
 
 - 不支援將對應至 Azure AD 群組的 Azure AD 登入設為資料庫擁有者。
-- 支援使用其他 Azure AD 主體來模擬 Azure AD 伺服器層級主體，例如 [EXECUTE AS](execute-as-transact-sql.md) 子句。
+- 支援使用其他 Azure AD 主體模擬 Azure AD 伺服器層級的主體，例如 [EXECUTE AS](execute-as-transact-sql.md) 子句。
 - 只有屬於 `sysadmin` 角色成員的 SQL Server 層級主體 (登入)，才能執行下列目標為 Azure AD 主體的作業：
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
@@ -554,16 +554,16 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL 資料<br />倉儲 \*_**|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_**|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-data-warehouse"></a>Azure SQL 資料倉儲
+## <a name="azure-synapse-analytics"></a>Azure Synapse Analytics
 
 ## <a name="syntax"></a>語法
 
 ```
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 CREATE LOGIN login_name
  { WITH <option_list> }
 
@@ -574,15 +574,15 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>引數
 
-*login_name* 指定建立的登入名稱。 Azure SQL Database 僅支援 SQL 登入。
+*login_name* 指定建立的登入名稱。 Azure Synapse 中的 SQL Analytics 僅支援 SQL 登入。 若要為 Azure Active Directory 使用者建立帳戶，請使用 [CREATE USER](create-user-transact-sql.md) 陳述式。
 
 PASSWORD **='** password* *'* 指定要建立的 SQL 登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
 
 密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name*。
 
- SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，不適用於 Windows 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 對於 SQL 資料倉儲，這通常是由 `0x01060000000000640000000000000000` 再加上代表 GUID 的 16 位元組組成的 32 位元組 (**binary(32)** ) 常值。 例如， `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`。
+ SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，不適用於 Windows 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 針對 SQL Analytics，這是由 `0x01060000000000640000000000000000` 加上代表 GUID 的 16 位元組組成的 32 位元組 (**binary(32)** ) 常值。 例如： `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` 。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 - 密碼會區分大小寫。
 - 如需傳送登入的指令碼，請參閱 [如何在 SQL Server 2005 和 SQL Server 2008 的執行個體之間傳送登入和密碼](https://support.microsoft.com/kb/918992)。
@@ -594,15 +594,15 @@ PASSWORD **='** password* *'* 指定要建立的 SQL 登入密碼。 請使用�
 
 **CREATE LOGIN** 陳述式必須是批次中唯一的陳述式。
 
-在連線至 SQL 資料倉儲的一些方法中 (例如 **sqlcmd**)，您必須使用 *\<login>* @ *\<server>* 標記法，將 SQL 資料倉儲伺服器名稱附加至連接字串中的登入名稱。 例如，如果您的登入為 `login1`，且 SQL 資料倉儲伺服器的完整名稱為 `servername.database.windows.net`，則連接字串的 *username* 參數應該是 `login1@servername`。 由於 *username* 參數的總長度為 128 個字元，因此 *login_name* 的限制為 127 個字元減去伺服器名稱的長度。 在此範例中，`login_name` 的長度只能是 117 個字元，因為 `servername` 為 10 個字元。
+使用如 **sqlcmd** 之類的工具來連線至 Azure Synapse 時，您必須使用 *\<login>* @ *\<server>* 標記法，將 SQL Analytics 伺服器名稱附加至連接字串中的登入名稱。 例如，如果您的登入為 `login1`，且 SQL Analytics 伺服器的完整名稱為 `servername.database.windows.net`，則連接字串的 *username* 參數應該是 `login1@servername`。 由於 *username* 參數的總長度為 128 個字元，因此 *login_name* 的限制為 127 個字元減去伺服器名稱的長度。 在此範例中，`login_name` 的長度只能是 117 個字元，因為 `servername` 為 10 個字元。
 
-在 SQL 資料倉儲中，您必須連線至 master 資料庫以建立登入。
+若要建立登入，您必須連接至 master 資料庫。
 
 SQL Server 規則可讓您建立 \<loginname>@\<servername> 格式的 SQL Server 驗證登入。 如果您的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器是 **myazureserver**，而您的登入是 **myemail@live.com** ，則必須以 **myemail@live.com@myazureserver** 提供登入。
 
-在 SQL 資料倉儲中，驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
+驗證連線所需的登入資料，以及伺服器層級防火牆規則，會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
-如需 SQL 資料倉儲登入的詳細資訊，請參閱[控制及授與 SQL Database 和 SQL 資料倉儲的資料庫存取權](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins) \(部分機器翻譯\)。
+如需登入的詳細資訊，請參閱[管理資料庫和登入](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins) \(部分機器翻譯\)。
 
 ## <a name="permissions"></a>權限
 
@@ -610,7 +610,7 @@ SQL Server 規則可讓您建立 \<loginname>@\<servername> 格式的 SQL Server
 
 ## <a name="after-creating-a-login"></a>建立登入之後
 
-建立登入之後，登入就可以連線至 SQL 資料倉儲，但是只會取得 **public** 角色的權限。 請考慮執行下列其中一些活動。
+建立登入之後，登入就可以連線至 Azure Synapse，但是只會取得授與 **public** 角色的權限。 請考慮執行下列其中一些活動。
 
 - 若要連接至資料庫，請建立用於登入的資料庫使用者。 如需詳細資訊，請參閱 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)。
 - 若要將權限授與資料庫中的使用者，請使用 **ALTER SERVER ROLE** ...**ADD MEMBER** 陳述式可將使用者新增至其中一個內建的資料庫角色或自訂角色，或直接使用 [GRANT](grant-transact-sql.md) 陳述式將權限授與使用者。 如需詳細資訊，請參閱[非管理員角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) \(機器翻譯\)、[其他伺服器層級的系統管理角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles) \(機器翻譯\)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 和 [GRANT](grant-transact-sql.md) 陳述式。
@@ -668,7 +668,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
 
 &nbsp;
 
@@ -712,7 +712,7 @@ CHECK_POLICY **=** { **ON** | OFF } 僅適用於 SQL Server 登入。 指定應�
 
 WINDOWS 指定將登入對應到 Windows 登入。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 - 密碼會區分大小寫。
 - 如果指定 MUST_CHANGE，則 CHECK_EXPIRATION 和 CHECK_POLICY 必須設為 ON。 否則，陳述式便會失敗。
@@ -732,7 +732,7 @@ WINDOWS 指定將登入對應到 Windows 登入。
 
 ## <a name="after-creating-a-login"></a>建立登入之後
 
-建立登入之後，登入就可以連線至 SQL 資料倉儲，但是只會取得 **public** 角色的權限。 請考慮執行下列其中一些活動。
+建立登入之後，登入就可以連線至 Azure Synapse Analytics，但是只會取得授與 **public** 角色的權限。 請考慮執行下列其中一些活動。
 
 - 若要連接至資料庫，請建立用於登入的資料庫使用者。 如需詳細資訊，請參閱 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)。
 - 使用 [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md) 建立使用者定義的伺服器角色。 使用 **ALTER SERVER ROLE** ...使用 **ADD MEMBER** 將新登入加入至使用者定義的伺服器角色中。 如需詳細資訊，請參閱 [CREATE SERVER ROL](../../t-sql/statements/create-server-role-transact-sql.md) 和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。

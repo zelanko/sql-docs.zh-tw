@@ -1,7 +1,7 @@
 ---
 title: 適用於 Integration Services (SSIS) 的 Azure Feature Pack | Microsoft Docs
 ms.custom: ''
-ms.date: 08/17/2019
+ms.date: 12/24/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e6531e05a3f800bbd4c1563c53c4b4d18eb0eea
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 563f984ed5aa401ae67572ad0f915698286f0aa4
+ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659581"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "75329950"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack for Integration Services (SSIS)
 
@@ -100,8 +100,8 @@ Azure Feature Pack 所使用的 TLS 版本遵循系統 .NET Framework 設定。
 
 ## <a name="dependency-on-java"></a>Java 的相依性
 
-需要 Java 才能搭配 Azure Data Lake Store/一般檔案連結器使用 ORC/Parquet 檔案格式。  
-JAVA 組建架構 (32/64 位元) 應該符合所要使用的 SSIS 執行階段架構。
+需要 Java 才能搭配 Azure Data Lake Store/彈性檔案連接器使用 ORC/Parquet 檔案格式。  
+Java 組建架構 (32/64 位元) 應該符合要使用的 SSIS 執行階段架構。
 下列 JAVA 組建已經過測試。
 
 - [Zulu 的 OpenJDK 8u192](https://www.azul.com/downloads/zulu/zulu-windows/)
@@ -119,6 +119,13 @@ JAVA 組建架構 (32/64 位元) 應該符合所要使用的 SSIS 執行階段�
 7. 選取 [確定]  以關閉 [新增系統變數]  對話方塊。
 8. 選取 [確定]  以關閉 [環境變數]  對話方塊。
 9. 選取 [確定]  以關閉 [系統內容]  對話方塊。
+
+> [!TIP]
+> 如果您使用 Parquet 格式並遇到錯誤，指出「叫用 Java 時發生錯誤，訊息:**java.lang.OutOfMemoryError:Java heap space**」，您可以新增環境變數 *`_JAVA_OPTIONS`* ，以調整 JVM 的最小/最大堆積大小。
+>
+>![JVM 堆積](media/azure-feature-pack-jvm-heap-size.png)
+>
+> 範例：將變數 *`_JAVA_OPTIONS`* 的值設定為 *`-Xms256m -Xmx16g`* 。 旗標 Xms 指定 Java 虛擬機器 (JVM) 的初始記憶體配置集區，而 Xmx 指定記憶體配置集區的最大值。 這表示 JVM 啟動時有 *`Xms`* 數量的記憶體，且最多可以使用 *`Xmx`* 數量的記憶體。 預設值為最小 64MB 和最大 1G。
 
 ### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>在 Azure-SSIS Integration Runtime 上設定 Zulu 的 OpenJDK
 
@@ -139,6 +146,13 @@ zulu8.33.0.1-jdk8.0.192-win_x64.zip
 ~~~
 powershell.exe -file install_openjdk.ps1
 ~~~
+
+> [!TIP]
+> 如果您使用 Parquet 格式並遇到錯誤，指出「叫用 Java 時發生錯誤，訊息:**java.lang.OutOfMemoryError:Java heap space**」，您可以在 *`main.cmd`* 中新增命令，以調整 JVM 的最小/最大堆積大小。 範例：
+> ~~~
+> setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
+> ~~~
+> 旗標 Xms 指定 Java 虛擬機器 (JVM) 的初始記憶體配置集區，而 Xmx 指定記憶體配置集區的最大值。 這表示 JVM 啟動時有 *`Xms`* 數量的記憶體，且最多可以使用 *`Xmx`* 數量的記憶體。 預設值為最小 64MB 和最大 1G。
 
 **install_openjdk.ps1**
 

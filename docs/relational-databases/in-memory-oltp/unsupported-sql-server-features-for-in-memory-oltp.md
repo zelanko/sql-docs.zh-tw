@@ -1,5 +1,5 @@
 ---
-title: 記憶體內部 OLTP 不支援的 SQL Server 功能 | Microsoft Docs
+title: 不支援的功能 - 記憶體內部 OLTP
 ms.custom: ''
 ms.date: 05/29/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 720b10e5f4cd7c7ba5676f9dddc2f64e632d64cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7427f7ccc70db68d1403cc1a92c7d7dafef82f5c
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912137"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412509"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>記憶體內部 OLTP 不支援的 SQL Server 功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "67912137"
 有一些例外狀況，不支援跨資料庫的交易。 下表描述支援的案例和對應的限制。 (另請參閱 [跨資料庫查詢](../../relational-databases/in-memory-oltp/cross-database-queries.md))。  
 
 
-|資料庫|Allowed|Description|  
+|資料庫|允許|描述|  
 |---------------|-------------|-----------------|  
 | 使用者資料庫、**model** 及 **msdb**。 | 否 | 在大部分情況下，「不」  支援跨資料庫的查詢及交易。<br /><br />任一查詢如使用了經記憶體最佳化的資料表或者原生編譯的預存程序，該查詢即無法存取其他資料庫。 這項限制適用於交易及查詢。<br /><br />系統資料庫 **tempdb** 及 **master** 則是例外。 在這裡，**master** 資料庫可供唯讀存取。 |
 | **Resource** 資料庫、**tempdb** | 是 | 在接觸記憶體內部 OLTP 物件的交易中，可以無限制地使用 **Resource** 及 **tempdb** 系統資料庫。
@@ -63,7 +63,7 @@ ms.locfileid: "67912137"
   
 - 存取記憶體最佳化資料表之查詢上的索引鍵集與動態資料指標。 這些資料指標會降級為靜態，且為唯讀。  
   
-- 不支援使用 **MERGE INTO** _target_ (其中 *target* 是經記憶體最佳化的資料表)。
+- 不支援使用 **MERGE INTO**_target_ (其中 *target* 是經記憶體最佳化的資料表)。
     - 經記憶體最佳化的資料表支援 **MERGE USING** _source_。  
   
 - 不支援 ROWVERSION (TIMESTAMP) 資料類型。 如需詳細資訊，請參閱 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)。

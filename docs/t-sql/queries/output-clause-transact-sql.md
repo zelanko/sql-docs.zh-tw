@@ -1,7 +1,7 @@
 ---
 title: OUTPUT 子句 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 01/14/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 13afbab4c154b39fe7762d39c0d431ce17848213
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2122954c2ce126441eba6d5d05db69e9a8bfa30e
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901876"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952442"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ DELETE Sales.ShoppingCartItem
  $action  
  僅適用於 MERGE 陳述式。 在 MERGE 陳述式的 OUTPUT 子句中指定類型為 **navchar(10)** 的資料行，傳回每個資料列下列三個值中的其中一個：'INSERT'、'UPDATE' 或 'DELETE'，根據在該資料列執行的動作而定。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  您可以在單一 INSERT、UPDATE、DELETE 或 MERGE 陳述式中，定義 OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } 子句。  
   
 > [!NOTE]  
@@ -225,7 +225,7 @@ DELETE Sales.ShoppingCartItem
   
  如果設定了 sp_configure 選項 disallow results from triggers，當從觸發程序內叫用不含 INTO 子句的 OUTPUT 子句時，它會使陳述式失敗。  
   
-## <a name="data-types"></a>資料型別  
+## <a name="data-types"></a>資料類型  
  OUTPUT 子句支援大型物件資料類型：**nvarchar(max)** 、**varchar(max)** 、**varbinary(max)** 、**text**、**ntext**、**image** 及 **xml**。 當您在 UPDATE 陳述式中使用 .WRITE 子句來修改 **nvarchar(max)** 、**varchar(max)** 或 **varbinary(max)** 資料行時，如果參考了值完整的先後影像，便會傳回這些影像。 在 OUTPUT 子句之 **text**、**ntext** 或 **image** 資料行的運算式中，不能出現 TEXTPTR( ) 函數。  
   
 ## <a name="queues"></a>佇列  
@@ -421,7 +421,7 @@ GO
   
 ```  
   
-### <a name="e-using-output-into-with-fromtablename-in-an-update-statement"></a>E. 在 UPDATE 陳述式中，使用 OUTPUT INTO 搭配 from_table_name  
+### <a name="e-using-output-into-with-from_table_name-in-an-update-statement"></a>E. 在 UPDATE 陳述式中，使用 OUTPUT INTO 搭配 from_table_name  
  下列範例會針對具有指定 `ProductID` 和 `ScrapReasonID` 的所有工單，更新 `WorkOrder` 資料表中的 `ScrapReasonID` 資料行。 `OUTPUT INTO` 子句會從更新的資料表 (`WorkOrder`) 傳回值，也會從 `Product` 傳回值。 `Product` 子句利用 `FROM` 資料表來指定要更新的資料列。 由於 `WorkOrder` 資料表定義了 `AFTER UPDATE` 觸發程序，因此，需要 `INTO` 關鍵字。  
   
 ```  
@@ -455,7 +455,7 @@ GO
   
 ```  
   
-### <a name="f-using-output-into-with-fromtablename-in-a-delete-statement"></a>F. 在 DELETE 陳述式中，使用 OUTPUT INTO 搭配 from_table_name  
+### <a name="f-using-output-into-with-from_table_name-in-a-delete-statement"></a>F. 在 DELETE 陳述式中，使用 OUTPUT INTO 搭配 from_table_name  
  下列範例根據 `ProductProductPhoto` 陳述式的 `FROM` 子句所定義的搜尋準則，來刪除 `DELETE` 資料表中的資料列。 `OUTPUT` 子句會傳回所刪除的資料表資料行 (`deleted.ProductID`、`deleted.ProductPhotoID`) 及 `Product` 資料表中的資料行。 `FROM` 子句利用這份資料表來指定要刪除的資料列。  
   
 ```  
@@ -576,9 +576,11 @@ DECLARE @MyTableVar table(
   );  
   
 INSERT INTO dbo.EmployeeSales (LastName, FirstName, CurrentSales)  
-  OUTPUT INSERTED.LastName,   
+  OUTPUT INSERTED.EmployeeID,
+         INSERTED.LastName,   
          INSERTED.FirstName,   
-         INSERTED.CurrentSales  
+         INSERTED.CurrentSales,
+         INSERTED.ProjectedSales
   INTO @MyTableVar  
     SELECT c.LastName, c.FirstName, sp.SalesYTD  
     FROM Sales.SalesPerson AS sp  

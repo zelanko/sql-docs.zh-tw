@@ -1,6 +1,7 @@
 ---
-title: 升級 AlwaysOn 可用性群組複本執行個體 | Microsoft Docs
-ms.custom: ''
+title: 升級可用性群組複本
+dsecription: Describes how to upgrade replicas that are participating in an Always On availability group.
+ms.custom: seo-lt-2019
 ms.date: 01/10/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 990d79e60a0be87588604d76786980c2520d6f53
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: 77fba513e72982920c399002555e5b96745e8492
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70910790"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822196"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升級 AlwaysOn 可用性群組複本執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +128,7 @@ ms.locfileid: "70910790"
 ## <a name="ag-with-failover-cluster-instance-nodes"></a>包含容錯移轉叢集執行個體節點的 AG  
  若 AG 包含容錯移轉叢集執行個體 (FCI) 節點，您應該先升級非使用中節點，再升級使用中節點。 下圖說明具有 FCI 的常見 AG 案例 (為了擁有本機高可用性及 FCI 之間用於遠端災害復原的非同步認可) 以及升級順序。  
   
- ![包含 FCI 的AG 升級](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "包含 FCI 的AG 升級")  
+ ![使用 FCI 將 AG 升級](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "使用 FCI 將 AG 升級")  
   
 1.  升級或更新 REMOTE2  
   

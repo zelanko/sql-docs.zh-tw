@@ -1,7 +1,7 @@
 ---
 title: 記憶體內部 OLTP 的範例資料庫 | Microsoft 文件
 ms.custom: ''
-ms.date: 11/30/2018
+ms.date: 12/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,25 +11,25 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2806522e0dcc0c9aa7badd099be28e11072b396e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef40223423b1645ce2acd7944db2ba32f85d01db
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111799"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258777"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>記憶體內部 OLTP 的範例資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
 ## <a name="overview"></a>概觀  
- 此範例示範了記憶體內部 OLTP 功能。 其顯示記憶體最佳化資料表和原生編譯的預存程序，並可用來示範記憶體內部 OLTP 的效能優勢。  
+ 此範例示範了記憶體內部 OLTP 功能。 其顯示經記憶體最佳化的資料表和原生編譯的預存程序，並可用來示範記憶體內部 OLTP 的效能優勢。  
   
 > [!NOTE]  
 >  若要檢視 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的這項主題，請參閱 [Extensions to AdventureWorks to Demonstrate In-Memory OLTP](https://msdn.microsoft.com/library/dn511655\(v=sql.120\).aspx)(示範記憶體內部 OLTP 的 AdventureWorks 延伸模組)。  
   
- 此範例會將 AdventureWorks 資料庫中的 5 個資料表移轉至記憶體最佳化資料表，並包含銷售訂單處理的工作負載示範。 您可以利用此工作負載示範，查看在伺服器上使用記憶體內部 OLTP 的效能優勢。  
+ 此範例會將 AdventureWorks 資料庫中的五個資料表移轉至經記憶體最佳化的資料表，並包含銷售訂單處理的工作負載示範。 您可以利用此工作負載示範，查看在伺服器上使用記憶體內部 OLTP 的效能優勢。  
   
- 在此範例的描述中，我們會討論將資料表移轉至記憶體內部 OLTP 的利弊，以說明記憶體最佳化資料表尚未支援的功能。  
+ 在此範例的描述中，我們會討論將資料表移轉至記憶體內部 OLTP 的利弊，以說明經記憶體最佳化的資料表尚未支援的功能。  
   
  此範例的文件集結構如下：  
   
@@ -37,17 +37,17 @@ ms.locfileid: "68111799"
   
 -   [安裝以 AdventureWorks 為基礎的 In-Memory OLTP 範例](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的指示  
   
--   [範例資料表和程序描述](#Descriptionofthesampletablesandprocedures) - 這包含 In-Memory OLTP 範例加入 AdventureWorks 中的資料表和程序的描述，以及將部分原始 AdventureWorks 資料表移轉至記憶體最佳化資料表的考量  
+-   [範例資料表和程序描述](#Descriptionofthesampletablesandprocedures) - 包含 In-Memory OLTP 範例加入 AdventureWorks 中的資料表和程序的描述，以及將部分原始 AdventureWorks 資料表移轉至經記憶體最佳化的資料表的考量  
   
--   執行 [使用工作負載示範的效能度量](#PerformanceMeasurementsusingtheDemoWorkload) 之指示 - 包括安裝及執行 ostress (用於驅動工作負載的工具) 的指示，以及執行工作負載示範本身的指示  
+-   執行[使用工作負載示範的效能度量](#PerformanceMeasurementsusingtheDemoWorkload)之指示 - 包括安裝及執行 ostress (用於驅動工作負載的工具) 的指示，以及執行工作負載示範本身的指示  
   
 -   [範例中的記憶體和磁碟空間使用量](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> 必要條件  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   基於效能測試考量，伺服器的規格必須與您的實際執行環境類似。 您應為此特定範例準備至少 16GB 的記憶體供 SQL Server 使用。 如需有關「記憶體內部 OLTP」硬體的一般指導方針，請參閱下列部落格文章：[SQL Server 2014 中記憶體內部 OLTP 的硬體考量](blog-hardware-in-memory-oltp.md)
+-   基於效能測試考量，伺服器的規格必須與您的實際執行環境類似。 針對此特定範例，您應該準備至少 16 GB 的記憶體供 SQL Server 使用。 如需有關「記憶體內部 OLTP」硬體的一般指導方針，請參閱下列部落格文章：[SQL Server 2014 中記憶體內部 OLTP 的硬體考量](blog-hardware-in-memory-oltp.md)
 
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>安裝以 AdventureWorks 為基礎的 In-Memory OLTP 範例  
  請遵循下列步驟來安裝範例：  
@@ -68,7 +68,7 @@ ms.locfileid: "68111799"
   
      範例 T-SQL 指令碼：  
   
-    ```  
+    ```sql
     RESTORE DATABASE [AdventureWorks2016CTP3]   
       FROM DISK = N'C:\temp\AdventureWorks2016CTP3.bak'   
         WITH FILE = 1,    
@@ -85,7 +85,7 @@ ms.locfileid: "68111799"
   
  新的記憶體最佳化資料表具有後置詞 '_inmem'。 此範例也會包含具有後置詞 '_ondisk' 的對應資料表，這些資料表可用來在系統上的記憶體最佳化資料表與磁碟資料表之間，進行一對一的效能比較。  
   
- 請注意，工作負載中用於比較效能的記憶體最佳化資料表是完全持久且完整記錄的。 這些資料表不會為了提升效能而犧牲持久性或可靠性。  
+ 工作負載中用於比較效能的經記憶體最佳化的資料表是完全持久且完整記錄的。 這些資料表不會為了提升效能而犧牲持久性或可靠性。  
   
  此範例的目標工作負載是銷售訂單處理，同時也會考量產品和折扣的相關資訊。 因此需要 SalesOrderHeader、SalesOrderDetail、Product、SpecialOffer 和 SpecialOfferProduct 資料表。  
   
@@ -141,13 +141,13 @@ ms.locfileid: "68111799"
   
 -   記憶體最佳化資料表支援「預設條件約束」  ，且大部分的預設條件約束在移轉後會保持原狀。 不過，原始資料表 Sales.SalesOrderHeader 包含兩個預設條件約束，會擷取資料行 OrderDate 和 ModifiedDate 的目前日期。 在具有大量並行的高輸送量訂單處理工作負載中，任何全域資源都可能會成為競爭重點。 系統時間即為這類全域資源。根據觀察，執行插入銷售訂單的記憶體內部 OLTP 工作負載時，系統時間可能會成為瓶頸，特別是在需要針對銷售訂單標頭的多個資料行擷取系統時間，並同時擷取銷售訂單詳細資料時。 這個問題已在此範例中獲得解決，只對每個插入的銷售訂單擷取一次系統時間，然後在預存程序 Sales.usp_InsertSalesOrder_inmem 中，將此值做為 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 的日期時間資料行使用。  
   
--   「別名 UDT」  - 原始資料表針對資料行 PurchaseOrderNumber 和 AccountNumber，分別使用兩個別名使用者定義資料類型 (UDT) dbo.OrderNumber 和 dbo.AccountNumber。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 不支援在記憶體最佳化資料表中使用別名 UDT，因此新資料表會分別使用系統資料類型 Nvarchar(25) 和 Nvarchar(15)。  
+-   別名使用者定義資料類型 (UDT)  - 原始資料表針對資料行 PurchaseOrderNumber 和 AccountNumber，分別使用兩個別名使用者定義資料類型 (UDT) dbo.OrderNumber 和 dbo.AccountNumber。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 不支援在記憶體最佳化資料表中使用別名 UDT，因此新資料表會分別使用系統資料類型 Nvarchar(25) 和 Nvarchar(15)。  
   
--   「索引鍵中的資料行可為 Null」  - 在原始資料表中，資料行 SalesPersonID 可為 Null，但是在新資料表中，資料行不可為 Null，且預設條件約束必須帶有值 (-1)。 這是因為記憶體最佳化資料表上的索引不可以在索引鍵中有可為 Null 的資料行，在此情況下，-1 會代替 NULL 值。  
+-   「索引鍵中的資料行可為 Null」  - 在原始資料表中，資料行 SalesPersonID 可為 Null，但是在新資料表中，資料行不可為 Null，且預設條件約束必須帶有值 (-1)。 這種情況是因為經記憶體最佳化的資料表上的索引不可以在索引鍵中有可為 Null 的資料行，在此情況下，-1 會代替 NULL 值。  
   
 -   「計算資料行」  - 由於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 不支援在記憶體最佳化資料表中使用計算資料行，因此會省略計算資料行 SalesOrderNumber 和 TotalDue。 新檢視 Sales.vSalesOrderHeader_extended_inmem 會反映資料行 SalesOrderNumber 和 TotalDue。 因此，如果需要這些資料行，您可以使用此檢視。  
 
-    - **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
+    - **適用範圍：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，記憶體最佳化的資料表和索引支援計算資料行。
 
   
@@ -182,21 +182,26 @@ ms.locfileid: "68111799"
   
  HASH 索引可用來進一步最佳化工作負載。 特別是最佳化點查閱和資料列插入。 不過請注意，這些索引不支援範圍掃描、依序掃描，或搜尋前置索引鍵資料行。 因此，您需要謹慎地使用這些索引。 此外，您必須在建立時指定 bucket_count。 此計數通常應該設定為索引鍵數值到兩倍索引鍵數值之間的值，不過高估通常不會造成問題。  
   
- 如需有關 [index guidelines](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) (索引指導方針) 及 [choosing the right bucket_count](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)(選擇正確的 bucket_count) 之指導方針的詳細資料，請參閱《線上叢書》。  
-  
+如需詳細資訊，請參閱《線上叢書》以取得有關[索引指導方針](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx)與[選擇正確的 bucket_count](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx) 之指導方針的詳細資料。  
+
+
+《線上叢書》提供有關下列主題的詳細資訊：
+- [索引指導方針](https://docs.microsoft.com/sql/database-engine/guidelines-for-using-indexes-on-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
+- [選擇正確的 bucket_count](https://docs.microsoft.com/sql/database-engine/determining-the-correct-bucket-count-for-hash-indexes) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn494956 -->
+
  移轉之資料表上的索引已調整為適用於銷售訂單處理工作負載示範。 此工作負載需要在 Sales.SalesOrderHeader_inmem 和 Sales.SalesOrderDetail_inmem 資料表中進行插入和點查閱，也需要對 Production.Product_inmem 和 Sales.SpecialOffer_inmem 資料表中的主索引鍵資料行進行點查閱。  
   
  Sales.SalesOrderHeader_inmem 具有三個索引，基於效能的考量，以及由於此工作負載不需要依序或範圍掃描，這三個索引都是 HASH 索引。  
   
 -   (SalesOrderID) 上的 HASH 索引：bucket_count 的大小調整為 1,000 萬 (無條件進位到 1,600 萬)，因為預期的銷售訂單數目為 1,000 萬  
   
--   (SalesPersonID) 上的 HASH 索引：bucket_count 為 100 萬。 提供的資料集沒有很多銷售人員，但容許未來成長使用；此外，如果將 bucket_count 的大小調整至過大，即可避免受到點查閱效能降低的影響。  
+-   (SalesPersonID) 上的 HASH 索引：bucket_count 為 100 萬。 提供的資料集沒有很多銷售人員。 但此大型 bucket_count 允許未來的成長。 此外，如果 bucket_count 過大，也不會對點查閱的效能造成負面影響。  
   
 -   (CustomerID) 上的 HASH 索引：bucket_count 為 100 萬。 提供的資料集沒有很多客戶，但容許未來成長使用。  
   
  Sales.SalesOrderDetail_inmem 具有三個索引，基於效能的考量，以及由於此工作負載不需要依序或範圍掃描，這三個索引都是 HASH 索引。  
   
--   (SalesOrderID, SalesOrderDetailID) 上的 HASH 索引：這是主索引鍵索引，即使 (SalesOrderID, SalesOrderDetailID) 上的查閱不頻繁，針對索引鍵使用雜湊索引仍可加速資料列插入。 bucket_count 的大小調整為 5,000 萬 (無條件進位到 6,700 萬)：預期的銷售訂單數目為 1,000 萬，放大的用意是為了使每個訂單平均有 5 個項目。  
+-   (SalesOrderID, SalesOrderDetailID) 上的 HASH 索引：這是主索引鍵索引，即使 (SalesOrderID, SalesOrderDetailID) 上的查閱不頻繁，針對索引鍵使用雜湊索引仍可加速資料列插入。 bucket_count 的大小調整為 5,000 萬 (無條件進位到 6,700 萬)：預期的銷售訂單數目為 1,000 萬，放大的用意是為了使每個訂單平均有五個項目  
   
 -   (SalesOrderID) 上的 HASH 索引：銷售訂單的查閱很頻繁，您會想要尋找對應至單一訂單的所有明細項目。  bucket_count 的大小調整為 1,000 萬 (無條件進位到 1,600 萬)，因為預期的銷售訂單數目為 1,000 萬  
   
@@ -242,7 +247,7 @@ ms.locfileid: "68111799"
   
         -   @ShipMethodID [int]  
   
-        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem - 包含訂單明細項目的 TVP  
+        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem - 包含訂單明細項目的資料表值參數 (TVP)  
   
     -   輸入參數 (選擇性)：  
   
@@ -304,15 +309,15 @@ ms.locfileid: "68111799"
   
     -   此程序依賴協助程式程序 dbo.usp_GenerateCKCheck、dbo.usp_GenerateFKCheck 和 dbo.GenerateUQCheck 來產生執行完整性檢查所需的 T-SQL。  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Performance Measurements using the Demo Workload  
+##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> 使用工作負載示範的效能度量  
  Ostress 是由 Microsoft CSS SQL Server 支援小組所開發的命令列工具。 此工具可用來平行執行查詢或執行預存程序。 您可以設定平行執行給定 T-SQL 陳述式的執行緒數目，以及指定此執行緒上應該執行陳述式的次數，ostress 會加快執行緒的速度，並平行執行所有執行緒上的陳述式。 所有執行緒完成執行之後，ostress 會報告所有執行緒完成執行所花費的時間。  
   
 ### <a name="installing-ostress"></a>安裝 ostress  
- Ostress 會當做 RML 公用程式的一部分來安裝，您無法獨立安裝 ostress。  
+ Ostress 會當做報表標記語言 (RML) 公用程式的一部分來安裝，您無法獨立安裝 Ostress。  
   
  安裝步驟：  
   
-1.  從下列頁面下載並執行 RML 公用程式的 x64 安裝套件：[下載適用於 SQL Server 的報表標記語言 (RML)](https://www.microsoft.com/en-us/download/details.aspx?id=4511)
+1.  從下列頁面下載並執行 RML 公用程式的 x64 安裝套件：[下載適用於 SQL Server 的 RML](https://www.microsoft.com/download/details.aspx?id=4511)
 
 2.  如果出現對話方塊，指出特定檔案正在使用，請按一下 [繼續]  
   
@@ -340,7 +345,7 @@ ms.locfileid: "68111799"
 -   -r：每個連接執行每個輸入檔案/查詢的反覆運算次數  
   
 ### <a name="demo-workload"></a>工作負載示範  
- 工作負載示範中所使用的主要預存程序為 Sales.usp_InsertSalesOrder_inmem/ondisk。 下列指令碼使用範例資料建構資料表值參數 (TVP)，並呼叫程序插入具有 5 個明細項目的銷售訂單。  
+ 工作負載示範中所使用的主要預存程序為 Sales.usp_InsertSalesOrder_inmem/ondisk。 下列指令碼使用範例資料建構資料表值參數 (TVP)，並呼叫程序插入具有五個明細項目的銷售訂單。  
   
  ostress 工具可用來平行執行預存程序呼叫，以模擬同時插入銷售訂單的客戶。  
   
@@ -348,7 +353,7 @@ ms.locfileid: "68111799"
   
  下列指令碼會同時執行，以模擬銷售訂單處理工作負載：  
   
-```  
+```sql
 DECLARE   
       @i int = 0,   
       @od Sales.SalesOrderDetailType_inmem,   
@@ -368,8 +373,7 @@ WHILE (@i < 20)
 BEGIN;   
       EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od;   
       SET @i += 1   
-END  
-  
+END
 ```  
   
  利用此指令碼，每個建構的範例訂單會透過以 WHILE 迴圈執行的 20 個預存程序被插入 20 次。 此迴圈可用來說明使用資料庫建構範例訂單的情況。 在一般實際執行環境中，中間層應用程式會建構要插入的銷售訂單。  
@@ -392,7 +396,7 @@ END
   
  按一下 [複製] 按鈕複製命令，然後將其貼入 RML 公用程式命令提示字元。  
   
-```  
+```console
 ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
@@ -401,13 +405,13 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 
  觀察執行工作負載時的 CPU 使用率，例如使用工作管理員。 您會看到 CPU 使用率接近 100%。 如果不是這種情況，則會發生記錄 IO 瓶頸 (也請參閱 [疑難排解執行緩慢的測試](#Troubleshootingslow-runningtests))。  
   
 ##### <a name="disk-based-tables"></a>磁碟型資料表  
- 下列命令會執行磁碟資料表上的工作負載。 請注意，執行此工作負載可能需要一些時間，主要是因為系統中發生閂鎖競爭。 記憶體最佳化資料表不需閂鎖，因此不會發生這個問題。  
+ 下列命令會執行磁碟資料表上的工作負載。 執行此工作負載可能需要一些時間，主要是因為系統中發生閂鎖爭用。 記憶體最佳化資料表不需閂鎖，因此不會發生這個問題。  
   
  開啟 RML CMD 命令提示字元，然後執行下列命令：  
   
  按一下 [複製] 按鈕複製命令，然後將其貼入 RML 公用程式命令提示字元。  
   
-```  
+```console
 ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
@@ -422,7 +426,7 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 
 #### <a name="resetting-the-demo"></a>重設示範  
  若要重設示範，請開啟 RML CMD 命令提示字元，然後執行下列命令：  
   
-```  
+```console
 ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"  
 ```  
   
@@ -451,7 +455,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 #### <a name="overall-utilization-of-the-database"></a>資料庫的整體使用情況  
  下列查詢可用來取得系統中記憶體內部 OLTP 的總記憶體使用量。  
   
-```  
+```sql
 SELECT type  
    , name  
 , pages_kb/1024 AS pages_MB   
@@ -467,13 +471,14 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 |MEMORYCLERK_XTP|DB_ID_5|877|  
 |MEMORYCLERK_XTP|預設|0|  
 |MEMORYCLERK_XTP|預設|0|  
+||||
   
- 預設記憶體 Clerk 包含全系統記憶體結構，且規模相對較小。 使用者資料庫 (在本例中為識別碼 5 的資料庫) 的記憶體 Clerk 約為 900MB。  
+ 預設記憶體 Clerk 包含全系統記憶體結構，且規模相對較小。 使用者資料庫 (在此案例中為識別碼 5 的資料庫) 的記憶體 Clerk 約為 900 MB。  
   
 #### <a name="memory-utilization-per-table"></a>每個資料表的記憶體使用量  
  下列查詢可用來向下鑽研至個別資料表及其索引的記憶體使用量：  
   
-```  
+```sql
 SELECT object_name(t.object_id) AS [Table Name]  
      , memory_allocated_for_table_kb  
  , memory_allocated_for_indexes_kb  
@@ -482,7 +487,7 @@ ON dms.object_id=t.object_id
 WHERE t.type='U'  
 ```  
   
- 以下顯示範例全新安裝的查詢結果：  
+ 下表顯示範例全新安裝的查詢結果：  
   
 ||||  
 |-|-|-|  
@@ -494,7 +499,8 @@ WHERE t.type='U'
 |SpecialOffer_inmem|3|8192|  
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
-  
+||||
+
  如您所見，這些資料表相當小：SalesOrderHeader_inmem 的大小約為 7 MB，而 SalesOrderDetail_inmem 的大小約為 15 MB。  
   
  此處值得注意的是，與資料表資料大小相較下，配置給索引的記憶體大小。 這是因為範例中的雜湊索引會預留大小以容納較大的資料。 請注意，雜湊索引有固定的大小，因此其大小不會隨資料表中的資料大小增加。  
@@ -502,7 +508,7 @@ WHERE t.type='U'
 ####  <a name="Memoryutilizationafterrunningtheworkload"></a> 執行工作負載之後的記憶體使用量  
  插入 1,000 萬個銷售訂單之後，總記憶體使用量會類似如下：  
   
-```  
+```sql
 SELECT type  
 , name  
 , pages_kb/1024 AS pages_MB   
@@ -516,12 +522,13 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
 |MEMORYCLERK_XTP|預設|0|  
 |MEMORYCLERK_XTP|預設|0|  
-  
- 如您所見，SQL Server 針對範例資料庫中的記憶體最佳化資料表和索引使用小於 8GB 的記憶體。  
+||||
+
+ 如您所見，SQL Server 針對範例資料庫中的經記憶體最佳化的資料表和索引使用小於 8 GB 的記憶體。  
   
  請在執行一個範例之後，查看每個資料表的詳細記憶體使用量：  
   
-```  
+```sql
 SELECT object_name(t.object_id) AS [Table Name]  
      , memory_allocated_for_table_kb  
  , memory_allocated_for_indexes_kb  
@@ -540,15 +547,16 @@ WHERE t.type='U'
 |Product_inmem|111|12032|  
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
-  
- 我們會看到總計約 6.5GB 的資料。 請注意，資料表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 上的索引大小，與插入銷售訂單之前的索引大小相同。 由於這兩個資料表使用雜湊索引，而雜湊索引是靜態的，因此索引大小不會改變。  
+||||
+
+ 我們會看到總計約 6.5 GB 的資料。 請注意，資料表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 上的索引大小，與插入銷售訂單之前的索引大小相同。 由於這兩個資料表使用雜湊索引，而雜湊索引是靜態的，因此索引大小不會改變。  
   
 #### <a name="after-demo-reset"></a>重設示範之後  
  您可以使用預存程序 Demo.usp_DemoReset 重設示範。 此預存程序會刪除資料表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 中的資料，然後重新植入原始資料表 SalesOrderHeader 和 SalesOrderDetail 中的資料。  
   
  現在，即使已刪除資料表中的資料列，也不表示會立即回收記憶體。 SQL Server 會視需要在背景回收記憶體最佳化資料表中已刪除資料列的記憶體。 由於系統上沒有交易式工作負載，因此重設示範之後，您會立即看到系統尚未對已刪除的資料列進行記憶體回收：  
   
-```  
+```sql
 SELECT type  
 , name  
 , pages_kb/1024 AS pages_MB   
@@ -562,12 +570,13 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
 |MEMORYCLERK_XTP|預設|0|  
 |MEMORYCLERK_XTP|預設|0|  
-  
+||||
+
  這是預期的結果：當交易式工作負載執行時，才會回收記憶體。  
   
  如果您開始執行第二次工作負載示範，一開始會看到記憶體使用量減少，這是由於之前刪除的資料列遭到清除所致。 在工作負載完成之前，記憶體大小會在某些時候再次增加。 重設示範並插入 1,000 萬個資料列之後，記憶體使用量與第一次執行之後的使用量非常相似。 例如：  
   
-```  
+```sql
 SELECT type  
 , name  
 , pages_kb/1024 AS pages_MB   
@@ -581,11 +590,12 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
 |MEMORYCLERK_XTP|預設|0|  
 |MEMORYCLERK_XTP|預設|0|  
-  
+||||
+
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>記憶體最佳化資料表的磁碟使用狀況  
  您可以使用下列查詢，找到給定時間下，資料庫的檢查點檔案在磁碟上的整體大小：  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -596,9 +606,9 @@ WHERE f.type=N'FX'
 #### <a name="initial-state"></a>初始狀態  
  一開始建立範例檔案群組和範例記憶體最佳化資料表時，會預先建立許多檢查點檔案，然後系統會開始填入檔案 (預先建立的檢查點檔案數目取決於系統中的邏輯處理器數目)。 由於範例一開始非常小，因此預先建立的檔案在初始建立之後，大部分都是空的。  
   
- 以下顯示具有 16 個邏輯處理器的機器上之範例在磁碟上的初始大小：  
+ 下列程式碼顯示具有 16 個邏輯處理器的機器上之範例在磁碟上的初始大小：  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -609,12 +619,13 @@ WHERE f.type=N'FX'
 |-|  
 |**在磁碟上的大小 (MB)**|  
 |2312|  
-  
- 如您所見，檢查點檔案在磁碟上的大小與實際資料大小差距懸殊，磁碟上的大小是 2.3GB，而實際資料大小則接近 30MB。  
+||
+
+ 如您所見，檢查點檔案在磁碟上的大小與實際資料大小差距懸殊，磁碟上的大小是 2.3 GB，而實際資料大小則接近 30 MB。  
   
  您可以使用下列查詢，更仔細地查看磁碟空間的使用來源。 這個查詢傳回的磁碟大小近似於狀態 5 (REQUIRED FOR BACKUP/HA)、6 (IN TRANSITION TO TOMBSTONE) 或 7 (TOMBSTONE) 的檔案。  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -638,15 +649,16 @@ ORDER BY state, file_type
 |已預先建立|DELTA|16|128|  
 |建構中|DATA|1|128|  
 |建構中|DELTA|1|8|  
-  
- 如您所見，預先建立的資料和差異檔案使用了大部分空間。 SQL Server 會針對每個邏輯處理器預先建立一組 (資料和差異) 檔案。 此外，系統會為資料檔案預留 128MB 的大小，並為差異檔案預留 8MB 的大小，以便更有效率地將資料插入這些檔案。  
+|||||
+
+ 如您所見，預先建立的資料和差異檔案使用了大部分空間。 SQL Server 會針對每個邏輯處理器預先建立一組 (資料和差異) 檔案。 此外，系統會為資料檔案預留 128 MB 的大小，並為差異檔案預留 8 MB 的大小，以便更有效率地將資料插入這些檔案。  
   
  記憶體最佳化資料表中的實際資料會包含在單一資料檔案中。  
   
 #### <a name="after-running-the-workload"></a>執行工作負載之後  
  完成插入 1,000 萬個銷售訂單的單一測試執行之後，磁碟上的整體大小會類似如下 (16 個核心測試伺服器)：  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -656,13 +668,14 @@ WHERE f.type=N'FX'
 ||  
 |-|  
 |**在磁碟上的大小 (MB)**|  
-|8828|  
+|8828|
+||
   
- 在磁碟上的大小接近 9GB，與記憶體中的資料大小更接近。  
+ 在磁碟上的大小接近 9 GB，與記憶體中的資料大小更接近。  
   
  請更仔細地查看不同狀態的檢查點檔案大小：  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -684,17 +697,18 @@ ORDER BY state, file_type
 |已預先建立|DELTA|16|128|  
 |建構中|DATA|1|128|  
 |建構中|DELTA|1|8|  
-  
+|||||
+
  我們還有 16 組預先建立的檔案，準備在關閉檢查點之後填入。  
   
- 以及一組建構中的檔案，會在關閉目前的檢查點之前使用。 連同使用中的檢查點檔案，記憶體中 6.5GB 資料的磁碟空間使用量約為 6.5GB。 請注意，索引不會保存在磁碟上，因此在本例中，磁碟上的整體大小會小於記憶體中的大小。  
+ 以及一組建構中的檔案，會在關閉目前的檢查點之前使用。 連同使用中的檢查點檔案，記憶體中 6.5 GB 資料的磁碟空間使用量約為 6.5 GB。 請注意，索引不會保存在磁碟上，因此在本例中，磁碟上的整體大小會小於記憶體中的大小。  
   
 #### <a name="after-demo-reset"></a>重設示範之後  
  重設示範之後，如果系統上沒有交易式工作負載，且沒有資料庫檢查點，則不會立即回收磁碟空間。 對於要在各階段移動並在最後捨棄的檢查點檔案而言，需要發生一些檢查點和記錄截斷事件，才會開始合併檢查點檔案，並開始進行記憶體回收。 如果系統中有交易式工作負載，則會自動發生這些事件 (如果使用完整復原模式，則需要定期備份記錄)，但是當系統閒置時，不會發生這些事件 (如示範情況所示)。  
   
  在此範例中，您會在重設示範之後看到類似如下的情況：  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -704,11 +718,12 @@ WHERE f.type=N'FX'
 ||  
 |-|  
 |**在磁碟上的大小 (MB)**|  
-|11839|  
+|11839|
+||
   
- 接近 12GB，明顯大於重設示範之前的 9GB。 這是因為已開始合併某些檢查點檔案，但尚未安裝部分合併目標，且尚未清除部分合併來源檔案 (如下所示)：  
+ 接近 12 GB，明顯大於重設示範之前的 9 GB。 這是因為已開始合併某些檢查點檔案，但尚未安裝部分合併目標，且尚未清除部分合併來源檔案 (如下所示)：  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -734,14 +749,15 @@ ORDER BY state, file_type
 |合併目標|DELTA|7|56|  
 |已合併來源|DATA|13|1772|  
 |已合併來源|DELTA|13|455|  
-  
+|||||
+
  由於系統中發生交易活動，因此已安裝合併目標並清除已合併來源。  
   
  重設示範並在第二次執行工作負載示範時插入 1,000 萬個銷售訂單之後，您會看到第一次執行工作負載期間所建構的檔案已遭到清除。 如果您在工作負載執行期間執行數次上述查詢，便會看到檢查點檔案度過各個階段。  
   
  第二次執行工作負載並插入 1,000 萬個銷售訂單之後，您會看到磁碟使用狀況與第一次執行之後的磁碟使用狀況很相似，但不一定相同 (因為系統在本質上是動態的)。 例如：  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -765,11 +781,10 @@ ORDER BY state, file_type
 |建構中|DELTA|2|16|  
 |使用中|DATA|41|5608|  
 |使用中|DELTA|41|328|  
-  
+|||||
+
  在本例中，有兩個檢查點檔案組在「建構中」狀態，這表示多組檔案已移至「建構中」狀態，這可能是由於工作負載中有高度並行所致。 多個並行執行緒會同時要求一個新的檔案組，因此會將一組檔案從「已預先建立」移至「建構中」。  
   
-## <a name="see-also"></a>另請參閱  
- [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
-  
+## <a name="see-also"></a>另請參閱
 
+[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](in-memory-oltp-in-memory-optimization.md)  

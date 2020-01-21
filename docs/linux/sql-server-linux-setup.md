@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: a6cd31b1f67d37f1316db9db5d4356bbb5e31d3b
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 57041b528186bde743abfeec293e696b0155d0e1
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593661"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884012"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的安裝指引
 
@@ -23,7 +23,7 @@ ms.locfileid: "73593661"
 
 本文提供在 Linux 上安裝、更新及解除安裝 SQL Server 2017 和 SQL Server 2019 的指導方針。
 
-如需其他部署案例，請參閱：
+如需了解其他部署案例，請參閱：
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
 - [Docker 容器](../linux/sql-server-linux-configure-docker.md)
@@ -59,7 +59,7 @@ Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES) 及 Ubuntu
 
 | 平台 | 支援的版本 | Get
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3、7.4、7.5、7.6 | [取得 RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3、7.4、7.5、7.6、8.0 | [取得 RHEL 8.0](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2、SP3、SP4 | [取得 SLES v12](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [取得 Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
 | **Docker 引擎** | 1.8+ | [取得 Docker](https://www.docker.com/get-started)
@@ -69,7 +69,7 @@ Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES) 及 Ubuntu
 Microsoft 也支援使用 OpenShift 和 Kubernetes 來部署和管理 SQL Server 容器。
 
 > [!NOTE]
-> SQL Server 已針對先前列出的發行版本在 Linux 上經過測試並受到支援。 但如果選擇在不支援的作業系統上安裝 SQL Server，請檢閱 [Microsoft SQL Server 的技術支援原則](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) \(機器翻譯\) 的＜支援原則＞  一節以了解隱含的支援。
+> SQL Server 已針對先前列出的發行版本，在 Linux 上經過測試並受到支援。 但如果選擇在不支援的作業系統上安裝 SQL Server，請檢閱 [Microsoft SQL Server 的技術支援原則](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) \(機器翻譯\) 的＜支援原則＞  一節以了解隱含的支援。
 
 ## <a id="system"></a> 系統需求
 
@@ -78,7 +78,7 @@ SQL Server 具有下列適用於 Linux 的系統需求：
 |||
 |-----|-----|
 | **記憶體** | 2 GB |
-| **[File System]** | **XFS** 或 **EXT4** (不支援其他檔案系統，例如 **BTRFS**) |
+| **檔案系統** | **XFS** 或 **EXT4** (不支援其他檔案系統，例如 **BTRFS**) |
 | **磁碟空間** | 6 GB |
 | **處理器速度** | 2 GHz |
 | **處理器核心數** | 2 個核心 |
@@ -88,7 +88,7 @@ SQL Server 具有下列適用於 Linux 的系統需求：
 
 - 使用 NFS 版本 **4.2 或更新的版本**。 舊版的 NFS 不支援新式檔案系統常用的必要功能，例如 fallocate 和疏鬆檔案建立。
 - 僅尋找 NFS 掛接上的 **/var/opt/mssql** 目錄。 不支援其他檔案，例如 SQL Server 系統二進位檔案。
-- 請確定 NFS 用戶端在裝載遠端共用時使用 'nolock' 選項。
+- 確定 NFS 用戶端在裝載遠端共用時使用 'nolock' 選項。
 
 ## <a id="repositories"></a> 設定來源存放庫
 

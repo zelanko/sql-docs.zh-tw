@@ -1,6 +1,7 @@
 ---
-title: 針對異動複寫測量延遲及驗證連接 | Microsoft Docs
-ms.custom: ''
+title: 測量延遲與驗證連線 (交易式)
+description: 了解如何使用 SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL) 或 Replication Management Objects (RMO) 中的複寫監視器，測量 SQL Server 中「交易發行集」的延遲並驗證連線。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: eef53dd48e960ac15e68e28e0be7265a8f25ba74
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 355840dee0c7ff327968457a54f55730665d5afe
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711028"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321846"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>針對異動複寫測量延遲及驗證連接
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.locfileid: "71711028"
 ###  <a name="Restrictions"></a> 限制事項  
  追蹤 Token 在停止系統時也很有幫助，包括停止所有活動並確認所有節點已接收全部尚未處理的變更。 如需詳細資訊，請參閱[停止複寫拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)。  
   
- 若要使用追蹤 Token，您必須使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的特定版本：  
+ 若要使用追蹤 Token，您必須使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的特定版本：  
   
 -   散發者必須為 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本。  
   

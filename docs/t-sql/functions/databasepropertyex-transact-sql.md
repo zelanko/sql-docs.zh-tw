@@ -20,12 +20,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 033756cb65cc217e6c9d915715f5740596694147
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 91301fcfb0376e1bd256ac60c59c1c0b65dfbbe4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982178"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256102"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ DATABASEPROPERTYEX ( database , property )
 ```  
   
 ## <a name="arguments"></a>引數  
-*資料庫*  
+*database*  
 指定資料庫名稱的運算式，其 `DATABASEPROPERTYEX` 會傳回具名屬性資訊。 *database* 具有 **nvarchar(128)** 資料類型。  
 
 若是 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，`DATABASEPROPERTYEX` 需要目前資料庫的名稱。 如果指定了不同的資料庫名稱，它會對所有屬性傳回 NULL。
@@ -52,11 +52,11 @@ DATABASEPROPERTYEX ( database , property )
 > [!NOTE]  
 >  如果資料庫尚未啟動，且 `DATABASEPROPERTYEX` 透過直接存取資料庫來擷取這些值，而不是從中繼資料擷取，則呼叫 `DATABASEPROPERTYEX` 會傳回 NULL。 AUTO_CLOSE 設定為 ON 或已離線的資料庫會定義為「未啟動」。  
   
-|屬性|Description|傳回的值|  
+|屬性|描述|傳回的值|  
 |---|---|---|
 |定序|資料庫的預設定序名稱。|定序名稱<br /><br /> NULL：資料庫未啟動。<br /><br /> 基底資料型別：**nvarchar(128)**|  
 |ComparisonStyle|Windows 的定序比較樣式。 使用下列樣式值為完成的 ComparisonStyle 值建立點陣圖：<br /><br /> 忽略大小寫：1<br /><br /> 忽略腔調字：2<br /><br /> 忽略假名：65536<br /><br /> 忽略寬度：131072<br /><br /> <br /><br /> 例如，預設值 196609 是結合「忽略大小寫」、「忽略假名」和「忽略寬度」等選項的結果。|傳回比較樣式。<br /><br /> 所有的二進位定序皆傳回 0。<br /><br /> 基底資料類型：**int**|  
-|版本|資料庫版本或服務層。|**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> 一般用途<br /><br /> 業務關鍵<br /><br /> [基本]<br /><br /> 標準<br /><br /> Premium<br /><br /> 系統 (適用於 master 資料庫)<br /><br /> NULL：資料庫未啟動。<br /><br /> 基底資料型別：**nvarchar**(64)|  
+|版本|資料庫版本或服務層。|**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> 一般用途<br /><br /> 業務關鍵<br /><br /> 基本<br /><br /> 標準<br /><br /> Premium<br /><br /> 系統 (適用於 master 資料庫)<br /><br /> NULL：資料庫未啟動。<br /><br /> 基底資料型別：**nvarchar**(64)|  
 |IsAnsiNullDefault|資料庫遵照允許 Null 值的 ISO 規則。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：輸入無效<br /><br /> 基底資料類型：**int**|  
 |IsAnsiNullsEnabled|所有對於 Null 的比較，都會得出「未知」。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：輸入無效<br /><br /> 基底資料類型：**int**|  
 |IsAnsiPaddingEnabled|字串在進行比較或插入處理之前，先填補至相同的長度。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：輸入無效<br /><br /> 基底資料類型：**int**|  
@@ -89,10 +89,10 @@ DATABASEPROPERTYEX ( database , property )
 |LCID|Windows 的定序地區設定識別碼 (LCID)。|LCID 值 (十進位格式)。<br /><br /> 基底資料類型：**int**|  
 |MaxSizeInBytes|資料庫的大小上限 (以位元組為單位)。|**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL：資料庫未啟動<br /><br /> 基底資料型別：**bigint**|  
 |復原|資料庫復原模式|FULL：完整復原模式<br /><br /> BULK_LOGGED：大量記錄模式<br /><br /> SIMPLE：簡單復原模式<br /><br /> 基底資料型別：**nvarchar(128)**|  
-|ServiceObjective|描述 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 或 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中資料庫的效能層級。|它有下列幾種：<br /><br /> Null：資料庫尚未啟動<br /><br /> 共用 (適用於 Web/Business 版本)<br /><br /> [基本]<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> 系統 (適用於 master 資料庫)<br /><br /> 基底資料型別：**nvarchar(32)**|  
+|ServiceObjective|描述 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 或 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中資料庫的效能層級。|下列其中之一：<br /><br /> Null：資料庫尚未啟動<br /><br /> 共用 (適用於 Web/Business 版本)<br /><br /> 基本<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> 系統 (適用於 master 資料庫)<br /><br /> 基底資料型別：**nvarchar(32)**|  
 |ServiceObjectiveId|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 中服務目標的識別碼。|識別服務目標的 **uniqueidentifier**。|  
 |SQLSortOrder|舊版 SQL Server 中所支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序順序識別碼。|0：資料庫使用 Windows 定序<br /><br /> >0：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序順序識別碼<br /><br /> NULL：輸入無效或資料庫尚未啟動<br /><br /> 基底資料型別：**tinyint**|  
-|[狀態]|資料庫狀態。|ONLINE：資料庫可用於查詢。<br /><br /> **注意：** 當資料庫開啟且尚未復原時，可能會傳回 ONLINE 狀態。 若要識別資料庫可接受連線的時間，請查詢 **DATABASEPROPERTYEX** 的 Collation 屬性。 當資料庫定序傳回非 Null 值時，表示資料庫可接受連接。 對於 AlwaysOn 資料庫，可查詢 `sys.dm_hadr_database_replica_states` 的 database_state 或 database_state_desc 資料行。<br /><br /> OFFLINE：資料庫明確離線。<br /><br /> RESTORING：資料庫還原已啟動。<br /><br /> RECOVERING：資料庫復原已啟動，但資料庫尚未準備好提供查詢。<br /><br /> SUSPECT：資料庫未復原。<br /><br /> EMERGENCY：資料庫處於緊急、唯讀的狀態。 存取限於系統管理員 (sysadmin) 成員<br /><br /> 基底資料型別：**nvarchar(128)**|  
+|狀態|資料庫狀態。|ONLINE：資料庫可用於查詢。<br /><br /> **注意：** 當資料庫開啟且尚未復原時，函式可能會傳回 ONLINE 狀態。 若要識別 ONLINE 資料庫是否可接受連線，請查詢 **DATABASEPROPERTYEX** 的 Collation 屬性。 當 ONLINE 資料庫定序傳回非 Null 值時，表示該資料庫可接受連線。 對於 AlwaysOn 資料庫，可查詢 `sys.dm_hadr_database_replica_states` 的 database_state 或 database_state_desc 資料行。<br /><br /> OFFLINE：資料庫明確離線。<br /><br /> RESTORING：資料庫還原已啟動。<br /><br /> RECOVERING：資料庫復原已啟動，但資料庫尚未準備好提供查詢。<br /><br /> SUSPECT：資料庫未復原。<br /><br /> EMERGENCY：資料庫處於緊急、唯讀的狀態。 存取限於系統管理員 (sysadmin) 成員<br /><br /> 基底資料型別：**nvarchar(128)**|  
 |Updateability|指出資料是否可以修改。|READ_ONLY：資料庫支援資料讀取，但不支援資料修改。<br /><br /> READ_WRITE：資料庫支援資料讀取和修改。<br /><br /> 基底資料型別：**nvarchar(128)**|  
 |UserAccess|指定那些使用者可以存取資料庫。|SINGLE_USER：一次只有一個 db_owner、資料庫建立者 (dbcreator) 或系統管理員使用者<br /><br /> RESTRICTED_USER：只有 db_owner、資料庫建立者 (dbcreator) 或系統管理員角色的成員<br /><br /> MULTI_USER：所有使用者<br /><br /> 基底資料型別：**nvarchar(128)**|  
 |版本|建立資料庫所用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式碼的內部版本號碼。 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|版本號碼：資料庫是開啟的。<br /><br /> NULL：資料庫尚未啟動。<br /><br /> 基底資料類型：**int**| 
@@ -110,7 +110,7 @@ DATABASEPROPERTYEX ( database , property )
   
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示，如果使用者沒有物件的權限，則發出中繼資料的內建函式 (例如 `OBJECT_ID`) 可能會傳回 NULL。 如需詳細資訊，請參閱[中繼資料可見性設定](../../relational-databases/security/metadata-visibility-configuration.md)。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `DATABASEPROPERTYEX` 一次只傳回一個屬性設定。 若要顯示多個屬性設定，請使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視。
   
 ## <a name="examples"></a>範例  

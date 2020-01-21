@@ -1,6 +1,7 @@
 ---
-title: 發行集資訊-警告-快照式發行集-SQL Server 2005+ | Microsoft Docs
-ms.custom: ''
+title: 警告 (快照集 - 複寫監視器)
+decription: Describes the 'Warnings' tab for a Snapshot Publication in the Replication Monitor found in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a9657fd76e48848035cac74acac1b0f723e07d31
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 058ad1dea883b2b5b9d5066bd1eedac0114f3d02
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769974"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321312"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>發行集資訊，警告 (快照式發行集，SQL Server 2005 和更新的版本)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68769974"
 -   定義與警告相關聯的警示。  
   
 ## <a name="warnings-thresholds-and-alerts"></a>警告、臨界值和警示  
- 根據預設，複寫監視器會針對未初始化的訂閱顯示警告：[未初始化的訂閱]  狀態會在包含訂閱資訊之頁面的 [狀態]  資料行中顯示為警告。 針對快照式發行集，您也可以藉由設定 **[若訂閱將在臨界值內過期，就發出警告]** 選項，來指定即將發生訂閱逾期時會產生警告。 如果達到或超出指定的臨界值，訂閱狀態會顯示為 **[即將過期/已過期]** (除非必須顯示具有更高優先權的問題)。  
+ 根據預設，複寫監視器會針對未初始化的訂閱顯示警告： **[未初始化的訂閱]** 狀態會在包含訂閱資訊之頁面的 **[狀態]** 資料行中顯示為警告。 針對快照式發行集，您也可以藉由設定 **[若訂閱將在臨界值內過期，就發出警告]** 選項，來指定即將發生訂閱逾期時會產生警告。 如果達到或超出指定的臨界值，訂閱狀態會顯示為 **[即將過期/已過期]** (除非必須顯示具有更高優先權的問題)。  
   
  除了在複寫監視器顯示警告外，達到臨界值也會觸發警示。 定義警示的方式，是按一下 **[設定警示]** ，並在 **[設定複寫警示]** 對話方塊中提供資訊。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "68769974"
  **警告**  
  與臨界值相關聯之警告的描述。  
   
- **臨界值**  
+ **閾值**  
  指定臨界值的值。  
   
  **[設定警示]**  

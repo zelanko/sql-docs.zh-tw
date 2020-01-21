@@ -1,7 +1,7 @@
 ---
-title: 範例線上還原讀取/寫入檔案 (完整復原模式) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 線上還原：讀寫檔案 (完整復原模式)
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5193d8e84cc3277d8c0031ab4a8f3c4f31845090
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.openlocfilehash: 6c01161349b33bc151fac3c7faadf77ac14f9302
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71341847"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243685"
 ---
-# <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>範例線上還原讀取/寫入檔案 (完整復原模式)
+# <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>範例：線上還原讀取/寫入檔案 (完整復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題是關於在完整復原模式下，包含多個檔案或檔案群組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  

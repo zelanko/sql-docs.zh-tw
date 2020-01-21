@@ -1,6 +1,7 @@
 ---
-title: 建立資料庫鏡像工作階段 - Windows 驗證 | Microsoft Docs
-ms.custom: ''
+title: 設定資料庫鏡像 (Windows 驗證)
+description: 了解如何使用 SQL Server Management Studio 設定使用 Windows 驗證的資料庫鏡像工作階段。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6e778d9c02e9cc0a877ef0804b1e95772e5f51cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f59dc7745f63b208b1a2a55361913a6eb290e08e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997893"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253576"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>建立資料庫鏡像工作階段 - Windows 驗證
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "67997893"
   
 -   鏡像資料庫必須存在而且保持在最新狀態。  
   
-     建立鏡像資料庫會需要在鏡像伺服器執行個體上還原最近的主體資料庫備份 (使用 WITH NORECOVERY)。 此外，在完整備份之後還需要建立一或多個記錄備份，並將這些記錄備份依序還原至鏡像資料庫 (使用 WITH NORECOVERY)。 如需詳細資訊，請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)版本都可使用見證伺服器執行個體。  
+     建立鏡像資料庫會需要在鏡像伺服器執行個體上還原最近的主體資料庫備份 (使用 WITH NORECOVERY)。 此外，在完整備份之後還需要建立一或多個記錄備份，並將這些記錄備份依序還原至鏡像資料庫 (使用 WITH NORECOVERY)。 如需詳細資訊，請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
 -   如果伺服器執行個體正在不同的網域使用者帳戶下執行，每個執行個體都會需要登入其他執行個體的 **master** 資料庫。 如果登入不存在，您必須先建立登入，然後再設定鏡像。 如需詳細資訊，請參閱 [使用 Windows 驗證允許資料庫鏡像的網路存取 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "67997893"
   
 2.  展開 **[資料庫]** ，然後選取要鏡像的資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，選取 **[工作]** ，然後按一下 **[鏡像]** 。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
+3.  以滑鼠右鍵按一下資料庫，選取 [工作]  ，然後按一下 [鏡像]  。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
   
 4.  若要開始設定鏡像，請按一下 **[設定安全性]** 按鈕，啟動「設定資料庫鏡像安全性精靈」。  
   
@@ -89,6 +90,6 @@ ms.locfileid: "67997893"
  [角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
  [設定資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
- [加入或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
+ [新增或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
   
