@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b33c005a33a3a2fb1c10d1eb8ce1a4981a59a375
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b27fc68fc3c7685583248b39a7c27d4d33efa38c
+ms.sourcegitcommit: e0067f3687003e1b59a83619fdd19b666cf61e10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295841"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74249746"
 ---
 # <a name="dtexec-utility"></a>dtexec 公用程式
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  **dtexec** 命令提示字元公用程式可用於設定及執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 **dtexec** 公用程式可存取所有封裝組態及執行功能，例如參數、連線、屬性、變數、記錄與進度指標。 **dtexec** 公用程式可讓您從下列來源載入封裝： [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器、.ispac 專案檔案、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統。  
+  **dtexec** 命令提示字元公用程式可用於設定及執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件。 **dtexec** 公用程式可存取所有封裝組態及執行功能，例如參數、連線、屬性、變數、記錄與進度指標。 **dtexec** 公用程式可讓您從下列來源載入套件：[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器、.ispac 專案檔、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、[!INCLUDE[ssIS](../../includes/ssis-md.md)] 套件存放區與檔案系統。  
   
 > **注意：** 當您使用最新版 **dtexec** 公用程式來執行舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]所建立的封裝，此公用程式會暫時將封裝升級為目前的封裝格式。 但您無法使用 **dtexec** 公用程式儲存這些升級的封裝。 如需如何永久地將封裝升級到最新版本，請參閱 [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md)。  
   
- 本主題包含下列各節：  
+ 這個主題包括下列各節：  
   
 -   [Integration Services 伺服器及專案檔案](#server)  
   
@@ -107,7 +107,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  封裝執行期間， **dtexec** 可能會傳回結束碼。 結束碼可用來擴展 ERRORLEVEL 變數，讓您可以在批次檔內的條件陳述式或分支邏輯中測試此變數的值。 下表列出 **dtexec** 公用程式結束時所能設定的值。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |0|順利執行封裝。|  
 |1|封裝失敗。|  
@@ -171,7 +171,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/CheckP[ointing]** _{on\off}_ ：(選擇性)。 設定一個值來決定在執行封裝期間，封裝是否要使用檢查點。 **on** 值可指定重新執行失敗的封裝。 當重新執行失敗的封裝時，執行階段引擎會使用檢查點，從失敗點重新啟動封裝。  
   
-     如果宣告的選項不含任何值，則預設值是 on。 如果此值設為 on，但找不到檢查點檔案，則封裝執行失敗。 如果沒有指定這個選項，就會保留封裝中所設定的值。 如需詳細資訊，請參閱 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+     如果宣告的選項不含任何值，則預設值是 on。 如果此值設為 on，但找不到檢查點檔案，則封裝執行失敗。 如果沒有指定這個選項，就會保留封裝中所設定的值。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
      dtexec 的 **/CheckPointing on** 選項相當於將封裝的 **SaveCheckpoints** 屬性設定為 True，以及將 **CheckpointUsage** 屬性設定為 Always。  
   
@@ -267,7 +267,7 @@ dtexec /option [value] [/option [value]]...
   
      如需有關偵錯傾印檔案的詳細資訊，請參閱＜ [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)＞。  
   
--   **/Env[Reference]** _環境參考識別碼_：(選擇性)。 針對部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝，指定封裝執行所使用的環境參考 (ID)。 設定為繫結至變數的參數將使用環境中包含之變數的值。  
+-   **/Env[Reference]** _environment reference ID_：(選擇性)。 針對部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝，指定封裝執行所使用的環境參考 (ID)。 設定為繫結至變數的參數將使用環境中包含之變數的值。  
   
      您同時使用了 **/Env[Reference]** 選項以及 **/ISServer** 與 **/Server** 選項。  
   
@@ -276,7 +276,7 @@ dtexec /option [value] [/option [value]]...
 
   *filespec* 引數指定封裝的路徑和檔案名稱。 您可以指定路徑為通用命名慣例 (UNC) 路徑或本機路徑。 如果 *filespec* 引數中指定的路徑或檔案名稱包含空格，必須將 *filespec* 引數括以引號。  
   
-     **/File** 選項不可與 **/DTS** 或 **/SQL** 選項並用。 若指定了多個選項， **dtexec** 便會失敗。  
+-   **/File** 選項不可與 **/DTS** 或 **/SQL** 選項並用。 若指定了多個選項， **dtexec** 便會失敗。
   
 -   **/H[elp]** [*option_name*]：(選擇性)。 顯示選項的說明，或顯示指定之 *option_name* 的說明，並關閉公用程式。  
   
@@ -334,7 +334,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Pack[age]** _PackageName_：(選擇性)。 指定所執行的封裝。 當您從 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]執行封裝時，主要會使用這個參數。  
   
--   **/P[assword]** _密碼_：(選擇性)。 允許擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證所保護的封裝。 此選項會與 **/User** 選項一起使用。 若省略 **/Password** 選項而使用 **/User** 選項，將會使用空白密碼。 *password* 值可括以引號。  
+-   **/P[assword]** _password_：(選擇性)。 允許擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證所保護的封裝。 此選項會與 **/User** 選項一起使用。 若省略 **/Password** 選項而使用 **/User** 選項，將會使用空白密碼。 *password* 值可括以引號。  
   
     > **重要！！** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
@@ -364,9 +364,9 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Proj[ect]** _ProjectFile_：(選擇性)。 指定要從中擷取所執行之封裝的專案。 *ProjectFile* 引數會指定 .ispac 檔案名稱。 當您從 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]執行封裝時，主要會使用這個參數。  
   
--   **/Rem** _註解_：(選擇性)。 在命令提示字元或命令檔中加入註解。 引數是選擇性的。 *comment* 的值是一個字串，它必須以引號括住，或不包含空格。 如果未指定引數，將會插入空白行。 命令取得階段將會捨棄*comment* 值。  
+-   **/Rem** _comment_：(選擇性)。 在命令提示字元或命令檔中加入註解。 引數是選擇性的。 *comment* 的值是一個字串，它必須以引號括住，或不包含空格。 如果未指定引數，將會插入空白行。 命令取得階段將會捨棄*comment* 值。  
   
--   **/Rep[orting]** _層級_ [ *;event_guid_or_name*[ *;event_guid_or_name*[...]]：(選擇性)。 指定要報告的訊息類型。 *level* 可用的報告選項如下：  
+-   **/Rep[orting]** _level_ [ *;event_guid_or_name*[ *;event_guid_or_name*[...]]：(選擇性)。 指定要報告的訊息類型。 *level* 可用的報告選項如下：  
   
      **N** ...無報告。  
   
@@ -424,7 +424,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/SQ[L]** _package_path_：載入儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中 **msdb** 資料庫內的套件。 儲存在 **msdb** 資料庫中的封裝是使用封裝部署模型所部署。 若要使用專案部署模型，執行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝，請使用 **/ISServer** 選項。 如需有關封裝和專案部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)＞。   
   
-     *package_path* 引數指定要擷取的封裝名稱。 如果路徑包含資料夾，則其結尾應為反斜線 ("\\")。 *Package_path* 值可以加上引號。 如果 *package_path* 引數中指定的路徑或檔案名稱包含空格，則必須將 *package_path* 引數以引號括住。  
+     *package_path* 引數指定要擷取的封裝名稱。 如果路徑包含資料夾，則其結尾應為反斜線 ("\\")。 *Package_path* 值可以加上引號。 如果 *package_path* 引數中指定的路徑或檔案名稱包含空格，必須將 *package_path* 引數括以引號。  
   
      **/User**、 **/Password**和 **/Server** 選項可以與 **/SQL** 選項一起使用。  
   
@@ -458,7 +458,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/VerifyP[ackageID]** _packageID_：(選擇性)。 將封裝 GUID 與 *package_id* 引數所指定的值進行比較，藉此驗證要執行之封裝的 GUID。  
   
--   **/VerifyS[igned]** ：(選擇性)。 使 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 檢查封裝的數位簽章。 如果此封裝未簽署或是簽章無效，此封裝就會失敗。 如需詳細資訊，請參閱 [使用數位簽章來識別封裝的來源](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)。  
+-   **/VerifyS[igned]** ：(選擇性)。 使 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 檢查封裝的數位簽章。 如果此封裝未簽署或是簽章無效，此封裝就會失敗。 如需詳細資訊，請參閱 [Identify the Source of Packages with Digital Signatures](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)(使用數位簽章識別封裝來源)。  
   
     > **重要！！** 當 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 設定為檢查封裝的簽章時，將只會檢查數位簽章是否存在、是否有效，以及是否來自信任的來源。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 不會檢查封裝是否經過變更。  
   
@@ -492,9 +492,9 @@ dtexec /option [value] [/option [value]]...
 -   **/Set** 與 **/ConfigFile** 選項會依據發現的順序進行處理。  
   
 ##  <a name="example"></a> 範例  
- 下列範例示範如何使用 **dtexec** 命令提示字元公用程式，設定及執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
+ 下列範例示範如何使用 **dtexec** 命令提示字元公用程式來設定及執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件。  
   
- **執行封裝**  
+ **[Running Packages]**  
   
  若要利用 Windows 驗證來執行儲存至 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封裝，請使用下列程式碼：  
   
