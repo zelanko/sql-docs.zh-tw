@@ -113,7 +113,13 @@
         "sql-server/**/*.md": "GitHub",
         "ssms/**/*.md": "GitHub",
         "tools/**/*.md": "GitHub",
-        "t-sql/**/*.md": "GitHub"
+        "t-sql/**/*.md": "GitHub",
+        "kb-support/*.md": "None",
+        "kb-support/**/*.md": "None"
+      },
+      "disable_contribution_on_translation_quality": {
+        "kb-support/*.md": ["HT","MT","MTE75","MTE95","Blank"],
+        "kb-support/**/*.md": ["HT","MT","MTE75","MTE95","Blank"]
       },
       "feedback_product_url": {
         "azure-data-studio/**/*.md": "https://github.com/microsoft/azuredatastudio/issues/"
@@ -139,8 +145,6 @@
         "2014/database-engine/log-shipping/windows/**/*.md": "SQL Server 2014 Log Shipping",
         "2014/ssms/**/*.md": "SQL Server Management Studio (SSMS)",
         "2014/data-quality-services/**/*.md": "Data Quality Services (DQS)",
-
-    
         "advanced-analytics/**/*.md": "SQL Server Machine Learning Services",
         "analysis-services/**/*.md": "",
         "analytics-platform-system/**/*.md": "Parallel Data Warehouse",
@@ -164,9 +168,6 @@
         "ssms/visual-db-tools/**/*.md": "Visual Database Tools",
         "tools/ssbdiagnose/**/*.md": "ssbdiagnose",
         "data-quality-services/**/*.md": "Data Quality Services (DQS)"
-
-
-
       },
       "breadcrumb_path": {
         "**/*.md": "~/breadcrumb/toc.yml",
