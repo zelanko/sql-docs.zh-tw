@@ -9,14 +9,14 @@ ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 21de137cefcfc61e91739ff33b2a9f0de4c3a05f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194380"
 ---
 # <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>建立具有參數的鑽研 (RDLC) 報表 - ReportViewer
-[鑽研](https://technet.microsoft.com/library/ff519554.aspx) 報表是使用者從另一個報表按一下連結所開啟的報表。 鑽研報表通常包含有關原始摘要報表之項目的詳細資料。 本教學課程將逐步引導您進行下列課程，以 [本機模式報表](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)建立包含參數和查詢的鑽研報表。  
+[鑽研](https://technet.microsoft.com/library/ff519554.aspx) 報表是使用者從另一個報表按一下連結所開啟的報表。 鑽研報表通常包含有關原始摘要報表之項目的詳細資料。 本教學課程將逐步引導您進行下列課程，以[本機模式報表](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)建立包含參數和查詢的鑽研報表。  
   
 ## <a name="requirements"></a>需求  
 若要使用此逐步解說，您必須能夠存取 **AdventureWorks2014** 範例資料庫。 如需如何取得 **AdventureWorks2014** 範例資料庫的詳細資訊，請參閱 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)。  
@@ -34,7 +34,7 @@ ms.locfileid: "63194380"
 [第 6 課：將 ReportViewer 控制項加入到應用程式](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)  
 [第 7 課：在父報表上加入鑽研動作](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)  
 [第 8 課：建立資料篩選](../reporting-services/lesson-8-create-a-data-filter.md)  
-[Lesson 9: Build and Run the Application](../reporting-services/lesson-9-build-and-run-the-application.md)  
+[第 9 課：建置並執行應用程式](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [Reporting Services 教學課程 &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)  

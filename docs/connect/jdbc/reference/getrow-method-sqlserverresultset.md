@@ -16,10 +16,10 @@ ms.assetid: a266e3bc-05c2-44e2-9346-125ae6780216
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4c9d83bbdb3f724c7d28d3881e7f27c1c0f70584
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980281"
 ---
 # <a name="getrow-method-sqlserverresultset"></a>getRow 方法 (SQLServerResultSet)
@@ -40,7 +40,7 @@ public int getRow()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getRow 方法是由 java.sql.ResultSet 介面中的 getRow 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,10 +1,7 @@
 ---
-title: 移除伺服器群組 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/07/2017
+title: 移除伺服器群組
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,16 +13,22 @@ helpviewer_keywords:
 ms.assetid: 1f3ea9ee-67c0-46ed-bf02-ceca92d3b8fe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c11853a8326cba737c6c291aa4897ffff5366130
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/07/2017
+ms.openlocfilehash: 026b25a81401f1c21523a80cca9003c41b9606ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266052"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256237"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>移除伺服器群組 (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中移除 [已註冊的伺服器] 中的伺服器群組。 您可以隨時刪除伺服器群組。 如果不是空的伺服器群組，那麼被刪除的伺服器群組內包含的伺服器或伺服器群組，也將會一併刪除。 刪除伺服器群組織前，請將想要保留的伺服器或伺服器群組移動到新的伺服器群組。  
+
+本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中移除 [已註冊的伺服器] 中的伺服器群組。 您可以隨時刪除伺服器群組。 如果不是空的伺服器群組，那麼被刪除的伺服器群組內包含的伺服器或伺服器群組，也將會一併刪除。 刪除伺服器群組織前，請將想要保留的伺服器或伺服器群組移動到新的伺服器群組。  
   
 ##  <a name="SSMSProcedure"></a>  
   

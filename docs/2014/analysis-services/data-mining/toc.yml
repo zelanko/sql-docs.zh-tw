@@ -46,7 +46,7 @@
       items:
         - name: Microsoft 羅吉斯迴歸演算法技術參考
           href: microsoft-logistic-regression-algorithm-technical-reference.md
-        - name: Mining Model Content for Logistic Regression Models
+        - name: 羅吉斯迴歸模型的採礦模型內容
           href: mining-model-content-for-logistic-regression-models.md
         - name: 羅吉斯迴歸模型查詢範例
           href: logistic-regression-model-query-examples.md
@@ -62,11 +62,11 @@
     - name: Microsoft Neural Network Algorithm
       href: microsoft-neural-network-algorithm.md
       items:
-        - name: Microsoft Neural Network Algorithm Technical Reference
+        - name: Microsoft 類神經網路演算法技術參考資料
           href: microsoft-neural-network-algorithm-technical-reference.md
         - name: 類神經網路模型的採礦模型內容
           href: mining-model-content-for-neural-network-models-analysis-services-data-mining.md
-        - name: Neural Network Model Query Examples
+        - name: 類神經網路模型查詢範例
           href: neural-network-model-query-examples.md
     - name: Microsoft 時序叢集演算法
       href: microsoft-sequence-clustering-algorithm.md
@@ -144,7 +144,7 @@
       href: feature-selection-data-mining.md
     - name: 模型旗標 (資料採礦)
       href: modeling-flags-data-mining.md
-    - name: Mining Model Content
+    - name: 採礦模型內容
       href: mining-model-content-analysis-services-data-mining.md
     - name: 採礦模型的鑽研
       href: drillthrough-on-mining-models.md
@@ -324,7 +324,7 @@
           href: add-mining-models-to-a-structure-analysis-services-data-mining.md
         - name: 自訂採礦模型和結構
           href: customize-mining-models-and-structure.md
-    - name: '[資料採礦設計師]'
+    - name: 資料採礦設計師
       href: data-mining-designer.md
     - name: 資料採礦模型檢視器
       href: data-mining-model-viewers.md

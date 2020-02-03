@@ -186,7 +186,7 @@
       href: report-builder/print-reports-report-builder-and-ssrs.md
     - name: 儲存報表 +
       href: report-builder/saving-reports-report-builder.md
-    - name: Security
+    - name: 安全性
       href: report-builder/security-report-builder.md
     - name: 安裝、解除安裝和報表產生器支援
       href: install-uninstall-and-report-builder-support.md

@@ -19,7 +19,7 @@
       href: formatting/server-side-xml-formatting-sqlxml-4-0.md
     - name: 用戶端 XML 格式 (SQLXML 4.0)
       href: formatting/client-side-xml-formatting-sqlxml-4-0.md
-    - name: 用戶端與伺服器端 XML 格式 (SQLXML 4.0)
+    - name: 用戶端和伺服器端的 XML 格式化 (SQLXML 4.0)
       href: formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
 - name: SQLXML 4.0 中的註解式 XSD 結構描述
   href: annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md

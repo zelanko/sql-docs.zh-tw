@@ -104,7 +104,7 @@
           href: ../analytics-platform-system/reserved-database-names.md
         - name: tempdb 資料庫
           href: ../analytics-platform-system/tempdb-database.md
-        - name: master 資料庫 (master database)
+        - name: 主要資料庫
           href: ../analytics-platform-system/master-database.md
     - name: 使用者工作階段
       href: ../analytics-platform-system/user-sessions.md
@@ -113,7 +113,7 @@
       items:
         - name: 工作負載管理工作
           href: ../analytics-platform-system/workload-management-tasks.md
-- name: Security
+- name: 安全性
   items:
     - name: 透明資料加密
       href: ../analytics-platform-system/transparent-data-encryption.md

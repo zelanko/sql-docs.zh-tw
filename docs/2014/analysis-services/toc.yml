@@ -189,7 +189,7 @@
       href: translations-analysis-services.md
     - name: 定義貨幣轉換
       href: currency-conversions-analysis-services.md
-    - name: 秘訣和最佳作法
+    - name: 祕訣和最佳作法
       href: globalization-tips-and-best-practices-analysis-services.md
 - name: Analysis Services 中的記錄
   href: instances/log-operations-in-analysis-services.md
@@ -368,7 +368,7 @@
           href: lesson-10-create-partitions.md
         - name: 第 12 課：建立角色
           href: lesson-11-create-roles.md
-        - name: 第 13 課：在 Excel 中分析
+        - name: 第 13 課：在 Excel 中進行分析
           href: lesson-12-analyze-in-excel.md
         - name: 第 14 課：部署
           href: lesson-13-deploy.md
@@ -442,7 +442,7 @@
               href: 4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
             - name: 定義未知的成員和 Null 處理屬性
               href: lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
-        - name: 第 5 課：定義維度和量值群組之間的關聯性
+        - name: 第 5 課：在維度和量值群組之間定義關聯性
           href: lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
           items:
             - name: 定義參考關聯性
@@ -477,7 +477,7 @@
               href: lesson-9-1-defining-and-browsing-perspectives.md
             - name: 定義和瀏覽翻譯
               href: lesson-9-2-defining-and-browsing-translations.md
-        - name: 第 10 課：定義系統管理角色
+        - name: 第 10 課：定義管理角色
           href: lesson-10-defining-administrative-roles.md
           items:
             - name: 授與處理資料庫權限

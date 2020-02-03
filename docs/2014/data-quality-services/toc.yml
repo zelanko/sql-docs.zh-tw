@@ -128,7 +128,7 @@
       items:
         - name: 為 DQS 記錄檔設定嚴重性層級
           href: configure-severity-levels-for-dqs-log-files.md
-        - name: Configure Advanced Settings for DQS Log Files
+        - name: 設定 DQS 記錄檔的進階設定
           href: configure-advanced-settings-for-dqs-log-files.md
     - name: 管理 DQS 資料庫
       href: manage-dqs-databases.md

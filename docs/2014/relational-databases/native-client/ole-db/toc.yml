@@ -179,7 +179,7 @@
       href: ../../native-client-ole-db-transactions/supporting-distributed-transactions.md
     - name: 隔離等級 (OLE DB)
       href: ../../native-client-ole-db-transactions/isolation-levels-ole-db.md
-- name: 錯誤
+- name: Errors
   href: ../../native-client-ole-db-errors/errors.md
   items:
     - name: 傳回碼

@@ -48,7 +48,7 @@
               href: ../dmx/select-from-model-dmx.md
             - name: SELECT FROM <structure>.CASES
               href: ../dmx/select-from-structure-cases.md
-            - name: Delete
+            - name: 刪除
               href: ../dmx/delete-dmx.md
             - name: INSERT INTO
               href: ../dmx/insert-into-dmx.md
@@ -185,11 +185,11 @@
               href: ../dmx/less-than-or-equal-to-dmx.md
             - name: '>= (大於或等於)'
               href: ../dmx/greater-than-or-equal-to-dmx.md
-            - name: 與
+            - name: AND
               href: ../dmx/and-dmx.md
             - name: NOT
               href: ../dmx/not-dmx.md
-            - name: 或
+            - name: OR
               href: ../dmx/or-dmx.md
             - name: + (正)
               href: ../dmx/positive-dmx.md

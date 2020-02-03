@@ -26,7 +26,7 @@
       href: accessibility-for-people-with-disabilities.md
     - name: 提供關於 SQL Server 2014 的回函
       href: providing-feedback-for-sql-server-2014.md
-- name: Backward Compatibility
+- name: 回溯相容性
   href: backward-compatibility.md
   items:
     - name: SQL Server 回溯相容性

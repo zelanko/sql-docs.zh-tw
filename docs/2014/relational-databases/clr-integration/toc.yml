@@ -102,7 +102,7 @@
     - name: 內容連接
       href: data-access/context-connection.md
       items:
-        - name: 一般連線與內容連接
+        - name: 正常連接與內容連接的比較
           href: data-access/context-connections-vs-regular-connections.md
         - name: 一般和內容連接的限制
           href: data-access/context-connections-and-regular-connections-restrictions.md

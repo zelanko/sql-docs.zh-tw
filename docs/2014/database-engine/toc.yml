@@ -34,7 +34,7 @@
           href: breaking-changes-to-management-tools-features-in-sql-server-2014.md
         - name: SQL Server 2014 中管理工具功能的行為變更
           href: behavior-changes-to-management-tools-features-in-sql-server-2014.md
-- name: 商務持續性
+- name: 業務持續性
   href: ../sql-server/failover-clusters/high-availability-solutions-sql-server.md
   items:
     - name: AlwaysOn 可用性群組

@@ -1,6 +1,6 @@
 ---
-title: Analysis Server &lt;伺服器&gt; (SQL Server 設定管理員) | Microsoft Docs
-ms.custom: ''
+title: Analysis Server &lt;伺服器&gt; (SQL Server 設定管理員)
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 88e0f096-d746-4b7d-a5a4-73c5dc139f30
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bed39851559c1206235c5a3d9f4bcb02ab0bf508
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: acc9589278f053663912dff373c3c34291a09707
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010340"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306540"
 ---
 # <a name="analysis-server-ltservergt-sql-server-configuration-manager"></a>Analysis Server &lt;伺服器&gt; (SQL Server 設定管理員)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

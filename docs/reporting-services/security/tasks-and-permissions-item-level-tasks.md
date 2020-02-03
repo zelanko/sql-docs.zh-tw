@@ -11,10 +11,10 @@ ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7224b99b721a48f14467da7479137fb4c61d4da9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570272"
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>工作和權限 - 項目層級工作
@@ -28,7 +28,7 @@ ms.locfileid: "65570272"
   
  共用資料集使用與報表相同的權限集合。 報表組件使用與資源相同的權限集合。  
   
-|工作|適用於項目|權限|  
+|Task|適用於項目|權限|  
 |----------|---------------------|-----------------|  
 |取用報表|報表|讀取內容<br /><br /> 讀取報表定義<br /><br /> 讀取屬性|  
 |取用報表|共用資料集|讀取內容<br /><br /> 讀取報表定義<br /><br /> 讀取屬性|  

@@ -16,10 +16,10 @@ ms.assetid: e1d7e267-d9de-407a-b1a9-abdc2623478d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2139a25c4032f4f95b173d4cb5e78fbbc62495f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973543"
 ---
 # <a name="setnull-method-javalangstring-int"></a>setNull 方法 (java.lang.String, int)
@@ -47,7 +47,7 @@ public void setNull(java.lang.String sCol,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此 setNull 方法由 java.sql.CallableStatement 介面中的 setNull 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

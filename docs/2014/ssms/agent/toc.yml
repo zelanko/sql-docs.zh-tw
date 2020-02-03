@@ -12,7 +12,7 @@
   href: autostart-sql-server-agent-sql-server-management-studio.md
 - name: Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
   href: set-sql-server-alias-for-sql-server-agent-service-ssms.md
-- name: 'Start, Stop, or Pause the SQL Server Agent Service'
+- name: 啟動、停止或暫停 SQL Server Agent 服務
   href: start-stop-or-pause-the-sql-server-agent-service.md
 - name: SQL Server Agent 錯誤記錄檔
   href: sql-server-agent-error-log.md
@@ -37,7 +37,7 @@
           href: configure-a-user-to-create-and-manage-sql-server-agent-jobs.md
         - name: 建立 SQL Server Agent Proxy
           href: create-a-sql-server-agent-proxy.md
-        - name: Modify a SQL Server Agent Proxy
+        - name: 修改 SQL Server Agent Proxy
           href: modify-a-sql-server-agent-proxy.md
         - name: Delete a SQL Server Agent Proxy
           href: delete-a-sql-server-agent-proxy.md
@@ -49,7 +49,7 @@
           items:
             - name: 建立作業
               href: create-a-job.md
-            - name: Give Others Ownership of a Job
+            - name: 將作業擁有權授與其他人
               href: give-others-ownership-of-a-job.md
             - name: Set Up the Job History Log
               href: set-up-the-job-history-log.md
@@ -62,7 +62,7 @@
               href: delete-a-job-category.md
             - name: 將作業指派至作業類別目錄
               href: assign-a-job-to-a-job-category.md
-            - name: Change the Membership of a Job Category
+            - name: 變更作業類別的成員資格
               href: change-the-membership-of-a-job-category.md
             - name: 列出作業類別目錄資訊
               href: list-job-category-information.md
@@ -96,7 +96,7 @@
           items:
             - name: Create a Schedule
               href: create-a-schedule.md
-            - name: Schedule a Job
+            - name: 排定作業執行時間
               href: schedule-a-job.md
             - name: 設定 CPU 閒置與持續時間 (SQL Server Management Studio)
               href: set-cpu-idle-time-and-duration-sql-server-management-studio.md
@@ -107,12 +107,12 @@
               href: start-a-job.md
             - name: 停止作業
               href: stop-a-job.md
-            - name: Disable or Enable a Job
+            - name: 停用或啟用作業
               href: disable-or-enable-a-job.md
         - name: 指定作業回應
           href: specify-job-responses.md
           items:
-            - name: Notify an Operator of Job Status
+            - name: 通知操作員作業狀態
               href: notify-an-operator-of-job-status.md
             - name: Write the Job Status to the Windows Application Log
               href: write-the-job-status-to-the-windows-application-log.md
@@ -123,9 +123,9 @@
               href: view-a-job.md
             - name: 檢視作業記錄
               href: view-the-job-history.md
-            - name: Clear the Job History Log
+            - name: 清除作業歷程記錄
               href: clear-the-job-history-log.md
-            - name: Resize the Job History Log
+            - name: 調整作業記錄大小
               href: resize-the-job-history-log.md
             - name: Modify a Job
               href: modify-a-job.md
@@ -134,7 +134,7 @@
           items:
             - name: 刪除一個或多個作業
               href: delete-one-or-more-jobs.md
-            - name: Automatically Delete a Job
+            - name: 自動刪除作業
               href: automatically-delete-a-job.md
         - name: 監視作業活動
           href: monitor-job-activity.md
@@ -151,9 +151,9 @@
           items:
             - name: 建立 WMI 事件警示
               href: create-a-wmi-event-alert.md
-            - name: Format Pager Addresses for Alerts
+            - name: 設定警示的呼叫器位址格式
               href: format-pager-addresses-for-alerts.md
-            - name: Edit an Alert
+            - name: 編輯警示
               href: edit-an-alert.md
             - name: Delete an Alert
               href: delete-an-alert.md
@@ -166,9 +166,9 @@
               href: create-an-alert-using-an-error-number.md
             - name: Create an Alert Using Severity Level
               href: create-an-alert-using-severity-level.md
-            - name: Send SQL Server Agent Error Messages
+            - name: 傳送 SQL Server Agent 錯誤訊息
               href: send-sql-server-agent-error-messages.md
-            - name: Disable or Reactivate an Alert
+            - name: 停用或重新啟用警示
               href: disable-or-reactivate-an-alert.md
         - name: 操作員
           href: operators.md
@@ -193,7 +193,7 @@
         - name: 建立多伺服器環境
           href: create-a-multiserver-environment.md
           items:
-            - name: Make a Master Server
+            - name: 設定為主要伺服器
               href: make-a-master-server.md
             - name: 設為目標伺服器
               href: make-a-target-server.md
@@ -211,9 +211,9 @@
           href: change-the-scheduling-details-for-a-sql-server-agent-master-job.md
         - name: 將步驟加入至 SQL Server Agent 主要作業
           href: ../object/add-steps-to-a-sql-server-agent-master-job.md
-        - name: Change Steps of a SQL Server Agent Master Job
+        - name: 變更 SQL Server Agent Master Job 的步驟
           href: change-steps-of-a-sql-server-agent-master-job.md
-        - name: Remove Steps from a SQL Server Agent Master Job
+        - name: 從 SQL Server Agent 主要作業中移除步驟
           href: remove-steps-from-a-sql-server-agent-master-job.md
         - name: 修改與 SQL Server Agent 主要作業相關聯的目標伺服器
           href: modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md
@@ -224,7 +224,7 @@
         - name: 管理整個企業的作業
           href: manage-jobs-across-an-enterprise.md
           items:
-            - name: Modify the Target Servers for a Job
+            - name: 修改作業的目標伺服器
               href: modify-the-target-servers-for-a-job.md
             - name: Synchronize Target Server Clocks (SQL Server Management Studio)
               href: synchronize-target-server-clocks-sql-server-management-studio.md
@@ -237,7 +237,7 @@
           items:
             - name: Set the Polling Interval for Target Servers
               href: set-the-polling-interval-for-target-servers.md
-            - name: Force a Target Server to Poll the Master Server
+            - name: 強制目標伺服器輪詢主要伺服器
               href: force-a-target-server-to-poll-the-master-server.md
         - name: 管理事件
           href: manage-events.md

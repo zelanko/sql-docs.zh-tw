@@ -78,7 +78,7 @@
           href: sql-server-certificates-and-asymmetric-keys.md
     - name: 驗證存取
       items:
-        - name: 主體
+        - name: Principals
           href: authentication-access/principals-database-engine.md
         - name: 伺服器層級角色
           href: authentication-access/server-level-roles.md
@@ -88,7 +88,7 @@
           href: authentication-access/application-roles.md
         - name: 認證
           href: authentication-access/credentials-database-engine.md
-        - name: '[安全性實體]'
+        - name: 安全性實體
           href: securables.md
         - name: 自主資料庫使用者
           href: contained-database-users-making-your-database-portable.md

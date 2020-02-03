@@ -10,7 +10,7 @@
           tocHref: /sql/2014-toc/
           topicHref: /sql/2014-toc/books-online-for-sql-server-2014
           items:
-            - name: 使用者入門
+            - name: 開始使用
               tocHref: /sql/getting-started/
               topicHref: /sql/getting-started/getting-started-sql-server-2014
             - name: Database Engine
@@ -33,7 +33,7 @@
                 - name: 維護計畫
                   tocHref: /sql/relational-databases/maintenance-plans/
                   topicHref: /sql/relational-databases/maintenance-plans/maintenance-plans
-                - name: '[資源管理員]'
+                - name: 資源管理員
                   tocHref: /sql/relational-databases/resource-governor/
                   topicHref: /sql/relational-databases/resource-governor/resource-governor
                 - name: Database Mail
@@ -45,13 +45,13 @@
                 - name: SQL 追蹤
                   tocHref: /sql/relational-databases/sql-trace/
                   topicHref: /sql/relational-databases/sql-trace/sql-trace
-                - name: Profiler
+                - name: 分析工具
                   tocHref: /sql/tools/sql-server-profiler/
                   topicHref: /sql/tools/sql-server-profiler/sql-server-profiler
                 - name: 追蹤變更
                   tocHref: /sql/relational-databases/track-changes/
                   topicHref: /sql/relational-databases/track-changes/track-data-changes-sql-server
-                - name: 記錄檔
+                - name: 記錄
                   tocHref: /sql/relational-databases/logs/
                   topicHref: /sql/relational-databases/logs/log-file-viewer
                 - name: 效能
@@ -85,7 +85,7 @@
                     - name: 功能表說明
                       tocHref: /sql/ssms/menu-help/
                       topicHref: /sql/ssms/menu-help/sql-server-management-studio-menu-help
-                    - name: Agent
+                    - name: 代理程式
                       tocHref: /sql/ssms/agent/
                       topicHref: /sql/ssms/agent/sql-server-agent
                 - name: 管理
@@ -103,7 +103,7 @@
                 - name: 資料收集
                   tocHref: /sql/relational-databases/data-collection/
                   topicHref: /sql/relational-databases/data-collection/data-collection
-                - name: 效能監視
+                - name: 效能監視器
                   tocHref: /sql/relational-databases/performance-monitor/
                   topicHref: /sql/relational-databases/performance-monitor/monitor-resource-usage-system-monitor
                 - name: 容錯移轉叢集
@@ -118,7 +118,7 @@
                 - name: 記錄傳送
                   tocHref: /sql/database-engine/log-shipping/
                   topicHref: /sql/database-engine/log-shipping/about-log-shipping-sql-server
-                - name: Security
+                - name: 安全性
                   tocHref: /sql/relational-databases/security/
                   topicHref: /sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
                 - name: 公用程式參考
@@ -208,10 +208,10 @@
                 - name: Packages
                   tocHref: /sql/integration-services/packages/
                   topicHref: /sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages
-                - name: 監視器
+                - name: 監視
                   tocHref: /sql/integration-services/performance/
                   topicHref: /sql/integration-services/performance/monitor-running-packages-and-other-operations
-                - name: Security
+                - name: 安全性
                   tocHref: /sql/integration-services/security/
                   topicHref: /sql/integration-services/security/security-overview-integration-services
                 - name: 使用指令碼來擴充套件
@@ -300,22 +300,22 @@
                     - name: 錯誤和事件
                       tocHref: /sql/relational-databases/replication/errors-events/
                       topicHref: /sql/relational-databases/replication/errors-events/errors-events-replication
-                    - name: 合併式
+                    - name: 合併
                       tocHref: /sql/relational-databases/replication/merge/
                       topicHref: /sql/relational-databases/replication/merge/merge-replication
-                    - name: 監視器
+                    - name: 監視
                       tocHref: /sql/relational-databases/replication/monitor/
                       topicHref: /sql/relational-databases/replication/monitoring-replication
                     - name: 非 SQL
                       tocHref: /sql/relational-databases/replication/non-sql/
                       topicHref: /sql/relational-databases/replication/non-sql/heterogeneous-database-replication
-                    - name: 發行
+                    - name: 發佈
                       tocHref: /sql/relational-databases/replication/publish/
                       topicHref: /sql/relational-databases/replication/publish/publish-data-and-database-objects
-                    - name: 異動
+                    - name: 交易式
                       tocHref: /sql/relational-databases/replication/transactional/
                       topicHref: /sql/relational-databases/replication/transactional/transactional-replication
-                    - name: Security
+                    - name: 安全性
                       tocHref: /sql/relational-databases/replication/security/
                       topicHref: /sql/relational-databases/replication/security/view-and-modify-replication-security-settings
                 - name: Native Client 程式設計
@@ -360,7 +360,7 @@
                 - name: 訂閱和排程
                   tocHref: /sql/reporting-services/subscriptions/
                   topicHref: /sql/reporting-services/subscriptions/subscriptions-and-delivery-reporting-services
-                - name: Security
+                - name: 安全性
                   tocHref: /sql/reporting-services/security/
                   topicHref: /sql/reporting-services/security/reporting-services-security-and-protection
                 - name: 工具
@@ -416,7 +416,7 @@
                     - name: 屬性
                       tocHref: /sql/analysis-services/scripting/properties/
                       topicHref: /sql/analysis-services/scripting/properties/properties-assl
-                    - name: 資料型別
+                    - name: 資料類型
                       tocHref: /sql/analysis-services/scripting/data-type/
                       topicHref: /sql/analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl
                 - name: XMLA

@@ -29,7 +29,7 @@
               href: establish-database-mirroring-session-windows-authentication.md
             - name: 移除資料庫鏡像
               href: removing-database-mirroring-sql-server.md
-        - name: Witness
+        - name: 見證
           items:
             - name: 使用 Windows 驗證加入見證
               href: add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md
@@ -59,7 +59,7 @@
           href: upgrading-mirrored-instances.md
         - name: 使用鏡像效能標準的警告臨界值與警示
           href: use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
-    - name: Security
+    - name: 安全性
       items:
         - name: 設定資料庫鏡像或 AlwaysOn 可用性群組的登入帳戶
           href: set-up-login-accounts-database-mirroring-always-on-availability.md
@@ -103,7 +103,7 @@
           href: troubleshoot-database-mirroring-configuration-sql-server.md
         - name: 在鏡像資料庫停機時間最少的情況下於系統上安裝 Service Pack
           href: ../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md
-    - name: Security
+    - name: 安全性
       items:
         - name: 端點
           href: the-database-mirroring-endpoint-sql-server.md

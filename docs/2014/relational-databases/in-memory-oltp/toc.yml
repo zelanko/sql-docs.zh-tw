@@ -7,7 +7,7 @@
 - name: 記憶體中 OLTP 程式碼範例
   href: in-memory-oltp-code-samples.md
   items:
-    - name: 示範：記憶體內部 OLTP 的效能改善
+    - name: 示範：記憶體中 OLTP 的效能改善
       href: demonstration-performance-improvement-of-in-memory-oltp.md
     - name: 示範記憶體中 OLTP 的 AdventureWorks 延伸模組
       href: ../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md

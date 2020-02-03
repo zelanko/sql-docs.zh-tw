@@ -44,7 +44,7 @@
   items:
     - name: SQL Server 元件
       href: sql-server-components.md
-    - name: 連接參數
+    - name: 連線參數
       href: connection-parameters.md
     - name: SQL Server 參數
       href: sql-server-parameters.md
@@ -335,7 +335,7 @@
       href: failover-cluster-report.md
     - name: 功能檢閱
       href: feature-review.md
-    - name: 安裝規則
+    - name: Installation Rules
       href: installation-rules.md
     - name: 功能規則
       href: feature-rules.md
@@ -349,7 +349,7 @@
       href: full-text-search-upgrade-options.md
     - name: 完成 - 安裝
       href: complete-installation.md
-    - name: 安裝的必要條件
+    - name: 安裝必要條件
       href: installation-prerequisites.md
     - name: 安裝進度
       href: installation-progress.md
@@ -424,7 +424,7 @@
   items:
     - name: 從命令提示字元安裝更新
       href: ../../database-engine/install-windows/installing-updates-from-the-command-prompt.md
-    - name: 如何：驗證 SQL Server 更新是否成功安裝
+    - name: 如何：驗證 SQL Server 更新的安裝是否成功
       href: how-to-validate-successful-installation-of-a-sql-server-update.md
     - name: SQL Server 服務安裝概觀
       href: overview-of-sql-server-servicing-installation.md

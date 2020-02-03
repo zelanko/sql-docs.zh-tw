@@ -81,7 +81,7 @@
       href: create-a-dimension-using-the-dimension-wizard.md
     - name: 使用現有的資料表建立維度
       href: create-a-dimension-by-using-an-existing-table.md
-    - name: Create a Time Dimension by Generating a Time Table
+    - name: 透過產生時間資料表來建立時間維度
       href: create-a-time-dimension-by-generating-a-time-table.md
     - name: 在資料來源中產生非時間資料表來建立維度
       href: create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md
@@ -245,7 +245,7 @@
       href: set-the-partition-slice-property-analysis-services.md
     - name: 設定分割區回寫
       href: set-partition-writeback.md
-- name: '[新增命名集]'
+- name: 計算
   href: calculations-in-multidimensional-models.md
   items:
     - name: 建立導出成員
@@ -269,7 +269,7 @@
       href: test-an-action.md
     - name: 使用範本建立動作
       href: use-a-template-to-create-an-action.md
-- name: 「檢視方塊」
+- name: 檢視方塊
   href: perspectives-in-multidimensional-models.md
 - name: 翻譯
   href: translations-in-multidimensional-models-analysis-services.md
@@ -278,7 +278,7 @@
   items:
     - name: Analysis Services 部署的需求和考量
       href: requirements-and-considerations-for-analysis-services-deployment.md
-- name: Multidimensional Databases
+- name: 多維度資料庫
   href: multidimensional-model-databases-ssas.md
   items:
     - name: 重新命名多維度資料庫

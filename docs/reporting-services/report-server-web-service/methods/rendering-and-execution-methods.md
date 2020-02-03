@@ -14,10 +14,10 @@ ms.assetid: 12626aad-f0be-4653-87d0-60eb3a3fff78
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 244541348f583ab5384a0ebfe7321509a421fe1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284543"
 ---
 # <a name="rendering-and-execution-methods"></a>轉譯及執行方法

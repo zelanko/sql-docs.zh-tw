@@ -1,6 +1,6 @@
 ---
-title: 開啟現有的方案 | Microsoft Docs
-ms.custom: ''
+title: 開啟現有的方案
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6cffd5ec-239a-4b21-a14c-15899ada3d27
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: adfb794b14b1ae5d16420a15e5d7c3f1710d1f6a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 81664a2329e212002000f4cbd7c75abe814b2cb0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264726"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251859"
 ---
 # <a name="open-an-existing-solution"></a>開啟現有的方案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -24,7 +24,7 @@
       href: contained-database-collations.md
     - name: 自主資料庫的安全性最佳做法
       href: security-best-practices-with-contained-databases.md
-    - name: 移轉至部分自主資料庫
+    - name: Migrate to a Partially Contained Database
       href: migrate-to-a-partially-contained-database.md
 - name: Azure 中的 SQL Server 資料檔案
   href: sql-server-data-files-in-microsoft-azure.md

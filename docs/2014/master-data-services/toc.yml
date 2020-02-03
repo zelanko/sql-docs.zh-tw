@@ -19,7 +19,7 @@
 - name: 連接
   href: microsoft-excel-add-in/connections-mds-add-in-for-excel.md
   items:
-    - name: 連接到 MDS 儲存機制
+    - name: 連接到 MDS 保存庫
       href: microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md
 - name: 載入資料
   href: microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md
@@ -151,7 +151,7 @@
   items:
     - name: 建立分葉成員
       href: create-a-leaf-member-master-data-services.md
-    - name: Create a Consolidated Member
+    - name: 建立合併成員
       href: create-a-consolidated-member-master-data-services.md
     - name: 刪除成員或集合
       href: delete-a-member-or-collection-master-data-services.md
@@ -250,7 +250,7 @@
       href: create-a-collection-master-data-services.md
     - name: 將成員加入至集合
       href: add-members-to-a-collection-master-data-services.md
-- name: Exporting Data
+- name: 匯出資料
   href: overview-exporting-data-master-data-services.md
 - name: 建立訂閱檢視
   href: create-a-subscription-view-to-export-data-master-data-services.md
@@ -308,7 +308,7 @@
       href: deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md
     - name: 編輯模型部署封裝
       href: edit-a-model-deployment-package.md
-- name: Security
+- name: 安全性
   href: security-master-data-services.md
 - name: 系統管理員
   href: administrators-master-data-services.md

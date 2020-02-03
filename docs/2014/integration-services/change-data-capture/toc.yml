@@ -82,7 +82,7 @@
           href: how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
         - name: 如何建立 SQL Server 變更資料庫執行個體
           href: how-to-create-the-sql-server-change-database-instance.md
-        - name: 如何管理 CDC 執行個體
+        - name: How to Manage a CDC Instance
           href: how-to-manage-a-cdc-instance.md
         - name: 如何編輯 CDC 執行個體屬性
           href: how-to-edit-the-cdc-instance-properties.md
@@ -92,7 +92,7 @@
       href: sql-server-connection-for-instance-creation.md
     - name: 進階連接屬性
       href: advanced-connection-properties.md
-    - name: 執行指令碼的 Oracle 認證
+    - name: Oracle Credentials for Running Script
       href: oracle-credentials-for-running-script.md
     - name: Oracle 補充記錄指令碼
       href: oracle-supplemental-logging-script.md
@@ -124,7 +124,7 @@
           href: connection-to-sql-server-for-delete.md
         - name: 建立及編輯 Oracle CDC 服務
           href: create-and-edit-an-oracle-cdc-service.md
-        - name: 管理 Oracle CDC 服務
+        - name: Manage an Oracle CDC Service
           href: manage-an-oracle-cdc-service.md
         - name: 為 CDC 準備 SQL Server
           href: prepare-sql-server-for-cdc.md

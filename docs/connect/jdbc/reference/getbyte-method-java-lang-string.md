@@ -16,10 +16,10 @@ ms.assetid: 2071c1e4-eca0-4ed4-b50f-85d3c861185d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cfe3f65125f9369630cac6e2f8e8cd4533107b82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953446"
 ---
 # <a name="getbyte-method-javalangstring"></a>getByte 方法 (java.lang.String)
@@ -45,7 +45,7 @@ public byte getByte(java.lang.String sCol)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getByte 方法是由 java.sql.CallableStatement 介面中的 getByte 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

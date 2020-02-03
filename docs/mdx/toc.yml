@@ -153,7 +153,7 @@
           href: ../mdx/comment-mdx.md
         - name: // (程式註解)
           href: ../mdx/comment-mdx-double-slash.md
-        - name: 所解碼的字元：(範圍)
+        - name: ': (範圍)'
           href: ../mdx/range-mdx.md
         - name: + (加)"
           href: ../mdx/add-mdx.md
@@ -175,13 +175,13 @@
           href: ../mdx/greater-than-mdx.md
         - name: '>= (大於或等於)'
           href: ../mdx/greater-than-or-equal-to-mdx.md
-        - name: 與
+        - name: AND
           href: ../mdx/and-mdx.md
         - name: IS
           href: ../mdx/is-mdx.md
         - name: NOT
           href: ../mdx/not-mdx.md
-        - name: 或
+        - name: OR
           href: ../mdx/or-mdx.md
         - name: XOR
           href: ../mdx/xor-mdx.md
@@ -202,7 +202,7 @@
           href: ../mdx/ascendants-mdx.md
         - name: Avg
           href: ../mdx/avg-mdx.md
-        - name: 座標軸
+        - name: 軸
           href: ../mdx/axis-mdx.md
         - name: BottomCount
           href: ../mdx/bottomcount-mdx.md
@@ -288,7 +288,7 @@
           href: ../mdx/exists-mdx.md
         - name: Extract
           href: ../mdx/extract-mdx.md
-        - name: 篩選
+        - name: Filter
           href: ../mdx/filter-mdx.md
         - name: FirstChild
           href: ../mdx/firstchild-mdx.md
@@ -364,7 +364,7 @@
           href: ../mdx/linregvariance-mdx.md
         - name: LookupCube
           href: ../mdx/lookupcube-mdx.md
-        - name: Max
+        - name: 最大值
           href: ../mdx/max-mdx.md
         - name: MeasureGroupMeasures
           href: ../mdx/measuregroupmeasures-mdx.md
@@ -378,11 +378,11 @@
           href: ../mdx/membertostr-mdx.md
         - name: MemberValue
           href: ../mdx/membervalue-mdx.md
-        - name: Min
+        - name: 最小值
           href: ../mdx/min-mdx.md
         - name: Mtd
           href: ../mdx/mtd-mdx.md
-        - name: '[屬性]'
+        - name: 名稱
           href: ../mdx/name-mdx.md
         - name: NameToSet
           href: ../mdx/nametoset-mdx.md
@@ -444,7 +444,7 @@
           href: ../mdx/strtovalue-mdx.md
         - name: Subset
           href: ../mdx/subset-mdx.md
-        - name: SUM
+        - name: Sum
           href: ../mdx/sum-mdx.md
         - name: Tail
           href: ../mdx/tail-mdx.md
@@ -472,7 +472,7 @@
           href: ../mdx/username-mdx.md
         - name: ValidMeasure
           href: ../mdx/validmeasure-mdx.md
-        - name: ReplTest1
+        - name: 值
           href: ../mdx/value-mdx.md
         - name: Var
           href: ../mdx/var-mdx.md

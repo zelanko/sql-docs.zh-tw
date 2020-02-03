@@ -1,23 +1,24 @@
 ---
-title: 如何：使用查詢編輯現有的資料表 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 使用查詢編輯現有的資料表
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 69a3486c837959cf4a92a7ee663225df16918928
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 56411bfffbaebeb07adf23b456a20523342db21d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929600"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241408"
 ---
 # <a name="how-to-edit-an-existing-table-using-queries"></a>如何：使用查詢編輯現有的資料表
+
 您可以撰寫 Transact\-SQL 查詢，編輯資料表的定義或資料。 若要以視覺化方式在資料表中檢視或輸入資料，請使用資料編輯器，如[連接的資料庫開發](../ssdt/connected-database-development.md)所述。  
   
 > [!WARNING]  
@@ -31,7 +32,7 @@ ms.locfileid: "67929600"
   
 3.  選取 [Address]  資料行的 [允許 Null]  方塊。 請注意，指令碼窗格中對應的程式碼會立即變更為 `NULL`。  
   
-4.  遵循[如何：使用 Power Buffer 更新連線的資料庫](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)主題中的步驟更新資料庫。  
+4.  遵循[如何：使用 Power Buffer 更新連接的資料庫](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)主題中的步驟更新資料庫。  
   
 ### <a name="to-populate-data-in-new-tables-using-a-transact-sql-query"></a>使用 Transact\-SQL 查詢在新資料表中填入資料  
   

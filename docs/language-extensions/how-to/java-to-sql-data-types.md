@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d1df57079acd79fc5370d0f2f198dc2d624d6983
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658829"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Java 與 SQL Server 支援的資料類型
@@ -28,7 +28,7 @@ ms.locfileid: "73658829"
 | bit      | boolean | | |
 | Tinyint      | short      | | |
 | Smallint | short      | | |
-| int | INT      | | |
+| Int | int      | | |
 | Real | FLOAT      | | |
 | Bigint | long      | | |
 | FLOAT | double      | | |
@@ -42,13 +42,13 @@ ms.locfileid: "73658829"
 | char(n) | String | 僅支援 UTF8 字串 | |
 | varchar(n) | String | 僅支援 UTF8 字串 | |
 | varchar(max) | String | 僅支援 UTF8 字串 | |
-| 日期 | java.sql.date  | | |
+| date | java.sql.date  | | |
 | NUMERIC | java.math.BigDecimal  | | |
-| Decimal | java.math.BigDecimal  | | |
+| decimal | java.math.BigDecimal  | | |
 | money | java.math.BigDecimal  | | |
 | SMALLMONEY | java.math.BigDecimal  | | |
 | smalldatetime | java.sql.timestamp  | | |
-| DATETIME | java.sql.timestamp  | | |
+| Datetime | java.sql.timestamp  | | |
 | datetime2 | java.sql.timestamp  | | |
 
 

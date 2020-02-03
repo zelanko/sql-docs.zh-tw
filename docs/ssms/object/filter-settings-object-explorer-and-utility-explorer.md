@@ -1,6 +1,6 @@
 ---
-title: 篩選設定 (物件總管與公用程式總管) | Microsoft Docs
-ms.custom: ''
+title: 篩選設定 (物件總管與公用程式總管)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e3a5cfecc4bf111e16da6451b56637abe9214c65
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe88e33261171b0c1584c89561e9fac2f081b816
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264112"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257177"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>篩選設定 (物件總管與公用程式總管)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,14 +28,14 @@ ms.locfileid: "68264112"
 **屬性**  
 顯示要根據該屬性進行篩選的屬性。  
   
-**[運算子]**  
+**運算子**  
 選取篩選將值套用到屬性的方式。 有下列的選項：  
   
 -   **等於**  
   
     篩選會顯示屬性和值完全相符的項目。  
   
--   **包含**  
+-   **Contains**  
   
     篩選會顯示屬性包含值的項目。 屬性可以包含其他文字。  
   

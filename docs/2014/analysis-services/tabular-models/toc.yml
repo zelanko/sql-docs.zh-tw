@@ -123,7 +123,7 @@
       href: create-a-relationship-between-two-tables-ssas-tabular.md
     - name: 刪除關聯性
       href: delete-relationships-ssas-tabular.md
-- name: '[新增命名集]'
+- name: 計算
   href: calculations-ssas-tabular.md
   items:
     - name: 了解表格式模型中的 DAX
@@ -150,7 +150,7 @@
       href: create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md
     - name: 在工作空間資料庫中處理資料分割
       href: process-partitions-in-the-workspace-database-ssas-tabular.md
-- name: 「檢視方塊」
+- name: 檢視方塊
   href: perspectives-ssas-tabular.md
   items:
     - name: 建立及管理檢視方塊
@@ -170,7 +170,7 @@
   items:
     - name: 從 SQL Server 資料工具部署
       href: deploy-from-sql-server-data-tools-ssas-tabular.md
-    - name: Deploy Model Solutions Using the Deployment Wizard
+    - name: 使用部署精靈部署模型解決方案
       href: ../multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md
       items:
         - name: 執行 Analysis Services 部署精靈

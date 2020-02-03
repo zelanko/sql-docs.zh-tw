@@ -1,4 +1,4 @@
-- name: 教學課程：撰寫 Transact-SQL 陳述式
+- name: 教學課程：撰寫國際性通用的 Transact-SQL 陳述式
   href: tutorial-writing-transact-sql-statements.md
   items:
     - name: 第 1 課：建立資料庫物件

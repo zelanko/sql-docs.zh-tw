@@ -5,7 +5,7 @@
       href: import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md
     - name: 使用 BULK INSERT 或 OPENROWSET(BULK...) 匯入大量資料
       href: import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md
-    - name: Prerequisites for Minimal Logging in Bulk Import
+    - name: 大量匯入中最低限度記錄的先決條件
       href: prerequisites-for-minimal-logging-in-bulk-import.md
 - name: 準備大量匯入資料 (SQL Server)
   href: prepare-to-bulk-import-data-sql-server.md

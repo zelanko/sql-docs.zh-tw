@@ -1,6 +1,6 @@
 ---
-title: 外部工具 | Microsoft Docs
-ms.custom: ''
+title: 外部工具
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 17e385913c362a2921d715607ca590d66ed69a48
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f86cd81ce23c0e68854a10c3df6e2aa0019bf9ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262809"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257726"
 ---
 # <a name="external-tools"></a>外部工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用此對話方塊可將外部工具 (例如 SQL Server 組態管理員或記事本) 新增到 [工具]  功能表。 加入外部工具可以讓您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中工作時，輕易地啟動其他應用程式。 啟動工具時，您可以指定引數和工作目錄。 除此之外，某些工具的輸出也可以顯示在 [輸出] 視窗中。 [外部工具]  對話方塊列在 [工具]  功能表中。  
+使用此對話方塊可將外部工具 (例如 SQL Server 組態管理員或記事本) 新增到 [工具]  功能表。 加入外部工具可以讓您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中工作時，輕易地啟動其他應用程式。 啟動工具時，您可以指定引數和工作目錄。 除此之外，某些工具的輸出也可以顯示在 [輸出] 視窗中。 [外部工具]  對話方塊可以透過 [工具]  功能表使用。  
   
 ## <a name="options"></a>選項。  
 **功能表內容**  
@@ -33,17 +33,17 @@ ms.locfileid: "68262809"
 **下移**  
 在 [工具]  功能表所顯示的工具清單中，將所選的工具向下移動至較後面的位置。  
   
-**[加入]**  
+**加入**  
 清除文字方塊，讓您指定新的工具。  
   
 **刪除**  
 從 [功能表內容]  清單及 [工具]  功能表中移除工具或命令。  
   
-**Title**  
+**Title** (標題)  
 出現在 [工具]  功能表之 [外部工具]  子功能表上的工具名稱或命令名稱。 將連字號 (&) 放在工具名稱中的字母前，即可使用該字母作為工具的加速鍵。 例如 `&Spy++` 在 [工具]  功能表上會顯示為 **Spy++** 。  
   
-**Command**  
-指定 .exe、.com、.pif、.bat、.cmd，或其他您想要啟動之檔案的路徑。 若選取 [使用輸出視窗]  核取方塊，即可在輸出視窗中檢視 `.bat``.com` 及其他檔案的輸出。  
+**命令**  
+指定 .exe、.com、.pif、.bat、.cmd，或其他您想要啟動之檔案的路徑。 若選取 [使用輸出視窗]`.bat``.com` 核取方塊，即可在輸出視窗中檢視  及其他檔案的輸出。  
   
 **引數**  
 在功能表上選取工具時，指定會傳遞至該工具的變數。 啟動工具或命令時，引數可以指定會傳遞至該工具或命令的值。 例如，值可以指定檔案名稱或目錄。 使用 **箭號** 按鈕，可從預先定義的引數清單中選取引數。 您可以加入一個以上。 如需預先定義的引數及其定義的完整清單，請參閱 [外部工具的引數](../../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)。 視您所使用的命令或工具而定，還可以輸入自訂引數 (例如，命令提示字元參數)。  

@@ -38,7 +38,7 @@
               href: ../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md
         - name: 屬性和屬性階層
           href: ../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md
-        - name: '中，使用 [維度設計師] 的'
+        - name: 屬性關聯性
           href: ../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md
         - name: 使用者階層
           href: ../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md
@@ -64,7 +64,7 @@
           href: ../multidimensional-models-olap-logical-cube-objects/cube-properties-multidimensional-model-programming.md
         - name: 維度關聯性
           href: ../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md
-        - name: '[新增命名集]'
+        - name: 計算
           href: ../multidimensional-models-olap-logical-cube-objects/calculations.md
         - name: 資料分割
           href: ../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md
@@ -77,7 +77,7 @@
               href: ../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md
             - name: 可寫入的資料分割
               href: ../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md
-        - name: 「檢視方塊」
+        - name: 檢視方塊
           href: ../multidimensional-models-olap-logical-cube-objects/perspectives.md
         - name: Cube 翻譯
           href: ../multidimensional-models-olap-logical-cube-objects/cube-translations.md

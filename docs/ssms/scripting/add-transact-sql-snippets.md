@@ -1,6 +1,6 @@
 ---
-title: 新增 Transact-SQL 程式碼片段 | Microsoft Docs
-ms.custom: ''
+title: 新增 Transact-SQL 程式碼片段
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 255fb72bea9ac6d967a69576804c2d70748f22d0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 6f2878a93f241235bb725cd40afd169f4c7d31aa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256877"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246465"
 ---
 # <a name="add-transact-sql-snippets"></a>新增 Transact-SQL 程式碼片段
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68256877"
   
 2.  選取 **[工具]** 功能表，然後按一下 **[程式碼片段管理員]** 。  
   
-3.  按一下 **[加入]** 按鈕。  
+3.  按一下 [新增]  按鈕。  
   
 4.  導覽至包含程式碼片段的資料夾，然後按一下 **[選取資料夾]** 按鈕。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68256877"
   
 2.  選取 **[工具]** 功能表，然後按一下 **[程式碼片段管理員]** 。  
   
-3.  按一下 **[匯入]** 按鈕。  
+3.  按一下 [匯入]  按鈕。  
   
 4.  導覽至包含程式碼片段的資料夾，然後按一下 .snippet 檔案，再按一下 **[開啟]** 按鈕。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "68256877"
   
 3.  選取 **[工具]** 功能表，然後按一下 **[程式碼片段管理員]** 。  
   
-4.  按一下 **[匯入]** 按鈕。  
+4.  按一下 [匯入]  按鈕。  
   
 5.  導覽至包含 TryCatch.snippet 的資料夾，然後按一下 TryCatch.snippet 檔案，再按一下 **[開啟]** 按鈕。 **[My Code 程式碼片段]** 資料夾中應該不會有 TryCatch 程式碼片段。  
   

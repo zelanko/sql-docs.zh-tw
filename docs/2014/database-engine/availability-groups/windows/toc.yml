@@ -132,7 +132,7 @@
           href: active-secondaries-readable-secondary-replicas-always-on-availability-groups.md
         - name: 在停機時間和資料遺失最少的情況下升級及更新可用性群組伺服器
           href: upgrading-always-on-availability-group-replica-instances.md
-    - name: 連接性
+    - name: 連線能力
       items:
         - name: 用戶端連線
           href: about-client-connection-access-to-availability-replicas-sql-server.md
