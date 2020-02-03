@@ -1,6 +1,6 @@
 ---
-title: 選項對話方塊 F1 說明 | Microsoft Docs
-ms.custom: ''
+title: 選項對話方塊 F1 說明
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b22a11c4538ccdcd353c558d57263c65688ec0a8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1d55f1115db836d3fddab4e18e63499c43e5993f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68257258"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245719"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>選項對話方塊 F1 說明
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-此章節包含在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中按一下 [工具]  功能表上的 [選項]  時，可用之對話方塊的 F1 說明。  
+此章節包含在  **中按一下 [工具]** **功能表上的 [選項]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 時，可用之對話方塊的 F1 說明。  
   
 [選項 &#40;設計工具 - Analysis Services 設計工具 - 一般&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   

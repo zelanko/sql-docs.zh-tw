@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio 中的工具視窗 | Microsoft Docs
-ms.custom: ''
+title: SQL Server Management Studio 中的工具視窗
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbb2464faa8620b7642dbd01affe3f9de318a8eb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 025a4a9ecb00e9827524652047970db0031dfc43
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266713"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243886"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 中的工具視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68266713"
 |[範本總管](../ssms/template/template-explorer.md)|根據現有的範本來建立查詢。 您也可以建立您的自訂查詢，或變更現有的範本來配合您的狀況。 此工具可從 [檢視]  功能表加以存取。|  
 |[動態說明](../ssms/user-assistance-in-sql-server-management-studio.md)|在您按一下元件或類型程式碼時，顯示一份相關說明主題的清單。|  
   
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的各項工具能夠協同運作。 例如，您可以執行下列動作：  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的各項工具能夠協同運作。 例如，您可以：  
   
 -   利用物件總管來註冊伺服器。  
   

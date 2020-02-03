@@ -1,6 +1,6 @@
 ---
-title: 使用 sqlcmd 執行 Transact-SQL 指令碼檔案 | Microsoft Docs
-ms.custom: ''
+title: 使用 sqlcmd 執行 Transact-SQL 指令碼檔案
+ms.custom: seo-lt-2019
 ms.date: 07/15/2016
 ms.prod: sql
 ms.technology: scripting
@@ -12,12 +12,12 @@ ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46f4a1660fd2b33581482025cd5a9cf3bb16f770
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ed85470d8e054ba60ae0b2525f773f83d70d0da3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267652"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253215"
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd - 執行 Transact-SQL 指令碼檔案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

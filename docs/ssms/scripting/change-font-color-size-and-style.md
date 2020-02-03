@@ -1,6 +1,6 @@
 ---
-title: 變更字型色彩、大小與樣式 | Microsoft Docs
-ms.custom: ''
+title: 變更字型色彩、大小與樣式
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,12 +18,12 @@ ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4f061857b18e8f316404e134a00e0ae040de154
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3d479991bed66e04a7c42870f0f1ba0c61ca7101
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256588"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246421"
 ---
 # <a name="change-font-color-size-and-style"></a>變更字型色彩、大小與樣式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68256588"
 > [!NOTE]  
 >  按一下 [使用預設值]  來返回預設值。  
   
- 編輯器只有一個字型設定，它會影響 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的所有編輯器。 您可以根據文字類型來變更色彩 (如註解和陳述式)。 在 [字型] 清單中，等寬字型會以粗體呈現，您可以根據個別文字類型套用粗體設定。 例如，您可以將註解和運算子的格式設為粗體，其他文字類型不會受到影響。  
+ 編輯器只有一個字型設定，它會影響 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的所有編輯器。 您可以根據文字類型來變更色彩 (如註解和陳述式)。 在 [字型] 清單中，等寬字型會以粗體呈現，您可以根據個別文字類型套用粗體設定。 例如，您可以將註解和運算子的格式設為粗體，其他文字類型不會受到影響。  
   
  文字色彩和字型類型的設定適用於全域的所有文字元素類型，如註解、字串...等。  
   

@@ -1,6 +1,6 @@
 ---
-title: 檢視專案屬性 | Microsoft Docs
-ms.custom: ''
+title: 檢視專案屬性
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9942a670c50967f408da1002356393323b9796e6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c63fe4710c35870ab5ff7d52167179146f3874a3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264715"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242801"
 ---
 # <a name="view-project-properties"></a>檢視專案屬性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
