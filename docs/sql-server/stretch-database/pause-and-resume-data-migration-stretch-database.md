@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b853d764d1cf7a6aa7252aa181b70dbcccc265fe
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844535"
 ---
 # <a name="pause-and-resume-data-migration-stretch-database"></a>暫停和繼續資料移轉 (Stretch Database)
@@ -68,7 +68,7 @@ ALTER TABLE <Stretch-enabled table name>
 ## <a name="check-whether-migration-is-active-or-paused"></a>檢查移轉為使用中或已暫停
 
 ### <a name="use-sql-server-management-studio-to-check-whether-migration-is-active-or-paused"></a>使用 SQL Server Management Studio 以檢查移轉為使用中或已暫停
-在 SQL Server Management Studio 中，開啟 [Stretch Database 監視器]  ，並檢查 [移轉狀態]  資料行的值。 如需詳細資訊，請參閱[監視及疑難排解資料移轉](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。
+在 SQL Server Management Studio 中，開啟 [Stretch Database 監視器]  ，並檢查 [移轉狀態]  資料行的值。 如需詳細資訊，請參閱 [監視及疑難排解資料移轉](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。
 
 ### <a name="use-transact-sql-to-check-whether-migration-is-active-or-paused"></a>使用 Transact-SQL 以檢查移轉為使用中或已暫停
 查詢 **sys.remote_data_archive_tables** 目錄檢視，並檢查 **is_migration_paused** 資料行的值。 如需詳細資訊，請參閱 [sys.remote_data_archive_tables](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md)。

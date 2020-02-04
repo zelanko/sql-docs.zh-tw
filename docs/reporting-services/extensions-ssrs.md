@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: f7a64289bd3f1e1bd8fce71d21e5e1604e5bf4b4
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68262893"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 的延伸模組
@@ -66,7 +66,7 @@ ms.locfileid: "68262893"
   
 - **XML 轉譯延伸模組** ：XML 轉譯延伸模組將報表轉譯成 XML 檔案。 然後，這些 XML 檔案就可以供其他程式儲存或讀取。 您也可以使用 XSLT 轉換，將報表變成可供其他應用程式使用的另一種 XML 結構描述。 由 XML 轉譯延伸模組所產生的 XML 是以 UTF-8 編碼。 如需詳細資訊，請參閱 [匯出至 XML &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)中使用這項資料。  
   
-- **影像轉譯延伸模組** ：影像轉譯延伸模組會將報表轉譯成點陣圖或中繼檔。 此延伸模組可將報表轉譯成下列格式：BMP、EMF、GIF、JPEG、PNG、TIFF，以及 WMF。 依預設，影像會轉譯成 TIFF 格式，可使用作業系統預設的影像檢視器來顯示 (例如，Windows 圖片和傳真檢視器)。 您可以從檢視器將影像傳送到印表機。 使用影像轉譯延伸模組來轉譯報表，以確保報表在每一個用戶端看起來皆一致。 (當使用者以 HTML 格式檢視報表時，報表的外觀會因使用者所用的瀏覽器版本、使用者的瀏覽器設定，以及可使用的字型而有所不同。)影像轉譯延伸模組會在伺服器上轉譯報表，因此所有的使用者皆會看到相同的影像。 因為報表是在伺服器上轉譯，報表中所使用的所有字型都必須安裝在伺服器上。 如需詳細資訊，請參閱 [匯出至影像檔 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)中使用這項資料。  
+- **影像轉譯延伸模組** ：影像轉譯延伸模組會將報表轉譯成點陣圖或中繼檔。 此延伸模組可將報表轉譯成下列格式：BMP、EMF、GIF、JPEG、PNG、TIFF，以及 WMF。 依預設，影像會轉譯成 TIFF 格式，可使用作業系統預設的影像檢視器來顯示 (例如，Windows 圖片和傳真檢視器)。 您可以從檢視器將影像傳送到印表機。 使用影像轉譯延伸模組來轉譯報表，以確保報表在每一個用戶端看起來皆一致。 (當使用者以 HTML 格式檢視報表時，報表的外觀會因使用者所用的瀏覽器版本、使用者的瀏覽器設定，以及可使用的字型而有所不同)。影像轉譯延伸模組會在伺服器上轉譯報表，因此所有的使用者皆會看到相同的影像。 因為報表是在伺服器上轉譯，報表中所使用的所有字型都必須安裝在伺服器上。 如需詳細資訊，請參閱 [匯出至影像檔 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)中使用這項資料。  
   
 - **PDF 轉譯延伸模組** ：PDF 轉譯延伸模組會將報表轉譯成可在 Adobe Acrobat 6.0 或更新版本中開啟和檢視的 PDF 檔案。 如需詳細資訊，請參閱 [匯出至 PDF 檔案 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)中使用這項資料。  
   

@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d558dad38492bcd9ce2bad0eb00a887a2225de33
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844573"
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>使用 Stretch Database 設定相容的 SQL Server 功能
@@ -20,10 +20,10 @@ ms.locfileid: "73844573"
 
 
 採取簡單的步驟即可設定下列的 SQL Server 功能，以便使用 Stretch Database。
--   Always On
+-   永遠開啟
 -   Always Encrypted
 -   透明資料加密 (TDE)
--   時態表
+-   暫存資料表
 
 ## <a name="configure-always-on-with-stretch-database"></a>使用 Stretch Database 設定永遠開啟
 如果您使用 Always On 搭配 Stretch Database，必須確定資料庫主要金鑰可用在次要複本。 Stretch Database 使用資料庫主要金鑰，來保護它用來連接遠端 Azure 資料庫的認證。

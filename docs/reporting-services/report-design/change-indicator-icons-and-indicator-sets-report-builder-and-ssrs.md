@@ -9,10 +9,10 @@ ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a73198264f13725b7c7050b5344c2af3df4ada8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581721"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>變更指標圖示和指標集合 (報表產生器及 SSRS)
@@ -72,7 +72,7 @@ ms.locfileid: "65581721"
   
 2.  按一下左窗格中的 **[值和狀態]** 。  
   
-3.  按一下 **[加入]** 。 指標隨即使用預設圖示與 [無色彩]  選項新增。  
+3.  按一下 [新增]  。 指標隨即使用預設圖示與 [無色彩]  選項新增。  
   
      設定指標使用您想要的圖示和色彩。 本主題稍早的程序描述執行這項操作的步驟。  
   

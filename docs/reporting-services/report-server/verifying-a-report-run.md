@@ -17,10 +17,10 @@ ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cd48861b53b6b7f159d4421bd86bf024838fbaf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580078"
 ---
 # <a name="verifying-a-report-run"></a>驗證報表執行

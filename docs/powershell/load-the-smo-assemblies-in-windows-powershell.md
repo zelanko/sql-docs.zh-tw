@@ -10,10 +10,10 @@ ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 2262de78691c14b14bf9177306c0eb7526ef290b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67951699"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>載入 Windows PowerShell 中的 SMO 組件
@@ -35,7 +35,7 @@ ms.locfileid: "67951699"
   
 -   您想要從不使用提供者或 Cmdlet 的另一個語言 (例如 C# 或 Visual Basic) 移植 SMO 程式碼。  
   
-## <a name="example-loading-the-sql-server-management-objects"></a>範例載入 SQL Server 管理物件  
+## <a name="example-loading-the-sql-server-management-objects"></a>範例：載入 SQL Server 管理物件  
  下列程式碼會載入 SMO 組件：  
   
 ```  

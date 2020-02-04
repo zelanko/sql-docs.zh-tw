@@ -16,10 +16,10 @@ ms.assetid: 1db346ba-a3bd-4387-a423-72e227346318
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73e140fd0d2953120be89ee6b05461d35610ad67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978938"
 ---
 # <a name="gettime-method-sqlserverresultset"></a>getTime 方法 (SQLServerResultSet)

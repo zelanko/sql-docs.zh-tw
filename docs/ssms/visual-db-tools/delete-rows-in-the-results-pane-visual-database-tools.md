@@ -1,10 +1,9 @@
 ---
-title: 刪除結果窗格中的資料列 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 刪除結果窗格中的資料列
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,14 @@ helpviewer_keywords:
 ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a07da8ed6f57a8ebcc693391bc69a0ba88175b87
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 227c2b460eac208827e188f35b4cc8630542c77c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263842"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247541"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>刪除結果窗格中的資料列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

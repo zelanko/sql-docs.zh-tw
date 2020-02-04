@@ -9,10 +9,10 @@ ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d22a5971d2becebec841c5e343e2361cbe2f26a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66500498"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>加入、編輯、重新整理報表資料窗格中的欄位 (報表產生器及 SSRS)
@@ -88,7 +88,7 @@ ms.locfileid: "66500498"
      在報表伺服器上，共用資料集查詢會執行並傳回目前的欄位集合。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料集 Fields 集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Reporting Services 查詢設計工具](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   

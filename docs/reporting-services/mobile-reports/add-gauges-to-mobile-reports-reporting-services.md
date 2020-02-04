@@ -9,10 +9,10 @@ ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 90440119ec21cbfe97096b439e61074c7e515e00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63280546"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>在行動報表中加入量測計 | Reporting Services

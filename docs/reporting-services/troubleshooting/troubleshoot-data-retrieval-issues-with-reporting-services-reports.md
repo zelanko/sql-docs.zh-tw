@@ -9,10 +9,10 @@ ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 86f1b8bda63cf8e6436e0dd3d5823fdada53a9f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574431"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>搭配 Reporting Services 報表為資料擷取問題疑難排解
@@ -56,7 +56,7 @@ ms.locfileid: "65574431"
   
 若要擴展資料集欄位集合，請執行下列動作：  
 * 請確定您擁有從資料庫中擷取欄位資訊的權限。 針對某些資料來源，您可能擁有存取資料來源的權限，但是沒有存取資料表或資料行的權限。 您可能擁有存取檢視的權限，但對於建立檢視的預存程序，卻沒有執行權限。 若要驗證您對資料庫中特定資料表或資料行的存取權，請使用您用於報表的相同權限，在 SQL Server Management Studio 等個別應用程式中確認查詢結果。 如果您無法看到想要的查詢結果，請與系統管理員一起調整您對資料的權限。   
-* 在 [資料集屬性]  對話方塊的 [查詢] 窗格中執行查詢。 如需詳細資訊，請參閱[報表資料集 (報表產生器 3.0 及 SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)。  
+* 在 [資料集屬性]  對話方塊的 [查詢] 窗格中執行查詢。 如需詳細資訊，請參閱 [報表資料集 (報表產生器 3.0 及 SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)。  
 * 手動加入欄位。 如需詳細資訊，請參閱 [如何：加入、編輯、重新整理報表資料窗格中的欄位 (報表產生器 3.0 及 SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。   
   
 ## <a name="see-also"></a>另請參閱  

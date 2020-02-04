@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.reviewer: ''
-ms.date: 03/14/2017
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8870849ef3cb83262284eab524b741c25a0a7ae
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: ab0abfe0e2221da335e069ef2f8ba6de38c1d3f8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119223"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252986"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Transact-SQL 偵錯工具 - 監看式視窗
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-**[監看式]** 視窗會顯示有關您已選取之運算式的資訊。 最多可以有四個監看式視窗：[監看式 1]  、[監看式 2]、[監看式 3]  和 [監看式 4]  。 運算式會在 **[呼叫堆疊]** 視窗內選取的目前呼叫堆疊框架範圍內評估。 您必須在偵錯模式下，才能監看變數和運算式。  
+**[監看式]** 視窗會顯示有關您已選取之運算式的資訊。 最多可以有四個監看式視窗： **Watch 1**、 **Watch 2、Watch 3**和 **Watch 4**。 運算式會在 **[呼叫堆疊]** 視窗內選取的目前呼叫堆疊框架範圍內評估。 您必須在偵錯模式下，才能監看變數和運算式。  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -38,7 +38,7 @@ ms.locfileid: "74119223"
   
 -   以滑鼠右鍵按一下運算式，然後選取 [編輯值]  。  
   
-## <a name="columns"></a>[資料行]  
+## <a name="columns"></a>資料行  
  **名稱**  
  為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具所列出的運算式。 以下為支援的運算式：  
   
@@ -50,7 +50,7 @@ ms.locfileid: "74119223"
   
 -   透過將運算子套用至一或多個變數、參數或系統函式 (例如 @IntegerCounter + 1 或 FirstName + LastName) 的方式建立的運算式。  
   
--   傳回單一值的 Transact-SQL 陳述式，例如：SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1。  
+-   傳回單一值的 Transact-SQL 陳述式，例如 SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1。  
   
  **ReplTest1**  
  顯示當 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具評估 [名稱]  內指定的運算式以後所傳回的值。  

@@ -15,10 +15,10 @@ ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a6fe3c0cd82d8ee8b92948d76d4f7cdb5fa4cf73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570562"
 ---
 # <a name="role-assignments"></a>角色指派
@@ -30,7 +30,7 @@ ms.locfileid: "65570562"
 - 可以利用 Windows 安全性，或其他驗證機制驗證的使用者或群組帳戶。  
   
 - 角色定義會定義一組允許的工作，包括：
-  - **瀏覽器**
+  - **[瀏覽器]**
   - **內容管理員**
   - **我的報表**
   - **發行者**
@@ -57,7 +57,7 @@ ms.locfileid: "65570562"
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中以角色為基礎的安全性會組織成下列層級：
 
 - 項目層級的角色指派會控制報表伺服器資料夾階層中對項目的存取，例如：
-  - 報表
+  - reports
   - 資料夾
   - 報表模型
   - 共用資料來源

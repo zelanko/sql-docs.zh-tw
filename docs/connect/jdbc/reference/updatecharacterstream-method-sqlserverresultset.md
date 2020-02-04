@@ -16,10 +16,10 @@ ms.assetid: 78f39ec7-e27c-4534-bb19-fae806afd08c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9c18df5aa5b0b82e14a20489df4afd99636aa2e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996686"
 ---
 # <a name="updatecharacterstream-method-sqlserverresultset"></a>updateCharacterStream 方法 (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67996686"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[updateCharacterStream 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-int-java-io-reader.md)|使用字元資料流值，更新指定的資料行。|  
 |[updateCharacterStream (int, java.io.Reader, int)](../../../connect/jdbc/reference/updatecharacterstream-method-int-java-io-reader-int.md)|使用字元資料流值來更新指定的資料行，該值將包含指定的字元數目。|  

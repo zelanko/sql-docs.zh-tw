@@ -1,5 +1,5 @@
 ---
-title: 語法組的自動比對 | Microsoft Docs
+title: 語法組的自動比對
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -11,12 +11,12 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0dae2e368fc4cba1a0276ed334cc8aece04cd0b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1251b6664266fdd1e4d91519186df95a52e52f35
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264884"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74834242"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>語法組的自動比對
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

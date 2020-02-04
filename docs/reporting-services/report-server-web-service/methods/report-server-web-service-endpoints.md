@@ -15,10 +15,10 @@ ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 19daac65c808691be20621d6718b4b71e33b83f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284624"
 ---
 # <a name="report-server-web-service-endpoints"></a>報表伺服器 Web 服務端點
@@ -61,7 +61,7 @@ https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx
 ## <a name="sharepoint-proxy-endpoints"></a>SharePoint Proxy 端點  
  當報表伺服器設定為 SharePoint 整合模式，而且已經安裝 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 增益集時，SharePoint 伺服器上會安裝一組 Proxy 端點。 當報表伺服器設定為 SharePoint 整合模式時，這些 Proxy 端點是用來開發報表方案的主要 API。 當針對 Proxy 端點進行開發時，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 增益集會在信任帳戶驗證模式下管理 SharePoint 伺服器與報表伺服器之間的認證交換。 當針對報表伺服器端點開發時，呼叫應用程式必須在信任帳戶驗證模式下管理認證交換。 下表將列出隨 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 增益集一起安裝的端點。  
   
-|Proxy 端點|Description|  
+|Proxy 端點|描述|  
 |--------------------|-----------------|  
 |<xref:ReportService2006>|提供 API 以管理設定為 SharePoint 整合模式的報表伺服器。<br /><br /> 注意：[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 已取代此端點。|  
 |<xref:ReportService2010>|提供 API 以管理設定為原生模式或 SharePoint 整合模式的報表伺服器。|  

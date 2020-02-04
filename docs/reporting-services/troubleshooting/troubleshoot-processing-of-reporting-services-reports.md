@@ -9,10 +9,10 @@ ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 85486e929683abaf99216a4d4b03c19a146f230c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573858"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>疑難排解 Reporting Services 報表的處理
@@ -28,7 +28,7 @@ ms.locfileid: "65573858"
 ### <a name="report-item-expressions-can-only-refer-to-fields-within-the-current-dataset-scope-or-if-inside-an-aggregate-the-specified-dataset-scope"></a>報表項目運算式僅可參考到目前資料集範圍，或指定的資料集範圍 (若報表項目運算式在彙總中時) 中的欄位。  
   
 請使用下列清單來協助判斷錯誤原因：  
-* 當報表包含一個以上的資料集時，位於報表主體文字方塊中的彙總運算式必須指定範圍參數。 例如， `=First(Fields!FieldName.Value, "DataSet1")`。  
+* 當報表包含一個以上的資料集時，位於報表主體文字方塊中的彙總運算式必須指定範圍參數。 例如： `=First(Fields!FieldName.Value, "DataSet1")` 。  
   
 若要指定範圍參數，請提供報表項目範圍內的資料集、資料區或群組的名稱。 如需詳細資訊，請參閱 [了解總計、彙總與內建集合的運算式範圍 (報表產生器 3.0 及 SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) 和 [運算式參考 (報表產生器 3.0 及 SSRS)](../../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md)。  
   

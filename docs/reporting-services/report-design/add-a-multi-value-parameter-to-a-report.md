@@ -9,10 +9,10 @@ ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ac257b63b3cd36cc789a842c87aff9d5186f1206
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575412"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>將多值參數加入至報表

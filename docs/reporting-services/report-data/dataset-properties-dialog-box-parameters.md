@@ -13,10 +13,10 @@ ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 66e0d56cbff57a6100ab8c61436ba6bcddf15382
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573181"
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>資料集屬性對話方塊、參數
@@ -27,7 +27,7 @@ ms.locfileid: "65573181"
  如果有一個報表參數的預設值相依於另一個連結到查詢參數的報表參數，報表參數的順序 (出現在 [報表參數屬性]  對話方塊中的順序) 很重要。 稍後在清單中的報表參數可以參照先前在清單中的報表參數。 如需報表參數的詳細資訊，請參閱 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
 ## <a name="options"></a>選項。  
- **[加入]**  
+ **加入**  
  將新的參數加入到清單中。  
   
  **刪除**  

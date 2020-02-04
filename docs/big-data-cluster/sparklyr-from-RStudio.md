@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 375993e4fd9506c129e4f98d9ad2193472e03edb
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531621"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>在 SQL Server 巨量資料叢集中使用 sparklyr
@@ -80,7 +80,7 @@ iris_count
 
 ## <a name="distributed-r-computations"></a>分散式 R 計算
 
-sparklyr 的其中一項功能，就是能夠使用 [spark_apply](https://spark.rstudio.com/reference/spark_apply/) 來[散發 R 計算](https://spark.rstudio.com/guides/distributed-r/)。
+sparklyr 的其中一項功能，就是能夠使用 [spark_apply](https://spark.rstudio.com/guides/distributed-r/) 來[散發 R 計算](https://spark.rstudio.com/reference/spark_apply/)。
 
 因為巨量資料叢集使用 Livy 連線，所以您必須將呼叫中的 `packages = FALSE` 設定為 **spark_apply**。 如需詳細資訊，請參閱分散式 R 計算相關 sparklyr 文件的 [Livy 一節](https://spark.rstudio.com/guides/distributed-r/#livy)。 使用此設定時，您只能在要傳遞給 **spark_apply** 的 R 程式碼中使用 Spark 叢集上所安裝 R 套件。 下列範例示範此功能：
 

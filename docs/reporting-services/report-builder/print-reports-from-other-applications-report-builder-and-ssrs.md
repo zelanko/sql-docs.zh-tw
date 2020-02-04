@@ -9,10 +9,10 @@ ms.assetid: a5560581-fd57-4a45-b7ea-43b21a8a7419
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: aecaaf98504f9e6228da16b3379efaffcaaaf5a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580682"
 ---
 # <a name="print-reports-from-other-applications-report-builder-and-ssrs"></a>從其他應用程式列印報表 (報表產生器及 SSRS)

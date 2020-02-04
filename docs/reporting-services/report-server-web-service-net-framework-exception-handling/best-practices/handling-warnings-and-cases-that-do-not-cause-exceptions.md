@@ -12,10 +12,10 @@ ms.assetid: 475c0713-6265-44e7-9ebc-ebdd1b89e0af
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5939d2ea37a36af991ce6dd8edab33036ed24b02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63162303"
 ---
 # <a name="handling-warnings-and-cases-that-do-not-cause-exceptions"></a>處理未造成例外狀況的警告與案例

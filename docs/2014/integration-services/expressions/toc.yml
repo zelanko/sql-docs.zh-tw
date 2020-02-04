@@ -83,7 +83,7 @@
       href: greater-than-or-equal-to-ssis-expression.md
     - name: <= (小於或等於) (SSIS 運算式)
       href: less-than-or-equal-to-ssis-expression.md
-    - name: '? 所解碼的字元：(條件) (SSIS 運算式)'
+    - name: '? : (條件) (SSIS 運算式)'
       href: conditional-ssis-expression.md
 - name: 函數 (SSIS 運算式)
   href: functions-ssis-expression.md

@@ -9,10 +9,10 @@ ms.assetid: 194e6679-890d-4a3e-a756-130d32ef7e29
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 20e9e6626bbd08eebfe69a04f63ed882979b34d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580153"
 ---
 # <a name="line-charts-report-builder-and-ssrs"></a>折線圖 (報表產生器及 SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "65580153"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="variations"></a>變數  
+## <a name="variations"></a>變化  
   
 -   **平滑線圖**： 使用曲線而非一般線條的折線圖。  
   

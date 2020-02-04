@@ -1,30 +1,36 @@
 ---
-title: 區域變數視窗 | Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
+title: 本機視窗
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Locals Window [Transact-SQL]
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cac6d8c5a231d51f89661baf57bec2fd0d9471fd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 70ee1eee120c94e7f851bc37c3becf1983a57d09
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253517"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253046"
 ---
 # <a name="transact-sql-debugger---locals-window"></a>Transact-SQL 偵錯工具 - 區域變數視窗
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [區域變數]  視窗會顯示有關 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具目前範圍中之區域運算式的資訊。 此範圍會設定為 [呼叫堆疊]  視窗內選取的目前呼叫堆疊框架。 您必須在偵錯模式中，才能顯示本機運算式。  
-  
-## <a name="task-list"></a>工作清單  
- **存取區域變數視窗**  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[區域變數]  視窗會顯示有關 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具目前範圍中之區域運算式的資訊。 此範圍會設定為 [呼叫堆疊]  視窗內選取的目前呼叫堆疊框架。 您必須在偵錯模式中，才能顯示本機運算式。  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## <a name="task-list"></a>工作清單
+
+**存取區域變數視窗**
   
 -   在 [偵錯]  功能表中，按一下 [視窗]  ，然後按一下 [區域變數]  。  
   
@@ -32,7 +38,7 @@ ms.locfileid: "68253517"
   
 -   以滑鼠右鍵按一下運算式，然後選取 [編輯值]  。  
   
-## <a name="columns"></a>[資料行]  
+## <a name="columns"></a>資料行  
  **名稱**  
  為本機運算式的名稱。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具會列出名稱以 @@ 開頭的變數、參數和系統函式。  
   

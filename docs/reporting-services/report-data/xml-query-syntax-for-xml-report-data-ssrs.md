@@ -14,10 +14,10 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3fc3cddc10dd53225867b910b8a3b3cb9c73d6ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574853"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML 報表資料的 XML 查詢語法 (SSRS)

@@ -11,10 +11,10 @@ ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b28d1b2f29dca3ab23ba658c8718173fe5d09779
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194133"
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>如何：部署自訂報表項目

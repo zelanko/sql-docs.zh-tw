@@ -1,6 +1,6 @@
 ---
-title: 查看 SQL Server 錯誤記錄檔 |Microsoft Docs
-ms.custom: ''
+title: 檢視 SQL Server 錯誤記錄
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,12 +18,12 @@ ms.assetid: 6908c21a-65e3-458f-a272-fee256d86448
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 54ceec989d9bb35807391f39beff543407a0c6f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 421836f23129879670dd4ff2194c553adaeaa12b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058259"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307570"
 ---
 # <a name="viewing-the-sql-server-error-log"></a>檢視 SQL Server 錯誤記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

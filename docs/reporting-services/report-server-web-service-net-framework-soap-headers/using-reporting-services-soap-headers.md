@@ -15,10 +15,10 @@ ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 99a4ac18003defd2a6b3cffdd4bc1d2955c44816
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63026016"
 ---
 # <a name="using-reporting-services-soap-headers"></a>使用 Reporting Services SOAP 標頭
@@ -30,7 +30,7 @@ ms.locfileid: "63026016"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[批次方法](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md)|描述如何使用 <xref:ReportService2005.BatchHeader>，在單一交易中批次處理多項作業。|  
 |[識別執行狀態](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)|描述如何在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，使用 **SessionHeader** 管理工作階段狀態。|  

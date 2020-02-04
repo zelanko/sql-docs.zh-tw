@@ -10,15 +10,15 @@ ms.author: mathoma
 ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5d9b834d94469adf8394dc12f3b812a0dfd1fbbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68067577"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>版本設定和 applies-to 的 SQL Server include 檔案
 
-您可使用 Markdown 中的 include 檔案輕鬆修改文件中的參考，並不需變更個別文章的實際文字。 在 SQL 內容世界中，Include 檔案有三種類型：SQL 版本、Applies-to 與參考性文字。 **SQL Server 版本** Include 檔案用來指出目前所討論的 SQL 版本，例如 SQL Server 2016 或 2017。 **Applies-to** Include 檔案指出文件適用於哪些 SQL 產品和服務，例如 Linux 上的 SQL Server 或 Azure SQL Database。 **參考性文字** Include 檔案不屬於上述兩種類型，例如「取得說明」Include 檔案是客戶可用來取得 SQL Server 說明的連結清單。
+您可使用 Markdown 中的 include 檔案輕鬆修改文件中的參考，並不需變更個別文章的實際文字。 在 SQL 內容世界中，include 檔案有三種類型：SQL 版本、applies-to 與參考性文字。 **SQL Server 版本** Include 檔案用來指出目前所討論的 SQL 版本，例如 SQL Server 2016 或 2017。 **Applies-to** Include 檔案指出文件適用於哪些 SQL 產品和服務，例如 Linux 上的 SQL Server 或 Azure SQL Database。 **參考性文字** Include 檔案不屬於上述兩種類型，例如「取得說明」Include 檔案是客戶可用來取得 SQL Server 說明的連結清單。
 
 此文章旨在作為前兩種 Include 檔案類型的參考點。 您可以在 [sql-docs 存放庫](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes)中瀏覽 include 檔案的完整清單。
 
@@ -26,7 +26,7 @@ ms.locfileid: "68067577"
 
 SQL 內容作者通常需要包括 SQL Server 的產品名稱與版本。 如此一來，若名稱有所變更，會更新 include 檔案，而不需在每篇文章中手動更新值。 這些 include 檔案用來作為產品名稱的預留位置，但並未在所有 SQL 文件中一致地使用。 SQL Server vNext 指的是目前尚未有版本號碼的未來 SQL 版本，而且是此處所述內容的例外。  
 
-|SQL 版本| 檔案名稱| Markdown 範例 |文字|
+|SQL 版本| 檔案名稱| Markdown 範例 |Text|
 | :------------  | :-------------| :----------| :-------------------|
 | SQL | ssnoversion-md.md | `[!INCLUDE[ssSQL11](../includes/ssnoversion-md.md)]` | SQL Server |
 | SQL 2000 | ssversion2000-md.md | `[!INCLUDE[ssSQL11](../includes/ssversion2000-md.md)]` | SQL Server 2000 (8.x) |
@@ -44,7 +44,7 @@ SQL 內容作者通常需要包括 SQL Server 的產品名稱與版本。 如此
 
 這些 Applies-to Include 檔案會省略 SQL Server 版本。
 
-| 檔案名稱| Markdown 範例 |image|
+| 檔案名稱| Markdown 範例 |影像|
 | :-------------| :----------| :-------------------|
 | appliesto-ss-asdb-asdw-xxx-md.md | `[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]` | [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)] |
 | appliesto-ss-asdb-asdw-pdw-md.md | `[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]` | [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] |
@@ -66,7 +66,7 @@ SQL 內容作者通常需要包括 SQL Server 的產品名稱與版本。 如此
 
 這些 Applies-to Include 檔案會指定文件適用於哪些 SQL 版本。
 
-| 檔案名稱| Markdown 範例 |image|
+| 檔案名稱| Markdown 範例 |影像|
 | :-------------| :----------| :-------------------|
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
@@ -110,7 +110,7 @@ SQL 內容作者通常需要包括 SQL Server 的產品名稱與版本。 如此
 
 這些 Applies-to Include 檔案與 Analysis Services 文件搭配使用。
 
-| 檔案名稱| Markdown 範例 |image|
+| 檔案名稱| Markdown 範例 |影像|
 | :-------------| :----------| :-------------------|
 | ssas-appliesto-sql2016.md | `[!INCLUDE[ssas-appliesto-sql2016.md](../includes/ssas-appliesto-sql2016.md)]` | [!INCLUDE[ssas-appliesto-sql2016.md](../includes/ssas-appliesto-sql2016.md)] |
 | ssas-appliesto-sql2016-later.md | `[!INCLUDE[ssas-appliesto-sql2016-later.md](../includes/ssas-appliesto-sql2016-later.md)]` | [!INCLUDE[ssas-appliesto-sql2016-later.md](../includes/ssas-appliesto-sql2016-later.md)] |
@@ -127,7 +127,7 @@ SQL 內容作者通常需要包括 SQL Server 的產品名稱與版本。 如此
 
 這些 Applies-to Include 檔案與 Reporting Services 文件搭配使用。
 
-| 檔案名稱| Markdown 範例 |image|
+| 檔案名稱| Markdown 範例 |影像|
 | :-------------| :----------| :-------------------|
 | ssrs-appliesto-2017-and-later.md | `[!INCLUDE[ssrs-appliesto-2017-and-later.md](../includes/ssrs-appliesto-2017-and-later.md)]` | [!INCLUDE[ssrs-appliesto-2017-and-later.md](../includes/ssrs-appliesto-2017-and-later.md)] |
 | ssrs-appliesto-not-pbirs.md | `[!INCLUDE[ssrs-appliesto-not-pbirs.md](../includes/ssrs-appliesto-not-pbirs.md)]` | [!INCLUDE[ssrs-appliesto-not-pbirs.md](../includes/ssrs-appliesto-not-pbirs.md)] |

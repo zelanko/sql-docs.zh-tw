@@ -9,10 +9,10 @@ ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eece2e47cee99c1c3716aadc597e8b6e6dd48d79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581203"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>匯出至 CSV 檔案 (報表產生器及 SSRS)
@@ -53,9 +53,9 @@ ms.locfileid: "65581203"
   
 -   自訂報表項目  
   
--   線條  
+-   折線圖  
   
--   image  
+-   影像  
   
 -   矩形  
   
@@ -65,7 +65,7 @@ ms.locfileid: "65581203"
   
  下表指出報表項目轉譯時的外觀：  
   
-|項目|轉譯行為|  
+|Item|轉譯行為|  
 |----------|------------------------|  
 |文字方塊|轉譯文字方塊的內容。 在預設模式下，系統會根據項目的格式化屬性來設定項目的格式。 在相容模式下，格式可以依據裝置資訊設定來變更。 如需有關 CSV 轉譯模式的詳細資訊，請參閱以下。|  
 |Table|藉由展開資料表，並為每個資料列與資料行以最低層級的詳細資料建立資料列與資料行，來進行轉譯。 小計資料列和資料行沒有資料行或資料列標題。 不支援鑽研報表。|  

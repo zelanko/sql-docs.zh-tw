@@ -9,10 +9,10 @@ ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 24b196927e582d1b21bf9f11bd7ea824ecf8ba7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576460"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>轉譯行為 (報表產生器及 SSRS)

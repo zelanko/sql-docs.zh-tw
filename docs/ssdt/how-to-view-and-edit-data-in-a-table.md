@@ -1,11 +1,7 @@
 ---
-title: 如何：檢視及編輯資料表中的資料 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 檢視及編輯資料表中的資料
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.QUERYRESULTS.F1
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: bb67ce83-a87a-4e14-84cd-9a5930fe74c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d6a59755f3c6675830324a314cbf364333e105c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 557b5d5c5986b47eab22bb9d70bd8103c5032eeb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141004"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226764"
 ---
 # <a name="how-to-view-and-edit-data-in-a-table"></a>如何：檢視及編輯資料表中的資料
+
 您可以使用視覺化資料編輯器來檢視、編輯及刪除現有資料表的資料。  
   
 > [!WARNING]  

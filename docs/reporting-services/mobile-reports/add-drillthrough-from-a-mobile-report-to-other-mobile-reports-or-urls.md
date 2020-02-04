@@ -9,10 +9,10 @@ ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4b702c79ad5c80254595ef5c4ff440919a8482e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63280754"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>從行動報表將鑽研加入其他行動報表或 URL
@@ -58,7 +58,7 @@ ms.locfileid: "63280754"
   
    *鑽研到自訂 URL 屬性*  
   
-4. 按一下 **[套用]** 。  
+4. 按一下 [套用]  。  
 
   
 當您在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]中預覽行動報表時，如果按一下具有鑽研的視覺效果，則會看到停用鑽研的訊息。 在您儲存或發行行動報表並進行檢視之後，實際上只能鑽研到目標，而不是在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 配置或預覽模式中。  

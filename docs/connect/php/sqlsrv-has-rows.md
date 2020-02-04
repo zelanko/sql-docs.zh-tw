@@ -14,13 +14,13 @@ ms.assetid: 4da7f640-cf12-409f-9e00-95b30a8d5e17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85b04a8b693e5ea2283ce215973c8149080d0036
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992679"
 ---
-# <a name="sqlsrvhasrows"></a>sqlsrv_has_rows
+# <a name="sqlsrv_has_rows"></a>sqlsrv_has_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 指出結果集是否有一或多個資料列。  

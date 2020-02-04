@@ -9,10 +9,10 @@ ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bd4423251ae02931d539b047251abb5915f85ccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578832"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>在矩陣和圖表上顯示相同的資料 (報表產生器)
@@ -67,7 +67,7 @@ ms.locfileid: "65578832"
   
 14. 按一下 **[排序]** 。  
   
-15. 按一下 **[加入]** 。 新的資料列會出現在排序運算式方格中。  
+15. 按一下 [新增]  。 新的資料列會出現在排序運算式方格中。  
   
 16. 在 [排序依據]  的下拉式清單中，選擇您在步驟 9 中選為分組依據的資料集欄位。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "65578832"
   
 21. 按一下 **[排序]** 。  
   
-22. 按一下 **[加入]** 。 新的資料列會出現在排序運算式方格中。  
+22. 按一下 [新增]  。 新的資料列會出現在排序運算式方格中。  
   
 23. 在 [排序依據]  的下拉式清單中，選擇您在步驟 16 中選為分組依據的資料集欄位。  
   

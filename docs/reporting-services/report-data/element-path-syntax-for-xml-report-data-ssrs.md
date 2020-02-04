@@ -12,10 +12,10 @@ ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bdff469a4a96fb7fe5111c619ad1895bcc200c25
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72173830"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML 報表資料的元素路徑語法 (SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "72173830"
 |&#124; (分隔號)|會分隔語法項目， 您只能選擇其中一個項目。|  
 |`[ ]` (方括弧)|選擇性的語法項目。 不要輸入方括號。|  
 |**{ }** (大括弧)|會分隔語法項目的參數。|  
-|[ **,** ...*n*]|指出先前項目可以重複 *n* 次。 以逗號分開各次出現項目。|  
+|[ **,** ...*n*]|指出先前項目可以重複 *n* 次。 以逗號分隔項目。|  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ XMLLocalName :: =
     Identifier in the XML tag.   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  下表摘要說明元素路徑的詞彙。 表格中的範例會參考範例 XML 文件 Customers.xml (包含在本主題的「範例」一節中)。  
   
 > [!NOTE]  
@@ -92,7 +92,7 @@ XMLLocalName :: =
   
  **範例 #1**： *空白*  
   
-|單|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
+|單|數量|ID|名字|姓氏|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
 |Chair|6|1|Bobby|Moore|11|https\://www.adventure-works.com|  
 |Table|1|2|Bobby|Moore|11|https\://www.adventure-works.com|  
@@ -101,7 +101,7 @@ XMLLocalName :: =
   
  **範例 #2**： `Customers {}/Customer`  
   
-|FirstName|LastName|ID|  
+|名字|姓氏|ID|  
 |---------------|--------------|--------|  
 |Bobby|Moore|11|  
 |Crystal|Hu|20|  
@@ -109,7 +109,7 @@ XMLLocalName :: =
   
  **範例 #3**： `Customers {}/Customer {}/LastName`  
   
-|LastName|  
+|姓氏|  
 |--------------|  
 |Moore|  
 |Hu|  
@@ -117,7 +117,7 @@ XMLLocalName :: =
   
  **範例 #4**： `Customers {}/Customer {}/Orders/Order {@,@Qty}`  
   
-|單|Qty|  
+|單|數量|  
 |-----------|---------|  
 |Chair|6|  
 |Table|1|  
@@ -126,7 +126,7 @@ XMLLocalName :: =
   
  **範例 #5**： `Customers {}/Customer/Orders/Order{ @ID(Integer)}`  
   
-|Order.ID|FirstName|LastName|ID|  
+|Order.ID|名字|姓氏|ID|  
 |--------------|---------------|--------------|--------|  
 |1|Bobby|Moore|11|  
 |2|Bobby|Moore|11|  

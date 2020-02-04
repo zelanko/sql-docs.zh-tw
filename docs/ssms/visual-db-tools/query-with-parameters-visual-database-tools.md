@@ -1,10 +1,9 @@
 ---
-title: 使用參數查詢 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 使用參數查詢
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 54d5549c72dab15e7ace0248afaaf027fb63a81e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 083f3da69d7b86d12dc1919cea143d10ce5a10fc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266283"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255305"
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>使用參數查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

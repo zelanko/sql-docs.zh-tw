@@ -1,29 +1,28 @@
 ---
-title: 重新執行至資料指標 (SQL Server Profiler) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 重新執行至游標
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- replaying cursors
-- traces [SQL Server], replaying
-- replaying traces
 ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c4a6a02576ac5c58c88cf1b2b489106d6cf8013e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 9df4fe8bf442fae11aefeb2b3d4e3c95aa13037e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928850"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74957782"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>重新執行至資料指標處 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  此主題描述如何利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，來重新執行已在到達資料指標時暫停的追蹤檔或資料表。 在資料指標暫停追蹤可以支援偵錯，因為您可以將較長追蹤指令碼的重新執行過程分解為可累加分析的較短片段。  
+
+此主題描述如何利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，來重新執行已在到達資料指標時暫停的追蹤檔或資料表。 在資料指標暫停追蹤可以支援偵錯，因為您可以將較長追蹤指令碼的重新執行過程分解為可累加分析的較短片段。  
   
 ### <a name="to-replay-to-the-cursor"></a>若要重新執行至資料指標處  
   

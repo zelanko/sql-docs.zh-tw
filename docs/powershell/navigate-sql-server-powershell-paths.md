@@ -10,10 +10,10 @@ ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 4ced679315a8e682a438f2ab99ca610219768172
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68049123"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>導覽 SQL Server PowerShell 路徑
@@ -30,7 +30,7 @@ Windows PowerShell 實作指令程式以導覽路徑結構，而路徑結構代�
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會實作提供者 Cmdlet 的子集，如下表所示：  
   
-|Cmdlet|標準的別名|cmd 別名|UNIX Shell 別名|Description|  
+|Cmdlet|標準的別名|cmd 別名|UNIX Shell 別名|描述|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|取得目前的節點。|  
 |**Set-Location**|**sl**|**cd, chdir**|**cd, chdir**|變更目前的節點。|  

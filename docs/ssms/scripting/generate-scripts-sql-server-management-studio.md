@@ -1,6 +1,6 @@
 ---
-title: 產生指令碼 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 產生指令碼 (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 800153a20651b649d644fecfeacf11d48958fab8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: abdbbd7659221fb27df12ff03995b2d246241463
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265450"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253863"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>產生指令碼 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68265450"
   
 3.  展開物件的類別目錄。 例如，展開 [資料表]  或 [檢視表]  節點。  
   
-4.  以滑鼠右鍵按一下物件，然後指向 [產生 \<物件類型> 的指令碼為]  ，例如指向 [產生資料表的指令碼為]  。  
+4.  以滑鼠右鍵按一下物件，然後指向 [產生 **物件類型> 的指令碼為]\<** ，例如指向 [產生資料表的指令碼為]  。  
   
 5.  指向指令碼類型，例如 [CREATE 至]  或 [ALTER 至]  。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68265450"
   
 6.  Ctrl + 以滑鼠左鍵按一下您想要編寫指令碼的第二個物件。  
   
-7.  以滑鼠右鍵按一下其中一個選取的物件，然後選取 [產生 \<物件類型> 的指令碼為]  。  
+7.  以滑鼠右鍵按一下其中一個選取的物件，然後選取 [產生 **物件類型> 的指令碼為]\<** 。  
 
     ![物件總管](media/generate-scripts-sql-server-management-studio/objectexplorerdetails.png)
   

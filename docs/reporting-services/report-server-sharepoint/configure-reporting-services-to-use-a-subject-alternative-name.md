@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 493abba0e4396b6f12670dd3214d19e4767c4d0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580012"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>設定 Reporting Services 來使用主體別名
@@ -34,7 +34,7 @@ ms.locfileid: "65580012"
   
 2.  在 [Web 服務 URL]  頁面中，選取 SSL 連接埠和 SSL 憑證。  
   
-     ![Reporting Services 設定管理員](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Reporting Services 設定管理員")  
+     ![Reporting Services 組態管理員](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Reporting Services 組態管理員")  
   
      組態管理員會針對通訊埠註冊 SSL 憑證。  
   

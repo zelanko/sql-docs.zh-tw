@@ -10,10 +10,10 @@ ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 21e642feba6a2726aa4d5615f6ae508fa33c1694
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67934656"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>編碼及解碼 SQL Server 識別碼

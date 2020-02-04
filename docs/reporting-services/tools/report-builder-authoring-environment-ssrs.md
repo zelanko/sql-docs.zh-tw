@@ -9,10 +9,10 @@ ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 597685b5de75fa78fab0fda4fc3f217462c3d736
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576302"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>報表產生器撰寫環境 (SSRS)

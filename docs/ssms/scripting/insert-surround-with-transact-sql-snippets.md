@@ -1,6 +1,6 @@
 ---
-title: 插入範圍陳述式 Transact-SQL 程式碼片段 | Microsoft Docs
-ms.custom: ''
+title: 插入範圍陳述式 Transact-SQL 程式碼片段
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c77619c36ce71fecbb5e7442f09ee9d03843bf83
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3ad887bc26ca9b320ff62130633d3a77b08b9f8f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265435"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253852"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>插入範圍陳述式 Transact-SQL 程式碼片段
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

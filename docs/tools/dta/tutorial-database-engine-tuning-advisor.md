@@ -1,10 +1,7 @@
 ---
-title: 教學課程：Database Engine Tuning Advisor | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 教學課程：Database Engine Tuning Advisor
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,15 +10,21 @@ helpviewer_keywords:
 ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ab03ee7997014308e6753f463119a3a9adc8c963
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: a6fea0bbb9c9471885f76f3f6f44a86b50718d3e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105839"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304699"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>教學課程：Database Engine Tuning Advisor
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 歡迎使用 Database Engine Tuning Advisor 教學課程。 Database Engine Tuning Advisor 會檢查在您指定的資料庫中如何處理查詢，之後，它會建議您如何修改資料庫結構 (如索引、索引檢視和資料分割) 來改進查詢處理效能。  
   
 Database Engine Tuning Advisor 提供兩個使用者介面：圖形化使用者介面 (GUI) 和 **dta** 命令提示字元公用程式。 GUI 可讓您既快又容易檢視微調工作階段的結果， **dta** 公用程式則可以輕易將 Database Engine Tuning Advisor 功能納入自動微調的指令碼中。 此外，Database Engine Tuning Advisor 可接受 XML 輸入，對微調處理序提供更多控制權。  
@@ -29,10 +32,10 @@ Database Engine Tuning Advisor 提供兩個使用者介面：圖形化使用者�
 ## <a name="what-you-will-learn"></a>學習內容  
 這個教學課程將告訴您如何導覽 Database Engine Tuning Advisor GUI，以及如何利用這個 GUI 和 **dta** 公用程式來執行某些基本工作。 它包含下列課程：  
   
-[第 1 課：Database Engine Tuning Advisor 中的基本導覽](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
+[課程 1：Database Engine Tuning Advisor 中的基本導覽](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
 在這個課程中，您將熟悉新的 Database Engine Tuning Advisor GUI，以及學習如何設定顯示選項和配置。  
   
-[第 2 課：使用 Database Engine Tuning Advisor](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[課程 2：使用 Database Engine Tuning Advisor](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
 在這個課程中，您將學會如何使用 Database Engine Tuning Advisor GUI 來執行基本微調工作。  
   
 [課程 3：使用 dta 命令提示字元公用程式](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  

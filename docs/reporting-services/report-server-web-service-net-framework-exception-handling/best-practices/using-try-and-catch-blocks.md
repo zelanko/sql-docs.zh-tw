@@ -12,10 +12,10 @@ ms.assetid: a7a9ef53-e3b6-4bf7-81f3-d85615954e6f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 055c1a98dd1c77f19712be66dc2b4dcaa6060b60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62992172"
 ---
 # <a name="using-try-and-catch-blocks"></a>使用 Try 和 Catch 區塊

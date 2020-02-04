@@ -1,5 +1,5 @@
 ---
-title: 物件總管 | Microsoft Docs
+title: 物件總管
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -24,14 +24,14 @@ ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 1ef39a04a9b9ae6997b1cd262db43a79c5b5ff49
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 575c8d2ec6e6397f7a3444bcc718988b070e783d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988143"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257143"
 ---
 # <a name="object-explorer"></a>物件總管
 
@@ -43,7 +43,7 @@ ms.locfileid: "70988143"
   
 ## <a name="object-explorer-tasks"></a>物件總管工作  
   
-|Description|主題|  
+|描述|主題|  
 |---------------|---------|  
 |描述如何開啟 [物件總管]，以及設定可定義總管行為的選項。|[開啟和設定物件總管](../../ssms/object/open-and-configure-object-explorer.md)|  
 |描述如何將 [物件總管] 連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]及 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]執行個體。|[從物件總管連接到執行個體](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  

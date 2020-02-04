@@ -9,10 +9,10 @@ ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 09a8fd213f8bebd171a9e9fa2427345e677523a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581953"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>加入、移動或刪除文字方塊 (報表產生器及 SSRS)

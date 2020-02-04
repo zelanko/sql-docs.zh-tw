@@ -1,10 +1,9 @@
 ---
-title: 開啟資料庫圖表設計工具 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 開啟資料庫圖表設計工具
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 871b4baa94fde44e642f3a0ec1862790474b30d7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: cefcabb8efd508a468f9171eb145cd3cf99a3efa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267047"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255856"
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>開啟資料庫圖表設計工具 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

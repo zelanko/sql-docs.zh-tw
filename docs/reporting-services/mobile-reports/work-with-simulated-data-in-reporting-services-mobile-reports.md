@@ -9,10 +9,10 @@ ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62474853"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>使用 Reporting Services 行動報表中的模擬資料

@@ -9,10 +9,10 @@ ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 84ca5db4b8979b1b49ffc25b809638defc40fe1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572121"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>為 Reporting Services 訂閱與傳遞疑難排解
@@ -46,7 +46,7 @@ ms.locfileid: "65572121"
   
 其中 \<錯誤訊息> 會取代為協同作業資料物件 (CDO) 所傳回的其他錯誤訊息資訊。  
   
-### <a name="to-resolve-this-problem"></a>若要解決這個問題：  
+### <a name="to-resolve-this-problem"></a>若要解決此問題：  
 * 將 `SendUsing` Rsreportserver.config **檔案中的** 元素的值設為 1。  
 * 清除 `SMTPServer` 屬性的值，使其空白。 您也需要提供 `SMTPServerPickupDirectory` 屬性的值。   
   

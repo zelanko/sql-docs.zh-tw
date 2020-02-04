@@ -1,10 +1,8 @@
 ---
-title: Transact-SQL 偵錯工具資訊 | Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
+title: Transact-SQL 偵錯工具資訊
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -16,20 +14,28 @@ helpviewer_keywords:
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6329776bd998a8d90cbadd577132a500020515b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82f5caaa772ab21ce5e36165fcc46665c99a4ea5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253550"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253045"
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL 偵錯工具 - 資訊
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  每當偵錯工具在特定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上暫停執行作業時，您就可以使用各種偵錯工具視窗來檢視目前的執行狀態。  
-  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+每當偵錯工具在特定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上暫停執行作業時，您就可以使用各種偵錯工具視窗來檢視目前的執行狀態。 
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
 ## <a name="debugger-windows"></a>偵錯工具視窗  
- 在偵錯工具模式中，偵錯工具會在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 主視窗的底部開啟兩個視窗。 偵錯工具會在這兩個視窗中顯示其所有資訊。 每個偵錯工具視窗都具有一些可讓您選取的索引標籤，以便控制哪一組資訊要顯示在視窗中。 左側的偵錯工具視窗包含 [區域變數]  、[監看式 1]  、[監看式 2]  、[監看式 3]  和 [監看式 4]  索引標籤。 右側的偵錯工具視窗包含 [呼叫堆疊]  、[執行緒]  、[中斷點]  、[命令視窗]  和 [輸出]  索引標籤。  
+
+在偵錯工具模式中，偵錯工具會在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 主視窗的底部開啟兩個視窗。 偵錯工具會在這兩個視窗中顯示其所有資訊。 每個偵錯工具視窗都具有一些可讓您選取的索引標籤，以便控制哪一組資訊要顯示在視窗中。 左側的偵錯工具視窗包含 [區域變數]  、[監看式 1]  、[監看式 2]  、[監看式 3]  和 [監看式 4]  索引標籤。 右側的偵錯工具視窗包含 [呼叫堆疊]  、[執行緒]  、[中斷點]  、[命令視窗]  和 [輸出]  索引標籤。  
   
 > [!NOTE]  
 >  先前的描述適用於偵錯工具視窗的預設位置。 您可以拖曳索引標籤，以便在視窗之間移動它，也可以取消停駐索引標籤來建立新的視窗，以便將它放在想要的位置。  
@@ -41,11 +47,11 @@ ms.locfileid: "68253550"
 -   在 [偵錯]  工具列上，按一下 [中斷點]  ，然後選取您想要的視窗。  
   
 ## <a name="transact-sql-expressions"></a>Transact-SQL 運算式  
- 運算式是評估成單一純量值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句，例如變數或參數。 左側偵錯工具視窗最多可以在五個索引標籤或視窗中顯示目前指派給運算式的資料值：[區域變數]、[監看式 1]  、[監看式 2]  、[監看式 3]  和 [監看式 4]  。  
+ 運算式是評估成單一純量值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句，例如變數或參數。 左側的偵錯工具視窗最多可以在五個索引標籤或視窗中顯示目前指派給運算式的資料值：[區域變數]  、[監看式 1]、[監看式 2]  、[監看式 3]  和 [監看式 4]  。  
   
  [區域變數]  視窗會顯示有關 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具目前範圍中之區域變數的資訊。 [區域變數]  視窗中所列的這組運算式會隨著偵錯工具逐步執行不同的程式碼部分而變更。  
   
- [快速監看式]  中的運算式和四個 [監看]  視窗都不限於僅列出變數的識別碼。 您可以指定評估為單一值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式，例如將數字加入變數中，或是評估為單一值的 SELECT 陳述式。 範例如下：  
+ [快速監看式]  中的運算式和四個 [監看]  視窗都不限於僅列出變數的識別碼。 您可以指定評估為單一值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式，例如將數字加入變數中，或是評估為單一值的 SELECT 陳述式。 範例包括：  
   
 -   變數的名稱，例如 @IntegerCounter。  
   
@@ -66,7 +72,7 @@ ms.locfileid: "68253550"
  在偵錯模式中，當您將滑鼠指標移到識別碼上方時，[快速諮詢]  快顯就會顯示運算式的名稱及其目前值。 如需詳細資訊，請參閱[快速諮詢 &#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md)。  
   
 ## <a name="breakpoints"></a>中斷點  
- 您可以使用 [中斷點]  視窗來檢視和管理目前已設定的中斷點。 如需詳細資訊，請參閱[逐步執行 TRANSACT-SQL 程式碼](../../relational-databases/scripting/step-through-transact-sql-code.md)。  
+ 您可以使用 [中斷點]  視窗來檢視和管理目前已設定的中斷點。 如需詳細資訊，請參閱 [逐步執行 TRANSACT-SQL 程式碼](../../relational-databases/scripting/step-through-transact-sql-code.md)。  
   
 ## <a name="call-stacks"></a>呼叫堆疊  
  [呼叫堆疊]  視窗會顯示目前的執行位置，以及有關執行作業如何從原始編輯器視窗通過任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組 (函數、預存程序或觸發程序) 而到達目前執行位置的資訊。 [呼叫堆疊]  視窗中的每個資料列都稱為堆疊框架，而且代表下列任何一個項目：  

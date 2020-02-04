@@ -12,10 +12,10 @@ ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037867"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>鍵盤快速鍵 (報表產生器)
@@ -30,7 +30,7 @@ ms.locfileid: "67037867"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>報表產生器中的鍵盤快速鍵  
   
-|Description|按鍵組合|  
+|描述|按鍵組合|  
 |-----------------|---------------------|  
 |開啟報表產生器的功能表。|ALT+F|  
 |建立報表。|CTRL+N|  
@@ -58,7 +58,7 @@ ms.locfileid: "67037867"
 |剪下|CTRL+X、ALT+H+X|  
 |貼上|CTRL+V、ALT+H+V|  
 |全選。|CTRL+A|  
-|恢復|CTRL+Z、ALT+Z|  
+|復原|CTRL+Z、ALT+Z|  
 |取消復原|CTRL+Y、ALT+Y|  
 |放大。|CTRL+加號 (+)|  
 |縮小。|CTRL+減號 (-)|  

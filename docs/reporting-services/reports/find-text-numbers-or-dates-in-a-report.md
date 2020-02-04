@@ -11,10 +11,10 @@ ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f76bc00eca721a2ca118062d21cafe042e572dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576407"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>在報表中尋找文字、數字或日期
@@ -41,6 +41,6 @@ ms.locfileid: "65576407"
 4.  若要搜尋相同值的下一個出現位置，請按 **[下一個]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [將報表檢視器 Web 組件加入網頁中 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+ [將報表檢視器網頁組件加入至網頁 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   

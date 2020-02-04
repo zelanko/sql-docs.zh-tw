@@ -12,10 +12,10 @@ ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e19691222fd55350bb3f0da7aaf94a983ec620cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193582"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>實作 IRenderingExtension 介面
@@ -40,7 +40,7 @@ ms.locfileid: "63193582"
   
 -   包含裝置設定的 *deviceInfo* 參數。 如需詳細資訊，請參閱[將裝置資訊設定傳遞至轉譯延伸模組](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)。  
   
--   包含 <xref:System.Collections.Specialized.NameValueCollection> 字典物件的 *clientCapabilities* 參數，該物件具有您要轉譯之目標用戶端的資訊。  
+-   包含 *字典物件的*clientCapabilities<xref:System.Collections.Specialized.NameValueCollection> 參數，該物件具有您要轉譯之目標用戶端的資訊。  
   
 -   包含轉譯結果相關資訊的 *RenderProperties*。  
   
@@ -70,7 +70,7 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
  <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.RenderStream%2A> 方法會從報表轉譯特定的資料流。 在初始 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> 呼叫期間會建立所有的資料流，但是一開始不會將資料流傳回給用戶端。 這個方法是用於第二個資料流 (例如 HTML 轉譯中的影像) 或是多頁面轉譯延伸模組的其他頁面 (例如影像/EMF)。  
   
 ## <a name="getrenderingresource-method"></a>GetRenderingResource 方法  
- <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法會擷取資訊，而不需執行報表的完整轉譯。 有時報表需要的資訊，並不需要轉譯報表本身。 例如，如果您需要與轉譯延伸模組建立關聯的圖示，請使用包含單一標記 **\<Icon>** 的 *deviceInfo* 參數。 在這些情況下，您可以使用 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法。  
+ <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法會擷取資訊，而不需執行報表的完整轉譯。 有時報表需要的資訊，並不需要轉譯報表本身。 例如，如果您需要與轉譯延伸模組建立關聯的圖示，請使用包含單一標記  Icon> **的 \<deviceInfo** 參數。 在這些情況下，您可以使用 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法。  
   
 ## <a name="see-also"></a>另請參閱  
  [實作轉譯延伸模組](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

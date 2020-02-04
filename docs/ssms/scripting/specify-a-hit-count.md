@@ -1,10 +1,8 @@
 ---
-title: 指定叫用計數 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 指定叫用計數
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.hitcount
@@ -13,19 +11,27 @@ helpviewer_keywords:
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 862d99fd57b22e1643ce2591fccfb0478b664074
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 03eed65b3295f1b9a1cc5b33de8809ce1d1c5c90
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267686"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243543"
 ---
 # <a name="specify-a-hit-count"></a>指定叫用計數
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  中斷點叫用次數是每次到達中斷點時由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具遞增的計數器。 如果已到達指定的叫用計數而且滿足任何指定的中斷點條件時，偵錯工具就會執行為中斷點指定的動作。  
-  
-## <a name="hit-count-considerations"></a>叫用次數考量  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+中斷點叫用次數是每次到達中斷點時由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具遞增的計數器。 如果已到達指定的叫用計數而且滿足任何指定的中斷點條件時，偵錯工具就會執行為中斷點指定的動作。  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## <a name="hit-count-considerations"></a>叫用次數考量
+
  根據預設，每次叫用中斷點時，執行就會中斷。 您可以選擇下列其中一個選項：  
   
 -   永遠中斷 (預設值)。  

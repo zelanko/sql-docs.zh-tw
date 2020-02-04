@@ -9,10 +9,10 @@ ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 92c0943b17f22c63481f1dbfb0f76977a4b71381
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66500226"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>為報表伺服器註冊服務主要名稱 (SPN)
@@ -21,7 +21,7 @@ ms.locfileid: "66500226"
 ## <a name="about-spns"></a>關於 SPN  
  SPN 是使用 Kerberos 驗證之網路上某項服務的唯一識別碼。 它是由服務類別、主機名稱所組成，有時也包含連接埠。 HTTP SPN 不需要連接埠。 在使用 Kerberos 驗證的網路上，伺服器的 SPN 必須在內建的電腦帳戶 (如 NetworkService 或 LocalSystem) 或使用者帳戶下註冊。 內建帳戶會自動註冊 SPN。 但是，當您在網域使用者帳戶下執行服務時，您必須針對您想要使用的帳戶手動註冊 SPN。  
   
- 若要建立 SPN，可以使用 **SetSPN** 命令列公用程式。 如需詳細資訊，請參閱下列內容：  
+ 若要建立 SPN，可以使用 **SetSPN** 命令列公用程式。 如需詳細資訊，請參閱下列：  
   
 -   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx) 。  
   
@@ -50,7 +50,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
   
 2.  以網域管理員的身分登入網域控制站。  
   
-3.  開啟 [命令提示字元] 視窗。  
+3.  開啟命令提示字元視窗。  
   
 4.  複製下列命令，使用對您的網路有效的實際值來取代預留位置值：  
   
@@ -60,7 +60,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
   
      例如： `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
   
-5.  執行此命令。  
+5.  執行命令。  
   
 6.  開啟 **RsReportServer.config** 檔，並找出 `<AuthenticationTypes>` 區段。  
   

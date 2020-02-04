@@ -1,5 +1,6 @@
 ---
-title: Transact-SQL 中斷點 | Microsoft 文件
+title: Transact-SQL 中斷點
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -9,21 +10,23 @@ ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 03/14/2017
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 989c2d7143d48a4817b7a69cf08e2845b51300e6
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: 1c31101eb201a55dffd100fb9365f7c29826fb5d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097923"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243397"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL 中斷點
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 中斷點指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具要在特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上暫停執行，然後您就可以在該點檢視程式碼元素的狀態。
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
 ## <a name="breakpoints"></a>中斷點
 

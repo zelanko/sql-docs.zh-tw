@@ -9,10 +9,10 @@ ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cac1a32b49fde5b41c0a8ef21706d873ce037cd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63061150"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>從 Reporting Services 行動報表中的共用資料集取得資料

@@ -9,10 +9,10 @@ ms.assetid: b8ae650b-0f46-4848-b62b-15f8a40751b8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 52b3fd24cf36aebeb87e41885b9e992fca1338a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581593"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>運算式中的常數 (報表產生器及 SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "65581593"
 ## <a name="literal-text"></a>常值文字  
  在運算式中，常值文字是置於雙引號之間的文字。 如果文字是運算式的一部分，則您也可以直接在文字方塊中輸入文字，而不加上雙引號。 如果文字方塊的值不是以等號 (=) 開頭，就會將該文字當做常值文字。 下表顯示若干運算式中的常值文字範例。  
   
-|常數|顯示文字|運算式文字|  
+|持續性|顯示文字|運算式文字|  
 |--------------|------------------|---------------------|  
 |報表執行於：|<\<Expr>>|`="Report run at: " & Globals!ExecutionTime`|  
 |Adventure Works Cycles|Adventure Works Cycles|Adventure Works Cycles|  
@@ -33,7 +33,7 @@ ms.locfileid: "65581593"
 ## <a name="rdl-constants"></a>RDL 常數  
  您可以在運算式中使用以報表定義語言 (RDL) 所定義的常數。 當您為報表屬性建立只接受特定有效的運算式時，常數就會顯示在 **[運算式]** 對話方塊中 (也稱為列舉型別)。 下表顯示兩個範例。  
   
-|屬性|Description|值|  
+|屬性|描述|值|  
 |--------------|-----------------|------------|  
 |TextAlign|用來對齊文字方塊中文字的有效。|一般、靠左、置中、靠右|  
 |BorderStyle|加入至報表的線條有效。|預設值、無、點線、虛線、實線、雙線、虛線點、虛線點點|  
@@ -46,7 +46,7 @@ ms.locfileid: "65581593"
 ## <a name="clr-constants"></a>CLR 常數  
  您可以在運算式中使用以 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 類別所定義的常數。 下表顯示系統定義色彩的範例。  
   
-|常數|Description|  
+|持續性|描述|  
 |--------------|-----------------|  
 |MistyRose|當您為以背景色彩為基礎的報表屬性建立運算式時，可以依名稱指定色彩。 有效的名稱會列在 **[運算式]** 對話方塊中。|  
   

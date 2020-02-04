@@ -9,10 +9,10 @@ ms.assetid: 4b194714-46f7-4f0e-9632-7f89d9600762
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a78a71caf85bad0df6d21f22c305a93898c122df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579032"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>在資料區域中設定沒有資料的訊息 (報表產生器及 SSRS)

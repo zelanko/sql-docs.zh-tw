@@ -16,10 +16,10 @@ ms.assetid: 78e367c6-5e4d-4715-8cb7-e841e4f76a7c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b57b962b343da7d169f77ad09a9e9a3191da443
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67997082"
 ---
 # <a name="updateblob-method-sqlserverresultset"></a>updateBlob 方法 (SQLServerResultSet)

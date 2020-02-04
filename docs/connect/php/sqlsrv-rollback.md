@@ -18,13 +18,13 @@ ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8475944b4167184a6a2ef4a71d8751b2cd320fe1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014958"
 ---
-# <a name="sqlsrvrollback"></a>sqlsrv_rollback
+# <a name="sqlsrv_rollback"></a>sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 在指定的連接上復原目前交易，並使連接回到自動認可模式。 目前交易包含在指定的連接上呼叫 [sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md) 之後和呼叫 **sqlsrv_rollback** 或 [sqlsrv_commit](../../connect/php/sqlsrv-commit.md)之前執行的所有陳述式。  

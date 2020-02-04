@@ -1,10 +1,9 @@
 ---
-title: 自動建立自我聯結 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 自動建立自我聯結
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: f9ec90e8-3aad-415c-a5c4-8dfa9540e37f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 66ba00a9ec4a8d39afd805c0dca45dbc70e4932e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 719f1ed067e3f53cc13839ecd42a5b7ec4791512
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264316"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254262"
 ---
 # <a name="create-self-joins-automatically-visual-database-tools"></a>自動建立自我聯結 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

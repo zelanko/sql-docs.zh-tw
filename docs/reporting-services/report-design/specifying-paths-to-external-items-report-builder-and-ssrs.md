@@ -9,10 +9,10 @@ ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9848a77ae760fc2c1fa4c4d0ddeaa5b1120ec1ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578481"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>指定外部項目的路徑 (報表產生器及 SSRS)
@@ -39,11 +39,11 @@ ms.locfileid: "65578481"
   
     -   **在報表伺服器上：** 路徑的開頭是 **/** ，亦即主資料夾。 例如 /Reports/AllSubreports/Subreport1。  
   
-    -   **在 SharePoint 網站上：** 您必須在運算式中指定報表名稱，以及項目的完整 URL 和副檔名 .rdl。 例如， `="https://server/site/library/folder/Report1.rdl"`。  
+    -   **在 SharePoint 網站上：** 您必須在運算式中指定報表名稱，以及項目的完整 URL 和副檔名 .rdl。 例如： `="https://server/site/library/folder/Report1.rdl"` 。  
   
 ## <a name="see-also"></a>另請參閱  
  [加入外部影像 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   
- [加入子報表和參數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
+ [新增子報表和參數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
  [在報表上新增鑽研動作 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   
   

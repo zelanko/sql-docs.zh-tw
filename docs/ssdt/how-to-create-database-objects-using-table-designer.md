@@ -1,11 +1,7 @@
 ---
-title: 如何：使用資料表設計工具建立資料庫物件 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 使用資料表設計工具建立資料庫物件
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.scriptpanel
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cab6b6114dd7ea7364df890be67579f91bee4339
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ef475a7a0f5e2e8fdea510a0ee743f0d74d19dd2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897166"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241497"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>如何：使用資料表設計工具建立資料庫物件
+
 [SQL Server 物件總管]  中新的 [SQL Server]  節點不僅看上去非常類似於 SSMS，還能讓您透過作用有如 SSMS 對應介面的關聯式功能表建立新物件。  
   
 例如，您可以在 [資料庫]  節點底下建立新的資料庫。 您也可以選取特定的資料庫，然後使用新的資料表設計工具，快速建立或編輯資料表定義及其相關的程式設計物件。 從資料表設計工具中，您可以切換到指令碼窗格，讓您能夠直接編輯定義這個資料表的指令碼。  
@@ -56,24 +57,24 @@ ms.locfileid: "67897166"
 5.  加入其他新的資料行。 分別為 [名稱]  和 [資料類型]  欄位輸入 **Address** 和 **nvarchar (MAX)** ，並取消選取 [允許 Null]  欄位。  
   
     > [!WARNING]  
-    > 從連接的資料庫編輯物件時，請不要將這些物件儲存到本機磁碟機。 若要正確儲存對資料庫的變更，請遵循下一個程序中的步驟：[如何：使用 Power Buffer 更新連線的資料庫](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)程序中的步驟套用變更。  
+    > 從連接的資料庫編輯物件時，請不要將這些物件儲存到本機磁碟機。 若要將您的變更正確地儲存到資料庫，請遵循後續程序[如何：使用 Power Buffer 更新連接的資料庫](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)中的步驟。  
   
 6.  重複前面的步驟，建立另一個名為 **Customer** 的資料表。 這次使用資料行格線，將下列資料行加入至 Customer 資料表。 而且，記得要變更指令碼，讓資料表名稱為 `[dbo].[Customer]`。  
   
-    |[屬性]|資料類型|**允許 Null**|  
+    |名稱|資料類型|**允許 Null**|  
     |--------|-------------|-------------------|  
-    |Id|INT|取消選取|  
-    |[屬性]|nvarchar (128)|取消選取|  
+    |Id|int|取消選取|  
+    |名稱|nvarchar (128)|取消選取|  
   
 7.  建立一個或多個名為 **Products** 的資料表。 使用資料行格線，將下列資料行加入至 Products 資料表。 而且，記得要變更指令碼，讓資料表名稱為 `[dbo].[Products]`。  
   
-    |[屬性]|資料類型|**允許 Null**|  
+    |名稱|資料類型|**允許 Null**|  
     |--------|-------------|-------------------|  
-    |Id|INT|取消選取|  
-    |[屬性]|nvarchar (128)|取消選取|  
-    |ShelfLife|INT|已選取|  
-    |SupplierId|INT|已選取|  
-    |CustomerId|INT|已選取|  
+    |Id|int|取消選取|  
+    |名稱|nvarchar (128)|取消選取|  
+    |ShelfLife|int|已選取|  
+    |SupplierId|int|已選取|  
+    |CustomerId|int|已選取|  
   
 ### <a name="to-create-a-new-check-constraint-using-the-table-designer"></a>若要使用資料表設計工具建立新的檢查條件約束  
   

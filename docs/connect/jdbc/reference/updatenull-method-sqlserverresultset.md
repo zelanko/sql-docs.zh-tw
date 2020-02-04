@@ -16,10 +16,10 @@ ms.assetid: ca0e9ae2-86e3-4763-8225-07d36acf8a18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a972b8a7f4bd049f6d15a0982dc4517497a34140
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998764"
 ---
 # <a name="updatenull-method-sqlserverresultset"></a>updateNull 方法 (SQLServerResultSet)

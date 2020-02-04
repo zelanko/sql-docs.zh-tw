@@ -1,29 +1,28 @@
 ---
-title: 一次重新執行一個事件 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 一次只重新執行一個單一事件
+titleSuffix: (SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- events [SQL Server], replaying single event at a time
-- traces [SQL Server], replaying
-- replaying traces
 ms.assetid: 220fb192-9636-41a2-b15c-62af6cab8fff
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 405debdbf84a3f7746754e2e2cf088fa1b76522b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: e8f217e2117e22edbd5f763b71c51cb078d49301
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031479"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307511"
 ---
 # <a name="replay-a-single-event-at-a-time-sql-server-profiler"></a>一次重新執行一個事件 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，在重新執行追蹤檔案或資料表中，一次重新執行一個事件。  
+
+此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，在重新執行追蹤檔案或資料表中，一次重新執行一個事件。  
   
 ### <a name="to-replay-a-single-event-at-a-time"></a>若要一次只重新執行一個事件  
   

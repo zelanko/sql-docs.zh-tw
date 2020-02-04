@@ -11,10 +11,10 @@ ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f7c663f1a6d13b910492e21b1bd05145dc2a5833
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575780"
 ---
 # <a name="user-role-properties-management-studio"></a>使用者角色屬性 (Management Studio)
@@ -34,7 +34,7 @@ ms.locfileid: "65575780"
  **說明**  
  顯示角色定義的描述。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，這項描述只會出現在本頁面上。 在報表管理員中，這項描述可協助使用者決定是否要在角色指派中使用角色。  
   
- **工作**  
+ **Task**  
  列出可為此角色定義選取的所有項目層級工作。 您可以將項目加入預先定義的工作清單，或者從清單移除項目，以定義使用者藉由這個角色存取指定項目的方式。 您不能建立新的工作，也不能修改現有的工作。 角色定義的工作清單只會顯示在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中。  
   
  **工作描述**  

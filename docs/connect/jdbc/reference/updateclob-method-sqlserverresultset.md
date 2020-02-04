@@ -16,10 +16,10 @@ ms.assetid: e841f9a6-e94f-4552-a0e2-aefe3d84faf0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5f5f5c65d8ce86ac0f48c3a2a459e0cffec3096b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999254"
 ---
 # <a name="updateclob-method-sqlserverresultset"></a>updateClob 方法 (SQLServerResultSet)

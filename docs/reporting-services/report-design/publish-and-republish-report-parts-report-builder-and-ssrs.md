@@ -9,10 +9,10 @@ ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f48415c35b57b889b764abfe44f5bf937ee3f650
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576628"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>發行與重新發行報表組件 (報表產生器及 SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "65576628"
   
      發行報表組件之後，對話方塊會顯示成功發行的報表組件，以及未成功發行的報表組件。 您可以在 [發行報表組件]  對話方塊中，檢視無法發行之報表組件的詳細資料。  
   
-6.  按一下 [ **關閉**]。  
+6.  按一下 [關閉]  。  
   
 ## <a name="to-republish-a-report-part"></a>重新發行報表組件  
   

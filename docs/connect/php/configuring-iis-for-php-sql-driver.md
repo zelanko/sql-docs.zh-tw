@@ -13,10 +13,10 @@ ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 150addd664870e5441c888b6bc357f8fb4d92b20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015165"
 ---
 # <a name="configuring-iis-for-the-microsoft-drivers-for-php-for-sql-server"></a>為 Microsoft Drivers for PHP for SQL Server 設定 IIS

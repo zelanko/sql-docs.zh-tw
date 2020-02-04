@@ -9,10 +9,10 @@ ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 450a490e5c4f54f9fec2e88c1c73bfbf8502869a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66499986"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>教學課程的必要條件 (報表產生器)
@@ -29,7 +29,7 @@ ms.locfileid: "66499986"
   
     在報表伺服器上，選取 [新增]   > [分頁報表]  。
   
-    在 SharePoint 整合模式的報表伺服器中，於 [文件]  索引標籤上，選取 [新增文件]  ，然後從下拉式清單中選取 [報表產生器報表]  。 例如， `https://<servername>/sites/mySite/reports`。 SharePoint 管理員必須啟用每一個文件庫的 [報表產生器報表] 功能。  
+    在 SharePoint 整合模式的報表伺服器中，於 [文件]  索引標籤上，選取 [新增文件]  ，然後從下拉式清單中選取 [報表產生器報表]  。 例如： `https://<servername>/sites/mySite/reports` 。 SharePoint 管理員必須啟用每一個文件庫的 [報表產生器報表] 功能。  
   
 -   [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 報表伺服器或是與 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 報表伺服器整合之 SharePoint 網站的 URL。 您必須具有權限，才能儲存和檢視報表、共用資料來源、共用資料集、報表組件和模型。 根據預設，報表伺服器的 URL 是 `https://<servername>/reportserver`。 根據預設，SharePoint 網站的 URL 是 `https://<sitename>` 或 `https://<server>/site`。  
   

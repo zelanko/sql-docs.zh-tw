@@ -9,10 +9,10 @@ ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0f9e826ff115183180ad42a1c065619f2196cd3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580886"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>顯示頁碼或其他報表屬性 (報表產生器及 SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "65580886"
   
 -   報表資料夾  
   
--   報表名稱  
+-   報告名稱  
   
 -   報表伺服器 URL  
   
@@ -32,7 +32,7 @@ ms.locfileid: "65580886"
   
 -   使用者識別碼  
   
--   語言  
+-   Language  
   
  您可能會想要針對頁碼，在數字前面加入 "Page" 一詞。 您可能也會想要顯示總頁數。  
   

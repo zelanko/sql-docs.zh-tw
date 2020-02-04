@@ -11,10 +11,10 @@ ms.assetid: abe8ff37-72e5-4ec1-a226-6b68dbf2c1b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ac6e2d368e39bc5a40cc40f7509fbf0b715e4f94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998253"
 ---
 # <a name="updatesqlxml-method-sqlserverresultset"></a>updateSQLXML 方法 (SQLServerResultSet)

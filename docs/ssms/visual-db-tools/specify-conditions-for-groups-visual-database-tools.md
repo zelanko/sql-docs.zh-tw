@@ -1,10 +1,9 @@
 ---
-title: 指定群組條件 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 指定群組條件
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 269ad9c5-3261-4526-badf-7be3c869f229
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 851245e9e294a5b7f5dfe0db9945bf6c2005ea0e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7e6c1bee30fb6ef4cd73772e7f62c2a51ebcd03f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263592"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254959"
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>指定群組條件 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

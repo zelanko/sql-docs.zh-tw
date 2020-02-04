@@ -18,13 +18,13 @@ ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02b4311348ebbd52e5e8382048449072c84d2e46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015030"
 ---
-# <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
+# <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 將下一個資料列擷取為數值索引陣列和 (或) 關聯陣列。  
@@ -41,7 +41,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* [選擇性]：預先定義的常數。 此參數可以採用下表所列的其中一個值：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|下一個資料列會以數值陣列的形式傳回。|  
 |SQLSRV_FETCH_ASSOC|下一個資料列會以關聯陣列的形式傳回。 陣列索引鍵是結果集內的資料行名稱。|  

@@ -11,10 +11,10 @@ ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 51708fc41bb154fcf67ac3a21bd6680c69e2f2c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63200547"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>使用 SQL Server 行動報表發行工具建立行動報表
@@ -31,7 +31,7 @@ ms.locfileid: "63200547"
 * 在設計介面上，使用可調式格線列和格線欄以及根據任何螢幕大小適當縮放的彈性行動報表元素，來配置行動報表。 
 * 然後將這些行動報表儲存至 Reporting Service 伺服器，在 iPad、iPhone、Android 手機和平板電腦以及 Windows 10 裝置的瀏覽器或 Power BI 行動裝置應用程式中，檢視報表並與其互動。
   
-## <a name="create-includessrsnoversionmdincludesssrsnoversion-mdmd--mobile-reports"></a>建立 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  行動報表  
+## <a name="create-includessrsnoversion_mdincludesssrsnoversion-mdmd--mobile-reports"></a>建立 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  行動報表  
   
 這些文件會協助您開始。
 -  下載 [SQL Server 行動報表發行工具](https://go.microsoft.com/fwlink/?LinkID=733527)  

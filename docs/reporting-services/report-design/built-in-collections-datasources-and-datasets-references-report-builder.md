@@ -9,10 +9,10 @@ ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 930dfe2773b72723c2b8dc8571272847bb0d62d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581810"
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>內建集合 - DataSources 和 DataSets 參考 (報表產生器)
@@ -26,8 +26,8 @@ ms.locfileid: "65581810"
   
 |**變數**|**型別**|**說明**|  
 |------------------|--------------|---------------------|  
-|**DataSourceReference**|**String**|報表伺服器上資料來源定義的完整路徑。 例如，您可以包含報表用來做為報表記錄一部分的所有資料來源的清單。 以下範例將示範名為 AdventureWorks2012 的資料來源完整路徑：<br /><br /> `/DataSources/AdventureWorks2012`。|  
-|**型別**|**String**|資料來源的資料提供者類型。 例如， `SQL`。|  
+|**DataSourceReference**|**String**|報表伺服器上資料來源定義的完整路徑。 例如，您可以包含報表用來做為報表記錄一部分的所有資料來源的清單。 以下範例將示範名為 AdventureWorks2012 的資料來源完整路徑：<br /><br /> `/DataSources/AdventureWorks2012`第 1 課：建立 Windows Azure 儲存體物件{2}。|  
+|**型別**|**String**|資料來源的資料提供者類型。 例如： `SQL` 。|  
   
 ## <a name="datasets"></a>DataSets  
  **DataSets** 集合代表報表定義中參考的資料集。 您可以選擇將查詢加入報表的文字方塊中，這樣如果使用者想要知道報表中到底有什麼資料，就可以看到原始的命令文字。 這個集合在 [預覽]  模式中無法使用。 下表描述 **DataSets** 集合的成員。  

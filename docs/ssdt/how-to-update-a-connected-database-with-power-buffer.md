@@ -1,25 +1,26 @@
 ---
-title: 如何：使用 Power Buffer 更新連線的資料庫 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 使用 Power Buffer 更新連線的資料庫
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.commitpreview.dialog
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bad8fd64e0242d4dbe965b91d8d8be5ab9796591
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: d9feeb9bee84cede398bba5105912385fd5e8c2e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034991"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244264"
 ---
-# <a name="how-to-update-a-connected-database-with-power-buffer"></a>如何：使用 Power Buffer 更新連線的資料庫
+# <a name="how-to-update-a-connected-database-with-power-buffer"></a>如何：使用 Power Buffer 更新連接的資料庫
+
 SQL Server Data Tools Power Buffer 技術讓您可以輕易地儲存目前工作階段的所有編輯，以套用對連接的資料庫所做的變更。 在 Power Buffer 視窗 (如 Transact\-SQL 編輯器或資料表設計工具) 中編輯所造成的任何錯誤會立即顯示在 [錯誤清單]  窗格，這可讓您追蹤識別的錯誤以進行進一步疑難排解。 您可以驗證暫止變更，直到準備好將其套用到資料庫為止。 在進行更新程序期間，SSDT 會依據您的編輯來自動建立 ALTER 指令碼，並提醒您注意任何可能發生的問題。 然後，您可以將所有開啟中 Power Buffer 視窗至今累積的一切變更套用到相同資料庫，或是儲存 ALTER 指令碼以供日後部署。  
   
 SSDT 也會分辨在 Visual Studio 之外對資料庫結構描述所做的變更。 例如，如果您在 SQL Server Management Studio 中加入新資料表至現有資料庫，此類變更會立即顯示在 Visual Studio 的 SQL Server 物件總管中，而不必由您手動重新整理。 此一漂移偵測功能可確保您在 SQL Server 物件總管中看到的永遠是資料庫最新的結構描述定義。 請注意，任何在資料表設計工具或 Transact\-SQL 編輯器中開啟以進行編輯的資料庫物件，將不會重新整理以顯示 Visual Studio 之外的變更。  
@@ -36,12 +37,12 @@ SSDT 也會分辨在 Visual Studio 之外對資料庫結構描述所做的變更
   
 4.  如果到目前為止對變更相當滿意，請按一下 [預覽資料庫更新]  對話方塊中的 [更新資料庫]  按鈕。 系統會替您執行部署指令碼，而累積的變更現在會套用到資料庫。  
   
-5.  如果您要檢視部署指令碼以進行確認，或要在更新前進行一些變更，請按一下 [預覽資料庫更新]  對話方塊中的 [產生指令碼]  按鈕。 產生的指令碼會在新的 Transact\-SQL 編輯器視窗中開啟。 您可以按下 Transact\-SQL 編輯器工具列上的 [執行查詢]  按鈕以執行這個查詢。 這與步驟 4 中 [更新資料庫]  按鈕所做的動作類似。  
+5.  如果您要檢視部署指令碼以進行確認，或要在更新前進行一些變更，請按一下 [預覽資料庫更新]  對話方塊中的 [產生指令碼]  按鈕。 產生的指令碼會在新的 Transact\-SQL 編輯器視窗中開啟。 您可以按下 Transact**SQL 編輯器工具列上的 [執行查詢]** \- 按鈕以執行這個查詢。 這與步驟 4 中 [更新資料庫]  按鈕所做的動作類似。  
   
     > [!WARNING]  
     > 如果對部署指令碼進行任何變更後再加以執行，這種變更並不會顯示在任何已開啟的資料庫實體中。 例如，如果在部署指令碼中重新命名 `Customers` 資料表的資料行並加以執行以更新資料庫，但 `Customers` 資料表已在資料表設計工具中開啟的話，則按下 [更新資料庫]  按鈕後該資料行名稱仍會是舊名稱。 您必須手動關閉資料表設計工具，而不在本機另存為指令碼。 從 [SQL Server 物件總管]  再次開啟資料表時，您會發現資料庫會以您在部署指令碼中所做的變更來更新。  
   
-6.  在 Transact\-SQL 編輯器的 [輸出]  窗格 (如果您自行執行部署指令碼則為 [訊息]  窗格) 中，請注意下列表示更新成功的訊息。  
+6.  在 Transact**SQL 編輯器的 [輸出]** \- 窗格 (如果您自行執行部署指令碼則為 [訊息]  窗格) 中，請注意下列表示更新成功的訊息。  
   
 **正在建立 [dbo].[Customers]... 正在建立 [dbo].[Products]... 正在建立 [dbo].[Suppliers]... 正在建立 FK_Products_SupplierId... 正在建立 FK_Products_CustomerId... 正在建立 CK_Products_ShelfLife。資料庫更新的異動部分成功。正在針對新建立的條件約束檢查現有資料。更新完成。**  
   
@@ -62,5 +63,5 @@ SSDT 也會分辨在 Visual Studio 之外對資料庫結構描述所做的變更
 5.  以滑鼠右鍵按一下 [Table_1]  ，再選取 [刪除]  。 按一下 [預覽資料庫更新]  對話方塊中的 [更新資料庫]  。  
   
 ## <a name="see-also"></a>另請參閱  
-[操作說明：修正錯誤](../ssdt/how-to-fix-errors.md)  
+[如何：修正錯誤](../ssdt/how-to-fix-errors.md)  
   

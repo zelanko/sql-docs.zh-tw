@@ -9,10 +9,10 @@ ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63316650"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>將視覺效果新增至 Reporting Services 行動報表

@@ -1,27 +1,28 @@
 ---
-title: 設定全域追蹤選項 (SQL Server Profiler) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 設定全域追蹤選項
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- global trace options [SQL Server]
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9605f5e12b1dcc206d50e958d8c1787750e98941
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: c66bb6a8a2f894cb80fd17c9fce24a0d98d027f2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104178"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307945"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>設定全域追蹤選項 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  此主題描述如何設定適用於利用特定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]執行個體而建立之所有追蹤的選項。  
+
+此主題描述如何設定適用於利用特定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]執行個體而建立之所有追蹤的選項。  
   
 ### <a name="to-set-global-trace-options"></a>若要設定全域追蹤選項  
   
@@ -45,7 +46,7 @@ ms.locfileid: "68104178"
   
     -   [預設重新執行執行緒數目]  控制重新執行期間要使用的處理器執行緒數目。 執行緒數目較多可使重新執行更快速完成，但會導致重新執行期間的伺服器效能降低。 建議設定是 **4**。 下表列出可用選項：  
   
-        |ReplTest1|Description|  
+        |值|描述|  
         |-----------|-----------------|  
         |**2**|最小值。 使用兩個執行緒重新執行。|  
         |**4**|預設值。|  
@@ -53,7 +54,7 @@ ms.locfileid: "68104178"
   
     -   [預設健全狀況監視器等候間隔 (秒)]  設定重新執行的執行緒可封鎖其他處理序的最長時間量 (以秒為單位)。 下表會說明這些值。  
   
-        |ReplTest1|Description|  
+        |值|描述|  
         |-----------|-----------------|  
         |**0**|最小值。 設為 **0** 代表 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 永遠不會停止封鎖處理序。|  
         |**3600**|預設值。 允許封鎖處理序，封鎖時間不超過 **3600** 秒或一小時。|  
@@ -61,7 +62,7 @@ ms.locfileid: "68104178"
   
     -   [預設健全狀況監視器輪詢間隔 (秒)]  設定輪詢重新執行的執行緒是否有封鎖處理序的頻率。 下表會說明這些值。  
   
-        |ReplTest1|Description|  
+        |值|描述|  
         |-----------|-----------------|  
         |**1**|最小值。 設為 **1** 代表 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會每秒輪詢封鎖處理序一次。|  
         |**60**|預設值。 每分鐘輪詢封鎖處理序一次。|  

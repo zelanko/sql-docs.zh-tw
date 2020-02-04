@@ -11,10 +11,10 @@ ms.assetid: d6a21d01-6d8e-4449-9fdf-ddb09bd4fdb8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ccaa98c30f3e50de8fe3858246d274f59a83462
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998780"
 ---
 # <a name="updatencharacterstream-method-sqlserverresultset"></a>updateNCharacterStream 方法 (SQLServerResultSet)

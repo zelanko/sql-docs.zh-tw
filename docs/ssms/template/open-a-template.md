@@ -1,6 +1,6 @@
 ---
-title: 開啟範本 | Microsoft Docs
-ms.custom: ''
+title: 開啟範本
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c52d9b58a3fb738222c78dd57e9d45634963fbde
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: dd59b435c1c0fbd3461333305824aca61c68d296
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266756"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245694"
 ---
 # <a name="open-a-template"></a>開啟範本
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

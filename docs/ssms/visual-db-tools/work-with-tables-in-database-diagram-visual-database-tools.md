@@ -1,10 +1,7 @@
 ---
-title: 使用資料庫圖表中的資料表 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: 使用資料庫圖表中的資料表
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,21 +12,27 @@ helpviewer_keywords:
 ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 358d9940227e9034cdd3155d521d1782abb95360
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 81611e2968dcf60bbf4d20a07364dc8fdd91a072
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262483"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246185"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>使用資料庫圖表中的資料表 (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 您可以在 [資料表設計工具] 或 [資料庫圖表設計工具] 中修改和建立資料庫資料表。  
   
 > [!NOTE]  
 > 如果資料表是要發佈以進行複寫，則必須使用 Transact-SQL 陳述式 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 或 SQL Server 管理物件 (SMO) 變更結構描述。 使用 [資料表設計工具] 或 [資料庫圖表設計工具] 變更結構描述時，會嘗試卸除並重新建立資料表。 您無法卸除已發行的物件，因此結構描述變更將會失敗。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本節內容
+
 [將資料表新增至圖表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
   
 [將相關的資料表新增至圖表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-related-tables-to-diagrams-visual-database-tools.md)  
@@ -44,7 +47,8 @@ ms.locfileid: "68262483"
   
 [繪製自反關聯性 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/draw-reflexive-relationships-visual-database-tools.md)  
   
-## <a name="reference"></a>參考  
-[新增資料表對話方塊 &#40;資料庫設計工具&#41; &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md)  
-  
-## <a name="related-sections"></a>相關章節  
+## <a name="reference"></a>參考
+
+[新增資料表對話方塊 &#40;資料庫設計工具&#41; &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md)
+
+## <a name="related-sections"></a>相關章節

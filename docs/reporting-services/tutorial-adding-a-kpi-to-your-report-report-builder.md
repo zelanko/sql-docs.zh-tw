@@ -9,14 +9,14 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041777"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教學課程：將 KPI 加入至報表 (報表產生器)
-在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教學課程中，您會將關鍵效能指標 (KPI) 新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 編頁報表。  
+在本 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教學課程中，您會將關鍵效能指標 (KPI) 新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表。  
 
 KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子類別排列的銷售摘要便是 KPI。 KPI 的目前狀態會以色彩、量測計和指標顯示。
   
@@ -37,7 +37,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
  
 ### <a name="to-create-a-table-with-an-embedded-dataset"></a>若要建立含內嵌資料集的資料表  
   
-1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  從您的電腦、[ Web 入口網站或 SharePoint 整合模式](../reporting-services/report-builder/start-report-builder.md)啟動報表產生器[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]。  
   
     [新報表或資料集]  對話方塊隨即開啟。  
   
@@ -134,7 +134,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 10. 按 [下一步]  。  
   
-11. 按一下 **[完成]** 。  
+11. 按一下 [完成]  。  
   
       資料表會加入至設計介面。 這個資料表具有五個資料行和五個資料列。 [資料列群組] 窗格會顯示三個資料列群組：[SalesDate]、[Subcategory] 和 [Details]。 詳細資料是資料集查詢擷取的所有資料。 [資料行群組] 窗格是空的。  
       
@@ -318,7 +318,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 4.  將 [名稱]  中的預設名稱取代為**產品銷售 KPI**。  
   
-5.  按一下 **[儲存]** 。  
+5.  按一下 [檔案]  。  
   
 報表就會儲存至報表伺服器。 您連接之報表伺服器的名稱會顯示在視窗底部的狀態列中。  
   
@@ -333,10 +333,10 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 1.  將 [名稱]  中的預設名稱取代為**產品銷售 KPI**。  
   
-2.  按一下 **[儲存]** 。  
+2.  按一下 [檔案]  。  
   
-## <a name="next-steps"></a>Next Steps  
-您已成功完成「將 KPI 加入至報表」教學課程。 如需詳細資訊，請參閱：
+## <a name="next-steps"></a>後續步驟  
+您已成功完成「將 KPI 加入至報表」教學課程。 如需詳細資訊，請參閱
 *  [量測計](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [指標](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   

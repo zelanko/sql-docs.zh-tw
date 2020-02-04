@@ -11,10 +11,10 @@ ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0e8441dec655398ec530bc95049a339edd9e01ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571408"
 ---
 # <a name="schedule-properties-reports-page"></a>排程屬性 (報表頁面)
@@ -29,7 +29,7 @@ ms.locfileid: "65571408"
  4. 以滑鼠右鍵按一下共用的排程，然後選取 [屬性]  。
  5. 按一下 [報表]  。  
   
-  您也可以從 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 入口網站的 [網站設定]  管理共用的排程。
+  您也可以從  **入口網站的 [網站設定]** [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 管理共用的排程。
   
 > [!NOTE]  
 >  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供此功能。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2017 的版本及支援的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
@@ -38,12 +38,12 @@ ms.locfileid: "65571408"
  **資料夾**  
  指定報表的路徑。  
   
- **報表**  
+ **Report**  
  指定使用排程之報表的名稱。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立、修改和刪除共用排程](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
- [排程](../../reporting-services/subscriptions/schedules.md)   
+ [[排程]](../../reporting-services/subscriptions/schedules.md)   
  [Management Studio F1 說明中的報表伺服器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [連接至 Management Studio 中的報表伺服器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [設定報表的一般屬性 (報表管理員)](https://msdn.microsoft.com/10b941b2-28e6-4408-9ee4-acebc63c8496)  

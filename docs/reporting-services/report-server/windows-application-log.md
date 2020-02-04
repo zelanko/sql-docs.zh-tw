@@ -13,10 +13,10 @@ ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f3d51afd8a27786be3c66bfdf935ad8b2e328d36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580927"
 ---
 # <a name="windows-application-log"></a>Windows 應用程式記錄檔
@@ -37,9 +37,9 @@ ms.locfileid: "65580927"
   
  下表描述報表伺服器寫入應用程式事件記錄的事件類型。  
   
-|事件類型|Description|  
+|事件類型|描述|  
 |----------------|-----------------|  
-|[資訊]|描述作業成功的事件 (例如，當報表伺服器服務啟動時)。|  
+|資訊|描述作業成功的事件 (例如，當報表伺服器服務啟動時)。|  
 |警告|表示有潛在問題的事件 (例如，磁碟空間不足)。|  
 |錯誤|描述嚴重問題的事件 (例如，服務未啟動)。|  
 |稽核成功|描述登入成功的安全性事件。|  

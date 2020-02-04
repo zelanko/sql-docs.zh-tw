@@ -9,10 +9,10 @@ ms.assetid: 06eccab6-4089-46e8-a84f-5bf3bbe0c23b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9125adcb007e7f191ab30bc0b957580d0012e859
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581512"
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>建立遞迴階層群組 (報表產生器及 SSRS)
@@ -34,9 +34,9 @@ ms.locfileid: "65581512"
  您可以使用接受 *Recursive* 參數的 Reporting Services 彙總函式，針對遞迴階層計算摘要資料。 下列函式接受 **Recursive** 當做參數： [Sum](../../reporting-services/report-design/report-builder-functions-sum-function.md)、 [Avg](../../reporting-services/report-design/report-builder-functions-avg-function.md)、 [Count](../../reporting-services/report-design/report-builder-functions-count-function.md)、 [CountDistinct](../../reporting-services/report-design/report-builder-functions-countdistinct-function.md)、 [CountRows](../../reporting-services/report-design/report-builder-functions-countrows-function.md)、 [Max](../../reporting-services/report-design/report-builder-functions-max-function.md)、 [Min](../../reporting-services/report-design/report-builder-functions-min-function.md)、 [StDev](../../reporting-services/report-design/report-builder-functions-stdev-function.md)、 [StDevP](../../reporting-services/report-design/report-builder-functions-stdevp-function.md)、 [Sum](../../reporting-services/report-design/report-builder-functions-sum-function.md)、 [Var](../../reporting-services/report-design/report-builder-functions-var-function.md)和 [VarP](../../reporting-services/report-design/report-builder-functions-varp-function.md)。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料表、矩陣和清單 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Tablix 資料區 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [彙總函式參考 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [彙總函式參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
  [資料表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [矩陣 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)    

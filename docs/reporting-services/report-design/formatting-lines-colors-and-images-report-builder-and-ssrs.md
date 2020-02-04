@@ -22,10 +22,10 @@ ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3bc6e9b634ce9872b069381d58ed2dc89a0dc1d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576010"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>格式化線條、色彩和影像 (報表產生器及 SSRS)

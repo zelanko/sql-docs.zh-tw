@@ -15,10 +15,10 @@ ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 101af9d59d4a3f1e48d85859c91f77c8be2e4719
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194369"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>透過運算式存取自訂組件

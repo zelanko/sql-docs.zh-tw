@@ -10,10 +10,10 @@ ms.assetid: 8a73e945-daa6-4e5d-93da-10f000f1f3a2
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: c196b316424c941cba52eb50c61c82ca772ba18c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67951701"
 ---
 # <a name="escape-sql-server-identifiers"></a>逸出 SQL Server 識別碼

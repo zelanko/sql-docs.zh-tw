@@ -1,10 +1,9 @@
 ---
-title: 驗證警告對話方塊 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 驗證警告對話方塊
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb7dc987ba03dc4d50c12c80519f769d6f5b3261
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 09b73a3f3065a7f953441566c71093a5701045ca
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267455"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246311"
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>驗證警告對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

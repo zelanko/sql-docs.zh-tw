@@ -10,10 +10,10 @@ ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4ab490b9c392f10abf4314dd70d760695d13a70f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68126155"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server 中的地區語言版本

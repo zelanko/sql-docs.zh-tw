@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67957689"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>使用 PROSE Code Accelerator 進行資料整頓
@@ -45,7 +45,7 @@ import prose.codeaccelerator as cx
 
 PROSE Code Accelerator 藉由分析資料檔案的結構，然後自動產出程式碼以載入檔案，來解決此問題。 在大多數情況下，產出的程式碼可以正確地剖析資料。 在少數情況下，您可能需要調整程式碼以符合您的需求。
 
-請設想下列範例：
+請考慮下列範例：
 
  ```python
 import prose.codeaccelerator as cx
@@ -113,7 +113,7 @@ builder.learn().code()
 另一個常見的案例是在字串資料行中偵測模式，以便清除或分組。 例如，您可能有一個日期資料行，其中包含多種不同格式的日期。 若要將值標準化，您可能需要使用規則運算式來撰寫條件陳述式。
 
 
-|   |[屬性]                      |BirthDate      |
+|   |名稱                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Unknown        |

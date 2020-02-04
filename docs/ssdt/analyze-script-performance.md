@@ -1,25 +1,24 @@
 ---
-title: 分析指令碼效能 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 分析指令碼效能
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- sql.data.tools.codeanalysis.configuring
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 355259372566758c48d6a20451627a51e65c6c09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0c762da9cf6bb8a2a66831e4a75c98a4360afc6a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984676"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245555"
 ---
 # <a name="analyze-script-performance"></a>分析指令碼效能
+
 您可以使用 SQL Server Data Tools 提供的工具，判斷是否能提升查詢、預存程序或指令碼的效能。 例如，監視用戶端統計資料 (例如常用查詢的回應時間)，您可以判斷是否需要變更資料表的查詢或索引。 這類統計資料可以包含用戶端執行時間、查詢設定檔、以及傳送和接收的封包/位元組。  
   
 此外，最好還要分析應用程式查詢和應用程式對資料庫提交的更新，以及這些查詢與更新如何跟資料庫與資料庫結構描述內含的資料互動，才能處理某些效能問題。 執行計畫會以圖形方式顯示 SQL Server 查詢最佳化工具所選的資料擷取方法，並顯示特定陳述式與查詢的執行成本。 因此，執行計畫可以幫助您了解 SQL Server 處理 SQL 查詢的方式，並判斷導致效能降低的因素。  
@@ -27,7 +26,7 @@ ms.locfileid: "67984676"
 ## <a name="using-client-statistics"></a>使用用戶端統計資料  
 在 Transact\-SQL 編輯器中執行指令碼或查詢時，您可以選擇收集用戶端統計資料，例如執行的應用程式設定檔、網路和時間統計資料。 這種衡量標準可讓您衡量指令碼的效率，或評定不同的指令碼。  
   
-若要切換用戶端統計資料的收集，請在 Transact\-SQL 編輯器處於開啟狀態時，指向 [資料]  功能表上的 [Transact\-SQL 編輯器]  ，再依序按一下 [執行設定]  和 [包括用戶端統計資料]  。 或者，按一下 Transact\-SQL 編輯器工具列上的 [包括用戶端統計資料]  按鈕 (右邊數來第五個按鈕)，或以滑鼠右鍵按一下 Transact\-SQL 編輯器再選取 [執行設定]  和 [包括用戶端統計資料]  。 請注意，您必須先開啟這個功能再執行查詢，這樣才能收集查詢的統計資料。  
+若要切換用戶端統計資料的收集，請在 Transact\-SQL 編輯器處於開啟狀態時，指向 [資料]  功能表上的 [Transact**SQL 編輯器]\-** ，再依序按一下 [執行設定]  和 [包括用戶端統計資料]  。 或者，按一下 Transact**SQL 編輯器工具列上的 [包括用戶端統計資料]** \- 按鈕 (右邊數來第五個按鈕)，或以滑鼠右鍵按一下 Transact\-SQL 編輯器再選取 [執行設定]  和 [包括用戶端統計資料]  。 請注意，您必須先開啟這個功能再執行查詢，這樣才能收集查詢的統計資料。  
   
 如果開啟用戶端統計資料，查詢執行時 [統計資料]  索引標籤會出現在 [訊息]  索引標籤旁邊。 如果關閉用戶端統計資料，[統計資料]  索引標籤就不會出現。 來自後續查詢執行的統計資料會與平均值一起列出。  
   

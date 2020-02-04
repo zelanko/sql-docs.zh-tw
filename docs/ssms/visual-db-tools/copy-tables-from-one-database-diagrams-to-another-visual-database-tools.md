@@ -1,10 +1,9 @@
 ---
-title: 將資料表從一個資料庫圖表複製到另一個資料庫圖表 | Microsoft Docs
-ms.custom: ''
+title: 將資料表從一個資料庫圖表複製到另一個
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 155a4f09-9321-4887-a7d4-aa2ce6b51277
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a8e1b80ae1a1afafd8befeb3b58c68c0d7933378
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 887cc2cdb2d70b0d69599d75d8534907552cb201
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262884"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254386"
 ---
 # <a name="copy-tables-from-one-database-diagrams-to-another-visual-database-tools"></a>將資料表從一個資料庫圖表複製至另一個資料庫圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

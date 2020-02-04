@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e21dfe719f40165e0e68e7bf6242c526c298eb4
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707442"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的新功能
@@ -59,7 +59,7 @@ R 的新功能包括[**套件管理**](r/install-additional-r-packages-on-sql-se
 
 ### <a name="r-libraries"></a>R 程式庫
 
-| 封裝 | Description |
+| Package | 描述 |
 |---------|-------------|
 | [**MicrosoftML**](r/ref-r-microsoftml.md) | 在此版本中，MicrosoftML 會包含在預設的 R 安裝中，讓使用者無須進行先前在 SQL Server 2016 R Services中所需的升級步驟。 MicrosoftML 能提供最先進的機器學習演算法及資料轉換，可在遠端計算內容中調整或執行。 演算法包括可自訂的深度神經網路、快速決策樹及決策樹系、線性迴歸，以及羅吉斯迴歸。  |
 
@@ -75,7 +75,7 @@ T-SQL 和 Python 整合可透過 [sp_execute_external_script](https://docs.micro
 
 ### <a name="python-libraries"></a>Python 程式庫
 
-| 封裝 | Description |
+| Package | 描述 |
 |---------|-------------|
 |[**revoscalepy**](python/ref-py-revoscalepy.md)| 相對於 RevoScaleR 的 Python 對等項目。 您可以針對線性及羅吉斯迴歸、決策樹、增強樹，以及隨機樹建立 Python 模型；它們全都可以平行化，也能在遠端計算內容中執行。 此套件支援使用多個資料來源和遠端計算內容。 資料科學家或開發人員可以在遠端 SQL Server 上執行 Python 程式碼，以在不移動資料的情況下探索資料或建置模型。 |
 |[**microsoftml**](python/ref-py-microsoftml.md) |MicrosoftML R 套件的 Python 對等項目。 |
@@ -101,7 +101,7 @@ T-SQL 和 Python 整合可透過 [sp_execute_external_script](https://docs.micro
 | 版本 |功能更新 |
 |---------|----------------|
 | CU 新增項目 | [**即時評分**](real-time-scoring.md)會仰賴原生 C++ 程式庫來讀取以最佳化二進位格式儲存的模型，然後在不需要呼叫 R 執行階段的情況下產生預測。 這可讓評分作業變得更加快速。 透過使用即時評分，您可以從 R 程式碼執行預存程序或執行即時評分。 即時評分也可供 SQL Server 2016 使用，前提是執行個體必須已升級到最新版本的 [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]。 |
-| 最初發行 | [**適用於資料庫內分析的 R 整合**](r/sql-server-r-services.md)。 <br/><br/> 用來以 T-SQL 呼叫 R 函數 (反之亦然) 的 R 套件。 RevoScaleR 函數能透過將資料區塊化成元件部分、協調及管理分散式處理，以及將結果彙總，來提供大規模的 R 分析。 在 SQL Server 2016 R Services (資料庫內) 中，RevoScaleR 引擎會與資料庫引擎執行個體整合，並在相同的處理內容中將資料和分析整合在一起。 <br/><br/>T-SQL 和 R 是透過 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) \(部分機器翻譯\) 進行整合。 您可以使用此預存程序來呼叫任何 R 程式碼。 這個安全的基礎結構可讓您以企業級的方式部署 R 模型和指令碼，並可透過簡單的預存程序從應用程式中呼叫它們。 透過將資料從 SQL 串流到 R 處理序及 MPI 通道平行處理，便能達成額外的效能提升。 <br/><br/>您可以使用 T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 函數，對先前以必要的二進位格式儲存的預先定型模型執行[原生評分](sql-native-scoring.md)。|
+| 初始版本 | [**適用於資料庫內分析的 R 整合**](r/sql-server-r-services.md)。 <br/><br/> 用來以 T-SQL 呼叫 R 函數 (反之亦然) 的 R 套件。 RevoScaleR 函數能透過將資料區塊化成元件部分、協調及管理分散式處理，以及將結果彙總，來提供大規模的 R 分析。 在 SQL Server 2016 R Services (資料庫內) 中，RevoScaleR 引擎會與資料庫引擎執行個體整合，並在相同的處理內容中將資料和分析整合在一起。 <br/><br/>T-SQL 和 R 是透過 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) \(部分機器翻譯\) 進行整合。 您可以使用此預存程序來呼叫任何 R 程式碼。 這個安全的基礎結構可讓您以企業級的方式部署 R 模型和指令碼，並可透過簡單的預存程序從應用程式中呼叫它們。 透過將資料從 SQL 串流到 R 處理序及 MPI 通道平行處理，便能達成額外的效能提升。 <br/><br/>您可以使用 T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 函數，對先前以必要的二進位格式儲存的預先定型模型執行[原生評分](sql-native-scoring.md)。|
 
 ::: moniker-end
 

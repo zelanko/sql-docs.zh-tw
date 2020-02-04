@@ -1,11 +1,7 @@
 ---
-title: 如何：建立專案的快照集 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 建立專案的快照集
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3fad9b94c83a314ab252ed52377d6fb332e7029e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 40111c8807c0a0aa6162e8ad6a03d796406d5c1d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897200"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241526"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>如何：建立專案的快照集
+
 **資料層應用程式**檔案提供了資料庫結構描述建立當時的唯讀表示。 其本質上被視為資料庫結構描述，您可以從中將結構描述物件匯回專案。 您也可以將它與資料庫或專案的結構描述進行比較，然後更新資料庫或專案以反映快照集之中定義的結構描述。  
   
 在來源資料庫專案發生使用者錯誤的情況下，您可以將該來源專案還原為它在快照集建立時所處於的狀態。 基於比較基準的目的，您也可以在各個開發階段建立快照集。  
@@ -30,7 +31,7 @@ ms.locfileid: "67897200"
   
 ### <a name="to-create-a-snapshot"></a>若要建立快照集  
   
-1.  以滑鼠右鍵按一下 [方案總管]  中的 [TradeDev]  專案，再選取 [資料層應用程式 (\*.dacpac)...]  。  
+1.  以滑鼠右鍵按一下 [方案總管]  中的 [TradeDev]  專案，再選取 [資料層應用程式 ( **.dacpac)...]\*** 。  
   
 2.  SSDT 將先嘗試建置專案。 如果沒有發生建置錯誤，[Snapshot]  資料夾會建立在 [方案總管]  中。 在這個資料夾內，SSDT 會以「<Project Name>_YYYYMMDD_HH-MM-SS.dacpac」名稱格式建立 .dacpac 檔案。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "67897200"
   
 ### <a name="to-import-a-snapshot"></a>若要匯入快照集  
   
-1.  以滑鼠右鍵按一下 [方案總管]  中的 [TradeDev]  專案，再從關連式功能表依序選取 [匯入]  和 [資料層應用 (\*.dacpac)...]  。  
+1.  以滑鼠右鍵按一下 [方案總管]  中的 [TradeDev]  專案，再從關連式功能表依序選取 [匯入]  和 [資料層應用 ( **.dacpac)...]\*** 。  
   
 2.  在 [匯入資料層應用程式]  對話方塊中，按一下 [瀏覽]  選取 **TradeDev1.dacpac** 做為匯入的來源。  
   
@@ -64,5 +65,5 @@ ms.locfileid: "67897200"
     使用 [結構描述比較]，您可以輕鬆地尋找不同快照集的差異。 在這種情況下，您可以找出專案在開發過程中的成長方式。  
   
 ## <a name="see-also"></a>另請參閱  
-[操作說明：使用結構描述比較以比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

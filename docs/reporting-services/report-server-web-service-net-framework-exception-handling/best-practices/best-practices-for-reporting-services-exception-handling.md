@@ -11,10 +11,10 @@ ms.assetid: 72fecf28-f02e-4338-b50f-0b21f520302d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c6e59ea3edb968182091b1b6496d47e9adb4d4be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63151108"
 ---
 # <a name="best-practices-for-reporting-services-exception-handling"></a>Reporting Services 例外處理的最佳作法
@@ -30,7 +30,7 @@ ms.locfileid: "63151108"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[防止無效的要求](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/preventing-invalid-requests.md)|描述可用以防止將無效的要求傳送到報表伺服器的技術。|  
 |[使用 Try 和 Catch 區塊](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-try-and-catch-blocks.md)|描述如何進一步使用 Try/Catch 區塊來增強應用程式的可靠性。|  

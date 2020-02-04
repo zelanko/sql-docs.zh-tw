@@ -18,10 +18,10 @@ ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bcafb334e32a1b98d10c57d8f31fe321d0b7f182
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62991481"
 ---
 # <a name="batching-methods"></a>批次方法

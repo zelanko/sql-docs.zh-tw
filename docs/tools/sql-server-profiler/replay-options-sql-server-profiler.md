@@ -1,30 +1,28 @@
 ---
-title: 重新執行選項 (SQL Server Profiler) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 重新執行選項
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], replaying
-- replaying traces
-- health monitor [SQL Server]
-- Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4a79c932739fa8d9d5d9125cdd93cc3564d16f55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 649bf543417c0772c23c6338862e33b6bac9bad1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031446"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307489"
 ---
 # <a name="replay-options-sql-server-profiler"></a>重新執行選項 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來重新執行擷取的追蹤之前，請在 [重新執行組態]  對話方塊中指定重新執行選項。 若要啟動此對話方塊，請開啟 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中的重新執行追蹤檔案或資料表，然後在 [重新執行]  功能表上按一下 [啟動]  。 如需有關重做追蹤時所需之權限的詳細資訊，請參閱＜ [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)＞。  
+
+使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來重新執行擷取的追蹤之前，請在 [重新執行組態]  對話方塊中指定重新執行選項。 若要啟動此對話方塊，請開啟 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中的重新執行追蹤檔案或資料表，然後在 [重新執行]  功能表上按一下 [啟動]  。 如需有關重做追蹤時所需之權限的詳細資訊，請參閱＜ [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)＞。  
   
  本主題描述使用 [重新執行組態]  對話方塊所指定的選項。  
   

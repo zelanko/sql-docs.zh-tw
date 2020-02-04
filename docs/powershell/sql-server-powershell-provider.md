@@ -17,10 +17,10 @@ ms.author: maghan
 ms.custom: ''
 ms.date: 07/31/2019
 ms.openlocfilehash: 1017620181ac127576f02fc792e3c4b85213a6d9
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68731120"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell 提供者
@@ -69,7 +69,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
   
  路徑中的集合節點會與相關聯物件模型中的集合類別產生關聯。 物件名稱節點會與相關聯物件模型中的物件類別建立關聯，如下表所示：  
   
-|路徑|SMO 類別|  
+|Path|SMO 類別|  
 |----------|---------------|  
 |`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases`|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
 |`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012`|<xref:Microsoft.SqlServer.Management.Smo.Database>|  

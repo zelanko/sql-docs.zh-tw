@@ -1,6 +1,6 @@
 ---
-title: 參數資訊 (IntelliSense) | Microsoft Docs
-ms.custom: ''
+title: 參數資訊 (IntelliSense)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -15,12 +15,12 @@ ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b678f4d24185e81406a22c081c9dfbb2d9b8c22d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d5668216e971c0e7c68e75f395699254ec61c109
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267008"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253736"
 ---
 # <a name="parameter-info-intellisense"></a>參數資訊 (IntelliSense)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

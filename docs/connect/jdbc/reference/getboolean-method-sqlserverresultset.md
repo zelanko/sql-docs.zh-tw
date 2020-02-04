@@ -16,10 +16,10 @@ ms.assetid: 970a41d0-b2f6-4890-aa6d-2346abb6d96a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eea4a6e5f798233b53814ded9bf355b41bcbe565
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953881"
 ---
 # <a name="getboolean-method-sqlserverresultset"></a>getBoolean 方法 (SQLServerResultSet)

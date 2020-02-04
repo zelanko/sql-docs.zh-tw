@@ -1,10 +1,9 @@
 ---
-title: 建立資料表別名 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 建立資料表別名
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 691f6280414dafd12839a8d55b13299b6b1ece56
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 14c8defcabde99a42993b4f1490094670a890cee
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264275"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254232"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>建立資料表別名 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68264275"
   
 -   您使用相同資料表的多個執行個體 (例如自我聯結)，然後需要參考到一個或另外一個執行個體的方式。  
   
-例如，您可以針對資料表名稱 `employee_information` 建立別名 `"e"`，然後在整個查詢的其他部分以 `"e"` 的方式參考資料表。  
+例如，您可以針對資料表名稱 `"e"` 建立別名 `employee_information`，然後在整個查詢的其他部分以 `"e"` 的方式參考資料表。  
   
 ### <a name="to-create-an-alias-for-a-table-or-table-valued-object"></a>若要建立資料表或資料表值物件的別名  
   

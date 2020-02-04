@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 61afc55e04f7cd317e11c7db527dc97fb80fc7be
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72904257"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
@@ -42,7 +42,7 @@ ms.locfileid: "72904257"
 |SQL Server 2008 R2 或 SQL Server 2008 R2 SP1 (包括 SQL Server 2008 R2 Management Studio) 之 32 位元版本的用戶端和管理能力工具|將用戶端和管理能力工具升級至 32 位元版本的 SQL Server 2008 R2 SP2|SQLServer2008R2SP2-KB2630458-x86-ENU.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
 |32 位元版本的 SQL Server 2008 R2 Management Studio Express 或 SQL Server 2008 R2 SP1 Management Studio Express|升級至 32 位元版本的 SQL Server 2008 R2 SP2 Management Studio Express|SQLManagementStudio_x86_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251791)|  
 |32 位元版本的 SQL Server 2008 R2 或 SQL Server 2008 R2 SP1 任何版， **以及** 32 位元版本的用戶端和管理能力工具 (包括 SQL Server 2008 R2 RTM Management Studio)|將所有產品升級至 32 位元版本的 SQL Server 2008 R2 SP2|SQLServer2008R2SP2-KB2630458-x86-ENU.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
-| [Microsoft SQL Server 2008 R2 RTM 功能套件](https://www.microsoft.com/download/en/details.aspx?id=16978)中一個或多個 32 位元版本的工具|將工具升級至 32 位元版本的 Microsoft SQL Server 2008 R2 SP2 功能套件| [Microsoft SQL Server 2008 R2 SP2 功能套件](https://go.microsoft.com/fwlink/?LinkId=251792)中一個或多個檔案|  
+|[Microsoft SQL Server 2008 R2 RTM 功能套件](https://www.microsoft.com/download/en/details.aspx?id=16978)中一個或多個 32 位元版本的工具|將工具升級至 32 位元版本的 Microsoft SQL Server 2008 R2 SP2 功能套件|[Microsoft SQL Server 2008 R2 SP2 功能套件](https://go.microsoft.com/fwlink/?LinkId=251792)中一個或多個檔案|  
 |無 32 位元版本的 SQL Server 2008 R2 安裝|安裝 Server 2008 R2，包括 SP2|移至 [SQL Server 2008 R2 SP2 - Express Edition](https://go.microsoft.com/fwlink/?LinkId=251791) 並依照指示執行。|  
 |無 32 位元版本的 SQL Server 2008 R2 Management Studio 安裝|安裝 SQL Server 2008 R2 Management Studio，包括 SP2|SQLManagementStudio_x86_ENU.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251791) ，可供免費安裝 SQL Server 2008 R2 SP2 Management Studio Express Edition。|  
 |64 位元版本的 SQL Server 2008 R2 或 SQL Server 2008 R2 SP1 任何版|升級至 64 位元版本的 SQL Server 2008 R2 SP2|SQLServer2008R2SP2-KB2630458-x64-ENU 或 SQLServer2008R2SP2-KB2630455-IA64-ENU.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
@@ -50,12 +50,12 @@ ms.locfileid: "72904257"
 |SQL Server 2008 R2 或 SQL Server 2008 R2 SP1 (包括 SQL Server 2008 R2 Management Studio) 之 64 位元版本的用戶端和管理能力工具|將用戶端和管理能力工具升級至 64 位元版本的 SQL Server 2008 R2 SP2|SQLServer2008R2SP2-KB2630458-x64-ENU.exe 或 SQLServer2008R2SP2-KB2630455-IA64-ENU.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
 |64 位元版本的 SQL Server 2008 R2 Management Studio Express 或 SQL Server 2008 R2 SP1 Management Studio Express|升級至 64 位元版本的 SQL Server 2008 R2 SP2 Management Studio Express|SQLManagementStudio_x64_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251791)|  
 |64 位元版本的 SQL Server 2008 R2 或 SQL Server 2008 R2 SP1 任何版， **以及** 64 位元版本的用戶端和管理能力工具 (包括 SQL Server 2008 R2 RTM Management Studio)|將所有產品升級至 64 位元版本的 SQL Server 2008 R2 SP2|SQLServer2008R2SP2-KB2630458-x64-ENU.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
-| [Microsoft SQL Server 2008 R2 RTM 功能套件](https://www.microsoft.com/download/en/details.aspx?id=16978)中一個或多個 64 位元版本的工具|將工具升級至 64 位元版本的 Microsoft SQL Server 2008 R2 SP2 功能套件| [Microsoft SQL Server 2008 R2 SP2 功能套件](https://go.microsoft.com/fwlink/?LinkId=251792)中一個或多個檔案|  
+|[Microsoft SQL Server 2008 R2 RTM 功能套件](https://www.microsoft.com/download/en/details.aspx?id=16978)中一個或多個 64 位元版本的工具|將工具升級至 64 位元版本的 Microsoft SQL Server 2008 R2 SP2 功能套件|[Microsoft SQL Server 2008 R2 SP2 功能套件](https://go.microsoft.com/fwlink/?LinkId=251792)中一個或多個檔案|  
 |無 64 位元版本的 SQL Server 2008 R2 安裝|安裝 Server 2008 R2，包括 SP2|移至 [SQL Server 2008 R2 SP2 - Express Edition](https://go.microsoft.com/fwlink/?LinkId=251791) 並依照指示執行。|  
 |無 64 位元版本的 SQL Server 2008 R2 Management Studio 安裝|安裝 SQL Server 2008 R2 Management Studio，包括 SP2|SQLManagementStudio_x64_ENU.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251791) ，可供免費安裝 SQL Server 2008 R2 SP2 Management Studio Express Edition。|  
   
 ### <a name="22-setup-might-fail-if-sqagtresdll-is-locked-by-another-process"></a>2.2 如果 SQAGTRES.dll 已由其他處理序鎖定，安裝程式可能發生失敗  
-**問題**：SQL Server 安裝程式作業可能會失敗並出現以下錯誤：`Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.`根本原因是 C:\Windows\system32\SQAGTRES.DLL 已由另一個處理序鎖定，使安裝程式無法加以更新。  
+**問題**：SQL Server 安裝程式作業可能會失敗並出現以下錯誤： `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` 起因是 C:\Windows\system32\SQAGTRES.DLL 已由另一個處理序鎖定，而安裝程式無法加以更新。  
   
 **因應措施**：暫時將 C:\Windows\system32\SQAGTRES.DLL 重新命名，例如 C:\Windows\system32\SQAGTRES_old.DLL，然後選取安裝程式錯誤訊息上的 [重試] 選項。 如此，安裝程式就能繼續執行。 重新開機之後，您可以刪除暫存檔 C:\Windows\system32\SQAGTRES_old.DLL。  
   

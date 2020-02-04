@@ -10,10 +10,10 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 205f849310ffe2f6139e76783ba7fa6ac315b214
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73532355"
 ---
 # <a name="configure-master-instance-of-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>設定 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的主要執行個體
@@ -43,7 +43,7 @@ ms.locfileid: "73532355"
    traceflag0 = 1204
    ```
 
-1. 將 `mssql-custom.conf` 檔案複製到 `master-0` Pod 中 `mssql-server` 容器的 `/var/opt/mssql` 內。 將 `<namespaceName>` 取代為巨量資料叢集名稱。
+1. 將 `mssql-custom.conf` 檔案複製到 `/var/opt/mssql` Pod 中 `mssql-server` 容器的 `master-0` 內。 將 `<namespaceName>` 取代為巨量資料叢集名稱。
 
    ```bash
    kubectl cp mssql-custom.conf master-0:/var/opt/mssql/mssql-custom.conf -c mssql-server -n <namespaceName>
@@ -58,7 +58,7 @@ ms.locfileid: "73532355"
    ```
 
 > [!IMPORTANT]
-> 如果 SQL Server 的主要執行個體位於可用性群組設定中，請複製所有 `master` Pod 中的 `mssql-custom.conf` 檔案。 請注意，每次重新啟動都會導致容錯移轉，因此，請務必確定您將此活動的時間設定在停機期間。
+> 如果 SQL Server 的主要執行個體位於可用性群組設定中，請複製所有 `mssql-custom.conf` Pod 中的 `master` 檔案。 請注意，每次重新啟動都會導致容錯移轉，因此，請務必確定您將此活動的時間設定在停機期間。
 
 ## <a name="known-limitations"></a>已知限制
 

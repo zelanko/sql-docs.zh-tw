@@ -1,23 +1,24 @@
 ---
-title: 逐步解說：延伸資料庫專案部署以分析部署計畫 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 擴充資料庫專案部署以分析部署計劃
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 167667590df0b2172e05674c462cfa9833d45acd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 5e51dddb7635ba0f50dfdd7566722b170be9f48a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912779"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242678"
 ---
-# <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>逐步解說：擴充資料庫專案部署以分析部署計劃
+# <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>逐步解說：擴充資料庫專案部署以分析部署計畫
+
 您可以建立部署參與者，以便在部署 SQL 專案時執行自訂動作。 您可以建立 DeploymentPlanModifier 或 DeploymentPlanExecutor。 使用 DeploymentPlanModifier，在計畫執行前變更計畫；使用 DeploymentPlanExecutor，在計畫執行時執行作業。 在這個逐步解說中，您會建立名稱為 DeploymentUpdateReportContributor 的 DeploymentPlanExecutor，以產生有關部署資料庫專案時執行之動作的報表。 因為這個組建參與者接受參數來控制是否產生報表，您必須執行其他必要步驟。  
   
 在本逐步解說中，您將會完成下列主要工作：  
@@ -250,7 +251,7 @@ ms.locfileid: "67912779"
   
     將 [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) 物件傳遞給 OnExecute 方法，以存取任何指定的引數、來源和目標資料庫模型、組建屬性和擴充檔。 在這個範例中，我們會取得模型，然後呼叫 Helper 函數以輸出模型資訊。 我們使用基底類別的 PublishMessage Helper 方法，回報所發生的任何錯誤。  
   
-    其他相關類型和方法包括：[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)、[ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx)、[DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) 和 [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx)。  
+    其他相關型別和方法包含：[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)、[ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx)、[DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) 和 [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx)。  
   
     下一步，您會定義挖掘部署計畫詳細資料的協助程式類別。  
   
@@ -525,7 +526,7 @@ ms.locfileid: "67912779"
     |-----------------|--------------------|  
     |類別成員|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)、[ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx)、[DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
     |WriteReport 方法|XmlWriter 和 XmlWriterSettings|  
-    |ReportPlanOperations 方法|相關類型包括下列項目：[DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)、[SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx)、[SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx)、[SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx)、[CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx)、[AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx)、[DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx)。<br /><br />還有一些其他步驟 (如需步驟的完整清單，請參閱 API 文件)。|  
+    |ReportPlanOperations 方法|相關型別包含：[DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)、[SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx)、[SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx)、[SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx)、[CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx)、[AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx)、[DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx)。<br /><br />還有一些其他步驟 (如需步驟的完整清單，請參閱 API 文件)。|  
     |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
     |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
   
@@ -549,7 +550,7 @@ ms.locfileid: "67912779"
   
 8.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
-9. 按一下 [ **建置** ] 功能表上的 [ **建置方案**]。  
+9. 在 [建置]  功能表上，按一下 [建置方案]  。  
   
 下一步，您必須安裝組件，以便在建置及部署 SQL 專案時將其載入。  
   
@@ -736,11 +737,11 @@ ms.locfileid: "67912779"
   
     藉由在執行時分析部署計畫，可以回報在部署中包含的任何資訊，也可以根據該計畫的步驟採取其他動作。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
 您可以建立其他工具，執行 XML 輸出檔案的處理。 這只是 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 的一個例子。 您也可以建立 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 以在計畫執行前變更部署計畫。  
   
 ## <a name="see-also"></a>另請參閱  
-[逐步解說：延伸資料庫專案組建，以產生模型統計資料](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[逐步解說：延伸資料庫專案部署以修改部署計畫](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
+[逐步解說：擴充資料庫專案組建，以產生模型統計資料](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx) \(機器翻譯\)  
+[逐步解說：擴充資料庫專案部署以修改部署計畫](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx) \(機器翻譯\)  
 [使用組建和部署參與者自訂資料庫建置和部署](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
   

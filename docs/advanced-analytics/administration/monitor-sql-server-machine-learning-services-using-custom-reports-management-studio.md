@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: afc90985fc7c0c6d7a04cb575ee9e93a4b7b4c51
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727751"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>使用 SQL Server Management Studio 中的自訂報表監視 Python 與 R 指令碼的執行
@@ -65,7 +65,7 @@ ms.locfileid: "73727751"
 
 [GitHub 中的 SSMS 自訂報表存放庫](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)包含下列報表：
 
-| 報表 | Description |
+| Report | 描述 |
 |-|-|
 | Active Sessions | 目前已連線到 SQL Server 執行個體並執行 Python 或 R 指令碼的使用者。 |
 | 組態 | Python 或 R 執行階段機器學習服務與屬性的安裝設定。 |

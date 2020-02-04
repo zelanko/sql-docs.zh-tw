@@ -11,10 +11,10 @@ ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 684f2ec1878e7918f9aa43017feb4b4f8d32cfa1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573815"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 錯誤
@@ -96,11 +96,11 @@ ms.locfileid: "65573815"
 ### <a name="cannot-compare-data-types-for-a-filter"></a>無法比較篩選的資料類型  
  在篩選方程式中，定義篩選項目的篩選運算式與篩選值必須屬於相同的資料類型，才能進行比較。 如果您看見下列其中一個錯誤，請修改欄位運算式或篩選值，讓資料類型相符：  
   
--   無法處理 \<報表項目名稱>  的 \<報表項目類型>  。 無法比較類型 \<類型>  與 \<類型>  的資料。 請檢查 \<報表項目名稱>  所傳回的資料類型。  
+-   無法處理 *報表項目名稱>\<* 的 *報表項目類型>\<* 。 無法比較類型 *類型>\<* 與 *類型>\<* 的資料。 請檢查 *報表項目名稱>\<* 所傳回的資料類型。  
   
--   無法評估 \<屬性名稱>  。  
+-   無法評估 *屬性名稱>\<* 。  
   
--   無法評估 \<屬性名稱>  。 它參考有錯誤的資料集欄位：\<錯誤字串>  。  
+-   無法評估 *屬性名稱>\<* 。 它參考有錯誤的資料集欄位：*錯誤字串>\<* 。  
   
  如需詳細資訊，請參閱 [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)(將互動式排序加入資料表或矩陣 (報表產生器及 SSRS))。  
   
@@ -109,18 +109,18 @@ ms.locfileid: "65573815"
   
  您也可以將特定範圍的名稱傳遞給彙總函式。 範圍可以參考資料集的名稱、資料區域或在資料階層中較高範圍的名稱。 這點適用於下列訊息：  
   
--   \<報表項目類型>  '\<報表項目名稱>  ' 有無效的範圍 "\<範圍名稱>  "。 範圍必須是目前的範圍，或包含在目前的範圍之內。  
+-   *報表項目類型>\<* '*報表項目名稱>\<* ' 有無效的範圍 "*範圍名稱>\<* "。 範圍必須是目前的範圍，或包含在目前的範圍之內。  
   
--   \<報表項目類型>  '\<報表項目名稱>  ' 的 \<屬性名稱>  運算式含有對彙總函式無效的範圍參數。 範圍參數必須設定為字串常數，此字串常數要和所包含的群組名稱、所包含的資料區域名稱或資料集名稱相同。  
+-   *報表項目類型>\<* '*報表項目名稱>\<* ' 的 *屬性名稱>\<* 運算式含有對彙總函式無效的範圍參數。 範圍參數必須設定為字串常數，此字串常數要和所包含的群組名稱、所包含的資料區域名稱或資料集名稱相同。  
   
  若為計算累加值的彙總函式 (**Previous**、 **RunningValue**或 **RowNumber**)，您可以指定屬於資料列群組名稱或資料行群組名稱的範圍參數，但不可同時屬於這兩者。 這點適用於下列錯誤訊息：  
   
--   在 \<報表項目類型>  '\<報表項目名稱>  ' 資料格中使用的 **Previous**、**RunningValue** 或 **RowNumber** 彙總函式，同時參考 \<報表項目類型>  的資料行和資料列的群組範圍。 在 \<報表項目類型>  中所有 **Previous**、**RunningValue** 和 **RowNumber** 彙總函式的範圍參數，都可以參考資料列群組或資料行群組，但不可同時參考兩者。  
+-   在 **報表項目類型>** **'** 報表項目名稱>  ' 資料格中使用的 *Previous\<、* RunningValue *或 \<RowNumber* 彙總函式，同時參考 *報表項目類型>\<* 的資料行和資料列的群組範圍。 在 **報表項目類型>** **中所有**Previous **、** RunningValue *和 \<RowNumber* 彙總函式的範圍參數，都可以參考資料列群組或資料行群組，但不可同時參考兩者。  
   
  如需詳細資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) 和[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
 ### <a name="default-dataset-scope-for-a-top-level-text-box"></a>最上層文字方塊的預設資料集範圍  
- 當報表具有多個資料集時，請勿針對加入至報表設計介面的文字方塊使用預設範圍。 請使用包含資料集名稱當做範圍的運算式，以及彙總函式。 例如， `=First(Fields!FieldName.Value, "DataSet2")`。  
+ 當報表具有多個資料集時，請勿針對加入至報表設計介面的文字方塊使用預設範圍。 請使用包含資料集名稱當做範圍的運算式，以及彙總函式。 例如： `=First(Fields!FieldName.Value, "DataSet2")` 。  
   
 ## <a name="see-also"></a>另請參閱  
  [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   

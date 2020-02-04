@@ -1,6 +1,6 @@
 ---
-title: 監視錯誤記錄檔 |Microsoft Docs
-ms.custom: ''
+title: 監視錯誤記錄
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -25,12 +25,12 @@ ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 80cee3338046bcfd1259e68e98cdbb9212eed010
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: f953f91d7def8c0363fe131540640047ef41f889
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010166"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306449"
 ---
 # <a name="monitoring-the-error-logs"></a>監視錯誤記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "68010166"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
-|[檢視 SQL Server 錯誤記錄](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)|包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔及其檢視方式的詳細資訊。|  
-|[檢視 Windows 應用程式記錄](../../tools/configuration-manager/viewing-the-windows-application-log.md)|包含 Windows 應用程式記錄檔及其檢視方式的詳細資訊。|  
+|[檢視 SQL Server 錯誤記錄檔](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)|包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔及其檢視方式的詳細資訊。|  
+|[檢視 Windows 應用程式記錄檔](../../tools/configuration-manager/viewing-the-windows-application-log.md)|包含 Windows 應用程式記錄檔及其檢視方式的詳細資訊。|  
   
   

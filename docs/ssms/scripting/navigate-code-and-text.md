@@ -1,6 +1,6 @@
 ---
-title: 導覽程式碼與文字 | Microsoft Docs
-ms.custom: ''
+title: 導覽程式碼與文字
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -21,12 +21,12 @@ ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4171d67bafa5b2f692a0a1a0b7e87dc9ed9b8525
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b03a4fdc2d7a49cdd9896768fb7e7d989bc4d3d3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258190"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253747"
 ---
 # <a name="navigate-code-and-text"></a>導覽程式碼與文字
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "68258190"
   
 -   利用 CTRL+向上鍵和 CTRL+向下鍵，在不移動插入點的情況下，捲動檢視。  
   
-## <a name="go-to-command"></a>[移至] 命令  
+## <a name="go-to-command"></a>移至命令  
  請使用 [移至]  命令移至特定行號。 若要顯示行號，請在 選項  對話方塊中，依序按一下 文字編輯器  所有語言  一般  ，然後選取 行號  。  
   
  **移至特定行號**  

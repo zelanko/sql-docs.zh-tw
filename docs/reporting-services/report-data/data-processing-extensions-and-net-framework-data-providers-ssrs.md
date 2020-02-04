@@ -16,10 +16,10 @@ ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 424dbb31ab96153dbf959c304456d8d1b2e4abd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573108"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>資料處理延伸模組與 .NET Framework Data Provider (SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "65573108"
 ## <a name="understanding-a-data-provider"></a>了解資料提供者  
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者 (有時稱為驅動程式) 可支援一組標準 <xref:System.Data> 介面來讀取、寫入及更新資料來源上的資料。 當特定類型的資料來源沒有可用的資料處理延伸模組時，可以使用資料提供者。 市面上有許多可用的協力廠商標準 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者。  
   
- 因為 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 具有可延伸的資料提供者架構，所以您可以建置自訂的資料處理延伸模組，以包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組所提供的額外功能。 如需詳細資訊，請參閱 [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)。 如需協力廠商資料處理延伸模組的資訊，請參閱協力廠商資料處理延伸模組所隨附的文件。  
+ 因為 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 具有可延伸的資料提供者架構，所以您可以建置自訂的資料處理延伸模組，以包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組所提供的額外功能。 如需詳細資訊，請參閱＜ [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)＞。 如需協力廠商資料處理延伸模組的資訊，請參閱協力廠商資料處理延伸模組所隨附的文件。  
   
 > [!NOTE]  
 >  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者或自訂的資料處理延伸模組必須經過安裝和註冊後，才能用來存取資料來源中的資料。 資料處理延伸模組必須在報表用戶端上安裝及註冊才能撰寫報表，而且必須安裝在報表伺服器上才能檢視發行的報表。 並非所有資料提供者的設計都是在伺服器環境下運作。 如需詳細資訊，請參閱[註冊標準 .NET Framework Data Provider &#40;SSRS&#41;](../../reporting-services/report-data/register-a-standard-net-framework-data-provider-ssrs.md) 和[部署資料處理延伸模組](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)。  

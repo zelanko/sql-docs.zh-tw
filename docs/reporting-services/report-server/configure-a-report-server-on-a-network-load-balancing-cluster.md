@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 07/16/2019
-ms.openlocfilehash: cd8f8e05e9be4bcd7a48c5e2fb800c2ebbc9e308
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
-ms.translationtype: MTE75
+ms.date: 12/11/2019
+ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329269"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244395"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在網路負載平衡叢集上設定報表伺服器
 
@@ -30,7 +30,7 @@ ms.locfileid: "68329269"
 
  您可以使用下列指導方針來安裝和設定部署：  
   
-|步驟|Description|詳細資訊|  
+|步驟|描述|詳細資訊|  
 |----------|-----------------|----------------------|  
 |1|在 NLB 叢集的伺服器節點上安裝 Reporting Services 之前，請先檢查向外延展部署的需求。|[設定原生模式報表伺服器向外延展部署](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |2|設定 NLB 叢集並確認它是否正常運作。<br /><br /> 請務必將主機標頭名稱對應至 NLB 叢集的虛擬伺服器 IP。 此主機標頭名稱會用於報表伺服器 URL 中，而且比 IP 位址更容易記得和輸入。|如需詳細資訊，請參閱 Windows Server 產品文件集來了解您所執行的 Windows 作業系統版本。|  
@@ -56,21 +56,21 @@ ms.locfileid: "68329269"
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-1. 使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供的自動產生功能來產生驗證金鑰和解密金鑰。 最後，您必須擁有單一 <`MachineKey`> 項目，以針對向外延展部署中的每個報表伺服器執行個體貼入 Web.config 檔案中。  
+1. 使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供的自動產生功能來產生驗證金鑰和解密金鑰。 最後，您必須擁有單一 <`machineKey`> 項目，以針對向外延展部署中的每個報表伺服器執行個體貼入 Web.config 檔案中。  
   
     下列範例說明您必須取得的值。 請勿將此範例複製到組態檔中，因為這些金鑰值是無效的。  
   
     ```xml
-    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    <machineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. 開啟 Reportserver 的 Web.config 檔案，並在 <`system.web`> 區段中貼上您產生的 <`MachineKey`> 項目。 根據預設，報表管理員的 Web.config 檔案位於 \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config。  
+2. 開啟 Reportserver 的 Web.config 檔案，並在 <`system.web`> 區段中貼上您產生的 <`machineKey`> 項目。 根據預設，報表管理員的 Web.config 檔案位於 \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config。  
   
 3. 儲存檔案。  
   
 4. 針對向外延展部署中的每個報表伺服器重複以上步驟。  
   
-5. 確認 \Reporting Services\Reportserver 資料夾中的所有 Web.Config 檔案在 <`system.web`> 區段中包含相同的 <`MachineKey`> 項目。  
+5. 確認 \Reporting Services\Reportserver 資料夾中的所有 Web.Config 檔案在 <`machineKey`> 區段中包含相同的 <`system.web`> 項目。  
 
 ::: moniker-end
 
@@ -144,5 +144,5 @@ ms.locfileid: "68329269"
 
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [設定原生模式報表伺服器向外延展部署 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
  [管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)

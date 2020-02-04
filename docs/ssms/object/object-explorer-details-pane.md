@@ -1,6 +1,6 @@
 ---
-title: 物件總管詳細資料窗格 | Microsoft Docs
-ms.custom: ''
+title: 物件總管詳細資料窗格
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b51309850e4e36083dbbf5fa228746dac18968ef
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fea000eb9b428c58fa01afdd9724b7b4418789cc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264085"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257147"
 ---
 # <a name="object-explorer-details-pane"></a>物件總管詳細資料窗格
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "68264085"
 |--------|----------|  
 |**上一頁**|移至 [物件總管詳細資料] 中顯示的先前項目。 當先前的顯示是搜尋作業的結果時，就會重新執行搜尋。|  
 |**下一頁**|在選取 [上一頁]  作業之後，移至下一個畫面。|  
-|**向上**|移至父物件或資料夾。|  
+|**Up**|移至父物件或資料夾。|  
 |**同步處理**|將 [物件總管] 的焦點設定成在 [物件總管詳細資料] 中選取的物件。|  
-|**篩選**|如果可用，顯示可設定的物件子集。|  
+|**Filter**|如果可用，顯示可設定的物件子集。|  
 |**[重新整理]**|重新整理 [物件總管詳細資料] 的顯示。|  
 |**搜尋**|提供區域來輸入特定資料庫物件的搜尋詞彙。|  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68264085"
 ### <a name="sorting"></a>排序  
 按一下資料行標頭就會依據該資料行進行排序。 再次按一下相同的標頭則會依據該資料行進行反向排序。 每位使用者的排序選取範圍會保留在物件和資料夾中，而且會在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 重新啟動時保留。  
   
-### <a name="filtering"></a>篩選  
+### <a name="filtering"></a>Filtering  
 您可以使用 [物件總管詳細資料] 工具列上的 [篩選]  圖示來篩選顯示在 [物件總管詳細資料] 中的特定物件清單。 此圖示會在可進行篩選時啟用。  
   
 ### <a name="details-pane"></a>詳細資料窗格  
@@ -88,7 +88,7 @@ ms.locfileid: "68264085"
 ## <a name="sql-server-object-search"></a>SQL Server 物件搜尋  
 萬用字元  
   
--   支援標準的萬用字元。 例如，搜尋 **dm_os%counters** 就會傳回 dm_os_memory_cache_counters 和 dm_os_performance_counters。 如需詳細資訊，請參閱[如何：用萬用字元搜尋](../../relational-databases/scripting/search-text-with-wildcards.md)。  
+-   支援標準的萬用字元。 例如，搜尋 **dm_os%counters** 就會傳回 dm_os_memory_cache_counters 和 dm_os_performance_counters。 如需詳細資訊，請參閱 [如何：用萬用字元搜尋](../../relational-databases/scripting/search-text-with-wildcards.md)。  
   
 搜尋範圍  
   

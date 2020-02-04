@@ -14,10 +14,10 @@ ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b55265887b8d824e5e7d90d0fb2108efcf75fdb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570604"
 ---
 # <a name="securable-items"></a>安全性實體項目
@@ -48,7 +48,7 @@ ms.locfileid: "65570604"
 ## <a name="item-descriptions"></a>項目描述  
  下表列出安全性實體項目並敘述它們的特性。  
   
-|項目|特性|  
+|Item|特性|  
 |----------|---------------------|  
 |資料夾|資料夾安全性會套用至資料夾本身以及它包含的項目。 [主資料夾] 資料夾是資料夾階層的根節點。 此資料夾所設定的安全性，會為資料夾階層中所有從屬的資料夾、報表、資源和共用資料來源，建立初始安全性設定。 如需詳細資訊，請參閱 [保護資料夾的安全](../../reporting-services/security/secure-folders.md)。<br /><br /> [我的報表] 是特殊用途資料夾，可以透過以專用角色為基礎的隱含角色指派來保護。 如需詳細資訊，請參閱 [保護我的報表](../../reporting-services/security/secure-my-reports.md)。|  
 |報表|可以保護報表與連結報表，以控制使用者可以執行之動作的範圍，例如變更給定報表的屬性。<br /><br /> 報表記錄是透過包含記錄的報表來保護。 您無法保護報表記錄內的個別快照集。<br /><br /> 如需保護報表的詳細資訊，請參閱 [保護報表和資源的安全](../../reporting-services/security/secure-reports-and-resources.md)。|  

@@ -12,10 +12,10 @@ ms.assetid: aee1608d-374f-4ad3-bc23-fe07fdaa52b7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 949ab416b0d30f7bb20ec2b797a04121d49b9811
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193711"
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>準備實作傳遞延伸模組
@@ -35,7 +35,7 @@ ms.locfileid: "63193711"
   
  下表描述傳遞延伸模組之可用的介面與類別。  
   
-|介面或類別|Description|  
+|介面或類別|描述|  
 |------------------------|-----------------|  
 |<xref:Microsoft.ReportingServices.Interfaces.IExtension> 介面|代表 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的擴充功能。|  
 |<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 介面|代表 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的傳遞延伸模組。|  

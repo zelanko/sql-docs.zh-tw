@@ -15,10 +15,10 @@ ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 87285bffd5136c4ac2a66ae17755edcecd35f065
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193978"
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>參考在 RDL 檔案中的組件

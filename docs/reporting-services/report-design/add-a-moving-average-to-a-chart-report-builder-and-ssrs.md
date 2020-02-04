@@ -9,10 +9,10 @@ ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 58dae055e89d2c1be50c7bbc515298cfadf9fd60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575000"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>將移動平均加入至圖表 (報表產生器及 SSRS)

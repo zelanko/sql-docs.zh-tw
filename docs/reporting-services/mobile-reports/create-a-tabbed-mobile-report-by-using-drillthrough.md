@@ -9,10 +9,10 @@ ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d01f9f1bef4d13cbce3f3e736cbef2f838c680ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63061778"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>使用鑽研建立索引標籤式的行動報表

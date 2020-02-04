@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e03ae1a8c4cdab87f46f63da6271886b4518b5e3
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68715009"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>使用 R 分析函式來改善效能
@@ -21,7 +21,7 @@ ms.locfileid: "68715009"
 除了使用 SQL Server 資源和工具來監視 R 指令碼執行之外，您還可以使用由其他 R 套件提供的效能工具，來取得內部函式呼叫的相關詳細資訊。 
 
 > [!TIP]
-> 本文提供您開始使用時的基本資源。 如需專家指導，建議您閱讀[由 Hadley Wickham 所著 "Advanced R"](http://adv-r.had.co.nz) 中的 *Performance* 一節。
+> 本文提供您開始使用時的基本資源。 如需專家指導，建議您閱讀*由 Hadley Wickham 所著 "Advanced R"* 中的 [Performance](http://adv-r.had.co.nz) 一節。
 
 ## <a name="using-rprof"></a>使用 RPROF
 

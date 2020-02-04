@@ -11,10 +11,10 @@ ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e7257e1c7a24786e580ce8d2c2da9bd52ac5b86c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573992"
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Reporting Services 錯誤
@@ -44,6 +44,6 @@ ms.locfileid: "65573992"
 ## <a name="internal-only"></a>僅供內部使用  
   
 ## <a name="see-also"></a>另請參閱  
- [啟動與停止 Report Server 服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
+ [啟動與停止報表伺服器服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
   
   

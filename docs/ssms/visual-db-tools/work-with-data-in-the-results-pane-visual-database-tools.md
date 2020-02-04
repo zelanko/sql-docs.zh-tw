@@ -1,10 +1,9 @@
 ---
-title: 使用結果窗格中的資料 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 使用結果窗格中的資料
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,14 @@ helpviewer_keywords:
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0420ece084af7f5fde51498226dbd06671f1c9c9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 4161966534f65936bbddc8753cdb116ea5f47e33
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262935"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246224"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>使用結果窗格中的資料 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

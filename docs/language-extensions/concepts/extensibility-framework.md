@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658875"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>SQL Server 語言延伸模組中的擴充性架構
@@ -54,11 +54,11 @@ The following diagram visually describes opportunities and benefits of the exten
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 是一項服務，可管理負責執行指令碼之外部處理序的存留時間、資源和安全性界限。 這如同全文索引及查詢服務啟動個別的主機來處理全文查詢。 啟動控制板服務只會啟動由 Microsoft 發行之信任的啟動器，或是經 Microsoft 認證符合效能和資源管理要求的啟動器。
 
-| 信任的啟動器 | 延伸模組 | SQL Server 版本 |
+| 信任的啟動器 | 分機 | SQL Server 版本 |
 |-------------------|-----------|---------------------|
 | 適用於 Java 的 JavaLauncher.dll | Java 延伸模組 | SQL Server 2019 |
 
-[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服務會以使用 [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) 執行隔離的 **SQLRUserGroup** 執行。
+[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服務會以使用 **AppContainers** 執行隔離的 [SQLRUserGroup](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) 執行。
 
 系統會針對您已新增 SQL Server 機器學習語言延伸模組的每個資料庫引擎執行個體，建立個別的 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服務。 每個資料庫引擎執行個體都有一個啟動控制板服務，因此如果您有多個支援外部指令碼的執行個體，就會每個都有一個啟動控制板服務。 資料庫引擎執行個體會繫結至為它建立的啟動控制板。 預存程序或 T-SQL 中的所有外部指令碼叫用，都會導致 SQL Server 服務呼叫為相同執行個體建立的啟動控制板服務。
 

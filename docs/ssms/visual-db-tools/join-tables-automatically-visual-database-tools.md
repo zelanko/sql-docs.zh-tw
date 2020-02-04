@@ -1,10 +1,9 @@
 ---
-title: 自動聯結資料表 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 自動聯結資料表
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 302580cec7a9c07e6021a2d625d048a690b5ccbf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b0f6c9b3ead5073e0983c4f251957bcd8dc76b6c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253943"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75224656"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>自動聯結資料表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -11,10 +11,10 @@ ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 61be4b4668b6736d30e28adb30fd16f289fb7c56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582192"
 ---
 # <a name="new-shared-schedule-management-studio"></a>新增共用排程 (Management Studio)

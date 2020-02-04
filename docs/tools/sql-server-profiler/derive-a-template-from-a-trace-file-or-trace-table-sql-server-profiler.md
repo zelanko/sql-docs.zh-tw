@@ -1,32 +1,31 @@
 ---
-title: 從追蹤檔案或追蹤資料表衍生範本 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 從追蹤檔案或追蹤資料表衍生範本
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- templates [SQL Server], traces
-- trace templates [SQL Server]
 ms.assetid: 305817b7-4d23-49fb-9e6c-4d34359877bf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 22f99d58d44fc5c6fd75e35161d71f0cf560c60f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 88058eed970b7294f8bbc0c1cc50352753f511a2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68223698"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307292"
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>從追蹤檔案或追蹤資料表衍生範本 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]從現有的追蹤檔案或追蹤資料表建立追蹤範本。  
   
 ### <a name="to-derive-a-template-from-a-trace-file-or-trace-table"></a>若要從追蹤檔案或追蹤資料表衍生範本  
   
-1.  開啟要做為範本基礎的追蹤檔案或追蹤資料表。 如需詳細資訊，請參閱[開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) 或[開啟追蹤資料表 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)。  
+1.  開啟要做為範本基礎的追蹤檔案或追蹤資料表。 如需詳細資訊，請參閱 [開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) 或 [開啟追蹤資料表 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)隨附的預先定義「微調」範本。  
   
 2.  在 **[檔案]** 功能表中指向 **[另存新檔]** ，然後按一下 **[追蹤範本]** 。  
   

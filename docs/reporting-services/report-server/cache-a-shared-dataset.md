@@ -9,10 +9,10 @@ ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7e98e5ffd8970806e2ed92e53c8e82da21387938
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574762"
 ---
 # <a name="cache-a-shared-dataset"></a>快取共用資料集
@@ -39,7 +39,7 @@ ms.locfileid: "65574762"
   
 6.  選取快取於 30 分鐘後過期的選項。 您也可以選擇讓快取在指定的排程時間過期。  
   
-7.  按一下 **[套用]** 。  
+7.  按一下 [套用]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理共用資料集](../../reporting-services/report-data/manage-shared-datasets.md)  

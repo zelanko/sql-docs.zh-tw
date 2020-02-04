@@ -12,10 +12,10 @@ ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8c77e0f066c6342fb0b5bc58130cb20c80e40de3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571162"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>設定報表伺服器上的自訂或表單驗證

@@ -9,10 +9,10 @@ ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6e3a96e3eef90778b0e7877b88ba79cb4e0dd43e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573854"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>在原生模式報表伺服器上疑難排解發行或檢視報表
@@ -53,7 +53,7 @@ ms.locfileid: "65573854"
 [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [錯誤和事件 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [針對 Reporting Services 報表的資料擷取問題進行疑難排解](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
-[為 Reporting Services 訂閱與傳遞疑難排解](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
+[針對 Reporting Services 訂閱與傳遞進行疑難排解](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   
 

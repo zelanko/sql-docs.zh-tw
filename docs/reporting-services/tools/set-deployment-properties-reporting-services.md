@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
 ms.openlocfilehash: 9106c4c45845d1e31d65180c8f0fd979e7e3e14c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66175335"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>設定部署屬性 (Reporting Services)

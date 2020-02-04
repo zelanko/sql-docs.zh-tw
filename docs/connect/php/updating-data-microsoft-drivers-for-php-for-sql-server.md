@@ -11,10 +11,10 @@ ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93bad991b56928db0d7b872b13904385d79ae788
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014837"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>更新資料 (Microsoft Drivers for PHP for SQL Server)
@@ -32,10 +32,10 @@ ms.locfileid: "68014837"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |---------|---------------|  
 |[如何：執行參數化查詢](../../connect/php/how-to-perform-parameterized-queries.md)|描述如何執行參數化查詢。|  
-|[如何：以資料流的形式傳送資料](../../connect/php/how-to-send-data-as-a-stream.md)|描述如何將資料串流處理到伺服器。|  
+|[如何：以資料流形式傳送資料](../../connect/php/how-to-send-data-as-a-stream.md)|描述如何將資料串流處理到伺服器。|  
 |[如何：執行交易](../../connect/php/how-to-perform-transactions.md)|描述如何使用 **sqlsrv** 函數來執行交易。|  
   
 ## <a name="see-also"></a>另請參閱  

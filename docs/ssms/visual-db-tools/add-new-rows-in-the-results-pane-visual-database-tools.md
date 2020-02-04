@@ -1,10 +1,7 @@
 ---
-title: 在結果窗格中加入新的資料列 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: 在結果窗格中新增資料列
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,15 +14,21 @@ helpviewer_keywords:
 ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 844acf7ff29557e67edab6a4851216a119542cd4
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: fed22c3c4922f74cb3462db4ac6617e6ee7a7c5f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263445"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253435"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>在結果窗格中加入新的資料列 (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 您可以利用輸入或是從其他諸如「記事本」或 Excel 程式貼上的方式，加入新的資料。 要貼上資料列必須要有與貼入的資料表完全相同的資料行數目和類型。 多重資料列可一併貼上至 [結果] 窗格。  
   
 如需如何輸入資料的資訊，請參閱 [更新結果的規則 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md)。  

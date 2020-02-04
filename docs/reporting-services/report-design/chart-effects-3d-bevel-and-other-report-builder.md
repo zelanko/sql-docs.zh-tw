@@ -11,10 +11,10 @@ ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3d6f854eff07947e16a929acec1c20011dcf0b4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581701"
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>圖表效果 - 3D、斜面和其他 (報表產生器)
@@ -60,6 +60,6 @@ ms.locfileid: "65581701"
 ## <a name="see-also"></a>另請參閱  
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [將 3D 效果加入至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
+ [將 3D 效果新增至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: 快速監看式對話方塊
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -11,15 +12,15 @@ ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 03/14/2017
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af12ca6fb0b8eb0b4461d95e75e8c1a3c62ed77e
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 9cfd48c59a928481be28d03d970fb399ea10b720
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119244"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253019"
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Transact-SQL 偵錯工具 - 快速監看式對話方塊
 
@@ -47,7 +48,7 @@ ms.locfileid: "74119244"
   
     -   透過將運算子套用至一或多個變數、參數或系統函式 (例如 @IntegerCounter + 1 或 FirstName + LastName) 的方式建立的運算式。  
   
-    -   傳回單一值的 Transact-SQL 陳述式，例如：SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1。  
+    -   傳回單一值的 Transact-SQL 陳述式，例如 SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1。  
   
 2.  按一下 [重新評估]  。  
   

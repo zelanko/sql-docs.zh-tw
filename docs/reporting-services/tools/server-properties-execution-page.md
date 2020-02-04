@@ -11,10 +11,10 @@ ms.assetid: 53b77db1-b013-4dac-82dd-30c0de276639
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e8259591c54068cde134c98ae405dd77fac6fab4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571370"
 ---
 # <a name="server-properties-execution-page"></a>伺服器屬性 (執行頁面)

@@ -9,10 +9,10 @@ ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3eb298bc6b359b0df92566f9add8d7011cdc907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573846"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>疑難排解 Reporting Services 的報表設計問題
@@ -38,7 +38,7 @@ PageNumber 和 TotalPages 只在頁首和頁尾有效。
   
 內建欄位 [&PageNumber] 和 [&TotalPages] 只在頁首和頁尾有效。   
   
-若要將 [&PageNumber] 或 [&TotalPages] 加入至報表，您必須先新增頁首或頁尾。 如需相關資訊，請參閱[新增或移除頁面標頭](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)。  
+若要將 [&PageNumber] 或 [&TotalPages] 加入至報表，您必須先新增頁首或頁尾。 如需相關資訊，請參閱 [新增或移除頁面標頭](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 > 在頁首或頁尾中包含 [&TotalPages]，會對報表處理產生一些影響。 如需詳細資訊，請參閱「報表疑難排解：將報表匯出為特定檔案格式」。  
@@ -54,7 +54,7 @@ PageNumber 和 TotalPages 只在頁首和頁尾有效。
   
 ## <a name="see-also"></a>另請參閱  
 [針對 Reporting Services 報表的資料擷取問題進行疑難排解](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
-[為 Reporting Services 訂閱與傳遞疑難排解](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
+[針對 Reporting Services 訂閱與傳遞進行疑難排解](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   
   

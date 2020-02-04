@@ -11,10 +11,10 @@ ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b83188359489759f50b2929de769721d627c15d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992896"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>使用 SQLSRV 驅動程式以資料流形式擷取資料
@@ -32,7 +32,7 @@ ms.locfileid: "67992896"
   
 3.  使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 擷取資料列中的欄位。 使用 **SQLSRV_PHPTYPE_STREAM(<encoding>)** 作為函式呼叫中的第三個參數，指定要以資料流的形式擷取資料。 下表列出用來指定編碼及其描述的常數：  
   
-    |SQLSRV 常數|Description|  
+    |SQLSRV 常數|描述|  
     |-------------------|---------------|  
     |SQLSRV_ENC_BINARY|資料會以原始位元組資料流形式從伺服器傳回，而不需執行編碼或轉譯。|  
     |SQLSRV_ENC_CHAR|資料會以如同在系統上設定之 Windows 地區設定的字碼頁中指定的 8 位元字元傳回。 系統會以單一位元組問號 (?) 字元取代任何多位元組字元或未對應到此字碼頁的字元。|  
@@ -42,10 +42,10 @@ ms.locfileid: "67992896"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |---------|---------------|  
 |[使用 SQLSRV 驅動程式支援資料流的資料類型](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|列出可以資料流的形式擷取的 SQL Server 資料類型。|  
-|[如何：使用 SQLSRV 驅動程式以資料流的形式擷取字元資料](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|示範如何以資料流的形式擷取字元資料。|  
+|[如何：使用 SQLSRV 驅動程式以資料流形式擷取字元資料](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|示範如何以資料流的形式擷取字元資料。|  
 |[如何：使用 SQLSRV 驅動程式以資料流形式擷取二進位資料](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|示範如何以資料流的形式擷取二進位資料。|  
   
 ## <a name="see-also"></a>另請參閱  

@@ -11,10 +11,10 @@ ms.assetid: 521f3772-043a-4bfa-a3d6-d5e3405ac09c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1e7b98cb6ffedcf5427ccafbc10d8b8f6f6e604a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580323"
 ---
 # <a name="document-outline"></a>文件大綱

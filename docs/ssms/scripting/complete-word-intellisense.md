@@ -1,6 +1,6 @@
 ---
-title: 自動完成文字 (IntelliSense) | Microsoft Docs
-ms.custom: ''
+title: 自動完成文字 (IntelliSense)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: daf84e726e9b27fba25b20974017b5b255aa3a10
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7b516e75ce312dbc2970ccb31975d892f7ab98cb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256477"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253986"
 ---
 # <a name="complete-word-intellisense"></a>自動完成文字 (IntelliSense)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

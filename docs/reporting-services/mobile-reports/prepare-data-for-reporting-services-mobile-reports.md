@@ -9,10 +9,10 @@ ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9ded496c3509420d54325dc054e018048ede0732
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62499919"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>準備 Reporting Services 行動報表的資料
@@ -38,7 +38,7 @@ ms.locfileid: "62499919"
 ## <a name="preparing-filter-data"></a>準備篩選資料 ##  
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 可以根據日期/時間欄位和索引鍵欄位來篩選資料。 雖然索引鍵欄位可以是數值，但是在大部分情況下會是識別碼或字串值。 若要準備與導覽器元素 (例如選擇清單) 搭配使用的篩選欄位，篩選索引鍵應該是資料表中的單一資料行。 因此，您可以根據篩選資料行中的值對資料表資料列進行分組。 擁有多個資料行會包含不同的篩選索引鍵或篩選準則，讓行動報表具有以階層方式或個別方式使用的多個篩選導覽器。  
   
-| Industry  | Country   | Region    |  
+| 業界  | Country   | 區域    |  
 | ------------- | ------------- | ------------- |  
 | Banks     | AFGHANISTAN   | ASIA      |  
 | Commercial & Professional Services | AFGHANISTAN | ASIA |  
@@ -59,7 +59,7 @@ ms.locfileid: "62499919"
 | Consumer Staples |    |  
 | Consumer Discretionary |  |     
 | 健康照護   |   |  
-| Information Technology |  |  
+| 資訊技術 |  |  
 | Banks | Financials |  
 | Real Estate | Financials |  
 | Diversified Financials |  Financials |   
@@ -77,9 +77,9 @@ ms.locfileid: "62499919"
 | Retailing | Consumer Discretionary |  
 | Pharmaceuticals   | 健康照護 |  
 | Health Care Equipment & Services |    健康照護 |  
-| Software & Services | Information Technology |  
-| Technology Hardware & Equipment   | Information Technology |  
-| Telecommunication Services |Information Technology |  
+| Software & Services | 資訊技術 |  
+| Technology Hardware & Equipment   | 資訊技術 |  
+| Telecommunication Services |資訊技術 |  
   
 ### <a name="see-also"></a>另請參閱  
 - [準備 Reporting Services 行動報表的 Excel 資料](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)  

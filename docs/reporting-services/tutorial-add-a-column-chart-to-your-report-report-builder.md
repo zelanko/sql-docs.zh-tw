@@ -9,10 +9,10 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041305"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教學課程：將直條圖加入至報表 (報表產生器)
@@ -43,7 +43,7 @@ ms.locfileid: "63041305"
   
 ### <a name="to-create-a-chart-report"></a>建立圖表報表  
   
-1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  從您的電腦、[ Web 入口網站或 SharePoint 整合模式](../reporting-services/report-builder/start-report-builder.md)啟動報表產生器[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]。  
   
     [新報表或資料集]  對話方塊隨即開啟。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "63041305"
     UNION SELECT CAST('2015-12-31' AS date) AS SalesDate, CAST(81946. AS money) AS Sales  
     ```  
   
-8.  (選擇性) 按一下 [執行] 按鈕 ( **!** ) 來查看您圖表所依據的資料。  
+8.  (選擇性) 按一下 [執行] 按鈕 ( **!** ) 來查看您報表所依據的資料。  
   
 9. 按 [下一步]  。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "63041305"
   
 4.  按 [下一步]  。  
  
-6.  按一下 **[完成]** 。  
+6.  按一下 [完成]  。  
   
     圖表就會加入至設計介面。 請注意，新的直條圖只會顯示代表性資料。 圖例會顯示 Sales Date A、Sales Date B 等，只會提供報表的外觀。 
     
@@ -295,9 +295,9 @@ ms.locfileid: "63041305"
   
 3.  在 [名稱]  中，鍵入 **Sales Order Column Chart**。  
   
-4.  按一下 **[儲存]** 。  
+4.  按一下 [檔案]  。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
 您已成功完成「將直條圖加入至報表」教學課程。 若要深入了解圖表，請參閱[圖表 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 和[走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  

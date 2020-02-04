@@ -9,10 +9,10 @@ ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b58cb9cd7b4fcb13454b1a8d7cebcf380987fcbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582098"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>加入和修改線條 (報表產生器及 SSRS)

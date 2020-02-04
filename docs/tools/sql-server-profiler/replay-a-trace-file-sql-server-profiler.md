@@ -1,28 +1,28 @@
 ---
-title: 重新執行追蹤檔案 (SQL Server Profiler) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 重新執行追蹤檔案
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], replaying
-- replaying traces
 ms.assetid: 9e361275-c8fd-4499-8389-242cf8e27415
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fe3a0971be4494c62d7e29a9641ed82655126a23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 0c658f692fcc1e58275c98e6cfd958dd8c73020f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031457"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307525"
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>重新執行追蹤檔案 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  重新執行是開啟儲存的追蹤並重新執行該追蹤的能力。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 多執行緒播放引擎功能，可以模擬使用者連接及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 重新執行在排解應用程式或處理序的疑難問題時很有用。 您識別問題並實作更正時，針對更正的應用程式或處理序執行發現可能問題的追蹤。 然後，重新執行原始追蹤並比較結果。  
+
+重新執行是開啟儲存的追蹤並重新執行該追蹤的能力。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 具有多執行緒播放引擎的功能，可以模擬使用者連線及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 重新執行在排解應用程式或處理序的疑難問題時很有用。 您識別問題並實作更正時，針對更正的應用程式或處理序執行發現可能問題的追蹤。 然後，重新執行原始追蹤並比較結果。  
   
  除了您要監視的其他任何事件類別以外，還必須擷取特定的事件類別以便重新執行。 依預設，如果您使用 **TSQL_Replay** 追蹤範本，就會擷取這些事件。 如需詳細資訊，請參閱 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68031457"
   
 5.  選擇 [以追蹤事件的順序重新執行事件]  或 [使用多執行緒重新執行事件]  。 下列資料表說明這些設定之間的差異。  
   
-    |選項|Description|  
+    |選項|描述|  
     |------------|-----------------|  
     |**依照追蹤的順序重新執行事件**|以記錄事件的順序重新執行事件。 此選項會啟動偵錯。|  
     |**使用多執行緒重新執行事件**|這個選項使用多個執行緒重新執行每個事件，不受順序的限制。 這個選項會將效能最佳化。|  

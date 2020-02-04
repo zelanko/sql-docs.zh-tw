@@ -9,10 +9,10 @@ ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 247a1ddeec14c38f2cc29d2d57df663c1c2368df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581268"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>在數列上顯示工具提示 (報表產生器及 SSRS)
@@ -30,9 +30,9 @@ ms.locfileid: "65581268"
 2.  按一下 **[數列資料]** ，然後針對 **[工具提示]** 屬性，輸入字串或運算式。 您可以使用任何圖表專用的關鍵字來表示圖表上的其他元素。 如需詳細資訊，請參閱 [格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [格式化圖表上的資料點 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [變更圖例項目的文字 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
  [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [在報表上加入鑽研動作 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
+ [在報表上新增鑽研動作 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   
   

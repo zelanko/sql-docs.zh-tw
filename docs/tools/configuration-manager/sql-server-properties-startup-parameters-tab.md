@@ -1,6 +1,6 @@
 ---
-title: SQL Server 屬性 ([啟動參數] 索引標籤) |Microsoft Docs
-ms.custom: ''
+title: SQL Server 屬性 (啟動參數索引標籤)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a95a90271c6196c68a23d0ba416c5157c90ae9c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 2d5a4c5cb279cb4cfd4bbe1baa63f89dc1289436
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023910"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306777"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 屬性 (啟動參數索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "68023910"
  如需有關如何移動 master 資料庫的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜移動系統資料庫＞主題。  
   
 ## <a name="optional-parameters"></a>選擇性參數  
- 《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動選項＞主題描述了所有支援的啟動參數。 啟動參數 -T*trace#* 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體應該使用作用中的指定追蹤旗標 (*trace#* ) 來啟動。 追蹤旗標用來啟動具有非標準行為的伺服器。 如需有關追蹤旗標的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜追蹤旗標 ([!INCLUDE[tsql](../../includes/tsql-md.md)])＞主題。  
+ 《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動選項＞主題描述了所有支援的啟動參數。 啟動參數 -T*trace#* 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體應該使用作用中的指定追蹤旗標 (*trace#* ) 來啟動。 追蹤旗標用來啟動具有非標準行為的伺服器。 如需有關追蹤旗標的詳細資訊，請參閱《[!INCLUDE[tsql](../../includes/tsql-md.md)] 線上叢書》中的＜追蹤旗標 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])＞主題。  
   
 > [!CAUTION]  
 >  您可能會在網際網路上看到其他未記載的啟動參數和追蹤旗標描述。 未記載的啟動參數和追蹤旗標是用來處理不常見的問題或強制執行測試所需的特定條件。 使用未記載的啟動參數可能會產生非預期的結果。 除非 Microsoft 客戶支援服務建議使用未記載的參數，否則請勿使用這些參數。  

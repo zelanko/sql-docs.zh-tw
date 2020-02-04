@@ -9,14 +9,14 @@ ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2658eb0eec1bd99c4e4503e8d8ae8894638e8c23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63280442"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>將資料格加入行動報表 | Reporting Services
-有時候，資料本身就是最佳的視覺效果。 深入了解用於顯示 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中資料的三種「資料格」  或資料表：
+有時候，資料本身就是最佳的視覺效果。 深入了解用於顯示  *中資料的三種「資料格」* [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]或資料表：
 * 簡易資料格
 * 指示器資料格
 * 圖表資料格

@@ -16,10 +16,10 @@ ms.assetid: 0dd61865-663b-47e2-b417-e9df418894cc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 079663faa466b171df35481ee69374194c015acb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978387"
 ---
 # <a name="getunicodestream-method-sqlserverresultset"></a>getUnicodeStream 方法 (SQLServerResultSet)

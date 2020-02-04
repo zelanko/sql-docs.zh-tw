@@ -16,10 +16,10 @@ ms.assetid: fbc70604-519d-461c-a8fa-e0a072d28a54
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5f6c9fff572794c523e8420c84af57b53ece1c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999136"
 ---
 # <a name="updatedate-method-sqlserverresultset"></a>updateDate 方法 (SQLServerResultSet)

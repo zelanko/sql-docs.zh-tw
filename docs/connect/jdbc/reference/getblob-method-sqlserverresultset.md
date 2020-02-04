@@ -16,10 +16,10 @@ ms.assetid: 2a43d1c8-ec8a-43de-b51e-b9108f4e3eae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c17e74c6844fa794dadb09e30f0be6822b66eb69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953731"
 ---
 # <a name="getblob-method-sqlserverresultset"></a>getBlob 方法 (SQLServerResultSet)
@@ -31,7 +31,7 @@ ms.locfileid: "67953731"
   
 |名稱|描述|  
 |----------|-----------------|  
-|[getBlob (int)](../../../connect/jdbc/reference/getblob-method-int-sqlserverresultset.md)|使用 Java 程式設計語言，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中所指定資料行索引的值來作為 Blob 物件。|  
+|[getBlob (int)](../../../connect/jdbc/reference/getblob-method-int-sqlserverresultset.md)|使用 Java 程式設計語言，從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行索引的值來作為 Blob 物件。|  
 |[getBlob (java.lang.String)](../../../connect/jdbc/reference/getblob-method-java-lang-string-sqlserverresultset.md)|使用 Java 程式設計語言，從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行名稱的值來作為 Blob 物件。|  
   
 ## <a name="see-also"></a>另請參閱  

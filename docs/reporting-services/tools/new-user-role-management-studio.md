@@ -11,10 +11,10 @@ ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 16f083c08a9d82a019ae98a8f9a71d7e596394da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582172"
 ---
 # <a name="new-user-role-management-studio"></a>新增使用者角色 (Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "65582172"
  **說明**  
  鍵入說明如何使用角色的描述，並列舉該角色支援的項目。  
   
- **工作**  
+ **Task**  
  選取可以透過此角色執行的工作。 您無法建立新工作，或修改 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]支援的現有工作。 項目層級角色定義中只能使用項目層級工作。  
   
  **工作描述**  

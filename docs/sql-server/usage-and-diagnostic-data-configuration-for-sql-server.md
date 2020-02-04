@@ -9,10 +9,10 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
 ms.openlocfilehash: d5248f97b044cb688174171fdb6ef79943851a92
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028929"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>設定 SQL Server 的使用狀況和診斷資料收集 (CEIP)
@@ -55,7 +55,7 @@ AND instance_name = '_Total'
 > [!NOTE]
 > 您僅可在付費版本的 SQL Server 中停用將資訊傳送給 Microsoft 的功能。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
  - 不支援移除或停用 SQL CEIP 服務。 
  - 不支援從叢集群組移除 SQL CEIP 資源。 
 
@@ -84,7 +84,7 @@ AND instance_name = '_Total'
     
     登錄項目名稱 = CustomerFeedback
     
-    項目類型 DWORD：0 為退出；1 為加入
+    項目類型 DWORD：0 為選擇退出，1 為選擇加入
     
     {InstanceID} 是指執行個體類型和執行個體，如下列範例所示：
 
@@ -98,7 +98,7 @@ AND instance_name = '_Total'
     
     登錄項目名稱 = CustomerFeedback
     
-    項目類型 DWORD：0 為退出；1 為加入
+    項目類型 DWORD：0 為選擇退出，1 為選擇加入
 
 > [!NOTE]
 > {Major Version} 是指 SQL Server 版本。例如，140 指的是 SQL Server 2017

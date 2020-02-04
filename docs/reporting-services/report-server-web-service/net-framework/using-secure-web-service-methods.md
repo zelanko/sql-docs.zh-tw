@@ -14,16 +14,16 @@ ms.assetid: 87329299-c2ea-4517-9148-d855726768a9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 84c0b693df2906d4ab3245df20c3b9a979cf07f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128806"
 ---
 # <a name="using-secure-web-service-methods"></a>使用安全的 Web 服務方法
   某些報表伺服器 Web 服務方法在叫用時，可能需要安全的連接。 需要安全連線的方法是由 RSReportServer.config 檔案中的 **SecureConnectionLevel** 設定所決定。 設定值有效範圍為 0 及以上的整數值。 下表描述這些值。  
   
-|層級|Description|  
+|層級|描述|  
 |-----------|-----------------|  
 |**0**|不安全。 對 Reporting Services SOAP API 的呼叫不需要安全連接。|  
 |大於 **0**|安全。 所有對 Reporting Services SOAP API 的呼叫都需要安全連接。|  

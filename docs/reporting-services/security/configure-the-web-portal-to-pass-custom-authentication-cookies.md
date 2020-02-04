@@ -12,10 +12,10 @@ ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2f3200a17f00efedae3f52be7f3b17df31167765
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579422"
 ---
 # <a name="configure-the-web-portal-to-pass-custom-authentication-cookies"></a>設定入口網站傳遞自訂驗證 Cookie
@@ -24,7 +24,7 @@ ms.locfileid: "65579422"
 
 ## <a name="modifying-the-rsreportserverconfig-file"></a>修改 RSReportServer.Config 檔
 
-您可以將 \<**PassThroughCookies**> 項目新增至 RSReportServer.config 檔中的入口網站組態設定，藉以讓 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 將其他 Cookie 傳送至報表伺服器。 當單一登入驗證方案不僅需要報表伺服器驗證 Cookie，同時也需要協力廠商驗證系統提供的 Cookie 時，傳送其他 Cookie 這項功能就顯得非常有用。
+您可以將 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]\<PassThroughCookies **> 項目新增至 RSReportServer.config 檔中的入口網站組態設定，藉以讓**  將其他 Cookie 傳送至報表伺服器。 當單一登入驗證方案不僅需要報表伺服器驗證 Cookie，同時也需要協力廠商驗證系統提供的 Cookie 時，傳送其他 Cookie 這項功能就顯得非常有用。
 
 使用入口網站時，若要能夠透過 HTTP 要求來傳送其他 Cookie，則必須在 RSReportServer.config 檔中設定下列項目：
   

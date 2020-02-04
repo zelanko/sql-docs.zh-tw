@@ -1,11 +1,7 @@
 ---
-title: 如何：刪除物件及解析相依性 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 刪除物件及解析相依性
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Data.Tools.Project.HelpKeywords.SqlProjectDropDatabaseConfirmationDialog
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ae25dbc584e564130348507e5aef657823502923
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c9f2bd6ed462004d76750fb2328d1615a51c2c84
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026608"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241432"
 ---
-# <a name="how-to-delete-objects-and-resolve-dependencies"></a>如何：刪除物件及解析相依性
+# <a name="how-to-delete-objects-and-resolve-dependencies"></a>如何：刪除物件及解析依存性
+
 在 [SQL Server 物件總管]  中重新命名或刪除物件時，SQL Server Data Tools 會自動偵測該物件的所有相依性物件，並視需要準備 ALTER 指令碼以重新命名或卸除相依性。  
   
 > [!WARNING]  
@@ -46,13 +47,13 @@ ms.locfileid: "68026608"
     > [!WARNING]  
     > SSDT 不會自動更新以指令碼為主的相依性 (如從檢視表至資料表的參考) 或預存程序。 在重新命名之後，您可以使用 [錯誤清單]  窗格尋找所有其他相依性，再手動加以修正。  
   
-5.  遵循先前[如何：使用 Power Buffer 更新連線的資料庫](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)程序中的步驟套用變更。  
+5.  遵循先前的[如何：使用 Power Buffer 更新連接的資料庫](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)程序中的步驟套用變更。  
   
 6.  再次以滑鼠右鍵按一下 [SQL Server 物件總管]  中的 [Customers]  資料表，然後選取 [檢視資料]  。 請注意，在重新命名作業之後資料表資料完整無損。  
   
 7.  以滑鼠右鍵按一下 [Products]  資料表，再選取 [檢視程式碼]  。 請注意，外部索引鍵參考已經自動更新為 `REFERENCES [dbo].[Customers] ([Id])`，以反映重新命名作業。  
   
-### <a name="to-delete-a-table"></a>若要刪除資料表  
+### <a name="to-delete-a-table"></a>刪除資料表  
   
 1.  以滑鼠右鍵按一下 [SQL Server 物件總管]  中的 [Customers]  資料表，然後選取 [刪除]  。  
   
@@ -63,5 +64,5 @@ ms.locfileid: "68026608"
 4.  以滑鼠右鍵按一下 [SQL Server 物件總管]  中的 [Products]  資料表，然後選取 [檢視程式碼]  。 請注意，`Customers` 資料表的外部索引鍵參考已不存在。  
   
     > [!WARNING]  
-    > 刪除作業發生時，如果已在資料表設計工具或 Transact\-SQL 編輯器中開啟 [Products]  資料表，後者不會自動重新整理以顯示外部索引鍵參考的刪除。 此外，在 [錯誤清單]  中可能會顯示和無法解析的參考有關的錯誤。 若要解決此問題，請關閉資料表設計工具或 Transact\-SQL 編輯器，再重新開啟 [Products] 資料表。  
+    > 刪除作業發生時，如果已在資料表設計工具或 Transact**SQL 編輯器中開啟 [Products]** \- 資料表，後者不會自動重新整理以顯示外部索引鍵參考的刪除。 此外，在 [錯誤清單]  中可能會顯示和無法解析的參考有關的錯誤。 若要解決此問題，請關閉資料表設計工具或 Transact\-SQL 編輯器，再重新開啟 [Products] 資料表。  
   

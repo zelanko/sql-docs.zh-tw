@@ -1,10 +1,9 @@
 ---
-title: 查詢定義差異對話方塊 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 查詢定義差異對話方塊
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -14,12 +13,14 @@ f1_keywords:
 ms.assetid: 90383473-2922-40e5-9682-3850849aa856
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aaf7b746c778809255280a01bef97be020a92a8f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 01e45f907f85ed02443502e899e11181a73f20ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266313"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255325"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>查詢定義差異對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

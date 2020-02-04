@@ -12,10 +12,10 @@ ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 51fcade75cff0f5cafa0e780a823ce505e43e297
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576649"
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>在已發行的報表上設定參數 - SharePoint 整合模式
@@ -77,7 +77,7 @@ ms.locfileid: "65576649"
   
     3.  如果您要使用預設值，而且不想讓此參數顯示在 [參數] 區域或訂閱頁面上，請選擇 [內部]  。  
   
-7.  按一下 **[套用]** 。  
+7.  按一下 [套用]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [報表伺服器項目的 SharePoint 網站和清單權限參考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  

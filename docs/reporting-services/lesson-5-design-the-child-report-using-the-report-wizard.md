@@ -9,10 +9,10 @@ ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: da9f07cf60a2ec42e23416b52cbfebab78802247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62512642"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>第 5 課：使用報表精靈設計子報表
@@ -32,7 +32,7 @@ ms.locfileid: "62512642"
   
     [可用資料集]  方塊會自動更新為您所建立的 DataTable。  
   
-5.  選取 **[下一步]** 。  
+5.  選取 [下一步]  。  
   
 6.  在 [排列欄位]  頁面中執行下列操作：  
   

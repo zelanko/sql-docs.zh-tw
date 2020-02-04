@@ -1,10 +1,9 @@
 ---
-title: 儲存後告知對話方塊 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 儲存後告知對話方塊
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -14,12 +13,14 @@ f1_keywords:
 ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c4947477f51c8fd417fc33ed6f249ad6a681af8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 71b15d02b5f334b7a3c50cf3c16b939eba3c1f96
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266381"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255392"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>儲存後告知對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

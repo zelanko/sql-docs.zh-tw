@@ -12,10 +12,10 @@ ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9f50535bbf4cca1775e963a2733e19dcd4ec7497
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582153"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>加入子報表和參數 (報表產生器及 SSRS)
@@ -50,7 +50,7 @@ ms.locfileid: "65582153"
   
 2.  在 **[子報表屬性]** 對話方塊中，按一下 **[參數]** 。  
   
-3.  按一下 **[加入]** 。 新的資料列就會加入至參數方格。  
+3.  按一下 [新增]  。 新的資料列就會加入至參數方格。  
   
 4.  在 **[名稱]** 文字方塊中，輸入子報表中的參數名稱或從清單方塊加以選擇。 此名稱必須與子報表中的報表參數 (而非查詢參數) 相符。  
   

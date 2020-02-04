@@ -10,10 +10,10 @@ ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 531e7f600c1523a565890d1ba1ab781d3b8a9deb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68019820"
 ---
 # <a name="remove-data-quality-server-objects"></a>移除 Data Quality Server 物件
@@ -37,7 +37,7 @@ ms.locfileid: "68019820"
  您可以滑鼠右鍵按一下物件，然後按一下快速鍵功能表中的 [刪除]  來刪除 SQL Server Management Studio 中的這些物件。  
   
 > [!IMPORTANT]  
->  如果您只要使用 `-uninstall` 命令列參數解除安裝 SQL Server 執行個體中的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]，則在解除安裝過程中將刪除所有 DQS 物件。 您不必在解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]之後手動刪除這些物件。 若要從命令提示字元解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，請在命令提示字元中輸入下列命令，然後按 ENTER：   
+>  如果您只要使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 命令列參數解除安裝 SQL Server 執行個體中的 `-uninstall` ，則在解除安裝過程中將刪除所有 DQS 物件。 您不必在解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]之後手動刪除這些物件。 若要從命令提示字元解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，請在命令提示字元中輸入下列命令，然後按 ENTER：   
 > `dqsinstaller.exe -uninstall`  
   
 ## <a name="uninstall-sql-server-instance-containing-data-quality-server"></a>解除安裝包含資料品質伺服器的 SQL Server 執行個體  

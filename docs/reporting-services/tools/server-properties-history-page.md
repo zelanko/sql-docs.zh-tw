@@ -11,10 +11,10 @@ ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f4f3c13e6393dc935c09d54a274d2dbe357401f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571353"
 ---
 # <a name="server-properties-history-page"></a>伺服器多個屬性 (記錄頁面)
@@ -24,7 +24,7 @@ ms.locfileid: "65571353"
   
  報表記錄快照集會儲存在報表伺服器資料庫中。 如果您保留無限數量的快照集，請務必定期檢查資料庫大小，以便確保它的成長速度不會過快或耗用過多磁碟空間。  
   
- 若要開啟此頁面：
+ 開啟此頁面：
  1) 啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
  2) 連接到報表伺服器執行個體。
  3) 以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]  。

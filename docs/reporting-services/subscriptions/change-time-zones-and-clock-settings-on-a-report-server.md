@@ -14,10 +14,10 @@ ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5c1e3a2b4fe468f3565dbf7ad47295ab8836315b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578371"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>變更報表伺服器上的時區和時鐘設定

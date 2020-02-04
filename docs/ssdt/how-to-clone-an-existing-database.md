@@ -1,24 +1,25 @@
 ---
-title: 如何：複製現有的資料庫 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 複製現有的資料庫
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d32b782c8508952a85f0a9a22b55d32dab096d6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 79dc8d87ab950336766283be20d79536b31a3cdd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017624"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241593"
 ---
 # <a name="how-to-clone-an-existing-database"></a>如何：複製現有的資料庫
-這個工作將使用一些您在先前的程序中所學到的步驟，建立新的資料庫並移植現有的資料。 此外，它還使用[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)中所述步驟，來同步處理來源和專案資料庫的結構描述。  
+
+這個工作將使用一些您在先前的程序中所學到的步驟，建立新的資料庫並移植現有的資料。 此外，它還使用[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)中所述的步驟，來同步處理來源和專案資料庫的結構描述。  
   
 利用這些步驟，您可以輕鬆地從生產資料庫建立具有相同結構描述和資料的開發或測試資料庫。 然後，您可以繼續在連線模式下開發測試資料庫，或是建立資料庫專案供離線開發和測試使用，所有工作都不必中斷生產資料庫的作業。  
   
@@ -33,7 +34,7 @@ ms.locfileid: "68017624"
   
 3.  將新的資料庫重新命名為 **TradeDev**。  
   
-4.  以滑鼠右鍵按一下 [SQL Server 物件總管]  中的 [Trade]  資料庫，再選取 [結構描述比較]  。 遵循[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)主題中步驟，選擇原始的 **Trade** 資料庫作為來源，並選擇新的 **TradeDev** 資料庫作為目標。 這會以 **Trade** 的結構描述來更新 **TradeDev**。  
+4.  以滑鼠右鍵按一下 [SQL Server 物件總管]  中的 [Trade]  資料庫，再選取 [結構描述比較]  。 遵循[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)主題中的步驟，選擇原始的 **Trade** 資料庫做為來源，新的 **TradeDev** 資料庫做為目標。 這會以 **Trade** 的結構描述來更新 **TradeDev**。  
   
 ### <a name="to-replicate-data"></a>若要複寫資料  
   
@@ -45,7 +46,7 @@ ms.locfileid: "68017624"
   
 3.  當指令碼視窗開啟時，請確認在 Transact\-SQL 指令碼窗格下方的狀態列中顯示「已連接」。 如果顯示「已中斷連接」，請按一下 [連接]  按鈕 (工具列上最左邊的按鈕)，然後輸入您的伺服器資訊和認證。  
   
-4.  在 [連接]  /[中斷連接]  按鈕旁邊的 [資料庫]  下拉式功能表中，選取 [TradeDev]  。 這類似於 Transact\-SQL`USE` 陳述式，而且將確保程式碼編輯器中的指令碼的執行對象會是 **TradeDev** 資料庫。  
+4.  在 [連接]  **[中斷連接]** / 按鈕旁邊的 [資料庫]  下拉式功能表中，選取 [TradeDev]  。 這類似於 Transact\-SQL`USE` 陳述式，而且將確保程式碼編輯器中的指令碼的執行對象會是 **TradeDev** 資料庫。  
   
 5.  按一下 [執行查詢]  按鈕執行 `INSERT` 陳述式。 這會將 `Suppliers` 資料庫的 `Trade` 資料表中的所有資料列插入 `Suppliers` 資料庫的 `TradeDev` 資料表。  
   
@@ -54,5 +55,5 @@ ms.locfileid: "68017624"
 7.  使用資料編輯器，確認新的 `TradeDev` 資料庫中的所有資料表全部都已填入。  
   
 ## <a name="see-also"></a>另請參閱  
-[操作說明：使用結構描述比較以比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

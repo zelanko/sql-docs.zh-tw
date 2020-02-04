@@ -11,10 +11,10 @@ ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7fb733325b09c189221729a3edc0dd12cf33b283
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140458"
 ---
 # <a name="report-server-http-log"></a>報表伺服器 HTTP 記錄
@@ -27,8 +27,8 @@ ms.locfileid: "67140458"
   
 |||  
 |-|-|  
-|[檔案名稱]|根據預設，其檔案名稱為 ReportServerService_HTTP_\<時間戳記>.log。 您可以透過在 ReportingServicesService.exe.config 檔中修改 HttpTraceFileName 屬性，自訂檔案名稱的前置詞。 此時間戳記是以國際標準時間 (UTC) 為基礎。|  
-|檔案位置|這個檔案位於 \Microsoft SQL Server\\\<SQL Server 執行個體>\Reporting Services\LogFiles。|  
+|檔案名稱|根據預設，其檔案名稱為 ReportServerService_HTTP_\<時間戳記>.log。 您可以透過在 ReportingServicesService.exe.config 檔中修改 HttpTraceFileName 屬性，自訂檔案名稱的前置詞。 此時間戳記是以國際標準時間 (UTC) 為基礎。|  
+|檔案位置|這個檔案位於 \Microsoft SQL Server\\*SQL Server 執行個體>\<* \Reporting Services\LogFiles。|  
 |檔案格式|此檔案採用 EN-US 格式。 它是 ASCII 文字檔。|  
 |檔案建立和保留|當您在組態檔中啟用 HTTP 記錄、重新啟動此服務，然後報表伺服器處理 HTTP 要求之後，系統就會建立 HTTP 記錄。 如果您設定了這些設定，但卻沒有看見記錄檔，請開啟報表或啟動報表伺服器應用程式 (例如，入口網站) 來產生 HTTP 要求，以建立此檔案。<br /><br /> 記錄檔的新執行個體會在報表伺服器的每個服務重新啟動和後續 HTTP 要求之後建立。<br /><br /> 根據預設，追蹤記錄的上限為 32 MB，並且會在 14 天之後遭到刪除。|  
   
@@ -56,9 +56,9 @@ ms.locfileid: "67140458"
   
 |欄位|描述|預設|  
 |-----------|-----------------|-------------|  
-|HttpTraceFileName|此為選擇性的值。 預設值為 ReportServerServiceHTTP_。 如果您想要使用不同的檔案命名慣例 (例如，當您要將記錄檔儲存至集中位置時，若要包含伺服器名稱)，可以指定不同的值。|是|  
-|HTTPTraceSwitches|此為選擇性的值。 如果您指定了此欄位，就可以使用逗號分隔的格式來設定記錄檔中使用的欄位。|否|  
-|date|活動發生的日期。|否|  
+|HttpTraceFileName|此為選用值。 預設值為 ReportServerServiceHTTP_。 如果您想要使用不同的檔案命名慣例 (例如，當您要將記錄檔儲存至集中位置時，若要包含伺服器名稱)，可以指定不同的值。|是|  
+|HTTPTraceSwitches|此為選用值。 如果您指定了此欄位，就可以使用逗號分隔的格式來設定記錄檔中使用的欄位。|否|  
+|Date|活動發生的日期。|否|  
 |Time|活動發生的時間。|否|  
 |ClientIp|存取報表伺服器之用戶端的 IP 位址。|是|  
 |UserName|存取報表伺服器之使用者的名稱。|否|  

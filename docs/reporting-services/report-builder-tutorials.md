@@ -9,10 +9,10 @@ ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e9d481e03efdcfb7ff109998eda3f4b2f6f3a3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "64330640"
 ---
 # <a name="report-builder-tutorials"></a>報表產生器教學課程
@@ -47,10 +47,10 @@ ms.locfileid: "64330640"
 [教學課程：將圓形圖加入至報表 &#40;報表產生器&#41;](../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
 請遵循此教學課程中的步驟，了解如何在報表中加入圓形圖。  
   
-[教學課程：將橫條圖加入至報表 &#40;報表產生器&#41;](../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+[教學課程：將橫條圖新增至報表 &#40;報表產生器&#41;](../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
 請遵循此教學課程中的步驟，了解如何在報表中加入橫條圖。  
   
-[教學課程：將走勢圖加入至報表 &#40;報表產生器&#41;](../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)  
+[教學課程：將走勢圖新增至報表 &#40;報表產生器&#41;](../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)  
 請遵循這個教學課程中的步驟來學習如何建立矩陣，然後將一組走勢圖加入至矩陣。  
   
 [教學課程：將 KPI 加入至報表 &#40;報表產生器&#41;](../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)  

@@ -11,10 +11,10 @@ ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4291245b101799238412115ced8b114de5a551be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572138"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Reporting Services 錯誤
@@ -51,6 +51,6 @@ ms.locfileid: "65572138"
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態檔](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
+ [修改 Reporting Services 設定檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   
   

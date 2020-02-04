@@ -9,10 +9,10 @@ ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 31eee586a5e825f3c2252e6e790d27263f04304d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576422"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>轉譯資料 (報表產生器及 SSRS)

@@ -22,10 +22,10 @@ ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2a2628bc5d098c32fc63d4a80bcf4c7b403a82a0
-ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72359410"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>將報表發行至報表伺服器
@@ -50,7 +50,7 @@ ms.locfileid: "72359410"
   
 ## <a name="to-publish-all-reports-in-a-project"></a>若要發行專案中的所有報表  
   
-在 [組建]  功能表上，按一下 [部署 \<報表專案名稱>]  。 或者，在方案總管中，以滑鼠右鍵按一下報表專案，然後按一下 [部署]  。 您可以在 [輸出] 視窗中，檢視發行程序的狀態。  
+在 [組建]  功能表上，按一下 [部署 **報表專案名稱>]\<** 。 或者，在方案總管中，以滑鼠右鍵按一下報表專案，然後按一下 [部署]  。 您可以在 [輸出] 視窗中，檢視發行程序的狀態。  
   
 當您部署報表伺服器專案時，也會部署報表專案中的共用資料來源。 所有報表都可以使用相同的報表組態，部署至相同的報表伺服器、伺服器上相同的資料夾等等。 若要將報表發行至不同的伺服器，請逐個報表發行，或僅包含報表伺服器專案中您要發行的報表。 一個方案可以包含多個報表伺服器專案，而且，使用多個專案可能會讓報表部署的管理更為容易，因為您可以使用不同的組態部署不同的專案。 
   

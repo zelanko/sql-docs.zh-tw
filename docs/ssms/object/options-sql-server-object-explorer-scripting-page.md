@@ -1,6 +1,6 @@
 ---
-title: 選項 (SQL Server 物件總管 - 指令碼頁面) | Microsoft Docs
-ms.custom: ''
+title: 選項 (SQL Server 物件總管 - 指令碼頁面)
+ms.custom: seo-lt-2019
 ms.date: 08/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0f2d5a92fb3359f1c6d63d9ca1dee0f265a8aee1
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 0991ab88cb37ab2f4decb67194ae78ed62d2c13d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844534"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251078"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>選項 (SQL Server 物件總管 - 指令碼頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,14 +26,14 @@ ms.locfileid: "73844534"
   
 -   使用者資料表與檢視的 [編輯]  命令。  
   
--   使用者建立之物件的 編寫 <object>  。  
+-   使用者建立之物件的 編寫 **<object>** 。  
   
 -   使用者建立之物件的 [修改]  命令。  
   
 -   此頁面也可設定 [產生 SQL Server 指令碼精靈]  的編寫指令碼選項預設值。  
   
-## <a name="remarks"></a>Remarks  
-即使選項設定相同，編輯  與 修改  命令所產生的結果，可能會與 編寫 <object>  命令所產生的結果不同。 [編輯]  與 [修改]  命令的設計讓您可以在查詢編輯器工作階段期間，修改目前資料庫中的物件。 [編寫 <object> 指令碼為]  命令的設計則在讓您產生指令碼，供日後建立物件之用。  
+## <a name="remarks"></a>備註  
+即使選項設定相同，編輯  與 修改  命令所產生的結果，可能會與 編寫 **<object>** 命令所產生的結果不同。 [編輯]  與 [修改]  命令的設計讓您可以在查詢編輯器工作階段期間，修改目前資料庫中的物件。 [編寫  **指令碼為] <object>** 命令的設計則在讓您產生指令碼，供日後建立物件之用。  
   
 ## <a name="options"></a>選項。  
 在每個選項右方的清單中選取可用的設定，即可指定指令碼選項。

@@ -9,10 +9,10 @@ ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8cdadc94bea1f3e303c89653cb9272cac244aeba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580364"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>隱藏第一頁或最後一頁的頁首或頁尾 (報表產生器及 SSRS)

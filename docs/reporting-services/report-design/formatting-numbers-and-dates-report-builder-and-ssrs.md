@@ -18,10 +18,10 @@ ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2802da2b5b227f3cdb4e4ea3bfa59ca15f5d8d2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576083"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>格式化數字和日期 (報表產生器及 SSRS)
@@ -50,7 +50,7 @@ ms.locfileid: "65576083"
   
 -   如果您指定無效的格式字串，格式化的文字會解譯為覆寫格式的常值字串。  
   
--   如果您要在相同的文字方塊中格式化數字和字串的混合時，請考慮使用預留位置來分別格式化數字與其餘文字。 如需詳細資訊，請參閱 [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)。 如果在文字方塊上針對 Format 屬性指定的格式字串無效，則會略過該格式字串。 如果在圖表或量測計上針對 Format 屬性指定的格式字串無效，您所指定的格式字串會解譯為字串，而且不會套用該格式。  
+-   如果您要在相同的文字方塊中格式化數字和字串的混合時，請考慮使用預留位置來分別格式化數字與其餘文字。 如需詳細資訊，請參閱 [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)(建立發票和表單的清單)。 如果在文字方塊上針對 Format 屬性指定的格式字串無效，則會略過該格式字串。 如果在圖表或量測計上針對 Format 屬性指定的格式字串無效，您所指定的格式字串會解譯為字串，而且不會套用該格式。  
   
 -   如果您選取 **[類別目錄]** 底下的 **[貨幣]** ，並核取 **[值的顯示單位]** ，您可以選取 **[千]** 、 **[百萬]** 或 **[十億]** 來使用財務格式顯示數值。 例如，如果欄位值為 1,789,905,394，而且您選取 **[十億]** 並指定 2 位小數位數，顯示在報表中的值為 1.78。  
   

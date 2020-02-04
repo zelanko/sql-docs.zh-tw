@@ -14,10 +14,10 @@ ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 00bf03cedffd985726eb10e1c048132c415b241e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570553"
 ---
 # <a name="secure-folders"></a>保護資料夾的安全

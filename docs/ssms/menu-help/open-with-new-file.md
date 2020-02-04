@@ -1,6 +1,6 @@
 ---
-title: 開啟方式 (新增檔案) | Microsoft Docs
-ms.custom: ''
+title: 開啟方式 (新增檔案)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0dc393db0da76d48c3d64a04a0ba57cda580ad8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9238bced3c9e0afe81a6eaaf7c9747c27ab4b3a9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252049"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245777"
 ---
 # <a name="open-with-new-file"></a>開啟方式 (新增檔案)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,14 +30,14 @@ ms.locfileid: "68252049"
 **開啟**  
 按一下 [開啟]  即可在選取的編輯器中開啟文件。  
   
-**[加入]**  
+**加入**  
 按一下此按鈕即可將程式新增至 [選取要開啟的程式]  清單中。 您可以在 [程式名稱]  欄位中鍵入檔案路徑，或按一下 [瀏覽]  瀏覽至程式的位置。 在 [易記名稱]  中輸入要顯示在 [選取要開啟的程式]  清單中的程式名稱。  
   
 **移除**  
 若要移除程式，請選取程式然後按一下 [移除]  。  
   
 **設定為預設值**  
-若要指定所選之檔案類型的預設編輯器 (如果適用的話，還有其語言編碼選項)，請從 [選取要開啟的程式]  清單中選擇程式，然後按一下 [設定為預設值]  。 下次您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 開啟此檔案類型時，就會在新的預設編輯器中開啟文件。  
+若要指定所選之檔案類型的預設編輯器 (如果適用的話，還有其語言編碼選項)，請從 [選取要開啟的程式]  清單中選擇程式，然後按一下 [設定為預設值]  。 下次您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]開啟此檔案類型時，就會在新的預設編輯器中開啟文件。  
   
 > [!NOTE]  
 > 在 [選取要開啟的程式]  的程式清單中，所選之檔案類型的預設編輯器名稱後面會接著 [(預設)]  。  

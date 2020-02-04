@@ -9,10 +9,10 @@ ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8ec929d77b9805e3285b5d5a75940231b09cbd8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576350"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>頁面配置和轉譯 (報表產生器及 SSRS)

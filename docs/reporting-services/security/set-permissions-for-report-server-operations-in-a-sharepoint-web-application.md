@@ -16,10 +16,10 @@ ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ce5ddca1cb39d7d4f375232e3588900b5b1ebe6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570601"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>在 SharePoint Web 應用程式中設定報表伺服器作業的權限
@@ -54,7 +54,7 @@ ms.locfileid: "65570601"
 ##  <a name="permissionReports"></a> 檢視和管理報表的權限  
  報表定義權限是透過包含報表的文件庫上的「清單」權限定義，不過，如果您要限制存取，可以在個別報表上設定權限。 下表提供工作以及支援各項工作之權限的清單。  
   
-|工作|權限|  
+|Task|權限|  
 |----------|----------------|  
 |檢視報表。|「檢視項目」  ，針對包含檔案的文件庫或個別的報表。|  
 |檢視使用報表模型做為資料來源的點選連結報表。|「檢視項目」  ，針對包含報表和報表模型的文件庫，或個別的報表和模型。 如果您沒有檢視模型的權限，您仍可開啟報表，但是無法在資料上進行特定瀏覽。<br /><br /> 如果報表模型使用模型項目安全性，使用者也必須擁有報表模型的「列舉權限」  權限。|  
@@ -77,7 +77,7 @@ ms.locfileid: "65570601"
   
  下表提供建立報表和使用報表產生器的工作清單，以及支援各項工作的權限：  
   
-|工作|權限|  
+|Task|權限|  
 |----------|----------------|  
 |啟動報表產生器。|沒有明確用來控制使用報表產生器的權限。 如果已設定報表伺服器整合，而且您具備將項目加入文件庫的權限，則可以使用報表產生器。 若要從文件庫中的 **[新增]** 功能表啟動報表產生器，則必須註冊報表產生器內容類型。 如需詳細資訊，請參閱 [將 Reporting Services 內容類型加入至 SharePoint 文件庫](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。|  
 |上傳模型或共用資料來源。|「加入項目」  ，針對包含檔案的文件庫。|  
@@ -95,7 +95,7 @@ ms.locfileid: "65570601"
   
  下表提供建立、管理和使用共用排程的工作和權限清單：  
   
-|工作|權限|  
+|Task|權限|  
 |----------|----------------|  
 |建立、編輯或刪除共用排程。|「管理網站」  ，針對網站。|  
 |選取訂閱處理或資料擷取的共用排程。|「開啟」  ，針對包含文件庫的網站。|  
@@ -105,7 +105,7 @@ ms.locfileid: "65570601"
   
  下表提供建立、管理和使用訂閱的工作和權限清單：  
   
-|工作|權限|  
+|Task|權限|  
 |----------|----------------|  
 |建立、編輯或刪除使用者擁有的特定報表訂閱。|程式庫 (包含該報表或位於該報表) 上的 [編輯項目]  。 「檢視項目」是相依權限，並且將會自動包含在權限等級中。 能夠建立訂閱的使用者，同樣能夠建立執行該訂閱的自訂排程。|  
 |選取搭配訂閱使用的共用排程。|「開啟」  ，針對包含文件庫的網站。|  

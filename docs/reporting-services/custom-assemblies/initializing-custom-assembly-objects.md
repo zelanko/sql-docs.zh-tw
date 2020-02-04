@@ -13,10 +13,10 @@ ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8bef8bcf36629b0cb31afef31f4d9a199313f015
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193951"
 ---
 # <a name="initializing-custom-assembly-objects"></a>初始化自訂組件物件

@@ -9,10 +9,10 @@ ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6ad5600def990457834d858b61ba3bad4a241158
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570748"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>在資料區中排序資料 (報表產生器及 SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "65570748"
   
 3.  針對每個排序運算式，請依照下列步驟執行：  
   
-    1.  按一下 **[加入]** 。  
+    1.  按一下 [新增]  。  
   
     2.  輸入或選取排序資料所依據的運算式。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65570748"
   
 4.  針對每個排序運算式，請依照下列步驟執行：  
   
-    1.  按一下 **[加入]** 。  
+    1.  按一下 [新增]  。  
   
     2.  輸入或選取排序資料所依據的運算式。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "65570748"
   
 3.  針對每個排序運算式，請依照下列步驟執行：  
   
-    1.  按一下 **[加入]** 。  
+    1.  按一下 [新增]  。  
   
     2.  選取符合您群組欄位的運算式。 您可以按一下 **[群組]** 來驗證群組欄位的運算式。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "65570748"
   
 3.  針對每個排序運算式，請依照下列步驟執行：  
   
-    1.  按一下 **[加入]** 。  
+    1.  按一下 [新增]  。  
   
     2.  選取符合您資料欄位的運算式。 在大部分的情況下，這是彙總值，例如 `=Sum(Fields!Quantity.Value)`。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "65570748"
   
 7.  針對每個排序運算式，請依照下列步驟執行：  
   
-    1.  按一下 **[加入]** 。  
+    1.  按一下 [新增]  。  
   
     2.  選取符合您群組欄位的運算式。 您可以按一下 **[群組]** 來驗證群組欄位的運算式。  
   
