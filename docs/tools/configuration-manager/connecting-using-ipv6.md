@@ -1,6 +1,6 @@
 ---
-title: 使用 IPv6 連接 |Microsoft Docs
-ms.custom: ''
+title: 使用 IPv6 連接
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ ms.assetid: 2669098c-f5f1-43da-aec6-e91003ac89f6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 52a2fff098698c945cde23fac13eec7ad78b63c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: e49366559b1e9af122b712aa2f2658f4814a75f7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010187"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306479"
 ---
 # <a name="connecting-using-ipv6"></a>使用 IPv6 連接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

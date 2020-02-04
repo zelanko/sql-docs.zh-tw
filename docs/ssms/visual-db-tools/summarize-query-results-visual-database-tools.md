@@ -1,10 +1,9 @@
 ---
-title: 摘要查詢結果 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 摘要查詢結果
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: c9e15350-ed57-4d95-814d-815fbebfd86b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c87d6eae1096d2c59e90895d4de5e44ac18843a4
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: c8903c23179d2743b39afd88d8f23c26e6da2790
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263167"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254854"
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>摘要查詢結果 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

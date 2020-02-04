@@ -11,10 +11,10 @@ ms.assetid: 5864b1d8-6814-41cd-a88d-415124484c13
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9846867cfc6bd50568440c5c66711457754af50c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993279"
 ---
 # <a name="pdoerrorcode"></a>PDO::errorCode
@@ -32,7 +32,7 @@ mixed PDO::errorCode();
 ## <a name="return-value"></a>傳回值  
 PDO::errorCode 會以字串形式傳回五字元的 SQLSTATE；如果沒有資料庫控制代碼的作業，則傳回 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 PDO_SQLSRV 驅動程式中的 PDO::errorCode 會針對某些成功的作業傳回警告。 例如，在成功連線之後，PDO::errorCode 會傳回 "01000"，指出 SQL_SUCCESS_WITH_INFO。  
   
 PDO::errorCode 只會針對直接在資料庫連接上執行作業擷取錯誤碼。 如果您透過 PDO::prepare 或 PDO::query 建立 PDOStatement 執行個體，而陳述式物件產生錯誤，PDO::errorCode 不會擷取該錯誤。 您必須呼叫 PDOStatement::errorCode，才能傳回在特定陳述式物件上執行之作業的錯誤碼。  

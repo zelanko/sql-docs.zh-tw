@@ -1,6 +1,6 @@
 ---
-title: 完成 Transact-SQL 程式碼片段 | Microsoft Docs
-ms.custom: ''
+title: 完成 Transact-SQL 程式碼片段
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29dd60e3cbd1591920a042a5e5d5d83ed1151a53
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2109b236bc13e8335e619ed90b8ee9a33ca08844
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256500"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253997"
 ---
 # <a name="complete-transact-sql-snippets"></a>完成 Transact-SQL 程式碼片段
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

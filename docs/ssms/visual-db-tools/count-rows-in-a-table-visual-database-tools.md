@@ -1,10 +1,9 @@
 ---
-title: 計算資料表中的資料列 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 計算資料表中的資料列
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,14 @@ helpviewer_keywords:
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 21f0b7becfae6c2656fd9a5f416decd32787e165
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 208705b0070ba60359f6fa0b6d543cdcf6ec55d3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266975"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254377"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>計算資料表中的資料列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

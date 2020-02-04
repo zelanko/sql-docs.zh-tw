@@ -1,6 +1,6 @@
 ---
-title: 方案 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 方案 (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 767023f1aa97ae1412bffe1298a20d52f570ded7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f3b747d771968ec78ebd58c5d9e6901a1a56e989
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259378"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242820"
 ---
 # <a name="solutions-sql-server-management-studio"></a>方案 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

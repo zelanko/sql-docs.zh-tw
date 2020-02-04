@@ -12,10 +12,10 @@ ms.assetid: 1145ac63-eafd-452a-82af-16f85b1676dd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 05196a42af159e06a2b740c5671b2892d8362453
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193617"
 ---
 # <a name="using-the-report-class-for-a-delivery-extension"></a>使用傳遞延伸模組的報表類別

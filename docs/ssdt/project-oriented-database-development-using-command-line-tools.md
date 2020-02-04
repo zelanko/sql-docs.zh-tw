@@ -1,23 +1,24 @@
 ---
-title: 使用命令列工具進行專案導向的資料庫開發 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 04/26/2017
+title: 使用命令列工具進行專案導向的資料庫開發
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9a26def9-8fbd-43e4-9e57-414840b73ed8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4df947eec003f171fd962299ad116972bd798151
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 04/26/2017
+ms.openlocfilehash: 321c0988603f7c31460d1c95791d57e5945c2b07
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110816"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243753"
 ---
 # <a name="project-oriented-database-development-using-command-line-tools"></a>使用命令列工具進行專案導向的資料庫開發
+
 SQL Server Data Tools 提供命令列工具以讓您應用於一些專案導向的資料庫開發案例。  
   
 ## <a name="in-this-section"></a>本節內容  

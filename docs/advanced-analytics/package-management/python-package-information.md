@@ -10,10 +10,10 @@ author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1aa12da4a138ea8f292fa8b64db00456d3c35fe3
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70000442"
 ---
 # <a name="get-python-package-information"></a>取得 Python 套件資訊
@@ -57,7 +57,7 @@ EXECUTE sp_execute_external_script
 
 以下是您在安裝期間選取 Python 功能時，與 SQL Server 機器學習服務一起安裝的 Python 套件。
 
-| Packages | 版本 |  Description |
+| Packages | 版本 |  描述 |
 | ---------|---------|--------------|
 | [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2 | 用於遠端計算內容、串流、平行執行 rx 函式以進行資料匯入與轉換、模型化、視覺化，以及分析。 |
 | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2 | 在 Python 中新增機器學習演算法。 |

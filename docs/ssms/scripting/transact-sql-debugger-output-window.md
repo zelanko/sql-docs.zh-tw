@@ -11,21 +11,21 @@ ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 03/14/2017
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2688432d81793cf4b4388283910e35811650ef0c
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 4d446b3b7af6ce4606d656a6a1232016dbb90ea5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119262"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253030"
 ---
 # <a name="transact-sql-debugger---output-window"></a>Transact-SQL 偵錯工具 - 輸出視窗
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-此視窗會顯示 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中各種功能的狀態訊息。 輸出會從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具、外部工具功能或是偵錯工具 [命令視窗]  內執行的命令傳遞給 [輸出]  視窗內的特殊窗格。 通常從外部工具 (如 .bat 或 .com 檔案) 顯示在 [命令提示字元] 視窗內的輸出也可以使用。
+此視窗會顯示 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中各種功能的狀態訊息。 輸出會從  **偵錯工具、外部工具功能或是偵錯工具 [命令視窗]** [!INCLUDE[tsql](../../includes/tsql-md.md)] 內執行的命令傳遞給 [輸出]  視窗內的特殊窗格。 通常從外部工具 (如 .bat 或 .com 檔案) 顯示在 [命令提示字元] 視窗內的輸出也可以使用。
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   

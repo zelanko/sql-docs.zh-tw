@@ -1,10 +1,9 @@
 ---
-title: 建立插入結果查詢 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 建立插入結果查詢
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 850d64df71644c5010cfda9a2c2624ab4bfd49cf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: bf6436ae1ec235c2fb750df5ed57e640326c56aa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264956"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254324"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>建立插入結果查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,9 +95,9 @@ WHERE (pub_id = '0766')
   
 8.  若要複製摘要資訊，請指定 [群組依據] 選項。 如需詳細資訊，請參閱[摘要查詢結果 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)。  
   
-在執行插入結果查詢時，[結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中不會報告結果， 而是出現訊息指出已經複製了多少資料列。  
+在執行插入結果查詢時， [結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中不會報告結果， 而是出現訊息指出已經複製了多少資料列。  
   
 ## <a name="see-also"></a>另請參閱  
-[查詢類型 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[查詢的類型 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
 [設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: 插入 Transact-SQL 程式碼片段 | Microsoft Docs
-ms.custom: ''
+title: 插入 Transact-SQL 程式碼片段
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c68bb779aba8013f0e9b81eb46ed7a325bd7cd2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 060dd1f05e55bf1de064e5497664077cac9f2903
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265477"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253834"
 ---
 # <a name="insert-transact-sql-snippets"></a>插入 Transact-SQL 程式碼片段
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

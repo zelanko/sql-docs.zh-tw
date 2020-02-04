@@ -1,23 +1,24 @@
 ---
-title: 如何：將測試條件新增至 SQL Server 單元測試 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 將測試條件新增至 SQL Server 單元測試
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: afc0e433a7d39dffa2e4d31d03292d2aee07a4a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 4216358a4b8b541ed724b70fe68245a16235664b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899180"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241632"
 ---
-# <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>如何：將測試條件新增至 SQL Server 單元測試
+# <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>HOW TO：將測試條件加入至 SQL Server 單元測試
+
 您可以使用 [SQL Server 單元測試設計工具]  ，將測試條件加入至 SQL Server 單元測試。 當您儲存測試類別時，測試條件會以 Visual C\# 或 Visual Basic 程式碼的形式，自動儲存在測試專案的原始程式碼檔案中 (包含測試類別)。 在您儲存測試條件之後，就可以在 [SQL Server 單元測試設計工具]  或其原始程式碼檔案中進行編輯。  
   
 ### <a name="to-add-test-conditions-to-a-sql-server-unit-test"></a>如何將測試條件加入至 SQL Server 單元測試  
@@ -48,10 +49,10 @@ ms.locfileid: "67899180"
   
 ## <a name="see-also"></a>另請參閱  
 [建立和定義 SQL Server 單元測試](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[操作說明：建立空白 SQL Server 單元測試](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
-[操作說明：建立針對函式、觸發程序和預存程序建立 SQL Server 單元測試](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
+[如何：建立空白 SQL Server 單元測試](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
+[如何：建立函式、觸發程序和預存程序的 SQL Server 單元測試](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
 [在 SQL Server 單元測試中使用測試條件](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [SQL Server 單元測試中的指令碼](../ssdt/scripts-in-sql-server-unit-tests.md)  
 [解譯 SQL Server 單元測試結果](../ssdt/interpreting-sql-server-unit-test-results.md)  
-[操作說明：執行 SQL Server 單元測試](../ssdt/how-to-run-sql-server-unit-tests.md)  
+[如何：執行 SQL Server 單元測試](../ssdt/how-to-run-sql-server-unit-tests.md)  
   

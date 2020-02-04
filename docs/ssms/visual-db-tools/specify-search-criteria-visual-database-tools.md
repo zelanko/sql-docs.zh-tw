@@ -1,10 +1,9 @@
 ---
-title: 指定搜尋準則 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 指定搜尋準則
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,14 @@ helpviewer_keywords:
 ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f3cef20ba9e4d841e74a8deaed47fab2f8b6b193
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: d8a27a6e7fa531f8fe95cfcc7cdd6d98043ab9d6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263542"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254937"
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>指定搜尋準則 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,10 +77,10 @@ ms.locfileid: "68263542"
 說明如何建立子查詢或巢狀查詢。  
   
 ## <a name="related-sections"></a>相關章節  
-[執行查詢的基本作業 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[使用查詢執行基本作業 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 提供最常見查詢工作之主題及步驟的連結。  
   
-[查詢類型 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[查詢的類型 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
 提供可說明所支援查詢類型之主題的連結。  
   
 [排序及分組查詢結果 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  

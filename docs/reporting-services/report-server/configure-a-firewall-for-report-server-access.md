@@ -12,10 +12,10 @@ ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bbcd96e24d0819cc8403a669c7333bb92d396e05
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593742"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configure a Firewall for Report Server Access
@@ -38,7 +38,7 @@ ms.locfileid: "73593742"
   
 1.  在 **[開始]** 功能表中，按一下 **[控制台]** 、按一下 **[系統及安全性]** ，然後按一下 **[Windows 防火牆]** 。 如果 [控制台] 沒有設定為「類別目錄」檢視，您只需要選取 **[Windows 防火牆]** 。  
   
-2.  按一下 **[進階設定]** 。  
+2.  按一下 [進階設定]  。  
   
 3.  按一下 **[輸入規則]** 。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "73593742"
   
 14. 在 [名稱]  頁面上，輸入名稱：**ReportServer (TCP 在連接埠 80 上)**  
   
-15. 按一下 **[完成]** 。  
+15. 按一下 [完成]  。  
   
 16. 重新啟動電腦。  
   

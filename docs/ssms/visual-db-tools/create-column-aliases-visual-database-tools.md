@@ -1,10 +1,9 @@
 ---
-title: 建立資料行別名 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 建立資料行別名
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: e2e1c166-8ea7-47a2-b6a7-e419bf0fa3bb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f63788f06e8d7fa921c06186b691a603a49059b6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: ecf5cbcac382bc088c5a04595d554e4d8ea124ba
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264936"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254365"
 ---
 # <a name="create-column-aliases-visual-database-tools"></a>建立資料行別名 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

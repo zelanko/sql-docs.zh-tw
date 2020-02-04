@@ -11,10 +11,10 @@ ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bf9345d7f707c1cebc086b9c3ff8a1d69997854c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576789"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>將新的或現有的報表加入報表專案 (SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "65576789"
   
 1.  在方案總管中，以滑鼠右鍵按一下 [報表] 資料夾，然後按一下 [新增新的報表]  。 [報表精靈]  對話方塊隨即開啟。  
   
-     這個精靈會逐步引導您建立資料來源、建立含有查詢的資料集、定義群組、指定配置以及建立報表。 這些步驟包含：  
+     這個精靈會逐步引導您建立資料來源、建立含有查詢的資料集、定義群組、指定配置以及建立報表。 步驟包括：  
   
     -   **選取資料來源。** 建立報表的第一個步驟是定義資料來源。 [報表精靈] 提供報表專案中所有共用資料來源的清單，也提供建立新資料來源的選項。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "65576789"
   
 2.  在 [範本]  中，按一下 [報表]  。  
   
-3.  按一下 **[加入]** 。  
+3.  按一下 [新增]  。  
   
      新的空白報表就會加入至專案並且顯示在設計介面上。  
   

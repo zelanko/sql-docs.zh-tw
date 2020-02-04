@@ -14,10 +14,10 @@ ms.assetid: 1912ad05-d0a4-40ff-8888-0d85bb36a807
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5edf63a654b21d080e48f93c71553b8909ce8fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993565"
 ---
 # <a name="how-to-disable-multiple-active-resultsets-mars"></a>如何：停用 Multiple Active Resultsets (MARS)。

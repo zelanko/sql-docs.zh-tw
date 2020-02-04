@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: fcdb92f92ffb8239a6cf20b0f39dfb8f546b521a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727686"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的擴充性結構 
@@ -56,7 +56,7 @@ SQL Server 有執行外部指令碼 (例如 R 或 Python) 的擴充性架構。 
   
 元件包含**啟動控制板**服務，用來叫用外部執行階段和程式庫特定邏輯，以載入解譯器和程式庫。 啟動器會載入語言執行階段，以及任何專屬模組。 例如，如果您的程式碼包含 RevoScaleR 函式，就會載入 RevoScaleR 解譯器。 **BxlServer** 和 **SQL Satellite** 管理對 SQL Server 的通訊和資料傳輸。 
 
-在 Linux 中，SQL 會使用**啟動控制板**服務，與每個使用者的不同啟動控制板程序通訊。
+在 Linux 中，SQL 會使用**啟動控制板**服務來與每個使用者的不同啟動控制板程序通訊。
 
 <a name="launchpad"></a>
 
@@ -64,7 +64,7 @@ SQL Server 有執行外部指令碼 (例如 R 或 Python) 的擴充性架構。 
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 是新服務，可管理和執行外部指令碼，就如同全文索引及查詢服務啟動個別的主機來處理全文查詢。 啟動控制板服務只會啟動由 Microsoft 發行之信任的啟動器，或是經 Microsoft 認證符合效能和資源管理要求的啟動器。
 
-| 信任的啟動器 | 延伸模組 | SQL Server 版本 |
+| 信任的啟動器 | 分機 | SQL Server 版本 |
 |-------------------|-----------|---------------------|
 | Windows 版 R 語言的 RLauncher.dll | [R 延伸模組](extension-r.md) | SQL Server 2016 及更新版本 |
 | Windows 版 Python 3.5 的 Pythonlauncher.dll | [Python 延伸模組](extension-python.md) | SQL Server 2017 和更新版本 |

@@ -1,21 +1,23 @@
 ---
-title: 加入資料庫參考對話方塊 | Microsoft Docs
+title: 加入資料庫參考對話方塊
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ''
-ms.custom: SSDT
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e8ff16ab27f47cd283c81606a4db9b580db523d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a43b16b3c45a0f98ca22a4d1e0d3e291cf92f95d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984694"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256137"
 ---
 # <a name="add-database-reference-dialog-box"></a>加入資料庫參考對話方塊
+
 本主題描述可以在 [加入資料庫參考]  對話方塊中執行的程序。  
   
 資料庫參考可讓您：  
@@ -28,7 +30,8 @@ ms.locfileid: "67984694"
   
 您可以對目前方案中的資料庫專案進行資料庫參考，也可以對 DACPAC 進行資料庫參考。 在專案中新增資料庫參考會變更專案相依性和建置順序。  
   
-## <a name="selecting-the-database-to-reference"></a>選取要參考的資料庫  
+## <a name="selecting-the-database-to-reference"></a>選取要參考的資料庫
+
 您可以參考相同方案中的另一個資料庫專案、系統資料庫或 DACPAC。  
   
 如果方案中有一個以上的資料庫專案，就會啟用 [目前方案中的資料庫專案]  。 您可以參考方案中的另一個資料庫。  
@@ -37,7 +40,8 @@ ms.locfileid: "67984694"
   
 請選取 [資料層應用程式 (.dacpac)]  以參考 DACPAC 中的資料庫，並瀏覽至含有 DACPAC 檔案的目錄。  
   
-## <a name="selecting-the-databases-relative-location"></a>選取資料庫的相對位置  
+## <a name="selecting-the-databases-relative-location"></a>選取資料庫的相對位置
+
 選取要參考的資料庫之後，您可以指定需要的資料庫物件位置 (相對於參考的專案)。  
   
 您可以使用下面其中一個位置來解析物件的參考：  
@@ -59,7 +63,8 @@ ms.locfileid: "67984694"
 > [!IMPORTANT]  
 > 在某些情況下，您可以建立與現有資料庫參考擁有相同名稱的資料庫參考。 兩個同名的資料庫參考可能會造成非預期的行為。 在這個情況下，請刪除這兩個資料庫參考。  
   
-## <a name="common-procedures"></a>常用程序  
+## <a name="common-procedures"></a>常用程序
+
 下列是常用程序：  
   
 ### <a name="to-create-a-reference-to-a-database-on-the-same-server"></a>在相同伺服器上建立資料庫的參考  
@@ -112,6 +117,6 @@ ms.locfileid: "67984694"
   
 3.  在 [進階發行設定]  對話方塊中，確認已核取 [進階部署選項]  清單中的 [包含複合物件]  。  
   
-## <a name="see-also"></a>另請參閱  
-[專案導向的離線資料庫開發](../ssdt/project-oriented-offline-database-development.md)  
-  
+## <a name="see-also"></a>另請參閱
+
+[專案導向的離線資料庫開發](../ssdt/project-oriented-offline-database-development.md)

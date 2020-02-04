@@ -9,10 +9,10 @@ ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 00f139a6b7b334e3a3e8254a742874cfc28145b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651254"
 ---
 # <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
@@ -20,7 +20,7 @@ ms.locfileid: "62651254"
   
 ### <a name="to-build-and-run-the-application"></a>若要建置並執行應用程式  
   
-1.  按 **CTRL+F5** 執行 Default.aspx 頁面，但不進行偵錯，或按 F5 執行頁面並進行偵錯。  
+1.  按下 **CTRL+F5** 執行 Default.aspx 頁面，但不偵錯；或按 F5 執行頁面並偵錯。  
   
     在建置過程中，報表會進行編譯，而找到的任何錯誤 (例如報表中所使用運算式的語法錯誤) 都會加入至位於 Visual Studio 視窗底部的 **[工作清單]** 。  
   

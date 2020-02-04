@@ -1,6 +1,6 @@
 ---
-title: 管理程式碼格式設定 | Microsoft Docs
-ms.custom: ''
+title: 管理程式碼格式設定
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -26,12 +26,12 @@ ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c971543a87645c1c4a25d181fa7cef478eef0f6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 741fce0949ce1a07f0f164c7f131579c220d4cfc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265409"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253812"
 ---
 # <a name="manage-code-formatting"></a>管理程式碼格式設定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "68265409"
   
     -   **None**： 游標會移至下一行的開頭。  
   
-    -   [區塊]  。 游標會對齊上下行。  
+    -   **封鎖**。 游標會對齊上下行。  
   
     -   [智慧型]  \(預設)。 語言服務會決定要使用的適當縮排樣式。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "68265409"
 3.  若要將文字轉換成小寫，請按 CTRL+SHIFT+L，或按一下 [編輯]  功能表 [進階]  子功能表中的 [設成小寫]  。  
   
 > [!NOTE]  
->  如需完整的鍵盤快速鍵清單，請參閱[SQL Server Management Studio 鍵盤快速鍵](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)。  
+>  如需完整的鍵盤快速鍵清單，請參閱 [SQL Server Management Studio 鍵盤快速鍵](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)。  
   
 ## <a name="displaying-and-linking-to-urls"></a>顯示和連結到 URL  
  您可以在程式碼中，建立和顯示可點按的 URL。 依預設，這些 URL：  

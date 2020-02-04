@@ -15,10 +15,10 @@ ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 13c3415a59205e02c70773f73b2696f4e079f119
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593855"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>加入和移除向外延展部署的加密金鑰

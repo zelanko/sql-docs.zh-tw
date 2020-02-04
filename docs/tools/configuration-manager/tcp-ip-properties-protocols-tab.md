@@ -1,6 +1,6 @@
 ---
-title: TCP/IP 屬性 (通訊協定索引標籤) |Microsoft Docs
-ms.custom: ''
+title: TCP/IP 屬性 (通訊協定索引標籤)
+ms.custom: seo-lt-2019
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ef748c0b53ecd4812816bfc021567e91fbc10c52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 32054dfc368a358370abe4b3a5213305fe815afb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023787"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307579"
 ---
 # <a name="tcpip-properties-protocols-tab"></a>TCP/IP 屬性 (通訊協定索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,6 +40,6 @@ ms.locfileid: "68023787"
   
 ## <a name="see-also"></a>另請參閱  
  [選擇網路通訊協定](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
- [Creating a Valid Connection String Using TCP IP](creating-a-valid-connection-string-using-tcp-ip.md)  
+ [使用 TCP IP 建立有效的連接字串](creating-a-valid-connection-string-using-tcp-ip.md)  
   
   

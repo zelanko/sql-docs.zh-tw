@@ -1,6 +1,6 @@
 ---
-title: 搜尋和取代 | Microsoft Docs
-ms.custom: ''
+title: 搜尋和取代
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -28,16 +28,16 @@ ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e9fffe0c3d3e7cd27de3aa208600340221d0406
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7fc7b5c7cb0fbd560dc2826af24029d2c7961d95
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264196"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253695"
 ---
 # <a name="search-and-replace"></a>搜尋和取代
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  您可以利用多種不同的方式來尋找和取代文字。 在 [編輯]  功能表上，[尋找和取代]  提供四個選擇：[快速尋找]  、[快速取代]  、[在檔案中尋找]  或 [在檔案中取代]  。 這些選項會開啟各個版本的 **[尋找和取代]** 對話方塊。 您也可以不用對話方塊，而利用累加搜尋鍵盤快速鍵來搜尋。 這些技術可讓您控制尋找和取代的範圍，以及選擇檢閱搜尋相符項目和取代項目的方法。  
+  您可以利用多種不同的方式來尋找和取代文字。 在 **[編輯]** 功能表上， **[尋找和取代]** 提供了四個選項： **[快速尋找]** 、 **[快速取代]** 、 **[檔案中尋找]** 和 **[檔案中取代]** 。 這些選項會開啟各個版本的 **[尋找和取代]** 對話方塊。 您也可以不用對話方塊，而利用累加搜尋鍵盤快速鍵來搜尋。 這些技術可讓您控制尋找和取代的範圍，以及選擇檢閱搜尋相符項目和取代項目的方法。  
   
  當您搜尋和取代文字時，您應該考慮下列各點：  
   

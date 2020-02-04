@@ -1,33 +1,32 @@
 ---
-title: 修改篩選 (SQL Server Profiler) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 修改篩選
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- filters [SQL Server], modifying
-- modifying filters, modifying
-- filters [SQL Server], traces
 ms.assetid: 8b317813-4918-4485-b930-77b1951aa00c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee101f13c7856b2701a02d1446a0ad8e5a4e2d24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 4953da977f5172b8e861069616ff96e792dac8ff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074903"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307180"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>修改篩選 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  您可以將篩選加入包含追蹤定義的追蹤範本，以限制追蹤所蒐集的事件數目。 限制蒐集的事件數目可以降低追蹤的效能影響。 如果您設定追蹤範本的篩選，但發現追蹤並未蒐集您所需要的資訊種類，您就可以編輯篩選。  
+
+您可以將篩選加入包含追蹤定義的追蹤範本，以限制追蹤所蒐集的事件數目。 限制蒐集的事件數目可以降低追蹤的效能影響。 如果您設定追蹤範本的篩選，但發現追蹤並未蒐集您所需要的資訊種類，您就可以編輯篩選。  
   
 ### <a name="to-modify-a-filter"></a>若要修改篩選  
   
-1.  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中，開啟您要修改的追蹤篩選範本。 在 [檔案]  功能表上，按一下 [範本]  ，然後選擇 [編輯範本]  。  
+1.  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，開啟您要修改的追蹤篩選範本。 在 [檔案]  功能表上，按一下 [範本]  ，然後選擇 [編輯範本]  。  
   
 2.  在 [追蹤範本屬性]  對話方塊的 [一般]  索引標籤中，從 [選取範本名稱]  清單中選取範本。  
   

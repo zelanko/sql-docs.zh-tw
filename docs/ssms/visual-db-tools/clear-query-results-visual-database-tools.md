@@ -1,10 +1,9 @@
 ---
-title: 清除查詢結果 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 清除查詢結果
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 291bfbebcca9006b393fc5b50a746be14e21b283
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: e43a4142c970c1e096478a65bf7753db7ea54a36
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262577"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255488"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>清除查詢結果 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

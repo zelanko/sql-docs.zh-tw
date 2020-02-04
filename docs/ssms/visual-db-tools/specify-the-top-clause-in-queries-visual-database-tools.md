@@ -1,10 +1,9 @@
 ---
-title: 在查詢中指定 TOP 子句 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 在查詢中指定 TOP 子句
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,14 @@ helpviewer_keywords:
 ms.assetid: ba7d7c10-9bb3-4d9b-90b0-5fa94ecae59b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3ad88b041167c8940a2243b5ce2dc32c1a58c7f2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7995bd9ac78595200f6ded5e23c0f0b40cf3ff66
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263526"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254926"
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>在查詢中指定 TOP 子句 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

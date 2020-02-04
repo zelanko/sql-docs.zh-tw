@@ -1,6 +1,6 @@
 ---
-title: 開啟編輯器 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 開啟編輯器 (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -10,12 +10,12 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31c2a9419105f1ee8435b3c1b7e0d7dc7728e0d8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 478f48cbea6bccb1cb66838a34d12689a94cf05a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267022"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253784"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>開啟編輯器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,9 +67,9 @@ ms.locfileid: "68267022"
 ### <a name="using-object-explorer"></a>使用物件總管  
  從 **[物件總管]** ：  
   
--   以滑鼠右鍵按一下與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的伺服器節點，然後選取 [新增查詢]  。 這樣會開啟與相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的 [[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗，並將此視窗的資料庫內容設定為登入的預設資料庫。  
+-   以滑鼠右鍵按一下與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的伺服器節點，然後選取 [新增查詢]  。 這樣會開啟與相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗，並將此視窗的資料庫內容設定為登入的預設資料庫。  
   
--   以滑鼠右鍵按一下資料庫節點，然後選取 [新增查詢]  。 這樣會開啟與相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的 [[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗，並將此視窗的資料庫內容設定為相同資料庫。  
+-   以滑鼠右鍵按一下資料庫節點，然後選取 [新增查詢]  。 這樣會開啟與相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗，並將此視窗的資料庫內容設定為相同資料庫。  
   
 ### <a name="using-solution-explorer"></a>使用方案總管  
  從方案總管  中，展開一個資料夾，然後以滑鼠右鍵按一下資料夾內的項目，再按一下 [開啟]  或按兩下項目或檔案。  

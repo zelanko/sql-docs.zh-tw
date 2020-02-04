@@ -11,10 +11,10 @@ ms.assetid: f9ebb203-2013-4feb-94f5-494b7f098f9a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 82e005a4e81dd08643613f0c90dafbd9124dd3bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970873"
 ---
 # <a name="sqlserverparametermetadata-members"></a>SQLServerParameterMetaData 成員
@@ -30,16 +30,16 @@ ms.locfileid: "67970873"
   
 ## <a name="inherited-fields"></a>繼承的欄位  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |java.sql.ParameterMetaData|parameterModeIn, parameterModeInOut, parameterModeOut, parameterModeUnknown, parameterNoNulls, parameterNullable, parameterNullableUnknown|  
   
 ## <a name="methods"></a>方法  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
-|[getParameterClassName](../../../connect/jdbc/reference/getparameterclassname-method-sqlserverparametermetadata.md)|擷取 Java 類別的完整名稱，此類別的執行個體應該要傳遞給 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 類別的 [setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) 方法。|  
-|[getParameterCount](../../../connect/jdbc/reference/getparametercount-method-sqlserverparametermetadata.md)|擷取 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 物件中參數的數目，而這個 [SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)物件會包含前述物件的資訊。|  
+|[getParameterClassName](../../../connect/jdbc/reference/getparameterclassname-method-sqlserverparametermetadata.md)|擷取 Java 類別的完整名稱，此類別的執行個體應該要傳遞給 [SQLServerPreparedStatement](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) 類別的 [setObject](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 方法。|  
+|[getParameterCount](../../../connect/jdbc/reference/getparametercount-method-sqlserverparametermetadata.md)|擷取 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 物件中參數的數目，而這個 [SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md) 物件會包含前述物件的資訊。|  
 |[getParameterMode](../../../connect/jdbc/reference/getparametermode-method-sqlserverparametermetadata.md)|擷取指定之參數的模式。|  
 |[getParameterType](../../../connect/jdbc/reference/getparametertype-method-sqlserverparametermetadata.md)|擷取指定之參數的 SQL 型別。|  
 |[getParameterTypeName](../../../connect/jdbc/reference/getparametertypename-method-sqlserverparametermetadata.md)|擷取指定之參數的資料庫特有型別名稱。|  

@@ -1,6 +1,6 @@
 ---
-title: 外部工具的引數 | Microsoft Docs
-ms.custom: ''
+title: 外部工具的引數
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b1f1cff589dfe005011c025b6083821d259f6e9f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 80b7d5e3eec617f82cb49b67a80d928cb3df9328
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267056"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252227"
 ---
 # <a name="arguments-for-external-tools"></a>外部工具的引數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68267056"
   
 下表列出外部工具的引數。  
   
-|[屬性]|引數|Description|  
+|名稱|引數|描述|  
 |--------|------------|---------------|  
 |**項目路徑**|$(ItemPath)|目前來源的完整檔案名稱 (定義為磁碟機 + 路徑 + 檔案名稱)；如果非來源窗格在作用中，便是空白。|  
 |**項目目錄**|$(ItemDir)|目前來源的目錄 (定義為磁碟機 + 路徑)；如果非來源窗格在作用中，便是空白。|  

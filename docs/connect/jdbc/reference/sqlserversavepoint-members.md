@@ -11,10 +11,10 @@ ms.assetid: 3aef1550-3798-4095-bd1c-1a4be09804e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76a07cf83f7b4356443d2180a48870b80dba4c69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970404"
 ---
 # <a name="sqlserversavepoint-members"></a>SQLServerSavepoint 成員
@@ -24,7 +24,7 @@ ms.locfileid: "67970404"
   
 ## <a name="constructors"></a>建構函式  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[SQLServerSavepoint (SQLServerConnection, java.lang.StringName)](../../../connect/jdbc/reference/sqlserversavepoint-constructor-sqlserverconnection-java-lang-stringname.md)|根據指定的連接和名稱，初始化 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 類別的新執行個體。|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67970404"
   
 ## <a name="methods"></a>方法  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getLabel](../../../connect/jdbc/reference/getlabel-method-sqlserversavepoint.md)|取得儲存點標籤的名稱。|  
 |[getSavepointId](../../../connect/jdbc/reference/getsavepointid-method-sqlserversavepoint.md)|取得儲存點的識別碼。|  

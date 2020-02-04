@@ -1,10 +1,9 @@
 ---
-title: 檢查條件約束運算式對話方塊 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 檢查條件約束運算式對話方塊
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,19 +11,21 @@ f1_keywords:
 ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7f1554ee91444462c52dee404d198b35944a7caf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: fcd0eacf11390947248208310eba3ddec40089ce
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263667"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255504"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>檢查條件約束運算式對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 當附加檢查條件約束至資料表或資料行時，必須包含 SQL 運算式。 在提供的方塊中輸入檢查條件約束運算式。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
-運算式  
+運算是  
 輸入運算式  
   
 您可以建立簡單的條件約束運算式以檢查簡單條件的資料，或是可以建立使用布林運算子的複雜運算式，檢查數種條件的資料。 例如，假設 authors 資料表有 zip 資料行，而其中需要 5 位數的字串。 這個簡單的條件約束運算式保證只會允許 5 位數的資料：  
@@ -55,14 +56,14 @@ NOT (payment_method = 'credit card') OR
   
 SQL 語法是由下列參數組成：  
   
-|參數|Description|  
+|參數|描述|  
 |-------------|---------------|  
 |常數|常值，例如數值或字元資料。 字元資料必須使用單引號 (') 括起來。|  
 |column_name|指定資料行。|  
 |函數|內建函數。|  
 |! 運算子之後|算術、位元、比較或字串運算子。|  
-|與|使用於布林運算式中，用於連接兩個運算式。 當兩個運算式都是 true 時傳回結果。<br /><br />當 AND 和 OR 同時在陳述式中使用時，會先處理 AND。 您可以使用括號來變更執行的順序。|  
-|或|使用於布林運算式中，用於連接兩個條件。 當任一條件為 true 時，傳回結果。<br /><br />當 AND 和 OR 同時在陳述式中使用時，OR 是在 AND 之後進行檢驗。 您可以使用括號來變更執行的順序。|  
+|AND|使用於布林運算式中，用於連接兩個運算式。 當兩個運算式都是 true 時傳回結果。<br /><br />當 AND 和 OR 同時在陳述式中使用時，會先處理 AND。 您可以使用括號來變更執行的順序。|  
+|OR|使用於布林運算式中，用於連接兩個條件。 當任一條件為 true 時，傳回結果。<br /><br />當 AND 和 OR 同時在陳述式中使用時，OR 是在 AND 之後進行檢驗。 您可以使用括號來變更執行的順序。|  
 |NOT|否定任何布林運算式 (可以包括關鍵字，例如 LIKE、NULL、BETWEEN、IN 和 EXISTS)。<br /><br />當在陳述式中使用一個以上的邏輯運算子時，會首先處理 NOT。 您可以使用括號來變更執行的順序。|  
   
 ## <a name="see-also"></a>另請參閱  

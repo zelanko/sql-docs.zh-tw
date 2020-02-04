@@ -1,6 +1,6 @@
 ---
-title: 列印程式碼與結果 | Microsoft Docs
-ms.custom: ''
+title: 列印程式碼與結果
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -15,12 +15,12 @@ ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 405e1d686bda5dc8894d21dbc3314b2b4ef51c51
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: af9e8ec48a47caf9f5512c282b86e81ef1bc1dbc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266009"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253718"
 ---
 # <a name="print-code-and-results"></a>列印程式碼與結果
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

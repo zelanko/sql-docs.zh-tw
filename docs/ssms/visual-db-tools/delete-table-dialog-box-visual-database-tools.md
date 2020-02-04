@@ -1,10 +1,9 @@
 ---
-title: 刪除資料表對話方塊 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 刪除資料表對話方塊
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d80d86a001a47eafc0ffeabd0f9e46b993667aad
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 3e8c3e50bc2e68953b36b80a6f3ffa3aba373145
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255147"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251834"
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>刪除資料表對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,5 +31,5 @@ ms.locfileid: "68255147"
 > DELETE 查詢會移除資料表中全部的資料列。 如果您要清除個別資料行中的值，請使用 UPDATE 查詢。 如果您要從資料表定義中刪除資料行或刪除資料表本身，請使用您資料庫的 [資料表設計師] 或資料庫設計工具。  
   
 ## <a name="see-also"></a>另請參閱  
-[從查詢移除資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md)  
+[移除查詢的資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md)  
   

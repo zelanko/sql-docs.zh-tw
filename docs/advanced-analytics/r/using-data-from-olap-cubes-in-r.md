@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2da5cbf0fd3fbc5b8fe1105261fff98625d590e5
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727321"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>在 R 中使用 OLAP Cube 的資料
@@ -66,7 +66,7 @@ MDX (多維度運算式的簡稱) 是用來查詢 Cube 的語言。 MDX 查詢�
 
 + **複製及貼上格式正確的 MDX。** 手動建立再貼上任何 MDX 查詢。 如果您有想要重複使用的現有 MDX 查詢，或您想要建立的查詢太複雜而 **olapR** 無法處理，這是最佳選項。
 
-    使用任何用戶端公用程式 (例如 SSMS 或 Excel) 建置 MDX 之後，請儲存查詢字串。 提供此 MDX 字串作為 **olapR** 套件中 [SSAS 查詢處理常式]  的引數。 提供者會將查詢傳送到指定的 Analysis Services 伺服器，並將結果傳回 R。 
+    使用任何用戶端公用程式 (例如 SSMS 或 Excel) 建置 MDX 之後，請儲存查詢字串。 提供此 MDX 字串作為 *olapR* 套件中 [SSAS 查詢處理常式]  的引數。 提供者會將查詢傳送到指定的 Analysis Services 伺服器，並將結果傳回 R。 
 
 如需如何建立 MDX 查詢或執行現有 MDX 查詢的範例，請參閱 [如何使用 R 建立 MDX 查詢](../../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md)。
 

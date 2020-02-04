@@ -11,10 +11,10 @@ ms.assetid: cf156d65-d933-4235-b89a-18e172d61c15
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5584d645bc506d1399a47852bed481791988623
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993094"
 ---
 # <a name="pdostatementdebugdumpparams"></a>PDOStatement::debugDumpParams
@@ -29,7 +29,7 @@ ms.locfileid: "67993094"
 bool PDOStatement::debugDumpParams();  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="example"></a>範例  

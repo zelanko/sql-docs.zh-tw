@@ -1,6 +1,6 @@
 ---
-title: 將現有專案加入方案中 | Microsoft Docs
-ms.custom: ''
+title: 將現有專案加入方案中
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6929f3b2fb35b5915f771d33c3a17ab98bea7ebf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 6752ecd92795ff2ca6de17f8b3de671e6895482d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252678"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252913"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>將現有專案加入方案中
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

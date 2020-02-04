@@ -1,29 +1,28 @@
 ---
-title: 組織追蹤內顯示的資料行 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 組織追蹤中所顯示的資料行
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- organizing trace columns displayed [SQL Server]
-- arranging trace columns displayed
-- traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aba356e951abc0fd63b28a7247e8319d860c99ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 52fc0c568a3880be3ace28f9f0a65f6bfd6a1225
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911719"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307555"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>組織追蹤內顯示的資料行 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  您可以在追蹤資料表或在 [追蹤檔案屬性]  對話方塊中選取 [組織資料行]  ，以將追蹤內的資料行加以群組；在定義追蹤時，也可以進行群組。 群組資料行可讓您以更佳的方式分析 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤輸出。 如需詳細資訊，請參閱[使用 SQL Server Profiler 檢視和分析追蹤](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)。  
+
+您可以在追蹤資料表或在 [追蹤檔案屬性]  對話方塊中選取 [組織資料行]  ，以將追蹤內的資料行加以群組；在定義追蹤時，也可以進行群組。 群組資料行可讓您以更佳的方式分析 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤輸出。 如需詳細資訊，請參閱 [使用 SQL Server Profiler 檢視和分析追蹤](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)。  
   
  [組織資料行]  可讓您依照所選取的資料行，來群組追蹤事件，或是群組並彙總追蹤事件。  
   

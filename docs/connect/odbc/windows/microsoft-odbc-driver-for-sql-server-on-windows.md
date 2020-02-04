@@ -11,10 +11,10 @@ ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c075c7adcc7eeae3ae7a83676256e72b4b86d187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989434"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 上適用於 SQL Server 的 Microsoft ODBC 驅動程式
@@ -26,14 +26,14 @@ Microsoft ODBC Driver for SQL Server 可用來建立新的應用程式。 您也
 
 ## <a name="summary"></a>摘要
 
-| Version       | 支援的功能      |
+| 版本       | 支援的功能      |
 | ------------- |---------------| 
 | Microsoft ODBC Driver 17 for SQL Server | <ul><li>BCP API 的 Always Encrypted 支援</li><li>新連接字串屬性 UseFMTONLY 會導致驅動程式在需要暫存資料表的特殊案例中使用舊版中繼資料</li>
 | Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Always Encrypted</li><li>Azure AD 驗證</li><li>AlwaysOn 可用性群組 (AG)</li></ul>   | 
 | Microsoft ODBC Driver 13 for SQL Server      | <ul><li>國際化網域名稱 (IDN)</li></ul> |
 | Microsoft ODBC Driver 11 for SQL Server | <ul><li>可感知驅動程式的連接共用</li><li>連接恢復功能</li><li>非同步執行 (輪詢方法)</li></ul> |    
 
-## <a name="documentation"></a>文件集  
+## <a name="documentation"></a>文件  
 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的文件包括：  
   
 -   [ODBC to SQL Server on Windows 版本資訊](../../../connect/odbc/windows/release-notes-odbc-sql-server-windows.md)  
@@ -48,11 +48,11 @@ Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-m
 
 ## <a name="community"></a>社群  
 - [Microsoft ODBC Driver For SQL Server 小組部落格](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
-- [SQL Server Data Access Forum](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
+- [SQL Server 資料存取論壇](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
   
 ## <a name="see-also"></a>另請參閱  
 - [關於 SQL Server Native Client](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   
-- [使用 SQL Server Native Client 建立應用程式](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
+- [使用 SQL Server Native Client 建置應用程式](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
 - [SQL Server Native Client 常見問題集](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   
 - [ODBC 程式設計人員參考](../../../odbc/reference/odbc-programmer-s-reference.md)   
 - [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  

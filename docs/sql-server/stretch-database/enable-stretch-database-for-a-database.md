@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: db08d84dd1619d8c9e2e4d8e796abdd0c9d202fc
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844594"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
@@ -26,18 +26,18 @@ ms.locfileid: "73844594"
   
  如果您為個別資料表選取 [工作 | 延展 | 啟用]  ，而您尚未針對 Stretch Database 啟用資料庫，精靈會針對 Stretch Database 設定資料庫，並且在程序中讓您選取資料表。 請遵循本文中的步驟，而非[為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 中的步驟。  
   
- 在資料庫或資料表上啟用 Stretch Database 需要 db_owner 權限。 在資料庫上啟用 Stretch Database 也需要 CONTROL DATABASE 權限。  
+ 在資料庫或資料表上啟用 Stretch Database 需要 db_owner 權限。 在資料庫或資料表上啟用 Stretch Database 也需要 CONTROL DATABASE 權限。  
 
 > [!NOTE]
 > 稍後，如果您停用 Stretch Database，請記住針對資料表或資料庫停用 Stretch Database，並不會刪除遠端物件。 若您想要刪除遠端資料表或遠端資料庫，則必須使用 Azure 管理入口網站將其卸除。 遠端物件會繼續產生 Azure 成本，直到您手動將其刪除為止。 
  
-## <a name="before-you-get-started"></a>在開始之前  
+## <a name="before-you-get-started"></a>開始之前  
   
--   在您設定資料庫以進行「延展」之前，我們建議您先執行 Stretch Database Advisor 以識別符合延展資格的資料庫及資料表。 Stretch Database Advisor 也可以找出封鎖問題。 如需詳細資訊，請參閱 [執行 Stretch Database Advisor 以識別 Stretch Database 的資料庫和資料表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)。  
+-   在您設定資料庫以進行「延展」之前，我們建議您先執行 Stretch Database Advisor 以識別符合延展資格的資料庫及資料表。 Stretch Database Advisor 也能識別封鎖問題。 如需詳細資訊，請參閱 [執行 Stretch Database Advisor 以識別 Stretch Database 的資料庫和資料表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)。  
   
 -   檢閱 [Stretch Database 的限制](../../sql-server/stretch-database/limitations-for-stretch-database.md)。  
   
--   Stretch Database 能將資料移轉到 Azure。 因此，您必須擁有 Azure 帳戶和計費用的訂閱。 若要取得 Azure 帳戶，請 [按一下這裡](https://azure.microsoft.com/pricing/free-trial/)。  
+-   Stretch Database 會將資料移轉至 Azure。 因此，您必須擁有 Azure 帳戶和計費用的訂閱。 若要取得 Azure 帳戶，請 [按一下這裡](https://azure.microsoft.com/pricing/free-trial/)。  
   
 -   擁有建立新的 Azure 伺服器或選取現有的 Azure 伺服器所需的連線和登入資訊。  
   
@@ -66,11 +66,11 @@ GO
 ##  <a name="EnableTSQLDatabase"></a> 使用 Transact-SQL 在資料庫上啟用 Stretch Database  
  在您於個別資料表上啟用 Stretch Database 前，您必須在資料庫上啟用它。  
   
- 在資料庫或資料表上啟用 Stretch Database 需要 db_owner 權限。 在資料庫上啟用 Stretch Database 也需要 CONTROL DATABASE 權限。  
+ 在資料庫或資料表上啟用 Stretch Database 需要 db_owner 權限。 在資料庫或資料表上啟用 Stretch Database 也需要 CONTROL DATABASE 權限。  
   
 1.  開始之前，請為 Stretch Database 要移轉的資料選擇現有的 Azure 伺服器，或建立新的 Azure 伺服器。  
   
-2.  在 Azure 伺服器上，建立具有 IP 位址範圍的 SQL Server 防火牆規則，讓 SQL Server 可以與遠端伺服器通訊。  
+2.  在 Azure 伺服器上，利用 SQL Server 的 IP 位址範圍，來建立能讓 SQL Server 與遠端伺服器通訊的防火牆規則。  
 
     您可以透過嘗試從 SQL Server Management Studio (SSMS) 中的物件總管連接到 Azure 伺服器，輕鬆地找到您需要的值並建立防火牆規則。 SSMS 可協助您開啟下列對話方塊來建立規則，該對話方塊中已包含必要的 IP 位址值。
     

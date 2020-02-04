@@ -1,24 +1,25 @@
 ---
-title: 如何：在 Transact-SQL 指令碼中概述及新增程式碼片段 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 在 Transact-SQL 指令碼中設定大綱及新增程式碼片段
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c8ab757cac0622c5674bb2008b5bafbbc07c182c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ac322bd8bd53297c4322607819a2ed2ab042a4e1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035124"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241364"
 ---
-# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>如何：在 Transact-SQL 指令碼中設定大綱及新增程式碼片段
-SQL Server Data Tools 包含由程式碼片段組成的程式碼程式庫，這些程式碼片段已準備就緒可供您插入應用程式中。 每個程式碼片段都執行完整的指令碼工作，例如建立函式、資料表、觸發程序、索引、檢視、使用者定義資料類型等等。您只需要按幾下滑鼠，便能將程式碼片段插入原始程式碼。 這些程式碼片段因減少打字的時間而提升產能。  
+# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>如何：在 Transact-SQL 指令碼中設定大綱及加入程式碼片段
+
+SQL Server Data Tools 包含由程式碼片段組成的程式碼程式庫，這些程式碼片段已準備就緒可供您插入應用程式中。 每個程式碼片段都執行複雜的指令碼工作，例如建立函式、資料表、觸發程序、索引、檢視表、使用者定義資料類型等等。您只需要按幾下滑鼠，便能將程式碼片段插入原始程式碼。 這些程式碼片段因減少打字的時間而提升產能。  
   
 需要瀏覽適當的程式碼片段時，您可以使用程式碼片段選擇器，從分類的程式碼片段清單中進行選擇。 在程式碼中加入程式碼片段後，可能有些部分需要自訂，例如以更適合的名稱取代變數名稱，或置入預存程序的實際邏輯。 您將發現為達到此目的，插入的程式碼片段在程式碼中有一個或多個以反白顯示的取代點。 如果您將滑鼠指標移到取代點上，就會顯示工具提示，說明如何變更程式碼。  
   

@@ -1,6 +1,6 @@
 ---
-title: 將自訂報表加入 Management Studio | Microsoft Docs
-ms.custom: ''
+title: 將自訂報表加入 Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84aee831cb03ebf419849fca8bf653803e5d5ced
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a7a287cad9b674c55f032a04490a0518f723a797
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263456"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251358"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>將自訂報表加入 Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,11 +62,11 @@ ms.locfileid: "68263456"
   
 -   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，以滑鼠右鍵按一下物件總管中的節點、指向 [報表]  ，然後按一下 [自訂報表]  。 在 [開啟檔案]  對話方塊中，找到自訂報表資料夾，並選取 **ConnectionsReport.rdl** 檔案，然後按一下 [開啟]  。  
   
-    第一次從物件總管節點開啟新的自訂報表時，此自訂報表就會新增至該節點快速鍵功能表上 [自訂報表]  底下的最近使用清單。 第一次開啟標準報表時，該報表也會顯示在 [自訂報表]  下之最近使用的清單中。 如果您刪除了某個自訂報表檔，下次選取該項目時，系統就會提示您是否要從最近使用清單中刪除該項目。  
+    第一次從物件總管節點開啟新的自訂報表時，該報表會新增到該節點的快速鍵功能表中，[自訂報表]  下之最近使用的清單中。 第一次開啟標準報表時，該報表也會顯示在 [自訂報表]  下之最近使用的清單中。 如果您刪除了某個自訂報表檔，下次選取該項目時，系統就會提示您是否要從最近使用清單中刪除該項目。  
   
     1.  若要變更最近使用清單中可顯示的檔案數目，請在 [工具]  功能表中，按一下 [選項]  、展開 [環境]  資料夾，然後按一下 [一般]  。  
   
-    2.  調整 [顯示最近使用清單中的檔案]  的數目。  
+    2.  調整 [顯示在最近使用的清單中的檔案數]  中的數目。  
   
 ## <a name="see-also"></a>另請參閱  
 [Management Studio 中的自訂報表](../../ssms/object/custom-reports-in-management-studio.md)  

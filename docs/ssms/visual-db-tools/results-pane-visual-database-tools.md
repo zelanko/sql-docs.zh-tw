@@ -1,10 +1,9 @@
 ---
-title: 結果窗格 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 結果窗格
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,14 @@ helpviewer_keywords:
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 65221627169e524b53eed7965ec6ec2f7c677b8d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b6c7817fd90085ab4a7520cb98481dabea3b9558
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255799"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255202"
 ---
 # <a name="results-pane-visual-database-tools"></a>結果窗格 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "68255799"
   
 若要移至特定資料錄，在巡覽列文字方塊中輸入列號，然後按 ENTER。  
   
-如需如何使用「查詢和檢視表設計工具」中之鍵盤快速鍵的資訊，請參閱[在查詢和檢視表設計工具中巡覽 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/navigate-in-the-query-and-view-designer-visual-database-tools.md)。  
+如需在查詢和檢視表設計工具中使用鍵盤快速鍵的詳細資訊，請參閱[在查詢和檢視表設計工具中巡覽 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/navigate-in-the-query-and-view-designer-visual-database-tools.md)。  
   
 ## <a name="keeping-the-results-set-synchronized-with-the-query-definition"></a>保持結果集與查詢定義同步處理  
 當您在處理查詢或檢視結果時，[結果] 窗格中的資料錄可能未與查詢定義保持同步處理。 例如，若您在資料表中執行五個資料行其中四個的查詢，然後使用 [圖表窗格] 在查詢定義中加入第五個資料行，則第五個資料行的資料將不會自動加入至 [結果] 窗格中。 若要讓 [結果] 窗格反映新的查詢定義，請再次執行查詢。  
@@ -66,7 +67,7 @@ ms.locfileid: "68255799"
 ## <a name="see-also"></a>另請參閱  
 [建立查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 [執行查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
-[設計查詢和檢視使用說明主題 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [圖表窗格 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)  
 [準則窗格 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
 [使用結果窗格中的資料 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  

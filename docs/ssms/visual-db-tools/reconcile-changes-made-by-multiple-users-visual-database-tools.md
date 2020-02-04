@@ -1,10 +1,9 @@
 ---
-title: 協調多位使用者所做的變更 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 協調多位使用者所做的變更
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b4eee47ea3e15b869909e66818bddf655f63ea3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b85d852b4eee542632af0afbbf561fec47fac35a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266242"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255282"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>協調多位使用者所做的變更 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "68266242"
   
 -   選擇 [是]  可儲存資料表，並且可使用清單中的所有變更更新資料庫。  
   
-    這個動作會影響共用相同資料庫物件的資料表。 例如，假設您編輯 `titleauthors` 資料表中的 `au_id` 資料行，而另一位使用者正在使用與 `titleauthors` 資料表 `au_id` 資料行相關的 `authors` 資料表。 如果您儲存您的資料表將會影響其他使用者的資料表。 同樣的，假設其他使用者在 `qty` 資料表中定義了一個 `sales` 資料行的檢查條件約束。 如果您刪除 `qty` 資料行並儲存 `sales` 資料表，則會影響其他使用者的檢查條件約束。  
+    這個動作會影響共用相同資料庫物件的資料表。 例如，假設您編輯 `au_id` 資料表中的 `titleauthors` 資料行，而另一位使用者正在使用與 `authors` 資料表 `titleauthors` 資料行相關的 `au_id` 資料表。 如果您儲存您的資料表將會影響其他使用者的資料表。 同樣的，假設其他使用者在 `qty` 資料表中定義了一個 `sales` 資料行的檢查條件約束。 如果您刪除 `qty` 資料行並儲存 `sales` 資料表，則會影響其他使用者的檢查條件約束。  
   
 -   選擇 [否]  會取消儲存動作。  
   

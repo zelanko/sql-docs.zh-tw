@@ -13,10 +13,10 @@ ms.assetid: 6f3410c4-7944-448f-bae8-bab3e8152d46
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b2568c2930080ddbb060f2c4d014c40476ab38f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570882"
 ---
 # <a name="search-a-report-using-url-access"></a>使用 URL 存取搜尋報表

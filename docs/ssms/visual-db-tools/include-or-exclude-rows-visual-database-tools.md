@@ -1,10 +1,9 @@
 ---
-title: 包含或排除資料列 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 包含或排除資料列
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,14 @@ helpviewer_keywords:
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 919ce01ce2e2ec6f91e5bd3d2bb6a40a2b8229a9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 38dfe12c0690e87ee0e57555a2d8ff67e6ff7673
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254155"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253522"
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>包含或排除資料列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

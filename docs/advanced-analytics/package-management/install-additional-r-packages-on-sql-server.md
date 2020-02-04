@@ -3,19 +3,19 @@ title: 安裝新的 R 套件
 description: 了解如何使用 sqlmlutils，在 SQL Server 機器學習服務執行個體上安裝新的 R 套件。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 827e83a0d1b363d3b91477b9ae85fec156ee4fc9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e9435c52cc0bf318291d38a2511f496c818c2fd6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727494"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479434"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝新的 R 套件
 
@@ -51,7 +51,7 @@ ms.locfileid: "73727494"
 
 若用戶端電腦可以存取網際網路，您可以在線上下載並安裝 **sqlmlutils** 與其相依套件。
 
-1. 從 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 將最新的 **sqlmlutils** ZIP 檔案下載到用戶端電腦。 請勿解壓縮檔案。
+1. 從 **將最新的**sqlmlutils https://github.com/Microsoft/sqlmlutils/tree/master/R/dist ZIP 檔案下載到用戶端電腦。 請勿解壓縮檔案。
 
 1. 開啟 [命令提示字元]  並執行下列命令，以安裝 **sqlmlutils** 與 **RODBCext** 套件。 取代為您下載之 **sqlmlutils** ZIP 檔案的完整路徑 (此範例假設該檔案位於您的 [文件] 資料夾中)。 會在線上找到 **RODBCext** 套件並安裝。
 
@@ -108,7 +108,7 @@ ms.locfileid: "73727494"
     , @script = N'print(R.version)'
    ```
 
-1. 從 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 下載最新的 **sqlmlutils** ZIP 檔案 (不要將該檔案解壓縮)。 例如，將檔案下載到 `c:\downloads\sqlmlutils_0.7.1.zip`。
+1. 從 **下載最新的**sqlmlutils https://github.com/Microsoft/sqlmlutils/tree/master/R/dist ZIP 檔案 (不要將該檔案解壓縮)。 例如，將檔案下載到 `c:\downloads\sqlmlutils_0.7.1.zip`。
 
 1. 將整個 **RODBCext** 存放庫資料夾 (`c:\downloads\rodbcext`) 與 **sqlmlutils** ZIP 檔案 (`c:\downloads\sqlmlutils_0.7.1.zip`) 複製到用戶端電腦。 例如，將它們複製到用戶端電腦上的 `c:\temp\packages` 資料夾。
 
@@ -146,7 +146,7 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 ### <a name="add-the-package-offline"></a>離線新增套件
 
 若用戶端電腦沒有網際網路連線，您可以透過可以存取網際網路的電腦，使用**miniCRAN** 來下載 **glue** 套件。 接著，將該套件複製到用戶端電腦，以便離線安裝套件。
-如需有關安裝 **miniCRAN** 的詳細資訊，請參閱[安裝 miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran)。
+如需有關安裝 [miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) 的詳細資訊，請參閱**安裝 miniCRAN**。
 
 在可以存取網際網路的電腦上：
 
@@ -213,7 +213,7 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 
 1. 開啟 Azure Data Studio 或 SSMS，並連線到您的 SQL Server 資料庫。
 
-1. 執行下列命令：
+1. 執行以下命令：
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'

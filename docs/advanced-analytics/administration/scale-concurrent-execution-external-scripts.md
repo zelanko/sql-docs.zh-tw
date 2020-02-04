@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: c10f92bcb0f8b64441ad4b088c4b8b3e2f62236b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727699"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>在 SQL Server Machine Learning 服務中調整外部指令碼的平行執行
@@ -24,7 +24,7 @@ ms.locfileid: "73727699"
 在 Machine Learning 服務的安裝過程中，會建立新的 Windows 使用者帳戶集區  ，以支援 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 服務執行工作。 這些工作者帳戶的目的是針對不同 SQL Server 使用者同時執行外部指令碼來進行隔離。
 
 > [!Note]
-> 在 SQL Server 2019 中，**SQLRUserGroup** 只有一個成員，且現在是單一 SQL Server Launchpad 服務帳戶，而不是多個背景工作帳戶。 本文說明 SQL Server 2016 和 2017 的背景工作帳戶。
+> 在 SQL Server 2019 中，**SQLRUserGroup** 只有一個成員，且現在是單一 SQL Server Launchpad 服務帳戶，而不是多個背景工作角色帳戶。 本文說明 SQL Server 2016 和 2017 的背景工作帳戶。
 
 ## <a name="worker-account-group"></a>背景工作帳戶群組
 
@@ -67,5 +67,5 @@ Python 或 R 指令碼可以使用的資源是由 SQL Server 管理。 建議您
 
 ## <a name="next-steps"></a>後續步驟
 
-- [使用 SQL Server Management Studio 中的自訂報告監視 Python 和 R 指令碼執行](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md)
-- [使用動態管理檢視 (DMV) 監視 SQL Server Machine Learning 服務](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)
+- [使用 SQL Server Management Studio 中的自訂報表監視 Python 與 R 指令碼執行](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md)
+- [使用動態管理檢視 (DMV) 監視 SQL Server 機器學習服務](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)

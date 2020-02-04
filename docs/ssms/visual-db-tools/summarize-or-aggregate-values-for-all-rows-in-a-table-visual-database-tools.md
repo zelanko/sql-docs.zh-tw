@@ -1,10 +1,9 @@
 ---
-title: 摘要或彙總資料表中所有資料列的值 | Microsoft Docs
-ms.custom: ''
+title: 摘要或彙總資料表中所有資料列的值
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9cfcb42df5c29fc0477e0a8575c6cfe299d3883b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 0405898284fd40caf39743f901a70a7c60a75023
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263186"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254916"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>摘要或彙總資料表中所有資料列的值 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +59,7 @@ FROM titles
   
     [查詢和檢視表設計工具] 會自動將資料行別名指派給您要加總的資料行。 您可以使用較有意義的別名取代這個別名。 如需詳細資訊，請參閱[建立資料行別名 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
   
-4.  在 [群組依據]  格線欄中，選取適當的彙總函式，例如：**Sum**、**Avg**、**Min**、**Max**、**Count**。 如果只要彙總結果集中的唯一資料列，請選擇含有 DISTINCT 選項的彙總函式，例如 [Min Distinct]  。 不要選擇 [Group By]  、[Expression]  或 [Where]  ，因為這些選項不適用於彙總所有資料列。  
+4.  在 [群組依據]  方格資料行中，選取適當的彙總函式，例如：[Sum]  、[Avg]  、[Min]  、[Max]  、[Count]  。 如果只要彙總結果集中的唯一資料列，請選擇含有 DISTINCT 選項的彙總函式，例如 [Min Distinct]  。 不要選擇 [Group By]  、[Expression]  或 [Where]  ，因為這些選項不適用於彙總所有資料列。  
   
     查詢和檢視表設計工具會使用指定的彙總函式，取代 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中陳述式的資料行名稱。 例如，SQL 陳述式將如下所示：  
   

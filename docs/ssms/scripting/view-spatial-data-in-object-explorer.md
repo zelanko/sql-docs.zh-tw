@@ -1,6 +1,6 @@
 ---
-title: 檢視物件總管中的空間資料 | Microsoft 文件
-ms.custom: ''
+title: 檢視物件總管中的空間資料
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -10,12 +10,12 @@ ms.assetid: 59cca562-e3f5-4257-b868-adcbcc0142cc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: facb39a333d148bad2f50c2d87899c308f155168
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fa47c1fe77caa828808c5a923a3ad824c12384e0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252717"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252917"
 ---
 # <a name="view-spatial-data-in-object-explorer"></a>檢視物件總管中的空間資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio 環境 | Microsoft Docs
-ms.custom: ''
+title: SQL Server Management Studio 環境
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 38a0417a7f934525c7d43e0a36a52ef918b573a6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f7c9339e5e374850bda986eedc28ace32b5630d1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266736"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247182"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>SQL Server Management Studio 環境
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

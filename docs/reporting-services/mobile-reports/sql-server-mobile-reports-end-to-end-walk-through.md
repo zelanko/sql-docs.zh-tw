@@ -11,10 +11,10 @@ ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028888"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 行動報表：完整逐步解說
@@ -22,7 +22,7 @@ ms.locfileid: "69028888"
 
 您可以在可調整格線列和欄，並具有彈性的行動報表元素的設計介面上，建立行動報表。 連接到各種不同的內部部署資料來源，或上傳 Excel 活頁簿來建立行動報表。 然後將您的報表儲存到 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站，並在瀏覽器中或者 Power BI 行動應用程式中檢視。  
   
-本文將逐步引導您完成︰   
+本文將引導您：   
   
 - 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站上建立共用資料來源和資料集，並使用 AdventureWorks 資料庫做為範例資料來源。  
 - 在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]中建立 Reporting Services 行動報表  
@@ -65,7 +65,7 @@ ms.locfileid: "69028888"
    
 ## <a name="shared-dataset">建立共用資料集</a>  
   
-使用現有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 用戶端工具 (例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的「報表設計師」) 建立共用資料集。  本逐步解說使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安裝報表產生器](../install-windows/install-report-builder.md)，或從您的入口網站啟動它。 您將建立三個資料集，分別針對：KPI 值、KPI 趨勢，以及 Reporting Services 行動報表 (含有更多欄位)。     
+使用現有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 用戶端工具 (例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的「報表設計師」) 建立共用資料集。  本逐步解說使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安裝報表產生器](../install-windows/install-report-builder.md)，或從您的入口網站啟動報表產生器。 您將建立三個資料集，分別針對：KPI 值、KPI 趨勢，以及 Reporting Services 行動報表 (含有更多欄位)。     
   
 1. 從您的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站，按一下 [新增]   > [編頁報表]  以啟動[!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。  
   

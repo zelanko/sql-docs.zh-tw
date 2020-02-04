@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e7b61536b335d6cbbcdc78e77e0ebbeb18618a22
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74056674"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>用戶端連接中的服務主要名稱 (SPN) 支援
@@ -44,10 +44,10 @@ ms.locfileid: "74056674"
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
  下表描述用戶端應用程式可允許安全驗證的常見案例。  
   
-|狀況|Description|  
+|狀況|描述|  
 |--------------|-----------------|  
 |舊版應用程式不會指定 SPN。|此相容性案例保證對於針對舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]開發的應用程式沒有行為上的變更。 如果沒有指定 SPN，應用程式會依賴所產生的 SPN，而且不會知道所使用的驗證方法。|  
 |使用目前版本 OLE DB Driver for SQL Server 的用戶端應用程式會將連接字串中的 SPN 指定為網域使用者或電腦帳戶、執行個體專屬的 SPN，或使用者定義的字串。|**ServerSPN** 關鍵字可以在提供者、初始化或連接字串中使用，以執行下列操作：<br /><br /> -指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體用於連接的帳戶。 這會簡化 Kerberos 驗證的存取。 如果有 Kerberos 金鑰發行中心 (KDC)，而且有指定正確的帳戶，則可能使用 Kerberos 驗證而非 NTLM。 KDC 通常位於與網域控制站相同的電腦上。<br /><br /> -指定 SPN 來查閱 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的服務帳戶。 對於每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，系統會產生可用於此目的的兩個預設 SPN。 不過，系統不保證這些金鑰存在於 Active Directory 中，因此在此情況下，不保證使用 Kerberos 驗證。<br /><br /> -指定將用於查閱 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之服務帳戶的 SPN。 這可以是對應到服務帳戶的任何使用者定義字串。 在此情況下，必須在 KDC 中手動註冊金鑰，而且必須滿足使用者定義 SPN 的規則。<br /><br /> **FailoverPartnerSPN** 關鍵字可用於指定容錯移轉夥伴伺服器的 SPN。 帳戶的範圍與 Active Directory 金鑰值與您針對主體伺服器指定的值相同。|  
@@ -69,7 +69,7 @@ ms.locfileid: "74056674"
  新的連接行為會由用戶端實作，因此，該行為對於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本而言不是專屬的。  
   
 ## <a name="linked-servers-and-delegation"></a>連結的伺服器與委派  
- 建立連結的伺服器時，可以使用 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 的 **\@provstr** 參數來指定伺服器和容錯移轉夥伴 SPN。 這麼做的優點與在用戶端連接字串中指定 SPN 相同：建立使用 Kerberos 驗證的連接更簡單，而且更可靠。  
+ 建立連結的伺服器時，可以使用 **sp_addlinkedserver\@ 的** [provstr](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 參數來指定伺服器和容錯移轉夥伴 SPN。 這麼做的優點與在用戶端連接字串中指定 SPN 相同：建立使用 Kerberos 驗證的連接更簡單，而且更可靠。  
   
  利用連結的伺服器委派需要 Kerberos 驗證。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "74056674"
   
  SPN 在連接字串或連接屬性中所使用的語法如下所示：  
   
-|語法|Description|  
+|語法|描述|  
 |------------|-----------------|  
-|MSSQLSvc/*fqdn*|使用 TCP 以外的通訊協定時，此為提供者針對預設執行個體所產生的預設 SPN。<br /><br /> *fqdn* 是完整的網域名稱。|  
+|MSSQLSvc/*fqdn*|使用 TCP 以外的通訊協定時，此為提供者針對預設執行個體所產生的預設 SPN。<br /><br /> *fqdn* 是完整網域名稱。|  
 |MSSQLSvc/*fqdn*:*port*|使用 TCP 時，此為提供者產生的預設 SPN。<br /><br /> *port* 是 TCP 通訊埠編號。|  
 |MSSQLSvc/*fqdn*:*InstanceName*|使用 TCP 以外的通訊協定時，此為提供者針對具名執行個體所產生的預設 SPN。<br /><br /> *InstanceName* 是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體名稱。|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|對應到 Windows 自動註冊之內建電腦帳戶的 SPN。|  

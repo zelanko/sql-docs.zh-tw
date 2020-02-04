@@ -16,10 +16,10 @@ ms.assetid: 86745aeb-ea0d-42d1-b7d2-141b7b067af9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9a00a79466bb4f53fcef10edb1dd6804542b3eae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982388"
 ---
 # <a name="getlong-method-sqlserverresultset"></a>getLong 方法 (SQLServerResultSet)

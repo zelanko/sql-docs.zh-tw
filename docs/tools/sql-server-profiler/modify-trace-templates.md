@@ -1,27 +1,22 @@
 ---
-title: 修改追蹤範本 |Microsoft Docs
-ms.custom: ''
-ms.date: 07/12/2017
+title: 修改追蹤範本
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- templates [SQL Server], SQL Server Profiler
-- Profiler [SQL Server Profiler], templates
-- trace templates [SQL Server]
-- modifying trace templates
-- SQL Server Profiler, templates
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 55a7cdf539a675fd6d3c86ace8cc837ed1e92358
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 07/12/2017
+ms.openlocfilehash: 71716d1a9a50a29e1f574fb292d078d21e34a9a6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074869"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307165"
 ---
 # <a name="modify-trace-templates"></a>修改追蹤範本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

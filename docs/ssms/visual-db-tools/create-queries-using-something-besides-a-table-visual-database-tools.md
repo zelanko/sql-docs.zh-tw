@@ -1,10 +1,9 @@
 ---
-title: 使用資料表以外的項目來建立查詢 | Microsoft Docs
-ms.custom: ''
+title: 使用資料表以外的項目來建立查詢
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 630cfd91df0d999d8866260eaee5152f2b4e91a5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 52ddb76ab1e4b6e04d043bd56c3ec55cef94e52b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264353"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254305"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>使用資料表以外的項目建立查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -142,5 +143,5 @@ FROM
      fn_GetWholeTeam ('VPA30890F')  
 ```  
   
-"VPA30890F" 是管理人員的 emp_id，您將擷取該管理人員的組織。 如需新增使用者定義函數至查詢的詳細資訊，請參閱[將資料表新增至查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)。 如需使用者定義函數的完整描述，請參閱[使用者定義函數](https://msdn.microsoft.com/d7ddafab-f5a6-44b0-81d5-ba96425aada4)。  
+"VPA30890F" 是管理人員的 emp_id，您將擷取該管理人員的組織。 如需新增使用者定義函數至查詢的詳細資訊，請參閱[將資料表新增至查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)。 如需使用者定義函數的完整描述，請參閱 [使用者定義函數](https://msdn.microsoft.com/d7ddafab-f5a6-44b0-81d5-ba96425aada4)。  
   

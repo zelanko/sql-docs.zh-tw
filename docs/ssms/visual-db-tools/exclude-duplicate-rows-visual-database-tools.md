@@ -1,10 +1,9 @@
 ---
-title: 排除重複的資料列 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 排除重複的資料列
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,14 @@ helpviewer_keywords:
 ms.assetid: ab35a363-421d-4665-946b-ae3f6397af50
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bb8dabb400121ffc98a5322132eb6fe4a2ea8d8c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 4caf41fcf7c4373250b875a01c1ce733d086b60a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254584"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247254"
 ---
 # <a name="exclude-duplicate-rows-visual-database-tools"></a>排除重複的資料列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

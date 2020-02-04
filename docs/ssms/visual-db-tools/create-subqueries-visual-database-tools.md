@@ -1,10 +1,9 @@
 ---
-title: 建立子查詢 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 建立子查詢
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 34f6b9b4-ca3a-4a4f-9594-36e513f1c547
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ce4067256d5940f94997e4d5f767cc2f01a1e6a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: c9e33752b7a843ac4e9798a259d5aac3e4ae350a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264302"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254236"
 ---
 # <a name="create-subqueries-visual-database-tools"></a>建立子查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

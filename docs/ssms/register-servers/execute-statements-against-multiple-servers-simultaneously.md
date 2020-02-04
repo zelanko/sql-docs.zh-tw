@@ -1,10 +1,7 @@
 ---
-title: 同時對多部伺服器執行陳述式 | Microsoft Docs
-ms.custom: ''
-ms.date: 07/18/2016
+title: 同時對多部伺服器執行陳述式
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,17 +11,23 @@ helpviewer_keywords:
 ms.assetid: 197760f3-0a06-43de-8162-69c27d3fbe56
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: abf087363c4e4cc17356882322643b6fae0da553
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 07/18/2016
+ms.openlocfilehash: 89e6e64f4e4dc5f3ae7c8f9adf1db3a392530989
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260574"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246564"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>同時對多部伺服器執行陳述式
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  本主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，透過建立本機伺服器群組或中央管理伺服器及一個或多個伺服器群組，以及位於這些群組內部的一個或多個已註冊的伺服器，然後查詢完整的群組的方式，同時查詢多部伺服器。 
-  
+
+本主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，透過建立本機伺服器群組或中央管理伺服器及一個或多個伺服器群組，以及位於這些群組內部的一個或多個已註冊的伺服器，然後查詢完整的群組的方式，同時查詢多部伺服器。 
+
 此查詢傳回的結果可以結合到單一結果窗格中，也可以在不同的結果窗格中傳回。 結果集可能包括伺服器名稱以及查詢在每部伺服器上使用之登入的額外資料行。 中央管理伺服器和從屬伺服器可以使用 Windows 驗證來註冊。 本機伺服器群組中的伺服器則可以使用 Windows 驗證或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行註冊。  
   
 > **注意！** 在您執行下列程序之前，請先建立中央管理伺服器和伺服器群組。 如需詳細資訊，請參閱[建立中央管理伺服器和伺服器群組 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)。  

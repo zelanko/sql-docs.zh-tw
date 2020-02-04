@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531596"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>如何檢視巨量資料叢集的狀態 
@@ -24,7 +24,7 @@ ms.locfileid: "73531596"
 
 ## <a id="datastudio"></a> 使用 Azure Data Studio
 
-下載 [Azure Data Studio](https://aka.ms/getazuredatastudio) 的最新**測試人員組建**之後，您可以使用 SQL Server 巨量資料叢集儀表板來檢視服務端點和巨量資料叢集的狀態。 以下部分功能僅先在 Azure Data Studio 的測試人員組建中提供。
+下載 **Azure Data Studio** 的最新[測試人員組建](https://aka.ms/getazuredatastudio)之後，您可以使用 SQL Server 巨量資料叢集儀表板來檢視服務端點和巨量資料叢集的狀態。 以下部分功能僅先在 Azure Data Studio 的測試人員組建中提供。
 
 1. 首先，在 Azure Data Studio 中建立與您巨量資料叢集的連線。 如需詳細資訊，請參閱[使用 Azure Data Studio 連線至 SQL Server 巨量資料叢集](connect-to-big-data-cluster.md)。
 

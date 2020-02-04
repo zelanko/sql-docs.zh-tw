@@ -1,10 +1,9 @@
 ---
-title: 停止查詢 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 停止查詢
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 60f322531f451ac0236cafc9d3d9d6b0cb361b30
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 76ad0c22c471656e9b91f8454ac8fc92087d602f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263224"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254867"
 ---
 # <a name="stop-a-query-visual-database-tools"></a>停止查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

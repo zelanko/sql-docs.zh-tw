@@ -1,11 +1,7 @@
 ---
-title: 如何：比較和同步處理兩個資料庫的資料 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 比較和同步處理兩個資料庫的資料
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datacompare.connection.datasources.f1
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d7654d02cfc35b0dfbaa82b100b9a82a8edacb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c53dc1e11d242d6864525aba677e78c67671277c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929472"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241575"
 ---
-# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>如何：比較和同步處理兩個資料庫的資料
+# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>HOW TO：比較和同步處理兩個資料庫的資料
+
 您可以比較兩個資料庫包含的資料。 要比較的資料庫稱為「來源」  和「目標」  。  
   
 > [!NOTE]  
@@ -38,7 +39,7 @@ ms.locfileid: "67929472"
 如需詳細資訊，請參閱[使用參考資料庫中的資料比較和同步處理一個或多個資料表中的資料](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)。  
   
 > [!NOTE]  
-> 您也可以比較兩個資料庫或相同資料庫兩個版本的「結構描述」  。 如需詳細資訊，請參閱[如何：使用結構描述比較以比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)。  
+> 您也可以比較兩個資料庫或相同資料庫兩個版本的「結構描述」  。 如需詳細資訊，請參閱[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)。  
   
 ## <a name="CompareDatabaseData"></a>比較資料庫資料  
   
@@ -61,7 +62,7 @@ ms.locfileid: "67929472"
   
 4.  如果有多個索引鍵存在，您可以使用 [比較索引鍵]  資料行，以指定資料比較所依據的索引鍵。 例如，您可以指定比較所依據的是主索引鍵資料行還是另一個 (可唯一識別的) 索引鍵資料行。  
   
-5.  按一下 **[完成]** 。  
+5.  按一下 [完成]  。  
   
     比較隨即開始。  
   

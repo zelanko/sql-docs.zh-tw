@@ -12,10 +12,10 @@ ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ed0bd3c53550a21f4a157ee637e7d153d8f2922
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194105"
 ---
 # <a name="custom-report-item-class-libraries"></a>自訂報表項目類別庫
@@ -40,9 +40,9 @@ ms.locfileid: "63194105"
 |**CustomProperties**|自訂報表項目的自訂屬性集合。|  
 |**高度**|自訂報表項目控制項的高度。|  
 |**寬度**|自訂報表項目控制項的寬度。|  
-|**報表**|報表層級屬性的容器，例如報表中資料集的清單。|  
+|**Report**|報表層級屬性的容器，例如報表中資料集的清單。|  
 |**AltReportItem**|替代報表項目物件，用於不支援自訂報表項目執行階段控制項之處。|  
-|**樣式**|自訂報表項目的樣式屬性。|  
+|**Style**|自訂報表項目的樣式屬性。|  
 |**裝飾**|用於控制項互動式編輯的裝飾視窗。|  
 |**網站**|元件的 **ISite**。|  
 |**DesignerVerbCollection**|控制項捷徑功能表的自訂動詞命令陣列。|  
@@ -61,7 +61,7 @@ ms.locfileid: "63194105"
 |**OnPaint**|在回應 **Paint** 事件時呼叫。|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- 這是用於識別自訂報表項目類型的屬性。 該名稱必須符合報表設計師設定檔中 **ReportItem** 項目的 \<**名稱**> 屬性值。  
+ 這是用於識別自訂報表項目類型的屬性。 該名稱必須符合報表設計師設定檔中 \<ReportItem**項目的** **名稱**> 屬性值。  
   
 #### <a name="public-methods"></a>公用方法  
   

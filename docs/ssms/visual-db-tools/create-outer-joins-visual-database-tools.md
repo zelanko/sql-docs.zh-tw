@@ -1,10 +1,9 @@
 ---
-title: 建立外部聯結 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 建立外部聯結
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,24 +12,26 @@ helpviewer_keywords:
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d107e8c4f7bd148bc4dddc3b598636bfcd7a635e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 5c1a8b952d0723c4fd1c54ab2b841ed818017c9f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264337"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254310"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>建立外部聯結 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 在預設狀況下， [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 會在資料表之間建立內部聯結 (Inner Join)。 內部聯結將刪除不符合其他資料表之資料列的資料列。 然而，外部聯結則至少傳回 FROM 子句提到的一個資料表或檢視，只要這些資料列符合任何 WHERE 或 HAVING 搜尋條件。 若要在不具有符合聯結資料表中資料的結果集中包含資料列，就可以建立外部聯結。  
   
-在建立外部聯結時，資料表在 SQL 陳述式中出現的順序 (如 SQL 窗格所反映) 非常重要。 您加入的第一個資料表會成為「左」資料表，第二個資料表會成為「右」資料表 (資料表出現在[圖表窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)的實際順序並不重要)。在指定左或右外部聯結時，是指這些資料表加入查詢時的順序，以及它們出現在 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)的 SQL 陳述式中的順序。  
+在建立外部聯結時，資料表在 SQL 陳述式中出現的順序 (如 SQL 窗格所反映) 非常重要。 您加入的第一個資料表會成為「左」資料表，第二個資料表會成為「右」資料表 (資料表出現在 [圖表窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) 的實際順序並不重要)。在指定左或右外部聯結時，是指這些資料表加入查詢時的順序，以及它們出現在 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)的 SQL 陳述式中的順序。  
   
 ### <a name="to-create-an-outer-join"></a>若要建立外部聯結  
   
 1.  自動或手動建立聯結。 如需詳細資訊，請參閱[自動聯結資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md) 或[手動聯結資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-manually-visual-database-tools.md)。  
   
-2.  選取 [圖表] 窗格中的聯結線 (Join Line)，然後從 [查詢設計工具]  功能表選擇 [選取 <tablename> 中所有的資料列]  ，以選取包含您要併入其額外資料列之資料表的命令。  
+2.  選取 [圖表] 窗格中的聯結線 (Join Line)，然後從 [查詢設計工具]  功能表選擇 [選取  **中所有的資料列]<tablename>** ，以選取包含您要併入其額外資料列之資料表的命令。  
   
     -   選擇第一個資料表以建立左外部聯結。  
   

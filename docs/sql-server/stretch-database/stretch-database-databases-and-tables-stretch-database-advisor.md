@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ec8df33c7af98889529232bbcd56437745339fba
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843754"
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>使用 Data Migration Assistant 識別適用於 Stretch Database 的資料庫和資料表
@@ -56,7 +56,7 @@ Stretch Database Advisor 之前是 SQL Server 2016 Upgrade Advisor 的一個元�
 
 發行 Data Migration Assistant 以取代並擴充 Upgrade Advisor 之後，Stretch Database Advisor 的功能會併入這項新工具。 您不需要選取任何選項，即可取得 Stretch Database 的相關建議。 當您在 Data Migration Assistant 中執行評量時，Stretch Database 的相關結果會出現在 [Feature recommendations ] (功能建議)  的 [Storage] (儲存體)  索引標籤中。
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>後續步驟  
  啟用 Stretch Database。  
   
 -   若要在 **資料庫**上啟用 Stretch Database，請參閱 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。  

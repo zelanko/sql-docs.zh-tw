@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: a78074b7e32df18de1308d2354d98079d074f9bf
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531936"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>管理 SQL Server 控制器儀表板的巨量資料叢集
@@ -78,6 +78,6 @@ ms.locfileid: "73531936"
 
 1. 當看到狀況不良的元件時，可按一下工具列上的 [疑難排解]  ，啟動包含筆記本的 Jupyter Book 來協助診斷問題。
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 
 如需控制器的詳細資訊，請參閱[我們的控制器文件](concept-controller.md)。

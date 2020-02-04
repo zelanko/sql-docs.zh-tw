@@ -1,10 +1,8 @@
 ---
-title: 指定中斷點動作 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 指定中斷點動作
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
@@ -12,24 +10,32 @@ helpviewer_keywords:
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5209a5cd5d80529a71c545a11d8b59b46248bc96
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d4bffc7742a9833d8715c9479e051cdd732d7596
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267726"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253655"
 ---
 # <a name="specify-a-breakpoint-action"></a>指定中斷點動作
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  中斷點 [叫用時]  動作指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具針對中斷點所執行的自訂工作。 如果已到達指定的叫用計數而且滿足任何指定的中斷點條件時，偵錯工具就會執行為中斷點指定的動作。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+中斷點 [叫用時]  動作指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具針對中斷點所執行的自訂工作。 如果已到達指定的叫用計數而且滿足任何指定的中斷點條件時，偵錯工具就會執行為中斷點指定的動作。
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
-##  <a name="BKMK_ActionConsiderations"></a> 動作考量因素  
- 中斷點的預設動作是在已滿足叫用計數和中斷點條件時中斷執行。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具中 [叫用時]  動作的主要用法是透過指定列印訊息，將資訊列印至偵錯工具 [輸出]  視窗。  
+##  <a name="BKMK_ActionConsiderations"></a> 動作考量因素
+
+中斷點的預設動作是在已滿足叫用計數和中斷點條件時中斷執行。 **偵錯工具中 [叫用時]** [!INCLUDE[tsql](../../includes/tsql-md.md)] 動作的主要用法是透過指定列印訊息，將資訊列印至偵錯工具 [輸出]  視窗。  
   
- 列印訊息是在 [列印訊息]  選項中指定，並指定為文字字串，其中的運算式包含來自偵錯中 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的資訊。 運算式包含：  
+列印訊息是在 [列印訊息]  選項中指定，並指定為文字字串，其中的運算式包含來自偵錯中 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的資訊。 運算式包含：  
   
--   以大括號 ({}) 括住的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 運算式可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變數、參數和內建函數。 範例包括 {@MyVariable}、{@NameParameter}、{@@SPID} 或 {SERVERPROPERTY('ProcessID')}。  
+-   以大括號 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 括住的 {} 運算式。 運算式可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變數、參數和內建函數。 範例包括 {@MyVariable}、{@NameParameter}、{@@SPID} 或 {SERVERPROPERTY('ProcessID')}。  
   
 -   下列其中一個關鍵字：  
   

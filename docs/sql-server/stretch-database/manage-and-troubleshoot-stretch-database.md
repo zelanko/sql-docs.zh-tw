@@ -14,13 +14,13 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844613"
 ---
-# <a name="manage-and-troubleshoot-stretch-database"></a>管理 Stretch Database 並對其進行疑難排解
+# <a name="manage-and-troubleshoot-stretch-database"></a>Stretch Database 的管理和疑難排解
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
@@ -42,10 +42,10 @@ GO
 ## <a name="manage-data-migration"></a>管理資料移轉  
   
 ### <a name="check-the-filter-function-applied-to-a-table"></a>檢查篩選函數是否已套用至資料表  
- 開啟 **sys.remote_data_archive_tables** 目錄檢視，並檢查 **filter_predicate** 資料行的值，以識別 Stretch Database 用什麼函數來選取要移轉的資料列。 若值為 Null，則整個資料表都適合進行移轉。 如需詳細資訊，請參閱 [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) 和[使用篩選函數選取要移轉的資料列](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。  
+ 開啟 **sys.remote_data_archive_tables** 目錄檢視，並檢查 **filter_predicate** 資料行的值，以識別 Stretch Database 用什麼函數來選取要移轉的資料列。 如果值為 Null，便代表整個資料表皆符合移轉資格。 如需詳細資訊，請參閱 [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) 和[使用篩選函數選取要移轉的資料列](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。  
   
 ###  <a name="Migration"></a> 檢查資料移轉狀態  
- 若要在 Stretch Database 監視器中監視資料移轉，請針對 SQL Server Management Studio 中的資料庫，選取 [工作 | 延展 | 監視]  。 如需詳細資訊，請參閱 [Monitor and troubleshoot data migration &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) (監視及疑難排解資料移轉 &#40;Stretch Database&#41;)。  
+ 若要在 Stretch Database 監視器中監視資料移轉，請針對 SQL Server Management Studio 中的資料庫，選取 [工作 | 延展 | 監視]  。 如需詳細資訊，請參閱 [監視和疑難排解資料移轉 &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。  
   
  或者，開啟 **sys.dm_db_rda_migration_status** 動態管理檢視，查看已移轉的批次和資料列數目。  
   
@@ -72,7 +72,7 @@ GO
 ## <a name="manage-table-schema"></a>管理資料表結構描述
 
 ### <a name="dont-change-the-schema-of-the-remote-table"></a>請不要變更遠端資料表的結構描述  
- 請不要變更針對 Stretch Database 設定且已與 SQL Server 資料表建立關聯之遠端 Azure 資料表的結構描述。 尤其不要修改資料行的名稱或資料類型。 針對 SQL Server 資料表的結構描述與遠端資料表的結構描述，Stretch Database 功能可在兩者的相對關係方面進行各種假設。 如果您變更遠端結構描述，Stretch Database 就無法再使用已變更的資料表。  
+ 請不要變更針對 Stretch Database 設定且已與 SQL Server 資料表建立關聯之遠端 Azure 資料表的結構描述。 尤其不要修改資料行的名稱或資料類型。 針對 SQL Server 資料表的結構描述與遠端資料表的結構描述，Stretch Database 功能可在兩者的相對關係方面進行各種假設。 如果您變更遠端結構描述，Stretch Database 針對已變更資料表將會停止運作。  
 
 ### <a name="reconcile-table-columns"></a>協調資料表資料行  
 如果您不小心刪除遠端資料表中的資料行，可執行 **sp_rda_reconcile_columns** ，將存在於已啟用延展功能的 SQL Server 資料表中，但遠端資料表卻沒有的資料行加入遠端資料表中。 如需詳細資訊，請參閱 [sys.sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md)。  
@@ -84,7 +84,7 @@ GO
  
 ## <a name="manage-performance-and-costs"></a>管理效能和成本  
   
-### <a name="troubleshoot-query-performance"></a>對查詢效能進行疑難排解  
+### <a name="troubleshoot-query-performance"></a>針對查詢效能進行疑難排解  
   如果查詢包含啟用 Stretch 功能的資料表，預期的執行速度會比之前未啟用 Stretch 功能時更慢。 如果查詢效能大幅降低，請檢閱下列可能的問題。  
   
 -   您的 Azure 伺服器與 SQL Server 是否位於不同的地理區域？ 請將 Azure 伺服器設為與 SQL Server 相同的地理區域，以縮短網路延遲。  

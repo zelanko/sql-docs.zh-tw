@@ -1,10 +1,9 @@
 ---
-title: 指定搜尋條件 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 指定搜尋條件
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 18e2c759-68ec-4efe-b208-2f73418cd9bd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1cdf4fc43478a8c1a6e4eca052abbec5c788263f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 424615ed5edfb74b4c31d048425ce700db66b483
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263554"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254951"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>指定搜尋條件 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

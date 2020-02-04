@@ -1,10 +1,9 @@
 ---
-title: 移除聯結 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 移除聯結
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: ccc212a1-fd13-48d6-85e5-5ff310c34bbd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d36c4abea4cf28e870a74d95c49a56f477a3eb1a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: df6fe66cdc1b503342ed4a7bcf765307f38a0cf7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266272"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255215"
 ---
 # <a name="remove-joins-visual-database-tools"></a>移除聯結 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -11,16 +11,16 @@ ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c7fa36db48a7912951f0232136945798caf6f7f7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727596"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>從 Python 或 R 指令碼對 SQL Server 的回送連線
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-了解如何使用回送連線，透過 [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) 連回到 SQL Server，以從 `sp_execute_external_script` 執行的 Python 或 R 指令碼讀取或寫入資料。 當您使用 `sp_execute_external_script` 的 **InputDataSet** 與 **OutputDataSet** 引數時，無法這樣做。
+了解如何使用回送連線，透過 [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) 連回到 SQL Server，以從 `sp_execute_external_script` 執行的 Python 或 R 指令碼讀取或寫入資料。 當您使用 **的**InputDataSet**與**OutputDataSet`sp_execute_external_script` 引數時，無法這樣做。
 
 ## <a name="connection-string"></a>連接字串
 
@@ -52,11 +52,11 @@ ms.locfileid: "73727596"
 
 ## <a name="generate-connection-string-with-revoscalepy-for-python"></a>使用適用於 Python 的 revoscalepy 產生連接字串
 
-您可以使用 [revoscalepy](../python/ref-py-revoscalepy.md) 中的 API **rx_get_sql_loopback_connection_string()** 為 Python 指令碼中的回送連線產生正確的連接字串。
+您可以使用 **revoscalepy** 中的 API [rx_get_sql_loopback_connection_string()](../python/ref-py-revoscalepy.md) 為 Python 指令碼中的回送連線產生正確的連接字串。
 
 它接受下列引數：
 
-| 引數 | Description |
+| 引數 | 描述 |
 |-|-|
 | name_of_database | 要建立連線的目標資料庫名稱 |
 | odbc_driver | ODBC 驅動程式的名稱 |
@@ -100,11 +100,11 @@ GO
 
 ## <a name="generate-connection-string-with-revoscaler-for-r"></a>使用適用於 R 的 RevoScaleR 產生連接字串
 
-您可以使用 [RevoScaleR](../r/ref-r-revoscaler.md) 中的 API **rxGetSqlLoopbackConnectionString()** 為 R 指令碼中的回送連線產生正確的連接字串。
+您可以使用 **RevoScaleR** 中的 API [rxGetSqlLoopbackConnectionString()](../r/ref-r-revoscaler.md) 為 R 指令碼中的回送連線產生正確的連接字串。
 
 它接受下列引數：
 
-| 引數 | Description |
+| 引數 | 描述 |
 |-|-|
 | nameOfDatabase | 要建立連線的目標資料庫名稱 |
 | odbcDriver | ODBC 驅動程式的名稱 |

@@ -11,10 +11,10 @@ ms.assetid: 079c7eb7-71e4-4109-83de-f6d785433c95
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 069b366f4414d4d6706ba14eb44662996273dad0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971188"
 ---
 # <a name="sqlserverdriver-members"></a>SQLServerDriver 成員
@@ -24,7 +24,7 @@ ms.locfileid: "67971188"
   
 ## <a name="constructors"></a>建構函式  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[SQLServerDriver ()](../../../connect/jdbc/reference/sqlserverdriver-constructor.md)|初始化 [SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md) 類別的新執行個體。|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67971188"
   
 ## <a name="methods"></a>方法  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[acceptsURL](../../../connect/jdbc/reference/acceptsurl-method-sqlserverdriver.md)|確認給定的 URL 有效。|  
 |[connect](../../../connect/jdbc/reference/connect-method-sqlserverdriver.md)|建立與資料庫的連接。|  

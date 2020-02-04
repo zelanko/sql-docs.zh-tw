@@ -1,6 +1,6 @@
 ---
-title: TCP/IP 屬性 (IP 位址索引標籤) |Microsoft Docs
-ms.custom: ''
+title: TCP/IP 屬性 (IP 位址索引標籤)
+ms.custom: seo-lt-2019
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 927f732d4f04c43b5e2973a82509e4da7970a448
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: f1afdb9d25d599f32b2efb9d5339ef4afffd6f31
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023816"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307559"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 屬性 (IP 位址索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  您可以使用 [TCP/IP 屬性 (IP 位址索引標籤)]  對話方塊，設定特定 IP 位址的 TCP/IP 通訊協定選項。 您只能透過選取 **[IPAll]** ，一次設定所有位址的 **[TCP 動態通訊埠]** 和 **[TCP 通訊埠]** 。  
+  您可以使用 **[TCP/IP 屬性 (IP 位址索引標籤)]** 對話方塊，設定特定 IP 位址的 TCP/IP 通訊協定選項。 您只能透過選取 **[IPAll]** ，一次設定所有位址的 **[TCP 動態通訊埠]** 和 **[TCP 通訊埠]** 。  
   
- 重新啟動 SQL Server 之後，變更才會生效。 如需啟動和停止 SQL Server Browser 服務的資訊，請參閱[啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+ 重新啟動 SQL Server 之後，變更才會生效。 如需啟動和停止 SQL Server Browser 服務的資訊，請參閱 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 ## <a name="static-vs-dynamic-ports"></a>靜態與動態通訊埠  
  預設的 SQL Server 執行個體使用通訊埠 1433 接聽內送連接。 為了安全上的理由或因為用戶端應用程式的需求，可以變更此通訊埠。 根據預設，具名執行個體 (包括 SQL Server Express) 設定為接聽動態通訊埠。 若要設定靜態通訊埠，請將 **[TCP 動態通訊埠]** 方塊保留空白，並於 **[TCP 通訊埠]** 方塊中提供可用的通訊埠編號。 如需有關在防火牆中開啟通訊埠的詳細資訊，請參閱線上叢書中的＜將 Windows 防火牆設定成允許 SQL Server 存取＞。  
@@ -33,7 +33,7 @@ ms.locfileid: "68023816"
  當 SQL Server 的執行個體設為接聽動態通訊埠，就會在啟動時檢查作業系統是否有可用的通訊埠，並為該通訊埠開啟一個端點。 內送連接必須指定要連接的通訊埠編號。 因為 SQL Server 每次啟動時通訊埠編號都會變更，所以 SQL Server 會提供 SQL Server Browser 服務以監視通訊埠，並將內送連接導向該執行個體目前的通訊埠。 使用動態通訊埠時，透過防火牆連接 SQL Server 將變得非常複雜，因為 SQL Server 重新啟動時通訊埠編號可能會變更，因此需要變更防火牆設定。 若要避免透過防火牆連接時發生問題，請將 SQL Server 設定為使用靜態通訊埠。  
   
 ## <a name="options"></a>選項。  
- **作用中**  
+ **使用中**  
  指出電腦上的 IP 位址為使用中狀態。 不適用於 **[IPAll]** 。  
   
  **已啟用**  
@@ -62,7 +62,7 @@ ms.locfileid: "68023816"
   
 ## <a name="see-also"></a>另請參閱  
  [選擇網路通訊協定](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
- [Creating a Valid Connection String Using TCP IP](creating-a-valid-connection-string-using-tcp-ip.md)   
+ [使用 TCP IP 建立有效的連接字串](creating-a-valid-connection-string-using-tcp-ip.md)   
  [SQL Server Browser 服務](sql-server-browser-service.md)  
   
   

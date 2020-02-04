@@ -1,10 +1,9 @@
 ---
-title: 更新結果的規則 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 更新結果的規則
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bef3b9612b68c253fed032fe63d5d67e61816dff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 95d22a06194bfd4121eff4ba01cb2788cf095bf8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255670"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255156"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>更新結果的規格 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,19 +40,19 @@ ms.locfileid: "68255670"
 |---------|---------------------------|  
 |查詢是根據輸出清單中有主索引鍵的一份資料表|能 (不含下列清單)。|  
 |查詢是根據不含唯一索引，也沒有主索引鍵的一份資料表|依照查詢和資料庫而定。 如果有足夠的資訊則可單獨識別出記錄，有些資料庫允許更新。|  
-|查詢是根據未相連結的多份資料表|資料分割|  
-|查詢是根據資料庫中標記為唯讀的資料|資料分割|  
+|查詢是根據未相連結的多份資料表|否。|  
+|查詢是根據資料庫中標記為唯讀的資料|否。|  
 |查詢是根據一份檢視，牽涉無條件約束 (Constraint) 的一份資料表|能 (不含下列清單)。|  
 |查詢是根據一對一關聯性 (One-To-One Relationship) 所連結的資料表|能 (不含下列清單)。|  
 |查詢是根據一對多關聯性 (One-To-Many Relationship) 所連結的資料表|通常可以。|  
-|查詢是根據三份以上的資料表，具有多對多關聯性 (Many-To-Many Relationship)|資料分割|  
+|查詢是根據三份以上的資料表，具有多對多關聯性 (Many-To-Many Relationship)|否。|  
 |查詢是根據未獲得更新使用權限的一份資料表|可刪除但不能更新。|  
 |查詢是根據未獲得刪除使用權限的一份資料表|可更新但不能刪除。|  
-|彙總查詢 (Aggregate Query)|資料分割|  
-|查詢是根據包含總計或彙總函式 (Aggregate Function) 的子查詢 (Subquery)|資料分割|  
-|查詢包含有 DISTINCT 關鍵字，以排除重複的資料列|資料分割|  
-|查詢的 FROM 子句包含使用者自訂的函數，可傳回資料表，而且此使用者自訂的函數並包含多選陳述式|資料分割|  
-|查詢的 FROM 子句包含使用者自訂的內嵌 (Inline) 函數|是的。|  
+|彙總查詢 (Aggregate Query)|否。|  
+|查詢是根據包含總計或彙總函式 (Aggregate Function) 的子查詢 (Subquery)|否。|  
+|查詢包含有 DISTINCT 關鍵字，以排除重複的資料列|否。|  
+|查詢的 FROM 子句包含使用者自訂的函數，可傳回資料表，而且此使用者自訂的函數並包含多選陳述式|否。|  
+|查詢的 FROM 子句包含使用者自訂的內嵌 (Inline) 函數|是。|  
   
 此外，查詢結果中可能有特定的資料行無法更新。 以下的清單是資料行特定類型的摘要，[結果] 窗格不能更新。  
   

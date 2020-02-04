@@ -1,10 +1,9 @@
 ---
-title: 建立查詢 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 建立查詢
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +11,14 @@ helpviewer_keywords:
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ded6c850d45cee6bee2fb820503eb17575a6377d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: f3b3719ae80dca63f8755e3c2a57179e219e1414
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264315"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254287"
 ---
 # <a name="create-queries-visual-database-tools"></a>建立查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

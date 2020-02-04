@@ -19,13 +19,13 @@ ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 59414abbc5c098382ec83d308d135af92f9dbb35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015008"
 ---
-# <a name="sqlsrvnextresult"></a>sqlsrv_next_result
+# <a name="sqlsrv_next_result"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 讓指定陳述式的下一個結果 (結果集、資料列計數或輸出參數) 成為作用中。  
@@ -185,7 +185,7 @@ sqlsrv_close( $conn );
 > [!NOTE]  
 > 批次查詢或預存程序所傳回的第一個 (或唯一) 結果為作用中，而不需要呼叫 **sqlsrv_next_result**。  
   
-此範例會使用 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫的 *Purchasing.ProductReview* 資料表，並假設此資料庫已安裝在伺服器上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例會使用 *AdventureWorks* 資料庫的 [Purchasing.ProductReview](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料表，並假設此資料庫已安裝在伺服器上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  

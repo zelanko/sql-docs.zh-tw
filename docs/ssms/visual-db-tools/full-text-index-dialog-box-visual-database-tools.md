@@ -1,10 +1,9 @@
 ---
-title: 全文檢索索引對話方塊 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 全文檢索索引對話方塊
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 926e3d42d21e24d9a3e76d10966e3d90381ca843
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 3056ebfc960b26dd3035f1aefd1932151bad207a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254619"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247256"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>全文檢索索引對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "68254619"
 **選取的全文檢索索引**  
 列出現有的全文檢索索引。 選取索引，在方格右側顯示其屬性。 如果清單是空的，表示資料表尚未定義全文檢索關聯性。  
   
-**[加入]**  
+**加入**  
 建立新的全文檢索索引。  
   
 **刪除**  
@@ -60,7 +61,7 @@ ms.locfileid: "68254619"
 **資料表設計工具類別目錄**  
 展開時會顯示指示索引如何執行的屬性。  
   
-**作用中**  
+**使用中**  
 指示是否能夠使用這個全文檢索索引執行全文檢索搜尋。  
   
 **變更追蹤設定**  
@@ -88,7 +89,7 @@ ms.locfileid: "68254619"
 顯示下一個搜耙將會開始的日期和時間。  
   
 **目前或上一個搜耙的類型**  
-顯示目前或最近搜耙的類型：[完整]、[累加]、[更新] 或 [自動傳播]。  
+顯示目前或最近搜耙的類型：[完整]、[累加]、[更新] 或 [自動傳用]。  
   
 **唯一索引名稱**  
 顯示這個資料庫中擁有唯一單一資料行索引的所有資料行名稱的清單。 這些資料行可用來建立全文檢索索引。  

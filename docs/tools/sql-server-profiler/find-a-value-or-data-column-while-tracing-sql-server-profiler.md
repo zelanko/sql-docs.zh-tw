@@ -1,29 +1,28 @@
 ---
-title: 在追蹤時尋找值或資料行 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 在追蹤時尋找值或資料行
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- searching while trace running
-- traces [SQL Server], running
-- traces [SQL Server], searching while trace running
 ms.assetid: fa5212af-1f49-4227-9d80-58003062146f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 515853eedcee1659a344845405663ad3c7e1c5dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: e78150643556a418226cff36e9aaa2a3fa3f555c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074987"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307199"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>在追蹤時尋找值或資料行 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  此主題描述如何在執行追蹤時，使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]在追蹤的輸出中搜尋特定的值或資料行。  
+
+此主題描述如何在執行追蹤時，使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]在追蹤的輸出中搜尋特定的值或資料行。  
   
 ### <a name="to-find-a-value-or-data-column-while-running-a-trace"></a>若要在執行追蹤時尋找值或資料行  
   
