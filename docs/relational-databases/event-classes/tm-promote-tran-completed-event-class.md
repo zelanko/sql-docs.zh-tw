@@ -1,5 +1,5 @@
 ---
-title: TM：Promote Tran Completed 事件類別 | Microsoft Docs
+title: 'TM: Promote Tran Completed 事件類別 | Microsoft 文件'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0671936227892a6a1d01e1bb0a7b246996f836be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125131"
 ---
-# <a name="tm-promote-tran-completed-event-class"></a>TM：Promote Tran Completed 事件類別
+# <a name="tm-promote-tran-completed-event-class"></a>TM: Promote Tran Completed 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  TM：Promote Tran Completed 事件類別指出 PROMOTE TRANSACTION 要求已完成。 要求是從用戶端透過交易管理介面傳送。  
+  TM: Promote Tran Completed 事件類別指出 PROMOTE TRANSACTION 要求已完成。 要求是從用戶端透過交易管理介面傳送。  
   
-## <a name="tm-promote-tran-completed-event-class-data-columns"></a>TM：Promote Tran Completed 事件類別資料行  
+## <a name="tm-promote-tran-completed-event-class-data-columns"></a>TM: Promote Tran Completed 事件類別資料行  
   
-|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |BinaryData|**image**|DTC Xact Token。|2|是|  
@@ -47,7 +47,7 @@ ms.locfileid: "68125131"
 |SessionLoginName|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|成功|**int**|1 = 成功。 0 = 失敗 (例如，1 表示權限檢查成功，而 0 表示該檢查失敗)。|23|是|  
+|Success|**int**|1 = 成功。 0 = 失敗 (例如，1 表示權限檢查成功，而 0 表示該檢查失敗)。|23|是|  
 |TransactionID|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|**bigint**|描述目前交易的 Token。|50|是|  
   

@@ -24,10 +24,10 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0c5c86d90536d1ba7c8acd5402317ff364ffdc67
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73637951"
 ---
 # <a name="data-flow-performance-features"></a>資料流程效能的功能
@@ -80,7 +80,7 @@ ms.locfileid: "73637951"
  請勿增加發生分頁至磁碟之起始點的緩衝區大小。 分頁至磁碟所妨礙的效能超過尚未經過最佳化的緩衝區大小。 若要判斷是否發生分頁，請在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) 的效能嵌入式管理單元中監視 "Buffers spooled" 效能計數器。  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>設定平行執行的封裝  
- 平行執行會改善具有多個實體或邏輯處理器之電腦的效能。 為了在套件中支援平行執行不同工作，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用兩種屬性：**MaxConcurrentExecutables** 和 **EngineThreads**。  
+ 平行執行會改善具有多個實體或邏輯處理器之電腦的效能。 為了在封裝中支援平行執行不同的工作， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用兩種屬性： **MaxConcurrentExecutables** 和 **EngineThreads**。  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables 屬性  
  **MaxConcurrentExecutables** 屬性是封裝本身的屬性。 此屬性會定義可以同時執行多少工作。 預設值為 -1，表示實體或邏輯處理器的數目加上 2。  
@@ -98,7 +98,7 @@ ms.locfileid: "73637951"
 ## <a name="configuring-individual-data-flow-components"></a>設定個別的資料流程元件  
  若要設定個別的資料流程元件以獲得較好的效能，有一些您可以遵循的一般指導方針。 針對每種資料流程元件，也有特定的指導方針：來源、轉換和目的地。  
   
-### <a name="general-guidelines"></a>一般指導方針  
+### <a name="general-guidelines"></a>一般準則  
  不管資料流程元件為何，都有兩個您應該遵循的一般指導方針來改善效能：最佳化查詢與避免不必要的字串。  
   
 #### <a name="optimize-queries"></a>最佳化查詢  
@@ -151,9 +151,9 @@ ms.locfileid: "73637951"
   
  「緩時變維度」轉換中最緩慢的元件通常是一次針對一個單一資料列執行 UPDATE 的「OLE DB 命令」轉換。 因此，改善「緩時變維度」轉換效能最有效的方式就是取代「OLE DB 命令」轉換。 您可以將這些轉換取代為將要更新的所有資料列儲存到臨時資料表的目的地元件。 然後，您可以同時加入針對所有資料列執行以單一資料列集為基礎之 Transact-SQL UPDATE 的「執行 SQL」工作。  
   
- 進階使用者可以針對緩時變維度處理，設計針對大維度進行最佳化的自訂資料流程。 如需取得此方式的討論與範例，請參閱[專案 REAL：Business Intelligence ETL 設計練習](https://www.microsoft.com/download/details.aspx?id=14582) (英文) 白皮書中的＜獨特的維度狀況＞一節。  
+ 進階使用者可以針對緩時變維度處理，設計針對大維度進行最佳化的自訂資料流程。 如需此方式的討論和範例，請參閱＜ [專案 REAL：Business Intelligence ETL 設計練習](https://www.microsoft.com/download/details.aspx?id=14582)＞(英文) 白皮書中的「唯一的維度狀況」一節。  
   
-### <a name="destinations"></a>目的地  
+### <a name="destinations"></a>Destinations  
  為達成較佳的目的地效能，請考慮使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地並測試目的地的效能。  
   
 #### <a name="sql-server-destination"></a>SQL Server 目的地  
@@ -174,11 +174,11 @@ ms.locfileid: "73637951"
 ## <a name="related-content"></a>相關內容  
  **文件和部落格文章**  
   
--   technet.microsoft.com 上的技術文章 [SQL Server 2005 Integration Services：效能策略](https://go.microsoft.com/fwlink/?LinkId=98899) (英文)  
+-   technet.microsoft.com 上的技術文件： [SQL Server 2005 Integration Services：效能策略](https://go.microsoft.com/fwlink/?LinkId=98899)  
   
--   technet.microsoft.com 上的技術文章 [Integration Services：效能微調技術](https://go.microsoft.com/fwlink/?LinkId=98900) (英文)  
+-   technet.microsoft.com 上的技術文件： [Integration Services：效能微調技術](https://go.microsoft.com/fwlink/?LinkId=98900)  
   
--   _BI 和分析的 SQLCAT 指南_中的技術文件：[將同步轉換分割為多個工作來增加管線的輸送量](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)
+-   [BI 和分析的 SQLCAT 指南](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)中的技術文件：_將同步轉換分割為多個工作來增加管線的輸送量_
   
 -   msdn.microsoft.com 上的技術文章： [資料載入效能指南](https://go.microsoft.com/fwlink/?LinkId=220816)。  
   
@@ -190,7 +190,7 @@ ms.locfileid: "73637951"
   
 -   blogs.msdn.com 上的部落格文章： [疑難排解 SSIS 封裝效能問題](https://go.microsoft.com/fwlink/?LinkId=238156)  
   
- **視訊**  
+ **影片**  
   
 -   影片系列， [Designing and Tuning for Performance your SSIS packages in the Enterprise (SQL Video Series)](https://go.microsoft.com/fwlink/?LinkId=400878)(設計及微調企業中 SSIS 封裝的效能 (SQL 影片系列))  
   
@@ -206,6 +206,6 @@ ms.locfileid: "73637951"
   
 ## <a name="see-also"></a>另請參閱  
  [疑難排解封裝開發的工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [套件執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

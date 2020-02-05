@@ -14,10 +14,10 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8c1447bfb5a4776430d24959267c7ec29aa48e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133595"
 ---
 # <a name="master-database"></a>master 資料庫
@@ -51,16 +51,16 @@ ms.locfileid: "68133595"
 
 |資料庫選項|預設值|可以修改|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|否|  
+|ALLOW_SNAPSHOT_ISOLATION|開啟|否|  
 |ANSI_NULL_DEFAULT|OFF|是|  
 |ANSI_NULLS|OFF|是|  
 |ANSI_PADDING|OFF|是|  
 |ANSI_WARNINGS|OFF|是|  
 |ARITHABORT|OFF|是|  
 |AUTO_CLOSE|OFF|否|  
-|AUTO_CREATE_STATISTICS|ON|是|  
+|AUTO_CREATE_STATISTICS|開啟|是|  
 |AUTO_SHRINK|OFF|否|  
-|AUTO_UPDATE_STATISTICS|ON|是|  
+|AUTO_UPDATE_STATISTICS|開啟|是|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|是|  
 |CHANGE_TRACKING|OFF|否|  
 |CONCAT_NULL_YIELDS_NULL|OFF|是|  
@@ -68,15 +68,15 @@ ms.locfileid: "68133595"
 |CURSOR_DEFAULT|GLOBAL|是|  
 |資料庫可用性選項|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|否<br /><br /> 否<br /><br /> 否|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|是|  
-|DB_CHAINING|ON|否|  
+|DB_CHAINING|開啟|否|  
 |ENCRYPTION|OFF|否|  
-|MIXED_PAGE_ALLOCATION|ON|否|  
+|MIXED_PAGE_ALLOCATION|開啟|否|  
 |NUMERIC_ROUNDABORT|OFF|是|  
 |PAGE_VERIFY|CHECKSUM|是|  
-|PARAMETERIZATION|SIMPLE|是|  
+|PARAMETERIZATION|簡單|是|  
 |QUOTED_IDENTIFIER|OFF|是|  
 |READ_COMMITTED_SNAPSHOT|OFF|否|  
-|RECOVERY|SIMPLE|是|  
+|RECOVERY|簡單|是|  
 |RECURSIVE_TRIGGERS|OFF|是|  
 |Service Broker 選項|DISABLE_BROKER|否|  
 |TRUSTWORTHY|OFF|是|  

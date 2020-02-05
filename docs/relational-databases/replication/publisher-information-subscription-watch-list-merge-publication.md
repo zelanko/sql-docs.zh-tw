@@ -14,24 +14,24 @@ ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 39c036c354716118fc4df791084f9838c6af5fea
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75320617"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication"></a>發行者資訊，訂閱監看清單 (合併式發行集)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  執行 **和更新版本的散發者可以使用** [訂閱監看清單] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 索引標籤。這個索引標籤的用途是顯示選取發行者端之所有可用發行集的相關訂閱資訊。 您可以篩選訂閱清單以查看錯誤、警告以及任何執行不良的訂閱。 此索引標籤為系統管理員提供一個可監視「發行者」端所有複寫活動的單一位置：「複寫監視器」會根據選取的複寫類型，以及在 [顯示]  下拉式清單方塊中選擇的選項，顯示所有需要注意的訂閱。 由於此索引標籤上顯示的項目會依據目前的狀態與效能，因此唯有在目前符合 **[顯示]** 清單方塊中之選項的訂閱，才會在這個頁面上顯示。  
+  執行 **和更新版本的散發者可以使用** [訂閱監看清單] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 索引標籤。這個索引標籤的用途是顯示選取發行者端之所有可用發行集的相關訂閱資訊。 您可以篩選訂閱清單以查看錯誤、警告以及任何執行不良的訂閱。 此索引標籤為管理員提供監視發行者端所有複寫活動的單一位置：複寫監視器會根據選取的複寫類型和 **[顯示]** 下拉式清單方塊中選擇的選項，顯示需要注意的所有訂閱。 由於此索引標籤上顯示的項目會依據目前的狀態與效能，因此唯有在目前符合 **[顯示]** 清單方塊中之選項的訂閱，才會在這個頁面上顯示。  
   
 ## <a name="options"></a>選項。  
  如需詳細資訊以及與訂閱相關的工作，請以滑鼠右鍵按一下該訂閱的資料列，然後按一下捷徑功能表上的選項。 若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  
   
--   **排序**：在 [排序資料行]  對話方塊中排序一個或多個資料行。  
+-   **排序**：在 **[排序資料行]** 對話方塊中排序一個或多個資料行。  
   
--   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及這些資料行在 [選擇資料行]  對話方塊中的顯示順序。  
+-   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及在 **[選擇資料行]** 對話方塊中顯示這些資料行所依循的順序。  
   
--   **篩選條件**：根據 [篩選設定]  對話方塊中的資料行值，篩選方格中的資料列。  
+-   **篩選**：根據 **[篩選設定]** 對話方塊中的資料行值，篩選方格中的資料列。  
   
 -   **清除篩選**：清除方格的所有篩選設定。  
   
@@ -71,13 +71,13 @@ ms.locfileid: "75320617"
  只有設定臨界值時，才會顯示 **[即將過期/已過期]** 和 **[長時間執行的合併]** 狀態值。 只有在相同連接類型 (撥號或 LAN) 的訂閱經過五次同步處理之後，才會顯示 **[效能嚴重不足]** 的狀態值。 如需效能測量和設定閾值的資訊，請參閱[使用複寫監視器監視效能](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)和[在複寫監視器中設定閾值和警告](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
  **訂用帳戶**  
- 每一個訂閱的名稱，格式為：*SubscriberName:SubscriptionDatabaseName*。  
+ 每一個訂閱名稱的格式為：*SubscriberName: SubscriptionDatabaseName*。  
   
  **易記名稱**  
- 每一個訂閱的描述。 此描述輸入於 [訂閱屬性]  對話方塊中或以 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 的 `@description` 參數或 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) 來指定。 使用者通常使用描述作為訂閱的「易記名稱」或暱稱。  
+ 每一個訂閱的描述。 此描述輸入於 [訂閱屬性]  對話方塊中或以 `@description`sp_addmergesubscription[ 的 ](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 參數或 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) 來指定。 使用者通常使用描述作為訂閱的「易記名稱」或暱稱。  
   
  **發行集**  
- 與訂閱同步處理的發行集名稱，格式為：*PublicationDatabaseName:PublicationName*。  
+ 與訂閱同步處理的發行集名稱，格式如下： *PublicationDatabaseName: PublicationName*。  
   
  **效能**  
  每一個訂閱的效能評比，是以複寫監視器所測量之傳遞速率的最新數據為基礎。 評比會根據相同連接類型 (撥號或 LAN) 的發行集訂閱，進行個別訂閱效能和平均記錄效能的比較來決定。 在相同連接類型上發生過五次同步處理，且每次同步處理都具有 50 或更多個變更之後，複寫監視器才會顯示值。 如果具有 50 或更多個變更的同步處理少於五次，或者最近的同步處理少於 50 個變更，則此資料行為空白。  

@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: fd6c55f439b9d95473c5e36ea88cc7c5e1fb555e
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72915987"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>驗證部署到 Azure 的 SQL Server Integration Services (SSIS) 套件
@@ -45,7 +45,7 @@ ms.locfileid: "72915987"
 |--------------------|----------|-----------|-----|-----------|-------------------|
 | Ado                | âœ“        |           |     | âœ“         | âœ“                 |
 | AdoNet             | âœ“        |           |     | âœ“         | âœ“                 |
-| Cache              |          | âœ“         | âœ“   |           |                   |
+| 快取              |          | âœ“         | âœ“   |           |                   |
 | Excel              |          | âœ“         | âœ“   |           |                   |
 | 檔案               |          | âœ“         | âœ“   |           |                   |
 | FlatFile           |          | âœ“         | âœ“   |           |                   |

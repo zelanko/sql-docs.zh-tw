@@ -23,10 +23,10 @@ ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 369dd7ec16ee530d7612222ad7e77dd6faf66e14
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73980940"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
@@ -67,7 +67,7 @@ ALL SERVER
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 啟用觸發程序並不會重新建立它。 停用的觸發程序仍然是目前資料庫中的一個物件，但不會引發。 若要啟用觸發程序，在執行原先已程式化的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時，便會引發該觸發程序。 您可以使用 [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) 停用觸發程序。 您也可以使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)，來停用或啟用資料表上定義的 DML 觸發程序。  
   
 ## <a name="permissions"></a>權限  

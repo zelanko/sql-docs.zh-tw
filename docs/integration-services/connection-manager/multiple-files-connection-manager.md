@@ -18,10 +18,10 @@ ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1bee1c469ca7febfa114a3143d5842db74356ed9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294366"
 ---
 # <a name="multiple-files-connection-manager"></a>多個檔案連接管理員
@@ -39,7 +39,7 @@ ms.locfileid: "71294366"
   
  下表列出 **FileUsageType**的值。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|「多個檔案」連接管理員會使用現有的檔案。|  
 |**1**|「多個檔案」連接管理員會建立檔案。|  
@@ -63,12 +63,12 @@ ms.locfileid: "71294366"
   
  \<*path*>|\<*path*>  
   
- 您也可以使用萬用字元來指定多個檔案或資料夾。 例如，若要參考 C 磁碟機上的所有文字檔， **ConnectionString** 屬性的值可以設定為 C:\\*.txt。  
+ 您也可以使用萬用字元來指定多個檔案或資料夾。 例如，若要參考 C 磁碟機上的所有文字檔， **ConnectionString** 屬性的值可以設定為 C:\\\*.txt。  
   
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具中設定之屬性的詳細資訊，請參閱 [Add File Connection Manager Dialog Box UI Reference](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)(加入 [檔案連線管理員] 對話方塊 UI 參考)。  
+ 如需可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具中設定之屬性的詳細資訊，請參閱 [加入檔案連接管理員對話方塊 UI 參考](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)(加入 [檔案連線管理員] 對話方塊 UI 參考)。  
   
- 如需以程式設計方式設定連線管理員的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)＞。  
+ 如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
   

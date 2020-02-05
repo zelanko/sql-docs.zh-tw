@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c4bdf8b5057fcbf405d78872f7329c70c754ff76
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843336"
 ---
 # <a name="session_user-transact-sql"></a>SESSION_USER (Transact-SQL)
@@ -43,10 +43,10 @@ ms.locfileid: "73843336"
 SESSION_USER  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  請在 CREATE TABLE 或 ALTER TABLE 陳述式中，搭配 DEFAULT 條件約束使用 SESSION_USER，或者將它作為任何標準函數使用。 如果未指定預設值，可將 SESSION_USER 插入資料表中。 這個函數沒有引數。 SESSION_USER 可用於查詢。  
   
  如果 SESSION_USER 是在內容切換後面呼叫，SESSION_USER 便會傳回模擬內容的使用者名稱。  
@@ -139,7 +139,7 @@ Order #   Customer #  When Delivered       Received By
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>C.利用 SESSION_USER 傳回目前工作階段的使用者名稱  
+### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>C：使用 SESSION_USER 傳回目前工作階段的使用者名稱  
  下列範例會傳回目前工作階段的工作階段使用者。  
   
 ```  

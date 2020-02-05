@@ -17,10 +17,10 @@ ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 94b495bf507dcbe67c305dbb69454bad943d2003
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014437"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>將次要資料庫從可用性群組移除 (SQL Server)
@@ -78,7 +78,7 @@ ms.locfileid: "68014437"
   
 1.  將目錄切換到 (**cd**) 裝載次要複本的伺服器執行個體。  
   
-2.  使用 **Remove-SqlAvailabilityDatabase** Cmdlet，指定要從可用性群組移除的可用性資料庫名稱。 連接到裝載次要複本的伺服器執行個體時，只會從可用性群組移除本機次要資料庫。  
+2.  使用 **Remove-SqlAvailabilityDatabase** 指令程式，指定要從可用性群組移除的可用性資料庫名稱。 連接到裝載次要複本的伺服器執行個體時，只會從可用性群組移除本機次要資料庫。  
   
      例如，下列命令會從伺服器執行個體 `MyDb8` 所裝載的次要複本中移除次要資料庫 `SecondaryComputer\Instance`。 已移除之次要資料庫的資料同步處理會停止。 此命令不會影響主要資料庫或任何其他次要資料庫。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68014437"
   
 -   [SQL Server PowerShell 提供者](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 後續操作：從可用性群組中移除次要資料庫之後  
+##  <a name="FollowUp"></a> 待處理：從可用性群組中移除次要資料庫之後  
  次要資料庫已移除時，它不再聯結至可用性群組，而且可用性群組會將移除之次要資料庫的所有相關資訊捨棄。 移除的次要資料庫處於 RESTORING 狀態。  
   
 > [!TIP]  

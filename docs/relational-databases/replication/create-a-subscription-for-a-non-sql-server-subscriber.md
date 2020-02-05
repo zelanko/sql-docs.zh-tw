@@ -16,10 +16,10 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75322001"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>為非 SQL Server 訂閱者建立訂閱
@@ -47,7 +47,7 @@ ms.locfileid: "75322001"
   
          為非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者啟用發行集後建立快照集，以確定「快照集代理程式」會產生適用於非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的快照集與初始化指令碼。  
   
-3.  使用 [發行集屬性 - \<發行集名稱>]  對話方塊，啟用非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發行集。 如需有關此步驟的詳細資訊，請參閱＜ [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) ＞。  
+3.  使用 [發行集屬性 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行集名稱>] **\< 對話方塊，啟用非**  訂閱者的發行集。 如需有關此步驟的詳細資訊，請參閱＜ [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) ＞。  
   
 4.  使用「新增訂閱精靈」建立訂閱。 本主題提供有關這個步驟的詳細資訊。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "75322001"
   
 #### <a name="to-retain-tables-at-the-subscriber"></a>將資料表保留在訂閱者端  
   
--   依預設，若啟用非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發行集，就會將 **pre_creation_cmd** 發行項屬性的值設定為 'drop'。 這項設定會指定當複寫符合發行項中的資料表名稱時，應該要卸除「訂閱者」端的資料表。 如果您在訂閱者端有想要保留的現有資料表，請針對每一個發行項使用 [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 預存程序，並為 **pre_creation_cmd**指定 'none' 值。 第 1 課：建立 Windows Azure 儲存體物件`sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`。  
+-   依預設，若啟用非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發行集，就會將 **pre_creation_cmd** 發行項屬性的值設定為 'drop'。 這項設定會指定當複寫符合發行項中的資料表名稱時，應該要卸除「訂閱者」端的資料表。 如果您在訂閱者端有想要保留的現有資料表，請針對每一個發行項使用 [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 預存程序，並為 **pre_creation_cmd**指定 'none' 值。 `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`第 1 課：建立 Windows Azure 儲存體物件{2}。  
   
 #### <a name="to-generate-a-snapshot-for-the-publication"></a>產生發行集的快照集  
   
@@ -139,7 +139,7 @@ ms.locfileid: "75322001"
   
 2.  以滑鼠右鍵按一下發行集，然後再按一下 **[檢視快照集代理程式的狀態]** 。  
   
-3.  在 [檢視快照集代理程式的狀態 - \<發行集>]  對話方塊中，按一下 [啟動]  。  
+3.  在 [檢視快照集代理程式的狀態 - **發行集>]\<** 對話方塊中，按一下 [啟動]  。  
   
  「快照集代理程式」完成產生快照集後，會顯示一個訊息，例如「[100%] 已產生了 17 個發行項的快照集」。  
   
@@ -153,31 +153,31 @@ ms.locfileid: "75322001"
   
 1.  同時在發行者和散發者上針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者安裝最近的 OLE DB 提供者。 如需 OLE DB 提供者的複寫需求，請參閱＜ [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)＞、＜ [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md)＞、＜ [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)＞。  
   
-2.  在發行集資料庫的發行者端，藉由執行 [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) 來確認發行集支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。  
+2.  在發行集資料庫的發行者端，藉由執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_helppublication &#40;Transact-SQL&#41;[ 來確認發行集支援非 ](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) 訂閱者。  
   
     -   如果 **enabled_for_het_sub** 的值為 1，表示支援非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。  
   
-    -   如果 **enabled_for_het_sub** 的值為 0，請執行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，並針對 `@property` 指定 **enabled_for_het_sub**，以及針對 `@value` 指定 **true**。  
+    -   如果 **enabled_for_het_sub** 的值為 0，請執行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，並針對 **指定**enabled_for_het_sub`@property`，以及針對 **指定**true`@value`。  
   
         > [!NOTE]  
         >  在將 **enabled_for_het_sub** 變更為 **true**之前，您必須先卸除此發行集的任何現有訂閱。 當此發行集同時支援更新訂閱時，您無法將 **enabled_for_het_sub** 設定為 **true** 。 變更 **enabled_for_het_sub** 會影響其他發行集屬性。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
   
-3.  在發行集資料庫的發行者端，執行 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 `@publication`、`@subscriber`，針對 `@destination_db` 指定 `(default destination)` 值、針對 `@subscription_type` 指定 **push** 值，並針對 `@subscriber_type` 指定值 3 (指定 OLE DB 提供者)。  
+3.  在發行集資料庫的發行者端，執行 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 `@publication`、`@subscriber`，針對 `(default destination)` 指定 `@destination_db` 值、針對 **指定**push`@subscription_type` 值，並針對 `@subscriber_type` 指定值 3 (指定 OLE DB 提供者)。  
   
 4.  在發行集資料庫的發行者端，執行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)。 指定下列項目：  
   
     -   `@subscriber` 和 `@publication` 參數。  
   
-    -   `@subscriber_db` 的值  (預設目的地)  
+    -   **的值**`@subscriber_db`(預設目的地)  
   
-    -   針對 `@subscriber_provider`、`@subscriber_datasrc`、`@subscriber_location`、`@subscriber_provider_string` 及 `@subscriber_catalog` 的非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源屬性。  
+    -   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、`@subscriber_provider`、`@subscriber_datasrc`、`@subscriber_location` 及 `@subscriber_provider_string` 的非 `@subscriber_catalog` 資料來源屬性。  
   
-    -   散發代理程式在散發者上執行時，針對 `@job_login` 和 `@job_password` 所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認證。  
+    -   散發代理程式在散發者上執行時，針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 和 `@job_login` 所使用的 `@job_password` Windows 認證。  
   
        > [!NOTE]  
        > 使用 Windows 整合式驗證所建立連接一律使用由 `@job_login` 和 `@job_password` 指定的 Windows 驗證。 散發代理程式一律使用「Windows 整合式驗證」建立與散發者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
   
-    -   `@subscriber_security_mode` 的 **0** 值與 `@subscriber_login` 和 `@subscriber_password` 的 OLE DB 提供者登入資訊。  
+    -   **的**0`@subscriber_security_mode` 值與 `@subscriber_login` 和 `@subscriber_password` 的 OLE DB 提供者登入資訊。  
   
     -   此訂閱之散發代理程式作業的排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   

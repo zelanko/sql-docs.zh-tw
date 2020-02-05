@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75548280"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
@@ -241,7 +241,7 @@ GO
  本節中的範例會顯示如何限制將會遭到刪除的資料列數目。  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. 使用 WHERE 子句刪除一組資料列  
- 以下範例會刪除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `ProductCostHistory` 資料表中，所有 `StandardCost` 資料行值超過 `1000.00` 的資料列。  
+ 以下範例會刪除 `ProductCostHistory` 資料庫的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中，所有 `StandardCost` 資料行值超過 `1000.00` 的資料列。  
   
 ```sql
 DELETE FROM Production.ProductCostHistory  
@@ -259,7 +259,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. 使用資料指標來判斷要刪除的資料列  
- 以下範例會使用名為 `complex_cursor` 的資料指標，從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `EmployeePayHistory` 資料表中刪除單一資料列。 刪除作業只會影響目前從資料指標中提取的單一資料列。  
+ 以下範例會使用名為 `EmployeePayHistory` 的資料指標，從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `complex_cursor` 資料表中刪除單一資料列。 刪除作業只會影響目前從資料指標中提取的單一資料列。  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -279,7 +279,7 @@ GO
 ```  
   
 #### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>D. 針對某個資料表中的資料使用聯結和子查詢，以刪除其他資料表中的資料列  
- 下列範例會顯示兩種方法，可根據其他資料表中的資料來刪除某個資料表中的資料列。 這兩個範例都會根據 `SalesPerson` 資料表所儲存之年初至今銷售情況來刪除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `SalesPersonQuotaHistory` 資料表中的資料列。 第一個 `DELETE` 陳述式會顯示 ISO 相容的子查詢方案，而第二個 `DELETE` 陳述式會顯示要聯結兩個資料表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] FROM 延伸模組。  
+ 下列範例會顯示兩種方法，可根據其他資料表中的資料來刪除某個資料表中的資料列。 這兩個範例都會根據 `SalesPersonQuotaHistory` 資料表所儲存之年初至今銷售情況來刪除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `SalesPerson` 資料表中的資料列。 第一個 `DELETE` 陳述式會顯示 ISO 相容的子查詢方案，而第二個 `DELETE` 陳述式會顯示要聯結兩個資料表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] FROM 延伸模組。  
   
 ```sql
 -- SQL-2003 Standard subquery  
@@ -315,7 +315,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. 使用 TOP 限制刪除的資料列數目  
- 當 TOP (*n*) 子句與 DELETE 一起使用時，會隨機選取 *n* 個資料列來執行刪除作業。 以下範例會從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `PurchaseOrderDetail` 資料表中刪除到期日早於 2006 年 7 月 1 日的 `20` 個隨機資料列。  
+ 當 TOP (*n*) 子句與 DELETE 一起使用時，會隨機選取 *n* 個資料列來執行刪除作業。 以下範例會從 `20` 資料庫的 `PurchaseOrderDetail` 資料表中刪除到期日早於 2006 年 7 月 1 日的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 個隨機資料列。  
   
 ```sql
 DELETE TOP (20)   
@@ -404,7 +404,7 @@ GO
 ```  
   
 #### <a name="j-using-output-with-from_table_name-in-a-delete-statement"></a>J. 在 DELETE 陳述式中，搭配 <from_table_name> 來使用 OUTPUT  
- 以下範例根據 `DELETE` 陳述式的 `FROM` 子句所定義的搜尋準則來刪除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `ProductProductPhoto` 資料表中的資料列。 `OUTPUT` 子句會傳回所刪除的資料表的 `DELETED.ProductID`、 `DELETED.ProductPhotoID`資料行及 `Product` 資料表中的資料行。 `FROM` 子句藉此來指定要刪除的資料列。  
+ 以下範例根據 `ProductProductPhoto` 陳述式的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 子句所定義的搜尋準則來刪除 `FROM` 資料庫的 `DELETE` 資料表中的資料列。 `OUTPUT` 子句會傳回所刪除的資料表的 `DELETED.ProductID`、 `DELETED.ProductPhotoID`資料行及 `Product` 資料表中的資料行。 `FROM` 子句藉此來指定要刪除的資料列。  
   
 ```sql
 DECLARE @MyTableVar table (  

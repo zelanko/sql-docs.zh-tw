@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 400de28e3191b953c1f44dfdf0777678f031e140
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119129"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
@@ -61,12 +61,12 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
 指定小數秒值的整數運算式。
   
 *有效位數*  
-整數運算式，指定 `DATETIME2FROMPARTS` 會傳回之 **datetime2** 值的精確度。
+整數運算式，指定 **會傳回之**datetime2`DATETIME2FROMPARTS` 值的精確度。
   
 ## <a name="return-types"></a>傳回類型
 **datetime2(** *precision* **)**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `DATETIME2FROMPARTS` 會傳回完整初始化的 **datetime2** 值。 如果至少一個必要引數具有無效的值，`DATETIME2FROMPARTS` 會引發錯誤。 如果至少一個必要引數具有 Null 值，則 `DATETIME2FROMPARTS` 會傳回 Null。 不過，如果 *precision* 引數為 Null 值，`DATETIME2FROMPARTS` 會引發錯誤。
 
 *fractions* 引數相依於 *precision* 引數。 例如，*precision* 值為 7 的每個部分表示 100 奈秒；*precision* 為 3 的每個部分表示 1 毫秒。 如果 *precision* 值為零，*fractions* 也必須為零，否則 `DATETIME2FROMPARTS` 會引發錯誤。
