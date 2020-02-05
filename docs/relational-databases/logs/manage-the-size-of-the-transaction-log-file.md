@@ -15,10 +15,10 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68084024"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理交易記錄檔的大小
@@ -28,7 +28,7 @@ ms.locfileid: "68084024"
 ##  <a name="MonitorSpaceUse"></a>監視記錄空間的使用  
 使用 [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) 來監視記錄空間的使用。 這個 DMV 會傳回目前使用之記錄空間量的相關資訊，並指出交易記錄需要截斷的時機。 
 
-如需目前的記錄檔大小、大小上限及檔案的自動成長選項等詳細資訊，您也可以在 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 中使用該記錄檔的 **size**、**max_size** 和 **growth** 資料行。  
+如需目前的記錄檔大小、大小上限及檔案的自動成長選項等詳細資訊，您也可以在 **sys.database_files** 中使用該記錄檔的 **size**、**max_size** 和 [growth](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 資料行。  
   
 > [!IMPORTANT]
 > 請避免讓記錄磁碟多載。 請確定記錄檔儲存體可以承受交易式負載的 [IOPS](https://wikipedia.org/wiki/IOPS) 和低延遲需求。 
@@ -63,8 +63,8 @@ ms.locfileid: "68084024"
 ##  <a name="AddOrEnlarge"></a> 加入或加大記錄檔  
 您可以加大現有的記錄檔 (如果磁碟空間允許的話)，或是將記錄檔加入資料庫 (通常是在不同的磁碟上)，來取得空間。 除非記錄檔空間不足，且保存記錄檔的磁碟區上磁碟空間也不足，否則一個交易記錄檔便已足夠。   
   
--   若要對資料庫新增一個記錄檔，請使用 `ALTER DATABASE` 陳述式的 `ADD LOG FILE` 子句。 新增記錄檔可讓記錄檔增大。  
--   若要加大記錄檔，請使用 `ALTER DATABASE` 陳述式的 `MODIFY FILE` 子句，並指定 `SIZE` 和 `MAXSIZE` 語法。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41; 檔案及檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。  
+-   若要對資料庫新增一個記錄檔，請使用 `ADD LOG FILE` 陳述式的 `ALTER DATABASE` 子句。 新增記錄檔可讓記錄檔增大。  
+-   若要加大記錄檔，請使用 `MODIFY FILE` 陳述式的 `ALTER DATABASE` 子句，並指定 `SIZE` 和 `MAXSIZE` 語法。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41; 檔案及檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。  
 
 如需詳細資訊，請參閱本主題中的[建議](#Recommendations)。
     
@@ -74,7 +74,7 @@ ms.locfileid: "68084024"
  您可以在啟動或重新啟動伺服器執行個體後，增加 **tempdb** 交易記錄的大小，藉以避免這項負擔。 如需詳細資訊，請參閱 [tempdb Database](../../relational-databases/databases/tempdb-database.md)。  
   
 ##  <a name="ControlGrowth"></a> 控制交易記錄檔的成長  
- 請使用 [ALTER DATABASE &#40;Transact-SQL&#41; 檔案及檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)陳述式來管理交易記錄檔的成長。 請注意下列事項：  
+ 請使用 [ALTER DATABASE &#40;Transact-SQL&#41; 檔案及檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)陳述式來管理交易記錄檔的成長。 請注意：  
   
 -   若要變更目前的檔案大小 (單位為 KB、MB、GB 和 TB)，請使用 `SIZE` 選項。  
 -   若要變更成長的增量，請使用 `FILEGROWTH` 選項。 0 的值表示將自動成長設為關閉，而且不允許任何其他空間。  
@@ -90,11 +90,11 @@ ms.locfileid: "68084024"
     -  最大索引維護作業所需的時間。
     -  執行資料庫中最大批次所需的時間。
 
--   使用 `FILEGROWTH` 選項設定資料和記錄檔的 **autogrow** 時，最好以 [大小]  來設定它，而不是使用 [百分比]  ，以便更能控制成長比率，因為百分比是個不斷成長的數量。
+-   使用 **選項設定資料和記錄檔的**autogrow`FILEGROWTH` 時，最好以 [大小]  來設定它，而不是使用 [百分比]  ，以便更能控制成長比率，因為百分比是個不斷成長的數量。
     -  請記住，交易記錄檔無法利用[立即檔案初始化](../../relational-databases/databases/database-instant-file-initialization.md)，因此延伸的記錄成長時間特別重要。 
     -  最佳做法是不要將交易記錄的 `FILEGROWTH` 選項值設定為超過 1024 MB。 `FILEGROWTH` 選項的預設值是：  
   
-      |Version|預設值|  
+      |版本|預設值|  
       |-------------|--------------------|  
       |從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始|資料 64 MB。 記錄檔 64 MB。|  
       |從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始|資料 1 MB。 記錄檔 10%。|  

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 142762514f9bdbd7c7984dff218e5ea665d1d4d4
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843319"
 ---
 # <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact-SQL)
@@ -41,10 +41,10 @@ ms.locfileid: "73843319"
 @@TRANCOUNT  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  BEGIN TRANSACTION 陳述式會遞增 @@TRANCOUNT，遞增量為 1。 ROLLBACK TRANSACTION 會將 @@TRANCOUNT 遞減到 0，不過 ROLLBACK TRANSACTION *savepoint_name* 除外，它不會影響 @@TRANCOUNT。 COMMIT TRANSACTION 或 COMMIT WORK 會遞減 @@TRANCOUNT，遞減量為 1。  
   
 ## <a name="examples"></a>範例  

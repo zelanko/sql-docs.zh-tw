@@ -14,17 +14,17 @@ ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 8a6a8bc83c1842676220f384d39179c74c47a336
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987060"
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>SQL Server 的 Broker─DBM Transport 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **Broker / DBM Transport** 效能物件包含效能計數器，以報告 Service Broker 和資料庫鏡像的網路資訊。 下表列出這個物件包含的計數器。  
   
-|SQL Server Broker / DBM Transport 計數器|Description|  
+|SQL Server Broker / DBM Transport 計數器|描述|  
 |------------------------------------------------|-----------------|  
 |**Current Bytes for Recv I/O**|此計數器會報告目前執行傳輸接收作業所讀取的位元組數目。|  
 |**Current Bytes for Send I/O**|此計數器會報告目前正在透過網路傳送訊息片段的位元組數目。|  

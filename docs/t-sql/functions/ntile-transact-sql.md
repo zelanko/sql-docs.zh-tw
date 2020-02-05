@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d4bd1270c0dde3031054dd4e0aa3e0719a77dfad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914900"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
@@ -46,15 +46,15 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
  用於指定每個分割區必須劃分之群組數的正整數運算式。 *integer_expression* 可為 **int** 類型或 **bigint**。  
   
  \<partition_by_clause>  
- 將 [FROM](../../t-sql/queries/from-transact-sql.md) 子句產生的結果集分割成函式所要套用的分割區。 如需 PARTITION BY 語法，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+ 將 [FROM](../../t-sql/queries/from-transact-sql.md) 子句產生的結果集分割成函式所要套用的分割區。 如需 PARTITION BY 的語法，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
  \<order_by_clause>  
  指定 NTILE 值指派給分割區中之資料列的順序。 在次序函式中使用 \<order_by_clause> 時，整數無法表示資料行。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 *integer_expression* 無法整除分割區中的資料列數，兩個大小的群組會相差一個成員。 在 OVER 子句所指定的順序中，較大群組會在較小群組的前面。 例如，如果資料列總數是 53，群組數目是 5，前三個群組會有 11 個資料列，後兩個群組會有 10 個資料列。 如果群組數目可以整除資料列的總數，資料列就會平均分散在各個群組中。 例如，如果資料列總數是 50，有 5 個群組，每個貯體都會包含 10 個資料列。  
   
  NTILE 不具決定性。 如需詳細資訊，請參閱 [決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  

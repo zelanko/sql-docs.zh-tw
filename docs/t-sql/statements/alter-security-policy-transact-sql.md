@@ -20,10 +20,10 @@ ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 458083fda6382c353af78c7d2b438fdc0d39c826
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72173861"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
@@ -88,7 +88,7 @@ NOT FOR REPLICATION
 table_schema_name.table_name  
 這是適用於已套用安全性述詞的目標資料表。 單一資料表可以有多個已停用的安全性原則，但無論何時都只能啟用一個安全性原則。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 ALTER SECURITY POLICY 陳述式位於交易的範圍內。 如果回復交易，也會回復此陳述式。  
   
 當使用述詞函數與記憶體最佳化資料表時，安全性原則必須包含 **SCHEMABINDING** 並使用 **WITH NATIVE_COMPILATION** 編譯提示。 SCHEMABINDING 引數無法使用 ALTER 陳述式來變更，因為它會套用到所有述詞。 若要變更結構描述繫結，您必須卸除並重新建立安全性原則。  

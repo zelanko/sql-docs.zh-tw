@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c37a0b953177d0e3d978607982da54c613a3d2a2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3006b3258d26f359e5eab98856ca7ffe43d8321a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908234"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287325"
 ---
 # <a name="republish-data"></a>重新發行資料
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "72908234"
   
  ![重新發佈資料](../../relational-databases/replication/media/repl-06a.gif "重新發佈資料")  
   
- 任何伺服器都可以同時扮演「發行者」與「訂閱者」的角色。 例如，假設下圖中的資料表發行集位於英國倫敦，且必須散發到美國四個不同城市：芝加哥、紐約、聖地牙哥和西雅圖。 位於紐約的伺服器將被選來訂閱在倫敦產生的發行資料表，因為紐約網站符合這些條件：  
+ 任何伺服器都可以同時扮演「發行者」與「訂閱者」的角色。 例如，假設下圖中位於英國倫敦，而且必須散發到美國四個不同城市的資料表發行集：芝加哥、紐約、聖地牙哥和西雅圖。 位於紐約的伺服器將被選來訂閱在倫敦產生的發行資料表，因為紐約網站符合這些條件：  
   
 -   到倫敦的網路連結相當可靠。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "72908234"
   
  複寫支援下表所示的重新發行案例。  
   
-|發行者|發行訂閱者|訂閱者|  
+|發行者|發行訂閱者|用戶|  
 |---------------|---------------------------|----------------|  
 |交易式發行集|交易式訂閱/交易式發行集|交易式訂閱|  
 |交易式發行集|交易式訂閱/合併式發行集*|合併訂閱|  

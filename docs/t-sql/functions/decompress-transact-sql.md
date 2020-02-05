@@ -16,10 +16,10 @@ ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6d94ffd0182bfad3ed95f52640a2aed01ceeaa54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118966"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
@@ -39,10 +39,10 @@ DECOMPRESS ( expression )
  *expression*  
 **varbinary(** _n_ **)** 、**varbinary(max)** 或 **binary(** _n_ **)** 值。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 **varbinary(max)** 資料類型的值。 `DECOMPRESS` 會使用 ZIP 演算法來解壓縮輸入引數。 使用者應明確將結果轉換成目標類型 (如有需要)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 ## <a name="examples"></a>範例  
   

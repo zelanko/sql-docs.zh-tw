@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72905945"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
@@ -40,7 +40,7 @@ ms.locfileid: "72905945"
 4.  [儲存體頁面](#Storage)  
 
 ##  <a name="GeneralPage"></a> 一般頁面  
- **[資料庫備份]**  
+ **Database**  
  包含此資料表之資料庫的名稱。  
   
  **Server**  
@@ -68,7 +68,7 @@ ms.locfileid: "72905945"
  指出物件是否使用設定為 ON 的引號識別碼選項建立。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
  **鎖定擴大**  
- 表示資料表的鎖定擴大資料粒度。 如需有關 Database Engine 中鎖定的詳細資訊，請參閱 [SQL Server 交易鎖定與資料列版本設定指南](https://msdn.microsoft.com/library/jj856598.aspx)。 可能的值為：  
+ 表示資料表的鎖定擴大資料粒度。 如需有關 Database Engine 中鎖定的詳細資訊，請參閱 [SQL Server 交易鎖定與資料列版本設定指南](https://msdn.microsoft.com/library/jj856598.aspx)。 可能的值包括：  
   
  AUTO  
  此選項允許 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 選取適用於資料表結構描述的鎖定擴大資料粒度。  
@@ -155,7 +155,7 @@ ms.locfileid: "72905945"
  資料在資料表中所佔的空間量 (以 MB 表示)。  
   
 ### <a name="partitioning"></a>資料分割  
- 只有在資料表為資料分割時，才能使用此區段。 如需詳細資訊，請參閱 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
+ 只有在資料表為資料分割時，才能使用此區段。 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。  
   
  **資料分割資料行**  
  用以分割資料表之資料行的名稱。  

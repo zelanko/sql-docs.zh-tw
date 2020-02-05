@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 83c53aa2e8c7700f5aa7b3c87dc0683f3c7ed447
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906311"
 ---
 # <a name="rename-indexes"></a>重新命名索引
@@ -46,9 +46,9 @@ ms.locfileid: "72906311"
 ###  <a name="Restrictions"></a> 限制事項  
  當您在資料表上建立 PRIMARY KEY 或 UNIQUE 條件約束時，也會自動為資料表建立一個與條件約束名稱相同的索引。 因為資料表內的索引名稱必須是獨一無二的，所以無法使用與資料表上現有 PRIMARY KEY 或 UNIQUE 條件約束相同的名稱來建立或重新命名索引。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要索引的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -67,9 +67,9 @@ ms.locfileid: "72906311"
   
 6.  在方格中，按一下 [ **名稱** ]，然後在文字方塊輸入新名稱。  
   
-7.  按一下 [ **關閉**]。  
+7.  按一下 [關閉]  。  
   
-8.  在 [檔案]  功能表上，按一下 [儲存 _table_name_]  。  
+8.  在 [檔案]  功能表上，按一下 [儲存 **資料表名稱**]  。  
 
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>使用物件總管重新命名索引  
   

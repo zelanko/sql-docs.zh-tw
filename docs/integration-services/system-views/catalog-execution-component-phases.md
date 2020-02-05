@@ -11,10 +11,10 @@ ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9c4580c6b6b4dc6ea0d7ab9bb93f9614b90feb1d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295182"
 ---
 # <a name="catalogexecution_component_phases"></a>catalog.execution_component_phases 
@@ -26,7 +26,7 @@ ms.locfileid: "71295182"
 
   顯示資料流程元件在每個執行階段所花費的時間。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |phase_stats_id|**bigint**|階段的唯一識別碼 (ID)。|  
 |execution_id|**bigint**|執行執行個體的唯一識別碼 (ID)。|  
@@ -38,7 +38,7 @@ ms.locfileid: "71295182"
 |end_time|**datetimeoffset(7)**|階段結束的時間。|  
 |execution_path|**nvarchar(max)**|資料流程工作的執行路徑。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此檢視針對資料流程元件的每個執行階段，各顯示一個資料列，例如：Validate、Pre-Execute、Post-Execute、PrimeOutput 和 ProcessInput。 每個資料列都會顯示特定執行階段的開始和結束的時間。  
   
 ## <a name="example"></a>範例  

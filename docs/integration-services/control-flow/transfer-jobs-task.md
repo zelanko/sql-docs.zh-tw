@@ -17,10 +17,10 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eb4812b48c9465659ca8c0739f0411a9e65660bf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293873"
 ---
 # <a name="transfer-jobs-task"></a>傳送作業工作
@@ -103,17 +103,17 @@ ms.locfileid: "71293873"
   
 ### <a name="options"></a>選項。  
  **SourceConnection**  
- 在清單中選取 SMO 連線管理員，或按一下 [\<新增連線...>]  建立來源伺服器的新連線。  
+ 在清單中選取 SMO 連線管理員，或按一下 [**新增連線...>]\<** 建立來源伺服器的新連線。  
   
  **DestinationConnection**  
- 在清單中選取一個 SMO 連線管理員，或按一下 [\<新增連線...>]  ，以建立目的地伺服器的新連線。  
+ 在清單中選取一個 SMO 連線管理員，或按一下 [**新增連線...>]\<** ，以建立目的地伺服器的新連線。  
   
  **TransferAllJobs**  
  選取工作是否應將所有作業或只有指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，從來源複製到目的地伺服器。  
   
  此屬性具有下表所列的選項：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**True**|複製所有作業。|  
 |**False**|只複製指定的作業。|  
@@ -131,7 +131,7 @@ ms.locfileid: "71293873"
   
  此屬性具有下表所列的選項：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**FailTask**|如果具有相同名稱的作業己經存在於目的地伺服器上，工作就會失敗。|  
 |**Overwrite**|工作會覆寫目的地伺服器上具有相同名稱的作業。|  
@@ -142,7 +142,7 @@ ms.locfileid: "71293873"
   
  此屬性具有下表所列的選項：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**True**|啟用目的地伺服器上的作業。|  
 |**False**|停用目的地伺服器上的作業。|  

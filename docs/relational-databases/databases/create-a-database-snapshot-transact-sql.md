@@ -13,10 +13,10 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71708281"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>建立資料庫快照集 (Transact-SQL)
@@ -45,13 +45,13 @@ ms.locfileid: "71708281"
 ##  <a name="Recommendations"></a> 建議  
  本節討論下列最佳作法：  
   
--   [最佳做法：命名資料庫快照集](#Naming)  
+-   [最佳作法：命名資料庫快照集](#Naming)  
   
--   [最佳做法：限制資料庫快照集的數目](#Limiting_Number)  
+-   [最佳作法：限制資料庫快照集的數目](#Limiting_Number)  
   
--   [最佳做法：用戶端連線到資料庫快照集](#Client_Connections)  
+-   [最佳作法：用戶端連接到資料庫快照集](#Client_Connections)  
   
-####  <a name="Naming"></a> 最佳做法：命名資料庫快照集  
+####  <a name="Naming"></a> 最佳作法：命名資料庫快照集  
  建立快照集之前，務必先考慮如何命名快照集。 每個資料庫快照集都需要一個唯一的資料庫名稱。 為了方便管理，快照集的名稱可加入用於識別資料庫的資訊，例如：  
   
 -   來源資料庫的名稱。  
@@ -76,13 +76,13 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-#### <a name="Limiting_Number"></a> 最佳做法：限制資料庫快照集的數目  
+#### <a name="Limiting_Number"></a> 最佳作法：限制資料庫快照集的數目  
  隨時間建立一系列的快照集，可擷取來源資料庫的循序快照集。 每個快照集都會一直保存到確實卸除該快照集為止。 因為每個快照集都會隨著原始頁面更新而不斷成長，所以您可能想要在建立新快照集之後，刪除較早的快照集，以節省磁碟空間。  
   
 
 **注意！** 若要還原為資料庫快照集，您需要刪除該資訊庫中的任何其他快照集。  
   
-####  <a name="Client_Connections"></a> 最佳做法：用戶端連線到資料庫快照集  
+####  <a name="Client_Connections"></a> 最佳作法：用戶端連接到資料庫快照集  
  若要使用資料庫快照集，用戶端需要知道去哪裡尋找。 正在建立或刪除某個資料庫快照集時，使用者仍可讀取其他快照集。 但是，當您以新的快照集取代現有的快照集時，必須將用戶端重新導向至新的快照集。 使用者可以利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，手動連接到資料庫快照集。 但是，若要支援實際執行環境，您應該建立程式設計方案，將撰寫報表的用戶端明確導向至資料庫最新的資料庫快照集。  
   
 
@@ -97,11 +97,11 @@ AdventureWorks_snapshot_evening
   
 1.  根據來源資料庫的目前大小，確定您擁有足夠的磁碟空間可存放資料庫快照集。 資料庫快照集的大小上限為快照集建立時的來源資料庫大小。 如需詳細資訊，請參閱[檢視資料庫快照集的疏鬆檔案大小 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)。  
   
-2.  在使用 AS SNAPSHOT OF 子句的檔案上，發出 CREATE DATABASE 陳述式。 建立快照集必須指定來源資料庫之每個資料庫檔案的邏輯名稱。 其語法如下：  
+2.  在使用 AS SNAPSHOT OF 子句的檔案上，發出 CREATE DATABASE 陳述式。 建立快照集必須指定來源資料庫之每個資料庫檔案的邏輯名稱。 語法如下所示：  
 
      CREATE DATABASE *database_snapshot_name*  
   
-     ON  
+     開啟  
   
      (  
   
@@ -125,7 +125,7 @@ AdventureWorks_snapshot_evening
 > [!NOTE]  
 >  用於範例中的 `.ss` 副檔名可自行決定。  
   
- 本節包含下列範例：  
+ 本區段包含下列範例：  
   
 -   A. [在 AdventureWorks 資料庫上建立快照集](#Creating_on_AW)  
   

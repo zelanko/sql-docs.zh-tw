@@ -21,10 +21,10 @@ ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252787"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>資料庫鏡像工作階段期間的角色切換 (SQL Server)
@@ -96,7 +96,7 @@ ms.locfileid: "75252787"
   
  下圖說明在升級資料庫伺服器執行個體的同時，使用手動容錯移轉來維護資料庫可用性的範例。 升級完成時，系統管理員可以選擇性地容錯移轉回原始的伺服器執行個體。 如果系統管理員想要停止鏡像工作階段，轉而使用別處的鏡像伺服器，這個方法便很有用。 使用這個方法，更新一連串的資料庫伺服器執行個體時，就可以重複使用單一的伺服器執行個體。  
   
- ![規劃的手動容錯移轉](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "|::ref2::|")  
+ ![規劃的手動容錯移轉](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "已規劃的手動容錯移轉")  
   
 ###  <a name="ConditionsForManualFo"></a> 手動容錯移轉所需的條件  
  手動容錯移轉需要將交易安全性設定為 FULL (即為高安全性模式)。 當夥伴已連接而且資料庫已經同步處理後，就會支援手動容錯移轉。  
@@ -109,7 +109,7 @@ ms.locfileid: "75252787"
 2.  鏡像伺服器會將從主體伺服器接收到最後一筆記錄的記錄序號 (LSN) 記錄下來，做為容錯移轉 LSN。  
   
     > [!NOTE]  
-    >  若要檢視此 LSN，請從 [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) 選取 **mirroring_failover_lsn** 資料行。  
+    >  若要檢視此 LSN，請從 **sys.database_mirroring &#40;Transact-SQL&#41;** 選取 [mirroring_failover_lsn](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) 資料行。  
   
 3.  如果在重做佇列中有任何記錄正在等待，則鏡像伺服器會完成鏡像資料庫的向前復原。 所需時間取決於系統的速度、最近的工作負載，以及重做佇列中的記錄量。 針對同步處理作業模式，容錯移轉時間可以藉由限制重做佇列的大小來調節。 但是，這可能會造成主體伺服器變慢，以便鏡像伺服器能夠跟上。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "75252787"
   
  下圖顯示自動容錯移轉的單一執行個體。  
   
- ![Automatic failover](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "|::ref3::|")  
+ ![Automatic failover](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "自動容錯移轉")  
   
  一開始，三部伺服器都已連接 (也就是工作階段具有完整的仲裁)。 **Partner_A** 是主體伺服器， **Partner_B** 是鏡像伺服器。 **Partner_A** (或 **Partner_A**上的主體資料庫) 變得無法使用。 見證與 **Partner_B** 兩者皆認定主體已無法使用，且工作階段會重新取得仲裁。 **Partner_B** 會成為主體伺服器，並使其資料庫副本成為新的主體資料庫。 最後， **Partner_A** 重新連接到工作階段，並發現 **Partner_B** 此時已擁有主體角色。 **Partner_A** 會接替鏡像角色。  
   

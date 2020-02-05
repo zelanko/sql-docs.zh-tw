@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
 ms.openlocfilehash: 01f86c0d100ef176cbd94e955d5919c031a9ac95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951350"
 ---
-# <a name="mssqlserver7911"></a>MSSQLSERVER_7911
+# <a name="mssqlserver_7911"></a>MSSQLSERVER_7911
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -31,7 +31,7 @@ ms.locfileid: "67951350"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_REPAIR_PAGE_DEALLOCATED|  
-|訊息文字|修復:頁面 P_ID 已經從物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE) 解除配置。|  
+|訊息文字|修復: 頁面 P_ID 已經從物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE) 取消配置。|  
   
 ## <a name="explanation"></a>說明  
 這是 REPAIR 傳回的參考用訊息，說明頁面已經從索引配置對應 (IAM) 頁面的單頁位置陣列取消配置。  

@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0c80e52eff233c2d04cb77fb5cf5d85bdac8fe34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68081759"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>記憶體最佳化資料表的交易
@@ -81,7 +81,7 @@ SELECT * FROM
 COMMIT TRANSACTION;
 ```
 
-透過使用資料庫選項 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`，即不需要 `WITH (SNAPSHOT)` 提示。 當此選項設為 `ON`時，較低隔離等級的記憶體最佳化資料表存取權，會自動提升為 SNAPSHOT 隔離。  
+透過使用資料庫選項 `WITH (SNAPSHOT)`，即不需要 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 提示。 當此選項設為 `ON`時，較低隔離等級的記憶體最佳化資料表存取權，會自動提升為 SNAPSHOT 隔離。  
 
 ```sql
 ALTER DATABASE CURRENT
@@ -98,7 +98,7 @@ ALTER DATABASE CURRENT
   
 下表列出可能的交易隔離等級，順序從隔離程度最低到最高。 如需會發生的衝突以及處理這些衝突之重試邏輯的詳細資訊，請參閱 [衝突偵測和重試邏輯](#conflict-detection-and-retry-logic)。 
   
-| 隔離等級 | Description |   
+| 隔離等級 | 描述 |   
 | :-- | :-- |   
 | READ UNCOMMITTED | 無法使用：READ UNCOMMITTED 隔離下無法存取記憶體最佳化資料表。 如果工作階段層級的 TRANSACTION ISOLATION LEVEL 設為 READ UNCOMMITTED，使用 WITH (SNAPSHOT) 資料表提示或將資料庫設定 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 設為 ON，仍有可能存取 SNAPSHOT 隔離下的記憶體最佳化資料表。 | 
 | READ COMMITTED | 只有在自動認可模式作用時，才受記憶體最佳化資料表支援。 如果工作階段層級的 TRANSACTION ISOLATION LEVEL 設為 READ COMMITTED，使用 WITH (SNAPSHOT) 資料表提示或將資料庫設定 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 設為 ON，仍有可能存取 SNAPSHOT 隔離下的記憶體最佳化資料表。<br/><br/>如果資料庫選項 READ_COMMITTED_SNAPSHOT 設為 ON，不允許存取相同陳述式中 READ COMMITTED 隔離下的記憶體最佳化和磁碟資料表。 |  
@@ -114,17 +114,17 @@ ALTER DATABASE CURRENT
   
 後面接著階段描述。  
   
-#### <a name="regular-processing-phase-1-of-3"></a>正常處理：階段 1 (共 3 個)  
+#### <a name="regular-processing-phase-1-of-3"></a>一般處理：階段 1 (之 3)  
   
 - 這個階段是由查詢中的所有查詢和 DML 陳述式的執行所組成。  
 - 在此階段，陳述式會將記憶體最佳化資料表的版本視為交易的邏輯開始時間。  
   
-#### <a name="validation-phase-2-of-3"></a>驗證：階段 2 (共 3 個)  
+#### <a name="validation-phase-2-of-3"></a>驗證：階段 2 (之 3)  
   
 - 指定結束時間即開始驗證階段，將交易標示為邏輯方面已完成。 完成此作業可讓依賴這筆交易的其他交易看到交易的所有變更。 成功認可此交易前，不允許認可相依的交易。 此外，不允許保留這類相依性的交易將結果集傳回用戶端，以確保用戶端只會看到已成功向資料庫認可的資料。  
 - 這個階段包含可重複的讀取和可序列化的驗證。 針對可重複讀取驗證，會檢查是否有任何交易讀取的資料列在此之後更新。 針對可序列化驗證，會檢查是否已將任何資料列插入此交易掃描的任何資料範圍。 根據 [隔離等級和衝突](#isolation-levels)中的資料表，使用快照集隔離時，都會發生可重複讀取和可序列化驗證，以驗證唯一外部索引鍵條件約束的一致性。  
   
-#### <a name="commit-processing-phase-3-of-3"></a>認可處理：階段 3 (共 3 個)  
+#### <a name="commit-processing-phase-3-of-3"></a>認可處理：階段 3 (之 3)  
   
 - 在認可階段，耐久資料表的變更會寫入記錄中，而記錄會寫入磁碟中。 控制項接著會傳回用戶端。  
 - 認可處理完成之後，所有相依的交易都會收到進行認可通知。  
@@ -139,7 +139,7 @@ ALTER DATABASE CURRENT
 
 以下是當交易存取記憶體最佳化資料表時，會導致交易失敗的錯誤狀況。
 
-| 錯誤碼 | Description | 原因 |
+| 錯誤碼 | 描述 | 原因 |
 | :-- | :-- | :-- |
 | **41302** | 嘗試更新目前交易開始後，已在其他交易中更新的資料列。 | 如果兩筆並行交易同時嘗試更新或刪除相同的資料列，就會發生這個錯誤狀況。 其中一筆交易會收到這個錯誤訊息，且必須重試。 <br/><br/>  | 
 | **41305**| 可重複的讀取驗證失敗。 這筆交易完成認可前，從記憶體最佳化資料表讀取的資料列已為另一筆認可的交易更新。 | 使用 REPEATABLE READ 或 SERIALIZABLE 隔離時，如果並行交易的動作又造成 FOREIGN KEY 條件約束違規，就會發生此錯誤。 <br/><br/>這種外部索引鍵條件約束的並行違規很少見，通常是應用程式邏輯或資料項目的問題。 不過，如果和 FOREIGN KEY 條件約束有關的資料行沒有索引，也會發生此錯誤。 因此，指引是一律在記憶體最佳化資料表中，建立外部索引鍵資料行的索引的上。 <br/><br/> 如需外部索引鍵違規所致驗證失敗的詳細考量，請參閱 SQL Server 客戶諮詢小組的 [部落格文章](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) 。 |  

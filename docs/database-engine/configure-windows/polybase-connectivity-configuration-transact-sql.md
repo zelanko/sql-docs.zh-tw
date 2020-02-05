@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: d86483245f8a4f06dfcb357d5d105539dd56f3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67997921"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 連接組態 (Transact-SQL)
@@ -56,7 +56,7 @@ RECONFIGURE
   
  這些是 Hadoop 連接性設定及其對應的支援 Hadoop 資料來源。 一次只能有一個設定生效。 選項 1、 4 和 7 可讓多個類型的外部資料來源能夠在伺服器上的所有工作階段之間建立和使用。  
   
--   選項 0︰停用 Hadoop 連線  
+-   選項 0︰停用 Hadoop 連接  
   
 -   選項 1：Windows Server 上的 Hortonworks HDP 1.3  
   
@@ -91,7 +91,7 @@ RECONFIGURE
 ##  <a name="ResultSets"></a> 結果集  
  如果執行時未使用任何參數， **sp_configure** 就會傳回含有五個資料行的結果集。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|組態選項的名稱。|  
 |**minimum**|**int**|組態選項的最小值。|  

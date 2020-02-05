@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: b93f85235b2676773ea3686c17d7d17e3a424d7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906836"
 ---
-# <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
+# <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -48,16 +48,16 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>引數
 
  *string*  
- 這是任何字元類型 (例如 **nvarchar**、**varchar**、**nchar** 或 **char**) 的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 這是任何字元類型 (例如 [nvarchar](../../t-sql/language-elements/expressions-transact-sql.md)、**varchar**、**nchar** 或 **char**) 的**運算式**。  
   
  *separator*  
- 這是任何字元類型 (例如 **nvarchar(1)** 、**varchar(1)** 、**nchar(1)** 或 **char(1)** ) 的單一字元[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，可作為串連子字串的分隔符號。  
+ 這是任何字元類型 (例如 [nvarchar(1)](../../t-sql/language-elements/expressions-transact-sql.md)、**varchar(1)** 、**nchar(1)** 或 **char(1)** ) 的單一字元**運算式**，可作為串連子字串的分隔符號。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 
 傳回資料列為子字串的單資料行資料表。 資料行的名稱是 **value**。 如果任何輸入引數是 **nvarchar** 或 **nchar**，則傳回 **nvarchar**。 否則傳回 **varchar**。 傳回類型的長度與字串引數的長度相同。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 
 **STRING_SPLIT** 輸入有已分隔之子字串的字串，並輸入一個字元作為分隔符號 (delimiter) 或分隔符號 (separator)。 STRING_SPLIT 輸出單一資料行資料表，其資料列包含子字串。 輸出資料行的名稱為 **value**。
 
@@ -102,7 +102,7 @@ WHERE RTRIM(value) <> '';
 
 Product 資料表有一個資料行含有標籤的逗號分隔清單，如下列範例所示：  
   
-|ProductId|[屬性]|Tags|  
+|ProductId|名稱|Tags|  
 |---------------|----------|----------|  
 |1|Full-Finger Gloves|clothing,road,touring,bike|  
 |2|LL Headset|bike|  
@@ -118,10 +118,10 @@ FROM Product
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|ProductId|[屬性]|value|  
+|ProductId|名稱|value|  
 |---------------|----------|-----------|  
 |1|Full-Finger Gloves|clothing|  
-|1|Full-Finger Gloves|road|  
+|1|Full-Finger Gloves|路段|  
 |1|Full-Finger Gloves|touring|  
 |1|Full-Finger Gloves|bike|  
 |2|LL Headset|bike|  

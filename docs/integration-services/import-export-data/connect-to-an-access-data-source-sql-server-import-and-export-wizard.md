@@ -10,10 +10,10 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a361446c69425f6b05bef913ded568a7dcfd75
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296299"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>連線至 Access 資料來源 (SQL Server 匯入和匯出精靈)
@@ -54,7 +54,7 @@ ms.locfileid: "71296299"
  **瀏覽**  
  使用 [開啟]  對話方塊來找出資料庫檔案。  
   
- **User name**  
+ **使用者名稱**  
 如果工作群組資訊檔案是與資料庫建立關聯，則請提供有效的使用者名稱。  
   
  **密碼**  
@@ -72,11 +72,11 @@ ms.locfileid: "71296299"
 > 若要使用 64 位元版本的 [SQL Server 匯入和匯出精靈]，您必須安裝 SQL Server。 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 是 32 位元應用程式，而且只會安裝 32 位元檔案 (包含 32 位元版本的精靈)。
 
 ## <a name="officeDownloads"></a>取得連線至 Access 所需的檔案  
-您可能必須下載尚未安裝的 Microsoft Office 資料來源 (包含 Access 和 Excel) 的連線元件。 在這裡下載適用於 Access 和 Excel 檔案的連線元件最新版本：[Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920) (Microsoft Access 資料庫引擎 2016 可轉散發套件)。
+您可能必須下載尚未安裝的 Microsoft Office 資料來源 (包含 Access 和 Excel) 的連線元件。 在這裡下載 Access 和 Excel 檔案的連線元件最新版本：[Microsoft Access Database Engine 2016 可轉散發套件](https://www.microsoft.com/download/details.aspx?id=54920)。
   
 最新版的元件可以開啟舊版 Access 所建立的檔案。
 
-如果電腦有 32 位元版本的 Office，則必須安裝 32 位元版本的元件，而且您也必須確定以 32 位元模式執行套件。
+如果電腦有 32 位元版本的 Office，則必須安裝 32 位元版本的元件，而且您也必須確定以 32 位元模式執行封裝。
 
 如果您有 Office 365 訂用帳戶，請確定下載 Access Database Engine 2016 可轉散發套件，而非 Microsoft Access 2016 Runtime。 當您執行安裝程式時，可能會看到錯誤訊息，指出您無法使用 Office 隨選即用元件並存安裝下載。 若要略過此錯誤訊息，請開啟 [命令提示字元] 視窗並執行使用 `/quiet` 參數所下載的 .EXE 檔案，以無訊息模式執行安裝。 例如：
 

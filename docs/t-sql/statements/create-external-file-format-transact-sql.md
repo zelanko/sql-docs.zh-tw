@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dd632c012e6859da004e105d2311c9c21d3dec02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902697"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
@@ -124,7 +124,7 @@ WITH (
 僅適用於分隔符號文字檔。 欄位結束字元會指定一或多個字元，在文字分隔檔案中標記每個欄位 (欄) 的結尾。 預設值是管道字元 ꞌ|ꞌ。 若要保證支援，我們建議使用一或多個 ASCII 字元。
   
   
- 範例:  
+ 範例：  
   
 -   FIELD_TERMINATOR = '|'  
   
@@ -138,7 +138,7 @@ WITH (
 針對文字分隔檔案中類型字串的資料指定欄位結束字元。 字串分隔符號的長度為一或多個字元，且要以單引號括起來。 預設值為空字串 ""。 若要保證支援，我們建議使用一或多個 ASCII 字元。
  
   
- 範例:  
+ 範例：  
 
 -   STRING_DELIMITER = '"'
 
@@ -182,23 +182,23 @@ PolyBase 只會使用自訂日期格式來匯入資料。 它不會使用自訂�
   
 -   Am、pm (tt) 不是必要的。 預設值是 AM。
   
-|日期類型|範例|Description|  
+|日期類型|範例|描述|  
 |---------------|-------------|-----------------|  
-|DateTime|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|除了年、月及日之外，此日期格式包含 00-24 時、00-59 分、00-59 秒，以及 3 位數的毫秒。|  
-|DateTime|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffftt'|除了年、月及日之外，此日期格式包含 00-12 時、00-59 分、00-59 秒、3 位數的毫秒，以及 AM、am、PM 或 pm。 |  
+|Datetime|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|除了年、月及日之外，此日期格式包含 00-24 時、00-59 分、00-59 秒，以及 3 位數的毫秒。|  
+|Datetime|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffftt'|除了年、月及日之外，此日期格式包含 00-12 時、00-59 分、00-59 秒、3 位數的毫秒，以及 AM、am、PM 或 pm。 |  
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd HH:mm'|除了年、月及日之外，此日期格式包含 00-23 時、00-59 分。|  
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd hh:mmtt'|除了年、月及日之外，此日期格式包含 00-11 時、00-59 分、沒有秒，以及 AM、am、PM 或 pm。|  
-|date|DATE_FORMAT =  'yyyy-MM-dd'|年、月及日。 未包含任何時間元素。|  
-|date|DATE_FORMAT = 'yyyy-MMM-dd'|年、月及日。 使用 3 個 M 來指定月份時，輸入值為下列其中一個字串：Jan、Feb、Mar、Apr、May、Jun、Jul、Aug、Sep、Oct、Nov 或 Dec。|  
-|datetime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|除了年、月及日之外，此日期格式包含 00-23 時、00-59 分、00-59 秒，以及 7 位數的毫秒。|  
-|datetime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|除了年、月及日之外，此日期格式包含 00-11 時、00-59 分、00-59 秒、7 位數的毫秒，以及 AM、am、PM 或 pm。|  
+|Date|DATE_FORMAT =  'yyyy-MM-dd'|年、月及日。 未包含任何時間元素。|  
+|Date|DATE_FORMAT = 'yyyy-MMM-dd'|年、月及日。 使用 3 個 M 來指定月份時，輸入值為下列其中一個字串：Jan、Feb、Mar、Apr、May、Jun、Jul、Aug、Sep、Oct、Nov 或 Dec。|  
+|DateTime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|除了年、月及日之外，此日期格式包含 00-23 時、00-59 分、00-59 秒，以及 7 位數的毫秒。|  
+|DateTime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|除了年、月及日之外，此日期格式包含 00-11 時、00-59 分、00-59 秒、7 位數的毫秒，以及 AM、am、PM 或 pm。|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff zzz'|除了年、月及日之外，此日期格式包含 00-23 時、00-59 分、00-59 秒、7 位數的毫秒，以及您放入輸入檔以作為 `{+&#124;-}HH:ss` 的時區差距。 例如，由於不含日光節約時間的洛杉磯時間比 UTC 晚 8 小時，因此，輸入檔中的 -08:00 值會指定洛杉磯的時區。|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt zzz'|除了年、月及日之外，此日期格式包含 00-11 時、00-59 分、00-59 秒、7 位數的毫秒、(AM、am、PM 或 pm)，以及時區差距。 請參閱上一列的描述。|  
 |Time|DATE_FORMAT = 'HH:mm:ss'|沒有日期值，只有 00-23 時、00-59 分和 00-59 秒。|  
   
  所有支援的日期格式：
   
-|DATETIME|smalldatetime|日期|datetime2|datetimeoffset|  
+|Datetime|smalldatetime|date|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  
 |[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fff]|[M[M]]M-[d]d-[yy]yy HH:mm[:00]|[M[M]]M-[d]d-[yy]yy|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff]|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff] zzz|  
 |[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm[:00][tt]||[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  

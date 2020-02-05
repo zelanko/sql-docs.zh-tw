@@ -19,10 +19,10 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa5d978126807e1fb83c08a1d1b8d9d7b74d8368
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74687167"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 連接管理員
@@ -102,7 +102,7 @@ OLE DB 連接管理員可透過使用 OLE DB 提供者讓封裝連接到資料�
     CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. 依照您平常為 SQL 使用者和其他人所進行的操作一樣，授與 Data Factory 受控識別所需的權限。 如需適當的角色，請參閱[資料庫層級角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)。 執行下列程式碼。 如需更多選項，請參閱[此文件](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql) \(部分機器翻譯\)。
+1. 依照您平常為 SQL 使用者和其他人所進行的操作一樣，授與 Data Factory 受控識別所需的權限。 如需適當的角色，請參閱[資料庫層級角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)。 執行下列程式碼。 如需更多選項，請參閱[此文件](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)。
 
     ```sql
     EXEC sp_addrolemember [role name], [your data factory name];
@@ -132,7 +132,7 @@ OLE DB 連接管理員可透過使用 OLE DB 提供者讓封裝連接到資料�
 
 然後為 OLE DB 連線管理員設定 OLE DB 提供者。 有兩個選項可以執行此操作：
     
-- **在設計階段設定。** 在 SSIS 設計工具中按兩下 [OLE DB 連線管理員]，開啟 [連線管理員]  視窗。 在 [提供者]  下拉式清單中選取 [Microsoft OLE DB Driver for SQL Server](https://go.microsoft.com/fwlink/?linkid=871294)  。
+- **在設計階段設定。** 在 SSIS 設計工具中按兩下 [OLE DB 連線管理員]，開啟 [連線管理員]  視窗。 在 [提供者]  下拉式清單中選取 [Microsoft OLE DB Driver for SQL Server  ](https://go.microsoft.com/fwlink/?linkid=871294)。
     > [!NOTE]
     >  下拉式清單中的其他提供者可能不支援受控識別驗證。
     
@@ -145,7 +145,7 @@ OLE DB 連接管理員可透過使用 OLE DB 提供者讓封裝連接到資料�
     
 - **在設計階段設定。** 在 [SSIS 設計工具] 中，以滑鼠右鍵按一下 [OLE DB 連線管理員]，然後選取 [屬性]  。 將 `ConnectUsingManagedIdentity` 屬性更新為 `True`。
     > [!NOTE]
-    >  目前，當您在 SSIS 設計工具中或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 中執行 SSIS 套件時，連線管理員的 `ConnectUsingManagedIdentity` 屬性不會生效 (表示受控識別驗證無法運作)。
+    >  目前，當您在 SSIS 設計工具中或 `ConnectUsingManagedIdentity` SQL Server 中執行 SSIS 套件時，連線管理員的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 屬性不會生效 (表示受控識別驗證無法運作)。
 
 - **在執行階段設定。** 當您透過 SSMS 或**執行 SQL 套件**活動執行套件時，尋找 OLE DB 連線管理員，並將其 `ConnectUsingManagedIdentity` 屬性更新為 `True`。
     > [!NOTE]

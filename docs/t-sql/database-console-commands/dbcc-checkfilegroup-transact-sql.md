@@ -26,10 +26,10 @@ ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: c3b8061b49d0acacedae323645cd8822beaa016e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68102027"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
@@ -92,14 +92,14 @@ DBCC CHECKFILEGROUP
 >  指定 PHYSICAL_ONLY 會造成 DBCC CHECKFILEGROUP 略過 FILESTREAM 資料的所有檢查。  
   
  MAXDOP  
- **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 到[目前的版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
+ **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
   
  覆寫陳述式之 **sp_configure** 的 **max degree of parallelism** 設定選項。 MAXDOP 可能會超過使用 sp_configure 所設定的值。 如果 MAXDOP 超過使用 Resource Governor 所設定的值，資料庫引擎就會使用 ALTER WORKLOAD GROUP (Transact-SQL) 中所描述的 Resource Governor MAXDOP 值。 當您使用 MAXDOP 查詢提示時，適用所有搭配 max degree of parallelism 組態選項使用的語意規則。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
 > [!CAUTION]  
 >  如果 MAXDOP 設定為零，則伺服器會選擇平行處理原則的最大程度。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 DBCC CHECKFILEGROUP 和 DBCC CHECKDB 是類似的 DBCC 命令。 主要差異在於 DBCC CHECKFILEGROUP 只限於單一指定檔案群組和必要的資料表。
 DBCC CHECKFILEGROUP 會執行下列命令：
 -   檔案群組的 [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)。  
@@ -131,7 +131,7 @@ DBCC CHECKFILEGROUP 會利用內部資料庫快照集來提供執行這些檢查
 ## <a name="understanding-dbcc-error-messages"></a>了解 DBCC 錯誤訊息  
 DBCC CHECKFILEGROUP 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中會寫入一則訊息。 如果 DBCC 命令執行成功，該訊息將指出命令已順利完成，並顯示命令執行的時間量。 如果 DBCC 命令由於發生錯誤而在完成檢查之前停止執行，則訊息中會指出命令已經終止，並顯示狀態值以及命令執行的時間量。 下表列出並描述可以包含在訊息中的狀態值。
   
-|State|Description|  
+|State|描述|  
 |-----------|-----------------|  
 |0|已引發錯誤號碼 8930。 這表示中繼資料損毀使 DBCC 命令終止。|  
 |1|已引發錯誤號碼 8967。 發生內部 DBCC 錯誤。|  
@@ -141,7 +141,7 @@ DBCC CHECKFILEGROUP 命令執行完成之後，[!INCLUDE[ssNoVersion](../../incl
 |5|發生使 DBCC 命令終止的未知錯誤。|  
   
 ## <a name="error-reporting"></a>錯誤報告  
-每當 DBCC CHECKFILEGROUP 偵測到損毀錯誤時，都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 目錄中建立小型傾印檔案 (SQLDUMP*nnnn*.txt)。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體已啟用「功能使用方式」資料收集及「錯誤報告」功能時，這個檔案會自動轉送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的資料是用來提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能。
+每當 DBCC CHECKFILEGROUP 偵測到損毀錯誤時，都會在  *LOG 目錄中建立小型傾印檔案 (SQLDUMP*nnnn[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].txt)。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體已啟用「功能使用方式」資料收集及「錯誤報告」功能時，這個檔案會自動轉送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的資料是用來提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能。
 傾印檔案包含 DBCC CHECKFILEGROUP 命令的結果以及其他診斷輸出。 這個檔案具有限制的任意存取控制清單 (DACL)。 存取權會限制為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶及系統管理員 **sysadmin** 角色的成員。 依預設，系統管理員 **sysadmin** 角色包含 Windows BUILTIN\Administrators 群組及本機系統管理員群組的所有成員。 如果資料收集程序失敗，DBCC 命令不會失敗。
   
 ## <a name="resolving-errors"></a>解決錯誤  
@@ -206,7 +206,7 @@ GO
 ```  
   
 ### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>B. 檢查 AdventureWorks PRIMARY 檔案群組，不含非叢集索引  
-下列範例會藉由指定主要檔案群組的識別碼，再指定 `NOINDEX`，以檢查 `AdventureWorks2012` 資料庫主要檔案群組 (排除非叢集索引)。
+下列範例會藉由指定主要檔案群組的識別碼，再指定 `AdventureWorks2012`，以檢查 `NOINDEX` 資料庫主要檔案群組 (排除非叢集索引)。
   
 ```sql  
 USE AdventureWorks2012;  

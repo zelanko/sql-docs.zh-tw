@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2d674bf516dbdf25f940e9b14792d71c01d44806
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940669"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed 事件類別
@@ -25,7 +25,7 @@ ms.locfileid: "67940669"
   
 ## <a name="preconnectcompleted-event-class-data-columns"></a>PreConnect:Completed 事件類別資料行  
   
-|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |EventClass|**int**|216|27|否|  
 |SPID|**int**|引發此事件之伺服器處理序的識別碼。|12|是|  
@@ -35,8 +35,8 @@ ms.locfileid: "67940669"
 |Duration|**bigint**|分類函數使用的時間量 (以百萬分之一秒為單位)。|13|是|  
 |ObjectID|**int**|使用者定義之分類物件的識別碼。|22|是|  
 |CPU|**int**|CPU 使用量 (以毫秒為單位)。|18|是|  
-|Reads|**int**|邏輯讀取的數目。|16|是|  
-|Writes|**int**|邏輯寫入的數目。|17|是|  
+|讀取|**int**|邏輯讀取的數目。|16|是|  
+|寫入|**int**|邏輯寫入的數目。|17|是|  
 |GroupID|**int**|分類工作負載群組的識別碼。|66|是|  
 |錯誤|**int**|如果使用者定義的分類函數無法執行，就是上一個錯誤號碼。|31|是|  
 |State|**int**|上一個錯誤的狀態。|30|是|  

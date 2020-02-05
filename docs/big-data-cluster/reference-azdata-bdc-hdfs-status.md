@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f3548feb06b05699750ce5c088c05c4e3cc67d57
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 6b72e6043626715994c59273bd3eb679396975f7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531787"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822375"
 ---
 # <a name="azdata-bdc-hdfs-status"></a>azdata bdc hdfs shell
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-下文提供 `azdata` 工具中 `sql` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
+下文提供 `bdc hdfs status` 工具中 `azdata` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
 |     |     |
@@ -47,9 +47,9 @@ azdata bdc hdfs status show --resource storage-0
 ```
 ### <a name="optional-parameters"></a>選擇性參數
 #### `--resource -r`
-取得此服務中的這個資源。
+取得此服務中的此資源。
 #### `--all -a`
-顯示服務內每個資源的所有執行個體。
+顯示此服務中各項資源的所有執行個體。
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
 增加記錄詳細資訊，以顯示所有偵錯記錄。

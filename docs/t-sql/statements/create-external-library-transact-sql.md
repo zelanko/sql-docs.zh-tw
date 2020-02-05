@@ -20,10 +20,10 @@ ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
 ms.openlocfilehash: cb698f95037cb6ab39c5a98dbf725f9decc66cd0
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73536250"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
@@ -204,7 +204,7 @@ Azure SQL Database 支援 R。
 指定套件的語言。 此值可以是 `R`、`Python` 或外部語言的名稱 (請參閱[建立外部語言](create-external-language-transact-sql.md))。
 ::: moniker-end
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 針對 R 語言，當使用檔案時，必須針對 Windows，以具有 .ZIP 副檔名的 ZIP 壓縮封存檔案形式備妥套件。 
@@ -273,7 +273,7 @@ EXEC sp_execute_external_script
 + `packageA` 具有 `packageB` 相依性
 + `packageB` 具有 `packageC` 相依性
 
-若要成功安裝 `packageA`，您必須在將 `packageA` 新增至 SQL Server 時，為 `packageB` 和 `packageC` 建立程式庫。 請務必一併檢查所需的套件版本。
+若要成功安裝 `packageA`，您必須在將 `packageB` 新增至 SQL Server 時，為 `packageC` 和 `packageA` 建立程式庫。 請務必一併檢查所需的套件版本。
 
 實際上，常用套件的套件相依性通常比這個簡單範例複雜許多。 例如，**ggplot2** 可能需要超過 30 個套件，而這些套件可能需要伺服器上所未提供的額外套件。 任何套件遺失或套件版本錯誤都可能造成安裝失敗。
 
@@ -302,7 +302,7 @@ EXEC sp_execute_external_script
 
     如果已經將必要套件上傳至執行個體，就無須再次新增。 只要確認現有套件的版本是否正確即可。 
     
-    第一次執行 `sp_execute_external_script` 來安裝套件 `packageA` 時，會依照正確順序安裝必要套件 `packageC` 和 `packageB`。
+    第一次執行 `packageC` 來安裝套件 `packageB` 時，會依照正確順序安裝必要套件 `sp_execute_external_script` 和 `packageA`。
 
     不過，如果有任何必要套件無法供使用，安裝目標套件 `packageA` 時就會失敗。
 

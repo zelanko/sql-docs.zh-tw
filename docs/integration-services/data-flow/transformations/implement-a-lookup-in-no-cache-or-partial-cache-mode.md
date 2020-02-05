@@ -16,10 +16,10 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c0f04255feb2eec4b7cc8fc2fd9df0eed67ef25f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297894"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>以沒有快取或部分快取模式實作查閱
@@ -82,7 +82,7 @@ ms.locfileid: "71297894"
     >  「查閱」轉換會自動對應具有相同名稱和相同資料類型的資料行。  
   
     > [!NOTE]  
-    >  資料行必須具有要對應的相符資料類型。 如需詳細資訊，請參閱 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)。  
+    >  資料行必須具有要對應的相符資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../../integration-services/data-flow/integration-services-data-types.md)。  
   
 10. 執行下列步驟，在輸出中包含查閱資料行：  
   

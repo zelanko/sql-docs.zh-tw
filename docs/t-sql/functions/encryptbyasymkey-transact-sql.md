@@ -20,10 +20,10 @@ ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1de142260dc0724656ca4cfdf286370d16def4b5
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314596"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
@@ -52,7 +52,7 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 + **nvarchar**
 + **varbinary**
   
-中的多個
+或
   
 + **varchar**
  
@@ -67,16 +67,16 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 + **nvarchar**
 + **varbinary**
   
-中的多個
+或
   
 + **varchar**
  
 資料類型。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 **varbinary**，大小上限為 8,000 個位元組。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 相較於對稱金鑰加密和解密，使用非對稱金鑰的加密和解密作業會耗用大量資源，因此變得非常昂貴。 建議開發人員避免在大型資料集上執行非對稱金鑰加密和解密作業；例如，儲存在資料庫資料表中的使用者資料集。 相反地，建議開發人員先使用強式對稱金鑰將該資料加密，再使用非對稱金鑰將該對稱金鑰加密。  
   
 根據演算法，如果輸入超過特定位元組數目，`ENCRYPTBYASYMKEY` 會傳回 **NULL**。 特定限制：
@@ -88,7 +88,7 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，憑證和非對稱金鑰都可作為 RSA 金鑰上的包裝函式。  
   
 ## <a name="examples"></a>範例  
-此範例會使用非對稱金鑰 `JanainaAsymKey02` 將儲存在 `@cleartext` 中的文字加密。 陳述式會將加密資料插入 `ProtectedData04` 資料表中。  
+此範例會使用非對稱金鑰 `@cleartext` 將儲存在 `JanainaAsymKey02` 中的文字加密。 陳述式會將加密資料插入 `ProtectedData04` 資料表中。  
   
 ```  
 INSERT INTO AdventureWorks2012.Sales.ProtectedData04   

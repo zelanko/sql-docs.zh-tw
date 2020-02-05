@@ -13,10 +13,10 @@ ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dc50611e1497d84335f29d763c280cb09e9d41b
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874747"
 ---
 # <a name="create-a-maintenance-plan"></a>建立維護計畫
@@ -29,7 +29,7 @@ ms.locfileid: "70874747"
   
      [限制事項](#Restrictions)  
      
-     [必要條件](#Prerequisite)  
+     [先決條件](#Prerequisite)  
   
      [安全性](#Security)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "70874747"
 ###  <a name="Prerequisite"></a> 必要條件  
 必須啟用 [Agent XPs 伺服器組態選項](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) 。
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  若要建立或管理維護計畫，您必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員。  
@@ -141,7 +141,7 @@ ms.locfileid: "70874747"
   
     ```  
   
- 如需詳細資訊，請參閱：  
+ 如需詳細資訊，請參閱  
   
 -   [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
   

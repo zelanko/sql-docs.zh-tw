@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 10caa7bd8270cdc73d1d5f9addd2b0ef55b89073
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68009546"
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page 事件類別
@@ -33,7 +33,7 @@ ms.locfileid: "68009546"
   
 ## <a name="database-suspect-data-page-event-class-data-columns"></a>Database Suspect Data Page 事件類別資料行  
   
-|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|已經引發可疑頁面事件之資料庫的識別碼。 這和 **suspect_pages** 資料表的 **database_id** 資料行相同。|3|是|  
 |**EventClass**|**int**|事件的類型是 213。|27|否|  

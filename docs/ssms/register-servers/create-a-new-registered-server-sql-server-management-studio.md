@@ -1,10 +1,7 @@
 ---
-title: 建立新的已註冊伺服器 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 建立新的已註冊伺服器
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -15,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2fd57edd00e2e5cd6a8921f324b1de20260bfa9f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: a62555b9cb6f94b4fd51e304537551d857d2c525
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267785"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246566"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>建立新的已註冊伺服器 (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  本主題描述如何藉由在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的「已註冊的伺服器」元件中註冊伺服器，來儲存您經常存取之伺服器的連接資訊。 您可以在連接之前或在連接時從 [物件總管] 註冊伺服器。 有一個特定的功能表選項，可用來註冊本機電腦上的伺服器執行個體。  
+
+本主題描述如何藉由在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的「已註冊的伺服器」元件中註冊伺服器，來儲存您經常存取之伺服器的連接資訊。 您可以在連接之前或在連接時從 [物件總管] 註冊伺服器。 有一個特定的功能表選項，可用來註冊本機電腦上的伺服器執行個體。  
   
  已註冊的伺服器有兩種：  
   
@@ -53,7 +56,7 @@ ms.locfileid: "68267785"
      從 [已註冊的伺服器] 註冊伺服器時，[伺服器類型]  方塊是唯讀的，且會與 [已註冊的伺服器] 窗格中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請在 **[已註冊的伺服器]** 工具列上按一下 **[Database Engine]** 、 **[Analysis Server]** 、 **[Reporting Services]** 或 **[Integration Services]** ，然後再開始註冊新的伺服器。  
   
      **伺服器名稱**  
-     選取要以下列格式註冊的伺服器執行個體：\<伺服器名稱>  [\\\<執行個體名稱>  ]。  
+     選取要以下列格式註冊的伺服器執行個體：*伺服器名稱>\<* [\\*執行個體名稱>\<* ]。  
   
      **驗證**  
      當連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體時，有兩種可用的驗證模式。  
@@ -67,7 +70,7 @@ ms.locfileid: "68267785"
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] 如需詳細資訊，請參閱 [選擇驗證模式](../../relational-databases/security/choose-an-authentication-mode.md)。  
   
-     **User name**  
+     **使用者名稱**  
      顯示您所連接的目前使用者名稱。 只有在您已選取使用 Windows 驗證進行連接時，才能使用此唯讀選項。 若要變更 **[使用者名稱]** ，請以不同使用者登入電腦。  
   
      **登入**  
@@ -88,7 +91,7 @@ ms.locfileid: "68267785"
      **已註冊的伺服器描述**  
      輸入伺服器的選擇性描述。  
   
-     **測試**  
+     **Test**  
      按一下以測試與 [伺服器名稱]  中選取之伺服器的連接。  
   
      **儲存**  

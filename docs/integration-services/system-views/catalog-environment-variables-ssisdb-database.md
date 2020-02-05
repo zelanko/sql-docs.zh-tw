@@ -11,10 +11,10 @@ ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fdb7a7c325a6189feaea690fe2cc22d685ba86e6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296652"
 ---
 # <a name="catalogenvironment_variables-ssisdb-database"></a>catalog.environment_variables (SSISDB 資料庫)
@@ -26,17 +26,17 @@ ms.locfileid: "71296652"
 
   針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的所有環境顯示環境變數詳細資料。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |variable_id|**bigint**|環境變數的唯一識別碼 (ID)。|  
 |environment_id|**bigint**|與變數相關聯之環境的唯一識別碼。|  
 |NAME|**sysname**|環境變數的名稱。|  
 |description|**nvarchar(1024)**|環境變數的描述。|  
-|型別|**nvarchar(128)**|環境變數的資料類型。|  
+|type|**nvarchar(128)**|環境變數的資料類型。|  
 |sensitive|**bit**|當值為 `1` 時，變數為敏感值，會在儲存時加密。 當值為 `0` 時，變數則不是敏感值，且會在儲存為純文字。|  
 |value|**sql_variant**|環境變數的值。 當 sensitive 為 `0` 時，會顯示純文字值。 當 sensitive 為 `1` 時，會顯示 **NULL**。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個檢視會顯示目錄中每個環境變數的資料列。  
   
 ## <a name="permissions"></a>權限  

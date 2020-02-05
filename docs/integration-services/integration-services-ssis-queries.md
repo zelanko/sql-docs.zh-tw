@@ -18,10 +18,10 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d24d4e8bdebca82ec0541132b52ac84de6c9c271
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284486"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) 查詢
@@ -64,7 +64,7 @@ ms.locfileid: "71284486"
  如需詳細資訊，請參閱 [查詢產生器](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)。  
   
 ## <a name="sql-in-files"></a>檔案中的 SQL  
- 「執行 SQL」工作的 SQL 陳述式也可位於個別檔案中。 例如，在執行封裝時，您可以使用工具 (例如， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的「查詢編輯器」) 撰寫查詢、將查詢儲存至檔案，然後從檔案讀取該查詢。 檔案只能包含要執行的 SQL 陳述式和註解。 若要使用在檔案中儲存的 SQL 陳述式，您必須提供指定檔案名稱和位置的檔案連接。 如需相關資訊，請參閱 [檔案連線管理員](../integration-services/connection-manager/file-connection-manager.md)。  
+ 「執行 SQL」工作的 SQL 陳述式也可位於個別檔案中。 例如，在執行封裝時，您可以使用工具 (例如， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的「查詢編輯器」) 撰寫查詢、將查詢儲存至檔案，然後從檔案讀取該查詢。 檔案只能包含要執行的 SQL 陳述式和註解。 若要使用在檔案中儲存的 SQL 陳述式，您必須提供指定檔案名稱和位置的檔案連接。 如需相關資訊，請參閱 [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md)。  
   
 ## <a name="sql-in-variables"></a>變數中的 SQL  
  如果「執行 SQL」工作中的 SQL 陳述式來源是一個變數，則您要提供包含查詢之變數的名稱。 變數的 Value 屬性包含查詢文字。 您可以將變數的 ValueType 屬性設為字串資料類型，然後將 SQL 陳述式輸入或複製到 Value 屬性中。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
@@ -94,7 +94,7 @@ ms.locfileid: "71284486"
  **工具列**  
  使用工具列來管理資料集、選取要顯示的窗格，以及控制查詢功能。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**顯示/隱藏圖表窗格**|顯示或隱藏 **[圖表]** 窗格。|  
 |**顯示/隱藏方格窗格**|顯示或隱藏 **[方格]** 窗格。|  
@@ -111,7 +111,7 @@ ms.locfileid: "71284486"
  **查詢定義**  
  查詢定義會提供可在其中定義和測試查詢的工具列和窗格。  
   
-|窗格|Description|  
+|窗格|描述|  
 |----------|-----------------|  
 |**圖表** 窗格|在圖表中顯示查詢。 此圖表顯示查詢所包括的資料表及其聯結方式。 選取或清除資料表之資料行旁邊的核取方塊，以便在查詢輸出中加入或移除。<br /><br /> 將資料表加入查詢時，查詢產生器會依據資料表中的索引鍵來建立以資料表為基礎的資料表之間的聯結。 若要加入聯結，請將欄位從一個資料表拖曳至另一個資料表的欄位。 若要管理聯結，請以滑鼠右鍵按一下聯結，然後選取功能表選項。<br /><br /> 以滑鼠右鍵按一下 [圖表]  窗格，即可加入或移除資料表、選取所有資料表以及顯示或隱藏窗格。|  
 |**方格** 窗格|在方格中顯示查詢。 您可以使用此方格，將資料行加入至查詢、從查詢移除資料行，以及變更每個資料行的設定。|  
