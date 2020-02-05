@@ -20,10 +20,10 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0478e345f388b3f4246bf33fdaba29a47a6ec0f6
-ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74491961"
 ---
 # <a name="install-integration-services-ssis"></a>安裝 Integration Services (SSIS)
@@ -73,11 +73,11 @@ ms.locfileid: "74491961"
 - 若要安裝用於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程式設計的受控組件，另請選取 [共用功能]  下方的 [用戶端工具 SDK]  。
 
 > [!NOTE]
-> [安裝精靈] 的 [功能選取]  頁面上提供一些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件供您選取安裝，以安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的部分元件。 這些元件適用於特定的工作，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能有限。 例如，[Database Engine Services]  選項會安裝 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 所需的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件。 為了確保 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 能完整安裝，您必須在 [功能選擇]  頁面上選取 [Integration Services]  。
+> [安裝精靈] 的 [功能選取][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**頁面上提供一些** 元件供您選取安裝，以安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的部分元件。 這些元件適用於特定的工作，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能有限。 例如，[Database Engine Services]  選項會安裝 [[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 匯入和匯出精靈] 所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件。 為了確保 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 能完整安裝，您必須在 [功能選擇]  頁面上選取 [Integration Services]  。
 
 ### <a name="installing-a-dedicated-server-for-etl-processes"></a>安裝 ETL 的專用伺服器程序
 
-若要使用專用伺服器進行擷取、轉換和載入 (ETL) 程序，請在安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 時安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的本機執行個體。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 通常會將封裝儲存在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體中，而且它會仰賴 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來排程這些封裝。 如果 ETL 伺服器沒有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，您就必須從具有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的伺服器來排程或執行套件。 這樣一來，套件就不是在 ETL 伺服器上執行，而會在啟動套件的伺服器上執行。 因此，將無法如預期般地使用專用 ETL 伺服器的資源。 此外，其他伺服器的資源可能會受到執行中 ETL 處理序的限制。
+若要使用專用伺服器進行擷取、轉換和載入 (ETL) 程序，請在安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 時安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的本機執行個體。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 通常會將封裝儲存在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體中，而且它會仰賴 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來排程這些封裝。 如果 ETL 伺服器沒有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，您就必須從具有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的伺服器來排程或執行套件。 這樣一來，套件就不是在 ETL 伺服器上執行，而會在啟動套件的伺服器上執行。 因此，將無法如預期般地使用專用 ETL 伺服器的資源。 此外，其他伺服器的資源可能會受到執行中 ETL 處理序的限制。
 
 ### <a name="configuring-ssis-event-logging"></a>設定 SSIS 事件記錄
 

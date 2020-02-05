@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6ef49eaecad32c4564fb75d05df1a20ff12c15f3
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278102"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
@@ -76,12 +76,12 @@ COMMIT [ TRAN | TRANSACTION ]
 
  要求這筆交易應延遲持久性認可的選項。 如果資料庫已經使用 `DELAYED_DURABILITY = DISABLED` 或 `DELAYED_DURABILITY = FORCED` 更改，則會忽略要求。 如需詳細資訊，請參閱[控制交易持久性](../../relational-databases/logs/control-transaction-durability.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式設計人員只負責在交易所參考的全部資料都邏輯正確時，才發出 COMMIT TRANSACTION。  
   
  如果認可的交易是一項 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散式交易，COMMIT TRANSACTION 會觸發 MS DTC 利用兩階段認可通訊協定來認可交易所涉及的所有伺服器。 當本機交易跨越相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的兩個或更多資料庫時，執行個體會利用內部的兩階段認可，認可與交易有關的所有資料庫。  
   
- 用於巢狀交易時，認可內部交易並不會釋出資源，或永久修改它們。 只有在認可外部交易時，才會使資料修改永久化及釋出資源。 當 @@TRANCOUNT 大於 1 時，每個發出的 COMMIT TRANSACTION 都只使 @@TRANCOUNT 減量 1。 當最後 @@TRANCOUNT 減量到 0 時，便會認可整個外部交易。 由於[!INCLUDE[ssDE](../../includes/ssde-md.md)]會忽略 *transaction_name*，因此，當有未完成的內部交易時，發出參考外部交易名稱的 COMMIT TRANSACTION 只會使 @@TRANCOUNT 減量 1。  
+ 用於巢狀交易時，認可內部交易並不會釋出資源，或永久修改它們。 只有在認可外部交易時，才會使資料修改永久化及釋出資源。 當 @@TRANCOUNT 大於 1 時，每個發出的 COMMIT TRANSACTION 都只使 @@TRANCOUNT 減量 1。 當最後 @@TRANCOUNT 減量到 0 時，便會認可整個外部交易。 由於*會忽略* transaction_name[!INCLUDE[ssDE](../../includes/ssde-md.md)]，因此，當有未完成的內部交易時，發出參考外部交易名稱的 COMMIT TRANSACTION 只會使 @@TRANCOUNT 減量 1。  
   
  當 @@TRANCOUNT 是 0 時，發出 COMMIT TRANSACTION 會產生錯誤；沒有對應的 BEGIN TRANSACTION。  
   
@@ -95,7 +95,7 @@ COMMIT [ TRAN | TRANSACTION ]
 ## <a name="examples"></a>範例  
   
 ### <a name="a-committing-a-transaction"></a>A. 認可交易  
-**適用於：** SQL Server、Azure SQL Database、Azure SQL 資料倉儲和平行處理資料倉儲   
+**適用於：** SQL Server、Azure SQL Database、Azure SQL 資料倉儲，以及平行處理資料倉儲   
 
 下列範例會刪除作業候選項。 此範例使用 AdventureWorks。 
   

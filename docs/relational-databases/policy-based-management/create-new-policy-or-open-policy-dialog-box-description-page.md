@@ -12,10 +12,10 @@ ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b3d8afca0504f34d2d78794e5fddb0ffbf1a6562
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558273"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>建立新原則或開啟原則對話方塊，描述頁面
@@ -29,13 +29,13 @@ ms.locfileid: "75558273"
  **說明**  
  輸入原則的描述。  
   
- **其他協助超連結：要顯示的文字**  
+ **其他說明超連結: 要顯示的文字**  
  在執行原則時，其他說明超連結會顯示在 [結果詳細檢視]  頁面上。 輸入要顯示為超連結的文字。  
   
- **其他協助超連結：位址**  
+ **其他說明超連結: 位址**  
  輸入當使用者按一下 [結果詳細檢視]  頁面上所出現的超連結文字時，所要開啟之網頁的超連結。  
   
- **其他協助超連結：測試連結**  
+ **其他說明超連結: 測試連結**  
  按一下此選項可開啟用來測試連結有效性的超連結。  
   
  **建立日期**  

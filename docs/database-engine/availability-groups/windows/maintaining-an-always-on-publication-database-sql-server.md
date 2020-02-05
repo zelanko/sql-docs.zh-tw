@@ -14,10 +14,10 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7371acd7c96dbf4baa6edf31ca88d1994141663f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75228194"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>管理屬於 Always On 可用性群組一部分的已複寫發行者資料庫
@@ -32,7 +32,7 @@ ms.locfileid: "75228194"
   
 -   複寫監視器永遠都會在原始發行者底下顯示發行集資訊。 不過，只要加入原始發行者做為伺服器，您就可以在複寫監視器中檢視任何複本的這項資訊。  
   
--   使用預存程序或 Replication Management Objects (RMO) 在目前主要複本上管理複寫時，如果您指定了發行者名稱，就必須指定在其上啟用資料庫以供複寫的執行個體名稱 (原始發行者)。 若要決定適當的名稱，請使用 **PUBLISHINGSERVERNAME** 函數。 當發行資料庫聯結了可用性群組時，儲存在次要資料庫複本中的複寫中繼資料會與主要複本上的中繼資料完全相同。 因此，對於在主要複本上啟用以供複寫的發行集資料庫而言，儲存在次要複本之系統資料表中的發行者執行個體名稱是主要複本的名稱，而不是次要複本的名稱。 如果發行集資料庫容錯移轉至次要複本，這會影響複寫組態和維護。 例如，如果您要在容錯移轉後於次要複本上使用預存程序來設定複寫，且您想要將提取訂閱加入至不同複本上啟用的發行集資料庫，則必須將原始發行者 (而非目前發行者) 的名稱指定為 **sp_addpullsubscription** 或 **sp_addmergepulllsubscription** 的 *\@publisher* 參數。 不過，如果您在容錯移轉後啟用發行集資料庫，則儲存在系統資料表中的發行者執行個體名稱就是目前主要主機的名稱。 在此情況中，您會為 *\@publisher* 參數使用目前主要複本的主機名稱。  
+-   使用預存程序或 Replication Management Objects (RMO) 在目前主要複本上管理複寫時，如果您指定了發行者名稱，就必須指定在其上啟用資料庫以供複寫的執行個體名稱 (原始發行者)。 若要決定適當的名稱，請使用 **PUBLISHINGSERVERNAME** 函數。 當發行資料庫聯結了可用性群組時，儲存在次要資料庫複本中的複寫中繼資料會與主要複本上的中繼資料完全相同。 因此，對於在主要複本上啟用以供複寫的發行集資料庫而言，儲存在次要複本之系統資料表中的發行者執行個體名稱是主要複本的名稱，而不是次要複本的名稱。 如果發行集資料庫容錯移轉至次要複本，這會影響複寫組態和維護。 例如，如果您要在容錯移轉後於次要複本上使用預存程序來設定複寫，且您想要將提取訂閱加入至不同複本上啟用的發行集資料庫，則必須將原始發行者 (而非目前發行者) 的名稱指定為 *sp_addpullsubscription\@ 或* sp_addmergepulllsubscription**的** **publisher** 參數。 不過，如果您在容錯移轉後啟用發行集資料庫，則儲存在系統資料表中的發行者執行個體名稱就是目前主要主機的名稱。 在此情況中，您會為 *\@publisher* 參數使用目前主要複本的主機名稱。  
   
     > [!NOTE]  
     >  對於某些程序 (例如 **sp_addpublication**) 而言， *\@publisher* 參數僅支援非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的發行者；在這些情況中，該參數便與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On 無關。  
@@ -113,7 +113,7 @@ ms.locfileid: "75228194"
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Always On 可用性群組：互通性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [AlwaysOn 可用性群組︰互通性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server 複寫](../../../relational-databases/replication/sql-server-replication.md)  
   
   

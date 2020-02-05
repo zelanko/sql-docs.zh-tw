@@ -14,10 +14,10 @@ ms.assetid: 23863340-d8e0-48d6-928b-462745885d37
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0cf1dc8196ef8e248da485b01efc4bf192d4248c
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558167"
 ---
 # <a name="check-disk-input-and-output-subsystem-for-io-delay-problems"></a>檢查磁碟輸入輸出子系統的 IO 延遲問題

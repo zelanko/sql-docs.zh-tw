@@ -14,10 +14,10 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ef64d09c7f99f5081ebd1cbcdd7418614c3b41f1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908750"
 ---
 # <a name="manage-filetables"></a>管理 FileTable
@@ -106,7 +106,7 @@ SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );
 GO  
 ```  
   
-###  <a name="visible"></a> 如何：確保資料庫中 FileTable 的可見度  
+###  <a name="visible"></a> 如何：確保資料庫中 FileTable 的可見性  
  如果下列所有條件都成立，就會顯示資料庫層級目錄和其下的 FileTable 目錄 (如果有的話)：  
   
 1.  在執行個體層級啟用 FILESTREAM。  
@@ -161,7 +161,7 @@ GO
 > [!WARNING]  
 >  終止開啟檔案控制代碼，可能會導致使用者遺失未儲存的資料。 此行為與檔案系統本身的行為一致。  
   
-###  <a name="HowToListOpen"></a> 如何：取得與 FileTable 建立關聯的開啟檔案控制代碼清單  
+###  <a name="HowToListOpen"></a> 如何：取得與 FileTable 相關聯的開啟檔案控制代碼清單  
  查詢 [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) 目錄檢視。  
   
 ```sql  
@@ -169,7 +169,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="HowToKill"></a> 如何：終止與 FileTable 建立關聯的開啟檔案控制代碼  
+###  <a name="HowToKill"></a> 如何：終止與 FileTable 相關聯的開啟檔案控制代碼  
  使用適當的引數來呼叫預存程序 [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)，可終止資料庫或 FileTable 中的所有開啟檔案控制代碼，或是終止特定控制代碼。  
   
 ```sql  
@@ -192,7 +192,7 @@ GO
  FileTable 所採用的大部分鎖定都會對應至應用程式所開啟的檔案。  
   
  **識別開啟的檔案和相關聯的鎖定**  
- 您可以將 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) 動態管理檢視中的 **request_owner_id** 欄位與 [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) 中的 **fcb_id** 欄位聯結。 在某些情況下，鎖定不會對應至單一開啟檔案控制代碼。  
+ 您可以將 **sys.dm_tran_locks &#40;Transact-SQL&#41;** 動態管理檢視中的 [request_owner_id](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) 欄位與 **sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;** 中的 [fcb_id](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) 欄位聯結。 在某些情況下，鎖定不會對應至單一開啟檔案控制代碼。  
   
 ```sql  
 SELECT opened_file_name  

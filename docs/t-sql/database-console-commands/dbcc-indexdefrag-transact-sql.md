@@ -24,10 +24,10 @@ ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7372051d8dfb23430f834ca159125822c6892956
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116525"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
@@ -70,7 +70,7 @@ DBCC INDEXDEFRAG
  WITH NO_INFOMSGS  
  抑制所有嚴重性層級在 0 到 10 的參考用訊息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 DBCC INDEXDEFRAG 會重新組織索引的分葉層級，使頁面的實體順序符合分葉節點由左至右的邏輯順序，以改進索引掃描的效能。
   
 > [!NOTE]  
@@ -113,7 +113,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="examples"></a>範例  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. 使用 DBCC INDEXDEFRAG 重組索引  
-下列範例會重組 `AdventureWorks` 資料庫之 `Production.Product`資料表中 `PK_Product_ProductID` 索引的所有分割區。
+下列範例會重組 `PK_Product_ProductID` 資料庫之 `Production.Product`資料表中 `AdventureWorks` 索引的所有分割區。
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  

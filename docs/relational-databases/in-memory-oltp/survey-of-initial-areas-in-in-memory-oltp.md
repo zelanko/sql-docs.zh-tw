@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ca32d98270a6eea4bd918c12c6b45279a05628e5
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412498"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>記憶體內部 OLTP 的初始區域調查
@@ -59,7 +59,7 @@ SQL Server 提供記憶體內部功能，以大幅改進許多應用程式系統
   
 您稍後可以瀏覽下列示範記憶體內部 OLTP 效能提升的各篇文章：  
   
-- [示範：記憶體內部 OLTP 的效能改進](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)提供一個展示較大潛在效能提升的小規模示範。  
+- [示範：記憶體內部 OLTP 的效能改進](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 提供小規模示範來示範較大的潛在效能提升。  
 - [記憶體內部 OLTP 的範例資料庫](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) 提供較大規模示範。  
   
   
@@ -93,12 +93,12 @@ SQL Server 提供記憶體內部功能，以大幅改進許多應用程式系統
 
 1. [即時作業分析使用記憶體內部技術](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)
 2. [即時作業分析 - 概覽非叢集資料行存放區索引 (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)
-3. [即時作業分析：在 SQL Server 2016 中使用非叢集資料行存放區索引 (NCCI) 的簡單範例](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/) \(英文\)
-4. [即時作業分析：SQL Server 2016 中的 DML 作業與非叢集資料行存放區索引 (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/) \(英文\)
-5. [即時作業分析：經過篩選的非叢集資料行存放區索引 (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/) \(英文\)
-6. [即時作業分析：非叢集資料行存放區索引 (NCCI) 的壓縮延遲選項](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/) \(英文\)
-7. [即時作業分析：使用 NCCI 的壓縮延遲選項與效能](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/) \(英文\)
-8. [即時作業分析：記憶體最佳化資料表與資料行存放區索引](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/) \(英文\)
+3. [即時作業分析：在 SQL Server 2016 中使用非叢集資料行存放區索引 (NCCI) 的簡單範例](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
+4. [即時作業分析：SQL Server 2016 中的 DML 作業與非叢集資料行存放區索引 (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)
+5. [即時作業分析：經過篩選的非叢集資料行存放區索引 (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)
+6. [即時作業分析：非叢集資料行存放區索引 (NCCI) 的壓縮延遲選項](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)
+7. [即時作業分析：使用 NCCI 的壓縮延遲選項與效能](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)
+8. [即時作業分析：記憶體最佳化資料表與資料行存放區索引](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)
 
 #### <a name="defragment-a-columnstore-index"></a>重組資料行存放區索引
 
@@ -107,9 +107,9 @@ SQL Server 提供記憶體內部功能，以大幅改進許多應用程式系統
 
 #### <a name="bulk-importation-of-data"></a>資料大量匯入
 
-1. [叢集資料行存放區：大量載入](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/) \(英文\)
-2. [叢集資料行存放區索引：資料載入最佳化 - 最低限度記錄](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/) \(英文\)
-3. [叢集資料行存放區索引：資料載入最佳化 - 平行大量匯入](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/) \(英文\)
+1. [叢集資料行存放區：大量載入](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/)
+2. [叢集資料行存放區索引︰資料載入最佳化 - 最低限度記錄](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
+3. [叢集資料行存放區索引︰資料載入最佳化 - 平行大量匯入](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/)
 
 
 
@@ -214,7 +214,7 @@ ALTER DATABASE CURRENT
 
 下列 T-SQL 指令碼範例會針對記憶體內部 OLTP 啟用資料庫，並設定所有建議的設定。 它會同時使用 SQL Server 和 Azure SQL Database：[enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)。
 
-即使資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組，也不一定支援所有 SQL Server 功能。 如需有關限制的詳細資料，請參閱：[記憶體內部 OLTP 不支援的 SQL Server 功能](unsupported-sql-server-features-for-in-memory-oltp.md)
+即使資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組，也不一定支援所有 SQL Server 功能。 如需相關限制的詳細資料，請參閱[記憶體內部 OLTP 不支援的 SQL Server 功能](unsupported-sql-server-features-for-in-memory-oltp.md)。
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
@@ -359,18 +359,18 @@ PRINT @mesg;
 ### <a name="how-memory-optimized-tables-perform-faster"></a>記憶體最佳化資料表如何執行得更快  
   
   
-**雙重本質：** 記憶體最佳化資料表具有雙重本質：一個是在作用中記憶體中的表示方式，另一個是在硬碟上的表示方式。 每項交易都會對資料表的兩種代表方式進行認可。 交易會針對速度較快的使用中記憶體表示方式運作。 記憶體最佳化資料表可從速度更快的使用中記憶體 (相較於硬碟) 獲益。 此外，使用中記憶體較高的敏捷性也讓針對速度最佳化的更先進資料表結構得以實現。 進階結構也是無頁面結構，因此它可以避免閂鎖和執行序同步鎖定超出負荷及競爭。  
+**雙重本質：** 記憶體最佳化資料表具有雙重本質：一個是在使用中記憶體中的表示方式，另一個是在硬碟中的表示方式。 每項交易都會對資料表的兩種代表方式進行認可。 交易會針對速度較快的使用中記憶體表示方式運作。 記憶體最佳化資料表可從速度更快的使用中記憶體 (相較於硬碟) 獲益。 此外，使用中記憶體較高的敏捷性也讓針對速度最佳化的更先進資料表結構得以實現。 進階結構也是無頁面結構，因此它可以避免閂鎖和執行序同步鎖定超出負荷及競爭。  
   
   
-**無鎖定：** 記憶體最佳化資料表依賴「開放式」  方法來達成資料完整性與並行處理及高輸送量之間的競爭目標。 在交易期間，資料表不會鎖定任何版本的已更新資料列。 這可以顯著降低某些高容量系統中的競爭。  
+**無鎖定：** 記憶體最佳化資料表依賴 *開放式* 方法來達到資料完整性和並行處理及高輸送量之間的競爭目標。 在交易期間，資料表不會鎖定任何版本的已更新資料列。 這可以顯著降低某些高容量系統中的競爭。  
   
   
-**資料列版本：** 記憶體最佳化資料表會在資料表本身 (而非在 tempdb) 中新增已更新之資料列的新版本，而不使用鎖定。 原始資料列會保留到交易被認可之後。 在交易期間，其他處理序可以讀取資料表的原始版本。  
+**資料列版本：** 記憶體最佳化資料表會在本身的資料表 (而非在 tempdb) 中新增已更新之資料列的新版本，而非鎖定。 原始資料列會保留到交易被認可之後。 在交易期間，其他處理序可以讀取資料表的原始版本。  
   
 - 為磁碟資料表建立多個版本的資料列時，資料列版本會暫時儲存在 tempdb 中。  
   
   
-**記錄較少：** 資料列的更新前和更新後版本會保留在記憶體最佳化資料表中。 資料列配對可提供許多傳統上會寫入記錄檔的資訊。 這可以讓系統寫入較少的資訊，以及降低寫入記錄的頻率。 同時還能確保交易完整性。  
+**記錄較少：** 已更新資料表之前與之後的版本會保留在記憶體最佳化資料表中。 資料列配對可提供許多傳統上會寫入記錄檔的資訊。 這可以讓系統寫入較少的資訊，以及降低寫入記錄的頻率。 同時還能確保交易完整性。  
   
   
 <a name="how-do-native-procs-perform-faster-35x"></a>  
@@ -396,14 +396,14 @@ PRINT @mesg;
 ### <a name="trade-offs-of-memory-optimized-tables"></a>memory_optimized 資料表的取捨  
   
   
-**估計記憶體：** 您必須估計記憶體最佳化資料表將取用的作用中記憶體數量。 您的電腦系統必須擁有足夠的記憶體容量，才能裝載記憶體最佳化資料表。 如需詳細資料，請參閱：  
+**評估記憶體：** 您必須評估您的記憶體最佳化資料表將耗用的使用中記憶體總量。 您的電腦系統必須擁有足夠的記憶體容量，才能裝載記憶體最佳化資料表。 如需詳細資料，請參閱：  
   
 - [監視與疑難排解記憶體使用量](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)  
 - [估計記憶體最佳化資料表的記憶體需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [記憶體最佳化資料表中的資料表和資料列大小](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-**分割大型資料表：** 滿足眾多作用中記憶體需求的方式之一，是將您的大型資料表分割成多個部分，部分位於記憶體內部，用來儲存「經常存取的最近使用」  資料列，其他部分則位於磁碟上，用來儲存「不常存取的舊版」  資料列 (例如已經完全出貨並結單的銷售訂單)。 此資料分割的設計與實作程序為手動程序。 請參閱：  
+**分割大型資料表：** 滿足大部分使用中記憶體需求的方式之一是將您的大型資料表分割成多個部分，部分位於儲存 *最近使用* 之資料列的記憶體內部，其他部分則位於儲存 *舊版未使用* 之資料列 (例如已經完全出貨並結單的銷售訂單) 的磁碟中。 此資料分割的設計與實作程序為手動程序。 請參閱：  
   
 - [應用程式層級資料分割](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [分割記憶體最佳化資料表的應用程式模式](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
@@ -493,9 +493,9 @@ PRINT @mesg;
   
 ## <a name="related-links"></a>相關連結  
   
-- 初始文章：[In-Memory OLTP (記憶體中最佳化)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+- 內部文章： [記憶體內部 OLTP (記憶體內部最佳化)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
     
 下列文章提供程式碼，示範您可以使用記憶體內部 OLTP 達到的效能提升︰  
   
-- [示範：記憶體內部 OLTP 的效能改進](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)提供一個展示較大潛在效能提升的小規模示範。  
+- [示範：記憶體內部 OLTP 的效能改進](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 提供小規模示範來示範較大的潛在效能提升。  
 - [記憶體內部 OLTP 的範例資料庫](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) 提供較大規模示範。  

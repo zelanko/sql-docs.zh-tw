@@ -12,10 +12,10 @@ ms.assetid: 63d6d6d7-3850-4061-8e96-b1fa665e3180
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d867839a68e3b6fc595f0753872b8224f3bf51fb
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908322"
 ---
 # <a name="mssqlserver_8645"></a>MSSQLSERVER_8645
@@ -42,7 +42,7 @@ ms.locfileid: "72908322"
   
 1.  確認是否有其他應用程式或服務正在耗用此伺服器的記憶體。 重新設定比較不重要的應用程式或服務，以降低其記憶體耗用量。  
   
-2.  開始收集下列項目的效能監視器計數：**SQL Server：緩衝區管理員**、**SQL Server：記憶體管理員**。  
+2.  開始收集 **SQL Server: Buffer Manager** 和 **SQL Server: Memory Manager** 的效能監視器計數器。  
   
 3.  檢查下列 SQL Server 記憶體組態參數：  
   

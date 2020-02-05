@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3e4aac74ac35fc5d75320b420e85b130be110340
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096031"
 ---
 # <a name="use-openjson-with-the-default-schema-sql-server"></a>搭配使用 OPENJSON 與預設結構描述 (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "74096031"
  以下是搭配使用 **OPENJSON** 與預設結構描述的一些範例。 如需詳細資訊和其他範例，請參閱 [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)。  
   
 ## <a name="example---return-each-property-of-an-object"></a>範例 - 傳回物件的每個屬性  
- **[資料集屬性]**  
+ **查詢**  
   
 ```sql  
 SELECT *
@@ -36,14 +36,14 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
   
  **結果**  
   
-|索引鍵|ReplTest1|  
+|Key|值|  
 |---------|-----------|  
 |NAME|John|  
 |surname|Doe|  
 |age|45|  
   
 ## <a name="example---return-each-element-of-an-array"></a>範例 - 傳回陣列的每個元素  
- **[資料集屬性]**  
+ **查詢**  
   
 ```sql  
 SELECT [key],value
@@ -52,7 +52,7 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
   
  **結果**  
   
-|索引鍵|ReplTest1|  
+|Key|值|  
 |---------|-----------|  
 |0|en-GB|  
 |1|en-UK|  
@@ -85,11 +85,11 @@ FROM OPENJSON(@json,N'lax $.info')
   
  **結果**  
   
-|索引鍵|ReplTest1|類型|  
+|Key|值|類型|  
 |---------|-----------|----------|  
-|型別|1|0|  
+|type|1|0|  
 |address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  
-|標記|[ "Sport", "Water polo" ]|4|  
+|tags|[ "Sport", "Water polo" ]|4|  
   
 ## <a name="example---combine-relational-data-and-json-data"></a>範例 - 合併關聯式資料和 JSON 資料  
  在下列範例中，SalesOrderHeader 資料表的 SalesReason 文字資料行包含 JSON 格式的 SalesOrderReasons 陣列。 SalesOrderReasons 物件包含 "Manufacturer" 和 "Quality" 這類屬性。 此範例所建立的報表會聯結每個銷售訂單資料列與相關銷售原因，方法是展開銷售原因的 JSON 陣列，就像原因是儲存在個別子資料表中一樣。  

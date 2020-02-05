@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 74b4b468f0475b0d1e85c27bfa6780c71eec4b8e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 236f933cb4799e675ea74c0e5c0664fc7455847f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768150"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285245"
 ---
 # <a name="configure-distribution-wizard"></a>設定散發精靈
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

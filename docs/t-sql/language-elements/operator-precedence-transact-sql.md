@@ -18,10 +18,10 @@ ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 37c1bac44b4dff2be7735f89243b6e273eca0775
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121908"
 ---
 # <a name="operator-precedence-transact-sql"></a>運算子優先順序 (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68121908"
 |3|+ (正)、- (負)、+ (加)、(+ 串連)、- (減)、& (位元 AND)、^ (位元互斥 OR)、&#124; (位元 OR)|  
 |4|=、>、\<、>=、<=、<>、!=、!>、!< (比較運算子)|  
 |5|NOT|  
-|6|與|  
+|6|AND|  
 |7|ALL、ANY、BETWEEN、IN、LIKE、OR、SOME|  
 |8|= (指派)|  
   

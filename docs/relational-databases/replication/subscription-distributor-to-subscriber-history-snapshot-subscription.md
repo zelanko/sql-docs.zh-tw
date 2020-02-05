@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: d3575964-f287-4bcf-8d2e-f81a33141b25
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 460ab1ee21fd09c423316e7f4893dd6875d43130
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8cd2a4ad7ce605139133b29fed6b2acee3b63c5c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321675"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287085"
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>訂閱，散發者到訂閱者記錄 (快照式訂閱)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

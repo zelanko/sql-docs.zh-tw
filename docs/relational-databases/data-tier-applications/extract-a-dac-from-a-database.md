@@ -20,10 +20,10 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86482b666c2ecfc5e9fcc09c1d06df14640386d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134787"
 ---
 # <a name="extract-a-dac-from-a-database"></a>從資料庫中擷取 DAC
@@ -86,9 +86,9 @@ ms.locfileid: "68134787"
   
  **名稱** ：此名稱會識別 DAC。 它可能與 DAC 封裝檔案的名稱不同，而且應該會描述您的應用程式。 例如，如果此資料庫用於財務應用程式，您可能會想要命名為 DAC Finance。  
   
- **版本 (使用 xx.xx.xx.xx，其中 x 是數字)** ：識別 DAC 版本的數值。 DAC 版本會用於 Visual Studio 中，以便識別開發人員正在處理的 DAC 版本。 部署 DAC 時，此版本會儲存在 **msdb** 資料庫中，而且您之後可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [資料層應用程式]  節點底下檢視此版本。  
+ **版本 (使用 xx.xx.xx.xx，其中 x 是數字)** ：識別 DAC 版本的數值。 DAC 版本會用於 Visual Studio 中，以便識別開發人員正在處理的 DAC 版本。 部署 DAC 時，此版本會儲存在 **msdb** 資料庫中，而且您之後可以在  **的 [資料層應用程式]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 節點底下檢視此版本。  
   
- **描述**：選擇性。 描述此 DAC。 部署 DAC 時，此描述會儲存在 **msdb** 資料庫中，而且您之後可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的 [資料層應用程式]  節點底下檢視此描述。  
+ **描述** ：選擇性。 描述此 DAC。 部署 DAC 時，此描述會儲存在 **msdb** 資料庫中，而且您之後可以在  **的 [資料層應用程式]** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 節點底下檢視此描述。  
   
  **儲存至 DAC 封裝檔案 (檔案名稱包含 .dacpac 副檔名)** ：將 DAC 儲存至副檔名為 .dacpac 的 DAC 封裝檔案。 按一下 **[瀏覽]** 按鈕，即可指定檔案的名稱和位置。  
   

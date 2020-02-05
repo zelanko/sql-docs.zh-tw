@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 482b098d253d078f57c26a482584c2863266a16a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095840"
 ---
 # <a name="add-a-root-node-to-json-output-with-the-root-option-sql-server"></a>將根節點與根選項加入至 JSON 輸出 (SQL Server)
@@ -65,7 +65,7 @@ ms.locfileid: "74095840"
   
  以下是另一種包含 **ROOT** 選項的 **FOR JSON** 子句範例。 這個範例會指定選擇性 *RootName* 引數的值。  
   
- **[資料集屬性]**  
+ **查詢**  
   
 ```sql  
 SELECT TOP 5   

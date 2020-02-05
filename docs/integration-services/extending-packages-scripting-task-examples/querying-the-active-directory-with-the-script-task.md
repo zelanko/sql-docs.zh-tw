@@ -18,10 +18,10 @@ ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 14fa2d0602f0c358cd400e0734e567e853a6db85
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286822"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>以指令碼工作查詢 Active Directory
@@ -34,7 +34,7 @@ ms.locfileid: "71286822"
 > [!NOTE]  
 >  如果您想要建立可更輕鬆地在多個封裝之間重複使用的工作，請考慮使用此指令碼工作範例中的程式碼做為自訂工作的起點。 如需詳細資訊，請參閱 [開發自訂工作](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  下列範例根據 `email` 變數值 (包含員工的電子郵件地址)，從 Active Directory 擷取員工的姓名、職稱與電話號碼。 封裝中的優先順序條件約束可以使用擷取的資訊來判斷，例如，根據員工的工作職稱，來判斷要傳送低優先順序的電子郵件訊息或是高優先順序的頁面。  
   
 #### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  

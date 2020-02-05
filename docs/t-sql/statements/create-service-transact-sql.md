@@ -22,10 +22,10 @@ ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 761a04baca38ee1301c8f51d8b69564f409fac1e
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745393"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
@@ -50,7 +50,7 @@ CREATE SERVICE service_name
  這是要建立的服務名稱。 新服務會建立在目前資料庫中，擁有者是 AUTHORIZATION 子句所指定的主體。 您不可指定伺服器、資料庫和結構描述名稱。 *service_name* 必須是有效的 **sysname**。  
   
 > [!NOTE]  
-> 請勿建立針對 *service_name* 使用關鍵字 ANY 的服務。 當您在 `CREATE BROKER PRIORITY` 中針對服務名稱指定 `ANY` 時，就會考慮所有服務的優先權。 這並不限於名稱為 ANY 的服務。  
+> 請勿建立針對 *service_name* 使用關鍵字 ANY 的服務。 當您在 `ANY` 中針對服務名稱指定 `CREATE BROKER PRIORITY` 時，就會考慮所有服務的優先權。 這並不限於名稱為 ANY 的服務。  
   
  AUTHORIZATION *owner_name*  
  將服務的擁有者設為指定的資料庫使用者或角色。 當目前的使用者是 **dbo** 或 **sa** 時，*owner_name* 可以是任何有效使用者或角色的名稱。 否則，*owner_name* 必須是目前使用者的名稱、目前使用者有其 IMPERSONATE 權限的使用者名稱，或目前使用者所屬的角色名稱。  
@@ -64,7 +64,7 @@ CREATE SERVICE service_name
  **[** DEFAULT **]**  
  指定這項服務可以是遵照 DEFAULT 合約的交談目標。 在這個子句的內容中，DEFAULT 不是關鍵字，必須用識別碼來分隔。 DEFAULT 合約允許交談的兩端傳送訊息類型是 DEFAULT 的訊息。 訊息類型 DEFAULT 所用的驗證是 NONE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  服務會顯露相關合約所提供的功能，供其他服務使用。 `CREATE SERVICE` 陳述式會指定目標是這項服務的合約。 交談必須使用服務指定的合約，才能將這項服務設為目標。 未指定合約的服務，不會向其他服務顯露任何功能。  
   
  這項服務所初始化的交談可以使用任何合約。 當服務只要起始交談時，您便建立不指定任何合約的服務。  

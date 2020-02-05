@@ -14,10 +14,10 @@ ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d199ba6ad64f3b259d7b94ac6180d12e83a311e1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252706"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable 與其他 SQL Server 功能的相容性
@@ -29,7 +29,7 @@ ms.locfileid: "75252706"
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]僅部分支援 FileTable 功能。 在容錯移轉之後，主要複本上的 FileTable 資料可供存取，但卻無法存取位在可讀取之次要複本上的 FileTable 資料。  
   
-    > **注意：** 請注意，容錯移轉後將支援所有 FILESTREAM 功能。 可讀取的次要複本以及新的主要複本上的 FILESTREAM 資料皆可供存取。  
+    > **注意**  ：請注意，容錯移轉後將支援所有 FILESTREAM 功能。 可讀取的次要複本以及新的主要複本上的 FILESTREAM 資料皆可供存取。  
   
 -   FILESTREAM 和 FileTable 函數會接受或傳回虛擬網路名稱 (VNN) 而非電腦名稱。 如需有關這些函數的詳細資訊，請參閱 [Filestream and FileTable Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md) (Filestream 和 FileTable 函數 (Transact-SQL))。  
   

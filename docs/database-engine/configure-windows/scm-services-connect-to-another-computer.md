@@ -13,10 +13,10 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 03f409e11e037fcc406940d5a97e9934a77b96b4
-ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74249762"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM 服務 - 連接至另一台電腦
@@ -38,7 +38,7 @@ ms.locfileid: "74249762"
 2. 在 [動作]  功能表上，按一下 [連線到另一台電腦]  。
 3. 在 [選取電腦]  對話方塊的 [另一台電腦]  文字方塊中，輸入要管理的電腦名稱，然後按一下 [確定]  。
 
-   [電腦管理] 會顯示出遠端電腦上執行的服務。 最上層節點會變更為 [電腦管理 \< 遠端電腦 >]   。
+   [電腦管理] 會顯示出遠端電腦上執行的服務。 最上層節點會變更為 [電腦管理  **遠端電腦 >]** \<  。
 
 4. 在主控台樹狀目錄中，展開 [服務與應用程式]  ，然後展開 [SQL Server 組態管理員]  ，來管理遠端電腦的服務。
 
@@ -53,7 +53,7 @@ ms.locfileid: "74249762"
 6. 在 [電腦管理]  視窗中，按一下 [另一台電腦]  ，並輸入想要管理之遠端電腦的名稱，然後按一下 [完成]  。
 7. 在 [新增獨立嵌入式管理單元]  視窗中，按一下 [關閉]  。
 8. 在 [新增/移除嵌入式管理單元]  視窗中，按一下 [確定]  。
-9. 依序展開 [電腦管理 (\<電腦名稱>)]    和 [服務與應用程式]  。
+9. 依序展開 [電腦管理 (**電腦名稱>)]** _\<_  和 [服務與應用程式]  。
 10. 以滑鼠右鍵按一下 [SQL Server 組態管理員]  ，然後按一下 [從這裡新增視窗]  。
 11. 在 [視窗]  功能表上，按一下 [主控台根目錄]  ，以切換回第一個視窗，並刪除該視窗。
 12. 在 [檔案]  功能表上，按一下 [另存新檔]  ，並將檔案以副檔名為 **.msc** 的適當名稱儲存在所要的資料夾中。 請關閉 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console。

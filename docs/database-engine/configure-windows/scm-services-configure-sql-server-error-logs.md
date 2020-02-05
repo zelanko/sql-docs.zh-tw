@@ -13,10 +13,10 @@ ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8e746861ef30305a901c388f7574a4a27e2edab4
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74127486"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>SCM 服務 - 設定 SQL Server 錯誤記錄檔
@@ -30,7 +30,7 @@ ms.locfileid: "74127486"
 
 2. 在 **[設定 SQL Server 錯誤記錄檔]** 對話方塊中，從下列選項中進行選擇。
 
-    A. 記錄檔計數
+    a. 記錄檔計數
 
       **限制回收錯誤記錄檔之前，所允許的檔案數目**
 
@@ -40,7 +40,7 @@ ms.locfileid: "74127486"
 
       指定回收前建立的封存錯誤記錄檔數量上限。 預設為 6，不包括目前的記錄檔。 這個值會決定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在回收記錄檔前所保留的先前備份記錄數量。
 
-    B. 記錄檔大小
+    b. 記錄檔大小
 
       **錯誤記錄檔大小上限 (KB)**
 

@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 12226869eb78e53c072826ad0dc8e280104108e3
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74094568"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>匯入 BACPAC 檔案以建立新的使用者資料庫
@@ -44,7 +44,7 @@ ms.locfileid: "74094568"
 2.  匯入會從匯出檔案大量複製資料。  
 
 ## <a name="sql-server-utility"></a>SQL Server 公用程式  
- 如果您將 DAC 匯入至資料庫引擎執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，匯入的 DAC 就會合併至 SQL Server 公用程式。 然後 DAC 會出現在  [公用程式總管] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[部署的資料層應用程式]** 節點中，並在  詳細資料頁面中報告。  
+ 如果您將 DAC 匯入至資料庫引擎執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，匯入的 DAC 就會合併至 SQL Server 公用程式。 然後 DAC 會出現在  **[公用程式總管]** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的 [部署的資料層應用程式]  節點中，並在 [部署的資料層應用程式]  詳細資料頁面中報告。  
   
 ## <a name="database-options-and-settings"></a>資料庫選項和設定  
  根據預設，匯入期間建立的資料庫將會擁有 CREATE DATABASE 陳述式中的所有預設值，但是資料庫定序和相容性層級會設定為 DAC 匯出檔案中所定義的值。 DAC 匯出檔案使用原始資料庫中的值。  
@@ -57,7 +57,7 @@ ms.locfileid: "74094568"
 ## <a name="prerequisites"></a>Prerequisites  
  建議您不要匯入來源不明或來源不受信任的 DAC 匯出檔案。 這類檔案可能包含惡意程式碼，因此可能會執行非預期的 Transact-SQL 程式碼，或是修改結構描述而造成錯誤。 在您使用來源不明或來源不受信任的匯出檔案之前，請解除封裝 DAC 並檢查程式碼，例如預存程序和其他使用者定義的程式碼。 如需有關如何執行這些檢查的詳細資訊，請參閱＜ [Validate a DAC Package](validate-a-dac-package.md)＞。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  為了提高安全性，SQL Server 驗證登入會儲存在 DAC 匯出檔案中，而且沒有密碼。 當您匯入檔案之後，此登入會建立為停用的登入，而且會產生密碼。 若要啟用登入，請使用具有 ALTER ANY LOGIN 權限的登入進行登入，並使用 ALTER LOGIN 來啟用登入，然後指派可以傳達給使用者的新密碼。 Windows 驗證登入不需要這項處理，因為這類登入的密碼不是由 SQL Server 所管理。  
   
 ## <a name="permissions"></a>權限  
@@ -122,7 +122,7 @@ ms.locfileid: "74094568"
  **針對 Azure SQL Database：**  
   
  - **[匯入 BACPAC 檔案以建立新的 Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-import/)** 提供使用 Azure 入口網站、PowerShell、SSMS 或 SqlPackage 的逐步指示。  
- - 請參閱 **[SQL Database 選項和效能：了解每個服務層的可用項目](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** ，以取得不同服務層的詳細外觀。  
+ - 請參閱 **[SQL Database 選項和效能︰了解每個服務層的可用項目](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** ，以取得不同服務層的詳細外觀。  
 
 ### <a name="validation-page"></a>驗證頁面  
  您可以使用此頁面檢閱造成此作業無法執行的任何問題。 若要繼續進行，請解決封鎖問題，然後按一下 **[重新執行驗證]** 確定驗證成功。  
@@ -140,10 +140,10 @@ ms.locfileid: "74094568"
 ###  <a name="Results"></a> 結果頁面  
  此頁面會報告匯入和建立資料庫作業成功或失敗，並顯示每個動作成功或失敗。 發生錯誤的所有動作在 **[結果]** 資料行中都會有一個連結。 按一下連結，即可檢視該動作的錯誤報告。  
   
- 按一下 **[關閉]** ，關閉精靈。  
+ 按一下 [關閉]  即可關閉精靈。  
   
 ## <a name="see-also"></a>另請參閱  
-[匯入 BACPAC 檔案以建立新的 Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
+[匯入 BACPAC 檔案以建立新的 Azure SQL 資料庫](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [匯出資料層應用程式](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
   

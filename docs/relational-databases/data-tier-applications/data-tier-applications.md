@@ -15,10 +15,10 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278282"
 ---
 # <a name="data-tier-applications"></a>資料層應用程式
@@ -114,7 +114,7 @@ ms.locfileid: "72278282"
   
 ## <a name="data-tier-application-tasks"></a>資料層應用程式工作  
   
-|工作|主題連結|  
+|Task|主題連結|  
 |----------------------|-----------|  
 |描述如何使用 DAC 封裝檔案來建立新的 DAC 執行個體。|[部署資料層應用程式](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)|  
 |描述如何使用新的 DAC 封裝檔案，將執行個體升級為新版的 DAC。|[升級資料層應用程式](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)|  
@@ -124,8 +124,8 @@ ms.locfileid: "72278282"
 |描述如何使用 DAC 封存檔案 (.bacpac) 執行 DAC 的邏輯還原，或將 DAC 移轉至另一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的執行個體。|[匯入 BACPAC 檔案以建立新的使用者資料庫](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)|  
 |描述如何匯入 BACPAC 檔案，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內建立新的使用者資料庫。|[從資料庫中擷取 DAC](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)|  
 |描述如何將現有的資料庫升級為 DAC 執行個體。 DAC 定義會建立並儲存在系統資料庫中。|[將資料庫註冊為 DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md)|  
-|描述如何先檢閱 DAC 封裝的內容以及 DAC 升級要執行的動作，再於實際執行系統中使用該封裝。|[驗證 DAC 套件](../../relational-databases/data-tier-applications/validate-a-dac-package.md)|  
-|描述如何先將 DAC 封裝的內容放入資料庫管理員可以檢閱 DAC 作用的資料夾，再將它部署至實際伺服器。|[解除封裝 DAC 套件](../../relational-databases/data-tier-applications/unpack-a-dac-package.md)|  
+|描述如何先檢閱 DAC 封裝的內容以及 DAC 升級要執行的動作，再於實際執行系統中使用該封裝。|[驗證 DAC 封裝](../../relational-databases/data-tier-applications/validate-a-dac-package.md)|  
+|描述如何先將 DAC 封裝的內容放入資料庫管理員可以檢閱 DAC 作用的資料夾，再將它部署至實際伺服器。|[解除封裝 DAC 封裝](../../relational-databases/data-tier-applications/unpack-a-dac-package.md)|  
 |描述如何使用精靈來部署現有的資料庫。 精靈會使用 DAC 來執行這種部署。|[使用 DAC 部署資料庫](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
 ## <a name="see-also"></a>另請參閱  

@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: aa54440c5b1a506ce9c218dc7213383e0ff43ca0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906871"
 ---
 # <a name="delete-user-defined-functions"></a>刪除使用者定義函數
@@ -44,7 +44,7 @@ ms.locfileid: "72906871"
   
 -   如果有計算資料行參考這個函數，而且已經產生索引，就無法刪除函數。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要函數所屬結構描述的 ALTER 權限，或函數的 CONTROL 權限。  

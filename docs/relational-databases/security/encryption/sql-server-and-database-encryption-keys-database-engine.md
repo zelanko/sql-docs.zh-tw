@@ -13,10 +13,10 @@ ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 1c5e618d1116dfc464bcea781cdab8469e735b32
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558103"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 和資料庫加密金鑰 (Database Engine)
@@ -26,7 +26,7 @@ ms.locfileid: "75558103"
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，加密金鑰包括用於保護機密資料的公開、私密和對稱金鑰的組合。 當您初次啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體時，會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 初始化期間建立對稱金鑰。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用此金鑰來加密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]內所儲存的敏感性資料。 公開金鑰和私密金鑰是由作業系統所建立，可用來保護對稱金鑰。 針對負責儲存資料庫中之敏感性資料的每一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，建立一組公開金鑰和私密金鑰。  
   
 ## <a name="applications-for-sql-server-and-database-keys"></a>SQL Server 和資料庫金鑰的套用  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 對於金鑰有兩個主要的應用：針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體產生「服務主要金鑰」  (SMK)，並將「資料庫主要金鑰」  (DMK) 用於資料庫。
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 對於金鑰有兩個主要的應用：針對  *執行個體產生「服務主要金鑰」* [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](SMK)，並將「資料庫主要金鑰」  (DMK) 用於資料庫。
 
 ### <a name="service-master-key"></a>服務主要金鑰
   

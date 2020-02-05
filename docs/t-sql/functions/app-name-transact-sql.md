@@ -22,10 +22,10 @@ ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 21b49eb9638b4651ff52c6515f6e5f62177fc504
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843435"
 ---
 # <a name="app_name-transact-sql"></a>APP_NAME (Transact-SQL)
@@ -45,13 +45,13 @@ ms.locfileid: "73843435"
 APP_NAME  ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 **nvarchar(128)**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 使用 `APP_NAME` 來區別不同的應用程式，作為針對那些應用程式執行不同動作的方法。 例如，`APP_NAME` 可以區別不同的應用程式，以允許每個應用程式使用不同的日期格式。 它也可允許傳回到特定應用程式的參考資訊。
   
-若要在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中設定應用程式名稱，請在 [連線到資料庫引擎]  對話方塊中按一下 [選項]  。 在 [Additional Connection Parameters] (其他連線參數)  索引標籤中，以 `;app='application_name'` 格式提供 **app** 屬性
+若要在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中設定應用程式名稱，請在 [連線到資料庫引擎]  對話方塊中按一下 [選項]  。 在 [Additional Connection Parameters] (其他連線參數)  索引標籤中，以 **格式提供**app`;app='application_name'` 屬性
   
 ## <a name="example"></a>範例  
 此範例會檢查起始這個處理序的用戶端應用程式是否為 `SQL Server Management Studio` 工作階段。 然後，它會提供 US 或 ANSI 格式的日期值。

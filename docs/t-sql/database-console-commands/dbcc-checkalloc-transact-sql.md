@@ -27,10 +27,10 @@ ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: d1735a107f0510deaf062ce28bdc1a8db2acbae1
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056347"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
@@ -82,7 +82,7 @@ DBCC CHECKALLOC
  不適用。  
  最好不要使用這些 REPAIR 選項。 若要修復錯誤，我們建議您從備份中還原。 修復作業並不考慮資料表或資料表之間的任何條件約束。 如果指定的資料表涉及一或多項條件約束，建議您在修復作業之後，執行 DBCC CHECKCONSTRAINTS。 如果您必須使用 REPAIR，請執行不含修復選項的 DBCC CHECKDB 來尋找要使用的修復層級。 如果您使用 REPAIR_ALLOW_DATA_LOSS 層級，建議您在搭配這個選項執行 DBCC CHECKDB 之前，先備份資料庫。
 
- 取代所有提及的  
+ WITH  
  啟用要指定的選項。
 
  ALL_ERRORMSGS  
@@ -97,7 +97,7 @@ DBCC CHECKALLOC
  ESTIMATEONLY  
  顯示當指定了所有其他指定的選項時，執行 DBCC CHECKALLOC 所需要的 tempdb 估計空間量。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 DBCC CHECKALLOC 會檢查資料庫中所有頁面的配置狀況，不論頁面類型或頁面所屬物件的類型為何，都是如此。 另外，它也會驗證用來追蹤這些頁面的各種內部結構及其間的關聯性。
 如果未指定 NO_INFOMSGS，DBCC CHECKALLOC 會收集資料庫中所有物件的空間使用方式資訊。 之後，會一起列印這項資訊及任何找到的錯誤。
   
@@ -113,7 +113,7 @@ DBCC CHECKALLOC 利用內部資料庫快照集來提供執行這些檢查所需�
 ## <a name="understanding-dbcc-error-messages"></a>了解 DBCC 錯誤訊息  
 DBCC CHECKALLOC 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中會寫入一則訊息。 如果 DBCC 命令執行成功，該訊息將指出命令已順利完成，並顯示命令執行的時間量。 如果 DBCC 命令由於發生錯誤而在完成檢查之前停止執行，則訊息中會指出命令已經終止，並顯示狀態值以及命令執行的時間量。 下表列出並描述可以包含在訊息中的狀態值。
   
-|State|Description|  
+|State|描述|  
 |---|---|  
 |0|已引發錯誤號碼 8930。 這表示中繼資料損毀使 DBCC 命令終止。|  
 |1|已引發錯誤號碼 8967。 發生內部 DBCC 錯誤。|  
@@ -123,7 +123,7 @@ DBCC CHECKALLOC 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes
 |5|發生使 DBCC 命令終止的未知錯誤。|  
   
 ## <a name="error-reporting"></a>錯誤報告  
-每當 DBCC CHECKALLOC 偵測到損毀錯誤時，都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 目錄中建立小型傾印檔案 (SQLDUMP*nnnn*.txt)。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體已啟用「功能使用方式」資料收集及「錯誤報告」功能時，這個檔案會自動轉送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的資料是用來提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能。
+每當 DBCC CHECKALLOC 偵測到損毀錯誤時，都會在  *LOG 目錄中建立小型傾印檔案 (SQLDUMP*nnnn[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].txt)。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體已啟用「功能使用方式」資料收集及「錯誤報告」功能時，這個檔案會自動轉送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的資料是用來提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能。
 傾印檔案包含 DBCC CHECKALLOC 命令的結果以及其他診斷輸出。 這個檔案具有限制的任意存取控制清單 (DACL)。 存取權會限制為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶及系統管理員 (sysadmin) 角色的成員。 依預設，系統管理員 (sysadmin) 角色包含 Windows BUILTIN\Administrators 群組及本機系統管理員群組的所有成員。 如果資料收集程序失敗，DBCC 命令不會失敗。
   
 ## <a name="resolving-errors"></a>解決錯誤  
@@ -133,7 +133,7 @@ DBCC CHECKALLOC 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes
 ## <a name="result-sets"></a>結果集  
 下表說明 DBCC CHECKALLOC 傳回的資訊。
   
-|項目|Description|  
+|Item|描述|  
 |---|---|  
 |FirstIAM|僅供內部使用。|  
 |Root|僅供內部使用。|  
@@ -143,7 +143,7 @@ DBCC CHECKALLOC 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes
   
 另外，DBCC CHECKALLOC 也會報告每個檔案中各個索引和資料分割的配置摘要。 這份摘要描述資料的散發。
   
-|項目|Description|  
+|Item|描述|  
 |---|---|  
 |保留的頁面|配置給索引的頁面，以及配置範圍中未使用的頁面。|  
 |使用的頁面|索引所配置且使用中的頁面。|  

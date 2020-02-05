@@ -20,10 +20,10 @@ ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5d79f02237a380a9431e8269875d93a79bd9d04
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75243351"
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>GRANT XML 結構描述集合權限 (Transact-SQL)

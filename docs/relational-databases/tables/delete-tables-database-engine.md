@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3c9dc1c5650c98a925ff79a9bc78917a80d73656
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909902"
 ---
 # <a name="delete-tables-database-engine"></a>刪除資料表 (Database Engine)
@@ -59,7 +59,7 @@ ms.locfileid: "72909902"
   
 -   對於參考已卸除之資料表的任何檢視表或預存程序，您必須明確刪除或修改它們，以便移除資料表的參考。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表所屬結構描述的 ALTER 權限、資料表的 CONTROL 權限，或 **db_ddladmin** 固定資料庫角色成員資格。  
@@ -72,7 +72,7 @@ ms.locfileid: "72909902"
   
 2.  在資料表上按一下滑鼠右鍵，再從快速鍵功能表中選擇 [刪除]  。  
   
-3.  訊息方塊會提示您確認是否刪除。 按一下 **[是]** 。  
+3.  訊息方塊會提示您確認是否刪除。 按一下 [是]  。  
 
     > [!NOTE]  
     >  刪除資料表會自動移除它的所有關聯性。  

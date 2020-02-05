@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d2df5c3df512c60c38caeb2f2d0240a3cf2daa6e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0ba452caea108e24e86bffc0e89bfbc85dd2ed3e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768720"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285813"
 ---
 # <a name="replication-agent-executables-concepts"></a>複寫代理程式可執行檔概念
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68768720"
   
  下列複寫代理程式的執行個體，可以使用可執行檔來執行。  
   
--   [複寫散發代理程式](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
 -   [複寫記錄讀取器代理程式](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   

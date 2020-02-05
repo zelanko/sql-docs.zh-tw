@@ -25,10 +25,10 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 29a30f6b8d65cf1b821c93de0f051925b3cb6626
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68112863"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
@@ -85,7 +85,7 @@ ALTER SERVICE MASTER KEY
 > [!WARNING]  
 >  這個選項已過時。 請勿使用。 請改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  第一次需要利用服務主要金鑰來加密連結伺服器密碼、認證或資料庫主要金鑰時，會自動產生服務主要金鑰。 服務主要金鑰是以本機電腦金鑰或 Windows 資料保護 API 加密。 這個 API 會使用衍生自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶之 Windows 認證的金鑰。  
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 是使用 AES 加密演算法來保護服務主要金鑰 (SMK) 及資料庫主要金鑰 (DMK)。 與舊版中使用的 3DES 相比，AES 是一種較新的加密演算法。 將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體升級至 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之後，應該會重新產生 SMK 和 DMK，以將主要金鑰升級至 AES。 如需重新產生 DMK 的詳細資訊，請參閱 [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)。  

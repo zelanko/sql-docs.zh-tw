@@ -29,10 +29,10 @@ ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 54e1dcd9735610f7cc8f109f00aa56fa7728ce04
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68495436"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>反斜線 (行接續符號) (Transact-SQL)
@@ -57,7 +57,7 @@ ms.locfileid: "68495436"
  \<字串的接續區段>  
  這是字串的接續。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 這個命令會將字串的第一個區段和接續區段當做一個字串傳回，但不含反斜線。 反斜線之後的新行必須是換行字元 (U+000A) 或是歸位字元 (U+000D) 和換行字元 (U+000A) (依照此順序) 的組合。 
 
 ## <a name="examples"></a>範例  

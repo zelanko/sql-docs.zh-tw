@@ -18,10 +18,10 @@ ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d3cf4e302df6e28d898a2790d928cf40085f7915
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74687269"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 連接管理員
@@ -92,9 +92,9 @@ ms.locfileid: "74687269"
 
 若要使用 Azure SQL Database 的受控識別驗證，請遵循下列步驟來設定您的資料庫：
 
-1. 在 Azure 入口網站為您的 Azure SQL Server [佈建 Azure Active Directory 系統管理員](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) \(部分機器翻譯\)，如果您尚未這麼做。 Azure AD 系統管理員可以是 Azure AD 使用者或 Azure AD 群組。 如果您將系統管理員角色授與受控識別群組，請略過步驟 2 和 3。 系統管理員將擁有資料庫的完整存取權。
+1. 在 Azure 入口網站為您的 Azure SQL Server [佈建 Azure Active Directory 系統管理員](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) \(部分機器翻譯\)，如果您尚未這麼做。 Azure AD 系統管理員可以是 Azure AD 使用者或 Azure AD 群組。 如果您將系統管理員角色授與受控識別群組，請略過步驟 2 與 3。 系統管理員將擁有資料庫的完整存取權。
 
-1. 為 Data Factory 受控識別[建立自主資料庫使用者](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)。 使用至少具有 ALTER ANY USER 權限的 Azure AD 身分識別，使用 SSMS 等工具連線至您要複製資料的資料庫。 執行下列 T-SQL： 
+1. 為 Data Factory 受控識別[建立自主資料庫使用者](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) \(部分機器翻譯\)。 使用至少具有 ALTER ANY USER 權限的 Azure AD 身分識別，使用 SSMS 等工具連線至您要複製資料的資料庫。 執行下列 T-SQL： 
     
     ```sql
     CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
@@ -116,7 +116,7 @@ ms.locfileid: "74687269"
     CREATE LOGIN [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. 為 Data Factory 受控識別[建立自主資料庫使用者](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)。 連線到您想要從中複製資料的資料庫，然後執行下列 T-SQL： 
+1. 為 Data Factory 受控識別[建立自主資料庫使用者](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) \(部分機器翻譯\)。 連線到您想要從中複製資料的資料庫，然後執行下列 T-SQL： 
   
     ```sql
     CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
@@ -132,7 +132,7 @@ ms.locfileid: "74687269"
     
 - **在設計階段設定。** 在 [SSIS 設計工具] 中，以滑鼠右鍵按一下 [ADO.NET 連線管理員]，然後選取 [屬性]  。 將 `ConnectUsingManagedIdentity` 屬性更新為 `True`。
     > [!NOTE]
-    >  目前，當您在 SSIS 設計工具中或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 中執行 SSIS 套件時，連線管理員的 `ConnectUsingManagedIdentity` 屬性不會生效 (表示受控識別驗證無法運作)。
+    >  目前，當您在 SSIS 設計工具中或 `ConnectUsingManagedIdentity` SQL Server 中執行 SSIS 套件時，連線管理員的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 屬性不會生效 (表示受控識別驗證無法運作)。
     
 - **在執行階段設定。** 當您透過 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) 或 [Azure Data Factory 執行 SSIS 套件活動](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity) \(部分機器翻譯\) 來執行套件時，請尋找 ADO.NET 連線管理員。 將其屬性 `ConnectUsingManagedIdentity` 更新為 `True`。
     > [!NOTE]

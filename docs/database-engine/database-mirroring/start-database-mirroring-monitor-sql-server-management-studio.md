@@ -16,10 +16,10 @@ ms.assetid: 53165335-97ca-4f88-8e78-22f1839dee98
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7c096cf3bba17eb92d9141383c604e3558c834cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252765"
 ---
 # <a name="start-database-mirroring-monitor-sql-server-management-studio"></a>啟動資料庫鏡像監視器 (SQL Server Management Studio)

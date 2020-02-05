@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4832910f00322875c334e16df77975a33106d214
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056419"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Errors and Warnings 事件類別目錄 (Database Engine)
@@ -27,11 +27,11 @@ ms.locfileid: "74056419"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[Attention 事件類別](../../relational-databases/event-classes/attention-event-class.md)|指出發生 **Attention** 事件。|  
 |[Background Job Error 事件類別](../../relational-databases/event-classes/background-job-error-event-class.md)|指出背景作業已異常結束。|  
-|[點陣圖警告事件類別](../../relational-databases/event-classes/bitmap-warning-event-class.md)|指出查詢中已經停用點陣圖篩選。|  
+|[Bitmap Warning 事件類別](../../relational-databases/event-classes/bitmap-warning-event-class.md)|指出查詢中已經停用點陣圖篩選。|  
 |[Blocked Process Report 事件類別](../../relational-databases/event-classes/blocked-process-report-event-class.md)|指出封鎖工作已超出指定的時間量。|  
 |[CPU Threshold Exceeded 事件類別](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)|指出資源管理員偵測到超出指定之 CPU 臨界值的查詢。|  
 |[ErrorLog 事件類別](../../relational-databases/event-classes/errorlog-event-class.md)|指出錯誤事件已記錄在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中。|  

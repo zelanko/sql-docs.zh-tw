@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
-ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74564816"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
@@ -62,7 +62,7 @@ ms.locfileid: "74564816"
  *CTE_query_definition*  
  指定其結果集擴展一般資料表運算式的 SELECT 陳述式。 除了 CTE 不能定義另一個 CTE 之外，*CTE_query_definition* 的 SELECT 陳述式必須符合建立檢視表的相同需求。 如需詳細資訊，請參閱＜備註＞一節和 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)。  
   
- 如果定義了多個 *CTE_query_definition*，就必須由下列設定運算子來聯結查詢定義：UNION ALL、UNION、EXCEPT 或 INTERSECT。  
+ 如果定義了多個 *CTE_query_definition*，就必須以下列其中一個設定運算子來聯結查詢定義：UNION ALL、UNION、EXCEPT 或 INTERSECT。  
   
 ## <a name="remarks"></a>備註  
   
@@ -132,7 +132,7 @@ ms.locfileid: "74564816"
   
 -   遞迴 CTE 能夠傳回的所有資料行都可為 Null，不論參與的 `SELECT` 陳述式所傳回之資料行 Null 屬性為何，都是如此。  
   
--   組合不正確的遞迴 CTE 可能會造成無限迴圈。 例如，若遞迴成員查詢定義對父資料行與子資料行傳回相同的值，就會建立無限迴圈。 若要防止無限迴圈，您可以在 `INSERT`、`UPDATE`、`DELETE` 或 `SELECT` 陳述式的 OPTION 子句中使用 `MAXRECURSION` 提示以及 0 與 32,767 之間的值，來限制特定陳述式所能使用的遞迴層級數目。 這可讓您控制陳述式的執行，直到產生迴圈的程式碼問題解決為止。 伺服器範圍的預設值是 100。 當指定 0 時，不會套用任何限制。 每個陳述式只能指定一個 `MAXRECURSION` 值。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
+-   組合不正確的遞迴 CTE 可能會造成無限迴圈。 例如，若遞迴成員查詢定義對父資料行與子資料行傳回相同的值，就會建立無限迴圈。 若要防止無限迴圈，您可以在 `MAXRECURSION`、`INSERT`、`UPDATE` 或 `DELETE` 陳述式的 OPTION 子句中使用 `SELECT` 提示以及 0 與 32,767 之間的值，來限制特定陳述式所能使用的遞迴層級數目。 這可讓您控制陳述式的執行，直到產生迴圈的程式碼問題解決為止。 伺服器範圍的預設值是 100。 當指定 0 時，不會套用任何限制。 每個陳述式只能指定一個 `MAXRECURSION` 值。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 -   您不能利用包含遞迴通用資料表運算式的檢視來更新資料。  
   
@@ -167,11 +167,11 @@ ms.locfileid: "74564816"
   
 -   不允許在 CTE 中指定多個 `WITH` 子句。 例如，如果 CTE 查詢定義包含子查詢，該子查詢就不能包含定義另一個 CTE 的巢狀 `WITH` 子句。  
   
--   除非已指定 `TOP` 子句，否則不能在 CTE_query_definition 中使用 `ORDER BY` 子句。  
+-   除非已指定 `ORDER BY` 子句，否則不能在 CTE_query_definition 中使用 `TOP` 子句。  
   
 -   當批次中的陳述式使用 CTE 時，在 CTE 之前的陳述式，後面必須接著分號。  
   
--   在 `sp_prepare` 所準備的陳述式中使用 CTE 時，CTE 的行為會與 PDW 中的其他 `SELECT` 陳述式相同。 不過，如果是在 `sp_prepare` 所準備的 CETAS 中使用 CTE，則由於受到針對 `sp_prepare` 實作繫結之方式的影響，CTE 的行為可能會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及其他 PDW 陳述式不同。 如果參考 CTE 的 `SELECT` 使用不存在於 CTE 中的錯誤資料行，`sp_prepare` 將不會偵測錯誤就逕行通過，但改為在 `sp_execute` 期間擲回該錯誤。  
+-   在 `sp_prepare` 所準備的陳述式中使用 CTE 時，CTE 的行為會與 PDW 中的其他 `SELECT` 陳述式相同。 不過，如果是在 `sp_prepare` 所準備的 CETAS 中使用 CTE，則由於受到針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實作繫結之方式的影響，CTE 的行為可能會與 `sp_prepare` 及其他 PDW 陳述式不同。 如果參考 CTE 的 `SELECT` 使用不存在於 CTE 中的錯誤資料行，`sp_prepare` 將不會偵測錯誤就逕行通過，但改為在 `sp_execute` 期間擲回該錯誤。  
   
 ## <a name="examples"></a>範例  
   
@@ -423,7 +423,7 @@ ORDER BY ComponentLevel, AssemblyID, ComponentID;
 ```  
   
 ### <a name="f-using-a-recursive-cte-in-an-update-statement"></a>F. 在 UPDATE 陳述式中使用遞迴 CTE  
- 下列範例會為用來建置產品 'Road-550-W Yellow, 44' `(ProductAssemblyID``800`) 的所有組件更新 `PerAssemblyQty` 值。 通用資料表運算式會傳回一份階層式清單，其中包含用來建立 `ProductAssemblyID 800` 的組件、用來建立這些組件的元件等等。 只會修改通用資料表運算式所傳回的資料列。  
+ 下列範例會為用來建置產品 'Road-550-W Yellow, 44' `PerAssemblyQty`) 的所有組件更新 `(ProductAssemblyID``800` 值。 通用資料表運算式會傳回一份階層式清單，其中包含用來建立 `ProductAssemblyID 800` 的組件、用來建立這些組件的元件等等。 只會修改通用資料表運算式所傳回的資料列。  
   
 ```sql  
 USE AdventureWorks2012;  

@@ -16,10 +16,10 @@ ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 61e3395939b7faf059a5376674d4f85e3d5c6677
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251164"
 ---
 # <a name="specify-backup-or-restore-to-continue-or-stop-after-error"></a>指定在錯誤之後繼續還是停止備份或還原

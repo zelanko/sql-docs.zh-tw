@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: b16af8c06f6ce1a5ab221f267b5b16dde27b587e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244394"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>如何叢集化 Always On 可用性群組的 DTC 服務
@@ -24,14 +24,14 @@ ms.locfileid: "75244394"
 
 本主題描述針對 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]叢集化 Microsoft Distributed Transaction Coordinator (DTC) 服務的需求和步驟。 如需有關分散式交易和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的其他資訊，請參閱 [AlwaysOn 可用性群組和資料庫鏡像的跨資料庫交易和分散式交易 (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。
 
- ## <a name="checklist-preliminary-requirements"></a>檢查清單：初步需求
+ ## <a name="checklist-preliminary-requirements"></a>檢查清單︰初步需求
 
 ||Task|參考|  
 |------|-----------------|----------|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|確定所有節點、服務和可用性群組皆已正確設定。|[AlwaysOn 可用性群組的必要條件、限制和建議 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)|
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|確定已符合可用性群組 DTC 需求。|[AlwaysOn 可用性群組和資料庫鏡像的跨資料庫交易和分散式交易 (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 
-## <a name="checklist-clustered-dtc-resource-dependencies"></a>檢查清單：叢集 DTC 資源相依性
+## <a name="checklist-clustered-dtc-resource-dependencies"></a>檢查清單︰叢集 DTC 資源相依性
 
 ||Task|參考|  
 |------|-----------------|----------|  
@@ -43,7 +43,7 @@ ms.locfileid: "75244394"
 建立可用性群組資源之後，請建立叢集 DTC 資源，並將它加入可用性群組。  您可以在[建立 AlwaysOn 可用性群組的叢集 DTC](../../../database-engine/availability-groups/windows/create-clustered-dtc-for-an-always-on-availability-group.md)中看到範例指令碼。
 
 
-## <a name="checklist-post-clustered-dtc-resource-configurations"></a>檢查清單：張貼叢集 DTC 資源設定
+## <a name="checklist-post-clustered-dtc-resource-configurations"></a>檢查清單︰張貼叢集 DTC 資源組態
 
 ||Task|參考|  
 |------|-----------------|----------|  
@@ -69,4 +69,4 @@ ms.locfileid: "75244394"
 
 [SQL Server 2016 DTC Support in Availability Groups](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) (可用性群組中的 SQL Server 2016 DTC 支援) 
 
-[External link:Configure DTC for a clustered instance of SQL Server with Windows Server 2008 R2](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) (外部連結：使用 Windows Server 2008 R2 設定 SQL Server 叢集執行個體的 DTC)
+[外部連結：使用 Windows Server 2008 R2 設定 SQL Server 叢集執行個體的 DTC](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)

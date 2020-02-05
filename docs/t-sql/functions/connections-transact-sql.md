@@ -22,10 +22,10 @@ ms.assetid: c59836a8-443c-4b9a-8b96-8863ada97ac7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b614ba90bddad592bedbf67e82d250ea8ba51e25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132084"
 ---
 # <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "68132084"
 ## <a name="return-types"></a>傳回類型
 **integer**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 連接次數並不等於使用者數目。 例如，當沒有觀察連線的使用者時，應用程式仍可以開啟多個通往 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連線。
   
 執行 **sp_monitor** 來顯示一張報表，裡面有多項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 統計資料，包含嘗試連線次數。

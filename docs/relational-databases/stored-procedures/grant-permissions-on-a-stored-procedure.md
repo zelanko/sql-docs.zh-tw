@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50a7df8f2c9479c957158e96f597655c72ac7b2c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909720"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>授與預存程序的權限
@@ -43,7 +43,7 @@ ms.locfileid: "72909720"
   
 -   您無法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 授與系統程序或系統函數的權限。 請改用 [GRANT 物件權限](../../t-sql/statements/grant-object-permissions-transact-sql.md) 。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  同意授權者 (或是指定了 AS 選項的主體) 必須具有指定了 GRANT OPTION 的權限本身，或是具有隱含目前正在授與權限的更高權限。 需要程序所屬結構描述的 ALTER 權限，或程序的 CONTROL 權限。 如需詳細資訊，請參閱 [GRANT 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)中授與預存程序的權限。  
@@ -78,7 +78,7 @@ ms.locfileid: "72909720"
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。 此範例會將預存程序 `EXECUTE` 的 `HumanResources.uspUpdateEmployeeHireInfo` 權限授與名為 `Recruiting11`的應用程式角色。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會將預存程序 `EXECUTE` 的 `HumanResources.uspUpdateEmployeeHireInfo` 權限授與名為 `Recruiting11`的應用程式角色。  
   
 ```sql  
 USE AdventureWorks2012;   

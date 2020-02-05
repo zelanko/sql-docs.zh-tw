@@ -16,13 +16,13 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 043a13a84eebe9fc1c2cac96628ce6303653e8ac
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 91e4ceeba2e8ec18569c22a886623977402e478a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768586"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284006"
 ---
 # <a name="distributor-information-publications"></a>散發者資訊，發行集
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "68768586"
  **發行集**  
  與代理程式相關聯之發行集的名稱。  
   
- **訂閱**  
+ **訂用帳戶**  
  訂閱的名稱，格式應該為：[*SubscriberName*].[*Database*]。  
   
  **型別**  
@@ -97,7 +97,7 @@ ms.locfileid: "68768586"
  **平均命令數**  
  最近一次代理程式執行期間，每項交易的平均命令數目。  
   
-### <a name="merge-agent"></a>[合併代理程式]  
+### <a name="merge-agent"></a>合併代理程式  
  **狀態**  
  代理程式的狀態。 下列清單顯示可能的狀態值：  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68768586"
  **發行集**  
  與代理程式相關聯之發行集的名稱。  
   
- **訂閱**  
+ **訂用帳戶**  
  訂閱的名稱，格式應該為：[*SubscriberName*].[*Database*]。  
   
  **型別**  

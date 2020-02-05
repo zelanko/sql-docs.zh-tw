@@ -18,10 +18,10 @@ ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 12ae393f99510df743b5a5ec0bf777f7b982d570
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120815"
 ---
 # <a name="stpointn-geography-data-type"></a>STPointN (geography 資料類型)
@@ -40,14 +40,14 @@ ms.locfileid: "68120815"
  *expression*  
  這是介於 1 和 **geography** 執行個體中點數間的 **int** 運算式。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回型別：**SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
- 開放式地理空間協會 (OGC) 類型：**點**  
+ 開放地理空間協會 (OGC) 類型：**Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 **geography** 執行個體是使用者建立的，STPointN() 會傳回 *expression* 所指定的點，其方式是根據原來輸入的順序來排序這些點。  
   
  如果 **geography** 執行個體是系統建構的，STPointN() 會傳回 *expression* 所指定的點，其方式是根據輸出的相同順序來排序所有點：首先是根據 **geography** 執行個體，然後是根據執行個體內的環形 (如果適用的話)，再根據環形內的點。 這個順序具決定性。  

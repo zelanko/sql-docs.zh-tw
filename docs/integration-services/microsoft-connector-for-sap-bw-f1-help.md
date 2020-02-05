@@ -13,10 +13,10 @@ ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d1676f6aeec77fa3feb6b46365536de3ac36bff6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282544"
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Microsoft Connector for SAP BW F1 說明
@@ -36,7 +36,7 @@ ms.locfileid: "71282544"
   
 ### <a name="sap-bw-connection-manager-f1-help"></a>SAP BW 連接管理員 F1 說明  
   
--   [SAP BW 連接管理員編輯器](../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
+-   [SAP BW 連線管理員編輯器](../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
   
 ### <a name="sap-bw-source-f1-help"></a>SAP BW 來源 F1 說明  
   
@@ -66,7 +66,7 @@ ms.locfileid: "71282544"
   
 -   [SAP BW 目的地編輯器 &#40;進階頁面&#41;](../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
--   [查閱 InfoPackage](../integration-services/data-flow/look-up-infopackage.md)  
+-   [ InfoPackage](../integration-services/data-flow/look-up-infopackage.md)  
   
 -   [建立新的 InfoObject](../integration-services/data-flow/create-new-infoobject.md)  
   

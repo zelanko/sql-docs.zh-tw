@@ -26,10 +26,10 @@ ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8cf0332d2a82113145e549d9419b855a222f7441
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117288"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
@@ -88,10 +88,10 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  [*table_schema_name*.] *table_name*  
  這是套用安全性述詞的目標資料表。 單一資料表可以有多個已停用的安全性原則，但無論何時都只能啟用一個安全性原則。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  搭配使用述詞函式與記憶體最佳化資料表時，您必須包含 **SCHEMABINDING** 並使用 **WITH NATIVE_COMPILATION** 編譯提示。  
   
- 系統會在執行對應的 DML 作業後評估封鎖述詞。 因此，READ UNCOMMITTED 查詢可以查看之後會回復的暫時性值。  
+ BLOCK 述詞會在執行對應的 DML 作業後加以評估。 因此，READ UNCOMMITTED 查詢可以查看之後會回復的暫時性值。  
   
 ## <a name="permissions"></a>權限  
  需要結構描述的 ALTER ANY SECURITY POLICY 權限和 ALTER 權限。  

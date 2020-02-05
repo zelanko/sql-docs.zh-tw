@@ -9,10 +9,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: ef4222b866be7979410f6a3f97dce8a4fc24ecd7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909423"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Hadoop 的 PolyBase 設定和安全性
@@ -161,7 +161,7 @@ SQL Server 必須至少是 SQL Server 2016 SP1 CU7、SQL Server 2016 SP2 或 SQL
    |------------|----------------|---------------------|----------|   
    |1|core-site.xml|polybase.kerberos.kdchost|指定 KDC 主機名稱。 例如：kerberos.your-realm.com。|  
    |2|core-site.xml|polybase.kerberos.realm|指定 Kerberos 領域。 例如：YOUR-REALM.COM|  
-   |3|core-site.xml|hadoop.security.authentication|尋找 Hadoop 端組態並複製到 SQL Server 電腦。 例如：KERBEROS<br></br>**安全性注意事項：** KERBEROS 必須為大寫。 如果為小寫，KERBEROS 可能不會開啟。|   
+   |3|core-site.xml|hadoop.security.authentication|尋找 Hadoop 端組態並複製到 SQL Server 電腦。 例如：KERBEROS<br></br>**安全性注意事項︰** KERBEROS 必須為大寫。 如果為小寫，KERBEROS 可能不會開啟。|   
    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|尋找 Hadoop 端組態並複製到 SQL Server 電腦。 例如： hdfs/_HOST@YOUR-REALM.COM|  
    |5|mapred-site.xml|mapreduce.jobhistory.principal|尋找 Hadoop 端組態並複製到 SQL Server 電腦。 例如： mapred/_HOST@YOUR-REALM.COM|  
    |6|mapred-site.xml|mapreduce.jobhistory.address|尋找 Hadoop 端組態並複製到 SQL Server 電腦。 例如：10.193.26.174:10020|  
@@ -171,7 +171,7 @@ SQL Server 必須至少是 SQL Server 2016 SP1 CU7、SQL Server 2016 SP2 或 SQL
 
 ## <a name="next-steps"></a>後續步驟  
 
-如需詳細資訊，請參閱下列文件：
+如需詳細資訊，請參閱下列文章：
 
 [設定 PolyBase 存取 Hadoop 中的外部資料](polybase-configure-hadoop.md)
 [PolyBase 概觀](../../relational-databases/polybase/polybase-guide.md)

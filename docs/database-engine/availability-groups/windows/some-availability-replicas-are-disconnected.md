@@ -15,10 +15,10 @@ ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b90caaa83f17eb532db0747c62f473ba77f7ebdb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75242595"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>部分可用性複本已中斷連接

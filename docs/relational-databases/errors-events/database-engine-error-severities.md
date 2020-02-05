@@ -16,10 +16,10 @@ ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d0984d0003f6a20c410b91f99dc6fd1b4ae3f545
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844334"
 ---
 # <a name="database-engine-error-severities"></a>Database Engine 錯誤嚴重性
@@ -29,7 +29,7 @@ ms.locfileid: "73844334"
 ## <a name="levels-of-severity"></a>嚴重性層級  
  下表列出和描述 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]所產生之錯誤的嚴重性層級。  
   
-|嚴重性層級|Description|  
+|嚴重性層級|描述|  
 |--------------------|-----------------|  
 |0-9|傳回狀態資訊或報告不嚴重之錯誤的參考訊息。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會產生嚴重性 0-9 的系統錯誤。|  
 |10|傳回狀態資訊或報告不嚴重之錯誤的參考訊息。 基於相容性考量， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會先將嚴重性 10 轉換成嚴重性 0，再將錯誤資訊傳回給發出呼叫的應用程式。|  
@@ -54,7 +54,7 @@ ms.locfileid: "73844334"
 ## <a name="user-defined-error-message-severity"></a>使用者自訂的錯誤訊息嚴重性  
  您可以利用**sp_addmessage** ，將嚴重性 1-25 的使用者自訂錯誤訊息加入 **sys.messages** 目錄檢視中。 RAISERROR 可以使用這些使用者自訂的錯誤訊息。 如需詳細資訊，請參閱 [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)。  
   
- RAISERROR 可以用來產生使用者定義的錯誤訊息，其嚴重性為 1 到 25。 RAISERROR 可以參考儲存在 **sys.messages** 目錄檢視的使用者定義錯誤訊息，或是動態建立訊息。 當在產生錯誤時使用 **sys.messages** 中的使用者自訂錯誤訊息，RAISERROR 指定的嚴重性會覆寫 **sys.messages** 所指定的嚴重性。 如需詳細資訊，請參閱 [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)。  
+ RAISERROR 可以用來產生使用者定義的錯誤訊息，其嚴重性為 1 到 25。 RAISERROR 可以參考儲存在 **sys.messages** 目錄檢視的使用者定義錯誤訊息，或是動態建立訊息。 當在產生錯誤時使用 **sys.messages** 中的使用者自訂錯誤訊息，RAISERROR 指定的嚴重性會覆寫 **sys.messages**所指定的嚴重性。 如需詳細資訊，請參閱 [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)。  
   
 ## <a name="error-severity-and-trycatch"></a>錯誤嚴重性和 TRY...CATCH  
  TRY...CATCH 建構會捕捉嚴重性大於 10 而並未終止資料庫連接的所有執行錯誤。  
@@ -63,7 +63,7 @@ ms.locfileid: "73844334"
   
  CATCH 區塊不會處理嚴重性通常是 20-25 的終止資料庫連接的錯誤，因為在連接終止時，會中止執行動作。  
   
- 如需詳細資訊，請參閱 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)所發生的問題類型。  
+ 如需詳細資訊，請參閱 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)。  
   
 ## <a name="retrieving-error-severity"></a>擷取錯誤嚴重性  
  您可以利用 ERROR_SEVERITY 系統函式來擷取造成執行 TRY...CATCH 建構的 CATCH 區塊之錯誤的嚴重性。 如果是在 CATCH 區塊範圍之外呼叫，ERROR_SEVERITY 會傳回 NULL。 如需詳細資訊，請參閱 [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)。  

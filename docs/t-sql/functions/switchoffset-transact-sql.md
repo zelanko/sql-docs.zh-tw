@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2ce69487c1550314dc7cfe3641333728fd07155e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117556"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
@@ -56,7 +56,7 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
 ## <a name="return-type"></a>傳回類型  
  **datetimeoffset**，其毫秒精確度為 *DATETIMEOFFSET* 引數的毫秒精確度。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  請使用 SWITCHOFFSET 來選取 **datetimeoffset** 值，以便進入與原本儲存之時區位移不同的時區位移。 SWITCHOFFSET 不會更新已儲存的 *time_zone* 值。  
   
  SWITCHOFFSET 可用來更新 **datetimeoffset** 資料行。  

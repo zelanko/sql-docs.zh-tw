@@ -14,10 +14,10 @@ ms.assetid: 7d604ab1-6dd6-4f8e-a79c-eba99ab106fd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fa0ee70601b11af3341483aff177ef6a7a389ba6
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558186"
 ---
 # <a name="copy-a-policy-based-management-facet-state-to-an-xml-file"></a>將原則式管理 Facet 狀態複製到 XML 檔案
@@ -47,7 +47,7 @@ ms.locfileid: "75558186"
   
 1.  在物件總管中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體、執行個體物件、資料庫或資料庫物件，然後按一下 [Facet]  。  
   
-2.  在 [檢視 Facet - _物件名稱_]  對話方塊中，按一下 [將目前狀態匯出為原則]  。  
+2.  在 [檢視 Facet - **物件名稱**]  對話方塊中，按一下 [將目前狀態匯出為原則]  。  
   
 3.  在 [匯出為原則] 對話方塊中，輸入檔案的路徑和名稱，或使用 [瀏覽] \(...) 按鈕找出檔案，然後輸入 XML 檔的名稱。   如需有關此對話方塊可用之選項的詳細資訊，請參閱＜ [Export As Policy Dialog Box](../../relational-databases/policy-based-management/export-as-policy-dialog-box.md)＞。  
   

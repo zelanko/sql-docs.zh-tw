@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: c4649a591f7261943d2d5393678f63888930c01f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982029"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT  (Transact-SQL)
@@ -88,7 +88,7 @@ ALTER SERVER AUDIT audit_name
  指定稽核檔案所能成長的大小上限。 *max_size* 值必須是整數，而且後面緊接著 **MB**、**GB**、**TB** 或 **UNLIMITED**。 您可以為 *max_size* 指定的大小下限為 2 **MB**，而上限則為 2,147,483,647 **TB**。 指定了 **UNLIMITED** 時，檔案會成長到磁碟已滿為止。 指定低於 2 MB 的值會引發 MSG_MAXSIZE_TOO_SMALL 錯誤。 預設值為 **UNLIMITED**。  
   
  MAX_ROLLOVER_FILES **=** _integer_ | **UNLIMITED**  
- 指定檔案系統中所要保留的最大檔案數目。 當設定 MAX_ROLLOVER_FILES=0 時，不會限制要建立的換用檔案數目。 預設值是 0。 可以指定的檔案數量上限為 2,147,483,647。  
+ 指定檔案系統中所要保留的最大檔案數目。 當設定 MAX_ROLLOVER_FILES=0 時，不會限制要建立的換用檔案數目。 預設值為 0。 可以指定的檔案數量上限為 2,147,483,647。  
   
  MAX_FILES =*integer*  
  指定可建立的最大稽核檔案數目。 達到此限制時，不會換用第一個檔案。 達到 MAX_FILES 限制時，導致系統產生其他稽核事件的任何動作都會失敗並發生錯誤。  
@@ -107,7 +107,7 @@ ALTER SERVER AUDIT audit_name
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業繼續進行。 系統不會保留稽核記錄。 稽核會繼續嘗試記錄事件，而且如果失敗狀況已解決，就會恢復稽核。 選取繼續選項會允許可能違反安全性原則的未稽核活動。 當繼續進行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 作業比維持完整稽核更重要時，請使用此選項。  
   
 SHUTDOWN  
-如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 因為任何原因無法將資料寫入稽核目標，則會強制關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 執行 `ALTER` 陳述式的登入在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內必須擁有 `SHUTDOWN` 權限。 即使稍後已從執行中的登入撤銷 `SHUTDOWN` 權限，關閉的行為仍會持續。 如果使用者沒有此權限，則陳述式將會失敗，且將不會修改稽核。 當稽核失敗可能危害系統的安全性或完整性時，請使用此選項。 如需詳細資訊，請參閱 [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)。 
+如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 因為任何原因無法將資料寫入稽核目標，則會強制關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 執行 `ALTER` 陳述式的登入在 `SHUTDOWN` 內必須擁有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 權限。 即使稍後已從執行中的登入撤銷 `SHUTDOWN` 權限，關閉的行為仍會持續。 如果使用者沒有此權限，則陳述式將會失敗，且將不會修改稽核。 當稽核失敗可能危害系統的安全性或完整性時，請使用此選項。 如需詳細資訊，請參閱 [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)。 
   
  FAIL_OPERATION  
  如果資料庫動作導致稽核的事件，這些動作就會失敗。 雖然不會導致稽核事件的動作可繼續進行，不過也無法發生稽核的事件。 稽核會繼續嘗試記錄事件，而且如果失敗狀況已解決，就會恢復稽核。 當維持完整稽核比 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的完整存取權更重要時，請使用此選項。  
@@ -135,7 +135,7 @@ SHUTDOWN
  ANSI 或 Unicode 字串 (依述詞比較的需求而定)。 不會針對述詞比較函數執行隱含字串類型轉換。 傳遞錯誤的類型會產生錯誤。  
  **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當您呼叫 ALTER AUDIT 時，您至少必須指定其中一個 TO、WITH 或 MODIFY NAME 子句。  
   
  您必須將稽核的狀態設定為 OFF 選項，才能變更稽核。 如果在設定 STATE=OFF 以外的任何選項時啟用稽核，而且執行 ALTER AUDIT，您會收到 MSG_NEED_AUDIT_DISABLED 錯誤訊息。  

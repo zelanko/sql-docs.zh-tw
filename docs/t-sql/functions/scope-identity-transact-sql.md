@@ -21,13 +21,13 @@ ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 86afd9bb2036edb77934f6ae622fafe93bd2d5a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111327"
 ---
-# <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
+# <a name="scope_identity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回插入相同範圍之識別欄位中的最後一個識別值。 範圍是一個模組：預存程序、觸發程序、函數或批次。 因此，若兩個陳述式在相同預存程序、函式或批次中，它們就在相同範圍中。  
@@ -40,10 +40,10 @@ ms.locfileid: "68111327"
 SCOPE_IDENTITY()  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  SCOPE_IDENTITY、IDENT_CURRENT 和 @@IDENTITY 是類似的函式，因為它們會傳回插入識別欄位的值。  
   
  IDENT_CURRENT 不受範圍和工作階段的限制；它只限於指定的資料表。 IDENT_CURRENT 會傳回在任何工作階段和任何範圍中，產生給特定資料表的值。 如需詳細資訊，請參閱 [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)。  
@@ -58,7 +58,7 @@ SCOPE_IDENTITY()
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>A. 使用 @@IDENTITY 和 SCOPE_IDENTITY 搭配觸發程序  
+### <a name="a-using-identity-and-scope_identity-with-triggers"></a>A. 使用 @@IDENTITY 和 SCOPE_IDENTITY 搭配觸發程序  
  下列範例會建立 `TZ` 和 `TY` 這兩份資料表，以及 `TZ` 的 INSERT 觸發程序。 當資料列插入 `TZ` 資料表時，會引發觸發程序 (`Ztrig`)，且會在 `TY` 中插入一個資料列。  
   
 ```sql  
@@ -73,7 +73,7 @@ INSERT TZ
   
 SELECT * FROM TZ;  
 ```     
-結果集：這是 TZ 資料表的外觀。  
+結果集：這是 TZ 資料表的樣子。  
   
 ```  
 Z_id   Z_name  
@@ -92,7 +92,7 @@ INSERT TY (Y_name)
   
 SELECT * FROM TY;  
 ```   
-結果集：這是 TY 的外觀：  
+結果集：這是 TY 資料表的樣子：  
 ```  
 Y_id  Y_name  
 ---------------  
@@ -132,7 +132,7 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. 使用 @@IDENTITY 和 SCOPE_IDENTITY() 搭配複寫  
+### <a name="b-using-identity-and-scope_identity-with-replication"></a>B. 使用 @@IDENTITY 和 SCOPE_IDENTITY() 搭配複寫  
  下列範例會說明如何針對為了合併式複寫而發行之資料庫的插入，使用 `@@IDENTITY` 和 `SCOPE_IDENTITY()`。 範例中的兩份資料表都位於 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中：`Person.ContactType` 尚未發行，而 `Sales.Customer` 已發行。 合併式複寫會將觸發程序加入至發行的資料表。 因此，`@@IDENTITY` 可能會根據複寫系統資料表的插入 (而非使用者資料表的插入) 傳回值。  
   
  `Person.ContactType` 資料表的最大識別值為 20。 如果您將資料列插入此資料表，`@@IDENTITY` 和 `SCOPE_IDENTITY()` 就會傳回相同的值。  

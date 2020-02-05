@@ -11,10 +11,10 @@ ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 8273d3c86cbfa6774458d40a964e64ba415f1de0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114036"
 ---
 # <a name="sql-server-xtp-storage"></a>SQL Server XTP 儲存體
@@ -24,7 +24,7 @@ ms.locfileid: "68114036"
   
  下表描述 **SQL Server XTP Storage** 計數器。  
   
-|計數器|Description|  
+|計數器|描述|  
 |-------------|-----------------|  
 |**Checkpoints Closed**|線上代理程式已關閉的檢查點計數。|  
 |**Checkpoints Completed**|離線檢查點執行緒已處理的檢查點計數。|  

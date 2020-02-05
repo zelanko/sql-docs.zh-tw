@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d6901afbb6d0faa26c4977c15a3836bdeab68bb4
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844618"
 ---
 # <a name="current_user-transact-sql"></a>CURRENT_USER (Transact-SQL)
@@ -45,7 +45,7 @@ CURRENT_USER
 ## <a name="return-types"></a>傳回類型
 **sysname**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `CURRENT_USER` 會傳回目前安全性內容的名稱。 如果 `CURRENT_USER` 是在呼叫 `EXECUTE AS` 參數內容之後執行，`CURRENT_USER` 就會傳回模擬內容的名稱。 如果 Windows 主體利用群組中的成員資格來存取資料庫，則 `CURRENT_USER` 會傳回 Windows 主體名稱而非群組名稱。
   
 請參閱 [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) 和 [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md) 以了解如何傳回目前使用者的登入。
@@ -61,7 +61,7 @@ GO
 ```  
   
 ### <a name="b-using-current_user-as-a-default-constraint"></a>B. 使用 CURRENT_USER 做為 DEFAULT 條件約束  
-此範例會建立一份資料表，利用 `CURRENT_USER` 作為銷售資料列之 `order_person` 資料行的 `DEFAULT` 條件約束。
+此範例會建立一份資料表，利用 `CURRENT_USER` 作為銷售資料列之 `DEFAULT` 資料行的 `order_person` 條件約束。
   
 ```sql
 USE AdventureWorks2012;  

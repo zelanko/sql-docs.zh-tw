@@ -21,10 +21,10 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a961dc8923d07b9a3036c38d9e0ae05a6b6a6010
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983041"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>資料庫管理員的診斷連接
@@ -42,7 +42,7 @@ ms.locfileid: "73983041"
   
  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員 (sysadmin) 角色的成員可以使用 DAC 進行連接。  
   
- DAC 的存取與支援是使用特殊的系統管理員參數 ( **-A** )，透過**sqlcmd**命令提示字元公用程式來執行。 如需使用 **sqlcmd** 的詳細資訊，請參閱[以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 您也可以在執行個體名稱前面加上 **admin:** 來連線，其格式為 **sqlcmd -S admin:<*執行個體名稱*>** 。 您也可以連線到 **admin:\<執行個體名稱  >** ，以便從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器起始 DAC。  
+ DAC 的存取與支援是使用特殊的系統管理員參數 ( **-A** )，透過**sqlcmd**命令提示字元公用程式來執行。 如需使用 **sqlcmd** 的詳細資訊，請參閱[以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 您也可以在執行個體名稱前面加上 **admin:** 來連線，其格式為 **sqlcmd -S admin:<*執行個體名稱*>** 。 您也可以連線到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]admin:**執行個體名稱\<  >，以便從**  查詢編輯器起始 DAC。  
   
 ## <a name="restrictions"></a>限制  
  由於 DAC 僅在少數的情況下才會為了診斷伺服器問題而建立，因此這項連接有某些限制：  
@@ -61,7 +61,7 @@ ms.locfileid: "73983041"
   
     -   RESTORE  
   
-    -   BACKUP  
+    -   備份  
   
 -   只有某些限定的資源必定可透過 DAC 來使用。 請勿使用 DAC 來執行需耗用大量資源的查詢 (例如， 大型資料表上的複雜聯結) 或可能會封鎖的查詢。 如此可防止 DAC 在現有的伺服器問題外衍生出其他問題。 為了避免潛在的封鎖情況，若您必須執行可能會封鎖的查詢，請盡可能在快照隔離等級下執行查詢；否則，請將交易隔離等級設為 READ UNCOMMITTED，並將 LOCK_TIMEOUT 值設為 2000 毫秒之類的短數值。 如此可防止 DAC 工作階段產生封鎖的情形。 但依照 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所處的狀態，DAC 工作階段也可能會遭到閂鎖封鎖。 您可以使用 CTRL-C 來結束 DAC 工作階段，但不一定能成功。 在這種情況下，重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可能是唯一的選擇。  
   

@@ -16,10 +16,10 @@ ms.assetid: e34072ae-fe8a-462d-bb03-02fa0987f793
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 816c5f5dea693a03054f2e35315ed3d121c7abaf
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822282"
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>資料庫鏡像和全文檢索目錄 (SQL Server)

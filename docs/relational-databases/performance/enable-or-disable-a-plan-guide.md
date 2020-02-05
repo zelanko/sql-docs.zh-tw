@@ -15,10 +15,10 @@ ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 6ebda9e472f2b276b66d393a808aaac3e8b595b1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907624"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>啟用或停用計畫指南
@@ -47,7 +47,7 @@ ms.locfileid: "72907624"
   
 -   停用已停用的計畫指南，或啟用已啟用的計畫指南，都沒有作用，執行時也不會發生錯誤。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  停用或啟用 OBJECT 計畫指南需要計畫指南所參考之物件 (例如：函數、預存程序) 的 ALTER 權限。 所有其他計畫指南都需要 ALTER DATABASE 權限。  

@@ -14,10 +14,10 @@ ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff428ab60ad51cfdf2cd19454c34e90644f30b5d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75235443"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>原則評估結果頁面 (Always On 儀表板)

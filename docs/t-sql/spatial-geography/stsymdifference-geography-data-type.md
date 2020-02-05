@@ -18,10 +18,10 @@ ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f1e7824f864d7d764529fb6860496316bf00537d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120767"
 ---
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference (geography 資料類型)
@@ -40,12 +40,12 @@ ms.locfileid: "68120767"
  *other_geography*  
  這是除了 STSymDistance() 叫用所在的執行個體之外的另一個 **geography** 執行個體。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回型別：**SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 **geography** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一定會傳回 null。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援大於半球的空間執行個體。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，伺服器上的可能結果集已擴充到 **FullGlobe** 執行個體。  

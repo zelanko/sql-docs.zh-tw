@@ -12,10 +12,10 @@ ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 86b2cf26c7af957579c5368ed70262e43db005f1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285871"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>選擇目的地 (SQL Server 匯入和匯出精靈)
@@ -45,7 +45,7 @@ ms.locfileid: "71285871"
 ## <a name="my-destination-isnt-in-the-list"></a>我的目的地不在清單中
 -   您可能必須從 Microsoft 或協力廠商**下載資料提供者**。 [目的地]  清單中可用的資料提供者清單，僅包括您在電腦上安裝的提供者。 如需您可以使用之目的地的資訊，請參閱[我可以使用哪些資料來源和目的地？](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
--   **您是否有適用於目的地的 ODBC 驅動程式？** ODBC 驅動程式未列在目的地的下拉式清單中。 如果您有適用於目的地的 ODBC 驅動程式，請選取 .NET Framework Data Provider for ODBC。 然後輸入驅動程式特有的資訊。 .Net Framework Data Provider for ODBC 用作為 ODBC 驅動程式的包裝函式。 如需詳細資訊，請參閱[連線至 ODBC 資料來源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。
+-   **您是否有適用於目的地的 ODBC 驅動程式？** ODBC 驅動程式未列在目的地的下拉式清單中。 如果您有適用於目的地的 ODBC 驅動程式，請選取 .NET Framework Data Provider for ODBC。 然後輸入驅動程式的特定資訊。 .Net Framework Data Provider for ODBC 用作為 ODBC 驅動程式的包裝函式。 如需詳細資訊，請參閱[連線至 ODBC 資料來源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。
 
 -   **64 位元和 32 位元提供者。** 如果您是執行 64 位元精靈，就不會看到只安裝 32 位元提供者的目的地，反之亦然。
 

@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 4b300d1fbc144f25b3f725f34e49d961953c434c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72289336"
 ---
 # <a name="compare-and-analyze-execution-plans"></a>比較和分析執行計劃

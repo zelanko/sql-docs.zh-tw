@@ -21,10 +21,10 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f90625c1aa123cf72b93ce815b02cccd7cedc78a
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321592"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>進階合併式複寫 - 衝突偵測與解決方法
@@ -113,9 +113,9 @@ ms.locfileid: "75321592"
   
  若要指定合併訂閱類型與衝突解決優先權，請參閱  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[指定合併訂閱類型及衝突解決優先順序 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[指定合併訂閱類型及衝突解決優先順序 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式設計與 Replication Management Objects (RMO) 程式設計：[建立提取訂閱](../../../relational-databases/replication/create-a-pull-subscription.md)和[建立發送訂閱](../../../relational-databases/replication/create-a-push-subscription.md)  
+-   複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式設計與 Replication Management Objects (RMO) 程式設計： [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) 和 [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>互動解析程式  
  複寫提供「互動解析程式」使用者介面，可與預設的優先權式衝突解析程式或發行項解析程式一起使用。 透過 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Synchronization Manager 執行視需要的同步處理時，「互動解析程式」會在執行階段顯示衝突資料，並讓您選擇如何解決衝突。 如需有關如何啟用互動式解決及啟動「互動解析程式」的詳細資訊，請參閱＜ [互動式衝突解決](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)＞。  
@@ -146,7 +146,7 @@ ms.locfileid: "75321592"
   
  **若要檢視衝突**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[檢視並解決合併式發行集的資料衝突 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[檢視並解決合併式發行集的資料衝突 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
 -   複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式設計：[檢視合併式發行集的衝突資訊 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
   

@@ -15,10 +15,10 @@ ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a51ca391fe8cc27ad9447e6b4d18b88787532e34
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558013"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>檢視或修改原則式管理原則的屬性
@@ -36,7 +36,7 @@ ms.locfileid: "75558013"
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>若要檢視物件之所有原則的屬性  
   
-1.  在物件總管中，以滑鼠右鍵按一下伺服器、伺服器物件、資料庫或資料庫物件，指向 [原則]  ，然後選取 [檢視]  。 如需有關 [檢視原則 - _物件名稱_]  對話方塊中可用選項的詳細資訊，請參閱[檢視原則對話方塊](../../relational-databases/policy-based-management/view-policies-dialog-box.md)。  
+1.  在物件總管中，以滑鼠右鍵按一下伺服器、伺服器物件、資料庫或資料庫物件，指向 [原則]  ，然後選取 [檢視]  。 如需有關 [檢視原則 - **物件名稱**]  對話方塊中可用選項的詳細資訊，請參閱[檢視原則對話方塊](../../relational-databases/policy-based-management/view-policies-dialog-box.md)。  
   
 2.  完成後，請按一下 **[關閉]** 。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75558013"
   
 4.  按一下加號展開 **[原則]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要檢視或修改的原則，然後選取 [屬性]  。 如需有關 [開啟原則 - _原則名稱_]  對話方塊中可用選項的詳細資訊，請參閱[建立新原則或開啟原則對話方塊，一般頁面](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md)和[建立新原則或開啟原則對話方塊，描述頁面](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)。  
+5.  以滑鼠右鍵按一下您想要檢視或修改的原則，然後選取 [屬性]  。 如需有關 [開啟原則 - **原則名稱**]  對話方塊中可用選項的詳細資訊，請參閱[建立新原則或開啟原則對話方塊，一般頁面](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md)和[建立新原則或開啟原則對話方塊，描述頁面](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)。  
   
 6.  完成後，請按一下 **[確定]** 。  
   

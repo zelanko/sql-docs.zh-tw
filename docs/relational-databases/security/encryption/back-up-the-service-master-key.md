@@ -12,15 +12,15 @@ ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 1fa730e1143516df2fe5f14c04afcbb9292ac67f
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74957482"
 ---
 # <a name="back-up-the-service-master-key"></a>備份服務主要金鑰
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本文描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 備份 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的服務主要金鑰。 服務主要金鑰是加密階層的根。 應該將服務主要金鑰備份並儲存在安全且位於異地的位置。 建立這個備份，應該是必須在伺服器上執行的首要管理動作之一。  
+  本文描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 備份 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中的服務主要金鑰。 服務主要金鑰是加密階層的根。 應該將服務主要金鑰備份並儲存在安全且位於異地的位置。 建立這個備份，應該是必須在伺服器上執行的首要管理動作之一。  
 
 ## <a name="before-you-begin"></a>開始之前  
   

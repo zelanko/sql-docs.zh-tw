@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7bc8d1e1a84ddacbffe5b830e1b5931eb94a5f14
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 497cf728ab104f706de0fbd8fd6946c481dd4c55
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745323"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004683"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  啟用或停用從這個稽核規格收集而來之記錄的稽核。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  您必須將稽核規格的狀態設定為 OFF 選項，才能對稽核規格進行變更。 如果在設定 STATE=OFF 以外的任何選項時啟用稽核，而且執行 ALTER SERVER AUDIT SPECIFICATION，您將會收到錯誤訊息。  
   
 ## <a name="permissions"></a>權限  
@@ -68,13 +68,14 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
  一旦建立伺服器稽核規格之後，就可以使用具有 CONTROL SERVER 或 ALTER ANY SERVER AUDIT 權限的主體、系統管理員 (sysadmin) 帳戶或具有此稽核之明確存取權的主體來加以檢視。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立一個稱為 `HIPAA_Audit_Specification` 的伺服器稽核規格。 針對失敗的登入，它會捨棄稽核動作群組，並針對稱為 `HIPAA_Audit` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 稽核，新增用於資料庫物件存取的稽核動作群組。  
+ 下列範例會建立一個稱為 `HIPAA_Audit_Specification` 的伺服器稽核規格。 針對失敗的登入，它會捨棄稽核動作群組，並針對稱為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `HIPAA_Audit` 稽核，新增用於資料庫物件存取的稽核動作群組。  
   
 ```  
 ALTER SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
 FOR SERVER AUDIT HIPAA_Audit  
-    DROP (FAILED_LOGIN_GROUP)  
-    ADD (DATABASE_OBJECT_ACCESS_GROUP);  
+    DROP (FAILED_LOGIN_GROUP),  
+    ADD (DATABASE_OBJECT_ACCESS_GROUP)  
+    WITH (STATE=ON);  
 GO  
 ```  
   

@@ -19,10 +19,10 @@ ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f4fd38ab48946269363e674dfcca6e4d05b9af49
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74127357"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>定義 XML 資料的序列化

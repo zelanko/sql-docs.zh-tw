@@ -14,10 +14,10 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908562"
 ---
 # <a name="view-offline-log-files"></a>檢視離線記錄檔
@@ -100,7 +100,7 @@ ms.locfileid: "72908562"
   
 3.  在主控台樹狀目錄中，找出您想要檢視離線檔案的執行個體。  
   
-4.  執行下列其中之一：  
+4.  執行下列其中一個動作：  
   
     -   如果此執行個體位於 [本機伺服器群組]  底下，請依序展開 [本機伺服器群組]  和伺服器群組 (如果此執行個體是群組成員)，以滑鼠右鍵按一下執行個體，然後按一下 [檢視 SQL Server 記錄檔]  。  
   

@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e8f345576db61768d9afe8243dfe41801f68b2ac
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095737"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON 路徑運算式 (SQL Server)
@@ -65,9 +65,9 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
 -   屬性路徑是一組路徑步驟。 路徑步驟可包含下列元素和運算子。  
   
-    -   索引鍵名稱。 例如， `$.name` 和 `$."first name"`。 如果索引鍵名稱以貨幣符號開頭或包含特殊字元 (例如空格)，請用引號括起。   
+    -   索引鍵名稱。 例如 `$.name` 和 `$."first name"`。 如果索引鍵名稱以貨幣符號開頭或包含特殊字元 (例如空格)，請用引號括起。   
   
-    -   陣列元素。 例如， `$.product[3]`。 以零為基底的陣列。  
+    -   陣列元素。 例如： `$.product[3]` 。 以零為基底的陣列。  
   
     -   點運算子 (`.`) 表示物件的成員。 例如，在 `$.people[1].surname` 中，`surname` 是 `people` 的子系。
   
@@ -89,12 +89,12 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
  下表顯示路徑運算式的一些範例。  
   
-|路徑運算式|ReplTest1|  
+|路徑運算式|值|  
 |---------------------|-----------|  
 |$.people[0].name|John|  
-|$.people[1]|{ "name":"Jane",  "surname": null, "active": true }|  
+|$.people[1]|{ "name": "Jane",  "surname": null, "active": true }|  
 |$.people[1].surname|null|  
-|$|{ "people": [ { "name":"John",  "surname":"Doe" },<br />   { "name":"Jane",  "surname": null, "active": true } ] }|  
+|$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>內建函數處理重複路徑的方法  
  如果 JSON 文字包含重複的屬性 (例如相同層級上有兩個同名的索引鍵)，**JSON_VALUE** 和 **JSON_QUERY** 函數會傳回第一個符合路徑的值。 若要剖析包含重複索引鍵的 JSON 物件，請使用 **OPENJSON**，如下列範例所示。  

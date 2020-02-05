@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 586b816282fff5586d3058cf9567a7d4c4466e29
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 6130acf6a503f3a803978b7db5a9a23b9918a3c7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322130"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286863"
 ---
 # <a name="compare-differences-between-replicated-tables-replication-programming"></a>比較複寫資料表的差異 (複寫程式設計)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

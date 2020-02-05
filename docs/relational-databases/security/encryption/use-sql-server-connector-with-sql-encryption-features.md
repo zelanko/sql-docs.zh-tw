@@ -14,10 +14,10 @@ ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558505"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>搭配使用 SQL Server 連接器與 SQL 加密功能
@@ -215,7 +215,7 @@ ms.locfileid: "75558505"
     
     若要還原使用 TDE 加密的資料庫備份，目標 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體必須先有一份用於加密的非對稱金鑰保存庫金鑰。 以下是達成此目的的方法：  
     
-    - 若金鑰保存庫中不再有原始用於 TDE 的非對稱金鑰，請還原金鑰保存庫的金鑰備份或重新匯入本機 HSM 中的金鑰。 **重要：** 為了使金鑰的指紋符合資料庫備份上所記錄指紋，金鑰必須命名為與之前原始名稱**相同的金鑰保存庫金鑰名稱**。
+    - 若金鑰保存庫中不再有原始用於 TDE 的非對稱金鑰，請還原金鑰保存庫的金鑰備份或重新匯入本機 HSM 中的金鑰。 **重要事項︰** 為了使金鑰的指紋符合資料庫備份上記錄的指紋，金鑰必須命名為與之前原始名稱**相同的金鑰保存庫金鑰名稱**。
     
     - 將步驟 1 和 2 套用在目標 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上。
     

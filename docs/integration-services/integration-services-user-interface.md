@@ -17,10 +17,10 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 183c95bf39c504c7444f1604206f5acef517a53d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284162"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services 使用者介面
@@ -39,19 +39,19 @@ ms.locfileid: "71284162"
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 還提供用來設定環境與使用封裝的視窗和對話方塊。  
   
 ## <a name="dialog-boxes-and-windows"></a>對話方塊和視窗  
- 在「[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」中開啟封裝或新建封裝後，可以使用下列對話方塊和視窗。  
+ 在「 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」中開啟封裝或新建封裝後，可以使用下列對話方塊和視窗。  
   
  下表列出 [SSIS]  功能表和 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 之設計介面中可用的對話方塊。  
   
 |對話方塊|目的|存取|  
 |----------------|-------------|------------|  
-|**快速入門**|存取範例、教學課程和影片。|在 [控制流程]  索引標籤或 [資料流程]  索引標籤的設計介面上按一下滑鼠右鍵，然後按一下 [使用者入門]  。<br /><br /> 若要在建立新 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案時自動顯示 [使用者入門]  視窗，請選取視窗最下方的 [Always show in new project (永遠在新專案中顯示)]  。|  
+|**快速入門**|存取範例、教學課程和影片。|在 [控制流程]  索引標籤或 [資料流程]  索引標籤的設計介面上按一下滑鼠右鍵，然後按一下 [使用者入門]  。<br /><br /> 若要在建立新  **專案時自動顯示 [使用者入門]** [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 視窗，請選取視窗最下方的 [Always show in new project (永遠在新專案中顯示)]  。|  
 |**[設定 SSIS 記錄]**|透過加入記錄和設定記錄詳細資料來設定封裝及其工作的記錄。|在 **[SSIS]** 功能表上，按一下 **[記錄]** 。<br /><br /> -或-<br /><br /> 以滑鼠右鍵按一下 [控制流程]  索引標籤之設計介面的任意位置，然後按一下 [記錄]  。|  
 |**[封裝組態組合管理]**|加入並編輯封裝組態。 您可從此對話方塊執行「封裝組態精靈」。|在 [SSIS]  功能表上，按一下 [封裝組態]  。<br /><br /> -或-<br /><br /> 以滑鼠右鍵按一下 [控制流程]  索引標籤之設計介面的任意位置，然後按一下 [封裝組態]  。|  
 |**數位簽章**|簽署封裝或從封裝中移除簽章。|在 **[SSIS]** 功能表上，按一下 **數位簽章**。<br /><br /> -或-<br /><br /> 以滑鼠右鍵按一下 [控制流程]  索引標籤之設計介面的任意位置，然後按一下 [數位簽章]  。|  
-|**[設定中斷點]**|啟用工作上的中斷點並設定中斷點屬性。|在 [控制流程]  索引標籤的設計介面上，以滑鼠右鍵按一下工作或容器，然後按一下 [編輯中斷點]  。 若要設定封裝上的中斷點，請以滑鼠右鍵按一下 [控制流程]  索引標籤之設計介面的任意位置，然後按一下 [編輯中斷點]  。|  
+|**設定中斷點**|啟用工作上的中斷點並設定中斷點屬性。|在 [控制流程]  索引標籤的設計介面上，以滑鼠右鍵按一下工作或容器，然後按一下 [編輯中斷點]  。 若要設定封裝上的中斷點，請以滑鼠右鍵按一下 [控制流程]  索引標籤之設計介面的任意位置，然後按一下 [編輯中斷點]  。|  
   
- [使用者入門]  視窗提供範例、教學課程和影片的連結。 若要加入其他內容的連結，請修改目前版本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]隨附的 SamplesSites.xml 檔案。 建議您不要修改指定 RSS 摘要 URL 的 \<GettingStartedSamples> 元素值。 檔案位於 \<磁碟機>  :\Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾。 在 64 位元電腦上，檔案位於 \<磁碟機>  :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn 資料夾  
+ [使用者入門]  視窗提供範例、教學課程和影片的連結。 若要加入其他內容的連結，請修改目前版本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]隨附的 SamplesSites.xml 檔案。 建議您不要修改指定 RSS 摘要 URL 的 \<GettingStartedSamples> 元素值。 檔案位於 *磁碟機>\<* :\Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾。 在 64 位元電腦上，檔案位於 *磁碟機>\<* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn 資料夾  
   
  如果 SamplesSites.xml 檔案未損毀，請使用下列預設 xml 取代檔案中的 xml。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71284162"
   
  下表列出 [SSIS]  和 [檢視]  功能表，以及 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 之設計介面中可用的視窗。  
   
-|視窗|目的|存取|  
+|時間範圍|目的|存取|  
 |------------|-------------|------------|  
 |**變數**|加入並管理自訂變數。|在 **[SSIS]** 功能表上，按一下 **變數**。<br /><br /> -或-<br /><br /> 以滑鼠右鍵按一下 [控制流程]  和 [資料流程]  索引標籤之設計介面的任意位置，然後按一下 [變數]  。<br /><br /> -或-<br /><br /> 在 [檢視]  功能表上，指向 [其他視窗]  ，然後按一下 [變數]  。|  
 |**記錄事件**|檢視執行階段的記錄項目。|在 **[SSIS]** 功能表上，按一下 **記錄事件**。<br /><br /> -或-<br /><br /> 以滑鼠右鍵按一下 [控制流程]  和 [資料流程]  索引標籤之設計介面的任意位置，然後按一下 [記錄事件]  。<br /><br /> -或-<br /><br /> 在 [檢視]  功能表上，指向 [其他視窗]  ，然後按一下 [記錄事件]  。|  
@@ -83,7 +83,7 @@ ms.locfileid: "71284162"
   
 |編輯器類型|存取|  
 |-----------------|------------|  
-|容器。 如需詳細資訊，請參閱[整合服務容器](../integration-services/control-flow/integration-services-containers.md)。|在 [控制流程]  索引標籤的設計介面上，按兩下容器。|  
+|容器。 如需詳細資訊，請參閱 [整合服務容器](../integration-services/control-flow/integration-services-containers.md)。|在 [控制流程]  索引標籤的設計介面上，按兩下容器。|  
 |工作。 如需詳細資訊，請參閱 [Integration Services Tasks](../integration-services/control-flow/integration-services-tasks.md)。|在 [控制流程]  索引標籤的設計介面上，按兩下工作。|  
 |來源。|在 [資料流程]  索引標籤的設計介面上，按兩下來源。|  
 |轉換。 如需詳細資訊，請參閱 [Integration Services 轉換](../integration-services/data-flow/transformations/integration-services-transformations.md)。|在 [資料流程]  索引標籤的設計介面上，按兩下轉換。|  
@@ -121,6 +121,6 @@ ms.locfileid: "71284162"
  如需如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中建立封裝的資訊，請參閱 [在 SQL Server 資料工具中建立封裝](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SSIS 設計師](../integration-services/ssis-designer.md)  
+ [SSIS 設計工具](../integration-services/ssis-designer.md)  
   
   

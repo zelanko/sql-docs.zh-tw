@@ -11,10 +11,10 @@ ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
 ms.openlocfilehash: 3609de02157637ec30f7e21ad4426c5001f31a6e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282653"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料載入 Azure SQL 資料倉儲
@@ -215,9 +215,9 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
 
 ## <a name="next-steps"></a>後續步驟
 
-- 了解如何直接在設計環境中針對您的套件進行偵錯及疑難排解。 從這裡開始：[用於疑難排解套件開發的工具][Troubleshooting Tools for Package Development]。
+- 了解如何直接在設計環境中針對您的套件進行偵錯及疑難排解。 從這裡開始： [封裝開發的疑難排解工具][Troubleshooting Tools for Package Development]。
 
-- 了解如何將您的 SSIS 專案和套件部署到 Integration Services 伺服器或另一個儲存位置。 從這裡開始：[部署專案和套件][Deployment of Projects and Packages]。
+- 了解如何將您的 SSIS 專案和套件部署到 Integration Services 伺服器或另一個儲存位置。 從這裡開始： [部署專案和封裝][Deployment of Projects and Packages]。
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-data-warehouse/ssis-designer-01.png

@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce8a48b7e8315a564eaa1338df35a04226e705d4
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906065"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>使用 Database Mail 傳送測試電子郵件  
@@ -32,10 +32,10 @@ ms.locfileid: "72906065"
 ## <a name="procedure"></a>程序
 
 1. 在 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 中使用 [物件總管]，連接到已設定 Database Mail 的 SQL Server 資料庫引擎執行個體，展開 [管理]，以滑鼠右鍵按一下 [Database Mail]，然後選取 [傳送測試電子郵件]。 如果 Database Mail 設定檔不存在，會出現一個對話方塊提示使用者建立設定檔，並開啟 [Database Mail 設定精靈]。
-1. 從 [<instance name>] 對話方塊的 [傳送測試電子郵件]  中，在 [Database Mail 設定檔] 方塊中選取您要測試的設定檔。
+1. 從 [ **] 對話方塊的 [傳送測試電子郵件]** <instance name> 中，在 [Database Mail 設定檔] 方塊中選取您要測試的設定檔。
 1. 在 [收件者]  方塊中，鍵入測試電子郵件的收件者電子郵件名稱。
-1. 在 [主旨]  方塊中，鍵入測試電子郵件的主旨列。 變更預設的主旨，以利識別您的電子郵件來進行疑難排解。
-1. 在 [本文]  方塊中，鍵入測試電子郵件的本文。 變更預設的主旨，以利識別您的電子郵件來進行疑難排解。
+1. 在 [主旨]  方塊中，鍵入測試電子郵件的主旨列。 變更預設的主旨，以便識別您的電子郵件來進行疑難排解。
+1. 在 [本文]  方塊中，鍵入測試電子郵件的本文。 變更預設的主旨，以便識別您的電子郵件來進行疑難排解。
 1. 選取 [傳送測試電子郵件]  將測試電子郵件傳送到 Database Mail 佇列。
 1. 傳送測試電子郵件會開啟 [Database Mail 測試電子郵件] 對話方塊。 記下 [已傳送的電子郵件] 方塊中顯示的數字。 這是測試訊息的 mailitem_id。 選取 [確定]。
 1. 在工具列上選取 [新增查詢] 開啟 [查詢編輯器] 視窗。 執行下列 T-SQL 陳述式來判斷測試電子郵件訊息的狀態：
@@ -47,7 +47,7 @@ ms.locfileid: "72906065"
 
     sent_status 資料行會指出是否已傳送測試電子郵件訊息。
 
-1. 如果發生錯誤，請執行下列陳述式檢視錯誤訊息：
+1. 如果發生錯誤，請執行以下陳述式檢視錯誤訊息：
 
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log 

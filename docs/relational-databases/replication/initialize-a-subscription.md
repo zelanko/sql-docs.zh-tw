@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: d6013845-cb7a-4203-8e21-edce32f1d330
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e88387df824cea6d617633fffcb27eeee8db9129
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 742b29d53d917308b97d5b6935ed6aa0c0cba462
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770612"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287938"
 ---
 # <a name="initialize-a-subscription"></a>初始化訂閱
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

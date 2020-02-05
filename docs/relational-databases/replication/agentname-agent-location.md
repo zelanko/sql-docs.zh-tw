@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f909e2ffc6f0af693325ae40cb50e92d465fc82c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: b8b61a52420752c2409edfd4ed580a07a79d492d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768696"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288285"
 ---
 # <a name="ltagentnamegt-agent-location"></a>&lt;代理程式名稱&gt; 代理程式位置
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

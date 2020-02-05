@@ -27,10 +27,10 @@ ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1e8fa047a65663f918bfcce4a92692f1c443f77a
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064666"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
@@ -79,7 +79,7 @@ CREATE FULLTEXT CATALOG catalog_name
  ACCENT_SENSITIVITY = {ON|OFF}  
  指定全文檢索索引的目錄是否區分腔調字。 當這個屬性有了改變時，您必須重建索引。 預設值是使用資料庫定序所指定的區分腔調字屬性。 若要顯示資料庫定序，請使用 **sys.databases** 目錄檢視。  
   
- 若要判斷全文檢索目錄目前的區分重音字屬性設定，請針對 *catalog_name*，搭配 **accentsensitivity** 屬性值來使用 FULLTEXTCATALOGPROPERTY 函數。 如果傳回的值是 '1'，全文檢索目錄就會區分腔調字；如果傳回的值是 '0'，目錄就不會區分腔調字。  
+ 若要判斷全文檢索目錄目前的區分重音字屬性設定，請針對 **catalog_name**，搭配 *accentsensitivity* 屬性值來使用 FULLTEXTCATALOGPROPERTY 函數。 如果傳回的值是 '1'，全文檢索目錄就會區分腔調字；如果傳回的值是 '0'，目錄就不會區分腔調字。  
   
  AS DEFAULT  
  指定這個全文檢索目錄是預設目錄。 當建立全文檢索索引，卻沒有明確指定全文檢索目錄時，便使用預設目錄。 如果現有的全文檢索目錄已標示了 AS DEFAULT，將這個新目錄設成 AS DEFAULT，會使這個目錄成為預設的全文檢索目錄。  
@@ -97,7 +97,7 @@ CREATE FULLTEXT CATALOG catalog_name
   
  *owner_name* 也必須取得指定之全文檢索目錄的 TAKE OWNERSHIP 權限。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  全文檢索目錄識別碼從 00005 開始，每次新增一個目錄時識別碼便增加一號。  
   
 ## <a name="permissions"></a>權限  

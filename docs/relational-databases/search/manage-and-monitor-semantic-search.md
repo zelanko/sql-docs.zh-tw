@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: c5e5c8256c117ebd3fbb57b5a7c291b539c5a428
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132248"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>管理及監視語意搜尋
@@ -25,7 +25,7 @@ ms.locfileid: "68132248"
   
 ##  <a name="HowToMonitorStatus"></a>檢查語意索引的狀態  
 ### <a name="is-the-first-phase-of-semantic-indexing-complete"></a>語意索引的第一個階段是否已完成？
- 查詢動態管理檢視 [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md) **status** 和 **status_description** 資料行。  
+ 查詢動態管理檢視 [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)**status** 和 **status_description** 資料行。  
   
  索引的第一個階段包括擴展全文檢索關鍵字索引和語意主要片語索引，以及擷取文件相似度資料。  
   
@@ -38,7 +38,7 @@ GO
 ```  
   
 ### <a name="is-the-second-phase-of-semantic-indexing-complete"></a>語意索引的第二個階段是否已完成？
- 查詢動態管理檢視 [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md) **status** 和 **status_description** 資料行。  
+ 查詢動態管理檢視 [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)**status** 和 **status_description** 資料行。  
   
  索引的第二個階段包括擴展語意文件相似度索引。  
   
@@ -65,7 +65,7 @@ GO
 ```  
   
 ### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>全文檢索目錄的全文檢索索引與語意索引的總大小為何？  
- 查詢 [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 中繼資料函數的 **IndexSize** 屬性。  
+ 查詢 **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** 中繼資料函數的 [IndexSize](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 屬性。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>全文檢索目錄的全文檢索索引和語意索引中建立了多少項目的索引？  
- 查詢 [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 中繼資料函數的 **ItemCount** 屬性。  
+ 查詢 **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** 中繼資料函數的 [ItemCount](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 屬性。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  
@@ -122,7 +122,7 @@ GO
 ##  <a name="SemanticIndexing"></a>關於語意索引的階段  
  語意搜尋會針對其啟用所在的每一個資料行，建立兩種資料的索引：  
   
-1.  **主要片語**  
+1.  **關鍵片語**  
   
 2.  **文件相似度**  
   
@@ -133,7 +133,7 @@ GO
 2.  **階段 2**： 然後會擴展語意文件相似度索引。 此索引取決於上一個階段中已擴展的兩個索引。  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a> 問題：未擴展語意索引  
+##  <a name="ProblemNotPopulated"></a>問題：未擴展語意索引  
 ### <a name="are-the-associated-full-text-indexes-populated"></a>是否已擴展關聯的全文檢索索引？  
  因為語意索引會依據全文檢索索引，所以只有當關聯的全文檢索索引已擴展時，才會擴展語意索引。  
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5a8335493cad5325d8433305a8a5d7968765cc39
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73757546"
 ---
 # <a name="sql-server-native-client-error-mssqlserver_50000"></a>SQL Server Native Client 錯誤 MSSQLSERVER_50000
@@ -32,7 +32,7 @@ ms.locfileid: "73757546"
 |產品版本|11.0|  
 |事件識別碼|50000|  
 |事件來源|SETUP|  
-|元件|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client|  
+|元件|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client{2}|  
 |符號名稱||  
 |訊息文字|嘗試讀取檔案 '%.*ls' 時發生網路錯誤。|  
   

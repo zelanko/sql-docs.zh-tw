@@ -15,17 +15,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056206"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>設定及管理全文檢索搜尋的同義字檔案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的全文檢索查詢可以透過使用「同義字」  ，搜尋使用者指定之詞彙的同義字。 每個同義字會針對特定語言定義一組同義字。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。
 
-系統會針對所有 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 查詢以及指定 `FORMSOF THESAURUS` 子句的任何 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 查詢進行同義字比對。
+系統會針對所有 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 查詢以及指定 [ 子句的任何 ](../../t-sql/queries/contains-transact-sql.md)CONTAINS[ 和 ](../../relational-databases/system-functions/containstable-transact-sql.md)CONTAINSTABLE`FORMSOF THESAURUS` 查詢進行同義字比對。
   
 全文檢索搜尋的同義字是一個 XML 文字檔。
   
@@ -115,7 +115,7 @@ ms.locfileid: "74056206"
 </XML>  
 ```
 
-### <a name="expansion"></a> 展開集的 XML 結構  
+### <a name="expansion"></a> XML structure of an expansion set  
   
  每個展開集都是用 `<expansion>` 元素括住。 在這個元素內，您可以使用 `<sub>` 元素來指定一或多個替代項目。 在展開集中，您可以指定一組彼此是同義字的替代項目。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "74056206"
 </expansion>  
 ```  
   
-### <a name="replacement"></a> 取代集的 XML 結構  
+### <a name="replacement"></a> XML structure of a replacement set  
   
 每個取代集都是用 `<replacement>` 元素括住。 在這個元素內，您可以使用 `<pat>` 元素來指定一或多個模式，並使用 `<sub>` 元素來指定零或多個替代項目 (每個同義字指定一個)。 您也可以指定要用替代集取代的模式。 模式和替代項目都可以包含單字或一串文字。 如果沒有針對某個模式指定替代項目，其作用就是從使用者查詢中移除該模式。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "74056206"
 </replacement>  
 ```  
   
-及  
+和  
   
 ```xml  
 <replacement>  
@@ -170,7 +170,7 @@ ms.locfileid: "74056206"
   
 您可在單一 `<diacritics_sensitive>` 元素中指定同義字的變音符號設定。 這個元素包含可控制區分腔調字的整數值，如下所示：  
   
-|變音符號設定|ReplTest1|XML|  
+|變音符號設定|值|XML|  
 |------------------------|-----------|---------|  
 |不區分腔調字|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
 |區分腔調字|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  

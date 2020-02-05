@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e9bd4cb0c2fff4259814f6e33a65777023a801fd
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412525"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio 對記憶體中 OLTP 的支援
@@ -138,9 +138,9 @@ ms.locfileid: "74412525"
   
         -   複製資料庫。 對於具有記憶體最佳化之物件的資料庫，交易時不會在目的伺服器上建立資料庫及傳送資料。  
   
-        -   匯入和匯出資料。 使用 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈] 的 [從一個或多個資料表或檢視表複製資料]  選項。 如果目的地資料表是不存在於目的地資料庫中的記憶體最佳化資料表：  
+        -   匯入和匯出資料。 使用 [**匯入和匯出精靈] 的 [從一個或多個資料表或檢視表複製資料][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 選項。 如果目的地資料表是不存在於目的地資料庫中的記憶體最佳化資料表：  
   
-            1.  在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈]  的 [指定資料表複製或查詢]  畫面，選取 [從一個或多個資料表或檢視表複製資料]  。 然後按一下 [下一步]  。  
+            1.  在 [**匯入和匯出精靈][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 的 [指定資料表複製或查詢]  畫面，選取 [從一個或多個資料表或檢視表複製資料]  。 然後按一下 [下一步]  。  
   
             2.  按一下 [編輯對應]  。 然後選取 [建立目的資料表]  並按一下 [編輯 SQL]  。 輸入 CREATE TABLE 語法，在目的地資料庫上建立記憶體最佳化的資料表。 按一下 [確定]  並完成此精靈中的其餘步驟。  
   

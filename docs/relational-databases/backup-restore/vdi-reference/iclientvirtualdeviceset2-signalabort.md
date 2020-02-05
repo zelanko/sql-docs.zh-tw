@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 0a0d53421f0928b1ebf0ba557afbd29dd8680993
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847539"
 ---
 # <a name="iclientvirtualdeviceset2signalabort-vdi"></a>IClientVirtualDeviceSet2::SignalAbort (VDI)
@@ -32,7 +32,7 @@ HRESULT IClientVirtualDeviceSet2::SignalAbort ();
 
 傳回 *HRESULT* ，指出方法呼叫成功或失敗。 值 NOERROR 表示方法呼叫成功。 非零值則表示已發生錯誤。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 用戶端可以隨時選擇中止 BACKUP 或 RESTORE 作業。 此常式會發出所有作業都應該停止的信號。 整體虛擬裝置集的狀態會進入「中止」狀態。 任何裝置上都不會再傳回任何命令。 所有未完成的命令都會自動完成，並傳回 ERROR_OPERATION_ABORTED 作為完成碼。 用戶端在安全地終止提供給用戶端任何未完成使用的緩衝區之後，應該會呼叫 IClientVirtualDeviceSet2::Close。 如需詳細資訊，請參閱＜異常終止＞。
 

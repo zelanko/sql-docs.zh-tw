@@ -18,10 +18,10 @@ ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b7bb0f690305320f5ae0f5d4ecdeb8f59b33cb01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114853"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY 端點權限 (Transact-SQL)
@@ -75,7 +75,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  AS *SQL_Server_login*  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，執行這項查詢的主體會從這項登入衍生其權限來拒絕權限。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  只有在目前資料庫是 **master** 的情況下，才能夠拒絕伺服器範圍的權限。  
   
  您可以在 [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) 目錄檢視中，看到有關端點的資訊。 您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中，看到伺服器權限的資訊，並在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中，看到有關伺服器主體的資訊。  
@@ -96,7 +96,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ## <a name="examples"></a>範例  
   
 ### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>A. 拒絕端點的 VIEW DEFINITION 權限  
- 下列範例拒絕在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `Mirror7` 端點上，登入 `ZArifin` 的 `VIEW DEFINITION` 權限。  
+ 下列範例拒絕在 `VIEW DEFINITION` 的 `Mirror7` 端點上，登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `ZArifin` 權限。  
   
 ```  
 USE master;  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>B. 拒絕具有 CASCADE 選項的 TAKE OWNERSHIP 權限  
- 下列範例會對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者 `TAKE OWNERSHIP` 拒絕端點 `Shipping83` 的 `PKomosinski` 權限，並對 `PKomosinski` 對其授與 `TAKE OWNERSHIP` 的主體拒絕該權限。  
+ 下列範例會對 `TAKE OWNERSHIP` 使用者 `Shipping83` 拒絕端點 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `PKomosinski` 權限，並對 `PKomosinski` 對其授與 `TAKE OWNERSHIP` 的主體拒絕該權限。  
   
 ```  
 USE master;  

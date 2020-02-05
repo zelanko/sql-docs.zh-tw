@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325490"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>分頁與範圍架構指南
@@ -94,7 +94,7 @@ ms.locfileid: "75325490"
 > [!NOTE]
 > 最高到 (並包含) [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，追蹤旗標 1118 可以用來將預設配置變更為一律使用統一範圍。 如需此追蹤旗標的詳細資訊，請參閱 [DBCC TRACEON - 追蹤旗標](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。   
 >   
-> 從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，會針對 TempDB 自動啟用 TF 1118 所提供的功能。 對於使用者資料庫，此行為由 `ALTER DATABASE` 的 `SET MIXED_PAGE_ALLOCATION` 選項 (預設值設定為 OFF) 所控制，而且追蹤旗標 1118 沒有作用。 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)。
+> 從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，會針對 TempDB 自動啟用 TF 1118 所提供的功能。 對於使用者資料庫，此行為由 `SET MIXED_PAGE_ALLOCATION` 的 `ALTER DATABASE` 選項 (預設值設定為 OFF) 所控制，而且追蹤旗標 1118 沒有作用。 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)。
 
 ## <a name="managing-extent-allocations-and-free-space"></a>管理範圍配置與可用空間 
 

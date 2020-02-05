@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7de18ecb5bf47c8d1fc03f95716bbebfb27cf7ae
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096097"
 ---
 # <a name="remove-square-brackets-from-json---without_array_wrapper-option"></a>從 JSON 輸出移除方括弧 - WITHOUT_ARRAY_WRAPPER 選項
@@ -29,7 +29,7 @@ ms.locfileid: "74096097"
 ## <a name="example-single-row-result"></a>範例 (單一資料列結果)  
 下列範例顯示使用或不使用 **WITHOUT_ARRAY_WRAPPER** 選項的 **FOR JSON** 子句輸出。  
   
- **[資料集屬性]**  
+ **查詢**  
   
 ```sql  
 SELECT 2015 as year, 12 as month, 15 as day  
@@ -59,7 +59,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 ## <a name="example-multiple-row-result"></a>範例 (多個資料列結果)
 以下是使用 **FOR JSON** 選項的 **WITHOUT_ARRAY_WRAPPER** 選項。 這個範例會產生多個資料列結果。 由於有多個元素且遺漏方括號，因此輸出不是有效的 JSON。
   
- **[資料集屬性]**  
+ **查詢**  
   
 ```sql  
 SELECT TOP 3 SalesOrderNumber, OrderDate, Status  

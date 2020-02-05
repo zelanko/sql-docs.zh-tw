@@ -16,10 +16,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: daf20c621f00529313498c4802cd1d7dfce0fd8b
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056218"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>SQL Server 2016 中已淘汰的全文檢索搜尋功能
@@ -41,12 +41,12 @@ ms.locfileid: "74056218"
 |sp_fulltext_service action values：clean_up、connect_timeout 和 data_timeout 會傳回零|None|sp_fulltext_service @action=clean_up<br /><br /> sp_fulltext_service @action=connect_timeout<br /><br /> sp_fulltext_service @action=data_timeout|116<br /><br /> 117<br /><br /> 118|  
 |sys.dm_fts_active_catalogs 資料行：<br /><br /> is_paused<br /><br /> previous_status<br /><br /> previous_status_description<br /><br /> row_count_in_thousands<br /><br /> status<br /><br /> status_description<br /><br /> worker_count|無。|dm_fts_active_catalogs.is_paused<br /><br /> dm_fts_active_catalogs.previous_status<br /><br /> dm_fts_active_catalogs.previous_status_description<br /><br /> dm_fts_active_catalogs.row_count_in_thousands<br /><br /> dm_fts_active_catalogs.status<br /><br /> dm_fts_active_catalogs.status_description<br /><br /> dm_fts_active_catalogs.worker_count|218<br /><br /> 221<br /><br /> 222<br /><br /> 224<br /><br /> 219<br /><br /> 220<br /><br /> 223|  
 |sys.dm_fts_memory_buffers 資料行：<br /><br /> row_count|無。|dm_fts_memory_buffers.row_count|225|  
-|sys.fulltext_catalogs 資料行：<br /><br /> 路徑<br /><br /> data_space_id<br /><br /> file_id 資料行|無。|fulltext_catalogs.path<br /><br /> fulltext_catalogs.data_space_id<br /><br /> fulltext_catalogs.file_id|215<br /><br /> 216<br /><br /> 217|  
+|sys.fulltext_catalogs 資料行：<br /><br /> path<br /><br /> data_space_id<br /><br /> file_id 資料行|無。|fulltext_catalogs.path<br /><br /> fulltext_catalogs.data_space_id<br /><br /> fulltext_catalogs.file_id|215<br /><br /> 216<br /><br /> 217|  
   
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>SQL Server 的未來版本不支援的功能  
  下一版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可支援下列全文檢索搜尋功能，但會在更新的版本中移除。 確實的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本尚未決定。  
   
- **Feature name** 值會出現在追蹤事件中當做 ObjectName，並在效能計數器和 sys.dm_os_performance_counters 中當做執行個體名稱。 **Feature ID** 值會出現在追蹤事件中當做 ObjectId。  
+ [功能名稱]  值會出現在追蹤事件中當做 ObjectName，並在效能計數器和 sys.dm_os_performance_counters 中當做執行個體名稱。 [功能識別碼]  值會出現在追蹤事件中當做 ObjectId。  
   
 |已被取代的功能|取代|功能名稱|功能識別碼|  
 |------------------------|-----------------|------------------|----------------|  

@@ -16,10 +16,10 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2e2a794a7e5bdafe4e07b5e7deb9a1007e4a7e73
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75235385"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>複寫、變更追蹤和異動資料擷取 - AlwaysOn 可用性群組
@@ -109,7 +109,7 @@ ms.locfileid: "75235385"
     ```  
   
     > [!NOTE]  
-    >  您應該在容錯移轉前於所有可能的容錯移轉目標上建立這些作業，並且將它們標示為停用，直到主機上的可用性複本變成新的主要複本為止。 當本機資料庫變成次要資料庫時，在舊主要資料庫上執行的 CDC 作業也應該停用。 若要停用和啟用作業，請使用 [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md) 的 *\@enabled* 選項。 如需有關建立 CDC 作業的詳細資訊，請參閱 [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)支援複寫、異動資料擷取 (CDC) 和變更追蹤 (CT)。  
+    >  您應該在容錯移轉前於所有可能的容錯移轉目標上建立這些作業，並且將它們標示為停用，直到主機上的可用性複本變成新的主要複本為止。 當本機資料庫變成次要資料庫時，在舊主要資料庫上執行的 CDC 作業也應該停用。 若要停用和啟用作業，請使用 *sp_update_job &#40;Transact-SQL&#41;\@ 的* [enabled](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md) 選項。 如需有關建立 CDC 作業的詳細資訊，請參閱 [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)支援複寫、異動資料擷取 (CDC) 和變更追蹤 (CT)。  
   
 -   **將 CDC 角色加入 AlwaysOn 主要資料庫複本中**  
   
@@ -198,7 +198,7 @@ ms.locfileid: "75235385"
   
     -   發送訂閱：發行者和散發者都必須至少執行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
   
-    -   提取訂閱：發行者、散發者和訂閱者資料庫都必須至少是 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 這是因為訂閱者的合併代理程式必須知道可用性群組如何容錯移轉到次要複本。  
+    -   提取訂閱：發行者、散發者和訂閱者資料庫必須至少是在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 這是因為訂閱者的合併代理程式必須知道可用性群組如何容錯移轉到次要複本。  
   
 -   發行者執行個體必須滿足參與 AlwaysOn 可用性群組所需的所有必要條件。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)支援複寫、異動資料擷取 (CDC) 和變更追蹤 (CT)。  
   
@@ -208,7 +208,7 @@ ms.locfileid: "75235385"
 |||||  
 |-|-|-|-|  
 ||**發行者**|**散發者**|**訂閱者**|  
-|**異動**|是<br /><br /> 注意:不包含對雙向和相互異動複寫的支援。|是|是| 
+|**異動**|是<br /><br /> 注意：不包含雙向和相互異動複寫的支援。|是|是| 
 |**P2P**|否|否|否|  
 |**合併式**|是|否|否|  
 |**快照式**|是|否|是|
@@ -252,7 +252,7 @@ ms.locfileid: "75235385"
  [複寫訂閱者及 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Always On 可用性群組：互通性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [AlwaysOn 可用性群組︰互通性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [關於異動資料擷取 &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [關於變更追蹤 &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   

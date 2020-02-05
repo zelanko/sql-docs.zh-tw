@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 0b7fd8a71f2636893f157b18630e2773b2f01951
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68262786"
 ---
 # <a name="upgrade-integration-services"></a>升級 Integration Services
@@ -57,7 +57,7 @@ ms.locfileid: "68262786"
   
 -   執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式，並選取**從 SQL Server 2008、SQL Server 2008 R2、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 升級的選項。  
   
--   在命令提示字元上執行 **setup.exe**，並指定 **/ACTION=upgrade** 選項。 如需詳細資訊，請參閱[從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的＜[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的安裝指令碼＞一節。  
+-   在命令提示字元上執行 **setup.exe** ，並指定 **/ACTION=upgrade** 選項。 如需詳細資訊，請參閱[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]從命令提示字元安裝 SQL Server 2016[ 中的＜](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 的安裝指令碼＞一節。  
   
  您無法使用升級作業來執行下列動作：  
   

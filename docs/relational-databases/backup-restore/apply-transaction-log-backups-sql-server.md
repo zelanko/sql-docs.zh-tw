@@ -17,10 +17,10 @@ ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 62d90931cdc1d7748f47edabb31e5f9404b1262d
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72916193"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>套用異動記錄備份 (SQL Server)
@@ -34,9 +34,9 @@ ms.locfileid: "72916193"
   
 -   **有足夠的記錄備份供還原順序使用：** 您必須備份了足夠的記錄，才能完成還原順序。 您必須先備妥必要的記錄備份，包括所需的 [結尾記錄備份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) ，才開始還原順序。  
   
--   **正確的還原順序：** 首先必須還原最新的完整資料庫備份或差異資料庫備份。 接著，必須依時間先後順序，還原在該完整或差異資料庫備份之後建立的所有交易記錄。 如果這個記錄鏈結中的某個交易記錄備份遺失或損毀，您只能還原該遺漏的交易記錄之前的交易記錄。  
+-   **正確的還原順序：**  首先必須還原最新的完整資料庫備份或差異資料庫備份。 接著，必須依時間先後順序，還原在該完整或差異資料庫備份之後建立的所有交易記錄。 如果這個記錄鏈結中的某個交易記錄備份遺失或損毀，您只能還原該遺漏的交易記錄之前的交易記錄。  
   
--   **資料庫尚未復原：** 直到套用了最後一個交易記錄之後，才能復原資料庫。 如果您只還原了其中一個中繼交易記錄備份 (尚未到達記錄鏈結的尾端) 之後便復原資料庫，則您無法還原該時間點之後的資料庫，除非您以完整資料庫備份開始重新啟動整個還原順序。  
+-   **資料庫尚未復原：**  直到套用了最後一個交易記錄之後，才能復原資料庫。 如果您只還原了其中一個中繼交易記錄備份 (尚未到達記錄鏈結的尾端) 之後便復原資料庫，則您無法還原該時間點之後的資料庫，除非您以完整資料庫備份開始重新啟動整個還原順序。  
   
     > [!TIP]
     > 最佳做法是還原所有記錄備份 (`RESTORE LOG *database_name* WITH NORECOVERY`)。 然後，在還原最後一個記錄備份後，在另一個作業中復原資料庫 (`RESTORE DATABASE *database_name* WITH RECOVERY`)。  
@@ -96,7 +96,7 @@ ms.locfileid: "72916193"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A> (SMO)  
   
--   [復原包含標記之異動的相關資料庫](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)  
+-   [復原包含標示之交易的相關資料庫](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)  
   
 -   [復原到記錄序號 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md)  
   

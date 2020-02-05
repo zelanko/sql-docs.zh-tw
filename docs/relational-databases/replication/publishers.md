@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 116cd6a5-32ac-4273-81a2-d184408e0f07
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 416a4dd7b2c4d68860263b7417d2c48ddffd644b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 9e4a59ac997232e7f037c4a9dd840f5cebbac70c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769765"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287436"
 ---
-# <a name="publishers"></a>[散發者屬性]
+# <a name="publishers"></a>發行者
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   您可以提供權限讓其他發行者使用此散發者。 請注意，讓發行者可以使用這個伺服器作為它的遠端散發者，並不會使該伺服器成為發行者。 您必須連接到發行者，設定其發行，並選擇此伺服器為散發者。 您可以透過新增發行集精靈來設定發行者和選擇散發者。  
   
@@ -30,8 +30,8 @@ ms.locfileid: "68769765"
  **發行者**  
  選取可使用這個散發者的伺服器。 按一下發行者旁的屬性按鈕 ( **...** )，即可檢視並設定其他屬性。  
   
- **[加入]**  
- 如果未列出您要允許的伺服器，請按一下 **[加入]** ，將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者或 Oracle 發行者加入可用發行者的清單中。  
+ **加入**  
+ 如果未列出您要允許的伺服器，請按一下 [加入]  ，將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者或 Oracle 發行者加入可用發行者的清單中。  
   
 ## <a name="see-also"></a>另請參閱  
  [[設定散發]](../../relational-databases/replication/configure-distribution.md)   

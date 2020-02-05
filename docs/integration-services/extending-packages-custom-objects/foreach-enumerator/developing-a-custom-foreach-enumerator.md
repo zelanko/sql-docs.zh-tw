@@ -15,10 +15,10 @@ ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3aedd7aef35555fe11bf67a11254833c52083f9d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297174"
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>開發自訂 ForEach 列舉值

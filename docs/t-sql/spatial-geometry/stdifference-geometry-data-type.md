@@ -18,10 +18,10 @@ ms.assetid: 737f39bb-8750-4ffb-8594-23febc2f1075
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f511c6fa7a0d41b0f072981898216fde050d1742
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127371"
 ---
 # <a name="stdifference-geometry-data-type"></a>STDifference (geometry 資料類型)
@@ -40,12 +40,12 @@ ms.locfileid: "68127371"
  *other_geometry*  
  這是另一個 **geometry** 執行個體，指示要從 `STDifference()` 叫用所在的執行個體中移除哪些點。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回型別：**SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一律會傳回 Null。   只有當輸入執行個體包含圓弧線段時，結果才能包含圓弧線段。  
   
 ## <a name="examples"></a>範例  

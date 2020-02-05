@@ -11,10 +11,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a2b02d5b987958abc8dd97e48f86e7b44636efad
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096073"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>使用記憶體內部 OLTP 最佳化 JSON 處理
@@ -23,7 +23,7 @@ ms.locfileid: "74096073"
 SQL Server 和 Azure SQL Database 可讓您使用格式化為 JSON 的文字。 若要提升處理 JSON 資料之查詢的效能，您可以使用標準字串資料行 (NVARCHAR 類型)，將 JSON 文件儲存到經記憶體最佳化的資料表中。 將 JSON 資料儲存在記憶體最佳化資料表時，透過利用無鎖定的記憶體內部資料存取，即可提高查詢效能。
 
 ## <a name="store-json-in-memory-optimized-tables"></a>將 JSON 儲存到記憶體最佳化資料表
-下列範例示範具有 `Tags` 和 `Data` 這兩個 JSON 資料行的記憶體最佳化 `Product` 資料表。
+下列範例示範具有 `Product` 和 `Tags` 這兩個 JSON 資料行的記憶體最佳化 `Data` 資料表。
 
 ```sql
 CREATE SCHEMA xtp;
@@ -49,7 +49,7 @@ SQL Server 和 Azure SQL Database 中提供的功能可讓您完全整合 JSON �
 ## <a name="validate"></a> 驗證 JSON 資料行
 SQL Server 和 Azure SQL Database 可讓您新增原生編譯 CHECK 條件約束，來驗證字串資料行中所儲存的 JSON 文件內容。 您可以使用原生編譯 JSON CHECK 條件約束，確保記憶體最佳化資料表中所儲存的 JSON 文字格式正確。
 
-下列範例會建立一份含有 JSON 資料行 `Tags` 的 `Product` 資料表。 `Tags` 資料行具有 CHECK 條件約束，使用 `ISJSON` 函式來驗證資料行中的 JSON 文字。
+下列範例會建立一份含有 JSON 資料行 `Product` 的 `Tags` 資料表。 `Tags` 資料行具有 CHECK 條件約束，使用 `ISJSON` 函式來驗證資料行中的 JSON 文字。
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;
@@ -82,7 +82,7 @@ ALTER TABLE xtp.Product
 -   產品的製作國家/地區。
 -   產品製造成本。
 
-在此範例中，每次 `Data` 資料行中所儲存的 JSON 文件變更時，都會更新計算資料行 `MadeIn` 和 `Cost`。
+在此範例中，每次 `MadeIn` 資料行中所儲存的 JSON 文件變更時，都會更新計算資料行 `Cost` 和 `Data`。
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;

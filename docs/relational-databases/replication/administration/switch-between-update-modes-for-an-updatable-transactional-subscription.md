@@ -16,10 +16,10 @@ ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8f9480787ced42ad66602bb34db98d1c2d53bd35
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321975"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>切換可更新之交易式訂閱的更新模式
@@ -63,17 +63,17 @@ ms.locfileid: "75321975"
   
 3.  以滑鼠右鍵按一下您要設定更新模式的訂閱，再按一下 **[設定更新方法]** 。  
   
-4.  在 [設定更新方法 - \<訂閱者> :  \<訂閱資料庫>] 對話方塊中，選取 [立即更新]  或 [佇列更新]  。  
+4.  在 [設定更新方法 - **訂閱者>: \<訂閱資料庫>]\<** 對話方塊中，選取 [立即更新]  或 [佇列更新]  。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>若要設定提取訂閱的更新模式  
   
-1.  在 [訂閱屬性 - \<發行者>:  \<發行資料庫>] 對話方塊中，選取 [立即複寫變更]  的值或 [訂閱者更新方法]  選項的 [佇列變更]  。  
+1.  在 [訂閱屬性 - **發行者>: \<發行資料庫>]\<** 對話方塊中，選取 [立即複寫變更]  的值或 [訂閱者更新方法]  選項的 [佇列變更]  。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- 如需有關存取 [訂閱屬性 - \<發行者>:  \<發行資料庫>] 對話方塊的詳細資訊，請參閱[檢視及修改提取訂閱屬性](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
+ 如需存取 [訂閱屬性 - **發行者>: \<發行集資料庫>]\<** 對話方塊的詳細資訊，請參閱[檢視及修改提取訂閱屬性](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 050197c7ce5a6098397b6ad3db13a933983270d6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d4aba7ca9e46725d771ba36c50ccc4e380fabae7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770745"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288105"
 ---
 # <a name="replication-agents-overview"></a>複寫代理程式概觀
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "68770745"
 ## <a name="distribution-agent"></a>散發代理程式  
  「散發代理程式」(Distribution Agent) 可搭配快照式複寫和異動複寫來使用。 它可將初始快照集套用至「訂閱者」，並將散發資料庫中的交易移至「訂閱者」。 「散發代理程式」在發送訂閱的「散發者」端或是提取訂閱的「訂閱者」端執行。 如需詳細資訊，請參閱 [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)。  
   
-## <a name="merge-agent"></a>[合併代理程式]  
+## <a name="merge-agent"></a>合併代理程式  
  「合併代理程式」(Merge Agent) 可搭配合併式複寫使用。 它可將初始快照集套用到「訂閱者」，移動並使累加的資料變更一致。 每個合併訂閱都有其「合併代理程式」，以連接「發行者」和「訂閱者」，並更新這兩者。 「合併代理程式」在發送訂閱的「散發者」端或是提取訂閱的「訂閱者」端執行。 依預設，「合併代理程式」將變更從「訂閱者」上傳到「發行者」，然後再將變更從「發行者」下載至「訂閱者」。 如需詳細資訊，請參閱 [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)。  
   
 ## <a name="queue-reader-agent"></a>佇列讀取器代理程式  

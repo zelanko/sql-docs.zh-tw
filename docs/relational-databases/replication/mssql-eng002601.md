@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4384164d7baa79559d8810114494473435894f8c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 96de733839deb644968303e58bcf069894aae160
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770515"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286325"
 ---
-# <a name="mssqleng002601"></a>MSSQL_ENG002601
+# <a name="mssql_eng002601"></a>MSSQL_ENG002601
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>訊息詳細資料  
@@ -31,7 +31,7 @@ ms.locfileid: "68770515"
 |事件識別碼|2601|  
 |事件來源|MSSQLSERVER|  
 |元件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|符號名稱|不適用|  
+|符號名稱|N/A|  
 |訊息文字|無法以唯一索引 '%.\*ls' 在物件 '%.*ls' 中插入重複的索引鍵資料列。|  
   
 ## <a name="explanation"></a>說明  
@@ -43,7 +43,7 @@ ms.locfileid: "68770515"
   
 -   已使用具有識別欄位的資料表，但並未適當管理資料行。  
   
--   在合併式複寫中，插入系統資料表 **MSmerge_contents** 期間也可能發生此錯誤；引發的錯誤與以下類似：無法以唯一索引 'ucl1SycContents' 在物件 'MSmerge_contents' 中插入重複的索引鍵資料列。  
+-   在合併式複寫中，插入系統資料表 **MSmerge_contents**期間也可以發生此錯誤；引發的錯誤與以下類似：無法以唯一索引 'ucl1SycContents' 在物件 'MSmerge_contents' 中插入重複的索引鍵資料列。  
   
 ## <a name="user-action"></a>使用者動作  
  必須依照錯誤產生的原因採取動作：  

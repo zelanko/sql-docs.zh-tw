@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 09f90bcf10db6d5a1406aa7a68f90b4704270d95
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903154"
 ---
 # <a name="create-an-application-role"></a>建立應用程式角色
@@ -43,7 +43,7 @@ ms.locfileid: "72903154"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料庫的 ALTER ANY APPLICATION ROLE 權限。  
@@ -64,7 +64,7 @@ ms.locfileid: "72903154"
   
 6.  在 **[預設結構描述]** 方塊中，透過輸入物件名稱，指定擁有此角色建立的物件之結構描述。 或者，按一下省略符號 **(...)** ，開啟 [尋找結構描述]  對話方塊。  
   
-7.  在 **[密碼]** 方塊中，輸入新角色的密碼。 在 **[確認密碼]** 方塊中重新輸入該密碼。  
+7.  在 **[密碼]** 方塊中，輸入新角色的密碼。 在 [確認密碼]  方塊中再次輸入密碼。  
   
 8.  在 **[此角色擁有的結構描述]** 底下，選取或檢視此角色將擁有的結構描述。 結構描述僅能由一個結構描述或角色擁有。  
   

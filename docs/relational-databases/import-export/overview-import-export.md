@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c131954cce8e65cd7f309b59f3780bbd214cb228
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 721347cd8b61497f5ff2c1beeb058a6457c37708
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74055935"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761862"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>匯入和匯出 SQL Server 和 Azure SQL Database 的資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "74055935"
 您可以使用 `BULK INSERT` 或 `OPENROWSET(BULK...)` 命令匯入資料。 您通常是在 SQL Server Management Studio (SSMS) 中執行這些命令。 如需詳細資訊，請參閱[使用 BULK INSERT 或 OPENROWSET(BULK...) 匯入大量資料](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。
 
 ### <a name="use-bcp-from-the-command-prompt"></a>從命令提示字元使用 BCP
-您可以使用 BCP 命令列公用程式匯入和匯出資料。 如需詳細資訊，請參閱[使用 bcp 公用程式匯入及匯出大量資料](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。
+您可以使用 BCP 命令列公用程式匯入和匯出資料。 如需詳細資訊，請參閱[使用 bcp 公用程式匯入及匯出大量資料](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)。
 
 ### <a name="use-the-import-flat-file-wizard"></a>使用「匯入一般檔案精靈」
 如果您不需要使用「匯入及匯出精靈」和其他工具中的所有設定選項，則可以使用 SQL Server Management Studio (SSMS) 中的**匯入一般檔案精靈**將文字檔匯入 SQL Server。 如需詳細資訊，請參閱下列文章：

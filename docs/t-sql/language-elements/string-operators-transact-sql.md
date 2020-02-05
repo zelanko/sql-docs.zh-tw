@@ -18,10 +18,10 @@ ms.assetid: ee4e715d-d8f1-4d0e-81b3-04573ec9f13c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 345cb7d09b7b1356751eb8b8b69ecf737805f2c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121654"
 ---
 # <a name="string-operators-transact-sql"></a>字串運算子 (Transact-SQL)

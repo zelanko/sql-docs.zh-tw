@@ -11,10 +11,10 @@ ms.assetid: f6f47fa2-7c17-41d4-9f69-9be144d56832
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d24b9300b5ce5d727d7e9b53c42cea4571ad066f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095973"
 ---
 # <a name="create-manual-traces-using-stored-procedures"></a>使用預存程序建立手動追蹤

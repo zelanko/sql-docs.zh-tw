@@ -9,10 +9,10 @@ author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
 ms.openlocfilehash: e37237224dd9e8a6b44b913914c43d29cbc25d21
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69028718"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>使用 PowerShell Core 管理 Linux 上的 SQL Server
@@ -74,7 +74,7 @@ ModuleType Version    Name          ExportedCommands
 Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailabilityGroupList...
 ```
 
-## <a name="connect-to-sql-server-and-get-server-information"></a>連線至 SQL Server 並取得伺服器資訊
+## <a name="connect-to-sql-server-and-get-server-information"></a>連線到 SQL Server 並取得伺服器資訊
 
 下列步驟使用 PowerShell Core 連線至您在 Linux 上的 SQL Server 執行個體，並顯示幾個伺服器屬性。
 
@@ -108,7 +108,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 
 ## <a name="using-the-sql-server-powershell-provider"></a>使用 SQL Server PowerShell 提供者
 
-連線至 SQL Server 執行個體的另一個選項是使用 [SQL Server PowerShell 提供者](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider)。  使用提供者可讓您瀏覽 SQL Server 執行個體，如同您在 [物件總管] 中瀏覽樹狀結構一樣，但是在 cmdline 上。  根據預設，此提供者會顯示為名為 `SQLSERVER:\` 的 PSDrive，您可以用來連線與瀏覽您的網域帳戶可存取的SQL Server 執行個體。  如需如何對 Linux 上的 SQL Server 設定 Active Directory 驗證的詳細資訊，請參閱 [Configuration steps](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps) (設定步驟)。
+連線到 SQL Server 執行個體的另一個選項是使用 [SQL Server PowerShell 提供者](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider)。  使用提供者可讓您瀏覽 SQL Server 執行個體，如同您在 [物件總管] 中瀏覽樹狀結構一樣，但是在 cmdline 上。  根據預設，此提供者會顯示為名為 `SQLSERVER:\` 的 PSDrive，您可以用來連線與巡覽您的網域帳戶可存取的 SQL Server 執行個體。  如需如何對 Linux 上的 SQL Server 設定 Active Directory 驗證的詳細資訊，請參閱 [Configuration steps](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps) (設定步驟)。
 
 您也可以搭配 SQL Server PowerShell 提供者使用 SQL 驗證。 若要這麼做，請使用 `New-PSDrive` Cmdlet 來建立新的 PSDrive，並提供適當的認證來進行連線。
 
@@ -120,7 +120,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 New-PSDrive -Name SQLonDocker -PSProvider SqlServer -Root 'SQLSERVER:\SQL\localhost,10002\Default\' -Credential $credential
 ```
 
-您可以藉由執行 `Get-PSDrive` Cmdlet 來確認磁碟機是否已建立。
+您可以藉由執行 `Get-PSDrive` Cmdlet 確認磁碟機是否建立。
 
 ```powershell
 Get-PSDrive
@@ -180,10 +180,10 @@ tempdb               Normal       16.00 MB    5.49 MB Simple       140 sa
 
 下列步驟會使用 PowerShell Core 來檢查 Linux 上 SQL Server 執行個體上的錯誤記錄檔連線。
 
-在 PowerShell 提示字元中複製並貼上下列命令。 可能需要幾分鐘的時間來執行。 這些命令會執行下列步驟：
+在 PowerShell 提示字元中複製並貼上下列命令。 可能需要幾分鐘的時間執行。 這些命令會執行下列步驟：
 - 顯示對話方塊，提示您輸入執行個體的主機名稱或 IP 位址
 - 顯示 [PowerShell 認證要求]  對話方塊，它會提示您輸入認證。 您可以使用「SQL 使用者名稱」  和「SQL 密碼」  連線至 Linux 上的 SQL Server 執行個體
-- 使用 **Get-SqlErrorLog** Cmdlet 連線至 Linux 上的 SQL Server 執行個體，並從 [昨天]  開始取出錯誤記錄檔
+- 使用 **Get-SqlErrorLog** Cmdlet 連線到 Linux 上的 SQL Server 執行個體，並擷取自**昨天**起的錯誤記錄檔
 
 (選擇性) 您可以將 `$serverInstance` 變數取代為您 SQL Server 執行個體的 IP 位址或主機名稱。
 

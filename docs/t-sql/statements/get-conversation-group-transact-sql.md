@@ -25,10 +25,10 @@ ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d0ede71391f31096191255c5a8fee2051ad6f696
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72252182"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
@@ -74,10 +74,10 @@ ms.locfileid: "72252182"
  TIMEOUT *timeout*  
  指定 Service Broker 等待訊息到達佇列的時間長度 (以毫秒為單位)。 這個子句只適用於 WAITFOR 子句。 如果使用 WAITFOR 的陳述式不包含這個子句，或者 *timeout* 為 -1，則等候時間沒有限制。 如果已經逾時，GET CONVERSATION GROUP 會將 *\@conversation_group_id* 變數設定為 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]  
->  如果 GET CONVERSATION GROUP 陳述式不是批次或預存程序中的第一個陳述式，就必須使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結束字元 (也就是分號 ( **;** )) 來結束前一個陳述式。  
+>  如果 GET CONVERSATION GROUP 陳述式不是批次或預存程序中的第一個陳述式，就必須使用  **陳述式結束字元 (也就是分號 (** ;[!INCLUDE[tsql](../../includes/tsql-md.md)])) 來結束前一個陳述式。  
   
  如果 GET CONVERSATION GROUP 陳述式中指定的佇列無法使用，陳述式便會發生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 錯誤而失敗。  
   

@@ -17,10 +17,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 38ccbeaf23e6d2daab46739064e30c4fc508d10f
-ms.sourcegitcommit: 12f529b811d308b169735740b78c6d5439ffefc7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75501913"
 ---
 # <a name="power-query-source-preview"></a>Power Query 來源 (預覽)
@@ -57,7 +57,7 @@ ms.locfileid: "75501913"
 ## <a name="configure-the-power-query-connection-manager"></a>設定 Power Query 連線管理員
 
 在 SSDT 上使用 Power Query 來源設計資料流程時，您可以透過下列方式來建立新的 Power Query 連線管理員：
-- 在選取 [新增]  /[偵測資料來源]  按鈕，然後從下拉式功能表中選取 [<New connection...>]  之後 (如上所述)，間接在 Power Query 來源的 [連線管理員]  索引標籤上建立它。
+- 在選取 [新增]  **[偵測資料來源]** / 按鈕，然後從下拉式功能表中選取 [ **]** **之後 (如上所述)，間接在 Power Query 來源的 [連線管理員]<New connection...>** 索引標籤上建立它。
 - 以滑鼠右鍵按一下封裝的 [連線管理員]  面板，然後從下拉式功能表中選取 [新增連線...]  。
 
 ![PQ 來源 [連線管理員] 面板新增](media/power-query-source/pq-source-connection-managers-panel-add.png)
@@ -82,7 +82,7 @@ ms.locfileid: "75501913"
 
 ### <a name="current-limitations"></a>目前的限制
 
--   目前無法在 Azure-SSIS IR 上使用 **Oracle** 資料來源，因為 Oracle ADO.NET 驅動程式無法在該處安裝；因此請暫時改為安裝 Oracle ODBC 驅動程式，並使用 **ODBC** 資料來源連線到 Oracle，請參閱[自訂 Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 一文中的 **ORACLE 標準 ODBC** 範例。
+-   目前無法在 Azure-SSIS IR 上使用 **Oracle** 資料來源，因為 Oracle ADO.NET 驅動程式無法在該處安裝；因此請暫時改為安裝 Oracle ODBC 驅動程式，並使用 **ODBC** 資料來源連線到 Oracle，請參閱**自訂 Azure-SSIS IR** 一文中的 [ORACLE 標準 ODBC](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 範例。
 
 -   目前無法以自訂安裝的狀態在 Azure-SSIS IR 上使用 **Web** 資料來源，所以請暫時以無自訂安裝的狀態在 Azure-SSIS IR 上使用。
 

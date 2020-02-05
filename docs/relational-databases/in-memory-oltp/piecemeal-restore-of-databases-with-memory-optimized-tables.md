@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a546e2aeceb60e42f4fc9dc8b1170431fd581ef3
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412584"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>分次還原具有記憶體最佳化資料表的資料庫
@@ -110,7 +110,7 @@ BACKUP database imoltp
     with init;
 ```
   
-### <a name="restore"></a>還原  
+### <a name="restore"></a>{1}還原{2}  
  下列範例顯示如何同時還原主要檔案群組和記憶體最佳化的檔案群組。  
 
 ```sql

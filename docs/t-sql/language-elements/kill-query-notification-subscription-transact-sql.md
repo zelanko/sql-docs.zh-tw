@@ -23,10 +23,10 @@ ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3d44551ead01d3a51cd52501460fbc390b18a438
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251065"
 ---
 # <a name="kill-query-notification-subscription-transact-sql"></a>KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)

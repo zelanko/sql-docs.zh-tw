@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3ee098b61c233bb3012ab1505553873c30edd5d
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095872"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
@@ -57,7 +57,7 @@ WHILE Boolean_expression
   
 ## <a name="arguments"></a>引數  
  *Boolean_expression*  
- 這是傳回 **TRUE** 或 **FALSE** 的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 如果布林運算式包含 SELECT 陳述式，則這個 SELECT 陳述式必須括在括號中。  
+ 這是傳回 [TRUE](../../t-sql/language-elements/expressions-transact-sql.md) 或 **FALSE** 的**運算式**。 如果布林運算式包含 SELECT 陳述式，則這個 SELECT 陳述式必須括在括號中。  
   
  {*sql_statement* | *statement_block*}  
  這是利用陳述式區塊來定義的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或陳述式分組。 若要定義陳述式區塊，請使用流程控制關鍵字 BEGIN 和 END。  
@@ -68,7 +68,7 @@ WHILE Boolean_expression
  CONTINUE  
  重新啟動 WHILE 迴圈，忽略 CONTINUE 關鍵字之後的任何陳述式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果一個或多個 WHILE 迴圈具有巢狀結構，內層的 BREAK 會跳到下一個最外層的迴圈。 內層迴圈尾端之後的所有陳述式會先執行，然後重新啟動下一個最外層迴圈。  
   
 ## <a name="examples"></a>範例  
@@ -117,7 +117,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-while-loop"></a>C.簡單的 While 迴圈  
+### <a name="c-simple-while-loop"></a>C：簡單的 While 迴圈  
  在下列範例中，如果產品的平均標價小於 `$300`，`WHILE` 迴圈會將標價加倍，再選取最大價格。 如果最大價格小於或等於 `$500`，`WHILE` 迴圈會重新啟動，價格會再加倍。 這個迴圈會繼續使價格加倍，直到最高價格大於 `$500` 為止，然後結束 `WHILE` 迴圈。  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: 7df18a5f-b9ee-4e36-b765-a0790c1dee3d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f673860664d6be588479111803c200f2903db0ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120794"
 ---
 # <a name="ststartpoint-geography-data-type"></a>STStartPoint (geography 資料類型)
@@ -36,14 +36,14 @@ ms.locfileid: "68120794"
 .STStartPoint ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回型別：**SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
- 開放式地理空間協會 (OGC) 類型：**點**  
+ 開放地理空間協會 (OGC) 類型：**Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  STStartPoint() 相當於 [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)`(1)`。  
   
 ## <a name="examples"></a>範例  

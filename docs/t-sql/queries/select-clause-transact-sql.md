@@ -27,10 +27,10 @@ ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 51707d97a738df13b7aae3c9e7208af76d440492
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141058"
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 子句 (Transact-SQL)
@@ -145,7 +145,7 @@ FROM Cities;
   
  *column_alias*可用在 ORDER BY 子句中。 不過，它不能用在 WHERE、GROUP BY 或 HAVING 子句中。 如果查詢運算式是 DECLARE CURSOR 陳述式的一部分，*column_alias* 就不能用在 FOR UPDATE 子句中。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  為選取清單所含 **text** 或 **ntext** 資料行傳回的資料長度會設定為下列各項中的最小值：**text**資料行的實際大小、預設的 TEXTSIZE 工作階段設定，或硬式編碼應用程式限制。 若要變更工作階段傳回文字的長度，請使用 SET 陳述式。 依預設，SELECT 陳述式傳回的文字資料長度限制是 4,000 個位元組。  
   
  如果發生下列中的任何行為，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會引發 511 例外狀況，且會回復目前在執行中的陳述式：  

@@ -17,10 +17,10 @@ ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d9114879622ea6d856e890a4f248ea1bc9a5d522
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75253487"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>還原差異資料庫備份 (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "75253487"
   
      [限制事項](#Restrictions)  
   
-     [先決條件](#Prerequisites)  
+     [必要條件](#Prerequisites)  
   
      [安全性](#Security)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "75253487"
   
          將您要的裝置加入 **[備份媒體]** 清單方塊後，按一下 **[確定]** 即可回到 **[一般]** 頁面。  
   
-         在 **[來源：裝置：資料庫]** 清單方塊中，選取應該還原的資料庫名稱。  
+         在 **[來源: 裝置: 資料庫]** 清單方塊中，選取應該還原的資料庫名稱。  
   
          **注意** ：這份清單只能在選取 **[裝置]** 時使用。 只有在所選取裝置上有備份的資料庫才可供使用。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "75253487"
   
 #### <a name="to-restore-a-differential-database-backup"></a>還原差異資料庫備份  
   
-1.  執行 RESTORE DATABASE 陳述式並指定 NORECOVERY 子句，以還原在差異資料庫備份之前的完整資料庫備份。 如需詳細資訊，請參閱[如何：還原完整備份](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)。  
+1.  執行 RESTORE DATABASE 陳述式並指定 NORECOVERY 子句，以還原在差異資料庫備份之前的完整資料庫備份。 如需詳細資訊，請參閱＜ [如何：還原完整備份](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)＞。  
   
 2.  執行 RESTORE DATABASE 陳述式以還原差異資料庫備份，請指定：  
   

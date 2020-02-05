@@ -11,10 +11,10 @@ ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d2db1405817c3fa6033082c7a1e285b2edca6ce0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298195"
 ---
 # <a name="odata-source-properties"></a>OData 來源屬性
@@ -26,7 +26,7 @@ ms.locfileid: "71298195"
 
 ## <a name="properties"></a>屬性 
 
-|屬性|Description|  
+|屬性|描述|  
 |-|-|  
 |CollectionName|要從 OData 服務擷取的集合名稱。 當 **UseResourcePath** 為 False 時，便會使用 **CollectionName** 屬性。<br /><br /> 此屬性具有運算式功能，可在執行階段設定值。 不過，如果集合的中繼資料不符合存在於設計階段的中繼資料，則會發生驗證錯誤，導致資料流程執行失敗。|  
 |DefaultStringLength|這個值會針對沒有最大長度的字串資料行指定預設長度。<br /><br /> **預設值：** 4000|  

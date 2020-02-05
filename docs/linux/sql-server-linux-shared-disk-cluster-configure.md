@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558323"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>設定容錯移轉叢集執行個體 - Linux 上的 SQL Server (RHEL)
@@ -88,7 +88,7 @@ SQL Server 雙節點共用磁碟容錯移轉叢集執行個體能提供伺服器
     sudo ip addr show
     ```
 
-1. 在每個節點上設定電腦名稱。 為每個節點提供不超過 15 個字元的唯一名稱。 將電腦名稱新增至 `/etc/hosts` 來設定電腦名稱。 下列指令碼可讓您使用 `vi` 編輯 `/etc/hosts`。 
+1. 在每個節點上設定電腦名稱。 為每個節點提供不超過 15 個字元的唯一名稱。 將電腦名稱新增至 `/etc/hosts` 來設定電腦名稱。 下列指令碼可讓您使用 `/etc/hosts` 編輯 `vi`。 
 
    ```bash
    sudo vi /etc/hosts

@@ -17,10 +17,10 @@ ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a6e5a0072db244835238c1b8623c667f03e653ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127341"
 ---
 # <a name="tostring-geometry-data-type"></a>ToString (geometry 資料類型)
@@ -35,12 +35,12 @@ ms.locfileid: "68127341"
 .ToString ()  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**nvarchar(max)**  
   
- CLR 傳回型別：**SqlString**  
+ CLR 傳回類型：**SqlString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個方法在 Null 例項上呼叫時，將會傳回 "Null" 字串。  
   
  在非 Null 例項上，此方法相當於使用 `AsTextZM().`  

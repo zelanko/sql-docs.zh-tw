@@ -11,10 +11,10 @@ ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/06/2019
 ms.openlocfilehash: 6c323c2580e86e560aa1b0df5d131b260d0c1bb5
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74957022"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>SQL Server 中央管理伺服器延伸模組 (預覽)

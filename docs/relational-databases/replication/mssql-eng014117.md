@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2d6a7318c8d45da6c6c029dcacc315fdd1b36460
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 1fa2265ec7f53372eac007ecb668cb6801e50d21
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809967"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287722"
 ---
 # <a name="mssql_eng014117"></a>MSSQL_ENG014117
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68809967"
 ## <a name="user-action"></a>使用者動作  
  請確認「散發者」執行個體註冊正確。 若電腦網路名稱和 SQL Server 執行個體名稱不符，則：  
   
--   加入 SQL Server 執行個體名稱做為有效網路名稱。 設定另一可用網路名稱的方法之一，是將它加入本機主機檔案。 本機主機檔案預設位於 WINDOWS\system32\drivers\etc 或 WINNT\system32\drivers\etc。如需詳細資訊，請參閱 Windows 文件集。  
+-   加入 SQL Server 執行個體名稱做為有效網路名稱。 設定另一可用網路名稱的方法之一，是將它加入本機主機檔案。 本機主機檔案預設位於 WINDOWS\system32\drivers\etc 或 WINNT\system32\drivers\etc。如需進一步資訊，請參閱 Windows 文件集。  
   
      例如，若電腦名稱為 comp1，電腦 IP 位址是 10.193.17.129，且執行個體名稱為 inst1/instname，請將下列項目加入主機檔案：  
   

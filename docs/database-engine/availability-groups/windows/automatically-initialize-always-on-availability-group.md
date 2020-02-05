@@ -11,10 +11,10 @@ ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 38bbab7ea9ae6aa7ddd70ede2161988c01431573
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75254095"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>使用自動植入將 Always On 可用性群組初始化

@@ -17,10 +17,10 @@ ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f773e5188716e7f74fc75567b0c6e000607d47c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115884"
 ---
 # <a name="maintenance-plans"></a>維護計畫
@@ -45,7 +45,7 @@ ms.locfileid: "68115884"
 ## <a name="maintenance-plan-functionality"></a>維護計畫功能  
  您可以建立維護計畫來執行下列工作：  
   
--   以新的填滿因數重建索引，重新整理資料以及索引頁上的資料。 使用新的填滿因數重建索引時，可以確保資料庫頁面包含平均分佈的資料量和可用空間。 也可以在未來快速擴展。 如需詳細資訊，請參閱[指定索引的填滿因素](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
+-   以新的填滿因數重建索引，重新整理資料以及索引頁上的資料。 使用新的填滿因數重建索引時，可以確保資料庫頁面包含平均分佈的資料量和可用空間。 也可以在未來快速擴展。 如需詳細資訊，請參閱 [指定索引的填滿因素](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
   
 -   藉由移除空的資料庫頁面來壓縮資料檔案。  
   

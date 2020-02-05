@@ -15,10 +15,10 @@ ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4c468376a67b955c467177161e3ea4bd932bb25a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907024"
 ---
 # <a name="view-a-saved-trace-transact-sql"></a>檢視已儲存的追蹤 (Transact-SQL)

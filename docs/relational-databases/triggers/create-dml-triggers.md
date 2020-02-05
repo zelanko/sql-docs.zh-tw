@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed3026ae450e50bcb2d9debf93c4b90eab3afad0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72905539"
 ---
 # <a name="create-dml-triggers"></a>建立 DML 觸發程序
@@ -57,12 +57,12 @@ ms.locfileid: "72905539"
   
 5.  在 **[指定範本參數的值]** 對話方塊中，為顯示的參數輸入下列值。  
   
-    |參數|ReplTest1|  
+    |參數|值|  
     |---------------|-----------|  
     |作者|*您的名字*|  
     |建立日期|*今天的日期*|  
-    |Description|先檢查供應商信用評等，再允許插入含有該供應商的新採購單。|  
-    |Schema_Name|Purchasing|  
+    |描述|先檢查供應商信用評等，再允許插入含有該供應商的新採購單。|  
+    |Schema_Name|購買|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|從清單中移除 UPDATE 和 DELETE。|  

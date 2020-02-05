@@ -11,10 +11,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 62d3177a3fc8b0b88e3cd65e8675041be3250a3a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907350"
 ---
 # <a name="modify-a-partition-function"></a>修改資料分割函數
@@ -44,7 +44,7 @@ ms.locfileid: "72907350"
   
 -   ALTER PARTITION FUNCTION 只能用來將一個資料分割拆解成兩個，或將兩個資料分割合併為一個。 若要變更資料表或索引的資料分割方式 (例如，從 10 個資料分割變更成 5 個)，您可以使用下列任何一個選項：  
   
-    -   使用所需的資料分割函數來建立新的資料分割資料表，然後再使用 INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [管理資料分割精靈]  ，將舊資料表中的資料插入新資料表中。  
+    -   使用所需的資料分割函數來建立新的資料分割資料表，然後再使用 INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或 **中的** [管理資料分割精靈] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，將舊資料表中的資料插入新資料表中。  
   
     -   建立堆積的資料分割叢集索引。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "72907350"
   
 -   ALTER PARTITION FUNCTION 所影響的所有檔案群組都必須在線上。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  下列中的任何權限都可用來執行 ALTER PARTITION FUNCTION：  

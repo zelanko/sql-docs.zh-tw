@@ -23,17 +23,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 201dbacf7ce2dde7cb3da387bbfd79070e1790ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140872"
 ---
 # <a name="set-a-session-language"></a>設定工作階段語言
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   工作階段語言可根據語言和文化喜好設定，用來設定在伺服器顯示下列元素的方式：  
   
--   錯誤訊息與其他系統訊息所使用的語言。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援所有系統錯誤字串及訊息的多個複本，而支援語言即為所提供之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 語言版本的所有語言。 您可以利用 [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) 目錄檢視來檢視這些訊息。 在您安裝當地語系化版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，會將這些系統訊息翻譯成您所安裝的語言版本。 依預設，您也會取得美國英文版的這些訊息。 此外，您也可以使用 [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)，新增以特定語言顯示的使用者自訂訊息。  
+-   錯誤訊息與其他系統訊息所使用的語言。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援所有系統錯誤字串及訊息的多個複本，而支援語言即為所提供之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 語言版本的所有語言。 您可以利用 [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) 目錄檢視來檢視這些訊息。 在您安裝當地語系化版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，會將這些系統訊息翻譯成您所安裝的語言版本。 依預設，您也會取得美國英文版的這些訊息。 此外，您也可以使用 [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)，新增以特定語言顯示的使用者自訂訊息。  
   
 -   日期和時間資料的格式。  
   

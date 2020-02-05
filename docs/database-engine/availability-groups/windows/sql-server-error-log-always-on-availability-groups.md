@@ -11,10 +11,10 @@ ms.assetid: 39d0c98d-75af-4dd1-b908-30d31af56f2a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 81d31225838ec029a020af2df25753b26acd2fb1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251255"
 ---
 # <a name="sql-server-error-log-always-on-availability-groups"></a>SQL Server 錯誤記錄檔 (Always On 可用性群組)
@@ -27,7 +27,7 @@ ms.locfileid: "75251255"
 -   主要與次要複本之間的可用性資料庫連線能力狀態    
 -   可用性群組端點的狀態    
 -   可用性群組接聽程式的狀態    
--   SQL Server 資源 DLL (在 WSFC 叢集中執行) 和 SQL Server 執行個體之間的租用狀態 (如需詳細資訊，請參閱 [How It Works:SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx)) (運作方式：SQL Server Always On 租用逾時)    
+-   SQL Server 資源 DLL (在 WSFC 叢集中執行) 和 SQL Server 執行個體之間的租用狀態 (如需詳細資訊，請參閱[運作方式：SQL Server Always On 租用逾時](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx) \(英文\))    
 -   可用性群組中的錯誤事件  
 
 下列徵兆應該需要檢閱 SQL Server 錯誤記錄檔：  

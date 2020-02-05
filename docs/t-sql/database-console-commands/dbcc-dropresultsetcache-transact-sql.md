@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: e46c70ad39a0f711a81b4ce87450da06ce07c083
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729895"
 ---
 # <a name="dbcc-dropresultsetcache--transact-sql"></a>DBCC DROPRESULTSETCACHE  (Transact-SQL)
@@ -38,7 +38,7 @@ DBCC DROPRESULTSETCACHE
 
 需要 DB_OWNER 固定資料庫角色中的成員資格。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 - 此命令會清空所有查詢的結果集快取。  
 
@@ -48,7 +48,7 @@ DBCC DROPRESULTSETCACHE
 
 ## <a name="see-also"></a>另請參閱
 
-[使用結果集快取微調效能](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
+[使用結果集快取進行效能微調](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

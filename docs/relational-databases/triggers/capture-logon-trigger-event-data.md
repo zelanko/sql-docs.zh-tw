@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1566d1404b7be2af520d26c557550ffb1c3feca7
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72689859"
 ---
 # <a name="capture-logon-trigger-event-data"></a>擷取登入觸發程序事件資料

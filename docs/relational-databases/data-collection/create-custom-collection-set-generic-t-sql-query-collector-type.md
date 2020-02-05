@@ -13,10 +13,10 @@ ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b27dda40294185f923d74b61dfd1b10ce7301ba9
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055579"
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>建立自訂收集組 - 一般 T-SQL 查詢收集器類型
@@ -115,7 +115,7 @@ ms.locfileid: "74055579"
     GO  
     ```  
   
-     您也可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中進行目視檢查。 在物件總管中，展開 [管理]  節點，然後展開 [資料收集]  。 將會顯示新的收集組。 收集組的紅色圓圈圖示是表示此收集組已經停止。  
+     您也可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中進行目視檢查。 在物件總管中，展開 [管理]  節點，然後展開 [資料收集]  。 將會顯示新的收集組。 收集組的紅色圓圈圖示是表示此收集組已經停止。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例會結合上述步驟所列的範例。 請注意，這時針對收集項所設定的收集頻率 (5 秒) 將會遭到忽略，因為收集組的收集模式設定為 0，而這是快取模式。 如需相關資訊，請參閱 [Data Collection](../../relational-databases/data-collection/data-collection.md)。  

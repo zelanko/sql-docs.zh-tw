@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9b0cf0be-d1f1-4163-a0ca-d6f095aa707e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b2144707d41ae82d0983a7b9c5a9ead6cf9832c9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 91d5c40e288f35687b1ae34397ad6bcdf51f2159
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768455"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287398"
 ---
 # <a name="reinitialize-subscriptions---one-subscription"></a>重新初始化訂閱 - 一個訂閱
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

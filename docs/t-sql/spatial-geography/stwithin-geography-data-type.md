@@ -15,10 +15,10 @@ ms.assetid: 6fc745cc-7976-418a-a89a-c267e64ab3a2
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ab4a3aee5c1828df80fc89f9fc5c230f41ead295
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120689"
 ---
 # <a name="stwithin-geography-data-type"></a>STWithin (geography 資料類型)
@@ -35,14 +35,14 @@ ms.locfileid: "68120689"
   
 ## <a name="arguments"></a>引數  
  *other_geography*  
- 這是要與叫用 `STWithin()` 所在之執行個體相比較的另一個 **geography** 執行個體。  
+ 這是要與叫用 **所在之執行個體相比較的另一個**geography`STWithin()` 執行個體。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回型別：**SqlBoolean**  
+ CLR 傳回類型：**SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 **geography** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一律會傳回 null。  
   
 ## <a name="examples"></a>範例  

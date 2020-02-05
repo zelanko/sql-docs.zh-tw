@@ -13,10 +13,10 @@ ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 855f7c079d592c095ce3754cd5c6fc799139324e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113047"
 ---
 # <a name="columns-with-a-name"></a>有名稱的資料行
@@ -127,7 +127,7 @@ WHERE  E.EmployeeID = C.ContactID  AND
 FOR XML PATH;
 ```  
   
- 該資料行名稱是在 PATH 模式中建構 XML 時當做路徑使用。 包含員工識別碼值的資料行名稱是以 '\@' 開頭，因此會將 **EmpID** 屬性新增至 `row` 項目。 在指出階層的資料行名稱中，所有其他的資料行都包含斜線 ('/')。 產生的 XML 在 `row` 項目底下將有 `EmpName` 子項目，而且 `EmpName` 子項目將有 `First`、`Middle` 和 `Last` 子項目。  
+ 該資料行名稱是在 PATH 模式中建構 XML 時當做路徑使用。 包含員工識別碼值的資料行名稱是以 '\@' 開頭，因此會將 **EmpID** 屬性新增至 `row` 項目。 在指出階層的資料行名稱中，所有其他的資料行都包含斜線 ('/')。 產生的 XML 在 `EmpName` 項目底下將有 `row` 子項目，而且 `EmpName` 子項目將有 `First`、`Middle` 和 `Last` 子項目。  
   
 ```xml
 <row EmpID="1">  

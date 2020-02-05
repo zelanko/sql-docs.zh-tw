@@ -19,16 +19,16 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f600f45241016bc2f5bb59faa89b5f45b317c90d
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278147"
 ---
 # <a name="spatial-data-sql-server"></a>空間資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  空間資料代表有關幾何物件之實體位置與形狀的資訊。 這些物件可以是點位置或更為複雜的物件，例如鄉村、道路或湖泊。  
+  空間資料代表幾何物件的實體位置和圖形相關資訊。 這些物件可以是點位置或更複雜的物件，例如國家/地區、道路或湖泊。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援兩種空間資料類型： **geometry** 資料類型和 **geography** 資料類型。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "72278147"
  [建立、建構及查詢幾何執行個體](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
  描述可以與 geometry 資料類型執行個體搭配使用的方法。  
   
- [建立、建構並查詢地理位置執行個體](../../relational-databases/spatial/create-construct-and-query-geography-instances.md)  
+ [建立、建構及查詢地理位置執行個體](../../relational-databases/spatial/create-construct-and-query-geography-instances.md)  
  描述可以與 geography 資料類型執行個體搭配使用的方法。  
   
  [查詢最接近像素的空間資料](../../relational-databases/spatial/query-spatial-data-for-nearest-neighbor.md)  
@@ -63,7 +63,7 @@ ms.locfileid: "72278147"
   
 -   [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)  
   
--   [多邊形](../../relational-databases/spatial/polygon.md)  
+-   [Polygon](../../relational-databases/spatial/polygon.md)  
   
 -   [CurvePolygon](../../relational-databases/spatial/curvepolygon.md)  
   

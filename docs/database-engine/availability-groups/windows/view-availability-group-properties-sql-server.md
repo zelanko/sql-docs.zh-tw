@@ -13,10 +13,10 @@ ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 44328d275c962c1f6315e56e763c3a8550318ffb
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74821818"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>檢視可用性群組屬性 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74821818"
   
 3.  以滑鼠右鍵按一下要檢視其屬性的可用性群組，然後選取 [屬性]  命令。  
   
-4.  在 **[可用性群組屬性]** 對話方塊中，使用 **[一般]** 和 **[備份喜好設定]** 頁面檢視所選可用性群組的屬性，並在某些情況下變更這些屬性。 如需詳細資訊，請參閱[可用性群組屬性：新增可用性群組 &#40;一般頁面&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-general-page.md) 和[可用性群組屬性：新增可用性群組 &#40;備份喜好設定頁面&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md)。  
+4.  在 **[可用性群組屬性]** 對話方塊中，使用 **[一般]** 和 **[備份喜好設定]** 頁面檢視所選可用性群組的屬性，並在某些情況下變更這些屬性。 如需詳細資訊，請參閱[可用性群組屬性：新增可用性群組 &#40;General Page&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-general-page.md) 和[可用性群組屬性/新增可用性群組 &#40;Backup Preferences Page&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md)。  
   
      使用 **[權限]** 頁面來檢視與可用性群組相關聯的目前登入、角色和明確權限。 如需相關資訊，請參閱 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)。  
   

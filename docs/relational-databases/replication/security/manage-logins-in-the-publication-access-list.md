@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b8a72455aafbf31f5a926719e821f3d15393d953
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: bd9a563ffe3b9617bbdba529b67e7270d8b6ee5f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710785"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287300"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>管理發行集存取清單中的登入
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,11 +47,11 @@ ms.locfileid: "71710785"
 -   您必須先將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入與發行集資料庫中的資料庫使用者產生關聯，才能將該登入加入 PAL 中。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以利用發行集存取清單 (PAL) 來管理登入，此清單位於 [發行集屬性 - \<發行集>]  對話方塊的 [發行集存取清單]  頁面中。 如需存取這個對話方塊的詳細資訊，請參閱[檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 您可以利用發行集存取清單 (PAL) 來管理登入，此清單位於 [發行集屬性 - **發行集>]** **對話方塊的 [發行集存取清單]\<** 頁面中。 如需存取這個對話方塊的詳細資訊，請參閱[檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-manage-logins-in-the-pal"></a>若要在 PAL 中管理登入  
   
-1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [發行集存取清單]  頁面中，使用 [新增]  、[移除]  和 [全部移除]  按鈕在 PAL 新增及移除登入和群組。 請不要從 PAL 移除 **distributor_admin** 。 此帳戶由複寫使用。  
+1.  在 [發行集屬性 - **發行集>]** **對話方塊的 [發行集存取清單]\<** 頁面中，使用 [新增]  、[移除]  和 [全部移除]  按鈕在 PAL 新增及移除登入和群組。 請不要從 PAL 移除 **distributor_admin** 。 此帳戶由複寫使用。  
   
     > [!NOTE]  
     >  如果使用遠端散發者，則 PAL 中的帳戶在發行者和散發者兩端都必須是可以使用的。 該帳戶必須是在兩部伺服器都已定義的網域帳戶或本機帳戶。 與兩個登入相關聯的密碼必須是一樣的。  

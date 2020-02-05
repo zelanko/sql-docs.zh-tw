@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ef602ecc617f9811b5c40abd1e512a6109fc8ec
-ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74249793"
 ---
 # <a name="square-transact-sql"></a>SQUARE (Transact-SQL)
@@ -41,7 +41,7 @@ SQUARE ( float_expression )
   
 ## <a name="arguments"></a>引數  
  *float_expression*  
- 為 **float** 類型或能夠隱含轉換成 float 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 為 [float](../../t-sql/language-elements/expressions-transact-sql.md) 類型或能夠隱含轉換成 float 類型的**運算式**。  
   
 ## <a name="return-types"></a>傳回型別  
  **float**  
@@ -65,7 +65,7 @@ Cyl Vol
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會傳回 `containers` 資料表 `volume` 資料行中每個值的平方。  
+ 下列範例會傳回 `volume` 資料表 `containers` 資料行中每個值的平方。  
   
 ```  
 -- Uses AdventureWorks  

@@ -13,10 +13,10 @@ ms.assetid: 7e2e0f7f-94a8-4178-8bc7-d2e14ac8528c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6f429d40b3bc93a4897cf23c5f9985fbf71c9016
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252722"
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>FileTable DDL、函數、預存程序及檢視

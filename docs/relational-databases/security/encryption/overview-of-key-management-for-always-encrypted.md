@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594102"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted 的金鑰管理概觀
@@ -58,7 +58,7 @@ ms.locfileid: "73594102"
 ## <a name="managing-keys-with-role-separation"></a>使用角色隔離管理金鑰
 使用角色隔離管理永遠加密金鑰時，會由組織中的不同人員擔任安全性系統管理員和 DBA 角色。 使用角色隔離的金鑰管理程序可確保 DBA 無法存取金鑰或保留實際金鑰的金鑰存放區，且安全性系統管理員無法存取包含敏感性資料的資料庫。 如果您的目標是確保組織中的 DBA 無法存取敏感性資料，建議使用角色隔離管理金鑰。 
 
-**注意：** 安全性系統管理員會產生並處理純文字金鑰，因此永遠都不應該在裝載資料庫系統的相同電腦，或是 DBA 或任何可能成為潛在敵人的人員所能存取的電腦上執行其工作。 
+**注意：** 安全性系統管理員會產生並處理純文字金鑰，因此永遠都不應該在裝載資料庫系統的相同電腦，或是 DBA 或其他可能成為潛在敵人之任何人可存取的電腦上執行其工作。 
 
 ## <a name="managing-keys-without-role-separation"></a>不使用角色隔離管理金鑰
 不使用角色隔離管理永遠加密金鑰時，某個人員可同時擔任安全性系統管理員和 DBA 角色，這表示該人員必須能夠存取及管理金鑰/金鑰存放區和金鑰中繼資料。 針對使用 DevOps 模型的組織，或是如果資料庫裝載於雲端且主要目標是限制雲端管理員 (而不是內部部署 DBA) 存取敏感性資料，可建議不使用角色隔離來管理金鑰。
@@ -73,7 +73,7 @@ ms.locfileid: "73594102"
     - [使用 SQL Server Management Studio 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-ssms.md)
     - [使用 SQL Server Management Studio 輪替 Always Encrypted 金鑰](rotate-always-encrypted-keys-using-ssms.md)
 
-- **SQL Server PowerShell** - 包含以使用和不使用角色隔離來管理 Always Encrypted 金鑰的 Cmdlet。 如需詳細資訊，請參閱：
+- **SQL Server PowerShell** - 包含以使用和不使用角色隔離來管理 Always Encrypted 金鑰的 Cmdlet。 如需詳細資訊，請參閱
     - [使用 PowerShell 設定 Always Encrypted 金鑰](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
     - [使用 PowerShell 輪替 Always Encrypted 金鑰](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
@@ -92,14 +92,14 @@ ms.locfileid: "73594102"
 - 永遠不要在裝載您資料庫的電腦上產生資料行主要金鑰或資料行加密金鑰。 請改為在不同的電腦上產生金鑰，這些電腦可以是金鑰管理的專用電腦，或是裝載無論如何都必須存取金鑰之應用程式的電腦。 這表示**您永遠都不應該在裝載資料庫的電腦上執行用來產生金鑰的工具**，因為如果攻擊者存取用來佈建或維護 Always Encrypted 金鑰的電腦，攻擊者可能會取得您的金鑰，即使金鑰只短暫地出現在工具的記憶體中亦然。
 - 為了確保您的金鑰管理程序不會不小心洩露資料行主要金鑰或資料行加密金鑰，請務必識別潛在敵人和安全性威脅，再定義及實作金鑰管理程序。 例如，如果您的目標是為了確保 DBA 無法存取敏感性資料，則不能由 DBA 負責產生金鑰。 不過，DBA「可以」  管理資料庫中的金鑰中繼資料，因為中繼資料不包含純文字金鑰。
 
-## <a name="next-steps"></a>Next Steps
-- [使用 Always Encrypted 精靈設定資料行加密](always-encrypted-wizard.md)
+## <a name="next-steps"></a>後續步驟
+- [使用 [Always Encrypted 精靈] 設定資料行加密](always-encrypted-wizard.md)
 - [建立及儲存 Always Encrypted 的資料行主要金鑰](create-and-store-column-master-keys-always-encrypted.md)
 - [使用 SQL Server Management Studio 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-ssms.md)
 - [使用 PowerShell 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-powershell.md)
 
 ## <a name="see-also"></a>另請參閱
-- [永遠加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [一律加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [永遠加密精靈教學課程 (Azure 金鑰保存庫)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
 - [永遠加密精靈教學課程 (Windows 憑證存放區)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

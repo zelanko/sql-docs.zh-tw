@@ -10,10 +10,10 @@ ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9fc1128ff50a6b5f6fbb459dca23f518cbcd4f26
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285687"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>連線至 MySQL 資料來源 (SQL Server 匯入和匯出精靈)
@@ -38,7 +38,7 @@ ms.locfileid: "71285687"
 |必要資訊|.Net Framework Data Provider for MySQL 屬性|
 |---|---|
 |伺服器名稱|**Server**|
-|資料庫名稱|**[資料庫備份]**|
+|資料庫名稱|**Database**|
 |驗證 (登入) 資訊|[使用者識別碼]  和 [密碼] |
 
 您不需要在清單的 [ConnectionString]  欄位中輸入連接字串。 當您為 MySQL 伺服器名稱 ([伺服器]  ) 和登入資訊輸入個別的值之後，精靈即會從個別的屬性和屬性值來組合連接字串。 
@@ -70,7 +70,7 @@ ODBC 驅動程式的名稱。
 **Server**  
 MySQL 伺服器的名稱。 
 
-**[資料庫備份]**  
+**Database**  
 MySQL 伺服器的名稱。
 
 **UID** 和 **PWD**   
@@ -84,7 +84,7 @@ MySQL 伺服器的名稱。
     ```
 
 ### <a name="enter-the-connection-string"></a>輸入連接字串
-在 [選擇資料來源]  或 [選擇目的地]  頁面上，於 [ConnectionString]  欄位中輸入連接字串，或在 [Dsn]  欄位中輸入 DSN 名稱。 輸入連接字串之後，精靈會剖析字串，並在清單中顯示個別屬性和其值。
+在 [選擇資料來源]  或 [選擇目的地]  頁面上，於 [ConnectionString]  欄位中輸入連接字串，或在 [Dsn]  欄位中輸入 DSN 名稱。 輸入連接字串之後，精靈會剖析字串，並在清單中顯示個別屬性和屬性值。
 
 下列範例使用此連接字串。
 

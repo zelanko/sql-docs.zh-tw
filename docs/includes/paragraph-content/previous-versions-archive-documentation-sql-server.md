@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 28835571ef6bd3690884ea3e2b916d0c0d237eab
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73057330"
----
 
 我們會在一組封存網頁中累積及保留非常舊版 Microsoft SQL Server 的文件。 Bing.com 和 Google.com 之類的搜尋引擎不會處理封存網頁。 然而，您可以在我們 Docs 的 _previous-versions/sql/_ 位址上看到這些封存檔：
 

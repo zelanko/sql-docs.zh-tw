@@ -19,10 +19,10 @@ ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 32f1363901d06e8e3551c8f161c38d48fc190921
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981791"
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
@@ -37,7 +37,7 @@ ms.locfileid: "73981791"
 - 可以從非預期的失敗、資料庫容錯移轉或 **PAUSE** 命令之後的停止處繼續索引。 請參閱 [Create Index](../../t-sql/statements/create-index-transact-sql.md) 及 [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)。
 
 > [!NOTE]  
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本所支援的功能清單，請參閱[版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> 並非所有版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都可以使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本所支援的功能清單，請參閱[版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
 
 下表顯示可在線上執行的索引作業、從這些線上作業排除的索引，以及可繼續的索引限制。 也包含其他限制。  
 
@@ -84,7 +84,7 @@ ms.locfileid: "73981791"
   
 因為索引作業的最終階段會保留 S-lock 或 Sch-M 鎖定，所以在明確的使用者交易 (例如 BEGIN TRANSACTION...COMMIT 區塊) 內執行線上索引作業時要特別小心。 這樣做導致交易完後才執行鎖定，而妨礙使用者進行並行作業。  
   
-當線上索引重建可搭配 `MAX DOP > 1` 和 `ALLOW_PAGE_LOCKS = OFF` 選項執行時，可能會增加片段。 如需詳細資訊，請參閱 [How It Works:Online Index Rebuild - Can Cause Increased Fragmentation](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx) (運作方式：線上索引重建 - 可能會導致片段增加)。  
+當線上索引重建可搭配 `MAX DOP > 1` 和 `ALLOW_PAGE_LOCKS = OFF` 選項執行時，可能會增加片段。 如需詳細資訊，請參閱 [運作方式：線上索引重建 - 可能會導致片段增加](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx)。  
   
 ## <a name="transaction-log-considerations"></a>交易記錄考量因素
 

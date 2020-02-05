@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: d7fc5a14a9da000b69db804a5439fb62985f59b8
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558533"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>設定 Linux 上 SQL Server 的使用狀況與診斷資料收集
@@ -61,7 +61,7 @@ SQL Server 2017 一律會收集並傳送與安裝程序中安裝體驗相關的�
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-1. 在主機目錄中新增具有 `[telemetry]` 和 `customerfeedback = false` 這二行的 `mssql.conf` 檔案：
+1. 在主機目錄中新增具有 `mssql.conf` 和 `[telemetry]` 這二行的 `customerfeedback = false` 檔案：
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -85,7 +85,7 @@ SQL Server 2017 一律會收集並傳送與安裝程序中安裝體驗相關的�
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-1. 在主機目錄中新增具有 `[telemetry]` 和 `customerfeedback = false` 這二行的 `mssql.conf` 檔案：
+1. 在主機目錄中新增具有 `mssql.conf` 和 `[telemetry]` 這二行的 `customerfeedback = false` 檔案：
 
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -154,7 +154,7 @@ Microsoft SQL Server 2017 包含一些啟用網際網路的功能，而這些功
    sudo mkdir <host directory>/audit
    ```
 
-1. 在主機目錄中新增具有 `[telemetry]` 和 `userrequestedlocalauditdirectory = <host directory>/audit` 這二行的 `mssql.conf` 檔案：
+1. 在主機目錄中新增具有 `mssql.conf` 和 `[telemetry]` 這二行的 `userrequestedlocalauditdirectory = <host directory>/audit` 檔案：
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -184,7 +184,7 @@ Microsoft SQL Server 2017 包含一些啟用網際網路的功能，而這些功
    sudo mkdir <host directory>/audit
    ```
 
-1. 在主機目錄中新增具有 `[telemetry]` 和 `userrequestedlocalauditdirectory = <host directory>/audit` 這二行的 `mssql.conf` 檔案：
+1. 在主機目錄中新增具有 `mssql.conf` 和 `[telemetry]` 這二行的 `userrequestedlocalauditdirectory = <host directory>/audit` 檔案：
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf

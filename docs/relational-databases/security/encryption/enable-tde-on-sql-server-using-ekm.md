@@ -16,15 +16,15 @@ ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 2507328ccc1d2a8baa47e97353c17ccc0345d3d7
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74957432"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>使用 EKM 在 SQL Server 上啟用 TDE
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本文描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中透過使用可延伸金鑰管理 (EKM) 模組中所儲存的非對稱金鑰，啟用透明資料加密 (TDE) 以保護資料庫加密金鑰。  
+  本文描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中透過使用可延伸金鑰管理 (EKM) 模組中所儲存的非對稱金鑰，啟用透明資料加密 (TDE) 以保護資料庫加密金鑰。  
   
  TDE 會使用稱為資料庫加密金鑰的對稱金鑰來加密整個資料庫的儲存體。 也可以使用憑證來保護資料庫加密金鑰，該憑證是由 master 資料庫的資料庫主要金鑰所保護。 如需有關使用資料庫主要金鑰來保護資料庫加密金鑰的詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)。 如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在 Azure VM 上執行時設定 TDE 的相關資訊，請參閱[使用 Azure 金鑰保存庫進行可延伸金鑰管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。 如需使用 Azure 金鑰保存庫中的金鑰設定 TDE 的相關資訊，請參閱 [搭配使用 SQL Server 連接器與 SQL 加密功能](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)。 
 

@@ -12,13 +12,13 @@ ms.assetid: 54a13abc-4c33-43f0-b55d-e2e74a1381c8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ca6a654894304197357cbe244be60f9b9a58f789
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68138507"
 ---
-# <a name="mssqlserver2518"></a>MSSQLSERVER_2518
+# <a name="mssqlserver_2518"></a>MSSQLSERVER_2518
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -30,7 +30,7 @@ ms.locfileid: "68138507"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC_NO_EXPRESSION_EVAL_CLR_DISABLED|  
-|訊息文字|物件識別碼 O_ID (物件"O_NAME")：無法檢查此物件的計算資料行和使用者定義型別，因為通用語言執行平台 (CLR) 已停用。|  
+|訊息文字|物件識別碼 O_ID (物件 "O_NAME"): 無法檢查此物件的計算資料行和使用者自訂類型，因為 Common Language Runtime (CLR) 已停用。|  
   
 ## <a name="explanation"></a>說明  
 這項參考用訊息指出查詢處理器無法提供 DBCC 與內部物件，以便評估計算資料行和 Common Language Runtime (CLR) 使用者自訂類型。 發生這個問題的原因是因為其中一個資料行包含 CLR，但是 CLR 並未啟用。 該內部物件涵蓋所有資料行。 因此，無法評估單一資料行也會造成無法建立內部物件的結果。 這表示 DBCC 不會在檢查索引和基底資料表的一致性時檢查計算資料行的正確性，或是使用這些計算資料行。  

@@ -14,10 +14,10 @@ ms.assetid: cedf4097-5b73-4964-9935-74a101847019
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0f894452dd056cf0e613100a5d1a7ee2d5e9ae0c
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558185"
 ---
 # <a name="check-disk-input-output-subsystem-for-read-retry-problems"></a>檢查磁碟輸入輸出子系統的讀取重試問題

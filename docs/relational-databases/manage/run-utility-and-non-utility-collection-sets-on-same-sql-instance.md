@@ -11,10 +11,10 @@ ms.assetid: ca7ee9b3-ef9a-4ba4-83d0-9ee9f80dab27
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 95eefe789ae50c9dadeb55c8960937256204460c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68219660"
 ---
 # <a name="run-utility-and-non-utility-collection-sets-on-same-sql-instance"></a>在相同 SQL 執行個體上執行公用程式和非公用程式收集組

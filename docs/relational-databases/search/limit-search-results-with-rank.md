@@ -19,10 +19,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132281"
 ---
 # <a name="limit-search-results-with-rank"></a>限制 RANK 的搜索結果
@@ -205,6 +205,6 @@ qtf is the frequency of the term in the query.
   
   
 ## <a name="see-also"></a>另請參閱  
- [使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)  
+ [使用全文檢索搜尋查詢](../../relational-databases/search/query-with-full-text-search.md)  
   
   

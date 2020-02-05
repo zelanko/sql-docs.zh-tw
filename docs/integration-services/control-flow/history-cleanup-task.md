@@ -16,10 +16,10 @@ ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1844f4088c026dda5636cd31a7f90b5effe4bfbc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298250"
 ---
 # <a name="history-cleanup-task"></a>記錄清除工作
@@ -52,7 +52,7 @@ ms.locfileid: "71298250"
 ## <a name="configuration-of-the-history-cleanup-task"></a>設定記錄清除工作  
  這項工作包含指定歷程記錄資料表中最舊日期之資料的屬性。 您可以用目前日期起算的天數、週數、月數或年數表示該日期，而工作會自動將間隔翻譯成日期。  
   
- 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」設定屬性 這項工作位於「 **設計師」中** [工具箱] **的** [維護計畫工作] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 區段。  
+ 您可以透過 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 設定屬性。 這項工作位於「 **設計師」中** [工具箱] **的** [維護計畫工作] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 區段。  
   
  如需有關可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請按下列主題：  
   

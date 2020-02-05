@@ -14,16 +14,16 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: fb063b3af008ad7e734197a0d4360c9d83535cd3
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74094552"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Database Mail 疑難排解的一般步驟 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-若要針對 Database Mail 進行疑難排解，必須檢查下列 Database Mail 系統的一般區域。 這些程序是以邏輯順序來呈現，但您可以採用任何順序來進行評估。
+Database Mail 疑難排解牽涉到檢查下列 Database Mail 系統的一般區域。 這些程序雖然是以邏輯順序來呈現，但可以使用任何順序來評估。
 
 ## <a name="permissions"></a>權限
 
@@ -43,9 +43,9 @@ ms.locfileid: "74094552"
     ```
 
    在結果窗格中，確認 [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 的 run_value 設為 1。
-   如果 run_value 不是 1，即未啟用 Database Mail。 為了降低惡意使用者可攻擊的功能數目，系統不會自動啟用 Database Mail。 如需詳細資訊，請參閱[了解介面區設定](../security/surface-area-configuration.md)。
+   如果 run_value 不是 1，即未啟用 Database Mail。 為了減少惡意使用者可攻擊的功能數目，所以系統不會自動啟用 Database Mail。 如需詳細資訊，請參閱[了解介面區設定](../security/surface-area-configuration.md)。
 
-1. 如果您認為啟用 Database Mail 是適當作法，請執行下列程式碼：
+1. 如果您決定適合啟用 Database Mail，請執行下列程式碼：
 
     ```sql
     sp_configure 'Database Mail XPs', 1; 
@@ -81,13 +81,13 @@ ms.locfileid: "74094552"
     ,@membername = '<database user>';
     ```
 
-1. 若要傳送 Database Mail，使用者必須至少具備一個 Database Mail 設定檔的存取權。 若要列出使用者 (主體) 和他們可存取的設定檔，請執行下列陳述式。
+1. 若要傳送 Database Mail，使用者必須至少擁有一個 Database Mail 設定檔的存取權。 若要列出使用者 (主體) 和他們可存取的設定檔，請執行以下陳述式。
 
     ```sql
     EXEC msdb.dbo.sysmail_help_principalprofile_sp;
     ```
 
-1. 使用 [Database Mail 設定精靈] 建立設定檔，並將設定檔的存取權授與使用者。
+1. 使用「Database Mail 組態精靈」可建立設定檔，並授與使用者對設定檔的存取權。
  
 ## <a name="is-database-mail-started"></a>是否已啟動 Database Mail
 
@@ -96,13 +96,13 @@ ms.locfileid: "74094552"
     ```sql
     EXEC msdb.dbo.sysmail_help_status_sp;
     ```
-1. 如果未啟動 Database Mail 啟用作業，請執行下列陳述式來啟動：
+1. 如果 Database Mail 啟用未啟動，請執行以下陳述式來啟動它：
 
     ```sql
     EXEC msdb.dbo.sysmail_start_sp;
     ```
 
-1. 如果 Database Mail 外部程式已啟動，請使用下列陳述式檢查郵件佇列的狀態：
+1. 如果 Database Mail 外部程式已啟動，請使用以下陳述式檢查郵件佇列的狀態：
 
     ```sql
     EXEC msdb.dbo.sysmail_help_queue_sp @queue_type = 'mail';
@@ -125,29 +125,29 @@ EXEC msdb.dbo.sysmail_start_sp;
 
 ## <a name="do-problems-affect-some-or-all-accounts"></a>問題影響部分或所有的帳戶
 
-1. 如果您判斷只有部分設定檔可以傳送郵件，那麼可能是使用這些問題設定檔的 Database Mail 帳戶有問題。 若要判斷哪些帳戶可以成功傳送郵件，請執行下列陳述式：
+1. 如果您判斷是只有部分設定檔可以傳送郵件，那麼可能是有問題的設定檔使用的 Database Mail 帳戶出問題。 若要判斷哪些帳戶可以成功傳送郵件，請執行以下陳述式：
 
     ```sql
     SELECT sent_account_id, sent_date FROM msdb.dbo.sysmail_sentitems;
     ```
 
 1. 如果無法運作的設定檔並未使用任何列出的帳戶，則可能是該設定檔的所有可用帳戶都無法正常運作。 若要測試個別帳戶，請使用 [Database Mail 設定精靈] 建立一個含單一帳戶的設定檔，然後使用新的帳戶從 [傳送測試電子郵件] 對話方塊來傳送電子郵件。 
-1. 若要檢視 Database Mail 傳回的錯誤訊息，請執行下列陳述式：
+1. 若要檢視 Database Mail 傳回的錯誤訊息，請執行以下陳述式：
 
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log;
     ```
 
    > [!NOTE]
-   > 當郵件成功傳遞到 SMTP 郵件伺服器之後，Database Mail 即會將該郵件視為已傳送。 後續所發生的錯誤 (例如收件者的電子郵件地址無效) 仍可能導致郵件無法傳遞，但卻不會包含在 Database Mail 記錄中。
+   > 當郵件成功傳遞到 SMTP 郵件伺服器之後，Database Mail 即會將該郵件視為已傳送。 接下來所發生的錯誤，例如收件者的電子郵件地址無效，可能會使得郵件沒有傳遞出去，但是不會包含在 Database Mail 的記錄檔中。
 
 ## <a name="retry-mail-delivery"></a>重試郵件傳遞
 
-1. 如果您判斷 Database Mail 是因為無法穩定連接 SMTP 伺服器而失敗，您可以增加 Database Mail 嘗試傳送每則訊息的次數，來提高郵件的成功傳遞率。 請開啟 [Database Mail 設定精靈]，並選取 [檢視] 或變更系統參數選項。 或者，您也可以將多個帳戶與設定檔建立關聯，讓主要帳戶具有容錯移轉的機制，Database Mail 就可以使用容錯移轉帳戶來傳送電子郵件。
+1. 如果您判斷 Database Mail 是因為無法正確連接 SMTP 伺服器而失敗，您可以增加 Database Mail 嘗試傳送每則訊息的次數，來提高郵件成功傳遞的比率。 請開啟 [Database Mail 設定精靈]，並選取 [檢視] 或變更系統參數選項。 或者，也可以將多個帳戶與設定檔關聯，讓主要帳戶具有容錯移轉的機制，Database Mail 就可以使用容錯移轉帳戶來傳送電子郵件。
 1. 在 [設定系統參數] 頁面上，[帳戶重試嘗試] 的預設值是五次，[帳戶重試延遲] 的預設值是 60 秒，這表示如果無法在 5 分鐘內連接 SMTP 伺服器，訊息傳遞就會失敗。 請增加這些參數，以延長訊息傳遞失敗前的時間。
 
     > [!NOTE]
-    > 傳送大量訊息時，較大的預設值能提高穩定性，但當很多訊息一直重複嘗試傳遞時，也會大幅增加使用的資源。 若要處理根本問題，請解決導致 Database Mail 無法正常連絡 SMTP 伺服器的網路或 SMTP 伺服器問題。
+    > 傳送大量訊息時，較大的預設值會增加可靠性，不過很多訊息一直重複嘗試傳遞，也會大幅增加使用的資源。 請解決導致 Database Mail 無法正常連絡 SMTP 伺服器的網路或 SMTP 伺服器問題，來處理根本的問題。
 
 
 

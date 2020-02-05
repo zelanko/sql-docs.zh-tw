@@ -14,10 +14,10 @@ ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 06c015c2f96bf2f7206a3e802d44a65871828d2c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290266"
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT (SSIS 運算式)
@@ -41,7 +41,7 @@ CODEPOINT(character_expression)
 ## <a name="result-types"></a>結果類型  
  DT_UI2  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  *character_expression* 引數必須是 DT_WSTR 資料類型。  
   
  如果 *character_expression* 為 Null 或空字串，則 CODEPOINT 會傳回 Null 結果。  

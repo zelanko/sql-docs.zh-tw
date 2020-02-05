@@ -13,10 +13,10 @@ ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc008fc1f59d8ea6b5f015f2028779aa270d3b2a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285863"
 ---
 # <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Integration Services (SSIS) 中的 Hadoop 和 HDFS 支援
@@ -30,7 +30,7 @@ ms.locfileid: "71285863"
   
 -   [ODBC 來源編輯器]  
   
-    -   [Hadoop 連接管理員](../integration-services/connection-manager/hadoop-connection-manager.md)  
+    -   [Hadoop 連線管理員](../integration-services/connection-manager/hadoop-connection-manager.md)  
   
 -   控制流程 - 工作  
   

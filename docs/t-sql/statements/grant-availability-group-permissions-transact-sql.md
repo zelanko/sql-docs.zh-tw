@@ -20,10 +20,10 @@ ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0a9954e823ae66017c3a6105f0f0ec27964b7043
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75246170"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>授與可用性群組權限 (Transact-SQL)
@@ -109,7 +109,7 @@ GO
 ```  
   
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. 授與具有 GRANT OPTION 的 TAKE OWNERSHIP 權限  
- 下列範例會將可用性群組 `TAKE OWNERSHIP` 的 `MyAg` 權限授與具有 `PKomosinski` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者 `GRANT OPTION`。  
+ 下列範例會將可用性群組 `TAKE OWNERSHIP` 的 `MyAg` 權限授與具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `PKomosinski` 使用者 `GRANT OPTION`。  
   
 ```  
 USE master;  

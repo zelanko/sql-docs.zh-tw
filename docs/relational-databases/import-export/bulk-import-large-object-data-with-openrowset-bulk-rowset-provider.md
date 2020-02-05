@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 845b552762574aa6a75a7ad00a1ce93aabff35c3
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056042"
 ---
 # <a name="bulk-import-large-object-data-with-openrowset-bulk-rowset-provider-sql-server"></a>使用 OPENROWSET 大量資料列集提供者大量匯入大型物件資料 (SQL Server)

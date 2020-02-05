@@ -1,5 +1,5 @@
 ---
-title: 步驟 2:執行套件安裝精靈 | Microsoft Docs
+title: 步驟 2：執行套件安裝精靈 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b380b56611e72bfd6b0c249792843a6a684813b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283322"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>課程 3-2 - 執行套件安裝精靈
@@ -46,7 +46,7 @@ ms.locfileid: "71283322"
   
 7.  確認已清除 [依賴伺服器儲存體進行加密]  核取方塊。  
   
-8.  按 **[下一步]** 。  
+8.  按 [下一步]  。  
   
 9. 在 [選取安裝資料夾] 頁面上，按一下 [瀏覽]  。  
   
@@ -69,14 +69,14 @@ ms.locfileid: "71283322"
   
 16. 在 [設定檔]  清單中，按一下 **datatransferconfig.dtsconfig**、展開 [設定]  方塊中 [路徑]  資料行的 [屬性]，並以下列值更新 [值]  資料行：  
   
-    |屬性|ReplTest1|更新的值|  
+    |屬性|值|更新的值|  
     |------------|---------|-----------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
 17. 在 [設定檔]  清單中，按一下 loadxmldataconfig.dtsconfig、展開 [設定]  方塊中 [路徑]  資料行的 [屬性]，並以下列值更新 [值]  資料行：  
   
-    |屬性|ReplTest1|更新的值|  
+    |屬性|值|更新的值|  
     |------------|---------|-----------------|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  
@@ -85,11 +85,11 @@ ms.locfileid: "71283322"
   
     由於目的地電腦上的環境變數值與開發電腦上的環境變數值不同，因此 [封裝驗證] 頁面上會出現一些警告。 您應該會看到下列這四個警告：  
   
-    -   設定檔："C:\DeploymentTutorial\DataTransferConfig.dtsConfig" 無效。 請檢查組態檔名稱。  
+    -   組態檔名稱 "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" 無效。 請檢查組態檔名稱。  
   
     -   無法載入封裝至少其中一個組態項目。 請檢查組態項目和之前的警告，查看哪個組態失敗的描述。  
   
-    -   設定檔："C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig 無效。 請檢查組態檔名稱。  
+    -   組態檔名稱 "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig" 無效。 請檢查組態檔名稱。  
   
     -   無法載入封裝至少其中一個組態項目。 請檢查組態項目和之前的警告，查看哪個組態失敗的描述。  
   

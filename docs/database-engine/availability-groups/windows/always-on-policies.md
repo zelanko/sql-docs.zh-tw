@@ -11,10 +11,10 @@ ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6a48450322a8552720a119ea325ed720669fe5a8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245645"
 ---
 # <a name="evaluate-health-of-the-always-on-availability-group-using-group-policies"></a>使用群組原則評估 Always On 可用性群組的健全狀況
@@ -33,6 +33,6 @@ ms.locfileid: "75245645"
 3.  若要在 [選取頁面]  窗格中檢視所有可用性群組系統原則，按一下 [原則選取]  。  
   
 ## <a name="next-steps"></a>後續步驟  
- [The Always On health model, part 2:Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (Always On 健全狀況模型第 2 部分：擴充健全狀況模型)。   
+ [Always On 健康情況模型第 2 部分：擴充健康情況模型](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) \(英文\)。   
   
   

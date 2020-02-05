@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 43a0382495c04a3fa34e00cb4e85d0b7ab04336e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982195"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
@@ -77,7 +77,7 @@ DROP DATABASE database_name [;]
 卸除資料庫時，不但會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中刪除該資料庫，同時也會刪除該資料庫所用的實體磁碟檔。 如果資料庫或其任何一個檔案在卸除時離線，磁碟檔就不會被刪除。 這些檔案可以利用 [Windows 檔案總管]，以手動方式刪除。 若要從目前伺服器中移除資料庫，而不刪除檔案系統中的檔案，請使用 [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)。
 
 > [!WARNING]
-> 卸除具有與其建立關聯之 FILE_SNAPSHOT 備份的資料庫會成功，但不會刪除具有相關聯快照集的資料庫檔案，以避免參考這些資料庫檔案的備份不正確。 檔案將會被截斷，但實體不會被刪除，以保存完整的 FILE_SNAPSHOT 備份。 如需詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [目前的版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)。
+> 卸除具有與其建立關聯之 FILE_SNAPSHOT 備份的資料庫會成功，但不會刪除具有相關聯快照集的資料庫檔案，以避免參考這些資料庫檔案的備份不正確。 檔案將會被截斷，但實體不會被刪除，以保存完整的 FILE_SNAPSHOT 備份。 如需詳細資訊，請參閱 [SQL Server 備份及還原與 Microsoft Azure Blob 儲存體服務](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [目前的版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)。
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

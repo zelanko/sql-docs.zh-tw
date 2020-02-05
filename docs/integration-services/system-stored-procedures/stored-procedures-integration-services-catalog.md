@@ -13,10 +13,10 @@ ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e1eea2f9e83069b18b47b1563e60a0c31c0bfcb0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296682"
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>預存程序 (Integration Services 目錄)
@@ -165,9 +165,9 @@ ms.locfileid: "71296682"
 將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker 新增 Scale Out 中的執行個體。
 
 [catalog.enable_worker_agent &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md)   
-啟用處理此 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄之相應放大主機的相應放大背景工作。
+啟用處理此 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄之 Scale Out Master 的 Scale Out Worker。
 
 [catalog.disable_worker_agent &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md)   
-停用處理此 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄之相應放大主機的相應放大背景工作。
+停用處理此 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄之 Scale Out Master 的 Scale Out Worker。
 
 

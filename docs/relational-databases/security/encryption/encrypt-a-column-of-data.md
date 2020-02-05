@@ -17,16 +17,16 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 08899661d3638b03aaf848bd207625e168812e87
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74957412"
 ---
 # <a name="encrypt-a-column-of-data"></a>加密資料行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  本文描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中透過對稱加密來加密資料行。 這有時候稱為資料行層級加密或資料格層級加密。  
+  本文描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中透過對稱加密來加密資料行。 這有時候稱為資料行層級加密或資料格層級加密。  
 
 ## <a name="security"></a>安全性  
   

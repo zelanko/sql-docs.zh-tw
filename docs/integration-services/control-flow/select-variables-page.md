@@ -16,10 +16,10 @@ ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 544740f7a6e0d292b1764a9bdfb565d1e7ce0f18
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293946"
 ---
 # <a name="select-variables-page"></a>選取變數頁面

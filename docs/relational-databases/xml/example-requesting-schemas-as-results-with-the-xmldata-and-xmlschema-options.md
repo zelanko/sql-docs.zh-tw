@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: a11e6a91c1fea9a0eb7b20124e0de8565540caf5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75243776"
 ---
 # <a name="request-schemas-as-results-with-xmldata--xmlschema"></a>使用 XMLDATA 與 XMLSCHEMA 要求結構描述作為結果

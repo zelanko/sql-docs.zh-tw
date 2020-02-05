@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5033bbb939c2c6237e82683fba4e32defef69281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 089725c52c2f65a9e1edb45a6afadd01ff2ace79
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902795"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910191"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "67902795"
 
 建立擴充事件工作階段，可識別事件的來源、事件工作階段目標及事件工作階段選項。
 
-![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="syntax"></a>語法
 
@@ -183,7 +183,7 @@ MAX_EVENT_SIZE =*size* [ KB | **MB** ] 指定事件可容許的大小上限。 M
 
 MEMORY_PARTITION_MODE = { **NONE** | PER_NODE | PER_CPU } 指定事件緩衝區的建立位置。
 
-**NONE** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內會建立單一組緩衝區。
+**NONE**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內會建立單一組緩衝區。
 
 PER_NODE 會針對每一個 NUMA 節點建立一組緩衝區。
 
@@ -200,7 +200,7 @@ ON 事件工作階段會在啟動時啟動。
 
 **OFF** 事件工作階段不會在啟動時啟動。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 邏輯運算子的優先順序是 `NOT` (最高)，後面依序接著 `AND` 和 `OR`。
 

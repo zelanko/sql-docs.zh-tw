@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d59f36bc315f6adf62d2ce8f09be4a1bb57bf428
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72452887"
 ---
 # <a name="change-column-order-in-a-table"></a>變更資料表中的資料行順序

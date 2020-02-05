@@ -14,13 +14,13 @@ ms.assetid: 53d4d63a-61e3-441f-bfe9-9d44f7a05fd4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d1035d0e6582f8b5f35e4e697ff42a70cd39d6c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116604"
 ---
-# <a name="mssqlserver11001"></a>MSSQLSERVER_11001
+# <a name="mssqlserver_11001"></a>MSSQLSERVER_11001
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -32,7 +32,7 @@ ms.locfileid: "68116604"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱||  
-|訊息文字|建立伺服器的連接時發生錯誤。  連接到 SQL Server 時，可能因為在預設的設定下 SQL Server 不允許遠端連接而引起此失敗。 (提供者：TCP 提供者，錯誤: 0 - 無法識別這部主機。) (.Net SqlClient 資料提供者)|  
+|訊息文字|建立伺服器的連接時發生錯誤。  連接到 SQL Server 時，可能因為在預設的設定下 SQL Server 不允許遠端連接而引起此失敗。 (提供者：TCP 提供者，錯誤：0 - 無法識別這部主機。) (.Net SqlClient 資料提供者)|  
   
 ## <a name="explanation"></a>說明  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端無法連接到伺服器。 發生這個錯誤的原因，可能是用戶端無法解析伺服器的名稱，或伺服器的名稱不正確。  

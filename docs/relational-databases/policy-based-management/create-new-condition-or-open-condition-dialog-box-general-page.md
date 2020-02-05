@@ -14,10 +14,10 @@ ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c16d813af595e3698379026e219440ba0007db12
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558133"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>建立新條件或開啟條件對話方塊，一般頁面
@@ -41,7 +41,7 @@ ms.locfileid: "75558133"
  為這個運算式選取比較運算子。 運算子如下：=、!=、>、>=、<、<=、[NOT]LIKE、[NOT]IN。 並非所有運算子都適用於某些屬性。  
   
  **ReplTest1**  
- 這個運算式的值設定。 允許的值取決於此 Facet 而定。 值可以是 TRUE/FALSE、字串或數字。 字串值必須括在單引號中，例如： **'AdventureWorks'** 。 並非所有運算子都適用於某些屬性。  
+ 這個運算式的值設定。 允許的值取決於此 Facet 而定。 值可以是 TRUE/FALSE、字串或數字。 字串值必須括在單引號中，例如 **'AdventureWorks'** 。 並非所有運算子都適用於某些屬性。  
   
 ## <a name="group-clauses"></a>群組子句  
  子句可加以群組，使其當成單一單位來運作，並與查詢的其餘部分區隔開來，這種方式與在數學方程式或邏輯陳述式的運算式周圍放置括號類似。 當您建立複雜的查詢時，群組子句將會很實用。  

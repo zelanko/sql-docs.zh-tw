@@ -15,15 +15,15 @@ ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: d15ca528efb0246d1d05c87420045fcc74918886
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165567"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>個別儲存 Showplan XML Statistics Profile 事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  此主題描述如何使用 **，將在追蹤中所擷取的** Showplan XML Statistics Profile [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]事件，儲存至個別的 .SQLPlan 檔案中。 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中開啟 **Showplan XML Statistics Profile** 事件檔案，以便檢視每個事件的圖形化執行計畫。  
+  此主題描述如何使用 **，將在追蹤中所擷取的** Showplan XML Statistics Profile [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]事件，儲存至個別的 .SQLPlan 檔案中。 您可以在 **中開啟**Showplan XML Statistics Profile[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 事件檔案，以便檢視每個事件的圖形化執行計畫。  
   
 ## <a name="save-showplan-xml-statistics-profile-events-separately"></a>個別儲存 Showplan XML Statistics Profile 事件  
   

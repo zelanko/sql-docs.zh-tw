@@ -13,10 +13,10 @@ ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f2b3ec4e0c7ec6a9335c9e37558123eca77995a3
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056427"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>檢視收集組記錄 (SQL Server Management Studio)
@@ -42,7 +42,7 @@ ms.locfileid: "74056427"
      **[記錄檔檢視器]** 隨即開啟，只顯示您選取之收集組的記錄檔。  
   
 ## <a name="see-also"></a>另請參閱  
- [[資料收集]](../../relational-databases/data-collection/data-collection.md)   
+ [資料收集](../../relational-databases/data-collection/data-collection.md)   
  [管理資料收集](../../relational-databases/data-collection/manage-data-collection.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 第 1 課：連線到資料庫引擎 | Microsoft Docs
+title: 第 1 課：連接到資料庫引擎 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/05/2018
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73033001"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連線到資料庫引擎
+# <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連接到 Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 當您安裝 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]時，所安裝的工具視版本和安裝選項而定。 這一課檢閱主要工具，顯示您如何連接及執行基本功能 (授權更多使用者)。  
@@ -43,7 +43,7 @@ ms.locfileid: "73033001"
 - 使用舊版 Windows 時，請在 [開始]  功能表上依序指向 [所有程式]  和 [[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]，然後按一下 [SQL Server Management Studio]  。  
 
 ##### <a name="to-start-sql-server-configuration-manager"></a>啟動 SQL Server 組態管理員  
-- 在目前的 Windows 版本上，於 [開始]  頁面上輸入**組態管理員**，然後按一下 [SQL Server *版本*組態管理員]  。   
+- 在目前的 Windows 版本上，於 [開始]  頁面上輸入**組態管理員**，然後按一下 [SQL Server **版本*組態管理員]*** 。   
 - 使用舊版 Windows 時，請在 [開始]  功能表上依序指向 [所有程式]  、[[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]] 和 [組態工具]  ，然後按一下 [SQL Server 組態管理員]  。  
 
 ## <a name="connect"></a>連接 Management Studio  
@@ -63,7 +63,7 @@ ms.locfileid: "73033001"
 
 1.  在 [已註冊的伺服器] 中，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的名稱旁邊有一個綠點和白色箭頭，表示 [!INCLUDE[ssDE](../includes/ssde-md.md)] 在執行中，不需要進一步動作。  
 
-2.  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體的名稱旁邊有一個紅點和白色方塊，表示 [!INCLUDE[ssDE](../includes/ssde-md.md)] 已停止。 以滑鼠右鍵按一下 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的名稱，並按一下 [服務控制]  ，然後按一下 [啟動]  。 在確認對話方塊之後，[!INCLUDE[ssDE](../includes/ssde-md.md)] 應該已經啟動，而且圓圈會變成帶有白色箭頭的綠色圖示。  
+2.  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體的名稱旁邊有一個紅點和白色方塊，表示 [!INCLUDE[ssDE](../includes/ssde-md.md)] 已停止。 以滑鼠右鍵按一下 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的名稱，並按一下 **「服務控制」** ，然後按一下 **「啟動」** 。 在確認對話方塊之後，[!INCLUDE[ssDE](../includes/ssde-md.md)] 應該已經啟動，而且圓圈會變成帶有白色箭頭的綠色圖示。  
 
 ##### <a name="to-connect-to-the-database-engine"></a>連接到 Database Engine  
 
@@ -72,7 +72,7 @@ ms.locfileid: "73033001"
 1.  在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中，按一下 [檔案]  功能表上的 [連接物件總管]  。 
 - [連接到伺服器]  對話方塊隨即開啟。 [伺服器類型]  方塊會顯示上次使用的元件類型。  
 
-2.  選取 [Database Engine]  。
+2.  選取 [資料庫引擎]  。
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
@@ -80,7 +80,7 @@ ms.locfileid: "73033001"
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 
-4.  按一下 **[連接]** 。
+4.  按一下 [ **連接**]。
 
 > [!NOTE]
 > 本教學課程假設您不熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 而且沒有特殊連接問題。 這應該適用於大部分的人，並且保持本教學課程的簡單性。 如需詳細疑難排解步驟，請參閱 [針對 SQL Server Database Engine 的連接進行疑難排解](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)。 
@@ -101,7 +101,7 @@ ms.locfileid: "73033001"
 
 3.  在 [預設資料庫]  方塊中，選取 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] (如果有的話)。 否則，請選取 [master]  。  
 4.  在 [伺服器角色]  頁面上，如果新登入將成為管理員，請按一下 [系統管理員 (sysadmin)]  ，否則保留空白。  
-5.  在 [使用者對應]  頁面上，對 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫選取 [對應]  \(如果有的話)。 否則，請選取 [master]  。 請注意，[使用者]  方塊會填入此登入。 當此對話方塊關閉時，會在資料庫中建立此使用者。  
+5.  在 [使用者對應]  頁面上，對  **資料庫選取 [對應]** [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] \(如果有的話)。 否則，請選取 [master]  。 請注意，[使用者]  方塊會填入此登入。 當此對話方塊關閉時，會在資料庫中建立此使用者。  
 6.  在 [預設結構描述]  方塊中輸入 **dbo**，將登入對應到資料庫擁有者結構描述。   
 7.  接受 [安全性實體]  和 [狀態]  方塊的預設值，並按一下 [確定]  來建立登入。  
 
@@ -109,5 +109,5 @@ ms.locfileid: "73033001"
 > 這是讓您快速入門的基本資訊。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供多樣化的安全性環境，安全性顯然是資料庫作業的重要一環。  
 
 ## <a name="next-lesson"></a>下一課  
-[第 2 課：從另一部電腦連線](../relational-databases/lesson-2-connecting-from-another-computer.md)    
+[第 2 課：從另一部電腦連接](../relational-databases/lesson-2-connecting-from-another-computer.md)    
   

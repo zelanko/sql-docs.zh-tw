@@ -13,10 +13,10 @@ ms.assetid: 100d5670-e2d8-425c-a927-2b4dfe453e28
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0c220523a431e8387601307709aa42bd9d4eeb02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113761"
 ---
 # <a name="date-and-time-types"></a>日期和時間類型

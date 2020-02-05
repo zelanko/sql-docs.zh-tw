@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75257662"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
@@ -76,7 +76,7 @@ ms.locfileid: "75257662"
     |----------|-----------------|  
     |**一般**|顯示全文檢索索引的基本屬性。 這些屬性包括許多可修改的屬性和一些無法變更的屬性，例如資料庫名稱、資料表名稱，以及全文檢索索引鍵資料行的名稱。 可修改的屬性包括：<br /><br /> **全文檢索索引停用字詞表**<br /><br /> **全文檢索索引已啟用**<br /><br /> **變更追蹤**<br /><br /> **搜尋屬性清單**|  
     |**資料行**|顯示可用於全文檢索索引的資料表資料行。 系統會針對選取的資料行建立全文檢索索引。 您可以選取任意數目的可用資料行，以便包含在全文檢索索引中。 如需詳細資訊，請參閱[擴展全文檢索索引](populate-full-text-indexes.md)。|
-    |**排程**|您可以使用這個頁面來建立或管理 SQL Server Agent 作業的排程，以便針對全文檢索索引母體擴展啟動累加資料表母體擴展。 如需詳細資訊，請參閱[擴展全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。<br /><br /> 注意:在您結束 [全文檢索索引屬性]  對話方塊之後，任何新建立的排程都會與 SQL Server Agent 作業 (針對 *database_name*.*table_name* 啟動累加資料表母體擴展) 建立關聯。|  
+    |**排程**|您可以使用這個頁面來建立或管理 SQL Server Agent 作業的排程，以便針對全文檢索索引母體擴展啟動累加資料表母體擴展。 如需詳細資訊，請參閱[擴展全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。<br /><br /> 注意：在您結束 [全文檢索索引屬性]  對話方塊之後，任何新建立的排程都會與 SQL Server Agent 作業 (針對 *database_name*.*table_name* 啟動 [累加資料表母體]) 相關聯。|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 儲存任何變更並結束 [全文檢索索引屬性]  對話方塊。  
   

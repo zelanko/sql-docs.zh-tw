@@ -12,10 +12,10 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908764"
 ---
 # <a name="enable-and-configure-filestream"></a>啟用及設定 FILESTREAM
@@ -27,7 +27,7 @@ ms.locfileid: "72908764"
   
 #### <a name="to-enable-and-change-filestream-settings"></a>若要啟用和變更 FILESTREAM 設定  
   
-1.  指向 [開始]  功能表上的 [所有程式]  ，然後依序指向 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]] 和 [組態工具]  ，再按一下 [SQL Server 組態管理員]  。  
+1.  指向 **[開始]** 功能表上的 **[所有程式]** ，然後依序指向 [ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]] 和 **[組態工具]** ，再按一下 **[SQL Server 組態管理員]** 。  
   
 2.  在服務的清單中，以滑鼠右鍵按一下 [SQL Server 服務]  ，然後按一下 [開啟]  。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "72908764"
   
 8.  如果遠端用戶端必須存取儲存在這個共用上的 FILESTREAM 資料，請選取 [允許遠端用戶端具有 FILESTREAM 資料的資料流存取權]  。  
   
-9. 按一下 **[套用]** 。  
+9. 按一下 [套用]  。  
   
 10. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，按一下 **[新增查詢]** 顯示 [查詢編輯器]。  
   
@@ -77,8 +77,8 @@ ms.locfileid: "72908764"
   
 ||||||  
 |-|-|-|-|-|  
-|RAID 層級|寫入效能|讀取效能|容錯|Remarks|  
-|RAID 5|一般|一般|非常好|效能高於單一磁碟或 JBOD，而低於具有條狀配置的 RAID 0 或 RAID 5。|  
+|RAID 層級|寫入效能|讀取效能|容錯|備註|  
+|RAID 5|正常|正常|非常好|效能高於單一磁碟或 JBOD，而低於具有條狀配置的 RAID 0 或 RAID 5。|  
 |RAID 0|非常好|非常好|None||  
 |RAID 5 + 條狀配置|非常好|非常好|非常好|成本最高的選項。|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |

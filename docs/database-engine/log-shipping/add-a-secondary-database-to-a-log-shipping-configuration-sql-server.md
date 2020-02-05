@@ -16,10 +16,10 @@ ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 66a194a26529834a3d77229a21b7556b03da635e
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822156"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>將次要資料庫加入至記錄傳送組態 (SQL Server)

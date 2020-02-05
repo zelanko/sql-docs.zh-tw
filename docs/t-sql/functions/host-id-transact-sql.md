@@ -21,10 +21,10 @@ ms.assetid: 36ba56d4-20d7-4cd1-aa2a-e40a6c0a4e39
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: cce09ec0e34aec88755eaeac0449bd5f75138d6f
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843725"
 ---
 # <a name="host_id-transact-sql"></a>HOST_ID (Transact-SQL)
@@ -41,10 +41,10 @@ ms.locfileid: "73843725"
 HOST_ID ()  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **char(10)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當系統函數的參數是選擇性時，就會假設使用目前資料庫、主機電腦、伺服器使用者或資料庫使用者。 內建函數後面一律必須接著括號。  
   
  系統函數可以用於選取清單、WHERE 子句以及任何可以使用運算式的位置。  

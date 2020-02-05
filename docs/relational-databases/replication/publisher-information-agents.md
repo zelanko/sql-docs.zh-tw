@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b006eac4981866bbadadaf47bc6d895e3abd0f9e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c0670e972dfb3c93a3b41dea67ebe5300c534843
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769727"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287486"
 ---
 # <a name="publisher-information-agents"></a>發行者資訊，代理程式
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ ms.locfileid: "68769727"
 ## <a name="options"></a>選項。  
  若要顯示某個代理程式或作業的相關資訊，請從 **[代理程式和作業類型]** 下拉式功能表中選取。 如需更詳細的資訊以及與代理程式或作業相關的工作，請以滑鼠右鍵按一下該代理程式或作業的資料列，然後按一下快速鍵功能表上的選項。 若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  
   
--   **排序**：在 [排序資料行]  對話方塊中排序一個或多個資料行。  
+-   **排序**：在 **[排序資料行]** 對話方塊中排序一個或多個資料行。  
   
--   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及這些資料行在 [選擇資料行]  對話方塊中的顯示順序。  
+-   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及在 **[選擇資料行]** 對話方塊中顯示這些資料行所依循的順序。  
   
--   **篩選**：根據 [篩選設定]  對話方塊中的資料行值，篩選方格中的資料列。  
+-   **篩選**：根據 **[篩選設定]** 對話方塊中的資料行值，篩選方格中的資料列。  
   
 -   **清除篩選**：清除方格的所有篩選設定。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68769727"
   
 -   執行中  
   
--   已完成  
+-   Completed  
   
  **發行集**  
  與代理程式相關聯之發行集的名稱。  

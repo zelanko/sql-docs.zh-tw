@@ -22,16 +22,16 @@ ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 70f3b23244095b79dc8340d3060e6d30d5009a2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121930"
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器資料指標，並執行 DECLARE CURSOR 或 SET *cursor_variable* 陳述式上指定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來擴展資料指標。  
+  開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器資料指標，並執行 DECLARE CURSOR 或 SET [!INCLUDE[tsql](../../includes/tsql-md.md)]cursor_variable*陳述式上指定的* 陳述式來擴展資料指標。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
  *cursor_variable_name*  
  這是參考資料指標之資料指標變數的名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果是用 INSENSITIVE 或 STATIC 選項來宣告資料指標，OPEN 會建立一份暫存資料表來存放結果集。 當結果集中任何資料列的大小超出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的最大資料列大小時，OPEN 會失敗。 如果是用 KEYSET 選項來宣告資料指標，OPEN 會建立一份暫存資料表來存放索引鍵集。 暫存資料表儲存在 tempdb 中。  
   
  開啟資料指標之後，利用 @@CURSOR_ROWS 函數來擷取最後開啟之資料指標中符合的資料列數。  

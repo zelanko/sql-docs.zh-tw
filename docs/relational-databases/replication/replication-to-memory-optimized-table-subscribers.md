@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: bf597d5a9be6a1e2e7fb3f045cd329f861379ad4
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 2b0f576365ef8e6221196eef4a9fca92f54f6318
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908302"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287343"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>複寫至記憶體最佳化資料表訂閱者
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "72908302"
   
 -   **將訂閱者資料庫設定為支援對記憶體最佳化資料表的複寫**  
   
-     藉由使用 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 或 [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)，將 **\@memory_optimized** 屬性設定為 **true**。  
+     藉由使用 **sp_addsubscription &#40;Transact-SQL&#41;\@ 或** sp_changesubscription &#40;Transact-SQL&#41; **，將** [memory_optimized](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 屬性設定為 [true](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)。  
   
 -   **將發行項設定為支援對記憶體最佳化資料表的複寫**  
   
-     使用 [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或 [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 來設定 `@schema_option = 0x40000000000` 發行項選項。  
+     使用 `@schema_option = 0x40000000000`sp_addarticle &#40;Transact-SQL&#41;[ 或 ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)sp_changearticle &#40;Transact-SQL&#41;[ 來設定 ](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 發行項選項。  
   
 #### <a name="to-configure-a-memory-optimized-table-as-a-subscriber"></a>將記憶體最佳化資料表設定為訂閱者  
   
@@ -39,7 +39,7 @@ ms.locfileid: "72908302"
   
 2.  將發行項加入至發行集。 如需詳細資訊，請參閱 [定義發行項](../../relational-databases/replication/publish/define-an-article.md)。  
   
-     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進行設定，將 **sp_addarticle** 預存程序的 **\@schema_option** 參數設為   
+     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進行設定，將 **sp_addarticle\@ 預存程序的** **schema_option** 參數設為   
     **0x40000000000**開始，將提供這項功能。  
   
 3.  在 [發行項屬性] 視窗中，將 啟用記憶體最佳化  設定為 [true]  。  
@@ -54,16 +54,16 @@ ms.locfileid: "72908302"
   
 1.  移至 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的訂閱屬性，並將 記憶體最佳化訂閱  設定為 [true]  。 重新初始化訂閱之前，不會套用所做的變更。  
   
-     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進行設定，將 **sp_addsubscription** 預存程序的 **\@memory_optimized** 參數設為 true。  
+     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進行設定，將 **sp_addsubscription\@ 預存程序的** **memory_optimized** 參數設為 true。  
   
 2.  移至 [發行項屬性] 視窗 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 內的發行集，將 啟用記憶體  設定為 [true]。  
   
-     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進行設定，將 **sp_addarticle** 預存程序的 **\@schema_option** 參數設為   
+     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進行設定，將 **sp_addarticle\@ 預存程序的** **schema_option** 參數設為   
     **0x40000000000**開始，將提供這項功能。  
   
 3.  記憶體最佳化資料表不支援叢集索引。 若要藉由在目的地上將複寫轉換為非叢集索引來處理此項目的話，請將 為記憶體最佳化發行項將叢集索引轉換為非叢集索引  設定為 [true]。  
   
-     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進行設定，將 **sp_addarticle** 預存程序的 **\@schema_option** 參數設為 **0x0000080000000000**。  
+     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進行設定，將 **sp_addarticle\@ 預存程序的** **schema_option** 參數設為 **0x0000080000000000**。  
   
 4.  重新產生快照集。  
   

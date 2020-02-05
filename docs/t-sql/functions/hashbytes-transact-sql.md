@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 29008af0f2584322b180a82b20268c452c603baa
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982926"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
@@ -53,7 +53,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 '*input*'  
 指定運算式，這個運算式評估為要雜湊的字元或二進位字串。  
   
- 輸出符合演算法標準：適用於 MD2、MD4 和 MD5 的 128 位元 (16 位元組)；適用於 SHA 和 SHA1 的 160 位元 (20 位元組)；適用於 SHA2_256 的 256 位元 (32 位元組)，以及適用於 SHA2_512 的 512 位元 (64 位元組)。  
+ 輸出符合演算法標準：用於 MD2、MD4 和 MD5 的 128 位元 (16 個位元組)；用於 SHA 和 SHA1 的 160 位元 (20 個位元組)；用於 SHA2_256 的 256 位元 (32 位元組)，以及用於 SHA2_512 的 512 位元 (64 位元組)。  
   
 **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
   
@@ -62,14 +62,14 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## <a name="return-value"></a>傳回值  
  **varbinary** (最大 8000 位元組)  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 請考慮使用 `CHECKSUM` 或 `BINARY_CHECKSUM` 作為計算雜湊值的替代方案。
 
 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始已淘汰 MD2、MD4、MD5、SHA 和 SHA1。 請改用 SHA2_256 或 SHA2_512。 較舊的演算法會繼續運作，但它們會引發淘汰事件。
 
 ## <a name="examples"></a>範例  
 ### <a name="return-the-hash-of-a-variable"></a>傳回變數的雜湊  
- 下列範例會傳回儲存於 `@HashThis` 變數中 **nvarchar** 資料的 `SHA2_256` 雜湊。  
+ 下列範例會傳回儲存於 `SHA2_256` 變數中 **nvarchar** 資料的 `@HashThis` 雜湊。  
   
 ```sql  
 DECLARE @HashThis nvarchar(32);  

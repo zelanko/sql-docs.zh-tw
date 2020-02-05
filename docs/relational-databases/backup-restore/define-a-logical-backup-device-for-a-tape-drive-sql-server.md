@@ -17,10 +17,10 @@ ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2e06b51b8c6c63d67645b493bdf4ca5bac3ab985
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75257996"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>定義磁帶機的邏輯備份裝置 (SQL Server)
@@ -63,7 +63,7 @@ ms.locfileid: "75257996"
   
 #### <a name="to-define-a-logical-backup-device-for-a-tape-drive"></a>定義磁帶機的邏輯備份裝置  
   
-1.  連線至適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱，以展開伺服器樹狀目錄。  
+1.  連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體之後，在物件總管中按一下伺服器名稱，以展開伺服器樹狀目錄。  
   
 2.  展開 [伺服器物件]  ，然後以滑鼠右鍵按一下 [備份裝置]  。  
   

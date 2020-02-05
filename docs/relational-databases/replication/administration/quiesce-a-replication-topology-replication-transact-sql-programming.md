@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0ad5d9595419c5d991dd1e33d15e1e7a4d1a8721
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: b940a8cccf7123e4783e2f351b940f40c3e5c5bf
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322003"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288338"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>停止複寫拓撲 (複寫 Transact-SQL 程式設計)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

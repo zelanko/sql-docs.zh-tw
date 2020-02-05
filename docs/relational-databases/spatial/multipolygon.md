@@ -14,10 +14,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8522e65762e8c27ec65fb5fc4a56db0653b5f5c9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907012"
 ---
 # <a name="multipolygon"></a>MultiPolygon
@@ -95,10 +95,10 @@ SET @g = geometry::Parse('MULTIPOLYGON EMPTY');
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Polygon](../../relational-databases/spatial/polygon.md)   
- [STArea &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
- [STCentroid &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stcentroid-geometry-data-type.md)   
- [STPointOnSurface &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)   
+ [多邊形](../../relational-databases/spatial/polygon.md)   
+ [STArea &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
+ [STCentroid &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stcentroid-geometry-data-type.md)   
+ [STPointOnSurface &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)   
  [空間資料 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

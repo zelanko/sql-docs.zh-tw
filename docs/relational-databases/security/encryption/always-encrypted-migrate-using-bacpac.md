@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1f2f44a6cf1172b779160d4ee17e584c7a7b2452
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595803"
 ---
 # <a name="export-and-import-databases-using-always-encrypted"></a>使用 Always Encrypted 匯出和匯入資料庫 
@@ -43,11 +43,11 @@ ms.locfileid: "73595803"
 
 您不需要存取針對加密資料行設定的資料行主要金鑰，因為在匯出和匯入作業期間，資料會保持加密狀態。
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 - [使用 Always Encrypted 開發應用程式](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>另請參閱
-- [永遠加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [一律加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [使用 Always Encrypted 備份和還原資料庫](always-encrypted-migrate-using-backup-restore.md)
-- [使用 Always Encrypted 與 [SQL Server 匯入和匯出精靈] 將資料移轉到資料行或從中移轉](always-encrypted-migrate-using-import-export-wizard.md)
+- [使用 Always Encrypted 與 SQL Server [匯入及匯出精靈]，將資料移轉進或移轉出資料行](always-encrypted-migrate-using-import-export-wizard.md)
 - [使用 Always Encrypted 將加密資料大量載入至資料行](migrate-sensitive-data-protected-by-always-encrypted.md)
