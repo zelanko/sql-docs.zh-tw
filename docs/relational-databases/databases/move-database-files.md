@@ -25,10 +25,10 @@ ms.assetid: 89f01b10-5fae-4ed8-b0fb-a4b9f540fd28
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c53e9ee51714ebfcce81a722f78a4f79cbc2530f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067322"
 ---
 # <a name="move-database-files"></a>移動資料庫檔案
@@ -43,7 +43,7 @@ ms.locfileid: "68067322"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[移動使用者資料庫](../../relational-databases/databases/move-user-databases.md)|描述將使用者資料庫檔案和全文檢索目錄檔案移到新位置的程序。|  
 |[移動系統資料庫](../../relational-databases/databases/move-system-databases.md)|描述將系統資料庫檔案移到新位置的程序。|  

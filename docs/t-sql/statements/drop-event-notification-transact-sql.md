@@ -22,10 +22,10 @@ ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: befa0085a7fc1a52ae02ba9443617b0593bb14ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910054"
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION (Transact-SQL)
@@ -57,7 +57,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  QUEUE *queue_name*  
  指出將事件通知範圍套用在 *queue_name* 所指定的佇列上。 如果建立事件通知時指定了 QUEUE，就必須指定 QUEUE。 *queue_name* 是佇列的名稱，也必須指定。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果在交易內引發事件通知，且在相同交易內卸除它，就會傳送事件通知執行個體，之後，再卸除事件通知。  
   
 ## <a name="permissions"></a>權限  

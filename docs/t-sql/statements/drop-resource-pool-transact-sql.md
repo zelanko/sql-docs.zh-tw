@@ -18,10 +18,10 @@ ms.assetid: 18cd6dd9-7a6d-4a08-b9d5-649af23583d5
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ab6a901d2c1eafc2469f0e1307e5d2db71186fb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043870"
 ---
 # <a name="drop-resource-pool-transact-sql"></a>DROP RESOURCE POOL (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68043870"
 
   卸除使用者定義的資源管理員資源集區。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +43,7 @@ DROP RESOURCE POOL pool_name
  *pool_name*  
  現有使用者定義之資源集區的名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果資源集區包含工作負載群組，您就無法卸除該資源集區。  
   
  您無法卸除資源管理員的預設或內部集區。  

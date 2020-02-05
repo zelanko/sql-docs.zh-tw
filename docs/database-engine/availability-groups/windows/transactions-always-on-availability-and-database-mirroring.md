@@ -17,10 +17,10 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 407e477be98f386adc27fc965b1d099d1dec4dfa
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251237"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>交易 - 可用性群組和資料庫鏡像
@@ -91,6 +91,6 @@ SQL Server 2016 引進此功能，以便在可用性群組中有一或多個該�
 >  不支援搭配使用資料庫鏡像或可用性群組與本文未核准的 DTC。  這並不表示不支援與 DTC 產品無關之產品的各個層面；不過，不支援不當使用分散式交易所造成的任何問題。  
   
 ## <a name="next-steps"></a>後續步驟  
- [Always On 可用性群組：互通性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+ [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   

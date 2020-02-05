@@ -12,10 +12,10 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 52b3154649a06bfb899e6993eb875a04190c59d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946943"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
@@ -111,7 +111,7 @@ Database Engine Tuning Advisor 的設計目的為處理下列查詢工作負載�
   
 -   只指定要讓 Database Engine Tuning Advisor 分析的實體資料庫設計結構。 Database Engine Tuning Advisor 有許多選項，但只要指定必要的選項即可。  
   
-## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>xp_msver 擴充預存程序的相依性  
+## <a name="dependency-on-xp_msver-extended-stored-procedure"></a>xp_msver 擴充預存程序的相依性  
  Database Engine Tuning Advisor 依賴 **xp_msver** 擴充預存程序來提供完整的功能。 預設會開啟擴充預存程序。 Database Engine Tuning Advisor 會使用這個擴充預存程序，來提取您要微調的資料庫所在電腦上的處理器數目和可用的記憶體。 如果無法使用 **xp_msver** ，Database Engine Tuning Advisor 會假設執行 Database Engine Tuning Advisor 的電腦之硬體特性。 如果無法取得執行 Database Engine Tuning Advisor 之電腦的硬體特性，將會假設 1 個處理器和 1024 MB 的記憶體。  
   
  此相依性會影響分割的建議，因為所建議的分割數目是根據這兩個值 (處理器的數目和可用的記憶體) 而定。 此外，當您使用測試伺服器來微調實際伺服器時，此相依性也會影響微調結果。 在此案例中，Database Engine Tuning Advisor 會使用 **xp_msver** ，從實際伺服器提取硬體屬性。 在測試伺服器上微調工作負載之後，Database Engine Tuning Advisor 會使用這些硬體屬性來產生建議。 如需詳細資訊，請參閱 [xp_msver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md)。  

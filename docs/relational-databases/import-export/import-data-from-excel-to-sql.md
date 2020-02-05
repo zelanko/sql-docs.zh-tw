@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245274"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>將 Excel 中的資料匯入到 SQL Server 或 Azure SQL Database
@@ -49,7 +49,7 @@ ms.locfileid: "75245274"
 
 逐步執行 [SQL Server 匯入和匯出精靈] 的頁面，以從 Excel 檔案直接匯入資料。 您也可以將設定儲存為 SQL Server Integration Services (SSIS) 套件，以便日後自訂及重複使用。
 
-1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。
+1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。
 
 2. 展開 **[資料庫]** 。
 3. 以滑鼠右鍵按一下資料庫。
@@ -106,7 +106,7 @@ RECONFIGURE;
 GO
 ```
 
-下列程式碼範例使用 `Sheet1`，將資料從 Excel `OPENROWSET` 工作表匯入至新的資料庫資料表。
+下列程式碼範例使用 `OPENROWSET`，將資料從 Excel `Sheet1` 工作表匯入至新的資料庫資料表。
 
 ```sql
 USE ImportFromExcel;
@@ -140,7 +140,7 @@ GO
 
 ### <a name="linked-servers"></a>連結的伺服器
 
-您也可以將 SQL Server 到 Excel 檔案的持續連線設定為「連結的伺服器」  。 下列範例會將資料從現有 Excel 連結伺服器 `EXCELLINK` 的 `Data` 工作表匯入至名為 `Data_ls` 的新 SQL Server 資料庫資料表。
+您也可以將 SQL Server 到 Excel 檔案的持續連線設定為「連結的伺服器」  。 下列範例會將資料從現有 Excel 連結伺服器 `Data` 的 `EXCELLINK` 工作表匯入至名為 `Data_ls` 的新 SQL Server 資料庫資料表。
 
 ```sql
 USE ImportFromExcel;
@@ -187,7 +187,7 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 
 若要使用此頁面所描述的剩餘方法 (BULK INSERT 陳述式、BCP 工具或 Azure Data Factory)，您必須先將 Excel 資料匯出為文字檔。
 
-在 Excel 中，選取 [檔案 | 另存新檔]  ，然後選取 [文字檔 (Tab 字元分隔) (\*.txt)]  或 [CSV (逗號分隔) (\*.csv)]  作為目的地檔案類型。
+在 Excel 中，選取 [檔案 | 另存新檔]  ，然後選取 [文字檔 (Tab 字元分隔) ( **.txt)]\*** 或 [CSV (逗號分隔) ( **.csv)]\*** 作為目的地檔案類型。
 
 如果您想要從活頁簿匯出多個工作表，請選取每個工作表，然後重複此程序。 **另存新檔**命令只會匯出使用中工作表。
 

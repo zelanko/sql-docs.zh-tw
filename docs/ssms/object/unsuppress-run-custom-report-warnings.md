@@ -1,6 +1,6 @@
 ---
-title: 取消隱藏執行自訂報表警告 | Microsoft Docs
-ms.custom: ''
+title: 取消隱藏執行自訂報表警告
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 14d7372258e3cc15eb3da6d5577145b588473388
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7df3354d78d9736f08e412e6da5e200b9ad41858
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262128"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243495"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>取消隱藏執行自訂報表警告
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-自訂報表有兩個警告對話方塊。 此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中取消隱藏這些方塊的顯示。  
+自訂報表有兩個警告對話方塊。 此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中取消隱藏這些方塊的顯示。  
   
 根據預設，[執行自訂報表]  對話方塊會在自訂報表執行之前顯示。 如果您選取了 [請不要再顯示這個警告]  核取方塊，將不再顯示此對話方塊。 此外，根據預設，當您開啟自訂報表，然後按一下連結來開啟另一份自訂報表時，就會顯示 [執行自訂報表]  對話方塊。 此對話方塊會顯示鑽研自訂報表檔案的完整路徑。 如果您選取了 [請不要再顯示這個警告]  核取方塊，將不再顯示此對話方塊。  
   
