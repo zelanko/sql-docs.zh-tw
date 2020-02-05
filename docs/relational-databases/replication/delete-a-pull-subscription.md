@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 74183916a438ea19536a7cac1abeb8d6cf7cc18a
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c97f69b69075a4ab60f8378344de139924dca788
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846695"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284665"
 ---
 # <a name="delete-a-pull-subscription"></a>刪除提取訂閱
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -69,13 +69,13 @@ ms.locfileid: "70846695"
   
 1.  在訂閱資料庫的訂閱者端，執行 [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)。 指定 **\@publication**、 **\@publisher** 和 **\@publisher_db**。  
   
-2.  在發行集資料庫的發行者端，執行 [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)。 指定 **\@publication** 和 **\@subscriber**。 為 **\@article** 指定 **all** 值。 (選擇性) 如果無法存取散發者，請為 **\@ignore_distributor** 指定 **1** 值來刪除此訂閱，而不需要移除散發者端上的相關物件。  
+2.  在發行集資料庫的發行者端，執行 [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)。 指定 **\@publication** 和 **\@subscriber**。 為  article **指定 \@all** 值。 (選擇性) 如果無法存取散發者，請為  ignore_distributor **指定 \@1** 值來刪除此訂閱，而不需要移除散發者端上的相關物件。  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>刪除合併式發行集的提取訂閱  
   
 1.  在訂閱資料庫的訂閱者端，執行 [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)。 指定 **\@publication**、 **\@publisher** 和 **\@publisher_db**。  
   
-2.  在發行集資料庫的發行者端，執行 [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)。 指定 **\@publication**、 **\@subscriber** 和 **\@subscriber_db**。 為 **\@subscription_type** 指定 **pull** 的值。 (選擇性) 如果無法存取散發者，請為 **\@ignore_distributor** 指定 **1** 值來刪除此訂閱，而不需要移除散發者端上的相關物件。  
+2.  在發行集資料庫的發行者端，執行 [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)。 指定 **\@publication**、 **\@subscriber** 和 **\@subscriber_db**。 為  subscription_type **指定 \@pull** 的值。 (選擇性) 如果無法存取散發者，請為  ignore_distributor **指定 \@1** 值來刪除此訂閱，而不需要移除散發者端上的相關物件。  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
  下列範例會刪除交易式發行集的提取訂閱。 第一批次是在「訂閱者」上執行，而第二批次是在「發行者」上執行。  
@@ -139,7 +139,7 @@ ms.locfileid: "70846695"
  [!code-vb[HowTo#rmo_vb_DropMergePullSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_dropmergepullsub)]  
   
 ## <a name="see-also"></a>另請參閱  
- [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [複寫安全性最佳作法](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

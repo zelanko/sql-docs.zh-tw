@@ -10,12 +10,12 @@ ms.author: maghan
 ms.custom: seodec18
 ms.date: 12/26/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: e0094ffaaa1be646b470547277026385c9dae24e
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.openlocfilehash: c5c75b2fda96d970b243161636d791029e311330
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75727025"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516489"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下載並安裝 Azure Data Studio
 
@@ -55,15 +55,13 @@ ms.locfileid: "75727025"
 
 1. 下載[適用於 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2113529)。
 2. 瀏覽至下載的檔案並解壓縮。
-3. `\azuredatastudio-windows\azuredatastudio.exe`執行
-
+3. `\azuredatastudio-windows\azuredatastudio.exe`執行 {2}
 
 ## <a name="get-azure-data-studio-for-macos"></a>取得適用於 macOS 的 Azure Data Studio
 
 1. 下載[適用於 macOS 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2113528)。
 2. 若要展開壓縮檔的內容，請按兩下檔案。
-3. 若要在「啟動控制板」  中提供 [!INCLUDE[name-sos](../includes/name-sos-short.md)]，請將 *Azure Data Studio.app* 拖曳至 [應用程式]  資料夾。
-
+3. 若要在「啟動控制板」[!INCLUDE[name-sos](../includes/name-sos-short.md)]*中提供* ，請將 *Azure Data Studio.app* 拖曳至 [應用程式]  資料夾。
 
 ## <a name="get-azure-data-studio-for-linux"></a>取得適用於 Linux 的 Azure Data Studio
 
@@ -146,10 +144,12 @@ ms.locfileid: "75727025"
 - Windows Server 2008 R2 (64 位元)
 
 ### <a name="macos"></a>macOS
+
 - macOS 10.13 High Sierra
 - macOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux
+
 - Red Hat Enterprise Linux 7.4
 - Red Hat Enterprise Linux 7.3
 - SUSE Linux Enterprise Server v12 SP2
@@ -164,6 +164,7 @@ ms.locfileid: "75727025"
 |             |           |            |
 
 ## <a name="check-for-updates"></a>檢查更新
+
 若要檢查是否有最新的更新，請按一下視窗左下方的齒輪圖示，然後按一下 [檢查更新] 
 
 ## <a name="supported-sql-offerings"></a>支援的 SQL 供應項目
@@ -173,9 +174,8 @@ ms.locfileid: "75727025"
 ## <a name="upgrade-from-sql-operations-studio"></a>從 SQL Operations Studio 升級
 
 如果您仍在使用 SQL Operations Studio，您需要升級到 Azure Data Studio。 SQL Operations Studio 是 Azure Data Studio 的預覽名稱和預覽版本。 在 2018 年 9 月，我們[已將名稱變更為 Azure Data Studio](https://cloudblogs.microsoft.com/sqlserver/2018/09/25/azure-data-studio-for-sql-server/) 並發行正式運作 (GA) 版本。 因為 SQL Operations Studio 已不再更新或受支援，所以我們要求所有 SQL Operations Studio 使用者下載最新版的 Azure Data Studio，以便取得最新的功能、安全性更新和修正。
- 
-從舊版預覽升級到最新版的 Azure Data Studio 時，您將會遺失目前的設定和延伸模組。 若要移動您的設定，請遵循下一節＜移動使用者設定＞  中的指示：
 
+從舊版預覽升級到最新版的 Azure Data Studio 時，您將會遺失目前的設定和延伸模組。 若要移動您的設定，請遵循下一節＜移動使用者設定＞  中的指示：
 
 ## <a name="move-user-settings"></a>移動使用者設定
 
@@ -203,6 +203,7 @@ ms.locfileid: "75727025"
 ## <a name="next-steps"></a>後續步驟
 
 若要開始使用，請參閱下列其中一個快速入門：
+
 - [連線與查詢 SQL Server](quickstart-sql-server.md)
 - [連線與查詢 Azure SQL Database](quickstart-sql-database.md)
 - [連線與查詢 Azure 資料倉儲](quickstart-sql-dw.md)

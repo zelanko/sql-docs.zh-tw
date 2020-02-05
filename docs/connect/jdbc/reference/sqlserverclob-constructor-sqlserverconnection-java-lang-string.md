@@ -16,19 +16,19 @@ ms.assetid: 7058f4f7-ef3e-4d62-90d1-79299708b1eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7a539ef893788be9e0200b9f412f8c3ed7652b26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971805"
 ---
 # <a name="sqlserverclob-constructor-sqlserverconnection-javalangstring"></a>SQLServerClob 建構函式 (SQLServerConnection, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  當指定 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件和資料字串時，初始化 [SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md) 類別的新執行個體。  
+  當指定 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverclob-class.md) 物件和資料字串時，初始化 [SQLServerClob](../../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的新執行個體。  
   
 > [!NOTE]  
->  這個方法在 JDBC Driver 2.0 版中已被取代。 請改用 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [createClob](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md) 方法。  
+>  這個方法在 JDBC Driver 2.0 版中已被取代。 請改用 [SQLServerConnection](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md) 類別的 [createClob](../../../connect/jdbc/reference/sqlserverconnection-class.md) 方法。  
   
 ## <a name="syntax"></a>語法  
   

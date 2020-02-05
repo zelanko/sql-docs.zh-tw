@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ebf59330-a421-45a5-9020-0484a96852bc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 10ddecc4e3c81d48a2824eb48e48495e4f2dec1d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: e9175157da22e10b8b4d30d46907481e3747e570
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764944"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286675"
 ---
 # <a name="new-agent-profile"></a>新增代理程式設定檔
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,14 +42,14 @@ ms.locfileid: "68764944"
   
 -   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
--   [複寫合併代理程式](../../relational-databases/replication/agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)  
   
 -   [複寫佇列讀取器代理程式](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
  **預設值**  
  每一個代理程式參數的預設值。  
   
- **值**  
+ **ReplTest1**  
  針對作為新設定檔之基礎的設定檔中，所指定的參數值。 編輯此欄位，即可變更參數的值。  
   
  **[只顯示這個設定檔中使用的參數]**  

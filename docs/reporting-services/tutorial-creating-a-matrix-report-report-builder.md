@@ -9,10 +9,10 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63294698"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>教學課程：建立矩陣報表 (報表產生器)
@@ -35,7 +35,7 @@ ms.locfileid: "63294698"
   
 ### <a name="to-create-a-matrix"></a>建立矩陣  
   
-1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  從您的電腦、[ Web 入口網站或 SharePoint 整合模式](../reporting-services/report-builder/start-report-builder.md)啟動報表產生器[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]。  
   
     [新報表或資料集]  對話方塊隨即開啟。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "63294698"
   
 11. 按 [下一步]  。  
   
-13. 按一下 **[完成]** 。  
+13. 按一下 [完成]  。  
   
     矩陣會加入至設計介面。 [資料列群組] 窗格將顯示兩個資料列群組：Territory 和 SalesDate。 [資料行群組] 窗格則顯示這兩個資料行群組：Subcategory 和 Product。 詳細資料是資料集查詢擷取的所有資料。  
     
@@ -310,7 +310,7 @@ ms.locfileid: "63294698"
   
 4.  在 [名稱]  中，將預設名稱取代為 **SalesByTerritorySubcategory**。  
   
-5.  按一下 **[儲存]** 。  
+5.  按一下 [檔案]  。  
   
 報表就會儲存至報表伺服器。 您連接之報表伺服器的名稱會顯示在視窗底部的狀態列中。  
   
@@ -322,7 +322,7 @@ ms.locfileid: "63294698"
   
 3.  在 [名稱]  中，將預設名稱取代為 **SalesByTerritorySubcategory**。  
   
-4.  按一下 **[儲存]** 。  
+4.  按一下 [檔案]  。  
   
 ## <a name="RotateTextBox"></a>9.(選擇性) 將文字方塊旋轉 270 度  
 含有矩陣的報表在執行時，可能會水平且垂直地展開。 如果將文字方塊旋轉 270 度 (垂直旋轉)，就比較不佔水平空間。 這樣轉譯後的報表將會變窄，且若匯出為 Microsoft Word 等格式，則大概都能容納於單一列印頁面上。  
@@ -352,7 +352,7 @@ ms.locfileid: "63294698"
   
 領域名稱的寫法為由上而下的垂直方向。 Territory 資料列群組的高度會依領域名稱的長度而變化。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
 以上總結如何建立矩陣報表的教學課程。 如需矩陣的詳細資訊，請參閱： 
 -    [資料表、矩陣和清單](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [建立矩陣](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)

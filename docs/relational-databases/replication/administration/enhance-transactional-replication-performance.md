@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f50978c19295f5973e787bdaab46efea6367308a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8ed18a3ea7ce4804146d448765d9f18e8b2a7f73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710383"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288175"
 ---
 # <a name="enhance-transactional-replication-performance"></a>增強異動複寫效能
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "71710383"
   
 -   連續執行代理程式來代替頻繁的排程執行。  
   
-     將代理程式設定為連續執行來代替建立頻繁的排程 (例如每分鐘) 可提升複寫效能，因為代理程式不必啟動和停止。 當您將「散發代理程式」設定為連續執行時，變更將以低度延遲傳播到拓撲中連接的其他伺服器。 如需詳細資訊，請參閱：  
+     將代理程式設定為連續執行來代替建立頻繁的排程 (例如每分鐘) 可提升複寫效能，因為代理程式不必啟動和停止。 當您將「散發代理程式」設定為連續執行時，變更將以低度延遲傳播到拓撲中連接的其他伺服器。 如需詳細資訊，請參閱  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[指定同步處理排程](../../../relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[指定同步處理排程](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>散發代理程式和記錄讀取器代理程式參數  
 代理程式設定檔參數會經常調整，目的是要讓「記錄讀取器」和「散發代理程式」的輸送量與高流量 OLTP 系統一同增加。 
@@ -116,7 +116,7 @@ ms.locfileid: "71710383"
   
 **–SubscriptionStreams** 參數可大幅提升彙總複寫輸送量。 它允許至「訂閱者」的多個連接平行套用批次變更，同時在使用單一執行緒時維護現有的許多交易特性。 如果有一個連接無法執行或認可，則所有連接都將中止目前批次，且代理程式將使用單一資料流重試失敗的批次。 在此重試階段完成之前，「訂閱者」端可能會出現暫時的交易不一致性。 成功認可失敗的批次後，「訂閱者」將返回交易一致性的狀態。  
   
-此代理程式參數值可以使用 [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 的 `@subscriptionstreams` 來指定。  
+此代理程式參數值可以使用 `@subscriptionstreams`sp_addsubscription &#40;Transact-SQL&#41;[ 的 ](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 來指定。  
 
 如需有關實作訂用帳戶資料流的詳細資訊，請參閱[瀏覽 SQL 複寫 subscriptionStream 設定](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting) \(英文\)。
   
@@ -142,11 +142,11 @@ ms.locfileid: "71710383"
 
 在這段查詢逾時期間，您可能會注意到散發代理程式效能計數器有下列趨勢： 
 
-- **Dist:Delivered Cmds/sec** 效能計數器的值一律為 0。
-- **Dist:Delivered Trans/sec** 效能計數器的值一律為 0。
-- **Dist:Delivery Latency** 效能計數器會回報值增加的情況，直到執行緒死結解決為止。
+- **Dist: Delivered Cmds/sec** 效能計數器的值一直是 0。
+- **Dist: Delivered Trans/sec** 效能計數器的值一直是 0。
+- **Dist: Delivery Latency** 效能計數器回報值的增加，直到執行緒死結解決為止。
 
-《SQL Server 線上叢書》中的＜複寫散發代理程式＞主題包含 *SubscriptionStreams* 參數的下列描述：「如果有無法執行或認可某個連線，則所有連線都將中止目前批次，且代理程式將使用單一資料流重試失敗的批次。」
+SQL Server 線上叢書的＜複寫散發代理程式＞中，包含 *SubscriptionStreams* 參數的以下描述：「如果其中一個連線無法執行或認可，所有連線就都會中止目前的批次，而代理程式會使用單一資料流來重試失敗的批次。」
 
 散發代理程式會使用一個工作階段來重試無法套用的批次。 在散發代理程式成功套用批次之後，散發代理程式會繼續使用多個工作階段，而不會重新啟動。
 

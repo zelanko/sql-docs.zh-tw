@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio 功能表說明 | Microsoft Docs
-ms.custom: ''
+title: SQL Server Management Studio 功能表說明 [SQL Server]
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 5b8b2e45-bee6-42c8-93d6-31432f4d5699
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d541d10f86e1ca0f12b421bee71b4923088214b7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5d44d4d2c4c825e671eb8f4210994324b3a0c094
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260136"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75240527"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>SQL Server Management Studio 功能表說明 [SQL Server]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-本節包含 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，功能表列所提供之對話方塊及頁面的 F1 說明。  
+This section contains F1 Help for the dialog boxes and pages available from the menu bar in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 [關於 SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md)  
   

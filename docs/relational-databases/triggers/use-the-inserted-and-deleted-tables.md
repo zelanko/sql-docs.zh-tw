@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e070cfc4b02ae52ab755306a29eb90c6afc912cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075503"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>使用插入或刪除的資料表
@@ -39,7 +39,7 @@ ms.locfileid: "68075503"
   
 -   尋找資料修改前後之資料表狀態的差異，並依據這些差異採取動作。  
   
- deleted 資料表會儲存被 DELETE 及 UPDATE 陳述式影響的資料列副本。 在執行 DELETE 或 UPDATE 陳述式時，資料列會從觸發程序資料表刪除，並傳送到 deleted 資料表。 deleted 資料表及其觸發程序資料表兩者通常不會有資料列。  
+ deleted 資料表會儲存被 DELETE 及 UPDATE 陳述式影響的資料列副本。 在執行 DELETE 或 UPDATE 陳述式時，資料列會從觸發程序資料表刪除，並傳送到 deleted 資料表。 deleted 資料表及其觸發程序資料表兩者通常不會有相同的資料列。  
   
  inserted 資料表會儲存被 INSERT 及 UPDATE 陳述式影響的資料列副本。 在插入或更新交易期間，新的資料列會同時加入 inserted 資料表和觸發程序資料表。 inserted 資料表中的資料列即為觸發程序資料表中新資料列的副本。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68075503"
 > [!NOTE]  
 >  若觸發程序動作依據被修改的資料列數目來決定啟動與否時，則可利用對多資料列資料修改 (依據 SELECT 陳述式的 INSERT、DELETE 或 UPDATE) 的測試 (如 @@ROWCOUNT 的檢查)，以決定執行何者動作。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] AFTER 觸發程序的已插入或已刪除的資料表中，不允許 **text**、 **ntext**，或 **image** 資料行參考。 但還是包含這些資料類型，僅做為回溯相容性的目的使用。 大型資料的慣用儲存體應使用 **varchar(max)** 、 **nvarchar(max)** ，以及 **varbinary(max)** 資料類型。 AFTER 和 INSTEAD OF 兩個觸發程序都支援已插入及已刪除資料表中的 **varchar(max)** 、**nvarchar(max)** ，和 **varbinary(max)** 資料。 如需詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] AFTER 觸發程序的已插入或已刪除的資料表中，不允許 **text**、 **ntext**，或 **image** 資料行參考。 但還是包含這些資料類型，僅做為回溯相容性的目的使用。 大型資料的慣用儲存體應使用 **varchar(max)** 、 **nvarchar(max)** ，以及 **varbinary(max)** 資料類型。 AFTER 和 INSTEAD OF 兩個觸發程序都支援已插入及已刪除資料表中的 **varchar(max)** 、 **nvarchar(max)** ，和 **varbinary(max)** 資料。 如需詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
  **在觸發程序中使用 inserted 資料表來強制執行商務規則的範例**  
   

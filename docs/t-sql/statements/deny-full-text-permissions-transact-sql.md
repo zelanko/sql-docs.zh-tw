@@ -19,10 +19,10 @@ ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5451cddba8a1719e9672c0d10ffe4a62c960d38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114816"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY 全文檢索權限 (Transact-SQL)
@@ -58,7 +58,7 @@ DENY permission [ ,...n ] ON
  指定正在拒絕權限的全文檢索停用字詞表。 範圍限定詞 **::** 為必要項目。  
   
  *database_principal*  
- 指定要拒絕其權限的主體。 它有下列幾種：  
+ 指定要拒絕其權限的主體。 下列其中之一：  
   
 -   資料庫使用者  
   
@@ -80,7 +80,7 @@ DENY permission [ ,...n ] ON
  指出目前受到拒絕的權限，也為這個主體曾授與此權限的其他主體所拒絕。  
   
  *denying_principal*  
- 指定主體，執行這項查詢的主體會從這個主體衍生權限來拒絕權限。 它有下列幾種：  
+ 指定主體，執行這項查詢的主體會從這個主體衍生權限來拒絕權限。 下列其中之一：  
   
 -   資料庫使用者  
   

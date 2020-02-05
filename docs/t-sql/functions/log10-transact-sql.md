@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c84d73c0ee48b75c8f31dda4dc87ecfbac5913f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059877"
 ---
 # <a name="log10-transact-sql"></a>LOG10 (Transact-SQL)
@@ -43,12 +43,12 @@ LOG10 ( float_expression )
   
 ## <a name="arguments"></a>引數  
  *float_expression*  
- 為 **float** 類型或能夠隱含轉換成 **float** 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 為 [float](../../t-sql/language-elements/expressions-transact-sql.md) 類型或能夠隱含轉換成 **float** 類型的**運算式**。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  LOG10 和 POWER 函數是彼此反向關聯。 例如，10 ^ LOG10(*n*) = *n*。  
   
 ## <a name="examples"></a>範例  
@@ -89,7 +89,7 @@ SELECT POWER (10, LOG10(5));
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C.針對某個值，計算以 10 為底數的對數。  
+### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C：針對某個值，計算以 10 為基底的對數。  
  下列範例會計算指定值的 `LOG10`。  
   
 ```  

@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f744dbde25bf5f7b307ccb44e03de70c1b60cc66
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844554"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>使用篩選函數選取要移轉的資料列 (Stretch Database)
@@ -31,7 +31,7 @@ ms.locfileid: "73844554"
   
  若您未指定篩選函數，則會移轉整個資料表。  
   
- 當您執行 [啟用資料庫的延展功能精靈] 時，可以移轉整個資料表，也可以在精靈中指定簡單的篩選函數。 如果您想要使用不同類型的篩選函數來選取要遷移的資料列，請執行下列其中一項操作。  
+ 當您執行 [啟用資料庫的延展功能精靈] 時，可以移轉整個資料表，也可以在精靈中指定簡單的篩選函數。 如果您想要使用不同類型的篩選函數來選取要移轉的資料列，請執行下列其中一項操作。  
   
 -   結束精靈，然後執行 ALTER TABLE 陳述式來啟用資料表的延展功能以及指定篩選函數。  
   
@@ -51,7 +51,7 @@ RETURN  SELECT 1 AS is_eligible
         WHERE <predicate>  
 ```  
   
- 函數的參數必須是資料表中資料行的識別碼。  
+ 函式的參數必須是來自資料表的資料欄識別碼。  
   
  需要結構描述繫結，才能避免篩選函數所使用的資料行遭到卸除或改變。  
   
@@ -65,7 +65,7 @@ RETURN  SELECT 1 AS is_eligible
 <predicate> ::= <condition> [ AND <condition> ] [ ...n ]  
 ```  
   
- 每個條件則可包含一個基本條件，或使用 OR 邏輯運算子聯結多個基本條件。  
+ 每個條件皆可以包含一個基本條件，或是包含以 OR 邏輯運算子結合的數個基本條件。  
   
 ```  
 <condition> ::= <primitive_condition> [ OR <primitive_condition> ] [ ...n ]  
@@ -84,7 +84,7 @@ RETURN  SELECT 1 AS is_eligible
   
 ```  
   
--   比較函數參數與常數運算式。 例如， `@column1 < 1000`。  
+-   比較函數參數與常數運算式。 例如： `@column1 < 1000` 。  
   
      以下範例會檢查 *date* 資料行的值是否為 &lt; 1/1/2016。  
   
@@ -104,9 +104,9 @@ RETURN  SELECT 1 AS is_eligible
   
     ```  
   
--   將 IS NULL 或 IS NOT NULL 運算子套用至函數參數。  
+-   將 IS NULL 或 IS NOT NULL 運算子套用至函式參數。  
   
--   使用 IN 運算子比較函數參數與常數值清單。  
+-   使用 IN 運算子來比較函式參數及常數值清單。  
   
      以下範例會檢查 *shipment_status*  資料行的值是否為 `IN (N'Completed', N'Returned', N'Cancelled')`。  
   
@@ -136,15 +136,15 @@ RETURN  SELECT 1 AS is_eligible
 ```  
   
 ### <a name="constant-expressions"></a>常數運算式  
- 您在篩選函數中使用的常數可以是任何確定性的運算式，其可在定義函數時接受評估。 常數運算式可包含下列項目。  
+ 您在篩選函數中使用的常數可以是任何確定性的運算式，其可在定義函數時接受評估。 常數運算式可以包含下列項目。  
   
--   常值。 例如， `N'abc', 123`。  
+-   常值。 例如： `N'abc', 123` 。  
   
--   代數運算式。 例如， `123 + 456`。  
+-   代數運算式。 例如： `123 + 456` 。  
   
--   確定性函數。 例如， `SQRT(900)`。  
+-   確定性函數。 例如： `SQRT(900)` 。  
   
--   使用 CAST 或 CONVERT 的確定性轉換。 例如， `CONVERT(datetime, '1/1/2016', 101)`。  
+-   使用 CAST 或 CONVERT 的確定性轉換。 例如： `CONVERT(datetime, '1/1/2016', 101)` 。  
   
 ### <a name="other-expressions"></a>其他運算式  
  在使用對等 AND 及 OR 運算式取代 BETWEEN 及 NOT BETWEEN 運算子後，若產生的函數符合此處所述的規則，您就可以使用 BETWEEN 及 NOT BETWEEN 運算子。  
@@ -208,7 +208,7 @@ ALTER TABLE SensorTelemetry
         SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;   
     ```  
   
-2. 等待移轉完成。 您可以在 SQL Server Management Studio 的 [延展資料庫監視器]  中或查詢 **sys.dm_db_rda_migration_status** 檢視，來查看狀態。 如需詳細資訊，請參閱[資料移轉的監視及疑難排解](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)或 [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md)。  
+2. 等待移轉完成。 您可以在 SQL Server Management Studio 的 [延展資料庫監視器]  中或查詢 **sys.dm_db_rda_migration_status** 檢視，來查看狀態。 如需詳細資訊，請參閱 [資料移轉的監視及疑難排解](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) 或 [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md)。  
   
 3. 建立您想要套用至資料表的篩選函數。  
   
@@ -259,7 +259,7 @@ GO
   
 -   函數必須為確定性函數。 因此您無法建立會隨著時間推移，而自動重新計算的滑動視窗函數。  
   
--   函數使用結構描述繫結。 因此您無法僅透過呼叫 **ALTER FUNCTION** 來移動滑動視窗，以每天「就地」更新函數。  
+-   此函式會使用結構描述繫結。 因此您無法僅透過呼叫 **ALTER FUNCTION** 來移動滑動視窗，以每天「就地」更新函數。  
   
  遵循下列範例開始使用篩選函數，此範例會移遷資料列，其中 **systemEndTime** 資料行包含早於 2016 年 1 月 1 日的值。  
   
@@ -288,7 +288,7 @@ SET (
   
 ```  
   
- 當您想更新滑動視窗時，請執行下列動作。  
+ 當您想要更新滑動視窗時，請執行下列動作。  
   
 1.  建立新的函數，以指定新的滑動視窗。 下列範例選取的日期早於 2016 年 1 月 2 日，而非 2016 年 1 月 1 日。  
   
@@ -368,7 +368,7 @@ COMMIT ;
   
     ```  
   
--   下列範例使用 BETWEEN 及 NOT BETWEEN 運算子。 在使用對等 AND 及 OR 運算式取代 BETWEEN 及 NOT BETWEEN 運算子後，產生的函數符合此處所述的規則，所以使用方式有效。  
+-   下列範例使用 BETWEEN 和 NOT BETWEEN 運算子。 在使用對等 AND 及 OR 運算式取代 BETWEEN 及 NOT BETWEEN 運算子後，產生的函數符合此處所述的規則，所以使用方式有效。  
   
     ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example3(@column1 int, @column2 int)  
@@ -382,7 +382,7 @@ COMMIT ;
   
     ```  
   
-     在使用對等 AND 及 OR 運算式取代 BETWEEN 及 NOT BETWEEN 運算子後，之前的函數即相當於下列函數。  
+     在您將 BETWEEN 和 NOT BETWEEN 運算子取代為對等的 AND 和 OR 運算式之後，前面的函式與後面的函式相等。  
   
     ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example4(@column1 int, @column2 int)  
@@ -436,7 +436,7 @@ COMMIT ;
   
     ```  
   
--   因為必須在定義函數時，將使用代數運算子或內建函數的運算式評估為常數，所以下列函數無效。 代數運算式或函數呼叫中不能包括資料行參考。  
+-   因為必須在定義函數時，將使用代數運算子或內建函數的運算式評估為常數，所以下列函數無效。 您無法包含以代數運算式或函式呼叫呈現的資料欄參考。  
   
     ```sql  
     CREATE FUNCTION dbo.fn_example8(@column1 int)  
@@ -510,7 +510,7 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
 -   新函式不能包含不存在於舊函式中的運算子。  
   
--   無法變更運算子引數的順序。  
+-   不能變更運算子引數的順序。  
   
 -   只有屬於 `<, <=, >, >=`  比較的常數值，可透過減少函數限制的方式進行變更。  
   

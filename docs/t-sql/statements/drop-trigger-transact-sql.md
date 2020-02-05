@@ -25,10 +25,10 @@ ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 810367b817aec0688a2bc5168be10c7ff073affc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73980989"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
@@ -60,7 +60,7 @@ ON ALL SERVER
   
 ## <a name="arguments"></a>引數  
  *IF EXISTS*  
- **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前的版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)、[!INCLUDE[sssds](../../includes/sssds-md.md)])。  
+ **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)、[!INCLUDE[sssds](../../includes/sssds-md.md)])。  
   
  只有在觸發程序已存在時，才能有條件地將其卸除。  
   
@@ -81,7 +81,7 @@ ON ALL SERVER
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  您可以卸除 DML 觸發程序，或卸除觸發程序資料表，來移除 DML 觸發程序。 當卸除資料表時，也會卸除所有相關聯的觸發程序。  
   
  當卸除觸發程序時，會從 **sys.objects**、**sys.triggers** 和 **sys.sql_modules** 目錄檢視中移除觸發程序的相關資訊。  
@@ -104,7 +104,7 @@ ON ALL SERVER
 ## <a name="examples"></a>範例  
   
 ### <a name="a-dropping-a-dml-trigger"></a>A. 卸除 DML 觸發程序  
- 下列範例會卸除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的 `employee_insupd` 觸發程序。 (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，您可以使用 DROP TRIGGER IF EXISTS 語法。)  
+ 下列範例會卸除 `employee_insupd` 資料庫中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 觸發程序。 (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，您可以使用 DROP TRIGGER IF EXISTS 語法。)  
   
 ```  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  

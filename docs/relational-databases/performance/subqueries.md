@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2d4bb708142d4471381a1579baa943d11357823
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113279"
 ---
 # <a name="subqueries-sql-server"></a>子查詢 (SQL Server)
@@ -76,7 +76,7 @@ GO
 
 子查詢的 SELECT 查詢永遠都會以括號括住。 它無法包含 `COMPUTE` 或 `FOR BROWSE` 子句，而且在未指定 TOP 子句時，只能包含 `ORDER BY` 子句。   
 
-子查詢能巢狀於外部 `SELECT`、`INSERT`、`UPDATE` 或 `DELETE` 陳述式的 `WHERE` 或 `HAVING` 子句中，或是巢狀於另一個子查詢中。 巢狀層級最多可達 32 層，不過此限制仍將取決於可用的記憶體，以及查詢中其他運算式的複雜性。 個別的查詢可能無法支援 32 層的巢狀。 若子查詢傳回單一數值的話，它將可出現在能夠使用運算式的任何位置。   
+子查詢能巢狀於外部 `WHERE`、`HAVING`、`SELECT` 或 `INSERT` 陳述式的 `UPDATE` 或 `DELETE` 子句中，或是巢狀於另一個子查詢中。 巢狀層級最多可達 32 層，不過此限制仍將取決於可用的記憶體，以及查詢中其他運算式的複雜性。 個別的查詢可能無法支援 32 層的巢狀。 若子查詢傳回單一數值的話，它將可出現在能夠使用運算式的任何位置。   
 
 如果資料表只出現在子查詢中，而沒有出現在外部查詢裡面，那麼該資料表的資料行並不能包含於輸出之中 (外部查詢的選取清單)。   
 
@@ -94,18 +94,18 @@ GO
 
 ## <a name="rules"></a> 子查詢規則
 子查詢具有下列限制： 
--   以比較運算子所提出之子查詢選取清單，只能包含一個運算式或資料行名稱 (除了分別運作於 `SELECT *` 或清單上的 `EXISTS` 與 `IN`)。   
+-   以比較運算子所提出之子查詢選取清單，只能包含一個運算式或資料行名稱 (除了分別運作於 `EXISTS` 或清單上的 `IN` 與 `SELECT *`)。   
 -   若外部查詢的 `WHERE` 子句包含資料行名稱，它必須與子查詢選取清單中的資料行具有聯結相容性。   
 -   **ntext**、**text** 及 **image** 資料類型無法在子查詢的選取清單中使用。   
 -   因為它們必須傳回單一數值，因此由未修改的比較運算子 (也就是後面沒有跟著關鍵字 ANY 或 ALL) 所提出的子查詢不能包含 `GROUP BY` 與 `HAVING` 子句。   
 -   在包含 GROUP BY 的子查詢內，不能使用 `DISTINCT` 關鍵字。
 -   不能指定 `COMPUTE` 和 `INTO` 子句。   
--   只有在同時指定 `TOP` 的情況下，才能指定 `ORDER BY`。   
+-   只有在同時指定 `ORDER BY` 的情況下，才能指定 `TOP`。   
 -   不能更新以子查詢建立的檢視。   
 -   `EXISTS` 所導入之子查詢的選取清單，依慣例會有星號 (\*)，而非單一資料行名稱。 `EXISTS` 所導入之子查詢的規則和適用於標準選取清單的規則一樣，因為由 `EXISTS` 所導入的子查詢會建立存在測試並傳回 TRUE 或 FALSE，而不是傳回資料。   
 
 ## <a name="qualifying"></a> 在子查詢中識別資料行名稱
-在以下的範例中，外部查詢之 `WHERE` 子句的 *BusinessEntityID* 資料行會由外部查詢 `FROM` 子句中的資料表名稱 (*Sales.Store*) 進行隱含限定。 在子查詢的選取清單中針對 *CustomerID* 的參考會被子查詢 `FROM` 子句限定，也就是被 *Sales.Customer* 資料表所限定。
+在以下的範例中，外部查詢之 *子句的*BusinessEntityID`WHERE` 資料行會由外部查詢 `FROM` 子句中的資料表名稱 (*Sales.Store*) 進行隱含限定。 在子查詢的選取清單中針對 *CustomerID* 的參考會被子查詢 `FROM` 子句限定，也就是被 *Sales.Customer* 資料表所限定。
 
 ```sql
 USE AdventureWorks2016;
@@ -486,7 +486,7 @@ WHERE ProductSubcategoryID NOT IN
 GO
 ```
 
-此陳述式不能轉換成聯結。 類似的不相等聯結則具有不同意義：它會在其他不屬於已完工自行車的部分子類別中，尋找產品名稱。      
+此陳述式不能轉換成聯結。 類似的不相等聯結則具有不同的意義：它會在其他不屬於已完工自行車的部份子類別中，尋找產品名稱。      
 
 ### <a name="upsert"></a> UPDATE、DELETE 與 INSERT 陳述式中的子查詢
 子查詢可以巢狀於 `UPDATE`、`DELETE`、`INSERT` 和 `SELECT` 資料操作 (DML) 陳述式中。    

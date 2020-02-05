@@ -15,10 +15,10 @@ ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d3ec56a8e4961985a6c809983f671edf0234491d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012891"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>設定用於 Database Engine 存取的 Windows 防火牆
@@ -55,7 +55,7 @@ ms.locfileid: "68012891"
   
 ## <a name="before-you-begin"></a>開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  在防火牆中開啟通訊埠可能會讓您的伺服器面臨惡意攻擊的威脅。 請先確定您已了解防火牆系統，然後再開啟通訊埠。 如需相關資訊，請參閱 [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
@@ -77,7 +77,7 @@ ms.locfileid: "68012891"
   
 6.  在 **[設定檔]** 對話方塊中，選取您想要連線至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]時，描述電腦連線環境的設定檔，然後按 **[下一步]** 。  
   
-7.  在 **[名稱]** 對話方塊中，輸入此規則的名稱和描述，然後按一下 **[完成]** 。  
+7.  在 [名稱]  對話方塊中輸入此規則的名稱和描述，然後按一下 [完成]  。  
   
 #### <a name="to-open-access-to-sql-server-when-using-dynamic-ports"></a>若要在使用動態通訊埠時開放 SQL Server 的存取  
   
@@ -93,9 +93,9 @@ ms.locfileid: "68012891"
   
 6.  在 **[設定檔]** 對話方塊中，選取您想要連線至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]時，描述電腦連線環境的設定檔，然後按 **[下一步]** 。  
   
-7.  在 **[名稱]** 對話方塊中，輸入此規則的名稱和描述，然後按一下 **[完成]** 。  
+7.  在 [名稱]  對話方塊中輸入此規則的名稱和描述，然後按一下 [完成]  。  
   
 ## <a name="see-also"></a>另請參閱  
- [操作說明：設定防火牆設定 (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
+ [如何：設定防火牆設定 (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

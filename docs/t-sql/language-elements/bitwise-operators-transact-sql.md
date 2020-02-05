@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0274f5235b51470d31a4904d5230c5b5ca14ecc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943062"
 ---
 # <a name="bitwise-operators-transact-sql"></a>位元運算子 (Transact-SQL)
@@ -35,8 +35,8 @@ ms.locfileid: "67943062"
 
 |! 運算子之後|位元數學|
 |---- |---- |
-|與 <br> 如果在任何位置的位元皆為 1，則結果為 1。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
-|或 <br> 如果在任何位置的其中一個位元為 1，則結果為 1。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
+|AND <br> 如果在任何位置的位元皆為 1，則結果為 1。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
+|OR <br> 如果在任何位置的其中一個位元為 1，則結果為 1。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
 |NOT  <br> 反轉每個位元位置的位元值。 |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
   
 請參閱下列主題：   

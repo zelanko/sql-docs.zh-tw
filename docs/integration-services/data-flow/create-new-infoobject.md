@@ -11,10 +11,10 @@ ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9691deb08bdc6bce05945e1210edd91273f1bc61
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293168"
 ---
 # <a name="create-new-infoobject"></a>建立新的 InfoObject
@@ -124,7 +124,7 @@ ms.locfileid: "71293168"
 ### <a name="attributes-list"></a>屬性清單  
  **[屬性]** 清單會顯示您所建立之 InfoObject 的屬性。 **[屬性]** 清單具有下列資料行標題：  
   
- **[InfoObject]**  
+ **InfoObject**  
  檢視 InfoObject 的名稱。  
   
  **說明**  
@@ -133,7 +133,7 @@ ms.locfileid: "71293168"
  **InfoObject 類型**  
  檢視 InfoObject 的類型。 下表列出類型的可能值。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |CHA|特性|  
 |KYF|關鍵數據|  
@@ -143,12 +143,12 @@ ms.locfileid: "71293168"
 ### <a name="attributes-options"></a>屬性選項  
  使用下列選項可以針對您所建立的 InfoObject 加入和移除屬性：  
   
- **[加入]**  
+ **加入**  
  加入現有的 InfoObject 做為屬性。  
   
  若要加入現有的 InfoObject，請按一下 [加入]，然後使用 **[查閱 InfoObject]** 對話方塊來尋找 InfoObject。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md)＞。  
   
- **[新增]**  
+ **新增**  
  加入新的 InfoObject 做為屬性。  
   
  若要建立並加入新的 InfoObject，請按一下 [新增]，然後使用 **[建立新的 InfoObject]** 對話方塊的新執行個體來建立新的 InfoObject。  
@@ -160,7 +160,7 @@ ms.locfileid: "71293168"
  [建立交易資料的 InfoCube](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [建立 InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [建立交易資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
- [[建立主要資料的 InfoSource]](../../integration-services/data-flow/create-infosource-for-master-data.md)   
+ [建立主要資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-master-data.md)   
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

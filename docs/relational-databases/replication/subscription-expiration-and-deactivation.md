@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 87c3a091e4a6ce3ef9462e6e0d730bcea56c18bc
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: bb803c0490b5e52ac26f0bdf04f30c4b10ce6446
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710710"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287067"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>訂閱逾期與停用
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "71710710"
  若要設定保留期限，請參閱[設定訂閱的逾期期限](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)、[設定交易式發行集的散發保留期限 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md) 和[設定發行與散發](../../relational-databases/replication/configure-publishing-and-distribution.md)。  
   
 ## <a name="transactional-replication"></a>異動複寫  
- 異動複寫使用最長散發保留期間 ([sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) 的 `@max_distretention` 參數) 和發行集保留期間 ([sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 的 `@retention` 參數)：  
+ 異動複寫使用最長散發保留期間 (`@max_distretention`sp_adddistributiondb &#40;Transact-SQL&#41;[ 的 ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) 參數) 和發行集保留期間 (`@retention`sp_addpublication &#40;Transact-SQL&#41;[ 的 ](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 參數)：  
   
 -   如果在最高散發保留期限內 (預設值為 72 小時) 未同步處理訂閱，並且散發資料庫中有變更尚未傳遞至「訂閱者」，則「散發者」上執行的 **Distribution clean up** 工作會將訂閱標記為停用。 訂閱必須重新初始化。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "71710710"
      若發送訂閱已過期，會完全移除；但提取訂閱不會移除。 您必須在訂閱者端清除提取訂閱。 如需詳細資訊，請參閱 [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)。  
   
 ## <a name="merge-replication"></a>合併式複寫  
- 合併式複寫使用發行集保留期間 ([sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@retention` 和 `@retention_period_unit` 參數)。 訂閱過期後，就必須重新初始化，因為訂閱的中繼資料已被移除。 未重新初始化的訂閱，由「發行者」上執行的 **Expired subscription clean up** 作業卸除。 依預設此作業每日執行，並移除所有尚未同步處理為兩倍發行保留期限的發送訂閱。 例如：  
+ 合併式複寫使用發行集保留期間 (`@retention`sp_addmergepublication &#40;Transact-SQL&#41;`@retention_period_unit` 的 [ 和 ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 參數)。 訂閱過期後，就必須重新初始化，因為訂閱的中繼資料已被移除。 未重新初始化的訂閱，由「發行者」上執行的 **Expired subscription clean up** 作業卸除。 依預設此作業每日執行，並移除所有尚未同步處理為兩倍發行保留期限的發送訂閱。 例如：  
   
 -   若發行的保留期限為 14 天，訂閱若未於 14 天內同步處理就會過期。  
   

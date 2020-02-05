@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1eaed4b8cc26cd1705aacb74e102be2e33b443e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059940"
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
@@ -47,13 +47,13 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
  *offset*  
  從取得數值的目前資料列轉寄資料列的數目。 若未加以指定，預設為 1。 *offset* 可以是資料行、子查詢或其他運算式，能算出正整數或可以明確地轉換為 **bigint**。 *offset* 不能是負值或分析函數。  
   
- *default*  
+ *預設值*  
  當 *offset* 超過資料分割範圍時會傳回的值。 如果未指定預設值，會傳回 NULL。 *default* 可以是資料行、子查詢或其他運算式，但不能是分析函數。 *default* 的類型必須與 *scalar_expression* 相容。
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  *partition_by_clause* 會將 FROM 子句產生的結果集分割成函數所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 在套用函數之前，*order_by_clause* 可指定資料順序。 當指定 *partition_by_clause* 時，即決定每一個分割區的次序。 *order_by_clause* 為必要項目。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  已指定的 *scalar_expression*的資料類型。 如果 *scalar_expression* 可以為 Null 或 *default* 設為 NULL，則會傳回 NULL。  
   
  LEAD 不具決定性。 如需詳細資訊，請參閱 [決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
@@ -139,7 +139,7 @@ b           c           i
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-compare-values-between-quarters"></a>D.比較各季之間的值  
+### <a name="d-compare-values-between-quarters"></a>D：比較各季之間的值  
  下列範例示範 LEAD 函數。 查詢會獲得指定員工在後續日曆季的銷售配額值中的差異。 請注意，因為最後一列之後沒有可用的前置值，所以會使用預設值零 (0)。  
   
 ```sql  

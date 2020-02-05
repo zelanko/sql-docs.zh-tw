@@ -25,10 +25,10 @@ ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 89f1338f2e127742a3e76b4b2dbc2f2ae5e8b8ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117133"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
@@ -51,7 +51,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
  AUTHORIZATION *server_principal*  
  這是即將擁有新伺服器角色的登入。 如果未指定任何登入，該伺服器角色便由執行 CREATE SERVER ROLE 的登入所擁有。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  伺服器角色是伺服器層級安全性實體。 當您建立伺服器角色之後，請利用 GRANT、DENY 和 REVOKE，設定角色的伺服器層級權限。 若要將登入新增到伺服器角色，或從其中移除登入，請使用 [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)。 若要卸除伺服器角色，請使用 [DROP SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)。 如需詳細資訊，請參閱 [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
   
  您可以藉由查詢 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 和 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視，檢視伺服器角色。  

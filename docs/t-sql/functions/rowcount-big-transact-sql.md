@@ -22,13 +22,13 @@ ms.assetid: 6e18a0eb-bb36-4348-90d9-8b1ecf095064
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4b354807fedda0f273d5f3822591f7f84912b028
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127412"
 ---
-# <a name="rowcountbig-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
+# <a name="rowcount_big-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回上次執行之陳述式所影響的資料列數。 這個函式相當於 [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md)，只是 ROWCOUNT_BIG 的傳回型別是 **bigint**。  
@@ -42,10 +42,10 @@ ms.locfileid: "68127412"
 ROWCOUNT_BIG ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個函數是在 SELECT 陳述式後面，它會傳回 SELECT 陳述式所傳回的列數。  
   
  這個函數是在 INSERT、UPDATE 或 DELETE 陳述式後面，它會傳回資料修改陳述式所影響的列數。  

@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 3469a162645816a3b90657b0c2a3b81b37e6cade
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68054631"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>執行部署於 Azure 中的 SQL Server Integration Services (SSIS) 套件
@@ -64,7 +64,7 @@ ms.locfileid: "68054631"
 
 ## <a name="script"></a> 使用指令碼或程式碼執行套件
 
-在您可以呼叫受控 API 的任何開發環境中，您可以藉由呼叫 `Microsoft.SQLServer.Management.IntegrationServices` 命名空間中 `Package` 物件的 `Execute` 方法來執行套件。
+在您可以呼叫受控 API 的任何開發環境中，您可以藉由呼叫 `Execute` 命名空間中 `Package` 物件的 `Microsoft.SQLServer.Management.IntegrationServices` 方法來執行套件。
 
 如需詳細資訊，請參閱下列範例：
 

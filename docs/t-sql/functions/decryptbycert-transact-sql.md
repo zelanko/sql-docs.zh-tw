@@ -20,10 +20,10 @@ ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9653e799a543dd95a7d6fb033e0a8d5b9a4484a8
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314526"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
@@ -57,17 +57,17 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
  @cert_password  
 **nchar** 或 **nvarchar** 類型的變數，其中包含用來加密憑證私密金鑰的密碼。 *\@cert_password* 必須是 Unicode 資料格式。  
 
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 **varbinary**，大小上限為 8,000 個位元組。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 這個函數是利用憑證的私密金鑰為資料解密。 使用非對稱金鑰來轉換密碼編譯，會耗用大量資源。 因此，建議開發人員避免使用 [ENCRYPTBYCERT](./encryptbycert-transact-sql.md) 和 DECRYPTBYCERT 對常式使用者資料進行加密/解密。  
 
 ## <a name="permissions"></a>權限  
 `DECRYPTBYCERT` 需要憑證的 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  
-此範例會從 `[AdventureWorks2012].[ProtectedData04]` 選取標示為憑證 `JanainaCert02` 原本加密之資料的資料列。 此範例會先使用憑證密碼 `pGFD4bb925DGvbd2439587y` 為憑證 `JanainaCert02` 的私密金鑰解密。 然後，此範例會使用此私密金鑰為加密文字解密。 此範例會將解密資料從 **varbinary** 轉換成 **nvarchar**。  
+此範例會從 `[AdventureWorks2012].[ProtectedData04]` 選取標示為憑證 `JanainaCert02` 原本加密之資料的資料列。 此範例會先使用憑證密碼 `JanainaCert02` 為憑證 `pGFD4bb925DGvbd2439587y` 的私密金鑰解密。 然後，此範例會使用此私密金鑰為加密文字解密。 此範例會將解密資料從 **varbinary** 轉換成 **nvarchar**。  
 
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  

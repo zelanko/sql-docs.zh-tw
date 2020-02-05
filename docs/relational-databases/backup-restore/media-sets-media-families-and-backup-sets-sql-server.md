@@ -23,10 +23,10 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 168a471a57b3f1d8cd3ea2a5428d8b0bd9063965
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258685"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>媒體集、媒體家族與備份組 (SQL Server)
@@ -52,7 +52,7 @@ ms.locfileid: "75258685"
 ##  <a name="OvMediaSetsFamiliesBackupSets"></a> 媒體集、媒體家族和備份組的概觀  
  單一媒體集是由一組一個或多個備份媒體上的備份組成。 「媒體集」  (Media Set) 是按順序排列的「備份媒體」  (Backup Media) 集合 (磁帶、磁碟檔案或Azure Blob)，由一個或多個備份作業使用固定的備份裝置類型與數量寫入。 給定的媒體集會使用磁帶機、磁碟機或Azure Blob，但是不得為兩個以上的組合。 
  
-**範例︰** 與媒體集建立關聯的備份裝置可能是三個磁帶機，分別名為 `\\.\TAPE0`、`\\.\TAPE1` 和 `\\.\TAPE2`。 此媒體集僅包含磁帶，一開始最少有三個磁帶 (每個磁帶機一個)。 備份裝置類型與數量是在媒體集建立時確立，而且無法變更。 不過，可在必要時以相同類型的裝置取代備份和還原作業間的指定裝置。  
+**範例：** 與媒體集相關的備份裝置可能是三個磁帶機，分別稱為 `\\.\TAPE0`、 `\\.\TAPE1`和 `\\.\TAPE2`。 此媒體集僅包含磁帶，一開始最少有三個磁帶 (每個磁帶機一個)。 備份裝置類型與數量是在媒體集建立時確立，而且無法變更。 不過，可在必要時以相同類型的裝置取代備份和還原作業間的指定裝置。  
   
  媒體集是在備份作業格式化備份媒體期間，於備份媒體上建立。 如需詳細資訊，請參閱本主題稍後的 [建立新媒體集](#CreatingMediaSet)。 完成格式化後，每個檔案或磁帶會包含媒體集的媒體標頭，且備妥要接收備份內容。 有了適當的標頭，備份作業就可以在指定供作業使用的所有備份裝置上，繼續將指定的資料備份至備份媒體。  
   

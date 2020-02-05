@@ -21,10 +21,10 @@ ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: c06fb5b28e1c3ec5bd50b8922bcdf1e5d1b27ff7
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594396"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
@@ -61,7 +61,7 @@ ALTER COLUMN ENCRYPTION KEY key_name
 > [!WARNING]  
 >  絕對不要在此陳述式中傳遞純文字的 CEK 值。 這麼做會影響此功能的優。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 一般來說，資料行加密金鑰建立時只會使用一個加密值。 當資料行主要金鑰必須輪替時 (目前資料行主要金鑰必須換成新的資料行主要金鑰)，您可以新增資料行加密金鑰值，並以新的資料行主要金鑰來加密。 此工作流程一方面可讓您確保用戶端應用程式能夠存取由資料行加密金鑰加密的資料，一方面也可確保用戶端應用程式能夠使用新的資料行主要金鑰。 如果用戶端應用程式中的驅動程式已啟用 Always Encrypted，但沒有新的主要金鑰存取權，其可使用以舊資料行主要金鑰加密的資料行加密金鑰值來存取敏感性資料。 Always Encrypted 支援的加密演算法需要使用 256 位元純文字值。 
  
 建議您使用 SQL Server Management Studio (SSMS) 或 PowerShell 之類的工具來輪替資料行主要金鑰。 請參閱[使用 SQL Server Management Studio 輪替 Always Encrypted 金鑰](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md)和[使用 PowerShell 輪替 Always Encrypted 金鑰](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)。
@@ -117,6 +117,6 @@ GO
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Always Encrypted 的金鑰管理概觀](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
- [針對具有安全記憶體保護區的 Always Encrypted 管理金鑰](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+ [為具有安全記憶體保護區的 Always Encrypted 管理金鑰](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

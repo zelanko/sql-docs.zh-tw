@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb5211a2d45ef1a5495d1df57143190f1d5f6419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927375"
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
@@ -44,15 +44,15 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>引數  
  *boolean_expression*  
- 這是任何會傳回布林值的有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)：**TRUE**、**FALSE** 或 **UNKNOWN**。  
+ 這是會傳回下列任一布林值的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)：**TRUE**、**FALSE** 或 **UNKNOWN**。  
   
 ## <a name="result-types"></a>結果類型  
- **布林**  
+ **布林值**  
   
 ## <a name="result-value"></a>結果值  
  當兩個運算式都是 TRUE 時，便傳回 TRUE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  下圖顯示利用 AND 運算子比較 TRUE 和 FALSE 值的結果。  
   
 ||TRUE|FALSE|UNKNOWN|  

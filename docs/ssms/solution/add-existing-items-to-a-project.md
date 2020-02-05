@@ -1,6 +1,6 @@
 ---
-title: 將現有的項目加入至專案 | Microsoft Docs
-ms.custom: ''
+title: 將現有的項目加入至專案
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cfdc8405fd958efb34a607736648eddf5f4732dc
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9f17139dfae9a04fe71c8b4d493b0be24d875c4b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252830"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241886"
 ---
 # <a name="add-existing-items-to-a-project"></a>將現有的項目加入至專案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-請將新的項目加入專案中，來延伸應用程式功能。 現有項目可以是查詢或其他檔案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有兩種專案類型：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案和 Analysis Services 指令碼專案。 專案類型決定了可以加入專案中的查詢檔。 例如，您可以將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢 (副檔名是 .sql 的檔案) 加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案中，但您不能將它加入 Analysis Services 指令碼專案中。 若要將其他副檔名關聯於某個專案類型，請參閱[如何：使副檔名與程式碼編輯器相關聯](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  
+請將新的項目加入專案中，來延伸應用程式功能。 現有項目可以是查詢或其他檔案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有兩種專案類型： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案和 Analysis Services 指令碼專案。 專案類型決定了可以加入專案中的查詢檔。 例如，您可以將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢 (副檔名是 .sql 的檔案) 加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案中，但您不能將它加入 Analysis Services 指令碼專案中。 若要使副檔名與專案類型相關聯，請參閱 [如何：使副檔名與程式碼編輯器相關聯](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>將現有的查詢或其他檔案加入專案中  
   
@@ -51,10 +51,10 @@ ms.locfileid: "68252830"
     **檔案類型**  
     使用此選項根據副檔名篩選檔案。 每個產品都會列出最常用之檔案類型的預設篩選。  
   
-    **[加入]**  
+    **加入**  
     使用此下拉式按鈕將項目加入專案中並在預設編輯器中開啟項目。  
   
-    -   **[加入]**  
+    -   **加入**  
   
         將現有的項目複製到磁碟上的專案資料夾，並將項目加入方案總管中所選取的專案之下。 對項目所做的任何變更不會反映到位於原始位置的項目中。 這是此檔案類型的預設編輯器。  
   

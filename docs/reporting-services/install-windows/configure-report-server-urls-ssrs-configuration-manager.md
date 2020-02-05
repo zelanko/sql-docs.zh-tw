@@ -12,10 +12,10 @@ ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 823df0704b07657b5f7493c03fb14158b73263a2
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594079"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>設定報表伺服器 URL (SSRS 組態管理員)
@@ -28,10 +28,10 @@ ms.locfileid: "73594079"
 ## <a name="defining-a-report-server-url"></a>定義報表伺服器 URL  
  此 URL 會精確識別報表伺服器應用程式執行個體在網路上的位置。 當您建立報表伺服器 URL 時，必須指定以下部分。  
   
-|部分|Description|  
+|部分|描述|  
 |----------|-----------------|  
 |主機名稱|TCP/IP 網路會使用 IP 位址來唯一識別網路上的裝置。 電腦上安裝的每一張網路卡都有一個實體 IP 位址。 如果此 IP 位址解析成主機標頭，您就可以指定主機標頭。 如果您正在企業網路上部署報表伺服器，可以使用電腦的網路名稱。|  
-|通訊埠|TCP 通訊埠是裝置上的端點。 報表伺服器將會接聽指定之通訊埠上的要求。|  
+|連接埠|TCP 通訊埠是裝置上的端點。 報表伺服器將會接聽指定之通訊埠上的要求。|  
 |虛擬目錄|通訊埠通常是由多個 Web 服務或應用程式所共用。 因此，報表伺服器 URL 一定會包含可對應至取得要求之應用程式的虛擬目錄。 您必須針對接聽相同 IP 位址和通訊埠的每一個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式指定唯一的虛擬目錄名稱。|  
 |SSL 設定|您可以將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 URL 設定為使用之前安裝在電腦上的現有 SSL 憑證。 如需詳細資訊，請參閱 [在原生模式報表伺服器上設定 SSL 連接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。|  
   
@@ -44,10 +44,10 @@ ms.locfileid: "73594079"
   
  讓這些 URL 可用的設定會出現在下表中， 這個表格會顯示可透過包含主機名稱的 URL 來啟用報表伺服器連接的預設值：  
   
-|部分|ReplTest1|說明|  
+|部分|值|說明|  
 |----------|-----------|-----------------|  
 |IP 位址|全部指派|網路上的網域名稱服務會將 URL 上的主機名稱解析為電腦的 IP 位址。 只要您定義的 URL 中有指定此 IP 位址，傳送給特定主機的要求都將到達所要的目標。|  
-|通訊埠|80|通訊埠 80 是電腦上 TCP/IP 連接的預設通訊埠。 由於報表伺服器會接聽通訊埠 80，所以您可以省略 URL 中的通訊埠編號。 如果您指定另一個通訊埠，就必須在 URL 中指定它。|  
+|連接埠|80|通訊埠 80 是電腦上 TCP/IP 連接的預設通訊埠。 由於報表伺服器會接聽通訊埠 80，所以您可以省略 URL 中的通訊埠編號。 如果您指定另一個通訊埠，就必須在 URL 中指定它。|  
 |虛擬目錄|ReportServer|請注意，這兩個範例 URL 都包含虛擬目錄名稱。 除非您自訂 URL 定義，否則您一定要在 URL 上指定應用程式的虛擬目錄名稱。|  
   
 > [!NOTE]  

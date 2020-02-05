@@ -20,10 +20,10 @@ ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e22d0c36c3a5ce614357566079ec81dc54b7c70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68022188"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
@@ -44,7 +44,7 @@ SESSIONPROPERTY (option)
  *選項*  
  這是此工作階段的目前選項設定。 *option* 可以是下列值之一。  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
 |ANSI_NULLS|指定是否對 Null 值套用等於 (=) 和不等於 (<>) 的 ISO 行為。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |ANSI_PADDING|控制資料行如何儲存比資料行的定義大小還短的值，以及如何儲存字元和二進位資料含有尾端空格的值。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
@@ -55,10 +55,10 @@ SESSIONPROPERTY (option)
 |QUOTED_IDENTIFIER|指定是否遵照如何利用引號來分隔識別碼和常值字串的 ISO 規則。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |\<任何其他字串>|NULL = 輸入無效。|  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **sql_variant**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  SET 選項是由組合伺服器層級、資料庫層級和使用者指定選項來表示。  
   
 ## <a name="examples"></a>範例  

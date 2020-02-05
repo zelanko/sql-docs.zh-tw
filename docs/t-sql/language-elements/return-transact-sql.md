@@ -25,10 +25,10 @@ ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7e16193e0bf6a9596a17f767b157fc825ff3e0a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072376"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
@@ -49,13 +49,13 @@ RETURN [ integer_expression ]
  *integer_expression*  
  這是傳回的整數值。 預存程序可以向發出呼叫的程序或應用程式傳回一個整數值。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  選擇性地傳回 **int**。  
   
 > [!NOTE]  
 >  除非另有說明，否則所有系統預存程序都會傳回 0 值。 這表示成功，而非零值則表示失敗。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當搭配預存程序來使用時，RETURN 無法傳回 Null 值。 如果程序嘗試傳回 Null 值 (例如，當 @status 是 NULL 時，使用 RETURN @status)，便會產生一則警告訊息，而且會傳回 0 值。  
   
  您可以將傳回狀態值包括在執行目前程序之批次或程序的後續 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中，不過，必須依照下列格式輸入：`EXECUTE @return_status = <procedure_name>`。  

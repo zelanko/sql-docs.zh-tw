@@ -1,6 +1,6 @@
 ---
-title: 屬性視窗 (Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 屬性視窗 (Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 51aff80cb84f5ff066917f5ba35d966c0f49d08d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 44110ee4d46cbd0ef25544b3cf410a1c8312d460
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262025"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257587"
 ---
 # <a name="properties-window-management-studio"></a>屬性視窗 (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68262025"
   
 ## <a name="options"></a>選項。  
   
-|元素|Description|  
+|元素|描述|  
 |-----------|---------------|  
 |**物件名稱**|列出目前選取的物件。 只有來自使用中編輯器或設計師的物件才可見。|  
 |**類別目錄**|依類別目錄列出已選取物件的全部屬性和屬性值。 您可以摺疊類別目錄，以減少可見屬性的數目。 當您展開或摺疊類別目錄時，類別目錄名稱左側會出現加號 (+) 或減號 (-)。 類別目錄依字母順序來排列。|  

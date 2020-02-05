@@ -13,24 +13,24 @@ ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d5f53246717621e2482a352d25cf2a24fd24f2f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125166"
 ---
 # <a name="filetable-schema"></a>FileTable 結構描述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   描述 FileTable 預先定義且固定的結構描述。  
   
-|檔案屬性名稱|型別|大小|預設|Description|檔案系統可存取性|  
+|檔案屬性名稱|type|大小|預設|描述|檔案系統可存取性|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
-|**path_locator**|**hierarchyid**|變數|識別此項目位置的 **hierarchyid** 。|此節點在階層式 FileNamespace 中的位置。<br /><br /> 資料表的主索引鍵。|可透過設定 Windows 路徑值加以建立及修改。|  
+|**path_locator**|**hierarchyid**|變動|識別此項目位置的 **hierarchyid** 。|此節點在階層式 FileNamespace 中的位置。<br /><br /> 資料表的主索引鍵。|可透過設定 Windows 路徑值加以建立及修改。|  
 |**stream_id**|**[uniqueidentifier] rowguidcol**||**NEWID()** 函數所傳回的值。|FILESTREAM 資料的唯一識別碼。|不適用。|  
-|**file_stream**|**varbinary(max)**<br /><br /> **檔案資料流**|變數|NULL|包含 FILESTREAM 資料。|不適用。|  
-|**file_type**|**nvarchar(255)**|變數|NULL。<br /><br /> 檔案系統中的建立或重新命名作業，將會根據名稱填入副檔名值。|代表檔案的類型。<br /><br /> 當您建立全文檢索索引時，此資料行可用以作為 **TYPE COLUMN** 。<br /><br /> **file_type** 是保存的計算資料行。|自動計算， 無法設定。|  
-|**名稱**|**nvarchar(255)**|變數|GUID 值。|檔案或目錄名稱。|可使用 Windows API 加以建立或修改。|  
-|**parent_path_locator**|**hierarchyid**|變數|**hierarchyid** ，識別內含此項目的目錄。|上層目錄的 **hierarchyid** 。<br /><br /> **parent_path_locator** 是保存的計算資料行。|自動計算， 無法設定。|  
+|**file_stream**|**varbinary(max)**<br /><br /> **檔案資料流**|變動|NULL|包含 FILESTREAM 資料。|不適用。|  
+|**file_type**|**nvarchar(255)**|變動|NULL。<br /><br /> 檔案系統中的建立或重新命名作業，將會根據名稱填入副檔名值。|代表檔案的類型。<br /><br /> 當您建立全文檢索索引時，此資料行可用以作為 **TYPE COLUMN** 。<br /><br /> **file_type** 是保存的計算資料行。|自動計算， 無法設定。|  
+|**名稱**|**nvarchar(255)**|變動|GUID 值。|檔案或目錄名稱。|可使用 Windows API 加以建立或修改。|  
+|**parent_path_locator**|**hierarchyid**|變動|**hierarchyid** ，識別內含此項目的目錄。|上層目錄的 **hierarchyid** 。<br /><br /> **parent_path_locator** 是保存的計算資料行。|自動計算， 無法設定。|  
 |**cached_file_size**|**bigint**|||FILESTREAM 資料的大小 (以位元組為單位)。<br /><br /> **cached_file_size** 是保存的計算資料行。|雖然快取的檔案大小會自動保持最新狀態，不過在少見的情況下，它可能會呈現未同步狀態。 若要計算確切的大小，請使用 **DATALENGTH()** 函數。|  
 |**creation_time**|**datetime2(4)**<br /><br /> **非 Null**|8 個位元組|目前時間。|建立檔案的日期與時間。|自動計算， 也可以使用 Windows API 加以設定。|  
 |**last_write_time**|**datetime2(4)**<br /><br /> **非 Null**|8 個位元組|目前時間。|上次更新檔案的日期與時間。|自動計算， 也可以使用 Windows API 加以設定。|  
