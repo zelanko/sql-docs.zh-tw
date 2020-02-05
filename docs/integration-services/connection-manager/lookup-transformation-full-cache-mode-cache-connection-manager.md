@@ -13,10 +13,10 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1ae22daf218c65bc0aa95068d6162a7b966c838c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298512"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>查閱轉換完整快取模式 - 快取連線管理員
@@ -57,19 +57,19 @@ ms.locfileid: "71298512"
   
 -   [快取轉換](../../integration-services/data-flow/transformations/cache-transform.md)  
   
--   [快取連接管理員](../../integration-services/connection-manager/cache-connection-manager.md)  
+-   [快取連線管理員](../../integration-services/connection-manager/cache-connection-manager.md)  
   
 -   [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)  
   
--   [執行封裝工作](../../integration-services/control-flow/execute-package-task.md)  
+-   [執行套件工作](../../integration-services/control-flow/execute-package-task.md)  
   
 -   [時序容器](../../integration-services/control-flow/sequence-container.md)  
   
- 如需示範如何使用快取連接管理員在完整快取模式下實作查閱轉換的視訊，請參閱[如何：在完整快取模式中實作查閱轉換 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=131031)。  
+ 如需示範如何在完整快取模式中使用快取連線管理員實作查閱轉換的影片，請參閱 [如何：在完整快取模式中實作查閱轉換 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=131031)。  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>若要使用快取連接管理員和資料流程中的資料來源在單一封裝中以完整快取模式實作查閱轉換  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中開啟 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，然後開啟封裝。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中開啟 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，然後開啟封裝。  
   
 2.  在 [控制流程]  索引標籤上加入兩個資料流程工作，然後使用綠色的連接子來連接這些工作：  
   
@@ -77,7 +77,7 @@ ms.locfileid: "71298512"
   
      視需要設定資料來源。  
   
-4.  按兩下 [快取轉換]，然後在 [快取轉換編輯器]  中，按一下 [連線管理員]  頁面上的 [新增]  ，建立新的快取連線管理員。  
+4.  按兩下快取轉換，然後在 [快取轉換編輯器]  中，按一下 [連線管理員]  頁面上的 [新增]  ，建立新的快取連線管理員。  
   
 5.  按一下 [快取連線管理員編輯器]  對話方塊的 [資料行]  索引標籤，然後使用 [索引位置]  選項，指定哪些資料行是索引資料行。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "71298512"
   
 9. 在子封裝中，以滑鼠右鍵按一下 [連線管理員]  區域，然後按一下 [新增連接]  ，在 [加入 SSIS 連線管理員]  對話方塊中選取 [CACHE]  ，然後按一下 [加入]  ，藉此建立快取連線管理員。  
   
-     [連線管理員]  區域會出現在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 設計師的 [控制流程]  、[資料流程]  和 [事件處理常式]  索引標籤底部。  
+     [連線管理員]  區域會出現在  **設計師的 [控制流程]** **、[資料流程]** **和 [事件處理常式]** [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 索引標籤底部。  
   
 10. 在 [快取連線管理員編輯器]  的 [一般]  索引標籤上，藉由設定下列選項，將快取連線管理員設定為從選取的快取檔案讀取資料：  
   
@@ -181,7 +181,7 @@ ms.locfileid: "71298512"
     -   在 [檔案名稱]  中，輸入檔案路徑或是按一下 [瀏覽]  選取檔案。  
   
     > [!NOTE]  
-    >  封裝保護等級不會套用至快取檔案。 如果快取檔案包含機密資訊，請使用存取控制清單 (ACL) 限制對其中儲存檔案的位置或資料夾的存取權。 您應該只啟用特定帳戶的存取權。 如需詳細資訊，請參閱[對封裝使用之檔案的存取權](../../integration-services/security/security-overview-integration-services.md#files)。  
+    >  封裝保護等級不會套用至快取檔案。 如果快取檔案包含機密資訊，請使用存取控制清單 (ACL) 限制對其中儲存檔案的位置或資料夾的存取權。 您應該只啟用特定帳戶的存取權。 如需詳細資訊，請參閱 [對封裝使用之檔案的存取權](../../integration-services/security/security-overview-integration-services.md#files)。  
   
 11. 如果已在步驟 8 中複製了資料行中繼資料，請按一下 [資料行]  ，選取空白資料列，然後按下 CTRL+V 來貼上資料行中繼資料。  
   
@@ -226,7 +226,7 @@ ms.locfileid: "71298512"
   
 2.  以滑鼠右鍵按一下 [連線管理員]  區域，然後按一下 [新增連接]  。  
   
-     [連線管理員]  區域會出現在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 設計師的 [控制流程]  、[資料流程]  和 [事件處理常式]  索引標籤底部。  
+     [連線管理員]  區域會出現在  **設計師的 [控制流程]** **、[資料流程]** **和 [事件處理常式]** [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 索引標籤底部。  
   
 3.  在 [加入 SSIS 連線管理員]  對話方塊中選取 [CACHE]  ，然後按一下 [加入]  加入快取連線管理員。  
   
@@ -246,7 +246,7 @@ ms.locfileid: "71298512"
      如果是非索引資料行，索引位置為 0。 如果是索引資料行，則索引位置是循序的正數。  
   
     > [!NOTE]  
-    >  當查閱轉換是設定為使用快取連接管理員，則只有參考資料集中的索引資料行可以對應到輸入資料行。 而且，所有的索引資料行都必須進行對應。 如需詳細資訊，請參閱[快取連線管理員編輯器](../../integration-services/connection-manager/cache-connection-manager-editor.md)。  
+    >  當查閱轉換是設定為使用快取連接管理員，則只有參考資料集中的索引資料行可以對應到輸入資料行。 而且，所有的索引資料行都必須進行對應。 如需詳細資訊，請參閱 [快取連線管理員編輯器](../../integration-services/connection-manager/cache-connection-manager-editor.md)。  
   
 7.  在 [控制流程]  索引標籤上，將資料流程工作加入封裝，然後將查閱轉換加入資料流程。  
   
@@ -259,7 +259,7 @@ ms.locfileid: "71298512"
   
     2.  按兩下來源或前一個轉換以設定元件。  
   
-    3.  按兩下 [查閱轉換]，然後在 [查閱轉換編輯器]  的 [一般]  頁面上，選取 [完整快取]  。  
+    3.  按兩下查閱轉換，然後在 [查閱轉換編輯器]  的 [一般]  頁面上，選取 [完整快取]  。  
   
     4.  在 [連接類型]  區域中選取 [快取連線管理員]  。  
   
@@ -284,7 +284,7 @@ ms.locfileid: "71298512"
 9. 執行封裝。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 OLE DB 連接管理員，以完整快取模式來實作查閱轉換](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [使用 OLE DB 連線管理員以完整快取模式來實作查閱轉換](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [以沒有快取或部分快取模式來實作查閱](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services 轉換](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

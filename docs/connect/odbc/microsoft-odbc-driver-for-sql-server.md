@@ -11,10 +11,10 @@ ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f8e46dd253514329ee486c940a14f8dc48b4e9b
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68702687"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
@@ -35,9 +35,9 @@ ODBC 驅動程式隨附 [**sqlcmd**](../../tools/sqlcmd-utility.md) 及 [**bcp**
 
 - ![Download-DownArrow-Circled](../../ssdt/media/download.png)[下載 ODBC 驅動程式](download-odbc-driver-for-sql-server.md)
 
-## <a name="documentation"></a>文件集
+## <a name="documentation"></a>文件
 
-### <a name="features"></a>功能
+### <a name="features"></a>特性
 
 - [自訂金鑰儲存區提供者](../../connect/odbc/custom-keystore-providers.md)
 - [資料分類](../../connect/odbc/data-classification.md)

@@ -11,10 +11,10 @@ ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c025eac60079e601d755439573b35257038d9275
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297359"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (SSIS 運算式)
@@ -43,7 +43,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
 ## <a name="result-types"></a>結果類型  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此函數會將 <character_expression> 字串分割成一組以 <delimiter_string> 中指定之分隔符號來分隔的 Token，然後傳回第 N 個 Token (其中 N 是 \<occurrence> 參數指定的 Token 出現編號)。 如需此函數的範例用法，請參閱＜範例＞一節。  
   
  下列備註適用於 TOKEN 函數：  

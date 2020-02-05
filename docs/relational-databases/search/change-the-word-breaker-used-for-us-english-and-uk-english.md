@@ -11,10 +11,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0d8299581c5394b5528e9c42a41a64445fae800
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903898"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Change the Word Breaker Used for US English and UK English
@@ -36,7 +36,7 @@ ms.locfileid: "72903898"
   
 #### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>若要從目前版本的美式英文斷詞工具切換成舊版  
   
-1.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
+1.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\CLSID**。  
   
 2.  使用下列步驟，針對 LCID 1033 的舊版美式英文斷詞工具和字幹分析器介面加入 COM ClassID 的新機碼：  
   
@@ -48,7 +48,7 @@ ms.locfileid: "72903898"
   
     4.  將該機碼值的 (預設) 資料更新為 **infosoft.dll**。  
   
-3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\enu**。  
+3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\Language\enu**。  
   
 4.  將 **WBreakerClass** 機碼值更新為 **{188D6CC5-CB03-4C01-912E-47D21295D77E}** 。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "72903898"
 
 #### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>若要從目前版本的英式英文斷詞工具切換成舊版  
   
-1.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
+1.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\CLSID**。  
   
 2.  使用下列步驟，針對 LCID 2057 的先前英式英文斷詞工具和字幹分析器介面加入 COM ClassID 的新機碼：  
   
@@ -70,7 +70,7 @@ ms.locfileid: "72903898"
   
     4.  將該機碼值的 (預設) 資料更新為 **infosoft.dll**。  
   
-3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**。  
+3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\Language\eng**。  
   
 4.  將 **WBreakerClass** 機碼值更新為 **{173C97E2-AEBE-437C-9445-01B237ABF2F6}** 。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "72903898"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>若要從舊版的美式英文斷詞工具切換回目前版本  
   
-1.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
+1.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\CLSID**。  
   
 2.  如果下列機碼不存在，請使用下列步驟，針對 LCID 1033 的目前美式英文斷詞工具和字幹分析器介面加入 COM ClassID 的新機碼：  
   
@@ -94,7 +94,7 @@ ms.locfileid: "72903898"
   
     4.  將該機碼值的 (預設) 資料更新為 **MsWb7.dll**。  
   
-3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**。  
+3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\Language\eng**。  
   
 4.  將 **WBreakerClass** 機碼值更新為 **{9faed859-0b30-4434-ae65-412e14a16fb8}** 。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "72903898"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>若要從舊版的英式英文斷詞工具切換回目前版本  
   
-1.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
+1.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\CLSID**。  
   
 2.  如果下列機碼不存在，請使用下列步驟，針對 LCID 2057 的目前英式英文斷詞工具和字幹分析器介面加入 COM ClassID 的新機碼：  
   
@@ -116,7 +116,7 @@ ms.locfileid: "72903898"
   
     4.  將該機碼值的 (預設) 資料更新為 **MsWb7.dll**。  
   
-3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**。  
+3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\Language\eng**。  
   
 4.  將 **WBreakerClass** 機碼值更新為 **{9faed859-0b30-4434-ae65-412e14a16fb8}** 。  
   

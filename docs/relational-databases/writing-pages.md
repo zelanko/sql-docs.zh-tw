@@ -14,10 +14,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9eea6c5cbc995cd73a9f799124772d2be396a9f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095479"
 ---
 # <a name="writing-pages"></a>寫入分頁
@@ -50,7 +50,7 @@ ms.locfileid: "68095479"
 * 急切寫入   
  急切寫入處理序會寫入與非記錄作業 (例如大量插入與選取插入) 相關聯的中途資料頁。 此處理序允許建立頁面與寫入新頁面的作業平行進行。 也就是說，呼叫作業不需要等到整個作業完成，即可將頁面寫入磁碟。
 
-* 檢查點   
+* Checkpoint   
  檢查點處理序會定期掃描緩衝快取，檢查是否有內含來自指定資料庫之頁面的緩衝區，並將所有中途分頁寫入磁碟。 藉由建立一個點來確保所有中途分頁都已寫入磁碟中，檢查點可讓稍後的復原節省時間。 使用者可以使用 CHECKPOINT 命令來要求檢查點作業，或者也可以由 [!INCLUDE[ssDE](../includes/ssde-md.md)] 根據自最後一個檢查點以來所使用的記錄空間數量及經過的時間，自動產生檢查點。 此外，檢查點還會在發生特定活動時產生。 例如，從資料庫加入或移除資料或記錄檔時，或者在停止 SQL Server 的執行個體時。 如需詳細資訊，請參閱 [檢查點與記錄檔的使用中部份](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)。
 
 延遲寫入、急切寫入和檢查點處理序不會等待 I/O 作業完成。 這些處理序一律使用非同步 (或重疊) I/O，並繼續執行其他工作，稍後才檢查 I/O 是否成功。 這可讓 SQL Server 為適當的工作提供最多的 CPU 和 I/O 資源。

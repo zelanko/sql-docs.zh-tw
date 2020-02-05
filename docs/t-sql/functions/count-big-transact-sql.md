@@ -23,13 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23a3dd70b96aef4c24f3aa405ce428db5c7b2321
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026514"
 ---
-# <a name="countbig-transact-sql"></a>COUNT_BIG (Transact-SQL)
+# <a name="count_big-transact-sql"></a>COUNT_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 此函數會傳回群組中找到的項目數。 `COUNT_BIG` 的運作方式類似 [COUNT](../../t-sql/functions/count-transact-sql.md) 函數。 這些函數唯一的差別就是其傳回值的資料類型。 `COUNT_BIG` 一律會傳回 **bigint** 資料類型值。 `COUNT` 一律會傳回 **int** 資料類型值。
@@ -66,14 +66,14 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**
 ## <a name="return-types"></a>傳回類型
 **bigint**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 COUNT_BIG(\*) 會傳回群組中的項目數。 其中包括 NULL 值和複本。
   
 COUNT_BIG (ALL *expression*) 會針對群組中的每個資料列來評估 *expression*，且會傳回非 Null 值的數目。
   
 COUNT_BIG (DISTINCT *expression*) 會針對群組中的每個資料列來評估 *expression*，且會傳回唯一且非 Null 值的數目。
   
-COUNT_BIG **不搭配**  OVER 和 ORDER BY 子句使用時，是具決定性的函數。 COUNT_BIG **搭配**  OVER 和 ORDER BY 子句使用時，不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
+COUNT_BIG **不搭配 ** OVER 和 ORDER BY 子句使用時，是具決定性的函數。 COUNT_BIG **搭配 ** OVER 和 ORDER BY 子句使用時，不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
   
 ## <a name="examples"></a>範例  
 如需範例，請參閱 [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md)。

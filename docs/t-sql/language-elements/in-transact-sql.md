@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 99d179218e52801da593eaba6ef9ff5c7dde5ee0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075065"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
@@ -56,7 +56,7 @@ test_expression [ NOT ] IN
  這是要進行相符測試的運算式清單。 所有運算式的類型都必須與 *test_expression* 相同。  
   
 ## <a name="result-types"></a>結果類型  
- **布林**  
+ **布林值**  
   
 ## <a name="result-value"></a>結果值  
  如果 *test_expression* 的值等於 *subquery* 所傳回的任何值，或等於以逗號分隔清單中的任何 *expression*，結果值就是 TRUE；否則，結果值就是 FALSE。  
@@ -66,7 +66,7 @@ test_expression [ NOT ] IN
 > [!CAUTION]  
 >  相較於使用 IN 或 NOT IN 的 *test_expression*，*subquery* 或 *expression* 所傳回的任何 Null 值都會傳回 UNKNOWN。 將 Null 值與 IN 或 NOT IN 一起使用可能會產生非預期的結果。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  在 IN 子句中明確包括極大量的值 (數千個以逗號分隔的值) 會耗用資源，並傳回錯誤 8623 或 8632。 若要解決此問題，請將項目儲存在資料表的 IN 清單中，並在 IN 子句內使用 SELECT 子查詢。  
   
  錯誤 8623：  
@@ -174,7 +174,7 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-in-and-not-in"></a>D. 使用 IN 和 NOT IN  
- 下列範例會在 `FactInternetSales` 資料表中尋找符合 `DimSalesReason` 資料表中 `SalesReasonKey` 值的所有項目。  
+ 下列範例會在 `FactInternetSales` 資料表中尋找符合 `SalesReasonKey` 資料表中 `DimSalesReason` 值的所有項目。  
   
 ```  
 -- Uses AdventureWorks  
@@ -184,7 +184,7 @@ WHERE SalesReasonKey
 IN (SELECT SalesReasonKey FROM DimSalesReason);   
 ```  
   
- 下列範例會在 `FactInternetSalesReason` 資料表中尋找不符合 `DimSalesReason` 資料表中 `SalesReasonKey` 值的所有項目。  
+ 下列範例會在 `FactInternetSalesReason` 資料表中尋找不符合 `SalesReasonKey` 資料表中 `DimSalesReason` 值的所有項目。  
   
 ```  
 -- Uses AdventureWorks  

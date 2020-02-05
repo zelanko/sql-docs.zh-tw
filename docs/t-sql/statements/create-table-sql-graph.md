@@ -33,10 +33,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37e374d44fc6013c1cdf6b9594d709ff4282f7aa
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846718"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL Graph)
@@ -99,7 +99,7 @@ CREATE TABLE
 本文件僅列出屬於 SQL 圖形的引數。 如需支援之引數的完整清單和描述，請參閱 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 
  *database_name*    
- 資料表據以建立之資料庫的名稱。 *database_name* 必須指定現有資料庫的名稱。 如果未指定，*database_name* 便預設為目前的資料庫。 目前連接的登入必須與 *database_name* 指定的資料庫中現有使用者識別碼有關聯，且這個使用者識別碼必須具有 CREATE TABLE 權限。  
+ 資料表據以建立之資料庫的名稱。 *database_name* 必須指定現有資料庫的名稱。 如果未指定，*database_name* 會預設為目前的資料庫。 目前連接的登入必須與 *database_name* 指定的資料庫中現有使用者識別碼有關聯，且這個使用者識別碼必須具有 CREATE TABLE 權限。  
   
  *schema_name*    
  這是新的資料表所屬的結構描述名稱。  
@@ -122,7 +122,7 @@ CREATE TABLE
  ON {partition_scheme | filegroup | "default"}    
  PRIMARY KEY 或 UNIQUE 條件約束中也可指定此項目。 這些條件約束會建立索引。 如果指定了 filegroup，索引會儲存在具名檔案群組中。 如果指定了 default，或完全未指定 ON，索引就會儲存在與資料表相同的檔案群組中。 如果 PRIMARY KEY 或 UNIQUE 條件約束建立叢集索引，資料表的資料頁面會儲存在索引的相同檔案群組中。 如果指定了 CLUSTERED 或常數建立了叢集索引，且所指定 partition_scheme 與資料表定義的 partition_scheme 或 filegroup 不同 (反之亦然)，則只會遵守條件約束定義，其他一概予以忽略。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 不支援建立暫存資料表作為節點或邊緣資料表。  
 
 不支援建立節點或邊緣資料表作為時態表。

@@ -24,10 +24,10 @@ ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 360b597b8cd122ede57426cc879dd041b3414078
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927559"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT (Transact-SQL)
@@ -54,12 +54,12 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
  *signature*  
  這是附加在已簽署資料中的簽章。 *signature* 為 **varbinary**。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
  如果已簽署的資料不變，則傳回 1，否則傳回 0。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **VerifySignedBycert** 會使用指定憑證的公開金鑰解密資料的簽章，並比較解密值與新計算的資料 MD5 雜湊。 如果值相符，簽章將確認為有效。  
   
 ## <a name="permissions"></a>權限  

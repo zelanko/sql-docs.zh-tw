@@ -16,10 +16,10 @@ ms.assetid: 85e7c3a2-f2da-49bf-9d90-5fd246fd60e1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5adfcb9127e6bc073bda7385387edf0946a96021
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954711"
 ---
 # <a name="executeupdate-method-javalangstring-sqlserverstatement"></a>executeUpdate 方法 (java.lang.String) (SQLServerStatement)

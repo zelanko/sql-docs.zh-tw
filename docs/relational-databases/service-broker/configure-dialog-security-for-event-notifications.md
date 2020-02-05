@@ -13,10 +13,10 @@ ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 488b1efd533f038914f2d0186e29e28622531f02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048900"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>設定事件通知的對話安全性
@@ -60,7 +60,7 @@ ms.locfileid: "68048900"
 ||在目標服務上[授與 SEND 權限](../../t-sql/statements/grant-transact-sql.md) 給來源資料庫使用者。|  
 |提供來源資料庫的 Service Broker 識別碼給目標伺服器。 此識別碼可利用查詢 **sys.databases** 目錄檢視的 [service_broker_guid](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 資料行取得。 若為伺服器層級事件通知，請使用 **msdb**的 Service Broker 識別碼。|提供目標資料庫的 Service Broker 識別碼給來源伺服器。|  
   
- **步驟 4：建立路由並設定伺服器層級驗證。**  
+ **步驟 4：建立路由及設定伺服器層級驗證。**  
   
  在來源和目標伺服器上完成下列動作。  
   

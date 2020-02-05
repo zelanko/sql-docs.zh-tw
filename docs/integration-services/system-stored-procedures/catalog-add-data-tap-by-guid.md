@@ -11,10 +11,10 @@ ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6d31ad18b9a7de5b045a9ed868d20a0f35ab441b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281375"
 ---
 # <a name="catalogadd_data_tap_by_guid"></a>catalog.add_data_tap_by_guid 
@@ -52,7 +52,7 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
  *dataflow_path_id_string* 是 **nvarchar(4000)** 。  
   
  [ @data_filename = ] *data_filename*  
- 儲存點選資料的檔案名稱。 如果資料流程工作是在 Foreach 迴圈或 For 迴圈容器中執行，個別檔案會針對迴圈的每次反覆運算，來儲存點選資料。 每個檔案都會以對應於反覆運算的號碼為字首。 資料點選檔案會寫入至資料夾 "\<SQL Server 安裝資料夾>  \130\DTS\\"。 *data_filename* 是 **nvarchar(4000)** 。  
+ 儲存點選資料的檔案名稱。 如果資料流程工作是在 Foreach 迴圈或 For 迴圈容器中執行，個別檔案會針對迴圈的每次反覆運算，來儲存點選資料。 每個檔案都會以對應於反覆運算的號碼為字首。 資料點選檔案會寫入至資料夾 "*SQL Server 安裝資料夾>\<* \130\DTS\\"。 *data_filename* 是 **nvarchar(4000)** 。  
   
  [ @max_rows = ] max_rows  
  在資料點選期間擷取的資料列數目。 如果沒有指定此值，則會擷取所有資料列。 max_rows 是 **int**。  
@@ -61,7 +61,7 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
  資料點選的識別碼。 *data_tap_id* 是 **bigint**。  
   
 ## <a name="example"></a>範例  
- 下列範例會在資料流程工作 `{D978A2E4-E05D-4374-9B05-50178A8817E8}` 中的資料流程路徑 `Paths[SRC DimDCVentor.OLE DB Source Output]` 上建立資料點選。 點選資料會儲存在 DCVendorOutput.csv 檔案中。  
+ 下列範例會在資料流程工作 `Paths[SRC DimDCVentor.OLE DB Source Output]` 中的資料流程路徑 `{D978A2E4-E05D-4374-9B05-50178A8817E8}` 上建立資料點選。 點選資料會儲存在 DCVendorOutput.csv 檔案中。  
   
 ```sql
 exec catalog.add_data_tap_by_guid   @execution_id,   
@@ -70,8 +70,8 @@ exec catalog.add_data_tap_by_guid   @execution_id,
 'D:\demos\datafiles\DCVendorOutput.csv'  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 若要新增資料點選，執行的執行個體必須處於已建立狀態 ([catalog.operations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 檢視之**狀態**資料行中的值為 1)。 狀態值會在您進行執行時變更。 您可以呼叫 [catalog.create_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) 來建立執行。  
+## <a name="remarks"></a>備註  
+ 若要新增資料點選，執行的執行個體必須處於已建立狀態 (**catalog.operations &#40;SSISDB 資料庫&#41;** 檢視之[狀態](../../integration-services/system-views/catalog-operations-ssisdb-database.md)資料行中的值為 1)。 狀態值會在您進行執行時變更。 您可以呼叫 [catalog.create_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) 來建立執行。  
   
  以下是 add_data_tap_by_guid 預存程序的考量事項。  
   

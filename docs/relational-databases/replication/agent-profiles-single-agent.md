@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 08a8362ab1cdf55af1c3735ee9ab27fb9991b07e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0c0ad89bed910450618c043e7ab5dd2d96fff342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770834"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288298"
 ---
 # <a name="agent-profiles-single-agent"></a>代理程式設定檔 (單一代理程式)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68770834"
  設定檔的名稱。  
   
  **型別**  
- 設定檔的類型：[使用者]  (使用者定義) 或 [系統]  (預先定義)。  
+ 設定檔的類型： **[使用者]** (使用者自訂) 或 **[系統]** (預先定義)。  
   
  **屬性 (...)**  
  按一下即可檢視代理程式設定檔中，每一個參數所使用的值。  

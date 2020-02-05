@@ -19,10 +19,10 @@ ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bcf14745af6da26cc625e928d75f510e0da9a2e8
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70030357"
 ---
 # <a name="data-type-precedence-transact-sql"></a>資料類型優先順序 (Transact-SQL)

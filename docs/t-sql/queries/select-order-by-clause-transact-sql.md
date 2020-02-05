@@ -40,10 +40,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981715"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 子句 (Transact-SQL)
@@ -137,7 +137,7 @@ ORDER BY SchemaName + ''; -- wrong
   
  在查詢執行計畫中，位移資料列計數值會顯示在 TOP 查詢運算子的 **Rows** 或 **Top** 屬性中。  
   
-## <a name="best-practices"></a>最佳作法  
+## <a name="best-practices"></a>最佳做法  
  避免將 ORDER BY 子句中的整數指定為選取清單中資料行的位置表示。 例如，雖然如 `SELECT ProductID, Name FROM Production.Production ORDER BY 2` 的陳述式有效，但相較於指定實際資料行名稱，此陳述式比較不容易為其他人了解。 此外，對選取清單的變更，例如變更資料行順序或加入新資料行，需要修改 ORDER BY 子句，以避免非預期的結果。  
   
  在 SELECT TOP (*N*) 陳述式中，永遠使用 ORDER BY 子句。 這是以預測的方式指示哪些資料列受到 TOP 影響的唯一方法。 如需詳細資訊，請參閱 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)。  
@@ -199,9 +199,9 @@ ORDER BY SchemaName + ''; -- wrong
   
 ## <a name="examples"></a>範例  
   
-|類別目錄|代表性語法元素|  
+|類別|代表性語法元素|  
 |--------------|------------------------------|  
-|[基本語法](#BasicSyntax)|ORDER BY|  
+|[基本語法](#BasicSyntax)|排序依據|  
 |[指定遞增和遞減順序](#SortOrder)|DESC • ASC|  
 |[指定定序](#Collation)|COLLATE|  
 |[指定條件順序](#Case)|CASE 運算式|  
@@ -537,7 +537,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName;  
 ```  
   
- 下列範例依據兩個資料行排序。 此查詢會先依據 `FirstName` 資料行以遞增順序排序，然後再依據 `LastName` 資料行以遞減順序排序共同的 `FirstName` 值。  
+ 下列範例依據兩個資料行排序。 此查詢會先依據 `FirstName` 資料行以遞增順序排序，然後再依據 `FirstName` 資料行以遞減順序排序共同的 `LastName` 值。  
   
 ```sql
 -- Uses AdventureWorks  

@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ed342f6b73ee596d8429aa4b952c4becf7d41ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044036"
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE (Transact-SQL)
@@ -65,13 +65,13 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
  *procedure*  
  要移除的預存程序或預存程序群組的名稱。 無法卸除編碼程序群組內的個別程序；會卸除整個程序群組。  
   
-## <a name="best-practices"></a>最佳作法  
+## <a name="best-practices"></a>最佳做法  
  在移除任何預存程序之前，請先檢查相依物件並對應地修改這些物件。 卸除預存程序可能在這些物件未更新的情況下，造成相依物件和指令碼失敗。 如需詳細資訊，請參閱[檢視預存程序的相依性](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)  
   
 ## <a name="metadata"></a>中繼資料  
  若要顯示現有程序的清單，查詢 **sys.objects** 目錄檢視。 若要顯示程序定義，請查詢 **sys.sql_modules** 目錄檢視。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>權限  
  需要程序的 **CONTROL** 權限，或程序所屬結構描述的 **ALTER** 權限，或 **db_ddladmin** 固定伺服器角色的成員資格。  

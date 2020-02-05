@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f624ada102ddc74f1062659a35dd758b5c33ce7a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295852"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 從 Excel 匯入資料，或將資料匯出至 Excel
@@ -55,7 +55,7 @@ ms.locfileid: "71295852"
 
 您可能必須下載適用於 Excel 的連線元件 (如果它們尚未安裝的話)，然後才能使用 SSIS 從 Excel 匯入資料，或將資料匯出至 Excel。 預設不會安裝適用於 Excel 的連線元件。
 
-在這裡下載適用於 Excel 的連線元件最新版本：[Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920) (Microsoft Access 資料庫引擎 2016 可轉散發套件)。 最新版的元件可以開啟舊版 Excel 所建立的檔案。
+在這裡下載適用於 Excel 的連線元件最新版本：[Microsoft Access Database Engine 2016 可轉散發套件](https://www.microsoft.com/download/details.aspx?id=54920)。 最新版的元件可以開啟舊版 Excel 所建立的檔案。
 
 ### <a name="notes-about-the-download-and-installation"></a>關於下載與安裝的注意事項
 
@@ -254,7 +254,7 @@ Excel 驅動程式會在指定來源中讀取特定資料列數目 (依預設為
 
 -   如果現有目的地資料表已包含資料列，則驅動程式所取樣的前幾個資料列必須在備忘資料行中至少包含一個值長於 255 個字元的執行個體。
 
--   如果在套件設計期間或在執行階段或由 [匯入和匯出精靈] 建立新的目的地資料表，則 `CREATE TABLE` 陳述式必須使用 LONGTEXT (或其同義字之一) 作為目的地備忘資料行的資料類型。 在精靈中，按一下 [資料行對應]  頁面的 [建立目的地資料表]  選項旁邊的 [編輯 SQL]  ，檢查 `CREATE TABLE` 陳述式並做必要的修訂。
+-   如果在套件設計期間或在執行階段或由 [匯入和匯出精靈] 建立新的目的地資料表，則 `CREATE TABLE` 陳述式必須使用 LONGTEXT (或其同義字之一) 作為目的地備忘資料行的資料類型。 在精靈中，按一下 [資料行對應]`CREATE TABLE` **頁面的 [建立目的地資料表]** **選項旁邊的 [編輯 SQL]** **，檢查**  陳述式並做必要的修訂。
 
 ## <a name="related-content"></a>相關內容
 

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1696860fd97d1622389cd7ac02ed96919663b5d6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3d8792020e540e67bc81aa1bba7453084fa8a65f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908524"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285956"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "72908524"
  [設定散發](../../../relational-databases/replication/configure-distribution.md)  
  本節中的主題示範如何使用 RMO 來設定發行與散發。  
   
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
+ [建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)  
  本章節中的主題示範如何使用 RMO 來建立、刪除和修改發行集與發行項。  
   
  [訂閱發行集](../../../relational-databases/replication/subscribe-to-publications.md)  
@@ -143,7 +143,7 @@ ms.locfileid: "72908524"
     ```  
   
 ## <a name="connecting-to-a-replication-server"></a>連接至複寫伺服器  
- RMO 程式設計物件需要使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別的執行個體，來建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接。 這個伺服器連接會獨立於任何 RMO 程式設計物件之外建立。 接著會在執行個體建立期間將它傳遞到 RMO 物件，或是將它指派到物件的 `P:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContex`t 屬性。 以此方式，就可以個別建立和管理 RMO 程式設計物件與連接物件執行個體，而且多個 RMO 程式設計物件可以重複使用單一連接物件。 下列規則適用於應用程式伺服器的連接：  
+ RMO 程式設計物件需要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 類別的執行個體，來建立 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 執行個體的連接。 這個伺服器連接會獨立於任何 RMO 程式設計物件之外建立。 接著會在執行個體建立期間將它傳遞到 RMO 物件，或是將它指派到物件的 `P:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContex`t 屬性。 以此方式，就可以個別建立和管理 RMO 程式設計物件與連接物件執行個體，而且多個 RMO 程式設計物件可以重複使用單一連接物件。 下列規則適用於應用程式伺服器的連接：  
   
 -   連接的所有屬性是針對指定的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件所定義。  
   

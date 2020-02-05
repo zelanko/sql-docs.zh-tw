@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bf46cd6f2ce89553d846c0322d0f8866f05921f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086137"
 ---
 # <a name="use-transact-sql"></a>USE (Transact-SQL)
@@ -48,7 +48,7 @@ USE { database_name }
   
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，資料庫參數只能參考目前資料庫。 如果提供目前資料庫以外的資料庫，則 `USE` 陳述式不會在資料庫之間切換，並且會傳回錯誤碼 40508。 若要變更資料庫，您必須直接連接到資料庫。 USE 陳述式在此頁面頂端標示為不適用於 SQL Database，因為即使您可在批次中加入 `USE` 陳述式，它也不會執行任何動作。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，會自動連接到預設的資料庫並取得資料庫使用者的安全性內容。 如果尚未針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入建立資料庫使用者，登入就會以 guest 的身分連接。 如果資料庫使用者沒有資料庫的 CONNECT 權限，USE 陳述式將會失敗。 如果尚未為登入指派預設的資料庫，則其預設資料庫將會設定為 master。  
   
  USE 執行於編譯和執行階段，且會立即生效。 因此，會在指定的資料庫中，執行批次中出現在 USE 陳述式之後的陳述式。  

@@ -1,10 +1,9 @@
 ---
-title: 在作業步驟中使用 Token | Microsoft Docs
-ms.custom: ''
+title: 在作業步驟中使用 Token
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,13 +15,15 @@ helpviewer_keywords:
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 13ee039c9f3a70b5468d3d7b726b1600e8f80339
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5800bd00faac0c34052a5930cfdb1ccaf86afbcb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260881"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257884"
 ---
 # <a name="use-tokens-in-job-steps"></a>在作業步驟中使用 Token
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,11 +37,11 @@ ms.locfileid: "68260881"
 ## <a name="understanding-using-tokens"></a>了解如何使用 Token  
   
 > [!IMPORTANT]  
-> 對 Windows 事件記錄檔具有寫入權限的任何 Windows 使用者，都可以存取由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示或 WMI 警示啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些 Token 包括：**A-DBN**、**A-SVR**、**A-ERR**、**A-SEV**、**A-MSG** 及 **WMI(** <屬性>  **)** 。 請注意在此版本中，Token 的使用擴充到所有警示。  
+> 對 Windows 事件記錄檔具有寫入權限的任何 Windows 使用者，都可以存取由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示或 WMI 警示啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些 Token 包括： **A-DBN**、 **A-SVR**、 **A-ERR**、 **A-SEV**、 **A-MSG**及 **WMI(** _&lt;屬性&gt;_ **)** 。 請注意在此版本中，Token 的使用擴充到所有警示。  
 >   
 > 如果需要使用這些 Token，請先確定只有受信任的 Windows 安全性群組的成員 (例如 Administrators 群組) 才對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在電腦的事件記錄檔具有寫入權限。 然後以滑鼠右鍵按一下物件總管中的 [SQL Server Agent]  、選取 [屬性]  ，然後在 [警示系統]  頁面上選取 [取代回應警示之所有作業的 Token]  ，以啟用這些 Token。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 權杖取代功能既簡單又有效率：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會取代權杖的確切常值字串值。 所有 Token 需區分大小寫。 您的作業步驟必須將這點納入考量，並且必須正確引用您所用的 Token 或將取代字串轉換成正確的資料類型。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token 取代功能既簡單又有效率： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會使用精確的常值字串值來取代 Token。 所有 Token 需區分大小寫。 您的作業步驟必須將這點納入考量，並且必須正確引用您所用的 Token 或將取代字串轉換成正確的資料類型。  
   
 例如，您可能會使用下列陳述式，在作業步驟中列印資料庫的名稱：  
   
@@ -61,7 +62,7 @@ ms.locfileid: "68260881"
   
 ### <a name="sql-server-agent-tokens"></a>SQL Server Agent Token  
   
-|Token|Description|  
+|Token|描述|  
 |---------|---------------|  
 |**(A-DBN)**|資料庫名稱。 若作業是由警示執行，則資料庫名稱值會自動取代作業步驟中的此 Token。|  
 |**(A-SVR)**|伺服器名稱。 若作業是由警示執行，則伺服器名稱值會自動取代作業步驟中的此 Token。|  
@@ -71,7 +72,7 @@ ms.locfileid: "68260881"
 |**(JOBNAME)**|作業的名稱。 此權杖僅適用於 SQL Server 2016 和更新版本。|  
 |**(STEPNAME)**|步驟的名稱。 此權杖僅適用於 SQL Server 2016 和更新版本。|  
 |**(DATE)**|目前日期 (格式為 YYYYMMDD)。|  
-|**(INST)**|執行個體名稱。 針對預設執行個體，此權杖將具有預設執行個體名稱：MSSQLSERVER。|  
+|**(INST)**|執行個體名稱。 如果是預設執行個體，此 Token 將具有預設執行個體名稱：MSSQLSERVER。|  
 |**(JOBID)**|作業識別碼。|  
 |**(MACH)**|電腦名稱。|  
 |**(MSSA)**|主要 SQLServerAgent 服務名稱。|  
@@ -88,7 +89,7 @@ ms.locfileid: "68260881"
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server Agent 逸出巨集  
   
-|逸出巨集|Description|  
+|逸出巨集|描述|  
 |-----------------|---------------|  
 |**$(ESCAPE_SQUOTE(** _token\_name_ **))**|在 Token 取代字串中逸出單引號 (')。 使用兩個單引號來取代一個單引號。|  
 |**$(ESCAPE_DQUOTE(** _token\_name_ **))**|在 Token 取代字串中逸出雙引號 (")。 使用兩個雙引號來取代一個雙引號。|  
@@ -130,7 +131,7 @@ PRINT N'Print ' + @msgString ;</pre>
   
 此外，請注意此範例中，QUOTENAME 函數會設定引號字元。  
   
-### <a name="c-using-tokens-with-the-escapenone-macro"></a>C. 使用 Token 搭配 ESCAPE_NONE 巨集  
+### <a name="c-using-tokens-with-the-escape_none-macro"></a>C. 使用 Token 搭配 ESCAPE_NONE 巨集  
 下列範例是指令碼的一部分，而這個指令碼會從 `job_id` 資料表擷取 `sysjobs` 並使用 `JOBID` Token 來擴展 `@JobID` 變數 (之前在指令碼中宣告成二進位資料類型)。 請注意，由於二進位資料類型不需要任何分隔符號，所以 `ESCAPE_NONE` 巨集會搭配 `JOBID` Token 使用。 您不需要在執行更新指令碼之後，更新此作業步驟。  
   
 <pre>SELECT * FROM msdb.dbo.sysjobs  

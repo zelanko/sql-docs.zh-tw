@@ -11,10 +11,10 @@ ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 62cbd5141dfb6254415657dc3ef03d1402b0f3b4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281363"
 ---
 # <a name="catalogcleanup_server_execution_keys"></a>catalog.cleanup_server_execution_keys 
@@ -66,7 +66,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
 -   SSISDB 資料庫未處於單一使用者模式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  SQL Server 2012 Service Pack 2 已將 SERVER_OPERATION_ENCRYPTION_LEVEL 屬性新增至 **internal.catalog_properties** 資料表。 此屬性有兩個可能的值：  
   
 -   **PER_EXECUTION (1)** - 會針對每次執行建立憑證和對稱金鑰，以用於保護機密的執行參數和執行記錄。 這是預設值。 您可能會在生產環境中遇到效能問題 (鎖死、維護作業失敗等等)，因為每次執行時都會產生憑證/金鑰。 不過，此設定所提供的安全性層級高於另一個值 (2)。  
@@ -85,7 +85,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
 5.  執行 [catalog.cleanup_server_execution_keys](../../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md) 預存程序，以清除 SSISDB 資料庫中的憑證金鑰。 捨棄 SSISDB 資料庫中的憑證和金鑰可能需要很長的時間，因此您應該在離峰期間定期執行這項作業。  
   
-     您可以指定範圍或層級 (執行/專案) 以及要刪除的金鑰數目。 刪除的預設批次大小是 1000。 如果您將層級設定為 2，則只有在刪除相關的專案時，才會刪除金鑰和憑證。  
+     您可以指定範圍或層級 (執行/專案) 以及要刪除的金鑰數目。 刪除的預設批次大小是 1000。 如果您將層級設為 2，則只有在刪除相關的專案時，才會刪除金鑰和憑證。  
   
  如需詳細資訊，請參閱下列知識庫文章。 [修正：當您在 SQL Server 2012 中使用 SSISDB 作為部署存放區時的效能問題](https://support.microsoft.com/kb/2972285)  
   

@@ -1,10 +1,9 @@
 ---
-title: 查詢屬性 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 查詢屬性
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a5365ffd384ae7feeee35924388ad0f89b03d629
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 0be86ddee956542e2637547acc989cf35407f2dd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266295"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255333"
 ---
 # <a name="query-properties-visual-database-tools"></a>查詢屬性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "68266295"
 **查詢設計工具分類**  
 展開以顯示其餘屬性。  
   
-**目的資料表**  
+**目的地資料表**  
 指定要插入資料的資料表名稱。 建立 INSERT 查詢或 MAKE TABLE 查詢時，會出現這份清單。 如果是 INSERT 查詢，請從清單中選取資料表名稱。  
   
 針對 MAKE TABLE 查詢，輸入新資料表的名稱。 若要在其他資料來源中建立目的資料表，請指定完整的資料表名稱，包括目標資料來源名稱、擁有人 (如有需要) 和資料表名稱。  

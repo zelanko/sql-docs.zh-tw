@@ -11,10 +11,10 @@ ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2c5736704fd170c629dacdadb89cb3466a0180db
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298238"
 ---
 # <a name="look-up-infopackage"></a>查閱 InfoPackage
@@ -63,7 +63,7 @@ ms.locfileid: "71298238"
  **型別**  
  顯示 InfoPackage 的類型。 下表列出類型的可能值。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |Trans.|交易資料。|  
 |Attr.|屬性資料。|  

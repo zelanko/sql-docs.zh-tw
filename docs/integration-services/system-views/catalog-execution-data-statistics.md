@@ -11,10 +11,10 @@ ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 97d78f4a96a87b6ffe373335167b796ea5a2de3d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296583"
 ---
 # <a name="catalogexecution_data_statistics"></a>catalog.execution_data_statistics 
@@ -26,7 +26,7 @@ ms.locfileid: "71296583"
 
   每當資料流程元件傳送資料至特定封裝執行的下游元件，此檢視就會顯示一個資料列。 此檢視中的資訊可用來計算元件的資料輸送量。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |data_stats_id|**bigint**|資料的唯一識別碼 (ID)。|  
 |execution_id|**bigint**|執行執行個體的唯一識別碼 (ID)。|  
@@ -40,7 +40,7 @@ ms.locfileid: "71296583"
 |created_time|**datatimeoffset(7)**|取得值的時間。|  
 |execution_path|**nvarchar(max)**|元件的執行路徑。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 -   當元件有多個輸出時，就會針對每個輸出各加入一個資料列。  
   

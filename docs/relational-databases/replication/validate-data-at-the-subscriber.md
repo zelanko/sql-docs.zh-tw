@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710759"
 ---
 # <a name="validate-replicated-data"></a>驗證複寫的資料
@@ -46,7 +46,7 @@ ms.locfileid: "71710759"
 
  驗證資料是一個三部份式的處理：  
   
-1.  *「標示」* 要驗證之發行集的單個或所有訂閱。 在 [驗證單一訂閱]  、[驗證多個訂閱]  和 [驗證所有訂閱]  對話方塊 (位於 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [本機發行集]  資料夾和 [本機訂閱]  資料夾) 中標示要驗證的訂閱。 您也可以從複寫監視器中的 **[所有訂閱]** 索引標籤、 **[訂閱監看清單]** 索引標籤和發行集節點標示訂閱。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+1.  *「標示」* 要驗證之發行集的單個或所有訂閱。 在 [驗證單一訂閱]  、[驗證多個訂閱]  和 [驗證所有訂閱]  對話方塊 (位於  的 [本機發行集]  資料夾和 [本機訂閱][!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]資料夾) 中標示要驗證的訂閱。 您也可以從複寫監視器中的 **[所有訂閱]** 索引標籤、 **[訂閱監看清單]** 索引標籤和發行集節點標示訂閱。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 2.  在下一次由「散發代理程式」(用於異動複寫) 或「合併代理程式」(用於合併式複寫) 進行同步時，將對訂閱進行驗證。 「散發代理程式」通常連續執行，此時可立即進行驗證；「合併代理程式」通常視需要執行，此時驗證將在執行代理程式後進行。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "71710759"
   
  若要處理驗證失敗，請考慮下列各項：  
   
--   設定名稱為**複寫:訂閱者資料驗證失敗**的複寫警示，以便通知您失敗的情況。 如需詳細資訊，請參閱[設定預先定義的複寫警示 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)。  
+-   設定名稱為 **複寫: 訂閱者資料驗證失敗** 的複寫警示，以便通知您失敗的情況。 如需詳細資訊，請參閱[設定預先定義的複寫警示 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)。  
   
 -   您的應用程式是否有驗證失敗的問題？ 如果有驗證失敗的問題，請手動更新資料以便對其進行同步處理，或重新初始化訂閱：  
   
@@ -104,11 +104,11 @@ ms.locfileid: "71710759"
     2.  如果代理程式尚未執行，請按一下 **[檢視同步處理的狀態]** 對話方塊中的 **[啟動]** 。 對話方塊就會顯示關於驗證的參考用訊息。    
      如果您未看到任何關於驗證的訊息，則代理程式已經記錄了後續訊息。 在此情況下，請在複寫監視器中檢視驗證結果。 如需詳細資訊，請參閱這個主題中＜複寫監視器＞的如何程序。  
 
-### <a name="using-transact-sql"></a>使用 Transact-SQL
+### <a name="using-transact-sql"></a>使用 TRANSACT-SQL
 
 #### <a name="all-articles"></a>所有發行項 
   
-1.  在發行集資料庫的發行者端，執行 [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)。 針對 `@rowcount_only` 指定 `@publication` 和下列其中一個值：  
+1.  在發行集資料庫的發行者端，執行 [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)。 針對 `@publication` 指定 `@rowcount_only` 和下列其中一個值：  
   
     -   **1** - 只限列數檢查 (預設值)    
     -   **2** - 列數及二進位總和檢查碼。  
@@ -213,7 +213,7 @@ ms.locfileid: "71710759"
     2.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]** 。    
     3.  在 **[同步處理記錄]** 索引標籤上的 **[所選取工作階段的最後訊息]** 測試區域中檢視資訊。  
 
-### <a name="using-transact-sql"></a>使用 Transact-SQL
+### <a name="using-transact-sql"></a>使用 TRANSACT-SQL
 1.  在發行集資料庫的發行者端，執行 [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)。 指定 `@publication`、`@subscriber` 的發行集、`@subscriber_db` 的訂閱者資料庫名稱，以及針對 `@level` 指定下列其中一個值：   
     -   **1** - 只驗證列數。    
     -   **3** - 驗證列數二進位總和檢查碼。  
@@ -240,8 +240,8 @@ ms.locfileid: "71710759"
     2.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]** 。    
     3.  在 **[同步處理記錄]** 索引標籤上的 **[所選取工作階段的最後訊息]** 測試區域中檢視資訊。 
   
-### <a name="using-transact-sql"></a>使用 Transact-SQL
-1.  在發行集資料庫的發行者端，執行 [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)。 針對 `@level` 指定 `@publication` 和下列其中一個值：    
+### <a name="using-transact-sql"></a>使用 TRANSACT-SQL
+1.  在發行集資料庫的發行者端，執行 [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)。 針對 `@publication` 指定 `@level` 和下列其中一個值：    
     -   **1** - 只驗證列數。   
     -   **3** - 驗證列數二進位總和檢查碼。  
   

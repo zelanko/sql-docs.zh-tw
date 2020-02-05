@@ -14,10 +14,10 @@ ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d2cae61482de6b3269122249b310166987cfb44b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296551"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (SSISDB 資料庫)
@@ -29,7 +29,7 @@ ms.locfileid: "71296551"
 
   顯示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的所有作業的詳細資料。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |operation_id|**bigint**|作業的唯一識別碼 (ID)。|  
 |operation_type|**smallint**|作業的類型。|  
@@ -37,7 +37,7 @@ ms.locfileid: "71296551"
 |object_type|**smallint**|受作業影響之物件的類型。 物件可以是資料夾 (`10`)、專案 (`20`)、封裝 (`30`)、環境 (`40`) 或執行執行個體 (`50`)。|  
 |object_id|**bigint**|受作業影響之物件的識別碼。|  
 |object_name|**nvarchar(260)**|物件的名稱。|  
-|status|**int**|作業的狀態。 可能的值為已建立 (`1`)、執行中 (`2`)、已取消 (`3`)、失敗 (`4`)、暫止 (`5`)、意外結束 (`6`)、成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
+|status|**int**|作業狀態。 可能的值為已建立 (`1`)、執行中 (`2`)、已取消 (`3`)、失敗 (`4`)、暫止 (`5`)、意外結束 (`6`)、成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
 |start_time|**datetimeoffset**|作業啟動的時間。|  
 |end_time|**datetimeoffsset**|作業結束的時間。|  
 |caller_sid|**varbinary(85)**|使用者的安全性識別碼 (SID) (如果使用 Windows 驗證登入)。|  
@@ -48,7 +48,7 @@ ms.locfileid: "71296551"
 |server_name|**nvarchar(128)**|指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 Windows 伺服器和執行個體資訊。|  
 |machine_name|**nvarchar(128)**|執行伺服器執行個體的電腦名稱。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個檢視會針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的每個作業顯示一行資料列。 它允許系統管理員列舉伺服器上已執行的所有邏輯作業 (例如部署專案或執行封裝)。  
   
  這個檢視會顯示下列作業類型，如同 **operation_type** 資料行中所列：  
@@ -63,7 +63,7 @@ ms.locfileid: "71296551"
 |`200`|**create_execution** 和 **start_execution**<br /><br /> (預存程序)|專案識別碼|**NULL**|  
 |`202`|**stop_operation**<br /><br /> (預存程序)|專案識別碼|**NULL**|  
 |`300`|**validate_project**<br /><br /> (預存程序)|專案識別碼|專案名稱|  
-|`301`|**validate_package**<br /><br /> (預存程序)|專案識別碼|封裝名稱|  
+|`301`|**validate_package**<br /><br /> (預存程序)|專案識別碼|套件名稱|  
 |`1000`|**configure_catalog**<br /><br /> (預存程序)|**NULL**|**NULL**||  
   
 ## <a name="permissions"></a>權限  

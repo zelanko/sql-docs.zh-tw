@@ -14,10 +14,10 @@ ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0dedb0034099dcb803bb6354a0806b613108da8d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296800"
 ---
 # <a name="catalogrevoke_permission-ssisdb-database"></a>catalog.revoke_permission (SSISDB 資料庫)
@@ -67,7 +67,7 @@ catalog.revoke_permission [ @object_type = ] object_type
 ## <a name="result-sets"></a>結果集  
  None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  None  
   
 ## <a name="permissions"></a>權限  
@@ -79,7 +79,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   **系統管理員**伺服器角色的成員資格  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果指定 permission_type，則預存程序會移除已明確指派給物件主體的權限。 即使沒有這種類型的執行個體，程序還是會傳回成功的程式碼值 (`0`)。 如果省略 permission_type，則預存程序會移除物件主體的所有權限。  
   
 > [!NOTE]  
@@ -91,7 +91,7 @@ catalog.revoke_permission [ @object_type = ] object_type
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|允許主體讀取會被視為物件一部分 (例如屬性) 的資訊。 它不允許主體列舉或讀取物件內所包含之其他主體的內容。|資料夾、專案、環境、作業|  
 |`2`|MODIFY|允許主體修改會被視為物件一部分 (例如屬性) 的資訊。 它不允許主體修改物件內所包含之其他主體的內容。|資料夾、專案、環境、作業|  
-|`3`|執行 CREATE 陳述式之前，請先執行|允許主體執行專案中所有的封裝。|專案|  
+|`3`|執行 CREATE 陳述式之前，請先執行|允許主體執行專案中所有的封裝。|隨附此逐步解說的專案|  
 |`4`|MANAGE_PERMISSIONS|允許主體將權限指派至物件。|資料夾、專案、環境、作業|  
 |`100`|CREATE_OBJECTS|允許主體在資料夾中建立物件。|資料夾|  
 |`101`|READ_OBJECTS|允許主體讀取資料夾中的所有物件。|資料夾|  

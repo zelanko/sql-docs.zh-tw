@@ -22,10 +22,10 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e555a51cc4ab7c628dc75469aa1cfe4d7c01edcc
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211436"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
@@ -105,7 +105,7 @@ ms.locfileid: "70211436"
  TIMEOUT *timeout*  
  指定陳述式等候訊息的時間 (以毫秒為單位)。 這個子句只適用於 WAITFOR 子句。 如果未指定這個子句，或逾時為 -**1**，等候時間便沒有限制。 如果等候時間逾時，RECEIVE 會傳回空的結果集。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]  
 >  如果 RECEIVE 陳述式不是批次或預存程序中的第一個陳述式，就必須利用分號 (;) 來終止前一個陳述式。  
@@ -155,7 +155,7 @@ ms.locfileid: "70211436"
 ## <a name="queue-columns"></a>佇列資料行  
  下表列出佇列中的資料行：  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**status**|**tinyint**|訊息狀態。 針對 RECEIVE 命令傳回的訊息，狀態一律是 **0**。 佇列中的訊息可能會包含下列其中一個值：<br /><br /> **0**=備妥**1**=接收的訊息**2**=尚未完成**3**=保留的傳送訊息|  
 |**priority**|**tinyint**|套用到訊息的交談優先權等級。|  

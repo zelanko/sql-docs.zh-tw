@@ -1,10 +1,9 @@
 ---
-title: XML 索引對話方塊 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: XML 索引對話方塊
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,29 +11,31 @@ f1_keywords:
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c2526d2facc494dc102ac6674ac01ab851b0a40c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 38be046b5c99e56a76c716117708d4eeb88ac9fd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262459"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246178"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML 索引對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用 [XML 索引]  對話方塊可建立 XML 資料類型資料行的索引，但是此類資料行無法以 [索引/索引鍵]  對話方塊進行索引。 各個 XML 資料行可以具有一個以上的 XML 索引，但是首先建立 (主要) 的索引將成為其他索引 (次要) 的基準。 如果刪除主要的 XML 索引，次要索引也將一併刪除。  
+使用 [XML 索引] 對話方塊可建立 XML 資料類型資料行的索引，但是此類資料行無法以 [索引/索引鍵] 對話方塊進行索引。 各個 XML 資料行可以具有一個以上的 XML 索引，但是首先建立 (主要) 的索引將成為其他索引 (次要) 的基準。 如果刪除主要的 XML 索引，次要索引也將一併刪除。  
   
 ## <a name="options"></a>選項。  
 **選取的 XML 索引**  
 列出現有的 XML 索引。 選取此選項，即可在右邊方格中顯示其屬性。 如果清單是空的，表示此資料表沒有任何定義的項目。  
   
-**[加入]**  
+**加入**  
 建立新的 XML 索引。  
   
 **刪除**  
-刪除 [選取的 XML 索引]  清單中選取的 XML 索引。 如果刪除主要 XML 索引，您會接獲通知表示這個動作將同時刪除所有的次要索引；您可以選擇繼續或取消動作。  
+刪除 [選取的 XML 索引] 清單中選取的 XML 索引。 如果刪除主要 XML 索引，您會接獲通知表示這個動作將同時刪除所有的次要索引；您可以選擇繼續或取消動作。  
   
 **一般類別目錄**  
-展開時會顯示 [資料行]  、[為主要]  和 [類型]  屬性欄位。  
+展開時會顯示 [資料行]、[為主要] 和 [類型] 屬性欄位。  
   
 **資料行**  
 顯示此索引依遞增順序排列。  
@@ -52,19 +53,19 @@ ms.locfileid: "68262459"
 顯示此索引為 XML 索引。  
   
 **識別類別目錄**  
-展開時會顯示 [名稱]  和 [描述]  屬性欄位。  
+展開時會顯示 [名稱] 和 [描述] 屬性欄位。  
   
 **名稱**  
 顯示 XML 索引的名稱。 在建立新索引時，會根據 [資料表設計師] 作用中視窗的資料表，給予預設的名稱。 您可以隨時變更名稱。  
   
 **說明**  
-描述索引。 若要寫入更詳細的描述，請按一下 [描述]  ，然後按一下屬性欄位右邊出現的省略符號按鈕 ( **...** )。 如此便可提供較大的區域以寫入文字。  
+描述索引。 若要寫入更詳細的描述，請按一下 [描述]，然後按一下屬性欄位右邊出現的省略符號按鈕 (**...**)。 如此便可提供較大的區域以寫入文字。  
   
 **資料表設計工具類別目錄**  
 展開時會顯示此 XML 索引的屬性相關資訊。  
   
 **填滿規格**  
-展開時會顯示 [填滿因數]  \(Fill Factor) 和 [索引頁預留空間]  的資訊。  
+展開時會顯示 [填滿因數]\(Fill Factor) 和 [索引頁預留空間] 的資訊。  
   
 **填滿因數**  
 指定系統可以填滿的索引頁百分比。 當一頁填滿時，如果加入新資料，系統必須分割此頁，因此會降低效能。  
@@ -74,7 +75,7 @@ ms.locfileid: "68262459"
 -   較小的值會在資料頁中會留下較多空白空間，因此索引增加時就不需要分割資料頁。 不過會需要更多的儲存空間。 此設定較適用於資料表內資料被變更的情況。  
   
 **索引頁預留空間**  
-提供此索引中的頁面與 [填滿因數]  中所指定相同的空白空間 (填補) 百分比。  
+提供此索引中的頁面與 [填滿因數] 中所指定相同的空白空間 (填補) 百分比。  
   
 **是停用的**  
 指定此索引是否停用。 停用的索引不支援搜尋功能，而且新項目加入資料表時也不會更新停用的索引。 您可以停用索引，提升大量插入與更新的效能。  

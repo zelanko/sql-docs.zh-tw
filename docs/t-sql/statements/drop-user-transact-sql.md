@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 99f4c5ac155f821dfaf69f335629730d99eb6933
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072088"
 ---
 # <a name="drop-user-transact-sql"></a>DROP USER (Transact-SQL)
@@ -60,7 +60,7 @@ DROP USER user_name
  *user_name*  
  指定在這個資料庫內用來識別使用者的名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  擁有安全性實體的使用者不能從資料庫卸除。 在卸除擁有安全性實體的資料庫使用者之前，必須先卸除或傳送那些安全性實體的擁有權。  
   
  雖然您不能卸除 guest 使用者，但是可以在 master 或 tempdb 以外的任何資料庫中執行 REVOKE CONNECT FROM GUEST 來撤銷其 CONNECT 權限，以停用 guest 使用者。  

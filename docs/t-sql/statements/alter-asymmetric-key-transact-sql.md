@@ -20,10 +20,10 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 06263499babe005bca36a982bc863dfa24356b5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066067"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
@@ -66,16 +66,16 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  DECRYPTION BY PASSWORD **='***oldPassword***'**  
  指定目前用來保護私密金鑰的舊密碼。 如果是利用資料庫主要金鑰加密私密金鑰，則不需要這個選項。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果沒有資料庫主要金鑰，則需要 ENCRYPTION BY PASSWORD 選項，而且如果沒有提供密碼，作業會失敗。 如需如何建立資料庫主要金鑰的資訊，請參閱 [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)。  
   
  您可以利用 ALTER ASYMMETRIC KEY 指定 PRIVATE KEY 選項 (如下表所示) 來變更私密金鑰的保護。  
   
 |變更保護|ENCRYPTION BY PASSWORD|DECRYPTION BY PASSWORD|  
 |----------------------------|----------------------------|----------------------------|  
-|從舊密碼到新密碼|必要項|必要項|  
-|從密碼到主要金鑰|省略|必要項|  
-|從主要金鑰到密碼|必要項|省略|  
+|從舊密碼到新密碼|必要|必要|  
+|從密碼到主要金鑰|省略|必要|  
+|從主要金鑰到密碼|必要|省略|  
   
  必須先開啟資料庫主要金鑰，才可以利用它來保護私密金鑰。 如需詳細資訊，請參閱 [ MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)。  
   

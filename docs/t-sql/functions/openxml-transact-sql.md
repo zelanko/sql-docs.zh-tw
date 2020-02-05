@@ -20,10 +20,10 @@ ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9dacd09604661f9880533fcdcafd2fb7ab9ab12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914588"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
@@ -51,7 +51,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *flags*  
  指出 XML 資料和關聯式資料列集之間所使用的對應，以及填入溢出資料行的方式。 *flags* 是選擇性的輸入參數，而且可以是下列其中一個值。  
   
-|位元組值|Description|  
+|位元組值|描述|  
 |----------------|-----------------|  
 |**0**|預設為**以屬性為主**的對應。|  
 |**1**|使用**以屬性為主**的對應。 可以和 XML_ELEMENTS 合併使用。 在此情況下，會先套用**屬性中心**對應。 接下來，會針對任何剩餘的資料行套用**項目中心**對應。|  
@@ -68,7 +68,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  這是資料列集中資料行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 如果資料行類型與屬性的基礎 **xml** 資料類型不同，則會發生強制型轉。  
   
  *ColPattern*  
- 這是描述 XML 節點應該如何對應到資料行的選擇性、一般 XPath 模式。 若未指定 *ColPattern*，則會發生預設對應 (*flags* 指定的**屬性中心**或**項目中心**對應)。  
+ 這是描述 XML 節點應該如何對應到資料行的選擇性、一般 XPath 模式。 若未指定 *ColPattern*，則會發生預設對應 (**flags** 指定的**屬性中心**或*項目中心*對應)。  
   
  作為指定為 *ColPattern* 之 XPath 模式會用於指定對應的特殊性質 (針對**屬性中心**和**項目中心**對應)，覆寫或增強 *flags* 指出的預設對應。  
   
@@ -80,12 +80,12 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *TableName*  
  這是在具有所要結構描述的資料表已經存在且不需要資料行模式的情況下，可以提供的資料表名稱 (而非 *SchemaDeclaration*)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  WITH 子句會使用 *SchemaDeclaration* 或指定現有的 *TableName*，來提供資料列集格式 (以及其他需要的對應資訊)。 若沒有指定選擇性的 WITH 子句，則會以**邊緣**資料表格式傳回結果。 邊緣資料表代表單一資料表中的細粒 XML 文件結構 (如元素/屬性名稱、文件階層、命名空間、PI 等等)。  
   
  下表說明**邊緣**資料表的結構。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|這是文件節點的唯一識別碼。<br /><br /> 根元素的識別碼值為 0。 負的識別碼值會保留。|  
 |**parentid**|**bigint**|識別節點的父系。 這個識別碼所識別的父系不一定是父項目，這要視其父系由這個識別碼所識別節點的 NodeType 而定。 例如，如果節點是文字節點，則其父系可能是屬性節點。<br /><br />  如果節點位於 XML 文件的最上層，其 ParentID 為 NULL。|  
@@ -102,7 +102,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 ### <a name="a-using-a-simple-select-statement-with-openxml"></a>A. 以 OPENXML 使用簡單的 SELECT 陳述式  
  下列範例會使用 `sp_xml_preparedocument` 來建立 XML 影像的內部表示法。 然後對 XML 文件的內部表示法執行使用 `SELECT` 資料列集提供者的 `OPENXML` 陳述式。  
   
- *flag* 值是設為 `1`。 此值指出**屬性中心**對應。 因此 XML 屬性是對應到資料列集中的資料行。 指定為 `/ROOT/Customer` 的 *rowpattern* 會識別要處理的 `<Customers>` 節點。  
+ *flag* 值是設為 `1`。 此值指出**屬性中心**對應。 因此 XML 屬性是對應到資料列集中的資料行。 指定為 *的*rowpattern`/ROOT/Customer` 會識別要處理的 `<Customers>` 節點。  
   
  此處並未指定選擇性的 *ColPattern* (資料行模式) 參數，因為資料行名稱與 XML 屬性名稱相符。  
   
@@ -161,7 +161,7 @@ NULL       NULL
   
 -   資料列集中的 `OrderID`、`CustomerID` 和 `OrderDate` 會對應到由 XML 文件中 *rowpattern* 所識別節點之父系的屬性。  
   
--   資料列集中的 `ProdID` 資料行會對應到 `ProductID` 屬性，而資料列集中的 `Qty` 資料行則會對應到 *rowpattern* 中所識別之節點的 `Quantity` 屬性。  
+-   資料列集中的 `ProdID` 資料行會對應到 `ProductID` 屬性，而資料列集中的 `Qty` 資料行則會對應到 `Quantity`rowpattern*中所識別之節點的* 屬性。  
   
  雖然**以元素為主**的對應是由 *flags* 參數所指定，但是在 *ColPattern* 中指定的對應會覆寫這個對應。  
   

@@ -22,13 +22,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 89cfdcb49734897dbc41552158c9faad850f331a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135917"
 ---
-# <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
+# <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 此函式會傳回結果集分割區內每個資料列的次序，次序值中沒有任何間距。 特定資料列的次序是一加上該特定資料列前面之相異次序值的數目。  
@@ -43,15 +43,15 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
   
 ## <a name="arguments"></a>引數  
  \<partition_by_clause>  
-首先將 [FROM](../../t-sql/queries/from-transact-sql.md) 子句產生的結果集分割成分割區，然後將 `DENSE_RANK` 函式套用至每個分割區。 如需 `PARTITION BY` 語法，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+首先將 [FROM](../../t-sql/queries/from-transact-sql.md) 子句產生的結果集分割成分割區，然後將 `DENSE_RANK` 函式套用至每個分割區。 如需 [ 語法，請參閱 ](../../t-sql/queries/select-over-clause-transact-sql.md)OVER 子句 &#40;Transact-SQL&#41;`PARTITION BY`。  
   
  \<order_by_clause>  
 決定將 `DENSE_RANK` 函式套用至分割區中資料列的順序。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 如果同一個分割區中有兩個或多個資料列具有相同的次序值，每個資料列會收到相同的次序。 例如，如果兩位頂尖銷售人員有相同的 SalesYTD 值，他們的次序值便都是一。 SalesYTD 次高之銷售人員的次序值便是二。 這會比相關資料列前面之相異資料列數目多出一。 因此，`DENSE_RANK` 函式所傳回的數目不會有間距，次序值一律是連續的。  
   
 整個查詢的排序順序決定資料列在結果集中的順序。 這暗示著次序編號第一的資料列，並不一定是分割區中的第一個資料列。  
@@ -155,9 +155,9 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|FirstName|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
+|名字|姓氏|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
 |---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
-|Michael|Blythe|1|1|1|1|4557045.0459|98027|  
+|Michael|{1}Blythe{2}|1|1|1|1|4557045.0459|98027|  
 |Linda|Mitchell|2|1|1|1|5200475.2313|98027|  
 |Jillian|Carson|3|1|1|1|3857163.6332|98027|  
 |Garrett|Vargas|4|1|1|1|1764938.9859|98027|  
@@ -174,7 +174,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-ranking-rows-within-a-partition"></a>D：排序分割區中的資料列  
+### <a name="d-ranking-rows-within-a-partition"></a>D：在分割區內排列資料列次序  
 此範例會根據其總銷售額，排列每個銷售領域內的銷售代表。 `DENSE_RANK` 會依 `SalesTerritoryGroup` 分割資料列集，並依 `SalesAmountQuota` 排序結果集。  
   
 ```  

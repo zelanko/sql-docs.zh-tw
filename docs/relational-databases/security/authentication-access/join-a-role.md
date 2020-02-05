@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 909a8156556cd4a654dcfd6406de2bd45826e31b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67990492"
 ---
 # <a name="join-a-role"></a>加入角色
@@ -61,7 +61,7 @@ ms.locfileid: "67990492"
   
 -   您可以在 sys.database_role_members 和 sys.database_principals 目錄檢視中，看到資料庫角色。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料庫的 **ALTER ANY ROLE** 權限、角色的 **ALTER** 權限，或 **db_securityadmin**的成員資格。  
@@ -78,9 +78,9 @@ ms.locfileid: "67990492"
   
 4.  以滑鼠右鍵按一下要編輯的角色，並且選取 [屬性]  。  
   
-5.  在 [伺服器角色屬性 -_server\_role\_name_]  對話方塊的 [成員]  頁面上，按一下 [新增]  。  
+5.  在 [伺服器角色屬性 -**server**role_name\_]\__ 對話方塊的 [成員]  頁面上，按一下 [新增]  。  
   
-6.  在 [選取伺服器登入或角色]  對話方塊中，於 [輸入要選取的物件名稱 (範例)]  底下輸入要加入至此伺服器角色的登入或伺服器角色。 或者，按一下 [瀏覽]  並選取 [瀏覽物件]  對話方塊中任何或所有可用的物件。 按一下 [確定]  ，返回 [伺服器角色屬性 -_server\_role\_name_]  對話方塊。  
+6.  在 [選取伺服器登入或角色]  對話方塊中，於 [輸入要選取的物件名稱 (範例)]  底下輸入要加入至此伺服器角色的登入或伺服器角色。 或者，按一下 [瀏覽]  並選取 [瀏覽物件]  對話方塊中任何或所有可用的物件。 按一下 [確定]  ，返回 [伺服器角色屬性 -**server**role_name\_]\__ 對話方塊。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -100,9 +100,9 @@ ms.locfileid: "67990492"
   
 7.  以滑鼠右鍵按一下要編輯的角色，並且選取 [屬性]  。  
   
-8.  在 [資料庫角色屬性 -_database\_role\_name_]  對話方塊的 [一般]  頁面中，按一下 [新增]  。  
+8.  在 [資料庫角色屬性 -**database**role_name\_]\__ 對話方塊的 [一般]  頁面中，按一下 [新增]  。  
   
-9. 在 [選取資料庫使用者或角色]  對話方塊中，於 [輸入要選取的物件名稱 (範例)]  底下輸入要加入至此資料庫角色的登入或資料庫角色。 或者，按一下 [瀏覽]  並選取 [瀏覽物件]  對話方塊中任何或所有可用的物件。 按一下 [確定]  ，返回 [資料庫角色屬性 -_database\_role\_name_]  對話方塊。  
+9. 在 [選取資料庫使用者或角色]  對話方塊中，於 [輸入要選取的物件名稱 (範例)]  底下輸入要加入至此資料庫角色的登入或資料庫角色。 或者，按一下 [瀏覽]  並選取 [瀏覽物件]  對話方塊中任何或所有可用的物件。 按一下 [確定]  ，返回 [資料庫角色屬性 -**database**role_name\_]\__ 對話方塊。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

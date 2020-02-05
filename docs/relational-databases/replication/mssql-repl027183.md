@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 52c271ac-1a0e-43d5-85d4-35886d1efd32
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 085a02cbb32ac47925ab47713a2502fd5dd3ea7b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: b54ab4bdf1e69efe4488525f6b2f089efc9231b6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770066"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286686"
 ---
-# <a name="mssqlrepl027183"></a>MSSQL_REPL027183
+# <a name="mssql_repl027183"></a>MSSQL_REPL027183
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>訊息詳細資料  
@@ -46,25 +46,25 @@ ms.locfileid: "68770066"
 -   已篩選資料表未聯結在唯一索引鍵上，並且聯結包含大量資料表的篩選。  
   
 ## <a name="user-action"></a>使用者動作  
- 若要解決這個問題：  
+ 若要解決此問題：  
   
--   如果您在解決基礎問題時出現此錯誤，則可以增加「合併代理程式」的 **-QueryTimeOut** 參數值，以便處理繼續進行。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
+-   如果您在解決基礎問題時出現此錯誤，則可以增加「合併代理程式」的 **-QueryTimeOut** 參數值，以便處理繼續進行。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱  
   
     -   [處理複寫代理程式設定檔](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
     -   [檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [複寫代理程式可執行檔概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)。  
+    -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)的最小和最大記憶體數量。  
   
 -   儘可能使用預先計算分割區最佳化。 如果符合一些發行集需求，則依預設使用此最佳化。 如需這些需求的詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。 如果發行集不符合這些需求，則請考慮重新設計此發行集。  
   
 -   為發行集保留期限指定可能的最低設定，因為只有在達到保留期限時，複寫才可以清除發行集與訂閱資料庫中的中繼資料。 如需詳細資訊，請參閱 [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)。  
   
--   進行合併式複寫的維護時，請偶爾檢查與合併式複寫相關的系統資料表成長情況：**MSmerge_contents**、**MSmerge_genhistory**、**MSmerge_tombstone**、**MSmerge_current_partition_mappings** 及 **MSmerge_past_partition_mappings**。 定期重新整理資料表的索引。 如需詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
+-   做為合併式複寫維護的一部份，請不時檢查與合併式複寫相關聯的系統資料表成長： **MSmerge_contents**、 **MSmerge_genhistory**、 **MSmerge_tombstone**、 **MSmerge_current_partition_mappings**和 **MSmerge_past_partition_mappings**。 定期重新整理資料表的索引。 如需詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   
 -   確定用於篩選的資料行索引正確，並在需要時重建這些索引。 如需詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   
--   為基於唯一資料行的聯結篩選設定 **join_unique_key** 屬性。 如需詳細資訊，請參閱 [Join Filters](../../relational-databases/replication/merge/join-filters.md)。  
+-   為基於唯一資料行的聯結篩選設定 **join_unique_key** 屬性。 如需相關資訊，請參閱 [Join Filters](../../relational-databases/replication/merge/join-filters.md)。  
   
 -   限制聯結篩選階層中資料表的數量。 若您正在產生五個以上資料表的聯結篩選，請考慮其他方案：不要篩選小型、無法變更或主要為查詢資料表的資料表。 聯結篩選只能用於必須在訂閱中分割的資料表之間。  
   

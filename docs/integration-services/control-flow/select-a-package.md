@@ -15,10 +15,10 @@ ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 561495eaad4dbe41a0af05e80d3c2ba35d91cb74
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293957"
 ---
 # <a name="select-a-package"></a>選取封裝
@@ -32,7 +32,7 @@ ms.locfileid: "71293957"
  **位置**  
  指定封裝的位置。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的位置。 選取此值會顯示動態選項 **[伺服器]** 、 **[使用 Windows 驗證]** 、 **[使用 SQL Server 驗證]** 、 **[使用者名稱]** 和 **[密碼]** 。|  
 |DTSX 檔案|設定 DTSX 檔案的位置。 選取此值會顯示動態選項 **[檔案名稱]** 。|  
@@ -43,7 +43,7 @@ ms.locfileid: "71293957"
  **封裝名稱**  
  選取儲存在指定之伺服器上的封裝。  
   
- **[伺服器]**  
+ **Server**  
  提供伺服器名稱或從清單中選取伺服器。  
   
  **[使用 Windows 驗證]**  
@@ -52,10 +52,10 @@ ms.locfileid: "71293957"
  **[使用 SQL Server 驗證]**  
  按一下即可使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。  
   
- **[使用者名稱]**  
+ **使用者名稱**  
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請提供登入伺服器時要使用的使用者名稱。  
   
- **[密碼]**  
+ **密碼**  
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請提供密碼。  
   
 ### <a name="location--dtsx-file"></a>位置 = DTSX 檔案  

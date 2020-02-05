@@ -1,29 +1,32 @@
 ---
-title: 中斷點視窗 | Microsoft 文件
+title: 中斷點視窗
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ''
-ms.custom: ''
-ms.date: 11/04/2019
 helpviewer_keywords:
 - Breakpoints Window [Transact-SQL]
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: cc5600a7cd9e933046700204a8dac916199832c6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: a80750a9885bd3cd61afd6b6719f5839b5503eac
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73638017"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243374"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Transact-SQL 偵錯工具 - 中斷點視窗
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [中斷點]  視窗會列出目前 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中設定的所有中斷點。 若要管理中斷點，請使用 [中斷點]  視窗內的工具列。 中斷點是偵錯模式下暫停執行的程式碼位置，好讓您可以檢視偵錯資料。
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
 ## <a name="task-list"></a>工作清單
 
@@ -38,7 +41,7 @@ ms.locfileid: "73638017"
 **名稱**  
 顯示中斷點的名稱。 中斷點名稱是由偵錯工具所提供。 此名稱包含內含中斷點的 Database Engine 查詢編輯器視窗名稱，以及查詢編輯器內中斷點設定所在的行號。  
 
-**條件**  
+**Condition**  
 顯示 [(無條件)]  。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具不支援設定中斷點條件。
 
 **叫用計數**  
@@ -46,16 +49,16 @@ ms.locfileid: "73638017"
 
 您可以加入及移除以下資料行，其方式是在 [資料行]  清單中選取這些資料行。  
 
-**篩選**  
+**Filter**  
 顯示 [(無)]  。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具不支援設定中斷點篩選。
 
 **叫用時**  
 顯示 [中斷]  。
 
 **語言**  
-顯示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的 [Transact-SQL]  。  
+顯示  **的 [Transact-SQL]** [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
 
-**函數**  
+**Function**  
 顯示設定中斷點的行號。  
 
 **檔案**  

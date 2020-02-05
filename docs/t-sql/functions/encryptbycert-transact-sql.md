@@ -20,10 +20,10 @@ ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f1548aa3b7b436f89ad4dee73b7c1ed7034e0f87
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314595"
 ---
 # <a name="encryptbycert-transact-sql"></a>ENCRYPTBYCERT (Transact-SQL)
@@ -57,10 +57,10 @@ _cleartext_
 * **varbinary**
 * **nchar**
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 **varbinary**，大小上限為 8,000 位元組。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 這個函式是利用憑證的公開金鑰為資料加密。 加密文字只能利用對應的私密金鑰加以解密。 與使用對稱金鑰進行加密和解密相比，這些非對稱轉換的成本相當高。 因此，若是使用大型資料集，不建議您使用非對稱式加密。
   
 ## <a name="examples"></a>範例  

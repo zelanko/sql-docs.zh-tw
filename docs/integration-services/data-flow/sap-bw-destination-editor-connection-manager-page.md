@@ -13,10 +13,10 @@ ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 66365c942bc3f996d834f0217f29bd82cc911457
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298111"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 目的地編輯器 (連接管理員頁面)
@@ -65,7 +65,7 @@ ms.locfileid: "71298111"
  **型別**  
  輸入可識別 InfoSource 類型的單一字元。 下表列出可接受的單一字元值。  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**D**|交易資料|  
 |**M**|主要資料|  

@@ -1,10 +1,9 @@
 ---
-title: 作業活動監視器 | Microsoft Docs
-ms.custom: ''
+title: 作業活動監視器
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,13 +12,15 @@ f1_keywords:
 ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a3e08cddb16b38d49c93ad596e3bcb87a3afa0d7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b23ddaf501201f8b86de820d29ade0ea5d977ce2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262356"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242359"
 ---
 # <a name="job-activity-monitor"></a>作業活動監視器
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68262356"
   
 ## <a name="options"></a>選項。  
 **名稱**  
-作業名稱。  
+作業的名稱。  
   
 **已啟用**  
 不論作業為已啟用 ([是]  ) 或未啟用 ([否]  )。  

@@ -11,10 +11,10 @@ ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 687e6940b9674cdff852d8aff3e0f6c05423cc70
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296621"
 ---
 # <a name="catalogexecutables"></a>catalog.executables 
@@ -28,7 +28,7 @@ ms.locfileid: "71296621"
   
  可執行檔是您加入至封裝之控制流程的工作或容器。  
   
-|資料行名稱|**Data type**|Description|  
+|資料行名稱|**Data type**|描述|  
 |-----------------|-------------------|-----------------|  
 |executable_id|**bigint**|可執行檔的唯一識別碼。|  
 |execution_id|**bigint**|執行之執行個體的唯一識別碼。|  
@@ -49,5 +49,5 @@ ms.locfileid: "71296621"
 > [!NOTE]  
 >  當您擁有在伺服器上執行操作的權限時，也會具有檢視作業資訊的權限。 強制使用資料列層級安全性，只會顯示您具有檢視權限的資料列。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   

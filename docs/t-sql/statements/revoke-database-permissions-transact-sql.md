@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59536e4f4ba418aef0ee49737a67df43f903435d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983284"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>REVOKE 資料庫權限 (Transact-SQL)
@@ -59,7 +59,7 @@ permission | ALL [ PRIVILEGES ]
  指定可以拒絕的資料庫權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  ALL  
- 這個選項不會撤銷所有可能的權限。 撤銷 ALL 等同於撤銷下列權限：BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。  
+ 這個選項不會撤銷所有可能的權限。 撤銷 ALL 相當於撤銷下列權限：BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。  
   
  PRIVILEGES  
  為符合 ISO 而包含這個項目。 不會變更 ALL 的行為。  
@@ -112,7 +112,7 @@ permission | ALL [ PRIVILEGES ]
  *Database_user_with_no_login*  
  指定不含對應伺服器層級主體的資料庫使用者。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  對被授與已指定 GRANT OPTION 之權限的主體撤銷該權限時，如果未指定 CASCADE，陳述式便會失敗。  
   
  資料庫是由伺服器所包含的安全性實體，而該伺服器是其權限階層中的父系。 下表所列的是可以撤銷之最特定和最有限的資料庫權限，並列出利用隱含方式來併入這些權限的較通用權限。  

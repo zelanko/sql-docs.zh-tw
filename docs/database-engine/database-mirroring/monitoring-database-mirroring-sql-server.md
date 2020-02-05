@@ -14,10 +14,10 @@ ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bcc63d87bc71fa2497e1282364f87272438bbf97
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70212284"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>監視資料庫鏡像 (SQL Server)
@@ -83,7 +83,7 @@ ms.locfileid: "70212284"
   
      下表介紹不需依賴 [資料庫鏡像監視器]，即可獨立用於管理並使用資料庫鏡像監視作業的預存程序。  
   
-    |程序|Description|  
+    |程序|描述|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)|建立一項作業，以便定期更新伺服器執行個體上每個鏡像資料庫的狀態資訊。|  
     |[sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)|變更資料庫鏡像監視參數的值。|  
@@ -131,7 +131,7 @@ ms.locfileid: "70212284"
      系統管理員可以使用 **sp_dbmmonitorresults** 系統預存程序來檢視並選擇性地更新狀態資料表 (如果在前 15 秒內未更新過的話)。 此程序會呼叫 **sp_dbmmonitorupdate** 程序並根據程序呼叫中要求的數量，傳回一個或多個記錄資料列。 如需結果集中狀態的資訊，請參閱 [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)。  
   
 #### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>監視資料庫鏡像狀態 (dbm_monitor 成員)  
- 如上所述，首次執行 **sp_dbmmonitorupdate** 時，它會在 **msdb** 資料庫中建立 **dbm_monitor** 固定資料庫角色。 **dbm_monitor** 固定資料庫角色的成員可以使用「資料庫鏡像監視器」或 **sp_dbmmonitorresults** 預存程序，檢視現有的鏡像狀態。 但是這些使用者無法更新狀態資料表。 若要了解顯示狀態的時間，使用者可以在 [狀態]  頁面上查看 [主體記錄 (\<時間>)]    和 [鏡像記錄 (\<時間>)]    標籤中的時間。  
+ 如上所述，首次執行 **sp_dbmmonitorupdate** 時，它會在 **msdb** 資料庫中建立 **dbm_monitor** 固定資料庫角色。 **dbm_monitor** 固定資料庫角色的成員可以使用「資料庫鏡像監視器」或 **sp_dbmmonitorresults** 預存程序，檢視現有的鏡像狀態。 但是這些使用者無法更新狀態資料表。 若要了解顯示狀態的時間，使用者可以在 [狀態]  頁面上查看 [主體記錄 (_時間>)]\<_   和 [鏡像記錄 (_時間>)]\<_   標籤中的時間。  
   
  **dbm_monitor** 固定資料庫角色的成員會仰賴 [資料庫鏡像監視器作業]  來定期更新狀態資料表。 如果此作業不存在或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 已停止，狀態就會逐漸成為過時，而且不再反映鏡像工作階段的組態。 例如，在容錯移轉之後，夥伴可能看起來像是共用相同的角色 (主體或鏡像)，或者目前的主體伺服器可能會顯示為鏡像，而目前的鏡像伺服器則顯示為主體。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "70212284"
   
  針對這其中每一項提供的資料都摘要在下列章節中。  
   
-#### <a name="partners"></a>夥伴  
+#### <a name="partners"></a>合作夥伴  
  **[狀態]** 頁面會顯示每個夥伴的下列資訊：  
   
 -   伺服器執行個體  
@@ -171,7 +171,7 @@ ms.locfileid: "70212284"
   
     -   已同步處理  
   
-    -   已暫停  
+    -   暫止  
   
     -   已中斷連接  
   
@@ -181,7 +181,7 @@ ms.locfileid: "70212284"
   
     -   Unknown  
   
-    -   已連接  
+    -   連線  
   
     -   已中斷連接  
   

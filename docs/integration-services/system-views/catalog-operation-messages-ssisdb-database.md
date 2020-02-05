@@ -14,10 +14,10 @@ ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bfad11f3bcba41160fcb46ede37f6e7ea3c5ece4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295155"
 ---
 # <a name="catalogoperation_messages-ssisdb-database"></a>catalog.operation_messages (SSISDB 資料庫)
@@ -29,7 +29,7 @@ ms.locfileid: "71295155"
 
   顯示在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中之作業期間所記錄的訊息。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|訊息的唯一識別碼 (ID)。|  
 |operation_id|**bigint**|作業的唯一識別碼。|  
@@ -39,17 +39,17 @@ ms.locfileid: "71295155"
 |message|**nvarchar(max)**|訊息的文字。|  
 |extended_info_id|**bigint**|在 [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) 檢視中所找到，且與作業訊息相關之其他資訊的識別碼。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個檢視會顯示在目錄作業期間所記錄之每個訊息的資料列。 訊息可由伺服器、封裝執行處理或執行引擎所產生。  
   
  這個檢視會顯示下列訊息類型：  
   
-|**message_type** 值|Description|  
+|**message_type** 值|描述|  
 |-----------------------------|-----------------|  
 |-1|Unknown|  
 |120|錯誤|  
 |110|警告|  
-|70|[資訊]|  
+|70|資訊|  
 |10|驗證前|  
 |20|驗證後|  
 |30|執行前|  
@@ -66,7 +66,7 @@ ms.locfileid: "71295155"
   
  這個檢視會顯示下列訊息來源類型。  
   
-|**message_source_type**|Description|  
+|**message_source_type**|描述|  
 |-------------------------------|-----------------|  
 |10|項目 API，例如 T-SQL 和 CLR 預存程序|  
 |20|用來執行封裝的外部處理序 (ISServerExec.exe)|  

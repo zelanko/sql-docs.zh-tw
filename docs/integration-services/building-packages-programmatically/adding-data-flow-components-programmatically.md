@@ -18,10 +18,10 @@ ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4e4c68d5c85f8e31837d24e9cd5e3074620bd303
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294974"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>以程式設計方式加入資料流程元件
@@ -151,7 +151,7 @@ End Module
   
  呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A> 方法以初始化來源元件輸出中的資料行。 因為元件不會自動連接到外部資料來源，所以請在呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.AcquireConnections%2A> 之前先呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A> 方法，以提供其外部資料來源的元件存取權，以及擴展其資料行中繼資料的能力。 最後，呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReleaseConnections%2A> 方法以釋放連接。  
   
-## <a name="next-step"></a>下一個步驟  
+## <a name="next-step"></a>後續步驟  
  在新增和設定元件之後，下一個步驟就是要在兩個元件之間建立路徑，也就是[在兩個元件之間建立路徑](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)主題所討論的內容。  
   
 ## <a name="sample"></a>範例  

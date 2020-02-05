@@ -12,23 +12,23 @@ f1_keywords:
 ms.assetid: 1b401d7d-db8a-4ba1-acb1-b8dec14e3311
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: fbf94f1ef3926c43f44e293f783ba0f1ac57fac9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: e5fa57172b7d6ec49b58bf965d81a23d4916cb2e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767699"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286401"
 ---
 # <a name="filter-settings"></a>篩選設定
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[篩選設定]** 對話方塊可讓您針對「複寫監視器」中的方格定義篩選。 例如，若只要顯示在 **[所有訂閱]** 索引標籤中處於使用中狀態的訂閱，請依序選取 **[資料行名稱]** 資料行中的 **[狀態]** 、 **[運算子]** 資料行中的 **[等於]** ，以及 **[值1]** 資料行中的 **[使用中]** 。 在您定義以一個或多個資料行為基礎的篩選之後，系統便套用此篩選，如此方格就只會顯示符合篩選準則的資料列子集。  
   
 ## <a name="options"></a>選項。  
- **[狀態]**  
+ **資料行名稱**  
  選取您想要用來篩選的資料行名稱。 您可以讓篩選以一個或多個資料行為基礎。  
   
- **[等於]**  
+ **運算子**  
  選取篩選的運算子，例如 **[小於或等於]** 。  
   
  **值1** 和 **值2**  

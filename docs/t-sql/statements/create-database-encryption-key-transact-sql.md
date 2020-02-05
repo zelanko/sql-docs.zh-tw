@@ -29,10 +29,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: da59f10213eab84f52b764f41625d6f9361f0a40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68061002"
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
@@ -78,7 +78,7 @@ ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name
 ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name  
 指定用於加密資料庫加密金鑰之非對稱金鑰的名稱。 為了利用非對稱金鑰加密資料庫加密金鑰，非對稱金鑰必須位在可延伸金鑰管理提供者上。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 您需要具備資料庫加密金鑰，資料庫才可以使用「資料庫透明加密」(TDE)  進行加密。 當資料庫以透明方式進行加密時，會在檔案層級加密整個資料庫，而不需要修改任何特殊的程式碼。 用於加密資料庫加密金鑰的憑證或非對稱金鑰必須位於 master 系統資料庫中。  
   
 資料庫加密陳述式僅允許用於使用者資料庫。  

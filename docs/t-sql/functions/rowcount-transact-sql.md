@@ -22,10 +22,10 @@ ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5baec7bb0328f6765bc4d4e1a04993074ad62999
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843520"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
@@ -41,10 +41,10 @@ ms.locfileid: "73843520"
 @@ROWCOUNT  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以使用下列方式，在 @@ROWCOUNT 中設定該值：  
   
 -   將 @@ROWCOUNT 設為受影響或讀取的資料列數。 資料列不一定會傳送到用戶端。  
@@ -53,7 +53,7 @@ ms.locfileid: "73843520"
   
 -   將 @@ROWCOUNT 重設為 0，但不將該值傳回用戶端。  
   
- 進行簡單指派的陳述式一律會將 @@ROWCOUNT 值設為 1。 它不會傳送任何資料列給用戶端。 這些陳述式的範例如下：SET @*local_variable*、RETURN、READTEXT，以及如 SELECT GETDATE() 或 SELECT **'***一般文字***'** 等無查詢的選取陳述式。  
+ 進行簡單指派的陳述式一律會將 @@ROWCOUNT 值設為 1。 它不會傳送任何資料列給用戶端。 以下是這些陳述式的範例：SET @*local_variable*、RETURN、READTEXT 以及 select without query 陳述式 (例如，SELECT GETDATE() 或 SELECT **'***Generic Text***'** 。  
   
  在查詢中進行指派的陳述式，或是在查詢中使用 RETURN 的陳述式，會將 @@ROWCOUNT 值設為受到該查詢影響或讀取的資料列數，例如：SELECT @*local_variable* = c1 FROM t1。  
   

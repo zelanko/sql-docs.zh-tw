@@ -1,6 +1,7 @@
 ---
-title: 設定 FailureConditionLevel 屬性設定 | Microsoft Docs
-ms.custom: ''
+title: Configure FailureConditionLevel property settings
+describes: 'Use the FailureConditionLevel property to set the conditions for the Always On Failover Cluster Instance (FCI) to fail over or restart. '
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6cbffb92f81ec8eb4485be6672de5ed037546997
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b14cbe214eee4122a60ba2984bc480dcdf44573
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063735"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822017"
 ---
-# <a name="configure-failureconditionlevel-property-settings"></a>設定 FailureConditionLeve 屬性設定
+# <a name="configure-failureconditionlevel-property-settings"></a>Configure FailureConditionLevel property settings
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用 FailureConditionLevel 屬性，即可將 AlwaysOn 容錯移轉叢集執行個體 (FCI) 的條件設定為容錯移轉或重新啟動。 對這個屬性的變更會立即套用，而不需要重新啟動 Windows Server 容錯移轉叢集 (WSFC) 服務或 FCI 資源。  
   
--   **開始之前：** [FailureConditionLevel 屬性設定](#Restrictions)[安全性](#Security)  
+-   **Before you begin:**  [FailureConditionLevel Property Settings](#Restrictions), [Security](#Security)  
   
 -   **To configure the FailureConditionLevel property settings using,** [PowerShell](#PowerShellProcedure), [Failover Cluster Manager](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
@@ -29,7 +30,7 @@ ms.locfileid: "68063735"
 ###  <a name="Restrictions"></a> FailureConditionLevel 屬性設定  
  失敗狀況會設定為遞增等級。 對於等級 1-5，每個等級都包含來自上一個等級的所有狀況，並加上自身的狀況。 這表示，每個等級都具有更高的容錯移轉或重新啟動可能性。  如需詳細資訊，請參閱＜ [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md) ＞主題中的＜判斷失敗＞一節。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 ALTER SETTINGS 及 VIEW SERVER STATE 權限。  

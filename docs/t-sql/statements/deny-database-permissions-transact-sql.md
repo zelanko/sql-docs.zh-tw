@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b78ebdd157afe35a78900e8ceb3c2bad40bb04d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983231"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY 資料庫權限 (Transact-SQL)
@@ -58,7 +58,7 @@ DENY <permission> [ ,...n ]
 
 *permission* 指定可以拒絕的資料庫權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。
 
-ALL 這個選項不會拒絕所有可能的權限。 拒絕 ALL 等同於拒絕下列權限：BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。
+ALL 這個選項不會拒絕所有可能的權限。 拒絕 ALL 相當於拒絕下列權限：BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。
 
 PRIVILEGES 為符合 ISO 而包含這個項目。 不會變更 ALL 的行為。
 
@@ -85,7 +85,7 @@ AS \<database_principal> 指定主體，以讓執行這項查詢的主體可從�
 
 *Database_user_with_no_login* 指定不含對應伺服器層級主體的資料庫使用者。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 資料庫是由伺服器所包含的安全性實體，而該伺服器是其權限階層中的父系。 下表所列的是可以拒絕之最特定和最有限的資料庫權限，並列出利用隱含方式來併入這些權限的較通用權限。
 
@@ -201,7 +201,7 @@ GO
 
 ### <a name="c-denying-view-definition-with-cascade"></a>C. 拒絕具有 CASCADE 的 VIEW DEFINITION
 
-下列範例會拒絕 `CarmineEs` 使用者在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫上的 `VIEW DEFINITION` 權限，以及 `CarmineEs` 授與 `VIEW DEFINITION` 權限的所有主體。
+下列範例會拒絕 `VIEW DEFINITION` 使用者在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫上的 `CarmineEs` 權限，以及 `CarmineEs` 授與 `VIEW DEFINITION` 權限的所有主體。
 
 ```sql
 USE AdventureWorks2012;
@@ -215,5 +215,5 @@ GO
 - [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [GRANT](../../t-sql/statements/grant-transact-sql.md)
-- [Permissions](../../relational-databases/security/permissions-database-engine.md)
+- [權限](../../relational-databases/security/permissions-database-engine.md)
 - [主體](../../relational-databases/security/authentication-access/principals-database-engine.md)

@@ -9,10 +9,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72251908"
 ---
 # <a name="branding-the-web-portal"></a>建立入口網站品牌形象
@@ -91,9 +91,9 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
   
 介面區段分成下列群組。  
   
-|章節|描述|  
+|區段|描述|  
 |---|---|  
-|primary|按鈕和暫留色彩。|  
+|Primary|按鈕和暫留色彩。|  
 |次要|標題列、搜尋列、左邊功能表 (如果顯示) 及這些項目的文字色彩|  
 |主要中性色彩|首頁和報表區域背景。|  
 |次要中性色彩|文字方塊和資料夾選項背景，以及設定功能表。|  
@@ -117,9 +117,9 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
   
 若要加入、下載或移除品牌封裝，您可以執行下列動作。  
   
-1.  選取右上方的**齒輪**。  
+1.  選取右上方的 **齒輪** 。  
   
-2.  選取 [網站設定]  。  
+2.  選取 [站台設定]  。  
   
     ![ssRSGearMenu](../reporting-services/media/ssrsgearmenu.png)  
   

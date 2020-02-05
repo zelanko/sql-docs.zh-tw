@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bc5a4def5c32ffc39c0df58d5a7927a24c90860d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135548"
 ---
 # <a name="native-compilation-advisor"></a>原生編譯 Advisor
@@ -33,7 +33,7 @@ ms.locfileid: "68135548"
  如需移轉方法的資訊，請參閱 [In-Memory OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>使用原生編譯 Advisor 的逐步解說  
- 在 [物件總管]  中，以滑鼠右鍵按一下您想要轉換的預存程序，然後選取 [原生編譯 Advisor]  。 隨即顯示 [預存程序原生編譯 Advisor]  的歡迎頁面。 按 **[下一步]** ，繼續進行。  
+ 在 [物件總管]  中，以滑鼠右鍵按一下您想要轉換的預存程序，然後選取 [原生編譯 Advisor]  。 隨即顯示 [預存程序原生編譯 Advisor]  的歡迎頁面。 選取 [下一步]  以繼續操作。  
   
 ### <a name="stored-procedure-validation"></a>預存程序驗證  
  此頁面將會回報預存程序是否使用任何與原生編譯不相容的建構。 您可以按 [下一步]  查看詳細資料。 如果有與原生編譯不相容的建構，您可以按 [下一步]  查看詳細資料。  

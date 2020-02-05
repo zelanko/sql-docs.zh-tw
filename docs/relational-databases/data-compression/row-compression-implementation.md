@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2127b9164537afca99b8bd556458137d6713001c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030521"
 ---
 # <a name="row-compression-implementation"></a>資料列壓縮實作
@@ -40,7 +40,7 @@ ms.locfileid: "68030521"
 ## <a name="how-row-compression-affects-storage"></a>資料列壓縮如何影響儲存  
  下表描述資料列壓縮如何影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]中的現有類型。 此表格不包含可藉由使用頁面壓縮而達成的節省量。  
   
-|資料類型|儲存是否受到影響？|Description|  
+|資料類型|儲存是否受到影響？|描述|  
 |---------------|--------------------------|-----------------|  
 |**tinyint**|否|所需的最小儲存區是 1 個位元組。|  
 |**smallint**|是|如果 1 個位元組能容納此值，只會使用 1 個位元組。|  

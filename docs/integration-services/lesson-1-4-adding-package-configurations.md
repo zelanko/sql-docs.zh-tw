@@ -11,10 +11,10 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ca9674a5bb3128e86d9cceaca4a971066da0fef
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283674"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>課程 1-4 - 新增套件設定
@@ -40,7 +40,7 @@ ms.locfileid: "71283674"
   
 1.  在 [方案總管] 中，按兩下 DataTransfer.dtsx。  
   
-2.  在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，按一下控制流程設計介面背景中的任何位置。  
+2.  在 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，按一下控制流程設計介面背景中的任何位置。  
   
 3.  在 [SSIS]  功能表上，按一下 [封裝組態]  。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "71283674"
   
 1.  在 [方案總管] 中，按兩下 DataTransfer.dtsx。  
   
-2.  在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，按一下控制流程設計介面背景中的任何位置。  
+2.  在 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，按一下控制流程設計介面背景中的任何位置。  
   
 3.  在 [SSIS]  功能表上，按一下 [封裝組態]  。  
   
@@ -139,5 +139,5 @@ ms.locfileid: "71283674"
   
 ## <a name="see-also"></a>另請參閱  
 [封裝組態](../integration-services/packages/package-configurations.md)  
-[建立封裝組態](../integration-services/packages/create-package-configurations.md)  
-[對封裝使用之檔案的存取權](../integration-services/security/security-overview-integration-services.md#files)  
+[建立套件設定](../integration-services/packages/create-package-configurations.md)  
+[套件所用檔案的存取](../integration-services/security/security-overview-integration-services.md#files)  

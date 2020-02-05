@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5a3fa36b42af67c26a5351a9d8ba7319fc37c4b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984396"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
@@ -132,7 +132,7 @@ DENY
   
 在此陳述式中使用 AS 不代表能模擬其他使用者。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  DENY 陳述式的完整語法相當複雜。 上方的語法圖已簡化，以強調其結構。 拒絕特定安全性實體權限的完整語法描述於下列主題中。  
   
  如果針對被授與指定 GRANT OPTION 之權限的主體拒絕權限時，並沒有指定 CASCADE，DENY 便會失敗。  
@@ -164,12 +164,12 @@ DENY
 |可用性群組|[DENY 可用性群組權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)|  
 |憑證|[DENY 憑證權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-certificate-permissions-transact-sql.md)|  
 |合約|[DENY Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|[資料庫]|[DENY 資料庫權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-permissions-transact-sql.md)|  
+|資料庫|[DENY 資料庫權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-permissions-transact-sql.md)|  
 |資料庫範圍認證|[DENY 資料庫範圍認證 (TRANSACT-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)|  
 |端點|[DENY 端點權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)|  
 |全文檢索目錄|[DENY 全文檢索權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
 |全文檢索停用字詞表|[DENY 全文檢索權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
-|函數|[DENY 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|函式|[DENY 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |登入|[DENY 伺服器主體權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)|  
 |訊息類型|[DENY Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
 |Object|[DENY 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
@@ -179,7 +179,7 @@ DENY
 |路由|[DENY Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
 |結構描述|[DENY 結構描述權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)|  
 |搜尋屬性清單|[DENY 搜尋屬性清單權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-search-property-list-permissions-transact-sql.md)|  
-|[伺服器]|[DENY 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)|  
+|伺服器|[DENY 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)|  
 |服務|[DENY Service Broker 權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
 |預存程序|[DENY 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |對稱金鑰|[DENY 對稱金鑰權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)|  
@@ -187,7 +187,7 @@ DENY
 |系統物件|[DENY 系統物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)|  
 |Table|[DENY 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |類型|[DENY 類型權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)|  
-|使用者|[DENY 資料庫主體權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
+|User|[DENY 資料庫主體權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
 |檢視|[DENY 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |XML 結構描述集合|[DENY XML 結構描述集合權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)|  
   

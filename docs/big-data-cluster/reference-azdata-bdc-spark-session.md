@@ -1,26 +1,26 @@
 ---
 title: azdata bdc spark session 參考
-titleSuffix: SQL Server big data clusters
 description: azdata bdc spark session 命令的參考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f1da72349e7594d267ae0d965ddad03cee93017b
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 6829ce474b2f2f0b000a8ded5cfae2e293e1c2da
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531737"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258621"
 ---
 # <a name="azdata-bdc-spark-session"></a>azdata bdc spark session
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-下文提供 `azdata` 工具中 `sql` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
+下文提供 `bdc spark session` 工具中 `azdata` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
 |     |     |

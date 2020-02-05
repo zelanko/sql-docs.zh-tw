@@ -20,10 +20,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 40ce8094d651ee9ae1423b9c3feb636c33befca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901938"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
@@ -131,10 +131,10 @@ n -  positive integer only.
 
 *al_pattern_quantifier*   
 任意長度的模式，接受規則運算式樣式的模式數量詞，來指定重複指定搜尋模式的次數。 支援的搜尋模式數量詞包括：   
-* **+** ：重複模式 1 或多次。 在找到最短路徑後立即終止。    
-* **{1,n}** ：重複模式 1 至 'n' 次。 在找到最短路徑後立即終止。     
+* **+**: Repeat the pattern 1 or more times. 在找到最短路徑後立即終止。    
+* **{1,n}**: Repeat the pattern 1 to ‘n’ times. 在找到最短路徑後立即終止。     
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 MATCH 內的節點名稱可以重複。  換句話說，在同一個查詢中，可以對某個節點周遊任意的次數。  
 邊緣節點名稱在 MATCH 內不可重複。  
 邊緣可以指向任一方向，但方向必須明確。  

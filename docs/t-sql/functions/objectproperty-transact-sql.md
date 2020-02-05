@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e319c3875adc616d6a855b7fdca0ff24ff880522
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982514"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
@@ -96,7 +96,7 @@ OBJECTPROPERTY ( id , property )
 |IsForeignKey|任何結構描述範圍物件|FOREIGN KEY 條件約束。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsIndexed|資料表、檢視表|有索引的資料表或檢視。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsIndexable|資料表、檢視表|可以建立索引的資料表或檢視。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsInlineFunction|函數|內嵌函數。<br /><br /> 1 = 內嵌函數<br /><br /> 0 = 非內嵌函數|  
+|IsInlineFunction|函式|內嵌函數。<br /><br /> 1 = 內嵌函數<br /><br /> 0 = 非內嵌函數|  
 |IsMSShipped|任何結構描述範圍物件|在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期間所建立的物件。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsPrimaryKey|任何結構描述範圍物件|PRIMARY KEY 條件約束。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> NULL = 不是函數，或物件識別碼無效。|  
 |IsProcedure|任何結構描述範圍物件|程序。<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -104,12 +104,12 @@ OBJECTPROPERTY ( id , property )
 |IsQueue|任何結構描述範圍物件|Service Broker 佇列<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsReplProc|任何結構描述範圍物件|複寫程序。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsRule|任何結構描述範圍物件|繫結規則。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsScalarFunction|函數|純量值函式。<br /><br /> 1 = 純量值函式<br /><br /> 0 = 非純量值函式|  
+|IsScalarFunction|函式|純量值函式。<br /><br /> 1 = 純量值函式<br /><br /> 0 = 非純量值函式|  
 |IsSchemaBound|函數、檢視表|利用 SCHEMABINDING 來建立的結構描述繫結函數或檢視表。<br /><br /> 1 = 結構描述繫結<br /><br /> 0 = 非結構描述繫結。|  
 |IsSystemTable|Table|系統資料表。<br /><br /> 1 = True<br /><br /> 0 = False| 
 |IsSystemVerified|Object|SQL Server 可以驗證物件的決定性和有效位數屬性。<br /><br /> 1 = True<br /><br /> 0 = False| 
 |IsTable|Table|資料表。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsTableFunction|函數|資料表值函式。<br /><br /> 1 = 資料表值函式<br /><br /> 0 = 非資料表值函式|  
+|IsTableFunction|函式|資料表值函式。<br /><br /> 1 = 資料表值函式<br /><br /> 0 = 非資料表值函式|  
 |IsTrigger|任何結構描述範圍物件|觸發程序。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUniqueCnst|任何結構描述範圍物件|UNIQUE 條件約束。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Table|使用者自訂資料表。<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -122,8 +122,8 @@ OBJECTPROPERTY ( id , property )
 |TableFullTextBackgroundUpdateIndexOn|Table|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 資料表啟用全文檢索背景更新索引 (自動變更追蹤)。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
 |TableFulltextCatalogId|Table|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 資料表的全文檢索索引資料所在的全文檢索目錄識別碼。<br /><br /> 非零 = 全文檢索目錄識別碼，關聯於用來識別全文檢索索引資料表中的資料列之唯一索引。<br /><br /> 0 = 資料表沒有全文檢索索引。|  
 |TableFulltextChangeTrackingOn|Table|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 資料表啟用全文檢索變更追蹤。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
-|TableFulltextDocsProcessed|Table|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 全文檢索索引啟動之後所處理的資料列數。 在建立全文檢索搜尋索引的資料表中，單一資料列的所有資料行都會被視為單一文件的一部分來建立索引。<br /><br /> 0 = 沒有使用中的搜耙，或全文檢索索引已完成。<br /><br /> > 0 = 下列其中之一 (A 或 B)：A) 自啟動「完整」、「累加」或「手動」變更追蹤擴展之後，插入或更新作業所處理的文件數目。 B) 啟用含背景更新索引母體擴展的變更追蹤、變更全文檢索索引結構描述、重建全文檢索目錄，或重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體等作業之後，插入或更新作業所處理的資料列數。<br /><br /> NULL = 資料表沒有全文檢索索引。<br /><br /> 這個屬性不會監視或計算已刪除的資料列。|  
-|TableFulltextFailCount|Table|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 全文檢索搜尋未建立索引的資料列數。<br /><br /> 0 = 母體擴展已完成。<br /><br /> > 0 = 下列其中之一 (A 或 B)：A) 自啟動「完整」、「累加」或「手動」更新變更追蹤擴展之後，尚未編製索引的文件數目。 B) 對於背景更新索引的變更追蹤，在開始母體擴展或重新開始母體擴展之後，尚未建立索引的資料列數。 這可能是結構描述變更、重建目錄、伺服器重新啟動等所造成的。<br /><br /> NULL = 資料表沒有全文檢索索引。|  
+|TableFulltextDocsProcessed|Table|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 全文檢索索引啟動之後所處理的資料列數。 在建立全文檢索搜尋索引的資料表中，單一資料列的所有資料行都會被視為單一文件的一部分來建立索引。<br /><br /> 0 = 沒有使用中的搜耙，或全文檢索索引已完成。<br /><br /> > 0 = 下列其中之一 (A 或 B)：A) 在啟動完整、累加或手動變更追蹤母體擴展之後，插入或更新作業所處理的文件數目。 B) 啟用含背景更新索引母體擴展的變更追蹤、變更全文檢索索引結構描述、重建全文檢索目錄，或重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體等作業之後，插入或更新作業所處理的資料列數。<br /><br /> NULL = 資料表沒有全文檢索索引。<br /><br /> 這個屬性不會監視或計算已刪除的資料列。|  
+|TableFulltextFailCount|Table|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 全文檢索搜尋未建立索引的資料列數。<br /><br /> 0 = 母體擴展已完成。<br /><br /> > 0 = 下列其中之一 (A 或 B)：A) 啟動完整、累加或手動更新變更追蹤母體擴展之後，尚未建立索引的文件數目。 B) 對於背景更新索引的變更追蹤，在開始母體擴展或重新開始母體擴展之後，尚未建立索引的資料列數。 這可能是結構描述變更、重建目錄、伺服器重新啟動等所造成的。<br /><br /> NULL = 資料表沒有全文檢索索引。|  
 |TableFulltextItemCount|Table|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 已順利建立全文檢索索引的資料列數。|  
 |TableFulltextKeyColumn|Table|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 參與全文檢索索引定義之單一資料行唯一索引的相關資料行識別碼。<br /><br /> 0 = 資料表沒有全文檢索索引。|  
 |TableFulltextPendingChanges|Table|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 要處理的暫止變更追蹤項目數。<br /><br /> 0 = 未啟用變更追蹤。<br /><br /> NULL = 資料表沒有全文檢索索引。|  
@@ -158,7 +158,7 @@ OBJECTPROPERTY ( id , property )
 |TableHasColumnSet|Table|資料表有資料行集。<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> 如需詳細資訊，請參閱 [使用資料行集](../../relational-databases/tables/use-column-sets.md)。|  
 |TableTemporalType|Table|**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。<br /><br /> 指定資料表的類型。<br /><br /> 0 = 非時態表<br /><br /> 1 = 系統版本設定資料表的記錄資料表<br /><br /> 2 = 系統版本設定的時態表|  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
 ## <a name="exceptions"></a>例外狀況  
@@ -166,7 +166,7 @@ OBJECTPROPERTY ( id , property )
   
  使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示發出中繼資料的內建函數 (例如，OBJECTPROPERTY) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 假設 *object_id* 在目前資料庫內容中。 參考另一資料庫中之 *object_id* 的查詢會傳回 NULL 或不正確的結果。 例如，在下列查詢中，目前資料庫內容是 master 資料庫。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會嘗試傳回該資料庫中指定之 *object_id* 的屬性值，而不是查詢中所指定的資料庫。 查詢會傳回不正確的結果，因為 `vEmployee` 檢視表不在 master 資料庫中。  
   
 ```  
@@ -217,7 +217,7 @@ GO
 0
 ```  
   
-### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C.尋找屬於特定結構描述的資料表  
+### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C：尋找屬於特定結構描述的資料表  
  下列範例會傳回 dbo 結構描述中的所有資料表。  
   
 ```  
@@ -232,7 +232,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-verifying-that-an-object-is-a-table"></a>D.確認物件是資料表  
+### <a name="d-verifying-that-an-object-is-a-table"></a>D：驗證物件是資料表  
  下列範例會測試 `dbo.DimReseller` 是否為 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 資料庫中的資料表。  
   
 ```  

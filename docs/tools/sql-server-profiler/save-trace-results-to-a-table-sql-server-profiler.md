@@ -1,30 +1,30 @@
 ---
-title: 將追蹤結果儲存至資料表 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 將追蹤結果儲存至資料表
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- saving traces
-- traces [SQL Server], saving
 ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9191c2ab44f4152a54211a1a66a5d843c0d6c12c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 6fb406988c9aeb92e7f0c1d3689e5b513a7ea0d3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928752"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307437"
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>將追蹤結果儲存到資料表 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]將追蹤結果儲存到資料庫資料表。  
+
+此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]將追蹤結果儲存到資料庫資料表。  
   
-### <a name="to-save-trace-results-to-a-table"></a>若要將追蹤結果儲存至資料表  
+## <a name="to-save-trace-results-to-a-table"></a>若要將追蹤結果儲存至資料表
   
 1.  在 [檔案]  功能表上，按一下 [新增追蹤]  ，接著連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67928752"
   
 5.  在 [擁有者]  清單中，選取追蹤的擁有者。  
   
-6.  在 [資料表]  清單中，輸入或選取追蹤結果的資料表名稱。 按一下 **[確定].**  
+6.  在 [資料表]  清單中，輸入或選取追蹤結果的資料表名稱。 按一下 [確定]  。  
   
 7.  在 [追蹤屬性]  對話方塊中，選取 [設定最大資料列數 (單位：千)]  核取方塊，以指定要儲存的最大資料列數。  
   

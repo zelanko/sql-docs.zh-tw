@@ -14,10 +14,10 @@ ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f53939adac7e0593245c4dfd35222696961a83b8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71289771"
 ---
 # <a name="exp-ssis-expression"></a>EXP (SSIS 運算式)
@@ -41,7 +41,7 @@ EXP(numeric_expression)
 ## <a name="result-types"></a>結果類型  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  numeric expression 會在計算指數之前轉換成 DT_R8 資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
  傳回結果永遠為正數。  

@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d9311ffde7323b11cd041e3fbc28eb249d019cd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934188"
 ---
 # <a name="rename-statistics"></a>重新命名統計資料
@@ -43,7 +43,7 @@ ms.locfileid: "67934188"
   
  變更物件名稱的任何部分，可能破壞指令碼和預存程序。 建議您卸除統計資料物件，並使用新名稱重新建立統計資料物件，而不要重新命名。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。  

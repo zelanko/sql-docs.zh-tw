@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7006843d30698fcdbc957222caa7be7a10cab11d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910962"
 ---
 # <a name="spcachehit-event-class"></a>SP:CacheHit 事件類別
@@ -25,7 +25,7 @@ ms.locfileid: "67910962"
   
 ## <a name="spcachehit-event-class-data-columns"></a>SP:CacheHit 事件類別資料行  
   
-|資料行名稱|**Data type**|Description|資料行識別碼|可篩選|  
+|資料行名稱|**Data type**|描述|資料行識別碼|可篩選|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |ClientProcessID|**int**|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供用戶端處理序識別碼，這個資料行就會擴展。|9|是|  
@@ -33,7 +33,7 @@ ms.locfileid: "67910962"
 |DatabaseName|**nvarchar**|執行預存程序之資料庫的名稱。|35|是|  
 |EventClass|**int**|事件類型 = 38。|27|否|  
 |EventSequence|**int**|要求中之給定事件的順序。|51|否|  
-|EventSubClass|**int**|1=執行內容點擊：在計畫快取中找到可用的執行計畫。<br /><br /> 2=Compplan 點擊：在計畫快取中找到已編譯的計畫。|21|是|  
+|EventSubClass|**int**|1=執行內容點擊：在計畫快取中找到可用的執行計畫。<br /><br /> 2=編譯計畫點擊：在計畫快取中找到編譯的計畫。|21|是|  
 |GroupID|**int**|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
 |HostName|**nvarchar**|執行用戶端的電腦名稱。 如果用戶端提供主機名稱，這個資料行就會擴展。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |IsSystem|**int**|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|是|  

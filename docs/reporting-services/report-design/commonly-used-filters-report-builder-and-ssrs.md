@@ -14,10 +14,10 @@ ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0757982d8e1e758a771d7ccdf880c88576f980f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581583"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>常用的篩選 (報表產生器及 SSRS)
@@ -29,11 +29,11 @@ ms.locfileid: "65581583"
 ## <a name="filter-examples"></a>篩選範例  
  下表說明使用不同資料類型和不同運算子的篩選方程式範例。 比較的範圍是由定義篩選的報表項目所決定。 例如，如果是資料集上所定義的篩選， **TOP % 10** 就是資料集中前百分之 10 的值；如果是群組上所定義的篩選， **TOP % 10** 就是群組中前百分之 10 的值。  
   
-|簡單運算式|資料類型|運算子|ReplTest1|Description|  
+|簡單運算式|資料類型|運算子|值|描述|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
-|`[SUM(Quantity)]`|**Integer**|**>**|`7`|包含大於 7 的資料值。|  
-|`[SUM(Quantity)]`|**Integer**|**TOP N**|`10`|包含前 10 大資料值。|  
-|`[SUM(Quantity)]`|**Integer**|**TOP %**|`20`|包含前百分之 20 的資料值。|  
+|`[SUM(Quantity)]`|**整數**|**>**|`7`|包含大於 7 的資料值。|  
+|`[SUM(Quantity)]`|**整數**|**TOP N**|`10`|包含前 10 大資料值。|  
+|`[SUM(Quantity)]`|**整數**|**TOP %**|`20`|包含前百分之 20 的資料值。|  
 |`[Sales]`|**Text**|**>**|`=CDec(100)`|包含所有大於 $100 之 System.Decimal 類型 (SQL "money" 資料類型) 的值。|  
 |`[OrderDate]`|**DateTime**|**>**|`2088-01-01`|包含從 2008 年 1 月 1 日到目前的所有日期。|  
 |`[OrderDate]`|**DateTime**|**BETWEEN**|`2008-01-01`<br /><br /> `2008-02-01`|包含從 2008 年 1 月 1 日 (含) 算起的日期。|  
@@ -44,10 +44,10 @@ ms.locfileid: "65581583"
 ## <a name="examples-with-report-parameters"></a>報表參數的範例  
  下表提供篩選運算式的範例，其中包含了單一值或多重值的參數參考。  
   
-|參數類型|(篩選) 運算式|運算子|ReplTest1|資料類型|  
+|參數類型|(篩選) 運算式|運算子|值|資料類型|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
-|單一值|`[EmployeeID]`|=|`[@EmployeeID]`|Integer|  
-|多重值|`[EmployeeID]`|IN|`[@EmployeeID]`|Integer|  
+|單一值|`[EmployeeID]`|=|`[@EmployeeID]`|整數|  
+|多重值|`[EmployeeID]`|IN|`[@EmployeeID]`|整數|  
   
 ## <a name="see-also"></a>另請參閱  
  [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

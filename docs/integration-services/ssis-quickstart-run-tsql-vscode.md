@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cdd1dc130efb795b957911c51d5d8c2243522d38
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281613"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>使用 Transact-SQL 從 Visual Studio Code 執行 SSIS 套件
@@ -36,7 +36,7 @@ Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式�
 
 -   Windows 上的 SQL Server。
 
--   Azure SQL Database。 如需在 Azure 部署和執行套件的詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+-   Azure SQL Database。 如需在 Azure 中部署和執行套件的詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
 
 您不能使用本快速入門中的資訊在 Linux 上執行 SSIS 套件。 如需在 Linux 上執行套件的詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../linux/sql-server-linux-migrate-ssis.md)。
 
@@ -74,12 +74,12 @@ Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式�
 
 4. 遵循提示來指定新連線設定檔的連線屬性。 指定每個值之後，請按 **ENTER** 繼續。 
 
-   | 設定       | 建議值 | 其他資訊 |
+   | 設定       | 建議的值 | 其他資訊 |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **伺服器名稱** | 完整伺服器名稱 | 如果您要連線至 Azure SQL Database 伺服器，則名稱的格式如下：`<server_name>.database.windows.net`。 |
    | **資料庫名稱** | **SSISDB** | 要連線之資料庫的名稱。 |
    | **驗證** | SQL 登入 | 使用 SQL Server 驗證時，您可以連線到 SQL Server 或 Azure SQL Database。 如果要連線至 Azure SQL Database 伺服器，您無法使用 Windows 驗證。 |
-   | **User name** | 伺服器系統管理員帳戶 | 這個帳戶是您在建立伺服器時指定的帳戶。 |
+   | **使用者名稱** | 伺服器系統管理員帳戶 | 這個帳戶是您在建立伺服器時指定的帳戶。 |
    | **密碼 (SQL 登入)** | 伺服器系統管理員帳戶的密碼 | 這個密碼是您在建立伺服器時指定的密碼。 |
    | **儲存密碼嗎？** | [是] 或 [否] | 如果您不想要每次都輸入密碼，請選取 [是]。 |
    | **輸入此設定檔的名稱** | 設定檔名稱，例如 **mySSISServer** | 儲存的設定檔名稱可在後續的登入中加速您的連線。 | 
@@ -91,7 +91,7 @@ Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式�
 ## <a name="run-the-t-sql-code"></a>執行 T-SQL 程式碼
 執行下列 Transact-SQL 程式碼來執行 SSIS 套件。
 
-1. 在 [編輯器]  視窗中，於空白查詢視窗中輸入下列查詢 (此程式碼是 SSMS 中 [執行套件]  對話方塊的 [指令碼]  選項所產生的程式碼)。
+1. 在 [編輯器]  視窗中，於空白查詢視窗中輸入下列查詢 (此程式碼是 SSMS 中 [執行套件]  對話方塊的 [指令碼]  選項所產生的程式碼。)
 
 2. 更新 `catalog.create_execution` 預存程序中您系統的參數值。
 

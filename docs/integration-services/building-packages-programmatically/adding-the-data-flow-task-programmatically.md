@@ -19,10 +19,10 @@ ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: db9545df35823161dbe6fa64673cac1361c3d34b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294915"
 ---
 # <a name="adding-the-data-flow-task-programmatically"></a>以程式設計方式加入資料流程工作

@@ -18,10 +18,10 @@ ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 274e6128ba57a92f6f2e1e84e160424571742787
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314607"
 ---
 # <a name="is_objectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
@@ -62,10 +62,10 @@ IS_OBJECTSIGNED (
 ## <a name="returned-types"></a>傳回的類型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  IS_OBJECTSIGNED 會傳回下列值。  
   
-|傳回值|Description|  
+|傳回值|描述|  
 |------------------|-----------------|  
 |NULL|物件未簽署，或物件無效。|  
 |0|物件已簽署，但簽章無效。|  

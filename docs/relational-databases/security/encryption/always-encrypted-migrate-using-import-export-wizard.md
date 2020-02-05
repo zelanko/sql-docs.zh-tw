@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c8e23b3f5f291d120a099cae7f3e3e057db8da95
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595783"
 ---
 # <a name="migrate-data-to-or-from-columns-using-always-encrypted-with-sql-server-import-and-export-wizard"></a>使用 Always Encrypted 與 [SQL Server 匯入和匯出精靈] 將資料移轉到資料行或從中移轉 
@@ -79,12 +79,12 @@ ms.locfileid: "73595783"
 - **密碼編譯服務提供者 (CAPI)** - 必要權限和認證 (您在使用金鑰存放區或金鑰時可能會收到提示) 取決於存放區和 CSP 設定。
 如需詳細資訊，請參閱 [建立及儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 - [使用 Always Encrypted 與 SQL Server Management Studio 查詢資料行](always-encrypted-query-columns-ssms.md)
 - [使用 Always Encrypted 開發應用程式](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>另請參閱
-- [永遠加密](always-encrypted-database-engine.md)
+- [一律加密](always-encrypted-database-engine.md)
 - [使用 Always Encrypted 匯出和匯入資料庫](always-encrypted-migrate-using-bacpac.md)
 - [使用 Always Encrypted 備份和還原資料庫](always-encrypted-migrate-using-backup-restore.md)
-- [使用 Always Encrypted 將加密資料大量載入資料行](migrate-sensitive-data-protected-by-always-encrypted.md)
+- [使用 Always Encrypted 將加密資料大量載入至資料行](migrate-sensitive-data-protected-by-always-encrypted.md)

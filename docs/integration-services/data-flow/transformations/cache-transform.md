@@ -17,10 +17,10 @@ ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b934ea191a0dc4f9f276b4e483f5f5671bd0cc3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297992"
 ---
 # <a name="cache-transform"></a>快取轉換
@@ -57,7 +57,7 @@ ms.locfileid: "71297992"
   
      您可以使用 [快取連線管理員編輯器]  修改資料行資料類型、名稱和其他資料行屬性。  
   
- 您可以透過 [[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 設計師] 設定屬性。 如需可在 [進階編輯器]  對話方塊中設定之屬性的詳細資訊，請參閱[轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
+ 您可以透過 [ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 設計師] 設定屬性。 如需可在 [進階編輯器]  對話方塊中設定之屬性的詳細資訊，請參閱[轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   
  如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "71297992"
  若要深入了解快取連接管理員，請參閱＜ [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)＞。  
   
 ### <a name="options"></a>選項。  
- **快取連接管理員**  
+ **[完整快取]**  
  使用清單方塊來選取現有的快取連線管理員，或使用 [新增]  按鈕來建立新的連線。  
   
  **新增**  

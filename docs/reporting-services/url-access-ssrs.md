@@ -16,10 +16,10 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a18ad4fd1d79bc7eae5f45318cece55037c78010
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574242"
 ---
 # <a name="url-access-ssrs"></a>URL 存取 (SSRS)
@@ -96,7 +96,7 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
 > [!NOTE]  
 >  如果未包括 URL 存取參數的前置詞，報表伺服器會以報表參數來處理參數。 報表參數不使用參數前置詞，且有區分大小寫。  
   
- **參數**  
+ **param**  
  參數名稱。  
   
  *value*  
@@ -108,9 +108,9 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
 |工作描述|連結|  
 |-----------------------|-----------|  
-|存取報表伺服器項目，如報表、共用資料來源和資源。|[使用 URL 存取權存取報表伺服器項目](../reporting-services/access-report-server-items-using-url-access.md)|  
+|存取報表伺服器項目，如報表、共用資料來源和資源。|[使用 URL 存取來存取報表伺服器項目](../reporting-services/access-report-server-items-using-url-access.md)|  
 |將報表參數傳遞至報表。|[在 URL 內傳遞報表參數](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
-|在 URL 存取字串中設定報表參數的地區設定，以定義特定地區的日期、貨幣等轉換。|[設定 URL 中報表參數的語言](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
+|在 URL 存取字串中設定報表參數的地區設定，以定義特定地區的日期、貨幣等轉換。|[在 URL 中設定報表參數的語言](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
 |傳送可自訂報表轉譯方式的轉譯延伸模組特定設定。|[在 URL 中指定裝置資訊設定](../reporting-services/specify-device-information-settings-in-a-url.md)|  
 |不在瀏覽器中檢視，而直接將報表匯出至檔案格式。|[使用 URL 存取匯出報表](../reporting-services/export-a-report-using-url-access.md)|  
 |開啟報表，並直接導覽至字串位置。|[使用 URL 存取搜尋報表](../reporting-services/search-a-report-using-url-access.md)|  

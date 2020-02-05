@@ -9,10 +9,10 @@ ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8b6891ec497b3100206b812fbc8da7b0463fa4d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579511"
 ---
 # <a name="report-builder-functions---inscope-function"></a>報表產生器函式 - InScope 函式
@@ -34,7 +34,7 @@ InScope(scope)
 ## <a name="return-type"></a>傳回類型  
  傳回 **布林值**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **InScope** 函數會測試報表項目目前執行個體的範圍，查看是否符合 *scope*參數所指定之範圍的成員資格。  
   
  *Scope* 不能是運算式。  

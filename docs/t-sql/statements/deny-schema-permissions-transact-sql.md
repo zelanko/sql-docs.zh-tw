@@ -18,10 +18,10 @@ ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: bd439e528cc30c0971d1b4c824ab2375856d26e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114794"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>DENY 結構描述權限 (Transact-SQL)
@@ -75,7 +75,7 @@ CASCADE
 -   對應至非對稱金鑰的資料庫使用者  
 -   未對應至伺服器主體的資料庫使用者  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 結構描述是資料庫層級安全性實體。 它由資料庫所包含，在權限階層中，此資料庫為該安全性實體的父系。 下表列出可以在結構描述上拒絕的最特定且最有限權限。 表格顯示利用隱含方式包含它們的較通用權限。  
   
 |結構描述權限|結構描述權限所隱含|資料庫權限所隱含|  
@@ -83,7 +83,7 @@ CASCADE
 |ALTER|CONTROL|ALTER ANY SCHEMA|  
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
-|Delete|CONTROL|Delete|  
+|刪除|CONTROL|刪除|  
 |執行 CREATE 陳述式之前，請先執行|CONTROL|執行 CREATE 陳述式之前，請先執行|  
 |Insert|CONTROL|Insert|  
 |REFERENCES|CONTROL|REFERENCES|  

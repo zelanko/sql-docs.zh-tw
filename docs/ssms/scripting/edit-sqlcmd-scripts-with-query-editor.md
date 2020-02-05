@@ -1,6 +1,6 @@
 ---
-title: 使用查詢編輯器編輯 SQLCMD 指令碼 | Microsoft Docs
-ms.custom: ''
+title: 使用查詢編輯器編輯 SQLCMD 指令碼
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +17,12 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7931e678db7e93dfea385b5ca905dd6968ec78eb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 637de4e8168b97e27da707f3f189d3608786d973
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263482"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253907"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>使用查詢編輯器編輯 SQLCMD 指令碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68263482"
   
 -   執行指令碼  
   
--   原始檔控制  
+-   原始程式碼控制  
   
 -   剖析指令碼  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68263482"
   
 3.  在 [SQL 編輯器]  工具列的 [可用資料庫]  清單中，選取 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]。  
   
-4.  在查詢編輯器視窗中輸入下列兩項 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式及 `!!DIR` **sqlcmd** 陳述式：  
+4.  In the Query Editor window, type the following two [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and the `!!DIR` **sqlcmd** statement:  
   
     ```  
     SELECT DISTINCT Type FROM Sales.SpecialOffer;  
@@ -83,7 +83,7 @@ ms.locfileid: "68263482"
     -   (4 個資料列受影響)  
   
 > [!IMPORTANT]  
->  從命令列執行時，**sqlcmd** 公用程式允許與作業系統進行完整互動。 當您在 [SQLCMD 模式]  中使用 [查詢編輯器] 時，您必須非常小心，不要執行互動式陳述式。 [查詢編輯器] 無法回應作業系統提示。  
+>  從命令列執行時， **sqlcmd** 公用程式允許與作業系統進行完整互動。 當您在 [SQLCMD 模式]  中使用 [查詢編輯器] 時，您必須非常小心，不要執行互動式陳述式。 [查詢編輯器] 無法回應作業系統提示。  
   
  如需有關如何執行 SQLCMD 的詳細資訊，請參閱 [sqlcmd 工用程式](../../tools/sqlcmd-utility.md)，或進入 SQLCMD 教學課程。  
   
@@ -161,6 +161,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sqlcmd 工用程式](../../tools/sqlcmd-utility.md)  
+ [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)  
   
   

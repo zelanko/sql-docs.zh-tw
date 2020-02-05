@@ -22,10 +22,10 @@ ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0d6b786725dfb50fceb1376fd104a4b5e5afbc76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902852"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
@@ -56,7 +56,7 @@ AS constant_expression [ ; ]
 *constant_expression*  
 只包含常數值的[運算式](../../t-sql/language-elements/expressions-transact-sql.md) (其中不能有任何資料行或其他資料庫物件的名稱)。 您可以使用任何常數、內建函式或數學運算式，但包含別名資料類型的項目除外。 使用者自訂函式則不能使用。 請用單引號 ( **'** ) 括住字元和日期常數；貨幣、整數和浮點數常數不需要引號。 二進位資料的前面必須是 0x，貨幣資料的前面必須是錢幣符號 ($)。 預設值必須相容於資料行資料類型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  您只能在目前資料庫中建立預設名稱。 在資料庫內，必須藉由結構描述，使預設名稱成為唯一。 當您建立預設值時，請使用 **sp_bindefault**，將它繫結到資料行或別名資料類型。  
   
  如果預設值與所繫結的資料行不相容，則在嘗試插入預設值時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生一則錯誤訊息。 例如，N/A 不能作為 **numeric** 資料行的預設值。  

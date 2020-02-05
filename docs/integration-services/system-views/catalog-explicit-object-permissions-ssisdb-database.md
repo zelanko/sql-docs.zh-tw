@@ -11,10 +11,10 @@ ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa3c4060f0d82ff590b6307bc35a3c11a86b3201
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296598"
 ---
 # <a name="catalogexplicit_object_permissions-ssisdb-database"></a>catalog.explicit_object_permissions (SSISDB 資料庫)
@@ -26,7 +26,7 @@ ms.locfileid: "71296598"
 
   只顯示已明確指派給使用者的權限。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|安全性實體物件的類型。 安全性實體物件類型包括資料夾 (`1`)、專案 (`2`)、環境 (`3`) 和作業 (`4`)。|  
 |object_id|**bigint**|安全性實體物件的唯一識別碼 (ID) 或主索引鍵。|  
@@ -35,14 +35,14 @@ ms.locfileid: "71296598"
 |is_deny|**bit**|指出權限是否已授與或遭到拒絕。 當值為 `1` 時，表示權限遭到拒絕。 當值為 `0` 時，表示權限未遭到拒絕。|  
 |grantor_id|**int**|授與權限之主體的識別碼。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個檢視會顯示下表列出的權限類型：  
   
 |permission_type 值|權限名稱|權限描述|適用的物件類型|  
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|允許主體讀取會被視為物件一部分 (例如屬性) 的資訊。 它不允許主體列舉或讀取物件內所包含之其他主體的內容。|資料夾、專案、環境、作業|  
 |`2`|MODIFY|允許主體修改會被視為物件一部分 (例如屬性) 的資訊。 它不允許主體修改物件內所包含之其他主體的內容。|資料夾、專案、環境、作業|  
-|`3`|執行 CREATE 陳述式之前，請先執行|允許主體執行專案中所有的封裝。|專案|  
+|`3`|執行 CREATE 陳述式之前，請先執行|允許主體執行專案中所有的封裝。|隨附此逐步解說的專案|  
 |`4`|MANAGE_PERMISSIONS|允許主體將權限指派至物件。|資料夾、專案、環境、作業|  
 |`100`|CREATE_OBJECTS|允許主體在資料夾中建立物件。|資料夾|  
 |`101`|READ_OBJECTS|允許主體讀取資料夾中的所有物件。|資料夾|  

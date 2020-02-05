@@ -17,10 +17,10 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71708689"
 ---
 # <a name="back-up-files-and-filegroups"></a>備份檔案與檔案群組
@@ -73,7 +73,7 @@ ms.locfileid: "71708689"
   
     - 若要讓備份組在特定的天數後過期，請按一下 [之後]  (預設選項)，然後輸入備份組建立之後將會過期的天數。 這個值可以介於 0 到 99999 日之間；值為 0 日意指備份組永遠不會過期。  
   
-         預設值會在 [伺服器屬性]  對話方塊 ([資料庫設定]  頁面) 的 [預設備份媒體保留 (以天為單位)]  選項中設定。 若要存取此選項，請以滑鼠右鍵按一下物件總管中的伺服器名稱，然後選取 [資料庫設定]  頁面。  
+         預設值會在 **[伺服器屬性]** 對話方塊 ( **[資料庫設定]** 頁面) 的 **[預設備份媒體保留 (以天為單位)]** 選項中設定。 若要存取此選項，請以滑鼠右鍵按一下物件總管中的伺服器名稱，然後選取 [資料庫設定]  頁面。  
   
     - 若要讓備份組在特定日期過期，請按一下 **[於]** ，然後輸入備份組將過期的日期。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "71708689"
   
      如需檢視現有備份壓縮預設值，請參閱[檢視或設定備份壓縮預設伺服器設定選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
 
-## <a name="using-transact-sql"></a>使用 Transact-SQL
+## <a name="using-transact-sql"></a>使用 TRANSACT-SQL
   
 若要建立檔案或檔案群組備份，請使用 [BACKUP DATABASE <file_or_filegroup>](../../t-sql/statements/backup-transact-sql.md) 陳述式。 這個陳述式至少必須指定下列各項：  
   
@@ -141,7 +141,7 @@ ms.locfileid: "71708689"
   
   [ WITH *with_options* [ **,** ...*o* ] ] ;  
   
-|選項|[描述]|  
+|選項|描述|  
 |------------|-----------------|  
 |*database*|這是要備份交易記錄、部分資料庫或完整資料庫的來源資料庫。|  
 |FILE _=_ *logical_file_name*|指定要包含在檔案備份中檔案的邏輯名稱。|  

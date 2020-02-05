@@ -25,10 +25,10 @@ ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 98dce9206326c51f5ae721903b93ea287afa992a
-ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75656645"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
@@ -95,7 +95,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="examples"></a>範例
 
 ### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>A. 針對任何資料庫主體，稽核資料表的 SELECT 和 INSERT 
- 下列範例會針對 `AdventureWorks2012` 資料庫中的 `HumanResources.EmployeePayHistory` 資料表，建立稱為 `Payrole_Security_Audit` 的伺服器稽核，然後建立可由 `dbo` 使用者稽核 `Payrole_Security_Audit` 和 `SELECT` 陳述式的資料庫稽核規格，其名稱為 `INSERT`。  
+ 下列範例會針對 `Payrole_Security_Audit` 資料庫中的 `Payrole_Security_Audit` 資料表，建立稱為 `SELECT` 的伺服器稽核，然後建立可由 `INSERT` 使用者稽核 `dbo` 和 `HumanResources.EmployeePayHistory` 陳述式的資料庫稽核規格，其名稱為 `AdventureWorks2012`。  
   
 ```  
 USE master ;  
@@ -122,7 +122,7 @@ GO
 ``` 
 
 ### <a name="b-audit-any-dml-insert-update-or-delete-on-_all_-objects-in-the-_sales_-schema-for-a-specific-database-role"></a>B. 針對特定的資料庫角色，稽核 _sales_ 結構描述中「所有」  物件的任何 DML (INSERT、UPDATE 或 DELETE)  
- 下列範例會針對 `AdventureWorks2012` 資料庫中的 `Sales` 資料表，建立稱為 `DataModification_Security_Audit` 的伺服器稽核，然後建立由具新資料庫角色 `SalesUK` 使用者稽核 `INSERT`、`UPDATE` 和 `DELETE` 陳述式的資料庫稽核規格，其稱為 `Audit_Data_Modification_On_All_Sales_Tables`。  
+ 下列範例會針對 `DataModification_Security_Audit` 資料庫中的 `Audit_Data_Modification_On_All_Sales_Tables` 資料表，建立稱為 `INSERT` 的伺服器稽核，然後建立由具新資料庫角色 `UPDATE` 使用者稽核 `DELETE`、`SalesUK` 和 `Sales` 陳述式的資料庫稽核規格，其稱為 `AdventureWorks2012`。  
   
 ```  
 USE master ;  

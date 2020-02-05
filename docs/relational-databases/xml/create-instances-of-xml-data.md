@@ -20,10 +20,10 @@ ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbdae019d2b4903bcebb0339df0ef243d6974766
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68112926"
 ---
 # <a name="create-instances-of-xml-data"></a>建立 XML 資料的執行個體
@@ -64,7 +64,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
  如果 CLR 使用者定義型別具有 XML 序列化，即可將該類型的執行個體明確轉換成 XML 資料類型。 如需有關 CLR 使用者定義型別之 XML 序列化的詳細資料，請參閱 [從 CLR 資料庫物件進行 XML 序列化](https://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)。  
   
 ### <a name="white-space-handling-in-typed-xml"></a>以具類型的 XML 處理空白  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，元素內容中的空白如果發生在以標記 (如開始或結束標記) 所分隔的僅空白字元資料序列內且未實體化，則會將它視為無意義。 (將會忽略 CDATA 區段。)空白處理的方式與 XML 1.0 規格 (由全球資訊網協會 (W3C) 所發佈) 所述的空白處理方式不同。 這是因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 XML 剖析器，只能辨識有限的 DTD 子集數目，如 XML 1.0 中所定義。 如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所支援之有限 DTD 子集的詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，元素內容中的空白如果發生在以標記 (如開始或結束標記) 所分隔的僅空白字元資料序列內且未實體化，則會將它視為無意義。 (將會忽略 CDATA 區段。)空白處理的方式與 XML 1.0 規格 (由全球資訊網協會 (W3C) 所發佈) 所述的空白處理方式不同。 這是因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 XML 剖析器，只能辨識有限的 DTD 子集數目，如 XML 1.0 中所定義。 如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所支援之有限 DTD 子集的詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
  依預設，只要下列任一項為真，當 XML 剖析器將字串資料轉換成 XML 時，將會捨棄無意義的空白。  
   
@@ -94,7 +94,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  如果未使用 *style* 參數或是將其值設為 0，在轉換 xml DT 執行個體時，將不會保留不重要的空白。 如需如何使用 CONVERT 運算子以及將字串資料轉換成 xmlDT 執行個體時其 *style* 參數的詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>範例將字串值轉換成具類型的 XML 並將它指派給資料行  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>範例：將字串值轉換成具類型的 xml 並將它指派給資料行  
  下列範例將含有 XML 片段的字串變數轉換成 **xml** 資料類型，然後在 **xml** 類型資料行中予以儲存：  
   
 ```  
@@ -122,7 +122,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>範例將字串轉換成具類型的 XML 並將它指派給變數  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>範例：將字串轉換成具類型的 xml 並將它指派給變數  
  在下列範例中，字串會轉換成 **xml** 類型，並受指派給 **xml** 的變數。  
   
 ```  
@@ -206,11 +206,11 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 >  對於具類型的 XML，將會針對指定的結構描述驗證 XML。 如需詳細資訊，請參閱 [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
   
 ## <a name="using-bulk-load"></a>使用大量載入  
- 增強的 [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md) 功能，可讓您在資料庫中大量載入 XML 文件。 您可以從檔案將 XML 執行個體大量載入資料庫中的 **xml** 類型資料行。 如需實用範例，請參閱[大量匯入與匯出 XML 文件的範例 &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)。 如需有關載入 XML 文件的詳細資訊，請參閱[載入 XML 資料](../../relational-databases/xml/load-xml-data.md)。  
+ 增強的 [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md) 功能，可讓您在資料庫中大量載入 XML 文件。 您可以從檔案將 XML 執行個體大量載入資料庫中的 **xml** 類型資料行。 如需實用範例，請參閱[大量匯入與匯出 XML 文件的範例 &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)。 如需有關載入 XML 文件的詳細資訊，請參閱 [載入 XML 資料](../../relational-databases/xml/load-xml-data.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[擷取及查詢 XML 資料](../../relational-databases/xml/retrieve-and-query-xml-data.md)|描述當 XML 執行個體儲存於資料庫中時，未保留的 XML 執行個體部分。|  
   

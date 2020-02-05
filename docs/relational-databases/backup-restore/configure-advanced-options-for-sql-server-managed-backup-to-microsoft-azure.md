@@ -12,10 +12,10 @@ ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4bd21bac561a34e6dab779f1db0656dcc8e3175e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75242565"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>設定 Microsoft Azure 的 SQL Server 受控備份進階選項
@@ -32,7 +32,7 @@ ms.locfileid: "75242565"
 ## <a name="configure-encryption"></a>設定加密  
  下列步驟說明如何使用預存程序 [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) 來指定加密設定。  
 
-1.  **決定加密演算法：** 首先，決定要使用之加密演算法的名稱。 從下列演算法中選取一個：  
+1.  **決定加密演算法︰** 先決定要使用的加密演算法名稱。 從下列演算法中選取一個：  
   
     -   AES_128  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75242565"
   
     -   NO_ENCRYPTION  
   
-2.  **建立資料庫主要金鑰：** 選擇密碼以加密即將儲存於資料庫的主要金鑰副本。  
+2.  **建立資料庫主要金鑰︰** 選擇要儲存在資料庫中之主要金鑰複本的加密密碼。  
   
     ```  
     -- Creates a database master key.  
@@ -55,7 +55,7 @@ ms.locfileid: "75242565"
     GO  
     ```  
   
-3.  **建立備份憑證或非對稱金鑰：** 加密可以搭配憑證或非對稱金鑰使用。 下例會建立用來加密的備份憑證。  
+3.  **建立備份憑證或非對稱金鑰︰** 加密可以搭配憑證或非對稱金鑰使用。 下例會建立用來加密的備份憑證。  
   
     ```sql  
     USE Master;  
@@ -65,7 +65,7 @@ ms.locfileid: "75242565"
     GO  
     ```  
   
-4.  **設定受控備份加密︰** 使用相對應的值呼叫 **managed_backup.sp_backup_config_advanced** 預存程序。 例如，下例會使用名為 `MyDB` 的憑證和 `MyTestDBBackupEncryptCert` 加密演算法來設定 `AES_128` 資料庫加密。  
+4.  **設定受管理的備份加密︰** 呼叫有對應值的 **managed_backup.sp_backup_config_advanced** 預存程序。 例如，下例會使用名為 `MyDB` 的憑證和 `MyTestDBBackupEncryptCert` 加密演算法來設定 `AES_128` 資料庫加密。  
   
     ```  
     USE msdb;  
@@ -88,13 +88,13 @@ ms.locfileid: "75242565"
   
 2.  **決定記錄備份的頻率︰** 決定進行記錄備份的頻率。 這個值為分鐘或小時。  
   
-3.  **決定星期幾進行每週備份︰** 如果每週備份，請選擇於星期幾進行完整備份。  
+3.  **決定週幾進行每週備份︰** 如果每週備份，請選擇於星期幾進行完整備份。  
   
 4.  **決定備份的開始時間︰** 使用 24 小時制，選擇開始備份的時間。  
   
-5.  **決定允許進行備份的時間長度：** 此步驟指定完成備份所需的時間。  
+5.  **決定允許備份的時長︰** 這會指定備份必須完成的時間長度。  
   
-6.  **設定自訂備份排程：** 下列預存程序會定義 `MyDB` 資料庫的自訂排程。 每週的完整備份於 `Monday` 的 `17:30`進行。 記錄備份每 `5` 分鐘進行。 備份完成時間為兩小時。  
+6.  **設定自訂的備份排程︰** 下列預存程序會定義 `MyDB` 資料庫的自訂排程。 每週的完整備份於 `Monday` 的 `17:30`進行。 記錄備份每 `5` 分鐘進行。 備份完成時間為兩小時。  
   
     ```  
     USE msdb;  

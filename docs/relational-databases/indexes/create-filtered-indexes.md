@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3cb02f0cbb395b8e3f730e62139eb7b7d89b4c96
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908112"
 ---
 # <a name="create-filtered-indexes"></a>建立篩選的索引
@@ -97,7 +97,7 @@ ms.locfileid: "72908112"
 
 - 檢閱 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md) 語法中用於建立已篩選索引的必要 SET 選項
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。 若要修改篩選索引運算式，請使用 CREATE INDEX WITH DROP_EXISTING。  
@@ -118,7 +118,7 @@ ms.locfileid: "72908112"
   
 6.  按一下 [索引鍵資料行]  下的 [新增...]  。  
   
-7.  在 [從 _table\_name_ 選取資料行]  對話方塊中，選取要新增至唯一索引之一或多個資料表資料行的一或多個核取方塊。  
+7.  在 [從 **table**name _選取資料行]\__ 對話方塊中，選取要新增至唯一索引之一或多個資料表資料行的一或多個核取方塊。  
   
 8.  按一下 [確定]  。  
   

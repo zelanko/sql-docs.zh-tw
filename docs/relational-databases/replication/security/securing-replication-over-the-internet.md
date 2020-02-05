@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 25b7af05-2721-4b24-9083-fb671e8bf4e0
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 42a070f35f6e9dce8a79e2c647ec290aac1adccc
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: cab28a63e72cf085c62ed6f35beefe7cafd06a05
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769597"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287229"
 ---
 # <a name="securing-replication-over-the-internet"></a>Securing Replication Over the Internet
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

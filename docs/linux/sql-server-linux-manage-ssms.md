@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.openlocfilehash: 753845d41c946d955b80a927901f827ee4643567
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000099"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>使用 Windows 上的 SQL Server Management Studio 來管理 Linux 上的 SQL Server
@@ -55,7 +55,7 @@ SSMS 為 SQL Server 提供一組廣泛的開發和管理功能，包括可執行
 
 1. 在 [連線到伺服器]  視窗中，輸入下列資訊 (如果 SSMS 已在執行中，請按一下 [連線] > [資料庫引擎]  來開啟 [連線到伺服器]  視窗)：
 
-   | 設定 | Description |
+   | 設定 | 描述 |
    |-----|-----|
    | **伺服器類型** | 預設值為資料庫引擎；請勿變更此值。 |
    | **伺服器名稱** | 輸入目標 Linux SQL Server 電腦的名稱或其 IP 位址。 |
@@ -63,9 +63,9 @@ SSMS 為 SQL Server 提供一組廣泛的開發和管理功能，包括可執行
    | **登入** | 輸入有權存取伺服器上資料庫的使用者名稱 (例如，安裝期間建立的預設 **SA** 帳戶)。 |
    | **密碼** | 輸入指定使用者的密碼 (針對 **SA** 帳戶，您在安裝期間建立了此密碼)。 |
 
-    ![SQL Server Management Studio：連線到 SQL Database 伺服器](./media/sql-server-linux-manage-ssms/connect.png)
+    ![SQL Server Management Studio：連接到 SQL Database 伺服器](./media/sql-server-linux-manage-ssms/connect.png)
 
-1. 按一下 **[連接]** 。
+1. 按一下 [ **連接**]。
 
     > [!TIP]
     > 如果您收到連線失敗，請先嘗試從錯誤訊息診斷問題。 然後檢閱[連線疑難排解建議](sql-server-linux-troubleshooting-guide.md#connection)。
@@ -91,7 +91,7 @@ SSMS 為 SQL Server 提供一組廣泛的開發和管理功能，包括可執行
 
 1. 按一下 [執行]  按鈕以執行查詢並查看結果。
 
-   ![成功。 連線到 SQL Database 伺服器：SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+   ![成功。 連接到 SQL Database 伺服器：SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
 雖然您幾乎可以使用 Transact-SQL 查詢進行任何管理工作，但 SSMS 是一種圖形化工具，可讓您更輕鬆地管理 SQL Server。 下列各節提供使用圖形化使用者介面的一些範例。
 
@@ -99,7 +99,7 @@ SSMS 為 SQL Server 提供一組廣泛的開發和管理功能，包括可執行
 
 連線到 *master* 資料庫時，您可以在伺服器上建立資料庫並修改或卸除現有的資料庫。 下列步驟描述如何透過 Management Studio 完成數個常見的資料庫管理工作。 若要執行這些工作，請確定您已使用設定 Linux 上的 SQL Server 時所建立的伺服器層級主體登入，連線到 *master* 資料庫。
 
-### <a name="create-a-new-database"></a>建立新的資料庫
+### <a name="create-a-new-database"></a>建立新資料庫
 
 1. 啟動 SSMS 並連線到您在 Linux 上 SQL Server 中的伺服器
 
@@ -144,5 +144,5 @@ SSMS 為 SQL Server 提供一組廣泛的開發和管理功能，包括可執行
 - [什麼是 SSMS？](../ssms/sql-server-management-studio-ssms.md)
 - [使用 SSMS 匯出和匯入資料庫](sql-server-linux-migrate-ssms.md)
 - [教學課程：SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
-- [教學課程：撰寫 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)
+- [教學課程：撰寫國際性通用的 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [伺服器效能與活動監視](../relational-databases/performance/server-performance-and-activity-monitoring.md)

@@ -13,10 +13,10 @@ ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6cf3c23908b3ec391afc7b9073796ab4c2f47100
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298271"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>功能相依性設定檔要求選項 (資料分析工作)
@@ -29,7 +29,7 @@ ms.locfileid: "71298271"
 > [!NOTE]  
 >  本主題所描述的選項會顯示在 **[資料分析工作編輯器]** 的 **[設定檔要求]** 頁面上。 如需此編輯器頁面的詳細資訊，請參閱[資料分析工作編輯器 &#40;設定檔要求頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
   
- 如需如何使用資料分析工作的詳細資訊，請參閱[資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱 [資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
+ 如需如何使用資料分析工作的詳細資訊，請參閱 [資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱 [資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
 ## <a name="understanding-the-selection-of-determinant-and-dependent-columns"></a>了解行列式和相依資料行的選擇  
  [功能相依性設定檔要求]  會計算行列式端資料行或資料行集合 (在 **DeterminantColumns** 屬性中指定) 決定相依端資料行值 (在 **DependentColumn** 屬性中指定) 的程度。 例如，美國州名資料行應該在功能上相依於美國郵遞區號資料行。 也就是說，如果郵遞區號 (行列式資料行) 是 98052，州名 (相依資料行) 應該永遠是華盛頓。  
@@ -40,7 +40,7 @@ ms.locfileid: "71298271"
   
 -   當您選取 **(\*)** 萬用字元和其他資料行時，資料分析工作會測試每個資料行的組合，當做相依性的行列式端。 例如，假設有一個包含 A、B 和 C 資料行的範例資料表。如果您指定 **(\*)** 和 C 資料行當做 **DeterminantColumns** 屬性的值，資料分析工作會測試 (A, C) 和 (B, C) 組合，當做相依性的行列式端。  
   
- 您可以針對相依端，在 **DependentColumn** 屬性中指定單一資料行或 **(\*)** 萬用字元。 當您選取 **(\*)** 時，資料分析工作會針對每個資料行測試行列式端資料行或資料行集合。  
+ 您可以針對相依端，在 **DependentColumn\* 屬性中指定單一資料行或** ( **)** 萬用字元。 當您選取 **(\*)** 時，資料分析工作會針對每個資料行測試行列式端資料行或資料行集合。  
   
 > [!NOTE]  
 >  如果您選取 **(\*)** ，這個選項可能會產生大量計算並降低工作的效能。 不過，如果此工作找到滿足功能相依性臨界值的子集，它就不會分析其他組合。 例如，在上述範例資料表中，如果此工作決定 C 資料行是行列式資料行，它就不會繼續分析複合候選。  
@@ -52,13 +52,13 @@ ms.locfileid: "71298271"
   
 -   **一般**  
   
--   **Options**  
+-   **選項**  
   
 ### <a name="data-options"></a>資料選項  
  **ConnectionManager**  
  選取現有的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，以便使用 .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 來連線至包含要分析之資料表或檢視表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
- **TableOrView**  
+ **[TableOrView]**  
  選取要分析的現有資料表或檢視表。  
   
  **DeterminantColumns**  
@@ -77,7 +77,7 @@ ms.locfileid: "71298271"
  如需詳細資訊，請參閱本主題前面的「了解行列式和相依資料行的選擇」章節。  
   
  **IsWildCard**  
- 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(\*)** 來分析所有資料行，這個選項會設定為 [True]  。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
+ 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(** ) **來分析所有資料行，這個選項會設定為 [True]\*** 。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
   
  **ColumnName**  
  顯示所選取資料行的名稱。 如果您已選取 **(\*)** 來分析所有資料行，這個選項就是空白的。 此選項是唯讀的。  
@@ -86,9 +86,9 @@ ms.locfileid: "71298271"
  選取比較字串值的選項。 這個屬性具有下表中所列的選項。 這個選項的預設值為 **預設值**頁面上。  
   
 > [!NOTE]  
->  當您針對 **ColumnName** 使用 **(\*)** 萬用字元時，**CompareOptions** 就是唯讀的，而且它會設定為 [預設值]  設定。  
+>  當您針對 **ColumnName\* 使用** ( **)** 萬用字元時，**CompareOptions** 就是唯讀的，而且它會設定為 [預設值]  設定。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**預設值**|根據來源資料表中的資料行定序來排序和比較資料。|  
 |**BinarySort**|根據針對每個字元所定義的位元模式來排序和比較資料。 二進位排序順序為區分大小寫和區分腔調字。 二進位也是最快的排序順序。|  
@@ -96,7 +96,7 @@ ms.locfileid: "71298271"
   
  如果您選取 [DictionarySort]  ，也可以選取下表中所列的任何選項組合。 根據預設，系統不會選取這些額外的選項。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreCase**|指定比較是否區分大寫與小寫字母。 如果設定此選項，則字串比較會忽略大小寫。 例如，「ABC」與「abc」視為一樣。|  
 |**IgnoreNonSpace**|指定比較是否區分空格字元與變音。 如果設定此選項，則比較會忽略變音符號。 例如，"Ã¥" 等於 "a"。|  
@@ -111,9 +111,9 @@ ms.locfileid: "71298271"
  **ThresholdSetting**  
  指定臨界值設定。 這個屬性的預設值為 [已指定]  。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|**無**|沒有指定臨界值。 不論功能相依性強度為何，系統都會報告此值。|  
+|**None**|沒有指定臨界值。 不論功能相依性強度為何，系統都會報告此值。|  
 |**已指定**|使用 **FDStrengthThreshold**中指定的臨界值。 只有當功能相依性強度大於臨界值時，系統才會報告此值。|  
 |**精確**|沒有指定臨界值。 只有當選取之資料行之間的功能相依性為精確時，系統才會報告此值。|  
   

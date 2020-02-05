@@ -21,16 +21,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d3cbf58a3a85d84daf5b0f83006a7cdcb24b589
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982252"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中指定之 **float** 運算式的自然對數。  
+  傳回 **中指定之**float[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 運算式的自然對數。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,27 +50,27 @@ LOG ( float_expression )
   
 ## <a name="arguments"></a>引數  
  *float_expression*  
- 為 **float** 類型或能夠隱含轉換成 **float** 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 為 [float](../../t-sql/language-elements/expressions-transact-sql.md) 類型或能夠隱含轉換成 **float** 類型的**運算式**。  
   
  *base*  
  可設定對數基數的選擇性整數引數。  
   
 **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  根據預設，**LOG()** 會傳回自然對數。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，您可以使用選擇性的 *base* 參數，將對數的基數變更為其他值。  
   
  自然對數是基數 **e** 的對數，其中 **e** 是大約等於 2.718281828 的無理常數。  
   
- 一個數值的指數自然對數，也是該數值本身：LOG( EXP( *n* ) ) = *n*。 而一個數值的自然對數指數，也是該數值本身：EXP( LOG( *n* ) ) = *n*。  
+ 數字之指數的自然對數就是該數字本身：LOG( EXP( *n* ) ) = *n*。 而數字之自然對數的指數就是該數字本身：EXP( LOG( *n* ) ) = *n*。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-calculating-the-logarithm-for-a-number"></a>A. 計算數值的對數。  
- 下列範例會計算指定 **float** 運算式的 `LOG`。  
+ 下列範例會計算指定 `LOG`float**運算式的**。  
   
 ```  
 DECLARE @var float = 10;  
@@ -106,7 +106,7 @@ SELECT LOG (EXP (10));
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-calculating-the-logarithm-for-a-number"></a>C. 計算數值的對數  
- 下列範例會計算指定 **float** 運算式的 `LOG`。  
+ 下列範例會計算指定 `LOG`float**運算式的**。  
   
 ```  
 SELECT LOG(10);  

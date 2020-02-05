@@ -1,6 +1,6 @@
 ---
-title: 使用規則運算式搜尋文字 | Microsoft Docs
-ms.custom: ''
+title: 使用規則運算式搜尋文字
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -16,17 +16,17 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1dba6a77288a4bebba70372ecf6fbd7a1f05dda6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 69ce1c16013b9ad27e390ddd91b0655aee2986d5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264175"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253682"
 ---
 # <a name="search-text-with-regular-expressions"></a>使用規則運算式搜尋文字
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-規則運算式是在尋找及取代文字模式時所使用，為既簡明、又有彈性的標記法。 特定的規則運算式集可用在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [尋找和取代]  對話方塊的 [尋找目標]  欄位。  
+規則運算式是在尋找及取代文字模式時所使用，為既簡明、又有彈性的標記法。 A specific set of regular expressions can be used in the **Find what** field of the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
   
 ## <a name="find-using-regular-expressions"></a>使用規則運算式來尋找  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68264175"
   
  下表說明 [參考清單]  中可用的規則運算式。  
   
-|運算式|語法|Description|  
+|運算是|語法|描述|  
 |----------------|------------|-----------------|  
 |任何字元|。|符合任何單一字元，分行符號除外。|  
 |零個或多個|*|符合零或多個前導運算式出現項目，會產生所有可能的相符項目。|  
@@ -51,22 +51,22 @@ ms.locfileid: "68264175"
 |分行符號|\n|符合不限特定平台使用的分行符號。 在取代運算式中，會插入分行符號。|  
 |集合中的任何單一字元|[]|符合 [] 以內的任何一個字元。 若要指定字元範圍，請列出開始和結束的字元，並以破折號 (-) 分隔，例如 [a-z]。|  
 |非集合中的任何單一字元|[^...]|符合接在 ^ 後面之字元集以外的任何字元。|  
-|或|&#124;|符合 OR 符號 (&#124;) 前後的運算式。 大多用於群組內。 例如 (海綿&#124;泥漿) 浴符合「海綿浴」和「泥漿浴」。|  
+|Or|&#124;|符合 OR 符號 (&#124;) 前後的運算式。 大多用於群組內。 例如 (海綿&#124;泥漿) 浴符合「海綿浴」和「泥漿浴」。|  
 |逸出|\|符合在反斜線 (\\) 之後作為常值的字元。 您可以尋找規則運算式標記法中所使用的字元，例如 { 及 ^。 例如， \\^ 會搜尋 ^ 字元。|  
 |標記運算式|{}|符合標示加上引號運算式的文字。|  
 |C/C++ 識別碼|:i|符合運算式 ([a-zA-Z_$][a-zA-Z0-9_$]*)。|  
 |加上引號的字串|:q|符合運算式 (("[^"]*")&#124;('[^']\*'))。|  
 |空格或定位點|:b|符合空格或定位字元。|  
-|Integer|:z|符合運算式 ([0-9]+)。|  
+|整數|:z|符合運算式 ([0-9]+)。|  
   
  [尋找和取代]  作業中有效的所有規則運算式清單很長，無法在 [參考清單]  中顯示出來。 您也可以將下列其中任何規則運算式插入 [尋找目標]  字串中：  
   
-|運算式|語法|Description|  
+|運算是|語法|描述|  
 |----------------|------------|-----------------|  
 |最少 - 零或多個|@|符合零或多個前導運算式出現項目，相符的字元數盡可能少。|  
 |最少 - 一或多個|#|符合一或多個前導運算式出現項目，相符的字元數儘可能少。|  
 |重複 n 次|^n|符合 N 個前導運算式的出現項目。 例如，[0-9]^4 符合任何四位數序列。|  
-|群組|()|將子運算式分組。|  
+|分組|()|將子運算式分組。|  
 |第 n 個標記文字|\n|在 [尋找或取代]  運算式中，指出第 n 個標記運算式相符的文字，其中 n 是 1 到 9 的數字。<br /><br /> 在 [取代]  運算式中，\0 會插入完整的相符文字。|  
 |欄位靠右對齊|\\(w,n)|在 [取代]  運算式中，將欄位中的第 n 個標記運算式靠右對齊至少 *w* 個字元寬。|  
 |欄位靠左對齊|\\(-w,n)|在 [取代]  運算式中，將欄位中的第 n 個標記運算式靠左對齊至少 *w* 個字元寬。|  
@@ -85,7 +85,7 @@ ms.locfileid: "68264175"
   
  下表列出依照標準 Unicode 字元屬性的比對語法。 兩個字母的縮寫與在 Unicode 字元屬性資料庫中所列者相同。 可指定為字元集的一部份。 例如，運算式 [:Nd:Nl:No] 符合任何種類的數字。  
   
-|運算式|語法|Description|  
+|運算是|語法|描述|  
 |----------------|------------|-----------------|  
 |大寫字母|:Lu|符合任何一個大寫字母。 例如，:Luhe 符合 "The"，但不符合 "the"。|  
 |小寫字母|:Ll|符合任何一個小寫字母。 例如，:Llhe 符合 "the"，但不符合 "The"。|  
@@ -120,12 +120,12 @@ ms.locfileid: "68264175"
   
  除了標準的 Unicode 字元屬性以外，另有下列屬性可指定為字元集的一部分。  
   
-|運算式|語法|Description|  
+|運算是|語法|描述|  
 |----------------|------------|-----------------|  
-|α|:Al|符合任何一個字元。 例如，:Alhe 符合如 "The"、"then" 及 "reached" 等字。|  
+|Alpha|:Al|符合任何一個字元。 例如，:Alhe 符合如 "The"、"then" 及 "reached" 等字。|  
 |數值|:Nu|符合任何數字。|  
 |標點符號|:Pu|符合任何一個標點符號，如 ?、@、' 等等。|  
-|空白|:Wh|符合所有類型的空白，包括發行和表意空格。|  
+|空白字元|:Wh|符合所有類型的空白，包括發行和表意空格。|  
 |Bidi|:Bi|符合由右至左書寫的字元，如阿拉伯文與希伯來文。|  
 |韓文|:Ha|符合韓文 (Hangul) 及組合的 Jamo。|  
 |平假名|:Hi|符合平假名字元。|  

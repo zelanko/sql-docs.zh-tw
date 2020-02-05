@@ -21,10 +21,10 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3dee5b4c6522afd93591d1e8aa0c94052d41d9bd
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71711061"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>參數化篩選 - 參數化資料列篩選
@@ -38,7 +38,7 @@ ms.locfileid: "71711061"
  若要定義或修改參數化資料列篩選，請參閱＜ [針對合併發行項定義及修改參數化資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)＞。  
   
 ## <a name="how-parameterized-filters-work"></a>參數化篩選如何運作  
- 參數化資料列篩選器使用 WHERE 子句選取要發行的適當資料。 您可以指定下列系統函數的其中一或兩個，而非在子句中指定常值 (如同對靜態資料列篩選的處理)：SUSER_SNAME() 和 HOST_NAME()。 也可以使用使用者定義函數，但它們必須在函數主體中包含 SUSER_SNAME() 或 HOST_NAME()，或者評估這些系統函數的其中之一 (例如 `MyUDF(SUSER_SNAME()`)。 如果使用者定義函數在函數主體中包含 SUSER_SNAME() 或 HOST_NAME()，則您將無法將參數傳遞到該函數。  
+ 參數化資料列篩選器使用 WHERE 子句選取要發行的適當資料。 您可以指定 SUSER_SNAME() 與 HOST_NAME() 系統函數中的其中之一或兩者，而不要在子句中指定常值 (如同對靜態資料列篩選那樣)。 也可以使用使用者定義函數，但它們必須在函數主體中包含 SUSER_SNAME() 或 HOST_NAME()，或者評估這些系統函數的其中之一 (例如 `MyUDF(SUSER_SNAME()`)。 如果使用者定義函數在函數主體中包含 SUSER_SNAME() 或 HOST_NAME()，則您將無法將參數傳遞到該函數。  
   
  系統函數 SUSER_SNAME() 和 HOST_NAME() 並不是合併式複寫的特定函數，但是可以由合併式複寫用來進行參數化篩選：  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71711061"
   
      也可以使用「訂閱者」或「散發者」名稱之外的其他值覆寫此函數。 通常，應用程式會使用更有意義的值覆寫此函數，例如業務員的姓名或識別碼。 如需詳細資訊，請參閱本主題中的＜覆寫 HOST_NAME() 值＞一節。  
   
- 系統函數傳回的值會與要篩選之資料表中所指定的資料行加以比較，並且適當的資料也會下載到「訂閱者」。 此比較在初始化訂閱 (如此便只有適當的資料才會包含在初始快照集中) 以及每次同步處理訂閱時執行。 根據預設，如果發行者端的變更導致資料列從資料分割中移出，則該資料列會在訂閱者端刪除 (此行為可透過使用 [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@allow_partition_realignment` 參數來控制)。  
+ 系統函數傳回的值會與要篩選之資料表中所指定的資料行加以比較，並且適當的資料也會下載到「訂閱者」。 此比較在初始化訂閱 (如此便只有適當的資料才會包含在初始快照集中) 以及每次同步處理訂閱時執行。 根據預設，如果發行者端的變更導致資料列從資料分割中移出，則該資料列會在訂閱者端刪除 (此行為可透過使用 `@allow_partition_realignment`sp_addmergepublication &#40;Transact-SQL&#41;[ 的 ](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 參數來控制)。  
   
 > [!NOTE]  
 >  當為參數化篩選執行比較時，會始終使用資料庫定序。 例如，如果資料庫定序不區分大小寫，但資料表或資料行定序區分大小寫，則比較將不區分大小寫。  
@@ -95,15 +95,15 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  例如，Pamela Ansman-Wolfe 的員工識別碼已被指派為 280。 當您為此員工建立訂閱時，請將 HOST_NAME() 值指定成員工識別碼的值 (此範例中為 280)。 「合併代理程式」連接到發行者端時，它會將 HOST_NAME() 傳回的值與資料表中的值相比較，並僅下載在 **EmployeeID** 資料行中包含值 280 的資料列。  
   
 > [!IMPORTANT]
->  HOST_NAME() 函數會傳回一個 **nchar** 值，因此，如果篩選子句中的資料行為數值資料類型 (如上述範例)，您必須使用 CONVERT。 基於效能的考量，建議您不要在參數化資料列篩選器子句中的資料行名稱套用函數，例如 `CONVERT(nchar,EmployeeID) = HOST_NAME()`。 反之，建議您使用範例中顯示的方法： `EmployeeID = CONVERT(int,HOST_NAME())`。 此子句可用於 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 `@subset_filterclause` 參數，但通常無法在 [新增發行集精靈] 中使用 (此精靈會執行篩選子句來驗證它，但是因為電腦名稱不能轉換為 **int** 而失敗)。 如果您使用「新增發行集精靈」，建議在此精靈中指定 `CONVERT(nchar,EmployeeID) = HOST_NAME()` ，然後在建立發行集的快照集之前，使用 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) ，將該子句變更為 `EmployeeID = CONVERT(int,HOST_NAME())` 。  
+>  HOST_NAME() 函數會傳回一個 **nchar** 值，因此，如果篩選子句中的資料行為數值資料類型 (如上述範例)，您必須使用 CONVERT。 基於效能的考量，建議您不要在參數化資料列篩選器子句中的資料行名稱套用函數，例如 `CONVERT(nchar,EmployeeID) = HOST_NAME()`。 反之，建議您使用範例中顯示的方法： `EmployeeID = CONVERT(int,HOST_NAME())`。 此子句可用於 `@subset_filterclause`sp_addmergearticle[ 的 ](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 參數，但通常無法在 [新增發行集精靈] 中使用 (此精靈會執行篩選子句來驗證它，但是因為電腦名稱不能轉換為 **int** 而失敗)。 如果您使用「新增發行集精靈」，建議在此精靈中指定 `CONVERT(nchar,EmployeeID) = HOST_NAME()` ，然後在建立發行集的快照集之前，使用 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) ，將該子句變更為 `EmployeeID = CONVERT(int,HOST_NAME())` 。  
   
  **覆寫 HOST_NAME() 值**  
   
  使用下列方法其中一之來覆寫 HOST_NAME() 值：  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：在 [新增訂閱精靈] 的 [HOST\_NAME\(\) 值]  頁面上指定一個值。 如需建立訂閱的詳細資訊，請參閱[訂閱發行集](../../../relational-databases/replication/subscribe-to-publications.md)。  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：在 [新增訂閱精靈] 的 [HOST**NAME\_\( 值]\)** 頁面上指定一個值。 如需建立訂閱的詳細資訊，請參閱[訂閱發行集](../../../relational-databases/replication/subscribe-to-publications.md)。  
   
--   複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式設計︰指定 [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (適用於發送訂閱) 或 [sp_addmergepullsubscription_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (適用於提取訂閱) 的 `@hostname` 參數值。  
+-   複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式設計︰指定 `@hostname`sp_addmergesubscription &#40;Transact-SQL&#41;[ (適用於發送訂閱) 或 ](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)sp_addmergepullsubscription_agent&#40;Transact-SQL&#41;[ (適用於提取訂閱) 的 ](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) 參數值。  
   
 -   合併代理程式：在命令列中或透過代理程式設定檔為 **-Hostname** 參數指定一個值。 如需「合併代理程式」的詳細資訊，請參閱＜ [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)＞。 如需代理程式設定檔的詳細資訊，請參閱＜ [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)＞。  
   
@@ -125,7 +125,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>設定資料分割選項  
  依據「訂閱者」共用已篩選資料表中資料之方式，您可以建立發行項時為 **資料分割選項** 屬性指定一個值。 您可以使用 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)和 **[發行項屬性]** 對話方塊，將這個屬性設為四個值的其中一個。 使用 **[加入篩選]** 或 **[編輯篩選]** 對話方塊 (在「新增發行集精靈」和 **[發行集屬性]** 對話方塊中可用) 可以將屬性設定為兩個值中的其中之一。 下表簡單說明了可用值：  
   
-|Description|「加入篩x」和「編輯篩選」中的值|「發行項屬性」中的值|預存程序中的值|  
+|描述|「加入篩x」和「編輯篩選」中的值|「發行項屬性」中的值|預存程序中的值|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |資料分割中的資料為重疊，「訂閱者」可以更新參數化篩選中參考的資料行。|**這個資料表中的一個資料列會提供給多個訂閱**|**重疊**|**0**|  
 |資料分割中的資料為重疊，「訂閱者」不能更新參數化篩選中參考的資料行。|N/A*|**重疊，不允許變更資料分割外的資料**|**1**|  
@@ -188,6 +188,6 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ## <a name="see-also"></a>另請參閱  
  [以時間為基礎之資料列篩選的最佳做法](../../../relational-databases/replication/merge/best-practices-for-time-based-row-filters.md)   
  [篩選發行的資料](../../../relational-databases/replication/publish/filter-published-data.md)   
- [針對合併式複寫篩選發行的資料](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  
+ [合併式複寫之篩選發行資料](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  
   
   

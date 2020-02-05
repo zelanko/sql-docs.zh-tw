@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: 3533d69ebaac7cf535de0e835bdbfdef9c5fbb4b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70152056"
 ---
 # <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
@@ -49,14 +49,14 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
  以文字表示結果所要求的資料類型。  
   
  *culture*  
- 指出 *string_value* 據以格式化之文化特性 (Culture) 的選擇性字串。  
+ 選擇性字串，指出 *string_value* 要據以格式化的文化特性 (Culture)。  
   
  如未提供 *culture* 引數，將會使用目前工作階段的語言。 此語言是以 SET LANGUAGE 陳述式隱含或明確加以設定。 *culture* 接受 .NET Framework 所支援的任何文化特性 (Culture)，不限於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 明確支援的語言。 如果 *culture* 引數無效，PARSE 會引發錯誤。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  將傳回運算式結果，並轉譯為所要求的資料類型；若轉換失敗，則傳回 Null。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  TRY_PARSE 僅適用於從字串轉換到日期/時間及數字類型。 一般類型轉換仍可繼續使用 CAST 或 CONVERT。 請注意，剖析字串值將對效能造成一定程度的負擔。  
   
  TRY_PARSE 仰賴既存的 .NET Framework Common Language Runtime (CLR)。  
@@ -67,32 +67,32 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
  *date_type* 的參數值僅適用於下表所示的類型與樣式。 此處所提供的樣式資訊可以協助您決定所要允許的模式類型。 如需樣式的詳細資訊，請參閱說明 **System.Globalization.NumberStyles** 和 **DateTimeStyles** 列舉的 .NET Framework 文件。  
   
-|類別目錄|類型|.NET 類型|使用的樣式|  
+|類別|類型|.NET 類型|使用的樣式|  
 |--------------|----------|---------------|-----------------|  
 |數值|BIGINT|Int64|NumberStyles.Number|  
-|數值|INT|Int32|NumberStyles.Number|  
+|數值|int|Int32|NumberStyles.Number|  
 |數值|SMALLINT|Int16|NumberStyles.Number|  
 |數值|TINYINT|Byte|NumberStyles.Number|  
-|數值|Decimal|Decimal|NumberStyles.Number|  
+|數值|decimal|Decimal|NumberStyles.Number|  
 |數值|NUMERIC|Decimal|NumberStyles.Number|  
 |數值|FLOAT|Double|NumberStyles.Float|  
-|數值|REAL|Single|NumberStyles.Float|  
+|數值|real|Single|NumberStyles.Float|  
 |數值|SMALLMONEY|Decimal|NumberStyles.Currency|  
 |數值|money|Decimal|NumberStyles.Currency|  
-|日期及時間|日期|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日期及時間|date|Datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日期及時間|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|日期及時間|DATETIME|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|日期及時間|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|日期及時間|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日期及時間|Datetime|Datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日期及時間|smalldatetime|Datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日期及時間|datetime2|Datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日期及時間|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
   
  **文化特性 (Culture) 參數的詳細資訊**  
   
  下表顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 語言所對應的 .NET Framework 文化特性。  
   
-|全名|別名|LCID|專屬文化特性|  
+|全名|Alias|LCID|專屬文化特性|  
 |---------------|-----------|----------|----------------------|  
-|us_english|英文|1033|en-US|  
+|us_english|英文|1033|zh-TW|  
 |Deutsch|德文|1031|de-DE|  
 |Français|法文|1036|fr-FR|  
 |日本語|日文|1041|ja-JP|  

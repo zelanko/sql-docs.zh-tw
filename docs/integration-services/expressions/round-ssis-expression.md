@@ -14,10 +14,10 @@ ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 74b18ed725b70e1086b22515a0a051d2521383b7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288326"
 ---
 # <a name="round-ssis-expression"></a>ROUND (SSIS 運算式)
@@ -38,13 +38,13 @@ ROUND(numeric_expression,length)
  *numeric_expression*  
  是有效數值類型的運算式。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
- *長度*  
+ *length*  
  是整數運算式。 它是 *numeric_expression* 進位到的有效位數。  
   
 ## <a name="result-types"></a>結果類型  
  與 *numeric*_*expression*相同的類型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  *length* 引數必須評估為正整數或零。  
   
  如果引數為 Null，則 ROUND 會傳回 Null 結果。  

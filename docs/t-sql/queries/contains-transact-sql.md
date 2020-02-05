@@ -35,17 +35,17 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 613dc7c05707d9a432ec6f8f7eab7b8b3bce2cce
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982827"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中搜尋單字和片語的精確或模糊 (較不精確) 相符項目、彼此在一定距離之間的單字，或加權相符項目。 CONTAINS 為用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT 陳述式之 [WHERE 子句](../../t-sql/queries/where-transact-sql.md)中的述詞，可在包含以字元為基礎之資料類型的全文檢索索引資料行上執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 全文檢索搜尋。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中搜尋單字和片語的精確或模糊 (較不精確) 相符項目、彼此在一定距離之間的單字，或加權相符項目。 CONTAINS 為用於 [ SELECT 陳述式之 ](../../t-sql/queries/where-transact-sql.md)WHERE 子句[!INCLUDE[tsql](../../includes/tsql-md.md)]中的述詞，可在包含以字元為基礎之資料類型的全文檢索索引資料行上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文檢索搜尋。  
   
  CONTAINS 可以搜尋下列項目：  
   
@@ -159,13 +159,13 @@ CONTAINS (
 >  *property_name* 必須在全文檢索索引的搜尋屬性清單中指定，而且全文檢索索引必須包含 *property_name* 的屬性特定項目，才能讓查詢傳回任何資料列。 如需詳細資訊，請參閱 [使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
  LANGUAGE *language_term*  
- 這是在查詢中用於斷詞、確立詞幹、同義字擴充與取代，以及移除非搜尋字 (或[停用字詞](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) 的語言。 這個參數是選擇性的。  
+ 這是在查詢中用於斷詞、確立詞幹、同義字擴充與取代，以及移除非搜尋字 (或[停用字詞](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) 的語言。 這是選擇性參數。  
   
  如果不同語言的文件當做二進位大型物件 (BLOB) 一起儲存在單一資料行中，給定文件的地區設定識別碼 (LCID) 會判斷要建立其內容索引所使用的語言。 查詢此種資料行時，指定 LANGUAGE *language_term* 可以增加完全相符的機率。  
   
  *language_term*以指定為對應於語言之 LCID 的字串、整數或十六進位值。 如果指定 *language_term*，系統就會將它所代表的語言套用至搜尋條件的所有元素上。 如果未指定任何值，就會使用資料行全文檢索語言。  
   
- 當指定為字串時，*language_term* 會對應到 [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 相容性檢視表中的 **alias** 資料行值。 字串必須以單引號括住，如 '*language_term*'。 當指定為整數時，*language_term* 是用於識別語言的實際 LCID。 當指定為十六進位值時，*language_term* 是 0x，後面接著 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。  
+ 當指定為字串時，*language_term* 會對應到 **sys.syslanguages &#40;Transact-SQL&#41;** 相容性檢視表中的 [alias](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 資料行值。 字串必須以單引號括住，如 '*language_term*'。 當指定為整數時，*language_term* 是用於識別語言的實際 LCID。 當指定為十六進位值時，*language_term* 是 0x，後面接著 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。  
   
  如果這個值是雙位元組字集 (DBCS) 格式，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將它轉換成 Unicode。  
   
@@ -359,7 +359,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
 ## <a name="querying-multiple-columns-full-text-search"></a>查詢多個資料行 (全文檢索搜尋)  
  您可以指定要搜尋的資料行清單，來查詢多個資料行。 這些資料行必須來自相同的資料表。  
   
- 例如，下列 CONTAINS 查詢會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫 `Production.Product` 資料表的 `Name` 和 `Color` 資料行中搜尋 `Red` 詞彙。  
+ 例如，下列 CONTAINS 查詢會在 `Red` 範例資料庫 `Name` 資料表的 `Color` 和 `Production.Product` 資料行中搜尋 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 詞彙。  
   
 ```sql  
 Use AdventureWorks2012;  
@@ -424,7 +424,7 @@ GO
   
 **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。 
   
- 下列範例會在 `Production.ProductReview` 資料表中，於 "`control`" 單字的 10 個詞彙內搜尋包含單字 `bike`，且依據指定順序 (也就是 "`bike`" 需位於 "`control`" 之前) 的所有註解。  
+ 下列範例會在 `Production.ProductReview` 資料表中，於 "`bike`" 單字的 10 個詞彙內搜尋包含單字 `control`，且依據指定順序 (也就是 "`bike`" 需位於 "`control`" 之前) 的所有註解。  
   
 ```sql  
 USE AdventureWorks2012;  

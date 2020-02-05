@@ -14,10 +14,10 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8f3aef5f587e590dcad0ab0490679a480529387a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290498"
 ---
 # <a name="add-or-change-a-property-expression"></a>加入或變更屬性運算式
@@ -72,10 +72,10 @@ ms.locfileid: "71290498"
  [Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [在封裝中使用屬性運算式](../../integration-services/expressions/use-property-expressions-in-packages.md)   
  [Integration Services &#40;SSIS&#41; 封裝](../../integration-services/integration-services-ssis-packages.md)   
- [整合服務容器](../../integration-services/control-flow/integration-services-containers.md)   
+ [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services &#40;SSIS&#41; 事件處理常式](../../integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Integration Services &#40;SSIS&#41; 連線](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)  
   
   

@@ -15,10 +15,10 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71708729"
 ---
 # <a name="back-up-a-transaction-log"></a>備份交易記錄
@@ -28,7 +28,7 @@ ms.locfileid: "71708729"
 ## <a name="before-you-begin"></a>開始之前
 ### <a name="Restrictions"></a> 限制事項  
   
-在明確或[隱含](../../t-sql/statements/set-implicit-transactions-transact-sql.md)的交易中，並不允許使用 `BACKUP` 陳述式。 明確交易是明確定義交易的啟動與結束的一種交易。
+在明確或`BACKUP`隱含[的交易中，並不允許使用 ](../../t-sql/statements/set-implicit-transactions-transact-sql.md) 陳述式。 明確交易是明確定義交易的啟動與結束的一種交易。
 
 ### <a name="Recommendations"></a> 建議  
   
@@ -67,7 +67,7 @@ ms.locfileid: "71708729"
   
 1. 指定備份組會在何時過期：  
   
-    - 若要讓備份組在特定的天數後過期，請按一下 **[之後]** (預設選項)，然後輸入備份組建立之後將會過期的天數。 這個值可以介於 0 到 99999 日之間；值為 0 日意指備份組永遠不會過期。  
+    - 若要讓備份組在特定的天數後過期，請按一下 [之後]  \(預設選項)，然後輸入備份組建立之後將會過期的天數。 這個值可以介於 0 到 99999 日之間；值為 0 日意指備份組永遠不會過期。  
   
          預設值會在 **[伺服器屬性]** 對話方塊 ( **[資料庫設定]** 頁面) 的 **[預設備份媒體保留 (以天為單位)]** 選項中設定。 若要存取此對話方塊，請以滑鼠右鍵按一下 [物件總管] 中的伺服器名稱並選取 [屬性]，然後選取 **[資料庫設定]** 頁面。  
   
@@ -127,9 +127,9 @@ ms.locfileid: "71708729"
   
    - AES 256  
   
-   - Triple DES  
+   - 三重 DES  
 
-## <a name="using-transact-sql"></a>使用 Transact-SQL  
+## <a name="using-transact-sql"></a>使用 TRANSACT-SQL  
   
 執行 BACKUP LOG 陳述式以備份交易記錄，並指定下列項目：  
   

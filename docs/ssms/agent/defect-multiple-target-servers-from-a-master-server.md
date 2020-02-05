@@ -1,10 +1,7 @@
 ---
-title: 使多個目標伺服器脫離主要伺服器 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Defect Multiple Target Servers from a Master Server
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,15 +14,20 @@ helpviewer_keywords:
 ms.assetid: 61a3713b-403a-4806-bfc4-66db72ca1156
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dc5ad3034885805272ed1d507e0168d5884c4c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: dcce797597d2f0ed4700ad17d716d31c49a4cffa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267232"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254719"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Defect Multiple Target Servers from a Master Server
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -39,7 +41,7 @@ ms.locfileid: "68267232"
   
 1.  在 **[物件總管]** 中，展開設定為主要伺服器的伺服器。  
   
-2.  在 [SQL Server Agent]  ，再指向 [多伺服器管理]  ，然後按一下 [管理目標伺服器]  。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，指向 [多重伺服器管理]  ，然後按一下 [管理目標伺服器]  。  
   
 3.  按一下 **[公佈指示]** ，然後在 **[指示類型]** 清單中選取 **[脫離]** 。  
   
@@ -52,5 +54,5 @@ ms.locfileid: "68267232"
 ## <a name="see-also"></a>另請參閱  
 [建立多伺服器環境](../../ssms/agent/create-a-multiserver-environment.md)  
 [將整個企業的管理自動化](../../ssms/agent/automated-administration-across-an-enterprise.md)  
-[Defect a Target Server from a Master Server](../../ssms/agent/defect-a-target-server-from-a-master-server.md)  
+[使目標伺服器脫離主要伺服器](../../ssms/agent/defect-a-target-server-from-a-master-server.md)  
   

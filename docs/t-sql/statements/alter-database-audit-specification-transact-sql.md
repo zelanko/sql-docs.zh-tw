@@ -20,10 +20,10 @@ ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c9229f5bec676f28d92b4ea1aba1ad3aeeb4d6c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065888"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
@@ -83,7 +83,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  啟用或停用從這個稽核規格收集而來之記錄的稽核。 稽核規格狀態變更必須在使用者交易外部完成，而且當轉換從 ON 到 OFF 時，相同的陳述式中可能不會有其他變更。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  資料庫稽核規格是位於給定資料庫內的非安全性實體物件。 您必須將稽核規格的狀態設定為 OFF 選項，才可以變更資料庫稽核規格。 如果在設定 STATE=OFF 以外的任何選項時啟用稽核，而且執行 ALTER DATABASE AUDIT SPECIFICATION，您將會收到錯誤訊息。 如需詳細資訊，請參閱 [tempdb Database](../../relational-databases/databases/tempdb-database.md)。  
   
 ## <a name="permissions"></a>權限  

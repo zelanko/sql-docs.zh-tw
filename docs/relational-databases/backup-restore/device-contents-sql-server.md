@@ -13,10 +13,10 @@ ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68068496"
 ---
 # <a name="device-contents-sql-server"></a>裝置內容 (SQL Server)
@@ -54,17 +54,17 @@ ms.locfileid: "68068496"
  **備份組**  
  顯示有關媒體上包含的備份組的資訊。 備份組是成功備份作業的結果，其內容會在備份裝置組的媒體之間散發。  
   
-|標頭|值|  
+|頁首|值|  
 |------------|------------|  
 |**名稱**|備份組的名稱。|  
-|**型別**|執行的備份類型：[完整]、[差異] 或 [交易記錄]。|  
-|**元件**|備份的元件：[資料庫]、[檔案] 或 [\<空白>]  (適用於交易記錄)。|  
+|**型別**|執行的備份類型：完整、差異或交易記錄。|  
+|**元件**|備份的元件：資料庫、檔案或 *\<空白>* (針對交易記錄)。|  
 |**Server**|執行備份作業之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的名稱。|  
-|**[資料庫備份]**|已備份資料庫的名稱。|  
+|**Database**|已備份資料庫的名稱。|  
 |**位置**|備份組在磁碟區中的位置。|  
 |**日期**|備份作業完成時的日期和時間，會出現在用戶端的地區設定中。|  
 |**大小**|備份組的大小 (以位元組為單位)。|  
-|**使用者名稱**|執行備份作業的使用者名稱。|  
+|**使用者名稱**|{1}執行備份作業的使用者名稱。{2}|  
 |**到期**|備份組過期的日期和時間。|  
   
 ## <a name="see-also"></a>另請參閱  

@@ -15,10 +15,10 @@ ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f4fd01821e8f432d39905fb0bca974c155a151af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066133"
 ---
 # <a name="unionaggregate-geometry-data-type"></a>UnionAggregate (geometry 資料類型)
@@ -37,13 +37,13 @@ UnionAggregate ( geometry_operand )
  *geometry_operand*  
  這是 **geometry** 類型資料表資料行，可保留要在其上執行聯集作業的一組 **geometry** 物件。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
 ## <a name="exceptions"></a>例外狀況  
  輸入的值無效時，會擲回 `FormatException`。 請參閱 [STIsValid &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當輸入是空的或輸入具有不同 SRID 時，此方法會傳回 **null**。 請參閱[空間參考識別碼 &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
  此方法會忽略 **null** 輸入。  

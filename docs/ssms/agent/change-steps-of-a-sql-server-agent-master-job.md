@@ -1,24 +1,25 @@
 ---
-title: 變更 SQL Server Agent 主要作業的步驟 | Microsoft Docs
-ms.custom: ''
+title: 變更 SQL Server Agent Master Job 的步驟
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ca117df9e02489e9ea3a9a194a002cc5e36d661d
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 00c518337b74f1c1adea9b39692e6659b6741d9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553314"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75238081"
 ---
-# <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
+# <a name="change-steps-of-a-sql-server-agent-master-job"></a>變更 SQL Server Agent Master Job 的步驟
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -48,13 +49,13 @@ ms.locfileid: "69553314"
   
 4.  以滑鼠右鍵按一下您想要修改步驟的作業，然後選取 [屬性]  。  
   
-5.  在 [作業屬性 - _job\_name_]  對話方塊的 [選取頁面]  下，選取 [步驟]  。  
+5.  在 [作業屬性 - **job**name _]\__ 對話方塊的 [選取頁面]  下，選取 [步驟]  。  
   
-6.  按一下 [編輯]  開啟 [作業步驟屬性 - _job\_step\_name_]  對話方塊。 如需此對話方塊中可用選項的詳細資訊，請參閱[作業步驟屬性 - 新增作業步驟 &#40;一般頁面&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) 和[作業步驟屬性 - 新增作業步驟 &#40;進階頁面&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)。  
+6.  按一下 [編輯]  開啟 [作業步驟屬性 - **job**step_name\_]\__ 對話方塊。 如需此對話方塊中可用選項的詳細資訊，請參閱[作業步驟屬性 - 新增作業步驟 &#40;一般頁面&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) 和[作業步驟屬性 - 新增作業步驟 &#40;進階頁面&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)。  
   
 7.  完成後，請按一下 **[確定]** 。  
   
-8.  在 [作業屬性 - _job\_name_]  對話方塊中，按一下 [確定]  。  
+8.  在 [作業屬性 - **job**name _]\__ 對話方塊中，按一下 [確定]  。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   

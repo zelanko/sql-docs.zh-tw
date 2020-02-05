@@ -25,13 +25,13 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a18b99d8e4700a840fa3cdc98af492bc0193bbaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914723"
 ---
-# <a name="objectname-transact-sql"></a>OBJECT_NAME (Transact-SQL)
+# <a name="object_name-transact-sql"></a>OBJECT_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回結構描述範圍物件的資料庫物件名稱。 如需結構描述範圍物件的清單，請參閱 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。  
@@ -45,13 +45,13 @@ OBJECT_NAME ( object_id [, database_id ] )
 ```  
   
 ## <a name="arguments"></a>引數  
- *object_id*  
+ object_id   
  這是所要使用的物件識別碼。 *object_id* 為 **int**，而且會假設為指定資料庫或目前資料庫內容中的結構描述範圍物件。  
   
  *database_id*  
  這是要在其中查閱物件之資料庫的識別碼。 *database_id* 為 **int**。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **sysname**  
   
 ## <a name="exceptions"></a>例外狀況  
@@ -62,7 +62,7 @@ OBJECT_NAME ( object_id [, database_id ] )
 ## <a name="permissions"></a>權限  
  需要物件的 ANY 權限。 若要指定資料庫識別碼，也需要資料庫的 CONNECT 權限，或必須啟用 Guest 帳戶。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  系統函數可以用於選取清單、WHERE 子句以及任何可以使用運算式的位置。 如需詳細資訊，請參閱[運算式](../../t-sql/language-elements/expressions-transact-sql.md) 及 [WHERE](../../t-sql/queries/where-transact-sql.md)。  
   
  這個系統函數傳回的值會使用目前資料庫的定序。  
@@ -89,7 +89,7 @@ GO
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-objectname-in-a-where-clause"></a>A. 在 WHERE 子句中使用 OBJECT_NAME  
+### <a name="a-using-object_name-in-a-where-clause"></a>A. 在 WHERE 子句中使用 OBJECT_NAME  
  下列範例會從 `sys.objects` 目錄檢視中，傳回 `OBJECT_NAME` 陳述式 `WHERE` 子句中的 `SELECT` 所指定之物件的資料行。  
   
 ```  
@@ -134,7 +134,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-objectname-in-a-where-clause"></a>D. 在 WHERE 子句中使用 OBJECT_NAME  
+### <a name="d-using-object_name-in-a-where-clause"></a>D. 在 WHERE 子句中使用 OBJECT_NAME  
  下列範例會從 `sys.objects` 目錄檢視中，傳回 `OBJECT_NAME` 陳述式 `WHERE` 子句中的 `SELECT` 所指定之物件的資料行。 (您的物件數目 (下列範例中為 274100017) 會不同。  若要測試此範例，請藉由在您的資料庫中執行 `SELECT name, object_id FROM sys.objects;` 來查看有效物件的數目。)  
   
 ```  

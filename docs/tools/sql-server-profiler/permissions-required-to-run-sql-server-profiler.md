@@ -1,31 +1,28 @@
 ---
-title: 執行 SQL Server Profiler 所需的權限 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 所需的權限
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- Profiler [SQL Server Profiler], permissions
-- traces [SQL Server], replaying
-- replaying traces
-- SQL Server Profiler, permissions
-- security [SQL Server], SQL Server Profiler
 ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 73b4be6320ab342bcdee3b2e66d8bcd31445e0d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 0570401f34d08009c4af1cfc9038bec9aae0fc7a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031515"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307529"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>執行 SQL Server Profiler 所需的權限
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  根據預設，執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 時，所需的使用者權限與用來建立追蹤的 Transact-SQL 預存程序相同。 若要執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，使用者必須被授與 ALTER TRACE 權限。 如需詳細資訊，請參閱 [GRANT 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)。  
+
+根據預設，執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 時，所需的使用者權限與用來建立追蹤的 Transact-SQL 預存程序相同。 若要執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，使用者必須被授與 ALTER TRACE 權限。 如需詳細資訊，請參閱 [GRANT 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)。  
   
 > [!IMPORTANT]  
 >  具有 SHOWPLAN、ALTER TRACE 或 VIEW SERVER STATE 權限的使用者可以檢視執行程序表輸出中所擷取的查詢。 這些查詢可能會包含類似密碼的敏感資訊。 因此，我們建議您只能將這些權限授與給有權檢視敏感資訊的使用者，例如 db_owner 固定資料庫角色的成員或是 sysadmin 固定伺服器角色的成員。 此外，我們也建議您只將執行程序表檔案或是包含與執行程序表相關之事件的追蹤檔案儲存到使用 NTFS 檔案系統的位置，並建議您將存取權限制為有權檢視敏感資訊的使用者。  
@@ -63,7 +60,7 @@ ms.locfileid: "68031515"
   
  下圖顯示重新執行追蹤時，檢查權限的程序：  
   
- ![SQL Server Profiler 重新執行追蹤許可權](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif "SQL Server Profiler 重新執行追蹤許可權")  
+ ![SQL Server Profiler replay trace permissions](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif"SQL Server Profiler replay trace permissions")  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler 預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   

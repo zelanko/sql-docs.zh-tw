@@ -13,10 +13,10 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9e3a8be595188b0eef11a78826c7447af40bec4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294386"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>查閱轉換完整快取模式 - OLE DB 連線管理員
@@ -86,8 +86,8 @@ ms.locfileid: "71294386"
 13. 按一下 **[確定]** ，將變更儲存至查閱轉換，然後再執行封裝。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用快取連接管理員以完整快取模式實作查閱轉換](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
- [以沒有快取或部分快取模式實作查閱](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [使用快取連線管理員以完整快取模式來實作查閱轉換](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
+ [以沒有快取或部分快取模式來實作查閱](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services 轉換](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

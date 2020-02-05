@@ -15,10 +15,10 @@ ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3b93c9b438a22cba125bb7487b393371b4ffd8c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033446"
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>進階合併式複寫衝突 - 選擇解析程式
@@ -35,7 +35,7 @@ ms.locfileid: "68033446"
   
 |衝突解決問題|建議|  
 |-------------------------------|--------------------|  
-|不同類別的使用者需要不同的優先權值。|使用預設解決器，並建立具有不同優先權值的主訂閱。<br /><br /> 或<br /><br /> 使用可在發行項中辨識授權值資料行之發行項解決器來協助解決衝突。|  
+|不同類別的使用者需要不同的優先權值。|使用預設解決器，並建立具有不同優先權值的主訂閱。<br /><br /> Or<br /><br /> 使用可在發行項中辨識授權值資料行之發行項解決器來協助解決衝突。|  
 |希望使用先改變者為贏的衝突解決方案。|使用預設解決器並建立客訂閱。|  
 |可接受多位使用者變更同一個資料列，只要同一資料行沒有衝突變更即可。|使用預設解決器或發行項解決器，並啟用資料行層級追蹤。|  
 |以旗標將資料列上任何值的多次變更標示為衝突。|使用預設解決器或發行項解決器，並啟用資料列層級追蹤。|  
@@ -43,7 +43,7 @@ ms.locfileid: "68033446"
 |衝突結果資料需與原始衝突資料不同。|使用可計算新值的發行項解決器。|  
   
 ## <a name="see-also"></a>另請參閱  
- [偵測和解決邏輯記錄中的衝突](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+ [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [進階合併式複寫衝突偵測與解決](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [重新發行資料](../../../relational-databases/replication/republish-data.md)  
   

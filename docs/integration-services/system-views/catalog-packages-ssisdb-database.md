@@ -14,10 +14,10 @@ ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aea0d3c07482c7c54dc5adb8956b290791f29111
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295171"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (SSISDB 資料庫)
@@ -29,7 +29,7 @@ ms.locfileid: "71295171"
 
   針對 **SSISDB** 目錄中出現的所有套件顯示詳細資料。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |package_id|**bigint**|封裝的唯一識別碼 (ID)。|  
 |NAME|**nvarchar(256)**|封裝的唯一名稱。|  
@@ -46,7 +46,7 @@ ms.locfileid: "71295171"
 |validation_status|**char(1)**|驗證的狀態。|  
 |last_validation_time|**datetimeoffset(7)**|上一次驗證的時間。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個檢視會顯示目錄中每個封裝的資料列。  
   
 ## <a name="permissions"></a>權限  

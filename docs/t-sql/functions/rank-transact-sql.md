@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 631ef62034027217e8893f2fab42ce299157c1ba
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68661441"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
@@ -50,10 +50,10 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  *partition_by_clause* 會將 FROM 子句產生的結果集分割成函數所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 在套用函式之前，_order\_by\_clause_ 可決定資料順序。 *order_by_clause* 為必要項目。 您無法為 RANK 函式指定 OVER 子句的 \<資料列或範圍子句/>。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  若針對某個次序繫結兩個或更多資料列，每個繫結的資料列都會收到相同的次序。 例如，如果兩位超級業務員有相同的 SalesYTD 值，他們的次序便都是第一。 SalesYTD 次高的業務員之次序便是第三，因為有兩個資料列次序比它高。 因此，RANK 函數不一定會傳回連續整數。  
   
  整個查詢所用的排序順序，決定了資料列在結果集中的出現順序。  
@@ -131,7 +131,7 @@ BusinessEntityID Rate                  RankBySalary
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-ranking-rows-within-a-partition"></a>C：排序分割區中的資料列  
+### <a name="c-ranking-rows-within-a-partition"></a>C：在分割區內排列資料列  
  下列範例會根據其總銷售額，排列每個銷售領域內的銷售代表。 資料列集由 `SalesTerritoryGroup` 來進行資料分割，依照 `SalesAmountQuota` 來排序。  
   
 ```sql  

@@ -1,10 +1,9 @@
 ---
-title: 監視作業活動 | Microsoft Docs
-ms.custom: ''
+title: 監視作業活動
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,13 +20,15 @@ helpviewer_keywords:
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a227b7ee1723dd8a77d7eb118476969575c5951c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0fdb46ddca31f870363385bef70adde37a7a36ef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267496"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252363"
 ---
 # <a name="monitor-job-activity"></a>監視作業活動
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,9 +56,9 @@ ms.locfileid: "68267496"
   
 當您想要了解有哪些作業已排程執行、目前工作階段期間已執行作業的最後結果，以及找出哪些作業目前執行中或閒置時，便可使用「作業活動監視器」。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務異常失敗，您可以查看「作業活動監視器」中的先前工作階段，判斷哪些作業原本正在執行中。  
   
-若要開啟「作業活動監視器」，請展開「[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 物件總管」中的 [SQL Server Agent]  、以滑鼠右鍵按一下 [作業活動監視器]  ，然後按一下 [檢視作業活動]  。  
+若要開啟「作業活動監視器」，請展開「 **物件總管」中的 [SQL Server Agent]** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、以滑鼠右鍵按一下 [作業活動監視器]  ，然後按一下 [檢視作業活動]  。  
   
-您也可以使用預存程序 **sp_help_jobactivity** 來檢視目前工作階段的作業活動。  
+您也可以使用預存程序 **sp_help_jobactivity**來檢視目前工作階段的作業活動。  
   
 ## <a name="related-tasks"></a>相關工作  
   

@@ -9,10 +9,10 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63295770"
 ---
 # <a name="tutorial-introducing-expressions"></a>教學課程：運算式簡介
@@ -39,7 +39,7 @@ ms.locfileid: "63295770"
   
 ### <a name="to-create-a-table-report"></a>建立資料表報表  
   
-1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  從您的電腦、[ Web 入口網站或 SharePoint 整合模式](../reporting-services/report-builder/start-report-builder.md)啟動報表產生器[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]。  
   
     [新報表或資料集]  對話方塊隨即開啟。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "63295770"
 
     ![report-builder-expression-tutorial-choose-layout](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
   
-17. 按一下 **[完成]** 。  
+17. 按一下 [完成]  。  
   
 ## <a name="UpdateNames"></a>2.更新資料來源和資料集的預設名稱  
   
@@ -533,25 +533,25 @@ ms.locfileid: "63295770"
   
 5.  在 [可用的值]  索引標籤上，按一下 [指定值]  。  
   
-7.  按一下 **[加入]** 。  
+7.  按一下 [新增]  。  
   
 8.  在 [標籤]  方塊中，鍵入 **Yellow**  
   
 9. 在 [值]  方塊中，輸入 **Yellow**。  
   
-10. 按一下 **[加入]** 。  
+10. 按一下 [新增]  。  
   
 11. 在 [標籤]  方塊中，鍵入 **Green**  
   
 12. 在 [值]  方塊中，鍵入 **PaleGreen**  
   
-13. 按一下 **[加入]** 。  
+13. 按一下 [新增]  。  
   
 14. 在 [標籤]  方塊中，鍵入 **Blue**  
   
 15. 在 [值]  方塊中，鍵入 **LightBlue**  
   
-16. 按一下 **[加入]** 。  
+16. 按一下 [新增]  。  
   
 17. 在 [標籤]  方塊中，鍵入 **Pink**  
   

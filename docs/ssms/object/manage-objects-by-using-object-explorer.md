@@ -1,6 +1,6 @@
 ---
-title: 使用物件總管管理物件 | Microsoft Docs
-ms.custom: ''
+title: 使用物件總管管理物件
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bb52261160cc693193e4cc983a4c2e28baa28686
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d499666f51605e7df90332174c82681f8a386017
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264099"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257223"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>使用物件總管管理物件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68264099"
 在 [物件總管] 中，每次只能選取一個物件。 若要選取多個項目，請按 **F7** 開啟 [物件總管詳細資料]  頁面。 [物件總管詳細資料]  頁面支援多重選取。  
   
 ## <a name="register-a-server-from-object-explorer"></a>從物件總管註冊伺服器  
-當連接到伺服器時，您便很容易註冊伺服器，供未來使用。 在物件總管中，以滑鼠右鍵按一下伺服器名稱，然後按一下 [註冊]  。 在 [已註冊的伺服器]  對話方塊中，指定伺服器在伺服器群組樹狀結構中的放置位置。 在 [伺服器名稱]  方塊中，您可以將伺服器名稱改成更有意義的伺服器名稱。 例如，您可以利用類似 "**Accounts Payable**" 等更有意義的名稱來註冊 **APSQL02** 伺服器。  
+當連接到伺服器時，您便很容易註冊伺服器，供未來使用。 在物件總管中，以滑鼠右鍵按一下伺服器名稱，然後按一下 [註冊]  。 在 [已註冊的伺服器]  對話方塊中，指定伺服器在伺服器群組樹狀結構中的放置位置。 在 [伺服器名稱]  方塊中，您可以將伺服器名稱改成更有意義的伺服器名稱。 例如，您可以利用類似 " **Accounts Payable** " 等更有意義的名稱來註冊**APSQL02**伺服器。  
   
 ## <a name="performing-actions-on-object-explorer-nodes"></a>在物件總管節點上執行動作  
 以滑鼠右鍵按一下表示物件的物件總管節點，針對物件執行動作。 每種物件類型都支援一組唯一的按右鍵動作。 您可以使用按右鍵功能表執行的某些動作類型包括：  

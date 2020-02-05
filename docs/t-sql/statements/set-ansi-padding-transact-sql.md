@@ -25,13 +25,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fcbc2f6ae35c72f86ccbbc6d34f45384c88c2fd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041906"
 ---
-# <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
+# <a name="set-ansi_padding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   控制資料行針對數值長度短於資料行所定義大小的儲存方式，以及資料行針對 **char**、 **varchar**、 **binary**和 **varbinary** 資料尾端具有空白之數值的儲存方式。  
@@ -52,7 +52,7 @@ SET ANSI_PADDING { ON | OFF }
 SET ANSI_PADDING ON
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  以 **char**、**varchar**、**binary** 和 **varbinary** 資料類型定義的資料行具有定義的大小。  
   
  這項設定只會影響新資料行的定義。 建立好資料行之後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會根據建立資料行之時的設定來儲存值。 這項設定後來的變更並不會影響現有的資料行。  
@@ -64,7 +64,7 @@ SET ANSI_PADDING ON
   
 |設定|char(*n*) NOT NULL 或 binary(*n*) NOT NULL|char(*n*) NULL 或 binary(*n*) NULL|varchar(*n*) 或 varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|將原始值填補到資料行的長度 (**char** 資料行使用尾端空格，**binary** 資料行使用尾端零)。|當 SET ANSI_PADDING 為 ON 時，請遵循 **char(** _n_ **)** 或 **binary(** _n_ **)** NOT NULL 的相同規則。|不修剪插入 **varchar** 資料行之字元值的尾端空格。 不修剪插入 **varbinary** 資料行之二進位值的尾端零。 值不會填補到資料行的長度。|  
+|開啟|將原始值填補到資料行的長度 (**char** 資料行使用尾端空格，**binary** 資料行使用尾端零)。|當 SET ANSI_PADDING 為 ON 時，請遵循 **char(** _n_ **)** 或 **binary(** _n_ **)** NOT NULL 的相同規則。|不修剪插入 **varchar** 資料行之字元值的尾端空格。 不修剪插入 **varbinary** 資料行之二進位值的尾端零。 值不會填補到資料行的長度。|  
 |OFF|將原始值填補到資料行的長度 (**char** 資料行使用尾端空格，**binary** 資料行使用尾端零)。|當 SET ANSI_PADDING 是 OFF 時，請遵照 **varchar** 或 **varbinary** 的相同規則。|修剪插入 **varchar** 資料行之字元值的尾端空格。 修剪插入 **varbinary** 資料行之二進位值的尾端零。|  
   
 > [!NOTE]  

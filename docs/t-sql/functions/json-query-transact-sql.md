@@ -19,13 +19,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 09b1f1036f298179033c9ab1ba2e7c3ffed1ce06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109367"
 ---
-# <a name="jsonquery-transact-sql"></a>JSON_QUERY (Transact-SQL)
+# <a name="json_query-transact-sql"></a>JSON_QUERY (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -69,7 +69,7 @@ JSON 路徑可為剖析指定 lax 或 strict 模式。 若您未指定剖析模�
   
 - 在 strict 模式中，**JSON_QUERY**會傳回錯誤。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 
 ### <a name="lax-mode-and-strict-mode"></a>lax 模式和 strict 模式
 
@@ -92,7 +92,7 @@ JSON 路徑可為剖析指定 lax 或 strict 模式。 若您未指定剖析模�
   
  下列表格會比較 lax 模式與 strict 模式中 **JSON_QUERY** 的行為。 如需選擇性路徑模式規格 (lax 或 strict) 的詳細資訊，請參閱 [JSON 路徑運算式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)。  
   
-|路徑|lax 模式中的傳回值|strict 模式中的傳回值|其他資訊|  
+|Path|lax 模式中的傳回值|strict 模式中的傳回值|其他資訊|  
 |----------|------------------------------|---------------------------------|---------------|  
 |$|傳回完整的 JSON 文字。|傳回完整的 JSON 文字。|N/a|  
 |$.info.type|NULL|錯誤|並非物件或陣列。<br /><br /> 請改為使用 **JSON_VALUE**。|  
@@ -102,11 +102,11 @@ JSON 路徑可為剖析指定 lax 或 strict 模式。 若您未指定剖析模�
 |$.info.type[0]|NULL|錯誤|非陣列。|  
 |$.info.none|NULL|錯誤|屬性不存在。|  
 
-### <a name="using-jsonquery-with-for-json"></a>搭配 FOR JSON 使用 JSON_QUERY
+### <a name="using-json_query-with-for-json"></a>搭配 FOR JSON 使用 JSON_QUERY
 
 **JSON_QUERY** 會傳回有效的 JSON 片段。 因此，**FOR JSON** 不會在 **JSON_QUERY** 的傳回值中逸出特殊字元。
 
-若您使用 FOR JSON 傳回結果，並且在其中包含已經是 JSON 格式的資料 (在資料行中或運算式的結果)，請使用不具有 *path* 參數的 **JSON_QUERY** 來包裝 JSON 資料。
+若您使用 FOR JSON 傳回結果，並且在其中包含已經是 JSON 格式的資料 (在資料行中或運算式的結果)，請使用不具有 **path** 參數的 *JSON_QUERY* 來包裝 JSON 資料。
 
 ## <a name="examples"></a>範例  
   

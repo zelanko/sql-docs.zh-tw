@@ -29,10 +29,10 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23ae71eff12e7155580eff8238a459c47211c5de
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297761"
 ---
 # <a name="term-extraction-transformation"></a>詞彙擷取轉換
@@ -180,7 +180,7 @@ ms.locfileid: "71297761"
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -193,7 +193,7 @@ ms.locfileid: "71297761"
  **可用的輸入資料行**  
  使用此核取方塊，選取用於詞彙擷取的單一文字資料行。  
   
- **詞彙**  
+ **字詞**  
  提供輸出資料行的名稱，其中將包含所擷取的詞彙。  
   
  **分數**  
@@ -241,7 +241,7 @@ ms.locfileid: "71297761"
  指定分數是詞彙的頻率。  
   
  **TFIDF**  
- 指定分數是詞彙的 TFIDF 值。 TFIDF 分數是「詞彙頻率」和「反向文件頻率」的乘積，定義為：詞彙 T 的 TFIDF = (T 的頻率) * log( (輸入中的資料列數目) / (有 T 的資料列數目) )  
+ 指定分數是詞彙的 TFIDF 值。 TFIDF 分數是「詞彙頻率」和「反向文件頻率」的乘積，定義為︰詞彙 T 的 TFIDF = (T 的頻率) * log((輸入中的資料列數) / (具有 T 的資料列數))  
   
  **頻率臨界值**  
  指定擷取單字或片語前，該單字或片語必須出現的次數。 預設值為 2。  

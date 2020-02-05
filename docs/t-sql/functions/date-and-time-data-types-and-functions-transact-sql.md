@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: a7beec472b0f4b70662c364081641b6ea91be507
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75256088"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>日期和時間資料類型與函數 (Transact-SQL)
@@ -116,10 +116,10 @@ ms.locfileid: "75256088"
   
 |函式|語法|傳回值|傳回資料類型|決定性|  
 |---|---|---|---|---|
-|[DATEADD](../../t-sql/functions/dateadd-transact-sql.md)|DATEADD (*datepart* , *number* , *date* )|透過在指定 *date* 的指定 *datepart* 中新增間隔，傳回新的 **datetime** 值。|*date* 引數的資料類型|具決定性|  
+|[DATEADD](../../t-sql/functions/dateadd-transact-sql.md)|DATEADD (*datepart* , *number* , *date* )|透過在指定 **date** 的指定 *datepart* 中新增間隔，傳回新的 *datetime* 值。|*date* 引數的資料類型|具決定性|  
 |[EOMONTH](../../t-sql/functions/eomonth-transact-sql.md)|EOMONTH  ( *start_date* [, *month_to_add* ] )|以選擇性位移，傳回包含指定日期的當月最後一天。|傳回類型是 *start_date* 引數的類型，或者是 **date** 資料類型。|具決定性|  
-|[SWITCHOFFSET](../../t-sql/functions/switchoffset-transact-sql.md)|SWITCHOFFSET (*DATETIMEOFFSET* , *time_zone*)|SWITCHOFFSET 會變更 DATETIMEOFFSET 值的時區時差，並保留 UTC 值。|具有 *DATETIMEOFFSET* 之毫秒精確度的 **datetimeoffset**|具決定性|  
-|[TODATETIMEOFFSET](../../t-sql/functions/todatetimeoffset-transact-sql.md)|TODATETIMEOFFSET (*expression* , *time_zone*)|TODATETIMEOFFSET 會將 datetime2 值轉換成 datetimeoffset 值。 *TODATETIMEOFFSET* 會針對指定的 time_zone 以當地時間解譯 datetime2 值。|具有 *datetime* 引數之毫秒精確度的 **datetimeoffset**|具決定性|  
+|[SWITCHOFFSET](../../t-sql/functions/switchoffset-transact-sql.md)|SWITCHOFFSET (*DATETIMEOFFSET* , *time_zone*)|SWITCHOFFSET 會變更 DATETIMEOFFSET 值的時區時差，並保留 UTC 值。|具有 **DATETIMEOFFSET** 之毫秒精確度的 *datetimeoffset*|具決定性|  
+|[TODATETIMEOFFSET](../../t-sql/functions/todatetimeoffset-transact-sql.md)|TODATETIMEOFFSET (*expression* , *time_zone*)|TODATETIMEOFFSET 會將 datetime2 值轉換成 datetimeoffset 值。 *TODATETIMEOFFSET* 會針對指定的 time_zone 以當地時間解譯 datetime2 值。|具有 **datetime** 引數之毫秒精確度的 *datetimeoffset*|具決定性|  
   
 ###  <a name="SetorGetSessionFormatFunctions"></a> 設定或傳回工作階段格式函式的函式
   

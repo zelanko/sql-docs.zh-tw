@@ -14,13 +14,13 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2250030405a0c6bb2512e3b8446cb76e11a7080e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903903"
 ---
-# <a name="view-resource-governor-properties"></a>View Resource Governor Properties
+# <a name="view-resource-governor-properties"></a>檢視資源管理員屬性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 [資源管理員屬性] 頁面來建立或設定資源管理員實體，例如資源集區和工作負載群組。  
@@ -56,7 +56,7 @@ ms.locfileid: "72903903"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
-2.  以滑鼠右鍵按一下 [Resource Governor]  ，然後按一下 [屬性]  ，這會開啟 [Resource Governor 屬性]  頁面。  
+2.  以滑鼠右鍵按一下 [資源管理員]  ，然後按一下 [屬性]  ，這會開啟 [資源管理員屬性]  頁面。  
   
 3.  如需有關該頁中之欄位的說明，請參閱＜ [資源管理員屬性](#RGProp)＞。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "72903903"
 2.  若要檢視 Resource Governor 實體的目前組態，請使用 [Resource Governor 相關的動態管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)。  
   
 ## <a name="more-information"></a>詳細資訊
- [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
+ [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [啟用資源管理員](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [資源管理員工作負載群組](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

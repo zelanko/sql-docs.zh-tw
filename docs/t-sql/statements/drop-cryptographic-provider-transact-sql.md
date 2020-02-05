@@ -18,10 +18,10 @@ ms.assetid: 71c55c20-439e-4897-aef5-f20e556d668f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 578026f567fc844cf2d0fdd13ce53d83e23f24ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898193"
 ---
 # <a name="drop-cryptographic-provider-transact-sql"></a>DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
@@ -42,7 +42,7 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
  *provider_name*  
  「可延伸金鑰管理」提供者的名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  若要刪除可延伸金鑰管理 (EKM) 提供者，必須停止使用該提供者的所有工作階段。  
   
  如果沒有對應到 EKM 提供者的憑證，則僅能卸除該 EKM 提供者。  

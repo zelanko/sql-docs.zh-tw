@@ -20,10 +20,10 @@ ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 795ef4c95981636eec2e95bc6f85c24d7da27eb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065665"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
@@ -141,7 +141,7 @@ ON SERVER
 |TRACK_CAUSALITY = { ON &#124; **OFF** }|指定是否要追蹤因果。 如果啟用的話，因果可允許不同伺服器連接上的相關事件彼此相互關聯。|  
 |STARTUP_STATE = { ON &#124; **OFF** }|指定當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時，是否要自動啟動這個事件工作階段。<br /><br /> 如果 STARTUP_STATE=ON，則只有當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 停止並重新啟動之後，事件工作階段才會啟動。<br /><br /> ON = 事件工作階段會在啟動時啟動。<br /><br /> **OFF** = 事件工作階段不會在啟動時啟動。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  不可在同一個陳述式內同時使用 `ADD` 和 `DROP` 引數。  
   
 ## <a name="permissions"></a>權限  

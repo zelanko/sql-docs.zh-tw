@@ -12,16 +12,16 @@ ms.assetid: 28146498-fae7-4b13-b47f-6ec05aa8e057
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 776a825c480568be2640d1309c7c3a48970e2c54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571134"
 ---
 # <a name="word-device-information-settings"></a>Word 裝置資訊設定
   下表列出以 [!INCLUDE[ofprword](../includes/ofprword-md.md)] 格式轉譯的裝置資訊設定。  
   
-|設定|ReplTest1|  
+|設定|值|  
 |-------------|-----------|  
 |**AutoFit**|**False**： 在任何 Word 資料表上都會將 AutoFit 設定為 **false** 。<br /><br /> **True**。 在每個 Word 資料表上都會將 AutoFit 設定為 **true** 。<br /><br /> **Never**。 在任何 Word 資料表上未設定 AutoFit 值，而且會將行為轉換 Word 預設值。<br /><br /> **Default**。 在每個邏輯頁上，AutoFit 是設定在比實體繪製區域 (排除邊界的實體頁面寬度) 更狹窄的資料表上。|  
 |**ExpandToggles**|指出可以切換的所有項目是否應該以其完全展開的狀態來轉譯。 預設值為 **false**。|  

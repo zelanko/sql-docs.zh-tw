@@ -11,17 +11,17 @@ ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025776"
 ---
 # <a name="using-the-jdbc-driver"></a>使用 JDBC 驅動程式
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-本節針對使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 建立與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的簡易連線，提供快速入門指示。 連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫之前，您必須先在本機電腦或伺服器上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而且必須在本機電腦上安裝 JDBC 驅動程式。  
+本節針對使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立與 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 資料庫的簡易連線，提供快速入門指示。 連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫之前，您必須先在本機電腦或伺服器上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而且必須在本機電腦上安裝 JDBC 驅動程式。  
   
 ## <a name="choosing-the-right-jar-file"></a>選擇正確的 JAR 檔案
 
@@ -227,7 +227,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 呼叫 DriverManager 類別的 getConnection 方法時，系統會從已註冊的 JDBC 驅動程式集合中找出適當的驅動程式。 sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 檔案會包括 "META-INF/services/java.sql.Driver" 檔案，其中包含 **com.microsoft.sqlserver.jdbc.SQLServerDriver** 作為已註冊的驅動程式。 目前使用 Class.forName 方法來載入驅動程式的現有應用程式將繼續運作而不進行修改。  
   
 > [!NOTE]  
-> sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 類別庫無法搭配舊版的 Java Runtime Environment (JRE) 使用。 如需 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 所支援的 JRE 版本清單，請參閱 [JDBC 驅動程式的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
+> sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 類別庫無法搭配舊版的 Java Runtime Environment (JRE) 使用。 如需 [ 所支援的 JRE 版本清單，請參閱 ](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)JDBC 驅動程式的系統需求[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]。  
 
 如需如何使用資料來源來連線以及使用連線 URL 的詳細資訊，請參閱[建置連線 URL](../../connect/jdbc/building-the-connection-url.md) 和[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
   

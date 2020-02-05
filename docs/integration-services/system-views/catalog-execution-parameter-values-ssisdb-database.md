@@ -11,10 +11,10 @@ ms.assetid: ec93e67b-04ce-4aae-ab96-3ad20e9793ad
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3d621eab941a4b4db5e679583fba56d6743d4d27
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296562"
 ---
 # <a name="catalogexecution_parameter_values-ssisdb-database"></a>catalog.execution_parameter_values (SSISDB 資料庫)
@@ -26,20 +26,20 @@ ms.locfileid: "71296562"
 
   顯示執行執行個體期間由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝所使用的實際參數值。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |execution_parameter_id|**bigint**|執行參數的唯一識別碼 (ID)。|  
 |execution_id|**bigint**|執行執行個體的唯一識別碼 (ID)。|  
 |object_type|**smallint**|當值為 `20` 時，參數為專案參數。 當值為 `30` 時，參數為封裝參數。 當值為 `50` 時，參數為下列其中一項：<br /><br /> **LOGGING_LEVEL**<br /><br /> **DUMP_ON_ERROR**<br /><br /> **DUMP_ON_EVENT**<br /><br /> **DUMP_EVENT_CODE**<br /><br /> **CALLER_INFO**<br /><br /> **SYNCHRONIZED**|  
 |parameter_data_type|**nvarchar(128)**|參數的資料類型。|  
-|parameter_name|**sysname**|參數的名稱。|  
+|parameter_name|**sysname**|參數名稱。|  
 |parameter_value|**sql_variant**|參數的值。 當 sensitive 為 `0` 時，會顯示純文字值。 當 sensitive 為 `1` 時，會顯示 **NULL**。|  
 |sensitive|**bit**|當值為 `1` 時，參數值為敏感值。 當值為 `0` 時，參數值則不是敏感值。|  
 |required|**bit**|當值為 `1` 時，必須有參數值才能開始執行。 當值為 `0` 時，不需要參數值即可開始執行。|  
 |value_set|**bit**|當值為 `1` 時，表示參數值已指派。 當值為 `0` 時，表示參數值未指派。|  
 |runtime_override|**bit**|當值為 `1` 時，表示在開始執行之前，參數值已從原始值變更。 當值為 `0` 時，表示參數值為設定的原始參數值。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個檢視會顯示目錄中每個執行參數的資料列。 執行參數值是在單一執行執行個體期間指派給專案參數或封裝參數的值。  
   
 ## <a name="permissions"></a>權限  

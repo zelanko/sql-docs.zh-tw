@@ -14,16 +14,16 @@ ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 53f5e080a4ce654eb133aed340034e547f247737
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65503335"
 ---
 # <a name="pptx-device-information-settings"></a>PPTX 裝置資訊設定
   下表列出以 PPTX 格式轉譯 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表的裝置資訊設定。  
   
-|設定|ReplTest1|  
+|設定|值|  
 |-------------|-----------|  
 |**資料行**|為報表所設定的資料行數目。 這個值會覆寫報表的原始設定。|  
 |**ColumnSpacing**|為報表所設定的資料行間距。 這個值會覆寫報表的原始設定。|  

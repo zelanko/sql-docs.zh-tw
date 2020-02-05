@@ -17,16 +17,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4d9319ef90263e6513661c4d9a24be7f530b917f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903852"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  「稽核」  [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 執行個體或個別資料庫會在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 上發生追蹤及記錄事件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核可讓您建立伺服器稽核，其中可包含伺服器層級事件的伺服器稽核規格，以及資料庫層級事件的資料庫稽核規格。 您可以將稽核事件寫入事件記錄或稽核檔案。  
+  「稽核」  [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 執行個體或個別資料庫會在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 上發生追蹤及記錄事件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核可讓您建立伺服器稽核，其中可包含伺服器層級事件的伺服器稽核規格，以及資料庫層級事件的資料庫稽核規格。 稽核的事件可以寫入事件記錄或稽核檔案。  
   
 [!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
@@ -115,7 +115,7 @@ ms.locfileid: "72903852"
 ## <a name="considerations"></a>考量  
  如果在稽核起始期間發生失敗，伺服器將不會啟動。 在此情況下，可以在命令列上使用 **-f** 選項來啟動伺服器。  
   
- 當稽核失敗造成伺服器關閉，或是因為已針對稽核指定 ON_FAILURE=SHUTDOWN 而造成伺服器無法啟動時，MSG_AUDIT_FORCED_SHUTDOWN 事件將會寫入記錄檔中。 由於關閉將發生在初次遇到此設定時，所以此事件將會寫入一次。 當稽核的失敗訊息造成伺服器關閉之後，將會寫入此事件。 管理員可藉由使用 **-m** 旗標在單一使用者模式下啟動[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，以略過稽核所導致的關閉。 如果您在單一使用者模式下啟動，您會將指定 ON_FAILURE=SHUTDOWN 於該工作階段執行的任何稽核降級為 ON_FAILURE=CONTINUE。 當使用 **-m** 旗標啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，MSG_AUDIT_SHUTDOWN_BYPASSED 訊息將會寫入到錯誤記錄檔。  
+ 當稽核失敗造成伺服器關閉，或是因為已針對稽核指定 ON_FAILURE=SHUTDOWN 而造成伺服器無法啟動時，MSG_AUDIT_FORCED_SHUTDOWN 事件將會寫入記錄檔中。 由於關閉將發生在初次遇到此設定時，所以此事件將會寫入一次。 當稽核的失敗訊息造成伺服器關閉之後，將會寫入此事件。 管理員可藉由使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-m **旗標在單一使用者模式下啟動**，以略過稽核所導致的關閉。 如果您在單一使用者模式下啟動，您會將指定 ON_FAILURE=SHUTDOWN 於該工作階段執行的任何稽核降級為 ON_FAILURE=CONTINUE。 當使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-m**旗標啟動** 時，MSG_AUDIT_SHUTDOWN_BYPASSED 訊息將會寫入到錯誤記錄檔。  
   
  如需服務啟動選項的詳細資訊，請參閱 [Database Engine 服務啟動選項](../../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "72903852"
 ### <a name="data-definition-language-statements"></a>資料定義語言陳述式  
  您可以使用下列 DDL 陳述式來建立、改變和卸除稽核規格：  
   
-|DDL 陳述式|Description| 
+|DDL 陳述式|描述| 
 |-|-|  
 |[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|變更安全性實體的擁有權。|  
 |[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|使用 SQL Server Audit 功能改變資料庫稽核規格物件。|  
@@ -158,7 +158,7 @@ ms.locfileid: "72903852"
 ### <a name="dynamic-views-and-functions"></a>動態檢視和函數  
  下表列出可用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核的動態檢視和函數。  
   
-|動態檢視和函數|Description|  
+|動態檢視和函數|描述|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)|傳回稽核記錄檔中可報告的每一個稽核動作及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 中可設定之每一個稽核動作群組的資料列。|  
 |[sys.dm_server_audit_status](../../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|提供有關稽核之目前狀態的資訊。|  
@@ -168,7 +168,7 @@ ms.locfileid: "72903852"
 ### <a name="catalog-views"></a>目錄檢視  
  下表列出可用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核的目錄檢視。  
   
-|目錄檢視|Description|  
+|目錄檢視|描述|  
 |-------------------|-----------------|  
 |[sys.database_audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|包含有關伺服器執行個體上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核內之資料庫稽核規格的資訊。|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|包含所有資料庫伺服器執行個體上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核內之資料庫稽核規格的資訊。|  
@@ -200,7 +200,7 @@ ms.locfileid: "72903852"
   
 ## <a name="topics-closely-related-to-auditing"></a>與稽核密切相關的主題  
  [伺服器屬性 &#40;安全性頁面&#41;](../../../database-engine/configure-windows/server-properties-security-page.md)  
- 說明如何開啟 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登入稽核。 這些稽核記錄會儲存在 Windows 應用程式記錄檔中。  
+ 說明如何開啟 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的登入稽核。 這些稽核記錄會儲存在 Windows 應用程式記錄檔中。  
   
  [C2 稽核模式伺服器組態選項](../../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)  
  說明 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的 C2 安全性規範稽核模式。  
@@ -214,7 +214,7 @@ ms.locfileid: "72903852"
  [DDL 觸發程序](../../../relational-databases/triggers/ddl-triggers.md)  
  說明如何使用資料定義語言 (DDL) 觸發程序來追蹤資料庫的變更。  
   
- [Microsoft TechNet：SQL Server TechCenter：SQL Server 2005 安全性與保護](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet：SQL Server TechCenter：SQL Server 2005 安全性和保護](https://go.microsoft.com/fwlink/?LinkId=101152)  
  提供有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性的最新資訊。  
   
 ## <a name="see-also"></a>另請參閱  

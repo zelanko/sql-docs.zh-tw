@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: fd44673ce62d74349e83b09b020c9e20ab6957de
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155801"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
@@ -54,13 +54,13 @@ FORMAT ( value, format [, culture ] )
   
  如未提供 *culture* 引數，將會使用目前工作階段的語言。 此語言是以 SET LANGUAGE 陳述式隱含或明確加以設定。 *culture* 的引數可以是 .NET Framework 所支援的任何文化特性，而不限於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 明確支援的語言。 如果 *culture* 引數無效，FORMAT 會引發錯誤。  
   
-## <a name="return-types"></a>傳回類型
+## <a name="return-types"></a>傳回型別
 
  **nvarchar** 或 null  
   
  傳回值的長度取決於 *format*。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
  FORMAT 會針對不是 *valid* 的 *culture* 以外的錯誤傳回 NULL。 例如，如果 *format* 中指定的值無效，則會傳回 NULL。  
 
@@ -74,23 +74,23 @@ FORMAT ( value, format [, culture ] )
   
  下表列出 *value* 引數可接受的資料類型，以及其 .NET Framework 對應的對等類型。  
   
-|類別目錄|類型|.NET 類型|  
+|類別|類型|.NET 類型|  
 |--------------|----------|---------------|  
 |數值|BIGINT|Int64|  
-|數值|INT|Int32|  
+|數值|int|Int32|  
 |數值|SMALLINT|Int16|  
 |數值|TINYINT|Byte|  
-|數值|Decimal|SqlDecimal|  
+|數值|decimal|SqlDecimal|  
 |數值|NUMERIC|SqlDecimal|  
 |數值|FLOAT|Double|  
-|數值|REAL|Single|  
+|數值|real|Single|  
 |數值|SMALLMONEY|Decimal|  
 |數值|money|Decimal|  
-|日期及時間|日期|DateTime|  
+|日期及時間|date|Datetime|  
 |日期及時間|time|TimeSpan|  
-|日期及時間|DATETIME|DateTime|  
-|日期及時間|smalldatetime|DateTime|  
-|日期及時間|datetime2|DateTime|  
+|日期及時間|Datetime|Datetime|  
+|日期及時間|smalldatetime|Datetime|  
+|日期及時間|datetime2|Datetime|  
 |日期及時間|datetimeoffset|DateTimeOffset|  
   
 ## <a name="examples"></a>範例  
@@ -150,7 +150,7 @@ DateTime Result  Custom Number Result
   
 ### <a name="c-format-with-numeric-types"></a>C. 數值類型的 FORMAT
 
- 下列範例會從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 **Sales.CurrencyRate** 資料表傳回 5 個資料列。 **EndOfDateRate** 資料行會以 **money** 類型，儲存在資料表中。 在此範例中，資料行會以未格式化的狀態傳回，然後藉由指定 .NET Number 格式、General 格式和 Currency 格式類型進行格式化。 如需有關這些數值格式和其他數值格式的詳細資訊，請參閱[標準數值格式字串](https://msdn.microsoft.com/library/dwhawy9k.aspx)。  
+ 下列範例會從 **資料庫的**Sales.CurrencyRate[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表傳回 5 個資料列。 **EndOfDateRate** 資料行會以 **money** 類型，儲存在資料表中。 在此範例中，資料行會以未格式化的狀態傳回，然後藉由指定 .NET Number 格式、General 格式和 Currency 格式類型進行格式化。 如需有關這些數值格式和其他數值格式的詳細資訊，請參閱[標準數值格式字串](https://msdn.microsoft.com/library/dwhawy9k.aspx)。  
   
 ```sql  
 SELECT TOP(5)CurrencyRateID, EndOfDayRate  

@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 ms.date: 05/08/2019
 ms.openlocfilehash: f5d2aad7b0a306dd4bd2c8e64b7a49581c8fb5d2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68264968"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 的備份與還原作業
 
   本文提供所有用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝中資料檔案的概觀，並描述備份這些檔案的時機與方法。 復原策略中最重要的部分，就是訂定報表伺服器資料庫檔案的備份與還原計劃。 但是，更加完整的復原策略應該要包括加密金鑰、自訂組件或延伸模組、設定檔以及報表之來源檔案的備份。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Mode  
 
 > [!NOTE]
 > SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
@@ -39,7 +39,7 @@ ms.locfileid: "68264968"
     ::: moniker-end
   
 ## <a name="backing-up-the-report-server-databases"></a>備份報表伺服器資料庫  
- 由於報表伺服器是無狀態伺服器，因此所有應用程式資料都會儲存在 **執行個體上執行的** reportserver **與** reportservertempdb [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 資料庫中。 您可以使用其中一種支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫備份方法，備份 **reportserver** 和 **reportservertempdb** 資料庫。 以下是一些特定於報表伺服器資料庫的建議：  
+ 由於報表伺服器是無狀態伺服器，因此所有應用程式資料都會儲存在 **執行個體上執行的** reportserver **與** reportservertempdb [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 資料庫中。 您可以使用其中一種支援的 **資料庫備份方法，備份**reportserver**和**reportservertempdb[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 以下是一些特定於報表伺服器資料庫的建議：  
   
 -   使用完整復原模式備份 **reportserver** 資料庫。  
   

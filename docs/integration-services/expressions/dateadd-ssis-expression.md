@@ -15,10 +15,10 @@ ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 66733b12bbf3b4723449eb09f93182efb1f6462c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290171"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (SSIS 運算式)
@@ -48,7 +48,7 @@ DATEADD(datepart, number, date)
 ## <a name="result-types"></a>結果類型  
  DT_DBTIMESTAMP  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  下表列出運算式評估工具所辨識的日期部份與縮寫。 日期部份的名稱不區分大小寫。  
   
 |日期部份|縮寫|  
@@ -62,7 +62,7 @@ DATEADD(datepart, number, date)
 |Weekday|dw, w|  
 |Hour|Hh|  
 |Minute|mi, n|  
-|第二個|ss, s|  
+|Second|ss, s|  
 |Millisecond|Ms|  
   
  *number* 引數必須在剖析運算式時提供。 這個引數可以是常數或變數。 您不可使用資料行的值，因為這些值在剖析運算式時並非已知。  

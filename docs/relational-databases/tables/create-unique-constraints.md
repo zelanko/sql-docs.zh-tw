@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4a35a937411a83b9dd27f4ab1673c9a892cf615b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907914"
 ---
 # <a name="create-unique-constraints"></a>建立唯一的條件約束
@@ -43,7 +43,7 @@ ms.locfileid: "72907914"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
@@ -60,7 +60,7 @@ ms.locfileid: "72907914"
   
 4.  在 [一般]  底下的方格中，按一下 [類型]  ，然後從屬性右邊的下拉式清單方塊中選擇 [唯一索引鍵]  。  
   
-5.  在 [檔案]  功能表上，按一下 [儲存]  _table name_。  
+5.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -107,7 +107,7 @@ ms.locfileid: "72907914"
   
 2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會建立資料表並且在 `TransactionID` 資料行上定義唯一條件約束。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會建立資料表並且在 `TransactionID`資料行上定義唯一條件約束。  
   
     ```  
     USE AdventureWorks2012;  

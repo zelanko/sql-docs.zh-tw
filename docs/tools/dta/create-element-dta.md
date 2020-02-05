@@ -1,10 +1,7 @@
 ---
-title: Create 元素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Create 元素 (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3541a007b51d5813a6bc42a977ec31fedf5bab87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: c12803dc07617012a6da22b130c2cd954a82c04e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104989"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307992"
 ---
 # <a name="create-element-dta"></a>Create 元素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  包含使用者指定組態中之索引、統計資料或堆積結構的相關資訊。  
+
+包含使用者指定組態中之索引、統計資料或堆積結構的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,7 +41,7 @@ ms.locfileid: "68104989"
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|Description|  
+|特性|描述|  
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  
@@ -51,7 +54,7 @@ ms.locfileid: "68104989"
 |**父元素**|[Recommendation 元素 &#40;DTA&#41;](../../tools/dta/recommendation-element-dta.md)|  
 |**子元素**|[Index 元素 &#40;DTA&#41;](../../tools/dta/index-element-dta.md)<br /><br /> **Statistics** 元素 (如需相關資訊，請參閱 [Database Engine Tuning Advisor XML schema](https://schemas.microsoft.com/sqlserver/) (Database Engine Tuning Advisor XML 結構描述))<br /><br /> **Heap** 元素 (如需相關資訊，請參閱 [Database Engine Tuning Advisor XML schema](https://schemas.microsoft.com/sqlserver/) (Database Engine Tuning Advisor XML 結構描述))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  在 Database Engine Tuning Advisor XML 結構描述中，這個元素的名稱為 **CreateTypecomplexType** 。 它用來建立使用者指定組態的索引、統計資料和堆積結構。 請勿混淆這個 **Create** 元素與可用來建立檢視 (**CreateViewType**) 或資料分割 (**CreatePType**) 的其他類型。 如需其他 [Create](https://schemas.microsoft.com/sqlserver/) 元素類型的資訊，請參閱 **Database Engine Tuning Advisor XML schema** (Database Engine Tuning Advisor XML 結構描述)。  
   
 ## <a name="example"></a>範例  

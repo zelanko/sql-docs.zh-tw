@@ -1,10 +1,9 @@
 ---
-title: 建立多伺服器環境 | Microsoft Docs
-ms.custom: ''
+title: 建立多伺服器環境
+ms.custom: seo-lt-2019
 ms.date: 01/30/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 27ef7467b0a5877e75f0391c3afe5ea88003c8c4
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8b01a04dfc4dbf31c08d595de184cd64f635e2c7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264817"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245914"
 ---
 # <a name="create-a-multiserver-environment"></a>建立多伺服器環境
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ ms.locfileid: "68264817"
 ## <a name="related-tasks"></a>相關工作  
 下列主題說明建立多伺服器環境的常見工作。  
   
-|Description|主題|  
+|描述|主題|  
 |---------------|---------|  
 |描述如何建立主要伺服器。|[設為主要伺服器](../../ssms/agent/make-a-master-server.md)|  
 |描述如何建立目標伺服器。|[設為目標伺服器](../../ssms/agent/make-a-target-server.md)|  

@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6567861c2150362e0d5b5cf386512daec6d758f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113718"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
@@ -39,10 +39,10 @@ ms.locfileid: "68113718"
   
 ## <a name="datetime-description"></a>datetime 描述  
   
-|屬性|ReplTest1|  
+|屬性|值|  
 |---|---|
 |語法|**datetime**|  
-|使用方式|DECLARE \@MyDatetime **datetime**<br /><br /> 建立資料表 Table1 (Column1 **datetime** )|  
+|使用量|DECLARE \@MyDatetime **datetime**<br /><br /> 建立資料表 Table1 (Column1 **datetime** )|  
 |預設的字串常值格式<br /><br /> (用於下層用戶端)|不適用|  
 |日期範圍|1753 年 1 月 1 日到 9999 年 12 月 31 日|  
 |時間範圍|00:00:00 到 23:59:59.997|  
@@ -52,7 +52,7 @@ ms.locfileid: "68113718"
 |儲存體大小|8 個位元組|  
 |精確度|四捨五入成 .000、.003 或 .007 秒的遞增。|  
 |預設值|1900-01-01 00:00:00|  
-|日曆|西曆 (包含年份的完整範圍)。|  
+|Calendar|西曆 (包含年份的完整範圍)。|  
 |使用者自訂的小數秒數有效位數|否|  
 |時區位移感知和保留|否|  
 |日光節約感知|否|  
@@ -60,25 +60,25 @@ ms.locfileid: "68113718"
 ## <a name="supported-string-literal-formats-for-datetime"></a>支援 datetime 的字串常值格式  
 下表列出 **datetime** 支援的字串常值格式。 除了 ODBC 以外，**datetime** 字串常值都位於單引號 (') 中，例如 'string_literaL'。 如果環境不是 **us_english**，字串常值就必須採用 N'string_literaL' 格式。
   
-|數值|Description|  
+|數值|描述|  
 |---|---|
 |日期格式：<br /><br /> [0]4/15/[19]96 -- (mdy)<br /><br /> [0]4-15-[19]96 -- (mdy)<br /><br /> [0]4.15.[19]96 -- (mdy)<br /><br /> [0]4/[19]96/15 -- (myd)<br /><br /> 15/[0]4/[19]96 -- (dmy)<br /><br /> 15/[19]96/[0]4 -- (dym)<br /><br /> [19]96/15/[0]4 -- (ydm)<br /><br /> [19]96/[0]4/15 -- (ymd)<br /><br /> 時間格式：<br /><br /> 14:30<br /><br /> 14:30[:20:999]<br /><br /> 14:30[:20.9]<br /><br /> 4am<br /><br /> 4 PM|您可以使用指定的數值月份來指定日期資料。 例如，5/20/97 代表 1997 年 5 月 20 日。 當您使用數值日期格式時，請在使用斜線 (/)、連字號 (-) 或句號 (.) 做為分隔符號的字串中指定月、日和年。 此字串必須以下列形式出現：<br /><br /> *數字分隔符號數字分隔符號數字 [time] [time]*<br /><br /> <br /><br /> 將語言設成 **us_english** 時，日期的預設順序是 mdy。 您可以使用 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 陳述式來變更日期順序。<br /><br /> SET DATEFORMAT 陳述式的設定會影響日期值的解譯方式。 如果順序不符合設定，值就不會解譯為日期。 不符合規則的日期可能會誤解為超出範圍，或使用錯誤的值。 例如，依 DATEFORMAT 設定而定，可以將 12/10/08 解譯為六種日期之一。 四部分的年份會解譯為年份。|  
   
-|字母順序|Description|  
+|字母順序|描述|  
 |---|---|
 |Apr[il] [15][,] 1996<br /><br /> Apr[il] 15[,] [19]96<br /><br /> Apr[il] 1996 [15]<br /><br /> [15] Apr[il][,] 1996<br /><br /> 15 Apr[il][,][19]96<br /><br /> 15 [19]96 apr[il]<br /><br /> [15] 1996 apr[il]<br /><br /> 1996 APR[IL] [15]<br /><br /> 1996 [15] APR[IL]|您可以使用指定為完整月份名稱的月份來指定日期資料。 例如，April 或該月份在目前語言中指定的縮寫 Apr。逗號是選擇性且會忽略大小寫。<br /><br /> 以下是使用字母日期格式的一些指導方針：<br /><br /> 1) 將日期和時間資料括在單引號 (') 中。 若為英文以外的語言，請使用 N'。<br /><br /> 2) 以括號括住的字元是選擇性的。<br /><br /> 3) 如果只指定年份的後兩位數字，這些數值小於[設定 two digit year cutoff 伺服器組態選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)組態選項的後兩位數字時，就與截斷年份同一世紀。 數值如果大於或等於這個選項的值，就在截止年份的前一個世紀。 例如，如果 **two digit year cutoff** 是 2050 (預設值)，25 就會解譯為 2025，而 50 則解譯為 1950。 若要避免模糊不清，請使用四位數年份。<br /><br /> 4) 如果漏了日的部分，就用當月第一天。<br /><br /> <br /><br /> 以字母形式指定月份時，就不適用 SET DATEFORMAT 工作階段設定。|  
   
-|ISO 8601|Description|  
+|ISO 8601|描述|  
 |---|---|
-|YYYY-MM-DDThh:mm:ss[.mmm]<br /><br /> YYYYMMDD[ hh:mm:ss[.mmm]]|範例:<br /><br /> 1) 2004-05-23T14:25:10<br /><br /> 2) 2004-05-23T14:25:10.487<br /><br /> <br /><br /> 若要使用 ISO 8601 格式，您必須指定格式的每個項目，包括出現在格式中的 **T**、冒號 (:) 和句號 (.)。<br /><br /> 括號指出秒數部分的小數是選擇性的。 時間元件會使用 24 小時制格式來指定。<br /><br /> T 指出 **datetime** 值之時間部份的開始。<br /><br /> 使用 ISO 8601 格式的優點在於它是國際標準，而且沒有模糊不清的規格。 另外，此格式不受 SET DATEFORMAT 或 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 設定影響。|  
+|YYYY-MM-DDThh:mm:ss[.mmm]<br /><br /> YYYYMMDD[ hh:mm:ss[.mmm]]|範例：<br /><br /> 1) 2004-05-23T14:25:10<br /><br /> 2) 2004-05-23T14:25:10.487<br /><br /> <br /><br /> 若要使用 ISO 8601 格式，您必須指定格式的每個項目，包括出現在格式中的 **T**、冒號 (:) 和句號 (.)。<br /><br /> 括號指出秒數部分的小數是選擇性的。 時間元件會使用 24 小時制格式來指定。<br /><br /> T 指出 **datetime** 值之時間部份的開始。<br /><br /> 使用 ISO 8601 格式的優點在於它是國際標準，而且沒有模糊不清的規格。 另外，此格式不受 SET DATEFORMAT 或 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 設定影響。|  
   
-|未分隔|Description|  
+|未分隔|描述|  
 |---|---|
 |YYYYMMDD hh:mm:ss[.mmm]||  
   
-|ODBC|Description|  
+|ODBC|描述|  
 |---|---|
-|{ ts '1998-05-02 01:23:56.123' }<br /><br /> { d '1990-10-02' }<br /><br /> { t '13:33:41' }|ODBC API 定義了逸出序列來代表日期和時間值，供 ODBC 呼叫時間戳記資料。 由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB 提供者所支援的 OLE DB 語言定義 (DBGUID-SQL) 也支援 ODBC 時間戳記格式。 使用 ADO、OLE DB 與 ODBC 架構 API 的應用程式都可以使用這個 ODBC 時間戳記格式來代表日期和時間值。<br /><br /> ODBC 時間戳記逸出序列的格式如下：{ *literal_type* '*constant_value*' }：<br /><br /> <br /><br /> - *literal_type* 會指定逸出序列的類型。 時間戳記有三個 *literal_type* 規範：<br />1) d = 只有日期<br />2) t = 只有時間<br />3) ts = 時間戳記 (時間 + 日期)<br /><br /> <br /><br /> - '*constant_value*' 是逸出序列的值。 對於各個 *literal_type*，*constant_value* 都必須遵循這些格式。<br />d：yyyy-mm-dd<br />t：hh:mm:ss[.fff]<br />ts：yyyy-mm-dd hh:mm:ss[.fff]|  
+|{ ts '1998-05-02 01:23:56.123' }<br /><br /> { d '1990-10-02' }<br /><br /> { t '13:33:41' }|ODBC API 定義了逸出序列來代表日期和時間值，供 ODBC 呼叫時間戳記資料。 由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 提供者所支援的 OLE DB 語言定義 (DBGUID-SQL) 也支援 ODBC 時間戳記格式。 使用 ADO、OLE DB 與 ODBC 架構 API 的應用程式都可以使用這個 ODBC 時間戳記格式來代表日期和時間值。<br /><br /> ODBC 時間戳記逸出序列的格式如下：{ *literal_type* '*constant_value*' }：<br /><br /> <br /><br /> - *literal_type* 會指定逸出序列的類型。 時間戳記有三個 *literal_type* 規範：<br />1) d = 只有日期<br />2) t = 只有時間<br />3) ts = 時間戳記 (時間 + 日期)<br /><br /> <br /><br /> - '*constant_value*' 是逸出序列的值。 對於各個 *literal_type*，*constant_value* 都必須遵循這些格式。<br />d：yyyy-mm-dd<br />t：hh:mm:ss[.fff]<br />ts：yyyy-mm-dd hh:mm:ss[.fff]|  
   
 ## <a name="rounding-of-datetime-fractional-second-precision"></a>datetime 小數秒數有效位數的四捨五入  
 **datetime** 值會捨入到 .000、.003 或 .007 秒的遞增，如下表所示。

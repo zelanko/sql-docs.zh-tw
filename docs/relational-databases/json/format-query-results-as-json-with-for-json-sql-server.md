@@ -15,10 +15,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 43e9b416885a5cbd1239b0694ffc3613b7509186
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095817"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>使用 FOR JSON 將查詢結果格式化為 JSON (SQL Server)
@@ -77,7 +77,7 @@ FOR JSON AUTO;
 
 下列 `SELECT...FOR JSON AUTO` 範例會顯示當已 `JOIN` 的資料表資料間有 1:Many 關聯性時，JSON 結果的外觀。
 
-也會示範傳回的 JSON 中沒有 Null 值。 不過，您可以在 `FOR` 子句中使用 `INCLUDE_NULL_VALUES` 關鍵字來覆寫此預設行為。
+也會示範傳回的 JSON 中沒有 Null 值。 不過，您可以在 `INCLUDE_NULL_VALUES` 子句中使用 `FOR` 關鍵字來覆寫此預設行為。
 
 ```sql
 go

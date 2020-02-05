@@ -20,10 +20,10 @@ ms.assetid: 912e4485-683c-41c2-97b3-8831c0289ee4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e1b4177de655300e8297d450ab382c6f37a9f0fe
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843661"
 ---
 # <a name="x40x40identity-transact-sql"></a>&#x40;&#x40;IDENTITY (Transact-SQL)
@@ -39,10 +39,10 @@ ms.locfileid: "73843661"
 @@IDENTITY  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  在 INSERT、SELECT INTO 或大量複製陳述式完成之後，@@IDENTITY 會包含陳述式所產生的最後一個識別值。 如果陳述式並未影響任何含有識別欄位的資料表，@@IDENTITY 會傳回 NULL。 如果插入多個資料列，產生多個識別值，@@IDENTITY 會傳回最後一個產生的識別值。 如果陳述式引發一或多個執行插入來產生識別值的觸發程序，在陳述式之後緊接著呼叫 @@IDENTITY，會傳回觸發程序所產生的最後一個識別值。 如果在含有識別欄位之資料表的插入動作之後引發觸發程序，且觸發程序插入另一個沒有識別欄位的資料表，@@IDENTITY 會傳回第一次插入的識別值。 如果 INSERT 或 SELECT INTO 陳述式或大量複製失敗，或回復交易，@@IDENTITY 值不會還原成先前的設定。  
   
  失敗的陳述式和交易可能會變更資料表的目前識別，以及建立識別欄位值中的間距。 識別值永遠不會回復，即使試圖將值插入資料表的交易未獲認可，也是如此。 例如，如果 INSERT 陳述式因 IGNORE_DUP_KEY 違規而失敗，資料表的目前識別值仍會遞增。  

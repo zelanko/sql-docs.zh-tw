@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2b318f7be6b403cb540305eb492cf99a776efc9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044220"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
@@ -65,7 +65,7 @@ DROP FUNCTION [ schema_name. ] function_name
  *function_name*  
  這是要移除的使用者自訂函數名稱。 您可以選擇性地指定結構描述名稱。 不能指定伺服器名稱和資料庫名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果資料庫中有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數或檢視參考這個函數，並且是利用 SCHEMABINDING 加以建立；或者如果有計算資料行、CHECK 條件約束或 DEFAULT 條件約束參考這個函數，DROP FUNCTION 就不會成功。  
   
  如果有計算資料行參考這個函數，而且已經產生索引，DROP FUNCTION 就不會成功。  
@@ -76,7 +76,7 @@ DROP FUNCTION [ schema_name. ] function_name
 ## <a name="examples"></a>範例  
   
 ### <a name="a-dropping-a-function"></a>A. 卸除函數  
- 下列範例會從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫的 `Sales` 結構描述，卸除 `fn_SalesByStore` 使用者定義的函數。 若要建立此函數，請參閱範例 B 中的 [CREATE FUNCTION & #40;TRANSACT-SQL & #41;](../../t-sql/statements/create-function-transact-sql.md)。  
+ 下列範例會從 `fn_SalesByStore` 範例資料庫的 `Sales` 結構描述，卸除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 使用者定義的函數。 若要建立此函數，請參閱範例 B 中的 [CREATE FUNCTION & #40;TRANSACT-SQL & #41;](../../t-sql/statements/create-function-transact-sql.md)。  
   
 ```  
 DROP FUNCTION Sales.fn_SalesByStore;  

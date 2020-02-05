@@ -16,10 +16,10 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4636dde3123cc3742a7dde57fa2a468583e2f2bd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293605"
 ---
 # <a name="copy-package-objects"></a>複製封裝物件
@@ -68,7 +68,7 @@ ms.locfileid: "71293605"
 ## <a name="see-also"></a>另請參閱  
  [控制流程](../integration-services/control-flow/control-flow.md)   
  [資料流程](../integration-services/data-flow/data-flow.md)   
- [Integration Services &#40;SSIS&#41; 連接](../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Integration Services &#40;SSIS&#41; 連線](../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [複製專案項目](https://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
   

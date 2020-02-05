@@ -11,10 +11,10 @@ ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 618499b25914ea4f521fa694ac14b9e9049ca330
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296692"
 ---
 # <a name="catalogvalidate_project-ssisdb-database"></a>catalog.validate_project (SSISDB 資料庫)
@@ -52,7 +52,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  傳回驗證的唯一識別碼 (ID)。 *validation_id* 是 **bigint**。  
   
  [ @use32bitruntime = ] *use32bitruntime*  
- 指出是否要使用 32 位元執行階段，在 64 位元作業系統上執行封裝。 使用 `1` 值，即可在執行 64 位元作業系統時，使用 32 位元執行階段執行套件。 使用 `0` 值，即可在執行 64 位元作業系統時執行 64 位元執行階段。 這個參數是選擇性的。 *use32bitruntime* 是 **bit**。  
+ 指出是否要使用 32 位元執行階段，在 64 位元作業系統上執行封裝。 使用 `1` 值，即可在執行 64 位元作業系統時，使用 32 位元執行階段執行套件。 使用 `0` 值，即可在執行 64 位元作業系統時執行 64 位元執行階段。 這是選擇性參數。 *use32bitruntime* 是 **bit**。  
   
  [ @environment_scope = ] *environment_scope*  
  指出由驗證考量的環境參考。 當值為 `A` 時，驗證中會包含與專案相關的所有環境參考。 當值為 `S` 時，只會包含單一環境參考。 當值為 `D` 時，不會包含任何環境參考，而且每個參數必須為常值預設值，才能通過驗證。 這是選擇性參數，根據預設，將會使用字元 `D`。 *environment_scope* 是 **char(1)** 。  
@@ -88,7 +88,7 @@ catalog.validate_project [ @folder_name = ] folder_name
   
 -   使用者未具備適當的權限  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  驗證有助於識別讓專案中之封裝無法成功執行的問題。 若要監視驗證狀態，請使用 [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) 或 [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 檢視。  
   
  驗證中只能夠使用使用者可存取的環境。 驗證輸出會當做結果集傳送至用戶端。  

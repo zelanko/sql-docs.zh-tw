@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2adf7404e80a0a04932c14b598011c1799b5611
-ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75546575"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)

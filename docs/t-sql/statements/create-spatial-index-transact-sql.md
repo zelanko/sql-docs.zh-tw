@@ -23,10 +23,10 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2bc1c2c7951efceca6d50a30098284f2bc3ef132
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982585"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
@@ -314,7 +314,7 @@ PAD_INDEX = { ON | **OFF** }
   
 指定索引填補。 預設值為 OFF。  
   
-ON     
+開啟     
 指出 *fillfactor* 指定的可用空間百分比會套用到索引的中繼層級頁面上。  
   
 OFF 或未指定 *fillfactor*     
@@ -342,7 +342,7 @@ SORT_IN_TEMPDB = { ON | **OFF** }
   
  指定是否要將暫時排序結果儲存在 tempdb 中。 預設值為 OFF。  
   
- ON     
+ 開啟     
  用來建立索引的中繼排序結果會儲存在 tempdb 中。 如果 tempdb 位於使用者資料庫以外的另一組磁碟上，這種儲存方式可以減少建立索引所需的時間。 不過，這會增加建立索引時所使用的磁碟空間量。  
   
  OFF     
@@ -356,7 +356,7 @@ IGNORE_DUP_KEY =**OFF**
 STATISTICS_NORECOMPUTE = { ON | **OFF**}     
 指定是否要重新計算散發統計資料。 預設值為 OFF。  
   
- ON    
+ 開啟    
  不會自動重新計算過期的統計資料。  
   
  OFF    
@@ -372,7 +372,7 @@ DROP_EXISTING = { ON | **OFF** }
   
  指定要卸除及重建預先存在的具名空間索引。 預設值為 OFF。  
   
- ON     
+ 開啟     
  卸除及重建現有的索引。 所指定的索引名稱必須與目前現有的索引相同；不過，索引定義可以修改。 例如，您可以指定不同的資料行、排序次序、分割區配置或索引選項。  
   
  OFF     
@@ -393,7 +393,7 @@ ALLOW_ROW_LOCKS = { **ON** | OFF }
   
  指定是否允許資料列鎖定。 預設值是 ON。  
   
- ON     
+ 開啟     
  當存取索引時，允許資料列鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會決定使用資料列鎖定的時機。  
   
  OFF     
@@ -404,7 +404,7 @@ ALLOW_PAGE_LOCKS = { **ON** | OFF }
   
  指定是否允許頁面鎖定。 預設值是 ON。  
   
- ON    
+ 開啟    
  當存取索引時，允許頁面鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會決定使用頁面鎖定的時機。  
   
  OFF     
@@ -432,7 +432,7 @@ MAXDOP =*max_degree_of_parallelism*
  如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 > [!NOTE]
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用平行索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每個版本都無法使用平行索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 DATA_COMPRESSION = {NONE | ROW | PAGE}     
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -448,7 +448,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  PAGE    
  索引會將頁面壓縮用於資料上。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 每一個 CREATE SPATIAL INDEX 陳述式只能指定每一個選項一次。 指定重複的任何選項都會引發錯誤。  
   
 在資料表的每一個空間資料行上最多可以建立 249 個空間索引。 例如，要針對單一資料行中的不同鑲嵌式參數建立索引時，在特定空間資料行上建立一個以上的空間索引可能會很有用處。  
@@ -492,7 +492,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
 ## <a name="examples"></a>範例  
   
 ### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>A. 在幾何資料行上建立空間索引
-下列範例會建立包含 **geometry** 類型資料行 `geometry_col` 且名稱為 `SpatialTable` 的資料表。 然後，此範例會在 `SIndx_SpatialTable_geometry_col1` 上建立空間索引 `geometry_col`。 此範例會使用預設鑲嵌式配置，並指定週框方塊。  
+下列範例會建立包含 `SpatialTable`geometry**類型資料行** 且名稱為 `geometry_col` 的資料表。 然後，此範例會在 `SIndx_SpatialTable_geometry_col1` 上建立空間索引 `geometry_col`。 此範例會使用預設鑲嵌式配置，並指定週框方塊。  
   
 ```sql  
 CREATE TABLE SpatialTable(id int primary key, geometry_col geometry);  
@@ -538,7 +538,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
 ```  
   
 ### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>E. 在地理資料行上建立空間索引
-下列範例會建立包含 **geography** 類型資料行 `geography_col` 且名稱為 `SpatialTable2` 的資料表。 然後，此範例會在 `SIndx_SpatialTable_geography_col1` 上建立空間索引 `geography_col`。 此範例會使用 GEOGRAPHY_AUTO_GRID 鑲嵌式配置的預設參數值。  
+下列範例會建立包含 `SpatialTable2`geography**類型資料行** 且名稱為 `geography_col` 的資料表。 然後，此範例會在 `SIndx_SpatialTable_geography_col1` 上建立空間索引 `geography_col`。 此範例會使用 GEOGRAPHY_AUTO_GRID 鑲嵌式配置的預設參數值。  
   
 ```sql  
 CREATE TABLE SpatialTable2(id int primary key, object GEOGRAPHY);  

@@ -1,6 +1,6 @@
 ---
-title: 連線至 SQL Server 或 Azure SQL Database | Microsoft Docs
-ms.custom: ''
+title: 連線至 SQL Server 或 Azure SQL Database
+ms.custom: seo-lt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aeb46551b33f40ba6c42de705559e20d8c7b0315
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8241bb0edff2a424d42d79ad3e6aa514519e79b3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264607"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257207"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>連線至 SQL Server 或 Azure SQL Database
 
@@ -28,7 +28,7 @@ ms.locfileid: "68264607"
 
 1. 在**物件總管**，按一下 [連線] > [資料庫引擎...]  。
 
-   ![connect](../media/connect-to-server/connect-db-engine.png)
+   ![連線](../media/connect-to-server/connect-db-engine.png)
 
 1. 填寫 [連線至伺服器]  表單，並按一下 [連線]  ：
 
@@ -46,9 +46,9 @@ ms.locfileid: "68264607"
 
 1. 成功連線後，伺服器會顯示在**物件總管**中：
 
-   ![已連線](../media/connect-to-server/connected.png)
+   ![已連接](../media/connect-to-server/connected.png)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 
 [設計、建立及更新資料表](../visual-db-tools/design-tables-visual-database-tools.md)
 

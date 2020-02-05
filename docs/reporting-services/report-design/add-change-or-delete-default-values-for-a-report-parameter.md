@@ -13,10 +13,10 @@ ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 902d28e7d37524ac0d1649642ca592b20ea5b3cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582037"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter"></a>為報表參數加入、變更或刪除預設值

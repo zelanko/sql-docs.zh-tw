@@ -21,10 +21,10 @@ ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2372b07e45e952003f18270995b52eb0f7338c64
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982027"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
@@ -98,7 +98,7 @@ ALTER RESOURCE GOVERNOR
   
  設定每一個磁碟區已排入佇列的最大 I/O 作業量。 這些 I/O 作業可以是任何規模的讀取或寫入。  MAX_OUTSTANDING_IO_PER_VOLUME 的最大值為 100。 其值並非百分比。 這項設定是設計來針對磁碟區的 IO 特性調整 IO 資源管理。 建議您試驗不同的值，並考慮使用 IOMeter、[DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) 或 SQLIO (已淘汰) 等校正工具識別儲存體子系統的最大值。 此設定提供系統層級安全性檢查，即使其他集區的 MAX_IOPS_PER_VOLUME 設為無限制，仍可讓 SQL Server 達到資源集區的 IOPS 下限。 如需有關 MAX_IOPS_PER_VOLUME 的詳細資訊，請參閱 [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  ALTER RESOURCE GOVERNOR DISABLE、ALTER RESOURCE GOVERNOR RECONFIGURE 和 ALTER RESOURCE GOVERNOR RESET STATISTICS 無法用於使用者交易內。  
   
  RECONFIGURE 參數是 Resource Governor 語法的一部分，不應該與屬於個別 DDL 陳述式的 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) 混淆。  

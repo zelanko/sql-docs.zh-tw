@@ -1,23 +1,24 @@
 ---
-title: 如何：建立 SQL Server 資料庫單元測試的測試專案 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 建立 SQL Server 資料庫單元測試的測試專案
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cff6d8342ea1fe4d40616bf07e1189e0ffba030e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: fe6b8e2e70a20041f394afa5cad1d800535559d1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897130"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241521"
 ---
-# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>如何：建立 SQL Server 資料庫單元測試的測試專案
+# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>HOW TO：建立 SQL Server 資料庫單元測試的測試專案
+
 在您開始撰寫評估資料庫物件的單元測試之前，必須先建立測試專案。 這個專案會包含 SQL Server 單元測試，但是它可以包含其他類型的測試。  
   
 您可以將給定資料庫專案的所有 SQL Server 單元測試都放在單一測試專案內。 不過，您可能會想要根據下列問題的回答，建立其他測試專案：  
@@ -28,7 +29,7 @@ ms.locfileid: "67897130"
 |不同的 SQL Server 單元測試是否需要針對測試執行或測試驗證存取不同的資料庫連接？|如果是，您就需要多個測試專案。 您無法針對測試執行指定多個資料庫連接。 不過，您可以針對測試驗證指定不同的資料庫連接。|  
 |您是否想要針對不同的單元測試部署不同的資料庫專案？|如果是，您就需要多個測試專案。 測試專案只能部署單一資料庫專案。|  
   
-如需上述每個問題的詳細資訊，請參閱[如何：設定 SQL Server 單元測試執行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。 您也可以提供自己的 [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService 實作，作為建立多個測試專案的替代方案。  
+如需其中一個問題的詳細資訊，請參閱[如何：設定 SQL Server 單元測試執行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。 您也可以提供自己的 [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService 實作，作為建立多個測試專案的替代方案。  
   
 您有三個選項可以將測試專案加入至包含資料庫專案的方案：  
   
@@ -52,7 +53,7 @@ ms.locfileid: "67897130"
   
 ### <a name="to-create-a-test-project-with-a-sql-server-unit-test-class"></a>若要建立包含 SQL Server 單元測試類別的測試專案  
   
--   遵循以下內容中所概述的程序：[如何：建立空白 SQL Server 單元測試](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)或[如何：建立函式、觸發程序和預存程序的 SQL Server 單元測試](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)。  
+-   請依照[如何：建立空白 SQL Server 單元測試](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)或[如何：建立函式、觸發程序和預存程序的 SQL Server 單元測試](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)中所述的程序進行。  
   
 ## <a name="see-also"></a>另請參閱  
 [建立和定義 SQL Server 單元測試](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

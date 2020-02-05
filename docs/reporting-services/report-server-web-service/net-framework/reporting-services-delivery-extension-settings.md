@@ -21,10 +21,10 @@ ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b801fc7ada9e370d12388ba341259f1c13c7a0f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128842"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 傳遞延伸模組設定
@@ -36,7 +36,7 @@ ms.locfileid: "63128842"
 ## <a name="e-mail-delivery-settings"></a>電子郵件傳遞設定  
  下表針對使用報表伺服器電子郵件的訂閱列出電子郵件傳遞設定。  
   
-|設定|ReplTest1|  
+|設定|值|  
 |-------------|-----------|  
 |**收件人**|出現在電子郵件訊息 [收件人]  的電子郵件地址。 分號會分隔多個電子郵件地址。 必要。|  
 |**副本**|出現在電子郵件訊息 [副本]  的電子郵件地址。 分號會分隔多個電子郵件地址。 選擇性。|  
@@ -44,7 +44,7 @@ ms.locfileid: "63128842"
 |**ReplyTo**|出現在電子郵件訊息**回覆**標頭的電子郵件地址。 值必須是單一電子郵件地址。 選擇性。|  
 |**IncludeReport**|指出在電子郵件傳遞中是否包括報表的值。 **true** 的值指出在電子郵件訊息的本文中所傳遞的報表。|  
 |**RenderFormat**|要用以產生轉譯報表的轉譯延伸模組名稱。 名稱必須對應至報表伺服器上安裝的其中一個可見的轉譯延伸模組。 如果將 **IncludeReport** 設定為 **true** 的值，則這個值是必要的。|  
-|**優先權**|傳送電子郵件訊息的優先權。 有效值為**低**、**一般**和**高**。 預設值為**一般**。|  
+|**優先順序**|傳送電子郵件訊息的優先權。 有效值為**低**、**一般**和**高**。 預設值為**一般**。|  
 |**主旨**|電子郵件訊息主旨中的文字。|  
 |**註解**|文字包括在電子郵件訊息的本文中。|  
 |**IncludeLink**|指出在電子郵件本文中是否包括報表連結的值。|  
@@ -52,7 +52,7 @@ ms.locfileid: "63128842"
 ## <a name="file-share-delivery-settings"></a>檔案共用傳遞設定  
  下表列出訂閱的檔案共用傳遞設定。  
   
-|設定|ReplTest1|  
+|設定|值|  
 |-------------|-----------|  
 |**FILENAME**|儲存到磁碟的檔案名稱。|  
 |**FILEEXTN**|指出轉譯報表是否包括副檔名。 值為 **true** 或 **false**。|  

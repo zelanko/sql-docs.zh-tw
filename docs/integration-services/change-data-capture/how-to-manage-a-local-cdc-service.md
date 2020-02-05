@@ -11,10 +11,10 @@ ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 722db3a272c99ba6733551f4fa1a4131971e2416
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298740"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>如何管理本機 CDC 服務
@@ -61,6 +61,6 @@ ms.locfileid: "71298740"
          您也可以用滑鼠右鍵按一下您要編輯屬性的 CDC 服務，然後選取 [屬性]  。  
   
 ## <a name="see-also"></a>另請參閱  
- [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+ [管理 Oracle CDC 服務](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

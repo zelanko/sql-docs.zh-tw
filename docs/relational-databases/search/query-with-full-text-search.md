@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68053568"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
@@ -175,7 +175,7 @@ GO
 ## <a name="examples_specific"></a> 特定的搜尋類型
 
 ###  <a name="Simple_Term"></a> 搜尋特定單字或片語 (簡單詞彙)  
- 您可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 來搜尋資料表中的特定單字或片語。 例如，如果您要搜尋 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中的 **ProductReview** 資料表，以尋找某產品具有 "learning curve" 片語的所有註解，可依照下列方式使用 CONTAINS 述詞：  
+ 您可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 來搜尋資料表中的特定單字或片語。 例如，如果您要搜尋 **資料庫中的**ProductReview[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表，以尋找某產品具有 "learning curve" 片語的所有註解，可依照下列方式使用 CONTAINS 述詞：  
   
 ```sql
 USE AdventureWorks2012  

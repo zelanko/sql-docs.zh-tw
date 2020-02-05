@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ef03354afd3aa2318317ca4c946463a5b7355c12
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727525"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>在 SQL Server 機器學習服務上設定用於 Python 開發的資料科學用戶端
@@ -306,4 +306,4 @@ display.Image(data=image)
 您已經具有工具和針對 SQL Server 的運作連線，現在請使用 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)完成 Python 快速入門來擴展您的技能。
 
 > [!div class="nextstepaction"]
-> [快速入門：使用 SQL Server 機器學習服務以建立及執行簡單的 Python 指令碼](../tutorials/quickstart-python-create-script.md)
+> [Quickstart: Create and run simple Python scripts with SQL Server Machine Learning Services](../tutorials/quickstart-python-create-script.md)
