@@ -24,13 +24,13 @@ ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 392a50a23bd33235bb5a89eb95d585ebd5531527
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929119"
 ---
-# <a name="set-cursorcloseoncommit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
+# <a name="set-cursor_close_on_commit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   控制 [!INCLUDE[tsql](../../includes/tsql-md.md)] COMMIT TRANSACTION 陳述式的行為。 這項設定的預設值是 OFF。 這表示當您認可交易時，伺服器不會關閉資料指標。  
@@ -44,7 +44,7 @@ ms.locfileid: "67929119"
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當 SET CURSOR_CLOSE_ON_COMMIT 為 ON 時，這項設定會遵照 ISO 標準，在認可或回復時關閉任何開啟的資料指標。 當 SET CURSOR_CLOSE_ON_COMMIT 為 OFF 時，在認可交易時，不會關閉資料指標。  
   
 > [!NOTE]  
