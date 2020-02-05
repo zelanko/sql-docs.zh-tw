@@ -9,24 +9,24 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 371321c8b91d3d7c56ac2721deb29a664209f004
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 7cb67f55af03fc8c948df6f17ee2924dea12825f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531912"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820976"
 ---
 # <a name="azdata-app"></a>azdata app
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-下列文章提供 `azdata` 工具中 `sql` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
+下文提供 `app` 工具中 `azdata` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
 |     |     |
 | --- | --- |
 [azdata app template](reference-azdata-app-template.md) | 範本。
-[azdata app init](#azdata-app-init) | Kickstart 新的應用程式基本架構。
+[azdata app init](#azdata-app-init) | 快速啟動新的應用程式基本架構。
 [azdata app create](#azdata-app-create) | 建立應用程式。
 [azdata app update](#azdata-app-update) | 更新應用程式。
 [azdata app list](#azdata-app-list) | 列出應用程式。
@@ -64,7 +64,7 @@ azdata app init --name reduce --template ssis
 #### `--spec -s`
 僅產生應用程式 spec.yaml。
 #### `--name -n`
-應用程式名稱
+應用程式名稱。
 #### `--version -v`
 應用程式版本。
 #### `--template -t`
@@ -156,7 +156,7 @@ azdata app list
 ```
 ### <a name="optional-parameters"></a>選擇性參數
 #### `--name -n`
-應用程式名稱
+應用程式名稱。
 #### `--version -v`
 應用程式版本。
 ### <a name="global-arguments"></a>全域引數
@@ -183,7 +183,7 @@ azdata app delete --name reduce --version v1
 ```
 ### <a name="required-parameters"></a>必要參數
 #### `--name -n`
-應用程式名稱
+應用程式名稱。
 #### `--version -v`
 應用程式版本。
 ### <a name="global-arguments"></a>全域引數
@@ -219,7 +219,7 @@ azdata app run --name reduce --version v1 --inputs x=10,y5.6
 ```
 ### <a name="required-parameters"></a>必要參數
 #### `--name -n`
-應用程式名稱
+應用程式名稱。
 #### `--version -v`
 應用程式版本。
 ### <a name="optional-parameters"></a>選擇性參數
@@ -252,7 +252,7 @@ azdata app describe --name reduce --version v1
 #### `--spec -s`
 目錄路徑，其中包含描述應用程式的 YAML 規格檔案。
 #### `--name -n`
-應用程式名稱
+應用程式名稱。
 #### `--version -v`
 應用程式版本。
 ### <a name="global-arguments"></a>全域引數

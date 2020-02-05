@@ -9,10 +9,10 @@ ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c3f1e0f0364eebbd0861edb931b0ee7f46954a7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577150"
 ---
 # <a name="report-builder-functions---union-function"></a>報表產生器函式 - Union 函式
@@ -41,7 +41,7 @@ Union(expression, scope, recursive)
 ## <a name="return"></a>傳回  
  根據運算式類型傳回空間物件 ( **SqlGeometry** 或 **SqlGeography**)。 如需 **SqlGeometry** 和 **SqlGeography** 空間資料類型的詳細資訊，請參閱 [空間資料類型概觀](../../relational-databases/spatial/spatial-data-types-overview.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  運算式中指定的資料集必須具有相同的資料類型。  
   
  *scope* 的值必須是字串常數，而且不得為運算式。 如果是未指定其他彙總的外部彙總， *scope* 必須參考目前的範圍或是包含的範圍。 不支援資料集範圍。 如果是彙總的彙總，巢狀彙總可以指定子範圍。  

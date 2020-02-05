@@ -18,10 +18,10 @@ ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eb6a57ae483b36aba960a2b10423d38e72d32c5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066105"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
@@ -66,7 +66,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  ASYMMETRIC KEY *Asym_Key_Name*  
  這是預存程序、函數、組件或觸發程序用來簽署或副署的非對稱金鑰名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  簽署或副署的模組及用來簽署的憑證或非對稱金鑰必須已存在。 模組中的每個字元都會包含在簽章計算中。 這包括開頭的歸位字元和換行字元。  
   
  可用任何數目的憑證和非對稱金鑰來簽署和副署模組。  

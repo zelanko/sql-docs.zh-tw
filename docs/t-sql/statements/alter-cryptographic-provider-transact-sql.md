@@ -20,10 +20,10 @@ ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b27695eba9f1092b09d147c373877a9b44789497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065897"
 ---
 # <a name="alter-cryptographic-provider-transact-sql"></a>ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
@@ -51,7 +51,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  ENABLE | DISABLE  
  啟用或停用提供者。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果提供者變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中用來實作 Extensible Key Management 的 .dll 檔案，您必須使用 ALTER CRYPTOGRAPHIC PROVIDER 陳述式。  
   
  當使用 ALTER CRYPTOGRAPHIC PROVIDER 陳述式來更新 .dll 檔案路徑時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會執行以下動作：  
@@ -76,7 +76,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  需要密碼編譯提供者的 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，將稱為 `SecurityProvider` 的密碼編譯提供者更改為更新版的 .dll 檔案。 這個新的版本命名為 `c:\SecurityProvider\SecurityProvider_v2.dll`，而且會安裝在伺服器上。 您必須將提供者的憑證安裝在伺服器上。  
+ 下列範例會在 `SecurityProvider` 中，將稱為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的密碼編譯提供者更改為更新版的 .dll 檔案。 這個新的版本命名為 `c:\SecurityProvider\SecurityProvider_v2.dll`，而且會安裝在伺服器上。 您必須將提供者的憑證安裝在伺服器上。  
   
 1. 停用提供者以執行升級。 這將會終止所有開啟的密碼編譯工作階段。  
 ```  

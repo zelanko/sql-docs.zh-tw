@@ -13,10 +13,10 @@ ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6838ae985c16f4188ed43e3442b4f86c4a3557b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298681"
 ---
 # <a name="manage-a-cdc-service"></a>管理 CDC 服務
@@ -49,6 +49,6 @@ ms.locfileid: "71298681"
 ## <a name="see-also"></a>另請參閱  
  [如何建立 SQL Server 變更資料庫執行個體](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [如何從 CDC 設計工具主控台管理 CDC 服務](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
+ [使用 [新增執行個體精靈]](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   

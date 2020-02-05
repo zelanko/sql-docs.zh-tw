@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0b7cdfe016a1010bef5322c3d39b7ee436437aa5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051199"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>將功能新增至 SQL Server 的執行個體 (安裝程式)
@@ -36,7 +36,7 @@ ms.locfileid: "68051199"
 >  如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則必須使用對遠端共用位置具有讀取權限的網域帳戶。  
   
 > [!NOTE]  
->  當您將功能加入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的執行個體時，現有的使用方式報表設定會套用至新加入的功能。 若要變更這些設定，請使用 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態工具]  功能表中的 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤和使用方式報表]  工具。  
+>  當您將功能加入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的執行個體時，現有的使用方式報表設定會套用至新加入的功能。 若要變更這些設定，請使用 [ **組態工具][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 功能表中的 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤和使用方式報表]  工具。  
   
 ## <a name="procedures"></a>程序  
   
@@ -44,23 +44,23 @@ ms.locfileid: "68051199"
   
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體。 在根資料夾中，按兩下 setup.exe。 若要從網路共用進行安裝，請導覽至共用上的根資料夾，然後按兩下 setup.exe。 如果出現 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式] 對話方塊，請[!INCLUDE[clickOK](../../includes/clickok-md.md)] 安裝必要條件，然後按一下 [取消]  以結束 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝。  
   
-2.  安裝精靈將會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要將功能加入現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體，請在左側導覽區域中，按一下 [安裝]  ，然後按一下 [新增 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立安裝或將功能加入至現有安裝]  。  
+2.  安裝精靈將會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要將功能加入現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體，請在左側導覽區域中，按一下 **「安裝」** ，然後按一下 **新增 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]「 獨立安裝或將功能加入至現有安裝」** 。  
   
 3.  系統組態檢查將會在電腦上執行探索作業。 若要檢視驗證詳細資料，請按一下 [檢視詳細資料]  。 若要繼續，請[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
-4.  最新可用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品更新會隨即顯示在 [產品更新] 頁面上。 如果不想包含更新，請清除 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品更新程式  核取方塊。 如果未偵測到任何產品更新， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將不會顯示此頁面，而會自動前往 **[安裝安裝程式檔案]** 頁面。  
+4.  最新可用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品更新會隨即顯示在 [產品更新] 頁面上。 如果不想包含更新，請清除 包含  **產品更新程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 核取方塊。 如果未偵測到任何產品更新， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將不會顯示此頁面，而會自動前往 **[安裝安裝程式檔案]** 頁面。  
   
 5.  安裝程式會在 [安裝安裝程式檔案] 頁面上，顯示下載、擷取及安裝安裝程式檔案的進度。 如有找到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的更新，並指定要包含該更新，將會一併安裝。 按一下 [安裝]  ，以安裝安裝程式支援檔案。  
   
 6.  系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。  
   
-7.  在 [安裝類型] 頁面上，選取 [將功能加入到現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體]  選項，然後選取要更新的執行個體。  
+7.  在 [安裝類型] 頁面上，選取 [將功能加入到現有的  **執行個體][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 選項，然後選取要更新的執行個體。  
   
 8.  在 [特徵選取] 頁面上，選取要安裝的元件。 當您選取功能名稱之後，每一個元件群組的描述就會出現在右手邊窗格中。 您可以選取核取方塊的任何組合。 如需詳細資訊，請參閱 [SQL Server 2017 的版本及支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。 在給定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上，每個元件都只能安裝一次。 若要安裝多個元件，您必須安裝其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  
   
      右窗格會顯示選取功能的必要條件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會在這個程序稍後說明的安裝步驟期間安裝尚未安裝的必要條件。  
   
-     系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 按 **[下一步]** ，繼續進行。  
+     系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 選取 [下一步]  以繼續操作。  
   
 9. [磁碟空間需求] 頁面會計算您所指定之功能的所需磁碟空間，並且比較空間需求與執行安裝程式之電腦的可用磁碟空間。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "68051199"
   
      如需詳細資訊，請參閱 [Database Engine 組態 - 資料目錄](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)。  
   
-15. 使用 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態 - FILESTREAM] 頁面來針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體啟用 FILESTREAM。 如需 FILESTREAM 的詳細資訊，請參閱 [Database Engine 組態 - Filestream](https://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)。 若要繼續進行，請按 [下一步]。  
+15. 使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [組態 - FILESTREAM] 頁面來針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體啟用 FILESTREAM。 如需 FILESTREAM 的詳細資訊，請參閱 [Database Engine 組態 - Filestream](https://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)。 若要繼續進行，請按 [下一步]。  
   
 16. 您可以使用 [[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態 - 帳戶提供] 頁面指定伺服器模式以及要擁有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 之管理員權限的使用者或帳戶。 伺服器模式會決定在伺服器上所要使用的記憶體及儲存體子系統。 不同方案類型會在不同的伺服器模式中執行。 如果要在伺服器上執行多維度 Cube 資料庫，請選擇預設選項 [多維度及資料採礦伺服器模式]。 無論系統管理員權限為何，至少須為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定一名系統管理員。 如果要加入執行 SQL Server 安裝程式的帳戶，請按一下 [加入目前使用者]  。 若要在系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]** ，然後編輯在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中將會有管理員權限的使用者、群組或電腦清單。 如需伺服器模式及系統管理員權限的詳細資訊，請參閱 [Analysis Services 組態 - 帳戶提供](https://msdn.microsoft.com/library/169b1af2-6fe2-467f-8ca4-919f24c620ce)。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "68051199"
   
 20. 您可以使用 [Distributed Replay Client 組態] 頁面，指定要授與 Distributed Replay Client 服務之管理權限的使用者。 擁有管理權限的使用者將可不受限制地存取 Distributed Replay Client 服務。  
   
-     [控制器名稱]  是選擇性參數，預設值為 \<空白  >。 針對 Distributed Replay Client 服務，輸入將與用戶端電腦進行通訊之控制器的名稱。 請注意下列事項：  
+     [控制器名稱]  是選擇性參數，預設值為 \<空白  >。 針對 Distributed Replay Client 服務，輸入將與用戶端電腦進行通訊之控制器的名稱。 請注意：  
   
     -   如果您已經設定了控制器，請在設定每個用戶端時輸入該控制器的名稱。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "68051199"
   
 26. 如果指示您重新啟動電腦，請立刻執行。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需安裝程式記錄檔的資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
  設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝。  
   
 -   為了減少系統的可攻擊介面區， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以選擇性地安裝和啟用主要服務和功能。 如需詳細資訊，請參閱＜ [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)＞。  

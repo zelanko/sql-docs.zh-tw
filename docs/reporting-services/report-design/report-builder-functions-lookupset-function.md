@@ -9,10 +9,10 @@ ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9b4de3e21a214a9894f93b8aa2fcd8fd8c6328eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577404"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>報表產生器函式 - LookupSet 函式
@@ -30,13 +30,13 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>參數  
  *source_expression*  
- (**Variant**) 在目前範圍中評估並指定要查閱之名稱或索引鍵的運算式。 例如， `=Fields!ID.Value`。  
+ (**Variant**) 在目前範圍中評估並指定要查閱之名稱或索引鍵的運算式。 例如： `=Fields!ID.Value` 。  
   
  *destination_expression*  
- (**Variant**) 針對資料集中的每個資料列評估並指定要比對之名稱或索引鍵的運算式。 例如， `=Fields!CustomerID.Value`。  
+ (**Variant**) 針對資料集中的每個資料列評估並指定要比對之名稱或索引鍵的運算式。 例如： `=Fields!CustomerID.Value` 。  
   
  *result_expression*  
- (**Variant**) 對資料集的每個資料列進行評估，而且指定要擷取之值的運算式，其中 *source_expression* = *destination_expression*。 例如， `=Fields!PhoneNumber.Value`。  
+ (**Variant**) 對資料集的每個資料列進行評估，而且指定要擷取之值的運算式，其中 *source_expression* = *destination_expression*。 例如： `=Fields!PhoneNumber.Value` 。  
   
  *資料集 (dataset)*  
  指定報表中資料集名稱的常數。 例如，"ContactInformation"。  
@@ -44,7 +44,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>傳回  
  傳回 **VariantArray**或在沒有相符項目時傳回 **Nothing** 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  使用 **LookupSet** 可從具有一對多關係之名稱/值組的指定資料集中擷取一組值。 例如，如果是資料表中的客戶識別碼，您可以使用 **LookupSet** 從未繫結至資料區的資料集中，擷取該客戶的所有相關電話號碼。  
   
  **LookupSet** 會執行下列動作：  
@@ -59,7 +59,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  若要從具有一對一關聯性之名稱/值組的資料集中，擷取指定名稱的單一值，請使用 [Lookup 函式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)。 若要針對一組值呼叫 **Lookup**，請使用 [Multilookup 函式 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)。  
   
- 系統會套用下列限制：  
+ 適用以下限制：  
   
 -   當套用所有篩選運算式之後，便會評估**LookupSet** 。  
   

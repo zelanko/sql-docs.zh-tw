@@ -18,10 +18,10 @@ ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9d8b500415aa5e6812524fff6403735a11cf765a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68017542"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (geometry 資料類型)
@@ -50,10 +50,10 @@ ms.locfileid: "68017542"
  *relative*  
  這是 **bit**，用來指定 *tolerance* 值是相對的還是絕對的。 如果為 'TRUE' 或 1，tolerance 就是相對值，會計算為 *tolerance* 參數與執行個體週框方塊之直徑的乘積。 如果為 'FALSE' 或 0，tolerance 就是絕對值，而 *tolerance* 值會是所傳回線性近似值之理想緩衝距離的最大變異絕對值。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回型別：**SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
 ## <a name="exceptions"></a>例外狀況  
  *tolerance* 參數必須大於零。 如果 *tolerance* <= 0，則會擲回 `System.ArgumentOutOfRangeException`。  
@@ -61,7 +61,7 @@ ms.locfileid: "68017542"
 > [!NOTE]  
 >  由於 *tolerance* 是 **float** 類型，因此如果指定的容錯值非常小，就可能因為浮點類型的捨入問題而擲回 `System.Runtime.InteropServices.COMException`。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當 *distance* > 0 時，會傳回 **Polygon** 或 **MultiPolygon** 執行個體。  
   
 > [!NOTE]  

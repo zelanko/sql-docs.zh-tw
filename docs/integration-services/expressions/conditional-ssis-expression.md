@@ -1,5 +1,5 @@
 ---
-title: '? 所解碼的字元：(條件) (SSIS 運算式) | Microsoft Docs'
+title: '? : (條件) (SSIS 運算式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 758cd90c3932d59e725f6a8a9bf829e59ecf5474
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290167"
 ---
-# <a name="--conditional-ssis-expression"></a>? 所解碼的字元：(條件) (SSIS 運算式)
+# <a name="--conditional-ssis-expression"></a>? : (條件) (SSIS 運算式)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -40,15 +40,15 @@ boolean_expression?expression1:expression2
  評估為 TRUE、FALSE 或 NULL 的任何有效運算式。  
   
  *expression1*  
- 任何有效的運算式。  
+ 為任何有效運算式。  
   
  *expression2*  
- 任何有效的運算式。  
+ 為任何有效運算式。  
   
 ## <a name="result-types"></a>結果類型  
  *expression1* 或 *expression2*的資料類型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 *boolean_expression* 評估為 NULL，則運算式結果為 NULL。 如果選取的運算式 ( *expression1* 或 *expression2* ) 為 NULL，則結果為 NULL。 如果選取的運算式不為 NULL，但未選取的運算式為 NULL，則結果為所選運算式的值。  
   
  如果 *expression1* 和 *expression2* 的資料類型相同，則結果即為該資料類型。 下列其他規則適用於結果類型：  
@@ -61,9 +61,9 @@ boolean_expression?expression1:expression2
   
 -   **數值** — *expression1* 與 *expression2* 都必須是數值資料類型。 資料類型的交集必須是運算式評估工具執行之隱含數值轉換規則中所指定的數值資料類型。 兩個數值資料類型的交集不能是 Null。 如需相關資訊，請參閱 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
--   **字串** *expression1* 和 *expression2* 都必須是字串資料類型：DT_STR 或 DT_WSTR。 兩個運算式可以評估為不同的字串資料類型。 結果的資料類型為 DT_WSTR，且長度為較長引數的長度。  
+-   **字串***expression1* 和 *expression2* 都必須是字串資料類型：DT_STR 或 DT_WSTR。 兩個運算式可以評估為不同的字串資料類型。 結果的資料類型為 DT_WSTR，且長度為較長引數的長度。  
   
--   **日期、時間或日期/時間** *expression1* 和 *expression2* 都必須評估為下列其中一個資料類型：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **日期、時間或日期/時間** ： *expression1* 和 *expression2* 都必須評估為下列其中一種資料類型：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系統不支援評估為時間資料類型之運算式與評估為日期或日期/時間資料類型之運算式之間的比較。 系統會產生錯誤。  

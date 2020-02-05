@@ -1,10 +1,7 @@
 ---
-title: Index 的 Column 元素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/09/2017
+title: 索引的 Column 元素 (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3abd394ea3b7c061deac894e611d1cae3e7d1c03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/09/2017
+ms.openlocfilehash: 008cba36af33c465c3a126dc3e101b8ebca28e36
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949859"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307882"
 ---
 # <a name="column-element-for-index-dta"></a>索引的 Column 元素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  指定針對使用者指定的組態來建立索引的資料行。  
+
+指定針對使用者指定的組態來建立索引的資料行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -69,7 +72,7 @@ ms.locfileid: "67949859"
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|Description|  
+|特性|描述|  
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  

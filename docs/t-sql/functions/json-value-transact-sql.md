@@ -19,13 +19,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 845c621291331fdf75e257a3f71ec8068df13ffd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109348"
 ---
-# <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
+# <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -67,7 +67,7 @@ JSON_VALUE ( expression , path )
   
  如果您必須傳回大於 4000 個字元的純量值，請使用 **OPENJSON** 而不是 **JSON_VALUE**。 如需詳細資訊，請參閱 [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 ### <a name="lax-mode-and-strict-mode"></a>lax 模式和 strict 模式
 
@@ -92,7 +92,7 @@ SET @jsonInfo=N'{
   
  下列表格會比較 lax 模式與 strict 模式中 **JSON_VALUE** 的行為。 如需選擇性路徑模式規格 (lax 或 strict) 的詳細資訊，請參閱 [JSON 路徑運算式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)。  
   
-|路徑|lax 模式中的傳回值|strict 模式中的傳回值|其他資訊|  
+|Path|lax 模式中的傳回值|strict 模式中的傳回值|其他資訊|  
 |----------|------------------------------|---------------------------------|---------------|  
 |$|NULL|錯誤|非純量值。<br /><br /> 請改用 **JSON_QUERY**。|  
 |$.info.type|N'1'|N'1'|N/a|  

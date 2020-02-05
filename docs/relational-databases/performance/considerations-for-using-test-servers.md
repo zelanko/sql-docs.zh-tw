@@ -19,10 +19,10 @@ ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a1cf7a4bb37abd60f7067381ba4da6a2d44328ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946981"
 ---
 # <a name="considerations-for-using-test-servers"></a>使用測試伺服器的考量
@@ -38,7 +38,7 @@ ms.locfileid: "67946981"
   
 -   要使用測試伺服器對實際伺服器上的資料庫進行微調的使用者，必須同時位於兩部伺服器上，否則此案例將會失敗。  
   
--   必須啟用擴充預存程序 **xp_msver**，才能使用測試伺服器/實際伺服器案例。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會使用此擴充預存程序來提取在微調測試伺服器時實際伺服器上可使用的處理器數量與記憶體數量。 若未啟用 **xp_msver** ， [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 即會採用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 執行所在電腦的硬體特性。 如果無法取得執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 所在電腦的硬體特性，將會假設 1 個處理器和 1024 MB 的記憶體。 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，預設會開啟擴充預存程序。 如需詳細資訊，請參閱[介面區組態](../../relational-databases/security/surface-area-configuration.md)和 [xp_msver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md)。  
+-   必須啟用擴充預存程序 **xp_msver**，才能使用測試伺服器/實際伺服器案例。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會使用此擴充預存程序來提取在微調測試伺服器時實際伺服器上可使用的處理器數量與記憶體數量。 若未啟用 **xp_msver** ， [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 即會採用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 執行所在電腦的硬體特性。 如果無法取得執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 所在電腦的硬體特性，將會假設 1 個處理器和 1024 MB 的記憶體。 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，預設會開啟擴充預存程序。 如需詳細資訊，請參閱[介面區組態](../../relational-databases/security/surface-area-configuration.md)和 [xp_msver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md)。  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 預期測試伺服器和實際伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本必須相同。 如果有兩種不同的版本，將優先採用測試伺服器上的版本。 例如，如果測試伺服器執行的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard，即使實際伺服器執行的是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Enterprise， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tuning Advisor 也不會在其建議中包含索引檢視表、資料分割和線上作業。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "67946981"
   
 ## <a name="issues-related-to-the-shell-database"></a>Shell 資料庫的相關問題  
   
--   在微調完成後， [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會移除它在微調處理過程中於測試伺服器上建立的任何中繼資料。 其中包括 Shell 資料庫。 若您要以相同的實際伺服器與測試伺服器執行一系列的微調工作階段，您可以保留此 Shell 資料庫以節省時間。 請在 XML 輸入檔中，指定 **RetainShellDB** 子元素以及 **TuningOptions** 父元素下的其他子元素。 利用這些選項，[!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 就會保留 Shell 資料庫。 如需詳細資訊，請參閱 [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)。  
+-   在微調完成後， [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會移除它在微調處理過程中於測試伺服器上建立的任何中繼資料。 其中包括 Shell 資料庫。 若您要以相同的實際伺服器與測試伺服器執行一系列的微調工作階段，您可以保留此 Shell 資料庫以節省時間。 請在 XML 輸入檔中，指定 **RetainShellDB** 子元素以及 **TuningOptions** 父元素下的其他子元素。 利用這些選項， [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 就會保留 Shell 資料庫。 如需詳細資訊，請參閱 [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)。  
   
 -   在順利完成測試伺服器/實際伺服器微調工作階段之後，即使您尚未指定 **RetainShellDB** 子元素，Shell 資料庫可能還是會留在測試伺服器上。 這些不需要的 Shell 資料庫可能會干擾後續的微調工作階段，因此應該在執行其他測試伺服器/實際伺服器微調工作階段之前加以卸除。 此外，如果有未預期的微調工作階段存在，測試伺服器上的 Shell 資料庫及這些資料庫中的物件都可能留在測試伺服器上。 啟動新的測試伺服器/實際伺服器微調工作階段之前，您也應該刪除這些資料庫和物件。  
   

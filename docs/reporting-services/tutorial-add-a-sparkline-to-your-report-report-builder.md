@@ -9,10 +9,10 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63043091"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教學課程：將走勢圖加入至報表 (報表產生器)
@@ -30,7 +30,7 @@ ms.locfileid: "63043091"
   
 ## <a name="CreateTable"></a>1.建立含資料表的報表  
   
-1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  從您的電腦、[ Web 入口網站或 SharePoint 整合模式](../reporting-services/report-builder/start-report-builder.md)啟動報表產生器[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]。  
   
     [新報表或資料集]  對話方塊隨即開啟。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "63043091"
   
 11. 按 [下一步]  。  
   
-12. 按一下 **[完成]** 。  
+12. 按一下 [完成]  。  
   
 14. 資料表會加入至設計介面。 該資料表具有三個資料行和三個資料列。  
   
@@ -300,7 +300,7 @@ ms.locfileid: "63043091"
   
 4.  將 [名稱]  中的預設名稱取代為 **Product Sales**。  
   
-5.  按一下 **[儲存]** 。  
+5.  按一下 [檔案]  。  
   
 報表就會儲存至報表伺服器。 您連接之報表伺服器的名稱會顯示在視窗底部的狀態列中。  
   
@@ -312,9 +312,9 @@ ms.locfileid: "63043091"
   
 3.  將 [名稱]  中的預設名稱取代為 **Product Sales**。  
   
-4.  按一下 **[儲存]** 。  
+4.  按一下 [檔案]  。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
 
 這總結本教學課程：建立含走勢圖的資料表報表。 如需走勢圖的詳細資訊，請參閱[走勢圖和資料橫條](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   

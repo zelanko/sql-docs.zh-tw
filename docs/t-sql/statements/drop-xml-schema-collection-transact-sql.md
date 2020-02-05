@@ -23,10 +23,10 @@ ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c2a02ae5bc9572265cc33392a02c596cfcfec0ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072013"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
@@ -50,7 +50,7 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
 *sql_identifier*  
 要卸除的 XML 結構描述集合名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 卸除 XML 結構描述集合是一項交易式作業。 當您卸除交易內的 XML 結構描述集合，並於稍後復原該交易時，不會卸除 XML 結構描述集合。  
   
 您無法卸除使用中的 XML 結構描述集合。 因此，無法在下列任一種情況中卸除集合：  

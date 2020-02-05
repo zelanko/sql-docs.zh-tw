@@ -12,13 +12,13 @@ ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7068229bcfcf63bb08fe46272cf308cee60be022
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056715"
 ---
-# <a name="mssqlserver21879"></a>MSSQLSERVER_21879
+# <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -52,7 +52,7 @@ ms.locfileid: "68056715"
   
 如果複寫代理程式是在散發者以外的節點上執行 (例如在訂閱者端執行的合併代理程式)，當其起始的 **sp_get_redirected_publisher** 呼叫傳回錯誤 21879 時，就會存在一些特殊考量。 如果 Windows 驗證用於重新導向發行者的連接，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就必須設定為 Kerberos 驗證，才能成功建立連接。 當您使用 Windows 驗證而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並未設定為 Kerberos 驗證時，在訂閱者端執行的合併代理程式就會收到表示 'NT AUTHORITY\ANONYMOUS LOGON' 登入失敗的錯誤 18456。 可解決此問題的方式有三種：  
   
--   將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為 Kerberos 驗證。 請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書中的 **Kerberos 驗證和 SQL Server**。  
+-   將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為 Kerberos 驗證。 請參閱 **線上叢書中的**Kerberos 驗證和 SQL Server[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 -   使用 **sp_changedistpublisher** 來變更與 MSdistpublishers 中之原始發行者相關聯的安全性模式，並且指定要用於連接的登入和密碼。  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7ba4edba0c8f6d47204bb61e2c6aeed98d0f9c3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67911288"
 ---
 # <a name="rpcstarting-event-class"></a>RPC:Starting 事件類別
@@ -25,7 +25,7 @@ ms.locfileid: "67911288"
   
 ## <a name="rpcstarting-event-class-data-columns"></a>RPC:Starting 事件類別資料行  
   
-|資料行名稱|**Data type**|Description|資料行識別碼|可篩選|  
+|資料行名稱|**Data type**|描述|資料行識別碼|可篩選|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |BinaryData|**image**|這是一個二進位值，會隨著追蹤所擷取的事件類別而不同。|2|是|  

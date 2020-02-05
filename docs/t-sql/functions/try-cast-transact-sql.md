@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
 ms.openlocfilehash: 915ea023442ab9d787a481cab44259b1fc4a3857
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70151947"
 ---
 # <a name="try_cast-transact-sql"></a>TRY_CAST (Transact-SQL)
@@ -51,10 +51,10 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
   
  可接受值的範圍由 *data_type* 值決定。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  如果轉換成功，則會傳回轉換為指定之資料類型的值，否則會傳回 Null。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **TRY_CAST** 會採用傳遞給它的值，然後會嘗試將該值轉換為指定的 *data_type*。 如果轉換成功，**TRY_CAST** 會傳回當做指定之 *data_type* 的值；如果發生錯誤則會傳回 Null。 但是，若您要求明確不允許的轉換，則 **TRY_CAST** 會失敗並出現錯誤。  
   
  **TRY_CAST** 不是新的保留關鍵字，而且可在所有相容性層級使用。 當連接到遠端伺服器時，**TRY_CAST** 的語意與 **TRY_CONVERT** 相同。  

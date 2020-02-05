@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4badf632e87404b0c3496564abec6ca9a56e3747
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909518"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>指定索引的填滿因素
@@ -59,7 +59,7 @@ ms.locfileid: "67909518"
 #### <a name="adding-data-to-the-end-of-the-table"></a>將資料加入資料表的結尾  
  如果新的資料在資料表內平均分配，則非零的填滿因數值 (0 或 100 以外) 對於效能將很有幫助。 但是，如果將所有資料加入資料表的結尾，索引頁面中的空白處將不會填滿。 例如，如果索引鍵資料行為 IDENTITY 資料行，新資料列的索引鍵一定會增加，而且在邏輯上會將索引資料列加入索引的結尾。 如果現有的資料列將以增加資料列大小的資料進行更新，請使用小於 100 的填滿因數。 每個頁面上的額外位元組將有助於減少資料列中額外長度所導致的頁面分割。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
@@ -80,9 +80,9 @@ ms.locfileid: "67909518"
   
 6.  展開 **[填滿規格]** ，選取 **[填滿因數]** 資料列，在資料列中輸入所要的填滿因數。  
   
-7.  按一下 [ **關閉**]。  
+7.  按一下 [關閉]  。  
   
-8.  在 [檔案]  功能表上，選取 [儲存 _table_name_]  。  
+8.  在 [檔案]  功能表上，選取 [儲存 **table_name**]  。  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>使用物件總管指定索引的填滿因數  
   

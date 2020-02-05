@@ -18,13 +18,13 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b16e58b8535d91fd29281aa986ab5ba26875dc38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014995"
 ---
-# <a name="sqlsrvprepare"></a>sqlsrv_prepare
+# <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 建立與指定的連接相關聯的陳述式資源。 此函數有助於您執行多個查詢。  
@@ -58,7 +58,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
     下表說明這些陣列元素：  
   
-    |元素|Description|  
+    |元素|描述|  
     |-----------|---------------|  
     |*&$value*|常值或 PHP 變數的參考。|  
     |*$direction*[OPTIONAL]|下列其中一項 **SQLSRV_PARAM_\*** 常數，用於指定參數方向：**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 預設值為 **SQLSRV_PARAM_IN**。<br /><br />如需 PHP 常數的詳細資訊，請參閱 [常數 &#40;適用於 SQL Server 之 PHP 的 Microsoft 驅動程序&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
@@ -67,7 +67,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$options* [OPTIONAL]：設定<a name="properties">查詢屬性</a>的關聯陣列。 下表列出支援的 Key 和對應的值：
 
-|索引鍵|支援的值|Description|  
+|Key|支援的值|描述|  
 |-------|--------------------|---------------|  
 |ClientBufferMaxKBSize|正整數|設定將保留用戶端資料指標結果集的緩衝區大小。<br /><br />預設值是 10240 KB。 如需詳細資訊，請參閱[指定資料指標類型及選取資料列](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。|
 |DecimalPlaces|介於 0 和 4 (含) 之間的整數|指定將擷取的貨幣值格式化時的小數位數。<br /><br />將忽略任何大於 4 的負整數或值。<br /><br />這個選項只有當 FormatDecimals 為 **true** 時才能運作。|
@@ -80,7 +80,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 ## <a name="return-value"></a>傳回值  
 陳述式資源。 如果無法建立陳述式資源，將會傳回 **false** 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 當您準備以變數做為參數的陳述式時，這些變數會繫結至陳述式。 這表示如果您更新變數的值，下一次執行陳述式時，就會以更新的參數值來執行。  
   
 **sqlsrv_prepare** 和 **sqlsrv_execute** 的組合可將陳述式準備和陳述式執行分成兩個函式呼叫中，並可用於執行參數化查詢。 此函數非常適合用來執行陳述式多次 (每次執行時使用不同的參數值)。  

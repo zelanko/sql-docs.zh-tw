@@ -17,10 +17,10 @@ ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eb41f051eca6a837abb61c308b67167a1874a44d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914285"
 ---
 # <a name="revoke-schema-permissions-transact-sql"></a>REVOKE 結構描述權限 (Transact-SQL)
@@ -55,7 +55,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  指定要撤銷其權限的結構描述。 範圍限定詞 **::** 為必要項目。  
   
  *database_principal*  
- 指定要撤銷其權限的主體。 它有下列幾種：  
+ 指定要撤銷其權限的主體。 下列其中之一：  
   
 -   資料庫使用者  
   
@@ -80,7 +80,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 >  指出目前正在撤銷的權限，而這個權限也會被這個主體所授與或拒絕的其他主體所撤銷。  
   
  AS *revoking_principal*  
- 指定主體，執行這項查詢的主體會從這個主體衍生其權限來撤銷權限。 它有下列幾種：  
+ 指定主體，執行這項查詢的主體會從這個主體衍生其權限來撤銷權限。 下列其中之一：  
   
 -   資料庫使用者  
   
@@ -98,7 +98,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   未對應至伺服器主體的資料庫使用者  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  結構描述是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 下表所列的是可以撤銷之最特定和最有限的結構描述權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   
 |結構描述權限|結構描述權限所隱含|資料庫權限所隱含|  
@@ -106,7 +106,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |ALTER|CONTROL|ALTER ANY SCHEMA|  
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
-|Delete|CONTROL|Delete|  
+|刪除|CONTROL|刪除|  
 |執行 CREATE 陳述式之前，請先執行|CONTROL|執行 CREATE 陳述式之前，請先執行|  
 |Insert|CONTROL|Insert|  
 |REFERENCES|CONTROL|REFERENCES|  

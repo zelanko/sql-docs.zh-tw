@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 33a6e32fead5e2c16a9b1c66d6de78d49adbee58
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73962437"
 ---
 # <a name="set-concat_null_yields_null-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
@@ -54,7 +54,7 @@ SET CONCAT_NULL_YIELDS_NULL { ON | OFF }
 SET CONCAT_NULL_YIELDS_NULL ON    
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當 SET CONCAT_NULL_YIELDS_NULL 是 ON 時，串連 NULL 值和字串會產生 NULL 結果。 例如，`SELECT 'abc' + NULL` 會產生 `NULL`。 當 SET CONCAT_NULL_YIELDS_NULL 是 OFF 時，串連 Null 值和字串會產生字串本身 (將 Null 值當作空字串來處理)。 例如，`SELECT 'abc' + NULL` 會產生 `abc`。  
   
  如果未指定 SET CONCAT_NULL_YIELDS_NULL，則會套用 **CONCAT_NULL_YIELDS_NULL** 資料庫選項的設定。  

@@ -13,10 +13,10 @@ ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d4ffc3930003a4035211a4a63a54bc4f8196948
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578342"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>建立及管理 SharePoint 模式報表伺服器的訂閱
@@ -70,7 +70,7 @@ ms.locfileid: "65578342"
   
 2.  按一下報表旁的向下箭頭，然後選取 **[管理訂閱]** 。  
   
-3.  按一下 **[加入訂閱]** 。  
+3.  按一下 [ **加入訂閱**]。  
   
 4.  在 **[傳遞延伸模組]** 中，選取 **[SharePoint 文件庫]** 。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "65578342"
   
 2.  按一下報表旁的向下箭頭，然後選取 **[管理訂閱]** 。  
   
-3.  按一下 **[加入訂閱]** 。  
+3.  按一下 [ **加入訂閱**]。  
   
 4.  在 **[傳遞延伸模組]** 中，選取 **[Windows 檔案共用]** 。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "65578342"
   
 2.  按一下報表旁的向下箭頭，然後選取 **[管理訂閱]** 。  
   
-3.  按一下 **[加入訂閱]** 。  
+3.  按一下 [ **加入訂閱**]。  
   
 4.  在 [傳遞延伸模組]  中，選取 [電子郵件]  。  
   

@@ -21,13 +21,13 @@ ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ec6830916132a87a7beb50a8509f2f46bd2d1d74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026267"
 ---
-# <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
+# <a name="x40x40cursor_rows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 這會傳回在連線所開啟的最後一個資料指標中，目前符合的資料列數。 若要提升效能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以非同步地擴展大型索引鍵集和靜態資料指標。 您可以呼叫 `@@CURSOR_ROWS` 來決定在呼叫 @@CURSOR_ROWS 時擷取資料指標適用的資料列數目。
@@ -45,14 +45,14 @@ ms.locfileid: "68026267"
   
 ## <a name="return-value"></a>傳回值  
   
-|傳回值|Description|  
+|傳回值|描述|  
 |---|---|
 |-*m*|資料指標非同步地擴展。 傳回的值 (-*m*) 是目前在索引鍵集中的資料列數。|  
 |-1|資料指標是動態的。 由於動態資料指標會反映所有變更；因此，資料指標適用的資料列數會不斷改變。 資料指標不一定會擷取所有合格的資料列。|  
 |0|未開啟任何資料列、最後開啟的資料指標沒有適合的資料列，或最後開啟的資料指標已關閉或取消配置。|  
 |*n*|已充分擴展資料指標。 傳回的值 (*n*) 是資料指標中的總資料列數。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 如果非同步地開啟最後一個資料指標，`@@CURSOR_ROWS` 會傳回負數。 如果 sp_configure 資料指標臨界值的值超過 0，且資料指標結果集中的資料列數超過資料指標臨界值，便會非同步地開啟索引鍵集驅動程式或靜態資料指標。
   
 ## <a name="examples"></a>範例  

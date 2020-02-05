@@ -9,10 +9,10 @@ ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3891d30ef5bfffb19ca1d4bfcaab290e3903816b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013672"
 ---
 # <a name="tune-compression-for-availability-group"></a>微調可用性群組的壓縮
@@ -31,7 +31,7 @@ ms.locfileid: "68013672"
 
 下表顯示變更 SQL Server 預設壓縮行為的追蹤旗標。 
 
-追蹤旗標 | Description
+追蹤旗標 | 描述
 ------------- | -------------
 1462          | 針對具有非同步複本的可用性群組停用記錄資料流壓縮。 在非同步複本上預設會啟用這項功能，來最佳化網路頻寬。
 9567          | 在自動植入期間，針對可用性群組啟用資料流的壓縮。 在自動植入期間，壓縮可以大幅縮短傳輸時間，而且會增加處理器負載。

@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 267209440bf68ecb2e6f3382823b30f3d19728f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67952332"
 ---
 # <a name="synonyms-database-engine"></a>同義字 (Database Engine)
@@ -66,7 +66,7 @@ ms.locfileid: "67952332"
   
 |||  
 |-|-|  
-|CONTROL|Delete|  
+|CONTROL|刪除|  
 |執行 CREATE 陳述式之前，請先執行|Insert|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
@@ -77,7 +77,7 @@ ms.locfileid: "67952332"
 |||  
 |-|-|  
 |SELECT|Insert|  
-|UPDATE|Delete|  
+|UPDATE|刪除|  
 |執行 CREATE 陳述式之前，請先執行|子 SELECT|  
   
  當您正在先前陳述的內容中使用同義字時，基底物件會受影響。 例如，如果同義字參考的基底物件是資料表，而且您將資料列插入同義字，則實際上您是將資料列插入參考的資料表。  
@@ -100,7 +100,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
   
 |||  
 |-|-|  
-|GRANT|DENY|  
+|GRANT|拒絕|  
 |REVOKE||  
   
 同義字不是結構描述繫結性質，因此，下列結構描述繫結的運算式內容無法參考同義字：  

@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2cbb9f2dc30ab02f77fafadf39d8c1c6426de708
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095755"
 ---
 # <a name="include-null-values-in-json---include_null_values-option"></a>在 JSON 中包含 Null 值 - INCLUDE_NULL_VALUES 選項
@@ -35,7 +35,7 @@ ms.locfileid: "74095755"
   
  以下是使用 **INCLUDE_NULL_VALUES** 選項之 **FOR JSON** 子句的另一個範例。  
   
- **[資料集屬性]**  
+ **查詢**  
   
 ```sql  
 SELECT name, surname  

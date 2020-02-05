@@ -11,10 +11,10 @@ ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4102ee4dc551a02a8b6853062e19d448ab414e7b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296524"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (SSISDB 資料庫)
@@ -26,7 +26,7 @@ ms.locfileid: "71296524"
 
   針對 **SSISDB** 目錄中出現的所有專案顯示詳細資料。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |project_id|**bigint**|專案的唯一識別碼 (ID)。|  
 |folder_id|**bigint**|專案所在資料夾的唯一識別碼。|  
@@ -41,7 +41,7 @@ ms.locfileid: "71296524"
 |validation_status|**char(1)**|驗證狀態。|  
 |last_validation_time|**datetimeoffset(7)**|上一次驗證的時間。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個檢視會顯示目錄中每個專案的資料列。  
   
 ## <a name="permissions"></a>權限  

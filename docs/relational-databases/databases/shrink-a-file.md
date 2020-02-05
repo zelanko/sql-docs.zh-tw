@@ -20,10 +20,10 @@ ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3adf38c1908e17dbac530cab0cc47658e9241559
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71961924"
 ---
 # <a name="shrink-a-file"></a>壓縮檔案
@@ -58,7 +58,7 @@ ms.locfileid: "71961924"
   
 -   為壓縮檔案所移動的資料可散佈至檔案中的任何可用位置。 如此會造成索引片段，並可能導致大範圍之索引搜尋的查詢效能變慢。 若要消除資料片段，可考慮在壓縮之後重建該檔案的索引。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 **系統管理員** 固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。  
@@ -73,7 +73,7 @@ ms.locfileid: "71961924"
   
 3.  指向 **[工作]** ，指向 **[壓縮]** ，然後按一下 **[檔案]** 。  
   
-     **[資料庫備份]**  
+     **Database**  
      顯示選取之資料庫的名稱。  
   
      **檔案類型**  
@@ -132,7 +132,7 @@ ms.locfileid: "71961924"
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 下列範例會使用 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) ，將 `UserDB` 資料庫中名為 `DataFile1` 之資料檔大小壓縮成 7 MB。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 下列範例會使用 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) ，將 `DataFile1` 資料庫中名為 `UserDB` 之資料檔大小壓縮成 7 MB。  
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../relational-databases/databases/codesnippet/tsql/shrink-a-file_1.sql)]  
   

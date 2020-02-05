@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 101c272e51a4a4fdab4456f87aac297c2ac56476
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0be4de8a2496bfc1c6f08c0207a64d486c9ed9c5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768816"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286855"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>備份及還原複寫的資料庫
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "68768816"
   
 -   發行者、散發者及所有訂閱者端的 **master** 與 **msdb** 系統資料庫。 這些資料庫應與其他每個及相關的複寫資料庫同時備份。 例如，在您備份發行集資料庫的同時，在發行者端備份 **master** 與 **msdb** 資料庫。 還原發行集資料庫時，請確定 **master** 與 **msdb** 資料庫的複寫組態與設定和發行集資料庫一致。  
   
- 如果您執行一般記錄備份，就必須在記錄備份中擷取任何複寫相關的變更。 如果不執行記錄備份，則每當與複寫相關的設定發生變更時，便應該執行備份。 如需詳細資訊，請參閱 [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md)。  
+ 如果您執行一般記錄備份，就必須在記錄備份中擷取任何複寫相關的變更。 如果不執行記錄備份，則每當與複寫相關的設定發生變更時，便應該執行備份。 如需相關資訊，請參閱 [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md)。  
   
 ## <a name="backup-and-restore-strategies"></a>備份與還原策略  
  備份與還原複寫拓撲中每個節點的策略，會因所用的複寫類型而異。 如需每種複寫類型的備份與還原策略之詳細資訊，請參閱下列主題：  
@@ -65,7 +65,7 @@ ms.locfileid: "68768816"
  請隨時將一份您現行複寫設定的指令碼存放在安全之處，作為復原策略的一部份。 如此一來，倘若伺服器發生錯誤或需要設定測試環境，您可藉由變更伺服器名稱參考來修改該指令碼，如此可幫助重新建立您的複寫設定。 除了將現行複寫設定撰寫成指令碼之外，您還必須撰寫可啟用及停用複寫的指令碼。 如需有關編寫複寫物件指令碼的詳細資訊，請參閱＜ [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 資料庫的備份和還原](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [SQL Server 資料庫的備份與還原](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   
   

@@ -25,13 +25,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3cd7682ec9377fe0163add5986bd0cc406d325cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67928952"
 ---
-# <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
+# <a name="set-implicit_transactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   將連線的 BEGIN TRANSACTION 模式設定為 *implicit*。  
@@ -44,7 +44,7 @@ ms.locfileid: "67928952"
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當設定為 ON 時，系統是處於「隱含」  交易模式。 這表示如果 @@TRANCOUNT = 0，任何下列 Transact-SQL 陳述式都會開始新的交易。 它相當於一個看不見的 BEGIN TRANSACTION 先被執行：  
   
 ||||  
@@ -52,7 +52,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |ALTER TABLE|FETCH|REVOKE|  
 |BEGIN TRANSACTION|GRANT|SELECT (請參閱底下的例外狀況)。|  
 |CREATE|Insert|TRUNCATE TABLE|  
-|Delete|OPEN|UPDATE|  
+|刪除|OPEN|UPDATE|  
 |DROP|。|。|  
   
  當設定為 OFF，每個前面的 T-SQL 陳述式會受限於看不見的 BEGIN TRANSACTION 和看不見的 COMMIT TRANSACTION 陳述式。 當設定為 OFF 時，我們稱交易模式為「自動認可」  。 如果您的 T-SQL 程式碼可見地發出 BEGIN TRANSACTION，我們稱交易模式為「明確」  。  

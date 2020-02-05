@@ -9,10 +9,10 @@ ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e8bcfe976a8094c6faa22d8aab3db8a4a833d8cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651596"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>第 2 課：定義父報表的資料連接和資料表
@@ -46,7 +46,7 @@ ms.locfileid: "62651596"
   
 7.  如果您已在步驟 6 (b) 中選取 [使用 SQL Server 驗證]  ，請選取在字串中包含敏感性資料或在應用程式程式碼中設定資訊的選項。  
   
-8.  在 [將連接字串儲存到應用程式設定檔]  頁面上，鍵入連接字串的名稱，或接受預設 **AdventureWorks2014ConnectionString**。 選取 **[下一步]** 。  
+8.  在 [將連接字串儲存到應用程式設定檔]  頁面上，鍵入連接字串的名稱，或接受預設 **AdventureWorks2014ConnectionString**。 選取 [下一步]  。  
   
 9. 在 [選擇命令類型]  頁面上，選取 [使用 SQL 陳述式]  ，然後選取 [下一步]  。  
   
