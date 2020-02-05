@@ -1,6 +1,6 @@
 ---
-title: Database Engine 查詢編輯器 (SQL Server Management Studio) | Microsoft 文件
-ms.custom: ''
+title: Database Engine 查詢編輯器 (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -23,12 +23,12 @@ ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26a6e67287c7a2effdd62604fa492a532ed636bf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1a21b567232bf24b561e014de231268632cc4b32
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263498"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253936"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Database Engine 查詢編輯器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "68263498"
     -   系統預存程序資料表的名稱，或是檢視表，例如 sys.data_spaces 或 sp_tableoption。  
   
 ## <a name="working-with-the-database-engine-query-editor"></a>使用 Database Engine 查詢編輯器  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器是在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中實作的四個編輯器之一。 如需在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中實作之功能及您可以使用編輯器執行之主要工作的描述，請參閱[查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器是在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中實作的四個編輯器之一。 如需在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中實作之功能及您可以使用編輯器執行之主要工作的描述，請參閱[查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)。  
   
 ## <a name="sql-editor-toolbar"></a>SQL 編輯器工具列  
  當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器開啟時，SQL 編輯器工具列會顯示下列按鈕。  
@@ -70,7 +70,7 @@ ms.locfileid: "68263498"
  **可用的資料庫**  
  變更連接到同一伺服器的其他資料庫。  
   
- **Execute**  
+ **執行**  
  執行選取的程式碼，或是在未選取任何程式碼時，執行查詢編輯器中的所有程式碼。  
   
  **偵錯**  
@@ -126,7 +126,7 @@ ms.locfileid: "68263498"
 ## <a name="sql-editor-toolbar"></a>SQL 編輯器工具列  
  當開啟 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [查詢編輯器] 視窗時，您可以加入 [偵錯] 工具列，其方式是選取 **[檢視]** 功能表、選取 **[工具列]** ，然後選取 **[偵錯]** 。 如果您在沒有任何 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [查詢編輯器] 視窗開啟時加入 [偵錯] 工具列，則所有的按鈕都將無法使用。  
   
- **Continue**  
+ **繼續**  
  在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [查詢編輯器] 視窗中執行程式碼，直到遇到中斷點為止。  
   
  **全部中斷**  
@@ -141,13 +141,13 @@ ms.locfileid: "68263498"
  **逐步執行**  
  系統會執行下一個陳述式。 如果此陳述式會叫用 Transact-SQL 預存程序、函數或觸發程序，偵錯工具就會顯示包含模組程式碼的新 [查詢編輯器]  視窗。 此視窗會處於偵錯模式中，而且執行作業會在模組的第一個陳述式上暫停。 接著，您就可以透過如設定中斷點或逐步執行程式碼，在模組之間移動。  
   
- **不進入函數**  
+ **逐程序**  
  系統會執行下一個陳述式。 如果此陳述式會叫用 Transact-SQL 預存程序、函數或觸發程序，此模組就會執行直到完成為止，而且結果會傳回給呼叫的程式碼。 如果您確定模組中沒有任何錯誤，就可以不進入此模組。 在呼叫模組之後的陳述式上會暫停執行。  
   
- **跳離函數**  
+ **跳出**  
  跳回下一個最高的呼叫層級 (函數、預存程序或觸發程序)。 執行作業會在呼叫預存程序、函數或觸發程序之後的陳述式上暫停。  
   
- **視窗**  
+ **Windows**  
  開啟 [中斷點]  視窗或 [即時運算]  視窗。  
   
 ## <a name="see-also"></a>另請參閱  

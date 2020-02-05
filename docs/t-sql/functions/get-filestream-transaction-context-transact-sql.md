@@ -18,13 +18,13 @@ ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7d284cb8c39307a6ee2568bd8e4fa5fa0df2c3e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940100"
 ---
-# <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
+# <a name="get_filestream_transaction_context-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回代表工作階段之目前交易內容的 Token。 應用程式會使用此 Token 將 FILESTREAM 檔案系統資料流作業繫結至此交易。 如需 FILESTREAM 主題的清單，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
@@ -44,13 +44,13 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
 ## <a name="return-value"></a>傳回值  
  如果此交易尚未啟動或是已被取消或認可，則會傳回 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  交易必須是明確的。 請使用 BEGIN TRANSACTION，後面緊接著 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION。  
   
  當您呼叫 GET_FILESTREAM_TRANSACTION_CONTEXT 時，呼叫端在交易期間會被授與此交易的檔案系統存取權。 若要允許另一個使用者透過檔案系統存取此交易，請使用 EXECUTE AS，以另一個使用者身分執行 GET_FILESTREAM_TRANSACTION_CONTEXT。  
   
 ## <a name="examples"></a>範例  
- 下列範例會在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 交易中使用 `GET_FILESTREAM_TRANSACTION_CONTEXT` 取得交易內容。  
+ 下列範例會在 `GET_FILESTREAM_TRANSACTION_CONTEXT` 交易中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 取得交易內容。  
   
 ```csharp  
 using System;  

@@ -45,10 +45,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 0eae7e7f1a0a673138b58440ee9c5c8d0b6f20bc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244432"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 檔案及檔案群組選項
@@ -312,14 +312,14 @@ READ_ONLY | READONLY 將檔案群組指定成唯讀狀態。 不允許更新其�
 - 唯讀資料庫不會出現鎖定。 因此，查詢效能會比較快。
 
 > [!NOTE]
-> 在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READONLY` 關鍵字。 請避免在新的開發工作中使用 `READONLY`，並規劃修改目前使用 `READONLY` 的應用程式。 請改用 `READ_ONLY`。
+> 在未來的 `READONLY`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 版本中，將移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關鍵字。 請避免在新的開發工作中使用 `READONLY`，並規劃修改目前使用 `READONLY` 的應用程式。 請改用 `READ_ONLY`。
 
 READ_WRITE | READWRITE 將群組指定成 READ_WRITE 狀態。 檔案群組中的物件可以更新。 若要變更這個狀態，您必須具有資料庫的獨佔存取權。 如需詳細資訊，請參閱 SINGLE_USER 子句。
 
 > [!NOTE]
-> 在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READWRITE` 關鍵字。 請避免在新的開發工作中使用 `READWRITE`，並規劃修改目前在使用 `READWRITE` 的應用程式，改為使用 `READ_WRITE`。
+> 在未來的 `READWRITE`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 版本中，將移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關鍵字。 請避免在新的開發工作中使用 `READWRITE`，並規劃修改目前在使用 `READWRITE` 的應用程式，改為使用 `READ_WRITE`。
 > [!TIP]
-> 您可以檢查 **sys.databases** 目錄檢視中的 **is_read_only** 資料行或 `DATABASEPROPERTYEX` 函數的 **Updateability** 屬性來判斷這些選項的狀態。
+> 您可以檢查 **sys.databases** 目錄檢視中的 **is_read_only** 資料行或 **函數的**Updateability`DATABASEPROPERTYEX` 屬性來判斷這些選項的狀態。
 
 ## <a name="remarks"></a>備註
 
@@ -338,9 +338,9 @@ READ_WRITE | READWRITE 將群組指定成 READ_WRITE 狀態。 檔案群組中�
 
 無法為記憶體最佳化檔案群組設定 SIZE 和 FILEGROWTH 參數。
 
-在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READONLY` 關鍵字。 請避免在新的開發工作中使用 `READONLY`，並規劃修改目前使用 READONLY 的應用程式。 請改用 `READ_ONLY`。
+在未來的 `READONLY`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 版本中，將移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關鍵字。 請避免在新的開發工作中使用 `READONLY`，並規劃修改目前使用 READONLY 的應用程式。 請改用 `READ_ONLY`。
 
-在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READWRITE` 關鍵字。 請避免在新的開發工作中使用 `READWRITE`，並規劃修改目前在使用 `READWRITE` 的應用程式，改為使用 `READ_WRITE`。
+在未來的 `READWRITE`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 版本中，將移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關鍵字。 請避免在新的開發工作中使用 `READWRITE`，並規劃修改目前在使用 `READWRITE` 的應用程式，改為使用 `READ_WRITE`。
 
 ## <a name="moving-files"></a>移動檔案
 
@@ -398,7 +398,7 @@ GO
 
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. 將含有兩個檔案的檔案群組加入資料庫中
 
-下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中建立 `Test1FG1` 檔案群組，且會將兩個 5 MB 的檔案加入檔案群組中。
+下列範例會在 `Test1FG1` 資料庫中建立 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 檔案群組，且會將兩個 5 MB 的檔案加入檔案群組中。
 
 ```sql
 USE master
@@ -845,9 +845,9 @@ READ_ONLY | READONLY 將檔案群組指定成唯讀狀態。 不允許更新其�
 READ_WRITE | READWRITE 將群組指定成 READ_WRITE 狀態。 檔案群組中的物件可以更新。 若要變更這個狀態，您必須具有資料庫的獨佔存取權。 如需詳細資訊，請參閱 SINGLE_USER 子句。
 
 > [!NOTE]
-> 在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READWRITE` 關鍵字。 請避免在新的開發工作中使用 `READWRITE`，並規劃修改目前在使用 `READWRITE` 的應用程式，改為使用 `READ_WRITE`。
+> 在未來的 `READWRITE`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 版本中，將移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關鍵字。 請避免在新的開發工作中使用 `READWRITE`，並規劃修改目前在使用 `READWRITE` 的應用程式，改為使用 `READ_WRITE`。
 
-您可以檢查 **sys.databases** 目錄檢視中的 **is_read_only** 資料行或 `DATABASEPROPERTYEX` 函數的 **Updateability** 屬性來判斷這些選項的狀態。
+您可以檢查 **sys.databases** 目錄檢視中的 **is_read_only** 資料行或 **函數的**Updateability`DATABASEPROPERTYEX` 屬性來判斷這些選項的狀態。
 
 ## <a name="remarks"></a>備註
 
@@ -879,7 +879,7 @@ GO
 
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. 將含有兩個檔案的檔案群組加入資料庫中
 
-下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中建立 `Test1FG1` 檔案群組，且會將兩個 5 MB 的檔案加入檔案群組中。
+下列範例會在 `Test1FG1` 資料庫中建立 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 檔案群組，且會將兩個 5 MB 的檔案加入檔案群組中。
 
 ```sql
 USE master

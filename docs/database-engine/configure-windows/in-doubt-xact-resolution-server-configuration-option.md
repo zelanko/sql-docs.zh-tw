@@ -15,10 +15,10 @@ ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bfdee182770e24896796bc3837d5c17d3d73da9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67998043"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>不能肯定的交易解析伺服器組態選項
@@ -28,7 +28,7 @@ ms.locfileid: "67998043"
   
  下表列出解析不確定的交易時，可能出現的結果值。  
   
-|結果值|Description|  
+|結果值|描述|  
 |-------------------|-----------------|  
 |0|無假設結果。 如果 MS DTC 有無法解析的不確定交易，復原即會失敗。|  
 |1|假設為認可。 任何 MS DTC 不確定的交易都假設為已認可。|  

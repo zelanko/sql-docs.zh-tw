@@ -1,24 +1,25 @@
 ---
-title: 從 SQL Server Agent 主要作業中移除步驟 | Microsoft Docs
-ms.custom: ''
+title: 從 SQL Server Agent 主要作業中移除步驟
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 871e6162-1221-464d-8f7f-7e454dcd9edb
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 48cb0a54ed026c958fa63fd4d13e4524b96e931e
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 80ad67f6a180aaab688f38c7504c1f9338f5f4b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552789"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246315"
 ---
-# <a name="remove-steps-from-a-sql-server-agent-master-job"></a>Remove Steps from a SQL Server Agent Master Job
+# <a name="remove-steps-from-a-sql-server-agent-master-job"></a>從 SQL Server Agent 主要作業中移除步驟
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -48,7 +49,7 @@ ms.locfileid: "69552789"
   
 4.  以滑鼠右鍵按一下您想要刪除步驟的作業，然後選取 [屬性]  。  
   
-5.  在 [作業屬性 -_job_name_]  對話方塊的 [選取頁面]  下，選取 [步驟]  。  
+5.  在 [作業屬性 -**job_name**]  對話方塊的 [選取頁面]  下，選取 [步驟]  。  
 
 6.  在 **[作業步驟清單]** 底下，選取您想要刪除的作業步驟，然後按一下 **[刪除]** 。  
   

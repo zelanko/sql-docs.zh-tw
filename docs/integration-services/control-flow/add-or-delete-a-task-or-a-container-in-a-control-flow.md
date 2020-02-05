@@ -16,10 +16,10 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 76e7db001469b141df5633228927135c6d01af53
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298436"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>在控制流程中加入或刪除工作或容器
@@ -57,7 +57,7 @@ ms.locfileid: "71298436"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在 [方案總管] 中，按兩下封裝將其開啟。 執行下列其中之一：  
+2.  在 [方案總管] 中，按兩下封裝將其開啟。 執行下列其中一個動作：  
   
     -   按一下 [控制流程]  索引標籤，以滑鼠右鍵按一下您要移除的工作或容器，然後按一下 [刪除]  。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "71298436"
     > [!NOTE]  
     >  大部分的屬性都可以經由直接在文字方塊中輸入某個值，或從清單中選取某個值予以設定。 不過，有些屬性比較複雜，並具有自訂屬性編輯器。 若要設定這種屬性，請按一下文字方塊，然後按一下建立 ([...])  按鈕開啟自訂編輯器。  
   
-6.  (選擇性) 建立屬性運算式，以動態方式更新工作或容器的屬性。 如需詳細資訊，請參閱 [加入或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)。  
+6.  (選擇性) 建立屬性運算式，以動態方式更新工作或容器的屬性。 如需詳細資訊，請參閱[加入或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)。  
   
 7.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "71298436"
   
      如需如何設定「For 迴圈」容器的資訊，請參閱[設定 For 迴圈容器](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)。  
   
-     如需如何設定「Foreach 迴圈」容器的資訊，請參閱 [設定 Foreach 迴圈容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+     如需如何設定Foreach 迴圈容器的資訊，請參閱 [設定 Foreach 迴圈容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
     > [!NOTE]  
     >  「時序」容器沒有任何自訂編輯器。  
@@ -117,6 +117,6 @@ ms.locfileid: "71298436"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)   
- [[控制流程]](../../integration-services/control-flow/control-flow.md)  
+ [控制流程](../../integration-services/control-flow/control-flow.md)  
   
   

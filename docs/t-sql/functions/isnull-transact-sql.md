@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b49310a633c822f8c57f66cc36951dfebe2c0707
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843639"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL)
@@ -49,10 +49,10 @@ ISNULL ( check_expression , replacement_value )
  *replacement_value*  
  為 *check_expression* 是 NULL 時，要傳回的運算式。 *replacement_value* 必須是能夠隱含轉換成 *check_expression* 類型的類型。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  傳回與 *check_expression* 相同的類型。 若將常值 NULL 作為 *check_expression* 提供，則會傳回 *replacement_value* 的資料類型。 若將常值 NULL 作為 *check_expression* 提供，並且未提供任何 *replacement_value*，則會傳回 **int**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 *check_expression* 的值不是 NULL，則會傳回該值；否則會在其隱含轉換成 *check_expression* 的類型後傳回 *replacement_value* (若兩者類型不同的話)。 若 *replacement_value* 的長度超過 *check_expression*，則 *replacement_value* 可能會被截斷。  
   
 > [!NOTE]  
@@ -93,14 +93,14 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|  Description       |  DiscountPct    |   MinQty    |   最大數量 (Max Quantity)       |
+|  描述       |  DiscountPct    |   MinQty    |   最大數量 (Max Quantity)       |
 |  ---------------   |  -------------  |   --------  |   ---------------    |
-|  No Discount       |  0.00           |   0         |   0                  |
-|  Volume Discount   |  0.02           |   11        |   14                 |
-|  Volume Discount   |  0.05           |   15        |   4                  |
-|  Volume Discount   |  0.10           |   25        |   0                  |
-|  Volume Discount   |  0.15           |   41        |   0                  |
-|  Volume Discount   |  0.20           |   61        |   0                  |
+|  {1}No Discount{2}       |  0.00           |   0         |   0                  |
+|  {1}Volume Discount{2}   |  0.02           |   11        |   14                 |
+|  {1}Volume Discount{2}   |  0.05           |   15        |   4                  |
+|  {1}Volume Discount{2}   |  0.10           |   25        |   0                  |
+|  {1}Volume Discount{2}   |  0.15           |   41        |   0                  |
+|  {1}Volume Discount{2}   |  0.20           |   61        |   0                  |
 |  Mountain-100 Cl   |  0.35           |   0         |   0                  |
 |  Sport Helmet Di   |  0.10           |   0         |   0                  |
 |  Road-650 Overst   |  0.30           |   0         |   0                  |
@@ -170,7 +170,7 @@ ORDER BY ResellerName;
 |  Acceptable Sales & Service  |     0.0000         |
   
 ### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. 使用 IS NULL 來在 WHERE 子句中測試 NULL  
- 下列範例會尋找 `Weight` 資料行中有 `NULL` 的所有產品。 請注意 `IS` 和 `NULL` 之間的空格。  
+ 下列範例會尋找 `NULL` 資料行中有 `Weight` 的所有產品。 請注意 `IS` 和 `NULL` 之間的空格。  
   
 ```  
 -- Uses AdventureWorks  

@@ -13,10 +13,10 @@ ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dc505c0fe87a298ba4a9015f467119c1b7d6d3f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021720"
 ---
 # <a name="select-source-dialog-box"></a>選取來源對話方塊
@@ -58,7 +58,7 @@ ms.locfileid: "68021720"
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。  
   
- **User name**  
+ **使用者名稱**  
  輸入要用來連接的使用者名稱。 只有在您已選取使用 Windows 驗證進行連接時，才能使用此選項。  
   
  **登入**  

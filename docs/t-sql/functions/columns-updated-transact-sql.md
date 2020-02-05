@@ -21,16 +21,16 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ae6e3b08b3a29afb9282d28f33ec9406ab418b2c
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75721923"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-此函式會傳回 **varbinary** 位元模式，指出資料表或檢視的已插入或更新資料行。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 觸發程序主體內的任何位置使用 `COLUMNS_UPDATED`，來測試觸發程序是否應該執行特定動作。
+此函式會傳回 **varbinary** 位元模式，指出資料表或檢視的已插入或更新資料行。 在 `COLUMNS_UPDATED` INSERT 或 UPDATE 觸發程序主體內的任何位置使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]，來測試觸發程序是否應該執行特定動作。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,9 +50,9 @@ COLUMNS_UPDATED ( )
   
 若要進行特定資料行的更新或插入測試，請遵循含有位元運算子和所測試資料行之整數位元遮罩的語法。 例如，假設 **t1** 資料表包含 **C1**、**C2**、**C3**、**C4** 和 **C5** 資料行。 若要確認已全部成功更新 **C2**、**C3** 和 **C4** 資料行 (**t1** 資料表具有 UPDATE 觸發程序)，請遵循含有 **& 14** 的語法。 若要測試是否僅有 **C2** 獲得更新，請指定 **& 2**。 如需實際範例，請參閱[範例 A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) 和[範例 B](#b-using-columns_updated-to-test-more-than-eight-columns)。
   
-在 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 觸發程序內的任何位置使用 `COLUMNS_UPDATED`。
+在 `COLUMNS_UPDATED` INSERT 或 UPDATE 觸發程序內的任何位置使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。
   
-INFORMATION_SCHEMA.COLUMNS 檢視的 ORDINAL_POSITION 資料行與 `COLUMNS_UPDATED` 所傳回之資料行的位元模式不相容。 若要取得與 `COLUMNS_UPDATED` 相容的位元模式，請在查詢 `INFORMATION_SCHEMA.COLUMNS` 檢視時，依下列範例所示來參考 `COLUMNPROPERTY` 系統函式的 `ColumnID` 屬性。
+INFORMATION_SCHEMA.COLUMNS 檢視的 ORDINAL_POSITION 資料行與 `COLUMNS_UPDATED` 所傳回之資料行的位元模式不相容。 若要取得與 `COLUMNS_UPDATED` 相容的位元模式，請在查詢 `ColumnID` 檢視時，依下列範例所示來參考 `COLUMNPROPERTY` 系統函式的 `INFORMATION_SCHEMA.COLUMNS` 屬性。
   
 ```sql
 SELECT TABLE_NAME, COLUMN_NAME,  
@@ -184,7 +184,7 @@ GO
 ```  
   
 ### <a name="b-using-columns_updated-to-test-more-than-eight-columns"></a>B. 利用 COLUMNS_UPDATED 來測試八個以上資料行  
-若要測試會影響前八個資料表資料行以外之資料行的更新，請使用 `SUBSTRING` 函式來測試 `COLUMNS_UPDATED` 所傳回的正確位元。 此範例會測試影響 `AdventureWorks2012.Person.Person` 資料表中第 `3` 個、第 `5` 個和第 `9` 個資料行的更新。
+若要測試會影響前八個資料表資料行以外之資料行的更新，請使用 `SUBSTRING` 函式來測試 `COLUMNS_UPDATED` 所傳回的正確位元。 此範例會測試影響 `3` 資料表中第 `5` 個、第 `9` 個和第 `AdventureWorks2012.Person.Person` 個資料行的更新。
   
 ```sql
 USE AdventureWorks2012;  

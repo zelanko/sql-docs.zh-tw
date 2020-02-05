@@ -15,10 +15,10 @@ ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8a0b9e7d163de73a2bb08d1095a0bb0c600bb0fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066526"
 ---
 # <a name="collectionaggregate-geography-data-type"></a>CollectionAggregate (geometry 資料類型)
@@ -37,13 +37,13 @@ ConvexHullAggregate ( geography_operand )
  *geography_operand*  
  這是 **geography** 型別資料表資料行，代表要列於 **GeometryCollection** 執行個體中的 **geography** 物件集。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
 ## <a name="exception"></a>例外狀況  
  輸入的值無效時，會擲回 `FormatException`。 請參閱 [STIsValid &#40;geography 資料型別&#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當輸入是空的或輸入具有不同 SRID 時，此方法會傳回 **null**。 請參閱[空間參考識別碼 &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
  此方法會忽略 **null** 輸入。  
@@ -52,7 +52,7 @@ ConvexHullAggregate ( geography_operand )
 >  如果所有輸入的值都為 **null**，此方法就會傳回 **null**。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回包含 **geography** 物件集的 `GeometryCollection` 執行個體。  
+ 下列範例會傳回包含 `GeometryCollection`geography**物件集的** 執行個體。  
   
  ```
  USE AdventureWorks2012  

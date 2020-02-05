@@ -26,16 +26,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 160d2e384dec5a0c0f3cc5ff40bcf62e3941d096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948280"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  從資料庫中擷取資料列，可讓您從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的一個或多個資料表選取一個或多個資料列或資料行。 SELECT 陳述式的完整語法很複雜，但主要子句可摘要如下：  
+  從資料庫中擷取資料列，並可讓您從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的一個或多個資料表選取一個或多個資料列或資料行。 SELECT 陳述式的完整語法很複雜，但主要子句可摘要如下：  
   
 [ WITH { [ XMLNAMESPACES ,] [ \<common_table_expression> ] } ]
   
@@ -100,7 +100,7 @@ SELECT <select_criteria>
   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  由於 SELECT 陳述式十分複雜，因此將會依子句顯示詳細的語法元素及引數：  
   
 |||  
@@ -124,7 +124,7 @@ SELECT <select_criteria>
  下列步驟顯示 SELECT 陳述式的邏輯處理順序或繫結順序。 此順序會決定在某個步驟中定義的物件提供給後續步驟之子句使用的時間。 例如，如果查詢處理器可繫結至 (存取) FROM 子句中定義的資料表或檢視表，這些物件及其資料行就會提供給所有後續步驟使用。 反之，因為 SELECT 子句是步驟 8，所以前面的子句無法參考該子句中定義的任何資料行別名或衍生資料行。 不過，ORDER BY 子句等後續子句都可以參考它們。 陳述式的實際執行方式由查詢處理器決定，其順序可能與此清單不同。  
   
 1.  FROM  
-2.  ON  
+2.  開啟  
 3.  JOIN  
 4.  WHERE  
 5.  GROUP BY  
@@ -132,7 +132,7 @@ SELECT <select_criteria>
 7.  HAVING  
 8.  SELECT  
 9. DISTINCT  
-10. ORDER BY  
+10. 排序依據  
 11. 頂端  
 
 > [!WARNING]
@@ -143,11 +143,11 @@ SELECT <select_criteria>
 ## <a name="permissions"></a>權限  
  選取資料需要資料表或檢視的 **SELECT** 權限；此權限可從較高的範圍繼承而來，例如結構描述的 **SELECT** 權限或資料表的 **CONTROL** 權限。 或是需要 **db_datareader** 或 **db_owner** 固定資料庫角色中的成員資格，或 **sysadmin** 固定伺服器角色中的成員資格。 使用 **SELECTINTO** 來建立新資料表也需要 **CREATETABLE** 權限，以及擁有新資料表之結構描述上的 **ALTERSCHEMA** 權限。  
   
-## <a name="examples"></a>範例:   
+## <a name="examples"></a>範例：   
 下列範例使用 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 資料庫。
   
 ### <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. 使用 SELECT 擷取資料列和資料行  
- 本節將示範三個程式碼範例。 第一個程式碼範例會從 `DimEmployee` 資料表中，傳回所有資料列 (未指定 WHERE 子句) 和所有資料行 (使用 `*`)。  
+ 本節將示範三個程式碼範例。 第一個程式碼範例會從 `*` 資料表中，傳回所有資料列 (未指定 WHERE 子句) 和所有資料行 (使用 `DimEmployee`)。  
   
 ```sql  
 SELECT *  
@@ -163,7 +163,7 @@ FROM DimEmployee AS e
 ORDER BY LastName;  
 ```  
   
- 此範例會從 `AdventureWorksPDW2012` 資料庫的 `DimEmployee` 資料表中，傳回所有資料列 (未指定 WHERE 子句)，以及資料行子集 (`FirstName`、`LastName`、`StartDate`)。 第三個資料行標題會重新命名為 `FirstDay`。  
+ 此範例會從 `FirstName` 資料庫的 `LastName` 資料表中，傳回所有資料列 (未指定 WHERE 子句)，以及資料行子集 (`StartDate`、`DimEmployee`、`AdventureWorksPDW2012`)。 第三個資料行標題會重新命名為 `FirstDay`。  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  
@@ -171,7 +171,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- 此範例只會傳回 `EndDate` 不是 NULL 且 `MaritalStatus` 是 ‘M’ (已婚) 的 `DimEmployee` 資料列。  
+ 此範例只會傳回 `DimEmployee` 不是 NULL 且 `EndDate` 是 ‘M’ (已婚) 的 `MaritalStatus` 資料列。  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  

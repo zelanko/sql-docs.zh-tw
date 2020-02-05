@@ -1,6 +1,6 @@
 ---
-title: 選擇工具箱項目 (維護工作頁面) | Microsoft Docs
-ms.custom: ''
+title: 選擇工具箱項目 (維護工作頁面)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ffbc5973d32de6d7fdf8a880ebc2bdf758ff2e73
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: decc1918fbc8da03ce4724dfb0dd5ec69f8fed35
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265304"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257728"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>選擇工具箱項目 (維護工作頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,6 +44,6 @@ ms.locfileid: "68265304"
 **語言**  
 元件的語言。  
   
-**版本(Version)**  
+**版本**  
 元件的版本。  
   

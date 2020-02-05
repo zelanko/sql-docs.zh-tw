@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dae7d1e29227484e907c45e8062f90873c10892b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086768"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
@@ -36,10 +36,10 @@ ms.locfileid: "68086768"
   
 ## <a name="datetime2-description"></a>datetime2 描述
   
-|屬性|ReplTest1|  
+|屬性|值|  
 |--------------|-----------|  
 |語法|**datetime2** [ (*毫秒精確度*) ]|  
-|使用方式|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
+|使用量|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
 |預設的字串常值格式<br /><br /> (用於下層用戶端)|YYYY-MM-DD hh:mm:ss[.小數秒數]<br /><br /> 如需詳細資訊，請參閱下列的＜下層用戶端的回溯相容性＞一節。|  
 |日期範圍|0001-01-01 到 31.12.99<br /><br /> 公元 1 年 1 月 1 日到公元 9999 年 12 月 31 日|  
 |時間範圍|00:00:00 到 23:59:59.9999999|  
@@ -50,7 +50,7 @@ ms.locfileid: "68086768"
 |儲存體大小|不到 3 個有效位數為 6 個位元組。<br/>3 或4 個有效位數為 7 個位元組。<br/>所有其他有效位數均需要 8 個位元組。<sup>1</sup>|  
 |精確度|100 奈秒|  
 |預設值|1900-01-01 00:00:00|  
-|日曆|西曆|  
+|Calendar|西曆|  
 |使用者自訂的小數秒數有效位數|是|  
 |時區位移感知和保留|否|  
 |日光節約感知|否|  
@@ -66,7 +66,7 @@ ms.locfileid: "68086768"
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]<br /><br /> YYYY-MM-DDThh:mm:ss[.nnnnnnn]|此格式不受 SET LANGUAGE 和 SET DATEFORMAT 工作階段地區設定的影響。 **T**、冒號 (:) 和句號 (.) 會包含在字串常值中，例如 '2007-05-02T19:58:47.1234567'。|  
   
-|ODBC|Description|  
+|ODBC|描述|  
 |---|---|
 |{ ts 'yyyy-mm-dd hh:mm:ss[.小數秒數]' }|ODBC API 專用：<br /><br /> 小數點右邊的位數 (代表小數秒數) 可指定為 0 至 7 (100 奈秒)。|  
   
@@ -89,7 +89,7 @@ ms.locfileid: "68086768"
 ### <a name="converting-other-date-and-time-types-to-the-datetime2-data-type"></a>將其他日期與時間類型轉換成 datetime2 資料類型
 本節描述當其他日期與時間資料類型轉換成 **datetime2** 資料類型時，可能發生的狀況。  
   
-當轉換來自 **date**，年、月和日都會複製。  時間元件會設定為 00:00:00.0000000。  下列程式碼顯示將 `date` 值轉換成 `datetime2` 值的結果。  
+從 **date** 轉換時，年、月和日都會複製。  時間元件會設定為 00:00:00.0000000。  下列程式碼顯示將 `date` 值轉換成 `datetime2` 值的結果。  
   
 ```sql
 DECLARE @date date = '12-21-16';

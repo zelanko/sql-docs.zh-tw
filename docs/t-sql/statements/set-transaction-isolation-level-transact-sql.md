@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4661fa1963b120a091953bff883a0510a396345e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099987"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
@@ -100,7 +100,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
  交易中每個陳述式所讀取的所有資料都會設定共用鎖定，直到交易完成為止。 這可以防止其他交易修改目前交易已讀取的任何資料列。 其他交易仍可以插入新資料列，但必須符合目前交易所發出的陳述式搜尋條件。 如果目前交易稍後重試陳述式，便會擷取新的資料列，因而產生虛設項目讀取 (Phantom Read)。 由於共用鎖定會保留至交易完成，而不是在每個陳述式結束時釋出，因此並行發生的可能性會低於預設的 READ COMMITTED 隔離等級。 請只在必要時，才使用這個選項。  
   
  SNAPSHOT  
- 指定交易中任何陳述式所讀取的資料，都是交易開始時就存在之資料的交易一致性版本。 交易只能辨識交易開始之前所認可的資料修改。 在目前交易中執行的陳述式，看不到其他交易在目前交易開始之後所進行的資料修改。 結果是交易中的陳述式會取得已認可之資料的快照集，如同資料在交易啟動時的狀態。  
+ 指定交易中任何陳述式所讀取的資料，都是交易開始時就存在之資料的交易一致性版本。 交易只能辨識交易開始之前所認可的資料修改。 在目前交易中執行的陳述式，看不到其他交易在目前交易開始之後所進行的資料修改。 效果就如同交易中的陳述式會取得認可資料的快照集，因為這項資料於交易開始時就存在。  
   
  除非在復原資料庫，否則，SNAPSHOT 交易不會在讀取資料時要求鎖定。 讀取資料的 SNAPSHOT 交易不會封鎖其他交易寫入資料。 寫入資料的交易也不會封鎖 SNAPSHOT 交易讀取資料。  
   
@@ -126,7 +126,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  範圍鎖定會放在符合交易所執行的每個陳述式之搜尋條件的索引鍵值範圍中。 這會封鎖其他交易，以免它們更新或插入符合目前交易執行之任何陳述式的所有資料列。 這表示第二次執行交易中的任何陳述式時，它們會讀取同一組資料列。 範圍鎖定會一直保留到交易完成。 這是隔離等級最嚴格的限制，因為它鎖定了索引鍵的整個範圍，且會將鎖定保留到交易完成。 由於並行發生的可能性較低，因此，請只在必要時，才使用這個選項。 這個選項的效果，與在交易中將所有 SELECT 陳述式之所有資料表設為 HOLDLOCK 相同。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  每次只能設定一個隔離等級選項，除非您明確變更，否則，這項設定對該連接持續有效。 除非陳述式 FROM 子句中的資料表提示為資料表指定了不同的鎖定或版本控制行為，否則，在交易內執行的所有讀取作業，都會遵照指定隔離等級的規則來運作。  
   
  交易隔離等級會定義讀取作業上取得的鎖定類型。 雖然利用讀取來參考頁面或資料表中的大量資料列時，資料列鎖定可以提升為頁面或資料表鎖定，但為了 READ COMMITTED 或 REPEATABLE READ 而取得的共用鎖定通常仍是資料列鎖定。 如果資料列被讀取之後，交易才修改資料列，交易會取得獨佔鎖定來保護這個資料列，且會保留獨佔鎖定直到交易完成為止。 例如，如果 REPEATABLE READ 交易有資料列的共用鎖定，之後交易又修改這個資料列，共用的資料列鎖定便會轉換成獨佔資料列鎖定。  

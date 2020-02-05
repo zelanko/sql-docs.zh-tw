@@ -18,16 +18,16 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071175"
 ---
 # <a name="insert-sql-graph"></a>INSERT (SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-將一或多個資料列新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `node` 或 `edge` 資料表。 
+將一或多個資料列新增至 `node` 的 `edge` 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 
 
 > [!NOTE]   
 >  如需標準 Transact-SQL 陳述式，請參閱 [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)。
@@ -116,14 +116,14 @@ INTO
 插入至邊緣時，使用者必須提供 `$from_id` 和 `$to_id` 的值。 如果未提供值或 NULL 插入這些資料行，則會傳回錯誤。 
   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 插入至節點是與插入至任何關聯式資料表相同。 $node_id 資料行的值會自動產生。
 
 插入至邊緣資料表時，使用者必須提供 `$from_id` 和 `$to_id` 的值。   
 
 節點資料表的大量插入仍然與關聯式資料表相同。
 
-在大量插入邊緣資料表之前，必須先匯入節點資料表。 然後可以從節點資料表的 `$node_id` 資料行擷取 `$from_id` 和 `$to_id` 的值，然後插入為邊緣。 
+在大量插入邊緣資料表之前，必須先匯入節點資料表。 然後可以從節點資料表的 `$from_id` 資料行擷取 `$to_id` 和 `$node_id` 的值，然後插入為邊緣。 
 
   
 ### <a name="permissions"></a>權限  
@@ -163,6 +163,6 @@ INSERT INTO dbo.friend VALUES ((SELECT $node_id FROM dbo.Person WHERE name = 'Al
   
 ## <a name="see-also"></a>另請參閱  
 [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
-[圖形處理與 SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
+[SQL Server 2017 的圖表處理](../../relational-databases/graphs/sql-graph-overview.md)  
 
 

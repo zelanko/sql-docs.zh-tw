@@ -9,10 +9,10 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63042951"
 ---
 # <a name="tutorial-format-text-report-builder"></a>教學課程：格式化文字 (報表產生器)
@@ -34,7 +34,7 @@ ms.locfileid: "63042951"
   
 ### <a name="to-create-a-blank-report"></a>建立空白報表  
   
-1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  從您的電腦、[ Web 入口網站或 SharePoint 整合模式](../reporting-services/report-builder/start-report-builder.md)啟動報表產生器[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]。  
   
     [新報表或資料集]  對話方塊隨即開啟。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "63042951"
   
 4.  在 [選擇配置]  頁面上，清除 [展開/摺疊群組]  核取方塊以便看見整個資料表，然後按一下 [下一步]  。 
   
-5.  按一下 **[完成]** 。  
+5.  按一下 [完成]  。  
   
 6.  按一下 **[執行]** 。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "63042951"
   
 8.  按一下 **[設計]** 返回 [設計] 檢視。  
   
-9. 選取 [LinkText]  資料行中的 [Total]  資料格，然後按住 SHIFT 鍵並選取其右邊的兩個資料格：[Product]  資料行中的空白資料格，以及 [Sales]  資料行中的 `[Sum(Sales)]` 資料格。  
+9. 選取 [LinkText]  資料行中的 [Total]  資料格，然後按住 SHIFT 鍵並選取其右邊的兩個資料格：[Product]  資料行中的空白資料格，以及 [Sales]`[Sum(Sales)]`**資料行中的** 資料格。  
   
 11. 在選取這三個資料格之後，以滑鼠右鍵按一下其中一個資料格，然後按一下 [刪除資料列]  。  
 
@@ -222,7 +222,7 @@ ms.locfileid: "63042951"
   
 6.  請注意，文字看起來並無任何改變。 您需要進行調整使其彷彿連結文字。  
   
-7.  選取 [ `[LinkText]`]。  
+7.  選取 `[LinkText]`。  
   
 8.  在 [主資料夾]  索引標籤 > [字型]  上，選取 [底線]  ，並將 [色彩]  變更為 [藍色]  。  
   
@@ -339,7 +339,7 @@ ms.locfileid: "63042951"
   
 4.  在 [名稱]  中，將預設名稱取代為您選擇的名稱。
 
-5.  按一下 **[儲存]** 。  
+5.  按一下 [檔案]  。  
   
 報表就會儲存至報表伺服器。 您連接之報表伺服器的名稱會顯示在視窗底部的狀態列中。  
   
@@ -351,9 +351,9 @@ ms.locfileid: "63042951"
   
 3.  在 [名稱]  中，將預設名稱取代為您選擇的名稱。 
   
-4.  按一下 **[儲存]** 。  
+4.  按一下 [檔案]  。  
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 
 在報表產生器中，格式化文字的方法有好幾種。 [教學課程：建立自由格式報表](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)包含更多範例。  
 
