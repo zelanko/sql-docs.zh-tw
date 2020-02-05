@@ -18,10 +18,10 @@ ms.assetid: a62ed736-44df-4591-9109-ce90e1df9bd3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e5932235ea8d97f67b17b481cff4e2d39b0c524a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127334"
 ---
 # <a name="z-geometry-data-type"></a>Z (geometry 資料類型)
@@ -36,15 +36,15 @@ ms.locfileid: "68127334"
 .Z  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型：**float**  
   
  CLR 類型：**SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  除了對於未設定此屬性的任何 **Point** 執行個體而言，此屬性的值會是 Null 之外，如果 geometry 執行個體不是點，此屬性也會是 Null。  
   
- 此屬性是唯讀的。  
+ 這個屬性是唯讀的。  
   
  Z 座標不會用於程式庫所做的任何計算，也不會透過任何程式庫計算來夾帶。  
   

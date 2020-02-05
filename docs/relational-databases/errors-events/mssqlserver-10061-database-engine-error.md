@@ -14,13 +14,13 @@ ms.assetid: 729602f3-08df-474c-8740-8dea13c1eee3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 47392f77ac3131a47a6f2a5f02f71d6a07e103be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68068307"
 ---
-# <a name="mssqlserver10061"></a>MSSQLSERVER_10061
+# <a name="mssqlserver_10061"></a>MSSQLSERVER_10061
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -32,7 +32,7 @@ ms.locfileid: "68068307"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱||  
-|訊息文字|建立伺服器的連接時發生錯誤。  連接到 SQL Server 時，可能因為在預設的設定下 SQL Server 不允許遠端連接而引起此失敗。 (提供者：TCP 提供者，錯誤: 0 - 無法連線，因為目標電腦拒絕連線。) (Microsoft SQL Server，錯誤:10061)|  
+|訊息文字|建立伺服器的連接時發生錯誤。  連接到 SQL Server 時，可能因為在預設的設定下 SQL Server 不允許遠端連接而引起此失敗。 (提供者: TCP 提供者，錯誤: 0 - 無法連線，因為目標電腦拒絕連線。) (Microsoft SQL Server，錯誤: 10061)|  
   
 ## <a name="explanation"></a>說明  
 伺服器並未回應用戶端要求。 發生這個錯誤可能是因為伺服器尚未啟動。  

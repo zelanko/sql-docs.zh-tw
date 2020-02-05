@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b9cdb3ce08f32c6b73ae1558ed2a9b3b8bf34871
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089406"
 ---
 # <a name="full-text-event-category"></a>Full Text 事件類別目錄
@@ -27,7 +27,7 @@ ms.locfileid: "68089406"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[FT:Crawl Aborted 事件類別](../../relational-databases/event-classes/ft-crawl-aborted-event-class.md)|指出全文檢索搜耙發生例外狀況。|  
 |[FT:Crawl Started 事件類別](../../relational-databases/event-classes/ft-crawl-started-event-class.md)|指出全文檢索搜耙已啟動。|  

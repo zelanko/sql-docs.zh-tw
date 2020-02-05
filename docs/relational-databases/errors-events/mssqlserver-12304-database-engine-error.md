@@ -12,13 +12,13 @@ ms.assetid: a2c252c2-e815-4ac8-a101-7af5b32e3233
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6bf076dd8a3dc3dc912ec7ec2155e477dff83f30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67912139"
 ---
-# <a name="mssqlserver12304"></a>MSSQLSERVER_12304
+# <a name="mssqlserver_12304"></a>MSSQLSERVER_12304
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  

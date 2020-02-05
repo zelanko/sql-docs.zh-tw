@@ -13,10 +13,10 @@ ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6d4b315a5cde27bb8dd3bce3d3642f17bbd13867
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292089"
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>SAP BW 目的地編輯器 (進階頁面)
@@ -35,7 +35,7 @@ ms.locfileid: "71292089"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 目的地的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件。  
   
-2.  在 [資料流程]  索引標籤中，按兩下 SAP BW 目的地。  
+2.  在 [資料流程]  索引標籤上，按兩下 SAP BW 目的地。  
   
 3.  在 SAP BW 目的地編輯器  中，按一下 [進階]  開啟編輯器的 [進階]  頁面。  
   

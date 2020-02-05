@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9a11d6d83b4c2c56d6448431028beec89265a0d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934486"
 ---
 # <a name="estimate-the-size-of-a-database"></a>估計資料庫的大小
@@ -41,7 +41,7 @@ ms.locfileid: "67934486"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[估計資料表的大小](../../relational-databases/databases/estimate-the-size-of-a-table.md)|定義必要的步驟和計算，來估計將資料儲存於資料表和相關聯索引所需的空間數量。|  
 |[估計堆積的大小](../../relational-databases/databases/estimate-the-size-of-a-heap.md)|定義必要的步驟和計算，來估計將資料儲存於堆積所需的空間數量。 堆積是沒有叢集索引的資料表。|  

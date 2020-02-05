@@ -16,10 +16,10 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a8b9d523f3c0edd3a642caba8efc2396267e141
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291487"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>使用衍生的資料行轉換來衍生資料行值
@@ -48,7 +48,7 @@ ms.locfileid: "71291487"
     > [!NOTE]  
     >  如果運算式無效，則運算式文字會反白顯示，且資料行上的「工具提示」會描述錯誤。  
   
-7.  在 [衍生的資料行]  清單中，選取 [\<以新資料行加入>]  以便將運算式的評估結果寫入新資料行，或選取要以評估結果更新的現有資料行。  
+7.  在 [衍生的資料行]  清單中，選取 [**以新資料行加入>]\<** 以便將運算式的評估結果寫入新資料行，或選取要以評估結果更新的現有資料行。  
   
      如果您選擇使用新資料行， **[衍生的資料行轉換編輯器]** 對話方塊就會依據資料類型、長度、有效位數、小數位數和字碼頁，評估運算式並指派資料類型到資料行。  
   

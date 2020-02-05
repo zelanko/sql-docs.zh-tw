@@ -18,10 +18,10 @@ ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9fb69a5c4e9d303ab0e3a7a3e2edeeeeed228391
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000609"
 ---
 # <a name="read-database-engine"></a>Read (Database Engine)
@@ -39,10 +39,10 @@ void Read( BinaryReader r )
 *r*  
  產生二進位資料流的 **BinaryReader** 物件，該資料流會對應到 **hierarchyid** 節點的二進位表示法。  
   
-## <a name="return-types"></a>傳回型
+## <a name="return-types"></a>傳回類型
  **CLR 傳回型別：void**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  Read 不會驗證它的輸入。 若提供的二進位輸入無效，Read 便可能引發例外狀況。 或者它可能會成功，並產生無效的 **SqlHierarchyId** 物件，該物件的方法可提供無法預測的結果或引發例外狀況。  
   
  Read 只能在新建立的 **SqlHierarchyId** 物件上呼叫。  

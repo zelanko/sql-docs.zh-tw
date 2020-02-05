@@ -11,10 +11,10 @@ ms.assetid: 8adee525-579b-4d2f-b807-e2ecc07fb2e9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d131ebd8d532e0844774fc675165750832f964c9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295465"
 ---
 # <a name="catalogrestore_project-ssisdb-database"></a>catalog.restore_project (SSISDB 資料庫)
@@ -49,7 +49,7 @@ catalog.restore_project [ @folder_name = ] folder_name
  0 (成功)  
   
 ## <a name="result-sets"></a>結果集  
- 如果找不到 *project_name*，專案詳細資料會以 **varbinary(MAX)** 的方式傳回，當作結果集的一部分。  
+ 如果找不到 **project_name**，專案詳細資料會以 *varbinary(MAX)* 的方式傳回，當作結果集的一部分。  
   
  如果專案無法還原到指定的資料夾，就會傳回 **NO RESULT SET**。  
   
@@ -71,7 +71,7 @@ catalog.restore_project [ @folder_name = ] folder_name
   
 -   使用者未具備適當的權限  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  還原專案時，會為所有參數會指定預設值，而且所有環境參考都會維持不變。 目錄中保留的專案版本最大數目取決於目錄屬性 **MAX_VERSIONS_PER_PROJECT**，如同 [catalog_property](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 檢視中所示。  
   
 > [!WARNING]  

@@ -14,10 +14,10 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9c0e005ee8dbb1c01cdaf5d3af031fd9ffba31ac
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288250"
 ---
 # <a name="syntax-ssis"></a>語法 (SSIS)
@@ -30,7 +30,7 @@ ms.locfileid: "71288250"
 > [!NOTE]  
 >  在舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，當運算式的評估結果具有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型 DT_WSTR 或 DT_STR 時，結果就會具有 4000 個字元的限制。 這項限制已移除。  
   
- 如需使用特定運算子及函數的範例運算式，請參閱下列主題中每個運算子及函數的相關主題：[運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md) 和[函式 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)。  
+ 如需使用特定運算子及函數的範例運算式，請參閱下列主題中每個運算子及函數的相關主題：[運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md) 和[函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)。  
   
  如需使用多個運算子、函數以及識別碼和常值的範例運算式，請參閱 [進階 Integration Services 運算式範例](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "71288250"
 ## <a name="literals"></a>常值  
  運算式可以包含數值、字串及布林常值。 運算式中使用的字串常值必須加上引號。 數值和布林常值則不使用引號。 運算式語言包括常逸出之字元的逸出序列。 如需詳細資訊，請參閱[常值 &#40;SSIS&#41;](../../integration-services/expressions/numeric-string-and-boolean-literals.md)。  
   
-## <a name="operators"></a>Operators  
+## <a name="operators"></a>操作員  
  運算式評估工具包含一組運算子，提供與 Transact-SQL、C++ 和 C# 語言中運算子類似的功能。 不過，運算式語言還包括額外的運算子，並且使用您可能不熟悉的不同符號。 如需詳細資訊，請參閱[運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md)。  
   
 ### <a name="namespace-resolution-operator"></a>命名空間解析運算子  
@@ -68,7 +68,7 @@ ms.locfileid: "71288250"
 ###### <a name="equality-operators"></a>相等運算子  
  運算式評估工具文法描述提供 == 相等運算子。 此運算子相當於 Transact-SQL 中的 = 運算子以及 C# 中的 == 運算子。  
   
-## <a name="functions"></a>函數  
+## <a name="functions"></a>Functions  
  運算式語言包括與 Transact-SQL 函數和 C# 方法類似的日期和時間函數、數學函數以及字串函數。  
   
  其中有少數函數的名稱與 Transact-SQL 函數相同，但是在運算式評估工具中其功能則稍有不同。  

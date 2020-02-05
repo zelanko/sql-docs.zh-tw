@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73532438"
 ---
 # <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 備份及還原資料庫

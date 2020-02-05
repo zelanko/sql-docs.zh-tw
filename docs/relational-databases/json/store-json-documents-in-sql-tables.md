@@ -10,10 +10,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ea43d88fea017c723177e4b83c86b5c8165b734b
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096030"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>將 JSON 文件儲存在 SQL Server 或 SQL Database

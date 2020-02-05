@@ -16,10 +16,10 @@ ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a48d827f621f37e73d82d4a8fa144bb1b95515e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293822"
 ---
 # <a name="update-statistics-task"></a>更新統計資料工作
@@ -27,7 +27,7 @@ ms.locfileid: "71293822"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  「更新統計資料」工作會在指定的資料表或索引檢視表中，更新一個或多個統計群組 (集合) 索引鍵值散發的詳細資訊。 如需詳細資訊，請參閱 [Statistics](../../relational-databases/statistics/statistics.md)。  
+  「更新統計資料」工作會在指定的資料表或索引檢視表中，更新一個或多個統計群組 (集合) 索引鍵值散發的詳細資訊。 如需詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
   
  藉由使用「更新統計資料」工作，封裝可更新單一資料庫或多重資料庫的統計資料。 如果此工作只更新單一資料庫中的統計資料，您可以選擇要由此工作更新統計資料的檢視或資料表。 您可以將更新作業設定為更新所有統計資料、只更新資料行統計資料，或只更新索引統計資料。  
   

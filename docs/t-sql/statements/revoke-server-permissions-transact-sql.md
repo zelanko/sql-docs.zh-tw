@@ -17,10 +17,10 @@ ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eada4b2dbd5a76418ec8de9f988a6291e175da5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914277"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE 伺服器權限 (Transact-SQL)
@@ -92,7 +92,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *server_role*  
  指定使用者定義伺服器角色。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  只有在目前資料庫是 master 的情況下，才能夠撤銷伺服器範圍的權限。  
   
  REVOKE 會同時移除 GRANT 和 DENY 權限。  
@@ -146,7 +146,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="examples"></a>範例  
   
 ### <a name="a-revoking-a-permission-from-a-login"></a>A. 從登入撤銷權限  
- 下列範例會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `VIEW SERVER STATE` 撤銷 `WanidaBenshoof` 權限。  
+ 下列範例會從 `VIEW SERVER STATE` 登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 撤銷 `WanidaBenshoof` 權限。  
   
 ```  
 USE master;  
@@ -155,7 +155,7 @@ GO
 ```  
   
 ### <a name="b-revoking-the-with-grant-option"></a>B. 撤銷 WITH GRANT 選項  
- 下列範例會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `CONNECT SQL` 撤銷授與 `JanethEsteves` 的權限。  
+ 下列範例會從 `CONNECT SQL` 登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 撤銷授與 `JanethEsteves` 的權限。  
   
 ```  
 USE master;  

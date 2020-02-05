@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
 ms.openlocfilehash: 66c836c80db24b951bbf4e53d77c975eea6e4832
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123155"
 ---
-# <a name="mssqlserver41368"></a>MSSQLSERVER_41368
+# <a name="mssqlserver_41368"></a>MSSQLSERVER_41368
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  

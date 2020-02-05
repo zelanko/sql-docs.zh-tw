@@ -25,10 +25,10 @@ ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 451743ebafe719b554384edd2d9abadb60e070f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039127"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
@@ -58,7 +58,7 @@ MARK_IN_USE_FOR_REMOVAL
 NO_INFOMSGS  
 隱藏所有參考訊息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 執行 DBCC FREESYSTEMCACHE 會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計劃快取。 清除計畫快取會導致重新編譯所有未來執行計畫，且可能會導致查詢效能突然暫時降低。 對於計劃快取中，各個已清除的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄會包含下列資訊訊息：「由於 'DBCC FREEPROCCACHE' 或 'DBCC FREESYSTEMCACHE' 作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計劃快取的一部分) 發生 %d 次快取存放區排清。」 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
 
 ## <a name="result-sets"></a>結果集  

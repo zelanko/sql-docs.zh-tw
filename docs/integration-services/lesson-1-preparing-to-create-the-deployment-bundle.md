@@ -11,13 +11,13 @@ ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6587c8c0e56e824b1a2ae73c5067949f3c4a223a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296073"
 ---
-# <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>第 1 課：準備建立部署套件組合
+# <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>第 1 課：準備建立部署配套
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -30,7 +30,7 @@ ms.locfileid: "71296073"
   
 在加入組態之後，您應該在 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] (用來建立 ETL 封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 圖形化工具) 中開啟封裝，並且檢查封裝和封裝元素的屬性以及封裝組態，以便能更加了解部署所需解決的問題。 例如，由於其中一個封裝會從文字檔擷取資料，因此您必須先更新資料檔的位置，部署的封裝才能順利執行。  
   
-**完成本課程的估計時間：** 1 小時  
+**完成本課程的估計時間** ：1 小時  
   
 ## <a name="lesson-tasks"></a>課程工作  
 這一課包含下列工作：  

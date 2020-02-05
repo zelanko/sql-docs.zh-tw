@@ -20,10 +20,10 @@ ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b08bd61a0150b0e3711219eea783985f80ffd72f
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745305"
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE (Transact-SQL)
@@ -65,7 +65,7 @@ ALTER MESSAGE TYPE message_type_name
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  
  訊息主體必須包含符合指定的結構描述集合中之結構描述的 XML。 *schema_collection_name* 必須是現有 XML 結構描述集合的名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  變更訊息類型的驗證不會影響已傳遞給佇列的訊息。  
   
  若要變更訊息類型的 AUTHORIZATION，請使用 ALTER AUTHORIZATION 陳述式。  

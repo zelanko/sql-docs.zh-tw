@@ -11,10 +11,10 @@ ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
 ms.openlocfilehash: 8d78ab5befe5f95c07b6cb539d2629fdd9d003ae
-ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75924980"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料載入 SQL Server 或 Azure SQL Database
@@ -173,9 +173,9 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
 
 ## <a name="next-steps"></a>後續步驟
 
-- 了解如何直接在設計環境中針對您的套件進行偵錯及疑難排解。 從這裡開始：[用於疑難排解套件開發的工具][Troubleshooting Tools for Package Development]。
+- 了解如何直接在設計環境中針對您的套件進行偵錯及疑難排解。 從這裡開始： [封裝開發的疑難排解工具][Troubleshooting Tools for Package Development]。
 
-- 了解如何將您的 SSIS 專案和套件部署到 Integration Services 伺服器或另一個儲存位置。 從這裡開始：[部署專案和套件][Deployment of Projects and Packages]。
+- 了解如何將您的 SSIS 專案和套件部署到 Integration Services 伺服器或另一個儲存位置。 從這裡開始： [部署專案和封裝][Deployment of Projects and Packages]。
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-database-with-ssis/ssis-designer-01.png

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3581d9247979702a7c1e9af409b43121c4158334
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111893"
 ---
 # <a name="non-xml-format-files-sql-server"></a>非 XML 格式檔案 (SQL Server)
@@ -58,14 +58,14 @@ ms.locfileid: "68111893"
   
  **Version** 和 **Number of columns** 欄位只出現一次。 下表描述其意義。  
   
-|格式檔案欄位|Description|  
+|格式檔案欄位|描述|  
 |------------------------|-----------------|  
-|Version|**bcp** 公用程式的版本號碼：<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> 只能由 **bcp**辨識版本號碼，而不是由 [!INCLUDE[tsql](../../includes/tsql-md.md)]辨識。<br /><br /> <br /><br /> 注意:用於讀取格式檔案的 **bcp** 公用程式 (Bcp.exe) 版本必須與用於建立格式檔案的版本相同，或比它更新。 例如， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** 可以讀取由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**產生的 10.0 版格式檔案，但是 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** 無法讀取由 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**bcp**產生的 12.0 版格式檔案。|  
+|版本|**bcp** 公用程式的版本號碼：<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> 只能由 **bcp**辨識版本號碼，而不是由 [!INCLUDE[tsql](../../includes/tsql-md.md)]辨識。<br /><br /> <br /><br /> 注意：用於讀取格式檔案的 **bcp** 公用程式 (Bcp.exe) 版本必須與用於建立格式檔案的版本相同，或比它更新。 例如， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** 可以讀取由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**產生的 10.0 版格式檔案，但是 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** 無法讀取由 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**bcp**產生的 12.0 版格式檔案。|  
 |Number of columns|資料檔案的欄位數。 在所有資料列中此數目必須相同。|  
   
  其他格式檔案欄位描述要大量匯入或匯出的資料欄位。 每個資料欄位在格式檔案中，必須有個別的資料列來代表。 每個格式檔案資料列都包含下表所述之格式檔案欄位的值。  
   
-|格式檔案欄位|Description|  
+|格式檔案欄位|描述|  
 |------------------------|-----------------|  
 |**主檔案欄位順序**|指出資料檔中每個欄位之位置的號碼。 資料列中的第一個欄位為 1，其餘依此類推。|  
 |**主檔案資料類型**|指出存放在資料檔給定欄位中的資料類型。 對於 ASCII 資料檔，請使用 SQLCHAR；對於原生 (Native) 格式的資料檔，請使用預設的資料類型。 如需詳細資訊，請參閱 [使用 bcp 時指定檔案儲存類型 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)。|  

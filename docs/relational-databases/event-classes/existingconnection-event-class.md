@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e4fe3060d0eb7a6c75333345f1770e2512371049
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089375"
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection 事件類別
@@ -25,7 +25,7 @@ ms.locfileid: "68089375"
   
 ## <a name="existing-connection-event-class-data-columns"></a>Existing Connection 事件類別資料行  
   
-|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |BinaryData|**image**|選項旗標的二進位傾印 (如工作階段層級設定)，包括 ANSI NULL、ANSI 填補、資料指標在認可時關閉、NULL 串連以及引號識別碼。|2|是|  

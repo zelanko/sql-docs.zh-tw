@@ -18,10 +18,10 @@ ms.assetid: 20cace39-02e5-46c1-a9a5-841d04d0da16
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7850a3fec40dcdd6606086d44e626e2e5f57ea93
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950176"
 ---
 # <a name="stgeomfromtext-geometry-data-type"></a>STGeomFromText (geometry 資料類型)
@@ -43,13 +43,13 @@ STGeomFromText ( 'geometry_tagged_text' , SRID )
  *SRID*  
  這是 **int** 運算式，代表要傳回之 **geometry** 執行個體的空間參考識別碼 (SRID)。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回型別：**SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
- `STGeomFromText()` 所傳回之 **geometry** 執行個體的 OGC 類型會設定為對應的 WKT 輸入。  
+## <a name="remarks"></a>備註  
+ **所傳回之**geometry`STGeomFromText()` 執行個體的 OGC 類型會設定為對應的 WKT 輸入。  
   
  如果輸入的格式不正確，這個方法將會擲回 **FormatException**。  
   

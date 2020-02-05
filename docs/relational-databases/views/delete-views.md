@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a0b11b2d6fa897b99276f75fb74e2c41e25db904
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123466"
 ---
 # <a name="delete-views"></a>刪除檢視
@@ -49,7 +49,7 @@ ms.locfileid: "68123466"
   
 -   在利用 `DROP TABLE` 來卸除的資料表中，您必須利用 `DROP VIEW`來明確卸除任何檢視。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 SCHEMA 的 ALTER 權限或 OBJECT 的 CONTROL 權限。  

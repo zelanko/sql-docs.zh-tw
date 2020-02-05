@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: d63ef5b6535c34e9b5d2087d96dbe615c7f1d8b3
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558539"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>操作容錯移轉叢集執行個體 - Linux 上的 SQL Server

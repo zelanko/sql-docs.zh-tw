@@ -15,10 +15,10 @@ ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: da14149b9518a14fa4b7a50072ba35c0b8dcefe2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991373"
 ---
 # <a name="availability-replica-is-not-joined-to-an-always-on-availability-group"></a>可用性複本並未聯結至 Always On 可用性群組
@@ -33,7 +33,7 @@ ms.locfileid: "67991373"
 |**類別目錄**|**警告**|  
 |**Facet**|可用性複本|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  這項原則會檢查可用性複本的聯結狀態。 當可用性複本已加入至可用性角色，但是沒有正確聯結時，原則為狀況不良。 否則原則為狀況良好。  
   
 > [!NOTE]  

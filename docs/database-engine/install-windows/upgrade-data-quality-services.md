@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: fab545b34f257563466ec2f64911cdfaceca9456
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934850"
 ---
 # <a name="upgrade-data-quality-services"></a>升級 Data Quality Services
@@ -60,8 +60,8 @@ ms.locfileid: "67934850"
 
       >[!NOTE]
       >將資料夾路徑中的 [nn] 替換成 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 版本號碼。
-      >- 針對 SQL Server 2016：13
-      >- 針對 SQL Server 2017：14
+      >- SQL Server 2016 為 13
+      >- SQL Server 2017 為 14
 
         ```  
         cd C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn  
@@ -91,7 +91,7 @@ ms.locfileid: "67934850"
   
 3.  輸出會顯示每個升級項目和升級日期。 最新日期的最大 VERSION_ID 和 ASSEMBLY_VERSION 為目前版本。 STATUS 資料行中的值為 2 代表成功。 如果發生錯誤，錯誤會列示在 ERROR 資料行中。 範例輸出：  
   
-    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|error|  
+    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|狀態|ERROR|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<網域\使用者名稱>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<網域\使用者名稱>|2||  

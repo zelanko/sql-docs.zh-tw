@@ -17,10 +17,10 @@ ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252756"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>指定伺服器網路位址 (資料庫鏡像)

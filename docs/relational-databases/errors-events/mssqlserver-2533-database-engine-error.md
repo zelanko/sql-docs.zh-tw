@@ -12,13 +12,13 @@ ms.assetid: 0418352c-0ab2-4dc7-b8b9-5c3bad94560c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e87c0983ac7e74b45251bb72c44265f2134aa3b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68103734"
 ---
-# <a name="mssqlserver2533"></a>MSSQLSERVER_2533
+# <a name="mssqlserver_2533"></a>MSSQLSERVER_2533
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -30,7 +30,7 @@ ms.locfileid: "68103734"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC_PAGE_WAS_NOT_SEEN|  
-|訊息文字|資料表錯誤：看不到配置給物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE) 的頁面 P_ID。 頁面可能無效，或標頭中的配置單位識別碼不正確。|  
+|訊息文字|資料表錯誤: 看不到配置給物件識別碼 O_ID 的頁面 P_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE)。 頁面可能無效，或標頭中的配置單位識別碼不正確。|  
   
 ## <a name="explanation"></a>說明  
 已將某個頁面配置給配置單位識別碼 (*A_ID*)，但是該頁面的標頭中沒有這個配置單位識別碼。 標頭中有另一個配置單位識別碼。 如果頁面標頭中的配置單位識別碼適用於有效的物件，頁面上可能會出現相符的 MSSQLEngine_2534 錯誤。  

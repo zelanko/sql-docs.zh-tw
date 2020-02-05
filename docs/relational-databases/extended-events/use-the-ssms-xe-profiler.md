@@ -16,10 +16,10 @@ author: yualan
 ms.author: alayu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6b500713053e8ea65722a10e2bf93ec566d9fbdd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251411"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>使用 SSMS XEvent 分析工具

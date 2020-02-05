@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: de6a4504e0b84efd8fa8fb5b60a8bd01ef85b474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099640"
 ---
 # <a name="database-object-extended-properties-page"></a>資料庫物件 (擴充屬性頁面)
@@ -25,7 +25,7 @@ ms.locfileid: "68099640"
   擴充屬性讓您能夠將自訂屬性加入資料庫物件中。 使用此頁面來檢視或修改選取物件的擴充屬性。 所有資料庫物件類型的 [擴充屬性]  頁面都是相同的。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
- **[資料庫備份]**  
+ **Database**  
  顯示選取之資料庫的名稱。 此欄位是唯讀的。  
   
  **定序**  

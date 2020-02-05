@@ -15,10 +15,10 @@ ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91ba54ce9141cd0e891e442c5cb89aab02dec1f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001726"
 ---
 # <a name="use-nested-for-xml-queries"></a>使用巢狀 FOR XML 查詢
@@ -67,7 +67,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- 因為結果為 **xml** 類型，所以您可以直接對此 XML 指定其中一個 **xml** 資料類型方法，如以下查詢所示。 在查詢中，會使用 [query() 方法 (xml 資料類型)](../../t-sql/xml/query-method-xml-data-type.md) 來擷取 <`myRoot`> 元素的第一個 <`row`> 元素子項。  
+ 因為結果為 **xml** 類型，所以您可以直接對此 XML 指定其中一個 **xml** 資料類型方法，如以下查詢所示。 在查詢中，會使用 [query() 方法 (xml 資料類型)](../../t-sql/xml/query-method-xml-data-type.md) 來擷取 <`row`> 元素的第一個 <`myRoot`> 元素子項。  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  

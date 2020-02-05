@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9707f0b23d9461418536c2b9f9015623124d5436
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70059844"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
@@ -49,11 +49,11 @@ TRIM ( string )
 
 字串是應移除字元的任何字元類型 (`nvarchar`、`varchar`、`nchar` 或 `char`) 的運算式。
 
-## <a name="return-types"></a>傳回類型
+## <a name="return-types"></a>傳回型別
 
 以字串引數的類型傳回字元運算式，其中空白字元 `char(32)` 或其他指定的字元會從兩端移除。 如果輸入字串為 `NULL`，傳回 `NULL`。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 根據預設，`TRIM` 函式會從字串的開頭和結尾處移除空白字元。 此行為相當於 `LTRIM(RTRIM(@string))`。
 

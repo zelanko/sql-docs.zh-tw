@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 85f631d55d93701738edca23f127ad4e0b212e34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089637"
 ---
 # <a name="deprecation-event-category"></a>Deprecation 事件類別目錄
@@ -25,7 +25,7 @@ ms.locfileid: "68089637"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[Deprecation Announcement 事件類別](../../relational-databases/event-classes/deprecation-announcement-event-class.md)|指出會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本中移除的功能。|  
 |[Deprecation Final Support 事件類別](../../relational-databases/event-classes/deprecation-final-support-event-class.md)|指出會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]下一個主要版本中移除的功能。|  

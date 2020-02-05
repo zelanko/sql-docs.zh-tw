@@ -12,13 +12,13 @@ ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 27f6dfb6a41bab31fb716671f431115468d8bd86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120586"
 ---
-# <a name="mssqlserver4104"></a>MSSQLSERVER_4104
+# <a name="mssqlserver_4104"></a>MSSQLSERVER_4104
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -79,7 +79,7 @@ ms.locfileid: "68120586"
     SELECT a.c2 FROM a, b;   
     ```  
   
-    假設 UDT `myudt2` 沒有名為 `c2` 的屬性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法判斷識別碼 `a.c2` 會參考資料表 `a` 中的資料行 `c2`，還是資料表 `b` 中屬性 `c2` 的資料行 `a`。  
+    假設 UDT `myudt2` 沒有名為 `c2` 的屬性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法判斷識別碼 `a.c2` 會參考資料表 `c2` 中的資料行 `a`，還是資料表 `a` 中屬性 `c2` 的資料行 `b`。  
   
 ## <a name="user-action"></a>使用者動作  
   
@@ -113,7 +113,7 @@ ms.locfileid: "68120586"
     SELECT 'X' FROM TableA, TableB WHERE TableB.KeyCol = TableA.KeyCol;  
     ```  
   
-    中的多個  
+    或  
   
     ```  
     SELECT 'X' FROM TableA INNER JOIN TableB ON TableB.KeyCol = TableA.KeyCol;  

@@ -17,10 +17,10 @@ ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eedc7754a9bb5f48a07b4865cfb426f7e234d192
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294978"
 ---
 # <a name="advanced-editor"></a>進階編輯器

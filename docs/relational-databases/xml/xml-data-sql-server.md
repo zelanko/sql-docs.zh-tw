@@ -14,17 +14,17 @@ ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fc11a8dd385266d38bb12f067d2ffa1a88030b87
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70190433"
 ---
 # <a name="xml-data-sql-server"></a>XML 資料 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了功能強大的平台，可針對半結構化的資料管理來開發豐富的應用程式。 支援將 XML 整合至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的所有元件，並包含下列項目：  
   
--   **xml** 資料類型。 XML 值可用原生方式儲存在 **xml** 資料類型資料行中，依照 XML 結構描述的集合來設定類型，或維持為不具類型。 您可以對 XML 資料行建立索引。  
+-   **xml** 資料類型。 XML 值可用原生方式儲存在 **xml** 資料類型資料行中，依照 XML 結構描述的集合來設定類型，或維持為不具類型。 您可以編製 XML 資料行的索引。  
   
 -   可以針對儲存在 **xml** 類型之資料行與變數中的 XML 資料，指定 XQuery 查詢。  
   

@@ -22,13 +22,13 @@ ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ff9f53c6dd3e0029f2627545c7654ded3219abbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914537"
 ---
-# <a name="originallogin-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
+# <a name="original_login-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的登入名稱。 您可以利用這個函數來傳回有許多明確或隱含內容切換的工作階段中原始登入的識別。  
@@ -42,15 +42,15 @@ ms.locfileid: "67914537"
 ORIGINAL_LOGIN( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **sysname**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個函數在稽核原始連接內容的識別時很有用。 [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) 和 [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) 這類函式會傳回目前的執行內容，ORIGINAL_LOGIN 則會傳回在該工作階段中，最先連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的登入識別。  
  
   
 ## <a name="examples"></a>範例  
- 下列範例會將目前工作階段的執行內容從陳述式的呼叫端切換到 `login1`。 `SUSER_SNAME` 和 `ORIGINAL_LOGIN` 函數用來傳回目前工作階段使用者 (內容切換後的使用者)，以及原始登入帳戶。 
+ 下列範例會將目前工作階段的執行內容從陳述式的呼叫端切換到 `login1`。 `SUSER_SNAME` 和 `ORIGINAL_LOGIN` 函數用來傳回目前工作階段使用者 (內容切換後的使用者)，以及原始登入帳戶。{3} 
  
   >[!NOTE]
   > 雖然 Azure SQL Database 支援 ORIGINAL_LOGIN 函式，但由於 Azure SQL Database 不支援「以登入身分執行」  ，因此下列指令碼會失敗。 

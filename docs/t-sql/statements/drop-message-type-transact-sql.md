@@ -22,10 +22,10 @@ ms.assetid: 805e8ad5-8a93-49f0-88e5-e6fca8814dd5
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 48c1a96998adf9fddd8ffd8da0e6f6711b9277b0
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745317"
 ---
 # <a name="drop-message-type-transact-sql"></a>DROP MESSAGE TYPE (Transact-SQL)
@@ -50,7 +50,7 @@ DROP MESSAGE TYPE message_type_name
 ## <a name="permissions"></a>權限  
  卸除訊息類型的權限預設為訊息類型的擁有者、db_ddladmin 或 db_owner 固定資料庫角色的成員，以及系統管理員 (sysadmin) 固定伺服器角色的成員。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果有任何合約參考訊息類型，您便無法刪除這個訊息類型。  
   
 ## <a name="examples"></a>範例  

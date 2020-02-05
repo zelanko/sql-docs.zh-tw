@@ -11,10 +11,10 @@ ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 75c34c5993204e4ee2331eea5bfde0014e355f19
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291804"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>SQL Server Compact Edition 目的地自訂屬性
@@ -26,7 +26,7 @@ ms.locfileid: "71291804"
   
  下表描述的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 目的地的自訂屬性。 所有屬性都是可讀寫的。  
   
-|屬性名稱|資料類型|Description|  
+|屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
 |TableName|String|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫中目的地資料表的名稱。<br /><br /> 此屬性的值可以使用屬性運算式指定。|  
   

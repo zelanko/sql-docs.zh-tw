@@ -14,10 +14,10 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fc6bb3164b54f0799073e8b959f68b0dd625c47e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258177"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>遠端 Blob 存放區 (RBS) (SQL Server)

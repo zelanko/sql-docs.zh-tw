@@ -18,10 +18,10 @@ ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d6c68aa9859fbe7e1066ad392377d6b50289fd0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042395"
 ---
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine (geography 資料類型)
@@ -36,12 +36,12 @@ ms.locfileid: "68042395"
 .STCurveToLine()  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回型別：**SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  傳回 **CircularString** 或 **CompoundCurve** 執行個體的 **LineString** 執行個體。  
   
  傳回 **CurvePolygon** 執行個體的 **Polygon** 執行個體。  

@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 67a4a4ad32e1d9471dc9a5b3d2f1c7b067cf480b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122116"
 ---
 # <a name="-modulus-transact-sql"></a>% (模數) (Transact-SQL)
@@ -47,7 +47,7 @@ dividend % divisor
   
 ## <a name="arguments"></a>引數  
  *dividend*  
- 要執行除法的數值運算式。 *dividend* 必須是整數與貨幣資料類型類別目錄中任何一個資料類型，或是 **numeric** 資料類型的有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 要執行除法的數值運算式。 *dividend* 必須是整數與貨幣資料類型類別目錄中任何一個資料類型，或是 [numeric](../../t-sql/language-elements/expressions-transact-sql.md) 資料類型的有效**運算式**。  
   
  *divisor*  
  要除以被除數的數值運算式。 *divisor* 必須是整數與貨幣資料類型類別目錄中任何一個資料類型，或是 **numeric** 資料類型的任何有效運算式。  
@@ -55,7 +55,7 @@ dividend % divisor
 ## <a name="result-types"></a>結果類型  
  由兩個引數的資料類型決定。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  您可以在 SELECT 陳述式的選取清單中使用模數算術運算子，搭配資料行名稱、數值常數，或是任何整數和貨幣資料類型類別目錄或 **numeric** 資料類型之有效運算式的任何組合。  
   
 ## <a name="examples"></a>範例  
@@ -82,7 +82,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-example"></a>C.簡單範例  
+### <a name="c-simple-example"></a>C：簡單範例  
  下列範例示範 3 除以 2 時，`%` 運算子所傳回的結果。  
   
 ```  

@@ -19,10 +19,10 @@ ms.assetid: 82a8f54a-3a47-4e20-b13a-b148029c5448
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b00d10e27e515cb30d32cdd08d7d10e69ac55b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930282"
 ---
 # <a name="filter-geography-data-type"></a>Filter (geography 資料類型)
@@ -45,12 +45,12 @@ ms.locfileid: "67930282"
  *other_geography*  
  這是要與叫用 Filter() 所在之執行個體相比較的另一個 **geography** 執行個體。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回型別：**SqlBoolean**  
+ CLR 傳回類型：**SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個方法不具決定性或並非精確的。  
   
 ## <a name="examples"></a>範例  

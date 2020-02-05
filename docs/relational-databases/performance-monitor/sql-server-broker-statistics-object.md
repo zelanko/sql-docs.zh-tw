@@ -14,17 +14,17 @@ ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 77a6174931924c30b8d482c0bd5d3f4a358f4a10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987019"
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server 的 Broker Statistics 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   SQLServer:Broker Statistics 效能物件包含可針對 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 執行個體報告一般 [!INCLUDE[ssDE](../../includes/ssde-md.md)]資訊的效能計數器。 下表列出這個物件包含的計數器：  
   
-|SQL Server 的 Broker Statistics 計數器|Description|  
+|SQL Server 的 Broker Statistics 計數器|描述|  
 |-------------------------------------------|-----------------|  
 |**Activation Errors Total**|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 啟用預存程序已結束並發生錯誤的次數。|  
 |**Broker Transaction Rollbacks**|包含與 [!INCLUDE[ssSB](../../includes/sssb-md.md)]相關之 DML 陳述式 (例如 SEND 和 RECEIVE) 的回復交易數目。|  

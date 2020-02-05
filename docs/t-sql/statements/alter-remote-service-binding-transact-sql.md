@@ -20,10 +20,10 @@ ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b91242524f3edada4de8112558a01f09fb3310cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927220"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING (Transact-SQL)
@@ -52,7 +52,7 @@ ALTER REMOTE SERVICE BINDING binding_name
  ANONYMOUS  
  指定與遠端服務通訊時，是否使用匿名驗證。 如果 ANONYMOUS = ON，會使用匿名驗證，本機使用者的認證不會傳送給遠端服務。 如果 ANONYMOUS = OFF，便會傳送使用者認證。 如果未指定這個子句，預設值便是 OFF。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  已與 *user_name* 建立關聯的憑證中之公開金鑰會用來驗證傳給遠端服務的訊息，以及對之後要用來加密交談的工作階段金鑰進行加密。 *user_name* 的憑證必須對應到主控遠端服務之資料庫中的使用者憑證。  
   
 ## <a name="permissions"></a>權限  

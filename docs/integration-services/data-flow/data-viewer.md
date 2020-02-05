@@ -15,10 +15,10 @@ ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fa6129fe5e617fc9f1684644012171d3ff6836c4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293029"
 ---
 # <a name="data-viewer"></a>資料檢視器

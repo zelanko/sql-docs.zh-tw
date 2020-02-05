@@ -15,10 +15,10 @@ ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 885e45267e7527a63f04facd630b2ec72f8a00f8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297602"
 ---
 # <a name="expression-builder"></a>運算式產生器
@@ -45,8 +45,8 @@ ms.locfileid: "71297602"
 |詞彙|定義|  
 |----------|----------------|  
 |**變數**|展開 **[變數]** 資料夾，然後將變數拖曳至 **[運算式]** 方塊。|  
-|**數學函數**<br /><br /> **字串函數**<br /><br /> **日期/時間函數**<br /><br /> **NULL 函數**<br /><br /> **類型轉換**<br /><br /> **運算子**|展開資料夾，然後將函數、類型轉換和運算子拖曳至 **[運算式]** 方塊。|  
-|**[運算式]**|編輯或輸入運算式。|  
+|**數學函式**<br /><br /> **字串函式**<br /><br /> **日期/時間函數**<br /><br /> **NULL 函數**<br /><br /> **類型轉換**<br /><br /> **運算子**|展開資料夾，然後將函數、類型轉換和運算子拖曳至 **[運算式]** 方塊。|  
+|**運算式**|編輯或輸入運算式。|  
 |**評估值**|列出運算式的評估結果。|  
 |**評估運算式**|按一下 **[評估運算式]** ，即可檢視運算式的評估結果。|  
   

@@ -12,10 +12,10 @@ ms.assetid: ccf367eb-06b0-42b8-b4d6-2b88f4a502d3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a3462dd0d57a65e7c1df1bfc298502555d99bd14
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874800"
 ---
 # <a name="mssqlserver_846"></a>MSSQLSERVER_846
@@ -29,13 +29,13 @@ ms.locfileid: "70874800"
 |事件識別碼|846|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
-|符號名稱|不適用|  
+|符號名稱|N/A|  
 |訊息文字|等候緩衝閂時發生逾時 -- 類型 %d，bp %p，頁面 %d:%d，狀態 %#x，資料庫識別碼: %d，配置單位識別碼: %I64d%ls，工作 0x%p : %d，等候時間 %d，旗標 0x%I64x，主控工作 0x%p。 不繼續等候。|  
   
 ## <a name="explanation"></a>說明  
 就在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將緩衝閂鎖錯誤寫入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔的同時，電腦可能會停止回應，或者發生逾時或其他例行作業中斷。  
   
-如果訊息中的狀態欄位值為 0x04 on，表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正等候 I/O 作業完成。 您可能也會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中看到 [MSSQLSERVER_833](~/relational-databases/errors-events/mssqlserver-833-database-engine-error.md) 訊息。  
+如果訊息中的狀態欄位值為 0x04 on，表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正等候 I/O 作業完成。 您可能也會在 [ 錯誤記錄檔中看到 ](~/relational-databases/errors-events/mssqlserver-833-database-engine-error.md)MSSQLSERVER_833[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訊息。  
   
 如果訊息中的狀態欄位值為 0x04 off，意指頁面發生嚴重的競爭問題。 若問題物件是資料頁，起因可能就在於程式碼設計不良。 反之若非資料頁，則錯誤大致是因伺服器瓶頸所造成，例如硬體資源不足。  
   

@@ -11,10 +11,10 @@ ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a48cb51b363d036f57dfd4f175ab862645ebca1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296791"
 ---
 # <a name="catalogdelete_project-ssisdb-database"></a>catalog.delete_project (SSISDB 資料庫)
@@ -63,7 +63,7 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 -   使用者未具備適當的權限  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  與專案對應的所有物件和環境參考都會隨著專案刪除。 但是，專案版本和相關的作業記錄會予以保留，直到執行下一次的作業清除工作。  
   
   

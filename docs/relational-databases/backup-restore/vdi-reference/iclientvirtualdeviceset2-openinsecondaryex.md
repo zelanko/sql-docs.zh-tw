@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: cd89359ecbcc920fe03ed4b2bc7d90fd01592476
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847559"
 ---
 # <a name="iclientvirtualdeviceset2openinsecondaryex-vdi"></a>IClientVirtualDeviceSet2::OpenInSecondaryEx (VDI)
@@ -45,7 +45,7 @@ HRESULT IClientVirtualDeviceSet2::OpenInSecondaryEx (
 | VD_E_PROTOCOL | 虛擬裝置集尚未開啟，或虛擬裝置集尚未準備好接受來自次要用戶端的開啟要求。 |
 | VD_E_ABORT | 作業即將中止。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 使用多個處理序模型時，主要用戶端會負責偵測次要用戶端的正常和異常終止。
 

@@ -11,10 +11,10 @@ ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1506c13655187ad29d27f96f5fa1b73d01f67620
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846818"
 ---
 # <a name="save-trace-results-to-a-file"></a>將追蹤結果儲存至檔案
@@ -35,7 +35,7 @@ ms.locfileid: "70846818"
   
 -   完成查詢最佳化。  
   
- 當您指定預存程序 **sp_trace_create** 中 **\@tracefile** 引數的路徑與檔案名稱時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將追蹤結果儲存到檔案。  
+ 當您指定預存程序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_trace_create **中 \@** tracefile **引數的路徑與檔案名稱時，** 會將追蹤結果儲存到檔案。  
   
 > [!NOTE]  
 >  若要將路徑指定到 **sp_trace_create** 預存程序以儲存追蹤檔案，則其必須是伺服器可存取的目錄。 另請注意，若要在 **sp_trace_create**指定本機目錄，此目錄必須是伺服器電腦上的本機目錄。  

@@ -17,10 +17,10 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3c84997d8ec11a4eb620daf7bf34af7adf3e8de1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293242"
 ---
 # <a name="comparing-string-data"></a>比較字串資料
@@ -71,7 +71,7 @@ ms.locfileid: "71293242"
   
  下表描述比較選項和排序樣式。  
   
-|比較選項|Description|  
+|比較選項|描述|  
 |-----------------------|-----------------|  
 |忽略大小寫|指定比較是否區分大寫與小寫字母。 如果設定此選項，則字串比較會忽略大小寫。 例如，「ABC」與「abc」視為一樣。|  
 |忽略假名類型|指定比較是否區分兩類日文的假名字元：平假名與片假名。 如果設定此選項，則字串比較會忽略假名類型。|  

@@ -14,10 +14,10 @@ ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 63c2638f6b6f58d3c3cafd8e8dd601a5a467b210
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987339"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server 代理程式、作業物件
@@ -26,7 +26,7 @@ ms.locfileid: "67987339"
   
  下表包含 **SQLAgent:Jobs** 計數器。  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |**Active Jobs**|此計數器報告目前執行中的作業數目。|  
 |**Failed jobs**|此計數器報告因失敗而結束的作業數目。|  
@@ -37,7 +37,7 @@ ms.locfileid: "67987339"
   
  物件中的每個計數器均包含下列執行個體：  
   
-|執行個體|Description|  
+|執行個體|描述|  
 |--------------|-----------------|  
 |**_Total**|所有作業的資訊。|  
 |**警示**|由警示啟動之作業的資訊。|  

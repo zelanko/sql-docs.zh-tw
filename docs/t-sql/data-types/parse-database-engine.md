@@ -18,10 +18,10 @@ ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8f7160513cd23e16f06dbba27851920b66bf72c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119821"
 ---
 # <a name="parse-database-engine"></a>剖析 (Database Engine)
@@ -46,16 +46,16 @@ static SqlHierarchyId Parse ( SqlString input )
   
 ## <a name="arguments"></a>引數  
 *input*  
-[!INCLUDE[tsql](../../includes/tsql-md.md)]:所轉換的字元資料類型值。
+[!INCLUDE[tsql](../../includes/tsql-md.md)]：正在轉換的字元資料類型值。
   
 CLR：正在評估的字串值。
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 **SQL Server 傳回型別：hierarchyid**
   
 **CLR 傳回型別：SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 若 Parse 收到一個值，而這個值不是 **hierarchyid** 的有效字串表示法，則會引發例外狀況。 例如，若 **char** 資料類型包含尾端空白，則會引發例外狀況。
   
 ## <a name="examples"></a>範例  

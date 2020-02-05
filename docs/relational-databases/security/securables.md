@@ -20,18 +20,18 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 30688490a06c784a2149e53f7e175b6350d3d891
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986571"
 ---
-# <a name="securables"></a>[安全性實體]
+# <a name="securables"></a>安全性實體
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   安全性實體是一種資源， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 授權系統會管理其存取權。 例如，資料表是安全性實體。 有些安全性實體可以包含在其他安全性實體內，因而建立稱為「範圍」的巢狀階層，以保護它們自己本身的安全。 安全性實體範圍為 **伺服器**、 **資料庫**以及 **結構描述**。  
   
-## <a name="securable-scope-server"></a>安全性實體範圍：[伺服器]  
+## <a name="securable-scope-server"></a>安全性實體範圍：伺服器  
  **伺服器** 安全性實體範圍包含下列安全性實體：  
   
 -   可用性群組  
@@ -42,9 +42,9 @@ ms.locfileid: "67986571"
   
 -   伺服器角色  
   
--   [資料庫]  
+-   資料庫  
   
-## <a name="securable-scope-database"></a>安全性實體範圍：[資料庫]  
+## <a name="securable-scope-database"></a>安全性實體範圍：資料庫  
  **資料庫** 安全性實體範圍包含下列安全性實體：  
   
 -   應用程式角色  
@@ -77,7 +77,7 @@ ms.locfileid: "67986571"
   
 -   對稱金鑰  
   
--   使用者  
+-   User  
   
 ## <a name="securable-scope-schema"></a>安全性實體範圍：結構描述  
  **結構描述** 安全性實體範圍包含下列安全性實體：  
@@ -90,7 +90,7 @@ ms.locfileid: "67986571"
   
     -   Aggregate  
   
-    -   函數  
+    -   函式  
   
     -   程序  
   

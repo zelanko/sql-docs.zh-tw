@@ -13,10 +13,10 @@ ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 31c6ab812081d66980002ed0138f5b1ad63f62b5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298096"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 目的地編輯器 (對應頁面)
@@ -77,7 +77,7 @@ ms.locfileid: "71298096"
  **輸入資料行**  
  檢視您已選取的輸入資料行。  
   
- 若要將不同的輸入資料行對應至相同的目的地資料行，請在清單中選取不同的輸入資料行。 若要移除對應，請選取 [\<忽略>]  ，即可從輸出中排除輸入資料行。  
+ 若要將不同的輸入資料行對應至相同的目的地資料行，請在清單中選取不同的輸入資料行。 若要移除對應，請選取 [**忽略>]\<** ，即可從輸出中排除輸入資料行。  
   
  **目的地資料行**  
  檢視每個可用的目的地資料行，不論該資料行是否已經對應。  

@@ -17,10 +17,10 @@ ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eb1de7efdc8592551343a9424e4ab3b1dd1f69f9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286740"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>使用指令碼工作傳送 HTML 郵件訊息
@@ -33,7 +33,7 @@ ms.locfileid: "71286740"
 > [!NOTE]  
 >  如果您想要建立可更輕鬆地在多個封裝之間重複使用的工作，請考慮使用此指令碼工作範例中的程式碼做為自訂工作的起點。 如需詳細資訊，請參閱 [開發自訂工作](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  下列範例使用 **System.Net.Mail** 命名空間來設定和傳送 HTML 郵件訊息。 指令碼會從套件變數取得電子郵件的收件者、寄件者、主旨以及本文、使用它們來建立新的 **MailMessage** 並將其 **IsBodyHtml** 屬性設定為 **True**。 然後它會從其他套件變數取得 SMTP 伺服器名稱、初始化 **System.Net.Mail.SmtpClient** 的執行個體，然後呼叫其 **Send** 方法以傳送 HTML 訊息。 這個範例會封裝在副程式中傳送功能的訊息，副程式本身可在其他指令碼中重複使用。  
   
 #### <a name="to-configure-this-script-task-example-without-an-smtp-connection-manager"></a>若要不使用 SMTP 連接管理員來設定這個指令碼工作範例  
@@ -60,7 +60,7 @@ ms.locfileid: "71286740"
   
 #### <a name="to-configure-this-script-task-example-with-an-smtp-connection-manager"></a>若要使用 SMTP 連接管理員來設定這個指令碼工作範例  
   
-1.  透過從 **ReadOnlyVariables** 清單中移除 `HtmlEmailServer` 變數，以修改之前設定的指令碼工作。  
+1.  透過從 `HtmlEmailServer`ReadOnlyVariables**清單中移除** 變數，以修改之前設定的指令碼工作。  
   
 2.  取代用以取得伺服器名稱的程式碼行：  
   

@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: a861377924b4bb3cc1c1d2a4b83eba660fbf99e0
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847589"
 ---
 # <a name="iclientvirtualdevicegetcommand-vdi"></a>IClientVirtualDevice::GetCommand (VDI)
@@ -46,7 +46,7 @@ HRESULT IClientVirtualDevice::GetCommand (
 | VD_E_TIMEOUT | 沒有命令可用並發生逾時。 |
 | VD_E_ABORT | 用戶端或伺服器已使用 SignalAbort 強制關閉。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 傳回 VD_E_CLOSE 時，SQL Server 已關閉裝置。 這是正常關機的一部分。 關閉所有裝置之後，用戶端會叫用 IClientVirtualDeviceSet2::Close，以關閉虛擬裝置集。
 

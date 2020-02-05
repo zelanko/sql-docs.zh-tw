@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a49c0a75a67e524475a8a1db7c4905c6490c85fc
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412543"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>記憶體中 OLTP 的 SQL Server 管理物件支援

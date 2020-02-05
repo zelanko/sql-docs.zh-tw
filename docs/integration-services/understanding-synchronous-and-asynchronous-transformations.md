@@ -16,10 +16,10 @@ ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 81ce27c94fbad5e326f636bfcefb633dbf5ebc52
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296472"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>了解同步和非同步轉換

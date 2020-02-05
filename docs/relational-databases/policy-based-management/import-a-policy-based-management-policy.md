@@ -13,10 +13,10 @@ ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ae1a68e63bd9d83cd80ec04b8ad2801b9f238a7b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908652"
 ---
 # <a name="import-a-policy-based-management-policy"></a>匯入原則式管理原則
@@ -40,7 +40,7 @@ ms.locfileid: "72908652"
 ###  <a name="Restrictions"></a> 限制事項  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隨附一些可用來監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的原則。 這些原則預設不會安裝在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 上，但是您可以從預設位置 C:\Program Files\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033 或 C:\Program Files (x86)\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033 (在 64 位元安裝上) 匯入這些原則。
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 msdb 資料庫中 PolicyAdministratorRole 角色的成員資格。  

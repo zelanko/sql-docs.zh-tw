@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 71f1d8a1c25f099338bbdfcc483ab2e8e8061bc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030467"
 ---
 # <a name="unicode-compression-implementation"></a>Unicode 壓縮實作
@@ -49,7 +49,7 @@ ms.locfileid: "68030467"
   
  壓縮所節省的儲存空間主要取決於所壓縮之資料的特性以及資料的地區設定。 下表將列出許多地區設定可達成的空間節省效果。  
   
-|地區設定|壓縮百分比|  
+|Locale|壓縮百分比|  
 |------------|-------------------------|  
 |英文|50%|  
 |德文|50%|  

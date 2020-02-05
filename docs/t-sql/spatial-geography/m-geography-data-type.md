@@ -18,10 +18,10 @@ ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1990361b643aee24f34e6b119f61595a450ceab4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127716"
 ---
 # <a name="m-geography-data-type"></a>M (geography 資料類型)
@@ -36,15 +36,15 @@ ms.locfileid: "68127716"
 .M  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型：**float**  
   
  CLR 類型：**SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 **geography** 執行個體不是 **Point** 以及對於未設定它的任何 **Point** 執行個體而言，這個屬性的值將會是 Null。  
   
- 此屬性是唯讀的。  
+ 這個屬性是唯讀的。  
   
  M 值不會用於程式庫所做的任何計算，也不會透過任何程式庫計算來夾帶。  
   

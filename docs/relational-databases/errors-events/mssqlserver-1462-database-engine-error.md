@@ -12,13 +12,13 @@ ms.assetid: 680e9c1c-a9d6-4765-b601-956d0a83324c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d53f3e8a00d0f93ac9c1738479cec05d2f01a602
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908570"
 ---
-# <a name="mssqlserver1462"></a>MSSQLSERVER_1462
+# <a name="mssqlserver_1462"></a>MSSQLSERVER_1462
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -42,5 +42,5 @@ ms.locfileid: "67908570"
 查詢 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔，找出造成這個錯誤的原因。 嘗試解決失敗的原因，然後在資料庫上繼續執行鏡像。  
   
 ## <a name="see-also"></a>另請參閱  
-[為資料庫鏡像組態疑難排解 &#40;SQL Server&#41;](~/database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
+[疑難排解資料庫鏡像組態 &#40;SQL Server&#41;](~/database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   

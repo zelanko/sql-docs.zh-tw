@@ -11,10 +11,10 @@ ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4a84025efefa397cd1f33a706073faceb0ad70ae
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292123"
 ---
 # <a name="request-log"></a>要求記錄檔
@@ -52,13 +52,13 @@ ms.locfileid: "71292123"
  **型別**  
  顯示記錄的事件類型。 下表列出可能的事件類型。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |S|成功訊息。|  
 |E|錯誤訊息|  
 |W|警告訊息。|  
 |I|參考資訊。|  
-|只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時，|作業已中止。|  
+|A|作業已中止。|  
   
  **訊息**  
  顯示與記錄之事件相關聯的訊息文字。  

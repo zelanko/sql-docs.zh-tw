@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b12d35d27fd4c90603cce6d798d8011ad1e65b81
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 2b66307976381ceb8085f72e553e010ee60e2974
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710837"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287548"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>複寫資料分割資料表及索引
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "71710837"
   
  複寫會在初始同步處理期間將物件複製到訂閱者。 如果資料分割配置使用 PRIMARY 以外的檔案群組，這些檔案群組必須在初始同步處理之前存在於訂閱者上。  
   
- 在初始化訂閱者之後，資料變更會傳播到訂閱者，並套用到適當的資料分割。 但是，不支援資料分割配置的變更。 異動複寫與合併式複寫不支援複寫下列命令：ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME 或 ALTER INDEX 的 REBUILD WITH PARTITION 陳述式。 這些命令所關聯的變更不會自動複寫到訂閱者。 使用者必須在訂閱者中手動進行類似的變更。  
+ 在初始化訂閱者之後，資料變更會傳播到訂閱者，並套用到適當的資料分割。 但是，不支援資料分割配置的變更。 交易式及合併複寫無法複寫下列命令：ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME 或 ALTER INDEX 的 REBUILD WITH PARTITION 陳述式。 這些命令所關聯的變更不會自動複寫到訂閱者。 使用者必須在訂閱者中手動進行類似的變更。  
   
 ## <a name="replication-support-for-partition-switching"></a>資料分割切換的複寫支援  
  資料表資料分割的其中一個重要優點，就是能夠快速及有效率地在資料分割之間移動資料子集。 資料的移動是利用 SWITCH PARTITION 命令。 根據預設，當啟用資料表進行複寫時，會基於以下理由而封鎖 SWITCH PARTITION 作業：  

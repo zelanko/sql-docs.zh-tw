@@ -13,13 +13,13 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f8c5d7ac822546d8334f1a174684f35733d9571b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116486"
 ---
-# <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
+# <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 顯示 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 資料庫中的資料列數目、保留的磁碟空間和 特定的資料表或所有資料表使用的磁碟空間。
@@ -48,28 +48,28 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 ## <a name="result-sets"></a>結果集  
 這是所有資料表的結果集。
   
-|「資料行」|資料類型|Description|  
+|資料行|資料類型|描述|  
 |------------|---------------|-----------------|  
 |reserved_space|BIGINT|資料庫使用的總空間 (KB)。|  
 |data_space|BIGINT|資料使用的空間 (KB)。|  
 |index_space|BIGINT|索引使用的空間 (KB)。|  
 |unused_space|BIGINT|保留未使用的空間 (KB)。|  
-|pdw_node_id|INT|資料使用的計算節點。|  
+|pdw_node_id|int|資料使用的計算節點。|  
   
 這是單一資料表的結果集。
   
-|「資料行」|資料類型|Description|範圍|  
+|資料行|資料類型|描述|範圍|  
 |------------|---------------|-----------------|-----------|  
 |rows|BIGINT|資料列數目。||  
 |reserved_space|BIGINT|為物件保留的總空間 (KB)。||  
 |data_space|BIGINT|資料使用的空間 (KB)。||  
 |index_space|BIGINT|索引使用的空間 (KB)。||  
 |unused_space|BIGINT|保留未使用的空間 (KB)。||  
-|pdw_node_id|INT|用於報告空間使用量的計算節點。||  
-|distribution_id|INT|用於報告空間使用量的分佈。|複寫資料表的值為 -1。|  
+|pdw_node_id|int|用於報告空間使用量的計算節點。||  
+|distribution_id|int|用於報告空間使用量的分佈。|複寫資料表的值為 -1。|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="a-dbcc-pdwshowspaceused-basic-syntax"></a>A. DBCC PDW_SHOWSPACEUSED 基本語法  
+### <a name="a-dbcc-pdw_showspaceused-basic-syntax"></a>A. DBCC PDW_SHOWSPACEUSED 基本語法  
 下列範例示範的多種方式可用來顯示 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 資料庫中的資料列數目、保留的磁碟空間和 FactInternetSales 資料表使用的磁碟空間。
   
 ```sql

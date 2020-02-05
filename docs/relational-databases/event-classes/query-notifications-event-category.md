@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7f336b68b53f95d839eede56fac206ebd390f9e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908344"
 ---
 # <a name="query-notifications-event-category"></a>查詢通知事件類別目錄
@@ -38,7 +38,7 @@ ms.locfileid: "67908344"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)   
- [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
+ [[SQL Server Profiler]](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

@@ -21,10 +21,10 @@ ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 06ab8c327709fa6bfb504217bdd083aaed98f870
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066004"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
@@ -55,7 +55,7 @@ FOR CONVERSATION
  指定要變更的交談優先權名稱。 此名稱必須參考目前資料庫中的交談優先權。  
   
  SET  
- 指定用來判斷交談優先權是否套用到交談的準則。 SET 為必要項目且必須至少包含一個準則：CONTRACT_NAME、LOCAL_SERVICE_NAME、REMOTE_SERVICE_NAME 或 PRIORITY_LEVEL。  
+ 指定用來判斷交談優先權是否套用到交談的準則。 SET 為必要項目，而且至少必須包含一個準則：CONTRACT_NAME、LOCAL_SERVICE_NAME、REMOTE_SERVICE_NAME 或 PRIORITY_LEVEL。  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
  指定合約名稱，以用來做為判斷交談優先權是否要套用到交談的準則。 *ContractName* 是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 識別碼，而且必須指定目前資料庫中的合約名稱。  
@@ -107,7 +107,7 @@ FOR CONVERSATION
   
  如果未指定 PRIORITY_LEVEL，則此交談優先權的優先權等級屬性將不會變更。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  ALTER BROKER PRIORITY 所變更的任何屬性都不會套用到現有的交談。 現有的交談會繼續使用在啟動時所指派的優先權。  
   
  如需詳細資訊，請參閱 [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)。  

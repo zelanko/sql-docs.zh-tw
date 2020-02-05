@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: daa05543715f81511aa0faa8467fc78819999404
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075893"
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>記憶體中 OLTP 支援的資料類型
@@ -39,7 +39,7 @@ ms.locfileid: "68075893"
 ## <a name="notable-supported-data-types"></a>值得注意的支援資料類型  
  記憶體中 OLTP 的功能支援大多數的資料類型。 以下是少數值得格外注意的資料類型︰  
   
-|字串與二進位類型|如需詳細資訊|  
+|字串與二進位類型|取得詳細資訊|  
 |-----------------------------|--------------------------|  
 |binary 和 varbinary*|[binary 和 varbinary &#40;Transact-SQL&#41;](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|  
 |char 和 varchar*|[char 和 varchar &#40;Transact-SQL&#41;](../../t-sql/data-types/char-and-varchar-transact-sql.md)|  
@@ -81,7 +81,7 @@ SELECT
 ### <a name="other-data-types"></a>其他資料類型
 
 
-|其他類型|如需詳細資訊|  
+|其他類型|取得詳細資訊|  
 |-----------------|--------------------------|  
 |資料表類型|[記憶體最佳化資料表變數](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)|  
   

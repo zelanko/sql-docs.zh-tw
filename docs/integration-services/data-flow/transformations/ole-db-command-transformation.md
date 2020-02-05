@@ -16,10 +16,10 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 09850707b83481909a881dcefdf00e710e6a8790
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291241"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 命令轉換
@@ -37,7 +37,7 @@ ms.locfileid: "71291241"
   
 -   指定預設字碼頁。  
   
- SQL 陳述式通常包含參數。 參數值儲存在轉換輸入的外部資料行內，且將輸入資料行對應到外部資料行會將其同時對應到參數。 例如，若要利用資料列在 **ProductKey** 資料行中的值找到 **DimProduct** 資料表中的資料列，然後予以刪除，您可以將名為 **Param_0** 的外部資料行對應到名為 **ProductKey** 的輸入資料行，然後執行 SQL 陳述式 `DELETE FROM DimProduct WHERE ProductKey = ?`。 OLE DB 命令轉換提供了參數名稱，您無法對它們進行修改。 這些參數名稱為 **Param_0**、**Param_1** 等。  
+ SQL 陳述式通常包含參數。 參數值儲存在轉換輸入的外部資料行內，且將輸入資料行對應到外部資料行會將其同時對應到參數。 例如，若要利用資料列在 **ProductKey** 資料行中的值找到 **DimProduct** 資料表中的資料列，然後予以刪除，您可以將名為 **Param_0** 的外部資料行對應到名為 **ProductKey** 的輸入資料行，然後執行 SQL 陳述式 `DELETE FROM DimProduct WHERE ProductKey = ?`。 OLE DB 命令轉換提供了參數名稱，您無法對它們進行修改。 這些參數名稱為 **Param_0**、 **Param_1**等。  
   
  如果您使用 [進階編輯器]  對話方塊設定 OLE DB 命令轉換，SQL 陳述式中的參數可自動對應到轉換輸入的外部資料行上，按一下 [重新整理]  按鈕可以定義每個參數的特性。 但是，如果 OLE DB 命令轉換使用的 OLE DB 提供者不支援從參數中衍生參數資訊，您必須手動設定外部資料行。 這表示您必須將每個參數的資料行加入轉換的外部輸入，更新資料行名稱以使用類似 **Param_0**的名稱，指定 DBParamInfoFlags 屬性的值，並將包含參數值的輸入資料行對應到外部資料行。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "71291241"
   
 8.  在 [字串值編輯器]  中，輸入參數化 SQL 陳述式，並使用問號 (?) 作為每個參數的參數標記。  
   
-9. 按一下 **[重新整理]** 。 當您按一下 [重新整理]  時，轉換會在「外部資料行」集合中為每個參數建立資料行，並設定 DBParamInfoFlags 屬性。  
+9. 按一下 [重新整理]  。 當您按一下 [重新整理]  時，轉換會在「外部資料行」集合中為每個參數建立資料行，並設定 DBParamInfoFlags 屬性。  
   
 10. 按一下 **[輸入與輸出屬性]** 索引標籤。  
   

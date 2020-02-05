@@ -14,10 +14,10 @@ ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 286513b2c78c87a1a0275b94d3e09ad961c4ff8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026625"
 ---
 # <a name="load-xml-data"></a>載入 XML 資料
@@ -33,7 +33,7 @@ ms.locfileid: "68026625"
 ## <a name="bulk-loading-xml-data"></a>大量載入 XML 資料  
  您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的大量載入功能 (例如 bcp) 來將 XML 資料大量載入伺服器中。 OPENROWSET 可讓您將資料從檔案載入至 XML 資料行中。 下列範例將說明這一點。  
   
-##### <a name="example-loading-xml-from-files"></a>範例從檔案載入 XML  
+##### <a name="example-loading-xml-from-files"></a>範例：從檔案載入 XML  
  此範例顯示如何在資料表 T 中插入資料列。XML 資料行的值從檔案 C:\MyFile\xmlfile.xml 載入成 CLOB，並且在整數資料行中提供值 10。  
   
 ```  
@@ -53,7 +53,7 @@ FROM    (SELECT *
   
 -   若要使用明確的編碼，請使用 **varbinary()** 類型 (與字碼頁沒有互動) 或使用適當字碼頁的字串類型。 然後再將資料指派給 XML 資料行、變數或參數。  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>範例明確地指定編碼方式  
+### <a name="example-explicitly-specifying-an-encoding"></a>範例：明確地指定編碼方式  
  假設您將 XML 文件 vcdoc 儲存成沒有明確 XML 宣告的 **varchar(max)** 。 下列陳述式會加入具有編碼 "iso8859-1" 的 XML 宣告、串連 XML 文件、將結果轉換成 **varbinary(max)** ，位元組表示法因而保存下來，最後再轉換成 XML。 這樣可以讓 XML 處理器依據所指定的編碼 "iso8859-1" 來剖析資料，並針對字串值來產生對應的 UTF-16 表示法。  
   
 ```  

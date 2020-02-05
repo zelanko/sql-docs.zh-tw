@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0cfd6c1c64c4e5d99ebddc8d610d7c6d56015b6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141145"
 ---
 # <a name="collation-precedence"></a>定序優先順序
@@ -145,7 +145,7 @@ Msg 448, Level 16, State 9, Line 2
 Cannot resolve collation conflict between 'Latin1_General_CS_AS' and 'Greek_CI_AS' in equal to operation.  
 ```  
   
-#### <a name="explicit-label-vs-implicit-label"></a>明確標籤與隱含標籤  
+#### <a name="explicit-label-vs-implicit-label"></a>明確標籤和隱含標籤  
  下列查詢中的述詞是以 `greek_ci_as` 定序來評估的，因為右側運算式有明確的標籤。 它的優先順序比左側運算式的隱含標籤高。  
   
 ```sql  

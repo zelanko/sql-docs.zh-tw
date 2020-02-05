@@ -10,10 +10,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bd4c7e7bb150a0eafbd855e1703713f3781bdc49
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710458"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 功能和限制
@@ -49,7 +49,7 @@ ms.locfileid: "71710458"
 |**運算子類型**|**可推送到 Hadoop**|**可推送到 Blob 儲存體**|
 |資料行投影|是|否|
 |述詞|是|否|
-|彙總|Partial|否|
+|彙總|部分|否|
 |外部資料表之間的聯結|否|否|
 |外部資料表和本機資料表之間的聯結|否|否|
 |排序|否|否|

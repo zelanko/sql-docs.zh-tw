@@ -11,10 +11,10 @@ ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ba6298d5ead650b5e6f6bc3cb68d0c5926624741
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295863"
 ---
 # <a name="microsoft-connector-for-sap-bw-components"></a>Microsoft Connector for SAP BW 元件
@@ -37,13 +37,13 @@ ms.locfileid: "71295863"
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  
   
 ## <a name="in-this-section"></a>本節內容  
- [SAP BW Connection Manager](../integration-services/connection-manager/sap-bw-connection-manager.md)  
+ [SAP BW 連線管理員](../integration-services/connection-manager/sap-bw-connection-manager.md)  
  描述 SAP BW 連接管理員。 此連接管理員會將 SAP BW 來源或 SAP BW 目的地連接至 SAP Netweaver BW 版本 7 系統。  
   
- [SAP BW Source](../integration-services/data-flow/sap-bw-source.md)  
+ [SAP BW 來源](../integration-services/data-flow/sap-bw-source.md)  
  描述可讓您從 SAP Netweaver BW 系統中擷取資料的 SAP BW 來源。  
   
- [SAP BW Destination](../integration-services/data-flow/sap-bw-destination.md)  
+ [SAP BW 目的地](../integration-services/data-flow/sap-bw-destination.md)  
  描述可讓您將資料載入 SAP Netweaver BW 系統中的 SAP BW 目的地。  
   
   

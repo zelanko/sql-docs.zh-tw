@@ -19,10 +19,10 @@ ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e62fd82b302576dfbaf45cbb8073c2e94f7a67e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68096969"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>檢視儲存的 XML 結構描述集合

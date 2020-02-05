@@ -13,10 +13,10 @@ ms.assetid: 3967c3ed-280a-4de8-a2ce-393e82745a7b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3cccccebcbbd9054752aa8aa4e65f3f2bc17b342
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013154"
 ---
 # <a name="allow-updates-server-configuration-option"></a>允許更新伺服器組態選項

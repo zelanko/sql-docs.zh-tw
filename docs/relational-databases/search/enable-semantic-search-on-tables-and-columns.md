@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 849cd64d336cf9289e04cd770eb51175c5cbebbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082903"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>在資料表和資料行上啟用語意搜尋
@@ -43,7 +43,7 @@ ms.locfileid: "68082903"
   
 -   您可以針對具有支援全文檢索索引之任何資料類型的資料行建立語意索引。 如需詳細資訊，請參閱 [建立及管理全文檢索索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)。  
   
--   您可以指定支援 **varbinary(max)** 資料行之全文檢索索引的任何文件類型。 如需詳細資訊，請參閱本主題中的[如何：決定可以建立索引的文件類型](#doctypes)。  
+-   您可以指定支援 **varbinary(max)** 資料行之全文檢索索引的任何文件類型。 如需詳細資訊，請參閱本主題的＜ [如何：決定可以進行索引的文件類型](#doctypes) ＞。  
   
 -   語意索引會針對您所選取的資料行建立兩種索引類型：主要片語的索引，以及文件相似度的索引。 當您啟用語意索引時，無法單獨選取其中一種索引類型。 不過，您可以個別查詢這兩個索引。 如需詳細資訊，請參閱 [使用語意搜尋找到文件中的主要片語](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) 和 [使用語意搜尋尋找相似及相關的文件](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
   
@@ -131,7 +131,7 @@ GO
   
 -   若要將語意索引加入已啟用全文檢索索引的資料行，請使用 **ADD STATISTICAL_SEMANTICS** 選項。 在單一 **ALTER** 陳述式中，您只能將語意索引加入至一個資料行。  
   
- **範例：將語意索引新增至已經具有全文檢索索引的資料行**  
+ **範例：將語意索引加入至已經具有全文檢索索引的資料行**  
   
  下列範例會針對 AdventureWorks2012 範例資料庫中的 **Production.Document** 資料表改變現有的全文檢索索引。 此範例會針對 **Production.Document** 資料表的 **Document** 資料行 (已經具有全文檢索索引) 加入語意索引。 此範例會指定不要自動重新擴展索引。  
   
@@ -158,7 +158,7 @@ GO
 當您使用 **ALTER FULLTEXT INDEX** 陳述式來改變現有的全文檢索索引時，可以卸除語意索引。 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的各種對話方塊來卸除語意索引。  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>使用 Transact-SQL 卸除語意索引  
-若只要從一或多個資料行卸除語意索引，請使用 **ALTER COLUMN**_column\_name_**DROP STATISTICAL_SEMANTICS** 選項呼叫 **ALTER FULLTEXT INDEX** 陳述式。 在單一 **ALTER** 陳述式中，您可以從多個資料行中卸除索引。  
+若只要從一或多個資料行卸除語意索引，請使用 **ALTER COLUMN** **column**name _\_DROP STATISTICAL_SEMANTICS_ 選項呼叫 **ALTER FULLTEXT INDEX** 陳述式。 在單一 **ALTER** 陳述式中，您可以從多個資料行中卸除索引。  
   
 ```sql  
 USE database_name  
@@ -170,7 +170,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-若要從某個資料行同時卸除全文檢索和語意索引，請使用 **ALTER COLUMN**_column\_name_**DROP** 選項呼叫 **ALTER FULLTEXT INDEX** 陳述式。  
+若要從某個資料行同時卸除全文檢索和語意索引，請使用 **ALTER COLUMN** **column**name _\_DROP_ 選項呼叫 **ALTER FULLTEXT INDEX** 陳述式。  
   
 ```sql  
 USE database_name  
@@ -194,7 +194,7 @@ GO
 ## <a name="check-whether-semantic-search-is-enabled-on-database-objects"></a>檢查資料庫物件上是否啟用語意搜尋  
 ### <a name="is-semantic-search-enabled-for-a-database"></a>是否已針對資料庫啟用語意搜尋？
   
- 查詢 [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 中繼資料函數的 **IsFullTextEnabled** 屬性。  
+ 查詢 **DATABASEPROPERTYEX &#40;Transact-SQL&#41;** 中繼資料函數的 [IsFullTextEnabled](../../t-sql/functions/databasepropertyex-transact-sql.md) 屬性。  
   
  傳回值 1 表示已針對資料庫啟用全文檢索搜尋和語意搜尋，傳回值 0 表示未啟用這兩個搜尋。  
   
@@ -205,7 +205,7 @@ GO
   
 ### <a name="is-semantic-search-enabled-for-a-table"></a>是否已針對資料表啟用語意搜尋？  
  
- 查詢 [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md) 中繼資料函數的 **TableFullTextSemanticExtraction** 屬性。  
+ 查詢 **OBJECTPROPERTYEX &#40;Transact-SQL&#41;** 中繼資料函數的 [TableFullTextSemanticExtraction](../../t-sql/functions/objectpropertyex-transact-sql.md) 屬性。  
   
  傳回值 1 表示已針對資料表啟用語意搜尋，傳回值 0 表示未啟用此搜尋。  
   
@@ -218,7 +218,7 @@ GO
    
  若要判斷是否已針對特定資料行啟用語意搜尋：  
   
--   查詢 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md) 中繼資料函數的 **StatisticalSemantics** 屬性。  
+-   查詢 **COLUMNPROPERTY &#40;Transact-SQL&#41;** 中繼資料函數的 [StatisticalSemantics](../../t-sql/functions/columnproperty-transact-sql.md) 屬性。  
   
      傳回值 1 表示已針對資料行啟用語意搜尋，傳回值 0 表示未啟用此搜尋。  
   
@@ -256,7 +256,7 @@ GO
   
  下列是語意索引所支援的語言。 此清單代表 [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md) 目錄檢視的輸出 (依據 LCID 排序)。  
   
-|語言|LCID|  
+|Language|LCID|  
 |--------------|----------|  
 |德文|1031|  
 |英文 (美國)|1033|  
@@ -274,7 +274,7 @@ GO
   
  如果您想要索引的文件類型不在支援的類型清單中，則可能必須尋找、下載並安裝其他篩選。 如需詳細資訊，請參閱 [檢視或變更已註冊的篩選與斷詞工具](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)。  
   
-##  <a name="BestPracticeFilegroup"></a> 最佳做法：考慮針對全文檢索索引和語意索引建立個別的檔案群組  
+##  <a name="BestPracticeFilegroup"></a> 最佳做法： 請考慮建立個別的檔案群組，全文檢索和語意索引  
  如果您有磁碟空間配置的顧慮，請考慮針對全文檢索和語意索引建立個別的檔案群組。 語意索引與全文檢索索引會建立在相同的檔案群組中。 完整擴展的語意索引可能會包含大量資料。  
  
 ##  <a name="IssueNoResults"></a> 問題：針對特定資料行進行搜尋時未傳回結果  

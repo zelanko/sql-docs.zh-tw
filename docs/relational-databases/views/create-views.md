@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: db933c5382049767fcb205b8daa2356a497f3d43
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909479"
 ---
 # <a name="create-views"></a>建立檢視表
@@ -51,7 +51,7 @@ ms.locfileid: "72909479"
   
  檢視最多可有 1,024 個資料行。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  至少必須有資料庫中的 CREATE VIEW 權限，以及正在建立之檢視表所在之結構描述的 ALTER 權限。  
@@ -64,7 +64,7 @@ ms.locfileid: "72909479"
   
 2.  以滑鼠右鍵按一下 [檢視]  資料夾，然後按一下 [新增檢視…]  。  
   
-3.  在 **[加入資料表]** 對話方塊中，從下列索引標籤選取您要包含在新檢視中的元素：[資料表]、[檢視]、[函數] 與 [同義字]。  
+3.  在 **[加入資料表]** 對話方塊中，從下列索引標籤選取您要包含在新檢視中的元素：[資料表]、[檢視]、[函數] 和 [同義字]。  
   
 4.  按一下 **[加入]** ，然後按一下 **[關閉]** 。  
   

@@ -18,10 +18,10 @@ ms.assetid: 4dc5a004-7a53-4cce-81dd-9f5e1dd0db78
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5663bc7a7236a49b6b97c41ed5c96e53f337c186
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930176"
 ---
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (geometry 資料類型)
@@ -36,15 +36,15 @@ ms.locfileid: "67930176"
 .STCentroid ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回型別：**SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
- 開放式地理空間協會 (OGC) 類型：**點**  
+ 開放地理空間協會 (OGC) 類型：**Point**  
   
-## <a name="remarks"></a>Remarks  
- 如果 **geometry** 執行個體不是 **Polygon, CurvePolygon** 或 **MultiPolygon** 型別，`STCentroid()` 會傳回 null。  
+## <a name="remarks"></a>備註  
+ 如果 `STCentroid()`geometry**執行個體不是**Polygon, CurvePolygon**或**MultiPolygon **型別，** 會傳回 null。  
   
 ## <a name="examples"></a>範例  
   

@@ -18,10 +18,10 @@ ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d9244a2833a75925fab1f00d6ce20915f5ceaafb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930330"
 ---
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull (geometry 資料類型)
@@ -36,12 +36,12 @@ ms.locfileid: "67930330"
 .STConvexHull ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回型別：**SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  `STConvexHull()` 會傳回包含所指定 **geometry** 執行個體的最小凸面多邊形。 **Points** 或共線 **LineString** 執行個體將會產生與輸入相同類型的執行個體。  
   
 ## <a name="examples"></a>範例  

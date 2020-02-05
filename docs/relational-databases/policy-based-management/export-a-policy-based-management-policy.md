@@ -13,10 +13,10 @@ ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 241cd0e4ec225c6627bb47ff6a4312f42aba26d1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908625"
 ---
 # <a name="export-a-policy-based-management-policy"></a>匯出原則式管理原則
@@ -35,7 +35,7 @@ ms.locfileid: "72908625"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 msdb 資料庫中 PolicyAdministratorRole 角色的成員資格。  
@@ -56,5 +56,5 @@ ms.locfileid: "72908625"
   
 6.  在 **[匯出原則]** 對話方塊的位址列中，輸入檔案的路徑和名稱。 或者，在對話方塊的導覽窗格中尋找適當的檔案位置，然後在 **[檔案名稱]** 方塊中輸入 XML 檔案的名稱。  
   
-7.  完成後，請按一下 **[儲存]** 。  
+7.  完成時，按一下 [儲存]  。  
 

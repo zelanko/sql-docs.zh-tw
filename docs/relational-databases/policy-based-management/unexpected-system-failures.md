@@ -13,10 +13,10 @@ ms.assetid: 1679bf9e-a2ef-4f90-8907-a002f7341a7d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8fb34965fe6392ac09b2582f5d840f0da90294d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021474"
 ---
 # <a name="unexpected-system-failures"></a>非預期的系統失敗

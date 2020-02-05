@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 51ad6849489392483dba8db7c3f7688e939d53c7
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0770615fa308085ca19996cffe0b32e709fb022e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75320015"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287100"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>SQL Server Management Studio 複寫對話方塊
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

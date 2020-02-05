@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: af24aff4bbb8f0eefa14363453e962c0a90d610e
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847209"
 ---
 # <a name="iservervirtualdeviceset2opendevice-vdi"></a>IServerVirtualDeviceSet2::OpenDevice (VDI)
@@ -33,7 +33,7 @@ HRESULT IServerVirtualDeviceSet2::OpenDevice (
 
 ## <a name="parameters"></a>參數
 
-*lpName* 這是由 BACKUP 或 RESTORE 命令的第一個 VIRTUAL_DEVICE= 子句提供。 此名稱可作為索引鍵，以存取用戶端所建立的虛擬裝置集。
+*lpName* 這是由 BACKUP 或 RESTORE 命令的第一個 VIRTUAL_DEVICE= 子句所提供。 此名稱可作為索引鍵，以存取用戶端所建立的虛擬裝置集。
 
 *ppVirtualDevice* 這可用來傳回虛擬裝置介面。
 
@@ -44,7 +44,7 @@ HRESULT IServerVirtualDeviceSet2::OpenDevice (
 | NOERROR | 此函數已成功。 |
 | VD_E_OPEN |所有裝置都已開啟。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 每個呼叫都會傳回下一個未開啟的裝置。 函式呼叫次數只能與虛擬裝置集設定中指定的裝置數目相等。
 

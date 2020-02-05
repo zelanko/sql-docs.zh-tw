@@ -14,10 +14,10 @@ ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8723d9750eb03eda14a7983cba8919ea8e92eb81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133615"
 ---
 # <a name="management-data-warehouse"></a>管理資料倉儲
@@ -39,7 +39,7 @@ ms.locfileid: "68133615"
   
  下表描述核心結構描述中的資料庫資料表。 這些資料庫資料表可讓資料收集器追蹤資料的來源、繼承者，以及何時將資料上傳到資料倉儲。  
   
-|資料表名稱|Description|  
+|資料表名稱|描述|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|儲存有關管理資料倉儲報表應該如何群組和彙總效能計數器的資訊。|  
 |core.snapshots_internal|識別每個新的快照集。 每當上傳封裝開始上傳新的資料批次時，就會在這個資料表中插入新的資料列。|  
@@ -109,7 +109,7 @@ ms.locfileid: "68133615"
   
  如果要取得資料庫資料表資料行的詳細資料類型和內容資訊，請讀取每一個資料表適合之資料收集器預存程序的文件集。  
   
-### <a name="best-practices"></a>最佳作法  
+### <a name="best-practices"></a>最佳做法  
  當使用管理資料倉儲時，我們建議您遵循以下最佳作法：  
   
 -   請勿修改管理資料倉儲資料表的中繼資料，除非您要加入新的收集器型別。  

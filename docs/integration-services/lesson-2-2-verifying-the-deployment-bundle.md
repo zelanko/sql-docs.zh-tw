@@ -1,5 +1,5 @@
 ---
-title: 步驟 2:確認部署配套 | Microsoft Docs
+title: 步驟 2：確認部署配套 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ba8767f4d1b4f8c38638dc1d12adb1a351511fc7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283600"
 ---
 # <a name="lesson-2-2---verifying-the-deployment-bundle"></a>課程 2-2 - 確認部署配套

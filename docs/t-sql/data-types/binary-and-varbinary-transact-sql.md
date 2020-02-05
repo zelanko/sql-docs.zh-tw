@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f844874da3ba4c7a644331f521293e1c0f94fed5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940245"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary 和 varbinary (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "67940245"
   
 **varbinary** [ ( _n_ | **max**) ] 可變長度的二進位資料。 _n_ 可以是從 1 到 8,000 之間的值。 **max** 表示儲存體大小上限是 2^31-1 個位元組。 儲存體大小是輸入資料的實際長度再加上 2 位元組。 輸入的資料有可能是 0 位元組。 **varbinary** 的 ANSI SQL 同義字是 **binary varying**。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 當資料定義或變數宣告陳述式中未指定 _n_ 時，預設長度為 1。 當 _n_ 不是由 CAST 函式指定時，預設長度為 30。
 
 | 資料類型 | 使用時機... |
@@ -92,7 +92,7 @@ GO
 最後的結果是 `57921`，不是 `123457`。
   
 > [!NOTE]  
->  於不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中在任何資料類型與 **binary** 資料類型之間轉換，不保證結果都會一樣。  
+>  於不同 **版本中在任何資料類型與**binary[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型之間轉換，不保證結果都會一樣。  
   
 ## <a name="see-also"></a>另請參閱
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  

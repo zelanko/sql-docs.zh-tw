@@ -16,10 +16,10 @@ ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 25424e7e41a2d1fdf1efb88f01c53f24902e7072
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030720"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
@@ -28,7 +28,7 @@ ms.locfileid: "68030720"
   
 ## <a name="primary-server-tables"></a>主要伺服器資料表  
   
-|Table|Description|  
+|Table|描述|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|儲存警示作業識別碼。 若未設定遠端監視伺服器，則此資料表只會用於主要伺服器。|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|儲存與此主要伺服器關聯之記錄傳送作業的錯誤詳細資料。|  
@@ -39,7 +39,7 @@ ms.locfileid: "68030720"
   
 ## <a name="primary-server-stored-procedures"></a>主要伺服器預存程序  
   
-|預存程序|Description|  
+|預存程序|描述|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)|設定記錄傳送組態的主要資料庫，其中包括備份作業、本機監視記錄，以及遠端監視記錄。|  
 |[sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)|新增次要資料庫名稱到現有主要資料庫。|  
@@ -53,7 +53,7 @@ ms.locfileid: "68030720"
   
 ## <a name="secondary-server-tables"></a>次要伺服器資料表  
   
-|Table|Description|  
+|Table|描述|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|儲存警示作業識別碼。 若未設定遠端監視伺服器，則此資料表只會用於次要伺服器。|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|儲存與此次要伺服器關聯之記錄傳送作業的錯誤詳細資料。|  
@@ -67,7 +67,7 @@ ms.locfileid: "68030720"
   
 ## <a name="secondary-server-stored-procedures"></a>次要伺服器預存程序  
   
-|預存程序|Description|  
+|預存程序|描述|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)|設定次要資料庫以進行記錄傳送。|  
 |[sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md)|設定主要資訊、加入本機和遠端監視器連結，以及在次要伺服器上建立所指定主要資料庫的複製和還原作業。|  
@@ -82,7 +82,7 @@ ms.locfileid: "68030720"
   
 ## <a name="monitor-server-tables"></a>監視伺服器資料表  
   
-|Table|Description|  
+|Table|描述|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|儲存警示作業識別碼。|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|儲存記錄傳送作業的錯誤詳細資料。|  
@@ -92,7 +92,7 @@ ms.locfileid: "68030720"
   
 ## <a name="monitor-server-stored-procedures"></a>監視伺服器預存程序  
   
-|預存程序|Description|  
+|預存程序|描述|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md)|建立記錄傳送警示作業 (若尚未建立)。|  
 |[sp_delete_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)|移除記錄傳送警示作業 (若沒有關聯的主要資料庫)。|  

@@ -13,10 +13,10 @@ ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 990797242acb57f36530315c416011325cce6358
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286421"
 ---
 # <a name="using-variables-in-the-script-component"></a>在指令碼元件中使用變數
@@ -37,10 +37,10 @@ ms.locfileid: "71286421"
   
  `Dim myIntegerVariableValue As Integer = Me.Variables.MyIntegerVariable`  
   
- 您也可以使用透過呼叫 `Me.VariableDispenser` 來存取的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> 屬性，以使用指令碼元件中的變數。 在這種情況下，您不是為變數使用具類型和具名的存取子屬性，而是直接存取變數。 在使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A>時，您必須在自己的程式碼中處理變數值的鎖定語意和資料類型的轉換。 如果您想要使用在設計階段無法使用，但是會在執行階段以程式設計方式建立的變數，就必須使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> 屬性，而不是具名與具類型的存取子屬性。  
+ 您也可以使用透過呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> 來存取的 `Me.VariableDispenser` 屬性，以使用指令碼元件中的變數。 在這種情況下，您不是為變數使用具類型和具名的存取子屬性，而是直接存取變數。 在使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A>時，您必須在自己的程式碼中處理變數值的鎖定語意和資料類型的轉換。 如果您想要使用在設計階段無法使用，但是會在執行階段以程式設計方式建立的變數，就必須使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> 屬性，而不是具名與具類型的存取子屬性。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 變數](../../../integration-services/integration-services-ssis-variables.md)   
- [在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [在套件中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

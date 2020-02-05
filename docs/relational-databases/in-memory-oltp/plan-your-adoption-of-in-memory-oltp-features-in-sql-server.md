@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f899a8fc1ad5a316784a83cb13f29acb84a01b2b
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412553"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>規劃在 SQL Server 中採用記憶體內部 OLTP 功能
@@ -204,7 +204,7 @@ READPAST 提示在一些案例中很有幫助，例如數個工作階段全都�
 
 當您第一次實作記憶體最佳化資料表時，傳統的 b 型樹狀目錄、非叢集索引經常是相當直覺且簡單的選擇。 稍後，在您看到應用程式的執行方式之後，可以考慮交換另一種索引類型。
 
-有兩個特殊類型的索引需要在經記憶體最佳化的資料表內容中討論：雜湊索引和資料行存放區索引。
+兩個特殊類型的索引需要記憶體最佳化資料表的內容討論︰雜湊索引和資料行存放區索引。
 
 如需記憶體最佳化資料表上的索引概觀，請參閱：
 
@@ -283,7 +283,7 @@ READPAST 提示在一些案例中很有幫助，例如數個工作階段全都�
 
 
 
-## <a name="f-application-design-transactions-and-retry-logic"></a>F. 應用程式設計：交易和重試邏輯
+## <a name="f-application-design-transactions-and-retry-logic"></a>F. 應用程式設計︰交易和重試邏輯
 
 牽涉到記憶體最佳化資料表的交易可能會依賴另一個牽涉到相同資料表的交易。 如果相依交易計數到達或超過允許的最大值，所有相依交易都會失敗。
 

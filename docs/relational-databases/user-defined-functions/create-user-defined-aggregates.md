@@ -14,10 +14,10 @@ ms.assetid: c278b746-6323-4b32-b460-239915acc067
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8e4291cbe79bf0eea51fdf10e2c13fea7f1e23a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68138354"
 ---
 # <a name="create-user-defined-aggregates"></a>建立使用者定義彙總

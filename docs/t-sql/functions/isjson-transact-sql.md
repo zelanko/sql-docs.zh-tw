@@ -18,10 +18,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 0d3060af2114f62c1c21b25e79abf4714acfbe4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109446"
 ---
 # <a name="isjson-transact-sql"></a>ISJSON (Transact-SQL)
@@ -46,7 +46,7 @@ ISJSON ( expression )
   
  不會傳回錯誤。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **ISJSON** 不會檢查相同層級中索引鍵的唯一性。  
   
 ## <a name="examples"></a>範例  

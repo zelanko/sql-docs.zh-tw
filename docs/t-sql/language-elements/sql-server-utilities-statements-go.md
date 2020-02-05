@@ -20,10 +20,10 @@ ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 48bca691f10822176c5169cf6bf9a052d7675478
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072302"
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server 公用程式陳述式 - GO
@@ -31,7 +31,7 @@ ms.locfileid: "68072302"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供不是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，但 **sqlcmd** 和 **osql** 公用程式以及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 程式碼編輯器都能辨識的命令。 這些命令可用來簡化批次和指令碼的可讀性與執行。  
   
-  GO 會向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式發出 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式批次結束的信號。  
+  GO 會向 [!INCLUDE[tsql](../../includes/tsql-md.md)] 公用程式發出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式批次結束的信號。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +45,7 @@ GO [count]
  *計數*  
  這是正整數。 在 GO 之前的批次將會執行指定的次數。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  GO 不是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式；它是 **sqlcmd** 和 **osql** 公用程式以及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 程式碼編輯器都能辨識的命令。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式會將 GO 解譯成應該將目前的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式批次傳送給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的信號。 目前的陳述式批次由在上一個 GO 之後輸入的所有陳述式組成；如果是第一個 GO，便是從特定工作階段或指令碼開始之後輸入的所有陳述式組成。  

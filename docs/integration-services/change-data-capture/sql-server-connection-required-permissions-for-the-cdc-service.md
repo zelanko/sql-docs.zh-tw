@@ -11,10 +11,10 @@ ms.assetid: d9e968f9-180c-4fa0-a849-98f2b1942330
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e7528545f2b7cd50e4b612372dc35e65dcc2324a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298642"
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-service"></a>SQL Server 連接所需的 CDC 服務權限
@@ -28,7 +28,7 @@ ms.locfileid: "71298642"
   
  下表描述需要連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各種工作以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入/使用者的必要權限。  
   
-|工作|最小權限|  
+|Task|最低權限|  
 |----------|-------------------------|  
 |準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|`dbcreator` 固定伺服器角色|  
 |建立 Oracle CDC 服務 SQL Server 登入，以供 Oracle CDC 服務使用。|`public` 固定伺服器角色|  
@@ -38,6 +38,6 @@ ms.locfileid: "71298642"
   
 ## <a name="see-also"></a>另請參閱  
  [連接到 SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md)   
- [連接到 SQL Server 進行刪除](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
+ [連接到 SQL Server 以進行刪除作業](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
   
   

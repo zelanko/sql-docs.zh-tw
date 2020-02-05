@@ -16,10 +16,10 @@ ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 35a118575be4ac15cb44588f1773ea1bb4fbc257
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006198"
 ---
 # <a name="detach-a-database"></a>卸離資料庫
@@ -45,7 +45,7 @@ ms.locfileid: "68006198"
 ###  <a name="Restrictions"></a> 限制事項  
  如需限制事項的清單，請參閱 [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)中卸離資料庫。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 db_owner 固定資料庫角色中的成員資格。  
@@ -79,7 +79,7 @@ ms.locfileid: "68006198"
      依預設，卸離作業會保留與該資料庫關聯的所有全文檢索目錄。 若要移除這些全文檢索目錄，請清除 **[保留全文檢索目錄]** 核取方塊。 只有當您從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升級資料庫時，才會出現這個選項。  
   
      **狀態**  
-     顯示下列其中一個狀態：[就緒]  或 [未就緒]  。  
+     顯示下列狀態其中之一： **就緒** 或 **未就緒**。  
   
      **訊息**  
      **[訊息]** 資料行可以顯示有關資料庫的資訊，如下所示：  
@@ -93,7 +93,7 @@ ms.locfileid: "68006198"
 4.  當您準備卸離資料庫時，請按一下 **[確定]** 。  
   
 > [!NOTE]  
->  重新整理檢視之前，仍可在 [物件總管] 的 **[資料庫]** 節點中看見最新卸離的資料庫。 您可以隨時重新整理檢視：按一下 [物件總管] 窗格，並從功能表列選取 [檢視]  ，然後選取 [重新整理]  。  
+>  重新整理檢視之前，仍可在 [物件總管] 的 **[資料庫]** 節點中看見最新卸離的資料庫。 您可以隨時重新整理檢視：按一下 [物件總管] 窗格，並從功能表列選取 **[檢視]** ，然後選取 **[重新整理]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -110,7 +110,7 @@ EXEC sp_detach_db 'AdventureWorks2012', 'true';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   
   

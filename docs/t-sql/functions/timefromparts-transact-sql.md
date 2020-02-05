@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: aab429b0d3705d6ba7867f146fa43aca486cbb02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098997"
 ---
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS (Transact-SQL)
@@ -54,10 +54,10 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
  *有效位數*  
  指定要傳回之 **time** 值的精確度的整數常值。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **time(** *precision* **)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  TIMEROMPARTS 會傳回完整初始化的時間值。 如果引數無效，將會引發錯誤。 如有任何參數為 null，會傳回 null。 然而，若 *precision* 引數為 Null，則會引發錯誤。  
   
  *fractions* 引數相依於 *precision* 引數。 例如，假設 *precision* 為 7，每個分數即表示 100 奈秒；如果 *precision* 為 3，每個分數即表示 1 毫秒。 如果 *precision* 的值為零，*fractions* 也必須為零，否則將引發錯誤。  

@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 22770207bd0c6da38f88680313d8da433e1da286
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 664ceea195e327b9c301ed1206eba014c8adf2a8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768524"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287871"
 ---
 # <a name="distributor"></a>散發者
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68768524"
  **使用下列伺服器做為散發者 (注意：您選取的伺服器必須已經設定為散發者)**  
  選取此選項，然後按一下下面的伺服器名稱，即可將其他伺服器設定為散發者。  
   
- **[加入]**  
+ **加入**  
  如果沒有列出您要用來作為散發者的伺服器，請按一下 **[加入]** ，以識別該伺服器並將其加入清單。  
   
 > [!NOTE]  

@@ -38,10 +38,10 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: cd1fc9d36200a571a3dfd0e5367d4e3e01278466
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68262325"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
@@ -88,7 +88,7 @@ SERVICEBROKER<br>
 BACKUP_CLONEDB  
 建立並驗證複製資料庫的備份。  如果搭配 VERIFY_CLONEDB 使用，則會驗證複製資料庫，再進行備份。  此選項從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 開始提供。
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 DBCC CLONEDATABASE 會執行下列驗證。 如果任一項驗證失敗，則命令會失敗。
 - 來源資料庫必須是使用者資料庫。 不允許複製系統資料庫 (master、模型、msdb、tempdb、散發資料庫等)。
 - 來源資料庫必須在線上或可讀取。
@@ -153,12 +153,12 @@ DBCC CLONEDATABASE 使用來源資料庫的內部資料庫快照集，以取得�
 - 全文檢索 (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 開始)
 - FUNCTION
 - INDEX
-- 登入
+- LOGIN
 - PARTITION FUNCTION
 - PARTITION SCHEME
 - PROCEDURE   
 > [!NOTE]   
-> 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 開始，所有版本都支援 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程序。 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 開始，支援 CLR 程序。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，支援原生編譯程序。  
+> 從 [!INCLUDE[tsql](../../includes/tsql-md.md)] SP2 開始，所有版本都支援 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 程序。 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 開始，支援 CLR 程序。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，支援原生編譯程序。  
 
 - QUERY STORE (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始)   
 > [!NOTE]   
@@ -177,7 +177,7 @@ DBCC CLONEDATABASE 使用來源資料庫的內部資料庫快照集，以取得�
 - TRIGGER
 - TYPE
 - UPGRADED DB
-- 使用者
+- USER
 - VIEW
 - XML INDEX
 - XML SCHEMA COLLECTION  

@@ -21,10 +21,10 @@ ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f6c7f0ebb1960c763dead68443ed4ae0c4c397db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086150"
 ---
 # <a name="unary-operators---positive"></a>一元加法 - 正數
@@ -56,7 +56,7 @@ ms.locfileid: "68086150"
 ## <a name="result-types"></a>結果類型  
  傳回 *numeric_expression*的資料類型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  雖然一元加號可以出現在任何數值運算式之前，但從運算式傳回的值，它並不會做任何處理。 明確地說，如果運算式是負的，它便不會傳回正值。 如果負運算式要傳回正值，請使用 [ABS](../../t-sql/functions/abs-transact-sql.md) 函數。  
   
 ## <a name="examples"></a>範例  

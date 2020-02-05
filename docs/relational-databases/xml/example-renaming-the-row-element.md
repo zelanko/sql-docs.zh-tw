@@ -1,5 +1,5 @@
 ---
-title: 範例重新命名 &lt;row&gt; 元素 | Microsoft Docs
+title: 範例：重新命名 &lt;資料列&gt; 項目 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 275b1c6c138b11fa6330dc61fbfbfd2014a229c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006806"
 ---
-# <a name="example-renaming-the-ltrowgt-element"></a>範例重新命名 &lt;row&gt; 元素
+# <a name="example-renaming-the-ltrowgt-element"></a>範例：重新命名 &lt;資料列&gt; 項目
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   如果是結果集中的每一個資料列，RAW 模式會產生一個 `<row>`元素。 您可以將一個選擇性引數指定給 RAW 模式，選擇性地為此元素指定另一個名稱，如下列查詢所示。 此查詢會針對資料列集的每一個資料列，各傳回一個 <`ProductModel`> 元素。  
   
@@ -43,6 +43,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 FOR XML 的 RAW 模式](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
+ [搭配 FOR XML 使用 RAW 模式](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

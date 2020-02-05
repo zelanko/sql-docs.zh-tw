@@ -13,10 +13,10 @@ ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 785c056b50ed3594fe9886eb9c6a9ec79f7895c1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908662"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>從 SQL Server 公用程式移除 SQL Server 執行個體
@@ -30,7 +30,7 @@ ms.locfileid: "72908662"
   
 2.  在清單檢視的 [SQL Server 執行個體名稱]  資料行中，選取要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中移除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 以滑鼠右鍵按一下要移除的執行個體，然後選取 [移除受管理的執行個體...]  。  
   
-3.  為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體指定具有系統管理員權限的認證：按一下 [連接]  、確認 [連接到伺服器]  對話方塊中的資訊，然後按一下 [連接]  。 您將會在 [移除 Managed 執行個體]  對話方塊中看到登入資訊。  
+3.  針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體指定具有系統管理員權限的認證：按一下 [連接...]  ，並確認 [連接到伺服器]  對話方塊中的資訊，然後按一下 [連接]  。 您將會在 [移除 Managed 執行個體]  對話方塊中看到登入資訊。  
   
 4.  若要確認此作業，請按一下 [確定]  。 若要結束此作業，請按一下 [取消]  。  
 

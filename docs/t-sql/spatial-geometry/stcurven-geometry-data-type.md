@@ -15,10 +15,10 @@ ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9b9e958085af5f70d4dedb1f9a44866c04918343
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930136"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN (geometry 資料類型)
@@ -37,15 +37,15 @@ ms.locfileid: "67930136"
  *curve_index*  
  這是 1 與 **geometry** 執行個體中曲線數目之間的 **int** 運算式。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回型別：**SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
 ## <a name="exceptions"></a>例外狀況  
  如果 *curve_index* < 1，就會擲回 `ArgumentOutOfRangeException`。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當發生下列任何狀況時，會傳回 **NULL**：  
   
 -   已宣告 **geometry** 執行個體，但未具現化  
@@ -97,7 +97,7 @@ ms.locfileid: "67930136"
  請注意，前三個範例的結果都相同。 無論使用何種 WKT (Well-known Text) 格式來輸入相同的曲線順序，使用 `STCurveN()` 執行個體時，`CompoundCurve` 所傳回的結果都相同。  
   
 ### <a name="d-validating-the-parameter-before-calling-stcurven"></a>D. 呼叫 STCurveN() 之前，先驗證參數  
- 下列範例示範如何在呼叫 `STCurveN()`方法之前先確認 `@n` 有效：  
+ 下列範例示範如何在呼叫 `@n`方法之前先確認 `STCurveN()` 有效：  
   
 ```
  DECLARE @g geometry;  

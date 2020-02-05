@@ -18,10 +18,10 @@ ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 45be9818ed599365ca50648cb08a1c65825d5a11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120995"
 ---
 # <a name="stmpolyfromtext-geography-data-type"></a>STMPolyFromText (geography 資料類型)
@@ -43,14 +43,14 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
  *SRID*  
  這是 **int** 運算式，表示要傳回之 **geographyMultiPolygon** 執行個體的空間參考識別碼 (SRID)。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回型別：**QL 地理位置**  
+ CLR 傳回類型：**Sql Geography**  
   
  OGC 類型：**MultiPolygon**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果輸入的格式不正確，這個方法將會擲回 **FormatException**。  
   
 ## <a name="examples"></a>範例  

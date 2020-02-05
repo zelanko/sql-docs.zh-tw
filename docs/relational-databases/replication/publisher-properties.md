@@ -16,13 +16,13 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 12c7a8482561e6ab608501158a05a275763ab74a
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 35ad6f4ab64f308fed55e328a1ddcae223ca4a79
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75320645"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287463"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>SQL Server 複寫發行者屬性對話方塊
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "75320645"
   
 
 ## <a name="subcribers"></a>訂閱者
-  [發行者屬性]  對話方塊的 [訂閱者]  頁面，是用於執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之發行者。 此頁面可讓您啟用訂閱者，以接收來自此發行者的發行集資料。 啟用訂閱者以接收來自此發行者的資料，並不會在此發行者上建立發行集的訂閱。 若要建立訂閱，您必須使用新增訂閱精靈。  
+  [發行者屬性]  對話方塊的 [訂閱者]  頁面，是用於執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 版本之發行者。 此頁面可讓您啟用訂閱者，以接收來自此發行者的發行集資料。 啟用訂閱者以接收來自此發行者的資料，並不會在此發行者上建立發行集的訂閱。 若要建立訂閱，您必須使用新增訂閱精靈。  
   
 ### <a name="options"></a>選項。  
  **[發行者屬性]**  

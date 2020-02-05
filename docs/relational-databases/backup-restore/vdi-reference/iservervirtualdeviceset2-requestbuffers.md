@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 1b941f251c9093f10abbced8c3522f1719a1580e
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847179"
 ---
 # <a name="iservervirtualdeviceset2requestbuffers-vdi"></a>IServerVirtualDeviceSet2::RequestBuffers (VDI)
@@ -49,7 +49,7 @@ HRESULT IServerVirtualDeviceSet2::RequestBuffers (
 | VD_E_PROTOCOL | 此集合不是處於可宣告緩衝區配置的狀態 (請參閱狀態轉換矩陣)。 |
 | VD_E_MEMORY | 無法取得所要求的記憶體。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 在使用 AllocateBuffer 配置緩衝區之前，應該使用這個方法。 具有指定大小和對齊方式的緩衝區集合會使用 RequestBuffers 進行要求，然後使用 AllocateBuffer 配置個別的緩衝區。
 

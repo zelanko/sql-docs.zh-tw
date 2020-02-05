@@ -11,10 +11,10 @@ ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c52e0bcb34c93bb3c973caae53d3983db3660e24
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822109"
 ---
 # <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>使用環形緩衝區取得 Always On 可用性群組的健全狀況資訊

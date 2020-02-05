@@ -22,10 +22,10 @@ ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2fa898451638503b2f91c97026158e7331a25e90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012807"
 ---
 # <a name="configure-client-protocols"></a>設定用戶端通訊協定

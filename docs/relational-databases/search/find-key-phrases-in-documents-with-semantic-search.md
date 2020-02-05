@@ -13,10 +13,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 64060ae1662d9d1448695426da9e555afbf6869a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056194"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>使用語意搜尋找到文件中的主要片語
@@ -36,7 +36,7 @@ ms.locfileid: "74056194"
 > [!IMPORTANT]  
 >  您設定為目標的資料行必須已啟用全文檢索和語意索引。  
   
-###  <a name="HowToTopPhrases"></a> 範例 1：在特定文件中尋找前幾個主要片語  
+###  <a name="HowToTopPhrases"></a> Example 1: Find the top key phrases in a specific document  
  下列範例會從 AdventureWorks 範例資料庫之 Production.Document 資料表 Document 資料行 @DocumentId 變數所指定的文件中，擷取前 10 個主要片語。 @DocumentId 變數是指來自全文檢索索引之索引鍵資料行的值。  
   
 ```sql  
@@ -53,7 +53,7 @@ GO
   
  **SEMANTICKEYPHRASETABLE** 函數會使用索引搜尋有效率地擷取這些結果，而不會使用資料表掃描。  
   
-###  <a name="HowToTopDocuments"></a> 範例 2：尋找包含特定主要片語的前幾份文件  
+###  <a name="HowToTopDocuments"></a> Example 2: Find the top documents that contain a specific key phrase  
  下列範例會從 AdventureWorks 範例資料庫 Production.Document 資料表的 Document 資料行中，擷取前 25 份包含主要片語的 "Bracket" 的文件。  
   
 ```sql  

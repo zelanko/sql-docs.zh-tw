@@ -14,10 +14,10 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295794"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>監視執行封裝和其他作業
@@ -27,7 +27,7 @@ ms.locfileid: "71295794"
 
   您可以使用下列其中一項或多項工具，監視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行封裝、專案驗證及其他作業。 某些工具 (例如資料點選) 僅適用於部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的專案。  
   
--   記錄檔  
+-   記錄  
   
      如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "71295794"
   
  此報表會顯示下列資訊區段。  
   
-|章節|Description|  
+|區段|描述|  
 |-------------|-----------------|  
 |**執行資訊**|顯示在過去 24 小時內，處於不同狀態 (失敗、執行中、成功、其他) 的執行數目。|  
 |**封裝資訊**|顯示在過去 24 小時內已經執行之封裝的總數。|  
@@ -153,7 +153,7 @@ ms.locfileid: "71295794"
   
  此報表會顯示下列資訊區段。  
   
-|章節|Description|  
+|區段|描述|  
 |-------------|-----------------|  
 |Filter|顯示目前套用至報表的篩選，例如 [開始時間範圍]。|  
 |執行資訊|顯示每個封裝執行的開始時間、結束時間和期間。您可以檢視封裝執行使用的參數值清單，例如使用 [執行封裝] 工作傳遞至子封裝的值。 若要檢視參數清單，請按一下 [概觀]。|  
@@ -167,7 +167,7 @@ ms.locfileid: "71295794"
   
  此報表會顯示下列資訊區段。  
   
-|章節|Description|  
+|區段|描述|  
 |-------------|-----------------|  
 |Filter|顯示目前套用至報表的篩選，例如具有指定字串和 [上次失敗時間]  範圍的連接。<br /><br /> 設定 [上次失敗時間]  範圍，就可以只顯示某個日期範圍內發生的連接失敗。 範圍可以跨多天、數個月或數年。|  
 |詳細資料|顯示連接字串、發生連接失敗的執行數目，以及上一次連接失敗的日期。|  
@@ -179,7 +179,7 @@ ms.locfileid: "71295794"
  [所有驗證]  報表會顯示伺服器上已執行之所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 驗證的摘要。 此摘要會顯示每個驗證的資訊，例如狀態、開始時間和結束時間。 每個摘要項目都包含一個指向驗證期間產生之訊息的連結。 就如同 Integration Services 儀表板一樣，您可以將篩選套用至資料表，以縮小顯示的資訊範圍。  
   
 ### <a name="custom-reports"></a>自訂報表  
- 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，將自訂報表 (.rdl 檔案) 加入 [Integration Services 目錄]  節點底下的 [SSISDB]  目錄節點。 加入報表之前，請確認您正在使用三部分命名慣例來完整限定您所參考的物件，例如來源資料表。 否則， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 將會顯示錯誤。 此命名慣例是 \<資料庫>.\<擁有者>.\<物件>。 SSISDB.internal.executions 就是範例。  
+ 您可以在  **中，將自訂報表 (.rdl 檔案) 加入 [Integration Services 目錄]** **節點底下的 [SSISDB]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 目錄節點。 加入報表之前，請確認您正在使用三部分命名慣例來完整限定您所參考的物件，例如來源資料表。 否則， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 將會顯示錯誤。 此命名慣例是 \<資料庫>.\<擁有者>.\<物件>。 SSISDB.internal.executions 就是範例。  
   
 > [!NOTE]  
 >  當您將自訂報表加入 [資料庫]  節點底下的 [SSISDB]  節點時，不需要使用 SSISDB 前置詞。  
@@ -187,7 +187,7 @@ ms.locfileid: "71295794"
  如需如何建立和加入自訂報表的指示，請參閱 [將自訂報表加入 Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)。  
 
 ## <a name="view-reports-for-the-integration-services-server"></a>檢視 Integration Services 伺服器的報表
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的目前版本中，於 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 內提供標準報表，協助您監視已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  如需報表的詳細資訊，請參閱 [Integration Services 伺服器的報表](#reports)。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的目前版本中， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供標準報表，協助您監視已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  如需報表的詳細資訊，請參閱 [Integration Services 伺服器的報表](#reports)。  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>若要檢視 Integration Services 伺服器的報表  
   
@@ -208,5 +208,5 @@ ms.locfileid: "71295794"
     -   **所有連接**  
 
 ## <a name="see-also"></a>另請參閱  
- [執行專案和封裝](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
- [疑難排解封裝執行的報表](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [執行專案和套件](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
+ [套件執行的疑難排解報告](../troubleshooting/troubleshooting-reports-for-package-execution.md)  

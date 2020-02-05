@@ -27,13 +27,13 @@ ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7dc31f0a7fde3e4ff73dbf6d1a927275a68f65d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67941661"
 ---
-# <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
+# <a name="set-showplan_text-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   使 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 相反地，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回如何執行這些陳述式的詳細資料。  
@@ -47,7 +47,7 @@ ms.locfileid: "67941661"
 SET SHOWPLAN_TEXT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  SET SHOWPLAN_TEXT 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
   
  當 SET SHOWPLAN_TEXT 是 ON 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無需執行每一項 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，即可傳回其執行資訊。 在這個選項設為 ON 之後，會傳回所有後續 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式的執行計畫相關資訊，直到這個選項設為 OFF 為止。 例如，如果執行 CREATE TABLE 陳述式時，SHOWPLAN_TEXT 是 ON，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會從包含這份相同資料表的後續 SELECT 陳述式傳回錯誤訊息，通知使用者指定的資料表並不存在。 因此，後來參考這份資料表都會失敗。 當 SET SHOWPLAN_TEXT 是 OFF 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會直接執行陳述式，而不會產生內含執行計畫資訊的報表。  
@@ -58,9 +58,9 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  SET SHOWPLAN_TEXT 會在一組資料列中傳回資訊，使這些資料列形成階層式樹狀結構，呈現出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢處理器在執行每個陳述式時所採取的步驟。 輸出中所反映的每個陳述式都包含單一資料列，其中含有陳述式的文字，後面再接著幾個資料列，其中含有執行步驟的詳細資料。 下表顯示輸出所包含的資料行。  
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
-|**StmtText**|對於每個類型不是 PLAN_ROW 的資料列，這個資料行都包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的文字。 對於類型是 PLAN_ROW 的資料列，這個資料行包含作業的說明。 這個資料行包含實體運算子，也可能選擇性地包含邏輯運算子。 這個資料行後面可能接著取決於實體運算子的說明。 如需實體運算子的詳細資訊，請參閱 [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md) 中**引數**資料行的詳細資訊。|  
+|**StmtText**|對於每個類型不是 PLAN_ROW 的資料列，這個資料行都包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的文字。 對於類型是 PLAN_ROW 的資料列，這個資料行包含作業的說明。 這個資料行包含實體運算子，也可能選擇性地包含邏輯運算子。 這個資料行後面可能接著取決於實體運算子的說明。 如需實體運算子的詳細資訊，請參閱 **SET SHOWPLAN_ALL &#40;Transact-SQL&#41;** 中[引數](../../t-sql/statements/set-showplan-all-transact-sql.md)資料行的詳細資訊。|  
   
  如需在顯示計畫輸出中所能見到之實體和邏輯運算子的詳細資訊，請參閱[執行程序表邏輯及實體運算子參考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   

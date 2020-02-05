@@ -18,10 +18,10 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38ba2374821505dc3541ea05e76fd8aaecdcb5fc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297632"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>屬性運算式中的列舉常數
@@ -37,7 +37,7 @@ ms.locfileid: "71297632"
   
  下列章節提供有關列舉常數的資訊：  
   
- [封裝](#Package)  
+ [套件](#Package)  
   
  [Foreach 迴圈列舉值](#Foreach)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "71297632"
   
  [維護計畫工作](#MaintenancePlanTasks)  
   
- [通用屬性](#CommonProperties)  
+ [Common Properties](#CommonProperties)  
   
 ##  <a name="Package"></a> 封裝  
  下列表格列出使用來自列舉值的值所設定之封裝屬性的易記名稱和數值相等項。  
@@ -67,7 +67,7 @@ ms.locfileid: "71297632"
 |-----------------------------------------|-------------------|  
 |永不|0|  
 |IfExists|1|  
-|永遠|2|  
+|一律|2|  
   
  **PackagePriorityClass** 屬性：使用來自 **DTSPriorityClass** 列舉的值進行設定。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "71297632"
 |---------------------------------------|-------------------|  
 |預設|0|  
 |AboveNormal|1|  
-|一般|2|  
+|正常|2|  
 |BelowNormal|3|  
-|Idle|4|  
+|閒置|4|  
   
  **ProtectionLevel** 屬性：使用來自 **DTSProtectionLevel** 列舉的值進行設定。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "71297632"
   
 |DTSPrecedenceEvalOp 中的易記名稱|數值|  
 |------------------------------------------|-------------------|  
-|運算式|1|  
+|運算是|1|  
 |條件約束|2|  
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
@@ -104,7 +104,7 @@ ms.locfileid: "71297632"
   
 |易記名稱|數值|  
 |-------------------|-------------------|  
-|成功|0|  
+|Success|0|  
 |失敗|1|  
 |Completion|2|  
 |已取消|3|  
@@ -134,7 +134,7 @@ ms.locfileid: "71297632"
   
 |EnumerationType 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
-|Navigator|0|  
+|導覽器|0|  
 |節點|1|  
 |NodeText|2|  
 |ElementCollection|3|  
@@ -143,7 +143,7 @@ ms.locfileid: "71297632"
   
 |InnerElementType 中的易記名稱|數值|  
 |---------------------------------------|-------------------|  
-|Navigator|0|  
+|導覽器|0|  
 |節點|1|  
 |NodeText|2|  
   
@@ -207,10 +207,10 @@ ms.locfileid: "71297632"
   
 |DTSFileSystemAttributes 中的易記名稱|數值|  
 |----------------------------------------------|-------------------|  
-|一般|0|  
-|Archive|1|  
+|正常|0|  
+|封存|1|  
 |Hidden|2|  
-|ReadOnly|4|  
+|唯讀|4|  
 |系統|8|  
   
 ### <a name="ftp-task"></a>FTP 工作  
@@ -219,7 +219,7 @@ ms.locfileid: "71297632"
 |DTSFTPOp 中的易記名稱|數值|  
 |-------------------------------|-------------------|  
 |Send|0|  
-|Receive|1|  
+|接收|1|  
 |DeleteLocal|2|  
 |DeleteRemote|3|  
 |MakeDirLocal|4|  
@@ -267,7 +267,7 @@ ms.locfileid: "71297632"
 |MailPriority 中的易記名稱|數值|  
 |-----------------------------------|-------------------|  
 |高|1|  
-|一般|3|  
+|正常|3|  
 |低|5|  
   
 ### <a name="transfer-database-task"></a>傳送資料庫工作  
@@ -276,7 +276,7 @@ ms.locfileid: "71297632"
 |TransferAction 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |[複製]|0|  
-|[移動]|1|  
+|移動|1|  
   
  **Method** 屬性：使用來自 **TransferMethod** 列舉的值設定。  
   
@@ -423,9 +423,9 @@ ms.locfileid: "71297632"
 |Validate|0|  
 |XSLT|1|  
 |XPATH|2|  
-|合併式|3|  
+|合併|3|  
 |Diff|4|  
-|修補|5|  
+|Patch|5|  
   
  **SourceType**、**SecondOperandType** 和 **XPathSourceType** 屬性：使用來自 **DTSXMLSourceType** 列舉的值進行設定。  
   
@@ -453,7 +453,7 @@ ms.locfileid: "71297632"
   
 |DTSXMLXPathOperation 中的易記名稱|數值|  
 |-------------------------------------------|-------------------|  
-|Evaluation|0|  
+|評估|0|  
 |值|1|  
 |NodeList|2|  
   
@@ -492,18 +492,18 @@ ms.locfileid: "71297632"
 |DatabaseSelection 中的易記名稱|數值|  
 |----------------------------------------|-------------------|  
 |None|0|  
-|All|1|  
+|全部|1|  
 |系統|2|  
 |User|3|  
-|Specific|4|  
+|特定|4|  
   
  **TableSelectionType** 屬性：使用來自 **TableSelection** 列舉的值進行設定。  
   
 |TableSelection 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |None|0|  
-|All|1|  
-|Specific|2|  
+|全部|1|  
+|特定|2|  
   
  **ObjectTypeSelection** 屬性：使用來自 **ObjectType** 列舉的值進行設定。  
   
@@ -532,7 +532,7 @@ ms.locfileid: "71297632"
   
 |BackupTaskType 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
-|[資料庫]|0|  
+|資料庫|0|  
 |檔案|1|  
 |Log|2|  
   
@@ -570,7 +570,7 @@ ms.locfileid: "71297632"
 |---------------------------------------|-------------------|  
 |資料行|1|  
 |索引|2|  
-|All|3|  
+|全部|3|  
   
 ##  <a name="CommonProperties"></a> 通用屬性  
  封裝、工作以及「Foreach 迴圈」、「For 迴圈」和「時序」等容器可以使用下列列舉來設定指定的屬性。  
@@ -580,7 +580,7 @@ ms.locfileid: "71297632"
 |DTSForcedExecResult 中的易記名稱|數值|  
 |------------------------------------------|-------------------|  
 |None|-1|  
-|成功|0|  
+|Success|0|  
 |失敗|1|  
 |Completion|2|  
   
@@ -591,7 +591,7 @@ ms.locfileid: "71297632"
 |DTSLoggingMode 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
-|已啟用|1|  
+|啟用|1|  
 |已停用|2|  
   
  **TransactionOption** 屬性：使用來自 **DTSTransactionOption** 列舉的值進行設定。  
@@ -600,7 +600,7 @@ ms.locfileid: "71297632"
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
 |支援|1|  
-|必要項|2|  
+|必要|2|  
   
 ## <a name="related-tasks"></a>相關工作  
  [新增或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)  
@@ -608,7 +608,7 @@ ms.locfileid: "71297632"
 ## <a name="see-also"></a>另請參閱  
  [在封裝中使用屬性運算式](../../integration-services/expressions/use-property-expressions-in-packages.md)   
  [Integration Services &#40;SSIS&#41; 封裝](../../integration-services/integration-services-ssis-packages.md)   
- [整合服務容器](../../integration-services/control-flow/integration-services-containers.md)   
+ [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)  
   

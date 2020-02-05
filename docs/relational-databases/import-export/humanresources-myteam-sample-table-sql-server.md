@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a95168f9c932b187a77d0d8e97511fd0070ea8ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68035680"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam 範例資料表 (SQL Server)
@@ -31,11 +31,11 @@ ms.locfileid: "68035680"
   
  **myTeam** 資料表包含下列資料行。  
   
-|「資料行」|資料類型|Null 屬性|Description|  
+|資料行|資料類型|Null 屬性|描述|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|非 Null|資料列的主索引鍵。 小組某個成員的員工識別碼。|  
 |**名稱**|**nvarchar(50)**|非 Null|小組某個成員的名稱。|  
-|**Title**|**nvarchar(50)**|可為 Null|小組中工作的員工之職稱。|  
+|**Title** (標題)|**nvarchar(50)**|Nullable|小組中工作的員工之職稱。|  
 |**背景**|**nvarchar(50)**|非 Null|資料列上次更新的日期和時間。 (預設值)|  
   
 **若要建立 HumanResources.myTeam**  

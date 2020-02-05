@@ -11,10 +11,10 @@ ms.assetid: 0d20a569-8a27-409c-bcab-0effefb48013
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 4b19476f08398e6b704ee56125f3290d39c59954
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111807"
 ---
 # <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>還原資料庫並將其繫結至資源集區
@@ -74,9 +74,9 @@ RESTORE DATABASE IMOLTP_DB
  一旦將資料庫繫結至具名資源集區並使用復原功能還原之後，請監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Resource Pool Stats 物件。 如需詳細資訊，請參閱＜ [SQL Server、Resource Pool Stats 物件](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [將包含記憶體最佳化資料表的資料庫繫結至資源集區](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [資料庫並繫結至資源集區的指引，請參閱](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
- [SQL Server、Resource Pool Stats 物件](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)   
+ [SQL Server, Resource Pool Stats 物件](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)   
  [sys.dm_resource_governor_resource_pools](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

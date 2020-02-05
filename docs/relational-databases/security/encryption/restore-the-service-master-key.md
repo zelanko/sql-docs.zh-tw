@@ -13,10 +13,10 @@ ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: e27516fb2b0931c2df8f4a76a4153ee8c38616b9
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74957382"
 ---
 # <a name="restore-the-service-master-key"></a>還原服務主要金鑰

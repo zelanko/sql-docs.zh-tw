@@ -19,13 +19,13 @@ ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 13680aea1d34b83d76647d39d0f40b84609b2e8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910649"
 ---
-# <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
+# <a name="grouping_id-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   這是計算群組層級的函數。 當指定 GROUP BY 時，GROUPING_ID 只能在 SELECT \<select> 清單、HAVING 或 ORDER BY 子句中使用。  
@@ -41,15 +41,15 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
   
 ## <a name="arguments"></a>引數  
  \<column_expression>  
- 為 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 子句中的 *column_expression*。  
+ 為 *GROUP BY* 子句中的 [column_expression](../../t-sql/queries/select-group-by-transact-sql.md)。  
   
 ## <a name="return-type"></a>傳回類型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  GROUPING_ID \<column_expression> 必須完全符合 GROUP BY 清單中的運算式。 例如，若您要根據 DATEPART (yyyy, \<*column name*>) 分組，請使用 GROUPING_ID (DATEPART (yyyy, \<資料行名稱  >))。若您要根據 \<資料行名稱  > 分組，請使用 GROUPING_ID (\<資料行名稱  >)。  
   
-## <a name="comparing-groupingid--to-grouping-"></a>比較 GROUPING_ID () 與 GROUPING ()  
+## <a name="comparing-grouping_id--to-grouping-"></a>比較 GROUPING_ID () 與 GROUPING ()  
  GROUPING_ID (\<column_expression> [ **,** ...*n* ]) 針對每一個輸出資料列中資料行清單中的每一個資料行輸入等於 GROUPING (\<column_expression>) 傳回的項目 (當作一和零的字串)。 GROUPING_ID 會將此字串解譯為以 2 為基底的數字，並傳回對等的整數。 例如，假設有以下的陳述式：`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`。 下表顯示 GROUPING_ID () 輸入和輸出值。  
   
 |彙總資料行|GROUPING_ID (a, b, c) 輸入 = GROUPING(a) + GROUPING(b) + GROUPING(c)|GROUPING_ID () 輸出|  
@@ -62,10 +62,10 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 |`bc`|`011`|`3`|  
 |`abc`|`111`|`7`|  
   
-## <a name="technical-definition-of-groupingid-"></a>GROUPING_ID () 的技術定義  
+## <a name="technical-definition-of-grouping_id-"></a>GROUPING_ID () 的技術定義  
  每一個 GROUPING_ID 引數都必須是 GROUP BY 清單中的元素。 GROUPING_ID () 會傳回**整數**點陣圖，可能會引發其最低的 N 位元。 引發的**位元**表示對應的引數不是指定輸出資料列的群組資料行。 最低順位的**位元**會對應到引數 N；而第 N-1 個<sup></sup>最低順位的**位元**會對應到引數 1。  
   
-## <a name="groupingid--equivalents"></a>GROUPING_ID () 對等項目  
+## <a name="grouping_id--equivalents"></a>GROUPING_ID () 對等項目  
  如果是單一群組查詢，GROUPING (\<column_expression>) 會等於 GROUPING_ID (\<column_expression>) 並傳回 0。  
   
  例如，下列陳述式是相等的：  
@@ -92,7 +92,7 @@ SELECT 0 FROM T GROUP BY A,B
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-groupingid-to-identify-grouping-levels"></a>A. 使用 GROUPING_ID 識別群組層級  
+### <a name="a-using-grouping_id-to-identify-grouping-levels"></a>A. 使用 GROUPING_ID 識別群組層級  
  下列範例會依據 `Name` 和 `Title`、`Name,` 和公司總數傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的員工計數。 `GROUPING_ID()` 會用來針對 `Title` 資料行中識別彙總層級的每一個資料列各建立一個值。  
   
 ```  
@@ -114,10 +114,10 @@ WHERE DH.EndDate IS NULL
 GROUP BY ROLLUP(D.Name, E.JobTitle);  
 ```  
   
-### <a name="b-using-groupingid-to-filter-a-result-set"></a>B. 使用 GROUPING_ID 篩選結果集  
+### <a name="b-using-grouping_id-to-filter-a-result-set"></a>B. 使用 GROUPING_ID 篩選結果集  
   
 #### <a name="simple-example"></a>簡單範例  
- 在下列程式碼中，若只要依據職稱傳回具有員工計數的資料列，請從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0` 中移除註解字元。 若只要依據部門傳回具有員工計數的資料列，請從 `HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;` 中移除註解字元。  
+ 在下列程式碼中，若只要依據職稱傳回具有員工計數的資料列，請從 `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0` 資料庫的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 中移除註解字元。 若只要依據部門傳回具有員工計數的資料列，請從 `HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;` 中移除註解字元。  
   
 ```  
 SELECT D.Name  
@@ -138,7 +138,7 @@ GROUP BY ROLLUP(D.Name, E.JobTitle)
   
  以下是未篩選的結果集。  
   
-|[屬性]|Title|Grouping Level|Employee Count|[屬性]|  
+|名稱|Title|Grouping Level|Employee Count|名稱|  
 |----------|-----------|--------------------|--------------------|----------|  
 |Document Control|Control Specialist|0|2|Document Control|  
 |Document Control|Document Control Assistant|0|2|Document Control|  
@@ -235,7 +235,7 @@ ORDER BY
     ,(H.SalesPersonID))ASC;  
 ```  
   
-### <a name="c-using-groupingid--with-rollup-and-cube-to-identify-grouping-levels"></a>C. 搭配 ROLLUP 和 CUBE 使用 GROUPING_ID () 來識別群組層級  
+### <a name="c-using-grouping_id--with-rollup-and-cube-to-identify-grouping-levels"></a>C. 搭配 ROLLUP 和 CUBE 使用 GROUPING_ID () 來識別群組層級  
  下列範例的程式碼會示範如何使用 `GROUPING()` 來計算 `Bit Vector(base-2)` 資料行。 `GROUPING_ID()` 是用來計算對應的 `Integer Equivalent` 資料行。 `GROUPING_ID()` 函數中的資料行順序與 `GROUPING()` 函數串連之資料行的資料行順序相反。  
   
  在這些範例中，`GROUPING_ID()` 是用來針對 `Grouping Level` 資料行中的每一個資料列各建立一個值，以識別群組的層級。 群組層級不一定是以 1 (0、1、2...*n*) 開頭之整數的連續清單。  

@@ -11,10 +11,10 @@ ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 13c40349ea5d46ecf1264ae5c7b7aee341d6d8f2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295843"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
@@ -35,7 +35,7 @@ ms.locfileid: "71295843"
 > [!IMPORTANT]  
 >  擷取 SAP Netweaver BW 中的資料需要額外的 SAP 授權。 請洽詢 SAP 以確認這些需求。  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>元件  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW 具有下列元件：  
   
 -   **SAP BW 來源** - SAP BW 來源是一個資料流程來源元件，可讓您擷取 SAP Netweaver BW 版本 7 系統中的資料。  
@@ -46,7 +46,7 @@ ms.locfileid: "71295843"
   
  如需示範如何設定及使用 SAP BW 連線管理員、來源和目的地的逐步解說，請參閱技術白皮書： [Using SQL Server Integration Services with SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkId=301897)(搭配 SAP BI 7.0 使用 SQL Server Integration Services)。 這份技術白皮書也會示範如何設定 SAP BW 中的必要物件。  
   
-## <a name="documentation"></a>文件集  
+## <a name="documentation"></a>文件  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW 的這個說明檔包含以下主題和章節：  
   
  [安裝 Microsoft Connector for SAP BW](../integration-services/installing-the-microsoft-connector-for-sap-bw.md)  

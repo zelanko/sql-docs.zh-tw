@@ -18,10 +18,10 @@ ms.assetid: 348e219a-b8ff-425e-b9c6-811880101c54
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4d56ea995caa6c363432169c660c5cb9f07d082d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297262"
 ---
 # <a name="developing-specific-types-of-data-flow-components"></a>開發特定類型的資料流程元件

@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: be05a8adcf83fdd9f2e26ca5dce38d71a67c70ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075262"
 ---
 # <a name="exists-transact-sql"></a>EXISTS (Transact-SQL)
@@ -50,7 +50,7 @@ EXISTS ( subquery )
  這是受限制的 SELECT 陳述式。 不允許 INTO 關鍵字。 如需詳細資訊，請參閱 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md) 中子查詢的相關資訊。  
   
 ## <a name="result-types"></a>結果類型  
- **布林**  
+ **布林值**  
   
 ## <a name="result-values"></a>結果值  
  如果子查詢包含任何資料列，便傳回 TRUE。  

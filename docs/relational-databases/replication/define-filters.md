@@ -15,10 +15,10 @@ ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1837e3b57548ec0d4324a408f8f43201ccc3ca6b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68768175"
 ---
 # <a name="define-filters"></a>定義篩選
@@ -26,7 +26,7 @@ ms.locfileid: "68768175"
   **[定義篩選]** 對話方塊可讓您定義篩選，然後套用至資料衝突，以在方格中檢視衝突的子集。 若要定義篩選，請從 **[運算子]** 下拉式清單方塊選擇運算子，然後輸入一個值。 例如，若只要顯示衝突失敗者為 **ReplTest1**伺服器的衝突，請從 **[運算子]** 下拉式清單方塊選取 **[等於]** ，然後在 **[值]** 資料行輸入 **ReplTest1** 。  
   
 ## <a name="options"></a>選項。  
- **[運算子]**  
+ **運算子**  
  選取篩選的運算子，例如 **[小於或等於]** 。
   
  **ReplTest1**  

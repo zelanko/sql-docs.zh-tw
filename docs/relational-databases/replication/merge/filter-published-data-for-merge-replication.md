@@ -14,10 +14,10 @@ ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1e0d157b6a4f7f08d068dc8da75c42f4ad924044
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033266"
 ---
 # <a name="filter-published-data-for-merge-replication"></a>篩選合併式複寫之發行的資料
@@ -28,7 +28,7 @@ ms.locfileid: "68033266"
   
 -   參數化篩選允許將不同資料分割傳送到不同「訂閱者」，而無需建立多個發行集。 例如，資料表可進行篩選，以便給定銷售代表的資料僅複寫至該代表。 參數化篩選具有各種不同的選項，允許您修改篩選，以最佳化效能並使資料和應用程式需求的相符達到最佳。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
--   聯結篩選通常配合參數化篩選使用，以將篩選擴充至相關聯的資料表 (也可與靜態篩選配合使用)。 例如，銷售代表通常在其他資料表 (如客戶和訂單資料表) 中也有資料。 這些資料可進行篩選，這樣銷售代表便僅接收其客戶和客戶訂單的相關資料。 如需詳細資訊，請參閱 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
+-   聯結篩選通常配合參數化篩選使用，以將篩選擴充至相關聯的資料表 (也可與靜態篩選配合使用)。 例如，銷售代表通常在其他資料表 (如客戶和訂單資料表) 中也有資料。 這些資料可進行篩選，這樣銷售代表便僅接收其客戶和客戶訂單的相關資料。 如需相關資訊，請參閱 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
   
  篩選不得包含複寫識別資料列所使用的 **rowguidcol** 。 根據預設，這是在您設定合併式複寫時加入，且名稱為 **rowguid**的資料行。  
   

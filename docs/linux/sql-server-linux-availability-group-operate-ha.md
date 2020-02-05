@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 24a9d3d9ee0fd65b08e30f40a0597eadf47c6b76
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67916044"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>在 Linux 上操作 Always On 可用性群組
@@ -76,13 +76,13 @@ ms.locfileid: "67916044"
 
    如果可用性群組叢集類型為 `NONE`，請以手動方式進行容錯移轉。 依序完成下列步驟：
 
-      A. 下列命令會將主要複本設定為次要複本。 將 `AG1` 取代為您的可用性群組名稱。 在裝載主要複本的 SQL Server 執行個體上，執行 Transact-SQL 命令。
+      a. 下列命令會將主要複本設定為次要複本。 將 `AG1` 取代為您的可用性群組名稱。 在裝載主要複本的 SQL Server 執行個體上，執行 Transact-SQL 命令。
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      B. 下列命令會將同步次要複本設定為主要複本。 在裝載同步次要複本的目標 SQL Server 執行個體上，執行下列 Transact-SQL 命令。
+      b. 下列命令會將同步次要複本設定為主要複本。 在裝載同步次要複本的目標 SQL Server 執行個體上，執行下列 Transact-SQL 命令。
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;

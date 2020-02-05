@@ -11,10 +11,10 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 68efb09a2b6d2a3ace441107ed9160fede154c8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085437"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>比較用於儲存 Blob 的選項 (SQL Server)

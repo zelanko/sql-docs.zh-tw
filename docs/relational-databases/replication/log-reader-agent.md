@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 8877af08b093b81a875b59fc11f4497b5089f680
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 4873d4e4481bb6a845101b5ce2754062bcd7ce10
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767637"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288490"
 ---
 # <a name="log-reader-agent"></a>記錄讀取器代理程式
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68767637"
 ## <a name="options"></a>選項。  
  從 **[檢視]** 功能表選取要檢視的記錄讀取器代理程式工作階段，然後在標示為 **[記錄讀取器代理程式的工作階段]** 的方格中，選取一個特定的工作階段。 有關這個工作階段的詳細資訊，會顯示在標示為 **[所選取工作階段中的動作]** 之方格中。 如果選取的工作階段結束時發生錯誤， **[所選取之工作階段的錯誤詳細資料或訊息]** 的文字區域也會顯示。  
   
- **[檢視]**  
+ **檢視**  
  選取要檢視的記錄讀取器代理程式工作階段。 記錄讀取器代理程式通常會連續執行，因此可能只會有一個工作階段可供檢視。  
   
  **狀態**  

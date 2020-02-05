@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 951ff4d63e2bd2739fda49ceafebf916089be45a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119124"
 ---
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
@@ -63,7 +63,7 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
 ## <a name="return-types"></a>傳回類型
 **datetime**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `DATETIMEFROMPARTS` 會傳回完整初始化的 **datetime** 值。 如果至少一個必要引數具有無效的值，`DATETIMEFROMPARTS` 會引發錯誤。 如果至少一個必要引數具有 Null 值，則 `DATETIMEFROMPARTS` 會傳回 Null。
   
 此函式支援遠端處理到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 伺服器及更新版本。 它不支援遠端處理到版本低於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的伺服器。

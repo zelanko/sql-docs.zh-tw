@@ -28,10 +28,10 @@ ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b6ee22299c854193d15e5fe4d1e2daabf7250bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037580"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>資料庫卸離與附加 (SQL Server)

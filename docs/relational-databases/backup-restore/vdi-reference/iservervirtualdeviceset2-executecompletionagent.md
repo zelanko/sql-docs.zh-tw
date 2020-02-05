@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2ad094794b5115aa4593f918de442798445e2b79
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847289"
 ---
 # <a name="iservervirtualdeviceset2executecompletionagent-vdi"></a>IServerVirtualDeviceSet2::ExecuteCompletionAgent (VDI)
@@ -32,7 +32,7 @@ HRESULT IServerVirtualDeviceSet2::ExecuteCompletionAgent ();
 
 傳回 *HRESULT* ，指出方法呼叫成功或失敗。 值 NOERROR 表示方法呼叫成功。 非零值則表示已發生錯誤。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 完成代理程式會提供一項機制，SQL Server 可以透過該機制將其本身與虛擬裝置命令完成同步。 它必須是作用中，才能發出任何命令，且應該在所有裝置都關閉之前保持作用中狀態。
 

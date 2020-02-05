@@ -16,10 +16,10 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 82ff8e58891d07ccbecfef119c05c0cef1bbb06e
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095263"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>啟用和停用異動資料擷取 (SQL Server)
@@ -79,7 +79,7 @@ GO
   
  **要包含變更資料表的檔案群組。**  
   
- 根據預設，變更資料表位於資料庫的預設檔案群組中。 如果資料庫擁有者想要控制個別變更資料表的位置，可以使用 *\@filegroup_name* 參數來指定與擷取執行個體建立關聯的變更資料表特定檔案群組。 此指定的檔案群組必須已存在。 一般而言，我們建議您將變更資料表放在與來源資料表不同的檔案群組中。 如需示範 *\@filegroup_name* 參數用法的範例，請參閱**啟用指定檔案群組選項的資料表**範本。  
+ 根據預設，變更資料表位於資料庫的預設檔案群組中。 如果資料庫擁有者想要控制個別變更資料表的位置，可以使用 *\@filegroup_name* 參數來指定與擷取執行個體建立關聯的變更資料表特定檔案群組。 此指定的檔案群組必須已存在。 一般而言，我們建議您將變更資料表放在與來源資料表不同的檔案群組中。 如需示範  filegroup_name *參數用法的範例，請參閱\@啟用指定檔案群組選項的資料表*範本。  
   
 ```sql  
 -- =========  

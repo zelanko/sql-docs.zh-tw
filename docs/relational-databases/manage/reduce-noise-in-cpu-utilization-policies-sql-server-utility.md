@@ -13,10 +13,10 @@ ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a9fc6db57277044267a89cc89e6c196c782ea920
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115346"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>降低 CPU 使用量原則的雜訊 (SQL Server 公用程式)
@@ -55,7 +55,7 @@ ms.locfileid: "68115346"
   
 -   將 CPU 報告為使用量過低之前，資料點違規的預設百分比為 90%。 選項的範圍是從 0% 到 100%。  
   
- 根據預設值，每週將會收集 672 個資料點，而且原則臨界值為 0%。 所以根據預設，這個原則不會產生處理器使用量過低的違規情形。 如需如何變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體或資料層應用程式之全域 CPU 使用量原則的詳細資訊，請參閱[公用程式管理 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)。 如需如何變更個別 SQL Server 執行個體之 CPU 使用量原則的詳細資訊，請參閱[受管理的執行個體詳細資料 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)。 如需如何變更個別資料層應用程式之 CPU 使用量原則的詳細資訊，請參閱[部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
+ 根據預設值，每週將會收集 672 個資料點，而且原則臨界值為 0%。 所以根據預設，這個原則不會產生處理器使用量過低的違規情形。 如需如何變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體或資料層應用程式之全域 CPU 使用量原則的詳細資訊，請參閱 [公用程式管理 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)。 如需如何變更個別 SQL Server 執行個體之 CPU 使用量原則的詳細資訊，請參閱[受管理的執行個體詳細資料 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)。 如需如何變更個別資料層應用程式之 CPU 使用量原則的詳細資訊，請參閱[部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
   
 ## <a name="see-also"></a>另請參閱  
  [公用程式管理 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)   

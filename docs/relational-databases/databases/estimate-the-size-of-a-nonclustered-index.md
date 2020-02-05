@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f63cb12399efd7417f9b00695d54b1356f681fb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934467"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>估計非叢集索引的大小

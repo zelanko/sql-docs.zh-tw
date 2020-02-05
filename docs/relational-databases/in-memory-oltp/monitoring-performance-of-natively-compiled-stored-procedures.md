@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e16276b7b514d921261ea9b53af13162d0aa3b8b
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412615"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>監視原生編譯預存程序的效能
@@ -42,12 +42,12 @@ SELECT [definition]
 
 ## <a name="procedure-level-execution-statistics"></a>程序層級執行統計資料
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ：使用 [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 在程序層級啟用或停用原生編譯預存程序的統計資料收集。  下列陳述式可以在目前的執行個體上啟用所有原生編譯 T-SQL 模組的程序層級執行統計資料收集：
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ：使用 [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 在程序層級啟用和停用原生編譯預存程序的統計資料收集。  下列陳述式可以在目前的執行個體上啟用所有原生編譯 T-SQL 模組的程序層級執行統計資料收集：
 ```sql
 EXEC sys.sp_xtp_control_proc_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** ：使用 [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 選項 `XTP_PROCEDURE_EXECUTION_STATISTICS` 來在程序層級啟用或停用原生編譯預存程序的統計資料收集。 下列陳述式可以在目前的資料庫上啟用所有原生編譯 T-SQL 模組的程序層級執行統計資料收集：
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** ：使用 [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 選項 `XTP_PROCEDURE_EXECUTION_STATISTICS` 來啟用或停用原生編譯預存程序的程序層級統計資料收集。 下列陳述式可以在目前的資料庫上啟用所有原生編譯 T-SQL 模組的程序層級執行統計資料收集：
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION
@@ -61,7 +61,7 @@ ALTER DATABASE
 EXEC sys.sp_xtp_control_query_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** ：使用 [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 選項 `XTP_QUERY_EXECUTION_STATISTICS` 在陳述式層級啟用或停用原生編譯預存程序的統計資料收集。 下列陳述式可以在目前的資料庫上啟用所有原生編譯 T-SQL 模組的陳述式層級執行統計資料收集：
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** ：使用 [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 選項 `XTP_QUERY_EXECUTION_STATISTICS` 啟用或停用原生編譯預存程序的陳述式層級統計資料收集。 下列陳述式可以在目前的資料庫上啟用所有原生編譯 T-SQL 模組的陳述式層級執行統計資料收集：
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION

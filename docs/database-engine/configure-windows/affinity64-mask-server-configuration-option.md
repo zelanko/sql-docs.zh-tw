@@ -15,10 +15,10 @@ ms.assetid: 75ed08c7-f85c-4e15-9ee1-e7bc545d3293
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2888394a73e7ce56e55c867adb21a54d6be81cc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013174"
 ---
 # <a name="affinity64-mask-server-configuration-option"></a>affinity64 mask 伺服器組態選項

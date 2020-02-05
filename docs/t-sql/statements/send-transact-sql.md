@@ -25,10 +25,10 @@ ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9a6c6993252ccad0335b177c31c9d20b40f520a5
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211424"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
@@ -59,7 +59,7 @@ MESSAGE TYPE *message_type_name*
 *message_body_expression*  
 提供代表訊息主體的運算式。 *message_body_expression* 為選擇性。 不過，如果 *message_body_expression* 存在，則運算式的類型必須能夠轉換成 **varbinary(max)** 。 運算式不能是 NULL。 如果省略這個子句，訊息主體就是空白的。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]  
 >  如果 SEND 陳述式不是批次或預存程序中的第一個陳述式，就必須使用分號 (;) 來終止前一個陳述式。  

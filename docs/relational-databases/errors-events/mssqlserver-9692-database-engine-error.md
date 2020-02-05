@@ -12,13 +12,13 @@ ms.assetid: 02399d6e-ab5e-4f30-8a3e-2bb1e8c135b5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7041aa3e2262932541c4d81fe93dd1d9a740c97a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903808"
 ---
-# <a name="mssqlserver9692"></a>MSSQLSERVER_9692
+# <a name="mssqlserver_9692"></a>MSSQLSERVER_9692
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -30,7 +30,7 @@ ms.locfileid: "67903808"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|SB2_CANT_LISTEN_PORT_IN_USE|  
-|訊息文字|%S_MSG 通訊協定傳輸無法在通訊埠 %d 上接聽，因為它正由另一個處理序所使用。|  
+|訊息文字|%S_MSG 通訊協定傳輸無法在連接埠 %d 上接聽，因為它正由另一個處理序所使用。|  
   
 ## <a name="explanation"></a>說明  
 電腦上的另一個程式正在使用指定的 TCP 通訊埠。  

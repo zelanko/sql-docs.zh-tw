@@ -16,10 +16,10 @@ ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0eef24cbeac94a6447c2cd6b4f5a43fd0ca93657
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292289"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>在資料流程元件中將查詢參數對應至變數
@@ -47,7 +47,7 @@ ms.locfileid: "71292289"
   
 7.  按一下 **[參數]** 。  
   
-8.  在 [設定查詢參數]  對話方塊中，將 [參數]  清單中的每個參數對應至 [變數]  清單中的變數，或按一下 [\<新增變數>]  來建立新變數。 按一下 [確定]  。  
+8.  在 [設定查詢參數]  對話方塊中，將 [參數]  清單中的每個參數對應至 [變數]  清單中的變數，或按一下 [**新增變數>]\<** 來建立新變數。 按一下 [確定]  。  
   
     > [!NOTE]  
     >  只有封裝、「Foreach 迴圈」之類的父容器或包含資料流程元件之「資料流程」工作等範圍內的系統變數和使用者自訂變數才可用於對應。 變數的資料類型必須與指派參數之 WHERE 子句中的資料行相容。  

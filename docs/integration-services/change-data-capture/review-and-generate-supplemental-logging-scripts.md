@@ -13,10 +13,10 @@ ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2de7acdd60a4d88c6523929615541cbed7674d12
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294584"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>檢閱及產生補充記錄指令碼
@@ -59,6 +59,6 @@ ms.locfileid: "71294584"
   
 ## <a name="see-also"></a>另請參閱  
  [如何編輯 CDC 執行個體屬性](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+ [執行指令碼的 Oracle 認證](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   

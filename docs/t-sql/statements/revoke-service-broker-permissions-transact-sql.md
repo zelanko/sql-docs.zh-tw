@@ -22,10 +22,10 @@ ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4ed6e67bbf6f3fcda872650c2d3394d6311802b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914220"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE Service Broker 權限 (Transact-SQL)
@@ -121,7 +121,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   未對應至伺服器主體的資料庫使用者  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 ## <a name="service-broker-contracts"></a>Service Broker 合約  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 合約是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 下表所列的是可以在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 合約上撤銷之最特定且最有限的權限，並列出利用隱含方式來包含這些權限的較通用權限。  

@@ -17,10 +17,10 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1c3ccadbe443ca555e5386ea3d3434405ae97461
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291473"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 清理轉換
@@ -49,7 +49,7 @@ ms.locfileid: "71291473"
   
 -   [在 Data Quality Client 中開啟 Integration Services 專案](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
   
--   [Import Cleansing Project Values into a Domain](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
+-   [將清理專案值匯入網域](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
   
 -   [將資料品質規則套用至資料來源](../../../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
@@ -163,5 +163,5 @@ ms.locfileid: "71291473"
   
 2.  以滑鼠右鍵按一下連接區域、按一下 [新增連接]  ，然後按一下 [DQS]  。  
   
-3.  按一下 **[加入]** 。  
+3.  按一下 [新增]  。  
   

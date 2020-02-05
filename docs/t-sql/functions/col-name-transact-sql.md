@@ -22,13 +22,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 91e36569f32f75e5b5328974f0df870c7814f251
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68064724"
 ---
-# <a name="colname-transact-sql"></a>COL_NAME (Transact-SQL)
+# <a name="col_name-transact-sql"></a>COL_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 此函式會根據資料表資料行的資料表識別碼和資料行識別碼值來傳回該資料表資料行的名稱。
@@ -56,7 +56,7 @@ COL_NAME ( table_id , column_id )
   
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示，如果使用者沒有物件的正確權限，則發出中繼資料的內建函式 (例如 `COL_NAME`) 可能會傳回 NULL。 如需詳細資訊，請參閱[中繼資料可見性設定](../../relational-databases/security/metadata-visibility-configuration.md)。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 *table_id* 和 *column_id* 參數會共同產生一個資料行名稱字串。
   
 如需取得資料表和資料行識別碼的詳細資訊，請參閱 [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)。

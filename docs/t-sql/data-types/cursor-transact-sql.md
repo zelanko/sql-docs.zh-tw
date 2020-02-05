@@ -15,10 +15,10 @@ ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c25550ed5e985f643f81b0b41e749f007eef0df3
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682073"
 ---
 # <a name="cursor-transact-sql"></a>資料指標 (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "71682073"
 
 參考資料指標的變數或預存程序 OUTPUT 參數的資料類型。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 以下是可參考 **cursor** 資料類型之變數和參數的作業：
 -   DECLARE *\@local_variable* 和 SET *\@local_variable* 陳述式。  
 -   OPEN、FETCH、CLOSE 和 DEALLOCATE 資料指標陳述式。  

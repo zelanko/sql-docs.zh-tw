@@ -21,10 +21,10 @@ ms.assetid: 99412475-b0df-4264-9938-33a0b302b41a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3f7bc162244e30b2ac48f9b49a6c596268b595c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901971"
 ---
 # <a name="hints-transact-sql"></a>提示 (Transact-SQL)

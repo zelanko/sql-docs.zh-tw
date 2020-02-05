@@ -14,10 +14,10 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fa5d6c780ce80e8f6de0493494f736f7049edc16
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298967"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services (SSIS) 伺服器與目錄
@@ -27,7 +27,7 @@ ms.locfileid: "71298967"
 
   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中設計和測試封裝之後，可以將含有那些封裝的專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器為主控 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 資料庫之 **ssDEnoversion** 的執行個體。 資料庫會儲存封裝、專案、參數、權限、伺服器屬性與作業歷程記錄等物件。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器是裝載 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]SSISDB**資料庫的** 執行個體。 資料庫會儲存封裝、專案、參數、權限、伺服器屬性與作業歷程記錄等物件。  
   
  **SSISDB** 資料庫會透過可供您查詢的公用檢視，公開物件資訊。 此資料庫也會提供預存程序，讓您可加以呼叫來管理物件。  
   

@@ -21,10 +21,10 @@ ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a1cc6427e01055a3aa97f8f79f9270dc22579255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140262"
 ---
 # <a name="comparison-operators-transact-sql"></a>比較運算子 (Transact-SQL)
@@ -45,9 +45,9 @@ ms.locfileid: "68140262"
 |[\!> (不大於)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|不大於 (不是 ISO 標準)|  
   
 ## <a name="boolean-data-type"></a>布林資料類型  
- 比較運算子的結果具有 **Boolean** 資料類型。 這有三個值：TRUE、FALSE 和 UNKNOWN。 傳回 **Boolean** 資料類型的運算式稱為布林運算式。  
+ 比較運算子的結果具有 **Boolean** 資料類型。 它有三個值：TRUE、FALSE 和 UNKNOWN。 傳回 **Boolean** 資料類型的運算式稱為布林運算式。  
   
- **Boolean** 資料類型和其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型不同，不能將它指定為資料表資料行或變數的資料類型，且無法在結果集中傳回。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Boolean**資料類型和其他** 資料類型不同，不能將它指定為資料表資料行或變數的資料類型，且無法在結果集中傳回。  
   
  當 SET ANSI_NULLS 是 ON 時，有一或兩個 NULL 運算式的運算子會傳回 UNKNOWN。 當 SET ANSI_NULLS 是 OFF 時，會套用相同的規則，但等於 (=) 和不等於 (<>) 運算子除外。 當 SET ANSI_NULLS 是 OFF 時，這些運算子會將 NULL 視為已知值，等同於任何其他 NULL，並且只會傳回 TRUE 或 FALSE (絶不會是 UNKNOWN)。  
   

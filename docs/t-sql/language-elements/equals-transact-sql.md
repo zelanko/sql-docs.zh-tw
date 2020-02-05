@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a08dbc63f765b436d9f6bb56be6456f197217db8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075273"
 ---
 # <a name="-equals-transact-sql"></a>= (等於) (Transact-SQL)
@@ -46,9 +46,9 @@ expression = expression
  這是任何有效的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 如果運算式的資料類型不同，一個運算式的資料類型必須能夠隱含地轉換成另一運算式的資料類型。 轉換會以[資料類型優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)的規則為基礎。  
   
 ## <a name="result-types"></a>結果類型  
- 布林  
+ Boolean  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當您使用 NULL 運算式進行比較時，結果會隨著 `ANSI_NULLS` 設定而不同：  
   
 -   如果 `ANSI_NULLS` 設定為 ON，任何與 NULL 的比較結果為 UNKNOWN，其遵循 ANSI 慣例：NULL 是未知的值，而且無法與任何其他值 (包括其他的 NULL) 進行比較。  

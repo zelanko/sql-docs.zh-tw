@@ -11,10 +11,10 @@ ms.assetid: 80334de2-17c1-43c9-951e-21a9f864e9cb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dee01068864d087548d0f6def2179787bf66fc55
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294550"
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-designer"></a>SQL Server 連接所需的 CDC 設計工具權限
@@ -28,7 +28,7 @@ ms.locfileid: "71294550"
   
  下表描述需要連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各種工作以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入/使用者的必要權限。  
   
-|工作|最小權限|  
+|Task|最低權限|  
 |----------|-------------------------|  
 |使用關聯的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體檢視 CDC 服務和執行個體的清單。|`db_datareader` 角色|  
 |啟動/停止 CDC 執行個體|`db_datareader` 和 `db_datawriter` 角色|  

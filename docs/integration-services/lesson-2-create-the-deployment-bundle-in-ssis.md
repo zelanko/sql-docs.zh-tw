@@ -11,10 +11,10 @@ ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23d700f7886b046896397eb1cce4eb21f9c32850
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296005"
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>第 2 課：在 SSIS 中建立部署配套
@@ -22,13 +22,13 @@ ms.locfileid: "71296005"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-在[第 1 課：準備建立部署配套](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)中，您建立了名稱為「部署教學課程」的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案、在專案中加入了套件和支援檔案，並且已在套件中實作組態。  
+在 [第 1 課：準備建立部署配套](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)中，您建立了名稱為「部署教學課程」的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案、在專案中加入了套件和支援檔案，並且已在套件中實作組態。  
   
 在這一課中，您會建立部署配套，這是一個資料夾，其中包含您必須在其他電腦上安裝封裝的項目。 部署配套將會包含「部署教學課程」專案中的部署資訊清單、封裝的副本，以及支援檔案的副本。 部署資訊清單會列出部署配套中的封裝、其他檔案和組態。  
   
 此外，您還會確認部署配套中的檔案清單，並檢查資訊清單的內容。  
   
-**完成本課程的估計時間：** 30 分鐘  
+**完成本課程的估計時間** ：30 分鐘  
   
 ## <a name="lesson-tasks"></a>課程工作  
 這一課包含下列工作：  

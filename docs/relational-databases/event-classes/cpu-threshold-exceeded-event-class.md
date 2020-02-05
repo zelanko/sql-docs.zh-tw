@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d74d1907b0f96275658c716a7a08061f0eec8995
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999570"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>CPU Threshold Exceeded 事件類別
@@ -28,14 +28,14 @@ ms.locfileid: "67999570"
   
 ## <a name="cpu-threshold-exceeded-data-columns"></a>CPU Threshold Exceeded 資料行  
   
-|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |CPU|**int**|CPU 使用量 (以毫秒為單位)。|18|是|  
 |EventClass|**int**|214|27|否|  
 |EventSubClass|**int**|CPU 限制違規。|21|是|  
 |GroupID|**int**|發生違規的群組識別碼。|66|是|  
 |OwnerID|**int**|導致違規之處理序的 SPID。|58|是|  
-|SPID|**int**|引發此事件之伺服器處理序的識別碼。<br /><br /> 注意:如果系統執行緒將 CPU 使用量驗證為背景工作，則這個識別碼可能會與實際的使用者 SPID 不同。|12|是|  
+|SPID|**int**|引發此事件之伺服器處理序的識別碼。<br /><br /> 注意：如果系統執行緒將 CPU 使用量驗證為背景工作，這個識別碼可能會與實際的使用者 SPID 不同。|12|是|  
 |StartTime|**datetime**|引發此事件的時間。|14|是|  
   
 ## <a name="see-also"></a>另請參閱  

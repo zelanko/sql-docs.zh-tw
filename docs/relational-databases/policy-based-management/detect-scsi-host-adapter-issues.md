@@ -13,10 +13,10 @@ ms.assetid: 75225b64-c102-4f1b-888a-fe72710dbfcd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c27ba2a02a9c54f2dc1b57341750d6600843d69d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137884"
 ---
 # <a name="detect-scsi-host-adapter-issues"></a>偵測到 SCSI 主機介面卡問題

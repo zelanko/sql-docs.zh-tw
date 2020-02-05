@@ -11,10 +11,10 @@ ms.assetid: e74217c8-234a-4095-b3c0-5870707e5a87
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 724fca0d77c897ae15d3f6ed1ab1848c265e37de
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296133"
 ---
 # <a name="integration-services-tutorials"></a>Integration Services 教學課程

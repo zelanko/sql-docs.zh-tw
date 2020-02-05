@@ -14,10 +14,10 @@ ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0fa4abf575c847bae10342a3870fc2c3785d16a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014227"
 ---
 # <a name="secondary-database-is-not-joined"></a>次要資料庫未加入
@@ -32,7 +32,7 @@ ms.locfileid: "68014227"
 |**類別目錄**|**警告**|  
 |**Facet**|可用性資料庫|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  此原則會檢查次要資料庫 (也稱為「次要資料庫複本」) 的聯結狀態。 當資料庫複本未聯結時，原則為狀況不良。 否則原則為狀況良好。  
   
 > [!NOTE]  

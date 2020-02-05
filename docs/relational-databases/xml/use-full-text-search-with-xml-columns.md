@@ -14,10 +14,10 @@ ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f101051d924c1fca0bfbcd131ea8544ea4781e12
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909112"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>使用 XML 資料行進行全文檢索搜尋
@@ -52,7 +52,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  此外，全文檢索搜尋會使用詞幹，但 XQuery **contains()** 是逐字比對的相符項。 下一個範例將舉例說明之間的差異。  
   
-## <a name="example-full-text-search-on-xml-values-using-stemming"></a>範例：使用詞幹對 XML 值進行全文檢索搜尋  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>範例：使用詞幹在 XML 值上進行全文檢索搜尋  
  在上個範例中執行的 XQuery **contains()** 檢查通常是無法排除的。 請考量這項查詢：  
   
 ```sql

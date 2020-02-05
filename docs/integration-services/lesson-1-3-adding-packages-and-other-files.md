@@ -1,5 +1,5 @@
 ---
-title: 步驟 3：加入套件和其他檔案 | Microsoft Docs
+title: 步驟 3：加入封裝和其他檔案 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: be3dcb5bd42624ee943db4393809e2889808a11e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283833"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>課程 1-3 - 加入封裝和其他檔案
@@ -34,7 +34,7 @@ ms.locfileid: "71283833"
   
 若要支援這些封裝的部署，您需要將下列輔助檔案加入至「部署教學課程」專案中：  
   
-|封裝|檔案|  
+|Package|檔案|  
 |-----------|--------|  
 |DataTransfer|NewCustomers.txt|  
 |LoadXMLData|orders.xml 和 orders.xsd|  

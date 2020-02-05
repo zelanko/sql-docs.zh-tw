@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5fcc1f21654fedc935a604fac37c7a3ca591b3d5
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: e577144d9c259d097e28b435b0d0eedc4252e82a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321552"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286935"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>檢視及修改散發者和發行者屬性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "75321552"
   
 2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[散發者屬性]** 。  
   
-3.  檢視和修改 [散發者屬性 - \<散發者>]  對話方塊中的屬性。  
+3.  檢視和修改 [散發者屬性 - **散發者>]\<** 對話方塊中的屬性。  
   
     -   若要檢視和修改散發資料庫的屬性，請按一下對話方塊中 [一般]  頁面上資料庫的屬性按鈕 ( **...** )。  
   

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5471791b3f75130bc2fb262a05683aa953f7f3a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000444"
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68000444"
 
 這是 16 位元組的 GUID。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 **uniqueidentifier** 資料類型的資料行或本機變數可以利用下列方法，初始化為一個值：
 -   使用 [NEWID](../../t-sql/functions/newid-transact-sql.md) 或 [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) 函式。    
 -   從 *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx* 格式的字串常數轉換，其中每一個 *x* 是範圍 0-9 或 a-f 的十六進位數字。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 是有效的 **uniqueidentifier** 值。  

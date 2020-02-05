@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2fff507046ae5a53abbffbd91bb245f52d57a53c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594142"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)
@@ -50,13 +50,13 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* 指定要所建立資料庫範圍認證的名稱。 *credential_name* 的開頭不可以是編號 (#) 符號。 系統認證必須以 ## 為開頭。
 
-IDENTITY **='** _identity\_name_ **'** 指定連接到伺服器外部時所要使用的帳戶名稱。 若要使用共用金鑰從 Azure Blob 儲存體匯入檔案，身分識別名稱必須為 `SHARED ACCESS SIGNATURE`。 若要將資料載入 SQL DW，可以將任何有效值用於身分識別。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。
+IDENTITY **='** _identity\_name_ **'** 指定連接到伺服器外部時要使用的帳戶名稱。 若要使用共用金鑰從 Azure Blob 儲存體匯入檔案，身分識別名稱必須為 `SHARED ACCESS SIGNATURE`。 若要將資料載入 SQL DW，可以將任何有效值用於身分識別。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。
 
 SECRET **='** _secret_ **'** 指定外寄驗證所需的祕密。 從 Azure Blob 儲存體匯入檔案需要 `SECRET`。 若要從 Azure Blob 儲存體載入到 SQL DW 或平行處理資料倉儲，祕密必須是Azure 儲存體金鑰。
 > [!WARNING]
 > SAS 金鑰值的開頭可能是 '?' (問號)。 當您使用 SAS 金鑰時，您必須移除前置字元 '?'。 否則您的工作可能會受阻。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 資料庫範圍認證是包含驗證資訊的資料列，該資訊是連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部資源時所需的資訊。 大部分認證都包含 Windows 使用者和密碼。
 

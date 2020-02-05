@@ -18,10 +18,10 @@ ms.assetid: a5b3c344-1045-43a4-82fa-47f6206a288e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e8669d2d4a04fba9a18f091dabab04fc1284ce03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042256"
 ---
 # <a name="stgeomcollfromtext-geography-data-type"></a>STGeomCollFromText (geography 資料類型)
@@ -43,12 +43,12 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
  *SRID*  
  這是 **int** 運算式，表示要傳回之 **geography** 執行個體的空間參考識別碼 (SRID)。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回型別：**SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  STGeomCollFromText() 所傳回之 **geography** 執行個體的 OGC 類型會設定為對應的 WKT 輸入。  
   
  如果輸入無效，這個方法會擲回 **ArgumentException**。  

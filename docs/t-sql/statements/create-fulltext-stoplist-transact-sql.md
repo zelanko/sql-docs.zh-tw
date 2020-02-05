@@ -26,10 +26,10 @@ ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7d2061479ac8f93dfcdbc4a8039ef3914d897f87
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064648"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
@@ -72,7 +72,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
  AUTHORIZATION *owner_name*  
  指定擁有停用字詞表的資料庫主體名稱。 *owner_name* 必須是目前使用者所屬的主體名稱，或者目前使用者必須具有 *owner_name* 的 IMPERSONATE 權限。 若未指定，擁有權便歸目前使用者。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  停用字詞表的建立者就是它的擁有者。  
   
 ## <a name="permissions"></a>權限  

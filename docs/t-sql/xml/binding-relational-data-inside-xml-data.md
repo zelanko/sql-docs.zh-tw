@@ -19,16 +19,16 @@ ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9a2253165045d74f669c52d0247b716e5576e8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051327"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>在 XML 資料中繫結關聯式資料
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  您可以針對 **xml** 資料類型變數或資料行指定 [xml 資料類型方法](../../t-sql/xml/xml-data-type-methods.md)。 例如，[query&#40;&#41; 方法 &#40;xml 資料類型&#41;](../../t-sql/xml/query-method-xml-data-type.md) 會針對 XML 執行個體來執行所指定的 XQuery。 當您以這種方式來建構 XML 時，可能會想要引用非 XML 類型資料行或 Transact-SQL 變數中的值。 此程序就稱為：在 XML 資料中繫結關聯式資料。  
+  您可以針對 [xml](../../t-sql/xml/xml-data-type-methods.md) 資料類型變數或資料行指定 **xml 資料類型方法**。 例如，[query&#40;&#41; 方法 &#40;xml 資料類型&#41;](../../t-sql/xml/query-method-xml-data-type.md) 會針對 XML 執行個體來執行所指定的 XQuery。 當您以這種方式來建構 XML 時，可能會想要引用非 XML 類型資料行或 Transact-SQL 變數中的值。 此程序就稱為：在 XML 資料中繫結關聯式資料。  
   
  為了在 XML 中繫結非 XML 的關聯式資料，SQL Server Database Engine 提供了下列虛擬函數：  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68051327"
   
  此外，這種繫結方式是唯讀的。 意即，您不能在使用這些函數的資料行中寫入資料。 例如，不允許下列語法：sql:variable("\@x")="某個運算式 *"* 。  
   
-## <a name="example-cross-domain-query-using-sqlvariable"></a>範例Cross-domain Query Using sql:variable()  
+## <a name="example-cross-domain-query-using-sqlvariable"></a>範例：Cross-domain Query Using sql:variable()  
  此範例會示範 **sql:variable()** 如何讓應用程式將查詢參數化。 ISBN 的傳入方式是使用 SQL 變數 @isbn。 將常數置換成 **sql:variable()** 之後，就可以使用該查詢來搜尋任何 ISBN，而不只是 ISBN 為 0-7356-1588-2 的 ISBN。  
   
 ```  

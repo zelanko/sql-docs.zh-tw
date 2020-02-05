@@ -15,10 +15,10 @@ ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b2c42ee67fe0c01570eadd6e3aa1d23019672172
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67968338"
 ---
 # <a name="data-synchronization-state-of-some-availability-database-is-not-healthy"></a>某些可用性資料庫的資料同步處理狀態不健全
@@ -33,7 +33,7 @@ ms.locfileid: "67968338"
 |**類別目錄**|**警告**|  
 |**Facet**|可用性複本|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  此原則會檢查可用性資料庫 (也稱為「資料庫複本」) 的資料同步處理狀態。 當資料同步處理狀態為 NOT SYNCHRONIZING，或同步認可資料庫複本的狀態不是 SYNCHRONIZED 時，原則為狀況不良。  
   
 > [!NOTE]  

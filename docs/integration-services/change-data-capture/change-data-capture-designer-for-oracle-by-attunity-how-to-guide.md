@@ -11,10 +11,10 @@ ms.assetid: 84ed22e8-2a0c-41c2-a8f0-eea3f4047656
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fae988015ab20018a919883aa53b2d61c9ccc0ad
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294826"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-how-to-guide"></a>Attunity Oracle Change Data Capture (CDC) 設計工具使用說明指南

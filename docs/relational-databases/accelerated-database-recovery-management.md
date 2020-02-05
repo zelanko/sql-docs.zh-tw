@@ -13,10 +13,10 @@ ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 8fea43ea41bc3e65fa0a6b36c7557322431e95fd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245256"
 ---
 # <a name="manage-accelerated-database-recovery"></a>管理加速資料庫復原
@@ -110,11 +110,11 @@ GO
 
 若 PVS 遠大於基準，或是其接近資料庫大小的 50%，該 PVS 便是大型 PVS。 
 
-1. 根據交易識別碼，查詢 `sys.dm_tran_database_transactions` 來擷取 `oldest_active_transaction_id`，並檢查此交易是否已處在使用中狀態相當長的時間。
+1. 根據交易識別碼，查詢 `oldest_active_transaction_id` 來擷取 `sys.dm_tran_database_transactions`，並檢查此交易是否已處在使用中狀態相當長的時間。
 
    使用中的交易會防止清除 PVS。
 
-1. 若資料庫是可用性群組的一部分，請檢查 `secondary_low_water_mark`。 這與 `sys.dm_hadr_database_replica_states` 報告的 `low_water_mark_for_ghosts` 相同。 查詢 `sys.dm_hadr_database_replica_states` 來查看其中一個複本是否正在保留此值，因為這也會防止 PVS 清除。
-1. 檢查 `min_transaction_timestamp` (或 `online_index_min_transaction_timestamp`，若線上 PVS 正在延誤的話)，並根據其結果，檢查資料行 `transaction_sequence_num` 的 `sys.dm_tran_active_snapshot_database_transactions` 來尋找包含正在延誤 PVS 清除舊快照集交易的工作階段。
+1. 若資料庫是可用性群組的一部分，請檢查 `secondary_low_water_mark`。 這與 `low_water_mark_for_ghosts` 報告的 `sys.dm_hadr_database_replica_states` 相同。 查詢 `sys.dm_hadr_database_replica_states` 來查看其中一個複本是否正在保留此值，因為這也會防止 PVS 清除。
+1. 檢查 `min_transaction_timestamp` (或 `online_index_min_transaction_timestamp`，若線上 PVS 正在延誤的話)，並根據其結果，檢查資料行 `sys.dm_tran_active_snapshot_database_transactions` 的 `transaction_sequence_num` 來尋找包含正在延誤 PVS 清除舊快照集交易的工作階段。
 1. 若上述項目皆不適用，這表示清除是由中止的交易延誤。 請檢查最後一次的 `aborted_version_cleaner_last_start_time` 和 `aborted_version_cleaner_last_end_time`，來查看中止的交易清除是否已完成。 `oldest_aborted_transaction_id` 應會在中止交易清除完成後向更高的方向移動。
 1. 若中止交易尚未成功完成，請檢查錯誤記錄檔，尋找報告 `VersionCleaner` 問題的訊息。

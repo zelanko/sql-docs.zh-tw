@@ -11,10 +11,10 @@ ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95216c6ecca08c48d845a63fb43486ace9bb44a5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296711"
 ---
 # <a name="catalogstop_operation-ssisdb-database"></a>catalog.stop_operation (SSISDB 資料庫)
@@ -60,7 +60,7 @@ catalog.stop_operation [ @operation_id = ] operation_id
   
 -   作業已停止  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  一次只能有一個使用者停止 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的作業。 如果多個使用者嘗試停止作業，預存程序將會在第一次嘗試時傳回成功 (值 `0`)，但後續的嘗試將會引發錯誤。  
   
   

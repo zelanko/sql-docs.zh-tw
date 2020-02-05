@@ -22,10 +22,10 @@ ms.assetid: 6aca7412-66a5-4fa4-86b2-061512ff2080
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1b490b3aae8fce4ef7b4ae912275e8a338f44833
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898055"
 ---
 # <a name="drop-endpoint-transact-sql"></a>DROP ENDPOINT (Transact-SQL)
@@ -46,7 +46,7 @@ DROP ENDPOINT endPointName
  *endPointName*  
  這是要移除的端點名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  ENDPOINT DDL 陳述式不能在使用者交易內執行。  
   
 ## <a name="permissions"></a>權限  

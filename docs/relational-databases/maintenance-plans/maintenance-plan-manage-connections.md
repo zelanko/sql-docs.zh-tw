@@ -13,10 +13,10 @@ ms.assetid: 95ad9375-6584-423e-b9de-0e86782f8017
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a388792d24ce033dce0ffb4c6f0120a6ea341ae0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115956"
 ---
 # <a name="maintenance-plan-manage-connections"></a>維護計畫 (管理連接)
@@ -31,9 +31,9 @@ ms.locfileid: "68115956"
  指出是以 Windows 驗證或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來建立連接。  
 
 > [!IMPORTANT]  
-> 套件會儲存在 **msdb** 資料庫中，且將 **ProtectionLevel** 設為 **ServerStorage**，因此在使用「SQL Server 驗證」  時，**msdb** 中的密碼將不會加密。 只要 **msdb** 是安全的，您就可以使用「SQL Server 驗證」  ，但建議使用「Windows 驗證」 
+> 套件會儲存在 **msdb** 資料庫中，且將 **ProtectionLevel** 設為 **ServerStorage**，因此在使用「SQL Server 驗證」  時，**msdb** 中的密碼將不會加密。 只要 *msdb* 是安全的，您就可以使用「SQL Server 驗證」  ，但建議使用「Windows 驗證」 
 
 ## <a name="see-also"></a>另請參閱  
- [中 [物件總管] 之](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+ [維護計畫](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

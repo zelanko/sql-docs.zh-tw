@@ -11,10 +11,10 @@ ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 532513a6d8c62cb1f1f36e6dc2c8b83a7c96089b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295392"
 ---
 # <a name="catalogrename_environment-ssisdb-database"></a>catalog.rename_environment (SSISDB 資料庫)
@@ -66,7 +66,7 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 -   新的名稱已經使用於現有環境  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  重新命名環境時，不會自動更新來自專案的環境參考。 環境參考必須隨之更新。 即使環境參考因為變更環境名稱而中斷，這個預存程序仍然會成功。 環境參考必須在預存程序完成之後更新。  
   
 > [!NOTE]  

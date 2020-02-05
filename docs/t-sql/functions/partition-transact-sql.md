@@ -19,10 +19,10 @@ ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3aa388dd079de10f18abbb39d240f3d57d1e2efd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914379"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
@@ -49,10 +49,10 @@ ms.locfileid: "67914379"
  *expression*  
  為資料類型必須完全符合或可隱含轉換成對應分割資料行之資料類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *expression* 也可以是目前參與 *partition_function_name* 之分割資料行的名稱。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  $PARTITION 會傳回一個 1 和資料分割函式的分割區數目之間的 **int** 值。  
   
  $PARTITION 會傳回任何有效值的資料分割編號，不論使用資料分割函數的資料分割資料表或索引中目前的值為何，都是如此。  

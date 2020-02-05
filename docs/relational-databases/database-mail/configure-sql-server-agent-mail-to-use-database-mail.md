@@ -14,10 +14,10 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0692421ca7e63b419c99ecc835516af4cbd5af0
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095772"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>設定 SQL Server Agent Mail 使用 Database Mail
@@ -49,7 +49,7 @@ ms.locfileid: "74095772"
   
 -   將設定檔設為 **msdb** 資料庫的預設設定檔。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  建立設定檔帳戶以及執行預存程序的使用者，應該是系統管理員 (sysadmin) 固定伺服器角色的成員。  

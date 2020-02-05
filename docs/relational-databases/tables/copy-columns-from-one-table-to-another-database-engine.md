@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 75046ec1915de92a1319b273bd2cce8e718aac1b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909779"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>將資料行從一個資料表複製至另一個資料表 (Database Engine)
@@ -45,7 +45,7 @@ ms.locfileid: "72909779"
 ###  <a name="Restrictions"></a> 限制事項  
  當您在資料庫之間複製擁有別名資料類型的資料行時，別名資料類型可能無法在目的地資料庫中使用。 在這種狀況下，將指派資料庫中可用而最符合的基本資料類型給該資料行。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  

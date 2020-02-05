@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0db1834114a8bb2ea21d9fb566f2201dd933803c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68088460"
 ---
 # <a name="delete-columns-from-a-table"></a>從資料表中刪除資料行
@@ -54,7 +54,7 @@ ms.locfileid: "68088460"
 
 除非使用資料表設計工具，否則您無法刪除具有 PRIMARY KEY 或 FOREIGN KEY 條件約束或其他相依性的資料行。 使用 [物件總管] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]時，您必須先移除資料行的所有相依性。
 
-### <a name="Security"></a> 安全性
+### <a name="Security"></a> Security
 
 #### <a name="Permissions"></a> 權限
 
@@ -75,7 +75,7 @@ ms.locfileid: "68088460"
 
 1. 在**物件總管**中，以滑鼠右鍵按一下您想要從中刪除資料行的資料表，然後選擇 [設計]  。
 2. 以滑鼠右鍵按一下您想要刪除的資料行，然後從捷徑功能表中選擇 [刪除資料行]  。
-3. 如果資料行參與關聯性 (FOREIGN KEY 或 PRIMARY KEY)，則會有訊息提示您確認是否要刪除選取的資料行及其關聯性。 選擇 [ **是**]。
+3. 如果資料行參與關聯性 (FOREIGN KEY 或 PRIMARY KEY)，則會有訊息提示您確認是否要刪除選取的資料行及其關聯性。 選擇 [是]  。
 
 ## <a name="TsqlProcedure"></a> 使用 Transact-SQL
 

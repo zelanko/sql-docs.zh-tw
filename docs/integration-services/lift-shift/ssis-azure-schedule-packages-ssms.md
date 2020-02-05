@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: c553e650dcbcfabc8ad2d18ce490221c0d2439ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68054598"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 排程 Azure 中部署的 SSIS 套件執行
@@ -29,7 +29,7 @@ ms.locfileid: "68054598"
 
 當您使用 SSMS 排程套件時，SSIS 會自動建立三個新的 Data Factory 物件，並根據所選套件的名稱及時間戳記來命名。 例如，如果 SSIS 套件的名稱是 **MyPackage**，SSMS 便會建立類似如下的新 Data Factory 物件：
 
-| Object | [屬性] |
+| Object | 名稱 |
 |---|---|
 | 管線 | **Pipeline_MyPackage_2018-05-08T09_00_00Z** |
 | 執行 SSIS 套件活動 | **Activity_MyPackage_2018-05-08T09_00_00Z** |
@@ -75,5 +75,5 @@ ms.locfileid: "68054598"
 若要了解排程 SSIS 套件的其他方法，請參閱[排程 Azure 上的 SSIS 套件執行](ssis-azure-schedule-packages.md)。
 
 若要深入了解 Azure Data Factory 管線、活動和觸發程序，請參閱下列文章：
--   [Azure Data Factory 中的管道及活動](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)
--   [Azure Data Factory 中的管道執行和觸發程序](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)
+-   [Azure Data Factory 中的管線及活動](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)
+-   [Azure Data Factory 中的管線執行和觸發程序](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)

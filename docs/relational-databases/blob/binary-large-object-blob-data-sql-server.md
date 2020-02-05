@@ -13,10 +13,10 @@ ms.assetid: 97509274-c3f8-43e5-a37c-52f1ffe0961a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6b38a13252001f9c50b62510f11e43822cde1666
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68018865"
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>二進位大型物件 (Blob) 資料 (SQL Server)

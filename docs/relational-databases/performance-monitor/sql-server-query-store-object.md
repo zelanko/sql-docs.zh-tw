@@ -14,10 +14,10 @@ ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 08cc5200801b99442c8973583f4ab7caa9ea9fb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140734"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, 查詢存放區物件
@@ -27,7 +27,7 @@ ms.locfileid: "68140734"
   
  下表描述 **SQLServer:Query Store**計數器。  
   
-|SQL Server 查詢存放區計數器|Description|  
+|SQL Server 查詢存放區計數器|描述|  
 |-------------------------------------|-----------------|  
 |**查詢存放區 CPU 使用量**|表示 CPU 的查詢存放區使用量。|  
 |**查詢存放區邏輯讀取**|表示查詢存放區所做的邏輯讀取數。|  
@@ -36,13 +36,13 @@ ms.locfileid: "68140734"
   
  物件中的每個計數器均包含下列執行個體：  
   
-|查詢存放區執行個體|Description|  
+|查詢存放區執行個體|描述|  
 |--------------------------|-----------------|  
 |**_Total**|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的查詢存放區資訊。|  
 |\<資料庫名稱>|此資料庫的查詢存放區資訊。|  
   
 ## <a name="see-also"></a>另請參閱  
- [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [查詢存放區預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [查詢存放區目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [監視資源使用狀況 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

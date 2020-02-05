@@ -19,10 +19,10 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dff79a428833e365d0ca55b287da6154f66d9966
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952473"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>建立伺服器稽核與伺服器稽核規格
@@ -97,7 +97,7 @@ ms.locfileid: "75952473"
      指定當 [稽核目的地]  為檔案時，要寫入稽核資料的資料夾位置。  
   
      **省略符號 (...)**  
-     開啟 [尋找資料夾 -_server\_name_]  對話方塊，指定檔案路徑或建立要寫入稽核檔案的資料夾。  
+     開啟 [尋找資料夾 -**server**name _]\__ 對話方塊，指定檔案路徑或建立要寫入稽核檔案的資料夾。  
   
      **稽核檔案最大限制:**  
      **輪用檔案數量上限**  

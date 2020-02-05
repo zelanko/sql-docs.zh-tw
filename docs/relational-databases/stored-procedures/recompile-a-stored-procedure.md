@@ -16,15 +16,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2a701e31e53b1d540c3fd586f10f34543895dfde
-ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74564796"
 ---
 # <a name="recompile-a-stored-procedure"></a>重新編譯預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 重新編譯 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的預存程序。 有三種方式可以執行此動作：程序定義中或呼叫程序時的 **WITH RECOMPILE** 選項、個別陳述式上的 **RECOMPILE** 查詢提示，或是透過使用 **sp_recompile** 系統預存程序。 本主題描述在建立程序定義及執行現有程序時使用 WITH RECOMPILE 選項。 另外還會描述使用 sp_recompile 系統預存程序重新編譯現有的程序。  
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 重新編譯 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的預存程序。 執行這項操作的方法有三種：程序定義中或呼叫程序時的 **WITH RECOMPILE** 選項、個別陳述式上的 **RECOMPILE** 查詢提示，或是藉由使用 **sp_recompile** 系統預存程序。 本主題描述在建立程序定義及執行現有程序時使用 WITH RECOMPILE 選項。 另外還會描述使用 sp_recompile 系統預存程序重新編譯現有的程序。  
   
  **本主題內容**  
   

@@ -15,10 +15,10 @@ ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 19f23e57fdb77a88ecf7c7b531c9c837e2c740ce
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298993"
 ---
 # <a name="folder-properties-dialog-box"></a>資料夾屬性對話方塊

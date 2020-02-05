@@ -15,10 +15,10 @@ ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 33a04235580d70567b1de09180b10526255811bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011940"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>預設追蹤已啟用伺服器組態選項
@@ -37,7 +37,7 @@ ms.locfileid: "68011940"
   
  如需使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler 來檢視此追蹤檔案的詳細資訊，請參閱[開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>範例：  
  以下陳述式可開啟預設位置中的預設追蹤記錄檔：  
   
 ```  

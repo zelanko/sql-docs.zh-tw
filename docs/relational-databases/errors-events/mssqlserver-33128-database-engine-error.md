@@ -12,13 +12,13 @@ ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 493513f21fbf61dd516160e61a7afb9e71e477fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908439"
 ---
-# <a name="mssqlserver33128"></a>MSSQLSERVER_33128
+# <a name="mssqlserver_33128"></a>MSSQLSERVER_33128
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -42,7 +42,7 @@ ms.locfileid: "67908439"
 > [!NOTE]  
 > 信號緩衝區是一個內部元件，不會進行完整記錄，也並非供客戶之用。 當您連絡 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客戶支援時，信號緩衝區中的訊息將提供有用協助。 若要檢視信號緩衝區，請查詢 sys.dm_os_ring_buffers 動態管理檢視。  
   
-|State|Description|  
+|State|描述|  
 |---------|---------------|  
 |1|內建的 encryptbykey() 函式中使用 RC4 金鑰。 內建函數傳回 NULL。 此訊息僅會顯示於信號緩衝區中。|  
 |2|內建的 decryptbykey() 函式中使用 RC4 金鑰。 此訊息僅會顯示於信號緩衝區中。|  

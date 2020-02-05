@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5ef4e316e27ddd77ee126549e21fc3e5efb988cd
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3794d249002fb6038be6a6d27d88e5f70e042104
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322209"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286329"
 ---
 # <a name="view-replicated-commands-and-information-in-distribution-database"></a>檢視散發資料庫中複寫的命令和資訊
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "75322209"
   
 1.  (選擇性) 在發行集資料庫的「發行者」端，執行 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)。 指定 `@publication` 和 `@article`。 請注意結果集中 **article id** 的值。  
   
-2.  在散發資料庫的「散發者」端，執行 [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)。 (選擇性) 針對 `@article_id` 指定步驟 2 的發行項識別碼。 (選擇性) 針對 `@publisher_database_id` 指定發行集資料庫的識別碼，此識別碼可從 [sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視的 **database_id** 資料行取得。  
+2.  在散發資料庫的「散發者」端，執行 [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)。 (選擇性) 針對 `@article_id` 指定步驟 2 的發行項識別碼。 (選擇性) 針對 `@publisher_database_id` 指定發行集資料庫的識別碼，此識別碼可從 **sys.databases** 目錄檢視的 [database_id](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 資料行取得。  
   
 ## <a name="see-also"></a>另請參閱  
  [以程式設計方式監視複寫](../../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

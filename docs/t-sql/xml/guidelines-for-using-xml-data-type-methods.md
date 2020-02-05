@@ -15,10 +15,10 @@ ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b354f824da86e3bfcc5fb8d6279cb755048046d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051306"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>使用 xml 資料類型方法的指導方針
@@ -71,9 +71,9 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 
 如果編譯器無法判斷是否能在執行階段保證單一性，則需要單一性的尋找步驟、函數參數及運算子將會傳回錯誤。 這個問題經常發生在不具類型的資料上。 例如，查閱屬性時需要單一父元素。 選擇單一父節點的序數即已足夠。 評估 **node()** -**value()** 組合來擷取屬性值時，可能不需要指定序數。 下一個範例將會加以說明。
 
-### <a name="example-known-singleton"></a>範例已知的單一性
+### <a name="example-known-singleton"></a>範例：已知的單一性
 
-在此範例中，**nodes()** 方法會為每個 `<book>` 元素各產生一列。 在 `<book>` 節點上評估的 **value()** 方法會擷取 `@genre` 的值，而且因為是屬性，所以會是 singleton。
+在此範例中，**nodes()** 方法會為每個 `<book>` 元素各產生一列。 在 **節點上評估的**value()`<book>` 方法會擷取 `@genre` 的值，而且因為是屬性，所以會是 singleton。
 
 ```sql
 SELECT nref.value('@genre', 'varchar(max)') LastName
@@ -84,7 +84,7 @@ XML 結構描述可用來檢查具類型之 XML 的類型。 如果在 XML 結�
 
 進行類型檢查時，務必持續留意 `//first-name[1]` 和 `(//first-name)[1]` 之間的差異。 前者會傳回 `<first-name>` 節點的序列，其中每個節點都是同層級中最左邊的 `<first-name>`節點。 後者會傳回 XML 執行個體中，文件順序中的第一個 singleton `<first-name>` 節點。
 
-### <a name="example-using-value"></a>範例使用 value()
+### <a name="example-using-value"></a>範例：使用 value()
 
 下面這個在不具類型 XML 資料行上執行的查詢會導致靜態的編譯錯誤。這是因為 **value()** 預期以 singleton 節點作為第一個引數，而編譯器無法判斷在執行階段是否只會出現一個 `<last-name>` 節點：
 

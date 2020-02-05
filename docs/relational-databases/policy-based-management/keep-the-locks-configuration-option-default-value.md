@@ -13,10 +13,10 @@ ms.assetid: f214f05b-5f0b-4786-b2ad-b8b4b6e58d72
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 57647a5ddd5f5bb98095f951d3fd3522757e0616
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087127"
 ---
 # <a name="keep-the-locks-configuration-option-default-value"></a>保留鎖定組態選項預設值

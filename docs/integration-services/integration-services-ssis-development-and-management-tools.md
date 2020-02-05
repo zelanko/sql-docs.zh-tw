@@ -19,10 +19,10 @@ ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ef390245e632b3e2c39bcc9ab27450839dcab2e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284371"
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>Integration Services (SSIS) 開發和管理工具

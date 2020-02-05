@@ -17,10 +17,10 @@ ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bf8e8c7bafb72b90edfe108c5702ad330bc3e700
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293472"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>使用 SQL Server 目的地來大量載入資料
@@ -36,7 +36,7 @@ ms.locfileid: "71293472"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  按一下 [資料流程]  索引標籤，然後將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地從 [工具箱]  拖曳到設計介面。  
+3.  按一下 [資料流程]  索引標籤，然後將  **目的地從 [工具箱]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拖曳到設計介面。  
   
 4.  將連接子拖曳到目的地，以便將目的地連接到資料流程中的來源或前一個轉換。  
   

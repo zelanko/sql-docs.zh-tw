@@ -13,10 +13,10 @@ ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 592fa533d6c6d6c518f1dcaaa3e70da2808b93b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947029"
 ---
 # <a name="database-properties-query-store-page"></a>資料庫屬性 (查詢存放區頁面)
@@ -64,7 +64,7 @@ ms.locfileid: "67947029"
   
  右圖顯示目前用完的查詢存放區配額比率。 請注意，配額不會顯示在左圖中。 配額可能超過目前資料庫的大小。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  查詢存放區功能為 DBA 提供查詢計劃選擇及效能的深入了解。 它能讓您快速找出因為查詢計劃中的變更所導致的效能差異，以簡化效能疑難排解。 該功能會自動擷取查詢、計劃及執行階段統計資料的記錄，並會保留這些記錄供您檢閱。 其會以時段來區分資料、供您查看資料庫使用模式，並了解何時在伺服器上發生查詢計劃變更。 可藉由使用這個查詢存放區資料庫屬性頁面，或是使用 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) 選項，設定查詢存放區。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 對話方塊，查詢存放區即可呈現資訊。 如需查詢存放區的詳細資訊，請參閱 [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -18,10 +18,10 @@ ms.assetid: 99602a62-265d-4aa4-a8dc-92992ca55ba4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 559a358e0a95af870a716001abb3935523d86248
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042540"
 ---
 # <a name="stasbinary-geography-data-type"></a>STAsBinary (geography 資料類型)
@@ -38,13 +38,13 @@ ms.locfileid: "68042540"
 .STAsBinary ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**varbinary(max)**  
   
- CLR 傳回型別：**SqlBytes**  
+ CLR 傳回類型：**SqlBytes**  
   
-## <a name="remarks"></a>Remarks  
- 可以叫用 [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) 來判斷 **geography** 執行個體的 OGC 型別。  
+## <a name="remarks"></a>備註  
+ 可以叫用 **STGeometryType()** 來判斷 [geography](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) 執行個體的 OGC 型別。  
   
 ## <a name="examples"></a>範例  
  下列範例使用 `STAsBinary()`，從文字建立 (-122.360, 47.656) 到 (-122.343, 47.656) 的 `LineString``geography` 執行個體。 然後，它會在 WKB 中傳回結果。  

@@ -12,10 +12,10 @@ ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4b4a5b5f27f959f3a04bb3cf5468d198d3ef5267
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295658"
 ---
 # <a name="integration-services-ssis-scale-out"></a>Integration Services (SSIS) 相應放大
@@ -25,7 +25,7 @@ ms.locfileid: "71295658"
 
 SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out 透過將套件執行散佈到多部電腦，來提供 SSIS 套件的高效能執行。 設定 Scale Out 之後，您可以從 SQL Server Management Studio (SSMS)，透過相應放大模式來平行執行多個套件執行。
 
-## <a name="components"></a>Components
+## <a name="components"></a>元件
 [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out 包含一個 [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out Master 及一或多個 [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out Worker。
 
 -   相應放大主機負責相應放大管理，以及接收來自使用者的套件執行要求。 如需詳細資訊，請參閱 [Scale Out Master](integration-services-ssis-scale-out-master.md)。
@@ -49,4 +49,4 @@ SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 
 ## <a name="next-steps"></a>後續步驟
 -   [在單一電腦上開始使用 Integration Services (SSIS) Scale Out](get-started-with-ssis-scale-out-onebox.md)
 
--   [逐步解說：設定整合服務 Scale Out](walkthrough-set-up-integration-services-scale-out.md)
+-   [逐步解說：設定 Integration Services 相應放大](walkthrough-set-up-integration-services-scale-out.md)

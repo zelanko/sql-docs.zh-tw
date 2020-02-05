@@ -18,15 +18,15 @@ ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 826e0a047e119b186905f9d3f2d56170aa7b9249
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041245"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>使用 OpenSqlFilestream 存取 FILESTREAM 資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  OpenSqlFilestream API 會為儲存在檔案系統中的 FILESTREAM 二進位大型物件 (BLOB)，取得與 Win32 相容的檔案控制代碼。 此控制代碼可傳遞給下列任何 Win32 API：[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) 或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 如果您將此控制代碼傳遞給其他任何 Win32 API，將會傳回錯誤 ERROR_ACCESS_DENIED。 在認可或回復交易之前，必須將此控制代碼傳遞給 Win32 的 [CloseHandle API](https://go.microsoft.com/fwlink/?LinkId=86428) 來關閉此控制代碼。 如果無法關閉此控制代碼，將會導致伺服器端資源洩露。  
+  OpenSqlFilestream API 會為儲存在檔案系統中的 FILESTREAM 二進位大型物件 (BLOB)，取得與 Win32 相容的檔案控制代碼。 此控制代碼可傳遞給下列任何 Win32 API： [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 如果您將此控制代碼傳遞給其他任何 Win32 API，將會傳回錯誤 ERROR_ACCESS_DENIED。 在認可或回復交易之前，必須將此控制代碼傳遞給 Win32 的 [CloseHandle API](https://go.microsoft.com/fwlink/?LinkId=86428) 來關閉此控制代碼。 如果無法關閉此控制代碼，將會導致伺服器端資源洩露。  
   
  您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易中執行所有的 FILESTREAM 資料容器存取。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式也可在同一交易中執行。 以維護 SQL 資料與 FILESTREAM 資料之間的一致性。  
   
@@ -55,7 +55,7 @@ HANDLE OpenSqlFilestream (
  *DesiredAccess*  
  [in] 設定用來存取 FILESTREAM BLOB 資料的模式。 此值會傳遞給 [DeviceIoControl 函式](https://go.microsoft.com/fwlink/?LinkId=105527)。  
   
-|[屬性]|ReplTest1|意義|  
+|名稱|值|意義|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_READ|0|資料可以從檔案讀取。|  
 |SQL_FILESTREAM_WRITE|1|資料可以寫入檔案。|  
@@ -67,7 +67,7 @@ HANDLE OpenSqlFilestream (
  *OpenOptions*  
  [in] 檔案屬性和旗標。 這個參數也可以包含下列旗標的任意組合。  
   
-|旗標|ReplTest1|意義|  
+|旗標|值|意義|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_OPEN_NONE|0x00000000:|開啟或建立這個檔案時，不搭配任何特殊選項。|  
 |SQL_FILESTREAM_OPEN_FLAG_ASYNC|0x00000001L|開啟或建立這個檔案是為了非同步 I/O。|  
@@ -97,7 +97,7 @@ HANDLE OpenSqlFilestream (
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../relational-databases/blob/codesnippet/cpp/access-filestream-data-w_0_3.cpp)]  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  必須安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，才能使用此 API。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 會隨 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端工具一起安裝。 如需詳細資訊，請參閱 [安裝 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
   
 ## <a name="see-also"></a>另請參閱  

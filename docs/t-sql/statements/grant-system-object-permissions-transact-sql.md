@@ -17,10 +17,10 @@ ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: cd783ac6f5f6d8c7a9e561614dbe2c06053f758a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050676"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT 系統物件權限 (Transact-SQL)
@@ -47,7 +47,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
  *principal*  
  指定要對其授與權限的主體。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個陳述式可用來授與下列項目的權限：某些預存程序、擴充預存程序、資料表值函式、純量函數、檢視、目錄檢視、相容性檢視、INFORMATION_SCHEMA 檢視、動態管理檢視及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的系統資料表。 在伺服器的資源資料庫 (mssqlsystemresource) 中，這些系統物件會個別以唯一記錄形式存在。 資源資料庫是唯讀的。 該物件的連結會公開為每個資料庫之 sys 結構描述中的記錄。 可以授與、拒絕及撤銷執行或選取系統物件的權限。  
   
  授與執行或選取某物件的權限，不一定會轉讓所有使用該物件所需的權限。 大部分的物件所執行的作業都需要其他權限。 例如，被授與 sp_addlinkedserver 之 EXECUTE 權限的使用者無法建立連結伺服器，除非該使用者也是系統管理員 (sysadmin) 固定伺服器角色的成員。  
@@ -76,7 +76,7 @@ GO
 ## <a name="examples"></a>範例  
   
 ### <a name="a-granting-select-permission-on-a-view"></a>A. 授與檢視的 SELECT 權限  
- 下列範例授與選取檢視 (這份檢視會列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `Sylvester1` 權限。 接著，這個範例再授與其他權限，它是檢視非使用者擁有之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入上的中繼資料時所需的權限。  
+ 下列範例授與選取檢視 (這份檢視會列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入) 的 `Sylvester1` 登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 權限。 接著，這個範例再授與其他權限，它是檢視非使用者擁有之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入上的中繼資料時所需的權限。  
   
 ```  
 USE AdventureWorks2012;  
@@ -97,6 +97,6 @@ GO
  [sys.system_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [REVOKE System Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)   
- [DENY System Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)  
+ [DENY 系統物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)  
   
   

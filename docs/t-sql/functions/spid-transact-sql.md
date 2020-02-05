@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3f46f8c23723bd467e649fd90c2f30741eb6bc9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67907040"
 ---
 # <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;SPID (Transact-SQL)
@@ -44,10 +44,10 @@ ms.locfileid: "67907040"
 @@SPID  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **smallint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  @@SPID 可在 **sp_who** 的輸出中，用來識別目前的使用者處理序。  
   
 ## <a name="examples"></a>範例  

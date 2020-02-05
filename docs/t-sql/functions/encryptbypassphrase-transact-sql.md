@@ -20,10 +20,10 @@ ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8aefacd470b045caafc73474126468fc01658276
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904375"
 ---
 # <a name="encryptbypassphrase-transact-sql"></a>ENCRYPTBYPASSPHRASE (Transact-SQL)
@@ -68,10 +68,10 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  @authenticator  
  含有要衍生驗證器之資料的變數。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **varbinary**，大小上限為 8,000 位元組。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  複雜密碼是指包含空格的密碼。 使用複雜密碼的好處是，記住有意義的片語或句子比記住相較之下冗長的字元字串容易得多。  
   
  這個函數不會檢查密碼複雜性。  

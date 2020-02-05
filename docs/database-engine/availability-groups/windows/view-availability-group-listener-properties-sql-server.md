@@ -15,10 +15,10 @@ ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 74f8a0823f281a9260ba2d8ba322ac97c0e7056b
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74821778"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>檢視可用性群組接聽程式屬性 (SQL Server)

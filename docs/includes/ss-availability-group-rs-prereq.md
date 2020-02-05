@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 336162ea06533901107c83dd47f062fc94fdd869
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68213311"
----
 ## <a name="prerequisites"></a>Prerequisites
 
 建立可用性群組之前，您需要：
@@ -24,7 +16,7 @@ ms.locfileid: "68213311"
 Enable-SqlAlwaysOn -ServerInstance <server\instance> -Force
 ```
 
-## <a name="enable-an-alwaysonhealth-event-session"></a>啟用 AlwaysOn_health 事件工作階段
+## <a name="enable-an-alwayson_health-event-session"></a>啟用 AlwaysOn_health 事件工作階段
 
  當您針對可用性群組進行疑難排解時，若要協助診斷根本原因，您可以選擇性地啟用 AlwaysOn 可用性群組擴充事件(XEvents) 工作階段。 若要這樣做，請在每個 SQL Server 執行個體上執行下列命令：
 

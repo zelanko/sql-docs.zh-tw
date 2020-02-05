@@ -18,10 +18,10 @@ ms.assetid: a9e44748-4a9e-4179-abc4-7631597be5a7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a8aaa21498c95c215de5e5a49f9ced8089b4c71e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68223665"
 ---
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel (geography 資料類型)
@@ -36,12 +36,12 @@ ms.locfileid: "68223665"
 . MinDbCompatibilityLevel ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
  CLR 傳回類型：**int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  在變更資料庫的相容性層級之前，請先使用 `MinDbCompatibilityLevel()` 測試空間物件的相容性。 無效的 **geography** 類型會傳回 110。  
   
 ## <a name="examples"></a>範例  

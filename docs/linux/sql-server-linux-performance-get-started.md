@@ -9,17 +9,17 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.openlocfilehash: fe60b00654d93c6362a8671318a4b7b88ae90a5f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896167"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux 上的 SQL Server 效能功能逐步解說
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-如果您是剛開始使用 SQL Server 的 Linux 使用者，下列工作將逐步解說一些效能功能。 這不是 Linux 專屬或特別的功能，但可協助您大致了解哪些領域需要深入了解。 在每個範例中，會提供該領域的深入文件連結。
+如果您是剛開始使用 SQL Server 的 Linux 使用者，下列工作將逐步解說一些效能功能。 這不是 Linux 唯一或特定功能，但可協助您大致了解哪些區域需要進一步調查。 在每個範例中，會提供該領域的深入文件連結。
 
 > [!NOTE]
 > 下列範例使用 AdventureWorks 範例資料庫。 如需如何取得和安裝此範例資料庫的指示，請參閱[將 SQL Server 資料庫從 Windows 還原到 Linux](sql-server-linux-migrate-restore-database.md)。

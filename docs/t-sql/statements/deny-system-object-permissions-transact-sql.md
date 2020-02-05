@@ -18,10 +18,10 @@ ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 54959f89172d0d382c20c60d46dac11df5837137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984405"
 ---
 # <a name="deny-system-object-permissions-transact-sql"></a>DENY 系統物件權限 (Transact-SQL)
@@ -48,7 +48,7 @@ DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal
  *principal*  
  指定要撤銷其權限的主體。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個陳述式可用來拒絕下列項目的權限：某些預存程序、擴充預存程序、資料表值函式、純量函數、檢視、目錄檢視、相容性檢視、INFORMATION_SCHEMA 檢視、動態管理檢視及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的系統資料表。 在資源資料庫 (**mssqlsystemresource**) 中，每一個系統物件都會以唯一記錄的形式存在。 資源資料庫是唯讀的。 該物件的連結會公開為每個資料庫 **sys** 結構描述中的記錄。  
   
  預設名稱解析會對資源資料庫解析不合格的程序名稱。 因此，只有在指定目錄檢視和動態管理檢視時，才需要 **sys** 限定詞。  

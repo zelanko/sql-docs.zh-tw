@@ -26,10 +26,10 @@ ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 46a6f7c08b540b6180326350a6e0aadb933a7ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121805"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
@@ -49,12 +49,12 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>引數  
  *savepoint_name*  
- 這是指派給儲存點的名稱。 儲存點名稱必須符合識別碼的規則，但不能超出 32 個字元。 即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體不區分大小寫，*savepoint_name* 還是一律都會區分大小寫。  
+ 這是指派給儲存點的名稱。 儲存點名稱必須符合識別碼的規則，但不能超出 32 個字元。 即使  *執行個體不區分大小寫，* savepoint_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還是一律都會區分大小寫。  
   
  @*savepoint_variable*  
  這是包含有效儲存點名稱之使用者自訂變數的名稱。 這個變數必須用 **char**、**varchar**、**nchar** 或 **nvarchar** 資料類型來宣告。 您可以將超出 32 個字元傳給變數，但只會使用前 32 個字元。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  使用者可以在交易內設定儲存點或標記。 儲存點定義在有條件地取消交易的一部份時，交易所能返回的位置。 如果交易回復到某個儲存點，它必須繼續完成多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (必要的話) 和 COMMIT TRANSACTION 陳述式，否則，您必須將交易回復到它的起點，徹底取消交易。 若要取消整個交易，所用格式如下：ROLLBACK TRANSACTION *transaction_name*。 這會恢復交易的所有陳述式或程序。  
   
  交易中可以有重複的儲存點，但指定儲存點名稱的 ROLLBACK TRANSACTION 陳述式，只會將交易回復到最近一個使用這個名稱的 SAVE TRANSACTION。  

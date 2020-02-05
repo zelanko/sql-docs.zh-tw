@@ -13,10 +13,10 @@ ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e745a2277a01cac3dd120af241e0ae1d7575b562
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294752"
 ---
 # <a name="connect-to-oracle"></a>連接到 Oracle
@@ -28,13 +28,13 @@ ms.locfileid: "71294752"
   
  **驗證**  
   
- 選取下列其中一項：  
+ 選取下列其中一個：  
   
 -   **Windows 驗證**：選取此選項可使用目前的 Windows 網域認證。 只有當設定 Oracle 資料庫使用 Windows 驗證時，才可使用這個選項。  
   
--   **Oracle 驗證**：如果您選取這個選項，您必須在您所連接的 Oracle 資料庫中鍵入使用者的 [使用者名稱]  和 [密碼]  。  
+-   **Oracle 驗證**：如果您選取這個選項，您必須在您所連接的 Oracle 資料庫中輸入使用者的 **[使用者名稱]** 和 **[密碼]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [將資料表加入至 CDC 執行個體](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)  
+ [將資料表新增至 CDC 執行個體](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)  
   
   

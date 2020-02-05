@@ -14,10 +14,10 @@ ms.assetid: 5f423b9f-a6c4-41a7-9d8d-8f4926ce1fb4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9284388a56014084b2478d6d805ff3fc917459d1
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558108"
 ---
 # <a name="view-policy-based-management-facets-on-a-sql-server-object"></a>檢視 SQL Server 物件的原則式管理 Facet
@@ -47,7 +47,7 @@ ms.locfileid: "75558108"
   
 1.  在物件總管中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體、執行個體物件、資料庫或資料庫物件，然後按一下 [Facet]  。  
   
-2.  在 [檢視 Facet - _物件名稱_]  對話方塊的 [Facet]  清單中，選取要檢視其屬性的 Facet。 如需有關此對話方塊可用之選項的詳細資訊，請參閱＜ [View Facets Dialog Box](../../relational-databases/policy-based-management/view-facets-dialog-box.md)＞。  
+2.  在 [檢視 Facet - **物件名稱**]  對話方塊的 [Facet]  清單中，選取要檢視其屬性的 Facet。 如需有關此對話方塊可用之選項的詳細資訊，請參閱＜ [View Facets Dialog Box](../../relational-databases/policy-based-management/view-facets-dialog-box.md)＞。  
   
 3.  完成後，請按一下 **[確定]** 。  
   

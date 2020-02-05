@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f18ee84c1bbb2234672d198923e93af4d99374f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67907099"
 ---
 # <a name="smalldatetimefromparts-transact-sql"></a>SMALLDATETIMEFROMPARTS (Transact-SQL)
@@ -54,10 +54,10 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
  *minute*  
  指定分鐘的整數運算式。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **smalldatetime**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此函式的功能與完全初始化之 **smalldatetime** 值的建構函式類似。 如果引數無效，將會引發錯誤。 如果要求的引數為 null，即會傳回 null。  
   
  函數可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 伺服器和更新版伺服器上以遠端方式進行。 它在版本低於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的伺服器上無法以遠端方式運作。  

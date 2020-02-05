@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ee462efca08173d6571fe5a3b3971b8f0460988a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258368"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>建立、修改和卸除次要選擇性 XML 索引

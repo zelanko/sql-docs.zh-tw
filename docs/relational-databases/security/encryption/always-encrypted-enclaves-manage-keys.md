@@ -11,13 +11,13 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: d3968c5c8f04cba8581dfdd44ac847f7010de994
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595623"
 ---
-# <a name="manage-keys-for-always-encrypted-with-secure-enclaves"></a>為具有安全記憶體保護區的 Always Encrypted 管理金鑰
+# <a name="manage-keys-for-always-encrypted-with-secure-enclaves"></a>針對具有安全記憶體保護區的 Always Encrypted 管理金鑰
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 [具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves.md) 會藉由引進已啟用記憶體保護區的金鑰，來擴充 [Always Encrypted](always-encrypted-database-engine.md) 的金鑰管理： 
@@ -34,7 +34,7 @@ ms.locfileid: "73595623"
 - [佈建已啟用記憶體保護區的金鑰](always-encrypted-enclaves-provision-keys.md)
 - [輪替已啟用記憶體保護區的金鑰](always-encrypted-enclaves-rotate-keys.md)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 - [佈建已啟用記憶體保護區的金鑰](always-encrypted-enclaves-provision-keys.md)
 
 ## <a name="see-also"></a>另請參閱  

@@ -14,10 +14,10 @@ ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 478e6b9bb6f8300a845ae8fe9e3202f750f525eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68106107"
 ---
 # <a name="article-options-for-merge-replication"></a>合併式複寫的發行項選項
@@ -34,7 +34,7 @@ ms.locfileid: "68106107"
   
 -   指定一組相關記錄應視為一個單位處理 (依預設，合併式複寫會以逐個資料列的方式處理資料表的變更)。 如需詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
   
--   對可以在拓撲的多個節點上變更相同資料之案例，使用衝突偵測和解決方案。 如需相關資訊，請參閱 [Detect and Resolve Merge Replication Conflicts](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
+-   對可以在拓撲的多個節點上變更相同資料之案例，使用衝突偵測和解決方案。 如需相關資訊，請參閱 [偵測及解決合併式複寫衝突](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
 -   指定結構描述選項，如條件約束和觸發程序是否複製到訂閱者。 如需詳細資訊，請參閱 [指定結構描述選項](../../../relational-databases/replication/publish/specify-schema-options.md)。  
   

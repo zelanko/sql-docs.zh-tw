@@ -24,10 +24,10 @@ ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 044f6b384bf557b2c926dd36151488adc6c292a4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287370"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>使用資料流程元件中的錯誤輸出
@@ -40,7 +40,7 @@ ms.locfileid: "71287370"
  若要在元件中實作和支援錯誤輸出，您必須先將元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A> 屬性設定為 **true**。 接著您必須將輸出新增至其 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> 屬性設定為 **true** 的元件。 最後，元件必須包含錯誤或截斷發生時會將資料列導向錯誤輸出的程式碼。 本主題涵蓋這三個步驟並說明同步與非同步錯誤輸出之間的差異。  
   
 ## <a name="creating-an-error-output"></a>建立錯誤輸出  
- 您可以呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A> 方法，然後將新輸出的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> 屬性設定為 **true**，以建立錯誤輸出。 如果輸出是非同步，則不需要對輸出再執行任何動作。 如果輸出是同步的，而且對同一個輸入而言有另一個同步的輸出，則也必須設定 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> 與 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> 屬性。 對同一個輸入而言屬同步的兩個輸出間，這兩個屬性值必須相同。 如果這些屬性不是設定成非零的值，輸入所提供的資料列會傳送至對輸入同步的兩個輸出。  
+ 您可以呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A> 方法，然後將新輸出的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> 屬性設定為 **true**，以建立錯誤輸出。 如果輸出是非同步，則不需要對輸出再執行任何動作。 如果輸出是同步的，而且對同一個輸入而言有另一個同步的輸出，則也必須設定 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> 與 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> 屬性。 對同一個輸入而言屬同步的兩個輸出間，這兩個屬性值必須相同。 如果這些屬性不是設定成非零的值，輸入所提供的資料列會傳送至對輸入同步的兩個輸出。  
   
  當元件在執行期間遇到錯誤或是截斷，它會根據發生錯誤之輸入或輸出，或是輸入或輸出資料行的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ErrorRowDisposition%2A> 與 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.TruncationRowDisposition%2A> 屬性的設定繼續。 這些屬性值預設應該設定為 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition.RD_NotUsed>。 當元件的錯誤輸出連接到下游元件時，會由元件的使用者設定這個屬性，並讓使用者控制元件處理錯誤或截斷的方式。  
   

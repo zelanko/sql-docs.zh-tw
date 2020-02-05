@@ -13,10 +13,10 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: beba1f54c4eae683e6b35eb44408d84c5d812b84
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293225"
 ---
 # <a name="cdc-splitter"></a>CDC 分隔器
@@ -26,13 +26,13 @@ ms.locfileid: "71293225"
 
   CDC 分隔器會將 CDC 來源資料流程中變更資料列的單一流程分割為插入、更新和刪除作業的不同資料流程。 資料流程是根據 `__$operation` 變更資料表中的必要資料行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及其標準值分割的。  
   
-|作業值|輸出|Description|  
+|作業值|輸出|描述|  
 |------------------------|------------|-----------------|  
-|1|DELETE|已刪除的資料列|  
-|2|Insert|插入的資料列 (在使用 [Net with Merge (淨 (含合併))]  CDC 模式時無法使用)|  
-|3|Update|更新前資料列 (僅在使用 [All with Old Values (全部 (含舊值))]  CDC 模式時才可使用)|  
-|4|Update|更新後資料列 (在更新前之後)|  
-|5|Update|合併資料列 (僅在使用 [Net with Merge (淨 (含合併))]  CDC 模式時才可使用)|  
+|1|刪除|已刪除的資料列|  
+|2|插入|插入的資料列 (在使用 [Net with Merge (淨 (含合併))]  CDC 模式時無法使用)|  
+|3|更新|更新前資料列 (僅在使用 [All with Old Values (全部 (含舊值))]  CDC 模式時才可使用)|  
+|4|更新|更新後資料列 (在更新前之後)|  
+|5|更新|合併資料列 (僅在使用 [Net with Merge (淨 (含合併))]  CDC 模式時才可使用)|  
 |其他|錯誤||  
   
  您可以使用分隔器連接到預先定義的 INSERT、DELETE 和 UPDATE 輸出，以供進一步處理。  
@@ -44,7 +44,7 @@ ms.locfileid: "71293225"
   
  此元件的錯誤輸出包含下列輸出資料行：  
   
--   **錯誤碼**：設定為 1。  
+-   **錯誤碼**：設為 1。  
   
 -   **錯誤資料行**：造成錯誤 (用於轉換錯誤) 的來源資料行。  
   

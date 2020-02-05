@@ -10,10 +10,10 @@ ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 3b9dd6793cc8b1c8dc43b72369c0c370ace36248
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67985022"
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>將查詢提示附加至計畫指南

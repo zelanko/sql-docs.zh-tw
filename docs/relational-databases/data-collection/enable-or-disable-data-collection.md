@@ -13,10 +13,10 @@ ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cea0fabf5a30ac2f92e1aa9087b1d1df595d761c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909659"
 ---
 # <a name="enable-or-disable-data-collection"></a>啟用或停用資料收集
@@ -37,7 +37,7 @@ ms.locfileid: "72909659"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 **dc_admin** 或 **dc_operator** (具有 EXECUTE 權限) 固定資料庫角色中的成員資格，才能執行此程序。  

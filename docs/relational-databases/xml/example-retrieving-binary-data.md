@@ -1,5 +1,5 @@
 ---
-title: 範例擷取二進位資料 | Microsoft Docs
+title: 範例：擷取二進位資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/23/2019
 ms.prod: sql
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
 ms.openlocfilehash: c168c76d33ac90bc658fad86404aea45b322d037
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71199466"
 ---
-# <a name="example-retrieving-binary-data"></a>範例擷取二進位資料
+# <a name="example-retrieving-binary-data"></a>範例：擷取二進位資料
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
@@ -46,4 +46,4 @@ GO
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 FOR XML 的 RAW 模式](../../relational-databases/xml/use-raw-mode-with-for-xml.md)
+[搭配 FOR XML 使用 RAW 模式](../../relational-databases/xml/use-raw-mode-with-for-xml.md)

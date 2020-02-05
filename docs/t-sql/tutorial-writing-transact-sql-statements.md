@@ -1,5 +1,5 @@
 ---
-title: 教學課程：撰寫 Transact-SQL 陳述式 | Microsoft Docs
+title: 教學課程：撰寫國際性通用的 Transact-SQL 陳述式 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -15,33 +15,33 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ae6f97bd7aeea2bb587f5c572204d76f7167aafa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051343"
 ---
-# <a name="tutorial-writing-transact-sql-statements"></a>教學課程：撰寫 Transact-SQL 陳述式
+# <a name="tutorial-writing-transact-sql-statements"></a>教學課程：撰寫國際性通用的 Transact-SQL 陳述式
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 歡迎使用「撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式」教學課程。 本教學課程的主要對象是撰寫 SQL 陳述式的新手， 會透過檢閱一些建立資料表及插入資料的基本陳述式，協助新手上路。 本教學課程採用 [!INCLUDE[tsql](../includes/tsql-md.md)]，是 SQL 標準的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 實作。 本教學課程的目的是用來概述 [!INCLUDE[tsql](../includes/tsql-md.md)] 語言，而非用來取代 [!INCLUDE[tsql](../includes/tsql-md.md)] 類別。 在本教學課程中的陳述式是有意經過簡化的，並無意呈現一般實際資料庫中所遇到的複雜問題。  
   
->**注意：** 如果您是初學者，可能會覺得使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 反而比撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式更簡單。  
+>**注意︰** 如果您是初學者，可能會覺得使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 反而比撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式更簡單。  
   
 ## <a name="finding-more-information"></a>尋找詳細資訊  
-若要尋找任何特定陳述式的詳細資訊，請在《SQL Server 線上叢書》中依名稱搜尋陳述式，或是使用 [內容] 瀏覽 [Transact-SQL 參考 &#40;Database Engine&#41;](../t-sql/transact-sql-reference-database-engine.md) 底下依字母順序排列的 1,800 個語言元素。 此外，搜尋與您有興趣的主題內容相關的關鍵字，也是另一種找出資訊的不錯方式。 例如，您想要知道如何傳回一部分的日期 (如月份)，您可以搜尋 **dates [SQL Server]** 的索引，然後選取 **dateparts**， 即會帶您前往 [DATEPART &#40;Transact-SQL&#41;](../t-sql/functions/datepart-transact-sql.md) 主題。 例如若要找出如何使用字串，您可以搜尋**字串函數**， 即會帶您前往[字串函數 &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md) 主題。  
+若要尋找任何特定陳述式的詳細資訊，請在《SQL Server 線上叢書》中依名稱搜尋陳述式，或是使用 [內容] 瀏覽 [Transact-SQL 參考 &#40;Database Engine&#41;](../t-sql/transact-sql-reference-database-engine.md) 底下依字母順序排列的 1,800 個語言元素。 此外，搜尋與您有興趣的主題內容相關的關鍵字，也是另一種找出資訊的不錯方式。 例如，您想要知道如何傳回一部分的日期 (如月份)，您可以搜尋 **dates [SQL Server]** 的索引，然後選取 **dateparts**， 即會帶您前往 [DATEPART &#40;Transact-SQL&#41;](../t-sql/functions/datepart-transact-sql.md) 主題。 例如若要找出如何使用字串，您可以搜尋 **字串函數**， 即會帶您前往[字串函數 &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md) 主題。  
   
 ## <a name="what-you-will-learn"></a>學習內容  
 本教學課程會示範如何建立資料庫、在資料庫中建立資料表、插入資料至資料表、更新資料、讀取資料、刪除資料，然後刪除資料表。 您將建立檢視和預存程序，並將使用者設定到資料庫及資料。  
   
 本教學課程分成三個課程：  
   
-[第 1 課：建立資料庫物件](../t-sql/lesson-1-creating-database-objects.md)  
+[課程 1：建立資料庫物件](../t-sql/lesson-1-creating-database-objects.md)  
 在這一課，您會建立資料庫、在資料庫中建立資料表、插入資料至資料表、更新資料以及讀取資料。  
   
-[第 2 課：設定資料庫物件的權限](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
+[課程 2：設定資料庫物件的權限](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
 在這一課，您會建立登入及使用者， 也會建立檢視和預存程序，然後將使用者權授與預存程序。  
   
-[第 3 課：刪除資料庫物件](../t-sql/lesson-3-deleting-database-objects.md)  
+[課程 3：刪除資料庫物件](../t-sql/lesson-3-deleting-database-objects.md)  
 在這一課，您會移除資料的存取、從資料表中刪除資料、刪除資料表，最後刪除資料庫。  
   
 ## <a name="requirements"></a>需求  

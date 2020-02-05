@@ -15,10 +15,10 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8b1f4f85fbd4806c164faef0c8bcac7a982cc4fe
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288499"
 ---
 # <a name="property-expressions-editor"></a>屬性運算式編輯器
@@ -49,6 +49,6 @@ ms.locfileid: "71288499"
  [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)   
  [系統變數](../../integration-services/system-variables.md)   
  [Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [在封裝中使用屬性運算式](../../integration-services/expressions/use-property-expressions-in-packages.md)  
+ [在套件中使用屬性運算式](../../integration-services/expressions/use-property-expressions-in-packages.md)  
   
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 76675cf49ba1ac19e18b3bb4b96980aa30c4f6c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115891"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType 追蹤事件資料行
@@ -28,7 +28,7 @@ ms.locfileid: "68115891"
   
 ## <a name="object-type-column-values"></a>Object Type 資料行值  
   
-|ReplTest1|定義|  
+|值|定義|  
 |-----------|----------------|  
 |8259|檢查條件約束|  
 |8260|預設 (條件約束或獨立)|  
@@ -41,7 +41,7 @@ ms.locfileid: "68115891"
 |8278|檢視|  
 |8280|擴充預存程序|  
 |16724|CLR 觸發程序|  
-|16964|[資料庫]|  
+|16964|資料庫|  
 |16975|Object|  
 |17222|全文檢索目錄|  
 |17232|CLR 預存程序|  
@@ -73,7 +73,7 @@ ms.locfileid: "68115891"
 |20038|純量 SQL 函數|  
 |20047|物件的事件通知|  
 |20051|同義字|  
-|20307|序列|  
+|20307|順序|  
 |20549|端點|  
 |20801|可以快取的特定查詢|  
 |20816|可以快取的準備查詢|  
@@ -81,13 +81,13 @@ ms.locfileid: "68115891"
 |20821|唯一的條件約束|  
 |21057|應用程式角色|  
 |21059|憑證|  
-|21075|[伺服器]|  
+|21075|伺服器|  
 |21076|Transact-SQL 觸發程序|  
 |21313|組件|  
 |21318|CLR 純量函數|  
 |21321|內嵌純量 SQL 函數|  
 |21328|資料分割配置|  
-|21333|使用者|  
+|21333|User|  
 |21571|Service Broker 服務合約|  
 |21572|資料庫的觸發程序|  
 |21574|CLR 資料表值函式|  
@@ -95,7 +95,7 @@ ms.locfileid: "68115891"
 |21581|Service Broker 訊息類型|  
 |21586|Service Broker 路由|  
 |21587|統計資料|  
-|21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|使用者|  
+|21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|User|  
 |22099|Service Broker 服務|  
 |22601|索引|  
 |22604|憑證登入|  

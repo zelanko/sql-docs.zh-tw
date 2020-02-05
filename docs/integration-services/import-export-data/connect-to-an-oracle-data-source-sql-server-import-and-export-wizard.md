@@ -10,10 +10,10 @@ ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285439"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>連線至 Oracle 資料來源 (SQL Server 匯入和匯出精靈)
@@ -30,7 +30,7 @@ ms.locfileid: "71285439"
 在您選取精靈的 [選擇資料來源]  或 [選擇目的地]  頁面上的 [.NET Framework Data Provider for Oracle]  之後，頁面會顯示提供者的分組選項清單。 其中有許多是不易記的名稱和不熟悉的設定。 不過別擔心，因為您只需要提供兩、三項資訊即可。 您可以忽略其他設定的預設值。
 
 > [!NOTE]
-> 不論 Oracle 是您的來源還是目的地，此資料提供者的連線選項都會相同。 也就是說，您在精靈的 [選擇資料來源]  和 [選擇目的地]  頁面上會看到一樣的選項。
+> 不論 Oracle 是您的來源還是目的地，此資料提供者的連線選項都會相同。 也就是，您在精靈的 [選擇資料來源]  和 [選擇目的地]  頁面上看到的選項會相同。
 
 |必要資訊|.Net Framework Data Provider for Oracle 屬性|
 |---|---|
@@ -44,7 +44,7 @@ ms.locfileid: "71285439"
 ## <a name="connect-to-oracle-with-the-microsoft-odbc-driver-for-oracle"></a>使用 Microsoft ODBC Driver for Oracle 連線至 Oracle
 ODBC 驅動程式未列在資料來源的下拉式清單中。 若要使用 ODBC 驅動程式連線，請先在 [選擇資料來源]  或 [選擇目的地]  頁面上，將 [.NET Framework Data Provider for ODBC]  選取為資料來源。 此提供者作用為 ODBC 驅動程式的包裝函式。
 
-以下是您選取 .NET Framework Data Provider for ODBC 之後會立即顯示的一般畫面。
+以下是您選取 .NET Framework Data Provider for ODBC 之後立即看到的一般畫面。
 
 ![使用 ODBC 連線至 Oracle](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
@@ -86,7 +86,7 @@ Oracle 伺服器的名稱。
 
 `SELECT host_name FROM v$instance`
 
-中的多個
+或
 
 `SELECT sys_context('USERENV','SERVER_HOST') FROM dual`
 

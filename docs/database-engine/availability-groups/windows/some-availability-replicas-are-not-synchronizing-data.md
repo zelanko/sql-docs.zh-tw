@@ -15,10 +15,10 @@ ms.assetid: 3db6a569-e942-4321-a0dd-c4ab002087c8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 66ebb11535fe2eecc6495b8c5e194d286ecc88ed
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822587"
 ---
 # <a name="some-availability-replicas-are-not-synchronizing-data"></a>部分可用性複本未同步處理資料

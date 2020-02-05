@@ -11,10 +11,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d42aa77e4ecddf96ee0405645e7f98a52b5823e7
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816747"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
@@ -30,7 +30,7 @@ ms.locfileid: "71816747"
   
 -   **CurvePolygon** 執行個體的內部是外部環形與所有內部環形之間的空間。  
   
- **CurvePolygon** 執行個體不同於 **Polygon** 執行個體，其中 **CurvePolygon** 執行個體可能會包含下列圓弧線段：**CircularString** 和 **CompoundCurve**。  
+ **CurvePolygon** 執行個體不同於 **多邊形** 執行個體，其中 **CurvePolygon** 執行個體可能會包含下列圓弧線段： **CircularString** 和 **CompoundCurve**。  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 執行個體  
  下圖顯示了有效的 **CurvePolygon** 圖形：  

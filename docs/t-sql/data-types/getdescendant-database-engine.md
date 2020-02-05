@@ -18,10 +18,10 @@ ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3d015602e944416435c95aba6aaea1ead84b834a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077967"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (Database Engine)
@@ -48,12 +48,12 @@ NULL 或目前節點子系的 **hierarchyid**。
 *child2*  
 NULL 或目前節點子系的 **hierarchyid**。
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 **SQL Server 傳回型別：hierarchyid**
   
 **CLR 傳回型別：SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 傳回父系之下階的一個子節點。
 -   如果父系為 NULL，則會傳回 NULL。  
 -   如果父系不是 NULL，而 child1 和 child2 都是 NULL，則會傳回父系的一個子系。  

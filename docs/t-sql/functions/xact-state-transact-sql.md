@@ -24,13 +24,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c287300b9db48327f5d3ac72e11fcc78183ed88b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927428"
 ---
-# <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
+# <a name="xact_state-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   這是報告目前正在執行之要求的使用者交易狀態的純量函數。 XACT_STATE 指出要求是否具有使用中的使用者交易，以及是否可以認可該交易。  
@@ -46,7 +46,7 @@ XACT_STATE()
 ## <a name="return-type"></a>傳回類型  
  **smallint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  XACT_STATE 會傳回下列值。  
   
 |傳回值|意義|  

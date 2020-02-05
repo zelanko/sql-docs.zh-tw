@@ -1,5 +1,5 @@
 ---
-title: 範例以 XML 的形式擷取產品型號資訊 | Microsoft Docs
+title: 範例：將產品型號資訊當作 XML 來擷取 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e5fd12b1de0f2c1cb792d5d764d6fb5917cc837
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006772"
 ---
-# <a name="example-retrieving-product-model-information-as-xml"></a>範例將產品型號資訊當做 XML 來擷取
+# <a name="example-retrieving-product-model-information-as-xml"></a>範例：將產品型號資訊當做 XML 來擷取
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   下列查詢會傳回產品型號資訊。 `RAW` 模式是在 `FOR XML` 子句中指定。  
   
@@ -79,6 +79,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 FOR XML 的 RAW 模式](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
+ [搭配 FOR XML 使用 RAW 模式](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

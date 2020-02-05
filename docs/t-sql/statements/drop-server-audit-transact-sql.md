@@ -18,10 +18,10 @@ ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f0bb90a3dd13ffd245c1cac5a9ee1610055aae55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929288"
 ---
 # <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT  (Transact-SQL)
@@ -39,7 +39,7 @@ DROP SERVER AUDIT audit_name
     [ ; ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  您必須將稽核的狀態設定為 OFF 選項，才能對稽核進行任何變更。 如果在設定 STATE=OFF 以外的任何選項時啟用稽核，而且執行 DROP AUDIT，您將會收到 MSG_NEED_AUDIT_DISABLED 錯誤訊息。  
   
  DROP SERVER AUDIT 會移除稽核的中繼資料，但不會移除命令發出前所收集的稽核資料。  

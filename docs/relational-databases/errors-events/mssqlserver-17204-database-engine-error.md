@@ -12,13 +12,13 @@ ms.assetid: 40db66f9-dd5e-478c-891e-a06d363a2552
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 555a7c6f0573836ee4afb95b91ce6e8b84ac6ee5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68131688"
 ---
-# <a name="mssqlserver17204"></a>MSSQLSERVER_17204
+# <a name="mssqlserver_17204"></a>MSSQLSERVER_17204
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -30,7 +30,7 @@ ms.locfileid: "68131688"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBLKIO_DEVOPENFAILED|  
-|訊息文字|%ls:無法開啟檔案 %ls，檔案編號為 %d。  作業系統錯誤: %ls。|  
+|訊息文字|%ls: 無法開啟檔案 %ls，檔案編號為 %d。  作業系統錯誤: %ls。|  
   
 ## <a name="explanation"></a>說明  
 SQL Server 無法開啟指定的檔案，因為發生指定的錯誤。  

@@ -14,10 +14,10 @@ ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 156ca6b7c04b8362a15a07f7db7f7aa43b2389a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085850"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>SQL Server 複寫中的重大變更

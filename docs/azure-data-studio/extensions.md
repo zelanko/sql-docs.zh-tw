@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 10/03/2019
 ms.openlocfilehash: 6f0a2ab021873a2a9414bfbcdb7aed63c2d31056
-ms.sourcegitcommit: cf268c4e39edf00a8552466e9440e79e6a5d0084
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72166731"
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>擴充 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的功能

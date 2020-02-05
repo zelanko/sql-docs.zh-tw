@@ -13,10 +13,10 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 71ad8a6d52367cf4b3288fa8bdd4bdbaa6863cf5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299018"
 ---
 # <a name="browse-all-principals-dialog-box"></a>瀏覽所有主體對話方塊

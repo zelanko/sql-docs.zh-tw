@@ -22,10 +22,10 @@ ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7720324915ea147cf5cac938c196957a6cb04c51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116463"
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE (Transact-SQL)
@@ -42,13 +42,13 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
 ```  
   
 ## <a name="arguments"></a>引數  
- 取代所有提及的  
+ WITH  
  接受即將指定的選項。  
   
  NO_INFOMSGS  
  抑制所有嚴重性層級在 0 至 10 的參考訊息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 程序快取用來快取已編譯和可執行的計畫，以加速批次的執行。 程序快取中的項目，屬於批次層級。 程序快取含有下列項目：
 -   已編譯的計畫  
 -   執行計畫  
@@ -58,7 +58,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
 ## <a name="result-sets"></a>結果集  
 下表將描述結果集的資料行。
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
 |**num proc buffs**|程序快取中所有項目所用的總頁數。|  
 |**num proc buffs used**|所有目前使用中的項目所用的總頁數。|  

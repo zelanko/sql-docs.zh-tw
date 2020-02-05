@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f5510d6c75380e48008740ab8a0f5b1c9f500fe5
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064546"
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL 資料倉儲)
@@ -131,7 +131,7 @@ RETURNS return_data_type
  RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
  指定純量值函式的 **OnNULLCall** 屬性。 若未指定，預設情況下意味著 CALLED ON NULL INPUT。 這表示，即使傳遞 NULL 做為引數，函數主體仍會執行。  
   
-## <a name="best-practices"></a>最佳作法  
+## <a name="best-practices"></a>最佳做法  
  如果未以 SCHEMABINDING 子句建立使用者定義函數，叫用該函數時，對基礎物件所進行的變更可能會影響函數的定義並產生非預期的結果。 建議您實作下列其中一個方法，以確保函數不會因為其基礎物件的變更而變成過期：  
   
 -   當您要建立函數時，指定 WITH SCHEMABINDING 子句。 這可以確保系統無法修改函數定義中參考的物件 (除非同時修改函數)。  
@@ -165,9 +165,9 @@ GO
   
 ```  
   
- [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)：顯示使用者定義函數中定義之參數的相關資訊。  
+ [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)：顯示使用者定義函式中定義之參數的相關資訊。  
   
- [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)：顯示函數所參考的基礎物件。  
+ [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)：顯示函式所參考的基礎物件。  
   
 ## <a name="permissions"></a>權限  
  需要資料庫中的 CREATE FUNCTION 權限，以及此函數建立所在之結構描述上的 ALTER 權限。  

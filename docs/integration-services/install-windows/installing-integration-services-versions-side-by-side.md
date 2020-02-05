@@ -14,10 +14,10 @@ ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 89126793193172dbdc35de2cb059a91173bb6faa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296229"
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>並存安裝 Integration Services 版本
@@ -26,7 +26,7 @@ ms.locfileid: "71296229"
 
 
   您可以並存安裝   
-      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) 與舊版 SSIS。 本主題說明並存安裝的一些限制。  
+      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) 與舊版 SSIS 並存。 本主題說明並存安裝的一些限制。  
   
 ## <a name="designing-and-maintaining-packages"></a>設計和維護封裝  
  若要設計和維護目標為 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的封裝，請使用適用於 Visual Studio 2015 的 SQL Server Data Tools (SSDT)。 若要取得 SSDT，請參閱 [下載最新的 SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。  
@@ -36,8 +36,8 @@ ms.locfileid: "71296229"
 |SQL Server 的目標版本|SSIS 封裝的開發環境|  
 |----------------------------------|-----------------------------------------------|  
 |2016|Visual Studio 2015 的 SQL Server Data Tools|  
-|2014|Visual Studio 2015 的 SQL Server Data Tools<br /><br /> 中的多個<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2013|  
-|2012|Visual Studio 2015 的 SQL Server Data Tools<br /><br /> 中的多個<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2012|  
+|2014|Visual Studio 2015 的 SQL Server Data Tools<br /><br /> 或<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2013|  
+|2012|Visual Studio 2015 的 SQL Server Data Tools<br /><br /> 或<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2012|  
 |2008|SQL Server 2008 的 Business Intelligence Development Studio|  
   
  當您將現有封裝加入現有專案時，封裝會轉換成專案所設目標的格式。  

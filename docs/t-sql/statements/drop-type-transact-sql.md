@@ -21,10 +21,10 @@ ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 00659f76da827bf5e00df72d966b32ec56e1f7ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072116"
 ---
 # <a name="drop-type-transact-sql"></a>DROP TYPE (Transact-SQL)
@@ -52,7 +52,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
  *type_name*  
  這是您要卸除的別名資料類型名稱或使用者自訂類型名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當出現下列中的任何狀況時，都不會執行 DROP TYPE 陳述式：  
   
 -   資料庫中有資料表包含別名資料類型或使用者自訂類型的資料行。 您可以查詢 [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 或 [sys.column_type_usages](../../relational-databases/system-catalog-views/sys-column-type-usages-transact-sql.md) 目錄檢視來取得別名或使用者定義類型資料行的相關資訊。  

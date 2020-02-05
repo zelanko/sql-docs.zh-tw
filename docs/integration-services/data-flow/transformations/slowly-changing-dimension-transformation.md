@@ -18,10 +18,10 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1fd5584a5c43762c4d732c677de225436e191a7e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297807"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>緩時變維度轉換
@@ -68,7 +68,7 @@ ms.locfileid: "71297807"
   
  下表描述轉換輸出及其後續資料流程的需求。 該需求會描述「緩時變維度精靈」建立的資料流程。  
   
-|輸出|Description|資料流程需求|  
+|輸出|描述|資料流程需求|  
 |------------|-----------------|----------------------------|  
 |**[變更屬性更新輸出]**|會更新查閱資料表中的記錄。 此輸出用於變更屬性資料列。|「OLE DB 命令」轉換會使用 UPDATE 陳述式更新記錄。|  
 |**[固定屬性輸出]**|不得變更之資料列中的值與查閱資料表中的值不相符。 此輸出用於固定屬性資料列。|不會建立任何預設資料流程。 如果轉換已設定為遇到固定屬性資料行的變更之後繼續，則應該建立擷取這些資料列的資料流程。|  
@@ -93,7 +93,7 @@ ms.locfileid: "71297807"
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

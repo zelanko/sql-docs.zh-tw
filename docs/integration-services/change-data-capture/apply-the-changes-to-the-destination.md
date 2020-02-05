@@ -13,10 +13,10 @@ ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a4df2ce8bc53694c74142f843c4656e254e748d4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298984"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>將變更套用到目的地
@@ -27,7 +27,7 @@ ms.locfileid: "71298984"
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中，第三個工作，也就是最後一個工作是將變更套用到您的目的地。 您將需要一個元件來套用插入、一個元件來套用更新，以及一個元件來套用刪除。  
   
 > [!NOTE]  
->  在設計可執行累加式變更資料載入的資料流程時，第二個工作是分隔插入、更新與刪除。 如需此元件的詳細資訊，請參閱[處理插入、更新與刪除](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)。 如需建立可執行累加式變更資料載入之封裝的完整程序描述，請參閱[變更資料擷取 &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
+>  在設計可執行累加式變更資料載入的資料流程時，第二個工作是分隔插入、更新與刪除。 如需此元件的詳細資訊，請參閱 [處理插入、更新與刪除](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)。 如需建立可執行累加式變更資料載入之封裝的完整程序描述，請參閱[異動資料擷取 &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
   
 ## <a name="applying-inserts"></a>套用插入  
  若要套用插入，您可以使用 OLE DB 目的地，因為新的資料列不需要任何特殊處理。  
@@ -106,6 +106,6 @@ ms.locfileid: "71298984"
 ## <a name="optimizing-inserts-and-updates-by-using-merge-functionality"></a>使用 MERGE 功能最佳化插入和更新  
  您可以結合特定的異動資料擷取選項與 Transact-SQL MERGE 關鍵字的使用，將插入和更新的處理最佳化。 如需 MERGE 關鍵字的詳細資訊，請參閱 [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)。  
   
- 當您呼叫 **cdc.fn_cdc_get_net_changes_<capture_instance>** 函數時，您可以在擷取變更資料的 Transact-SQL 陳述式中，指定 *all with merge* 作為 *row_filter_option* 參數的值。 當這個異動資料擷取函數不必執行區別插入與更新所需的額外處理時，其運作會更有效率。 當您指定 *all with merge* 參數值時，變更資料的 **__$operation** 值為 1 (針對刪除) 或 5 (針對插入或更新所造成的變更)。 如需用於擷取變更資料之 Transact-SQL 函數的詳細資訊，請參閱 [擷取與了解變更資料](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)。利用 *all with merge* 參數值擷取變更後，您可以套用刪除，並將剩餘的資料列輸出到暫存資料表或臨時資料表。 接著，在下游的「執行 SQL」工作中，您可以使用單一 MERGE 陳述式，將所有插入或更新從臨時資料表套用到目的地。  
+ 當您呼叫 *cdc.fn_cdc_get_net_changes_<capture_instance>* 函數時，您可以在擷取變更資料的 Transact-SQL 陳述式中，指定 *all with merge* 作為 **row_filter_option** 參數的值。 當這個異動資料擷取函數不必執行區別插入與更新所需的額外處理時，其運作會更有效率。 當您指定 *all with merge* 參數值時，變更資料的 **__$operation** 值為 1 (針對刪除) 或 5 (針對插入或更新所造成的變更)。 如需用於擷取變更資料之 Transact-SQL 函數的詳細資訊，請參閱 [擷取與了解變更資料](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)。利用 *all with merge* 參數值擷取變更後，您可以套用刪除，並將剩餘的資料列輸出到暫存資料表或臨時資料表。 接著，在下游的「執行 SQL」工作中，您可以使用單一 MERGE 陳述式，將所有插入或更新從臨時資料表套用到目的地。  
   
   

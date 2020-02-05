@@ -38,10 +38,10 @@ ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2fc021cec09a7f62d05f5e435db9d6fc2597fce3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117335"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
@@ -78,7 +78,7 @@ CREATE REMOTE SERVICE BINDING binding_name
  ANONYMOUS  
  指定與遠端服務通訊時，是否使用匿名驗證。 如果 ANONYMOUS = ON，便會使用匿名驗證，且遠端資料庫的作業會以 **public** 固定資料庫角色成員的身分來執行。 如果 ANONYMOUS = OFF，遠端資料庫的作業會以這個資料庫的特定使用者身分來執行。 如果未指定這個子句，預設值便是 OFF。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 利用遠端服務繫結來尋找新交談要用的憑證。 已與 *user_name* 建立關聯的憑證中之公開金鑰會用來驗證傳給遠端服務的訊息，以及對之後要用來加密交談的工作階段金鑰進行加密。 *user_name* 的憑證必須對應於主控遠端服務之資料庫中的使用者憑證。  
   
  只有與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體以外目標服務通訊的起始服務，才需要遠端服務繫結。 主控起始服務的資料庫必須含有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體以外的任何目標服務的遠端服務繫結。 主控目標服務的資料庫不需要含有與它交談的起始服務之遠端服務繫結。 當起始端服務和目標服務位於相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中時，不需要任何遠端服務繫結。 但是，如果有遠端服務繫結存在 (此時為 TO SERVICE 指定的 *service_name* 符合本機服務的名稱)，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 將會使用此繫結。  

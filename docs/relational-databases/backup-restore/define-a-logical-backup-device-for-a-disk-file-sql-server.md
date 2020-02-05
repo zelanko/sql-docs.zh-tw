@@ -17,10 +17,10 @@ ms.assetid: 86331d43-c738-4523-ae3d-7d6700348ed1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6f628da66345668768aae1fe2de29596082ae6fa
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75255941"
 ---
 # <a name="define-a-logical-backup-device-for-a-disk-file-sql-server"></a>定義磁碟檔案的邏輯備份裝置 (SQL Server)

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f166963f1325379d4545f9d8a334e7b77590a14f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075486"
 ---
 # <a name="ddl-events"></a>DDL 事件
@@ -26,7 +26,7 @@ ms.locfileid: "68075486"
   下表列出可用以引發 DDL 觸發程序或事件通知的 DDL 事件。 請注意，每個事件都會對應到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或預存程序，且陳述式語法已修改為在關鍵字之間加上了底線字元 (_)。  
   
 > [!IMPORTANT]  
->  執行類似 DDL 作業的系統預存程序也可以引發 DDL 觸發程序和事件通知。 請測試 DDL 觸發程序和事件通知，以判斷它們對執行之系統預存程序的回應。 例如，CREATE TYPE 陳述式與 **sp_addtype** 預存程序都會引發基於 CREATE_TYPE 事件而建立的 DDL 觸發程序或事件通知。  
+>  執行類似 DDL 作業的系統預存程序也可以引發 DDL 觸發程序和事件通知。 請測試 DDL 觸發程序和事件通知，以判斷它們對執行之系統預存程序的回應。 例如，CREATE TYPE 陳述式與 **sp_addtype** 預存程序都會引發在 CREATE_TYPE 事件上建立的 DDL 觸發程序或事件通知。  
   
 ## <a name="ddl-statements-that-have-server-or-database-scope"></a>具有伺服器或資料庫範圍的 DDL 陳述式  
  可以建立 DDL 觸發程序或事件通知，以便在下列事件發生於此觸發程序或事件通知建立所在的資料庫內或是伺服器執行個體的任何地方時，可引發此觸發程序或事件通知來進行回應。  

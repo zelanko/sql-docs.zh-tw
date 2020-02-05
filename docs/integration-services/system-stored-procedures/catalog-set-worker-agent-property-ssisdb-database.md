@@ -11,10 +11,10 @@ ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ea5a3a5d3d816c8debe1fb51b69a953cf6dd324a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295237"
 ---
 # <a name="catalogset_worker_agent_property-ssisdb-database"></a>catalog.set_worker_agent_property (SSISDB 資料庫)
@@ -42,7 +42,7 @@ Scale Out Worker 的背景工作代理程式識別碼。 *WorkerAgentId* 是 **u
 [@PropertyValue =] *PropertyValue*  
 屬性的值。 *PropertyValue* 是 **nvarchar(max)** 。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 有效屬性名稱是 **DisplayName**、**Description**、**Tags**。
 
 ## <a name="return-code-value"></a>傳回碼值  

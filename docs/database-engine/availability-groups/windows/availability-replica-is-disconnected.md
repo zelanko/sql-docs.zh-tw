@@ -15,10 +15,10 @@ ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0fc0dbd2df2d0383e7fd63eddc941170d4b0a47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67988650"
 ---
 # <a name="availability-replica-is-disconnected-within-an-always-on-availability-group"></a>Always On 可用性群組中的可用性複本已中斷連線
@@ -33,7 +33,7 @@ ms.locfileid: "67988650"
 |**類別目錄**|**嚴重**|  
 |**Facet**|可用性複本|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  這項原則檢查可用性複本之間的連接狀態。 當可用性複本的連接狀態為 DISCONNECTED 時，原則為狀況不良。 否則原則為狀況良好。  
   
 > [!NOTE]  

@@ -19,10 +19,10 @@ ms.assetid: 39714de0-2a1f-4179-9091-5c3fa4612545
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 65313b589892a2a72edc50c017914272c6a31925
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012145"
 ---
 # <a name="connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager"></a>經由 Proxy 伺服器連接至 SQL Server (SQL Server 組態管理員)

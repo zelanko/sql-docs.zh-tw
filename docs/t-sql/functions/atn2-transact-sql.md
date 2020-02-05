@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 993020892a992800a8fb8fab2c7801fe7caf9493
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040190"
 ---
 # <a name="atn2-transact-sql"></a>ATN2 (Transact-SQL)
@@ -42,7 +42,7 @@ ATN2 ( float_expression , float_expression )
   
 ## <a name="arguments"></a>引數  
 *float_expression*  
-資料型別為 **float** 的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
+資料型別為 [float](../../t-sql/language-elements/expressions-transact-sql.md) 的**運算式**。
   
 ## <a name="return-types"></a>傳回類型
 **float**
@@ -66,7 +66,7 @@ The ATN2 of the angle is: 1.30545
 ## <a name="see-also"></a>另請參閱
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [float 和 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
-[數學函式 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[數學函數 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

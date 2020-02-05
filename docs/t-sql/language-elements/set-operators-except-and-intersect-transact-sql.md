@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f9e0f46e098ec0944577738332a38e08384a2579
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121767"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>設定運算子 - EXCEPT 和 INTERSECT (Transact-SQL)
@@ -69,7 +69,7 @@ EXCEPT
 INTERSECT  
 傳回 INTERSECT 運算子左右兩側之查詢所傳回的任何相異值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 EXCEPT 或 INTERSECT 運算子左側和右側查詢會傳回可比較資料行的資料類型。 這些資料類型可能包括含不同定序的字元資料類型。 如果是這種情形，則會根據[定序優先順序](../../t-sql/statements/collation-precedence-transact-sql.md)規則來執行必要的比較。 如果您無法執行這項轉換，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會傳回錯誤。  
   
 當您比較資料行值來判斷相異資料列時，會將兩個 NULL 值視為相等。  

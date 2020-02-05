@@ -14,10 +14,10 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4ed4722261ca83d95345c8d8fc5024f1076be839
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282502"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services 封裝所記錄的事件
@@ -29,7 +29,7 @@ ms.locfileid: "71282502"
   
  本主題會提供封裝記錄至應用程式事件記錄檔之常見事件訊息的相關資訊。 根據預設，封裝會記錄其中某些訊息，即使您尚未針對此封裝啟用記錄也一樣。 不過，只有當您針對此封裝啟用記錄時，封裝才會記錄其他訊息。 不論此封裝預設記錄這些訊息或因為已經啟用記錄，訊息的事件來源都是 SQLISPackage。  
   
- 如需如何執行 SSIS 套件的一般資訊，請參閱[執行專案和套件](../packages/run-integration-services-ssis-packages.md)。  
+ 如需如何執行 SSIS 套件的一般資訊，請參閱 [執行專案和套件](../packages/run-integration-services-ssis-packages.md)。  
   
  如需如何針對執行中封裝進行疑難排解的詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
@@ -86,9 +86,9 @@ ms.locfileid: "71282502"
   
 ### <a name="to-view-log-entries"></a>檢視記錄項目  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在 [SSIS]  功能表上，按一下 [記錄事件]  。 您可以將 View.LogEvents 命令對應到您在 [選項]  對話方塊的 [鍵盤]  頁面中所選擇的組合鍵，以選擇性地顯示 [記錄事件]  視窗。  
+2.  在 **[SSIS]** 功能表上，按一下 **記錄事件**。 您可以將 View.LogEvents 命令對應到您在 [選項]  對話方塊的 [鍵盤]  頁面中所選擇的組合鍵，以選擇性地顯示 [記錄事件]  視窗。  
   
 3.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]** 。  
   

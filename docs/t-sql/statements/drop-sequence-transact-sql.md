@@ -19,10 +19,10 @@ ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 740c8bff60f56b94304b789e901ec3b1d945fd17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077718"
 ---
 # <a name="drop-sequence-transact-sql"></a>DROP SEQUENCE (Transact-SQL)
@@ -54,7 +54,7 @@ DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_n
  *sequence_name*  
  這是要卸除的順序名稱。 類型是 **sysname**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  在產生數字之後，順序物件與所產生的數字沒有持續的關聯性，因此即使產生的數字仍在使用中，也可以卸除順序數字。  
   
  因為順序物件不是結構描述繫結，即使由預存程序或觸發程序參考時，也可以卸除順序物件。 如果當做資料表中的預設值來參考，便無法卸除順序物件。 錯誤訊息會列出參考順序的物件。  
@@ -69,7 +69,7 @@ SELECT sch.name + '.' + seq.name AS [Sequence schema and name]
 GO  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>權限  
  需要結構描述的 ALTER 或 CONTROL 權限。  

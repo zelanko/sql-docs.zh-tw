@@ -22,10 +22,10 @@ ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e12088669f56dce1b6dee69202284f3cc044e274
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286950"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>開發自訂工作的使用者介面
@@ -37,7 +37,7 @@ ms.locfileid: "71286950"
   
  為工作開發自訂使用者介面牽涉到兩個重要類別的使用。 下表將描述這些類別。  
   
-|類別|Description|  
+|類別|描述|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|識別受管理的工作，並透過它的屬性來提供設計階段資訊，以控制 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師如何顯示物件以及與物件互動的屬性。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|此工作所使用，以便將此工作與其自訂使用者介面產生關聯的介面。|  
@@ -53,12 +53,12 @@ ms.locfileid: "71286950"
   
  下表描述 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 屬性 (Attribute) 的屬性 (Property)。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|在控制流程工具箱內顯示工作名稱。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|工作描述 (繼承自 <xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>)。 這個屬性會顯示在工具提示中。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.IconResource%2A>|顯示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中的圖示。|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|如果有使用的話，請將它設定為 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 列舉內的其中一個值。 例如， `RequiredProductLevel = DTSProductLevel.None`。|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|如果有使用的話，請將它設定為 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 列舉內的其中一個值。 例如： `RequiredProductLevel = DTSProductLevel.None` 。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|保留連絡人資訊給此工作需要技術支援的情況使用。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|指派類型給此工作。|  
 |Attribute.TypeId|在衍生類別中實作時，取得這個屬性的唯一識別碼。 如需詳細資訊，請參閱 .NET Framework 類別庫中的 **Attribute.TypeID** 屬性。|  

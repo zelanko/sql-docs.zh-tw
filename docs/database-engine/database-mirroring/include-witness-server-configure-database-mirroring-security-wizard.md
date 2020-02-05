@@ -14,10 +14,10 @@ ms.assetid: f04b38a4-f4e2-4d4c-bdac-7cc70e5a5684
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9c1c3de18f4da7d6f55ad0bba5b684e21989b1e0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75253562"
 ---
 # <a name="include-witness-server-configure-database-mirroring-security-wizard"></a>包含見證伺服器 (設定資料庫鏡像安全性精靈)

@@ -18,10 +18,10 @@ ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 3aa054a04b236c419b833df42ba668926e97e312
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030869"
 ---
 # <a name="stisvalid-geometry-data-type"></a>STIsValid (geometry 資料類型)
@@ -36,13 +36,13 @@ ms.locfileid: "68030869"
 .STIsValid ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回型別：**SqlBoolean**  
+ CLR 傳回類型：**SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
- 可以叫用 [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md) 來判斷 **geometry** 執行個體的 OGC 類型。  
+## <a name="remarks"></a>備註  
+ 可以叫用 **STGeometryType()** 來判斷 [geometry](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md) 執行個體的 OGC 類型。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只會產生有效的 **geometry** 執行個體，但是允許儲存和擷取無效的執行個體。 可以使用 `MakeValid()` 方法來擷取表示任何無效例項之相同點組的有效例項。  
   

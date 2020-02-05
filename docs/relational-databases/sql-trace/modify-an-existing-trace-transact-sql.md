@@ -14,10 +14,10 @@ ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2d1f0eeb0591bd4a51b79b8e83fbbd8d6023535f
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73632990"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>修改現有的追蹤 (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "73632990"
   
      當您修改 **\@on**參數時，請記住此參數與 **\@columnid** 參數的互動：  
   
-    |ON|資料行識別碼|結果|  
+    |開啟|資料行識別碼|結果|  
     |--------|---------------|------------|  
     |ON (**1**)|NULL|會開啟事件。 會清除所有資料行。|  
     ||NOT NULL|資料行會針對特定的事件開啟。|  

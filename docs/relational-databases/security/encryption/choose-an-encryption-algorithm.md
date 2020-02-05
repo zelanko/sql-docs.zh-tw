@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e73d0d6cdf244cfb9e08993c91737a14a1d2b24b
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74957453"
 ---
 # <a name="choose-an-encryption-algorithm"></a>選擇加密演算法

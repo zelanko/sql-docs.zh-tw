@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fcdbb300bbc9209f284cd5a92d192a219f79052d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075333"
 ---
-# <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
+# <a name="concat_ws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 此函式會傳回透過以端對端方式串連 (或聯結) 兩個以上字串值所產生的字串。 它使用第一個函數引數中指定的分隔符號來分隔這些串連的字串值。 (`CONCAT_WS` 指出 *與分隔符號的串連*。)
@@ -45,7 +45,7 @@ separator
 ## <a name="return-types"></a>傳回類型
 長度和類型取決於輸入的字串值。
 
-## <a name="remarks"></a>Remarks   
+## <a name="remarks"></a>備註   
 `CONCAT_WS` 會採用可變數量的字串引數，並將其串連 (聯結) 成單一字串。 它使用第一個函數引數中指定的分隔符號來分隔這些串連的字串值。 `CONCAT_WS` 需要分隔引數和至少兩個其他字串值引數。否則，`CONCAT_WS` 會引發錯誤。 `CONCAT_WS` 會在串連之前將所有引數隱含地轉換成字串類型。 
 
 隱含轉換成字串會遵循現有的資料類型轉換規則。 如需行為和資料類型轉換的詳細資訊，請參閱 [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)。

@@ -13,10 +13,10 @@ ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6eb32d81ccab79efa044ed4a21798bebe6ee3fd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025470"
 ---
 # <a name="server-properties---memory-page"></a>伺服器屬性 - 記憶體頁面

@@ -18,16 +18,16 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75254826"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  ![一律加密](../../../relational-databases/security/encryption/media/always-encrypted.png "|::ref1::|")  
+  ![一律加密](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
  Always Encrypted 是一個設計來保護儲存於 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中之敏感性資料的功能，像是信用卡號碼或全國性的身分證字號 (例如美國社會安全號碼)。 Always Encrypted 可讓用戶端將用戶端應用程式內的敏感性資料進行加密，且絕不會顯示 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) 的加密金鑰。 如此一來，Always Encrypted 在資料擁有者 (且可以檢視資料) 和資料管理者 (但應該不具備存取權) 之間做出區隔。 透過確定內部部署資料庫系統管理員，雲端資料庫操作員，或其他高權限未經授權的使用者則無法存取加密資料，Always Encrypted 可讓客戶有信心地將機密資料存放在他們無法直接控制的位置。 這讓組織能夠將其資料儲存在 Azure 中，並將內部部署資料庫管理委派給第三方，或是降低組織本身 DBA 人員的安全性許可需求。
 
@@ -115,7 +115,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 |加密所選資料庫資料行中的現有資料|是|是|否|
 
 > [!NOTE]
-> 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中引進的[具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves.md)，支援使用 Trasact-SQL 來加密現有的資料。 此外，也不需要將資料移到資料之外，就能進行密碼編譯作業。
+> 在 [ 中引進的](always-encrypted-enclaves.md)具有安全記憶體保護區的 Always Encrypted[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]，支援使用 Trasact-SQL 來加密現有的資料。 此外，也不需要將資料移到資料之外，就能進行密碼編譯作業。
 
 > [!NOTE]
 > 執行金鑰佈建或資料加密工具時，請務必在裝載資料庫之電腦以外的電腦且安全的環境中進行。 否則，敏感性資料或金鑰可能會洩漏到伺服器環境中，而縮減使用 [永遠加密] 的優點。  
@@ -148,7 +148,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
   
 -   在使用隨機加密進行加密的資料行上的查詢，無法在任何這些資料行上執行作業。 不支援建立使用隨機加密進行加密之資料行的索引。  
  > [!NOTE] 
- > 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中引進的[具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves.md)，可以藉由啟用模式比對、比較運算子，以及使用隨機加密來對資料行編製索引，來解決上述限制。
+ > 在 [ 中引進的](always-encrypted-enclaves.md)具有安全記憶體保護區的 Always Encrypted[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]，可以藉由啟用模式比對、比較運算子，以及使用隨機加密來對資料行編製索引，來解決上述限制。
 
 -   資料行加密金鑰最多可以有兩個不同的加密值，每個都使用不同的資料行主要金鑰進行加密。 這有助於資料行主要金鑰輪替。  
   

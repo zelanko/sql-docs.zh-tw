@@ -24,10 +24,10 @@ ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 671c49e0b36107682994fdc2192a11db0b40d9d1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297120"
 ---
 # <a name="developing-a-custom-task"></a>開發自訂工作

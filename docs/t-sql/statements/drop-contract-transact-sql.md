@@ -22,10 +22,10 @@ ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 479d00aec0cbd4c9cd81359a0a1f633e80bce521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898272"
 ---
 # <a name="drop-contract-transact-sql"></a>DROP CONTRACT (Transact-SQL)
@@ -47,7 +47,7 @@ DROP CONTRACT contract_name
  *contract_name*  
  要卸除的合約名稱。 您不可指定伺服器、資料庫和結構描述名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果有任何服務或交談優先權參考合約，您便不能卸除這份合約。  
   
  當您卸除合約時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會結束使用這份合約的任何現有交談，且會出現一則錯誤。  

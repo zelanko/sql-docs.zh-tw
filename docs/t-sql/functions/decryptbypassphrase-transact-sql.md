@@ -20,10 +20,10 @@ ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9791a9672965757f5b86cbae60241ef7528ae565
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314517"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
@@ -54,7 +54,7 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 + **nchar**
 + **nvarchar**
 
-中的多個
+或
 
 + **varchar**
 
@@ -78,10 +78,10 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 @authenticator  
 變數，其中包含作為驗證器產生基礎使用的資料。 *\@authenticator* 具有 **sysname** 資料類型。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 **varbinary**，大小上限為 8,000 個位元組。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 執行 `DECRYPTBYPASSPHRASE` 不需要任何權限。 如果收到錯誤的複雜密碼或錯誤的驗證器資訊，則 `DECRYPTBYPASSPHRASE` 會傳回 NULL。  
   
 `DECRYPTBYPASSPHRASE` 使用複雜密碼來產生解密金鑰。 此解密金鑰不會保存。  

@@ -11,10 +11,10 @@ ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5b2e9ebcf8464b17712d36fc43c86b7785de9ae7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292999"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 目的地自訂屬性
@@ -26,11 +26,11 @@ ms.locfileid: "71292999"
   
  下表描述的是 DataReader 目的地的自訂屬性。 除了 **DataReader** 以外的所有屬性都是可讀寫的。  
   
-|屬性名稱|資料類型|Description|  
+|屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
 |DataReader|String|DataReader 目的地的類別名稱。|  
-|FailOnTimeout|布林|指出發生 **ReadTimeout** 時是否會失敗。 此屬性的預設值為 **False**。|  
-|ReadTimeout|Integer|發生逾時之前的毫秒數。 此屬性的預設值為 30000 (30 秒)。|  
+|FailOnTimeout|Boolean|指出發生 **ReadTimeout** 時是否會失敗。 此屬性的預設值為 **False**。|  
+|ReadTimeout|整數|發生逾時之前的毫秒數。 此屬性的預設值為 30000 (30 秒)。|  
   
  DataReader 目的地的輸入和輸入資料行沒有任何自訂屬性。  
   

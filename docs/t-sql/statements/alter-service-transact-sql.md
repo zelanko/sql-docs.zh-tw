@@ -21,10 +21,10 @@ ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3b18eb0d8f848bb57015aa78797d1222b9d92194
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745291"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE (Transact-SQL)
@@ -60,7 +60,7 @@ ALTER SERVICE service_name
  DROP CONTRACT *contract_name*  
  指定要從這項服務所公開的合約集中刪除的合約。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在針對與使用這份合約的這項服務的任何現有交談，傳送錯誤訊息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當 ALTER SERVICE 陳述式刪除服務中的合約時，服務就不再是使用這份合約的交談目標。 因此，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 不會接受在這份合約上，指向這項服務的新交談。 使用這份合約的現有交談不會受到影響。  
   
  若要改變服務的 AUTHORIZATION，請使用 ALTER AUTHORIZATION 陳述式。  

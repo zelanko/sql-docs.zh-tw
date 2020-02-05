@@ -20,10 +20,10 @@ ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ceb07117a8842faa35d005dba008d15b3810040a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75242609"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>撤銷可用性群組權限 (Transact-SQL)
@@ -107,7 +107,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="examples"></a>範例  
   
 ### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>A. 撤銷可用性群組的 VIEW DEFINITION 權限  
- 下列範例會撤銷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `VIEW DEFINITION` 之可用性群組 `MyAg` 的 `ZArifin` 權限。  
+ 下列範例會撤銷 `VIEW DEFINITION` 登入 `MyAg` 之可用性群組 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `ZArifin` 權限。  
   
 ```  
 USE master;  
@@ -116,7 +116,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>B. 撤銷具有 CASCADE 的 TAKE OWNERSHIP 權限  
- 下列範例會撤銷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者 `TAKE OWNERSHIP` 之可用性群組 `MyAg` 的 `PKomosinski` 權限，並從 `PKomosinski` 對其授與 MyAg 之 TAKE OWNERSHIP 的所有主體撤銷該權限。  
+ 下列範例會撤銷 `TAKE OWNERSHIP` 使用者 `MyAg` 之可用性群組 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `PKomosinski` 權限，並從 `PKomosinski` 對其授與 MyAg 之 TAKE OWNERSHIP 的所有主體撤銷該權限。  
   
 ```  
 USE master;  

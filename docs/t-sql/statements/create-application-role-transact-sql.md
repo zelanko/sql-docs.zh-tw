@@ -24,10 +24,10 @@ ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dc3caf4c1643405cc7db31e2a9c76cf70456b272
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064588"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
@@ -55,7 +55,7 @@ CREATE APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA **=** _schema\_name_  
  指定伺服器在解析這個角色的物件名稱時，將搜尋的第一個結構描述。 如果未定義 DEFAULT_SCHEMA，應用程式角色會將 DBO 用做它的預設結構描述。 *schema_name* 可以是資料庫中不存在的結構描述。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]  
 >  設定應用程式角色時會檢查密碼複雜性。 叫用應用程式角色的應用程式必須儲存其密碼。 應用程式角色密碼應該一律以加密方式儲存。  

@@ -13,10 +13,10 @@ ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7c6c5cdc269c757b8578314d39fd07f9f947a5e7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287142"
 ---
 # <a name="coding-a-custom-log-provider"></a>撰寫自訂記錄提供者的程式碼
@@ -136,7 +136,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>寫入記錄項目  
- 每次封裝中的物件呼叫其中一個事件介面上的 Fire\<event> 方法來引發事件時，就會呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法。 每個引發的事件都會帶有關於其內容且通常是說明訊息的資訊。 不過，並不是每次呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法都包括每個方法參數的資訊。 例如，有些其名稱字面意義明白的標準事件並未提供 MessageText，而且 DataCode 與 DataBytes 是為了提供選擇性的補充資訊。  
+ 每次封裝中的物件呼叫其中一個事件介面上的 Fire<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>event> 方法來引發事件時，就會呼叫 \< 方法。 每個引發的事件都會帶有關於其內容且通常是說明訊息的資訊。 不過，並不是每次呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法都包括每個方法參數的資訊。 例如，有些其名稱字面意義明白的標準事件並未提供 MessageText，而且 DataCode 與 DataBytes 是為了提供選擇性的補充資訊。  
   
  下列程式碼範例會實作 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法，並將事件寫入上一節所開啟的資料流。  
   

@@ -14,10 +14,10 @@ ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8342fc3595f695225ee5ea3e4a12259c2bb8301a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293456"
 ---
 # <a name="azure-blob-source"></a>Azure Blob 來源
@@ -25,7 +25,7 @@ ms.locfileid: "71293456"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  **Azure Blob 來源** 元件可讓 SSIS 封裝從 Azure Blob 讀取資料。 支援的檔案格式：CSV 和 AVRO。
+  **Azure Blob 來源** 元件可讓 SSIS 封裝從 Azure Blob 讀取資料。 支援的檔案格式：CSV 與 AVRO。
   
   若要查看 Azure Blob 來源的編輯器，可在資料流程設計師上拖放 **Azure Blob 來源** ，並連按兩下以開啟編輯器。  
   

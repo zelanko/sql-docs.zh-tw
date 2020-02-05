@@ -17,10 +17,10 @@ ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a271b9dd9da2a4b21040a89145d9f2ab1fe84b68
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297585"
 ---
 # <a name="functions-ssis-expression"></a>函數 (SSIS 運算式)
@@ -42,7 +42,7 @@ ms.locfileid: "71297585"
   
  運算式語言提供下列數學函數。  
   
-|函數|Description|  
+|函式|描述|  
 |--------------|-----------------|  
 |[ABS &#40;SSIS 運算式&#41;](../../integration-services/expressions/abs-ssis-expression.md)|傳回數值運算式的絕對正數值。|  
 |[EXP &#40;SSIS 運算式&#41;](../../integration-services/expressions/exp-ssis-expression.md)|傳回做為指定運算式中 e 之基底的指數。|  
@@ -58,7 +58,7 @@ ms.locfileid: "71297585"
   
  運算式評估工具提供下列字串函數。  
   
-|函數|Description|  
+|函式|描述|  
 |--------------|-----------------|  
 |[CODEPOINT &#40;SSIS 運算式&#41;](../../integration-services/expressions/codepoint-ssis-expression.md)|傳回字元運算式最左邊字元的 Unicode 字碼值。|  
 |[FINDSTRING &#40;SSIS 運算式&#41;](../../integration-services/expressions/findstring-ssis-expression.md)|傳回運算式中，所指定字元字串出現位置的以 1 為基底的索引。|  
@@ -78,7 +78,7 @@ ms.locfileid: "71297585"
   
  運算式評估工具提供下列日期和時間函數。  
   
-|函數|Description|  
+|函式|描述|  
 |--------------|-----------------|  
 |[DATEADD &#40;SSIS 運算式&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)|藉由將日期或時間間隔加入至指定的日期，傳回新的 DT_DBTIMESTAMP 值。|  
 |[DATEDIFF &#40;SSIS 運算式&#41;](../../integration-services/expressions/datediff-ssis-expression.md)|傳回跨越兩個指定日期的日期和時間界線數目。|  
@@ -91,7 +91,7 @@ ms.locfileid: "71297585"
   
  運算式評估工具提供下列 Null 函數。  
   
-|函數|Description|  
+|函式|描述|  
 |--------------|-----------------|  
 |[ISNULL &#40;SSIS 運算式&#41;](../../integration-services/expressions/isnull-ssis-expression.md)|依據運算式是否為 Null 來傳回布林結果。|  
 |[NULL &#40;SSIS 運算式&#41;](../../integration-services/expressions/null-ssis-expression.md)|傳回所要求資料類型的 Null 值。|  

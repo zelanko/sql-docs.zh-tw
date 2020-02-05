@@ -26,10 +26,10 @@ helpviewer_keywords:
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68223590"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
@@ -58,7 +58,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
     - *table_name* - 是分類的資料行所屬的資料表名稱。
     - *column_name* - 是要卸除分類的資料行名稱。
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 
 - 多個物件分類可使用單一 'DROP SENSITIVITY CLASSIFICATION' 陳述式來卸除。
 

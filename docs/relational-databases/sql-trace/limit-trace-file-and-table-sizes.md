@@ -17,10 +17,10 @@ ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b12834eac33fd016279b6f2f3a79cee413c3d23d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072873"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>限制追蹤檔案和資料表的大小

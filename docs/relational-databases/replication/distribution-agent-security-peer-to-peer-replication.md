@@ -14,10 +14,10 @@ ms.assetid: def6bf26-c640-4caf-ad30-05d1e649541d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d1329f2b432727731565da796baf021328b9b606
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321785"
 ---
 # <a name="distribution-agent-security-peer-to-peer-replication"></a>散發代理程式安全性 (點對點複寫)
@@ -39,10 +39,10 @@ ms.locfileid: "75321785"
  對等 (Peer) 端的資料庫，會同時作為發行集資料庫與訂閱資料庫。  
   
  **散發者的連接**  
- 用於連接到散發者的內容。 本機連接一律會使用執行代理程式之 Windows 帳戶的內容來進行。 此精靈會建立發送訂閱 (本機連線會連線到散發者)，所以此欄位一律會顯示：[模擬 '\<網域>\\<登入\>']  或 [模擬 '\<電腦>\\<登入\>']  。  
+ 用於連接到散發者的內容。 本機連接一律會使用執行代理程式之 Windows 帳戶的內容來進行。 此精靈會建立發送訂閱，本機連接會連接到散發者，所以此欄位一律會顯示：[模擬 '**網域>\<<登入\\']\>** 或是 [模擬 '**電腦>\<<登入\\']\>** 。  
   
  **訂閱者的連接**  
- 與訂閱者進行連接的內容。 連接可以使用執行代理程式之 Windows 帳戶的內容，或使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的內容來進行。 這個欄位會顯示下列其中一項資訊：[使用登入 '\<登入>']  、[模擬 '\<網域>\\<登入\>']  或 [模擬 '\<電腦>\\<登入\>']  。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 Windows 帳戶的內容進行所有連接。  
+ 與訂閱者進行連接的內容。 連接可以使用執行代理程式之 Windows 帳戶的內容，或使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的內容來進行。 欄位會顯示下列內容之一：[使用者登入 '**登入>']\<** 、[模擬 '**網域>\<<登入\\']\>** 或 [模擬 '**電腦>\<<登入\\']\>** 。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 Windows 帳戶的內容進行所有連接。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理點對點拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e42d7dbfe00ff957511d9853e39febd29b7aab66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137334"
 ---
 # <a name="contained-databases"></a>自主資料庫
@@ -65,7 +65,7 @@ ms.locfileid: "68137334"
   
 -   **具有密碼之自主資料庫使用者**  
   
-     具有密碼之自主資料庫使用者是由資料庫驗證。 如需詳細資訊，請參閱 [自主資料庫使用者 - 使資料庫可攜](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+     具有密碼之自主資料庫使用者是由資料庫驗證。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
 -   **Windows 主體**  
   
@@ -143,17 +143,17 @@ ms.locfileid: "68137334"
 ##  <a name="Identifying"></a> 識別資料庫內含項目  
  有兩項工具可協助識別資料庫的內含項目狀態。 [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) 是顯示資料庫中所有可能非內含性實體的檢視。 在執行階段中識別任何實際非內含性實體時，就會發生 database_uncontained_usage 事件。  
   
-### <a name="sysdmdbuncontainedentities"></a>sys.dm_db_uncontained_entities  
+### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  
  這個檢視會顯示資料庫中任何可能的非內含性實體，例如跨越資料庫界限的實體。 這包括可能使用資料庫模型外部之物件的使用者實體。 不過，因為某些實體 (例如，使用動態 SQL 的實體) 的內含項目要等到執行階段才能判斷，所以此檢視可能會顯示一些實際上包含的實體。 如需詳細資訊，請參閱 [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)。  
   
-### <a name="databaseuncontainedusage-event"></a>database_uncontained_usage 事件  
+### <a name="database_uncontained_usage-event"></a>database_uncontained_usage 事件  
  在執行階段識別非內含性實體時，會發生此 XEvent。 這包括起源自用戶端程式碼的實體。 這個 XEvent 只會針對實際非內含性實體發生。 不過，此事件只會在執行階段中發生。 因此，這個 XEvent 不會識別您尚未執行的任何非內含性使用者實體。  
   
 ## <a name="see-also"></a>另請參閱  
  [修改的功能 &#40;自主資料庫&#41;](../../relational-databases/databases/modified-features-contained-database.md)   
- [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
- [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
+ [自主資料庫定序](../../relational-databases/databases/contained-database-collations.md)   
+ [自主資料庫的安全性最佳做法](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
- [自主資料庫使用者 - 使資料庫可攜](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
+ [自主資料庫使用者 - 讓資料庫具有可攜性](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
   
   

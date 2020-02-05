@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ce38e546aa77e375d65a9f95f708718d283a53b0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251601"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安裝上設定 SQL Server
@@ -39,7 +39,7 @@ ms.locfileid: "75251601"
   
 - [在 Server Core 伺服器 Windows Server 2012 R2 上安裝伺服器角色和功能](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
   
-- [Managing a Server Core installation:Overview](https://go.microsoft.com/fwlink/?LinkId=245962) (管理 Server Core 安裝：概觀)  
+- [Managing a Server Core installation: Overview](https://go.microsoft.com/fwlink/?LinkId=245962)  
   
 - [Administering a Server Core installation](https://go.microsoft.com/fwlink/?LinkId=245963)
   
@@ -107,9 +107,9 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQL
   
 4. 在主控台樹狀目錄中，於 Server Core 電腦的 [電腦管理]  底下按一下 [服務與應用程式]  。  
   
-5. 按兩下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員]  。  
+5. 按兩下 [ **組態管理員][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 。  
   
-6. 在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員**中，按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務]  ，以滑鼠右鍵按一下 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<執行個體名稱>)，這裡的 \<執行個體名稱> 是您想要啟用 AlwaysOn 可用性群組的本機伺服器執行個體名稱，然後按一下 [屬性]。  
+6. 在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員**中，按一下 [ **服務][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ，以滑鼠右鍵按一下 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<執行個體名稱>)，這裡的 \<執行個體名稱> 是您想要啟用 AlwaysOn 可用性群組的本機伺服器執行個體名稱，然後按一下 [屬性]。  
   
 7. 選取 **[AlwaysOn 高可用性]** 索引標籤。  
   
@@ -225,7 +225,7 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> 使用疑難排解工具  
  您可以使用 [SQLdiag 公用程式](../../tools/sqldiag-utility.md) ，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他類型的伺服器收集記錄檔案和資料檔案，並使用其監視您的伺服器一段時間，或為伺服器的特定問題疑難排解。 SQLdiag 用於加速和簡化 Microsoft 客戶支援服務部門對診斷資訊的收集過程。  
   
- 您可以在 Server Core 上的系統管理員命令提示字元中，使用下列文章中指定的語法來啟動此公用程式：[SQLdiag 公用程式](../../tools/sqldiag-utility.md)。  
+ 您可以在 Server Core 上的系統管理員命令提示字元中，使用 [SQLdiag 公用程式](../../tools/sqldiag-utility.md)一文中指定的語法來法啟動此公用程式。  
   
 ## <a name="see-also"></a>另請參閱  
  [在 Server Core 上安裝 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)   

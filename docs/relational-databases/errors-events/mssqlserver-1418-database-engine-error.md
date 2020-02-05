@@ -12,13 +12,13 @@ ms.assetid: 6e9c7241-0201-44e0-9f8b-b3c4e293f0f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c8f238589f0f9b6641095a4ccb65a4665300a28b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68023172"
 ---
-# <a name="mssqlserver1418"></a>MSSQLSERVER_1418
+# <a name="mssqlserver_1418"></a>MSSQLSERVER_1418
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -30,7 +30,7 @@ ms.locfileid: "68023172"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBM_PARTNERNOTFOUND|  
-|訊息文字|伺服器網路位址 "%.*ls" 無法連上或不存在。 請檢查網路位址名稱，並檢查本機和遠端端點的通訊埠是否可正常運作。|  
+|訊息文字|伺服器網路位址 "%.*ls" 無法連上或不存在。 請檢查網路位址名稱，並檢查本機和遠端端點的連接埠是否可正常運作。|  
   
 ## <a name="explanation"></a>說明  
 伺服器網路端點未回應，因為指定的伺服器網路位址無法連上或不存在。  

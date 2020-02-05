@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: aff46d7240cf504b02e75d91b75d0ba746a24752
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847569"
 ---
 # <a name="iclientvirtualdeviceset2opendevice-vdi"></a>IClientVirtualDeviceSet2::OpenDevice (VDI)
@@ -48,7 +48,7 @@ HRESULT IClientVirtualDeviceSet2::OpenDevice (
 | VD_E_PROTOCOL | 集合未處於初始化狀態，或此特定裝置已開啟。 |
 | VD_E_INVALID | 裝置名稱無效。 這不是組成集合的其中一個已知名稱。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 可能會傳回 VD_E_OPEN 且未發生問題。 用戶端可能會透過迴圈呼叫 OpenDevice，直到傳回此代碼為止。
 如果已設定多部裝置 (例如 n 部裝置)，虛擬裝置集會傳回 n 個唯一的裝置介面。 第一個裝置的名稱與虛擬裝置集相同。 其他裝置會以 BACKUP/RESTORE 陳述式的 VIRTUAL_DEVICE 子句所指定的名稱來命名。

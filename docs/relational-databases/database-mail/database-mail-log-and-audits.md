@@ -17,10 +17,10 @@ ms.assetid: 846589ee-5fe5-4ab3-b335-0c253e569f99
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4fa7f81d2ca96b8a54e36240bdee60508c1490bc
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228475"
 ---
 # <a name="database-mail-log-and-audits"></a>Database Mail 記錄與稽核

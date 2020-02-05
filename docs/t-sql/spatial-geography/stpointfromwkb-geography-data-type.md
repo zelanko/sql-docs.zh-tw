@@ -18,10 +18,10 @@ ms.assetid: b3b4e3bb-47bc-4621-99c4-c97aa60cdf8b
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 97c519350024947ed6854554526b65754c6621a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120832"
 ---
 # <a name="stpointfromwkb-geography-data-type"></a>STPointFromWKB (geography 資料類型)
@@ -43,14 +43,14 @@ STPointFromWKB ( 'WKB_point' , SRID )
  *SRID*  
  這是 **int** 運算式，表示要傳回之 **geographyPoint** 執行個體的空間參考識別碼 (SRID)。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回型別：**SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
- OGC 類型：**點**  
+ OGC 類型：**Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果輸入的格式不正確，這個方法將會擲回 **FormatException**。  
   
 ## <a name="examples"></a>範例  

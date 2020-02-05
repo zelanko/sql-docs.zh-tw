@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 ms.openlocfilehash: ff7b069ebde75185b0e500bc7052edc6e99fc927
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68265354"
 ---
 # <a name="data-synchronization-state-of-availability-database-is-not-healthy-for-an-always-on-availability-group"></a>Always On 可用性群組可用性資料庫的資料同步處理狀態不健全
@@ -34,7 +34,7 @@ ms.locfileid: "68265354"
 |**類別目錄**|**警告**|  
 |**Facet**|可用性資料庫|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  這項原則會積存可用性複本中所有可用性資料庫 (也稱為「資料庫複本」) 的資料同步處理狀態。 當任何資料庫複本不在預期的資料同步處理狀態時，原則為狀況不良。 否則原則為狀況良好。  
   
 > [!NOTE]  

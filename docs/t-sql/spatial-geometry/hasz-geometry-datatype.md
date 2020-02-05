@@ -15,10 +15,10 @@ ms.assetid: aa378943-252a-4079-848b-6c59344fcfce
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: cba3487b17828ffaf4f7bd092b83542de639fcfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101247"
 ---
 # <a name="hasz-geometry-datatype"></a>HasZ (geometry 資料類型)
@@ -33,12 +33,12 @@ ms.locfileid: "68101247"
 .HasZ  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回型別：**布林**  
+ CLR 傳回類型：**Boolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 ## <a name="examples"></a>範例  
   

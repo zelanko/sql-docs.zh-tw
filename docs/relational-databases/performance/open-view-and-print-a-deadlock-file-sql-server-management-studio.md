@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c305d9fd08ffcdd1c4b66d90d834c8f0fb6dead5
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165763"
 ---
 # <a name="open-view-and-print-a-deadlock-file-in-sql-server-management-studio-ssms"></a>在 SQL Server Management Studio (SSMS) 開啟、檢視及列印死結檔案
@@ -30,13 +30,13 @@ ms.locfileid: "74165763"
   
 ## <a name="open-and-view-a-deadlock-file"></a>開啟和檢視死結檔案  
   
-1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案]  功能表上，指向 [開啟]  ，然後選取 [檔案]  。  
+1. 在  **的 [檔案]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 功能表上，指向 [開啟]  ，然後選取 [檔案]  。  
   
 2. 在 [開啟檔案]  對話方塊中，從 [檔案類型]  方塊中選取 .xdl 檔案類型。 您現在會有一份只有死結檔案的篩選清單。  
   
 ## <a name="print-a-deadlock-file"></a>列印死結檔案  
   
-1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案]  功能表上，指向 [開啟]  ，然後選取 [檔案]  。  
+1. 在  **的 [檔案]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 功能表上，指向 [開啟]  ，然後選取 [檔案]  。  
   
 2. 在 [開啟檔案]  對話方塊中，從 [檔案類型]  方塊中選取 .xdl 檔案類型。 您現在會有一份只有死結檔案的篩選清單。  
   

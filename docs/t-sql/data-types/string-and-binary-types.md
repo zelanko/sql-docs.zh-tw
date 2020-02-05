@@ -16,10 +16,10 @@ ms.assetid: fe8ee5b6-7392-4aae-a551-973bae02de8d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0d781b9f733a38b65f26d8995c0859879a9ba730
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000523"
 ---
 # <a name="string-and-binary-types"></a>字串與二進位類型

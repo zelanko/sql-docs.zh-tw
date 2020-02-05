@@ -1,5 +1,5 @@
 ---
-title: ::(範圍解析) (Transact-SQL) | Microsoft Docs
+title: ':: (範圍解析) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: 764d8f91-957b-4037-997b-a9b6b533c504
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ff16ec709e8ed3cf7e0d6a4b129641d1e553a11a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072289"
 ---
-# <a name="-scope-resolution-transact-sql"></a>::(範圍解析) (Transact-SQL)
+# <a name="-scope-resolution-transact-sql"></a>:: (範圍解析) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   範圍解析運算子 **::** 可讓您存取複合資料類型的靜態成員。 複合資料類型包含了多個簡單的資料類型和方法。 複合資料類型包括所內建 CLR 類型和自訂的 SQLCLR 使用者定義型別 (UDT)。  

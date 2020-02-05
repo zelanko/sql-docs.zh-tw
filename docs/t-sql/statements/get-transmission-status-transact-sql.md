@@ -26,10 +26,10 @@ ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: bf05f923a5a7a6333bdca7278efae918aed71f32
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211415"
 ---
 # <a name="get_transmission_status-transact-sql"></a>GET_TRANSMISSION_STATUS (Transact-SQL)
@@ -50,10 +50,10 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
  *conversation_id*  
  這是交談的交談控制代碼。 此參數類型為 **uniqueidentifier**。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **nchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  傳回一個字串，描述指定交談的上次嘗試傳輸狀態。 如果上次嘗試傳輸成功、未嘗試進行任何傳輸，或 *conversation_handle* 不存在，則傳回空字串。  
   
  這個函數所傳回的資訊，與管理檢視 sys.transmission_queue 的 last_transmission_error 資料行所顯示的資訊一樣。 不過，這個函數可以用來尋找目前傳輸佇列中沒有訊息之交談的傳輸狀態。  

@@ -18,10 +18,10 @@ ms.assetid: bbed028c-9cd6-4236-b5e5-8e914a21f2e4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: afa95f660c04bf38bf12cee66b1053b935cc5113
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042245"
 ---
 # <a name="stgeomcollfromwkb-geography-data-type"></a>STGeomCollFromWKB (geography 資料類型)
@@ -43,12 +43,12 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
  *SRID*  
  這是 **int** 運算式，表示要傳回之 **GeometryCollection** 執行個體的空間參考識別碼 (Spatial Reference Identifier，SRID)。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回型別：**SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  STGeomCollFromWKB() 傳回之 **geography** 執行個體的 OGC 類型會根據對應的 WKB 輸入而設定為 **GeometryCollection**、**MultiPolygon**、**MultiLineString** 或 **MultiPoint**。  
   
  如果輸入的格式不正確，這個方法將會擲回 **FormatException** 例外狀況。  

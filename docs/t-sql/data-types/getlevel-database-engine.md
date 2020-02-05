@@ -18,10 +18,10 @@ ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f05c80a78417a8b5153345466eadcd49fa810228
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077993"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel (Database Engine)
@@ -41,12 +41,12 @@ node.GetLevel ( )
 SqlInt16 GetLevel ( )   
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 **SQL Server 傳回型別：smallint**
   
 **CLR 傳回型別：SqlInt16**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 用來判斷一或多個節點的層級，或是將節點篩選至指定之層級的成員。 此階層的根節點為層級 0。
   
 GetLevel 對於廣度優先的搜尋索引很有用。 如需詳細資訊，請參閱[階層式資料 &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)。

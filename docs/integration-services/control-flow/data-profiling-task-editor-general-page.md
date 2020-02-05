@@ -15,10 +15,10 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 46eb7c7f0834f864aba8e3951f4caf9092f5bb7b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294203"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>資料分析工作編輯器 (一般頁面)
@@ -54,10 +54,10 @@ ms.locfileid: "71294203"
  **DestinationType**  
  指定要將資料設定檔輸出儲存至檔案或變數：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|**FileConnection**|將設定檔輸出儲存至檔案連線管理員中指定之位置的檔案。<br /><br /> 注意:您可以在 [目的地]  選項中指定要使用的檔案連線管理員。|  
-|**變數**|將設定檔輸出儲存至封裝變數。<br /><br /> 注意:您可以在 [目的地]  選項中指定要使用的封裝變數。|  
+|**FileConnection**|將設定檔輸出儲存至檔案連線管理員中指定之位置的檔案。<br /><br /> 注意：您可以在 [目的地]  選項中指定要使用的檔案連線管理員。|  
+|**變數**|將設定檔輸出儲存至封裝變數。<br /><br /> 注意：您可以在 [目的地]  選項中指定要使用的封裝變數。|  
   
  **目的地**  
  指定哪一個檔案連線管理員或封裝變數包含資料設定檔輸出：  
@@ -80,7 +80,7 @@ ms.locfileid: "71294203"
  開啟資料設定檔檢視器。 獨立資料設定檔檢視器會顯示資料分析工作的資料設定檔輸出。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部執行資料分析工作並計算資料設定檔後，您可以檢視資料設定檔輸出。  
   
 > [!NOTE]  
->  您也可以藉由執行 \<磁碟機>  :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾中的 DataProfileViewer.exe，開啟資料設定檔檢視器。  
+>  您也可以藉由執行 *磁碟機>\<* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾中的 DataProfileViewer.exe，開啟資料設定檔檢視器。  
   
 ## <a name="see-also"></a>另請參閱  
  [單一資料表快速分析表單 &#40;資料分析工作&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)   

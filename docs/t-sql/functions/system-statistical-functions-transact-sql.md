@@ -17,10 +17,10 @@ ms.assetid: 45828c67-1b9a-4653-bb24-86246084d8ba
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c55a051866ae346d5f83c898dc8292833d6d0679
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117514"
 ---
 # <a name="system-statistical-functions-transact-sql"></a>系統統計函數 (Transact-SQL)

@@ -15,15 +15,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 70798b0e967d62b51879cc694c8eb43363d364c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67912950"
 ---
 # <a name="semantic-search-sql-server"></a>語意搜尋 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-統計語意搜尋會擷取統計上相關的「主要片語」  並建立其索引，藉以深入解析儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的非結構化文件。 接著使用這些主要片語來識別「相似或相關文件」  ，並建立其索引。  
+統計語意搜尋會擷取統計上相關的「主要片語」[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*並建立其索引，藉以深入解析儲存在*  資料庫中的非結構化文件。 接著使用這些主要片語來識別「相似或相關文件」  ，並建立其索引。  
   
 ##  <a name="whatcanido"></a> 可以使用語意搜尋進行哪些作業？  
  雖然語意搜尋是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中現有的全文檢索搜尋功能為建立基礎，但是可以實現超過關鍵字搜尋的新案例。 全文檢索搜尋可讓您查詢文件中的「字詞」  ，而語意搜尋則可讓您查詢文件的「意義」  。 目前可能的方案包含自動標記擷取、相關內容探索，以及相似內容的階層式導覽。 例如，您可以查詢主要片語的索引來建立組織或文件主體的分類。 或者，您可以查詢文件相似度索引來識別符合工作描述的履歷表。  
@@ -101,7 +101,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  [在資料表和資料行上啟用語意搜尋](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)  
  描述如何針對包含文件或文字的選取資料行啟用或停用統計語意索引。  
   
- [使用語意搜尋找到文件中的主要片語](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)  
+ [使用語意搜尋在文件中尋找主要片語](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)  
  描述如何在設定為統計語意索引的文件或文字資料行中尋找主要片語。  
   
  [使用語意搜尋尋找相似及相關的文件](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)  

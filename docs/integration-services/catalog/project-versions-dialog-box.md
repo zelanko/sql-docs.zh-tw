@@ -13,10 +13,10 @@ ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9b1715b517f6933a9f904b17ff268fdf7162464d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294901"
 ---
 # <a name="project-versions-dialog-box"></a>專案版本對話方塊

@@ -10,10 +10,10 @@ ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: da1688881523723206b03d7f7dec3abc2e518370
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296304"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>連線至 PostgreSQL 資料來源 (SQL Server 匯入和匯出精靈)
@@ -62,7 +62,7 @@ PostgreSQL 伺服器的名稱。
 **通訊埠**  
 用來連線至 PostgreSQL 伺服器的連接埠。
 
-**[資料庫備份]**  
+**Database**  
 PostgreSQL 資料庫的名稱。
 
 **Uid** 和 **Pwd**   
@@ -76,7 +76,7 @@ PostgreSQL 資料庫的名稱。
     ```
 
 ### <a name="enter-the-connection-string"></a>輸入連接字串
-在 [選擇資料來源]  或 [選擇目的地]  頁面上，於 [ConnectionString]  欄位中輸入連接字串，或在 [Dsn]  欄位中輸入 DSN 名稱。 輸入連接字串之後，精靈會剖析字串，並在清單中顯示個別屬性和其值。
+在 [選擇資料來源]  或 [選擇目的地]  頁面上，於 [ConnectionString]  欄位中輸入連接字串，或在 [Dsn]  欄位中輸入 DSN 名稱。 輸入連接字串之後，精靈會剖析字串，並在清單中顯示個別屬性和屬性值。
 
 下列範例使用此連接字串。
 

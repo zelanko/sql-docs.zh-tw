@@ -13,15 +13,15 @@ ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 94860f25b8cb53ab3c273da2e020d0d6a506ad0b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155622"
 ---
 # <a name="connect-to-microsoft-azure-storage-restore"></a>連接到 Microsoft Azure 儲存體 (還原)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  此對話方塊可讓您指定 Azure 儲存體帳戶資訊的連線，以擷取儲存在 Azure 儲存體帳戶中的檔案。 指定必要資訊之後，按一下 [連接] 建立 Azure 儲存體的連線。  
+  此對話方塊可讓您指定 Azure 儲存體帳戶資訊的連線，以擷取儲存在 Azure 儲存體帳戶中的檔案。 指定必要資訊之後，按一下 [連接]  建立 Azure 儲存體的連線。  
   
 ## <a name="azure-storage-account"></a>Azure 儲存體帳戶  
  **儲存體帳戶**  
@@ -30,10 +30,10 @@ ms.locfileid: "70155622"
  **帳戶金鑰**  
  指定 Azure 儲存體帳戶存取金鑰。  
   
- [使用安全端點 (HTTPS)] 核取方塊  
+ [使用安全端點 (HTTPS)]  核取方塊  
  選取此選項，以確保 Azure 儲存體的安全連線 (建議使用)。  
   
- [儲存帳戶金鑰]核取方塊  
+ [儲存帳戶金鑰]  核取方塊  
  如果您想要 SQL Server 記住此儲存體帳戶的存取金鑰，請選取此核取方塊。  
   
 ### <a name="sql-credential"></a>SQL 認證  
@@ -41,6 +41,6 @@ ms.locfileid: "70155622"
  選取符合儲存體帳戶和帳戶金鑰資訊的現有 SQL 認證。  
   
  **建立新認證**  
- 選取此選項，以使用儲存體帳戶和帳戶金鑰資訊建立新認證。 在 [認證名稱] 欄位中指定新認證的名稱。  
+ 選取此選項，以使用儲存體帳戶和帳戶金鑰資訊建立新認證。 在 [認證名稱]  欄位中指定新認證的名稱。  
   
   

@@ -38,10 +38,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c7d18395321a6ea4c077b251b1a838646af9b2a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68027656"
 ---
 # <a name="search-condition-transact-sql"></a>搜尋條件 (Transact-SQL)
@@ -115,15 +115,15 @@ ms.locfileid: "68027656"
  指定 SELECT 陳述式、查詢運算式或子查詢結果集中所傳回之資料列的條件。 如果是 UPDATE 陳述式，便指定要更新的資料列。 如果是 DELETE 陳述式，便指定要刪除的資料列。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式搜尋條件中所能包括的述詞數目沒有限制。  
   
  \<graph_search_pattern>  
- 指定圖形比對模式。 如需此子句的引數詳細資訊，請參閱 [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
+ 指定圖形搜尋模式。 如需此子句的引數詳細資訊，請參閱 [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
  
  NOT  
  執行述詞所指定之布林運算式的否定運算。 如需詳細資訊，請參閱 [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)。  
   
- 與  
+ AND  
  組合兩個條件，當兩個條件都是 TRUE 時，便得出 TRUE。 如需詳細資訊，請參閱 [AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md)。  
   
- 或  
+ OR  
  組合兩個條件，當任何一個條件是 TRUE 時，便得出 TRUE。 如需詳細資訊，請參閱 [OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md)。  
   
  \< predicate >  
@@ -200,7 +200,7 @@ ms.locfileid: "68027656"
  EXISTS  
  搭配子查詢來測試子查詢傳回的資料列是否存在。 如需詳細資訊，請參閱 [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  邏輯運算子的優先順序是 NOT (最高)，後面依序接著 AND 和 OR。 您可以利用括號來置換搜尋條件中的這個優先順序。 評估邏輯運算子的順序可能會隨著查詢最佳化工具所進行的選擇而不同。 如需有關邏輯運算子如何處理邏輯值的詳細資訊，請參閱 [AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md)、[OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md) 及 [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  

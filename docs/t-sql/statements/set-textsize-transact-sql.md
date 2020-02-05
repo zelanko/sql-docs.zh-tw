@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7e0a949e132f01ce82e46a6e8b4c1d761c1a52a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100047"
 ---
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68100047"
   指定 SELECT 陳述式傳回的 **varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**text**、**ntext** 和 **image** 資料大小。  
   
 > [!IMPORTANT]
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未來版本將會移除 **ntext**、**text** 及 **image** 資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 **nvarchar(max)** 、 **varchar(max)** 和 **varbinary(max)** 。  
+>   的未來版本將會移除 **ntext**、**text** 及 [!INCLUDE[msCoName](../../includes/msconame-md.md)]image[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 **nvarchar(max)** 、 **varchar(max)** 和 **varbinary(max)** 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,9 +53,9 @@ SET TEXTSIZE { number }
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (10.0 及更高版本) 和 ODBC Driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在連線時自動指定 `-1` (無限制)。  
   
- **比 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 舊的驅動程式：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者 (第 9 版) 在連接時，都會將 TEXTSIZE 設為 2147483647。  
+ **若是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 以前的版本：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式和適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者 (第 9 版) 在連線時會將 TEXTSIZE 設為 2147483647。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  設定 SET TEXTSIZE 會影響 @@TEXTSIZE 函式。  
   
  SET TEXTSIZE 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  

@@ -14,16 +14,16 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b7b284052b049515aedc1541ae1cab6bf5719afe
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095921"
 ---
 # <a name="use-for-json-output-in-sql-server-and-in-client-apps-sql-server"></a>在 SQL Server 和用戶端應用程式中使用 FOR JSON 輸出 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-下列範例示範在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或用戶端應用程式中使用 **FOR JSON** 子句及其 JSON 輸出的部分方式。  
+下列範例示範在 **或用戶端應用程式中使用**FOR JSON[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 子句及其 JSON 輸出的部分方式。  
   
 ## <a name="use-for-json-output-in-sql-server-variables"></a>在 SQL Server 變數中使用 FOR JSON 輸出  
 FOR JSON 子句的輸出屬於 NVARCHAR(MAX) 類型，因此您可以將它指派給任何變數，如下列範例所示。  

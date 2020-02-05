@@ -13,10 +13,10 @@ ms.assetid: 9a276caa-ea38-473d-92bc-26302bfcf660
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4d600a5bf3e5667fdd3bd247e2e479a6c870ff21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021708"
 ---
 # <a name="server-public-permissions"></a>伺服器 public 權限
@@ -29,7 +29,7 @@ ms.locfileid: "68021708"
 > [!IMPORTANT]  
 >  在安裝程式完成之後，**PUBLIC** 角色會擁有 [專用管理員連接]  以外之所有端點的 **CONNECT** 權限。 這是正常狀況，通常不應該變更 (存取權是使用建立新登入時自動授與的 **CONNECT SQL** 權限來控制)。  
   
-### <a name="for-more-information"></a>如需詳細資訊  
+### <a name="for-more-information"></a>取得詳細資訊  
  [保護 SQL Server 的安全](../../relational-databases/security/securing-sql-server.md)  
   
   

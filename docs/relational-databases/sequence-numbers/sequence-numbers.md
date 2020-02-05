@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6f56e354023c869fb04d296b63ac748abec763e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126776"
 ---
 # <a name="sequence-numbers"></a>序號
@@ -391,7 +391,7 @@ GO
   
 ```  
   
- 使用 `SELECT *` 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式將收到新的資料行做為最後一個資料行，而非第一個資料行。 如果這是無法接受的資料行，您就必須建立全新的資料表、將資料移入其中，然後重新建立新資料表的權限。  
+ 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的 `SELECT *` 陳述式將收到新的資料行做為最後一個資料行，而非第一個資料行。 如果這是無法接受的資料行，您就必須建立全新的資料表、將資料移入其中，然後重新建立新資料表的權限。  
   
 ## <a name="related-content"></a>相關內容  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)  

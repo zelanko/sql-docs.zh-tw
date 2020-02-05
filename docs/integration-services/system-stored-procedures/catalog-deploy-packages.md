@@ -11,10 +11,10 @@ ms.assetid: 8e861df6-d103-4d84-8438-e822533f6849
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0a1828925494ca2e1e8f593e3f133a21cd10a9ee
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296778"
 ---
 # <a name="catalogdeploy_packages"></a>catalog.deploy_packages 

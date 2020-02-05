@@ -11,10 +11,10 @@ ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 733e6c8000f3a14127b0f3a8704b43af81fa0f85
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292335"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>使用 ODBC 目的地來載入資料
@@ -55,7 +55,7 @@ ms.locfileid: "71292335"
 12. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [ODBC 目的地編輯器 &#40;連接管理員頁面&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
+ [ODBC 目的地編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
  [ODBC 目的地編輯器 &#40;對應頁面&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
  [ODBC 來源編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   

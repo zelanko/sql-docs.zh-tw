@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f3614b1f9c058405c041aa2b4de27d97caadb8fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111758"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>記憶體內部 OLTP 的純量使用者定義函數
@@ -91,7 +91,7 @@ END
   
 -   由結構描述繫結預存程序或使用者定義函數參考時，無法卸除或變更。  
   
-## <a name="showplanxml"></a>SHOWPLAN_XML  
+## <a name="showplan_xml"></a>SHOWPLAN_XML  
  原生編譯純量使用者定義函數支援 SHOWPLAN_XML。 由於搭配原生編譯預存程序，因此其符合一般 SHOWPLAN_XML 結構描述。 使用者定義函數的基底項目為 `<UDF>`。  
   
  STATISTICS XML 不支援原生編譯純量使用者定義函數。 若您執行參考使用者定義函數且啟用 STATISTICS XML 的查詢，則會傳回無使用者定義函數部分的 XML 內容。  

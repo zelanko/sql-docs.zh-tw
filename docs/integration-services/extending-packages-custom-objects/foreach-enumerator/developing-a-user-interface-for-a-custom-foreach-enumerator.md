@@ -14,10 +14,10 @@ ms.assetid: 8aa4aa80-c9ba-42b3-ba87-ae5ea5d3cac3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 07bd14be05b07fab0ba383da928e2fd384bbdfe5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297163"
 ---
 # <a name="developing-a-user-interface-for-a-custom-foreach-enumerator"></a>開發自訂 ForEach 列舉值的使用者介面
@@ -30,7 +30,7 @@ ms.locfileid: "71297163"
  在自訂的使用者介面專案或是組件中，您可以建立可實作 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI> 的類別。 這個類別衍生自 System.Windows.Forms.UserControl，通常它是用於建立複合控制項，以主控其他的 Windows Form 控制項。 在 **Foreach 迴圈編輯器**中，您建立的控制項是顯示在 [集合]  索引標籤的 [列舉值設定]  區域中。  
   
 > [!IMPORTANT]  
->  在簽署和組建自訂使用者介面，以及在全域組件快取中安裝它之後 (如[建立、部署和偵錯自訂物件](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)所述)，請記得在 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> 屬性中提供這個類別的完整名稱。  
+>  在簽署和組建自訂使用者介面，以及在全域組件快取中安裝它之後 (如[建立、部署和偵錯自訂物件](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)所述)，請記得在 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 屬性中提供這個類別的完整名稱。  
   
 ## <a name="coding-the-user-interface-control-class"></a>撰寫使用者介面控制項類別的程式碼  
   

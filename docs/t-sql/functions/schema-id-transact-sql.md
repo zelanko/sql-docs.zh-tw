@@ -23,13 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5882a98a856916ebeaa0ad30d545d29cdf21071c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089873"
 ---
-# <a name="schemaid-transact-sql"></a>SCHEMA_ID (Transact-SQL)
+# <a name="schema_id-transact-sql"></a>SCHEMA_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回與結構描述名稱相關聯的結構描述識別碼。  
@@ -48,12 +48,12 @@ SCHEMA_ID ( [ schema_name ] )
 |----------|----------------|  
 |*schema_name*|這是結構描述的名稱。 *schema_name* 為 **sysname**。 若未指定 *schema_name*，則 SCHEMA_ID 會傳回呼叫者預設結構描述的識別碼。|  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
  若 *schema_name* 不是有效的結構描述，則會傳回 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  SCHEMA_ID 會傳回系統結構描述和使用者自訂結構描述的識別碼。 SCHEMA_ID 可在選取清單、WHERE 子句及任何允許使用運算式的位置中呼叫。  
   
 ## <a name="examples"></a>範例  

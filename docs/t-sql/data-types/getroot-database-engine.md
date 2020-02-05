@@ -18,10 +18,10 @@ ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 58f5389953c2257c7478ad54665cfdeeb0a805c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077936"
 ---
 # <a name="getroot-database-engine"></a>GetRoot (Database Engine)
@@ -41,12 +41,12 @@ hierarchyid::GetRoot ( )
 static SqlHierarchyId GetRoot ( )   
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 **SQL Server 傳回型別：hierarchyid**
   
 **CLR 傳回型別：SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 使用判斷階層樹狀結構中的根節點。
   
 ## <a name="examples"></a>範例  

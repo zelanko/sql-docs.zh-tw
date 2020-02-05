@@ -14,10 +14,10 @@ ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3beb9b01beafcb247372c49d9219550c95fd1b03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986442"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>授與 XML 結構描述集合的權限

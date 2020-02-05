@@ -14,10 +14,10 @@ ms.assetid: 1a0da6df-57ff-4f3f-aae9-2fbc4897508c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b225710aaadf3ea605e3cffd91a5a4fea2a51e62
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557786"
 ---
 # <a name="correct-affinity-mask-and-affinity-input-and-output-mask-overlap"></a>Correct Affinity Mask and Affinity Input and Output Mask Overlap

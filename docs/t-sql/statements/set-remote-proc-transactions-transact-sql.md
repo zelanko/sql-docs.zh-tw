@@ -24,13 +24,13 @@ ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0d94799898517b2d75ce6a1add308f0831b112ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132816"
 ---
-# <a name="set-remoteproctransactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
+# <a name="set-remote_proc_transactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   指定當本機交易在使用中，執行遠端預存程序會啟動一項 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散式交易協調器 (MS DTC) 所管理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易。  
@@ -51,7 +51,7 @@ SET REMOTE_PROC_TRANSACTIONS { ON | OFF }
  ON | OFF  
  如果設為 ON，當從本機交易執行遠端預存程序時，會啟動 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散式交易。 如果設為 OFF，當從本機交易呼叫遠端預存程序時，並不會啟動 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散式交易。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當 REMOTE_PROC_TRANSACTIONS 是 ON 時，呼叫預存程序會啟動一項分散式交易，且會利用 MS DTC 來編列這項交易。 發出遠端預存程序呼叫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是交易發起者，它會控制交易的完成。 當發出連接的後續 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 陳述式時，負責控制的執行個體會要求 MS DTC 跨越所涉及的各部電腦來管理分散式交易的完成。  
   
  在啟動 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散式交易之後，會向已定義為遠端伺服器的其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體發出遠端預存程序呼叫。 所有遠端伺服器都會編列在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散式交易中，MS DTC 會確保已針對每部遠端伺服器來完成交易。  

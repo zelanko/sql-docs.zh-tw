@@ -24,10 +24,10 @@ ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 009029f16d85fa82867f37e075066701dacfc375
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064696"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
@@ -114,7 +114,7 @@ CREATE ASYMMETRIC KEY asym_key_name
  ENCRYPTION BY PASSWORD = '*password*'  
  指定用來加密私密金鑰的密碼。 如果這個子句不存在，此私密金鑰將會使用資料庫主要金鑰來加密。 *password* 的上限為 128 個字元。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  「非對稱金鑰」  是資料庫層級的安全性實體。 在它的預設格式中，這個實體同時包含公開金鑰和私密金鑰。 如果執行時不使用 FROM 子句，CREATE ASYMMETRIC KEY 會產生新金鑰組。 如果執行時使用 FROM 子句，CREATE ASYMMETRIC KEY 就會從檔案匯入金鑰組，或是從組件或 DLL 檔案匯入公開金鑰。  
   
  依預設，私密金鑰由資料庫主要金鑰保護。 如果尚未建立資料庫主要金鑰，則需要利用密碼保護私密金鑰。  
@@ -147,7 +147,7 @@ GO
 ```  
   
 ### <a name="c-creating-an-asymmetric-key-from-an-ekm-provider"></a>C. 從 EKM 提供者建立非對稱金鑰  
- 下列範例會從稱為 `EKM_Provider1` 的可延伸金鑰管理提供者中所儲存的金鑰組來建立非對稱金鑰 `EKM_askey1`，並在稱為 `key10_user1` 的提供者上建立金鑰。  
+ 下列範例會從稱為 `EKM_askey1` 的可延伸金鑰管理提供者中所儲存的金鑰組來建立非對稱金鑰 `EKM_Provider1`，並在稱為 `key10_user1` 的提供者上建立金鑰。  
   
 ```sql  
 CREATE ASYMMETRIC KEY EKM_askey1   

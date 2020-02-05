@@ -11,10 +11,10 @@ ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3ce06430094825bf3268836657661930fea058e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296628"
 ---
 # <a name="catalogmaster_properties-ssisdb-database"></a>catalog.master_properties (SSISDB 資料庫)
@@ -26,15 +26,15 @@ ms.locfileid: "71296628"
 
 顯示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Master 的屬性。
 
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar(256)**|相應放大主要屬性的名稱。|  
 |property_value|**nvarchar(max)**|相應放大主要屬性的值。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 這個檢視會顯示每個相應放大主要屬性的資料列。 這個檢視會顯示的屬性包括：
 
-|屬性名稱|Description|  
+|屬性名稱|描述|  
 |-------------------|-----------------| 
 |**CLUSTER_LOGDB_SERVER**|記錄資料庫所在的 SQL Server。|
 |**LAST_ONLINE_TIME**|Scale Out Master 上次上線的時間。|

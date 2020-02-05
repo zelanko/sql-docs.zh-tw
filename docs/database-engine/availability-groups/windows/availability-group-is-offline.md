@@ -15,10 +15,10 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d2f9c6101be3dba631a9e0cbebdfedc3444c72d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991469"
 ---
 # <a name="always-on-availability-group-is-offline"></a>Always On 可用性群組為離線
@@ -33,7 +33,7 @@ ms.locfileid: "67991469"
 |**類別目錄**|**嚴重**|  
 |**Facet**|可用性群組|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  這項原則檢查可用性群組的線上或離線狀態。 當可用性群組的叢集資源為離線或可用性群組沒有主要複本時，原則為狀況不良並會引發警示。  
   
  當可用性群組的叢集資源為線上或可用性群組有主要複本時，原則為狀況良好。  

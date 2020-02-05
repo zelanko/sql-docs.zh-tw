@@ -14,10 +14,10 @@ ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e1b4811e15d9f6927d06a4d4f9ff99466eb164c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68112913"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>具有 XPath 節點測試名稱的資料行

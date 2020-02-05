@@ -13,10 +13,10 @@ ms.assetid: 235ff2ab-1c5a-45c7-a91b-9db69b958b60
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3c8baf2b846e33d7df51dfef3e24ee2b6028babb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109926"
 ---
 # <a name="asymmetric-keys-encryption-strength"></a>非對稱金鑰加密強度

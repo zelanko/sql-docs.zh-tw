@@ -19,10 +19,10 @@ ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e45060a494fad2fbd0310a31bdf433e624becdc2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294296"
 ---
 # <a name="back-up-database-task"></a>備份資料庫工作
@@ -30,23 +30,23 @@ ms.locfileid: "71294296"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  「備份資料庫」工作會執行不同類型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫備份作業。 如需詳細資訊，請參閱 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
+  「備份資料庫」工作會執行不同類型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫備份作業。 如需詳細資訊，請參閱 [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
  使用「備份資料庫」工作，封裝即可備份單一資料庫或多個資料庫。 如果工作僅備份單一資料庫，您可以選擇備份元件：資料庫，或其檔案和檔案群組。  
   
 ## <a name="supported-recover-models-and-backup-types"></a>支援的復原模型和備份類型  
  下表列出「備份資料庫」工作支援的復原模式和備份類型。  
   
-|復原模式|[資料庫]|資料庫差異|交易記錄|檔案或檔案差異|  
+|復原模式|資料庫|資料庫差異|交易記錄|檔案或檔案差異|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
-|Simple|必要項|選擇性|不支援|不支援|  
-|完整|必要項|選擇性|必要項|選擇性|  
-|大量記錄|必要項|選擇性|必要項|選擇性|  
+|Simple|必要|選用|不支援|不支援|  
+|完整|必要|選用|必要|選用|  
+|大量記錄|必要|選用|必要|選用|  
   
  「備份資料庫」工作會封裝 Transact-SQL BACKUP 陳述式。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。  
   
 ## <a name="configuration-of-the-back-up-database-task"></a>備份資料庫工作的組態  
- 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」設定屬性 這項工作位於「 **設計師」中** [工具箱] **的** [維護計畫工作] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 區段。  
+ 您可以透過 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 設定屬性。 這項工作位於「 **設計師」中** [工具箱] **的** [維護計畫工作] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 區段。  
   
  如需有關可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請按下列主題：  
   

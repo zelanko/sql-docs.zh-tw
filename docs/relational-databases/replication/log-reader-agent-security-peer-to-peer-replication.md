@@ -14,10 +14,10 @@ ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5caaa59fd28f3557a6ae7edf90c6a53497d24a1a
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321591"
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>記錄讀取器代理程式安全性 (點對點複寫)
@@ -39,10 +39,10 @@ ms.locfileid: "75321591"
  在每個對等 (Peer) 端作為發行集資料庫和訂閱資料庫的資料庫。  
   
  **散發者的連接**  
- 用於連接到散發者的內容。 散發者的本機連接一律會使用執行代理程式之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的內容進行，所以這個欄位一律顯示 [模擬 '\<網域>\\<登入\>']  或 [模擬 '\<電腦>\\<登入\>']  。  
+ 用於連接到散發者的內容。 散發者的本機連接一律會使用執行代理程式之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的內容進行，所以這個欄位一律顯示 [模擬 '**網域>\<<登入\\']\>** 或 [模擬 '**電腦>\<<登入\\']\>** 。  
   
  **發行者的連接**  
- 用於連接到發行者的內容。 發行者的連接可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，或使用執行代理程式之 Windows 帳戶的內容進行。 這個欄位會顯示下列其中一項資訊：[使用登入 '\<登入>']  、[模擬 '\<網域>\\<登入\>']  或 [模擬 '\<電腦>\\<登入\>']  。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 Windows 帳戶的內容進行所有連接。  
+ 用於連接到發行者的內容。 發行者的連接可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，或使用執行代理程式之 Windows 帳戶的內容進行。 欄位會顯示下列內容之一：[使用者登入 '**登入>']\<** 、[模擬 '**網域>\<<登入\\']\>** 或 [模擬 '**電腦>\<<登入\\']\>** 。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 Windows 帳戶的內容進行所有連接。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理點對點拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

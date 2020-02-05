@@ -18,10 +18,10 @@ ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 0b91fdde3c6940ffa0a7f2e77591e05578e005c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894921"
 ---
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (geometry 資料類型)
@@ -36,12 +36,12 @@ ms.locfileid: "67894921"
 .STIsSimple ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回型別：**SqlBoolean**  
+ CLR 傳回類型：**SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **geometry** 執行個體必須符合以下所有的需求，才能是簡單的執行個體：  
   
 -   此例項的每一個圖形都不能自己相交 (除了在它的端點上以外)。  

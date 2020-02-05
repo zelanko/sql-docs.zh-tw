@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f79e7931e0e1fd04a699620f65c1dc2566347202
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140234"
 ---
 # <a name="set-rowcount-transact-sql"></a>SET ROWCOUNT (Transact-SQL)
@@ -51,7 +51,7 @@ SET ROWCOUNT { number | @number_var }
  *number* | @*number_var*  
  這是停止特定查詢之前所要處理的資料列數，這是一個整數。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]  
 >  使用 SET ROWCOUNT 不會影響將來 SQL Server 版本中的 DELETE、INSERT 和 UPDATE 陳述式。 請避免在新的開發工作中使用 SET ROWCOUNT 搭配 DELETE、INSERT 和 UPDATE 陳述式，並計畫修改目前正在使用它的應用程式。 如需類似的行為，請使用 TOP 語法。 如需詳細資訊，請參閱 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)。  

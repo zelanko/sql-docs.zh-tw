@@ -13,10 +13,10 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2532ca83c063d029015560b22e1a89317b90b5b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115814"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>作業活動監視器 (篩選設定)

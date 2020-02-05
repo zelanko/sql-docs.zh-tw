@@ -14,10 +14,10 @@ ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 218389eaf76336e33d866f16c6b79ef54661be0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011956"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>預設 SQL Server 網路通訊協定組態
@@ -33,14 +33,14 @@ ms.locfileid: "68011956"
 
 |版本 | 有新安裝還是舊版安裝存在 | 共用記憶體 | TCP/IP | 具名管道|
 | -------- | -- | -- | -- | --  |  
-|Enterprise | 新安裝 | 已啟用 | 已啟用 | 針對網路連接停用。|
-|Standard | 新安裝 | 已啟用 | 已啟用 | 針對網路連接停用。|
-|Web | 新安裝 | 已啟用 | 已啟用 | 針對網路連接停用。|
-|Developer | 新安裝 | 已啟用 | 已停用 | 針對網路連接停用。|
-|Evaluation | 新安裝 | 已啟用 | 已啟用 | 針對網路連接停用。|
-|SQL Server Express | 新安裝 | 已啟用 | 已停用 | 針對網路連接停用。|
+|Enterprise | 新的安裝 | 啟用 | 啟用 | 針對網路連接停用。|
+|標準 | 新的安裝 | 啟用 | 啟用 | 針對網路連接停用。|
+|Web | 新的安裝 | 啟用 | 啟用 | 針對網路連接停用。|
+|開發人員 | 新的安裝 | 啟用 | 已停用 | 針對網路連接停用。|
+|評估 | 新的安裝 | 啟用 | 啟用 | 針對網路連接停用。|
+|SQL Server Express | 新的安裝 | 啟用 | 已停用 | 針對網路連接停用。|
 |所有版本 | 存在舊版安裝，但未升級 | 與新安裝相同 | 與新安裝相同 | 與新安裝相同|
-|所有版本 | UPGRADE | 已啟用 | 保留舊版安裝的設定。 | 保留舊版安裝的設定。|
+|所有版本 | 升級 | 啟用 | 保留舊版安裝的設定。 | 保留舊版安裝的設定。|
 
 
 >[!NOTE]
@@ -57,7 +57,7 @@ ms.locfileid: "68011956"
 
 
 
-## <a name="includessnoversionmdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 瀏覽器設定
+## <a name="includessnoversion_mdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 瀏覽器設定
 
 安裝過程中，可以將 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser 服務設定為自動啟動。 預設值為在下列狀況成立時，此服務才會自動啟動：
 

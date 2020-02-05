@@ -14,10 +14,10 @@ ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a9e62710d28b9b7e0ad66ff157b841f939d6dfaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041087"
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>點對點 - 點對點複寫中的衝突偵測
@@ -87,7 +87,7 @@ ms.locfileid: "68041087"
   
 -   透過讓散發代理程式繼續套用變更，嘗試再次同步處理節點：  
   
-    1.  執行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)：針對 @property 參數指定 'p2p_continue_onconflict' 而針對 @value 參數指定 **true**。  
+    1.  執行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)：針對 @property 參數指定 'p2p_continue_onconflict' 而針對 **參數指定**true@value。  
   
     2.  重新啟動散發代理程式。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68041087"
         > [!NOTE]  
         >  如果進行這個步驟之後資料出現不一致，您就必須手動更新具有最高優先權之節點上的資料列，然後讓變更從這個節點傳播。 如果拓撲中沒有其他進一步的衝突變更，所有節點都會處於一致狀態。  
   
-    5.  執行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)：針對 @property 參數指定 'p2p_continue_onconflict' 而針對 @value 參數指定 **false**。  
+    5.  執行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)：針對 @property 參數指定 'p2p_continue_onconflict' 而針對 **參數指定**false@value。  
   
 ## <a name="see-also"></a>另請參閱  
  [@loopback_detection](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  

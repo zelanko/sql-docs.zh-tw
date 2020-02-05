@@ -15,10 +15,10 @@ ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a0648ea24162f59562f6d7a68dd5007ca78be3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051267"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() 方法 (xml 資料類型)
@@ -46,7 +46,7 @@ nodes (XQuery) as Table(Column)
 *Table*(*Column*)  
 是結果資料列集的資料表名稱和資料行名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 舉例來說，假設您有下列資料表：  
   
 ```sql
@@ -71,7 +71,7 @@ T (ProductModelID int, Instructions xml)
 </root>  
 ```  
   
-含有查詢運算式 `/root/Location` 的 `nodes()` 方法引動過程會傳回含有三個資料列的資料列集，每個資料列都含有原始 XML 文件的邏輯複本，且其內容項目會設成其中一個 `<Location>` 節點：  
+含有查詢運算式 `nodes()` 的 `/root/Location` 方法引動過程會傳回含有三個資料列的資料列集，每個資料列都含有原始 XML 文件的邏輯複本，且其內容項目會設成其中一個 `<Location>` 節點：  
   
 ```sql
 Product  
@@ -201,9 +201,9 @@ go
 ### <a name="specifying-the-nodes-method-against-a-column-of-xml-type"></a>針對 xml 類型的資料行來指定 nodes() 方法  
 此範例使用自行車製造指示，並將其儲存在 **ProductModel** 資料表的 Instructions **xml** 類型資料行中。  
   
-在下列範例中，會針對 `ProductModel` 資料表中 **xml** 類型的 `Instructions` 資料行來指定 `nodes()` 方法。  
+在下列範例中，會針對 `nodes()` 資料表中 `Instructions`xml**類型的** 資料行來指定 `ProductModel` 方法。  
   
-`nodes()` 方法藉由指定 `/MI:root/MI:Location` 路徑，將 <`Location`> 元素設為內容節點。 結果資料列集包含原始文件的邏輯複本 (文件中的每個 <`Location`> 節點各有一個複本)，且其內容節點會設為 <`Location`> 元素。 因此，`nodes()` 函式會提供一組 <`Location`> 內容節點。  
+`nodes()` 方法藉由指定 `Location` 路徑，將 <`/MI:root/MI:Location`> 元素設為內容節點。 結果資料列集包含原始文件的邏輯複本 (文件中的每個 <`Location`> 節點各有一個複本)，且其內容節點會設為 <`Location`> 元素。 因此，`nodes()` 函式會提供一組 <`Location`> 內容節點。  
   
 根據此資料列集的 `query()` 方法會要求 `self::node`，且會傳回每個資料列的 `<Location>` 項目。  
   
@@ -211,11 +211,11 @@ go
   
 - 尋找每個 <`Location`> 中的 Location ID  
   
-- 擷取每個 <`Location`> 中的製造步驟 (<`step`> 子元素)  
+- 擷取每個 <`step``Location` 中的製造步驟 (<>> 子元素)  
   
 此查詢會傳回內容項目，其中在 `'.'` 方法中指定了 `self::node()` 的 `query()` 縮寫語法。  
   
-請注意下列事項：
+請注意：
   
 - `nodes()` 方法會套用至 Instructions 資料行，並傳回資料列集 `T (C)`。 此資料列集包含原始製造指示文件的邏輯副本，並以 `/root/Location` 做為內容項目。  
   
@@ -247,7 +247,7 @@ go
 ### <a name="applying-nodes-to-the-rowset-returned-by-another-nodes-method"></a>將 nodes() 套用到由另一個 nodes() 方法傳回的資料列集  
 下列程式碼會在 XML 文件中查詢 `Instructions` 資料表之 `ProductModel` 資料行中的製造指示。 該查詢會傳回一個資料列集，其中包含產品型號識別碼、製造位置，以及製造步驟。  
   
-請注意下列事項：  
+請注意：  
   
 - `nodes()` 方法會套用至 `Instructions` 資料行，並傳回 `T1 (Locations)` 資料列集。 此資料列集包含原始製造說明文件的邏輯副本，並以 `/root/Location` 元素做為項目內容。  
   

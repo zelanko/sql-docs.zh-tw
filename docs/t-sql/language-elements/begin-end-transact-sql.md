@@ -25,10 +25,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7e278e41fa2f27684b1ce249bb45b1dc78356753
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325560"
 ---
 # <a name="beginend-transact-sql"></a>BEGIN...END (Transact-SQL)

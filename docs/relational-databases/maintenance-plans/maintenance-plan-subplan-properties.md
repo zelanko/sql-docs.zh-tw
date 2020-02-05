@@ -14,10 +14,10 @@ ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 28fb816554093c78c1ce71d7a3712ca8804fd4af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115664"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>維護計畫 (子計畫屬性)
@@ -31,10 +31,10 @@ ms.locfileid: "68115664"
  **說明**  
  輸入子計畫的描述。 描述限制為 512 個字元。  
   
- **排程**  
+ **[排程]**  
  按一下排程圖示指定何時執行子計畫工作，或按一下有紅色 x 的排程圖示，移除現有子計畫排程。  
   
 ## <a name="see-also"></a>另請參閱  
- [中 [物件總管] 之](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+ [維護計畫](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

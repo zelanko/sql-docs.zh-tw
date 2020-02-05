@@ -11,10 +11,10 @@ ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 62b781351b406aadc1b7516cd70dc0d11e7c5a16
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291888"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 目的地
@@ -102,7 +102,7 @@ ms.locfileid: "71291888"
   
  設定 SAP BW 目的地時，您也可以使用各種對話方塊來查閱或建立 SAP Netweaver BW 物件。 如需有關這些對話方塊的詳細資訊，請按下列其中一個主題：  
   
--   [查閱 InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)  
+-   [ InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)  
   
 -   [建立新的 InfoObject](../../integration-services/data-flow/create-new-infoobject.md)  
   

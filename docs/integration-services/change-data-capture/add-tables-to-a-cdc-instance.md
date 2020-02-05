@@ -13,10 +13,10 @@ ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa9bf38512b2ba817156f216161d21bc1d27c129
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294855"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>將資料表加入至 CDC 執行個體
@@ -38,7 +38,7 @@ ms.locfileid: "71294855"
 > [!NOTE]  
 >  您可以在一個或兩個欄位中輸入準則。  
   
--   **顯示前 1000 個相符的資料表**：根據預設，此核取方塊為已選取。 它會將顯示畫面限制為前 1000 個相符的資料表。 如果您清除此核取方塊，符合準則的所有資料表都會顯示。 如果有大量的資料表，則顯示清單可能需要很長的時間。  
+-   **顯示前 1000 個相符的資料表**：預設會選取這個核取方塊。 它會將顯示畫面限制為前 1000 個相符的資料表。 如果您清除此核取方塊，符合準則的所有資料表都會顯示。 如果有大量的資料表，則顯示清單可能需要很長的時間。  
   
  **若要選取包含在 CDC 執行個體中的資料表**  
  按一下您想要包含之任何資料表旁邊的核取方塊，然後按一下 [加入]  。 資料表隨即加入至新增執行個體精靈中 **[選取資料表和資料行]** 頁面的清單中。  
@@ -54,6 +54,6 @@ ms.locfileid: "71294855"
 ## <a name="see-also"></a>另請參閱  
  [如何編輯 CDC 執行個體屬性](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
- [選取 Oracle 資料表來擷取變更](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
+ [選取 Oracle 資料表以擷取變更](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
   
   

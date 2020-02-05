@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68139604"
 ---
 # <a name="modify-foreign-key-relationships"></a>修改外部索引鍵關聯性
@@ -54,7 +54,7 @@ ms.locfileid: "68139604"
   
 -   別名資料類型可以與其基底類型相關聯。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
@@ -72,10 +72,10 @@ ms.locfileid: "68139604"
      **選取的關聯性**  
      列出現有的關聯性。 選取關聯性，在右邊方格中顯示其屬性。 如果清單是空的，表示此資料表沒有定義關聯性。  
   
-     **[加入]**  
+     **加入**  
      建立新的關聯性。 [ **資料表及資料行規格** ] 必須在關聯性生效之前設定。  
   
-     **Delete**  
+     **刪除**  
      在 [選取的關聯性]  清單中刪除選取的關聯性。 若要刪除加入的關聯性，請使用此按鈕移除該關聯性。  
   
      **一般類別目錄**  
@@ -142,7 +142,7 @@ ms.locfileid: "68139604"
   
     -   **設為預設值** ：如果資料表的所有外部索引鍵資料行都具有為其所定義的預設值，就可以將值設為資料行所定義的預設值。  
   
-4.  在 [檔案]  功能表上，按一下 [儲存]  _table name_。  
+4.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改外部索引鍵**  

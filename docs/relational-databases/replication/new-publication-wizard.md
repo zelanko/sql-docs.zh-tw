@@ -41,13 +41,13 @@ ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bba300b88a8028bee1793247a80d93fd4c6fe691
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68020120"
 ---
-# <a name="new-publication-wizard"></a>New Publication Wizard
+# <a name="new-publication-wizard"></a>新增發行集精靈
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此章節提供有關新增發行集精靈之下列頁面的資訊。  
   

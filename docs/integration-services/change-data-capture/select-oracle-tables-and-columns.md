@@ -13,10 +13,10 @@ ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 62297d0a947b77288db843f0c16bd0799c90bca1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298658"
 ---
 # <a name="select-oracle-tables-and-columns"></a>選取 Oracle 資料表和資料行
@@ -56,7 +56,7 @@ ms.locfileid: "71298658"
 ## <a name="see-also"></a>另請參閱  
  [如何建立 SQL Server 變更資料庫執行個體](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [編輯資料表](../../integration-services/change-data-capture/edit-tables.md)   
- [將資料表加入至 CDC 執行個體](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)   
+ [將資料表新增至 CDC 執行個體](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)   
  [編輯資料表屬性](../../integration-services/change-data-capture/edit-the-table-properties.md)  
   
   

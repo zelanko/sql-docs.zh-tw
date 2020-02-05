@@ -19,10 +19,10 @@ ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070327"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
@@ -77,7 +77,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
   
  如需快取行為的詳細資訊，請參閱 [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如需如何建立順序與管理順序快取的資訊，請參閱 [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)。  
   
  遞增順序的 MINVALUE 和遞減順序的 MAXVALUE 值不可改變成不允許順序的 START WITH 值。 若要將遞增順序的 MINVALUE 變更為大於 START WITH 值的數字或將遞減順序的 MAXVALUE 變更為小於 START WITH 的數字，請在最小值和最大值範圍內的所需落點包含 RESTART WITH 引數來重新啟動順序。  
@@ -85,7 +85,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
 ## <a name="metadata"></a>中繼資料  
  如需有關順序的詳細資訊，請查詢 [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>權限  
  需要順序的 **ALTER** 權限，或結構描述的 **ALTER** 權限。 若要授與順序的 **ALTER** 權限，請使用下列格式的 **ALTER ON OBJECT**：  

@@ -18,10 +18,10 @@ ms.assetid: 48e78948-5b14-41dd-85d1-169bba1c4195
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a076c8356cb7dedec9759e445c9c80499528437b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140931"
 ---
 # <a name="stnuminteriorring-geometry-data-type"></a>STNumInteriorRing (geometry 資料類型)
@@ -36,12 +36,12 @@ ms.locfileid: "68140931"
 .STNumInteriorRing ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
- CLR 傳回型別：**SqlInt32**  
+ CLR 傳回類型：**SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 **geometry** 執行個體不是多邊形，此方法會傳回 Null。  
   
 ## <a name="examples"></a>範例  

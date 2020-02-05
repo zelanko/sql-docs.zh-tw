@@ -13,10 +13,10 @@ ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85f97f8e7fe754a4c52b34f52ecb45d142a43c4b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297774"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>緩時變維度精靈 F1 說明

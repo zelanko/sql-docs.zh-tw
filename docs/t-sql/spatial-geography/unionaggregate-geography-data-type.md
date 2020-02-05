@@ -18,10 +18,10 @@ ms.assetid: 1a3aeef1-5b0e-4ae8-aeb7-c4aab22f42ab
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 17c5ec83217c072ada5d112bab1dd4f0105e0971
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120665"
 ---
 # <a name="unionaggregate-geography-data-type"></a>UnionAggregate (geography 資料類型)
@@ -40,10 +40,10 @@ UnionAggregate ( geography_operand )
  *geography_operand*  
  這是 **geography** 類型資料表資料行，可保留要在其上執行聯集作業的一組 **geography** 物件。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果輸入具有不同的 SRID，方法會傳回 **null**。 請參閱[空間參考識別碼 &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。  
   
  此方法會忽略 **null** 輸入。  
@@ -52,7 +52,7 @@ UnionAggregate ( geography_operand )
 >  如果所有輸入的值都為 **null**，此方法就會傳回 **null**。  
   
 ## <a name="examples"></a>範例  
- 下列範例會在城市內的一組 **geography** 位置點上執行 `UnionAggregate`。  
+ 下列範例會在城市內的一組 `UnionAggregate`geography**位置點上執行**。  
   
  ```
  USE AdventureWorks2012  

@@ -11,10 +11,10 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c49fb6ad9ad1d824a91f2a91c399770f3032b8aa
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952490"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>設定 Always On 分散式可用性群組  

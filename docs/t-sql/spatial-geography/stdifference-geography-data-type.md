@@ -18,10 +18,10 @@ ms.assetid: 1cde5054-b91a-41bb-812a-08c9308738af
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7ddc3324099be031fff61c2268094b85e9fab143
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042337"
 ---
 # <a name="stdifference-geography-data-type"></a>STDifference (geography 資料類型)
@@ -40,15 +40,15 @@ ms.locfileid: "68042337"
  *other_geography*  
  這是另一個 **geography** 執行個體，指示要從 STDifference() 叫用所在的執行個體中移除哪些點。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回型別：**SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
 ## <a name="exceptions"></a>例外狀況  
  如果執行個體包含對蹠邊緣，這個方法會擲回 **ArgumentException**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 **geography** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一定會傳回 null。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，伺服器上傳回的可能結果集已擴充到 **FullGlobe** 執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援大於半球的空間執行個體。 只有當輸入執行個體包含圓弧線段時，結果才能包含圓弧線段。 這個方法並不精確。  

@@ -16,10 +16,10 @@ ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0c998b4d5ed5988d5a5e2a01bf0cbd611157f665
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095106"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>將 SQL Server Audit 事件寫入安全性記錄檔  
@@ -46,7 +46,7 @@ ms.locfileid: "68095106"
 ###  <a name="Restrictions"></a> 限制事項  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 電腦的管理員應該了解安全性記錄檔的本機設定可以由網域原則覆寫。 在此情況下，網域原則可能會覆寫子類別目錄設定 (**auditpol /get /subcategory:"application generated"** )。 這可能會影響 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 記錄事件的功能，讓它無法偵測出系統無法繼續記錄 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 正嘗試稽核的事件。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  您必須是 Windows 管理員才能設定這些設定。  

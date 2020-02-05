@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3177a33d8560e9e66a610a39e555bf1dbf3cc44a
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68495476"
 ---
 # <a name="---comment-transact-sql"></a>-- (註解) (Transact-SQL)
@@ -47,10 +47,10 @@ ms.locfileid: "68495476"
  *text_of_comment*  
  這是包含註解文字的字元字串。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 單行註解或巢狀註解使用兩個連字號 ( **--** )。 使用 **--** 插入的註解會以新行終止，系統會將它指定為歸位字元 (U+000A)、換行字元 (U+000D) 或兩者的組合。 註解沒有長度上限。 下表列出您可以用來註解或取消註解文字的鍵盤快速鍵。
   
-|動作|Standard|  
+|動作|標準|  
 |------------|--------------|  
 |讓所選的文字變成註解|CTRL+K、CTRL+C|  
 |將所選的文字取消註解|CTRL+K、CTRL+U|  

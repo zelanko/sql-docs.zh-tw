@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 45fabf20b18fb0f3227f99ab2a6b5270e245562a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907304"
 ---
 # <a name="duplicate-tables"></a>複製資料表
@@ -45,7 +45,7 @@ ms.locfileid: "72907304"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要目的地資料庫中的 CREATE TABLE 權限。  
@@ -82,6 +82,6 @@ ms.locfileid: "72907304"
   
 4.  移除新資料表不需要的任何資料行。  
   
-5.  按一下 [執行]  。  
+5.  按一下 **[執行]** 。  
   
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2d7019b369999afe8c28660a6a533e61b1d01c29
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75234525"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>在物件總管中管理事件工作階段
@@ -99,7 +99,7 @@ STATE = STOP
   
 4.  展開 **[範本]** 下拉式方塊。  
   
-5.  按一下 [\<檔案來源 …>開啟]  ，然後巡覽至您想要匯入的工作階段 (XML 檔案)。  
+5.  按一下 [**檔案來源 …>開啟]\<** ，然後巡覽至您想要匯入的工作階段 (XML 檔案)。  
   
  此工作階段會顯示在 **[工作階段]** 節點底下。 根據預設，工作階段不會啟動。  
   

@@ -15,10 +15,10 @@ ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b17deb29406ff70d777e45ceed8db8ca23275f1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71289751"
 ---
 # <a name="getdate-ssis-expression"></a>GETDATE (SSIS 運算式)
@@ -65,6 +65,6 @@ DATEADD("Month",3,GETDATE())
   
 ## <a name="see-also"></a>另請參閱  
  [GETUTCDATE &#40;SSIS 運算式&#41;](../../integration-services/expressions/getutcdate-ssis-expression.md)   
- [函式 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

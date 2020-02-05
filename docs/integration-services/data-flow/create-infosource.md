@@ -11,10 +11,10 @@ ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1556a98ad812c32c514b8e55ab1ece3e6d7a40e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293256"
 ---
 # <a name="create-infosource"></a>建立 InfoSource
@@ -48,7 +48,7 @@ ms.locfileid: "71293256"
  **主要資料**  
  建立主要資料的新 InfoSource。  
   
- 如果您選取此選項，就會開啟 [建立主要資料的 InfoSource]  對話方塊。 您可以使用 [建立主要資料的 InfoSource]  對話方塊來建立新的 InfoSource。 如需此對話方塊的詳細資訊，請參閱[建立主要資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-master-data.md)。  
+ 如果您選取此選項，就會開啟 [建立主要資料的 InfoSource]  對話方塊。 您可以使用 [建立主要資料的 InfoSource]  對話方塊來建立新的 InfoSource。 如需此對話方塊的詳細資訊，請參閱 [建立主要資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-master-data.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  

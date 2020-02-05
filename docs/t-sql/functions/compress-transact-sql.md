@@ -16,10 +16,10 @@ ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6fd94c5062e0f268e902c69c154834430bf9e6f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943125"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
@@ -37,7 +37,7 @@ COMPRESS ( expression )
   
 ## <a name="arguments"></a>引數  
 *expression*  
-只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時，
+A
 
 * **binary(***n***)**
 * **char(***n***)**
@@ -48,7 +48,7 @@ COMPRESS ( expression )
 * **varbinary(***n***)**
 * **varchar(max)**
 
-中的多個
+或
 
 * **varchar(***n***)**
 
@@ -57,7 +57,7 @@ expression： 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](.
 ## <a name="return-types"></a>傳回類型
 **varbinary(max)** 代表輸入的已壓縮內容。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 壓縮的資料無法編製索引。
   
 `COMPRESS` 函式會壓縮輸入運算式資料。 您必須叫用此函式才能壓縮各資料區段。 如需有關在資料列或頁面層級儲存期間的自動資料壓縮詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。

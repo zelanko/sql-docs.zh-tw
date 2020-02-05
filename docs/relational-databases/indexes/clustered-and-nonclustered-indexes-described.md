@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e3b0fdb182b3623f4461544d94347544d7d19bf6
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68811126"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>叢集與非叢集索引說明

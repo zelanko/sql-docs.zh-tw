@@ -18,10 +18,10 @@ ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 817a6325b956f5fc4214597b0b8bc46f6aff49f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042516"
 ---
 # <a name="starea-geography-data-type"></a>STArea (geography 資料類型)
@@ -36,12 +36,12 @@ ms.locfileid: "68042516"
 .STArea ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**float**  
   
-CLR 傳回型別：**SqlDouble**  
+CLR 傳回類型：**SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 如果 **geography** 執行個體僅包含 0 維度和 1 維度的圖形 (或為空白)，則 STArea() 會傳回 0。  
   
 > [!NOTE]  

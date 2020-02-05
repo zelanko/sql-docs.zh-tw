@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: d0f3855e-d095-4a81-a5bd-9d7ad51f2c77
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 57f9d589e91683ecf127a1891623da3da3786946
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 6df43b31760f6e59c1675a2dcd604364e7c8b50e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68765923"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287767"
 ---
-# <a name="mssqleng014160"></a>MSSQL_ENG014160
+# <a name="mssql_eng014160"></a>MSSQL_ENG014160
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>訊息詳細資料  
@@ -32,7 +32,7 @@ ms.locfileid: "68765923"
 |事件來源|MSSQLSERVER|  
 |元件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |符號名稱||  
-|訊息文字|已設定臨界值 [%s:%s] (針對發行集 [%s])。 此發行集的一個或多個訂閱已經到期。|  
+|訊息文字|已設定針對發行集[%s]的臨界值[%s:%s] 此發行集的一個或多個訂閱已經到期。|  
   
 ## <a name="explanation"></a>說明  
  複寫可讓您啟用多個條件的警告。 這包括訂閱即將過期。 如果訂閱在指定 *「保留期限」* 內未執行同步處理，則會使訂閱過期。 如需詳細資訊，請參閱 [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)。  

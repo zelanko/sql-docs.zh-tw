@@ -1,5 +1,5 @@
 ---
-title: 步驟 1:建置部署公用程式 | Microsoft Docs
+title: 步驟 1：建置部署公用程式 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: edb7f78fd1d1d64980e7874f953a91030e7ecdc9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296034"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>第 2-1 課：建置部署公用程式
@@ -32,7 +32,7 @@ ms.locfileid: "71296034"
   
 1.  如果尚未開啟 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，請按一下 [開始]  ，依序指向 [所有程式]  和 [Microsoft SQL Server]  ，然後按一下 [Business Intelligence Development Studio]  。  
   
-2.  在 [檔案]  功能表上，依序按一下 [開啟]  、[專案/方案]  和 [Deployment Tutorial (部署教學課程)]  資料夾，然後按一下 [開啟]  ，再按兩下 **Deployment Tutorial.sln**。  
+2.  在 [檔案]  功能表上，依序按一下 [開啟]  、[專案/方案]  和 [部署教學課程]  資料夾，然後按一下 [開啟]  ，再按兩下 [Deployment Tutorial.sln]  。  
   
 3.  在方案總管中，以滑鼠右鍵按一下 [Deployment Tutorial (部署教學課程)]，然後按一下 [屬性]  。  
   
@@ -46,13 +46,13 @@ ms.locfileid: "71296034"
   
 1.  在方案總管中，按一下 [Deployment Tutorial (部署教學課程)]  。  
   
-2.  在 [檢視]  功能表上，按一下 [輸出]  。 根據預設值，[輸出] 視窗是位在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的左下角。  
+2.  在 [檢視]  功能表上，按一下 [輸出]  。 根據預設值，[輸出] 視窗是位在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的左下角。  
   
 3.  在 [建立]  功能表上，按一下 [Build Deployment Tutorial (建立部署教學課程)]  。  
   
 4.  在 [輸出] 視窗中，確認以下資訊：  
   
-    建置已開始:SQL Integration Services 專案:累加 ...  
+    已經開始建立: SQL Integration Services 專案: 累加 ...  
   
     正在建立部署公用程式...  
   
@@ -60,7 +60,7 @@ ms.locfileid: "71296034"
   
     建立已完成 -- 0 個錯誤，0 個警告  
   
-    ========== 建置：0 成功、0 失敗、1 最新、0 略過 ==========  
+    ========== 建置: 0 成功、0 失敗、1 最新、0 略過 ==========  
   
 5.  在 **[檔案]** 功能表上按一下 **[結束]** 。 如果出現對 [Deployment Tutorial (部署教學課程)] 項目儲存變更的提示，請按一下 [是]  。  
   

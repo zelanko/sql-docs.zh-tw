@@ -24,13 +24,13 @@ ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b385caa4146f40a1395c74fa0f26b5be518ff149
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026485"
 ---
-# <a name="x40x40cpubusy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
+# <a name="x40x40cpu_busy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 此函數會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自上次開始之後，花費在進行中操作的總時間。 `@@CPU_BUSY` 會傳回以 CPU 時間遞增 (或以「刻度」為單位) 所測量的結果。 這個值是所有 CPU 的累計，所以可能會超出實際的經歷時間。 乘以 [@@TIMETICKS](./timeticks-transact-sql.md) 以轉換成毫秒。
@@ -49,7 +49,7 @@ ms.locfileid: "68026485"
 ## <a name="return-types"></a>傳回類型
 **integer**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 若要查看包含多項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 統計資料的報表，其中包括 CPU 活動，請執行 [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)。
   
 ## <a name="examples"></a>範例  

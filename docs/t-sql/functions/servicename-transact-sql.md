@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: adae0818964e55bffb71dd415dde9cb74297f3ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906117"
 ---
 # <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;SERVICENAME (Transact-SQL)
@@ -40,10 +40,10 @@ ms.locfileid: "67906117"
 @@SERVICENAME  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **nvarchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會執行為 MSSQLServer 服務。  
   
 ## <a name="examples"></a>範例  

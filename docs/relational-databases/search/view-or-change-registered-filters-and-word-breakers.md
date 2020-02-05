@@ -17,10 +17,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 4b1679674ba3ae46dd988ef25703acd291fc6bfa
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056079"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>檢視或變更已註冊的篩選與斷詞工具

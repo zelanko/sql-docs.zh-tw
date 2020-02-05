@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 38570e910994e77084777bcc4245ccbb6033d39b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: ba656a13c71792a176b7f625a2f561f1f422e4b3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769432"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287053"
 ---
 # <a name="subscription-synchronization-history"></a>訂閱，同步處理記錄
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68769432"
 ## <a name="options"></a>選項。  
  從 **[檢視]** 功能表中選取要檢視的合併代理程式工作階段，再於 **[合併代理程式工作階段]** 方格中選取特定的工作階段。 有關這個工作階段的詳細資訊，會顯示在標示為 **[在選取的工作階段中處理的發行項]** 的方格中。  
   
- **[檢視]**  
+ **檢視**  
  選取要檢視的合併代理程式工作階段。  
   
  **狀態**  
@@ -36,7 +36,7 @@ ms.locfileid: "68769432"
   
 -   錯誤  
   
--   已完成  
+-   Completed  
   
 -   正在重試  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68769432"
  **錯誤訊息**  
  如果工作階段結束時發生錯誤，這個欄位會顯示合併代理程式記錄的最後一個錯誤訊息。 如果工作階段結束時沒有錯誤，這個欄位會是空白。  
   
- **發行項**  
+ **文章**  
  發行集內每個發行項的名稱，以及整個發行集的下列處理階段：  
   
 -   **初始化**。 這是指合併代理程式的啟動；而不是涉及套用快照集的訂閱之初始化。  
@@ -82,7 +82,7 @@ ms.locfileid: "68769432"
  **Inserts**  
  在所選取工作階段的此階段中插入之資料列數。  
   
- **Updates**  
+ **更新**  
  在所選取工作階段的此階段中更新之資料列數。  
   
  **Deletes**  

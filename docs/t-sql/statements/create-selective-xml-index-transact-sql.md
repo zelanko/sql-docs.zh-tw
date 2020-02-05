@@ -13,10 +13,10 @@ ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 30b70c57d90f7772368713ac378c809a3dd7c46e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117204"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
@@ -117,7 +117,7 @@ identifier
   
  WITH *\<index_options>* 如需索引選項的相關資訊，請參閱 [CREATE XML INDEX &#40;選擇性 XML 索引&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
   
-## <a name="best-practices"></a>最佳作法  
+## <a name="best-practices"></a>最佳做法  
  在大部分情況下，建立選擇性 XML 索引會比一般 XML 索引獲得更佳的效能和更有效率的儲存。 但是，下列任一情況為 true 時，不建議使用選擇性 XML 索引：  
   
 -   您需要對應大量節點路徑。  
@@ -127,7 +127,7 @@ identifier
 ## <a name="limitations-and-restrictions"></a>限制事項  
  如需限制事項的相關資訊，請參閱[選擇性 XML 索引 &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  

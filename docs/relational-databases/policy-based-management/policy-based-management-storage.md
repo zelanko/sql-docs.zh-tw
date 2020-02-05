@@ -13,10 +13,10 @@ ms.assetid: d0cbf214-fc2e-4917-8d31-1d71c9ffa61d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2f2be2bae147355557925bba1bd475ee9583447d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086926"
 ---
 # <a name="policy-based-management-storage"></a>原則式管理原則儲存

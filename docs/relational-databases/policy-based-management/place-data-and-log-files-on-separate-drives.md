@@ -13,10 +13,10 @@ ms.assetid: 6cbedc27-4d77-44ad-bed2-c23b628475a7
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 54f469f8ab9f0daaf6f37c8f6bad1878bc716dbd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086933"
 ---
 # <a name="place-data-and-log-files-on-separate-drives"></a>將資料檔和記錄檔放在不同的磁碟機上

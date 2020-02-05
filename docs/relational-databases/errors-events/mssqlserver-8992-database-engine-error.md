@@ -12,13 +12,13 @@ ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 149e83acd2a8e0e6d3022d74f929584190c91374
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118465"
 ---
-# <a name="mssqlserver8992"></a>MSSQLSERVER_8992
+# <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -30,7 +30,7 @@ ms.locfileid: "68118465"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC3_CHECK_CATALOG|  
-|訊息文字|檢查目錄訊息 ERROR 層級 LEVEL 狀態 STATE:MESSAGE。|  
+|訊息文字|檢查目錄訊息 ERROR 層級 LEVEL 狀態 STATE: MESSAGE。|  
   
 ## <a name="explanation"></a>說明  
 DBCC CHECKCATALOG 或 DBCC CHECKDB 在指定之物件的系統中繼資料表中發現不一致。 亦即，在記錄的物件識別碼和錯誤訊息中指定的物件之間發生不一致。  

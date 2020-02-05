@@ -15,10 +15,10 @@ ms.assetid: 74960d25-83c2-4ad6-9318-098c348ea977
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 48f8b8a53f22c4f4e102606ca4e5133b95536be2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101073"
 ---
 # <a name="ogc-static-geometry-methods"></a>OGC 靜態幾何方法

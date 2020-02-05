@@ -18,10 +18,10 @@ ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5c79a6aea1042649d688b52d124f9b661d4a5b7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107717"
 ---
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing (geometry 資料類型)
@@ -36,14 +36,14 @@ ms.locfileid: "68107717"
 .STExteriorRing ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回型別：**SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
- 開放式地理空間協會 (OGC) 類型：**LineString**  
+ 開放地理空間協會 (OGC) 類型：**LineString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 **geometry** 執行個體不是多邊形，這個方法會傳回 **null**。  
   
 ## <a name="examples"></a>範例  

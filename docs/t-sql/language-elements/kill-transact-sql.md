@@ -35,10 +35,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981928"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
@@ -87,7 +87,7 @@ _UOW_
 WITH STATUSONLY  
 會針對因先前 KILL 陳述式而導致復原的指定 _session ID_ 或 _UOW_，產生一份進度報告。 KILL WITH STATUSONLY 並不會結束或復原 _Id>_ 或是 _UOW_。 此命令只會顯示目前的復原進度。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 KILL 通常用於結束會使用鎖定來封鎖其他重要處理序的處理序。 KILL 也可用來停止正在執行必要系統資源之查詢的處理序。 系統處理序和執行擴充預存程序的處理序無法結束。  
   
 請謹慎使用 KILL，特別是當重要處理序正在執行時。 您無法終止自己的處理序。 您也不應終止下列處理序：  

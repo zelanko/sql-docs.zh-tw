@@ -18,13 +18,13 @@ ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2949c4bbf5e72fad99f6698287880ec2a2f97f7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067563"
 ---
-# <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
+# <a name="session_context-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   傳回目前工作階段內容中指定索引鍵的值。 會使用 [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md) 程序來設定值。  
@@ -50,7 +50,7 @@ SESSION_CONTEXT(N'key')
 ## <a name="permissions"></a>權限  
  任何使用者都可以讀取其工作階段的工作階段內容。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  SESSION_CONTEXT 的 MARS 行為與 CONTEXT_INFO 相似。 若 MARS 批次設定索引鍵值組，則新的值將不會在相同連線中的另外一個 MARS 批次中傳回，除非它們是在設定新值的批次完成之後才啟動。 若在連線上有多個 MARS 作用中，值將無法設為「唯讀」(read_only)。 這可防止競爭條件以及針對哪個值「會獲勝」的不確定性。  
   
 ## <a name="examples"></a>範例  

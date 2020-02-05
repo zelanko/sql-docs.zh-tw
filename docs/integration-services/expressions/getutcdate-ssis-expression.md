@@ -16,10 +16,10 @@ ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cfef4d05eb95afe0c8ede44df061f95eeb221c41
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297572"
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE (SSIS 運算式)

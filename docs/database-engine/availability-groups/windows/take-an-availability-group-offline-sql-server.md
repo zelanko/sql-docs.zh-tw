@@ -12,10 +12,10 @@ ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: af8c94c6705578371fcb6b4d260da6313b73e4ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013837"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>讓可用性群組離線 (SQL Server)
@@ -59,9 +59,9 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 ##  <a name="FollowUp"></a> 後續操作：可用性群組離線之後  
   
--   **OFFLINE 作業的記錄：** OFFLINE 作業起始所在的 WSFC 節點身分識別會同時儲存在 WSFC 叢集記錄檔和 SQL ERRORLOG 中。  
+-   **OFFLINE 作業記錄**  ：起始 OFFLINE 作業所在的 WSFC 節點識別會同時儲存在 WSFC 叢集記錄檔和 SQL ERRORLOG 中。  
   
--   **如未在群組離線前刪除可用性群組接聽程式：** 如果您要將可用性群組移轉至另一個 WSFC 叢集，請刪除接聽程式的 VNN 和 VIP。 您可以使用容錯移轉叢集管理主控台、 [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) PowerShell Cmdlet 或 [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx)刪除它們。 請注意，cluster.exe 在 Windows 8 中已被取代。  
+-   **如果您未在群組離線之前刪除可用性群組接聽程式**  ：如果您要將可用性群組移轉至另一個 WSFC 叢集，請刪除接聽程式的 VNN 和 VIP。 您可以使用容錯移轉叢集管理主控台、 [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) PowerShell Cmdlet 或 [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx)刪除它們。 請注意，cluster.exe 在 Windows 8 中已被取代。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
@@ -73,7 +73,7 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 -   [SQL Server 2012 技術文件](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server AlwaysOn 團隊部落格：SQL Server AlwaysOn 官方團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  

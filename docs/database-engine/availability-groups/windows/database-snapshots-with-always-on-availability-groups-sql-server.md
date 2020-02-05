@@ -14,10 +14,10 @@ ms.assetid: 7432da1c-ce2f-4cd9-af41-54c97744166b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 87b14058e49f6cd22d60e4e4b48f2a0868f8f45a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67968321"
 ---
 # <a name="database-snapshots-with-always-on-availability-groups-sql-server"></a>資料庫快照集與 AlwaysOn 可用性群組 (SQL Server)

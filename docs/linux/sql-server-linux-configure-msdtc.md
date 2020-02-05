@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: a39e0a743053db694efc2d0e8176e659d7e376d1
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68995871"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>如何在 Linux 上設定 Microsoft Distributed Transaction Coordinator (MSDTC)
@@ -29,7 +29,7 @@ ms.locfileid: "68995871"
 
 MSDTC 針對 mssql-conf 公用程式使用兩個設定參數：
 
-| mssql-conf 設定 | Description |
+| mssql-conf 設定 | 描述 |
 |---|---|
 | **network.rpcport** | RPC 端點對應程式所繫結的 TCP 連接埠。 |
 | **distributedtransaction.servertcpport** | MSDTC 伺服器所接聽的連接埠。 如果未設定，MSDTC 服務會在服務重新啟動時使用隨機的暫時連接埠，且防火牆例外將必須重新設定，以確保 MSDTC 服務可以繼續進行通訊。 |
@@ -184,7 +184,7 @@ tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 
 Linux 上 SQL Server 的 MSDTC 預設不會在 RPC 通訊上使用驗證。 不過，當主機電腦已加入 Active Directory (AD) 網域時，便可以使用下列 **mssql-conf** 設定來設定讓 MSDTC 使用已驗證的 RPC 通訊：
 
-| 設定 | Description |
+| 設定 | 描述 |
 |---|---|
 | **distributedtransaction.allowonlysecurerpccalls**          | 針對分散式交易設定僅限安全的 RPC 呼叫。 預設值為 0。 |
 | **distributedtransaction.fallbacktounsecurerpcifnecessary** | 針對分散式交易設定僅限安全性的 RPC 呼叫。 預設值為 0。 |
@@ -200,7 +200,7 @@ Linux 上 SQL Server 的 MSDTC 預設不會在 RPC 通訊上使用驗證。 不�
 
 如果 Windows 作業系統上的用戶端需要使用 Linux 上的 SQL Server 登錄到分散式交易，它必須具有下列最低版本的 Windows 作業系統：
 
-| 作業系統 | 最低版本 | OS 組建 |
+| 作業系統 | 最小版本 | OS 組建 |
 |---|---|---|
 | [Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
 | [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |

@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 844ddad21eaf3fb579d6a0981f2a042238e92372
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847329"
 ---
 # <a name="iclientvirtualdeviceset2getbufferhandle-vdi"></a>IClientVirtualDeviceSet2::GetBufferHandle (VDI)
@@ -45,7 +45,7 @@ HRESULT IClientVirtualDeviceSet2::GetBufferHandle (
 | VD_E_PROTOCOL | 虛擬裝置集目前未開啟。 |
 | VD_E_INVALID | pBuffer 不是有效的位址。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 叫用 GetBufferHandle 函式的處理序會負責在資料轉送完成時叫用 IClientVirtualDevice2::CompleteCommand。
 

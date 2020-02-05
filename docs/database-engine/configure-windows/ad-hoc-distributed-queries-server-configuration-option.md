@@ -18,10 +18,10 @@ ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8c8387f833fbfb877393fc0180008557509ed8ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013276"
 ---
 # <a name="ad-hoc-distributed-queries-server-configuration-option"></a>特定分散式查詢伺服器組態選項
@@ -34,8 +34,8 @@ ms.locfileid: "68013276"
 > [!IMPORTANT]  
 >  啟用特定名稱，表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何驗證登入都可以存取該提供者。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對於任何可安全由本機登入存取的提供者，系統管理員應該為他啟用此功能。  
   
-## <a name="remarks"></a>Remarks  
- 嘗試建立未啟用**特定分散式查詢**的特定連線，產生錯誤：訊息 7415、層級 16、狀態 1、行 1  
+## <a name="remarks"></a>備註  
+ 嘗試進行特定連接但是未啟用 **特定分散式查詢** 會產生錯誤：訊息 7415、層級 16、狀態 1、行 1  
   
  特定存取至 OLE DB 提供者 'Microsoft.ACE.OLEDB.12.0' 已經遭到拒絕。 您必須透過連結伺服器來存取此提供者。  
   

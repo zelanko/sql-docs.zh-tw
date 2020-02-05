@@ -13,10 +13,10 @@ ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f53fe9d295fdd5cd34c6391332af12b9f6788668
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294758"
 ---
 # <a name="create-the-sql-server-change-database"></a>建立 SQL Server 變更資料庫
@@ -41,14 +41,14 @@ ms.locfileid: "71294758"
   
 -   **名稱**：輸入新服務的名稱。 這也會是新的變更資料庫的名稱。  
   
--   **描述**：輸入新執行個體的描述，協助您識別該執行個體。 這是選擇性的。  
+-   **描述**：輸入新執行個體的描述，幫助您識別該執行個體。 這是選擇性的。  
   
  **SQL Server 變更資料庫**  
  此區段是用來建立資料庫。  
   
 1.  **變更資料庫**：新的變更資料庫的名稱。 此資料庫的名稱與您提供給執行個體的名稱相同。 這個唯讀欄位會顯示資料庫的完整路徑。  
   
-2.  **建立資料庫**：按一下 [建立資料庫]  ，即可建立資料庫。  
+2.  **建立資料庫**：按一下 **[建立資料庫]** ，即可建立資料庫。  
   
      若要建立資料庫，登入必須擁有 `sysasmin` 伺服器角色。 如需詳細資訊，請參閱上述的安全性注意事項。  
   

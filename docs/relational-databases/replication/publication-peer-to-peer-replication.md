@@ -13,10 +13,10 @@ ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d7097c59f77b95a561420183e2e899c0672dc5e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908127"
 ---
 # <a name="publication-peer-to-peer-replication"></a>發行集 (點對點複寫)

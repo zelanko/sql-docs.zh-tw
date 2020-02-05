@@ -18,10 +18,10 @@ ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8ff469d92165d12bac6d10bed6682d29ea162eb7
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278365"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (Database Engine)
@@ -48,18 +48,18 @@ _oldRoot_
 _newRoot_  
 表示節點的 **hierarchyid**。 請取代目前節點的 _oldRoot_ 區段以移動節點。
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 **SQL Server 傳回型別：hierarchyid**
   
 **CLR 傳回型別：SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 用來將節點從 _oldRoot_ 移至 _newRoot_，藉以修改樹狀目錄。 GetReparentedValue 可用來將階層節點移至階層中的新位置。 **hierarchyid** 資料類型代表階層式結構，但不會加以強制執行。 使用者必須確保此 hierarchyid 已針對新位置適當地結構化。 **hierarchyid** 資料類型的唯一索引可以協助防止出現重複的項目。 如需移動整個子樹的範例，請參閱[階層式資料 &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)。
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-comparing-two-node-locations"></a>A. 比較兩個節點位置  
-下列範例會顯示某個節點的目前 hierarchyid。 此外，它也會顯示如果您移動此節點來成為 **\@NewParent** 節點的子系，則該節點的 **hierarchyid** 會是什麼。 它會使用 `ToString()` 方法來顯示階層式關聯性。
+下列範例會顯示某個節點的目前 hierarchyid。 此外，它也會顯示如果您移動此節點來成為  NewParent **節點的子系，則該節點的 \@hierarchyid** 會是什麼。 它會使用 `ToString()` 方法來顯示階層式關聯性。
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  

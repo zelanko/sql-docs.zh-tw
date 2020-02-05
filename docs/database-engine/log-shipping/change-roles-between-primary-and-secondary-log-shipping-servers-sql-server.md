@@ -18,10 +18,10 @@ ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e06d382258d6d98b7f54ff9dd3f4840a04274d81
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258997"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>變更主要與次要記錄傳送伺服器間的角色 (SQL Server)

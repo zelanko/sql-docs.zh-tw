@@ -20,15 +20,15 @@ ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c5e81ec7dcb3f86b5200ee2de3a65a9b56823b1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024676"
 ---
 # <a name="scm-services---configure-server-startup-options"></a>SCM 服務 - 設定伺服器啟動選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager，設定每次 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中啟動時要使用的啟動選項。 如需啟動選項的清單，請參閱 [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
+  本主題描述如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration Manager，設定每次 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中啟動時要使用的啟動選項。 如需啟動選項的清單，請參閱 [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68024676"
   
  在叢集中，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上線時在使用中伺服器上進行變更；當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 重新啟動時，這些變更就會生效。 下次容錯移轉時則會在另一個節點上進行啟動選項的登錄更新。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  設定伺服器啟動選項僅限於能夠在登錄中變更相關項目的使用者， 包括下列使用者。  
@@ -62,7 +62,7 @@ ms.locfileid: "68024676"
   
 2.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，按一下 **[SQL Server 服務]** 。  
   
-3.  在右窗格中，以滑鼠右鍵按一下 [SQL Server ( _<instance_name>_ **)** ]  ，然後按一下 [屬性]  。  
+3.  在右窗格中，以滑鼠右鍵按一下 [SQL Server ( **<instance_name>** _)_ ]  ，然後按一下 [屬性]  。  
   
 4.  在 **[啟動參數]** 索引標籤的 **[指定啟動參數]** 方塊中輸入參數，然後按一下 **[加入]** 。  
   

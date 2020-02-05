@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 162cccb3bba13d6d72f1af11effd6ceb8f26ff79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044310"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
@@ -69,7 +69,7 @@ ALTER SCHEMA schema_name
  *securable_name*  
  這是要移至結構描述的結構描述範圍內含安全性實體之一部分或兩部分名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  使用者和結構描述完全分隔。  
   
  ALTER SCHEMA 只能用來移動相同資料庫中結構描述之間的安全性實體。 若要變更或卸除結構描述內的安全性實體，請使用該安全性實體特定的 ALTER 或 DROP 陳述式。  
@@ -138,7 +138,7 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. 傳送資料表的擁有權  
- 下列範例會在 `dbo` 結構描述中建立資料表 `Region`、建立 `Sales` 結構描述，然後將 `Region` 資料表從 `dbo` 結構描述移動至 `Sales` 結構描述。  
+ 下列範例會在 `Region` 結構描述中建立資料表 `dbo`、建立 `Sales` 結構描述，然後將 `Region` 資料表從 `dbo` 結構描述移動至 `Sales` 結構描述。  
   
 ```  
 CREATE TABLE dbo.Region   

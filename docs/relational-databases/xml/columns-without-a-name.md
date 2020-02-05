@@ -13,10 +13,10 @@ ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d8fb8fc597fd0562640821769e3314b4f3020bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68112912"
 ---
 # <a name="columns-without-a-name"></a>沒有名稱的資料行

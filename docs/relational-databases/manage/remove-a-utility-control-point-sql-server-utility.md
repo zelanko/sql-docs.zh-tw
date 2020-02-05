@@ -11,10 +11,10 @@ ms.assetid: c048a416-900e-4c77-8243-e0f0d8b94068
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 34fb18296b176e49220f9566dccaba4bc8d7b34c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115334"
 ---
 # <a name="remove-a-utility-control-point-sql-server-utility"></a>移除公用程式控制點 (SQL Server 公用程式)
@@ -44,7 +44,7 @@ ms.locfileid: "68115334"
   
 -   如果已移除 UCP 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體具有非公用程式資料收集組，此程序就不會卸除 UMDW 資料庫 (sysutility_mdw)。 如果發生這種情況，您就必須先手動卸除 UMDW 資料庫 (sysutility_mdw)，然後才能再次建立 UCP。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  此程序必須由擁有系統管理員 ( **sysadmin** ) 權限的使用者執行，而這些是建立 UCP 所需的相同權限。  

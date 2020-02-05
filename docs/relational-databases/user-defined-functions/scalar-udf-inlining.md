@@ -16,10 +16,10 @@ author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
 ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
-ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75831773"
 ---
 # <a name="scalar-udf-inlining"></a>純量 UDF 內嵌
@@ -138,10 +138,10 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 
 - UDF 使用下列建構函式撰寫：
     - `DECLARE`、`SET`：變數宣告和指派。
-    - `SELECT`:包含單一/多個變數指派的 SQL 查詢<sup>1</sup>。
+    - `SELECT`：包含單一/多個變數指派的 SQL 查詢<sup>1</sup>。
     - `IF`/`ELSE`：使用任意巢狀層級的分支。
-    - `RETURN`:單一或多個傳回陳述式。
-    - `UDF`:巢狀/遞迴函式呼叫<sup>2</sup>。
+    - `RETURN`：單一或多個傳回陳述式。
+    - `UDF`：巢狀/遞迴函式呼叫<sup>2</sup>。
     - 其他：`EXISTS`、`ISNULL` 等關聯式作業。
 - UDF 不會叫用任何與時間相依 (例如 `GETDATE()`) 或有副作用<sup>3</sup> (例如 `NEWSEQUENTIALID()`) 的內建函式。
 - UDF 會使用 `EXECUTE AS CALLER` 子句 (如果未指定 `EXECUTE AS` 子句，則為預設行為)。

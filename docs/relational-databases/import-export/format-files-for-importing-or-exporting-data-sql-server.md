@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3cc48298aadc027509adb9d0abf5f5057e0c4fef
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055974"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>格式化匯入和匯出資料的檔案 (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "74055974"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 當您將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表，或從資料表大量匯出資料時，可以使用「格式檔案」  來儲存大量匯出或大量匯入資料所需的所有格式資訊。 這包含相對於該資料表之資料檔中各欄位的格式資訊。
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援兩種類型的格式檔案：XML 格式和非 XML 格式檔案。 非 XML 格式檔案和 XML 格式檔案都會將每個欄位的描述包含在資料檔中，而且 XML 格式檔案也包含對應資料表資料行的描述。 一般而言，XML 和非 XML 格式檔案可以互換使用， 但是，仍建議您在新的格式檔案中使用 XML 語法，因為 XML 比非 XML 格式檔案多了一些優點。 如需詳細資訊，請參閱 [XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)。
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援兩種類型的格式檔案：XML 格式檔案和非 XML 格式檔案。 非 XML 格式檔案和 XML 格式檔案都會將每個欄位的描述包含在資料檔中，而且 XML 格式檔案也包含對應資料表資料行的描述。 一般而言，XML 和非 XML 格式檔案可以互換使用， 但是，仍建議您在新的格式檔案中使用 XML 語法，因為 XML 比非 XML 格式檔案多了一些優點。 如需詳細資訊，請參閱 [XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)。
 
 ## <a name="Benefits"></a> 格式檔案的優點
 
@@ -36,7 +36,7 @@ ms.locfileid: "74055974"
 
 ## <a name="ExamplesOfFFs"></a> 格式檔案的範例
 
-下列範例顯示非 XML 格式檔案及 XML 格式檔案的配置。 這些格式檔案會對應到 `HumanResources.myTeam` 範例資料庫中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表。 這個資料表包含四個資料行：`EmployeeID`、`Name`、`Title` 和 `ModifiedDate`。
+下列範例顯示非 XML 格式檔案及 XML 格式檔案的配置。 這些格式檔案會對應到 `HumanResources.myTeam` 範例資料庫中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表。 這個資料表包含四個資料行： `EmployeeID`、 `Name`、 `Title`和 `ModifiedDate`。
 
 > [!NOTE]
 > 如需此資料表及建立方式的相關資訊，請參閱 [HumanResources.myTeam 範例資料表 &#40;SQL Server&#41;](../../relational-databases/import-export/humanresources-myteam-sample-table-sql-server.md)。
@@ -55,7 +55,7 @@ The contents of this format file are as follows: 9.0
 4       SQLNCHAR      2       100     ""   4     Background               SQL_Latin1_General_CP1_CI_AS  
 ```  
 
-如需詳細資訊，請參閱 [非 XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)。
+如需詳細資訊，請參閱 [非 XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)所支援的原始格式。
 
 ### <a name="b-using-an-xml-format-file"></a>B. 使用 XML 格式檔案
 

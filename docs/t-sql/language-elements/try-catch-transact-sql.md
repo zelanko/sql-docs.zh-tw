@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ccb51c6934a60fa60fa7fbcb12967928d63de92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121563"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
@@ -63,7 +63,7 @@ END CATCH
  *statement_block*  
  在批次或 BEGIN...END 區塊中的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式群組。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  TRY...CATCH 建構會擷取嚴重性高於 10 而未關閉資料庫連線的所有執行錯誤。  
   
  TRY 區塊後面必須緊接著相關聯的 CATCH 區塊。 在 END TRY 與 BEGIN CATCH 陳述式之間包含任何其他陳述式，將會產生語法錯誤。  
@@ -133,7 +133,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- ERROR\_\* 函數也可在[原生編譯之預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)的 `CATCH` 區塊中運作。  
+ ERROR\_\* 函數也可在`CATCH`原生編譯之預存程序[的 ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) 區塊中運作。  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>不受 TRY...CATCH 建構影響的錯誤  
  TRY...CATCH 建構不會擷取下列狀況：  
@@ -200,7 +200,7 @@ BEGIN CATCH
 END CATCH;  
 ```  
   
-## <a name="uncommittable-transactions-and-xactstate"></a>無法認可的交易和 XACT_STATE  
+## <a name="uncommittable-transactions-and-xact_state"></a>無法認可的交易和 XACT_STATE  
  如果在 TRY 區塊內產生的錯誤使目前交易的狀態失效，交易便會分類為無法認可的交易。 通常會在 TRY 區塊之外結束交易的錯誤，當它發生在 TRY 區塊內時，會使交易進入無法認可的狀態。 無法認可的交易只能執行讀取作業或 ROLLBACK TRANSACTION。 這個交易無法執行會產生寫入作業或 COMMIT TRANSACTION 的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 如果交易分類為無法認可的交易，XACT_STATE 函數會傳回 -1 值。 當批次完成時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會回復任何使用中無法認可的交易。 如果在交易進入無法認可的狀態時沒有傳送任何錯誤訊息，則當批次完成時，就會將錯誤訊息傳送給用戶端應用程式。 這表示偵測到無法認可的交易，並且需要回復它。  
   
  如需有關無法認可的交易和 XACT_STATE 函數的詳細資訊，請參閱 [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)。  
@@ -256,7 +256,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-### <a name="c-using-trycatch-with-xactstate"></a>C. 使用 TRY...CATCH 搭配 XACT_STATE  
+### <a name="c-using-trycatch-with-xact_state"></a>C. 使用 TRY...CATCH 搭配 XACT_STATE  
  下列範例顯示如何利用 `TRY...CATCH` 建構來處理交易內所發生的錯誤。 `XACT_STATE` 函數會判斷是否應該認可或回復交易。 在此範例中，`SET XACT_ABORT` 是 `ON`。 當發生條件約束違規錯誤時，會使交易成為無法認可。  
   
 ```sql  

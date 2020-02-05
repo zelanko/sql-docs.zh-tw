@@ -20,10 +20,10 @@ ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3996a89355ba9a3346c9751f011db24ae6757fb9
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244535"
 ---
 # <a name="deny-xml-schema-collection-permissions-transact-sql"></a>DENY XML 結構描述集合權限 (Transact-SQL)

@@ -15,10 +15,10 @@ ms.assetid: 6472c5e1-d37f-4919-a903-177e90cbfe1b
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 81b74eec0ea22cd6c88cc896af6537fa893ed925
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68081168"
 ---
 # <a name="extended-methods-on-geometry-instances"></a>幾何例項上擴充的方法

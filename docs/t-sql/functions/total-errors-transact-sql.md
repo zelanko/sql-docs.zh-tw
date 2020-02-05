@@ -24,13 +24,13 @@ ms.assetid: 09e62428-ee0e-4ef5-b969-da9d255f1199
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a07518edbdfce618fa8bfcff15a49df70f029ee3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098958"
 ---
-# <a name="x40x40totalerrors-transact-sql"></a>&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
+# <a name="x40x40total_errors-transact-sql"></a>&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在上次啟動之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所發生的磁碟寫入錯誤數目。  
@@ -43,10 +43,10 @@ ms.locfileid: "68098958"
 @@TOTAL_ERRORS  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個函數並不會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所發現的所有寫入錯誤都計算在內。 伺服器本身會處理不常發生的非嚴重寫入錯誤，這些錯誤不會被視為錯誤。 若要顯示包含多項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 統計資料的報表，其中包括錯誤總數，請執行 **sp_monitor**。  
   
 ## <a name="examples"></a>範例  

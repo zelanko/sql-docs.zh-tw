@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: dab00f633a72df1a0c799a2d074befee73cf561e
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71974315"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>啟用 FileTable 的必要條件
@@ -67,14 +67,14 @@ GO
  非交易式存取的可用層級是 FULL、READ_ONLY 和 OFF。  
   
  **使用 Transact-SQL 指定非交易式存取的層級**  
- - **建立新資料庫**時，請使用 **NON_TRANSACTED_ACCESS** FILESTREAM 選項，呼叫 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 陳述式。
+ - **建立新資料庫**時，請使用 [NON_TRANSACTED_ACCESS](../../t-sql/statements/create-database-sql-server-transact-sql.md) FILESTREAM 選項，呼叫 **CREATE DATABASE &#40;SQL Server Transact-SQL&#41;** 陳述式。
 
    ```sql
    CREATE DATABASE database_name  
      WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
    ```
 
-- **改變現有資料庫**時，請使用 **NON_TRANSACTED_ACCESS** FILESTREAM 選項，呼叫 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 陳述式。
+- **改變現有資料庫**時，請使用 [NON_TRANSACTED_ACCESS](../../t-sql/statements/alter-database-transact-sql.md) FILESTREAM 選項，呼叫 **ALTER DATABASE &#40;Transact-SQL&#41;** 陳述式。
 
    ```sql
    ALTER DATABASE database_name  
@@ -93,7 +93,7 @@ GO
  跨資料庫層級目錄的執行個體中，指定的名稱必須是唯一的。  
   
 **使用 Transact-SQL 指定 FileTable 的目錄**  
-- **建立新資料庫**時，請使用 **DIRECTORY_NAME** FILESTREAM 選項，呼叫 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 陳述式。
+- **建立新資料庫**時，請使用 [DIRECTORY_NAME](../../t-sql/statements/create-database-sql-server-transact-sql.md) FILESTREAM 選項，呼叫 **CREATE DATABASE &#40;SQL Server Transact-SQL&#41;** 陳述式。
 
    ```sql
    CREATE DATABASE database_name  
@@ -101,7 +101,7 @@ GO
    GO  
    ```
 
--   **改變現有資料庫**時，請使用 **DIRECTORY_NAME** FILESTREAM 選項，呼叫 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 陳述式。 當您使用這些選項來變更目錄名稱時，資料庫必須獨佔鎖定，而且沒有任何開啟的檔案控制代碼。  
+-   **改變現有資料庫**時，請使用 [DIRECTORY_NAME](../../t-sql/statements/alter-database-transact-sql.md) FILESTREAM 選項，呼叫 **ALTER DATABASE &#40;Transact-SQL&#41;** 陳述式。 當您使用這些選項來變更目錄名稱時，資料庫必須獨佔鎖定，而且沒有任何開啟的檔案控制代碼。  
   
     ```sql  
     ALTER DATABASE database_name  
@@ -109,7 +109,7 @@ GO
     GO  
     ```  
   
--   **附加資料庫**時，請使用 **FOR ATTACH** 選項和 **DIRECTORY_NAME** FILESTREAM 選項，呼叫 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 陳述式。  
+-   **附加資料庫**時，請使用 [FOR ATTACH](../../t-sql/statements/create-database-sql-server-transact-sql.md) 選項和 **DIRECTORY_NAME** FILESTREAM 選項，呼叫 **CREATE DATABASE &#40;SQL Server Transact-SQL&#41;** 陳述式。  
   
     ```sql  
     CREATE DATABASE database_name  
@@ -117,7 +117,7 @@ GO
     GO  
     ```  
   
--   **還原資料庫**時，請使用 **DIRECTORY_NAME** FILESTREAM 選項，呼叫 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式。  
+-   **還原資料庫**時，請使用 [DIRECTORY_NAME](../../t-sql/statements/restore-statements-transact-sql.md) FILESTREAM 選項，呼叫 **RESTORE &#40;Transact-SQL&#41;** 陳述式。  
   
     ```sql  
     RESTORE DATABASE database_name  
@@ -128,7 +128,7 @@ GO
  **使用 SQL Server Management Studio 指定 FileTable 的目錄**  
  在 [資料庫屬性]  對話方塊中，您可以透過 [選項]  頁面的 [FILESTREAM 目錄名稱]  欄位，來指定目錄名稱。 如需此對話方塊的詳細資訊，請參閱[資料庫屬性 &#40;選項頁面&#41;](../../relational-databases/databases/database-properties-options-page.md)。  
   
-###  <a name="viewnames"></a> 如何：檢視執行個體的現有目錄名稱  
+###  <a name="viewnames"></a> 如何：檢查執行個體的現有目錄名稱  
  若要檢視執行個體的現有目錄名稱清單，請查詢 [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) 目錄檢視，並檢查 **filestream_database_directory_name** 資料行。  
   
 ```sql  

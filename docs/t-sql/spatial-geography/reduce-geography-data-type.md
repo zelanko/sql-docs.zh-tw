@@ -18,10 +18,10 @@ ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 0713ba46d6d99a8ed325d37d11396b46618f92ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101763"
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce (geography 資料類型)
@@ -45,12 +45,12 @@ ms.locfileid: "68101763"
 |詞彙|定義|  
 |*tolerance*|這是 **float** 類型的值。 *tolerance* 是輸入到 Douglas-Peucker 演算法的容錯。 *tolerance* 必須是正數。|  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回型別：**SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果是集合類型，這個演算法會在此執行個體包含的每一個 **geography** 上獨立運作。 此演算法不會修改 **Point** 執行個體。  
   
  這個方法會嘗試保留 **LineString** 執行個體的端點，但為了保留有效的結果，這項嘗試可能會失敗。  

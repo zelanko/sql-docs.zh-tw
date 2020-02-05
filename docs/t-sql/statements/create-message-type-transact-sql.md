@@ -29,10 +29,10 @@ ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: de98dffe77940c6b8a6b66d0ce1a8b3b7565349d
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745465"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
@@ -77,7 +77,7 @@ CREATE MESSAGE TYPE message_type_name
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
  指定訊息主體必須包含符合指定的結構描述集合中之結構描述的 XML。*schema_collection_name* 必須是現有 XML 結構描述集合的名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會驗證內送訊息。 當訊息包含不符合指定驗證類型的訊息主體時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會捨棄無效的訊息，且會將錯誤訊息傳回給送出訊息的服務。  
   
  交談的兩端必須定義相同的訊息類型名稱。 為了有助於進行疑難排解，交談的兩端通常會針對此訊息類型指定相同的驗證，不過，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 並不要求交談的兩端使用相同的驗證。  

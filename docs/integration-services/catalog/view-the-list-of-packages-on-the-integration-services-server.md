@@ -11,10 +11,10 @@ ms.assetid: 67a992d1-7524-4f4b-b3d8-ebd9e5ea82a8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 68c9fca56732dd0757d7c602152b523132d5eafc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294884"
 ---
 # <a name="view-the-list-of-packages-on-the-integration-services-server"></a>檢視 Integration Services 伺服器上的封裝清單
@@ -27,7 +27,7 @@ ms.locfileid: "71294884"
  [!INCLUDE[tsql](../../includes/tsql-md.md)] access  
  若要檢視儲存在伺服器上的封裝清單，請查詢 [catalog.packages &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-packages-ssisdb-database.md) 檢視。  
   
- In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+ 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中  
  若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的物件總管檢視儲存在伺服器上的封裝，請依照以下的程序進行。  
   
 ### <a name="to-view-packages-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  

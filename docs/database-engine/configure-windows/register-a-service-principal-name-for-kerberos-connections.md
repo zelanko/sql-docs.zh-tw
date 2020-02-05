@@ -17,10 +17,10 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0248af282581019ebedc28656852ec5c78fd00b5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75257513"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>註冊 Kerberos 連接的服務主體名稱
@@ -103,9 +103,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > 在 TCP/IP 連接的情況下，由於 TCP 通訊埠包含於 SPN 中，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須啟用 TCP 通訊協定，使用者才能使用 Kerberos 驗證進行連接。 
 
 ##  <a name="Auto"></a> 自動 SPN 註冊  
- 當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體啟動時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試註冊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的 SPN。 當此執行個體停止時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試取消註冊 SPN。 如果是 TCP/IP 連接，SPN 會以 MSSQLSvc/\<FQDN>  :\<tcpport>  格式註冊。具名執行個體和預設執行個體都會註冊為 MSSQLSvc  (根據 \<tcpport>  值來區分執行個體)。  
+ 當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體啟動時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試註冊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的 SPN。 當此執行個體停止時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試取消註冊 SPN。 如果是 TCP/IP 連接，SPN 會以 MSSQLSvc/*FQDN>\<* :*tcpport>\<* 格式註冊。具名執行個體和預設執行個體都會註冊為 MSSQLSvc  (根據 *tcpport>\<* 值來區分執行個體)。  
   
- 如果是支援 Kerberos 的其他連接，SPN 會針對具名執行個體來以 MSSQLSvc/\<FQDN>  /\<執行個體名稱>  格式註冊。 用來註冊預設執行個體的格式為 MSSQLSvc/\<FQDN>  。  
+ 如果是支援 Kerberos 的其他連接，SPN 會針對具名執行個體來以 MSSQLSvc/*FQDN>\<* /*執行個體名稱>\<* 格式註冊。 用來註冊預設執行個體的格式為 MSSQLSvc/*FQDN>\<* 。  
   
  如果服務帳戶缺少這些動作所需的權限，可能需要手動介入才能註冊或取消註冊 SPN。  
   

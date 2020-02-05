@@ -14,10 +14,10 @@ ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6123a670053f5e6fa4b9c7196c9bc503b97c855b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293501"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>在資料流程中加入或刪除元件

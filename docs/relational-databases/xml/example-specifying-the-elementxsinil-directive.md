@@ -1,5 +1,5 @@
 ---
-title: 範例指定 ELEMENTXSINIL 指示詞 | Microsoft Docs
+title: 範例：指定 ELEMENTXSINIL 指示詞 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 485a0a9061a1cef6bdde4fee84b95614ea220005
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006713"
 ---
-# <a name="example-specifying-the-elementxsinil-directive"></a>範例指定 ELEMENTXSINIL 指示詞
+# <a name="example-specifying-the-elementxsinil-directive"></a>範例：指定 ELEMENTXSINIL 指示詞
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   當您指定 ELEMENT 指示詞來擷取元素中心的 XML 時，如果資料行有 NULL 值，EXPLICIT 模式就不會產生與其對應的元素。 您可以在 **xsi:nil** 屬性設為值 TRUE 之處，選擇性地指定 ELEMENTXSINIL 指示詞，要求產生 NULL 值的元素。  
   

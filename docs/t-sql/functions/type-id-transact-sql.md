@@ -22,13 +22,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 71e719d816e1afb9457d99049fa69c4749c18c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098737"
 ---
-# <a name="typeid-transact-sql"></a>TYPE_ID (Transact-SQL)
+# <a name="type_id-transact-sql"></a>TYPE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回指定資料類型名稱的識別碼。  
@@ -45,7 +45,7 @@ TYPE_ID ( [ schema_name ] type_name )
  *type_name*  
  這是資料類型的名稱。 *type_name* 的類型為 **nvarchar**。 *type_name* 可以是系統或使用者定義的資料類型。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
 ## <a name="exceptions"></a>例外狀況  
@@ -53,7 +53,7 @@ TYPE_ID ( [ schema_name ] type_name )
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示發出中繼資料的內建函數 (例如，TYPE_ID) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果類型名稱無效，或呼叫端沒有足以參考這個類型的權限，TYPE_ID 會傳回 NULL。  
   
 ## <a name="examples"></a>範例  
@@ -86,7 +86,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C.查閱系統資料類型的 TYPE ID  
+### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C：查閱系統資料類型的 TYPE ID  
  下列範例會針對 `TYPE ID` 系統資料類型來傳回 `datetime`。  
   
 ```  

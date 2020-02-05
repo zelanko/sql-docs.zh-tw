@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68019506"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux 上的 SQL Server 安全性功能逐步解說
@@ -259,7 +259,7 @@ SQL Server has the ability to encrypt the data while creating a backup. By speci
 The following example creates a certificate, and then creates a backup protected by the certificate.
 ```
 USE master;   GO   CREATE CERTIFICATE BackupEncryptCert   WITH SUBJECT = 'Database backups';   GO BACKUP DATABASE [AdventureWorks2014]   TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
-取代所有提及的  
+WITH  
   COMPRESSION,  
   ENCRYPTION   
    (  

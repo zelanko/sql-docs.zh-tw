@@ -17,10 +17,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
 ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70873878"
 ---
 # <a name="edge-constraints"></a>邊緣條件約束
@@ -39,7 +39,7 @@ ms.locfileid: "70873878"
 
 每個邊緣條件約束都是由一或多個邊緣條件約束子句所組成。 邊緣條件約束子句是由一對 FROM 與指定邊緣可連線的 TO 節點所組成。
 
-假設您的圖形中有 `Product` 和 `Customer` 節點，而且您使用 `Bought` 邊緣來連線這些節點。 邊緣條件約束子句指定 FROM 和 TO 節點配對以及邊緣方向。 在此情況下，邊緣條件約束子句會是 `Customer` TO `Product`。 亦即，允許插入從 `Customer` 流向 `Product` 的 `Bought`。 嘗試插入從 `Product` 流向 `Customer` 的邊緣失敗。
+假設您的圖形中有 `Product` 和 `Customer` 節點，而且您使用 `Bought` 邊緣來連線這些節點。 邊緣條件約束子句指定 FROM 和 TO 節點配對以及邊緣方向。 在此情況下，邊緣條件約束子句會是 `Customer` TO `Product`。 亦即，允許插入從 `Bought` 流向 `Customer` 的 `Product`。 嘗試插入從 `Product` 流向 `Customer` 的邊緣失敗。
 
 - 邊緣條件約束子句包含強制執行邊緣條件約束的一對 FROM 與 TO 節點資料表。
 - 使用者可以為每個邊緣條件約束指定將套用為分離的多個邊緣條件約束子句。
@@ -59,7 +59,7 @@ ms.locfileid: "70873878"
 
 ## <a name="working-with-edge-constraints"></a>使用邊緣條件約束
 
-您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中定義邊緣條件約束。 邊緣條件約束只能定義在圖形邊緣資料表上。 若要建立、刪除或修改邊緣條件約束，您必須擁有資料表的 **ALTER** 權限。
+您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中定義邊緣條件約束。 邊緣條件約束只能定義在圖形邊緣資料表上。 若要建立、刪除或修改邊緣條件約束，您必須擁有資料表的 **ALTER** 權限。
 
 ### <a name="create-edge-constraints"></a>建立邊緣條件約束
 

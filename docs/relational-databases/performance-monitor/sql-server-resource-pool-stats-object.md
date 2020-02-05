@@ -14,10 +14,10 @@ ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 98241060994cd97944db30a777bc23f475b8cb0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995696"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, Resource Pool Stats 物件
@@ -26,7 +26,7 @@ ms.locfileid: "67995696"
   
  每個作用中資源集區都會建立 SQLServer:Resource Pool Stats 效能物件的執行個體，而且此執行個體的名稱與資源管理員資源集區名稱相同。 下表描述這個執行個體支援的計數器。  
   
-|計數器名稱|Description|  
+|計數器名稱|描述|  
 |------------------|-----------------|  
 |**Active memory grant amount (KB)**|目前授與記憶體的總數量 (以 KB 為單位)。 您也可以在 [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)中取得這項資訊。| 
 |**Active memory grants count**|目前的記憶體授權總計數。 您也可以在 [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)中取得這項資訊。|  

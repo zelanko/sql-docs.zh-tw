@@ -15,10 +15,10 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2587c08c3ebf919a1665989863dc46e23a0ae690
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297985"
 ---
 # <a name="convert-data-type-by-using-data-conversion-transformation"></a>使用資料轉換轉換資料類型

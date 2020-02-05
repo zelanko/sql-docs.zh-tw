@@ -15,10 +15,10 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 88893b16dcb6e0529f166ab3c6e3f255110b6f71
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295778"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>使用檢查點來重新啟動封裝
@@ -57,7 +57,7 @@ ms.locfileid: "71295778"
   
  下表列出設定用以實作檢查點的封裝屬性。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |CheckpointFileName|指定檢查點檔案的名稱。|  
 |CheckpointUsage|指定是否使用檢查點。|  
@@ -70,7 +70,7 @@ ms.locfileid: "71295778"
 ### <a name="checkpoint-usage"></a>檢查點使用方式  
  CheckpointUsage 屬性可以設為下列值：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**永不**|指定不使用檢查點檔案，且封裝從封裝工作流程的開始點執行。|  
 |**永遠**|指定總是使用檢查點檔案，且封裝從上一個執行失敗點重新啟動。 如果找不到檢查點檔案，則封裝會失敗。|  

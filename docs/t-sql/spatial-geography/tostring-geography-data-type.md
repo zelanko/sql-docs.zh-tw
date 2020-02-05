@@ -17,10 +17,10 @@ ms.assetid: 045c12fa-8fc6-441a-9500-7021cb4ff13e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 3e4ca89d9fa8dccf2e819e76db188f84b25f0b59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120676"
 ---
 # <a name="tostring-geography-data-type"></a>ToString (geography 資料類型)
@@ -37,12 +37,12 @@ ms.locfileid: "68120676"
 .ToString ()  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**nvarchar(max)**  
   
- CLR 傳回型別：**SqlString**  
+ CLR 傳回類型：**SqlString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個方法在 Null 執行個體上呼叫時，將會傳回 "Null" 字串。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，伺服器上的可能結果集已擴充到 **FullGlobe** 執行個體。 這個方法會傳回與 `AsTextZM()` 相同的值。  
   
  這個方法並不精確。  

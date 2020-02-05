@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 43d4405411005ab43e3f2b2fe9b2136a5793e8a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099993"
 ---
 # <a name="transact-sql-statements"></a>Transact-SQL 陳述式
@@ -43,7 +43,7 @@ BACKUP 及 RESTORE 陳述式可讓您建立備份並從備份進行還原。  �
 資料操作語言 (DML) 會影響儲存在資料庫中的資訊。 您可以使用這些陳述式來插入、更新和變更資料庫中的資料列。
 
 - BULK INSERT
-- Delete
+- 刪除
 - Insert
 - UPDATE
 - MERGE

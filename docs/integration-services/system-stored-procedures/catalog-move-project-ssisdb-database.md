@@ -11,10 +11,10 @@ ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bcab50f0e1082ecbff8f19a9261a1d7694616b26
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296758"
 ---
 # <a name="catalogmove_project---ssisdb-database"></a>catalog.move_project - SSISDB 資料庫
@@ -70,7 +70,7 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   使用者未具備適當的權限  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當專案從來源資料夾移動到目的地資料夾時，來源資料夾中的專案和對應環境參考將遭到刪除。 目的地資料夾中會建立相同的專案和環境參考。 移動之後，相對環境參考將解析成不同的資料夾。 移動之後，絕對參考會解析成相同的資料夾。  
   
 > [!NOTE]  

@@ -12,10 +12,10 @@ ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: db307d221b8c90f478c21ab1605362e7fdf2ffd6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907714"
 ---
 # <a name="mssqlserver_701"></a>MSSQLSERVER_701
@@ -33,7 +33,7 @@ ms.locfileid: "72907714"
 |訊息文字|系統記憶體不足，無法執行此查詢。|  
   
 ## <a name="explanation"></a>說明  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法配置足夠的記憶體來執行查詢。 這可能是由各種原因造成，包括作業系統的設定、實體記憶體的可用量，或是目前工作負載的記憶體限制。 大多數的情況下，這個錯誤的原因並不是因為交易失敗。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法配置足夠的記憶體來執行查詢。 有各種原因會造成此錯誤，包括作業系統設定、實體記憶體可用性或目前工作負載的記憶體限制。 在大部分情況下，交易失敗並非造成此錯誤的原因。  
   
 診斷查詢 (例如 DBCC 陳述式) 可能會因為伺服器記憶體不足而失敗。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72907714"
   
 1.  確認是否有其他應用程式或服務正在耗用此伺服器的記憶體。 重新設定比較不重要的應用程式或服務，以降低其記憶體耗用量。  
   
-2.  開始收集以下內容的效能監視器計數：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **：緩衝區管理員**、**SQL Server：記憶體管理員**。  
+2.  開始收集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Buffer Manager** 和 **SQL Server: Memory Manager** 的效能監視器計數器。  
   
 3.  檢查下列 SQL Server 記憶體組態參數：  
   

@@ -23,10 +23,10 @@ ms.assetid: 4de76f33-399e-4912-a617-6eb6c560a058
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 00a313c6edfc9f8088d8cb19f62b51144fcc159b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140247"
 ---
 # <a name="commit-work-transact-sql"></a>COMMIT WORK (Transact-SQL)
@@ -44,7 +44,7 @@ COMMIT [ WORK ]
 [ ; ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個陳述式的功能與 COMMIT TRANSACTION 相同，不過 COMMIT TRANSACTION 接受使用者自訂的交易名稱。 這個 COMMIT 語法無論指定或不指定選擇性的關鍵字 WORK，皆與 SQL-92 相容。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -21,10 +21,10 @@ ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7d39f716717fe517fb3274e4c5519606916afb7b
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064669"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
@@ -60,7 +60,7 @@ ALTER APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA =*schema_name*  
  指定當伺服器解析物件名稱時，將搜尋的第一個結構描述。 *schema_name* 可以是資料庫中不存在的結構描述。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果資料庫中已存在新的應用程式角色名稱，則這個陳述式會失敗。 變更應用程式角色的名稱、密碼或預設結構描述時，與角色相關聯的識別碼不變。  
   
 > [!IMPORTANT]  
@@ -69,7 +69,7 @@ ALTER APPLICATION ROLE application_role_name
  您可以在 sys.database_principals 目錄檢視中，看到應用程式角色。  
   
 > [!CAUTION]  
->  在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，結構描述的行為已經與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的行為不同。 假設結構描述相當於資料庫使用者的程式碼可能不會傳回正確的結果。 不應該在曾經使用下列任何一個 DDL 陳述式的資料庫中使用舊的目錄檢視 (包括 sysobjects)：CREATE SCHEMA、ALTER SCHEMA、DROP SCHEMA、CREATE USER、ALTER USER、DROP USER、CREATE ROLE、ALTER ROLE、DROP ROLE、CREATE APPROLE、ALTER APPROLE、DROP APPROLE、ALTER AUTHORIZATION。 在曾經使用這些陳述式的任何一個資料庫中，您必須使用新的目錄檢視。 新的目錄檢視會考量 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中所導入的主體和結構描述的分隔。 如需目錄檢視的詳細資訊，請參閱[目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。  
+>  在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，結構描述的行為已經與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的行為不同。 假設結構描述相當於資料庫使用者的程式碼可能不會傳回正確的結果。 曾經使用下列任何一個 DDL 陳述式的資料庫中不應該使用舊的目錄檢視 (包括 sysobjects)：CREATE SCHEMA、ALTER SCHEMA、DROP SCHEMA、CREATE USER、ALTER USER、DROP USER、CREATE ROLE、ALTER ROLE、DROP ROLE、CREATE APPROLE、ALTER APPROLE、DROP APPROLE、ALTER AUTHORIZATION。 在曾經使用這些陳述式的任何一個資料庫中，您必須使用新的目錄檢視。 新的目錄檢視會考量 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中所導入的主體和結構描述的分隔。 如需目錄檢視的詳細資訊，請參閱[目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。  
   
 ## <a name="permissions"></a>權限  
  需要資料庫的 ALTER ANY APPLICATION ROLE 權限。 若要變更預設的結構描述，使用者還需要在應用程式角色上具有 ALTER 權限。 應用程式角色可改變它自己的預設結構描述，但不能變更它的名稱或密碼。  

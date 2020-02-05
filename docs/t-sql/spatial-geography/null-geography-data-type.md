@@ -18,10 +18,10 @@ ms.assetid: bb464b06-86e0-4b8b-ad78-04bd33b6069c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 775410c9a57d9bf030f34f84640522b766f0cf23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127384"
 ---
 # <a name="null-geography-data-type"></a>Null (geography 資料類型)
@@ -38,12 +38,12 @@ Null
   
 ## <a name="arguments"></a>引數  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型別：**geography**  
   
- CLR 類型：**SqlGeography**  
+ CLR 型別：**SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 ## <a name="examples"></a>範例  
  下列範例會擷取 Null `geography`執行個體。  

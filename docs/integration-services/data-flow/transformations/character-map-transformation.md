@@ -19,10 +19,10 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8211045a72ae56b04bb93b7be7e83f296f2467e5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291660"
 ---
 # <a name="character-map-transformation"></a>字元對應轉換
@@ -41,7 +41,7 @@ ms.locfileid: "71291660"
 ## <a name="mapping-operations"></a>對應作業  
  下表描述「字元對應」轉換支援的對應作業。  
   
-|作業|Description|  
+|作業|描述|  
 |---------------|-----------------|  
 |位元組反轉|反轉位元組的順序。|  
 |全形|將半形字元對應到全形字元。|  
@@ -77,7 +77,7 @@ ms.locfileid: "71291660"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -100,7 +100,7 @@ ms.locfileid: "71291660"
  **目的地**  
  指定字串作業之結果的儲存方式為就地儲存、使用現有的資料行儲存，或將修改的資料儲存為新的資料行。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |新增資料行|將資料儲存在新的資料行中。 在 **[輸出別名]** 之下指派資料行名稱。|  
 |就地變更|將修改的資料儲存在現有的資料行中。|  
@@ -108,7 +108,7 @@ ms.locfileid: "71291660"
  **運算**  
  從字串函數要套用至資料行資料的清單中選取。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |小寫|轉換為小寫。|  
 |大寫|轉換為大寫。|  
@@ -121,7 +121,7 @@ ms.locfileid: "71291660"
 |簡體中文|將繁體中文字元轉換為簡體中文。|  
 |繁體中文|將簡體中文字元轉換為繁體中文。|  
   
- **[輸出別名]**  
+ **輸出別名**  
  輸入每一個輸出資料行的別名。 預設為輸入資料行的名稱，後面接著 **[的副本]** ；但是您也可以選擇任何唯一的描述性名稱。  
   
  **設定錯誤輸出**  

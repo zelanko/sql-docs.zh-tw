@@ -16,10 +16,10 @@ ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 733c3a909629514b55042d21f02cfca563d3c531
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297068"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>使用指令碼元件剖析非標準文字檔案格式
@@ -100,13 +100,13 @@ ms.locfileid: "71297068"
   
 12. 在 [指令碼轉換編輯器]  的 [輸入及輸出]  頁面上，選取 [Output 0] 並將其 **SynchronousInputID** 設定為 None。 建立 5 個輸出資料行，全部都屬於字串 [DT_STR] 類型而且長度為 32：  
   
-    -   FirstName  
+    -   名字  
   
-    -   LastName  
+    -   姓氏  
   
     -   Title  
   
-    -   [縣/市]  
+    -   City  
   
     -   StateProvince  
   

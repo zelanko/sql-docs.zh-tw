@@ -15,10 +15,10 @@ ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c5947d1793b39a0bf6aba9729b9f4b1ca7305fab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042460"
 ---
 # <a name="stcontains--geography-data-type"></a>STContains (geography 資料類型)
@@ -35,14 +35,14 @@ ms.locfileid: "68042460"
   
 ## <a name="arguments"></a>引數  
  *other_geography*  
- 這是要與叫用 `STContains()` 所在之執行個體相比較的另一個 **geography** 執行個體。  
+ 這是要與叫用 **所在之執行個體相比較的另一個**geography`STContains()` 執行個體。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回型別：**SqlBoolean**  
+ CLR 傳回類型：**SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果呼叫 **geography** 執行個體在空間上包含傳遞給方法的 **geography** 執行個體，則傳回 1，否則傳回 0。 如果兩個 **geography** 執行個體的 SRID 並不相同，則傳回 **null**。  
   
 ## <a name="examples"></a>範例  

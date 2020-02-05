@@ -18,10 +18,10 @@ ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: dbc1bd923b0e86acfd0fbae995bd6fdbd16816a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042029"
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed (geography 資料類型)
@@ -38,12 +38,12 @@ ms.locfileid: "68042029"
 .STIsClosed ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回型別：**SqlBoolean**  
+ CLR 傳回類型：**SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 **geography** 執行個體的任何數據是點，或是這個執行個體是空的，則此方法會傳回 0。  
   
  如果 **FullGlobe** 執行個體是 **Polygon** 或其他類型的執行個體，則此方法會傳回 True。  

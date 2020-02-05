@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f51227380aa0e3cacebceaae246df672d3fcd663
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056049"
 ---
 # <a name="manage-trigger-security"></a>管理觸發程序安全性
@@ -35,7 +35,7 @@ ms.locfileid: "68056049"
   
  `GO`  
   
- 這個觸發程序所代表的意義是，只要有權執行 `GRANT CONTROL SERVER` 陳述式的使用者 (例如 **sysadmin** 固定伺服器角色的成員) 執行 `ALTER TABLE` 陳述式，就會授與 `JohnDoe` `CONTROL SERVER` 權限。 換句話說，雖然 `JohnDoe` 無法授與 `CONTROL SERVER` 權限給自己，不過他可以啟用觸發程序程式碼，以便授與自己在提升權限的情況下執行的權限。 DML 與 DDL 觸發程序都曝露於此種安全性威脅下。  
+ 這個觸發程序所代表的意義是，只要有權執行 `GRANT CONTROL SERVER` 陳述式的使用者 (例如 **sysadmin** 固定伺服器角色的成員) 執行 `ALTER TABLE` 陳述式，就會授與 `JohnDoe``CONTROL SERVER` 權限。 換句話說，雖然 `JohnDoe` 無法授與 `CONTROL SERVER` 權限給自己，不過他可以啟用觸發程序程式碼，以便授與自己在提升權限的情況下執行的權限。 DML 與 DDL 觸發程序都曝露於此種安全性威脅下。  
   
 ## <a name="trigger-security-best-practices"></a>觸發程序安全性最佳作法  
  您可以採用下列措施來防止觸發程序的程式碼在提升權限的情況下執行：  

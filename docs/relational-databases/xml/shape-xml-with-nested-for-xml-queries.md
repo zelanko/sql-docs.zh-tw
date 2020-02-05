@@ -15,10 +15,10 @@ ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22522a2bfabc3406e8e3e1331a0518a38b930c8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000670"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>使用巢狀 FOR XML 查詢組成 XML
@@ -62,7 +62,7 @@ for XML AUTO, TYPE, XMLSCHEMA
   
  請注意下列項目是從上一個查詢而來：  
   
--   外部 SELECT 陳述式會建構擁有 **ProductID** 屬性的 <`Product`> 元素，以及兩個 <`Price`> 子元素。  
+-   外部 SELECT 陳述式會建構擁有 `Product`ProductID **屬性的 <** > 元素，以及兩個 <`Price`> 子元素。  
   
 -   兩個內部 SELECT 陳述式會建構兩個 <`Price`> 元素，每個都具有一個 **PriceType** 屬性與會傳回產品價格的 XML。  
   

@@ -11,10 +11,10 @@ ms.assetid: b402fd9e-0bea-4c38-a371-6ed7fea12e96
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bffc65e8586e8a158c58f7afb5cfb244835e8c86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115385"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>將 UCP 從一個 SQL Server 執行個體移到另一個 (SQL Server 公用程式)
@@ -35,7 +35,7 @@ ms.locfileid: "68115385"
   
 5.  將 UMDW 的備份還原到新的 UCP。 如需詳細資訊，請參閱 [使用備份與還原複製資料庫](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
   
-6.  將執行個體註冊到新的 UCP，使其受 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式所管理。 如需詳細資訊，請參閱 [註冊 SQL Server 的執行個體 &#40;SQL Server 公用程式&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)執行個體之間移動公用程式控制點 (UCP)。  
+6.  將執行個體註冊到新的 UCP，使其受 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式所管理。 如需詳細資訊，請參閱[註冊 SQL Server 的執行個體 &#40;SQL Server 公用程式&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)。  
   
 7.  必要時針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]受管理的執行個體實作自訂原則定義。  
   

@@ -25,10 +25,10 @@ ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 73e0c8737a65b040552029717bf6848e1fc0cb63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094569"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "68094569"
 EVENTDATA( )  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 只有在 DDL 或登入觸發程序內直接參考時，`EVENTDATA` 才會傳回資料。 如果 `EVENTDATA` 是由其他常式所呼叫，它便會傳回 NULL，即使那些常式是由 DDL 或登入觸發程序所呼叫亦然。
   
 `EVENTDATA` 傳回的資料在以下交易之後無效：
@@ -73,7 +73,7 @@ EVENTDATA( )
 執行 `CREATE LOGIN` 或 `ALTER LOGIN` 陳述式時，不會顯示密碼。 這可以保護登入安全性。  
   
 ## <a name="schemas-returned"></a>傳回的結構描述  
-EVENTDATA 會傳回 **xml** 資料類型的值。 根據預設，所有事件的結構描述定義都會安裝在以下目錄：[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
+EVENTDATA 會傳回 **xml** 資料類型的值。 根據預設，所有事件的結構描述定義都會安裝在此目錄中：[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
   
 [Microsoft SQL Server XML Schemas](https://go.microsoft.com/fwlink/?LinkID=31850) (Microsoft SQL Server XML 結構描述) 網頁也會有事件結構描述。  
   
@@ -85,7 +85,7 @@ EVENTDATA 會傳回 **xml** 資料類型的值。 根據預設，所有事件的
 此範例會建立可防止建立新資料庫資料表的 DDL 觸發程序。 針對 `EVENTDATA` 所產生的 XML 資料使用 XQuery ，可擷取引發觸發程序的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 如需詳細資訊，請參閱 [XQuery 語言參考 &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)。  
   
 > [!NOTE]  
->  當您使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [以方格顯示結果]  來查詢 `<TSQLCommand>` 元素時，命令文字中不會出現分行符號。 請改用 [Results to Text] (以文字顯示結果)  。  
+>  當您使用  **中的 [以方格顯示結果]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來查詢 `<TSQLCommand>` 元素時，命令文字中不會出現分行符號。 請改用 [Results to Text] (以文字顯示結果)  。  
   
 ```  
 USE AdventureWorks2012;  

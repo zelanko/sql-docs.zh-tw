@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: fea109e55b9efa5619bdccb11d692ffebd1a6847
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847479"
 ---
 # <a name="iservervirtualdeviceset2beginconfiguration-vdi"></a>IServerVirtualDeviceSet2::BeginConfiguration (VDI)
@@ -54,7 +54,7 @@ HRESULT IServerVirtualDeviceSet2::BeginConfiguration (
 | VD_E_ABORT | 已叫用 SignalAbort。 |
 | VD_E_PROTOCOL | 虛擬裝置集不是處於連線狀態。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 叫用此函式之後，虛擬裝置集就會移至可設定的狀態，並在其中決定緩衝區配置。
 設定基本設定 (根據參數) 之後，這些值會在虛擬裝置集的存留期間保持固定。 虛擬裝置集對齊方式屬性是用來控制資料緩衝區的對齊方式。 這個值會設定可依緩衝區逐一覆寫的最小對齊值。

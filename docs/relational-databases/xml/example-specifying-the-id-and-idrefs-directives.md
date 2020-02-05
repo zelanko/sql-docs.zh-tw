@@ -1,5 +1,5 @@
 ---
-title: 範例指定識別碼和 IDREFS 指示詞 | Microsoft Docs
+title: 範例：指定 ID 和 IDREFS 指示詞 | Microsoft Docs
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1574f3336ae06b8bfb368de7eff37d1bc4286af0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006683"
 ---
-# <a name="example-specifying-the-id-and-idrefs-directives"></a>範例指定 ID 和 IDREFS 指示詞
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>範例：指定 ID 和 IDREFS 指示詞
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
@@ -39,7 +39,7 @@ ms.locfileid: "68006683"
 </Customer>  
 ```  
   
-`<Customer>` 項目的 `SalesOrderIDList` 屬性是一項多重值屬性，參考 `<SalesOrder>` 項目的 `SalesOrderID` 屬性。 若要建立此連結，`SalesOrderID` 屬性必須宣告為 `ID` 類型，且 `<Customer>` 項目的 `SalesOrderIDList` 屬性必須宣告為 `IDREFS` 類型。 因為一位客戶可以下多份訂單，所以要使用 `IDREFS` 類型。
+`SalesOrderIDList` 項目的 `<Customer>` 屬性是一項多重值屬性，參考 `SalesOrderID` 項目的 `<SalesOrder>` 屬性。 若要建立此連結，`SalesOrderID` 屬性必須宣告為 `ID` 類型，且 `SalesOrderIDList` 項目的 `<Customer>` 屬性必須宣告為 `IDREFS` 類型。 因為一位客戶可以下多份訂單，所以要使用 `IDREFS` 類型。
   
  **IDREFS** 類型的元素也會有一個以上的值。 因此，您必須使用個別的 select 子句，以重複使用相同的標記、父系及索引鍵資料行資訊。 然後 `ORDER BY` 必須確定構成 **IDREFS** 值的資料列順序，在它們的父元素下會分在同一組。  
   

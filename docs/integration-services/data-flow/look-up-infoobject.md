@@ -11,10 +11,10 @@ ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e77890725659f05d8616156f6e84712dc20323eb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292309"
 ---
 # <a name="look-up-infoobject"></a>查閱 InfoObject
@@ -39,11 +39,11 @@ ms.locfileid: "71292309"
   
 4.  在 [連線管理員]  頁面的 [建立 SAP BW 物件]  群組方塊中，選取下列其中一個選項：  
   
-    1.  選取 [InfoCube]  。 然後，按一下 [建立]  。 在 [建立交易資料的 InfoCube]  對話方塊中，於清單內其中一個資料列的 [IObject]  資料行中，按一下 [搜尋]  。 每個資料列都代表封裝之資料流程中的資料行。  
+    1.  選取 [InfoCube]  。 然後按一下 [ **建立**]。 在 [建立交易資料的 InfoCube]  對話方塊中，於清單內其中一個資料列的 [IObject]  資料行中，按一下 [搜尋]  。 每個資料列都代表封裝之資料流程中的資料行。  
   
-    2.  選取 [InfoSource]  。 然後，按一下 [建立]  。 在 [建立 InfoSource]  對話方塊中，選取 [交易資料]  。 在 [建立交易資料的 InfoSource]  對話方塊中，於清單內其中一個資料列的 [IObject]  資料行中，按一下 [搜尋]  。 每個資料列都代表封裝之資料流程中的資料行。  
+    2.  選取 [InfoSource]  。 接著，按一下 [建立]  。 在 [建立 InfoSource]  對話方塊中，選取 [交易資料]  。 在 [建立交易資料的 InfoSource]  對話方塊中，於清單內其中一個資料列的 [IObject]  資料行中，按一下 [搜尋]  。 每個資料列都代表封裝之資料流程中的資料行。  
   
-    3.  選取 [InfoSource]  。 然後，按一下 [建立]  。 在 [建立 InfoSource]  對話方塊中，選取 [主要資料]  。 在 [建立主要資料的 InfoSource]  對話方塊中，按一下 [查閱]  。  
+    3.  選取 [InfoSource]  。 接著，按一下 [建立]  。 在 [建立 InfoSource]  對話方塊中，選取 [主要資料]  。 在 [建立主要資料的 InfoSource]  對話方塊中，按一下 [查閱]  。  
   
  您也可以在 [建立新的 InfoObject]  對話方塊的 [屬性]  區段中按一下 [加入]  ，藉以開啟 [查閱 InfoObject]  對話方塊。  
   

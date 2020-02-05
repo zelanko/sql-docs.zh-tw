@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c28efd8106056ea900fef0cd57791837cf79e21a
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69553224"
 ---
 # <a name="microsoft-connector-for-oracle-data-type-support"></a>Microsoft Connector for Oracle 資料類型支援
@@ -34,7 +34,7 @@ Oracle 的 SSIS 元件不支援所有 Oracle 資料類型。 在 SSDT 中設計�
 |NUMBER|DT_R8|您可以使用特定的有效位數與小數位數，將此變更為 DT_NUMERIC。 有效位數與小數位數是由使用者根據需求來定義的。 輸出將會是具有固定有效位數與小數位數的資料行資料。|
 |NUMBER(P, S)| 當小數位數為 0 時，根據有效位數 (P) <li> DT_I1 <Li> DT_I2 <Li> DT_I4 <Li> DT_NUMBERIC(P,0)||
 ||DT_NUMERIC(P,S)||
-|DATE|DT_DBTIMESTAMP||
+|日期|DT_DBTIMESTAMP||
 |<li>timestamp <li>TIMESTAMP WITH TIME ZONE <li>INTERVAL YEAR TO MONTH <li>INTERVAL DAY TO SECOND <li>TIMESTAMP WITH LOCAL TIME ZONE|DT_STR||
 |RAW|DT_BYTES||
 |CLOB|DT_TEXT|只有陣列模式才支援 CLOB、NCLOB 與 BLOB 資料類型，快速載入模式中不支援。|

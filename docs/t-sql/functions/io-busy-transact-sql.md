@@ -23,13 +23,13 @@ ms.assetid: 3c26770c-41ae-4e34-8c82-7bef920ffbca
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f7bb537df511483b05647d36dba2a0323e44b199
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024257"
 ---
-# <a name="x40x40iobusy-transact-sql"></a>&#x40;&#x40;IO_BUSY (Transact-SQL)
+# <a name="x40x40io_busy-transact-sql"></a>&#x40;&#x40;IO_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上一次啟動之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用來執行輸入和輸出作業的時間。 結果是以 CPU 時間遞增 (「刻度」) 來計算，且會針對所有 CPU 來累計，因此，它可能會超出實際的經歷時間。 乘以 @@TIMETICKS 以轉換成微秒。  
@@ -45,10 +45,10 @@ ms.locfileid: "68024257"
 @@IO_BUSY  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  若要顯示包含多項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 統計資料的報表，請執行 sp_monitor。  
   
 ## <a name="examples"></a>範例  

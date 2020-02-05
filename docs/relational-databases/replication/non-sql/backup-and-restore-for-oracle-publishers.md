@@ -16,10 +16,10 @@ ms.assetid: e5f181d0-cacf-442b-8b7a-202b3cfc358b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ea6539e0d004f573281d54f7bb4a4c055c7b3e73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901116"
 ---
 # <a name="backup-and-restore-for-oracle-publishers"></a>Oracle 發行者的備份與還原

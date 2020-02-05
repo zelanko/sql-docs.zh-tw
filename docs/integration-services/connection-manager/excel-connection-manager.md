@@ -18,10 +18,10 @@ ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9ce3042bedd23c5ee173b1df7669a09cce35351
-ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75831756"
 ---
 # <a name="excel-connection-manager"></a>Excel 連接管理員

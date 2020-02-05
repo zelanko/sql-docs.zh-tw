@@ -21,10 +21,10 @@ ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5563c65352713f3557e4c412607d1944f28f3a3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071433"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
@@ -47,20 +47,20 @@ FILEGROUPPROPERTY ( filegroup_name, property )
  *property*  
 類型是 **varchar(128)** 的運算式，此運算式會傳回檔案群組屬性的名稱。 *Property* 可以傳回下列其中一個值：  
   
-|ReplTest1|Description|傳回的值|  
+|值|描述|傳回的值|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|檔案群組是唯讀的。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無效的輸入。|  
 |**IsUserDefinedFG**|檔案群組是使用者自訂檔案群組。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無效的輸入。|  
 |**IsDefault**|檔案群組是預設的檔案群組。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無效的輸入。|  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 *filegroup_name* 對應到 **sys.filegroups** 目錄檢視中的 **name** 資料行。  
   
 ## <a name="examples"></a>範例  
-這個範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中主要檔案群組的 `IsDefault` 屬性設定。  
+這個範例會傳回 `IsDefault` 資料庫中主要檔案群組的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 屬性設定。  
   
 ```  
 SELECT FILEGROUPPROPERTY('PRIMARY', 'IsDefault') AS 'Default Filegroup';  

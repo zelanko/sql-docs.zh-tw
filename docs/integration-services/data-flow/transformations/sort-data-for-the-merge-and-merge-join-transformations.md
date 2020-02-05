@@ -14,10 +14,10 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3a73c3aaf23d74857c1c182e4505fb8d602543a8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297791"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>排序合併和合併聯結轉換的資料
@@ -75,7 +75,7 @@ ms.locfileid: "71297791"
   
 5.  按一下 **[輸入與輸出屬性]** 索引標籤。  
   
-6.  按一下 [\<元件名稱> 輸出]  ，然後將 **IsSorted** 屬性設定為 **True**。  
+6.  按一下 [**元件名稱> 輸出]\<** ，然後將 **IsSorted** 屬性設定為 **True**。  
   
     > [!NOTE]  
     >  如果您手動將輸出的 **IsSorted** 屬性設定為 **True** 而且資料未排序，則當您執行封裝時，下游「合併」或「合併聯結」轉換中可能會有資料遺失或是不正確的資料比較。  

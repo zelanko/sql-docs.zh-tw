@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 00175ce9c9c9c0f6f83b7661b685063f97ef8c44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950353"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
@@ -87,7 +87,7 @@ END
  WHEN *Boolean_expression*  
  這是使用搜尋的 CASE 格式時，所評估的布林運算式。 *Boolean_expression* 是任何有效的布林值運算式。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  從 *result_expressions* 和選擇性 *else_result_expression* 的類型集傳回優先順序最高的類型。 如需詳細資訊，請參閱[資料類型優先順序 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
 ### <a name="return-values"></a>傳回值  
@@ -99,7 +99,7 @@ END
   
 -   依指定的順序來評估每個 WHEN 子句的 input_expression = when_expression。  
   
--   傳回第一個評估為 TRUE 之 *input_expression* = *when_expression* 的 *result_expression*。  
+-   傳回第一個評估為 TRUE 之 *input_expression*  when_expression =  的 *result_expression*。  
   
 -   如果沒有任何 *input_expression* = *when_expression* 評估為 TRUE，若指定了 ELSE 子句，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 就會傳回 *else_result_expression*，若未指定 ELSE 子句，則會傳回 NULL 值。  
   
@@ -111,7 +111,7 @@ END
   
 -   如果沒有任何 *Boolean_expression* 評估為 TRUE，若指定了 ELSE 子句，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會傳回 *else_result_expression*，若未指定 ELSE 子句，則會傳回 NULL 值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 CASE 運算式中只允許 10 層的巢狀層級。  
   
  CASE 運算式無法用於控制 Transact-SQL 陳述式、陳述式區塊、使用者定義函數以及預存程序的執行流程。 如需流程控制方法的清單，請參閱[流程控制語言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)。  
@@ -219,7 +219,7 @@ WHERE SalariedFlag = 0;
 ```  
   
 ### <a name="e-using-case-in-a-set-statement"></a>E. 在 SET 陳述式中使用 CASE  
- 下列範例會在資料表值函式 `dbo.GetContactInfo` 的 SET 陳述式中使用 CASE 運算式。 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中，與人員相關的所有資料都會儲存在 `Person.Person` 資料表中。 例如，該人員可能是員工、廠商代表或客戶。 此函數會傳回給定之 `BusinessEntityID` 的姓名，以及該人員的連絡類型。SET 陳述式中的 CASE 運算式會根據 `Employee`、`Vendor` 或 `Customer` 資料表中的 `BusinessEntityID` 資料行是否存在，來決定要針對 `ContactType` 資料行顯示的值。  
+ 下列範例會在資料表值函式 `dbo.GetContactInfo` 的 SET 陳述式中使用 CASE 運算式。 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中，與人員相關的所有資料都會儲存在 `Person.Person` 資料表中。 例如，該人員可能是員工、廠商代表或客戶。 此函數會傳回給定之 `BusinessEntityID` 的姓名，以及該人員的連絡類型。SET 陳述式中的 CASE 運算式會根據 `ContactType`、`BusinessEntityID` 或 `Employee` 資料表中的 `Vendor` 資料行是否存在，來決定要針對 `Customer` 資料行顯示的值。  
   
 ```  
   

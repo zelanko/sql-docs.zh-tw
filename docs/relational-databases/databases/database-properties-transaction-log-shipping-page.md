@@ -13,10 +13,10 @@ ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8155524f6e5d8172092630c04dbb0540514b56ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099572"
 ---
 # <a name="database-properties-transaction-log-shipping-page"></a>資料庫屬性 (交易記錄傳送頁面)
@@ -41,7 +41,7 @@ ms.locfileid: "68099572"
  **次要伺服器執行個體與資料庫**  
  列出此主要資料庫目前設定的次要伺服器與資料庫。 反白顯示資料庫，然後按一下 **[...]** 即可修改與次要資料庫相關聯的參數。  
   
- **[加入]**  
+ **加入**  
  按一下 [加入]  ，即可將次要資料庫加入此主要資料庫的記錄傳送組態。  
   
  **移除**  
@@ -53,7 +53,7 @@ ms.locfileid: "68099572"
  **監視伺服器執行個體**  
  指出此記錄傳送組態目前設定的監視伺服器執行個體。  
   
- **[設定]**  
+ **設定**  
  設定記錄傳送組態的監視伺服器執行個體。 按一下 **[設定]** 即可設定此監視伺服器執行個體。  
   
  **指令碼組態**  

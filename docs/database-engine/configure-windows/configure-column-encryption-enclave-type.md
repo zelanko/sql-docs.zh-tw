@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4786c512850d161d9b7ab33f2a12cd0bd077b2bd
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593825"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>設定 Always Encrypted 伺服器設定選項的記憶體保護區類型
@@ -24,13 +24,13 @@ ms.locfileid: "73593825"
 
 [資料行加密記憶體保護區類型]  伺服器設定選項可控制用於 Always Encrypted 的安全記憶體保護區類型。 可將此選項設定為下列其中一個值：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-------------------|-----------------| 
 |0|**無安全記憶體保護區**。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將不會初始化 Always Encrypted 的安全記憶體保護區。 因此，將無法使用具有安全記憶體保護區之 Always Encrypted 的功能。|  
 |1|**虛擬化型安全性 (VBS)** 。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將嘗試初始化虛擬式安全性 (VBS) 記憶體保護區。
 
 > [!IMPORTANT]
-> 除非您重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，否則 [資料行加密記憶體保護區類型]  的變更不會生效。
+> 除非您重新啟動  **執行個體，否則 [資料行加密記憶體保護區類型]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的變更不會生效。
    
 您可以使用 [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 檢視，檢查已設定記憶體保護區類型值和目前作用中的記憶體保護區類型值。 
 
@@ -72,8 +72,8 @@ SELECT
 FROM sys.configurations
 WHERE [name] = 'column encryption enclave type'; 
 ```  
-## <a name="next-steps"></a>Next Steps
- [針對具有安全記憶體保護區的 Always Encrypted 管理金鑰](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)
+## <a name="next-steps"></a>後續步驟
+ [為具有安全記憶體保護區的 Always Encrypted 管理金鑰](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)
 
 ## <a name="see-also"></a>另請參閱  
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

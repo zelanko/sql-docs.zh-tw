@@ -21,13 +21,13 @@ ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 767ccc61139886a1e81bbeb390b89676267b0d79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059898"
 ---
-# <a name="x40x40locktimeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
+# <a name="x40x40lock_timeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回目前工作階段的目前鎖定逾時設定 (以毫秒為單位)。  
@@ -40,10 +40,10 @@ ms.locfileid: "68059898"
 @@LOCK_TIMEOUT  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  SET LOCK_TIMEOUT 允許應用程式設定陳述式在封鎖的資源上，最大的等待時間。 當陳述式等待時間超出 LOCK_TIMEOUT 設定時，會自動取消封鎖的陳述式，且會傳回一則錯誤訊息給應用程式。  
   
  若尚未在目前工作階段中執行 SET LOCK_TIMEOUT，@@LOCK_TIMEOUT 會傳回 -1 值。  

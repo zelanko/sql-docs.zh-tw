@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 4a701a56ba5a71037317f6c404fa394a466febba
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729890"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "73729890"
 
 顯示 Azure [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 資料庫的已使用儲存空間結果集快取。
   
-![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [ Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>語法  
   
@@ -33,7 +33,7 @@ ms.locfileid: "73729890"
 DBCC SHOWRESULTCACHESPACEUSED  
 [;]  
 ```  
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 `DBCC SHOWRESULTCACHESPACEUSED` 命令不接受任何參數，而且會傳回命令執行所在資料庫的已使用空間。
 
@@ -43,7 +43,7 @@ DBCC SHOWRESULTCACHESPACEUSED
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行|資料類型|Description|  
+|資料行|資料類型|描述|  
 |------------|---------------|-----------------|  
 |reserved_space|BIGINT|資料庫使用的總空間 (KB)。 當快取的結果集增加時，此數字就會變更。|  
 |data_space|BIGINT|資料使用的空間 (KB)。|  
@@ -53,7 +53,7 @@ DBCC SHOWRESULTCACHESPACEUSED
 
 ## <a name="see-also"></a>另請參閱
 
-[使用結果集快取微調效能](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
+[使用結果集快取進行效能微調](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

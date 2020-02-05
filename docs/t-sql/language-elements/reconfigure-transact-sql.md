@@ -23,10 +23,10 @@ ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6ee52f585af8930afcba301a5aba12df4eb47173
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072384"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
@@ -52,7 +52,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  幾乎所有設定選項都可使用 WITH OVERRIDE 選項重新設定，不過，仍要避免一些嚴重錯誤。 例如，您無法將 **min server memory** 設定選項的值設為大於 **max server memory** 設定選項所指定的值。
       
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>備註    
  **sp_configure** 不接受針對各個設定選項，使用超出所記載之有效範圍的新設定選項值。    
     
  在明確或隱含的交易中，不允許使用 RECONFIGURE。 當您同時重新設定數個選項時，若有任何重新設定作業失敗，則所有重新設定作業都不會生效。    

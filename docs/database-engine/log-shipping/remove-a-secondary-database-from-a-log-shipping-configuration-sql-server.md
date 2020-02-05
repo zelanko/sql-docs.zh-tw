@@ -17,10 +17,10 @@ ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 03a22206129b3f6002006f1fdcb74d5aad73308f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258993"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>從記錄傳送組態中移除次要資料庫 (SQL Server)

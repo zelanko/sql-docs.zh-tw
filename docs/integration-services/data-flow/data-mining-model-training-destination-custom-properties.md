@@ -11,10 +11,10 @@ ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e603b7e7342ee349b885392c43e42f33009700ae
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293121"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>資料採礦模型定型目的地自訂屬性
@@ -26,7 +26,7 @@ ms.locfileid: "71293121"
   
  下表描述的是資料採礦模型定型目的地的自訂屬性。 所有屬性都是可讀寫的。  
   
-|屬性|資料類型|Description|  
+|屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
 |ASConnectionId|String|連接管理員的唯一識別碼。|  
 |ASConnectionString|String|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的連接字串。|  

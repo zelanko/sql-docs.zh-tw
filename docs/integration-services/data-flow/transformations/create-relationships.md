@@ -13,10 +13,10 @@ ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fce60dd2a2663e23001805621e622b4334126a1e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291536"
 ---
 # <a name="create-relationships"></a>建立關聯性
@@ -44,7 +44,7 @@ ms.locfileid: "71291536"
  當您使用模糊比對時，如果所有含模糊相符類型的資料行都具有足夠的相似度，則這些資料列就會被視為重複。 若要從模糊比對取得較佳的結果，您可以指定某些資料行應使用完全相符而非模糊比對。 例如，若您知道特定資料行沒有錯誤或不一致性，您就可以在該資料行指定完全相符，使得此資料行中只有包含相同值的資料列才會被視為可能重複。 這可在其他資料行增加模糊比對的精確度。  
   
  **比較旗標**  
- 如需字串比較選項的相關資訊，請參閱 [比較字串資料](../../../integration-services/data-flow/comparing-string-data.md)。  
+ 如需字串比較選項的資訊，請參閱 [比較字串資料](../../../integration-services/data-flow/comparing-string-data.md)。  
   
  **最小相似度**  
  藉由使用滑桿，在資料行層級設定相似度臨界值。 這個值愈接近 1，則查閱值與來源值就必須愈相似，才能認定它們相符。 增加臨界值可以改善比對的速度，因為需要考慮的候選記錄比較少。  

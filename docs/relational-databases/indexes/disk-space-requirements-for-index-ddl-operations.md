@@ -17,10 +17,10 @@ ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e49ef1ad379f675ca457f8cd9c82a5e4ecc3fd04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107128"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
@@ -80,7 +80,7 @@ ms.locfileid: "68107128"
  線上索引作業會使用資料列版本設定來隔離索引作業與其他交易所進行的修改影響。 這樣可避免在已讀取的資料列上要求共用鎖定。 線上索引作業期間進行的並行使用者更新和刪除作業，將需要一些空間在 **tempdb**中產生版本記錄。 如需詳細資訊，請參閱 [線上執行索引作業](../../relational-databases/indexes/perform-index-operations-online.md) 。  
   
 ## <a name="related-tasks"></a>相關工作  
- [Index Disk Space Example](../../relational-databases/indexes/index-disk-space-example.md)  
+ [索引磁碟空間範例](../../relational-databases/indexes/index-disk-space-example.md)  
   
  [索引作業的交易記錄磁碟空間](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   

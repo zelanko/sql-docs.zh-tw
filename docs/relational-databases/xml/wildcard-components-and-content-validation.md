@@ -14,10 +14,10 @@ ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba4e15016ca7b6ae3094b575ee87a1c7508b8aac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68096958"
 ---
 # <a name="wildcard-components-and-content-validation"></a>萬用字元元件和內容驗證

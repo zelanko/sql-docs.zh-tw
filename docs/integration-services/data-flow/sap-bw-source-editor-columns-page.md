@@ -13,10 +13,10 @@ ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d523437dd2deaddac4462f2e825ff0c197b26bf6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291842"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>SAP BW 來源編輯器 (資料行頁面)
@@ -52,7 +52,7 @@ ms.locfileid: "71291842"
   
  若要在資料流程中包含資料行，請選取對應至該資料行的核取方塊。 您選取核取方塊的順序會決定資料行的輸出順序。 也就是說，您所選取的第一個核取方塊就是第一個輸出資料行，第二個核取方塊就是第二個輸出資料行，依此類推。  
   
- **外部資料行**  
+ **[外部資料行]**  
  檢視選取的外部 (來源) 資料行。 當您設定從這個來源取用資料的下游元件時，選取的資料行會按照其對應輸出資料行的顯示順序出現。  
   
  若要變更資料行的順序，請在 **[可用的外部資料行]** 清單中，清除所有資料行的核取方塊。 然後，按照您想要讓資料行出現的順序選取資料行。  

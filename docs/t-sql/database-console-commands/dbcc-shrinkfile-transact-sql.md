@@ -30,10 +30,10 @@ ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: ac274000ffdb1bcd29ebad2a2e0d0395b8daba0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930321"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
@@ -96,7 +96,7 @@ WITH NO_INFOMSGS
 ## <a name="result-sets"></a>結果集  
 下表會描述結果集資料行。
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |---|---|
 |**DbId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 試圖壓縮之檔案的資料庫識別碼。|  
 |**FileId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 試圖壓縮之檔案的檔案識別碼。|  
@@ -105,7 +105,7 @@ WITH NO_INFOMSGS
 |**UsedPages**|檔案目前所用的 8 KB 頁數。|  
 |**EstimatedPages**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 估計檔案可以壓縮成 8 KB 頁面的數目。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 DBCC SHRINKFILE 適用於目前資料庫的檔案。 如需有關如何變更目前資料庫的詳細資訊，請參閱 [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)。
   
 您可以隨時停止 DBCC SHRINKFILE 作業，任何已完成的工作都會保留下來。 如果您使用 EMPTYFILE 參數並取消作業，則不會標示檔案來防止新增額外的資料。
@@ -120,7 +120,7 @@ DBCC SHRINKFILE 適用於目前資料庫的檔案。 如需有關如何變更目
   
 由於記錄檔只能壓縮成虛擬記錄檔界限，因此可能無法將記錄檔壓縮成小於虛擬記錄檔的大小，即使它不在使用中也是如此。 建立或擴充記錄檔時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會以動態方式選擇虛擬記錄檔大小。
   
-## <a name="best-practices"></a>最佳做法 
+## <a name="best-practices"></a>最佳作法 
  
 當您計畫壓縮檔案時，請考量下列資訊：
 -   壓縮作業在截斷資料表或卸除資料表作業等建立大量未用空間的作業之後最有效。  
@@ -161,7 +161,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-此訊息表示時間戳記在 109 (壓縮作業所完成的最後一項交易) 之前的快照集交易將封鎖壓縮作業。 這也表示 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 動態管理檢視中的 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 資料行包含值 15。 如果 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 檢視資料行所包含數字小於壓縮作業最後完成的交易 (109)，壓縮作業將會等到這些交易完成。
+此訊息表示時間戳記在 109 (壓縮作業所完成的最後一項交易) 之前的快照集交易將封鎖壓縮作業。 這也表示 **sys.dm_tran_active_snapshot_database_transactions** 動態管理檢視中的 **transaction_sequence_num** 或 [first_snapshot_sequence_num](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 資料行包含值 15。 如果 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 檢視資料行所包含數字小於壓縮作業最後完成的交易 (109)，壓縮作業將會等到這些交易完成。
   
 若要解決這個問題，可以執行下列其中一項工作：
 -   結束正在封鎖壓縮作業的交易。
@@ -174,7 +174,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 ## <a name="examples"></a>範例  
   
 ### <a name="shrinking-a-data-file-to-a-specified-target-size"></a>將資料檔案壓縮為指定的目標大小  
-下列範例會將 `UserDB` 使用者資料庫中名為 `DataFile1` 之資料檔案大小壓縮成 7 MB。
+下列範例會將 `DataFile1` 使用者資料庫中名為 `UserDB` 之資料檔案大小壓縮成 7 MB。
   
 ```sql  
 USE UserDB;  

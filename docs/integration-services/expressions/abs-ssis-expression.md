@@ -14,10 +14,10 @@ ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2d332c8cdffae320d602f0581c7641d69c31c4fa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297693"
 ---
 # <a name="abs-ssis-expression"></a>ABS (SSIS 運算式)
@@ -41,7 +41,7 @@ ABS(numeric_expression)
 ## <a name="result-types"></a>結果類型  
  提交至函數之數值運算式的資料類型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果引數為 Null，則 ABS 會傳回 Null 結果。  
   
 ## <a name="expression-examples"></a>運算式範例  

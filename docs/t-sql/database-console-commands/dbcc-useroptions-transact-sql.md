@@ -22,10 +22,10 @@ ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: dc8f12ae745acd0410fb309dc4c3dc9b65e7a382
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040453"
 ---
 # <a name="dbcc-useroptions-transact-sql"></a>DBCC USEROPTIONS (Transact-SQL)
@@ -70,7 +70,7 @@ isolation level              read committed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.
  ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 當 READ_COMMITTED_SNAPSHOT 資料庫選項設為 ON 且交易隔離等級設為 'read committed' 時，DBCC USEROPTIONS 會報告 'read committed snapshot' 隔離等級。 實際的隔離等級為讀取認可。
   
 ## <a name="permissions"></a>權限  

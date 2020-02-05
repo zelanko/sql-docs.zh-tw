@@ -15,10 +15,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: feac4a3e00164837373f9b3024c322dbf7c49818
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095829"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>使用 OPENJSON 剖析及轉換 JSON 資料 (SQL Server)
@@ -55,7 +55,7 @@ FROM OPENJSON(@json);
   
 **結果**
   
-|索引鍵|value|型別|  
+|索引鍵|value|type|  
 |---------|-----------|----------|  
 |NAME|John|1|  
 |surname|Doe|1|  
@@ -116,7 +116,7 @@ WITH (
   
 **結果**
   
-|Number|Date|客戶|Quantity|  
+|Number|Date|客戶|數量|  
 |------------|----------|--------------|--------------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|  

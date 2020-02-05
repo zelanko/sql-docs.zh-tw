@@ -20,10 +20,10 @@ ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 37fd90d37f989fb496b6d9fe1ea1153de25db0d7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024736"
 ---
 # <a name="scm-services---change-the-password-of-the-accounts-used"></a>SCM 服務 - 變更所使用帳戶的密碼
@@ -35,7 +35,7 @@ ms.locfileid: "68024736"
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員是已獲授權專供變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務各項設定而設計的工具。 使用 Windows 服務控制管理員 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.msc **) 應用程式變更**服務時，不一定能變更所有必要的設定，而且可能導致服務無法正常運作。 不過，在叢集環境的使用中節點上透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員變更密碼之後，必須在被動節點上使用服務控制管理員變更密碼。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  您必須是電腦的系統管理員才能變更服務所使用的密碼。  
@@ -56,9 +56,9 @@ ms.locfileid: "68024736"
   
 2.  在 [SQL Server 組態管理員] 中，按一下 **[SQL Server 服務]** 。  
   
-3.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (\<執行個體名稱>)]   ，然後按一下 [屬性]  。  
+3.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (**執行個體名稱>)]** \<  ，然後按一下 [屬性]  。  
   
-4.  在 [SQL Server (\<執行個體名稱>) 屬性]   對話方塊的 [登入] 索引標籤上，針對列於 [帳戶名稱]  方塊的帳戶，在 [密碼]  和 [確認密碼]  方塊中鍵入新密碼，然後按一下 [確定]  。  
+4.  在 [SQL Server (**執行個體名稱>) 屬性]** \<  對話方塊的 [登入] 索引標籤上，針對列於 [帳戶名稱]  方塊的帳戶，在 [密碼]  和 [確認密碼]  方塊中鍵入新密碼，然後按一下 [確定]  。  
   
      密碼會立即生效，不需重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
@@ -68,9 +68,9 @@ ms.locfileid: "68024736"
   
 2.  在 [SQL Server 組態管理員] 中，按一下 **[SQL Server 服務]** 。  
   
-3.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server Agent (\<執行個體名稱>)]   ，然後按一下 [屬性]  。  
+3.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server Agent (**執行個體名稱>)]** \<  ，然後按一下 [屬性]  。  
   
-4.  在 [SQL Server Agent (\<執行個體名稱>) 屬性]   對話方塊的 [登入] 索引標籤上，針對列於 [帳戶名稱]  方塊的帳戶，在 [密碼]  和 [確認密碼]  方塊中鍵入新密碼，然後按一下 [確定]  。  
+4.  在 [SQL Server Agent (**執行個體名稱>) 屬性]** \<  對話方塊的 [登入] 索引標籤上，針對列於 [帳戶名稱]  方塊的帳戶，在 [密碼]  和 [確認密碼]  方塊中鍵入新密碼，然後按一下 [確定]  。  
   
      在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]獨立執行個體上，密碼會立即生效，不需要重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在叢集執行個體上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源離線，而且需要重新啟動。  
   
