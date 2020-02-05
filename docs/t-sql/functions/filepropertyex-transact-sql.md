@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 955cfe87f93bedc41c6aeb29951ee1c81d0a4d6e
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68425930"
 ---
 # <a name="filepropertyex-transact-sql"></a>FILEPROPERTYEX (Transact-SQL)
@@ -48,17 +48,17 @@ FILEPROPERTYEX ( name , property )
 
 
   
-|ReplTest1|Description|
+|值|描述|
 |-----------|-----------------|  
 |**BlobTier**|目標 Azure 分頁 Blob 的階層。 僅適用於使用 Azure 分頁 Blob 儲存體的標準和一般用途資料庫。|
 |**AccountType**|儲存體帳戶類型，指出其為 Blob 儲存體或檔案儲存體，以及其為進階還是標準儲存體。|
 |**IsInferredTier**|指出階層是否為隱含 (推斷) 階層，其可能會隨著資料大小或明確 (固定) 階層而成長。|
 |**IsPageBlob**|指出目標 Blob 是否為分頁 Blob。|
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **sql_variant**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  *file_name* 對應於 **sys.master_files** 或 **sys.database_files** 目錄檢視中的 **name** 資料行。  
   
 ## <a name="examples"></a>範例  

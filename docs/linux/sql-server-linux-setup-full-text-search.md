@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874760"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>在 Linux 上安裝 SQL Server 全文檢索搜尋
@@ -88,7 +88,7 @@ sudo zypper update mssql-server-fts
 
 | Language | 語言識別碼 |
 |---|---|
-| 中性語言 | 0 |
+| 中性 | 0 |
 | 阿拉伯文 | 1025 |
 | 孟加拉文 (印度) | 1093 |
 | 巴克摩 | 1044 |
@@ -120,7 +120,7 @@ sudo zypper update mssql-server-fts
 | 立陶宛文 | 1063 |
 | 馬來文 - 馬來西亞 | 1086 |
 | 馬來亞拉姆文 | 1100 |
-| 馬拉提文 | 1102 |
+| 馬拉地文 | 1102 |
 | 波蘭文 | 1045 |
 | 葡萄牙文 | 2070 |
 | 旁遮普文 | 1094 |
@@ -134,7 +134,7 @@ sudo zypper update mssql-server-fts
 | 西班牙文 | 3082 |
 | 瑞典文 | 1053 |
 | 坦米爾文 | 1097 |
-| 特拉古文 | 1098 |
+| 泰盧固文 | 1098 |
 | 泰文 | 1054 |
 | 繁體中文 | 1028 |
 | 土耳其文 | 1055 |
@@ -148,7 +148,7 @@ sudo zypper update mssql-server-fts
 
 您可以呼叫 **sp_help_fulltext_system_components 'filter'** 來查看已安裝的篩選清單。 SQL Server 會安裝下列篩選：
 
-| 元件名稱 | 類別識別碼 | Version |
+| 元件名稱 | 類別識別碼 | 版本 |
 |---|---|---|
 |.a | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ans | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |

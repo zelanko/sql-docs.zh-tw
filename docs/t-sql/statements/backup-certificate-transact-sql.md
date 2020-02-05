@@ -29,10 +29,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 7b2559ca1eee0f2787fbf74adba97b03671d6faf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091758"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
@@ -73,7 +73,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  這是要備份的憑證名稱。
 
  TO FILE = '*path_to_file*'  
- 指定儲存憑證的檔案之完整路徑，包括檔案名稱。 此路徑可以是本機路徑或通往網路位置的 UNC 路徑。 如果只指定檔案名稱，檔案將會儲存在執行個體的預設使用者資料夾 (它不一定是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 資料夾)。 如果是 SQL Server Express LocalDB，執行個體的預設使用者資料夾是 `%USERPROFILE%` 環境變數為建立該執行個體的帳戶所指定的路徑。  
+ 指定儲存憑證的檔案之完整路徑，包括檔案名稱。 此路徑可以是本機路徑或通往網路位置的 UNC 路徑。 如果只指定檔案名稱，檔案將會儲存在執行個體的預設使用者資料夾 (它不一定是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 資料夾)。 如果是 SQL Server Express LocalDB，執行個體的預設使用者資料夾是 `%USERPROFILE%` 環境變數為建立該執行個體的帳戶所指定路徑。  
 
  WITH PRIVATE KEY 指定憑證的私密金鑰要儲存到檔案。 這個子句是選擇性的。
 
@@ -86,7 +86,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  DECRYPTION BY PASSWORD = '*decryption_password*'  
  這是備份私密金鑰之前用來解密該金鑰的密碼。 如果憑證由主要金鑰加密，則不需要此引數。 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果是在資料庫中利用密碼加密私密金鑰，則必須指定解密密碼。  
   
  將私密金鑰備份至檔案時，需要加密。 用以保護檔案中私密金鑰的密碼與用以加密資料庫中憑證之私密金鑰的密碼並不相同。  

@@ -17,10 +17,10 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909490"
 ---
 # <a name="filter-a-trace"></a>篩選追蹤
@@ -61,11 +61,11 @@ ms.locfileid: "72909490"
   
  篩選的可用性視資料行而定。 部份資料行無法篩選。 可篩選的資料行只能由特定關聯式運算子進行篩選，如下表所示。  
   
-|關聯式運算子|運算子符號|Description|  
+|關聯式運算子|運算子符號|描述|  
 |-------------------------|---------------------|-----------------|  
-|相似|相似|指定追蹤事件資料必須和輸入的文字相似。 允許多值。|  
+|相似|LIKE|指定追蹤事件資料必須和輸入的文字相似。 允許多值。|  
 |不相似|不相似|指定追蹤事件資料絕對必須和輸入的文字不相似。 允許多值。|  
-|等於|=|指定追蹤事件資料必須和輸入的值相等。 允許多值。|  
+|Equals|=|指定追蹤事件資料必須和輸入的值相等。 允許多值。|  
 |不等於|<>|指定追蹤事件資料絕對必須和輸入的值不相等。 允許多值。|  
 |大於|>|指定追蹤事件資料必須大於輸入的值。|  
 |大於或等於|>=|指定追蹤事件資料必須大於或等於輸入的值。|  
@@ -115,7 +115,7 @@ ms.locfileid: "72909490"
 |**OwnerID**|=, <>, >=, <=|  
 |**OwnerName**|LIKE、NOT LIKE|  
 |**ParentName**|LIKE、NOT LIKE|  
-|**Permissions**|=, <>, >=, <=|  
+|**權限**|=, <>, >=, <=|  
 |**ProviderName**|LIKE、NOT LIKE|  
 |**Reads**|=, <>, >=, <=|  
 |**RequestID**|=, <>, >=, <=|  
@@ -128,7 +128,7 @@ ms.locfileid: "72909490"
 |**SqlHandle**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 篩選這個資料行中的事件。 如需詳細資訊，請參閱 [使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**StartTime**|>=, <=|  
 |**State**|=, <>, >=, <=|  
-|**成功**|=, <>, >=, <=|  
+|「成功」 |=, <>, >=, <=|  
 |**TargetLoginName**|LIKE、NOT LIKE|  
 |**TargetLoginSid**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 篩選這個資料行中的事件。 如需詳細資訊，請參閱 [使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**TargetUserName**|LIKE、NOT LIKE|  

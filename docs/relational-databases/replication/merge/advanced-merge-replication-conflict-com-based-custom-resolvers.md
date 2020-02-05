@@ -14,10 +14,10 @@ ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 96716d694a44003105190e287cfc7a4662924663
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033417"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-custom-resolvers"></a>進階合併式複寫衝突 - 以 COM 為基礎的自訂解析程式
@@ -42,7 +42,7 @@ ms.locfileid: "68033417"
  若要指定自訂解析程式，請參閱＜ [指定合併發行項解析程式](../../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [進階合併式複寫衝突偵測與解決方法](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [進階合併式複寫衝突偵測與解決](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Microsoft COM-Based Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)  
   
   

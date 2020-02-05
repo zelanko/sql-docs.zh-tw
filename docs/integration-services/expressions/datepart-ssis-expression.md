@@ -14,10 +14,10 @@ ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e85eb7e41a3211f132ea32858bf859c153f15de7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290287"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (SSIS 運算式)
@@ -35,7 +35,7 @@ DATEPART(datepart, date)
 ```  
   
 ## <a name="arguments"></a>引數  
- *日期部份*  
+ *datepart*  
  這是指定日期中哪一個部分要傳回新值的參數。  
   
  *date*  
@@ -44,7 +44,7 @@ DATEPART(datepart, date)
 ## <a name="result-types"></a>結果類型  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果引數為 Null，則 DATEPART 會傳回 Null 結果。  
   
  日期常值必須明確轉換為日期資料類型之一。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
@@ -62,7 +62,7 @@ DATEPART(datepart, date)
 |Weekday|dw|  
 |Hour|Hh|  
 |Minute|mi, n|  
-|第二個|ss, s|  
+|Second|ss, s|  
 |Millisecond|Ms|  
   
 ## <a name="ssis-expression-examples"></a>SSIS 運算式範例  

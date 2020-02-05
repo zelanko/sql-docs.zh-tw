@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070269"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
@@ -67,7 +67,7 @@ DROP MEMBER *server_principal*
 WITH NAME **=** _new_server_role_name_  
 指定使用者定義伺服器角色的新名稱。 此名稱不能已存在於伺服器中。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 變更使用者定義伺服器角色的名稱不會變更角色的識別碼、擁有者或權限。  
   
 為變更角色成員資格，`ALTER SERVER ROLE` 會取代 sp_addsrvrolemember 和 sp_dropsrvrolemember。 這些預存程序都已被取代。  
@@ -112,7 +112,7 @@ ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>C. 將 SQL Server 登入加入至伺服器角色  
-下列範例會將 `Ted` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入新增至 `diskadmin` 固定伺服器角色中。  
+下列範例會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `Ted` 登入新增至 `diskadmin` 固定伺服器角色中。  
   
 ```  
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
@@ -120,14 +120,14 @@ GO
 ```  
   
 ### <a name="d-removing-a-domain-account-from-a-server-role"></a>D. 從伺服器角色移除網域帳戶  
-下列範例會從使用者定義的伺服器角色 `Production` 移除網域帳戶 `adventure-works\roberto0`。  
+下列範例會從使用者定義的伺服器角色 `adventure-works\roberto0` 移除網域帳戶 `Production`。  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>E. 從伺服器角色移除 SQL Server 登入  
-下列範例會從 `diskadmin` 固定伺服器角色移除 `Ted` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
+下列範例會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定伺服器角色移除 `Ted` 的 `diskadmin` 登入。  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
@@ -143,7 +143,7 @@ GO
 ```  
   
 ### <a name="g-to-view-role-membership"></a>G. 若要檢視角色成員資格  
-若要檢視角色成員資格，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [伺服器角色 (成員)]  頁面，或執行下列查詢：  
+若要檢視角色成員資格，請使用  **的 [伺服器角色 (成員)]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 頁面，或執行下列查詢：  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   

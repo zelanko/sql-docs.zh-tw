@@ -22,10 +22,10 @@ ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a5b722f37fb6a5e30a50307a5d7828868ecd1fba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072266"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
@@ -57,13 +57,13 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  這是有單一資料行結果集的子查詢。 傳回的資料行資料類型必須與 *scalar_expression* 的資料類型相同。  
   
 ## <a name="result-types"></a>結果類型  
- **布林**  
+ **布林值**  
   
 ## <a name="result-value"></a>結果值  
- 若任意組 (_scalar_expression_ **,** _x_) 的指定比較都是 TRUE (其中 *x* 是單一資料行集中的值)，則 SOME 或 ANY 會傳回 **TRUE**；否則，會傳回 **FALSE**。  
+ 若任意組 (**scalar_expression** _,_ **x**) 的指定比較都是 TRUE (其中 _x_ 是單一資料行集中的值)，則 SOME 或 ANY 會傳回 *TRUE*；否則，會傳回 **FALSE**。  
   
-## <a name="remarks"></a>Remarks  
- SOME 需要正面比較 *scalar_expression* 與至少一個子查詢傳回值。 對於需要以正數來比較 *scalar_expression* 和由子查詢傳回之每個值的陳述式，請參閱 [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)。 例如，如果子查詢傳回 2 和 3 的值，*scalar_expression* = SOME (子查詢) 會針對值為 2 的 *scalar_express* 評估為 TRUE。 如果子查詢傳回 2 和 3 的值，*scalar_expression* = ALL (子查詢) 就會評估為 FALSE，因為子查詢 (值為 3) 的某些值不符合運算式的準則。  
+## <a name="remarks"></a>備註  
+ SOME 需要正面比較 *scalar_expression* 與至少一個子查詢傳回值。 對於需要以正數來比較 *scalar_expression* 和由子查詢傳回之每個值的陳述式，請參閱 [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)。 例如，如果子查詢傳回 2 和 3 的值，*scalar_expression* = SOME (子查詢) 會針對值為 2 的 *scalar_express* 評估為 TRUE。 如果子查詢傳回 2 和 3 的值，*scalar_expression* = ALL (子查詢) 就會評估為 FALSE，因為子查詢 (值為 3) 的某些值不符合運算式準則。  
   
 ## <a name="examples"></a>範例  
   
@@ -99,7 +99,7 @@ PRINT 'FALSE' ;
 ```  
   
 ### <a name="b-running-a-practical-example"></a>B. 執行實際範例  
- 下列範例會建立預存程序，以判斷 `AdventureWorks2012` 資料庫中所指定 `SalesOrderID` 的所有組件，是否都可以在指定的天數內製造出來。 這個範例會使用子查詢，針對特定 `DaysToManufacture` 的所有元件建立一份 `SalesOrderID` 值數目的清單，然後測試是否有任何一個子查詢傳回值大於所指定的天數。 如果傳回的每個 `DaysToManufacture` 值都小於提供的數目，則條件為 TRUE，並且會列印出第一個訊息。  
+ 下列範例會建立預存程序，以判斷 `SalesOrderID` 資料庫中所指定 `AdventureWorks2012` 的所有組件，是否都可以在指定的天數內製造出來。 這個範例會使用子查詢，針對特定 `DaysToManufacture` 的所有元件建立一份 `SalesOrderID` 值數目的清單，然後測試是否有任何一個子查詢傳回值大於所指定的天數。 如果傳回的每個 `DaysToManufacture` 值都小於提供的數目，則條件為 TRUE，並且會列印出第一個訊息。  
   
 ```  
 -- Uses AdventureWorks  
