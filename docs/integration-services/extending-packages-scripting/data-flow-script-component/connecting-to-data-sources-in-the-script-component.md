@@ -13,10 +13,10 @@ ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 82ec2ddf98780a7230ccc123e3de152ad643669a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296964"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>連接到指令碼元件中的資料來源
@@ -54,7 +54,7 @@ ms.locfileid: "71296964"
 > [!IMPORTANT]  
 >  當您在指令碼元件中撰寫 Managed 程式碼時，無法呼叫傳回 Unmanaged 物件之連線管理員的 AcquireConnection 方法，例如 OLE DB 連線管理員與 Excel 連線管理員。 不過，您可以讀取這些連線管理員的 ConnectionString 屬性，而且可以透過使用來自 **System.Data.OleDb** 命名空間的 OLEDB **連接**之連接字串，直接在程式碼中連接至資料來源。  
 >   
->  如果您需要呼叫會傳回 Unmanaged 物件之連線管理員的 AcquireConnection 方法，請使用 ADO.NET 連線管理員。 當您設定 ADO.NET 連接管理員以使用 OLE DB 提供者時，它會透過使用 .NET Framework Data Provider for OLE DB 來連接。 在這種情況下，AcquireConnection 方法會傳回 **System.Data.OleDb.OleDbConnection**，而不是 Unmanaged 物件。 若要將 ADO.NET 連線管理員設定成與 Excel 資料來源搭配使用，請選取 Microsoft OLE DB Provider for Jet，指定 Excel 活頁簿，然後在 [連線管理員]  對話方塊的 [全部]  頁面上輸入 `Excel 8.0` (針對 Excel 97 和更新的版本)，作為 [擴充屬性]  的值。  
+>  如果您需要呼叫會傳回 Unmanaged 物件之連線管理員的 AcquireConnection 方法，請使用 ADO.NET 連線管理員。 當您設定 ADO.NET 連接管理員以使用 OLE DB 提供者時，它會透過使用 .NET Framework Data Provider for OLE DB 來連接。 在這種情況下，AcquireConnection 方法會傳回 **System.Data.OleDb.OleDbConnection**，而不是 Unmanaged 物件。 若要將 ADO.NET 連線管理員設定成與 Excel 資料來源搭配使用，請選取 Microsoft OLE DB Provider for Jet，指定 Excel 活頁簿，然後在 [連線管理員]`Excel 8.0` **對話方塊的 [全部]** **頁面上輸入** (針對 Excel 97 和更新的版本)，作為 [擴充屬性]  的值。  
   
  如需如何透過指令碼元件使用連線管理員的詳細資訊，請參閱[以指令碼元件建立來源](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)和[以指令碼元件建立目的地](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)。  
   

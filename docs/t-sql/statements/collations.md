@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 883256cfaad3c23133b5db520f5d9ef92f4546d3
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71271907"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
@@ -52,7 +52,7 @@ COLLATE { <collation_name> | database_default }
 
 **database_default** 使 COLLATE 子句繼承目前資料庫的定序。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 您可以在許多層級指定 COLLATE 子句。 這些選項包括：
 
@@ -160,5 +160,5 @@ Chiapas
 - [常數](../../t-sql/data-types/constants-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
-- [DECLARE@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
+- [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
 - [資料表資料類型](../../t-sql/data-types/table-transact-sql.md)

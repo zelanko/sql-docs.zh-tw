@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b4647814765225a2c1deeedd05f77bed80d7e992
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056149"
 ---
 # <a name="ddl-triggers"></a>DDL 觸發程序
@@ -111,7 +111,7 @@ GO
   
 ## <a name="related-tasks"></a>相關工作  
   
-|工作|主題|  
+|Task|主題|  
 |----------|-----------|  
 |描述如何建立、修改、刪除或停用 DDL 觸發程序。|[實作 DDL 觸發程序](../../relational-databases/triggers/implement-ddl-triggers.md)|  
 |描述如何建立 CLR DDL 觸發程序。|[建立 CLR 觸發程序](../../relational-databases/triggers/create-clr-triggers.md)|  

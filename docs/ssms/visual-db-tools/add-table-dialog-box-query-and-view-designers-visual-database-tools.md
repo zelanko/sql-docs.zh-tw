@@ -1,10 +1,7 @@
 ---
-title: 加入資料表對話方塊 (查詢和檢視表設計工具) (Visual DB Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Add Table Dialog Box (Query and View Designers)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +10,19 @@ f1_keywords:
 ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89058296254f4aae6d8e27a214416cb76c1f03f6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 167b1e86c28a56c9d3159a4e01fe337ba428e1b7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263736"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253403"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>加入資料表對話方塊 (查詢和檢視表設計工具) (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 這個對話方塊可讓您將資料表、檢視、使用者自訂函數或同義字加入查詢或檢視中。  
   
@@ -43,7 +45,7 @@ ms.locfileid: "68263736"
 **[重新整理]**  
 更新清單以包含自上次擷取清單以來對資料庫所做的任何變更。  
   
-**[加入]**  
+**加入**  
 加入選取的一或多個項目。  
   
 ## <a name="see-also"></a>另請參閱  

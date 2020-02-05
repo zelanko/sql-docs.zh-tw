@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 2ab65d61abb497c1930b94868f0a8b3433b44c95
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70212303"
 ---
 # <a name="secure-the-subscriber"></a>保護訂閱者
@@ -35,7 +35,7 @@ ms.locfileid: "70212303"
   
  若要指定提取訂閱的連接資訊，請參閱[建立提取訂閱](../../../relational-databases/replication/create-a-pull-subscription.md)。  
   
-## <a name="merge-agent"></a>[合併代理程式]  
+## <a name="merge-agent"></a>合併代理程式  
  每個合併訂閱都有其「合併代理程式」，以連接「發行者」和「訂閱者」，並更新這兩者。  
   
  若要指定發送訂閱的連接資訊，請參閱[建立發送訂閱](../../../relational-databases/replication/create-a-push-subscription.md)。  

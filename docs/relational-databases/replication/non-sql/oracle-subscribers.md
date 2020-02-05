@@ -17,10 +17,10 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a97acba6af3cb960cf4d98d26d3f8da4805822da
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907992"
 ---
 # <a name="oracle-subscribers"></a>Oracle 訂閱者
@@ -32,7 +32,7 @@ ms.locfileid: "72907992"
   
 1.  在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」上安裝並設定 Oracle 用戶端網路軟體及 Oracle OLE DB 提供者，以便「散發者」可與「Oracle 訂閱者」建立連接。 Oracle 用戶端網路軟體應為最新的可用版本。 Oracle 建議使用者安裝最新版本的用戶端軟體。 因此用戶端軟體的版本通常比資料庫軟體的版本還要新。 安裝該軟體最直接的方法是使用 Oracle Client 磁碟上的 Oracle Universal Installer。 在 Oracle Universal Installer 中，您將提供下列資訊：  
   
-    |[資訊]|Description|  
+    |資訊|描述|  
     |-----------------|-----------------|  
     |Oracle Home|這是到 Oracle 軟體之安裝目錄的路徑。 接受預設路徑 (C:\oracle\ora90 或類似路徑) 或輸入其他路徑。 如需有關 Oracle Home 的詳細資訊，請參閱本主題後面的「Oracle Home 的注意事項」。|  
     |Oracle Home 名稱|Oracle Home 路徑的別名。|  
@@ -42,7 +42,7 @@ ms.locfileid: "72907992"
   
      Oracle Universal Installer 完成之後，請使用 Net Configuration Assistant 設定網路連接性。 您必須提供四項資訊來設定網路連接性。 Oracle 資料庫管理員會在設定資料庫與接聽程式時設定網路組態，如果您沒有此一資訊，管理員應該能夠提供。 您必須執行下列工作：  
   
-    |動作|Description|  
+    |動作|描述|  
     |------------|-----------------|  
     |識別資料庫|有兩種方法可以識別資料庫。 第一種方法使用 Oracle 系統識別碼 (SID)，每個 Oracle 版本都有。 第二種方法使用服務名稱，從 Oracle 8.0 版開始提供。 這兩種方法都使用在建立資料庫時設定的值，重要的是，用戶端網路組態必須使用相同於管理員在設定資料庫接聽程式時，所使用的命名方法。|  
     |識別資料庫的網路別名|您必須指定一個用於存取 Oracle 資料庫的網路別名。 網路別名實質上是指向在建立資料庫時設定之遠端 SID 或服務名稱的指標；不同的 Oracle 版本與產品中所使用的稱呼各有不同，包括網路服務名稱 (Net Service Name) 和 TNS 別名 (TNS Alias)。 您登入時，SQL*Plus 會提示以「Host String」參數輸入這個別名。|  
@@ -104,8 +104,8 @@ ms.locfileid: "72907992"
 |**char(1-2000)**|CHAR(1-2000)|  
 |**char(2001-4000)**|VARCHAR2(2001-4000)|  
 |**char(4001-8000)**|CLOB|  
-|**date**|DATE|  
-|**datetime**|DATE|  
+|**date**|日期|  
+|**datetime**|日期|  
 |**datetime2(0-7)**|適用於 Oracle 9 和 Oracle 10 的 TIMESTAMP(7)；適用於 Oracle 8 的 VARCHAR(27)|  
 |**datetimeoffset(0-7)**|適用於 Oracle 9 和 Oracle 10 的 TIMESTAMP(7) WITH TIME ZONE；適用於 Oracle 8 的 VARCHAR(34)|  
 |**decimal(1-38, 0-38)**|NUMBER(1-38, 0-38)|  
@@ -125,10 +125,10 @@ ms.locfileid: "72907992"
 |**nvarchar(1001-4000)**|NCLOB|  
 |**nvarchar(max)**|NCLOB|  
 |**real**|real|  
-|**smalldatetime**|DATE|  
+|**smalldatetime**|日期|  
 |**smallint**|NUMBER(5,0)|  
 |**smallmoney**|NUMBER(10,4)|  
-|**sql_variant**|不適用|  
+|**sql_variant**|N/A|  
 |**sysname**|VARCHAR2(128)|  
 |**text**|CLOB|  
 |**time(0-7)**|VARCHAR(16)|  

@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 608b6cc3ee887a8d17b30a027a7669d51c8822ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929311"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (geometry 資料類型)
@@ -38,10 +38,10 @@ ms.locfileid: "67929311"
  *distance*  
  這是一個 **float**，指出形成緩衝的點與 **geometry** 執行個體相距的最大可能距離。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 SQL Server 傳回類型：**geometry**  
   
- CLR 傳回型別：**SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
 ## <a name="exceptions"></a>例外狀況  
  下列準則會擲回 **ArgumentException**。  
@@ -52,7 +52,7 @@ SQL Server 傳回類型：**geometry**
   
 -   將 **NULL** 傳遞至此方法，例如 `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  下圖顯示由這個方法傳回的 geometry 執行個體範例。  
   
  ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
@@ -62,7 +62,7 @@ SQL Server 傳回類型：**geometry**
 |distance 值|維度類型|傳回的空間類型|  
 |--------------------|---------------------|---------------------------|  
 |distance < 0|零或一維|空的 **GeometryCollection** 執行個體|  
-|distance < 0|二維或以上|具有負數緩衝的 **CurvePolygon** 或 **GeometryCollection** 執行個體。 **注意：** 負數緩衝可能會建立空白 **GeometryCollection**|  
+|distance < 0|二維或以上|具有負數緩衝的 **CurvePolygon** 或 **GeometryCollection** 執行個體。 **注意：** 負數緩衝可能會建立空的 **GeometryCollection**|  
 |distance = 0|所有維度|叫用端 **geometry** 執行個體的複本|  
 |distance > 0|所有維度|**CurvePolygon** 或 **GeometryCollection** 執行個體|  
   

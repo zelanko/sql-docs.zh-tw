@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 329fb8644219d750595ff8a9cb2ddb5a6b804e4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951227"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>原生程序中不可部分完成的區塊
@@ -126,21 +126,21 @@ ORDER BY c1
 GO  
 ```  
   
- 記憶體最佳化資料表特有的以下錯誤訊息會毀滅交易。 如果它們發生在不可部分完成的區塊範圍內，將造成交易中止：10772、41301、41302、41305、41325、41332、41333 及 41839。  
+ 記憶體最佳化資料表特有的以下錯誤訊息會毀滅交易。 如果發生在不可部分完成的區塊範圍內，將會造成交易中止：10772、41301、41302、41305、41325、41332、41333 和 41839。  
   
 ## <a name="session-settings"></a>工作階段設定  
  當編譯預存程序時，將會修復不可部分完成的區塊內的工作階段設定。 某些設定可以使用 **BEGIN ATOMIC** 來指定，而其他設定則一律固定為相同的值。  
   
  **BEGIN ATOMIC**需要以下選項：  
   
-|必要設定|Description|  
+|必要設定|描述|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|支援的值為 **SNAPSHOT**、 **REPEATABLEREAD**和 **SERIALIZABLE**。|  
 |**LANGUAGE**|判斷日期和時間格式及系統訊息。 [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 中的所有語言和別名都受到支援。|  
   
  以下是選擇性設定：  
   
-|選擇性設定|Description|  
+|選擇性設定|描述|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期格式都受到支援。 當指定時， **DATEFORMAT** 會覆寫與 **LANGUAGE**相關聯的預設日期格式。|  
 |**DATEFIRST**|當指定時， **DATEFIRST** 會覆寫與 **LANGUAGE**相關聯的預設值。|  
@@ -150,16 +150,16 @@ GO
   
 |Set 選項|不可部分完成的區塊的系統預設值|  
 |----------------|--------------------------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNING|ON|  
-|ARITHABORT|ON|  
+|ANSI_NULLS|開啟|  
+|ANSI_PADDING|開啟|  
+|ANSI_WARNING|開啟|  
+|ARITHABORT|開啟|  
 |ARITHIGNORE|OFF|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
+|CONCAT_NULL_YIELDS_NULL|開啟|  
 |IDENTITY_INSERT|OFF|  
-|NOCOUNT|ON|  
+|NOCOUNT|開啟|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|QUOTED_IDENTIFIER|開啟|  
 |ROWCOUNT|0|  
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> 未捕捉到的例外狀況會造成不可部分完成的區塊回復，但是並不會造成交易中止，除非錯誤會毀滅交易。|  

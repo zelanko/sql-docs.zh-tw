@@ -1,6 +1,6 @@
 ---
-title: 視窗對話方塊 (Microsoft 文件總管說明) | Microsoft Docs
-ms.custom: ''
+title: 視窗對話方塊 (Microsoft 文件總管說明)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 93f9f21bd681abdd95ca326e44ee4911f2e365ed
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3b909491eb6228225fe9e54390842e26e590d8dc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263407"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75240565"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>視窗對話方塊 (Microsoft 文件總管說明)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68263407"
 **路徑**  
 顯示文件的完整路徑。 一般而言，視窗並沒有路徑。  
   
-**Activate**  
+**啟用**  
 使選取的文件或工具視窗成為 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 文件總管中的使用中項目。  
   
 **儲存**  

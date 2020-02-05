@@ -11,10 +11,10 @@ ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63308395"
 ---
 # <a name="configure-the-web-portal"></a>設定入口網站
@@ -35,7 +35,7 @@ ms.locfileid: "63308395"
 
 入口網站是使用者在網頁瀏覽器中存取的 Web 應用程式。 您至少必須定義用來在瀏覽器視窗中開啟應用程式的 URL。 此 URL 包含主機名稱、通訊埠和虛擬目錄。 此 URL 的預設值包括您針對報表伺服器 Web 服務 URL 所定義的主機名稱和通訊埠值，再加上 **reports** 虛擬目錄名稱。 如果您擁有具名執行個體，此虛擬目錄就是 **reports_instance**，其中 **instance** 是您 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體的名稱。
 
-根據預設，入口網站 URL 包含唯一的虛擬目錄名稱，再加上針對在相同執行個體中執行報表伺服器 Web 服務所定義的通訊埠和主機名稱。 在大部分情況下，主機名稱就是報表伺服器電腦的網路名稱，但是它可能也是解析電腦的 IP 位址或主機標頭。 若要將入口網站設定為使用預設 URL，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定工具中的 [入口網站 URL]  頁面。
+根據預設，入口網站 URL 包含唯一的虛擬目錄名稱，再加上針對在相同執行個體中執行報表伺服器 Web 服務所定義的通訊埠和主機名稱。 在大部分情況下，主機名稱就是報表伺服器電腦的網路名稱，但是它可能也是解析電腦的 IP 位址或主機標頭。 若要將入口網站設定為使用預設 URL，請使用  **設定工具中的 [入口網站 URL]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 頁面。
 
 > [!TIP]
 > 如果您嘗試存取遠端電腦上的入口網站，但是在瀏覽器中收到連線錯誤訊息，常見的原因會是防火牆設定。 如需詳細資訊，請參閱 [設定供報表伺服器存取的防火牆](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)。
@@ -48,7 +48,7 @@ ms.locfileid: "63308395"
 
 3. 針對入口網站輸入唯一的虛擬目錄名稱。
 
-4. 按一下 **[套用]** 。
+4. 按一下 [套用]  。
 
 5. 如果您正在使用 [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 或 Windows Server 2008，可能需要進行其他步驟，才能使用入口網站。 如需詳細資訊，請參閱 [設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。
 
@@ -66,7 +66,7 @@ ms.locfileid: "63308395"
 
 3. 將它取代成報表伺服器執行個體的 URL。
 
-4. 儲存您的變更，然後關閉檔案。
+4. 儲存變更並關閉該檔案。
 
 如需組態檔的詳細資訊，請參閱[修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) 和 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。
 

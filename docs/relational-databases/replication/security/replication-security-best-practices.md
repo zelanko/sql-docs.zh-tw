@@ -16,10 +16,10 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a282ed4ce04df00a062fb1b910318125e23b1634
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078786"
 ---
 # <a name="replication-security-best-practices"></a>複寫安全性最佳做法
@@ -30,7 +30,7 @@ ms.locfileid: "68078786"
   
 -   使用業界標準方法加密複寫拓撲中各電腦之間的連接，例如虛擬私人網路 (Virtual Private Networks，VPN)、安全通訊端層 (Secure Sockets Layer，SSL) 或 IP 安全性 (IPSEC)。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。 如需有關透過網際網路使用 VPN 與 SSL 複寫資料的資訊，請參閱＜ [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)＞。  
   
-     如果使用 SSL 保護複寫拓撲中電腦之間的連接，請將每個複寫代理程式的 **-EncryptionLevel** 參數值指定為 **1** 或 **2** (建議使用 **2** 值)。 值 **1** 會指定使用加密，但代理程式不會確認 SSL 伺服器憑證是否由受信任簽發者簽署；值 **2** 則會指定對憑證進行確認。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
+     如果使用 SSL 保護複寫拓撲中電腦之間的連接，請將每個複寫代理程式的 **-EncryptionLevel** 參數值指定為 **1** 或 **2** (建議使用 **2** 值)。 值 **1** 會指定使用加密，但代理程式不會確認 SSL 伺服器憑證是否由受信任簽發者簽署；值 **2** 則會指定對憑證進行確認。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱  
   
     -   [處理複寫代理程式設定檔](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   

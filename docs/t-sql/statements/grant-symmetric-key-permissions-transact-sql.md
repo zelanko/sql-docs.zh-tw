@@ -20,10 +20,10 @@ ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a7c592af7f2971cc637c9049b8ca06a92a2f3c05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050774"
 ---
 # <a name="grant-symmetric-key-permissions-transact-sql"></a>GRANT 對稱金鑰權限 (Transact-SQL)
@@ -92,7 +92,7 @@ GRANT permission [ ,...n ]
  *Database_user_with_no_login*  
  指定不含對應伺服器層級主體的資料庫使用者。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  您可以在 [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) 目錄檢視中，看到有關對稱金鑰的資訊。  
   
  對稱金鑰是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 下表所列的可以授與之最特定和最有限的對稱金鑰權限，並列出利用隱含方式來併入這些權限的較通用權限。  

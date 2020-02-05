@@ -23,13 +23,13 @@ ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 59b44b3356a0f71074543eb35107040ff8c47982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071498"
 ---
-# <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
+# <a name="file_idex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 此函數會傳回目前資料庫中資料、記錄或全文檢索檔案之指定邏輯資料名稱的檔案識別碼 (ID)。 
@@ -46,13 +46,13 @@ FILE_IDEX ( file_name )
  *file_name*  
 類型是 **sysname** 的運算式，此運算式會傳回檔案名稱的檔案識別碼值 'FILE_IDEX'。 
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 **int**  
   
 發生錯誤時傳回 **NULL**  
   
-## <a name="remarks"></a>Remarks  
-*file_name* 對應至 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 或 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)目錄檢視 **name** 資料行中所顯示的邏輯檔案名稱。  
+## <a name="remarks"></a>備註  
+*file_name* 對應至 **sys.master_files** 或 [sys.database_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)目錄檢視 [name](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 資料行中所顯示的邏輯檔案名稱。  
   
 您可以在 SELECT 清單、WHERE 子句或支援使用運算式的任何位置使用 `FILE_IDEX`。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。  
   

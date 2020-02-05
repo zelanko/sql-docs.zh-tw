@@ -1,6 +1,6 @@
 ---
-title: 建立新方案 | Microsoft Docs
-ms.custom: ''
+title: 建立新方案
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b8f05d883896e4d027a34afb1d7849c8c9368b01
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1988a31f085619604198b889138bb8e62eb8f28b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258278"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251922"
 ---
 # <a name="create-a-new-solution"></a>建立新方案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

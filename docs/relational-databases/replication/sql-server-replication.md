@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 427367994418ea7e82288541c89b47cc8bb7ea75
-ms.sourcegitcommit: d1bc0dd1ac626ee7034a36b81554258994d72c15
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: eb45cf400b0fe8318d0bef5a99b36f20bff8ef21
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958346"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287115"
 ---
 # <a name="sql-server-replication"></a>SQL Server 複寫
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "70958346"
   
 ## <a name="publications-and-articles"></a>發行集和發行項 
   
--   [Create a Publication](publish/create-a-publication.md)    
+-   [建立發行集](publish/create-a-publication.md)    
 -   [定義發行項](publish/define-an-article.md)   
 -   [檢視和修改發行集屬性](publish/view-and-modify-publication-properties.md)   
 -   [檢視和修改發行項屬性](publish/view-and-modify-article-properties.md)    
@@ -128,12 +128,12 @@ ms.locfileid: "70958346"
 -   [設定 Oracle 發行者的交易集作業 &#40;複寫 Transact-SQL 程式設計&#41;](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
 -   [升級複寫指令碼 &#40;複寫 Transact-SQL 程式設計&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
-## <a name="monitor"></a>監視器
+## <a name="monitor"></a>監視
   
 -   [允許非管理員使用複寫監視器](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [以程式設計方式監視複寫](monitor/programmatically-monitor-replication.md)    
 -   [在散發資料庫中檢視複寫的命令和其他資訊 &#40;複寫 Transact-SQL 程式設計&#41;](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
 -   [檢視合併式發行集的衝突資訊 &#40;複寫 Transact-SQL 程式設計&#41;](view-conflict-information-for-merge-publications.md) 
--   [針對異動複寫測量延遲及驗證連線](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+-   [針對異動複寫測量延遲及驗證連接](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

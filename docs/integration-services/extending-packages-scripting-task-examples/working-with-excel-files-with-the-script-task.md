@@ -17,10 +17,10 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9386f146aee229eb4547ad54b4dd576fda1c0bfc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286579"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>以指令碼工作處理 Excel 檔案
@@ -76,7 +76,7 @@ ms.locfileid: "71286579"
   
 1.  將新指令碼工作新增至套件，並將其名稱變更為 **ExcelFileExists**。  
   
-2.  在 [指令碼工作編輯器]  的 [指令碼]  索引標籤上，按一下 [ReadOnlyVariables]  ，並使用下列其中一項方法輸入屬性值：  
+2.  在 [指令碼工作編輯器]  的 [指令碼]  索引標籤上，按一下 **ReadOnlyVariables**，並使用下列其中一項方法輸入屬性值：  
   
     -   鍵入 **ExcelFile**。  
   
@@ -253,7 +253,7 @@ public class ScriptMain
   
 1.  將新指令碼工作新增至套件，並將其名稱變更為 **GetExcelFiles**。  
   
-2.  開啟 [指令碼工作編輯器]  的 [指令碼]  索引標籤，並按一下 [ReadOnlyVariables]  ，然後使用下列其中一項方法輸入屬性值：  
+2.  開啟 [指令碼工作編輯器]  的 [指令碼]  索引標籤，並按一下 **ReadOnlyVariables**，然後使用下列其中一項方法輸入屬性值：  
   
     -   鍵入 **ExcelFolder**  
   

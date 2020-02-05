@@ -18,10 +18,10 @@ ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 57849c8d99700f61c251177c3c3195b2277163ae
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982079"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "73982079"
 
   變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中現有的資源管理員資源集區組態。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>語法  
   
@@ -68,15 +68,15 @@ ALTER RESOURCE POOL { pool_name | "default" }
 >  預先定義的工作負載群組和資源集區都會使用小寫名稱，例如 "default"。 如果是使用區分大小寫之定序的伺服器，則應該將此列入考量。 具有不區分大小寫之定序 (如 SQL_Latin1_General_CP1_CI_AS) 的伺服器會將 "default" 和 "Default" 視為相同。  
   
  MIN_CPU_PERCENT =*value*  
- 當 CPU 出現競爭時，為在資源集區中的所有要求，指定保證平均 CPU 頻寬。 *value* 是預設值為 0 的整數。 允許的 *value* 範圍從 0 至 100。  
+ 當 CPU 出現競爭時，為在資源集區中的所有要求，指定保證平均 CPU 頻寬。 *value* 是預設值為 0 的整數。 *value* 允許的範圍從 0 至 100。  
   
  MAX_CPU_PERCENT =*value*  
- 當出現 CPU 競爭時，指定所有要求在資源集區中將會接收的最大平均 CPU 頻寬。 *value* 是整數，預設值為 100。 允許的 *value* 範圍從 1 至 100。  
+ 當出現 CPU 競爭時，指定所有要求在資源集區中將會接收的最大平均 CPU 頻寬。 *value* 是整數，預設值為 100。 允許的 *value* 範圍為 1 至 100。  
   
  CAP_CPU_PERCENT =*value*  
  **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
   
- 指定資源集區中要求的目標最大 CPU 容量。 *value* 是預設值為 100 的整數。 允許的 *value* 範圍從 1 至 100。  
+ 指定資源集區中要求的目標最大 CPU 容量。 *value* 是整數，預設值為 100。 允許的 *value* 範圍為 1 至 100。  
   
 > [!NOTE]  
 >  由於 CPU 治理的統計本質，您可能會注意到偶爾出現穗狀超過 CAP_CPU_PERCENT 中指定的值。  
@@ -99,10 +99,10 @@ INNER JOIN sys.dm_os_schedulers AS sc
 ```  
   
  MIN_MEMORY_PERCENT =*value*  
- 指定為此資源集區所保留的最小記憶體數量 (不與其他資源集區共享)。 *value* 是預設值為 0 的整數。 允許的 *value* 範圍從 0 至 100。  
+ 指定為此資源集區所保留的最小記憶體數量 (不與其他資源集區共享)。 *value* 是預設值為 0 的整數。 *value* 允許的範圍從 0 至 100。  
   
  MAX_MEMORY_PERCENT =*value*  
- 指定在此資源集區中，可供要求所用的伺服器記憶體總量。 *value* 是整數，預設值為 100。 允許的 *value* 範圍從 1 至 100。  
+ 指定在此資源集區中，可供要求所用的伺服器記憶體總量。 *value* 是整數，預設值為 100。 允許的 *value* 範圍為 1 至 100。  
   
  MIN_IOPS_PER_VOLUME =*value*  
  **適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。  
@@ -116,7 +116,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
   
  如果集區的 MAX_IOPS_PER_VOLUME 設定為 0，則完全不會管制集區，且即使其他集區設定 MIN_IOPS_PER_VOLUME，該集區也會保留系統中的所有 IOPS。 在此情況下，如果您希望此集區受 IO 管制，建議您將此集區的 MAX_IOPS_PER_VOLUME 值設定為較高的數字 (例如最大值 2^31-1)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  MAX_CPU_PERCENT 和 MAX_MEMORY_PERCENT 必須分別大於或等於 MIN_CPU_PERCENT 和 MIN_MEMORY_PERCENT。  
   
  如果有可用的 CPU 容量，MAX_CPU_PERCENT 就可以使用高於 MAX_CPU_PERCENT 值的 CPU 容量。 雖然可能會有高於 CAP_CPU_PERCENT 的週期穗狀，工作負載不應該在延伸的時間期間內超過 CAP_CPU_PERCENT，即使有可用的額外 CPU 容量。  

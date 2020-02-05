@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: jaszymas
 ms.openlocfilehash: 4d7b428534462779abeb72c65b05f551bfd4b0eb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75246131"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>自主資料庫的安全性最佳做法

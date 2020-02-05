@@ -11,10 +11,10 @@ ms.assetid: 83cbdd6f-ddde-47bf-abde-36bd24272621
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5ad38c81101d983f70130bd0df5526ccba785f57
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296558"
 ---
 # <a name="catalogexecution_property_override_values"></a>catalog.execution_property_override_values 
@@ -26,7 +26,7 @@ ms.locfileid: "71296558"
 
   顯示封裝執行期間所設定的屬性覆寫值。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |property_id|**bigint**|屬性覆寫值的唯一識別碼。|  
 |execution_id|**bigint**|執行執行個體的唯一識別碼 (ID)。|  
@@ -34,7 +34,7 @@ ms.locfileid: "71296558"
 |property_value|**nvarchar(max)**|屬性的覆寫值。|  
 |sensitive|**bit**|當值為 1 時，屬性為敏感值，而且會在儲存時加密。 當值為 0 時，屬性不是敏感值，而且會儲存為純文字。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個檢視會針對使用 [執行封裝]  對話方塊之 [進階]  索引標籤中的 [屬性覆寫]  區段來覆寫屬性值的每個執行，顯示一個資料列。 屬性的路徑衍生自封裝工作的 [封裝路徑]  屬性。  
   
 ## <a name="permissions"></a>權限  

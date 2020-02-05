@@ -1,10 +1,7 @@
 ---
-title: 選取 SQL Server Agent 服務的帳戶 | Microsoft Docs
-ms.custom: ''
-ms.date: 05/04/2017
+title: 選取 SQL Server Agent 服務的帳戶
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,15 +18,20 @@ helpviewer_keywords:
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 05/04/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a1398e56ccb4ade7504d20708fda3c4bdec9d34b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 86ee07ffd09ab72fdce4bde1a247e37328c4b626
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811547"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253226"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>選取 SQL Server Agent 服務的帳戶
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -39,7 +41,7 @@ ms.locfileid: "68811547"
   
 -   **內建帳戶**。 您可從下列內建 Windows 服務帳戶的清單中進行選擇：  
   
-    -   **本機系統** 帳戶。 這個帳戶的名稱是 NT AUTHORITY\System。 它是功能強大的帳戶，可不受限制地存取所有本機系統資源。 這個帳戶是本機電腦上的 Windows **Administrators** 群組成員，因此也是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **系統管理員 (sysadmin)** 固定伺服器角色的成員。  
+    -   **本機系統** 帳戶。 這個帳戶的名稱是 NT AUTHORITY\System。 它是功能強大的帳戶，可不受限制地存取所有本機系統資源。 It is a member of the Windows **Administrators** group on the local computer, and is therefore a member of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** fixed server role  
   
         > [!IMPORTANT]  
         > [本機系統帳戶]  選項僅用於回溯相容性。 本機系統帳戶具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 不需要的權限。 避免以本機系統帳戶身分執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent。 為了改善安全性，請搭配使用 Windows 網域帳戶與下節「Windows 網域帳戶權限」所列的權限。  
@@ -89,24 +91,24 @@ ms.locfileid: "68811547"
 |本機系統帳戶 (NT AUTHORITY\System)|支援<br /><br />請參閱下列限制 2。|不支援|支援<br /><br />請參閱下列限制 2。|  
 |本機服務帳戶 (NT AUTHORITY\LocalService)|不支援|不支援|不支援|  
   
-### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>限制 1：針對多伺服器管理使用非管理帳戶  
-將目標伺服器登錄到主要伺服器可能失敗，並出現下列錯誤訊息：「登錄作業失敗。」  
+### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>限制 1：對於多伺服器管理使用非管理帳戶  
+在主要伺服器上編列目標伺服器可能失敗，並出現下列錯誤訊息：「編列作業失敗」。  
   
 若要解決此錯誤，請重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務。 如需詳細資訊，請參閱 [启动、停止、暂停、继续、重启 SQL Server 服务](https://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6)。  
   
-### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>限制 2：針對多伺服器管理使用本機系統帳戶  
+### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>限制 2：對於多伺服器管理使用本機系統帳戶  
 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務在本機系統帳戶下執行時支援多伺服器管理，但前提是主要伺服器和目標伺服器都必須位於相同電腦上。 如果您使用此組態，則當您在主要伺服器上編列目標伺服器時會傳回下列訊息：  
   
 「請確定 <目標伺服器電腦名稱>  的代理程式啟動帳戶有權限以 targetServer 的身分登入」。  
   
 您可以忽略此參考訊息。 編列作業應該順利完成。 如需詳細資訊，請參閱 [建立多伺服器環境](../../ssms/agent/create-a-multiserver-environment.md)。  
   
-### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>限制 3：在網路服務帳戶為 SQL Server 使用者時使用它  
+### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>限制 3：若為 SQL Server 使用者，則使用網路服務帳戶  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果您是在網路服務帳戶之下執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務，而且已明確授與網路服務帳戶存取權限，以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者的身分登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，則 Agent 可能無法啟動。  
   
 若要解決此問題，請將執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦重新開機。 這個動作只需要做一次。  
   
-### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>限制 4：當 SQL Server Reporting Services 在相同電腦上執行時，使用網路服務帳戶  
+### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>限制 4：當 SQL Server Reporting Services 在相同電腦上執行時，則使用網路服務帳戶  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果您是在網路服務帳戶之下執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務，且 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 也在相同電腦上執行，則 Agent 可能無法啟動。  
   
 若要解決此問題，請將執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦重新開機，然後重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務。 這個動作只需要做一次。  
@@ -118,7 +120,7 @@ ms.locfileid: "68811547"
   
 **若要指定 SQL Server Agent 的郵件設定檔**  
   
--   [操作說明：設定 SQL Server Agent Mail 使用 Database Mail (SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [How to: Configure SQL Server Agent Mail to Use Database Mail](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
 > [!NOTE]  
 > 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 必須在啟動作業系統時啟動。  
