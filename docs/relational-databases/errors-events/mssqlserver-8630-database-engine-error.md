@@ -12,13 +12,13 @@ ms.assetid: 45a9d084-b5ad-435b-ac19-5f4352515817
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7497dc60af7dc2be1653997ef8bfdd9b8ea62f38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67944730"
 ---
-# <a name="mssqlserver8630"></a>MSSQLSERVER_8630
+# <a name="mssqlserver_8630"></a>MSSQLSERVER_8630
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -30,7 +30,7 @@ ms.locfileid: "67944730"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|EXECUTION_ERR|  
-|訊息文字|內部查詢處理器錯誤:查詢處理器執行期間發現意外的錯誤。|  
+|訊息文字|內部查詢處理器錯誤: 查詢處理器執行期間發現意外的錯誤。|  
   
 ## <a name="explanation"></a>說明  
 內部查詢處理錯誤。  

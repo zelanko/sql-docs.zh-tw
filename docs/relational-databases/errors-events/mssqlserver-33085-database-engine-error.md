@@ -12,13 +12,13 @@ ms.assetid: c27b8d1d-668a-4ba8-8b61-25a5ebbc5485
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6eb560fb30d71ba16a153b3101c6f85a2194ca3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908442"
 ---
-# <a name="mssqlserver33085"></a>MSSQLSERVER_33085
+# <a name="mssqlserver_33085"></a>MSSQLSERVER_33085
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -35,7 +35,7 @@ ms.locfileid: "67908442"
 ## <a name="explanation"></a>說明  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法使用錯誤訊息中所列的密碼編譯提供者。 此密碼編譯提供者不支援所需的方法。 錯誤的狀態表示找不到哪一個方法。  
   
-|State|Description|  
+|State|描述|  
 |---------|---------------|  
 |1|SqlCryptInitializeProvider|  
 |2|SqlCryptFreeProvider|  

@@ -11,10 +11,10 @@ ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3bc559bce60b4b179cd6e5a69846e1caa9b4668b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75257958"
 ---
 # <a name="filestream-functions-stored-procedures-and-views"></a>FILESTREAM、函數、預存程序和檢視

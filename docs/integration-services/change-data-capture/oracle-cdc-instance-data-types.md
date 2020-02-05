@@ -11,10 +11,10 @@ ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5dc1ae24d927247a1af61ff974a535b6bdb48502
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298665"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Oracle CDC 執行個體資料類型
@@ -32,7 +32,7 @@ ms.locfileid: "71298665"
 |BINARY_FLOAT|real|  
 |BINARY_DOUBLE|FLOAT|  
 |CHAR|NVARCHAR|  
-|DATE|DATETIME|  
+|日期|DATETIME|  
 |FLOAT|FLOAT|  
 |INT|NUMERIC (38)|  
 |INTERVAL|DATETIME|  
@@ -41,7 +41,7 @@ ms.locfileid: "71298665"
 |NAVARCHAR2|NVARCHAR|  
 |RAW|VARBINARY|  
 |real|FLOAT|  
-|TIMESTAMP|DATETIME2|  
+|timestamp|DATETIME2|  
 |TIMESTAMP WITH TIME ZONE|VARCHAR (37)|  
 |TIMESTAMP WITH LOCAL TIME ZONE|VARCHAR (37)|  
 |VARCHAR2|VARCHAR|  

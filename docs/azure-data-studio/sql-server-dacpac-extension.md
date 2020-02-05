@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: d33f43f4232e7a9a62365c5bb438c91339f4fd47
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73532423"
 ---
 # <a name="sql-server-dacpac-extension"></a>SQL Server dacpac 延伸模組
@@ -22,7 +22,7 @@ ms.locfileid: "73532423"
 [資料層應用程式精靈]    提供部署和解壓縮 .dacpac 檔案，以及匯入和匯出 .bacpac 檔案的易於使用體驗。
 
 
-## <a name="features"></a>功能
+## <a name="features"></a>特性
 
 * 將 dacpac 部署至 SQL Server 執行個體
 * 將 SQL Server 執行個體解壓縮至 dacpac

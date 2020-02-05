@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
-ms.date: 10/15/2019
-ms.openlocfilehash: 9f6be7cbd673a98f8e8934860b0e26d427acac06
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.date: 01/15/2020
+ms.openlocfilehash: 7cf4f98a4cb8d191cebd9b361fd63217b9cd2228
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241751"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "75956491"
 ---
 # <a name="what-is-azure-data-studio"></a>什麼是 Azure Data Studio？
 
@@ -33,7 +33,7 @@ Azure Data Studio 及其提供者的原始程式碼根據原始程式碼 EULA �
 
 ## <a name="smart-sql-code-snippets"></a>智慧型 SQL 程式碼片段
 
-SQL 程式碼片段會產生適當的 SQL 語法，以便建立資料庫、資料表、檢視、預存程序、使用者、登入、角色等，以及更新現有的資料庫物件。 使用智慧型程式碼片段，快速建立資料庫的複本以供進行開發或測試，以及產生和執行 CREATE 和 INSERT 指令碼。
+SQL 程式碼片段會產生適當的 SQL 語法，來建立資料庫、資料表、檢視、預存程序、使用者、登入、角色，以及更新現有的資料庫物件。 使用智慧型程式碼片段，快速建立資料庫的複本以供進行開發或測試，以及產生和執行 CREATE 和 INSERT 指令碼。
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 也提供建立自訂 SQL 程式碼片段的功能。 若要深入了解，請參閱[建立和使用程式碼片段](code-snippets.md)。
 
@@ -95,9 +95,9 @@ SQL 程式碼片段會產生適當的 SQL 語法，以便建立資料庫、資�
 |佈景主題|是||
 |深色模式|是||
 |Azure 資源總管|預覽||
-|產生指令碼精靈||是|
-|匯入\匯出 DACPAC||是|
-|物件屬性||是|
+|產生指令碼精靈||預覽|
+|匯入/匯出 DACPAC||是|
+|物件屬性||預覽|
 |資料表設計工具||是|
 
 ### <a name="query-editor"></a>查詢編輯器
@@ -131,9 +131,9 @@ SQL 程式碼片段會產生適當的 SQL 語法，以便建立資料庫、資�
 
 |功能|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|建立外部資料表精靈|預覽||
-|HDFS 整合|預覽||
-|Notebooks|預覽||
+|建立外部資料表精靈|是||
+|HDFS 整合|是||
+|Notebooks|是||
 
 ### <a name="database-administration"></a>資料庫管理
 
@@ -147,7 +147,7 @@ SQL 程式碼片段會產生適當的 SQL 語法，以便建立資料庫、資�
 |永遠開啟||是|
 |Always Encrypted||是|
 |複製資料精靈||是|
-|資料調整建議程式||是|
+|Database Engine Tuning Advisor||是|
 |錯誤記錄檔檢視器||是|
 |維護計畫||是|
 |多伺服器查詢||是|

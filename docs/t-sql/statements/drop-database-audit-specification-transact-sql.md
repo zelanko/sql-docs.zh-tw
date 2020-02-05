@@ -19,10 +19,10 @@ ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 828ff285606fcd1f0daf1c7dd2343a1c3cfed9e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898179"
 ---
 # <a name="drop-database-audit-specification-transact-sql"></a>DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
@@ -44,7 +44,7 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
  *audit_specification_name*  
  現有稽核規格物件的名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  DROP DATABASE AUDIT SPECIFICATION 會移除稽核規格的中繼資料，但不會移除 DROP 命令發出前所收集的稽核資料。 您必須使用 `ALTER DATABASE AUDIT SPECIFICATION` 將資料庫稽核規格的狀態設定為 OFF，然後才可以將它卸除。  
   
 ## <a name="permissions"></a>權限  

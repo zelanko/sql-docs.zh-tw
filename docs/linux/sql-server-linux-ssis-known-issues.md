@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032236"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Linux 上的 SSIS 限制和已知問題
@@ -25,12 +25,12 @@ ms.locfileid: "68032236"
 
 Linux 上的此版本 SSIS 不支援下列功能：
   - SSIS 類別目錄資料庫
-  - SQL Agent 的排程套件執行
+  - SQL Agent 排定的套件執行
   - Windows 驗證
   - 協力廠商元件
   - 異動資料擷取 (CDC)
   - SSIS Scale Out
-  - Azure Feature Pack for SSIS
+  - 適用於 SSIS 的 Azure Feature Pack
   - Hadoop 和 HDFS 支援
   - Microsoft Connector for SAP BW
 
@@ -53,7 +53,7 @@ Linux 支援下列內建 Integration Services 元件。 其中有些元件對 Li
 
 ## <a name="control-flow-tasks-supported-with-limitations"></a>有限支援的控制流程工作
 
-| 工作 | 限制 |
+| Task | 限制 |
 |------------|---|
 | 執行處理工作 | 僅支援同處理序模式。 |
 | 檔案系統工作 | 不支援「移動目錄」  *和「設定檔案屬性」* 動作。 |
@@ -114,13 +114,13 @@ Linux 支援下列維護計畫工作：
 - 模糊查閱
 - 匯入資料行
 - 查閱
-- 合併式
+- 合併
 - 合併聯結
 - 多點傳送
 - 樞紐
 - 資料列計數
 - 緩時變維度
-- 排序
+- Sort
 - 詞彙查閱
 - 聯集全部
 - 取消樞紐

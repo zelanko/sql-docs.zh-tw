@@ -13,10 +13,10 @@ ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 33d2f34f9f2ea63f23c570c0b4ada95906649215
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091530"
 ---
 # <a name="move-a-filestream-enabled-database"></a>移動啟用 FILESTREAM 功能的資料庫
@@ -46,7 +46,7 @@ ms.locfileid: "68091530"
     GO  
     ```  
   
-4.  建立 `C:\moved_location` 資料夾，然後將步驟 2 所列的檔案和資料夾移到這個資料夾中。  
+4.  建立 `C:\moved_location`資料夾，然後將步驟 2 所列的檔案和資料夾移到這個資料夾中。  
   
 5.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼複製到 [查詢編輯器]，然後按一下 [執行]  。 此指令碼會將 `Archive` 資料庫設定為線上。  
   

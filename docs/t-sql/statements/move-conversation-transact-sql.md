@@ -24,10 +24,10 @@ ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2e4deadd4f48457557019ac02337133466b3df33
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211343"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
@@ -53,11 +53,11 @@ MOVE CONVERSATION conversation_handle
  TO *conversation_group_id*  
  這是一個變數或常數，其中包含要移動交談之交談群組的識別碼。 *conversation_group_id* 必須是類型 **uniqueidentifier**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  MOVE CONVERSATION 陳述式會將 *conversation_handle* 指定的交談移到 *conversation_group_id* 識別的交談群組。 對話只能在與同一佇列相關聯的交談群組之間重新導向。  
   
 > [!IMPORTANT]  
->  如果 MOVE CONVERSATION 陳述式不是批次或預存程序中的第一個陳述式，就必須利用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結束字元 (也就是分號 **;** ) 來結束前一個陳述式。  
+>  如果 MOVE CONVERSATION 陳述式不是批次或預存程序中的第一個陳述式，就必須利用 **陳述式結束字元 (也就是分號**;[!INCLUDE[tsql](../../includes/tsql-md.md)]) 來結束前一個陳述式。  
   
  MOVE CONVERSATION 陳述式會鎖定與 *conversation_handle* 相關聯的交談群組，以及 *conversation_group_id* 所指定的交談群組，直到包含該陳述式的交易認可或回復為止。  
   

@@ -11,10 +11,10 @@ ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2a8830fbf4b9418f80cf07c7586e71689001d455
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109610"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>使用記憶體最佳化資料表的需求
@@ -43,7 +43,7 @@ ms.locfileid: "68109610"
   
      若要安裝報表產生功能 ([判斷是否應將資料表或預存程序移植到記憶體內部 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 以及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管來管理記憶體內部 OLTP)，請 [下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。   
   
-## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>使用 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的重要注意事項  
+## <a name="important-notes-on-using-includehek_2includeshek-2-mdmd"></a>使用 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的重要注意事項  
   
 -   自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，記憶體最佳化資料表除了可用的記憶體之外，沒有任何大小限制。 
 
@@ -52,7 +52,7 @@ ms.locfileid: "68109610"
 > [!NOTE]
 > 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 起，Standard 和 Express 版本皆支援記憶體內部 OLTP，但會用到在指定資料庫用於記憶體最佳化資料表的記憶體數量的配額。 Standard 版本是每個資料庫 32 GB，Express 版本是每個資料庫 352 MB。 
   
--   如果您建立一或多個具有記憶體最佳化資料表的資料庫，即應將 *SE_MANAGE_VOLUME_NAME* 使用者權利授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動帳戶，以啟用檔案立即初始化 (IFI)。 如果沒有 IFI，記憶體最佳化儲存體檔案 (資料與差異檔案) 將會在建立時進行初始化，而如此可能會對工作負載的效能產生負面的影響。 如需 IFI 的詳細資訊及啟用方式，請參閱[資料庫檔案立即初始化](../../relational-databases/databases/database-instant-file-initialization.md)。
+-   如果您建立一或多個具有記憶體最佳化資料表的資料庫，即應將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SE_MANAGE_VOLUME_NAME*使用者權利授與* 服務啟動帳戶，以啟用檔案立即初始化 (IFI)。 如果沒有 IFI，記憶體最佳化儲存體檔案 (資料與差異檔案) 將會在建立時進行初始化，而如此可能會對工作負載的效能產生負面的影響。 如需 IFI 的詳細資訊及啟用方式，請參閱[資料庫檔案立即初始化](../../relational-databases/databases/database-instant-file-initialization.md)。
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

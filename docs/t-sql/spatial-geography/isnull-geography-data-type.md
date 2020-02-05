@@ -17,10 +17,10 @@ ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: aaae21e3a47465011f6644901d0ac886da6846f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930220"
 ---
 # <a name="isnull-geography-data-type"></a>IsNull (geography 資料類型)
@@ -35,12 +35,12 @@ ms.locfileid: "67930220"
 .IsNull  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型：**bit**  
   
  CLR 類型：**SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  `IsNull` 可用來測試 **geography** 執行個體是否為 null。 這會產生令人混淆的結果，當此例項不是 Null 時傳回 0，但是如果此例項為 Null 則傳回 Null。  
   
  這個方法主要是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基礎結構所使用；建議您使用 T-SQL 述詞 IS NULL 來測試 **geography** 執行個體是否為 Null。 如需 T-SQL 述詞 IS NULL 的詳細資訊，請參閱 [IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md)。  

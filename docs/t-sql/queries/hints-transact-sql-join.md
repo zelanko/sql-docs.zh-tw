@@ -23,10 +23,10 @@ ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f6f89e973d5f021dbd48a1bc7fc8234f9c9b6a89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902019"
 ---
 # <a name="hints-transact-sql---join"></a>提示 (Transact-SQL) - Join
@@ -37,7 +37,7 @@ ms.locfileid: "67902019"
 > [!CAUTION]  
 >  由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具通常會選取最好的查詢執行計畫，因此，我們建議資深的開發人員和資料庫管理員只將提示當做最後的解決辦法。
   
- **適用於：**  
+ **適用範圍：**  
   
  [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "67902019"
   
  REMOTE 只能用於 INNER JOIN 作業。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  聯結提示是在查詢的 FROM 子句中指定。 聯結提示會強制執行兩份資料表之間的聯結策略。 如果指定了兩份資料表的聯結提示，查詢最佳化工具會根據 ON 關鍵字的位置，自動強制執行查詢中所有聯結的資料表之聯結順序。 當使用不含 ON 子句的 CROSS JOIN 時，您可以用括號來指示聯結順序。  
   
 ## <a name="examples"></a>範例  

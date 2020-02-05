@@ -14,10 +14,10 @@ ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa9599ae0a4c3a38a409131b3f9f344bd478e15b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294305"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight 建立叢集工作
@@ -46,10 +46,10 @@ ms.locfileid: "71294305"
 |ResourceGroup|指定 HDInsight 叢集日後建立所在的 Azure 資源群組。|
 |Location|指定 HDInsight 叢集的位置。 叢集必須建立在和 Azure 儲存體帳戶指定位置相同的位置。|  
 |ClusterName|指定要建立的 HDInsight 叢集名稱。|  
-|ClusterSize|指定要在叢集中建立的節點數目。|  
+|clusterSize|指定要在叢集中建立的節點數目。|  
 |BlobContainer|指定要與 HDInsight 叢集建立關聯的預設儲存體容器名稱。|  
 |UserName|指定連線至 HDInsight 叢集要使用的使用者名稱。|  
-|[密碼]|指定連線至 HDInsight 叢集要使用的密碼。|
+|密碼|指定連線至 HDInsight 叢集要使用的密碼。|
 |SshUserName|指定從遠端存取使用 SSH 的 HDInsight 叢集時所用的使用者名稱。|
 |SshPassword|指定從遠端存取使用 SSH 的 HDInsight 叢集時所用的密碼。|
 |FailIfExists|指定若叢集已存在則工作是否會失敗。|  

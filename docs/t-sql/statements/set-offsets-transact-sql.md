@@ -23,10 +23,10 @@ ms.assetid: c7bcc697-0930-4630-acae-d8ccbfa4414c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 93c00a24ee8b5436b3f3b1869c9ea41b633560b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68008928"
 ---
 # <a name="set-offsets-transact-sql"></a>SET OFFSETS (Transact-SQL)
@@ -50,7 +50,7 @@ SET OFFSETS keyword_list { ON | OFF }
  *keyword_list*  
  這是一份 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建構清單 (以逗號分隔)，其中包括 SELECT、FROM、ORDER、TABLE、PROCEDURE、STATEMENT、PARAM 和 EXECUTE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  只有在 DB-Library 應用程式中，才會使用 SET OFFSETS。  
   
  SET OFFSETS 的設定是在剖析階段進行設定，而不是在執行階段進行設定。 在剖析階段進行設定意謂著，如果 SET 陳述式在批次或預存程序中，不論程式碼是否實際執行到這一點，設定都會生效；SET 陳述式會在執行任何陳述式之前生效。 例如，即使 SET 陳述式是在永遠不會執行到的 IF...ELSE 陳述式區塊中，SET 陳述式仍會生效，因為會剖析 IF...ELSE 陳述式區塊。  

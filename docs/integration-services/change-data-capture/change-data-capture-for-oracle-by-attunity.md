@@ -11,10 +11,10 @@ ms.assetid: 520dc05b-83de-4668-8d27-07ee0ef08185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ab96499d8c4185e14481e18518cad514992b2e96
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294814"
 ---
 # <a name="change-data-capture-for-oracle-by-attunity"></a>Change Data Capture for Oracle by Attunity

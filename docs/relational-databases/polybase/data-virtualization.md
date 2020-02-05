@@ -11,10 +11,10 @@ ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
 ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75227507"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>搭配使用外部資料表精靈與關聯式資料來源
@@ -28,7 +28,7 @@ ms.locfileid: "75227507"
 
 ## <a name="start-the-external-table-wizard"></a>啟動外部資料表精靈
 
-以使用 [**azdata cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints) 命令取得的 **sql-server-master** 端點 IP 位址/連接埠號碼來連線到主要執行個體。 展開 [物件總管] 中的 [資料庫]  節點。 然後選取您想要將資料從現有 SQL Server 執行個體虛擬化到其中的其中一個資料庫。 以滑鼠右鍵按一下資料庫，然後選取 [建立外部資料表]  以啟動 [虛擬化資料精靈]。 您也可以從命令選擇區啟動 [虛擬化資料精靈]。 使用 Ctrl+Shift+P (在 Windows 中) 或 Cmd+Shift+P (在 Mac 中)。
+以使用  azdata cluster endpoints list[**命令取得的**sql-server-master](../../big-data-cluster/deployment-guidance.md#endpoints) 端點 IP 位址/連接埠號碼來連線到主要執行個體。 展開 [物件總管] 中的 [資料庫]  節點。 然後選取您想要將資料從現有 SQL Server 執行個體虛擬化到其中的其中一個資料庫。 以滑鼠右鍵按一下資料庫，然後選取 [建立外部資料表]  以啟動 [虛擬化資料精靈]。 您也可以從命令選擇區啟動 [虛擬化資料精靈]。 使用 Ctrl+Shift+P (在 Windows 中) 或 Cmd+Shift+P (在 Mac 中)。
 
 ![虛擬化資料精靈](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>選取資料來源

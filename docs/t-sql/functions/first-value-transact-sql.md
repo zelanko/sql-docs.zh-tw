@@ -20,13 +20,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d5954a1b090be1749c07c09a83d4c2cfbf441f6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071377"
 ---
-# <a name="firstvalue-transact-sql"></a>FIRST_VALUE (Transact-SQL)
+# <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   傳回 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中排序值集的第一個值。  
@@ -48,7 +48,7 @@ FIRST_VALUE ( [scalar_expression ] )
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
  *partition_by_clause* 會將 FROM 子句產生的結果集分割成函數所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause* 可決定執行作業的邏輯順序。 *order_by_clause* 為必要項目。 *rows_range_clause* 會指定起始點及結束點，以進一步限制分割區中的資料列數。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  為與 *scalar_expression* 相同的類型。  
   
 ## <a name="general-remarks"></a>一般備註  
@@ -56,7 +56,7 @@ FIRST_VALUE ( [scalar_expression ] )
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-firstvalue-over-a-query-result-set"></a>A. 針對查詢結果集使用 FIRST_VALUE  
+### <a name="a-using-first_value-over-a-query-result-set"></a>A. 針對查詢結果集使用 FIRST_VALUE  
  下列範例使用 FIRST_VALUE 傳回給定產品類別目錄中最便宜產品的名稱。  
   
 ```  
@@ -88,7 +88,7 @@ HL Mountain Tire        35.00                 Patch Kit/8 Patches
   
 ```  
   
-### <a name="b-using-firstvalue-over-partitions"></a>B. 針對整個分割區使用 FIRST_VALUE  
+### <a name="b-using-first_value-over-partitions"></a>B. 針對整個分割區使用 FIRST_VALUE  
  下列範例使用 FIRST_VALUE 傳回相同職稱的員工中，休假時數最少的員工。 PARTITION BY 子句會依職稱分割員工，而 FIRST_VALUE 函數會個別套用至每個分割區。 OVER 子句中指定的 ORDER BY 子句，可決定 FIRST_VALUE 函數套用至每個分割區中之資料列的邏輯順序。 ROWS UNBOUNDED PRECEDING 子句會將視窗起點指定為每個分割區的第一列。  
   
 ```  

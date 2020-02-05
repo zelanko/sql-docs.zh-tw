@@ -26,10 +26,10 @@ ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b71c6f867bcc03b220b99ac1e28e930dbe8ea89d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907201"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>比較具類型的 XML 與不具類型的 XML
@@ -64,7 +64,7 @@ ms.locfileid: "72907201"
  具類型的 XML 資料行、參數及變數可儲存 XML 文件或內容。 但是您必須在宣告時，用旗標來指定您是要儲存文件還是內容。 此外，您也必須提供 XML 結構描述的集合。 如果每個 XML 執行個體都只有一個最上層元素，請指定 DOCUMENT。 否則，請使用 CONTENT。 查詢編譯器會在查詢編譯期間，於類型檢查中使用 DOCUMENT 旗標，以推斷單一最上層元素。  
   
 ## <a name="creating-typed-xml"></a>建立具類型的 XML  
- 您必須先使用 [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 註冊 XML 結構描述集合之後，才能夠建立具類型的 **XML** 變數、參數或資料行。 然後，您可以將 XML 結構描述集合與 **XML** 資料類型的變數、參數或資料行產生關聯。  
+ 您必須先使用 **CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;** 註冊 XML 結構描述集合之後，才能夠建立具類型的 [XML](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 變數、參數或資料行。 然後，您可以將 XML 結構描述集合與 **XML** 資料類型的變數、參數或資料行產生關聯。  
   
  在下列範例中，會使用兩段式命名慣例來指定 XML 結構描述集合名稱。 第一個部分是結構描述名稱，而第二個部分是 XML 結構描述集合名稱。  
   
@@ -106,7 +106,7 @@ AS
   
  在資料類型階層中， **XML** 資料類型會出現在 **sql_variant** 和使用者定義類型的下面，但會出現在任何內建類型的上面。  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>範例：指定 Facet 來約束具類型的 xml 資料行  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>範例：指定 Facet 來約束 xml 類型的資料行  
  對於具類型的 **XML** 資料行而言，您可以約束資料行，讓儲存在其中的每個執行個體只能有單一的最上層元素。 作法是，在建立資料表時指定選擇性的 `DOCUMENT` Facet，如下列範例所示：  
   
 ```  

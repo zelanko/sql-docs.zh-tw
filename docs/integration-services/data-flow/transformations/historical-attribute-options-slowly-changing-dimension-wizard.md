@@ -13,10 +13,10 @@ ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4b06f56346e8e17fbdb9284dded2bfc154b9ae1a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297921"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>記錄屬性選項 (緩時變維度精靈)
@@ -32,7 +32,7 @@ ms.locfileid: "71297921"
  **使用單一資料行顯示目前與逾期記錄**  
  如果您選擇使用單一資料行來記錄記錄屬性的狀態，則可以使用下列選項：  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
 |**指出目前記錄的資料行**|選取要指出目前記錄的資料行。|  
 |**目前值**|使用 [True]  或 [目前]  來顯示記錄是否為目前的。|  
@@ -41,7 +41,7 @@ ms.locfileid: "71297921"
  **使用開始和結束日期以識別目前與逾期記錄**  
  此選項的維度資料表必須包含日期資料行。 如果您選擇依開始和結束日期顯示記錄屬性，則可以使用下列選項：  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
 |**開始日期資料行**|選取維度資料表中的資料行以包含開始日期。|  
 |**結束日期資料行**|選取維度資料表中的資料行以包含結束日期。|  

@@ -14,10 +14,10 @@ ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a50fd15830d3509cd086ad4b62938658e1866494
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297680"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING (SSIS 運算式)
@@ -41,7 +41,7 @@ CEILING(numeric_expression)
 ## <a name="result-types"></a>結果類型  
  提交至函數之數值運算式的資料類型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果引數為 Null，則 CEILING 會傳回 Null 結果。  
   
 ## <a name="expression-examples"></a>運算式範例  

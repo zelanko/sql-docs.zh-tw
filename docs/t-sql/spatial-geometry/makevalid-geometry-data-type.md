@@ -18,10 +18,10 @@ ms.assetid: 38673010-ab77-4ebb-9c4d-b26b79e3b7ea
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9c613a95ea3bee42d51ac1805ff65281fa96ec33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101193"
 ---
 # <a name="makevalid-geometry-data-type"></a>MakeValid (geometry 資料類型)
@@ -36,12 +36,12 @@ ms.locfileid: "68101193"
 .MakeValid ()  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回型別：**SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個方法可能會造成 **geometry** 執行個體的類型變更，以及 **geometry** 執行個體的點稍微偏移。  
   
 ## <a name="examples"></a>範例  

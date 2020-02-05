@@ -13,10 +13,10 @@ ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 3b408951b0a1f32bda0920260aae18ab93350fdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986721"
 ---
 # <a name="sql-server-catalog-metadata-object"></a>SQL Server, Catalog Metadata Object
@@ -26,7 +26,7 @@ ms.locfileid: "67986721"
 下表描述 SQL Server **Catalog Metadata** 效能物件。
 
 
-|**SQL Server Catalog Metadata 計數器**|Description|  
+|**SQL Server Catalog Metadata 計數器**|描述|  
 |-------------|-----------------|  
 |**Cache Entries Count**|目錄中繼資料快取中的項目數。|
 |**Cache Entries Pinned Count**|已釘選的目錄中繼資料快取項目數。|

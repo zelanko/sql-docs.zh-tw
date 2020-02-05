@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.openlocfilehash: 5abd2db590a89350f45497d7f94b81940a0ec5bc
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065147"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>在 Linux 上建立及執行 SQL Server Agent 作業
@@ -34,7 +34,7 @@ SQL Server 作業被用來在 SQL Server 資料庫中定期執行相同的命令
 必須擁有下列先決條件，才能完成本教學課程：
 
 * 具有下列先決條件的 Linux 電腦：
-  * 具有命令列工具的 SQL Server ([RHEL](quickstart-install-connect-red-hat.md)、、[SLES](quickstart-install-connect-suse.md) 或 [Ubuntu](quickstart-install-connect-ubuntu.md))。
+  * 具有命令列工具的 SQL Server ([RHEL](quickstart-install-connect-red-hat.md)、[SLES](quickstart-install-connect-suse.md) 或 [Ubuntu](quickstart-install-connect-ubuntu.md))。
 
 下列先決條件為選擇性：
 
@@ -187,7 +187,7 @@ SQL Server 作業被用來在 SQL Server 資料庫中定期執行相同的命令
 
    <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-9.png" alt="Start the SQL Server Agent job" style="width: 550px;"/>
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 
 在本教學課程中，您已了解如何：
 

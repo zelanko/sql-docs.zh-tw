@@ -16,10 +16,10 @@ ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b625b23dc45a3a5ed9abc00f0068ed3e7fbfeb58
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297444"
 ---
 # <a name="operators-ssis-expression"></a>運算子 (SSIS 運算式)
@@ -31,7 +31,7 @@ ms.locfileid: "71297444"
   
  下表列出本節中運算子的相關主題。  
   
-|運算子|Description|  
+|運算子|描述|  
 |--------------|-----------------|  
 |[轉換 &#40;SSIS 運算式&#41;](../../integration-services/expressions/cast-ssis-expression.md)|將運算式從一種資料類型轉換成不同資料類型。|  
 |[&#40;&#41; &#40;括孤&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/parentheses-ssis-expression.md)|識別運算式的評估順序。|  

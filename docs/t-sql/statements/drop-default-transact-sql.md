@@ -19,10 +19,10 @@ ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 885336e48d7b8820ac7c1015be6d770b851978af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898082"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
@@ -53,7 +53,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
  *default_name*  
  這是現有預設值的名稱。 若要查看存在的預設清單，請執行 **sp_help**。 預設必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 您可以選擇性地指定預設結構描述名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  在卸除預設之前，如果預設目前繫結到資料行或別名資料類型，請執行 **sp_unbindefault** 來解除預設的繫結。  
   
  在從允許 Null 值的資料行中卸除預設值之後，當加入資料列且未明確提供值時，會在這個位置插入 NULL。 從 NOT NULL 資料行中卸除預設值之後，當加入資料列且未明確提供值時，會傳回錯誤訊息。 稍後，會做為一般 INSERT 陳述式行為的一部份而加入這些資料列。  

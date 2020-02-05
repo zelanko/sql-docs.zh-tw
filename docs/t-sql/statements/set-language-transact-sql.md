@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ac79430a87cccb7b67ce81a3cb6ca9b05d0a04db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67928939"
 ---
 # <a name="set-language-transact-sql"></a>SET LANGUAGE (Transact-SQL)
@@ -48,7 +48,7 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
  [**N**] **'** _language_ **'**  |  **@** _language\_var_  
  這是符合 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 中所儲存的語言名稱。 這個引數可以是 Unicode 或轉換成 Unicode 的 DBCS。 若要用 Unicode 來指定語言，請使用 **N'** _language_ **'** 。 如果指定為變數，變數必須是 **sysname**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  SET LANGUAGE 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
   
  SET LANGUAGE 會隱含地設定 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 的設定。  

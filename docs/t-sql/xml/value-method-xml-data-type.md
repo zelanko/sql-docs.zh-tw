@@ -15,10 +15,10 @@ ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9224e9050ecf01255151e5ec8e11ecaf282d7387
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051223"
 ---
 # <a name="value-method-xml-data-type"></a>value() 方法 (xml 資料類型)
@@ -73,7 +73,7 @@ SELECT @ProdID
  雖然 XML 執行個體中只有一個 `ProductID` 屬性，靜態類型規則仍要求您明確指定路徑運算式傳回單一值。 因此，會在路徑運算式結尾另外指定 `[1]`。 如需靜態類型的詳細資訊，請參閱 [XQuery 與靜態類型](../../xquery/xquery-and-static-typing.md)。  
   
 ### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>B. 使用 value() 方法來擷取 xml 類型資料行中的值  
- 下列查詢是針對 `AdventureWorks` 資料庫中的 **xml** 類型資料行 (`CatalogDescription`) 所指定。 此查詢會從儲存在資料行中的每一個 XML 執行個體擷取 `ProductModelID` 屬性值。  
+ 下列查詢是針對 **資料庫中的**xml`CatalogDescription` 類型資料行 (`AdventureWorks`) 所指定。 此查詢會從儲存在資料行中的每一個 XML 執行個體擷取 `ProductModelID` 屬性值。  
   
 ```  
 SELECT CatalogDescription.value('             
@@ -100,7 +100,7 @@ ORDER BY Result desc
 ```  
   
 ### <a name="c-using-the-value-and-exist-methods-to-retrieve-values-from-an-xml-type-column"></a>C. 使用 value() 和 exist() 方法來擷取 xml 類型資料行中的值  
- 下列範例顯示如何使用 **xml** 資料類型的 `value()` 方法和 [exist()](../../t-sql/xml/exist-method-xml-data-type.md) 方法。 `value()` 方法是用於擷取 XML 中的 `ProductModelID` 屬性值。 `exist()` 子句中的 `WHERE` 方法則是用於篩選資料表中的資料列。  
+ 下列範例顯示如何使用 `value()`xml[ 資料類型的 ](../../t-sql/xml/exist-method-xml-data-type.md) 方法和 **exist()** 方法。 `value()` 方法是用於擷取 XML 中的 `ProductModelID` 屬性值。 `exist()` 子句中的 `WHERE` 方法則是用於篩選資料表中的資料列。  
   
  此查詢會從將保固資訊 (<`Warranty`> 元素) 作為功能之一的 XML 執行個體中，擷取產品型號識別碼。 `WHERE` 子句中的條件會使用 `exist()` 方法，只擷取滿足此條件的資料列。  
   

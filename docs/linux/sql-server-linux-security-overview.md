@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
 ms.openlocfilehash: 8a9094977597fd7c2d76f2c80a1773c176b9c6dc
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70929813"
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Linux 上的 SQL Server 安全性限制

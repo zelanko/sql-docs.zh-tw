@@ -18,10 +18,10 @@ ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7844f1d38f5d2e6f36f971eb83d8961596483142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042602"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (geography 資料類型)
@@ -40,12 +40,12 @@ ms.locfileid: "68042602"
  *geography_other*  
  指定第二個 **geography** 執行個體，呼叫 **geography** 執行個體正在嘗試判斷與其相距的最短距離。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回型別：**SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  方法會傳回 **LineString** 執行個體，其端點在兩個非交集 **geography** 比較執行個體的框線上。 所傳回 **LineString** 的長度等於兩個 **geography** 執行個體之間的最短距離。 當兩個 **geography** 執行個體彼此交集時，會傳回空白 **LineString** 執行個體。  
   
 ## <a name="examples"></a>範例  

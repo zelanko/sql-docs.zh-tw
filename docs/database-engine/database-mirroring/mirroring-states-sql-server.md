@@ -20,10 +20,10 @@ ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 03455038964c06c5a101c7259e65dfecff5b4404
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67996553"
 ---
 # <a name="mirroring-states-sql-server"></a>鏡像狀態 (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "67996553"
   
  可能的資料庫鏡像狀態如下：  
   
-|鏡像狀態|Description|  
+|鏡像狀態|描述|  
 |---------------------|-----------------|  
 |SYNCHRONIZING|鏡像資料庫的內容落後於主體資料庫的內容。 主體伺服器將記錄檔記錄傳送至鏡像伺服器，將所做的變更套用到鏡像資料庫來向前復原。<br /><br /> 在資料庫鏡像工作階段開始時，資料庫處於 SYNCHRONIZING 狀態。 主體伺服器正為資料庫提供服務，而鏡像伺服器則試圖趕上。|  
 |SYNCHRONIZED|當鏡像伺服器足以追趕上主體伺服器時，鏡像狀態就會變更為 SYNCHRONIZED。 只要主體伺服器繼續傳送變更到鏡像伺服器，而鏡像伺服器也繼續將變更套用到鏡像資料庫，資料庫便會保持在這種狀態。<br /><br /> 如果交易安全性設定為 FULL，SYNCHRONIZED 狀態將可同時支援自動容錯移轉和手動容錯移轉，而且容錯移轉之後不會遺失任何資料。<br /><br /> 如果關閉交易安全性，永遠都有可能遺失部分資料，即使是在 SYNCHRONIZED 狀態也是如此。|  

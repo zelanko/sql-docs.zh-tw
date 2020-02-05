@@ -20,13 +20,13 @@ ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6fa6d6c5736f57338474c17ac41eee55411c865b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105009"
 ---
-# <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
+# <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 此函式會傳回群組中值的總和檢查碼。 `CHECKSUM_AGG` 會忽略 Null 值。 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)可以跟在 `CHECKSUM_AGG` 後面。
@@ -52,7 +52,7 @@ DISTINCT
 ## <a name="return-types"></a>傳回類型
 將所有 *expression* 值的總和檢查碼作為 **int** 傳回。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `CHECKSUM_AGG` 可以偵測資料表中的變更。
   
 `CHECKSUM_AGG` 結果與資料表中資料列的順序無關。 此外，`CHECKSUM_AGG` 函式允許使用 `DISTINCT` 關鍵字和 `GROUP BY` 子句。
@@ -62,7 +62,7 @@ DISTINCT
 `CHECKSUM_AGG` 的功能與其他彙總函式的功能類似。 如需詳細資訊，請參閱[彙總函式 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)。
   
 ## <a name="examples"></a>範例  
-這些範例使用 `CHECKSUM_AGG` 來偵測 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `ProductInventory` 資料表之 `Quantity` 資料行的變更。
+這些範例使用 `CHECKSUM_AGG` 來偵測 `Quantity` 資料庫中 `ProductInventory` 資料表之 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料行的變更。
   
 ```sql
 --Get the checksum value before the column value is changed.  

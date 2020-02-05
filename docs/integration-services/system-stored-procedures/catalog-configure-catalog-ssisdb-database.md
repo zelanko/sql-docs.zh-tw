@@ -11,10 +11,10 @@ ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4e8da4de862bf67a552da61a5d921e7c6c4c51fa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281351"
 ---
 # <a name="catalogconfigure_catalog-ssisdb-database"></a>catalog.configure_catalog (SSISDB 資料庫)
@@ -45,7 +45,7 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
 ## <a name="result-sets"></a>結果集  
  None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個預存程序會判斷 *property_value* 對每個 *property_name* 是否有效。  
   
  這個預存程序只可以在沒有作用中執行 (例如暫止、已佇列、執行中與已暫停的執行) 時執行。  

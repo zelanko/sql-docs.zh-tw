@@ -20,10 +20,10 @@ ms.assetid: e9dc27f6-e945-4457-8498-7644db34008e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a711e81c796293f9c9ac8694b1dc32e0e60f6938
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066598"
 ---
 # <a name="astextzm-geography-data-type"></a>AsTextZM (geography 資料類型)
@@ -38,15 +38,15 @@ ms.locfileid: "68066598"
 .AsTextZM ()  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**nvarchar(max)**  
   
- CLR 傳回型別：**SqlChars**  
+ CLR 傳回類型：**SqlChars**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立一個包含 **Z** (高度) 和 **M** (測量) 值的 `Point` 執行個體。 `STAsText()` 會選取 WKT 值 (-122.34900 47.65100)；`AsTextZM()` 會選取相同的 WKT 值，也會傳回 **Z** 和 **M** 的值，產生 (-122.34900 47.65100 10.3 12)。  
+ 下列範例會建立一個包含 `Point`Z **(高度) 和**M **(測量) 值的** 執行個體。 `STAsText()` 會選取 WKT 值 (-122.34900 47.65100)；`AsTextZM()` 會選取相同的 WKT 值，也會傳回 **Z** 和 **M** 的值，產生 (-122.34900 47.65100 10.3 12)。  
   
 ```  
 DECLARE @g geography;  

@@ -14,10 +14,10 @@ ms.assetid: e2c60a6d-be6f-4bb1-aaee-e464a4dc892c
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 6478c1b0f1e453fd10f18a403a00f471309f6f35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986691"
 ---
 # <a name="sql-server-cursor-manager-total-object"></a>SQL Server 的 Cursor Manager Total 物件
@@ -26,7 +26,7 @@ ms.locfileid: "67986691"
   
  下表說明 SQL Server **Cursor Manager Total** 計數器。  
   
-|Cursor Manager Total 計數器|Description|  
+|Cursor Manager Total 計數器|描述|  
 |-----------------------------------|-----------------|  
 |**Async population count**|非同步擴展的資料指標數。|  
 |**Cursor conversion rate**|每秒的資料指標轉換數。|  

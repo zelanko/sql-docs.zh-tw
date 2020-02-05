@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: c0d069601c36ba46be3c1950300c16b8808c264f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013349"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>WSFC 叢集服務離線
@@ -34,7 +34,7 @@ ms.locfileid: "68013349"
 |**類別目錄**|**嚴重**|  
 |**Facet**|SQL Server 的執行個體|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  這項原則檢查 Windows Server 容錯移轉叢集 (WSFC) 的狀態。 當 WSFC 叢集已離線或處於強制仲裁狀態時，原則為狀況不良並會引發警示。 此叢集中裝載的所有可用性群組都已離線或需要災害復原動作。  
   
  當叢集狀態為標準仲裁時，原則為狀況良好。  

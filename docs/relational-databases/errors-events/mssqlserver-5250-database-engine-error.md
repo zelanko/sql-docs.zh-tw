@@ -12,13 +12,13 @@ ms.assetid: f4a1d0e8-f27f-4cb8-a25d-040b40555dcc
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 27f8965d0244a532b9afeae44b43df6081aac64b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68053617"
 ---
-# <a name="mssqlserver5250"></a>MSSQLSERVER_5250
+# <a name="mssqlserver_5250"></a>MSSQLSERVER_5250
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -30,7 +30,7 @@ ms.locfileid: "68053617"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC4_CRITICAL_DATABASE_PAGE_CORRUPT|  
-|訊息文字|資料庫錯誤:資料庫 'NAME' (資料庫識別碼 DB_ID) 的 PAGE_TYPE 頁面 P_ID 無效。 此錯誤無法修復。 您必須從備份還原。|  
+|訊息文字|資料庫錯誤: 資料庫 'NAME' (資料庫識別碼 DB_ID) 的 PAGE_TYPE 頁面 P_ID 無效。 此錯誤無法修復。 您必須從備份還原。|  
   
 ## <a name="explanation"></a>說明  
 指定之資料庫的檔案標頭頁面或啟動頁面已損毀。  

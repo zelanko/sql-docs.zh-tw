@@ -22,13 +22,13 @@ ms.assetid: cd528126-51ee-4aa4-a21f-f32ce5c80fac
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 295dbd375b099227fb29333a3af925649b1fb88e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098923"
 ---
-# <a name="x40x40totalwrite-transact-sql"></a>&#x40;&#x40;TOTAL_WRITE (Transact-SQL)
+# <a name="x40x40total_write-transact-sql"></a>&#x40;&#x40;TOTAL_WRITE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在上次啟動之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所進行的磁碟寫入數目。  
@@ -42,10 +42,10 @@ ms.locfileid: "68098923"
 @@TOTAL_WRITE  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  若要顯示包含多項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 統計資料的報表，其中包括讀取和寫入活動，請執行 **sp_monitor**。  
   
 ## <a name="examples"></a>範例  

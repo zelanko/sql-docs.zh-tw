@@ -14,10 +14,10 @@ ms.assetid: b88f6ff2-795e-4730-bfb8-dbc6a958f2ad
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8335f821e2bd4026c17b0054e047125a0afd0177
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011700"
 ---
 # <a name="filestream-access-level-server-configuration-option"></a>檔案資料流存取層級伺服器組態選項
@@ -28,7 +28,7 @@ ms.locfileid: "68011700"
 > [!NOTE]  
 >  您必須先針對 FILESTREAM 啟用 Windows 管理設定，然後這個選項才會生效。 當您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員時，可以啟用這些設定。  
   
-|ReplTest1|定義|  
+|值|定義|  
 |-----------|----------------|  
 |0|針對這個執行個體停用 FILESTREAM 支援。|  
 |1|針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取啟用 FILESTREAM。|  

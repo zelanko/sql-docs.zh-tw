@@ -17,10 +17,10 @@ ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0e7b51e71feef1dcd30b3e63c38b6cf10598cd80
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294164"
 ---
 # <a name="execute-t-sql-statement-task"></a>執行 T-SQL 陳述式工作
@@ -46,6 +46,6 @@ ms.locfileid: "71294164"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)   
- [MERGE in Integration Services Packages](../../integration-services/control-flow/merge-in-integration-services-packages.md)  
+ [Integration Services 套件中的 MERGE](../../integration-services/control-flow/merge-in-integration-services-packages.md)  
   
   

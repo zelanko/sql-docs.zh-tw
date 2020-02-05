@@ -18,10 +18,10 @@ ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 328e77c0a5be561f795d1892512e7a72fd21340a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950151"
 ---
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN (geometry 資料類型)
@@ -40,14 +40,14 @@ ms.locfileid: "67950151"
  *expression*  
  這是介於 1 和 **geometry** 執行個體中內環數之間的 **int** 運算式。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回型別：**SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
- 開放式地理空間協會 (OGC) 類型：**LineString**  
+ 開放地理空間協會 (OGC) 類型：**LineString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 **geometry** 執行個體不是多邊形，這個方法會傳回 **null**。 如果此運算式大於環形數，此方法也會擲回 **ArgumentOutOfRangeException**。 可以使用 `STNumInteriorRing``()` 傳回環形數。  
   
 ## <a name="examples"></a>範例  

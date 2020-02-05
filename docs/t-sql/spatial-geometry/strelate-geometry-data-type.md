@@ -18,10 +18,10 @@ ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1e50ca09fc8ac7c9c61c17227448deebe8c69bc8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066315"
 ---
 # <a name="strelate-geometry-data-type"></a>STRelate (geometry 資料類型)
@@ -38,18 +38,18 @@ ms.locfileid: "68066315"
   
 ## <a name="arguments"></a>引數  
  *other_geometry*  
- 這是要與進行 `STRelate()` 叫用的執行個體做比較的另一個 **geometry** 執行個體。  
+ 這是要與叫用 **所在之執行個體相比較的另一個**geometry`STRelate()` 執行個體。  
   
  *intersection_pattern_matrix*  
  這是兩個 **geometry** 執行個體之間 DE-9IM 模式矩陣裝置的 **nchar(9)** 類型編碼可接受值字串。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一律會傳回 Null。 如果矩陣的格式不正確，這個方法將會擲回 **ArgumentException**。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回型別：**SqlBoolean**  
+ CLR 傳回類型：**SqlBoolean**  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 `STRelate()`，利用明確的 DE-9IM 模式測試兩個 **geometry** 執行個體是否在空間上不相鄰。  

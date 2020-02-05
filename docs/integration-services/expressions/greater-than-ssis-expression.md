@@ -14,10 +14,10 @@ ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e154659500155a2a171f03ee18f5c62319142a8c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297568"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (大於) (SSIS 運算式)
@@ -42,12 +42,12 @@ expression1 > expression2
   
 ## <a name="arguments"></a>引數  
  *expression1, expression2*  
- 任何有效的運算式。 這兩個運算式的類型，都必須是可以隱含轉換的資料類型。  
+ 為任何有效運算式。 這兩個運算式的類型，都必須是可以隱含轉換的資料類型。  
   
 ## <a name="result-types"></a>結果類型  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果比較中的任一個運算式為 Null，則比較結果為 Null。 如果兩個運算式都是 Null，結果則為 Null。  
   
  運算式集 *expression1* 與 *expression2*必須遵循下列規則之一：  
@@ -59,7 +59,7 @@ expression1 > expression2
     > [!NOTE]  
     >  字串比較有區分大小寫、腔調字、假名與全半形。  
   
--   **日期、時間或日期/時間** *expression1* 和 *expression2* 都必須評估為下列其中一個資料類型：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **日期、時間或日期/時間** ： *expression1* 和 *expression2* 都必須評估為下列其中一種資料類型：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系統不支援評估為時間資料類型之運算式與評估為日期或日期/時間資料類型之運算式之間的比較。 系統會產生錯誤。  

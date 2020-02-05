@@ -18,16 +18,16 @@ ms.assetid: a3f2c84b-a49f-4ce3-ba25-b903fb0c99b4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e48cea62df1e0828a583cfccf35fc4bedf7358cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101276"
 ---
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-在提供了地理標記語言 (GML) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 子集中的表示法時，建構 **geometry** 執行個體。
+在提供了地理標記語言 (GML) **子集中的表示法時，建構**geometry[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。
   
 如需有關地理標記語言 (GML) 的詳細資訊，請參閱以下開放式地理空間協會規格：
   
@@ -47,12 +47,12 @@ GeomFromGml ( GML_input, SRID )
  *SRID*  
  這是 **int** 運算式，代表要傳回之 **geometry** 執行個體的空間參考識別碼 (SRID)。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回型別：**SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果輸入的格式不正確，這個方法將會擲回 **FormatException**。  
   
 ## <a name="examples"></a>範例  

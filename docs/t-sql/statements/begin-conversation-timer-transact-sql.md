@@ -33,10 +33,10 @@ ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 65fbd94bac320994f9c1917e634210febd2ba878
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211221"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
@@ -62,7 +62,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
  TIMEOUT  
  指定等待多久之後，便將訊息放入佇列 (以秒為單位)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  交談計時器提供一種方式，供應用程式在特定時間量之後，接收交談的訊息。 在計時器到期之前，在交談上呼叫 BEGIN CONVERSATION TIMER，會將逾時設為新值。 這不像交談存留期間，交談的每一端都會有獨立的交談計時器。 **DialogTimer** 訊息到達本機佇列時，不會影響交談的遠端。 因此，應用程式可以為了任何目的而使用計時器訊息。  
   
  例如，您可以利用交談計時器，使應用程式不會為了逾期回應而等待太久。 如果您預期應用程式會在 30 秒內完成對話，您可以將這項對話的交談計時器設為 60 秒 (30 秒加上 30 秒的寬限期)。 如果在 60 秒之後，對話仍在開啟狀態，應用程式會在這項對話的佇列上，收到一則逾時訊息。  

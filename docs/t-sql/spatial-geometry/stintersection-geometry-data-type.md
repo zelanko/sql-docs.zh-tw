@@ -18,10 +18,10 @@ ms.assetid: 354843f5-cc14-478c-974a-04f363f9530f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e57a3551660467254a9c291ed78ed41aae30b7c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950138"
 ---
 # <a name="stintersection-geometry-data-type"></a>STIntersection (geometry 資料類型)
@@ -38,15 +38,15 @@ ms.locfileid: "67950138"
   
 ## <a name="arguments"></a>引數  
  *other_geometry*  
- 這是要與 `STIntersection()` 叫用所在之執行個體相比較的另一個 **geometry** 執行個體，以判斷兩者相交的地方。  
+ 這是要與 **叫用所在之執行個體相比較的另一個**geometry`STIntersection()` 執行個體，以判斷兩者相交的地方。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回型別：**SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
- 如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，`STIntersection()` 一定會傳回 Null。 只有當輸入執行個體包含圓弧線段，結果才能包含圓弧線段。  
+## <a name="remarks"></a>備註  
+ 如果 `STIntersection()`geometry **執行個體的空間參考識別碼 (SRID) 不相符，** 一定會傳回 Null。 只有當輸入執行個體包含圓弧線段，結果才能包含圓弧線段。  
   
 ## <a name="examples"></a>範例  
   

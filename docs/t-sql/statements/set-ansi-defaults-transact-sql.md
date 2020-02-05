@@ -22,13 +22,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 02353688efb79b4c2dbb7c4bc3d9ed0d4d5e0a37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67913948"
 ---
-# <a name="set-ansidefaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
+# <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   控制一群共同指定某些 ISO 標準行為的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定。  
@@ -49,7 +49,7 @@ SET ANSI_DEFAULTS { ON | OFF }
 SET ANSI_DEFAULTS ON
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 ANSI_DEFAULTS 是用戶端不會修改的伺服器端設定。 用戶端會管理自己的設定。 依預設，這些設定與伺服器設定相反。 使用者不應該修改伺服器設定。 若要變更用戶端行為，使用者應使用 SQL_COPT_SS_PRESERVE_CURSORS。 如需詳細資訊，請參閱 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)。  
   
 當啟用 (ON) 時，這個選項會啟用下列 ISO 設定：  

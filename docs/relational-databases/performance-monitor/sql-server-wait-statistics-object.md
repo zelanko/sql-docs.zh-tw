@@ -14,10 +14,10 @@ ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: c690c2cd19acae2fb3a6bde8b2dcd6d72b3acf18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947880"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server 的 Wait Statistics 物件
@@ -26,7 +26,7 @@ ms.locfileid: "67947880"
   
  下表列出 Wait Statistics 物件包含的計數器。  
   
-|SQL Server Wait Statistics 計數器|Description|  
+|SQL Server Wait Statistics 計數器|描述|  
 |-----------------------------------------|-----------------|  
 |**Lock waits**|正在等候鎖定的處理序統計資料。|  
 |**Log buffer waits**|等候記錄緩衝區變為可用的處理序統計資料。|  
@@ -43,7 +43,7 @@ ms.locfileid: "67947880"
   
  物件中的每個計數器均包含下列執行個體：  
   
-|項目|Description|  
+|Item|描述|  
 |----------|-----------------|  
 |**Average wait time (ms)**|所選取等候類型的平均等候時間。|  
 |**Cumulative wait time (ms) per second**|所選取等候類型的每秒彙總等候時間。|  

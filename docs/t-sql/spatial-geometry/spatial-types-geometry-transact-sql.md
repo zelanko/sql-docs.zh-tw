@@ -18,10 +18,10 @@ ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a2b65decea6d737801ef1b0b37e44b0c8ae028af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101009"
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>空間類型 - geometry (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68101009"
 
   平面空間資料類型 **geometry** 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中是實作為通用語言執行平台 (CLR) 資料類型。 此類型代表以 Euclidean (平面) 座標系統表示的資料。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援一組 **geometry** 空間資料類型方法。 這些方法包括「開放地理空間協會」(OGC) 標準及該標準的一組 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 延伸模組所定義的 **geometry** 相關方法。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援一組 **geometry** 空間資料類型方法。 這些方法包括「開放地理空間協會」(OGC) 標準及該標準的一組 **延伸模組所定義的**geometry[!INCLUDE[msCoName](../../includes/msconame-md.md)] 相關方法。  
  
  geometry 方法的誤差容許範圍可以大到 1.0e-7 *。 範圍指的是 **geometry** 物件的點之間大致的最大距離。
   

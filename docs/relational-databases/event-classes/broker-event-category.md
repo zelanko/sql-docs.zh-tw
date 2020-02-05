@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8efa6f503f552965e3885d92626e8b5da453e29b
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69494090"
 ---
 # <a name="broker-event-category"></a>Broker 事件類別目錄
@@ -29,7 +29,7 @@ ms.locfileid: "69494090"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[Broker:Activation 事件類別](../../relational-databases/event-classes/broker-activation-event-class.md)|當佇列監視器啟動一個啟用預存程序時產生的事件。|  
 |[Broker:Connection 事件類別](../../relational-databases/event-classes/broker-connection-event-class.md)|為報告 Service Broker 所管理之傳輸連接的狀態而產生的事件。|  

@@ -32,10 +32,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1385a80df97bc02af60cb5c151424dc79bd03913
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109447"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
@@ -62,7 +62,7 @@ ISDATE ( expression )
 ## <a name="return-type"></a>傳回類型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  只有在搭配 [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) 函式使用，且已指定 CONVERT 樣式參數，並且樣式不等於 0、100、9 或 109 時，ISDATE 才具確定性。  
   
  ISDATE 的傳回值會根據 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)、[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 和[設定預設語言伺服器設定選項](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)的設定而不同。  

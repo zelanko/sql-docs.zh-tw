@@ -23,10 +23,10 @@ ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 72426dddcab7c0250b6ef0d744f9ede0a19f1550
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072347"
 ---
 # <a name="rollback-work-transact-sql"></a>ROLLBACK WORK (Transact-SQL)
@@ -45,7 +45,7 @@ ROLLBACK [ WORK ]
 [ ; ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個陳述式的功能與 ROLLBACK TRANSACTION 相同，不過 ROLLBACK TRANSACTION 接受使用者自訂的交易名稱。 不論是否指定了選擇性的 WORK 關鍵字，這個 ROLLBACK 語法與 ISO 相容。  
   
  建立巢狀交易時，ROLLBACK WORK 一律會回復到最外層的 BEGIN TRANSACTION 陳述式，並將 @@TRANCOUNT 系統函數減至 0。  

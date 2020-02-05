@@ -21,10 +21,10 @@ ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c01695891e1d41fed5e1e5c293a18f74462a4151
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285981"
 ---
 # <a name="using-variables-in-the-script-task"></a>在指令碼工作中使用變數
@@ -34,12 +34,12 @@ ms.locfileid: "71285981"
 
   變數讓指令碼工作可以和封裝中的其他物件交換資料。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../../integration-services/integration-services-ssis-variables.md)。  
   
- 指令碼工作使用 **Dts** 物件的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 屬性，讀取和寫入套件的 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 物件。  
+ 指令碼工作使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>Dts**物件的** 屬性，讀取和寫入套件的 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 物件。  
   
 > [!NOTE]  
->  <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 類別的 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 屬性其類型為**物件**。 因為指令碼工作已啟用 **Option Strict**，所以您必須在使用它之前將 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 屬性轉換為適當的類型。  
+>  <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 類別的 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 屬性其類型為**物件**。 因為指令碼工作已啟用 **Option Strict**，所以您必須在使用它之前將 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 屬性轉換為適當的類型。  
   
- 您將現有的變數新增至 [指令碼工作編輯器]  的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A> 與 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> 清單中，讓它們可供自訂指令碼使用。 請記住變數名稱有區分大小寫。 在指令碼中，您可以透過 **Dts** 物件的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 屬性存取兩種類型的變數。 使用 **Value** 屬性讀取和寫入個別變數。 指令碼工作會以透明的方式管理鎖定，因為指令碼會讀取和修改變數值。  
+ 您將現有的變數新增至 [指令碼工作編輯器]<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A><xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> 的 **與** 清單中，讓它們可供自訂指令碼使用。 請記住變數名稱有區分大小寫。 在指令碼中，您可以透過 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>Dts**物件的** 屬性存取兩種類型的變數。 使用 **Value** 屬性讀取和寫入個別變數。 指令碼工作會以透明的方式管理鎖定，因為指令碼會讀取和修改變數值。  
   
  您可以在程式碼中使用變數之前，先透過 <xref:Microsoft.SqlServer.Dts.Runtime.Variables.Contains%2A> 屬性傳回的 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 集合之 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 方法，檢查變數是否存在。  
   
@@ -120,6 +120,6 @@ public class ScriptMain
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 變數](../../../integration-services/integration-services-ssis-variables.md)   
- [在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [在套件中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

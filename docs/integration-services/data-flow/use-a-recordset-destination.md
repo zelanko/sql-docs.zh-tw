@@ -13,10 +13,10 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 94c1d149dd152a9cf83e5464cde2c56ec9b42af7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290994"
 ---
 # <a name="use-a-recordset-destination"></a>使用資料錄集目的地
@@ -66,13 +66,13 @@ ms.locfileid: "71290994"
   
 #### <a name="to-create-the-project-and-configure-the-variables"></a>建立專案和設定變數  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，建立新的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，建立新的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
 2.  在 [SSIS]  功能表上，選取 [變數]  。  
   
 3.  在 [變數]  視窗中建立變數，用以保存資料錄集和目前資料列的資料行值：  
   
-    1.  建立名稱為 **BonusRecordset** 的變數，並將其類型設為 **Object**。  
+    1.  建立名稱為 **BonusRecordset**的變數，並將其類型設為 **Object**。  
   
          **BonusRecordset** 變數會保存資料錄集。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "71290994"
   
 #### <a name="to-configure-the-data-flow-and-the-recordset-destination"></a>設定資料流程和資料錄集目的地  
   
-1.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [控制流程]  索引標籤上，將資料流程工作加入設計介面。  
+1.  在  **設計師的 [控制流程]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 索引標籤上，將資料流程工作加入設計介面。  
   
 2.  在 [資料流程]  索引標籤上，將 OLE DB 來源加入至資料流程工作，然後開啟 OLE DB 來源編輯器  。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "71290994"
         ```  
   
         > [!NOTE]  
-        >  您必須將 Bonus 資料行中的 **currency** 值轉換為 **float**，然後才能將此值載入 **Double** 類型的封裝變數中。  
+        >  您必須將 Bonus 資料行中的 **currency** 值轉換為 **float** ，然後才能將此值載入 **Double**類型的封裝變數中。  
   
 4.  在 [資料流程]  索引標籤上，加入資料錄集目的地，然後將目的地連接到 OLE DB 來源之後。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "71290994"
   
 #### <a name="to-configure-the-foreach-loop-container-and-run-the-package"></a>設定 Foreach 迴圈容器並執行封裝  
   
-1.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [控制流程]  索引標籤上，加入 Foreach 迴圈容器，並將此容器連接在資料流程工作之後。  
+1.  在  **設計師的 [控制流程]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 索引標籤上，加入 Foreach 迴圈容器，並將此容器連接在資料流程工作之後。  
   
 2.  開啟 Foreach 迴圈編輯器  ，依照下列設定來設定容器：  
   
@@ -147,7 +147,7 @@ ms.locfileid: "71290994"
   
     2.  針對 [From]  ，輸入適當的電子郵件地址。  
   
-         如果使用您自己的電子郵件地址，可以確認封裝是否成功執行。 針對由傳送郵件工作傳送到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 虛構銷售人員的郵件，您將會收到無法傳遞的收件者訊息。  
+         如果使用您自己的電子郵件地址，可以確認封裝是否成功執行。 針對由傳送郵件工作傳送到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]虛構銷售人員的郵件，您將會收到無法傳遞的收件者訊息。  
   
     3.  針對 [To]  ，輸入預設的電子郵件地址。  
   

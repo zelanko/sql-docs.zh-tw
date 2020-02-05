@@ -13,10 +13,10 @@ ms.assetid: 3b1ec9fe-f6c5-46f7-aa63-6e671be1572d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f0be2586d83aaf859ba6b5f4b57f08a4d679b9be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109877"
 ---
 # <a name="check-integrity-of-database-with-suspect-pages"></a>檢查具有可疑頁面的資料庫是否完整

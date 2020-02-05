@@ -1,5 +1,5 @@
 ---
-title: 範例指定 ELEMENT 指示詞 | Microsoft Docs
+title: 範例：指定 ELEMENT 指示詞 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5e0760c0d1ee59725e074f55d3730f574a5fac3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006732"
 ---
-# <a name="example-specifying-the-element-directive"></a>範例指定 ELEMENT 指示詞
+# <a name="example-specifying-the-element-directive"></a>範例：指定 ELEMENT 指示詞
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   這會擷取員工資訊，並產生元素中心的 XML，如下所示：  
   

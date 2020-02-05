@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 012c2c880e81c095e90086cf26ebffd6117d534e
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959126"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server 匯入延伸模組 (預覽)
@@ -46,9 +46,9 @@ SQL Server 匯入延伸模組 (預覽) 會將 .txt 和 .csv 檔案轉換成 SQL 
     
     按一下 [瀏覽]  ，選取檔案。 資料表名稱應該會根據檔名自動填入，但您也可以自行變更。
 
-    結構描述預設為 dbo，但您可以變更。 按 **[下一步]** 繼續進行。
+    結構描述預設為 dbo，但您可以變更。 按 [下一步]  繼續進行。
     ![輸入檔](media/sql-server-import-extension/import-wizard-input-file.png)
-1. 精靈會根據前 50 個資料列產生預覽。 除了確認資料是否正確之外，不需要在此頁面上執行其他動作。 按 **[下一步]** 繼續進行。
+1. 精靈會根據前 50 個資料列產生預覽。 除了確認資料是否正確之外，不需要在此頁面上執行其他動作。 按 [下一步]  繼續進行。
     ![開啟 [匯入精靈]](media/sql-server-import-extension/import-wizard-preview-data.png)
 2. 在此頁面上，您可以變更資料行名稱、資料類型、是否為主索引鍵，或是否允許 Null。 如有需要，您可以進行多次變更。 按一下 [匯入資料]  繼續進行。
     ![開啟 [匯入精靈]](media/sql-server-import-extension/import-wizard-modify-columns.png)

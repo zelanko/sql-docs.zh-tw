@@ -18,10 +18,10 @@ ms.assetid: 2aef77e8-0460-43f9-bad6-2aae6d8c36f9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8a6b8896dadf8abc17d2fb3b3836d53815b7d3f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066163"
 ---
 # <a name="stx-geometry-data-type"></a>STX (geometry 資料類型)
@@ -36,15 +36,15 @@ ms.locfileid: "68066163"
 .STX  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型：**float**  
   
  CLR 類型：**SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 **geometry** 執行個體不是點，這個屬性的值將會是 Null。  
   
- 此屬性是唯讀的。  
+ 這個屬性是唯讀的。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立 `Point` 例項，並使用 `STX` 來擷取此例項的 X 座標。  

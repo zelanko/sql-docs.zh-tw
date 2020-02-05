@@ -12,13 +12,13 @@ ms.assetid: 991a86df-42cd-435e-85b3-f42e4cb13039
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3c3444c213d71f9062f1456471db5d71ba9e842b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951511"
 ---
-# <a name="mssqlserver7903"></a>MSSQLSERVER_7903
+# <a name="mssqlserver_7903"></a>MSSQLSERVER_7903
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -30,7 +30,7 @@ ms.locfileid: "67951511"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_ORPHANED_FILE|  
-|訊息文字|資料表錯誤：在物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，資料行識別碼 C_ID 的 Filestream 目錄中找到被遺棄的檔案 'FILE'。|  
+|訊息文字|資料表錯誤: 在物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，資料行識別碼 C_ID 的 Filestream 目錄中找到被遺棄的檔案 'FILE'。|  
   
 ## <a name="explanation"></a>說明  
 在 FILESTREAM 資料行目錄中找到 FILESTREAM 檔案，但是遺漏了分割區中的對應資料行值。  

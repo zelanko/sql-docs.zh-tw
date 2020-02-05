@@ -11,10 +11,10 @@ ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: efc8ce0a541a508f88e7b1122b561008e25f4d51
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292663"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>使用 ODBC 來源來擷取資料
@@ -36,11 +36,11 @@ ms.locfileid: "71292663"
   
 5.  選取資料存取方法。  
   
-    -   **資料表名稱**：選取 ODBC 連線管理員連線之資料庫中的資料表或檢視，或輸入規則運算式以識別資料表。  
+    -   **資料表名稱**：選取 ODBC 連接管理員連接之資料庫中的資料表或檢視，或輸入規則運算式以識別資料表。  
   
          此清單只包含前 1000 個資料表。 如果您的資料庫包含超過 1000 個資料表，您可以輸入資料表名稱的開頭或使用 (*) 萬用字元來輸入名稱的任何部分，以便顯示您想要使用的資料表。  
   
-    -   **SQL 命令**：輸入 SQL 命令，或按一下 [瀏覽]  從文字檔載入 SQL 查詢。  
+    -   **SQL 命令**：輸入 SQL 命令，或按一下 **[瀏覽]** 從文字檔載入 SQL 查詢。  
   
 6.  您可以按一下 **[預覽]** ，以檢視 ODBC 來源擷取的最多 200 個資料列。  
   

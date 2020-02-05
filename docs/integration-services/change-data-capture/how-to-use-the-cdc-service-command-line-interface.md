@@ -11,10 +11,10 @@ ms.assetid: ab87b7da-c3b9-4bc8-a853-798716cbf74b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6447fa6b4105f15cf069524f022579e255def5a3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298718"
 ---
 # <a name="how-to-use-the-cdc-service-command-line-interface"></a>如何使用 CDC 服務命令列介面

@@ -13,10 +13,10 @@ ms.author: mikeray
 ms.custom: ''
 ms.date: 05/23/2019
 ms.openlocfilehash: bdefcbbfe6d5987de4ac69ab60d1e80b004a5db6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025461"
 ---
 # <a name="server-properties---database-settings-page"></a>伺服器屬性 - 資料庫設定頁面
@@ -73,7 +73,7 @@ ms.locfileid: "68025461"
 
 設定每個資料庫復原的最長時間 (分鐘)。 預設值是 0，指出由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自動組態。 實務上，此選項表示復原時間小於一分鐘，且使用中資料庫幾乎每分鐘有一次檢查點。 如需詳細資訊，請參閱 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。  
   
-### <a name="data"></a>data
+### <a name="data"></a>資料
 
 指定資料檔案的預設位置。 按一下 [瀏覽] 按鈕，即可導覽到新的預設位置。 要等到重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後才會生效。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68025461"
   
 指定記錄檔案的預設位置。 按一下 [瀏覽] 按鈕，即可導覽到新的預設位置。 要等到重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後才會生效。  
   
-### <a name="configured-values"></a>設定的值
+### <a name="configured-values"></a>已設定的值
 
 針對此窗格中的選項，顯示設定的值。 如果您變更這些值，請按一下 **[執行中的值]** ，即可查看變更是否已生效。 如果沒有的話，就必須先重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   

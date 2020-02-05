@@ -24,13 +24,13 @@ author: CarlRabeler
 ms.author: carlrab
 monkerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 1b1706a78402c705eac92f135a492ea352544fe9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67928965"
 ---
-# <a name="set-identityinsert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
+# <a name="set-identity_insert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 允許將明確的值插入資料表的識別欄位中。  
@@ -54,7 +54,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF 
  *table_name*  
  這是含識別欄位之資料表的名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  不論何時，工作階段中只能有一份資料表將 IDENTITY_INSERT 屬性設為 ON。 如果已有資料表的這個屬性設為 ON，又針對另一份資料表發出 SET IDENTITY_INSERT ON 陳述式，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回一則錯誤訊息，指出 SET IDENTITY_INSERT 已設為 ON，且會報告設為 ON 所針對的資料表。  
   
  如果輸入的值大於資料表目前的識別值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動利用新插入的值來作為目前的識別值。  

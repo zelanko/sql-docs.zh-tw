@@ -13,10 +13,10 @@ ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7ee52054e14c641aad64eaa96b146af86e048d95
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298699"
 ---
 # <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>變更為了擷取變更所選取的資料表

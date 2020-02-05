@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee403317d9b10733126f462b47dc8d57d7f177d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943039"
 ---
 # <a name="-bitwise-not-transact-sql"></a>~ (位元 NOT) (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "67943039"
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 這是整數資料類型類別目錄之任何資料類型或是 **bit**、**binary** 或 **varbinary** 資料類型的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *expression* 會被視為適用於位元運算的二進位數字。  
+ 這是整數資料類型類別目錄之任何資料類型或是 [bit](../../t-sql/language-elements/expressions-transact-sql.md)、**binary** 或 **varbinary** 資料類型的任何有效**運算式**。 *expression* 會被視為適用於位元運算的二進位數字。  
   
 > [!NOTE]  
 >  在位元運算中，只能有一個 *expression* 是 **binary** 或 **varbinary** 資料類型。  
@@ -59,7 +59,7 @@ ms.locfileid: "67943039"
   
  如果輸入值為 **bit**，則為 **bit**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **~** 位元運算子會執行 *expression* 的位元邏輯 NOT 運算，依次處理每個位元。 如果 *expression* 的值為 0，結果集內的位元就會設定為 1；否則，結果中的位元會清除為 0 值。 換句話說，1 會變更為零，零則會變更為 1。  
   
 > [!IMPORTANT]  

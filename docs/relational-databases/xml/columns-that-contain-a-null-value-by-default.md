@@ -13,10 +13,10 @@ ms.assetid: 9381c07f-6887-4a62-9730-32661f9aa87c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0fb8b86daedb73f62396e1dc13a06a5a4e2a7bb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113072"
 ---
 # <a name="columns-that-contain-a-null-value-by-default"></a>預設包含 NULL 值的資料行

@@ -13,13 +13,13 @@ ms.assetid: 16403850-d745-4754-b84f-5f01aaecd24e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2b202f2856e066047c5458ef8ed1f40b2422b391
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021687"
 ---
-# <a name="set-the-autoshrink-database-option-to-off"></a>將 AUTO_SHRINK 資料庫選項設定為 OFF
+# <a name="set-the-auto_shrink-database-option-to-off"></a>將 AUTO_SHRINK 資料庫選項設定為 OFF
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   這個規則會檢查 AUTO_SHRINK 資料庫選項是否設定為 OFF。 通常壓縮和展開資料庫可能會導致實體片段。  
   

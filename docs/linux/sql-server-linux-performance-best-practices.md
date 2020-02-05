@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 543488eada46a088f3c634ce2326c7e2db2a97a5
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105446"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Linux 上 SQL Server 的效能最佳作法和設定方針
@@ -27,11 +27,11 @@ ms.locfileid: "68105446"
 
 建議您在安裝 Linux 上的 SQL Server 之後執行下列設定工作，以達到應用程式的最佳效能。
 
-### <a name="best-practices"></a>最佳做法
+### <a name="best-practices"></a>最佳作法
 
 - **針對節點和/或 CPU 使用處理程序親和性**
 
-   建議使用 `ALTER SERVER CONFIGURATION` 為 Linux 作業系統上用於 SQL Server (通常用於所有 NODE 和 CPU) 的所有 **NUMANODE** 和/或CPU 設定 `PROCESS AFFINITY`。 處理程序親和性有助於維護有效率的 Linux 和 SQL 排程行為。 使用 **NUMANODE** 選項是最簡單的方法。 請注意，即使您的電腦上只有一個 NUMA 節點，您還是應該使用**處理程序親和性**。  如需如何設定**處理程序親和性**的詳細資訊，請參閱 [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md)。
+   建議使用 `ALTER SERVER CONFIGURATION` 為 Linux 作業系統上用於 SQL Server (通常用於所有 NODE 和 CPU) 的所有 `PROCESS AFFINITY`NUMANODE**和/或CPU 設定**。 處理程序親和性有助於維護有效率的 Linux 和 SQL 排程行為。 使用 **NUMANODE** 選項是最簡單的方法。 請注意，即使您的電腦上只有一個 NUMA 節點，您還是應該使用**處理程序親和性**。  如需如何設定[處理程序親和性](../t-sql/statements/alter-server-configuration-transact-sql.md)的詳細資訊，請參閱 **ALTER SERVER CONFIGURATION**。
 
 - **設定多個 tempdb 資料檔案**
 
@@ -61,7 +61,7 @@ ms.locfileid: "68105446"
 
 下表提供 CPU 設定的建議：
 
-| 設定 | ReplTest1 | 詳細資訊 |
+| 設定 | 值 | 詳細資訊 |
 |---|---|---|
 | CPU 頻率管理員 | 效能 | 請參閱 **cpupower** 命令 |
 | ENERGY_PERF_BIAS | 效能 | 請參閱 **x86_energy_perf_policy** 命令 |
@@ -70,7 +70,7 @@ ms.locfileid: "68105446"
 
 下表提供磁碟設定的建議：
 
-| 設定 | ReplTest1 | 詳細資訊 |
+| 設定 | 值 | 詳細資訊 |
 |---|---|---|
 | 磁碟預先讀取 | 4096 | 請參閱 **blockdev** 命令 |
 | sysctl 設定 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness = 10 | 請參閱 **sysctl** 命令 |

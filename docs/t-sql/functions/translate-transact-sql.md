@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 025aaad5c92a448114355c8700aee1b6bc0a7d2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098834"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
@@ -43,13 +43,13 @@ TRANSLATE ( inputString, characters, translations)
 
 *translations* 是包含取代字元的字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *translations* 必須與 *characters* 是一樣的資料類型和長度。
 
-## <a name="return-types"></a>傳回類型
+## <a name="return-types"></a>傳回型別
 
 傳回資料類型與 `inputString` 相同的字元運算式，其中第二個引數中的字元會取代為第三個引數中相符的字元。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
-如果 *characters* 和 *translations* 運算式的長度不同，則 `TRANSLATE` 函數會傳回錯誤。 如果任何引數是 NULL，`TRANSLATE` 會傳回 NULL。  
+如果 `TRANSLATE`characters*和*translations*運算式的長度不同，則* 函數會傳回錯誤。 如果任何引數是 NULL，`TRANSLATE` 會傳回 NULL。  
 
 `TRANSLATE` 函式的行為類似於使用多個 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 函式。 不過，`TRANSLATE` 不會多次取代字元。 這與多個 `REPLACE` 函式不同，因為每次使用時都會取代相關的所有字元。 
 
@@ -111,7 +111,7 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|點  |座標 |  
+|Point  |座標 |  
 |---------|--------- |
 |(137.4  72.3) |[137.4,72.3] |
 

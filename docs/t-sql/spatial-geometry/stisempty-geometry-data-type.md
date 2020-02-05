@@ -18,10 +18,10 @@ ms.assetid: dcbd6ae1-5d63-485f-9d58-28bfd504524e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 4583fd37837c9703325fd577b6bd984505fbd98e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68106106"
 ---
 # <a name="stisempty-geometry-data-type"></a>STIsEmpty (geometry 資料類型)
@@ -36,10 +36,10 @@ ms.locfileid: "68106106"
 .STIsEmpty ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回型別：**SqlBoolean**  
+ CLR 傳回類型：**SqlBoolean**  
   
 ## <a name="examples"></a>範例  
  下列範例會建立空的 `geometry` 例項，並使用 `STIsEmpty()` 來測試看看此例項是不是空的。  

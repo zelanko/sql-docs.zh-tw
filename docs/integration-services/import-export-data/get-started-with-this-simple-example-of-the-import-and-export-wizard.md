@@ -10,10 +10,10 @@ ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 40b71d77727435316c2595abba6db70119d4b152
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285210"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>開始使用這個匯入和匯出精靈的簡單範例
@@ -24,7 +24,7 @@ ms.locfileid: "71285210"
 逐步執行將資料從 Excel 試算表匯入至 SQL Server 資料庫的這個常見案例，以了解 [SQL Server 匯入和匯出精靈] 中的預期作業。 即使您要使用不同的來源和不同的目的地，本主題還是會示範您執行精靈時所需知道的大部分內容。
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>必要條件 - 電腦上已安裝精靈嗎？
-如果您想要執行精靈，但電腦上尚未安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則可以安裝 SQL Server Data Tools (SSDT) 來安裝 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈]。 如需詳細資訊，請參閱 [下載 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。
+如果您想要執行精靈，但電腦上尚未安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則可以安裝 SQL Server Data Tools (SSDT) 來安裝 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈]。 如需詳細資訊，請參閱 [下載 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。
 
 ## <a name="heres-the-excel-source-data-for-this-example"></a>以下是此範例的 Excel 來源資料
 以下是您要複製的來源資料：WizardWalkthrough.xlsx Excel 活頁簿的 WizardWalkthrough 工作表中的小型兩個資料行資料表。
@@ -126,7 +126,7 @@ ms.locfileid: "71285210"
 ## <a name="step-10---yes-you-want-to-run-the-import-export-operation"></a>步驟 10 - 是，您想要執行匯入/匯出作業
 在下一個 [儲存並執行套件]  頁面上，您可以啟用 [立即執行]  在按下一個頁面上的 [完成]  時盡快複製資料。 或者，您可以按一下 [儲存並執行套件]  頁面上的 [完成]  ，跳過下一個頁面。
 
-![執行套件](../../integration-services/import-export-data/media/run-the-package.jpg)
+![執行封裝](../../integration-services/import-export-data/media/run-the-package.jpg)
 
 如需精靈之這個頁面的詳細資訊，請參閱[儲存並執行套件](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。
 
@@ -157,7 +157,7 @@ ms.locfileid: "71285210"
 深入了解精靈運作方式。
 -   **深入了解此精靈。** 如果您要尋找精靈概觀，請參閱 [使用 SQL Server 匯入及匯出精靈匯入和匯出資料](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。
 
--   **了解此精靈的步驟。** 如果您要尋找精靈中各步驟的資訊，請從這裡的清單中選取您想要的頁面 - [SQL Server 匯入和匯出精靈中的步驟](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)。 精靈的每個頁面也都會有個別文件頁面。
+-   **了解此精靈的步驟。** 如果您要尋找精靈中各步驟的資訊，請從這裡的清單中選取您想要的頁面 - [SQL Server 匯入和匯出精靈中的步驟](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)。 文件中另有專頁會列出此精靈的每一個頁面。
 
 -   **了解如何連線至資料來源和目的地。** 如果您要尋找如何連線至資料的資訊，請從這裡的清單中選取您想要的頁面 - [使用 SQL Server 匯入和匯出精靈連線至資料來源](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)。 數個常用資料來源都各有個別文件頁面。
 

@@ -25,13 +25,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c0852c01f37e8dbf324e18d140bd30a510fd14c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68008976"
 ---
-# <a name="set-numericroundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
+# <a name="set-numeric_roundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 指定在運算式中因捨入而造成失去精確度時，所產生的錯誤報告層級。  
@@ -45,7 +45,7 @@ ms.locfileid: "68008976"
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 當 SET NUMERIC_ROUNDABORT 是 ON 時，若在運算式中失去精確度，就會產生一則錯誤。 如果設為 OFF 時，失去精準度並不會產生錯誤訊息。 結果會捨入為用於儲存結果的資料行或變數精確度。  
   
 當嘗試在精確度較低的資料行或變數中儲存固定精確度的值時，會失去精確度。  
@@ -64,7 +64,7 @@ SET NUMERIC_ROUNDABORT 的設定是在執行階段進行設定，而不是在剖
 - CREATE 
 - UPDATE 
 - Insert 
-- Delete 
+- 刪除 
 
 如需含索引檢視表和計算資料行索引的必要 SET 選項設定詳細資訊，請參閱[使用 SET 陳述式時的考量](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements)。
   

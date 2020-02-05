@@ -18,10 +18,10 @@ ms.assetid: 37059074-5ee8-4f55-9414-1e958fd3adaf
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f9f2198595e48c98277215b7ec186c7b7848f0d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894708"
 ---
 # <a name="stmpointfromtext-geometry-data-type"></a>STMPointFromText (geometry 資料類型)
@@ -43,14 +43,14 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
  *SRID*  
  這是 **int** 運算式，代表要傳回之 **geometryMultiPoint** 執行個體的空間參考識別碼 (SRID)。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回型別：**SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
  OGC 類型：**MultiPoint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果輸入的格式不正確，這個方法將會擲回 **FormatException**。  
   
 ## <a name="examples"></a>範例  

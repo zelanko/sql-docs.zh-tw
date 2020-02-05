@@ -18,10 +18,10 @@ ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 93ea5be3c2f9a4ecdd415471da16ca21eb1f08c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066237"
 ---
 # <a name="sttouches-geometry-data-type"></a>STTouches (geometry 資料類型)
@@ -38,14 +38,14 @@ ms.locfileid: "68066237"
   
 ## <a name="arguments"></a>引數  
  *other_geometry*  
- 這是要與叫用 `STTouches()` 所在之執行個體相比較的另一個 **geometry** 執行個體。  
+ 這是要與叫用 **所在之執行個體相比較的另一個**geometry`STTouches()` 執行個體。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回型別：**SqlBoolean**  
+ CLR 傳回類型：**SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果兩個 **geometry** 執行個體的點組相交，但是其內部未相交，即表示這兩個執行個體有接觸。  
   
  如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一律會傳回 Null。  

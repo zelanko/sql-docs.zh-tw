@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fe01e0d9465495cbf4943ba7867ebf262a1f3dd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135933"
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE (Transact-SQL)
@@ -44,10 +44,10 @@ DIFFERENCE ( character_expression , character_expression )
 *character_expression*  
 字元資料的英數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是常數、變數或資料行。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 **int**  
  
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `DIFFERENCE` 會比較兩個不同的 `SOUNDEX` 值，然後傳回整數值。 這個值會測量 `SOUNDEX` 值相符的程度，級別從 0 到 4。 值為 0 表示 SOUNDEX 值之間相似性弱或完全不相似；4 表示 SOUNDEX 值高度相似，或甚至完全相符。  
   
 `DIFFERENCE` 和 `SOUNDEX` 會區分定序。  
@@ -80,7 +80,7 @@ B432  G650  0
   
 ## <a name="see-also"></a>另請參閱  
  [SOUNDEX &#40;Transact-SQL&#41;](../../t-sql/functions/soundex-transact-sql.md)   
- [字串函式 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

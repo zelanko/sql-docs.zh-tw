@@ -13,10 +13,10 @@ ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c86ab8b3f29699e807c61b571832c106ab235710
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68018887"
 ---
 # <a name="access-filetables-with-transact-sql"></a>利用 Transact-SQL 存取 FileTable
@@ -30,14 +30,14 @@ ms.locfileid: "68018887"
   
 -   若 INSERT 陳述式設定 **name**、**path_locator**、**parent_path_locator** 或檔案屬性，則會強制執行系統定義的條件約束。  
   
--   提供 [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) 函數的檔案系統路徑，應用程式就可以取得檔案或目錄的 **path_locator**。  
+-   提供 **GetPathLocator &#40;Transact-SQL&#41;** 函數的檔案系統路徑，應用程式就可以取得檔案或目錄的 [path_locator](../../relational-databases/system-functions/getpathlocator-transact-sql.md)。  
   
 ##  <a name="BasicsUpdate"></a> FileTable 上的 UPDATE 作業  
  下列考量適用於 FileTable 上的 **UPDATE** 作業：  
   
 -   允許更新任何使用者定義的資料。  
   
--   若 INSERT 陳述式設定 **name**、 **path_locator**、 **parent_path_locator**或檔案屬性，則會強制執行系統定義的條件約束。  
+-   若 INSERT 陳述式設定 **name**、**path_locator**、**parent_path_locator** 或檔案屬性，則會強制執行系統定義的條件約束。  
   
 -   您可以更新 **file_stream** 資料行中的 FILESTREAM 資料，而不影響任何其他資料行 (包括時間戳記)。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68018887"
   
 ## <a name="see-also"></a>另請參閱  
  [載入檔案至 FileTable](../../relational-databases/blob/load-files-into-filetables.md)   
- [使用 FileTables 中的目錄與路徑](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [使用檔案輸入輸出 API 存取 FileTable](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)   
  [FileTable DDL、函數、預存程序及檢視](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   

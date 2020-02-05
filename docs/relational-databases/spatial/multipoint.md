@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0b045ca8fd9d93ab2c088d898bd86fafe7acfc60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048636"
 ---
 # <a name="multipoint"></a>MultiPoint
@@ -34,7 +34,7 @@ SET @g = geometry::STGeomFromText('MULTIPOINT((2 3), (7 8 9.5))', 23);
 ```  
   
 ### <a name="example-b"></a>範例 B. 
-下列範例使用 `STMPointFromText()` 來表示 `MultiPoint` 執行個體。  
+下列範例使用 `MultiPoint` 來表示 `STMPointFromText()` 執行個體。  
   
 ```sql  
 DECLARE @g geometry;  

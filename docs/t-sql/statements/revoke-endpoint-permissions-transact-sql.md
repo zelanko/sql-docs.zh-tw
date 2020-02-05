@@ -17,10 +17,10 @@ ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: db85df99a2b37e2d92997dce579d77d0f31f7c0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082283"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE 端點權限 (Transact-SQL)
@@ -83,7 +83,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  AS *SQL_Server_login*  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，執行這項查詢的主體會從這項登入衍生其權限來撤銷權限。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  只有在目前資料庫是 **master** 的情況下，才能夠撤銷伺服器範圍的權限。  
   
  您可以在 [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) 目錄檢視中，看到有關端點的資訊。 您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中，看到伺服器權限的資訊，並在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中，看到有關伺服器主體的資訊。  
@@ -104,7 +104,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>範例  
   
 ### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>A. 撤銷端點的 VIEW DEFINITION 權限  
- 下列範例會撤銷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `VIEW DEFINITION` 之端點 `Mirror7` 的 `ZArifin` 權限。  
+ 下列範例會撤銷 `VIEW DEFINITION` 登入 `Mirror7` 之端點 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `ZArifin` 權限。  
   
 ```  
 USE master;  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. 撤銷具有 CASCADE 選項的 TAKE OWNERSHIP 權限  
- 下列範例會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者 `PKomosinski` 撤銷 `Shipping83` 端點上的 `TAKE OWNERSHIP` 權限，以及從所有 `PKomosinski` 授與 `Shipping83` 上 `TAKE OWNERSHIP` 權限的主體撤銷該權限。  
+ 下列範例會從 `TAKE OWNERSHIP` 使用者 `Shipping83` 撤銷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 端點上的 `PKomosinski` 權限，以及從所有 `PKomosinski` 授與 `TAKE OWNERSHIP` 上 `Shipping83` 權限的主體撤銷該權限。  
   
 ```  
 USE master;  

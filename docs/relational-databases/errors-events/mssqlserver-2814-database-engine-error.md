@@ -12,13 +12,13 @@ ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2c36c06ad91cb9082f06d57f622db4209ac94212
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001970"
 ---
-# <a name="mssqlserver2814"></a>MSSQLSERVER_2814
+# <a name="mssqlserver_2814"></a>MSSQLSERVER_2814
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -37,7 +37,7 @@ ms.locfileid: "68001970"
   
 下表列出重新編譯的原因。  
   
-|原因代碼|Description|  
+|原因代碼|描述|  
 |---------------|---------------|  
 |1|結構描述已變更|  
 |2|統計資料已變更|  
@@ -53,7 +53,7 @@ ms.locfileid: "68001970"
   
 ## <a name="user-action"></a>使用者動作  
   
-1.  您可以執行下列查詢來檢視導致重新編譯的陳述式。 請將 *sql_handle*、*starting_offset*、*ending_offset* 和 *plan_handle* 預留位置取代成錯誤訊息中指定的值。 針對隨選和備妥的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，**database_name** 和 **object_name** 資料行為 NULL。  
+1.  您可以執行下列查詢來檢視導致重新編譯的陳述式。 請將 *sql_handle*、*starting_offset*、*ending_offset* 和 *plan_handle* 預留位置取代成錯誤訊息中指定的值。 針對隨選和備妥的  **陳述式，** database_name**和**object_name[!INCLUDE[tsql](../../includes/tsql-md.md)] 資料行為 NULL。  
   
     ```sql   
     SELECT DB_NAME(st.dbid) AS database_name,  

@@ -23,13 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e38e57bf64d20dcc4e16a8d7b31c372d877c038f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904389"
 ---
-# <a name="errormessage-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
+# <a name="error_message-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 此函式會傳回造成執行 TRY...CATCH 建構的 CATCH 區塊之錯誤的訊息文字。  
@@ -42,7 +42,7 @@ ms.locfileid: "67904389"
 ERROR_MESSAGE ( )   
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **nvarchar(4000)**  
   
 ## <a name="return-value"></a>傳回值  
@@ -50,16 +50,16 @@ ERROR_MESSAGE ( )
   
 在 CATCH 區塊範圍之外呼叫時，`ERROR_MESSAGE` 會傳回 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `ERROR_MESSAGE` 支援在 CATCH 區塊範圍內的任何位置呼叫。  
   
-不論執行多少次，或在 `CATCH` 區塊範圍內的哪個位置執行，`ERROR_MESSAGE` 都會傳回相關的錯誤訊息。 這有別於 @@ERROR 之類的函式，它們只會在緊接於發生錯誤的陳述式之後的陳述式中，傳回錯誤號碼。  
+不論執行多少次，或在 `ERROR_MESSAGE` 區塊範圍內的哪個位置執行，`CATCH` 都會傳回相關的錯誤訊息。 這有別於 @@ERROR 之類的函式，它們只會在緊接於發生錯誤的陳述式之後的陳述式中，傳回錯誤號碼。  
   
 在巢狀 `CATCH` 區塊中，`ERROR_MESSAGE` 會參考該 `CATCH` 區塊之 `CATCH` 區塊範圍特定的錯誤訊息。 例如，外部 TRY...CATCH 建構的 `CATCH` 區塊可能會有內部 `TRY...CATCH` 建構。 在該內部 `CATCH` 區塊內，`ERROR_MESSAGE` 會傳回叫用內部 `CATCH` 區塊之錯誤的訊息。 如果 `ERROR_MESSAGE` 是在外部 `CATCH` 區塊中執行，它會傳回叫用該外部 `CATCH` 區塊之錯誤的訊息。  
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-errormessage-in-a-catch-block"></a>A. 在 CATCH 區塊中使用 ERROR_MESSAGE  
+### <a name="a-using-error_message-in-a-catch-block"></a>A. 在 CATCH 區塊中使用 ERROR_MESSAGE  
 此範例會顯示產生除以零之錯誤的 `SELECT` 陳述式。 `CATCH` 區塊會傳回錯誤訊息。  
   
 ```sql   
@@ -86,7 +86,7 @@ Divide by zero error encountered.
 
 ```  
   
-### <a name="b-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>B. 在含有其他錯誤處理工具的 CATCH 區塊中使用 ERROR_MESSAGE  
+### <a name="b-using-error_message-in-a-catch-block-with-other-error-handling-tools"></a>B. 在含有其他錯誤處理工具的 CATCH 區塊中使用 ERROR_MESSAGE  
 此範例會顯示產生除以零之錯誤的 `SELECT` 陳述式。 除了錯誤訊息，`CATCH` 區塊也會傳回該錯誤的相關資訊。  
   
 ```sql  

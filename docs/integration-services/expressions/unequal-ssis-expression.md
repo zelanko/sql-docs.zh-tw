@@ -14,10 +14,10 @@ ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67aa61e65bc89246cfb0c685d08a32371a5fc4df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287909"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (不等於) (SSIS 運算式)
@@ -39,12 +39,12 @@ expression1 != expression2
   
 ## <a name="arguments"></a>引數  
  *expression1, expression2*  
- 任何有效的運算式。  
+ 為任何有效運算式。  
   
 ## <a name="result-types"></a>結果類型  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果比較中的任一個運算式為 Null，則比較結果為 Null。 如果兩個運算式都是 Null，結果則為 Null。  
   
  運算式集 *expression1* 與 *expression2*必須遵循下列規則之一：  
@@ -56,7 +56,7 @@ expression1 != expression2
     > [!NOTE]  
     >  字串比較有區分大小寫、腔調字、假名與全半形。  
   
--   **日期、時間或日期/時間** *expression1* 和 *expression2* 都必須評估為下列其中一個資料類型：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **日期、時間或日期/時間** ： *expression1* 和 *expression2* 都必須評估為下列其中一種資料類型：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系統不支援評估為時間資料類型之運算式與評估為日期或日期/時間資料類型之運算式之間的比較。 系統會產生錯誤。  
@@ -85,7 +85,7 @@ expression1 != expression2
   
 -   **二進位** ： *expression1* 和 *expression2* 都必須評估為 DT_BYTES 資料類型。  
   
--   **BLOB** *expression1* 和 *expression2* 都必須評估為相同的二進位大型物件區塊 (BLOB) 資料類型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
+-   **BLOB** ： *expression1* 和 *expression2* 都必須評估為相同的二進位大型物件區塊 (BLOB) 資料類型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
   
  如需有關資料類型的詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
   

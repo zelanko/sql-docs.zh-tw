@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e5ff96f07db7b368acc7ee36296516e047bc0475
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125996"
 ---
 # <a name="bit-transact-sql"></a>bit (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68125996"
 
   一種整數資料類型，其值有 1、0 或 NULL 幾種。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可將 **bit** 資料行的儲存體最佳化。 如果資料表中的 **bit** 資料行小於或等於 8 個，這些資料行會儲存為 1 個位元組。 如果有 9 到 16 個 **bit** 資料行，則儲存為 2 個位元組，依此類推。
   
 字串值 TRUE 和 FALSE 可以轉換成 **bit** 值：TRUE 會轉換成 1，FALSE 則轉換成 0。

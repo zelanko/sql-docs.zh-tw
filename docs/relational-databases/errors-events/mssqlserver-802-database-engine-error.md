@@ -12,13 +12,13 @@ ms.assetid: 5892ed24-4dcb-4bf9-a8a4-a7ca898832d5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f880cd41cdde662913099e06ef93eacc17d94265
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68007042"
 ---
-# <a name="mssqlserver802---database-engine-error"></a>MSSQLSERVER_802 - Database Engine 錯誤
+# <a name="mssqlserver_802---database-engine-error"></a>MSSQLSERVER_802 - Database Engine 錯誤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -40,7 +40,7 @@ ms.locfileid: "68007042"
   
 1.  確認是否有其他應用程式或服務正在耗用此伺服器的記憶體。 重新設定比較不重要的應用程式或服務，以降低其記憶體耗用量。  
   
-2.  開始收集以下內容的效能監視器計數：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **：Buffer Manager**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **：記憶體管理員**。  
+2.  開始收集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Buffer Manager** 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Memory Manager** 的效能監視器計數器。  
   
 3.  檢查下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體組態參數：  
   

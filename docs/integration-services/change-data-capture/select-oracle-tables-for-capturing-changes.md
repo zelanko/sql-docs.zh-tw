@@ -13,10 +13,10 @@ ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e0ce4f9888602ef8083dc4f64e98ac4ad6154e5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294585"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>選取 Oracle 資料表來擷取變更
@@ -38,7 +38,7 @@ ms.locfileid: "71294585"
 > [!NOTE]  
 >  您可以在一個或兩個欄位中輸入準則。  
   
--   **顯示前 1000 個相符的資料表**：根據預設，此核取方塊為已選取。 它會將顯示畫面限制為前 1000 個相符的資料表。 如果您清除此核取方塊，符合準則的所有資料表都會顯示。 如果有大量的資料表，則顯示清單可能需要很長的時間。  
+-   **顯示前 1000 個相符的資料表**：預設會選取這個核取方塊。 它會將顯示畫面限制為前 1000 個相符的資料表。 如果您清除此核取方塊，符合準則的所有資料表都會顯示。 如果有大量的資料表，則顯示清單可能需要很長的時間。  
   
  **若要選取包含在 CDC 執行個體中的資料表**  
  按一下您想要包含之任何資料表旁邊的核取方塊，然後按一下 [加入]  。 資料表隨即加入至新增執行個體精靈中 **[選取資料表和資料行]** 頁面的清單中。  

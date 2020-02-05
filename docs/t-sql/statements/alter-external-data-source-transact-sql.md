@@ -19,10 +19,10 @@ ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 236749303a05b54f37be5e24f10f56fc6f5bc41d
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71227162"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
@@ -63,18 +63,18 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
  LOCATION = 'server_name_or_IP' 提供連線通訊協定和路徑給外部資料來源。
 
- RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' (不適用於 Azure SQL 資料倉儲) 指定 Hadoop 資源管理員位置。 指定時，查詢最佳化工具可能會使用 Hadoop 的計算功能，選擇對適用於 PolyBase 查詢的資料進行前置處理。 這是成本型決策。 稱為述詞下推，這可大幅降低在 Hadoop 與 SQL 之間傳送的資料量，因而改善查詢效能。
+ RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' (不適用於 Azure SQL 資料倉儲) 指定 Hadoop 資源管理員位置。 指定時，查詢最佳化工具可能會使用 Hadoop 的計算功能，選擇對適用於 PolyBase 查詢的資料進行前置處理。 這是成本型決策。 這稱為述詞下推，可大幅降低在 Hadoop 與 SQL 之間傳輸的資料量，因而改善查詢效能。
 
  CREDENTIAL = Credential_Name 指定具名認證。 請參閱 [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
 
 TYPE = [HADOOP | BLOB_STORAGE]   
 **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
-僅適用於大量作業，`LOCATION` 必須是有效的 Azure Blob 儲存體 URL。 不要將 **/** 、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。
+僅適用於大量作業，`LOCATION` 必須是有效的 Azure Blob 儲存體 URL。 請不要將 **/** 、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。
 使用的認證必須利用 `SHARED ACCESS SIGNATURE` 來建立，以作為身分識別。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。
 
   
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
  每次只能修改單一來源。 修改相同來源的同時要求會導致一個陳述式進入等待。 不過，可同時修改不同的來源。 這個陳述式可以與其他陳述式同時執行。
 
 ## <a name="permissions"></a>權限  

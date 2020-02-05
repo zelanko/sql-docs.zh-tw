@@ -13,10 +13,10 @@ ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f2110726db47cf76adffca4b10f153ce941565cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093497"
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server 的 FileTable 物件
@@ -25,7 +25,7 @@ ms.locfileid: "68093497"
 
 下表描述 SQL Server **FileTable** 效能物件。
 
-|**SQL Server 的 FileTable 計數器**|Description|  
+|**SQL Server 的 FileTable 計數器**|描述|  
 |-------------|-----------------|  
 |**Avg time delete FileTable item**|刪除 FileTable 項目所花費的平均時間 (以毫秒為單位)。|
 |**Avg time FileTable enumeration**|FileTable 列舉要求所花費的平均時間 (以毫秒為單位)。|

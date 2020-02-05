@@ -18,10 +18,10 @@ ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c769b2e5fa5de94770d556264b82c81e28d43363
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930210"
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed (geography 資料類型)
@@ -36,15 +36,15 @@ ms.locfileid: "67930210"
 .IsValidDetailed()  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**nvarchar(max)**  
   
  CLR 傳回類型：**string**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  下表包含可能的傳回值：  
   
-|傳回值|Description|  
+|傳回值|描述|  
 |------------------|-----------------|  
 |24400|有效|  
 |24401|無效，原因未知。|  

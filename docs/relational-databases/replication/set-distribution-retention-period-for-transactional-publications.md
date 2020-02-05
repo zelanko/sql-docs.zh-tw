@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 9a98c53a-fea5-4235-b23d-6c69587c5676
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ebbf937388d19b36910bc0d1a029933f500d4715
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d699eb502d99818926e92ff07a8fc16248aeee3d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321709"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287205"
 ---
 # <a name="set-distribution-retention-period-for-transactional-publications"></a>設定交易式發行集的散發保留週期
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  在 [散發資料庫屬性 - \<散發資料庫>]  對話方塊中，指定最短和最長散發保留期限。 這可以從 [散發者屬性 - \<散發者>]  對話方塊的 [一般]  頁面取得。 如需存取此對話方塊的詳細資訊，請參閱[檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
+  在 [散發資料庫屬性 - **散發資料庫>]\<** 對話方塊中，指定最短和最長散發保留期限。 這可以從 [散發者屬性 - **散發者>]** **對話方塊的 [一般]\<** 頁面取得。 如需存取此對話方塊的詳細資訊，請參閱[檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
   
 ### <a name="to-specify-the-distribution-retention-period"></a>若要指定散發保留期限  
   
-1.  在 [散發者屬性 - \<散發者>]  對話方塊的 [一般]  頁面上，按一下散發資料庫的屬性按鈕 ( **...** )。  
+1.  在 [散發者屬性 - **散發者>]** **對話方塊的 [一般]\<** 頁面上，按一下散發資料庫的屬性按鈕 ( **...** )。  
   
 2.  若要指定最短散發保留期限，請在 **[至少]** 方塊中輸入值；若要指定最長散發期限，請在 **[但是不能超過]** 方塊中輸入值。  
   

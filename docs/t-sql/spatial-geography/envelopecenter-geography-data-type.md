@@ -18,10 +18,10 @@ ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: da1c2fd6f1e6732f28f79196b433b8e46a595a85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066431"
 ---
 # <a name="envelopecenter-geography-data-type"></a>EnvelopeCenter (geography 資料類型)
@@ -40,12 +40,12 @@ ms.locfileid: "68066431"
 EnvelopeCenter( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
-CLR 傳回型別：**SqlGeography**  
+CLR 傳回類型：**SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 這個方法會傳回 **point**。 搭配 `EnvelopeAngle()` 使用時，`EnvelopeCenter()` 會傳回 **geography** 執行個體的週框圓形。  
   
 > [!NOTE]  

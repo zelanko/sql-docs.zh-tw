@@ -11,10 +11,10 @@ ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 36d73a0248be0bd8f9a0873e5ae8445ee68af2e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295284"
 ---
 # <a name="catalogset_object_parameter_value-ssisdb-database"></a>catalog.set_object_parameter_value (SSISDB 資料庫)
@@ -49,7 +49,7 @@ catalog.set_object_parameter_value [@object_type =] object_type
  包含參數之專案的名稱。 *project_name* 是 **nvarchar(128)** 。  
   
  [@parameter_name =] *parameter_name*  
- 參數的名稱。 *parameter_name* 是 **nvarchar(128)** 。  
+ 參數名稱。 *parameter_name* 是 **nvarchar(128)** 。  
   
  [@parameter_value =] *parameter_value*  
  參數的值。 *parameter_value* 是 **sql_variant**。  
@@ -88,14 +88,14 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 -   使用者未具備適當的權限  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
--   如果沒有指定 *value_type*，預設會使用 *parameter_value* 的常值。 使用常值時，[object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 檢視中的 *value_set* 會設定為 `1`。 不允許 NULL 參數值。  
+-   如果沒有指定 *value_type*，預設會使用 *parameter_value* 的常值。 使用常值時，*object_parameters* 檢視中的 [value_set](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 會設定為 `1`。 不允許 NULL 參數值。  
   
 -   如果 *value_type* 包含字元 `R` (表示受參考的值)，*parameter_value* 就會參考環境變數的名稱。  
   
--   *object_type* 可以使用 `20` 值表示專案參數。 在這個情況下，就不需要 *object_name* 的值，而且為 *object_name* 指定的任何值都會遭到忽略。 當使用者想要設定專案參數時，可以使用這個值。  
+-   `20`object_type*可以使用* 值表示專案參數。 在這個情況下，就不需要 *object_name* 的值，而且為 *object_name* 指定的任何值都會遭到忽略。 當使用者想要設定專案參數時，可以使用這個值。  
   
--   *object_type* 可以使用 `30` 值表示套件參數。 在這個情況下，*object_name* 的值會用來表示對應的套件。 如果未指定 *object_name*，則預存程序會傳回錯誤並結束。  
+-   `30`object_type*可以使用* 值表示套件參數。 在這個情況下，*object_name* 的值會用來表示對應的套件。 如果未指定 *object_name*，則預存程序會傳回錯誤並結束。  
   
   

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 65f4db24d081dc8ceb85201eee088005662e9146
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040445"
 ---
 # <a name="acos-transact-sql"></a>ACOS (Transact-SQL)
@@ -44,7 +44,7 @@ ACOS ( float_expression )
 *float_expression*  
 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)，為 **float** 類型或是能隱含地轉換成 float 的類型。 只有範圍在 -1.00 到 1.00 之間的值為有效。 在這個範圍之外的值會傳回 NULL，且 ASIN 會報告定義域錯誤。
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 **float**
   
 ## <a name="examples"></a>範例  

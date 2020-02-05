@@ -12,10 +12,10 @@ ms.assetid: a55ebd88-6f58-454d-b1c4-991b88add522
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 35f02764a62d780819ba0ee4549d3f307df72af4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986741"
 ---
 # <a name="validate-plan-guides-after-upgrade"></a>升級之後驗證計畫指南

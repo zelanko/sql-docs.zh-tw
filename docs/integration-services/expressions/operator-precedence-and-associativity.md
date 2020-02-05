@@ -14,10 +14,10 @@ ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5e1c394cd8b58fccdae23e83b163164776de3948
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288707"
 ---
 # <a name="operator-precedence-and-associativity"></a>運算子優先順序與關聯性
@@ -31,7 +31,7 @@ ms.locfileid: "71288707"
   
 |運算子符號|運算類型|關聯性|  
 |---------------------|-----------------------|-------------------|  
-|( )|運算式|由左至右|  
+|( )|運算是|由左至右|  
 |-、!、~|一元 (Unary)|由右至左|  
 |轉換|一元 (Unary)|由右至左|  
 |*, / ,%|乘法|由左至右|  

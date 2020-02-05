@@ -24,10 +24,10 @@ ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 84060374e3d46dde985e32a549180d8492c72892
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929000"
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "67929000"
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  基本上，SET FORCEPLAN 會覆寫查詢最佳化工具用來處理 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式的邏輯。 不論這項設定為何，SELECT 陳述式傳回的資料都相同。 唯一不同是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理資料表來滿足查詢的方式。  
   
  查詢也可以利用查詢最佳化工具提示來影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理 SELECT 陳述式的方式。  

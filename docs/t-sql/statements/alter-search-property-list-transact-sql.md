@@ -24,10 +24,10 @@ ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9caf29596f3a5cf610e02ffcf4f27bfacbce668
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001631"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
@@ -106,7 +106,7 @@ SELECT property_int_id FROM sys.registered_search_properties;
  DROP  
  從 *list_name* 所指定的屬性清單中卸除指定屬性。 卸除屬性會取消註冊屬性，所以它不再是可搜尋的。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  每個全文檢索索引只能有一個搜尋屬性清單。  
   
  若要在指定的搜尋屬性上啟用查詢，您必須將它加入至全文檢索索引的搜尋屬性清單，然後再重新擴展索引。  

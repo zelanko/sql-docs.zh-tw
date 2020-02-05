@@ -17,10 +17,10 @@ ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d8d863a6ca6a44a323c05f26298c68de774dfc3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948018"
 ---
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
@@ -41,7 +41,7 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
  CONTENT  
  將 **xml** 執行個體限制為格式正確的 XML 片段。 XML 資料可以在最上層包含多個零或更多元素。 最上層也可以有文字節點。  
   
- 這是預設行為。  
+ 此為預設行為。  
   
  DOCUMENT  
  將 **xml** 執行個體限制為格式正確的 XML 文件。 XML 資料必須也只能有一個根元素。 最上層不能有文字節點。  
@@ -49,7 +49,7 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
  *xml_schema_collection*  
  這是 XML 結構描述集合的名稱。 若要建立具類型的 **xml** 資料行或變數，您可以選擇性指定 XML 結構描述集合名稱。 如需具類型和不具類型之 XML 的詳細資訊，請參閱[比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **xml** 資料類型執行個體的預存表示法大小不得超過 2 GB。  
   
  CONTENT 和 DOCUMENT Facet 只適用於具類型的 XML。 如需詳細資訊，請參閱[比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  

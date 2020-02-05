@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
 ms.openlocfilehash: 3ff0064a228cb756614dec2ff54a91f4f03d374c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991160"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的讀取級別

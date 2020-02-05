@@ -18,10 +18,10 @@ ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f13f076309cfc1b78ab5b76676cbf7ec3eb82f87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077979"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor (Database Engine)
@@ -45,12 +45,12 @@ SqlHierarchyId GetAncestor ( int n )
 *n*  
 **int**，代表要在階層中向上移動的層級數目。
   
-## <a name="return-types"></a>傳回型
+## <a name="return-types"></a>傳回類型
 **SQL Server 傳回型別：hierarchyid**
   
 **CLR 傳回型別：SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 用來測試輸出中的每個節點是否都具有目前的節點當做位於指定之層級的上階。
   
 如果傳遞大於 [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md) 的數字，就會傳回 NULL。

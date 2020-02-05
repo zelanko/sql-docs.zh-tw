@@ -27,10 +27,10 @@ ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ea7697294cd25412d4ac78c92f3b1bf689f1ff34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086108"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
@@ -58,13 +58,13 @@ WAITFOR
  這是在繼續執行批次、預存程序或交易之前，必須經過的指定時段，最多 24 小時。  
   
  '*time_to_pass*'  
- 這是要等待的時間週期。 您可以使用 **datetime** 資料格式來指定 *time_to_pass*，或將它指定成區域變數。 不能指定日期，因此不接受 **datetime** 值的日期部分。 *time_to_pass*會格式化為 hh:mm[[:ss].mss]。
+ 這是要等待的時間週期。 您可以使用 *datetime* 資料格式來指定 **time_to_pass**，或將它指定成區域變數。 不能指定日期，因此不接受 **datetime** 值的日期部分。 *time_to_pass*會格式化為 hh:mm[[:ss].mss]。
   
  TIME  
  此時執行批次、預存程序或交易時的指定時間。  
   
  '*time_to_execute*'  
- 這是 WAITFOR 陳述式完成的時間。 您可以使用 **datetime** 資料格式來指定 *time_to_execute*，也可以將它指定成區域變數。 不能指定日期，因此不接受 **datetime** 值的日期部分。 *time_to_execute* 會格式化為 hh:mm[[:ss].mss]，且可以選擇性地包含日期 1900-01-01。
+ 這是 WAITFOR 陳述式完成的時間。 您可以使用 *datetime* 資料格式來指定 **time_to_execute**，也可以將它指定成區域變數。 不能指定日期，因此不接受 **datetime** 值的日期部分。 *time_to_execute* 會格式化為 hh:mm[[:ss].mss]，且可以選擇性地包含日期 1900-01-01。
   
  *receive_statement*  
  這是有效的 RECEIVE 陳述式。  
@@ -84,7 +84,7 @@ WAITFOR
 > [!IMPORTANT]  
 >  指定 TIMEOUT 的 WAITFOR 只適用於 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 訊息。 如需詳細資訊，請參閱 [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md) 和 [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當執行 WAITFOR 陳述式時，交易在執行中，在相同交易之下，不能執行其他要求。  
   
  實際的時間延遲可能與 *time_to_pass*、*time_to_execute* 或 *timeout* 中所指定時間不同，且會隨著伺服器的活動層級而異。 為 WAITFOR 陳述式執行緒進行排程後，時間計數器便會啟動。 如果伺服器處於忙碌狀態，執行緒可能不會立即排程，因此時間延遲可能比指定的時間還長。  

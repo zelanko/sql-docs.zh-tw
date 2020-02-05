@@ -12,13 +12,13 @@ ms.assetid: 4a8bf90f-a083-4c53-84f0-d23c711c8081
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 112ba12a568190967a31789ca6cd69d2056d9e8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896755"
 ---
-# <a name="mssqlserver2020"></a>MSSQLSERVER_2020
+# <a name="mssqlserver_2020"></a>MSSQLSERVER_2020
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -36,7 +36,7 @@ ms.locfileid: "67896755"
 **sys.dm_sql_referenced_entities** 系統函數會回報任何資料行層級相依性，以進行結構描述繫結參考。 例如，此函數將會報告索引檢視表的所有資料行層級相依性，因為索引檢視表需要結構描述繫結。 不過，如果受參考實體並未結構描述繫結，只有當參考資料行的所有陳述式都可以繫結時，才會報告資料行相依性。 只有當剖析陳述式時所有物件都存在時，陳述式才能成功繫結。 如果實體中定義的任何陳述式無法繫結，即不會回報資料行相依性，而且 **referenced_minor_id** 資料行會傳回 0。 無法解析資料行相依性時，就會引發錯誤 2020。 這個錯誤不會讓查詢無法傳回物件層級相依性。  
   
 ## <a name="user-action"></a>使用者動作  
-更正發生錯誤 2020 之前，在訊息中識別的任何錯誤。 例如，在下列程式碼範例中，`Production.ApprovedDocuments` 檢視表定義於 `Title` 資料表中的 `ChangeNumber`、`Status` 和 `Production.Document` 資料行上。 系統會針對 `ApprovedDocuments` 檢視表所相依的物件和資料行查詢 **sys.dm_sql_referenced_entities** 系統函數。 因為此檢視表並非使用 WITH SCHEMA_BINDING 子句建立，所以檢視表中參考的資料行可能會在參考的資料表中修改。 此範例會將 `ChangeNumber` 資料表中的 `Production.Document` 資料行重新命名為 `TrackingNumber`，藉以更改此資料行。 系統會再次針對 `ApprovedDocuments` 檢視表查詢目錄檢視。不過，它無法繫結至檢視表中定義的所有資料行。 然後，系統會傳回識別此問題的錯誤 207 和 2020。 若要解決此問題，您必須更改檢視表，以便反映資料行的新名稱。  
+更正發生錯誤 2020 之前，在訊息中識別的任何錯誤。 例如，在下列程式碼範例中，`Production.ApprovedDocuments` 檢視表定義於 `Title` 資料表中的 `ChangeNumber`、`Status` 和 `Production.Document` 資料行上。 系統會針對 **檢視表所相依的物件和資料行查詢**sys.dm_sql_referenced_entities`ApprovedDocuments` 系統函數。 因為此檢視表並非使用 WITH SCHEMA_BINDING 子句建立，所以檢視表中參考的資料行可能會在參考的資料表中修改。 此範例會將 `ChangeNumber` 資料表中的 `Production.Document` 資料行重新命名為 `TrackingNumber`，藉以更改此資料行。 系統會再次針對 `ApprovedDocuments` 檢視表查詢目錄檢視。不過，它無法繫結至檢視表中定義的所有資料行。 然後，系統會傳回識別此問題的錯誤 207 和 2020。 若要解決此問題，您必須更改檢視表，以便反映資料行的新名稱。  
   
 <pre>USE AdventureWorks2012;  
 GO  

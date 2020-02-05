@@ -16,10 +16,10 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 19a234b8c2939730a6c5a815885606dac15d0a0a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298162"
 ---
 # <a name="odbc-source"></a>ODBC 來源
@@ -58,7 +58,7 @@ ms.locfileid: "71298162"
 ## <a name="extract-options"></a>擷取選項  
  ODBC 來源以 [批次]  或 [逐列]  模式操作。 所用的模式是由 **FetchMethod** 屬性所決定。 下列清單描述這些模式。  
   
--   **批次**：元件會根據所見的 ODBC 提供者功能，嘗試使用最有效率的擷取方法。 對於最新型的 ODBC 提供者，這是 SQLFetchScroll 與陣列繫結搭配使用 (陣列大小是由 **BatchSize** 屬性所決定)。 如果您選取 [批次]  ，而提供者不支援此方法，ODBC 目的地會自動切換為**逐列**模式。  
+-   **批次**：元件會根據所見的 ODBC 提供者功能，嘗試使用最有效率的提取方法。 對於最新型的 ODBC 提供者，這是 SQLFetchScroll 與陣列繫結搭配使用 (陣列大小是由 **BatchSize** 屬性所決定)。 如果您選取 [批次]  ，而提供者不支援此方法，ODBC 目的地會自動切換為**逐列**模式。  
   
 -   **逐列**：元件會使用 SQLFetch，一次擷取一個資料列。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "71298162"
 #### <a name="data-access-mode"></a>資料存取模式  
  選取從來源中選取資料的方法。 下表將顯示這些選項：  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
 |資料表名稱|從 ODBC 資料來源中的資料表或檢視表擷取資料。 當您選取此選項時，請從清單中選取下列項目的值：|  
 ||**資料表或檢視表的名稱**：從清單中選取可用的資料表或檢視表，或是輸入可識別資料表的規則運算式。|  
@@ -131,7 +131,7 @@ ms.locfileid: "71298162"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟具有 ODBC 來源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
   
-2.  在 [資料流程]  索引標籤中，按兩下 ODBC 來源。  
+2.  在 [資料流程]  索引標籤上，按兩下 ODBC 來源。  
   
 3.  在 **[ODBC 來源編輯器]** 中，按一下 **[資料行]** 。  
   
@@ -174,7 +174,7 @@ ms.locfileid: "71298162"
 #### <a name="truncation"></a>截斷  
  選取 ODBC 來源應該如何處理流程中的截斷：忽略失敗、重新導向資料列，或使元件失效。  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>描述  
  未使用。  
   
 #### <a name="set-this-value-to-selected-cells"></a>將這個值設定到選取的資料格  
@@ -187,7 +187,7 @@ ms.locfileid: "71298162"
  您可以使用下列選項來設定 ODBC 來源處理錯誤和截斷的方式。  
   
 #### <a name="fail-component"></a>失敗元件  
- 當發生錯誤或截斷時，資料流程工作將失敗。 這是預設行為。  
+ 當發生錯誤或截斷時，資料流程工作將失敗。 此為預設行為。  
   
 #### <a name="ignore-failure"></a>忽略失敗  
  忽略錯誤或截斷。  

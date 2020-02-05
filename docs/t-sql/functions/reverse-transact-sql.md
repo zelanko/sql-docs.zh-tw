@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 208babd394592d48feaf257d14329db89d11f767
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68092625"
 ---
 # <a name="reverse-transact-sql"></a>REVERSE (Transact-SQL)
@@ -44,10 +44,10 @@ REVERSE ( string_expression )
  *string_expression*  
  *string_expression* 是字串或二進位資料類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *string_expression* 可以是字元或二進位資料的常數、變數或資料行。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **varchar** 或 **nvarchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  *string_expression* 必須是可以隱含轉換成 **varchar** 的資料類型。 否則，請使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 來明確轉換 *string_expression*。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補充字元 (Surrogate 字組)  

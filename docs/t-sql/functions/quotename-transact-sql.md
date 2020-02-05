@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 761e6f43f1199d4eb16060cd769a30ebba220ef8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914248"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
@@ -49,7 +49,7 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  '*quote_character*'  
  這是用來當做分隔符號的單字元字串。 它可以是單引號 ( **'** )、左或右方括弧 ( **[]** )、雙引號 ( **"** )、左或右括弧 ( **()** )、大於或小於符號 ( **><** )、左或右大括弧 ( **{}** ) 或反勾號 ( **\`** )。 如果提供了無法接受的字元，則會傳回 NULL。 如果未指定 *quote_character*，就會使用方括號。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **nvarchar(258)**  
   
 ## <a name="examples"></a>範例  

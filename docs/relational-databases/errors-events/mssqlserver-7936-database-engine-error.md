@@ -12,13 +12,13 @@ ms.assetid: d78fc8a9-d173-4801-bb32-ed6a29257f08
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e094c571498c315ec57471f216b65376f76eb2aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987744"
 ---
-# <a name="mssqlserver7936"></a>MSSQLSERVER_7936
+# <a name="mssqlserver_7936"></a>MSSQLSERVER_7936
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -30,7 +30,7 @@ ms.locfileid: "67987744"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_ORPHANED_COLUMN_DIRECTORY|  
-|訊息文字|資料表錯誤：物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 的資料行識別碼 C_ID 存在 Filestream 目錄，但是該資料行並非 Filestream 資料行。|  
+|訊息文字|資料表錯誤: FileStream 目錄對於物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 的資料行識別碼 C_ID 存在，但是該資料行並非 FileStream 資料行。|  
   
 ## <a name="explanation"></a>說明  
 在 DBCC CHECKDB 執行期間，系統已找到指定之資料行的 FILESTREAM 目錄。但是，該資料行不是 **FILESTREAM** 資料行。  

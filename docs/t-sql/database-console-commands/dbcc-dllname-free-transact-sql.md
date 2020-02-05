@@ -27,10 +27,10 @@ ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: cc9716cbd1e27c6589b964c3c3d6208105f4863c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101953"
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
@@ -51,7 +51,7 @@ DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]
  WITH NO_INFOMSGS  
  隱藏所有參考訊息。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 在執行擴充預存程序時，DLL 仍由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體載入，直到伺服器關閉為止。 這個陳述式可讓 DLL 從記憶體卸載，而不必關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 若要顯示目前由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 載入的 DLL 檔，請執行 **sp_helpextendedproc**
   
 ## <a name="result-sets"></a>結果集  

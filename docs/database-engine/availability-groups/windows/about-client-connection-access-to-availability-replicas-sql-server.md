@@ -18,17 +18,17 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a47e3c79bacbd75ca6761bdb250b05084caf2832
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991726"
 ---
 # <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Always On 可用性群組內複本的用戶端連線類型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   在 AlwaysOn 可用性群組中，您可以設定一或多個可用性複本，讓它在次要角色之下執行時 (也就是以次要複本的方式執行時)，允許唯讀連接。 以主要角色執行時 (也就是當做主要複本執行時)，您也可以設定每個可用性複本，以允許或排除唯讀連接。  
   
- 若要簡化用戶端對給定可用性群組之主要或次要資料庫的存取，您應該定義可用性群組接聽程式。 根據預設，可用性群組接聽程式會將內送連接導向至主要複本。 不過，您可以將可用性群組設定為支援唯讀路由，讓它的可用性群組接聽程式將讀取意圖應用程式的連接要求重新導向至可讀取的次要複本。 如需詳細資訊，請參閱 [設定可用性群組的唯讀路由 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)。  
+ 若要簡化用戶端對給定可用性群組之主要或次要資料庫的存取，您應該定義可用性群組接聽程式。 根據預設，可用性群組接聽程式會將內送連接導向至主要複本。 不過，您可以將可用性群組設定為支援唯讀路由，讓它的可用性群組接聽程式將讀取意圖應用程式的連接要求重新導向至可讀取的次要複本。 如需詳細資訊，請參閱本主題稍後的 [設定可用性群組的唯讀路由 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md))。  
   
  在容錯移轉期間，次要複本會轉換到主要角色，而先前的主要複本會轉換到次要角色。 在容錯移轉過程中，會同時終止主要複本和次要複本的所有用戶端連接。 容錯移轉之後，當用戶端重新連接至可用性群組接聽程式時，接聽程式會將用戶端重新連接至新的主要複本 (但讀取意圖的連接要求除外)。 如果用戶端、裝載新主要複本的伺服器執行個體，以及至少一個可讀取的次要複本上設定了唯讀路由，讀取意圖連接要求會重新導向至支援用戶端所需連接存取類型的次要複本。 為確保容錯移轉後的用戶端經驗沒有失誤，最好同時針對每個可用性複本的次要和主要角色，設定連接存取。  
   
@@ -69,13 +69,13 @@ ms.locfileid: "67991726"
   
 |複本角色|複本上支援的連接存取|連接意圖|連接嘗試結果|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|次要|All|讀取意圖、讀寫，或未指定任何連接意圖|成功|  
+|次要|全部|讀取意圖、讀寫，或未指定任何連接意圖|Success|  
 |次要|無 (這是預設的次要行為)。|讀取意圖、讀寫，或未指定任何連接意圖|失敗|  
-|次要|僅限讀取意圖|讀取意圖|成功|  
+|次要|僅限讀取意圖|讀取意圖|Success|  
 |次要|僅限讀取意圖|讀寫，或未指定任何連接意圖|失敗|  
-|Primary|全部 (這是預設的主要行為)。|唯讀、讀寫，或未指定任何連接意圖|成功|  
+|Primary|全部 (這是預設的主要行為)。|唯讀、讀寫，或未指定任何連接意圖|Success|  
 |Primary|讀寫|僅限讀取意圖|失敗|  
-|Primary|讀寫|讀寫，或未指定任何連接意圖|成功|  
+|Primary|讀寫|讀寫，或未指定任何連接意圖|Success|  
   
  如需設定可用性群組接受用戶端連接至其複本的相關資訊，請參閱 [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
   
@@ -86,8 +86,8 @@ ms.locfileid: "67991726"
   
 |複本|認可模式|初始角色|次要角色的連接存取|主要角色的連接存取|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|同步的|Primary|None|讀寫|  
-|Replica2|同步的|次要|None|讀寫|  
+|Replica1|同步|Primary|None|讀寫|  
+|Replica2|同步|次要|None|讀寫|  
 |Replica3|非同步的|次要|僅限讀取意圖|讀寫|  
 |Replica4|非同步的|次要|僅限讀取意圖|讀寫|  
   
@@ -109,7 +109,7 @@ ms.locfileid: "67991726"
   
 -   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server AlwaysOn 團隊部落格：SQL Server AlwaysOn 官方團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

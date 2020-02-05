@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3185634a4370ccb86fdb2f0199dc3af452d77558
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042084"
 ---
 # <a name="stintersects-geography-data-type"></a>STIntersects (geography 資料類型)
@@ -39,14 +39,14 @@ ms.locfileid: "68042084"
   
 ## <a name="arguments"></a>引數  
  *other_geography*  
- 這是要與 `STIntersects()` 叫用所在的執行個體相比較的另一個 **geography** 執行個體。  
+ 這是要與 **叫用所在的執行個體相比較的另一個**geography`STIntersects()` 執行個體。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回型別：**SqlBoolean**  
+ CLR 傳回類型：**SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 **geography** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一定會傳回 **NULL**。  
   
 ## <a name="examples"></a>範例  

@@ -10,10 +10,10 @@ ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 765763ae01183d0907e5371cf1420205cd5737b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68076136"
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>連接至 Microsoft Azure 訂用帳戶

@@ -22,10 +22,10 @@ ms.assetid: 3b083cbb-3c6a-4f59-8d34-601db1efcc83
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8d0f9c50b5d89926f370f9059a1cbce6c246e216
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141158"
 ---
 # <a name="close-symmetric-key-transact-sql"></a>CLOSE SYMMETRIC KEY (Transact-SQL)
@@ -46,7 +46,7 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
  *Key_name*  
  這是要關閉的對稱金鑰名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  開啟的對稱金鑰繫結到工作階段，而非安全性內容。 開啟的金鑰將持續保持可用狀態，直到明確關閉金鑰或結束工作階段為止。 CLOSE ALL SYMMETRIC KEYS 會關閉目前工作階段中使用 [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) 陳述式開啟的任何資料庫主要金鑰。  您可以在 [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) 目錄檢視中看到開啟金鑰的資訊。  
   
 ## <a name="permissions"></a>權限  

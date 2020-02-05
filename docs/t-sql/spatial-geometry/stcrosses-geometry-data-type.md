@@ -18,10 +18,10 @@ ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 0320cbd20242f19bab7c7990f4bad13458e403e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930141"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses (geometry 資料類型)
@@ -38,14 +38,14 @@ ms.locfileid: "67930141"
   
 ## <a name="arguments"></a>引數  
  *other_geometry*  
- 這是要與叫用 `STCrosses()` 所在之執行個體相比較的另一個 **geometry** 執行個體。  
+ 這是要與叫用 **所在之執行個體相比較的另一個**geometry`STCrosses()` 執行個體。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回型別：**SqlBoolean**  
+ CLR 傳回類型：**SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果下列兩個條件都成立，則表示這兩個 **geometry** 執行個體相交：  
   
 -   兩個 **geometry** 執行個體的交集會產生一個幾何，這個幾何的維度小於來源 **geometry** 執行個體的最大維度。  

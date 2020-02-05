@@ -18,10 +18,10 @@ ms.assetid: f0551674-e6e8-4926-9038-df03f2c807d7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1a15d3bdc505c4406c1c5d09dbc9d6f007c34fe0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930389"
 ---
 # <a name="stboundary-geometry-data-type"></a>STBoundary (geometry 資料類型)
@@ -36,13 +36,13 @@ ms.locfileid: "67930389"
 .STBoundary ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回型別：**SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
- 當 **LineString**、**CircularString** 或 **CompoundCurve** 執行個體的端點相同時，`STBoundary()` 會傳回空的 **GeometryCollection**。  
+## <a name="remarks"></a>備註  
+ 當 `STBoundary()`LineString **、** CircularString**或**CompoundCurve **執行個體的端點相同時，** 會傳回空的 **GeometryCollection**。  
   
 ## <a name="examples"></a>範例  
   

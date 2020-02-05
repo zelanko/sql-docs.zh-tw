@@ -31,10 +31,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b92994f9a04b0b9bda56085b00896278e124705
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910677"
 ---
 # <a name="getdate-transact-sql"></a>GETDATE (Transact-SQL)
@@ -58,7 +58,7 @@ GETDATE ( )
 ## <a name="return-type"></a>傳回類型  
  **datetime**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  只要是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以參考 **datetime** 運算式的任何位置，它們就可以參考 GETDATE。  
   
  GETDATE 是不具決定性的函數。 在資料行中參考這個函數的檢視表和運算式無法編製索引。  

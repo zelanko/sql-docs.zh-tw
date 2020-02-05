@@ -22,10 +22,10 @@ ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: f35532913a21ed6f90d1e940dd6346137fc3feda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039090"
 ---
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
@@ -55,13 +55,13 @@ FROM sys.dm_exec_requests
 WHERE session_id = @@spid;  
 ```  
   
- 取代所有提及的  
+ WITH  
  接受即將指定的選項。  
   
  NO_INFOMSGS  
  抑制所有嚴重性層級在 0 到 10 的參考用訊息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 DBCC OUTPUTBUFFER 會顯示傳給指定用戶端 (*session_id*) 的結果。 如果是不包含輸出資料流的處理序，便會傳回錯誤訊息。
   
 若要顯示執行之後傳回 DBCC OUTPUTBUFFER 所顯示之結果的陳述式，請執行 DBCC INPUTBUFFER。

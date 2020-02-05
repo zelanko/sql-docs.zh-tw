@@ -13,10 +13,10 @@ ms.assetid: 7101d77a-84ca-4c00-af1c-17679234e9fb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6ab246e886e4f439fbf1dca600372a6816bc198b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940451"
 ---
 # <a name="device-driver-control-error"></a>裝置驅動程式控制項錯誤

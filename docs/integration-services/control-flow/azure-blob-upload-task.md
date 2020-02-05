@@ -14,10 +14,10 @@ ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e903de279e4373e234dab18401465edd997e7407
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298428"
 ---
 # <a name="azure-blob-upload-task"></a>Azure Blob 上傳工作
@@ -40,5 +40,5 @@ ms.locfileid: "71298428"
 |BlobDirectory|指定以區塊 Blob 形式儲存上傳之檔案的 Blob 目錄。 Blob 目錄是虛擬的階層式結構。 如果在 Blob 已存在，則會遭到取代。|  
 |LocalDirectory|指定含有要上傳之檔案的本機目錄。|  
 |SearchRecursively|指定是否要以遞迴方式在子目錄中搜尋。|  
-|FileName|指定名稱篩選，利用指定的名稱模式來選取檔案。 例如，`MySheet*.xls\*` 包含 `MySheet001.xls` 和 `MySheetABC.xlsx` 等檔案。|  
-|TimeRangeFrom/TimeRangeTo|指定時間範圍篩選。 包含在 **TimeRangeFrom** 之後且 **TimeRangeTo** 之前所修改的檔案。|  
+|FileName|指定名稱篩選器以選取採用指定名稱模式的檔案。 例如，`MySheet*.xls\*` 包含 `MySheet001.xls` 和 `MySheetABC.xlsx` 等檔案。|  
+|TimeRangeFrom/TimeRangeTo|指定時間範圍篩選器。 包含在 **TimeRangeFrom** 之後且 **TimeRangeTo** 之前所修改的檔案。|  

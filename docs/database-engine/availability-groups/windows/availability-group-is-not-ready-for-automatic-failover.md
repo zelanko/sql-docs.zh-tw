@@ -15,10 +15,10 @@ ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 78f61b21ae2399a3aa5d0b5432a4047c3f4fd4b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991494"
 ---
 # <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>Always On 可用性群組尚未準備進行自動容錯移轉
@@ -33,7 +33,7 @@ ms.locfileid: "67991494"
 |**類別目錄**|**嚴重**|  
 |**Facet**|可用性群組|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  這項原則檢查可用性群組是否至少有一個已做好容錯移轉準備的次要複本。 當主要複本的容錯移轉模式為自動，但是可用性群組中的次要複本都未準備進行容錯移轉時，原則為狀況不良並會引發警示。  
   
  至少一個次要複本已做好自動容錯移轉的準備時，原則為狀況良好。  

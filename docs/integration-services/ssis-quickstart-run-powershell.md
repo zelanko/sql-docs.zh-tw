@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b3a77db696e684a499ffcfc09fb64271be5c6b64
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295611"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>使用 PowerShell 執行 SSIS 套件
@@ -32,7 +32,7 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 
 -   Windows 上的 SQL Server。
 
--   Azure SQL Database。 如需在 Azure 部署和執行套件的詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+-   Azure SQL Database。 如需在 Azure 中部署和執行套件的詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
 
 您不能使用本快速入門中的資訊在 Linux 上執行 SSIS 套件。 如需在 Linux 上執行套件的詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../linux/sql-server-linux-migrate-ssis.md)。
 
@@ -61,7 +61,7 @@ WHERE { $_.Name -eq 'Package.dtsx' }).Execute("false", $null)
 為下列指令碼上方的變數提供適當的值，然後執行指令碼以執行 SSIS 套件。
 
 > [!NOTE]
-> 下列範例使用 Windows 驗證。 若要使用 SQL Server 驗證，請使用 `User ID=<user name>;Password=<password>;` 取代 `Integrated Security=SSPI;` 引數。 如果要連線至 Azure SQL Database 伺服器，您無法使用 Windows 驗證。 
+> 下列範例使用 Windows 驗證。 若要使用 SQL Server 驗證，請使用 `Integrated Security=SSPI;` 取代 `User ID=<user name>;Password=<password>;` 引數。 如果要連線至 Azure SQL Database 伺服器，您無法使用 Windows 驗證。 
 
 ```powershell
 # Variables

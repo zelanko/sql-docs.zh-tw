@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2847ef10bd52d69375fa4f13f1d003eb4159961f
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847469"
 ---
 # <a name="iservervirtualdeviceset2close-vdi"></a>IServerVirtualDeviceSet2::Close (VDI)
@@ -34,7 +34,7 @@ HRESULT IServerVirtualDeviceSet2::Close ();
 |---|---|
 | VD_E_PROTOCOL | 裝置仍處於開啟狀態。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 在關閉裝置之前，不應執行關閉虛擬裝置集。 如果發生這種情況，則會傳回 VD_E_PROTOCOL。 此動作會導致 Close 立即釋放其共用記憶體的對應。 如果伺服器持續預期從虛擬裝置介面傳回的資源擁有權，則會受到存取違規的影響。 此介面會執行 SignalAbort 處理。
 

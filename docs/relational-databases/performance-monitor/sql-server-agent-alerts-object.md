@@ -14,10 +14,10 @@ ms.assetid: e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a5a408ac1329c11054804902f3e751d6126afa4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987349"
 ---
 # <a name="sql-server-agent-alerts-object"></a>SQL Server Agent、Alerts 物件
@@ -26,7 +26,7 @@ ms.locfileid: "67987349"
   
  下表包含 **SQLAgent:Alerts** 計數器。  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |**Activated alerts**|這個計數器報告自從 SQL Server Agent 上次重新啟動後，SQL Server Agent 已啟動的警示總數。|  
 |**Alerts activated/minute**|這個計數器報告 SQL Server Agent 在前一分鐘內所啟動的警示數目。|  

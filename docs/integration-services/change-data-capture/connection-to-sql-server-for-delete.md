@@ -11,10 +11,10 @@ ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b28d1c4cb3f17ae5a22e98735730a94ae186885
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298901"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>連接到 SQL Server 進行刪除
@@ -32,13 +32,13 @@ ms.locfileid: "71298901"
  輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在的伺服器名稱。  
   
  **驗證**  
- 選取下列其中一項：  
+ 選取下列其中一個：  
   
 -   **Windows 驗證**  
   
--   **SQL Server 驗證**：如果您選取這個選項，必須針對您所連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的使用者輸入**登入**和**密碼**。  
+-   **SQL Server 驗證**：如果您選取這個選項，您必須針對您所連接之  **中的使用者輸入 [登入]** **和 [密碼]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- **選項。**  
+ **選項**  
  按一下箭頭即可檢視要設定的可用選項。 您可以選擇保留這些選項的預設值。 可用的選項如下：  
   
 -   **連接逾時**：輸入此程式在產生逾時錯誤之前，等候連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的時間 (以秒數為單位)。 預設值為 **15**。  

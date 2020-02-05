@@ -29,10 +29,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 1bda4ebd946bfd8adf31190c36125075d50dc28d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68073166"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
@@ -78,7 +78,7 @@ WITH NO_INFOMSGS
 ## <a name="result-sets"></a>結果集  
 下表描述結果集中的資料行。
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
 |**DbId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 試圖壓縮之檔案的資料庫識別碼。|  
 |**FileId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 試圖壓縮之檔案的識別碼。|  
@@ -90,7 +90,7 @@ WITH NO_INFOMSGS
 >[!NOTE]
 > [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會顯示未壓縮之檔案的資料列。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 
 >[!NOTE]
 > Azure SQL 資料倉儲目前不支援 DBCC SHRINKDATABASE。 不建議執行此命令，因為這是 I/O 密集作業，而且可以讓您的資料倉儲離線。 此外，執行此命令之後將會對您的資料倉儲快照集成本有所影響。 
@@ -116,11 +116,11 @@ DBCC SHRINKDATABASE 會以個別檔案為基礎來壓縮資料檔案，但會依
   
 假設您有幾個記錄檔、一個資料檔，以及一個名為 **mydb** 的資料庫。 每個資料檔案和記錄檔均為 10 MB，資料檔案則包含 6 MB 的資料。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會計算每個檔案的目標大小。 這個值是檔案要壓縮到的大小。 當設定 _target\_percent_ 來指定 DBCC SHRINKDATABASE 時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將目標大小計算為在壓縮之後，檔案中可用空間的 _target\_percent_ 量。 
 
-例如，如果您指定壓縮 **mydb** 的 _target\_percent_ 為 25，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將這個資料檔案的目標大小計算為 8 MB (6 MB 資料加 2 MB 可用空間)。 因此，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將資料檔案最後 2 MB 的任何資料移到資料檔案前 8 MB 中的任何可用空間，然後再壓縮檔案。
+例如，如果您指定壓縮 _mydb\_ 的_ target**percent** 為 25，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將這個資料檔案的目標大小計算為 8 MB (6 MB 資料加 2 MB 可用空間)。 因此，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將資料檔案最後 2 MB 的任何資料移到資料檔案前 8 MB 中的任何可用空間，然後再壓縮檔案。
   
 假設 **mydb** 的資料檔案包含 7 MB 的資料。 將 _target\_percent_ 指定為 30，可以將這個資料檔案壓縮到可用百分比 30。 不過，將 _target\_percent_ 指定為 40 並不會壓縮資料檔案，因為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會將檔案壓縮成小於資料目前所佔用的大小。 
 
-您也可以用另一種方法思考此問題：40% 需要的可用空間 + 70% 完整資料檔案 (10 MB 中的 7 MB) 會超出 100%。 大於 30 的任何 _target\_size_ 都不會壓縮資料檔案。 它不會壓縮，因為您想要的可用百分比加上目前資料檔案所佔百分比已超過 100%。
+您也可以用另一個方式來考慮這個問題：40% 需要的可用空間 + 70% 完整資料檔案 (10 MB 中的 7 MB) 會超出 100%。 大於 30 的任何 _target\_size_ 都不會壓縮資料檔案。 它不會壓縮，因為您想要的可用百分比加上目前資料檔案所佔百分比已超過 100%。
   
 針對記錄檔，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會使用 _target\_percent_ 來計算整份記錄的目標大小。 這就是為什麼 _target\_percent_ 是壓縮作業之後的記錄檔可用空間量。 之後，便會將整份記錄的目標大小轉換成每個記錄檔的目標大小。
   
@@ -128,7 +128,7 @@ DBCC SHRINKDATABASE 會試圖將每個實體記錄檔立即壓縮成目標大小
   
 記錄檔只能壓縮到虛擬記錄檔界限。 這就是為什麼可能無法將記錄檔壓縮成小於虛擬記錄檔大小的大小。 即使並未正在使用它也可能無法這麼做。 建立或擴充記錄檔時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會動態選擇虛擬記錄檔的大小。
   
-## <a name="best-practices"></a>最佳作法  
+## <a name="best-practices"></a>最佳做法  
 當您計畫壓縮資料庫時，請考量下列資訊：
 -   壓縮作業在作業之後最有效。 這個作業會建立未使用的空間，例如截斷資料表或卸除資料表作業。  
 -   大部分資料庫都需要一些可用空間來執行每天的例行作業。 您可以反覆壓縮資料庫，且注意到資料庫大小再次成長。 這種成長表示例行作業需要壓縮空間。 在這些情況之下，反覆壓縮資料庫是一項會造成浪費的作業。  
@@ -144,7 +144,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-此錯誤表示時間戳記早於 109 的快照集交易會封鎖壓縮作業。 該交易是壓縮作業完成的最後一個交易。 其也表示 [sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 動態管理檢視中的 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 資料行包含值 15。 檢視中的 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 資料行所包含數字可能小於壓縮作業所完成的最後一項交易 (109)。 如果是這樣，壓縮作業將會等到這些交易完成。
+此錯誤表示時間戳記早於 109 的快照集交易會封鎖壓縮作業。 該交易是壓縮作業完成的最後一個交易。 其也表示 **sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;** 動態管理檢視中的 **transaction_sequence_num** 或 [first_snapshot_sequence_num](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 資料行包含值 15。 檢視中的 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 資料行所包含數字可能小於壓縮作業所完成的最後一項交易 (109)。 如果是這樣，壓縮作業將會等到這些交易完成。
   
 若要解決這個問題，可以執行下列其中一項工作：
 -   結束正在封鎖壓縮作業的交易。  

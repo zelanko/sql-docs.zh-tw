@@ -12,13 +12,13 @@ ms.assetid: 7dcc61a3-975d-4662-8a4e-c153e26b36c6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f7716083ff9c7963a913bc407dffc3938ef27bb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68007093"
 ---
-# <a name="mssqlserver7937"></a>MSSQLSERVER_7937
+# <a name="mssqlserver_7937"></a>MSSQLSERVER_7937
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -30,7 +30,7 @@ ms.locfileid: "68007093"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_MISSING_COLUMN_DIRECTORY|  
-|訊息文字|資料表錯誤：找不到物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 中資料行識別碼 C_ID 的 Filestream 目錄。|  
+|訊息文字|資料表錯誤: 找不到物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 中資料行識別碼 C_ID 的 FileStream 目錄。|  
   
 ## <a name="explanation"></a>說明  
 指定的資料行存在於分割區中；不過，在 FILESTREAM 資料空間中找不到其對應的 FILESTREAM 目錄。  

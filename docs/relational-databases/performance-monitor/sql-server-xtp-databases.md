@@ -13,10 +13,10 @@ ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 01336bc87411fec167a3f78dfd3bf397a93b6d2c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947791"
 ---
 # <a name="sql-server-xtp-databases"></a>SQL Server XTP 資料庫
@@ -29,7 +29,7 @@ ms.locfileid: "67947791"
 
 下表描述 **SQL Server XTP Databases** 計數器。
 
-|計數器|Description| 
+|計數器|描述| 
 |-------------|-----------------|  
 |**Avg Transaction Segment Large Data Size**|交易區段大型資料內容的平均大小。 這是層級非常低的計數器，非供客戶使用。|
 |**Avg Transaction Segment Size**|交易區段內容的平均大小。 如果這個值會變成零，則會從後端配置器配置更多頁面。 這是層級非常低的計數器，非供客戶使用。|

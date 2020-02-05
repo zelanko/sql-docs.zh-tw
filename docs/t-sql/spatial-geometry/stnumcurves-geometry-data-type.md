@@ -15,10 +15,10 @@ ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1eb57ac476d430d5bc79c71ce5c6a12087155366
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089003"
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (geometry 資料類型)
@@ -33,12 +33,12 @@ ms.locfileid: "68089003"
 .STNumCurves()  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回型別：**SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  空的一維 **geometry** 執行個體會傳回 0。 當 **geometry** 執行個體不是一維執行個體，或者是未初始化的執行個體時，就會傳回 **NULL**。  
   
 ## <a name="examples"></a>範例  

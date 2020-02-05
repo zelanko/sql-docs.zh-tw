@@ -22,10 +22,10 @@ ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 01cf9fcf7795e8f353565b767bbf79b1da43f4de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121700"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
@@ -46,7 +46,7 @@ SHUTDOWN [ WITH NOWAIT ]
  WITH NOWAIT  
  選擇性。 在不執行每個資料庫之檢查點的情況下，關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在嘗試終止所有使用者處理序之後，結束 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 當重新啟動伺服器時，會執行未完成的交易之回復作業。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  除非使用 WITHNOWAIT 選項，否則，SHUTDOWN 會利用下列方式來關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：  
   
 1.  停用登入 (**sysadmin** 和 **serveradmin** 固定伺服器角色的成員除外)。  

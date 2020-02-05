@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 085972109c9b19173e46c97cc5cef239a454dcb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950296"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
@@ -45,10 +45,10 @@ COALESCE ( expression [ ,...n ] )
 _expression_  
 這是任何類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 傳回具有最高資料類型優先順序的 _expression_ 資料類型。 如果所有運算式都不可為 Null，結果的類型也是不可為 Null。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 如果所有引數均為 `NULL`，`COALESCE` 就會傳回 `NULL`。 至少其中一個 Null 值必須是 `NULL` 類型。  
   
 ## <a name="comparing-coalesce-and-case"></a>比較 COALESCE 和 CASE  
@@ -65,7 +65,7 @@ END
   
 如此，會多次評估輸入值 (_expression1_、_expression2_、_expressionN_ 等等)。 包含子查詢的值運算式會視為不具決定性，且會評估子查詢兩次。 此結果符合 SQL 標準。 不論是哪一種情況，第一次評估和後續評估之間都會傳回不同的結果。  
   
-例如，執行程式碼 `COALESCE((subquery), 1)` 時，會評估子查詢兩次。 因此，您會根據查詢的隔離等級取得不同的結果。 例如，程式碼在多使用者環境的 `READ COMMITTED` 隔離等級下，會傳回 `NULL`。 為了確保會傳回穩定的結果，請使用 `SNAPSHOT ISOLATION` 隔離等級，或以 `ISNULL` 函數取代 `COALESCE`。 或者，您可以重寫查詢，將子查詢推送至子選擇，如下列範例所示：  
+例如，執行程式碼 `COALESCE((subquery), 1)` 時，會評估子查詢兩次。 因此，您會根據查詢的隔離等級取得不同的結果。 例如，程式碼在多使用者環境的 `NULL` 隔離等級下，會傳回 `READ COMMITTED`。 為了確保會傳回穩定的結果，請使用 `SNAPSHOT ISOLATION` 隔離等級，或以 `COALESCE` 函數取代 `ISNULL`。 或者，您可以重寫查詢，將子查詢推送至子選擇，如下列範例所示：  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -109,7 +109,7 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
     );  
     ```  
   
-4.  適用於 `ISNULL` 和 `COALESCE` 的驗證也不一樣。 例如，`ISNULL` 的 `NULL` 值會轉換為 **int**；而針對 `COALESCE`，您卻必須提供資料類型。  
+4.  適用於 `ISNULL` 和 `COALESCE` 的驗證也不一樣。 例如，`NULL` 的 `ISNULL` 值會轉換為 **int**；而針對 `COALESCE`，您卻必須提供資料類型。  
   
 5.  `ISNULL` 只接受兩個參數。 相較之下，`COALESCE` 接受數目不定的參數。  
   
@@ -189,7 +189,7 @@ Total Salary
 (12 row(s) affected)
 ```  
   
-### <a name="c-simple-example"></a>C.簡單範例  
+### <a name="c-simple-example"></a>C：簡單範例  
 下列範例示範 `COALESCE` 如何從具有非 Null 值的第一個資料行選取資料。 此範例假設 `Products` 資料表包含此資料：  
   
 ```  
@@ -219,7 +219,7 @@ NULL         White      PN9876         White
   
 請注意，在第一個資料列中，`FirstNotNull` 值是 `PN1278`，而非 `Socks, Mens`。 這個值會這樣，是因為在範例中，未將 `Name` 資料行指定為 `COALESCE` 的參數。  
   
-### <a name="d-complex-example"></a>D.複雜範例  
+### <a name="d-complex-example"></a>D：複雜範例  
 下列範例會使用 `COALESCE` 來比較三個資料行中的值，並且只傳回在資料行中找到的非 Null 值。  
   
 ```sql  

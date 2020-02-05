@@ -15,10 +15,10 @@ ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 95893aac0b6ca62b60b12f9d35daf15e77e565f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929306"
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (geometry 資料類型)
@@ -40,15 +40,15 @@ ms.locfileid: "67929306"
  *relative*  
  這是一個 **bool** 運算式，用來指出是否要使用偏差的相對最大值。 如果 relative 設為 false (0)，則會設定線性近似值的偏差絕對最大值。 如果 relative 設為 true (1)，則會以容錯參數與空間物件週框方塊之直徑的乘積來計算容錯。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回型別：**SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
 ## <a name="exceptions"></a>例外狀況  
  如果容錯設為 <= 0，則會擲回 `ArgumentOutOfRange` 例外狀況。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此方法可以指定結果 **LineString** 的誤差容許範圍。  
   
  下表顯示 `CurveToLineWithTolerance()` 為各種不同類型所傳回的執行個體類型。  
@@ -72,7 +72,7 @@ ms.locfileid: "67929306"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. 在 CircularString 執行個體上使用不同的容錯值  
- 下列範例示範設定容錯如何影響從 `CircularString` 執行個體傳回的 `LineString` 執行個體：  
+ 下列範例示範設定容錯如何影響從 `LineString` 執行個體傳回的 `CircularString` 執行個體：  
   
 ```
  DECLARE @g geometry; 
@@ -99,7 +99,7 @@ ms.locfileid: "67929306"
  ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. 為叫用 CurvePolygon 執行個體，將 relative 設為 true  
- 下列範例使用 `CurvePolygon` 執行個體，在 *relative* 設為 true 時呼叫 `CurveToLineWithTolerance()`：  
+ 下列範例使用 `CurvePolygon` 執行個體，在 `CurveToLineWithTolerance()`relative*設為 true 時呼叫*：  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 361059daeb60402f564caa09837046117804ba6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059917"
 ---
 # <a name="left-transact-sql"></a>LEFT (Transact-SQL)
@@ -50,18 +50,18 @@ LEFT ( character_expression , integer_expression )
   
  *integer_expression* 參數會將 UTF-16 代理字元視為一個字元。  
   
-## <a name="return-types"></a>傳回類型  
- 當 *character_expression* 是非 Unicode 字元資料類型時，則傳回 **varchar**。  
+## <a name="return-types"></a>傳回型別  
+ 當 **character_expression** 是非 Unicode 字元資料類型時，則傳回 *varchar*。  
   
- 當 *character_expression* 是 Unicode 字元資料類型時，則傳回 **nvarchar**。  
+ 當 **character_expression** 是 Unicode 字元資料類型時，則傳回 *nvarchar*。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當使用 SC 定序時，*integer_expression* 參數會將 UTF-16 代理字組視為一個字元。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-left-with-a-column"></a>A. 使用 LEFT 搭配資料行  
- 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `Product` 資料表中，每個產品名稱最左邊的五個字元。  
+ 下列範例會傳回 `Product` 資料庫的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中，每個產品名稱最左邊的五個字元。  
   
 ```  
 SELECT LEFT(Name, 5)   

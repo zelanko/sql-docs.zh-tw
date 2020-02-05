@@ -1,10 +1,7 @@
 ---
-title: 工作負載元素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Workload 元素 (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fb526f31bb36ca7d4dd046f8a0f3a4f7962c6ea8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 22331332715639b12f7a2cc82d8b71d723a1fecd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105937"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307889"
 ---
 # <a name="workload-element-dta"></a>Workload 元素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  指定微調工作階段所用的工作負載。  
+
+指定微調工作階段所用的工作負載。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +40,7 @@ ms.locfileid: "68105937"
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|Description|  
+|特性|描述|  
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  
@@ -50,7 +53,7 @@ ms.locfileid: "68105937"
 |**父元素**|[啟動及使用 Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
 |**子元素**|[File 元素 &#40;DTA&#41;](../../tools/dta/file-element-dta.md)<br /><br /> [工作負載的 Database 元素 &#40;DTA&#41;](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [EventString 元素 &#40;DTA&#41;](../../tools/dta/eventstring-element-dta.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  工作負載是針對需要微調的一或多個資料庫來執行的一組 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 Database Engine Tuning Advisor 可以利用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼、追蹤檔和追蹤資料表來作為工作負載。  
   
  如果您在 XML 輸入檔中指定工作負載，以及在命令列中利用 **dta** 工具來指定工作負載，就會利用命令列所指定的工作負載來進行微調。 命令列所指定的所有微調選項都會覆寫 XML 輸入檔中所指定的微調選項。 XML 輸入檔中以評估模式輸入的使用者指定組態是唯一例外。 例如，如果在 XML 輸入檔的 **Configuration** 元素中輸入了某項組態， **EvaluateConfiguration** 元素也指定成一個微調選項，XML 輸入檔所指定的微調選項會覆寫在命令列中輸入的任何微調選項。  

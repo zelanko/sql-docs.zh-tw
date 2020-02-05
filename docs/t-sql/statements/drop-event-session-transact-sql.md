@@ -19,10 +19,10 @@ ms.assetid: 92eabe4b-24e2-43b1-978c-31a199964b90
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b408b030a27b1e6ebe0fc94db8b6ee32cbb837ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898052"
 ---
 # <a name="drop-event-session-transact-sql"></a>DROP EVENT SESSION (Transact-SQL)
@@ -43,7 +43,7 @@ ON SERVER
  *event_session_name*  
  這是現有事件工作階段的名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當您卸除事件工作階段時，會完全移除所有的組態資訊，例如目標和工作階段參數。  
   
 ## <a name="permissions"></a>權限  

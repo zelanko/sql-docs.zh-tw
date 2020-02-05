@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c3ec437ccaaf3280be800ea6f80ac6ad38a0a1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024913"
 ---
 # <a name="create-indexes-with-included-columns"></a>建立內含資料行的索引
@@ -67,7 +67,7 @@ ms.locfileid: "68024913"
   
     -   增加 **varchar**、 **nvarchar**或 **varbinary** 資料行的長度。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
@@ -88,13 +88,13 @@ ms.locfileid: "68024913"
   
 6.  按一下 [索引鍵資料行]  索引標籤底下的 [加入...]  。  
   
-7.  在 [從 _table\_name_ 選取資料行]  對話方塊中，選取要新增至索引之一或多個資料表資料行的一或多個核取方塊。  
+7.  在 [從 **table**name _選取資料行]\__ 對話方塊中，選取要新增至索引之一或多個資料表資料行的一或多個核取方塊。  
   
 8.  按一下 [確定]  。  
   
 9. 按一下 [包含的資料行]  索引標籤底下的 [加入...]  。  
   
-10. 在 [從 _table\_name_ 選取資料行]  對話方塊中，選取要新增至索引中作為非索引鍵資料行之一或多個資料表資料行的一或多個核取方塊。  
+10. 在 [從 **table**name _選取資料行]\__ 對話方塊中，選取要新增至索引中作為非索引鍵資料行之一或多個資料表資料行的一或多個核取方塊。  
   
 11. 按一下 [確定]  。  
   

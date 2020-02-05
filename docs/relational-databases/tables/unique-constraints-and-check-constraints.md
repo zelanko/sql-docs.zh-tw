@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 400b028696666b188760f61c2490a218bc8bd2be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68017665"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>唯一條件約束與檢查條件約束
@@ -92,13 +92,13 @@ DELETE CheckTbl WHERE col1 = 10;
 > [!NOTE]  
 >  如果資料表是要發佈以進行複寫，則必須使用 Transact-SQL 陳述式 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 或 SQL Server 管理物件 (SMO) 變更結構描述。 使用 [資料表設計工具] 或 [資料庫圖表設計工具] 變更結構描述時，會嘗試卸除並重新建立資料表。 您無法卸除已發行的物件，因此結構描述變更將會失敗。  
   
-|工作|主題|  
+|Task|主題|  
 |----------|-----------|  
 |描述如何建立唯一的條件約束。|[建立唯一的條件約束](../../relational-databases/tables/create-unique-constraints.md)|  
 |描述如何修改唯一的條件約束。|[修改唯一的條件約束](../../relational-databases/tables/modify-unique-constraints.md)|  
 |描述如何刪除唯一條件約束。|[刪除唯一的條件約束](../../relational-databases/tables/delete-unique-constraints.md)|  
 |描述如何在複寫代理程式在資料表中插入或更新資料時，停用檢查條件約束。|[停用複寫的檢查條件約束](../../relational-databases/tables/disable-check-constraints-for-replication.md)|  
-|描述如何在加入資料表資料、更新資料表資料或刪除資料表資料時，停用檢查條件約束。|[使用 INSERT 與 UPDATE 陳述式停用檢查條件約束](../../relational-databases/tables/disable-check-constraints-with-insert-and-update-statements.md)|  
+|描述如何在加入資料表資料、更新資料表資料或刪除資料表資料時，停用檢查條件約束。|[停用 INSERT 與 UPDATE 陳述式的檢查條件約束](../../relational-databases/tables/disable-check-constraints-with-insert-and-update-statements.md)|  
 |描述如何變更條件約束運算式或啟用或停用特定條件之條件約束的選項。|[修改檢查條件約束](../../relational-databases/tables/modify-check-constraints.md)|  
 |描述如何刪除檢查條件約束。|[刪除檢查條件約束](../../relational-databases/tables/delete-check-constraints.md)|  
 |描述如何檢視檢查條件約束的屬性。|[唯一條件約束與檢查條件約束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)|  

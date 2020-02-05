@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: af3301961fb153dc64e7ebe98f7012ce6570d0e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948441"
 ---
 # <a name="rand-transact-sql"></a>RAND (Transact-SQL)
@@ -45,10 +45,10 @@ RAND ( [ seed ] )
  *seed*  
  為提供初始值的整數[運算式](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**、**smallint**，或 **int**)。 如果未指定 *seed*，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 便會隨機指派一個初始值。 只要指定初始值之後，傳回的結果一律相同。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  以同樣的初始值反覆呼叫 RAND()，傳回的結果都是一樣的。  
   
  在一個連接中，如果 RAND() 是以指定的初始值呼叫，則後續所有對 RAND() 的呼叫，都會根據初始的 RAND() 呼叫而產生結果。 例如，下面這個查詢一定會傳回同樣順序的號碼。  

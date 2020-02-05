@@ -15,10 +15,10 @@ ms.assetid: 5eae2872-adca-4b8f-8b04-4ee91ced98f1
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 83d300b006055a83e823ff509d18ce40e63708c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120654"
 ---
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM (geometry 資料類型)
@@ -33,12 +33,12 @@ ms.locfileid: "68120654"
 .AsBinaryZM()  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**varbinary(max)**  
   
- CLR 傳回型別：**SqlBytes**  
+ CLR 傳回類型：**SqlBytes**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 ## <a name="examples"></a>範例  
   

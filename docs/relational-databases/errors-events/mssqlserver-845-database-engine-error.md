@@ -12,13 +12,13 @@ ms.assetid: 8fff6ad4-234c-44be-b123-e25d5e1cd63e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce297a1c2bc782a82a322618acedb102bb9e18eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101483"
 ---
-# <a name="mssqlserver845"></a>MSSQLSERVER_845
+# <a name="mssqlserver_845"></a>MSSQLSERVER_845
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -33,7 +33,7 @@ ms.locfileid: "68101483"
 |訊息文字|等候緩衝閂類型 %d (資料庫識別碼 %d，頁面 %S_PGID) 時發生逾時。|  
   
 ## <a name="explanation"></a>說明  
-處理序持續等候取得閂鎖，但一直等到超出時間限制仍無法取得。 如果 I/O 作業完成需要花費太長時間 (通常是因為其他工作封鎖了系統處理序)，可能就會發生這種情形。 在某些情況下，這項錯誤可能是硬體故障的結果。  
+處理序一直等候要取得閂鎖，但該處理序等候到時間限制過期卻仍無法取得。 如果 I/O 作業完成需要花費太長時間 (通常是因為其他工作封鎖了系統處理序)，可能就會發生這種情形。 在某些情況下，這項錯誤可能是硬體故障的結果。  
   
 ## <a name="user-action"></a>使用者動作  
 執行下列事項或可避免此錯誤發生：  

@@ -15,10 +15,10 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 840e34dcad069ccd6dc2c4102c6a2a85b7e4fbf5
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822229"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>為使用 Always On 可用性群組中資料庫的作業管理登入
@@ -31,7 +31,7 @@ ms.locfileid: "74822229"
   
      裝載可用性群組之可用性複本的伺服器執行個體可能會以不同的磁帶機代號或之類的方式予以個別設定。 每個可用性複本的作業都必須允許這類差異。  
   
-     請注意，備份作業可以使用 [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 函數根據可用性群組備份喜好設定，識別本機複本是否為備份慣用的複本。 使用 [維護計畫精靈](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) 建立的備份作業原本使用此函數。 至於其他備份作業，我們建議您使用此函數做為備份作業中的條件，如此備份作業就只會在慣用複本上執行。 如需詳細資訊，請參閱[使用中次要：在次要複本上備份 &#40;Always On 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+     請注意，備份作業可以使用 [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 函數根據可用性群組備份喜好設定，識別本機複本是否為備份慣用的複本。 使用 [維護計畫精靈](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) 建立的備份作業原本使用此函數。 至於其他備份作業，我們建議您使用此函數做為備份作業中的條件，如此備份作業就只會在慣用複本上執行。 如需詳細資訊，請參閱 [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 -   **登入**  
   

@@ -14,10 +14,10 @@ ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5c99e51dd90f17313d146fce2b6b02802a579eb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67944825"
 ---
 # <a name="restore-database-files-page"></a>還原資料庫 (檔案頁面)
@@ -32,7 +32,7 @@ ms.locfileid: "67944825"
  **將所有檔案重新放置到資料夾**  
  重新放置還原的檔案。  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
 |**資料檔資料夾**|輸入或搜尋還原的資料檔應該重新放置到的目標資料檔資料夾名稱。|  
 |**記錄檔資料夾**|輸入或搜尋還原的記錄檔應該重新放置到的目標記錄檔資料夾。|  

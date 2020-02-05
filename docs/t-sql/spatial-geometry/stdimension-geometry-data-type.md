@@ -18,10 +18,10 @@ ms.assetid: 4fbd27dd-317b-4916-a8ae-4df1b8a6f27c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1feffb9116294c6dc77af5bae2552362fd8e532b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107843"
 ---
 # <a name="stdimension-geometry-data-type"></a>STDimension (geometry 資料類型)
@@ -36,13 +36,13 @@ ms.locfileid: "68107843"
 .STDimension ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
- CLR 傳回型別：**SqlInt32**  
+ CLR 傳回類型：**SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
- 如果 **geometry** 執行個體是空的，`STDimension()` 會傳回 -1。  
+## <a name="remarks"></a>備註  
+ 如果 `STDimension()`geometry **執行個體是空的，** 會傳回 -1。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立資料表變數來保存 **geometry** 執行個體，並插入 `Point`、`LineString` 和 `Polygon`。  然後使用 `STDimension()` 傳回每一個 **geometry** 執行個體的維度。  
@@ -60,9 +60,9 @@ FROM @temp;
   
 |NAME|dim|  
 |----------|---------|  
-|點|0|  
+|Point|0|  
 |LineString|1|  
-|多邊形|2|  
+|Polygon|2|  
   
 ## <a name="see-also"></a>另請參閱  
  [幾何例項上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

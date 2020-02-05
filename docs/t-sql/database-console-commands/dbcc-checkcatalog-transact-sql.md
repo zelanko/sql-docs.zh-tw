@@ -24,10 +24,10 @@ ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: d75739e2a8594bbd049a7d9b1c2a6908b1c0e29c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68102205"
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
@@ -56,10 +56,10 @@ DBCC CHECKCATALOG
  WITH NO_INFOMSGS  
  隱藏所有參考訊息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 DBCC CATALOG 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中會寫入一則訊息。 如果 DBCC 命令執行成功，該訊息將指出命令已順利完成，並顯示命令執行的時間量。 如果 DBCC 命令由於發生錯誤而在完成檢查之前停止執行，則訊息中會指出命令已經終止，並顯示狀態值以及命令執行的時間量。 下表列出並描述可以包含在訊息中的狀態值。
   
-|State|Description|  
+|State|描述|  
 |-----------|-----------------|  
 |0|已引發錯誤號碼 8930。 這表示中繼資料損毀使 DBCC 命令終止。|  
 |1|已引發錯誤號碼 8967。 發生內部 DBCC 錯誤。|  

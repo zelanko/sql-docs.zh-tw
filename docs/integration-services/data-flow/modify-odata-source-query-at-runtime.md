@@ -11,10 +11,10 @@ ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa8a5454fb85c4a6bcfe53088549107f09b9772f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298204"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>在執行階段提供 OData 來源查詢
@@ -33,7 +33,7 @@ ms.locfileid: "71298204"
   
 1.  以滑鼠右鍵按一下 [資料流程工作]  ，然後選取 [參數化...]  選項。  
   
-2.  在 [參數化]  對話方塊中，針對 [屬性]  選取 **[\<OData 來源元件的名稱>].[Query]** 。  
+2.  在 [參數化]  對話方塊中，針對 [屬性] **\< 選取** [**OData 來源元件的名稱>].[Query]** 。  
   
 3.  選擇是要 [建立新的參數]  還是 [使用現有的參數]  。  
   

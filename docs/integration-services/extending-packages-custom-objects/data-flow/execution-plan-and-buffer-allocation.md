@@ -21,10 +21,10 @@ ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dba5ae3bf996f469f18a9802dd8cc8232a5bc885
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297232"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>執行計劃和緩衝區配置

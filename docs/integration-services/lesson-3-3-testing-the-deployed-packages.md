@@ -11,10 +11,10 @@ ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac260f2c3703260e5472d5be399333a93574f2c9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283258"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>課程 3-3 - 測試已部署的套件
@@ -75,7 +75,7 @@ ms.locfileid: "71283258"
   
 2.  在 **[連接到伺服器]** 對話方塊中，從 **[伺服器類型]** 清單中選取 **[Database Engine]** ，並在 **[伺服器名稱]** 方塊中提供安裝教學課程封裝所在的伺服器名稱或是輸入 (local)，然後選取驗證模式。 如果要使用「SQL Server 驗證」，請提供使用者名稱和密碼。  
   
-3.  按一下 **[連接]** 。  
+3.  按一下 [ **連接**]。  
   
 4.  在查詢視窗中，輸入或貼上下列 SQL 陳述式：  
   
@@ -95,7 +95,7 @@ ms.locfileid: "71283258"
   
 2.  如果提示您重新連接，請在 **[連接到伺服器]** 對話方塊中，從 **[伺服器類型]** 清單中選取 **[Database Engine]** ，並在 **[伺服器名稱]** 方塊中提供安裝教學課程封裝所在的伺服器名稱或是輸入 (local)，然後選取驗證模式。 如果要使用「SQL Server 驗證」，請提供使用者名稱和密碼。  
   
-3.  按一下 **[連接]** 。  
+3.  按一下 [ **連接**]。  
   
 4.  在查詢視窗中，輸入或貼上下列 SQL 陳述式：  
   

@@ -11,10 +11,10 @@ ms.assetid: 430905eb-d218-458c-bd48-aeee6fbb7446
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 73f1d6c4d65a9e581611ef439c79c41eb691e4c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68076117"
 ---
 # <a name="configure-backup-compression-sql-server"></a>設定備份壓縮 (SQL Server)

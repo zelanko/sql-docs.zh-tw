@@ -22,13 +22,13 @@ ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6f6876003c64889d32e31266ebe74b6532c1a8f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000309"
 ---
-# <a name="-wildcard---match-one-character-transact-sql"></a>_ (萬用字元 - 符合單一字元) (Transact-SQL)
+# <a name="_-wildcard---match-one-character-transact-sql"></a>_ (萬用字元 - 符合單一字元) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 使用底線字元 _ 在涉及模式比對 (如 `LIKE` 和 `PATINDEX`) 的字串比較運算式中，比對任何單一字元。  
@@ -65,7 +65,7 @@ FROM Person.Person
 WHERE FirstName LIKE '_an'  
 ORDER BY FirstName;  
 ```  
-## <a name="c-escaping-the-underscore-character"></a>C.逸出底線字元   
+## <a name="c-escaping-the-underscore-character"></a>C：逸出底線字元   
 下列範例傳回固定資料庫角色的名稱，如 `db_owner` 和 `db_ddladmin`，但它也會傳回 `dbo` 使用者。 
 
 ```sql

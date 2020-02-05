@@ -18,10 +18,10 @@ ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: eb5d28712e5d4132cd8be07ab1e5014d5cb26567
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71118134"
 ---
 # <a name="stendpoint-geography-data-type"></a>STEndpoint (geography 資料類型)
@@ -36,14 +36,14 @@ ms.locfileid: "71118134"
 .STEndPoint ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回型別：**SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
- 開放式地理空間協會 (OGC) 類型：**點**  
+ 開放地理空間協會 (OGC) 類型：**Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  STEndPoint() 相當於 [STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md)`(x.STNumPoints``())`。  
   
  這個方法如果在空的 **geography** 執行個體上呼叫，就會傳回 Null。  

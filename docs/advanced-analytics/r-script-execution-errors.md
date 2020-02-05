@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d1cfd06fd881c4749879365feda14e3cfcb877a9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727509"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>SQL Server 中的 R 指令碼錯誤
@@ -37,7 +37,7 @@ ms.locfileid: "73727509"
 
 我們也建議您檢查並稍微重寫指令碼，以更正在 R 和資料庫引擎之間移動資料時，可能會引發的任何資料類型問題。 如需詳細資訊，請參閱 [R 程式庫和資料類型](r/r-libraries-and-data-types.md)。
 
-此外，您可以使用 sqlrutils 封裝，以比較容易作為預存程序取用的格式來與您的 R 指令碼組合使用。 如需詳細資訊，請參閱：
+此外，您可以使用 sqlrutils 封裝，以比較容易作為預存程序取用的格式來與您的 R 指令碼組合使用。 如需詳細資訊，請參閱
 * [sqlrutils 封裝](r/ref-r-sqlrutils.md)
 * [使用 sqlrutils 建立預存程序](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 

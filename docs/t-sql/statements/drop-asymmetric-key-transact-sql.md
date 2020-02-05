@@ -24,10 +24,10 @@ ms.assetid: bf94ac07-9b62-4318-b55b-1eed8f3a1ac6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fdc08d0598209e3d5fa4957ca241bfa49c60b6a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898303"
 ---
 # <a name="drop-asymmetric-key-transact-sql"></a>DROP ASYMMETRIC KEY (Transact-SQL)
@@ -51,7 +51,7 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
  REMOVE PROVIDER KEY  
  從 EKM 裝置中移除 Extensible Key Management (EKM) 金鑰。 如需可延伸金鑰管理的詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  無法卸除資料庫中的對稱金鑰加密所用的非對稱金鑰，或是使用者或登入所對應的非對稱金鑰。 在您卸除這類金鑰之前，必須先卸除任何對應至該金鑰的使用者或登入。 您同時也必須卸除或變更任何以非對稱金鑰加密的對稱金鑰。 您可以使用 [ALTER SYMMETRIC KEY](../../t-sql/statements/alter-symmetric-key-transact-sql.md) 的 DROP ENCRYPTION 選項，來移除非對稱金鑰進行的加密。  
   
  您可以使用 [sys.asymmetric_keys](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md) 目錄檢視，來存取非對稱金鑰的中繼資料。 金鑰本身不能直接從資料庫內部檢視。  

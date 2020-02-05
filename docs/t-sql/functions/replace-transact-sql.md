@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59cbaf203b8e877f9476e807008345b9af05b0fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67944531"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
@@ -52,14 +52,14 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  *string\_replacement*  
  這是取代字串。 *string_replacement* 可以是字元或二進位資料類型。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  如果其中一個輸入引數是 **nvarchar** 資料類型，便傳回 **nvarchar**；否則，REPLACE 會傳回 **varchar**。  
   
  如果任何一個引數是 NULL，便會傳回 NULL。  
   
  如果 *string_expression* 的類型不是 **varchar(max)** 或 **nvarchar(max)，則 REPLACE** 會將傳回值截斷為 8,000 位元組。 若要傳回大於 8,000 位元組的值，*string_expression* 必須明確轉換成大數值資料類型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  REPLACE 會以輸入的定序為基礎來執行比較。 若要執行指定定序的比較，您可以利用 [COLLATE](~/t-sql/statements/collations.md)，將明確定序套用至輸入。  
   
  0x0000 (**char(0)** ) 是 Windows 定序中未定義的字元，而且不得包含在 REPLACE 中。  

@@ -19,10 +19,10 @@ ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 61743139f35ed3e8a5dd4bbac9bd1f4660cb2ec2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136034"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
@@ -41,13 +41,13 @@ ms.locfileid: "68136034"
 ## <a name="return-types"></a>傳回類型
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 @@DBTS 會傳回前次使用的目前資料庫時間戳記值。 插入或更新含有 **timestamp** 資料行的資料列會產生新的時間戳記值。
   
 變更交易隔離等級不會影響 @@DBTS 函式。
   
 ## <a name="examples"></a>範例  
-此範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫目前的 **timestamp**。
+此範例會傳回 **資料庫目前的**timestamp[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。
   
 ```sql
 USE AdventureWorks2012;  

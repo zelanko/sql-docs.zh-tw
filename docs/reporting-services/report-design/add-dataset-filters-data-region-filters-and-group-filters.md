@@ -9,10 +9,10 @@ ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582058"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>新增資料集篩選、資料區篩選和群組篩選
@@ -60,7 +60,7 @@ ms.locfileid: "65582058"
   
  下列各節將描述篩選方程式的每個部分。  
   
-### <a name="expression"></a>運算式  
+### <a name="expression"></a>運算是  
  當報表處理器在執行階段評估篩選方程式時，運算式和值的資料類型必須相同。 您針對 [運算式]  選取的欄位資料類型是由用來從資料來源中擷取資料的資料處理延伸模組或資料提供者所決定。 您針對 [值]  輸入的運算式資料類型是由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設值所決定。 資料類型的選擇是由支援報表定義的資料類型所決定。 資料提供者可能會將資料庫的值轉換成 CLR 類型。  
   
 ### <a name="data-type"></a>資料類型  
@@ -68,9 +68,9 @@ ms.locfileid: "65582058"
   
 |**報表定義結構描述資料類型**|**CLR 類型**|  
 |--------------------------------------------|-----------------------|  
-|**布林**|**布林**|  
+|**布林值**|**布林值**|  
 |**DateTime**|**DateTime**、 **DateTimeOffset**|  
-|**Integer**|**Int16**、 **Int32**、 **UInt16**、 **Byte**、 **SByte**|  
+|**整數**|**Int16**、 **Int32**、 **UInt16**、 **Byte**、 **SByte**|  
 |**Float**|**Single**、 **Double**、 **Decimal**|  
 |**Text**|**String**、 **Char**、 **GUID**、 **Timespan**|  
   
@@ -85,9 +85,9 @@ ms.locfileid: "65582058"
 |**TopN、BottomN**|比較運算式與單一 **整數** 值。|  
 |**TopPercent、BottomPercent**|比較運算式與單一 **整數** 或 **浮點數** 值。|  
 |**介於**|測試運算式是否位於 (包含) 兩個值之間。|  
-|**In**|測試運算式是否包含在一組值之中。|  
+|**位置**|測試運算式是否包含在一組值之中。|  
   
-### <a name="value"></a>ReplTest1  
+### <a name="value"></a>值  
  Value 運算式會指定篩選方程式的最終部分。 報表處理器會將評估的運算式轉換成您所指定的資料類型，然後評估整個篩選方程式，以便判斷在 [運算式] 中指定的資料是否通過篩選。  
   
  若要轉換成不是標準 CLR 資料類型的資料類型，您必須修改運算式，以便明確轉換成資料類型。 在 [運算式]  對話方塊中，您可以使用列於 [一般函數]  之 [轉換]  底下的轉換函數。 例如，若為代表在 `ListPrice` 資料來源上儲存成 **money** 資料類型之資料的欄位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，資料處理延伸模組就會將欄位值傳回成 <xref:System.Decimal> 資料類型。 若要將篩選設定成僅使用報表貨幣中大於 **$50000.00** 的值，請使用運算式 `=CDec(50000.00)`，將此值轉換成十進位。  

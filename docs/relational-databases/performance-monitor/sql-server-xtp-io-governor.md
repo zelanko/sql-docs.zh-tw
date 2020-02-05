@@ -11,10 +11,10 @@ ms.assetid: 91e176fe-c838-44e9-b4fc-2814a0551ca3
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 975dca6fe0151b5bd1fc1d72b9d14e47a57413d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67915217"
 ---
 # <a name="sql-server-xtp-io-governor"></a>SQL Server XTP IO 管理員
@@ -24,7 +24,7 @@ SQL Server XTP IO 管理員效能物件包含與記憶體內部 OLTP IO 速率�
 
 本表說明 **SQL Server XTP IO 管理員** 計數器。
 
-|計數器|Description|  
+|計數器|描述|  
 |-------------|-----------------|  
 |**Insufficient Credits Waits/sec**|因為速率物件額度不足 (每秒) 所產生的等候次數。|
 |**Io Issued/sec**|清除執行緒每秒發出的 Io 數目。|
