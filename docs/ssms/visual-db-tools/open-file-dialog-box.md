@@ -1,10 +1,9 @@
 ---
-title: 開啟檔案對話方塊 | Microsoft Docs
-ms.custom: ''
+title: 開啟檔案對話方塊
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 869af839389aec533f132f6e2174d8495ffe1f20
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 61a0a699c7d754d3b21b671da5cd29ea0ec0f240
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263317"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251458"
 ---
 # <a name="open-file-dialog-box"></a>開啟檔案對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,10 +27,10 @@ ms.locfileid: "68263317"
 若要存取這個對話方塊，請從 [檔案]  功能表選取 [開啟]  ，然後再選擇 [檔案]  。 從其他元素 (例如 [外部工具]  對話方塊) 開啟檔案時，也會出現這個對話方塊。 從 [檔案]  功能表選取 [開啟]  ，然後選擇 [專案/方案]  以開啟相同的 [開啟專案]  對話方塊。  
   
 > [!NOTE]  
-> 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中開啟專案或元件之前，請判斷其程式碼的可信度。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中開啟專案或元件的動作可能會在本機電腦的信任處理序中執行它的程式碼。  
+> 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中開啟專案或元件之前，請判斷其程式碼的可信度。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中開啟專案或元件的動作可能會在本機電腦的信任處理序中執行它的程式碼。  
   
 ## <a name="option"></a>選項  
-**查詢**  
+**Look in**  
 從這個下拉式功能表找出現有的專案資料夾。 從此清單中選取資料夾會在主窗格中顯示該資料夾的內容。  
   
 ## <a name="my-places-bar"></a>我的位置工作列  

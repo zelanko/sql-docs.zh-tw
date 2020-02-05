@@ -1,10 +1,7 @@
 ---
-title: Configuration (DTA) 的 Database 元素 |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 組態的 Database 元素 (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 713fe8d41b4ec47e624b8fcc501c7e2b87653346
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: cb444b56c70d70fda8578459b83939ebcbcf3645
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116940"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306690"
 ---
 # <a name="database-element-for-configuration-dta"></a>組態的 Database 元素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  指定 Database Engine Tuning Advisor 評估假設性組態 ( **Configuration** 元素所指定) 時所針對的資料庫。  
+
+指定 Database Engine Tuning Advisor 評估假設性組態 ( **Configuration** 元素所指定) 時所針對的資料庫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +39,7 @@ ms.locfileid: "68116940"
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|Description|  
+|特性|描述|  
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  
@@ -49,7 +52,7 @@ ms.locfileid: "68116940"
 |**父元素**|[組態的 Server 元素 &#40;DTA&#41;](../../tools/dta/server-element-for-configuration-dta.md)|  
 |**子元素**|[資料庫的 Name 元素 &#40;DTA&#41;](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [資料庫的 Schema 元素 &#40;DTA&#41;](../../tools/dta/schema-element-for-database-dta.md)<br /><br /> [Recommendation 元素 &#40;DTA&#41;](../../tools/dta/recommendation-element-dta.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  在 Database Engine Tuning Advisor XML 結構描述中，這個元素的名稱為 **DatabaseTypecomplexType** 。 請勿混淆這個 **Database** 元素與根父系是在 XML 輸入檔頂端之 **Server** 元素的元素。 如需詳細資訊，請參閱[伺服器的 Database 元素 &#40;DTA&#41;](../../tools/dta/database-element-for-server-dta.md)。  
   
 ## <a name="example"></a>範例  

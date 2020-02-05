@@ -1,10 +1,7 @@
 ---
-title: DatabaseToConnect 元素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: DatabaseToConnect 元素 (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 65153a66-3aee-4429-99b7-0816ac23c285
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e37bef50b77ded9d41fde856cbe4beebdf05cb9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 5ea514d4f401eeebc822e8d6bbaafcf09282da34
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119788"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306901"
 ---
 # <a name="databasetoconnect-element-dta"></a>DatabaseToConnect 元素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  指定微調工作負載時，Database Engine Tuning Advisor 所連接的第一個資料庫。  
+
+指定微調工作負載時，Database Engine Tuning Advisor 所連接的第一個資料庫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +39,7 @@ ms.locfileid: "68119788"
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|Description|  
+|特性|描述|  
 |--------------------|-----------------|  
 |**資料類型和長度**|**string**，沒有長度限制。|  
 |**預設值**|無。|  
@@ -49,7 +52,7 @@ ms.locfileid: "68119788"
 |**父元素**|[TuningOptions 元素 &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**子元素**|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  請利用 **DatabaseToConnect** 來指定 Database Engine Tuning Advisor 開始微調工作階段時，所要連接的第一個資料庫的名稱。 您只能利用這個元素來指定一個資料庫。 如果指定了多個資料庫名稱，Database Engine Tuning Advisor 就會傳回錯誤。  
   
 ## <a name="example"></a>範例  

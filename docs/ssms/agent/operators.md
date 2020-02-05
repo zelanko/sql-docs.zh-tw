@@ -1,10 +1,9 @@
 ---
-title: 操作員 | Microsoft Docs
-ms.custom: ''
+title: 操作員
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,13 +22,15 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c4059bda6f761171292f2977f7d8e6a3f6896451
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3e5ecdc830550570f43484c61a87e315e9fc7661
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260075"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247626"
 ---
 # <a name="operators"></a>操作員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "68260075"
   
 -   操作員名稱  
   
--   連絡資訊  
+-   連絡人資訊  
   
 ### <a name="naming-an-operator"></a>為操作員命名  
 每個操作員都必須要有一個名稱。 操作員名稱必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中唯一的名稱，而且不可長於 **128** 個字元。  
@@ -77,11 +78,11 @@ ms.locfileid: "68260075"
   
         如果所有的操作員共用同一個呼叫器供應商，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來指定呼叫器轉電子郵件系統所需的任何特殊電子郵件格式。 此特殊格式可以是前置詞或後置詞，並可包含在下列的電子郵件字行中：  
   
-        **主旨：**  
+        **主體：**  
   
         副本：   
   
-        收件者：   
+        **收件者**：  
   
     > [!NOTE]  
     > 如果使用低容量的英數字元呼叫系統，您可以將呼叫器通知中的錯誤文字排除，以縮短所傳送的文字。 例如，有一種低容量英數字元呼叫系統，每頁限制為 64 個字元。  

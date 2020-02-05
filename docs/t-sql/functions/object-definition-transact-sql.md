@@ -21,13 +21,13 @@ ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0ec1dc88832c4a44b3f019bb0e63369ab2d3587a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914896"
 ---
-# <a name="objectdefinition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
+# <a name="object_definition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回指定物件定義的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來源文字。  
@@ -42,10 +42,10 @@ OBJECT_DEFINITION ( object_id )
 ```  
   
 ## <a name="arguments"></a>引數  
- *object_id*  
+ object_id   
  這是所要使用的物件識別碼。 *object_id* 為 **int**，並會用來代表目前資料庫內容中的物件。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **nvarchar(max)**  
   
 ## <a name="exceptions"></a>例外狀況  
@@ -53,7 +53,7 @@ OBJECT_DEFINITION ( object_id )
   
  使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示發出中繼資料的內建函數 (例如，OBJECT_DEFINITION) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 假設 *object_id* 在目前資料庫內容中。 物件定義的定序一律符合發出呼叫之資料庫內容的定序。  
   
  OBJECT_DEFINITION 適用於下列物件類型：  
@@ -79,7 +79,7 @@ OBJECT_DEFINITION ( object_id )
 -   V = 檢視  
   
 ## <a name="permissions"></a>權限  
- 系統物件定義是公開顯示的。 凡具有下列任一權限的物件擁有者或承授者，都看得到使用者物件的定義：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。 **db_owner**、 **db_ddladmin**和 **db_securityadmin** 固定資料庫角色的成員隱含地擁有這些權限。  
+ 系統物件定義是公開顯示的。 凡具有 ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION 任一權限的物件擁有者或被授與者，都看得到使用者物件的定義。 **db_owner**、 **db_ddladmin**和 **db_securityadmin** 固定資料庫角色的成員隱含地擁有這些權限。  
   
 ## <a name="examples"></a>範例  
   
