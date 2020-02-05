@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 78e19aa69d5d5141be7b142074a1c4d120ea8519
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121874"
 ---
 # <a name="or-transact-sql"></a>OR (Transact-SQL)
@@ -45,12 +45,12 @@ boolean_expression OR boolean_expression
  這是任何會傳回 TRUE、FALSE 或 UNKNOWN 的有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="result-types"></a>結果類型  
- **布林**  
+ **布林值**  
   
 ## <a name="result-value"></a>結果值  
  當任何一個條件是 TRUE 時，OR 會傳回 TRUE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  下表會顯示 OR 運算子的結果。  
   
 ||TRUE|FALSE|UNKNOWN|  

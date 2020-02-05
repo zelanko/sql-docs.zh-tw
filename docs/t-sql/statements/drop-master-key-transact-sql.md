@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6722becf2b18b1c81576b6f3173be2474e94cc73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044135"
 ---
 # <a name="drop-master-key-transact-sql"></a>DROP MASTER KEY (Transact-SQL)
@@ -47,7 +47,7 @@ DROP MASTER KEY
 ## <a name="arguments"></a>引數  
  這個陳述式沒有引數。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果資料庫中有任何受主要金鑰保護的私密金鑰，卸除作業便會失敗。  
   
 ## <a name="permissions"></a>權限  

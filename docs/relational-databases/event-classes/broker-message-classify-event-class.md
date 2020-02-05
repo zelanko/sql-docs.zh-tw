@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f0d3219271483ffbd4d5c51d1f382b3277086521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999645"
 ---
 # <a name="brokermessage-classify-event-class"></a>Broker:Message Classify 事件類別
@@ -27,14 +27,14 @@ ms.locfileid: "67999645"
   
 ## <a name="brokermessage-classify-event-class-data-columns"></a>Broker:Message Classify 事件類別資料行  
   
-|資料行|資料類型|Description|資料行編號|可篩選|  
+|資料行|資料類型|描述|資料行編號|可篩選|  
 |-----------------|---------------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |**ClientProcessID**|**int**|主機電腦指派給用戶端應用程式執行中處理序的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|9|是|  
 |**DatabaseID**|**int**|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |**EventClass**|**int**|擷取的事件類別類型。 **Broker:Message Classify** 永遠都是 **141**。|27|否|  
 |**EventSequence**|**int**|此事件的序號。|51|否|  
-|**EventSubClass**|**nvarchar**|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 此資料行可包含下列值。<br /><br /> **本機**：選擇的路由位址為 LOCAL。<br /><br /> **遠端**：               選擇的路由具有 LOCAL 以外的位址。<br /><br /> **延遲**：               訊息已延遲，原因是因為轉送已停用或沒有符合的路由存在。|21|是|  
+|**EventSubClass**|**nvarchar**|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 此資料行可包含下列值。<br /><br /> **本機**：選擇的路由已處理 LOCAL。<br /><br /> **遠端**：選擇的路由有 LOCAL 以外的位址。<br /><br /> **延遲**：訊息已延遲，原因是因為停用轉寄或沒有符合的路由存在。|21|是|  
 |**FileName**|**nvarchar**|訊息已導向至服務名稱。|36|否|  
 |**GUID**|**uniqueidentifier**|對話的交談識別碼。 此識別碼是以訊息的一部份傳送，並在交談的兩端之間共用。|54|否|  
 |**HostName**|**nvarchar**|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  

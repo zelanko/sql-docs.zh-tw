@@ -26,13 +26,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 651af5040782bc729d5bca48fa2285e14e709e10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929172"
 ---
-# <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
+# <a name="set-ansi_nulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   指定在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中與 Null 值一起使用時，等於 (=) 和不等於 (<>) 比較運算子的 ISO 標準行為。  
@@ -56,7 +56,7 @@ SET ANSI_NULLS { ON | OFF }
 SET ANSI_NULLS ON
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 當 ANSI_NULLS 是 ON 時，使用 WHERE *column_name* = **NULL** 的 SELECT 陳述式會傳回零個資料列，即使 *column_name* 中含有 Null 值，也是如此。 使用 WHERE *column_name* <> **NULL** 的 SELECT 陳述式會傳回零個資料列，即使 *column_name* 中含有非 Null 值，也是如此。  
   
 當 ANSI_NULLS 是 OFF 時，等於 (=) 和不等於 (<>) 比較運算子並不遵循 ISO 標準。 使用 WHERE *column_name* = **NULL** 的 SELECT 陳述式會傳回 *column_name* 中含有 Null 值的資料列。 使用 WHERE *column_name* <> **NULL** 的 SELECT 陳述式會傳回資料行中含有非 Null 值的資料列。 另外，使用 WHERE *column_name* <> *XYZ_value* 的 SELECT 陳述式也會傳回非 *XYZ_value* 以及非 Null 值的所有資料列。  

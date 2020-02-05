@@ -16,10 +16,10 @@ ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 712665d24946c2826e4ab6c5e53bb853b07642b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033240"
 ---
 # <a name="join-filters"></a>聯結篩選
@@ -44,7 +44,7 @@ ms.locfileid: "68033240"
 LoginID = SUSER_SNAME()  
 ```  
   
- 此篩選可確保每位員工的訂閱僅包含 **HumanResources.Employee** 資料表中與該員工自己有關的資料 (本範例中是單一資料列)。 如需詳細資訊，請參閱 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+ 此篩選可確保每位員工的訂閱僅包含 **HumanResources.Employee** 資料表中與該員工自己有關的資料 (本範例中是單一資料列)。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
  第二步要使用與指定兩資料表之間聯結類似的語法，將此篩選擴充到所有相關資料表。 第一個聯結篩選子句為：  
   
@@ -88,7 +88,7 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
      強烈建議以聯結篩選而不是子查詢表示所有上述邏輯。 如果應用程式要求資料列篩選使用子查詢，請確定子查詢僅參考查閱資料 (不進行變更)。  
   
 ## <a name="see-also"></a>另請參閱  
- [篩選合併式複寫之發行的資料](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
+ [針對合併式複寫篩選發行的資料](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
  [參數化資料列篩選器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   
