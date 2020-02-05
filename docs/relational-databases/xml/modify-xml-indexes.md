@@ -14,10 +14,10 @@ ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a579fcf8809c8c05838dad70126421362cd8048
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042686"
 ---
 # <a name="modify-xml-indexes"></a>修改 XML 索引
@@ -30,7 +30,7 @@ ms.locfileid: "68042686"
   
 -   如果指定了 ALTER INDEX ALL，它會同時套用至非 XML 與 XML 索引。 索引選項可以指定為對於兩種索引類型都無效。 在此情況下，整個陳述式都會失敗。  
   
-## <a name="example-modifying-an-xml-index"></a>範例修改 XML 索引  
+## <a name="example-modifying-an-xml-index"></a>範例：修改 XML 索引  
  下列範例會建立 XML 索引，然後將 `ALLOW_ROW_LOCKS` 選項設定為 `OFF`來加以修改。 當 `ALLOW_ROW_LOCKS` 為 `OFF`時，將不會鎖定資料列，並可使用頁面與資料表層級鎖定來取得指定索引的存取權。  
   
 ```  
@@ -51,7 +51,7 @@ ALTER INDEX PIdx_T_XmlCol on T
 SET (ALLOW_ROW_LOCKS = OFF)  
 ```  
   
-## <a name="example-disabling-and-enabling-an-xml-index"></a>範例停用和啟用 XML 索引  
+## <a name="example-disabling-and-enabling-an-xml-index"></a>範例：停用和啟用 XML 索引  
  依預設，XML 索引為已啟用。 如果停用了 XML 索引，針對 XML 資料行執行的查詢將不會使用 XML 索引。 若要啟用 XML 索引，請使用 `ALTER INDEX` 搭配 `REBUILD` 選項。  
   
 ```  

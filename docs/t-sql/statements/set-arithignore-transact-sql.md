@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6d2cfda829d014f85f933aaa476507252ca056e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929100"
 ---
 # <a name="set-arithignore-transact-sql"></a>SET ARITHIGNORE (Transact-SQL)
@@ -51,7 +51,7 @@ SET ARITHIGNORE { ON | OFF }
 SET ARITHIGNORE OFF
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  SET ARITHIGNORE 設定只會控制是否傳回錯誤訊息。 在包含溢位或除以零的錯誤之計算中，不論這項設定為何，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都會傳回 NULL。 您可以利用 SET ARITHABORT 設定來判斷查詢是否終止。 這項設定不會影響 INSERT、UPDATE 和 DELETE 陳述式期間所發生的錯誤。  
   
  如果 SET ARITHABORT 或 SET ARITHIGNORE 是 OFF，而 SET ANSI_WARNINGS 是 ON，當發現除以零或溢位的錯誤時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤訊息。  

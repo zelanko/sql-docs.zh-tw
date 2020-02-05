@@ -14,10 +14,10 @@ ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1948f42f5a572a7a7737b58afab8f407932660d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078033"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>在 FOR XML 查詢中的 TYPE 指示詞
@@ -74,7 +74,7 @@ GO
 ### <a name="querying-results-of-a-for-xml-query"></a>查詢 FOR XML 查詢的結果  
  FOR XML 查詢會傳回 XML。 因此您可以將 **xml** 類型方法 (例如 **query()** 與 **value()** ) 套用至 FOR XML 查詢所傳回的 XML 結果。  
   
- 在下列查詢中，**xml** 資料類型的 `query()` 方法是用以查詢 `FOR XML` 查詢的結果。 如需詳細資訊，請參閱 [query&#40;&#41; 方法 &#40;xml 資料類型&#41;](../../t-sql/xml/query-method-xml-data-type.md)。  
+ 在下列查詢中， `query()` xml **資料類型的** 方法是用以查詢 `FOR XML` 查詢的結果。 如需詳細資訊，請參閱 [query&#40;&#41; 方法 &#40;xml 資料類型&#41;](../../t-sql/xml/query-method-xml-data-type.md)。  
   
 ```  
 USE AdventureWorks2012;  
@@ -104,7 +104,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- 在下列查詢中，**xml** 資料類型的 `value()` 方法是用以擷取 `SELECT...FOR XML` 查詢所傳回的 XML 結果。 如需詳細資訊，請參閱 [value&#40;&#41; 方法 &#40;xml 資料類型&#41;](../../t-sql/xml/value-method-xml-data-type.md)。  
+ 在下列查詢中， `value()` xml **資料類型的** 方法是用以擷取 `SELECT...FOR XML` 查詢所傳回的 XML 結果。 如需詳細資訊，請參閱 [value&#40;&#41; 方法 &#40;xml 資料類型&#41;](../../t-sql/xml/value-method-xml-data-type.md)。  
   
 ```  
 USE AdventureWorks2012;  
@@ -124,7 +124,7 @@ declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure
 SELECT @FirstPhoneFromAdditionalContactInfo;  
 ```  
   
- 在 `value()` 方法中的 XQuery 路徑運算式會擷取客戶連絡人之 `BusinessEntityID` 為 `1` 的第一個客戶電話號碼。  
+ 在 `value()` 方法中的 XQuery 路徑運算式會擷取客戶連絡人之 `BusinessEntityID` 為 `1`的第一個客戶電話號碼。  
   
 > [!NOTE]  
 >  由於未指定 TYPE 指示詞，因此 FOR XML 查詢結果會以 **nvarchar(max)** 類型傳回。  

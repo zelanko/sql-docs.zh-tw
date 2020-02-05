@@ -12,10 +12,10 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5f11e6c98d53cd5008c72510282a0d31019a320d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056456"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>使用 SQL Server Profiler 建立 SQL 追蹤收集組
@@ -34,7 +34,7 @@ ms.locfileid: "74056456"
   
 ### <a name="create-and-export-a-sql-server-profiler-trace"></a>建立和匯出 SQL Server Profiler 追蹤  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，開啟 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (在 [工具]  功能表上，按一下 [SQL Server Profiler]  )。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (在 [工具]  功能表上，按一下 [SQL Server Profiler]  )。  
   
 2.  在 [連接到伺服器]  對話方塊中，按一下 [取消]  。  
   

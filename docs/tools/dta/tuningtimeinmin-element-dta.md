@@ -1,10 +1,7 @@
 ---
-title: TuningTimeInMin 元素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: TuningTimeInMin 元素 (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c19cec140b0059cad98c777613dcbe1d3ec5a7b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 31d72b47896360c673865aec9847f268ad79d9d5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105855"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304690"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 元素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  指定微調工作階段的最長時間 (分鐘)。  
+
+指定微調工作階段的最長時間 (分鐘)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +40,7 @@ ms.locfileid: "68105855"
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|Description|  
+|特性|描述|  
 |--------------------|-----------------|  
 |**資料類型和長度**|**unsignedInt**，沒有長度限制。|  
 |**預設值**|480 分鐘 (8 小時)。|  
@@ -52,7 +55,7 @@ ms.locfileid: "68105855"
   
 ## <a name="example"></a>範例  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  下列程式碼範例顯示如何設定 12 小時作為最大微調時間：  
   
 ## <a name="code"></a>程式碼  

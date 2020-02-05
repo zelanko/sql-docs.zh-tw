@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8c7fed197491d26c4aaad4b4d09ba480d2d7eb82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123604"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定性與非決定性函數
@@ -48,14 +48,14 @@ ms.locfileid: "68123604"
 |ATN2|FLOOR|SIN|  
 |CEILING|ISNULL|SQUARE|  
 |COALESCE|ISNUMERIC|SQRT|  
-|COS|LOG|TAN|  
-|COT|LOG10|YEAR|  
-|DATALENGTH|MONTH||  
+|COS|記錄|TAN|  
+|COT|LOG10|年|  
+|DATALENGTH|月||  
 |DATEADD|NULLIF||  
   
  下列函數並非永遠是具決定性函數，但若是以決定性的方式來指定，則可用於索引檢視表或計算資料行的索引。  
   
-|函數|註解|  
+|函式|註解|  
 |--------------|--------------|  
 |所有彙總函式|除非為 OVER 與 ORDER BY 子句所指定，否則所有彙總函式都具有決定性。 如需這些函數的清單，請參閱[彙總函數 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)。|  
 |CAST|除非搭配使用 **datetime**、 **smalldatetime**或 **sql_variant**，否則為決定性函數。|  

@@ -22,10 +22,10 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a334b4a02126023b94e5623b45050b067b48ce6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68096823"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 結構描述集合 (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "68096823"
   
  請注意，XML 結構描述集合是一個中繼資料實體，就像資料庫中的資料表。 您可以加以建立、修改及卸除。 系統會將 [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 陳述式中所指定的結構描述，自動匯入新建的 XML 結構描述集合物件中。 您可以使用 [ALTER XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) 陳述式，將其他的結構描述或結構描述元件匯入資料庫的現有集合物件中。  
   
- 如[比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md) 主題所述，如果 XML 是儲存在有關聯之結構描述的資料行或變數中，即為**具類型的** XML，因為結構描述會提供執行個體資料所需的資料類型資訊。 SQL Server 會使用此類型資訊來將資料儲存最佳化。  
+ 如 [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)主題所述，如果 XML 是儲存在有關聯之結構描述的資料行或變數中，即為 **具類型的** XML，因為結構描述會提供執行個體資料所需的資料類型資訊。 SQL Server 會使用此類型資訊來將資料儲存最佳化。  
   
  查詢處理引擎也會使用結構描述來檢查類型，以及將查詢和資料修改最佳化。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68096823"
  您也可以使用 XML 結構描述集合來輸入 XML 變數、參數及資料行。  
   
 ##  <a name="ddl"></a> 管理結構描述集合的 DDL  
- 您可以在資料庫中建立 XML 結構描述集合，然後將它們與 **xml** 類型的變數和資料行產生關聯。 為了管理資料庫中的結構描述集合，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了下列 DDL 陳述式：  
+ 您可以在資料庫中建立 XML 結構描述集合，然後將它們與 **xml** 類型的變數和資料行產生關聯。 為了管理資料庫中的結構描述集合， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了下列 DDL 陳述式：  
   
 -   [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 將結構描述元件匯入資料庫中。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "68096823"
   
      此主題討論如何授與權限以建立 XML 結構描述集合，以及如何授與 XML 結構描述集合物件上的權限。  
   
--   [撤銷 XML 結構描述集合上的權限](../../relational-databases/xml/revoke-permissions-on-an-xml-schema-collection.md)  
+-   [撤銷 XML 結構描述集合的權限](../../relational-databases/xml/revoke-permissions-on-an-xml-schema-collection.md)  
   
      此主題討論如何使用撤銷權限以防止建立 XML 結構描述集合，以及如何撤銷 XML 結構描述集合物件上的權限。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "68096823"
   
  如下列範例所示。  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>範例列舉 XML 結構描述集合中的 XML 命名空間  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>範例：列舉 XML 結構描述集合中的 XML 命名空間  
  針對 XML 結構描述集合 "myCollection" 來使用下列查詢：  
   
 ```sql
@@ -183,7 +183,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>範例列舉 XML 結構描述集合的內容  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>範例：列舉 XML 結構描述集合的內容  
  下列陳述式會列舉關聯式結構描述 dbo 中之 XML 結構描述集合 "myCollection" 的內容。  
   
 ```sql
@@ -192,7 +192,7 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  您可以將目標命名空間指定為 **XML_SCHEMA_NAMESPACE()** 的第三個引數，以 **xml**資料類型執行個體的型式來取得集合中的個別 XML 結構描述。 下列範例會顯示這一點。  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>範例從 XML 結構描述集合輸出指定的結構描述  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>範例：從 XML 結構描述集合輸出指定的結構描述  
  下列陳述式會從關聯式結構描述 dbo 內的 XML 結構描述集合 "myCollection"，輸出含有「假設」  目標命名空間 https/\/www.microsoft.com/was-books 的 XML 結構描述。  
   
 ```sql

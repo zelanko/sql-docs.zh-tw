@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a9fff28fd4f4d47c68dfd86eaa7de450ff5e79d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68008883"
 ---
 # <a name="set-parseonly-transact-sql"></a>SET PARSEONLY (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "68008883"
 SET PARSEONLY { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當 SET PARSEONLY 是 ON 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只會剖析陳述式。 當 SET PARSEONLY 是 OFF 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會編譯和執行陳述式。  
   
  SET PARSEONLY 的設定是在剖析階段進行設定，而不是在執行階段進行設定。  

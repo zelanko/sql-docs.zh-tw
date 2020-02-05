@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
 ms.openlocfilehash: 2fea849a46dea302dccba3ae8648db3654c35798
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558471"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性群組設定的高可用性和資料保護
@@ -155,7 +155,7 @@ SQL Server 2017 CTP 1.4 已將 `sequence_number` 新增至 `sys.availability_gro
 
 您可以選擇覆寫預設行為，並防止可用性群組資源自動設定 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`。
 
-下列指令碼會將名為 `<**ag1**>` 的可用性群組上 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 設為 0。 執行之前，請以您的可用性群組名稱取代 `<**ag1**>`。
+下列指令碼會將名為 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 的可用性群組上 `<**ag1**>` 設為 0。 執行之前，請以您的可用性群組名稱取代 `<**ag1**>`。
 
 ```bash
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=0

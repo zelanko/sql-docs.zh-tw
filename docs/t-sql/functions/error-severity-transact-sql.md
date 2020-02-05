@@ -23,13 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0a5df90640dc9ebdd2d59593c4b2a82a0f7daa00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094647"
 ---
-# <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
+# <a name="error_severity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 此函式會在發生錯誤且該錯誤造成執行 TRY...CATCH 建構的 CATCH 區塊時，傳回錯誤的嚴重性值。  
@@ -42,7 +42,7 @@ ms.locfileid: "68094647"
 ERROR_SEVERITY ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
 ## <a name="return-value"></a>傳回值  
@@ -50,16 +50,16 @@ ERROR_SEVERITY ( )
 
 如果是在 CATCH 區塊範圍之外呼叫，則 `ERROR_SEVERITY` 會傳回 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `ERROR_SEVERITY` 支援在 CATCH 區塊範圍內的任何位置呼叫。  
   
-不論執行多少次，或在 `CATCH` 區塊範圍內的哪個位置執行，`ERROR_SEVERITY` 都會傳回錯誤的錯誤嚴重性值。 這有別於 @@ERROR 之類的函式，它們只會在緊接於發生錯誤的陳述式之後的陳述式中，傳回錯誤號碼。  
+不論執行多少次，或在 `ERROR_SEVERITY` 區塊範圍內的哪個位置執行，`CATCH` 都會傳回錯誤的錯誤嚴重性值。 這有別於 @@ERROR 之類的函式，它們只會在緊接於發生錯誤的陳述式之後的陳述式中，傳回錯誤號碼。  
   
 `ERROR_SEVERITY` 通常會在巢狀 `CATCH` 區塊中作業。 `ERROR_SEVERITY` 會傳回參考該 `CATCH` 區塊之 `CATCH` 區塊範圍特定的錯誤嚴重性值。 例如，外部 TRY...CATCH 建構的 `CATCH` 區塊可能會有內部 `TRY...CATCH` 建構。 在該內部 `CATCH` 區塊內，`ERROR_SEVERITY` 會傳回叫用內部 `CATCH` 區塊之錯誤的嚴重性值。 如果 `ERROR_SEVERITY` 是在外部 `CATCH` 區塊中執行，它會傳回叫用該外部 `CATCH` 區塊之錯誤的錯誤嚴重性值。  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-using-errorseverity-in-a-catch-block"></a>A. 在 CATCH 區塊中使用 ERROR_SEVERITY  
+### <a name="a-using-error_severity-in-a-catch-block"></a>A. 在 CATCH 區塊中使用 ERROR_SEVERITY  
 此範例會顯示產生除以零之錯誤的預存程序。 `ERROR_SEVERITY` 會傳回該錯誤的嚴重性值。  
 ```sql  
 BEGIN TRY  
@@ -85,7 +85,7 @@ ErrorSeverity
 
 ```  
   
-### <a name="b-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>B. 在含有其他錯誤處理工具的 CATCH 區塊中使用 ERROR_SEVERITY  
+### <a name="b-using-error_severity-in-a-catch-block-with-other-error-handling-tools"></a>B. 在含有其他錯誤處理工具的 CATCH 區塊中使用 ERROR_SEVERITY  
 此範例會顯示產生除以零之錯誤的 `SELECT` 陳述式。 預存程序會傳回錯誤的相關資訊。  
 
 ```sql  

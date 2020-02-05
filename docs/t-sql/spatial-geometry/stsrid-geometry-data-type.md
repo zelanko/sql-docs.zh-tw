@@ -18,10 +18,10 @@ ms.assetid: 5e0de983-a0fe-48b7-9e08-30588d7271e2
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f1119c0c906e3a3825882e3fe1043e9bdaceb0f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066303"
 ---
 # <a name="stsrid-geometry-data-type"></a>STSrid (geometry 資料類型)
@@ -38,10 +38,10 @@ ms.locfileid: "68066303"
 STSrid  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型別：**int**  
   
- CLR 類型：**SqlInt32**  
+ CLR 型別：**SqlInt32**  
   
 ## <a name="examples"></a>範例  
  第一個範例會建立一個具有 SRID 值 13 的 **geometry** 執行個體，並使用 `STSrid` 來確認此 SRID。  

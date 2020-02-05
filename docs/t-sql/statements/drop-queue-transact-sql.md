@@ -22,10 +22,10 @@ ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2854cca3e231c479675a06857e24c3e09cfd8762
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745331"
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE (Transact-SQL)
@@ -56,7 +56,7 @@ DROP QUEUE <object>
  *queue_name*  
  要卸除的佇列名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果有任何服務參考佇列，您便不能卸除這個佇列。  
   
 ## <a name="permissions"></a>權限  

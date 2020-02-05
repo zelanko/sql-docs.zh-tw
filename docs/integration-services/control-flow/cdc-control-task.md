@@ -14,10 +14,10 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1ef859193b0a2410b7057365c64506976d7ee8ab
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294264"
 ---
 # <a name="cdc-control-task"></a>CDC 控制工作
@@ -33,7 +33,7 @@ ms.locfileid: "71294264"
   
  下列作業會處理初始載入和變更處理的同步處理：  
   
-|作業|Description|  
+|作業|描述|  
 |---------------|-----------------|  
 |ResetCdcState|此作業是用來重設與目前 CDC 內容相關聯的永續性 CDC 狀態。 執行此作業之後，LSN 時間戳記 `sys.fn_cdc_get_max_lsn` 資料表中的目前最大 LSN 就會變成下一個處理範圍的範圍開頭。 此作業需要來源資料庫的連接。|  
 |MarkInitialLoadStart|在初始載入封裝開始時使用此作業，以便在初始載入封裝開始讀取來源資料表之前記錄來源資料庫中目前的 LSN。 這需要來源資料庫的連接，以呼叫 `sys.fn_cdc_get_max_lsn`。<br /><br /> 如果您在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (亦即，非 Oracle) 上工作時選取了 MarkInitialLoadStart，連線管理員中指定的使用者就必須是 db_owner 或系統管理員。|  
@@ -42,10 +42,10 @@ ms.locfileid: "71294264"
   
  下列作業用來管理處理範圍：  
   
-|作業|Description|  
+|作業|描述|  
 |---------------|-----------------|  
 |GetProcessingRange|此作業是在叫用使用 CDC 來源資料流程的資料流程之前使用。 叫用此作業時，它會建立 CDC 來源資料流程所讀取的 LSN 範圍。 此範圍會儲存在資料流程處理期間 CDC 來源所使用的 SSIS 封裝變數中。<br /><br /> 如需儲存之狀態的詳細資訊，請參閱 [定義狀態變數](../../integration-services/data-flow/define-a-state-variable.md)。|  
-|MarkProcessedRange|所解碼的字元：在每個 CDC 執行之後 (CDC 資料流程順利完成之後) 執行此作業，以便記錄 CDC 執行期間完整處理的最後一個 LSN。 下次執行 GetProcessingRange 時，這個位置就是下一個處理範圍的開頭。|  
+|MarkProcessedRange|在每個 CDC 執行之後 (CDC 資料流程順利完成之後) 執行此作業，以便記錄 CDC 執行期間完整處理的最後一個 LSN。 下次執行 GetProcessingRange 時，這個位置就是下一個處理範圍的開頭。|  
   
 ## <a name="handling-cdc-state-persistency"></a>處理 CDC 狀態持續性  
  CDC 控制工作會在啟動之間維護永續性狀態。 儲存在 CDC 狀態中的資訊用來決定及維護 CDC 封裝的處理範圍，以及用於偵測錯誤狀態。 永續性狀態儲存為字串。 如需詳細資訊，請參閱 [定義狀態變數](../../integration-services/data-flow/define-a-state-variable.md)。  
@@ -107,17 +107,17 @@ ms.locfileid: "71294264"
   
 -   **標記初始載入開始**：此作業是在從不含快照集的使用中資料庫執行初始載入時使用。 初始載入封裝開始讀取來源資料表之前，系統會在初始載入封裝的開頭叫用此作業，以便在來源資料庫中記錄目前的 LSN。 這需要來源資料庫的連接。  
   
-     如果您在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (亦即非 Oracle) 上工作時選取了 [標記初始載入開始]  ，連接管理員中指定的使用者就必須是 **db_owner** 或**系統管理員**。  
+     如果您在  **CDC (亦即非 Oracle) 上工作時選取了 [標記初始載入開始]** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，連接管理員中指定的使用者就必須是 **db_owner** 或**系統管理員**。  
   
 -   **標記初始載入結束**：此作業是在從不含快照集的使用中資料庫執行初始載入時使用。 初始載入封裝讀取來源資料表完成之後，系統會在初始載入封裝的結尾叫用此作業，以便在來源資料庫中記錄目前的 LSN。 這個 LSN 的決定方式如下：記錄進行此作業時的目前時間，然後在 CDC 資料庫中查詢 `cdc.lsn_time_`mapping 資料表，尋找該時間之後發生的變更。  
   
-     如果您在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (亦即非 Oracle) 上工作時選取了 [標記初始載入結束]  ，連接管理員中指定的使用者就必須是 **db_owner** 或**系統管理員**。  
+     如果您在  **CDC (亦即非 Oracle) 上工作時選取了 [標記初始載入結束]** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，連接管理員中指定的使用者就必須是 **db_owner** 或**系統管理員**。  
   
 -   **標記 CDC 開始**：此作業會在從快照集資料庫或靜止資料庫進行初始載入時使用。 系統會在初始載入封裝中的任何時間點叫用此作業。 此作業所接受的參數可以是快照集 LSN、快照集資料庫的名稱 (從中自動衍生快照集 LSN)，也可以保留空白 (在此情況中，目前資料庫 LSN 就會當做變更處理封裝的啟始 LSN 使用)。  
   
      此作業是用來取代「標記初始載入開始/結束」作業。  
   
-     如果您在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (亦即非 Oracle) 上工作時選取了 [標記 CDC 開始]  ，連接管理員中指定的使用者就必須是 **db_owner** 或**系統管理員**。  
+     如果您在  **CDC (亦即非 Oracle) 上工作時選取了 [標記 CDC 開始]** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，連接管理員中指定的使用者就必須是 **db_owner** 或**系統管理員**。  
   
 -   **取得處理範圍**：此作業是在叫用使用 CDC 來源資料流程的資料流程之前用於變更處理封裝中。 叫用此作業時，它會建立 CDC 來源資料流程所讀取的 LSN 範圍。 此範圍會儲存在資料流程處理期間 CDC 來源所使用的 SSIS 封裝變數中。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "71294264"
   
 -   **標記處理的範圍**：此作業是在 CDC 回合結束時 (CDC 資料流程順利完成之後) 用於變更處理封裝中，以便記錄 CDC 回合中完整處理的最後一個 LSN。 下次執行 `GetProcessingRange` 時，這個位置就會決定下一個處理範圍的開頭。  
   
--   **重設 CDC 狀態**：此作業是用來重設與目前 CDC 內容相關聯的永續性 CDC 狀態。 執行此作業之後，LSN 時間戳記 `sys.fn_cdc_get_max_lsn` 資料表中的目前最大 LSN 就會變成下一個處理範圍的範圍開頭。 此作業需要來源資料庫的連接。  
+-   **重設 CDC 狀態**：此作業是用來重設與目前 CDC 內容相關聯的持續性 CDC 狀態。 執行此作業之後，LSN 時間戳記 `sys.fn_cdc_get_max_lsn` 資料表中的目前最大 LSN 就會變成下一個處理範圍的範圍開頭。 此作業需要來源資料庫的連接。  
   
      此作業使用時機的範例如下：當您只想要處理新建立的變更記錄，而忽略所有舊的變更記錄時。  
   

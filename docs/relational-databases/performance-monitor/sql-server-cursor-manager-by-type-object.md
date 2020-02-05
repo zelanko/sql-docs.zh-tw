@@ -14,10 +14,10 @@ ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 712cc824e6faa834bd8d6023e4948e9e80dfabce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986700"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>SQL Server 的 Cursor Manager by Type 物件
@@ -26,7 +26,7 @@ ms.locfileid: "67986700"
   
  下表說明 SQL Server **Cursor Manager by Type** 計數器。  
   
-|Cursor Manager by Type 計數器|Description|  
+|Cursor Manager by Type 計數器|描述|  
 |-------------------------------------|-----------------|  
 |**Active cursors**|使用中的資料指標數目。|  
 |**Cache Hit Ratio**|快取叫用數和查閱數之間的比率|  
@@ -40,7 +40,7 @@ ms.locfileid: "67986700"
   
  物件中的每個計數器均包含下列執行個體：  
   
-|Cursor Manager 執行個體|Description|  
+|Cursor Manager 執行個體|描述|  
 |-----------------------------|-----------------|  
 |**_Total**|所有資料指標的相關資訊。|  
 |**API Cursor**|僅限 API 資料指標資訊。|  

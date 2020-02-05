@@ -11,10 +11,10 @@ ms.assetid: b79e3a06-22c0-40e5-8933-1b3414db3329
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: de1e0cddcee34685e5921b7cc31837a301f44166
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295335"
 ---
 # <a name="catalogset_environment_reference_type-ssisdb-database"></a>catalog.set_environment_reference_type (SSISDB 資料庫)
@@ -66,9 +66,9 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
   
 -   使用者未具備適當的權限  
   
--   已使用 *reference_location* 參數中的 `A` 字元指定了絕對參考，但是並未使用 *environment_folder_name* 參數指定資料夾名稱。  
+-   已使用 `A`reference_location*參數中的* 字元指定了絕對參考，但是並未使用 *environment_folder_name* 參數指定資料夾名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  專案可以具有相對或絕對的環境參考。 相對參考會依名稱參考環境，並且需要位於與專案相同的資料夾中。 絕對參考會依名稱和資料夾參考環境，且可以參考位於與專案不同資料夾中的環境。 專案可以參考多個環境。  
   
 > [!IMPORTANT]  

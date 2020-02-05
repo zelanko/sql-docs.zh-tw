@@ -16,10 +16,10 @@ ms.assetid: 88d025c4-07c2-4e4d-8634-204249a8c82c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 179b5431f0531b29b4867f405ee88e4567ddb5d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68054403"
 ---
 # <a name="working-with-policy-based-management-facets"></a>使用原則式管理 Facet
@@ -30,7 +30,7 @@ ms.locfileid: "68054403"
   
  此主題描述如何將 Facet 的狀態複製到 XML 檔。  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
+##  <a name="BeforeYouBegin"></a> 權限  
  本主題中的程序需要 msdb 資料庫的 PolicyAdministratorRole 角色成員資格。  
   
 ## <a name="viewing-and-copying-facet-states"></a>檢視和複製 Facet 狀態  

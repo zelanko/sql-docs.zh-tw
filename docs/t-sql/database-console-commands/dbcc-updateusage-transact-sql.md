@@ -34,10 +34,10 @@ ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7d983f2e7e370ec9fe385e6d46602c4703ca6d1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040459"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
@@ -67,7 +67,7 @@ DBCC UPDATEUSAGE
 *index_id* | *index_name*  
 這是要使用之索引的識別碼或名稱。 若未指定，陳述式會處理指定資料表或檢視表的所有索引。  
   
-取代所有提及的  
+WITH  
 接受即將指定的選項。  
   
 NO_INFOMSGS  
@@ -76,12 +76,12 @@ NO_INFOMSGS
 COUNT_ROWS  
 指定利用資料表或檢視表中目前的資料列計數來更新 row count 資料行。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 DBCC UPDATEUSAGE 會更正資料表或索引中的每一個資料分割的資料列、使用頁面、保留頁面、分葉頁和資料頁的計數。 如果系統資料表中沒有不準確的情況，DBCC UPDATEUSAGE 不會傳回任何資料。 如果找到且更正了不準確的情況，就不會使用 WITH NO_INFOMSGS，DBCC UPDATEUSAGE 會傳回系統資料表所更新的資料列和資料行。
   
 DBCC CHECKDB 已經增強，可在頁面或資料列計數變成負數時偵測出。 偵測到時，DBCC CHECKDB 輸出會包含警告及執行 DBCC UPDATEUSAGE 來處理這個問題的建議。
   
-## <a name="best-practices"></a>最佳作法  
+## <a name="best-practices"></a>最佳做法  
 我們的建議如下：
 -   請勿例行性地執行 DBCC UPDATEUSAGE。 DBCC UPDATEUSAGE 可能需要一些時間才能在大型資料表或資料庫上執行，因此，除非您懷疑 sp_spaceused 所傳回的值不正確，否則不應僅使用它。
 -   只有在資料庫進行頻繁的資料定義語言 (DDL) 修改 (如 CREATE、ALTER 或 DROP 陳述式) 時，才考慮例行地執行 DBCC UPDATEUSAGE (例如，每週)。  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>C. 更新 Employee 資料表的頁面及 (或) 資料列計數  
-下列範例會報告 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中 `Employee` 資料表的已更新頁面或資料列計數資訊。
+下列範例會報告 `Employee` 資料庫中 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表的已更新頁面或資料列計數資訊。
   
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');  

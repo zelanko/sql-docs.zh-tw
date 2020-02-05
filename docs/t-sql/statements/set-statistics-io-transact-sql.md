@@ -26,10 +26,10 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3cf335242bd0f0e33939c0a72c19390d90252103
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67941841"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "67941841"
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當 STATISTICS IO 為 ON 時，會顯示統計資訊，而其為 OFF 時，則不會顯示資訊。   
   
  在這個選項設為 ON 之後，所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式都會傳回統計資訊，直到這個選項設為 OFF 為止。  
@@ -56,7 +56,7 @@ SET STATISTICS IO { ON | OFF }
 |輸出項目|意義|  
 |-----------------|-------------|  
 |**Table**|資料表的名稱。|  
-|**掃描計數**|為了建構輸出的最終資料集，在達到分葉層級之後朝任何方向啟動以擷取所有值的搜尋或掃描次數。<br /><br /> 如果使用的索引是主索引鍵的唯一索引或叢集索引，且您只要搜尋一個值，掃描計數就是 0。 例如， `WHERE Primary_Key_Column = <value>`。<br /><br /> 當您使用非主索引鍵資料行上定義的非唯一叢集索引來搜尋一個值時，掃描計數就是 1。 執行此處理序是為了檢查您所搜尋索引鍵值是否有重複的值。 例如， `WHERE Clustered_Index_Key_Column = <value>`。<br /><br /> 當 N 是使用索引鍵找出索引鍵值之後，朝向分葉層級左側或右側啟動的不同搜尋或掃描次數時，掃描計數就是 N。|  
+|**掃描計數**|為了建構輸出的最終資料集，在達到分葉層級之後朝任何方向啟動以擷取所有值的搜尋或掃描次數。<br /><br /> 如果使用的索引是主索引鍵的唯一索引或叢集索引，且您只要搜尋一個值，掃描計數就是 0。 例如： `WHERE Primary_Key_Column = <value>` 。<br /><br /> 當您使用非主索引鍵資料行上定義的非唯一叢集索引來搜尋一個值時，掃描計數就是 1。 執行此處理序是為了檢查您所搜尋索引鍵值是否有重複的值。 例如： `WHERE Clustered_Index_Key_Column = <value>` 。<br /><br /> 當 N 是使用索引鍵找出索引鍵值之後，朝向分葉層級左側或右側啟動的不同搜尋或掃描次數時，掃描計數就是 N。|  
 |**邏輯讀取**|從資料快取中讀取的頁數。|  
 |**實體讀取**|從磁碟中讀取的頁數。|  
 |**讀取前讀取**|放入查詢快取中的頁數。|  

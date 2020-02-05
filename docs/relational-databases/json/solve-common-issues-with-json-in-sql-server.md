@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8dd50c08035690fd932dc717ae08d179b89b4ed2
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325410"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>解決 SQL Server 中的 JSON 常見問題
@@ -85,7 +85,7 @@ FOR JSON PATH
   
  FOR JSON 查詢傳回的文字似乎會逸出為純文字。 僅在指定 WITHOUT_ARRAY_WRAPPER 時才會發生此情況。 為何不會將它視為 JSON 物件，並將它以未逸出方式包含在結果中？  
   
- **答：** 如果您在內部 `FOR JSON` 中指定 `WITHOUT_ARRAY_WRAPPER` 選項，產生的 JSON 文字不一定是有效的 JSON。 因此，外部 `FOR JSON` 會假定此為純文字並逸出字串。 若您確定 JSON 輸出有效，請使用 `JSON_QUERY` 函數將其包裝以升級為正確格式的 JSON，如下列範例所示。  
+ **答：** 如果您在內部 `WITHOUT_ARRAY_WRAPPER` 中指定 `FOR JSON` 選項，產生的 JSON 文字不一定是有效的 JSON。 因此，外部 `FOR JSON` 會假定此為純文字並逸出字串。 若您確定 JSON 輸出有效，請使用 `JSON_QUERY` 函數將其包裝以升級為正確格式的 JSON，如下列範例所示。  
   
 ```sql  
 SELECT 'Text' as myText,  

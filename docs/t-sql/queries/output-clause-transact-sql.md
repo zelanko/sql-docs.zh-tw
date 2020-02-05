@@ -31,10 +31,10 @@ ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2122954c2ce126441eba6d5d05db69e9a8bfa30e
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952442"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
@@ -133,10 +133,10 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- 這是一個明確的資料行參考。 指向正經修改之資料表的任何參考，都必須由 INSERTED 或 DELETED 前置詞來適當地加以限定，例如：INSERTED **.** _column\_name_。  
+ 這是一個明確的資料行參考。 若要參考所要修改的資料表，必須依據適用情況，以 INSERTED 或 DELETED 前置詞正確地限定該參考，例如：INSERTED **.** _column\_name_。  
   
  $action  
- 僅適用於 MERGE 陳述式。 在 MERGE 陳述式的 OUTPUT 子句中指定類型為 **navchar(10)** 的資料行，傳回每個資料列下列三個值中的其中一個：'INSERT'、'UPDATE' 或 'DELETE'，根據在該資料列執行的動作而定。  
+ 僅適用於 MERGE 陳述式。 在 MERGE 陳述式的 OUTPUT 子句中指定 **nvarchar(10)** 類型的資料行，此陳述式會針對每個資料列傳回下列三個值其中之一：'INSERT'、'UPDATE' 或 'DELETE' (依據在該資料列上執行的動作而定)。  
   
 ## <a name="remarks"></a>備註  
  您可以在單一 INSERT、UPDATE、DELETE 或 MERGE 陳述式中，定義 OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } 子句。  
@@ -353,7 +353,7 @@ GO
 ```  
   
 ### <a name="c-using-output-into-with-an-update-statement"></a>C. 使用 OUTPUT INTO 搭配 UPDATE 陳述式  
- 下列範例會將 `VacationHours` 資料表前 10 個資料列的 `Employee` 資料行更新 25%。 `OUTPUT` 子句會將在 `deleted.VacationHours` 資料行中套用 `UPDATE` 陳述式之前便已存在的 `VacationHours` 值，以及 `inserted.VacationHours` 資料行中更新的值傳回給 `@MyTableVar` 資料表變數。  
+ 下列範例會將 `VacationHours` 資料表前 10 個資料列的 `Employee` 資料行更新 25%。 `OUTPUT` 子句會將在 `VacationHours` 資料行中套用 `UPDATE` 陳述式之前便已存在的 `deleted.VacationHours` 值，以及 `inserted.VacationHours` 資料行中更新的值傳回給 `@MyTableVar` 資料表變數。  
   
  之後的兩個 `SELECT` 陳述式會傳回 `@MyTableVar` 中的值，以及 `Employee` 資料表中更新作業的結果。  
   
@@ -388,7 +388,7 @@ GO
 ```  
   
 ### <a name="d-using-output-into-to-return-an-expression"></a>D. 使用 OUTPUT INTO 來傳回運算式  
- 下列範例是以範例 C 為基礎所建立，它在 `OUTPUT` 子句中定義一個運算式，當做更新的 `VacationHours` 值和套用更新之前的 `VacationHours` 值之間的差異。 此運算式的值會傳回給 `VacationHoursDifference` 資料行中的 `@MyTableVar``table` 變數。  
+ 下列範例是以範例 C 為基礎所建立，它在 `OUTPUT` 子句中定義一個運算式，當做更新的 `VacationHours` 值和套用更新之前的 `VacationHours` 值之間的差異。 此運算式的值會傳回給 `@MyTableVar``table` 資料行中的 `VacationHoursDifference` 變數。  
   
 ```  
 USE AdventureWorks2012;  
@@ -422,7 +422,7 @@ GO
 ```  
   
 ### <a name="e-using-output-into-with-from_table_name-in-an-update-statement"></a>E. 在 UPDATE 陳述式中，使用 OUTPUT INTO 搭配 from_table_name  
- 下列範例會針對具有指定 `ProductID` 和 `ScrapReasonID` 的所有工單，更新 `WorkOrder` 資料表中的 `ScrapReasonID` 資料行。 `OUTPUT INTO` 子句會從更新的資料表 (`WorkOrder`) 傳回值，也會從 `Product` 傳回值。 `Product` 子句利用 `FROM` 資料表來指定要更新的資料列。 由於 `WorkOrder` 資料表定義了 `AFTER UPDATE` 觸發程序，因此，需要 `INTO` 關鍵字。  
+ 下列範例會針對具有指定 `ScrapReasonID` 和 `WorkOrder` 的所有工單，更新 `ProductID` 資料表中的 `ScrapReasonID` 資料行。 `OUTPUT INTO` 子句會從更新的資料表 (`WorkOrder`) 傳回值，也會從 `Product` 傳回值。 `Product` 子句利用 `FROM` 資料表來指定要更新的資料列。 由於 `WorkOrder` 資料表定義了 `AFTER UPDATE` 觸發程序，因此，需要 `INTO` 關鍵字。  
   
 ```  
 USE AdventureWorks2012;  

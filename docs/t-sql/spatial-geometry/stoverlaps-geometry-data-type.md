@@ -18,10 +18,10 @@ ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 392b39ae14819aa645e4714189f17e6d4604bf44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140920"
 ---
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (geometry 資料類型)
@@ -38,17 +38,17 @@ ms.locfileid: "68140920"
   
 ## <a name="arguments"></a>引數  
  *other_geometry*  
- 這是要與叫用 `STOverlaps()` 所在之執行個體相比較的另一個 **geometry** 執行個體。  
+ 這是要與叫用 **所在之執行個體相比較的另一個**geometry`STOverlaps()` 執行個體。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回型別：**SqlBoolean**  
+ CLR 傳回類型：**SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  兩個 **geometry** 執行個體重疊的條件是：代表其交集的區域與這兩個執行個體的維度相同，而且區域不等於任一個執行個體。  
   
- 如果 **geometry** 執行個體相交的點不是相同的維度，`STOverlaps()` 一律會傳回 0。  
+ 如果 `STOverlaps()`geometry **執行個體相交的點不是相同的維度，** 一律會傳回 0。  
   
  如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一律會傳回 Null。  
   

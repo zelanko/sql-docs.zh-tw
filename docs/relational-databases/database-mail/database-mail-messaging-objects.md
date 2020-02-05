@@ -16,10 +16,10 @@ ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8eb132920a6b51303e5725ecdb770dd742972f42
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70809944"
 ---
 # <a name="database-mail-messaging-objects"></a>Database Mail 訊息物件
@@ -33,14 +33,14 @@ ms.locfileid: "70809944"
   
  這些物件是郵件主機資料庫中的 Database Mail 介面。 所安裝的其他物件則可執行上列物件所提供的功能。 不過，那些物件會保留給內部使用。  
   
-|[屬性]|類型|Description|  
+|名稱|類型|描述|  
 |----------|----------|-----------------|  
-|[sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**[檢視]**|列出提交至 Database Mail 的所有訊息。|  
-|[sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**[檢視]**|列出關於 [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md)行為的訊息。|  
-|[sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)|**[檢視]**|關於 Database Mail 無法傳送之訊息的資訊。|  
-|[sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)|**[檢視]**|關於 Database Mail 訊息之附加檔案的資訊。|  
+|[sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**檢視**|列出提交至 Database Mail 的所有訊息。|  
+|[sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**檢視**|列出關於 [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md)行為的訊息。|  
+|[sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)|**檢視**|關於 Database Mail 無法傳送之訊息的資訊。|  
+|[sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)|**檢視**|關於 Database Mail 訊息之附加檔案的資訊。|  
 |[sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)|**檢視**|關於使用 Database Mail 傳訊之訊息的資訊。|  
-|[sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)|**[檢視]**|關於 Database Mail 目前嘗試傳送之訊息的資訊。|  
+|[sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)|**檢視**|關於 Database Mail 目前嘗試傳送之訊息的資訊。|  
 |[sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)|**預存程序**|使用 Database Mail 來傳送電子郵件訊息。|  
 |[sysmail_delete_log_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)|**預存程序**|刪除 Database Mail 記錄檔中的訊息。|  
 |[sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)|**預存程序**|刪除 Database Mail 佇列中的郵件項目。|  

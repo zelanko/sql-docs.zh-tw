@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 980b179f39edc3e93e5cb0bc105b6b2f8d12bb58
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903748"
 ---
 # <a name="create-a-database-schema"></a>建立資料庫結構描述
@@ -37,7 +37,7 @@ ms.locfileid: "72903748"
   
 -   建立資料庫物件時，如果您將有效的網域主體 (使用者或群組) 指定為物件擁有者，即會將該網域主體新增至資料庫作為結構描述。 新的結構描述將由該網域主體所擁有。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
   
@@ -65,7 +65,7 @@ ms.locfileid: "72903748"
 > 如果對 **Azure SQL Database** 或 **Azure SQL 資料倉儲**使用 SSMS 建立結構描述，則不會顯示對話方塊。 您將需要執行所產生的「建立結構描述範本 T-SQL 陳述式」。
   
 ### <a name="additional-options"></a>其他選項  
- [結構描述 - 新增]  對話方塊也在其他兩個頁面上提供選項：[權限]  和 [延伸屬性]  。  
+ [結構描述 - 新增]  對話方塊也在其他兩個頁面上提供選項： [權限]  和 [擴充屬性]  。  
   
 -   **[權限]** 頁面列出所有可能的安全性實體以及可授與登入的安全性實體權限。  
   

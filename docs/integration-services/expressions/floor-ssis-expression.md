@@ -14,10 +14,10 @@ ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 56f69743e8bbfb8290e492613daeb07885f5ed7d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71289619"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR (SSIS 運算式)
@@ -41,7 +41,7 @@ FLOOR(numeric_expression)
 ## <a name="result-types"></a>結果類型  
  引數運算式的數值資料類型。 結果是計算值的整數部分，與 *numeric_expression*具有相同的資料類型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果引數為 Null，則 FLOOR 會傳回 Null 結果。  
   
 ## <a name="expression-examples"></a>運算式範例  

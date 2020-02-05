@@ -13,10 +13,10 @@ ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 86e63eb6ab4c8d851d442e50b68cc56d2456580c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298443"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>建議資料行類型對話方塊 UI 參考
@@ -26,7 +26,7 @@ ms.locfileid: "71298443"
 
   使用 [建議資料行類型]  對話方塊，根據檔案內容的取樣來識別一般檔案連線管理員中之資料行的資料類型與長度。  
   
- 若要深入了解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所使用的資料類型，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
+ 若要深入了解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]所使用的資料類型，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ## <a name="options"></a>選項。  
  **資料列數目**  
@@ -49,6 +49,6 @@ ms.locfileid: "71298443"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)   
- [一般檔案連接管理員](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+ [一般檔案連線管理員](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   

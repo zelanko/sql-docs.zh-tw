@@ -18,10 +18,10 @@ ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ac39de3b0fe0d85aa65ef59661a512988acd4a36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042336"
 ---
 # <a name="stdimension-geography-data-type"></a>STDimension (geography 資料類型)
@@ -36,12 +36,12 @@ ms.locfileid: "68042336"
 .STDimension ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
- CLR 傳回型別：**SqlInt32**  
+ CLR 傳回類型：**SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 **geography** 執行個體是空的，STDimension() 會傳回 -1。  
   
 ## <a name="examples"></a>範例  
@@ -62,9 +62,9 @@ FROM @temp;
   
 |NAME|dim|  
 |----------|---------|  
-|點|0|  
+|Point|0|  
 |LineString|1|  
-|多邊形|2|  
+|Polygon|2|  
   
 ## <a name="see-also"></a>另請參閱  
  [地理例項上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

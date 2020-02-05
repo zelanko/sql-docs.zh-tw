@@ -14,10 +14,10 @@ ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 84e9e7577f74aa3ea43d99bc6b3c12cd5637c9ec
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558213"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>評估原則對話方塊，原則選取頁面
@@ -34,13 +34,13 @@ ms.locfileid: "75558213"
  **Server**  
  選取此選項可連接包含您想要之原則的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體。  
   
- **原則：原則**  
+ **原則: 原則**  
  按一下此選項可開啟指定之原則的原則對話方塊。  
   
- **原則：類別目錄**  
+ **原則: 類別目錄**  
  此原則的類別目錄。 這個方塊是唯讀的。  
   
- **原則：Facet**  
+ **原則: Facet**  
  此原則所實作的 Facet。 這個方塊是唯讀的。  
   
  **評估**  

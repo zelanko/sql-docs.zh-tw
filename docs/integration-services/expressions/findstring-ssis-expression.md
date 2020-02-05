@@ -13,10 +13,10 @@ ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a9eb015bbab987c37df2390eee81af2f3338644b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297592"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (SSIS 運算式)
@@ -46,8 +46,8 @@ FINDSTRING(character_expression, searchstring, occurrence)
 ## <a name="result-types"></a>結果類型  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
- FINDSTRING 只適用於 DT_WSTR 資料類型。  為字串常值或具有 DT_STR 資料類型之資料行的*character_expression* 和 *searchstring* 引數，會在 FINDSTRING 執行其作業之前隱含轉換為 DT_WSTR 資料類型。 其他資料類型必須明確地轉換為 DT_WSTR 資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)和 [Cast &#40;SSIS 運算式&#41;](../../integration-services/expressions/cast-ssis-expression.md)。  
+## <a name="remarks"></a>備註  
+ FINDSTRING 只適用於 DT_WSTR 資料類型。  為字串常值或具有 DT_STR 資料類型之資料行的*character_expression* 和 *searchstring* 引數，會在 FINDSTRING 執行其作業之前隱含轉換為 DT_WSTR 資料類型。 其他資料類型必須明確地轉換為 DT_WSTR 資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)和[轉換 &#40;SSIS 運算式&#41;](../../integration-services/expressions/cast-ssis-expression.md)。  
   
  如果 *character_expression* 或 *searchstring* 都是 null，FINDSTRING 會傳回 null。  
   

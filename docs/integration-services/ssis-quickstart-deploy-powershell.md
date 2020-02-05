@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 108331bfdff6734b7f5a8d64a4983f2c54490ec5
-ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74947103"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>使用 PowerShell 部署 SSIS 專案
@@ -85,7 +85,7 @@ SELECT Name, DisplayName, PackageId
 為下列指令碼上方的變數提供適當的值，然後執行指令碼部署 SSIS 專案。
 
 > [!NOTE]
-> 下列範例會使用 Windows 驗證來部署至內部部署的 SQL Server。 若要使用 SQL Server 驗證，請使用 `User ID=<user name>;Password=<password>;` 取代 `Integrated Security=SSPI;` 引數。 如果要連線至 Azure SQL Database 伺服器，您無法使用 Windows 驗證。
+> 下列範例會使用 Windows 驗證來部署至內部部署的 SQL Server。 若要使用 SQL Server 驗證，請使用 `Integrated Security=SSPI;` 取代 `User ID=<user name>;Password=<password>;` 引數。 如果要連線至 Azure SQL Database 伺服器，您無法使用 Windows 驗證。
 
 ```powershell
 # Variables

@@ -13,10 +13,10 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557926"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server 連接器維護和疑難排解
@@ -153,7 +153,7 @@ ms.locfileid: "75557926"
 * 授與 SQL Server 服務主體使用新保存庫的權限。  
 * 修改 Database Engine 所使用的 SQL Server 認證，以反映新的保存庫名稱 (如果需要)。  
   
-金鑰備份可以跨 Azure 區域還原，只要它們仍存在於相同的地理區域或下列國家/地區雲端內：美國、加拿大、日本、澳洲、印度、亞太地區、 歐洲巴西、中國、美國政府或德國。  
+只要金鑰備份位於相同的地理區域或國家雲端，就可以跨 Azure 區域進行還原：美國、加拿大、日本、澳洲、印度、亞太地區 (APAC)、歐洲巴西、中國、美國政府或德國。  
   
   
 ##  <a name="AppendixB"></a> B. 常見問題集  

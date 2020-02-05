@@ -18,10 +18,10 @@ ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fc14bf340407903674014a84a6b48f2ff14522fc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298123"
 ---
 # <a name="recordset-destination"></a>資料錄集目的地
@@ -38,11 +38,11 @@ ms.locfileid: "71298123"
   
  此來源具有一個輸入。 它不支援錯誤輸出。  
   
- 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [資料錄集目的地自訂屬性](../../integration-services/data-flow/recordset-destination-custom-properties.md)  
   

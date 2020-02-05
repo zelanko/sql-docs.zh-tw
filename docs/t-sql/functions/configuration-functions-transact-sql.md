@@ -18,10 +18,10 @@ ms.assetid: 066f15e7-3406-437e-93c4-3f247c529169
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5db26c5c4efa1398cf5a958279cb75d84cb3bb13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086157"
 ---
 # <a name="configuration-functions-transact-sql"></a>組態函數 (Transact-SQL)

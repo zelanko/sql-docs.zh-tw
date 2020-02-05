@@ -13,10 +13,10 @@ ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 45a57f45eae2a54d73e08064b9a02446871f8400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946959"
 ---
 # <a name="create-a-plan-guide-for-parameterized-queries"></a>建立參數化查詢的計畫指南

@@ -23,13 +23,13 @@ ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 569486f5806ac6f0d62f32fa9ac17efc1d43a85a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904377"
 ---
-# <a name="errorline-transact-sql"></a>ERROR_LINE (Transact-SQL)
+# <a name="error_line-transact-sql"></a>ERROR_LINE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 此函式會傳回發生錯誤造成執行 TRY...CATCH 建構之 CATCH 區塊的行號。  
@@ -52,7 +52,7 @@ ERROR_LINE ( )
 -   常式中的行號 (如果在預存程序或觸發程序內發生錯誤)  
 -   NULL (如果在 CATCH 區塊範圍之外呼叫)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 可以在 CATCH 區塊範圍內的任何位置呼叫 `ERROR_LINE`。  
   
 `ERROR_LINE` 會傳回發生錯誤的行號。 不論在 CATCH 區塊範圍內的哪個位置呼叫 `ERROR_LINE`，以及呼叫 `ERROR_LINE` 的次數為何，都是如此。 這有別於 @ERROR 之類的函式。 @ERROR 會在緊接於發生錯誤的陳述式之後的陳述式中，或在 CATCH 區塊的第一個陳述式中，傳回錯誤號碼。  
@@ -61,7 +61,7 @@ ERROR_LINE ( )
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-errorline-in-a-catch-block"></a>A. 在 CATCH 區塊中使用 ERROR_LINE  
+### <a name="a-using-error_line-in-a-catch-block"></a>A. 在 CATCH 區塊中使用 ERROR_LINE  
 此程式碼範例會顯示產生除以零之錯誤的 `SELECT` 陳述式。 `ERROR_LINE` 會傳回發生錯誤的行號。  
   
 ```  
@@ -89,7 +89,7 @@ ErrorLine
 (1 row(s) affected)
 ```  
   
-### <a name="b-using-errorline-in-a-catch-block-with-a-stored-procedure"></a>B. 在含有預存程序的 CATCH 區塊中使用 ERROR_LINE  
+### <a name="b-using-error_line-in-a-catch-block-with-a-stored-procedure"></a>B. 在含有預存程序的 CATCH 區塊中使用 ERROR_LINE  
 此範例會顯示產生除以零之錯誤的預存程序。 `ERROR_LINE` 會傳回發生錯誤的行號。  
   
 ```  
@@ -129,7 +129,7 @@ ErrorLine
    
 ```
 
-### <a name="c-using-errorline-in-a-catch-block-with-other-error-handling-tools"></a>C. 在含有其他錯誤處理工具的 CATCH 區塊中使用 ERROR_LINE  
+### <a name="c-using-error_line-in-a-catch-block-with-other-error-handling-tools"></a>C. 在含有其他錯誤處理工具的 CATCH 區塊中使用 ERROR_LINE  
 此程式碼範例會顯示產生除以零之錯誤的 `SELECT` 陳述式。 `ERROR_LINE` 會傳回發生錯誤的行號，以及與錯誤本身相關的資訊。  
   
 ```  

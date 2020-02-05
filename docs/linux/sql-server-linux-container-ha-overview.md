@@ -1,6 +1,6 @@
 ---
 title: SQL Server 容器的高可用性
-description: 此文章介紹 SQL Server 容器的高可用性
+description: 本文介紹 SQL Server 容器的高可用性
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
 ms.openlocfilehash: 688db496825af348183e195bfd4003cfcfb53d81
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69653380"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>SQL Server 容器的高可用性
@@ -26,7 +26,7 @@ SQL Server 2017 引進可在 Kubernetes 上部署的 Docker 映像。 您可以�
 
 ## <a name="container-with-sql-server-instance-on-kubernetes"></a>在 Kubernetes 上具有 SQL Server 執行個體的容器
 
-Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs/concepts/storage/storage-classes/)  、[持續性磁碟區宣告](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)  ，以及[Azure 磁片磁碟區類型](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)  。 
+Kubernetes 1.6 和更新版本支援[儲存體類別  ](https://kubernetes.io/docs/concepts/storage/storage-classes/)、[持續性磁碟區宣告  ](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)，以及[Azure 磁片磁碟區類型  ](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)。 
 
 在此設定中，Kubernetes 扮演容器協調者的角色。 
 

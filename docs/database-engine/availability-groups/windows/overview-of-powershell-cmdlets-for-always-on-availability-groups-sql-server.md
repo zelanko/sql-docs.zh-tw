@@ -15,10 +15,10 @@ ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8aac669c8e7b2f43666a43c26a8040c3658c560c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75236090"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>AlwaysOn 可用性群組的 PowerShell Cmdlet 概觀

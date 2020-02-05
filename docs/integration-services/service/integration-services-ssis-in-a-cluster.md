@@ -11,10 +11,10 @@ ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9203423267f68137e11203be60ffa4d0e0c3e41
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296900"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>叢集中的 Integration Services (SSIS)
@@ -22,7 +22,7 @@ ms.locfileid: "71296900"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  不建議您以叢集方式設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，因為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務不是叢集服務或叢集感知的服務，也不支援從一個叢集節點容錯移轉到另一個叢集節點。 因此，在叢集環境中，應該以獨立服務的形式在叢集中的每一個節點上安裝及啟動 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。  
+  不建議您以叢集方式設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，因為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務不是叢集服務或叢集感知的服務，也不支援從一個叢集節點容錯移轉到另一個叢集節點。 因此，在叢集環境中，應該以獨立服務的形式在叢集中的每一個節點上安裝及啟動 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。  
   
  雖然 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務並非叢集服務，但在叢集的每個節點上個別安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 之後，您可以手動設定該服務，把它當做叢集資源來運作。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71296900"
   
 -   **當容錯移轉發生時，執行中的套件不會重新啟動。**
     
-    您可以藉由從檢查點重新啟動封裝而從封裝失敗復原。 如果不將服務設定為叢集資源，就可以從檢查點重新啟動。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+    您可以藉由從檢查點重新啟動封裝而從封裝失敗復原。 如果不將服務設定為叢集資源，就可以從檢查點重新啟動。 如需詳細資訊，請參閱[使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
 -   當您在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的不同資源群組中設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務時，無法從用戶端電腦使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來管理儲存在 msdb 資料庫中的封裝。 在這種雙躍點的狀況中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務無法委派認證。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "71296900"
   
     -   若要將 Integrations Services 當做叢集資源加入與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相同的資源群組，請選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所屬的群組。  
   
-    -   若要將 Integrations Services 當做叢集資源加入至與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同的群組，請選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所屬群組以外的群組。  
+    -   若要將 Integrations Services 當做叢集資源加入至與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不同的群組，請選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所屬群組以外的群組。  
   
 4.  在 [檔案]  功能表上，指向 [開新檔案]  ，然後按一下 [資源]  。  
   
@@ -106,9 +106,9 @@ ms.locfileid: "71296900"
   
 6.  在 [可能的擁有者]  頁面中，加入或移除作為資源之可能擁有者的叢集節點。 按 [下一步]  。  
   
-7.  若要在 [相依性]  頁面上加入相依性，請選取 [可用的資源]  之下的資源，然後按一下 [加入]  。 在容錯移轉時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和儲存 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的共用磁碟會在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 連線之前重新連線。 選取相依性之後，請按一下 [下一步]  。  
+7.  若要在 [相依性]  頁面上加入相依性，請選取 [可用的資源]  之下的資源，然後按一下 [加入]  。 在容錯移轉時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和儲存 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的共用磁碟會在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 連線之前重新連線。 選取相依性之後，請按一下 [下一步]  。  
   
-     如需詳細資訊，請參閱[加入 SQL Server 資源的相依性](../../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md)。  
+     如需詳細資訊，請參閱 [加入 SQL Server 資源的相依性](../../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md)。  
   
 8.  在 [一般服務參數]  頁面上，輸入 **MsDtsServer** 作為服務的名稱。 按 [下一步]  。  
   

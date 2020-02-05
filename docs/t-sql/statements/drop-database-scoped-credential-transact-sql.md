@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 10c1b29b1e5a8d4c7d91c428fd404b19cb77dd80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898109"
 ---
 # <a name="drop-database-scoped-credential-transact-sql"></a>DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
@@ -42,7 +42,7 @@ DROP DATABASE SCOPED CREDENTIAL credential_name
  *credential_name*  
  是要從伺服器移除的資料庫範圍認證的名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  若要卸除與資料庫範圍認證相關聯的祕密，但不卸除資料庫範圍認證本身，請使用 [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md)。  
   
  資料庫範圍認證的相關資訊顯示在 [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) 目錄檢視中。  

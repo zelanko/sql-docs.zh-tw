@@ -11,17 +11,17 @@ ms.assetid: ca851a07-e4e5-439c-8da5-d8e97aaf4873
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba3695cffffe5d28af15a94461f60fb207fbe665
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115617"
 ---
 # <a name="monitor-instances-of-sql-server-in-the-sql-server-utility"></a>監視 SQL Server 公用程式中的 SQL Server 執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
   
-|主題|[資訊]|  
+|主題|資訊|  
 |-----------|-----------------|  
 |[連接至 SQL Server 公用程式](../../relational-databases/manage/connect-to-a-sql-server-utility.md)|描述檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式儀表板和視點。|  
 |[降低 CPU 使用量原則的雜訊 &#40;SQL Server 公用程式&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)|描述在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式監視原則中減少報告雜訊和不必要的違規。|  

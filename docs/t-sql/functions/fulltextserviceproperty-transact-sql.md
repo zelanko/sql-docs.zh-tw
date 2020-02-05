@@ -21,10 +21,10 @@ ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 726b071c222580ec75091477dc68509cdb71e1e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940257"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
@@ -46,9 +46,9 @@ FULLTEXTSERVICEPROPERTY ('property')
  這是一個包含全文檢索服務層級屬性名稱的運算式。 下表列出各個屬性，並提供傳回資訊的描述。  
   
 > [!NOTE]
->  後續版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將移除下列屬性：**ConnectTimeout**、**DataTimeout** 和 **ResourceUsage**。 請避免在新的開發工作中使用這些屬性，並規劃修改目前使用任何這些屬性的應用程式。  
+>  下列屬性將會在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中移除：**ConnectTimeout**、**DataTimeout** 和 **ResourceUsage**。 請避免在新的開發工作中使用這些屬性，並規劃修改目前使用任何這些屬性的應用程式。  
   
-|屬性|ReplTest1|  
+|屬性|值|  
 |--------------|-----------|  
 |**ResourceUsage**|傳回 0。 支援這個項目的目的，只是為了與舊版相容。|  
 |**ConnectTimeout**|傳回 0。 支援這個項目的目的，只是為了與舊版相容。|  
@@ -57,7 +57,7 @@ FULLTEXTSERVICEPROPERTY ('property')
 |**LoadOSResources**|指出是否註冊作業系統斷詞工具和篩選，以及是否搭配這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體來使用它們。 依預設，會停用這個屬性來防止因更新作業系統 (OS) 而意外變更行為。 啟用 OS 資源會提供 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 索引服務所登錄，但並未安裝特定執行個體專用資源之語言和文件類型的存取權。 如果您啟用 OS 資源的載入，請確定這些 OS 資源是受信任之已簽署的二進位檔，否則當 **VerifySignature** 設為 1 時，便無法載入它們。<br /><br /> 0 = 只用這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體專用的篩選和斷詞工具。<br /><br /> 1 = 載入 OS 篩選和斷詞工具。|  
 |**VerifySignature**|指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 搜尋服務是否只載入已簽署的二進位檔。 依預設，只會載入受信任的已簽署之二進位檔。<br /><br /> 0 = 不驗證是否已簽署二進位檔。<br /><br /> 1 = 確認只載入受信任的已簽署之二進位檔。|  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
 ## <a name="examples"></a>範例  

@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 5d181d1b6ddfea034716ebb048768cd7d43fbc61
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847579"
 ---
 # <a name="iclientvirtualdeviceset2mapbufferhandle-vdi"></a>IClientVirtualDeviceSet2::MapBufferHandle (VDI)
@@ -45,7 +45,7 @@ HRESULT IClientVirtualDeviceSet2::MapBufferHandle (
 | VD_E_PROTOCOL | 虛擬裝置集目前未開啟。 |
 | VD_E_INVALID | ppBuffer 是無效的控制代碼。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 請務必謹慎，以正確地傳達控制代碼。 控制代碼位於虛擬裝置集的本機。 共用控制代碼的夥伴程序，必須確保緩衝區控制代碼只在原本取得緩衝區的來源虛擬裝置集範圍內使用。
 

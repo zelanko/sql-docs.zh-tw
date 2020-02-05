@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a3b2d2ff81fddaae0b0ae68da9d4477819a61073
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101928"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
@@ -61,7 +61,7 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
  ALL  
  從每個計算節點和控制節點中，清除記憶體中的資料快取。 如果您未指定值，則這是預設值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 在不將伺服器關閉再重新啟動的情況下，可以使用 DBCC DROPCLEANBUFFERS，以冷緩衝快取區來測試查詢。
 若要從緩衝集區中卸除清除緩衝區，以及從資料行存放區物件集區中卸除資料行存放區物件，請先使用 CHECKPOINT 來產生冷緩衝區快取。 此舉會強制將所有目前資料庫的中途分頁寫入磁碟中，然後清除緩衝區。 之後，您就可以發出 DBCC DROPCLEANBUFFERS 命令，從緩衝集區移除所有的緩衝區了。
   
@@ -74,11 +74,11 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="permissions"></a>權限  
 
-適用於：SQL Server 平行處理資料倉儲 
+適用對象：SQL Server、平行處理資料倉儲 
 
 - 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
 
-適用於：Azure SQL 資料倉儲
+適用對象：Azure SQL 資料倉儲
 
 - 需要 DB_OWNER 固定資料庫角色中的成員資格。  
   

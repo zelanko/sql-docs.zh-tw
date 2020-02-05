@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325454"
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安裝 SQL Server
@@ -31,7 +31,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
   
 |需求|安裝方式|  
 |-----------------|--------------------|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |若是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 以外的所有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 版本，則安裝程式需要 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile。 如果尚未安裝這個項目，則 SQL Server 安裝程式會自動進行安裝。 安裝需要重新開機。 您可以先安裝 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，再執行安裝程式，以避免重新開機。|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |若是 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 以外的所有 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本，則安裝程式需要 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile。 如果尚未安裝這個項目，則 SQL Server 安裝程式會自動進行安裝。 安裝需要重新開機。 您可以先安裝 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，再執行安裝程式，以避免重新開機。|  
 |Windows Installer 4.5|隨附於 Server Core 安裝。|  
 |Windows PowerShell|隨附於 Server Core 安裝。|  
 |Java Runtime |若要使用 PolyBase，您需要安裝適當的 Java Runtime。 如需詳細資訊，請參閱 [PolyBase 安裝](../../relational-databases/polybase/polybase-installation.md)。|
@@ -291,7 +291,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
   
 2.  在 [應用程式]  索引標籤上，按一下 [新工作]  。  
   
-3.  在 [建立新工作]  對話方塊的 [開啟]  欄位中輸入 **sqlps.exe**，然後按一下 [確定]  。 隨即開啟 [[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]  視窗。  
+3.  在 [建立新工作]  對話方塊的 [開啟]  欄位中輸入 **sqlps.exe**，然後按一下 [確定]  。 隨即開啟 [ **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Powershell][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 視窗。  
   
 4.  在 [**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**] 視窗中，執行下列指令碼以啟用 TCP/IP 通訊協定：  
   

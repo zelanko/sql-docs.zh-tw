@@ -11,10 +11,10 @@ ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 52ce0e96ce131b1ea1a69f2ba9f7466850cbf4cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290938"
 ---
 # <a name="xml-source-custom-properties"></a>XML 來源自訂屬性
@@ -26,16 +26,16 @@ ms.locfileid: "71290938"
   
  下表描述的是 XML 來源的自訂屬性。 所有屬性都是可讀寫的。  
   
-|屬性名稱|資料類型|Description|  
+|屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|用來存取 XML 資料的模式。|  
-|UseInlineSchema|布林|一個值，指出是否要使用 XML 來源中的內嵌結構描述定義。 此屬性的預設值為 **False**。|  
+|AccessMode|整數|用來存取 XML 資料的模式。|  
+|UseInlineSchema|Boolean|一個值，指出是否要使用 XML 來源中的內嵌結構描述定義。 此屬性的預設值為 **False**。|  
 |XMLData|String|要從中擷取 XML 資料的檔案或變數。<br /><br /> 此屬性的值可以使用屬性運算式指定。|  
 |XMLSchemaDefinition|String|結構描述定義檔 (.xsd) 的路徑和檔案名稱。<br /><br /> 此屬性的值可以使用屬性運算式指定。|  
   
  下表描述的是 XML 來源之輸出的自訂屬性。 所有屬性都是可讀寫的。  
   
-|屬性名稱|資料類型|Description|  
+|屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
 |RowsetID|String|一個值，可識別與輸出相關聯的資料列集。|  
   

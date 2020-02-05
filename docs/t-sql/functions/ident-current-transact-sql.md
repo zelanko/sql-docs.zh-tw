@@ -21,10 +21,10 @@ ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2271bbdd9a5b61fdfbf4985ca68acbffbc0b0b9d
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843697"
 ---
 # <a name="ident_current-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
@@ -44,7 +44,7 @@ IDENT_CURRENT( 'table_or_view' )
 *table_or_view*  
 這是傳回之識別值所屬的資料表或檢視名稱。 *table_or_view* 是沒有預設值的 **varchar**。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 **numeric**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## <a name="exceptions"></a>例外狀況  
@@ -52,7 +52,7 @@ IDENT_CURRENT( 'table_or_view' )
   
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示發出中繼資料的內建函數 (例如，IDENT_CURRENT) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 IDENT_CURRENT 與 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 識別函式 SCOPE_IDENTITY 和 @@IDENTITY 相似。 三個函數都會傳回最後產生的識別值。 不過，各函式定義 *last* 的範圍和工作階段各不相同：  
 
 -   IDENT_CURRENT 會傳回在任何工作階段和任何範圍中，產生給特定資料表的最後一個識別值。  

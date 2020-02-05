@@ -11,10 +11,10 @@ ms.assetid: 25b71829-bdb1-46f4-ac36-80ddced52f3d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: cc2c9a8ebd5d60dbd9c3ed302b76a3c248941439
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68081635"
 ---
 # <a name="sql-server-express-localdb-reference"></a>SQL Server Express LocalDB 參考

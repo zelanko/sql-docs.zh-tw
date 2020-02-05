@@ -11,10 +11,10 @@ ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f85e27484378d1074564a320aea7f8ed1766e1ce
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251322"
 ---
 # <a name="catalogdeploy_project-ssisdb-database"></a>catalog.deploy_project (SSISDB 資料庫)
@@ -76,7 +76,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   使用者未具備足夠的權限  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  在專案部署或更新期間，預存程序並不會檢查專案中的個別封裝的保護等級。  
   
   

@@ -16,10 +16,10 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822672"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>使用 Always On 可用性群組儀表板 (SQL Server Management Studio)
@@ -168,8 +168,8 @@ ms.locfileid: "74822672"
  指出次要複本的目前操作狀態。 預設隱藏此值。 可能的值包括：  
   
  **0**.暫止容錯移轉    
- **1**。Pending    
- **2**.線上    
+ **1**.暫止    
+ **2**.線上存取    
  **3**.離線   
  **4**.失敗    
  **5**.失敗，無仲裁  

@@ -19,10 +19,10 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 122630048b7e4ff9cef34c49bfde68177020630f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077899"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid 資料類型方法參考
@@ -42,7 +42,7 @@ ms.locfileid: "68077899"
   
 **hierarchyid** 類型可作為 **SqlHierarchyId** 資料類型提供給 CLR 用戶端使用。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 **hierarchyid** 類型會透過編碼從樹狀目錄根到節點的路徑，以邏輯方式編碼階層樹狀結構目錄中單一節點的相關資訊。 這類路徑會以邏輯方式表示成在根目錄之後造訪之所有子系的節點標籤序列。 此表示以斜線為開頭，而且只有造訪根目錄的路徑才會以單一斜線表示。 若為根目錄底下的層級，每個標籤都會編碼成以小數點隔開的整數序列。 子系之間的比較是透過按照字典順序比較以小數點隔開的整數序列加以執行。 每個層級後面都跟著一個斜線。 因此，斜線會分隔父代與其子系。 例如，下面是有效的 **hierarchyid** 路徑 (長度分別為 1、2、2、3 和 3 個層級)：
   
 -   /  

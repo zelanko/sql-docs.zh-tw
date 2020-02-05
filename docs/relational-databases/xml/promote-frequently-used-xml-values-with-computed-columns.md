@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 156ed5549daa8129ff17d1b2827d798521c8a88b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75257630"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用計算資料行升級常用的 XML 值
@@ -29,7 +29,7 @@ ms.locfileid: "75257630"
 ## <a name="computed-column-based-on-the-xml-data-type"></a>以 xml 資料類型為基礎的計算的資料行  
  您可以使用叫用 **xml** 資料類型方法的使用者定義函數，進而建立計算資料行。 計算資料行的類型可以是任何 SQL 類型，包括 XML。 下列範例會加以說明。  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>範例：以 xml 資料類型方法為基礎的計算資料行  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>範例：以 xml 資料類型方法為基礎的計算的資料行  
  針對書籍的 ISBN 號碼來建立使用者自訂函數：  
   
 ```  
@@ -51,7 +51,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  可以用一般的方式來檢索計算的資料行。  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>範例：查詢以 xml 資料類型方法為基礎的計算資料行  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>範例：查詢以 xml 資料類型方法為基礎的計算的資料行  
  若要取得 ISBN 為 0-7356-1588-2 的 <`book`>，請：  
   
 ```  
@@ -92,7 +92,7 @@ WHERE  ISBN = '0-7356-1588-2'
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>範例：建立使用者自訂函數，以從 XML 執行個體產生資料列集  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>範例：建立使用者自訂函數，以從 XML 執行個體產生資料列集。  
  下列資料表值函式 udf_XML2Table 可接受主索引鍵值和 XML 執行個體。 它會擷取 <`book`> 元素中所有作者的名字，並傳回主索引鍵的資料列集 (名字配對)。  
   
 ```  
@@ -108,7 +108,7 @@ begin
 end  
 ```  
   
-### <a name="example-create-triggers-to-populate-a-property-table"></a>範例：建立觸發程序以填入屬性資料表  
+### <a name="example-create-triggers-to-populate-a-property-table"></a>範例：建立觸發程序來擴展屬性資料表  
  插入觸發程序會在屬性資料表中插入資料列：  
   
 ```  

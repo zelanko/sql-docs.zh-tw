@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0c871da0fcd20cffc2c6510d7084f79faefa2d50
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412795"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>分割記憶體最佳化資料表的應用程式模式
@@ -37,7 +37,7 @@ ms.locfileid: "74412795"
   
 -   加入使用中分割區。  
   
- ![分割區切換。](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "|::ref1::|")  
+ ![分割區切換。](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "分割區切換。")  
 使用中資料維護  
   
  從刪除使用中訂單開始的動作必須在維護期間完成，以免在刪除資料以及在暫存資料表中切換之間會遺失查詢資料。  

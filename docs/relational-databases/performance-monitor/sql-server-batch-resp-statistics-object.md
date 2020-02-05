@@ -13,10 +13,10 @@ ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 87045f104bdf183c91c3b60b0d85c4a64929359e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987190"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server 的 Batch Resp Statistics 物件
@@ -26,7 +26,7 @@ ms.locfileid: "67987190"
 下表說明 SQL Server **Batch Resp Statistics** 效能物件。
 
 
-|**SQL Server Batch Resp Statistics 計數器**|Description|  
+|**SQL Server Batch Resp Statistics 計數器**|描述|  
 |-------------|-----------------|  
 |**Batches >=000000ms & \<000001ms**|回應時間大於或等於 0 毫秒但小於 1 毫秒的 SQL 批次數目|
 |**Batches >=000001ms & \<000002ms**|回應時間大於或等於 1 毫秒但小於 2 毫秒的 SQL 批次數目|
@@ -48,7 +48,7 @@ ms.locfileid: "67987190"
 
 物件中的每個計數器均包含下列執行個體：  
   
-|項目|Description|  
+|Item|描述|  
 |----------|-----------------|  
 |**CPU Time:Requests**|CPU 花費在要求上的時間。|  
 |**CPU Time:Total(ms)**|CPU 花費在批次上的時間總計。|  

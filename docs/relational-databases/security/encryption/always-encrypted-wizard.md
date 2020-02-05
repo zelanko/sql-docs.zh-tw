@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 71df93e5e7d628fadf5839e980f42a92138a5e0c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594508"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>使用 [Always Encrypted 精靈] 設定資料行加密
@@ -101,14 +101,14 @@ ms.locfileid: "73594508"
 > [!TIP]
 > 精靈只允許您在 Windows 憑證存放區和 Azure Key Vault 中瀏覽和建立金鑰。 精靈也會自動產生兩個新金鑰的名稱，以及描述金鑰的資料庫中繼資料物件。 若您需要深入控制您金鑰的佈建方式 (以及針對包含您資料行主要金鑰的金鑰存放區擁有更多選擇)，您可以先使用 [新增資料行主要金鑰]  和 [新增資料行加密金鑰]  對話方塊來建立金鑰，然後執行精靈並挑選您已建立的金鑰。 請參閱[使用 [新增資料行主要金鑰] 對話方塊佈建資料行主要金鑰](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog)和[使用 [新增資料行加密金鑰] 對話方塊佈建資料行加密金鑰](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog)。 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 - [使用 Always Encrypted 與 SQL Server Management Studio 查詢資料行](always-encrypted-query-columns-ssms.md)
 - [使用 Always Encrypted 開發應用程式](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>另請參閱  
- - [永遠加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
- - [Always Encrypted 金鑰管理概觀](overview-of-key-management-for-always-encrypted.md) 
- - [使用 SQL Server Management Studio 設定永遠加密](configure-always-encrypted-using-sql-server-management-studio.md)
+ - [一律加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+ - [Always Encrypted 的金鑰管理概觀](overview-of-key-management-for-always-encrypted.md) 
+ - [使用 SQL Server Management Studio 設定 Always Encrypted](configure-always-encrypted-using-sql-server-management-studio.md)
  - [使用 PowerShell 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-powershell.md)
  - [使用 Always Encrypted 與 PowerShell 設定資料行加密](configure-column-encryption-using-powershell.md)
  - [使用 Always Encrypted 與 DAC 套件設定資料行加密](configure-always-encrypted-using-dacpac.md)

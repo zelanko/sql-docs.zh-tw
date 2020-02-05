@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 64e05a3498a489cfa16d913b953b39c0d0ccb251
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816840"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY (Transact-SQL)
@@ -48,9 +48,9 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 
 ## <a name="arguments"></a>引數
 
-PASSWORD ='*password*' 是用來加密資料庫中主要金鑰的密碼。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 中，*password* 為選擇性。
+PASSWORD ='*password*' 是用來加密資料庫中主要金鑰的密碼。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。 在 *和* 中，[!INCLUDE[ssSDS](../../includes/sssds-md.md)]password[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 為選擇性。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 資料庫主要金鑰是一個用來保護憑證私密金鑰和資料庫中非對稱金鑰的對稱金鑰。 建立資料庫主要金鑰時，系統會利用 AES_256 演算法和使用者提供的密碼來加密主要金鑰。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，使用 TRIPLE DES 演算法。 若要啟用主要金鑰的自動解密，必須利用服務主要金鑰來加密該金鑰的副本，並將它同時儲存在資料庫和 master 中。 通常，每當主要金鑰變更時，儲存在 master 中的副本便會以無訊息模式更新。 您可以使用 [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md) 的 DROP ENCRYPTION BY SERVICE MASTER KEY 選項來變更這個預設值。 如果主要金鑰未以服務主要金鑰來加密，則必須使用 [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) 陳述式和密碼來開啟。
 

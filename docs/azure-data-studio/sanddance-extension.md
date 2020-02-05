@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: e6576d383011a47eb963774f2834a854dec4416e
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70212330"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>適用於 Azure Data Studio 的 SandDance (預覽)
@@ -27,7 +27,7 @@ SandDance 利用容易了解的檢視，協助您深入解析資料，進而協�
 SandDance 使用單元視覺效果，這會在您資料庫的資料列之間套用一對一對應，並在畫面上標示。
 在檢視之間順暢地進行動畫轉換，可協助您在與資料互動時維持內容脈絡。
 
-## <a name="usage"></a>使用方式
+## <a name="usage"></a>使用量
 
 ### <a name="view-csv-or-tsv-files"></a>檢視 .csv 或 .tsv 檔案
 這包括 SQL Server 2019 巨量資料叢集中的本機檔案或 HDFS 檔案。
@@ -52,5 +52,5 @@ SandDance 使用單元視覺效果，這會在您資料庫的資料列之間套�
 
 azdata-sanddance 的初始版本
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 若要深入了解，請[瀏覽 GitHub 存放庫](https://github.com/Microsoft/SandDance)。

@@ -11,10 +11,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: de1dc6567603b0b16324aa798527a0b79282fa83
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095747"
 ---
 # <a name="import-json-documents-into-sql-server"></a>將 JSON 文件匯入 SQL Server
@@ -36,7 +36,7 @@ SELECT BulkColumn
 
 OPENJSON(BULK) 會讀取檔案的內容，並將它傳回至 `BulkColumn`。
 
-您也可以將檔案內容載入至區域變數或資料表，如下列範例所示：
+您也可以將檔案內容載入區域變數或資料表中，如下列範例所示：
 
 ```sql
 -- Load file contents into a variable
@@ -89,7 +89,7 @@ SELECT BulkColumn
 
 ## <a name="import-json-documents-from-azure-blob-storage"></a>從 Azure Blob 儲存體匯入 JSON 文件
 
-您可以使用 T-SQL BULK INSERT 命令或 OPENROWSET 函數，將檔案直接從 Azure Blob 儲存體載入至 Azure SQL Database。
+您可以使用 T-SQL BULK INSERT 命令或 OPENROWSET 函數，將檔案直接從 Azure Blob 儲存體載入 Azure SQL Database 中。
 
 請先建立外部資料來源，如下列範例所示。
 
@@ -110,7 +110,7 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 
 ## <a name="parse-json-documents-into-rows-and-columns"></a>將 JSON 文件剖析成資料列和資料行
 
-您可能想要剖析 JSON 檔案，並傳回檔案中的書籍以及其資料列和資料行中的屬性，而不是讀取整個 JSON 檔案作為單一值。 下列範例使用的 JSON 檔案來自[此網站](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)，其中包含書籍清單。
+建議您剖析 JSON 檔案，並在資料列和資料行中傳回檔案中的書本及其屬性，而不要將整個檔案視為單一值來讀取。 下列範例使用的 JSON 檔案來自[此網站](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)，其中包含書籍清單。
 
 ### <a name="example-1"></a>範例 1
 
@@ -145,11 +145,11 @@ SELECT book.*
 
 在此範例中，OPENROWSET(BULK) 會讀取檔案內容，並將該內容傳遞給包含輸出之已定義結構描述的 OPENJSON 函式。 OPENJSON 使用資料行名稱來符合 JSON 物件中的屬性。 例如，`price` 屬性會以 `price` 資料行形式傳回並轉換為浮點資料類型。 以下是結果：
 
-|Id|[屬性]|price|pages_i|作者|
+|Id|名稱|price|pages_i|作者|
 |---|---|---|---|---|
 |978-0641723445|The Lightning Thief|12.5|384|Rick Riordan| 
 |978-1423103349|The Sea of Monsters|6.49|304|Rick Riordan| 
-|978-1857995879|Sophie's World :The Greek Philosophers|3.07|64|Jostein Gaarder| 
+|978-1857995879|Sophie's World : The Greek Philosophers|3.07|64|Jostein Gaarder| 
 |978-1933988177|Lucene in Action, Second Edition|30.5|475|Michael McCandless|
 ||||||
 

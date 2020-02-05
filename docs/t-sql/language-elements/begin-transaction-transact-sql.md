@@ -31,10 +31,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6dc5c823a69d348e3206d55c3c49f8954204a794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910080"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
@@ -68,7 +68,7 @@ BEGIN { TRAN | TRANSACTION }
  *transaction_name*  
  **適用於：** SQL Server (從 2008 開始)、Azure SQL Database
  
- 這是指派給交易的名稱。 *transaction_name* 必須符合識別碼的規則，但不允許超出 32 個字元的識別碼。 請只在巢狀 BEGIN...COMMIT 或 BEGIN...ROLLBACK 陳述式的最外一組使用交易名稱。 即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體不區分大小寫，*transaction_name* 一律還是會區分大小寫。  
+ 這是指派給交易的名稱。 *transaction_name* 必須符合識別碼的規則，但不允許超出 32 個字元的識別碼。 請只在巢狀 BEGIN...COMMIT 或 BEGIN...ROLLBACK 陳述式的最外一組使用交易名稱。 即使  *的執行個體不區分大小寫，* transaction_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一律還是會區分大小寫。  
   
  @*tran_name_variable*  
  **適用於：** SQL Server (從 2008 開始)、Azure SQL Database
@@ -133,7 +133,7 @@ COMMIT TRAN T1;
   
  "BEGIN TRAN M2 WITH MARK ...;"  
   
- "Server:Msg 3920, Level 16, State 1, Line 3"  
+ "Server: Msg 3920, Level 16, State 1, Line 3"  
   
  "WITH MARK 選項只可套用至第一個 BEGIN TRAN WITH MARK。"  
   

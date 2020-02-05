@@ -13,10 +13,10 @@ ms.assetid: 540f1c6d-df51-497e-958a-3a0f429d2920
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: cbe3efe2337b8e967ea7b5ced9fc6b3890d989e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087288"
 ---
 # <a name="guest-permissions-on-user-databases"></a>使用者資料庫的 Guest 權限

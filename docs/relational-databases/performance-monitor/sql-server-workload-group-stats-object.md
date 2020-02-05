@@ -14,10 +14,10 @@ ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 68d4d824dc95fcbc9c56fe13493c16d0a8f6a0bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947816"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, Workload Group Stats 物件
@@ -26,7 +26,7 @@ ms.locfileid: "67947816"
   
  每個作用中工作負載群組都會建立 SQLServer:Workload Group Stats 效能物件的執行個體，而且此執行個體的名稱與資源管理員工作負載群組名稱相同。 下表描述這個執行個體支援的計數器。  
   
-|計數器名稱|Description|  
+|計數器名稱|描述|  
 |------------------|-----------------|  
 |**Active parallel threads**|目前平行執行緒使用量的計數。|  
 |**Active requests**|目前正在這個工作負載群組中執行的要求數目。 這個計數應該等於群組識別碼所篩選之 sys.dm_exec_requests 中的資料列計數。|  
@@ -47,7 +47,7 @@ ms.locfileid: "67947816"
 |**Suboptimal plans/sec**|在這個工作負載群組中每秒產生的次佳計畫數目。|  
   
 ## <a name="see-also"></a>另請參閱  
- [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
+ [監視資源使用量 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Resource Pool Stats 物件](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)   
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)  
   

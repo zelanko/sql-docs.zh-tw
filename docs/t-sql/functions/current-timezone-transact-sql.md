@@ -25,10 +25,10 @@ helpviewer_keywords:
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e659ae78b81cb6888e749bd40546efe16b4c542d
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72261334"
 ---
 # <a name="current_timezone-transact-sql"></a>CURRENT_TIMEZONE (Transact-SQL)
@@ -54,7 +54,7 @@ CURRENT_TIMEZONE ( )
 
 **varchar**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 
 `CURRENT_TIMEZONE` 是非決定性函數。 參考這個資料行的檢視和運算式，是無法編製索引的。
   

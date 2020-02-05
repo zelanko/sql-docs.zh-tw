@@ -11,10 +11,10 @@ ms.assetid: 80347417-338d-4bea-8885-91fae5181cfe
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d1c5a85072bec1fc304156268680c201ad2245e
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095648"
 ---
 # <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>使用 Transact-SQL 預存程序來建立和執行追蹤
@@ -40,7 +40,7 @@ ms.locfileid: "74095648"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[最佳化 SQL 追蹤](../../relational-databases/sql-trace/optimize-sql-trace.md)|包含如何降低追蹤對於系統效能之影響的相關資訊。|  
 |[篩選追蹤](../../relational-databases/sql-trace/filter-a-trace.md)|包含使用篩選進行追蹤的相關資訊。|  

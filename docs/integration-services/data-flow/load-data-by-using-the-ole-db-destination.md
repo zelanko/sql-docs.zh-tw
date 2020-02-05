@@ -15,10 +15,10 @@ ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 235491b5a3595098b42689f77fdc9077efd9b758
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292347"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>使用 OLE DB 目的地來載入資料
@@ -46,11 +46,11 @@ ms.locfileid: "71292347"
   
     -   **資料表或檢視** ：在資料庫中選取包含資料的資料表或檢視。  
   
-    -   **資料表或檢視表 - 快速載入**：在資料庫中選取包含資料的資料表或檢視，然後設定快速載入選項：[保留識別]  、[保留 Null]  、[資料表鎖定]  、[檢查條件約束]  、[每批次的資料列]  或 [插入認可大小上限]  。  
+    -   **資料表或檢視 - 快速載入**：在資料庫中選取包含資料的資料表或檢視，然後設定快速載入選項：[保留識別]  、[保留 Null]  、[資料表鎖定]  、[檢查條件約束]  、[每批次的資料列]  或 [插入認可大小上限]  。  
   
     -   **資料表名稱或檢視名稱變數** ：選取使用者自訂變數，該變數包含資料庫中資料表或檢視的名稱。  
   
-    -   **資料表名稱或檢視名稱變數 - 快速載入**：選取使用者自訂變數，該變數含有資料庫中包含該資料之資料表或檢視的名稱，然後設定快速載入選項。  
+    -   **資料表名稱或檢視名稱變數 - 快速載入** ：選取使用者自訂變數，該變數含有資料庫中包含該資料之資料表或檢視的名稱，然後設定快速載入選項。  
   
     -   **SQL 命令**：輸入 SQL 命令，或按一下 [建立查詢]  ，以使用 [查詢產生器]  來撰寫 SQL 命令。  
   

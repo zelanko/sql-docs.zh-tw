@@ -12,13 +12,13 @@ ms.assetid: cf19fbbb-7158-45f2-8778-8f3cad7f574a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b379a690019121ea98ff8e8b001f18814dbf6ebe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951508"
 ---
-# <a name="mssqlserver7905"></a>MSSQLSERVER_7905
+# <a name="mssqlserver_7905"></a>MSSQLSERVER_7905
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -30,7 +30,7 @@ ms.locfileid: "67951508"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_INVALID_ROWSET_DIRECTORY|  
-|訊息文字|資料庫錯誤:目錄 'DIRECTORY' 不是有效的 Filestream 目錄。|  
+|訊息文字|資料庫錯誤: 目錄 'DIRECTORY' 不是有效的 Filestream 目錄。|  
   
 ## <a name="explanation"></a>說明  
 除了特殊的資料列集目錄名稱 (例如 'ghost') 以外，資料列集目錄的名稱都是分割區的分割區識別碼。 如果無法將資料列集目錄名稱轉換成分割區識別碼，則表示該目錄不是有效的資料列集目錄。  

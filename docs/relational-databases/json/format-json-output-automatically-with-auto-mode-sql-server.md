@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1472c05c2ac4a9308a0fc941ed706d155203ca03
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095801"
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>使用 AUTO 模式自動格式化 JSON 輸出 (SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "74095801"
 ## <a name="examples"></a>範例
 
 ### <a name="example-1"></a>範例 1
- **[資料集屬性]**  
+ **查詢**  
   
 如果查詢只參考一個資料表，FOR JSON AUTO 子句的結果會類似於 FOR JSON PATH 的結果。 在此情況下，FOR JSON AUTO 不會建立巢狀物件。 唯一的差別在於 FOR JSON AUTO 會輸出以點分隔的別名 (例如，下列範例中的 `Info.MiddleName`) 作為含點的索引鍵，而不是巢狀物件。  
   
@@ -83,7 +83,7 @@ SELECT TOP 5
 
 ### <a name="example-2"></a>範例 2
 
-**[資料集屬性]**  
+**查詢**  
   
 聯結資料表時，第一個資料表中的資料行會產生為根物件的屬性。 第二個資料表中的資料行則會產生為巢狀物件的屬性。 第二個資料表的資料表名稱或別名 (例如，下列範例中的 `D`) 可作為巢狀陣列的名稱。  
   
@@ -121,7 +121,7 @@ FOR JSON AUTO
 
 ### <a name="example-3"></a>範例 3
  
-**[資料集屬性]**  
+**查詢**  
 您可以將 FOR JSON PATH 子查詢巢狀於 SELECT 陳述式，而不是使用 FOR JSON AUTO，如下列範例所示。 此範例所輸出的結果與上述範例相同。  
   
 ```sql  

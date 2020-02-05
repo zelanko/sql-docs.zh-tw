@@ -11,10 +11,10 @@ ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b32f52bd01cb0f19bc107f5f94118d699c239e27
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290717"
 ---
 # <a name="delete-packages"></a>刪除封裝
@@ -29,7 +29,7 @@ ms.locfileid: "71290717"
   
 ### <a name="to-delete-a-package-in-business-intelligence"></a>在 Business Intelligence 中刪除封裝  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，開啟包含要刪除之封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟包含要刪除之封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
 2.  在方案總管中，以滑鼠右鍵按一下封裝，然後按一下 [刪除]  。  
   

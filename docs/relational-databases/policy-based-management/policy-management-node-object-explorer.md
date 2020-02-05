@@ -11,10 +11,10 @@ ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6fc55d4d0e68d83db7c7684d9c0d5cee3982a6c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086915"
 ---
 # <a name="policy-management-node-object-explorer"></a>原則管理節點 (物件總管)
@@ -53,7 +53,7 @@ ms.locfileid: "68086915"
   
 -   [匯出為原則對話方塊](../../relational-databases/policy-based-management/export-as-policy-dialog-box.md)  
   
--   [匯出原則對話方塊](../../relational-databases/policy-based-management/import-policies-dialog-box.md)  
+-   [匯入原則對話方塊](../../relational-databases/policy-based-management/import-policies-dialog-box.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

@@ -18,10 +18,10 @@ ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e409d5064cb0e807d12a76b42055a6a43c9cb7c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "65948823"
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY (Transact-SQL)
@@ -58,7 +58,7 @@ CERTPRIVATEKEY
 ## <a name="return-types"></a>傳回類型
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 搭配使用 **CERTENCODED** 和 **CERTPRIVATEKEY**，以透過二進位格式傳回憑證的不同部分。
   
 ## <a name="permissions"></a>權限  
@@ -79,7 +79,7 @@ GO
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-如需使用 **CERTPRIVATEKEY** 和 **CERTENCODED** 將憑證複製至其他資料庫的更複雜範例，請參閱 [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) 範例 B。
+如需使用 [CERTPRIVATEKEY](../../t-sql/functions/certencoded-transact-sql.md) 和 **CERTENCODED** 將憑證複製至其他資料庫的更複雜範例，請參閱 **CERTENCODED &#40;Transact-SQL&#41;** 範例 B。
   
 ## <a name="see-also"></a>另請參閱
 [安全性函數 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

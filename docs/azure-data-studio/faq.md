@@ -11,17 +11,17 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959541"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] 常見問題集
 
 ## <a name="what-is-azure-data-studio"></a>什麼是 Azure Data Studio？
 
-Azure Data Studio 是新的開放原始碼、跨平台的桌面環境，適用於在 Windows、MacOS 和 Linux 上使用內部部署和雲端資料平台的 Azure 資料系列的資料專業人員。 Azure Data Studio 過去是以 SQL Operations Studio 的預覽名稱發行，它可提供新式編輯器體驗，其中包含快速的 IntelliSense、程式碼片段、原始檔控制整合及整合式終端。 它在工程設計時考慮到資料平台使用者，並內建了查詢結果集的圖表和可自訂的儀表板。
+Azure Data Studio 是新的開放原始碼、跨平台的桌面環境，適用於在 Windows、MacOS 和 Linux 上使用內部部署和雲端資料平台的 Azure 資料系列的資料專業人員。 Azure Data Studio 過去是以 SQL Operations Studio 的預覽名稱發行，它可提供新式編輯器體驗，其中包含快速的 IntelliSense、程式碼片段、原始檔控制整合及整合式終端。 在工程設計時，考量到資料平台使用者，並內建查詢結果集的圖表和可自訂的儀表板。
 
 研究顯示使用者在查詢編輯時所花費的時間量，比 SQL Server Management Studio 的任何其他工作更多。 基於這個理由，Azure Data Studio 的設計極端著重於最常使用的功能，並提供額外的體驗作為產品的選擇性延伸模組。 這可讓每個使用者將其環境自訂為最常使用的工作流程。
 
@@ -48,15 +48,15 @@ Azure Data Studio 提供一致的資料庫備份與還原體驗。 透過 SQL Se
 
 ## <a name="do-we-plan-to-open-source-ssms"></a>我們計劃開放原始碼 SSMS 嗎？
 
-資料分割 不過，下一代多 OS CLI 與 GUI 工具是開放原始碼。 例如，VS Code 的 mssql 延伸模組、mssql-scripter 和 msql-CLI 都是 GitHub 上的開放原始碼。 您可以在 GitHub 上取得 Azure Data Studio 的原始程式碼。  
+否。 不過，下一代多 OS CLI 與 GUI 工具是開放原始碼。 例如，VS Code 的 mssql 延伸模組、mssql-scripter 和 msql-CLI 都是 GitHub 上的開放原始碼。 您可以在 GitHub 上取得 Azure Data Studio 的原始程式碼。  
 
 ## <a name="now-that-there-is-azure-data-studio-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>現在有了 Azure Data Studio，Microsoft 打算淘汰 SSMS 和 SSDT 嗎？ 
 
-資料分割 除了新一代的多 OS 和多 DB CLI 與 GUI 工具以外，還會繼續進行對旗艦版 Windows 工具 (SSMS、SSDT、PowerShell) 的投資。 其目標是要讓客戶選擇使用為其案例選擇的平台上所需的工具。 Azure Data Studio 更密切著重在查詢編輯和資料開發方面的體驗，而研究顯示為 SQL Server Management Studio 中依程度列出的最常使用功能。 其他高價值的系統管理功能 (例如備份、還原、代理程式作業管理和伺服器分析) 也可提供作為 Azure Data Studio 中的延伸模組。 Azure Data Studio 也是跨平台產品，可讓使用者能夠在他們選擇的平台上工作。 不過，SQL Server Management Studio 仍然提供最廣泛的系統管理功能，而且仍然是平台管理工作的旗艦工具。 
+否。 除了新一代的多 OS 和多 DB CLI 與 GUI 工具以外，還會繼續進行對旗艦版 Windows 工具 (SSMS、SSDT、PowerShell) 的投資。 其目標是要讓客戶選擇使用為其案例選擇的平台上所需的工具。 Azure Data Studio 更密切著重在查詢編輯和資料開發方面的體驗，而研究顯示為 SQL Server Management Studio 中依程度列出的最常使用功能。 其他高價值的系統管理功能 (例如備份、還原、代理程式作業管理和伺服器分析) 也可提供作為 Azure Data Studio 中的延伸模組。 Azure Data Studio 也是跨平台產品，可讓使用者能夠在他們選擇的平台上工作。 不過，SQL Server Management Studio 仍然提供最廣泛的系統管理功能，而且仍然是平台管理工作的旗艦工具。 
 
 ## <a name="when-should-i-use-azure-data-studio-vs-sql-server-management-studio"></a>何時應該使用 Azure Data Studio 與 SQL Server Management Studio？
 
- 在下列情況下使用 Azure Data Studio：
+*在下列情況下使用 Azure Data Studio：*
 
 - 將大部分的時間花在編輯或執行查詢。
 - 需要能夠快速繪製和視覺化結果集。
@@ -65,7 +65,7 @@ Azure Data Studio 提供一致的資料庫備份與還原體驗。 透過 SQL Se
 - 不需要執行深層管理或平台相關設定。
 - 需要在 macOS 或 Linux 上執行。
 
- 在下列情況下使用 SQL Server Management Studio：
+*在下列情況下使用 SQL Server Management Studio：*
 
 - 將大部分的時間花在資料庫管理工作。
 - 正在執行複雜的系統管理或平台設定。
@@ -96,7 +96,7 @@ Azure Data Studio 提供一致的資料庫備份與還原體驗。 透過 SQL Se
 |深色模式|是||
 |Azure 資源總管|預覽||
 |產生指令碼精靈||是
-|滙入\匯出 DACPAC||是|
+|匯入\匯出 DACPAC||是|
 |物件屬性||是|
 |資料表設計工具||是|
 
@@ -132,7 +132,7 @@ Azure Data Studio 提供一致的資料庫備份與還原體驗。 透過 SQL Se
 |:---|:---|:---|
 |外部資料精靈|預覽||
 |HDFS 整合|預覽||
-|筆記型電腦|預覽||
+|Notebooks|預覽||
 
 ### <a name="database-administration"></a>資料庫管理
 
@@ -140,12 +140,12 @@ Azure Data Studio 提供一致的資料庫備份與還原體驗。 透過 SQL Se
 |:---|:---|:---|
 |備份 / 還原|是|是|
 |一般檔案匯入|預覽|是|
-|SQL 代理程式|預覽|是|
+|SQL Agent|預覽|是|
 |SQL Profiler|預覽|是|
-|Always On||是|
-|永遠加密||是|
+|永遠開啟||是|
+|Always Encrypted||是|
 |複製資料精靈||是|
-|資料調整建立程式||是|
+|資料調整建議程式||是|
 |資料庫圖表||是|
 |錯誤記錄檔檢視器||是|
 |維護計畫||是|
@@ -185,7 +185,7 @@ SQL PowerShell 目前可以在 PowerShell 資源庫上取得，而您可以在 W
 
 ## <a name="does-azure-data-studio-integrate-with-azure-sql-data-warehouse"></a>Azure Data Studio 是否與 Azure SQL 資料倉儲整合？
 
-是的。 Azure SQL 資料倉儲的 Azure Data Studio 支援目前處於預覽階段，可與 Azure SQL Database 受控執行個體和 SQL Server 2019 巨量資料搭配使用。
+是。 Azure SQL 資料倉儲的 Azure Data Studio 支援目前處於預覽階段，可與 Azure SQL Database 受控執行個體和 SQL Server 2019 巨量資料搭配使用。
 
 ## <a name="why-is-azure-data-studio-important-for-the-new-version-of-sql-server"></a>為什麼 Azure Data Studio 對 SQL Server 的新版本來說很重要？
 

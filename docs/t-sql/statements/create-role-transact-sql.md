@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b5a8e03235614ce9ae5b2461154c97a2bb5f67f1
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064621"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
@@ -54,7 +54,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  AUTHORIZATION *owner_name*  
  這是要擁有新角色的資料庫使用者或角色。 如果未指定任何使用者，該角色便由執行 CREATE ROLE 的使用者所擁有。 角色的擁有者，或是任何擁有角色的成員都可以新增或移除角色成員。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  角色是資料庫層級的安全性實體。 當您建立角色之後，請利用 GRANT、DENY 和 REVOKE，設定角色的資料庫層級權限。 若要在資料庫角色中新增成員，請使用 [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)。 如需詳細資訊，請參閱[資料庫層級角色](../../relational-databases/security/authentication-access/database-level-roles.md)。  
   
  您可以在 sys.database_role_members 和 sys.database_principals 目錄檢視中，看到資料庫角色。  

@@ -19,10 +19,10 @@ ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23cea7d670916db9dfd13fa37170967a3c19d11c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297122"
 ---
 # <a name="coding-a-custom-task"></a>撰寫自訂工作的程式碼
@@ -56,12 +56,12 @@ ms.locfileid: "71297122"
   
  在判斷要驗證的項目時，需要考量的另一個層面是效能。 例如，工作的輸入可能是透過低頻寬網路或高流量網路的連接。 如果您決定驗證該資源是否可用，驗證可能需要花費數秒的處理時間。 另一項驗證可能會造成需要大量地往返於伺服器之間，而且驗證常式可能會變慢。 雖然有許多屬性和設定都可加以驗證，但這不表示您該驗證所有項目。  
   
--   在執行工作之前，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 也會呼叫 **Validate** 方法中的程式碼，而且如果驗證失敗，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 會取消執行。  
+-   在執行工作之前，**也會呼叫**Validate<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 方法中的程式碼，而且如果驗證失敗，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 會取消執行。  
   
 #### <a name="user-interface-considerations-during-validation"></a>在驗證期間的使用者介面考量  
  <xref:Microsoft.SqlServer.Dts.Runtime.Task> 包含 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 介面以作為 **Validate** 方法的參數。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 介面包含工作向執行階段引擎引發事件所呼叫的方法。 當警告或是錯誤狀況在驗證期間發生時，會呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法。 這兩個警告方法都需要相同的參數，包含錯誤碼、來源元件、描述、說明檔以及說明內容資訊。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師使用此資訊在設計介面上顯示視覺提示。 設計師提供的視覺提示包括出現在設計師介面上工作旁邊的驚嘆號圖示。 此視覺提示提醒使用者工作需要其他組態，執行才可以繼續。  
   
- 驚嘆號圖示也會顯示包含錯誤訊息的工具提示。 工作會在事件的描述參數中提供錯誤訊息。 錯誤訊息也會顯示在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的 [工作清單]  窗格中，這個窗格為使用者提供檢視所有驗證錯誤的集中位置。  
+ 驚嘆號圖示也會顯示包含錯誤訊息的工具提示。 工作會在事件的描述參數中提供錯誤訊息。 錯誤訊息也會顯示在  **的 [工作清單]** [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 窗格中，這個窗格為使用者提供檢視所有驗證錯誤的集中位置。  
   
 #### <a name="validation-example"></a>驗證範例  
  下列程式碼範例示範如何使用 **UserName** 屬性的工作。 已指定此屬性為成功驗證所需。 如果未設定此屬性，工作會公佈錯誤，並從 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure> 列舉傳回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>。 **Validate** 方法會包裝在 Try/Catch 區塊中，而且驗證會在發生例外狀況時失敗。  
@@ -167,7 +167,7 @@ End Class
   
  下表列出 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法中提供給工作的參數。  
   
-|參數|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Connections>|包含可供工作使用的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件集合。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|包含工作可用的變數。 工作會透過 VariableDispenser 來使用變數，不會直接使用變數。 變數分配程式會鎖定和解除鎖定變數，並防止死結或是覆寫。|  
@@ -183,7 +183,7 @@ End Class
  <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 也提供 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 屬性，可用以提供有關執行結果的其他資訊。 例如，如果工作從資料表刪除資料列，作為其 **Execute** 方法的一部分，它可能會傳回刪除的資料列數，以作為 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 屬性的值。 此外，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 提供 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecValueVariable%2A> 屬性。 此屬性可讓使用者將從工作傳回的 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 對應至工作可看到的任何變數。 然後，指定的變數可以用來建立工作間的優先順序條件約束。  
   
 ### <a name="execution-example"></a>執行範例  
- 下列程式碼範例會示範 **Execute** 方法的實作，並顯示覆寫的 **ExecutionValue** 屬性。 工作會刪除工作的 **fileName** 屬性所指定的檔案。 如果檔案不存在，或者 **fileName** 屬性是空字串，則工作會張貼警告。 工作會傳回 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 屬性中的 **Boolean** 值，以指出是否已刪除檔案。  
+ 下列程式碼範例會示範 **Execute** 方法的實作，並顯示覆寫的 **ExecutionValue** 屬性。 工作會刪除工作的 **fileName** 屬性所指定的檔案。 如果檔案不存在，或者 **fileName** 屬性是空字串，則工作會張貼警告。 工作會傳回 **屬性中的**Boolean<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 值，以指出是否已刪除檔案。  
   
 ```csharp  
 using System;  

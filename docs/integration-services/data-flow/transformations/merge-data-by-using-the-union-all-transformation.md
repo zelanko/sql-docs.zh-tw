@@ -17,10 +17,10 @@ ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 42c556b3c348205833f4d080199c184dd30c8cf3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291249"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>使用聯集全部轉換來合併資料
@@ -42,7 +42,7 @@ ms.locfileid: "71291249"
   
 4.  按兩下 [聯集全部] 轉換。  
   
-5.  在 [聯集全部轉換編輯器]  中，藉由按一下資料列並選取輸入清單中的資料行，將輸入的資料行對應至 [輸出資料行名稱]  清單中的資料行。 選取輸入清單中的 [\<忽略>]  ，以略過資料行的對應。  
+5.  在 [聯集全部轉換編輯器]  中，藉由按一下資料列並選取輸入清單中的資料行，將輸入的資料行對應至 [輸出資料行名稱]  清單中的資料行。 選取輸入清單中的 [**忽略>]\<** ，以略過資料行的對應。  
   
     > [!NOTE]  
     >  兩個資料行之間的對應，會要求資料行的中繼資料相符。  
@@ -59,7 +59,7 @@ ms.locfileid: "71291249"
 9. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [聯集全部轉換](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路徑](../../../integration-services/data-flow/integration-services-paths.md)   
  [資料流程工作](../../../integration-services/control-flow/data-flow-task.md)  

@@ -15,13 +15,13 @@ ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c09e789738f8ca6633a56c36d626dd200ae70e78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137241"
 ---
-# <a name="mssqlserver17832"></a>MSSQLSERVER_17832
+# <a name="mssqlserver_17832"></a>MSSQLSERVER_17832
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -38,7 +38,7 @@ ms.locfileid: "68137241"
 ## <a name="explanation"></a>說明  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦無法處理用戶端登入封包。 這可能是因為封包的建立方式不正確，或者封包在傳輸期間已損毀。 此外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦的組態也可能會造成這個錯誤。 所列出的 IP 位址就是用戶端電腦的位址。  
   
-### <a name="more-information"></a>[詳細資訊]  
+### <a name="more-information"></a>相關資訊  
 在 Kerberos 環境中使用 Windows 驗證時，用戶端就會接收包含專用權屬性憑證 (PAC) 的 Kerberos Ticket。 此 PAC 包含各種類型的授權資料，包括使用者為所屬成員的群組、使用者擁有的權限，以及哪些原則會套用至使用者。 當此用戶端接收 Kerberos Ticket 時，PAC 中所包含的資訊就會用來產生使用者的存取 Token。 此用戶端會將 Token 呈現給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦，當做登入封包的一部分。  
   
 如果此 Token 的建立方式不正確或者在傳輸期間已損毀，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就無法提供有關問題的其他資訊。  

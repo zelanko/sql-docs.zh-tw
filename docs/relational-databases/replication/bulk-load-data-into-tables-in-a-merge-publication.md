@@ -17,10 +17,10 @@ ms.assetid: 16e6498a-b449-4051-aec4-ea814a2ad993
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f5b6deb043b12dc90a6543f7ef394046b00aaf5e
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710291"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication"></a>將資料大量載入合併式發行集中的資料表

@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: e6230ee4efebc4b1af873a61e9f2ebfc191df171
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943812"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>使用 SSIS 在 Linux 上擷取、轉換和載入資料
@@ -36,7 +36,7 @@ ms.locfileid: "67943812"
 若要在 Linux 電腦上執行 SSIS 套件，請執行下列動作：
 
 1.  將 SSIS 套件複製到 Linux 電腦。
-2.  執行下列命令：
+2.  執行以下命令：
     ```
     $ dtexec /F \<package name \> /DE <protection password>
     ```
@@ -71,7 +71,7 @@ ms.locfileid: "67943812"
 
 ## <a name="design-packages"></a>設計套件
 
-**連接到 ODBC 資料來源**。 透過 Linux CTP 2.1 Refresh 和更新版本上的 SSIS，SSIS 套件可以在 Linux 上使用 ODBC 連接。 此功能已經過 SQL Server 和 MySQL ODBC 驅動程式的測試，但也應該能夠與任何遵循 ODBC 規格的 Unicode ODBC 驅動程式搭配使用。 在設計階段，您可以提供 DSN 或連接字串來連接到 ODBC 資料；您也可以使用 Windows 驗證。 如需詳細資訊，請參閱[宣佈在 Linux 上提供 ODBC 支援的部落格文章](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)。
+**連接到 ODBC 資料來源**。 透過 Linux CTP 2.1 Refresh 和更新版本上的 SSIS，SSIS 套件可以在 Linux 上使用 ODBC 連接。 此功能已經過 SQL Server 和 MySQL ODBC 驅動程式的測試，但也應該能夠與任何遵循 ODBC 規格的 Unicode ODBC 驅動程式搭配使用。 在設計階段，您可以提供 DSN 或連接字串來連接到 ODBC 資料；您也可以使用 Windows 驗證。 如需詳細資訊，請參閱[宣佈在 Linux 上提供 ODBC 支援的部落格文章](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/) \(英文\)。
 
 **路徑**。 在 SSIS 套件中提供 Windows 樣式路徑。 Linux 上的 SSIS 不支援 Linux 樣式路徑，但會在執行階段將 Windows 樣式路徑對應至 Linux 樣式路徑。 例如，Linux 上的 SSIS 會將 Windows 樣式路徑 `C:\test` 對應至 Linux 樣式路徑 `/test`。
 

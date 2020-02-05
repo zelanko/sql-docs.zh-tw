@@ -25,10 +25,10 @@ ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 461750eee78c631adef9b012b971c9bab60bf29f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286890"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>引發並在自訂工作中定義事件
@@ -41,7 +41,7 @@ ms.locfileid: "71286890"
  另一組定義在 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面的事件，是由 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 代表工作而引發。 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 會引發在驗證和執行前後發生的事件，而工作會引發在執行和驗證期間發生的事件。  
   
 ## <a name="creating-custom-events"></a>建立自訂事件  
- 自訂工作開發人員可以透過在 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> 方法的覆寫實作中建立新的 <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A>，以定義新自訂事件。 在建立 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> 之後，會使用 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> 方法，將它新增至 **EventInfos** 集合。 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> 方法的方法簽章如下所示：  
+ 自訂工作開發人員可以透過在 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> 方法的覆寫實作中建立新的 <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A>，以定義新自訂事件。 在建立 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> 之後，會使用 **方法，將它新增至**EventInfos<xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> 集合。 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> 方法的方法簽章如下所示：  
   
  `public void Add(string eventName, string description, bool allowEventHandlers, string[] parameterNames, TypeCode[] parameterTypes, string[] parameterDescriptions);`  
   
@@ -121,7 +121,7 @@ Nothing,  bFireOnBeforeIncrement)
 ```  
   
 ## <a name="sample"></a>範例  
- 下列範例顯示的工作會在 **InitializeTask** 方法中定義自訂事件，將自訂事件新增至 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> 集合，然後透過呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A> 方法在其 **Execute** 方法期間引發自訂事件。  
+ 下列範例顯示的工作會在 **InitializeTask** 方法中定義自訂事件，將自訂事件新增至 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> 集合，然後透過呼叫 **方法在其**Execute<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A> 方法期間引發自訂事件。  
   
 ```csharp  
 [DtsTask(DisplayName = "CustomEventTask")]  

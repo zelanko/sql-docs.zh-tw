@@ -18,10 +18,10 @@ ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f7a525dedd8f5cbfbf881da63b7bb40f461bc802
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120926"
 ---
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves (geography 資料類型)
@@ -36,12 +36,12 @@ ms.locfileid: "68120926"
 .STNumCurves()  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回型別：**SqlGeography**  
+ CLR 傳回類型：**SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  一維空間資料類型包括 **LineString**、**CircularString** 及 **CompoundCurve**。 空的一維 **geography** 執行個體會傳回 0。  
   
  `STNumCurves`() 只在簡單類型上運作；它不能與 **geography**集合 (如 **MultiLineString**) 搭配使用。 當 **geography** 執行個體不是一維資料類型時，會傳回 **NULL**。  

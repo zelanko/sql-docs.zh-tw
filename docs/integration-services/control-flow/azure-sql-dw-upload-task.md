@@ -14,10 +14,10 @@ ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
 ms.openlocfilehash: 584bd3a22c24dfccf8fab562202d66ce8689b55b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947201"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上傳工作
@@ -39,14 +39,14 @@ ms.locfileid: "67947201"
 
 **SourceType** 指定來源資料存放區的類型。 選取下列其中一種類型：
 
-* **FileSystem：** 來源資料所在的本機檔案系統。
+* **檔案系統：** 來源資料所在的本機檔案系統。
 * **BlobStorage：** 來源資料所在的 Azure Blob 儲存體。
 
 以下是每個來源類型的屬性。
 
 ### <a name="filesystem"></a>FileSystem
 
-欄位|Description
+欄位|描述
 -----|-----------
 LocalDirectory|指定包含要上傳之資料檔案的本機目錄。
 Recursively|指定是否要以遞迴方式搜尋子目錄。
@@ -61,13 +61,13 @@ RetainFiles|指定是否要保留上傳到 Azure 儲存體的檔案。
 CompressionType|指定在將檔案上傳到 Azure 儲存體時要使用的壓縮格式。 本機來源不會受到影響。
 CompressionLevel|指定要用於壓縮格式的壓縮層級。
 AzureDwConnection|指定 Azure SQL DW 的 ADO.NET 連線管理員。
-TableName|指定目的資料表的名稱。 選擇現有的資料表名稱，或選擇 \<新增資料表...>  建立新的資料表。
+TableName|指定目的資料表的名稱。 選擇現有的資料表名稱，或選擇 **新增資料表...>\<** 建立新的資料表。
 TableDistribution|指定新資料表的發佈方法。 如果為 **TableName**指定了新的資料表名稱即適用。
 HashColumnName|指定用於雜湊表發佈的資料行。 如果為 **TableDistribution** 指定了 **HASH**即適用。
 
 ### <a name="blobstorage"></a>BlobStorage
 
-欄位|Description
+欄位|描述
 -----|-----------
 AzureStorageConnection|指定 Azure 儲存體連線管理員。
 BlobContainer|指定來源資料所在的 Blob 容器名稱。
@@ -76,7 +76,7 @@ RowDelimiter|指定標示各資料列結尾的字元。
 ColumnDelimiter|指定一或多個標示各資料行結尾的字元。 例如 &#124; (縱線字元)、\t (定位字元)、' (單引號)、" (雙引號) 和 0x5c (反斜線)。
 CompressionType|指定來源資料使用的壓縮格式。
 AzureDwConnection|指定 Azure SQL DW 的 ADO.NET 連線管理員。
-TableName|指定目的資料表的名稱。 選擇現有的資料表名稱，或選擇 \<新增資料表...>  建立新的資料表。
+TableName|指定目的資料表的名稱。 選擇現有的資料表名稱，或選擇 **新增資料表...>\<** 建立新的資料表。
 TableDistribution|指定新資料表的發佈方法。 如果為 **TableName**指定了新的資料表名稱即適用。
 HashColumnName|指定用於雜湊表發佈的資料行。 如果為 **TableDistribution** 指定了 **HASH**即適用。
 

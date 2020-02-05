@@ -18,10 +18,10 @@ ms.assetid: a7dd6083-c649-4ac3-885d-1234e0db62f1
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: fcaad3c2fb8337c64612d5ef5532bcbc4ed4b91d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100996"
 ---
 # <a name="starea-geometry-data-type"></a>STArea (geometry 資料類型)
@@ -36,13 +36,13 @@ ms.locfileid: "68100996"
 .STArea ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**float**  
   
- CLR 傳回型別：**SqlDouble**  
+ CLR 傳回類型：**SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
- 如果 **geometry** 執行個體只包含 0 維度和 1 維度的圖形，或它是空的，`STArea()` 會傳回 0。 如果 **geometry** 執行個體尚未初始化，`STArea()` 會傳回 **NULL**。  
+## <a name="remarks"></a>備註  
+ 如果 `STArea()`geometry **執行個體只包含 0 維度和 1 維度的圖形，或它是空的，** 會傳回 0。 如果 `STArea()`geometry **執行個體尚未初始化，** 會傳回 **NULL**。  
   
 ## <a name="examples"></a>範例  
   

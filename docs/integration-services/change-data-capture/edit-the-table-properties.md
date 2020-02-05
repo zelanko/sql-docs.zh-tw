@@ -13,10 +13,10 @@ ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae05c1015fe885c7488af0b0c9c7e340dc25d056
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294744"
 ---
 # <a name="edit-the-table-properties"></a>編輯資料表屬性
@@ -50,12 +50,12 @@ ms.locfileid: "71294744"
   
     -   **取代現有的**：此情況下會刪除目前的擷取執行個體，並由您建立的擷取執行個體取代。 如果已經為此資料表定義兩個擷取執行個體，您必須選取其中一個來替換。  
   
- **注意**：您可以從 [資料表]  索引標籤的資料表清單中移除擷取執行個體。  
+ **注意**：您可以從 **[資料表]** 索引標籤的資料表清單中移除擷取執行個體。  
   
  在此對話方塊中輸入資訊完畢後，請按一下 **[確定]** 接受變更。  
   
 ## <a name="see-also"></a>另請參閱  
  [如何編輯 CDC 執行個體屬性](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [變更為了擷取變更所選取的資料表](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
+ [針對為了擷取變更所選取的資料表進行變更](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
   

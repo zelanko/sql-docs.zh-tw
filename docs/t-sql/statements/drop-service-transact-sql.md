@@ -22,10 +22,10 @@ ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c23b3895afaae2e474898a617c2fbabee4df2abe
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73791305"
 ---
 # <a name="drop-service-transact-sql"></a>DROP SERVICE (Transact-SQL)
@@ -47,7 +47,7 @@ DROP SERVICE service_name
  *service_name*  
  要卸除的服務名稱。 您不可指定伺服器、資料庫和結構描述名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當有任何交談優先權參考服務時，您將無法卸除此服務。  
   
  卸除服務會從服務使用的佇列中，刪除此服務的所有訊息。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將錯誤傳送到使用此服務之任何開啟交談的遠端。  

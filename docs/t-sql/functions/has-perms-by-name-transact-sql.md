@@ -23,10 +23,10 @@ ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1420c5f8a1a16dc7430af0b445a8464c16d1b763
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982945"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
@@ -51,7 +51,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  *securable_class*  
  這是用來測試權限之安全性實體的類別名稱。 *securable_class* 為 **nvarchar(60)** 類型的純量運算式。  
   
- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，securable_class 引數必須設定為下列其中一項：**DATABASE**、**OBJECT**、**ROLE**、**SCHEMA** 或 **USER**。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，securable_class 引數必須設為下列其中一項：**DATABASE**、**OBJECT**、**ROLE**、**SCHEMA** 或 **USER**。  
   
  *permission*  
  類型為 **sysname**，不可為 Null 的純量運算式，表示要檢查的權限名稱。 沒有預設值。 權限名稱 ANY 是萬用字元。  
@@ -67,12 +67,12 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
   
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，只有當 securable_class 引數設定為 **OBJECT** 時，sub-securable_class 才有效。 如果 securable_class 引數設定為 **OBJECT**，sub-securable_class 引數必須設定為 **COLUMN**。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
  如果查詢失敗，則傳回 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個內建函數會測試目前主體對於指定的安全性實體是否有特定有效權限。 當使用者對於安全性實體具有有效權限時，HAS_PERMS_BY_NAME 會傳回 1；當使用者對於安全性實體沒有任何有效權限，則傳回 0；當安全性實體類別或權限無效時，則傳回 NULL。 有效權限為下列任何一項：  
   
 -   直接授與主體的權限，且不被拒絕。  
@@ -97,7 +97,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 -   目前資料庫定序：包含結構描述未包含之安全性實體的資料庫層級安全性實體；一或兩部分結構描述範圍的安全性實體；使用三部分名稱時的目標資料庫。  
   
--   Master 資料庫定序：伺服器層級安全性實體。  
+-   master 資料庫定序：伺服器層級安全性實體。  
   
 -   資料行層級檢查不支援 'ANY'。 您必須指定適當的權限。  
   

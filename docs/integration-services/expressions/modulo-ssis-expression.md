@@ -15,10 +15,10 @@ ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c6b663a99e8e0e5dd7d9d91a81fe39fecef6802b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288802"
 ---
 # <a name="modulo-ssis-expression"></a>(模數) (SSIS 運算式)
@@ -46,7 +46,7 @@ dividend % divisor
 ## <a name="result-types"></a>結果類型  
  由兩個引數的資料類型決定。 如需相關資訊，請參閱 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這兩個運算式都須評估為帶正負號或不帶正負號的整數資料類型。  
   
  如果任一個運算元為 Null，則結果為 Null。  

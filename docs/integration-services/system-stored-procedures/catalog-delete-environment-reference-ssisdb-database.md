@@ -11,10 +11,10 @@ ms.assetid: 1f68f157-c4e9-412c-92b3-53a2faaba29b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 69a0a462f4c265e6992f27286377f7bcaa3b2dad
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281152"
 ---
 # <a name="catalogdelete_environment_reference-ssisdb-database"></a>catalog.delete_environment_reference (SSISDB 資料庫)

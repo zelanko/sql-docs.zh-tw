@@ -18,10 +18,10 @@ ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 81808f6387942bd3ba8aa01f4eeaa5bd93b2dcba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066408"
 ---
 # <a name="stpointn-geometry-data-type"></a>STPointN (geometry 資料類型)
@@ -40,14 +40,14 @@ ms.locfileid: "68066408"
  *expression*  
  這是 1 與 **geometry** 執行個體中點數之間的 **int** 運算式。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回型別：**SqlGeometry**  
+ CLR 傳回類型：**SqlGeometry**  
   
- 開放式地理空間協會 (OGC) 類型：**點**  
+ 開放地理空間協會 (OGC) 類型：**Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 **geometry** 執行個體是使用者所建立的，`STPointN()` 會傳回 *expression* 所指定的點，其方式是依據原先輸入點的順序來排序這些點。  
   
  如果 **geometry** 執行個體是系統所建構的，`STPointN()` 會傳回 *expression* 所指定的點，其方式是依據將輸出這些點的順序來排序所有點：先依據幾何，再依據幾何內的環形 (如果適用)，然後再依據環形內的點。 這個順序具決定性。  

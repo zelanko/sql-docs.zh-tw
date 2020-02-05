@@ -20,10 +20,10 @@ ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7d2da79cc46ac546099e492af3b6d5f4f726a2a2
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75320475"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>從備份初始化交易式訂閱
@@ -36,12 +36,12 @@ ms.locfileid: "75320475"
   
     -   如果此值是 **1**，表示發行集支援此功能。  
   
-    -   如果這個值是 **0**，請在發行集資料庫的發行者端執行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 針對 `@property` 指定 **allow_initialize_from_backup** 的值，並針對 `@value` 指定 **true** 的值。  
+    -   如果這個值是 **0**，請在發行集資料庫的發行者端執行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 針對 **指定**allow_initialize_from_backup`@property` 的值，並針對 **指定**true`@value` 的值。  
   
 2.  如果是新的發行集，請在發行集資料庫的發行者端執行 [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 針對 **allow_initialize_from_backup** 指定 **true**的值。 如需詳細資訊，請參閱[建立發行集](../../relational-databases/replication/publish/create-a-publication.md)。  
   
     > [!WARNING]  
-    >  為了避免遺漏訂閱者資料，當您搭配 `@allow_initialize_from_backup = N'true'` 使用 **sp_addpublication** 或 **sp_changepublication** 時，請一律使用 `@immediate_sync = N'true'`。  
+    >  為了避免遺漏訂閱者資料，當您搭配 **使用**sp_addpublication**或**sp_changepublication`@allow_initialize_from_backup = N'true'` 時，請一律使用 `@immediate_sync = N'true'`。  
   
 3.  使用 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md) 陳述式建立發行集資料庫的備份。  
   

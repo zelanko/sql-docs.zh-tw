@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3bfdfb5c3579b43ada97c9ef72b72dbaf3d29308
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982941"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
@@ -53,7 +53,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 > [!NOTE]  
 >  除非另有說明，否則當 *property* 不是有效屬性的名稱、*object_ID* 不是有效的物件識別碼、*object_ID* 不是指定屬性所支援的物件類型，或呼叫者沒有檢視物件中繼資料的權限時，便會傳回 NULL。  
   
-|屬性|Description|ReplTest1|  
+|屬性|描述|值|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|索引的深度。|索引層級的數目。<br /><br /> NULL = XML 索引或輸入無效。|  
 |**IndexFillFactor**|當建立索引或上次重建索引時，所用的填滿因數值。|填滿因數|  
@@ -69,9 +69,9 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsStatistics**|*index_or_statistics_name* 為 CREATE STATISTICS 陳述式或 ALTER DATABASE 之 AUTO_CREATE_STATISTICS 選項建立的統計資料。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
 |**IsUnique**|索引是唯一的。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
 |**IsColumnstore**|索引是 xVelocity 記憶體最佳化的資料行存放區索引。|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 1 = True<br /><br /> 0 = False| 
-|**IsOptimizedForSequentialKey**|索引已啟用最後一頁插入的最佳化。|**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和更新版本。 <br><br>1 = True<br><br>0 = False| 
+|**IsOptimizedForSequentialKey**|索引已啟用最後一頁插入的最佳化。|**適用對象**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更新版本。 <br><br>1 = True<br><br>0 = False| 
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
 ## <a name="exceptions"></a>例外狀況  
@@ -80,7 +80,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示發出中繼資料的內建函數 (例如，INDEXPROPERTY) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Employee` 資料表 `PK_Employee_BusinessEntityID` 索引的 **IsClustered**、**IndexDepth** 和 **IndexFillFactor** 屬性的值。  
+ 下列範例會傳回 **資料庫中** 資料表 **索引的**IsClustered **、** IndexDepth`PK_Employee_BusinessEntityID` 和 `Employee`IndexFillFactor[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 屬性的值。  
   
 ```  
 SELECT   

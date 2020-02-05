@@ -19,10 +19,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 872f5207f673c5047475220b1da01a41678c1c6d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056143"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>設定及管理全文檢索搜尋的停用字詞與停用字詞表
@@ -97,7 +97,7 @@ ms.locfileid: "74056143"
   
 5.  在 [[全文檢索停用字詞表屬性]](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) 對話方塊中：  
   
-    1.  在 [動作]  清單方塊中，選取下列其中一個動作：[新停用字詞]  、[刪除停用字詞]  、[刪除所有停用字詞]  或 [清除停用字詞表]  。  
+    1.  在 **[動作]** 清單方塊中，選取下列其中一個動作： **[加入停用字詞]** 、 **[刪除停用字詞]** 、 **[刪除所有停用字詞]** 或 **[清除停用字詞表]** 。  
   
     2.  如果已針對選定動作啟用 **[停用字詞]** 文字方塊，請輸入單一停用字詞。 這個停用字詞必須是唯一的，亦即，尚未存在您所選取之語言的這個停用字詞表中。  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 02bd8c4d017d391755eb9d61ef7685883a5ade51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115897"
 ---
 # <a name="objects-event-category"></a>Objects 事件類別目錄
@@ -27,7 +27,7 @@ ms.locfileid: "68115897"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[Auto Stats 事件類別](../../relational-databases/event-classes/auto-stats-event-class.md)|指出已自動更新索引和資料行統計資料。|  
 |[Object:Altered 事件類別](../../relational-databases/event-classes/object-altered-event-class.md)|指出已改變物件；例如透過 ALTER DATABASE 陳述式或 ALTER TABLE 陳述式。|  

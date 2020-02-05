@@ -14,10 +14,10 @@ ms.assetid: 4f8557a8-345f-4622-a8a5-763a0388ad94
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: c1dad11470d76b0759c7c0b1d4f26c84bfb67a45
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093577"
 ---
 # <a name="sql-server-execstatistics-object"></a>SQL Server 的 ExecStatistics 物件
@@ -26,7 +26,7 @@ ms.locfileid: "68093577"
   
  下表描述 SQL Server **Exec Statistics** 計數器。  
   
-|SQL Server Exec Statistics 計數器|Description|  
+|SQL Server Exec Statistics 計數器|描述|  
 |-----------------------------------------|-----------------|  
 |**Distributed Query**|執行分散式查詢的相關統計資料。|  
 |**DTC calls**|執行 DTC 呼叫的相關統計資料。|  
@@ -35,7 +35,7 @@ ms.locfileid: "68093577"
   
  物件中的每個計數器均包含下列執行個體：  
   
-|項目|Description|  
+|Item|描述|  
 |----------|-----------------|  
 |**平均執行時間 (ms)**|選取的執行類型之平均執行時間。|  
 |**每秒累計執行時間 (ms)**|選取的執行類型之每秒彙總執行時間。|  

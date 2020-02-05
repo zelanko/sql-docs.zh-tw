@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e2f8c5534e58299f17f89543668404e7ea8507bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071290"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
@@ -98,7 +98,7 @@ ALTER MASTER KEY <alter_option>
 
 PASSWORD ='*password*' 指定用於加密或解密資料庫主要金鑰的密碼。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 REGENERATE 選項會重新建立資料庫主要金鑰和它保護的所有金鑰。 會先利用舊的主要金鑰解密這些金鑰，然後利用新的主要金鑰加密它們。 除非已危害到主要金鑰，否則，這項需要大量資源的作業應該安排在低需求時進行。
 

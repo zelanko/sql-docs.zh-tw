@@ -14,10 +14,10 @@ ms.assetid: 29d01bd9-8b38-43b1-b937-67f8aea57c0f
 author: Lingxi-Li
 ms.author: lingxl
 ms.openlocfilehash: c57abdf2cd6fbdf5cbb0953f1604440d714e1e7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67968263"
 ---
 # <a name="azure-hdinsight-connection-manager"></a>Azure HDInsight 連線管理員

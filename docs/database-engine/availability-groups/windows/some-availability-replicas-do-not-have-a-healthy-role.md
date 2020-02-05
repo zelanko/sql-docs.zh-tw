@@ -14,10 +14,10 @@ ms.assetid: 7ec5b337-7201-4a66-a541-7560f8b18784
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce157b3d188f7841df4f7dc626928029219c3088
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014070"
 ---
 # <a name="some-availability-replicas-do-not-have-a-healthy-role"></a>某些可用性複本沒有狀況良好的角色
@@ -32,7 +32,7 @@ ms.locfileid: "68014070"
 |**類別目錄**|**警告**|  
 |**Facet**|可用性群組|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  這項原則會積存所有可用性複本的連接狀態，並檢查是否有任何可用性複本沒有狀況良好的角色。 當可用性複本既不是主要也不是次要時，原則為狀況不良。 否則原則為狀況良好。  
   
 > [!NOTE]  

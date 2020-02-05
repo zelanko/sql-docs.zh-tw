@@ -18,10 +18,10 @@ ms.assetid: 4947797f-edb8-490f-beca-37df9ec06954
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 896a328f0f11570034b71f57e912ec3f460d73e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066456"
 ---
 # <a name="envelopeaggregate-geography-data-type"></a>EnvelopeAggregate (geography 資料類型)
@@ -40,10 +40,10 @@ EnvelopeAggregate ( geography_operand )
  *geography_operand*  
  這是 **geography** 類型資料表資料行，可保存要執行封套彙總作業的一組 **geography** 物件。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果產生的週框物件大於半球，則會傳回 **FullGlobe** 物件。 這個方法並不精確。  
   
  如果輸入具有不同的 SRID，方法會傳回 **null**。 請參閱[空間參考識別碼 &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。  
@@ -54,7 +54,7 @@ EnvelopeAggregate ( geography_operand )
 >  如果所有輸入的值都為 **null**，此方法就會傳回 **null**。  
   
 ## <a name="examples"></a>範例  
- 下列範例會在城市內的一組 **geography** 位置點上執行 `EnvelopeAggregate`。  
+ 下列範例會在城市內的一組 `EnvelopeAggregate`geography**位置點上執行**。  
   
  ```
  USE AdventureWorks2012  

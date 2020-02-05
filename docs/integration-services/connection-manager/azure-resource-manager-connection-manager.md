@@ -14,10 +14,10 @@ ms.assetid: 8ce8024f-153f-4066-b607-0d36fefc79ed
 author: Lingxi-Li
 ms.author: lingxl
 ms.openlocfilehash: cb8482fe4acee529da7462f5eb9400f2738439d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67968147"
 ---
 # <a name="azure-resource-manager-connection-manager"></a>Azure Resource Manager 連線管理員

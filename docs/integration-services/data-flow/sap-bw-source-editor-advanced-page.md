@@ -13,10 +13,10 @@ ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a8eaed6e70ad457f33dc9587e3004e433da43ae1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298083"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>SAP BW 來源編輯器 (進階頁面)
@@ -38,7 +38,7 @@ ms.locfileid: "71298083"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 來源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程]  索引標籤中，按兩下 SAP BW 來源。  
+2.  在 [資料流程]  索引標籤上，按兩下 SAP BW 來源。  
   
 3.  在 **[SAP BW 來源編輯器]** 中，按一下 **[進階]** 開啟編輯器的 **[進階]** 頁面。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71298083"
  **字串轉換**  
  指定要針對字串轉換套用的規則。  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
 |**自動字串轉換**|當 SAP Netweaver BW 系統是 Unicode 系統時，將所有字串轉換為 **nvarchar** 。 否則，將所有字串轉換為 **varchar**。|  
 |**將字串轉換為 varchar**|將所有字串轉換為 **varchar**。|  

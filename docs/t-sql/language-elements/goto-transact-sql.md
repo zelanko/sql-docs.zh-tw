@@ -22,10 +22,10 @@ ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9964745ede5eb49dd56fbcf2a8d75aee3633fc3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075198"
 ---
 # <a name="goto-transact-sql"></a>GOTO (Transact-SQL)
@@ -49,7 +49,7 @@ GOTO label
  *label*  
  這是 GOTO 的目標標籤，處理程序在這個點之後開始。 標籤必須遵照[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 標籤可用來作為是使用 GOTO 的註解化方法。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  GOTO 可以在條件式流程控制陳述式、陳述式區塊或程序內，但它不能移至批次之外的標籤。 GOTO 分支可以移至定義在 GOTO 之前或之後的標籤。  
   
 ## <a name="permissions"></a>權限  

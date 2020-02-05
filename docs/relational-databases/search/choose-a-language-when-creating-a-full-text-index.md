@@ -20,10 +20,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 05a5e9c01e46a83e0ba6a2bc206fd6f10328e9c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093383"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>選擇建立全文檢索索引時的語言
@@ -50,7 +50,7 @@ ms.locfileid: "68093383"
   
      經測試顯示，新的斷詞工具在高度壓力的查詢環境中仍然保持健全狀態。  
   
--   Security  
+-   安全性  
   
      新的斷詞工具預設會在 SQL Server 中啟用，這點受惠於語言元件的安全性改善。 我們強烈建議您應該簽署外部元件 (例如，斷詞工具和篩選)，以便改善 SQL Server 的整體安全性和健全性。 您可以設定全文檢索來確認這些元件是否已簽署，方法如下所示：  
   

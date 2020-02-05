@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23782f796bae3dee795fbafacd2d0d4436337f38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040420"
 ---
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
@@ -45,7 +45,7 @@ ABS ( numeric_expression )
 *numeric_expression*  
 精確數值或近似數值資料型別類別目錄的運算式。
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 傳回與 *numeric_expression*相同的類型。
   
 ## <a name="examples"></a>範例  

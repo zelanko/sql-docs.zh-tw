@@ -24,10 +24,10 @@ ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8fd770d8f1af098d4328df12a11cdcff609f2328
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71974396"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
@@ -82,7 +82,7 @@ FETCH
  INTO \@*variable_name*[ ,...*n*]  
  可讓提取的資料行資料放在本機變數中。 清單中的各個變數會由左至右，依次與資料指標結果集中對應的資料行相關。 每個變數的資料類型都必須符合對應結果集資料行的資料類型，或必須是支援的對應結果集資料行的資料類型之隱含轉換。 變數的數目必須符合資料指標選取清單中的資料行數目。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 `SCROLL` 選項不是指定為 ISO 樣式的 `DECLARE CURSOR` 陳述式，則 `NEXT` 是唯一支援的 `FETCH` 選項。 如果 `SCROLL` 是指定為 ISO 樣式 `DECLARE CURSOR`，則所有 `FETCH` 都受支援。  
   
  當使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] DECLARE 資料指標延伸模組時，適用下列規則：  
@@ -91,7 +91,7 @@ FETCH
   
 -   如果未指定 `DYNAMIC`、`FORWARD_ONLY` 或 `FAST_FORWARD`，且指定了 `KEYSET`、`STATIC` 或 `SCROLL` 其中之一，則所有 `FETCH` 都受支援。  
   
--   `DYNAMIC SCROLL` 資料指標支援除了 `ABSOLUTE` 外的所有 `FETCH` 選項。  
+-   `DYNAMIC SCROLL` 資料指標支援除了 `FETCH` 外的所有 `ABSOLUTE` 選項。  
   
  `@@FETCH_STATUS` 函數會報告最後一個 `FETCH` 陳述式的狀態。 相同的資訊記錄在 sp_describe_cursor 傳回之資料指標的 fetch_status 資料行中。 試圖在 `FETCH` 陳述式傳回的資料上執行任何作業之前，您應該先利用這個狀態資訊來判斷該資料是否有效。 如需詳細資訊，請參閱 [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)。  
   

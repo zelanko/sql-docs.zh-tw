@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 1394414db170826fa96ca51a5d35ff8dea199310
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68212231"
----
 本文提供 SQL Server 中有關業務持續性解決方案之高可用性和災害復原的概觀。 
 
 大眾部署 SQL Server 時都必須考量的一項工作，是確定所有任務關鍵性 SQL Server 執行個體及其內部資料庫，在企業和使用者需要它們時都能夠使用，無論是上班時間或全天候。 目標是維持企業運轉不中斷或將影響降至最低。 這個概念就是所謂的企業持續營運。
@@ -75,7 +67,7 @@ WSFC 和 Pacemaker 同大於異。 它們都提供一種方式，採用個別伺
 因為叢集堆疊的差異，所以可用性群組需要進行某些變更，因為 SQL Server 必須處理一些經過 WSFC 原生處理的中繼資料。 最 [!IMPORTANT] 的變更是引進可用性群組的叢集類型。 這儲存在 cluster_type 和 cluster_type_desc 資料行中的 sys.availability_groups。 有三種叢集類型：
 
 * WSFC 
-* External
+* 外部
 * None
 
 所有需要可用性的可用性群組都必須使用基礎叢集，這在 SQL Server 2017 即為 WSFC 或 Pacemaker。 使用基礎 WSFC 的 Windows Server 可用性群組，其預設叢集類型是 WSFC，而且不需要設定。 至於 Linux 可用性群組，在建立可用性群組時，叢集類型必須設定為外部。 整合 Pacemaker 是在建立可用性群組之後設定，而在 WSFC 是於建立階段完成。
@@ -91,11 +83,11 @@ None 叢集類型可以搭配 Windows Server 和 Linux 可用性群組。 將叢
 
 ![SSMS AG 選項](media/sql-server-ha-story/image2.png)
  
-##### <a name="requiredsynchronizedsecondariestocommit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
+##### <a name="required_synchronized_secondaries_to_commit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
 
 SQL Server 2016 對 Enterprise Edition 的同步複本數目支援，從二個增加到三個。 不過，如果一個次要複本已同步處理，但另一個卻發生問題，沒有辦法控制行為以通知主要複本去等候行為異常的複本或允許它繼續。 這表示在某些時候，主要複本會繼續接收寫入流量，即使次要複本不在同步處理的狀態，這表示次要複本上有資料遺失。
 SQL Server 2017 現在有選項能夠控制當名為 REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT 的同步複本出現時的行為。 選項的運作方式如下：
-* 有三個可能的值：0、1 與 2
+* 有三個可能的值：0、1 和 2。
 * 值是必須同步的次要複本數目，對資料遺失、可用性群組的可用性和容錯移轉都有影響。
 * WSFC 和 None 叢集類型的預設值為 0，可以手動設定為 1 或 2。
 * 根據預設，外部叢集類型的叢集機制會設定它，且可手動覆寫。 三個同步複本的預設值都會是 1。

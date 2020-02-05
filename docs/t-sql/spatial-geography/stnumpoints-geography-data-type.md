@@ -18,10 +18,10 @@ ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 320118e7844dfe40e45be9a893ad7bf45faff8bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120895"
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (geography 資料類型)
@@ -36,12 +36,12 @@ ms.locfileid: "68120895"
 .STNumPoints ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
- CLR 傳回型別：**SqlInt32**  
+ CLR 傳回類型：**SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此方法會算入 **geography** 執行個體描述中的點。 重複的點都會被算入；但是，區段之間的連接點只計算一次。 如果此執行個體為集合，這個方法會傳回集合內的總點數。  
   
 ## <a name="examples"></a>範例  

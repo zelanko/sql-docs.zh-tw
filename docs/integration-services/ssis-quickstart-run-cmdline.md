@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 964fdf4d4abb58d7baf27ee9e2f8b6900a7d0bbb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295715"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>從命令提示字元使用 DTExec.exe 執行 SSIS 套件
@@ -43,7 +43,7 @@ ms.locfileid: "71295715"
 
 使用下例中所用的參數值，程式會執行位在指定的 SSIS 伺服器資料夾路徑中的套件，此伺服器就是裝載 SSIS 目錄資料庫 (SSISDB) 的伺服器。 `/Server` 參數會提供伺服器名稱。 程式會以目前具有 Windows 整合式驗證的使用者身分連線。 若要使用 SQL 驗證，請指定有適當值的 `/User` 和 `Password` 參數。
 
-1. 開啟 [命令提示字元] 視窗。
+1. 開啟命令提示字元視窗。
 
 2. 執行 `DTExec.exe` 並至少提供 `ISServer` 和 `Server` 參數的值，如下列範例所示：
 

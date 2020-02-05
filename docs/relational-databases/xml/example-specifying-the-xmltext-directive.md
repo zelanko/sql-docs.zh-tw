@@ -1,5 +1,5 @@
 ---
-title: 範例指定 XMLTEXT 指示詞 | Microsoft Docs
+title: 範例：指定 XMLTEXT 指示詞 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006682"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>範例指定 XMLTEXT 指示詞
+# <a name="example-specifying-the-xmltext-directive"></a>範例：指定 XMLTEXT 指示詞
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   此範例說明如何在使用 EXPLICIT 模式的 **陳述式中，使用** XMLTEXT `SELECT` 指示詞將溢位資料行中的資料定址。  
   
@@ -49,9 +49,9 @@ FOR XML EXPLICIT;
   
  在產生的 XML 文件中：  
   
--   因為 `Overflow` 資料行未指定 *AttributeName*，但指定 `xmltext` 指示詞，所以 <`overflow`> 元素中的屬性會附加到封閉式 <`Parent`> 元素的屬性清單。  
+-   因為 *資料行未指定*AttributeName`Overflow`，但指定 `xmltext` 指示詞，所以 <`overflow`> 元素中的屬性會附加到封閉式 <`Parent`> 元素的屬性清單。  
   
--   因為 <`xmltext`> 元素中的 `PersonID` 屬性與在相同元素層級上擷取的 `PersonID` 屬性衝突，所以即使 `PersonID` 為 NULL，還是會忽略 <`xmltext`> 元素中的屬性。 一般而言，屬性會覆寫溢位中相同名稱的屬性。  
+-   因為 <`PersonID`> 元素中的 `xmltext` 屬性與在相同元素層級上擷取的 `PersonID` 屬性衝突，所以即使 `xmltext` 為 NULL，還是會忽略 <`PersonID`> 元素中的屬性。 一般而言，屬性會覆寫溢位中相同名稱的屬性。  
   
  以下是結果：  
   
@@ -97,7 +97,7 @@ FOR XML EXPLICIT;
  </Parent>
  ```  
   
- 如果以 `xmltext` 指示詞指定 *AttributeName*，則 <`overflow`> 元素的屬性將會新增為封閉式 <`Parent`> 元素的子元素屬性。 為 *AttributeName* 所指定的名稱將成為子元素的名稱。  
+ 如果以 *指示詞指定*AttributeName`xmltext`，則 <`overflow`> 元素的屬性將會新增為封閉式 <`Parent`> 元素的子元素屬性。 為 *AttributeName* 所指定的名稱將成為子元素的名稱。  
   
  在此查詢中，*AttributeName* (<`overflow`>) 會與 `xmltext` 指示詞一起指定：   
   
@@ -127,7 +127,7 @@ FOR XML EXPLICIT
  </Parent>
  ```  
   
- 在此查詢元素中，`PersonName` 屬性指定為 *directive*。 `PersonName` 的這個結果將會新增為封閉式 <`Parent`> 元素的子元素。 <`xmltext`> 的屬性仍然會附加到封閉式 <`Parent`> 元素。 <`overflow`> 元素的內容 (子元素) 將會附加到封閉式 <`Parent`> 元素的其他子元素前面。  
+ 在此查詢元素中， *屬性指定為* directive `PersonName` 。 `PersonName` 的這個結果將會新增為封閉式 <`Parent`> 元素的子元素。 <`xmltext`> 的屬性仍然會附加到封閉式 <`Parent`> 元素。 <`overflow`> 元素的內容 (子元素) 將會附加到封閉式 <`Parent`> 元素的其他子元素前面。  
   
 ```  
 SELECT 1      AS Tag, NULL as parent,  

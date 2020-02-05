@@ -14,10 +14,10 @@ ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b226f3886deee5f405bf2726e5a0f51b68fbac4d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294294"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Azure HDInsight Hive 工作
@@ -25,7 +25,7 @@ ms.locfileid: "71294294"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-使用 **Azure HDInsight Hive 工作**，在 Azure HDInsight 叢集上執行 Hive 指令碼。
+使用 **Azure HDInsight Hive 工作** ，在 Azure HDInsight 叢集上執行 Hive 指令碼。
      
 若要新增 **Azure HDInsight Hive 工作**，請將其拖放至 SSIS 設計師，並按兩下或在其上按一下滑鼠右鍵，然後按一下 [編輯]  ，即可看到以下 [Azure HDInsight Hive Task Editor (Azure HDInsight Hive 工作編輯器)]  對話方塊。  
   
@@ -43,8 +43,8 @@ ms.locfileid: "71294294"
   
 5.  有兩個方法可以指定要執行的 Hive 指令碼：
   
-    1.  **內嵌指令碼**：透過在 [輸入指令碼]  對話方塊中輸入要執行的內嵌指令碼，來指定 [指令碼]  欄位。
+    1.  **內嵌指令碼**：透過在 [輸入指令碼]  對話方塊中鍵入要執行的內嵌指令碼，來指定 [指令碼]  欄位。
   
-    2.  **指令檔**：將指令檔上傳至 Azure Blob 儲存體，並指定 **BlobName** 欄位。 如果 blob 不在與 HDInsight 叢集相關聯的預設儲存體帳戶或容器中，則必須指定 [ExternalStorageAccountName]  和 [ExternalBlobContainer]  欄位。 若是外部 blob，請確定它已設定為可公開存取。  
+    2.  **指令檔**：將指令檔上傳至 Azure Blob 儲存體，並指定 [BlobName]  欄位。 如果 blob 不在與 HDInsight 叢集相關聯的預設儲存體帳戶或容器中，則必須指定 [ExternalStorageAccountName]  和 [ExternalBlobContainer]  欄位。 若是外部 blob，請確定它已設定為可公開存取。  
   
      如果指定兩者，則會使用指令檔並忽略內嵌指令碼。

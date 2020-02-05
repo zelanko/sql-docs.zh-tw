@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4a6fd6dd25d19e153b4a2623ceaaeaec558a1aad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68064748"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
@@ -58,7 +58,7 @@ CHECKSUM ( * | expression [ ,...n ] )
 ## <a name="return-types"></a>傳回類型
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `CHECKSUM` 會針對它的引數清單來計算稱為總和檢查碼的雜湊值。 使用此雜湊值來建置雜湊索引。 如果 `CHECKSUM` 函數具有資料行引數，而且會針對計算得來的 `CHECKSUM` 值建置索引，則將會產生雜湊索引。 這可用來進行資料行的相等搜尋。
   
 `CHECKSUM` 函式滿足雜湊函式屬性：如果兩份清單的對應項目具有相同的資料類型，而且這些對應的項目在使用等於 (=) 運算子比較時相等，則套用至任兩份運算式清單的 `CHECKSUM` 會傳回相同的值。 針對 `CHECKSUM` 函式目的，定義所指定類型的 Null 值以比較為相等。 如果運算式清單中至少有一個值變更，則清單總和檢查碼可能會變更。 不過，不保證一定會如此。 因此，若要偵測值是否已變更，建議只有在您的應用程式可以容忍偶而遺失的變更時才使用 `CHECKSUM`。 否則，請考慮改用 `HASHBYTES`。 使用指定的 MD5 雜湊演算法，`HASHBYTES` 將為兩個不同的輸入傳回相同結果的可能性比 `CHECKSUM` 要低很多。

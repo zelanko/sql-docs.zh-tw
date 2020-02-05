@@ -14,10 +14,10 @@ ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fd1505bbbfc03308cbdbf6a5fc9fba122c4da24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995263"
 ---
 # <a name="retrieve-and-query-xml-data"></a>擷取及查詢 XML 資料
@@ -92,13 +92,13 @@ GO
   
 |SET 選項|必要值|  
 |-----------------|---------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNINGS|ON|  
-|ARITHABORT|ON|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
+|ANSI_NULLS|開啟|  
+|ANSI_PADDING|開啟|  
+|ANSI_WARNINGS|開啟|  
+|ARITHABORT|開啟|  
+|CONCAT_NULL_YIELDS_NULL|開啟|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|QUOTED_IDENTIFIER|開啟|  
   
  如果未將這些選項設為如上表所示，對於 **xml** 資料類型方法的查詢及修改都會失敗。  
   

@@ -15,10 +15,10 @@ ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 183761474b6841e092f1bc40da4ee2473e13bab6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297363"
 ---
 # <a name="string-padding-ssis"></a>字串填補 (SSIS)

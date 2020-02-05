@@ -26,10 +26,10 @@ ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7075de83b3f2d13d80d0eb08db1d780827eddeec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039077"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
@@ -64,7 +64,7 @@ DBCC OPENTRAN
  NO_INFOMSGS  
  隱藏所有參考訊息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 請利用 DBCC OPENTRAN 來判斷開啟的交易是否在交易記錄內。 當您使用 BACKUP LOG 陳述式時，只能截斷記錄非使用中的部分。開啟的交易可以防止記錄徹底截斷。 若要識別開啟的交易，請利用 sp_who 來取得系統處理序識別碼。
   
 ## <a name="result-sets"></a>結果集  

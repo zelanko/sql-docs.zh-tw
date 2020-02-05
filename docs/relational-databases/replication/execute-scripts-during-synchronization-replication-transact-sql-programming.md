@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d1027e969c12f5b5234f05bfeef12c7b93e3de84
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321712"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>在同步處理期間執行指令碼 (複寫 Transact-SQL 程式設計)
@@ -35,7 +35,7 @@ ms.locfileid: "75321712"
   
 2.  將指令碼檔案儲存到可由發行集之快照集代理程式存取的位置。  
   
-3.  在發行集資料庫的發行者上，執行 [sp_addscriptexec &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md)。 針對 `@scriptfile` 指定步驟 2 中建立之具有完整 UNC 路徑的指令碼檔案名稱 `@publication`，並針對 `@skiperror` 指定下列其中一個值：  
+3.  在發行集資料庫的發行者上，執行 [sp_addscriptexec &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md)。 針對 `@publication` 指定步驟 2 中建立之具有完整 UNC 路徑的指令碼檔案名稱 `@scriptfile`，並針對 `@skiperror` 指定下列其中一個值：  
   
     -   **0** - 如果遇到錯誤，代理程式將會停止執行指令碼。  
   

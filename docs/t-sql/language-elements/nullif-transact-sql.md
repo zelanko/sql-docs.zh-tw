@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 28c331cd810e905a14fa17d6e212fee331da74f9
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844382"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
@@ -45,12 +45,12 @@ NULLIF ( expression , expression )
  *expression*  
  這是任何有效的純量[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  傳回與第一個 *expression* 相同的類型。  
   
  如果這兩個運算式不相等，NULLIF 會傳回第一個 *expression*。 如果運算式相等，NULLIF 會傳回第一個 *expression* 類型的 Null 值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  NULLIF 相當於兩個運算式相等且產生的運算式為 NULL 的搜尋 CASE 運算式。  
   
  我們建議您不要在 NULLIF 函數中使用時間相依函數，例如 RAND()。 這可能會導致系統評估此函數兩次，並從這兩個引動過程傳回不同的結果。  
@@ -111,7 +111,7 @@ WHERE ProductID < 10;
 GO  
 ```  
 
-### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C.傳回未包含資料的預算金額  
+### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C：傳回未包含資料的預算金額  
  下列範例會建立 `budgets` 資料表、載入資料，然後使用 `NULLIF` 傳回 Null (如果 `current_year` 和 `previous_year` 都未包含資料)。  
   
 ```sql  

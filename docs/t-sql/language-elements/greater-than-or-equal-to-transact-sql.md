@@ -25,10 +25,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8a661006b04f5af7116d03bf736bdabc70cf421c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075159"
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;= (大於或等於) (Transact-SQL)
@@ -49,9 +49,9 @@ expression >= expression
  這是任何有效的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 這兩個運算式的類型，都必須是可以隱含轉換的資料類型。 轉換會隨著[資料類型優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)的規則而不同。  
   
 ## <a name="result-types"></a>結果類型  
- 布林  
+ Boolean  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當您在比較非 Null 運算式時，如果左運算元的值大於或等於右運算元，則結果為 TRUE，否則結果就是 FALSE。  
   
  與 = (等於) 比較運算子不同的是，兩個 NULL 值的 >= 比較結果不受 ANSI_NULLS 設定的影響。  
@@ -88,7 +88,7 @@ DepartmentID Name
 ## <a name="see-also"></a>另請參閱  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [= &#40;等於&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/equals-transact-sql.md)   
+ [= &#40;Equals&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/equals-transact-sql.md)   
  [&#62; &#40;大於&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   
  [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   

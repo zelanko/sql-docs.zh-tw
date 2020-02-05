@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d835e68c767866a130ebb62c26fd315f5448416e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947767"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
@@ -45,29 +45,29 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
   
 ## <a name="arguments"></a>引數  
  *test_expression*  
- 這是要在 *begin_expression* 和 *end_expression* 定義的範圍中測試的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *test_expression* 的資料類型必須與 *begin_expression* 和 *end_expression* 相同。  
+ 這是要在 [begin_expression](../../t-sql/language-elements/expressions-transact-sql.md) 和 *end_expression* 定義的範圍中測試的*運算式*。 *test_expression* 的資料類型必須與 *begin_expression* 和 *end_expression* 相同。  
   
  NOT  
  指定執行否定運算的述詞結果。  
   
  *begin_expression*  
- 任何有效的運算式。 *begin_expression* 的資料類型必須與 *test_expression* 和 *end_expression* 相同。  
+ 為任何有效運算式。 *begin_expression* 的資料類型必須與 *test_expression* 和 *end_expression* 相同。  
   
  *end_expression*  
- 任何有效的運算式。 *end_expression* 的資料類型必須與 *test_expression* 和 *begin_expression* 相同。  
+ 為任何有效運算式。 *end_expression* 的資料類型必須與 *test_expression* 和 *begin_expression* 相同。  
   
- 與  
+ AND  
  用來作為預留位置，表示 *test_expression* 應該位於 *begin_expression* 和 *end_expression* 所指定的範圍內。  
   
 ## <a name="result-types"></a>結果類型  
- **布林**  
+ **布林值**  
   
 ## <a name="result-value"></a>結果值  
- 如果 *test_expression* 的值大於或等於 *begin_expression* 的值且小於或等於 *end_expression* 的值，BETWEEN 就會傳回 **TRUE**。  
+ 如果 **test_expression** 的值大於或等於 *begin_expression* 的值且小於或等於 *end_expression* 的值，BETWEEN 就會傳回 *TRUE*。  
   
- 如果 *test_expression* 的值小於 *begin_expression* 的值或大於 *end_expression* 的值，NOT BETWEEN 就會傳回 **TRUE**。  
+ 如果 **test_expression** 的值小於 *begin_expression* 的值或大於 *end_expression* 的值，NOT BETWEEN 就會傳回 *TRUE*。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  若要指定獨佔範圍，請使用大於 (>) 和小於 (<) 運算子。 如果 BETWEEN 或 NOT BETWEEN 述詞的任何輸入是 NULL，結果就是 UNKNOWN。  
   
 ## <a name="examples"></a>範例  
@@ -178,7 +178,7 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  4           2002-01-05 00:00:00.000  
  ```  
  
- 查詢會擷取預期的資料列，因為已指定查詢中的日期值以及儲存在 `RateChangeDate` 資料行中的 **datetime** 值不含日期的時間部分。 未指定時間部分時，它會預設為上午 12:00。 請注意，若資料列包含 2002-01-05 上午 12:00 之後的時間部分， 此查詢將不會傳回該資料列，因為它是在範圍之外。  
+ 查詢會擷取預期的資料列，因為已指定查詢中的日期值以及儲存在 **資料行中的**datetime`RateChangeDate` 值不含日期的時間部分。 未指定時間部分時，它會預設為上午 12:00。 請注意，若資料列包含 2002-01-05 上午 12:00 之後的時間部分， 此查詢將不會傳回該資料列，因為它是在範圍之外。  
   
   
 ## <a name="see-also"></a>另請參閱  

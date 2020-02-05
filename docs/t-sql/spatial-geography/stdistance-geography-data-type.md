@@ -18,10 +18,10 @@ ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 45f0b6f9524c4877c669bfec8c5ab7bcfec198bb
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74200501"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance (geography 資料類型)
@@ -46,11 +46,11 @@ ms.locfileid: "74200501"
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**float**  
   
- CLR 傳回型別：**SqlDouble**  
+ CLR 傳回類型：**SqlDouble**  
   
 ## <a name="remarks"></a>備註  
  表達結果的測量單位是由空間資料的[空間參考識別碼 &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) 定義。
-如果 **geography** 執行個體的空間參考識別碼 (SRID) 不相符，STDistance() 一定會傳回 *null*。  
+如果 *geography* 執行個體的空間參考識別碼 (SRID) 不相符，STDistance() 一定會傳回 **null**。  
   
 > [!NOTE]  
 >  **geography** 資料型別上計算區域或距離的方法將會根據此方法中使用之執行個體的 SRID，而傳回不同的結果。 如需有關 SRID 的詳細資訊，請參閱[空間參考識別碼 &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。  

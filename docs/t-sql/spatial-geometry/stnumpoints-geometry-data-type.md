@@ -18,10 +18,10 @@ ms.assetid: a19520fc-7f91-4a2c-856f-4d8b99a7e496
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b15d0601255cc7f53b677c333f531057a05573a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075084"
 ---
 # <a name="stnumpoints-geometry-data-type"></a>STNumPoints (geometry 資料類型)
@@ -36,12 +36,12 @@ ms.locfileid: "68075084"
 .STNumPoints ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
- CLR 傳回型別：**SqlInt32**  
+ CLR 傳回類型：**SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此方法會算入 **geometry** 執行個體描述中的點。 重複的點都會被算入。 如果此執行個體為 **collection** 型別，這個方法會傳回它的每一個元素內點的總和。  
   
 ## <a name="examples"></a>範例  

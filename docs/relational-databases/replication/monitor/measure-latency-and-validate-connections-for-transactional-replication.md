@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 355840dee0c7ff327968457a54f55730665d5afe
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: cdf335fe061bfd6c7c8646f87b6b4c1798243e9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321846"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288145"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>針對異動複寫測量延遲及驗證連接
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "75321846"
   
 3.  按一下 **[插入追蹤]** 。  
   
-4.  在下列資料行中檢視追蹤權杖的經過時間：[發行者到散發者]  、[散發者到訂閱者]  、[延遲總計]  。 **[暫止]** 表示 Token 尚未到達給定點。  
+4.  在下列資料行中檢視追蹤 Token 的經過時間： **[發行者到散發者]** 、 **[散發者到訂閱者]** 、 **[延遲總計]** 。 **[暫止]** 表示 Token 尚未到達給定點。  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>若要檢視先前插入之追蹤 Token 上的訊息  
   
@@ -101,7 +101,7 @@ ms.locfileid: "75321846"
   
 3.  從 **[插入的時間]** 下拉式清單中選取時間。  
   
-4.  在下列資料行中檢視追蹤權杖的經過時間：[發行者到散發者]  、[散發者到訂閱者]  、[延遲總計]  。 **[暫止]** 表示 Token 尚未到達給定點。  
+4.  在下列資料行中檢視追蹤 Token 的經過時間： **[發行者到散發者]** 、 **[散發者到訂閱者]** 、 **[延遲總計]** 。 **[暫止]** 表示 Token 尚未到達給定點。  
   
     > [!NOTE]  
     >  追蹤 Token 資訊與其他記錄資料的保留時間週期相同，這會由散發資料庫的記錄保留期限控制。 如需變更散發資料庫屬性的詳細資訊，請參閱[檢視及修改散發者和發行者屬性](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  

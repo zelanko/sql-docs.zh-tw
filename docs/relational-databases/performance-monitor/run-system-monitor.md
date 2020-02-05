@@ -17,10 +17,10 @@ ms.assetid: 05297984-bc8d-43df-829c-032387f7ea61
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 015570319e537199f13bd1d3783c508e22ab49ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987379"
 ---
 # <a name="run-system-monitor"></a>執行系統監視器

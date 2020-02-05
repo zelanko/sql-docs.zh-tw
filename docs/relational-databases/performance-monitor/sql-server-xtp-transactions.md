@@ -11,10 +11,10 @@ ms.assetid: 443d67e4-1c7f-41d7-b18d-2d657f58c22a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: c00e408454b4bf5b4b907e517fa430212739734e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006989"
 ---
 # <a name="sql-server-xtp-transactions"></a>SQL Server XTP 交易
@@ -24,7 +24,7 @@ ms.locfileid: "68006989"
   
  下表描述 **SQL Server XTP Transactions** 計數器。  
   
-|計數器|Description|  
+|計數器|描述|  
 |-------------|-----------------|  
 |**串聯中止/秒**|(平均) 每秒因為認可相依性回復而回復的交易數。|  
 |**採取的認可相依性/秒**|(平均) 每秒交易採取的認可相依性數目。|  

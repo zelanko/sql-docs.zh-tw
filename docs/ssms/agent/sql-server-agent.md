@@ -1,8 +1,7 @@
 ---
-title: SQL Server Agent | Microsoft Docs
+title: SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +10,17 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: af9045220d860efdf60a4df37c138ac81bf3c05d
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: e62d4502feb6985717e9aad1bf2f6da63100e60c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552663"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257927"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
 
@@ -42,8 +43,8 @@ ms.locfileid: "69552663"
 ## <a name="Components"></a>SQL Server Agent 元件  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用下列元件來定義要執行的工作，何時執行工作以及報告工作成功或失敗的方式。  
   
-### <a name="jobs"></a>中稱為  
-*「作業」* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行的一系列指定動作。 請使用作業來定義管理工作，這個管理工作可以執行一或多次，而且可以監視它是成功或者失敗。 作業可以在本機伺服器或多個遠端伺服器上執行。  
+### <a name="jobs"></a>工作  
+*「作業」* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行的一系列指定動作。 使用作業來定義可執行一或多次並監視成功或失敗的系統管理工作。 一個作業可以在一部本機伺服器或在多部遠端伺服器上執行。  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的容錯移轉事件期間執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，並不會在容錯移轉至另一個容錯移轉叢集節點後繼續。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 於 Hyper-V 暫停期間執行的 Agent 作業，如果該此暫停會造成容錯移轉至另一個節點，那麼這些作業並不會繼續。 已開始的工作卻因為容錯移轉事件而無法完成，會記錄為已啟動，但是不會顯其他表示完成或失敗的記錄項目。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業看起來永遠不會結束。  
@@ -60,8 +61,8 @@ ms.locfileid: "69552663"
   
 每個作業步驟都是在特定的安全性內容中執行。 對於使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]的作業步驟，請使用 EXECUTE AS 陳述式來設定作業步驟的安全性內容。 對其他作業步驟類型，可以使用 Proxy 帳戶來設定作業步驟的安全性內容。  
   
-### <a name="schedules"></a>[排程]  
-您可以使用 *「排程」* (Schedule) 來指定作業的執行時間。 相同的排程上可執行多個作業，而且多個排程可以套用到相同的作業。 排程可以為作業執行時間定義下列條件：  
+### <a name="schedules"></a>排程  
+您可以使用 *「排程」* (Schedule) 來指定作業的執行時間。 您可以依照相同的排程執行一項以上的作業，而且可以將一個以上的排程套用至相同的作業。 排程可以針對作業的執行時間定義下列條件：  
   
 -   每當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 啟動時。  
   
@@ -69,7 +70,7 @@ ms.locfileid: "69552663"
   
 -   某個特定的日期和時間。  
   
--   執行循環排程時。  
+-   依照週期性排程。  
   
 如需詳細資訊，請參閱 [建立及附加排程至作業](../../ssms/agent/create-and-attach-schedules-to-jobs.md)。  
   
@@ -93,7 +94,7 @@ ms.locfileid: "69552663"
 如需詳細資訊，請參閱 [警示](../../ssms/agent/alerts.md)。  
   
 ### <a name="operators"></a>操作員  
-*「操作員」* (Operator) 會定義負責維護一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之人員的連絡資訊。 某些企業將操作員責任指派給一個人。 在具有多個伺服器的企業中，很多人可以共同擔任操作員的任務。 操作員不包含安全性資訊，而且不會定義安全性主體。  
+*「操作員」* (Operator) 會定義負責維護一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之人員的連絡資訊。 某些企業將操作員責任指派給一個人。 在具有多個伺服器的企業中，很多人可以共同擔任操作員的任務。 操作員不包含安全性資訊，並不會定義安全性主體。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以透過下列一或多種方式，通知操作員發生警示：  
   
@@ -124,9 +125,9 @@ ms.locfileid: "69552663"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定義了下表所列的子系統：  
   
-|子系統名稱|Description|  
+|子系統名稱|描述|  
 |--------------|-----------|  
-|Microsoft ActiveX Script|執行 ActiveX Scripting 作業步驟。<br /><br />**警告** [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後的版本會將 ActiveX Scripting 子系統從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
+|Microsoft ActiveX Script|執行 ActiveX Scripting 作業步驟。<br /><br />**警告**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame_md.md)] 之後的版本會將 ActiveX Scripting 子系統從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
 |作業系統 (**CmdExec**)|執行可執行的程式。|  
 |PowerShell|執行 PowerShell 指令碼作業步驟。|  
 |複寫散發者|執行可啟動複寫「散發代理程式」的作業步驟。|  
@@ -164,7 +165,7 @@ ms.locfileid: "69552663"
   
 若要開始使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，請使用下列工作：  
   
-|Description|主題|  
+|描述|主題|  
 |-----------|-----|  
 |描述如何設定 SQL Server Agent。|[設定 SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)|  
 |描述如何啟動、停止和暫停 SQL Server Agent 服務。|[啟動、停止或暫停 SQL Server Agent 服務](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  
