@@ -20,10 +20,10 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1fae39a6cd0fcd61b18419f8e46786067a4a69dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134813"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 來部署資料庫
@@ -51,13 +51,13 @@ ms.locfileid: "68134813"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體必須執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本，才能使用精靈。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上的資料庫物件不受 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]支援，則無法使用此精靈將資料庫部署到 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 如果 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 上的資料庫物件不受 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援，則無法使用此精靈將資料庫部署到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  為了提高安全性，SQL Server 驗證登入會儲存在 DAC BACPAC 檔案中，而且沒有密碼。 當您匯入 BACPAC 之後，此登入會建立為停用的登入，而且會產生密碼。 若要啟用登入，請使用具有 ALTER ANY LOGIN 權限的登入進行登入，並使用 ALTER LOGIN 來啟用登入，然後指派可以傳達給使用者的新密碼。 Windows 驗證登入不需要這項處理，因為這類登入的密碼不是由 SQL Server 所管理。  
   
 #### <a name="permissions"></a>權限  
  精靈需要來源資料庫的 DAC 匯出權限。 登入至少需要 ALTER ANY LOGIN 和資料庫範圍 VIEW DEFINITION 權限，以及 **sys.sql_expression_dependencies**的 SELECT 權限。 匯出 DAC 可以透過 securityadmin 固定伺服器角色的成員來完成，這個角色的成員也是匯出 DAC 之來源資料庫中 database_owner 固定資料庫角色的成員。 系統管理員固定伺服器角色的成員或內建 SQL Server 系統管理員帳戶 **sa** 也可以匯出 DAC。  
   
- 精靈需要目的地執行個體或伺服器的 DAC 匯入權限。 登入必須是 **系統管理員 (sysadmin)** 或 **伺服器管理員 (serveradmin)** 固定伺服器角色的成員，或是具有 **dbcreator** 固定伺服器角色及擁有 ALTER ANY LOGIN 權限。 名為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的內建** 系統管理員帳戶也可以匯入 DAC。 將具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 loginmanager 或 serveradmin 角色的成員資格。 將不具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 dbmanager 或 serveradmin 角色的成員資格。  
+ 精靈需要目的地執行個體或伺服器的 DAC 匯入權限。 登入必須是 **系統管理員 (sysadmin)** 或 **伺服器管理員 (serveradmin)** 固定伺服器角色的成員，或是具有 **dbcreator** 固定伺服器角色及擁有 ALTER ANY LOGIN 權限。 內建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶 (名稱為 **sa** ) 也可以匯入 DAC。 將具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 loginmanager 或 serveradmin 角色的成員資格。 將不具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 dbmanager 或 serveradmin 角色的成員資格。  
   
 ##  <a name="UsingDeployDACWizard"></a> 使用部署資料庫精靈  
  **若要使用部署資料庫精靈移轉資料庫**  
@@ -78,7 +78,7 @@ ms.locfileid: "68134813"
   
     -   [摘要頁面](#Summary)  
   
-    -   [進度](#Progress)  
+    -   [Progress](#Progress)  
     
     -   [結果](#Results)  
   

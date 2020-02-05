@@ -14,10 +14,10 @@ ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 86bf6dc67143ea539ea0329fc1783629b26aa802
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297659"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (SSIS 運算式)
@@ -47,10 +47,10 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="result-types"></a>結果類型  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  下表列出運算式評估工具所辨識的日期部份與縮寫。  
   
-|datepart|縮寫|  
+|日期部份|縮寫|  
 |--------------|-------------------|  
 |Year|yy, yyyy|  
 |Quarter|qq, q|  
@@ -61,7 +61,7 @@ DATEDIFF(datepart, startdate, endate)
 |Weekday|dw, w|  
 |Hour|Hh|  
 |Minute|mi, n|  
-|第二個|ss, s|  
+|Second|ss, s|  
 |Millisecond|Ms|  
   
  如果任何引數為 Null，則 DATEDIFF 會傳回 Null 結果。  

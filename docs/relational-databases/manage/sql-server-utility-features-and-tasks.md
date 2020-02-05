@@ -18,10 +18,10 @@ ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 08c4877b4fc3280826100cdfe7f0dfcad716ca22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115309"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 公用程式的功能與工作
@@ -41,8 +41,8 @@ ms.locfileid: "68115309"
   
 |||  
 |-|-|  
-|**描述**|**主題**|  
-|描述設定伺服器在相同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上執行公用程式和非公用程式收集組的考量。|[在相同 SQL Server 執行個體上執行公用程式和非公用程式收集組的考量事項](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
+|**說明**|**主題**|  
+|描述設定伺服器在相同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上執行公用程式和非公用程式收集組的考量。|[在相同 SQL Server 執行個體上執行公用程式和非公用程式收集組的考量](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
 |描述如何建立 SQL Server 公用程式控制點。|[建立 SQL Server 公用程式控制點 &#40;SQL Server 公用程式&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |描述如何連接至 SQL Server 公用程式。|[連接至 SQL Server 公用程式](../../relational-databases/manage/connect-to-a-sql-server-utility.md)|  
 |描述如何使用公用程式控制點來註冊 SQL Server 執行個體。|[註冊 SQL Server 的執行個體 &#40;SQL Server 公用程式&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)|  

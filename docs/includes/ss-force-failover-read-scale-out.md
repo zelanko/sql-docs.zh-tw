@@ -8,10 +8,10 @@ ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
 ms.openlocfilehash: 6b00c445f75c4cdc36e34d471b01d4fa56f81f9e
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70963565"
 ---
 每個可用性群組只有一個主要複本。 主要複本允許讀取和寫入。 若要變更作為主要的複本，您可以進行容錯移轉。 在高可用性的可用性群組中，叢集管理員會自動化容錯移轉程序。 在叢集類型為 NONE 的可用性群組中，容錯移轉程序是手動的。 
@@ -68,7 +68,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
 3. 將 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 更新為 1。
 
-   下列指令碼會將名為 `ag1` 的可用性群組上的 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 設為 1。 執行下列指令碼之前，以您的可用性群組名稱取代 `ag1`：
+   下列指令碼會將名為 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 的可用性群組上的 `ag1` 設為 1。 執行下列指令碼之前，以您的可用性群組名稱取代 `ag1`：
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 

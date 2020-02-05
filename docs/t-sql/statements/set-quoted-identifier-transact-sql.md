@@ -26,13 +26,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b080efcb7af0f813f798c7f572f464d4718fdd75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68008884"
 ---
-# <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
+# <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
@@ -54,7 +54,7 @@ SET QUOTED_IDENTIFIER { ON | OFF }
 SET QUOTED_IDENTIFIER ON
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 當 SET QUOTED_IDENTIFIER 是 ON 時，您可以用雙引號來分隔識別碼，文字則必須用單引號來分隔。 當 SET QUOTED_IDENTIFIER 是 OFF 時，識別碼不能附加引號，且必須遵照所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼規則。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。 文字可以用單引號或雙引號來分隔。
 
@@ -205,7 +205,7 @@ GO
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
 - [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)
 - [CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)
-- [資料類型](../../t-sql/data-types/data-types-transact-sql.md)
+- [Data types (資料類型)](../../t-sql/data-types/data-types-transact-sql.md)
 - [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)
 - [SELECT](../../t-sql/queries/select-transact-sql.md)
 - [SET 陳述式](../../t-sql/statements/set-statements-transact-sql.md)

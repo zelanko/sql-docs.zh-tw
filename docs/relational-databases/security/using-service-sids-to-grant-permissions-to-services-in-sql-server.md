@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.openlocfilehash: 18ac490c514703d890f2a1075602494fff81749a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095593"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>使用服務 SID 授與對 SQL Server 服務的權限
@@ -32,7 +32,7 @@ SQL Server 會使用[個別服務安全性識別碼 (SID)](https://support.micro
 > [!TIP]
 > 如果收到 `Login failed for user 'NT AUTHORITY\SYSTEM'` 錯誤，請確認所需服務的服務 SID 存在、服務 SID 登入是在 SQL Server 中建立，且適當的權限已在 SQL Server 中授與給服務 SID。
 
-## <a name="security"></a>Security
+## <a name="security"></a>安全性
 
 ### <a name="eliminate-service-accounts"></a>排除服務帳戶
 
@@ -42,7 +42,7 @@ SQL Server 會使用[個別服務安全性識別碼 (SID)](https://support.micro
 
 系統帳戶在過去是藉由為 [LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190) ([en-us 的 NT AUTHORITY\SYSTEM](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)) 或[NetworkService](/windows/desktop/Services/networkservice-account) ([en-us 的 NT AUTHORITY\NETWORK SERVICE](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)) 帳戶建立登入並授與這些登入權限而獲得授與權限。 這個方法會授與任何處理序或服務對以系統帳戶執行的 SQL 權限。
 
-使用服務 SID，可容許授與對特定服務的權限。 服務只有在執行時，才能存取它已獲得授與權限的資源。 例如，如果 `HealthService` 以 `LocalSystem` 身分執行，且獲得授與 `View Server State`，則 `LocalSystem` 帳戶只有在 `HealthService` 的內容中執行時才具有 `View Server State` 的權限。 如果任何其他處理序嘗試以 `LocalSystem` 身分存取 SQL 的伺服器狀態，它們將會遭到拒絕存取。
+使用服務 SID，可容許授與對特定服務的權限。 服務只有在執行時，才能存取它已獲得授與權限的資源。 例如，如果 `HealthService` 以 `LocalSystem` 身分執行，且獲得授與 `View Server State`，則 `LocalSystem` 帳戶只有在 `View Server State` 的內容中執行時才具有 `HealthService` 的權限。 如果任何其他處理序嘗試以 `LocalSystem` 身分存取 SQL 的伺服器狀態，它們將會遭到拒絕存取。
 
 ## <a name="examples"></a>範例
 

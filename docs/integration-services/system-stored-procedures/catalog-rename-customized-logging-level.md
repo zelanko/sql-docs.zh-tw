@@ -11,10 +11,10 @@ ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c73937dcd201e65578f2d5738ae3706273300476
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295408"
 ---
 # <a name="catalogrename_customized_logging_level"></a>catalog.rename_customized_logging_level 
@@ -44,7 +44,7 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
   
  *new_name* 是 **nvarchar(128)** 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 ## <a name="return-codes"></a>傳回碼  
  0 (成功)  

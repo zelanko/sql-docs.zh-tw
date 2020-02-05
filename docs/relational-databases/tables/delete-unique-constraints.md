@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6790d66ad3a5f80a0964ada3c68311ef3d83b25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68016446"
 ---
 # <a name="delete-unique-constraints"></a>刪除唯一的條件約束
@@ -43,7 +43,7 @@ ms.locfileid: "68016446"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
@@ -68,7 +68,7 @@ ms.locfileid: "68016446"
   
 4.  按一下 **[刪除]** 。  
   
-5.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
+5.  在 [檔案]  功能表上，按一下 [儲存「資料表名稱」  ]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -26,10 +26,10 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fefd85737e5d58e71dae6fd81dc2c0306b0838e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927637"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - 觸發程序函式 (Transact-SQL)
@@ -48,12 +48,12 @@ UPDATE ( column )
   
 ## <a name="arguments"></a>引數  
  *column*  
- 這是進行 INSERT 或 UPDATE 動作測試的資料行名稱。 由於資料表名稱指定在觸發程序的 ON 子句中，因此，請勿在資料行名稱前面併入資料表名稱。 資料行可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所支援的任何[資料類型](../../t-sql/data-types/data-types-transact-sql.md)。 不過，在這個內容中，不能使用計算資料行。  
+ 這是進行 INSERT 或 UPDATE 動作測試的資料行名稱。 由於資料表名稱指定在觸發程序的 ON 子句中，因此，請勿在資料行名稱前面併入資料表名稱。 資料行可以是 [ 所支援的任何](../../t-sql/data-types/data-types-transact-sql.md)資料類型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不過，在這個內容中，不能使用計算資料行。  
   
-## <a name="return-types"></a>傳回類型  
- 布林  
+## <a name="return-types"></a>傳回型別  
+ Boolean  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  不論 INSERT 或 UPDATE 嘗試成功與否，UPDATE() 都會傳回 TRUE。  
   
  若要測試多個資料行的 INSERT 或 UPDATE 動作，請在第一個資料行之後，指定個別的 UPDATE(*column*) 子句。 您可以利用 COLUMNS_UPDATED 來測試多個資料行的 INSERT 或 UPDATE 動作。 這會傳回一個位元模式來指出插入或更新了哪些資料行。  
@@ -63,7 +63,7 @@ UPDATE ( column )
 > [!NOTE]  
 >  IF UPDATE(*column*) 子句的功能與 IF、IF...ELSE 或 WHILE 子句相同，可以使用 BEGIN...END 區塊。 如需詳細資訊，請參閱[流程控制語言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)。  
   
- 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 觸發程序主體內的任何位置，都可以使用 UPDATE(*column*)。  
+ 在  *觸發程序主體內的任何位置，都可以使用 UPDATE(* column[!INCLUDE[tsql](../../includes/tsql-md.md)])。  
  
 如果觸發程序套用至資料行，則 `UPDATED` 值將會傳回 `true` 或 `1`，即使資料行的值維持不變也是如此。 這是根據設計的行為，且觸發程序應該實作商務邏輯，以決定是否可允許插入/更新/刪除作業。 
   

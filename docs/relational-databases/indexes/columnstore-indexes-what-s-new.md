@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 690455f8dba76b45643ac4971c988059c56e33f9
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70009428"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>資料行存放區索引 - 新功能
@@ -53,13 +53,13 @@ ms.locfileid: "70009428"
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 新增這些新功能。
 
-### <a name="functional"></a>功能
+### <a name="functional"></a>函數
 - [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 支援叢集資料行存放區索引中的非保存計算資料行。 叢集資料行存放區索引中不支援保存的計算資料行。 您無法在具有計算資料行的資料行存放區索引上建立非叢集索引。 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 會加入索引鍵增強功能，以改善資料行存放區索引的效能和彈性。 這些改善會強化資料倉儲案例，並進行即時作業分析。  
   
-### <a name="functional"></a>功能  
+### <a name="functional"></a>函數  
   
 -   資料列存放區資料表可以有一個可更新的非叢集資料行存放區索引。 非叢集資料行存放區索引以前是唯讀的。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "70009428"
 -   在 `MAXDOP 1` 下執行，或以批次模式執行序列查詢計畫的單一執行緒查詢。 以前只有多執行緒查詢可以批次執行的方式來執行。  
 -   在存取資料列存放區或資料行存放區索引中的資料時，記憶體最佳化資料表查詢在 SQL InterOp 模式中可以有平行計畫。  
   
-### <a name="supportability"></a>可支援性  
+### <a name="supportability"></a>支援能力  
 這些系統檢視表對資料行存放區而言是新的︰  
 
 ||| 

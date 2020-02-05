@@ -20,13 +20,13 @@ ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d07892e1a47025107205f590d6a41aebebbb571a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071560"
 ---
-# <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
+# <a name="x40x40fetch_status-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 此函數會傳回針對連接目前開啟的任何資料指標所發出的最後一個資料指標 FETCH 陳述式的狀態。  
@@ -44,14 +44,14 @@ ms.locfileid: "68071560"
   
 ## <a name="return-value"></a>傳回值  
   
-|傳回值|Description|  
+|傳回值|描述|  
 |------------------|-----------------|  
 |&nbsp;0|FETCH 陳述式成功。|  
 |-1|FETCH 陳述式失敗，或資料列已超出結果集。|  
 |-2|遺漏提取的資料列。|
 |-9|資料指標並未執行擷取作業。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 由於 `@@FETCH_STATUS` 在連線的所有資料指標的全域範圍內有效，因此，請小心使用。 在執行 FETCH 陳述式之後，`@@FETCH_STATUS` 的測試必須在針對另一個資料指標執行任何其他 FETCH 陳述式之前進行。 在連線進行任何擷取之前，並未定義 `@@FETCH_STATUS`。  
   
 例如，使用者從一個資料指標執行 FETCH 陳述式，然後再呼叫預存程序來開啟和處理來自另一個資料指標的結果。 當控制權從所呼叫的預存程序傳回時，`@@FETCH_STATUS` 會反映預存程序中所執行的最後一個 FETCH，而不是在呼叫預存程序之前執行的 FETCH 陳述式。  

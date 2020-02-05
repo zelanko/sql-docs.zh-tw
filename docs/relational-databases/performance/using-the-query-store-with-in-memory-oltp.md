@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251291"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>使用含有記憶體內部 OLTP 的查詢存放區
@@ -45,9 +45,9 @@ ms.locfileid: "72251291"
   
 -   查詢存放區會在編譯期間，利用來自記憶體內部 OLTP 的計劃產生機制，來擷取查詢執行計劃。 預存的計劃在語意上相當於使用 `SET SHOWPLAN_XML ON` 取得的計劃，但有一點不同︰查詢存放區中的計劃會依據個別的陳述式進行分割和儲存。  
     
--   當您在含有混合工作負載的資料庫中執行查詢存放區時，則可從 [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 使用 **is_natively_compiled** 欄位，快速找到原生程式碼編譯所產生的查詢計劃。  
+-   當您在含有混合工作負載的資料庫中執行查詢存放區時，則可從 **sys.query_store_plan &#40;Transact-SQL&#41;** 使用 [is_natively_compiled](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 欄位，快速找到原生程式碼編譯所產生的查詢計劃。  
   
--   查詢存放區擷取模式 (**ALTER TABLE** 陳述式中的 *QUERY_CAPTURE_MODE* 參數) 不會影響來自原生編譯模組的查詢，因為不論組態值為何，一律會擷取它們。 這包括 `QUERY_CAPTURE_MODE = NONE`設定。  
+-   查詢存放區擷取模式 (*ALTER TABLE* 陳述式中的 **QUERY_CAPTURE_MODE** 參數) 不會影響來自原生編譯模組的查詢，因為不論組態值為何，一律會擷取它們。 這包括 `QUERY_CAPTURE_MODE = NONE`設定。  
   
 -   查詢存放區所擷取的查詢編譯期間只會包含在產生原生程式碼之前，進行查詢最佳化所花費的時間。 更精確地說，它不包含編譯 C 程式碼的時間，以及產生 C 程式碼所需之內部結構的產生時間。  
   
@@ -135,9 +135,9 @@ WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [建立記憶體最佳化資料表和原生編譯的預存程序](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
- [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)   
+ [查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [查詢存放區預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [查詢存放區目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   

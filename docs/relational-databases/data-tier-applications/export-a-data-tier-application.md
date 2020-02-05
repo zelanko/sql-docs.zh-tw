@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 61d240262d491976eaa9e591fa15e4ffd1f1258e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72904173"
 ---
 # <a name="export-a-data-tier-application"></a>匯出資料層應用程式
@@ -83,7 +83,7 @@ ms.locfileid: "72904173"
 ##  <a name="Introduction"></a> 簡介頁面  
  此頁面描述匯出資料層應用程式精靈的步驟。  
   
- **選項。**  
+ **選項**  
   
  **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示 [簡介] 頁面。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "72904173"
  若要指定要匯出的資料表子集，請使用 [進階]  選項。  
   
 ##  <a name="Validation"></a> 驗證頁面  
- 您可以使用 [驗證] 頁面來檢閱封鎖作業的任何問題。 若要繼續進行，請解決封鎖問題，然後按一下 [重新執行驗證]  確定驗證成功。  
+ 您可以使用 [驗證] 頁面來檢閱封鎖作業的任何問題。 若要繼續進行，請解決封鎖問題，然後按一下 **[重新執行驗證]** 確定驗證成功。  
   
  若要繼續進行，請按 **[下一步]** 。  
   
