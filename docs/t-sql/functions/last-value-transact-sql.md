@@ -20,13 +20,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 53053b4f2176a01970f433072634a49ec0d21eb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109195"
 ---
-# <a name="lastvalue-transact-sql"></a>LAST_VALUE (Transact-SQL)
+# <a name="last_value-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   傳回 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中一組經過排序之值的最後一個值。  
@@ -50,7 +50,7 @@ LAST_VALUE ( [ scalar_expression ] )
   
  在套用函數之前，*order_by_clause* 可指定資料順序。 *order_by_clause* 為必要項目。 *rows_range_clause* 會指定起始點及結束點，以進一步限制分割區中的資料列數。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  為與 *scalar_expression* 相同的類型。  
   
 ## <a name="general-remarks"></a>一般備註  
@@ -58,7 +58,7 @@ LAST_VALUE ( [ scalar_expression ] )
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-lastvalue-over-partitions"></a>A. 對分割區使用 LAST_VALUE  
+### <a name="a-using-last_value-over-partitions"></a>A. 對分割區使用 LAST_VALUE  
  下列範例會就給定的薪資 (費用)，傳回每個部門中最後一名員工的雇用日期。 PARTITION BY 子句會依部門分割員工，而 LAST_VALUE 函數則會個別套用到每個分割區。 OVER 子句中指定的 ORDER BY 子句，可決定 LAST_VALUE 函數套用至每個分割區中之資料列的邏輯順序。  
   
 ```  
@@ -99,7 +99,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
   
 ```  
   
-### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>B. 在計算運算式中使用 FIRST_VALUE 及 LAST_VALUE  
+### <a name="b-using-first_value-and-last_value-in-a-computed-expression"></a>B. 在計算運算式中使用 FIRST_VALUE 及 LAST_VALUE  
  下列範例會使用計算運算式中的 FIRST_VALUE 及 LAST_VALUE 函數，分別顯示給定員工人數當季與年度第一季和最後一季銷售量配額值之間的差異。 FIRST_VALUE 函數會當年度第一季的銷售配額值，並將該值從當季的銷售配額值中減去。 其會隨附在衍生資料行 DifferenceFromFirstQuarter 中傳回。 年度第一季的 DifferenceFromFirstQuarter 資料行值為 0。 LAST_VALUE 函數會傳回年度最後一季的銷售額值，並會從本季的銷售額值減去該值。 其會隨附在衍生資料行 DifferenceFromLastQuarter 中傳回。 對於當年度的最後一季，DifferenceFromLastQuarter 資料行的值為 0。  
   
  在此範例中，若要在 DifferenceFromLastQuarter 資料行中傳回非零的值，必須要有 "RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING" 子句，如下所示。 預設範圍為 "RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW"。 在此範例中，使用該預設範圍 (或不包含範圍而使用預設值) 會導致 DifferenceFromLastQuarter 資料行中傳回零。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  

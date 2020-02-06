@@ -18,10 +18,10 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 517814aa9878206fa46c4ce8ea775cda18265ede
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095257"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>使用中斷連結與連結來移動資料庫 (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "74095257"
     > [!NOTE]  
     >  如果您嘗試在不指定記錄檔的情形下附加資料庫，附加作業會在其原始位置中尋找記錄檔。 如果原始位置中仍有記錄的副本存在，則會附加該副本。 若要避免使用原始記錄檔，請指定新記錄檔的路徑，或者移除記錄檔的原始副本 (在將記錄檔複製到新位置後)。  
   
-3.  附加複製的檔案。 如需相關資訊，請參閱 [Attach a Database](../../relational-databases/databases/attach-a-database.md)。  
+3.  附加複製的檔案。 如需詳細資訊，請參閱 [Attach a Database](../../relational-databases/databases/attach-a-database.md)。  
   
 ## <a name="example"></a>範例  
  下列範例可為 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫建立名為 `MyAdventureWorks`的副本。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會在 [查詢編輯器] 視窗中執行，此視窗連接到附加的伺服器執行個體。  

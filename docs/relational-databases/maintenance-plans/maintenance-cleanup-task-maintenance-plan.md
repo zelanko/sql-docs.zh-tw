@@ -15,10 +15,10 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bd0f58fc45889bfef8701538bebc4ec94af85944
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115746"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>維護清除工作 (維護計畫)
@@ -29,7 +29,7 @@ ms.locfileid: "68115746"
 >  維護清除工作不會自動刪除所指定目錄之子資料夾中的檔案。 這項功能可降低利用「維護清除」工作刪除檔案這類惡意攻擊的可能性。 如果您要刪除第一層子資料夾中的檔案，必須選取 [包含第一層的子資料夾]  。  
   
 ## <a name="options"></a>選項。  
- **連接**  
+ **[連接]**  
  顯示目前的連接。  
   
  **新增**  
@@ -72,7 +72,7 @@ ms.locfileid: "68115746"
 >  受影響的物件數目較為大量時，會多花一些時間才會顯示。  
   
 ## <a name="new-connection-dialog-box"></a>新增連接對話方塊  
- **連接名稱**  
+ **連線名稱**  
  輸入新連接的名稱。  
   
  **選取或輸入伺服器名稱**  
@@ -90,13 +90,13 @@ ms.locfileid: "68115746"
  **使用特定的使用者名稱和密碼**  
  使用 SQL Server 驗證來連接 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體。 無法使用此選項。  
   
- **User name**  
+ **使用者名稱**  
  提供驗證時要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 無法使用此選項。  
   
  **密碼**  
  提供驗證時要使用的密碼。 無法使用此選項。  
   
 ## <a name="see-also"></a>另請參閱  
- [中 [物件總管] 之](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+ [維護計畫](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

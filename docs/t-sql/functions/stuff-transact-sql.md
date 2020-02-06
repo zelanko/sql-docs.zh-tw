@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0bb5b030b138fa49f90c77c13e12bf2f64968da3
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71341998"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
@@ -57,10 +57,10 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  *replaceWith_expression*  
  這是字元資料的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是字元或二進位資料的常數、變數或資料行。 這個運算式會從 *start* 開始取代 *character_expression* 的 *length* 字元。 提供 `NULL` 當做 *replaceWith_expression*，移除字元且不插入任何內容。   
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  如果 *character_expression* 是其中一個支援的字元資料類型，就會傳回字元資料。 如果 *character_expression* 是其中一個支援的二進位資料類型，就會傳回二進位資料。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果開始位置或長度是負的，或如果開始位置大於第一個字串的長度，則會傳回空的字串。 如果開始位置是 0，則會傳回 null 值。 如果刪除的長度大於第一個字串，則會刪除到剩下第一個字串中的第一個字元。  
 
 如果產生的值大於傳回類型所支援的最大值，便會引發錯誤。  

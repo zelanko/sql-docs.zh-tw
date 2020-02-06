@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5b2e87cf96d6237521caeaae55802d2d72769603
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594332"
 ---
 # <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-with-windows-installer"></a>使用 Windows Installer 來安裝 `azdata` 以管理 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -24,13 +24,13 @@ ms.locfileid: "73594332"
 
 >針對 Linux (Ubuntu)，請參閱[使用安裝程式來安裝 `azdata`](./deploy-install-azdata-linux-package.md)。
 
-目前，沒有任何套件管理員可在其他作業系統或發行版本上安裝 `azdata`。 針對這些平台，請參閱[在沒有套件管理員的情況下安裝 `azdata`](./deploy-install-azdata.md)。
+目前沒有任何套件管理員能夠在其他作業系統或發行版上安裝 `azdata`。 針對這些平台，請參閱[在沒有套件管理員的情況下安裝 `azdata`](./deploy-install-azdata.md)。
 
 ## <a name="install-azdata-with-the-microsoft-windows-installer"></a>使用 Microsoft Windows Installer 安裝 `azdata`
 
 若要使用 Microsoft Windows Installer 安裝 `azdata`，
 
-1. 如果 `pip` 是使用 `azdata` 來進行安裝，請將其移除。 如果 `azdata` 是使用 Windows Installer 來進行安裝，請繼續進行下一個步驟。
+1. 如果 `azdata` 是使用 `pip` 來進行安裝，請將其移除。 如果 `azdata` 是使用 Windows Installer 來進行安裝，請繼續進行下一個步驟。
 1. 使用 Windows Installer 來安裝 `azdata`。
 
 ### <a name="uninstall-if-previous-installation-done-with-pip"></a>如果先前使用 `pip` 來進行安裝，請解除安裝

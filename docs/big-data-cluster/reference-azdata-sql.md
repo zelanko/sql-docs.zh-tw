@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 951598c895fe322ee1a8b32cbbc2dc29b20c8e1a
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f8fa1ca8df7f4d72c6df9b252d639f8771dee30c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531656"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908742"
 ---
 # <a name="azdata-sql"></a>azdata sql
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-下文提供 `azdata` 工具中 `sql` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
+下文提供 `sql` 工具中 `azdata` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
 |     |     |
@@ -51,13 +51,12 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 ## <a name="azdata-sql-query"></a>azdata sql query
 查詢命令允許執行 T-SQL 查詢。
 ```bash
-azdata sql query --database -d 
-                 -q
+azdata sql query -q --database -d
 ```
 ### <a name="examples"></a>範例
 選取資料表名稱的清單。  資料庫預設為主要。
 ```bash
-azdata sql query 'SELECT name FROM SYS.TABLES'
+azdata sql query -q 'SELECT name FROM SYS.TABLES'
 ```
 ### <a name="required-parameters"></a>必要參數
 #### `--database -d`
