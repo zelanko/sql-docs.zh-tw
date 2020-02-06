@@ -20,10 +20,10 @@ ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 83655bc03b2f55d9d7d426d1fa58ce4e86570d8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114991"
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY 非對稱金鑰權限 (Transact-SQL)
@@ -53,7 +53,7 @@ DENY { permission  [ ,...n ] }
  指定正在拒絕權限的非對稱金鑰。 需要範圍限定詞 "::"。  
   
  *database_principal*  
- 指定要拒絕其權限的主體。 它有下列幾種：  
+ 指定要拒絕其權限的主體。 下列其中之一：  
   
 -   資料庫使用者  
   
@@ -75,7 +75,7 @@ DENY { permission  [ ,...n ] }
  指出目前受到拒絕的權限，也為這個主體曾授與此權限的其他主體所拒絕。  
   
  *denying_principal*  
- 指定主體，執行這項查詢的主體會從這個主體衍生權限來拒絕權限。 它有下列幾種：  
+ 指定主體，執行這項查詢的主體會從這個主體衍生權限來拒絕權限。 下列其中之一：  
   
 -   資料庫使用者  
   
@@ -93,7 +93,7 @@ DENY { permission  [ ,...n ] }
   
 -   未對應至伺服器主體的資料庫使用者  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  非對稱金鑰是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 下面所列的是可以授與之最特定且最有限的非對稱金鑰權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   
 |非對稱金鑰權限|非對稱金鑰權限所隱含|資料庫權限所隱含|  

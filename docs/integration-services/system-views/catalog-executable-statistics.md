@@ -11,10 +11,10 @@ ms.assetid: 3dda28d6-10d8-4294-9b5e-a6048c07faf9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85f24df15c968aa7a5848519f4c118a96bc3534c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296635"
 ---
 # <a name="catalogexecutable_statistics"></a>catalog.executable_statistics 
@@ -28,7 +28,7 @@ ms.locfileid: "71296635"
   
  可執行檔是您加入至封裝之控制流程的工作或容器。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |Statistics_id|BIGINT|資料的唯一識別碼。|  
 |Execution_id|BIGINT|執行之執行個體的唯一識別碼。<br /><br /> catalog.executions 檢視提供有關執行的詳細資訊。 如需詳細資訊，請參閱 [catalog.executions &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md)。|  
@@ -36,7 +36,7 @@ ms.locfileid: "71296635"
 |Execution_path|nvarchar(max)|元件封裝 (包括元件的每個反覆運算) 的完整執行路徑。|  
 |Start_time|datetimeoffset(7)|可執行檔進入執行前階段的時間。|  
 |End_time|datetimeoffset(7)|可執行檔進入執行後階段的時間。|  
-|Execution_duration|INT|可執行檔花在執行的時間長度。 值會以毫秒來表示。|  
+|Execution_duration|int|可執行檔花在執行的時間長度。 值會以毫秒來表示。|  
 |Execution_result|SMALLINT|以下是可能的值：<br /><br /> 0 (成功)<br /><br /> 1 (失敗)<br /><br /> 2 (完成)<br /><br /> 3 (已取消)|  
 |Execution_value|sql_variant|執行所傳回的值。 這是使用者定義值。|  
   

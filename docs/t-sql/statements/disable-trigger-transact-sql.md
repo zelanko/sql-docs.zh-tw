@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d658b63e8c2b80c277ed9d8c3647717d07c96c48
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 8e426d6af578cd822befdeab928c522a55f98d7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982983"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76259416"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  根據預設，在建立觸發程序時會一併將它啟用。 即使停用觸發程序，也不會卸除它。 該觸發程序仍然會以物件形式存在於目前的資料庫中。 不過，只要編寫它的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式在執行時，觸發程序就不會引發。 觸發程序可以使用 [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md) 重新啟用。 您也可以使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)，來停用或啟用資料表上定義的 DML 觸發程序。  
   
  當您使用 **ALTER TRIGGER** 陳述式來變更觸發程序時，會啟用觸發程序。  
@@ -85,7 +85,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 AdventureWorks2012 資料庫會描述下列範例。
   
 ### <a name="a-disabling-a-dml-trigger-on-a-table"></a>A. 停用資料表的 DML 觸發程序  
- 下列範例會停用在 `uAddress` 資料表中建立的觸發程序 `Address`。  
+ 下列範例會停用在 `uAddress` 資料表中建立的觸發程序 `Person`。  
   
 ```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  

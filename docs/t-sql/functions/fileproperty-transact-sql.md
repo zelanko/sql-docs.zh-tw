@@ -23,10 +23,10 @@ ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 79be8af32c13b9e910b94b40bd3c1bf9b2c0e2c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071402"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY (Transact-SQL)
@@ -50,21 +50,21 @@ FILEPROPERTY ( file_name , property )
  *property*  
  這是包含要傳回之檔案屬性名稱的運算式。 *property* 為 **varchar(128)** ，而且可以是下列值之一。  
   
-|ReplTest1|Description|傳回的值|  
+|值|描述|傳回的值|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|檔案群組是唯讀的。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 輸入無效。|  
 |**IsPrimaryFile**|檔案是主要檔案。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 輸入無效。|  
 |**IsLogFile**|檔案是記錄檔。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 輸入無效。|  
 |**SpaceUsed**|指定檔案所用的空間量。|檔案中所配置的頁數|  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  *file_name* 對應於 **sys.master_files** 或 **sys.database_files** 目錄檢視中的 **name** 資料行。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `IsPrimaryFile` 檔案名稱的 `AdventureWorks_Data` 屬性設定。  
+ 下列範例會傳回 `IsPrimaryFile` 資料庫中 `AdventureWorks_Data` 檔案名稱的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 屬性設定。  
   
 ```  
   

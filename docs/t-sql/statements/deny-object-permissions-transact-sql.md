@@ -16,10 +16,10 @@ ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114796"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY 物件權限 (Transact-SQL)
@@ -60,7 +60,7 @@ DENY <permission> [ ,...n ] ON
  ALL  
  拒絕 ALL 不會拒絕所有可能的權限。 拒絕 ALL 相當於拒絕所有適用於指定物件的 ANSI-92 權限。 ALL 有多種意義，如下所示：  
   
- - 純量函式權限：EXECUTE、REFERENCES。  
+ - 純量函數權限：EXECUTE、REFERENCES。  
  - 資料表值函式權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
  - 預存程序權限：EXECUTE。  
  - 資料表權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
@@ -76,7 +76,7 @@ PRIVILEGES
 >  資料表層級的 DENY 不會優先於資料行層級的 GRANT。 保留權限階層中這項不一致的目的，是為了與舊版相容。  
   
  ON [ OBJECT **::** ] [ *schema_name* ] **.** *object_name*  
- 指定要拒絕其權限的物件。 若指定 *schema_name*，則 OBJECT 片語為選擇性。 若使用 OBJECT 片語，則範圍限定詞 ( **::** ) 為必要項目。 如果未指定 *schema_name*，則使用預設結構描述。 如果指定 *schema_name*，則結構描述範圍限定詞 ( **.** ) 為必要項目。  
+ 指定要拒絕其權限的物件。 若指定 *schema_name*，則 OBJECT 片語為選擇性。 若使用 OBJECT 片語，則範圍限定詞 ( **::** ) 為必要項目。 若未指定 *schema_name*，則會使用預設結構描述。 如果指定 *schema_name*，則結構描述範圍限定詞 ( **.** ) 為必要項目。  
   
  TO \<database_principal>  
  指定要拒絕其權限的主體。  
@@ -111,7 +111,7 @@ PRIVILEGES
  *Database_user_with_no_login*  
  指定不含對應伺服器層級主體的資料庫使用者。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  可以在各種目錄檢視中看到物件的相關資訊。 如需詳細資訊，請參閱[物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)。  
   
  物件是一個由結構描述所包含的結構描述層級安全性實體，在權限階層中，此結構描述為該安全性實體的父系。 下表所列的是可以拒絕之最特定和最有限制的物件權限，並列出利用隱含方式來併入這些權限的較通用權限。  
@@ -120,7 +120,7 @@ PRIVILEGES
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|Delete|CONTROL|Delete|  
+|刪除|CONTROL|刪除|  
 |執行 CREATE 陳述式之前，請先執行|CONTROL|執行 CREATE 陳述式之前，請先執行|  
 |Insert|CONTROL|Insert|  
 |RECEIVE|CONTROL|CONTROL|  
@@ -140,7 +140,7 @@ PRIVILEGES
 下列範例使用 AdventureWorks 資料庫。
   
 ### <a name="a-denying-select-permission-on-a-table"></a>A. 拒絕資料表的 SELECT 權限  
- 下列範例會拒絕使用者 `RosaQdM` 對 `Person.Address` 資料表的 `SELECT` 權限。  
+ 下列範例會拒絕使用者 `SELECT` 對 `RosaQdM` 資料表的 `Person.Address` 權限。  
   
 ```  
 DENY SELECT ON OBJECT::Person.Address TO RosaQdM;  

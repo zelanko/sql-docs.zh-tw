@@ -33,10 +33,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 90a62fed8292a5d5cbb1945cdfe8b2cee2502235
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901940"
 ---
 # <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
@@ -60,14 +60,14 @@ expression IS [ NOT ] NULL
  指定執行布林結果的否定運算。 這個述詞會反轉它的傳回值，如果值不是 NULL，就傳回 TRUE，如果值是 NULL，就傳回 FALSE。  
   
 ## <a name="result-types"></a>結果類型  
- **布林**  
+ **布林值**  
   
 ## <a name="return-code-values"></a>傳回碼值  
  如果 *expression* 的值是 NULL，IS NULL 就會傳回 TRUE；否則會傳回 FALSE。  
   
  如果 *expression* 的值是 NULL，IS NOT NULL 就會傳回 FALSE；否則會傳回 TRUE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  若要判斷運算式是否為 NULL，請利用 IS NULL 或 IS NOT NULL 來取代比較運算子 (如 = 或 !=)。 當兩個引數或其中一個引數是 NULL 時，比較運算子會傳回 UNKNOWN。  
   
 ## <a name="examples"></a>範例  

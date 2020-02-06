@@ -15,10 +15,10 @@ ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d8162a8eef652a14993f67e4e3931be7362e6f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929669"
 ---
 # <a name="drop-xml-indexes"></a>卸除 XML 索引
@@ -27,7 +27,7 @@ ms.locfileid: "67929669"
   
  具有 *TableName.IndexName* 的 DROP 語法已捨棄不用，XML 索引也不支援它。  
   
-## <a name="example-creating-and-dropping-a-primary-xml-index"></a>範例建立和卸除主要 XML 索引  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>範例：建立和卸除主要 XML 索引  
  在下列範例中，會在 **xml** 類型資料行上建立 XML 索引。  
   
 ```  
@@ -69,7 +69,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>範例使用 DROP_EXISTING 索引選項建立 XML 索引  
+## <a name="example-creating-an-xml-index-by-using-the-drop_existing-index-option"></a>範例：使用 DROP_EXISTING 索引選項建立 XML 索引  
  在下列範例中，會在資料行 (`XmlColx`) 上建立 XML 索引。 接著，會在不同資料行 (`XmlColy`) 上建立另一個具有相同名稱的 XML 索引。 因為指定了 `DROP_EXISTING` 選項，所以會卸除 (`XmlColx)` 上的現有 XML 索引，並在 (`XmlColy`) 上建立新 XML 索引。  
   
 ```  
