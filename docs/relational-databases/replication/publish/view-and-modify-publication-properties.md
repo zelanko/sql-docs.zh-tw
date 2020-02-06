@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ff07e2eaa15b76fe45a3f3ef7128a47e9415a4d1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 852363b7106d6f4a6b4fb359a14410dd8cb09a99
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908054"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287503"
 ---
 # <a name="view-and-modify-publication-properties"></a>檢視及修改發行集屬性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,9 +57,9 @@ ms.locfileid: "72908054"
 -   建立發行集之後，某些屬性變更需要新的快照集。 如果發行集有訂閱，則某些變更還需要重新初始化所有訂閱。 如需詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)和[在現有發行集中新增和卸除發行項](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在位於 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 與複寫監視器的 [發行集屬性 - \<發行集>]  對話方塊中，檢視及修改發行集屬性。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+ 您可以在位於  **與複寫監視器的 [發行集屬性 - \<發行集>]** [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 對話方塊中，檢視及修改發行集屬性。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
- [發行集屬性 - \<發行集>]  對話方塊上包含下列頁面：  
+ [發行集屬性 - **發行集>]\<** 對話方塊上包含下列頁面：  
   
 -   **[一般]** 頁面包含發行集名稱和描述、發行集類型以及訂閱過期設定。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "72908054"
 1.  執行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，在 **\@property** 參數中指定要變更的發行集屬性，並在 **\@value** 參數中指定這個屬性的新值。  
   
     > [!NOTE]  
-    >  如果此變更需要產生新的快照集，您也必須為 **\@force_invalidate_snapshot** 指定 **1** 值；如果此變更需要重新初始化訂閱者，則您必須為 **\@force_reinit_subscription** 指定 **1** 值。 如需當變更時需要新的快照集或重新初始化之屬性的詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
+    >  如果此變更需要產生新的快照集，您也必須為  force_invalidate_snapshot **指定 \@1** 值；如果此變更需要重新初始化訂閱者，則您必須為  force_reinit_subscription **指定 \@1** 值。 如需當變更時需要新的快照集或重新初始化之屬性的詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>檢視合併式發行集的屬性  
   
@@ -122,7 +122,7 @@ ms.locfileid: "72908054"
 1.  執行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，在 **\@property** 參數中指定要變更的發行集屬性，並在 **\@value** 參數中指定這個屬性的新值。  
   
     > [!NOTE]  
-    >  如果此變更需要產生新的快照集，您也必須為 **\@force_invalidate_snapshot** 指定 **1** 值；如果此變更將需要重新初始化訂閱者，則您必須為 **\@force_reinit_subscription** 指定 **1** 值。如需變更時需要新快照集或重新初始化的屬性詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
+    >  如果此變更需要產生新的快照集，您也必須為  force_invalidate_snapshot **指定 \@1** 值；如果此變更將需要重新初始化訂閱者，則您必須為  force_reinit_subscription **指定 \@1** 值。如需變更時需要新快照集或重新初始化的屬性詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>檢視快照集的屬性  
   

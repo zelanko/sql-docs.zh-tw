@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a26dbcc45f5c236b6cbe8998b2d12808711ff6ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044125"
 ---
 # <a name="drop-login-transact-sql"></a>DROP LOGIN (Transact-SQL)
@@ -46,7 +46,7 @@ DROP LOGIN login_name
  *login_name*  
  指定要卸除之登入的名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  已登入的登入無法卸除。 擁有安全性實體、伺服器層級物件或 SQL Server Agent 作業的登入也無法卸除。  
   
  您可以卸除資料庫使用者對應的登入；然而，這會建立被遺棄的使用者。 如需詳細資訊，請參閱[孤立的使用者疑難排解 &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。  

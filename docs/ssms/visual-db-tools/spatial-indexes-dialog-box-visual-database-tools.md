@@ -1,10 +1,9 @@
 ---
-title: 空間索引對話方塊 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 空間索引對話方塊
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a4d8ce987edf5595c0f1f75bb0da6d94c5399033
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 40e3625aee9da35d2c29d495346386768b41aee8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263566"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254975"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>空間索引對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68263566"
 **選取的空間索引**  
 列出現有的空間索引。 選取索引以顯示其屬性。 如果清單是空的，表示此資料表沒有定義任何空間索引。  
   
-**[加入]**  
+**加入**  
 建立新的空間索引。  
   
 **刪除**  
@@ -82,7 +83,7 @@ ms.locfileid: "68263566"
 **Y-min**  
 指定週框方塊左下角的 Y 座標。 如果 [鑲嵌式配置]  為 [地理方格]  ，這個屬性就會呈暗灰色。  
   
-**識別**  
+**身分識別**  
 展開時會顯示 [名稱]  和 [描述]  屬性欄位。  
   
 **(名稱)**  

@@ -15,10 +15,10 @@ ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7eaa4c35079d8eec49d7197778a01b7bac6cf9c1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982039"
 ---
 # <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
@@ -52,10 +52,10 @@ column_name AS computed_column_expression
   
 ## <a name="arguments"></a>引數  
 *column_name*  
- 要改變、加入或卸除的資料欄名稱。 *column_name* 可以是 1 至 128 個字元。 若是以 **timestamp** 資料類型建立的新資料行，則可以省略 *column_name*。 如果沒有為 **timestamp** 資料類型資料行指定任何 *column_name*，則會使用 **timestamp** 這個名稱。  
+ 要改變、加入或卸除的資料欄名稱。 *column_name* 可以是 1 至 128 個字元。 若是以 *timestamp* 資料類型建立的新資料行，則可以省略 **column_name**。 如果沒有為 *timestamp* 資料類型資料行指定任何 **column_name**，則會使用 **timestamp** 這個名稱。  
   
 *computed_column_expression*  
- 這是定義計算資料行值的運算式。 計算資料行是一個虛擬資料行，並未實際儲存在資料表中，而是從使用相同資料表之其他資料行的運算式計算出來的。 例如，計算資料行可能會有 cost AS price * qty 這類定義。這個運算式可以是非計算的資料行名稱、常數、函式、變數，以及一或多個運算子所連接這些項目的任何組合。 這個運算式不能是子查詢，也不能包括別名資料類型。  
+ 這是定義計算資料行值的運算式。 計算資料行是一個虛擬資料行，並未實際儲存在資料表中，而是從使用相同資料表之其他資料行的運算式計算出來的。 例如，計算資料行可能會有的定義是：cost AS price * qty。這個運算式可以是非計算的資料行名稱、常數、函數、變數，以及一個或多個運算子所連接的這些項目的任何組合。 這個運算式不能是子查詢，也不能包括別名資料類型。  
   
  計算資料行可用在選取清單、WHERE 子句、ORDER BY 子句中，或任何能夠使用規則運算式的其他位置中，但下列狀況例外：  
   
@@ -145,7 +145,7 @@ ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}
 > [!NOTE]  
 >  在此內容中，default 不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，例如 ON "default" 或 ON [default]。 如果指定了 "default"，目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  每個 PRIMARY KEY 和 UNIQUE 條件約束都會產生一個索引。 UNIQUE 和 PRIMARY KEY 條件約束數目無法使資料表的索引數目超出 999 個非叢集索引和 1 個叢集索引。  
   
 ## <a name="see-also"></a>另請參閱  

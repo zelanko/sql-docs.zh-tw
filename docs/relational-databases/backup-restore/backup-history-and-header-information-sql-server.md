@@ -34,10 +34,10 @@ ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: f2b04fb3c35f810e37e1646446f7ebdfb8915ee1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75242593"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>備份記錄與標頭資訊 (SQL Server)

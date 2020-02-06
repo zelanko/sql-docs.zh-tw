@@ -28,10 +28,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2765c7c610bd37e68124d7b45ddd0390cc8777dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113704"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
@@ -57,10 +57,10 @@ CHAR ( integer_expression )
 ## <a name="return-types"></a>傳回類型
 **char(1)**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 使用 `CHAR` 將控制字元插入字元字串。 此表顯示一些常用的控制字元。
   
-|控制字元|ReplTest1|  
+|控制字元|值|  
 |---|---|
 |索引標籤|**char(9)**|  
 |換行字元|**char(10)**|  

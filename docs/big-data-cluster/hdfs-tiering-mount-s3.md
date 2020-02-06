@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69652300"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>如何在巨量資料叢集中掛接 S3 以進行 HDFS 階層處理
@@ -27,7 +27,7 @@ ms.locfileid: "69652300"
   - **azdata**
   - **kubectl**
 - 建立資料並上傳到 S3 貯體 
-  - 將 CSV 或 Parquet 檔案上傳到您的 S3 貯體。 這是將掛接到巨量資料叢集中 HDFS 的外部 HDFS 資料。
+  - 將 CSV 或 Parquet 檔案上傳到您的 S3 貯體。 這是將會掛接到巨量資料叢集中 HDFS 的外部 HDFS 資料。
 
 ## <a name="access-keys"></a>存取金鑰
 
@@ -104,4 +104,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>後續步驟
 
-如需 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的詳細資訊，請參閱[什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)。
+如需 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]的詳細資訊，請參閱[什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)。

@@ -9,10 +9,10 @@ ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8a506442cca08dfa40cb3665571662a477ef5345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581553"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>建立遞迴階層群組 (報表產生器及 SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "65581553"
     > [!NOTE]  
     >  如果看不到 [屬性] 窗格，請按一下 [檢視]  索引標籤上的 [屬性]  。  
   
-2.  在 [屬性] 窗格中，展開 [Padding]  節點，然後按一下 [左]  ，再從下拉式清單中選取 [\<運算式>]  。  
+2.  在 [屬性] 窗格中，展開 [Padding]  節點，然後按一下 [左]  ，再從下拉式清單中選取 [**運算式>]\<** 。  
   
 3.  在 [運算式] 窗格中，輸入下列運算式：  
   

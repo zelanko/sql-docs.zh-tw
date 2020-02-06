@@ -19,10 +19,10 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fd8b17acb904ae0d33b06e85531e531792f1d60e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295698"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用數位簽章來識別封裝的來源
@@ -38,7 +38,7 @@ ms.locfileid: "71295698"
 ## <a name="set-an-option-to-check-the-package-signature"></a>設定檢查套件簽章的選項  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 **dtexec** 公用程式都具有一個選項，可設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來檢查已簽署封裝的數位簽章。 您應該使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 **dtexec** 公用程式，取決於您想要檢查所有封裝或只檢查特定封裝：  
   
--   若要在設計階段載入封裝之前檢查所有封裝的數位簽章，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中設定 [載入封裝時檢查數位簽章]  選項。 這個選項是 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中所有封裝的全域設定。
+-   若要在設計階段載入封裝之前檢查所有封裝的數位簽章，請在  **中設定 [載入封裝時檢查數位簽章]** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 選項。 這個選項是 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中所有封裝的全域設定。
   
 -   若要檢查個別封裝的數位簽章，請在您使用 **dtexec** 公用程式來執行封裝時，指定 **/VerifyS[igned]** 選項。 如需詳細資訊，請參閱 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71295698"
 ## <a name="registry"></a> 透過設定登錄值實作簽署原則
   您可以使用選擇性登錄值來管理載入已簽署或未簽署之封裝的組織原則。 如果您使用這個登錄值，就必須在即將執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝而且想要強制執行此原則的每部電腦上建立這個登錄值。 設定此登錄值之後， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 就會檢查或確認簽章，然後再載入封裝。  
   
- 本主題中的這個程序描述如何將選擇性 **BlockedSignatureStates** DWORD 值加入至 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS 登錄機碼。 **BlockedSignatureStates** 中的資料值會決定在封裝具有不受信任的簽章、具有無效的簽章或未簽署時，是否應該封鎖它。 關於用來簽署封裝的簽章狀態，**BlockedSignatureStates** 登錄值會使用下列定義：  
+ 本主題中的這個程序描述如何將選擇性 **BlockedSignatureStates** DWORD 值加入至 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS 登錄機碼。 **BlockedSignatureStates** 中的資料值會決定在封裝具有不受信任的簽章、具有無效的簽章或未簽署時，是否應該封鎖它。 關於用來簽署封裝的簽章狀態， **BlockedSignatureStates** 登錄值會使用下列定義：  
   
 -   「有效簽章」  是指可以成功讀取的簽章。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "71295698"
   
  下表列出 DWORD 資料的有效值及其相關聯的原則。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |0|沒有管理限制。|  
 |1|封鎖無效的簽章。<br /><br /> 此設定不會封鎖未簽署的封裝。|  

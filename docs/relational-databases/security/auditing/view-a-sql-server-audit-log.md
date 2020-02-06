@@ -15,10 +15,10 @@ ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9bc987034cde54d5c90392876f223ef5cf428562
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903799"
 ---
 # <a name="view-a-sql-server-audit-log"></a>檢視 SQL Server Audit 記錄
@@ -37,7 +37,7 @@ ms.locfileid: "72903799"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 **CONTROL SERVER** 權限。  
@@ -50,7 +50,7 @@ ms.locfileid: "72903799"
   
 2.  展開 **[稽核]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您想要檢視的稽核記錄，然後選取 **[檢視稽核記錄]** 。 這會開啟 [記錄檔檢視器 -_伺服器\_名稱_]  對話方塊。 如需詳細資訊，請參閱 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)。  
+3.  以滑鼠右鍵按一下您想要檢視的稽核記錄，然後選取 **[檢視稽核記錄]** 。 這會開啟 [記錄檔檢視器 -**伺服器**名稱 _]\__ 對話方塊。 如需詳細資訊，請參閱 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)。  
   
 4.  完成後，請按一下 **[關閉]** 。  
 

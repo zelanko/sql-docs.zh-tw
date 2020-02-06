@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70148830"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
@@ -37,10 +37,10 @@ ms.locfileid: "70148830"
   
 ## <a name="datetimeoffset-description"></a>datetimeoffset 描述
   
-|屬性|ReplTest1|  
+|屬性|值|  
 |---|---|
 |語法|**datetimeoffset** [ (*毫秒精確度*) ]|  
-|使用方式|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
+|使用量|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
 |預設的字串常值格式 (用於下層用戶端)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> 如需詳細資訊，請參閱下列的＜下層用戶端的回溯相容性＞一節。|  
 |日期範圍|0001-01-01 到 31.12.99<br /><br /> 公元 1 年 1 月 1 日到公元 9999 年 12 月 31 日|  
 |時間範圍|00:00:00 到 23:59:59.9999999|  
@@ -51,7 +51,7 @@ ms.locfileid: "70148830"
 |儲存體大小|10 個位元組 (固定) 是預設值，而且具有 100ns 小數秒數有效位數的預設值。|  
 |精確度|100 奈秒|  
 |預設值|1900-01-01 00:00:00 00:00|  
-|日曆|西曆|  
+|Calendar|西曆|  
 |使用者自訂的小數秒數有效位數|是|  
 |時區位移感知和保留|是|  
 |日光節約感知|否|  
@@ -71,7 +71,7 @@ ms.locfileid: "70148830"
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>datetimeoffset 支援的字串常值格式
 下表將列出 **datetimeoffset** 支援的 ISO 8601 字串常值格式。 如需 **datetimeoffset** 日期和時間部分之字母、數字、未分隔和時間格式的資訊，請參閱 [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) 和 [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)。
   
-|ISO 8601|Description|  
+|ISO 8601|描述|  
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|這兩種格式不受 SET LANGUAGE 和 SET DATEFORMAT 工作階段地區設定的影響。 **datetimeoffset** 和 **datetime** 部分之間不允許有空格。|  
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|根據 ISO 定義，這種格式表示 **datetime** 部分應該以國際標準時間 (UTC) 來表示。 例如，1999-12-12 12:30:30.12345 -07:00 應該表示成 1999-12-12 19:30:30.12345Z。|  

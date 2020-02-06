@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 073675e3402c83a8cda76b21b870a6c432abf68f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999804"
 ---
 # <a name="brokerconnection-event-class"></a>Broker:Connection 事件類別
@@ -27,7 +27,7 @@ ms.locfileid: "67999804"
   
 ## <a name="brokerconnection-event-class-data-columns"></a>Broker:Connection 事件類別資料行  
   
-|資料行|類型|Description|資料行編號|可篩選|  
+|資料行|類型|描述|資料行編號|可篩選|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |**ClientProcessID**|**int**|主機電腦指派給用戶端應用程式執行中處理序的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|9|是|  
@@ -35,7 +35,7 @@ ms.locfileid: "67999804"
 |**錯誤**|**int**|**sys.messages** 中針對事件內文字的訊息識別碼。 如果此事件報告錯誤，這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤號碼。|31|否|  
 |**EventClass**|**int**|擷取的事件類別類型。 **Broker:Connection** 永遠是 **138**。|27|否|  
 |**EventSequence**|**int**|此事件的序號。|51|否|  
-|**EventSubClass**|**nvarchar**|此連線的連線狀態。 對於此事件，子類別將為下列其中一個值。<br /><br /> <br /><br /> **Connecting**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在起始傳輸連接。<br /><br /> **Connected**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已建立傳輸連接。<br /><br /> **Connect Failed**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法建立傳輸連接。<br /><br /> **Closing**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在關閉傳輸連接。<br /><br /> **Closed**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已經關閉傳輸連接。<br /><br /> **Accept**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已經接受另一個執行個體的傳輸連接。<br /><br /> **Send IO Error**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在傳送訊息時遭遇到傳輸錯誤。<br /><br /> **Receive IO Error**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在接收訊息時遭遇到傳輸錯誤。|21|是|  
+|**EventSubClass**|**nvarchar**|此連線的連線狀態。 對於此事件，子類別將為下列其中一個值。<br /><br /> <br /><br /> **Connecting**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在起始傳輸連接。<br /><br /> **Connected**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已建立傳輸連接。<br /><br /> **Connect Failed**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法建立傳輸連接。<br /><br /> **Closing**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在關閉傳輸連接。<br /><br /> **關閉**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已經關閉傳輸連接。<br /><br /> **Accept**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已經接受另一個執行個體的傳輸連接。<br /><br /> **Send IO Error**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在傳送訊息時遭遇到傳輸錯誤。<br /><br /> **Receive IO Error**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在接收訊息時遭遇到傳輸錯誤。|21|是|  
 |**GUID**|**uniqueidentifier**|此連線的結束點識別碼。|54|否|  
 |**HostName**|**nvarchar**|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 **HOST_NAME** 函數。|8|是|  
 |**IntegerData**|**int**|此連線已經關閉的次數|25|是|  

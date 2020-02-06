@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 786729a6bfcae37e3c2fb1aa9a9e85839ca9c127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119111"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
@@ -68,12 +68,12 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 指定時區時差之分鐘部分的整數運算式。  
   
 *有效位數*  
-整數常值，指定 `DATETIMEOFFSETFROMPARTS` 所傳回 **datetimeoffset** 值的有效位數。  
+整數常值，指定 **所傳回**datetimeoffset`DATETIMEOFFSETFROMPARTS` 值的有效位數。  
   
 ## <a name="return-types"></a>傳回類型
 **datetimeoffset(** *precision* **)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 
 `DATETIMEOFFSETFROMPARTS` 會傳回完整初始化的 **datetimeoffset** 資料類型。 offset 引數代表時區時差。 針對省略的 offset 引數，`DATETIMEOFFSETFROMPARTS` 會假設時區時差為 `00:00`，也就是完全沒有時區時差。 針對指定的 offset 引數，`DATETIMEOFFSETFROMPARTS` 預期兩個引數都有值，而且兩個值同時為正數值或負數值。 如果 *minute_offset* 具有值而 *hour_offset* 沒有值，`DATETIMEOFFSETFROMPARTS` 會引發錯誤。 如果其他引數的值無效，則 `DATETIMEOFFSETFROMPARTS` 會引發錯誤。 如果至少一個必要引數具有 `NULL` 值，則 `DATETIMEOFFSETFROMPARTS` 會傳回 `NULL`。 不過，如果 *precision* 引數具有 `NULL` 值，則 `DATETIMEOFFSETFROMPARTS` 會引發錯誤。  
   

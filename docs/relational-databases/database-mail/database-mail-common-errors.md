@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228429"
 ---
 # <a name="common-errors-with-database-mail"></a>使用 Database Mail 的常見錯誤 
@@ -28,7 +28,7 @@ ms.locfileid: "70228429"
 ## <a name="could-not-find-stored-procedure-sp_send_dbmail"></a>找不到預存程序 'sp_send_dbmail'
 [sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) 預存程序已安裝在 msdb 資料庫。 您必須從 msdb 資料庫執行 **sp_send_dbmail**，或為預存程序指定三段式名稱。
 
-範例
+範例：
 ```sql
 EXEC msdb.dbo.sp_send_dbmail ...
 ```
@@ -52,7 +52,7 @@ EXEC dbo.sp_send_dbmail ...
 
 此主題描述如何針對嘗試傳送 Database Mail 之使用者沒有權限執行 sp_send_dbmail 的錯誤訊息進行疑難排解。
 
-錯誤文字如下：
+錯誤文字是：
 
 ```
 EXECUTE permission denied on object 'sp_send_dbmail', 
@@ -88,7 +88,7 @@ ALTER DATABASE msdb SET ENABLE_BROKER ;
 GO
 ``` 
 
-Database Mail 仰賴許多內部預存程序。 為降低介面區，安裝新的 SQL Server 時會停用這些預存程序。 若要啟用這些預存程序，請使用 **sp_configure** 系統預存程序的 [Database Mail XP 選項](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)，如下例所示：
+Database Mail 仰賴許多內部預存程序。 為降低介面區，安裝新的 SQL Server 時會停用這些預存程序。 若要啟用這些預存程序，請使用 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 系統預存程序的 **Database Mail XP 選項**，如下例所示：
 
 ```sql
 EXEC sp_configure 'show advanced options', 1;  

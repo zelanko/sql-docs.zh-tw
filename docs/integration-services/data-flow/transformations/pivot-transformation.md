@@ -19,10 +19,10 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 68f0f1ea718d867b2fb26f08bb5b6c30e49dd739
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291227"
 ---
 # <a name="pivot-transformation"></a>樞紐轉換
@@ -97,7 +97,7 @@ ms.locfileid: "71291227"
   
  下表顯示資料在 **Year** 資料行上樞紐之前的資料集。  
   
-|Year|產品名稱|Total|  
+|Year|產品名稱|總計|  
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Road Tire Tube|35920.50|  

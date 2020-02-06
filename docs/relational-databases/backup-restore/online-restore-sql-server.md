@@ -14,10 +14,10 @@ ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: e4f5817fe575422dddeedd525b077dbf643a29b2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908875"
 ---
 # <a name="online-restore-sql-server"></a>線上還原 (SQL Server)
@@ -46,7 +46,7 @@ ms.locfileid: "72908875"
 >  如果備份是在附加至伺服器的多個裝置上進行，則在執行線上還原時，必須有相同數目的裝置可用。  
   
 > [!CAUTION]  
->  使用快照集備份時，您無法執行「線上還原」  。 如需**快照集備份**的詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
+>  使用快照集備份時，您無法執行「線上還原」  。 如需 **快照集備份**的詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 ## <a name="log-backups-for-online-restore"></a>線上還原的記錄備份  
  在線上還原中，復原點就是還原的資料變成離線或最後一次設為唯讀的時間點。 能夠重建及包含此復原點的交易記錄備份，必須完整備妥。 一般而言，在該時間點後必須有記錄備份，才能涵蓋檔案的復原點。 唯一的例外就是從資料變成唯讀後建立的資料備份中，對唯讀資料所進行的線上還原。 在這種情況下，您不需要有記錄備份。  
@@ -91,7 +91,7 @@ ms.locfileid: "72908875"
   
 -   [範例：僅限於部分檔案群組的分次還原 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [範例：線上還原讀取/寫入檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [範例：線上還原讀寫檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
 -   [範例：線上還原唯讀檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   

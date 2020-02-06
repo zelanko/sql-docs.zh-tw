@@ -1,10 +1,9 @@
 ---
-title: 停用或啟用作業 | Microsoft Docs
-ms.custom: ''
+title: 停用或啟用作業
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,15 +14,17 @@ helpviewer_keywords:
 ms.assetid: 5041261f-0c32-4d4a-8bee-59a6c16200dd
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3653d02ee517c919a57b81110a06f4ba3cf3472d
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 30b1023ab732bdc711afa2a15b70df5646a90826
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552944"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242415"
 ---
-# <a name="disable-or-enable-a-job"></a>Disable or Enable a Job
+# <a name="disable-or-enable-a-job"></a>停用或啟用作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
