@@ -23,10 +23,10 @@ ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e37586d17a7b99d3dd191f63ed858805ef497a03
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68670529"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
@@ -59,10 +59,10 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
  *over_order_by_clause*  
  決定將順序值指派給資料分割中之資料列的順序。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  使用順序的類型傳回數字。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **NEXT VALUE FOR** 函式可用於預存程序和觸發程序中。  
   
  當 **NEXT VALUE FOR** 函式用於查詢或預設條件約束時，如果使用相同的順序物件不只一次，或在提供值的陳述式中以及正在執行的預設條件約束中使用相同的順序物件，則會對結果集中資料列內參考相同順序的所有資料行傳回相同值。  
@@ -149,7 +149,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 ## <a name="metadata"></a>中繼資料  
  如需順序的詳細資訊，請查詢 [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md) 目錄檢視。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>權限  
  需要順序物件或順序之結構描述的 **UPDATE** 權限。 如需授與權限的範例，請參閱本主題稍後的範例 F。  

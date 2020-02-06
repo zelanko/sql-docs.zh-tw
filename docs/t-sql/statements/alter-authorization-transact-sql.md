@@ -27,10 +27,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af69908f78c5f6a0958c87d315c0ba20da25cfb3
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982875"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
@@ -133,7 +133,7 @@ ALTER AUTHORIZATION ON
 |CERTIFICATE|**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |CONTRACT|**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。|    
 |DATABASE|**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 如需詳細資訊，請參閱下方的[資料庫的 ALTER AUTHORIZATION](#AlterDB) 一節。|    
-|ENDPOINT|**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。|    
+|端點|**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。|    
 |FULLTEXT CATALOG|**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |FULLTEXT STOPLIST|**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |MESSAGE TYPE|**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。|    
@@ -154,7 +154,7 @@ ALTER AUTHORIZATION ON
  *principal_name* | SCHEMA OWNER    
  擁有實體的安全性主體名稱。 資料庫物件必須由資料庫主體、資料庫使用者或角色所擁有。 伺服器物件 (例如資料庫) 必須由伺服器主體 (登入) 所擁有。 指定 **SCHEMA OWNER** 作為 *principal_name*，表示物件必須由擁有物件結構描述的主體所擁有。    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>備註    
  ALTER AUTHORIZATION 可用來變更具有擁有者之任何實體的擁有權。 資料庫包含的實體擁有權可傳送給任何資料庫層級主體。 伺服器層級實體的擁有權只能傳送給伺服器層級主體。    
     
 > [!IMPORTANT]    
@@ -189,7 +189,7 @@ ALTER AUTHORIZATION ON
 |CONTRACT、MESSAGE TYPE 或 SERVICE|無法變更系統實體的擁有權。|    
 |SYMMETRIC KEY|無法變更全域暫時金鑰的擁有權。|    
 |CERTIFICATE 或 ASYMMETRIC KEY|無法將這些實體的擁有權傳送給角色或群組。|    
-|ENDPOINT|主體必須是登入。|    
+|端點|主體必須是登入。|    
   
 ## <a name="AlterDB"></a>資料庫的 ALTER AUTHORIZATION  
 **適用對象**：[!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -229,10 +229,10 @@ ALTER AUTHORIZATION ON
   
 執行程式  |目標  |結果    
 ---------|---------|---------  
-SQL Server 驗證登入     |SQL Server 驗證登入         |成功  
+SQL Server 驗證登入     |SQL Server 驗證登入         |Success  
 SQL Server 驗證登入     |Azure AD 使用者         |失敗           
-Azure AD 使用者     |SQL Server 驗證登入         |成功           
-Azure AD 使用者     |Azure AD 使用者         |成功           
+Azure AD 使用者     |SQL Server 驗證登入         |Success           
+Azure AD 使用者     |Azure AD 使用者         |Success           
   
 若要驗證資料庫的 Azure AD 擁有者，請在使用者資料庫中執行下列 Transact-SQL 命令 (在此範例中為 `testdb`)。  
     

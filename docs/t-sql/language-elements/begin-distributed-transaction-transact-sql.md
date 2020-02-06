@@ -27,10 +27,10 @@ ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0faddc5b763a2728dc507d2aad17b26501846452
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125316"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
@@ -57,7 +57,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
  @*tran_name_variable*  
  這是一個使用者定義變數的名稱，變數中包含在 MS DTC 公用程式內，用來追蹤分散式交易的交易名稱。 這個變數必須用 **char**、**varchar**、**nchar** 或 **nvarchar** 資料類型來宣告。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  執行 BEGIN DISTRIBUTED TRANSACTION 陳述式的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體是交易發起者，它會控制交易的完成。 當發出工作階段的後續 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 陳述式時，負責控制的執行個體會要求 MS DTC 跨越所涉及的所有執行個體來管理分散式交易的完成。  
   
  交易層級快照集隔離不支援分散式交易。  

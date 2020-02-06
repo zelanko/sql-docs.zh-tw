@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 81bdd9f2077a3fb773e36399aedc9c2323169f2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929062"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
@@ -53,7 +53,7 @@ SET DATEFORMAT { format | @format_var }
  *format* |  **@** _format_var_  
  這是日期部分的順序。 有效的參數為 **mdy**、**dmy**、**ymd**、**ydm**、**myd** 和 **dym**。 這個引數可以是 Unicode 或轉換成 Unicode 的雙位元組字集 (DBCS)。 美國美國英文的預設值是 **mdy**。 如需所有支援語言的預設 DATEFORMAT，請參閱 [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **date**、**datetime2** 和 **datetimeoffset** 資料類型不支援 DATEFORMAT **ydm**。  
   
  DATEFORMAT 設定會針對日期資料類型以不同方式解譯字元字串，視其字串格式而定。 例如，**datetime** 和 **smalldatetime** 解譯可能不符合 **date**、**datetime2** 或 **datetimeoffset**。 DATEFORMAT 會影響字元字串針對資料庫轉換成日期值的解譯方式。 但是，它並不會影響日期資料類型值的顯示，或其在資料庫中的儲存格式。  
