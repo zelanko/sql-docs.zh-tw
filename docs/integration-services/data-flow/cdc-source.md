@@ -16,10 +16,10 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 668b7343ae893d302a27c0a68aec58e536cffcc9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293284"
 ---
 # <a name="cdc-source"></a>CDC 來源
@@ -52,7 +52,7 @@ ms.locfileid: "71293284"
 ## <a name="error-handling"></a>錯誤處理  
  CDC 來源有錯誤輸出。 此元件的錯誤輸出包含下列輸出資料行：  
   
--   **錯誤碼**：此值一律為 -1。  
+-   **錯誤碼**：值一定是 -1。  
   
 -   **錯誤資料行**：造成錯誤 (用於轉換錯誤) 的來源資料行。  
   
@@ -90,7 +90,7 @@ use <cdc-enabled-database-name>
   
 -   \<模式> 是 CDC 處理模式。 處理模式有下列其中一個值：[全部]  、[全部 (含舊值)]  、[淨]  、[淨 (含更新遮罩)]  、[淨 (含合併)]  。  
   
- 此指令碼會在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中重現問題，協助您輕鬆重現及識別錯誤以隔離問題。  
+ 此指令碼會在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中重現問題，協助您輕鬆重現及識別錯誤以隔離問題。  
   
 #### <a name="sql-server-error-message"></a>SQL Server 錯誤訊息  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可能會傳回下列訊息：  
@@ -114,7 +114,7 @@ use <cdc-enabled-database-name>
   
  若要開啟 **[進階編輯器]** 對話方塊：  
   
--   在 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 專案的 [資料流程]  畫面中，以滑鼠右鍵按一下 CDC 來源，然後選取 [顯示進階編輯器]  。  
+-   在  **專案的 [資料流程]** [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 畫面中，以滑鼠右鍵按一下 CDC 來源，然後選取 [顯示進階編輯器]  。  
   
  如需可在 [進階編輯器]  對話方塊中設定之屬性的詳細資訊，請參閱 [CDC 來源自訂屬性](../../integration-services/data-flow/cdc-source-custom-properties.md)。  
   
@@ -158,7 +158,7 @@ use <cdc-enabled-database-name>
   
 -   **全部**：傳回目前 CDC 範圍中的變更，不含 [更新之前]  值。  
   
--   **全部 (含舊值)** ：傳回目前 CDC 處理範圍中的變更，包括舊值 ([更新前]  )。 每個更新作業都有兩個資料列：一個包含更新之前的值，另一個則包含更新之後的值。  
+-   **全部 (含舊值)** ：傳回目前 CDC 處理範圍中的變更，包括舊值 ([更新之前]  )。 每個更新作業都有兩個資料列：一個包含更新之前的值，另一個則包含更新之後的值。  
   
 -   **淨**：只針對目前 CDC 處理範圍中修改的每個來源資料列傳回一項變更。 如果來源資料列更新了許多次，就會產生結合的變更 (例如，插入+更新會產生為單一更新，而更新+刪除則產生為單一刪除)。 在淨變更處理模式中工作時，您可以將變更分割成刪除、插入和更新輸出，並且以平行方式處理它們，因為單一來源資料列會出現在多個輸出中。  
   
@@ -239,7 +239,7 @@ use <cdc-enabled-database-name>
  您可以使用下列選項來設定 CDC 來源處理錯誤和截斷的方式。  
   
  **失敗元件**  
- 當發生錯誤或截斷時，資料流程工作將失敗。 這是預設行為。  
+ 當發生錯誤或截斷時，資料流程工作將失敗。 此為預設行為。  
   
  **忽略失敗**  
  系統會忽略錯誤或截斷，並將資料列導向至 CDC 來源輸出。  
@@ -249,6 +249,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>相關內容  
   
--   mattmasson.com 上的部落格文章：[Processing Modes for the CDC Source](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)。  
+-   mattmasson.com 上的部落格文章： [Processing Modes for the CDC Source](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)。  
   
   
