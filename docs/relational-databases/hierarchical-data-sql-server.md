@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 089de803bee02d241e1d7b56578c7e8bf8b15649
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72304959"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層式資料 (SQL Server)
@@ -163,7 +163,7 @@ GO
   
      在廣度優先的索引中，節點的所有直接子系都會位於相同位置。 因此，廣度優先的索引在回應關於下層子系的查詢 (例如，「尋找直接回報給此經理的所有員工」) 時很有效率。  
   
- 不論是讓深度優先、廣度優先，或是兩者，還是那個要產生叢集索引鍵 (如果有的話)，都取決於上述查詢類型的相對重要性，以及 SELECT 和DML 作業的相對重要性。 如需索引策略的詳細範例，請參閱[教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)。  
+ 不論是讓深度優先、廣度優先，或是兩者，還是那個要產生叢集索引鍵 (如果有的話)，都取決於上述查詢類型的相對重要性，以及 SELECT 和DML 作業的相對重要性。 如需索引策略的詳細範例，請參閱＜ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)＞。  
   
   
 ### <a name="creating-indexes"></a>建立索引  
@@ -271,7 +271,7 @@ INSERT SimpleDemo
 ##  <a name="tasks"></a> 相關工作  
   
 ###  <a name="migrating"></a> 從父子式移轉到 hierarchyid  
- 大部分的樹狀目錄都是使用 [父子式] 代表。 從 [父子式] 結構遷移到使用 **hierarchyid** 的資料表最簡單的方式，就是使用暫存資料行或暫存資料表來追蹤每個階層層級的節點數。 如需移轉父子式資料表的範例，請參閱[教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 課。  
+ 大部分的樹狀目錄都是使用 [父子式] 代表。 從 [父子式] 結構遷移到使用 **hierarchyid** 的資料表最簡單的方式，就是使用暫存資料行或暫存資料表來追蹤每個階層層級的節點數。 如需遷移 [父子式] 資料表的範例，請參閱 [教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 課。  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> 使用 hierarchyid 管理樹狀結構  
@@ -540,7 +540,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [Hierarchyid 資料類型方法參考](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

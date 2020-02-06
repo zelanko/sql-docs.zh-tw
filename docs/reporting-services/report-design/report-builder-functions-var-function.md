@@ -9,10 +9,10 @@ ms.assetid: 7b2018ce-c5f9-4f8b-bd44-4201379a584b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2fba0fc4720e10fc2c90dcdecf783bd01f849fd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576751"
 ---
 # <a name="report-builder-functions---var-function"></a>報表產生器函式 - Var 函式
@@ -41,7 +41,7 @@ Var(expression, scope, recursive)
 ## <a name="return-type"></a>傳回類型  
  十進位運算式會傳回 **Decimal** ，所有其他運算式都會傳回 **Double** 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  運算式中指定的資料集必須具有相同的資料類型。 若要將具有多個數值資料類型的資料轉換成相同的資料類型，請使用 **CInt**、 **CDbl** 或 **CDec**等轉換函數。 如需詳細資訊，請參閱 [類型轉換函數](https://go.microsoft.com/fwlink/?LinkId=96142)。  
   
  *scope* 的值必須是字串常數，而且不得為運算式。 如果是未指定其他彙總的外部彙總， *scope* 必須參考目前的範圍或是包含的範圍。 如果是彙總的彙總，巢狀彙總可以指定子範圍。  

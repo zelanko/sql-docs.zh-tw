@@ -19,10 +19,10 @@ ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a3f1e7f07b95c71eeddc65fed6db3f10cc31ee32
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321476"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>在合併同步處理期間執行商務邏輯
@@ -31,7 +31,7 @@ ms.locfileid: "75321476"
   
 -   應用程式開發介面 (API) 參考： <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   有關如何實作商務邏輯處理常式的說明：[為合併發行項實作商務邏輯處理常式](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+-   如何實作商務邏輯處理常式的指示：[為合併發行項實作商務邏輯處理常式](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## <a name="uses-for-business-logic-handlers"></a>商務邏輯處理常式的使用  
  合併同步處理可以叫用商務邏輯處理常式以執行下列作業：  

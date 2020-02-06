@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b221a39ea46c0bb853aacfbeaa020d67b53ebbca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126991"
 ---
 # <a name="sequence-properties-general-page"></a>順序屬性 (一般頁面)
@@ -26,7 +26,7 @@ ms.locfileid: "68126991"
   
  不同於插入時產生的識別資料行值，應用程式可以藉由呼叫 [NEXT VALUE FOR 函數](../../t-sql/functions/next-value-for-transact-sql.md)取得下一個序數，而不需要插入資料列。 您可以使用 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) 一次取得多個序號。  
   
- 如需使用 **CREATE SEQUENCE** 和 **NEXT VALUE FOR** 函數的相關資訊和案例，請參閱[序號](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
+ 如需使用 **CREATE SEQUENCE** 和 **NEXT VALUE FOR** 函數的相關資訊和案例，請參閱 [序號](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
  此頁面可經由兩種方式存取：以滑鼠右鍵按一下 [物件總管] 中的 [順序]  ，然後按一下 [新增順序]  ，或者以滑鼠右鍵按一下現有的順序，然後按一下 [屬性]  。 以滑鼠右鍵按一下現有的順序，然後按一下 [屬性]  時，無法編輯選項。 若要變更順序選項，請使用 [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) 陳述式或卸除然後重新建立順序物件。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68126991"
  **順序結構描述**  
  指定將擁有此順序的結構描述。  
   
- **資料類型**  
+ **Data type**  
  順序可以定義為任何整數類型。 這包括：  
   
 |資料類型|範圍|  

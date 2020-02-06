@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a26c03eaef6eecf0cee442d2b5b55f599c58065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123751"
 ---
 # <a name="create-foreign-key-relationships"></a>建立外部索引鍵關聯性
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-此文章說明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立外部索引鍵關聯性。 當想要將一個資料表的資料列，與其他資料表的資料列建立相關時，可以建立兩者間的關聯性。
+此文章說明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中建立外部索引鍵關聯性。 當想要將一個資料表的資料列，與其他資料表的資料列建立相關時，可以建立兩者間的關聯性。
 
 ## <a name="BeforeYouBegin"></a> 開始之前！ 限制事項
 
@@ -71,9 +71,9 @@ ms.locfileid: "68123751"
 
 ## <a name="create-a-foreign-key-in-a-new-table"></a>在新的資料表建立外部索引鍵
 
-### <a name="using-transact-sql"></a>使用 Transact-SQL
+### <a name="using-transact-sql"></a>使用 TRANSACT-SQL
 
-下列範例會建立資料表並在 `TempID` 資料行上定義外部索引鍵條件約束，而此資料行會參考 AdventureWorks 資料庫 `Sales.SalesReason` 資料表中的 `SalesReasonID` 資料行。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用來確定對 `Sales.SalesReason` 資料表所做的變更會自動傳播至 `Sales.TempSalesReason` 資料表。    
+下列範例會建立資料表並在 `TempID` 資料行上定義外部索引鍵條件約束，而此資料行會參考 AdventureWorks 資料庫 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用來確定對 `Sales.SalesReason` 資料表所做的變更會自動傳播至 `Sales.TempSalesReason` 資料表。    
 
 ```sql
 CREATE TABLE Sales.TempSalesReason 
@@ -90,8 +90,8 @@ CREATE TABLE Sales.TempSalesReason
 
 ## <a name="create-a-foreign-key-in-an-existing-table"></a>在現有的資料表建立外部索引鍵
 
-### <a name="using-transact-sql"></a>使用 Transact-SQL
-下列範例會在 `TempID` 資料行上建立外部索引鍵，並參考 AdventureWorks 資料庫 `Sales.SalesReason` 資料表中的 `SalesReasonID` 資料行。
+### <a name="using-transact-sql"></a>使用 TRANSACT-SQL
+下列範例會在 `TempID` 資料行上建立外部索引鍵，並參考 AdventureWorks 資料庫 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。
 
 ```sql
 ALTER TABLE Sales.TempSalesReason
@@ -101,7 +101,7 @@ ALTER TABLE Sales.TempSalesReason
       ON UPDATE CASCADE
 ;
 ```
-如需詳細資訊，請參閱：
+如需詳細資訊，請參閱
 
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
