@@ -41,13 +41,13 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7c0e87750bb408e617a94185ad85b101e8893711
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 5db7d4d73c4d6c03ce31935a9eb874bdd605fa99
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769896"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287605"
 ---
 # <a name="publish-data-and-database-objects"></a>發行資料和資料庫物件
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "68769896"
 -   發行集的名稱及描述。  
   
  如需有關如何使用發行集的資訊，請參閱下列主題：    
--   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)    
+-   [建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)    
 -   [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)    
 -   [檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)    
 -   [檢視和修改發行項屬性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)    
@@ -97,7 +97,7 @@ ms.locfileid: "68769896"
   
 -   [篩選發行的資料](../../../relational-databases/replication/publish/filter-published-data.md)    
 -   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
--   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
+-   [合併式複寫的發行項選項](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
 -   [複寫識別資料行](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  在為複寫發行資料表時，您可以指定應複製到「訂閱者」的結構描述物件，例如宣告參考完整性 (主索引鍵條件約束、參考條件約束、唯一條件約束)、索引、使用者 DML 觸發程序 (無法複寫 DDL 觸發程序)、擴充屬性和定序。 只在發行者與訂閱者之間的初始同步處理中複寫擴充屬性。 如果您在初始同步處理之後加入或修改擴充屬性，就不會複寫這項變更。  
@@ -115,7 +115,7 @@ ms.locfileid: "68769896"
 ## <a name="publishing-views"></a>發行檢視表  
  所有類型的複寫都可讓您複寫檢視。 檢視 (及其隨附的索引，如果它是索引檢視表的話) 可被複製到「訂閱者」，但必須同時複寫基底資料表。  
   
- 對於索引檢視表，異動複寫也可讓您以資料表而不是檢視複寫索引檢視表，不需要複寫基底資料表。 若要執行此操作，請為 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 的 *\@type* 參數指定 "indexed view logbased" 選項之一。 如需使用 **sp_addarticle** 的詳細資訊，請參閱[定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
+ 對於索引檢視表，異動複寫也可讓您以資料表而不是檢視複寫索引檢視表，不需要複寫基底資料表。 若要執行此操作，請為 *sp_addarticle &#40;Transact-SQL&#41;\@ 的* [type](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 參數指定 "indexed view logbased" 選項之一。 如需使用 **sp_addarticle** 的詳細資訊，請參閱[定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 ## <a name="publishing-user-defined-functions"></a>發行使用者自訂函數  
  CLR 函數和 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函數的 CREATE FUNCTION 陳述式會複製到每一個訂閱者。 如果使用 CLR 函數，還將複製相關組件。 對函數所作的變更會被複寫到「訂閱者」；而對相關組件所作的變更則不會。  
@@ -153,7 +153,7 @@ ms.locfileid: "68769896"
 -   如果您發行的資料庫物件相依於一或多個其他資料庫物件，就必須發行所有參考物件。 例如，如果您發行相依於資料表的檢視表，同時也必須發行該資料表。  
   
     > [!NOTE]  
-    >  如果您將發行項新增至合併式發行集且現有某發行項相依於新的發行項，則您必須使用 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 和 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 的 **\@processing_order** 參數來指定兩個發行項的處理順序。 請考慮下列狀況：您發行資料表但未發行該資料表所參考的函數。 如果您未發行該函數，該資料表就無法在「訂閱者」端建立。 當您將函式新增至發行集時：請將 **sp_addmergearticle** 的 **\@processing_order** 參數值指定為 **1**；並將 **sp_changemergearticle** 的 **\@processing_order** 參數值指定為 **2**，指定 **\@article** 參數的資料表名稱。 此處理順序可確保您先在「訂閱者」端建立函數之後才建立相依於此函數的資料表。 您可對每個發行項使用不同的編號，只要函數的編號低於資料表的編號即可。  
+    >  如果您將發行項新增至合併式發行集且現有某發行項相依於新的發行項，則您必須使用 **sp_addmergearticle\@ 和** sp_changemergearticle[ 的 ](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)[processing_order](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 參數來指定兩個發行項的處理順序。 請考慮下列狀況：您發行資料表但未發行該資料表所參考的函數。 如果您未發行該函數，該資料表就無法在「訂閱者」端建立。 當您將函式新增至發行集時：請將 **sp_addmergearticle** 的 **\@processing_order** 參數值指定為 **1**；並將 **sp_changemergearticle** 的 **\@processing_order** 參數值指定為 **2**，指定 **\@article** 參數的資料表名稱。 此處理順序可確保您先在「訂閱者」端建立函數之後才建立相依於此函數的資料表。 您可對每個發行項使用不同的編號，只要函數的編號低於資料表的編號即可。  
   
 -   發行集名稱不能包含下列字元：% * [ ] | : " ? \ / < >.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "68769896"
   
 -   不會複寫使用 [sp_bindefault &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md) 建立的繫結預設值 (繫結預設值已經棄用，以支援使用 ALTER TABLE 或 CREATE TABLE 的 DEFAULT 關鍵字建立的預設值)。  
   
--   因為散發代理程式傳遞順序的關係，索引檢視表上含有 **NOEXPAND** 提示的函數，不能發行在與參考資料表和索引檢視表相同的發行集中。 若要解決此問題，請將資料表和索引檢視表的建立放在第一個發行集中，然後再將索引檢視表上含有 **NOEXPAND** 提示的函數加入在第一個發行集完成後發行的第二個發行集。 或者，使用 **sp_addpublication** 的 *\@post_snapshot_script* 參數，為這些函式建立指令碼並傳遞指令碼。  
+-   因為散發代理程式傳遞順序的關係，索引檢視表上含有 **NOEXPAND** 提示的函數，不能發行在與參考資料表和索引檢視表相同的發行集中。 若要解決此問題，請將資料表和索引檢視表的建立放在第一個發行集中，然後再將索引檢視表上含有 **NOEXPAND** 提示的函數加入在第一個發行集完成後發行的第二個發行集。 或者，使用 *sp_addpublication\@ 的* **post_snapshot_script** 參數，為這些函式建立指令碼並傳遞指令碼。  
   
 ### <a name="schemas-and-object-ownership"></a>結構描述和物件擁有權  
  針對結構描述和物件擁有權，複寫在新增複寫精靈中具有下列預設行為：  
@@ -235,7 +235,7 @@ ms.locfileid: "68769896"
 -   異動複寫和未篩選的合併式複寫支援在多個發行集中發行資料表，然後在訂閱資料庫中的單一資料表內進行訂閱 (通常稱為積存狀況)。 積存通常用於從中央訂閱者端一個資料表中的多個位置彙總資料子集。 篩選的合併式發行集不支援中央「訂閱者」狀況。 對於合併式複寫，積存通常透過具有參數化資料列篩選器的單一發行集實作。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [在現有發行集中新增和卸除發行項](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
+ [在現有發行集中加入和卸除發行項](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [[設定散發]](../../../relational-databases/replication/configure-distribution.md)   
  [初始化訂閱](../../../relational-databases/replication/initialize-a-subscription.md)   
  [編寫複寫指令碼](../../../relational-databases/replication/scripting-replication.md)   

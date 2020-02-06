@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7e88a1c65d2c8cdf8ba6129c8af28492dc362aba
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245241"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>搭配 FOR XML 使用 RAW 模式
@@ -38,7 +38,7 @@ RAW 模式會將查詢結果集的每一個資料列轉換成具有泛用識別�
 ## <a name="in-this-section"></a>本節內容  
  本區段包含下列範例：  
   
--   [範例：以 XML 的形式擷取產品型號資訊](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
+-   [範例：將產品型號資訊當做 XML 來擷取](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   
 -   [範例：使用 ELEMENTS 指示詞指定 XSINIL](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   

@@ -20,10 +20,10 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e605c4fb62e56113a5cc36e418d5648ed6ba3031
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297958"
 ---
 # <a name="derived-column-transformation"></a>衍生的資料行轉換
@@ -50,7 +50,7 @@ ms.locfileid: "71297958"
 ## <a name="configuration-of-the-derived-column-transformation"></a>設定衍生資料行轉換  
  您可以利用下列方式設定「衍生的資料行」轉換：  
   
--   為每一個要變更的輸入資料行或新資料行提供運算式。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)。  
+-   為每一個要變更的輸入資料行或新資料行提供運算式。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)為止。  
   
     > [!NOTE]  
     >  如果運算式參考「衍生的資料行」轉換所覆寫的輸入資料行，則運算式會使用資料行的原始值，而非衍生的值。  
@@ -65,7 +65,7 @@ ms.locfileid: "71297958"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -98,7 +98,7 @@ ms.locfileid: "71297958"
   
  此屬性的值可以使用屬性運算式指定。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[運算子 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)和[函數 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **相關主題**︰[Integration Services &#40;SSIS&#41; 運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[運算子 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)和[函數 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **資料類型**  
  如果將資料加入新的資料行，[衍生的資料行轉換編輯器]  對話方塊就會自動評估運算式，並且適當設定資料類型。 這個資料行的值是唯讀的。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../../integration-services/data-flow/integration-services-data-types.md)。  
@@ -109,7 +109,7 @@ ms.locfileid: "71297958"
  **有效位數**  
  如果將資料加入新的資料行，[衍生的資料行轉換編輯器]  對話方塊就會自動根據資料類型來設定數值資料的有效位數。 這個資料行的值是唯讀的。  
   
- **小數位數**  
+ **調整**  
  如果將資料加入新的資料行，[衍生的資料行轉換編輯器]  對話方塊就會自動根據資料類型來設定數值資料的小數位數。 這個資料行的值是唯讀的。  
   
  **字碼頁**  

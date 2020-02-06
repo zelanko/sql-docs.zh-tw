@@ -18,10 +18,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c97363e7f13c3b42cf447ecf69929171544f3a6b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907254"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
@@ -90,7 +90,7 @@ WITH 子句用來指定 `PREDICT` 函數傳回之輸出的結構描述。
 
 使用 `PREDICT` 無法檢視內部模型結構。 如果您想要了解模型本身的內容，必須載入模型物件、將物件還原序列化，並使用適當的 R 程式碼剖析模型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 Windows 和 Linux 上所有版本的 SQL Server 2017 和更新版本都支援 `PREDICT` 函式。 雲端的 Azure SQL Database 也支援 `PREDICT`。 這些支援都已啟用，不論是否已啟用其他機器學習功能。
 
@@ -110,7 +110,7 @@ Windows 和 Linux 上所有版本的 SQL Server 2017 和更新版本都支援 `P
 
 ### <a name="using-predict-in-a-from-clause"></a>在 FROM 子句中使用 PREDICT
 
-此範例在 `SELECT` 陳述式的 `FROM` 子句中參考 `PREDICT` 函數：
+此範例在 `PREDICT` 陳述式的 `FROM` 子句中參考 `SELECT` 函數：
 
 ```sql
 SELECT d.*, p.Score
@@ -118,7 +118,7 @@ FROM PREDICT(MODEL = @logit_model,
   DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 
-`DATA` 參數中為資料表來源指定的別名 **d** 用來參考屬於 dbo.mytable 的資料行。 為 **PREDICT** 函數指定的別名 **p** 用來參考 PREDICT 函數所傳回的資料行。
+**參數中為資料表來源指定的別名**d`DATA` 用來參考屬於 dbo.mytable 的資料行。 為 **PREDICT** 函數指定的別名 **p** 用來參考 PREDICT 函數所傳回的資料行。
 
 ### <a name="combining-predict-with-an-insert-statement"></a>合併 PREDICT 與 INSERT 陳述式
 

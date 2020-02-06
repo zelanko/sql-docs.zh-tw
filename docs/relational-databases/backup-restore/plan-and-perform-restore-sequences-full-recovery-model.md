@@ -14,10 +14,10 @@ ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 81f8e91f2179fdc0b11747714ab810b801dc5389
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258663"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>規劃和執行還原順序 (完整復原模式)

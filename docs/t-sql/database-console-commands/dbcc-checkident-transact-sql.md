@@ -30,10 +30,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 2a3c1885d6796977ea48585858fa5d2a271e6a46
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72798368"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
@@ -85,14 +85,14 @@ DBCC CHECKIDENT
  WITH NO_INFOMSGS  
  隱藏所有參考訊息。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
  目前識別值的特定更正會隨著參數規格而不同。  
   
 |DBCC CHECKIDENT 命令|進行的識別更正|  
 |-----------------------------|---------------------------------------------|  
 |DBCC CHECKIDENT ( *table_name*, NORESEED )|不重設目前的識別值。 DBCC CHECKIDENT 會傳回識別欄位目前的識別值和最大值。 如果這兩個值不同，則應該重設識別值以防止值序列中發生錯誤或間距。|  
-|DBCC CHECKIDENT ( *table_name* )<br /><br /> 中的多個<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|如果資料表目前的識別值小於識別欄位所儲存的最大識別值，就會利用識別欄位中的最大值來重設它。 請參閱稍後的＜例外＞一節。|  
+|DBCC CHECKIDENT ( *table_name* )<br /><br /> 或<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|如果資料表目前的識別值小於識別欄位所儲存的最大識別值，就會利用識別欄位中的最大值來重設它。 請參閱稍後的＜例外＞一節。|  
 |DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|目前的識別值設為 *new_reseed_value*。 如果建立好資料表之後並未插入任何資料列，或者已經使用 TRUNCATE TABLE 陳述式來移除所有資料列，則執行 DBCC CHECKIDENT 之後所插入的第一個資料列就會使用 *new_reseed_value* 作為識別。 若資料表中有資料列，或已使用 DELETE 陳述式移除所有資料列，插入的下一列就會使用 *new_reseed_value* + [目前增量](../../t-sql/functions/ident-incr-transact-sql.md)值。 若交易插入一個資料行，並於稍後進行復原，則下一個插入的資料行會使用 *new_reseed_value* + [current increment](../../t-sql/functions/ident-incr-transact-sql.md) 值，如同資料列已遭到刪除。 如果資料表不是空的，則將識別值設定為小於識別欄位中最大值的數字，可能會導致下列其中一種狀況：<br /><br /> -如果識別欄位有 PRIMARY KEY 或 UNIQUE 條件約束，則之後對資料表進行插入作業時會產生錯誤訊息 2627，因為所產生的識別值會與現有值相衝突。<br /><br /> -如果沒有 PRIMARY KEY 或 UNIQUE 條件約束，則之後進行的插入作業會導致重複的識別值。|  
   
 ## <a name="exceptions"></a>例外狀況
@@ -167,7 +167,7 @@ GO
 
 ### <a name="d-resetting-the-identity-value-on-an-empty-table"></a>D. 在空白資料表上重設識別值
 
- 下列範例會在刪除資料表中所有記錄後，強制將 `ErrorLog` 資料表中 `ErrorLogID` 資料行內的目前識別值設定為 1。 因為資料表沒有現有的資料列，所以下一個插入的資料列將會使用 1 作為值，也就是目前的識別值，而不新增針對資料行定義的遞增值。  
+ 下列範例會在刪除資料表中所有記錄後，強制將 `ErrorLogID` 資料表中 `ErrorLog` 資料行內的目前識別值設定為 1。 因為資料表沒有現有的資料列，所以下一個插入的資料列將會使用 1 作為值，也就是目前的識別值，而不新增針對資料行定義的遞增值。  
   
 ```sql
 USE AdventureWorks2012;  

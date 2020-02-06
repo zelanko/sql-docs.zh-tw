@@ -16,10 +16,10 @@ ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04b3bdcd2b495513500d07583fadc910fe9c13a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954688"
 ---
 # <a name="executeupdate-method-javalangstring"></a>executeUpdate 方法 (java.lang.String)
@@ -43,8 +43,8 @@ public final int executeUpdate(java.lang.String sql)
 ## <a name="exceptions"></a>例外狀況
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>Remarks
-這個 executeUpdate 方法是由 java.sql.PreparedStatement 介面中的 executeUpdate方法指定。
+## <a name="remarks"></a>備註
+這個 executeUpdate 方法是由 java.sql.PreparedStatement 介面中的 executeUpdate 方法指定。
 
 呼叫這個方法將會產生例外狀況，因為當建立 SQLServerPreparedStatement 物件時，已指定此物件的 SQL 陳述式。
 

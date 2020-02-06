@@ -15,10 +15,10 @@ ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9e3bbe6e788512144211ed35d1cfa8326d8f3ef7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290020"
 ---
 # <a name="expressions-page"></a>運算式頁面

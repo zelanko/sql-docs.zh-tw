@@ -24,10 +24,10 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 61dad85fb7857b8694712f79b860f58d88e7d650
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291199"
 ---
 # <a name="term-lookup-transformation"></a>詞彙查閱轉換
@@ -63,7 +63,7 @@ ms.locfileid: "71291199"
   
  當查閱項目在參考集中包含重疊的詞彙 (即，在一個以上參考記錄中找到子詞彙) 時，「詞彙查閱」轉換只會傳回一個查閱結果。 下列範例顯示查閱項目包含重疊子詞彙時的結果。 此處的重疊子詞彙為 *Windows*，其在兩個參考詞彙中均有找到。 但轉換不會傳回兩個結果，而只會傳回單一參考詞彙 *Windows*。 第二個參考詞彙 *Windows 7 Professional*不會傳回。  
   
-|項目|ReplTest1|  
+|Item|值|  
 |----------|-----------|  
 |輸入詞彙|Windows 7 Professional|  
 |參考詞彙|Windows、Windows 7 Professional|  
@@ -71,7 +71,7 @@ ms.locfileid: "71291199"
   
  「詞彙查閱」轉換可以比對包含特殊字元的名詞及名詞片語，且參考資料表中的資料可能包含這些字元。 特殊字元如下：%、@、&、$、#、\*、:、;、.、 **,** 、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、" 和 '。  
   
-## <a name="data-types"></a>資料型別  
+## <a name="data-types"></a>資料類型  
  「詞彙查閱」轉換只可以使用具有 DT_WSTR 或 DT_NTEXT 資料類型的資料行。 如果資料行包含文字，但不具有這些資料類型的其中之一，則「資料轉換」可以將具有 DT_WSTR 或 DT_NTEXT 資料類型的資料行加入資料流程，並將資料行值複製至新資料行。 然後，「資料轉換」的輸出可以用作「詞彙查閱」轉換的輸入。 如需詳細資訊，請參閱 [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)。  
   
 ## <a name="configuration-the-term-lookup-transformation"></a>設定詞彙查閱轉換  
@@ -89,7 +89,7 @@ ms.locfileid: "71291199"
   
  查閱資料表必須是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 Access 資料庫中的資料表。 如果將「詞彙擷取」轉換的輸出儲存為資料表，不僅可將此資料表用為參考資料表，也可以使用其他資料表。 在您可以使用「詞彙查閱」轉換之前，一般檔案、Excel 活頁簿或其他來源中的文字必須匯入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫或 Access 資料庫。  
   
- 「詞彙查閱」轉換會使用個別 OLE DB 連接，以連接到參考資料表。 如需詳細資訊，請參閱 [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md)。  
+ 「詞彙查閱」轉換會使用個別 OLE DB 連接，以連接到參考資料表。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
  「詞彙查閱」轉換以完全預先快取模式運作。 在執行階段，「詞彙查閱」轉換在處理任何轉換輸入資料列之前，會從參考資料表讀取詞彙，並將其儲存於其私用記憶體中。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "71291199"
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

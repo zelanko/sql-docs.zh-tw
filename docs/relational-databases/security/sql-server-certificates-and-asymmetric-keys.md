@@ -14,10 +14,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 99e5f88f730953929115a5b18c00e5d1bb67562e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126832"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 憑證與非對稱金鑰
@@ -45,7 +45,7 @@ ms.locfileid: "68126832"
 ### <a name="using-a-certificate-in-sql-server"></a>在 SQL Server 中使用憑證  
  憑證可用來維護連接的安全、在資料庫鏡像中用來簽署封裝和其他物件，或是加密資料或連接。 下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中憑證的其他資源。  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)|說明用來建立憑證的命令。|  
 |[使用數位簽章來識別封裝的來源](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|顯示有關如何使用憑證來簽署軟體封裝的資訊。|  
@@ -59,7 +59,7 @@ ms.locfileid: "68126832"
 ### <a name="using-an-asymmetric-key-in-sql-server"></a>在 SQL Server 中使用非對稱金鑰  
  非對稱金鑰可用來維護資料的安全或是簽署純文字。 下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中非對稱金鑰的其他資源。  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)|說明用來建立非對稱金鑰的命令。|  
 |[SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)|顯示用來簽署物件的選項。|  

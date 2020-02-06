@@ -1,6 +1,6 @@
 ---
 title: 執行緒視窗
-titleSuffix: T-SQL Debugger
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -10,15 +10,15 @@ ms.assetid: e153f619-0049-4162-9076-c24a454f3278
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 03/14/2017
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba4f72bc5848f14e2bfd9821c43f024a129092e1
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 057178568ef12c6de42cde518c02db1ae137a0ae
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119240"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253012"
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Transact-SQL 偵錯工具 - 執行緒視窗
 
@@ -34,8 +34,8 @@ ms.locfileid: "74119240"
   
 -   在 [偵錯]  功能表中，按一下 [視窗]  ，再按一下 [執行緒]  。  
   
-## <a name="columns"></a>[資料行]  
- **ID**  
+## <a name="columns"></a>資料行  
+ **識別碼**  
  這是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具指派給執行緒的唯一識別碼。 您可以從 sys.dm_os_threads 動態管理檢視選取資料列，以尋找有關執行緒的詳細資訊。  
   
  如果您不是在輕量型共用模式下執行，請選取一個資料列，其中的 os_thread_id 值符合 [識別碼]  資料行中的值。 如果您在輕量型共用模式下執行，請選取一個資料列，其中的 fiber_context_address 值符合 [識別碼]  資料行中的值。  
@@ -55,7 +55,7 @@ ms.locfileid: "74119240"
  **位置**  
  顯示所偵錯之查詢編輯器工作階段內使用的指令碼檔案名稱。  
   
- **優先權**  
+ **優先順序**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具不支援這個功能。  
   
  **暫止**  

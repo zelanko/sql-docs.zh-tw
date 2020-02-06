@@ -26,13 +26,13 @@ author: rothja
 ms.author: jroth
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 6a274535d53b7eec57fdf257425f855eded5d046
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121783"
 ---
-# <a name="select-localvariable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
+# <a name="select-local_variable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   將區域變數設為運算式的值。  
@@ -56,7 +56,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 將右邊的值指派給左邊的變數。  
   
 複合指派運算子：  
-  |! 運算子之後 |action |   
+  |! 運算子之後 |動作 |   
   |-----|-----|  
   | = | 將後面的運算式指派給變數。 |  
   | += | 加並指派 |   
@@ -71,7 +71,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
  *expression*  
  這是任何有效的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 其中包括純量子查詢。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  SELECT @*local_variable* 通常用來將單一值傳回給變數。 不過，當 *expression* 是資料行名稱時，它可以傳回多個值。 如果 SELECT 陳述式傳回多個值，就會將最後傳回的值指派給變數。  
   
  如果 SELECT 陳述式未傳回任何資料列，變數會保留它目前的值。 如果 *expression* 是未傳回任何值的純量子查詢，變數會設為 NULL。  
@@ -83,7 +83,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-use-select-localvariable-to-return-a-single-value"></a>A. 使用 SELECT @local_variable 傳回單一值  
+### <a name="a-use-select-local_variable-to-return-a-single-value"></a>A. 使用 SELECT @local_variable 傳回單一值  
  在下列範例中，`@var1` 變數指派了 `Generic Name` 來作為值。 針對 `Store` 資料表的查詢不會傳回任何資料列，因為資料表中並沒有指定給 `CustomerID` 的值。 變數會保留 `Generic Name` 值。  
   
 ```sql  
@@ -105,7 +105,7 @@ SELECT @var1 AS 'Company Name';
  Generic Name  
  ```  
   
-### <a name="b-use-select-localvariable-to-return-null"></a>B. 使用 SELECT @local_variable 傳回 Null  
+### <a name="b-use-select-local_variable-to-return-null"></a>B. 使用 SELECT @local_variable 傳回 Null  
  在下列範例中，利用子查詢來將值指派給 `@var1`。 由於針對 `CustomerID` 所要求的值並不存在，因此，子查詢不會傳回任何值，變數會設為 `NULL`。  
   
 ```sql  

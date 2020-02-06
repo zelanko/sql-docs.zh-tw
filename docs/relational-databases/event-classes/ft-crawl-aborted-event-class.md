@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df18d75f240b4447579a84ad023ecee9757feeb4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089348"
 ---
 # <a name="ftcrawl-aborted-event-class"></a>FT:Crawl Aborted 事件類別
@@ -25,7 +25,7 @@ ms.locfileid: "68089348"
   
 ## <a name="ftcrawl-aborted-event-class-data-columns"></a>FT:Crawl Aborted 事件類別資料行  
   
-|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|正在執行全文檢索搜耙的資料庫識別碼。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |**錯誤**|**int**|給定事件的錯誤號碼。 通常這是存放在 **sysmessages** 資料表中的錯誤號碼。|31|是|  

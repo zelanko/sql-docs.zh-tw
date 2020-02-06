@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ede74cb467b0ee9f83c72c5c07ee1b933c1a7fa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072106"
 ---
 # <a name="drop-view-transact-sql"></a>DROP VIEW (Transact-SQL)
@@ -63,7 +63,7 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
  *view_name*  
  這是要移除的檢視名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當您卸除檢視時，也會從系統目錄中刪除檢視的定義和檢視的其他相關資訊。 檢視的所有權限也都會刪除。  
   
  在利用 DROP TABLE 來卸除的資料表中，您必須利用 DROP VIEW 來明確卸除任何檢視。  

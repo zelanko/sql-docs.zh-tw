@@ -1,10 +1,7 @@
 ---
-title: IntelliSense 所支援的 Transact-SQL 語法 | Microsoft 文件
-ms.custom: ''
-ms.date: 03/16/2017
+title: IntelliSense 所支援的 Transact-SQL 語法
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -14,13 +11,16 @@ helpviewer_keywords:
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63e8ba6c7770679ca487d945e4823f70425413ba
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5acada236056a5691ceebe81d0372f1fa06543f1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253260"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252982"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense 所支援的 Transact-SQL 語法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68253260"
 |||  
 |-|-|  
 |SELECT|WHERE|  
-|FROM|ORDER BY|  
+|FROM|排序依據|  
 |HAVING|UNION|  
 |FOR|GROUP BY|  
 |頂端|OPTION (hint)|  
@@ -51,7 +51,7 @@ ms.locfileid: "68253260"
 |[INSERT](../../t-sql/statements/insert-transact-sql.md)|所有語法，但 *execute_statement* 子句除外。|None|  
 |[UPDATE](../../t-sql/queries/update-transact-sql.md)|所有語法。|None|  
 |[DELETE](../../t-sql/statements/delete-transact-sql.md)|所有語法。|None|  
-|[DECLARE@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|所有語法。|None|  
+|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|所有語法。|None|  
 |[SET@local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|所有語法。|None|  
 |[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|可執行使用者定義的預存程序、系統預存程序、使用者定義的函數以及系統函數。|None|  
 |[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|所有語法。|None|  
@@ -73,7 +73,7 @@ ms.locfileid: "68253260"
   
     -   資料表、檢視、資料表值函式和資料表運算式  
   
-    -   [資料行]  
+    -   資料行  
   
     -   程序和程序參數  
   

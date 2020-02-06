@@ -29,10 +29,10 @@ ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 28952359d69fa1fa1c140a8a2a18222ec114cea0
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593909"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
@@ -75,7 +75,7 @@ _varbinary\_literal_
 > [!WARNING]  
 >  絕對不要在此陳述式中傳遞純文字的資料行加密金鑰值。 這麼做會影響此功能的優。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `CREATE COLUMN ENCRYPTION KEY` 陳述式必須包含至少一或兩個值。 如您可以使用 [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](alter-column-encryption-key-transact-sql.md)，稍後再新增第二個值。 您也可以使用 `ALTER COLUMN ENCRYPTION KEY` 陳述式來移除值。  
   
 一般來說，資料行加密金鑰建立時只會使用一個加密值。 有時候，您需要輪替資料行主要金鑰，以新的資料行主要金鑰來取代目前的資料行主要金鑰。 需要輪替金鑰時，請新增資料行加密金鑰的新值，並使用新的 CMK 加密。 此輪替一方面可讓您確保用戶端應用程式能夠存取由資料行加密金鑰加密的資料，一方面也可確保用戶端應用程式能夠使用新的資料行主要金鑰。 如果用戶端應用程式中的驅動程式已啟用 Always Encrypted，但沒有新的主要金鑰存取權，其將使用以舊資料行主要金鑰加密的資料行加密金鑰值來存取敏感性資料。  

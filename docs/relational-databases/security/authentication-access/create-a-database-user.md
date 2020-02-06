@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981933"
 ---
 # <a name="create-a-database-user"></a>建立資料庫使用者
@@ -48,11 +48,11 @@ ms.locfileid: "73981933"
   
  如果您不熟悉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，就很難判斷您要建立的使用者類型。 先問問自己，需要存取資料庫的個人或群組是否有登入？ Master 資料庫中的登入通常是管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的人員，以及需要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的執行個體上存取許多或所有資料庫的人員。 針對此情況，您將建立 **有登入的 SQL 使用者**。 連接到資料庫時，資料庫使用者是登入的識別。 資料庫使用者可以使用相同的名稱做為登入，但是並非必要。 本主題假設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中已有登入存在。 如需如何建立登入的相關資訊，請參閱 [建立登入](../../../relational-databases/security/authentication-access/create-a-login.md)。  
   
- 如果需要存取資料庫的個人或群組沒有登入，以及如果他們只需要存取一個或數個資料庫，請建立 **Windows 使用者** 或 **有密碼的 SQL 使用者**。 也稱為自主資料庫使用者，它不會與 master 資料庫中的登入相關聯。 當您想要能夠輕鬆地在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體之間移動資料庫時，這是很好的選擇。 若要在 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]上使用此選項，系統管理員必須先針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]啟用自主資料庫，以及針對內含項目啟用資料庫。 如需詳細資訊，請參閱 [自主資料庫使用者 - 使資料庫可攜](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+ 如果需要存取資料庫的個人或群組沒有登入，以及如果他們只需要存取一個或數個資料庫，請建立 **Windows 使用者** 或 **有密碼的 SQL 使用者**。 也稱為自主資料庫使用者，它不會與 master 資料庫中的登入相關聯。 當您想要能夠輕鬆地在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體之間移動資料庫時，這是很好的選擇。 若要在 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]上使用此選項，系統管理員必須先針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]啟用自主資料庫，以及針對內含項目啟用資料庫。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
 > **重要！** 以自主資料庫使用者身分連接時，您必須提供資料庫的名稱做為連接字串的一部分。 若要在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]中指定資料庫，可在 [連接到]  對話方塊中，按一下 [選項]  ，然後按一下 [連接屬性]  索引標籤。  
   
- 當連接的人員無法使用 Windows 驗證時，請根據 [SQL Server 驗證登入]  選取 [有密碼的 SQL 使用者]  或 [有登入的 SQL 使用者]  。 當您組織外部的人員 (例如客戶) 要連接到您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，這是很常見的情況。  
+ 當連接的人員無法使用 Windows 驗證時，請根據 [SQL Server 驗證登入]  選取 [有密碼的 SQL 使用者]  或 [有登入的 SQL 使用者]  。 當您組織外部的人員 (例如客戶) 要連接到您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]時，這是很常見的情況。  
   
 > **提示！** 對組織內部的人員來說，Windows 驗證是比較好的選擇，因為他們不需要記住額外的密碼，以及因為 Windows 驗證可提供額外的安全性功能，例如 Kerberos。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "73981933"
      **登入名稱**  
      輸入使用者的登入。 或者，按一下省略符號 **(...)** ，開啟 [選取登入]  對話方塊。 如果您從 **[使用者類型]** 清單中選取 **[有登入的 SQL 使用者]** 或 **[Windows 使用者]** ， **[登入名稱]** 就是可用的。  
   
-     [密碼]  與 [確認密碼]   
+     **[密碼]** 與 **[確認密碼]**  
      針對在資料庫上進行驗證的使用者輸入密碼。  
   
      **預設語言**  
@@ -115,7 +115,7 @@ ms.locfileid: "73981933"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他選項  
- [資料庫使用者 - 新增]  對話方塊也會在其他四個頁面上提供選項：[自有結構描述]  、[成員資格]  、[安全性實體]  和 [延伸屬性]  。  
+ [資料庫使用者 - 新增]  對話方塊也在其他四個頁面上提供選項：[擁有的結構描述]  、[成員資格]  、[安全性實體]  和 [擴充屬性]  。  
   
 -   **[擁有的結構描述]** 頁面列出新資料庫使用者可擁有的所有可能結構描述。 若要在資料庫使用者中加入或移除結構描述，請在 **[這個使用者擁有的結構描述]** 底下選取或清除結構描述旁邊的核取方塊。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "73981933"
   
 -   **[擴充屬性]** 頁面讓您能夠將自訂屬性加入至資料庫使用者。 此頁面提供下列選項。  
   
-     **資料庫**  
+     **Database**  
      顯示選取之資料庫的名稱。 此欄位是唯讀的。  
   
      **定序**  

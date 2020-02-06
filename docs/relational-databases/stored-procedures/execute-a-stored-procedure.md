@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f088c526666dcd81d269bc68479914202969a2e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934042"
 ---
 # <a name="execute-a-stored-procedure"></a>執行預存程序
@@ -121,7 +121,7 @@ ms.locfileid: "67934042"
   
     2.  停止某個程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時執行。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  如需詳細資訊，請參閱 [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md) 和 [EXECUTE AS 子句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
   
 ####  <a name="Permissions"></a> 權限  

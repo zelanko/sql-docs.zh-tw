@@ -1,7 +1,6 @@
 ---
-title: 安裝 Distributed Replay |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 安裝 Distributed Replay
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,22 +8,26 @@ ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4aa2cc0859972f980e26d67e054dba3c955527c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 4679b1f2ca6de3a358528a7ef24af8f118aa5f45
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950031"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74992177"
 ---
 # <a name="install-distributed-replay"></a>安裝 Distributed Replay
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  您可以使用下列三種方式之一來安裝 Distributed Replay︰  
+
+您可以使用下列三種方式之一來安裝 Distributed Replay︰  
   
 -   [從 [安裝精靈] 安裝 Distributed Replay](#bkmk_wizard)  
   
--   [從命令提示字元處安裝 Distributed Replay](#bkmk_command_prompt)  
+-   [從命令提示字元安裝 Distributed Replay](#bkmk_command_prompt)  
   
--   [使用組態檔安裝 Distributed Replay](#bkmk_configuration_file)  
+-   [使用設定檔安裝 Distributed Replay](#bkmk_configuration_file)  
   
 ##  <a name="bkmk_wizard"></a> 從 [安裝精靈] 安裝 Distributed Replay  
  您可以使用 [ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈] 安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Distributed Replay 功能。 規劃要安裝這些功能的位置時，請考慮下列事項：  
@@ -39,10 +42,10 @@ ms.locfileid: "67950031"
   
 -   在效能測試案例中，我們不建議您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的目標執行個體上安裝管理工具、Distributed Replay Controller 服務或 Client 服務。 在目標伺服器上安裝這些所有功能應限於應用程式相容性的功能測試。  
   
--   安裝之後，必須先執行控制器服務 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller)，然後再啟動用戶端上的 Distributed Replay Client 服務。  
+-   安裝之後，必須先執行控制器服務 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller)，然後再啟動用戶端上的 Distributed Replay Client 服務。  
   
 > [!NOTE]  
->  如果要移除或變更 Distributed Replay 功能，請使用 Windows [控制台]  中的 [程式和功能]  視窗。 在 [解除安裝或變更程式]  視窗中，選取 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]]，然後按一下 [移除]  開啟 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈。 在 [選取功能]  頁面上，核取您想要移除的 Distributed Replay 功能。  
+>  如果要移除或變更 Distributed Replay 功能，請使用 Windows [控制台]  中的 [程式和功能]  視窗。 在 [解除安裝或變更程式][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] **視窗中，選取 [** ]，然後按一下 [移除]  開啟 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈。 在 [選取功能]  頁面上，核取您想要移除的 Distributed Replay 功能。  
   
  **必要條件：**  
   
@@ -75,7 +78,7 @@ ms.locfileid: "67950031"
   
 #### <a name="to-install-distributed-replay-features"></a>安裝 Distributed Replay 功能  
   
-1.  如果要開始安裝 Distributed Replay 功能，請啟動 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈。  
+1.  如果要開始安裝 Distributed Replay 功能，請啟動 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈。  
   
 2.  [安裝程式支援規則]  頁面會識別安裝 SQL Server 安裝程式支援檔案時可能會發生的問題。 您必須先更正任何安裝程式支援失敗，然後再繼續進行安裝。  
   
@@ -85,7 +88,7 @@ ms.locfileid: "67950031"
   
 5.  在 [安裝程式支援檔案]  頁面上，按一下 [安裝]  ，即可安裝或更新 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的安裝程式支援檔案。  
   
-6.  在 [安裝程式角色]  頁面上，選取 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能安裝]  ，然後按一下 [下一步]  繼續前往 [特徵選取]  頁面。  
+6.  在 [安裝程式角色]  頁面上，選取 [ **功能安裝][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ，然後按一下 [下一步]  繼續前往 [特徵選取]  頁面。  
   
 7.  在 [特徵選取]  頁面上，設定您想要安裝的功能。  
   
@@ -115,7 +118,7 @@ ms.locfileid: "67950031"
   
     2.  在 64 位元電腦上，預設安裝路徑為 **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-9. 完成後，請按一下 [下一步]  。  
+9. 完成後，請按 [下一步]  。  
   
 10. 在 [安裝規則]  頁面上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會驗證您的電腦組態。 當驗證程序完成之後，請按一下 [下一步]  。  
   
@@ -153,15 +156,15 @@ ms.locfileid: "67950031"
   
  您可以使用下表中的參數來開發安裝的命令列指令碼。  
   
-|參數|Description|支援的值|  
+|參數|描述|支援的值|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **選擇性**|Distributed Replay Controller 服務的服務帳戶。|檢查帳戶和密碼|  
 |/CTLRSVCPASSWORD<br /><br /> **選擇性**|Distributed Replay Controller 服務帳戶的密碼。|檢查帳戶和密碼|  
-|/CTLRSTARTUPTYPE<br /><br /> **選擇性**|Distributed Replay Controller 服務的啟動類型。|Automatic<br /><br /> 已停用<br /><br /> 手動|  
+|/CTLRSTARTUPTYPE<br /><br /> **選擇性**|Distributed Replay Controller 服務的啟動類型。|自動<br /><br /> 已停用<br /><br /> 手動|  
 |/CTLRUSERS<br /><br /> **選擇性**|指定哪些使用者擁有 Distributed Replay Controller 服務的權限。|使用者帳戶字串的集合，以 " " (空格) 作為分隔符號<br /><br /> **重要事項**：當您設定 Distributed Replay Controller 服務時，可以指定將用來執行 Distributed Replay Client 服務的一個或多個使用者帳戶。 下列是支援帳戶的清單：<br /><br /> 網域使用者帳戶<br /><br /> 使用者建立的本機使用者帳戶<br /><br /> 系統管理員<br /><br /> 系統管理員<br /><br /> 虛擬帳戶和 MSA (受管理的服務帳戶)<br /><br /> 網路服務、本機系統和系統<br /><br /> <br /><br /> 注意：不接受群組帳戶 (本機或網域) 和其他內建帳戶 (例如 Everyone)。|  
 |/CLTSVCACCOUNT<br /><br /> **選擇性**|Distributed Replay Client 服務的服務帳戶。|檢查帳戶和密碼|  
 |/CLTSVCPASSWORD<br /><br /> **選擇性**|Distributed Replay 用戶端服務帳戶的密碼。|檢查帳戶和密碼|  
-|/CLTSTARTUPTYPE<br /><br /> **選擇性**|Distributed Replay Client 服務的啟動類型。|Automatic<br /><br /> 已停用<br /><br /> 手動|  
+|/CLTSTARTUPTYPE<br /><br /> **選擇性**|Distributed Replay Client 服務的啟動類型。|自動<br /><br /> 已停用<br /><br /> 手動|  
 |/CLTCTLRNAME<br /><br /> **選擇性**|用戶端與 Distributed Replay Controller 服務通訊的電腦名稱。||  
 |/CLTWORKINGDIR<br /><br /> **選擇性**|Distributed Replay Client 服務的工作目錄。|有效路徑|  
 |/CLTRESULTDIR<br /><br /> **選擇性**|Distributed Replay Client 服務的結果目錄。|有效路徑|  
@@ -217,7 +220,7 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay 需求](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [管理工具命令列選項 &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [設定 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   

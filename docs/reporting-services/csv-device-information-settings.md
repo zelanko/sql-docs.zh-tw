@@ -12,10 +12,10 @@ ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9423f82e025146773c5d04a276cf15c76c6b1101
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571602"
 ---
 # <a name="csv-device-information-settings"></a>CSV 裝置資訊設定
@@ -23,7 +23,7 @@ ms.locfileid: "65571602"
   
  下表列出以 Text 格式轉譯的裝置資訊設定。  
   
-|設定|ReplTest1|  
+|設定|值|  
 |-------------|-----------|  
 |**編碼方式**|.NET Framework 所支援之字元編碼方式的 Internet Assigned Numbers Authority (IANA) 名稱。 預設值為 **UTF-8**。 其他值的範例包括 ASCII、UTF-7 和 UTF-16。|  
 |**ExcelMode**|指定 Excel 的目標輸出。 預設值為 **true**。|  

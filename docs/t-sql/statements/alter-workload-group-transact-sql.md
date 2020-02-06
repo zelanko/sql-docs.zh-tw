@@ -18,10 +18,10 @@ ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 47b924754f221b93e8f9e661a1b12afb5f07fcd4
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70026235"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "70026235"
 
   變更現有的資源管理員工作負載群組設定，並選擇性地將其指派給資源管理員資源集區。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>語法  
   
@@ -142,7 +142,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 > "default" 選項會區分大小寫。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  在預設群組中允許使用 ALTER WORKLOAD GROUP。  
   
  工作負載群組組態的變更在執行 ALTER RESOURCE GOVERNOR RECONFIGURE 前不會生效。 當變更計劃影響設定時，只有在執行 DBCC FREEPROCCACHE (*pool_name*) 之後新的設定才會在先前已快取的計劃中生效，其中 *pool_name* 是工作負載群組相關聯之 Resource Governor 資源集區的名稱。  
@@ -156,7 +156,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  要執行 DDL 陳述式時，建議您先熟悉資源管理員的狀態。 如需詳細資訊，請參閱 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。  
   
- REQUEST_MEMORY_GRANT_PERCENT：在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，允許建立索引即可使用比一開始授與的記憶體更多工作區記憶體來改善效能。 資源管理員的更新版本中支援此特殊處理，不過，初始授與和任何額外的記憶體授與都會受到資源集區和工作負載群組設定的限制。  
+ REQUEST_MEMORY_GRANT_PERCENT：在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，允許建立索引即可使用比一開始授與之記憶體更多的工作空間記憶體來改善效能。 資源管理員的更新版本中支援此特殊處理，不過，初始授與和任何額外的記憶體授與都會受到資源集區和工作負載群組設定的限制。  
   
  **在資料分割資料表上建立索引**  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3c78124b3836026ced3f36500ed5558b58009fe5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136631"
 ---
 # <a name="stored-procedure-properties-general-page"></a>預存程序屬性 (一般頁面)
@@ -25,7 +25,7 @@ ms.locfileid: "68136631"
   顯示預存程序的相關資訊。 所有資訊為唯讀。  
   
 ## <a name="options"></a>選項。  
- **[資料庫備份]**  
+ **Database**  
  包含此預存程序之資料庫的名稱。  
   
  **Server**  

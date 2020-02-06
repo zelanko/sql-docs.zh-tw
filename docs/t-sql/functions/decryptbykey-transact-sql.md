@@ -21,10 +21,10 @@ ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9ca108b3336a77becc605040b12c0361db4ac903
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251374"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
@@ -58,10 +58,10 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 **\@authenticator**  
 含有驗證器從中產生之資料的變數。 必須符合提供給 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值。 *\@authenticator* 具有 **sysname** 資料類型。  
 
-## <a name="return-types"></a>傳回類型  
-**varbinary**，大小上限為 8,000 個位元組。 如果未開啟用於資料加密的對稱金鑰，或「加密文字」  為 NULL，則 `DECRYPTBYKEY` 會傳回 NULL。  
+## <a name="return-types"></a>傳回型別  
+**varbinary**，大小上限為 8,000 個位元組。 如果未開啟用於資料加密的對稱金鑰，或「加密文字」`DECRYPTBYKEY`*為 NULL，則*  會傳回 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `DECRYPTBYKEY` 使用對稱金鑰。 資料庫必須已開啟此對稱金鑰。 `DECRYPTBYKEY` 允許同時開啟多個金鑰。 加密文字解密之前，您不需要立即開啟金鑰。  
   
 對稱式加密和解密運作起來通常較快，而且非常適合涉及大量資料的作業。  

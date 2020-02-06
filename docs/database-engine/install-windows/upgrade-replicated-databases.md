@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72008461"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>升級或修補複寫的資料庫

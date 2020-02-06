@@ -11,10 +11,10 @@ ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c462eb1957f1c8014dd9220f86cb9ae3e32ea65f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295187"
 ---
 # <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters (SSISDB 資料庫)
@@ -26,13 +26,13 @@ ms.locfileid: "71295187"
 
   針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中出現的所有封裝和專案顯示參數。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |parameter_id|**bigint**|參數的唯一識別碼 (ID)。|  
 |project_id|**bigint**|專案的唯一識別碼。|  
 |object_type|**smallint**|參數類型。 專案參數的值會是 `20`，而封裝參數的值則會是 `30`。|  
 |object_name|**sysname**|對應專案或封裝的名稱。|  
-|parameter_name|**sysname(nvarchar(128))**|參數的名稱。|  
+|parameter_name|**sysname(nvarchar(128))**|參數名稱。|  
 |data_type|**nvarchar(128)**|參數的資料類型。|  
 |required|**bit**|當值為 `1` 時，必須有參數值才能開始執行。 當值為 `0` 時，不需要參數值即可開始執行。|  
 |sensitive|**bit**|當值為 `1` 時，參數值為敏感值。 當值為 `0` 時，參數值則不是敏感值。|  

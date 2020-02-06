@@ -1,10 +1,7 @@
 ---
-title: 註冊已連接的伺服器 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/28/2016
+title: 註冊已連線的伺服器
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -15,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 24751639dcd0484bb31f1783ca936dddd3e9240c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 07/28/2016
+ms.openlocfilehash: 2487dff89a32c4a5b62bcbb7a610e88f58ed2f78
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256307"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256285"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>註冊連接的伺服器 (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (SSMS) 註冊 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中已連接的伺服器。 透過註冊伺服器，您可以儲存經常存取之伺服器的連接資訊。 您可以在連接之前或連接時從 [物件總管] 註冊伺服器。  您可以從功能表瀏覽至 [檢視]  \\[已註冊的伺服器]  ，在 SSMS 中檢視已註冊的伺服器。
+
+本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (SSMS) 註冊 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中已連接的伺服器。 透過註冊伺服器，您可以儲存經常存取之伺服器的連接資訊。 您可以在連接之前或連接時從 [物件總管] 註冊伺服器。  您可以從功能表瀏覽至 [檢視]  \\[已註冊的伺服器]  ，在 SSMS 中檢視已註冊的伺服器。
   
  **本主題內容**  
   
@@ -53,7 +56,7 @@ Windows 驗證模式允許使用者透過 [!INCLUDE[msCoName](../../includes/msc
      > [!IMPORTANT]  
      > [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] 如需詳細資訊，請參閱 [選擇驗證模式](../../relational-databases/security/choose-an-authentication-mode.md)。  
 
-     -    **User name**  
+     -    **使用者名稱**  
 顯示您所連接的目前使用者名稱。 只有在您已選取使用 Windows 驗證進行連接時，才能使用此唯讀選項。 若要變更 **[使用者名稱]** ，請以不同使用者登入電腦。 
 
      -    **登入**  
@@ -74,13 +77,12 @@ Windows 驗證模式允許使用者透過 [!INCLUDE[msCoName](../../includes/msc
 **已註冊的伺服器描述**  
 輸入伺服器的選擇性描述。  
   
-**測試**  
+**Test**  
 按一下以測試與 [伺服器名稱]  中選取之伺服器的連接。  
   
 **儲存**  
 按一下即可儲存已註冊的伺服器設定。 
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
+
 [建立新的已註冊伺服器 (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)
-  
-  

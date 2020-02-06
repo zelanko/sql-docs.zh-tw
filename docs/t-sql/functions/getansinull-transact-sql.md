@@ -21,10 +21,10 @@ ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c5c52edfde8a0cde06ec5a0f2f154df06b6b6c12
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843721"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
@@ -45,10 +45,10 @@ GETANSINULL ( [ 'database' ] )
  '*database*'  
  這是傳回的 Null 屬性資訊所針對的資料庫名稱。 *database 可以是 **char** 或 **nchar**。 若為 **char**，則 *database* 會隱含轉換成 **nchar**。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 若資料庫的可 NULL 性允許 Null 值，則 GETANSINULL 會傳回 1。 此傳回值也需要其並未明確定義資料行或資料類型可 NULL 性。 ANSI NULL 預設為 1。 
   
  若要啟用 ANSI NULL 預設行為，則必須符合下列條件之一：  

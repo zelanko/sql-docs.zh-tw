@@ -16,10 +16,10 @@ ms.assetid: 8a98c8a8-61d0-40c9-9335-25a87b732dc3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f8961f6b67a4b22370d6712e44616036631d1935
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979485"
 ---
 # <a name="getstring-method-javalangstring-sqlserverresultset"></a>getString 方法 (java.lang.String) (SQLServerResultSet)
@@ -45,7 +45,7 @@ public java.lang.String getString(java.lang.String columnName)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getString 方法是由 java.sql.ResultSet 介面中的 getString 方法指定。  
   
  SQL Server 中的所有資料行都可以當做字串傳回， 這表示可以傳回所有數字和字元類型的**字串**表示法，以及二進位資料行的十六進位字串表示法，例如 binary、varbinary、varbinary(max)、image、timestamp 和 uniqueidentifier。  

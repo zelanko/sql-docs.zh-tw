@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3f9324ee324188fd8cf70f97280b5e613ffd1178
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843647"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
@@ -40,10 +40,10 @@ ms.locfileid: "73843647"
 NEWID ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  `NEWID()` 符合 RFC4122。  
   
 ## <a name="examples"></a>範例  
@@ -71,7 +71,7 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- 下列範例會建立 **uniqueidentifier** 資料類型的 `cust` 資料表，且使用 NEWID 在資料表中填入預設值。 在指派 `NEWID()` 的預設值時，每個新的資料列和現有的資料列，都有唯一的 `CustomerID` 資料行值。  
+ 下列範例會建立 `cust`uniqueidentifier**資料類型的** 資料表，且使用 NEWID 在資料表中填入預設值。 在指派 `NEWID()` 的預設值時，每個新的資料列和現有的資料列，都有唯一的 `CustomerID` 資料行值。  
   
 ```  
 -- Creating a table using NEWID for uniqueidentifier data type.  

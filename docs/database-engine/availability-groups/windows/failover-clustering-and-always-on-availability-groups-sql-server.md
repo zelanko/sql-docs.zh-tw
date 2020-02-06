@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 62b5f1d23608ce6337befa1e4888ad2cda543dc9
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822249"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)
@@ -74,7 +74,7 @@ ms.locfileid: "74822249"
  **可用性群組的容錯移轉原則設定適用於所有複本，無論複本裝載於獨立執行個體或 FCI 執行個體。  
   
 > [!NOTE]  
->  如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的 FCI 和 **Always On 可用性群組**內**節點數目**的詳細資訊，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
+>  如需 **版本的 FCI 和**Always On 可用性群組**內**節點數目[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的詳細資訊，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI 裝載可用性複本的考量  
   
@@ -115,13 +115,13 @@ ms.locfileid: "74822249"
   
      [以有限安全性設定 SQL Server 的 Windows 容錯移轉叢集 (可用性群組或 FCI)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security/)  
   
-     [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
 -   **白皮書：**  
   
-     [Always On Architecture Guide:Building a High Availability and Disaster Recovery Solution by Using Failover Cluster Instances and Availability Groups](https://msdn.microsoft.com/library/jj215886.aspx) (Always On 架構指南：使用容錯移轉叢集執行個體和可用性群組，建置高可用性和災害復原解決方案)  
+     [AlwaysOn 架構指南：使用容錯移轉叢集執行個體和可用性群組，建立高可用性和災害復原解決方案](https://msdn.microsoft.com/library/jj215886.aspx)  
   
      [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

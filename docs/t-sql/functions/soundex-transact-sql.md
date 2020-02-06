@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3f0a8dd4c5faecc54b7d1c5a5d506fc7cf4ecd00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67907073"
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
@@ -46,10 +46,10 @@ SOUNDEX ( character_expression )
  *character_expression*  
  為字元資料的英數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是常數、變數或資料行。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **varchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  SOUNDEX 會根據字串發音，將英數字串轉換為四個字元的代碼。 代碼的第一個字元是 *character_expression* 的第一個字元，轉換成大寫。 代碼的第二到第四個字元是數字，代表運算式中的字母。 字母 A、E、I、O、U、H、W 和 Y 除非是字串的第一個字母，否則會忽略它們。 如果需要產生四個字元的代碼，則在尾端加入零。 如需 SOUNDEX 代碼的詳細資訊，請參閱 [Soundex 索引系統](https://www.archives.gov/research/census/soundex.html)。  
   
  不同字串的 SOUNDEX 代碼可以相比較，來查看字串發音相似度。 DIFFERENCE 函數會在兩個字串上執行 SOUNDEX，並傳回整數，表示這些字串的 SOUNDEX 代碼相似度。  

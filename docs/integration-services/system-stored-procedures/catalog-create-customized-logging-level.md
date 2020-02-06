@@ -11,10 +11,10 @@ ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 87acb8f9b15fa2b22f4a7f1dbe01669eff08b92e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281021"
 ---
 # <a name="catalogcreate_customized_logging_level"></a>catalog.create_customized_logging_level 
@@ -76,7 +76,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
   
  *level_id* 是 **bigint**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  若要結合 Transact-SQL 中 *profile_value* 或 *events_value* 引數的多個值，請遵循此範例。 若要擷取 OnError (8) 和 DiagnosticEx (15) 事件，計算 *events_value* 的公式是 `2^8 + 2^15 = 33024`。  
   
 ## <a name="return-codes"></a>傳回碼  

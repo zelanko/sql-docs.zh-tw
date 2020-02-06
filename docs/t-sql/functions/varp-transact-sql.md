@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 49b699b943041ba3edf91db9e96a6e044826d854
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927576"
 ---
 # <a name="varp-transact-sql"></a>VARP (Transact-SQL)
@@ -57,10 +57,10 @@ VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  _partition\_by\_clause_ 會將 FROM 子句所產生結果集分割成函式所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 _order\_by\_clause_ 可決定執行作業的邏輯順序。 需要 _order\_by\_clause_。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果在 SELECT 陳述式的所有項目上使用 VARP，結果集中的每個值都會包含在計算中。 VARP 只能搭配數值資料行來使用。 會忽略 Null 值。  
   
  VARP 未搭配 OVER 和 ORDER BY 子句使用時，是具決定性函數。 使用 OVER 和 ORDER BY 子句指定時，則不具決定性。 如需詳細資訊，請參閱 [決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
@@ -68,7 +68,7 @@ VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-varp"></a>A：使用 VARP  
- 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之`SalesPerson` 資料表中所有獎金值母體的變異數。  
+ 下列範例會傳回 `SalesPerson` 資料庫之[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中所有獎金值母體的變異數。  
   
 ```  
 SELECT VARP(Bonus)  
@@ -79,7 +79,7 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-varp"></a>B：使用 VARP  
- 下列範例會傳回 `dbo.FactSalesQuota` 資料表中所有銷售配額值的 `VARP`。 第一個資料行包含所有相異值的變異數，而第二個資料行則包含所有值的變異數 (包含任何重複的值)。  
+ 下列範例會傳回 `VARP` 資料表中所有銷售配額值的 `dbo.FactSalesQuota`。 第一個資料行包含所有相異值的變異數，而第二個資料行則包含所有值的變異數 (包含任何重複的值)。  
   
 ```  
 -- Uses AdventureWorks  

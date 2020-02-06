@@ -15,10 +15,10 @@ ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b989d4958da67a0959c0d3686a1d207c4353e302
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846657"
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>資料庫鏡像 - 使用傳出連接的憑證
@@ -64,7 +64,7 @@ ms.locfileid: "70846657"
      例如，建立 HOST_A 系統的憑證。  
   
     > [!IMPORTANT]  
-    >  如果您想要使用此憑證一年以上，請在 CREATE CERTIFICATE 陳述式中使用 EXPIRY_DATE 選項來指定 UTC 時間格式的到期日。 此外，我們建議您使用 SQL Server Management Studio 建立原則式管理規則，在您的憑證即將過期時通知您。 使用 [原則管理] 的 [建立新條件]  對話方塊，在 [憑證]  Facet 的 **\@ExpirationDate** 欄位上建立這個規則。 如需詳細資訊，請參閱 [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 和 [保護 SQL Server 的安全](../../relational-databases/security/securing-sql-server.md)。  
+    >  如果您想要使用此憑證一年以上，請在 CREATE CERTIFICATE 陳述式中使用 EXPIRY_DATE 選項來指定 UTC 時間格式的到期日。 此外，我們建議您使用 SQL Server Management Studio 建立原則式管理規則，在您的憑證即將過期時通知您。 使用 [原則管理] 的 [建立新條件]  對話方塊，在 [憑證] **\@ Facet 的** **ExpirationDate** 欄位上建立這個規則。 如需詳細資訊，請參閱 [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 和 [保護 SQL Server 的安全](../../relational-databases/security/securing-sql-server.md)。  
   
     ```  
     USE master;  
@@ -113,7 +113,7 @@ ms.locfileid: "70846657"
     GO  
     ```  
   
-     如需詳細資訊，請參閱 [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)。  
+     如需詳細資訊，請參閱 [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)的相關資訊。  
   
 4.  備份憑證，並將其複製到其他一或多個系統。 若要在其他系統上設定傳入連接，就必須執行此動作。  
   
@@ -165,11 +165,11 @@ GO
  使用您所選的任何安全方式，將憑證複製到其他系統。 務必將您所有的憑證小心保管。  
   
 > [!IMPORTANT]  
->  在設定傳出連接後，您必須在每個伺服器執行個體上設定其他一或多個伺服器執行個體的傳入連接。 如需詳細資訊，請參閱[允許資料庫鏡像端點使用傳入連接的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)。  
+>  在設定傳出連接後，您必須在每個伺服器執行個體上設定其他一或多個伺服器執行個體的傳入連接。 如需詳細資訊，請參閱 [允許資料庫鏡像端點使用輸入連線的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)。  
   
  如需建立鏡像資料庫的相關資訊，包括 Transact-SQL 範例在內，請參閱[準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
- 如需建立高效能模式工作階段的 Transact-SQL 範例，請參閱[範例：使用憑證設定資料庫鏡像 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
+ 如需建立高效能模式工作階段的 Transact-SQL 範例，請參閱 [範例：使用憑證設定資料庫鏡像 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  除非您可保證網路的安全無虞，否則建議您對資料庫鏡像連接使用加密。  

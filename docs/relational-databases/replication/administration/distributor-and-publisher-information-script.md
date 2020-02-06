@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e6db876f54d28594786e585ba9f907c59f645c93
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 14221eb76ed4c7ec587e493163caa299aa243967
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768784"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288193"
 ---
 # <a name="distributor-and-publisher-information-script"></a>散發者與發行者資訊指定碼
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68768784"
   
 -   變更 `use AdventureWorks2012` 行以使用您的發行集資料庫之名稱。  
   
--   從 `exec sp_helparticle @publication='<PublicationName>'` 行移除註解 (`--`)，並使用發行集的名稱取代 \<發行集名稱>。  
+-   從 `--` 行移除註解 (`exec sp_helparticle @publication='<PublicationName>'`)，並使用發行集的名稱取代 \<發行集名稱>。  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  

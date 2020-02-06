@@ -19,10 +19,10 @@ ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6d81c961600eca7dddd1ecd5995dbb488094aafb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294932"
 ---
 # <a name="creating-a-package-programmatically"></a>以程式設計方式建立封裝
@@ -67,7 +67,7 @@ Module Module1
 End Module  
 ```  
   
- 若要編譯和執行範例，請在 Visual Studio 中按 F5。 若要使用 C# 編譯器 **csc.exe** 建置程式碼，請在要編譯的命令提示字元之下，使用下列命令與檔案參考，以 .cs 或 .vb 檔案的名稱取代 \<filename>  ，並提供您所選擇的 *\<outputfilename>* 。  
+ 若要編譯和執行範例，請在 Visual Studio 中按 F5。 若要使用 C# 編譯器 **csc.exe** 建置程式碼，請在要編譯的命令提示字元之下，使用下列命令與檔案參考，以 .cs 或 .vb 檔案的名稱取代 *filename>\<* ，並提供您所選擇的 *\<outputfilename>* 。  
   
  **csc /target:library /out: \<outputfilename>.dll \<filename>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
@@ -75,7 +75,7 @@ End Module
   
  **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- 您也可以載入儲存在磁碟上、在檔案系統或是儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的現有封裝以建立封裝。 其差異在於會先建立 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 物件，然後其中一個應用程式的多載方法會填入封裝物件：**LoadPackage** 用於一般檔案、**LoadFromSQLServer** 用於儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的封裝，或是 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 用於儲存到檔案系統的封裝。 下列範例會從磁碟載入現有封裝，然後檢視封裝上的數個屬性。  
+ 您也可以載入儲存在磁碟上、在檔案系統或是儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的現有封裝以建立封裝。 其差異在於會先建立 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 物件，然後其中一個應用程式的多載方法會填入套件物件：**LoadPackage** 用於一般檔案、**LoadFromSQLServer** 用於儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的套件，或是 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 用於儲存到檔案系統的套件。 下列範例會從磁碟載入現有封裝，然後檢視封裝上的數個屬性。  
   
 ```csharp  
 using System;  

@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 30977ed0baff058c838403b436a4da497c5ac4c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121987"
 ---
 # <a name="not-transact-sql"></a>NOT (Transact-SQL)
@@ -46,12 +46,12 @@ ms.locfileid: "68121987"
  這是任何有效的布林[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="result-types"></a>結果類型  
- **布林**  
+ **布林值**  
   
 ## <a name="result-value"></a>結果值  
  NOT 會反轉任何布林運算式的值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  使用 NOT 會執行運算式的否定運算。  
   
  下表會利用 NOT 運算子來顯示 TRUE 和 FALSE 值的比較結果。  

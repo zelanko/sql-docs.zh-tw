@@ -13,10 +13,10 @@ ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b4fa1d2dd8219c28a1fd9c8f3f403c6098d96e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298072"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 來源編輯器 (連接管理員頁面)
@@ -61,7 +61,7 @@ ms.locfileid: "71298072"
  **執行模式**  
  指定從來源中擷取資料的方法。  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
 |**P - 觸發處理鏈結**|觸發處理序鏈結。 在此情況下， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝會啟動擷取處理序。|  
 |**W - 等候通知**|等候來自 SAP Netweaver BW 系統的通知，以便開始擷取資料。 在此情況下，SAP Netweaver BW 系統會啟動擷取處理序。|  

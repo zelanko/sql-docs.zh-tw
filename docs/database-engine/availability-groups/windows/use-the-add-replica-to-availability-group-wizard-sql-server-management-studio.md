@@ -16,10 +16,10 @@ ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: afca5e00f95056fc201f37260088c90004ff3d1f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244976"
 ---
 # <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>在 SQL Server 管理中使用 [可用性群組精靈] 將複本新增至 Always On 可用性群組
@@ -70,14 +70,14 @@ ms.locfileid: "75244976"
   
 3.  以滑鼠右鍵按一下您要加入次要複本的可用性群組，並選取 [加入複本]  命令。 這會啟動 [將複本加入至可用性群組] 精靈。  
   
-4.  在 **[連接到現有次要複本]** 頁面上，連接到可用性群組中的每一個次要複本。 如需詳細資訊，請參閱[連接到現有次要複本頁面 &#40;新增複本精靈：新增資料庫精靈 &#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)。  
+4.  在 **[連接到現有次要複本]** 頁面上，連接到可用性群組中的每一個次要複本。 如需詳細資訊，請參閱[連接到現有次要複本頁面 &#40;加入複本精靈/加入資料庫精靈&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)。  
   
-5.  在 **[指定複本]** 頁面上，針對可用性群組指定並設定一個或多個新次要複本。 此頁面包含三個索引標籤。 下表將介紹這些索引標籤。 如需詳細資訊，請參閱[指定複本頁面 &#40;新增可用性群組精靈：新增複本精靈 &#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)。  
+5.  在 **[指定複本]** 頁面上，針對可用性群組指定並設定一個或多個新次要複本。 此頁面包含三個索引標籤。 下表將介紹這些索引標籤。 如需詳細資訊，請參閱[指定複本頁面 &#40;新增可用性群組精靈：加入複本精靈&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)。  
   
     |索引標籤|簡短描述|  
     |---------|-----------------------|  
     |**複本**|使用此索引標籤可指定將裝載新次要複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。|  
-    |**端點**|使用此索引標籤來驗證每個新次要複本的現有資料庫鏡像端點 (如果有的話)。 如果在其服務帳戶使用 Windows 驗證的伺服器執行個體上缺少此端點，精靈會嘗試自動建立該端點。<br /><br /> <br /><br /> 注意:如果有任何伺服器執行個體在非網域使用者帳戶之下執行，您需要對伺服器執行個體進行手動變更，才可以在精靈中繼續執行。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#Prerequisites)＞。|  
+    |**端點**|使用此索引標籤來驗證每個新次要複本的現有資料庫鏡像端點 (如果有的話)。 如果在其服務帳戶使用 Windows 驗證的伺服器執行個體上缺少此端點，精靈會嘗試自動建立該端點。<br /><br /> <br /><br /> 注意：如果有任何伺服器執行個體在非網域使用者帳戶之下執行，您需要對伺服器執行個體進行手動變更，然後才可以在精靈中繼續執行。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#Prerequisites)＞。|  
     |**備份喜好設定**|使用此索引標籤可指定整個可用性群組的備份喜好設定，如果您希望修改目前設定，可指定個別可用性複本的備份優先權。|  
   
 6.  如果選取的複本包含具有資料庫主要金鑰的資料庫，請在 [密碼]  資料行中輸入資料庫主要金鑰的密碼。 [狀態]  資料行會針對具有資料庫主要金鑰的資料庫指出 [需要密碼]  。 在 [密碼]  資料行中輸入正確的密碼之前，[下一步]  會呈現灰色。 輸入密碼之後，請按一下 [重新整理]  。 如果您已正確輸入密碼，[狀態] 資料行會指出 [已輸入密碼]  ，而且 [下一步]  會變成可用。  
@@ -116,7 +116,7 @@ ms.locfileid: "75244976"
      當精靈完成時，按一下 **[關閉]** 以結束。  
   
 > [!IMPORTANT]  
->  新增複本之後，請參閱＜後續操作：新增複本之後＞一節，位於[將次要複本新增至可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)中。  
+>  加入複本之後，請參閱 [將次要複本加入至可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   

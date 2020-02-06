@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3d820e8740740335a576385a7c971d1e0fe5eb5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67942946"
 ---
 # <a name="grant-database-scoped-credential-permissions-transact-sql"></a>GRANT 資料庫範圍認證 (Transact-SQL)
@@ -52,7 +52,7 @@ GRANT permission  [ ,...n ]
  指定要授與的資料庫範圍認證權限。 需要範圍限定詞 "::"。  
   
  *database_principal*  
- 指定要對其授與權限的主體。 它有下列幾種：  
+ 指定要對其授與權限的主體。 下列其中之一：  
   
 -   資料庫使用者  
 -   資料庫角色  
@@ -67,7 +67,7 @@ GRANT OPTION
  指出主體也有權授與指定權限給其他主體。  
   
 AS *granting_principal*  
- 指定主體，執行這項查詢的主體就是從這個主體衍生權限來授與權限。 它有下列幾種：  
+ 指定主體，執行這項查詢的主體就是從這個主體衍生權限來授與權限。 下列其中之一：  
   
 -   資料庫使用者  
 -   資料庫角色  
@@ -78,7 +78,7 @@ AS *granting_principal*
 -   對應至非對稱金鑰的資料庫使用者  
 -   未對應至伺服器主體的資料庫使用者  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  資料庫範圍認證是包含在資料庫內的資料庫層級安全性實體，在權限階層中，該資料庫為其父系。 下方列出的資料庫範圍認證權限，是可以授與的最明確與最有限權限，以及隱含包括這些權限的一般權限。  
   
 |資料庫範圍認證權限|資料庫範圍認證權限所隱含|資料庫權限所隱含|  

@@ -11,10 +11,10 @@ ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8f7474200fa8156ab0663540611803276375ad6b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281186"
 ---
 # <a name="catalogcreate_environment_variable-ssisdb-database"></a>catalog.create_environment_variable (SSISDB 資料庫)
@@ -84,19 +84,19 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 -   使用者未具備適當的權限  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  環境變數可以用來將值有效地指派給專案參數或封裝參數，以用於封裝的執行中。 環境變數啟用了參數值的組織。 變數名稱在環境中必須是唯一的。  
   
  預存程序會驗證變數的資料類型，以確定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄可支援該變數。  
   
 > [!TIP]  
->  請考慮使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 **Int16** 資料類型，而非使用不受支援的 **Sbyte** 資料類型。  
+>  請考慮使用 **中的**Int16[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型，而非使用不受支援的 **Sbyte** 資料類型。  
   
  根據下表，傳遞到這個具有 *value* 參數之預存程序的值，將會從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型轉換為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型：  
   
 |Integration Services 資料類型|SQL Server 資料類型|  
 |------------------------------------|--------------------------|  
-|**布林**|**bit**|  
+|**布林值**|**bit**|  
 |**位元組**|**binary**、**varbinary**|  
 |**DateTime**|**datetime**、**datetime2**、**datetimeoffset**、**smalldatetime**|  
 |**Double**|精確數值：**decimal**、**numeric**；近似數值：**float**、**real**|  

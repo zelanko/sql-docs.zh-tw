@@ -19,10 +19,10 @@ ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: bf40ce38bf96ae4d31c9102290e74d5db2230240
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927389"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
@@ -52,12 +52,12 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  這是一個受限制的 SELECT 陳述式，不允許使用 ORDER BY 子句和 INTO 關鍵字。  
   
 ## <a name="result-types"></a>結果類型  
- **布林**  
+ **布林值**  
   
 ## <a name="result-value"></a>結果值  
  若各組 (_scalar_expression_ **,** _x)_ 的指定比較都是 TRUE (其中 *x* 是單一資料行集中的值)，則傳回 TRUE。 否則傳回 FALSE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  ALL 需要正面比較 *scalar_expression* 與子查詢所傳回的每個值。 例如，如果子查詢傳回 2 和 3 的值，*scalar_expression* <= ALL (子查詢) 會針對值為 2 的 *scalar_expression* 評估為 TRUE。 如果子查詢傳回 2 和 3 的值，*scalar_expression* = ALL (子查詢) 就會評估為 FALSE，因為子查詢 (值為 3) 的某些值不符合運算式準則。  
   
  如需要求正面比較 *scalar_expression* 和僅由子查詢傳回之單一值的陳述式，請參閱 [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md)。  
@@ -65,7 +65,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  本文所使用的子查詢都是指 ALL。 ALL 也可以搭配 [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) 和 [SELECT](../../t-sql/queries/select-transact-sql.md) 使用。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立預存程序，以判斷 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中所指定 `SalesOrderID` 的所有組件，是否都可以在指定的天數內製造出來。 這個範例會使用子查詢，針對特定 `SalesOrderID` 的所有元件建立一份 `DaysToManufacture` 值數目清單，然後確認所有 `DaysToManufacture` 都在指定的天數範圍內。  
+ 下列範例會建立預存程序，以判斷 `SalesOrderID` 資料庫中所指定 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 的所有組件，是否都可以在指定的天數內製造出來。 這個範例會使用子查詢，針對特定 `DaysToManufacture` 的所有元件建立一份 `SalesOrderID` 值數目清單，然後確認所有 `DaysToManufacture` 都在指定的天數範圍內。  
   
 ```  
 -- Uses AdventureWorks  

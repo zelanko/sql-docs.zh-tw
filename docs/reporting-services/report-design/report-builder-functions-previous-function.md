@@ -9,10 +9,10 @@ ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3a54bd68b1bac51581329224aa7e9405cee8e93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577201"
 ---
 # <a name="report-builder-functions---previous-function"></a>報表產生器函式 - Previous 函式
@@ -38,7 +38,7 @@ Previous(expression, scope)
 ## <a name="return-type"></a>傳回類型  
  傳回 **Variant** 或 **Binary**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **Previous** 函數會在套用過所有的排序和篩選之後，針對在指定範圍內評估的運算式傳回上一個值。  
   
  如果 *expression* 未包含彙總，則 **Previous** 函數會預設為報表項目的目前範圍。  
@@ -58,7 +58,7 @@ Previous(expression, scope)
   
 ## <a name="examples"></a>範例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  下列程式碼範例如果置於資料區域的預設資料列中，會為上一個資料列的 `LineTotal` 欄位提供值。  
   
 ### <a name="code"></a>程式碼  
@@ -67,7 +67,7 @@ Previous(expression, scope)
 =Previous(Fields!LineTotal.Value)  
 ```  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  下列程式碼範例顯示的運算式會計算月中特定日的銷售總和，以及該日在去年度的上一個值。 運算式會加到屬於子群組 `GroupbyDay`的資料列中的資料格。 該群組的父群組為 `GroupbyMonth`，這個群組的父群組又為 `GroupbyYear`。 運算式會顯示 GroupbyDay (預設範圍) 的結果，然後再顯示 `GroupbyYear` (GroupbyDay 父群組 `GroupbyMonth`的父代) 的結果。  
   
  例如，如果資料區域具有名為 `Year`的父群組，而其子群組名為 `Month`，該子群組的子群組又名為 `Day` (3 個巢狀層級)。 與群組 `=Previous(Sum(Fields!Sales.Value,"Day"),"Year")` 相關資料列中的運算式 `Day` 會針對去年度的同一日期和月份傳回銷售值。  

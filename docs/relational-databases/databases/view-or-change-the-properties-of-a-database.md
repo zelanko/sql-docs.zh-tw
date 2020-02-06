@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: dc1e6d1021e1e7cf30a683d8c81c625a56b9766c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127061"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>檢視或變更資料庫的屬性
@@ -48,7 +48,7 @@ ms.locfileid: "68127061"
   
 -   當 AUTO_CLOSE 是 ON 時， [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中的某些資料行及 DATABASEPROPERTYEX 函數會傳回 NULL，因為資料庫無法擷取資料。 若要解決此問題，請開啟資料庫。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要具有資料庫的 ALTER 權限，才能變更資料庫的屬性。 至少需要具有公用資料庫角色的成員資格，才能檢視資料庫的屬性。  
@@ -64,7 +64,7 @@ ms.locfileid: "68127061"
 3.  在 **[資料庫屬性]** 對話方塊中，選取一個頁面以檢視對應的資訊。 例如，選取 **[檔案]** 頁面以檢視資料和記錄檔資訊。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- Transact-SQL 提供許多不同的方法來檢視資料庫的屬性，以及變更資料庫屬性。 若要檢視資料庫的屬性，您可以使用 [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 函數和 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視。 若要變更資料庫的屬性，您可以使用您環境適用的 ALTER DATABASE 陳述式版本：[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 或 [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md)。 若要檢視資料庫範圍的屬性，請使用 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 目錄檢視，若要改變資料庫範圍的屬性，請使用 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 陳述式。  
+ Transact-SQL 提供許多不同的方法來檢視資料庫的屬性，以及變更資料庫屬性。 若要檢視資料庫的屬性，您可以使用 [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 函數和 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視。 若要變更資料庫的屬性，您可以使用您環境適用的 ALTER DATABASE 陳述式版本： [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 或 [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md)。 若要檢視資料庫範圍的屬性，請使用 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 目錄檢視，若要改變資料庫範圍的屬性，請使用 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 陳述式。  
   
 #### <a name="to-view-a-property-of-a-database-by-using-the-databasepropertyex-function"></a>使用 DATABASEPROPERTYEX 函數檢視資料庫的屬性  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68127061"
     FROM sys.databases WHERE name = 'AdventureWorks2012';  
     ```  
   
-#### <a name="to-view-the-properties-of-a-database-scoped-configuration-by-querying-sysdatabasesscopedconfiguration"></a>查詢 sys.databases_scoped_configuration 檢視資料庫範圍組態的屬性  
+#### <a name="to-view-the-properties-of-a-database-scoped-configuration-by-querying-sysdatabases_scoped_configuration"></a>查詢 sys.databases_scoped_configuration 檢視資料庫範圍組態的屬性  
   
 1.  連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，然後連接至您要檢視其屬性的資料庫。  
   

@@ -16,13 +16,13 @@ ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d1b8de8961ef9001c7ef94356a2b82bb248271af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65569138"
 ---
-# <a name="msreportserverinstance-properties"></a>MSReportServer_Instance 屬性
+# <a name="msreportserver_instance-properties"></a>MSReportServer_Instance 屬性
   MSReportServer_Instance 類別提供用戶端所需的基本資訊，以連接至安裝的報表伺服器。  
   
 ## <a name="public-properties"></a>公用屬性  

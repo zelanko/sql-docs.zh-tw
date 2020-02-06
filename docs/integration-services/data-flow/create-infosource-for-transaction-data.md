@@ -11,10 +11,10 @@ ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 19c8384a389db2032c36291e669d5dd2885ac8dd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293311"
 ---
 # <a name="create-infosource-for-transaction-data"></a>建立交易資料的 InfoSource
@@ -85,7 +85,7 @@ ms.locfileid: "71293311"
  **型別**  
  顯示與資料流程資料行相關聯的 InfoObject 類型。 下表列出類型的可能值。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |CHA|特性|  
 |UNI|單位|  

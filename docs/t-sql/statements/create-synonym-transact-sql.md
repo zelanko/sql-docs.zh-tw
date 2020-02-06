@@ -23,10 +23,10 @@ ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3682c9faa66252f4e578fe75b41b010380409fc6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982576"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
@@ -84,7 +84,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  當 database_name 是目前的資料庫或 database_name 是 tempdb，而且 object_name 開頭為 # 時，Azure SQL Database 支援三部分名稱格式 database_name.[schema_name].object_name。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  在建立同義字時，基底物件不需要存在。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在執行階段檢查基底物件是否存在。  
   
  您可以建立下列物件類型的同義字：  

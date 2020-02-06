@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 680e944326046ea2fc7694257977c6bc15a4f959
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082276"
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE 資料庫範圍認證 (Transact-SQL)
@@ -58,7 +58,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  指定要撤銷的資料庫範圍認證權限。 需要範圍限定詞 "::"。  
   
  *database_principal*  
- 指定要撤銷其權限的主體。 它有下列幾種：  
+ 指定要撤銷其權限的主體。 下列其中之一：  
   
 -   資料庫使用者  
   
@@ -83,7 +83,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 >  獲得授與 WITH GRANT OPTION 之權限的串聯撤銷，會同時撤銷該權限的 GRANT 和 DENY。  
   
  AS *revoking_principal*  
- 指定主體，執行這項查詢的主體會從這個主體衍生其權限來撤銷權限。 它有下列幾種：  
+ 指定主體，執行這項查詢的主體會從這個主體衍生其權限來撤銷權限。 下列其中之一：  
   
 -   資料庫使用者  
   
@@ -101,7 +101,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   未對應至伺服器主體的資料庫使用者  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  資料庫範圍認證是包含在資料庫內的資料庫層級安全性實體，在權限階層中，該資料庫為其父系。 下方列出的資料庫範圍認證權限，是可以撤銷的最明確與最有限權限，以及隱含包括這些權限的一般權限。  
   
 |資料庫範圍認證權限|資料庫範圍認證權限所隱含|資料庫權限所隱含|  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b2bce8ef0c47a26ef1b1a095160ce6cc7357a00f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127358"
 ---
 # <a name="system-databases"></a>系統資料庫
@@ -28,11 +28,11 @@ ms.locfileid: "68127358"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括下列系統資料庫。  
   
-|系統資料庫|Description|  
+|系統資料庫|描述|  
 |---------------------|-----------------|  
 |[master 資料庫](../../relational-databases/databases/master-database.md)|記錄 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的所有系統層級資訊。|  
 |[msdb 資料庫](../../relational-databases/databases/msdb-database.md)|由 SQL Server Agent 用於排程警示和作業。|  
-|[Model 資料庫](../../relational-databases/databases/model-database.md)|用來當作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上建立之所有資料庫的範本。 對 **model** 資料庫進行的修改 (例如，資料庫大小、定序、復原模式和其他資料庫選項) 會套用到之後建立的任何資料庫。|  
+|[model 資料庫](../../relational-databases/databases/model-database.md)|用來當作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上建立之所有資料庫的範本。 對 **model** 資料庫進行的修改 (例如，資料庫大小、定序、復原模式和其他資料庫選項) 會套用到之後建立的任何資料庫。|  
 |[Resource 資料庫](../../relational-databases/databases/resource-database.md)|是一個唯讀的資料庫，其中包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]擁有的系統物件。 系統物件實際上會保存在 **Resource** 資料庫中，但邏輯上會出現在每個資料庫的 **sys** 結構描述中。|  
 |[tempdb 資料庫](../../relational-databases/databases/tempdb-database.md)|是保存暫存物件或中繼結果集的工作空間。|  
 

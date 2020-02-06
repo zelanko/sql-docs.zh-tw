@@ -14,10 +14,10 @@ ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 17a92a32fba02d8c4da167d412d02eed0d5f6b77
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290418"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>| (位元包含 OR) (SSIS 運算式)
@@ -44,7 +44,7 @@ integer_expression1 | integer_expression2
 ## <a name="result-types"></a>結果類型  
  由兩個引數的資料類型決定。 如需相關資訊，請參閱 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果任一個條件為 Null，則運算式結果為 Null。  
   
 ## <a name="expression-examples"></a>運算式範例  

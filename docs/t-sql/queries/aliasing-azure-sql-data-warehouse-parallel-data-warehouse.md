@@ -13,10 +13,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 3b548dd789bc7e234eb527ffe5766f433a06d77e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244773"
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>別名功能 (Azure SQL 資料倉儲、平行處理資料倉儲)
@@ -47,7 +47,7 @@ object_source [ AS ] alias
   
 -   資料行別名功能：在此範例中，資料行及涉及選取清單中資料行的運算式都採用別名。 `SalesTerritoryRegion AS SalesTR` 示範一個簡單的資料行別名。 `Sum(SalesAmountQuota) AS TotalSales` 示範  
   
--   資料表別名功能：`dbo.DimSalesTerritory AS st` 示範如何為 `dbo.DimSalesTerritory` 資料表建立 `st` 別名。  
+-   資料表別名功能：`dbo.DimSalesTerritory AS st` 示範如何為 `st` 資料表建立 `dbo.DimSalesTerritory` 別名。  
   
 ```  
 -- Uses AdventureWorks  

@@ -15,10 +15,10 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 81f96fac7ea9021c1f5eb39ad186dcdd35c92127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067367"
 ---
 # <a name="model-database"></a>Model 資料庫
@@ -59,9 +59,9 @@ ms.locfileid: "68067367"
 |ANSI_WARNINGS|OFF|是|  
 |ARITHABORT|OFF|是|  
 |AUTO_CLOSE|OFF|是|  
-|AUTO_CREATE_STATISTICS|ON|是|  
+|AUTO_CREATE_STATISTICS|開啟|是|  
 |AUTO_SHRINK|OFF|是|  
-|AUTO_UPDATE_STATISTICS|ON|是|  
+|AUTO_UPDATE_STATISTICS|開啟|是|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|是|  
 |CHANGE_TRACKING|OFF|否|  
 |CONCAT_NULL_YIELDS_NULL|OFF|是|  
@@ -71,10 +71,10 @@ ms.locfileid: "68067367"
 |DATE_CORRELATION_OPTIMIZATION|OFF|是|  
 |DB_CHAINING|OFF|否|  
 |ENCRYPTION|OFF|否|  
-|MIXED_PAGE_ALLOCATION|ON|否|  
+|MIXED_PAGE_ALLOCATION|開啟|否|  
 |NUMERIC_ROUNDABORT|OFF|是|  
 |PAGE_VERIFY|CHECKSUM|是|  
-|PARAMETERIZATION|SIMPLE|是|  
+|PARAMETERIZATION|簡單|是|  
 |QUOTED_IDENTIFIER|OFF|是|  
 |READ_COMMITTED_SNAPSHOT|OFF|是|  
 |RECOVERY|取決於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版*|是|  

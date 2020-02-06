@@ -1,10 +1,7 @@
 ---
-title: 橫幅元素 (ssbdiagnose) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Banner 元素
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,16 +11,23 @@ helpviewer_keywords:
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 202652271b9d8de9603706b9d1c7be8ca9411bb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 446a022570781aa6f965ee6f4728e833620158c2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986214"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257703"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 元素 (ssbdiagnose)
+
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  識別產生 **ssbdiagnose** 輸出 XML 檔的公用程式。  
+
+識別產生 **ssbdiagnose** 輸出 XML 檔的公用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +41,7 @@ ms.locfileid: "67986214"
   
 ## <a name="element-attributes"></a>元素屬性  
   
-|attribute|Description|  
+|屬性|描述|  
 |---------------|-----------------|  
 |**title**|識別產生 **ssbdiagnose** XML 輸出檔的公用程式。|  
 |**product**|識別產生 **ssbdiagnose** XML 輸出檔的產品。|  
@@ -45,7 +49,7 @@ ms.locfileid: "67986214"
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|Description|  
+|特性|描述|  
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  

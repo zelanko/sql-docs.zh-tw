@@ -17,10 +17,10 @@ ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 33c1a7821f532249c13400c3937706267e22bf7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914178"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE 對稱金鑰權限 (Transact-SQL)
@@ -99,7 +99,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *Database_user_with_no_login*  
  指定不含對應伺服器層級主體的資料庫使用者。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  您可以在 [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) 目錄檢視中，看到有關對稱金鑰的資訊。  
   
  從被授與指定了 GRANT OPTION 之權限的主體撤銷該權限時，如果未指定 CASCADE，陳述式便會失敗。  

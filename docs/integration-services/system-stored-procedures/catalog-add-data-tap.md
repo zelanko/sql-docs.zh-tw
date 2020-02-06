@@ -11,10 +11,10 @@ ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 513e4874c858d6ce83b65a9a846aa05617229481
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295569"
 ---
 # <a name="catalogadd_data_tap"></a>catalog.add_data_tap 
@@ -67,7 +67,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  傳回資料點選的識別碼。 *data_tap_id* 是 **bigint**。  
   
 ## <a name="example"></a>範例  
- 下列範例會在資料流程工作 `'Paths[OLE DB Source.OLE DB Source Output]` 中的資料流程路徑 `\Package\Data Flow Task` 上建立資料點選。 點選的資料會儲存在 DataDumps 資料夾 (\<磁碟機  >:\Program Files\Microsoft SQL Server\130\DTS\DataDumps) 的 `output0.txt` 檔案中。  
+ 下列範例會在資料流程工作 `'Paths[OLE DB Source.OLE DB Source Output]` 中的資料流程路徑 `\Package\Data Flow Task` 上建立資料點選。 點選的資料會儲存在 DataDumps 資料夾 (`output0.txt`磁碟機\< *>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps) 的*  檔案中。  
   
 ```sql
 Declare @execution_id bigint  
@@ -80,8 +80,8 @@ Exec SSISDB.Catalog.add_data_tap @execution_id, @task_package_path='\Package\Dat
 Exec SSISDB.Catalog.start_execution @execution_id  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 若要新增資料點選，執行的執行個體必須處於已建立狀態 ([catalog.operations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 檢視之**狀態**資料行中的值為 1)。 狀態值會在您進行執行時變更。 您可以呼叫 [catalog.create_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) 來建立執行。  
+## <a name="remarks"></a>備註  
+ 若要新增資料點選，執行的執行個體必須處於已建立狀態 (**catalog.operations &#40;SSISDB 資料庫&#41;** 檢視之[狀態](../../integration-services/system-views/catalog-operations-ssisdb-database.md)資料行中的值為 1)。 狀態值會在您進行執行時變更。 您可以呼叫 [catalog.create_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) 來建立執行。  
   
  以下是 add_data_tap 預存程序的考量事項。  
   
@@ -126,7 +126,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="requirements"></a>需求  
   
 ## <a name="external-resources"></a>外部資源  
- rafael-salas.com 上的部落格文章：[SSIS 2012:資料點選一覽](https://go.microsoft.com/fwlink/?LinkId=239983)。  
+ rafael-salas.com 上的部落格文章：[SSIS 2012：資料點選一覽](https://go.microsoft.com/fwlink/?LinkId=239983)。  
   
 ## <a name="see-also"></a>另請參閱  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  

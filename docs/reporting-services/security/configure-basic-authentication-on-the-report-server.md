@@ -12,10 +12,10 @@ ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d93152c87ff874014e6960e4f213e5eac050618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573301"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>設定報表伺服器的基本驗證
@@ -36,7 +36,7 @@ ms.locfileid: "65573301"
   
 1.  在文字編輯器中開啟 RSReportServer.config。  
   
-     此檔案位於 \<磁碟機>:  \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer。  
+     此檔案位於 *磁碟機>:\<* \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer。  
   
 2.  尋找 \<**驗證**>。  
   
@@ -80,11 +80,11 @@ ms.locfileid: "65573301"
 ## <a name="rswindowsbasic-reference"></a>RSWindowsBasic 參考  
  當您設定基本驗證時，可以指定下列元素。  
   
-|元素|必要項|有效的值|  
+|元素|必要|有效的值|  
 |-------------|--------------|------------------|  
 |LogonMethod|是<br /><br /> 如果您未指定值，將會使用 3。|**2** = 網路登入，用於驗證純文字密碼的高效能伺服器。<br /><br /> **3** = 純文字登入，可將登入認證保存在隨著每個 HTTP 要求傳送的驗證封裝中，以便在連接至網路中的其他伺服器時，允許伺服器模擬使用者。 (預設值)<br /><br /> 注意： **中** 不 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]支援值 0 (用於互動式登入) 和 1 (用於批次登入)。|  
-|Realm|選擇性|指定資源分割區，其中包含用於控制組織中受保護資源之存取權的授權和驗證功能。|  
-|DefaultDomain|選擇性|指定伺服器用以驗證使用者的網域。 雖然這個值是選擇性的，但是如果您省略它，報表伺服器將使用電腦名稱當做網域。 如果電腦是網域的成員，該網域就是預設網域。 如果您在網域控制站上安裝了報表伺服器，則使用的網域就是電腦所控制的網域。|  
+|Realm|選用|指定資源分割區，其中包含用於控制組織中受保護資源之存取權的授權和驗證功能。|  
+|DefaultDomain|選用|指定伺服器用以驗證使用者的網域。 雖然這個值是選擇性的，但是如果您省略它，報表伺服器將使用電腦名稱當做網域。 如果電腦是網域的成員，該網域就是預設網域。 如果您在網域控制站上安裝了報表伺服器，則使用的網域就是電腦所控制的網域。|  
   
 ## <a name="see-also"></a>另請參閱  
  [報表伺服器應用程式的應用程式網域](../../reporting-services/report-server/application-domains-for-report-server-applications.md)   

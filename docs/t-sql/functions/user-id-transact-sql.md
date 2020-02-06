@@ -23,13 +23,13 @@ ms.assetid: 67fd29bc-eda9-4d4d-b148-5d3659181a43
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1b8b1b0b5a9254382490272bd92405f52ed90a3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927600"
 ---
-# <a name="userid-transact-sql"></a>USER_ID (Transact-SQL)
+# <a name="user_id-transact-sql"></a>USER_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回資料庫使用者的識別碼。  
@@ -50,10 +50,10 @@ USER_ID ( [ 'user' ] )
  *user*  
  要使用的使用者名稱。 *user* 為 **nchar**。 若指定 **char** 值，它會隱含轉換成 **nchar**。 它必須用括號括住。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當省略 *user* 時，會假設為目前的使用者。 如果參數包含 NULL 一詞，即會傳回 NULL。當 USER_ID 在 EXECUTE AS 之後呼叫時，USER_ID 會傳回模擬內容的識別碼。  
   
  未對應至特定資料庫使用者的 Windows 主體藉由群組成員資格來存取資料庫時，USER_ID 會傳回 0 (public 的識別碼)。 如果這類主體建立物件而不指定結構描述，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會建立對應至 Windows 主體的隱含使用者和結構描述。 在這種情況下建立的使用者不能用來連接到資料庫。 對應至隱含使用者的 Windows 主體對 USER_ID 的呼叫會傳回隱含使用者的識別碼。  

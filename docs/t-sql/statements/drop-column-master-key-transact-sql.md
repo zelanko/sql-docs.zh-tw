@@ -20,10 +20,10 @@ ms.assetid: fd5e77c8-a3ae-4795-bb46-b322c0500041
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: f6267189a83816f1c77740e5df176cc2dda86428
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594151"
 ---
 # <a name="drop-column-master-key-transact-sql"></a>DROP COLUMN MASTER KEY (Transact-SQL)
@@ -44,7 +44,7 @@ DROP COLUMN MASTER KEY key_name;
  *key_name*  
  資料行主要金鑰名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  只有在沒有任何資料行加密金鑰值使用資料行主要金鑰來加密時，才能卸除資料行主要金鑰。 若要卸除資料行加密金鑰值，請使用 [DROP COLUMN ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md) 陳述式。  
   
 ## <a name="permissions"></a>權限  
@@ -68,6 +68,6 @@ GO
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
  [Always Encrypted 的金鑰管理概觀](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
- [針對具有安全記憶體保護區的 Always Encrypted 管理金鑰](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+ [為具有安全記憶體保護區的 Always Encrypted 管理金鑰](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

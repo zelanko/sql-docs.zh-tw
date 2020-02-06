@@ -13,10 +13,10 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 05906db66c2bf4948e91dddafa2cdd54aaf936ec
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907302"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>第 1 課：將資料表轉換為階層式結構
@@ -223,7 +223,7 @@ ms.locfileid: "72907302"
     ```  
   
 ## <a name="optimizing-the-neworg-table"></a>最佳化 NewOrg 資料表
-您在[使用現有的階層式資料填入資料表](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)工作中建立的 **NewOrd** 資料表包含所有員工資訊，並使用 **hierarchyid** 資料類型代表階層式結構。 此工作會新增索引以支援在 **hierarchyid** 資料行上進行搜尋。  
+您在 **使用現有的階層式資料填入資料表** 工作中建立的 [NewOrd](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) 資料表包含所有員工資訊，並使用 **hierarchyid** 資料類型代表階層式結構。 此工作會新增索引以支援在 **hierarchyid** 資料行上進行搜尋。  
   
 
 **hierarchyid** 資料行 (**OrgNode**) 是 **NewOrg** 資料表的主要索引鍵。 建立資料表時，它包含名為 **PK_NewOrg_OrgNode** 的叢集索引以強制 **OrgNode** 資料行的唯一性。 此叢集索引也支援深度優先的資料表搜尋。  
@@ -289,7 +289,7 @@ ms.locfileid: "72907302"
     /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
     ```
 
-    **EmployeeID**-優先索引：資料列會以 **EmployeeID** 順序儲存。  
+    **EmployeeID**優先索引：資料列會以 **EmployeeID** 順序儲存。  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID

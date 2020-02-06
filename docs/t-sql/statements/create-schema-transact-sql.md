@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 365abc8df7c64650e3be6c79bcd00725149ec25d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117304"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
@@ -87,7 +87,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  *deny_statement*  
  指定拒絕新結構描述以外任何安全性實體之權限的 DENY 陳述式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 > [!NOTE]  
 >  允許包含 CREATE SCHEMA AUTHORIZATION 但不指定名稱之陳述式的目的，只是為了與舊版相容。 陳述式不會導致錯誤，但是不會建立結構描述。  
@@ -112,7 +112,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  **建立隱含結構描述和使用者**  
   
- 在某些情況下，使用者可以使用資料庫，但是沒有資料庫使用者帳戶 (資料庫中的資料庫主體)。 在下列情況，就會發生上述狀況：  
+ 在某些情況下，使用者可以使用資料庫，但是沒有資料庫使用者帳戶 (資料庫中的資料庫主體)。 此錯誤會於下列情況發生：  
   
 -   登入具有 **CONTROL SERVER** 權限。  
   
@@ -171,7 +171,7 @@ GO
 ```  
   
 ### <a name="c-setting-the-owner-of-a-schema"></a>C. 設定結構描述的擁有者  
- 下列範例會建立由 `Mary` 擁有的 `Production` 結構描述。  
+ 下列範例會建立由 `Production` 擁有的 `Mary` 結構描述。  
   
 ```  
 CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];  

@@ -19,10 +19,10 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8badd727143d80db08eed45ddbf5102c635ddeeb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293901"
 ---
 # <a name="transfer-database-task"></a>傳送資料庫工作
@@ -108,10 +108,10 @@ ms.locfileid: "71293901"
   
 ### <a name="options"></a>選項。  
  **SourceConnection**  
- 在清單中選取 SMO 連線管理員，或按一下 [\<新增連線...>]  建立來源伺服器的新連線。  
+ 在清單中選取 SMO 連線管理員，或按一下 [**新增連線...>]\<** 建立來源伺服器的新連線。  
   
  **DestinationConnection**  
- 在清單中選取一個 SMO 連線管理員，或按一下 [\<新增連線...>]  ，以建立目的地伺服器的新連線。  
+ 在清單中選取一個 SMO 連線管理員，或按一下 [**新增連線...>]\<** ，以建立目的地伺服器的新連線。  
   
  **DestinationDatabaseName**  
  指定目的地伺服器上之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的名稱。  
@@ -135,7 +135,7 @@ ms.locfileid: "71293901"
   
  此屬性具有下表所列的選項：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**True**|覆寫目的地伺服器資料庫。|  
 |**False**|請勿覆寫目的地伺服器資料庫。|  
@@ -164,7 +164,7 @@ ms.locfileid: "71293901"
   
  此屬性具有下表所列的選項：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**True**|重新附加來源資料庫。|  
 |**False**|請勿重新附加來源資料庫。|  

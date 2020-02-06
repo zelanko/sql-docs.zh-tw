@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1020bb9dff821471f33ba3af9285249a93980133
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68055996"
 ---
 # <a name="specify-first-and-last-triggers"></a>指定第一個與最後一個觸發程序
@@ -29,11 +29,11 @@ ms.locfileid: "68055996"
   
  若要指定 AFTER 觸發程序的順序，請使用 **sp_settriggerorder** 預存程序。 **sp_settriggerorder** 具有下列選項。  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
 |**第一個**|指定 DML 觸發程序為針對觸發動作而引發的第一個 AFTER 觸發程序。|  
 |**最後一個**|指定 DML 觸發程序為針對觸發動作而引發的最後一個 AFTER 觸發程序。|  
-|**無**|指定 DML 觸發程序的引發並無特定的順序。 主要用來重設第一個或最後一個觸發程序。|  
+|**None**|指定 DML 觸發程序的引發並無特定的順序。 主要用來重設第一個或最後一個觸發程序。|  
   
  下列範例示範如何使用 **sp_settriggerorder**：  
   
@@ -52,7 +52,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  如果 ALTER TRIGGER 陳述式變更第一個或最後一個觸發程序，則會捨棄 **First** 或 **Last** 屬性，並且將順序值設為 [None]  。 順序必須使用 **sp_settriggerorder**進行重設。  
   
- OBJECTPROPERTY 函式也會利用下列屬性來報告觸發程序究竟是第一個或最後一個觸發程序：**ExecIsFirstInsertTrigger**、**ExecIsFirstUpdateTrigger**、**ExecIsFirstDeleteTrigger**、**ExecIsLastInsertTrigger**、**ExecIsLastUpdateTrigger** 及 **ExecIsLastDeleteTrigger**。  
+ OBJECTPROPERTY 函式使用下列屬性報告觸發程序是第一個還是最後一個觸發程序：**ExecIsFirstInsertTrigger**、**ExecIsFirstUpdateTrigger**、**ExecIsFirstDeleteTrigger**、**ExecIsLastInsertTrigger**、**ExecIsLastUpdateTrigger** 和 **ExecIsLastDeleteTrigger**。  
   
  複寫會為包含在即時更新或佇列式更新訂閱的資料表，自動產生第一個觸發程序。 複寫需要觸發程序是第一個觸發程序。 當您嘗試將含有第一個觸發程序的資料表包括在立即更新或佇列更新訂閱中，複寫會引發錯誤。 如果您嘗試在資料表已加入訂閱後，將觸發程序變成第一個觸發程序，則 **sp_settriggerorder** 會傳回錯誤。 如果您對複寫觸發程序使用 ALTER，或使用 **sp_settriggerorder** 將複寫觸發程序變更為最後一個或無觸發程序，則訂閱將無法正常運作。  
   

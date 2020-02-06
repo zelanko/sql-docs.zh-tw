@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843796"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>開始執行啟用資料庫的延展功能精靈
@@ -56,19 +56,19 @@ ms.locfileid: "73843796"
  ![Stretch Database 精靈的 [簡介] 頁面](../../sql-server/stretch-database/media/stretch-wizard-1.png "Stretch Database 精靈的 [簡介] 頁面")  
   
 ##  <a name="Tables"></a> 選取資料表  
- 選取要針對 Stretch 啟用的資料表。  
+ 選取想要啟用延伸功能的資料表。  
  
 有大量資料列的資料表會出現在排序清單的頂端。 精靈顯示資料表清單之前，它會針對 Stretch Database 目前不支援的資料類型分析它們。 
   
  ![Stretch Database 精靈的 [選取資料表] 頁面](../../sql-server/stretch-database/media/stretch-wizard-2.png "Stretch Database 精靈的 [選取資料表] 頁面")  
   
-|資料行|Description|  
+|資料行|描述|  
 |------------|-----------------|  
-|(沒有標題)|檢查此資料行的核取方塊，以啟用針對 Stretch 選取的資料表。|  
+|(沒有標題)|請勾選此資料欄的核取方塊，以為選取的資料表啟用延伸功能。|  
 |**名稱**|指定資料庫中資料表的名稱。|  
 |(沒有標題)|這個資料行中的符號可能代表警告，您仍然可以選取 Stretch 的資料表。 它也可能代表封鎖的問題，使您無法選取 Stretch 的資料表，比方說，因為資料表使用不支援的資料類型。 將滑鼠停留在工具提示中的符號上，來顯示詳細資訊。 如需詳細資訊，請參閱 [Stretch Database 的限制](../../sql-server/stretch-database/limitations-for-stretch-database.md)。|  
 |**已延展**|指出資料表是否已經針對 Stretch 啟用。|  
-|**移轉**|您可以移轉整個資料表 (**整份資料表**)，或者您可以指定篩選資料表中現有的資料行。 如果您想要使用不同的篩選函數來選取要移轉的資料列，請在結束精靈之後執行 ALTER TABLE 陳述式來指定篩選函數。 如需篩選函數的詳細資訊，請參閱[使用篩選函數選取要移轉的資料列](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。 如需如何套用函數的詳細資訊，請參閱[為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 或 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)。|  
+|**移轉**|您可以移轉整個資料表 (**整份資料表**)，或者您可以指定篩選資料表中現有的資料行。 如果您想要使用不同的篩選函數來選取要移轉的資料列，請在結束精靈之後執行 ALTER TABLE 陳述式來指定篩選函數。 如需有關篩選函數的詳細資訊，請參閱 [Select rows to migrate by using a filter function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)(使用篩選函數選取要移轉的資料列)。 如需如何套用函數的詳細資訊，請參閱[為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 或 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)。|  
 |**資料列**|指定資料表中的資料列數目。|  
 |**大小 (KB)**|指定資料表的大小 (KB)。|  
   
@@ -100,7 +100,7 @@ ms.locfileid: "73843796"
   
 -   結束精靈，然後執行 ALTER TABLE 陳述式來啟用資料表的延展功能以及指定篩選函數。 如需詳細資訊，請參閱 [為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。  
   
--   結束精靈之後，請執行 ALTER TABLE 陳述式來指定篩選函數。 如需必要的步驟，請參閱 [在執行精靈後新增篩選函數](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz)。  
+-   結束精靈之後，請執行 ALTER TABLE 陳述式來指定篩選函數。 如需必要的步驟，請參閱 [Add a filter function after running the Wizard](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz)(在執行精靈後新增篩選函數)。  
   
 ##  <a name="Configure"></a> 設定 Azure  
   
@@ -177,10 +177,10 @@ ms.locfileid: "73843796"
   
 ##  <a name="KnownIssues"></a> 疑難排解精靈  
  **Stretch Database 精靈失敗。**  
- 如果尚未在伺服器層級啟用 Stretch Database，而您在執行精靈來啟用它時未具備系統管理員權限，則精靈會失敗。 請要求系統管理員，在本機伺服器執行個體上啟用 Stretch Database，然後再次執行精靈。 如需詳細資訊，請參閱[必要條件：在伺服器上啟用 Stretch Database 的權限](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)。  
+ 如果尚未在伺服器層級啟用 Stretch Database，而您在執行精靈來啟用它時未具備系統管理員權限，則精靈會失敗。 請要求系統管理員，在本機伺服器執行個體上啟用 Stretch Database，然後再次執行精靈。 如需詳細資訊，請參閱＜ [必要條件：在伺服器上啟用 Stretch Database 的權限](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)＞。  
   
 ## <a name="next-steps"></a>後續步驟  
- 針對 Stretch Database 啟用額外資料表。 監視資料移轉以及管理已啟用 Stretch 的資料庫和資料表。  
+ 為其他資料表啟用 Stretch Database。 監視資料移轉以及管理已啟用 Stretch 的資料庫和資料表。  
   
 -   [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 以啟用額外資料表。  
   
@@ -195,7 +195,7 @@ ms.locfileid: "73843796"
 -   [還原已啟用 Stretch 的資料庫](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [為資料庫啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
+ [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0aeeeab2e90ebd90068be44f817cd6bd65af061
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907270"
 ---
 # <a name="modify-check-constraints"></a>修改檢查條件約束
@@ -42,7 +42,7 @@ ms.locfileid: "72907270"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
@@ -59,7 +59,7 @@ ms.locfileid: "72907270"
   
 4.  完成下表中的動作：  
   
-    |若要|請依照下列步驟：|  
+    |至|請依照下列步驟：|  
     |--------|------------------------|  
     |編輯條件約束運算式|在 **[運算式]** 欄位中輸入新的運算式。|  
     |重新命名條件約束|在 **[名稱]** 欄位中輸入新的名稱。|  
@@ -70,9 +70,9 @@ ms.locfileid: "72907270"
     > [!NOTE]  
     >  某些資料庫具有不同的檢查條件約束功能。  
   
-5.  按一下 [ **關閉**]。  
+5.  按一下 [關閉]  。  
   
-6.  在 [檔案]  功能表上，按一下 [儲存]  _table name_。  
+6.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改檢查條件約束**  

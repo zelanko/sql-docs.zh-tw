@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d81c5865b062e0817c41cef504994f1d6a5c437c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68009525"
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Degree of Parallelism (7.0 Insert) 事件類別
@@ -27,7 +27,7 @@ ms.locfileid: "68009525"
   
 ## <a name="degree-of-parallelism-70-insert-event-class-data-columns"></a>Degree of Parallelism (7.0 Insert) 事件類別資料行  
   
-|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |**BinaryData**|**image**|用來完成處理序的 CPU 數量，根據的值如下：<br /><br /> 0x00000000，表示依序執行的序列計畫。<br /><br /> 0x01000000，表示依序執行的平行計畫。<br /><br /> >= 0x02000000，表示平行執行的平行計畫。|2|否|  

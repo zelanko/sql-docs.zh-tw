@@ -17,10 +17,10 @@ ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fc7a59b36d7fce90315833baf8461a1860be2a64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140912"
 ---
 # <a name="revoke-certificate-permissions-transact-sql"></a>REVOKE 憑證權限 (Transact-SQL)
@@ -55,7 +55,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  指定正在撤銷權限的憑證。 需要範圍限定詞 "::"。  
   
  *database_principal*  
- 指定要撤銷其權限的主體。 它有下列幾種：  
+ 指定要撤銷其權限的主體。 下列其中之一：  
   
 -   資料庫使用者  
   
@@ -80,7 +80,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 >  獲得授與 WITH GRANT OPTION 之權限的串聯撤銷，會同時撤銷該權限的 GRANT 和 DENY。  
   
  AS *revoking_principal*  
- 指定主體，執行這項查詢的主體會從這個主體衍生其權限來撤銷權限。 它有下列幾種：  
+ 指定主體，執行這項查詢的主體會從這個主體衍生其權限來撤銷權限。 下列其中之一：  
   
 -   資料庫使用者  
   
@@ -98,7 +98,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   未對應至伺服器主體的資料庫使用者  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  憑證是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 下面所列的是可以撤銷之最特定且最有限的憑證權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   
 |憑證權限|憑證權限所隱含|資料庫權限所隱含|  

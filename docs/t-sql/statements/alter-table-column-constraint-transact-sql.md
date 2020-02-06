@@ -21,10 +21,10 @@ ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f45cb5b270bff9b2609ca0228c4e37a06314d368
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981999"
 ---
 # <a name="alter-table-column_constraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
@@ -130,9 +130,9 @@ ms.locfileid: "73981999"
   
  例如在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中，**ProductVendor** 資料表與 **Vendor** 資料表有參考關聯性。 **ProductVendor.VendorID** 外部索引鍵會參考 **Vendor.VendorID** 主索引鍵。  
   
- 如果在 **Vendor** 資料表的某資料列上執行 DELETE 陳述式，且指定了 **ProductVendor.VendorID** 的 ON DELETE CASCADE 動作，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 便會檢查 **ProductVendor** 資料表中一或多個相依的資料列。 如果有任何相依的資料列存在，除了 **Vendor** 資料表中所參考的資料列，還會刪除 **ProductVendor** 資料表中的相依資料列。  
+ 如果在 **Vendor** 資料表的某資料列上執行 DELETE 陳述式，且指定了 **ProductVendor.VendorID** 的 ON DELETE CASCADE 動作，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 便會檢查 **ProductVendor** 資料表中一或多個相依的資料列。 如果有任何相依的資料列存在，除了會將 **Vendor** 資料表中所參考的資料列刪除，還會刪除 **ProductVendor** 資料表中的相依資料列。  
   
- 相反地，如果指定 NO ACTION，當 **ProductVendor** 資料表中有至少一個資料列參考 **Vendor** 資料列時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會產生一則錯誤，且會回復 Vendor 資料列的刪除動作。  
+ 相反地，如果指定 NO ACTION，當 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ProductVendor**資料表中有至少一個資料列參考**Vendor **資料列時，** 會產生一則錯誤，且會回復 Vendor 資料列的刪除動作。  
   
  ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
  指定當變更的資料表中之資料列有參考關聯性，且在父資料表中所參考的資料列有了更新時，變更的資料表中之資料列會發生什麼動作。 預設值是 NO ACTION。  
@@ -157,7 +157,7 @@ ms.locfileid: "73981999"
   
  如果在 **Vendor** 資料表的某資料列上執行 UPDATE 陳述式，且指定了 **ProductVendor.VendorID** 的 ON UPDATE CASCADE 動作，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 便會檢查 **ProductVendor** 資料表中一或多個相依的資料列。 如果有任何相依的資料列存在，除了 **Vendor** 資料表中所參考的資料列，還會更新 **ProductVendor** 資料表中的相依資料列。  
   
- 相反地，如果指定了 NO ACTION，當 **ProductVendor** 資料表中有至少一個資料列參考 Vendor 資料列時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會產生一則錯誤，且會回復 **Vendor** 資料列的更新動作。  
+ 相反地，如果指定了 NO ACTION，當 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ProductVendor **資料表中有至少一個資料列參考 Vendor 資料列時，** 會產生一則錯誤，且會回復 **Vendor** 資料列的更新動作。  
   
  NOT FOR REPLICATION  
  **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
@@ -170,7 +170,7 @@ ms.locfileid: "73981999"
  *logical_expression*  
  CHECK 條件約束所使用的邏輯運算式，會傳回 TRUE 或 FALSE。 搭配 CHECK 條件約束使用的 *logical_expression* 無法參考其他資料表，但可以參考相同資料列所在之資料表的其他資料行。 這個運算式不能參考別名資料類型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  加入 FOREIGN KEY 或 CHECK 條件約束時，除非指定 WITH NOCHECK 選項，否則將會驗證所有現有資料的強制違規。 如果有任何違規，ALTER TABLE 便會失敗，且會傳回錯誤。 當現有資料行中加入了新的 PRIMARY KEY 或 UNIQUE 條件約束時，資料行中的資料便必須是唯一的。 如果找到重複的值，ALTER TABLE 便會失敗。 當加入 PRIMARY KEY 或 UNIQUE 條件約束時，WITH NOCHECK 選項沒有作用。  
   
  每個 PRIMARY KEY 和 UNIQUE 條件約束都會產生一個索引。 UNIQUE 和 PRIMARY KEY 條件約束數目無法使資料表的索引數目超出 999 個非叢集索引和 1 個叢集索引。 外部索引鍵條件約束不會自動產生索引。 但外部索引鍵資料行常會用於查詢的聯結準則，方法是將資料表的外部索引鍵條件約束與其他資料表的主要或唯一索引鍵資料行進行比對。 外部索引鍵資料行的索引可讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 快速從外部索引鍵資料表中尋找相關資料。  

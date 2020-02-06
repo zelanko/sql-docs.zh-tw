@@ -26,10 +26,10 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b1446d4b43524a1e670084812279284d86eb1b0b
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71326100"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
@@ -110,7 +110,7 @@ POISON_MESSAGE_HANDLING 會指定是否針對佇列啟用有害訊息處理。 �
 
 ON *filegroup |* [**DEFAULT**] 會指定要在其上建立此佇列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案群組。 您可以利用 *filegroup* 參數來識別檔案群組，或利用 DEFAULT 識別碼來使用 Service Broker 資料庫的預設檔案群組。 在這個子句的內容中，DEFAULT 不是關鍵字，必須用識別碼來分隔。 當沒有指定任何檔案群組時，佇列會使用資料庫的預設檔案群組。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 佇列可以是 SELECT 陳述式的目標。 不過，您只能利用在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談上運作的陳述式來修改佇列的內容，例如 SEND、RECEIVE 和 END CONVERSATION。 佇列不能是 INSERT、UPDATE、DELETE 或 TRUNCATE 陳述式的目標。
 
@@ -128,7 +128,7 @@ ON *filegroup |* [**DEFAULT**] 會指定要在其上建立此佇列的 [!INCLUDE
 
 下表列出佇列中的資料行。
 
-|資料行名稱|資料類型|Description|
+|資料行名稱|資料類型|描述|
 |-----------------|---------------|-----------------|
 |status|**tinyint**|訊息狀態。 RECEIVE 陳述式會傳回 status 為**1** 的所有訊息。 如果訊息保留開啟，則 status 會設定為 0。 如果訊息保留關閉，訊息會從佇列刪除。 佇列中的訊息可包含下列其中一個值：<br /><br /> **0**=已保留接收的訊息<br /><br /> **1**=準備好接收<br /><br /> **2**=未完成<br /><br /> **3**=已保留傳送的訊息|
 |priority|**tinyint**|指派給這個訊息的優先權等級。|

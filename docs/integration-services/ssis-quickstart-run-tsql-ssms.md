@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b2155697d4c936c81c082553e2e499f006e7b945
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295633"
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>使用 Transact-SQL 從 SSMS 執行 SSIS 套件
@@ -36,7 +36,7 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 
 -   Windows 上的 SQL Server。
 
--   Azure SQL Database。 如需在 Azure 部署和執行套件的詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+-   Azure SQL Database。 如需在 Azure 中部署和執行套件的詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
 
 您不能使用本快速入門中的資訊在 Linux 上執行 SSIS 套件。 如需在 Linux 上執行套件的詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../linux/sql-server-linux-migrate-ssis.md)。
 
@@ -57,7 +57,7 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 
 2. 在 [連線至伺服器]  對話方塊中，輸入下列資訊：
 
-   | 設定       | 建議值 | 其他資訊 | 
+   | 設定       | 建議的值 | 其他資訊 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **伺服器類型** | 資料庫引擎 | 這是必要的值。 |
    | **伺服器名稱** | 完整伺服器名稱 | 如果您要連線至 Azure SQL Database 伺服器，則名稱的格式如下：`<server_name>.database.windows.net`。 |
@@ -65,7 +65,7 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
    | **登入** | 伺服器系統管理員帳戶 | 這個帳戶是您在建立伺服器時指定的帳戶。 |
    | **密碼** | 伺服器系統管理員帳戶的密碼 | 這個密碼是您在建立伺服器時指定的密碼。 |
 
-3.  按一下 **[連接]** 。 [物件總管] 視窗會在 SSMS 中開啟。
+3.  按一下 [ **連接**]。 [物件總管] 視窗會在 SSMS 中開啟。
 
 4. 在 [物件總管] 中，展開 [Integration Services 目錄]  ，然後展開 [SSISDB]  以檢視 SSIS 目錄資料庫中的物件。
 
@@ -104,6 +104,6 @@ GO
 - 請考慮使用其他方式來執行套件。
     - [使用 SSMS 執行 SSIS 套件](./ssis-quickstart-run-ssms.md)
     - [使用 Transact-SQL 執行 SSIS 套件 (VS Code)](ssis-quickstart-run-tsql-vscode.md)
-    - [從命令提示字元中執行 SSIS 套件](./ssis-quickstart-run-cmdline.md)
+    - [從命令提示字元執行 SSIS 套件](./ssis-quickstart-run-cmdline.md)
     - [使用 PowerShell 執行 SSIS 套件](ssis-quickstart-run-powershell.md)
     - [使用 C# 執行 SSIS 套件](./ssis-quickstart-run-dotnet.md) 

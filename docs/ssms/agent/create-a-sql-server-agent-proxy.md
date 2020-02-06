@@ -1,10 +1,9 @@
 ---
-title: 建立 SQL Server Agent Proxy | Microsoft Docs
-ms.custom: ''
+title: 建立 SQL Server Agent Proxy
+ms.custom: seo-lt-2019
 ms.date: 05/04/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,13 +11,15 @@ helpviewer_keywords:
 ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 24a1b058fcada694bc117bb261c17b863e4be569
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 5abaf32126cb8d61c6bdc3e7634aa00b6066c054
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553103"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245847"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>建立 SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "69553103"
   
 #### <a name="Permissions"></a>Permissions  
   
--   只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員才擁有建立、修改或刪除 Proxy 帳戶的權限。 非**系統管理員**固定伺服器角色成員的使用者，必須新增至 **msdb** 資料庫中的下列其中一個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色，才可使用 Proxy：**SQLAgentUserRole**、**SQLAgentReaderRole** 或 **SQLAgentOperatorRole**。  
+-   只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員才擁有建立、修改或刪除 Proxy 帳戶的權限。 非 **系統管理員 (sysadmin)** 固定伺服器角色成員的使用者，必須加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫中的下列其中一個** Agent 固定資料庫角色，才可使用 Proxy： **SQLAgentUserRole**、 **SQLAgentReaderRole**或 **SQLAgentOperatorRole**。  
   
 -   如果除了 Proxy 之外還要建立認證，需要 **ALTER ANY CREDENTIAL** 權限。  
   
@@ -106,7 +107,7 @@ ms.locfileid: "69553103"
     GO  
     ```  
   
-如需詳細資訊，請參閱：  
+如需詳細資訊，請參閱  
   
 -   [CREATE CREDENTIAL (Transact-SQL)](https://msdn.microsoft.com/d5e9ae69-41d9-4e46-b13d-404b88a32d9d)  
   

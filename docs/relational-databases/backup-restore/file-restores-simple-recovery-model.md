@@ -20,10 +20,10 @@ ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 4f6d06667e4cb3b2c89d920424fb9801b0e1de2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68138735"
 ---
 # <a name="file-restores-simple-recovery-model"></a>檔案還原 (簡單復原模式)
@@ -48,7 +48,7 @@ ms.locfileid: "68138735"
      如需線上頁面和檔案還原支援的資訊，請參閱 [Database Engine 功能及工作](https://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)。 如需線上還原的詳細資訊，請參閱[線上還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
   
     > [!TIP]  
-    >  如果您想要讓資料庫離線以進行檔案還原，請在啟動還原順序之前，先執行下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 陳述式來使資料庫離線：ALTER DATABASE *database_name* SET OFFLINE。  
+    >  若您要讓資料庫離線以進行檔案還原，請在啟動還原順序之前，執行下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 陳述式：ALTER DATABASE *database_name* SET OFFLINE。  
   
  **本主題內容：**  
   

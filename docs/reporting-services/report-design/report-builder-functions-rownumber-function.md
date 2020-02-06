@@ -9,10 +9,10 @@ ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e918a674b48eeb34fad7ea660b7e907fc9dcb44b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577182"
 ---
 # <a name="report-builder-functions---rownumber-function"></a>報表產生器函式 - RowNumber 函式
@@ -32,7 +32,7 @@ RowNumber(scope)
  *範圍 (scope)*  
  (**字串**) 資料集、資料區或群組的名稱，或為 Null (在**中為** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])，指定要在其中評估資料列數的內容。 **Nothing** 指定最外層的內容，這通常為報表資料集。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **RowNumber** 會傳回指定範圍內資料列計數的執行值，如同 [RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md) 傳回彙總函式的執行值一樣。 當您指定範圍時，可以指定何時要將資料列計數重設為 1。  
   
  *scope* 不可為運算式。 *scope* 必須是包含範圍。 就一般範圍而言，從最外層到最內層的內含項目依序為報表資料集、資料區域、資料列群組或資料行群組。  
