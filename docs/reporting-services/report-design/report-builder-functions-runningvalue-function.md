@@ -9,10 +9,10 @@ ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 91447a23f04b05dc27d0ddcc47ba845d3dc313a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577177"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>報表產生器函式 - RunningValue 函式
@@ -41,7 +41,7 @@ RunningValue(expression, function, scope)
 ## <a name="return-type"></a>傳回類型  
  取決於 *function* 參數所指定的彙總函式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **RunningValue** 的值會針對範圍的每個新執行個體重設為 0。 如果已指定群組，當群組運算式變更時，執行中的值也會重設。 如果已指定資料區域，就會為每個資料區域的新執行個體重設執行中的值。 如果已指定資料集，則整個資料集不會重設執行中的值。  
   
  **RunningValue** 不能用於篩選或排序運算式。  

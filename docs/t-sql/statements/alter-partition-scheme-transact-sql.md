@@ -22,10 +22,10 @@ ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 593c2d8bf9cff3e10aaafc339aa82ef16c4bc09f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071245"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
@@ -60,7 +60,7 @@ NEXT USED [ filegroup_name ] [ ; ]
   
  如果未指定 *filegroup_name*，也沒有標示為 NEXT USED 的檔案群組，ALTER PARTITION SCHEME 便會傳回一則警告。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  只要是 ALTER PARTITION SCHEME 影響所及的檔案群組都必須在線上。  
   
 ## <a name="permissions"></a>權限  

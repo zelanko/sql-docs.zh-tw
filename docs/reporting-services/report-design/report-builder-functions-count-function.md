@@ -9,10 +9,10 @@ ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9cdf7cc51563de96e20e188a7fca2fb0f1ac9631
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579712"
 ---
 # <a name="report-builder-functions---count-function"></a>報表產生器函式 - Count 函式
@@ -41,7 +41,7 @@ Count(expression, scope, recursive)
 ## <a name="return-type"></a>傳回類型  
  傳回 **Integer**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  *scope* 的值必須是字串常數，而且不得為運算式。 如果是未指定其他彙總的外部彙總， *scope* 必須參考目前的範圍或是包含的範圍。 如果是彙總的彙總，巢狀彙總可以指定子範圍。  
   
  *Expression* 可以包含巢狀彙總函式的呼叫，其中包含下列例外和條件：  
@@ -60,7 +60,7 @@ Count(expression, scope, recursive)
   
  範例  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  下列程式碼範例顯示的運算式會針對預設範圍及父群組範圍，計算 `Size` 的非 Null 值數目。 運算式會加到屬於子群組 `GroupbySubcategory`的資料列中的資料格。 父群組是 `GroupbyCategory`。 運算式會先顯示 `GroupbySubcategory` (預設範圍) 的結果，再顯示 `GroupbyCategory` (父群組範圍) 的結果。  
   
 > [!NOTE]  

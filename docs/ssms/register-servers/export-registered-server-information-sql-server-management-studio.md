@@ -1,10 +1,7 @@
 ---
-title: 匯出已註冊的伺服器資訊 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 匯出已註冊的伺服器資訊
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -16,16 +13,22 @@ helpviewer_keywords:
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bb3b4001453ce7c7c256c101244970ff788310b0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 673cde844a678e54ccb5622a55e2d546cf7e9bc9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264736"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246531"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>匯出已註冊的伺服器資訊 (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  本主題描述如何儲存並匯出 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中已註冊伺服器的資訊，並將資訊散發給其他員工或伺服器。 您可以使用此匯出功能，在多部電腦上顯示一致的使用者介面。  
+
+本主題描述如何儲存並匯出 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中已註冊伺服器的資訊，並將資訊散發給其他員工或伺服器。 您可以使用此匯出功能，在多部電腦上顯示一致的使用者介面。  
   
  先匯出然後再匯入已註冊的伺服器檔案，可以讓您輕鬆地在 [已註冊的伺服器] 中使用相同的伺服器設定數部電腦。 從各地的電腦管理大量的伺服器時，或要為較沒有經驗的使用者設定基本連接設定時，這個作法非常有用。  
   

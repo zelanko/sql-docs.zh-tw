@@ -17,10 +17,10 @@ ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 29bf592fcc169f112eb938af19077aa59621b843
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982897"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE 類型權限 (Transact-SQL)
@@ -56,7 +56,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  指定可以撤銷的類型權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  ON TYPE **::** [ *schema_name* ] **.** *type_name*  
- 指定要撤銷其權限的類型。 範圍限定詞 ( **::** ) 是必要項。 如果未指定 *schema_name*，則使用預設結構描述。 如果指定 *schema_name*，則結構描述範圍限定詞 ( **.** ) 為必要項目。  
+ 指定要撤銷其權限的類型。 範圍限定詞 ( **::** ) 是必要項。 若未指定 *schema_name*，則會使用預設結構描述。 如果指定 *schema_name*，則結構描述範圍限定詞 ( **.** ) 為必要項目。  
   
  { FROM | TO } \<database_principal> 指定要對其撤銷權限的主體。  
   
@@ -108,7 +108,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *Database_user_with_no_login*  
  指定不含對應伺服器層級主體的資料庫使用者。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  類型是一個由結構描述所包含的結構描述層級安全性實體，在權限階層中，此結構描述為該安全性實體的父系。  
   
 > [!IMPORTANT]  

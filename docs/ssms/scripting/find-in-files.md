@@ -1,6 +1,6 @@
 ---
-title: 檔案中尋找 | Microsoft Docs
-ms.custom: ''
+title: 檔案中尋找
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45121de07c89603f4de8f2d97ddd7d92d500879b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 4acfec737fb3ba0779c825e294315183ec463cf2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265457"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253885"
 ---
 # <a name="find-in-files"></a>檔案中尋找
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,13 +79,13 @@ ms.locfileid: "68265457"
  **全字拼寫須相符**  
  如果選取此核取方塊，則 [尋找結果] 視窗僅會顯示整個字串與 [尋找目標]  中所指定之字串相符的執行個體。 例如，搜尋 **MyObject** ，將會傳回「MyObject」，但不會傳回「CMyObject」或「MyObjectC」。  
   
- **[使用]**  
+ **使用**  
  指出如何解譯在 [尋找目標]  或 [取代成]  文字方塊中所輸入的特殊字元。 選項包含 **[萬用字元]** 和 **[規則運算式]** 。  
   
  **[規則運算式]**  
  定義要比對之文字模式的特殊標記法。 如需清單，請參閱 [使用規則運算式搜尋文字](../../relational-databases/scripting/search-text-with-regular-expressions.md)。  
   
- **[萬用字元]**  
+ **萬用字元**  
  例如星號 (`*`) 和問號 (`?`) 等特殊字元，代表一或多個字元。 如需清單，請參閱 [使用萬用字元搜尋文字](../../relational-databases/scripting/search-text-with-wildcards.md)。  
   
  **尋找下列檔案類型**  
@@ -104,7 +104,7 @@ ms.locfileid: "68265457"
  選取清單中的任何項目，即可輸入預先設定的搜尋字串，來尋找特定類型的檔案。  
   
 ## <a name="result-options"></a>結果選項  
- 決定按一下 [全部尋找]  時結果的位置。 您可以展開或摺疊 [結果選項]  區段。 您可以選取或清除下列選項。  
+ 決定按一下 [全部尋找]  時結果的位置。 您可以展開或摺疊 **結果選項** 區段。 您可以選取或清除下列選項。  
   
  **尋找結果 1 視窗**  
  如果選取此核取方塊，目前搜尋的結果將會附加至 [尋找結果 1] 視窗的內容。 此視窗會自動開啟，以顯示您的搜尋結果。 若要手動開啟此視窗，請按一下 [檢視]  功能表上的 [其他視窗]  ，然後按一下 [尋找結果 1]  。  

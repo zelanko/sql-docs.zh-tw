@@ -11,10 +11,10 @@ ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 37fc28cbcdbeaa261550f0490dccaf2a25c51cdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579071"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>篩選方程式範例 (報表產生器及 SSRS)
@@ -26,11 +26,11 @@ ms.locfileid: "65579071"
 ## <a name="filter-examples"></a>篩選範例  
  下表說明使用不同資料類型和不同運算子的篩選方程式範例。 比較的範圍是由定義篩選的報表項目所決定。 例如，如果是資料集上所定義的篩選， **TOP % 10** 就是資料集中前百分之 10 的值；如果是群組上所定義的篩選， **TOP % 10** 就是群組中前百分之 10 的值。  
   
-|簡單運算式|資料類型|運算子|ReplTest1|Description|  
+|簡單運算式|資料類型|運算子|值|描述|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
-|`[SUM(Quantity)]`|**Integer**|**>**|`7`|包含大於 7 的資料值。|  
-|`[SUM(Quantity)]`|**Integer**|**TOP N**|`10`|包含前 10 大資料值。|  
-|`[SUM(Quantity)]`|**Integer**|**TOP %**|`20`|包含前百分之 20 的資料值。|  
+|`[SUM(Quantity)]`|**整數**|**>**|`7`|包含大於 7 的資料值。|  
+|`[SUM(Quantity)]`|**整數**|**TOP N**|`10`|包含前 10 大資料值。|  
+|`[SUM(Quantity)]`|**整數**|**TOP %**|`20`|包含前百分之 20 的資料值。|  
 |`[Sales]`|**Text**|**>**|`=CDec(100)`|包含所有大於 $100 之 System.Decimal 類型 (SQL "money" 資料類型) 的值。|  
 |`[OrderDate]`|**DateTime**|**>**|`2008-01-01`|包含從 2008 年 1 月 1 日到目前的所有日期。|  
 |`[OrderDate]`|**DateTime**|**BETWEEN**|`2008-01-01`<br /><br /> `2008-02-01`|包含從 2008 年 1 月 1 日 (含) 算起的日期。|  

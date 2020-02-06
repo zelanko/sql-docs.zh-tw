@@ -12,10 +12,10 @@ ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 30455d77efff3c9a9e4f48b9cbeccfa983001220
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128811"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Reporting Services 屬性 - 報表伺服器系統屬性
@@ -23,7 +23,7 @@ ms.locfileid: "63128811"
   
 ## <a name="properties"></a>屬性  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |SiteName|顯示在使用者介面上的報表伺服器網站名稱。 預設值為 **Microsoft 報表伺服器**。 這個屬性可以是空字串。 最大長度是 8,000 個字元。|  
 |SystemSnapshotLimit|針對報表所儲存之快照集的最大數目。 有效值是 **-1** 到 **2**,**147**,**483**,**647**。 如果此值為 **-1**，表示沒有任何快照集限制。|  

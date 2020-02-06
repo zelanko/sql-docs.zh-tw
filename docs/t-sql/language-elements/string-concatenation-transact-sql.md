@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09f32949faca6994d460284a56e2b08315f1b43b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072256"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (字串串連) (Transact-SQL)
@@ -67,7 +67,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ## <a name="result-types"></a>結果類型  
  傳回優先順序最高之引數的資料類型。 如需詳細資訊，請參閱[資料類型優先順序 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  \+ (字串串連) 運算子的行為，在使用空白、長度為零的字串時，與使用 NULL 或未知的值時，各不相同。 長度為零的字元字串可以指定為兩個單引號，引號內不含任何字元。 長度為零的二進位字串可以指定為不含以十六進位常數指定之任何二進位值的 0x。 串連長度為零的字串，一律會串連兩個指定的字串。 當您使用含 Null 值的字串時，串連結果會隨著工作階段設定而不同。 正如同在 Null 值上執行的算術運算，當未知的值加上 Null 值時，結果通常是未知的值，以 Null 值來執行的字串串連作業也應該產生 Null 結果。 不過，您可以變更目前工作階段的 `CONCAT_NULL_YIELDS_NULL` 設定來變更這個行為。 如需詳細資訊，請參閱 [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)。  
   
  如果字串的串連結果超出 8,000 位元組的限制，就會截斷結果。 不過，如果至少有一個串連的字串是大數值類型時，就不會截斷。  

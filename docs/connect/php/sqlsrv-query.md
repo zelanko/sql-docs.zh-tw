@@ -18,13 +18,13 @@ ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ce7a12b3964e3e0c2407521978df03af9d88f63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014967"
 ---
-# <a name="sqlsrvquery"></a>sqlsrv_query
+# <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 準備及執行陳述式。  
@@ -55,19 +55,19 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
   
     下表描述陣列的每個項目：  
   
-    |元素|Description|  
+    |元素|描述|  
     |-----------|---------------|  
     |*$value*|常值、PHP 變數或 PHP by-reference 變數。|  
     |*$direction*[OPTIONAL]|下列其中一項 **SQLSRV_PARAM_\*** 常數，用於指定參數方向：**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 預設值為 **SQLSRV_PARAM_IN**。<br /><br />如需 PHP 常數的詳細資訊，請參閱 [常數 &#40;適用於 SQL Server 之 PHP 的 Microsoft 驅動程序&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
     |*$phpType*[OPTIONAL]|**SQLSRV_PHPTYPE_\*** 常數，指定傳回值的 PHP 資料類型。<br /><br />如需 PHP 常數的詳細資訊，請參閱 [常數 &#40;適用於 SQL Server 之 PHP 的 Microsoft 驅動程序&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
-    |*$sqlType*[OPTIONAL]|**SQLSRV_SQLTYPE_\*** 常數，指定輸入值的 SQL Server 資料類型。<br /><br />如需 PHP 常數的詳細資訊，請參閱[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
+    |*$sqlType*[OPTIONAL]|**SQLSRV_SQLTYPE_\*** 常數，指定輸入值的 SQL Server 資料類型。<br /><br />如需 PHP 常數的詳細資訊，請參閱 [常數 &#40;適用於 SQL Server 之 PHP 的 Microsoft 驅動程序&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
   
 *$options* [選用]：設定查詢屬性的關聯陣列。 它與 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties) 也支援的索引鍵清單相同。
   
 ## <a name="return-value"></a>傳回值  
 陳述式資源。 如果無法建立且 (或) 無法執行陳述式，將會傳回 **false**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 **sqlsrv_query** 函式非常適用於一次性查詢，且應作為執行查詢的預設選擇 (除非情況特殊)。 此函數提供簡便的方法，可用最少量的程式碼來執行查詢。 **sqlsrv_query** 函式可執行陳述式準備和陳述式執行，而且可用來執行參數化查詢。  
   
 如需詳細資訊，請參閱 [如何：使用 SQLSRV 驅動程式擷取輸出參數](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  

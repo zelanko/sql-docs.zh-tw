@@ -1,10 +1,7 @@
 ---
-title: 操作員屬性 (記錄頁面) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: 操作員屬性 (記錄頁面)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +9,20 @@ f1_keywords:
 ms.assetid: d25f79da-1ec1-4683-8ceb-5026b62b7364
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8db0f992f38a3f89c3dd84495459c87f8bc1916d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7ad39e3181dca5041eb4bbe8fddde7284e425280
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260094"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247665"
 ---
 # <a name="operator-properties-history-page"></a>操作員屬性 (記錄頁面)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  

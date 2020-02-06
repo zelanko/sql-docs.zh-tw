@@ -1,10 +1,9 @@
 ---
-title: 逐步解說：新增與變更資料庫圖表 | Microsoft Docs
-ms.custom: ''
+title: 新增及變更資料庫圖表
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +13,16 @@ helpviewer_keywords:
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 30177e5dc9061fb66bffda6203f0740bcac3b5af
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 8333c2120868f8d929d937faa155b7d595abff20
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258926"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246251"
 ---
-# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>逐步解說：新增及變更資料庫圖表
+# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>逐步解說：加入與變更資料庫圖表
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 這個逐步解說將說明如何建立與修改資料庫圖表，以及透過資料庫圖表元件對資料庫進行變更。 您將看到如何將資料表加入至圖表、建立資料表之間的關聯性、建立資料行上的條件約束和索引，以及變更您查看每個資料表的資訊層級。  
   
@@ -45,7 +46,7 @@ ms.locfileid: "68258926"
   
 3.  以滑鼠右鍵按一下 [資料庫圖表] 節點，再選擇 [新增資料庫圖表]  。  
   
-    若資料庫沒有建立圖表所需的物件，便會出現下列訊息：**此資料庫沒有使用資料庫圖表所需的一或多個支援物件。要建立資料庫物件嗎?** 選擇 [ **是**]。  
+    如果資料庫沒有建立圖表所需的物件，便會顯示下列訊息： **此資料庫沒有使用資料庫圖表所需的一或多個支援物件。要建立資料庫物件嗎?** 選擇 [是]  。  
   
     出現 [新增資料表]  對話方塊。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "68258926"
   
 1.  以滑鼠右鍵按一下 `Address` 資料表。 在快速鍵功能表上，指向 [資料表檢視]  ，然後按一下 [標準]  。  
   
-    資料表格線會顯示三個資料行：**資料行名稱**、**資料類型**，以及**允許 Null**。  
+    資料表方格會顯示三個資料行：[資料行名稱]  、[資料類型]  和 [允許 Null]  。  
   
 2.  以滑鼠右鍵按一下 `Address` 資料表、按一下 [資料表檢視]  ，再選取 [索引鍵]  。  
   
@@ -73,7 +74,7 @@ ms.locfileid: "68258926"
   
 2.  在 [選擇名稱]  對話方塊中，按一下 [確定]  ，接受預設名稱 **Table1**。  
   
-    新的資料表格線隨即出現，並顯示三個資料行：**資料行名稱**、**資料類型**，以及**允許 Null**。  
+    隨即出現新的資料表方格，其中會有三個資料行：[資料行名稱]  、[資料類型]  和 [允許 Null]  。  
   
 3.  將下列資訊新增至 **Table1**：  
   
@@ -91,7 +92,7 @@ ms.locfileid: "68258926"
   
 6.  在 [選擇名稱]  對話方塊中，按一下 [確定]  ，接受預設名稱 **Diagram1**。  
   
-7.  [儲存]  對話方塊會顯示訊息，表示要將 `Table1` 儲存到資料庫。 按一下 **[是]** 。  
+7.  [儲存]  對話方塊會顯示訊息，表示要將 `Table1` 儲存到資料庫。 按一下 [是]  。  
   
 ## <a name="modifying-table-structure"></a>修改資料表結構  
 您可以在圖表設計工具中加入檢查條件約束，以及建立資料表間的關聯性。  
@@ -102,7 +103,7 @@ ms.locfileid: "68258926"
   
     此時會出現 [檢查條件約束]  對話方塊。  
   
-2.  按一下 **[加入]** 。  
+2.  按一下 [新增]  。  
   
     [選取的檢查條件約束]  清單中會出現新的條件約束，其預設名稱為 `CK_Table1`。  
   
@@ -114,7 +115,7 @@ ms.locfileid: "68258926"
   
     `Table1` 現在便會有一項條件約束，規定所有輸入 `T1col3` 的值都必須大於 5。  
   
-5.  按一下 [ **關閉**]。  
+5.  按一下 [關閉]  。  
   
 #### <a name="to-create-relationships-between-tables"></a>若要建立資料表之間的關聯性  
   
@@ -146,7 +147,7 @@ ms.locfileid: "68258926"
   
     [索引/索引鍵]  對話方塊便會出現。  
   
-2.  按一下 **[加入]** 。  
+2.  按一下 [新增]  。  
   
     [選取的主/唯一索引鍵或索引]  清單中會出現新的索引，其預設名稱類似 `IX_Table1`。  
   
@@ -170,15 +171,15 @@ ms.locfileid: "68258926"
     > [!NOTE]  
     > 加入 XML 索引時，需要將資料表中的另一個資料行設定為叢集主索引鍵。  
   
-2.  以滑鼠右鍵按一下 `Table2` 中的 `T2col3` 資料列，再選取 [XML 索引]  。  
+2.  以滑鼠右鍵按一下 `T2col3` 中的 `Table2` 資料列，再選取 [XML 索引]  。  
   
     [XML 索引]  對話方塊便會出現。  
   
-3.  按一下 **[加入]** 。  
+3.  按一下 [新增]  。  
   
     便會將含有預設值的 XML 索引新增至 [選取的 XML 索引]  清單。  
   
-4.  按一下 [ **關閉**]。  
+4.  按一下 [關閉]  。  
   
     > [!NOTE]  
     > XML 索引會針對個別資料行建立。 第一個 XML 索引是主索引；任何額外的索引則為次要索引。  
@@ -196,7 +197,7 @@ ms.locfileid: "68258926"
   
 3.  如果發生任何錯誤，[儲存後告知]  對話方塊會顯示錯誤及其原因。 修正錯誤並再一次儲存圖表。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
 這是含有兩個現有的及兩個新的資料表的基本圖表，但是已經具體而微地說明其圖表化現有資料庫或透過視覺化方式建立新結構描述的潛力。 建議您進一步研究的部分包括：  
   
 -   建立含有相關資料表群組的新圖表  
