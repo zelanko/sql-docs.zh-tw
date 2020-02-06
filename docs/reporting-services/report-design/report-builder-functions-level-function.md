@@ -9,10 +9,10 @@ ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9dbecce71d9464267da63dcebb7388cd947a168f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579507"
 ---
 # <a name="report-builder-functions---level-function"></a>報表產生器函式 - Level 函式
@@ -35,7 +35,7 @@ Level(scope)
 ## <a name="return-type"></a>傳回類型  
  傳回 **Integer**。 如果 *scope* 指定資料集或資料區，或指定非遞迴群組 (亦即，沒有 **Parent** 元素的群組)， **Level** 會傳回 0。 如果省略 *scope* ，則會傳回目前範圍的層級。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **Level** 函數傳回的值是以零為基礎；亦即，階層中的第一個層級是 0。  
   
  **Level** 函數可以在遞迴階層 (例如員工清單) 中提供縮排。  

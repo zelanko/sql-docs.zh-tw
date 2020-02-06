@@ -10,19 +10,16 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 957d0fa1d5b311fbecfd76340e443e8f2f3f81f5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b5de8c538d0ee91f8d176637beceabdf9352177a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296425"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76037052"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>函式 - dm_execution_performance_counters
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   傳回 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上執行之執行的效能統計資料。  
   
@@ -39,10 +36,10 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
   
  如果沒有指定的執行識別碼，則會傳回多個執行的效能統計資料。 如果您是 **ssis_admin** 資料庫角色的成員，則會傳回所有執行中之執行的效能統計資料。  如果您不是 **ssis_admin** 資料庫角色的成員，則會傳回您具有讀取權限之執行中執行的效能統計資料。 *execution_id* 是 **BigInt**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  下表列出 dm_execution_performance_counter 函數傳回的計數器名稱值。  
   
-|計數器名稱|Description|  
+|計數器名稱|描述|  
 |------------------|-----------------|  
 |BLOB bytes read|資料流程引擎從所有來源讀取之二進位大型物件 (BLOB) 資料的位元組數目。|  
 |BLOB bytes written|資料流程引擎寫入至所有目的地的 BLOB 資料位元組數目。|  
@@ -60,7 +57,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>傳回  
  dm_execution_performance_counters 函數會針對執行中的執行，傳回含有下列資料行的資料表。 傳回的資訊適用於執行中包含的所有封裝。 如果沒有執行中的執行，就會傳回空的資料表。  
   
-|資料行名稱|資料行類型|Description|Remarks|  
+|資料行名稱|資料行類型|描述|備註|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** 是無效的值。|包含封裝之執行的唯一識別碼。||  
 |counter_name|**nvarchar(128)**|計數器的名稱。|請參閱值的**備註**一節。|  

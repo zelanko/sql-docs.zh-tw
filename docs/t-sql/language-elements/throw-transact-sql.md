@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bfedebc32722f860fb0c84f385742c441023140d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072215"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
@@ -51,7 +51,7 @@ THROW [ { error_number | @local_variable },
  *state*  
  這是介於 0 和 255 之間的常數或變數，表示要與訊息相關聯的狀態。 *state* 是 **tinyint**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  THROW 陳述式之前的陳述式後面必須接著分號 (;) 陳述式結束字元。  
   
  如果沒有 TRY...CATCH 建構，就會終止陳述式批次。 系統會設定引發例外狀況的行號和程序。 嚴重性設為 16。  

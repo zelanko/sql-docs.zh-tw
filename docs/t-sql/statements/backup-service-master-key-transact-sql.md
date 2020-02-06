@@ -25,10 +25,10 @@ ms.assetid: f8356683-6680-4f1c-9eaf-5c29a9a9020d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1a8526ee9113af846288f68b0ad0bc24dbf9b821
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091727"
 ---
 # <a name="backup-service-master-key-transact-sql"></a>BACKUP SERVICE MASTER KEY (Transact-SQL)
@@ -53,7 +53,7 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
  PASSWORD **='***password***'**  
  這是用來加密備份檔案中之服務主要金鑰的密碼。 這個密碼必須遵守複雜性檢查。 如需詳細資訊，請參閱＜ [Password Policy](../../relational-databases/security/password-policy.md)＞。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  應該將服務主要金鑰備份並儲存至安全的離站位置。 建立這個備份，應該是必須在伺服器上執行的首要管理動作之一。  
   
 ## <a name="permissions"></a>權限  

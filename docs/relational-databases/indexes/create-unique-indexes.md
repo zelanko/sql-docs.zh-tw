@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7129c5feb6bc23a7e72dddfa70a10d4d2bc0811c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898599"
 ---
 # <a name="create-unique-indexes"></a>建立唯一索引
@@ -92,7 +92,7 @@ ms.locfileid: "67898599"
   
 -   唯一非叢集索引可有內含的非索引鍵之索引資料行。 如需詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
@@ -123,11 +123,11 @@ ms.locfileid: "67898599"
   
 11. 在方格的 [(一般)]  底下，選取 [是唯一的]  ，然後從清單中選擇 [是]  。  
   
-12. 選擇性：在主要方格的 [資料表設計工具]  底下，選取 [忽略重複的索引鍵]  ，然後從清單選擇 [是]  。 如果您要忽略會在唯一的索引中建立重複索引鍵的加入資料嘗試，請執行這個動作。  
+12. 選擇性：在主要方格中的 **[資料表設計工具]** 底下，選取 **[忽略重複的索引鍵]** ，然後從清單選擇 **[是]** 。 如果您要忽略會在唯一的索引中建立重複索引鍵的加入資料嘗試，請執行這個動作。  
   
-13. 按一下 [ **關閉**]。  
+13. 按一下 [關閉]  。  
   
-14. 在 [檔案]  功能表上，按一下 [儲存 _table\_name_]  。  
+14. 在 [檔案]  功能表上，按一下 [儲存 **table**name _]\__ 。  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>使用物件總管建立唯一索引  
   
@@ -145,7 +145,7 @@ ms.locfileid: "67898599"
   
 7.  按一下 [索引鍵資料行]  下的 [新增...]  。  
   
-8.  在 [從 _table\_name_ 選取資料行]  對話方塊中，選取要新增至唯一索引之一或多個資料表資料行的一或多個核取方塊。  
+8.  在 [從 **table**name _選取資料行]\__ 對話方塊中，選取要新增至唯一索引之一或多個資料表資料行的一或多個核取方塊。  
   
 9. 按一下 [確定]  。  
   

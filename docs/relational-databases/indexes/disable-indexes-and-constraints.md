@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107139"
 ---
 # <a name="disable-indexes-and-constraints"></a>停用索引和條件約束
@@ -88,7 +88,7 @@ ms.locfileid: "68107139"
   
 -   建立新的叢集索引可啟用先前停用的非叢集索引。 如需詳細資訊，請參閱 [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  若要執行 ALTER INDEX，至少需要資料表或檢視表的 ALTER 權限。  
@@ -135,7 +135,7 @@ ms.locfileid: "68107139"
  **狀態**  
  顯示停用作業的狀態。 執行之後可能的值：  
   
--   空白  
+-   Blank  
   
      執行之前 **[狀態]** 為空白。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "68107139"
   
      已經開始停用索引，但尚未完成。  
   
--   **成功**  
+-   「成功」   
   
      已成功地完成停用作業。  
   

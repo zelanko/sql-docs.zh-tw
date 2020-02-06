@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7da76d948774ecbedfc363bdcff3404698d5cf43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085729"
 ---
 # <a name="create-check-constraints"></a>建立檢查條件約束
@@ -43,7 +43,7 @@ ms.locfileid: "68085729"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
@@ -77,13 +77,13 @@ ms.locfileid: "68085729"
   
 6.  在 **[資料表設計工具]** 類別目錄中，您可以設定強制執行條件約束的時間。  
   
-    |**若要：**|**請在下列欄位中選取 [是]：**|  
+    |**收件人：**|**請在下列欄位中選取 [是]：**|  
     |-------------|---------------------------------------------|  
     |針對建立條件約束之前存在的資料測試條件約束|**檢查建立或重新啟用時的現有資料**|  
     |每次在此資料表上進行複寫作業時都強制執行條件約束|**強制複寫**|  
     |每次插入或更新此資料表的資料列時都強制執行條件約束|**於 INSERT 及 UPDATE 時強制套用**|  
   
-7.  按一下 [ **關閉**]。  
+7.  按一下 [關閉]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

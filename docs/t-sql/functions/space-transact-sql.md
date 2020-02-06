@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c04af45ee0188c2520ccad6b65f50be2021cdf10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67907067"
 ---
 # <a name="space-transact-sql"></a>SPACE (Transact-SQL)
@@ -46,10 +46,10 @@ SPACE ( integer_expression )
   
  如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **varchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  若要在 Unicode 資料中加入空格，或者傳回超過 8000 個字元空格，請使用 REPLICATE 而非 SPACE。  
   
 ## <a name="examples"></a>範例  

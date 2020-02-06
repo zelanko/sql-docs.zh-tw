@@ -33,10 +33,10 @@ ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7fb31db6e9b438fbab74a8b23462d8c7dc897d46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059757"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
@@ -60,7 +60,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *propertyname*  
  這是包含為登入傳回之屬性資訊的運算式。 *propertyname* 可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**BadPasswordCount**|傳回連續使用錯誤密碼嘗試登入的次數。|  
 |**BadPasswordTime**|傳回上一次使用錯誤密碼嘗試登入的時間。|  
@@ -111,7 +111,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   如果登入不是有效的 SQL Server 登入，則為 NULL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個內建函數會傳回有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入之密碼原則設定的資訊。 屬性的名稱不區分大小寫，所以 **BadPasswordCount** 和 **badpasswordcount** 之類的屬性名稱是相等的。 **PasswordHash、PasswordHashAlgorithm** 和 **PasswordLastSetTime** 屬性值可用於所有受支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定，但其他屬性則只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 上執行而且同時啟用 CHECK_POLICY 和 CHECK_EXPIRATION 時才可使用。 如需詳細資訊，請參閱＜ [Password Policy](../../relational-databases/security/password-policy.md)＞。  
   
 ## <a name="permissions"></a>權限  

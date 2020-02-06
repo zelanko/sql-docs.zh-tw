@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5eff5410ecd53148a16ae1e726407a7883606a89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999718"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped 事件類別
@@ -27,7 +27,7 @@ ms.locfileid: "67999718"
   
 ## <a name="brokerforwarded-message-dropped-event-class-data-columns"></a>Broker:Forwarded Message Dropped 事件類別資料行  
   
-|資料行|類型|Description|資料行編號|可篩選|  
+|資料行|類型|描述|資料行編號|可篩選|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |BigintData1|**bigint**|訊息序號。|52|否|  
@@ -49,13 +49,13 @@ ms.locfileid: "67999718"
 |ObjectId|**int**|轉寄訊息的存留時間值。|22|否|  
 |ObjectName|**nvarchar**|轉寄訊息的訊息識別碼。|34|否|  
 |OwnerName|**nvarchar**|訊息目的地之 Broker 執行個體識別碼。|37|否|  
-|RoleName|**nvarchar**|交談控制代碼的角色。 它是下列項目之一：<br /><br /> -Initiator. 此 Broker 起始了交談。<br /><br /> -Target. 此 Broker 是交談的目標。|38|否|  
+|RoleName|**nvarchar**|交談控制代碼的角色。 值為下列其中之一：<br /><br /> -Initiator. 此 Broker 起始了交談。<br /><br /> -Target. 此 Broker 是交談的目標。|38|否|  
 |ServerName|**nvarchar**|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |Severity|**int**|事件中文字的嚴重性編號。|29|否|  
 |SPID|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  
 |StartTime|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |State|**int**|指出產生事件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原始程式碼內的位置。 每個可能產生此事件的位置都有不同的狀態碼。 Microsoft 支援工程師可以使用此狀態碼來尋找產生事件的位置。|30|否|  
-|成功|**int**|訊息已經存留的時間量。 當此值大於或等於存留時間時，就會卸除訊息。|23|否|  
+|Success|**int**|訊息已經存留的時間量。 當此值大於或等於存留時間時，就會卸除訊息。|23|否|  
 |TargetLoginName|**nvarchar**|將轉寄訊息的目的網路位址。|42|否|  
 |TargetUserName|**nvarchar**|訊息的起始端服務名稱。|39|否|  
 |TextData|**ntext**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 卸除訊息的原因描述。|1|是|  

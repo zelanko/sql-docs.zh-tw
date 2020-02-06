@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 49d3f7fa266be69c767b0fb0450cc6898351f39b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843812"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
@@ -30,7 +30,7 @@ ms.locfileid: "73843812"
  
  **必要條件**。 如果您為資料表選取了 [延展 | 啟用]  ，卻未針對資料庫啟用 Stretch Database，精靈會先設定 Stretch Database 資料庫。 請遵循[開始執行 [啟用資料庫的延展功能精靈]](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) 的步驟著手，而不是本文中的步驟。  
   
- **權限**。 在資料庫或資料表上啟用 Stretch Database 需要 db_owner 權限。 在資料表上啟用 Stretch Database 也需要資料表的 ALTER 權限。  
+ **權限**。 在資料庫或資料表上啟用 Stretch Database 需要 db_owner 權限。 在資料表上啟用 Stretch Database 也需要資料表上的 ALTER 權限。  
 
  > [!NOTE]
  > 稍後，如果您停用 Stretch Database，請記住針對資料表或資料庫停用 Stretch Database，並不會刪除遠端物件。 若您想要刪除遠端資料表或遠端資料庫，則必須使用 Azure 管理入口網站將其卸除。 遠端物件會繼續產生 Azure 成本，直到您手動將其刪除為止。
@@ -55,7 +55,7 @@ ms.locfileid: "73843812"
   
  本文稍後將描述 ALTER TABLE 語法。  
   
- **摘要**  
+ **總結**  
  檢閱您輸入的值和在精靈中選取的選項。 然後選取 [完成]  以啟用 Stretch。  
   
  **結果**  

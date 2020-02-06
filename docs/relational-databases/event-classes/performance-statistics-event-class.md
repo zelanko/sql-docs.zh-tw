@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c6dff2998686c73693f73ecbcad0b9b7f360ca86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940716"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics 事件類別
@@ -24,21 +24,21 @@ ms.locfileid: "67940716"
   Performance Statistics 事件類別可用來監視正在執行之查詢、預存程序和觸發程序的效能。 其六個事件子類別分別表示了系統中查詢、預存程序和觸發程序存留期間內的一項事件。 您可以使用這些事件子類別以及關聯 sys.dm_exec_query_stats、sys.dm_exec_procedure_stats 和 sys.dm_exec_trigger_stats 動態管理檢視的組合，重新組成任何給定查詢、預存程序或觸發程序的效能記錄。  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Performance Statistics 事件類別資料行  
- 下列資料表描述與下列每一個事件子類別相關聯的事件類別資料行：EventSubClass 0、EventSubClass 1、EventSubClass 2、EventSubClass 3、EventSubClass 4 和 EventSubClass 5。  
+ 下表描述與下列每個事件子類別相關聯的事件類別資料行：EventSubClass 0、EventSubClass 1、EventSubClass 2、EventSubClass 3、EventSubClass 4 和 EventSubClass 5。  
   
 ### <a name="eventsubclass-0"></a>EventSubClass 0  
   
-|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|是|  
 |BinaryData|**image**|NULL|2|是|  
 |DatabaseID|**int**|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在追蹤中擷取 ServerName 資料行，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |EventSequence|**int**|要求中的給定事件順序。|51|否|  
 |EventSubClass|**int**|事件子類別的類型。<br /><br /> 0 = 目前未顯示在快取中的新批次 SQL 文字。<br /><br /> 特定批次的追蹤會產生下列 EventSubClass 類型。<br /><br /> 針對查詢數目為 *n* 的隨選批次：<br /><br /> 類型 0 之 1|21|是|  
-|IntegerData2|**整數**|NULL|55|是|  
+|IntegerData2|**int**|NULL|55|是|  
 |ObjectID|**int**|NULL|22|是|  
 |Offset|**int**|NULL|61|是|  
-|PlanHandle|**Image**|NULL|65|是|  
+|PlanHandle|**映像**|NULL|65|是|  
 |SessionLoginName|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |SqlHandle|**image**|SQL 控制代碼，可用它來透過 sys.dm_exec_sql_text 動態管理檢視取得批次 SQL 文字。|63|是|  
@@ -47,7 +47,7 @@ ms.locfileid: "67940716"
   
 ### <a name="eventsubclass-1"></a>EventSubClass 1  
   
-|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|重新編譯這個計畫的累加次數。|52|是|  
 |BinaryData|**image**|已編譯計畫的二進位 XML。|2|是|  
@@ -71,7 +71,7 @@ ms.locfileid: "67940716"
   
 ### <a name="eventsubclass-2"></a>EventSubClass 2  
   
-|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|重新編譯這個計畫的累加次數。|52|是|  
 |BinaryData|**image**|已編譯計畫的二進位 XML。|2|是|  
@@ -80,7 +80,7 @@ ms.locfileid: "67940716"
 |SessionLoginName|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |EventSubClass|**int**|事件子類別的類型。<br /><br /> 2 = 特定 SQL 陳述式內的已編譯查詢。<br /><br /> 特定批次的追蹤會產生下列 EventSubClass 類型。<br /><br /> 針對查詢數目為 *n* 的隨選批次：<br /><br /> 數目為*n* 的類型 2|21|是|  
 |IntegerData2|**int**|批次內的陳述式結尾。<br /><br /> -1 代表批次的結尾。|55|是|  
-|ObjectID|**int**|不適用|22|是|  
+|ObjectID|**int**|N/A|22|是|  
 |Offset|**int**|批次內的陳述式起始位移。<br /><br /> 0 代表批次的開頭。|61|是|  
 |SPID|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |SqlHandle|**image**|SQL 控制代碼。 這可用來透過 dm_exec_sql_text 動態管理檢視取得批次 SQL 文字。|63|是|  
@@ -94,7 +94,7 @@ ms.locfileid: "67940716"
   
 ### <a name="eventsubclass-3"></a>EventSubClass 3  
   
-|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|重新編譯這個計畫的累加次數。|52|是|  
 |BinaryData|**image**|NULL|2|是|  
@@ -114,7 +114,7 @@ ms.locfileid: "67940716"
   
 ### <a name="eventsubclass-4"></a>EventSubClass 4  
   
-|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|是|  
 |BinaryData|**image**|NULL|2|是|  
@@ -122,7 +122,7 @@ ms.locfileid: "67940716"
 |EventSequence|**int**|要求中的給定事件順序。|51|否|  
 |SessionLoginName|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |EventSubClass|**int**|事件子類別的類型。<br /><br /> 4 = 快取預存程序已經從快取中移除了，而且與它相關聯的記錄效能資料也將被銷毀。|21|是|  
-|IntegerData2|**整數**|NULL|55|是|  
+|IntegerData2|**int**|NULL|55|是|  
 |ObjectID|**int**|預存程序的識別碼。 這個識別碼與 sys.procedures 中的 object_id 資料行相同。|22|是|  
 |Offset|**int**|NULL|61|是|  
 |SPID|**int**|事件發生所在之工作階段的識別碼。|12|是|  
@@ -134,7 +134,7 @@ ms.locfileid: "67940716"
   
 ### <a name="eventsubclass-5"></a>EventSubClass 5  
   
-|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|是|  
 |BinaryData|**image**|NULL|2|是|  
@@ -142,7 +142,7 @@ ms.locfileid: "67940716"
 |EventSequence|**int**|要求中的給定事件順序。|51|否|  
 |SessionLoginName|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |EventSubClass|**int**|事件子類別的類型。<br /><br /> 5 = 快取觸發程序已經從快取中移除了，而且與它相關聯的記錄效能資料也將被銷毀。|21|是|  
-|IntegerData2|**整數**|NULL|55|是|  
+|IntegerData2|**int**|NULL|55|是|  
 |ObjectID|**int**|觸發程序的識別碼。 這個識別碼與 sys.triggers/sys.server_triggers 目錄檢視中的 object_id 資料行相同。|22|是|  
 |Offset|**int**|NULL|61|是|  
 |SPID|**int**|事件發生所在之工作階段的識別碼。|12|是|  

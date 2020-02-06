@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a90add62cdda0e127d84a60fadf7f1f1578c7a0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050825"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT 物件權限 (Transact-SQL)
@@ -62,7 +62,7 @@ GRANT <permission> [ ,...n ] ON
  ALL  
  授與 ALL 不會授與所有可能的權限。 授與 ALL 相當於授與適用於指定之物件的所有 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 權限。 ALL 有多種意義，如下所示：  
   
-- 純量函式權限：EXECUTE、REFERENCES。  
+- 純量函數權限：EXECUTE、REFERENCES。  
 - 資料表值函式權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
 - 預存程序權限：EXECUTE。  
 - 資料表權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
@@ -112,10 +112,10 @@ PRIVILEGES
  *Database_user_with_no_login*  
  指定不含對應伺服器層級主體的資料庫使用者。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]  
->  在某些情況下，ALTER 與 REFERENCE 權限的結合可允許被授與者檢視資料或執行未經授權的函數。 例如：擁有資料表 ALTER 權限和函式 REFERENCE 權限的使用者，可以透過函式建立並執行計算資料行。 在此情況下，使用者也需要計算資料行的 SELECT 權限。  
+>  在某些情況下，ALTER 與 REFERENCE 權限的結合可允許被授與者檢視資料或執行未經授權的函數。 例如：擁有資料表的 ALTER 權限和函數的 REFERENCE 權限之使用者，可以透過函數來建立計算資料行並執行它。 在此情況下，使用者也需要計算資料行的 SELECT 權限。  
   
  可以在各種目錄檢視中看到物件的相關資訊。 如需詳細資訊，請參閱[物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)。  
   
@@ -125,7 +125,7 @@ PRIVILEGES
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|Delete|CONTROL|Delete|  
+|刪除|CONTROL|刪除|  
 |執行 CREATE 陳述式之前，請先執行|CONTROL|執行 CREATE 陳述式之前，請先執行|  
 |Insert|CONTROL|Insert|  
 |RECEIVE|CONTROL|CONTROL|  
