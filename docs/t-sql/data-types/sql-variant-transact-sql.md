@@ -21,13 +21,13 @@ ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6a417d8240bb3360a13367230f0017762b51d659
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000510"
 ---
-# <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
+# <a name="sql_variant-transact-sql"></a>sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 儲存各種 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援之資料類型值的資料類型。
@@ -40,7 +40,7 @@ ms.locfileid: "68000510"
 sql_variant  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 **sql_variant** 可用在資料行、參數、變數及使用者定義函式的傳回值中。 **sql_variant** 可讓這些資料庫物件支援其他資料類型的值。
   
 **sql_variant** 類型的資料行可包含不同資料類型的資料列。 例如，定義為 **sql_variant** 的資料行可儲存 **int**、**binary**，及 **char** 值。
@@ -59,7 +59,7 @@ sql_variant
   
 ODBC 不完全支援 **sql_variant**。 因此，當您使用 Microsoft OLE DB Provider for ODBC (MSDASQL) 時，會將 **sql_variant** 資料行的查詢當作二進位資料傳回。 例如，包含 'PS2091' 字元字串資料的 **sql_variant** 資料行會以 0x505332303931 傳回。
   
-## <a name="comparing-sqlvariant-values"></a>比較 sql_variant 值  
+## <a name="comparing-sql_variant-values"></a>比較 sql_variant 值  
 **sql_variant** 資料類型屬於轉換的資料類型階層清單頂端。 為比較 **sql_variant**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型階層順序會分組成資料類型家族。
   
 |資料類型階層|資料類型家族|  
@@ -85,16 +85,16 @@ ODBC 不完全支援 **sql_variant**。 因此，當您使用 Microsoft OLE DB P
 |**nchar**|Unicode|  
 |**varchar**|Unicode|  
 |**char**|Unicode|  
-|**varbinary**|二進位|  
-|**binary**|二進位|  
+|**varbinary**|Binary|  
+|**binary**|Binary|  
 |**uniqueidentifier**|Uniqueidentifier |  
   
 下列規則適用於 **sql_variant** 比較：
 -   當比較不同基底資料型別的 **sql_variant** 值，且基底資料型別是在不同的資料類型家族中時，資料類型家族在階層圖表中較高位置的值，會被視為兩個值中的較大者。  
 -   當比較不同基底資料型別的 **sql_variant** 值，且基底資料型別是在相同的資料類型家族中，會先將基底資料型別在階層圖表中較低位置的值隱含轉換成其他資料類型，之後再進行比較。  
--   當比較 **char**、**varchar**、**nchar** 或 **nvarchar** 資料類型的 **sql_variant** 值時，將會先根據下列準則來比較其定序：LCID、LCID 版本、比較旗標和排序識別碼。 每一個準則都會以整數值的形式來比較，而且會根據所列的順序來比較。 如果所有的準則都相同，將會根據此定序來比較實際的字串值。  
+-   當比較 **char**、**varchar**、**nchar** 或 **nvarchar** 資料類型的 **sql_variant** 值時，將會先根據以下準則來比較其定序：LCID、LCID 版本、比較旗標和排序識別碼。 每一個準則都會以整數值的形式來比較，而且會根據所列的順序來比較。 如果所有的準則都相同，將會根據此定序來比較實際的字串值。  
   
-## <a name="converting-sqlvariant-data"></a>轉換 sql_variant 資料  
+## <a name="converting-sql_variant-data"></a>轉換 sql_variant 資料  
 處理 **sql_variant** 資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援將有其他資料類型的物件隱含轉換成 **sql_variant** 類型。 但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援從 **sql_variant** 資料隱含轉換成其他資料類型的物件。
   
 ## <a name="restrictions"></a>限制  
@@ -114,8 +114,8 @@ ODBC 不完全支援 **sql_variant**。 因此，當您使用 Microsoft OLE DB P
 
 ## <a name="examples"></a>範例  
 
-### <a name="a-using-a-sqlvariant-in-a-table"></a>A. 在資料表中使用 sql_variant  
- 下列範例會使用 sql_variant 資料類型建立資料表。 接著範例會擷取有關 `colA` 值 `46279.1` 的 `SQL_VARIANT_PROPERTY` 資訊，如果 `tableA` 有 `colB` 和 `sql_variant` 類型的 `colA`，則 `colB` =`1689`。  
+### <a name="a-using-a-sql_variant-in-a-table"></a>A. 在資料表中使用 sql_variant  
+ 下列範例會使用 sql_variant 資料類型建立資料表。 接著範例會擷取有關 `SQL_VARIANT_PROPERTY` 值 `colA` 的 `46279.1` 資訊，如果 `colB` 有  = 和 `1689` 類型的 `tableA`，則 `colA``sql_variant``colB`。  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -137,8 +137,8 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. 使用 sql_variant 作為變數   
- 下列範例會使用 sql_variant 資料類型建立變數，然後擷取關於名為 @v1 之變數的 `SQL_VARIANT_PROPERTY` 資訊。  
+### <a name="b-using-a-sql_variant-as-a-variable"></a>B. 使用 sql_variant 作為變數   
+ 下列範例會使用 sql_variant 資料類型建立變數，然後擷取關於名為 `SQL_VARIANT_PROPERTY` 之變數的 @v1 資訊。  
   
 ```sql    
 DECLARE @v1 sql_variant;  

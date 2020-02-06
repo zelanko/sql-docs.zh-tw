@@ -11,10 +11,10 @@ ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7dac194c0ceb54eeb716b9cf5ec676e7fe120d8f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296521"
 ---
 # <a name="catalogobject_versions-ssisdb-database"></a>catalog.object_versions (SSISDB 資料庫)
@@ -26,7 +26,7 @@ ms.locfileid: "71296521"
 
   顯示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的物件版本。 在這個版本中，這個檢視僅支援部分專案版本。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_version_lsn|**bigint**|物件版本的唯一識別碼 (ID)。 無法保證這個數字是連續的。|  
 |object_id|**bigint**|物件的唯一識別碼。|  
@@ -38,7 +38,7 @@ ms.locfileid: "71296521"
 |restored_by|**nvarchar(128)**|還原物件的使用者名稱。|  
 |last_restored_time|**datetimeoffset**|上次還原物件的日期和時間。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個檢視會顯示目錄中每個物件版本的資料列。  
   
 ## <a name="permissions"></a>權限  
