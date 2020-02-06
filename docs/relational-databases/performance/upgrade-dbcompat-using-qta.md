@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 958445b0f07dc9624e7d284f408210c386ecfa9e
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165681"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>使用查詢調整小幫手來升級資料庫
@@ -89,7 +89,7 @@ QTA 是一種以工作階段為基礎的功能，它會將工作階段狀態儲�
         -  在 QTA 工作流程完成後，設定使用者資料庫預期的目標資料庫相容性層級。
         完成後，請按一下 [下一步]  。
     
-       ![新的資料庫升級工作階段設定視窗](../../relational-databases/performance/media/qta-new-session-setup.png "|::ref3::|")  
+       ![新的資料庫升級工作階段設定視窗](../../relational-databases/performance/media/qta-new-session-setup.png "新的資料庫升級工作階段設定視窗")  
   
     2.  在 [設定]  視窗中，兩個資料行顯示目標資料庫中查詢存放區的**目前**狀態，以及**建議**設定。 
         -  根據預設，會選取 [建議] 設定，但按一下 [目前] 資料行上的圓形按鈕，即會接受目前的設定，同時允許對目前的查詢存放區設定進行微調。 
@@ -153,7 +153,7 @@ QTA 是一種以工作階段為基礎的功能，它會將工作階段狀態儲�
 
         下列頁面確認已成功升級資料庫相容性層級。
 
-        ![QTA 步驟 2 子步驟 2](../../relational-databases/performance/media/qta-step2-substep2.png "|::ref9::|")
+        ![QTA 步驟 2 子步驟 2](../../relational-databases/performance/media/qta-step2-substep2.png "QTA 步驟 2 子步驟 2")
 
     3.  **觀察到的資料收集**要求使用者重新執行代表性工作負載循環，以讓查詢存放區收集將用來搜尋最佳化機會的比較基準。 當工作負載執行時，使用 [重新整理]  按鈕繼續更新迴歸查詢的清單 (如果有找到任何迴歸查詢)。 變更**要顯示的查詢**值以限制顯示的查詢數目。 清單的順序受**計量** (持續時間或 CpuTime) 和**彙總** (預設為平均值) 的影響。 同時選取要顯示**要顯示的查詢**數量。 完成該工作負載後，請核取 [工作負載執行已完成]  並按一下 [下一步]  。
 

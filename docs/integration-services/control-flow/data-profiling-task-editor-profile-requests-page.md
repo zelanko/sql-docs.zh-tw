@@ -15,10 +15,10 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a13799d353fcf1e1dff1999009cc2f1e8dcedc76
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294184"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
@@ -44,7 +44,7 @@ ms.locfileid: "71294184"
 ### <a name="requests-pane-options"></a>要求窗格選項  
  此要求窗格具有下列選項：  
   
- **[檢視]**  
+ **檢視**  
  選取要檢視已經針對此工作設定的所有設定檔，還是僅檢視其中一個設定檔。  
   
  要求窗格中的資料行會根據您所選取的 **[檢視]** 而變更。 如需有關每個資料行的詳細資訊，請參閱下一節「要求窗格資料行」。  
@@ -68,7 +68,7 @@ ms.locfileid: "71294184"
  **[設定檔類型]**  
  從下列選項中選取資料設定檔：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**候選索引鍵設定檔要求**|計算候選索引鍵設定檔。<br /><br /> 這個設定檔會報告資料行或資料行集合是否為選取之資料表的索引鍵或近似索引鍵。 這個設定檔也可協助您識別資料中的問題，例如潛在索引鍵資料行中重複的值。|  
 |**資料行長度散發設定檔要求**|計算資料行長度散發設定檔。<br /><br /> 資料行長度散發設定檔會報告選取之資料行中字串值的所有相異長度，以及該資料表中每個長度所代表之資料列的百分比。 這個設定檔可協助您識別資料中的問題，例如無效的值。 舉例來說，您分析了美國州名二字元代碼的資料行並發現長度超過兩個字元的值。|  
@@ -86,14 +86,14 @@ ms.locfileid: "71294184"
  **連線管理員**  
  顯示連接至來源資料庫的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員。  
   
- **[要求識別碼]**  
+ **要求識別碼**  
  顯示要求的識別碼。 一般而言，您不需要變更自動產生的值。  
   
 #### <a name="columns-common-to-the-five-individual-column-profiles"></a>五個個別資料行設定檔通用的資料行  
  **[資料表或檢視表]**  
  顯示包含選取之資料行的資料表或檢視表。  
   
- **[資料行]**  
+ **資料行**  
  顯示選取以便分析的資料行。  
   
 #### <a name="columns-specific-to-the-candidate-key-profile"></a>候選索引鍵設定檔特有的資料行  

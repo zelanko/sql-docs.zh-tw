@@ -11,13 +11,13 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c8b363be7cd8f160cb7317e6a90d109cc1ad3ccb
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 9a079838d343ba8de93e270d01d704eb32219ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321935"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286982"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>疑難排解員：尋找 SQL Server 異動複寫的錯誤 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

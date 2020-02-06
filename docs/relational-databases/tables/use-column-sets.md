@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71326132"
 ---
 # <a name="use-column-sets"></a>使用資料行集
@@ -112,7 +112,7 @@ GO
 ## <a name="using-the-sql_variant-data-type"></a>使用 sql_variant 資料類型  
  **sql_variant** 資料類型可以儲存多種不同的資料類型，例如 **int**、 **char**和 **date**。 資料行集會將與 **sql_variant** 值相關聯的資料類型資訊 (例如小數位數、有效位數和地區設定資訊)，輸出為產生之 XML 資料行內的屬性。 如果您嘗試在自訂產生的 XML 陳述式內提供這些屬性當做資料行集上插入或更新作業的輸入，某些屬性會是必要的，而且其中一些屬性會指派預設值。 下表列出當未提供值時，伺服器所產生的資料類型和預設值。  
   
-|資料類型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大長度|有效位數|小數位數|  
+|資料類型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大長度|Precision|調整|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |**char**、 **varchar**、 **binary**|-1|'Default'|0|0|8000|不適用**|不適用|  
 |**nvarchar**|-1|'Default'|0|0|4000|不適用|不適用|  
@@ -128,7 +128,7 @@ GO
   
  **  不適用 = 在資料行集上的選取作業期間，沒有任何值是這些屬性的輸出。 當提供給插入或更新作業內資料行集的 XML 表示中的呼叫端指定這個屬性的值時，將會產生錯誤。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  資料行集之安全性模型的運作方式，類似於資料表和資料行之間存在的安全性模型。 資料行集可視為一個迷你資料表，而選取作業就像是此迷你資料表上的 SELECT * 作業。 但是，資料行集與疏鬆資料行之間的關聯性是一種群組關聯性，而不限為容器。 此安全性模型會檢查資料行集資料行上的安全性，並接受基礎疏鬆資料行上的 DENY 作業。 此安全性模型的其他特性如下：  
   
 -   可以從資料行集資料行授與及撤銷安全性權限，類似於資料表中的任何其他資料行。  

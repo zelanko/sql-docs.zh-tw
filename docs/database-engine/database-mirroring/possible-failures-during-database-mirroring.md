@@ -19,10 +19,10 @@ ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9d8530425db1353a22365b0de165619f6e8eee74
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874278"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>資料庫鏡像期間可能發生的失敗

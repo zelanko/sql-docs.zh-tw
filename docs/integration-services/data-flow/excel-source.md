@@ -19,10 +19,10 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38af7d056eab840a5cf83eefa96ec2731e58bc67
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292775"
 ---
 # <a name="excel-source"></a>Excel 來源
@@ -77,7 +77,7 @@ ms.locfileid: "71292775"
  **資料存取模式**  
  從來源中指定選取資料的方法。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |資料表或檢視|從工作表或 Excel 檔案的具名範圍中擷取資料。|  
 |資料表名稱或檢視名稱變數|在變數中指定工作表或範圍名稱。<br /><br /> **相關資訊：** [在套件中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  

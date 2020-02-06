@@ -22,10 +22,10 @@ ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2e7dbdb8ea5a422b91f290478eeca4dfc9b21cbc
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064643"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
@@ -75,7 +75,7 @@ CREATE CONTRACT contract_name
  [ DEFAULT ]  
  表示這個合約支援預設訊息類型的訊息。 依預設，所有資料庫都包含名稱為 DEFAULT 的訊息類型。 這個訊息類型使用 NONE 的驗證。 在這個子句的內容中，DEFAULT 不是關鍵字，必須用識別碼來分隔。 Microsoft SQL Server 也提供指定 DEFAULT 訊息類型的 DEFAULT 合約。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  合約中訊息類型的順序並不重要。 在目標收到第一則訊息之後，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 允許交談的任何一端在任何時間傳送該端允許的任何訊息。 例如，如果交談起始端可以傳送 **//Adventure-Works.com/Expenses/SubmitExpense** 訊息類型，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 便允許起始端在交談期間傳送任何數目的 **SubmitExpense** 訊息。  
   
  合約中的訊息類型和方向無法變更。 若要改變合約的 AUTHORIZATION，請使用 ALTER AUTHORIZATION 陳述式。  

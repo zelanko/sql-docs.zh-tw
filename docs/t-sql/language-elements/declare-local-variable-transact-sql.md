@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed6848494d9d9673905dadbff036ad97f3be834c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894888"
 ---
 # <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
@@ -158,7 +158,7 @@ CURSOR
  *logical_expression*  
  這是一個傳回 TRUE 或 FALSE 的邏輯運算式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  批次或程序通常會利用變數來當做 WHILE、LOOP 或 IF...ELSE 區塊的計數器。  
   
  變數只能用在運算式中，不能用來取代物件名稱或關鍵字。 若要建構動態 SQL 陳述式，請使用 EXECUTE。  
@@ -224,7 +224,7 @@ Manzanares          Tomas                   1 (11) 500 555-0178
 ```  
   
 ### <a name="b-using-declare-with-two-variables"></a>B. 使用 DECLARE 與兩個變數  
- 下列範例會擷取在北美銷售地區且年度銷售額至少 $2,000,000 的 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 銷售代表姓名。  
+ 下列範例會擷取在北美洲銷售地區且年度銷售額至少 $2,000,000 的 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 銷售代表姓名。  
   
 ```  
 USE AdventureWorks2012;  

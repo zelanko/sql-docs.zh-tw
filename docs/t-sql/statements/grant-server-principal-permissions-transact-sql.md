@@ -22,10 +22,10 @@ ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 81a8422cbab7eb10d0c74ad5cd758817a665eaa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050780"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>GRANT 伺服器主體權限 (Transact-SQL)
@@ -88,7 +88,7 @@ GRANT permission [ ,...n ] }
  AS *SQL_Server_login*  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，執行這項查詢的主體會從這項登入衍生其權限來授與權限。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  只有在目前資料庫是 master 的情況下，才能夠授與伺服器範圍的權限。  
   
  您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中，看到有關伺服器權限的資訊。 您可以在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中，看到有關伺服器主體的資訊。  

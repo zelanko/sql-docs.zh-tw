@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7822cd56a52e47493fe175c293dbfe491a9524af
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727442"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>如何在 SQL Server 中使用機器學習模型產生各種預測
@@ -97,7 +97,7 @@ CLR 和 C++ 擴充功能的重要性就是與資料庫引擎本身的鄰近程�
 
 ## <a name="scoring-in-related-products"></a>在相關產品中進行評分
 
-如果您使用[獨立伺服器](r-server-standalone.md)或 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) \(英文\)，除了預存程序和 T-SQL 函式之外，還有其他選項可快速產生預測。 獨立伺服器和 Machine Learning Server 均支援可用來進行程式碼部署的「Web 服務」  概念。 您可以將 R 或 Python 預先定型的模型組合成 Web 服務，在執行階段進行呼叫以評估新的資料輸入。 如需詳細資訊，請參閱下列文章：
+如果您使用[獨立伺服器](r-server-standalone.md)或 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) \(英文\)，除了預存程序和 T-SQL 函式之外，還有其他選項可快速產生預測。 獨立伺服器和 Machine Learning Server 均支援可用來進行程式碼部署的「Web 服務」  概念。 您可以將 R 或 Python 預先定型的模型組合成 Web 服務，在執行階段進行呼叫以評估新的資料輸入。 如需詳細資訊，請參閱這些文章：
 
 + [Machine Learning Server 中有哪些 Web 服務？](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services) \(英文\)
 + [什麼是作業化？](https://docs.microsoft.com/machine-learning-server/what-is-operationalization) \(英文\)

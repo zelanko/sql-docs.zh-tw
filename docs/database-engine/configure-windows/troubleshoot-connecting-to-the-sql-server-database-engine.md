@@ -14,10 +14,10 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b2394fc73483b78e5e90a4ccffa9ce45205dc237
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74542309"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>對 SQL Server 資料庫引擎的連線進行疑難排解

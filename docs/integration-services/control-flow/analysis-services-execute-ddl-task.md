@@ -18,10 +18,10 @@ ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a160e61e390f58dc640a5d1da265cdb77d5d9be1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294335"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services 執行 DDL 工作
@@ -46,11 +46,11 @@ ms.locfileid: "71294335"
   
 -   ASSL 是用來定義和描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，及其包含的資料庫和資料庫物件。 如需詳細資訊，請參閱 [Analysis Services 指令碼語言 &#40;ASSL&#41; 參考 ](/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)。  
   
--   XMLA 為命令語言，用來傳送動作命令 (如「建立」、「改變」或「處理」) 至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體。 如需詳細資訊，請參閱 [XML for Analysis &#40;XMLA&#41; 參考](/bi-reference/xmla/xml-for-analysis-xmla-reference)。  
+-   XMLA 為命令語言，用來傳送動作命令 (如「建立」、「改變」或「處理」) 至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體。 如需詳細資訊，請參閱 [XML for Analysis &#40;XMLA&#41; 參考](/bi-reference/xmla/xml-for-analysis-xmla-reference)。  
   
- 如果 DDL 程式碼存放在另一個檔案中，「[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL」工作便會使用「檔案」連線管理員指定該檔案的路徑。 如需相關資訊，請參閱 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)。  
+ 如果 DDL 程式碼存放在另一個檔案中，「 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL」工作便會使用「檔案」連線管理員指定該檔案的路徑。 如需相關資訊，請參閱 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)。  
   
- 由於 DDL 陳述式可能包含密碼和其他機密資訊，因此包含一或多項「[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL」工作的封裝應使用封裝保護等級 **EncryptAllWithUserKey** 或 **EncryptAllWithPassword**。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 封裝](../../integration-services/integration-services-ssis-packages.md)。  
+ 由於 DDL 陳述式可能包含密碼和其他機密資訊，因此包含一或多項「 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL」工作的封裝應使用封裝保護等級 **EncryptAllWithUserKey** 或 **EncryptAllWithPassword**。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 封裝](../../integration-services/integration-services-ssis-packages.md)。  
   
 ### <a name="ddl-examples"></a>DDL 範例  
  下列三種 DDL 陳述式由 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] ([!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中所含的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫) 中的指令碼物件所產生。  
@@ -260,7 +260,7 @@ ms.locfileid: "71294335"
  **SourceType**  
  指定 DDL 陳述式的來源類型。 此屬性具有下表所列的選項：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|將來源設定為 [SourceDirect]  文字方塊中所儲存的 DDL 陳述式。 選取這個值就會顯示在下列章節中的動態選項。|  
 |**檔案連接**|將來源設定為包含 DDL 陳述式的檔案。 選取這個值就會顯示在下列章節中的動態選項。|  

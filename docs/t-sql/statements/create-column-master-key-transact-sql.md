@@ -27,10 +27,10 @@ ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: cd6148499c6e9d906d0077632001d3fe32ce9cc3
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593899"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
@@ -167,7 +167,7 @@ ENCLAVE_COMPUTATIONS
 二進位常值，它是數位簽署「金鑰路徑」  和使用資料行主要金鑰之 ENCLAVE_COMPUTATIONS 設定的結果。 簽章會反映是否已指定 ENCLAVE_COMPUTATIONS。 簽章會保護所簽署的值不會受到未經授權的使用者所改變。 已啟用 Always Encrypted 的用戶端驅動程式會驗證簽章，並在簽章無效時，傳回錯誤給應用程式。 簽章需使用用戶端工具予以產生。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 
 請在資料庫中建立資料行加密金鑰中繼資料項目之前，以及可在使用 Always Encrypted 為資料庫中任何資料行進行加密之前，建立資料行主要金鑰中繼資料項目。 中繼資料中的資料行主要金鑰項目不包含實際資料行主要金鑰。 資料行主要金鑰必須儲存在外部資料行金鑰存放區 (SQL Server 之外)。 中繼資料中的金鑰存放區提供者名稱和資料行主要金鑰路徑，對用戶端應用程式而言都必須有效。 用戶端應用程式必須使用資料行主要金鑰來解密資料行加密金鑰。 資料行加密金鑰會使用資料行主要金鑰進行加密。 用戶端應用程式也需要查詢加密資料行。
 
@@ -247,8 +247,8 @@ WITH (
 * [DROP COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
 * [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 * [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
-* [永遠加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+* [一律加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 * [具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
 * [永遠加密的金鑰管理概觀](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
-* [針對具有安全記憶體保護區的 Always Encrypted 管理金鑰](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+* [為具有安全記憶體保護區的 Always Encrypted 管理金鑰](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   

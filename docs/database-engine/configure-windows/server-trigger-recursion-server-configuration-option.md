@@ -15,10 +15,10 @@ ms.assetid: da4c25f5-d04c-4951-a3db-409e71a1b468
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: dcd67a89ea5605647d6736d9d28a6e070a483c16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68027619"
 ---
 # <a name="server-trigger-recursion-server-configuration-option"></a>伺服器觸發程序遞迴伺服器組態選項

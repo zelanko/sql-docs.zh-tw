@@ -13,10 +13,10 @@ ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 07c1743107d3edce7012740a3f1600d2157bf001
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136892"
 ---
 # <a name="create-a-resource-pool"></a>建立資源集區
@@ -74,13 +74,13 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [啟用資源管理員](../../relational-databases/resource-governor/enable-resource-governor.md)   
- [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
+ [資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [變更資源集區設定](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
  [刪除資源集區](../../relational-databases/resource-governor/delete-a-resource-pool.md)   
  [使用範本來設定資源管理員](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)   
  [資源管理員工作負載群組](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [資源管理員分類函數](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   
- [建立資源集區 &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
+ [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)   
  [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)   
  [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)  

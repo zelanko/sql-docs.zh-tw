@@ -14,10 +14,10 @@ ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0312349652ad1854efdeacdbfc25726e1766862f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298041"
 ---
 # <a name="source-assistant"></a>Source Assistant
@@ -48,7 +48,7 @@ ms.locfileid: "71298041"
 ## <a name="add-new-source-dialog-box"></a>加入新來源對話方塊
 下表列出可以在 [加入新來源]  對話方塊中使用的選項。  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
 |類型|選取您要連接的來源類型。|  
 |連接管理員|選取現有的連線管理員，或按一下 [\<新增>]  以建立新的連線管理員。|  

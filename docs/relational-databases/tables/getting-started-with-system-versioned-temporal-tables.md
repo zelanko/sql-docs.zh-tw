@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 725dbc3306f9ad9616b5cbeca2d96249dca1c4a8
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165777"
 ---
 # <a name="getting-started-with-system-versioned-temporal-tables"></a>開始使用系統建立版本的時態表
@@ -26,7 +26,7 @@ ms.locfileid: "74165777"
 
 除了一般資料操作語言 (DML) 和查詢，Temporal 也提供方便且簡單的方式，透過擴充的 Transact-SQL 語法，從資料歷程記錄中取得見解。 每個系統建立版本的資料表中有一個指派的歷程記錄資料表，但是使用者完全看不到，除非他們想要藉由建立額外的索引，或選擇不同的儲存體選項，最佳化工作負載效能或儲存體使用量。
 
-下列圖表描述使用系統建立版本之時態表的一般工作流程︰![開始使用時態表](../../relational-databases/tables/media/getting-started-with-temporal.png "|::ref1::|")
+下列圖表描述使用系統建立版本之時態表的一般工作流程︰![開始使用時態表](../../relational-databases/tables/media/getting-started-with-temporal.png "開始使用時態表")
 
 本主題分成以下 5 個子主題：
 

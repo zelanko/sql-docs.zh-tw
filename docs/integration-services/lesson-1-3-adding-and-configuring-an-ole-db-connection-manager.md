@@ -11,10 +11,10 @@ ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4bf9a4a922c8aeed7ca344b423193e8b01c19037
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296148"
 ---
 # <a name="lesson-1-3-add-and-configure-an-ole-db-connection-manager"></a>課程 1-3：新增及設定 OLE DB 連線管理員
@@ -29,7 +29,7 @@ ms.locfileid: "71296148"
   
 ## <a name="add-and-configure-an-ole-db-connection-manager"></a>新增及設定 OLE DB 連線管理員
 
-1. 在 [方案總管]  中，於 [連線管理員]  上按一下滑鼠右鍵，然後選取 [新增連線管理員]  。
+1. 在 [方案總管]  窗格中，於 [連線管理員]  上按一下滑鼠右鍵，然後選取 [新增連線管理員]  。
 
 1. 在 [加入 SSIS 連線管理員]  對話方塊中，依序選取 [OLEDB]  和 [加入]  。
     

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ddaca1490782c8fd3a88b941fbabe6af48531726
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727760"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>使用動態管理檢視 (DMV) 來監視 SQL Server 機器學習服務
@@ -41,7 +41,7 @@ ms.locfileid: "73727760"
 
 在 SQL Server 中監視機器學習工作負載時，可以使用下列動態管理檢視。 若要查詢 DMV，您需要執行個體的 `VIEW SERVER STATE` 權限。
 
-| 動態管理檢視 | 類型 | Description |
+| 動態管理檢視 | 類型 | 描述 |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | 執行 | 逐資料列傳回正在執行外部指令碼的每個使用中背景工作帳戶。 |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | 執行 | 逐資料列傳回各種類型的外部指令碼要求。 |
@@ -79,7 +79,7 @@ WHERE name = 'external scripts enabled';
 
 查詢會傳回下列資料行：
 
-| 資料行 | Description |
+| 資料行 | 描述 |
 |--------|-------------|
 | IsMLServicesInstalled | 如果已經為執行個體安裝 SQL Server 機器學習服務，則會傳回 1。 否則，會傳回 0。 |
 | ExternalScriptsEnabled | 如果已啟用執行個體的外部指令碼，則會傳回 1。 否則，會傳回 0。 |
@@ -107,7 +107,7 @@ ON s.session_id = r.session_id;
 
 查詢會傳回下列資料行：
 
-| 資料行 | Description |
+| 資料行 | 描述 |
 |--------|-------------|
 | session_id | 識別每個使用中的主要連接所關聯的工作階段。 |
 | blocking_session_id | 封鎖要求之工作階段的識別碼。 如果這個資料行是 NULL，表示要求沒有被封鎖，或者封鎖工作階段的工作階段資訊無法使用 (或無法識別)。 |
@@ -122,7 +122,7 @@ ON s.session_id = r.session_id;
 | reads | 這項要求所執行的讀取數。 |
 | logical_reads | 這項要求所執行的邏輯讀取數。 |
 | writes | 這項要求所執行的寫入數。 |
-| language | 代表支援的指令碼語言的關鍵字。 |
+| 語言 | 代表支援的指令碼語言的關鍵字。 |
 | degree_of_parallelism | 指出已建立之平行處理序數目的數字。 這個值可能與已要求的平行處理序數目不同。 |
 | external_user_name | 用來執行指令碼的 Windows 背景工作帳戶。 |
 
@@ -143,9 +143,9 @@ ORDER BY language, counter_name;
 
 查詢會傳回下列資料行：
 
-| 資料行 | Description |
+| 資料行 | 描述 |
 |--------|-------------|
-| language | 註冊的外部指令碼語言名稱。 |
+| 語言 | 註冊的外部指令碼語言名稱。 |
 | counter_name | 註冊的外部指令碼函數名稱。 |
 | counter_value | 伺服器上已呼叫之註冊的外部指令碼函數總數。 這個值會從在執行個體上安裝功能之後開始累計，而且無法重設。 |
 
@@ -165,7 +165,7 @@ WHERE object_name LIKE '%External Scripts%'
 
 **sys.dm_os_performance_counters** 會輸出外部指令碼的下列效能計數器：
 
-| 計數器 | Description |
+| 計數器 | 描述 |
 |---------|-------------|
 | 執行總計 | 本機或遠端呼叫所啟動的外部處理序數目。 |
 | 平行執行 | 指令碼包含 _\@parallel_ 規格且 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 能夠產生及使用平行查詢計劃的次數。 |
@@ -175,7 +175,7 @@ WHERE object_name LIKE '%External Scripts%'
 | 執行時間總計 (毫秒) | 呼叫與完成呼叫之間的經過時間。 |
 | 執行錯誤 | 指令碼回報錯誤的次數。 此計數不包含 R 或 Python 錯誤。 |
 
-## <a name="memory-usage"></a>記憶體使用狀況
+## <a name="memory-usage"></a>記憶體使用量
 
 檢視 OS、SQL Server 與外部集區所使用之記憶體的相關資訊。
 
@@ -193,7 +193,7 @@ FROM sys.dm_os_sys_info;
 
 查詢會傳回下列資料行：
 
-| 資料行 | Description |
+| 資料行 | 描述 |
 |--------|-------------|
 | physical_memory_kb | 電腦上實體記憶體的總數。 |
 | committed_kb | 記憶體管理員中已認可的記憶體 (KB)。 不包含記憶體管理員中的保留記憶體。 |
@@ -222,7 +222,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 查詢會傳回下列資料行：
 
-| 資料行 | Description |
+| 資料行 | 描述 |
 |--------|-------------|
 | NAME | 外部資源集區或 SQL Server 的名稱。 |
 | max_memory_percent | SQL Server 或外部資源集區可以使用的最大記憶體。 |
@@ -247,7 +247,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 查詢會傳回下列資料行：
 
-| 資料行 | Description |
+| 資料行 | 描述 |
 |--------|-------------|
 | pool_name | 資源集區的名稱。 SQL Server 資源集區前面會加上 `SQL Server`，而外部資源集區前面會加上 `External Pool`。
 | total_cpu_usage_hours | Resource Govenor 統計資料重設之後的累積 CPU 使用量 (以毫秒為單位)。 |
@@ -276,9 +276,9 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 傳回的資料行如下：
 
-| 資料行 | Description |
+| 資料行 | 描述 |
 |--------|-------------|
-| 封裝 | 已安裝之套件的名稱。 |
+| Package | 已安裝之套件的名稱。 |
 | 版本 | 套件的版本。 |
 | 相依 | 列出已安裝之套件所相依的套件。 |
 | 授權 | 已之安裝套件的授權。 |
@@ -302,9 +302,9 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 傳回的資料行如下：
 
-| 資料行 | Description |
+| 資料行 | 描述 |
 |--------|-------------|
-| 封裝 | 已安裝之套件的名稱。 |
+| Package | 已安裝之套件的名稱。 |
 | 版本 | 套件的版本。 |
 | Location | 可在其中找到套件的目錄。 |
 

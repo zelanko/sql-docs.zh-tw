@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: ad9346cacd3cb29b19245fb11b0d21c373d93738
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595653"
 ---
 # <a name="enable-always-encrypted-with-secure-enclaves-for-existing-encrypted-columns"></a>為現有加密資料行啟用具有安全記憶體保護區的 Always Encrypted 
@@ -72,6 +72,6 @@ ms.locfileid: "73595653"
 
 如需如何透過用戶端工具輪替資料行加密金鑰的詳細資訊，請參閱[使用 SQL Server Management Studio 輪替 Always Encrypted 金鑰](rotate-always-encrypted-keys-using-ssms.md)和[使用 PowerShell 輪替 Always Encrypted 金鑰](rotate-always-encrypted-keys-using-powershell.md)。
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 - [使用具有安全記憶體保護區的 Always Encrypted 查詢資料行](always-encrypted-enclaves-query-columns.md)
 - [使用具有安全記憶體保護區的 Always Encrypted 開發應用程式](always-encrypted-enclaves-client-development.md)

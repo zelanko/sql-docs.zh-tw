@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.openlocfilehash: e4979fbb4e2dbbccf7ed11b744051373b0750d1f
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558625"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Linux 上的 Always On 可用性群組

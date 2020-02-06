@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2bc231a064862c5e2a16f60d85a5166fd4765566
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727586"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>從命令列安裝 SQL Server 機器學習 R 和 Python 元件
@@ -36,7 +36,7 @@ ms.locfileid: "73727586"
 
 + 請勿在容錯移轉叢集上安裝。 用來隔離 R 和 Python 程序的安全性機制不相容於 Windows Server 容錯移轉叢集環境。
 
-+ 請勿在網域控制站上安裝。 安裝程式的 Machine Learning 服務部分將會失敗。
++ 請勿在網域控制站上安裝。 安裝程式的機器學習服務部分將會失敗。
 
 + 請避免在同一部電腦上安裝獨立和資料庫內執行個體。 獨立伺服器會爭用相同資源，而損害這兩個安裝的效能。
 
@@ -48,7 +48,7 @@ FEATURES 引數是必要的，如同授權條款合約。
 透過命令提示字元安裝時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援使用 /Q 參數的完整無訊息模式或使用 /QS 參數的簡單無訊息模式。 /QS 參數只會顯示進度、不接受任何輸入，而且不會顯示任何遇到的錯誤訊息。 只有當您指定 /Action=install 時，才支援 /QS 參數。
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-| 引數 | Description |
+| 引數 | 描述 |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | 安裝資料庫內版本：SQL Server R Services (資料庫內)。  |
 | /FEATURES = SQL_SHARED_MR | 安裝獨立版本的 R 功能：Microsoft R Server (獨立式)。 獨立伺服器是指未繫結至資料庫引擎執行個體的「共用功能」。|
@@ -59,7 +59,7 @@ FEATURES 引數是必要的，如同授權條款合約。
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-| 引數 | Description |
+| 引數 | 描述 |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | 安裝資料庫內版本：SQL Server 機器學習服務 (資料庫內)。  |
 | /FEATURES = SQL_INST_MR | 將此與 AdvancedAnalytics 配對。 安裝 (資料庫內) R 功能，包括 Microsoft R Open 和專屬的 R 套件。 |
@@ -70,11 +70,11 @@ FEATURES 引數是必要的，如同授權條款合約。
 | /IACCEPTPYTHONLICENSETERMS | 表示您已接受授權合約以使用 Python 元件。 |
 | /IACCEPTSQLSERVERLICENSETERMS | 表示您已接受使用 SQL Server 的授權條款。|
 | /MRCACHEDIRECTORY | 針對離線安裝，會設定包含 R 元件 CAB 檔案的資料夾。 |
-| /MPYCACHEDIRECTORY | 保留供日後使用。 請使用 %TEMP% 來儲存 Python 元件 CAB 檔案，以在沒有網際網路連線的電腦上進行安裝。 |
+| /MPYCACHEDIRECTORY | 保留供未來使用。 請使用 %TEMP% 來儲存 Python 元件 CAB 檔案，以在沒有網際網路連線的電腦上進行安裝。 |
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-| 引數 | Description |
+| 引數 | 描述 |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | 安裝資料庫內版本：SQL Server 機器學習服務 (資料庫內)。  |
 | /FEATURES = SQL_INST_MR | 將此與 AdvancedAnalytics 配對。 安裝 (資料庫內) R 功能，包括 Microsoft R Open 和專屬的 R 套件。 |
@@ -86,7 +86,7 @@ FEATURES 引數是必要的，如同授權條款合約。
 | /IACCEPTPYTHONLICENSETERMS | 表示您已接受授權合約以使用 Python 元件。 |
 | /IACCEPTSQLSERVERLICENSETERMS | 表示您已接受使用 SQL Server 的授權條款。|
 | /MRCACHEDIRECTORY | 針對離線安裝，會設定包含 R 元件 CAB 檔案的資料夾。 |
-| /MPYCACHEDIRECTORY | 保留供日後使用。 請使用 %TEMP% 來儲存 Python 元件 CAB 檔案，以在沒有網際網路連線的電腦上進行安裝。 |
+| /MPYCACHEDIRECTORY | 保留供未來使用。 請使用 %TEMP% 來儲存 Python 元件 CAB 檔案，以在沒有網際網路連線的電腦上進行安裝。 |
 ::: moniker-end
 
 ## <a name="indb"></a> 資料庫內執行個體安裝

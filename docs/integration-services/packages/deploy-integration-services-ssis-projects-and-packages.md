@@ -19,10 +19,10 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680967"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 專案和封裝
@@ -63,7 +63,7 @@ ms.locfileid: "71680967"
 ## <a name="features-of-project-deployment-model"></a>專案部署模型的功能  
  下表列出可用於專為專案部署模型開發之專案的功能。  
   
-|功能|Description|  
+|功能|描述|  
 |-------------|-----------------|  
 |參數|參數指定要供封裝使用的資料。 您可以將參數範圍限定在分別具有封裝參數和專案參數的封裝層級或專案層級。 在運算式或工作中，都會用到參數。 將專案部署到目錄之後，您可以為每個參數各指定一個常值，或是使用在設計時所指派的預設值。 您也可以參考環境變數來替代常值。 環境變數會在封裝執行時解析。|  
 |環境|環境是可供 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案參考之變數的容器。 每個專案都可以有多個環境參考，但是封裝執行的單一執行個體只能參考來自單一環境的變數。 環境可讓您組織指派給封裝的值。 例如，您可能會有命名為 "Dev"、"test" 和 "Production" 的環境。|  
@@ -117,7 +117,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
          根據您是從 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 還是從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行 [Integration Services 專案轉換精靈]  ，此精靈會執行不同的轉換工作。  
   
-        -   如果您是從 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 執行此精靈，則專案中包含的封裝會從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 2005、2008 或 2008 R2 轉換為目前版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用的格式。 系統將會升級原始專案 (.dtproj) 和封裝 (.dtsx) 檔。  
+        -   如果您是從 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]執行此精靈，則專案中包含的封裝會從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 2005、2008 或 2008 R2 轉換為目前版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用的格式。 系統將會升級原始專案 (.dtproj) 和封裝 (.dtsx) 檔。  
   
         -   如果您是從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行此精靈，此精靈將會從專案中包含的封裝和組態產生專案部署檔案 (.ispac)。 系統將不會升級原始封裝 (.dtsx) 檔。  
   
@@ -137,7 +137,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
      -或-  
   
-     從 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的 [物件總管] 中，以滑鼠右鍵按一下 [專案]  節點，然後選取 [匯入封裝]  。  
+     從 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的物件總管中，以滑鼠右鍵按一下 [專案]  節點，然後選取 [匯入封裝]  。  
   
 2.  完成精靈。
   
@@ -145,17 +145,17 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 1.  開啟 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的專案，然後從 [專案]  功能表中選取 [部署]  ，以啟動 [Integration Services 部署精靈]  。  
   
-     中的多個  
+     或  
   
      在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，展開 [物件總管] 內的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > SSISDB  節點，然後找出您要部署之專案的 [專案] 資料夾。 以滑鼠右鍵按一下 [專案]  資料夾，然後按一下 [部署專案]  。  
   
-     中的多個  
+     或  
   
      在命令提示字元中，從 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** 執行 **isdeploymentwizard.exe**。 64 位元的電腦上的 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**也有提供 32 位元版本的工具。  
   
 2.  在 [選取來源]  頁面上，按一下 [專案部署檔案]  以選取專案的部署檔案。  
   
-     中的多個  
+     或  
   
      按一下 [Integration Services 目錄]  ，選取已經部署至 SSISDB 目錄的專案。  
   
@@ -166,7 +166,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 ###  <a name="DeployWizard"></a> 使用 Integration Services 部署精靈部署封裝  
   
-1.  在命令提示字元中，從 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** 執行 **isdeploymentwizard.exe**。 64 位元的電腦上的 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn** 也有提供 32 位元版本的工具。  
+1.  在命令提示字元中，從 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** 執行 **isdeploymentwizard.exe**。 64 位元的電腦上的 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**也有提供 32 位元版本的工具。  
   
 2.  在 [選取來源]  頁面上，切換至 [封裝部署模型]  。 然後，選取含有來源套件的資料夾並設定套件。  
   
@@ -296,7 +296,7 @@ static void Main()
 
  - 在 Windows Search 中輸入「SQL Server 部署精靈」  
 
- 中的多個
+ 或
 
  - 在 SQL Server 安裝資料夾下搜尋可執行檔 **ISDeploymentWizard.exe**，例如："C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn"。 
  
@@ -416,7 +416,7 @@ static void Main()
   
     2.  按一下 [使用環境變數]  ，然後選取您建立的環境變數。  
   
-14. 按兩次 [確定]  ，以儲存您的變更。  
+14. 按 [確定]  兩次以儲存變更。  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>使用預存程序部署及執行 SSIS 封裝
 
@@ -593,7 +593,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **使用 SQL Server 驗證**  
  當使用者透過不信任連接並指定登入名稱和密碼進行連接時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會驗證此連接，檢查是否已建立該 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入帳戶，而且指定的密碼是否符合先前記錄的密碼。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 沒有登入帳戶集，驗證將失敗，而使用者會收到錯誤訊息。  
   
- **User name**  
+ **使用者名稱**  
  使用 SQL Server 驗證時，請指定使用者名稱。  
   
  **密碼**  
@@ -654,7 +654,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  選擇性地輸入專案描述。  
   
 ###  <a name="executePackage"></a> 設定 [更新執行封裝工作] 頁面上的選項  
- 更新執行封裝工作包含在封裝中，以使用專案參考。 如需詳細資訊，請參閱＜ [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md)＞。  
+ 更新執行封裝工作包含在封裝中，以使用專案參考。 如需詳細資訊，請參閱＜ [執行封裝工作編輯器](../../integration-services/control-flow/execute-package-task-editor.md)＞。  
   
  **父封裝**  
  列出使用「執行封裝」工作執行子封裝之封裝的名稱。  
@@ -671,7 +671,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="configurations"></a> 設定 [選取組態] 頁面上的選項  
  選取您要以參數取代的封裝組態。  
   
- **封裝**  
+ **套件**  
  列出封裝檔案。  
   
  **型別**  
@@ -697,20 +697,20 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="createParameters"></a> 設定 [建立參數] 頁面上的選項  
  選取每個組態屬性的參數名稱和範圍。  
   
- **封裝**  
+ **套件**  
  列出封裝檔案。  
   
  **參數名稱**  
  列出參數名稱。  
   
- **範圍。**  
+ **範圍**  
  選取參數的範圍 (封裝或專案)。  
   
 ###  <a name="configureParameters"></a> 設定 [設定參數] 頁面上的選項  
  **名稱**  
  列出參數名稱。  
   
- **範圍。**  
+ **範圍**  
  列出參數的範圍。  
   
  **ReplTest1**  

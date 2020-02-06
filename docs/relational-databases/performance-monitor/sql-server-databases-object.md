@@ -16,10 +16,10 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a8114722ac95c1404a45d8c85bf1736e541fa0ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093606"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server、Databases 物件
@@ -30,7 +30,7 @@ ms.locfileid: "68093606"
   
  下表描述 SQL Server **Databases** 計數器。  
   
-|SQL Server Databases 計數器|Description|  
+|SQL Server Databases 計數器|描述|  
 |-----------------------------------|-----------------|  
 |**Active Transactions**|資料庫的使用中交易數。|  
 |**Avg Dist From EOL/LP Request**|從每個記錄集區要求的記錄檔結尾之平均距離 (以位元組為單位)，供最後一個 VLF 中的要求之用。| 
@@ -85,6 +85,6 @@ ms.locfileid: "68093606"
   
 ## <a name="see-also"></a>另請參閱  
  [監視資源使用量 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server、資料庫複本](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
+ [SQL Server 的 Database Replica](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   
   

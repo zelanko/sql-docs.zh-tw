@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 068b7aa3c068b10b787b99bba26c12a2b680bcd3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727404"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services 的效能：結果和資源
@@ -41,7 +41,7 @@ ms.locfileid: "73727404"
 3. 已將各種修改套用到資料表的複本，以測試 SQL Server 功能，例如，頁面壓縮、資料列壓縮、編製索引、單欄式資料存放區等。
 4. 效能會在套用每個最佳化前後進行測量。
 
-| 資料表名稱| Description|
+| 資料表名稱| 描述|
 |------|------|
 | *airline* | 使用 `rxDataStep` 從原始 xdf 檔案轉換的資料|                          |
 | *airlineWithIntCol*   | 轉換成整數而不是字串的 *DayOfWeek*。 會一併新增 *rowNum* 資料行。|
@@ -92,7 +92,7 @@ metric time pct
 
 第一個測試會比較壓縮和單欄式資料表的使用方式，以縮減資料大小。
 
-| 資料表名稱            | 資料列     | 已保留   | data       | index_size | 未使用  | 節省 % (已保留) |
+| 資料表名稱            | 資料列     | Reserved   | 資料       | index_size | 未使用  | 節省 % (已保留) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816 KB | 2972160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784 KB  | 623744 KB  | 1352 KB    | 688 KB  | 79%                 |
@@ -268,8 +268,8 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 | 資料表名稱 | 測試名稱 | 平均時間 (用於訓練模型) | 儲存/載入模型的時間|
 |------------|------------|------------|------------|
-| airline    | SaveModel| 21.59| 2.08|
-| airline    | LoadModelAndPredict | | 2.09 (包括用於預測的時間) |
+| 航空    | SaveModel| 21.59| 2.08|
+| 航空    | LoadModelAndPredict | | 2.09 (包括用於預測的時間) |
 
 **結論**
 
@@ -400,10 +400,10 @@ CPU 親和性會在繼續比對案例中強制執行，以評估對 R 作業的�
 
 ## <a name="other-articles-in-this-series"></a>此系列的其他文章
 
-[R 的效能微調 - 簡介](sql-server-r-services-performance-tuning.md)
+[R 的效能調整 - 簡介](sql-server-r-services-performance-tuning.md)
 
-[R 的效能微調 - SQL Server 設定](sql-server-configuration-r-services.md)
+[R 的效能調整 - SQL Server 設定](sql-server-configuration-r-services.md)
 
-[R 的效能微調 - R 程式碼和資料最佳化](r-and-data-optimization-r-services.md)
+[R 的效能調整 - R 程式碼和資料最佳化](r-and-data-optimization-r-services.md)
 
-[效能微調 - 案例研究結果](performance-case-study-r-services.md)
+[效能調整 - 案例研究結果](performance-case-study-r-services.md)

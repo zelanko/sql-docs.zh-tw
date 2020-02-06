@@ -15,10 +15,10 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 09b3759af6fc956d83daee464b5120fa80462dcf
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278318"
 ---
 # <a name="create-a-database-mail-profile"></a>建立 Database Mail 設定檔
@@ -36,7 +36,7 @@ ms.locfileid: "72278318"
 ###  <a name="Prerequisites"></a> 必要條件  
  替該設定檔建立一個或多個 Database Mail 帳戶。 如需建立 Database Mail 帳戶的詳細資訊，請參閱 [建立 Database Mail 帳戶](../../relational-databases/database-mail/create-a-database-mail-account.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  公用設定檔可以讓任何可存取 **msdb** 資料庫的使用者使用該設定檔來傳送電子郵件。 使用者或角色可以使用私人設定檔。 為角色授與設定檔的存取權限時，會建立能夠更輕鬆維護的架構。 您必須是 **msdb** 資料庫中之 **DatabaseMailUserRole** 的成員，而且至少可以存取一個 Database Mail 設定檔，才能傳送郵件。  
   
 ####  <a name="Permissions"></a> 權限  
@@ -83,7 +83,7 @@ ms.locfileid: "72278318"
   
     -   在 [完成精靈]  頁面上，檢閱要執行的動作，然後按一下 [完成]  完成設定檔的設定。  
   
-## <a name="using-transact-sql"></a>使用 Transact-SQL  
+## <a name="using-transact-sql"></a>使用 TRANSACT-SQL  
   
 ###  <a name="PrivateProfile"></a> 建立 Database Mail 私人設定檔  
   
@@ -97,7 +97,7 @@ ms.locfileid: "72278318"
   
      *\@description* = '*描述*'  
   
-     其中， *\@profile_name* 是定檔的名稱，而 *\@description* 是設定檔的描述。 這個參數是選擇性的。  
+     其中， *\@profile_name* 是定檔的名稱，而 *\@description* 是設定檔的描述。 這是選擇性參數。  
   
 -   針對每個帳戶，執行預存程序 [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)，如下所示：  
   
@@ -165,7 +165,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *\@description* = '*描述*'  
   
-     其中， *\@profile_name* 是定檔的名稱，而 *\@description* 是設定檔的描述。 這個參數是選擇性的。  
+     其中， *\@profile_name* 是定檔的名稱，而 *\@description* 是設定檔的描述。 這是選擇性參數。  
   
 -   針對每個帳戶，執行預存程序 [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)，如下所示：  
   

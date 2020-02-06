@@ -10,16 +10,16 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 406f8e1c60c5820f9edaaf7760b7aeed321d2611
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73724453"
 ---
 # <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>第 3 課：使用 T-SQL 定型及儲存模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文是適用 SQL 開發人員的教學課程的一部分，說明如何在 SQL Server 中使用 R。
+本篇教學課程文章適用 SQL 開發人員，說明如何在 SQL Server 中使用 R。
 
 在本課程中，您將學習如何使用 R 來定型機器學習模型。您將使用在上一課中建立的資料功能來定型模型，然後將定型的模型儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。 在此情況下，R 套件已隨 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]安裝，因此可以從 SQL 完成所有作業。
 

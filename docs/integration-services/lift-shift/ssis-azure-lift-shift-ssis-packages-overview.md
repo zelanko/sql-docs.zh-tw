@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 0a402c50e8a7f1c2467b00fbbaa599d6c289ebab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896184"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>將 SQL Server Integration Services 工作負載隨即轉移至雲端
@@ -35,7 +35,7 @@ ms.locfileid: "67896184"
 
 最明顯的差異在於區隔儲存與執行階段。 Azure Data Factory 會裝載 Azure 上 SSIS 套件的執行階段引擎。 執行階段引擎稱為 Azure SSIS Integration Runtime (Azure SSIS IR)。 如需詳細資訊，請參閱 [Azure SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)。
 
-| 位置 | 儲存體 | 執行階段 | 延展性 |
+| Location | 儲存體 | 執行階段 | 延展性 |
 |---|---|---|---|
 | 內部部署 | SQL Server | SQL Server 所裝載的 SSIS 執行階段 | SSIS Scale Out (在 SQL Server 2017 和更新版本中)<br/><br/>自訂解決方案 (在舊版 SQL Server 中) |
 | 在 Azure 上 | SQL Database 或 SQL Database 受控執行個體 | Azure SSIS Integration Runtime，Azure Data Factory 的元件 | Azure SSIS Integration Runtime 的擴充選項 |
@@ -75,7 +75,7 @@ ms.locfileid: "67896184"
 
 ### <a name="available-ssis-components"></a>可用的 SSIS 元件
 
-當您佈建 SQL Database 執行個體來裝載 SSISDB 時，也會安裝 Azure Feature Pack for SSIS 以及 Access 可轉散發套件。 除了內建元件所支援的資料來源之外，這些元件還會提供與各種 **Azure** 資料來源及 **Excel 和 Access** 檔案的連線。
+當您佈建 SQL Database 的執行個體以裝載 SSISDB 時，也會安裝適用於 SSIS 的 Azure Feature Pack 和 Access 可轉散發套件。 除了內建元件所支援的資料來源之外，這些元件還會提供與各種 **Azure** 資料來源及 **Excel 和 Access** 檔案的連線。
 
 您也可以安裝其他元件。例如，您可以安裝預設不會安裝的驅動程式。 如需詳細資訊，請參閱[自訂 Azure-SSIS 整合執行階段的安裝](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)。
 
@@ -91,7 +91,7 @@ ms.locfileid: "67896184"
 
 ## <a name="deploy-and-run-packages"></a>部署和執行套件
 
-若要開始進行，請參閱[教學課程：在 Azure 中部署及執行 SQL Server Integration Services (SSIS) 套件](ssis-azure-deploy-run-monitor-tutorial.md)。
+若要開始使用，請參閱[教學課程：在 Azure 中部署及執行 SQL Server Integration Services (SSIS) 套件](ssis-azure-deploy-run-monitor-tutorial.md)。
 
 ### <a name="prerequisites"></a>Prerequisites
 

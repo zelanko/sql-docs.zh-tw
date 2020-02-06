@@ -15,10 +15,10 @@ ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 501ec8bc3e7ad039e3864ce8a9a1767c6961848c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75235648"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>判斷在可用性複本之間連線失敗的可能原因

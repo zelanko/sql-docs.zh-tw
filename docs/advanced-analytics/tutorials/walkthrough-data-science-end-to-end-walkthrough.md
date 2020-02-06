@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9844746d6887c14e5524ed54c39e2de7e0375eb1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73723796"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>教學課程：適用 R 資料科學家的 SQL 開發
@@ -84,7 +84,7 @@ ms.locfileid: "73723796"
   install.packages("ROCR", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
   install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
   ```
-  這個範例會使用 R grep 函數來搜尋可用路徑的向量，並尋找包含 "Program Files" 的路徑。 如需相關資訊，請參閱 [https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep)。
+  這個範例會使用 R grep 函數來搜尋可用路徑的向量，並尋找包含 "Program Files" 的路徑。 如需詳細資訊，請參閱 [https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep)。
 
   如果您認為已經安裝套件，請執行 `installed.packages()` 檢查已安裝的套件清單。
 
