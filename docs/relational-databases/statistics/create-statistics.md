@@ -19,10 +19,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1876c16455876931d6a5c1d091d9d4c0dc860fcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68103417"
 ---
 # <a name="create-statistics"></a>建立統計資料
@@ -53,7 +53,7 @@ ms.locfileid: "68103417"
   
 -   您不能卸除、重新命名或變更在篩選統計資料述詞中定義的資料表資料行定義。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  使用者必須是資料表或索引檢視表擁有者，或是下列其中一個角色的成員： **系統管理員** 固定伺服器角色、 **db_owner** 固定資料庫角色或 **db_ddladmin** 固定資料庫角色。  
@@ -70,7 +70,7 @@ ms.locfileid: "68103417"
   
 4.  以滑鼠右鍵按一下 [統計資料]  資料夾，然後選取 [新增統計資料…]  。  
   
-     下列屬性會在 [_table\_name_ 資料表上新統計資料]  對話方塊的 [一般]  頁面中顯示。  
+     下列屬性會在 [**table**name **資料表上新統計資料]** _對話方塊的 [一般]\__ 頁面中顯示。  
   
      **資料表名稱**  
      顯示統計資料所描述的資料表名稱。  
@@ -90,13 +90,13 @@ ms.locfileid: "68103417"
      **大小**  
      顯示各個資料行的資料類型大小。  
   
-     **識別**  
+     **身分識別**  
      勾選時表示為識別欄位。  
   
      **允許 Null**  
      指出資料行是否接受 NULL 值。  
   
-     **[加入]**  
+     **加入**  
      將資料表的其他資料行加入統計資料方格。  
   
      **移除**  
@@ -114,12 +114,12 @@ ms.locfileid: "68103417"
      **更新這些資料行的統計資料**  
      勾選即可在對話方塊關閉時更新統計資料。  
   
-     下列屬性會在 [_table\_name_ 資料表上新統計資料]  對話方塊的 [篩選]  頁面中顯示。  
+     下列屬性會在 [**table**name **資料表上新統計資料]** _對話方塊的 [篩選]\__ 頁面中顯示。  
   
      **篩選運算式**  
      定義要在篩選統計資料中包含什麼資料列。 例如， `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  在 [_table\_name_ 資料表上新統計資料]  對話方塊的 [一般]  頁面上，按一下 [新增]  。  
+5.  在 [**table**name _資料表上新統計資料]\__ 對話方塊的 [一般]  頁面上，按一下 [新增]  。  
   
      下列屬性會在 **[選取資料行]** 對話方塊中顯示。 此資訊是唯讀的。  
   
@@ -132,15 +132,15 @@ ms.locfileid: "68103417"
      **大小**  
      顯示各個資料行的資料類型大小。  
   
-     **識別**  
+     **身分識別**  
      勾選時表示為識別欄位。  
   
-     **Allow NULLs**  
+     **允許 NULL**  
      指出資料行是否接受 NULL 值。  
   
 6.  在 **[選取資料行]** 對話方塊中，選取要為其建立統計資料的每個資料行的核取方塊，然後按一下 **[確定]** 。  
   
-7.  在 [_table\_name_ 資料表上新統計資料]  對話方塊中，按一下 [確定]  。  
+7.  在 [**table**name _資料表上新統計資料]\__ 對話方塊中，按一下 [確定]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

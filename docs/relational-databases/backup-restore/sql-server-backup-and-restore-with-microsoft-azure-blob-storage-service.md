@@ -11,10 +11,10 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251129"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原
@@ -26,23 +26,23 @@ ms.locfileid: "75251129"
   
  SQL Server 可以下列方式將備份儲存到 Microsoft Azure BLOB 儲存體服務：  
   
--   **管理針對 Microsoft Azure 所進行的備份：** 相同的方式也可用於備份到磁碟和磁帶。現在只要指定 URL 作為備份目的地，即可備份至 Microsoft Azure 儲存體。 一如您對於本機儲存體或其他異地選項的處理方式，您可以使用此功能手動備份或設定您自己的備份策略。 此功能又稱為 **SQL Server 備份至 URL**。 如需詳細資訊，請參閱 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。 SQL Server 2012 SP1 CU2 或更新版本皆提供此功能。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 已增強這項功能，透過使用區塊 Blob、共用存取簽章和等量配置，提升效能和功能。  
+-   **管理 Microsoft Azure 的備份：** 現在，您可使用備份到磁碟和磁帶的相同方式，指定 URL 作為備份目的地以備份至 Microsoft Azure 儲存體。 一如您對於本機儲存體或其他異地選項的處理方式，您可以使用此功能手動備份或設定您自己的備份策略。 此功能又稱為 **SQL Server 備份至 URL**。 如需詳細資訊，請參閱 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。 SQL Server 2012 SP1 CU2 或更新版本皆提供此功能。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 已增強這項功能，透過使用區塊 Blob、共用存取簽章和等量配置，提升效能和功能。  
   
     > [!NOTE]  
     >  若是使用 SQL Server 2012 SP1 CU2 之前的 SQL Server 版本，則可使用 Microsoft Azure 工具的 SQL Server 備份增益集，快速而輕鬆地建立要儲存到 Microsoft Azure 儲存體的備份。 如需詳細資訊，請參閱＜ [下載中心](https://go.microsoft.com/fwlink/?LinkID=324399)＞。  
   
 -   **Azure Blob 儲存體中資料庫檔案的檔案快照集備份** ：透過使用 Azure 快照集， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案快照集備份可針對使用 Azure Blob 儲存體服務儲存的資料庫檔案，提供幾乎即時的備份和還原。 這個功能可讓您簡化備份和還原原則，並支援還原時間點。 如需詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。 SQL Server 2016 或更新版本皆提供此功能。  
   
--   **讓 SQL Server 管理針對 Microsoft Azure 所進行的備份：** 設定 SQL Server 以管理單一資料庫或多個資料庫的備份策略與排程備份，或是在執行個體層級設定預設值。 此功能又稱為 **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** 。 如需詳細資訊，請參閱 [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。 SQL Server 2014 或更新版本皆提供此功能。  
+-   **由 SQL Server 管理 Microsoft Azure 的備份：** 設定由 SQL Server 管理單一資料庫或多個資料庫的備份策略及排程備份，或在執行個體層級設定預設值。 此功能又稱為 **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** 。 如需詳細資訊，請參閱 [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。 SQL Server 2014 或更新版本皆提供此功能。  
   
 ## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>使用 Microsoft Azure Blob 服務進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份的優點  
   
--   彈性、可靠且無限制的異地儲存體：將您的備份儲存在 Microsoft Azure Blob 服務上是一種方便、彈性且容易存取的異地選項。 針對您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份建立異地儲存體就像修改現有的指令碼/作業一樣簡單。 異地儲存體通常應該遠離實際執行資料庫位置，防止單一災害同時影響異地和實際執行資料庫位置。 透過選擇異地備援 Blob 儲存體，您就可以在發生可能影響整個地區的災害時，獲得一層額外的保護。 此外，您可以隨時隨地取得備份，輕鬆地針對還原作業進行存取。  
+-   彈性、可靠且沒有限制的異地儲存體：將您的備份儲存在 Microsoft Azure Blob 服務上是一種方便、彈性且容易存取的異地選項。 針對您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份建立異地儲存體就像修改現有的指令碼/作業一樣簡單。 異地儲存體通常應該遠離實際執行資料庫位置，防止單一災害同時影響異地和實際執行資料庫位置。 透過選擇異地備援 Blob 儲存體，您就可以在發生可能影響整個地區的災害時，獲得一層額外的保護。 此外，您可以隨時隨地取得備份，輕鬆地針對還原作業進行存取。  
   
     > [!IMPORTANT]  
     >  透過使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中的區塊 Blob，您可以將備份組等量配置以支援高達 12.8 TB 的備份檔案大小。  
   
--   備份封存：Microsoft Azure Blob 儲存體服務能提供較佳的替代方案，來取代經常用來封存備份的磁帶選項。 磁帶儲存體可能需要實際運輸至異地設施並採取措施來保護媒體。 將您的備份儲存在 Microsoft Azure Blob 儲存體中，即可提供立即、高可用性且耐用的封存選項。  
+-   備份封存：Microsoft Azure Blob 儲存體服務提供了較佳的替代方案，有效取代封存備份的常用磁帶選項。 磁帶儲存體可能需要實際運輸至異地設施並採取措施來保護媒體。 將您的備份儲存在 Microsoft Azure Blob 儲存體中，即可提供立即、高可用性且耐用的封存選項。  
   
 -   沒有硬體管理的負擔：Microsoft Azure 服務不會產生任何硬體管理的負擔。 Microsoft Azure 服務會管理硬體並提供異地複寫，以進行備援，防止硬體故障。  
   
@@ -57,9 +57,9 @@ ms.locfileid: "75251129"
   
  [Microsoft Azure 定價計算機](https://go.microsoft.com/fwlink/?LinkId=277060) 可以協助您預估成本。  
   
- **儲存體：** 費用是根據使用的空間收費，而計算方式則是採累進費率和備援層級計算。 如需詳細資料與最新資訊，請參閱 **定價詳細資料** 文章的 [資料管理](https://go.microsoft.com/fwlink/?LinkId=277059) 一節。  
+ **儲存體** ：費用是根據使用的空間收費，而計算方式採累進費率和備援等級計算。 如需詳細資料與最新資訊，請參閱 **定價詳細資料** 文章的 [資料管理](https://go.microsoft.com/fwlink/?LinkId=277059) 一節。  
   
- **資料轉送：** 針對 Microsoft Azure 的輸入資料轉送是免費的。 輸出傳輸則必須支付頻寬使用量的費用，計算方式是根據地區特定的累進費率計算。 如需詳細資料，請參閱＜定價詳細資料＞文章的 [資料傳輸](https://go.microsoft.com/fwlink/?LinkId=277061) 一節。  
+ **資料傳輸** ：輸入 Microsoft Azure 的資料傳輸是免費的。 輸出傳輸則必須支付頻寬使用量的費用，計算方式是根據地區特定的累進費率計算。 如需詳細資料，請參閱＜定價詳細資料＞文章的 [資料傳輸](https://go.microsoft.com/fwlink/?LinkId=277061) 一節。  
   
 ## <a name="see-also"></a>另請參閱  
 

@@ -11,10 +11,10 @@ ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d85df8c4d07a61c75dcb42eadbc9c7cdae4faad6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75257969"
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>停用 SQL Server Managed Backup to Microsoft Azure
@@ -22,7 +22,7 @@ ms.locfileid: "75257969"
   本主題說明如何在資料庫和執行個體層級停用或暫停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。  
   
 ##  <a name="DatabaseDisable"></a> 停用資料庫的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
- 您可以使用系統預存程序 [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) 來停用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 設定。 *\@enable_backup* 參數用於啟用和停用特定資料庫的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 設定，其中的 1 會啟用而 0 會停用組態設定。  
+ 您可以使用系統預存程序 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]managed_backup.sp_backup_config_basic (Transact-SQL)[ 來停用 ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) 設定。 *\@enable_backup* 參數用於啟用和停用特定資料庫的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 設定，其中的 1 會啟用而 0 會停用組態設定。  
   
 #### <a name="to-disable-includess_smartbackupincludesss-smartbackup-mdmd-for-a-specific-database"></a>停用特定資料庫的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：  
   

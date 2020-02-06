@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bbcf7c136bfe9ff80b1ea9129e5c6d453aec9e01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114857"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY 資料庫範圍認證 (TRANSACT-SQL)
@@ -53,7 +53,7 @@ DENY permission  [ ,...n ]
  指定拒絕權限的資料庫範圍認證。 需要範圍限定詞 "::"。  
   
  *database_principal*  
- 指定要拒絕其權限的主體。 它有下列幾種：  
+ 指定要拒絕其權限的主體。 下列其中之一：  
   
 -   資料庫使用者  
   
@@ -75,7 +75,7 @@ DENY permission  [ ,...n ]
  指出目前受到拒絕的權限，也為這個主體曾授與此權限的其他主體所拒絕。  
   
  *denying_principal*  
- 指定主體，執行這項查詢的主體會從這個主體衍生權限來拒絕權限。 它有下列幾種：  
+ 指定主體，執行這項查詢的主體會從這個主體衍生權限來拒絕權限。 下列其中之一：  
   
 -   資料庫使用者  
   
@@ -93,7 +93,7 @@ DENY permission  [ ,...n ]
   
 -   未對應至伺服器主體的資料庫使用者  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  資料庫範圍認證是包含在資料庫內的資料庫層級安全性實體，在權限階層中，該資料庫為其父系。 下方列出用資料庫範圍認證可拒絕的最特定也最有限權限，另外還有以隱含方式加以涵蓋的較通用權限。  
   
 |資料庫範圍認證權限|資料庫範圍認證權限所隱含|資料庫權限所隱含|  

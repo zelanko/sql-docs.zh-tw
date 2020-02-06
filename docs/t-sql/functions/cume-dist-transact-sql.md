@@ -20,16 +20,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 05906cfd0e72531bf332ebca4215df047eb8e3fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026466"
 ---
-# <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
+# <a name="cume_dist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此函數會計算值群組中，某值的累加分配。 換言之，`CUME_DIST` 會計算值群組中，某一指定值的相對位置。 假設採取遞增排序，則資料列 _r_ 中，某值的 `CUME_DIST` 是定義為有多少個資料列的值是小於或等於資料列 _r_ 中的值，除以資料分割或查詢結果集中計算得出的資料列數。 `CUME_DIST` 類似於 `PERCENT_RANK` 函數。
+針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此函數會計算值群組中，某值的累加分配。 換言之，`CUME_DIST` 會計算值群組中，某一指定值的相對位置。 假設採取遞增排序，則資料列 `CUME_DIST`r_中，某值的_ 是定義為有多少個資料列的值是小於或等於資料列 _r_ 中的值，除以資料分割或查詢結果集中計算得出的資料列數。 `CUME_DIST` 類似於 `PERCENT_RANK` 函數。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,7 +49,7 @@ _partition\_by\_clause_ 會將 FROM 子句結果集分割成函式所要套用�
 ## <a name="return-types"></a>傳回類型
 **float(53)**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `CUME_DIST` 傳回某一範圍的值，且這些值大於 0 且小於或等於 1。 繫結值的計算所得一律會是相同的累計分佈值。 `CUME_DIST` 預設會包含 NULL 值，並將其視為最低值。
   
 `CUME_DIST` 不具決定性。 如需詳細資訊，請參閱 [決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。

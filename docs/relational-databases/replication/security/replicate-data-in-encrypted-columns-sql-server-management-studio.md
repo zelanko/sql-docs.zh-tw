@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 740c66805b7f1e204604f3747882faa843e638b4
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 360b8027b30bf731bcc42e658d60ae4ec94066bf
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321645"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287257"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>複寫加密資料行中的資料 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -21,13 +21,13 @@ ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4544cc4f0a4d7c1d6d33e1f71bde4b55c09a59c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040365"
 ---
-# <a name="applockmode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
+# <a name="applock_mode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 此函數傳回特定應用程式資源的鎖定擁有者所持有的鎖定模式。 APPLOCK_MODE 是應用程式鎖定函數，會在目前的資料庫上運作。 資料庫是應用程式鎖定的範圍。
@@ -50,7 +50,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 '*lock_owner*'  
 為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 是 **nvarchar(32)** ，而且此值可以是**交易** (預設值) 或**工作階段**。
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回類型
 **nvarchar(32)**
   
 ## <a name="return-value"></a>傳回值
@@ -58,7 +58,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
   
 ||||  
 |-|-|-|  
-|**NoLock**|**Update**|**\*SharedIntentExclusive**|  
+|**NoLock**|**更新**|**\*SharedIntentExclusive**|  
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
 |**Shared**|**排除**||  
   

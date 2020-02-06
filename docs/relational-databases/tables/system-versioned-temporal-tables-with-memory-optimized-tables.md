@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ba6894a7e30c9b5112ced867766598cd62a0552f
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165466"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>系統版本設定時態表與記憶體最佳化資料表
@@ -54,7 +54,7 @@ ms.locfileid: "74165466"
 
 - 資料表名稱會以下列格式產生：**Memory_Optimized_History_Table_<物件識別碼>** ，其中 <物件識別碼>  是目前時態表的識別碼。
 - 資料表會複寫目前時態表的結構描述，加上一個 BIGINT 資料行。 這個額外的資料行可保證移動到內部歷程記錄緩衝區之資料列的唯一性。
-- 其他資料行具有下列名稱格式：**Change_ID[_<尾碼>]** ，其中 _\<尾碼>  是在資料表已經有 *Change_ID* 資料行時選擇性新增。
+- 額外的資料行具有下列名稱格式：**Change_ID[_<後置詞>]** ，其中 *_\<後置詞>* 是在資料表已經有 *Change_ID* 資料行時選擇性加入。
 - 因為暫存資料表中額外的 BIGINT 資料行，系統建立版本記憶體最佳化資料表的資料列大小上限減少 8 個位元組。 現在新的最大值為 8052 位元組。
 - 內部記憶體最佳化暫存資料表不會出現在 SQL Server Management Studio 的「物件總管」中。
 - 關於此資料表的中繼資料與其目前時態表的連線，可在 [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) 中找到。

@@ -22,10 +22,10 @@ ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 46ab24ff86eb7a68e48f58e67f03a859d0c43aa7
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72916040"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>復原到記錄序號 (SQL Server)
@@ -59,11 +59,11 @@ ms.locfileid: "72916040"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>還原至 LSN 的 Transact-SQL 語法  
  使用 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式，您可以在 LSN 上或剛好就在它之前停止，如下所述：  
   
--   使用 WITH STOPATMARK **='** lsn:_<lsn_number>_**'** 子句，其中 lsn:*\<lsnNumber>* 是會指定包含所指定的 LSN 的記錄檔記錄為復原點的字串。  
+-   使用 WITH STOPATMARK **='** lsn: _<lsn_number>_ **'** 子句，其中 lsn: *\<lsnNumber>* 是會指定包含所指定的 LSN 的記錄檔記錄為復原點的字串。  
   
      STOPATMARK 會向前復原到 LSN，並且將該筆記錄納入向前復原中。  
   
--   使用 WITH STOPBEFOREMARK **='** lsn:_<lsn_number>_**'** 子句，其中 lsn:*\<lsnNumber>* 是會指定緊接在包含指定的 LSN 號碼的記錄檔記錄之前的記錄檔記錄為復原點的字串。  
+-   使用 WITH STOPBEFOREMARK **='** lsn: _<lsn_number>_ **'** 子句，其中 lsn: *\<lsnNumber>* 是會指定緊接在包含指定的 LSN 號碼的記錄檔記錄之前的記錄檔記錄為復原點的字串。  
   
      STOPBEFOREMARK 會向前復原到 LSN，並且從向前復原中排除該筆記錄。  
   

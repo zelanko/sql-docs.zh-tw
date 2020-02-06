@@ -17,10 +17,10 @@ ms.assetid: be0896b3-f793-44c9-9390-1c6e58f33b2b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a1131a6f7b00f9b8ba4646106de0699a2a9fada8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115011"
 ---
 # <a name="deny-assembly-permissions-transact-sql"></a>DENY 組件權限 (Transact-SQL)
@@ -50,7 +50,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  指定正在拒絕權限的組件。 需要範圍限定詞 "::"。  
   
  *database_principal*  
- 指定要拒絕其權限的主體。 它有下列幾種：  
+ 指定要拒絕其權限的主體。 下列其中之一：  
   
 -   資料庫使用者  
   
@@ -72,7 +72,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  指出目前受到拒絕的權限，也為這個主體曾授與此權限的其他主體所拒絕。  
   
  *denying_principal*  
- 指定主體，執行這項查詢的主體會從這個主體衍生權限來拒絕權限。 它有下列幾種：  
+ 指定主體，執行這項查詢的主體會從這個主體衍生權限來拒絕權限。 下列其中之一：  
   
 -   資料庫使用者  
   
@@ -90,7 +90,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
   
 -   未對應至伺服器主體的資料庫使用者  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  組件是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 下面所列的是可以拒絕之最特定且最有限的組件權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   
 |組件權限|資料庫權限所隱含|資料庫權限所隱含|  

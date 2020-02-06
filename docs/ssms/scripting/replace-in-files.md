@@ -1,6 +1,6 @@
 ---
-title: 檔案中取代 | Microsoft Docs
-ms.custom: ''
+title: 檔案中取代
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -12,12 +12,12 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b53a95f29495388f31ca833b992f8afe3fd9450c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 787ab0e852055b7dcc53a16f14580f7e184500bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265976"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253711"
 ---
 # <a name="replace-in-files"></a>檔案中取代
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68265976"
  **運算式產生器**  
  當您在 [尋找選項]  中選取 [使用]  核取方塊時，即可使用 [尋找目標]  方塊旁的三角形按鈕。 按一下此按鈕，即可顯示萬用字元或規則運算式的清單，視選取的 **[使用]** 選項而定。 在此清單中選擇任何項目，會加入 **[尋找目標]** 方塊中所指定的字串。  
   
-## <a name="replace-with"></a>取代成  
+## <a name="replace-with"></a>取代為  
  這些控制項可以讓您指定要插入的字串，以取代相符的字串或運算式。  
   
  **Replace with**  
@@ -49,14 +49,14 @@ ms.locfileid: "68265976"
  **運算式產生器**  
  當您在 [尋找選項]  中選取 [使用]  核取方塊時，即可使用 [取代成]  方塊旁的三角形按鈕。 按一下此按鈕，即可顯示萬用字元或規則運算式的清單，視選取的 **[使用]** 選項而定。 按一下此清單中的任何項目，將其加入 **[取代成]** 方塊中所指定的字串。  
   
- **取代**  
+ **Replace**  
  按一下此按鈕，以 [取代成]  方塊中所指定的字串，取代 [尋找目標]  中所指定之字串的目前執行個體，並於 [查詢]  中所指定的範圍內尋找下一個執行個體。  
   
  **全部取代**  
  按一下此按鈕，即可在 [查詢]  所指定之範圍內的所有檔案中，以 [取代成]  方塊中所指定的字串，取代 [尋找目標]  中所指定之字串的所有執行個體。  
   
 > [!CAUTION]  
->  確認 [查詢]  已設定為僅包含您要修改的那些檔案。  
+>  確定 [查詢]  已設定為僅包含您要修改的那些檔案。  
   
  顯示的提醒會包含 **[保持已修改的檔案開啟]** 選項。 若要保留 **[恢復]** 選項，您必須選取此選項。 **[恢復]** 功能僅適用於檔案在修改之後仍保持開啟可供編輯的檔案。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "68265976"
  **瀏覽 (...)**  
  按一下此按鈕即可顯示 [選擇搜尋資料夾]  對話方塊，您可以在其中組合、編輯、儲存並選取目錄的命名集，以輸入到 [查詢]  方塊中。  
   
-## <a name="find-options"></a>尋找選項  
+## <a name="find-options"></a>[使用]  
  您可以展開或摺疊 **[尋找選項]** 區段。 您可以選取或清除下列選項。  
   
  **大小寫須相符**  
@@ -99,13 +99,13 @@ ms.locfileid: "68265976"
  **全字拼寫須相符**  
  如果選取此核取方塊，則 [尋找結果] 視窗僅會顯示整個字串與 [尋找目標]  中所指定之字串相符的執行個體。 例如，搜尋 **MyObject** ，將會傳回「MyObject」，但不會傳回「CMyObject」或「MyObjectC」。  
   
- **[使用]**  
+ **使用**  
  指出如何解譯在 [尋找目標]  或 [取代成]  文字方塊中所輸入的特殊字元。 選項包含 **[萬用字元]** 和 **[規則運算式]** 。  
   
  **[規則運算式]**  
  定義要比對之文字模式的特殊標記法。 如需清單，請參閱 [使用規則運算式搜尋文字](../../relational-databases/scripting/search-text-with-regular-expressions.md)。  
   
- **[萬用字元]**  
+ **萬用字元**  
  例如星號 (`*`) 和問號 (`?`) 等特殊字元，代表一或多個字元。 如需清單，請參閱 [使用萬用字元搜尋文字](../../relational-databases/scripting/search-text-with-wildcards.md)。  
   
  **尋找下列檔案類型**  

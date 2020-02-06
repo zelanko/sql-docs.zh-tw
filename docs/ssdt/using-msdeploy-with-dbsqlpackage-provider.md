@@ -1,32 +1,33 @@
 ---
-title: 搭配 dbSqlPackage 提供者使用 MSDeploy | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 04/26/2017
+title: 搭配 dbSqlPackage 提供者使用 MSDeploy
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e9279a433d848108b204cadc6990803695f9e82d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 04/26/2017
+ms.openlocfilehash: f4c45335bae79a0307be27efb88cb0858bd6439f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140975"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243556"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>搭配 dbSqlPackage 提供者使用 MSDeploy
+
 **DbSqlPackage** 是一種 **MSDeploy** 提供者，可讓您與 SQL Server/SQL Azure 資料庫進行互動。 **DbSqlPackage** 支援下列動作：  
   
 -   **Extract**：從即時 SQL Server 或 SQL Azure 資料庫建立資料庫快照集 (.dacpac) 檔案。  
   
--   **Publish**：以累加方式更新資料庫結構描述，以符合來源 .dacpac 檔案的結構描述。  
+-   **Publish**：累加更新資料庫結構描述以符合來源 .dacpac 檔案的結構描述。  
   
 -   **DeployReport**：建立發行動作所做變更的 XML 報表。  
   
--   **Script**：建立相當於「發行動作」所執行指令碼的 Transact\-SQL 指令碼。  
+-   **Script**：建立 Transact\-SQL 指令碼 (相當於發行動作所執行的指令碼)。  
   
 如需有關 DACFx 的詳細資訊，請參閱 DACFx Managed API 文件，網址為：[https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) \(機器翻譯\) 或 [SqlPackage.exe](../tools/sqlpackage.md) (DACFx 命令列工具)。  
   
@@ -44,7 +45,7 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 ## <a name="ms-deploy-verbs"></a>MS-Deploy 動詞命令  
 透過在 MS-Deploy 命令列上使用 **-verb** 參數，指定 MS-Deploy 動詞命令。 **dbSqlPackage** 提供者支援下列 **MSDeploy** 動詞命令：  
   
-|動詞命令|Description|  
+|動詞命令|描述|  
 |--------|---------------|  
 |dump|提供有關 .dacpac 檔案中所含來源資料庫的資訊，包括名稱、版本號碼和描述。 在命令列上使用下列格式來指定來源資料庫：<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="** _.dacpac-file-path_ **"**|  
 |sync|在命令列上使用下列格式來指定 dbSqlPackage 動作：<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_ **dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />請參閱下列各節以了解 sync 動詞命令的有效來源和目的參數。|  
@@ -52,21 +53,21 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 ## <a name="dbsqlpackage-source"></a>dbSqlPackage 來源  
 **dbSqlPackage** 提供者可接受的輸入包括有效的 SQL Server/SQL Azure 連接字串，或是磁碟上 .dacpac 檔案的路徑。  針對提供者指定輸入來源的語法如下：  
   
-|輸入|預設|Description|  
+|輸入|預設|描述|  
 |---------|-----------|---------------|  
-|**-source:dbSqlPackage=** {*input*}|**N/A**|*input* 是有效的 SQL Server 或 SQL Azure 連接字串，或是磁碟上 .dacpac 檔案的路徑。<br /><br />**注意：** 使用連接字串作為輸入來源時，支援的連接字串屬性只有 *InitialCatalog、DataSource、UserID、Password、IntegratedSecurity、Encrypt、TrustServerCertificate* 和 *ConnectionTimeout*。|  
+|**-source:dbSqlPackage=** {*input*}|**N/A**|*input* 是有效的 SQL Server 或 SQL Azure 連接字串，或是磁碟上 .dacpac 檔案的路徑。<br /><br />**注意：** 當您使用連接字串當作輸入來源時，支援的連接字串屬性只有 *InitialCatalog、DataSource、UserID、Password、IntegratedSecurity、Encrypt、TrustServerCertificate* 和 *ConnectionTimeout*。|  
   
 如果您的輸入來源是即時 SQL Server/SQL Azure 資料庫的連接字串，**dbSqlPackage** 將會從即時 SQL Server/SQL Azure 資料庫中擷取資料庫快照集 (.dacpac 格式的檔案)。  
   
 **來源**參數包括：  
   
-|參數|預設|Description|  
+|參數|預設|描述|  
 |-------------|-----------|---------------|  
-|**Profile**:{ *string*}|不適用|指定 DAC 發行設定檔的檔案路徑。 設定檔會定義產生結果 dacpac 時要使用之屬性及變數的集合。 發行設定檔會傳遞給目的地，並且在執行 **Publish**、**Script** 或 **DeployReport** 動作時當作預設選項使用。|  
+|**Profile**:{ *string*}|N/A|指定 DAC 發行設定檔的檔案路徑。 設定檔會定義產生結果 dacpac 時要使用之屬性及變數的集合。 發行設定檔會傳遞給目的地，並且在執行 **Publish**、**Script** 或 **DeployReport** 動作時當作預設選項使用。|  
 |**DacApplicationName**={ *string* }|資料庫名稱|定義要儲存在 DACPAC 中繼資料中的應用程式名稱。 預設字串為資料庫名稱。|  
 |**DacMajorVersion** ={*integer*}|**1**|定義要儲存在 DACPAC 中繼資料中的主要版本。|  
 |**DacMinorVersion**={*integer*}|**0**|定義要儲存在 DACPAC 中繼資料中的次要版本。|  
-|**DacApplicationDescription**={ *string* }|不適用|定義要儲存在 DACPAC 中繼資料中的應用程式描述。|  
+|**DacApplicationDescription**={ *string* }|N/A|定義要儲存在 DACPAC 中繼資料中的應用程式描述。|  
 |**ExtractApplicationScopedObjectsOnly={True &#124; False}**|**True**|如果為 **True**，只會從來源擷取應用程式範圍的物件。 如果為 **False**，則會擷取應用程式範圍的物件和非應用程式範圍的物件。|  
 |**ExtractReferencedServerScopedElements={True &#124; False}**|**True**|若為 **True**，則擷取來源資料庫物件所參考的登入、伺服器稽核及認證物件。|  
 |**ExtractIgnorePermissions={True &#124; False}**|**False**|如果為 **True**，則忽略擷取所有擷取物件的權限。如果為 **False**，則不忽略。|  
@@ -77,15 +78,15 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 ## <a name="dbsqlpackage-destination"></a>DbSqlPackage 目的地  
 **dbSqlPackage** 提供者可接受有效的 SQL Server/SQL Azure 連接字串或磁碟上 .dacpac 檔案的路徑做為目的輸入。  針對提供者指定目的地的語法如下：  
   
-|輸入|預設|Description|  
+|輸入|預設|描述|  
 |---------|-----------|---------------|  
-|-**dest:dbSqlPackage**={*input*}|不適用|*input* 是有效的 SQL Server 或 SQL Azure 連接字串，或是磁碟上 .dacpac 檔案的完整或部分路徑。 如果 *input* 是檔案路徑，就不得指定其他參數。|  
+|-**dest:dbSqlPackage**={*input*}|N/A|*input* 是有效的 SQL Server 或 SQL Azure 連接字串，或是磁碟上 .dacpac 檔案的完整或部分路徑。 如果 *input* 是檔案路徑，就不得指定其他參數。|  
   
 下列的**目的地**參數可供所有 **dbSqlPackage** 作業使用：  
   
-|屬性|預設|Description|  
+|屬性|預設|描述|  
 |------------|-----------|---------------|  
-|**Action={Publish&#124;DeployReport&#124;Script}**|不適用|指定要在**目的地**執行之動作的選擇性參數。|  
+|**Action={Publish&#124;DeployReport&#124;Script}**|N/A|指定要在**目的地**執行之動作的選擇性參數。|  
 |**AllowDropBlockingAssemblies ={True &#124; False}**|**False**|指定 **SqlClr** 發行是否會在部署計畫中卸除封鎖的組件。 根據預設，如果必須卸除任何參考組件，則該封鎖或參考組件會封鎖組件更新。|  
 |**AllowIncompatiblePlatform={True &#124; False}**|**False**|指定儘管 SQL Server 平台可能不相容，是否仍要進行發行動作。|  
 |**BackupDatabaseBeforeChanges={True &#124; False}**|**False**|在部署任何變更之前，先備份資料庫。|  
@@ -122,7 +123,7 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 |**IgnoreFileSize= {True &#124; False}**|**True**|指定當您發行至資料庫時，應該忽略或更新檔案大小的差異。|  
 |**IgnoreFillFactor= {True &#124; False}**|**True**|指定當您發行至資料庫時，應該忽略或更新填滿因數的差異。|  
   
-|屬性|預設|Description|  
+|屬性|預設|描述|  
 |------------|-----------|---------------|  
 |**IgnoreFullTextCatalogFilePath= {True &#124; False}**|**True**|指定當您發行至資料庫時，應該忽略或更新全文檢索索引檔案之路徑的差異。|  
 |**IgnoreIdentitySeed= {True &#124; False}**|**False**|指定當您發行至資料庫時，應該忽略或更新識別欄位之種子的差異。|  
@@ -171,9 +172,9 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
   
 下列的**目的地**參數只提供 **DeployReport** 和 **Script** 作業使用：  
   
-|參數|預設|Description|  
+|參數|預設|描述|  
 |-------------|-----------|---------------|  
-|**OutputPath**={ *string* }|不適用|選擇性參數，告知 **dbSqlPackage** 在 *string* 所指定的磁碟位置建立 DeployReport XML 輸出檔或 Script SQL 輸出檔。 這個動作會覆寫目前在 string 所指定位置上的任何指令碼。|  
+|**OutputPath**={ *string* }|N/A|選擇性參數，告知 **dbSqlPackage** 在 *string* 所指定的磁碟位置建立 DeployReport XML 輸出檔或 Script SQL 輸出檔。 這個動作會覆寫目前在 string 所指定位置上的任何指令碼。|  
   
 > [!NOTE]  
 > 如果沒有針對 **DeployReport** 或**Script** 動作提供 **OutputPath** 參數，就會以訊息的形式傳回輸出。  

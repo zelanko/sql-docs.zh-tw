@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8cf672f9aefc4b9fa0444c73596d2fac67089474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67938935"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (屬性)
@@ -54,7 +54,7 @@ IDENTITY [ (seed , increment) ]
   
  您必須同時指定種子和遞增，或同時不指定這兩者。 如果同時不指定這兩者，預設值便是 (1,1)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  識別欄位可用於產生索引鍵值。 資料行上的識別屬性可確保以下事項：  
   
 -   根據目前種子與增量產生每個新值。  
@@ -77,7 +77,7 @@ IDENTITY [ (seed , increment) ]
   
  每份資料表都只能建立一個識別欄位。  
   
- 在經記憶體最佳化的資料表中，種子和增量必須設為 1,1。 將種子或增量設定為 1 以外的值會導致發生下列錯誤：記憶體最佳化資料表不支援使用 1 以外的種子或增量值。  
+ 在經記憶體最佳化的資料表中，種子和增量必須設為 1,1。 若將種子或增量設為 1 以外的值，會產生下列錯誤：經記憶體最佳化的資料表不支援使用 1 以外的種子和增量值。  
   
 ## <a name="examples"></a>範例  
   

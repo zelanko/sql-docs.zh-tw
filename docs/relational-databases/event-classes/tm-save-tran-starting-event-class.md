@@ -1,5 +1,5 @@
 ---
-title: TM：Save Tran Starting 事件類別 | Microsoft Docs
+title: 'TM: Save Tran Starting 事件類別 | Microsoft 文件'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3cf22c17cc0b76e9ea05b8f600ae6b695d615777
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68007006"
 ---
-# <a name="tm-save-tran-starting-event-class"></a>TM：Save Tran Starting 事件類別
+# <a name="tm-save-tran-starting-event-class"></a>TM: Save Tran Starting 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  TM：Save Tran Starting 事件類別指出正在啟動 SAVE TRANSACTION 要求。 此要求是從用戶端透過 Transaction Management 介面傳送的。  
+  TM: Save Tran Starting 事件類別指出正在啟動 SAVE TRANSACTION 要求。 此要求是從用戶端透過 Transaction Management 介面傳送的。  
   
-## <a name="tm-save-tran-starting-event-class-data-columns"></a>TM：Save Tran Starting 事件類別資料行  
+## <a name="tm-save-tran-starting-event-class-data-columns"></a>TM: Save Tran Starting 事件類別資料行  
   
-|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |ClientProcessID|**int**|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|9|是|  

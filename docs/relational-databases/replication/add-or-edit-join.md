@@ -13,10 +13,10 @@ ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 13c441771044ba6932b35fd59f593b9e635b0afe
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907569"
 ---
 # <a name="add-or-edit-join"></a>加入或編輯聯結
@@ -59,7 +59,7 @@ ms.locfileid: "72907569"
         > [!CAUTION]  
         >  選取此選項表示聯結篩選中的子資料表與父資料表之間的關聯性是一對一或一對多。 如果在父資料表中的聯結資料行有保證唯一性的條件約束，請僅選取此選項。 如果選項設定不正確，則資料可能發生非聚合的情況。  
   
-    -   僅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 依預設，合併式複寫在同步處理過程中會按逐個資料列的方式處理變更。 若要將相關的變更作為一個單位來處理，請選取 **[邏輯記錄]** 。 只有當發行項與發行集之使用邏輯記錄的需求均符合時，才可以使用此選項。 如需詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)中的＜使用邏輯記錄的考量＞一節。  
+    -   僅限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 依預設，合併式複寫在同步處理過程中會按逐個資料列的方式處理變更。 若要將相關的變更作為一個單位來處理，請選取 **[邏輯記錄]** 。 只有當發行項與發行集之使用邏輯記錄的需求均符合時，才可以使用此選項。 如需詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)中的＜使用邏輯記錄的考量＞一節。  
   
  您加入或編輯篩選之後，請按一下 **[確定]** 以儲存變更並關閉對話方塊。 您指定的篩選會被剖析，並會針對 SELECT 子句中的資料表執行。 如果篩選陳述式包含語法錯誤或其他問題，則系統會通知您，然後您可以編輯該篩選陳述式。  
   

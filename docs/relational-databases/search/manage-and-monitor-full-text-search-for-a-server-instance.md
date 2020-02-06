@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 72b34355a11e87540bc8a298d0144988cdbeb17c
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056177"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理及監視伺服器執行個體的全文檢索搜尋
@@ -58,7 +58,7 @@ ms.locfileid: "74056177"
   
          如果無法使用全文檢索目錄，將會重建關聯的全文檢索索引。 只有針對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫才可以使用此選項。  
   
-         **Rebuild**  
+         **重建**  
          全文檢索目錄會使用新的增強斷詞工具重建。 重建索引可能要花一些時間，而且在升級之後可能需要相當多的 CPU 和記憶體。  
   
          **重設**  
@@ -74,7 +74,7 @@ ms.locfileid: "74056177"
   
  下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 伺服器執行個體的全文檢索屬性及其相關的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數。  
   
-|屬性|Description|函數|  
+|屬性|描述|函式|  
 |--------------|-----------------|--------------|  
 |**IsFullTextInstalled**|全文檢索元件是否會與目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體一起安裝。|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)<br /><br /> [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)|  
 ||||  

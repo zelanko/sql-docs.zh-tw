@@ -11,10 +11,10 @@ ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a8e85c35552a8bcbf4190bd3ce36b4a65be96789
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295297"
 ---
 # <a name="catalogset_execution_property_override_value"></a>catalog.set_execution_property_override_value 
@@ -48,7 +48,7 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  [ @sensitive = ] *sensitive*  
  當值為 1 時，屬性為敏感值，而且會在儲存時加密。 當值為 0 時，屬性不是敏感值，而且會儲存為純文字。 *sensitive* 引數是 **bit**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個程序會與 [執行封裝]  對話方塊之 [進階]  索引標籤中的 [屬性覆寫]  區段執行相同的功能。 屬性的路徑衍生自封裝工作的 [封裝路徑]  屬性。  
   
 ## <a name="return-code-value"></a>傳回碼值  

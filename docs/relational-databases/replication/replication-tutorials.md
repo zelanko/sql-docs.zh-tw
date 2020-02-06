@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6a99d15ba812edac0408262ba1ae26d7ea8b8dbc
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3df80893c54978060387c7ff96cb975b34740534
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768442"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287335"
 ---
 # <a name="replication-tutorials"></a>複寫教學課程
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68768442"
  
 了解如何準備伺服器，以便使用最低權限執行複寫。 您必須先完成本教學課程，才能進行其他複寫教學課程。  
   
-[教學課程：設定兩個已完全連線伺服器之間的複寫 (異動)](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md)
+[教學課程：設定兩個完全連線的伺服器之間的複寫 (異動)](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md)
 
 了解如何設定異動複寫，在完全連線的伺服器之間複寫資料。 本教學課程也包含一些基本的錯誤疑難排解方法。 
 

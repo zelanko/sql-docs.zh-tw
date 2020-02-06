@@ -1,10 +1,9 @@
 ---
-title: 管理事件 | Microsoft Docs
-ms.custom: ''
+title: 管理事件
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,13 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a777dc834e835f7f06bc301158e4967d9c8117e1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 4c7acceed73fdc902fc384f6f7b81fa39e1bfbc5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258168"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254132"
 ---
 # <a name="manage-events"></a>管理事件
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

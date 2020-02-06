@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 13bb5944c5907f3bebc9f01eb969b4b8979f8c97
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595753"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 佈建 Always Encrypted 金鑰
@@ -103,18 +103,18 @@ ms.locfileid: "73595753"
 
 [Always Encrypted 精靈](../../../relational-databases/security/encryption/always-encrypted-wizard.md)是用來加密、解密和重新加密所選資料庫資料行的工具。 該工具除了可以使用已設定的金鑰，也可讓您產生新資料行主要金鑰和新資料行加密。 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 - [使用 [Always Encrypted 精靈] 設定資料行加密](always-encrypted-wizard.md)
 - [使用 Always Encrypted 與 DAC 套件設定資料行加密](configure-always-encrypted-using-dacpac.md)
 - [使用 SQL Server Management Studio 輪替 Always Encrypted 金鑰](rotate-always-encrypted-keys-using-ssms.md)
 - [使用 Always Encrypted 開發應用程式](always-encrypted-client-development.md)
-- [使用 Always Encrypted 與 [SQL Server 匯入和匯出精靈] 將資料移轉到資料行或從中移轉](always-encrypted-migrate-using-import-export-wizard.md)
+- [使用 Always Encrypted 與 SQL Server [匯入及匯出精靈]，將資料移轉進或移轉出資料行](always-encrypted-migrate-using-import-export-wizard.md)
 
 ## <a name="see-also"></a>另請參閱
-- [永遠加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [一律加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted 的金鑰管理概觀](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [建立及儲存 Always Encrypted 的資料行主要金鑰](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
-- [使用 SQL Server Management Studio 設定永遠加密](configure-always-encrypted-using-sql-server-management-studio.md)
+- [使用 SQL Server Management Studio 設定 Always Encrypted](configure-always-encrypted-using-sql-server-management-studio.md)
 - [使用 PowerShell 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-powershell.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)
 - [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md)

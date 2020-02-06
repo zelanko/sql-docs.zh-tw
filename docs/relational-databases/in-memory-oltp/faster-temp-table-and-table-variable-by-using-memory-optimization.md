@@ -12,10 +12,10 @@ author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 833108cfc5e8a11f72e8b7cb7b628690b0050c58
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412683"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>使用記憶體最佳化加快暫存資料表與資料表變數的速度
@@ -57,10 +57,10 @@ ms.locfileid: "74412683"
 - 記憶體最佳化資料表變數  
   - 必須分兩個步驟 (而非內嵌) 宣告：  
     - `CREATE TYPE my_type AS TABLE ...;` ，則  
-    - 第 1 課：建立 Windows Azure 儲存體物件`DECLARE @mytablevariable my_type;`。  
+    - `DECLARE @mytablevariable my_type;`第 1 課：建立 Windows Azure 儲存體物件{2}。  
   
   
-## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. 案例：取代全域 tempdb &#x23;&#x23;table  
+## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. 案例︰取代全域 tempdb &#x23;&#x23;table  
   
 使用經記憶體最佳化的 SCHEMA_ONLY 資料表取代全域暫存資料表相當簡單。 最大的變更是在部署階段 (而非執行階段) 建立資料表。 因為編譯時間最佳化，所以建立經記憶體最佳化的資料表會花費比建立傳統資料表更長的時間。 在線上工作負載過程中建立和卸除經記憶體最佳化的資料表會影響工作負載的效能，也會影響 AlwaysOn 次要資料庫上的重做和資料庫復原的效能。
 
@@ -104,7 +104,7 @@ CREATE TABLE dbo.soGlobalB
 3. 在 T-SQL 中，以 **dbo.soGlobalB** 取代所有提及的 **&#x23;&#x23;tempGlobalB**。  
   
   
-## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. 案例：取代工作階段 tempdb &#x23;table  
+## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. 案例︰取代工作階段 tempdb &#x23;table  
   
 取代工作階段暫存資料表的準備工作，需要比先前的全域暫存資料表案例更多的 T-SQL。 幸好額外的 T-SQL 並不表示需要任何更多的工作才能完成轉換。  
 
@@ -190,7 +190,7 @@ go
   
   
   
-## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>D. 案例：資料表變數可設為 MEMORY_OPTIMIZED=ON  
+## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>D. 案例︰資料表變數可以是 MEMORY_OPTIMIZED=ON  
   
   
 傳統資料表變數代表 tempdb 資料庫中的資料表。 如需更快的效能，您可以對資料表變數進行記憶體最佳化。  
@@ -211,7 +211,7 @@ DECLARE @tvTableD TABLE
   
 上述語法適用於建立資料表變數 *inline*。 此內嵌語法不支援記憶體最佳化。 因此請將 TYPE 的內嵌語法轉換成明確語法。  
   
-範圍：  第一個 go 分隔之批次所建立的 TYPE 定義，即使在關閉並重新啟動伺服器之後仍然存在。 但在第一個 go 分隔符號之後，宣告的資料表 @tvTableC 只會保存至達到下一個 go 且批次結束時。  
+範圍  ︰第一個 go 分隔批次所建立的 TYPE 定義，即使在關閉並重新啟動伺服器之後仍然存在。 但在第一個 go 分隔符號之後，宣告的資料表 @tvTableC 只會保存至達到下一個 go 且批次結束時。  
   
   
   
@@ -269,7 +269,7 @@ CREATE TYPE dbo.typeTableD
 - Azure SQL Database 不需要建立此 FILEGROUP。  
   
   
-必要條件：  FILEGROUP 的下列 Transact-SQL 程式碼是本文稍後章節中很長之 T-SQL 程式碼範例的必要條件。  
+*必要條件︰* FILEGROUP 的下列 Transact-SQL 程式碼是本文稍後章節中很長之 T-SQL 程式碼範例的必要條件。  
   
 1. 您必須使用 SSMS.exe 或可提交 T-SQL 的其他工具。  
 2. 將範例 FILEGROUP T-SQL 程式碼貼到 SSMS 中。  
@@ -313,7 +313,7 @@ go
   
 比較測試會持續約 7 秒。 若要執行範例：  
   
-1. 必要條件：  您必須已執行上一節中的 FILEGROUP T-SQL。  
+1. *必要條件︰* 您必須已執行上一節中的 FILEGROUP T-SQL。  
 2. 執行下列 T-SQL INSERT-DELETE 指令碼。  
   - 請注意，'GO 5001' 陳述式會重新提交 T-SQL 5001 次。 您可以調整次數，然後重新執行。  
   
@@ -420,7 +420,7 @@ Batch execution completed 5001 times.
 您可以透過下列資源，了解如何預測記憶體最佳化資料表的使用中記憶體需求：  
   
 - [估計記憶體最佳化資料表的記憶體需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
-- [經記憶體最佳化資料表中的資料表和資料列大小：範例計算](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
+- [記憶體最佳化資料表中的資料表和資料列大小：計算範例](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
 針對較大的資料表變數，非叢集索引會使用比記憶體最佳化「資料表」  更多的記憶體。 資料列計數和索引鍵愈大，所增加的差異愈多。  
   

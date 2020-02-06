@@ -16,10 +16,10 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 79dc4b26ee543aa99b9fc90e29f7bb6c7d571555
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321885"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>合併式複寫的衝突解決
@@ -28,9 +28,9 @@ ms.locfileid: "75321885"
   
  複寫衝突檢視器可以在衝突保留期限指定的時間內使用衝突資料 (預設為 14 天)。 若要設定衝突保留期限，可以：  
   
--   針對 [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@conflict_retention` 參數指定保留值。  
+-   針對 `@conflict_retention`sp_addmergepublication &#40;Transact-SQL&#41;[ 的 ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 參數指定保留值。  
   
--   針對 [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 的 `@property` 參數指定 **conflict_retention** 的值，且為 `@value` 參數指定保留值。  
+-   針對 **sp_changemergepublication &#40;Transact-SQL&#41;** 的 `@property` 參數指定 `@value`conflict_retention[ 的值，且為 ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 參數指定保留值。  
   
  依預設，會儲存衝突資訊：    
 -   如果發行集相容性層級為 90RTM 或更高，則是在「發行者」與「訂閱者」端。   
@@ -50,7 +50,7 @@ ms.locfileid: "75321885"
 3.  以滑鼠右鍵按一下您要檢視衝突的發行集，然後按一下 **[檢視衝突]** 。  
   
     > [!NOTE]  
-    >  如果將 **conflict_logging** 屬性的值指定為 **'subscriber'** ，就無法使用 **[檢視衝突]** 功能表選項。 若要檢視衝突，請從命令提示字元啟動 ConflictViewer.exe。 ConflictViewer.exe 預設會位於下列目錄中︰Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE。 如需有效的啟動參數清單，請執行 ConflictViewer.exe -?。  
+    >  如果將 **conflict_logging** 屬性的值指定為 **'subscriber'** ，就無法使用 **[檢視衝突]** 功能表選項。 若要檢視衝突，請從命令提示字元啟動 ConflictViewer.exe。 依預設，ConflictViewer.exe 位於下列目錄：Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE。 如需有效的啟動參數清單，請執行 ConflictViewer.exe -?。  
   
 4.  在 **[選取衝突資料表]** 對話方塊中，選取要檢視衝突的資料庫、發行集和資料表。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "75321885"
     -   **decentralized_conflicts** - 1 表示在訂閱者上儲存衝突資料列，0 則表示不會在訂閱者上儲存衝突資料列。  
   
         > [!NOTE]  
-        >  合併式發行集之衝突記錄行為是使用 [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@conflict_logging` 參數來設定。 已淘汰使用 `@centralized_conflicts` 參數。  
+        >  合併式發行集之衝突記錄行為是使用 `@conflict_logging`sp_addmergepublication[ 的 ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 參數來設定。 已淘汰使用 `@centralized_conflicts` 參數。  
   
      下表描述這些資料行的值 (根據針對 `@conflict_logging` 所指定的值)。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "75321885"
     -   **decentralized_conflicts** - 1 表示在訂閱者上儲存衝突資料列，0 則表示不會在訂閱者上儲存衝突資料列。  
   
         > [!NOTE]  
-        >  合併式發行集之衝突記錄行為是使用 [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@conflict_logging` 參數來設定。 已淘汰使用 `@centralized_conflicts` 參數。  
+        >  合併式發行集之衝突記錄行為是使用 `@conflict_logging`sp_addmergepublication[ 的 ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 參數來設定。 已淘汰使用 `@centralized_conflicts` 參數。  
   
 2.  在發行集資料庫的發行者上或是在訂閱資料庫的訂閱者上，執行 [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)。 針對 `@publication` 指定值，只傳回屬於特定發行集的發行項衝突資料表資訊。 這樣會傳回有衝突之發行項的衝突資料表資訊。 請記下感興趣之任何發行項的 **source_object** 值。 如果發行項的 **conflict_table** 值為 NULL，只要刪除此發行項中已發生的衝突。  
   

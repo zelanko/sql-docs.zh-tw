@@ -15,10 +15,10 @@ ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0dd31433b94cb32cb68c9ff9d1eaa7e2f08ab324
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822435"
 ---
 # <a name="modify-the-session-timeout-period-for-an-availability-group-replica"></a>修改可用性群組複本的工作階段逾時期限

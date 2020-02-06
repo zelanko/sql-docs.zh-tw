@@ -1,5 +1,5 @@
 ---
-title: SQL Server 安裝的安全性考量 | Microsoft Docs
+title: 安全性考量
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 302b29901b9f20c70799704bdf75938270900173
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c11b2a788561af2281a7f0967972e63358c4ab82
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019815"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258958"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>SQL Server 安裝的安全性考量
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

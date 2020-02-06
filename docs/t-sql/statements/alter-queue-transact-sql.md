@@ -24,10 +24,10 @@ ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 253828eba55e919d7363bb56896560de1de38b25
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982058"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
@@ -157,7 +157,7 @@ WITH
   
  有害訊息處理設定為 OFF 的佇列將不會在五個連續的交易復原後停用。 這可讓應用程式定義自訂有害訊息處理系統。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當含有指定之啟用預存程序的佇列包含訊息時，將啟用狀態 OFF 改成 ON 會立即啟動這個啟用預存程序。 將啟用狀態 ON 改成 OFF 會使 Broker 停止啟用預存程序的執行個體，但並不會停止目前在執行中的預存程序之執行個體。  
   
  變更佇列來加入啟用預存程序，並不會變更佇列的啟用狀態。 變更佇列的啟用預存程序，並不會影響目前在執行中的啟用預存程序的執行個體。  
@@ -191,7 +191,7 @@ ALTER QUEUE ExpenseQueue
 ```  
   
 ### <a name="c-changing-the-number-of-queue-readers"></a>C. 變更佇列讀取器的數目  
- 下列範例會將 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 為了這個佇列而啟動的最大預存程序執行個體數目設為 `7`。  
+ 下列範例會將 `7` 為了這個佇列而啟動的最大預存程序執行個體數目設為 [!INCLUDE[ssSB](../../includes/sssb-md.md)]。  
   
 ```  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  
@@ -241,7 +241,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
-### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I.將佇列內部資料表移至另一個檔案群組  
+### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I：將佇列內部資料表移動至另一個檔案群組  
   
 **適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。  
   

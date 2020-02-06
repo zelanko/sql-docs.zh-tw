@@ -17,10 +17,10 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9d82f3ef27525ad918ef01e9cb2e0600ef85ae0a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293856"
 ---
 # <a name="transfer-logins-task"></a>傳送登入工作
@@ -106,15 +106,15 @@ ms.locfileid: "71293856"
   
 ### <a name="options"></a>選項。  
  **SourceConnection**  
- 在清單中選取 SMO 連線管理員，或按一下 [\<新增連線...>]  建立來源伺服器的新連線。  
+ 在清單中選取 SMO 連線管理員，或按一下 [**新增連線...>]\<** 建立來源伺服器的新連線。  
   
  **DestinationConnection**  
- 在清單中選取一個 SMO 連線管理員，或按一下 [\<新增連線...>]  ，以建立目的地伺服器的新連線。  
+ 在清單中選取一個 SMO 連線管理員，或按一下 [**新增連線...>]\<** ，以建立目的地伺服器的新連線。  
   
  **LoginsToTransfer**  
  選取要從來源複製到目的地伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 此屬性具有下表所列的選項：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**AllLogins**|來源伺服器上的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，都會複製到目的地伺服器。|  
 |**SelectedLogins**|只有使用 **LoginsList** 指定的登入，才會複製到目的地伺服器。|  
@@ -131,7 +131,7 @@ ms.locfileid: "71293856"
   
  此屬性具有下表所列的選項：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**FailTask**|如果具有相同名稱的登入已經存在於目的地伺服器上，工作就會失敗。|  
 |**Overwrite**|工作會覆寫目的地伺服器上具有相同名稱的登入。|  

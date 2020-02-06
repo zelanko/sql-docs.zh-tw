@@ -1,10 +1,7 @@
 ---
-title: 索引的 Filegroup 元素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 索引的 Filegroup 元素 (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8ea26368dacd6cfc3a81245fe95eef27ec94b9a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: d08931e613cb32b961e6bbd8f848abb42c0de67b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034896"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307671"
 ---
 # <a name="filegroup-element-for-index-dta"></a>索引的 Filegroup 元素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  指定要針對使用者指定的組態來建立索引的檔案群組。  
+
+指定要針對使用者指定的組態來建立索引的檔案群組。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,7 +41,7 @@ ms.locfileid: "68034896"
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|Description|  
+|特性|描述|  
 |--------------------|-----------------|  
 |**資料類型和長度**|**string**，沒有長度限制。|  
 |**預設值**|無。|  

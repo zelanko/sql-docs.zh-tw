@@ -18,10 +18,10 @@ ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f38ee0e89201a1ecc0a8faa145167ad58601c133
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077826"
 ---
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (Database Engine)
@@ -45,12 +45,12 @@ SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )
 *parent*  
 應執行 IsDescendantOf 測試的 **hierarchyid** 節點。
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 **SQL Server 傳回型別：bit**
   
 **CLR 傳回型別：SqlBoolean**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 針對位於父系之子樹中的所有節點傳回 true，而針對所有其他節點傳回 false。
   
 父系會被視為自己的下階。

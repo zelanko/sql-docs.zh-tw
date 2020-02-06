@@ -17,10 +17,10 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4f1a2e2122c4d141d8d702d027bf30d65db93f9c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293837"
 ---
 # <a name="transfer-sql-server-objects-task"></a>傳送 SQL Server 物件工作
@@ -148,13 +148,13 @@ ms.locfileid: "71293837"
   
 ### <a name="static-options"></a>靜態選項  
  **SourceConnection**  
- 在清單中選取 SMO 連線管理員，或按一下 [\<新增連線...>]  建立來源伺服器的新連線。  
+ 在清單中選取 SMO 連線管理員，或按一下 [**新增連線...>]\<** 建立來源伺服器的新連線。  
   
  **SourceDatabase**  
  在來源伺服器上選取會從中複製物件的資料庫。  
   
  **DestinationConnection**  
- 在清單中選取一個 SMO 連線管理員，或按一下 [\<新增連線...>]  ，以建立目的地伺服器的新連線。  
+ 在清單中選取一個 SMO 連線管理員，或按一下 [**新增連線...>]\<** ，以建立目的地伺服器的新連線。  
   
  **DestinationDatabase**  
  在目的地伺服器上選取物件會被複製到的資料庫。  
@@ -171,10 +171,10 @@ ms.locfileid: "71293837"
  **ExistingData**  
  指定如何將資料複製到目的地伺服器。 此屬性具有下表所列的選項：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|**取代**|目的地伺服器上的資料會被覆寫。|  
-|**附加**|從來源伺服器複製的資料會附加至目的地伺服器上的現有資料。|  
+|**Replace**|目的地伺服器上的資料會被覆寫。|  
+|**Append**|從來源伺服器複製的資料會附加至目的地伺服器上的現有資料。|  
   
 > [!NOTE]  
 >  只有 [CopyData]  設定為 [True]  時，才能使用 [ExistingData]  選項。  

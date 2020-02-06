@@ -19,10 +19,10 @@ ms.assetid: 7773a87d-2f1b-4951-a225-baf159a7291b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ad3ad143a6c1f8b786f2054b1537d393afc49e13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111319"
 ---
 # <a name="security-functions-transact-sql"></a>安全性函數 (Transact-SQL)

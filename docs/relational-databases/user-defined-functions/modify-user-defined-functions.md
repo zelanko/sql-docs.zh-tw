@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 391c4f3013754e4b641241bacb025c63a68cb68e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906673"
 ---
 # <a name="modify-user-defined-functions"></a>修改使用者定義函數
@@ -47,7 +47,7 @@ ms.locfileid: "72906673"
   
 -   將 Transact-SQL 函數變更為 CLR 函數，反之亦然。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要函數或結構描述的 ALTER 權限。 如果此函數指定使用者定義型別，則需要該型別的 EXECUTE 權限。  
@@ -72,7 +72,7 @@ ms.locfileid: "72906673"
   
 5.  在查詢視窗中，對 ALTER FUNCTION 陳述式進行必要的變更。  
   
-6.  在 [檔案]  功能表上，按一下 [儲存 _function_name_]  。  
+6.  在 [檔案]  功能表上，按一下 [儲存 **function_name**]  。  
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

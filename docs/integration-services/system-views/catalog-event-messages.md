@@ -11,10 +11,10 @@ ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ebd5c1cc320426ea0ae3ff1b0b9832fb2ca76f1b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296643"
 ---
 # <a name="catalogevent_messages"></a>catalog.event_messages 
@@ -26,7 +26,7 @@ ms.locfileid: "71296643"
 
   顯示作業期間所記錄的訊息資訊。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |Event_message_ID|BIGINT|事件訊息的唯一識別碼。|  
 |Operation_id|BIGINT|作業的類型。<br /><br /> 如需作業類型的清單，請參閱 [catalog.operations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)。|  
@@ -42,13 +42,13 @@ ms.locfileid: "71296643"
 |Subcomponent_name|nvarchar(4000)|訊息來源的資料流程元件。<br /><br /> [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 引擎傳回訊息時，SSIS.Pipeline 會出現在這個資料行中。|  
 |Package_path|nvarchar(max)|封裝中元件的唯一路徑。|  
 |Execution_path|nvarchar(max)|從父封裝到元件執行點的完整路徑。<br /><br /> 此路徑也會擷取元件的反覆運算。|  
-|threadID|INT|記錄訊息時執行之執行緒的識別碼。|  
-|Message_code|INT|與訊息相關聯的代碼。|  
+|threadID|int|記錄訊息時執行之執行緒的識別碼。|  
+|Message_code|int|與訊息相關聯的代碼。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個檢視會顯示下列訊息來源類型。  
   
-|**message_source_type**|Description|  
+|**message_source_type**|描述|  
 |-------------------------------|-----------------|  
 |10|項目 API，例如 T-SQL 和 CLR 預存程序|  
 |20|用來執行封裝的外部處理序 (ISServerExec.exe)|  

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0a148e1725d1ce74d206e85cd9a8fd2b88f18eb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050188"
 ---
 # <a name="memory-optimization-advisor"></a>記憶體最佳化 Advisor
@@ -53,7 +53,7 @@ ms.locfileid: "68050188"
   
  可付諸行動的警告會在左邊資料行中出現一個黃色的三角形。 如果有可付諸行動的警告，您應該結束移轉、解決警告，然後重新啟動程序。 如果您沒有解決警告，移轉的資料表可能會導致失敗。  
   
- 按一下 **[產生報告]** 即可產生這些警告的 HTML 報告。 按 **[下一步]** 繼續進行。  
+ 按一下 **[產生報告]** 即可產生這些警告的 HTML 報告。 按 [下一步]  繼續進行。  
   
 ### <a name="review-optimization-options"></a>檢閱最佳化選項  
  下一個畫面可讓您修改選項以便移轉至 In-Memory OLTP：  
@@ -91,7 +91,7 @@ ms.locfileid: "68050188"
 > [!WARNING]  
 >  只有在您了解非持久性資料表的相關資料遺失風險時，才可選取此選項。  
   
- 按 **[下一步]** ，繼續進行。  
+ 選取 [下一步]  以繼續操作。  
   
 ### <a name="review-primary-key-conversion"></a>檢閱主索引鍵轉換  
  下一個畫面是 **[檢閱主索引鍵轉換]** 。 記憶體最佳化 Advisor 會偵測資料表中是否有一個或多個主索引鍵，並根據主索引鍵的中繼資料填入資料行的清單。 否則，如果您想要移轉至持久性記憶體最佳化資料表，就必須建立主索引鍵。  
