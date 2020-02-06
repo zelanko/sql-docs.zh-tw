@@ -11,10 +11,10 @@ ms.assetid: e8b6e380-6b53-489b-be73-73fcb5258269
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 166c9ddbd4b5c11b3c032a5a4ecf43c95f183473
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974538"
 ---
 # <a name="setdatetimeoffsetint-javasqldatetimeoffset-sqlserverstatement"></a>setDateTimeOffset(int, java.sql.DateTimeOffset) (SQLServerStatement)
@@ -41,16 +41,16 @@ public void setDateTimeOffset(int parameterIndex, DateTimeOffset dateTime)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  DateTimeOffset 格式為 "YYYY-MM-DD HH-MM-SS[.nnnnnnn] [+][-] HH:MM"。 使用下表當做參考。  
   
-|SQL 型別|Insert|  
+|SQL 型別|插入|  
 |--------------|------------|  
-|DATETIME|只能插入："YYYY-MM-DD hh:mm:ss[.nnn]"|  
+|Datetime|只能插入："YYYY-MM-DD hh:mm:ss[.nnn]"|  
 |smalldatetime|只能插入："YYYY-MM-DD hh:mm:ss"|  
 |Time|只能插入："hh:mm:ss[.nnnnnnn]"|  
-|date|只能插入："YYYY-MM-DD"|  
-|datetime2|只能插入："YYYY-MM-DD hh:mm:ss[.nnnnnnn]"|  
+|Date|只能插入："YYYY-MM-DD"|  
+|DateTime2|只能插入："YYYY-MM-DD hh:mm:ss[.nnnnnnn]"|  
   
 ## <a name="see-also"></a>另請參閱  
  [getDateTimeOffset &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)   
