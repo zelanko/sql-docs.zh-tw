@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74401698"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (平行處理資料倉儲)
@@ -24,7 +24,7 @@ ms.locfileid: "74401698"
   
  若要設定遠端伺服器，請參閱[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的＜Remote Table Copy＞(遠端資料表複製)。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  指定遠端 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之名稱或 IP 位址及 TCP 連接埠號碼的參數。  
   
  *hostname* 或 *IP_address*  
- 遠端伺服器電腦的名稱，或遠端伺服器的 IPv4 位址。 不支援 IPv6 位址。 您可以使用 **Computer_Name\Instance_Name** 或 **IP_address\Instance_Name** 格式來指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具名執行個體。 伺服器必須是遠端伺服器，因此不能指定為 (local)。  
+ 遠端伺服器電腦的名稱，或遠端伺服器的 IPv4 位址。 不支援 IPv6 位址。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Computer_Name\Instance_Name**或**IP_address\Instance_Name**格式來指定** 具名執行個體。 伺服器必須是遠端伺服器，因此不能指定為 (local)。  
   
  TCP *port* number  
  用於連線的 TCP 連接埠號碼。 針對不是在預設連接埠 1433 上進行接聽的 SQL Server 執行個體，您可以指定 0 到 65535 的 TCP 連接埠號碼。 例如：**ServerA,1450** 或 **10.192.14.27,1435**  
@@ -135,7 +135,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 ##  <a name="Examples"></a> 範例  
   
 ### <a name="a-creating-a-remote-table"></a>A. 建立遠端資料表  
- 此範例會在資料庫 `OrderReporting` 和結構描述 `Orders` 上建立一個名為 `MyOrdersTable` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP 遠端資料表。 `OrderReporting` 資料庫位於名為 `SQLA` 並在預設連接埠 1433 上進行接聽的伺服器上。 對該伺服器的連線會使用使用者 `David` 的認證，其密碼為 `e4n8@3`。  
+ 此範例會在資料庫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和結構描述 `MyOrdersTable` 上建立一個名為 `OrderReporting` 的 `Orders` SMP 遠端資料表。 `OrderReporting` 資料庫位於名為 `SQLA` 並在預設連接埠 1433 上進行接聽的伺服器上。 對該伺服器的連線會使用使用者 `David` 的認證，其密碼為 `e4n8@3`。  
   
 ```  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  

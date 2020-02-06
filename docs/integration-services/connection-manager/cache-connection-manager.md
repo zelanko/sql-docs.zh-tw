@@ -15,10 +15,10 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac44546e0f74e8cdee7e004f33a515b94e16aeb2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294449"
 ---
 # <a name="cache-connection-manager"></a>快取連接管理員
@@ -124,13 +124,13 @@ ms.locfileid: "71294449"
  **有效位數**  
  針對特定資料行資料類型指定有效位數。 位數 (Precision) 是指數字中總共的位數。 如果適用於資料類型，您可以更新 **Precision**。  
   
- **小數位數**  
+ **調整**  
  針對特定資料行資料類型指定小數位數。 小數位數 (Scale) 則是指數字中小數點右方的位數。 如果適用於資料類型，您可以更新 **Scale**。  
   
  **字碼頁**  
  指定資料行類型的字碼頁。 如果適用於資料類型，您可以更新 **Code Page**。  
   
 ## <a name="related-tasks"></a>相關工作  
- [使用快取連接管理員以完整快取模式實作查閱轉換](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+ [使用快取連線管理員以完整快取模式來實作查閱轉換](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   

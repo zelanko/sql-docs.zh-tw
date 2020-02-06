@@ -11,10 +11,10 @@ ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 086b4503289c01f8b0022633361e7ce72dff73e1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295245"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (SSISDB 資料庫)
@@ -26,7 +26,7 @@ ms.locfileid: "71295245"
 
   針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的所有專案和封裝驗證顯示詳細資料。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |validation_id|**bigint**|驗證的唯一識別碼 (ID)。|  
 |environment_scope|**Char(1)**|指出由驗證考量的環境參考。 當值為 `A` 時，驗證中會包含與專案相關的所有環境參考。 當值為 `S` 時，只會包含單一環境參考。 當值為 `D` 時，不會包含任何環境參考，而且每個參數必須為常值預設值，才能通過驗證。|  
@@ -42,7 +42,7 @@ ms.locfileid: "71295245"
 |object_id|**bigint**|受作業影響之物件的識別碼。|  
 |start_time|**datetimeoffset(7)**|作業啟動的時間。|  
 |end_time|**datetimeoffsset(7)**|作業結束的時間。|  
-|status|**int**|作業的狀態。 可能的值為已建立 (`1`)、執行中 (`2`)、已取消 (`3`)、失敗 (`4`)、暫止 (`5`)、意外結束 (`6`)、成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
+|status|**int**|作業狀態。 可能的值為已建立 (`1`)、執行中 (`2`)、已取消 (`3`)、失敗 (`4`)、暫止 (`5`)、意外結束 (`6`)、成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
 |caller_sid|**varbinary(85)**|使用者的安全性識別碼 (SID) (如果使用 Windows 驗證登入)。|  
 |caller_name|**nvarchar(128)**|執行作業的帳戶名稱。|  
 |process_id|**int**|外部處理序的處理序識別碼 (如果適用)。|  
@@ -52,7 +52,7 @@ ms.locfileid: "71295245"
 |machine_name|**nvarchar(128)**|執行伺服器執行個體的電腦名稱。|  
 |dump_id|**uniqueidentifier**|執行傾印的識別碼。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個檢視會針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的每個驗證顯示一行資料列。  
   
 ## <a name="permissions"></a>權限  

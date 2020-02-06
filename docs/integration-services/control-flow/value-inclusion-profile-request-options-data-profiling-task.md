@@ -13,10 +13,10 @@ ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa6215e3fafbbf962c687daf329f6781f466342d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293806"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>值包含設定檔要求選項 (資料分析工作)
@@ -29,7 +29,7 @@ ms.locfileid: "71293806"
 > [!NOTE]  
 >  本主題所描述的選項會顯示在 **[資料分析工作編輯器]** 的 **[設定檔要求]** 頁面上。 如需此編輯器頁面的詳細資訊，請參閱[資料分析工作編輯器 &#40;設定檔要求頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
   
- 如需如何使用資料分析工作的詳細資訊，請參閱[資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱 [資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
+ 如需如何使用資料分析工作的詳細資訊，請參閱 [資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱 [資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
 ## <a name="understanding-the-selection-of-columns-for-the-inclusioncolumns-property"></a>了解 InclusionColumns 屬性之資料行的選擇  
  [值包含設定檔要求]  會計算某個子集中的所有值是否都會出現在超集中。 超集通常是查閱或參考資料表。 例如，地址資料表中的州名資料行就是子集資料表。 這個資料行中的每個二字元州名代碼也應該可在美國郵遞服務州名代碼的資料表 (超集資料表) 中找到。  
@@ -61,11 +61,11 @@ ms.locfileid: "71293806"
   
 -   **一般**  
   
--   **Options**  
+-   **選項**  
   
 ### <a name="data-options"></a>資料選項  
  **ConnectionManager**  
- 選取現有的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，以便使用 .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 來連接至包含要分析之資料表或檢視表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
+ 選取現有的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，以便使用 .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 來連線至包含要分析之資料表或檢視表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
  **SubsetTableOrView**  
  選取要分析的現有資料表或檢視表。  
@@ -95,7 +95,7 @@ ms.locfileid: "71293806"
  如需詳細資訊，請參閱本主題前面的「了解 InclusionColumns 屬性之資料行的選擇」一節。  
   
  **IsWildcard**  
- 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(\*)** 來分析所有資料行，這個選項會設定為 [True]  。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
+ 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(** ) **來分析所有資料行，這個選項會設定為 [True]\*** 。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
   
  **ColumnName**  
  顯示所選取資料行的名稱。 如果您已選取 **(\*)** 來分析所有資料行，這個選項就是空白的。 此選項是唯讀的。  
@@ -104,9 +104,9 @@ ms.locfileid: "71293806"
  選取比較字串值的選項。 這個屬性具有下表中所列的選項。 這個選項的預設值為 **預設值**頁面上。  
   
 > [!NOTE]  
->  當您針對 **ColumnName** 使用 **(\*)** 萬用字元時，**CompareOptions** 就是唯讀的，而且它會設定為 [預設值]  設定。  
+>  當您針對 **ColumnName\* 使用** ( **)** 萬用字元時，**CompareOptions** 就是唯讀的，而且它會設定為 [預設值]  設定。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**預設值**|根據來源資料表中的資料行定序來排序和比較資料。|  
 |**BinarySort**|根據針對每個字元所定義的位元模式來排序和比較資料。 二進位排序順序為區分大小寫和區分腔調字。 二進位也是最快的排序順序。|  
@@ -114,7 +114,7 @@ ms.locfileid: "71293806"
   
  如果您選取 [DictionarySort]  ，也可以選取下表中所列的任何選項組合。 根據預設，系統不會選取這些額外的選項。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreCase**|指定比較是否區分大寫與小寫字母。 如果設定此選項，則字串比較會忽略大小寫。 例如，「ABC」與「abc」視為一樣。|  
 |**IgnoreNonSpace**|指定比較是否區分空格字元與變音。 如果設定此選項，則比較會忽略變音符號。 例如，"Ã¥" 等於 "a"。|  
@@ -129,9 +129,9 @@ ms.locfileid: "71293806"
  **InclusionThresholdSetting**  
  選取臨界值設定，以便精簡設定檔的輸出。 這個屬性的預設值為 [已指定]  。 如需詳細資訊，請參閱本主題前面的「了解臨界值設定」一節。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|**無**|沒有指定臨界值。 不論索引鍵強度為何，系統都會報告此值。|  
+|**None**|沒有指定臨界值。 不論索引鍵強度為何，系統都會報告此值。|  
 |**已指定**|使用 **InclusionStrengthThreshold**中指定的臨界值。 只有當包含強度大於臨界值時，系統才會報告此值。|  
 |**精確**|沒有指定臨界值。 只有當子集值完全包含在超集值中時，系統才會報告包含強度。|  
   
@@ -143,9 +143,9 @@ ms.locfileid: "71293806"
  **SupersetColumnsKeyThresholdSetting**  
  指定超集臨界值。 這個屬性的預設值為 [已指定]  。 如需詳細資訊，請參閱本主題前面的「了解臨界值設定」一節。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|**無**|沒有指定臨界值。 不論超集資料行的索引鍵強度為何，系統都會報告包含強度。|  
+|**None**|沒有指定臨界值。 不論超集資料行的索引鍵強度為何，系統都會報告包含強度。|  
 |**已指定**|使用 **SupersetColumnsKeyThreshold**頁面上。 只有當超集資料行的索引鍵強度大於臨界值時，系統才會報告包含強度。|  
 |**精確**|沒有指定臨界值。 只有當超集資料行是超集資料表中的精確索引鍵時，系統才會報告包含強度。|  
   
