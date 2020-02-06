@@ -1,20 +1,21 @@
 ---
 title: 設定 Azure Kubernetes Service
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: 了解如何針對 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]部署設定 Azure Kubernetes Service (AKS)。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9a3b52a87927eb85d638ed97c1e145efd50602bf
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: 10e46d39d312f47fa327d79523a2613ef4b80634
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016893"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251204"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>針對 SQL Server 巨量資料叢集部署設定 Azure Kubernetes Service
 
@@ -69,7 +70,7 @@ Azure 資源群組是部署及管理 Azure 資源所在的邏輯群組。 下列
    az account set --subscription <subscription id>
    ```
 
-1. 使用 **az group create** 命令來建立資源群組。 下列範例會在 `westus2` 位置建立名為 `sqlbdcgroup` 的資源群組。
+1. 使用 **az group create** 命令來建立資源群組。 下列範例會在 `sqlbdcgroup` 位置建立名為 `westus2` 的資源群組。
 
    ```azurecli
    az group create --name sqlbdcgroup --location westus2
@@ -140,7 +141,7 @@ Azure 資源群組是部署及管理 Azure 資源所在的邏輯群組。 下列
 
 1. 儲存上一個命令的 JSON 輸出以供稍後使用。
 
-## <a name="connect-to-the-cluster"></a>連線到叢集
+## <a name="connect-to-the-cluster"></a>連線至叢集
 
 1. 若要設定 kubectl 以連線到您的 Kubernetes 叢集，請執行 [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) \(英文\) 命令。 此步驟會下載認證，並設定 kubectl CLI 以使用它們。
 
@@ -148,7 +149,7 @@ Azure 資源群組是部署及管理 Azure 資源所在的邏輯群組。 下列
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
    ```
 
-1. 若要驗證針對您叢集的連線，請使用 [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) \(英文\) 命令來傳回叢集節點的清單。  下列範例會顯示當您具有 1 個主要節點和 3 個代理程式節點時的輸出。
+1. 若要驗證針對您叢集的連線，請使用 [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) 命令來傳回叢集節點的清單。  下列範例會顯示當您具有 1 個主要節點和 3 個代理程式節點時的輸出。
 
    ```bash
    kubectl get nodes

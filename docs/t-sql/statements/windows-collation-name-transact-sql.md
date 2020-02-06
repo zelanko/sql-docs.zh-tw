@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874460"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 定序名稱 (Transact-SQL)
@@ -72,12 +72,12 @@ CollationDesignator_<ComparisonStyle>
 省略此選項指定不區分全半形，**WS** 指定區分全半形。
 
 *VariationSelectorSensitivity*  
-- **適用於**：從 [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 開始 
+- **適用於**：從 [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 起 
 
 - 省略此選項指定不區分變化選取器，**VSS** 則指定區分變化選取器。
 
 **UTF8**  
-- **適用於**：從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始   
+- **適用於**：從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起   
 
 - 指定要用於合格資料類型的 UTF-8 編碼。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。
 
@@ -87,7 +87,7 @@ CollationDesignator_<ComparisonStyle>
 **BIN2**  
 指定使用字碼指標比較語意的二進位排序順序。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 由於定序版本的不同，有些字碼元素可能不會有已定義的排序權重及 (或) 大寫/小寫對應。 例如，比較 `LOWER` 函式在得到相同字元，但在相同定序不同版本時的輸出：
 
 ```sql
@@ -196,10 +196,10 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |蓋楚瓦文 (秘魯)|Latin1_General_100_|無法使用|
 |羅曼斯文 (瑞士)|Romansh_100_|無法使用|
 |沙米文 (伊納立，芬蘭)|Sami_Sweden_Finland_100_|無法使用|
-|薩米文 (魯勒，挪威)|Sami_Norway_100_|無法使用|
+|沙米文 (盧勒，挪威)|Sami_Norway_100_|無法使用|
 |沙米文 (盧勒，瑞典)|Sami_Sweden_Finland_100_|無法使用|
 |沙米文 (北，芬蘭)|Sami_Sweden_Finland_100_|無法使用|
-|薩米文 (北，挪威)|Sami_Norway_100_|無法使用|
+|沙米文 (北，挪威)|Sami_Norway_100_|無法使用|
 |沙米文 (北，瑞典)|Sami_Sweden_Finland_100_|無法使用|
 |沙米文 (斯科特，芬蘭)|Sami_Sweden_Finland_100_|無法使用|
 |沙米文 (南，挪威)|Sami_Norway_100_|無法使用|
@@ -233,7 +233,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |已被取代，無法用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本的伺服器層級|Hindi|Hindi|
 |已被取代，無法用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本的伺服器層級|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
 |已被取代，無法用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本的伺服器層級|Lithuanian_Classic|Lithuanian_Classic|
-|已被取代，無法用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本的伺服器層級|Macedonian|Macedonian|
+|已被取代，無法用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本的伺服器層級|馬其頓文|馬其頓文|
 
 <sup>1</sup> 僅限 Unicode 的 Windows 定序只能套用至資料行層級或運算式層級的資料。 它們無法當做伺服器或資料庫定序使用。
 
@@ -246,6 +246,6 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 - [常數](../../t-sql/data-types/constants-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
-- [DECLARE@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
+- [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
 - [table](../../t-sql/data-types/table-transact-sql.md)
 - [sys.fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)

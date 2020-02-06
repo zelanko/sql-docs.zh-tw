@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325510"
 ---
 # <a name="create-indexed-views"></a>建立索引檢視表
@@ -80,7 +80,7 @@ ms.locfileid: "75325510"
 
 索引檢視表的定義必須具決定性。 如果選取清單及 `WHERE` 和 `GROUP BY` 子句中的所有運算式都具決定性，則檢視表也具決定性。 每當利用一組特定的輸入值來評估具決定性的運算式時，具決定性的運算式一律傳回相同的結果。 只有具決定性的函數可以參與具決定性的運算式。 例如，`DATEADD` 函式具決定性，因為它會針對它的三個參數之任何一組給定的引數值一律傳回相同的結果。 `GETDATE` 不具決定性，因為它一律被相同的引數叫用，但是，每當它被執行時，它所傳回的值都會變更。
 
-若要判斷檢視表資料行是否具決定性，請使用 **COLUMNPROPERTY** 函數的 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 屬性。 如果檢視表含有結構描述繫結，您可以利用 `COLUMNPROPERTY` 函式的 **IsPrecise** 屬性來判斷其中具決定性的資料行是否精確。 如果是 TRUE，`COLUMNPROPERTY` 會傳回 1；如果是 FALSE，則傳回 0；如果輸入無效，則傳回 NULL。 這表示這個資料行不具決定性或不是精確資料行。
+若要判斷檢視表資料行是否具決定性，請使用 **COLUMNPROPERTY** 函數的 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 屬性。 如果檢視表含有結構描述繫結，您可以利用 **函式的**IsPrecise`COLUMNPROPERTY` 屬性來判斷其中具決定性的資料行是否精確。 如果是 TRUE，`COLUMNPROPERTY` 會傳回 1；如果是 FALSE，則傳回 0；如果輸入無效，則傳回 NULL。 這表示這個資料行不具決定性或不是精確資料行。
 
 即使運算式具決定性，如果它包含浮點運算式，確切的結果仍取決於處理器架構或微碼的版本而定。 若要確保資料完整性，這類運算式在參與時可以只做為索引檢視表的非索引鍵資料行。 未含浮點運算式之具決定性的運算式稱為精確運算式。 只有精確的具決定性運算式可以參與索引鍵資料行和索引檢視表的 `WHERE` 或 `GROUP BY` 子句。
 
@@ -112,7 +112,7 @@ ms.locfileid: "75325510"
    ||||
    |-|-|-|
    |`COUNT`|ROWSET 函式 (`OPENDATASOURCE`、`OPENQUERY`、`OPENROWSET` 和 `OPENXML`)|`OUTER` 聯結 (`LEFT`、`RIGHT` 或 `FULL`)|
-   |衍生資料表 (藉由在 `FROM` 子句中指定 `SELECT` 陳述式所定義)|自我聯結|使用 `SELECT *` 或 `SELECT <table_name>.*` 指定資料行|
+   |衍生資料表 (藉由在 `SELECT` 子句中指定 `FROM` 陳述式所定義)|自我聯結|使用 `SELECT *` 或 `SELECT <table_name>.*` 指定資料行|
    |`DISTINCT`|`STDEV`、`STDEVP`、`VAR`、`VARP` 或 `AVG`|通用資料表運算式 (CTE)|
    |**float**<sup>1</sup>、**text**、**ntext**、**image**、**XML** 或 **filestream** 資料行|子查詢|`OVER` 子句，其中包含次序或彙總視窗函式|
    |全文檢索述詞 (`CONTAINS`、`FREETEXT`)|`SUM` 函式，參考可為 Null 值的運算式|`ORDER BY`|

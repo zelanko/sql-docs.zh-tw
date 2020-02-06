@@ -13,19 +13,19 @@ ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2681d021099e8b10150efd255e27cf436c665a90
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73926027"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit 記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能可讓您稽核伺服器層級和資料庫層級的事件群組和事件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能可讓您稽核伺服器層級和資料庫層級的事件群組和事件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。  
   
  稽核是由零或多個稽核動作項目所組成，這些項目會記錄到稽核 *「目標」* (Target)。 稽核目標可以是二進位檔案、Windows 應用程式事件記錄檔或 Windows 安全性事件記錄檔。 傳送給目標的記錄包含下表所述的項目：  
   
-|資料行名稱|Description|類型|永遠可使用|  
+|資料行名稱|描述|類型|永遠可使用|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|可稽核的動作引發時的日期/時間。|**datetime2**|是|  
 |**sequence_no**|追蹤單一稽核記錄中太長而無法納入稽核寫入緩衝區內的記錄順序。|**int**|是|  
@@ -36,7 +36,7 @@ ms.locfileid: "73926027"
 |**session_id**|事件發生所在之工作階段的識別碼。|**int**|是|  
 |**server_principal_id**|動作執行所在之登入環境的識別碼。|**int**|是|  
 |**database_principal_id**|動作執行所在之資料庫使用者環境的識別碼。|**int**|否|  
-|**object_id**|稽核發生所在之實體的主要識別碼。 此識別碼可以是：<br /><br /> 伺服器物件<br /><br /> 資料庫<br /><br /> 資料庫物件<br /><br /> 結構描述物件|**int**|否|  
+|object_id |稽核發生所在之實體的主要識別碼。 此識別碼可以是：<br /><br /> 伺服器物件<br /><br /> 資料庫<br /><br /> 資料庫物件<br /><br /> 結構描述物件|**int**|否|  
 |**target_server_principal_id**|套用可稽核之動作的伺服器主體。|**int**|是|  
 |**target_database_principal_id**|套用可稽核之動作的資料庫主體。|**int**|否|  
 |**class_type**|稽核發生所在之可稽核的實體類型。|**varchar(2)**|是|  
@@ -54,7 +54,7 @@ ms.locfileid: "73926027"
 |**陳述式**|TSQL 陳述式 (如果有的話)|**nvarchar(4000)**|否|  
 |**additional_information**|有關儲存為 XML 之事件的任何其他資訊。|**nvarchar(4000)**|否|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  某些動作不會填入資料行的值，因為它可能不適用於此動作。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 會將字元欄位的 4000 個字元資料儲存在稽核記錄中。 當從可稽核的動作傳回的 **additional_information** 和 **statement** 值傳回 4000 個以上的字元時， **sequence_no** 資料行會用來將多筆記錄寫入單一稽核動作的稽核報表中，以記錄這些資料。 此程序如下：  

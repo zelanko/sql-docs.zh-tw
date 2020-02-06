@@ -11,10 +11,10 @@ ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95f2fc808723fa3a69222ead3f362007585231f1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294516"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>使用 Oracle CDC 服務
@@ -74,15 +74,15 @@ ms.locfileid: "71294516"
   
  以下描述 **dbo.xdbcdc_trace** 資料表中包含的項目。  
   
-|項目|Description|  
+|Item|描述|  
 |----------|-----------------|  
-|TIMESTAMP|寫入追蹤記錄的精確 UTC 時間戳記。|  
-|型別|包含下列其中一個值。<br /><br /> error<br /><br /> INFO<br /><br /> 追蹤|  
+|timestamp|寫入追蹤記錄的精確 UTC 時間戳記。|  
+|type|包含下列其中一個值。<br /><br /> ERROR<br /><br /> INFO<br /><br /> TRACE|  
 |node|寫入記錄的節點名稱。|  
 |status|狀態資料表使用的狀態碼。|  
 |sub_status|狀態資料表使用的子狀態碼。|  
 |status_message|狀態資料表使用的狀態訊息。|  
-|來源|產生追蹤記錄的 Oracle CDC 元件名稱。|  
+|source|產生追蹤記錄的 Oracle CDC 元件名稱。|  
 |text_data|當錯誤或追蹤記錄包含文字裝載時的其他文字資料。|  
 |binary_data|當錯誤或追蹤記錄包含二進位裝載時的其他二進位資料。|  
   
@@ -93,19 +93,19 @@ ms.locfileid: "71294516"
   
  下表描述 **dbo.xdbcdc_databases** 資料表中包含的項目。  
   
-|項目|Description|  
+|Item|描述|  
 |----------|-----------------|  
 |NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中 Oracle 資料庫的名稱。|  
 |config_version|對應 CDC 資料庫 **xdbcdc_config** 資料表中上次變更的時間戳記 (UTC)，或是此資料表中目前資料列的時間戳記 (UTC)。<br /><br /> UPDATE 觸發程序會針對這個項目強制使用 GETUTCDATE() 的值。 **config_version** 可讓 CDC 服務識別需要檢查是否有組態變更或啟用/停用的 CDC 執行個體。|  
 |cdc_service_name|這個項目會判斷哪一個 Oracle CDC 服務處理選取的 Oracle 資料庫。|  
-|enabled|指出 Oracle CDC 執行個體為使用中 (1) 還是停用 (0) 狀態。 當 Oracle CDC 服務啟動時，只會啟動標示為啟用 (1) 的執行個體。<br /><br /> **注意**：發生無法重試的錯誤時，Oracle CDC 執行個體可能會停用。 在此情況下，必須在解決錯誤之後手動重新啟動執行個體。|  
+|已啟用|指出 Oracle CDC 執行個體為使用中 (1) 還是停用 (0) 狀態。 當 Oracle CDC 服務啟動時，只會啟動標示為啟用 (1) 的執行個體。<br /><br /> **注意**：發生無法重試的錯誤時，Oracle CDC 執行個體可能會停用。 在此情況下，必須在解決錯誤之後手動重新啟動執行個體。|  
   
 ###  <a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  此資料表列出與主機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體相關聯的 CDC 服務。 CDC 設計工具主控台會使用此資料表來判斷針對本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體設定的 CDC 服務清單。 CDC 服務也會使用此資料表來確保只有一個執行中的 Windows 服務會處理給定的 Oracle CDC 服務名稱。  
   
  以下描述 **dbo.xdbcdc_databases** 資料表中包含的擷取狀態項目。  
   
-|項目|Description|  
+|Item|描述|  
 |----------|-----------------|  
 |cdc_service_name|Oracle CDC 服務的名稱 (Windows 服務名稱)。|  
 |cdc_service_sql_login|Oracle CDC 服務為了連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 隨即建立名為 cdc_service 的新 SQL 使用者並與這個登入名稱產生關聯，然後針對此服務處理的每一個 CDC 資料庫，將此使用者當做 db_ddladmin、db_datareader 和 db_datawriter 固定資料庫角色的成員加入。|  
@@ -194,7 +194,7 @@ ms.locfileid: "71294516"
   
 -   [建立](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_create)  
   
--   [Delete](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_delete)  
+-   [刪除](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_delete)  
   
 ###  <a name="BKMK_config"></a> Config  
  使用 `Config` 可從指令碼更新 Oracle CDC 服務組態。 此命令只能用於更新 CDC 服務組態的特定部分 (例如，只有連接字串，而不知道非對稱金鑰密碼)。 此命令必須由電腦管理員執行。 以下是 `Config` 命令的範例。  

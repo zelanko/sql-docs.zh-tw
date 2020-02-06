@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df18a2ca6f79982db41b5188283bf1721b518e31
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595743"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>使用 Always Encrypted 與 DAC 套件設定資料行加密 
@@ -60,14 +60,14 @@ ms.locfileid: "73595743"
 如需詳細資訊，請參閱 [建立及儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。 
 
  
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 - [使用 Always Encrypted 開發應用程式](always-encrypted-client-development.md)
 - [使用 Always Encrypted 與 SQL Server Management Studio 查詢資料行](always-encrypted-query-columns-ssms.md)
 
 ## <a name="see-also"></a>另請參閱  
- - [永遠加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+ - [一律加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
  - [Always Encrypted 的金鑰管理概觀](overview-of-key-management-for-always-encrypted.md) 
- - [使用 SQL Server Management Studio 設定永遠加密](configure-always-encrypted-using-sql-server-management-studio.md)
- - [使用 Always Encrypted 精靈設定資料行加密](always-encrypted-wizard.md)
+ - [使用 SQL Server Management Studio 設定 Always Encrypted](configure-always-encrypted-using-sql-server-management-studio.md)
+ - [使用 [Always Encrypted 精靈] 設定資料行加密](always-encrypted-wizard.md)
  - [使用 Always Encrypted 與 PowerShell 設定資料行加密](configure-column-encryption-using-powershell.md)
  

@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f5a9846ddc19320b3299893929c7ebf11ca0269
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73962346"
 ---
 # <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
@@ -43,7 +43,7 @@ APPROX_COUNT_DISTINCT ( expression )
 ## <a name="return-types"></a>傳回類型
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `APPROX_COUNT_DISTINCT( expression )` 會針對群組中的每個資料列評估運算式，然後傳回群組中非 Null 的唯一值的近似數目。 設計此函式的目的是提供大型資料集之間的彙總，在此情況下回應性比絕對精確度更重要。  
 
 `APPROX_COUNT_DISTINCT` 是針對用於大型資料的案例而設計，且已針對以下條件最佳化：

@@ -12,10 +12,10 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0481f39c0c047f401914e2c710a1f52c393bc335
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580340"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的資料點 (報表產生器及 SSRS)
@@ -56,23 +56,23 @@ ms.locfileid: "65580340"
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>為資料點標籤、工具提示和圖例文字加入關鍵字  
  您可以使用區分大小寫的圖表專用關鍵字來表示存在於圖表中的項目。 這些關鍵字僅適用於工具提示、自訂圖例文字與資料點標籤屬性。 在許多情況下，圖表關鍵字擁有相等的簡單運算式，但是關鍵字輸入時更快、更容易。 下列是圖表關鍵字的清單。  
   
-|圖表關鍵字|Description|適用於圖表類型|相等簡單運算式的範例|  
+|圖表關鍵字|描述|適用於圖表類型|相等簡單運算式的範例|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
-|#VALY|資料點的 Y 值。|All|`=Fields!MyDataField.Value`|  
+|#VALY|資料點的 Y 值。|全部|`=Fields!MyDataField.Value`|  
 |#VALY2|資料點的 Y 值 #2。|範圍圖、泡泡圖|None|  
 |#VALY3|資料點的 Y 值 #3。|股票圖、K 線圖|None|  
 |#VALY4|資料點的 Y 值 #4。|股票圖、K 線圖|None|  
-|#SERIESNAME|數列名稱。|All|None|  
-|#LABEL|資料點標籤。|All|None|  
-|#AXISLABEL|軸資料點標籤。|形狀圖|`=Fields!MyDataField.Value`|  
-|#INDEX|資料點索引。|All|None|  
-|#PERCENT|資料點 Y 值的百分比。|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
-|#TOTAL|數列中所有 Y 值的總計。|All|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|對應到圖例項目文字的文字。|All|None|  
-|#AVG|數列中所有 Y 值的平均值。|All|`=Avg(Fields!MyDataField.Value)`|  
+|#SERIESNAME|數列名稱。|全部|None|  
+|#LABEL|資料點標籤。|全部|None|  
+|#AXISLABEL|軸資料點標籤。|形狀|`=Fields!MyDataField.Value`|  
+|#INDEX|資料點索引。|全部|None|  
+|#PERCENT|資料點 Y 值的百分比。|全部|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
+|#TOTAL|數列中所有 Y 值的總計。|全部|`=Sum(Fields!MyDataField.Value)`|  
+|#LEGENDTEXT|對應到圖例項目文字的文字。|全部|None|  
+|#AVG|數列中所有 Y 值的平均值。|全部|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|數列中所有 Y 值的最小值。|全部|`=Min(Fields!MyDataField.Value)`|  
-|#MAX|數列中所有 Y 值的最大值。|All|`=Max(Fields!MyDataField.Value)`|  
-|#FIRST|數列中所有 Y 值的第一個。|All|`=First(Fields!MyDataField.Value)`|  
+|#MAX|數列中所有 Y 值的最大值。|全部|`=Max(Fields!MyDataField.Value)`|  
+|#FIRST|數列中所有 Y 值的第一個。|全部|`=First(Fields!MyDataField.Value)`|  
   
  若要格式化關鍵字，請以括號括住 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串。 例如，若要將工具提示中資料點的值指定為包含兩位小數的數字，請以大括弧包含格式字串 "N2"，例如 "#VALY{N2}" 表示數列的 **ToolTip** 屬性。 如需有關 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串的詳細資訊，請參閱 MSDN 上的＜ [格式化型別](https://go.microsoft.com/fwlink/?LinkId=112024) ＞。 如需在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中將數字格式化的詳細資訊，請參閱[將數字和日期格式化 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "65580340"
 ## <a name="see-also"></a>另請參閱  
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [圖表 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [將軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [教學課程：將圓形圖新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   

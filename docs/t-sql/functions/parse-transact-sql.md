@@ -18,10 +18,10 @@ ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 991d27258b37895ebb2bf54e267fd07fbe87d78e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892504"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
@@ -52,10 +52,10 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
  如未提供 *culture* 引數，將會使用目前工作階段的語言。 此語言是以 SET LANGUAGE 陳述式隱含或明確加以設定。 *culture* 接受 .NET Framework 所支援的任何文化特性 (Culture)，不限於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 明確支援的語言。 如果 *culture* 引數無效，PARSE 會引發錯誤。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  傳回轉譯成所要求之資料類型的運算式結果。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  以引數形式傳遞給 PARSE 的 Null 值，會以下列兩種方式處理：  
   
 1.  如果傳遞了 NULL 常數就會引發錯誤。 Null 值無法以特定文化特定方式剖析為不同的資料類型。  
@@ -72,32 +72,32 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
  *date_type* 的參數值僅適用於下表所示的類型與樣式。 此處所提供的樣式資訊可以協助您決定所要允許的模式類型。 如需樣式的詳細資訊，請參閱說明 **System.Globalization.NumberStyles** 和 **DateTimeStyles** 列舉的 .NET Framework 文件。  
   
-|類別目錄|類型|.NET Framework 類型|使用的樣式|  
+|類別|類型|.NET Framework 類型|使用的樣式|  
 |--------------|----------|-------------------------|-----------------|  
 |數值|BIGINT|Int64|NumberStyles.Number|  
-|數值|INT|Int32|NumberStyles.Number|  
+|數值|int|Int32|NumberStyles.Number|  
 |數值|SMALLINT|Int16|NumberStyles.Number|  
 |數值|TINYINT|Byte|NumberStyles.Number|  
-|數值|Decimal|Decimal|NumberStyles.Number|  
+|數值|decimal|Decimal|NumberStyles.Number|  
 |數值|NUMERIC|Decimal|NumberStyles.Number|  
 |數值|FLOAT|Double|NumberStyles.Float|  
-|數值|REAL|Single|NumberStyles.Float|  
+|數值|real|Single|NumberStyles.Float|  
 |數值|SMALLMONEY|Decimal|NumberStyles.Currency|  
 |數值|money|Decimal|NumberStyles.Currency|  
-|日期及時間|日期|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日期及時間|date|Datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日期及時間|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|日期及時間|DATETIME|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|日期及時間|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|日期及時間|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日期及時間|Datetime|Datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日期及時間|smalldatetime|Datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日期及時間|datetime2|Datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日期及時間|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
   
  **文化特性 (Culture) 參數的詳細資訊**  
   
  下表顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 語言所對應的 .NET Framework 文化特性。  
   
-|全名|別名|LCID|專屬文化特性|  
+|全名|Alias|LCID|專屬文化特性|  
 |---------------|-----------|----------|----------------------|  
-|us_english|英文|1033|en-US|  
+|us_english|英文|1033|zh-TW|  
 |Deutsch|德文|1031|de-DE|  
 |Français|法文|1036|fr-FR|  
 |日本語|日文|1041|ja-JP|  

@@ -28,10 +28,10 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93571a71662f8d24044b77c2c65dec01778096d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948062"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
@@ -110,7 +110,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  FOR { VALUE | PATH | PROPERTY }  
  指定次要 XML 索引的類型。  
   
- Value  
+ 值  
  在索引鍵資料行屬於主要 XML 索引 (屬於主要 XML 索引的節點值和路徑) 的資料行上建立次要 XML 索引。  
   
  PATH  
@@ -139,7 +139,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  PAD_INDEX **=** { ON | **OFF** }  
  指定索引填補。 預設值為 OFF。  
   
- ON  
+ 開啟  
  *fillfactor* 指定的可用空間百分比會套用到索引的中繼層級頁面。  
   
  OFF 或未指定 *fillfactor*  
@@ -163,7 +163,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
  指定是否要將暫時排序結果儲存在 **tempdb** 中。 預設值為 OFF。  
   
- ON  
+ 開啟  
  用來建置索引的中繼排序結果會儲存在 **tempdb** 中。 如果 **tempdb** 位於與使用者資料庫所在磁碟不同的磁碟上，這可能會減少建立索引所需的時間。 不過，這會增加建立索引時所使用的磁碟空間量。  
   
  OFF  
@@ -177,7 +177,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  DROP_EXISTING **=** { ON | **OFF** }  
  指定要卸除及重建預先存在的具名 XML 索引。 預設值為 OFF。  
   
- ON  
+ 開啟  
  卸除及重建現有的索引。 所指定的索引名稱必須與目前現有的索引相同；不過，索引定義可以修改。 例如，您可以指定不同的資料行、排序次序、分割區配置或索引選項。  
   
  OFF  
@@ -196,7 +196,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
  指定是否允許資料列鎖定。 預設值是 ON。  
   
- ON  
+ 開啟  
  當存取索引時，允許資料列鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會決定使用資料列鎖定的時機。  
   
  OFF  
@@ -205,7 +205,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
  指定是否允許頁面鎖定。 預設值是 ON。  
   
- ON  
+ 開啟  
  當存取索引時，允許頁面鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會決定使用頁面鎖定的時機。  
   
  OFF  
@@ -231,9 +231,9 @@ CREATE [ PRIMARY ] XML INDEX index_name
  如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 > [!NOTE]
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用平行索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每個版本都無法使用平行索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  只要計算資料行資料類型可當做索引鍵資料行或非索引鍵資料行，衍生自 **xml** 資料類型的計算資料行都可以當做索引鍵資料行或內含非索引鍵資料行來建立索引。 您無法在計算的 **xml** 資料行上建立主要 XML 索引。  
   
  若要檢視關於 XML 索引的資訊，請使用 [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md) 目錄檢視。  
