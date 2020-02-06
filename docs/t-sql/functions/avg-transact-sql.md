@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e97480b767e10a27c7e9647c2e6ae7369d4b37f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040231"
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
@@ -69,7 +69,7 @@ OVER **(** [ *partition_by_clause* ] _order\_by\_clause_ **)**
 |**money** 和 **smallmoney** 類別|**money**|  
 |**float** 和 **real** 類別|**float**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 如果 *expression* 的資料類型是一個別名資料類型，傳回型別也會是別名資料類型。 不過，如果別名資料型別的基底資料型別升級；例如，從 **tinyint** 升級到 **int**，傳回值會採用升級的資料型別，而不是別名資料型別。
   
 AVG () 會計算一組值的平均值，其方式是將這些值的總和除以非 null 值的計數。 如果總和超過傳回值資料型別的最大值，則 AVG() 會傳回錯誤。
@@ -146,7 +146,7 @@ FROM Production.Product;
 ```
   
 ### <a name="d-using-avg-without-distinct"></a>D. 使用不含 DISTINCT 的 AVG  
-沒有 DISTINCT 時，`AVG` 函數會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `Product` 資料表中，尋找所有產品的平均標價，且包含任何重複的值。
+沒有 DISTINCT 時，`AVG` 函數會在 `Product` 資料庫的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中，尋找所有產品的平均標價，且包含任何重複的值。
   
 ```sql
 SELECT AVG(ListPrice)  
@@ -163,7 +163,7 @@ FROM Production.Product;
 ```
   
 ### <a name="e-using-the-over-clause"></a>E. 使用 OVER 子句  
-以下範例使用 AVG 函數搭配 OVER 子句，以針對 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫 `Sales.SalesPerson` 資料表中的每個領域，提供年度銷售的移動平均。 `TerritoryID` 負責分割資料，而 `SalesYTD` 會進行邏輯性地排序。 這表示，將會根據銷售年度來針對每一個領域計算 AVG 函數。 請注意，對於 `TerritoryID` 1，銷售年度 2005 有兩個資料列，這表示兩個銷售人員在該年度的銷售額。 系統計算這兩個資料列的平均銷售額，然後將表示 2006 年度銷售額的第三個資料列納入計算。
+以下範例使用 AVG 函數搭配 OVER 子句，以針對 `Sales.SalesPerson` 資料庫 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中的每個領域，提供年度銷售的移動平均。 `TerritoryID` 負責分割資料，而 `SalesYTD` 會進行邏輯性地排序。 這表示，將會根據銷售年度來針對每一個領域計算 AVG 函數。 請注意，對於 `TerritoryID` 1，銷售年度 2005 有兩個資料列，這表示兩個銷售人員在該年度的銷售額。 系統計算這兩個資料列的平均銷售額，然後將表示 2006 年度銷售額的第三個資料列納入計算。
   
 ```sql
 SELECT BusinessEntityID, TerritoryID   

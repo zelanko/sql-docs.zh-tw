@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 431ec504fdcf977af23cf5340e39052ff4416d01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043298"
 ---
 # <a name="stored-procedures-event-category"></a>Stored Procedures 事件類別目錄
@@ -27,7 +27,7 @@ ms.locfileid: "68043298"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[RPC:Completed 事件類別](../../relational-databases/event-classes/rpc-completed-event-class.md)|指出遠端程序呼叫 (RPC) 已完成。|  
 |[PreConnect:Completed 事件類別](../../relational-databases/event-classes/preconnect-completed-event-class.md)|指出資源管理員分類函數執行完成。|  

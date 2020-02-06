@@ -20,13 +20,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 506f3f0e79501b16ea5455ab1ff4d4ee83a7abff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040215"
 ---
-# <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
+# <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 傳回針對一份資料表的某個資料列或一份運算式清單，來計算的二進位總和檢查碼值。
@@ -53,10 +53,10 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 *expression*  
 任意類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 BINARY_CHECKSUM 忽略其計算中無法比較之資料類型的運算式。
 
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 只要稍後不修改資料列，對資料表任何資料列執行計算的 `BINARY_CHECKSUM(*)` 就會傳回相同值。 `BINARY_CHECKSUM` 會滿足雜湊函數的屬性：套用於任兩個運算式清單時，如果這兩個清單的對應元素具有相同的類型，且在使用等於 (=) 運算子進行比較時相等，則會傳回相同的值。 在此定義中，假設所指定類型的 Null 值比較為相等值。 如果運算式清單中至少有一個值變更，則運算式總和檢查碼也會變更。 不過，不一定有這項變更，因此若要偵測值是否已變更，建議只有在您的應用程式可以容忍偶而遺失的變更時才使用 `BINARY_CHECKSUM`。 否則，請考慮改用 `HASHBYTES`。 使用指定的 MD5 雜湊演算法，`HASHBYTES` 將為兩個不同輸入傳回相同結果的可能性比 `BINARY_CHECKSUM` 要低很多。
   
 `BINARY_CHECKSUM` 可以對運算式清單進行操作，而它會針對指定的清單傳回相同的值。 套用於任兩個運算式清單的 `BINARY_CHECKSUM`，如果這兩個清單的對應元素具有相同的類型和位元組表示法，則會傳回相同的值。 對這項定義而言，指定類型的 Null 值會被視為具有相同位元組表示法。
@@ -70,7 +70,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 * **nvarchar**  
 * **varchar**  
 
-中的多個  
+或  
 
 * **sql_variant** (如果 **sql_variant** 的基底類型是字串資料類型)。  
   

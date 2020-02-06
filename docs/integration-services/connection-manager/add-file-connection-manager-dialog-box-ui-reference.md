@@ -15,10 +15,10 @@ ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc0df82879f835428640b403a5d9b2befa66e34a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294501"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>加入檔案連接管理員對話方塊 UI 參考
@@ -37,7 +37,7 @@ ms.locfileid: "71294501"
  **使用類型**  
  指定用於多個檔案連接管理員的檔案類型。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**建立檔案**|連接管理員將建立檔案。|  
 |**現有的檔案**|連接管理員將使用現有的檔案。|  
@@ -47,7 +47,7 @@ ms.locfileid: "71294501"
  **檔案 / 資料夾**  
  檢視已經使用如下所述的按鈕加入的檔案或資料夾。  
   
- **[加入]**  
+ **加入**  
  使用 [選取檔案]  對話方塊來加入檔案，或使用 [瀏覽資料夾]  對話方塊來加入資料夾。  
   
  **編輯**  

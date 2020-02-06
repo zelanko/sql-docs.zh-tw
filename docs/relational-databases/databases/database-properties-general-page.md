@@ -13,10 +13,10 @@ ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7b9ba71d5f7791b442989a5194c9cc6aede98677
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099599"
 ---
 # <a name="database-properties-general-page"></a>資料庫屬性 (一般頁面)
@@ -36,7 +36,7 @@ ms.locfileid: "68099599"
  **狀態**  
  顯示資料庫狀態。 如需詳細資訊，請參閱 [Database States](../../relational-databases/databases/database-states.md)。  
   
- **[擁有者]**  
+ **擁有者**  
  顯示資料庫擁有者的名稱。 可以在 **[檔案]** 頁面上變更擁有者。  
   
  **建立日期**  

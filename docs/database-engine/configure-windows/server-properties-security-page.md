@@ -13,10 +13,10 @@ ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 11a8e63d75f4194727344009dfac6f2fed77edaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68031434"
 ---
 # <a name="server-properties---security-page"></a>伺服器屬性 - 安全性頁面
@@ -37,7 +37,7 @@ ms.locfileid: "68031434"
 >  變更安全性組態需要重新啟動此服務。 將伺服器驗證變更為 SQL Server 和 Windows 驗證模式時，不會自動啟用 SA 帳戶。 若要使用 SA 帳戶，請使用 ENABLE 選項來執行 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) 。  
   
 ## <a name="login-auditing"></a>登入稽核  
- **無**  
+ **None**  
  關閉登入稽核。  
   
  **只限失敗的登入**  

@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7727d197e8a0ecb1009ea33c04311f3b63e5ff4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ca8f97c98ec94ca021f025ffc5b67152e8253ad6
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982558"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971455"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -111,7 +111,7 @@ UPDATE STATISTICS [ schema_name . ] table_name
   
  大部分的工作負載都不需要進行完整掃描，且預設取樣就已足夠。  
 不過，某些會隨廣泛變化資料分佈波動的工作負載可能需要提高取樣的大小，甚至進行完整掃描。  
-如需詳細資訊，請參閱 [CSS SQL 擴大服務部落格](https://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx) \(英文\)。  
+如需詳細資訊，請參閱 [CSS SQL 擴大服務部落格](https://docs.microsoft.com/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed) \(英文\)。  
   
  RESAMPLE  
  使用最新的取樣率更新每一項統計資料。  
@@ -183,7 +183,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  \<update_stats_stream_option> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 ### <a name="when-to-use-update-statistics"></a>使用 UPDATE STATISTICS 的時機  
  如需 `UPDATE STATISTICS` 之使用時機的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
@@ -282,14 +282,14 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-update-statistics-on-a-table"></a>E. 更新資料表上的統計資料  
- 下列範例會更新 `Customer` 資料表上的 `CustomerStats1` 統計資料。  
+ 下列範例會更新 `CustomerStats1` 資料表上的 `Customer` 統計資料。  
   
 ```sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
 ### <a name="f-update-statistics-by-using-a-full-scan"></a>F. 使用完整掃描更新統計資料  
- 下列範例會根據掃描 `Customer` 資料表中的所有資料列來更新 `CustomerStats1` 統計資料。  
+ 下列範例會根據掃描 `CustomerStats1` 資料表中的所有資料列來更新 `Customer` 統計資料。  
   
 ```sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  

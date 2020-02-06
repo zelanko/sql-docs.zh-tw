@@ -27,10 +27,10 @@ ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 8cb3c1c0eba5c39083b6a6b39b4040639909808c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101969"
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
@@ -64,14 +64,14 @@ DBCC CLEANTABLE
  WITH NO_INFOMSGS  
  隱藏所有參考訊息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 DBCC CLEANTABLE 會在可變長度資料行卸除之後回收空間。 可變長度資料行可以是下列資料類型之一：**varchar**、**nvarchar**、**varchar(max)** 、**nvarchar(max)** 、**varbinary**、**varbinary(max)** 、**text**、**ntext**、**image**、**sql_variant** 和 **xml**。 在卸除固定長度資料行之後，這個命令並不會回收空間。
 如果卸除的資料行之前是儲存在同資料列，則 DBCC CLEANTABLE 會從資料表的 IN_ROW_DATA 配置單位回收空間。 如果資料行儲存在非資料列中，則會根據卸除資料行的資料類型，從 ROW_OVERFLOW_DATA 或 LOB_DATA 配置單位回收空間。 如果從 ROW_OVERFLOW_DATA 或 LOB_DATA 頁面回收空間會導致空頁面，則 DBCC CLEANTABLE 會將頁面移除。
 DBCC CLEANTABLE 可以執行為一或多項交易。 如果未指定批次大小，這個命令會在單一交易中處理整份資料表，在作業期間，會獨佔鎖定這份資料表。 對於某些大型資料表而言，單一交易的長度及所需要的記錄空間可能會太大。 如果指定了批次大小，便會在一系列交易中執行這個命令，每項交易都包含指定數目的資料列。 DBCC CLEANTABLE 無法作為另一項交易內的交易來執行。
 這項作業會完整記錄下來。
 不支援在系統資料表、暫存資料表或資料表之 xVelocity 記憶體最佳化的資料行存放區索引部分中使用 DBCC CLEANTABLE。
   
-## <a name="best-practices"></a>最佳作法  
+## <a name="best-practices"></a>最佳做法  
 DBCC CLEANTABLE 不應當做例行維護工作來執行， 而應該在對資料表或索引檢視中的可變長度資料行進行了大幅變更，而且需要立即回收未使用空間時，使用 DBCC CLEANTABLE。 或者，您可以在資料表或檢視上重建索引；不過，這項作業可能會需要大量的資源。
   
 ## <a name="result-sets"></a>結果集  
@@ -86,7 +86,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="examples"></a>範例  
 ### <a name="a-using-dbcc-cleantable-to-reclaim-space"></a>A. 使用 DBCC CLEANTABLE 來回收空間  
-下列範例會針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中的 `Production.Document` 資料表執行 DBCC CLEANTABLE。
+下列範例會針對 `Production.Document` 範例資料庫中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表執行 DBCC CLEANTABLE。
   
 ```sql  
 DBCC CLEANTABLE (AdventureWorks2012,'Production.Document', 0)  

@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982219"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
@@ -295,10 +295,10 @@ OUTPUT 子句
 > [!NOTE]
 >  如果未提供資料行清單，則會引發語法錯誤。  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 如需將資料插入 SQL Graph 資料表的特定資訊，請參閱 [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)。 
 
-## <a name="best-practices"></a>最佳作法  
+## <a name="best-practices"></a>最佳做法  
  您可以使用 @@ROWCOUNT 函式，將插入的資料列數目傳回給用戶端應用程式。 如需詳細資訊，請參閱 [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)。  
   
 ### <a name="best-practices-for-bulk-importing-data"></a>大量匯入資料的最佳做法  
@@ -335,7 +335,7 @@ OUTPUT 子句
   
 這些最佳化類似於 BULK INSERT 命令所能使用的最佳化。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
-## <a name="data-types"></a>資料型別  
+## <a name="data-types"></a>資料類型  
  當您插入資料列時，請考量以下資料類型行為：  
   
 -   如果要將值載入 **char**、**varchar** 或 **varbinary** 資料類型的資料行，系統會依據建立資料表時為資料行定義的 SET ANSI_PADDING 設定，來決定填補或截斷尾端空白 (**char** 和 **varchar** 是空格，**varbinary** 是零)。 如需詳細資訊，請參閱 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  
@@ -352,7 +352,7 @@ OUTPUT 子句
   
 -   將 Null 值插入 **text** 或 **image** 資料行時，並不會建立有效的文字指標，也不會預先配置 8 KB 文字頁面。  
   
--   若是以 **uniqueidentifier** 資料類型建立的資料行，其會儲存特殊格式的 16 位元組二進位值。 不同於識別欄位，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會自動為 **uniqueidentifier** 資料類型的資料行產生值。 在插入作業期間，**uniqueidentifier** 資料行可以使用 **uniqueidentifier** 資料類型的變數以及 *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* 格式的字串常數 (36 個字元，包括連字號；其中 *x* 是 0-9 或 a-f 範圍內的十六進位數字)。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 即為 **uniqueidentifier** 變數或資料行的有效值。 請使用 [NEWID()](../../t-sql/functions/newid-transact-sql.md) 函式來取得全域唯一識別碼 (GUID)。  
+-   若是以 **uniqueidentifier** 資料類型建立的資料行，其會儲存特殊格式的 16 位元組二進位值。 不同於識別欄位，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會自動為 **uniqueidentifier** 資料類型的資料行產生值。 在插入作業期間，**uniqueidentifier** 資料行可以使用 *uniqueidentifier* 資料類型的變數以及 *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* 格式的字串常數 (36 個字元，包括連字號；其中 **x** 是 0-9 或 a-f 範圍內的十六進位數字)。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 即為 **uniqueidentifier** 變數或資料行的有效值。 請使用 [NEWID()](../../t-sql/functions/newid-transact-sql.md) 函式來取得全域唯一識別碼 (GUID)。  
   
 ### <a name="inserting-values-into-user-defined-type-columns"></a>將值插入使用者定義型別資料行  
  您可以利用下列方式，在使用者定義型別資料行中插入值：  
@@ -399,7 +399,7 @@ OUTPUT 子句
 ## <a name="logging-behavior"></a>記錄行為  
  除了搭配使用 BULK 關鍵字與 OPENROWSET 函式或是使用 `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` 以外，系統一定都會完整記錄 INSERT 陳述式。 這些作業可以進行最低限度記錄。 如需詳細資訊，請參閱本主題前面的＜大量載入資料的最佳做法＞一節。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  在連結的伺服器連接期間，傳送端伺服器會提供一個登入名稱與密碼來代表它本身，以連接到接收端伺服器。 若要讓這個連線有所作用，您必須使用 [sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md) 在連結伺服器之間建立登入對應。  
   
  當您使用 OPENROWSET(BULK...) 時，一定要了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何處理模擬。 如需詳細資訊，請參閱[使用 BULK INSERT 或 OPENROWSET&#40;BULK...&#41; 匯入大量資料 &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 中的＜安全性考量＞。  
@@ -413,7 +413,7 @@ OUTPUT 子句
   
 ##  <a name="InsertExamples"></a> 範例  
   
-|類別目錄|代表性語法元素|  
+|類別|代表性語法元素|  
 |--------------|------------------------------|  
 |[基本語法](#BasicSyntax)|INSERT • 資料表值建構函式|  
 |[處理資料行值](#ColumnValues)|IDENTITY • NEWID • 預設值 • 使用者定義型別|  
@@ -428,7 +428,7 @@ OUTPUT 子句
  本節的範例會使用所需的最少語法來示範 INSERT 陳述式的基本功能。  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>A. 插入單一資料列  
- 下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `Production.UnitMeasure` 資料表中插入一個資料列。 此資料表中的資料行為 `UnitMeasureCode`、`Name` 和 `ModifiedDate`。 由於所有資料行的值均已提供，並按資料表中資料行的相同順序列出；因此，您不需要在資料行清單中指定資料行名稱。   
+ 下列範例會在 `Production.UnitMeasure` 資料庫的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中插入一個資料列。 此資料表中的資料行為 `UnitMeasureCode`、`Name` 和 `ModifiedDate`。 由於所有資料行的值均已提供，並按資料表中資料行的相同順序列出；因此，您不需要在資料行清單中指定資料行名稱。   
   
 ```sql
 INSERT INTO Production.UnitMeasure  
@@ -436,7 +436,7 @@ VALUES (N'FT', N'Feet', '20080414');
 ```  
   
 #### <a name="b-inserting-multiple-rows-of-data"></a>B. 插入多個資料列  
- 下列範例會在單一 INSERT 陳述式中使用[資料表值建構函式](../../t-sql/queries/table-value-constructor-transact-sql.md)，將三個資料列插入至 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `Production.UnitMeasure` 資料表。 由於提供了所有資料行的值，而且依照資料表中資料行的相同順序來列出它們，因此，不需要在資料行清單中指定資料行名稱。  
+ 下列範例會在單一 INSERT 陳述式中使用[資料表值建構函式](../../t-sql/queries/table-value-constructor-transact-sql.md)，將三個資料列插入至 `Production.UnitMeasure` 資料庫的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表。 由於提供了所有資料行的值，而且依照資料表中資料行的相同順序來列出它們，因此，不需要在資料行清單中指定資料行名稱。  
   
 ```sql
 INSERT INTO Production.UnitMeasure  
@@ -445,7 +445,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
 ```  
   
 #### <a name="c-inserting-data-that-is-not-in-the-same-order-as-the-table-columns"></a>C. 插入與資料表資料行順序不同的資料  
- 下列範例會利用資料行清單來明確指定插入每個資料行的值。 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Production.UnitMeasure` 資料表的資料行順序是 `UnitMeasureCode`、`Name`、`ModifiedDate`，但在 *column_list* 中不會依照該順序列出這些資料行。  
+ 下列範例會利用資料行清單來明確指定插入每個資料行的值。 `Production.UnitMeasure` 資料庫中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表的資料行順序是 `UnitMeasureCode`、`Name`、`ModifiedDate`，但在 *column_list* 中不會依照該順序列出這些資料行。  
   
 ```sql
 INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,  
@@ -535,7 +535,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. 使用 SELECT 和 EXECUTE 選項插入其他資料表的資料  
  下列範例會示範如何使用 INSERT...SELECT 或 INSERT...EXECUTE 將一個資料表中的資料插入另一個資料表。 每個方法都是以多資料表的 SELECT 陳述式為基礎，而該 SELECT 陳述式在資料行清單中包括一個運算式及一個常值。  
   
- 第一個 INSERT 陳述式會使用 SELECT 陳述式，以從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的來源資料表 (`Employee`、`SalesPerson` 和 `Person`) 衍生資料，並將結果集儲存在 `EmployeeSales` 資料表中。 第二個 INSERT 陳述式會使用 EXECUTE 子句來呼叫包含 SELECT 陳述式的預存程序，而第三個 INSERT 陳述式會使用 EXECUTE 子句將 SELECT 陳述式當做常值字串來參考。  
+ 第一個 INSERT 陳述式會使用 SELECT 陳述式，以從 `Employee` 資料庫的來源資料表 (`SalesPerson`、`Person` 和 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]) 衍生資料，並將結果集儲存在 `EmployeeSales` 資料表中。 第二個 INSERT 陳述式會使用 EXECUTE 子句來呼叫包含 SELECT 陳述式的預存程序，而第三個 INSERT 陳述式會使用 EXECUTE 子句將 SELECT 陳述式當做常值字串來參考。  
   
 ```sql
 CREATE TABLE dbo.EmployeeSales  
@@ -588,7 +588,7 @@ FROM dbo.EmployeeSales;
 ```  
   
 #### <a name="i-using-with-common-table-expression-to-define-the-data-inserted"></a>I. 使用 WITH 通用資料表運算式定義插入的資料  
- 下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中建立 `NewEmployee` 資料表。 通用資料表運算式 (`EmployeeTemp`) 會定義一個或多個資料表中要插入 `NewEmployee` 資料表的資料列。 INSERT 陳述式會在通用資料表運算式中參考此資料行。  
+ 下列範例會在 `NewEmployee` 資料庫中建立 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表。 通用資料表運算式 (`EmployeeTemp`) 會定義一個或多個資料表中要插入 `NewEmployee` 資料表的資料列。 INSERT 陳述式會在通用資料表運算式中參考此資料行。  
   
 ```sql
 CREATE TABLE HumanResources.NewEmployee  
@@ -631,7 +631,7 @@ GO
 ```  
   
 #### <a name="j-using-top-to-limit-the-data-inserted-from-the-source-table"></a>J. 使用 TOP 限制從來源資料表中插入的資料  
- 下列範例會建立 `EmployeeSales` 資料表，而且會將 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `HumanResources.Employee` 資料表的前 5 名隨機員工的姓名和今年到目前的銷售資料插入其中。 INSERT 陳述式會選擇 `SELECT` 陳述式所傳回的任 5 個資料列。 OUTPUT 子句會顯示插入到 `EmployeeSales` 資料表的資料列。 請注意，SELECT 陳述式中的 ORDER BY 子句不會用來判斷前 5 名員工。  
+ 下列範例會建立 `EmployeeSales` 資料表，而且會將 `HumanResources.Employee` 資料庫中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表的前 5 名隨機員工的姓名和今年到目前的銷售資料插入其中。 INSERT 陳述式會選擇 `SELECT` 陳述式所傳回的任 5 個資料列。 OUTPUT 子句會顯示插入到 `EmployeeSales` 資料表的資料列。 請注意，SELECT 陳述式中的 ORDER BY 子句不會用來判斷前 5 名員工。  
   
 ```sql
 CREATE TABLE dbo.EmployeeSales  
@@ -941,7 +941,7 @@ FROM dbo.EmployeeSales;
 ```  
   
 #### <a name="v-inserting-data-returned-from-an-output-clause"></a>V. 插入從 OUTPUT 子句傳回的資料  
- 下列範例將擷取從 MERGE 陳述式的 OUTPUT 子句中傳回的資料，並將該資料插入另一個資料表中。 MERGE 陳述式會根據在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Quantity` 資料表內處理的順序，每天更新 `ProductInventory` 資料表的 `SalesOrderDetail` 資料行。 它也會刪除產品存貨降到 0 的資料列。 此範例會擷取已刪除的資料列，並將其插入另一個資料表 `ZeroInventory`，該資料表會追蹤沒有存貨的產品。  
+ 下列範例將擷取從 MERGE 陳述式的 OUTPUT 子句中傳回的資料，並將該資料插入另一個資料表中。 MERGE 陳述式會根據在 `Quantity` 資料庫中 `ProductInventory` 資料表內處理的順序，每天更新 `SalesOrderDetail` 資料表的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料行。 它也會刪除產品存貨降到 0 的資料列。 此範例會擷取已刪除的資料列，並將其插入另一個資料表 `ZeroInventory`，該資料表會追蹤沒有存貨的產品。  
   
 ```sql
 --Create ZeroInventory table.  

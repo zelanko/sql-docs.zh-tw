@@ -22,13 +22,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e73d13927ff4618f0c0ea0b7246df0d722340a1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095386"
 ---
-# <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
+# <a name="row_number-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 為結果集的輸出編號。 具體來說，傳回結果集分割區內某資料列的序號，序號從 1 開始，每個分割區第一個資料列的序號是 1。 
@@ -55,7 +55,7 @@ ROW_NUMBER ( )
  *order_by_clause*  
  `ORDER BY` 子句決定了在指定分割區內，將唯一 `ROW_NUMBER` 指派給資料列的順序。 此為必要。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **bigint**  
   
 ## <a name="general-remarks"></a>一般備註  
@@ -87,10 +87,10 @@ ORDER BY name ASC;
    
 |NAME    |recovery_model_desc |  
 |-----------  |------------ |  
-|master |SIMPLE |
+|master |簡單 |
 |model |FULL |
-|msdb |SIMPLE |
-|tempdb |SIMPLE |
+|msdb |簡單 |
+|tempdb |簡單 |
 
 若要在每個資料列前面新增資料列號碼資料行，請新增有 `ROW_NUMBER` 函數的資料行，在此情況下名為 `Row#`。 您必須將 `ORDER BY` 子句移到 `OVER` 子句。
 
@@ -106,12 +106,12 @@ WHERE database_id < 5;
    
 |Row# |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
-|1 |master |SIMPLE |
+|1 |master |簡單 |
 |2 |model |FULL |
-|3 |msdb |SIMPLE |
-|4 |tempdb |SIMPLE |
+|3 |msdb |簡單 |
+|4 |tempdb |簡單 |
 
-在 `recovery_model_desc`資料行新增 `PARTITION BY` 子句，將會在 `recovery_model_desc` 值變更時重新啟動編號。 
+在 `PARTITION BY`資料行新增 `recovery_model_desc` 子句，將會在 `recovery_model_desc` 值變更時重新啟動編號。 
  
 ```sql
 SELECT 
@@ -126,9 +126,9 @@ FROM sys.databases WHERE database_id < 5;
 |Row# |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |model |FULL |
-|1 |master |SIMPLE |
-|2 |msdb |SIMPLE |
-|3 |tempdb |SIMPLE |
+|1 |master |簡單 |
+|2 |msdb |簡單 |
+|3 |tempdb |簡單 |
 
 
 ### <a name="b-returning-the-row-number-for-salespeople"></a>B. 傳回銷售人員的資料列編號  
@@ -182,7 +182,7 @@ FROM OrderedOrders
 WHERE RowNumber BETWEEN 50 AND 60;  
 ```  
   
-### <a name="d-using-rownumber-with-partition"></a>D. 並用 PARTITION 與 ROW_NUMBER()  
+### <a name="d-using-row_number-with-partition"></a>D. 並用 PARTITION 與 ROW_NUMBER()  
  下列範例使用 `PARTITION BY` 引數依據資料行 `TerritoryName` 分割查詢結果集。 `ORDER BY` 子句中指定的 `OVER` 子句會依資料行 `SalesYTD` 排列每個分割區的資料列。 `ORDER BY` 陳述式中的 `SELECT` 子句會依照 `TerritoryName` 排列整個查詢結果集。  
   
 ```sql  
@@ -249,7 +249,7 @@ RowNumber  FirstName  LastName            SalesQuota
 4          Jae        Pak                 10,514,000.00  
 ```
 
-### <a name="f-using-rownumber-with-partition"></a>F. 並用 PARTITION 與 ROW_NUMBER()  
+### <a name="f-using-row_number-with-partition"></a>F. 並用 PARTITION 與 ROW_NUMBER()  
  下列範例顯示如何搭配 `ROW_NUMBER` 引數使用 `PARTITION BY` 函數。 這會導致 `ROW_NUMBER` 函數為每個分割區中的資料列編號。  
   
 ```sql  

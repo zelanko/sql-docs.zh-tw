@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 612e5c59-ba3e-49c3-a3df-56bac3d850a2
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 20f819b4a4751ca46f3e010954508486827f7ae3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: fc907238dd294106b4086c7df647acb051dc9d1f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770355"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288040"
 ---
-# <a name="mssqleng021076"></a>MSSQL_ENG021076
+# <a name="mssql_eng021076"></a>MSSQL_ENG021076
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>訊息詳細資料  
@@ -38,7 +38,7 @@ ms.locfileid: "68770355"
  如果在「快照集代理程式」完成快照集的產生之前啟動「散發代理程式」，會引發錯誤 MSSQL_ENG021076。 只有在發行集包含單一發行項時才會引發該錯誤。 如果發行集包含一個以上發行項，則會引發錯誤 MSSQL_ENG021075。 如需詳細資訊，請參閱 [MSSQL_ENG021075](../../relational-databases/replication/mssql-eng021075.md)。  
   
 ## <a name="user-action"></a>使用者動作  
- 如果在建立訂閱或上次選擇重新初始化訂閱後未啟動發行集的「快照集代理程式」，請啟動「快照集代理程式」，並讓其在啟動「散發代理程式」之前完成。 如需詳細資訊，請參閱[建立並套用快照集](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
+ 如果在建立訂閱或上次選擇重新初始化訂閱後未啟動發行集的「快照集代理程式」，請啟動「快照集代理程式」，並讓其在啟動「散發代理程式」之前完成。 如需詳細資訊，請參閱[建立和套用快照集](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
  若快照集代理程式未完成，請檢查快照集代理程式記錄，以便找出錯誤並加以解決。 如需有關在「複寫監視器」中檢視代理程式狀態和錯誤詳細資料的資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   

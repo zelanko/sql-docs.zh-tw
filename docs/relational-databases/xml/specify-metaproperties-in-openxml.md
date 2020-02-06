@@ -17,10 +17,10 @@ ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9354bf1c1539a7ba83f1af1eafdb27ed99041d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000702"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>在 OPENXML 中指定中繼屬性
@@ -38,7 +38,7 @@ ms.locfileid: "68000702"
 > [!NOTE]  
 >  您無法在任何 XPath 瀏覽中參考這些中繼屬性。  
   
-|中繼屬性的屬性|Description|  
+|中繼屬性的屬性|描述|  
 |----------------------------|-----------------|  
 |**\@mp:id**|提供 DOM 節點的全文件識別碼 (由系統產生)。 只要文件未經過重新分析，此識別碼就會參照相同的 XML 節點。<br /><br /> XML 識別碼為 **0** ，表示元素為根元素。 其父系 XML 識別碼為 NULL。|  
 |**\@mp:localname**|儲存節點名稱的本機部份。 它會和前置詞及命名空間 URI 一起用來命名元素或屬性節點。|  
@@ -49,7 +49,7 @@ ms.locfileid: "68000702"
   
  下表顯示所提供的其他父屬性，可讓您擷取關於階層的資訊。  
   
-|父系中繼屬性的屬性|Description|  
+|父系中繼屬性的屬性|描述|  
 |-----------------------------------|-----------------|  
 |**\@mp:parentid**|對應至 **../\@mp:id**|  
 |**\@mp:parentlocalname**|對應至 **../\@mp:localname**|  

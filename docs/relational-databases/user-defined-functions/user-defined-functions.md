@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8a659583df74cdc2e5100fcc25aa25e90af3bf22
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843837"
 ---
 # <a name="user-defined-functions"></a>使用者定義的函式
@@ -115,7 +115,7 @@ ms.locfileid: "73843837"
 ##  <a name="SchemaBound"></a> 結構描述繫結的函式  
  `CREATE FUNCTION` 支援 `SCHEMABINDING` 子句，它可將函式與其參考的任何物件結構描述繫結在一起，例如資料表、檢視及其他使用者定義函式。 嘗試更改或卸除任何被結構描述繫結函數所參考的物件將會失敗。  
   
- 必須滿足以下條件，您才可以在 [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) 中指定 `SCHEMABINDING`：  
+ 必須滿足以下條件，您才可以在 `SCHEMABINDING`CREATE FUNCTION[ 中指定 ](../../t-sql/statements/create-function-transact-sql.md)：  
   
 -   函數所參考的所有檢視及使用者自訂函數，都必須是結構描述繫結的。  
   
@@ -134,12 +134,12 @@ ms.locfileid: "73843837"
 |-|-|  
 |**工作描述**|**主題**|  
 |描述如何建立 Transact-SQL 使用者定義函數。|[建立使用者定義函式 &#40;資料庫引擎&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
-|描述如何建立 CLR 函數。|[建立 CLR 函式](../../relational-databases/user-defined-functions/create-clr-functions.md)|  
+|描述如何建立 CLR 函數。|[建立 CLR 函數](../../relational-databases/user-defined-functions/create-clr-functions.md)|  
 |描述如何建立使用者定義的彙總函式。|[建立使用者定義彙總](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  
-|描述如何修改 Transact-SQL 使用者定義函數。|[修改使用者定義函式](../../relational-databases/user-defined-functions/modify-user-defined-functions.md)|  
-|描述如何刪除使用者定義函數。|[刪除使用者定義函式](../../relational-databases/user-defined-functions/delete-user-defined-functions.md)|  
-|描述如何執行使用者定義函數。|[執行使用者定義函式](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)|  
-|描述如何重新命名使用者定義函數。|[重新命名使用者定義函式](../../relational-databases/user-defined-functions/rename-user-defined-functions.md)|  
-|描述如何檢視使用者定義函數的定義。|[檢視使用者定義函式](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
+|描述如何修改 Transact-SQL 使用者定義函數。|[修改使用者定義函數](../../relational-databases/user-defined-functions/modify-user-defined-functions.md)|  
+|描述如何刪除使用者定義函數。|[刪除使用者定義函數](../../relational-databases/user-defined-functions/delete-user-defined-functions.md)|  
+|描述如何執行使用者定義函數。|[執行使用者定義函數](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)|  
+|描述如何重新命名使用者定義函數。|[重新命名使用者定義函數](../../relational-databases/user-defined-functions/rename-user-defined-functions.md)|  
+|描述如何檢視使用者定義函數的定義。|[檢視使用者定義函數](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   

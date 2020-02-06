@@ -11,10 +11,10 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08fb8cc6e54fff4b315a0a98ace046a49b2673a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008776"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux 和 macOS 上的 ODBC 驅動程式 - 高可用性和災害復原的支援
@@ -59,7 +59,7 @@ Linux 和 macOS 的 ODBC 驅動程式支援 [!INCLUDE[ssHADR](../../../includes/
 
 -   您可以增加 **loginTimeout** 的值，以容納容錯移轉時間並減少應用程式連接重試次數。
 
--   不支援分散式交易。  
+-   不支援分散式工作階段。  
   
 如果唯讀路由不在作用中，在下列狀況下，連接到可用性群組中的次要複本位置將會失敗：  
   
@@ -93,7 +93,7 @@ Linux 和 macOS 的 ODBC 驅動程式支援 [!INCLUDE[ssHADR](../../../includes/
   
 使用 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] 的 ODBC 應用程式可使用兩個函式的其中一個來進行連線：  
   
-|函數|Description|  
+|函式|描述|  
 |------------|---------------|  
 |[SQLConnect 函式](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** 可透過資料來源名稱 (DSN) 或連線屬性來支援 **ApplicationIntent** 和 **MultiSubnetFailover**。|  
 |[SQLDriverConnect 函式](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** 可透過 DSN、連接字串或連線屬性來支援 **ApplicationIntent** 和 **MultiSubnetFailover**。|

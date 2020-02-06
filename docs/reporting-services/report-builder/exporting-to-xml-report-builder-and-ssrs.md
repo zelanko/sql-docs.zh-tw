@@ -9,10 +9,10 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 52d83c17a1cfe79f8add7f0764216d404c14cfd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580753"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>匯出至 XML (報表產生器及 SSRS)
@@ -24,9 +24,9 @@ ms.locfileid: "65580753"
 ##  <a name="ReportItems"></a> 報表項目  
  下表描述報表項目轉譯的方式。  
   
-|項目|轉譯行為|  
+|Item|轉譯行為|  
 |----------|------------------------|  
-|報表|轉譯成 XML 文件的最上層元素。|  
+|Report|轉譯成 XML 文件的最上層元素。|  
 |資料區域|轉譯成元素中的元素做為其容器。 資料區包含資料表、矩陣和清單，可將資料顯示為文字和圖表、資料橫條、走勢圖、量測計，以及將資料視覺化的指標。|  
 |群組和詳細資料區段|每一個執行個體會轉譯成元素中的元素做為其容器。|  
 |文字方塊|轉譯成其容器中的屬性或元素。|  
@@ -63,7 +63,7 @@ ms.locfileid: "65580753"
 |**雙精度** (或 **十進位** 和任何整數或位元組資料類型)|**xsd:double**|  
 |**DateTime 或 DateTime Offset**|**xsd:dateTime**|  
 |**Time**|**xsd:string**|  
-|**布林**|**xsd:boolean**|  
+|**布林值**|**xsd:boolean**|  
 |**String**、 **Char**|**xsd:string**|  
 |其他|**xsd:string**|  
   
@@ -80,9 +80,9 @@ ms.locfileid: "65580753"
   
  變數的值如下：  
   
-|[屬性]|ReplTest1|  
+|名稱|值|  
 |----------|-----------|  
-|報表|Report.DataElementName|  
+|Report|Report.DataElementName|  
 |ReportURL|伺服器上，報表的 URLEncoded 絕對 URL。|  
 |SchemaName|Report.SchemaName. 如果為 null，則是 Report.Name。 如果使用 Report.Name，會先以 XmlConvert.EncodeLocalName 編碼。|  
 |ReportName|報表的名稱。|  

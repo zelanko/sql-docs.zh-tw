@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 52f66f1922814f77f93dfdec8725c024c0a129ff
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68495464"
 ---
 # <a name="set-operators---union-transact-sql"></a>Set 運算子 - UNION (Transact-SQL)
@@ -101,7 +101,7 @@ GO
 ```  
   
 ### <a name="b-using-select-into-with-union"></a>B. 搭配 UNION 使用 SELECT INTO  
-在下列範例中，第二個 `SELECT` 陳述式中的 `INTO` 子句指定名為 `ProductResults` 的資料表，保留 `ProductModel` 和 `Gloves` 資料表所選資料行聯集的最終結果集。 `Gloves` 資料表是建立在第一個 `SELECT` 陳述式中。  
+在下列範例中，第二個 `INTO` 陳述式中的 `SELECT` 子句指定名為 `ProductResults` 的資料表，保留 `ProductModel` 和 `Gloves` 資料表所選資料行聯集的最終結果集。 `Gloves` 資料表是建立在第一個 `SELECT` 陳述式中。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -178,7 +178,7 @@ GO
 ### <a name="d-using-union-of-three-select-statements-to-show-the-effects-of-all-and-parentheses"></a>D. 利用三個 SELECT 陳述式的 UNION 來顯示 ALL 和括號的作用  
 下列範例會利用 `UNION` 來結合有 5 個相同資料列的三份資料表的結果。 第一個範例利用 `UNION ALL` 來顯示重複的記錄，以及傳回所有的 15 個資料列。 第二個範例利用不含 `UNION` 的 `ALL` 來刪除三個 `SELECT` 陳述式之組合結果中重複的資料列，並傳回 5 個資料列。  
   
-第三個範例搭配第一個 `UNION` 來使用 `ALL`，並用括弧括住未使用 `ALL` 的第二個 `UNION`。 系統會先處理第二個 `UNION`，因為它在括弧中；由於未使用 `ALL` 選項，並已移除重複項目，因此會傳回 5 個資料列。 這 5 個資料列利用 `SELECT` 關鍵字，與第一個 `UNION ALL` 的結果結合起來。 此範例並不會移除這兩組 5 個資料列之間的重複項目。 最終結果有 10 個資料列。  
+第三個範例搭配第一個 `ALL` 來使用 `UNION`，並用括弧括住未使用 `UNION` 的第二個 `ALL`。 系統會先處理第二個 `UNION`，因為它在括弧中；由於未使用 `ALL` 選項，並已移除重複項目，因此會傳回 5 個資料列。 這 5 個資料列利用 `SELECT` 關鍵字，與第一個 `UNION ALL` 的結果結合起來。 此範例並不會移除這兩組 5 個資料列之間的重複項目。 最終結果有 10 個資料列。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -249,7 +249,7 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-a-simple-union"></a>E. 使用簡單 UNION  
-在下列範例中，結果集包括 `FactInternetSales` 和 `DimCustomer` 資料表之 `CustomerKey` 資料行的內容。 因為沒有使用 ALL 關鍵字，所以重複項目會從結果中排除。  
+在下列範例中，結果集包括 `CustomerKey` 和 `FactInternetSales` 資料表之 `DimCustomer` 資料行的內容。 因為沒有使用 ALL 關鍵字，所以重複項目會從結果中排除。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -263,7 +263,7 @@ ORDER BY CustomerKey;
 ```  
   
 ### <a name="f-using-union-of-two-select-statements-with-order-by"></a>F. 搭配 ORDER BY 使用兩個 SELECT 陳述式的 UNION  
- 當 UNION 陳述式中的任何 SELECT 陳述式包含 ORDER BY 子句時，該子句應置於所有 SELECT 陳述式之後。 下列範例在兩個 `SELECT` 陳述式 (其中有使用 ORDER BY 進行排序的資料行) 中顯示不正確的和正確的 `UNION` 用法。  
+ 當 UNION 陳述式中的任何 SELECT 陳述式包含 ORDER BY 子句時，該子句應置於所有 SELECT 陳述式之後。 下列範例在兩個 `UNION` 陳述式 (其中有使用 ORDER BY 進行排序的資料行) 中顯示不正確的和正確的 `SELECT` 用法。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -289,7 +289,7 @@ ORDER BY CustomerKey;
 ```  
   
 ### <a name="g-using-union-of-two-select-statements-with-where-and-order-by"></a>G. 使用含 WHERE 和 ORDER BY 之 SELECT 陳述式的 UNION  
-以下範例說明在需要 WHERE 和 ORDER BY 的兩個 `SELECT` 陳述式中，不正確的和正確的 `UNION` 用法。  
+以下範例說明在需要 WHERE 和 ORDER BY 的兩個 `UNION` 陳述式中，不正確的和正確的 `SELECT` 用法。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -319,9 +319,9 @@ ORDER BY CustomerKey;
 ### <a name="h-using-union-of-three-select-statements-to-show-effects-of-all-and-parentheses"></a>H. 利用三個 SELECT 陳述式的 UNION 來顯示 ALL 和括號的作用效果  
 下列範例使用 `UNION` 來合併**同一個資料表**的結果，以示範在使用 `UNION` 時 ALL 和括弧的效果。  
   
-第一個範例使用 `UNION ALL` 顯示重複的記錄，並將來源資料表中的每個資料列都傳回三次。 第二個範例使用不含 `ALL` 的 `UNION`，以排除三個 `SELECT` 陳述式的結合結果中的重複資料列，並只傳回來源資料表中未重複的資料列。  
+第一個範例使用 `UNION ALL` 顯示重複的記錄，並將來源資料表中的每個資料列都傳回三次。 第二個範例使用不含 `UNION` 的 `ALL`，以排除三個 `SELECT` 陳述式的結合結果中的重複資料列，並只傳回來源資料表中未重複的資料列。  
   
-第三個範例搭配第一個 `UNION` 來使用 `ALL`，並用括弧括住未使用 `ALL` 的第二個 `UNION`。 系統會先處理第二個 `UNION`，因為它在括號中。 由於未使用 `ALL` 選項，並已移除重複項目，因此它只會傳回資料表中未重複的資料列。 這些資料列利用 `UNION ALL` 關鍵字，與第一個 `SELECT` 的結果合併。 此範例並不會移除這兩組之間的重複項目。  
+第三個範例搭配第一個 `ALL` 來使用 `UNION`，並用括弧括住未使用 `UNION` 的第二個 `ALL`。 系統會先處理第二個 `UNION`，因為它在括號中。 由於未使用 `ALL` 選項，並已移除重複項目，因此它只會傳回資料表中未重複的資料列。 這些資料列利用 `SELECT` 關鍵字，與第一個 `UNION ALL` 的結果合併。 此範例並不會移除這兩組之間的重複項目。  
   
 ```sql
 -- Uses AdventureWorks  

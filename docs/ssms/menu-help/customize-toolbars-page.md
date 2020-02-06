@@ -1,6 +1,6 @@
 ---
-title: 自訂 (工具列頁面) | Microsoft Docs
-ms.custom: ''
+title: 自訂 (工具列頁面)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09926451f7dc8f2e9ef8a6fd355b86eb9230bfd8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1d6297151c5f31c88d108835f1c6c4955bfbccf8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264022"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242194"
 ---
 # <a name="customize-toolbars-page"></a>自訂 (工具列頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68264022"
 **新增**  
 顯示 [新增工具列]  對話方塊，讓您能夠建立和命名自訂工具列。  
   
-**Rename**  
+**重新命名**  
 顯示 [重新命名工具列]  對話方塊，讓您僅能變更自訂工具列的名稱。  
   
 **刪除**  

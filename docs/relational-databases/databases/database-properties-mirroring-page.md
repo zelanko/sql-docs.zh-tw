@@ -13,10 +13,10 @@ ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a25b2b40b147cd0bd23e8c7554e548b6a577d539
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099589"
 ---
 # <a name="database-properties-mirroring-page"></a>資料庫屬性 (鏡像頁面)
@@ -41,7 +41,7 @@ ms.locfileid: "68099589"
 |如果鏡像已經開始。|如果在精靈中變更了見證伺服器，設定就會隨之變更。|  
   
  **伺服器網路位址**  
- 下列每個伺服器執行個體都有一個相等的選項：[主體]  、[鏡像]  及 [見證]  。  
+ 下列每個伺服器執行個體都有一個相等的選項：[主體]  、[鏡像]  和 [見證]  。  
   
  伺服器執行個體的伺服器網路位址，是在您完成「設定資料庫鏡像安全性精靈」時自動指定的。 完成精靈之後，如有必要，可以再用手動方式修改網路位址。  
   
@@ -84,7 +84,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  按一下 [啟動鏡像]  以起始工作階段。 Database Engine 會嘗試自動連接到鏡像夥伴，以確認鏡像伺服器已正確設定，並開始鏡像工作階段。 如果可以啟動鏡像，就會建立一個作業來監視資料庫。  
   
- **暫停**或**繼續**  
+ **暫停** 或 **繼續**  
  在資料庫鏡像工作階段期間，按一下 [暫停]  即可暫停工作階段。 會出現提示字元要求確認；如果您按一下 **[是]** ，工作階段將暫停，然後按鈕將變更為 **[繼續]** 。 若要繼續工作階段，請按一下 **[繼續]** 。  
   
  如需暫停工作階段之影響的相關資訊，請參閱 [暫停與繼續資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)。  
@@ -116,7 +116,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |------------|--------------|-----------------|  
 |**高效能 (非同步)**|Null (若存在，則不使用，但工作階段需要仲裁)|為了將效能發揮到極致，鏡像資料庫的狀態總是會比主體資料庫有些延遲，永遠無法真正的同步。 然而，在資料庫之間的間距通常很小。 夥伴的遺失將具有下列結果：<br /><br /> 如果鏡像伺服器執行個體已無法使用，主體將繼續。<br /><br /> 如果主體伺服器執行個體變成無法使用，鏡像就會停止。 但是如果工作階段沒有見證 (依照建議)，或者見證已連接到鏡像伺服器，則鏡像伺服器會以暖待命方式保持可存取狀態；資料庫擁有者可以對鏡像伺服器執行個體強制服務 (有遺失資料的可能)。|  
 |**不具有自動容錯移轉的高安全性 (同步)**|否|保證會將所有已認可的交易都寫入鏡像伺服器上的磁碟。<br /><br /> 夥伴互相連接時才可以執行手動容錯移轉。<br /><br /> 夥伴的遺失將具有下列結果：<br /><br /> 如果鏡像伺服器執行個體已無法使用，主體將繼續。<br /><br /> 如果主體伺服器執行個體變成無法使用，鏡像就會停止，但是會以暖待命方式保持可使用狀態；資料庫擁有者可以對鏡像伺服器執行個體強制服務 (有遺失資料的可能)。|  
-|**具有自動容錯移轉的高安全性 (同步)**|是 (必要)|藉由納入見證伺服器執行個體來支援自動容錯移轉，而發揮最大的可用性。 請注意，您必須先指定見證伺服器位址，才能選取 [具有自動容錯移轉的高安全性 (同步)]  選項。<br /><br /> 每當夥伴互相連接時才可以執行手動容錯移轉。<br /><br /> **&#42;&#42; 重要事項 &#42;&#42;** 如果見證中斷連線，則必須將夥伴相互連線，才能使用資料庫。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。<br /><br /> 在同步作業模式中，保證會將所有已認可的交易都寫入鏡像伺服器上的磁碟。 在有見證的情況下，夥伴的遺失將具有下列結果：<br /><br /> 如果主體伺服器執行個體已無法使用，將發生自動容錯移轉。 鏡像伺服器執行個體將切換到主體的角色，並且提供它的資料庫做為主體資料庫。<br /><br /> 如果鏡像伺服器執行個體已無法使用，主體將繼續。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。|  
+|**具有自動容錯移轉的高安全性 (同步)**|是 (必要)|藉由納入見證伺服器執行個體來支援自動容錯移轉，而發揮最大的可用性。 請注意，您必須先指定見證伺服器位址，才能選取 **[具有自動容錯移轉的高安全性 (同步)]** 選項。<br /><br /> 每當夥伴互相連接時才可以執行手動容錯移轉。<br /><br /> **&#42;&#42; 重要事項 &#42;&#42;** 如果見證中斷連線，則必須將夥伴相互連線，才能使用資料庫。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。<br /><br /> 在同步作業模式中，保證會將所有已認可的交易都寫入鏡像伺服器上的磁碟。 在有見證的情況下，夥伴的遺失將具有下列結果：<br /><br /> 如果主體伺服器執行個體已無法使用，將發生自動容錯移轉。 鏡像伺服器執行個體將切換到主體的角色，並且提供它的資料庫做為主體資料庫。<br /><br /> 如果鏡像伺服器執行個體已無法使用，主體將繼續。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。|  
   
  在鏡像開始後，您可以變更作業模式，並且按一下 **[確定]** 以儲存變更。  
   
@@ -130,16 +130,16 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |**這個資料庫尚未設定鏡像**|資料庫鏡像工作階段不存在，並且在 [鏡像]  頁面上沒有可以報告的活動。|  
 |**已暫停**|主體資料庫可供使用，但是不會將任何記錄傳送到鏡像伺服器。|  
 |**沒有連接**|主體伺服器執行個體無法連接到其夥伴。|  
-|**正在同步處理**|鏡像資料庫內容延遲在主體資料庫的內容之後。 主體伺服器執行個體正在將記錄傳送到鏡像伺服器執行個體，這時會將變更套用至鏡像資料庫，以便向前復原。<br /><br /> 在資料庫鏡像工作階段開始時，鏡像資料庫和主體資料庫都是處於這個狀態。|  
+|**正在同步處理**|鏡像資料庫的內容落後於主體資料庫的內容。 主體伺服器執行個體正在將記錄傳送到鏡像伺服器執行個體，這時會將變更套用至鏡像資料庫，以便向前復原。<br /><br /> 在資料庫鏡像工作階段開始時，鏡像資料庫和主體資料庫都是處於這個狀態。|  
 |**容錯移轉**|在主體伺服器執行個體上，手動容錯移轉 (角色切換) 已經開始，而且伺服器目前正在轉換成鏡像角色。 在這個狀態下，使用者與主體資料庫的連接會快速結束，而且接著資料庫就會立即接替鏡像角色。|  
-|**已同步處理**|當鏡像伺服器足以追趕上主體伺服器時，資料庫狀態就會變成 [已同步處理]  。 只要主體伺服器繼續傳送變更到鏡像伺服器，而鏡像伺服器也繼續將變更套用到鏡像資料庫，資料庫便會保持在這種狀態。<br /><br /> 在高安全性模式中，可以進行容錯移轉，不會遺失任何資料。<br /><br /> 在高效能模式中，即使是處於 [已同步處理]  狀態，有些資料也一定會遺失。|  
+|**已同步處理**|當鏡像伺服器足以追趕上主體伺服器時，資料庫狀態就會變成 [已同步處理]  。 只要主體伺服器繼續傳送變更到鏡像伺服器，而鏡像伺服器也繼續將變更套用到鏡像資料庫，資料庫便會保持在這種狀態。<br /><br /> 在高安全性模式中，可以進行容錯移轉，不會遺失任何資料。<br /><br /> 在高效能模式中，永遠都有可能遺失部分資料，即使是在 [已同步處理]  狀態也是如此。|  
   
  如需詳細資訊，請參閱[鏡像狀態 &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)。  
   
  **[重新整理]**  
  按一下以更新 [狀態]  方塊。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如不熟悉資料庫鏡像，請參閱 [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
 ### <a name="adding-a-witness-to-an-existing-session"></a>將見證加入至現有的工作階段  
@@ -149,7 +149,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  **若要在使用 Windows 驗證時加入見證**  
   
- [加入或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
+ [新增或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
 ### <a name="removing-a-witness"></a>移除見證  
  若要移除見證，請從 [見證]  欄位中刪除其伺服器網路位址。 如果從具有自動容錯移轉的高安全性模式切換到高效能模式，則會自動清除 [見證]  欄位。  
@@ -176,7 +176,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 -   [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
+ [資料庫鏡像和 Always On 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [監視資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   

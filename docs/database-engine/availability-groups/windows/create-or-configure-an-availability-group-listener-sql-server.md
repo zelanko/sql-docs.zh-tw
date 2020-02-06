@@ -17,15 +17,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 ms.openlocfilehash: 918619afd0b07c6d7b8e5d3ccef526da5f4d8fad
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822127"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的接聽程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，建立或設定 AlwaysOn 可用性群組的單一「可用性群組接聽程式」  (Availability Group Listener)。  
+  本主題描述如何使用 *、* 或[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 PowerShell，建立或設定 AlwaysOn 可用性群組的單一「可用性群組接聽程式」[!INCLUDE[tsql](../../../includes/tsql-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](Availability Group Listener)。  
   
 > [!IMPORTANT]  
 >  若要建立可用性群組的第一個可用性群組接聽程式，強烈建議您使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell。 除非必要 (例如建立其他接聽程式)，否則避免在 WSFC 叢集中直接建立接聽程式。  
@@ -68,8 +68,8 @@ ms.locfileid: "74822127"
   
 |權限|連結|  
 |-----------------|----------|  
-|裝載可用性群組之 WSFC 叢集的叢集物件名稱 (CNO) 必須具有「建立電腦物件」  權限。<br /><br /> 在 Active Directory 中，CNO 預設不會明確具有「建立電腦物件」  權限，而且可以建立 10 個虛擬電腦物件 (VCO)。 在建立 10 個 VCO 之後，其他 VCO 的建立作業將會失敗。 您可以明確授與權限給 WSFC 叢集的 CNO，以避免這個狀況。 請注意，您已刪除之可用性群組的 VCO 不會自動在 Active Directory 中刪除及算為 10 個 VCO 預設限制，除非您手動加以刪除。<br /><br /> 注意:在某些組織中，安全性原則會禁止將 [建立電腦物件]  權限授與個別使用者帳戶。|＜Steps for configuring the account for the person who installs the cluster＞(為叢集安裝人員設定帳戶的步驟)  ，位於 [Failover Cluster Step-by-Step Guide:Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer) (容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶)<br /><br /> ＜Steps for prestaging the cluster name account＞(預先設置叢集名稱帳戶的步驟)  ，位於 [Failover Cluster Step-by-Step Guide:Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating) (容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶)|  
-|如果您的組織要求您為接聽程式虛擬網路名稱預先設置電腦帳戶，將需要 **Account Operator** 群組中的成員資格或網域管理員的協助。|＜Steps for prestaging an account for a clustered service or application＞(為叢集服務或應用程式預先設置帳戶的步驟)  ，位於 [Failover Cluster Step-by-Step Guide:Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2) (容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶)。|  
+|裝載可用性群組之 WSFC 叢集的叢集物件名稱 (CNO) 必須具有「建立電腦物件」  權限。<br /><br /> 在 Active Directory 中，CNO 預設不會明確具有「建立電腦物件」  權限，而且可以建立 10 個虛擬電腦物件 (VCO)。 在建立 10 個 VCO 之後，其他 VCO 的建立作業將會失敗。 您可以明確授與權限給 WSFC 叢集的 CNO，以避免這個狀況。 請注意，您已刪除之可用性群組的 VCO 不會自動在 Active Directory 中刪除及算為 10 個 VCO 預設限制，除非您手動加以刪除。<br /><br /> 注意：在某些組織中，安全性原則會禁止將「建立電腦物件」  權限授與個別使用者帳戶。|*容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶*中的[為叢集安裝人員設定帳戶的步驟](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶* 中的 [預先設置叢集名稱帳戶的步驟](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
+|如果您的組織要求您為接聽程式虛擬網路名稱預先設置電腦帳戶，將需要 **Account Operator** 群組中的成員資格或網域管理員的協助。|*容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶* 中的 [為叢集服務或應用程式預先設置帳戶的步驟](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)。|  
   
 > [!TIP]  
 >  一般而言，不要為接聽程式虛擬網路名稱預先設置電腦帳戶是最簡單的。 如果可以，讓帳戶在您執行「WSFC 高可用性精靈」時自動建立並設定。  
@@ -228,21 +228,21 @@ ms.locfileid: "74822127"
   
  **NET Framework 3.5 或 OLEDB 不支援 MultiSubnetFailover=True**  
   
- **問題：** 如果您的可用性群組或容錯移轉叢集執行個體具有相依於不同子網路中多個 IP 位址的接聽程式名稱 (WSFC 叢集管理員中稱為網路名稱或用戶端存取點)，而且您使用 ADO.NET 搭配 .NET Framework 3.5 SP1 或使用 SQL Native Client 11.0 OLEDB，對可用性群組接聽程式的用戶端連線要求中，可能有 50% 會連線逾時。  
+ **問題** ：如果您的可用性群組或容錯移轉叢集執行個體具有相依於不同子網路中多個 IP 位址的接聽程式名稱 (WSFC 叢集管理員中稱為網路名稱或用戶端存取點)，而且您使用 ADO.NET 搭配 .NET Framework 3.5 SP1 或使用 SQL Native Client 11.0 OLEDB，對可用性群組接聽程式的 50% 用戶端連接要求可能會達到連接逾時。  
   
- **因應措施：** 建議您執行下列任一項工作。  
+ **因應措施** ：建議您執行下列其中一項工作。  
   
 -   如果您沒有操作叢集資源的權限，請將連接逾時變更為 30 秒 (此值會產生 20 秒 TCP 逾時期間加上 10 秒緩衝時間)。  
   
-     **優點**：如果發生跨子網路的容錯移轉，用戶端復原時間很短。  
+     **優點**：如果發生跨子網路容錯移轉，用戶端復原時間很短。  
   
-     **缺點**：半數的用戶端連線需要 20 秒以上  
+     **缺點**：一半的用戶端連接需要 20 秒以上。  
   
 -   如果您有操作叢集資源的權限，比較建議的作法是將可用性群組接聽程式的網路名稱設定為 `RegisterAllProvidersIP=0`。 如需詳細資訊，請參閱本節稍後的＜RegisterAllProvidersIP 設定＞。  
   
-     **優點：** 您不需要增加用戶端連線逾時值。  
+     **優點** ：您不需要增加用戶端連接逾時值。  
   
-     **缺點：** 如果發生跨子網路的容錯移轉，用戶端復原時間可能長達 15 分鐘或以上，取決於您的 **HostRecordTTL** 設定和跨網站 DNS/AD 複寫排程設定。  
+     **缺點** ：如果發生跨子網路容錯移轉，用戶端復原時間可能是 15 分鐘以上，視您的 **HostRecordTTL** 設定和跨網站 DNS/AD 複寫排程的設定而定。  
   
 ###  <a name="RegisterAllProvidersIP"></a> RegisterAllProvidersIP 設定  
  當您使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或PowerShell 建立可用性群組接聽程式時，會在 WSFC 中建立用戶端存取點，且 **RegisterAllProvidersIP** 屬性會設定為 1 (true)。 這個屬性值的影響取決於用戶端連接字串，如下所示：  
@@ -305,7 +305,7 @@ Start-ClusterResource yourListenerName
   
         3.  將相依性加入至 WSFC 可用性群組資源。  
   
-         如需容錯移轉叢集管理員對話方塊和索引標籤的資訊，請參閱 [User Interface:The Failover Cluster Manager Snap-In](https://technet.microsoft.com/library/cc772502.aspx) (使用者介面：容錯移轉叢集管理員嵌入式管理單元)。  
+         如需容錯移轉叢集管理員之對話方塊和索引標籤的相關資訊，請參閱 [使用者介面：容錯移轉叢集管理員嵌入式管理單元](https://technet.microsoft.com/library/cc772502.aspx)。  
   
     -   **使用適用容錯移轉叢集的 Windows PowerShell：**  
   
@@ -331,7 +331,7 @@ Start-ClusterResource yourListenerName
   
 -   [如何為相同可用性群組建立多個接聽程式](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/)  
   
--   [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

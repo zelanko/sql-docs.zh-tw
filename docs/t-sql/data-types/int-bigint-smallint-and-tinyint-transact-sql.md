@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c61ca9f853f851bb531abdbcba66773f9e9d9e1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077905"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint 和 tinyint (Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "68077905"
 |**smallint**|-2^15 (-32,768) 到 2^15-1 (32,767)|2 位元組|  
 |**tinyint**|0 至 255|1 位元組|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 **int** 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的主要整數資料類型。 **bigint** 資料類型通常是在整數值可能超過 **int** 資料類型所支援的範圍時使用。
   
 **bigint** 位於資料類型優先順序圖表中 **smallmoney** 和 **int** 之間。

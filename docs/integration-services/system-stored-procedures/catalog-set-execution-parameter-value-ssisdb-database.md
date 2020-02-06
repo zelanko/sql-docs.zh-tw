@@ -11,10 +11,10 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f75065f38d47964ab3bbc07f22bb809061fb22d4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295305"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB 資料庫)
@@ -65,22 +65,22 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  *object_type* 是 **smallint**。  
   
  [ @parameter_name = ] *parameter_name*  
- 參數的名稱。 *parameter_name* 是 **nvarchar(128)** 。  
+ 參數名稱。 *parameter_name* 是 **nvarchar(128)** 。  
   
  [ @parameter_value = ] *parameter_value*  
  參數的值。 *parameter_value* 是 **sql_variant**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  若要找出用於給定執行的參數值，請查詢 catalog.execution_parameter_values 檢視。  
   
  若要指定套件執行期間所記錄的資訊範圍，請將 *parameter_name* 設為 LOGGING_LEVEL，並將 *parameter_value* 設為下列其中一個值。  
   
  將 *object_type*參數設為 50。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |0|None<br /><br /> 關閉記錄功能。 只記錄封裝執行狀態。|  
-|1|[基本]<br /><br /> 記錄所有事件，自訂和診斷事件除外。 這是預設值。|  
+|1|基本<br /><br /> 記錄所有事件，自訂和診斷事件除外。 這是預設值。|  
 |2|效能<br /><br /> 只記錄效能統計資料，以及 OnError 和 OnWarning 事件。|  
 |3|「詳細資訊」<br /><br /> 記錄所有事件，包括自訂和診斷事件。 <br />自訂事件，包括 Integration Services 工作所記錄的那些事件。 如需詳細資訊，請參閱[自訂訊息以進行記錄](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages)|  
 |4|執行階段歷程<br /><br /> 收集追蹤資料流程中歷程所需的資料。|  
@@ -88,7 +88,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  若要指定 Integration Services 伺服器在套件執行期間發生任何錯誤時產生傾印檔案，請針對尚未執行之執行的執行個體，設定下列參數值。  
   
-|參數|ReplTest1|  
+|參數|值|  
 |---------------|-----------|  
 |*execution_id*|執行的執行個體之唯一識別碼|  
 |*object_type*|50|  
@@ -97,7 +97,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  若要指定 Integration Services 伺服器在套件執行期間發生事件時產生傾印檔案，請針對尚未執行的執行執行個體，設定下列參數值。  
   
-|參數|ReplTest1|  
+|參數|值|  
 |---------------|-----------|  
 |*execution_id*|執行的執行個體之唯一識別碼|  
 |*object_type*|50|  
@@ -106,7 +106,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  若要指定套件執行期間會導致 Integration Services 伺服器產生傾印檔案的事件，請針對尚未執行之執行的執行個體，設定下列參數值。 使用分號來分隔多個事件代碼。  
   
-|參數|ReplTest1|  
+|參數|值|  
 |---------------|-----------|  
 |*execution_id*|執行的執行個體之唯一識別碼|  
 |*object_type*|50|  

@@ -11,10 +11,10 @@ ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0338675549b49dd5c50eff9a8996f7a3ee6ee329
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73049954"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values (SSISDB 資料庫)
@@ -47,7 +47,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  封裝名稱。 指定封裝名稱，以擷取所有專案參數和來自特定封裝的參數。 *package_name* 是 **nvarchar(260)** 。  
   
  [ @reference_id = ] *reference_id*  
- 環境參考的唯一識別碼。 這個參數是選擇性的。 *reference_id* 是 **bigint**。  
+ 環境參考的唯一識別碼。 這是選擇性參數。 *reference_id* 是 **bigint**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  
@@ -55,11 +55,11 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>結果集  
  傳回具有下列格式的資料表：  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|參數類型。 專案參數的值會是 `20`，而封裝參數的值則會是 `30`。|  
 |parameter_data_type|**nvarchar(128)**|參數的資料類型。|  
-|parameter_name|**sysname**|參數的名稱。|  
+|parameter_name|**sysname**|參數名稱。|  
 |parameter_value|**sql_variant**|參數的值。|  
 |sensitive|**bit**|當值為 `1` 時，參數值為敏感值。 當值為 `0` 時，參數值則不是敏感值。|  
 |required|**bit**|當值為 `1` 時，必須有參數值才能開始執行。 當值為 `0` 時，不需要參數值即可開始執行。|  

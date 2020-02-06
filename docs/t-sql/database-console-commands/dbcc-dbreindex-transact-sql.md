@@ -23,10 +23,10 @@ ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 5aa089ac3c8de549e0c2ec33fd413c9cafba24dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101992"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
@@ -66,7 +66,7 @@ DBCC DBREINDEX
  WITH NO_INFOMSGS  
  抑制所有嚴重性層級在 0 到 10 的參考用訊息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 DBCC DBREINDEX 會重建資料表的索引，或定義給資料表的所有索引。 在允許動態重建索引時，您不需要卸除再重新建立 PRIMARY KEY 或 UNIQUE 條件約束，就可以重建強制執行 PRIMARY KEY 或 UNIQUE 條件約束的索引。 這表示您不需要知道資料表或其條件約束的結構，就能重建索引。 在資料大量複製到資料表時，就可能發生這個情況。
 
 DBCC DBREINDEX 可以在單一陳述式中，重建資料表的所有索引。 這比編寫多個 DROP INDEX 和 CREATE INDEX 陳述式簡單。 由於工作是用單一陳述式來執行的，因此，DBCC DBREINDEX 會自動成為不可部分完成；個別的 DROP INDEX 和 CREATE INDEX 陳述式則必須包括在交易內，才能成為不可部分完成。 另外，DBCC DBREINDEX 提供的最佳化程度超出個別的 DROP INDEX 和 CREATE INDEX 陳述式。

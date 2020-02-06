@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cb3fd4e2bc815e143ba1ff6d690d2c55a40c6f31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087611"
 ---
 # <a name="trace-file-close-event-class"></a>Trace File Close 事件類別
@@ -25,7 +25,7 @@ ms.locfileid: "68087611"
   
 ## <a name="trace-file-close-event-class-data-columns"></a>Trace File Close 事件類別資料行  
   
-|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**EventClass**|**int**|事件類別 = 150。|27|否|  
 |**EventSequence**|**int**|此追蹤中觸發這個事件的唯一時間戳記。 所觸發的每個事件都會使這個數字逐一遞增。|51|否|  

@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.openlocfilehash: b611ef63532dd855648354bb85fc96f7cb52bd60
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127315"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>使用 bcp 將資料大量複製到 Linux 上的 SQL Server
@@ -23,7 +23,7 @@ ms.locfileid: "68127315"
 
 您可以使用 `bcp` 將大量資料列匯入 SQL Server 資料表中，或將 SQL Server 資料表的資料匯出至資料檔中。 除了搭配 queryout 選項使用之外，`bcp` 不需要任何 Transact-SQL 的知識。 `bcp` 命令列公用程式可搭配在內部部署或在雲端中、在 Linux、Windows 或 Docker 上，以及 Azure SQL Database 和 Azure SQL 資料倉儲上執行的 Microsoft SQL Server 使用。
 
-此文章示範如何：
+本文示範如何：
 - 使用 `bcp in` 命令將資料匯入資料表
 - 使用 `bcp out` 命令從資料表匯出資料
 
@@ -94,7 +94,7 @@ bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d Bc
 - `-t`：指定欄位結束字元。 我們會使用 `comma` 作為資料檔案中記錄的欄位結束字元
 
 > [!NOTE]
-> 在此範例中，我們不會指定自訂的資料列結束字元。 當我們稍早使用 `cat` 命令來建立資料檔案時，文字資料檔案中的資料列已正確地以 `newline` 終止。
+> 在此範例中，我們不會指定自訂的資料列結束字元。 當我們稍早使用 `newline` 命令來建立資料檔案時，文字資料檔案中的資料列已正確地以 `cat` 終止。
 
 您可以在終端機視窗中執行下列命令，以確認資料已成功匯入。 請記得在執行命令之前，視需要取代 `username` 和 `<your_password>`。
 ```bash 

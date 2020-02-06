@@ -13,10 +13,10 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68049032"
 ---
 # <a name="database-properties-options-page"></a>資料庫屬性 (選項頁面)
@@ -35,12 +35,12 @@ ms.locfileid: "68049032"
  指定資料庫所支援的最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 如需可能的值，請參閱 [ALTER DATABASE (Transact-SQL) 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。 升級 SQL Server 資料庫之後，會盡可能保留該資料庫的相容性層級，或變更為新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所支援的最低層級。 
   
  **內含項目類型**  
- 指定無或部分以指定其是否為自主資料庫。 如需自主資料庫的詳細資訊，請參閱[自主資料庫](../../relational-databases/databases/contained-databases.md)。 必須先將伺服器屬性 [啟用自主資料庫]  設為 [TRUE]  ，才能將資料庫設為自主。  
+ 指定無或部分以指定其是否為自主資料庫。 如需自主資料庫的詳細資訊，請參閱 [自主資料庫](../../relational-databases/databases/contained-databases.md)。 必須先將伺服器屬性 [啟用自主資料庫]  設為 [TRUE]  ，才能將資料庫設為自主。  
   
 > [!IMPORTANT]  
 >  若啟用部分自主資料庫，會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的存取控制權委派給資料庫擁有者。 如需詳細資訊，請參閱 [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)。  
   
-## <a name="automatic"></a>Automatic  
+## <a name="automatic"></a>自動  
  **自動關閉**  
  指定最後一個使用者結束後，資料庫是否正常關閉並釋出資源。 可能的值為 **True** 和 **False**。 若為 [True]  ，資料庫會正常關閉，並在最後一位使用者登出之後釋放其資源。  
 
@@ -90,7 +90,7 @@ ms.locfileid: "68049032"
  **兩位數年份的截止**  
  指出可用兩位數年份格式輸入的最大年份數目。 列出的年份以及前 99 年均可用兩位數年份格式輸入。 所有其他的年份都必須用四位數年份輸入。  
   
- 例如，2049 的預設設定指出用 '3/14/49' 格式輸入的日期會被解譯為 2049 年 3 月 14 日，而用 '3/14/50' 格式輸入的日期會被解譯為 1950 年 3 月 14 日。 如需詳細資訊，請參閱 [設定兩位數年份的截止伺服器組態選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。  
+ 例如，2049 的預設設定指出用 '3/14/49' 格式輸入的日期會被解譯為 2049 年 3 月 14 日，而用 '3/14/50' 格式輸入的日期會被解譯為 1950 年 3 月 14 日。 如需詳細資訊，請參閱 [設定 two digit year cutoff 伺服器組態選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。  
   
 ## <a name="cursor"></a>資料指標  
  **認可時關閉資料指標已啟用**  
@@ -131,7 +131,7 @@ ms.locfileid: "68049032"
  針對與選定資料庫相關的 FILESTREAM 資料指定目錄名稱。  
   
  **FILESTREAM 非交易存取**  
- 指定下列其中一個選項，可進行透過檔案系統到 FileTable 中所儲存 FILESTREAM 資料的非交易存取：**OFF**、**READ_ONLY** 或 **FULL**。 如果伺服器上未啟用 FILESTREAM，這個值會設定為 OFF 而且會停用。 如需詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。  
+ 針對從檔案系統到 FileTable 中所儲存之 FILESTREAM 資料的非交易存取，指定下列其中一個選項： **OFF**、 **READ_ONLY**或 **FULL**。 如果伺服器上未啟用 FILESTREAM，這個值會設定為 OFF 而且會停用。 如需詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。  
   
 ## <a name="miscellaneous"></a>其他  
 **允許快照集隔離**  
@@ -141,10 +141,10 @@ ms.locfileid: "68049032"
  針對在 **CREATE TABLE** 或 **ALTER TABLE** 陳述式期間未明確定義為 **NOT NULL** 的所有使用者定義資料類型或資料行，允許 Null 值 (預設狀態)。 如需詳細資訊，請參閱 [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md) 和 [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)。  
   
  **ANSI NULLS 已啟用**  
- 使用 Null 值時，指定等於 (`=`) 和不等於 (`<>`) 比較運算子的行為。 可能的值為 [True]  (開啟) 與 [False]  (關閉)。 若為 [True]  ，所有與 Null 值的比較都會評估為 UNKNOWN。 若為 [False]  ，非 UNICODE 值與 Null 值都為 NULL 時，其比較會評估為 [True]  。 如需詳細資訊，請參閱 [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)。  
+ 使用 Null 值時，指定等於 (`=`) 和不等於 (`<>`) 比較運算子的行為。 可能的值為 [True]  \(開啟) 與 [False]  \(關閉)。 若為 [True]  ，所有與 Null 值的比較都會評估為 UNKNOWN。 若為 [False]  ，非 UNICODE 值與 Null 值都為 NULL 時，其比較會評估為 [True]  。 如需詳細資訊，請參閱 [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)。  
   
  **ANSI 填補已啟用**  
- 指定開啟或關閉 ANSI 填補。 允許的值為 [True]  (開啟) 與 [False]  (關閉)。 如需詳細資訊，請參閱 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  
+ 指定開啟或關閉 ANSI 填補。 允許的值為 [True]  \(開啟) 與 [False]  \(關閉)。 如需詳細資訊，請參閱 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  
   
  **ANSI 警告已啟用**  
  針對數個錯誤狀況指定 ISO 標準行為。 若為 [True]  ，Null 值出現在彙總函數 (例如 SUM、AVG、MAX、MIN、STDEV、STDEVP、VAR、VARP 或 COUNT) 時，就會產生警告訊息。 若為 [False]  ，則不會發出警告。 如需詳細資訊，請參閱 [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)。  
@@ -179,7 +179,7 @@ ms.locfileid: "68049032"
  指定如果以引號括住，是否可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關鍵字做為識別碼 (物件或變數名稱)。 可能的值為 **True** 和 **False**。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
  **遞迴觸發程序已啟用**  
- 指定其他觸發程序是否可以引發觸發程序。 可能的值為 **True** 和 **False**。 設定為 [True]  時，就會啟用觸發程序的遞迴引發。 設定為 [False]  時，只會避免直接遞迴。 若要停用間接遞迴，請使用 sp_configure 將巢狀觸發程序伺服器選項設定為 0。 如需詳細資訊，請參閱 [建立巢狀觸發程序](../../relational-databases/triggers/create-nested-triggers.md)。  
+ 指定其他觸發程序是否可以引發觸發程序。 可能的值為 **True** 和 **False**。 設定為 [True]  時，就會啟用觸發程序的遞迴引發。 設定為 [False]  時，只會避免直接遞迴。 若要停用間接遞迴，請使用 sp_configure 將巢狀觸發程序伺服器選項設定為 0。 如需相關資訊，請參閱 [建立巢狀觸發程序](../../relational-databases/triggers/create-nested-triggers.md)。  
   
  **可信任**  
  顯示 [True]  時，這個唯讀選項指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許存取資料庫外的資源，但前提是資料庫內已建立模擬內容。 在資料庫模組上使用 EXECUTE AS 使用者陳述式或 EXECUTE AS 子句，即可在資料庫內建立模擬內容。  
@@ -221,13 +221,13 @@ ms.locfileid: "68049032"
  指定資料庫是否為唯讀。 可能的值為 **True** 和 **False**。 若為 [True]  ，使用者只能讀取資料庫中的資料。 使用者無法修改資料或資料庫物件，但可以使用 `DROP DATABASE` 陳述式刪除資料庫本身。 在指定 [資料庫唯讀]  選項的新值時，資料庫不可在使用中。 master 資料庫為例外，只有系統管理員可以在設定此選項時使用 master。  
   
  **資料庫狀態**  
- 檢視資料庫的目前狀態。 它是不可編輯的。 如需 [資料庫狀態]  的詳細資訊，請參閱[資料庫狀態](../../relational-databases/databases/database-states.md)。  
+ 檢視資料庫的目前狀態。 您無法編輯它。 如需 [資料庫狀態]  的詳細資訊，請參閱[資料庫狀態](../../relational-databases/databases/database-states.md)。  
 
  **加密已啟用**  
  若為 [True]  ，這個資料庫就會啟用資料庫加密。 「資料庫加密金鑰」都需要加密。 如需詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
  
  **限制存取**  
- 指定哪些使用者可以存取資料庫。 可能的值為：  
+ 指定哪些使用者可以存取資料庫。 可能的值包括：  
   
 -   **多重**  
   

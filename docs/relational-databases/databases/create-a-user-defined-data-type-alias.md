@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c83006aab69b7d72a2c3006dab48811eeda8495
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909114"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>建立使用者定義資料類型別名
@@ -47,7 +47,7 @@ ms.locfileid: "72909114"
   
 -   使用者定義資料類型別名的名稱必須符合識別碼的規則。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要目前資料庫的 CREATE TYPE 權限，以及 *schema_name*的 ALTER 權限。 如果未指定 *schema_name* ，則套用用來判斷目前使用者之結構描述的預設名稱解析規則。  
@@ -78,7 +78,7 @@ ms.locfileid: "72909114"
      **規則**  
      選擇性地選取繫結到使用者定義資料類型別名的規則。  
   
-     **小數位數**  
+     **調整**  
      指定小數點右方的小數位數上限。  
   
      **結構描述**  
@@ -96,7 +96,7 @@ ms.locfileid: "72909114"
   
      如果是 **nchar** 和 **nvarchar** 資料類型，儲存體值一律為 [長度]  值的兩倍。  
   
-     **nvarchar(max)** 、**varchar(max)** 或 **varbinary(max)** 資料類型不會顯示儲存體。  
+     **nvarchar(max)** 、 **varchar(max)** 或 **varbinary(max)** 資料類型不會顯示儲存體。  
   
 2.  在 [新增使用者定義資料類型]  對話方塊的 [結構描述]  方塊中，輸入要擁有此資料類型別名的結構描述，或使用瀏覽按鈕來選取結構描述。  
   

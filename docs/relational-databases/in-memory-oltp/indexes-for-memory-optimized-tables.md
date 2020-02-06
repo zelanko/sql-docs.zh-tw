@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70929691"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>記憶體最佳化資料表上的索引
@@ -215,7 +215,7 @@ WHERE col1 = 'dn';
   
 下表列出各種索引類型支援的所有運算。 「是」  表示索引可以有效率地為要求提供服務，「否」  則表示索引無法有效率地滿足要求。 
   
-| 作業 | 記憶體最佳化、 <br/> hash (雜湊) | 記憶體最佳化、 <br/> 非叢集 | 以磁碟為基礎、 <br/> (非)叢集 |  
+| 作業 | 記憶體最佳化、 <br/> 雜湊 | 記憶體最佳化、 <br/> 非叢集 | 以磁碟為基礎、 <br/> (非)叢集 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
 | 索引掃描，擷取所有資料表資料列。 | 是 | 是 | 是 |  
 | 等號比較述詞 (=) 的索引搜尋。 | 是 <br/> (需要有完整索引鍵。) | 是  | 是 |  

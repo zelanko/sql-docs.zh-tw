@@ -14,10 +14,10 @@ ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: abfb9f445b52550caf63cc440143e6b008df1d62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580271"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>群組運算式範例 (報表產生器及 SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "65580271"
 ## <a name="examples-of-group-expressions"></a>群組運算式的範例  
  下表提供您可用來定義群組的群組運算式範例。  
   
-|Description|運算式|  
+|描述|運算是|  
 |-----------------|----------------|  
 |依 `Region` 欄位分組。|`=Fields!Region.Value`|  
 |依姓名分組。|`=Fields!LastName.Value`<br /><br /> `=Fields!FirstName.Value`|  

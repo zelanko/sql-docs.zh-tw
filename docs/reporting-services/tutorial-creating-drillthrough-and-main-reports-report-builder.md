@@ -9,10 +9,10 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73637988"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教學課程：建立鑽研及主報表 (報表產生器)
@@ -40,7 +40,7 @@ ms.locfileid: "73637988"
   
 #### <a name="to-create-a-new-report"></a>建立新的報表  
   
-1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  從您的電腦、[ Web 入口網站或 SharePoint 整合模式](../reporting-services/report-builder/start-report-builder.md)啟動報表產生器[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]。  
   
     [新報表或資料集]  對話方塊隨即開啟。  
   
@@ -202,7 +202,7 @@ ms.locfileid: "73637988"
   
 2.  按 [下一步]  。  
   
-2.  按一下 **[完成]** 。  
+2.  按一下 [完成]  。  
   
     資料表會加入至設計介面。  
   
@@ -322,7 +322,7 @@ ms.locfileid: "73637988"
     Http://<ServerName>/<Sites>/  
     ```  
   
-4.  按一下 **[儲存]** 。  
+4.  按一下 [檔案]  。  
   
     **[最近使用的網站和伺服器]** 會列出 SharePoint 網站上的文件庫。  
   
@@ -333,14 +333,14 @@ ms.locfileid: "73637988"
     > [!NOTE]  
     > 您會將主報表儲存至相同的位置。 如果您想要將主報表和鑽研報表儲存到不同的網站或文件庫，必須在主報表中更新 **[移至報表]** 動作的路徑。  
   
-7.  按一下 **[儲存]** 。  
+7.  按一下 [檔案]  。  
   
 ## <a name="MMatrixAndDataset"></a>1.從資料表或矩陣精靈建立主報表  
 從 **[使用者入門]** 對話方塊中，使用 **[資料表或矩陣精靈]** 建立矩陣報表。  
   
 #### <a name="to-create-the-main-report"></a>建立主報表  
   
-1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  從您的電腦、[ Web 入口網站或 SharePoint 整合模式](../reporting-services/report-builder/start-report-builder.md)啟動報表產生器[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]。  
   
     [新報表或資料集]  對話方塊隨即開啟。  
   
@@ -515,7 +515,7 @@ ms.locfileid: "73637988"
   
 2.  按 [下一步]  。  
   
-3.  按一下 **[完成]** 。  
+3.  按一下 [完成]  。  
   
 3.  若要預覽報表，按一下 **[執行]** 。  
   
@@ -659,7 +659,7 @@ ms.locfileid: "73637988"
     > [!IMPORTANT]  
     > 將主報表儲存到儲存鑽研報表的相同位置。 若要將主報表和鑽研報表儲存到不同的網站或文件庫，請確認主報表中的 **[移至報表]** 動作指向鑽研報表的正確路徑。  
   
-7.  按一下 **[儲存]** 。  
+7.  按一下 [檔案]  。  
   
 ## <a name="MRunReports"></a>8.執行主報表和鑽研報表  
 執行主報表，然後按一下產品類別目錄資料行中的值以執行鑽研報表。  

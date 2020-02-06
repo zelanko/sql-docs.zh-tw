@@ -14,10 +14,10 @@ ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9daa6cf4c788c4ca63a9cc394c9a814a8c27cb5b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295213"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (SSISDB 資料庫)
@@ -29,7 +29,7 @@ ms.locfileid: "71295213"
 
   顯示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中封裝的執行執行個體。 以 [封裝執行工作] 執行的封裝會使用與父封裝的相同執行執行個體來執行。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |execution_id|**bigint**|執行執行個體的唯一識別碼 (ID)。|  
 |folder_name|**sysname(nvarchar(128))**|包含專案之資料夾的名稱。|  
@@ -45,7 +45,7 @@ ms.locfileid: "71295213"
 |use32bitruntime|**bit**|指出是否使用 32 位元執行階段，在 64 位元作業系統上執行封裝。 當值為 `1` 時，會使用 32 位元執行階段來執行。 當值為 `0` 時，會使用 64 位元執行階段來執行。|  
 |object_type|**smallint**|物件的類型。 物件可以是專案 (`20`) 或封裝 (`30`)。|  
 |object_id|**bigint**|受作業影響之物件的識別碼。|  
-|status|**int**|作業的狀態。 可能的值為已建立 (`1`)、執行中 (`2`)、已取消 (`3`)、失敗 (`4`)、暫止 (`5`)、意外結束 (`6`)、成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
+|status|**int**|作業狀態。 可能的值為已建立 (`1`)、執行中 (`2`)、已取消 (`3`)、失敗 (`4`)、暫止 (`5`)、意外結束 (`6`)、成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
 |start_time|**datetimeoffset**|執行執行個體的啟動時間。|  
 |end_time|**datetimeoffsset**|執行執行個體的結束時間。|  
 |caller_sid|**varbinary(85)**|使用者的安全性識別碼 (SID) (如果使用 Windows 驗證登入)。|  
@@ -62,7 +62,7 @@ ms.locfileid: "71295213"
 |machine_name|**nvarchar(128)**|執行伺服器執行個體的電腦名稱。|  
 |dump_id|**uniqueidentifier**|執行傾印的識別碼。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個檢視會顯示目錄中每個執行之執行個體的資料列。  
   
 ## <a name="permissions"></a>權限  

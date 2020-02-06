@@ -18,10 +18,10 @@ ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fd74479464d23ab6ce85a92babf6ba92fa8baf49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984351"
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY 類型權限 (Transact-SQL)
@@ -55,7 +55,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  指定可以拒絕的類型權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  ON TYPE **::** [ _schema_name_ **.** ] *type_name*  
- 指定要拒絕其權限的類型。 範圍限定詞 ( **::** ) 是必要項。 如果未指定 *schema_name*，則使用預設結構描述。 如果指定 *schema_name*，則結構描述範圍限定詞 ( **.** ) 為必要項目。  
+ 指定要拒絕其權限的類型。 範圍限定詞 ( **::** ) 是必要項。 若未指定 *schema_name*，則會使用預設結構描述。 如果指定 *schema_name*，則結構描述範圍限定詞 ( **.** ) 為必要項目。  
   
  TO \<database_principal>  
  指定要拒絕其權限的主體。  
@@ -95,7 +95,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *Database_user_with_no_login*  
  指定不含對應伺服器層級主體的資料庫使用者。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  類型是一個由結構描述所包含的結構描述層級安全性實體，在權限階層中，此結構描述為該安全性實體的父系。  
   
 > [!IMPORTANT]  

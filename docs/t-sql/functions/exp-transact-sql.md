@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 638e9960af007710b7c9a891109597db14227092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071587"
 ---
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
@@ -41,17 +41,17 @@ EXP ( float_expression )
   
 ## <a name="arguments"></a>引數  
  *float_expression*  
- 為 **float** 類型或能夠隱含轉換成 **float** 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 為 [float](../../t-sql/language-elements/expressions-transact-sql.md) 類型或能夠隱含轉換成 **float** 類型的**運算式**。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  常數 **e** (2.718281...) 是自然對數的基底。  
   
  數字的指數，是提升為數字乘冪的常數 **e**。 例如，EXP(1.0) = e^1.0 = 2.71828182845905 和 EXP(10) = e^10 = 22026.4657948067。  
   
- 一個數值的自然對數指數，也是該數值本身：EXP (LOG (*n*)) = *n*。 而一個數值的指數自然對數，也是該數值本身：LOG (EXP (*n*)) = *n*。  
+ 數字之自然對數的指數就是該數字本身：EXP (LOG (*n*)) = *n*。 數字之指數的自然對數就是該數字本身：LOG (EXP (*n*)) = *n*。  
   
 ## <a name="examples"></a>範例  
   

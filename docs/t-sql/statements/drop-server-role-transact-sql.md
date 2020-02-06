@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f55027afe2452acd6b9eb3f0dd39f4212fe08081
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929240"
 ---
 # <a name="drop-server-role-transact-sql"></a>DROP SERVER ROLE (Transact-SQL)
@@ -45,7 +45,7 @@ DROP SERVER ROLE role_name
  *role_name*  
  指定要從伺服器卸除的使用者定義伺服器角色。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  擁有安全性實體的使用者定義伺服器角色，不可以從伺服器卸除。 若要卸除一個擁有安全性實體的使用者定義伺服器角色，必須先轉移那些安全性實體的擁有權，或者刪除安全性實體。  
   
  含有成員的使用者定義伺服器角色，不可以卸除。 若要卸除具有成員的使用者定義伺服器角色，您必須先使用 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 移除角色的成員。  
@@ -68,7 +68,7 @@ GO
 ```  
   
 ### <a name="b-to-view-role-membership"></a>B. 若要檢視角色成員資格  
- 若要檢視角色成員資格，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的**伺服器角色 (成員)** 頁面，或執行下列查詢：  
+ 若要檢視角色成員資格，請使用  **的**伺服器角色 (成員)[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 頁面，或執行下列查詢：  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   

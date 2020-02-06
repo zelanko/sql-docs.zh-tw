@@ -21,13 +21,13 @@ ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bb3b19e67a4a85ef3f7a26d7ad792e7e39459302
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948016"
 ---
-# <a name="xmlschemanamespace"></a>xml_schema_namespace
+# <a name="xml_schema_namespace"></a>xml_schema_namespace
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   在指定的 XML 結構描述集合中重新建構所有結構描述或特定結構描述。 這個函數會傳回 **xml** 資料類型執行個體。  
@@ -51,10 +51,10 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
  *Namespace*  
  這是您要重新建構之 XML 結構描述的命名空間 URI。 它限制為 1,000 個字元。 如果不提供命名空間 URI，會重新建構整個 XML 結構描述集合。 *Namespace* 是 **nvarchar(4000)** 。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **xml**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當您使用 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 或 [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) 在資料庫中匯入 XML 結構描述元件時，會保留用於驗證的結構描述部份。 因此，重新建構的結構描述與原始結構描述文件可能不會逐字相同。 尤其，會失去註解 (Annotation)、空白和註解 (Comment)；且隱含的類型資訊會變成明確資訊。 例如，\<xs:element name="e1" /> 會變成 \<xs:element name="e1" type="xs:anyType"/>。 而且，不保留命名空間前置詞。  
   
  如果您指定命名空間參數，產生的結構描述文件將包含該命名空間中所有結構描述元件的定義，即使它們已加入至不同的結構描述文件及 (或) DDL 步驟中也是如此。  

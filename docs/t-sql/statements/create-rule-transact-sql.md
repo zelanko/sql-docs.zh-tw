@@ -30,10 +30,10 @@ ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0e0a46138b9e6c4ccaff09c1ab5261f739deb6b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006483"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
@@ -72,7 +72,7 @@ AS condition_expression
 > [!NOTE]  
 >  請避免建立使用別名資料型別之運算式的規則。 雖然您可以建立使用別名資料型別之運算式的規則，但在規則繫結到資料行或別名資料型別之後，當參考運算式時，會無法編譯運算式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  CREATE RULE 無法在單一批次中，與其他 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結合起來。 規則不適用於建立規則時已在資料庫中的資料，規則無法繫結到系統資料類型。  
   
  規則只能建立在目前資料庫中。 建立好規則之後，請執行 **sp_bindrule**，將規則繫結到資料行或別名資料類型。 規則必須相容於資料行資料類型。 例如， "\@value LIKE A%" 不能用來作為數值資料行的規則。 規則無法繫結到 **text**、**ntext** **image**、**varchar (max)** 、**nvarchar(max)** 、**varbinary(max)** 、**xml**、CLR 使用者定義型別或 **timestamp** 資料行。 規則無法繫結到計算資料行。  
@@ -87,10 +87,10 @@ AS condition_expression
   
  您可以在未解除先前繫結的情況下，將新規則繫結到資料行或資料類型；新規則會覆寫先前的規則。 繫結到資料行的規則，一律優先於繫結到別名資料型別的規則。 將規則繫結到資料行，會取代已繫結到這個資料行的別名資料型別之規則。 但將規則繫結到資料類型，並不會取代繫結到這個別名資料型別之資料行的規則。 下表顯示將規則繫結到資料行，或繫結到規則已存在的別名資料型別時，所採用的優先順序。  
   
-|新規則繫結到|舊規則繫結到<br /><br /> 別名資料型別|舊規則繫結到<br /><br /> 「資料行」|  
+|新規則繫結到|舊規則繫結到<br /><br /> 別名資料型別|舊規則繫結到<br /><br /> 資料行|  
 |-----------------------|-------------------------------------------|----------------------------------|  
 |別名資料型別|取代舊規則|沒有變更|  
-|「資料行」|取代舊規則|取代舊規則|  
+|資料行|取代舊規則|取代舊規則|  
   
  如果資料行有預設值及其相關聯的規則，預設值必須在規則所定義的網域內。 永遠不會插入與規則衝突的預設值。 SQL Server Database Engine 每次嘗試插入這類預設值時，都會產生一則錯誤訊息。  
   

@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 009a65c7c4381440dd7af6bb627fe2db70a16918
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68007949"
 ---
 # <a name="access-data-stores-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>在 Azure 中從 SSIS 套件使用 Windows 驗證來存取資料存放區和檔案共用
@@ -28,7 +28,7 @@ ms.locfileid: "68007949"
 |---|---|---|---|---|---|
 | 設定活動層級的執行內容 | 每個執行 SSIS 套件活動 | 在執行 SSIS 套件作為 ADF 管線中的執行 SSIS 套件活動時，設定 **Windows 驗證**屬性來設定 "Execution/Run as" 內容。<br/><br/> 如需詳細資訊，請參閱[設定執行 SSIS 套件活動](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)。 | 透過 UNC 路徑直接在套件中存取資源，例如，如果您使用檔案共用或 Azure 檔案：`\\YourFileShareServerName\YourFolderName` 或 `\\YourAzureStorageAccountName.file.core.windows.net\YourFolderName` | 針對所有已連線的資源只支援一組認證 | - 內部部署/Azure VM 上的檔案共用<br/><br/> - Azure 檔案，請參閱[使用 Azure 檔案共用](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - 內部部署 SQL Server/Azure VM 搭配 Windows 驗證<br/><br/> - 其他資源搭配 Windows 驗證 |
 | 設定目錄層級的執行內容 | 每個 Azure-SSIS IR，但在設定活動層級執行內容時將被覆寫 (參見上文) | 執行 SSISDB `catalog.set_execution_credential` 預存程序，以設定 "Execution/Run as" 內容。<br/><br/> 如需詳細資訊，請參閱本文下方的其餘部分。 | 透過 UNC 路徑直接在套件中存取資源，例如，如果您使用檔案共用或 Azure 檔案：`\\YourFileShareServerName\YourFolderName` 或 `\\YourAzureStorageAccountName.file.core.windows.net\YourFolderName` | 針對所有已連線的資源只支援一組認證 | - 內部部署/Azure VM 上的檔案共用<br/><br/> - Azure 檔案，請參閱[使用 Azure 檔案共用](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - 內部部署 SQL Server/Azure VM 搭配 Windows 驗證<br/><br/> - 其他資源搭配 Windows 驗證 |
-| 透過 `cmdkey` 命令保存認證 | 每個 Azure-SSIS IR，但在設定活動/目錄層級執行內容時將被覆寫 (參見上文) | 佈建/重新設定 Azure-SSIS IR 時以自訂安裝指令碼 (`main.cmd`) 執行 `cmdkey` 命令，例如，如果您使用檔案共用或 Azure Files：`cmdkey /add:YourFileShareServerName /user:YourDomainName\YourUsername /pass:YourPassword` 或 `cmdkey /add:YourAzureStorageAccountName.file.core.windows.net /user:azure\YourAzureStorageAccountName /pass:YourAccessKey`。<br/><br/> 如需詳細資訊，請參閱[自訂 Azure SSIS IR 的安裝](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)。 | 透過 UNC 路徑直接在套件中存取資源，例如，如果您使用檔案共用或 Azure 檔案：`\\YourFileShareServerName\YourFolderName` 或 `\\YourAzureStorageAccountName.file.core.windows.net\YourFolderName` | 支援針對不同的連線資源使用多組認證 | - 內部部署/Azure VM 上的檔案共用<br/><br/> - Azure 檔案，請參閱[使用 Azure 檔案共用](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - 內部部署 SQL Server/Azure VM 搭配 Windows 驗證<br/><br/> - 其他資源搭配 Windows 驗證 |
+| 透過 `cmdkey` 命令保存認證 | 每個 Azure-SSIS IR，但在設定活動/目錄層級執行內容時將被覆寫 (參見上文) | 佈建/重新設定 Azure-SSIS IR 時以自訂安裝指令碼 (`cmdkey`) 執行 `main.cmd` 命令，例如，如果您使用檔案共用或 Azure Files：`cmdkey /add:YourFileShareServerName /user:YourDomainName\YourUsername /pass:YourPassword` 或 `cmdkey /add:YourAzureStorageAccountName.file.core.windows.net /user:azure\YourAzureStorageAccountName /pass:YourAccessKey`。<br/><br/> 如需詳細資訊，請參閱[自訂 Azure SSIS IR 的安裝](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)。 | 透過 UNC 路徑直接在套件中存取資源，例如，如果您使用檔案共用或 Azure 檔案：`\\YourFileShareServerName\YourFolderName` 或 `\\YourAzureStorageAccountName.file.core.windows.net\YourFolderName` | 支援針對不同的連線資源使用多組認證 | - 內部部署/Azure VM 上的檔案共用<br/><br/> - Azure 檔案，請參閱[使用 Azure 檔案共用](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - 內部部署 SQL Server/Azure VM 搭配 Windows 驗證<br/><br/> - 其他資源搭配 Windows 驗證 |
 | 在套件執行期間裝載磁碟機 (非持續性) | 每個套件 | 以在套件控制流程一開始加入的「執行處理工作」執行 `net use` 命令，例如：`net use D: \\YourFileShareServerName\YourFolderName` | 透過對應磁碟機存取檔案共用 | 支援不同的檔案共用使用多個磁碟機 | - 內部部署/Azure VM 上的檔案共用<br/><br/> - Azure 檔案，請參閱[使用 Azure 檔案共用](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) |
 |||||||
 

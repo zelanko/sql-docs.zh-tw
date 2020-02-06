@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0d4148e002ba84677e13e101a4830f0b6da10915
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68088967"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
@@ -77,7 +77,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *property_name*  
  與事件相關的屬性。  屬性名稱可以是擷取標記的一部分，或用來作為篩選準則的一部分。  
   
-|屬性名稱|Description|  
+|屬性名稱|描述|  
 |-------------------|-----------------|  
 |UserName|使用者 (登入) 名稱。|  
 |SessionId|工作階段識別碼。|  
@@ -88,7 +88,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |Duration|事件的持續時間。|  
 |SPID|服務處理序識別碼。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  允許每位使用者最多 10 個並行診斷工作階段。 如需目前工作階段的清單，請參閱 [sys.pdw_diag_sessions](../../relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md) \(英文\)，並使用 `DROP DIAGNOSTICS SESSION` 卸除任何不需要的工作階段。  
   
  診斷工作階段將繼續收集中繼資料，直到被卸除為止。  

@@ -23,10 +23,10 @@ ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2105b03f64ecc2e0357e5a06f0d7cb2c18fb69b0
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72252181"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
@@ -48,7 +48,7 @@ REVERT
  WITH COOKIE = @*varbinary_variable*  
  指定在對應 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 獨立陳述式中建立的 Cookie。 *\@varbinary_variable* 是 **varbinary(100)** 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  您可以在模組 (例如，預存程序或使用者定義函數，或是獨立陳述式) 中指定 REVERT。 如果 REVERT 是在模組內部指定，則只能用於模組中定義的 EXECUTE AS 陳述式。 例如，下列預存程序會發出後面接有 `EXECUTE AS` 的 `REVERT` 陳述式。  
   
 ```  
@@ -72,7 +72,7 @@ GO
 EXECUTE dbo.usp_myproc;   
 ```  
   
- 在 `usp_myproc` 內定義的 `REVERT` 陳述式會切換模組中的執行內容集，但不會影響模組外的執行內容集。 換句話說，工作階段的執行內容仍然設為 `login1`。  
+ 在 `REVERT` 內定義的 `usp_myproc` 陳述式會切換模組中的執行內容集，但不會影響模組外的執行內容集。 換句話說，工作階段的執行內容仍然設為 `login1`。  
   
  當 REVERT 被指定為獨立陳述式時，則會套用至批次或工作階段內定義的 EXECUTE AS 陳述式。 如果對應的 EXECUTE AS 陳述式含有 WITH NO REVERT 子句，REVERT 就沒有任何影響。 此時，在工作階段卸除之前，執行內容仍然有效。  
   

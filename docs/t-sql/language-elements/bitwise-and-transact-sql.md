@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d572117c10673d86c71fb943a3d58cec423618c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943077"
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp; (位元 AND) (Transact-SQL)
@@ -43,7 +43,7 @@ expression & expression
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 這是整數資料類型類別目錄之任何資料類型，或是 **bit**、**binary** 或 **varbinary** 資料類型的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *expression* 會被視為適用於位元運算的二進位數字。  
+ 這是整數資料類型類別目錄之任何資料類型，或是 [bit](../../t-sql/language-elements/expressions-transact-sql.md)、**binary** 或 **varbinary** 資料類型的任何有效**運算式**。 *expression* 會被視為適用於位元運算的二進位數字。  
   
 > [!NOTE]  
 >  在位元運算中，只能有一個 *expression* 是 **binary** 或 **varbinary** 資料類型。  
@@ -55,7 +55,7 @@ expression & expression
   
  如果輸入值為 **tinyint** 或 **bit**，則為 **tinyint**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **&** 位元運算子會在這兩個運算式之間執行位元邏輯 AND 運算，每個運算式各有一個對應的位元。 只有在輸入運算式的兩個位元 (針對目前所解析的位元) 的值都是 1 時，結果中的兩個位元才會都設為 1；否則，結果中的位元便設為 0。  
   
  如果左右運算式的整數資料類型不同 (例如，左邊的 *expression* 是 **smallint**，而右邊的 *expression* 是 **int**)，就會將較小資料類型的引數轉換為較大的資料類型。 在此案例中，會將 **smallint**_expression_ 轉換為 **int**。  

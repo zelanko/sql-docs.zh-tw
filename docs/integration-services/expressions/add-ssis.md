@@ -15,10 +15,10 @@ ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0b733b2f19cb4bb8af3096d65a2c3099832aea10
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297721"
 ---
 # <a name="-add-ssis"></a>+ (加) (SSIS)
@@ -43,7 +43,7 @@ numeric_expression1 + numeric_expression2
 ## <a name="result-types"></a>結果類型  
  由兩個引數的資料類型決定。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果任一個運算元為 Null，則結果為 Null。  
   
 ## <a name="expression-examples"></a>運算式範例  

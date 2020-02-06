@@ -13,10 +13,10 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0f0ebc393c48562c5fcd783b4c056aa218e8ffaa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298480"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 連接管理員
@@ -87,7 +87,7 @@ ms.locfileid: "71298480"
  **語言**  
  指定系統所使用的語言。 例如，指定 [EN]  代表英文。  
   
- **User name**  
+ **使用者名稱**  
  指定將用來連接到系統的使用者名稱。  
   
  **密碼**  
