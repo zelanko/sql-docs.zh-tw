@@ -28,13 +28,13 @@ helpviewer_keywords:
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 482991f4faad8fff3747556c47166096ae4974ec
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0926264c25affe2f110227fad4c0fb2b113c9590
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69633498"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287855"
 ---
 # <a name="programmatically-monitor-replication"></a>以程式設計方式監視複寫
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -78,9 +78,9 @@ ms.locfileid: "69633498"
   
 #### <a name="to-monitor-merge-agent-sessions"></a>若要監視合併代理程式的工作階段  
   
-1.  在散發資料庫的「散發者」端，執行 [sp_replmonitorhelpmergesession](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)。 這會針對所有使用此「散發者」的訂閱，傳回有關「合併代理程式」工作階段的監視資訊，包括 **Session_id**。 您也可以藉由查詢 **MSmerge_sessions** 系統資料表來取得 [Session_id](../../../relational-databases/system-tables/msmerge-sessions-transact-sql.md)。  
+1.  在散發資料庫的「散發者」端，執行 [sp_replmonitorhelpmergesession](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)。 這會針對所有使用此「散發者」的訂閱，傳回有關「合併代理程式」工作階段的監視資訊，包括 **Session_id**。 您也可以藉由查詢 **MSmerge_sessions** 系統資料表來取得 [Session_id](../../../relational-databases/system-tables/msmerge-sessions-transact-sql.md) 。  
   
-2.  在散發資料庫的「散發者」端，執行 [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)。 針對 **\@session_id** 指定步驟 1 的 **Session_id** 值。 這會顯示有關工作階段的詳細監視資訊。  
+2.  在散發資料庫的「散發者」端，執行 [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)。 針對  session_id **指定步驟 1 的 \@Session_id** 值。 這會顯示有關工作階段的詳細監視資訊。  
   
 3.  針對每個感興趣的工作階段重複步驟 2。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "69633498"
   
 1.  在訂閱資料庫的「訂閱者」端，執行 [sp_replmonitorhelpmergesession](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)。 針對給定的訂閱指定 **\@publisher**、 **\@publication**，及 **\@publisher_db** 的發行集資料庫名稱。 這會傳回此訂閱最後五個「合併代理程式」工作階段的監視資訊。 請注意結果集中感興趣之工作階段的 **Session_id** 值。  
   
-2.  在訂閱資料庫的「訂閱者」端，執行 [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)。 針對 **\@session_id** 指定步驟 1 的 **Session_id** 值。 這會顯示有關工作階段的詳細監視資訊。  
+2.  在訂閱資料庫的「訂閱者」端，執行 [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)。 針對  session_id **指定步驟 1 的 \@Session_id** 值。 這會顯示有關工作階段的詳細監視資訊。  
   
 3.  針對每個感興趣的工作階段重複步驟 2。  
   
@@ -98,13 +98,13 @@ ms.locfileid: "69633498"
   
 2.  在散發資料庫的「散發者」端，執行 [sp_replmonitorchangepublicationthreshold](../../../relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql.md)。 視需要指定下列項目：  
   
-    -   針對 **\@metric_id** 指定在步驟 1 中取得的 **Metric_id** 值。  
+    -   針對  metric_id **指定在步驟 1 中取得的 \@Metric_id** 值。  
   
     -   針對 **\@value** 指定監視臨界值標準的新值。  
   
-    -   針對 **\@shouldalert**，指定 **1** 的值以在達到此臨界值時記錄警示，或者如果不需要警示，則指定 **0** 的值。  
+    -   針對  shouldalert **，指定 \@1** 的值以在達到此臨界值時記錄警示，或者如果不需要警示，則指定 **0** 的值。  
   
-    -   針對 **\@mode**，指定 **1** 的值以啟用監視臨界值標準；或指定 **2** 的值加以停用。  
+    -   針對  mode **，指定 \@1** 的值以啟用監視臨界值標準；或指定 **2** 的值加以停用。  
   
 ##  <a name="RMO"></a> Replication Management Objects (RMO)  
   
@@ -112,7 +112,7 @@ ms.locfileid: "69633498"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與「訂閱者」的連接。  
   
-2.  建立 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor> 類別的執行個體、設定訂閱的 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publisher%2A>、 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publication%2A>、 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.PublisherDB%2A>、 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.SubscriberDB%2A> 屬性，以及將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為步驟 1 中所建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+2.  建立 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor> 類別的執行個體、設定訂閱的 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publisher%2A>、 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publication%2A>、 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.PublisherDB%2A>、 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.SubscriberDB%2A> 屬性，以及將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為步驟 1 中所建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
 3.  呼叫下列其中一個方法，以傳回此訂閱的「合併代理程式」工作階段的相關資訊：  
   
@@ -126,13 +126,13 @@ ms.locfileid: "69633498"
   
     -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetLastSessionSummaryDataRow%2A> - 傳回 <xref:System.Data.DataRow> 物件，提供最後一個「合併代理程式」工作階段的相關資訊。 請記下此工作階段的 **Session_id** 資料行值。  
   
-4.  (選擇性) 呼叫 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A>，以重新整理以 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> 所傳遞之 *T:Microsoft.SqlServer.Replication.MergeSessionSummary* 物件的資料，或呼叫 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> ，以重新整理以 <xref:System.Data.DataRow> 所傳遞之 *T:System.Data.DataRow*。  
+4.  (選擇性) 呼叫 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> ，以重新整理以 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> 所傳遞之 *mss,* 物件的資料，或呼叫 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> ，以重新整理以 <xref:System.Data.DataRow> 所傳遞之 *drRefresh*。  
   
 5.  使用步驟 3 中取得的工作階段識別碼，呼叫下列其中一個方法來傳回有關特定工作階段詳細資料的資訊。  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> - 傳回所提供 *SessionId* 的 <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> 物件。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> - 傳回 <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> ，傳回 *SessionId*。  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> - 傳回 <xref:System.Data.DataSet> 物件，提供指定之 *T:Microsoft.SqlServer.Replication.MergeSessionDetail*。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> - 傳回 <xref:System.Data.DataSet> 物件，提供指定之 *SessionId*。  
   
 #### <a name="to-monitor-replication-properties-for-all-publications-at-a-distributor"></a>若要監視在散發者端所有發行集的複寫屬性  
   
@@ -140,7 +140,7 @@ ms.locfileid: "69633498"
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> 類別的執行個體。  
   
-3.  將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+3.  將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。  
   
@@ -174,9 +174,9 @@ ms.locfileid: "69633498"
   
 2.  以下列其中一種方法取得 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 物件。  
   
-    -   建立 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 類別的執行個體。 設定「發行者」的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示「發行者」名稱定義不正確，或者該發行集不存在。  
+    -   建立 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 類別的執行個體。 設定「發行者」的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示「發行者」名稱定義不正確，或者該發行集不存在。  
   
-    -   從藉由現有 <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> 物件的 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> 屬性進行存取的 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor>。  
+    -   從藉由現有 <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> 物件的 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> 屬性進行存取的 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> 。  
   
 3.  執行下列其中一或多個方法，針對屬於此「發行者」的所有發行集傳回複寫資訊。  
   
@@ -214,9 +214,9 @@ ms.locfileid: "69633498"
   
 2.  以下列其中一種方法取得 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 物件。  
   
-    -   建立 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 類別的執行個體。 設定發行集的 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示發行集屬性定義不正確，或者該發行集不存在。  
+    -   建立 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 類別的執行個體。 設定發行集的 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示發行集屬性定義不正確，或者該發行集不存在。  
   
-    -   從藉由現有 <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> 物件的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> 屬性進行存取的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor>。  
+    -   從藉由現有 <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> 物件的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> 屬性進行存取的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 。  
   
 3.  執行下列其中一或多個方法，傳回有關此發行集的詳細資訊。  
   
@@ -244,9 +244,9 @@ ms.locfileid: "69633498"
   
 2.  以下列其中一種方法取得 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 物件。  
   
-    -   建立 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 類別的執行個體。 設定發行集的 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示發行集屬性定義不正確，或者該發行集不存在。  
+    -   建立 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 類別的執行個體。 設定發行集的 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示發行集屬性定義不正確，或者該發行集不存在。  
   
-    -   從藉由現有 <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> 物件的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> 屬性進行存取的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor>。  
+    -   從藉由現有 <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> 物件的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> 屬性進行存取的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 。  
   
 3.  執行 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.TransPendingCommandInfo%2A> 方法，傳回 <xref:Microsoft.SqlServer.Replication.PendingCommandInfo> 物件。  
   
@@ -258,9 +258,9 @@ ms.locfileid: "69633498"
   
 2.  以下列其中一種方法取得 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 物件。  
   
-    -   建立 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 類別的執行個體。 設定發行集的 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示發行集屬性定義不正確，或者該發行集不存在。  
+    -   建立 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 類別的執行個體。 設定發行集的 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示發行集屬性定義不正確，或者該發行集不存在。  
   
-    -   從藉由現有 <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> 物件的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> 屬性進行存取的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor>。  
+    -   從藉由現有 <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> 物件的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> 屬性進行存取的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 。  
   
 3.  執行 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumMonitorThresholds%2A> 方法。 請注意在 <xref:System.Collections.ArrayList> 物件的傳回 <xref:Microsoft.SqlServer.Replication.MonitorThreshold> 中的目前臨界值設定。  
   

@@ -1,30 +1,28 @@
 ---
-title: 重新執行需求 |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 重新執行需求
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- event classes [SQL Server], replaying traces
-- traces [SQL Server], replaying
-- replaying traces
-- TSQL_Replay template [SQL Server]
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4a4cf18a4bf6131e41e45343244a747c4651a2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 85f062ae15addae9908dca572c916e55a7ffde39
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928898"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307488"
 ---
 # <a name="replay-requirements"></a>重新執行需求
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  若要使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 或分散式重新執行公用程式來重新執行追蹤資料，您必須在追蹤中擷取特定的事件類別和資料行集合。 如果 **TSQL_Replay** 追蹤範本用來設定之後用於重新執行的追蹤，預設將啟用這些設定。 本主題會說明這些設定和其他重新執行需求。  
+
+若要使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 或分散式重新執行公用程式來重新執行追蹤資料，您必須在追蹤中擷取特定的事件類別和資料行集合。 如果 **TSQL_Replay** 追蹤範本用來設定之後用於重新執行的追蹤，預設將啟用這些設定。 本主題會說明這些設定和其他重新執行需求。  
   
 > [!NOTE]  
 >  我們建議您使用分散式重新執行公用程式來重新執行密集的 OLTP 應用程式 (具有許多使用中並行連接或高輸送量)。 分散式重新執行公用程式可以從多部電腦重新執行追蹤資料，並有效模擬關鍵任務的工作負載。 如需詳細資訊，請參閱 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)。  
@@ -71,7 +69,7 @@ ms.locfileid: "67928898"
   
 -   **TextData**  
   
--   **Application Name**  
+-   **應用程式名稱**  
   
 -   **LoginName**  
   

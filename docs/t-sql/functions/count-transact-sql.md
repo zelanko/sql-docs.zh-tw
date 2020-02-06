@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e4cec9afec24b1ef184b9f37795903017c6d3b00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026487"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
@@ -67,7 +67,7 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_claus
 ## <a name="return-types"></a>傳回類型
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 COUNT(\*) 會傳回群組中的項目數。 其中包括 NULL 值和複本。
   
 COUNT(ALL *expression*) 會針對群組中的每個資料列來評估 *expression*，且會傳回非 Null 值的數目。
@@ -76,7 +76,7 @@ COUNT(DISTINCT *expression*) 會針對群組中的每個資料列來評估 *expr
   
 若傳回的值超過 2^31-1，`COUNT` 會傳回錯誤。 這些情況下，請改用 `COUNT_BIG`。
   
-***未搭配*** OVER 和 ORDER BY 子句使用時，`COUNT` 是具決定性函數。 ***搭配*** OVER 和 ORDER BY 子句時，則不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
+`COUNT`未搭配 ***OVER 和 ORDER BY 子句使用時，*** 是具決定性函數。 ***搭配*** OVER 和 ORDER BY 子句時，則不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
   
 ## <a name="examples"></a>範例  
   
