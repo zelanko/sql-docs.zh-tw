@@ -22,10 +22,10 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981810"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
@@ -170,7 +170,7 @@ ALTER FULLTEXT INDEX ON table_name
  OFF  
  指定沒有任何停用字詞表要與全文檢索索引產生關聯。  
   
- SYSTEM  
+ 系統  
  指定預設全文檢索系統 STOPLIST 應該用於這個全文檢索索引。  
   
  *stoplist_name*  
@@ -212,8 +212,8 @@ ALTER FULLTEXT INDEX ON table_name
 |---------------------|------------------------|------------|  
 |未啟用|未指定|在索引上執行完整母體擴展。|  
 |未啟用|已指定|要等到發出 ALTER FULLTEXT INDEX...START POPULATION 陳述式之後，才會進行索引的母體擴展。|  
-|已啟用|已指定|引發錯誤，而且索引不會改變。|  
-|已啟用|未指定|在索引上執行完整母體擴展。|  
+|啟用|已指定|引發錯誤，而且索引不會改變。|  
+|啟用|未指定|在索引上執行完整母體擴展。|  
   
  如需填入全文檢索索引的詳細資訊，請參閱[填入全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。  
   
