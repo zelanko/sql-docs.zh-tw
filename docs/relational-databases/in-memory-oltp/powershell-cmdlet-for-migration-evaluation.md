@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5272203fb1a1c0ac2f755a4da99c654b2595a7f0
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68698310"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>用於移轉評估的 PowerShell Cmdlet
@@ -57,16 +57,16 @@ Save-SqlMigrationReport
 
 相反的，若您「沒有」  指定 `-InputObject` 參數，您便必須指定 `-Server` 和 `-Database`。 若您指定 `-Server`，您可以選擇指定 `-Schema` 或 `-Object`，或同時指定兩者來縮小範圍。
 
-| 參數名稱 | Description |
+| 參數名稱 | 描述 |
 | :------------- | :---------- |
-| [資料庫] | 目標 SQL Server 資料庫的名稱。 當 `-Server` 為強制時，此為強制項目。<br/><br/> 在 SQLPS 中為選擇性參數。 |
+| 資料庫 | 目標 SQL Server 資料庫的名稱。 當 `-Server` 為強制時，此為強制項目。<br/><br/> 在 SQLPS 中為選擇性參數。 |
 | FolderPath | Cmdlet 應於其下儲存所產生報告的資料夾。<br/><br/> 必要。 |
 | InputObject | Cmdlet 的目標 SMO 物件。<br/><br/> 若沒有提供 `-Server`，則在 Windows Powershell 環境中為強制項目。<br/><br/> 在 SQLPS 中為選擇性參數。 |
 | MigrationType | Cmdlet 的目標移轉案例類型。 目前唯一的值是預設 **'OLTP'** 。<br/><br/> 選擇性。 |
 | Object | 要報告的物件名稱。 可以是資料表或預存程序。 |
-| [密碼] | 當 `-Username` 為必要時，此為必要項目。 |
+| 密碼 | 當 `-Username` 為必要時，此為必要項目。 |
 | 結構描述 | 擁有要報告物件的結構描述名稱。<br/><br/> 選擇性。 |
-| [伺服器] | 目標 SQL Server 執行個體的名稱。 若沒有提供 `-InputObject` 參數，則在 Windows Powershell 環境中為強制項目。<br/><br/> 在 SQLPS 中為選擇性參數。 |
+| 伺服器 | 目標 SQL Server 執行個體的名稱。 若沒有提供 `-InputObject` 參數，則在 Windows Powershell 環境中為強制項目。<br/><br/> 在 SQLPS 中為選擇性參數。 |
 | 使用者名稱 | 透過 SQL Server 驗證而非透過 Windows 驗證進行連線時，此為必要項目。 否則請省略它。 |
 | &nbsp; | &nbsp; |
 
@@ -111,7 +111,7 @@ Save-SqlMigrationReport `
 
 HTML 大多數是包含下列標頭的兩欄式表格：
 
-- Description
+- 描述
 - 驗證結果
 
 以下是一個資料表的 HTML 報告實際範例。
@@ -176,7 +176,7 @@ HTML 大多數是包含下列標頭的兩欄式表格：
 
 接下來則是表格的近似外觀。
 
-| Description | 驗證結果 |
+| 描述 | 驗證結果 |
 | :---------- | :---------------- |
 | 此資料表上沒有定義任何不受支援的資料類型。 | 成功 |
 | 此資料表沒有定義任何疏鬆資料行。 | 成功 |

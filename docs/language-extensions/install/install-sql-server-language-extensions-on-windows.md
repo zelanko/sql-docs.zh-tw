@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658840"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>在 Windows 上安裝 SQL Server 語言延伸模組
@@ -219,7 +219,7 @@ GO
     
 2. 開啟 [服務]  面板或 SQL Server 組態管理員，並確認 **SQL Server Launchpad 服務**正在執行。 每個安裝語言延伸模組的資料庫引擎執行個體應該都有一個該服務。 如需服務的詳細資訊，請參閱[擴充性架構](../concepts/extensibility-framework.md)。 
    
-## <a name="additional-configuration"></a>其他組態
+## <a name="additional-configuration"></a>其他設定
 
 如果驗證步驟成功，您就可以從 SQL Server Management Studio、Azure Data Studio、Visual Studio Code，或任何可以將 T-SQL 陳述式傳送到伺服器的其他用戶端來執行 Java 程式碼。
 

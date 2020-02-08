@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72783395"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具在 Linux 上設定 SQL Server
@@ -393,7 +393,7 @@ ms.locfileid: "72783395"
 
     下表列出可能的 **coredump.coredumptype** 值。
 
-    | 類型 | Description |
+    | 類型 | 描述 |
     |-----|-----|
     | **mini** | Mini 是最小的傾印檔案類型。 它會使用 Linux 系統資訊來判斷程序中的執行緒和模組。 傾印僅包含主機環境執行緒堆疊和模組。 它不包含間接記憶體參考或 Globals。 |
     | **miniplus** | MiniPlus 類似於 mini，但它包含額外的記憶體。 它瞭解 SQLPAL 和主機環境的內部，並將下列記憶體區域新增至傾印：</br></br> - 各種 Globals</br> - 所有高於 64TB 的記憶體</br> - 在 **/proc/$pid/maps** 中找到的所有具名區域</br> - 來自執行緒和堆疊的間接記憶體</br> - 執行緒資訊</br> - 相關聯的 Teb 和 Peb</br> - 模組資訊</br> - VMM 和 VAD 樹狀 |
@@ -507,7 +507,7 @@ sudo systemctl restart mssql-server
 
 您可以使用其他數個適用於 mssql-conf 的設定來監視和疑難排解 MSDTC。 下表簡短描述這些設定。 如需其使用方式的詳細資訊，請參閱 Windows 支援文章中的詳細資料：[如何針對 MS DTC 啟用診斷追蹤](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute) \(機器翻譯\)。
 
-| mssql-conf 設定 | Description |
+| mssql-conf 設定 | 描述 |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | 針對分散式交易設定僅安全的 RPC 呼叫 |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | 針對分散式交易設定僅限安全性的 RPC 呼叫 |
@@ -564,7 +564,7 @@ accepteulaml = Y
 
 預設會在 [SQL Server 機器學習服務](sql-server-linux-setup-machine-learning.md)功能中，停用 R、Python 和 JAVA 延伸模組的輸出網路存取。 若要啟用輸出要求，請使用 mssql-conf 來設定 "outboundnetworkaccess" 布林值屬性。
 
-設定屬性之後，重新啟動 SQL Server Launchpad 服務，以從 INI 檔案讀取更新後的值。 每當修改擴充性相關設定時，系統就會顯示重新啟動訊息來提醒您。
+設定屬性之後，重新啟動 SQL Server Launchpad 服務，以從 INI 檔案讀取更新後的值。 每當修改擴充性相關設定時，系統會顯示重新啟動訊息提醒您。
 
 ```bash
 # Adds the extensibility section and property.
@@ -613,7 +613,7 @@ outboundnetworkaccess = 1
 
 下列選項會針對在 Linux 上執行的 SQL Server 執行個體設定 TLS。
 
-|選項 |Description |
+|選項 |描述 |
 |--- |--- |
 |**network.forceencryption** |如果是 1，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會強制加密所有連線。 根據預設，這個選項是 0。 |
 |**network.tlscert** |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 針對 TLS 使用之憑證檔案的絕對路徑。 範例： `/etc/ssl/certs/mssql.pem` 憑證檔案必須可由 mssql 帳戶存取。 Microsoft 建議使用 `chown mssql:mssql <file>; chmod 400 <file>` 來限制檔案的存取。 |

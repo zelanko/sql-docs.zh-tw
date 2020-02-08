@@ -15,10 +15,10 @@ ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9621d6be1c309930f6104d2193d6127a3167cd7a
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278152"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() 方法 (xml 資料類型)
@@ -43,7 +43,7 @@ exist (XQuery)
  XQuery  
  是一個 XQuery 運算式，為字串常值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 > [!NOTE]  
 >  **exist()** 方法會針對傳回非空白結果的 XQuery 運算式傳回 1。 若您在 **exist()** 方法內指定 **true()** 或 **false()** 函數，則 **exist()** 方法會傳回 1，因為函數 **true()** 及 **false()** 分別會傳回布林值 True 及 False。 也就是說，它們會傳回非空白的結果。 因此，**exist()** 會傳回 1 (True)，如下列範例所示：  

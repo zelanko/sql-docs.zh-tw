@@ -13,10 +13,10 @@ ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 289610b05757a1b2e94f27164b8f43464d49c227
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012614"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>設定 index create memory 伺服器組態選項
@@ -60,7 +60,7 @@ ms.locfileid: "68012614"
 
 -   對生產系統建立索引通常是難得執行的工作，多半排程為工作在離峰時間執行。 因此，一旦有機會在離峰時間或是在建立索引不頻繁時，加大 **[索引建立記憶體]** 可能有助於改善建立索引的效能。 但仍請儘量將 **[[每個查詢的最小記憶體]](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** 設定選項維持在較小的值，讓索引建立作業即使無法取得要求的記憶體，還是能夠啟動。
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  

@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f5627a5e35039420725795f53a7fc63d5582ab9
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: da725efe691aae60bf9776bbe73f80227067d2e2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706851"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74200391"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的已知問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "73706851"
 
 ### <a name="1-inconsistent-results-in-mkl-computations-due-to-missing-environment-variable"></a>1.由於遺失環境變數而導致 MKL 計算不一致
 
-**適用於：** R_SERVER 二進位檔 9.0、9.1、9.2 或 9.3。
+**適用範圍：** R_SERVER 二進位檔 9.0、9.1、9.2 或 9.3。
 
 R_SERVER 使用 Intel 數學核心函數庫 (MKL)。 對於涉及 MKL 的計算，如果您的系統遺失環境變數，可能會產生不一致的結果。 
 
@@ -101,7 +101,7 @@ SQL Server 2016 要求用戶端上的 R 程式庫必須完全符合伺服器上�
 
 若要避免發生 R 套件的問題，您也可以變更服務合約以使用新式生命週期支援原則，藉以升級伺服器上所安裝的 R 程式庫版本，如[下一節](#bkmk_sqlbindr)所述。 當您執行此操作時，隨 SQL Server 安裝的 R 版本就會依機器學習伺服器 (先前稱為 Microsoft R Server) 更新所使用的相同排程進行更新。
 
-**適用於：** 含 R Server 9.0.0 版或更早版本的 SQL Server 2016 R Services
+**適用範圍：** 含 R Server 9.0.0 版或更早版本的 SQL Server 2016 R Services
 
 ### <a name="5-r-components-missing-from-cu3-setup"></a>5.安裝 CU3 時遺失 R 元件
 
@@ -123,7 +123,7 @@ SQL Server 2016 要求用戶端上的 R 程式庫必須完全符合伺服器上�
 
 此問題已在發行版本中修正。 此外，此限制不適用於 R 元件。
 
-**適用於：** 搭配 Python 的 SQL Server 2017
+**適用範圍：** 搭配 Python 的 SQL Server 2017
 
 ### <a name="bkmk_sqlbindr"></a> 當您使用 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 以從用戶端連線到舊版 SQL Server R Services 時，會出現版本不相容的警告
 
@@ -138,7 +138,7 @@ SQL Server 2016 要求用戶端上的 R 程式庫必須完全符合伺服器上�
 
 為確保伺服器和用戶端會使用相同版本，您可能需要使用「繫結」  (支援 Microsoft R Server 9.0 和更新版本)，來升級 SQL Server 2016 執行個體中的 R 元件。 若要判斷您的 R Services 版本是否支援升級，請參閱[使用 SqlBindR.exe 升級 R Services 的執行個體](install/upgrade-r-and-python.md)。
 
-**適用於：** 含 R Server 9.0.0 版或更早版本的 SQL Server 2016 R Services
+**適用範圍：** 含 R Server 9.0.0 版或更早版本的 SQL Server 2016 R Services
 
 ### <a name="7-setup-for-sql-server-2016-service-releases-might-fail-to-install-newer-versions-of-r-components"></a>7.SQL Server 2016 服務版本的安裝程式可能無法安裝較新版本的 R 元件
 
@@ -150,7 +150,7 @@ SQL Server 2016 要求用戶端上的 R 程式庫必須完全符合伺服器上�
 
 若要取得最新安裝程式，請參閱[在沒有網際網路存取的情況下安裝機器學習元件](install/sql-ml-component-install-without-internet-access.md)。
 
-**適用於：** 含 R Server 9.0.0 版或更早版本的 SQL Server 2016 R Services
+**適用範圍：** 含 R Server 9.0.0 版或更早版本的 SQL Server 2016 R Services
 
 ### <a name="8-launchpad-services-fails-to-start-if-the-version-is-different-from-the-r-version"></a>8.如果版本與 R 版本不同，Launchpad 服務就無法啟動
 
@@ -178,7 +178,7 @@ SQL Server 2016 要求用戶端上的 R 程式庫必須完全符合伺服器上�
 
 如果無法升級，則因應措施是，使用 SQL 登入來執行可能需要內嵌 ODBC 呼叫的遠端 R 作業。
 
-**適用於：** SQL Server 2016 R Services Express Edition
+**適用範圍：** SQL Server 2016 R Services Express Edition
 
 ### <a name="11-performance-limits-when-libraries-used-by-sql-server-are-called-from-other-tools"></a>11.從其他工具中呼叫 SQL Server 所使用的程式庫時的效能限制
 
@@ -204,7 +204,7 @@ DACPAC 模型目前不支援 R Services 或機器學習服務所使用的權限�
 
 如果您遇到資源限制，請檢查目前的預設值。 如果 20% 不夠用，請參閱 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的文件，以了解如何變更此值。
 
-**適用於：** SQL Server 2016 R Services Enterprise Edition
+**適用範圍：** SQL Server 2016 R Services Enterprise Edition
 
 
 ### <a name="14-error-when-using-sp_execute_external_script-without-libcso-on-linux"></a>14.在 Linux 上使用不含 `libc++.so` 的 `sp_execute_external_script` 時發生錯誤
@@ -249,7 +249,7 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
    readabledirectories = /opt/mssql
    ```
 
-**適用於：** Linux 上的 SQL Server 2019
+**適用範圍：** Linux 上的 SQL Server 2019
 
 ## <a name="r-script-execution-issues"></a>R 指令碼執行問題
 
@@ -297,7 +297,7 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
 
 SQL Server 2016 Service Pack 1 已修正這個問題。 我們建議您升級至最新服務版本。
 
-**適用於：** SQL Server 2016 R Services RTM 版本
+**適用範圍：** SQL Server 2016 R Services RTM 版本
 
 ### <a name="5-changes-to-column-types-cannot-be-performed-when-reading-data-in-a-sql-server-compute-context"></a>5.讀取 SQL Server 計算內容中的資料，無法變更資料行類型。
 
@@ -314,7 +314,7 @@ data <- RxSqlServerData(
 
 因應措施是，您可以重新撰寫 SQL 查詢以使用 CAST 或 CONVERT，並使用正確的資料類型來向 R 呈現資料。 通常，效能最佳的時機是使用 SQL 來處理資料，而不是在 R 程式碼中變更資料。
 
-**適用於：** SQL Server 2016 R Services
+**適用範圍：** SQL Server 2016 R Services
 
 ### <a name="6-limits-on-size-of-serialized-models"></a>6.序列化模型的大小限制
 
@@ -513,7 +513,7 @@ go
 
 不要與長時間執行的查詢平行執行程式庫安裝。 或者，在安裝完成之後，重新執行長時間執行的查詢。
 
-**適用於：** 僅限 Linux 上的 SQL Server 2019 與巨量資料叢集。
+**適用範圍：** 僅限 Linux 上的 SQL Server 2019 與巨量資料叢集。
 
 ## <a name="python-script-execution-issues"></a>Python 指令碼執行問題
 
@@ -613,7 +613,7 @@ wget 'https://bootstrap.pypa.io/get-pip.py'
 
 請參閱[使用 sqlmlutils 安裝 Python 套件](package-management/install-additional-python-packages-on-sql-server.md)。
 
-**適用於：** Linux 上的 SQL Server 2019
+**適用範圍：** Linux 上的 SQL Server 2019
 
 ### <a name="7-unable-to-install-python-packages-using-pip-after-installing-sql-server-2019-on-windows"></a>7.在 Windows 上安裝 SQL Server 2019 之後，無法使用 pip 安裝 Python 套件
 
@@ -644,7 +644,7 @@ pip install quantfolio
 
 然後開啟新的 DOS 命令殼層提示字元。
 
-**適用於：** Windows 上的 SQL Server 2019
+**適用範圍：** Windows 上的 SQL Server 2019
 
 ### <a name="8-error-when-using-sp_execute_external_script-without-libcaboso-on-linux"></a>8.在 Linux 上使用不含 `libc++abo.so` 的 `sp_execute_external_script` 時發生錯誤
 
@@ -681,13 +681,13 @@ Total execution time: 00:01:00.387
 
 **因應措施**
 
-執行下列命令：
+執行以下命令：
 
 ```bash
 sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 ```
 
-**適用於：** Linux 上的 SQL Server 2019
+**適用範圍：** Linux 上的 SQL Server 2019
 
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise 和 Microsoft R Open
 
@@ -703,7 +703,7 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 某些 [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] 發行前版本會包含 Revolution Analytics 所建立的 Windows R 開發環境。 此工具已不再提供且不受支援。
 
-為了與 [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] 相容，建議您改為安裝 Microsoft R Client。 [Visual Studio R 工具](https://www.visualstudio.com/vs/rtvs/)和 [Visual Studio Code](https://code.visualstudio.com/) \(英文\) 也支援 Microsoft R 解決方案。
+為了與 [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] 相容，建議您改為安裝 Microsoft R Client。 [Visual Studio R 工具](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019)和 [Visual Studio Code](https://code.visualstudio.com/) \(英文\) 也支援 Microsoft R 解決方案。
 
 ### <a name="2-compatibility-issues-with-sqlite-odbc-driver-and-revoscaler"></a>2.SQLite ODBC 驅動程式與 RevoScaleR 的相容性問題
 

@@ -14,10 +14,10 @@ ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 645382a105edd65248d82c0f325d88c37857d0e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128829"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Reporting Services 屬性 - 報表伺服器項目屬性
@@ -28,13 +28,13 @@ ms.locfileid: "63128829"
 ## <a name="item-properties"></a>項目屬性  
  下列屬性適用報表伺服器資料庫中的所有項目。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**CreatedBy**|原先將項目加入報表伺服器資料庫的使用者名稱。|  
 |**CreationDate**|項目加入報表伺服器資料庫的日期與名稱。|  
 |**說明**|項目的描述。|  
 |**Hidden**|指出使用者是否可看到和使用項目的值。|  
-|**ID**|報表伺服器資料庫中項目的識別碼。|  
+|**識別碼**|報表伺服器資料庫中項目的識別碼。|  
 |**ModifiedBy**|報表伺服器資料庫中上次修改項目的使用者名稱。|  
 |**ModifiedDate**|使用者上次修改項目的日期和時間。|  
 |**名稱**|報表伺服器資料庫中項目的名稱。|  
@@ -46,14 +46,14 @@ ms.locfileid: "63128829"
 ## <a name="folder-properties"></a>資料夾屬性  
  除了先前所列的項目屬性之外，下列屬性會套用至報表伺服器資料庫中的資料夾。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**已保留**|針對報表伺服器所保留的資料夾，由 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 方法傳回的值。 保留的資料夾包含 [使用者]、[我的報表] 和 /。 無法修改或移除保留的資料夾。|  
   
 ## <a name="report-properties"></a>報表屬性  
  除了先前所列的項目屬性之外，下列屬性會套用至報表伺服器資料庫中的報表。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**語言**|報表中使用的語言。 這個值是網際網路工程任務推動小組 (IETF) RFC1766 規格中定義的語言代碼。 第一部分是由基本語言的兩個字元所指定。 第二個部分是由連字號分隔，並指定語言的變化或是方言。 如果在與報表定義中的 **Body** 元素相關聯的 **Style** 元素中未指定值，預設值是報表伺服器的語言。|  
 |**ReportProcessingTimeout**|個別報表的逾時 (以秒為單位)。 如果已設定此值，當指定時間已經過時，報表伺服器會嘗試停止處理報表。 有效值是 **-1** 到 **2**,**147**,**483**,**647**。 如果此值為 **-1**，報表就不會在處理期間逾時。 如果此值為 **null**，系統屬性 **ReportProcessingTimeout** 的值會用於報表處理逾時。預設值是 **null**。 如需詳細資訊，請參閱[報表伺服器系統屬性](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)。|  
@@ -67,7 +67,7 @@ ms.locfileid: "63128829"
 ## <a name="resource-properties"></a>資料屬性  
  除了先前所列的項目屬性之外，下列屬性會套用至報表伺服器資料庫中的資源。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**MimeType**|報表伺服器資料庫中資源的 MIME 類型。|  
   

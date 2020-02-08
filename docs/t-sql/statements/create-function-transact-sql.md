@@ -41,10 +41,10 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 35cf1b37a7c10992e17a52e4a44a473127ffb586
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982788"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
@@ -333,7 +333,7 @@ RETURNS return_data_type
   
  在內嵌 TVF 中，TABLE 傳回值是透過單一 SELECT 陳述式定義。 內嵌函數沒有相關聯的傳回變數。  
   
- <a name="mstvf"></a> 在 MSTVF 中，\@*return_variable* 是一個 TABLE 變數，可用來儲存及累積應作為函式值傳回的資料列。 您只能針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式指定 \@ *return_variable*，不能針對 CLR 函式指定。  
+ <a name="mstvf"></a> 在 MSTVF 中，\@*return_variable* 是一個 TABLE 變數，可用來儲存及累積應作為函式值傳回的資料列。 您只能針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式指定 \@*return_variable*，不能針對 CLR 函式指定。  
   
  *select_stmt*  
  這是單一 SELECT 陳述式，可定義內嵌資料表值函式 (TVF) 的傳回值。  
@@ -531,7 +531,7 @@ INLINE = { ON | OFF }
  ALLOW_PAGE_LOCKS = { **ON** | OFF }  
  指定是否允許頁面鎖定。 預設值是 ON。  
   
-## <a name="best-practices"></a>最佳作法  
+## <a name="best-practices"></a>最佳做法  
 如果未以 `SCHEMABINDING` 子句建立使用者定義函式，叫用該函式時，對基礎物件所進行的變更可能會影響函式定義並產生非預期結果。 建議您實作下列其中一個方法，以確保函數不會因為其基礎物件的變更而變成過期：  
   
 -   當您要建立函式時，請指定 `WITH SCHEMABINDING` 子句。 這可以確保系統無法修改函數定義中參考的物件 (除非同時修改函數)。  
@@ -541,7 +541,7 @@ INLINE = { ON | OFF }
 > [!IMPORTANT]  
 > 如需內嵌資料表值函式 (內嵌 TVF) 和多重陳述式資料表值函式 (MSTVF) 的詳細資訊和效能考量事項，請參閱[建立使用者定義函式 &#40;資料庫引擎&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)。 
 
-## <a name="data-types"></a>資料型別  
+## <a name="data-types"></a>資料類型  
  如果在 CLR 函式中指定參數，這些參數應該是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型，如同先前針對 *scalar_parameter_data_type* 所下的定義。 如需有關比較 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型與 CLR 整合資料類型或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 通用語言執行平台資料類型的詳細資訊，請參閱[對應 CLR 參數資料](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
   
  若要讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在正確方法於類別中出現多載時參考該正確方法，\<method_specifier> 中所指出的方法必須具有下列特性： 
@@ -581,7 +581,7 @@ INLINE = { ON | OFF }
 ### <a name="computed-column-interoperability"></a>計算資料行的互通性  
  函數具有下列屬性。 這些屬性的值會決定是否可以在可保存或索引的計算資料行中使用函數。  
   
-|屬性|Description|注意|  
+|屬性|描述|注意|  
 |--------------|-----------------|-----------|  
 |**IsDeterministic**|函數可分為具決定性或不具決定性。|具決定性函數中允許本機資料存取。 例如，每當利用一組特定輸入值來呼叫函數時都一律傳回相同結果且含有相同資料庫狀態的函數，就會被標示為具決定性。|  
 |**IsPrecise**|函數可分為精確或不精確。|不精確函數內含浮點作業之類的作業。|  
@@ -655,7 +655,7 @@ INLINE = { ON | OFF }
 ## <a name="metadata"></a>中繼資料  
  下表列出您可以用來傳回使用者定義函數之中繼資料的系統目錄檢視表。  
   
-|系統檢視表|Description|  
+|系統檢視表|描述|  
 |-----------------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|請參閱下方＜範例＞一節中的範例 E。|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|顯示 CLR 使用者定義函數的相關資訊。|  

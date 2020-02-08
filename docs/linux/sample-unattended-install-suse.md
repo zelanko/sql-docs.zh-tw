@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 392d8d477a2e136d54e6f0f06608eb0ebeda12a5
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593511"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>範例：SUSE Linux Enterprise Server 的 SQL Server 自動安裝指令碼
@@ -28,7 +28,7 @@ ms.locfileid: "73593511"
 
 - 您需要至少 2 GB 的記憶體才能在 Linux 上執行 SQL Server。
 - 檔案系統必須是 **XFS** 或 **EXT4**。 不支援其他檔案系統 (例如 **BTRFS**)。
-- 如需其他系統需求，請參閱 [Linux 上的 SQL Server 系統需求](sql-server-linux-setup.md#system)。
+- 如需其他系統需求，請參閱 [SQL Server 在 Linux 上的系統需求](sql-server-linux-setup.md#system)。
 
 > [!IMPORTANT]
 > SQL Server 2017 需要 libsss_nss_idmap0，但預設 SLES 存放庫並未提供。 您可以從 SLES v12 SP2 SDK 進行安裝。
@@ -176,7 +176,7 @@ echo Done!
    ```
 
 ### <a name="understanding-the-script"></a>了解指令碼
-Bash 指令碼的第一個工作就是設定一些變數。 這些變數可以是指令碼變數 (如範例所示) 或環境變數。 SQL Server 安裝**需要** `MSSQL_SA_PASSWORD` 變數，其他變數是針對指令碼所建立的自訂變數。 範例指令碼會執行下列步驟：
+Bash 指令碼的第一個工作就是設定一些變數。 這些變數可以是指令碼變數 (如範例所示) 或環境變數。 SQL Server 安裝**需要**`MSSQL_SA_PASSWORD` 變數，其他變數是針對指令碼所建立的自訂變數。 範例指令碼會執行下列步驟：
 
 1. 匯入公開 Microsoft GPG 金鑰。
 

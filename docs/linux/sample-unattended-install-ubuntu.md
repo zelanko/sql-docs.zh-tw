@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: b71bad98aa6e9172b69efa67ce8708f1479fa691
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910487"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>範例：於 Ubuntu 自動安裝 SQL Server 指令碼
@@ -28,7 +28,7 @@ ms.locfileid: "67910487"
 
 - 您需要至少 2 GB 的記憶體才能在 Linux 上執行 SQL Server。
 - 檔案系統必須是 **XFS** 或 **EXT4**。 不支援其他檔案系統 (例如 **BTRFS**)。
-- 如需其他系統需求，請參閱 [Linux 上的 SQL Server 系統需求](sql-server-linux-setup.md#system)。
+- 如需其他系統需求，請參閱 [SQL Server 在 Linux 上的系統需求](sql-server-linux-setup.md#system)。
 
 ## <a name="sample-script"></a>範例指令碼
 
@@ -159,7 +159,7 @@ echo Done!
 
 1. 將範例貼到您慣用的文字編輯器中，並以易記的名稱 (例如 `install_sql.sh`) 儲存。
 
-1. 自訂 `MSSQL_SA_PASSWORD`、`MSSQL_PID` 及任何您想要變更的其他變數。
+1. 自訂 `MSSQL_SA_PASSWORD`、`MSSQL_PID` 及您想要變更的其他變數。
 
 1. 將指令碼標示為可執行檔
 
@@ -174,7 +174,7 @@ echo Done!
    ```
 
 ### <a name="understanding-the-script"></a>了解指令碼
-Bash 指令碼的第一個工作就是設定一些變數。 這些變數可以是指令碼變數 (如範例所示) 或環境變數。 SQL Server 安裝**需要** `MSSQL_SA_PASSWORD` 變數，其他變數則是針對指令碼所建立的自訂變數。 範例指令碼會執行下列步驟：
+Bash 指令碼的第一個工作就是設定一些變數。 這些變數可以是指令碼變數 (如範例所示) 或環境變數。 SQL Server 安裝**需要**`MSSQL_SA_PASSWORD` 變數，其他變數是針對指令碼所建立的自訂變數。 範例指令碼會執行下列步驟：
 
 1. 匯入公開 Microsoft GPG 金鑰。
 
@@ -190,9 +190,9 @@ Bash 指令碼的第一個工作就是設定一些變數。 這些變數可以�
 
 1. 將 SQL Server 命令列工具新增至方便使用的路徑。
 
-1. 如果指令碼變數 ```SQL_INSTALL_AGENT``` 已設定 (預設為開啟)，請安裝 SQL Server Agent。
+1. 如果已設定指令碼變數 ```SQL_INSTALL_AGENT``` (預設為開啟)，請安裝 SQL Server Agent。
 
-1. 如果變數 ```SQL_INSTALL_FULLTEXT``` 已設定，請選擇性地安裝 SQL Server 全文檢索搜尋。
+1. 如果已設定變數 ```SQL_INSTALL_FULLTEXT```，請選擇性地安裝 SQL Server 全文檢索搜尋。
 
 1. 解除系統防火牆上 TCP 通訊埠 1433 的封鎖，這是從另一個系統連線到 SQL Server 的必要動作。
 
@@ -200,13 +200,13 @@ Bash 指令碼的第一個工作就是設定一些變數。 這些變數可以�
 
 1. SQL Server 現已安裝，若要讓它運作，請重新啟動此程序。
 
-1. 確認已正確安裝 SQL Server，同時隱藏任何錯誤訊息。
+1. 確認已正確安裝 SQL Server，同時隱藏所有錯誤訊息。
 
 1. 如果 ```SQL_INSTALL_USER``` 和 ```SQL_INSTALL_USER_PASSWORD``` 都已設定，請建立新的伺服器管理員使用者。
 
 ## <a name="next-steps"></a>後續步驟
 
-簡化多個自動安裝，並建立獨立的 Bash 指令碼，設定適當的環境變數。 您可以移除範例指令碼所使用的所有變數，並放在其專屬的 Bash 指令碼中。
+簡化多個自動安裝，並建立獨立的 Bash 指令碼，設定適當的環境變數。 您可以移除範例指令碼所使用的所有變數，並放在專屬的 Bash 指令碼中。
 
 ```bash
 #!/bin/bash

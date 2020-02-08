@@ -26,10 +26,10 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127121"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用複製資料庫精靈
@@ -74,7 +74,7 @@ ms.locfileid: "68127121"
 -   **卸離與附加** 方法可卸離資料庫，移動或複製資料庫 .mdf、.ndf 和 .ldf 檔案，並在新的位置中重新附加資料庫。 對於 **卸離與附加** 方法而言，為了避免資料遺失或不一致，使用中工作階段不能附加到正在移動或複製的資料庫。 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件方法而言，因為資料庫絕對不會離線，所以允許使用中工作階段。  
 
 -    傳送參考目的地伺服器上還不存在之資料庫的 SQL Server Agent 作業，將會導致整個作業失敗。  此精靈會先嘗試建立 SQL Server Agent 作業，再建立資料庫。  因應措施：
-     1. 在目的地伺服器上，建立與要複製或移動的資料庫名稱相同的 Shell 資料庫。  請參閱[建立資料庫](../../relational-databases/databases/create-a-database.md)。
+     1. 在目的地伺服器上，建立與要複製或移動的資料庫名稱相同的 Shell 資料庫。  請參閱 [建立資料庫](../../relational-databases/databases/create-a-database.md)。
      
      2. 從 [設定目的地資料庫]  頁面中，選取 [卸除目的地伺服器上具有相同名稱的資料庫，然後繼續資料庫傳送，並覆寫現有的資料庫檔案]  。
 
@@ -117,7 +117,7 @@ ms.locfileid: "68127121"
 -    **[使用 SQL Server 驗證]**  
 可讓使用者經由提供 SQL Server 驗證使用者名稱和密碼來進行連接。
 
-     -    **User name**  
+     -    **使用者名稱**  
 用來輸入要連接的使用者名稱。 只有在您選擇使用 [SQL Server 驗證]  進行連接時，才能使用此選項。
 
      -    **密碼**  
@@ -137,7 +137,7 @@ ms.locfileid: "68127121"
 -    **[使用 SQL Server 驗證]**  
 可讓使用者經由提供 SQL Server 驗證使用者名稱和密碼來進行連接。
 
-     -    **User name**  
+     -    **使用者名稱**  
 用來輸入要連接的使用者名稱。 只有在您選擇使用 [SQL Server 驗證]  進行連接時，才能使用此選項。
 
      -    **密碼**  
@@ -162,10 +162,10 @@ ms.locfileid: "68127121"
 ###  <a name="select-database"></a>選取資料庫
 選取您要從來源伺服器移動或複製到目的地伺服器的資料庫。  請參閱主題上方的 [限制事項](#Restrictions) 。  
   
--    **[移動]**  
+-    **移動**  
 移動資料庫至目的地伺服器。
 
--    **[複製]**  
+-    **複製**  
 複製資料庫至目的地伺服器。
 
 -    **Source**  
@@ -198,7 +198,7 @@ ms.locfileid: "68127121"
 要裝載目的地資料庫檔案之目的地伺服器上的資料夾，請視需要進行修改。
 
      -    **狀態**  
-[狀態]
+狀態
 
 -    **如果目的地資料庫已存在:**  
      決定目的地資料庫已存在時所要採取的動作。
@@ -237,17 +237,17 @@ ms.locfileid: "68127121"
 ###   <a name="location-of-source-database-files"></a>來源資料庫檔案的位置
 此頁面只能在來源和目的地是不同的伺服器時使用。  指定包含來源伺服器上之資料庫檔案的檔案系統共用。
   
--    **[資料庫備份]**  
+-    **Database**  
      顯示要移動的每個資料庫的名稱。  
   
 -    **資料夾位置**  
 指定來源伺服器上之資料庫檔案的資料夾位置。
-例如： `C:\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA`。
+例如： `C:\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA` 。
 
   
 -    **來源伺服器上的檔案共用**  
 包含來源伺服器上之資料庫檔案的檔案共用。  手動輸入共用，或按一下省略符號以巡覽至共用。
-例如： `\\server_name\C$\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\Data`。
+例如： `\\server_name\C$\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\Data` 。
 
 ### <a name="configure-the-package"></a>設定套件
 [複製資料庫精靈] 會建立 SSIS 封裝來傳送資料庫。
@@ -269,17 +269,17 @@ ms.locfileid: "68127121"
 
 > **重要！！** Integration Services Proxy 帳戶必須依照 **卸離與附加** 方法使用。  
 
--    **立即執行**  
+-    **Run immediately**  
      完成精靈後將會執行 SSIS 封裝。
   
 -    **[排程]**  
      根據排程來執行 SSIS 封裝。 
   
      -    **變更排程**   
-開啟 [新增作業排程]  對話方塊。  請視需要進行設定。  完成後按一下 [確定]  。
+開啟 [新增作業排程]  對話方塊。  請視需要進行設定。  完成後，按一下 [確定]  。
 
 
--    **Integration Services Proxy 帳戶**：從下拉式清單中選取可用的 Proxy 帳戶。  若要排程傳送，至少必須有一個 Proxy 帳戶可供使用者使用，而且帳戶要設定為擁有 **SSIS 封裝執行子系統**的權限。
+-    **Integration Services Proxy 帳戶** ：從下拉式清單中選取可用的 Proxy 帳戶。  若要排程傳送，至少必須有一個 Proxy 帳戶可供使用者使用，而且帳戶要設定為擁有 **SSIS 封裝執行子系統**的權限。
 
         若要建立 SSIS 封裝執行的 Proxy 帳戶，請在物件總管  中，依序展開 [SQL Server Agent]  和 [Proxy]  ，以滑鼠右鍵按一下 [SSIS 封裝執行]  ，然後按一下 [新增 Proxy]  。
 
@@ -297,7 +297,7 @@ ms.locfileid: "68127121"
 
 ##  <a name="Examples"></a> 範例
 ### <a name="common-steps"></a>**通用步驟** 
-不論您選擇的是 [移動]  或 [複製]  、[卸離與附加]  或 [SMO]  ，下列五個步驟都會相同。  為求簡潔，這些步驟只會在此列出一次，所有範例將從**步驟 6** 開始進行。
+不論您選擇的是 [移動]  或 [複製]  、[卸離與附加]  或 [SMO]  ，下列五個步驟都會相同。  為求簡潔，這些步驟只會在此列出一次，所有範例將從 **步驟 6**開始進行。
 
 1.  在物件總管  中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 
@@ -305,9 +305,9 @@ ms.locfileid: "68127121"
 
 3.  如果出現 [歡迎使用複製資料庫精靈]  開頭顯示頁面，請按一下 [下一步]  。
 
-4.  [選取來源伺服器]  頁面：指定要移動或複製之資料庫所在的伺服器。  選取驗證方法。  如果選擇 [使用 SQL Server 驗證]  ，則必須輸入您的登入認證。  按一下 [下一步]  ，建立與來源伺服器的連接。  在整個工作階段中，此連接會保持開啟。
+4.  [選取來源伺服器]  頁面：指定要移動或複製之資料庫所在的伺服器。  選取驗證方法。  如果選擇 [使用 SQL Server 驗證]  ，則必須輸入您的登入認證。  按 **[下一步]** 以建立與來源伺服器的連接。  在整個工作階段中，此連接會保持開啟。
 
-5.  [選取目的地伺服器]  頁面：指定將移動或複製資料庫的目的地伺服器。  選取驗證方法。  如果選擇 [使用 SQL Server 驗證]  ，則必須輸入您的登入認證。  按一下 [下一步]  ，建立與來源伺服器的連接。  在整個工作階段中，此連接會保持開啟。
+5.  [選取目的地伺服器]  頁面：指定將移動或複製資料庫的目的地伺服器。  選取驗證方法。  如果選擇 [使用 SQL Server 驗證]  ，則必須輸入您的登入認證。  按 **[下一步]** 以建立與來源伺服器的連接。  在整個工作階段中，此連接會保持開啟。
 
      > **注意：** 您可以從任何資料庫啟動 [複製資料庫精靈]。  您可以從來源或目的地伺服器使用 [複製資料庫精靈]。
   
@@ -322,7 +322,7 @@ ms.locfileid: "68127121"
   
 9.  [設定目的地資料庫]  頁面：此**精靈**指出 `Sales` 已存在於目的地伺服器上 (如上述**步驟 6** 中所建立)，並已在**目的地資料庫**名稱中附加 `_new`。  請從 [目的地資料庫]  文字方塊中刪除 `_new`。  如有需要，請變更 [檔案名稱]  和 [目的地資料夾]  。  選取 [卸除目的地伺服器上具有相同名稱的資料庫，然後繼續資料庫傳送，並覆寫現有的資料庫檔案]  。  按 [下一步]  。
   
-10. [選取伺服器物件]  頁面：在 [選取的相關物件:]  面板中，按一下[Object name Logins] \(物件名稱登入\)  的省略符號按鈕。  在 [複製選項]  下，選取 [只複製選取的登入:]  。  核取 [顯示所有伺服器登入]  的方塊。  核取 `contoso\Jennie` 的 [登入]  方塊。  按一下 [確定]  。  在 [可用的相關的物件:]  面板中，選取 [SQL Server Agent 作業]  然後按一下 [>]  按鈕。  在 [選取的相關物件:]  面板中，按一下 [SQL Server Agent 作業]  的省略符號按鈕。  在 [複製選項]  下，選取 [只複製選取的作業]  。  核取 [`Jennie's Report`] 的方塊。  按一下 [確定]  。  按 [下一步]  。  
+10. [選取伺服器物件]  頁面：在 [選取的相關物件:]  面板中，按一下[Object name Logins] \(物件名稱登入\)  的省略符號按鈕。  在 [複製選項]  下，選取 [只複製選取的登入:]  。  核取 [顯示所有伺服器登入]  的方塊。  核取 `contoso\Jennie` 的 [登入]  方塊。  按一下 [確定]  。  在 [可用的相關的物件:]  面板中，選取 [SQL Server Agent 作業]  然後按一下 [>]  按鈕。  在 [選取的相關物件:]  面板中，按一下 [SQL Server Agent 作業]  的省略符號按鈕。  在 [複製選項]  下，選取 [只複製選取的作業]  。  核取 [ `Jennie's Report`] 的方塊。  按一下 [確定]  。  按 [下一步]  。  
   
 11. [來源資料庫檔案的位置]  頁面：按一下 [來源伺服器上的檔案共用]  的省略符號按鈕，然後巡覽至指定的資料夾位置。  例如，針對資料夾位置 `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA`，使用 `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` 作為 [來源伺服器上的檔案共用]  。  按 [下一步]  。
   
@@ -385,9 +385,9 @@ ms.locfileid: "68127121"
 
   
 ##  <a name="FollowUp"></a> 後續操作：升級資料庫之後  
- 在您使用複製資料庫精靈，將資料庫從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，資料庫就會變成立即可用並自動進行升級。 如果資料庫具有全文檢索索引，升級程序就會根據 **[全文檢索目錄升級選項]** 伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 **[匯入]** 或 **[重建]** ，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入]  時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 如需有關檢視或變更 **全文檢索目錄升級選項** 屬性設定的詳細資訊，請參閱＜ [管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)＞。  
+ 在您使用複製資料庫精靈，將資料庫從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，資料庫就會變成立即可用並自動進行升級。 如果資料庫具有全文檢索索引，升級程序就會根據 [全文檢索目錄升級選項]  伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 [匯入]  或 [重建]  ，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入]  時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 如需有關檢視或變更 **全文檢索目錄升級選項** 屬性設定的詳細資訊，請參閱＜ [管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)＞。  
   
- 如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。 如果已升級資料庫中的相容性層級為 90，則相容性層級會設定為 100 (這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所支援的最低相容性層級)。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
+ 如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。 如果已升級資料庫中的相容性層級為 90，則相容性層級會設定為 100 (這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]所支援的最低相容性層級)。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
  
  ## <a name="Post"></a> 複製或移動後的考量
  請考慮是否要在 **複製** 或 **移動**後執行下列步驟：

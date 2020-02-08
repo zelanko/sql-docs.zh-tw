@@ -9,10 +9,10 @@ ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 84f7ebd295cb64ca4d6f77427a727c1d0182b142
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574822"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>將超連結加入到 URL (報表產生器及 SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "65574822"
  
  *  而且您可以 **將書籤加入同一份報表中的特定位置** 。 
   
-試試看在[教學課程：將文字格式化 &#40;報表產生器&#41;](../../reporting-services/tutorial-format-text-report-builder.md) 中使用相同資料新增超連結。  
+嘗試在以下教學課程中使用範例資料新增超連結：[教學課程：格式化文字 &#40;報表產生器&#41;](../../reporting-services/tutorial-format-text-report-builder.md)。  
   
 > [!NOTE]  
 >  繫結至資料集欄位的連結可能很容易受到惡意竄改。 如需詳細資訊，請參閱 [保護報表和資源的安全](../../reporting-services/security/secure-reports-and-resources.md)。  
@@ -73,9 +73,9 @@ ms.locfileid: "65574822"
   
 4.  在 **[選取 URL]** 中，輸入或選取 URL 或是評估為 URL 的運算式，或者按下拉式箭號，再按一下含有 URL 之欄位的名稱。 
 
-    對於發行到設定為原生模式之報表伺服器的項目，請使用完整或相對路徑， 例如， `https://<servername>/images/image1.jpg`。 
+    對於發行到設定為原生模式之報表伺服器的項目，請使用完整或相對路徑， 例如： `https://<servername>/images/image1.jpg` 。 
     
-    對於發行到設定為 SharePoint 整合模式之報表伺服器的項目，請使用完整 URL， 例如， `https://<SharePointservername>/<site>/Documents/images/image1.jpg`。
+    對於發行到設定為 SharePoint 整合模式之報表伺服器的項目，請使用完整 URL， 例如： `https://<SharePointservername>/<site>/Documents/images/image1.jpg` 。
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

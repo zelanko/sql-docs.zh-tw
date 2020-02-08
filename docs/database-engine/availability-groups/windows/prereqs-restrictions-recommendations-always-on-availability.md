@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f918fea905451aed787416aff0e2c22cae9e2bf5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 31a443e7a3a1e7dedf9efb0742cfad5862804945
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258077"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831937"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 可用性群組的必要條件、限制和建議
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,17 +157,14 @@ ms.locfileid: "75258077"
     -   如果給定的執行緒已經閒置一段時間，它會釋放回一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行緒集區。 一般而言，非使用中的執行緒在 ~15 秒非使用狀態之後釋出。 不過，根據上一個活動，閒置執行緒可能會保留更久。  
 
     -   SQL Server 執行個體針對次要複本最多可使用 100 個平行重做執行緒。 每個資料庫最多可使用 CPU 核心總數的一半，但每個資料庫不得超過 16 個執行緒。 如果單一執行個體所需的執行緒總數超過 100，SQL Server 會針對其餘每個資料庫使用單一重做執行緒。 序列重做執行緒在處於非使用狀態 ~15 秒之後便會釋出。 
-    
-    > [!NOTE]
-    > 系統會根據資料庫識別碼的遞增順序，選擇要改為單一執行緒的資料庫。 因此，應針對裝載可用性群組資料庫多於可用性背景工作執行緒的 SQL Server 執行個體，考慮其資料庫建立順序。 例如，在具有 32 個以上之 CPU 核心的系統上，一或多個可用性群組中的前六個資料庫 (依資料庫識別碼排序) 將使用平行重做模式，而所有後續資料庫都將使用單一重做模式。
-  
+     
 -   此外，可用性群組也使用不共用的執行緒，如下所示：  
   
     -   每個主要複本會針對每個主要資料庫使用 1 個記錄檔擷取執行緒。 此外，它會針對每個次要資料庫使用 1 個記錄檔傳送執行緒。 記錄檔傳送執行緒在 ~15 秒非使用狀態之後釋出。    
   
     -   次要複本上的備份會在備份作業的持續時間內保留主要複本上的執行緒。  
   
- 如需詳細資訊，請參閱 [Always On - HADRON Learning Series:Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On - HADRON 學習系列：已啟用 HADRON 功能的資料庫背景工作集區使用方式) (CCS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工程師部落格)。  
+ 如需詳細資訊，請參閱 [Always On - HADRON Learning Series:Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (Always On - HADRON 學習系列：已啟用 HADRON 功能的資料庫背景工作集區使用方式) (CCS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工程師部落格)。  
   
 ###  <a name="PermissionsSI"></a> 權限 (伺服器執行個體)  
   
@@ -186,7 +183,7 @@ ms.locfileid: "75258077"
   
 ###  <a name="RelatedContentSI"></a> 相關內容 (伺服器執行個體)  
   
--   [Always On - HADRON Learning Series:Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On - HADRON 學習系列：已啟用 HADRON 功能的資料庫背景工作集區使用方式)  
+-   [Always On - HADRON Learning Series:Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (Always On - HADRON 學習系列：已啟用 HADRON 功能的資料庫背景工作集區使用方式)  
   
 ##  <a name="NetworkConnect"></a> 網路連線建議  
  強烈建議您針對 WSFC 節點之間的通訊及可用性複本之間的通訊使用相同的網路連結。  使用不同的網路連結時，部分連結失敗 (或甚至間歇性失敗) 可能會發生意外的行為。  
@@ -386,7 +383,7 @@ ms.locfileid: "75258077"
   
 -   [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [Always On - HADRON Learning Series:Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On - HADRON 學習系列：已啟用 HADRON 功能的資料庫背景工作集區使用方式)  
+-   [Always On - HADRON Learning Series:Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (Always On - HADRON 學習系列：已啟用 HADRON 功能的資料庫背景工作集區使用方式)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

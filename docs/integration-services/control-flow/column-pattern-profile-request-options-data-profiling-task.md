@@ -13,10 +13,10 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85f02243a8b331ac96dce55ed39813b39fa697b0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294251"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>資料行模式設定檔要求選項 (資料分析工作)
@@ -29,12 +29,12 @@ ms.locfileid: "71294251"
 > [!NOTE]  
 >  本主題所描述的選項會顯示在 **[資料分析工作編輯器]** 的 **[設定檔要求]** 頁面上。 如需此編輯器頁面的詳細資訊，請參閱[資料分析工作編輯器 &#40;設定檔要求頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
   
- 如需如何使用資料分析工作的詳細資訊，請參閱[資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱 [資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
+ 如需如何使用資料分析工作的詳細資訊，請參閱 [資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱 [資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
 ## <a name="understanding-the-use-of-delimiters-and-symbols"></a>了解分隔符號和符號的使用方式  
  針對 [資料行模式設定檔要求]  計算模式之前，資料分析工作會 Token 化資料。 也就是說，此工作會將字串值分隔成名為 Token 的較小單位。 此工作會根據您針對 [分隔符號]  和 [符號]  屬性指定的分隔符號和符號，將字串分隔成 Token：  
   
--   **分隔符號**：根據預設，分隔符號清單包含下列字元：空格、水平定位字元 (\t)、新行字元 (\n) 和歸位字元 (\r)。 雖然您可以指定其他分隔符號，但是無法移除預設的分隔符號。  
+-   **分隔符號** ：根據預設，分隔符號清單包含下列字元：空格、水平定位字元 (\t)、新行字元 (\n) 和歸位字元 (\r)。 雖然您可以指定其他分隔符號，但是無法移除預設的分隔符號。  
   
 -   **符號**：根據預設，[符號]  清單包含下列字元：`,.;:-"'~=&/@!?()<>[]{}|#*^%` 以及刻度標記。 例如，如果這些符號是 "`()-`"，"(425) 123-4567" 值就會 Token 化成為 ["(", "425", ")", "123", "-", "4567", ")"]。  
   
@@ -47,21 +47,21 @@ ms.locfileid: "71294251"
   
  例如，您可以使用單一標記「方向」，將可能顯示在街道地址中的「東」、「西」、「北」和「南」值組成群組。 下表是這類標記資料表的範例。  
   
-|標記|詞彙|  
+|Tag|詞彙|  
 |---------|----------|  
 |方向|東|  
-|方向|西|  
+|方向|West|  
 |方向|北|  
 |方向|南|  
   
  您可以使用另一個標記，將在街道地址中表示「街道」概念的不同字詞組成群組：  
   
-|標記|詞彙|  
+|Tag|詞彙|  
 |---------|----------|  
-|街|街|  
-|街|道|  
-|街|大街|  
-|街|路|  
+|Street|Street|  
+|Street|道|  
+|Street|位置|  
+|Street|路|  
   
  根據這種標記的組合，街道地址的產生模式可能會類似於下列模式：  
   
@@ -79,7 +79,7 @@ ms.locfileid: "71294251"
   
 -   **一般**  
   
--   **Options**  
+-   **選項**  
   
 ### <a name="data-options"></a>資料選項  
  **ConnectionManager**  

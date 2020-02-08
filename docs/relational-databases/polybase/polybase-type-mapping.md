@@ -8,10 +8,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 34f6b61160b687fa6864a2660b632524188b922c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710460"
 ---
 # <a name="type-mapping-with-polybase"></a>使用 PolyBase 進行類型對應
@@ -35,25 +35,25 @@ ms.locfileid: "71710460"
 | ------------- | ------------------------- | -------------- | --------------------- | ------------------------------ |
 | TINYINT       | Byte                      | TINYINT        | ByteWritable          | 僅適用於不帶正負號的數字。     |
 | SMALLINT      | Int16                     | SMALLINT       | ShortWritable         |
-| INT           | Int32                     | INT            | IntWritable           |
+| int           | Int32                     | int            | IntWritable           |
 | BIGINT        | Int64                     | BIGINT         | LongWritable          |
-| bit           | 布林                   | boolean        | BooleanWritable       |
+| bit           | Boolean                   | boolean        | BooleanWritable       |
 | FLOAT         | Double                    | double         | DoubleWritable        |
-| REAL          | Single                    | FLOAT          | FloatWritable         |
+| real          | Single                    | FLOAT          | FloatWritable         |
 | money         | Decimal                   | double         | DoubleWritable        |
 | SMALLMONEY    | Decimal                   | double         | DoubleWritable        |
-| NCHAR         | String<br /><br /> Char[] | string         | Varchar               |
-| NVARCHAR      | String<br /><br /> Char[] | string         | Varchar               |
-| char          | String<br /><br /> Char[] | string         | Varchar               |
-| varchar       | String<br /><br /> Char[] | string         | Varchar               |
+| NCHAR         | String<br /><br /> Char[] | 字串         | Varchar               |
+| NVARCHAR      | String<br /><br /> Char[] | 字串         | Varchar               |
+| char          | String<br /><br /> Char[] | 字串         | Varchar               |
+| varchar       | String<br /><br /> Char[] | 字串         | Varchar               |
 | BINARY        | Byte[]                    | BINARY         | BytesWritable         | 適用於 Hive 0.8 及更新版本。 |
 | varbinary     | Byte[]                    | BINARY         | BytesWritable         | 適用於 Hive 0.8 及更新版本。 |
-| 日期          | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| smalldatetime | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| datetime2     | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| DATETIME      | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| time          | TimeSpan                  | TIMESTAMP      | TimestampWritable     |
-| Decimal       | Decimal                   | Decimal        | BigDecimalWritable    | 適用於 Hive 0.11 及更新版本。 |
+| date          | Datetime                  | timestamp      | TimestampWritable     |
+| smalldatetime | Datetime                  | timestamp      | TimestampWritable     |
+| datetime2     | Datetime                  | timestamp      | TimestampWritable     |
+| Datetime      | Datetime                  | timestamp      | TimestampWritable     |
+| time          | TimeSpan                  | timestamp      | TimestampWritable     |
+| decimal       | Decimal                   | decimal        | BigDecimalWritable    | 適用於 Hive 0.11 及更新版本。 |
 
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
@@ -62,11 +62,11 @@ ms.locfileid: "71710460"
 
 | Oracle 資料類型 | SQL Server 類型 | 
 | -------------    | --------------- |
-|float             |float            |
+|Float             |Float            |
 |NUMBER            |Decimal          |
 |LONG              |nvarchar         |
 |BINARY_FLOAT      |Real             | 
-|BINARY_DOUBLE     |float            | 
+|BINARY_DOUBLE     |Float            | 
 |CHAR              |Char             |
 |VARCHAR2          |Varchar          | 
 |NVARCHAR2         |nvarchar         | 
@@ -77,7 +77,7 @@ ms.locfileid: "71710460"
 |NCLOB             | nvarchar        | 
 |ROWID             |Varchar          |
 |UROWID            |Varchar          | 
-|DATE              |Datetime2        |
+|日期              |Datetime2        |
 |timestamp         |Datetime2        | 
 
 **類型不符** 
@@ -93,13 +93,13 @@ ms.locfileid: "71710460"
 
 | BSON 資料類型     | SQL Server 類型 |
 | ------------------ | --------------- |
-| Double             | float           |
+| Double             | Float           |
 | String             | nvarchar        |
 | 二進位資料        | nvarchar        |
 | 物件識別碼          | nvarchar        |
-| 布林            | bit             |
+| Boolean            | bit             |
 | Date               | Datetime2       |
-| 32 位元整數     | int             |
+| 32 位元整數     | Int             |
 | 時間戳記          | nvarchar        |
 | 64 位元整數     | BigInt          |
 |Decimal 128         | Decimal         | 
@@ -119,13 +119,13 @@ MongoDB 會使用 BSON 文件來儲存資料記錄。 不同於先前的案例�
 
 | Teradata 資料類型 | SQL Server 類型 | 
 | -------------      | -------------   |
-|INTEGER             |int              |
+|INTEGER             |Int              |
 |SMALLINT            |SmallInt         |
 |bigint              |BigInt           |
 |BYTEINT             |SmallInt         |
 |DECIMAL             |Decimal          |
 |FLOAT               |Decimal          |
-|BYTE                |二進位           |
+|BYTE                |Binary           |
 |VARBYTE             |Varbinary        |
 |BLOB                |varbinary        |
 |CHAR                |Nchar            |
@@ -134,7 +134,7 @@ MongoDB 會使用 BSON 文件來儲存資料記錄。 不同於先前的案例�
 |Graphic             |Nchar            |
 |JSON                |nvarchar         |
 |VARGRAPHIC          |nvarchar         |
-|DATE                |Date             |
+|日期                |Date             |
 |timestamp           |Datetime2        |
 |TIME                |Time             |
 |TIME WITH TIME ZONE |Time             |

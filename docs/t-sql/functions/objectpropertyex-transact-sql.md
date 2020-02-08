@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3035fbe469fa70ed6419388107c479e28b2a656b
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982490"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
@@ -97,7 +97,7 @@ OBJECTPROPERTYEX ( id , property )
 |IsForeignKey|任何結構描述範圍物件|FOREIGN KEY 條件約束。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**|  
 |IsIndexed|資料表、檢視表|含索引的資料表或檢視表。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**|  
 |IsIndexable|資料表、檢視表|可以建立索引的資料表或檢視表。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**|  
-|IsInlineFunction|函數|內嵌函數。<br /><br /> 1 = 內嵌函數<br /><br /> 0 = 非內嵌函數<br /><br /> 基底資料類型：**int**|  
+|IsInlineFunction|函式|內嵌函數。<br /><br /> 1 = 內嵌函數<br /><br /> 0 = 非內嵌函數<br /><br /> 基底資料類型：**int**|  
 |IsMSShipped|任何結構描述範圍物件|在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時所建立的物件。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**|  
 |IsPrecise|已計算的資料行、函數、使用者自訂類型、檢視表|指出物件是否包含浮點運算等不精確的計算。<br /><br /> 1 = 精確<br /><br /> 0 = 不精確<br /><br /> 基底資料類型：**int**|  
 |IsPrimaryKey|任何結構描述範圍物件|PRIMARY KEY 條件約束。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**|  
@@ -106,12 +106,12 @@ OBJECTPROPERTYEX ( id , property )
 |IsQueue|任何結構描述範圍物件|Service Broker 佇列<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**|  
 |IsReplProc|任何結構描述範圍物件|複寫程序。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**|  
 |IsRule|任何結構描述範圍物件|繫結規則。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**|  
-|IsScalarFunction|函數|純量值函式。<br /><br /> 1 = 純量值函式<br /><br /> 0 = 非純量值函式<br /><br /> 基底資料類型：**int**|  
+|IsScalarFunction|函式|純量值函式。<br /><br /> 1 = 純量值函式<br /><br /> 0 = 非純量值函式<br /><br /> 基底資料類型：**int**|  
 |IsSchemaBound|函數、程序、檢視|利用 SCHEMABINDING 來建立的結構描述繫結函數或檢視表。<br /><br /> 1 = 結構描述繫結<br /><br /> 0 = 非結構描述繫結<br /><br /> 基底資料類型：**int**|  
 |IsSystemTable|Table|系統資料表。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**|  
 |IsSystemVerified|已計算的資料行、函數、使用者自訂類型、檢視表|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以驗證物件的有效位數和決定性屬性。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**|  
 |IsTable|Table|資料表。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**|  
-|IsTableFunction|函數|資料表值函式。<br /><br /> 1 = 資料表值函式<br /><br /> 0 = 非資料表值函式<br /><br /> 基底資料類型：**int**|  
+|IsTableFunction|函式|資料表值函式。<br /><br /> 1 = 資料表值函式<br /><br /> 0 = 非資料表值函式<br /><br /> 基底資料類型：**int**|  
 |IsTrigger|任何結構描述範圍物件|觸發程序。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**|  
 |IsUniqueCnst|任何結構描述範圍物件|UNIQUE 條件約束。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**|  
 |IsUserTable|Table|使用者自訂資料表。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**|  
@@ -157,14 +157,14 @@ OBJECTPROPERTYEX ( id , property )
 |TableIsMemoryOptimized|Table|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> 資料表是記憶體最佳化的<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**<br /><br /> 如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。|  
 |TableIsPinned|Table|資料表固定保留在資料快取中。<br /><br /> 0 = False<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本中不支援這項功能。|  
 |TableTextInRowLimit|Table|資料表有 text in row 選項集。<br /><br /> > 0 = text in row 所允許的最大位元組數目。<br /><br /> 0 = 未設定 text in row 選項。<br /><br /> 基底資料類型：**int**|  
-|TableUpdateTrigger|Table|資料表有 UPDATE 觸發程序。<br /><br /> >1 = 含指定類型之第一個觸發程序的識別碼。<br /><br /> 基底資料類型：**int**|  
+|TableUpdateTrigger|Table|資料表有 UPDATE 觸發程序。<br /><br /> >1 = 具有指定類型之第一個觸發程序的識別碼。<br /><br /> 基底資料類型：**int**|  
 |TableUpdateTriggerCount|Table|資料表有指定數目的 UPDATE 觸發程序。<br /><br /> >0 = UPDATE 觸發程序的數目。<br /><br /> 基底資料類型：**int**|  
 |UserDataAccess|函數、檢視表|表示物件存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本機執行個體中的使用者資料及使用者資料表。<br /><br /> 1 = 讀取<br /><br /> 0 = 無<br /><br /> 基底資料類型：**int**|  
 |TableHasColumnSet|Table|資料表有資料行集。<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> 如需詳細資訊，請參閱 [使用資料行集](../../relational-databases/tables/use-column-sets.md)。|  
 |基數|資料表 (系統或使用者定義)、檢視表或索引|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 指定之物件中的資料列數目。|  
 |TableTemporalType|Table|**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。<br /><br /> 指定資料表的類型。<br /><br /> 0 = 非時態表<br /><br /> 1 = 系統版本設定資料表的記錄資料表<br /><br /> 2 = 系統版本設定的時態表|  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **sql_variant**  
   
 ## <a name="exceptions"></a>例外狀況  
@@ -172,7 +172,7 @@ OBJECTPROPERTYEX ( id , property )
   
  使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示發出中繼資料的內建函數 (例如，OBJECTPROPERTYEX) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 假設 *object_id* 在目前資料庫內容中。 參考另一資料庫中之 *object_id* 的查詢會傳回 NULL 或不正確的結果。 例如，在下列查詢中，目前資料庫內容是 master 資料庫。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會嘗試傳回這個資料庫 (而不是查詢中所指定的資料庫) 中指定之 *object_id* 的屬性值。 查詢會傳回不正確的結果，因為 `vEmployee` 檢視表不在 master 資料庫中。  
   
 ```  

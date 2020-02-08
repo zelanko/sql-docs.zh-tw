@@ -53,7 +53,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 '*input*'  
 指定運算式，這個運算式評估為要雜湊的字元或二進位字串。  
   
- 輸出符合演算法標準：用於 MD2、MD4 和 MD5 的 128 位元 (16 個位元組)；用於 SHA 和 SHA1 的 160 位元 (20 個位元組)；用於 SHA2_256 的 256 位元 (32 位元組)，以及用於 SHA2_512 的 512 位元 (64 位元組)。  
+ 輸出符合演算法標準：適用於 MD2、MD4 和 MD5 的 128 位元 (16 位元組)；適用於 SHA 和 SHA1 的 160 位元 (20 位元組)；適用於 SHA2_256 的 256 位元 (32 位元組)，以及適用於 SHA2_512 的 512 位元 (64 位元組)。  
   
 **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
   
@@ -69,7 +69,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 
 ## <a name="examples"></a>範例  
 ### <a name="return-the-hash-of-a-variable"></a>傳回變數的雜湊  
- 下列範例會傳回儲存於 `SHA2_256` 變數中 **nvarchar** 資料的 `@HashThis` 雜湊。  
+ 下列範例會傳回儲存於 `@HashThis` 變數中 **nvarchar** 資料的 `SHA2_256` 雜湊。  
   
 ```sql  
 DECLARE @HashThis nvarchar(32);  

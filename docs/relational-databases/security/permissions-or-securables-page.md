@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 949e3c3cfc14082ef2093dfdd11baa01218ccb2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68076625"
 ---
 # <a name="permissions-or-securables-page"></a>權限或安全性實體頁面
@@ -43,9 +43,9 @@ ms.locfileid: "68076625"
  描述每個項目的類型。  
   
 ## <a name="explicit-tab"></a>明確索引標籤  
- **[明確]** 索引標籤會列出上方格中選取之安全性實體的可能權限。 若要設定權限，請選取或清除 [授與]  (或 [允許]  )、[可授與]  和 [拒絕]  核取方塊。 所有選項不適用於所有明確權限。  
+ **[明確]** 索引標籤會列出上方格中選取之安全性實體的可能權限。 若要設定權限，請選取或清除 [授與]  \(或 [允許]  )、[可授與]  和 [拒絕]  核取方塊。 所有選項不適用於所有明確權限。  
   
- **[權限]**  
+ **權限**  
  權限的名稱。  
   
  **授與者**  
@@ -66,7 +66,7 @@ ms.locfileid: "68076625"
 ## <a name="effective-tab"></a>有效索引標籤  
  主體所擁有而且與安全性實體有關的權限可能來自於針對幾個不同主體所設定的權限。 例如，可個別為登入授與權限，而登入也可以是某個群組的成員。 **[有效]** 索引標籤會顯示結合明確權限以及從群組或角色成員資格取得之權限的結果。 授與的權限會經過彙總。 拒絕權限會覆寫所有授與權限。  
   
- **Permissions**  
+ **權限**  
  權限的名稱。  
   
  **資料行**  

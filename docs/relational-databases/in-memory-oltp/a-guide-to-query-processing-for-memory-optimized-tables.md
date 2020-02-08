@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef5c610cb71a0f638c2dfba8aad1fbdb77308dfa
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412822"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>記憶體最佳化資料表的查詢處理指南
@@ -73,7 +73,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  執行計畫大致如下面的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 所示  
   
- ![聯結磁碟為基礎資料表的查詢計劃。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "|::ref1::|")  
+ ![聯結磁碟為基礎資料表的查詢計劃。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "聯結磁碟為基礎資料表的查詢計劃。")  
 聯結磁碟為基礎資料表的查詢計劃。  
   
  關於這個查詢計劃：  
@@ -92,7 +92,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  這個查詢的計畫大致如下：  
   
- ![磁碟為基礎資料表的雜湊聯結查詢計劃。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "|::ref2::|")  
+ ![磁碟為基礎資料表的雜湊聯結查詢計劃。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "磁碟為基礎資料表的雜湊聯結查詢計劃。")  
 磁碟為基礎資料表的雜湊聯結查詢計劃。  
   
  在這個查詢中，Orders 資料表的資料列是使用叢集索引擷取。 **Hash Match** 實體運算子現在用於 **Inner Join**。 Order 上的叢集索引不會在 CustomerID 上排序，因此 **Merge Join** 會需要排序運算子，而這樣就會影響效能。 請記下與上一個範例中 **Merge Join** 運算子成本 (46%) 相較的 **Hash Match** 運算子相對成本 (75%)。 最佳化工具原本也會在上一個範例中考慮 **Hash Match** 運算子，但結果卻是 **Merge Join** 運算子提供更佳效能的結果。  
@@ -100,7 +100,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁碟資料表的查詢處理  
  下圖概述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中隨選查詢的查詢處理流程：  
   
- ![SQL Server 查詢處理管線。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "|::ref3::|")  
+ ![SQL Server 查詢處理管線。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "SQL Server 查詢處理管線。")  
 SQL Server 查詢處理管線。  
   
  在此情節中：  
@@ -220,7 +220,7 @@ END
   
  原生編譯預存程序的引動過程會轉譯為在 DLL 中呼叫函數。  
   
- ![執行原生編譯預存程序。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "|::ref7::|")  
+ ![執行原生編譯預存程序。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "執行原生編譯預存程序。")  
 執行原生編譯預存程序。  
   
  原生編譯預存程序的引動過程描述如下：  
@@ -294,7 +294,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  只保留 Customer 資料表中的一個資料列，並刪除其餘全部資料列時：  
   
- ![資料行統計資料和聯結。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "|::ref8::|")  
+ ![資料行統計資料和聯結。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "資料行統計資料和聯結。")  
   
  關於這個查詢計畫：  
   

@@ -12,10 +12,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
 ms.openlocfilehash: 2269c594bd0fff036d4fe5d5d722aa5d78d4ca6d
-ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75883989"
 ---
 # <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>適用於 Azure Data Studio 的 Azure SQL Database 受控執行個體儀表板 (預覽)

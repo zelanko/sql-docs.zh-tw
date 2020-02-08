@@ -11,10 +11,10 @@ ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
 ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71127245"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>快速入門：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連線及查詢 PostgreSQL
@@ -43,10 +43,10 @@ ms.locfileid: "71127245"
 
    ![新增連線畫面](media/quickstart-postgresql/new-connection-screen.png)  
 
-   | 設定       | 範例值 | Description |
+   | 設定       | 範例值 | 描述 |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **伺服器名稱** | localhost | 完整伺服器名稱 |
-   | **User name** | postgres | 您要用來登入的使用者名稱。 |
+   | **使用者名稱** | postgres | 您要用來登入的使用者名稱。 |
    | **密碼 (SQL 登入)** | *password* | 您要用來登入的帳戶密碼。 |
    | **密碼** | *檢查* | 如果您不想要每次連線都輸入密碼，請核取此方塊。 |
    | **資料庫名稱** | \<預設值\> | 如果您希望連線能夠指定資料庫，請填入這個選項。 |
@@ -131,6 +131,6 @@ ms.locfileid: "71127245"
 
    ![檢視結果](media/quickstart-postgresql/view-results.png)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 
 了解[適用於 Azure Data Studio 中 Postgres 的案例](postgres-extension.md)。 

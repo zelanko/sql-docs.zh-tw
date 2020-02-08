@@ -18,10 +18,10 @@ ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b12ad1dcc054f7c59f52b3aee23d5d6368f1459b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948250"
 ---
 # <a name="table-value-constructor-transact-sql"></a>資料表值建構函式 (Transact-SQL)
@@ -93,7 +93,7 @@ VALUES ('Helmet', 25.50),
 GO  
 ```  
   
-## <a name="data-types"></a>資料型別  
+## <a name="data-types"></a>資料類型  
  在多重資料列 INSERT 陳述式中指定的值會遵循 UNION ALL 語法的資料類型轉換屬性。 這會導致將不相符的類型隱含地轉換成較高[優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)的類型。 如果轉換不是支援的隱含轉換，就會傳回錯誤。 例如，下列陳述式會將整數值和字元值插入至類型為 **char** 的資料行中。  
   
 ```sql

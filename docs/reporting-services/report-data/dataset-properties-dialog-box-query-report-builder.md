@@ -13,10 +13,10 @@ ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e05ae59d963bd9b165d2f6f825955ee276683328
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66500446"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>資料集屬性對話方塊、查詢 (報表產生器)
@@ -45,7 +45,7 @@ ms.locfileid: "66500446"
 > [!NOTE]  
 >  並非所有的查詢類型都受到所有資料來源的支援。 例如， **[資料表]** 只受到 **[OLE DB]** 和 **[ODBC]** 資料來源類型的支援。  
   
- **[資料集屬性]**  
+ **查詢**  
  此選項會在選擇 [文字]  命令類型選項時出現。 鍵入查詢，或按一下 [匯入]  來匯入已存在的查詢。 請按一下 **運算式** (*fx*) 按鈕來編輯運算式。  
   
 > [!NOTE]  
@@ -58,7 +58,7 @@ ms.locfileid: "66500446"
 此選項會在選擇 [預存程序] 命令類型選項時出現。 輸入或選擇您要使用之預存程序的名稱。 請按一下 **運算式** (*fx*) 按鈕來編輯運算式。   
   
  **逾時 (以秒為單位)**  
- 輸入查詢逾時之前的秒數。預設值是 30 秒。 **[逾時]** 的值必須是空白或大於零。 如果是空白，則查詢不會逾時。  
+ 輸入查詢逾時之前的秒數。預設值為 30 秒。 **[逾時]** 的值必須是空白或大於零。 如果是空白，則查詢不會逾時。  
   
  **重新整理欄位**  
  執行查詢命令，以更新 [資料集屬性] 對話方塊 [欄位]  頁面中的欄位清單。  

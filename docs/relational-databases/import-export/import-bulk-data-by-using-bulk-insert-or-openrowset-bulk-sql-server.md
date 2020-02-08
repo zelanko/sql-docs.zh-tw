@@ -23,12 +23,12 @@ manager: jroth
 ms.custom: seo-lt-2019
 ms.date: 09/25/2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: deaaa783f465c5cfecb940df4b9dd56e10590bc5
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 0fb3a05f08cdf3481b9e2957c35bf6ee48bce6b0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056387"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909961"
 ---
 # <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>使用 BULK INSERT 或 OPENROWSET(BULK...) 將資料匯入 SQL Server
 
@@ -58,7 +58,7 @@ BULK INSERT 會從資料檔案將資料載入資料表。 此功能與 **bcp** �
 - [使用格式檔案略過資料表資料行 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)
 - [使用格式檔案將資料表資料行對應至資料檔案欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
 
-## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...)函數
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...)函式
 
 OPENROWSET BULK 資料列集提供者可透過呼叫 OPENROWSET 函數及指定 BULK 選項加以存取。 OPENROWSET(BULK…) 函數可讓您透過 OLE DB 提供者連接到遠端資料來源 (例如資料檔案)，以存取遠端資料。
 
@@ -79,7 +79,7 @@ INSERT ...SELECT * FROM OPENROWSET(BULK...)
 - [使用字元格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)
 - [使用格式檔案略過資料表資料行 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)
 - [使用格式檔案略過資料欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)
-- [使用格式檔案將資料表資料行對應至資料檔欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
+- [使用格式檔案將資料表資料行對應至資料檔案欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
 
 ## <a name="security-considerations"></a>安全性考量
 
@@ -95,7 +95,7 @@ INSERT ...SELECT * FROM OPENROWSET(BULK...)
 
 若要使用 BULK INSERT 或 INSERT...SELECT \* FROM OPENROWSET(BULK...) 從另一部電腦大量匯入資料，則必須在兩部電腦之間共用資料檔案。 若要指定共用資料檔案，請使用它的通用命名慣例 (UNC) 名稱，其使用一般格式： **\\\\** <伺服器名稱>  **\\** <共用名稱>  **\\** <路徑>  **\\** <檔案名稱>  。 此外，用來存取資料檔案的帳戶必須擁有在遠端磁碟上讀取檔案所需的權限。
 
-例如，下列 `BULK INSERT` 陳述式會從名為 `SalesOrderDetail` 的資料檔案大量匯入資料到 `AdventureWorks` 資料庫的 `newdata.txt`資料表。 此資料檔案位於 `\dailyorders` 系統上的 `salesforce` 網路共用目錄上的 `computer2` 共用資料夾中。
+例如，下列 `BULK INSERT` 陳述式會從名為 `SalesOrderDetail` 的資料檔案大量匯入資料到 `AdventureWorks` 資料庫的 `newdata.txt`資料表。 此資料檔案位於 `\dailyorders` 系統上的 `salesforce` 網路共用目錄上的 `computer2`共用資料夾中。
 
 ```sql
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
@@ -114,7 +114,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 下列範例說明如何使用 BULK INSERT 命令，從建立 SAS 金鑰之 Azure Blob 儲存體位置上的 CSV 檔案載入資料。 Azure Blob 儲存體位置已設定為外部資料來源。 這需要使用在使用者資料庫中以主要金鑰加密的共用存取簽章來進行資料庫範圍認證。
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -142,10 +142,10 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 
 ### <a name="using-openrowset"></a>使用 OPENROWSET
 
-下列範例說明如何使用 OPENROWSET 命令，從建立 SAS 金鑰之 Azure Blob 儲存體位置上的 CSV 檔案載入資料。 Azure Blob 儲存體位置已設定為外部資料來源。 這需要使用在使用者資料庫中以主要金鑰加密的共用存取簽章來進行資料庫範圍認證。
+下列範例說明如何使用 OPENROWSET 命令，從已建立 SAS 金鑰的 Azure Blob 儲存體位置中 CSV 檔案載入資料。 Azure Blob 儲存體位置已設定為外部資料來源。 這需要使用在使用者資料庫中以主要金鑰加密的共用存取簽章來進行資料庫範圍認證。
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!

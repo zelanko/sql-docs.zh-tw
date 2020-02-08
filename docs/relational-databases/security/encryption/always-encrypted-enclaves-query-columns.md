@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: d0a522d6deb01169189d6f5faaf7ba2f189d1522
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595503"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves"></a>使用具有安全記憶體保護區的 Always Encrypted 查詢資料行
@@ -34,7 +34,7 @@ ms.locfileid: "73595503"
 > 在加密字元字串資料行上進行的豐富查詢，需要資料行使用具有 binary2 排序次序 (BIN2 定序) 的定序。 
 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 - [使用具有安全記憶體保護區的 Always Encrypted 與 SSMS 查詢資料行](always-encrypted-enclaves-query-columns-ssms.md)
 
 ## <a name="see-also"></a>另請參閱

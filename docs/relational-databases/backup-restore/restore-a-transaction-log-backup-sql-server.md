@@ -20,10 +20,10 @@ ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 852c7f2c8f9f25903ee575d8e3b85df1d0009b1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111183"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>還原交易記錄備份 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "68111183"
   
 -   **開始之前：**  
   
-     [必要條件](#Prerequisites)  
+     [先決條件](#Prerequisites)  
   
      [安全性](#Security)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68111183"
   
          如需交易記錄備份的詳細資訊，請參閱[交易記錄備份 &#40;SQL Server &#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md) 和[套用交易記錄備份 &#40;SQL Server &#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此；因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
@@ -71,7 +71,7 @@ ms.locfileid: "68111183"
   
 #### <a name="to-restore-a-transaction-log-backup"></a>還原交易記錄備份  
   
-1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱展開伺服器樹狀目錄。  
+1.  連線至適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱，以展開伺服器樹狀目錄。  
   
 2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
@@ -98,16 +98,16 @@ ms.locfileid: "68111183"
   
      下表列出方格的各資料行標頭，並描述各標頭的值。  
   
-    |標頭|ReplTest1|  
+    |頁首|值|  
     |------------|-----------|  
     |**Restore**|選取的核取方塊表示要還原的備份組。|  
     |**名稱**|備份組的名稱。|  
     |**元件**|備份的元件：**資料庫** **檔案**，或 \<空白> (適用於交易記錄)。|  
-    |**[資料庫備份]**|執行備份所涉及的資料庫名稱。|  
+    |**Database**|執行備份所涉及的資料庫名稱。|  
     |**開始日期**|備份作業開始的日期和時間，以用戶端的區域設定表示。|  
     |**完成日期**|備份作業完成的日期和時間，以用戶端的區域設定表示。|  
-    |**[第一個 LSN]**|備份組內第一筆交易的記錄序號。 針對檔案備份為空白。|  
-    |**[最後一個 LSN]**|備份組內最後一個交易的記錄序號。 針對檔案備份為空白。|  
+    |**第一個 LSN**|備份組內第一筆交易的記錄序號。 針對檔案備份為空白。|  
+    |**最後一個 LSN**|備份組內最後一個交易的記錄序號。 針對檔案備份為空白。|  
     |**檢查點 LSN**|在建立備份時，最近的檢查點之記錄序號。|  
     |**完整 LSN**|最近的完整資料庫備份之記錄序號。|  
     |**Server**|執行備份作業之 Database Engine 執行個體的名稱。|  
@@ -116,7 +116,7 @@ ms.locfileid: "68111183"
     |**位置**|備份組在磁碟區中的位置。|  
     |**到期**|備份組到期的日期和時間。|  
   
-7.  選取下列其中一項：  
+7.  選取下列其中一個：  
   
     -   **時間點**  
   
@@ -130,14 +130,14 @@ ms.locfileid: "68111183"
   
          下表列出方格的各資料行標頭，並描述各標頭的值。  
   
-        |標頭|ReplTest1|  
+        |頁首|值|  
         |------------|-----------|  
         |\<空白>|顯示選取標示的核取方塊。|  
         |**交易標示**|在認可交易時，由使用者所指定之標示交易的名稱。|  
         |**日期**|認可交易的日期和時間。 交易日期和時間是依照 **msdbgmarkhistory** 資料表中記錄的顯示，而非依照用戶端電腦的日期和時間。|  
         |**說明**|在認可交易時，由使用者所指定之標示交易的描述 (如果有的話)。|  
         |**LSN**|標示之交易的記錄序號。|  
-        |**[資料庫備份]**|認可標示的交易之資料庫的名稱。|  
+        |**Database**|認可標示的交易之資料庫的名稱。|  
         |**使用者名稱**|認可標示的交易之資料庫使用者的名稱。|  
   
 8.  若要檢視或選取進階選項，請按一下 **[選取頁面]** 窗格中的 **[選項]** 。  

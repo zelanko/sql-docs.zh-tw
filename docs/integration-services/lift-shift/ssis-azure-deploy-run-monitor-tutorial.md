@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 42250d8edbd646f9bd89f3663f2591b3404fe05f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68007946"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>教學課程：在 Azure 中部署和執行 SQL Server Integration Services (SSIS) 套件
@@ -30,7 +30,7 @@ ms.locfileid: "68007946"
 
 也請確定您已在 Azure 中設定 SSISDB 資料庫和佈建 Azure SSIS Integration Runtime。 如需在 Azure 上佈建 SSIS 的資訊，請參閱[將 SQL Server Integration Services 套件部署至 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
 
-## <a name="for-azure-sql-database-get-the-connection-info"></a>若是 Azure SQL Database，請取得連線資訊
+## <a name="for-azure-sql-database-get-the-connection-info"></a>針對 Azure SQL Database，請取得連線資訊
 
 若要在 Azure SQL Database 上執行套件，請取得連線至 SSIS 目錄資料庫 (SSISDB) 所需的連線資訊。 在下列程序中，您需要完整伺服器名稱和登入資訊。
 
@@ -54,13 +54,13 @@ ms.locfileid: "68007946"
 
 2. **連線至伺服器**。 在 [連線至伺服器]  對話方塊中，輸入下列資訊：
 
-   | 設定       | 建議值 | Description | 
+   | 設定       | 建議的值 | 描述 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **伺服器類型** | Database Engine | 這是必要的值。 |
    | **伺服器名稱** | 完整伺服器名稱 | 名稱的格式應如下所示：**mysqldbserver.database.windows.net**。 如果您需要伺服器名稱，請參閱[連線至 Azure 上的 SSISDB 目錄資料庫](ssis-azure-connect-to-catalog-database.md)。 |
    | **驗證** | SQL Server 驗證 | 您無法使用 Windows 驗證連線到 Azure SQL Database。 |
-   | **登入** | 伺服器系統管理員帳戶 | 其為您在建立伺服器時指定的帳戶。 |
-   | **密碼** | 伺服器系統管理員帳戶的密碼 | 其為您在建立伺服器時指定的密碼。 |
+   | **登入** | 伺服器系統管理員帳戶 | 您在建立伺服器時所指定的帳戶。 |
+   | **密碼** | 伺服器系統管理員帳戶的密碼 | 這是您在建立伺服器時所指定的密碼。 |
 
 3. **連線至 SSISDB 資料庫**。 選取 [選項]  以展開 [連線至伺服器]  對話方塊。 在展開的 [連線至伺服器]  對話方塊中，選取 [連線屬性]  索引標籤。在 [連線至資料庫]  欄位中，選取或輸入 `SSISDB`。
 
@@ -102,7 +102,7 @@ ms.locfileid: "68007946"
   
 4.  在 [檢閱]  頁面上，檢閱您選取的設定。
     -   您可以選取 **[上一步]** ，或選取左窗格中的任何步驟來變更您的選取項目。
-    -   選取 [部署]  開始部署程序。
+    -   選取 [部署]  來啟動部署程序。
 
     > [!NOTE]
     > 如果您收到**沒有使用中的背景工作代理程式。(.Net SqlClient 資料提供者)** 錯誤訊息，請確認 Azure-SSIS Integration Runtime 正在執行。 如果您在 Azure SSIS IR 處於停止狀態時嘗試部署，就會發生這個錯誤。

@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 92cf3e13f1e386a77ba4621b817567af95b42884
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896981"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>變更 Scale Out 記錄的帳戶
@@ -32,7 +32,7 @@ ms.locfileid: "67896981"
 ## <a name="1-create-a-user-for-ssisdb"></a>1.建立 SSISDB 的使用者
 如需如何建立資料庫使用者的指示，請參閱[建立資料庫使用者](../../relational-databases/security/authentication-access/create-a-database-user.md)。
 
-## <a name="2-add-the-user-to-the-database-role-ssisclusterworker"></a>2.將使用者新增至資料庫角色 ssis_cluster_worker
+## <a name="2-add-the-user-to-the-database-role-ssis_cluster_worker"></a>2.將使用者新增至資料庫角色 ssis_cluster_worker
 
 如需如何加入資料庫角色的指示，請參閱[加入角色](../../relational-databases/security/authentication-access/join-a-role.md)。
 

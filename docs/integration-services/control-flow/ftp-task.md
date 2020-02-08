@@ -17,10 +17,10 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d606e66c3ad7a78edf3808578fe3021d2933b22d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294135"
 ---
 # <a name="ftp-task"></a>FTP 工作
@@ -41,11 +41,11 @@ ms.locfileid: "71294135"
 > [!IMPORTANT]  
 >  FTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
   
- 存取本機檔案或本機目錄時，FTP 工作會使用「檔案」連接管理員或變數中儲存的路徑資訊。 但 FTP 工作存取遠端檔案或遠端目錄時則相反，是使用遠端伺服器上直接指定的路徑 (如 FTP 連接管理員中所指定)，或變數中儲存的路徑資訊。 如需詳細資訊，請參閱[檔案連接管理員](../../integration-services/connection-manager/file-connection-manager.md)和 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)。  
+ 存取本機檔案或本機目錄時，FTP 工作會使用「檔案」連接管理員或變數中儲存的路徑資訊。 但 FTP 工作存取遠端檔案或遠端目錄時則相反，是使用遠端伺服器上直接指定的路徑 (如 FTP 連接管理員中所指定)，或變數中儲存的路徑資訊。 如需詳細資訊，請參閱[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)和 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)。  
   
  這表示，FTP 工作可接收多個檔案和刪除多個遠端檔案；而如果此工作使用連接管理員，則只能傳送一個檔案且只能刪除一個本機檔案，因為「檔案」連接管理員只能存取一個檔案。 若要存取多個本機檔案，FTP 工作必須使用變數提供路徑資訊。 例如，變數如果含有 "C:\Test\&#42;.txt"，其提供的路徑便可支援刪除或傳送 [Test] 目錄中所有副檔名為 .txt 的檔案。  
   
- 若要傳送多個檔案及存取多個本機檔案和目錄，您也可以將 FTP 工作加入「Foreach 迴圈」中，藉此多次執行 FTP 工作。 「Foreach 迴圈」可使用 For Each File 列舉值，於目錄中跨檔案列舉。 如需詳細資訊，請參閱 [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md)。  
+ 若要傳送多個檔案及存取多個本機檔案和目錄，您也可以將 FTP 工作加入「Foreach 迴圈」中，藉此多次執行 FTP 工作。 「Foreach 迴圈」可使用 For Each File 列舉值，於目錄中跨檔案列舉。 如需詳細資訊，請參閱 [Foreach 迴圈容器](../../integration-services/control-flow/foreach-loop-container.md)＞。  
   
  FTP 工作支援在路徑中使用 *?* 及 *\** 萬用字元。 如此即可讓工作存取多個檔案。 不過，您只能在指定檔名的路徑部分使用萬用字元。 例如，C:\MyDirectory\\*.txt 是有效的路徑，而 C:\\\*\MyText.txt 則無效。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "71294135"
 ## <a name="predefined-ftp-operations"></a>預先定義的 FTP 作業  
  FTP 工作包括一組預先定義的作業。 下表描述這些作業。  
   
-|作業|Description|  
+|作業|描述|  
 |---------------|-----------------|  
 |傳送檔案|從本機電腦將檔案傳送到 FTP 伺服器。|  
 |接收檔案|從 FTP 伺服器將檔案儲存到本機電腦。|  
@@ -68,7 +68,7 @@ ms.locfileid: "71294135"
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>FTP 工作上可用的自訂記錄項目  
  下表列出 FTP 工作的自訂記錄項目。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|Description|  
+|記錄項目|描述|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|指出工作已經起始與 FTP 伺服器的連接。|  
 |**FTPOperation**|報告工作執行之 FTP 作業的開始及其類型。|  
@@ -111,7 +111,7 @@ ms.locfileid: "71294135"
  **IsRemotePathVariable**  
  指出遠端路徑是否儲存在變數中。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[RemoteVariable]** 。|  
 |**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項 **[RemotePath]** 。|  
@@ -122,7 +122,7 @@ ms.locfileid: "71294135"
  **IsLocalPathVariable**  
  指出本機路徑是否儲存在變數中。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[LocalVariable]** 。|  
 |**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項 **[LocalPath]** 。|  
@@ -130,7 +130,7 @@ ms.locfileid: "71294135"
  **運算**  
  選取要執行的 FTP 作業。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**傳送檔案**|傳送檔案。 選取此值會顯示動態選項 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  
 |**接收檔案**|接收檔案。 選取此值會顯示動態選項 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  

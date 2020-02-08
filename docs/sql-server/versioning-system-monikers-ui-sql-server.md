@@ -10,10 +10,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f175e9639b07c945b92b6fd715fa8b34ebea60c3
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049912"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 版本設定系統文件
@@ -60,7 +60,7 @@ ms.locfileid: "73049912"
 
 在 1990 到 2000 年代間，Microsoft SQL Server 只有一個產品。 每個 SQL Server 版本都有各種「版本」  ，例如 SQL Server 2008 的 _Developer_ 和 _Enterprise_ 版本。 版本會包含稍微不同的功能集，但核心產品都是相同的。 新的 SQL Server 版本仍然可能會有各種版本。
 
-### <a name="products"></a>產品
+### <a name="products"></a>Products
 
 隨著近年雲端運算和 Microsoft Azure 的崛起，Microsoft 發行了 Azure SQL Database 產品。 雖然傳統式 SQL Server 內部部署產品和 Azure SQL Database 產品共用了許多程式碼，但這兩個產品是真正各自獨立的產品。
 
@@ -113,7 +113,7 @@ ms.locfileid: "73049912"
 
 下列文章是針對 SQL Server 2017 新增的。 文章會描述在版本 2017 中新增至 SQL Server 的功能。 大多數或所有這些新功能也都是版本 2019 的一部分。 以下是文章的屬性。
 
-| attribute | ReplTest1 |
+| 屬性 | 值 |
 | :-------- | :---- |
 | Title | SQL Server 2017 的新功能 |
 | moniker 範圍 | `>= sql-server-2017 || = sqlallproducts-allversions` |

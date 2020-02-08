@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: ff3d3db1ab4fc3d02e8710cf482225523285c0a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68031520"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
@@ -45,13 +45,13 @@ inputdate AT TIME ZONE timezone
  *timezone*  
  目的地時區的名稱。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需倚賴儲存在「Windows 登錄」中的時區。 安裝在電腦上的所有時區都儲存在下列登錄區中：**KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**。 已安裝的時區清單也會透過 [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) 檢視表公開。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  傳回 **datetimeoffset** 的資料類型。  
   
 ## <a name="return-value"></a>傳回值  
  目標時區中的 **datetimeoffset** 值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **AT TIME ZONE** 會針對 **smalldatetime**、**datetime** 及 **datetime2** 資料類型中，落在受 DST 變更影響之間隔內的輸入值，套用特定的轉換規則：  
   
 -   將時鐘調快時，本地時間會有落差，其相當於時鐘調整的持續時間。 這段持續時間通常是 1 個小時，但也可能是 30 或 45 分鐘，視時區而定。 將會使用在 DST 變更「後」  之位移來轉換位於此落差中的時間點。  

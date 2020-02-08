@@ -16,10 +16,10 @@ ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: badeb4de20aa885a77fa61ec3a261a8c09c79506
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571242"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>註冊標準的 .NET Framework Data Provider (SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "65571242"
   
 4.  加入 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者的項目。  
   
-    |attribute|Description|  
+    |屬性|描述|  
     |---------------|-----------------|  
     |**名稱**|為資料提供者提供唯一的名稱，例如， **MyNETDataProvider**。 **Name** 屬性的最大長度為 255 個字元。 該名稱在組態檔之 **Extension** 元素的所有元素中，必須是唯一的。 當您建立新的資料來源時，您在此處包含的值會出現在資料來源類型的下拉式清單中。|  
     |**型別**|輸入一個逗號分隔清單，其中包含實作 <xref:System.Data.IDbConnection> 介面之類別的完整命名空間，後面緊接著 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者組件的名稱 (不包含 .dll 副檔名)。|  
@@ -129,7 +129,7 @@ ms.locfileid: "65571242"
   
 4.  加入資料提供者的項目。  
   
-    |attribute|Description|  
+    |屬性|描述|  
     |---------------|-----------------|  
     |**名稱**|為資料提供者提供唯一的名稱，例如， **MyNETDataProvider**。 **Name** 屬性的最大長度為 255 個字元。 該名稱在組態檔之 **Extension** 元素的所有元素中，必須是唯一的。 當您建立新的資料來源時，您在此處包含的值會出現在資料來源類型的下拉式清單中。|  
     |**型別**|輸入一個逗號分隔清單，其中包含實作 <xref:System.Data.IDbConnection> 介面之類別的完整命名空間，後面緊接著 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者組件的名稱 (不包含 .dll 副檔名)。|  

@@ -20,10 +20,10 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa922a5a850a6cee9b782d894994835d8e1d9a1c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291762"
 ---
 # <a name="aggregate-transformation"></a>彙總轉換
@@ -36,7 +36,7 @@ ms.locfileid: "71291762"
 ## <a name="operations"></a>作業  
  「彙總」轉換支援下列作業。  
   
-|作業|Description|  
+|作業|描述|  
 |---------------|-----------------|  
 |群組依據|將資料集分割成群組。 任何資料類型的資料行都可用於群組。 如需詳細資訊，請參閱 [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md)。|  
 |Sum|加總資料行中的值。 只能加總具有數值資料類型的資料行。 如需詳細資訊，請參閱 [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md)。|  
@@ -118,7 +118,7 @@ ms.locfileid: "71291762"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -154,7 +154,7 @@ ms.locfileid: "71291762"
  **索引鍵小數位數**  
  在 [進階] 顯示中，選擇性地指定彙總可以寫入的大約索引鍵數目。 根據預設，此選項的值為 **[未指定]** 。 如果 [索引鍵小數位數]  和 [索引鍵]  屬性都有設定，會優先使用 [索引鍵]  。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |[未指定]|不使用 [索引鍵小數位數] 屬性。|  
 |低|彙總可寫入大約 500,000 個索引鍵。|  
@@ -176,14 +176,14 @@ ms.locfileid: "71291762"
  **運算**  
  使用下表作為指南，從可用的作業清單中選擇。  
   
-|作業|Description|  
+|作業|描述|  
 |---------------|-----------------|  
 |**GroupBy**|將資料集分割成群組。 具有任何資料類型的資料行可用於分組。 如需詳細資訊，請參閱 GROUP BY。|  
 |**Sum**|加總資料行中的值。 只能加總具有數值資料類型的資料行。 如需詳細資訊，請參閱 SUM。|  
 |**平均值**|傳回資料行中資料行值的平均。 只能平均具有數值資料類型的資料行。 如需詳細資訊，請參閱 AVG。|  
-|**計數**|傳回群組中的項目數。 如需詳細資訊，請參閱 COUNT。|  
+|**Count**|傳回群組中的項目數。 如需詳細資訊，請參閱 COUNT。|  
 |**CountDistinct**|傳回群組中唯一非 Null 值的數目。 如需詳細資訊，請參閱 COUNT 和 Distinct。|  
-|**最小值**|傳回群組中的最小值。 限制為數值資料類型。|  
+|**最低**|傳回群組中的最小值。 限制為數值資料類型。|  
 |**最大值**|傳回群組中的最大值。 限制為數值資料類型。|  
   
  **比較旗標**  
@@ -192,7 +192,7 @@ ms.locfileid: "71291762"
  **Count Distinct Scale**  
  可選擇性地指定彙總可寫入之相異值的近似數目。 根據預設，此選項的值為 **[未指定]** 。 如果 [CountDistinctScale]  和 [CountDistinctKeys]  都有指定，會優先使用 [CountDistinctKeys]  。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |[未指定]|不使用 **CountDistinctScale** 屬性。|  
 |低|彙總可寫入大約 500,000 個相異值。|  
@@ -214,7 +214,7 @@ ms.locfileid: "71291762"
  **[索引鍵小數位數]**  
  選擇性地指定彙總預期的近似索引鍵數目。 轉換時會使用此資訊來最佳化初始快取大小。 根據預設，此選項的值為 **[未指定]** 。 如果 **[索引鍵小數位數]** 和 **[索引鍵數目]** 都有指定，會優先使用 **[索引鍵數目]** 。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |[未指定]|不使用 **[索引鍵小數位數]** 屬性。|  
 |低|彙總可寫入大約 500,000 個索引鍵。|  
@@ -227,7 +227,7 @@ ms.locfileid: "71291762"
  **[計算相異小數位數]**  
  可選擇性地指定彙總可寫入之相異值的近似數目。 根據預設，此選項的值為 **[未指定]** 。 如果 **[計算相異小數位數]** 和 **[計算相異索引鍵]** 都有指定，會優先使用 **[計算相異索引鍵]** 。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |[未指定]|不使用 CountDistinctScale 屬性。|  
 |低|彙總可寫入大約 500,000 個相異值。|  

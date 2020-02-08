@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 4fe5ea36b2e60a3a0531e247acc303b70e0db801
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72929911"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux 上的 SQL Server 常見問題集 (FAQ)
@@ -83,7 +83,7 @@ ms.locfileid: "72929911"
 
 1. **我可以在適用於 Windows 10 的 Linux 子系統上安裝 SQL Server 嗎？**
 
-   資料分割 Windows 10 上執行的 Linux 目前不是 SQL Server 和相關工具的支援平台。
+   否。 Windows 10 上執行的 Linux 目前不是 SQL Server 和相關工具的支援平台。
 
 1. **SQL Server 可以針對資料檔案使用哪些 Linux 檔案系統？**
 
@@ -91,11 +91,11 @@ ms.locfileid: "72929911"
 
 1. **我可以下載安裝套件，以離線方式安裝 SQL Server 嗎？**
 
-   是的。 如需詳細資訊，請參閱[版本資訊](sql-server-linux-release-notes.md)中的套件下載連結。 另請檢閱[離線安裝的指示](sql-server-linux-setup.md#offline)。
+   是。 如需詳細資訊，請參閱[版本資訊](sql-server-linux-release-notes.md)中的套件下載連結。 另請檢閱[離線安裝的指示](sql-server-linux-setup.md#offline)。
 
 1. **我可以在 Linux 上自動安裝 SQL Server 嗎？**
 
-   是的。 如需自動安裝的討論，請參閱 [Linux 上的 SQL Server 安裝指引](sql-server-linux-setup.md#unattended)。 請參閱 [Red Hat](sample-unattended-install-redhat.md)、[SUSE Linux Enterprise Server](sample-unattended-install-suse.md) 和 [Ubuntu](sample-unattended-install-ubuntu.md) 的範例指令碼。 您也可以檢閱 SQL Server 客戶諮詢小組所建立的[這個範例指令碼](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/)。
+   是。 如需自動安裝的討論，請參閱 [Linux 上的 SQL Server 安裝指引](sql-server-linux-setup.md#unattended)。 請參閱 [Red Hat](sample-unattended-install-redhat.md)、[SUSE Linux Enterprise Server](sample-unattended-install-suse.md) 和 [Ubuntu](sample-unattended-install-ubuntu.md) 的範例指令碼。 您也可以檢閱 SQL Server 客戶諮詢小組所建立的[這個範例指令碼](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/)。
 
 ## <a name="tools"></a>工具
 
@@ -120,7 +120,7 @@ ms.locfileid: "72929911"
    您可以使用[系統動態管理檢視 (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 收集有關 SQL Server 的各種資訊類型，包括 Linux 處理序資訊。 您可以使用[查詢存放區](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)，改善查詢效能。 其他工具 (例如內建的[效能儀表板](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)) 可從 Windows 的 SQL Server Management Studio (SSMS) 遠端工作。
 
    > [!TIP]
-   > 改善效能的方式之一為適當地設定您的 Linux 作業系統和 SQL Server 執行個體。 如需詳細資訊，請參閱 [Linux 上的 SQL Server 效能最佳做法和組態方針](sql-server-linux-performance-best-practices.md)。
+   > 改善效能的方式之一為適當地設定您的 Linux 作業系統和 SQL Server 執行個體。 如需詳細資訊，請參閱 [Linux 上的 SQL Server 效能最佳做法和設定方針](sql-server-linux-performance-best-practices.md)。
 
 ## <a name="administration"></a>系統管理
 
@@ -134,7 +134,7 @@ ms.locfileid: "72929911"
 
 1. **Linux 上是否支援 Active Directory 驗證？**
 
-   是的。 如需詳細資訊，請參閱[在 Linux 上的 SQL Server 使用 Active Directory 驗證](sql-server-linux-active-directory-authentication.md)。
+   是。 如需詳細資訊，請參閱[在 Linux 上的 SQL Server 使用 Active Directory 驗證](sql-server-linux-active-directory-authentication.md)。
 
 1. **Linux 上是否支援 Always On 和叢集？**
 
@@ -150,7 +150,7 @@ ms.locfileid: "72929911"
 
 1. **我可以將資料從 Oracle 和其他資料庫引擎移轉到 Linux 上的 SQL Server 嗎？**
 
-   是的。 SSMA 支援從數種資料庫引擎類型進行移轉：Microsoft Access、DB2、MySQL、Oracle 和 SAP ASE (先前稱為 SAP Sybase ASE)。 如需如何使用 SSMA 的範例，請參閱[使用 SQL Server 移轉小幫手將 Oracle 結構描述移轉到 Linux 上的 SQL Server](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=/sql/toc/toc.json)。
+   是。 SSMA 支援從數種資料庫引擎類型進行移轉：Microsoft Access、DB2、MySQL、Oracle 和 SAP ASE (先前稱為 SAP Sybase ASE)。 如需如何使用 SSMA 的範例，請參閱[使用 SQL Server 移轉小幫手將 Oracle 結構描述移轉到 Linux 上的 SQL Server](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=/sql/toc/toc.json)。
 
 1. **SQL Server 檔案需要哪些權限？**
 

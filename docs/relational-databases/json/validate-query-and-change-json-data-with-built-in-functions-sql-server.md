@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8ddc5fb198a62374fc43ebacb5fa7423ac9fadd5
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096070"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>使用內建函數，驗證、查詢以及變更 JSON 資料 (SQL Server)
@@ -103,7 +103,7 @@ ORDER BY JSON_VALUE(f.doc, '$.address.city') DESC, JSON_VALUE(f.doc, '$.address.
 
 下表顯示此查詢的結果：
 
-| [屬性] | [縣/市] | County |
+| 名稱 | City | 郡/縣 |
 | --- | --- | --- |
 | AndersenFamily | NY | Manhattan |
 
@@ -143,7 +143,7 @@ FROM Families f
 
 下表顯示此查詢的結果：
 
-| [屬性] | [縣/市] | givenName | grade |
+| 名稱 | City | givenName | grade |
 | --- | --- | --- | --- |
 | AndersenFamily | NY | Jesse | 1 |
 | AndersenFamily | NY | Lisa | 8 |
@@ -194,7 +194,7 @@ FROM Families f
   
 在這個 JSON 文字範例中，資料成員 "a" 和 "c" 為字串值，而資料成員 "b" 是陣列。 **JSON_VALUE** 和 **JSON_QUERY** 傳回下列結果︰  
   
-|路徑|**JSON_VALUE** 傳回|**JSON_QUERY** 傳回|  
+|Path|**JSON_VALUE** 傳回|**JSON_QUERY** 傳回|  
 |-----------|-----------------------------|-----------------------------|  
 |**$**|NULL 或錯誤|`{ "a": "[1,2]", "b": [1,2], "c":"hi"}`|  
 |**$.a**|[1,2]|NULL 或錯誤|  

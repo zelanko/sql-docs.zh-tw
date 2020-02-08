@@ -11,10 +11,10 @@ ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e8f0c38d7dd712c5727fc5e9f7f62a35c1b886e1
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70280813"
 ---
 # <a name="create-an-encrypted-backup"></a>建立加密的備份
@@ -30,7 +30,7 @@ ms.locfileid: "70280813"
   
  使用下列步驟建立要存放到本機磁碟的資料庫加密備份。 此範例會使用稱為 MyTestDB 的使用者資料庫。  
   
-1.  **建立 master 資料庫的資料庫主要金鑰：** 選擇密碼以加密即將儲存於資料庫的主要金鑰副本。 連接到 Database Engine，再啟動新的查詢視窗，將下列範例複製並貼到新的查詢視窗中，然後按一下 [執行]。  
+1.  **建立 master 資料庫的資料庫主要金鑰：** 選擇密碼以加密即將儲存於資料庫的主要金鑰副本。 連接到 Database Engine，再啟動新的查詢視窗，將下列範例複製並貼到新的查詢視窗中，然後按一下 [執行]  。  
   
     ```  
     -- Creates a database master key.   
@@ -53,7 +53,7 @@ ms.locfileid: "70280813"
   
     ```  
   
-3.  **備份資料庫：** 指定要使用的加密演算法與憑證。 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  **備份資料庫：** 指定要使用的加密演算法與憑證。 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
 
     ```
     BACKUP DATABASE [MyTestDB]  
@@ -72,7 +72,7 @@ ms.locfileid: "70280813"
  如需加密受 EKM 保護的備份的範例，請參閱[使用 Azure 金鑰保存庫進行可延伸金鑰管理 &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。  
   
 ### <a name="backup-to-azure-storage-with-encryption"></a>將儲存到 Azure 儲存體的備份加密  
- 如果使用 [SQL Server 備份至 URL] 選項建立要儲存到 Azure 儲存體的備份，其加密步驟完全相同，但您必須使用 URL 作為目的地，並使用 SQL 認證向 Azure 儲存體進行驗證。 如果您要將 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 設定成使用加密選項，請參閱 [啟用 SQL Server Managed Backup 到 Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)。  
+ 如果使用 [SQL Server 備份至 URL]  選項建立要儲存到 Azure 儲存體的備份，其加密步驟完全相同，但您必須使用 URL 作為目的地，並使用 SQL 認證向 Azure 儲存體進行驗證。 如果您要將 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 設定成使用加密選項，請參閱 [啟用 SQL Server Managed Backup 到 Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)。  
   
  **必要條件：**  
   
@@ -80,7 +80,7 @@ ms.locfileid: "70280813"
   
 -   主要資料庫的資料主要金鑰，以及 SQL Server 執行個體的憑證或非對稱金鑰。 如需加密需求及權限的資訊，請參閱 [備份加密](../../relational-databases/backup-restore/backup-encryption.md)。  
   
-1.  **建立 SQL Server 認證：** 若要建立 SQL Server 認證，請連線到 Database Engine、開啟新的查詢視窗、複製並貼上下列範例，然後按一下 [執行]。  
+1.  **建立 SQL Server 認證：** 若要建立 SQL Server 認證，請連線到 Database Engine、開啟新的查詢視窗、複製並貼上下列範例，然後按一下 [執行]  。  
   
     ```  
     CREATE CREDENTIAL mycredential   
@@ -88,7 +88,7 @@ ms.locfileid: "70280813"
     , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **建立資料庫主要金鑰：** 選擇密碼以加密即將儲存於資料庫的主要金鑰副本。 連接到 Database Engine，再啟動新的查詢視窗，將下列範例複製並貼到新的查詢視窗中，然後按一下 [執行]。  
+2.  **建立資料庫主要金鑰：** 選擇密碼以加密即將儲存於資料庫的主要金鑰副本。 連接到 Database Engine，再啟動新的查詢視窗，將下列範例複製並貼到新的查詢視窗中，然後按一下 [執行]  。  
   
     ```  
     -- Creates a database master key.  
@@ -100,7 +100,7 @@ ms.locfileid: "70280813"
   
     ```  
   
-3.  **建立備份憑證：** 在 master 資料庫中建立備份憑證。 複製下列範例，並將其貼到查詢視窗中，然後按一下 [執行]。  
+3.  **建立備份憑證：** 在 master 資料庫中建立備份憑證。 複製下列範例，並將其貼到查詢視窗中，然後按一下 [執行]  。  
   
     ```  
     USE Master;  
@@ -111,7 +111,7 @@ ms.locfileid: "70280813"
   
     ```  
   
-4.  **備份資料庫：** 指定要使用的加密演算法與憑證。 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+4.  **備份資料庫：** 指定要使用的加密演算法與憑證。 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     BACKUP DATABASE [MyTestDB]  

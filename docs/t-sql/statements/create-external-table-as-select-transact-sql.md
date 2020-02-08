@@ -21,10 +21,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68073138"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
@@ -81,7 +81,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
  REJECT_VALUE = *reject_value*  
  指定在資料庫停止匯入之前，可允許發生匯入失敗的資料列值或百分比。  
   
- REJECT_TYPE = **value** | percentage  
+ REJECT_TYPE = **value** | 百分比  
  指明是要將 REJECT_VALUE 選項指定為常值還是百分比。  
   
  value  
@@ -100,17 +100,17 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 > [!NOTE]  
 >  由於資料庫會不時計算失敗的資料列百分比，因此實際的失敗資料列百分比可能超出 *reject_value*。  
   
- 範例  
+ 範例：  
   
- 此範例說明三個 REJECT 選項彼此如何互動。 例如，如果 REJECT_TYPE = percentage、REJECT_VALUE = 30 及 REJECT_SAMPLE_VALUE = 100，就可能發生下列案例：  
+ 此範例說明三個 REJECT 選項彼此如何互動。 例如，如果 REJECT_TYPE = percentage、REJECT_VALUE = 30 且 REJECT_SAMPLE_VALUE = 100，就可能發生下列案例：  
   
 -   資料庫會嘗試載入前 100 個資料列；其中有 25 個失敗，75 個成功。  
   
--   失敗的資料列百分比計算後為 25%，低於拒絕值 30%。 因此，不需要停止載入。  
+-   失敗資料列的百分比會計算為 25%，低於拒絕值 30%。 因此，不需要停止載入。  
   
 -   資料庫會嘗試載入接下來 100 個資料列；這次有 25 個成功，75 個失敗。  
   
--   失敗的資料列百分比重新計算後為 50%。 失敗的資料列百分比已超出 30% 拒絕值。  
+-   失敗資料列的百分比在重新計算後為 50%。 失敗資料列的百分比已超出 30% 的拒絕值。  
   
 -   在嘗試載入 200 個資料列之後，因為失敗的資料列達 50%，已超出指定的 30% 限制，所以載入失敗。  
   

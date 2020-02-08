@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f010a9fbd77d3b6a65103f3ed85a7cc521c279c9
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70009436"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>資料行存放區索引 - 設計指導
@@ -23,9 +23,9 @@ ms.locfileid: "70009436"
 
 資料行存放區索引設計的高階建議。 下列幾個良好的設計決策，有助您實現資料行存放區索引所設計的高資料壓縮和查詢效能。 
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>Prerequisites
 
-此文章假設您熟悉資料行存放區架構和術語。 如需詳細資訊，請參閱[資料行存放區索引 - 概觀](../../relational-databases/indexes/columnstore-indexes-overview.md)和[資料行存放區索引架構](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)。
+本文假設您熟悉資料行存放區架構和術語。 如需詳細資訊，請參閱[資料行存放區索引 - 概觀](../../relational-databases/indexes/columnstore-indexes-overview.md)和[資料行存放區索引架構](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)。
 
 ### <a name="know-your-data-requirements"></a>了解自身的資料需求
 在設計資料行存放區索引之前，請先盡可能了解您的資料需求。 例如，您可以思考下列問題的答案：
@@ -71,7 +71,7 @@ ms.locfileid: "70009436"
 
 ## <a name="add-b-tree-nonclustered-indexes-for-efficient-table-seeks"></a>新增 B 型樹狀結構非叢集索引，以保障有效率的資料表搜尋
 
-從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，您可以將非叢集 B 型樹狀結構索引建立為叢集資料行存放區索引上的次要索引。 資料行存放區索引發生變更時，會更新 B 型樹狀結構非叢集索引。 您可以使用這個強大的功能來發揮優勢。 
+從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，您可以將非叢集 B 型樹狀結構索引建立為叢集資料行存放區索引上的次要索引。 資料行存放區索引發生變更時，會更新 B 型樹狀結構非叢集索引。 您可以使用這項強大功能來發揮優勢。 
 
 藉由使用次要 B 型樹狀結構索引，您可以有效率地搜尋特定的資料列，而不需掃描所有資料列。  其他選項現在也可以使用。 例如，您可以在 B 型樹狀結構索引上使用 UNIQUE 條件約束，強制執行主索引鍵或外部索引鍵條件約束。 由於非唯一的值無法插入 B 型樹狀結構索引，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法將值插入資料行存放區。 
 
@@ -125,7 +125,7 @@ ms.locfileid: "70009436"
 
 除非您的資料量夠大，否則當資料行存放區索引含較少分割區 (相較於資料列存放區索引所用的分割區) 時執行效果最好。 如果每個資料分割區的資料列不足 1 百萬個，大部分的資料列可能會移至差異存放區中，而這個位置就無法享有資料行存放區壓縮的效能優勢。 例如，如果您將 1 百萬個資料列載入具有 10 個分割區的資料表，每個分割區收到 100,000 個資料列，則所有資料列都會移到差異資料列群組。 
 
-範例
+範例：
 * 將 1,000,000 個資料列載入一個分割區或非資料分割的資料表。 您會取得一個壓縮資料列群組，其中含有 1,000,000 個資料列。 這可以確保高資料壓縮與快速的查詢效能。
 * 將 1,000,000 個資料列平均載入 10 個分割區。 每個分割區取得 100,000 個資料列，這低於資料行存放區壓縮的最小臨界值。 因此，資料行存放區索引可能會有 10 個差異資料列群組，每個含有 100,000 個資料列。 您可以使用一些方法，強制將差異資料列群組放入資料行存放區。 不過，如果資料行存放區索引中僅有這些資料列，壓縮的資料列群組就會太小，而無法達到最佳壓縮和查詢效能。
 
@@ -168,19 +168,19 @@ ms.locfileid: "70009436"
 ## <a name="related-tasks"></a>相關工作  
 下列是建立和維護資料行存放區索引的工作。 
   
-|工作|參考主題|注意|  
+|Task|參考主題|注意|  
 |----------|----------------------|-----------|  
 |建立資料表作為資料行存放區。|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]開始，您可以建立資料表作為叢集資料行存放區索引。 您不需要先建立資料列存放區資料表，再將它轉換成資料行存放區。|  
 |建立具有資料行存放區索引的記憶體資料表。|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]開始，您可以建立具有資料行存放區索引的記憶體最佳化資料表。 建立資料表之後，也可以使用 ALTER TABLE ADD INDEX 語法來加入資料行存放區索引。|  
-|將資料列存放區資料表轉換成資料行存放區。|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|將現有的堆積或二進位樹狀目錄轉換成資料行存放區。 範例示範如何在執行此轉換時處理現有的索引及索引名稱。|  
-|將資料行存放區資料表轉換成資料列存放區。|[建立叢集索引 &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md#d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index) 或[將資料行存放區資料表轉換回資料列存放區堆積](../../t-sql/statements/create-columnstore-index-transact-sql.md#e-convert-a-columnstore-table-back-to-a-rowstore-heap) |此轉換通常並非必要，但有時您仍舊需要轉換。 範例示範如何將資料行存放區轉換成堆積或叢集索引。|   
+|將資料列存放區資料表轉換成資料行存放區。|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|將現有的堆積或二進位樹狀目錄轉換成資料行存放區。 範例示範如何在執行這項轉換時處理現有的索引及索引名稱。|  
+|將資料行存放區資料表轉換成資料列存放區。|[建立叢集索引X &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md#d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index) 或[將資料行存放區資料表轉換回資料列存放區堆積](../../t-sql/statements/create-columnstore-index-transact-sql.md#e-convert-a-columnstore-table-back-to-a-rowstore-heap) |此轉換通常並非必要，但有時您仍舊需要轉換。 範例示範如何將資料行存放區轉換成堆積或叢集索引。|   
 |在資料列存放區資料表上建立資料行存放區索引。|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|資料列存放區資料表可以有一個資料行存放區索引。  從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]開始，資料行存放區索引可以有一個篩選條件。 範例示範基本語法。|  
 |為作業分析建立高效能的索引。|[開始使用資料行存放區進行即時作業分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|描述如何建立互補資料行存放區和 B 型樹狀結構索引，讓 OLTP 查詢使用 B 型樹狀結構索引，而分析查詢使用資料行存放區索引。|  
 |為資料倉儲建立高效能的資料行存放區索引。|[資料行存放區索引 - 資料倉儲](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|描述如何在資料行存放區資料表上使用 B 型樹狀結構索引，建立高效能的資料倉儲查詢。|  
 |使用 B 型樹狀結構索引，在資料行存放區索引上強制執行主索引鍵條件約束。|[資料行存放區索引 - 資料倉儲](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|示範如何合併 B 型樹狀結構和資料行存放區索引，在資料行存放區索引上強制執行主索引鍵條件約束。|  
 |卸除資料行存放區索引|[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)|卸除資料行存放區索引，其使用 B 型樹狀結構索引所使用的標準 DROP INDEX 語法。 若卸除叢集資料行存放區索引，會將資料行存放區資料表轉換成堆積。|  
-|從資料行存放區索引刪除資料列|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|使用 [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) 刪除資料列。<br /><br /> **資料行存放區** 資料列：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將該資料列標示為邏輯刪除，但在重建索引之前，不會回收該資料列的實體儲存體。<br /><br /> **差異存放區** 資料列：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會以邏輯方式實際刪除該資料列。|  
-|更新資料行存放區索引中的資料列|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|使用 [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) 更新資料列。<br /><br /> **資料行存放區** 資料列：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將該資料列標示為邏輯刪除，然後將更新的資料列插入差異存放區中。<br /><br /> **差異存放區** 資料列： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會更新差異存放區中的該資料列。|  
+|從資料行存放區索引刪除資料列|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|使用 [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) 刪除資料列。<br /><br /> **資料行存放區** 資料列： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將該資料列標示為邏輯刪除，但在重建索引之前，不會回收該資料列的實體儲存體。<br /><br /> **差異存放區** 資料列： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會以邏輯方式實際刪除該資料列。|  
+|更新資料行存放區索引中的資料列|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|使用 [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) 更新資料列。<br /><br /> **資料行存放區** 資料列：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將該資料列標示為邏輯刪除，然後將更新的資料列插入差異存放區中。<br /><br /> **差異存放區** 資料列： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會更新差異存放區中的該資料列。|  
 |強制將差異存放區中的所有資料列移入資料行存放區。|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ...REBUILD<br /><br /> [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)|ALTER INDEX 搭配 REBUILD 選項會強制將所有資料列移入資料行存放區。|  
 |重組資料行存放區索引|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX ...REORGANIZE 會線上重組資料行存放區索引。|  
 |合併具有資料行存放區索引的資料表。|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)|

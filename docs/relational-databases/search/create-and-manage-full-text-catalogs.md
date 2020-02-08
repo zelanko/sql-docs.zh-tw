@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903856"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>建立及管理全文檢索目錄
@@ -66,7 +66,7 @@ GO
   
 下表列出與全文檢索目錄相關的屬性。 此資訊適用於管理全文檢索搜尋並對其進行疑難排解。 
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**AccentSensitivity**|區分腔調字設定。|
 |**ImportStatus**|是否正在匯入全文檢索目錄。|  
@@ -119,5 +119,5 @@ GO
   
 4.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>後續步驟
 [建立及管理全文檢索索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)

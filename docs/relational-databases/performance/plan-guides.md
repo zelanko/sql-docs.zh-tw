@@ -20,10 +20,10 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 595ef410a631da1eb1d71e7b2d20c75fd09e4bb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113484"
 ---
 # <a name="plan-guides"></a>計畫指南
@@ -158,7 +158,7 @@ where SalesOrderID =  @so_id',
   
 ## <a name="related-tasks"></a>相關工作  
   
-|工作|主題|  
+|Task|主題|  
 |----------|-----------|  
 |描述如何建立計畫指南。|[建立新的計畫指南](../../relational-databases/performance/create-a-new-plan-guide.md)|  
 |描述如何建立參數化查詢的計畫指南。|[建立參數化查詢的計畫指南](../../relational-databases/performance/create-a-plan-guide-for-parameterized-queries.md)|  

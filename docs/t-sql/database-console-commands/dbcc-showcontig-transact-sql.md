@@ -24,10 +24,10 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 0e1fff3c60dab7e8fe055753c125fddf70abb1df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039057"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
@@ -68,7 +68,7 @@ DBCC SHOWCONTIG
  *index_name* | *index_id*  
  檢查片段資訊的索引。 若未指定，陳述式會處理指定之資料表或檢視表的基本索引。 若要取得索引識別碼，請使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目錄檢視。  
   
- 取代所有提及的  
+ WITH  
  指定 DBCC 陳述式所傳回之資訊類型的選項。  
   
  FAST  
@@ -89,7 +89,7 @@ DBCC SHOWCONTIG
 ## <a name="result-sets"></a>結果集  
 下表描述結果集中的資訊。
   
-|統計資料|Description|  
+|統計資料|描述|  
 |---|---|
 |**掃描頁數**|資料表或索引中的頁數。|  
 |**掃描範圍**|資料表或索引中的範圍數目。|  
@@ -110,7 +110,7 @@ DBCC SHOWCONTIG
   
 當指定 TABLERESULTS 時，DBCC SHOWCONTIG 會傳回下列資料行以及上一表格所描述的 9 個資料行。
   
-|統計資料|Description|  
+|統計資料|描述|  
 |---|---|
 |**Object Name**|所處理之資料表或檢視的名稱。|  
 |**ObjectId**|物件名稱的識別碼。|  
@@ -142,7 +142,7 @@ DBCC SHOWCONTIG
 |**AverageRecordSize**|**ExtentFragmentation**|  
 |**ForwardedRecords**||  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 當指定 *index_id* 時，DBCC SHOWCONTIG 陳述式會往返於指定索引之分葉層級的頁面鏈結。 如果只指定 *table_id*，或是 *index_id* 為 0，便會掃描指定資料表的資料頁面。 這個作業僅需要意圖共用 (IS) 資料表鎖定。 這個方式可以執行所有更新和插入，但需要獨佔 (X) 資料表鎖定者除外。 這可讓您在執行速度和充分並行傳回的統計資料數目之間進行取捨。 不過，如果這個命令只用來量測片段化，我們建議您使用 WITH FAST 選項以獲得最佳效能。 快速掃描不會讀取索引的分葉或資料層級頁面。 WITH FAST 選項不會套用到堆積。
   
 ## <a name="restrictions"></a>限制  
@@ -198,7 +198,7 @@ DBCC SHOWCONTIG ('HumanResources.Employee');
 GO  
 ```  
   
-### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. 利用 OBJECT_ID 取得資料表識別碼，利用 sys.indexes 取得索引識別碼  
+### <a name="b-using-object_id-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. 利用 OBJECT_ID 取得資料表識別碼，利用 sys.indexes 取得索引識別碼  
 下列範例會利用 `OBJECT_ID` 和 `sys.indexes` 目錄檢視來取得 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中 `Production.Product` 資料表之 `AK_Product_Name` 索引的資料表識別碼和索引識別碼。
   
 ```sql  

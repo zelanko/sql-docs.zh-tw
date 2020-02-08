@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 06708cc6770779f22bea45eddacba5a5d29f9092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082132"
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out 管理員
@@ -57,7 +57,7 @@ Scale Out Manager 是一種管理工具，可讓您透過單一應用程式管�
 ### <a name="view-scale-out-master-status"></a>檢視 Scale Out 主機狀態
 Scale Out 主機的狀態會顯示在 [儀表板]  頁面。
 
-![入口網站的儀表板](media/portal-dashboard-new.PNG)
+![入口網站儀表板](media/portal-dashboard-new.PNG)
 
 ### <a name="view-scale-out-worker-status"></a>檢視 Scale Out 背景工作狀態
 Scale Out 背景工作的狀態會顯示在 [背景工作管理員]  頁面。 您可以選取每個背景工作，以查看個別狀態。

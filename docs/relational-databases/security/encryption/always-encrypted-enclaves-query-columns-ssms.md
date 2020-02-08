@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6bee04f4a794a503b89b73d4ef4a6a1cef897b4b
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595593"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves-with-ssms"></a>使用具有安全記憶體保護區的 Always Encrypted 與 SSMS 查詢資料行
@@ -30,7 +30,7 @@ ms.locfileid: "73595593"
 - 您需要 SSMS 18.3 版或更高版本。
 - 請確定您是在查詢視窗中執行查詢，而該查詢視窗會透過已啟用 Always Encrypted 和記憶體保護區計算的連線來利用安全記憶體保護區。 如需詳細指示，請參閱[教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted](../tutorial-getting-started-with-always-encrypted-enclaves.md) 和[針對資料庫連接啟用和停用 Always Encrypted](always-encrypted-query-columns-ssms.md#en-dis)。
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 - [使用具有安全記憶體保護區的 Always Encrypted 開發應用程式](always-encrypted-enclaves-client-development.md)
 
 ## <a name="see-also"></a>另請參閱  

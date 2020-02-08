@@ -17,10 +17,10 @@ ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d1e4cddbdad631a5602096f92915a4fe78b23d67
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298009"
 ---
 # <a name="conditional-split-transformation"></a>條件式分割轉換
@@ -28,7 +28,7 @@ ms.locfileid: "71298009"
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  「條件式分割」轉換可根據資料的內容，將資料列傳送至不同的輸出。 「條件式分割」轉換的實作與程式設計語言中的 CASE 決策結構類似。 轉換會評估運算式，並根據結果將資料列導向指定的輸出。 此轉換亦提供預設輸出，如此一來，即使資料列未符合任何運算式，仍會導向預設輸出。  
+  「條件式分割」轉換可根據資料的內容，將資料列傳送至不同的輸出。 條件式分割轉換的實作類似程式設計語言中的 CASE 決策結構。 轉換會評估運算式，並根據結果將資料列導向指定的輸出。 此轉換也提供預設輸出，因此若某個資料列不符合任何運算式，它會被導向到預設輸出。  
   
 ## <a name="configuration-of-the-conditional-split-transformation"></a>設定條件式分割轉換  
  您可以利用下列方式設定「條件式分割」轉換：  
@@ -59,7 +59,7 @@ ms.locfileid: "71298009"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -79,13 +79,13 @@ ms.locfileid: "71298009"
 >  條件式分割轉換會將每個輸入資料列導向至單一輸出。 如果輸入多重條件，轉換會將每個資料列傳送到條件為 True 的第一個輸出，而略過該資料列後續的條件。 如果您需要連續評估數個條件，就可能需要在資料流程中串連多重條件式分割轉換。  
   
 ### <a name="options"></a>選項。  
- **單**  
+ **Order**  
  選取資料列並使用右邊的方向鍵來變更評估運算式的順序。  
   
  **輸出名稱**  
  提供輸出名稱。 預設為已編號的案例清單；然而，您可選擇任何唯一的、描述性名稱。  
   
- **條件**  
+ **Condition**  
  輸入運算式或從可用的資料行、變數、函數以及運算子的清單中拖曳來建立運算式。  
   
  此屬性的值可以使用屬性運算式指定。  

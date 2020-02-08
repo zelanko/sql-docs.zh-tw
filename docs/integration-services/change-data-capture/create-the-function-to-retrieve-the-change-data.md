@@ -13,10 +13,10 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 43809c2be4dca62d150be31f62b833b08a2569b7
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251981"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>建立函數以擷取變更資料
@@ -210,17 +210,17 @@ go
 ### <a name="retrieving-additional-metadata-with-the-change-data"></a>擷取包含異動資料的其他中繼資料  
  雖然之前顯示之使用者建立的資料表值函式僅使用 **__$operation** 資料行，但 **cdc.fn_cdc_get_net_changes_<capture_instance>** 函式會針對每個變更資料列傳回四個中繼資料。 如果您要在資料流程中使用這些值，您可以傳回它們，當做資料表值包裝函數的其他資料行。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|與變更之認可交易相關聯的 LSN。<br /><br /> 在相同交易中認可的所有變更都會共用相同的認可 LSN。 例如，如果來源資料表上的更新作業修改了兩個不同的資料列，此變更資料表將會包含四個資料列 (其中兩個是舊值，而另外兩個是新值)，而且每個資料列都包含相同的 **__$start_lsn** 值。|  
 |**__$seqval**|**binary(10)**|用來排序交易內資料列變更的序列值。|  
 |**__$operation**|**int**|與變更相關聯的資料操作語言 (DML) 作業。 可以是下列其中一項：<br /><br /> 1 = 刪除<br /><br /> 2 = 插入<br /><br /> 3 = 更新 (更新作業之前的值)。<br /><br /> 4 = 更新 (更新作業之後的值)。|  
 |**__$update_mask**|**varbinary(128)**|位元遮罩，可根據變更資料表的資料行序數識別這些變更的資料行。 如果您必須判斷已經變更的資料行，可以檢查這個值。|  
-|**\<擷取的來源資料表資料行>**|變化|這個函數所傳回的其餘資料行都是建立擷取執行個體時，在來源資料表中識別成擷取資料行的資料行。 如果擷取的資料行清單中沒有以序數指定任何資料行，就會傳回來源資料表中的所有資料行。|  
+|**\<擷取的來源資料表資料行>**|視情況而異|這個函數所傳回的其餘資料行都是建立擷取執行個體時，在來源資料表中識別成擷取資料行的資料行。 如果擷取的資料行清單中沒有以序數指定任何資料行，就會傳回來源資料表中的所有資料行。|  
   
  如需詳細資訊，請參閱 [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)。  
   
-## <a name="next-step"></a>下一個步驟  
+## <a name="next-step"></a>後續步驟  
  建立查詢變更資料的資料表值函式後，下一個步驟是開始在封裝中設計資料流程。  
   
  **下一個主題：** [擷取與了解變更資料](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  

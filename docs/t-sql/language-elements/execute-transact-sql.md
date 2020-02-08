@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981949"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
@@ -266,7 +266,7 @@ Execute a character string
  AS \<context_specification>  
  指定執行陳述式的內容。  
   
- 登入  
+ LOGIN  
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
  指定您要模擬的內容是登入。 模擬範圍是伺服器。  
@@ -327,7 +327,7 @@ Execute a character string
   
  執行期間傳回的實際結果集可能在下列方面不同於透過 WITH RESULT SETS 選項所定義的結果：結果集數目、資料行數目、資料行名稱、Null 屬性和資料類型。 如果結果集數目不同，就會發生錯誤並且中止批次。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  您可以使用 *value* 或 @*parameter_name*=*value* 來提供參數。 來提供參數。參數不是交易的一部分；因此，如果交易中的參數變更之後再回復，參數值並不會還原為之前的值。 傳回呼叫端的值一定是模組傳回時的值。  
   
  當一個模組呼叫另一個模組，或者參考 Common Language Runtime (CLR) 模組、使用者定義類型或彙總來執行 Managed 程式碼時，就會產生巢狀結構。 當被呼叫的模組或 Managed 程式碼參考開始執行時，巢狀層級便開始累加；而當被呼叫的模組或 Managed 程式碼參考完成時，就開始遞減。 如果超過 32 個巢狀層級上限，完整的呼叫鏈便會失敗。 目前巢狀層級是儲存在 @@NESTLEVEL 系統函數中。  
@@ -370,7 +370,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
   
  雖然 CompanyDomain\SqlUser1 擁有透過 SQLUsers 群組中的成員資格，對資料庫進行存取的權限，但是 `EXECUTE @string_variable AS USER = 'CompanyDomain\SqlUser1'` 陳述式會失敗，因為 `CompanyDomain\SqlUser1` 並未以主體形式存在於資料庫中。  
   
-### <a name="best-practices"></a>最佳作法  
+### <a name="best-practices"></a>最佳做法  
  指定一個登入或使用者，它具有執行在陳述式或模組中定義的作業時所需要的最低權限。 例如，如果只需要資料庫層級權限，就不要指定具有伺服器層級權限的登入名稱；或者除非需要其權限，否則不要指定資料庫擁有者帳戶。  
   
 ## <a name="permissions"></a>權限  

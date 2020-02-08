@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 15c3406d6745802ece620942bf51b23c4d3643ee
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727451"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>在 SQL Server 機器學習服務中使用預存程序以便讓 R 程式碼能夠運作
@@ -32,7 +32,7 @@ ms.locfileid: "73727451"
 
 ## <a name="guidelines-for-optimizing-r-code-for-sql"></a>將適用於 SQL 的 R 程式碼最佳化的方針
 
-如果事先在 R 或 Python 程式碼中進行一些最佳化，則在 SQL 中轉換 R 程式碼會比較容易。 這些最佳化包括避免使用會造成問題的資料類型、避免進行不必要的資料轉換，以及將 R 程式碼重寫為可輕易參數化的單一函式呼叫。 如需詳細資訊，請參閱：
+如果事先在 R 或 Python 程式碼中進行一些最佳化，則在 SQL 中轉換 R 程式碼會比較容易。 這些最佳化包括避免使用會造成問題的資料類型、避免進行不必要的資料轉換，以及將 R 程式碼重寫為可輕易參數化的單一函式呼叫。 如需詳細資訊，請參閱
 
 + [R 程式庫和資料類型](r-libraries-and-data-types.md)
 + [轉換 R 程式碼以在 R Services 中使用](converting-r-code-for-use-in-sql-server.md)

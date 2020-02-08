@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 810dfbc7230171f59cb8f1df04ab1c7f4774e044
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907249"
 ---
 # <a name="modify-a-stored-procedure"></a>修改預存程序
@@ -37,7 +37,7 @@ ms.locfileid: "72907249"
   
  如果先前的程序定義是利用 WITH ENCRYPTION 或 WITH RECOMPILE 來建立的，只有在 ALTER PROCEDURE 陳述式包括這些選項時，才會啟用這些選項。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要程序的 ALTER PROCEDURE 權限。  
@@ -60,7 +60,7 @@ ms.locfileid: "72907249"
   
 4.  修改預存程序的文字。  
   
-5.  若要測試語法，請在 [查詢]  功能表上按一下 [剖析]  。  
+5.  若要測試語法，請在 **[查詢]** 功能表上按一下 **[剖析]** 。  
   
 6.  若要將所做的修改儲存至程序定義，請在 **[查詢]** 功能表上按一下 **[執行]** 。  
   

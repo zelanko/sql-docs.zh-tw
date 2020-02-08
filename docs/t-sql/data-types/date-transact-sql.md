@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ae7ab885ced505ccf7da03d388e8063c276fc0d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113705"
 ---
 # <a name="date-transact-sql"></a>日期 (Transact-SQL)
@@ -36,10 +36,10 @@ ms.locfileid: "68113705"
   
 ## <a name="date-description"></a>日期描述
   
-|屬性|ReplTest1|  
+|屬性|值|  
 |--------------|-----------|  
 |語法|**date**|  
-|使用方式|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
+|使用量|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
 |預設的字串常值格式<br /><br /> (用於下層用戶端)|YYYY-MM-DD<br /><br /> 如需詳細資訊，請參閱下列的＜下層用戶端的回溯相容性＞一節。|  
 |範圍|0001-01-01 到 9999-12-31 (Informatica 則為 1582-10-15 到 9999-12-31)<br /><br /> 西元 1 年 1 月 1 日到西元 9999 年 12 月 31 日 (在計算機科學則為西元 1582 年 10 月 15 日到西元 9999 年 12 月 31 日)|  
 |元素範圍|YYYY 是代表年份的四位數，範圍介於 0001 至 9999 之間。 若是 Informatica，YYYY 限於 1582 至 9999 的範圍之間。<br /><br /> MM 是代表指定年份中某個月份的兩位數，範圍介於 01 至 12 之間。<br /><br /> DD 是代表指定月份中某個日期的兩位數，範圍介於 01 至 31 之間 (視月份而定)。|  
@@ -49,7 +49,7 @@ ms.locfileid: "68113705"
 |儲存體結構|1 個 3 位元組的整數會儲存日期。|  
 |精確度|一天|  
 |預設值|1900-01-01<br /><br /> 這個值會用於從 **time** 隱含轉換成 **datetime2** 或 **datetimeoffset** 的附加日期部分。|  
-|日曆|西曆|  
+|Calendar|西曆|  
 |使用者自訂的小數秒數有效位數|否|  
 |時區位移感知和保留|否|  
 |日光節約感知|否|  
@@ -57,27 +57,27 @@ ms.locfileid: "68113705"
 ## <a name="supported-string-literal-formats-for-date"></a>date 支援的字串常值格式
 下表顯示 **date** 資料類型的有效字串常值格式。
   
-|數值|Description|  
+|數值|描述|  
 |-------------|-----------------|  
 |mdy<br /><br /> [m]m/dd/[yy]yy<br /><br /> [m]m-dd-[yy]yy<br /><br /> [m]m.dd.[yy]yy<br /><br /> myd<br /><br /> mm/[yy]yy/dd<br /><br /> mm-[yy]yy/dd<br /><br /> [m]m.[yy]yy.dd<br /><br /> dmy<br /><br /> dd/[m]m/[yy]yy<br /><br /> dd-[m]m-[yy]yy<br /><br /> dd.[m]m.[yy]yy<br /><br /> dym<br /><br /> dd/[yy]yy/[m]m<br /><br /> dd-[yy]yy-[m]m<br /><br /> dd.[yy]yy.[m]m<br /><br /> ymd<br /><br /> [yy]yy/[m]m/dd<br /><br /> [yy]yy-[m]m-dd<br /><br /> [yy]yy-[m]m-dd|[m]m、dd 和 [yy]yy 在字串中代表月、日和年，以斜線 (/)、連字號 (-) 或句號 (.) 為分隔符號。<br /><br /> 僅支援四或兩位數年份。 請盡可能使用四位數年份。 若要指定介於 0001 到 9999 之間的整數來代表截止年份，用於將兩位數年份解譯為四位數年份，請使用[設定 two digit year cutoff 伺服器組態選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。<br /><br /> **注意！** 若是 Informatica，YYYY 限於 1582 至 9999 的範圍之間。<br /><br /> 兩位數年份若小於或等於截止年份的後兩位數，表示它與截止年份同一世紀。 兩位數年份若大於截止年份的後兩位數，表示它在截止年份的前一個世紀。 例如，如果兩位數年份的截止是預設值 2049，則兩位數年份 49 就會被解譯為 2049，而兩位數年份 50 則解譯為 1950。<br /><br /> 預設的日期格式由目前的語言設定決定。 您可以使用 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 和 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 陳述式來變更日期格式。<br /><br /> **date** 不支援 **ydm** 格式。|  
   
-|字母順序|Description|  
+|字母順序|描述|  
 |------------------|-----------------|  
 |mon [dd][,] yyyy<br /><br /> mon dd[,] [yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon** 代表目前語言中指定的完整月份名稱或月份縮寫。 逗號是選擇性且會忽略大小寫。<br /><br /> 若要避免模糊不清，請使用四位數年份。<br /><br /> 如果漏了日的部分，就用當月第一天。|  
   
-|ISO 8601|Description|  
+|ISO 8601|描述|  
 |--------------|----------------|  
 |YYYY-MM-DD<br /><br /> YYYYMMDD|與 SQL 標準相同。 這是唯一定義為國際標準的格式。|  
   
-|未分隔|Description|  
+|未分隔|描述|  
 |-----------------|-----------------|  
 |[yy]yymmdd<br /><br /> yyyy[mm][dd]|您可以使用四位數、六位數或八位數指定 **date** 資料。 六位數或八位數字串一律會解譯成 **ymd**。 月和日一定是兩位數。 四位數字串則會解譯為年份。|  
   
-|ODBC|Description|  
+|ODBC|描述|  
 |----------|-----------------|  
 |{ d 'yyyy-mm-dd' }|ODBC API 專用。|  
   
-|W3C XML 格式|Description|  
+|W3C XML 格式|描述|  
 |--------------------|-----------------|  
 |yyyy-mm-ddTZD|支援 XML/SOAP 使用方式。<br /><br /> TZD 是時區指示項 (Z 或 + hh: mm 或 -hh:mm)：<br /><br /> -   hh:mm 表示時區時差。 hh 表示時區時差中的兩位數時數，範圍介於 0 至 14 之間。<br />-   MM 是代表時區時差中額外分鐘數的兩位數，範圍介於 0 至 59 之間。<br />-   + (加號) 或 - (減號) 是時區時差的必要符號。 這個符號指出，若要取得當地時間，則必須在國際標準時間 (UTC) 中新增或扣除時區位移。 時區位移的有效範圍介於 -14:00 至 +14:00 之間。|  
   

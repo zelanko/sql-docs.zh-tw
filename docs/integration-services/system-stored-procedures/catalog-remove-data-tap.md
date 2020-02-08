@@ -11,10 +11,10 @@ ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bc76e5f5d710dfe088a27376af4f3938257a0ec7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296823"
 ---
 # <a name="catalogremove_data_tap"></a>catalog.remove_data_tap 
@@ -36,7 +36,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  [ @data_tap_id = ] *data_tap_id*  
  使用 catalog.add_data_tap 預存程序來建立之資料點選的唯一識別碼。 *data_tap_id* 是 **bigint**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果封裝包含多個具有相同名稱的資料流程工作，則會將資料點選加入具有給定名稱的第一個資料流程工作。  
   
 ## <a name="return-codes"></a>傳回碼  
@@ -47,7 +47,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
 ## <a name="result-set"></a>結果集  
  None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  若要移除資料點選，執行的執行個體必須處於已建立狀態 ([catalog.operations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 檢視之 [狀態]  資料行中的值為 1)。  
   
 ## <a name="permissions"></a>權限  

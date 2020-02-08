@@ -11,17 +11,17 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: f93711983eb32a979e47941883e968b52e03459c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73532537"
 ---
 # <a name="schema-compare-extension"></a>結構描述比較延伸模組
 結構描述比較延伸模組提供容易使用的體驗，比較兩項資料庫定義，並將來源的差異性套用至目標。
 
 
-## <a name="features"></a>功能
+## <a name="features"></a>特性
 
 * 比較兩個 dacpac 檔案或資料庫的結構描述
 * 以必須針對目標採取的動作集來檢視結果，以比對來源

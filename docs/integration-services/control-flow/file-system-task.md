@@ -16,10 +16,10 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f170a279f591b496b4c69cbb80b4c719954c30ba
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294131"
 ---
 # <a name="file-system-task"></a>檔案系統工作
@@ -36,7 +36,7 @@ ms.locfileid: "71294131"
 ## <a name="predefined-file-system-operations"></a>預先定義的檔案系統作業  
  「檔案系統」工作包括一組預先定義的作業。 下表描述這些作業。  
   
-|作業|Description|  
+|作業|描述|  
 |---------------|-----------------|  
 |複製目錄|將資料夾從一個位置複製到另一個。|  
 |複製檔案|將檔案從一個位置複製到另一個。|  
@@ -58,7 +58,7 @@ ms.locfileid: "71294131"
 ## <a name="custom-log-entries-available-on-the-file-system-task"></a>檔案系統工作上可用的自訂記錄項目  
  下表描述「檔案系統」工作的自訂記錄項目。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|Description|  
+|記錄項目|描述|  
 |---------------|-----------------|  
 |**FileSystemOperation**|報告工作執行的作業。 記錄項目會在檔案系統作業開始時寫入，項目中包含有關來源和目的地的資訊。|  
   
@@ -99,7 +99,7 @@ ms.locfileid: "71294131"
  **IsDestinationPathVariable**  
  指出目的地路徑是否儲存在變數中。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**True**|目的地路徑儲存在變數中。 選取這個值會顯示動態選項 [DestinationVariable]  。|  
 |**False**|目的地路徑是在檔案連接管理員中指定。 選取這個值會顯示動態選項 [DestinationConnection]  。|  
@@ -119,7 +119,7 @@ ms.locfileid: "71294131"
  **運算**  
  選取要執行的檔案系統作業。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**複製目錄**|複製目錄。 選取此值會顯示來源與目的地的動態選項。|  
 |**複製檔案**|複製檔案。 選取此值會顯示來源與目的地的動態選項。|  
@@ -135,7 +135,7 @@ ms.locfileid: "71294131"
  **IsSourcePathVariable**  
  指出目的地路徑是否儲存在變數中。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1||  
+|值||  
 |-----------|-|  
 |**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 [SourceVariable]  。|  
 |**False**|目的地路徑是在檔案連接管理員中指定。 選取這個值會顯示動態選項 [DestinationVariable]  。|  
@@ -177,7 +177,7 @@ ms.locfileid: "71294131"
  **ReadOnly**  
  指出檔案是否為唯讀。  
   
- **Archive**  
+ **封存**  
  指出檔案或目錄是否準備就緒，可供封存。  
   
  **系統**  

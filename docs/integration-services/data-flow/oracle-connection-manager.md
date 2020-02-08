@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 092760fdd99a6840e77278fce96e2d321ea4edc9
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69553252"
 ---
 # <a name="oracle-connection-manager"></a>Oracle 連線管理員
@@ -30,7 +30,7 @@ Oracle 連線管理員設定變更將會在執行階段由 Integration Services 
 
 ![連線管理員](media/oracle-connection-manager.png)
 
-### <a name="options"></a>選項
+### <a name="options"></a>選項。
 
 #### <a name="connection-manager-information"></a>連線管理員資訊
 
@@ -40,7 +40,7 @@ Oracle 連線管理員設定變更將會在執行階段由 Integration Services 
 
 輸入 Oracle 連線的名稱。 預設名稱為「Oracle 連線管理員」。 
 
-**描述** 
+**說明** 
 
 輸入連線的描述。 這是選擇性的輸入。
 
@@ -78,9 +78,9 @@ Oracle 連線管理員中有下列自訂連線管理員屬性：
 
 - **EnableDetailedTracing**：未使用。
 
-- **OracleHome**：指定連接器要使用的 32 位元 Oracle Home 名稱或資料夾。 (選擇性)
+- **OracleHome**：指定連接器要使用的 32 位元 Oracle Home 名稱或資料夾。 (選用)
 
-- **OracleHome64**：以 64 位元模式執行時，指定連接器要使用的 64 位元 Oracle Home 名稱或資料夾。 (選擇性)
+- **OracleHome64**：以 64 位元模式執行時，指定連接器要使用的 64 位元 Oracle Home 名稱或資料夾。 (選用)
 
 自訂屬性不會列在 [Oracle 連線管理員編輯器] 中。 若要設定 **OracleHome** 與 **OracleHome64** 屬性：
 

@@ -18,10 +18,10 @@ ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a0a912e4ab228617537e9c28e9a5cecc4a0278fe
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278136"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (geometry 資料類型)
@@ -43,14 +43,14 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
  *SRID*  
  這是 **int** 運算式，代表要傳回之 **geometryLineString** 執行個體的空間參考識別碼 (SRID)。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
  CLR 傳回型別：**SqlGeometry**  
   
  OGC 類型：**LineString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 如果輸入的格式不正確，此方法將會擲回 **FormatException**。 不支援來自 SQL 規格 1.2.1 版之開放地理空間協會 (OGC) 簡單功能的三維與已測量幾何 WKT 標記法。 查看範例以了解支援的 Z (高度) 與 M (測量) 值表示法。
   
 ## <a name="examples"></a>範例  

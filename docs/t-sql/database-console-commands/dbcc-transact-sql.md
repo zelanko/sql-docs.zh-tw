@@ -37,10 +37,10 @@ ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7f0d3d07f6f4a0ef3a35991c4805c478ed702bdf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982437"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
@@ -96,7 +96,7 @@ DBCC 命令有輸入參數和傳回值。 所有 DBCC 命令參數都可以接�
   
 進度單位的定義會隨著 DBCC 命令目前的執行階段而不同。 有時候，進度會以資料庫頁面的資料粒度來報告；在其他階段，則以單一資料庫或配置修復的資料粒度來報告。 下表描述每個執行階段，以及命令報告進度的資料粒度。
   
-|執行階段|Description|進度報告資料粒度|  
+|執行階段|描述|進度報告資料粒度|  
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|在這個階段中，會檢查資料庫中各物件的邏輯和實體一致性。|資料庫頁面層級所報告的進度。<br /><br /> 每檢查 1000 個資料庫頁面，就會更新進度報告值。|  
 |DBCC TABLE REPAIR|如果指定了 REPAIR_FAST、REPAIR_REBUILD 或 REPAIR_ALLOW_DATA_LOSS，而且有必須加以修復的物件錯誤，就會在這個階段期間執行資料庫修復。|個別修復層級所報告的進度。<br /><br /> 每次修復完成，就會更新計數器。|  

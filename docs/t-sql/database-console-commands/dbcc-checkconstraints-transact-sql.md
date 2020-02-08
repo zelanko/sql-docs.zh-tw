@@ -24,10 +24,10 @@ ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 4fb6bc14742d4aa25c47af59bc1be72ebfffa5a4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982401"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
@@ -57,7 +57,7 @@ DBCC CHECKCONSTRAINTS
  這是要檢查的資料表或條件約束。 指定 *table_name* 或 *table_id* 時，就會檢查該資料表所有已啟用的條件約束。 指定 *constraint_name* 或 *constraint_id* 時，只會檢查該條件約束。 如果未指定資料表識別碼，也未指定條件約束識別碼，就會檢查目前資料庫的所有資料表中所有已啟用的條件約束。  
  條件約束名稱會唯一識別它所屬的資料表。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
   
- 取代所有提及的  
+ WITH  
  啟用要指定的選項。  
   
  ALL_CONSTRAINTS  
@@ -69,7 +69,7 @@ DBCC CHECKCONSTRAINTS
  NO_INFOMSGS  
  隱藏所有參考訊息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 DBCC CHECKCONSTRAINTS 會針對資料表的所有 FOREIGN KEY 條件約束和 CHECK 條件約束，建構和執行查詢。
   
 例如，外部索引鍵查詢的格式如下：
@@ -92,7 +92,7 @@ DBCC CHECKCONSTRAINTS 會檢查 FOREIGN KEY 和 CHECK 條件約束的完整性�
   
 如果指定 *table_name* 或 *table_id*，並已針對系統版本設定啟用，DBCC CHECKCONSTRAINTS 也會在指定的資料表上執行時態性資料一致性檢查。 未指定 *NO_INFOMSGS* 時，此命令會在輸出的獨立一行中傳回每個一致性違規。 輸出的格式將為 ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...)AND \<時態表記錄的問題>。
   
-|檢查|檢查失敗時輸出中的其他資訊|  
+|勾選|檢查失敗時輸出中的其他資訊|  
 |-----------|-----------------------------------------------|  
 |PeriodEndColumn ≥ PeriodStartColumn (目前)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
 |PeriodEndColumn ≥ PeriodStartColumn (目前, 歷程記錄)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
@@ -105,11 +105,11 @@ DBCC CHECKCONSTRAINTS 會檢查 FOREIGN KEY 和 CHECK 條件約束的完整性�
 ## <a name="result-sets"></a>結果集  
 DBCC CHECKCONSTRAINTS 會傳回含有下列資料行的資料列集。
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |資料表名稱|**varchar**|資料表的名稱。|  
 |Constraint Name|**varchar**|違反的條件約束名稱。|  
-|位置|**varchar**|用來識別違反條件約束的一個或多個資料列的資料行值指派。<br /><br /> 在查詢違反條件約束的資料列之 SELECT 陳述式的 WHERE 子句中，可以使用這個資料行中的值。|  
+|Where|**varchar**|用來識別違反條件約束的一個或多個資料列的資料行值指派。<br /><br /> 在查詢違反條件約束的資料列之 SELECT 陳述式的 WHERE 子句中，可以使用這個資料行中的值。|  
   
 ## <a name="permissions"></a>權限  
 需要 **系統管理員** 固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。

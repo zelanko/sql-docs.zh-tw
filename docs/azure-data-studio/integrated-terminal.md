@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959531"
 ---
 # <a name="integrated-terminal"></a>整合式終端
@@ -93,7 +93,7 @@ ms.locfileid: "67959531"
 
 以下是可在整合式終端內快速巡覽的鍵盤快速鍵：
 
-|索引鍵|命令|  
+|Key|Command|  
 |---|---|  
 |**Ctrl+\`**|顯示整合式終端|  
 |**Ctrl+Shift+\`**|建立新的終端|  
@@ -132,7 +132,7 @@ ms.locfileid: "67959531"
 * Mac：**Cmd+C** 和 **Cmd+V**
 * Windows：**Ctrl+C** 和 **Ctrl+V**
 
-### <a name="find"></a>尋找
+### <a name="find"></a>Find
 
 整合式終端具有基本的尋找功能，可透過 **Ctrl+F** 加以觸發。
 

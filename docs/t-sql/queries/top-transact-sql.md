@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948242"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
@@ -67,7 +67,7 @@ WITH TIES
   
 只限於 SELECT 陳述式中，且只有在您也指定了 ORDER BY 子句時，才能搭配 WITH TIES 引數指定 TOP 子句。 有同值記錄的傳回順序是任意的。 ORDER BY 不會影響此規則。  
   
-## <a name="best-practices"></a>最佳作法  
+## <a name="best-practices"></a>最佳做法  
 在 SELECT 陳述式中，永遠搭配 TOP 子句使用 ORDER BY 子句。 因為它是以預測方式來指示哪些資料列受到 TOP 影響的唯一方法。  
   
 在 ORDER BY 子句中使用 OFFSET 和 FETCH 子句 (而不要使用 TOP 子句)，來實作查詢分頁方案。 使用 OFFSET 和 FETCH 子句，比較容易實作分頁方案 (也就是將資料區塊或「頁面」傳送到用戶端)。 如需詳細資訊，請參閱 [ORDER BY 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)。  
@@ -137,7 +137,7 @@ GO
   
 藉由在子選擇作業中使用 TOP 和 ORDER BY，可以確保 ORDER BY 子句的結果會套用到 TOP 子句，而不會排序 UNION 作業的結果。  
   
- 以下為結果集：  
+ 以下為結果集。  
   
  ```
  Model         Color      Price  
@@ -155,7 +155,7 @@ GO
   
 ## <a name="examples"></a>範例  
   
-|類別目錄|代表性語法元素|  
+|類別|代表性語法元素|  
 |--------------|------------------------------|  
 |[基本語法](#BasicSyntax)|TOP • PERCENT|  
 |[包括相同值](#tie)|WITH TIES|  

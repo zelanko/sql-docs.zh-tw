@@ -9,10 +9,10 @@ ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ff2c93000c1b5f0e9d01a3204858717640733228
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580791"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>匯出至 PDF 檔案 (報表產生器及 SSRS)
@@ -59,10 +59,10 @@ ms.locfileid: "65580791"
   
 |PDF 屬性|來源|  
 |------------------|------------------|  
-|**Title**|**Name** RDL 元素的 **Report** 屬性。|  
-|**作者**|**Author** RDL 元素。|  
+|**Title** (標題)|**Name** RDL 元素的 **Report** 屬性。|  
+|**Author** (作者)|**Author** RDL 元素。|  
 |**主旨**|**Description** RDL 元素。|  
-|**建立者**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 產品名稱和版本。|  
+|**[建立者]**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 產品名稱和版本。|  
 |**產生器 (producer)**|轉譯延伸模組名稱與版本。|  
 |**CreationDate**|PDF **datetime** 格式的報表執行時間。|  
   

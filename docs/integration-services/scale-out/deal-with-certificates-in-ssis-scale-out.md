@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896958"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>管理 SQL Server Integration Services Scale Out 的憑證
@@ -88,9 +88,9 @@ netsh http add sslcert ipport=0.0.0.0:8391 certhash=01d207b300ca662f479beb884efe
 #### <a name="5-reconnect-scale-out-workers-to-scale-out-master"></a>5.將 Scale Out Worker 重新連線至 Scale Out Master
 針對每個 Scale Out Worker，刪除 Worker，然後使用 [Scale Out Manager](integration-services-ssis-scale-out-manager.md) 將其重新新增，或執行下列動作：
 
-A.  將用戶端 SSL 憑證安裝至背景工作節點上本機電腦的根存放區。
+a.  將用戶端 SSL 憑證安裝至背景工作節點上本機電腦的根存放區。
 
-B.  更新 Scale Out Worker 服務設定檔。
+b.  更新 Scale Out Worker 服務設定檔。
 
 更新背景工作節點上的 Scale Out Worker 服務設定檔 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`。 將 **MasterHttpsCertThumbprint** 更新為新的 SSL 憑證指紋。
 

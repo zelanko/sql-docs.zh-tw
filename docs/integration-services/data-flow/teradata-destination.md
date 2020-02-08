@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d016a1fed3a60df78a02242a2f42e46cf7184553
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245096"
 ---
 # <a name="teradata-destination"></a>Teradata 目的地
@@ -88,7 +88,7 @@ TPT 資料流模式中則沒有平行處理原則的限制。 您可以針對相
 |BufferSize|整數|用於傳送載入包裹的輸出緩衝區大小 (以 KB 為單位)。 預設值為 1024。 僅適用於 TPT 載入。 這個屬性位於 [進階編輯器]  中。|
 |DataEncryption|Boolean|預設值為 **False**。 若設定為 **True**，則會使用完整安全性加密。|
 |DefaultCodePage|整數|當資料來源沒有字碼頁資訊時，所要使用的字碼頁。 <br>**注意**：這個屬性位於 [進階編輯器]  中。|
-|DetailedTracingLevel|整數 (列舉)|選取下列其中一個選項以進行進階追蹤： <br> **Off**：不使用進階記錄。 <br> **General**：記錄驅動程式特定的活動一般追蹤。 <br> **CLI**：記錄 CLIv2 相關的活動追蹤。 <br> **通知方法**：記錄通知功能相關的活動追蹤。 <br> **通用程式庫**：記錄 Opcommon 程式庫活動追蹤。 <br> **全部**：記錄以上所有的活動追蹤。 <br> 進階追蹤記錄檔定義於 **DetailedTracingFile** 屬性中。 <br> 如果選項不為 Off，則您必須設定 **DetailedTracingFile** 屬性。 <br> 這個屬性位於 [進階編輯器]  中。|
+|DetailedTracingLevel|整數 (列舉)|選取下列其中一個選項以進行進階追蹤： <br> **Off**：不使用進階記錄。 <br> **一般**：記錄驅動程式特定的活動一般追蹤。 <br> **CLI**：記錄 CLIv2 相關的活動追蹤。 <br> **通知方法**：記錄通知功能相關的活動追蹤。 <br> **通用程式庫**：記錄 Opcommon 程式庫活動追蹤。 <br> **全部**：記錄以上所有的活動追蹤。 <br> 進階追蹤記錄檔定義於 **DetailedTracingFile** 屬性中。 <br> 如果選項不為 Off，則您必須設定 **DetailedTracingFile** 屬性。 <br> 這個屬性位於 [進階編輯器]  中。|
 |DetailedTracingFile|String|當 **DetailedTracingLevel** 不為 **Off** 時，則會自動產生的記錄檔路徑。 這個屬性位於 [進階編輯器]  中。|
 |DiscardLargeRow|Boolean|預設值為 **False**。 若設定為 **True**，則捨棄大型資料列 (大於 64K)|
 |ErrorTableName|String|錯誤資料表名稱。 預設值為目標資料表名稱|

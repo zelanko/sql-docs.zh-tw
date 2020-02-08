@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6968766b2d7d447f21fccc6425935017a6943778
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70122951"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
@@ -46,15 +46,15 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 *string_value*  
 長度和類型取決於輸入的字串值。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `CONCAT` 會採用可變數量的字串引數，並將其串連 (聯結) 成單一字串。 它至少需要兩個輸入值，否則 `CONCAT` 會引發錯誤。 `CONCAT` 會在串連之前將所有引數隱含地轉換成字串類型。 `CONCAT` 會將 Null 值隱含地轉換成空字串。 如果 `CONCAT` 收到全部都是 **NULL** 值的引數，則會傳回 **varchar**(1) 類型的空字串。 隱含轉換成字串會遵循現有的資料類型轉換規則。 如需資料類型轉換的詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。
   
 傳回類型取決於引數類型。 此表說明對應：
   
 |輸入類型|輸出類型及長度|  
 |---|---|
-|1.下者的任何引數：<br><br />SQL-CLR 系統類型<br><br />SQL-CLR UDT<br><br />中的多個<br><br />`nvarchar(max)`|**nvarchar(max)**|  
-|2.否則，是下列類型的任何參數：<br><br />**varbinary(max)**<br><br />中的多個<br><br />**varchar(max)**|**varchar(max)** ，除非其中一個參數是任何長度的 **nvarchar**。 在此情況下，`CONCAT` 會傳回 **nvarchar(max)** 類型的結果。|  
+|1.下者的任何引數：<br><br />SQL-CLR 系統類型<br><br />SQL-CLR UDT<br><br />或<br><br />`nvarchar(max)`|**nvarchar(max)**|  
+|2.否則，是下列類型的任何參數：<br><br />**varbinary(max)**<br><br />或<br><br />**varchar(max)**|**varchar(max)** ，除非其中一個參數是任何長度的 **nvarchar**。 在此情況下，`CONCAT` 會傳回 **nvarchar(max)** 類型的結果。|  
 |3.否則為 **nvarchar** 類型且最多 4000 個字元的任何引數<br><br />(**nvarchar**(<= 4000))|**nvarchar**(<= 4000)|  
 |4.在所有其他情況下|**varchar**(<= 8000) (最多 8000 個字元的 **varchar**)，除非其中一個參數是任何長度的 nvarchar。 在該情況下，`CONCAT` 會傳回 **nvarchar(max)** 類型的結果。|  
   

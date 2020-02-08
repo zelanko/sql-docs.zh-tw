@@ -9,10 +9,10 @@ ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 780cda075d8280d71f3438c79359c58ad1ac3133
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575638"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>格式化量測計上的指標 (報表產生器及 SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "65575638"
 ##  <a name="SpecifyingImage"></a> 將影像指定為星形量測計的指標  
  除了指標樣式的內建清單之外，您也可以將影像指定為指標。 這在使用影像取代現有的指針指標樣式時是最有效果的。 影像會附加在指標上，但是所有指標功能都適用。 當影像用於指標時，色彩與漸層選項則不適用。  
   
- 如果指標影像為不規則的形狀，您應該將色彩定義為透明的，以便隱藏不應該出現在量測計上的影像區域。 當您定義透明色彩時，量測計會調換現有指標頂端的影像並修剪影像，這樣就可以只顯示指標的形狀。 量測計會重新調整影像以符合您指標的大小。 當您指定指標的影像時，加入到量測計頂端的任何後續指標都會繪製在影像的下方。 因此，如果量測計上有多個指標，最好不要為指標指定影像。 如需詳細資訊，請參閱 [將影像指定為量測計的指標 (報表產生器及 SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)。  
+ 如果指標影像為不規則的形狀，您應該將色彩定義為透明的，以便隱藏不應該出現在量測計上的影像區域。 當您定義透明色彩時，量測計會調換現有指標頂端的影像並修剪影像，這樣就可以只顯示指標的形狀。 量測計會重新調整影像以符合您指標的大小。 當您指定指標的影像時，加入到量測計頂端的任何後續指標都會繪製在影像的下方。 因此，如果量測計上有多個指標，最好不要為指標指定影像。 如需詳細資訊，請參閱[將影像指定為量測計的指標 (報表產生器及 SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)。  
   
 ## <a name="see-also"></a>另請參閱  
  [格式化量測計上的標尺 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   

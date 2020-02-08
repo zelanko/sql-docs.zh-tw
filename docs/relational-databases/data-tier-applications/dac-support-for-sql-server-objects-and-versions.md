@@ -13,10 +13,10 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0e0f85e21898ccf61d7c205305fc9179edc2af4
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68810584"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server 物件與版本的 DAC 支援
@@ -51,7 +51,7 @@ ms.locfileid: "68810584"
 |FUNCTION：多重陳述式資料表值|FUNCTION：純量|  
 |INDEX：叢集|INDEX：非叢集|  
 |INDEX：空間|INDEX：唯一|  
-|登入|權限|  
+|LOGIN|權限|  
 |角色成員資格|SCHEMA|  
 |統計資料|STORED PROCEDURE：Transact-SQL|  
 |同義字|TABLE：檢查條件約束|  
@@ -60,7 +60,7 @@ ms.locfileid: "68810584"
 |TABLE：條件約束，索引|TABLE：條件約束，主索引鍵|  
 |TABLE：條件約束，唯一|TRIGGER：DML|  
 |TYPE：HIERARCHYID、GEOMETRY、GEOGRAPHY|TYPE：使用者定義資料類型|  
-|TYPE：使用者定義資料表類型|使用者|  
+|TYPE：使用者定義資料表類型|USER|  
 |VIEW||  
   
 ##  <a name="SupportByVersion"></a> SQL Server 版本的資料層應用程式支援  

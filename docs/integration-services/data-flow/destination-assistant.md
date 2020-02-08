@@ -14,10 +14,10 @@ ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5f302227746b0479f096fbfc29e50c328b61f114
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292907"
 ---
 # <a name="destination-assistant"></a>Destination Assistant
@@ -48,7 +48,7 @@ ms.locfileid: "71292907"
 ## <a name="add-new-destination-dialog-box"></a>新增新目的地對話方塊
 下表列出可以在 [新增新目的地]  對話方塊中使用的選項。  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
 |類型|選取您要連接的目的地類型。|  
 |連接管理員|選取現有的連線管理員，或按一下 [\<新增>]  以建立新的連線管理員。|  

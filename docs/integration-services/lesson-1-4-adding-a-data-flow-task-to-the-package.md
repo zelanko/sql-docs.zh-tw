@@ -11,10 +11,10 @@ ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a98437a88fc81d83c98ec2c3417df6d38bc1b421
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283828"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>第 1-4 課：將資料流程工作新增至套件

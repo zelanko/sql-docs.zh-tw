@@ -13,10 +13,10 @@ ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 15ab408465890a13fc6e87efd2f2e15e8f8a7fad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025495"
 ---
 # <a name="server-properties---connections-page"></a>伺服器屬性 - 連接頁面
@@ -34,7 +34,7 @@ ms.locfileid: "68025495"
  **Default connection options**  
  指定預設連接選項，如下表中所述。  
   
-|組態選項|Description|  
+|組態選項|描述|  
 |--------------------------|-----------------|  
 |**停用延遲條件約束檢查**|控制暫時的或延遲的條件約束檢查。|  
 |**隱含交易**|控制陳述式執行時是否隱含地啟動交易。|  

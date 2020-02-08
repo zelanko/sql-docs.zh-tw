@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727556"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>在 SQL Server上安裝預先定型的機器學習模型
@@ -25,7 +25,7 @@ ms.locfileid: "73727556"
 
 若要使用預先定型的模型，請呼叫下表所列的函式。
 
-| R 函式 (MicrosoftML) | Python 函式 (microsoftml) | 使用方式 |
+| R 函式 (MicrosoftML) | Python 函式 (microsoftml) | 使用量 |
 |--------------------------|-------------------------------|-------|
 | [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | 根據文字輸入產生正負情緒分數。 |
 | [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 從影像檔案輸入擷取文字資訊。 |
@@ -213,7 +213,7 @@ R 與 Python 模型的安裝路徑如下所示：
 
 ## <a name="see-also"></a>另請參閱
 
-+ [SQL Server 機器學習服務](sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning 服務](sql-machine-learning-services-windows-install.md)
 + [升級 SQL Server 執行個體中的 R 與 Python 元件](../install/upgrade-r-and-python.md)
 + [ R 的 MicrosoftML 套件](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) \(英文\)
 + [ Python 的 microsoftml 套件](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) \(英文\)

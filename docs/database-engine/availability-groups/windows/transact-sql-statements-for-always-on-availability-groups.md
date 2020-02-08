@@ -14,10 +14,10 @@ ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5ef8cd17f7a6db5058fd10d26de9f8674846ed03
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822208"
 ---
 # <a name="transact-sql-statements-for-always-on-availability-groups"></a>Always On 可用性群組的 Transact-SQL 陳述式

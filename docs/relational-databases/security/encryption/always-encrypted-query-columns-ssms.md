@@ -12,12 +12,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c97d3ae0dd6b334e129134ba391124d8de3e8260
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73595793"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910231"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>使用 Always Encrypted 與 SQL Server Management Studio 查詢資料行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "73595793"
 1. 如果您使用 SSMS 17 或更舊版本：
     1. 選取 [其他屬性]  索引標籤。
     1. 若要啟用 Always Encrypted，請鍵入 `Column Encryption Setting = Enabled`。 若要停用 Always Encrypted，請指定 `Column Encryption Setting = Disabled`，或從 [其他屬性]  索引標籤中移除 [資料行加密設定]  的設定 (預設值為 [停用]  )。   
- 1. 按一下 **[連接]** 。
+ 1. 按一下 [ **連接**]。
 
 > [!TIP]
 > 在已針對現有的 [查詢編輯器] 視窗啟用和停用的 Always Encrypted 之間進行切換：   
@@ -108,7 +108,7 @@ ms.locfileid: "73595793"
    
 ## <a name="param"></a>Always Encrypted 的參數化   
  
-[Always Encrypted 的參數化] 是 SQL Server Management Studio 中的一項功能，可將 Transact-SQL 變數自動轉換為查詢參數 ([SqlParameter 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)的執行個體)。 (至少需要 SSMS 17.0 版。)這讓基礎的 .NET Framework Data Provider for SQL Server 能夠偵測目標為加密資料行的資料，並且在將這類資料傳送至資料庫之前，先進行加密。 
+[Always Encrypted 的參數化] 是 SQL Server Management Studio 中的一項功能，可將 Transact-SQL 變數自動轉換為查詢參數 ( [SqlParameter 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)的執行個體)。 (至少需要 SSMS 17.0 版。)這讓基礎的 .NET Framework Data Provider for SQL Server 能夠偵測目標為加密資料行的資料，並且在將這類資料傳送至資料庫之前，先進行加密。 
   
 未啟用參數化時，.NET Framework Data Provider 會以非參數化的查詢傳遞您在 [查詢編輯器] 中撰寫的每一個陳述式。 如果查詢包含目標為加密資料行的常值或 Transact-SQL 變數，.NET Framework Data Provider for SQL Server 就無法在將查詢傳送至資料庫之前先偵測並加密它們。 如此一來，查詢將因 (純文字的常值 Transact-SQL 變數與加密資料行之間) 類型不符而導致失敗。 例如，假設 `SSN` 資料行已加密，下列查詢將因未啟用參數化而失敗。   
 
@@ -162,7 +162,7 @@ DECLARE @Salary money = $30000;
 此外，以下是 SQL Server Management Studio 不會嘗試參數化的一些變數範例：
 
 ```sql
-DECLARE @Name nvarchar(50); --Initialization seperate from declaration
+DECLARE @Name nvarchar(50); --Initialization separate from declaration
 SET @Name = 'Abel';
 
 DECLARE @StartDate date = GETDATE(); -- a function used instead of a literal
@@ -214,9 +214,9 @@ WHERE [SSN] = @SSN;
 > [!NOTE]
 > 未啟用參數化時，整個查詢 (包括類型轉換) 會在 SQL Server/Azure SQL Database 內部進行處理。 啟用參數化時，.NET Framework 會在 SQL Server Management Studio 內部執行一些類型轉換。 由於 .NET Framework 類型系統與 SQL Server 類型系統之間的差異 (例如某些類型 (例如浮點數) 的有效位數不同)，因此，已啟用參數化執行的查詢可以產生不同於未啟用參數化執行的查詢的結果。 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 - [使用 Always Encrypted 開發應用程式](always-encrypted-client-development.md)
 
 
 ## <a name="see-also"></a>另請參閱
-- [永遠加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [一律加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

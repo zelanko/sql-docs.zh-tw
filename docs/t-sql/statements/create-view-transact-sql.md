@@ -38,10 +38,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50ae26a445faa8f8bcd811ed7834868417fc27b4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982674"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
@@ -158,7 +158,7 @@ OR ALTER
   
  當檢視是使用 WITH VIEW_METADATA 來建立時，如果該檢視具有 INSTEAD OF INSERT 或 INSTEAD OF UPDATE 觸發程序，則除了 **timestamp** 資料行之外，所有資料行都可以更新。 如需有關可更新檢視的詳細資訊，請參閱「備註」一節。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  檢視只能建立在目前資料庫中。 CREATE VIEW 必須是查詢批次中的第一個陳述式。 檢視最多可有 1,024 個資料行。  
   
  當查詢檢視時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會檢查確定陳述式所參考的所有資料庫物件都存在、在陳述式的內容中有效，且修改資料陳述式未違反任何資料完整性規則。 檢查失敗會傳回錯誤訊息。 檢查成功會將動作轉換成針對基礎資料表的動作。  

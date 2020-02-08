@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7a9ad1938f94c090bd0f7e3746d565d2f0fce25d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 6172f4e209c1c8d7ecb5768494f2c5fea0497d83
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770456"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288457"
 ---
-# <a name="mssqleng020554"></a>MSSQL_ENG020554
+# <a name="mssql_eng020554"></a>MSSQL_ENG020554
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>訊息詳細資料  
@@ -62,7 +62,7 @@ ms.locfileid: "68770456"
   
 -   如果代理程式無法登入拓撲中的某台電腦：  
   
-     建議將 **-LoginTimeOut** 值設定為小於複寫代理程式檢查作業執行的時間間隔。 在某些情況下， **-LoginTimeOut** 的值之所以設定得高，是因為會導致登入逾時的網路問題。如果 **-LoginTimeOut** 設定得較低，則複寫會報告其他特定的問題，讓您可以對由權限、網路問題或其他問題導致的登入問題進行疑難排解。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
+     建議將 **-LoginTimeOut** 值設定為小於複寫代理程式檢查作業執行的時間間隔。 在某些情況下， **-LoginTimeOut** 的值之所以設定得高，是因為會導致登入逾時的網路問題。如果 **-LoginTimeOut** 設定得較低，則複寫會報告其他特定的問題，讓您可以對由權限、網路問題或其他問題導致的登入問題進行疑難排解。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱  
   
     -   [處理複寫代理程式設定檔](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
@@ -73,10 +73,10 @@ ms.locfileid: "68770456"
 ## <a name="see-also"></a>另請參閱  
  [複寫代理程式管理](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [錯誤和事件參考 &#40;複寫&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [複寫散發代理程式](../../relational-databases/replication/agents/replication-distribution-agent.md)   
- [複寫記錄讀取器代理程式](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [複寫合併代理程式](../../relational-databases/replication/agents/replication-merge-agent.md)   
+ [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [複寫佇列讀取器代理程式](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [複寫快照集代理程式](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

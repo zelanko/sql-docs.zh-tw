@@ -21,10 +21,10 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f35ec3ad66199e6c13c648c9a2208f5bf88f439a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293934"
 ---
 # <a name="send-mail-task"></a>傳送郵件工作
@@ -64,7 +64,7 @@ ms.locfileid: "71293934"
 ## <a name="custom-logging-messages-available-on-the-send-mail-task"></a>傳送郵件工作上可用的自訂記錄訊息  
  下表列出「傳送郵件」工作的自訂記錄項目。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|Description|  
+|記錄項目|描述|  
 |---------------|-----------------|  
 |**SendMailTaskBegin**|指出工作已經開始傳送電子郵件訊息。|  
 |**SendMailTaskEnd**|指出工作已經完成傳送電子郵件訊息。|  
@@ -112,7 +112,7 @@ ms.locfileid: "71293934"
   
  **相關主題：** [SMTP 連線管理員](../../integration-services/connection-manager/smtp-connection-manager.md)  
   
- **來源**  
+ **From**  
  指定寄件者的電子郵件地址。  
   
  **若要**  
@@ -130,13 +130,13 @@ ms.locfileid: "71293934"
  **MessageSourceType**  
  選取訊息的來源類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|將來源設定為訊息文字。 選取此值會顯示動態選項 [MessageSource]  。|  
 |**檔案連接**|將來源設定為包含訊息文字的檔案。 選取此值會顯示動態選項 [MessageSource]  。|  
 |**變數**|將來源設定為包含訊息文字的變數。 選取此值會顯示動態選項 [MessageSource]  。|  
   
- **優先權**  
+ **優先順序**  
  設定訊息的優先權。  
   
  **附加檔案**  

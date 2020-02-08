@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077438"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>為 Linux 上的 SQL Server 建立和設定可用性群組
@@ -30,7 +30,7 @@ ms.locfileid: "68077438"
 > * 建立 Pacemaker 的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 登入和權限。
 > * 在 Pacemaker 叢集 (僅限外部類型) 中建立可用性群組。
 
-## <a name="prerequisite"></a>先決條件
+## <a name="prerequisite"></a>必要條件
 - 部署 Pacemaker 高可用性叢集，如[為 Linux 上的 SQL Server 部署 Pacemaker 叢集](sql-server-linux-deploy-pacemaker-cluster.md)中所述。
 
 
@@ -332,7 +332,7 @@ sudo systemctl restart mssql-server
 
 5.  在 [指定複本] 對話方塊中，按一下 [新增複本]  。
 
-6.  在 [連線至伺服器] 對話方塊中，輸入將作為次要複本 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux 執行個體的名稱，以及要連線的認證。 按一下 **[連接]** 。
+6.  在 [連線至伺服器] 對話方塊中，輸入將作為次要複本 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux 執行個體的名稱，以及要連線的認證。 按一下 [ **連接**]。
 
 7.  針對將包含僅限設定複本或另一個次要複本的執行個體，重複前兩個步驟。
 
@@ -354,9 +354,9 @@ sudo systemctl restart mssql-server
 
 11. 如果接聽程式是為可讀取的案例建立，SSMS 17.3 或更新版本允許在精靈中建立唯讀路由。 您也可以在稍後透過 SSMS 或 Transact-SQL 新增它。 現在新增唯讀路由：
 
-    A.  選取 [唯讀路由] 索引標籤。
+    a.  選取 [唯讀路由] 索引標籤。
 
-    B.  輸入唯讀複本的 URL。 這些 URL 與端點相似，不同之處在於它們使用執行個體的連接埠，而不是端點。
+    b.  輸入唯讀複本的 URL。 這些 URL 與端點相似，不同之處在於它們使用執行個體的連接埠，而不是端點。
 
     c.  選取每個 URL，然後從底部選取可讀取複本。 若要複選，請按住 SHIFT 或按一下並拖曳。
 
@@ -512,7 +512,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-    位置
+    Where
     - *AGName* 是可用性群組的名稱。
     - *DBName* 是將會與可用性群組搭配使用之資料庫的名稱。 它也可以是以逗號分隔的名稱清單。
     - *PortOfEndpoint* 是所建立端點使用的連接埠號碼。
@@ -569,7 +569,7 @@ Linux 上的基礎 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Pac
     
 4.  按住 CTRL 鍵，然後按 X，再按 C，以結束並儲存檔案。
 
-5.  Execute 
+5.  執行 
     ```bash
     sudo chmod 400 /var/opt/mssql/secrets/passwd
     ```
@@ -676,7 +676,7 @@ Linux 上的基礎 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Pac
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您將了解如何為 Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 建立和設定可用性群組。 您已了解如何：
+在本教學課程中，您將了解如何為 Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 建立和設定可用性群組。 您已了解如何︰
 > [!div class="checklist"]
 > * 啟用可用性群組。
 > * 建立 AG 端點和憑證。

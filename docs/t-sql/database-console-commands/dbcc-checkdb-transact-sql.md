@@ -35,10 +35,10 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 54b6353b789f837f45759c34b0dbbbd591cf5dbf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982415"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
@@ -168,7 +168,7 @@ DATA_PURITY
 > [!WARNING] 
 > 如果 MAXDOP 設定為零，SQL Server 會選擇要使用之平行處理原則的最大程度。    
 
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>備註    
 DBCC CHECKDB 不會檢查停用的索引。 如需詳細資訊，請參閱[停用索引和條件約束](../../relational-databases/indexes/disable-indexes-and-constraints.md)。    
 
 如果使用者定義型別標示為按位元組排序，該使用者定義型別只能有一個序列。 按位元組排序之使用者定義型別如果沒有一致的序列，DBCC CHECKDB 執行期間將會發生錯誤 2537。 如需詳細資訊，請參閱[使用者定義類型需求](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)。    
@@ -201,7 +201,7 @@ DBCC CHECKDB 使用內部資料庫快照集來維護執行這些檢查時所需�
 針對資料庫和資料表啟用 FILESTREAM 時，您可以選擇將 **varbinary(max)** 二進位大型物件 (BLOB) 儲存在檔案系統中。 當您針對將 BLOB 儲存於檔案系統中的資料庫使用 DBCC CHECKDB 時，DBCC 會檢查檔案系統與資料庫之間的連結層級一致性。
 例如，如果資料表包含使用 FILESTREAM 屬性的 **varbinary(max)** 資料行，DBCC CHECKDB 將會檢查檔案系統目錄和檔案與資料表資料列、資料行和資料行值之間是否有一對一的對應。 如果您指定 REPAIR_ALLOW_DATA_LOSS 選項，則 DBCC CHECKDB 可以修復損毀。 為了修復 FILESTREAM 損毀，DBCC 將刪除遺失檔案系統資料的任何資料表資料列。
     
-## <a name="best-practices"></a>最佳作法    
+## <a name="best-practices"></a>最佳做法    
 我們建議您在生產環境系統上，使用 `PHYSICAL_ONLY` 選項作為常用的選項。 使用 PHYSICAL_ONLY 可以大幅縮減在大型資料庫上執行 DBCC CHECKDB 所需的時間。 我們也建議您不搭配使用任何選項，定期執行 DBCC CHECKDB。 執行這些作業的頻率是依個別公司及其實際執行環境而定。
     
 ## <a name="checking-objects-in-parallel"></a>平行檢查物件    
@@ -213,7 +213,7 @@ DBCC CHECKDB 使用內部資料庫快照集來維護執行這些檢查時所需�
 ## <a name="understanding-dbcc-error-messages"></a>了解 DBCC 錯誤訊息    
 DBCC CHECKDB 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中會寫入一則訊息。 如果 DBCC 命令執行成功，該訊息將指出命令已順利完成，並顯示命令執行的時間量。 如果 DBCC 命令由於發生錯誤而在完成檢查之前停止執行，則訊息會指出命令已經結束，並顯示狀態值以及命令執行的時間量。 下表列出並描述可以包含在訊息中的狀態值。
     
-|State|Description|    
+|State|描述|    
 |-----------|-----------------|    
 |0|已引發錯誤號碼 8930。 這表示中繼資料中的損毀導致 DBCC 命令結束。|    
 |1|已引發錯誤號碼 8967。 發生內部 DBCC 錯誤。|    

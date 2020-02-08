@@ -10,10 +10,10 @@ author: chugugrace
 ms.author: chugu
 ms.reviewer: ''
 ms.openlocfilehash: ac10ace82a38110d2038f95c3514aa8271d5b88c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283751"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>課程 1-6：新增及設定查閱轉換

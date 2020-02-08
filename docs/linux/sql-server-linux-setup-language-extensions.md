@@ -6,17 +6,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/05/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b5a8c83f827f574698d2e9b37a19cdb29e1ba80
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660775"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971227"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>在 Linux 上安裝 SQL Server 語言延伸模組
 
@@ -30,7 +30,7 @@ Java 擴充功能的套件位置在 SQL Server Linux 來源存放庫中。 如�
 
 Linux 容器上也支援語言擴充功能。 我們沒有提供含語言擴充功能的預先建立容器，但您可以使用 [GitHub 上提供的範例範本](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices) \(英文\)，從 SQL Server 容器建立一個。
 
-根據預設，系統會在 SQL Server 巨量資料叢集上安裝語言延伸模組和[機器學習服務](../advanced-analytics/index.yml)。 如果您使用的是巨量資料叢集，就不需要依照此文章中的步驟進行。 如需詳細資訊，請參閱[在巨量資料叢集上使用機器學習服務 (Python 和 R)](../big-data-cluster/machine-learning-services.md)。
+根據預設，系統會在 SQL Server 巨量資料叢集上安裝語言延伸模組與[機器學習服務](../advanced-analytics/index.yml)。 如果您使用的是巨量資料叢集，就不需要依照此文章中的步驟進行。 如需詳細資訊，請參閱[在巨量資料叢集上使用機器學習服務 (Python 和 R)](../big-data-cluster/machine-learning-services.md)。
 
 ## <a name="uninstall-preview-version"></a>解除安裝預覽版本
 
@@ -50,7 +50,7 @@ ls /opt/microsoft/mssql/bin
 
   + 針對 Java 整合，移除 **mssql-server-extensibility-java**
 
-下表中顯示移除封裝的命令。
+下表中顯示移除套件的命令。
 
 | 平台  | 套件移除命令 | 
 |-----------|----------------------------|
@@ -80,13 +80,13 @@ ls /opt/microsoft/mssql/bin
 
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-+ 您應該有執行 T-SQL 命令的工具。 必須使用查詢編輯器進行安裝後設定和驗證。 我們建議 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux) \(部分機器翻譯\)，這是在 Linux 上執行的免費下載。
++ 您應該有執行 T-SQL 命令的工具。 必須使用查詢編輯器進行安裝後設定和驗證。 我們推薦 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux) \(部分機器翻譯\)，這是在 Linux 上執行的免費下載。
 
 ## <a name="package-list"></a>套件清單
 
 在連線到網際網路的裝置上，系統會使用每個作業系統的套件安裝程式，獨立地下載及安裝套件。 下表描述所有可用套件。
 
-| 封裝名稱 | 適用於 | Description |
+| 套件名稱 | 適用於 | 描述 |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | 所有語言 | 用於 Java 語言擴充的 Extensibility Framework |
 |mssql-server-extensibility-java | Java | 用於 Java 語言擴充且包含支援之 Java 執行階段的 Extensibility Framework |
@@ -159,7 +159,7 @@ sudo zypper install mssql-server-extensibility-java
 
     其他設定主要是透過 [mssql-conf 工具](sql-server-linux-configure-mssql-conf.md)來設定。
 
-2. 新增用來執行 SQL Server 服務的 mssql 使用者帳戶。 如果您先前未執行安裝，則這是必要的。
+2. 新增用來執行 SQL Server 服務的 mssql 使用者帳戶。 如果您先前未執行安裝程式，則這是必要的。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -262,19 +262,19 @@ Java 功能整合不包含程式庫，但您可以執行 `grep -r JRE_HOME /etc`
 
 |||
 |--|----|
-| mssql/extensibility-java packages | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| mssql/extensibility-java packages | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 
 #### <a name="ubuntu1604-paths"></a>Ubuntu/16.04 路徑
 
 |||
 |--|----|
-| mssql/extensibility-java packages | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| mssql/extensibility-java packages | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 
 #### <a name="suse12-paths"></a>SUSE/12 路徑
 
 |||
 |--|----|
-| mssql/extensibility-java packages | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| mssql/extensibility-java packages | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 
 #### <a name="package-list"></a>套件清單
 
@@ -297,7 +297,7 @@ mssql-server-extensibility-java-15.0.1000
 
 針對外部資源集區的[資源管理](../t-sql/statements/create-external-resource-pool-transact-sql.md)，Linux 與 Windows 之間有同位，但 [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) 的統計資料在 Linux 上目前有不同單位。 
  
-| 資料行名稱   | Description | Linux 上的值 | 
+| 資料行名稱   | 描述 | Linux 上的值 | 
 |---------------|--------------|---------------|
 |peak_memory_kb | 用於資源集區的記憶體數量上限。 | 在 Linux 上，此統計資料是來自 CGroups 記憶體子系統，其中的值為 memory.max_usage_in_bytes |
 |write_io_count | 重設 Resource Governor 統計資料之後發出的寫入 IO 總數。 | 在 Linux 上，此統計資料來自 CGroups blkio 子系統，其中寫入資料列上的值為 blkio.throttle.io_serviced | 

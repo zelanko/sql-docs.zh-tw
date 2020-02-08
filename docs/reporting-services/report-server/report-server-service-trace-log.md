@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
 ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68254860"
 ---
 # <a name="report-server-service-trace-log"></a>報表伺服器服務追蹤記錄
@@ -32,7 +32,7 @@ ms.locfileid: "68254860"
 
 追蹤記錄檔的行為在設定檔 **ReportingServicesService.exe.config** 中管理。下列資料夾路徑中可找到組態檔：  
   
- `\Program Files\Microsoft SQL Server\MSRS13.<instance name>\Reporting Services\ReportServer\bin`中管理。  
+ 第 1 課：建立 Windows Azure 儲存體物件`\Program Files\Microsoft SQL Server\MSRS13.<instance name>\Reporting Services\ReportServer\bin`。  
   
  下列範例說明 **RStrace** 設定的 XML 結構。 **DefaultTraceSwitch** 的值會決定要將哪種資訊新增到記錄。 除了 **Components** 屬性外， **RStrace** 的值在所有組態檔中都相同。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68254860"
   
  下表提供有關各項設定的資訊。  
   
-|設定|Description|值|  
+|設定|描述|值|  
 |-------------|-----------------|------------|  
 |**RStrace**|指定用於錯誤和追蹤的命名空間。||  
 |**DefaultTraceSwitch**|指定報告到 ReportServerService 追蹤記錄的資訊層級。 每一個層級包括所有較低層級所報告的資訊。 不建議停用追蹤。|有效值為：<br /><br /> <br /><br /> 0= 停用追蹤。 ReportServerService 記錄檔是預設為啟用。 若要關閉，請將追蹤層級設定為 0。<br /><br /> 1= 例外狀況和重新啟動<br /><br /> 2= 例外、重新啟動和警告<br /><br /> 3= 例外、重新啟動、警告和狀態訊息 (預設值)<br /><br /> 4= 詳細資訊模式|  

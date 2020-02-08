@@ -13,10 +13,10 @@ ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e5fb68197b4347c3b3c2e9c6c7186d28c9c79efa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041559"
 ---
 # <a name="restore-database-options-page"></a>還原資料庫 (選項頁面)
@@ -90,16 +90,16 @@ ms.locfileid: "68041559"
 > [!NOTE]  
 >  如果您在 [[備份時間表]](../../relational-databases/backup-restore/backup-timeline.md) 對話方塊中選取的時間點需要結尾記錄備份，系統就會選取這個方塊，而且您無法進行編輯。  
   
- **備份檔案**  
+ **[備份檔案]**  
  指定記錄結尾的備份檔案。 您可以瀏覽備份檔案，也可以直接在文字方塊中輸入其名稱。  
   
-### <a name="server-connections"></a>伺服器連接  
+### <a name="server-connections"></a>伺服器連線  
  可讓您關閉現有的資料庫連接。  
   
  **關閉現有的連接**  
  若資料庫有使用中的連接，還原作業可能會失敗。 核取 **[關閉現有的連接選項]** ，確定已關閉 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 與資料庫之間的所有使用中連接。 這個核取方塊會在執行還原作業之前將資料庫設定為單一使用者模式，並在完成後將資料庫設定為多使用者模式。  
   
-### <a name="prompt"></a>提示  
+### <a name="prompt"></a>Prompt  
  **還原每個備份之前先提示**  
  指定在還原每個備份之後顯示 [繼續還原]  對話方塊，以便詢問是否還要繼續還原順序。 這個對話方塊會顯示下一個媒體集的名稱 (如果知道)，以及下一個備份組的名稱和描述。  
   

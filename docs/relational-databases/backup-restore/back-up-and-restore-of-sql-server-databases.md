@@ -23,10 +23,10 @@ ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e0e8d41e22efd3f51e1e0812d9476cce9b4b324d
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75320495"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 資料庫的備份與還原
@@ -154,7 +154,7 @@ ms.locfileid: "75320495"
  在您完成備份的測試之前，還不能算是具備還原策略。 您務必要將資料庫副本還原到測試系統，以針對每個資料庫完整測試備份策略。 您必須測試還原您要使用的每個備份類型。 此外，也建議您在還原備份後透過資料庫的 DBCC CHECKDB 來執行資料庫一致性檢查，以確認備份媒體未損毀。 
 
 ### <a name="verify-media-stability-and-consistency"></a>確認媒體穩定性和一致性
-使用由備份公用程式 (BACKUP T-SQL 命令、SQL Server 維護計劃、備份軟體或解決方案等等) 所提供的驗證選項。 如需範例，請參閱 [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md) 使用如備份總和檢查碼的進階功能，來偵測備份媒體本身的問題。 如需詳細資訊，請參閱 [](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)
+使用由備份公用程式 (BACKUP T-SQL 命令、SQL Server 維護計劃、備份軟體或解決方案等等) 所提供的驗證選項。 如需範例，請參閱 [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md) 使用如備份總和檢查碼的進階功能，來偵測備份媒體本身的問題。 如需詳細資訊，[請參閱](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)
 
 ### <a name="document-backuprestore-strategy"></a>文件備份/還原策略 
 建議您寫下備份和還原程序，並將文件的副本保留在執行書中。

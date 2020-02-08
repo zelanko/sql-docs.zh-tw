@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 43292a665583962694974f524786356c747b7e9d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75255472"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>權限：GRANT、DENY、REVOKE (Azure SQL 資料倉儲、平行處理資料倉儲)
@@ -36,7 +36,7 @@ ms.locfileid: "75255472"
   
 -   **REVOKE** 會移除現有的 **GRANT** 或 **DENY** 權限。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -242,7 +242,7 @@ REVOKE
 ### <a name="chart-of-permissions"></a>權限圖表  
  這張海報以圖形方式顯示所有權限。 這是了解權限巢狀階層的最簡單方式。 例如，**ALTER ON LOGIN** 權限可藉由本身授與，但如果登入被授與該登入的 **CONTROL** 權限，或如果登入被授與 **ALTER ANY LOGIN** 權限，則也會包含此權限。  
   
- ![APS 安全性權限海報](../../t-sql/statements/media/aps-security-perms-poster.png "|::ref2::|")  
+ ![APS 安全性權限海報](../../t-sql/statements/media/aps-security-perms-poster.png "APS 安全性權限海報")  
   
  若要下載這張海報的完整大小版本，請參閱 APS Yammer 網站檔案區段中的 [SQL Server PDW 權限](https://go.microsoft.com/fwlink/?LinkId=244249) (或透過電子郵件向 **apsdoc\@microsoft.com** 索取)。  
   

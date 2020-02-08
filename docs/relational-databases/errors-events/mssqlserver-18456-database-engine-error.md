@@ -12,13 +12,13 @@ ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 737e64973e4651dd36c58fa9ff97a61c65a604a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137087"
 ---
-# <a name="mssqlserver18456"></a>MSSQLSERVER_18456
+# <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -60,7 +60,7 @@ ms.locfileid: "68137087"
 ## <a name="additional-error-information"></a>其他錯誤資訊  
 為增加安全性，傳回用戶端的錯誤訊息會刻意隱藏驗證錯誤的原本形式。 不過，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中，會有對應的錯誤包含對應至驗證失敗狀況的錯誤狀態。 請將錯誤狀態與下列清單做比較，以判斷登入失敗的原因。  
   
-|State|Description|  
+|State|描述|  
 |---------|---------------|  
 |1|無錯誤資訊。 這個狀態通常表示您沒有接收錯誤詳細資料的權限。 如需詳細資訊，請連絡 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員。|  
 |2|使用者識別碼無效。|  
@@ -93,9 +93,9 @@ ms.locfileid: "68137087"
 ## <a name="examples"></a>範例  
 在此範例中，驗證錯誤狀態為 8。 這表示密碼不正確。  
   
-|date|來源|訊息|  
+|Date|來源|訊息|  
 |--------|----------|-----------|  
-|2007-12-05 20:12:56.34|登入|Error:18456，嚴重性：14，狀態：8.|  
+|2007-12-05 20:12:56.34|登入|錯誤：18456，嚴重性：14，狀態：8.|  
 |2007-12-05 20:12:56.34|登入|使用者 '<user_name>' 登入失敗。 [CLIENT: <ip address>]|  
   
 > [!NOTE]  

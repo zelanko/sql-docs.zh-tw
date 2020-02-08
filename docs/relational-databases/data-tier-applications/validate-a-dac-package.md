@@ -16,10 +16,10 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7df5bb3b2ef677e597d12dad8b8d92ddbb22fcba
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908252"
 ---
 # <a name="validate-a-dac-package"></a>驗證 DAC 封裝
@@ -135,7 +135,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
 ### <a name="view-upgrade-actions-example-powershell"></a>檢視升級動作範例 (PowerShell)  
  **檢視升級動作範例 (PowerShell)**  
   
- 下列範例報告 Transact-SQL 陳述式，可執行以將 DAC (名稱為 MyApplicaiton) 升級至 MyApplication2017.dacpac 檔案中所定義的結構描述。  
+ 下列範例報告一些 Transact-SQL 陳述式，若要將名為 MyApplicaiton 的 DAC 升級至 MyApplication2017.dacpac 檔案中所定義的結構描述，可執行這些陳述式。  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

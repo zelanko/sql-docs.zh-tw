@@ -11,10 +11,10 @@ ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8076434e550f27ac292eec1b7385fce93d60e3ec
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295552"
 ---
 # <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution (SSISDB 資料庫)
@@ -52,13 +52,13 @@ catalog.create_execution [@folder_name = folder_name
  要執行之封裝的名稱。 *package_name* 是 **nvarchar(260)** 。  
   
  [@reference_id =] *reference_id*  
- 環境參考的唯一識別碼。 這個參數是選擇性的。 *reference_id* 是 **bigint**。  
+ 環境參考的唯一識別碼。 這是選擇性參數。 *reference_id* 是 **bigint**。  
   
  [@use32bitruntime =] *use32bitruntime*  
- 指出是否要使用 32 位元執行階段，在 64 位元作業系統上執行封裝。 使用 1 值，即可在執行 64 位元作業系統時執行含 32 位元執行階段的套件。 使用 0 值，即可在執行 64 位元作業系統時執行 64 位元執行階段。 這個參數是選擇性的。 *Use32bitruntime* 是 **bit**。  
+ 指出是否要使用 32 位元執行階段，在 64 位元作業系統上執行封裝。 使用 1 值，即可在執行 64 位元作業系統時執行含 32 位元執行階段的套件。 使用 0 值，即可在執行 64 位元作業系統時執行 64 位元執行階段。 這是選擇性參數。 *Use32bitruntime* 是 **bit**。  
  
  [@runinscaleout =] *runinscaleout*  
- 指出是否以相應放大執行。使用 1 值，即可使用相應放大執行套件。使用 0 值，即可不使用相應放大執行套件。這個參數是選擇性的。 如果未指定，會在 [SSISDB].[catalog].[catalog_properties] 中將其值設定為 DEFAULT_EXECUTION_MODE。 *runinscaleout* 是 **bit**。 
+ 指出是否以相應放大執行。使用 1 值，即可使用相應放大執行套件。使用 0 值，即可不使用相應放大執行套件。這是選擇性參數。 如果未指定，會在 [SSISDB].[catalog].[catalog_properties] 中將其值設定為 DEFAULT_EXECUTION_MODE。 *runinscaleout* 是 **bit**。 
  
 [@useanyworker =] *useanyworker*  
 指出是否允許任何 Scale Out Worker 進行執行。
@@ -67,13 +67,13 @@ catalog.create_execution [@folder_name = folder_name
 
 -   使用 0 值，即可指出不允許所有 Scale Out Worker 執行套件。 當您將 `@useanyworker` 設為 false，您必須使用 Scale Out Manager，或藉由呼叫預存程序 `[catalog].[add_execution_worker]`，指定允許執行套件的背景工作。 如果您指定的背景工作已執行另一個套件，背景工作在完成執行目前的套件之後會要求執行另一個套件。
 
-這個參數是選擇性的。 如果未指定，會將其值設定為 1。 *useanyworker* 是 **bit**。 
+這是選擇性參數。 如果未指定，會將其值設定為 1。 *useanyworker* 是 **bit**。 
   
  [@execution_id =] *execution_id*  
  傳回執行執行個體的唯一識別碼。 *execution_id* 是 **bigint**。  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  執行是用以指定在封裝執行的單一執行個體期間，該封裝所使用的變數值。  
   
  如果使用 *reference_id* 參數指定環境參考，則預存程序會將來自對應環境變數的常值或參考值填入專案和套件參數。 如果指定了環境參考，封裝執行期間就會使用預設參數值。 若要精確地判斷哪些值用於執行的特定執行個體，請使用來自此預存程序的 *execution_id* 輸出參數值，並查詢 [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) 檢視。  

@@ -20,10 +20,10 @@ ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6a0f2fc8c2af69832150ab5ab229ffc50c84e831
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68010479"
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
@@ -76,7 +76,7 @@ int 資料類型的憑證識別碼值。
 -   *Cert_Serial_Number*、*Issuer_Name*、*String_SID* 和 *Subject* 全部會傳回 **nvarchar**。  
 -   *SID* 會傳回 **varbinary**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 請在 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 目錄檢視中查看憑證資訊。
   
 ## <a name="permissions"></a>權限  

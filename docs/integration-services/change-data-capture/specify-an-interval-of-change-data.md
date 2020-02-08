@@ -13,10 +13,10 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3cb5949943cb03095328bc43599fbfef2fa74da2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294566"
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定變更資料的間隔
@@ -106,7 +106,7 @@ ms.locfileid: "71294566"
     > [!NOTE]  
     >  當您使用運算式來設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 變數的值時，每次存取變數的值時，就會評估該運算式。  
   
-## <a name="next-step"></a>下一個步驟  
+## <a name="next-step"></a>後續步驟  
  計算變更範圍的起點和結束點後，下一個步驟是判斷變更資料是否就緒。  
   
  **下一個主題：** [判斷變更資料是否就緒](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  

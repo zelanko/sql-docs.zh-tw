@@ -11,10 +11,10 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95dceade62e487db05a66df6b7986f23723b1303
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297762"
 ---
 # <a name="tutorial-using-the-odata-source"></a>教學課程：使用 OData 來源
@@ -28,7 +28,7 @@ ms.locfileid: "71297762"
   
 1.  啟動 **[SQL Server Data Tools]** 或 [ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]]。  
   
-2.  按一下 **[檔案]** 、指向 **[新增]** ，然後按一下 **[專案]** 。  
+2.  按一下 [檔案]  ，指向 [新增]  ，然後按一下 [專案]  。  
   
 3.  在 **[新增專案]** 對話方塊中，依序展開 **[已安裝的]** 、 **[範本]** 、 **[Business Intelligence]** ，然後按一下 **[Integration Services]** 。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "71297762"
   
 10. 從 [集合]  下拉式清單中選取 **Employees**。  
   
-11. 針對 **[查詢選項]** 輸入任何其他 OData 查詢選項或篩選。 例如， `$orderby=CompanyName&$top=100`。 針對本教學課程的用途，輸入 `$top=5`。  
+11. 針對 **[查詢選項]** 輸入任何其他 OData 查詢選項或篩選。 例如： `$orderby=CompanyName&$top=100` 。 針對本教學課程的用途，輸入 `$top=5`。  
   
 12. 按一下 **[預覽]** 預覽資料。  
   

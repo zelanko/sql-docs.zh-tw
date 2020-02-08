@@ -13,10 +13,10 @@ ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 025961e39a4f0b1beb0588f0dc7ef2c668bd09a2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294774"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>判斷變更資料是否就緒
@@ -27,7 +27,7 @@ ms.locfileid: "71294774"
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程中，第二個工作是確保所選間隔之變更資料已就緒。 由於非同步的擷取程序可能還沒有處理到所選端點的所有變更，因此這是必要的步驟。  
   
 > [!NOTE]  
->  控制流程的第一個工作是計算變更間隔的端點。 如需這項工作的詳細資訊，請參閱[指定變更資料的間隔](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)。 如需設計控制流程之完整程序的描述，請參閱[變更資料擷取 &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
+>  控制流程的第一個工作是計算變更間隔的端點。 如需這項工作的詳細資訊，請參閱 [指定變更資料的間隔](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)。 如需設計控制流程之完整程序的描述，請參閱[異動資料擷取 &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
   
 ## <a name="understanding-the-components-of-the-solution"></a>了解方案的元件  
  本主題所描述的方案使用 4 個 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件：  
@@ -335,7 +335,7 @@ ms.locfileid: "71294774"
   
 8.  關閉指令碼開發環境以及 **[指令碼工作編輯器]** 。  
   
-## <a name="next-step"></a>下一個步驟  
+## <a name="next-step"></a>後續步驟  
  判斷變更資料就緒後，下一個步驟是準備針對變更資料進行查詢。  
   
  **下一個主題：** [準備查詢變更資料](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  

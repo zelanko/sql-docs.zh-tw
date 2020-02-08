@@ -12,10 +12,10 @@ author: tmichael-ms
 ms.author: tmichael
 mtps_version: v=MSDN.10
 ms.openlocfilehash: a9abd0b1cb9fd6ed97b139f08641f024eda03aeb
-ms.sourcegitcommit: 68751257feec99109edf88a5b89c0ec2ee72276f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75728539"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>適用於 Microsoft SQL Server 的最新更新

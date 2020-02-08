@@ -18,10 +18,10 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 343d3d0d16a19e6d7e1610eff84f6e1aa8ff860a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293803"
 ---
 # <a name="web-service-task"></a>Web 服務工作
@@ -60,7 +60,7 @@ ms.locfileid: "71293803"
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Web 服務工作上可用的自訂記錄訊息  
  下表列出您可以為 Web 服務工作啟用的自訂記錄項目。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|Description|  
+|記錄項目|描述|  
 |---------------|-----------------|  
 |**WSTaskBegin**|工作已經開始存取 Web 服務。|  
 |**WSTaskEnd**|工作已經完成 Web 服務方法。|  
@@ -164,7 +164,7 @@ ms.locfileid: "71293803"
  **OutputType**  
  選取儲存結果時使用的儲存類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**檔案連接**|在檔案中儲存結果。 選取此值會顯示動態選項 [檔案]  。|  
 |**變數**|在變數中儲存結果。 選取此值會顯示動態選項 [變數]  。|  

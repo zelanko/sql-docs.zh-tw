@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0445fb83a1ee4c4e2a991df8e698f24988454d19
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727682"
 ---
 # <a name="python-language-extension-in-sql-server"></a>SQL Server 中的 Python 語言延伸模組
@@ -35,7 +35,7 @@ SQL Server 不會修改 Python 可執行檔，但您必須使用安裝程式所�
 
 Microsoft 為平行和分散式工作負載新增的 Python 套件包含下列程式庫。
 
-| 程式庫 | Description |
+| 程式庫 | 描述 |
 |---------|-------------|
 | [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 支援資料來源物件和資料探索、操作、轉換和視覺化。 RevoScaleR 支援建立遠端計算內容，以及各種可調整的機器學習模型，例如 **rxLinMod**。 如需詳細資訊，請參閱 [revoscalepy 模組與 SQL Server](../python/ref-py-revoscalepy.md)。  |
 | [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 包含已針對速度和正確性最佳化的機器學習演算法，以及適用於處理文字和影像的內嵌轉換。 如需詳細資訊，請參閱 [microsoftml 模組與 SQL Server](../python/ref-py-microsoftml.md)。 |

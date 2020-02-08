@@ -62,7 +62,7 @@ DISTINCT
 `CHECKSUM_AGG` 的功能與其他彙總函式的功能類似。 如需詳細資訊，請參閱[彙總函式 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)。
   
 ## <a name="examples"></a>範例  
-這些範例使用 `CHECKSUM_AGG` 來偵測 `Quantity` 資料庫中 `ProductInventory` 資料表之 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料行的變更。
+這些範例使用 `CHECKSUM_AGG` 來偵測 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `ProductInventory` 資料表之 `Quantity` 資料行的變更。
   
 ```sql
 --Get the checksum value before the column value is changed.  

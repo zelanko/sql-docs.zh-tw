@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6c1f1fe588447ba4fdbac3cdc66fcc17ea5a6508
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72041234"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
@@ -50,7 +50,7 @@ ROUND ( numeric_expression , length [ ,function ] )
  *函數*  
  這是要執行的作業類型。 *function* 必須是 **tinyint**、**smallint** 或 **int**。當 *function* 遭到省略或者值為 0 (預設值) 時，會捨入 *numeric_expression*。 當指定 0 以外的值時，會截斷 *numeric_expression*。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  傳回下列資料類型。  
   
 |運算式結果|傳回類型|  
@@ -63,7 +63,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 |**money** 和 **smallmoney** 類別|**money**|  
 |**float** 和 **real** 類別|**float**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  ROUND 會一律傳回值。 如果 *length* 是負的，且大於小數點前面的位數，ROUND 會傳回 0。  
   
 |範例|結果|  

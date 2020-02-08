@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: e3e52a854224210ed4561dbce12877fbb4c0f6fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082117"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services (SSIS) 相應放大主機
@@ -52,7 +52,7 @@ Scale Out Master 服務是一種 Windows 服務，負責與 Scale Out Worker 通
 您可以使用 `<drive>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config` 檔案來設定 Scale Out Master 服務。 更新設定檔之後，必須重新啟動服務。
 
 
-|組態  |Description  |[預設值]  |
+|組態  |描述  |預設值  |
 |---------|---------|---------|
 |PortNumber|用來與相應放大背景工作通訊的網路連接埠號碼。|8391|
 |SSLCertThumbprint|用來保護與相應放大背景工作通訊的 SSL 憑證指紋。|在相應放大主機安裝期間指定的 SSL 憑證指紋|

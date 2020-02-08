@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/04/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f32f4219e438a3f6dc390d11b50e6487c47ee49
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 71ab699e99a3d22b6b04299b8de1ccb18e5f0708
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531253"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971369"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>在 Linux 上安裝 SQL Server 機器學習服務 (Python 和 R)
 
@@ -170,9 +170,9 @@ zypper update
 
 在連線到網際網路的裝置上，系統會使用每個作業系統的套件安裝程式，獨立地下載及安裝套件。 下表描述只適用於 R 和 Python 的所有可用套件，您可以指定提供完整功能安裝或最基本功能安裝的套件。
 
-| 封裝名稱 | 適用於 | Description |
+| 套件名稱 | 適用於 | 描述 |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | All | 用來執行 R 和 Python 程式碼的擴充性架構。 |
+|mssql-server-extensibility  | 全部 | 用來執行 R 和 Python 程式碼的擴充性架構。 |
 | microsoft-openmpi  | Python、R | 針對 Linux 上用於平行處理，Revo* 程式庫所使用的訊息傳遞介面。 |
 | mssql-mlservices-python | Python | Anaconda 和 Python 的開放原始碼散發。 |
 |mssql-mlservices-mlm-py  | Python | *完整安裝*。 提供 revoscalepy、microsoftml、適用於影像特徵化和文字情感分析的預先定型的模型。| 
@@ -426,7 +426,7 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 |||
 |--|----|
-| mssql/mlservices 套件 | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| mssql/mlservices 套件 | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 | microsoft-r-open 套件 | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
 
 
@@ -434,14 +434,14 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 |||
 |--|----|
-| mssql/mlservices 套件 | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| mssql/mlservices 套件 | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 | microsoft-r-open 套件 | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
 
 #### <a name="sles12-paths"></a>SLES/12 路徑
 
 |||
 |--|----|
-| mssql/mlservices 套件 | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| mssql/mlservices 套件 | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 | microsoft-r-open 套件 | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
 
 #### <a name="package-list"></a>套件清單
@@ -576,7 +576,7 @@ mssql-mlservices-mlm-py-9.4.7.64
    此命令會使用 Developer 版本 (預設值) 建立具有機器學習服務的 SQL Server 容器。 SQL Server 連接埠 **1433** 在主機上會公開為連接埠 **1401**。
 
    > [!NOTE]
-   > 在容器中執行生產 SQL Server 版本的程序將有些微差異。 如需詳細資訊，請參閱[在 Docker 上設定 SQL Server 容器映像](sql-server-linux-configure-docker.md)。 如果您使用相同的容器名稱和連接埠，本逐步解說的其餘部分仍然可與生產容器搭配運作。
+   > 在容器中執行生產環境 SQL Server 版本的程序會稍有不同。 如需詳細資訊，請參閱[在 Docker 上設定 SQL Server 容器映像](sql-server-linux-configure-docker.md)。 如果您使用相同的容器名稱和連接埠，本逐步解說的其餘部分仍然可與生產容器搭配運作。
 
 1. 若要檢視 Docker 容器，請執行 `docker ps` 命令：
 

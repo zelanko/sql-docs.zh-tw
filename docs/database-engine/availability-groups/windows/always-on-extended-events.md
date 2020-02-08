@@ -11,10 +11,10 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d6fdf58703d448e07c9be063b616f90c72f2411d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991559"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>設定 Always On 可用性群組的延伸事件
@@ -81,15 +81,15 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
 #### <a name="event-information"></a>事件資訊  
   
-|「資料行」|Description|  
+|資料行|描述|  
 |------------|-----------------|  
-|[屬性]|availability_replica_state_change|  
-|類別目錄|永遠開啟|  
-|通路|作業|  
+|名稱|availability_replica_state_change|  
+|類別|永遠開啟|  
+|通路|運作|  
   
 #### <a name="event-fields"></a>事件欄位  
   
-|[屬性]|Type_name|Description|  
+|名稱|Type_name|描述|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性群組的識別碼。|  
 |availability_group_name|unicode_string|可用性群組的名稱。|  
@@ -97,7 +97,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 |previous_state|availability_replica_state|複本在變更之前的角色。<br /><br /> **可能的值為：**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
 |current_state|availability_replica_state|複本在變更之後的角色。<br /><br /> **可能的值為：**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health 工作階段定義  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health 工作階段定義  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -112,20 +112,20 @@ GO
   
 #### <a name="event-information"></a>事件資訊  
   
-|「資料行」|Description|  
+|資料行|描述|  
 |------------|-----------------|  
-|[屬性]|availability_group_lease_expired|  
-|類別目錄|永遠開啟|  
-|通路|作業|  
+|名稱|availability_group_lease_expired|  
+|類別|永遠開啟|  
+|通路|運作|  
   
 #### <a name="event-fields"></a>事件欄位  
   
-|[屬性]|Type_name|Description|  
+|名稱|Type_name|描述|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性群組的識別碼。|  
 |availability_group_name|unicode_string|可用性群組的名稱。|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health 工作階段定義  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health 工作階段定義  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -140,15 +140,15 @@ GO
   
 #### <a name="event-information"></a>事件資訊  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
-|類別目錄|永遠開啟|  
+|類別|永遠開啟|  
 |通路|分析|  
   
 #### <a name="event-fields"></a>事件欄位  
   
-|[屬性]|Type_name|Description|  
+|名稱|Type_name|描述|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性群組的識別碼。|  
 |availability_group_name|unicode_string|可用性群組的名稱。|  
@@ -157,7 +157,7 @@ GO
 |joined_and_synchronized|validation_result_type|如果值為 FALSE，則這個可用性複本上的自動容錯移轉已失效。<br /><br /> TRUE<br /><br /> FALSE|  
 |previous_primary_or_automatic_failover_target|validation_result_type|如果值為 FALSE，則這個可用性複本上的自動容錯移轉已失效。<br /><br /> TRUE<br /><br /> FALSE|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health 工作階段定義  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health 工作階段定義  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -177,15 +177,15 @@ GO
 ###  <a name="BKMK_error_reported"></a> error_reported (多個錯誤號碼)：適用於傳輸或連線問題  
  每個篩選的事件指出在可用性群組所依賴的傳輸或資料庫鏡像端點中發生的連線問題。  
   
-|「資料行」|Description|  
+|資料行|描述|  
 |------------|-----------------|  
-|[屬性]|error_reported<br /><br /> 要篩選的數字：35201、35202、35206、35204、35207、9642、9666、9691、9692、9693、28034、28036、28080、28091、33309|  
-|類別目錄|錯誤|  
+|名稱|error_reported<br /><br /> 要篩選的數字：35201、35202、35206、35204、35207、9642、9666、9691、9692、9693、28034、28036、28080、28091、33309|  
+|類別|錯誤|  
 |通路|管理|  
   
 #### <a name="error-numbers-to-filter"></a>要篩選的錯誤號碼  
   
-|錯誤號碼|Description|  
+|錯誤號碼|描述|  
 |------------------|-----------------|  
 |35201|嘗試建立可用性複本 '%ls' 的連線時發生連線逾時。|  
 |35202|已成功建立可用性群組 '%ls' 從可用性複本 '%ls' (識別碼為 [%ls]) 到 '%ls' (識別碼為 [%ls]) 的連線。  此為參考用訊息， 使用者不必採取任何動作。|  
@@ -204,7 +204,7 @@ GO
 |28091|不支援在沒有驗證的情況下啟動 %S_MSG 的端點。|  
 |33309|因為尚未載入預設的 %S_MSG 端點組態，所以無法啟動叢集端點。|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health 工作階段定義  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health 工作階段定義  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -240,17 +240,17 @@ GO
   
 #### <a name="event-information"></a>事件資訊  
   
-|「資料行」|Description|  
+|資料行|描述|  
 |------------|-----------------|  
-|[屬性]|data_movement_suspend_resume|  
-|類別目錄|永遠開啟|  
-|通路|作業|  
+|名稱|data_movement_suspend_resume|  
+|類別|一律開啟|  
+|通路|運作|  
   
 #### <a name="event-fields"></a>事件欄位  
   
 ||||  
 |-|-|-|  
-|[屬性]|Type_name|Description|  
+|名稱|Type_name|描述|  
 |availability_group_id|guid|可用性群組的識別碼。|  
 |availability_group_name|unicode_string|可用性群組的名稱 (如果有)。|  
 |availability_replica_id|guid|可用性複本的識別碼。|  
@@ -261,7 +261,7 @@ GO
 |suspend_source|suspend_source_type|暫止或繼續動作的來源。|  
 |suspend_reason|unicode_string|在資料庫複本管理員中擷取到的暫止原因。|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health 工作階段定義  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health 工作階段定義  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -283,15 +283,15 @@ GO
   
 #### <a name="event-information"></a>事件資訊  
   
-|「資料行」|Description|  
+|資料行|描述|  
 |------------|-----------------|  
-|[屬性]|alwayson_ddl_execution|  
-|類別目錄|永遠開啟|  
+|名稱|alwayson_ddl_execution|  
+|類別|永遠開啟|  
 |通路|分析|  
   
 #### <a name="event-fields"></a>事件欄位  
   
-|[屬性]|Type_name|Description|  
+|名稱|Type_name|描述|  
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|可用性群組的識別碼。|  
 |availability_group_name|unicode_string|可用性群組的名稱。|  
@@ -299,7 +299,7 @@ GO
 |ddl_phase|ddl_opcode|表示 DDL 作業的階段：BEGIN、COMMIT 或 ROLLBACK。|  
 |引數|unicode_string|所執行陳述式的文字。|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health 工作階段定義  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health 工作階段定義  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -316,19 +316,19 @@ GO
   
 #### <a name="event-information"></a>事件資訊  
   
-|「資料行」|Description|  
+|資料行|描述|  
 |------------|-----------------|  
-|[屬性]|availability_replica_manager_state_change|  
-|類別目錄|永遠開啟|  
-|通路|作業|  
+|名稱|availability_replica_manager_state_change|  
+|類別|永遠開啟|  
+|通路|運作|  
   
 #### <a name="event-fields"></a>事件欄位  
   
-|[屬性]|Type_name|Description|  
+|名稱|Type_name|描述|  
 |----------|----------------|-----------------|  
-|current_state|manager_state|可用性複本管理員的目前狀態。<br /><br /> 線上存取<br /><br /> 離線<br /><br /> WaitingForClusterCommunication|  
+|current_state|manager_state|可用性複本管理員的目前狀態。<br /><br /> 線上<br /><br /> 離線<br /><br /> WaitingForClusterCommunication|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Alwayson_health 工作階段定義  
+#### <a name="alwayson_health-session-definition"></a>Alwayson_health 工作階段定義  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -347,13 +347,13 @@ GO
   
 #### <a name="event-information"></a>事件資訊  
   
-|「資料行」|Description|  
+|資料行|描述|  
 |------------|-----------------|  
-|[屬性]|error_reported<br /><br /> 錯誤號碼 1480：REPLICATION_TYPE_MSG 資料庫 "DATABASE_NAME" 因為 REASON_MSG 從 "OLD_ROLE" 角色變更為 "NEW_ROLE"|  
-|類別目錄|錯誤|  
+|名稱|error_reported<br /><br /> 錯誤號碼 1480：REPLICATION_TYPE_MSG 資料庫 "DATABASE_NAME" 因為 REASON_MSG 從 "OLD_ROLE" 角色變更為 "NEW_ROLE"|  
+|類別|錯誤|  
 |通路|管理|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health 工作階段定義  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health 工作階段定義  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   

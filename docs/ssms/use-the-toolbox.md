@@ -1,6 +1,6 @@
 ---
-title: 使用工具箱 | Microsoft Docs
-ms.custom: ''
+title: 使用工具箱
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6564bd4d2c8c88c4415be8c19e8a0b791d48dea9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 6a7d9029d775b2d1255d683e6b4c3b9d44ccdb31
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263372"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252201"
 ---
 # <a name="use-the-toolbox"></a>使用工具箱
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68263372"
   
 [工具箱] 中的項目分組成若干稱為「索引標籤」的區段。 以下是常用的 [工具箱] 工作及其執行方式的參考清單：  
   
-|若要|執行方式|  
+|至|執行方式|  
 |------|-----------|  
 |開啟 [工具箱]|在 [檢視]  功能表上，按一下 [工具箱]  。|  
 |自動關閉 [工具箱]|開啟 [工具箱]。 在 [視窗]  功能表上，選取 [自動隱藏]  。|  

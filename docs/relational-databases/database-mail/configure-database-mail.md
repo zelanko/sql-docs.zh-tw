@@ -40,10 +40,10 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095707"
 ---
 # <a name="configure-database-mail"></a>設定 Database Mail
@@ -60,7 +60,7 @@ ms.locfileid: "74095707"
 ###  <a name="Restrictions"></a> 限制事項  
  在任何資料庫中啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker 都需要資料庫鎖定。 如果已在 **msdb**中停用 Service Broker，則啟用 Database Mail 的第一步是停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，好讓 Service Broker 可以取得必要的鎖定。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  若要設定 Database Mail，您必須是 **系統管理員** 固定伺服器角色的成員。 若要傳送 Database Mail，您必須是 **msdb** 資料庫之 **DatabaseMailUserRole** 資料庫角色的成員。  
   
 ##  <a name="DBWizard"></a> 使用 Database Mail 組態精靈  
@@ -218,7 +218,7 @@ ms.locfileid: "74095707"
  **基本驗證**  
  指定 SMTP 伺服器所需的使用者名稱和密碼。  
   
- **User name**  
+ **使用者名稱**  
  檢視或更新 Database Mail 用來登入 SMTP 伺服器的使用者名稱。 如果 SMTP 伺服器需要基本驗證，則使用者名稱是必要的。  
   
  **密碼**  
@@ -233,7 +233,7 @@ ms.locfileid: "74095707"
  [Database Mail 組態精靈](#DBWizard)  
   
 ###  <a name="NewProfile"></a> 新增設定檔頁面  
- 使用此頁面可建立 Database Mail 設定檔。 Database Mail 設定檔是 Database Mail 帳戶的集合。 設定檔會在電子郵件伺服器無法連接時，提供替代的 Database Mail 帳戶，加強可靠性。 至少需要一個 Database Mail 帳戶。 如需在設定檔中設定 Database Mail 帳戶之優先權的詳細資訊，請參閱[建立 Database Mail 設定檔](../../relational-databases/database-mail/create-a-database-mail-profile.md)。  
+ 使用此頁面可建立 Database Mail 設定檔。 Database Mail 設定檔是 Database Mail 帳戶的集合。 設定檔會在電子郵件伺服器無法連接時，提供替代的 Database Mail 帳戶，加強可靠性。 至少需要一個 Database Mail 帳戶。 如需在設定檔中設定 Database Mail 帳戶之優先權的詳細資訊，請參閱 [建立 Database Mail 設定檔](../../relational-databases/database-mail/create-a-database-mail-profile.md)。  
   
  使用 [上移]  和 [下移]  按鈕，即可變更使用 Database Mail 帳戶的順序。 此順序是由一個值 (稱為序號) 決定。 [上移]  會減少序號，而 [下移]  會增加序號。 序號決定了 Database Mail 使用設定檔中之帳戶的順序。 如果是新的電子郵件訊息，Database Mail 會從序號最低的帳戶開始。 如果這個帳戶失敗，Database Mail 會使用序號次高的帳戶，依此類推，直到 Database Mail 傳送訊息成功為止，或直到序號最高的帳戶失敗為止。 如果序號最高的帳戶失敗，Database Mail 會暫停嘗試傳送郵件一段時間，這段時間是在 Database Mail **AccountRetryDelay** 參數中設定，然後從最低序號開始，再次開始嘗試傳送郵件。 使用 Database Mail **AccountRetryAttempts** 參數，即可設定外部郵件處理序使用指定之設定檔內的每個帳戶，嘗試傳送電子郵件訊息的次數。 您可以在 Database Mail 組態精靈的 [設定系統參數]  頁面上，設定 **AccountRetryDelay** 和 **AccountRetryAttempts** 參數。  
   
@@ -246,7 +246,7 @@ ms.locfileid: "74095707"
  **SMTP 帳戶**  
  為設定檔選擇一或多個帳戶。 優先權會設定 Database Mail 使用這些帳戶的順序。 如果沒有列出任何帳戶，您必須按一下 [加入]  才能繼續，然後加入新的 SMTP 帳戶。  
   
- **[加入]**  
+ **加入**  
  將帳戶加入至設定檔。  
   
  **移除**  
@@ -261,7 +261,7 @@ ms.locfileid: "74095707"
  [Database Mail 組態精靈](#DBWizard)  
   
 ###  <a name="ExistingProfile"></a> 管理現有的設定檔頁面  
- 使用此頁面可管理現有的 Database Mail 設定檔。 Database Mail 設定檔是 Database Mail 帳戶的集合。 設定檔會在電子郵件伺服器無法連接時，提供替代的 Database Mail 帳戶，加強可靠性。 至少需要一個 Database Mail 帳戶。 如需在設定檔中設定 Database Mail 帳戶之優先權的詳細資訊，請參閱[建立 Database Mail 設定檔](../../relational-databases/database-mail/create-a-database-mail-profile.md)。  
+ 使用此頁面可管理現有的 Database Mail 設定檔。 Database Mail 設定檔是 Database Mail 帳戶的集合。 設定檔會在電子郵件伺服器無法連接時，提供替代的 Database Mail 帳戶，加強可靠性。 至少需要一個 Database Mail 帳戶。 如需在設定檔中設定 Database Mail 帳戶之優先權的詳細資訊，請參閱 [建立 Database Mail 設定檔](../../relational-databases/database-mail/create-a-database-mail-profile.md)。  
   
  使用 [上移]  和 [下移]  按鈕，即可變更使用 Database Mail 帳戶的順序。 此順序是由一個值 (稱為序號) 決定。 [上移]  會減少序號，而 [下移]  會增加序號。 序號決定了 Database Mail 使用設定檔中之帳戶的順序。 如果是新的電子郵件訊息，Database Mail 會從序號最低的帳戶開始。 如果這個帳戶失敗，Database Mail 會使用序號次高的帳戶，依此類推，直到 Database Mail 傳送訊息成功為止，或直到序號最高的帳戶失敗為止。 如果序號最高的帳戶失敗，Database Mail 會暫停嘗試傳送郵件一段時間，這段時間是在 Database Mail **AccountRetryDelay** 參數中設定，然後從最低序號開始，再次開始嘗試傳送郵件。 使用 Database Mail **AccountRetryAttempts** 參數，即可設定外部郵件處理序使用指定之設定檔內的每個帳戶，嘗試傳送電子郵件訊息的次數。 您可以在 Database Mail 組態精靈的 [設定系統參數]  頁面上，設定 **AccountRetryDelay** 和 **AccountRetryAttempts** 參數。  
   
@@ -277,7 +277,7 @@ ms.locfileid: "74095707"
  **SMTP 帳戶**  
  為設定檔選擇一或多個帳戶。 容錯移轉優先權會設定在發生容錯移轉時，Database Mail 使用帳戶的順序。  
   
- **[加入]**  
+ **加入**  
  將帳戶加入至設定檔。  
   
  **移除**  
@@ -289,7 +289,7 @@ ms.locfileid: "74095707"
  **下移**  
  減少選取之帳戶的容錯移轉優先權。  
   
- **優先權**  
+ **優先順序**  
  檢視帳戶的目前容錯移轉優先權。  
   
  **帳戶名稱**  
@@ -341,7 +341,7 @@ ms.locfileid: "74095707"
   
  設定檔可能是預設設定檔。 在此情況下，使用者或角色不必明確指定設定檔，就能使用設定檔傳送電子郵件。 如果傳送電子郵件訊息的使用者或角色有預設的私人設定檔，Database Mail 就會使用該設定檔。 如果使用者或角色沒有預設的私人設定檔， **sp_send_dbmail** 會使用 **msdb** 資料庫的預設公用設定檔。 如果沒有使用者或角色的預設私人設定檔，而且沒有資料庫的預設公用設定檔， **sp_send_dbmail** 會傳回錯誤。 只有一個設定檔可以標示為預設的設定檔。  
   
- **公用**  
+ **公開**  
  選取此選項使指定的設定檔成為公用的。  
   
  **Profile Name**  
@@ -362,10 +362,10 @@ ms.locfileid: "74095707"
   
  設定檔可能是預設設定檔。 在此情況下，使用者或角色不必明確指定設定檔，就能使用設定檔傳送電子郵件。 如果傳送電子郵件訊息的使用者或角色有預設的私人設定檔，Database Mail 就會使用該設定檔。 如果使用者或角色沒有預設的私人設定檔， **sp_send_dbmail** 會使用 **msdb** 資料庫的預設公用設定檔。 如果沒有使用者或角色的預設私人設定檔，而且沒有資料庫的預設公用設定檔， **sp_send_dbmail** 會傳回錯誤。  
   
- **User name**  
+ **使用者名稱**  
  選取 **msdb** 資料庫中使用者或角色的名稱。  
   
- **存取**  
+ **Access**  
  選取使用者或角色是否能夠存取指定的設定檔。  
   
  **設定檔名稱**  
@@ -398,7 +398,7 @@ ms.locfileid: "74095707"
  外部郵件處理序維持使用中的最短時間 (以秒為單位)。 只要在 Database Mail 佇列中有電子郵件，此處理序就會保持在使用中。 此參數指定當沒有要處理的訊息時，處理序保持在使用中的時間。  
   
  **記錄層級**  
- 指定哪些訊息要記錄在 Database Mail 記錄中。 可能的值為：  
+ 指定哪些訊息要記錄在 Database Mail 記錄中。 可能的值包括：  
   
 -   一般 - 只記錄錯誤  
   
@@ -454,10 +454,10 @@ ms.locfileid: "74095707"
   
 4.  在 [查詢]  功能表上，選取 [指定範本參數的值]  。 即會開啟 [取代範本參數]  視窗。  
   
-5.  輸入 **profile_name**、**account_name**、**SMTP_servername**、**email_address** 和 **display_name** 的值。 SQL Server Management Studio 就會將您提供的值填入範本中。  
+5.  輸入 **profile_name**、 **account_name**、 **SMTP_servername**、 **email_address**和 **display_name**的值。 SQL Server Management Studio 就會將您提供的值填入範本中。  
   
 6.  執行指令碼以建立組態。  
   
-7.  此指令碼不會將資料庫使用者存取權授與給設定檔。 因此，依預設只有**系統管理員**固定安全性角色的成員才能使用此設定檔。 如需授與設定檔存取權限的詳細資訊，請參閱 [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)。  
+7.  此指令碼不會將資料庫使用者存取權授與給設定檔。 因此，依預設只有 **系統管理員** 固定安全性角色的成員才能使用此設定檔。 如需授與設定檔存取權限的詳細資訊，請參閱 [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)。  
   
   

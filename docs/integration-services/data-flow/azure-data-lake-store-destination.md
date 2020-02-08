@@ -14,10 +14,10 @@ ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 952dcc604dd99c2563ee0c9ef6dac3b9980ce429
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293399"
 ---
 # <a name="azure-data-lake-store-destination"></a>Azure Data Lake Store 目的地

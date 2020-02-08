@@ -15,10 +15,10 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bd42f62e51e44e218c39d0907cb16db1ef502c79
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298329"
 ---
 # <a name="data-profiling-task-and-viewer"></a>資料分析工作和檢視器

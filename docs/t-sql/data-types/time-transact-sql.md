@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239d7ee532f4052caa067be7a20022720740ff3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000451"
 ---
 # <a name="time-transact-sql"></a>時間 (Transact-SQL)
@@ -39,10 +39,10 @@ ms.locfileid: "68000451"
   
 ## <a name="time-description"></a>time 描述  
   
-|屬性|ReplTest1|  
+|屬性|值|  
 |--------------|-----------|  
 |語法|**time** [ (*毫秒小數位數*) ]|  
-|使用方式|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
+|使用量|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*毫秒小數位數*|指定秒鐘小數部分的位數。<br /><br /> 這可以是介於 0 至 7 之間的整數。 針對 Informatica，這可以是介於 0 至 3 之間的整數。<br /><br /> 預設的小數位數是 7 (100 毫秒)。|  
 |預設的字串常值格式<br /><br /> (用於下層用戶端)|Informatica 為 hh:mm:ss[.nnnnnnn])<br /><br /> 如需詳細資訊，請參閱[下層用戶端的回溯相容性](#BackwardCompatibilityforDownlevelClients)一節。|  
 |範圍|00:00:00.0000000 到 23:59:59.9999999 (Informatica 為 00:00:00.000 到 23:59:59.999)|  
@@ -56,7 +56,7 @@ ms.locfileid: "68000451"
 |時區位移感知和保留|否|  
 |日光節約感知|否|  
   
-|指定的小數位數|結果 (有效位數，小數位數)|資料行長度 (以位元組為單位)|小數<br /><br /> seconds<br /><br /> 有效位數|  
+|指定的小數位數|結果 (有效位數，小數位數)|資料行長度 (以位元組為單位)|小數<br /><br /> seconds<br /><br /> precision|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  
 |**time**|(16,7) [Informatica 中為 (12,3)]|5 (Informatica 中為 4)|7 (Informatica 中為 3)|  
 |**time(0)**|(8,0)|3|0-2|  
@@ -71,7 +71,7 @@ ms.locfileid: "68000451"
 ## <a name="supported-string-literal-formats-for-time"></a>支援 time 的字串常值格式  
  下表顯示 **time** 資料類型的有效字串常值格式。  
   
-|SQL Server|Description|  
+|SQL Server|描述|  
 |----------------|-----------------|  
 |hh:mm[:ss][:小數秒數][AM][PM]<br /><br /> hh:mm[:ss][.小數秒數][AM][PM]<br /><br /> hhAM[PM]<br /><br /> hh AM[PM]|無論您是否指定 AM，只要小時的值為 0 就表示午夜之後 (AM) 的小時。 小時等於 0 時，無法指定 PM。<br /><br /> 如果沒有指定 AM 或 PM，小時值 01 至 11 就代表正午之前的小時。 指定為 AM 時，這些值就代表正午之前的小時。 如果指定為 PM，這些值就代表正午之後的小時。<br /><br /> 如果沒有指定 AM 或 PM，小時值 12 就代表從正午開始的小時。 如果指定為 AM，此值就代表從午夜開始的小時。 如果指定為 PM，此值就代表從正午開始的小時。 例如，12:01 就是正午之後的 1 分鐘，也就是 12:01 PM，而 12:01 AM 則是午夜之後一分鐘。 指定為 12:01 AM 與指定為 00:01 或 00:01 AM 是相同的。<br /><br /> 如果未指定 AM 或 PM，從 13 到 23 的小時值就代表正午之後的小時。 如果指定為 PM，這些值也代表正午之後的小時。 當小時值為 13 至 23 時，則無法指定為 AM。<br /><br /> 24 小時值無效。 若要表示午夜，請使用 12: 00 AM 或 00:00。<br /><br /> 毫秒前可以用冒號 (:) 或句號 (.)。 如果使用冒號，數字是指千分之一秒。 如果使用句號，一位數代表十分之一秒、二位數代表百分之一秒，而三位數代表千分之一秒。 例如，12:30:20:1 表示 12:30 過 20 又千分之一秒；12:30:20.1 表示 12:30 過 20 又十分之一秒。|  
   
@@ -244,7 +244,7 @@ SELECT
 ###  <a name="ExampleB"></a> B. 將有效的時間字串常值插入 time(7) 資料行  
  下表將列出可插入 **time(7)** 資料類型之資料行的不同字串常值，以及之後儲存在該資料行中的值。  
   
-|字串常值格式類型|插入的字串常值|儲存的 time(7) 值|Description|  
+|字串常值格式類型|插入的字串常值|儲存的 time(7) 值|描述|  
 |--------------------------------|-----------------------------|------------------------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01:123AM'|01:01:01.1230000|當冒號 (:) 出現在小數秒數有效位數之前時，小數位數就無法超過三個位置，否則將會引發錯誤。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01.1234567 AM'|01:01:01.1234567|指定為 AM 或 PM 時，時間就會採用 24 小時格式儲存，但不含常值 AM 或 PM。|  
@@ -259,7 +259,7 @@ SELECT
 ### <a name="c-inserting-time-string-literal-into-columns-of-each-date-and-time-date-type"></a>C. 將時間字串常值插入每個 date 和 time 資料類型的資料行  
  在下表中，第一個資料行會顯示即將插入 date 或 time 資料類型 (顯示於第二個資料行) 之資料庫資料表資料行的時間字串常值。 第三個資料行會顯示將儲存在資料庫資料表資料行中的值。  
   
-|插入的字串常值|資料行資料類型|儲存在資料行中的值|Description|  
+|插入的字串常值|資料行資料類型|儲存在資料行中的值|描述|  
 |-----------------------------|----------------------|------------------------------------|-----------------|  
 |'12:12:12.1234567'|**time(7)**|12:12:12.1234567|如果小數秒數有效位數超過針對資料行所指定的值，字串就會被截斷，但不會發生錯誤。|  
 |'2007-05-07'|**date**|NULL|任何時間值都會導致 INSERT 陳述式失敗。|  

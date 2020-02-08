@@ -14,10 +14,10 @@ ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d52fa3912bffd084a8f95e79963abcd99158cdd4
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822392"
 ---
 # <a name="configure-database-mirrroing-security-wizard-mirror-server-instance"></a>設定資料庫鏡像安全性精靈：鏡像伺服器執行個體

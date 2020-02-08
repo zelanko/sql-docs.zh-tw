@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: c083ae0fbee92f67e20e6fd14620f005b7c9ca53
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244695"
 ---
 # <a name="breaking-changes-to-database-engine-in-includesssqlv15-mdincludessssqlv15-mdmd"></a>[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] 資料庫引擎的重大變更

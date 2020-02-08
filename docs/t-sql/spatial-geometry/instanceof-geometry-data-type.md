@@ -18,10 +18,10 @@ ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7eee6c8aa847a199f7b1547f61bbcd523039644f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101237"
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (geometry 資料類型)
@@ -40,12 +40,12 @@ ms.locfileid: "68101237"
 *geometry_type*  
 **nvarchar(4000)** 字串，它會指定在 **geometry** 類型階層內公開的 15 種類型其中之一。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
  CLR 傳回型別：**SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此方法的輸入必須是下列其中一種類型：**Geometry**、**Point**、**Curve**、**LineString**、**CircularString**、**CompoundCurve**、**Surface**、**Polygon**、**CurvePolygon**、**GeometryCollection**、**MultiSurface**、**MultiPolygon**、**MultiCurve**、**MultiLineString** 和 **MultiPoint**。 如果輸入有使用任何其他字串，這個方法會擲回 **ArgumentException**。  
   
 ## <a name="examples"></a>範例  

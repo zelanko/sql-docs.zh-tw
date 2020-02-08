@@ -11,10 +11,10 @@ ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 341d48d35404cd8d18c3f1474693305b7fadb3cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296717"
 ---
 # <a name="catalogstart_execution-ssisdb-database"></a>catalog.start_execution (SSISDB 資料庫)
@@ -37,9 +37,9 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
  執行之執行個體的唯一識別碼。 *execution_id* 是 **bigint**。
  
  [@retry_count =] *retry_count*  
- 執行失敗時的重試次數。 只有當執行位在 Scale Out 中時，它才會生效。這個參數是選擇性的。 如果未指定，會將其值設定為 0。 *retry_count* 是 **int**。
+ 執行失敗時的重試次數。 只有當執行位在 Scale Out 中時，它才會生效。這是選擇性參數。 如果未指定，會將其值設定為 0。 *retry_count* 是 **int**。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  已使用執行來指定在套件執行的單一執行個體期間，套件所使用的參數值。 建立執行執行個體之後，在該執行執行個體啟動之前，對應的專案可能已重新部署。 在這種情況下，執行的執行個體將會參考已過期的專案。 無效的參考會導致預存程序失敗。  
   
 > [!NOTE]  

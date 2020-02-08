@@ -19,10 +19,10 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 07a4d09e55999c9e6f85e059f576c1460baf750a
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71823555"
 ---
 # <a name="delete-a-data-tier-application"></a>刪除資料層應用程式
@@ -74,7 +74,7 @@ ms.locfileid: "71823555"
   
     2.  [選擇方法](#Choose_method)  
   
-    3.  [摘要](#Summary)  
+    3.  [總結](#Summary)  
   
     4.  [刪除資料層應用程式](#Delete_datatier_application)  
   
@@ -83,7 +83,7 @@ ms.locfileid: "71823555"
   
  **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示此頁面。  
   
- **下一步 >** - 繼續進行 [選擇方法]  頁面。  
+ **下一步 >** - 繼續進行至 [選擇方法]  頁面。  
   
  **取消** - 結束精靈，不刪除資料層應用程式或資料庫。  
   

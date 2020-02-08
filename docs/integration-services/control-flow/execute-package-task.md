@@ -20,10 +20,10 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294185"
 ---
 # <a name="execute-package-task"></a>執行封裝工作
@@ -164,7 +164,7 @@ ms.locfileid: "71294185"
  如果子封裝受到密碼保護，請提供子封裝的密碼，或按一下省略符號 ([...]) 按鈕，然後建立子封裝的新密碼。  
   
  **ExecuteOutOfProcess**  
- 指定子封裝是在父封裝的處理序中執行，還是在個別的處理序中執行。 依預設，[執行封裝] 工作的 ExecuteOutOfProcess 屬性會設定為 [False]  ，而且子封裝會在與父封裝的相同處理序中執行。 如果您將此屬性設定為 [True]  ，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 另外，如果此屬性設定為 [True]  ，則無法在僅限工具安裝中偵錯封裝；您必須安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 產品。 如需詳細資訊，請參閱[安裝 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
+ 指定子封裝是在父封裝的處理序中執行，還是在個別的處理序中執行。 依預設，「執行封裝」工作的 ExecuteOutOfProcess 屬性會設定為 **False**，而且子封裝會在與父封裝的相同處理序中執行。 如果您將此屬性設定為 [True]  ，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 另外，如果此屬性設定為 [True]  ，則無法在僅限工具安裝中偵錯封裝；您必須安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 產品。 如需詳細資訊，請參閱[安裝 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
   
 #### <a name="referencetype-dynamic-options"></a>ReferenceType 動態選項  
   
@@ -172,7 +172,7 @@ ms.locfileid: "71294185"
  **位置**  
  選取子封裝的位置。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**SQL Server**|設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的位置。|  
 |**檔案系統**|設定檔案系統的位置。|  
@@ -218,7 +218,7 @@ ms.locfileid: "71294185"
  **繫結參數或變數**  
  選取包含您要傳遞到子封裝之值的參數或變數。  
   
- **[加入]**  
+ **加入**  
  按一下此選項可將參數或變數對應到子封裝參數。  
   
  **移除**  

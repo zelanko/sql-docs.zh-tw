@@ -18,10 +18,10 @@ ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e81c4101d03fd6f8426b1a15a29b206a0c2be7a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040100"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
@@ -42,7 +42,7 @@ CERTENCODED ( cert_id )
 ## <a name="return-types"></a>傳回類型
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 搭配使用 **CERTENCODED** 和 **CERTPRIVATEKEY**，以透過二進位格式傳回憑證的不同部分。
   
 ## <a name="permissions"></a>權限  

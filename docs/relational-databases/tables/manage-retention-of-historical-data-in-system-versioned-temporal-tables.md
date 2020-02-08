@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 81e51dfca5692882ec75841f9be1244ef3479c33
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74401574"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理系統建立版本之時態表中的歷程記錄資料保留
@@ -172,7 +172,7 @@ COMMIT ;
 
 下圖顯示保存 6 個月資料的初始資料分割組態。
 
-![資料分割](../../relational-databases/tables/media/partitioning.png "|::ref5::|")
+![資料分割](../../relational-databases/tables/media/partitioning.png "資料分割")
 
 > **注意：** 如需在設定資料分割時使用 RANGE LEFT 與 RANGE RIGHT 的效能含意，請參閱下文中的資料表資料分割效能考量。
 
@@ -314,7 +314,7 @@ COMMIT TRANSACTION
 
 讓我們先以視覺化方式說明 RANGE LEFT 和 RANGE RIGHT 選項的意義：
 
-![資料分割 3](../../relational-databases/tables/media/partitioning3.png "|::ref7::|")
+![資料分割 3](../../relational-databases/tables/media/partitioning3.png "資料分割 3")
 
 當您將資料分割函數定義為 RANGE LEFT 時，指定的值是資料分割的上限。 當您使用 RANGE RIGHT 時，指定的值是資料分割的下限。 當您使用 MERGE RANGE 作業來移除資料分割函數定義中的界限時，基礎實作也會移除包含界限的資料分割。 如果該資料分割不是空的，系統會將資料移動到 MERGE RANGE 作業產生的資料分割。
 

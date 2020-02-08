@@ -11,10 +11,10 @@ ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.openlocfilehash: 23610c3144c7cf03a4c93be900bfc60a449448ed
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72041254"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>在 Linux 上安裝 SQL Server 命令列工具 sqlcmd 和 bcp
@@ -46,7 +46,7 @@ ms.locfileid: "72041254"
    sudo su
    ```
 
-1. 下載 Microsoft Red Hat 存放庫設定檔。
+1. 下載 Microsoft Red Hat 存放庫組態檔。
 
    ```bash
    curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
@@ -58,7 +58,7 @@ ms.locfileid: "72041254"
    exit
    ```
 
-1. 如果您已安裝舊版的 **mssql-tools**，請移除任何舊版的 unixODBC 套件。
+1. 如果您已安裝舊版的 **mssql-tools**，請移除所有舊版的 unixODBC 套件。
 
    ```bash
    sudo yum remove mssql-tools unixODBC-utf16-devel
@@ -94,7 +94,7 @@ ms.locfileid: "72041254"
 
 ## <a id="ubuntu"></a>在 Ubuntu 16.04 上安裝工具
 
-遵循下列步驟，在 Ubuntu 上安裝 **mssql-tools**。 
+使用下列步驟在 Ubuntu 上安裝 **mssql-tools**。 
 
 1. 匯入公開存放庫 GPG 金鑰。
 

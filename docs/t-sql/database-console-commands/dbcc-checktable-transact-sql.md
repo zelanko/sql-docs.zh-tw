@@ -27,10 +27,10 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: a4c68ce8ca6174f036b2b893a664b758745369d0
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982319"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
@@ -130,7 +130,7 @@ MAXDOP
  > [!NOTE]  
  > 如果 MAXDOP 設定為零，則伺服器會選擇平行處理原則的最大程度。  
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>備註    
     
 > [!NOTE]    
 > 若要在資料庫的每份資料表上執行 DBCC CHECKTABLE，請使用 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。    
@@ -180,7 +180,7 @@ DBCC CHECKTABLE 會利用內部資料庫快照集來提供執行這些檢查所�
 ## <a name="understanding-dbcc-error-messages"></a>了解 DBCC 錯誤訊息    
 DBCC CHECKTABLE 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中會寫入一則訊息。 如果 DBCC 命令執行成功，該訊息將指出命令已順利完成，並顯示命令執行的時間量。 如果 DBCC 命令由於發生錯誤而在完成檢查之前停止執行，則訊息中會指出命令已經終止，並顯示狀態值以及命令執行的時間量。 下表列出並描述可以包含在訊息中的狀態值。
     
-|State|Description|    
+|State|描述|    
 |-----------|-----------------|    
 |0|已引發錯誤號碼 8930。 這表示中繼資料損毀使 DBCC 命令終止。|    
 |1|已引發錯誤號碼 8967。 發生內部 DBCC 錯誤。|    

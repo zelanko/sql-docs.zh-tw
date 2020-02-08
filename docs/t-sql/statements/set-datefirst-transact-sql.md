@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19019a0493ef20aac9ab51090d64646d5d626185
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041800"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST (Transact-SQL)
@@ -59,17 +59,17 @@ SET DATEFIRST 7 ;
  *number* |  **@** _number_var_  
  這是一個整數，代表一週的第一天。 它可以是下列值之一。  
   
-|ReplTest1|每週的第一天是|  
+|值|每週的第一天是|  
 |-----------|------------------------------|  
 |**1**|星期一|  
-|**2**|星期二|  
+|**2**|Tuesday|  
 |**3**|星期三|  
-|**4**|星期四|  
+|**4**|Thursday|  
 |**5**|星期五|  
 |**6**|星期六|  
 |**7** (預設，U.S.英文)|星期日|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  若要查看 SET DATEFIRST 的目前設定，請使用 [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md) 函數。  
   
  SET DATEFIRST 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  

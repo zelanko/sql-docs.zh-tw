@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 96c706d58e0f90f4f10b89a724f7d87fa94e41f3
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72586769"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>建立 Always On 可用性群組的叢集 DTC 資源
@@ -41,7 +41,7 @@ ms.locfileid: "72586769"
 - 叢集詳細資料 (現有)：
   - 名稱：`Cluster`
   - 網路名稱：`Cluster Network 1`
-  - 節點：`SQLNODE1, SQLNODE2`
+  - 多個節點：`SQLNODE1, SQLNODE2`
   - 共用儲存體：`Cluster Disk 3` (由 `SQLNODE1` 所擁有)
 - 叢集詳細資料 (即將建立)：
   - 網路名稱資源：`DTCnet1`
@@ -157,7 +157,7 @@ GO
 ```
 
 ## <a name="4-create-test-databases"></a>4.建立測試資料庫
-此指令碼會在 `SQLNODE1` 上建立名為 `AG1` 的資料庫，並在 `SQLNODE2` 上建立名為 `dtcDemoAG1` 的資料庫。  在 SSMS 中，對 **SQLCMD 模式**的 `SQLNODE1` 執行下列 T-SQL 指令碼。
+此指令碼會在 `SQLNODE1` 上建立名為 `AG1` 的資料庫，並在 `SQLNODE2` 上建立名為 `dtcDemoAG1` 的資料庫。  在 SSMS 中，對 `SQLNODE1` SQLCMD 模式 **的**執行下列 T-SQL 指令碼。
 
 ```sql  
 /*******************************************************************

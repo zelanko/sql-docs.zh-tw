@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594408"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted 密碼編譯
@@ -31,7 +31,7 @@ ms.locfileid: "73594408"
   
  資料行加密金鑰 (CEK) 是受到 CMK 保護的內容加密金鑰 (例如：用來保護資料的金鑰)。  
   
- 所有 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 存放區提供者都會使用具備最佳非對稱加密填補的 RSA (RSA-OAEP) 來加密 CEK。 支援 Microsoft Cryptography API 的金鑰存放區提供者包括：.NET Framework 中的新一代 (CNG) ([SqlColumnEncryptionCngProvider 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) 使用 RFC 8017 在第 A.2.1 節指定的預設參數。 這些預設參數會使用 SHA-1 的雜湊函數，以及搭配 SHA-1 的 MGF1 遮罩產生函數。 所有其它的金鑰存放區提供者都使用 SHA-256。 
+ 所有 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 存放區提供者都會使用具備最佳非對稱加密填補的 RSA (RSA-OAEP) 來加密 CEK。 支援 Microsoft Cryptography API 的金鑰存放區提供者包括：.NET Framework 中的新一代 (CNG) ([SqlColumnEncryptionCngProvider 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) 使用 RFC 8017 在第 A.2.1 節指定的預設參數。 這些預設參數會使用 SHA-1 的雜湊函數及搭配 SHA-1 的 MGF1 遮罩產生函數。 所有其它的金鑰存放區提供者都使用 SHA-256。 
   
 ## <a name="data-encryption-algorithm"></a>資料加密演算法  
  「永遠加密」會使用 **AEAD_AES_256_CBC_HMAC_SHA_256** 演算法來加密資料庫中的資料。  
@@ -178,7 +178,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
  如需本文件所討論的演算法詳細資料，請參閱 [.NET 參考](https://referencesource.microsoft.com/)中的 **SqlAeadAes256CbcHmac256Algorithm.cs**、**SqlColumnEncryptionCertificateStoreProvider.cs** 和 **SqlColumnEncryptionCertificateStoreProvider.cs** 檔案。  
   
 ## <a name="see-also"></a>另請參閱  
- - [永遠加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ - [一律加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [使用 Always Encrypted 開發應用程式](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

@@ -19,10 +19,10 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0793c48a6ea531dbca499b07ca28be9601e5843
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292240"
 ---
 # <a name="ole-db-source"></a>OLE DB 來源
@@ -72,7 +72,7 @@ ms.locfileid: "71292240"
 ### <a name="specifying-parameters-by-using-ordinal-positions"></a>使用序數位置指定參數  
  如果沒有傳回任何參數名稱，便會依照參數在 [設定查詢參數]  對話方塊之 [參數]  清單中的列示順序，來控制執行階段中參數所對應的參數標記。 清單中的第一個參數會對應到 SQL 陳述式裡的第一個 ?， 第二個參數則對應到第二個 ?，依此類推。  
   
- 下列 SQL 陳述式會從 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 資料庫的 **Product** 資料表中選取資料列。 [對應]  清單中的第一個參數對應到 **Color** 資料行的第一個參數，第二個參數則對應到 **Size** 資料行。  
+ 下列 SQL 陳述式會從 **資料庫的** Product [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 資料表中選取資料列。 [對應]  清單中的第一個參數對應到 **Color** 資料行的第一個參數，第二個參數則對應到 **Size** 資料行。  
   
  `SELECT * FROM Production.Product WHERE Color = ? AND Size = ?`  
   
@@ -146,7 +146,7 @@ ms.locfileid: "71292240"
  **資料存取模式**  
  從來源中指定選取資料的方法。  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
 |資料表或檢視|從 OLE DB 資料來源中的資料表或檢視擷取資料。|  
 |資料表名稱或檢視名稱變數|請在變數中指定資料表或檢視名稱。<br /><br /> **相關資訊：** [在套件中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  

@@ -13,10 +13,10 @@ ms.assetid: 189f2067-c6c4-48bd-9bd9-65f6b2021c12
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 243798abec1a00d3c5ea3a9426449c3bd42e462b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012737"
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>設定 cursor threshold 伺服器組態選項
@@ -56,7 +56,7 @@ ms.locfileid: "68012737"
   
 -   如果將 [資料指標臨界值]  設定為 -1，所有索引鍵集都會以同步方式產生，這有益於小型的資料指標集。 如果將 **cursor threshold** 設成 0，所有資料指標索引鍵集都會以非同步方式產生。 若使用其他值，查詢最佳化工具會比較資料指標集中預期的列數，如果列數超過 **cursor threshold**中設定的數字，就以非同步方式建立索引鍵集。 請不要將 **cursor threshold** 設得太低，因為小的結果集最好是以同步的方式建立。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  

@@ -13,10 +13,10 @@ ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 035c31286e0594763c1063b606ad56473c41fbf5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294614"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>處理插入、更新與刪除
@@ -27,7 +27,7 @@ ms.locfileid: "71294614"
   在執行累加式變更資料載入之 Integration Services 封裝的資料流程中，第二個工作是分隔插入、更新與刪除。 然後，您可以使用適當的命令，將其套用到目的地。  
   
 > [!NOTE]  
->  設計執行累加式變更資料載入之封裝資料流程的第一個工作是，設定執行擷取變更資料之查詢的來源元件。 如需此元件的詳細資訊，請參閱[擷取與了解變更資料](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)。 如需建立可執行累加式變更資料載入之封裝的完整程序描述，請參閱[異動資料擷取 &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
+>  設計執行累加式變更資料載入之封裝資料流程的第一個工作是，設定執行擷取變更資料之查詢的來源元件。 如需此元件的詳細資訊，請參閱 [擷取與了解變更資料](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)。 如需建立可執行累加式變更資料載入之封裝的完整程序描述，請參閱[異動資料擷取 &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
   
 ## <a name="associating-friendly-values-to-separate-inserts-updates-and-deletes"></a>將易記值與個別的插入、更新與刪除產生關聯  
  在擷取變更資料的範例查詢中，**cdc.fn_cdc_get_net_changes_<擷取執行個體>** 函數僅會傳回名稱為 **__$operation** 之中繼資料的資料行。 此中繼資料行包含表示哪個作業造成變更的序數值。  
@@ -68,13 +68,13 @@ select
   
     3.  針對直接刪除的資料列，將條件為 `CDC_OPERATION == "D"` 的行輸入到刪除的輸出。  
   
-## <a name="next-step"></a>下一個步驟  
+## <a name="next-step"></a>後續步驟  
  分割要處理的資料列後，下一個步驟是將變更套用到目的地。  
   
  **下一個主題：** [將變更套用到目的地](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [條件式分割轉換](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
+ [Conditional Split Transformation](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
  [使用條件式分割轉換來分割資料集](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

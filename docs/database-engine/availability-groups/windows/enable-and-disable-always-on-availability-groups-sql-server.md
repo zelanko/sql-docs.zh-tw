@@ -16,10 +16,10 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 77e07cd5493220f14b177292e9065c355fca866f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000177"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>啟用或停用 Always On 可用性群組功能
@@ -50,7 +50,7 @@ ms.locfileid: "68000177"
   
 ##  <a name="IsEnabled"></a> 判斷 AlwaysOn 可用性群組是否已啟用  
   
--   [SQL Server Management Studio](#SSMS1Procedure)  
+-   [Transact-SQL](#SSMS1Procedure)  
   
 -   [Transact-SQL](#Tsql1Procedure)  
   
