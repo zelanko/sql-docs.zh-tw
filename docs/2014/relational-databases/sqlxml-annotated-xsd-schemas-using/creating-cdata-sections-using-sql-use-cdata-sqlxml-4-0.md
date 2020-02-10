@@ -1,5 +1,5 @@
 ---
-title: 'CDATA 區段使用 sql: use-cdata 建立-(SQLXML 4.0) |Microsoft Docs'
+title: 使用 sql： use-cdata 建立 CDATA 區段（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,28 +20,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cddde2ed1e40b2ea21cf4ebff75bea3beed8f2ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014005"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>使用 sql:use-cdata 建立 CDATA 區段 (SQLXML 4.0)
   在 XML 中，CDATA 區段可用來逸出包含字元的文字區塊，否則這些字元會被辨識為標記字元。  
   
- Microsoft 中的資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有時可以包含的 XML 剖析器視為標記字元; 例如，角括號字元 (\<和 >)，無比-或-等於符號 (< =)，以及連字號 (&) 會視為標記字元。 但是，您可以將這類型的特殊字元包裝在 CDATA 區段內，以免被視為標記字元。 XML 剖析器會將 CDATA 區段內的文字視為純文字。  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的資料庫有時會包含 XML 剖析器視為標記字元的字元;例如，角括弧（\<和 >）、小於或等於符號（<=）和連字號（&）會被視為標記字元。 但是，您可以將這類型的特殊字元包裝在 CDATA 區段內，以免被視為標記字元。 XML 剖析器會將 CDATA 區段內的文字視為純文字。  
   
- `sql:use-cdata` 註解是用來指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所傳回的資料應該包裝在 CDATA 區段內 (也就是說，它會指出 `sql:field` 指定之資料行中的值是否應該包含在 CDATA 區段內)。 `sql:use-cdata` 註解只能在對應至資料庫資料行的元素上指定。  
+ 
+  `sql:use-cdata` 註解是用來指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所傳回的資料應該包裝在 CDATA 區段內 (也就是說，它會指出 `sql:field` 指定之資料行中的值是否應該包含在 CDATA 區段內)。 
+  `sql:use-cdata` 註解只能在對應至資料庫資料行的元素上指定。  
   
- `sql:use-cdata` 註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。  
+ 
+  `sql:use-cdata` 註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。  
   
  此註解不能搭配 `sql:url-encode` 使用或是在 ID、IDREF、IDREFS、NMTOKEN 和 NMTOKENS 屬性類型上使用。  
   
 ## <a name="examples"></a>範例  
- 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. 在元素上指定 sql:use-cdata  
- 在下列結構描述中，`sql:use-cdata`設為 1 (True)，如 **\<AddressLine1 >** 內 **\<位址 >** 項目。 因此，資料會在 CDATA 區段內傳回。  
+ 在下列架構中， `sql:use-cdata`會在** \<Address>** 元素內，將** \<AddressLine1>** 設為1（True）。 因此，資料會在 CDATA 區段內傳回。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -82,7 +85,7 @@ ms.locfileid: "66014005"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  這是部分結果集：  
   

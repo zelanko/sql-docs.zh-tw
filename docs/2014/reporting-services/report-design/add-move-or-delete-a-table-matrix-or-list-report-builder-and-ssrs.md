@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3e98a5c49877f6bc94e9e3ac1e880c90229cd3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106603"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>加入、移動或刪除資料表、矩陣或清單 (報表產生器及 SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66106603"
   
 1.  在 **[插入]** 索引標籤上，按一下 **[資料表]** 或 **[矩陣]** ，然後按一下 **[資料表精靈]** 或 **[矩陣精靈]** 。  
   
-2.  請依照下列中的步驟**NewTable**或是**新的矩陣**精靈。  
+2.  依照 [ **NewTable** ] 或 [**新增矩陣**] 嚮導中的步驟進行。  
   
 3.  在 **[主資料夾]** 索引標籤上，按一下 **[執行]** 查看轉譯的報表。  
   

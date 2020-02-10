@@ -23,13 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873551"
 ---
 # <a name="data-compression"></a>資料壓縮
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援資料列存放區之資料表和索引的資料列和頁面壓縮，並且支援資料行存放區之資料表和索引的資料行存放區和資料行存放區封存壓縮。  
   
  如果是資料列存放區資料表和索引，使用資料壓縮功能有助於減少資料庫的大小。 除了節省空間之外，資料壓縮也有助於改善 I/O 密集型工作負載的效能，因為資料會儲存在更少的頁面中，而且查詢需要從磁碟讀取的頁面也變少了。 但是在與應用程式交換資料時，資料庫伺服器上需要額外的 CPU 資源來壓縮和解壓縮資料。 您可以針對下列資料庫物件來設定資料列和頁面壓縮：  
@@ -57,13 +58,13 @@ ms.locfileid: "62873551"
   
 -   Service Pack 或後續版本中的資料壓縮詳細資料可能會變更，恕不另行通知。  
   
--   每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中都無法使用壓縮。 如需詳細資訊，請參閱＜ [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)＞。  
+-   每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中都無法使用壓縮。 如需詳細資訊，請參閱＜ [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)＞。  
   
 -   壓縮不適用於系統資料表。  
   
 -   壓縮可讓更多的資料列儲存在頁面上，但是不會變更資料表或索引的資料列大小上限。  
   
--   當資料列大小上限加上壓縮負擔超過 8060 個位元組的資料列大小上限時，資料表將無法啟用壓縮。 例如，資料表具有資料行 c1`char(8000)`及 c2`char(53)`無法壓縮，因為有額外的壓縮負荷。 當使用 Vardecimal 儲存格式時，將會在啟用此格式時執行資料列大小檢查。 對於資料列和頁面壓縮而言，最初壓縮物件時會執行資料列大小檢查，然後在插入或修改每一個資料列時加以檢查。 壓縮會強制執行下列兩個規則：  
+-   當資料列大小上限加上壓縮負擔超過 8060 個位元組的資料列大小上限時，資料表將無法啟用壓縮。 例如，因為有額外的壓縮負荷，所以`char(8000)`無法壓縮`char(53)`具有資料行 c1 和 c2 的資料表。 當使用 Vardecimal 儲存格式時，將會在啟用此格式時執行資料列大小檢查。 對於資料列和頁面壓縮而言，最初壓縮物件時會執行資料列大小檢查，然後在插入或修改每一個資料列時加以檢查。 壓縮會強制執行下列兩個規則：  
   
     -   固定長度類型的更新一定要成功。  
   
@@ -102,7 +103,8 @@ ms.locfileid: "62873551"
 -   在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中實作 Vardecimal 儲存格式的資料表將會在升級時保留此設定。 您可以將資料列壓縮套用到具有 Vardecimal 儲存格式的資料表。 但是，由於資料列壓縮是 Vardecimal 儲存格式的超集，所以沒有理由保留 Vardecimal 儲存格式。 當您將 Vardecimal 儲存格式結合資料列壓縮時，十進位值不會取得額外的壓縮。 您可以將頁面壓縮套用到具有 Vardecimal 儲存格式的資料表；但是，Vardecimal 儲存格式資料行可能不會封存其他壓縮。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援 Vardecimal 儲存格式；但是，由於資料列層級的壓縮會達成相同的目標，所以 Vardecimal 儲存格式已被取代。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    >  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援 Vardecimal 儲存格式；但是，由於資料列層級的壓縮會達成相同的目標，所以 Vardecimal 儲存格式已被取代。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>使用資料行存放區和資料行存放區封存壓縮  
   
@@ -119,7 +121,7 @@ ms.locfileid: "62873551"
   
  若要新增封存壓縮，請使用 [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) 或 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) 搭配 REBUILD 選項和 DATA COMPRESSION = COLUMNSTORE。  
   
- 範例:  
+ 範例：  
   
 ```  
 ALTER TABLE ColumnstoreTable1   
@@ -135,7 +137,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
  若要移除封存壓縮並將資料還原成資料行存放區壓縮，請使用 [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) 或 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) 搭配 REBUILD 選項和 DATA COMPRESSION = COLUMNSTORE。  
   
- 範例:  
+ 範例：  
   
 ```  
 ALTER TABLE ColumnstoreTable1   
@@ -167,11 +169,12 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>中繼資料  
  下列系統檢視表包含叢集索引之資料壓縮的相關資訊：  
   
--   [sys.indexes &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) -`type`並`type_desc`資料行包含 CLUSTERED COLUMNSTORE 和 NONCLUSTERED COLUMNSTORE。  
+-   [&#40;transact-sql&#41;的索引](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)- `type`和`type_desc`資料行包含叢集資料行存放區和非叢集資料行存放區。  
   
--   [sys.partitions &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) -`data_compression`並`data_compression_desc`資料行包含 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。  
+-   [sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) - `data_compression`和`data_compression_desc`資料行包含資料行存放區和 COLUMNSTORE_ARCHIVE。  
   
- [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) 程序不適用於資料行存放區索引。  
+ 
+  [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) 程序不適用於資料行存放區索引。  
   
 ## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>壓縮對分割資料表和索引有何影響  
  當您搭配分割資料表和索引使用資料壓縮時，請注意以下考量事項：  
@@ -252,13 +255,13 @@ REBUILD PARTITION = ALL WITH (
 -   啟用壓縮可能會造成查詢計畫變更，因為系統會使用不同的頁數以及每頁不同的資料列數來儲存資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料列壓縮實作](row-compression-implementation.md)   
+ [資料列壓縮執行](row-compression-implementation.md)   
  [頁面壓縮實作](page-compression-implementation.md)   
- [Unicode 壓縮實作](unicode-compression-implementation.md)   
- [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
- [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)   
- [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
- [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [Unicode 壓縮執行](unicode-compression-implementation.md)   
+ [建立資料分割配置 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
+ [&#40;Transact-sql&#41;建立資料分割函數](/sql/t-sql/statements/create-partition-function-transact-sql)   
+ [CREATE TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)   
+ [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
   

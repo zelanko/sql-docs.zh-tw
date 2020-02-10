@@ -1,5 +1,5 @@
 ---
-title: 步驟 3：測試第 3 課的教學課程封裝 |Microsoft Docs
+title: 步驟 3：測試第 3 課教學課程套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac1aa0c45e8201d50ead862dd1631bbb3324c8e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891586"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>步驟 3：測試第 3 課的教學課程封裝
@@ -25,11 +25,11 @@ ms.locfileid: "62891586"
   
  **控制流程**  
   
- ![套件中的控制流程](../../2014/tutorials/media/task4lesson2control.gif "套件中的控制流程")  
+ ![封裝中的控制流程](../../2014/tutorials/media/task4lesson2control.gif "封裝中的控制流程")  
   
  **資料流程**  
   
- ![套件中的資料流程](../../2014/tutorials/media/task9lesson1data.gif "套件中的資料流程")  
+ ![封裝中的資料流程](../../2014/tutorials/media/task9lesson1data.gif "封裝中的資料流程")  
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>若要執行第 4 課的教學課程封裝  
   
@@ -43,9 +43,9 @@ ms.locfileid: "62891586"
   
 -   使用記事本或任何其他文字編輯器來開啟 TutorialLog.log 檔。  
   
--   雖然產生的資訊之語意`PipelineExecutionPlan`並`PipelineExecutionTrees`事件已超出本教學課程的範圍，您可以看到第一行列出在指定的資訊欄位**詳細資料** 索引標籤**設定 SSIS 記錄** 對話方塊。 而且，您還可以確認，在 Foreach 迴圈的每一個反覆運算中，已記錄您選取的兩個事件 PipelineExecutionPlan 和 PipelineExecutionTrees。  
+-   雖然針對`PipelineExecutionPlan`和`PipelineExecutionTrees`事件產生之資訊的語義已超出本教學課程的範圍，但您可以看到第一行列出在 [**設定 SSIS 記錄**] 對話方塊的 [**詳細資料**] 索引標籤中指定的資訊欄位。 而且，您還可以確認，在 Foreach 迴圈的每一個反覆運算中，已記錄您選取的兩個事件 PipelineExecutionPlan 和 PipelineExecutionTrees。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 4 課：加入錯誤流程重新導向](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [「課程 4：加入錯誤流程重新導向](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
   
   

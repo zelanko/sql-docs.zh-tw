@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912542"
 ---
-# <a name="mssqlserver8992"></a>MSSQLSERVER_8992
+# <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|8992|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC3_CHECK_CATALOG|  
-|訊息文字|檢查目錄訊息錯誤層級 LEVEL 狀態 STATE:訊息。|  
+|訊息文字|檢查目錄訊息 ERROR 層級 LEVEL 狀態 STATE: MESSAGE。|  
   
 ## <a name="explanation"></a>說明  
  DBCC CHECKCATALOG 或 DBCC CHECKDB 在指定之物件的系統中繼資料表中發現不一致。 亦即，在記錄的物件識別碼和錯誤訊息中指定的物件之間發生不一致。  

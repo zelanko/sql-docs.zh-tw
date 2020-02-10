@@ -15,16 +15,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1a0cb087f5a0cd429d9bc6f30ea08aaef3d07b3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483098"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>刪除模型物件權限 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除模型物件權限，移除所做的任何指派。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  
@@ -33,25 +33,25 @@ ms.locfileid: "65483098"
   
 ### <a name="to-delete-model-object-permissions"></a>若要刪除模型物件權限  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]** 。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]**。  
   
 2.  在 **[使用者]** 或 **[群組]** 頁面上，選取要編輯之使用者或群組的資料列。  
   
-3.  按一下 **[編輯選取的使用者]** 。  
+3.  按一下 **[編輯選取的使用者]**。  
   
 4.  按一下 **[模型]** 索引標籤。  
   
 5.  (選擇性) 從 **[模型]** 清單中選取模型。  
   
-6.  在 [**模型權限摘要**] 窗格中，選取您想要刪除的權限的資料列。  
+6.  在 [**模型許可權摘要**] 窗格中，選取您想要刪除之許可權的資料列。  
   
-7.  按一下 **刪除選取的使用權限**。  
+7.  按一下 [**刪除選取的許可權**]。  
   
     > [!NOTE]  
     >  如果權限繼承自群組，則無法從使用者移除權限。 您必須改為從群組移除權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [模型物件權限 &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [指派模型物件權限 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
+ [模型物件使用權限 &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [指派模型物件使用權限 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
   

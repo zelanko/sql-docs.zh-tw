@@ -1,5 +1,5 @@
 ---
-title: 註解解譯 (SQLXML 4.0) |Microsoft Docs
+title: 批註轉譯（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,32 +17,32 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2db54a2bec501c3422cf19b1efab7cdb581420e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013448"
 ---
 # <a name="annotation-interpretation-sqlxml-40"></a>註解的解譯 (SQLXML 4.0)
   本章節的主題描述 XML 大量載入要如何解譯 XSD 結構描述中的註解。 這裡所述的行為也適用於 XDR 結構描述中的註解。  
   
 > [!NOTE]  
->  這些主題的資訊只會描述 XML 大量載入在處理時所使用的註解。 SQLXML 4.0 支援之 XSD 結構描述註解的完整清單，請參閱 <<c0> [ 使用的註解 XSD 結構描述中&#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md)。</c0> 如需支援的註解 XDR 結構描述的清單，請參閱 < [Annotated XDR Schemas&#40;在 SQLXML 4.0 中已被取代&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
+>  這些主題的資訊只會描述 XML 大量載入在處理時所使用的註解。 如需 SQLXML 4.0 支援之 XSD 架構的批註完整清單，請參閱[在 Xsd 架構中使用批註 &#40;sqlxml 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md)。 如需 XDR 架構支援的注釋清單，請參閱[SQLXML 4.0&#41;中 &#40;已被取代的批註式 XDR 架構](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
- [sql: relationship 和關鍵識別碼順序規則&#40;SQLXML 4.0&#41;](annotation-interpretation-sql-relationship-and-key-ordering-rule.md)  
+ [sql：關聯性和索引鍵排序規則 &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-relationship-and-key-ordering-rule.md)  
  描述如何在 XML 大量載入內解譯 `sql:relationship` 註解。  
   
- [sql： 對應&#40;SQLXML 4.0&#41;](annotation-interpretation-sql-mapped.md)  
+ [sql：對應 &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-mapped.md)  
  描述如何在 XML 大量載入內解譯 `sql:mapped` 註解。  
   
- [sql: limit-value-欄位和 sql: limit-value-值&#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
+ [sql： limit-field 和 sql： limit-value &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
  描述如何在 XML 大量載入內解譯 `sql:limit-field` 和 `sql:limit-value` 註解。  
   
- [sql: overflow-field-欄位&#40;SQLXML 4.0&#41;](annotation-interpretation-sql-overflow-field.md)  
+ [sql：溢位欄位 &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-overflow-field.md)  
  描述如何在 XML 大量載入內解譯 `sql:overflow` 註解。  
   
- [其他註解&#40;SQLXML 4.0&#41;](annotation-interpretation-other-annotations.md)  
+ [&#40;SQLXML 4.0&#41;的其他批註](annotation-interpretation-other-annotations.md)  
  描述如何在 XML 大量載入內解譯下列註解：`sql:id-prefix`、`sql:use-cdata`、`sql:url-encode`、`sql:is-mapping-schema`、`sql:key-fields`。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 在 XPath 查詢 (SQLXML 4.0) 中指定布林值述詞 |Microsoft Docs
+title: 在 XPath 查詢中指定布林值述詞（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d04cefe217d72d36ff8cd342c27addca6bcff21e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012456"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定布林值述詞 (SQLXML 4.0)
-  下列範例顯示如何在 XPath 查詢中指定布林值述詞。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例結構描述資訊，請參閱[範例註解式 XSD 結構描述 XPath 範例的&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
+  下列範例顯示如何在 XPath 查詢中指定布林值述詞。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例架構的詳細資訊，請參閱[XPath 範例的範例批註式 XSD 架構 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
   
 ## <a name="examples"></a>範例  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66012456"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   
-1.  複製[結構描述程式碼範例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
+1.  複製[範例架構程式碼](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)，並將它貼到文字檔中。 將檔案儲存為 SampleSchema1.xml。  
   
 2.  建立下列範本 (BooleanValuedPredicatesA.xml)，並將其儲存在儲存 SampleSchema1.xml 的目錄中。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66012456"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
      結果如下：  
   
@@ -89,13 +89,13 @@ ms.locfileid: "66012456"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. 指定連續和巢狀述詞  
- 下列查詢顯示使用連續述詞。 此查詢會傳回所有 **\<客戶 >** 的內容節點的子項目都有**SalesPersonID**屬性值為 277 和**TerritoryID**屬性值為 3:  
+ 下列查詢顯示使用連續述詞。 此查詢會傳回所有** \<客戶>** 內容節點的子專案，**此屬性的**值為277，而**TerritoryID**屬性的值為3：  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- 此查詢會傳回 **\<客戶 >** 滿足述詞中指定這兩個條件的項目。  
+ 查詢會傳回滿足述詞中所指定條件的** \<客戶>** 元素。  
   
  您可以指定 `attribute` 軸的快速鍵 (@)，而且因為 `child` 軸是預設值，因此可從查詢省略：  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66012456"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 下列 XPath 查詢說明巢狀述詞的使用方式。 此查詢會傳回所有 **\<客戶 >** 包含的子元素的內容節點 **\<順序 >** 具有至少一個子元素 **\<順序 >** 具有項目**SalesPersonID**屬性值為 2。  
+ 下列 XPath 查詢說明巢狀述詞的使用方式。 此查詢會傳回內容節點的所有** \<客戶>** 子專案，其中包含** \<** 至少具有一個** \<order>** 元素（具有**SalesPersonID**屬性值為2）的 order>子項目。  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -111,7 +111,7 @@ ms.locfileid: "66012456"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   
-1.  複製[結構描述程式碼範例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
+1.  複製[範例架構程式碼](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)，並將它貼到文字檔中。 將檔案儲存為 SampleSchema1.xml。  
   
 2.  建立下列範本 (nestedSuccessive.xml)，並將其儲存在儲存 SampleSchema1.xml 的目錄中。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "66012456"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下為部分結果：  
   
@@ -166,13 +166,14 @@ ms.locfileid: "66012456"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. 指定最上層述詞  
- 下列查詢會傳回 **\<客戶 >** 子項目節點的內容節點為具有 **\<順序 >** 元素子系。 此查詢會測試當做最上層述詞的位置路徑：  
+ 下列查詢會傳回具有** \<Order>** 專案子系之內容節點的** \<Customer>** 子項目節點。 此查詢會測試當做最上層述詞的位置路徑：  
   
 ```  
 /child::Customer[child::Order]  
 ```  
   
- `child` 軸是預設值。 因此，此查詢可以指定為：  
+ 
+  `child` 軸是預設值。 因此，此查詢可以指定為：  
   
 ```  
 /Customer[Order]  
@@ -180,7 +181,7 @@ ms.locfileid: "66012456"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   
-1.  複製[結構描述程式碼範例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
+1.  複製[範例架構程式碼](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)，並將它貼到文字檔中。 將檔案儲存為 SampleSchema1.xml。  
   
 2.  建立下列範本 (TopLevelPredicate.xml)，並將其儲存在儲存 SampleSchema1.xml 的目錄中。  
   
@@ -200,7 +201,7 @@ ms.locfileid: "66012456"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  部分結果如下：  
   

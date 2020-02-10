@@ -1,5 +1,5 @@
 ---
-title: sp_helpdevice (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpdevice （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0db0242e5bdd9e04d3d7c424382933121c2e0ac2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67902985"
 ---
-# <a name="sphelpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
+# <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   報告 Microsoft® SQL Server™ 備份裝置的相關資訊。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我們建議您改用[sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)目錄檢視。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]我們建議您改用[sys.databases backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)目錄檢視  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +42,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @devname = ] 'name'` 是報告資訊所屬之備份裝置名稱。 值*名稱*總是**sysname**。  
+`[ @devname = ] 'name'`這是要報告其資訊的備份裝置名稱。 *Name*的值一律為**sysname**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -53,17 +53,17 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|邏輯裝置名稱。|  
 |**physical_name**|**nvarchar(260)**|實體檔案名稱。|  
-|**description**|**nvarchar(255)**|裝置的描述。|  
-|**status**|**int**|對應至狀態描述的數字**描述**資料行。|  
+|**描述**|**nvarchar(255)**|裝置的描述。|  
+|**狀態**|**int**|對應至 [**描述**] 資料行中狀態原因的數位。|  
 |**cntrltype**|**smallint**|裝置的控制器類型：<br /><br /> 2 = 磁碟裝置<br /><br /> 5 = 磁帶裝置|  
-|**size**|**int**|裝置大小 (2KB) 頁面。|  
+|**容量**|**int**|裝置大小 (2KB) 頁面。|  
   
 ## <a name="remarks"></a>備註  
- 如果*名稱*指定，則**sp_helpdevice**顯示指定傾印裝置的相關資訊。 如果*名稱*未指定，則**sp_helpdevice**顯示中的所有傾印裝置的相關資訊**sys.backup_devices**目錄檢視。  
+ 如果指定了*name* ， **sp_helpdevice**會顯示指定傾印裝置的相關資訊。 如果未指定*name* ， **sp_helpdevice**會顯示**sys.databases backup_devices**目錄檢視中所有傾印裝置的相關資訊。  
   
- 傾印裝置時，會新增至系統上，使用**sp_addumpdevice**。  
+ 傾印裝置會使用**sp_addumpdevice**新增至系統。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  
@@ -76,7 +76,7 @@ EXEC sp_helpdevice;
 ## <a name="see-also"></a>另請參閱  
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
- [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

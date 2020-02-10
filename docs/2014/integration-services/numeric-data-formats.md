@@ -16,17 +16,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0f48c3a6cebe079d93601f53698afafb350587e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057390"
 ---
 # <a name="numeric-data-formats"></a>數值資料格式
   快速剖析提供一組快速、簡易且區分區域設定的常式集，以剖析資料。 快速剖析僅支援整數資料類型的有限格式集。  
   
 ## <a name="integer-data-types"></a>整數資料類型  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供的整數資料類型為 DT_I1、DT_UI1、DT_I2、DT_UI2、DT_I4、DT_UI4、DT_I8 及 DT_UI8。 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供的整數資料類型為 DT_I1、DT_UI1、DT_I2、DT_UI2、DT_I4、DT_UI4、DT_I8 及 DT_UI8。 如需詳細資訊，請參閱[Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
   
  快速剖析支援整數資料類型的下列格式：  
   

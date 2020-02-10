@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 873aaee7641c84ad3e204c860a61ea5bc138fae6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835750"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Attunity Oracle Change Data Capture (CDC) 設計工具 F1 說明參考
@@ -48,7 +48,7 @@ ms.locfileid: "62835750"
   
     -   [產生鏡像資料表和 CDC 擷取執行個體](generate-mirror-tables-and-cdc-capture-instances.md)  
   
-    -   [完成](finish.md)  
+    -   [[完成]](finish.md)  
   
 -   [編輯執行個體屬性](edit-instance-properties.md)(或是直接前往下列其中一項工作)  
   

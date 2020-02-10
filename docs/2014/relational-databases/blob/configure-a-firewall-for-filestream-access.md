@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fff59c773e4c96b8d14cf604c1a9a3e2b31869f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010304"
 ---
 # <a name="configure-a-firewall-for-filestream-access"></a>為 FILESTREAM 存取設定防火牆
@@ -27,7 +27,7 @@ ms.locfileid: "66010304"
   
 1.  在 [控制台] 中，開啟 [Windows 防火牆]  。  
   
-2.  在左窗格中，按一下 [進階設定]  。 若是系統提示需要管理員密碼或確認，請輸入密碼或提供確認。  
+2.  在左窗格中，按一下 [進階設定]  。 如果系統提示您輸入系統管理員密碼或確認，請輸入密碼或提供確認。  
   
 3.  在 [具有進階安全性的 Windows 防火牆]  對話方塊的左窗格中，按一下 [輸入規則]  ，然後按一下右窗格中的 [新增規則]  。  
   

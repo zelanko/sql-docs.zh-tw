@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d833e0b42a6bfdaf9754525740f9bb58df794fdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580031"
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>使用 Reporting Services 報表檢視器網頁組件連線篩選或文件網頁組件
@@ -39,13 +39,13 @@ ms.locfileid: "65580031"
   
 4.  在 [所有網頁組件]  的 [其他]  類別目錄中，選取 [SQL Server Reporting Services 報表檢視器]  。  
   
-5.  按一下 **[加入]** 。 網頁組件會新增至區域頂端。  
+5.  按一下 [新增]  。 網頁組件會新增至區域頂端。  
   
 6.  在相同網頁組件頁面或儀表板的另一個區域中，按一下 [新增網頁組件]  。  
   
 7.  在 [所有網頁組件]  的 [篩選]  區段中，選取網頁組件。  
   
-8.  按一下 **[加入]** 。 網頁組件會新增至區域頂端。  
+8.  按一下 [新增]  。 網頁組件會新增至區域頂端。  
   
 9. 在包含網頁組件的區段中，按一下網頁組件的 [編輯]  功能表，並依序指向 [連]  和 [Send Filter Values To] \(傳送篩選值至)  ，然後選取 [報表檢視器  - 報表名稱  ]  。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "65580031"
   
 4.  在 [所有網頁組件]  的 [清單和文件庫]  區段中，選取 [文件]  。  
   
-5.  按一下 **[加入]** 。 網頁組件會新增至區域頂端。  
+5.  按一下 [新增]  。 網頁組件會新增至區域頂端。  
   
 6.  按一下工具窗格底部的 [套用]  ，然後按一下 [確定]  關閉窗格。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65580031"
   
 8.  在 [所有網頁組件]  的 [其他]  類別目錄中，選取 [SQL Server Reporting Services 報表檢視器]  。  
   
-9. 按一下 **[加入]** 。 網頁組件會新增至區域頂端。  
+9. 按一下 [新增]  。 網頁組件會新增至區域頂端。  
   
 10. 在包含網頁組件的區段中，按一下網頁組件的 [編輯]  功能表，指向 [連線]  ，再指向 [報表定義取得來源]  ，然後選取 [文件]  。  
   

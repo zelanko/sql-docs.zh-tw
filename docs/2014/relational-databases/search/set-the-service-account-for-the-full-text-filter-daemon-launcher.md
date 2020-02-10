@@ -14,32 +14,32 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010941"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>設定全文檢索篩選背景程式啟動器的服務帳戶
   此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來為 SQL 全文檢索篩選背景程式啟動器服務 (MSSQLFDLauncher) 設定服務帳戶。 ssNoVersion 全文檢索搜尋使用 SQL 全文檢索篩選背景程式啟動器服務，來啟動篩選背景程式主機處理序，以便處理全文檢索搜尋篩選和斷詞。 若要使用全文檢索搜尋，您必須執行這個服務。  
   
- SQL 全文檢索篩選背景程式啟動器服務是與特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體相關聯的執行個體感知服務。 SQL 全文檢索篩選背景程式啟動器服務會將服務帳戶資訊傳播給每個篩選背景程式主機處理序。  
+ SQL 全文檢索篩選背景程式啟動器服務是與特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體相關聯的執行個體感知服務。 SQL 全文檢索篩選背景程式啟動器服務會將服務帳戶資訊傳播給每個篩選背景程式主機處理序。  
   
   
-##  <a name="setting"></a> 設定服務帳戶  
+##  <a name="setting"></a>設定服務帳戶  
   
 #### <a name="to-set-the-sql-full-text-filter-daemon-launcher-service-account-for-full-text-search"></a>設定全文檢索搜尋的 SQL 全文檢索篩選背景程式啟動器服務帳戶  
   
 1.  指向 **[開始]** 功能表上的 **[所有程式]** ，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]** ，再按一下 **[SQL Server 組態管理員]** 。  
   
-2.  在  **SQL Server 組態管理員**，按一下**SQL Server 服務**，以滑鼠右鍵按一下**SQL 全文檢索篩選背景程式啟動器 ( *`instance name`* )** ，然後按一下**屬性**。  
+2.  在**SQL Server 組態管理員**中，按一下 [ **SQL Server Services**]，以滑鼠右鍵按一下 **[SQL 全文檢索*`instance name`* 篩選背景程式啟動器（）**]，然後按一下 [**屬性**]。  
   
-3.  按一下對話方塊的 [登入]  索引標籤，然後選取或輸入用以執行 SQL 全文檢索篩選背景程式啟動器服務所建立之每個處理序的帳戶。  
+3.  按一下對話方塊的 [登入]**** 索引標籤，然後選取或輸入用以執行 SQL 全文檢索篩選背景程式啟動器服務所建立之每個處理序的帳戶。  
   
 4.  在您關閉對話方塊之後，請按一下 [重新啟動]  重新啟動 SQL 全文檢索篩選背景程式啟動器服務。  
   
   
-##  <a name="error"></a> 如果 SQL 全文檢索篩選背景程式啟動器服務就無法啟動  
+##  <a name="error"></a>如果 SQL 全文檢索篩選背景程式啟動器服務未啟動  
  若未啟動 SQL 全文檢索篩選背景程式啟動器服務，則可能是下列其中一個或多個原因所造成：  
   
 -   與 SQL 全文檢索篩選背景程式啟動器服務帳戶相關聯的密碼已過期。  

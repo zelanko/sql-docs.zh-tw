@@ -1,5 +1,5 @@
 ---
-title: 資料集屬性對話方塊、 欄位 （報表產生器） |Microsoft Docs
+title: 資料集屬性對話方塊、欄位（報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 375d8eda6f0863dbe3852f1a88ea2e58ecc85b80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109426"
 ---
 # <a name="dataset-properties-dialog-box-fields-report-builder"></a>資料集屬性對話方塊、欄位 (報表產生器)
@@ -25,13 +25,13 @@ ms.locfileid: "66109426"
  只有在內嵌資料集上才支援導出欄位。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 ## <a name="options"></a>選項。  
- **[加入]**  
+ **加入**  
  將新的查詢或導出欄位加入到資料集中。  
   
  **刪除**  
  從資料集中刪除選取的欄位。  
   
- **欄位名稱**  
+ **功能變數名稱**  
  輸入欄位的名稱。 此欄位在資料集內必須是唯一的。 對於資料集中每個現有的欄位，系統都會預先填入名稱。  
   
  **欄位來源**  
@@ -46,12 +46,12 @@ ms.locfileid: "66109426"
   
 ## <a name="see-also"></a>另請參閱  
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [對話方塊、窗格和精靈的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [資料集屬性對話方塊、 選項&#40;報表產生器&#41;](report-data/dataset-properties-dialog-box-options-report-builder.md)   
- [資料集屬性對話方塊、 篩選&#40;報表產生器&#41;](../../2014/reporting-services/dataset-properties-dialog-box-filters-report-builder.md)   
- [資料集屬性對話方塊、 參數&#40;報表產生器&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md)   
- [資料集屬性對話方塊、 查詢&#40;報表產生器&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
+ [建立共用資料集或內嵌資料集 &#40;報表產生器和 SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [對話方塊、窗格和嚮導的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [資料集屬性對話方塊、選項 &#40;報表產生器&#41;](report-data/dataset-properties-dialog-box-options-report-builder.md)   
+ [資料集屬性對話方塊、篩選 &#40;報表產生器&#41;](../../2014/reporting-services/dataset-properties-dialog-box-filters-report-builder.md)   
+ [資料集屬性對話方塊、參數 &#40;報表產生器&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md)   
+ [資料集屬性對話方塊、查詢 &#40;報表產生器&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [報表產生器中的資料連接、資料來源及連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   

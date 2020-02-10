@@ -1,5 +1,5 @@
 ---
-title: 資料分割處理目的地編輯器 （對應頁面） |Microsoft Docs
+title: 資料分割處理目的地編輯器（對應頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 16f08d9b10bd0f29593695b8d7ea44c329b6a3a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056695"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>資料分割處理目的地編輯器 (對應頁面)
@@ -45,6 +45,6 @@ ms.locfileid: "66056695"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [資料分割處理目的地編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
- [資料分割處理目的地編輯器 &#40;進階頁面&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [資料分割處理目的地編輯器 &#40;Advanced Page&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

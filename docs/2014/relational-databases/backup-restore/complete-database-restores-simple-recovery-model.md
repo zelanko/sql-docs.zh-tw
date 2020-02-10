@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e64bf4d4642d8091cd0892283a996e7dccc56e26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877119"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>完整資料庫還原 (簡單復原模式)
@@ -60,7 +60,7 @@ ms.locfileid: "62877119"
   
  RESTORE DATABASE *database_name* FROM *backup_device* WITH RECOVERY  
   
-###  <a name="Example"></a> 範例 (Transact-SQL)  
+###  <a name="Example"></a> 範例 &#40;Transact-SQL&#41;  
  下列範例首先顯示如何使用 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 陳述式來建立 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的完整資料庫備份及差異資料庫備份。 此範例接著依序還原這些備份。 資料庫會還原到差異資料庫備份完成時的狀態。  
   
  這個範例顯示在完整資料庫還原實例中，還原順序的一些關鍵選項。 *「還原順序」* (Restore sequence) 包含一個或多個還原作業，會在一個或多個還原階段中移動資料。 會省略與這個檔案還原無關的語法和詳細資料。 為了清楚起見，建議您在復原資料庫時明確指定 RECOVERY 選項，即使它是預設的。  
@@ -99,7 +99,7 @@ GO
   
 -   [在簡單復原模式下還原資料庫備份 &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
--   [還原資料庫備份&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [還原資料庫備份 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [將資料庫還原到新位置 &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
   

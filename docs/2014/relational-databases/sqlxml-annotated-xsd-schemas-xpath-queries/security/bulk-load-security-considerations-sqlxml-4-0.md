@@ -1,5 +1,5 @@
 ---
-title: 大量載入安全性考量 (SQLXML 4.0) |Microsoft Docs
+title: 大量載入安全性考慮（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 559c54c263f685350badc5d7e0232d0d0354443a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010560"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>大量載入安全性考量 (SQLXML 4.0)
@@ -54,6 +54,6 @@ ms.locfileid: "66010560"
 -   如果使用者設定了讓 SQLXML 寫入錯誤的錯誤記錄檔，每次執行大量載入時，系統都會使用上一個大量載入處理序的資料來覆寫該檔案。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行大量載入 XML 資料的&#40;SQLXML 4.0&#41;](../bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [執行 XML 資料的大量載入 &#40;SQLXML 4.0&#41;](../bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

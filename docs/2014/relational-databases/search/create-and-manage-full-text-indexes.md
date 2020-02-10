@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011550"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
@@ -27,12 +27,12 @@ ms.locfileid: "66011550"
 > [!NOTE]  
 >  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新的版本中，全文檢索引擎位於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序中，而非個別的服務中。 將全文檢索引擎整合到 Database Engine 可以改善全文檢索管理能力、混合式查詢的最佳化，以及整體效能。  
   
- 每個資料表只允許有一個全文檢索索引。 若要對資料表建立全文檢索索引，該資料表必須有單一的非 Null 唯一資料行。 您可以針對 `char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml`、`varbinary` 和 `varbinary(max)` 類型的資料行建立全文檢索索引，並且建立全文檢索搜尋的索引。 針對資料類型為 `varbinary`、`varbinary(max)`、`image` 或 `xml` 的資料行建立全文檢索索引會要求您指定類型資料行。 「類型資料行」  是一個資料表資料行，您可以在每個資料列中儲存文件的副檔名 (.doc、.pdf 與 .xls 等)。  
+ 每個資料表只允許有一個全文檢索索引。 若要對資料表建立全文檢索索引，該資料表必須有單一的非 Null 唯一資料行。 您可以針對 `char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml`、`varbinary` 和 `varbinary(max)` 類型的資料行建立全文檢索索引，並且建立全文檢索搜尋的索引。 針對資料類型為 `varbinary`、`varbinary(max)`、`image` 或 `xml` 的資料行建立全文檢索索引會要求您指定類型資料行。 「類型資料行」** 是一個資料表資料行，您可以在每個資料列中儲存文件的副檔名 (.doc、.pdf 與 .xls 等)。  
   
  建立與維護全文檢索索引的程序稱為「母體擴展」  ，也稱為「搜耙」  。 全文檢索索引母體擴展有三種類型：完整母體擴展、以變更追蹤為基礎的母體擴展，以及以時間戳記為基礎的累加母體擴展。 如需詳細資訊，請參閱 [擴展全文檢索索引](populate-full-text-indexes.md)。  
   
-##  <a name="tasks"></a> 一般工作  
- **若要建立全文檢索索引**  
+##  <a name="tasks"></a>一般工作  
+ **建立全文檢索索引**  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
@@ -40,18 +40,18 @@ ms.locfileid: "66011550"
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
   
- **若要卸除全文檢索索引**  
+ **卸除全文檢索索引**  
   
 -   [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-index-transact-sql)  
   
  [本主題內容](#top)  
   
-##  <a name="structure"></a> 全文檢索索引結構  
+##  <a name="structure"></a>全文檢索索引結構  
  若能充分了解全文檢索索引的結構，將有助於了解全文檢索引擎的運作方式。 本主題會使用下列 **之** Document [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 資料表的摘錄當做範例資料表。 這個摘錄只會顯示該資料表中的兩個資料行 ( **DocumentID** 資料行和 **Title** 資料行) 和三個資料列。  
   
  就本例而言，我們會假設已經在 **Title** 資料行中建立了全文檢索索引。  
   
-|DocumentID|標題|  
+|DocumentID|Title|  
 |----------------|-----------|  
 |1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
@@ -63,14 +63,14 @@ ms.locfileid: "66011550"
   
  此外，請注意，關鍵字 "and" 已經從全文檢索索引中移除了。 進行此作業的原因是 "and" 是停用字詞，而且從全文檢索索引中移除停用字詞可能會大幅節省磁碟空間，進而改善查詢效能。 如需停用字詞的詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
- **片段 1**  
+ **片段1**  
   
 |關鍵字|ColId|DocId|出現次數|  
 |-------------|-----------|-----------|----------------|  
 |Crank|1|1|1|  
 |Arm|1|1|2|  
 |Tire|1|1|4|  
-|維護|1|1|5|  
+|維護 |1|1|5|  
 |Front|1|2|1|  
 |Front|1|3|1|  
 |Reflector|1|2|2|  
@@ -82,33 +82,36 @@ ms.locfileid: "66011550"
 |3|1|2|7|  
 |安裝|1|3|4|  
   
- **Keyword** 資料行包含編列索引時所擷取的單一 Token 表示法。 文字分隔會決定 Token 的組成項目。  
+ 
+  **Keyword** 資料行包含編列索引時所擷取的單一 Token 表示法。 文字分隔會決定 Token 的組成項目。  
   
- **ColId** 資料行所包含的值會對應到已建立全文檢索索引的特定資料行。  
+ 
+  **ColId** 資料行所包含的值會對應到已建立全文檢索索引的特定資料行。  
   
- `DocId`資料行包含對應至特定全文檢索索引鍵值全文檢索索引資料表中的八位元組整數的值。 當全文檢索索引鍵不是整數資料類型時，這項對應就是必要的。 在此情況下，全文檢索停用字之間的對應索引鍵值和`DocId`會在稱為 DocId Mapping 資料表的個別資料表中保留的值。 若要查詢這些對應，請使用 [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) 系統預存程序。 為了滿足搜尋條件，上述資料表中的 DocId 值必須與 DocId Mapping 資料表聯結，以便從查詢的基底資料表中擷取資料列。 如果基底資料表的全文檢索索引鍵值是整數類型，此值就會直接當做 DocId 而且不需要任何對應。 因此，使用整數全文檢索索引鍵值有助於最佳化全文檢索查詢。  
+ 此`DocId`資料行包含八個位元組整數的值，對應到全文檢索索引資料表中的特定全文檢索索引鍵值。 當全文檢索索引鍵不是整數資料類型時，這項對應就是必要的。 在這種情況下，全文檢索索引鍵值與`DocId`值之間的對應會保留在稱為 DocId Mapping 資料表的個別資料表中。 若要查詢這些對應，請使用 [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) 系統預存程序。 為了滿足搜尋條件，上述資料表中的 DocId 值必須與 DocId Mapping 資料表聯結，以便從查詢的基底資料表中擷取資料列。 如果基底資料表的全文檢索索引鍵值是整數類型，此值就會直接當做 DocId 而且不需要任何對應。 因此，使用整數全文檢索索引鍵值有助於最佳化全文檢索查詢。  
   
- **Occurrence** 資料行包含整數值。 針對每個 DocId 值，都會有一個對應到該 DocId 內特定關鍵字之相對單字位移的出現次數值清單。 出現次數值有助於決定詞句或相似的相符項目，例如，具有鄰近發生次數值的片語。 它們也有助於計算相關分數。例如，在 DocId 中的關鍵字出現次數可用來計分。  
+ 
+  **Occurrence** 資料行包含整數值。 針對每個 DocId 值，都會有一個對應到該 DocId 內特定關鍵字之相對單字位移的出現次數值清單。 出現次數值有助於決定詞句或相似的相符項目，例如，具有鄰近發生次數值的片語。 它們也有助於計算相關分數。例如，在 DocId 中的關鍵字出現次數可用來計分。  
   
  [本主題內容](#top)  
   
-##  <a name="fragments"></a> 全文檢索索引片段  
+##  <a name="fragments"></a>全文檢索索引片段  
  邏輯全文檢索索引通常會在多份內部資料表之間分割。 每份內部資料表會稱為全文檢索索引片段。 其中某些片段可能包含比其他片段更新的資料。 例如，如果使用者更新 DocId 為 3 的下列資料列，而且資料表已進行自動變更追蹤，就會建立新的片段。  
   
-|DocumentID|標題|  
+|DocumentID|Title|  
 |----------------|-----------|  
 |3|Rear Reflector|  
   
  在下列範例 (顯示片段 2) 中，此片段包含的 DocId 3 相關資料比片段 1 更新。 因此，當使用者查詢 "Rear Reflector" 時，片段 2 的資料就會用於 DocId 3。 每個片段都會以建立時間戳記標示，而且您可以使用 [sys.fulltext_index_fragments](/sql/relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql) 目錄檢視，查詢此時間戳記。  
   
- **片段 2**  
+ **片段2**  
   
 |關鍵字|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
 |Rear|1|3|1|  
 |Reflector|1|3|2|  
   
- 如片段 2 所示，全文檢索查詢必須在內部查詢每個片段並捨棄較舊的項目。 因此，如果全文檢索索引包含過多全文檢索索引片段，可能會導致查詢效能大幅降低。 若要減少片段的數目，請使用 [ALTER FULLTEXT CATALOG](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 REORGANIZE 選項來重新組織全文檢索目錄。 這個陳述式會執行「主要合併」  ，將片段合併成較大的單一片段，然後從全文檢索索引中移除所有已過時的項目。  
+ 如片段 2 所示，全文檢索查詢必須在內部查詢每個片段並捨棄較舊的項目。 因此，如果全文檢索索引包含過多全文檢索索引片段，可能會導致查詢效能大幅降低。 若要減少片段的數目，請使用[ALTER 全文檢索目錄](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)]語句的 [重新組織] 選項來重新組織全文檢索目錄。 這個陳述式會執行「主要合併」**，將片段合併成較大的單一片段，然後從全文檢索索引中移除所有已過時的項目。  
   
  重新組織之後，範例索引就會包含下列資料列：  
   
@@ -117,7 +120,7 @@ ms.locfileid: "66011550"
 |Crank|1|1|1|  
 |Arm|1|1|2|  
 |Tire|1|1|4|  
-|維護|1|1|5|  
+|維護 |1|1|5|  
 |Front|1|2|1|  
 |Rear|1|3|1|  
 |Reflector|1|2|2|  

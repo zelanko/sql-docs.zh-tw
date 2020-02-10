@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) 參數 |Microsoft Docs
+title: Integration Services （SSIS）參數 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,15 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cfd6a65e1561f252574ff919c8b63b0bbd57876f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892239"
 ---
 # <a name="integration-services-ssis-parameters"></a>Integration Services (SSIS) 參數
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 參數可讓您在封裝執行時，將值指派給封裝內的屬性。 您可以在專案層級建立 *「專案參數」* (Project Parameter)，並在封裝層級建立 *「封裝參數」* (Package Parameter)。 專案參數可用於向專案中的一個或多個封裝提供專案接收的任何外部輸入。 封裝參數可讓您修改封裝執行，而不需要編輯和重新部署封裝。  
+  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 參數可讓您在封裝執行時，將值指派給封裝內的屬性。 您可以在專案層級和封裝層級的*封裝參數*建立*專案參數*。 專案參數可用於向專案中的一個或多個封裝提供專案接收的任何外部輸入。 封裝參數可讓您修改封裝執行，而不需要編輯和重新部署封裝。  
   
  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中您使用 **[Project.params]** 視窗建立、修改或刪除專案參數。 您可使用 **設計師中的** [參數] [!INCLUDE[ssIS](../includes/ssis-md.md)] 索引標籤建立、修改或刪除封裝參數。 您可使用 **[參數化]** 對話方塊將新的或現有的參數與工作屬性產生關聯。 如需使用 **[Project.params]** 視窗和 **[參數]** 索引標籤的詳細資訊，請參閱＜ [Create Parameters](create-parameters.md)＞。 如需 **[參數化]** 對話方塊的詳細資訊，請參閱＜ [Parameterize Dialog Box](parameterize-dialog-box.md)＞。  
   
@@ -51,8 +52,9 @@ ms.locfileid: "62892239"
   
  您可以使用單一參數，將值指派給多個封裝屬性。 但是，您只能從單一參數，將值指派給單一封裝屬性。  
   
-###  <a name="executions"></a> 執行和參數值  
- *「執行」* (Execution) 是一個物件，代表封裝執行的單一執行個體。 當您建立執行時，可以指定執行封裝的所有必要詳細資料，例如執行參數值。 您也可以修改現有執行的參數值。  
+###  <a name="executions"></a>執行和參數值  
+ 
+  *「執行」* (Execution) 是一個物件，代表封裝執行的單一執行個體。 當您建立執行時，可以指定執行封裝的所有必要詳細資料，例如執行參數值。 您也可以修改現有執行的參數值。  
   
  當您明確設定執行參數值時，此值只適用於執行的該特定執行個體。 系統會使用執行值，而非伺服器值或設計值。 如果您沒有明確設定執行值，而且已經指定伺服器值，則會使用伺服器值。  
   
@@ -68,19 +70,19 @@ ms.locfileid: "62892239"
 #### <a name="determining-execution-parameter-values"></a>決定執行參數值  
  下列 Transact-SQL 檢視和預存程序可用來顯示和設定參數值。  
   
- [catalog.execution_parameter_values &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-execution-parameter-values-ssisdb-database) (檢視)  
+ [catalog. execution_parameter_values &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-execution-parameter-values-ssisdb-database)（view）  
  顯示特定執行將會使用的實際參數值。  
   
- [catalog.get_parameter_values &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database) (預存程序)  
+ [catalog. get_parameter_values &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database) （預存程式）  
  解析並顯示指定封裝和環境參考的實際值  
   
- [catalog.object_parameters &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database) (檢視)  
+ [catalog. object_parameters &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database) （view）  
  在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 目錄中顯示所有封裝及專案的參數和屬性，包括設計預設值和伺服器預設值。  
   
  [catalog.set_execution_parameter_value &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)  
  為 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 目錄中執行的執行個體設定參數值。  
   
- 您也可以在 **中使用** [執行封裝] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊修改參數值。 如需詳細資訊，請參閱＜ [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md)＞。  
+ 您也可以在 **中使用** [執行封裝] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊修改參數值。 如需詳細資訊，請參閱[執行封裝對話方塊](../../2014/integration-services/execute-package-dialog-box.md)。  
   
  您也可以使用 dtexec `/Parameter` 選項修改參數值。 如需詳細資訊，請參閱 [dtexec Utility](packages/dtexec-utility.md)。  
   
@@ -97,11 +99,11 @@ ms.locfileid: "62892239"
  在準備封裝執行的特定執行個體時，系統會指派值 5 給 **pkgOptions** 參數。 這個值就是執行值，因為只能針對執行的該特定執行個體，將此值套用至該參數。 執行啟動時，系統會將值 5 指派給對應至 **pkgOptions** 參數的封裝屬性。  
   
 ## <a name="related-tasks"></a>相關工作  
- [建立參數](create-parameters.md)  
+ [Create Parameters](create-parameters.md)  
   
  [部署專案之後設定參數值](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   
 ## <a name="related-content"></a>相關內容  
- mattmasson.com 上的部落格文章：[SSIS 快速提示：必要參數](https://go.microsoft.com/fwlink/?LinkId=239781)。  
+ mattmasson.com 上的部落格文章： [SSIS 快速提示：必要參數](https://go.microsoft.com/fwlink/?LinkId=239781)。  
   
   

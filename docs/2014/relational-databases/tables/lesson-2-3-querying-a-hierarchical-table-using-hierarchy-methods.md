@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: be1d0dcd37dba9b1025ba3e4a93aa60d2198b237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110050"
 ---
 # <a name="querying-a-hierarchical-table-using-hierarchy-methods"></a>使用階層方法查詢階層式資料表
@@ -40,7 +40,8 @@ ms.locfileid: "66110050"
   
      結果會同時列出 Sariya 和 Wanida。 Sariya 是層級 0 的下階，因此會被列出。 Wanida 是層級 1 的下階。  
   
-2.  您也可以使用 [GetAncestor](/sql/t-sql/data-types/getancestor-database-engine) 方法來查詢這項資訊。 `GetAncestor` 會針對您嘗試傳回的層級傳回一個引數。 由於 Wanida 是 Sariya 下的一個層級，請按照下列程式碼的示範，使用 `GetAncestor(1)` ：  
+2.  您也可以使用 [GetAncestor](/sql/t-sql/data-types/getancestor-database-engine) 方法來查詢這項資訊。 
+  `GetAncestor` 會針對您嘗試傳回的層級傳回一個引數。 由於 Wanida 是 Sariya 下的一個層級，請按照下列程式碼的示範，使用 `GetAncestor(1)` ：  
   
     ```  
     DECLARE @CurrentEmployee hierarchyid  

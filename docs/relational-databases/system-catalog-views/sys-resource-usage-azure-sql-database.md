@@ -1,5 +1,5 @@
 ---
-title: sys.resource_usage (Azure SQL Database) |Microsoft Docs
+title: sys. resource_usage （Azure SQL Database） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.service: sql-database
@@ -20,13 +20,13 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 3be4ff07923759af53b929852d4dbaa4088a77f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67904427"
 ---
-# <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Azure SQL Database)
+# <a name="sysresource_usage-azure-sql-database"></a>sys.resource_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
@@ -38,19 +38,19 @@ ms.locfileid: "67904427"
 >  -   當開啟時，DMV 會傳回目前彙總的資料。  
 > -   當關閉時，DMV 會傳回可能已過時的歷程記錄資料。  
   
- 提供目前伺服器中使用者資料庫的資源使用狀況資料的每小時摘要。 歷程記錄資料會保留 90 天。  
+ 提供目前伺服器中使用者資料庫的資源使用狀況資料的每小時摘要。 歷程記錄資料會保留90天。  
   
  針對每個使用者資料庫，連續每個小時都會有一個資料列。 即使資料庫在某一小時期間是處於閒置狀態，還是會有一個資料列，而該資料庫的 usage_in_seconds 值將會是 0。 該小時的儲存使用量和 SKU 資訊則會適當地縮合起來。  
   
-|[資料行]|資料類型|描述|  
+|資料行|資料類型|描述|  
 |-------------|---------------|-----------------|  
 |time|**datetime**|以每小時增加的時間 (UTC)。|  
 |database_name|**nvarchar**|使用者資料庫的名稱。|  
-|sku|**nvarchar**|SKU 的名稱。 以下是可能的值：<br /><br /> Web<br /><br /> Business<br /><br /> [基本]<br /><br /> Standard<br /><br /> Premium|  
-|usage_in_seconds|**int**|某一小時內所使用的 CPU 時間總和。<br /><br /> 注意:本專欄 v11 已被取代，並不適用於 V12。 **值一律是設定為 0。**|  
+|sku|**nvarchar**|SKU 的名稱。 以下是可能的值：<br /><br /> Web<br /><br /> Business<br /><br /> 基本<br /><br /> 標準<br /><br /> Premium|  
+|usage_in_seconds|**int**|某一小時內所使用的 CPU 時間總和。<br /><br /> 注意：此資料行已被 V11 取代，不適用於 V12。 **值一律設定為0。**|  
 |storage_in_megabytes|**decimal**|某一小時的最大儲存體大小，包括資料庫資料、索引、預存程序和中繼資料。|  
   
-## <a name="permissions"></a>Permissions  
- 這個檢視可供所有使用者角色權限來連接到虛擬**主要**資料庫。  
+## <a name="permissions"></a>權限  
+ 此視圖適用于具有連接到虛擬**master**資料庫之許可權的所有使用者角色。  
   
   

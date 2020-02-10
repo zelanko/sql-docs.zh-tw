@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e4e9c8ea3300c35cb75d451206ab9869f932814
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889321"
 ---
 # <a name="save-packages"></a>儲存封裝
@@ -32,8 +32,8 @@ ms.locfileid: "62889321"
   
 ### <a name="to-save-a-package"></a>若要儲存封裝  
   
--   [將套件儲存至檔案系統](../../2014/integration-services/save-a-package-to-the-file-system.md)  
+-   [將封裝儲存至檔案系統](../../2014/integration-services/save-a-package-to-the-file-system.md)  
   
--   [儲存套件的複本](../../2014/integration-services/save-a-copy-of-a-package.md)  
+-   [儲存封裝的複本](../../2014/integration-services/save-a-copy-of-a-package.md)  
   
   

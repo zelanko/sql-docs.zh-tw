@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d7d1a2d3b62578fc2fd627aea32112c218895d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896258"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>資料流程元件的設計階段方法
@@ -64,9 +64,10 @@ End Sub
  在呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 方法時，元件開發人員應該將自訂屬性 (<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100>) 加入元件。 自訂屬性沒有資料類型屬性。 自訂屬性的資料類型是由您指派至其 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.Value%2A> 屬性的值資料類型所設定。 不過，在您將初始值指派到自訂屬性之後，您無法以不同的資料類型指派值。  
   
 > [!NOTE]  
->  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> 介面對於 `Object` 類型的屬性值之支援有限。 您可以儲存為自訂屬性值的唯一物件是簡單類型的陣列，例如字串或是整數。  
+>  
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> 介面對於 `Object` 類型的屬性值之支援有限。 您可以儲存為自訂屬性值的唯一物件是簡單類型的陣列，例如字串或是整數。  
   
- 您可以將自訂屬性的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.ExpressionType%2A> 屬性值設定成 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSCustomPropertyExpressionType> 列舉的 `CPET_NOTIFY`，藉此指出自訂屬性支援屬性運算式，如下列範例所示。 您不必加入任何程式碼以處理或是驗證使用者所輸入的屬性運算式。 您可以為屬性設定預設值、驗證其值，以及正常地讀取和使用其值。  
+ 您可以將自訂屬性的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.ExpressionType%2A> 屬性值設定成 `CPET_NOTIFY` 列舉的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSCustomPropertyExpressionType>，藉此指出自訂屬性支援屬性運算式，如下列範例所示。 您不必加入任何程式碼以處理或是驗證使用者所輸入的屬性運算式。 您可以為屬性設定預設值、驗證其值，以及正常地讀取和使用其值。  
   
 ```csharp  
 IDTSCustomProperty100 myCustomProperty;  
@@ -80,7 +81,7 @@ Dim myCustomProperty As IDTSCustomProperty100
 myCustomProperty.ExpressionType = DTSCustomPropertyExpressionType.CPET_NOTIFY  
 ```  
   
- 您可以使用從列舉選取自訂屬性值來限制使用者<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A>屬性，如下列的範例中，假設您已定義名為的公用列舉中所示`MyValidValues`。  
+ 您可以使用<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A>屬性來限制使用者從列舉中選取自訂屬性值，如下列範例所示，這會假設您已定義名為`MyValidValues`的公用列舉。  
   
 ```csharp  
 IDTSCustomProperty100 customProperty = outputColumn.CustomPropertyCollection.New();  
@@ -136,7 +137,7 @@ customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName
   
  如需詳細資訊，請參閱 [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022) 中的＜實作 UI 類型編輯器＞。  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流程元件的執行階段方法](run-time-methods-of-a-data-flow-component.md)  

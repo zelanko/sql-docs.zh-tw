@@ -1,5 +1,5 @@
 ---
-title: 執行 SQL 查詢 （SQLXMLOLEDB 提供者） |Microsoft Docs
+title: 執行 SQL 查詢（SQLXMLOLEDB 提供者） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 029ba9e05a422648d75487e85f367b3b4f698ebd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013180"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>執行 SQL 查詢 (SQLXMLOLEDB 提供者)
@@ -29,12 +29,12 @@ ms.locfileid: "66013180"
   
 -   xml root  
   
- 在此用戶端的 ADO 範例應用程式中，會在用戶端上執行簡單的 SQL 查詢。 ClientSideXML 屬性設定為 True，因為沒有 FOR XML 子句的 SELECT 陳述式會傳送到伺服器。 伺服器會執行查詢，並將資料列集傳回給用戶端。 用戶端接著會將 FOR XML 轉換套用至資料列集，並產生 XML 文件。  
+ 在此用戶端的 ADO 範例應用程式中，會在用戶端上執行簡單的 SQL 查詢。 因為 ClientSideXML 屬性設定為 True，所以不含 FOR XML 子句的 SELECT 語句會傳送至伺服器。 伺服器會執行查詢，並將資料列集傳回給用戶端。 用戶端接著會將 FOR XML 轉換套用至資料列集，並產生 XML 文件。  
   
- Xml root 屬性就會產生 XML 文件提供單一最上層的根項目。  
+ Xml 根屬性會為所產生的 XML 檔提供單一最上層根項目。  
   
 > [!NOTE]  
->  在程式碼中，您必須於連接字串內提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此外，這個範例會指定針對資料提供者使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) (需要安裝其他網路用戶端軟體)。 如需詳細資訊，請參閱 < [SQL Server Native Client 的系統需求](../../native-client/system-requirements-for-sql-server-native-client.md)。  
+>  在程式碼中，您必須於連接字串內提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此外，這個範例會指定針對資料提供者使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) (需要安裝其他網路用戶端軟體)。 如需詳細資訊，請參閱[SQL Server Native Client 的系統需求](../../native-client/system-requirements-for-sql-server-native-client.md)。  
   
 ```  
 Option Explicit  

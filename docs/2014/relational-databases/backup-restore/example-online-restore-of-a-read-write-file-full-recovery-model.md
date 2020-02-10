@@ -1,5 +1,5 @@
 ---
-title: 範例線上還原讀寫檔案 （完整復原模式） |Microsoft Docs
+title: 範例：線上還原讀取/寫入檔案 (完整復原模式) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 45056586be543894c714f4005ba84826aa856674
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876065"
 ---
-# <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>範例線上還原讀取/寫入檔案 (完整復原模式)
+# <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>範例：線上還原讀取/寫入檔案 (完整復原模式)
   本主題是關於在完整復原模式下，包含多個檔案或檔案群組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
  這個範例當中，使用完整復原模式，名為 `adb`的資料庫包含三個檔案群組。 檔案群組 `A` 可讀取/寫入，而檔案群組 `B` 和檔案群組 `C` 則是唯讀的。 所有的檔案群組一開始都是在線上。  

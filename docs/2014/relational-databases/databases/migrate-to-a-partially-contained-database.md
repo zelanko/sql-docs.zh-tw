@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e535935da5c99668e39ab4f84eb98ccd5bab064
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871725"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -35,7 +35,7 @@ ms.locfileid: "62871725"
 ##  <a name="prepare"></a> 準備移轉資料庫  
  當您考慮將資料庫移轉至部分自主資料庫模型時，請檢閱下列項目。  
   
--   您應該了解部分自主資料庫模型。 如需詳細資訊，請參閱 [自主資料庫](contained-databases.md)。  
+-   您應該了解部分自主資料庫模型。 如需相關資訊，請參閱 [自主資料庫](contained-databases.md)。  
   
 -   您應該了解部分自主資料庫獨有的風險。 如需詳細資訊，請參閱 [Security Best Practices with Contained Databases](security-best-practices-with-contained-databases.md)。  
   
@@ -61,7 +61,7 @@ GO
 ```  
   
 #### <a name="enabling-contained-databases-using-management-studio"></a>使用 Management Studio 來啟用自主資料庫  
- 下列範例會在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體上啟用自主資料庫。  
+ 下列範例會在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體上啟用自主資料庫。  
   
 1.  在物件總管中，以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]  。  
   

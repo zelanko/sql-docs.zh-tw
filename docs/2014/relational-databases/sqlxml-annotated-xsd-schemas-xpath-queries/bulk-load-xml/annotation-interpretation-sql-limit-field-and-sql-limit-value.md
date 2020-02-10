@@ -1,5 +1,5 @@
 ---
-title: 'sql: limit-value-欄位和 sql: limit-value-值 (SQLXML 4.0) |Microsoft Docs'
+title: sql： limit-field 和 sql： limit-value （SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5d49a8159601236d280aed809fa41287cd4ab22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013569"
 ---
 # <a name="sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field 和 sql:limit-value (SQLXML 4.0)
-  XML 大量載入會根據 `sql:limit-field` 和 `sql:limit-value` 註解的定義來處理這些註解。 如需詳細資訊，請參閱 <<c0> [ 篩選值使用 sql: limit-value-欄位和 sql: limit-value-值&#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)。</c0>  
+  XML 大量載入會根據 `sql:limit-field` 和 `sql:limit-value` 註解的定義來處理這些註解。 如需詳細資訊，請參閱[使用 sql： limit-field 和 sql： limit-value 來篩選值 &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)。  
   
  例如，假設資料庫包含下列資料表：  
   

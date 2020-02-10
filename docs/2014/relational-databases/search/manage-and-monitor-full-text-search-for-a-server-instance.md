@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011173"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理及監視伺服器執行個體的全文檢索搜尋
@@ -56,13 +56,13 @@ ms.locfileid: "66011173"
   
          如果無法使用全文檢索目錄，將會重建關聯的全文檢索索引。 只有針對 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 資料庫才可以使用此選項。  
   
-         **Rebuild**  
+         **重建**  
          全文檢索目錄會使用新的增強斷詞工具重建。 重建索引可能要花一些時間，而且在升級之後可能需要相當多的 CPU 和記憶體。  
   
          **重設**  
          重設全文檢索目錄。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文檢索目錄檔案會遭到移除，但是全文檢索目錄和全文檢索索引的中繼資料則會保留。 在升級之後，所有的全文檢索索引都會停用變更追蹤，而且不會自動啟動搜耙。 當您在升級完成之後手動發出完整母體擴展之前，此目錄將會維持空白狀態。  
   
-         如需選擇全文檢索升級選項的相關資訊，請參閱 <<c0> [ 升級全文檢索搜尋](upgrade-full-text-search.md)。  
+         如需選擇全文檢索升級選項的詳細資訊，請參閱[升級全文檢索搜尋](upgrade-full-text-search.md)。  
   
         > [!NOTE]  
         >  也可以使用 [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)**upgrade_option** 動作來設定全文檢索升級選項。  
@@ -72,40 +72,40 @@ ms.locfileid: "66011173"
   
  下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 伺服器執行個體的全文檢索屬性及其相關的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函數。  
   
-|屬性|描述|函數|  
+|屬性|描述|函式|  
 |--------------|-----------------|--------------|  
 |`IsFullTextInstalled`|全文檢索元件是否會與目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體一起安裝。|[FULLTEXTSERVICEPROPERTY](/sql/t-sql/functions/fulltextserviceproperty-transact-sql)<br /><br /> [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql)|  
 |`LoadOSResources`|作業系統斷詞工具和篩選是否已註冊並搭配這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體使用。|FULLTEXTSERVICEPROPERTY|  
 |`VerifySignature`|指定全文檢索引擎是否只載入已簽署的二進位檔。|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a> 監視全文檢索搜尋活動  
+##  <a name="monitor"></a>監視全文檢索搜尋活動  
  在伺服器執行個體上監視全文檢索搜尋活動時，許多動態管理檢視與函數相當有用。  
   
- **若要檢視有關包含進行中母體擴展活動之全文檢索目錄的資訊**  
+ **若要使用進行中的擴展活動來查看全文檢索目錄的相關資訊**  
   
 -   [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql)  
   
- **若要檢視篩選背景程式主機處理序的目前活動**  
+ **若要查看篩選背景程式主機進程的目前活動**  
   
 -   [sys.dm_fts_fdhosts &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-fdhosts-transact-sql)  
   
- **若要檢視有關進行中索引母體擴展的資訊**  
+ **若要查看進行中索引擴展的相關資訊**  
   
 -   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)  
   
- **若要檢視在記憶體集區中當做搜耙或搜耙範圍一部分使用的記憶體緩衝區**  
+ **若要在記憶體集區中，查看當做編目或編目範圍一部分使用的記憶體緩衝區。**  
   
 -   [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)  
   
- **檢視可供全文檢索搜耙或全文檢索搜耙範圍之全文檢索收集程式元件使用的共用記憶體集區**  
+ **若要查看全文檢索編目或全文檢索編目範圍之全文檢索收集程式元件可用的共用記憶體集區**  
   
 -   [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   
- **檢視有關每個全文檢索索引批次的資訊**  
+ **若要查看有關每個全文檢索索引批次的資訊**  
   
 -   [sys.dm_fts_outstanding_batches &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql)  
   
- **檢視有關與進行中母體擴展相關之特定範圍的資訊**  
+ **若要查看與進行中擴展相關之特定範圍的資訊**  
   
 -   [sys.dm_fts_population_ranges &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql)  
   

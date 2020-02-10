@@ -1,5 +1,5 @@
 ---
-title: 導出數列屬性對話方塊、 一般 （報表產生器及 SSRS） |Microsoft Docs
+title: 匯出數列屬性對話方塊、一般（報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3f03857ebbd1d633d78a25437b1f7c03558c7e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109864"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>導出數列屬性對話方塊、一般 (報表產生器及 SSRS)
-  選取 [導出數列屬性]  對話方塊上的 [公式]  ，加入或修改將會根據使用現有數列資料作為輸入之內建公式導出的數列。  
+  選取 [導出數列屬性]**** 對話方塊上的 [公式]****，加入或修改將會根據使用現有數列資料作為輸入之內建公式導出的數列。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **公式**  
- 選取要套用到圖表的公式。 這些選項包括：  
+ 選取要套用到圖表的公式。 選項包括：  
   
--   平均數  
+-   平均值  
   
 -   中位數  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66109864"
   
 -   去價格走勢振盪指標 (Detrended Price Oscillator)  
   
--   範圍  
+-   信封  
   
 -   效能  
   

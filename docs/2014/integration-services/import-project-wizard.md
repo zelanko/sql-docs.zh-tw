@@ -1,5 +1,5 @@
 ---
-title: 匯入專案精靈 |Microsoft Docs
+title: 匯入專案 Wizard |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1399b14ec9345b9ca312db463ba5e508d9b9bbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058053"
 ---
 # <a name="import-project-wizard"></a>匯入專案精靈
@@ -24,13 +24,13 @@ ms.locfileid: "66058053"
   
 ### <a name="to-create-a-project-based-on-a-project-in-ispac-file-or-in-catalog"></a>若要根據 .ispac 檔案或目錄中的專案建立專案  
   
-1.  按一下 **[檔案]** 、指向 **[新增]** ，然後按一下 [專案]。  
+1.  按一下 [檔案]，指向 [**新增** **]，然後**按一下 [專案]。  
   
-2.  展開 **[商業智慧]** ，然後按一下 **[Integration Services]** 。  
+2.  展開 **[商業智慧]**，然後按一下 **[Integration Services]**。  
   
-3.  選取中間窗格的 **[Integration Services 匯入精靈]** 、輸入方案和專案的 **[名稱]** 、指定專案的 **[資料夾]** ，然後按一下 **[確定]** 。  
+3.  選取中間窗格的 **[Integration Services 匯入精靈]** 、輸入方案和專案的 **[名稱]** 、指定專案的 **[資料夾]** ，然後按一下 **[確定]**。  
   
-     此時，您應該會看見 **[Integration Services 匯入專案精靈]** 。 這個精靈會根據現有的 Integration Services 專案建立新的專案。  
+     此時，您應該會看見 **[Integration Services 匯入專案精靈]**。 這個精靈會根據現有的 Integration Services 專案建立新的專案。  
   
 4.  在 **[簡介]** 頁面上，按 **[下一步]** 即可看見 **[選取來源]** 頁面。  
   
@@ -44,8 +44,9 @@ ms.locfileid: "66058053"
   
 7.  按一下 **[匯入]** ，根據您所選取的 Integration Services 專案建立新的專案。  
   
-8.  **[結果]** 頁面應該會顯示精靈已執行之匯入作業的結果。 按一下 **[儲存報表]** ，將報表儲存至 XML 檔案。  
+8.  
+  **[結果]** 頁面應該會顯示精靈已執行之匯入作業的結果。 按一下 **[儲存報表]** ，將報表儲存至 XML 檔案。  
   
-9. 按一下 **[關閉]** ，關閉精靈。  
+9. 按一下 [關閉]  即可關閉精靈。  
   
   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 87e5446d4d6c9c0997dadbd2d3f9964b8d4271ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483898"
 ---
 # <a name="entities-master-data-services"></a>實體 (Master Data Services)
@@ -40,7 +40,7 @@ ms.locfileid: "65483898"
  您也可以讓實體包含明確階層 (以單一實體為基礎的不完全結構) 和集合 (成員子集的 One-off 合併)。 如需詳細資訊，請參閱[明確階層 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md) 和[集合 &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)。  
   
 ## <a name="using-entities-as-constrained-lists"></a>使用實體做為條件約束清單  
- 當使用者要指派屬性給實體中的成員時，您可以讓他們從條件約束的值清單中選擇。 若要這麼做，您可以使用實體來擴展屬性值的清單。 這稱為網域屬性。 如需詳細資訊，請參閱[網域屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)。  
+ 當使用者要指派屬性給實體中的成員時，您可以讓他們從條件約束的值清單中選擇。 若要這麼做，您可以使用實體來擴展屬性值的清單。 這稱為網域屬性。 如需詳細資訊，請參閱 [網域屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)。  
   
 ## <a name="base-entities"></a>基底實體  
  在模型中導覽物件時，基底實體是使用者的起始點。 基底實體可決定當使用者開啟 **[總管]** 功能區域，並按一下功能表列上的 **[總管]** 時，所呈現的畫面配置。 若要指定實體做為基底實體，請導覽至 **[系統管理]** 功能區域。 在 **[模型檢視]** 頁面上，將實體從右邊的樹狀控制，拖曳至左邊樹狀控制中的模型名稱。  
@@ -65,10 +65,10 @@ ms.locfileid: "65483898"
 |工作描述|主題|  
 |----------------------|-----------|  
 |建立新實體。|[建立實體 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
-|指定實體可以包含明確階層和集合。|[啟用明確階層和集合的實體&#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|變更現有實體的名稱。|[變更實體名稱&#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
+|指定實體可以包含明確階層和集合。|[啟用明確階層和集合的實體 &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|變更現有實體的名稱。|[變更機構名稱 &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
 |刪除現有實體。|[刪除實體 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
-|將權限指派給實體。|[指派模型物件權限 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|將權限指派給實體。|[指派模型物件使用權限 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
@@ -76,6 +76,6 @@ ms.locfileid: "65483898"
   
 -   [成員 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
--   [屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [Master Data Services &#40;的屬性&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

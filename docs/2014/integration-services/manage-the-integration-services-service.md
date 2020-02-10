@@ -14,21 +14,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fc3b1eb4e73b3d77b49cc9f485e0a6fc456a8875
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057784"
 ---
 # <a name="manage-the-integration-services-service"></a>管理 Integration Services 服務
     
 > [!IMPORTANT]  
->  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支援此服務能與舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]回溯相容。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
+>  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]支援服務，以提供與舊版的[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]回溯相容性。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
   
  當安裝 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]元件時，也會安裝 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務。 根據預設， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會啟動，而且服務的啟動類型會設為自動。 不過，您也必須安裝 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 才能使用此服務來管理已儲存和執行中的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
   
 > [!NOTE]  
->  您無法連接到的執行個體[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服務[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]新版[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 也就是說，在 **[連接到伺服器]** 對話方塊中，您無法輸入只有執行 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 版本之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的伺服器名稱。 不過，您可以從 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 版本的 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 編輯此服務的組態檔，進而管理儲存在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]執行個體中的封裝。 如需詳細資訊，請參閱 [設定 Integration Services 服務 &#40;SSIS 服務&#41;](service/integration-services-service-ssis-service.md)回溯相容。  
+>  您[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]無法從[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]版本的[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]連接至服務的實例。 也就是說，在 **[連接到伺服器]** 對話方塊中，您無法輸入只有執行 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 版本之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的伺服器名稱。 不過，您可以從 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 版本的 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 編輯此服務的組態檔，進而管理儲存在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]執行個體中的封裝。 如需詳細資訊，請參閱 [設定 Integration Services 服務 &#40;SSIS 服務&#41;](service/integration-services-service-ssis-service.md)回溯相容。  
   
  您在一部電腦上只能安裝單一 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的執行個體。 此服務並非特定 [!INCLUDE[ssDE](../includes/ssde-md.md)]執行個體特有的。 您可以使用執行服務所在之電腦的名稱來連接至服務。  
   
@@ -42,7 +42,8 @@ ms.locfileid: "66057784"
   
  根據預設， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會在 NETWORK SERVICE 帳戶內容中執行。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會寫入 Windows 事件記錄檔。 您可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中檢視服務事件。 此外，您也可以使用「Windows 事件檢視器」來檢視服務事件。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會寫入 Windows 事件記錄檔。 您可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中檢視服務事件。 此外，您也可以使用「Windows 事件檢視器」來檢視服務事件。  
   
 ### <a name="to-set-properties-of-integration-services-service-using-the-services-snap-in"></a>若要使用「服務」嵌入式管理單元設定 Integration Services 服務的屬性  
   
@@ -55,7 +56,7 @@ ms.locfileid: "66057784"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 服務 &#40;SSIS 服務&#41;](service/integration-services-service-ssis-service.md)   
  [設定 Integration Services 服務 &#40;SSIS 服務&#41;](configuring-the-integration-services-service-ssis-service.md)   
- [SQL Server 匯入和匯出精靈](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
+ [SQL Server 匯入和匯出嚮導](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [dtexec 公用程式](packages/dtexec-utility.md)   
  [執行專案和封裝](packages/run-integration-services-ssis-packages.md)  
   

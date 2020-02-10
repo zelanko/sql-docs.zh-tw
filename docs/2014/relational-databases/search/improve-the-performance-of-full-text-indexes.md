@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011254"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改善全文檢索索引的效能
   全文檢索索引與全文檢索查詢的效能會受硬體資源的影響，例如記憶體、磁碟速度、CPU 速度與電腦架構。  
   
-##  <a name="causes"></a> 效能問題的常見原因  
+##  <a name="causes"></a>效能問題的常見原因  
  全文檢索索引效能降低的主要原因即為硬體資源的限制：  
   
 -   如果篩選背景程式主機處理序 (fdhost.exe) 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序 (sqlservr.exe) 的 CPU 使用率接近 100%，表示 CPU 就是瓶頸。  
@@ -37,11 +37,12 @@ ms.locfileid: "66011254"
 -   如果實體記憶體 (3 GB 的限制) 不足，表示記憶體可能是瓶頸。 實體記憶體限制可能會在所有系統上發生，而且在 32 位元系統上，虛擬記憶體不足的壓力可能會降低全文檢索索引的速度。  
   
     > [!NOTE]  
-    >  從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]開始，全文檢索引擎就可以使用 AWE 記憶體，因為全文檢索引擎屬於 sqlservr.exe 的一部分。  
+    >  從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，全文檢索引擎就可以使用 AWE 記憶體，因為全文檢索引擎屬於 sqlservr.exe 的一部分。  
   
  如果系統沒有任何硬體瓶頸，全文檢索搜尋的索引效能大多取決於下列條件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立全文檢索批次所花的時間。  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立全文檢索批次所花的時間。  
   
 -   篩選背景程式可以取用這些批次的速度。  
   
@@ -55,10 +56,10 @@ ms.locfileid: "66011254"
   
   
   
-##  <a name="tuning"></a> 微調全文檢索索引的效能  
+##  <a name="tuning"></a>微調全文檢索索引的效能  
  若要將全文檢索索引的效能發揮至極限，請實作下列最佳作法：  
   
--   若要使用所有處理器或核心，最大值，將[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' 系統上的 Cpu 數目。 此組態選項的相關資訊，請參閱 [全文檢索搜耙最大範圍伺服器組態選項](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)。  
+-   若要使用所有處理器或核心來達到最大[](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)值，`max full-text crawl ranges`請將 sp_configure ' ' 設定為系統上的 cpu 數目。 此組態選項的相關資訊，請參閱 [全文檢索搜耙最大範圍伺服器組態選項](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)。  
   
 -   請確定基底資料表具有叢集索引。 對叢集索引的第一個資料行使用整數資料類型。 避免在叢集索引的第一個資料行使用 GUID。 叢集索引的多重範圍母體擴展可能會產生最高的母體擴展速度。 我們建議當做全文檢索索引鍵的資料行應該是整數資料類型。  
   
@@ -70,7 +71,7 @@ ms.locfileid: "66011254"
   
   
   
-##  <a name="full"></a> 疑難排解完整母體擴展的效能問題  
+##  <a name="full"></a>針對完整擴展的效能進行疑難排解  
  若要診斷效能問題，請查看全文檢索搜耙記錄檔。 如需搜耙記錄檔的相關資訊，請參閱[擴展全文檢索索引](../indexes/indexes.md)。  
   
  如果您對於完整母體擴展的效能不滿意，建議您遵循下列疑難排解順序進行。  
@@ -90,7 +91,7 @@ ms.locfileid: "66011254"
     > [!NOTE]  
     >  在多重 CPU 電腦上進行全文檢索母體擴展期間，fdhost.exe 或 sqlservr.exe 之間可能會發生競爭緩衝集區記憶體的情況。 所產生的共用記憶體不足會導致批次重試、記憶體壓力以及 fdhost.exe 處理序的傾印。  
   
-     您可以透過適當地設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 緩衝集區的 `max server memory` 值，解決此問題。 如需詳細資訊，請參閱本主題稍後的＜估計篩選背景程式主機處理序 (fdhost.exe) 的記憶體需求＞一節。 減少全文檢索索引所使用的批次大小可能也會有所幫助。  
+     您可以透過適當地設定 `max server memory` 緩衝集區的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值，解決此問題。 如需詳細資訊，請參閱本主題稍後的＜估計篩選背景程式主機處理序 (fdhost.exe) 的記憶體需求＞一節。 減少全文檢索索引所使用的批次大小可能也會有所幫助。  
   
 -   分頁問題  
   
@@ -105,51 +106,51 @@ ms.locfileid: "66011254"
   
  您可以使用下列公式來概略估計篩選背景程式主機所耗用的記憶體數量 (以位元組為單位)：  
   
- *number_of_crawl_ranges* \`ism_size`*max_outstanding_isms*\* 2  
+ *number_of_crawl_ranges* \`ism_size '*max_outstanding_isms* \* 2  
   
  上述公式中變數的預設值如下所示：  
   
 |**變數**|**預設值**|  
 |------------------|-----------------------|  
-|*number_of_crawl_ranges*|CPU 的數目|  
+|*number_of_crawl_ranges*|CPU 數目|  
 |*ism_size*|1 MB (適用於 x86 電腦)<br /><br /> 4 MB、8 MB 或 16MB (適用於 x64 電腦，端視實體記憶體總數而定)|  
 |*max_outstanding_isms*|25 (適用於 x86 電腦)<br /><br /> 5 (適用於 x64 電腦)|  
   
  下表將列出有關如何估計 fdhost.exe 記憶體需求的指導方針。 此表中的公式會使用下列值：  
   
--   *F*，這是 fdhost.exe 所需記憶體的估計 (以 MB 為單位)。  
+-   *F*，這是 fdhost 所需記憶體的估計（以 MB 為單位）。  
   
--   *T*，這是系統上可用的實體記憶體總計 (以 MB 為單位)。  
+-   *T*，這是系統上可用的實體記憶體總計（以 MB 為單位）。  
   
 -   *M*，這是最佳`max server memory`設定。  
   
 > [!IMPORTANT]  
->  如需公式的基本資訊，請參閱<sup>1</sup>， <sup>2</sup>，並<sup>3</sup>底下。  
+>  如需公式的基本資訊，請參閱下方的<sup>1</sup>、 <sup>2</sup>和<sup>3</sup>。  
   
-|平台|估計 fdhost.exe 記憶體需求，在 MB*F*<sup>1</sup>|計算最大伺服器記憶體-公式*M*<sup>2</sup>|  
+|平台|估計 fdhost 的 .exe 記憶體需求（以 MB 為單位）-*F*<sup>1</sup>|計算最大伺服器記憶體的公式-*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ **=** _搜耙範圍數目_ **&#42;** 50|_M_ **=minimum(** _T_ **,** 2000 **)- *`F`* -** 500|  
-|x64|_F_ **=** _搜耙範圍數目_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
+|x86|_F_ **=** **&#42;** 50_的爬網範圍數目_|_M_ **= 最小值（** _T_ **，** 2000 **）-*`F`* ** 500|  
+|x64|_F_ **=** _爬網範圍數_ **&#42;** 10 **&#42;** 8|_M_ **=** __ T **-** __ F **-** 500|  
   
- <sup>1</sup>多個完整母體擴展正在進行中，如果計算的 fdhost.exe 記憶體需求，每個分別為*F1*， *F2*，依此類推。 然後將 *M* 計算為 _T_ **-** sigma **(** _F_i **)** 。  
+ <sup>1</sup>如果有多個完整擴展正在進行中，請分別計算每個的 fdhost 記憶體需求，例如*F1*、 *F2*等。 然後將*M*計算為_T_ **-** sigma **（**_F_i **）**。  
   
- <sup>2</sup> 500 MB 是系統中其他處理序所需記憶體的估計。 如果系統正在進行其他工作，請據此增加這個值。  
+ <sup>2</sup> 500 MB 是系統中其他進程所需記憶體的估計。 如果系統正在進行其他工作，請據此增加這個值。  
   
- <sup>3</sup> 。*ism_size*假設為 8 MB x64 平台。  
+ <sup>3</sup> 。x64 平臺的*ism_size*假設為 8 MB。  
   
- **範例：估計 fdhost.exe 記憶體需求**  
+ **範例：估計 fdhost.exe 的記憶體需求**  
   
- 這個範例適用於具有 8GM RAM 和 4 個雙核心處理器的 AMD64 電腦。 第一個計算會估計 fdhost.exe 所需的記憶體-*F*。 搜耙範圍的數目是 `8`。  
+ 這個範例適用於具有 8GM RAM 和 4 個雙核心處理器的 AMD64 電腦。 第一個計算會估計 fdhost 所*需的記憶體。* 搜耙範圍的數目是 `8`。  
   
  `F = 8*10*8=640`  
   
- 下一個計算會取得的最佳值`max server memory` - *M*。 *T*MB-在此系統上可用的實體記憶體總計*T*-是`8192`。  
+ 下一個計算會取得`max server memory` - *M*的最佳值。 此系統上可用的實體記憶體總計（以 MB 為*單位）* 為`8192` *t*。  
   
  `M = 8192-640-500=7052`  
   
  **範例：設定 max server memory**  
   
- 這個範例會使用[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)並[重新設定](/sql/t-sql/language-elements/reconfigure-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式，將`max server memory`計算的值*M*在上述範例, `7052`:  
+ 這個範例會使用[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)並[重新](/sql/t-sql/language-elements/reconfigure-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]設定語句， `max server memory`將設為上述範例中為*M*計算的值`7052`，如下所示：  
   
 ```  
 USE master;  
@@ -160,7 +161,7 @@ RECONFIGURE;
 GO  
 ```  
   
- **若要設定最大伺服器記憶體組態選項**  
+ **設定最大伺服器記憶體組態選項**  
   
 -   [伺服器記憶體伺服器組態選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
@@ -198,22 +199,22 @@ GO
   
   
   
-##  <a name="filters"></a> 疑難排解因篩選而編製索引的效能變慢  
+##  <a name="filters"></a>針對緩慢的索引編制效能疑難排解，因為篩選準則  
  擴展全文檢索索引時，全文檢索引擎會使用兩種篩選：多執行緒與單一執行緒。 某些文件 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 文件) 是使用多執行緒篩選進行篩選。 其他文件 (例如 Adobe Acrobat Portable Document Format (PDF) 文件) 則是使用單一執行緒篩選進行篩選。  
   
  基於安全性理由，篩選是由篩選背景程式主機處理序載入。 伺服器執行個體會針對所有多執行緒篩選使用多執行緒處理序，而針對所有單一執行緒篩選使用單一執行緒處理序。 當使用多執行緒篩選的文件包含使用單一執行緒篩選的內嵌文件時，全文檢索引擎就會針對內嵌文件啟動單一執行緒處理序。 例如，如果遇到包含 PDF 文件的 Word 文件，全文檢索引擎就會針對 Word 內容啟動多執行緒處理序，而針對 PDF 內容啟動單一執行緒處理序。 不過，單一執行緒篩選在此環境下可能無法正常運作，而且可能會使篩選處理序不穩定。 在經常會有這類內嵌的特定情況下，不穩定可能會導致篩選處理序損毀。 發生這個狀況時，全文檢索引擎就會將任何失敗的文件 (例如，包含內嵌 PDF 內容的 Word 文件) 重新路由傳送至單一執行緒篩選處理序。 如果經常發生重新路由傳送的狀況，則會導致全文檢索索引處理序的效能降低。  
   
- 若要解決這個問題，請將容器文件 (在此範例中是 Word) 的篩選標示成單一執行緒篩選。 您可以變更篩選登錄值，以便將給定的篩選標示成單一執行緒篩選。 若要將篩選標示成單一執行緒篩選，您必須設定**ThreadingModel**登錄值，篩選出`Apartment Threaded`。 如需有關單一執行緒 Apartment 的詳細資訊，請參閱 [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159)(了解與使用 COM 執行緒模型) 技術白皮書。  
+ 若要解決這個問題，請將容器文件 (在此範例中是 Word) 的篩選標示成單一執行緒篩選。 您可以變更篩選登錄值，以便將給定的篩選標示成單一執行緒篩選。 若要將篩選標示為單一執行緒篩選，您必須將篩選的**ThreadingModel**登錄值設定為`Apartment Threaded`。 如需有關單一執行緒 Apartment 的詳細資訊，請參閱 [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159)(了解與使用 COM 執行緒模型) 技術白皮書。  
   
   
   
 ## <a name="see-also"></a>另請參閱  
  [伺服器記憶體伺服器組態選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
- [全文檢索搜耙最大範圍伺服器組態選項](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
- [擴展全文檢索索引](populate-full-text-indexes.md)   
+ [全文檢索爬網範圍上限伺服器設定選項](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
+ [填入全文檢索索引](populate-full-text-indexes.md)   
  [建立及管理全文檢索索引](create-and-manage-full-text-indexes.md)   
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
- [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)   
+ [dm_fts_memory_pools &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)   
  [疑難排解全文檢索索引](troubleshoot-full-text-indexing.md)  
   
   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0dbf84d6fd3253a3b4d945693090fdad00d077ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483538"
 ---
 # <a name="collections-master-data-services"></a>集合 (Master Data Services)
@@ -33,10 +33,10 @@ ms.locfileid: "65483538"
  當您建立集合時，您會自動列為擁有者。 如果您是管理員，可以視需要建立集合的其他屬性。  
   
 > [!NOTE]  
->  在您可以建立集合之前，實體必須啟用明確階層。 如需詳細資訊，請參閱 <<c0> [ 啟用明確階層和集合的實體&#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)。</c0>  
+>  在您可以建立集合之前，實體必須啟用明確階層。 如需詳細資訊，請參閱[啟用明確階層和集合的實體 &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)。  
   
 ## <a name="subscription-views-for-collections"></a>集合的訂閱檢視  
- 顯示集合的訂閱檢視有兩種。 [集合屬性]  格式會顯示集合的清單，以及與集合相關的任何屬性 (如描述或擁有者)。 [集合]  格式會顯示所有集合中的所有成員，以及每個成員加權和排序次序。 如需詳細資訊，請參閱 <<c0> [ 匯出的資料&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)。</c0>  
+ 顯示集合的訂閱檢視有兩種。 [集合屬性]**** 格式會顯示集合的清單，以及與集合相關的任何屬性 (如描述或擁有者)。 [集合]**** 格式會顯示所有集合中的所有成員，以及每個成員加權和排序次序。 如需詳細資訊，請參閱[匯出資料 &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)。  
   
  如果您為某個集合中的特定成員設定加權值，這些值則可以在相關的訂閱檢視中使用。  
   
@@ -44,14 +44,14 @@ ms.locfileid: "65483538"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|啟用明確階層和集合的實體。|[啟用明確階層和集合的實體&#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|建立新集合。|[建立集合 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
-|將成員加入至現有的集合。|[將成員加入至集合 &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
+|啟用明確階層和集合的實體。|[啟用明確階層和集合的實體 &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|建立新集合。|[建立 &#40;Master Data Services 的集合&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
+|將成員加入至現有的集合。|[將成員新增至集合 &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
 -   [明確階層 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [將資料匯出&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
+-   [將資料匯出 &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
   

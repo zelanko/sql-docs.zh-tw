@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011151"
 ---
 # <a name="limit-search-results-with-rank"></a>限制 RANK 的搜索結果
@@ -37,7 +37,7 @@ ms.locfileid: "66011151"
   
 ##  <a name="examples"></a> 使用 RANK 限制搜尋結果的範例  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>範例 a:只搜尋前三個相符項目  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>範例 A：只搜尋前三個相符項目  
  下列範例會使用 CONTAINSTABLE，以便只傳回前三個相符項目。  
   
 ```  
@@ -68,7 +68,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>範例 b:搜尋前十個相符項目  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>範例 B：搜尋前十個相符項目  
  下列範例會使用 CONTAINSTABLE 傳回 `Description` 資料行在 "light" 或 "lightweight" 字附近包含 "aluminum" 一字的前 5 項產品描述。  
   
 ```  
@@ -143,7 +143,8 @@ GO
   
  統計資料 (例如 `IndexRowCount`) 可能會有很大的差異。 例如，如果某個目錄在主索引中有 20 億個資料列，則會將一個新文件的索引編製到記憶體的中繼索引。而該文件會根據記憶體索引中的文件數目所得的等級，與主索引的文件等級進行非對稱比較。 因此，建議您在執行任何會造成大量資料列編製索引或重新編製索引的母體擴展動作後，使用 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來將這些索引與主要的索引合併。 全文檢索引擎也會根據參數 (例如中繼索引的數目與大小) 來自動合併索引。  
   
- `MaxOccurrence` 值會正規化為 32 種範圍中的其中一種。 這表示，會將長度 50 個字的文件視為與長度 100 個字的文件一樣。 下表用於正規化作業。 因為文件長度在相鄰資料表值 32 到 128 之間的範圍，它們會被視為具有相同長度，也就是 128 (32 < `docLength` < = 128)。  
+ 
+  `MaxOccurrence` 值會正規化為 32 種範圍中的其中一種。 這表示，會將長度 50 個字的文件視為與長度 100 個字的文件一樣。 下表用於正規化作業。 因為檔長度在相鄰資料表值32和128之間的範圍內，所以會有效地將其視為具有相同的長度，128（32 `docLength` < <= 128）。  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   
@@ -204,6 +205,6 @@ qtf is the frequency of the term in the query.
   
   
 ## <a name="see-also"></a>另請參閱  
- [使用全文檢索搜尋進行查詢](query-with-full-text-search.md)  
+ [使用全文檢索搜尋查詢](query-with-full-text-search.md)  
   
   

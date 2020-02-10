@@ -1,5 +1,5 @@
 ---
-title: 套用 XSL 轉換 (SQLXML Managed 類別) |Microsoft Docs
+title: 套用 XSL 轉換（SQLXML Managed 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 79f30fdbdd2db468e2dcb3690254463001f0fb12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012596"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>套用 XSL 轉換 (SQLXML Managed 類別)
   在本範例中，SQL 查詢會針對 AdventureWorks 資料庫執行。 XSL 轉換會套用到查詢結果以產生員工名字和姓氏之兩個資料行的資料表。  
   
- SqlXmlCommand 物件 XslPath 屬性用來指定 XSL 檔案及其目錄路徑。  
+ SqlXmlCommand 物件的 XslPath 屬性是用來指定 XSL 檔案及其目錄路徑。  
   
 > [!NOTE]  
 >  在程式碼中，您必須於連接字串內提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。  

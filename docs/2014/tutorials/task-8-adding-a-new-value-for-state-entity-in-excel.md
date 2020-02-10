@@ -1,5 +1,5 @@
 ---
-title: 工作 8：加入新的值為 State 實體，在 Excel 中 |Microsoft Docs
+title: 工作8：在 Excel 中為 State 實體加入新的值 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,48 +11,48 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 831d0b504a65d485413772ee3711e689e29ee2a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489701"
 ---
-# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>工作 8：在 Excel 中為 State 實體新增值
+# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>工作 8：在 Excel 中為 State 實體加入新的值
   在這項工作中，您會在 Excel 中加入 State 實體的值，並將變更發行到 MDS 伺服器。  
   
-1.  新增**工作表**在 Excel 中按一下底部的 [新增] 索引標籤。  
+1.  按一下底部的 [新增] 索引標籤，在 Excel 中加入**工作表**。  
   
-     ![Excel-新的工作表索引標籤](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-01.jpg "Excel-新的工作表索引標籤")  
+     ![Excel - [新工作表] 索引標籤](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-01.jpg "Excel - [新工作表] 索引標籤")  
   
-2.  在 [ **Excel**，按一下**Master Data**功能表上，索引標籤，然後按一下**顯示總管]** 功能區上。  
+2.  在**Excel**中，按一下功能表上的 [**主要資料**] 索引標籤，然後按一下功能區上的 [**顯示瀏覽器**]。  
   
-3.  在 **主資料總管**，選取**供應商**for**模型**。 您應該會看到兩個實體：**供應商**並**狀態**實體清單中。  
+3.  在 [**主要] 資料總管**中，選取 [適用于**模型**的**供應商**]。 您應該會在實體清單中看到兩個實體：**供應商**和**狀態**。  
   
-4.  按兩下**狀態**清單中。 所有成員**狀態**從 MDS 的實體應該顯示在工作表。  
+4.  按兩下清單中的 [**狀態**]。 MDS 中**狀態**實體的所有成員都應該顯示在工作表中。  
   
-5.  現在，新增資料列結尾包含下列值：**北卡羅萊納州**for**名稱**並**NC**如**程式碼**。 色彩編碼會區分任何新增/更新的記錄與其他記錄。  
+5.  現在，在結尾加入包含下列值的資料列：適用于程式**代碼**的**名稱**和**NC**的**北卡羅萊納州**。 色彩編碼會區分任何新增/更新的記錄與其他記錄。  
   
-     ![Excel-加入狀態的北卡羅萊納州](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-02.jpg "Excel-北卡羅萊納州加入狀態")  
+     ![Excel-將北卡羅萊納州新增至州](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-02.jpg "Excel-將北卡羅萊納州新增至州")  
   
-6.  按一下 **發佈**將變更發行到 MDS 功能區上。  
+6.  按一下功能區上的 [**發佈**]，將變更發佈至 MDS。  
   
-     ![Excel-[發行主要資料] 索引標籤上的按鈕](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-03.jpg "Excel-[發行主要資料] 索引標籤上的按鈕")  
+     ![Excel - [主要資料] 索引標籤上的 [發佈] 按鈕](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-03.jpg "Excel - [主要資料] 索引標籤上的 [發佈] 按鈕")  
   
-7.  上**發行並註解**對話方塊方塊中，注意**對所有變更使用相同的註解**已選取。 您可以針對這裡的所有變更輸入單一註解。  
+7.  請注意，在 [**發行並批註**] 對話方塊中，已選取 [**針對所有變更使用相同的注釋**]。 您可以針對這裡的所有變更輸入單一註解。  
   
-8.  選取 **檢閱變更並個別提供註解**提供每個變更 （在此情況下，只有一個） 的註解的選項。  
+8.  選取 [**檢查變更並個別提供批註**] 選項，以提供每項變更的注釋（在此案例中，只有一個）。  
   
-     ![Excel-[發行並註解] 對話方塊](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-04.jpg "Excel-[發行並註解] 對話方塊")  
+     ![Excel - [發行並註解] 對話方塊](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-04.jpg "Excel - [發行並註解] 對話方塊")  
   
-9. 按一下 **發佈**來將資料發行至 MDS。  
+9. 按一下 [**發佈**]，將資料發行至 MDS。  
   
-10. 請注意，**色彩編碼**使用資料列**北卡羅萊納州**作為**狀態**現已與其他記錄相同。  
+10. 請注意，以**北卡羅萊納州**作為**狀態**的資料列的**色彩編碼**與現在的其他記錄相同。  
   
-11. **選擇性：** 確認新的成員 (NC) 已新增至**狀態**使用的實體**總管**中**主資料管理員**。  
+11. **選擇性：** 使用**主資料管理員**中的**Explorer** ，確認新的成員（NC）已加入至**State**實體。  
   
-12. 在 Excel 中，以滑鼠右鍵按一下**狀態**下方，然後按一下工作表**刪除**刪除工作表。 刪除工作表並不會從 MDS 伺服器刪除任何資料。  
+12. 在 Excel 中，以滑鼠右鍵按一下底部的**狀態**工作表，然後按一下 [**刪除**] 以刪除工作表。 刪除工作表並不會從 MDS 伺服器刪除任何資料。  
   
-## <a name="next-step"></a>下一個步驟  
- [工作 9:建立衍生階層，使用主資料管理員](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
+## <a name="next-step"></a>後續步驟  
+ [工作 9：使用主資料管理員建立衍生階層](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
   
   

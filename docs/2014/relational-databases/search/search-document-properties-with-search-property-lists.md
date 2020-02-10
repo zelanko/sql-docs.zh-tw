@@ -19,16 +19,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011075"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索屬性清單搜索文件屬性
   文件屬性的內容與文件本文的內容之間原本無法區別。 這項限制會將全文檢索查詢限制為整個文件的一般搜尋。 不過，現在您可以針對 `varbinary`、`varbinary(max)` (包括 `FILESTREAM`) 或 `image` 二進位資料行中支援的文件類型設定全文檢索索引，以便支援特定屬性 (例如 Author 和 Title) 的屬性範圍搜尋作業。 這種搜尋形式稱為「屬性搜尋」  。  
   
- 相關聯的[篩選](configure-and-manage-filters-for-search.md) (IFilter) 會決定是否可對特定文件類型進行屬性搜尋。 對於某些文件類型而言，相關聯的 IFilter 會擷取針對該文件類型定義的部分或全部屬性，以及文件本文的內容。 您可以設定全文檢索索引，以便支援針對 IFilter 在建立全文檢索索引期間所擷取的特定屬性進行屬性搜尋。 適用於 .docx、.xlsx 和 .pptx 等 Microsoft Office 文件類型的 IFilter 就是會擷取許多文件屬性的 IFilter。 另一方面，XML IFilter 不會發出屬性。  
+ 相關聯的 [篩選](configure-and-manage-filters-for-search.md) (IFilter) 會決定是否可對特定文件類型進行屬性搜尋。 對於某些文件類型而言，相關聯的 IFilter 會擷取針對該文件類型定義的部分或全部屬性，以及文件本文的內容。 您可以設定全文檢索索引，以便支援針對 IFilter 在建立全文檢索索引期間所擷取的特定屬性進行屬性搜尋。 適用於 .docx、.xlsx 和 .pptx 等 Microsoft Office 文件類型的 IFilter 就是會擷取許多文件屬性的 IFilter。 另一方面，XML IFilter 不會發出屬性。  
   
 ##  <a name="How_FTS_Works_with_search_properties"></a> 全文檢索搜尋如何使用搜尋屬性  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66011075"
   
  下圖顯示指定 Title 和 Keywords 這兩個屬性之搜尋屬性清單的邏輯檢視。 Keywords 的屬性清單名稱為 "Tags"。 這些屬性屬於相同的屬性集，其 GUID 為 F29F85E0-4FF9-1068-AB91-08002B27B3D9。 Title 和 Tags (Keywords) 的屬性整數識別碼分別為 2 和 5。 全文檢索引擎會將每個屬性任意對應至搜尋屬性清單獨有的內部屬性識別碼。 Title 屬性的內部屬性識別碼為 1，而 Tags 屬性的內部屬性識別碼為 2。  
   
- ![搜尋屬性清單至內部資料表的對應](../../database-engine/media/ifts-spl-w-title-and-keywords.gif "搜尋屬性清單至內部資料表的對應")  
+ ![將搜尋屬性清單對應至內部資料表](../../database-engine/media/ifts-spl-w-title-and-keywords.gif "將搜尋屬性清單對應至內部資料表")  
   
  內部屬性識別碼可能會與屬性的屬性整數識別碼不同。 如果給定屬性已在多個搜尋屬性清單中註冊，可能會為每個搜尋屬性清單指定不同的內部屬性識別碼。 例如，內部屬性識別碼在某個搜尋屬性清單中可能是 4、在另一個清單中可能是 1、在另一個清單中可能是 3，依此類推。 反之，屬性整數識別碼是屬性內建的，而且不論該屬性用於何處，它都會維持相同。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66011075"
 ##  <a name="impact"></a> 啟用屬性搜索的影響  
  如果您設定全文檢索索引來支援一個或多個屬性的搜尋，就會根據您在搜尋屬性清單中指定的屬性數目以及每個屬性的內容，稍微增加索引的大小。  
   
- 在測試 Microsoft word 的一般主體<sup>??</sup>，Excel<sup>??</sup>，和 PowerPoint<sup>??</sup> 文件中，我們設定全文檢索索引來建立一般搜尋屬性。 建立這些屬性的索引大約增加了 5% 的全文檢索索引大小。 我們預期大部分文件主體的這個近似大小增加量應該相同。 不過，此大小增加量最終將取決於給定文件主體中的屬性資料量相對於整體資料量。  
+ 在測試 Microsoft Word<sup>？？</sup>、Excel<sup>？？</sup>和 PowerPoint 的一般主體嗎<sup>？</sup> 檔，我們已設定全文檢索索引來編制一般搜尋屬性的索引。 建立這些屬性的索引大約增加了 5% 的全文檢索索引大小。 我們預期大部分文件主體的這個近似大小增加量應該相同。 不過，此大小增加量最終將取決於給定文件主體中的屬性資料量相對於整體資料量。  
   
   
   

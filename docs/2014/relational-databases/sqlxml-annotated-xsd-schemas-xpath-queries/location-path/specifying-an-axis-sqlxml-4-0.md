@@ -1,5 +1,5 @@
 ---
-title: 指定軸 (SQLXML 4.0) |Microsoft Docs
+title: 指定軸（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8da239fd8a6bbf559f89ba5fd1b0fa0ab10ec190
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012653"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>指定軸 (SQLXML 4.0)
@@ -33,31 +33,33 @@ ms.locfileid: "66012653"
   
      包含內容節點的子系。  
   
-     下列 XPath 運算式 （位置路徑） 從目前所有的內容節點中選取 **\<客戶 >** 子系：  
+     下列 XPath 運算式（位置路徑）會從目前的內容節點中選取所有** \<客戶>** 子系：  
   
     ```  
     child::Customer  
     ```  
   
-     在下列 XPath 查詢中，`child` 為軸。 `Customer` 為節點測試。  
+     在下列 XPath 查詢中，`child` 為軸。 
+  `Customer` 為節點測試。  
   
 -   `parent`  
   
      包含內容節點的父系。  
   
-     下列 XPath 運算式會選取所有 **\<客戶 >** 父系 **\<順序 >** 子系：  
+     下列 XPath 運算式會選取** \<訂單>** 子系的所有** \<客戶>** 父系：  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     這與指定 `child::Customer` 相同。 在此 XPath 查詢中，`child` 和 `parent` 為軸。 `Customer` 和 `Order` 為節點測試。  
+     這與指定 `child::Customer` 相同。 在此 XPath 查詢中，`child` 和 `parent` 為軸。 
+  `Customer` 和 `Order` 為節點測試。  
   
 -   `attribute`  
   
      包含內容節點的屬性。  
   
-     下列 XPath 運算式選取**CustomerID**內容節點的屬性：  
+     下列 XPath 運算式會選取內容節點的**CustomerID**屬性：  
   
     ```  
     attribute::CustomerID  
@@ -67,7 +69,7 @@ ms.locfileid: "66012653"
   
      包含內容節點本身。  
   
-     下列 XPath 運算式會選取目前的節點才 **\<順序 >** 節點：  
+     下列 XPath 運算式會選取目前的節點（如果它是** \<Order>** 節點）：  
   
     ```  
     self::Order  

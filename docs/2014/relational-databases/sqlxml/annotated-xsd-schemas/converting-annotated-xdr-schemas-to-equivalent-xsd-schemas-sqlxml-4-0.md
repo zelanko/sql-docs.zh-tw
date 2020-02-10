@@ -1,5 +1,5 @@
 ---
-title: 註解式轉換為相等的 XSD 結構描述 (SQLXML 4.0) 的 XDR 結構描述 |Microsoft Docs
+title: 將批註式 XDR 架構轉換為對等的 XSD 架構（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c09f9eff920c11f37f0fd173f6cd612aca6df6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014541"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>將註解式 XDR 結構描述轉換為等效 XSD 結構描述 (SQLXML 4.0)
@@ -56,7 +56,7 @@ cvtschema XDRFileName, [-y], [-w] [-?]
  傳回您可以使用 `cvtschema` 來指定的選項清單，以及相關說明。  
   
 ## <a name="see-also"></a>另請參閱  
- [將 XSD 資料類型對應到 XPath 資料類型&#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)   
- [XSD 註解&#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
+ [將 XSD 資料類型對應到 XPath 資料類型 &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)   
+ [&#40;SQLXML 4.0&#41;的 XSD 注釋](../../sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
   
   

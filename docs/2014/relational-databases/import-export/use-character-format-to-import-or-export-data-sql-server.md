@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011673"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字元格式匯入或匯出資料 (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "66011673"
 ## <a name="considerations-for-using-character-format"></a>使用字元格式的考量  
  使用字元格式時，請考慮下列事項：  
   
--   依預設，**bcp** 公用程式會以定位字元分隔字元資料欄位，並以新行字元來結束記錄。 如需如何指定其他結束字元的相關資訊，請參閱[指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)。  
+-   根據預設， **bcp**公用程式會以定位字元分隔字元資料欄位，並以分行符號結束記錄。 如需如何指定其他結束字元的相關資訊，請參閱[指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)。  
   
 -   依預設，在大量匯出或匯入字元模式資料之前，會執行下列轉換：  
   
@@ -44,19 +44,19 @@ ms.locfileid: "66011673"
   
 -   所有儲存在字元格式檔案中的 `sql_variant` 資料，會在沒有中繼資料的情況下儲存。 每個資料值會根據隱含資料轉換的規則，轉換成 `char` 格式。 匯入至 `sql_variant` 資料行時，資料會以 `char` 格式匯入。 要匯入的資料行如果不是採用 `sql_variant` 資料類型，則會使用隱含轉換將資料從 `char` 轉換過來。 如需資料轉換的詳細資訊，請參閱[資料類型轉換 &#40;Database Engine&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)。  
   
--   **Bcp**公用程式匯出`money`有四個位數小數點之後、 但沒有任何數字分位符號，例如逗點分隔符號字元格式資料檔的值。 例如，`money` 資料行包含的值 1,234,567.123456，會採用 1234567.1235 的字元字串，大量匯出到資料檔。  
+-   **Bcp**公用程式會`money`將值匯出為小數點後有四位數的字元格式資料檔案，但不含任何數位群組符號（例如逗號分隔符號）。 例如，`money` 資料行包含的值 1,234,567.123456，會採用 1234567.1235 的字元字串，大量匯出到資料檔。  
   
 ## <a name="command-options-for-character-format"></a>字元格式的命令選項  
- 您可以將字元格式資料匯入資料表，方法是使用 **bcp**、BULK INSERT 或 INSERT ...SELECT \* FROM OPENROWSET(BULK...)。若是 **bcp** 命令或 BULK INSERT 陳述式，您可以在命令列上指定資料格式。 針對 INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式，您必須在格式檔案中指定資料格式。  
+ 您可以使用**bcp**、BULK INSERT 或 INSERT ...，將字元格式資料匯入資料表中。SELECT \* FROM OPENROWSET （BULK ...）。對於**bcp**命令或 BULK INSERT 語句，您可以在命令列上指定資料格式。 對於 INSERT...SELECT * FROM OPENROWSET(BULK...) 陳述式，您必須在格式檔案中指定資料格式。  
   
  下列命令列選項支援字元格式：  
   
-|命令|選項|描述|  
+|Command|選項|描述|  
 |-------------|------------|-----------------|  
-|**bcp**|**-c**|會導致**bcp**公用程式使用字元資料。<sup>1</sup>|  
-|BULK INSERT|DATAFILETYPE **='char'**|於大量匯入資料時使用字元格式。|  
+|**in**|**-c**|使**bcp**公用程式使用字元資料。<sup>1</sup>|  
+|BULK INSERT|DATAFILETYPE **= ' char '**|於大量匯入資料時使用字元格式。|  
   
- <sup>1</sup>載入字元 ( **-c**) 與舊版相容的格式資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端，使用 **-V**切換。 如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
+ <sup>1</sup>若要將字元（**-c**）資料載入與舊版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端相容的格式，請使用 **-V**參數。 如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
  如需詳細資訊，請參閱 [bcp 公用程式](../../tools/bcp-utility.md)、[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 或 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)。  
   
@@ -97,7 +97,7 @@ SELECT Col1,Col2,Col3 FROM myTestCharData
 |限定詞|描述|  
 |----------------|-----------------|  
 |**-c**|指定字元格式。|  
-|**-t** `,`|指定逗號 (`,`) 作為欄位結束字元。<br /><br /> 注意:預設欄位結束字元是定位字元 (\t)。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)。|  
+|**-t**`,`|指定逗號 (`,`) 作為欄位結束字元。<br /><br /> 注意：預設的欄位結束字元是定位字元 (\t)。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)。|  
 |**-T**|指定 **bcp** 公用程式使用整合式安全性的信任連接，連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，則必須指定 **-U** 與 **-P** ，才能順利登入。|  
   
  下列範例會將字元格式的資料，從 `myTestCharData` 資料表大量匯出至名為 `myTestCharData-c.Dat` 的新資料檔，並使用逗號 (,) 做為欄位結束字元。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 命令提示字元中，輸入：  
@@ -137,7 +137,7 @@ GO
 -   [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 公用程式](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [資料類型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   

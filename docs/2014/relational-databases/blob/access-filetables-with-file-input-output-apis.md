@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd43f430f43f31435df6fff71687136f4bd5f9e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010362"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>使用檔案輸入輸出 API 存取 FileTable
@@ -25,7 +25,7 @@ ms.locfileid: "66010362"
 ##  <a name="accessing"></a> 開始使用 FileTable 檔案的 I/O API  
  FileTable 的主要用法是透過 Windows 檔案系統和檔案 I/O API。 FileTable 支援透過一系列可用檔案 I/O API 的非交易式存取。  
   
-1.  檔案 I/O API 存取通常一開始會先取得檔案或目錄的邏輯 UNC 路徑。 應用程式可以搭配 [GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) 函數使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以取得檔案或目錄的邏輯路徑。 如需詳細資訊，請參閱 [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)。  
+1.  檔案 I/O API 存取通常一開始會先取得檔案或目錄的邏輯 UNC 路徑。 應用程式可以搭配 [!INCLUDE[tsql](../../includes/tsql-md.md)]GetFileNamespacePath &#40;Transact-SQL&#41;[ 函數使用 ](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) 陳述式，以取得檔案或目錄的邏輯路徑。 如需詳細資訊，請參閱 [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)。  
   
 2.  然後應用程式會使用此邏輯路徑以取得檔案或目錄控制代碼，並對物件進行操作。 該路徑可傳遞至任何支援的檔案系統 API 函數，例如 CreateFile() 或 CreateDirectory()，以建立或開啟檔案並取得控制代碼。 控制代碼隨後便可用於以資料流形式處理資料、列舉或組織目錄、取得或設定檔案屬性、刪除檔案或目錄等。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66010362"
   
 ##  <a name="considerations"></a> FileTable 之檔案 I/O 存取的其他考量  
   
-###  <a name="vnn"></a> 使用虛擬網路名稱 (VNN) 搭配 AlwaysOn 可用性群組  
+###  <a name="vnn"></a>搭配 AlwaysOn 可用性群組使用虛擬網路名稱（Vnn）  
  當包含 FILESTREAM 或 FileTable 資料的資料庫屬於 AlwaysOn 可用性群組時，透過檔案系統 API 對 FILESTREAM 或 FileTable 資料進行的所有存取都應該使用 VNN 而非電腦名稱。 如需詳細資訊，請參閱 [FILESTREAM 和 FileTable 與 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)。  
   
 ###  <a name="partial"></a> 部分更新  
@@ -92,7 +92,7 @@ ms.locfileid: "66010362"
   
 -   這些變更無法回復。  
   
- 但是，FileTable 中的 FILESTREAM 資料行也可以透過呼叫 **OpenSqlFileStream()**，與交易式 FILESTREAM 存取一同進行存取。 這種存取可以完全為交易式，而且會接受目前一致支援的所有交易式層級。  
+ 但是，FileTable 中的 FILESTREAM 資料行也可以透過呼叫 **OpenSqlFileStream()** ，與交易式 FILESTREAM 存取一同進行存取。 這種存取可以完全為交易式，而且會接受目前一致支援的所有交易式層級。  
   
 ###  <a name="concurrency"></a> 並行存取控制  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在檔案系統應用程式之間以及檔案系統應用程式和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 應用程式之間強制執行 FileTable 存取的並行存取控制。 達成此並行存取控制的方式是針對 FileTable 資料列採取適當的鎖定。  
@@ -102,7 +102,7 @@ ms.locfileid: "66010362"
   
 ##  <a name="funclist"></a> FileTable 中支援的檔案系統功能  
   
-|功能|Supported|註解|  
+|功能|支援|註解|  
 |----------------|---------------|--------------|  
 |**Oplock**|是|支援層級 2、層級 1、批次和篩選器 oplock。|  
 |**擴充屬性**|否||  
@@ -111,7 +111,7 @@ ms.locfileid: "66010362"
 |**具名資料流**|否||  
 |**疏鬆檔案**|是|疏鬆性只能在檔案上設定，而且會影響資料流的儲存方式。 FILESTREAM 資料儲存在 NTFS 磁碟區上，因此 FileTable 功能會將要求轉送至 NTFS 檔案系統以支援疏鬆檔案。|  
 |**壓縮**|是||  
-|**加密**|是||  
+|**Encryptiion**|是||  
 |**TxF**|否||  
 |**檔案識別碼**|否||  
 |**物件識別碼**|否||  

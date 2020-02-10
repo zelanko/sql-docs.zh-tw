@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011270"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>改善全文檢索查詢的效能
@@ -26,7 +26,8 @@ ms.locfileid: "66011270"
   
 -   使用 [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)來重新組織全文檢索目錄。 在進行效能測試之前，請確定完成此動作，因為執行此陳述式會造成該目錄中之全文檢索的主要合併。  
   
--   請將您選擇的全文檢索索引鍵資料行限制為小資料行。 雖然支援 900 位元組的資料行，但是我們建議您在全文檢索索引中使用較小的索引鍵資料行。 `int` 和 `bigint` 會提供最佳效能。  
+-   請將您選擇的全文檢索索引鍵資料行限制為小資料行。 雖然支援 900 位元組的資料行，但是我們建議您在全文檢索索引中使用較小的索引鍵資料行。 
+  `int` 和 `bigint` 會提供最佳效能。  
   
 -   使用整數全文檢索索引鍵可避免與 **docid** 對應資料表發生聯結。 因此，整數全文檢索索引鍵會依據重要性順序改善查詢效能並改善搜耙效能。 如果全文檢索索引鍵也是叢集索引索引鍵，可能會產生額外效能優勢。  
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4be1c196adbe21635c1339da3d5ec7ca519001fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876596"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>建立差異資料庫備份 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "62876596"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目建立差異資料庫備份：**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62876596"
   
 -   隨著差異備份大小增加，還原差異備份會大幅增加還原資料庫所需的時間。 因此，建議您定期進行新的完整備份，為資料建立新的差異基底。 例如，您可能每週進行整個資料庫的完整備份 (亦即，完整資料庫備份)，然後在該週定期進行一連串的差異資料庫備份。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  BACKUP DATABASE 和 BACKUP LOG 權限預設為 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。  
@@ -68,11 +68,11 @@ ms.locfileid: "62876596"
   
 #### <a name="to-create-a-differential-database-backup"></a>建立差異資料庫備份  
   
-1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱展開伺服器樹狀目錄。  
+1.  連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體之後，在物件總管中按一下伺服器名稱，以展開伺服器樹狀目錄。  
   
 2.  展開 **[資料庫]** ，根據資料庫選取使用者資料庫或展開 **[系統資料庫]** ，然後選取一個系統資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，指向 [工作]  ，然後按一下 [備份]  。 會出現 **[備份資料庫]** 對話方塊。  
+3.  以滑鼠右鍵按一下資料庫，指向 **[工作]** ，然後按一下 **[備份]** 。 會出現 **[備份資料庫]** 對話方塊。  
   
 4.  在 **[資料庫]** 清單方塊中確認資料庫名稱。 您可以選擇性從清單中選取不同的資料庫。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62876596"
 5.  在 **[備份類型]** 清單方塊中，選取 **[差異]** 。  
   
     > [!IMPORTANT]  
-    >  當**差異**已選取，請確認**只複製備份**核取方塊。  
+    >  選取 [**差異**] 時，請確認已清除 [**僅複本備份**] 核取方塊。  
   
 6.  針對 **[備份元件]** ，按一下 **[資料庫]** 。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62876596"
   
 9. 指定備份組會在何時過期：  
   
-    -   若要讓備份組在特定的天數後過期，請按一下 **[之後]** (預設選項)，然後輸入備份組建立之後將會過期的天數。 這個值可以介於 0 到 99999 日之間；值為 0 日意指備份組永遠不會過期。  
+    -   若要讓備份組在特定的天數後過期，請按一下 [之後]  \(預設選項)，然後輸入備份組建立之後將會過期的天數。 這個值可以介於 0 到 99999 日之間；值為 0 日意指備份組永遠不會過期。  
   
          預設值會在 **[伺服器屬性]** 對話方塊 ( **[資料庫設定]** 頁面) 的 **[預設備份媒體保留 (以天為單位)]** 選項中設定。 若要存取，請以滑鼠右鍵按一下物件總管中的伺服器名稱並選取 [屬性]，然後選取 [資料庫設定]  頁面。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "62876596"
     > [!NOTE]  
     >  除非您備份的是交易記錄檔 (依 [一般]  頁面的 [備份類型]  區段中的指定)，否則 [交易記錄檔]  區段中的選項為非使用中。  
   
-15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新的版本支援 [備份壓縮](backup-compression-sql-server.md)。 依預設，備份壓縮與否取決於 **備份壓縮預設** 伺服器組態選項的值。 不過，不論目前的伺服器層級預設值為何，您都可以透過核取 **[壓縮備份]** 壓縮備份，而且可以透過核取 **[不要壓縮備份]** 防止壓縮。  
+15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新的版本支援 [備份壓縮](backup-compression-sql-server.md)。 依預設，備份壓縮與否取決於 **備份壓縮預設** 伺服器組態選項的值。 不過，不論目前的伺服器層級預設值為何，您都可以透過核取 [壓縮備份]  壓縮備份，而且可以透過核取 [不要壓縮備份]  防止壓縮。  
   
      **檢視目前的 backup compression default**  
   

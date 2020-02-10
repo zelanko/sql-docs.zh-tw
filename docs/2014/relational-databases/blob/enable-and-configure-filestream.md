@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f074872f05ff907d88d58e986d33ae128bcb5f2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010161"
 ---
 # <a name="enable-and-configure-filestream"></a>啟用及設定 FILESTREAM
@@ -29,7 +29,7 @@ ms.locfileid: "66010161"
   
 #### <a name="to-enable-and-change-filestream-settings"></a>若要啟用和變更 FILESTREAM 設定  
   
-1.  指向 [開始]  功能表上的 [所有程式]  ，然後依序指向 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]] 和 [組態工具]  ，再按一下 [SQL Server 組態管理員]  。  
+1.  指向 **[開始]** 功能表上的 **[所有程式]** ，然後依序指向 [ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]] 和 **[組態工具]** ，再按一下 **[SQL Server 組態管理員]** 。  
   
 2.  在服務的清單中，以滑鼠右鍵按一下 [SQL Server 服務]  ，然後按一下 [開啟]  。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66010161"
   
 8.  如果遠端用戶端必須存取儲存在這個共用上的 FILESTREAM 資料，請選取 [允許遠端用戶端具有 FILESTREAM 資料的資料流存取權]  。  
   
-9. 按一下 **[套用]** 。  
+9. 按一下 [套用]  。  
   
 10. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，按一下 **[新增查詢]** 顯示 [查詢編輯器]。  
   
@@ -62,9 +62,9 @@ ms.locfileid: "66010161"
   
 
   
-##  <a name="best"></a> 最佳作法  
+##  <a name="best"></a>最佳做法  
   
-###  <a name="config"></a> 實體組態和維護  
+###  <a name="config"></a>實體設定和維護  
  當您設定 FILESTREAM 儲存體磁碟區時，請考慮下列指導方針：  
   
 -   在 FILESTREAM 電腦系統上關閉簡短檔案名稱。 簡短檔案名稱會花費更長的時間來建立。 若要停用簡短檔案名稱，請使用 Windows **fsutil** 公用程式。  
@@ -82,16 +82,16 @@ ms.locfileid: "66010161"
 ||||||  
 |-|-|-|-|-|  
 |RAID 層級|寫入效能|讀取效能|容錯|備註|  
-|RAID 5|一般|一般|非常好|效能高於單一磁碟或 JBOD，而低於具有條狀配置的 RAID 0 或 RAID 5。|  
+|RAID 5|正常|正常|非常好|效能高於單一磁碟或 JBOD，而低於具有條狀配置的 RAID 0 或 RAID 5。|  
 |RAID 0|非常好|非常好|None||  
 |RAID 5 + 條狀配置|非常好|非常好|非常好|成本最高的選項。|  
   
 
   
-###  <a name="database"></a> 實體資料庫設計  
+###  <a name="database"></a>實體資料庫設計  
  當您設計 FILESTREAM 資料庫時，請考慮下列指導方針：  
   
--   FILESTREAM 資料行必須附帶對應`uniqueidentifier`ROWGUID 資料行。 這些種類的資料表也必須附帶唯一的索引。 一般而言，這個索引不是叢集索引。 如果資料庫商務邏輯需要叢集索引，您就必須確定儲存在索引中的值不是隨機的。 隨機值將會導致每次在資料表中加入或移除資料列時，重新排列索引。  
+-   FILESTREAM 資料行必須伴隨對應`uniqueidentifier`的 ROWGUID 資料行。 這些種類的資料表也必須附帶唯一的索引。 一般而言，這個索引不是叢集索引。 如果資料庫商務邏輯需要叢集索引，您就必須確定儲存在索引中的值不是隨機的。 隨機值將會導致每次在資料表中加入或移除資料列時，重新排列索引。  
   
 -   基於效能考量，FILESTREAM 檔案群組和容器應該位於作業系統、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄、tempdb 或分頁檔以外的磁碟區上。  
   

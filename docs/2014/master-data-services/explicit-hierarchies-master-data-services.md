@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: db039658fa292976062426268234d3978c1b32ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483007"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>明確階層 (Master Data Services)
@@ -30,7 +30,7 @@ ms.locfileid: "65483007"
  明確階層可以是不完全的，這表示階層可以同時在不同層級結束。 每個合併成員都可以有數量不受限制的合併成員及其底下的分葉成員，也可以沒有任何成員。 分葉成員可以在單一彙總成員底下，或是在合併成員的多個層級底下。  
   
 > [!NOTE]  
->  在您可以建立明確階層之前，實體必須啟用明確階層。 如需詳細資訊，請參閱 <<c0> [ 啟用明確階層和集合的實體&#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)。</c0>  
+>  在您可以建立明確階層之前，實體必須啟用明確階層。 如需詳細資訊，請參閱[啟用明確階層和集合的實體 &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)。  
   
 ## <a name="types-of-explicit-hierarchies"></a>明確階層的類型  
  有兩種類型的明確階層：強制和非強制。  
@@ -39,7 +39,7 @@ ms.locfileid: "65483007"
  強制的明確階層是一種階層，其中的所有分葉成員都必須包括在階層樹狀結構中。 根據預設，所有成員都會包含在樹狀結構的根。 您可以視需要重新排列成員。  
   
 ### <a name="non-mandatory-explicit-hierarchy"></a>非強制的明確階層  
- 非強制的明確階層是一種階層，其所有分葉成員都是位於系統建立的 [未使用]  節點。 您可以在需要時，將成員移出這個節點。 其餘的成員可以保留在 [未使用]  節點中。  
+ 非強制的明確階層是一種階層，其所有分葉成員都是位於系統建立的 [未使用]**** 節點。 您可以在需要時，將成員移出這個節點。 其餘的成員可以保留在 [未使用]**** 節點中。  
   
  當您使用非強制的明確階層時，在此階層上所做的任何報告或分析可能不會符合強制的階層上所做的報告或分析。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "65483007"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|啟用明確階層和集合的實體。|[啟用明確階層和集合的實體&#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|啟用明確階層和集合的實體。|[啟用明確階層和集合的實體 &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |建立新的明確階層。|[建立明確階層 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
 |變更現有明確階層的名稱。|[變更明確階層名稱 &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
 |刪除現有明確階層。|[刪除明確階層 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
@@ -91,6 +91,6 @@ ms.locfileid: "65483007"
   
 -   [衍生階層 &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [集合 &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+-   [&#40;Master Data Services 的集合&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 執行 XPath 查詢 （SQLXMLOLEDB 提供者） 的命名空間與 |Microsoft Docs
+title: 執行含有命名空間的 XPath 查詢（SQLXMLOLEDB 提供者） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f72c5841989eb12f89eda34fbfb310e125612d1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013074"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>執行含有命名空間的 XPath 查詢 (SQLXMLOLEDB 提供者)
   XPath 查詢可以包含命名空間。 如果結構描述元素會限定命名空間 (亦即，如果它們包含目標命名空間)，針對此結構描述進行的 XPath 查詢就必須指定此命名空間。  
   
- 由於 SQLXML 4.0 不支援使用萬用字元 (*)，所以您必須使用命名空間前置詞來指定 XPath 查詢。 若要解析此前置詞，使用命名空間屬性來指定命名空間繫結。  
+ 由於 SQLXML 4.0 不支援使用萬用字元 (*)，所以您必須使用命名空間前置詞來指定 XPath 查詢。 若要解析此前置詞，請使用 namespace 屬性來指定命名空間系結。  
   
- 在下列範例中，XPath 查詢，請指定使用萬用字元的命名空間 (\*) 和 local-name （) and namespace-uri （) XPath 函式。 這個 XPath 查詢會傳回本機名稱為 `Contact` 而且命名空間 URI 為 `urn:myschema:Contacts` 的所有元素。  
+ 在下列範例中，XPath 查詢會使用萬用字元（\*）和本機名稱（）和命名空間 uri （） xpath 函數來指定命名空間。 這個 XPath 查詢會傳回本機名稱為 `Contact` 而且命名空間 URI 為 `urn:myschema:Contacts` 的所有元素。  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
@@ -53,10 +53,10 @@ ms.locfileid: "66013074"
   
  由於這個結構描述會定義目標命名空間，所以針對此結構描述進行的 XPath 查詢 (例如 "Employee") 必須包含該命名空間。  
   
- 這是針對上述 XSD 結構描述執行 XPath 查詢 (x:Employee) 的範例 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 應用程式。 若要解析此前置詞，會使用命名空間屬性指定的命名空間繫結。  
+ 這是針對上述 XSD 結構描述執行 XPath 查詢 (x:Employee) 的範例 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 應用程式。 若要解析前置詞，命名空間系結是使用 namespace 屬性所指定。  
   
 > [!NOTE]  
->  在程式碼中，您必須於連接字串內提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此外，這個範例會指定針對資料提供者使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) (需要安裝其他網路用戶端軟體)。 如需詳細資訊，請參閱 < [SQL Server Native Client 的系統需求](../../native-client/system-requirements-for-sql-server-native-client.md)。  
+>  在程式碼中，您必須於連接字串內提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此外，這個範例會指定針對資料提供者使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) (需要安裝其他網路用戶端軟體)。 如需詳細資訊，請參閱[SQL Server Native Client 的系統需求](../../native-client/system-requirements-for-sql-server-native-client.md)。  
   
 ```  
 Option Explicit  

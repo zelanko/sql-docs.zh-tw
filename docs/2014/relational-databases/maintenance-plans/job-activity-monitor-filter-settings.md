@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b6c7b5cff8b288e688f2744c615d62bd8417acf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856646"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>作業活動監視器 (篩選設定)
@@ -45,7 +45,7 @@ ms.locfileid: "62856646"
  **已啟用**  
  只檢視已啟用或未啟用的作業  
   
- **分類**  
+ **類別目錄**  
  依作業類別目錄篩選作業。  
   
  **已排程**  
@@ -59,7 +59,7 @@ ms.locfileid: "62856646"
  這個未命名的方塊，在準則被選取時提供準則的簡短描述。  
   
  **套用篩選**  
- 若要套用的篩選器，按一下**套用篩選**，然後按一下**確定**。 若要保留中的篩選器設定**篩選設定**對話方塊方塊中，但不是套用它們，請取消核取**套用篩選**，然後按一下 **[確定]** ，用來顯示所有資料列。  
+ 若要套用篩選，請按一下 [套用**篩選**]，然後按一下 **[確定]**。 若要在 [**篩選設定**] 對話方塊中保留篩選設定，但不套用它們，請取消選取 [套用**篩選**]，然後按一下 **[確定]** 以顯示所有資料列。  
   
  **Clear**  
  將篩選設定恢復成預設值。  

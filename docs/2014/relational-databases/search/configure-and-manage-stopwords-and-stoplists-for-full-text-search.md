@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fe48b26960db591ce803b1f110e9293fd22d6554
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011518"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>設定及管理全文檢索搜尋的停用字詞與停用字詞表
   為精簡全文檢索索引， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有一種機制，可捨棄無助於搜尋卻經常出現的字串。 這些捨棄的字串稱為 *「停用字詞」* (Stopword)。 在索引建立期間，全文檢索引擎會從全文檢索索引省略停用字詞。 這代表全文檢索查詢不會搜尋停用字詞。  
   
-##  <a name="understand"></a> 了解停用字詞與停用字詞表  
+##  <a name="understand"></a>瞭解停用字詞和字詞  
  停用字詞表可以是具有特定語言意義的字詞，或者也可以是不具有語言意義的 *token* 。 例如，在英文中，"a"、"and"、"is" 及 "the" 等字會排除在全文檢索索引外，因為一般而言這些字都無助於搜尋。  
   
  雖然全文檢索索引會略過包含的停用字詞，但仍會考慮其位置。 例如，請參考例句 "Instructions are applicable to these Adventure Works Cycles models"。 下表說明這些單字在片語中的位置：  
@@ -49,10 +49,11 @@ ms.locfileid: "66011518"
  資料庫中的停用字詞是使用稱為停用字詞表的物件來管理。 「停用字詞表」  是停用字詞的清單，與全文檢索索引相關聯時，會套用至該索引上的全文檢索查詢。  
   
   
-##  <a name="creating"></a> 建立停用字詞表  
+##  <a name="creating"></a>建立停用字詞表  
  您可以使用下列任一方式建立停用字詞表：  
   
--   在資料庫中使用系統提供的停用字詞表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隨附一份系統停用字詞表，其中包含每種受支援語言的常用停用字詞，而且適用於預設與給定斷詞工具相關聯的每種語言。 此系統停用字詞表包含所有受支援語言的常見停用字詞。  您可以複製此系統停用字詞表，並且透過加入和移除停用字詞，自訂您的複本。  
+-   在資料庫中使用系統提供的停用字詞表。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隨附一份系統停用字詞表，其中包含每種受支援語言的常用停用字詞，而且適用於預設與給定斷詞工具相關聯的每種語言。 此系統停用字詞表包含所有受支援語言的常見停用字詞。  您可以複製此系統停用字詞表，並且透過加入和移除停用字詞，自訂您的複本。  
   
      系統停用字詞表是安裝在 [資源](../databases/resource-database.md) 資料庫。  
   
@@ -90,45 +91,45 @@ ms.locfileid: "66011518"
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- **若要卸除停用字詞表**  
+ **卸除停用字詞表**  
   
 -   [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
   
   
-##  <a name="queries"></a> 在全文檢索查詢中使用停用字詞表  
+##  <a name="queries"></a>在全文檢索查詢中使用停用字詞表  
  若要在查詢中使用停用字詞表，您必須將其與全文檢索索引產生關聯。 您可以在建立索引時將停用字詞表附加到全文檢索索引，也可以之後再更改索引以加入停用字詞表。  
   
- **若要建立全文檢索索引，並讓停用字詞表與其產生關聯**  
+ **建立全文檢索索引並讓停用字詞表與其產生關聯**  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
- **若要建立關聯或取消關聯的停用字詞表與現有的全文檢索索引**  
+ **讓停用字詞表與現有的全文檢索索引產生關聯或取消關聯**  
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
   
- **若要隱藏錯誤訊息，如果停用字詞造成全文檢索查詢失敗的布林運算**  
+ **如果停用字詞造成全文檢索查詢的布林運算失敗，則抑制錯誤訊息的顯示**  
   
 -   [轉換非搜尋字伺服器組態選項](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)  
   
   
-##  <a name="viewing"></a> 檢視停用字詞表及停用字詞表中繼資料  
- **若要檢視停用字詞表的所有停用字詞**  
+##  <a name="viewing"></a>查看字詞和停用字詞表中繼資料  
+ **檢視停用字詞表的所有停用字詞**  
   
 -   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
- **若要取得目前資料庫中的所有停用字詞表的相關資訊**  
+ **取得有關目前資料庫中所有停用字詞表的詳細資訊**  
   
 -   [sys.fulltext_stoplists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)  
   
 -   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
- **若要檢視斷詞工具、 同義字和停用字詞表組合的 token 化結果**  
+ **檢視斷詞工具、同義字及停用字詞表組合的 Token 化結果**  
   
 -   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="change"></a> 變更停用字詞表中的停用字詞  
- **加入或卸除停用字詞表的停用字詞**  
+##  <a name="change"></a>變更停用字詞表中的停用字詞  
+ **在停用字詞表中加入或卸除停用字詞**  
   
 -   [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)  
   
@@ -144,7 +145,7 @@ ms.locfileid: "66011518"
   
 5.  在 [[全文檢索停用字詞表屬性]](../../database-engine/full-text-stoplist-properties.md) 對話方塊中：  
   
-    1.  在 [動作]  清單方塊中，選取下列其中一個動作：[新停用字詞]  、[刪除停用字詞]  、[刪除所有停用字詞]  或 [清除停用字詞表]  。  
+    1.  在 **[動作]** 清單方塊中，選取下列其中一個動作： **[加入停用字詞]** 、 **[刪除停用字詞]** 、 **[刪除所有停用字詞]** 或 **[清除停用字詞表]** 。  
   
     2.  如果已針對選定動作啟用 **[停用字詞]** 文字方塊，請輸入單一停用字詞。 這個停用字詞必須是唯一的，亦即，尚未存在您所選取之語言的這個停用字詞表中。  
   
@@ -153,7 +154,7 @@ ms.locfileid: "66011518"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
   
-##  <a name="upgrade"></a> 從 SQL Server 2005 升級非搜尋字  
+##  <a name="upgrade"></a>從 SQL Server 2005 升級非搜尋字  
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 非搜尋字已經由停用字詞所取代。 當資料庫從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]升級時，便不再使用非搜尋字檔案。 不過，這些非搜尋字檔案會儲存在 FTDATA\ FTNoiseThesaurusBak 資料夾中，而且您之後可以在更新或建立對應的停用字詞表時使用它們。 如需如何將非搜尋字檔案升級為停用字詞表的資訊，請參閱 [升級全文檢索搜尋](upgrade-full-text-search.md)。  
   
   

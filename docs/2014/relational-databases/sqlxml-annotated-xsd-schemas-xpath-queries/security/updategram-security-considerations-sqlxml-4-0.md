@@ -1,5 +1,5 @@
 ---
-title: Updategram 安全性考量 (SQLXML 4.0) |Microsoft Docs
+title: Updategram 安全性考慮（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 12354329d51bbe13930fc6edefca1fcf84171e33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66015060"
 ---
 # <a name="updategram-security-considerations-sqlxml-40"></a>Updategram 安全性考量 (SQLXML 4.0)
@@ -29,6 +29,6 @@ ms.locfileid: "66015060"
 -   請勿允許使用者建立和執行其 Updategram。 建議您將 Updategram 放置於伺服器上成為範本，而非以動態方式在 ASP 類型的應用程式中建立它們，因為這樣會讓資料庫中的資料面臨風險。 僅允許使用者透過當做範本提供的 Updategram 來存取資料可以降低這項風險。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 Updategram 修改 SQLXML 4.0 中的資料](../updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+ [使用 Updategram 來修改 SQLXML 4.0 中的資料](../updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
   
   

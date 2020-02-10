@@ -1,5 +1,5 @@
 ---
-title: 負載平衡記錄在遠端伺服器上的套件 |Microsoft Docs
+title: 遠端伺服器上負載平衡封裝的記錄 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64dec3a89b883d6b3234f65896bb89d3bfde5305
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057844"
 ---
 # <a name="logging-for-load-balanced-packages-on-remote-servers"></a>遠端伺服器上負載平衡封裝的記錄

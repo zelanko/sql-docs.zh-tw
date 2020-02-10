@@ -1,5 +1,5 @@
 ---
-title: XML 來源編輯器 （錯誤輸出頁面） |Microsoft Docs
+title: XML 來源編輯器（錯誤輸出頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 19ebeac45f7596de42add894922838864f62546e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054304"
 ---
 # <a name="xml-source-editor-error-output-page"></a>XML 來源編輯器 (錯誤輸出頁面)
@@ -31,7 +31,7 @@ ms.locfileid: "66054304"
  檢視資料來源的名稱。  
   
  **資料行**  
- 檢視您在 [XML 來源編輯器]  對話方塊的 [連線管理員]  頁面上所選取的外部 (來源) 資料行。  
+ 檢視您在 [XML 來源編輯器]**** 對話方塊的 [連線管理員]**** 頁面上所選取的外部 (來源) 資料行。  
   
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
@@ -47,13 +47,13 @@ ms.locfileid: "66054304"
  **將這個值設定到選取的資料格**  
  指定發生錯誤或截斷時要對所有選取之資料格採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **Apply**  
+ **套用**  
  將錯誤處理選項套用至選取的資料格。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [XML 來源編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
- [XML 來源編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
- [使用 XML 來源擷取資料](data-flow/extract-data-by-using-the-xml-source.md)  
+ [XML 來源編輯器 &#40;資料行] 頁面&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [使用 XML 來源來擷取資料](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

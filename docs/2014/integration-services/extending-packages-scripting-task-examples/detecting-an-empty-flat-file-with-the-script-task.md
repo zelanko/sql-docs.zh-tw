@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 34462589141133e04ca8728361e3a173f0944f12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62895497"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>以指令碼工作偵測空的一般檔案
@@ -29,11 +29,11 @@ ms.locfileid: "62895497"
 >  如果您想要建立可更輕鬆地在多個封裝之間重複使用的工作，請考慮使用此指令碼工作範例中的程式碼做為自訂工作的起點。 如需詳細資訊，請參閱 [開發自訂工作](../extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
 ## <a name="description"></a>描述  
- 下列範例會使用 `System.IO` 命名空間的方法來測試一般檔案連接管理員中指定的一般檔案，以便判斷此檔案是否空白，或者它是否僅包含預期的非資料列，例如資料行標頭或空白的行。 此指令碼會先檢查檔案的大小。如果大小為零個位元組，表示檔案是空白的。 如果檔案大小大於零，此指令碼就會從檔案中讀取各行，直到沒有其他行為止，或者直到行數超過預期的非資料列數目為止。 如果檔案中的行數小於或等於預期的非資料列數目，此檔案就會被視為空白。 結果會以布林值的形式傳入使用者變數中，而這個變數的值可用於在封裝的控制流程中分支。 `FireInformation`方法也會顯示在結果**輸出**窗口[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。  
+ 下列範例會使用 `System.IO` 命名空間的方法來測試一般檔案連接管理員中指定的一般檔案，以便判斷此檔案是否空白，或者它是否僅包含預期的非資料列，例如資料行標頭或空白的行。 此指令碼會先檢查檔案的大小。如果大小為零個位元組，表示檔案是空白的。 如果檔案大小大於零，此指令碼就會從檔案中讀取各行，直到沒有其他行為止，或者直到行數超過預期的非資料列數目為止。 如果檔案中的行數小於或等於預期的非資料列數目，此檔案就會被視為空白。 結果會以布林值的形式傳入使用者變數中，而這個變數的值可用於在封裝的控制流程中分支。 方法也會在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications （VSTA）的 [輸出] 視窗中顯示結果。 **** `FireInformation`  
   
 #### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
   
-1.  建立和設定名為 「 一般檔案連接管理員`EmptyFlatFileTest`。  
+1.  建立並設定名為`EmptyFlatFileTest`的一般檔案連線管理員。  
   
 2.  建立名為 `FFNonDataRows` 的整數變數並將其值設定為一般檔案中預期的非資料列數目。  
   
@@ -139,7 +139,7 @@ public void Main()
         }  
 ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [指令碼工作範例](../extending-packages-scripting-task-examples/script-task-examples.md)  

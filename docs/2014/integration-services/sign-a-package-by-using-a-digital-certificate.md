@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 31da686dbf25922205ea4d1b03ecaa3758457573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055619"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>使用數位憑證來簽署封裝
@@ -50,13 +50,13 @@ ms.locfileid: "66055619"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 的 **[SSIS]** 功能表上，按一下 **[數位簽章]** 。  
+3.  在 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 的 **[SSIS]** 功能表上，按一下 **[數位簽章]**。  
   
-4.  在 **[數位簽章]** 對話方塊中，按一下 **[簽署]** 。  
+4.  在 **[數位簽章]** 對話方塊中，按一下 **[簽署]**。  
   
 5.  在 **[選取憑證]** 對話方塊中，選取憑證。  
   
-6.  (選擇性) 按一下 [檢視憑證]  檢視憑證資訊。  
+6.  (選擇性) 按一下 [檢視憑證]**** 檢視憑證資訊。  
   
 7.  按一下 **[確定]** 關閉 **[選取憑證]** 對話方塊。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66055619"
   
 9. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-     雖然封裝已經簽署，但是您現在必須設定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，以便檢查或確認數位簽章，然後再載入封裝。 如需詳細資訊，請參閱 [使用數位簽章來識別封裝的來源](security/identify-the-source-of-packages-with-digital-signatures.md)。  
+     雖然封裝已經簽署，但是您現在必須設定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，以便檢查或確認數位簽章，然後再載入封裝。 如需詳細資訊，請參閱 [Identify the Source of Packages with Digital Signatures](security/identify-the-source-of-packages-with-digital-signatures.md)(使用數位簽章識別封裝來源)。  
   
 ## <a name="see-also"></a>另請參閱  
  [安全性概觀 (Integration Services)](security/security-overview-integration-services.md)  

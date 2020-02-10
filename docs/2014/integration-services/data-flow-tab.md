@@ -1,5 +1,5 @@
 ---
-title: 資料流程索引標籤 |Microsoft Docs
+title: '[資料流程] 索引標籤 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 403100ddfbd78609ac0d98dd3ee387d2ecdeec61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059902"
 ---
 # <a name="data-flow-tab"></a>資料流程索引標籤
@@ -24,7 +24,7 @@ ms.locfileid: "66059902"
   
  將代表來源、轉換以及目的地的圖形物件，從 **[工具箱]** 拖曳至 **[資料流程]** 索引標籤的設計介面，然後連接物件來建立決定轉換執行順序的路徑，以建立資料流程。  
   
- 以滑鼠右鍵按一下路徑，然後按一下 [資料檢視器]  ，即可加入資料檢視器，以檢視在每個資料流程物件之前與之後的資料。  
+ 以滑鼠右鍵按一下路徑，然後按一下 [資料檢視器]****，即可加入資料檢視器，以檢視在每個資料流程物件之前與之後的資料。  
   
  您也可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師，來加入 **[資料流程]** 索引標籤中的下列功能：  
   

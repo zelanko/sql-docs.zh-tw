@@ -14,20 +14,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 772dbb86188bf164a2e135f7bb9b71a1cc030745
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011772"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>使用格式檔案大量匯入資料 (SQL Server)
-  此主題說明格式檔案在大量匯入作業中的用法。 格式檔案會將資料檔案的欄位對應到資料表的資料行。  您可以使用非 XML 或 XML 格式檔案來大量匯入資料，當您使用 **bcp** 命令或 BULK INSERT 或 INSERT ......SELECT * FROM OPENROWSET(BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令時，可以使用非 XML 或 XML 格式的檔案來大量匯入資料。  
+  此主題說明格式檔案在大量匯入作業中的用法。 格式檔案會將資料檔案的欄位對應到資料表的資料行。  使用**bcp**命令或 BULK INSERT 或 INSERT ... 時，您可以使用非 XML 或 xml 格式檔案來大量匯入資料SELECT * FROM OPENROWSET （BULK ...）[!INCLUDE[tsql](../../includes/tsql-md.md)]命令。  
   
 > [!IMPORTANT]  
 >  如果格式檔案要與 Unicode 字元資料檔案搭配使用，則所有的輸入欄位都必須是 Unicode 文字字串 (也就是固定大小或以字元結束的 Unicode 字串)。  
   
 > [!NOTE]  
->  如果您不熟悉格式檔案，請參閱[非 XML 格式檔案&#40;SQL Server&#41; ](xml-format-files-sql-server.md)並[XML 格式檔案&#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
+>  如果您不熟悉格式檔案，請參閱[非 XML 格式檔案 &#40;SQL Server&#41;](xml-format-files-sql-server.md)和[xml 格式檔案 &#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
   
 ## <a name="format-file-options-for-bulk-import-commands"></a>大量匯入命令的格式檔案選項  
  下表摘述每個大量匯入命令的格式檔案選項。  
@@ -36,15 +36,15 @@ ms.locfileid: "66011772"
 |------------------------|-----------------------------------|  
 |BULK INSERT|FORMATFILE = '*format_file_path*'|  
 |INSERT ...SELECT * FROM OPENROWSET(BULK...)|FORMATFILE = '*format_file_path*'|  
-|**bcp** ... **in**|**-f** *format_file*|  
+|**bcp** .。。**中的**|**-f** *format_file*|  
   
  如需詳細資訊，請參閱 [bcp 公用程式](../../tools/bcp-utility.md)、[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 或 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)。  
   
 > [!NOTE]  
->  若要大量匯出或匯入 SQLXML 資料，請在格式檔案中使用下列其中一種資料類型：SQLCHAR 或 SQLVARYCHAR (資料會以用戶端字碼頁或定序所隱含的字碼頁傳送)、SQLNCHAR 或 SQLNVARCHAR (資料會以 Unicode 傳送)，或是 SQLBINARY 或 SQLVARYBIN (資料不經轉換即傳送)。  
+>  若要大量匯出或匯入 SQLXML 資料，請在格式檔案中使用下列資料類型：SQLCHAR 或 SQLVARYCHAR (資料會以用戶端字碼頁或定序所隱含的字碼頁傳送)、SQLNCHAR、SQLNVARCHAR (資料會以 Unicode 傳送)、SQLBINARY 或 SQLVARYBIN (資料不經轉換即傳送)。  
   
 ## <a name="examples"></a>範例  
- 本節中的範例說明如何藉由使用下列命令來以格式檔案大量匯入資料：**bcp** 命令與 BULK INSERT 和 INSERT ......SELECT * FROM OPENROWSET(BULK...) 陳述式。 執行其中一個大量匯入範例之前，必須先建立範例資料表、資料檔案與格式檔案。  
+ 本節中的範例說明如何使用格式檔案，利用**bcp**命令和 BULK INSERT 來大量匯入資料，然後插入 .。。SELECT * FROM OPENROWSET （BULK ...）語句。 執行其中一個大量匯入範例之前，必須先建立範例資料表、資料檔案與格式檔案。  
   
 ### <a name="sample-table"></a>範例資料表  
  這些範例在 **dbo** 結構描述下的 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 範例資料庫中，需要建立一個名為 **myTestFormatFiles** 的資料表。 若要建立這個資料表，請在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 查詢編輯器中，執行：  
@@ -75,7 +75,8 @@ GO
  本節中有部分範例會使用 XML 格式檔案 `myTestFormatFiles-f-x-c.Xml`，而其他範例會使用非 XML 格式檔案。 兩種格式檔案都使用字元資料格式和非預設欄位結束字元 (,)。  
   
 #### <a name="the-sample-non-xml-format-file"></a>非 XML 格式檔案範例  
- 下列範例會使用 **bcp**，從 `myTestFormatFiles` 資料表產生 XML 格式檔案。 `myTestFormatFiles.Fmt` 檔案包含下列資訊：  
+ 下列範例會使用 **bcp**，從 `myTestFormatFiles` 資料表產生 XML 格式檔案。 
+  `myTestFormatFiles.Fmt` 檔案包含下列資訊：  
   
 ```  
 9.0  
@@ -96,7 +97,8 @@ bcp AdventureWorks2012..MyTestFormatFiles format nul -c -t, -f myTestFormatFiles
  如需建立格式檔案的詳細資訊，請參閱[建立格式檔案 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)。  
   
 #### <a name="the-sample-xml-format-file"></a>XML 格式檔案範例  
- 下列範例使用 **bcp**，從 `myTestFormatFiles` 資料表建立以產生 XML 格式檔案。 `myTestFormatFiles.Xml` 檔案包含下列資訊：  
+ 下列範例使用 **bcp**，從 `myTestFormatFiles` 資料表建立以產生 XML 格式檔案。 
+  `myTestFormatFiles.Xml` 檔案包含下列資訊：  
   
 ```  
 <?xml version="1.0"?>  
@@ -135,7 +137,7 @@ bcp AdventureWorks2012..myTestFormatFiles in C:\myTestFormatFiles-c.Dat -f C:\my
 >  如需此命令的詳細資訊，請參閱 [bcp 公用程式](../../tools/bcp-utility.md)。  
   
 ### <a name="using-bulk-insert"></a>使用 BULK INSERT  
- 下列範例使用 BULK INSERT，將 `myTestFormatFiles-c.Dat` 資料檔中的資料大量匯入到 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 範例資料庫中的 `HumanResources.myTestFormatFiles` 資料表。 這個範例使用非 XML 格式檔案 `MyTestFormatFiles.Fmt`。 這個範例會在匯入資料檔之前，刪除任何現有的資料表資料列。  
+ 下列範例使用 BULK INSERT，將 `myTestFormatFiles-c.Dat` 資料檔中的資料大量匯入到 `HumanResources.myTestFormatFiles` 範例資料庫中的 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 資料表。 這個範例使用非 XML 格式檔案 `MyTestFormatFiles.Fmt`。 這個範例會在匯入資料檔之前，刪除任何現有的資料表資料列。  
   
  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 查詢編輯器中，執行：  
   
@@ -193,7 +195,7 @@ DROP TABLE myTestFormatFiles
  [使用格式檔案將資料表資料行對應至資料檔案欄位 &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 公用程式](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [非 XML 格式檔案 &#40;SQL Server&#41;](xml-format-files-sql-server.md)   

@@ -1,5 +1,5 @@
 ---
-title: OLE DB 目的地編輯器 （對應頁面） |Microsoft Docs
+title: OLE DB 目的地編輯器（對應頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c79715803d598b3f30eb5b54bd6ddcb77f1aae2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057085"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>OLE DB 目的地編輯器 (對應頁面)
-  使用 [OLE DB 目的地編輯器] 對話方塊的 [對應] 頁面，將輸入資料行對應至目的地資料行。  
+  使用 [OLE DB 目的地編輯器]**** 對話方塊的 [對應]**** 頁面，將輸入資料行對應至目的地資料行。  
   
  若要深入了解 OLE DB 目的地，請參閱＜ [OLE DB Destination](data-flow/ole-db-destination.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **可用的輸入資料行**  
  檢視可用的輸入資料行清單。 使用拖放作業，即可將資料表中的可用輸入資料行對應到目的地資料行。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66057085"
  檢視可用的目的地資料行清單。 使用拖放作業，即可將資料表中的可用目的地資料行對應到輸入資料行。  
   
  **輸入資料行**  
- 檢視所選取的輸入資料行。 您可以選取 [\<忽略>] 移除對應，排除輸出的資料行。  
+ 檢視所選取的輸入資料行。 您可以選取 [**忽略>]\<** 移除對應，排除輸出的資料行。  
   
  **目的地資料行**  
  檢視每個可用的目的地資料行，不論是否已經對應。  

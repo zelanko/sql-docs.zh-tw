@@ -1,5 +1,5 @@
 ---
-title: 將參數傳遞給 Updategram (SQLXML 4.0) |Microsoft Docs
+title: 將參數傳遞至 Updategram （SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92238e27c364c8f09721a55d00c750022b53a18f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014727"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>將參數傳遞至 Updategrams (SQLXML 4.0)
-  Updategrams 是範本，所以您可以將參數傳遞給它們。 如需參數傳遞給範本的詳細資訊，請參閱[Updategram 安全性考量&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)。  
+  Updategrams 是範本，所以您可以將參數傳遞給它們。 如需將參數傳遞至範本的詳細資訊，請參閱[Updategram &#40;SQLXML 4.0&#41;的安全性考慮](../security/updategram-security-considerations-sqlxml-4-0.md)。  
   
  Updategrams 可讓您將 NULL 當做參數值來傳遞。 若要傳遞 NULL 參數值，您會指定 `nullvalue` 屬性。 然後會將指派給 `nullvalue` 屬性的值當做參數值來提供。 Updategrams 將此值視為 NULL。  
   
@@ -32,14 +32,14 @@ ms.locfileid: "66014727"
 >  在 `<sql:header>` 和 `<updg:header>` 中，您應該將 `nullvalue` 指定為不合格；但是在 `<updg:sync>` 中，您應該將 `nullvalue` 指定為合格 (例如 `updg:nullvalue`)。  
   
 ## <a name="examples"></a>範例  
- 若要建立使用下列範例的實用範例，您必須符合指定的需求[如需執行 SQLXML 範例的需求](../../sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要使用下列範例建立工作範例，您必須符合[執行 SQLXML 範例的需求](../../sqlxml/requirements-for-running-sqlxml-examples.md)中所指定的需求。  
   
  使用 Updategram 範例之前，請注意下列事項：  
   
--   此範例會使用預設對應 (也就是說，updategram 中不會指定任何對應結構描述)。 如需使用對應結構描述的 updategram 的範例，請參閱[在 Updategram 中指定註解式對應結構描述&#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
+-   此範例會使用預設對應 (也就是說，updategram 中不會指定任何對應結構描述)。 如需使用對應架構之 updategram 的更多範例，請參閱[在 Updategram 中指定批註式對應架構 &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
   
 ### <a name="a-passing-parameters-to-an-updategram"></a>A. 傳遞參數給 updategram  
- 在此範例中，updategram 會變更 umanResources.Shift 資料表內員工的姓氏。 Updategram 會傳遞兩個參數：ShiftID，用來唯一識別移位和名稱。  
+ 在此範例中，updategram 會變更 umanResources.Shift 資料表內員工的姓氏。 有兩個參數會傳遞給 updategram：用來唯一識別移位的 ShiftID 及 Name。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -62,7 +62,7 @@ ms.locfileid: "66014727"
   
 1.  將上述的 updategram 複製到 [記事本] 中，並將它儲存為 UpdategramWithParameters.xml 檔。  
   
-2.  準備中的 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) [Ba6e326154d2"&gt;using ADO to Execute SQLXML 4.0 Queries&lt](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)以加入下列幾行之後執行 updategram `cmd.Properties("Output Stream").Value = outStream`:  
+2.  在中準備 SQLXML 4.0 測試腳本（Sqlxml4test.vbs），以[使用 ADO 執行 sqlxml 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)來執行 updategram，方法是在之後新增下列幾行`cmd.Properties("Output Stream").Value = outStream`：  
   
     ```  
     cmd.NamedParameters = True  
@@ -97,7 +97,7 @@ ms.locfileid: "66014727"
   
 1.  將上述的 updategram 複製到 [記事本] 中，並將它儲存為 UpdategramPassingNullvalues.xml 檔。  
   
-2.  準備中的 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) [Ba6e326154d2"&gt;using ADO to Execute SQLXML 4.0 Queries&lt](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)以加入下列幾行之後執行 updategram `cmd.Properties("Output Stream").Value = outStream`:  
+2.  在中準備 SQLXML 4.0 測試腳本（Sqlxml4test.vbs），以[使用 ADO 執行 sqlxml 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)來執行 updategram，方法是在之後新增下列幾行`cmd.Properties("Output Stream").Value = outStream`：  
   
     ```  
     cmd.NamedParameters = True  
@@ -107,6 +107,6 @@ ms.locfileid: "66014727"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Updategram 安全性考量&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;的 Updategram 安全性考慮](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 118d68d1cacd5035535c6f1ac578542909356c7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057705"
 ---
 # <a name="merge-join-transformation-editor"></a>合併聯結轉換編輯器
@@ -29,7 +29,7 @@ ms.locfileid: "66057705"
   
  若要深入了解合併聯結轉換，請參閱 [合併聯結轉換](data-flow/transformations/merge-join-transformation.md)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **聯結類型**  
  指定要使用內部聯結、左方外部聯結或完整聯結。  
   

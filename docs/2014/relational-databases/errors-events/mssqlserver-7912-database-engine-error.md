@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b46cd9ea4d461b4b6f5755e8fb9bb9199d1bdbbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913150"
 ---
-# <a name="mssqlserver7912"></a>MSSQLSERVER_7912
+# <a name="mssqlserver_7912"></a>MSSQLSERVER_7912
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|7912|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_REPAIR_EXTENT_ALLOCATED|  
-|訊息文字|修復:範圍 P_ID 已經配置給物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID （類型 TYPE）。|  
+|訊息文字|修復: 範圍 P_ID 已經配置給物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE)。|  
   
 ## <a name="explanation"></a>說明  
  這是來自 REPAIR 的參考用訊息，表示某個範圍已經配置給指定的物件。  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 85e0c761f5dc784698b3aed361ce50488a93e366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010094"
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>FileTable DDL、函數、預存程序及檢視
@@ -28,7 +28,7 @@ ms.locfileid: "66010094"
   
 ##  <a name="ddl"></a> Transact-SQL 資料定義語言 (DDL) 陳述式  
   
-|Object|[狀態]|[詳細資訊]|  
+|Object|狀態|相關資訊|  
 |------------|------------|----------------------|  
 |[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)<br /><br /> [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|已變更|[啟用 FileTable 的必要條件](enable-the-prerequisites-for-filetable.md)<br /><br /> [管理 FileTable](manage-filetables.md)|  
 |[ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)|已變更|[建立、改變及卸除 FileTable](create-alter-and-drop-filetables.md)<br /><br /> [管理 FileTable](manage-filetables.md)|  
@@ -38,21 +38,21 @@ ms.locfileid: "66010094"
   
 ##  <a name="func"></a> 函數  
   
-|Object|[狀態]|[詳細資訊]|  
+|Object|狀態|相關資訊|  
 |------------|------------|----------------------|  
-|[FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql)|**已加入**|[使用 FileTables 中的目錄與路徑](work-with-directories-and-paths-in-filetables.md)|  
+|[FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql)|**已加入**|[使用 FileTable 中的目錄與路徑](work-with-directories-and-paths-in-filetables.md)|  
 |[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|**已加入**|[使用 FileTable 中的目錄與路徑](work-with-directories-and-paths-in-filetables.md)|  
-|[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|**已加入**|[使用 FileTables 中的目錄與路徑](work-with-directories-and-paths-in-filetables.md)|  
+|[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|**已加入**|[使用 FileTable 中的目錄與路徑](work-with-directories-and-paths-in-filetables.md)|  
   
 ##  <a name="sproc"></a> 預存程序  
   
-|Object|[狀態]|[詳細資訊]|  
+|Object|狀態|相關資訊|  
 |------------|------------|----------------------|  
 |[sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles)|**已加入**|[管理 FileTable](manage-filetables.md)|  
   
 ##  <a name="cv"></a> 目錄檢視  
   
-|Object|[狀態]|[詳細資訊]|  
+|Object|狀態|相關資訊|  
 |------------|------------|----------------------|  
 |[sys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql)|**已加入**|[啟用 FileTable 的必要條件](enable-the-prerequisites-for-filetable.md)|  
 |[sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql)|**已加入**|[建立、改變及卸除 FileTable](create-alter-and-drop-filetables.md)<br /><br /> [管理 FileTable](manage-filetables.md)|  
@@ -61,7 +61,7 @@ ms.locfileid: "66010094"
   
 ##  <a name="dmv"></a> 動態管理檢視  
   
-|Object|[狀態]|[詳細資訊]|  
+|Object|狀態|相關資訊|  
 |------------|------------|----------------------|  
 |[sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql)|**已加入**|[管理 FileTable](manage-filetables.md)|  
   

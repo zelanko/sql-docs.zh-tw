@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7db9b0b31d619dc77b537989bfbf281c276e95e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011304"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>全文檢索搜尋 DDL、函數、預存程序與檢視
@@ -22,7 +22,7 @@ ms.locfileid: "66011304"
   
  此清單不包含已被取代的物件。  
   
- 如需支援語意搜尋之資料庫物件的清單，請參閱＜ [語意搜尋 DDL、函數、預存程序及檢視](../views/views.md)＞。  
+ 如需支援語意搜尋之資料庫物件的清單，請參閱＜ [Semantic Search DDL, Functions, Stored Procedures, and Views](../views/views.md)＞。  
   
 ##  <a name="ddl"></a> Transact-SQL 資料定義語言 (DDL) 陳述式  
   

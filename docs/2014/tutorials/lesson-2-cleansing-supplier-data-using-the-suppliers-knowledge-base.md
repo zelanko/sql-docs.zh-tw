@@ -1,5 +1,5 @@
 ---
-title: 第 2 課：清理供應商資料使用供應商知識庫 |Microsoft Docs
+title: 第2課：使用供應商知識庫清理供應商資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b99676a9f51bf76dc9db294365a5a628dd25fa2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65488477"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>第 2 課：使用供應商知識庫清理供應商資料
-  您可以在這一課中，清理 Excel 檔案中的供應商資料來使用**供應商**您在第 1 課中建立的知識庫。 DQS 中的資料清理包含**電腦輔助的程序**，以分析資料符合知識庫中的知識，以及**互動式處理序**，可讓您檢閱並修改電腦輔助的程序的結果。 資料清理功能會識別資料來源中不正確的資料，然後針對不正確的資料進行更正或建議更正。 它也會使用定義域值、同義字的前置值、定義域規則、以詞彙為主的關聯及參考資料來標準化及豐富客戶資料。 您可以用互動方式核准或拒絕電腦輔助程序所提議的變更。 請參閱[資料清理](https://msdn.microsoft.com/library/gg524800.aspx)如需詳細資訊。  
+  在這一課，您會使用您在第一課建立的**供應商**知識庫來清理 Excel 檔案中的供應商資料。 DQS 中的資料清理包含**電腦輔助**的程式，可分析資料符合知識庫中知識的方式，以及可讓您從電腦輔助的程式中檢查和修改結果的**互動式進程**。 資料清理功能會識別資料來源中不正確的資料，然後針對不正確的資料進行更正或建議更正。 它也會使用定義域值、同義字的前置值、定義域規則、以詞彙為主的關聯及參考資料來標準化及豐富客戶資料。 您可以用互動方式核准或拒絕電腦輔助程序所提議的變更。 如需詳細資訊，請參閱[資料清理](https://msdn.microsoft.com/library/gg524800.aspx)。  
   
  電腦輔助程序會使用以下的臨界值，您可以在 DQS 用戶端主頁面上使用 [組態] 選項設定此值。  
   
--   **建議的最低分數：** 最低分數或信賴等級，可由 DQS 為了建議替換某個值。  
+-   **建議的最低分數：** DQS 用來建議取代值的最低分數或信賴等級。  
   
--   **自動更正的最低分數：** 最低分數或信賴等級，可由 DQS 來自動更正某個值。  
+-   **自動校正的最低分數：** DQS 用來自動校正值的最低分數或信賴等級。  
   
- 請參閱[設定清理和比對的臨界值](https://msdn.microsoft.com/library/hh510415.aspx)如需有關如何設定這些設定。  
+ 如需如何設定這些設定的詳細資訊，請參閱[設定清理和](https://msdn.microsoft.com/library/hh510415.aspx)比對的臨界值。  
   
  在這一課，您會使用供應商知識庫來執行下列工作，以清理輸入資料。  
   
@@ -40,9 +40,9 @@ ms.locfileid: "65488477"
   
 5.  將清理程序的結果匯出到 Excel 檔案。  
   
-6.  清理專案值匯網域來增強知識庫中的知識與新的規則、 值、 更正等...  
+6.  將清理專案中的值匯入定義域，以新的規則、值、更正等功能來增強知識庫中的知識。  
   
-## <a name="next-step"></a>下一個步驟  
+## <a name="next-step"></a>後續步驟  
  [工作 1：建立資料品質專案](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
   
   

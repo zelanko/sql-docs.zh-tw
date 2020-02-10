@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 810b1d36eefb99d6e1bcf855dc7710495429751a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010321"
 ---
 # <a name="create-a-filestream-enabled-database"></a>建立啟用 FILESTREAM 的資料庫
@@ -28,15 +28,17 @@ ms.locfileid: "66010321"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，按一下 **[新增查詢]** 顯示 [查詢編輯器]。  
   
-2.  複製[!INCLUDE[tsql](../../includes/tsql-md.md)]程式碼會建立稱為 Archive 的啟用 FILESTREAM 的資料庫。  
+2.  複製程式[!INCLUDE[tsql](../../includes/tsql-md.md)]代碼會建立稱為 Archive 的啟用 FILESTREAM 資料庫。  
   
     > [!NOTE]  
     >  在這個指令碼中，目錄 C:\Data 必須存在。  
   
-3.  若要建立資料庫，請按一下 **[執行]** 。  
+3.  若要建立資料庫，請按一下 **[執行]**。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例會建立名為 `Archive`的資料庫。 此資料庫包含三個檔案群組： `PRIMARY`、 `Arch1`和 `FileStreamGroup1`。 `PRIMARY` 和 `Arch1` 是一般的檔案群組，不能包含 FILESTREAM 資料。 `FileStreamGroup1` 則為 `FILESTREAM` 檔案群組。  
+ 下列程式碼範例會建立名為 `Archive`的資料庫。 此資料庫包含三個檔案群組： `PRIMARY`、 `Arch1`和 `FileStreamGroup1`。 
+  `PRIMARY` 和 `Arch1` 是一般的檔案群組，不能包含 FILESTREAM 資料。 
+  `FileStreamGroup1` 則為 `FILESTREAM` 檔案群組。  
   
 ```sql  
 CREATE DATABASE Archive   
@@ -60,7 +62,7 @@ GO
  針對現有的資料庫，您可以使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 陳述式來加入 FILESTREAM 檔案群組。  
   
 ## <a name="see-also"></a>另請參閱  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [建立資料庫 &#40;SQL Server Transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
   

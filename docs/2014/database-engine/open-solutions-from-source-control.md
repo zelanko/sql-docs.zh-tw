@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f8405c9fcb04559b6f25d2244bc36dde760a182
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62844762"
 ---
 # <a name="open-solutions-from-source-control"></a>從原始檔控制開啟方案
@@ -30,15 +30,15 @@ ms.locfileid: "62844762"
   
 ### <a name="to-open-a-solution-from-source-control"></a>從原始檔控制中開啟方案  
   
-1.  在上**檔案**功能表上，指向**原始檔控制**，然後按一下**從原始檔控制開啟**。  
+1.  **在 [檔案**] 功能表上，指向 [原始檔**控制**]，然後按一下 [**從原始檔控制開啟**]。  
   
 2.  如果出現提示，請登入 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe。  
   
-3.  在 **從 SourceSafe 建立本機專案**對話方塊方塊中，選取包含您想要開啟此項目，然後按一下 的方案的資料夾**確定**。  
+3.  在 [**從 SourceSafe 建立本機專案**] 對話方塊中，選取包含您想要開啟之方案的資料夾，然後按一下 **[確定]**。  
   
-4.  如果方案的工作資料夾已經存在本機磁碟機上**資料夾中建立新的專案**方塊來識別的本機目錄的變更。 如果沒有方案的工作目錄，您可以輸入或瀏覽到應該在其中開啟方案的本機目錄。  
+4.  如果解決方案的工作資料夾已經存在於您的本機磁片磁碟機上，[在**資料夾中建立新專案**] 方塊會變更，以識別本機目錄。 如果沒有方案的工作目錄，您可以輸入或瀏覽到應該在其中開啟方案的本機目錄。  
   
-5.  在 [**開啟的方案**] 對話方塊中，選取方案檔，然後按一下**確定**。  
+5.  在 [**開啟方案**] 對話方塊中，選取方案檔，然後按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
  [從原始檔控制開啟專案](../../2014/database-engine/open-projects-from-source-control.md)  

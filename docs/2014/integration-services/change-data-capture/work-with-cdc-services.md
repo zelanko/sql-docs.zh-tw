@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0aefc386d2da3cc17c7ed335a6438667b715d11a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835145"
 ---
 # <a name="work-with-cdc-services"></a>使用 CDC 服務
   您可以使用 CDC 服務組態主控台來建立新的 CDC 服務並為 CDC 準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **準備 SQL Server**  
  從 CDC 服務組態主控台右側的 **[動作]** 窗格中選取這個選項。  
   

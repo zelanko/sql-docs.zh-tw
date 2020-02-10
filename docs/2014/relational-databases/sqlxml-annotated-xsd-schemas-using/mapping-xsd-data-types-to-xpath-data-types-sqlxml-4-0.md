@@ -1,5 +1,5 @@
 ---
-title: 將 XSD 資料類型對應到 XPath 資料類型 (SQLXML 4.0) |Microsoft Docs
+title: 將 XSD 資料類型對應到 XPath 資料類型（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8e0e1f4e2914439c380b3bbf7b6339ee28c6879
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013760"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>將 XSD 資料類型對應到 XPath 資料類型 (SQLXML 4.0)
@@ -31,7 +31,7 @@ ms.locfileid: "66013760"
   
  節點的 XPath 資料類型衍生自結構描述中的 XSD 資料類型，如下表所示  (EmployeeID 節點用於提供說明)。  
   
-|XSD 資料類型|XDR 資料類型|對等用法<br /><br /> XPath 資料類型|[SQL Server]<br /><br /> 所使用的轉換|  
+|XSD 資料類型|XDR 資料類型|對等用法<br /><br /> XPath 資料類型|SQL Server<br /><br /> 所使用的轉換|  
 |-------------------|-------------------|------------------------------------|--------------------------------------------|  
 |`Base64Binary`<br /><br /> `HexBinary`|`None`<br /><br /> `bin.base64bin.hex`|`Not applicable`|None<br /><br /> EmployeeID|  
 |`Boolean`|`boolean`|`boolean`|CONVERT(bit, EmployeeID)|  

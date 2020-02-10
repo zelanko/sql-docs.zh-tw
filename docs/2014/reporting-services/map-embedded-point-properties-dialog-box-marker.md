@@ -1,5 +1,5 @@
 ---
-title: 地圖內嵌的點屬性對話方塊、 標記 |Microsoft Docs
+title: 地圖內嵌點屬性對話方塊、標記 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e58ab5cbee4b039206eec713fe964169c4aecee1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108327"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>地圖內嵌點屬性對話方塊、標記
@@ -31,7 +31,7 @@ ms.locfileid: "66108327"
   
 ## <a name="options"></a>選項。  
  **標記類型**  
- 指定標記類型。 預設為 `Circle`。  
+ 指定標記類型。 預設值為 `Circle`。  
   
  **標記大小**  
  指定標記大小。 預設值為 10pt。  

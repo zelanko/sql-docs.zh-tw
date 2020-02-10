@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bd8d4122dca96d49fa3351375f545d32273646c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060477"
 ---
 # <a name="confirm-delete-page"></a>確認刪除頁面
   使用 **[確認刪除]** 頁面可指出 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 是否會在您刪除某些元件時顯示確認訊息。  
   
-## <a name="options"></a>選項  
- **當您刪除工作時要求確認。**  
+## <a name="options"></a>選項。  
+ **刪除工作時要求確認。**  
  刪除工作時顯示確認訊息。  
   
  **刪除轉換時要求確認。**  

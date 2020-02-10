@@ -1,5 +1,5 @@
 ---
-title: 文件集的法律注意事項 |Microsoft Docs
+title: 檔集的法律注意事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -17,23 +17,24 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62837518"
 ---
 # <a name="legal-notice-for-documentation"></a>文件集的法律注意事項
-  本文件是以原本的形式提供， 本文件中所表達的資訊和觀點，包括 URL 及其他網際網路網站參考資料，如有變更恕不另行通知。 您應自行承擔使用本文件的風險。  
+  這份文件依「現狀」提供。 本文件中提供的資訊與畫面 (包括 URL 及其他網際網路網站參考資料) 如有變更，恕不另行通知。 您應自行承擔使用本文件的風險。  
   
- 此處描述的部分範例僅供說明使用，純屬虛構， 並無意圖亦不應將其影射為任何實際關聯或連接。  
+ 此處描述的一些範例僅供說明之用，純屬虛構。 並未影射或關聯任何真實的人、事、物。  
   
- 本文件不會為您提供任何 Microsoft 產品的任何智慧財產權的任何法律權限。 您可以在內部為了參考用途來複製及使用本文件。  
+ 本文件未提供給您任何 Microsoft 產品中任何智慧財產的任何法定權利。 您可以複製並使用這份文件，供內部參考之用。  
   
  © 2013 Microsoft. 著作權所有，並保留一切權利。  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>SQL Server 支援及升級的文件集原則  
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 軟體文件集包括《[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 線上叢書》、安裝文件集、開發人員參考文件集、教學課程、讀我檔案、已知問題文件、範例程式碼、範例資料庫以及 Microsoft 所發行的知識庫文件，這些全都包含有關 SQL Server 特性與功能的內容。 此支援和升級原則適用於 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 文件集，包括 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本及 Service Pack 的讀我檔案；讀我檔案可視為《[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 線上叢書》的延伸部分。  
+ 
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 軟體文件集包括《[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 線上叢書》、安裝文件集、開發人員參考文件集、教學課程、讀我檔案、已知問題文件、範例程式碼、範例資料庫以及 Microsoft 所發行的知識庫文件，這些全都包含有關 SQL Server 特性與功能的內容。 此支援和升級原則適用於 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 文件集，包括 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本及 Service Pack 的讀我檔案；讀我檔案可視為《[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 線上叢書》的延伸部分。  
   
  本文件內所含範例的主要目的在於闡釋某個概念，或說明特定陳述式或子句的合理使用。 多數範例並不包含通常可在完整生產系統中找到的所有程式碼，因為已將某些一般資料驗證及錯誤處理部分移除，以將焦點放在範例中的特定概念或陳述上。 這些範例或其中包含的任何原始程式碼並不包含於技術支援的服務範圍之內。  
   

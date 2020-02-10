@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054680"
 ---
 # <a name="variable-grid-options"></a>變數方格選項
@@ -26,7 +26,7 @@ ms.locfileid: "66054680"
   
 ## <a name="options-for-filter"></a>篩選選項  
  **顯示系統變數**  
- 選取此選項即可在 [變數]  視窗中列出系統變數。 系統變數是預先定義的， 您無法加入或刪除系統變數。 但您可以修改 **RaiseChangedEvent** 屬性設定。  
+ 選取此選項即可在 [變數]**** 視窗中列出系統變數。 系統變數是預先定義的， 您無法加入或刪除系統變數。 但您可以修改 **RaiseChangedEvent** 屬性設定。  
   
  此清單有色碼。 系統變數是灰色，而使用者定義的變數是黑色。  
   
@@ -38,13 +38,13 @@ ms.locfileid: "66054680"
 ## <a name="options-for-columns"></a>資料行選項  
  選取您想要在 **[變數]** 視窗中顯示的資料行。  
   
--   **範圍。**  
+-   **影響範圍**  
   
--   **Data type**  
+-   **資料類型**  
   
--   **值**  
+-   **ReplTest1**  
   
--   **Namespace**  
+-   **命名空間**  
   
 -   **變數值變更時引發事件**  
   

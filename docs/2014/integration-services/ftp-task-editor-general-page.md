@@ -1,5 +1,5 @@
 ---
-title: FTP 工作編輯器 （一般頁面） |Microsoft Docs
+title: FTP 工作編輯器（一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058425"
 ---
 # <a name="ftp-task-editor-general-page"></a>FTP 工作編輯器 (一般頁面)
@@ -28,12 +28,12 @@ ms.locfileid: "66058425"
   
 ## <a name="options"></a>選項。  
  **FtpConnection**  
- 選取現有的 FTP 連線管理員，或按一下 [\<新增連線...>]  建立連線管理員。  
+ 選取現有的 FTP 連線管理員，或\<按一下 [**新增連接 ...** ]> 建立連線管理員。  
   
 > [!IMPORTANT]  
 >  FTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
   
- **相關主題**：[FTP 連線管理員](connection-manager/ftp-connection-manager.md)、[FTP 連線管理員編輯器](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **相關主題**： [Ftp 連線管理員](connection-manager/ftp-connection-manager.md)、 [ftp 連線管理員編輯器](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
  **StopOnFailure**  
  指出當 FTP 作業失敗時，FTP 工作是否結束。  

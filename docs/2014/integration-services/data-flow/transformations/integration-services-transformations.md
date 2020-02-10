@@ -22,14 +22,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b283f179a6d9ad79e90e4abdfc2e5af0c199d4dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900261"
 ---
 # <a name="integration-services-transformations"></a>Integration Services 轉換
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 轉換是封裝之資料流程中的元件，用以彙總、合併、散發和修改資料。 轉換還可以執行查閱作業，並產生範例資料集。 此章節描述 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所包含的轉換，並解釋其運作方式。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]轉換是封裝之資料流程中的元件，可匯總、合併、散發和修改資料。 轉換還可以執行查閱作業，並產生範例資料集。 此章節描述 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所包含的轉換，並解釋其運作方式。  
   
 ## <a name="business-intelligence-transformations"></a>商業智慧轉換  
  下列轉換會執行商業智慧作業 (例如，清除資料、採礦文字及執行資料採礦預測查詢)。  
@@ -79,13 +79,14 @@ ms.locfileid: "62900261"
 |[多點傳送轉換](multicast-transformation.md)|將資料集散發至多個輸出的轉換。|  
 |[聯集全部轉換](union-all-transformation.md)|合併多個資料集的轉換。|  
 |[合併轉換](merge-transformation.md)|合併兩個已排序資料集的轉換。|  
-|[合併聯結轉換](merge-join-transformation.md)|使用 FULL、LEFT 或 INNER 聯結來聯結兩個資料集的轉換。|  
+|[Merge Join Transformation](merge-join-transformation.md)|使用 FULL、LEFT 或 INNER 聯結來聯結兩個資料集的轉換。|  
 |[查閱轉換](lookup-transformation.md)|在參考資料表中使用完全比對查閱值的轉換。|  
 |[快取轉換](cache-transform.md)|將資料流程中已連接資料來源的資料寫入快取連接管理員以便將資料寫入快取檔案的轉換。 「查閱」轉換會在快取檔案的資料上執行查閱。|  
 |[平衡資料分佈器轉換](balanced-data-distributor-transformation.md)|轉換會將傳入資料列的緩衝區一致地分佈到個別執行緒上的輸出，以提升在多核心和多處理器伺服器上執行之 SSIS 封裝的效能。|  
   
 ## <a name="auditing-transformations"></a>稽核轉換  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括下列轉換，用以稽核資訊與計數資料列。  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括下列轉換，用以稽核資訊與計數資料列。  
   
 |轉換|描述|  
 |--------------------|-----------------|  

@@ -14,17 +14,17 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d6ad90fe277e76f98298f4e66fe8c652e64fd38d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483651"
 ---
 # <a name="business-rules-master-data-services"></a>商務規則 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，商務規則是用來確保主要資料品質和正確性的規則。 您可以使用商務規則自動更新資料、傳送電子郵件，或啟動商務程序或工作流程。  
   
 ## <a name="create-and-publish-business-rules"></a>建立及發行商務規則  
- 商務規則是您在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中建立的 `If/Then` 陳述式。 如果屬性值符合指定的條件，便會執行動作。 可能的動作包含設定預設值或變更值。 這些動作可以結合傳送電子郵件通知。  
+ 商務規則是您在 `If/Then` 中建立的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 陳述式。 如果屬性值符合指定的條件，便會執行動作。 可能的動作包含設定預設值或變更值。 這些動作可以結合傳送電子郵件通知。  
   
  商務規則可以以特定的屬性值 (例如，如果 Color=Blue，則採取動作) 為基礎，或當屬性值變更 (例如，如果 Color 屬性的值變更時，則採取動作)。 如需追蹤非特定變更的詳細資訊，請參閱[變更追蹤 &#40;Master Data Services&#41;](change-tracking-master-data-services.md)。  
   
@@ -62,16 +62,17 @@ ms.locfileid: "65483651"
 -   商務規則不得包含一個以上的 **[啟動工作流程]** 動作。  
   
 ## <a name="system-settings"></a>系統設定  
- [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中有兩項設定會影響商務規則。 您可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中或直接在 [系統設定] 表格中調整這些設定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md)。  
+ 
+  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中有兩項設定會影響商務規則。 您可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中或直接在 [系統設定] 表格中調整這些設定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|建立及發行新的商務規則。|[建立及發行商務規則 &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
+|建立及發行新的商務規則。|[建立和發佈商務規則 &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
 |將多個條件加入至商務規則。|[將多個條件新增至商務規則 &#40;Master Data Services&#41;](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
-|建立商務規則來要求屬性包含值。|[要求屬性值 &#40;Master Data Services&#41;](../../2014/master-data-services/require-attribute-values-master-data-services.md)|  
-|建立商務規則根據屬性值變更來執行動作。|[根據屬性值變更來起始動作 &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|建立商務規則來要求屬性包含值。|[需要 &#40;Master Data Services 的屬性值&#41;](../../2014/master-data-services/require-attribute-values-master-data-services.md)|  
+|建立商務規則根據屬性值變更來執行動作。|[根據屬性值變更起始動作 &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
 |變更現有商務規則的名稱。|[變更商務規則名稱 &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)|  
 |設定 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在套用商務規則時傳送通知。|[設定商務規則來傳送通知 &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
 |將商務規則套用至特定成員。|[根據商務規則驗證特定成員 &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  

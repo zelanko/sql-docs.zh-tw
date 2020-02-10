@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: dd6a34e6dbf57eb5080525d7dd0f7d7067484ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580483"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>將權限授與使用者及警示管理員
@@ -31,7 +31,7 @@ ms.locfileid: "65580483"
 
 若要深入了解 SharePoint 權限，請參閱 [使用者權限與權限等級 (SharePoint Server 2010)](https://technet.microsoft.com/library/cc721640.aspx)。
 
-## <a name="grant-permissions"></a>[授與權限]
+## <a name="grant-permissions"></a>授與權限
   
 1.  移至您要授與權限的 SharePoint 網站。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "65580483"
   
      如果沒有看到此選項，表示您沒有足夠的權限以將權限授與給其他人。  
   
-3.  按一下 **[授與權限]** 。  
+3.  按一下 [授與權限]  。  
   
 4.  在 [使用者/群組]  中，輸入要授與權限的使用者名稱、群組名稱或電子郵件地址。  
   

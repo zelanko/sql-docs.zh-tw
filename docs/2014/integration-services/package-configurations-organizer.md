@@ -1,5 +1,5 @@
 ---
-title: 封裝組態組合管理 |Microsoft Docs
+title: 套件設定召集人 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,36 +15,37 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d5313118f7949818d341a47744a69cf13c43dbc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056971"
 ---
 # <a name="package-configurations-organizer"></a>[封裝組態組合管理]
   使用 **[封裝組態組合管理]** 對話方塊，即可啟用封裝組態、檢視目前封裝的組態清單，以及指定載入組態的喜好順序。  
   
 > [!NOTE]  
->  組態可用於封裝部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型讓您能將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 如需有關部署模型的詳細資訊，請參閱＜ [部署專案和封裝](packages/deploy-integration-services-ssis-projects-and-packages.md)＞。  
+>  組態可用於封裝部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型讓您能將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)＞。  
   
  如果組態更新相同的屬性，列於組態清單較下面的組態值會取代清單中較上面的組態值。 載入屬性的最後一個值是封裝執行時所使用的值。 此外，如果封裝使用如 XML 組態檔案等直接組態以及如環境變數等間接組態的組合，則指向直接組態位置的間接組態必須是清單中較上面的部份。  
   
 > [!NOTE]  
 >  以喜好的順序載入封裝組態時，組態會根據 **[封裝組態組合管理]** 對話方塊中清單顯示的順序 (由上而下) 依序載入。 不過，在執行階段，封裝組態可能不會以喜好的順序載入。 特別是，父封裝組態會在其他類型的組態後面載入。  
   
- 封裝組態會在執行階段更新封裝物件的屬性值。 載入封裝時，組態值將會取代開發封裝時所設定的值。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支援不同的組態類型。 例如，您可以使用包含多個組態的 XML 檔案，或是包含單一組態的環境變數。 如需相關資訊，請參閱 [Package Configurations](../../2014/integration-services/package-configurations.md)。  
+ 封裝組態會在執行階段更新封裝物件的屬性值。 載入封裝時，組態值將會取代開發封裝時所設定的值。 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支援不同的組態類型。 例如，您可以使用包含多個組態的 XML 檔案，或是包含單一組態的環境變數。 如需相關資訊，請參閱 [Package Configurations](../../2014/integration-services/package-configurations.md)。  
   
-## <a name="options"></a>選項  
- **啟用封裝組態**  
+## <a name="options"></a>選項。  
+ **啟用套件設定**  
  選取即可使用封裝的組態。  
   
- **組態名稱**  
+ **設定名稱**  
  檢視組態的名稱。  
   
- **組態類型**  
+ **設定類型**  
  檢視儲存組態的位置類型。  
   
- **組態字串**  
+ **設定字串**  
  檢視儲存組態值的位置。 位置可以是檔案的路徑、環境變數的名稱、父封裝變數的名稱、登錄機碼，或是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表的名稱。  
   
  **目標物件**  
@@ -53,19 +54,19 @@ ms.locfileid: "66056971"
  **目標屬性**  
  檢視組態所修改之屬性的名稱。 如果組態類型支援多個組態，則此資料行是空白。  
   
- **[加入]**  
+ **加入**  
  使用封裝組態精靈來加入組態。  
   
  **編輯**  
  重新執行封裝組態精靈來編輯現有的組態。  
   
  **移除**  
- 選取組態，然後按一下 [移除]  。  
+ 選取組態，然後按一下 [移除]****。  
   
- **箭頭**  
+ **鍵**  
  選取組態，然後使用向上和向下箭頭，即可將其在清單中向上移動或向下移動。 組態會依其出現在清單中的順序載入。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立封裝組態](../../2014/integration-services/create-package-configurations.md)  
+ [Create Package Configurations](../../2014/integration-services/create-package-configurations.md)  
   
   

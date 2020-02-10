@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f8d49bcc6b25b9d66d8aba77c2300549c682a879
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867704"
 ---
-# <a name="mssqlserver605"></a>MSSQLSERVER_605
+# <a name="mssqlserver_605"></a>MSSQLSERVER_605
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|605|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -45,7 +45,7 @@ ms.locfileid: "62867704"
   
 -   作業系統向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 誤報 I/O 作業已完成；即使資料其實並未損毀也會顯示錯誤訊息。  
   
- 以最佳化工具提示 NOLOCK 執行查詢，或將交易隔離等級設定為 READ UNCOMMITTED。 使用 NOLOCK 的查詢或者 READ UNCOMMITTED 若嘗試讀取其他使用者正在搬移或變更的資料，便會發生 605 錯誤。 若要確認是否發生暫時性 605 錯誤，請稍後再執行一次查詢。 如需詳細資訊，請參閱這篇知識庫文章[235880](https://support.microsoft.com/kb/235880/en-us):「 您收到 「 錯誤 605 」 錯誤訊息時使用最佳化器提示 NOLOCK 執行查詢，或您設定的交易隔離等級為 READ UNCOMMITTED 在 SQL Server。 」  
+ 以最佳化工具提示 NOLOCK 執行查詢，或將交易隔離等級設定為 READ UNCOMMITTED。 使用 NOLOCK 的查詢或者 READ UNCOMMITTED 若嘗試讀取其他使用者正在搬移或變更的資料，便會發生 605 錯誤。 若要確認是否發生暫時性 605 錯誤，請稍後再執行一次查詢。 如需詳細資訊，請參閱這篇知識庫文章 [235880](https://support.microsoft.com/kb/235880/en-us)："You receive an "Error 605" error message when you run a query with the optimizer hint NOLOCK or you set the transaction isolation level to READ UNCOMMITTED in SQL Server" (當您使用最佳化器提示 NOLOCK 執行查詢，或在 SQL Server 中將交易隔離等級設定為 READ UNCOMMITTED 時，收到「錯誤 605」錯誤訊息)。  
   
  一般而言，如果錯誤僅在資料存取期間發生，但後續的 DBCC CHECKDB 作業均順利完成而沒有錯誤，605 錯誤可能就是暫時性錯誤。  
   

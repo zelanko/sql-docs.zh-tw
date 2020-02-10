@@ -1,5 +1,5 @@
 ---
-title: 使用 ADO (SQLXML 4.0) 中執行 DiffGram |Microsoft Docs
+title: 使用 ADO 執行 DiffGram （SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,28 +17,28 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac11a4f5f697e2b2cd0c27a56940a7183c6231da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012474"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>使用 ADO 執行 DiffGram (SQLXML 4.0)
-  這個 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 應用程式會使用 ADO 來建立 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接，然後執行 DiffGram。 在此應用程式中，DiffGram 和 XSD 結構描述會儲存在一個檔案中。 應用程式會從指定的檔案載入 DiffGram。 您可以使用任何 DiffGrams （及相關聯的 XSD 結構描述） 中所述[DiffGram 範例](diffgram-examples-sqlxml-4-0.md)。  
+  這個 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 應用程式會使用 ADO 來建立 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接，然後執行 DiffGram。 在此應用程式中，DiffGram 和 XSD 結構描述會儲存在一個檔案中。 應用程式會從指定的檔案載入 DiffGram。 您可以使用[DiffGram 範例](diffgram-examples-sqlxml-4-0.md)中所述的任何 diffgram （和相關聯的 XSD 架構）。  
   
  這是範例應用程式的程序：  
   
--   **Conn**物件 (**ADODB。連接**) 建立與特定伺服器上執行的 SQL Server 執行個體的連接。  
+-   **Conn**物件（**ADODB。連接**）會建立與特定伺服器上 SQL Server 之執行中實例的連接。  
   
--   **Cmd**物件 (**ADODB.Command**) 建立的連接上執行。  
+-   **Cmd**物件（**ADODB**）會在已建立的連接上執行。  
   
 -   命令用語會設定為 DBGUID_MSSQLXML。  
   
--   DiffGram 會複製到命令資料流 (**strmIn**) 檔案。  
+-   DiffGram 會從檔案複製到命令資料流程（**字串分 text.append**）。  
   
--   命令的輸出資料流設定為**StrmOut**物件 (**ADODB。Stream**) 才能接受任何傳回的資料。  
+-   命令的輸出資料流程會設定為**StrmOut**物件（**ADODB。資料流程**）接收任何傳回的資料。  
   
--   當您使用 SQLOLEDB 提供者時，根據預設，您會取得 Sqlxmlx.dll 提供的 Microsoft SQLXML 功能。 若要搭配 SQLOLEDB 提供者使用 Sqlxml4.dll **SQLXML Version**屬性必須設為**SQLXML.4.0** SQLOLEDB 提供者**連接**物件。  
+-   當您使用 SQLOLEDB 提供者時，根據預設，您會取得 Sqlxmlx.dll 提供的 Microsoft SQLXML 功能。 若要搭配使用 Sqlxml4.dll 與 SQLOLEDB 提供者，必須在 SQLOLEDB 提供者**連接**物件上，將**sqlxml Version**屬性設定為**sqlxml. 4.0** 。  
   
 -   執行命令 (DiffGram)。  
   
@@ -84,7 +84,7 @@ End Sub
   
 ### <a name="to-test-the-diffgram"></a>若要測試 DiffGram  
   
-1.  您的電腦上的資料夾，複製任何一個 DiffGrams 和對應的 XSD 結構描述中的範例之一[DiffGram 範例](diffgram-examples-sqlxml-4-0.md)。  
+1.  如果您是電腦上的資料夾，請從[DiffGram 範例](diffgram-examples-sqlxml-4-0.md)中的其中一個範例複製其中一個 diffgram 和對應的 XSD 架構。  
   
 2.  開啟 Visual Basic，然後建立一個標準的 EXE 專案。  
   
@@ -94,7 +94,7 @@ End Sub
     Microsoft ActiveX Data Objects 2.8 Library  
     ```  
   
-4.  在 [工具箱] 中，按一下**CommandButton**，然後在表單上繪製一個按鈕。  
+4.  在 [工具箱] 中，按一下 [**命令**]，然後在表單上繪製一個按鈕。  
   
 5.  按兩下該按鈕來編輯程式碼，然後加入主題中提供之應用程式的程式碼。  
   

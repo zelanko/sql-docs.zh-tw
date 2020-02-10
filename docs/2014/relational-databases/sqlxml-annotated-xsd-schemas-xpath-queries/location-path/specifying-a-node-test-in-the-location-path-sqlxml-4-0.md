@@ -1,5 +1,5 @@
 ---
-title: 指定節點測試中的位置路徑 (SQLXML 4.0) |Microsoft Docs
+title: 在位置路徑中指定節點測試（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,35 +16,36 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d0a3dd41259bcbf2567d34a86527865de011faf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012669"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>在位置路徑中指定節點測試 (SQLXML 4.0)
-  節點測試會指定位置步驟所選取的節點類型。 每個軸 (`child`、`parent`、`attribute` 或 `self`) 都有一個主要節點類型。 針對`attribute`軸的主要節點類型是 **\<屬性 >**。 針對`parent`， `child`，並`self`軸的主要節點類型會 **\<項目 >**。  
+  節點測試會指定位置步驟所選取的節點類型。 每個軸 (`child`、`parent`、`attribute` 或 `self`) 都有一個主要節點類型。 若為`attribute`軸，主要節點類型為** \<屬性>**。 針對`parent`、 `child`和`self`座標軸，主要節點類型為** \<element>**。  
   
 > [!NOTE]  
 >  不支援萬用字元節點測試 * (例如 `child::*`)。  
   
-## <a name="node-test-example-1"></a>節點測試：範例 1  
- 位置路徑`child::Customer`選取 **\<客戶 >** 內容節點的項目子系。  
+## <a name="node-test-example-1"></a>節點測試：範例1  
+ 位置路徑`child::Customer`會選取** \<** 內容節點的客戶>元素子系。  
   
- 在此範例中，`child` 為軸，而 `Customer` 為節點測試。 主要節點型別`child`軸是 **\<項目 >**。 因此，會在節點測試為 TRUE，如果 **\<客戶 >** 節點 **\<項目 >** 節點。 若內容節點沒有 **\<客戶 >** 子系，會傳回空的節點集。  
+ 在此範例中，`child` 為軸，而 `Customer` 為節點測試。 `child`軸的主要節點類型是** \<元素>**。 因此，如果** \<客戶>** 節點是>節點的** \<元素**，節點測試就會是 TRUE。 如果內容節點沒有** \<客戶>** 子系，則會傳回空的節點集。  
   
 ## <a name="node-test-example-2"></a>節點測試：範例 2  
- 位置路徑`attribute::CustomerID`選取**CustomerID**內容節點的屬性。  
+ 位置路徑`attribute::CustomerID`會選取內容節點的**CustomerID**屬性。  
   
- 在此範例中，`attribute` 為軸，而 `CustomerID` 為節點測試。 主要節點類型`attribute`軸是 **\<屬性 >**。 因此，會在節點測試為 TRUE，如果**CustomerID**是 **\<屬性 >** 節點。 若內容節點沒有**CustomerID**，會傳回空的節點集。  
+ 在此範例中，`attribute` 為軸，而 `CustomerID` 為節點測試。 `attribute`軸的主要節點類型是** \<>的屬性**。 因此，如果**CustomerID**是>節點的** \<屬性**，節點測試就會是 TRUE。 如果內容節點沒有**CustomerID**，則會傳回空的節點集。  
   
 > [!NOTE]  
->  在此實作中的 XPath，如果位置步驟參考 **\<項目 >** 該 **\<屬性 >** 中未宣告結構描述，則會產生錯誤的類型。 這與 MSXML 中的 XPath 實作不同，該實作會傳回空的節點集。  
+>  在此 XPath 的執行中，如果位置步驟參考>的** \<元素**，或未在架構中宣告的** \<屬性>** 類型，則會產生錯誤。 這與 MSXML 中的 XPath 實作不同，該實作會傳回空的節點集。  
   
 ## <a name="abbreviated-syntax-for-the-axes"></a>軸的縮寫語法  
  位置路徑的以下縮寫語法有受到支援：  
   
--   `attribute::` 可縮寫成 `@`。  
+-   
+  `attribute::` 可縮寫成 `@`。  
   
      位置路徑 `Customer[@CustomerID="ALFKI"]` 與 `child::Customer[attribute::CustomerID="ALFKI"]` 相同。  
   
@@ -52,6 +53,7 @@ ms.locfileid: "66012669"
   
      因此，`child` 是預設軸。 位置路徑 `Customer/Order` 與 `child::Customer/child::Order` 相同。  
   
--   `self::node()` 可以縮寫成一個句號 (.)，而 `parent::node()` 可縮寫成兩個句號 (..)。  
+-   
+  `self::node()` 可以縮寫成一個句號 (.)，而 `parent::node()` 可縮寫成兩個句號 (..)。  
   
   

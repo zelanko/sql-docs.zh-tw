@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 910de9d388e60ae3664153e2f6cb3bb5203b289c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055783"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>部署專案之後設定參數值
@@ -22,19 +22,19 @@ ms.locfileid: "66055783"
   
 ### <a name="to-set-server-defaults-with-ssms-object-explorer"></a>若要使用 SSMS 物件總管來設定伺服器預設值，請執行下列作業：  
   
-1.  選取並以滑鼠右鍵按一下 [Integration Services]  節點底下的專案。  
+1.  選取並以滑鼠右鍵按一下 [Integration Services]**** 節點底下的專案。  
   
 2.  按一下 **[屬性]** ，以開啟 **[專案屬性]** 對話方塊視窗。  
   
-3.  按一下 **[選取頁面]** 底下的 **[參數]** ，以開啟參數頁面。  
+3.  按一下 **[選取頁面]** 底下的 **[參數]**，以開啟參數頁面。  
   
-4.  在 **[參數]** 清單選取所需的參數。 注意:[容器]  資料行有助於區分專案參數與封裝參數。  
+4.  在 **[參數]** 清單選取所需的參數。 附註： **[容器]** 資料行有助於區分專案參數與封裝參數。  
   
 5.  在 **[值]** 資料行中，指定所需的伺服器預設參數值。  
   
  若要使用 Transact-SQL 設定伺服器預設值，請使用 [catalog.set_object_parameter_value &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database) 預存程序。 若要檢視目前的伺服器預設值，請查詢 [catalog.object_parameters &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database) 檢視。 若要清除伺服器預設值，請使用 [catalog.clear_object_parameter_value &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database) 預存程序。  
   
 ## <a name="see-also"></a>另請參閱  
- [Integration Services &#40;SSIS&#41;參數](integration-services-ssis-package-and-project-parameters.md)  
+ [Integration Services &#40;SSIS&#41; 參數](integration-services-ssis-package-and-project-parameters.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 新增中繼資料 (Master Data Services) |Microsoft Docs
+title: 新增中繼資料（Master Data Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,39 +14,39 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 801872affac61572553cbbd2e9648e197e16bb47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054285"
 ---
 # <a name="add-metadata-master-data-services"></a>加入中繼資料 (Master Data Services)
-  在  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，新增至使用者定義的中繼資料**中繼資料**模型，以描述模型物件。  
+  在[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，將使用者定義的中繼資料加入至**中繼資料**模型，以描述您的模型物件。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
   
--   針對**中繼資料**模型，您必須擁有**新增**之中繼資料實體或分葉成員類型，您想要新增的權限。  
+-   針對**中繼資料**模型，您必須擁有要加入之中繼資料實體或分葉成員類型的 [**加入**] 許可權。  
   
--   版本的狀態必須是 [開啟]  。  
+-   版本的狀態必須是 [開啟]****。  
   
 ### <a name="to-add-metadata"></a>若要加入中繼資料  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]首頁上，從**模型**清單中，選取**中繼資料**模型。  
+1.  在首頁上，從 [**模型**] 清單中選取**中繼資料**模型。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]  
   
 2.  從 **[版本]** 清單中選取版本。  
   
-3.  按一下 **[總管]** 。  
+3.  按一下 **[總管]**。  
   
-4.  從功能表列指向**實體**然後按一下您想要新增的中繼資料實體。  
+4.  從功能表列指向 [**實體**]，然後按一下您想要加入的中繼資料實體。  
   
-5.  按一下 [ **Add Member** ] 按鈕。 **加入新的成員**頁面將會顯示此頁面的右邊。  
+5.  按一下 [**新增成員**] 按鈕。 [**加入新成員**] 頁面會顯示在此頁面的右側。  
   
-6.  輸入新名稱、 代碼和描述，然後再按一下**確定**。  
+6.  輸入新的 [名稱]、[程式碼] 和 [描述]，然後按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [中繼資料&#40;Master Data Services&#41;](metadata-master-data-services.md)  
+ [中繼資料 &#40;Master Data Services&#41;](metadata-master-data-services.md)  
   
   

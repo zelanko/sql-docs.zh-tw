@@ -1,5 +1,5 @@
 ---
-title: 使用快顯功能表設定優先順序條件約束的值 |Microsoft Docs
+title: 使用快捷方式功能表來設定優先順序條件約束的值 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4086ab60e4f9fab576ba2d28ab0bbe332435ba58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055663"
 ---
 # <a name="set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu"></a>使用快速鍵功能表來設定優先順序條件約束的值
@@ -30,9 +30,9 @@ ms.locfileid: "66055663"
   
 3.  按一下 **[控制流程]** 索引標籤。  
   
-4.  在 [控制流程] 索引標籤的設計介面上，以滑鼠右鍵按一下優先順序條件約束，然後按一下 [成功]、[失敗] 或 [完成]。  
+4.  在 [控制流程]**** 索引標籤的設計介面上，以滑鼠右鍵按一下優先順序條件約束，然後按一下 [成功]****、[失敗]**** 或 [完成]****。  
   
-5.  若要儲存更新的封裝，請按一下 [檔案] 功能表上的 [儲存選取項目]。  
+5.  若要儲存更新的封裝，請按一下 [檔案]**** 功能表上的 [儲存選取項目]****。  
   
 ## <a name="see-also"></a>另請參閱  
  [優先順序條件約束](control-flow/precedence-constraints.md)   

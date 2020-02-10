@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5bd144197379ed574ccd152fedf8089b311881be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483531"
 ---
 # <a name="change-the-order-of-attributes"></a>變更屬性的順序
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更屬性的順序。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -29,21 +29,21 @@ ms.locfileid: "65483531"
   
 ### <a name="to-change-the-order-of-an-attribute"></a>若要變更屬性的順序  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
-2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[實體]** 。  
+2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[實體]**。  
   
 3.  在 **[實體維護]** 頁面上，選取 **[模型]** 清單中的模型。  
   
 4.  針對包含您想要變更順序之屬性的實體按一下其資料列。  
   
-5.  按一下 **[編輯選取的實體]** 。  
+5.  按一下 **[編輯選取的實體]**。  
   
-6.  在 **編輯實體**頁面上，於**分葉成員屬性**，或**合併成員屬性**，或**集合屬性**，選取您想要變更順序，然後按一下 向上鍵或向下箭號，即可變更其順序中的屬性。  
+6.  在 [**編輯實體**] 頁面的 [分**葉成員屬性**] 或 **[合併成員屬性**] 或 [**集合屬性**] 中，選取您要變更順序的屬性，然後按一下向上箭號或向下箭號來變更其順序。  
   
-7.  按一下 **儲存實體**。  
+7.  按一下 [**儲存實體**]。  
   
 ## <a name="see-also"></a>另請參閱  
- [屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+ [Master Data Services &#40;的屬性&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 要求的 URL 參考 BLOB 資料使用 sql： 編碼 (SQLXML 4.0) |Microsoft Docs
+title: 使用 sql：編碼來要求 BLOB 資料的 URL 參考（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 153a88bcb31f65d4e6aff007cfbee7d1f7afc6df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013724"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>使用 sql:encode 要求指向 BLOB 資料的 URL 參考 (SQLXML 4.0)
@@ -31,20 +31,22 @@ ms.locfileid: "66013724"
   
  如果您希望要傳回之資料的參考 (URI) 可以在稍後用來擷取二進位格式的 BLOB 資料，請指定 `sql:encode` 註解。 您可以在屬性或簡單類型的元素上指定 `sql:encode`。  
   
- 指定 `sql:encode` 註解可指示應該傳回欄位的 URL，而不是欄位的值。 `sql:encode` 會依賴主索引鍵來產生 URL 中的單一選取。 主索引鍵可以使用 `sql:key-fields` 註解來指定。  
+ 指定 `sql:encode` 註解可指示應該傳回欄位的 URL，而不是欄位的值。 
+  `sql:encode` 會依賴主索引鍵來產生 URL 中的單一選取。 主索引鍵可以使用 `sql:key-fields` 註解來指定。  
   
  可以將 "url" 或 "default" 值指派給 `sql:encode` 註解。 "default" 值會傳回 Base 64 編碼格式的資料。  
   
- `sql:encode` 註解不能搭配 `sql:use-cdata` 使用或是在 ID、IDREF、IDREFS、NMTOKEN 或 NMTOKENS 屬性類型上使用。 它也不能搭配 XSD**修正**屬性。  
+ 
+  `sql:encode` 註解不能搭配 `sql:use-cdata` 使用或是在 ID、IDREF、IDREFS、NMTOKEN 或 NMTOKENS 屬性類型上使用。 它也不能與 XSD **fixed**屬性一起使用。  
   
 > [!NOTE]  
 >  BLOB 類型的資料行不能當做索引鍵或外部索引鍵的一部分使用。  
   
 ## <a name="examples"></a>範例  
- 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. 指定 sql:encode 來取得指向 BLOB 資料的 URL 參考  
- 在此範例中，指定對應結構描述`sql:encode`上**LargePhoto**屬性來擷取特定產品相片 （而不是擷取 Base 64 編碼格式的二進位資料） 的 URI 參考。  
+ 在此範例中，對應架構會`sql:encode`在**LargePhoto**屬性上指定，以抓取特定產品相片的 URI 參考（而不是以64編碼格式的二進位資料來取得）。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -82,7 +84,7 @@ ms.locfileid: "66013724"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下是結果：  
   

@@ -1,5 +1,5 @@
 ---
-title: 基本資訊的 SSIS 套件 |Microsoft Docs
+title: SSIS 套件基本概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cba1fb860d884b568fe132fc2b38ff50fbd480d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055420"
 ---
 # <a name="ssis-package-essentials"></a>SSIS 封裝基本功能
-  封裝是實作 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能以擷取、轉換和載入資料的物件。 您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 設計師來建立封裝。 您也可以執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯入和匯出精靈或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 連接專案精靈來建立封裝。 如需詳細資訊，[在 SQL Server Data Tools 中建立封裝](create-packages-in-sql-server-data-tools.md)SSIS 設計師 」 中並[匯入專案精靈](../../2014/integration-services/import-project-wizard.md)。  
+  封裝是實作 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能以擷取、轉換和載入資料的物件。 您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 設計師來建立封裝。 您也可以執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯入和匯出精靈或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 連接專案精靈來建立封裝。 如需詳細資訊，請在 SSIS 設計師的[SQL Server Data Tools 中建立封裝](create-packages-in-sql-server-data-tools.md)和匯[入專案嚮導](../../2014/integration-services/import-project-wizard.md)。  
   
  基本的套件包含下列項目：  
   
@@ -34,13 +34,13 @@ ms.locfileid: "66055420"
   
  如需詳細資訊，請參閱 [資料流程](data-flow/data-flow.md)。  
   
- 如需如何建立基本封裝的範例，請參閱[第 1 課：建立專案和基本套件](lesson-1-create-a-project-and-basic-package-with-ssis.md)。  
+ 如需如何建立基本封裝的範例，請參閱[第1課：建立專案和基本封裝](lesson-1-create-a-project-and-basic-package-with-ssis.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
   
--   [在 SQL Server Data Tools 中建立套件](create-packages-in-sql-server-data-tools.md)  
+-   [在 SQL Server 資料工具中建立封裝](create-packages-in-sql-server-data-tools.md)  
   
--   [在控制流程中新增或刪除工作或容器](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+-   [在控制流程中加入或刪除工作或容器](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 -   [設定工作或容器的屬性](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   

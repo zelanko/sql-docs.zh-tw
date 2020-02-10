@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4379e0ff3ca534acd6ae130cbdf0f8acd2b6a81f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66009853"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>遠端 Blob 存放區 (RBS) (SQL Server)
@@ -50,17 +50,18 @@ ms.locfileid: "66009853"
 ## <a name="rbs-requirements"></a>RBS 需求  
  RBS 在儲存 BLOB 中繼資料所在的主要資料庫伺服器中，需要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise。 不過，如果您使用提供的 FILESTREAM 提供者，可以將 BLOB 本身儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 上。  
   
- RBS 包含一個 FILESTREAM 提供者，可讓您使用 RBS，將 BLOB 儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體上。 如果您要使用 RBS 將 BLOB 儲存在不同的儲存方案中，您必須使用針對該儲存方案開發的 RBS 提供者，或使用 RBS API 開發一個自訂的 RBS 提供者。 將 BLOB 儲存在 NTFS 檔案系統中的範例提供者，在 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190)上作為學習資源提供。  
+ RBS 包含一個 FILESTREAM 提供者，可讓您使用 RBS，將 BLOB 儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體上。 如果您要使用 RBS 將 BLOB 儲存在不同的儲存方案中，您必須使用針對該儲存方案開發的 RBS 提供者，或使用 RBS API 開發一個自訂的 RBS 提供者。 將 BLOB 儲存在 NTFS 檔案系統中的範例提供者，在 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190)上作為學習資源提供。  
   
 ## <a name="rbs-security"></a>RBS 安全性  
  當您使用自訂提供者將 BLOB 儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部時，可以提供給略過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性系統的其他處理序使用。 請確認您會使用適合自訂提供者使用之儲存媒體的權限和加密選項，保護已儲存的 BLOB。  
   
-##  <a name="rbsresources"></a> RBS 資源  
+##  <a name="rbsresources"></a>RBS 資源  
  **RBS 文件集**  
- RBS 文件集包含在 Windows Installer 套件中。 如果您要在不安裝 RBS 的情況下檢閱 RBS 文件集，則可以在 [MSDN Library 中線上](https://go.microsoft.com/fwlink/?LinkId=210192)檢視該文件集的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本。  
+ RBS 文件集包含在 Windows Installer 套件中。 如果您要在不安裝 RBS 的情況下檢閱 RBS 文件集，則可以在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]MSDN Library 中線上[檢視該文件集的 ](https://go.microsoft.com/fwlink/?LinkId=210192) 版本。  
   
  **RBS 技術白皮書**  
- [遠端 BLOB 儲存](https://go.microsoft.com/fwlink/?LinkId=210422)技術白皮書是可下載的 Microsoft Word 文件，這個技術白皮書提供有關安裝與設定 RBS 的詳細資訊。  
+ 
+  [遠端 BLOB 儲存](https://go.microsoft.com/fwlink/?LinkId=210422)技術白皮書是可下載的 Microsoft Word 文件，這個技術白皮書提供有關安裝與設定 RBS 的詳細資訊。  
   
  **RBS 範例**  
  [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) 上提供的 RBS 範例會示範如何開發 RBS 應用程式，以及如何開發與安裝自訂的 RBS 提供者。  

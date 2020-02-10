@@ -1,5 +1,5 @@
 ---
-title: HTTP 連接管理員編輯器 （Proxy 頁面） |Microsoft Docs
+title: HTTP 連線管理員編輯器（Proxy 頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b6694741388e649e8a216efad18f48a66de6d61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058254"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>HTTP 連接管理員編輯器 (Proxy 頁面)
@@ -26,14 +26,14 @@ ms.locfileid: "66058254"
   
  若要深入了解 HTTP 連接管理員，請參閱＜ [HTTP Connection Manager](connection-manager/http-connection-manager.md)＞。 若要深入了解 HTTP 連接管理員的常見使用案例，請參閱＜ [Web Service Task](control-flow/web-service-task.md)＞。  
   
-## <a name="options"></a>選項  
- **使用 Proxy**  
+## <a name="options"></a>選項。  
+ **使用 proxy**  
  指定 HTTP 連接管理員是否要透過 Proxy 伺服器連接。  
   
  **Proxy URL**  
  輸入 Proxy 伺服器的 URL。  
   
- **在本機上略過 Proxy**  
+ **本機上略過 proxy**  
  針對本機位址，指定 HTTP 連接管理員是否要略過 Proxy 伺服器。  
   
  **使用認證**  
@@ -51,11 +51,11 @@ ms.locfileid: "66058254"
  **Proxy 略過清單**  
  輸入您想要略過之 Proxy 伺服器的位址清單。  
   
- **[加入]**  
+ **加入**  
  輸入您想要針對它略過 Proxy 伺服器的位址。  
   
  **移除**  
- 選取一個位址，然後按一下 [移除]  來移除它。  
+ 選取一個位址，然後按一下 [移除]**** 來移除它。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

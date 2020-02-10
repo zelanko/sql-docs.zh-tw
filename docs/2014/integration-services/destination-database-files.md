@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cfee31b4167625b4f868d7312abd752a215652c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059550"
 ---
 # <a name="destination-database-files"></a>目的地資料庫檔案
@@ -30,7 +30,7 @@ ms.locfileid: "66059550"
   
  輸入檔案名稱，或是按一下檔案名稱來編輯它。  
   
- **目的資料夾**  
+ **目的地資料夾**  
  目的地伺服器上的資料夾，用於存放將傳送的資料庫檔案。  
   
  輸入資料夾路徑，按一下該資料夾路徑來編輯它，或是按一下瀏覽來找出在目的地伺服器上的資料夾，以存放要傳送的資料庫檔案。  
@@ -44,7 +44,7 @@ ms.locfileid: "66059550"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [傳送資料庫工作編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
- [傳送資料庫工作編輯器 &#40;資料庫頁面&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [[傳送資料庫工作編輯器] &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [[傳送資料庫工作編輯器 &#40;資料庫] 頁面&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

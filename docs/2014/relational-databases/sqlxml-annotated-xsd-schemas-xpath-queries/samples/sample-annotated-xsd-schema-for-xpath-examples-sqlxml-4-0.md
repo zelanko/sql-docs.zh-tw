@@ -1,5 +1,5 @@
 ---
-title: 範例的註解式 XSD 結構描述 XPath 範例 (SQLXML 4.0) |Microsoft Docs
+title: XPath 範例的批註式 XSD 架構範例（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0464b11906d08b22c100efa6d142b16fb8fa679
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010733"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>XPath 範例的範例註解式 XSD 結構描述 (SQLXML 4.0)
-  本章節的範例 XPath 查詢會參考對應結構描述。 此對應結構描述是註解式 XML 結構描述 (XSD) 檔案。 如需有關對應結構描述的詳細資訊，請參閱 <<c0> [ 註解式 XSD 結構描述簡介&#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。</c0>  
+  本章節的範例 XPath 查詢會參考對應結構描述。 此對應結構描述是註解式 XML 結構描述 (XSD) 檔案。 如需對應架構的詳細資訊，請參閱[批註式 XSD 架構簡介 &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。  
   
  以下是針對註解式 XSD 結構描述執行 XPath 查詢所需的處理：  
   
 -   建立包含 XPath 查詢的範本。 在此範本中，您會指定 XPath 查詢執行時所要針對的對應結構描述。 在此案例中，對應結構描述必須儲存在與範本檔案相關的目錄中 (或是它的一個子目錄，其中會將相對路徑指定為範本中的 `mapping-schema` 屬性值)。  
   
--   建立一個將 SQLXML 延伸模組用於 ADO 來執行查詢的測試應用程式。 如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+-   建立一個將 SQLXML 延伸模組用於 ADO 來執行查詢的測試應用程式。 如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  在本章節的所有範例中，為了加以說明，將會在範本中指定 XPath 查詢，而且會使用 ADO 來執行此範本。 因此，您必須使用下列的對應結構描述檔案 SampleSchema1.xml。 將這個檔案儲存在您存放範本的目錄中。  
   

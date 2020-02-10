@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b56bba0567a96b7bdd7b75ad191d553ffa019930
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010433"
 ---
 # <a name="access-filetables-with-transact-sql"></a>利用 Transact-SQL 存取 FileTable
@@ -29,14 +29,14 @@ ms.locfileid: "66010433"
   
 -   若 INSERT 陳述式設定 **name**、**path_locator**、**parent_path_locator** 或檔案屬性，則會強制執行系統定義的條件約束。  
   
--   提供 [GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 函數的檔案系統路徑，應用程式就可以取得檔案或目錄的 **path_locator**。  
+-   提供 **GetPathLocator &#40;Transact-SQL&#41;** 函數的檔案系統路徑，應用程式就可以取得檔案或目錄的 [path_locator](/sql/relational-databases/system-functions/getpathlocator-transact-sql)。  
   
 ##  <a name="BasicsUpdate"></a> FileTable 上的 UPDATE 作業  
  下列考量適用於 FileTable 上的 **UPDATE** 作業：  
   
 -   允許更新任何使用者定義的資料。  
   
--   若 INSERT 陳述式設定 **name**、 **path_locator**、 **parent_path_locator**或檔案屬性，則會強制執行系統定義的條件約束。  
+-   若 INSERT 陳述式設定 **name**、**path_locator**、**parent_path_locator** 或檔案屬性，則會強制執行系統定義的條件約束。  
   
 -   您可以更新 **file_stream** 資料行中的 FILESTREAM 資料，而不影響任何其他資料行 (包括時間戳記)。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66010433"
   
 ## <a name="see-also"></a>另請參閱  
  [載入檔案至 FileTable](load-files-into-filetables.md)   
- [使用 FileTables 中的目錄與路徑](work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)   
  [使用檔案輸入輸出 API 存取 FileTable](access-filetables-with-file-input-output-apis.md)   
  [FileTable DDL、函數、預存程序及檢視](../views/views.md)  
   

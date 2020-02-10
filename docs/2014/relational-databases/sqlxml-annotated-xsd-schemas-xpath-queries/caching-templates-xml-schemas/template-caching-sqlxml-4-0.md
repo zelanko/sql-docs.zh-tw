@@ -1,5 +1,5 @@
 ---
-title: 範本快取 (SQLXML 4.0) |Microsoft Docs
+title: 範本快取（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0024066a5a687828cc59d5053d62e891bbf198d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013204"
 ---
 # <a name="template-caching-sqlxml-40"></a>範本快取 (SQLXML 4.0)
@@ -33,9 +33,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\TemplateCacheSi
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
   
- 範本大小應該根據可用的記憶體以及您要使用的範本數目來設定。 預設值是**TemplateCacheSize**大小為 31。 如果範本存取速度似乎緩慢，您可以增加快取大小，或者如果記憶體不足，則減少快取大小。  
+ 範本大小應該根據可用的記憶體以及您要使用的範本數目來設定。 **TemplateCacheSize**大小的預設值為31。 如果範本存取速度似乎緩慢，您可以增加快取大小，或者如果記憶體不足，則減少快取大小。  
   
- 為了達到最佳效能，建議您設定**TemplateCacheSize**比您通常使用的範本數目高。 如果**TemlateCacheSize**小於您擁有的範本數目，效能會隨著範本增加數目。 **TemplateCacheSize**可以設為上限 128。  
+ 為獲得較佳的效能，建議您將**TemplateCacheSize**設定為高於您通常使用的範本數目。 如果**TemlateCacheSize**小於您擁有的範本數目，效能會隨著範本數目的增加而降低。 **TemplateCacheSize**可以設定為最大值128。  
   
  每次使用快取的範本時，就會檢查範本檔的修改時間以查看該範本檔是否需要重新整理。 這是因為磁碟副本比快取副本新的緣故。  
   
@@ -43,7 +43,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\TemplateCacheSi
 >  系統不會快取範本參數和命令屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [結構描述快取&#40;SQLXML 4.0&#41;](schema-caching-sqlxml-4-0.md)   
- [XSL 快取&#40;SQLXML 4.0&#41;](xsl-caching-sqlxml-4-0.md)  
+ [架構快取 &#40;SQLXML 4.0&#41;](schema-caching-sqlxml-4-0.md)   
+ [XSL Caching &#40;SQLXML 4.0&#41;](xsl-caching-sqlxml-4-0.md)  
   
   

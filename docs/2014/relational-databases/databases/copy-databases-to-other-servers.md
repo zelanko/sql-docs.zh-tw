@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d40c76281b3368505caee55af3def9f7f61f1696
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872416"
 ---
 # <a name="copy-databases-to-other-servers"></a>複製資料庫至其他伺服器
@@ -36,7 +36,7 @@ ms.locfileid: "62872416"
   
 -   還原資料庫備份  
   
-     若要複製整個資料庫，您可以使用 BACKUP 與 RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 還原資料庫的完整備份，可用來將某部電腦的資料庫複製到另一部上，而會這麼做通常有許多原因。 如需使用備份與還原來複製資料庫的資訊，請參閱[使用備份與還原複製資料庫](copy-databases-with-backup-and-restore.md)。  
+     若要複製整個資料庫，您可以使用 BACKUP 與 RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 還原資料庫的完整備份，可用來將某部電腦的資料庫複製到另一部上，而會這麼做通常有許多原因。 如需使用備份與還原來複製資料庫的資訊，請參閱 [使用備份與還原複製資料庫](copy-databases-with-backup-and-restore.md)。  
   
     > [!NOTE]  
     >  若要設定鏡像資料庫以執行資料庫鏡像作業，您必須使用 RESTORE DATABASE *<資料庫名稱>* WITH NORECOVERY 將資料庫還原成鏡像伺服器。 如需詳細資訊，請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  

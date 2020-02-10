@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059650"
 ---
 # <a name="date-and-time-formats"></a>日期和時間格式
@@ -32,7 +32,7 @@ ms.locfileid: "66059650"
   
 -   ISO 8601 格式，如下表中所列：  
   
-    |格式|描述|  
+    |[格式]|描述|  
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> YYYY-MM-DD|四位數年份、兩位數月份和兩位數天數的基本格式與擴充格式。 在擴充格式中，日期各部份以連字號 (-) 分隔。|  
     |YYYY-MM|降低有效位數的四位數年份和兩位數月份之基本格式與擴充格式。 在擴充格式中，日期各部份以連字號 (-) 分隔。|  
@@ -52,7 +52,7 @@ ms.locfileid: "66059650"
   
  快速剖析會以 DT_DBDATE 輸出資料。 將填補以截斷格式表示的日期值。 例如，YYYY 會變為 YYYY0101。  
   
- 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
+ 如需詳細資訊，請參閱[Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
   
 ## <a name="time-data-type"></a>時間資料類型  
  快速剖析支援下列字串格式的時間資料：  
@@ -63,7 +63,7 @@ ms.locfileid: "66059650"
   
 -   ISO 8601 時間格式，如下表中所列：  
   
-    |格式|描述|  
+    |[格式]|描述|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|四位數小時、兩位數分鐘和兩位數秒鐘的基本格式與擴充格式。 在擴充格式中，時間各部份以冒號 (:) 分隔。|  
     |HHMI<br /><br /> HH:MI|兩位數小時和兩位數分鐘之基本截斷格式與擴充截斷格式。 在擴充格式中，時間各部份以冒號 (:) 分隔。|  
@@ -72,7 +72,7 @@ ms.locfileid: "66059650"
   
 -   指定時區的時間格式，如下表中所列：  
   
-    |格式|描述|  
+    |[格式]|描述|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|基本格式及擴充格式，指出要加入至「國際標準時間」(UTC) 以取得本地時間的小時和分鐘數。|  
     |-HH:MI<br /><br /> -HHMI|基本格式及擴充格式，指出要從 UTC 減去以取得本地時間的小時和分鐘數。|  
@@ -80,7 +80,7 @@ ms.locfileid: "66059650"
     |-HH|截斷格式，指出要從 UTC 減去以取得本地時間的小時數。|  
     |Z|0 的值，指出時間是以 UTC 表示。|  
   
-     所有時間和日期/時間資料的格式都可以包含時區元素。 不過，除非資料是 DT_DBTIMESTAMPOFFSET 類型，否則系統會忽略時區值。 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
+     所有時間和日期/時間資料的格式都可以包含時區元素。 不過，除非資料是 DT_DBTIMESTAMPOFFSET 類型，否則系統會忽略時區值。 如需詳細資訊，請參閱[Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
   
      在包含時區元素的格式中，在時間元素和時區元素之間沒有空格，如以下範例所示：  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66059650"
   
 -   包含小數的時間格式，如下表中所列：  
   
-    |格式|描述|  
+    |[格式]|描述|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n 是介於 0 和 9999999 之間且代表小數時數的值。 方括號表示此值是選擇性的。<br /><br /> 例如，值 12.750 表示 12:45。|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n 是介於 0 和 9999999 之間且代表小數分鐘數的值。 方括號表示此值是選擇性的。<br /><br /> 例如，值 1220.500 表示 12:20:30。|  
@@ -107,7 +107,7 @@ ms.locfileid: "66059650"
   
  快速剖析會以 DT_DBTIME 和 DT_DBTIME2 輸出字串。 將填補以截斷格式表示的時間值。 例如，HH:MI 會變為 HH:MM:00.000。  
   
- 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
+ 如需詳細資訊，請參閱[Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
   
 ## <a name="datetime-data-type"></a>日期/時間資料類型  
  快速剖析支援下列字串格式的日期/時間資料：  
@@ -123,11 +123,11 @@ ms.locfileid: "66059650"
 |日期/時間部分|填補|  
 |---------------------|-------------|  
 |秒|加入 00。|  
-|Minutes|加入 00:00。|  
-|Hour|加入 00:00:00。|  
+|分鐘|加入 00:00。|  
+|小時|加入 00:00:00。|  
 |Day|加入 01 做為此月的某個日期。|  
 |Month|加入 01 做為此年份的某個月份。|  
   
- 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
+ 如需詳細資訊，請參閱[Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
   
   

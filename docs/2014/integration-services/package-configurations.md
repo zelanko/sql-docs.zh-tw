@@ -1,5 +1,5 @@
 ---
-title: 封裝組態 |Microsoft Docs
+title: 套件設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,17 +22,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056887"
 ---
 # <a name="package-configurations"></a>封裝組態
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供可用以在執行階段更新屬性值的封裝組態。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]提供封裝設定，可讓您在執行時間用來更新屬性的值。  
   
 > [!NOTE]  
->  組態可用於封裝部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型讓您能將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 如需有關部署模型的詳細資訊，請參閱＜ [部署專案和封裝](packages/deploy-integration-services-ssis-projects-and-packages.md)＞。  
+>  組態可用於封裝部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型讓您能將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)＞。  
   
  組態是您加入已完成封裝的一組屬性/值配對。 一般而言，您建立封裝、在封裝開發期間設定封裝物件的屬性，然後將組態加入至封裝。 當封裝執行時，它會從組態取得新的屬性值； 舉例來說，經由使用組態，您可以變更連接管理員的連接字串，或更新變數的值。  
   
@@ -44,7 +44,8 @@ ms.locfileid: "66056887"
   
 -   組態使封裝更有彈性。 例如，組態可以更新屬性運算式中使用的變數值。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支援使用幾種不同的方法儲存封裝組態，例如 XML 檔案、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的資料表，以及環境和封裝變數。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支援使用幾種不同的方法儲存封裝組態，例如 XML 檔案、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的資料表，以及環境和封裝變數。  
   
  每個組態都是屬性/值配對。 XML 組態檔和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態類型可以包含多重組態。  
   
@@ -55,7 +56,8 @@ ms.locfileid: "66056887"
   
  當此公用程式載入及執行此封裝時，事件會依照下列順序發生：  
   
-1.  **dtexec** 公用程式會載入此封裝。  
+1.  
+  **dtexec** 公用程式會載入此封裝。  
   
 2.  此公用程式會套用您在設計階段於封裝內所指定的組態，而且會依照封裝內所指定的順序 (唯一的例外是父封裝變數組態。 此公用程式只會在稍後於處理序中套用這些組態一次)。  
   
@@ -67,7 +69,8 @@ ms.locfileid: "66056887"
   
 6.  此公用程式會執行此封裝。  
   
- **dtexec** 公用程式套用組態的方式會影響下列命令列選項：  
+ 
+  **dtexec** 公用程式套用組態的方式會影響下列命令列選項：  
   
 -   您可以在執行階段使用 **/Connection** 或 **/Set** 選項，從不同於設計時所指定的位置載入封裝組態。  
   
@@ -79,7 +82,7 @@ ms.locfileid: "66056887"
   
 -   您不能使用 **/ConfigFile** 選項來載入可取代您在設計階段指定之組態的組態。  
   
- 如需有關這些選項，以及這些選項的行為之間的差異[!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]和舊版中，請參閱[SQL Server 2014 中 Integration Services 功能的行為變更](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)。  
+ 如需這些選項的詳細資訊，以及這些選項的行為在和舊版[!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]之間的差異，請參閱[SQL Server 2014 中 Integration Services 功能的行為變更](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)。  
   
 ## <a name="package-configuration-types"></a>封裝組態類型  
  下表描述封裝組態類型。  
@@ -90,10 +93,11 @@ ms.locfileid: "66056887"
 |環境變數|環境變數包含組態。|  
 |登錄項目|登錄項目包含組態。|  
 |父封裝變數|封裝中的變數包含組態。 這個組態類型通常用來更新子封裝中的屬性。|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的資料表包含組態。 資料表可以包含多重組態。|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]目錄|
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的資料表包含組態。 資料表可以包含多重組態。|  
   
 ### <a name="xml-configuration-files"></a>XML 組態檔  
- 如果選取 [XML 組態檔]  組態類型，您可以建立新的組態檔、重複使用現有的檔案並加入新組態，或者重複使用現有的檔案但覆寫現有的檔案內容。  
+ 如果選取 [XML 組態檔]**** 組態類型，您可以建立新的組態檔、重複使用現有的檔案並加入新組態，或者重複使用現有的檔案但覆寫現有的檔案內容。  
   
  XML 組態檔包含兩個區段：  
   
@@ -123,10 +127,10 @@ ms.locfileid: "66056887"
 ### <a name="registry-entry"></a>登錄項目  
  如果您想使用登錄項目儲存組態，可以使用現有的機碼或在 HKEY_CURRENT_USER 中建立新的機碼。 您所使用的登錄機碼必須具有名為 `Value` 的值。 該值可以是 DWORD 或字串。  
   
- 如果您選取 [登錄項目]  組態類型，就要在 [登錄項目] 方塊中輸入登錄機碼的名稱。 格式為 \<登錄機碼>。 如果您想要使用不是在 HKEY_CURRENT_USER 根目錄的登錄機碼，請使用 \<登錄機碼\登錄機碼\\...> 格式識別該機碼。 例如，若要使用位於 SSISPackages 中的 MyPackage 機碼，請輸入 `SSISPackages\MyPackage`。  
+ 如果您選取 [登錄項目]**** 組態類型，就要在 [登錄項目] 方塊中輸入登錄機碼的名稱。 格式為 \<登錄機碼>。 如果您想要使用不是在 HKEY_CURRENT_USER 根目錄的登錄機碼，請使用 \<登錄機碼\登錄機碼\\...> 格式識別該機碼。 例如，若要使用位於 SSISPackages 中的 MyPackage 機碼，請輸入 `SSISPackages\MyPackage`。  
   
-### <a name="sql-server"></a>[SQL Server]  
- 如果選取 [SQL Server]  組態類型，則需要指定要儲存組態之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的連接。 您可以將組態儲存至現有的資料表，或者在指定的資料庫中建立新的資料表。  
+### <a name="sql-server"></a>SQL Server  
+ 如果選取 [SQL Server]**** 組態類型，則需要指定要儲存組態之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的連接。 您可以將組態儲存至現有的資料表，或者在指定的資料庫中建立新的資料表。  
   
  下列 SQL 陳述式顯示 [封裝組態精靈] 提供的預設 CREATE TABLE 陳述式。  
   
@@ -144,19 +148,20 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  您提供給組態的名稱為 **ConfigurationFilter** 資料行中儲存的值。  
   
 ## <a name="direct-and-indirect-configurations"></a>直接和間接組態  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供直接和間接組態。 如果您直接指定組態， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 便會在組態項目和封裝物件屬性之間建立直接的連結。 來源的位置沒有變更時，使用直接組態是較好的選擇。 例如，如果您確定封裝中的所有部署都使用相同的檔案路徑，便可指定 XML 組態檔。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供直接和間接組態。 如果您直接指定組態， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 便會在組態項目和封裝物件屬性之間建立直接的連結。 來源的位置沒有變更時，使用直接組態是較好的選擇。 例如，如果您確定封裝中的所有部署都使用相同的檔案路徑，便可指定 XML 組態檔。  
   
  間接組態會使用環境變數。 與直接指定組態設定的方法不同，間接組態會指向包含組態值的環境變數。 如果組態的位置可以針對封裝的每個部署變更，則使用間接組態是較好的選擇。  
   
 ## <a name="related-tasks"></a>相關工作  
- [建立套件設定](../../2014/integration-services/create-package-configurations.md)  
+ [Create Package Configurations](../../2014/integration-services/create-package-configurations.md)  
   
 ## <a name="related-content"></a>相關內容  
   
--   msdn.microsoft.com 上的技術文件： [了解 Integration Services 封裝組態](https://go.microsoft.com/fwlink/?LinkId=165643)  
+-   msdn.microsoft.com 上的技術文件： [Understanding Integration Services Package Configurations](https://go.microsoft.com/fwlink/?LinkId=165643)(了解 Integration Services 封裝組態)  
   
--   部落格文章[程式碼-封裝組態建立套件](https://go.microsoft.com/fwlink/?LinkId=217663)，www.sqlis.com 上。  
+-   Www.sqlis.com 上的 Blog 專案，[以程式碼套件設定建立封裝](https://go.microsoft.com/fwlink/?LinkId=217663)。  
   
--   部落格文章[API 範例-以程式設計方式將組態檔加入封裝](https://go.microsoft.com/fwlink/?LinkId=217664)，blogs.msdn.com 上。  
+-   Blog 專案， [API 範例-在 blogs.msdn.com 上以程式設計方式將設定檔新增至套件](https://go.microsoft.com/fwlink/?LinkId=217664)。  
   
   

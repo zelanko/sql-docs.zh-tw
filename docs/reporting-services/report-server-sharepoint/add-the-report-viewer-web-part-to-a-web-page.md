@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 562c762871db5c29476d10a81ac52dad46f65ad5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579393"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>將報表檢視器網頁組件新增至網頁
@@ -39,7 +39,7 @@ ms.locfileid: "65579393"
   
 4.  在網頁組件類別目錄的清單中，選取 [其他]  類別目錄，然後選取 [SQL Server Reporting Services 報表檢視器]  。  
   
-5.  按一下 **[加入]** 。 網頁組件會新增至區域頂端。 您可將它拖曳至該區域中的其他位置。  
+5.  按一下 [新增]  。 網頁組件會新增至區域頂端。 您可將它拖曳至該區域中的其他位置。  
   
 6.  在檢視器中，按一下 [請按這裡開啟工具窗格]  。  
   

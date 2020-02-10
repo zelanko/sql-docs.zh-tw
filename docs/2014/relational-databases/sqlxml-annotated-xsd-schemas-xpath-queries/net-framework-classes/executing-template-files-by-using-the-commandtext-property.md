@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1635358fc136c9faba3ce18b1d278ee1e407411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012506"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>使用 CommandText 屬性執行範本檔案
-  此範例說明如何指定 SQL 或 XPath 查詢所組成的範本檔案，使用 CommandTextproperty。 而不是做為 CommandText 值，指定 SQL 或 XPath 查詢，您可以指定檔案名稱的值。 在下列範例中，CommandType 屬性會指定為 SqlXmlCommandType.TemplateFile。  
+  這個範例說明如何使用 CommandTextproperty 來指定由 SQL 或 XPath 查詢所組成的範本檔案。 您可以指定檔案名做為值，而不是將 SQL 或 XPath 查詢指定為 CommandText 的值。 在下列範例中，CommandType 屬性指定為 SqlXmlCommandType. TemplateFile。  
   
  此範例應用程式會執行此範本：  
   
@@ -79,7 +79,7 @@ class Test
   
 2.  將這個範例所提供的 XML 範本 (TemplateFile.xml) 儲存在資料夾中。  
   
-3.  將此範例中提供的 C# 程式碼 (DocSample.cs) 儲存到儲存結構描述的相同資料夾中 (如果您將檔案儲存在不同的資料夾中，您將需要編輯程式碼，然後為對應的結構描述指定適當的目錄路徑)。  
+3.  將此範例中提供的 C# 程式碼 (DocSample.cs) 儲存到儲存結構描述的相同資料夾中  (如果您將檔案儲存在不同的資料夾中，您將需要編輯程式碼，然後為對應的結構描述指定適當的目錄路徑)。  
   
 4.  編譯程式碼。 若要在命令提示字元下編譯程式碼，請使用：  
   
@@ -91,7 +91,7 @@ class Test
   
 5.  在命令提示字元中，執行 DocSample.exe。  
   
- 如果您將參數傳遞給範本時，參數名稱必須以開頭 at 符號 (@);比方說，p.Name="@ContactID"，其中 p 是 SqlXmlParameter 物件。  
+ 如果您將參數傳遞至範本，參數名稱必須以 @ 符號開頭，例如，p.Name = "@ContactID"，其中 p 是 SqlXmlParameter 物件。  
   
  這是採用一個參數的已更新範本。  
   

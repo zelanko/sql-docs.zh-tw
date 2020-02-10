@@ -1,5 +1,5 @@
 ---
-title: 選取來源位置 （SSIS 封裝升級精靈） |Microsoft Docs
+title: 選取來源位置（SSIS 封裝升級嚮導） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1ba348d3a47945bf9bb4f375310c5c92e6be7705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055936"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>選取來源位置 (SSIS 封裝升級精靈)
@@ -25,9 +25,9 @@ ms.locfileid: "66055936"
 > [!NOTE]  
 >  只有當您從 [!INCLUDE[ssIS](../includes/ssis-md.md)] 或命令提示字元執行 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 封裝升級精靈時，才可使用此頁面。  
   
- **執行 SSIS 封裝升級精靈**  
+ **執行 SSIS 封裝升級嚮導**  
   
--   [使用 SSIS 套件升級精靈來升級 Integration Services 套件](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
+-   [使用 SSIS 封裝升級精靈來升級 Integration Services 封裝](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ## <a name="static-options"></a>靜態選項  
  **封裝來源**  
@@ -35,12 +35,12 @@ ms.locfileid: "66055936"
   
 |值|描述|  
 |-----------|-----------------|  
-|**[File System]**|指示要升級的封裝位於本機電腦的資料夾中。<br /><br /> 若要讓精靈在升級這些封裝之前先備份原始封裝，原始封裝必須儲存在檔案系統中。 如需詳細資訊，請參閱「如何」主題。|  
-|**SSIS 封裝存放區**|指示要升級的封裝位於封裝存放區中。 此封裝存放區是由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務所管理的檔案系統資料夾集合所組成。 如需詳細資訊，請參閱 [AllMembers &#40;MDX&#41;](service/package-management-ssis-service.md)。<br /><br /> 選取這個值會顯示對應的 **[封裝來源]** 動態選項。|  
+|**檔案系統**|指示要升級的封裝位於本機電腦的資料夾中。<br /><br /> 若要讓精靈在升級這些封裝之前先備份原始封裝，原始封裝必須儲存在檔案系統中。 如需詳細資訊，請參閱「如何」主題。|  
+|**SSIS 封裝存放區**|指示要升級的封裝位於封裝存放區中。 此封裝存放區是由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務所管理的檔案系統資料夾集合所組成。 如需詳細資訊，請參閱[封裝管理 &#40;SSIS 服務&#41;](service/package-management-ssis-service.md)。<br /><br /> 選取這個值會顯示對應的 **[封裝來源]** 動態選項。|  
 |**Microsoft SQL Server**|指示要升級的封裝是來自現有的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。<br /><br /> 選取這個值會顯示對應的 **[封裝來源]** 動態選項。|  
   
  **資料夾**  
- 輸入包含您想要升級之封裝的資料夾名稱，或是按一下 [瀏覽]  並尋找資料夾。  
+ 輸入包含您想要升級之封裝的資料夾名稱，或是按一下 [瀏覽]**** 並尋找資料夾。  
   
  **瀏覽**  
  瀏覽來尋找包含您要升級之封裝的資料夾。  

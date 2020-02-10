@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57131b757dfc66df990f0ddf8a3c5f28f4e04396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871208"
 ---
 # <a name="secondary-database-settings"></a>次要資料庫設定
@@ -24,7 +24,7 @@ ms.locfileid: "62871208"
   
  如需記錄傳送概念的說明，請參閱 [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **次要伺服器執行個體**  
  顯示目前在記錄傳送組態中設定為次要伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。  
   

@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7f5f11ba4154b70c5aa1fd0ae0e7579c746ce744
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483178"
 ---
 # <a name="database-configuration-page-master-data-services-configuration-manager"></a>資料庫組態頁面 (Master Data Services 組態管理員)
@@ -27,9 +27,10 @@ ms.locfileid: "65483178"
   
 |控制項名稱|描述|  
 |------------------|-----------------|  
-|**SQL Server 執行個體**|顯示選取的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體名稱。 在您連接到執行個體然後選取或建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫之前，這會是空白的。|  
+|**SQL Server 實例**|顯示選取的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體名稱。 在您連接到執行個體然後選取或建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫之前，這會是空白的。|  
 |**Master Data Services 資料庫**|顯示選取之 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的名稱。 在您連接到執行個體然後選取或建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫之前，這會是空白的。|  
-|**Master Data Services 資料庫版本**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫結構描述的版本。|  
+|**Master Data Services 資料庫版本**|
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫結構描述的版本。|  
 |**建立資料庫**|開啟 **[建立資料庫]** 精靈，您可以從此精靈連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，並為該執行個體建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。|  
 |**選取資料庫**|開啟 **[連接到資料庫]** 對話方塊，您可以從此對話方塊連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，並選取 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。|  
 |**升級資料庫**|開啟精靈，供您用來升級指定的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。 只有當指定的資料庫需要升級時，才會啟用這個按鈕。|  
@@ -41,7 +42,7 @@ ms.locfileid: "65483178"
  這些設定可在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中使用，並儲存在資料庫的 [系統設定] 資料表 (mdm.tblSystemSetting)。 如需所有設定的清單，請參閱[系統設定 &#40;Master Data Services&#41;](system-settings-master-data-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定 Master Data Services 資料庫和網站](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [設定 Master Data Services 的資料庫和網站](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [資料庫需求 &#40;Master Data Services&#41;](install-windows/database-requirements-master-data-services.md)  
   
   

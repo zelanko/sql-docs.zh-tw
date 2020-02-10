@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 348a50b1f199fa28b9bc67718b47ee4819bdde87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873486"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>檢視或變更收集組排程 (SQL Server Management Studio)
@@ -112,7 +112,7 @@ ms.locfileid: "62873486"
   
 |||  
 |-|-|  
-|**無快取 - 在相同排程時收集和上傳資料。**|當選取此選項時，請指定下列其中一項：<br /><br /> **視需要**。 視需要收集及上傳資料。<br /><br /> **排程**。 根據排程收集及上傳資料。 請按一下 **[挑選]** 從預先定義的排程清單中選取，或是按一下 **[新增]** 建立新的排程。|  
+|**無快取 - 在相同排程時收集和上傳資料。**|當選取此選項時，請指定下列其中一項：<br /><br /> **隨選**。 視需要收集及上傳資料。<br /><br /> **排程**。 根據排程收集及上傳資料。 請按一下 **[挑選]** 從預先定義的排程清單中選取，或是按一下 **[新增]** 建立新的排程。|  
 |**快取 - 以一組收集頻率來收集和快取資料，並在個別排程時上傳快取的資料。**|以指定的收集頻率來收集和快取資料。 根據個別排程上傳收集的資料。|  
   
  **收集項**  

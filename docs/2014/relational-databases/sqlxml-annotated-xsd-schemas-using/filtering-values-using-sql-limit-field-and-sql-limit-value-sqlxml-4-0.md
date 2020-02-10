@@ -1,5 +1,5 @@
 ---
-title: '篩選值使用 sql: limit-value-欄位和 sql: limit-value-值 (SQLXML 4.0) |Microsoft Docs'
+title: 使用 sql： limit-field 和 sql： limit-value 篩選值（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013812"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>使用 sql:limit-field 和 sql:limit-value 篩選值 (SQLXML 4.0)
-  您可以根據特定的限制值來限制從資料庫查詢傳回的資料列。 `sql:limit-field` 和 `sql:limit-value` 註解用於識別包含限制值的資料庫資料行，以及指定篩選所傳回之資料所使用的特定限制值。  
+  您可以根據特定的限制值來限制從資料庫查詢傳回的資料列。 
+  `sql:limit-field` 和 `sql:limit-value` 註解用於識別包含限制值的資料庫資料行，以及指定篩選所傳回之資料所使用的特定限制值。  
   
- `sql:limit-field` 註解用於識別包含限制值的資料行；該註解可在每個對應的元素或屬性上使用。  
+ 
+  `sql:limit-field` 註解用於識別包含限制值的資料行；該註解可在每個對應的元素或屬性上使用。  
   
- `sql:limit-value` 註解用於指定 `sql:limit-field` 註解中所指定之資料行中的限制值。 `sql:limit-value` 註解是選擇性的。 如果未指定 `sql:limit-value`，則會假設 NULL 值。  
+ 
+  `sql:limit-value` 註解用於指定 `sql:limit-field` 註解中所指定之資料行中的限制值。 
+  `sql:limit-value` 註解是選擇性的。 如果未指定 `sql:limit-value`，則會假設 NULL 值。  
   
 > [!NOTE]  
 >  使用 `sql:limit-field` (其中對應的 SQL 資料行屬於 `real` 類型) 時，SQLXML 4.0 會針對 XML 結構描述中指定的 `sql:limit-value` 執行轉換，做為 `nvarchar` 指定的值。 這需要使用完整的科學記號標記法指定十進位限制值。 如需詳細資訊，請參閱下列範例 B。  
@@ -53,7 +57,7 @@ ms.locfileid: "66013812"
   
  一個客戶可以有一個送貨地址和/或一個帳單地址。 AddressType 資料行值為 Shipping 和 Billing。  
   
- 這是對應的結構描述所在**ShipTo**結構描述屬性會對應到 Addresses 關聯中的 StreetAddress 資料行。 針對此屬性傳回的值會透過指定 `sql:limit-field` 和 `sql:limit-value` 註解，僅限於送貨地址。 同樣地， **BillTo**結構描述屬性會傳回客戶的帳單地址。  
+ 這是對應的架構，其中**ShipTo**架構屬性會對應至位址關聯中的 StreetAddress 資料行。 針對此屬性傳回的值會透過指定 `sql:limit-field` 和 `sql:limit-value` 註解，僅限於送貨地址。 同樣地， **BillTo**架構屬性只會傳回客戶的帳單位址。  
   
  這是結構描述：  
   
@@ -99,7 +103,7 @@ ms.locfileid: "66013812"
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>針對結構描述測試範例 XPath 查詢  
   
-1.  建立兩個資料表中的**tempdb**資料庫：  
+1.  在**tempdb**資料庫中建立兩個數據表：  
   
     ```  
     USE tempdb  
@@ -146,7 +150,7 @@ ms.locfileid: "66013812"
   
 5.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 [使用ADO執行SQLXML查詢](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 查詢](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下是結果：  
   
@@ -170,7 +174,7 @@ ms.locfileid: "66013812"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- 這是對應的結構描述所在**OrderID**訂單明細上的屬性會對應到 orders 關聯中的 OrderID 資料行。 針對此屬性傳回的值會僅限於值為 2.0000000e-001 (0.2) 針對所指定**折扣**屬性使用`sql:limit-field`和`sql:limit-value`註解。  
+ 這是對應的架構，其中訂單詳細資料上的 **「訂單」屬性會**對應到 orders 關聯中的「訂單」資料行。 針對此屬性傳回的值僅限於值為 2.0000000 e-001 （0.2）， `sql:limit-field`並使用和`sql:limit-value`注釋指定的**折扣**屬性。  
   
  這是結構描述：  
   
@@ -216,7 +220,7 @@ ms.locfileid: "66013812"
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>針對結構描述測試範例 XPath 查詢  
   
-1.  建立兩個資料表中的**tempdb**資料庫：  
+1.  在**tempdb**資料庫中建立兩個數據表：  
   
     ```  
     USE tempdb  
@@ -305,9 +309,9 @@ ms.locfileid: "66013812"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [float 和 real &#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)   
- [nchar 和 nvarchar &#40;-SQL&AMP;#41;&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
+ [float 和 real &#40;Transact-sql&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)   
+ [Nchar 和 Nvarchar &#40;Transact-sql&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
  [安裝 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [使用註解式 XSD 結構描述，在查詢中的&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [在查詢中使用批註式 XSD 架構 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

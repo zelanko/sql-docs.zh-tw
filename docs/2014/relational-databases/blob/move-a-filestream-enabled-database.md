@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aaf6dffd3d8424f5582a43d327ce6f2b3e26af4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66009960"
 ---
 # <a name="move-a-filestream-enabled-database"></a>移動啟用 FILESTREAM 功能的資料庫
@@ -27,9 +27,9 @@ ms.locfileid: "66009960"
   
 ### <a name="to-move-a-filestream-enabled-database"></a>移動已啟用 FILESTREAM 功能的資料庫  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，按一下 [新增查詢] 開啟 [查詢編輯器]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，按一下 [新增查詢]  開啟 [查詢編輯器]。  
   
-2.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼複製到 [查詢編輯器]，然後按一下 [執行]。 此指令碼會顯示 FILESTREAM 資料庫使用之實體資料庫檔案的位置。  
+2.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼複製到 [查詢編輯器]，然後按一下 [執行]  。 此指令碼會顯示 FILESTREAM 資料庫使用之實體資料庫檔案的位置。  
   
     ```sql  
     USE Archive  
@@ -37,7 +37,7 @@ ms.locfileid: "66009960"
     SELECT type_desc, name, physical_name from sys.database_files  
     ```  
   
-3.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼複製到 [查詢編輯器]，然後按一下 [執行]。 此程式碼會讓 `Archive` 資料庫離線。  
+3.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼複製到 [查詢編輯器]，然後按一下 [執行]  。 此程式碼會讓 `Archive` 資料庫離線。  
   
     ```sql  
     USE master  
@@ -45,9 +45,9 @@ ms.locfileid: "66009960"
     GO  
     ```  
   
-4.  建立 `C:\moved_location` 資料夾，然後將步驟 2 所列的檔案和資料夾移到這個資料夾中。  
+4.  建立 `C:\moved_location`資料夾，然後將步驟 2 所列的檔案和資料夾移到這個資料夾中。  
   
-5.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼複製到 [查詢編輯器]，然後按一下 [執行]。 此指令碼會將 `Archive` 資料庫設定為線上。  
+5.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼複製到 [查詢編輯器]，然後按一下 [執行]  。 此指令碼會將 `Archive` 資料庫設定為線上。  
   
     ```sql  
     CREATE DATABASE Archive ON  

@@ -1,5 +1,5 @@
 ---
-title: 第 2 課：將採礦模型加入至時間序列採礦結構 |Microsoft Docs
+title: 第2課：將採礦模型加入至時間序列的採礦結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62855712"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>第 2 課：將採礦模型新增至時間序列採礦結構
-  在這一課，您將新的採礦模型加入剛才建立的採礦結構[第 1 課：建立時間序列採礦模型和採礦結構](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)。  
+# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>第 2 課：將採礦模型加入時間序列採礦結構中
+  在這一課，您會將新的採礦模型加入至您剛在[第1課：建立時間序列](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)的「採礦模型」和「採礦結構」中所建立的「採礦結構」。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE 陳述式  
- 若要將新的採礦模型新增至現有的採礦結構中，您使用[ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)陳述式。 陳述式中的程式碼可分成下列各部份：  
+ 若要將新的採礦模型加入至現有的採礦結構，請使用[ALTER 採礦結構 &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)語句。 陳述式中的程式碼可分成下列各部份：  
   
 -   識別採礦結構  
   
@@ -57,7 +57,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- 如需命名的物件，在 DMX 中的資訊，請參閱[識別碼&#40;DMX&#41;](/sql/dmx/identifiers-dmx)。  
+ 如需在 DMX 中命名物件的詳細資訊，請參閱[dmx&#41;&#40;的識別碼](/sql/dmx/identifiers-dmx)。  
   
  接下來幾行的程式碼定義採礦結構中將由採礦模型使用的資料行：  
   
@@ -95,7 +95,7 @@ WITH DRILLTHROUGH
   
 #### <a name="to-add-an-arima-time-series-mining-model"></a>若要加入 ARIMA 時間序列採礦模型  
   
-1.  在**物件總管] 中**，以滑鼠右鍵按一下執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查詢**，然後按一下**DMX**以開啟 [查詢編輯器及新的空白查詢。  
+1.  在**物件總管**中，以滑鼠右鍵按一下的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]實例，指向 [追加**查詢**]，然後按一下 [ **DMX** ] 以開啟 [查詢編輯器] 和新的空白查詢。  
   
 2.  將 ALTER MINING STRUCTURE 陳述式的一般範例複製到空白查詢中。  
   
@@ -105,7 +105,7 @@ WITH DRILLTHROUGH
     <mining structure name>   
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     [Forecasting_MIXED_Structure]  
@@ -117,7 +117,7 @@ WITH DRILLTHROUGH
     <mining model name>   
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     Forecasting_ARIMA  
@@ -129,7 +129,7 @@ WITH DRILLTHROUGH
     <key columns>,  
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     [ReportingDate],  
@@ -144,7 +144,7 @@ WITH DRILLTHROUGH
     <mining model columns>  
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     ([Quantity] PREDICT,  
@@ -159,7 +159,7 @@ WITH DRILLTHROUGH
     [WITH DRILLTHROUGH]  
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     USING Microsoft_Time_Series (AUTO_DETECT_PERIODICITY = .08, FORECAST_METHOD = 'ARIMA')  
@@ -181,11 +181,11 @@ WITH DRILLTHROUGH
     WITH DRILLTHROUGH  
     ```  
   
-8.  在 **檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
+8.  **在 [檔案**] 功能表上，按一下 [**將 DMXQuery1 另存為**]。  
   
-9. 在 [**另存新檔**] 對話方塊中，瀏覽至適當的資料夾，並將檔案命名`Forecasting_ARIMA.dmx`。  
+9. 在 [**另存**新檔] 對話方塊中，流覽至適當的資料夾，並`Forecasting_ARIMA.dmx`將檔案命名為。  
   
-10. 在工具列上，按一下**Execute**  按鈕。  
+10. 在工具列上，按一下 [**執行**] 按鈕。  
   
 ## <a name="adding-an-artxp-time-series-model-to-the-structure"></a>將 ARTXP 時間序列模型加入到結構中  
  ARTXP 演算法是 SQL Server 2005 中的預設時間序列演算法，而且已針對長期預測而最佳化。 為了使用所有的這三種時間序列演算法來比較預測，您將會再加入一個根據 ARTXP 演算法的模型。  
@@ -209,11 +209,11 @@ WITH DRILLTHROUGH
     WITH DRILLTHROUGH  
     ```  
   
-2.  在 **檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
+2.  **在 [檔案**] 功能表上，按一下 [**將 DMXQuery1 另存為**]。  
   
-3.  在 [**另存新檔**] 對話方塊中，瀏覽至適當的資料夾，並將檔案命名`Forecasting_ARTXP.dmx`。  
+3.  在 [**另存**新檔] 對話方塊中，流覽至適當的資料夾，並`Forecasting_ARTXP.dmx`將檔案命名為。  
   
-4.  在工具列上，按一下**Execute**  按鈕。  
+4.  在工具列上，按一下 [**執行**] 按鈕。  
   
  在下一課，您將處理所有的模型和採礦結構。  
   

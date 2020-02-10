@@ -18,10 +18,10 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 46176d786314284f4056b58ba351dacee37a06e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574812"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 和 Power View 的瀏覽器支援
@@ -94,11 +94,11 @@ ms.locfileid: "65574812"
 
 |**瀏覽器類型**|**支援**|**瀏覽器預設值**|**伺服器預設值**|
 |----------------------|------------------|-------------------------|------------------------|
-|**Microsoft Edge** (+)|交涉, Kerberos, NTLM, 基本|交涉|是的。 預設驗證設定適用於 Edge。|
-|**Microsoft Internet Explorer**|交涉, Kerberos, NTLM, 基本|交涉|是的。 搭配 Internet Explorer 使用預設驗證設定。|
-|**Google Chrome**(+)|交涉, NTLM, 基本|交涉|是的。 預設驗證設定適用於 Chrome。|
-|**Mozilla Firefox**(+)|NTLM，基本|NTLM|是的。 搭配 Firefox 使用預設驗證設定。|
-|**Apple Safari**(+)|NTLM，基本|[基本]|是的。 搭配 Safari 使用預設驗證設定。|
+|**Microsoft Edge** (+)|交涉, Kerberos, NTLM, 基本|交涉|是。 預設驗證設定適用於 Edge。|
+|**Microsoft Internet Explorer**|交涉, Kerberos, NTLM, 基本|交涉|是。 搭配 Internet Explorer 使用預設驗證設定。|
+|**Google Chrome**(+)|交涉, NTLM, 基本|交涉|是。 預設驗證設定適用於 Chrome。|
+|**Mozilla Firefox**(+)|NTLM，基本|NTLM|是。 搭配 Firefox 使用預設驗證設定。|
+|**Apple Safari**(+)|NTLM，基本|基本|是。 搭配 Safari 使用預設驗證設定。|
 
  **(+)** 最新的公開發行版本
 
@@ -157,7 +157,7 @@ ms.locfileid: "65574812"
 [在入口網站中尋找和檢視報表](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)  
 [入口網站 (SSRS 原生模式)](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
-[HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
+[HTML 檢視器和報表工具列](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL 存取參數參考](../reporting-services/url-access-parameter-reference.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

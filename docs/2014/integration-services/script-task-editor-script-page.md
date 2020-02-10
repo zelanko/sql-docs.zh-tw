@@ -1,5 +1,5 @@
 ---
-title: 指令碼工作編輯器 （指令碼頁面） |Microsoft Docs
+title: 腳本工作編輯器（腳本頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056192"
 ---
 # <a name="script-task-editor-script-page"></a>指令碼工作編輯器 (指令碼頁面)
@@ -29,7 +29,7 @@ ms.locfileid: "66056192"
   
  若要深入了解指令碼工作，請參閱＜ [Script Task](control-flow/script-task.md) ＞和＜ [在指令碼工作編輯器設定指令碼工作](extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼工作，請參閱＜ [Extending the Package with the Script Task](extending-packages-scripting/task/extending-the-package-with-the-script-task.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **ScriptLanguage**  
  為此工作選取指令碼語言，可以是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66056192"
  若要為指令碼工作設定預設指令碼語言，請使用 **[選項]** 對話方塊上 **[一般]** 頁面上的 **[指令碼語言]** 選項。 如需相關資訊，請參閱 [General Page](general-page-of-integration-services-designers-options.md)。  
   
  **EntryPoint**  
- 將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 執行階段呼叫的方法指定為指令碼工作程式碼的進入點。 指定的方法必須位於 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) 專案的 ScriptMain 類別內。ScriptMain 是指令碼範本所產生的預設類別。  
+ 將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 執行階段呼叫的方法指定為指令碼工作程式碼的進入點。 指定的方法必須位於 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) 專案的 ScriptMain 類別內。ScriptMain 類別是指令碼範本所產生的預設類別。  
   
  如果您在 VSTA 專案內變更此方法的名稱，您就必須變更 **[EntryPoint]** 屬性的值。  
   
@@ -59,10 +59,10 @@ ms.locfileid: "66056192"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [General Page](general-page-of-integration-services-designers-options.md)   
- [指令碼工作編輯器 &#40;一般頁面&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
+ [一般頁面](general-page-of-integration-services-designers-options.md)   
+ [[腳本工作編輯器] &#40;一般頁面&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
  [運算式頁面](expressions/expressions-page.md)   
- [指令碼工作範例](extending-packages-scripting-task-examples/script-task-examples.md)   
+ [腳本工作範例](extending-packages-scripting-task-examples/script-task-examples.md)   
  [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)   
  [加入、刪除、變更封裝中使用者定義變數的範圍](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   

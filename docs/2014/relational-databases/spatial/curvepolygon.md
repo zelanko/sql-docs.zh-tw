@@ -10,25 +10,27 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014244"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
+  
   `CurvePolygon` 是由一個外部週框環形以及零或多個內部環形所定義的拓撲封閉介面。  
   
 > [!IMPORTANT]  
->  詳細的說明和中空間功能的範例[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，包括`CurvePolygon`子類型，請下載技術白皮書： [SQL Server 2012 中的新空間功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
+>  如需中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]引進的空間功能（包括`CurvePolygon`子類型）的詳細描述和範例，請下載技術白皮書： [SQL Server 2012 中的新空間功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
   
- 下列準則會定義屬性`CurvePolygon`執行個體：  
+ 下列準則會定義`CurvePolygon`實例的屬性：  
   
--   `CurvePolygon` 執行個體的界限是由外部環形和所有內部環形所定義。  
+-   
+  `CurvePolygon` 執行個體的界限是由外部環形和所有內部環形所定義。  
   
--   `CurvePolygon` 執行個體的內部是外部環形與所有內部環形之間的空間。  
+-   `CurvePolygon`實例的內部是外部環形與所有內部環形之間的空間。  
   
- `CurvePolygon` 執行個體與 `Polygon` 執行個體不同之處在於，`CurvePolygon` 執行個體可能會包含下列圓弧線段：`CircularString` 和 `CompoundCurve`。  
+ `CurvePolygon`實例與`Polygon`實例不同之處在于， `CurvePolygon`實例可能包含下列圓弧線段： `CircularString`和。 `CompoundCurve`  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 執行個體  
  下圖顯示了有效的 `CurvePolygon` 圖形：  
@@ -55,7 +57,7 @@ DECLARE @g4 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';
 DECLARE @g5 geography = 'CURVEPOLYGON((-122.3 47, 122.3 -47, 125.7 -49, 121 -38, -122.3 47))';  
 ```  
   
- `@g3` 即使起點和終點的 Z 值不同仍會接受，因為會忽略 Z 值。 即使 `geography` 類型執行個體無效，仍會接受 `@g5`。  
+ `@g3` 即使起點和終點的 Z 值不同仍會接受，因為會忽略 Z 值。 即使 `@g5` 類型執行個體無效，仍會接受 `geography`。  
   
  下列範例會擲回 `System.FormatException`。  
   

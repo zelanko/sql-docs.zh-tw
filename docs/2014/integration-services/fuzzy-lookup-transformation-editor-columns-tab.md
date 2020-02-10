@@ -1,5 +1,5 @@
 ---
-title: 模糊查閱轉換編輯器 （資料行索引標籤） |Microsoft Docs
+title: 模糊查閱轉換編輯器（資料行索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 063248c6b91aebf6198323487aa30ddd1c9cb6ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058324"
 ---
 # <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>模糊查閱轉換編輯器 (資料行索引標籤)
@@ -26,14 +26,14 @@ ms.locfileid: "66058324"
   
  若要深入了解模糊查閱轉換，請參閱＜ [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **可用的輸入資料行**  
  拖曳輸入資料行，即可將資料行連接到可用的查閱資料行。 這些資料行必須擁有相符的、支援的資料類型。 在 [ [建立關聯性](data-flow/transformations/create-relationships.md) ] 對話方塊中選取對應行，並以滑鼠右鍵按一下來編輯對應。  
   
  **名稱**  
  檢視可用輸入資料行的名稱。  
   
- **通過**  
+ **傳遞**  
  指定是否在轉換的輸出中包含輸入資料行。  
   
  **可用的查閱資料行**  
@@ -47,7 +47,7 @@ ms.locfileid: "66058324"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [模糊查閱轉換編輯器 &#40;參考資料表索引標籤&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
- [模糊查閱轉換編輯器 &#40;進階索引標籤&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
+ [[模糊查閱轉換編輯器] &#40;[參考資料表] 索引標籤&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
+ [模糊查閱轉換編輯器 &#40;[Advanced] 索引標籤&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
   

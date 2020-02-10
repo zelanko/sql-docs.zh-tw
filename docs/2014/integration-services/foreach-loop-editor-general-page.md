@@ -1,5 +1,5 @@
 ---
-title: Foreach 迴圈編輯器 （一般頁面） |Microsoft Docs
+title: Foreach 迴圈編輯器（一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 804e8ddca760be8734dd4862aed5c2edd6fc8caa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058514"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Foreach 迴圈編輯器 (一般頁面)
@@ -36,8 +36,8 @@ ms.locfileid: "66058514"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Foreach 迴圈編輯器&#40;的集合頁面&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [Foreach 迴圈編輯器&#40;變數對應頁面&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
+ [[Foreach 迴圈編輯器] &#40;集合] 頁面&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
+ [Foreach 迴圈編輯器 &#40;變數對應頁面&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
  [運算式頁面](expressions/expressions-page.md)   
  [Foreach 迴圈容器](control-flow/foreach-loop-container.md)   
  [For 迴圈容器](control-flow/for-loop-container.md)  

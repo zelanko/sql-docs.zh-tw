@@ -1,5 +1,5 @@
 ---
-title: 維度處理目的地編輯器 （連線管理員頁面） |Microsoft Docs
+title: 維度處理目的地編輯器（連線管理員頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2259b19cec6674cdb1f5f4a0064334f78aa5300f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059440"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>維度處理目的地編輯器 (連接管理員頁面)
@@ -26,28 +26,28 @@ ms.locfileid: "66059440"
   
  若要深入了解維度處理目的地，請參閱＜ [Dimension Processing Destination](data-flow/dimension-processing-destination.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **[ODBC 目的地編輯器]**  
- 從清單中選取現有的連接管理員，或按一下 [新增]  來建立新的連接管理員。  
+ 從清單中選取現有的連接管理員，或按一下 [新增]**** 來建立新的連接管理員。  
   
  **新增**  
- 使用 [加入 Analysis Services 連接管理員]  對話方塊來建立新的連接。  
+ 使用 [加入 Analysis Services 連接管理員]**** 對話方塊來建立新的連接。  
   
- **可用維度清單**  
+ **可用維度的清單**  
  選取要處理的維度。  
   
  **處理方法**  
- 選取要套用至清單中選取之維度的處理方法。 此選項的預設值是 **[完整]** 。  
+ 選取要套用至清單中選取之維度的處理方法。 此選項的預設值是 **[完整]**。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**加入 (累加)**|執行維度的累加處理。|  
-|**[完整]**|執行維度的完整處理。|  
-|**Update**|執行維度的更新處理。|  
+|**新增（增量）**|執行維度的累加處理。|  
+|**完整**|執行維度的完整處理。|  
+|**更新**|執行維度的更新處理。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [維度處理目的地編輯器 &#40;對應頁面&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
- [維度處理目的地編輯器 &#40;進階頁面&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [維度處理目的地編輯器 &#40;Advanced Page&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

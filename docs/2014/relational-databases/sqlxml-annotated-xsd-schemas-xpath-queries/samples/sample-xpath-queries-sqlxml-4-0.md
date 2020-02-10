@@ -1,5 +1,5 @@
 ---
-title: 範例 XPath 查詢 (SQLXML 4.0) |Microsoft Docs
+title: 範例 XPath 查詢（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71f6cc444bd5a5cee3f3e3399736c2f25e32b8dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010704"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>範例 XPath 查詢 (SQLXML 4.0)
@@ -30,31 +30,31 @@ ms.locfileid: "66010704"
 >  本節的範例查詢會依據查詢所執行的 XPath 作業類型分組。  
   
 ## <a name="in-this-section"></a>本節內容  
- [範例的註解式 XSD 結構描述 XPath 範例&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)  
+ [XPath 範例的批註式 XSD 架構範例 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)  
  使用這個檔案搭配本節所提供的 XPath 查詢範例。  
   
- [在 XPath 查詢中指定軸&#40;SQLXML 4.0&#41;](specifying-axes-in-xpath-queries-sqlxml-4-0.md)  
+ [在 XPath 查詢中指定軸 &#40;SQLXML 4.0&#41;](specifying-axes-in-xpath-queries-sqlxml-4-0.md)  
  說明如何在 XPath 查詢中指定軸。  
   
- [在 XPath 查詢中指定布林值述詞&#40;SQLXML 4.0&#41;](specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md)  
+ [在 XPath 查詢中指定布林值述詞 &#40;SQLXML 4.0&#41;](specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md)  
  說明如何在 XPath 查詢中指定布林值述詞。  
   
- [在 XPath 查詢中指定關係運算子&#40;SQLXML 4.0&#41;](specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)  
+ [在 XPath 查詢中指定關聯式運算子 &#40;SQLXML 4.0&#41;](specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)  
  說明如何在 XPath 查詢中指定關係運算子。  
   
- [在 XPath 查詢中指定算術運算子&#40;SQLXML 4.0&#41;](specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)  
+ [在 XPath 查詢中指定算術運算子 &#40;SQLXML 4.0&#41;](specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)  
  說明如何在 XPath 查詢中指定算術運算子。  
   
- [在 XPath 查詢中指定明確的轉換函式&#40;SQLXML 4.0&#41;](specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)  
+ [在 XPath 查詢中指定明確轉換函數 &#40;SQLXML 4.0&#41;](specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)  
  說明如何在 XPath 查詢中指定明確轉換函數。  
   
- [在 XPath 查詢中指定布林運算子&#40;SQLXML 4.0&#41;](specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)  
+ [在 XPath 查詢中指定布林運算子 &#40;SQLXML 4.0&#41;](specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)  
  說明如何在 XPath 查詢中指定布林運算子。  
   
- [在 XPath 查詢中指定布林函數&#40;SQLXML 4.0&#41;](specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)  
+ [在 &#40;SQLXML 4.0&#41;的 XPath 查詢中指定布耳函數](specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)  
  說明如何在 XPath 查詢中指定布林函數。  
   
- [在 XPath 查詢中指定 XPath 變數&#40;SQLXML 4.0&#41;](specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)  
+ [在 XPath 查詢中指定 XPath 變數 &#40;SQLXML 4.0&#41;](specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)  
  說明如何在 XPath 查詢中指定 XPath 變數。  
   
   

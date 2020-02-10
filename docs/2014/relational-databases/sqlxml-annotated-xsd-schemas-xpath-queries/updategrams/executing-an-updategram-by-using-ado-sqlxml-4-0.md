@@ -1,5 +1,5 @@
 ---
-title: 執行 Updategram 使用 ADO (SQLXML 4.0) |Microsoft Docs
+title: 使用 ADO 執行 Updategram （SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 54ee962310cb1ac41e442155a146afec8758c64f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014841"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>使用 ADO 執行 Updategram (SQLXML 4.0)
@@ -26,19 +26,19 @@ ms.locfileid: "66014841"
   
  在此範例應用程式中：  
   
--   **Conn**物件 (**ADODB。連接**) 建立與執行個體的連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定伺服器電腦上。  
+-   **Conn**物件（**ADODB。連接**）與特定伺服器電腦[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的執行中實例建立連接。  
   
--   **Cmd**物件 (**ADODB.Command**) 建立的連接上執行。  
+-   **Cmd**物件（**ADODB**）會在已建立的連接上執行。  
   
 -   命令用語會設定為 DBGUID_MSSQLXML。  
   
--   Updategram 會複製到命令資料流 (**strmIn**)。  
+-   Updategram 會複製到命令資料流程（**字串分 text.append**）。  
   
--   命令的輸出資料流設定為**StrmOut**物件 (**ADODB。Stream**) 才能接受任何傳回的資料。  
+-   命令的輸出資料流程會設定為**StrmOut**物件（**ADODB。資料流程**）接收任何傳回的資料。  
   
 -   最後，系統會擲行命令 (updategram)。  
   
- 此為範例程式碼：  
+ 以下為範例程式碼：  
   
 ```vb  
 Private Sub Form_Load()  
@@ -182,7 +182,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>傳遞參數  
- 在先前提供的 Visual Basic 應用程式中，系統不會傳遞參數。 在此應用程式中， **ContactID**並**MiddleName**值會傳遞為參數化的輸入到 updategram。  
+ 在先前提供的 Visual Basic 應用程式中，系統不會傳遞參數。 在此應用程式中， **ContactID**和**MiddleName**值會當做參數化輸入傳遞至 updategram。  
   
 ```vb  
 Private Sub Form_Load()  

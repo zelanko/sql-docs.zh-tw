@@ -1,5 +1,5 @@
 ---
-title: '使用 sql: identity 和 sql: guid 註解 |Microsoft Docs'
+title: 使用 sql： identity 和 sql： guid 注釋 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,23 +24,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6135f1b46e9b2312f01b9ff7a7ebdd08d2d34a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013643"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>使用 sql:identity 和 sql:guid 註解
-  您可以指定`sql:identity`並`sql:guid`對應至資料庫資料行中的任何節點上的 XSD 結構描述中的註解[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 updategram 格式支援 `updg:at-identity` 和 `updg:guid` 屬性，而 DiffGram 格式則不支援。 `updg:at-identity` 屬性會定義更新 IDENTITY 類型之資料行時的行為。 `updg:guid` 屬性可讓您從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 取得 GUID 值，並將其用在 updategram 中。 如需詳細資訊和實用範例，請參閱 <<c0> [ 插入的資料使用 XML Updategram &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)。</c0>  
+  您可以在對應`sql:identity`至`sql:guid`中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫資料行的任何節點上，于 XSD 架構中指定和批註。 updategram 格式支援 `updg:at-identity` 和 `updg:guid` 屬性，而 DiffGram 格式則不支援。 
+  `updg:at-identity` 屬性會定義更新 IDENTITY 類型之資料行時的行為。 
+  `updg:guid` 屬性可讓您從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 取得 GUID 值，並將其用在 updategram 中。 如需詳細資訊和工作範例，請參閱[使用 XML Updategram 插入資料 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)。  
   
- `sql:identity` 和 `sql:guid` 註解會將此功能擴充到 DiffGrams。  
+ 
+  `sql:identity` 和 `sql:guid` 註解會將此功能擴充到 DiffGrams。  
   
  當您執行 DiffGram 時，會先將其轉換為 updategram，然後再執行 updategram。 透過在 XSD 結構描述中指定 `sql:identity` 和 `sql:guid` 註解，您實際上就在定義 updategram 的行為。 因此，所有註解的描述都在 updategram 的內容中。 註解可以同時用於 DiffGrams 和 updategrams，不過，updategrams 已經提供更強大的方式來處理識別與 GUID 值。  
   
- `sql:identity` 和 `sql:guid` 註解可以在複雜內容元素上定義。  
+ 
+  `sql:identity` 和 `sql:guid` 註解可以在複雜內容元素上定義。  
   
 ## <a name="sqlidentity-annotation"></a>sql:identity 註解  
- 您可以在對應到 IDENTITY 類型之資料庫資料行的任何節點上，指定 XSD 結構描述的 `sql:identity` 註解。 針對此註解指定的值可讓您定義如何更新 IDENTITY 類型資料行 (使用 updategram 中提供的值來修改資料行，或忽略值，在此情況下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-產生的值用於此資料行)。  
+ 您可以在對應到 IDENTITY 類型之資料庫資料行的任何節點上，指定 XSD 結構描述的 `sql:identity` 註解。 針對此批註指定的值會定義如何更新 IDENTITY 類型的資料行（藉由使用 updategram 中提供的值來修改資料行，或忽略值，在此情況下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，會針對此資料行使用產生的值）。  
   
  系統可以指派兩個值給 `sql:identity` 註解：  
   

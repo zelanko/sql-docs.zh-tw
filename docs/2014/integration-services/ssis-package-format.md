@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055344"
 ---
 # <a name="ssis-package-format"></a>SSIS 封裝格式
-  在目前的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]版本中，已經對封裝格式 (.dtsx 檔案) 做了重大變更，讓您更輕鬆地讀取此格式及比較封裝。 您也可以更可靠地合併不包含衝突的變更或變更以二進位格式儲存的封裝。  
+  在目前的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]版本中，已經對封裝格式 (.dtsx 檔案) 做了重大變更，讓您更輕鬆地讀取此格式及比較封裝。 您也可以更可靠地合併不包含衝突變更的封裝，或以二進位格式儲存的變更。  
   
- 若要檢視目前的 DTSX 封裝檔案格式，請參閱[ \[MS-DTSX\]:Data Transformation Services 封裝 XML 檔案格式規格](https://go.microsoft.com/fwlink/?LinkId=233251)。  
+ 若要查看目前的 .dtsx 封裝檔案格式，請參閱[ \[.dtsx\]：資料轉換服務封裝 XML 檔案格式規格](https://go.microsoft.com/fwlink/?LinkId=233251)。  
   
  下列清單概述檔案格式變更。 若要檢視這些變更的程式碼範例，請參閱 [SQL Server 2012 中的封裝格式變更](https://go.microsoft.com/fwlink/?LinkId=233255)。  
   
@@ -30,7 +30,8 @@ ms.locfileid: "66055344"
   
 -   封裝內可由其他物件參考的大多數物件現在擁有封裝 XML 中所定義的 `refId` 屬性。 現在會保存 `refID`，而不會保存歷程識別碼。 歷程識別碼依然會在執行階段內使用，而且載入封裝時會重新產生。  
   
-     `refId` 值是可讀取及可了解的唯一字串 (相較於 GUID 或整數值)。 此字串類似於在舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中用於封裝組態的路徑值。  
+     
+  `refId` 值是可讀取及可了解的唯一字串 (相較於 GUID 或整數值)。 此字串類似於在舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中用於封裝組態的路徑值。  
   
      如果您要合併兩個封裝版本之間的變更，則 `refId` 可用於尋找/取代作業，以確保該物件的所有參考都已經正確更新。  
   

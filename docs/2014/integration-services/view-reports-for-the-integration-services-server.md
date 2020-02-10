@@ -1,5 +1,5 @@
 ---
-title: 檢視 Integration Services 伺服器的報表 |Microsoft Docs
+title: 查看 Integration Services 伺服器的報表 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cfce32afdb334ecba55f082dce80af580a73178
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054553"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>檢視 Integration Services 伺服器的報表
-  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的目前版本中，於 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 內提供標準報表，協助您監視已部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  如需報表的詳細資訊，請參閱 [Integration Services 伺服器的報表](../../2014/integration-services/reports-for-the-integration-services-server.md)。  
+  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的目前版本中， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中提供標準報表，協助您監視已部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  如需報表的詳細資訊，請參閱 [Integration Services 伺服器的報表](../../2014/integration-services/reports-for-the-integration-services-server.md)。  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>若要檢視 Integration Services 伺服器的報表  
   

@@ -11,17 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62834640"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC 設計工具主控台簡介
   本節描述 Attunity Oracle Change Data Capture (CDC) 設計工具的安裝程序。  
   
 ## <a name="installation"></a>安裝  
- 本節描述 Attunity Oracle Change Data Capture (CDC) 設計工具的安裝程序。 若要安裝 CDC 設計工具主控台，以手動方式執行**AttunityOracleCdcDesigner.msi**從 SQL Server 安裝媒體。  適用於 x86 和 x64 的安裝套件位於 **.\Tools\AttunityCDCOracle\\**  SQL Server 安裝媒體上。  
+ 本節描述 Attunity Oracle Change Data Capture (CDC) 設計工具的安裝程序。 若要安裝 CDC 設計工具主控台，請從 SQL Server 安裝媒體手動執行**attunityoraclecdcdesigner.msi。**  X86 和 x64 的安裝套件位於 SQL Server 安裝媒體上的 **.\Tools\AttunityCDCOracle\\ **中。  
   
 ## <a name="supported-windows-environments"></a>支援的 Windows 環境  
  CDC 設計工具主控台可在以下 Windows 環境中執行：  
@@ -39,24 +39,24 @@ ms.locfileid: "62834640"
   
  **Oracle 資料庫**  
   
--   Oracle Database 10g Release 2:10.2.0.1-10.2.0.5 （自 2010 年 4 月起的修補集）  
+-   Oracle Database 10g Release 2：10.2.0.1-10.2.0.5 (2010 年 4 月的修補集)  
   
--   Oracle Database 11g Release 1:11.1.0.6-11.1.0.7 （自 2008 年 9 月起的修補集）  
+-   Oracle Database 11g Release 1：11.1.0.6-11.1.0.7 (2008 年 9 月的修補集)  
   
--   Oracle Database 11g Release 2:11.2.0.1-11.2.0.3 （自 2011 年 9 月起的修補集）  
+-   Oracle Database 11g Release 2：11.2.0.1-11.2.0.3 (2011 年 9 月的修補集)  
   
  **SQL Server 資料庫**  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本，支援 SQL Server CDC  
   
 ## <a name="software-prerequisites"></a>軟體必要條件  
- 以下是必要的軟體：  
+ 需要下列軟體：  
   
--   Oracle 10.x 用戶端  
+-   Oracle 10. x 用戶端  
   
 -   Oracle 11.x 用戶端  
   
- **注意**：您必須使用 32 位元或 64 位元版本的此軟體，根據安裝的 Oracle CDC 設計工具主控台版本而定。  
+ **注意**：您必須根據所安裝的 Oracle CDC 設計工具主控台版本，使用32位或64位版本的此軟體。  
   
  Oracle CDC 設計工具主控台會使用 Oracle ODBC 提供者與來源 Oracle 資料庫通訊。  
   

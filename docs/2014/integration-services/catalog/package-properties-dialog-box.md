@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ab3cdf0079d0c01d95b73339e1fce8960658f93a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836329"
 ---
 # <a name="package-properties-dialog-box"></a>封裝屬性對話方塊
@@ -57,9 +57,11 @@ ms.locfileid: "62836329"
  列出封裝識別碼。  
   
  **進入點**  
- `True` 的值表示封裝是直接啟動。 `False` 的值表示封裝是使用「執行封裝」，由另一個封裝啟動。 預設值是 `True`。  
+ 
+  `True` 的值表示封裝是直接啟動。 
+  `False` 的值表示封裝是使用「執行封裝」，由另一個封裝啟動。 預設值是 `True`。  
   
- 以滑鼠右鍵按一下方案總管中的封裝，然後按一下 [進入點封裝]  ，就可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中為父封裝和子封裝設定此屬性。  
+ 以滑鼠右鍵按一下方案總管中的封裝，然後按一下 [進入點封裝][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **，就可以在**  中為父封裝和子封裝設定此屬性。  
   
  **說明**  
  顯示封裝的選擇性描述。  

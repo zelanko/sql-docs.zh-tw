@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a040993001a60c410cc1da83f8efae2a4d163162
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175421"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>使用 SQL Server Native Client 建立應用程式
@@ -50,7 +50,7 @@ ms.locfileid: "70175421"
  [SQL Server Native Client 的支援原則](support-policies-for-sql-server-native-client.md)  
  討論要如何搭配不同版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用各種資料存取元件。  
   
- [使用 SQL Server Native Client 連接到 Azure SQL Database](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
+ [使用 SQL Server Native Client 連線到 Azure SQL Database](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
  討論如何使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client 連接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="see-also"></a>另請參閱  

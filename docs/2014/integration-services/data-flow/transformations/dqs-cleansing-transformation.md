@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c06abe4d6adb3916028b3501c16b68d2491af47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900395"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 清理轉換
@@ -42,13 +42,13 @@ ms.locfileid: "62900395"
   
 -   [在 Data Quality Client 中開啟 Integration Services 專案](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
   
--   [Import Cleansing Project Values into a Domain](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
+-   [將清理專案值匯入網域](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
   
 -   [將資料品質規則套用至資料來源](apply-data-quality-rules-to-data-source.md)  
   
 ## <a name="related-content"></a>相關內容  
   
--   [管理&#40;開啟、 解除鎖定、 重新命名和刪除&#41;的資料品質專案](../../../data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)  
+-   [管理 &#40;開啟、解除鎖定、重新命名和刪除資料品質專案&#41;](../../../data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)  
   
 -   social.technet.microsoft.com 上的文章： [使用複合定義域清理複雜的資料](https://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx)。  
   

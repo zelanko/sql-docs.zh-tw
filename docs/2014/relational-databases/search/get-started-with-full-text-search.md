@@ -16,16 +16,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fd5ced641ee8fc17f0be7d7b6e19aff17dcb69bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011291"
 ---
 # <a name="get-started-with-full-text-search"></a>全文檢索搜尋使用者入門
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料庫預設會啟用全文檢索。 不過，若要針對資料表使用全文檢索索引，您必須在要以全文檢索引擎存取的資料表資料行中設定全文檢索索引功能。  
   
-##  <a name="configure"></a> 設定資料庫的全文檢索搜尋  
+##  <a name="configure"></a>設定全文檢索搜尋的資料庫  
  在任何案例中，資料庫管理員都會執行下列基本步驟，針對全文檢索搜尋設定資料庫中的資料表資料行：  
   
 1.  建立全文檢索目錄。  
@@ -34,15 +35,15 @@ ms.locfileid: "66011291"
   
     1.  識別您想要包含在全文檢索索引中的每個文字資料行。  
   
-    2.  如果指定的資料行包含儲存為二進位資料的文件 (`varbinary(max)`，或`image`資料)，您必須指定資料表資料行 (*類型資料行*)，識別要編製索引的資料行中每個文件的類型。  
+    2.  如果給定的資料行包含儲存為二進位資料（`varbinary(max)`或`image`資料）的檔，您就必須指定資料表資料行（*類型資料行*），以識別要編制索引之資料行中每個檔的類型。  
   
     3.  指定您想讓全文檢索搜尋用於資料行中文件的語言。  
   
     4.  選擇您想要針對全文檢索索引使用的變更追蹤機制，以便追蹤基底資料表及其資料行中的變更。  
   
- 全文檢索搜尋會透過使用下列「語言元件」  (Linguistic Component) 支援多國語言：斷詞工具和字幹分析器、包含停用字詞 (也稱為非搜尋字) 的停用字詞表，以及同義字檔案。 同義字檔案和停用字詞表 (在某些情況下) 會要求資料庫管理員進行組態設定。 給定的同義字檔案支援所有使用對應語言的全文檢索索引，而且給定的停用字詞表可以與任意數目的全文檢索索引相關聯。  
+ 全文檢索搜尋會透過使用下列「語言元件」**(Linguistic Component) 支援多國語言：斷詞工具和字幹分析器、包含停用字詞 (也稱為非搜尋字) 的停用字詞表，以及同義字檔案。 同義字檔案和停用字詞表 (在某些情況下) 會要求資料庫管理員進行組態設定。 給定的同義字檔案支援所有使用對應語言的全文檢索索引，而且給定的停用字詞表可以與任意數目的全文檢索索引相關聯。  
   
-##  <a name="setup"></a> 設定全文檢索目錄和索引  
+##  <a name="setup"></a>設定全文檢索目錄和索引  
  這項作業包含下列基本步驟：  
   
 1.  建立全文檢索目錄以儲存全文檢索索引。  
@@ -53,16 +54,16 @@ ms.locfileid: "66011291"
   
      全文檢索索引是一種特殊類型的 Token 式功能索引，由全文檢索引擎所建立與維護。 若要針對資料表或檢視表建立全文檢索搜尋，它必須具有唯一、單一資料行且不可為 Null 的索引。 全文檢索引擎需要使用此唯一索引，將資料表中的各資料列對應至唯一且可壓縮的索引鍵。 全文檢索索引可以包括 `char`、`varchar`、`nchar``nvarchar`、`text`、`ntext`、`image`、`xml`、`varbinary` 和 `varbinary(max)` 資料行。 如需詳細資訊，請參閱 [建立及管理全文檢索索引](create-and-manage-full-text-indexes.md)。  
   
- 學習建立全文檢索索引之前，請務必了解全文檢索索引與一般 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引的差異。 下表將列出這些差異。  
+ 學習建立全文檢索索引之前，請務必了解全文檢索索引與一般 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引的差異。 下表列出差異。  
   
 |全文檢索索引|一般 SQL Server 索引|  
 |------------------------|--------------------------------|  
 |每個資料表只允許有一個全文檢索索引。|每個資料表允許有多個一般索引。|  
-|將資料加入至全文檢索索引的作業稱為「母體擴展」  (Population)，可透過排程或特定的要求來要求執行，也可在加入新的資料時自動執行。|當依據的資料有插入、更新或刪除時，會自動更新索引內容。|  
+|將資料加入至全文檢索索引的作業稱為「母體擴展」**(Population)，可透過排程或特定的要求來要求執行，也可在加入新的資料時自動執行。|當依據的資料有插入、更新或刪除時，會自動更新索引內容。|  
 |在相同的資料庫中分組為一個或多個全文檢索目錄。|沒有分組。|  
   
   
-##  <a name="options"></a> 選擇全文檢索索引的選項  
+##  <a name="options"></a>選擇全文檢索索引的選項  
  本節內容包括下列主題：  
   
 -   選擇資料行語言  
@@ -91,7 +92,7 @@ ms.locfileid: "66011291"
   
  當您將資料表指派給全文檢索目錄時，請考量下列指導方針：  
   
--   永遠選取最小的唯一索引，做為全文檢索唯一索引鍵。 (四個位元組的整數式索引最好)。如此可大幅減少 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search Service 在檔案系統中所需的資源。 如果主索引鍵較大 (超過 101 個位元組) 時，可考慮選擇資料表中其他的唯一索引，做為全文檢索唯一的索引鍵 (或建立另一個唯一索引)。 若全文檢索唯一索引鍵的大小超過允許的最大值 (900 個位元組) 時，將無法執行全文檢索的母體擴展作業。  
+-   永遠選取最小的唯一索引，做為全文檢索唯一索引鍵。 （4位元組、以整數為基礎的索引是最佳的）。這會大幅減少[!INCLUDE[msCoName](../../includes/msconame-md.md)]搜尋服務在檔案系統中所需的資源。 如果主索引鍵較大 (超過 101 個位元組) 時，可考慮選擇資料表中其他的唯一索引，做為全文檢索唯一的索引鍵 (或建立另一個唯一索引)。 若全文檢索唯一索引鍵的大小超過允許的最大值 (900 個位元組) 時，將無法執行全文檢索的母體擴展作業。  
   
 -   如果您正在針對包含數百萬資料列的資料表建立索引，請將此資料表指派給它本身的全文檢索目錄。  
   
@@ -99,16 +100,18 @@ ms.locfileid: "66011291"
   
   
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>將停用字詞表與全文檢索索引產生關聯  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了停用字詞表。 *「停用字詞表」* (Stoplist) 是停用字詞 (也稱為非搜尋字) 的清單。 停用字詞表會與每個全文檢索索引相關聯，而且該停用字詞表中的字詞會套用至該索引的全文檢索查詢。 根據預設，系統停用字詞表會與新的全文檢索索引相關聯。 不過，您可以改為建立並使用自己的停用字詞表。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
+ 
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了停用字詞表。 
+  *「停用字詞表」* (Stoplist) 是停用字詞 (也稱為非搜尋字) 的清單。 停用字詞表會與每個全文檢索索引相關聯，而且該停用字詞表中的字詞會套用至該索引的全文檢索查詢。 根據預設，系統停用字詞表會與新的全文檢索索引相關聯。 不過，您可以改為建立並使用自己的停用字詞表。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
- 例如，下列[CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式會建立新全文檢索停用字詞表複製從系統停用字詞表，名為 myStoplist3:  
+ 例如，下列[建立全文](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]檢索停用字詞表語句會從系統停用字詞表中複製，以建立名為 myStoplist3 的新全文檢索停用字詞表：  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- 下列 [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式會更改名為 myStoplist 的停用字詞表，並加入 'en' 一詞 (先針對西班牙文，然後再針對法文)：  
+ 下列[ALTER 全文](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]檢索停用字詞表語句會改變名為 myStoplist 的停用字詞表，並加入 ' en ' 這個字，第一個是針對西班牙文，再針對法文  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  
@@ -118,7 +121,7 @@ GO
   
   
 ### <a name="updating-a-full-text-index"></a>更新全文檢索索引  
- 如同一般 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引，當相關聯資料表中的資料變更時，就可以自動更新全文檢索索引。 這是預設行為。 或者，您也可以手動或以指定的排程間隔將全文檢索索引保持在最新狀態。 擴展全文檢索索引可能會相當耗時而且需要大量資源，因此，索引更新通常會當做在背景中執行的非同步處理序執行並且在修改基底資料表之後，將全文檢索索引保持在最新狀態。 在基底資料表每次變更之後立即更新全文檢索索引可能需要大量資源。 因此，如果您設定了非常高的更新/插入/刪除速率，可能會遇到查詢效能降低的情況。 如果發生這種情況，請考慮排程手動變更追蹤更新，以便偶爾與許多變更保持同步，而非與查詢競爭資源。  
+ 如同一般 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引，當相關聯資料表中的資料變更時，就可以自動更新全文檢索索引。 此為預設行為。 或者，您也可以手動或以指定的排程間隔將全文檢索索引保持在最新狀態。 擴展全文檢索索引可能會相當耗時而且需要大量資源，因此，索引更新通常會當做在背景中執行的非同步處理序執行並且在修改基底資料表之後，將全文檢索索引保持在最新狀態。 在基底資料表每次變更之後立即更新全文檢索索引可能需要大量資源。 因此，如果您設定了非常高的更新/插入/刪除速率，可能會遇到查詢效能降低的情況。 如果發生這種情況，請考慮排程手動變更追蹤更新，以便偶爾與許多變更保持同步，而非與查詢競爭資源。  
   
  若要監視母體擴展狀態，請使用 FULLTEXTCATALOGPROPERTY 函數或 OBJECTPROPERTYEX 函數。 若要取得目錄母體擴展狀態，請執行下列陳述式：  
   
@@ -129,10 +132,10 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
  一般而言，如果完整母體擴展進行中，傳回的結果會是 1。  
   
   
-##  <a name="example"></a> 範例：設定全文檢索搜尋  
- 下列兩部分的範例會針對 AdventureWorks 資料庫建立名為 `AdvWksDocFTCat` 的全文檢索目錄，然後針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中的 `Document` 資料表建立全文檢索索引。 這個陳述式會在安裝期間所指定的預設目錄中建立全文檢索目錄。 名為 `AdvWksDocFTCat` 的資料夾位於預設的目錄中。  
+##  <a name="example"></a>範例：設定全文檢索搜尋  
+ 下列兩部分的範例會針對 AdventureWorks 資料庫建立名為 `AdvWksDocFTCat` 的全文檢索目錄，然後針對 `Document` 中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表建立全文檢索索引。 這個陳述式會在安裝期間所指定的預設目錄中建立全文檢索目錄。 名為 `AdvWksDocFTCat` 的資料夾位於預設的目錄中。  
   
-1.  為了建立名為 `AdvWksDocFTCat` 的全文檢索目錄，此範例會使用 [CREATE FULLTEXT CATALOG](/sql/t-sql/statements/create-fulltext-catalog-transact-sql) 陳述式：  
+1.  為了建立名為 `AdvWksDocFTCat`的全文檢索目錄，此範例會使用 [CREATE FULLTEXT CATALOG](/sql/t-sql/statements/create-fulltext-catalog-transact-sql) 陳述式：  
   
     ```  
     USE AdventureWorks;  
@@ -161,10 +164,10 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
     ```  
   
-     在這個範例中定義的 TYPE COLUMN 會在資料表中指定類型資料行，其中在 'Document' 資料行的每個資料列中包含文件類型 (二進位類型)。 類型資料行中指定的資料列中儲存使用者提供的檔案副檔名為".doc"、".xls"和等等的文件。 全文檢索引擎會使用給定資料列中的副檔名來叫用正確的篩選，以便用於剖析該資料列中的資料。 在此篩選已經剖析資料列的二進位資料之後，指定的斷詞工具將會剖析內容 (在此範例中，將會使用英式英文的斷詞工具)。 請注意，當全文檢索索引已啟用自動變更追蹤時，篩選程序只會在建立索引時進行，或在使用者於基底資料表中插入或更新資料行時進行。 如需詳細資訊，請參閱 [設定及管理搜尋的篩選](configure-and-manage-filters-for-search.md)。  
+     在這個範例中定義的 TYPE COLUMN 會在資料表中指定類型資料行，其中在 'Document' 資料行的每個資料列中包含文件類型 (二進位類型)。 類型資料行會在給定的資料列中儲存使用者提供的副檔名-".doc"、".xls" 等等檔。 全文檢索引擎會使用給定資料列中的副檔名來叫用正確的篩選，以便用於剖析該資料列中的資料。 在此篩選已經剖析資料列的二進位資料之後，指定的斷詞工具將會剖析內容 (在此範例中，將會使用英式英文的斷詞工具)。 請注意，當全文檢索索引已啟用自動變更追蹤時，篩選程序只會在建立索引時進行，或在使用者於基底資料表中插入或更新資料行時進行。 如需詳細資訊，請參閱 [設定及管理搜尋的篩選](configure-and-manage-filters-for-search.md)。  
   
   
-##  <a name="tasks"></a> 一般工作  
+##  <a name="tasks"></a>一般工作  
   
 ### <a name="to-create-a-full-text-catalog"></a>建立全文檢索目錄  
   
@@ -202,11 +205,11 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
   
 ## <a name="see-also"></a>另請參閱  
- [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+ [建立全文檢索目錄 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
- [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
- [擴展全文檢索索引](populate-full-text-indexes.md)   
+ [CREATE TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)   
+ [填入全文檢索索引](populate-full-text-indexes.md)   
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql)  
   

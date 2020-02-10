@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dfbd321e56d1df3b985ed7b89dde3a4b29d36c27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012533"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>使用 ExecuteXMLReader 方法執行 SQL 查詢
-  而不是使用 ExecuteToStream 方法，您可以使用 SqlXmlCommand 物件 ExecuteXmlReader 方法執行命令。 這個方法會傳回 XmlReader 物件，可用來進一步處理結果 （在此範例中列印元素或屬性名稱和值）。  
+  您可以使用 SqlXmlCommand 物件的 ExecuteXmlReader 方法來執行命令，而不是使用 ExecuteToStream 方法。 這個方法會傳回可用於進一步處理結果的 XmlReader 物件（在此範例中，會列印元素或屬性名稱和值）。  
   
 > [!NOTE]  
 >  在程式碼中，您必須於連接字串內提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。  

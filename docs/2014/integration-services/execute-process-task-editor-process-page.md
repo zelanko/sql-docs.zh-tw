@@ -1,5 +1,5 @@
 ---
-title: 執行處理工作編輯器 （處理頁面） |Microsoft Docs
+title: 執行處理工作編輯器（處理頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa799404777f8f0ef0a8a07a81c8c7961c636004
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059024"
 ---
 # <a name="execute-process-task-editor-process-page"></a>執行處理工作編輯器 (處理頁面)
@@ -26,11 +26,11 @@ ms.locfileid: "66059024"
   
  若要了解這個工作，請參閱＜ [Execute Process Task](control-flow/execute-process-task.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **RequireFullFileName**  
  指出如果在指定位置找不到可執行檔時，工作是否失敗。  
   
- **可執行檔**  
+ **作品**  
  輸入要執行的可執行檔名稱。  
   
  **引數**  
@@ -40,23 +40,23 @@ ms.locfileid: "66059024"
  鍵入包含可執行檔的資料夾路徑，或按一下瀏覽按鈕 **(...)** 並尋找資料夾。  
   
  **StandardInputVariable**  
- 選取變數來提供處理序的輸入，或按一下 [\<新增變數...>]  建立新的變數：  
+ 選取變數來提供處理序的輸入，或按一下 [\<新增變數...>]**** 建立新的變數：  
   
- **相關主題：** [新增變數](../../2014/integration-services/add-variable.md)  
+ **相關主題：**  [新增變數](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
- 選取變數來擷取處理序的輸出，或按一下 [\<新增變數...>]  建立新的變數。  
+ 選取變數來擷取處理序的輸出，或按一下 [\<新增變數...>]**** 建立新的變數。  
   
  **StandardErrorVariable**  
- 選取變數來擷取處理器的錯誤輸出，或按一下 [\<新增變數...>]  建立新的變數。  
+ 選取變數來擷取處理器的錯誤輸出，或按一下 [\<新增變數...>]**** 建立新的變數。  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  指出如果處理序的結束碼和 **SuccessValue**中指定的值不同時，工作是否失敗。  
   
- **SuccessValue**  
+ **和 successvalue**  
  指定可執行檔要表示成功時將傳回的值。 依預設，此值設定為 **0**。  
   
- **TimeOut**  
+ **限制**  
  指定處理序可以執行的秒數。 若值為 **0** ，表示不使用逾時值，則處理序會一直執行到完成或發生錯誤為止。  
   
  **TerminateProcessAfterTimeOut**  

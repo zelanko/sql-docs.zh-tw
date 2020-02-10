@@ -1,5 +1,5 @@
 ---
-title: SMO 連接管理員編輯器 |Microsoft Docs
+title: SMO 連線管理員編輯器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,28 +15,28 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055600"
 ---
 # <a name="smo-connection-manager-editor"></a>SMO 連接管理員編輯器
-  使用 [SMO 連線管理員編輯器]  來設定傳送 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件的各種工作所使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 連接。  
+  使用 [SMO 連線管理員編輯器]**** 來設定傳送 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件的各種工作所使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 連接。  
   
  若要深入了解 SMO 連線管理員，請參閱 [SMO 連線管理員](connection-manager/smo-connection-manager.md)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **伺服器名稱**  
  輸入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的名稱，或從清單中選取伺服器名稱。  
   
  **[重新整理]**  
  重新整理可以在網路上偵測到的可用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的清單。  
   
- **[使用 Windows 驗證]**  
+ **使用 Windows 驗證**  
  使用 Windows 驗證連接到選取的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。  
   
- **[使用 SQL Server 驗證]**  
+ **使用 SQL Server 驗證**  
  使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證連接到選取的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。  
   
  **使用者名稱**  

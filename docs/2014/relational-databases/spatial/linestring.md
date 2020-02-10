@@ -13,13 +13,14 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 6bc07f8770e6cd7d1fb1e4b4e6e40ca8b1c5256f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014196"
 ---
 # <a name="linestring"></a>LineString
+  
   `LineString` 是代表一連串的點及連接這些點之線段的一維度物件。  
   
 ## <a name="linestring-instances"></a>LineString 執行個體  
@@ -46,7 +47,8 @@ DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';  
 ```  
   
- `@g3` 顯示 `LineString` 執行個體可被系統接受但卻無效。  
+ 
+  `@g3` 顯示 `LineString` 執行個體可被系統接受但卻無效。  
   
  下面是無法接受的 `LineString` 執行個體。 它將擲回 `System.FormatException`。  
   
@@ -55,13 +57,15 @@ DECLARE @g geometry = 'LINESTRING(1 1)';
 ```  
   
 ### <a name="valid-instances"></a>有效的執行個體  
- `LineString` 執行個體必須符合下列準則，才會是有效的。  
+ 
+  `LineString` 執行個體必須符合下列準則，才會是有效的。  
   
 1.  系統必須接受 `LineString` 執行個體。  
   
 2.  如果 `LineString` 執行個體不是空的，則它至少必須包含兩個相異點。  
   
-3.  `LineString` 執行個體本身不得在兩個或多個連續點的間隔上重疊。  
+3.  
+  `LineString` 執行個體本身不得在兩個或多個連續點的間隔上重疊。  
   
  下面是有效的 `LineString` 執行個體。  
   
@@ -83,7 +87,8 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
 ```  
   
 > [!WARNING]  
->  `LineString` 重疊的偵測是以浮點計算為基礎，但這些計算並不精確。  
+>  
+  `LineString` 重疊的偵測是以浮點計算為基礎，但這些計算並不精確。  
   
 ## <a name="examples"></a>範例  
  下列範例示範如何建立具有三個點且 SRID 為 0 的 `geometry``LineString` 執行個體：  
@@ -93,14 +98,16 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomFromText('LINESTRING(1 1, 2 4, 3 9)', 0);  
 ```  
   
- `LineString` 執行個體中的每個點都可包含 Z (高度) 和 M (測量) 值。 此範例會將 M 值加入到上述範例所建立的 `LineString` 執行個體。 M 和 Z 可以是 null 值。  
+ 
+  `LineString` 執行個體中的每個點都可包含 Z (高度) 和 M (測量) 值。 此範例會將 M 值加入到上述範例所建立的 `LineString` 執行個體。 M 和 Z 可以是 null 值。  
   
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NULL 24.5)', 0);  
 ```  
   
- 下列範例會示範如何建立具有兩個相同點的 `geometry LineString` 執行個體。 `IsValid` 的呼叫表示 `LineString` 執行個體無效，而 `MakeValid` 的呼叫會將 `LineString` 執行個體轉換成 `Point`。  
+ 下列範例會示範如何建立具有兩個相同點的 `geometry LineString` 執行個體。 
+  `IsValid` 的呼叫表示 `LineString` 執行個體無效，而 `MakeValid` 的呼叫會將 `LineString` 執行個體轉換成 `Point`。  
   
 ```sql  
 DECLARE @g geometry  

@@ -13,13 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dfe1f6e5b752284b6bb0feec96f4f3dfd67cc4f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060353"
 ---
 # <a name="convert-to-package-deployment-model-dialog-box"></a>轉換成封裝部署模型對話方塊
+  
   **[轉換成封裝部署模型]** 命令可讓您在檢查專案和專案中的每個封裝是否與該模型相容之後，將封裝轉換成封裝部署模型。 如果某個封裝使用專案部署模型獨有的功能 (例如參數)，則無法轉換該封裝。  
   
 ## <a name="task-list"></a>工作清單  
@@ -32,11 +33,11 @@ ms.locfileid: "66060353"
 2.  如果專案和所有封裝通過相容性測試，則按一下 **[確定]** 以轉換封裝。  
   
 > [!NOTE]  
->  若要將專案轉換為專案部署模型，請使用 **[Integration Services 專案轉換精靈]** 。 如需相關資訊，請參閱 [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md)。  
+>  若要將專案轉換為專案部署模型，請使用 **[Integration Services 專案轉換精靈]**。 如需相關資訊，請參閱 [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [部署專案和封裝](packages/deploy-integration-services-ssis-projects-and-packages.md)   
- [封裝部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
+ [專案和套件的部署](packages/deploy-integration-services-ssis-projects-and-packages.md)   
+ [&#40;SSIS&#41;的套件部署](packages/legacy-package-deployment-ssis.md)   
  [Integration Services 專案轉換精靈](../../2014/integration-services/integration-services-project-conversion-wizard.md)  
   
   

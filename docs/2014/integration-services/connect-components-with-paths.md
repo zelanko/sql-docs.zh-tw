@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a75a9717345d1d0dc4c2fe30bf7fc441cb91ddc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060390"
 ---
 # <a name="connect-components-with-paths"></a>以路徑連接元件
@@ -26,7 +26,7 @@ ms.locfileid: "66060390"
   
  下圖顯示的範例資料流程中，包含一個來源元件、兩個轉換、一個目的地元件，以及連接元件的路徑。  
   
- ![Data flow](media/mw-dts-08.gif "Data flow")  
+ ![資料流程](media/mw-dts-08.gif "資料流")  
   
  在連接兩個元件之後，您可以在 **[資料流程路徑編輯器]** 中，檢視經由路徑移動的資料之中繼資料，以及路徑的屬性。 如需詳細資訊，請參閱 [Integration Services Paths](data-flow/integration-services-paths.md)。  
   
@@ -46,12 +46,12 @@ ms.locfileid: "66060390"
   
 ### <a name="to-view-path-metadata"></a>若要檢視路徑中繼資料  
   
--   [將資料檢視器新增到資料流程](../../2014/integration-services/add-a-data-viewer-to-a-data-flow.md)  
+-   [將資料檢視器加入資料流程](../../2014/integration-services/add-a-data-viewer-to-a-data-flow.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流程工作](control-flow/data-flow-task.md)   
  [資料流程](data-flow/data-flow.md)   
  [使用轉換來轉換資料](data-flow/transformations/transform-data-with-transformations.md)   
- [資料中的錯誤處理](data-flow/error-handling-in-data.md)  
+ [處理資料中的錯誤](data-flow/error-handling-in-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 工作 5：設定以詞彙為主的關聯性 |Microsoft Docs
+title: 工作5：設定以詞彙為基礎的關聯性 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0e9a6a1a96d208077e70c0cf1835cff6e34650dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489115"
 ---
 # <a name="task-5-setting-term-based-relationships"></a>工作 5：設定以詞彙為主的關聯
-  在這個工作中，您可以定義一些以詞彙為主的關聯，值**Supplier Name**網域。 以詞彙為主的關聯可讓您針對屬於定義域值的詞彙進行更正。 它會啟用多個值，這些值除了被視為相同同義字的共同部分拼字以外，都是相同的。 例如， **Inc.** 可以以下列方式更正**Incorporated**。 DQS 會在知識探索、清理或比對程序中使用這些關聯。 請參閱[建立以詞彙為主的關聯](https://msdn.microsoft.com/library/hh510404.aspx)如需詳細資訊。  
+  在這項工作中，您會針對**供應商名稱**網域的值定義幾個以詞彙為主的關聯。 以詞彙為主的關聯可讓您針對屬於定義域值的詞彙進行更正。 它會啟用多個值，這些值除了被視為相同同義字的共同部分拼字以外，都是相同的。 例如， **inc.** 可以更正為已**納入**。 DQS 會在知識探索、清理或比對程序中使用這些關聯。 如需詳細資訊，請參閱[建立以詞彙為基礎](https://msdn.microsoft.com/library/hh510404.aspx)的關聯。  
   
-1.  選取  **Supplier Name**中**定義域清單**。  
+1.  在 [**網域] 清單**中選取 [**供應商名稱**]。  
   
-2.  若要切換**以詞彙為主的關聯性**右窗格中的索引標籤。  
+2.  切換至右窗格中的 [以**詞彙為基礎的關聯**性] 索引標籤。  
   
-3.  按一下 [**加入新關聯**加入資料表中的關聯性] 工具列上的按鈕。  
+3.  按一下工具列上的 [**加入新關聯**] 按鈕，以加入資料表的關聯性。  
   
-4.  型別**Co.** 如**值**欄位並**公司**如**更正為**欄位。  
+4.  針對 [**值**欄位] 和 [**公司**] 輸入 [ **Co** ] 作為 [**更正為**] 欄位。  
   
 5.  針對以下的值重複上述兩個步驟：  
   
@@ -35,9 +35,9 @@ ms.locfileid: "65489115"
     |Corp.|Corporation|  
     |Inc.|Incorporated|  
   
-     ![詞彙為主的關聯](../../2014/tutorials/media/et-settingtermbasedrelations.jpg "詞彙為主的關聯")  
+     ![以詞彙為主的關聯](../../2014/tutorials/media/et-settingtermbasedrelations.jpg "以詞彙為主的關聯")  
   
-## <a name="next-step"></a>下一個步驟  
- [工作 6:設定同義字](../../2014/tutorials/task-6-setting-synonyms.md)  
+## <a name="next-step"></a>後續步驟  
+ [工作 6：設定同義字](../../2014/tutorials/task-6-setting-synonyms.md)  
   
   

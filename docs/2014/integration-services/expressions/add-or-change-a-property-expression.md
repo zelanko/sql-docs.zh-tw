@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bd9095a11ef304c256b6c5a60560a71866e744fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899016"
 ---
 # <a name="add-or-change-a-property-expression"></a>加入或變更屬性運算式
@@ -68,10 +68,10 @@ ms.locfileid: "62899016"
  [Integration Services &#40;SSIS&#41; 運算式](integration-services-ssis-expressions.md)   
  [在封裝中使用屬性運算式](use-property-expressions-in-packages.md)   
  [Integration Services &#40;SSIS&#41; 封裝](../integration-services-ssis-packages.md)   
- [整合服務容器](../control-flow/integration-services-containers.md)   
+ [Integration Services 容器](../control-flow/integration-services-containers.md)   
  [Integration Services 工作](../control-flow/integration-services-tasks.md)   
  [Integration Services &#40;SSIS&#41; 事件處理常式](../integration-services-ssis-event-handlers.md)   
- [Integration Services &#40;SSIS&#41; 連接](../connection-manager/integration-services-ssis-connections.md)   
+ [Integration Services &#40;SSIS&#41; 連線](../connection-manager/integration-services-ssis-connections.md)   
  [Integration Services &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)  
   
   

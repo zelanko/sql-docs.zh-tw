@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 04dff943d1227f84ff514e593f65c2ce4d7a918f
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952578"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>設定服務帳戶 (SSRS 組態管理員)
@@ -38,19 +38,19 @@ ms.locfileid: "71952578"
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並連接到報表伺服器。  
   
-2.  在 [服務帳戶] 頁面上，選取可描述您想要使用之帳戶類型的選項。 如需所要指定之帳戶類型的建議，請參閱[設定報表伺服器&#40;服務帳戶&#41;SSRS Configuration Manager](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
+2.  在 [服務帳戶] 頁面上，選取可描述您想要使用之帳戶類型的選項。 如需所要指定之帳戶類型的建議，請參閱[將報表伺服器服務帳戶設定 &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
   
 3.  如果您選取了 Windows 使用者帳戶，請指定新的帳戶和密碼。 此帳戶不能超過 20 個字元。  
   
      如果在支援 Kerberos 驗證的網路中部署報表伺服器，您就必須使用您剛剛指定的網域使用者帳戶來註冊報表伺服器的「服務主要名稱」(SPN)。 如需詳細資訊，請參閱[為報表伺服器註冊服務主體名稱 &#40;SPN&#41;](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)。  
   
-4.  按一下 **[套用]** 。  
+4.  按一下 [套用]  。  
   
-5.  如果出現提示要求備份對稱金鑰，請輸入對稱金鑰備份的檔案名稱和位置，然後輸入用來鎖定和解除檔案鎖定的密碼，再按一下 **[確定]** 。  
+5.  如果出現提示要求備份對稱金鑰，請輸入對稱金鑰備份的檔案名稱和位置，然後輸入用來鎖定和解除檔案鎖定的密碼，再按一下 **[確定]**。  
   
-6.  如果報表伺服器使用此服務帳戶來連接報表伺服器資料庫，將會更新連接資訊來使用新的帳戶或密碼。 更新連接資訊時，將需要連接到資料庫。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **[資料庫連接]** 對話方塊出現，請輸入有權連接此資料庫的認證，然後按一下 **[確定]** 。  
+6.  如果報表伺服器使用此服務帳戶來連接報表伺服器資料庫，將會更新連接資訊來使用新的帳戶或密碼。 更新連接資訊時，將需要連接到資料庫。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **[資料庫連接]** 對話方塊出現，請輸入有權連接此資料庫的認證，然後按一下 **[確定]**。  
   
-7.  當系統提示您還原對稱金鑰時，請輸入您在步驟 5 中指定的密碼，然後按一下 **[確定]** 。  
+7.  當系統提示您還原對稱金鑰時，請輸入您在步驟 5 中指定的密碼，然後按一下 **[確定]**。  
   
 8.  檢閱 [結果] 窗格中的狀態訊息，以確認所有工作都已順利完成。  
   
@@ -66,8 +66,8 @@ ms.locfileid: "71952578"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [服務帳戶&#40;SSRS 原生&#41;模式](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
+ [&#40;SSRS Configuration Manager 設定報表伺服器資料庫連接&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [服務帳戶 &#40;SSRS 原生模式&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
  [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

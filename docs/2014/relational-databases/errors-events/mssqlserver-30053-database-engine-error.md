@@ -11,19 +11,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b753397b4791d658692a8cb63dbc6a3d779c621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914355"
 ---
-# <a name="mssqlserver30053"></a>MSSQLSERVER_30053
+# <a name="mssqlserver_30053"></a>MSSQLSERVER_30053
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|30053|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -48,7 +48,7 @@ ms.locfileid: "62914355"
 ## <a name="user-action"></a>使用者動作  
  請選取適用於逾時可能原因的使用者動作，如下所示：  
   
-|可能原因|使用者動作|  
+|可能的原因|使用者動作|  
 |--------------------|-----------------|  
 |查詢語言的斷詞工具設定不正確。|如果您正在使用協力廠商斷詞工具，可能是作業系統的註冊不正確。 在此情況下，請重新註冊斷詞工具。 如需詳細資訊，請參閱[將搜索所使用的斷詞工具還原為舊版](../search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)。|  
 |斷詞工具由於特定的查詢字串而無法運作。|如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援斷詞工具，請連絡 Microsoft 客戶服務及支援中心。|  
@@ -59,7 +59,7 @@ ms.locfileid: "62914355"
 ## <a name="see-also"></a>另請參閱  
  [設定全文檢索篩選背景程式啟動器的服務帳戶](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [全文檢索搜尋](../search/full-text-search.md)   
- [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
+ [sp_help_fulltext_system_components &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
  [設定及管理搜尋的斷詞工具與字幹分析器](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [設定及管理搜尋的篩選](../search/configure-and-manage-filters-for-search.md)  
   

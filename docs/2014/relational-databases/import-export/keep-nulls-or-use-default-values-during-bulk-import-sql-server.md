@@ -21,16 +21,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011896"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>大量匯入期間保留 Null 或使用預設值 (SQL Server)
-  依預設，當資料匯入資料表時，**bcp** 命令和 BULK INSERT 陳述式會查看資料表中的資料行是否已定義預設值。 例如，若資料檔中有一個 Null 值欄位，將會以載入該資料行的預設值來取代。 **bcp** 命令和 BULK INSERT 陳述式都可以指定保留 Null 值。  
+  根據預設，當資料匯入資料表時， **bcp** 命令和 BULK INSERT 陳述式會查看資料表中的資料行是否已定義預設值。 例如，若資料檔中有一個 Null 值欄位，將會以載入該資料行的預設值來取代。 
+  **bcp** 命令和 BULK INSERT 陳述式都可讓您指定保留 Null 值。  
   
- 相對地，一般的 INSERT 陳述式會保留 Null 值，而不會插入預設值。 INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式所提供的基本行為與一般 INSERT 陳述式相同，但它還支援用於插入預設值的資料表提示。  
+ 相對地，一般的 INSERT 陳述式會保留 Null 值，而不會插入預設值。 INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式所提供的基本行為與一般 INSERT 陳述式相同，但它還支援用於插入預設值的 資料表提示 。  
   
 > [!NOTE]  
 >  如需略過資料表資料行的範例格式檔案，請參閱[使用格式檔案略過資料表資料行 &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)。  
@@ -39,7 +40,7 @@ ms.locfileid: "66011896"
  若要執行此主題中的範例，您必須建立範例資料表與資料檔。  
   
 ### <a name="sample-table"></a>範例資料表  
- 在此範例中，必須將名為 **MyTestDefaultCol2** 的資料表，建立在 **AdventureWorks** 範例資料庫中的 **dbo** 結構描述下。 若要建立這個資料表，請在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器中執行：  
+ 在此範例中，必須將名為 **MyTestDefaultCol2** 的資料表，建立在 **AdventureWorks** 範例資料庫中的 **dbo** 結構描述下。 若要建立此資料表， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]請在 [查詢編輯器] 中執行：  
   
 ```  
 USE AdventureWorks;  
@@ -63,10 +64,11 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
   
 ```  
   
- 如需建立格式檔案的詳細資訊，請參閱[建立格式檔案 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)。  
+ 如需建立格式檔案的詳細資訊，請參閱 [建立格式檔案 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)。  
   
 ### <a name="sample-data-file"></a>範例資料檔  
- 此範例將使用範例資料檔 `MyTestEmptyField2-c.Dat`，此檔案在第二個欄位中不含任何值。 `MyTestEmptyField2-c.Dat` 資料檔含有下列記錄。  
+ 此範例將使用範例資料檔 `MyTestEmptyField2-c.Dat`，此檔案在第二個欄位中不含任何值。 
+  `MyTestEmptyField2-c.Dat` 資料檔含有下列記錄。  
   
 ```  
 1,,DataField3  
@@ -77,12 +79,12 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 ## <a name="keeping-null-values-with-bcp-or-bulk-insert"></a>使用 bcp 或 BULK INSERT 保留 Null 值  
  下列限定詞 (qualifier) 可指定資料檔中的空白欄位，在大量匯入作業期間保留其 Null 值，而不要繼承資料表資料行的預設值 (若有的話)。  
   
-|命令|Qualifier|限定詞類型|  
+|Command|Qualifier|限定詞類型|  
 |-------------|---------------|--------------------|  
-|**bcp**|`-k`|參數|  
-|BULK INSERT|KEEPNULLS<sup>1</sup>|引數|  
+|**in**|`-k`|Switch|  
+|BULK INSERT|KEEPNullS<sup>1</sup>|引數|  
   
- <sup>1</sup>對於 BULK INSERT，若沒有預設值可使用，資料表資料行必須定義為允許 null 值。  
+ <sup>1</sup>針對 BULK INSERT，如果無法使用預設值，則必須將資料表資料行定義為允許 null 值。  
   
 > [!NOTE]  
 >  這些限定詞會使這些大量匯入命令不再檢查資料表上有無 DEFAULT 定義， 但對任何並行 INSERT 陳述式而言，DEFAULT 定義是可預期的。  
@@ -99,12 +101,12 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- 若要插入"`NULL`「 instead of 」`Default value of Col2`」，您必須使用`-k`參數或 KEEPNULL 選項，如下列所示**bcp**和 BULK INSERT 範例。  
+ 若要插入`NULL`"" 而非`Default value of Col2`""，您必須使用`-k` switch 或 KEEPNull 選項，如下列**bcp**和 BULK INSERT 範例所示。  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>使用 bcp 並保留 Null 值  
- 下列範例示範如何使用 **bcp** 命令保留 Null 值。 **bcp** 命令包含下列參數：  
+ 下列範例示範如何使用 **bcp** 命令保留 Null 值。 **Bcp**命令包含下列參數：  
   
-|參數|描述|  
+|Switch|描述|  
 |------------|-----------------|  
 |`-f`|指定命令將使用格式檔案。|  
 |`-k`|指定空白資料行在作業過程中應保持 Null 值，而非保有插入之資料行的任何預設值。|  
@@ -134,22 +136,22 @@ GO
   
 ```  
   
-## <a name="keeping-default-values-with-insert--select--from-openrowsetbulk"></a>使用 INSERT 保留預設值 ...SELECT * FROM OPENROWSET(BULK...)  
- 根據預設，在大量載入作業中未指定的資料行都會設定為 NULL，方法是使用 INSERT ...SELECT * FROM OPENROWSET(BULK...)。但您可以指定在資料檔的空白欄位中，對應的資料表資料行會使用其預設值 (若有的話)。 若要使用預設值，請指定下列資料表提示：  
+## <a name="keeping-default-values-with-insert--select--from-openrowsetbulk"></a>保留預設值與 INSERT .。。SELECT * FROM OPENROWSET （BULK ...）  
+ 根據預設，在大量載入作業中未指定的任何資料行都會設定為 Null，方法是使用 INSERT .。。SELECT * FROM OPENROWSET （BULK ...）。不過，您可以針對資料檔中的空白欄位指定，對應的資料表資料行會使用其預設值（如果有的話）。 若要使用預設值，請指定下列資料表提示：  
   
-|命令|Qualifier|限定詞類型|  
+|Command|Qualifier|限定詞類型|  
 |-------------|---------------|--------------------|  
 |INSERT ...SELECT * FROM OPENROWSET(BULK...)|WITH(KEEPDEFAULTS)|資料表提示|  
   
 > [!NOTE]  
->  如需詳細資訊，請參閱 [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)、[SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)、[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)[ &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)。  
+>  如需詳細資訊，請參閱[INSERT &#40;transact-sql&#41;](/sql/t-sql/statements/insert-transact-sql)、 [SELECT &#40;Transact-sql&#41;](/sql/t-sql/queries/select-transact-sql)、 [OPENROWSET &#40;transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql)和[Table 提示 &#40;transact-sql&#41;](/sql/t-sql/queries/hints-transact-sql-table)  
   
 ### <a name="examples"></a>範例  
- 下列 INSERT ...SELECT * FROM OPENROWSET(BULK...) 範例會大量匯入資料並保留預設值。  
+ 下列插入 .。。SELECT * FROM OPENROWSET （BULK ...）範例會大量匯入資料並保留預設值。  
   
  若要執行範例，您必須建立 **MyTestDefaultCol2** 範例資料表與 `MyTestEmptyField2-c.Dat` 資料檔，並使用格式檔案 `MyTestDefaultCol2-f-c.Fmt`。 如需建立這些範例的詳細資訊，請參閱本主題稍早的「範例資料表與資料檔」。  
   
- 第二個資料表資料行 **Col2** 有預設值。 資料檔的對應欄位包含空白字串。 當 INSERT ...SELECT \* FROM OPENROWSET(BULK...) 將此資料檔的欄位匯入 **MyTestDefaultCol2** 資料表時，依預設會在 **Col2** 中插入 NULL，而非預設值。 此預設行為會產生下列結果：  
+ 第二個資料表資料行 **Col2** 有預設值。 資料檔的對應欄位包含空白字串。 當 INSERT .。。SELECT \* FROM OPENROWSET （BULK ...）將此資料檔的欄位匯入**MyTestDefaultCol2**資料表中，根據預設，Null 會插入至**Col2** ，而不是預設值。 此預設行為會產生下列結果：  
   
 ||||  
 |-|-|-|  
@@ -203,11 +205,11 @@ GO
   
  **若要在使用 bcp 時指定相容性的資料格式**  
   
--   [指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [指定欄位和資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
--   [使用 bcp 指定資料檔的前置長度 &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+-   [使用 bcp &#40;SQL Server 在資料檔案中指定前置長度&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
--   [使用 bcp 指定檔案儲存類型 &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+-   [使用 bcp &#40;SQL Server 來指定檔案儲存類型&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   

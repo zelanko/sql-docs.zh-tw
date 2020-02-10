@@ -1,5 +1,5 @@
 ---
-title: 存取.NET 環境中的 SQLXML 功能 |Microsoft Docs
+title: 存取 .NET 環境中的 SQLXML 功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d4055c52f8d7a9401bf3c9b89754db831d94bb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012570"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>存取 .NET 環境中的 SQLXML 功能
   此範例顯示：  
   
--   如何使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)]SQLXML Managed 類別 (Microsoft.Data.SqlXml) 來存取 Microsoft[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 環境。  
+-   如何使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Sqlxml Managed 類別（Microsoft 資料 sqlxml）在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 環境中存取 Microsoft。  
   
 -   在 .NET Framework 環境中產生的 DiffGrams 如何將資料更新套用到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。  
   
- 在此應用程式中，XPath 查詢會根據 XSD 結構描述執行。 執行 XPath 查詢會傳回包含連絡人資料的 XML 文件 (**FirstName**， **LastName**)。 應用程式會將 XML 文件載入到 .NET Framework 環境的資料集中。 資料集中的資料已修改：連絡人的名字會變更為 "Susan"，成為資料集中的第一個連絡人。 DiffGram 會從資料集產生，然後會將 DiffGram (員工名字的變更) 中指定的更新套用到 Person.Contact 資料表。  
+ 在此應用程式中，XPath 查詢會根據 XSD 結構描述執行。 執行 XPath 查詢會傳回由連絡人資料（**FirstName**、 **LastName**）組成的 XML 檔。 應用程式會將 XML 文件載入到 .NET Framework 環境的資料集中。 資料集中的資料已修改：連絡人的名字會變更為 "Susan"，成為資料集中的第一個連絡人。 DiffGram 會從資料集產生，然後會將 DiffGram (員工名字的變更) 中指定的更新套用到 Person.Contact 資料表。  
   
 > [!NOTE]  
 >  在程式碼中，您必須於連接字串內提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。  
@@ -70,7 +70,7 @@ class Test
 }  
 ```  
   
- **若要測試的範例：**  
+ **測試範例：**  
   
  若要測試此範例，您必須先在電腦上安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework。  
   
@@ -95,7 +95,7 @@ class Test
     </xsd:schema>  
     ```  
   
-2.  將此範例中提供的 C# 程式碼 (DocSample.cs) 儲存到儲存結構描述的相同資料夾中 (如果您將檔案儲存在不同的資料夾中，您將需要編輯程式碼，然後為對應的結構描述指定適當的目錄路徑)。  
+2.  將此範例中提供的 C# 程式碼 (DocSample.cs) 儲存到儲存結構描述的相同資料夾中  (如果您將檔案儲存在不同的資料夾中，您將需要編輯程式碼，然後為對應的結構描述指定適當的目錄路徑)。  
   
 3.  編譯程式碼。 若要在命令提示字元下編譯程式碼，請使用：  
   

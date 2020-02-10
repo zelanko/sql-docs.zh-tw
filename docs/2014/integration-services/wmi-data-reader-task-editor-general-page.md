@@ -1,5 +1,5 @@
 ---
-title: WMI 資料讀取器工作編輯器 （一般頁面） |Microsoft Docs
+title: WMI 資料讀取器工作編輯器（一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d25a77fd9a3fce701f65eca580647b193a6c0276
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054410"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>WMI 資料讀取器工作編輯器 (一般頁面)
@@ -26,7 +26,7 @@ ms.locfileid: "66054410"
   
  若要了解這個工作，請參閱＜ [WMI Data Reader Task](control-flow/wmi-data-reader-task.md)＞。 如需 WMI 查詢語言 (WQL) 的詳細資訊，請參閱 MSDN Library 中的 Windows Management Instrumentation 主題 [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)(使用 WQL 查詢)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **名稱**  
  提供 WMI 資料讀取器工作的唯一名稱。 這個名稱是作為工作圖示中的標籤使用。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66054410"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [WMI 資料讀取器工作編輯器 &#40;WMI 選項頁面&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
+ [Wmi 資料讀取器工作編輯器 &#40;WMI 選項頁面&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
  [運算式頁面](expressions/expressions-page.md)   
  [WMI 事件監看員工作](control-flow/wmi-event-watcher-task.md)  
   

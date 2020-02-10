@@ -1,5 +1,5 @@
 ---
-title: 工作 6：設定同義字 |Microsoft Docs
+title: 工作6：設定同義字 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,32 +11,32 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 41c11138d00b4aea7332dac9984cbd609eba05e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489088"
 ---
 # <a name="task-6-setting-synonyms"></a>工作 6：設定同義字
-  在這個工作中，您可以設定兩個定義域值，**美國**並**美國**的**國家/地區**同義字的網域**美國**為前置值。 由於**使用前置值**建立時，已選取選項**國家/地區**網域中，任何**USA**值**國家/地區**網域將會輸出為**美國**（因為 United States 是前置值）。 請參閱[Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx)如需詳細資訊。  
+  在這項工作中，您會將**Country**網域的兩個定義域值（**美國**和**美國**）設定為以**美國**做為前置值的同義字。 因為在建立**國家/地區**網域時選取了 [**使用前置值**] 選項，所以**country**網域的任何**美國**值都會輸出為**美國**（美國是前置值）。 如需詳細資訊，請參閱[變更定義域值](https://msdn.microsoft.com/library/hh510408.aspx)。  
   
-1.  選取 **國家/地區**從網域清單。  
+1.  從網域清單中選取 [**國家/地區**]。  
   
-2.  若要切換**定義域值** 索引標籤。  
+2.  切換至 [**定義域值**] 索引標籤。  
   
-3.  按一下 **加入新的定義域值**工具列上的按鈕。  
+3.  按一下工具列上的 [**加入新的定義域值**] 按鈕。  
   
-4.  型別**USA**值並按下**ENTER**。  
+4.  輸入**USA**作為值，然後按**enter**。  
   
-5.  Multiselect**美國**並**USA**使用 CTRL 或 SHIFT 鍵，以滑鼠右鍵按一下選取的項目，然後**設為同義字**。 DQS 會將這些值分組在一起，並將其中一個值指定為將用來取代其他值的前置值。  
+5.  使用 CTRL 或 SHIFT**鍵，以**滑鼠右鍵按一下選取的專案 **，然後按一下**[**設為同義字**]。 DQS 會將這些值分組在一起，並將其中一個值指定為將用來取代其他值的前置值。  
   
-     ![設定為同義字 功能表](../../2014/tutorials/media/et-settingsynonyms-01.jpg "設為同義字 功能表")  
+     ![[設為同義字] 功能表](../../2014/tutorials/media/et-settingsynonyms-01.jpg "[設為同義字] 功能表")  
   
-6.  請注意，**美國**設為前置值。 如果您希望 USA 成為前置值，您可以滑鼠右鍵按一下 USA，並選取**設為前置**選項。 本教學課程中，我們使用**美國**為前置值。  
+6.  請注意，**美國**已設定為前置值。 如果您想要讓 USA 成為前置值，可以用滑鼠右鍵按一下 [美國]，然後選取 [**設定為前置**選項]。 在本教學課程中，我們會使用**美國**做為前置值。  
   
      ![United States 和 USA 為同義字](../../2014/tutorials/media/et-settingsynonyms-02.jpg "United States 和 USA 為同義字")  
   
-## <a name="next-step"></a>下一個步驟  
- [工作 7:建立複合定義域](../../2014/tutorials/task-7-creating-a-composite-domain.md)  
+## <a name="next-step"></a>後續步驟  
+ [工作 7：建立複合定義域](../../2014/tutorials/task-7-creating-a-composite-domain.md)  
   
   

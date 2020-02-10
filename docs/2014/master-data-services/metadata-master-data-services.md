@@ -1,5 +1,5 @@
 ---
-title: 中繼資料 (Master Data Services) |Microsoft Docs
+title: 中繼資料（Master Data Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql-server-2014
@@ -16,23 +16,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2bbb98653dbbaad577f9a48d7a778b41d19fbf37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054041"
 ---
 # <a name="metadata-master-data-services"></a>中繼資料 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，使用者定義的中繼資料是用來描述模型物件的資訊。 例如，您可以追蹤特定模型或實體的擁有者，或追蹤提供資料給實體的來源系統。  
   
- 使用者定義的中繼資料由稱為 「 模型管理**中繼資料**。 此模型時，會自動包含[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]已安裝，而且類似於其他所有 MDS 模型，不同之處在於您無法建立它的版本。  
+ 使用者定義的中繼資料是由稱為「**中繼資料**」的模型所管理。 當安裝時[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，會自動包含此模型，而且它類似于其他所有 MDS 模型，但您無法建立其版本。  
   
  當您使用使用者定義的中繼資料來擴展中繼資料模型時，可以將其包含在訂閱檢視中，以便透過訂閱系統來取用。  
   
 ## <a name="metadata-entities"></a>中繼資料實體  
- 中繼資料模型包含五個實體，每個實體代表一種支援使用者定義中繼資料的主要資料模型物件類型。 例如，**模型中繼資料定義**實體都包含代表模型的成員和**屬性中繼資料定義**實體具有成員，表示所有模型中的所有屬性。  
+ 中繼資料模型包含五個實體，每個實體代表一種支援使用者定義中繼資料的主要資料模型物件類型。 例如，「**模型元資料定義**」實體包含代表模型的成員，而「**屬性元資料定義**」實體具有代表所有模型中所有屬性的成員。  
   
- 若要定義模型物件的中繼資料，必須擴展其中一個成員的屬性。 例如，在**實體中繼資料定義**實體，您可以擴展價格成員的描述屬性，以文字：**產品價格賣給客戶**。  
+ 若要定義模型物件的中繼資料，必須擴展其中一個成員的屬性。 例如，在**實體元資料定義**實體中，您可以在價格成員的 Description 屬性中填入下列文字：**銷售給客戶時的產品價格**。  
   
  每當加入或刪除支援使用者定義中繼資料的模型物件時，中繼資料模型中的成員會自動更新。  
   
@@ -47,17 +47,17 @@ ms.locfileid: "66054041"
   
 -   名稱為 [上次檢閱日期] 的自由格式屬性，用來追蹤擁有者上次檢閱物件的日期。  
   
--   網域屬性名為來源，用來追蹤和管理與互動的來源系統[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]執行個體。  
+-   名為 [來源] 的網域屬性，用來追蹤和管理與[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]實例互動的來源系統。  
   
 ## <a name="related-tasks"></a>相關工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|將中繼資料加入至模型物件。|[新增中繼資料&#40;Master Data Services&#41;](add-metadata-master-data-services.md)
+|將中繼資料加入至模型物件。|[新增中繼資料 &#40;Master Data Services&#41;](add-metadata-master-data-services.md)
 |&nbsp;|&nbsp;|
   
 ## <a name="related-content"></a>相關內容  
   
--   [將資料匯出&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
+-   [將資料匯出 &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
   

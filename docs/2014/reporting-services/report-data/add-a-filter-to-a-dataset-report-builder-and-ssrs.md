@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3ce57aa0ac17a29b9e8f3b0ea7eef3ad1501a60e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107542"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>將篩選加入至資料集 (報表產生器及 SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "66107542"
   
 3.  按一下 **[篩選]** 。 這樣就會顯示目前的篩選方程式清單。 根據預設，此清單是空的。  
   
-4.  按一下 **[加入]** 。 新的空白篩選方程式隨即顯示。  
+4.  按一下 [新增]  。 新的空白篩選方程式隨即顯示。  
   
 5.  在 **[運算式]** 中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66107542"
   
 3.  按一下 **[篩選]** 。 這樣就會顯示目前的篩選方程式清單。 根據預設，此清單是空的。  
   
-4.  按一下 **[加入]** 。 新的空白篩選方程式隨即顯示。  
+4.  按一下 [新增]  。 新的空白篩選方程式隨即顯示。  
   
 5.  在 **[運算式]** 中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
   
@@ -74,6 +74,6 @@ ms.locfileid: "66107542"
 ## <a name="see-also"></a>另請參閱  
  [新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](../report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)   
- [加入篩選 &#40;報表產生器及 SSRS&#41;](../report-design/add-a-filter-report-builder-and-ssrs.md)  
+ [新增篩選 &#40;報表產生器及 SSRS&#41;](../report-design/add-a-filter-report-builder-and-ssrs.md)  
   
   

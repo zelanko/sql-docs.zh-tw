@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c61e1b980e729cb936c00410a156d8c0dc47d0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62842973"
 ---
 # <a name="sql-server-management-tools-backward-compatibility"></a>SQL Server 管理工具回溯相容性
@@ -22,9 +22,9 @@ ms.locfileid: "62842973"
   
 |**主題**|**說明**|  
 |---------------|---------------------|  
-|[SQL Server 2014 中已淘汰的管理工具功能](../../2014/database-engine/deprecated-management-tools-features-in-sql-server-2014.md)|在這個版本中已被取代的管理工具功能。|  
-|[SQL Server 2014 中已中止的管理工具功能](../../2014/database-engine/discontinued-management-tools-features-in-sql-server-2014.md)|在這個版本中已停止的管理工具功能。|  
-|[SQL Server 2014 中管理工具功能的重大變更](../../2014/database-engine/breaking-changes-to-management-tools-features-in-sql-server-2014.md)|可能需要對應用程式做一些改變的管理工具功能變更。|  
+|[在 SQL Server 2014 中已被取代的管理工具功能](../../2014/database-engine/deprecated-management-tools-features-in-sql-server-2014.md)|在這個版本中已被取代的管理工具功能。|  
+|[在 SQL Server 2014 中已停止的管理工具功能](../../2014/database-engine/discontinued-management-tools-features-in-sql-server-2014.md)|在這個版本中已停止的管理工具功能。|  
+|[SQL Server 2014 中管理工具功能的突破性變更](../../2014/database-engine/breaking-changes-to-management-tools-features-in-sql-server-2014.md)|可能需要對應用程式做一些改變的管理工具功能變更。|  
 |[SQL Server 2014 中管理工具功能的行為變更](../../2014/database-engine/behavior-changes-to-management-tools-features-in-sql-server-2014.md)|這個版本中管理工具功能的其他變更。|  
   
 ## <a name="see-also"></a>另請參閱  

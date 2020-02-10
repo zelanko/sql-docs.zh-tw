@@ -1,5 +1,5 @@
 ---
-title: 傳送 SQL Server 物件工作編輯器 （一般頁面） |Microsoft Docs
+title: 傳輸 SQL Server 物件工作編輯器（一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5fba4bafe61090e3b7bb89129e5ecefd0befc7d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054887"
 ---
 # <a name="transfer-sql-server-objects-task-editor-general-page"></a>傳送 SQL Server 物件工作編輯器 (一般頁面)
