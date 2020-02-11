@@ -1,5 +1,5 @@
 ---
-title: 資料錄集相關的錯誤資訊 |Microsoft Docs
+title: 記錄集相關的錯誤資訊 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,11 +14,11 @@ ms.assetid: 7e103574-59ad-4790-b5f9-fa8d715e711e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3f8e8d9802b5d0c73af73aff20d929c188b9292
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924379"
 ---
 # <a name="recordset-related-error-information"></a>資料錄集相關的錯誤資訊
-批次在處理期間，**狀態**屬性**Recordset**物件提供在個別的記錄資訊**資料錄集**。 批次更新所需的位置，再**狀態**屬性**資料錄集**反映要加入、 變更和刪除的記錄資訊。 在後**UpdateBatch**已呼叫**狀態**屬性會指出成功或失敗的作業。 當您移動記錄間**Recordset**的值**狀態**屬性變更，來描述目前記錄的狀態。
+在批次處理期間，**記錄集**物件的**Status**屬性會提供有關**記錄集中**個別記錄的資訊。 進行批次更新之前，**記錄集**的**Status**屬性會反映要新增、變更及刪除之記錄的相關資訊。 呼叫**UpdateBatch**之後， **Status**屬性會指出作業成功或失敗。 當您從記錄檔移至記錄**集**內的記錄時， **Status**屬性的值會變更以描述目前記錄的狀態。
