@@ -1,5 +1,5 @@
 ---
-title: 建立相關的時序群集模型 （中繼資料採礦教學課程） |Microsoft Docs
+title: 建立相關的時序群集模型（中繼資料採礦教學課程） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 71db7ba5246e151bbca8a52972a2ba835b80ddb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62855871"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>建立相關的時序群集採礦模型 (中繼資料採礦教學課程)
@@ -26,48 +26,48 @@ ms.locfileid: "62855871"
   
 ### <a name="to-make-a-copy-of-the-sequence-clustering-model"></a>若要製作時序群集模型的副本  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，在 資料採礦設計師中，按一下 [**採礦模型**] 索引標籤。  
+1.  在[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的資料採礦設計工具中，按一下 [**採礦模型**] 索引標籤。  
   
-2.  以滑鼠右鍵按一下您想要複製，並選取的模型**新的採礦模型**。  
+2.  以滑鼠右鍵按一下您要複製的模型，然後選取 [新增] [**採礦模型**]。  
   
-3.  在 **新的採礦模型** 對話方塊中，輸入模型名稱，然後選取 Microsoft `Sequence Clustering`。  
+3.  在 [**新增採礦模型**] 對話方塊中，輸入模型名稱，然後選取 [ `Sequence Clustering`Microsoft]。  
   
-     本教學課程中，輸入 名稱`Sequence Clustering`。  
+     在此教學課程中，請`Sequence Clustering`輸入名稱。  
   
 4.  按一下 [確定]  。  
   
 ### <a name="to-remove-columns-from-the-mining-model"></a>若要從採礦模型移除資料行  
   
-1.  在 **採礦模型**索引標籤上，在名為 時序群集中，新模型的資料行中按一下資料列**Income Group**屬性，然後選取**忽略**。  
+1.  在 [**採礦模型**] 索引標籤中，于名為 [時序群集] 的新模型之資料行中，按一下 [**收入群組**] 屬性的資料列，然後選取 [**忽略**]。  
   
-2.  重複此步驟的屬性**地區**。  
+2.  針對屬性**區域**重複此步驟。  
   
-3.  按一下 資料表名稱旁邊的加號**v Assoc Seq Line Items**，以展開的資料表，並檢視巢狀資料表的資料行。  
+3.  按一下資料表名稱旁邊的加號 [ **v Assoc Seq Line Items**]，以展開資料表並查看嵌套資料表中的資料行。  
   
      新模型應該只包含下列資料行：  
   
-     **順序 NumberKey**  
+     **訂單 NumberKey**  
   
-     **列數字鍵**  
+     **行號索引鍵**  
   
-     **預測模型**  
+     **模型預測**  
   
 ### <a name="to-process-the-new-sequence-clustering-model"></a>若要處理新的時序群集模型  
   
-1.  在**採礦模型**索引標籤上，以滑鼠右鍵按一下名為新的模型`Sequence Clustering`，然後選取**處理序模型**。  
+1.  在 [**採礦模型**] 索引標籤中，以滑鼠右鍵`Sequence Clustering`按一下名為的新模型，然後選取 [**處理模型**]。  
   
      由於簡化的新採礦模型所根據的結構已經過處理，因此您不需要重新處理結構。 您可以只處理新的採礦模型。  
   
-2.  按一下 **是**若要更新的資料採礦專案部署至伺服器。  
+2.  按一下 **[是]** ，將更新的資料採礦專案部署到伺服器。  
   
-3.  在 [**處理採礦模型**] 對話方塊中，按一下**執行**。  
+3.  在 [**處理採礦模型**] 對話方塊中，按一下 [**執行**]。  
   
-4.  按一下 [**關閉**以關閉**處理進度**對話方塊，然後再按一下**關閉**中再次**處理採礦模型**] 對話方塊。  
+4.  按一下 [**關閉**] 以關閉 [**處理進度**] 對話方塊，然後在 [**處理採礦模型**] 對話方塊中再次按一下 [**關閉**]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [時序群集模型上建立預測&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/create-predictions-on-model-intermediate-data-mining-tutorial.md)  
+ [在時序群集模型上建立預測 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/create-predictions-on-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [處理需求和考量 (資料採礦)](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [&#40;資料採礦&#41;的處理需求和考慮](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   
