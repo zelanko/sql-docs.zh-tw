@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 951e96cd13ba7cbb6f14039d3745a44ff6167fa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62760760"
 ---
 # <a name="duplicate-tables"></a>複製資料表
@@ -32,7 +32,7 @@ ms.locfileid: "62760760"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來複製資料表：**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62760760"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要目的地資料庫中的 CREATE TABLE 權限。  
@@ -79,6 +79,6 @@ ms.locfileid: "62760760"
   
 4.  移除新資料表不需要的任何資料行。  
   
-5.  按一下 [執行]  。  
+5.  按一下 **[執行]** 。  
   
   
