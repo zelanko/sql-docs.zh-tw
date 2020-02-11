@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b985db3cb58a7029a3b5ec489d2e23b0c1292919
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786735"
 ---
 # <a name="sqlfreestmt"></a>SQLFreeStmt
@@ -30,7 +30,7 @@ ms.locfileid: "73786735"
  一般來說，重複使用語句比卸載它們並配置新的更有效率。 不過，在某些情況下，例如重複使用語句，仍然必須使用 SQLFreeStmt。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLFreeStmt 函數](https://go.microsoft.com/fwlink/?LinkId=59346)   
+ [SQLFreeStmt 函式](https://go.microsoft.com/fwlink/?LinkId=59346)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

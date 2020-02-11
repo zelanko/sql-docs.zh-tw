@@ -12,10 +12,10 @@ ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3ebd6ca2702c902d25f7a73539017bd0540cc3d4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252248"
 ---
 # <a name="create-a-linked-domain"></a>建立連結的定義域
@@ -35,14 +35,14 @@ ms.locfileid: "75252248"
   
  範例是包含以下欄位的記錄：客戶名字、客戶姓氏和父親的名字。 假設您將客戶名字和父親的名字對應到「名字」定義域，並讓「名字」定義域和「姓氏」定義域成為「完整名稱」複合定義域的一部分。 問題是父親的名字將會加入至複合定義域，而且不含姓氏。 但是，如果您將兩個名字欄位中的每一個都連結到定義域，並連結這兩個定義域，然後您可以將「客戶名字」定義域加入至「完整名稱」複合定義域，而不將「父親的名字」欄位加入至複合定義域，以免「父親的名字」被加入至複合定義域。  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a>要求  
+###  <a name="Prerequisites"></a> 必要條件  
  若要建立連結的定義域，您必須擁有知識庫以及您想要連結的現有定義域。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能建立連結的定義域。  
   
 ##  <a name="Create"></a>建立連結的定義域  

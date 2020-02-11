@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ddb7e84f69f501a7857b0d55b1b8a14d11a85694
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244506"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 憑證與非對稱金鑰
@@ -47,9 +47,9 @@ ms.locfileid: "75244506"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[建立憑證 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|說明用來建立憑證的命令。|  
+|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|說明用來建立憑證的命令。|  
 |[使用數位簽章來識別封裝的來源](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|顯示有關如何使用憑證來簽署軟體封裝的資訊。|  
-|[針對資料庫鏡像端點使用憑證 &#40;Transact-sql&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|涵蓋如何搭配資料庫鏡像使用憑證的相關資訊。|  
+|[使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|涵蓋如何搭配資料庫鏡像使用憑證的相關資訊。|  
   
 ## <a name="asymmetric-keys"></a>非對稱金鑰  
  非對稱金鑰是用來維護對稱金鑰的安全， 也可用於有限制的資料加密及數位簽署資料庫物件。 非對稱金鑰是由私密金鑰與對應的公開金鑰所組成。 如需非對稱金鑰的詳細資訊，請參閱 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)的公開金鑰 (以及選擇性的私密金鑰)。  
@@ -61,8 +61,8 @@ ms.locfileid: "75244506"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[建立非對稱金鑰 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|說明用來建立非對稱金鑰的命令。|  
-|[SIGNBYASYMKEY &#40;Transact-sql&#41;](/sql/t-sql/functions/signbyasymkey-transact-sql)|顯示用來簽署物件的選項。|  
+|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|說明用來建立非對稱金鑰的命令。|  
+|[SIGNBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/signbyasymkey-transact-sql)|顯示用來簽署物件的選項。|  
   
 ## <a name="tools"></a>工具  
  
@@ -77,9 +77,9 @@ ms.locfileid: "75244506"
 ## <a name="related-tasks"></a>相關工作  
  [選擇加密演算法](encryption/choose-an-encryption-algorithm.md)  
   
- [建立對稱金鑰 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
- [建立憑證 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+ [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
 ## <a name="see-also"></a>另請參閱  
  [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   

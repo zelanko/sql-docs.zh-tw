@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_optimizer_info (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_exec_query_optimizer_info （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,34 +21,34 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d6195ee80fb851a9875e4a95a6e5aab87deb905e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68255357"
 ---
-# <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
+# <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具作業的詳細統計資料。 您可以使用這個檢視來調整工作負載，找出查詢最佳化的問題或可供改善之處。 例如，您可以使用最佳化總數、經過時間值和最終成本值，比較目前工作負載的查詢最佳化以及調整過程中所觀察到的任何變化。 部分計數器只提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部診斷使用的相關資料。 這些計數器會標示「僅供內部使用」。  
   
 > [!NOTE]  
->  若要呼叫這個屬性從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或是[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_exec_query_optimizer_info**。  
+>  若要從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼叫此，請使用**dm_pdw_nodes_exec_query_optimizer_info**的名稱。  
   
 |名稱|資料類型|描述|  
 |----------|---------------|-----------------|  
-|**counter**|**nvarchar(4000)**|最佳化工具統計資料事件的名稱。|  
-|**occurrence**|**bigint**|這個計數器最佳化事件的出現次數。|  
+|**抵禦**|**nvarchar(4000)**|最佳化工具統計資料事件的名稱。|  
+|**次出現**|**Bigint**|這個計數器最佳化事件的出現次數。|  
 |**value**|**float**|每一事件發生的平均屬性值。|  
-|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
+|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
 
-在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
     
 ## <a name="remarks"></a>備註  
- **sys.dm_exec_query_optimizer_info**包含下列屬性 （計數器）。 所有發生值會累計並在系統重新啟動時設為 0。 所有值欄位的值於系統重新啟動時設為 NULL。 所有指定平均值的值資料行值會使用來自同一資料列的發生值作為平均值計算中的分母。 所有查詢最佳化時測量[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]判斷變更**dm_exec_query_optimizer_info**，包括這兩個使用者和系統產生的查詢。 已快取的計劃的執行不會變更中的值**dm_exec_query_optimizer_info**，只有最佳化是顯著。  
+ **sys. dm_exec_query_optimizer_info**包含下列屬性（計數器）。 所有發生值會累計並在系統重新啟動時設為 0。 所有值欄位的值於系統重新啟動時設為 NULL。 所有指定平均值的值資料行值會使用來自同一資料列的發生值作為平均值計算中的分母。 所有的查詢優化都會在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]判斷**dm_exec_query_optimizer_info**的變更時進行測量，包括使用者和系統產生的查詢。 執行已經快取的計畫並不會變更**dm_exec_query_optimizer_info**中的值，只有優化才有意義。  
   
 |計數器|出現次數|值|  
 |-------------|----------------|-----------|  
@@ -77,12 +77,12 @@ ms.locfileid: "68255357"
 |包含子查詢|包含至少一個子查詢之查詢的最佳化數目。|不適用|  
 |UNNEST 失敗|僅供內部使用|僅供內部使用|  
 |tables|最佳化的總數。|每一最佳化查詢所參考資料表的平均數。|  
-|提示|指定某個提示的次數。 計數的提示包括：聯結、 群組、 UNION 和 FORCE ORDER 查詢提示、 FORCE PLAN 設定選項，以及聯結提示。|不適用|  
+|提示|指定某個提示的次數。 計數的提示包括：JOIN、GROUP、UNION 和 FORCE ORDER 查詢提示、FORCE PLAN 設定選項，以及聯結提示。|不適用|  
 |ORDER 提示|指定 FORCE ORDER 提示的次數。|不適用|  
 |聯結提示|聯結提示強制執行聯結演算法的次數。|不適用|  
 |檢視參考|檢視在查詢中被參考的次數。|不適用|  
 |遠端查詢|查詢參考最少一個遠端資料來源 (如具有四部分名稱的資料表或 OPENROWSET 結果) 的最佳化數目。|不適用|  
-|最大 DOP|最佳化的總數。|最佳化計畫的平均有效 MAXDOP 值。 根據預設，有效 MAXDOP 由**的最大平行處理原則程度**伺服器組態選項，並可能會覆寫特定查詢的 MAXDOP 查詢提示值。|  
+|最大 DOP|最佳化的總數。|最佳化計畫的平均有效 MAXDOP 值。 根據預設，有效 MAXDOP 是由 [平行處理原則**的最大程度**] 伺服器設定選項所決定，而且可能會根據 MAXDOP 查詢提示的值來覆寫特定查詢。|  
 |最大遞迴層級|查詢提示指定 MAXRECURSION 層級大於 0 的最佳化數目。|查詢提示指定最大遞迴層級之最佳化的平均 MAXRECURSION 層級。|  
 |索引檢視已載入|僅供內部使用|僅供內部使用|  
 |相符的索引檢視|與一或多份索引檢視相符的最佳化數目。|相符檢視的平均數。|  
@@ -129,7 +129,7 @@ SELECT (SELECT CAST (occurrence AS float) FROM sys.dm_exec_query_optimizer_info 
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [執行相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [執行相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: 在完整快取模式中使用 OLE DB 連接管理員實作查閱轉換 |Microsoft Docs
+title: 使用 OLE DB 連線管理員，以完整快取模式來執行查閱轉換 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a11eb545aa4d9beefc0852bb68ed18a84ffe3256
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833695"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-ole-db-connection-manager"></a>使用 OLE DB 連接管理員，以完整快取模式來實作查閱轉換
@@ -82,8 +82,8 @@ ms.locfileid: "62833695"
 13. 按一下 **[確定]** ，將變更儲存至查閱轉換，然後再執行封裝。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用快取連接管理員以完整快取模式實作查閱轉換](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
- [以沒有快取或部分快取模式實作查閱](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [使用快取連線管理員以完整快取模式來實作查閱轉換](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [以沒有快取或部分快取模式來實作查閱](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services 轉換](../data-flow/transformations/integration-services-transformations.md)  
   
   

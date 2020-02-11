@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a1d02ef5827ff9d121c19dd055f97feea5184758
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095351"
 ---
 # <a name="conversions-ole-db"></a>轉換 (OLE DB)
@@ -31,15 +31,16 @@ ms.locfileid: "74095351"
   
 -   **Datetime**和**datetimeoffset**字串的格式為：  
   
-     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
+     *yyyy*-** mm-*dd*[ *hh*：*mm*：*ss*[]。*9999999*] [± *hh*：*mm*]]  
   
--   **time** 字串的格式為：  
+-   
+  **time** 字串的格式為：  
   
-     *hh*:*mm*:*ss*[.*9999999*]  
+     *hh*：*mm*：*ss*[。*9999999*]  
   
 -   **日期**字串的格式為：  
   
-     *yyyy*-*mm*-*dd*  
+     *yyyy*-** mm-*dd*  
   
 > [!NOTE]  
 >  如果標準轉換失敗，舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和 SQLOLEDB 會實作 OLE 轉換。 因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 和更新版本所執行的某些轉換與 OLE DB 規格不同。  
@@ -72,6 +73,6 @@ ms.locfileid: "74095351"
  描述在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本) 和使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 撰寫之用戶端應用程式之間執行的日期/時間轉換。  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間改善 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [&#40;OLE DB 的日期和時間改善&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

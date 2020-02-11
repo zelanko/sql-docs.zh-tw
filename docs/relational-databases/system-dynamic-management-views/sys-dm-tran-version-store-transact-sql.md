@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_version_store & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.databases dm_tran_version_store （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -21,20 +21,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d993cd06d555a9d4136274b35242477df1b304e9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262596"
 ---
-# <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
+# <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回在版本存放區中顯示所有版本記錄的虛擬資料表。 **sys.dm_tran_version_store**效率不佳，無法執行，因為它會查詢整個版本存放區中，而版本存放區可能非常龐大。  
+  傳回在版本存放區中顯示所有版本記錄的虛擬資料表。 **dm_tran_version_store**的執行效率不佳，因為它會查詢整個版本存放區，而版本存放區可能非常大。  
   
  每一個版本控制記錄是以二進位資料連同一些追蹤或狀態資訊儲存在一起。 與資料庫資料表中的記錄類似，版本存放區記錄也是儲存在 8192 位元組的頁面中。 如果記錄超出 8192 位元組，該記錄便會分割成兩個不同的記錄。  
   
- 因為版本控制記錄是以二進位儲存，所以不同資料庫的不同定序不會造成問題。 使用**sys.dm_tran_version_store**來尋找二進位表示法中的資料列的舊版，存在於版本存放區中。  
+ 因為版本控制記錄是以二進位儲存，所以不同資料庫的不同定序不會造成問題。 使用**dm_tran_version_store sys.databases**來尋找二進位標記法中的舊版資料列，因為它們存在於版本存放區中。  
   
   
 ## <a name="syntax"></a>語法  
@@ -47,21 +47,21 @@ sys.dm_tran_version_store
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**transaction_sequence_num**|**bigint**|產生記錄版本之交易的序號。|  
-|**version_sequence_num**|**bigint**|版本記錄序號。 這個值在版本產生交易內是唯一的。|  
+|**transaction_sequence_num**|**Bigint**|產生記錄版本之交易的序號。|  
+|**version_sequence_num**|**Bigint**|版本記錄序號。 這個值在版本產生交易內是唯一的。|  
 |**database_id**|**int**|版本控制記錄的資料庫識別碼。|  
-|**rowset_id**|**bigint**|記錄的資料列集識別碼。|  
-|**status**|**tinyint**|指出版本控制記錄是否已分割成兩個記錄。 如果值設為 0，表示記錄是儲存在一個頁面。 如果值設為 1，表示記錄分割成儲存在兩個不同頁面的兩個記錄。|  
+|**rowset_id**|**Bigint**|記錄的資料列集識別碼。|  
+|**狀態**|**tinyint**|指出版本控制記錄是否已分割成兩個記錄。 如果值設為 0，表示記錄是儲存在一個頁面。 如果值設為 1，表示記錄分割成儲存在兩個不同頁面的兩個記錄。|  
 |**min_length_in_bytes**|**smallint**|記錄的最小長度 (以位元組為單位)。|  
 |**record_length_first_part_in_bytes**|**smallint**|版本控制記錄第一部份的長度 (以位元組為單位)。|  
-|**record_image_first_part**|**varbinary(8000)**|版本記錄第一部份的二進位檔映像。|  
+|**record_image_first_part**|**Varbinary （8000）**|版本記錄第一部份的二進位檔映像。|  
 |**record_length_second_part_in_bytes**|**smallint**|版本記錄第二部份的長度 (以位元組為單位)。|  
-|**record_image_second_part**|**varbinary(8000)**|版本記錄第二部份的二進位檔映像。|  
+|**record_image_second_part**|**Varbinary （8000）**|版本記錄第二部份的二進位檔映像。|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>權限
 
-在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
   
 ## <a name="examples"></a>範例  
  下列範例使用的測試案例中有四筆並行交易正在 ALLOW_SNAPSHOT_ISOLATION 和 READ_COMMITTED_SNAPSHOT 選項都設為 ON 的資料庫中執行，而每一筆交易都由一個交易序號 (XSN) 識別。 正在執行的交易包括：  

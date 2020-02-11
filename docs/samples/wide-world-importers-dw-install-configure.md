@@ -11,10 +11,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d8768fec2f96c725a9ba4bbf91996e95de4c800a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056306"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW 安裝和設定
@@ -36,7 +36,7 @@ WideWorldImportersDW 資料庫的安裝和設定指示。
 
 [全世界-匯入工具-來源](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
 
-## <a name="install"></a>Install
+## <a name="install"></a>安裝
 
 
 ### <a name="sql-server"></a>SQL Server
@@ -46,9 +46,9 @@ WideWorldImportersDW 資料庫的安裝和設定指示。
 1. 開啟 SQL Server Management Studio，並連接到目標 SQL Server 實例。
 2. 以滑鼠右鍵按一下 [**資料庫**] 節點，然後選取 [**還原資料庫**]。
 3. 選取 [**裝置**]，然後按一下 **[...] 按鈕。**
-4. 在對話方塊中，**選取 [備份裝置**]，按一下 [**新增**]，流覽至伺服器檔案系統中的資料庫備份，然後選取備份。 按一下 [確定]。
+4. 在對話方塊中，**選取 [備份裝置**]，按一下 [**新增**]，流覽至伺服器檔案系統中的資料庫備份，然後選取備份。 按一下 [確定]  。
 5. 如有需要，請在 [檔案] 窗格中變更**資料檔案和**記錄檔的目標位置。 請注意，最佳做法是將資料和記錄檔放在不同的磁片磁碟機上。
-6. 按一下 [確定]。 這會起始資料庫還原。 完成之後，您的 SQL Server 實例上會安裝資料庫 WideWorldImporters。
+6. 按一下 [確定]  。 這會起始資料庫還原。 完成之後，您的 SQL Server 實例上會安裝資料庫 WideWorldImporters。
 
 ### <a name="azure-sql-database"></a>Azure SQL Database
 
@@ -60,9 +60,9 @@ WideWorldImportersDW 資料庫的安裝和設定指示。
 3. 以滑鼠右鍵按一下 [**資料庫**] 節點，然後選取 [匯**入資料層應用程式**]。
 4. 在 [匯**入設定**] 中，選取 [**從本機磁片匯入**]，然後從您的檔案系統中選取範例資料庫的 bacpac。
 5. 在 [**資料庫設定**] 底下，將資料庫名稱變更為*WideWorldImportersDW* ，然後選取要使用的目標版本和服務目標。
-6. 按 **[下一步**]，然後按一下 **[完成]** 開始進行部署。 需要幾分鐘的時間才能完成。 指定低於 S2 的服務目標時，可能需要較長的時間。
+6. 按 **[下一步**]，然後按一下 **[完成]** 開始進行部署。 這需要幾分鐘才能完成。 指定低於 S2 的服務目標時，可能需要較長的時間。
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>組態
 
 [適用于 SQL Server 2016 （和更新版本）開發人員/評估版/Enterprise Edition]
 

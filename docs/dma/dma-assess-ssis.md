@@ -15,15 +15,15 @@ author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74687163"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>使用 Data Migration Assistant 執行 SQL Server 整合服務遷移評估
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 若要評估 SQL Server 整合服務（SSIS）套件，下列元件必須與 Data Migration Assistant 一起安裝：
 
@@ -71,7 +71,7 @@ DMA 必須以**系統管理員**存取權執行，才能評估封裝存放區中
 
 ![檢視結果](media/dma-assess-ssis/dma-assess-ssis-result.png)
 
-## <a name="next-steps"></a>接下來的步驟
+## <a name="next-steps"></a>後續步驟
 
 - [將內部部署 SSIS 工作負載遷移至 ADF 中的 SSIS 總覽](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
 - [將 SQL Server Integration Services 封裝遷移至 Azure SQL Database 受控實例](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401196"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>下載並套用適用于分析平臺系統的 Microsoft 更新
@@ -26,7 +26,7 @@ ms.locfileid: "74401196"
 >   
 > 當設備在使用中時，請勿套用 Microsoft Updates。 套用更新可能會導致應用裝置節點重新開機。 應用程式不使用時，應該在維護期間套用更新。  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>Prerequisites  
 執行這些步驟之前，您必須：  
   
 -   遵循[設定 Windows Server Update Services &#40;wsus&#41; &#40;分析平臺系統&#41;](configure-windows-server-update-services-wsus.md)中的指示，在您的設備上設定 WSUS。  
@@ -65,7 +65,7 @@ ms.locfileid: "74401196"
   
 1.  在 [WSUS 主控台] 的左窗格中，按一下 [**所有更新**]。  
   
-2.  在 [**所有更新**] 窗格中，按一下 [**核准**] 下拉式功能表，將 [**核准**] 設定為 [拒絕]**以外的任何**一個。 按一下 [**狀態**] 下拉式功能表，將 [**狀態**] 設定為 [**任何**]。 按一下 [重新整理]****。  
+2.  在 [**所有更新**] 窗格中，按一下 [**核准**] 下拉式功能表，將 [**核准**] 設定為 [拒絕]**以外的任何**一個。 按一下 [**狀態**] 下拉式功能表，將 [**狀態**] 設定為 [**任何**]。 按一下 [重新整理]  。  
   
     以滑鼠右鍵按一下 [**標題**] 資料行，然後選取 [檔案**狀態**]，以在下載完成後確認檔案狀態。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "74401196"
   
 8.  在 [**所有更新**] 視窗中，將 [**狀態**] 設定為 [**失敗] 或 [必要**]  
   
-9. 按一下 [重新整理]****。  
+9. 按一下 [重新整理]  。  
   
 10. 如果**需要的更新**大於零，請聯絡支援以取得協助。  
   

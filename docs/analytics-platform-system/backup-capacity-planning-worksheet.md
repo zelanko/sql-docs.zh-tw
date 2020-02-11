@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 46dbdded5adf41a847f017cf4ee203597df13962
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401338"
 ---
 # <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>備份伺服器容量規劃工作表-平行處理資料倉儲
@@ -23,7 +23,7 @@ ms.locfileid: "74401338"
   
 ## <a name="capacity-planning-worksheet-for-backup-servers"></a>備份伺服器的容量規劃工作表  
 
-### <a name="notes"></a>附註  
+### <a name="notes"></a>注意  
   
 1.  此工作表適用于將執行 PDW 資料庫之備份和還原作業的伺服器。  
   

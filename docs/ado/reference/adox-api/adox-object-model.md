@@ -13,18 +13,18 @@ ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad9942121c6b6173e773cc601f33b572a58512d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928532"
 ---
 # <a name="adox-object-model"></a>ADOX 物件模型
-下圖說明表示和 ADOX 中相關物件的方式。 如需特定物件或集合的詳細資訊，請參閱特定的參考主題中，或是[ADOX 物件](../../../ado/reference/adox-api/adox-objects.md)並[ADOX Collections](../../../ado/reference/adox-api/adox-collections.md)。  
+下圖說明如何在 ADOX 中表示和關聯物件。 如需特定物件或集合的詳細資訊，請參閱特定的參考主題或[Adox 物件](../../../ado/reference/adox-api/adox-objects.md)和[adox 集合](../../../ado/reference/adox-api/adox-collections.md)。  
   
  ![ADOX 物件模型](../../../ado/reference/adox-api/media/adox_object_model.gif "ADOX_object_model")  
   
- 每個[表格](../../../ado/reference/adox-api/table-object-adox.md)， [Index](../../../ado/reference/adox-api/index-object-adox.md)，和[資料行](../../../ado/reference/adox-api/column-object-adox.md)物件也會有標準的 ADO[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
+ 每一個[資料表](../../../ado/reference/adox-api/table-object-adox.md)、[索引](../../../ado/reference/adox-api/index-object-adox.md)和資料[行](../../../ado/reference/adox-api/column-object-adox.md)物件也都有標準的 ADO[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
   
 ## <a name="see-also"></a>另請參閱  
  [ADOX API 參考](../../../ado/reference/adox-api/adox-api-reference.md)   

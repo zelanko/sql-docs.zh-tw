@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7fbb516647b76a720adfd855af3f6205d3814e0b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242774"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 資料表值參數類型支援 (屬性)
@@ -25,7 +25,7 @@ ms.locfileid: "75242774"
 
   本主題提供與資料表值參數資料列集物件相關聯之 OLE DB 屬性和屬性集的相關資訊。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>屬性  
  以下為透過 IRowsetInfo::GetProperties 方法，在資料表值參數資料列集物件上公開的屬性清單。 請注意，所有資料表值參數資料列集屬性都是唯讀的。 因此，嘗試透過 IOpenRowset：： OpenRowset 或 ITableDefinitionWithConstraints：： CreateTableWithConstraints 方法將任何屬性設定為非預設值，將會導致錯誤，而且不會建立任何物件。  
   
  沒有在資料表值參數資料列集物件中實作的屬性不會列在此處。 如需屬性的完整清單，請參閱 OLE DB 文件集中的＜Windows Data Access Components＞。  

@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e0277959c1776dfbe9bd088c639f243ad6a2f7d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782523"
 ---
 # <a name="bcp_readfmt"></a>bcp_readfmt
@@ -43,7 +43,7 @@ RETCODE bcp_readfmt (
  *hdbc*  
  這是已啟用大量複製的 ODBC 連接控制代碼。  
   
- *Szformatfile 中*  
+ *szFormatFile*  
  這是包含資料檔格式值之檔案的路徑和檔案名稱。  
   
 ## <a name="returns"></a>傳回值  
@@ -54,7 +54,7 @@ RETCODE bcp_readfmt (
   
  若要保存格式檔案，請呼叫[bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)。 **Bcp_readfmt**的呼叫可以參考已儲存的格式。 如需詳細資訊，請參閱[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)。  
   
- 或者，大量複製公用程式（**bcp**）可以將使用者定義的資料格式儲存在**bcp_readfmt**可以參考的檔案中。 如需**bcp**公用程式和**bcp**資料格式檔案結構的詳細資訊，請參閱[大量匯入和匯出&#40;資料&#41;SQL Server](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
+ 或者，大量複製公用程式（**bcp**）可以將使用者定義的資料格式儲存在**bcp_readfmt**可以參考的檔案中。 如需**bcp**公用程式和**bcp**資料格式檔案結構的詳細資訊，請參閱[大量匯入和匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
   
  [Bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)的*EOption*參數的**BCPDELAYREADFMT**值會修改 bcp_readfmt 的行為。  
   

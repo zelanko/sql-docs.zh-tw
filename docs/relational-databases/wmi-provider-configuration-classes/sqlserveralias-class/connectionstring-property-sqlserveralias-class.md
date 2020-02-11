@@ -17,10 +17,10 @@ ms.assetid: 8a3692b9-3a34-42e2-b0b9-28e6bd3a7aba
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 435bb6ab0585b7f453fe035fa99be913dffbf769
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659007"
 ---
 # <a name="connectionstring-property-sqlserveralias-class"></a>ConnectionString 屬性 (SqlServerAlias 類別)
@@ -35,8 +35,8 @@ object.ConnectionString [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
- 代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 別名的[SqlServerAlias 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)物件。  
+ *目標*  
+ 代表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]別名的[SqlServerAlias 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  一個字串，可指定用來為伺服器連接別名建立連接的連接字串。  

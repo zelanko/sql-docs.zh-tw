@@ -10,10 +10,10 @@ ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 841e2991e672aa9c8a8ab74437fcd12fecdfaa2f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251672"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>卸離和附加 DQS 資料庫
@@ -22,20 +22,20 @@ ms.locfileid: "75251672"
 
   本主題描述如何卸離和附加 DQS 資料庫。  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Limitations"></a>限制事項  
+###  <a name="Limitations"></a> 限制事項  
  如需限制事項的清單，請參閱 [資料庫卸離與附加 &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)中卸離資料庫。  
   
-###  <a name="Prerequisites"></a>要求  
+###  <a name="Prerequisites"></a> 必要條件  
   
 -   請確定 DQS 中沒有任何執行中的活動或處理序。 這可以使用 **[活動監控]** 畫面加以確認。 如需有關在此畫面工作的詳細資訊，請參閱＜ [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md)＞。  
   
 -   確定沒有任何使用者登入 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
   
 -   您的 Windows 使用者帳戶必須是 SQL Server 執行個體之 db_owner 固定伺服器角色的成員，才能卸離 DQS 資料庫。  
   
@@ -50,8 +50,7 @@ ms.locfileid: "75251672"
   
 2.  在 [物件總管] 中，展開 **[資料庫]** 節點。  
   
-3.  以滑鼠右鍵按一下 **[DQS_MAIN]** 資料庫，並指向 **[工作]**，然後按一下 **[卸離]**。 
-  **[卸離資料庫]** 對話方塊隨即出現。  
+3.  以滑鼠右鍵按一下 **[DQS_MAIN]** 資料庫，並指向 **[工作]**，然後按一下 **[卸離]**。 **[卸離資料庫]** 對話方塊隨即出現。  
   
 4.  選取 **[卸除]** 資料行底下的核取方塊，然後按一下 **[確定]** 以卸離 DQS_MAIN 資料庫。  
   

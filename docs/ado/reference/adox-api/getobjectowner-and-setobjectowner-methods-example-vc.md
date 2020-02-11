@@ -1,5 +1,5 @@
 ---
-title: GetObjectOwner 和 SetObjectOwner 方法範例 （VC + +） |Microsoft Docs
+title: GetObjectOwner 和 SetObjectOwner 方法範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1cf3526681095fd5d1cc1dd67b5dd16061f601b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c16536becfcea826d9cb6e6ea251517d40ad3ded
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966369"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76934643"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner 和 SetObjectOwner 方法範例 (VC++)
-此範例示範[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)並[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)方法。 此程式碼假設有群組帳戶處理 (請參閱[群組和使用者 Append、 ChangePassword 方法範例 （VC + +）](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md)以了解如何將此群組新增到系統)。 類別目錄資料表的擁有者設為 會計。  
+這個範例示範[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)和[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)方法。 此程式碼假設群組會計存在（請參閱[群組和使用者附加、ChangePassword 方法範例（VC + +））](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) ，以瞭解如何將此群組新增至系統。 Category 資料表的擁有者已設定為會計。  
   
 ```  
 // BeginOwnersCpp.cpp  
@@ -86,7 +86,7 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
    ::CoUninitialize();  
 }  

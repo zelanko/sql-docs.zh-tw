@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd6f1d63b0de5e8ce0fda7ab4fbc727c70f67bbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022737"
 ---
-# <a name="mssqlrepl027056"></a>MSSQL_REPL027056
+# <a name="mssql_repl027056"></a>MSSQL_REPL027056
     
 ## <a name="message-details"></a>訊息詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|27056|  
 |事件來源|MSSQLSERVER|  
 |元件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -38,7 +38,7 @@ ms.locfileid: "63022737"
 ## <a name="user-action"></a>使用者動作  
  **若要解決這個問題：**  
   
-1.  減少「合併代理程式」-**DownloadGenerationsPerBatch** 和 **-UploadGenerationsPerBatch** 參數的值，以便在您解決造成此錯誤的基礎問題時讓處理繼續進行。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
+1.  減少「合併代理程式」-**DownloadGenerationsPerBatch** 和 **-UploadGenerationsPerBatch** 參數的值，以便在您解決造成此錯誤的基礎問題時讓處理繼續進行。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱  
   
     -   [處理複寫代理程式設定檔](agents/replication-agent-profiles.md)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63022737"
   
 2.  為發行集保留期限指定儘可能低的設定。 如需詳細資訊，請參閱 [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)。  
   
-3.  進行合併式複寫的維護時，請偶爾檢查與合併式複寫相關的系統資料表成長情況：**MSmerge_contents**、**MSmerge_genhistory**、**MSmerge_tombstone**、**MSmerge_current_partition_mappings** 及 **MSmerge_past_partition_mappings**。 定期重新整理資料表的索引。 如需詳細資訊，請參閱 [重新組織與重建索引](../indexes/indexes.md)。  
+3.  做為合併式複寫維護的一部份，請不時檢查與合併式複寫相關聯的系統資料表成長： **MSmerge_contents**、 **MSmerge_genhistory**、 **MSmerge_tombstone**、 **MSmerge_current_partition_mappings**和 **MSmerge_past_partition_mappings**。 定期重新整理資料表的索引。 如需詳細資訊，請參閱 [重新組織與重建索引](../indexes/indexes.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤和事件參考 &#40;複寫&#41;](errors-and-events-reference-replication.md)  

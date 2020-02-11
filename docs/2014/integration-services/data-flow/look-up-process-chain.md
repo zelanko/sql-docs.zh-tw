@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01c30422e6f0a1beb65c5f72259fce2aa8f80806
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771154"
 ---
 # <a name="look-up-process-chain"></a>查閱 ProcessChain
@@ -40,7 +40,7 @@ ms.locfileid: "62771154"
 ## <a name="lookup-options"></a>查閱選項  
  在查閱欄位中，您可以使用星號萬用字元 (*) 或結合星號萬用字元使用部分字串來篩選結果。 不過，如果您將查閱欄位保留空白，查閱作業就只會比對該欄位中的空白字串。  
   
- **Process chain**  
+ **處理序鏈結**  
  輸入您想要查閱的處理序鏈結名稱，或輸入包含星號萬用字元 (*) 的部分名稱。 或者，單獨使用星號萬用字元來包含所有處理序鏈結。  
   
  **查閱**  

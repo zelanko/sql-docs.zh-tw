@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6a0fe1fa812f42ad29b6cc9780acd896ff44bc8a
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73758288"
 ---
 # <a name="command-parameters"></a>命令參數
@@ -33,7 +33,7 @@ ms.locfileid: "73758288"
 {call SalesByCategory('Produce', ?)}  
 ```  
   
- 為了藉由減少網路流量來改善效能，除非**ICommandWithParameters：： GetParameterInfo**或**ICommandPrepare：:P 準備**為，否則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者不會自動衍生參數資訊。在執行命令之前呼叫。 這表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者不會自動執行下列動作：  
+ 為了藉由減少網路流量來改善效能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，除非在執行命令之前呼叫了**ICommandWithParameters：： GetParameterInfo**或**ICommandPrepare：:P 準備**，否則 Native Client OLE DB 提供者不會自動衍生參數資訊。 這表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者不會自動執行下列動作：  
   
 -   確認使用 **ICommandWithParameters::SetParameterInfo** 所指定之資料類型的正確性。  
   
@@ -52,14 +52,14 @@ ms.locfileid: "73758288"
 > [!NOTE]  
 >  在下列情況下，提供者不支援呼叫 **ICommandWithParameters::GetParameterInfo**：包含 FROM 子句的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UPDATE 或 DELETE 陳述式、相依於包含參數之子查詢的任何 SQL 陳述式、在比較 (like) 或定量述詞的運算式中都包含參數標記的 SQL 陳述式，或是其中一個參數為函式參數的任何查詢。 在處理 SQL 陳述式批次時，提供者也不支援針對批次內第一個陳述式之後的陳述式中的參數標記呼叫 **ICommandWithParameters::GetParameterInfo**。 不允許在 \* 命令中使用註解 (/* [!INCLUDE[tsql](../../includes/tsql-md.md)]/)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援 SQL 語句命令中的輸入參數。 在程序呼叫命令中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援輸入、輸出和輸入/輸出參數。 在執行 (只有在沒有傳回任何資料列集時) 或應用程式已用盡所有傳回的資料列集時，輸出參數值就會傳回應用程式。 若要確保傳回的值有效，請使用 **IMultipleResults** 來強制資料列集取用。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援 SQL 語句命令中的輸入參數。 在程序呼叫命令中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援輸入、輸出和輸入/輸出參數。 在執行 (只有在沒有傳回任何資料列集時) 或應用程式已用盡所有傳回的資料列集時，輸出參數值就會傳回應用程式。 若要確保傳回的值有效，請使用 **IMultipleResults** 來強制資料列集取用。  
   
- 您不需要在 DBPARAMBINDINFO 結構中指定預存程序參數的名稱。 請使用 Null 作為*pwszName*成員的值，以指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者應該忽略參數名稱，並只使用 ICommandWithParameters：：的*rgParamOrdinals*成員中指定的序數。 **SetParameterInfo**。 如果命令文字同時包含已命名和未命名的參數，您就必須在任何已命名的參數前面指定所有未命名的參數。  
+ 您不需要在 DBPARAMBINDINFO 結構中指定預存程序參數的名稱。 請使用 Null 作為*pwszName*成員的值，以指出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者應該忽略參數名稱，並只使用**ICommandWithParameters：： SetParameterInfo**的*rgParamOrdinals*成員中指定的序數。 如果命令文字同時包含已命名和未命名的參數，您就必須在任何已命名的參數前面指定所有未命名的參數。  
   
- 如果指定了預存程式參數的名稱，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者就會檢查名稱，以確保它是有效的。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者從取用者收到錯誤的參數名稱時，會傳回錯誤。  
+ 如果指定了預存程式參數的名稱， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查名稱，以確保它是有效的。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 提供者從取用者收到錯誤的參數名稱時，會傳回錯誤。  
   
 > [!NOTE]  
->  為了公開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 和使用者定義型別（UDT）的支援，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會實行新的[ISSCommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)介面。  
+>  為了公開[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 和使用者定義型別（UDT）的支援， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會實行新的[ISSCommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)介面。  
   
 ## <a name="see-also"></a>另請參閱  
  [命令](../../relational-databases/native-client-ole-db-commands/commands.md)  

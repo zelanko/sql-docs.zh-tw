@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6d122881f5283da86f66494ee2f049756d151551
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400457"
 ---
 # <a name="restore-the-master-database-in-analytics-platform-system-aps"></a>在 Analytics Platform System （AP）中還原 master 資料庫
@@ -32,7 +32,7 @@ SQL Server PDW Configuration Manager 的 [**還原主版**] 頁面可讓您從�
   
 3.  選取要還原的主要備份。  
   
-4.  按一下 **[套用]**。  
+4.  按一下 [套用]  。  
   
 5.  若要執行還原，SQL Server PDW 將會關閉所有設備服務，並中斷所有使用者的連線。 還原完成之後，SQL Server PDW 會重新開機設備服務。  
   

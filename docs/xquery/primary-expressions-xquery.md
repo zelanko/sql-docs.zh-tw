@@ -20,10 +20,10 @@ ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74200518"
 ---
 # <a name="primary-expressions-xquery"></a>主要運算式 (XQuery)

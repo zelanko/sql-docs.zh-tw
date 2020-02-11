@@ -15,10 +15,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8bd173abbb6ee355429d891a49f672bb0ac818d2
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683619"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>SQL Server 2014 快速入門安裝
@@ -57,11 +57,11 @@ ms.locfileid: "74683619"
   
      請參閱[從命令提示字元安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) ，以取得執行自動安裝的範例語法和安裝參數。  
   
--   **設定檔**  
+-   **組態檔**  
   
      請參閱[使用設定檔安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-using-a-configuration-file.md) ，以取得透過設定檔執行安裝程式的範例語法和安裝參數。  
   
--   **Sysprep.inf**  
+-   **SysPrep**  
   
      如需使用 SysPrep 安裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的程式資訊，請參閱[使用 sysprep 安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-using-sysprep.md) 。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "74683619"
 |工作描述|主題|  
 |----------------------|-----------|  
 |請檢閱硬體及軟體需求、作業系統支援、網路及網際網路考量，以及硬碟空間需求。|[安裝必要條件](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
-|檢閱 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝的安全性考量。|[安全性考慮](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
+|檢閱 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝的安全性考量。|[安全性考量](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
 |請檢閱由不同版本 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 所支援功能的詳細資料。|[功能和版本](features-supported-by-the-editions-of-sql-server-2014.md)|  
 |請判斷 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中可用版本及元件之間最好的選擇。|[SQL Server 2014 的版本和元件](../sql-server/editions-and-components-of-sql-server-2016.md)|  
 |請檢閱硬體組態，並學習如何準備 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 容錯移轉叢集安裝。|[安裝容錯移轉叢集之前](../sql-server/failover-clusters/install/before-installing-failover-clustering.md)|  
@@ -112,7 +112,7 @@ ms.locfileid: "74683619"
 |-----------------|-----------|  
 |支援 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 升級路徑的文件。|[支援的升級](../database-engine/install-windows/supported-version-and-edition-upgrades.md)|  
 |描述 Upgrade Advisor，這是用於分析 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 和 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 執行個體以識別已知升級問題的工具。|[使用 Upgrade Advisor 來準備升級](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)|  
-|描述 Distributed Replay Utility，一種可使用多個元件重新執行追蹤資料，並模擬關鍵任務工作負載的工具。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 升級前後於測試伺服器上進行重新執行作業，可讓您衡量效能差異，並找出應用程式在升級後可能會發生的不相容情況。|[使用 Distributed Replay 公用程式來準備升級](../../2014/sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md)|  
+|描述 Distributed Replay Utility，一種可使用多個元件重新執行追蹤資料，並模擬關鍵任務工作負載的工具。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 升級前後於測試伺服器上進行重新執行作業，可讓您衡量效能差異，並找出應用程式在升級後可能會發生的不相容情況。|[使用 Distributed Replay Utility 來準備升級](../../2014/sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md)|  
 |列出當您升級到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 之後會影響應用程式的一些重大變更。|[回溯相容性](backward-compatibility.md)|  
 |將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的獨立執行個體升級到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的程序主題。|[使用安裝精靈 &#40;安裝程式升級至 SQL Server 2014&#41;](../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|  
 |將 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的版本升級至另一個版本的程序主題。 如需支援版本升級方式的詳細資訊，請參閱 [支援的版本與版本升級](../database-engine/install-windows/supported-version-and-edition-upgrades.md)。|[升級至不同版本的 SQL Server 2014 &#40;安裝程式&#41;](../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)|  
@@ -131,7 +131,7 @@ ms.locfileid: "74683619"
 |您可以使用本主題管理現有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體中的節點。|[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
 |您可以使用本主題在容錯移轉叢集上安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用戶端工具。|[在 SQL Server 容錯移轉叢集上安裝用戶端工具](../sql-server/failover-clusters/install/install-client-tools-on-a-sql-server-failover-cluster.md)|  
 |檢閱 SQL 探索報告的使用狀況，以驗證電腦上所安裝之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的版本與 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 功能。|[驗證 SQL Server 安裝](../database-engine/install-windows/validate-a-sql-server-installation.md)|  
-|提供如何從安裝精靈、從命令提示字元、使用組態檔及使用 SysPrep 安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的程序性主題連結。|[安裝 how to 主題](../../2014/sql-server/install/installation-how-to-topics.md)|  
+|提供如何從安裝精靈、從命令提示字元、使用組態檔及使用 SysPrep 安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的程序性主題連結。|[安裝的使用說明主題](../../2014/sql-server/install/installation-how-to-topics.md)|  
   
 ## <a name="related-content"></a>相關內容  
  本節提供設定及解除安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的詳細資訊。  
@@ -143,14 +143,14 @@ ms.locfileid: "74683619"
 |-----------------|-----------|  
 |使用本主題中的資訊可判斷是否需要在防火牆中解除封鎖通訊埠，以允許存取 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 或 PowerPivot for SharePoint。 您可以遵循本主題所提供的步驟，設定通訊埠以及防火牆。|[設定 Windows 防火牆以允許 Analysis Services 存取](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |本主題會提供防火牆組態的概觀，並且摘要列出 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理員感興趣的資訊。|[設定 Windows 防火牆以允許 SQL Server 存取](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
-|此主題描述如何設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和具有進階安全性的 Windows 防火牆，以便在多重主目錄環境中提供給 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的網路連接。|[設定多重主目錄電腦以進行 SQL Server 存取](../../2014/sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|  
+|此主題描述如何設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和具有進階安全性的 Windows 防火牆，以便在多重主目錄環境中提供給 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的網路連接。|[設定多重主目錄電腦進行 SQL Server 存取](../../2014/sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|  
   
 ###  <a name="BKMK_Uninstalling"></a>卸載[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  下列主題描述如何手動解除安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的獨立執行個體及容錯移轉叢集執行個體：  
   
 |描述|主題|  
 |-----------------|-----------|  
-|此主題描述如何手動解除安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的獨立執行個體。|[卸載 SQL Server 2014](../sql-server/install/uninstall-sql-server.md)|  
+|此主題描述如何手動解除安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的獨立執行個體。|[解除安裝 SQL Server 2014](../sql-server/install/uninstall-sql-server.md)|  
 |此主題描述如何解除安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體。|[&#40;安裝程式移除 SQL Server 容錯移轉叢集實例&#41;](../sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md)|  
 |本主題提供有關在解除安裝 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 或只解除安裝 DQS 伺服器之後，手動移除 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (DQS) 物件的資訊。|[移除 Data Quality Server 物件](../../2014/sql-server/install/remove-data-quality-server-objects.md)|  
   

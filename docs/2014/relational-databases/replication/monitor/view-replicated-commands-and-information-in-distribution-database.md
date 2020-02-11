@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86ced6fd281da2e47ddaa31cab7fa977767b98d6
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74164960"
 ---
 # <a name="view-replicated-commands-and-other-information-in-the-distribution-database-replication-transact-sql-programming"></a>在散發資料庫中檢視複寫的命令和其他資訊 (複寫 Transact-SQL 程式設計)
@@ -33,9 +33,9 @@ ms.locfileid: "74164960"
   
 ### <a name="to-view-replicated-commands-in-the-distribution-database-from-a-specific-article-or-from-a-specific-database-published-using-transactional-replication"></a>若要在散發資料庫中，檢視從使用異動複寫所發行之特定發行項或特定資料庫複寫的命令  
   
-1.  (選擇性) 在發行集資料庫的「發行者」端，執行 [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)。 指定 **\@發行**集和 **\@文章**。 請注意結果集中 **article id** 的值。  
+1.  (選擇性) 在發行集資料庫的「發行者」端，執行 [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)。 指定** \@發行**集** \@和**發行項。 請注意結果集中 **article id** 的值。  
   
-2.  在散發資料庫的「散發者」端，執行 [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql)。 選擇性針對 **\@article_id**指定步驟2中的發行項識別碼。 選擇性針對 **\@publisher_database_id**指定發行集資料庫的識別碼，這可以從[sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)目錄檢視中的**database_id**資料行取得。  
+2.  在散發資料庫的「散發者」端，執行 [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql)。 選擇性針對** \@article_id**，指定步驟2中的發行項識別碼。 選擇性針對** \@publisher_database_id**指定發行集資料庫的識別碼，這可以從[sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)目錄檢視中的 [ **database_id** ] 資料行取得。  
   
 ## <a name="see-also"></a>另請參閱  
  [以程式設計方式監視複寫](../monitoring-replication.md)  

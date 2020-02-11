@@ -15,15 +15,16 @@ ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7cfcc3f4d65901da34152a6fce21b436750c15fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68118505"
 ---
 # <a name="clr-integration-security"></a>CLR 整合安全性
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 與 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 的整合安全性模型可管理及保護在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內執行之不同類型 CLR 及非 CLR 物件的存取權。 這些物件可由 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式或在伺服器中執行的其他 CLR 物件呼叫。 這些物件之間的呼叫稱為連結。 針對這些物件所執行的安全性檢查類型會因所涉及的連結類型而不同。  
   
  CLR 整合安全性模型具有下列目標：  
@@ -36,7 +37,8 @@ ms.locfileid: "68118505"
   
 -   使用者定義程式碼不應該透過在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序中執行，取得系統資源的未經授權存取權。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 現在會整合 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以使用者為基礎的安全性模型與 CLR 以程式碼存取權為基礎的安全性模型。 本節將討論這種結合方法對於安全性的一些優點。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 現在會整合 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以使用者為基礎的安全性模型與 CLR 以程式碼存取權為基礎的安全性模型。 本節將討論這種結合方法對於安全性的一些優點。  
   
  下表列出本節的主題。  
   
@@ -55,7 +57,7 @@ ms.locfileid: "68118505"
  [允許部分信任的呼叫端](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  討論 Managed 方法叫用其他組件所包含之類別中的方法時所引發的問題。  
   
- [應用程式定義域和 CLR 整合安全性](/sql/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
+ [應用程式網域和 CLR 整合安全性](/sql/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
  描述如何將組件載入應用程式網域中。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 64dc9129373a57de2924b2983e14266a67d4915e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873516"
 ---
 # <a name="write-international-transact-sql-statements"></a>撰寫國際通用的 Transact-SQL 陳述式
@@ -36,15 +36,15 @@ ms.locfileid: "62873516"
   
     -   ADO、OLE DB 和 ODBC 應用程式應該使用以下形式的 ODBC 時間戳記、日期和時間逸出子句：  
   
-         **{ts'** yyyy **-** _mm_ **-** _ddhh_ **:** _mm_ **:** _ss_[ **。** _fff_] **'}** 例如： **{ts'** 1998年 **-** 09 **-** 24 10 **:** 02 **:** 20 **'}**  
+         **{ts '** yyyy**-**_mm_**-**_ddhh_**：**_mm_**：**_ss_[**。**_fff_]**'}** 例如： **{ts '** 1998**-** 09**-** 24 10 **：** 02 **：** 20 **'}**  
   
-         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** 例如： **{ d'** 1998 **-** 09 **-** 24 **'}**  
+         **{d '** _yyyy_ **-** _mm_ **-** _dd_ **'}** 例如： **{d '** 1998**-** 09**-** 24 **'}**  
   
-         **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** such as: **{ t'** 10:02:20 **'}**  
+         **{t '** _hh_ **：** _mm_ **：** _ss_ **'}** 例如： **{t '** 10:02:20 **'}**  
   
     -   使用其他 API 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼、預存程序和觸發程序的應用程式，應該使用未分隔的數值字串。 例如 *yyyymmdd* 為 19980924。  
   
-    -   使用其他 Api 的應用程式或[!INCLUDE[tsql](../../includes/tsql-md.md)]指令碼、 預存程序和觸發程序應該使用的 CONVERT 陳述式使用明確樣式參數之間的所有轉換`time`， `date`， `smalldate`， `datetime`，**datetime2**，和`datetimeoffset`資料型別和字元字串資料類型。 例如，下列陳述式在所有日期格式連接設定下的解譯都是一樣的：  
+    -   使用其他 api 或[!INCLUDE[tsql](../../includes/tsql-md.md)]腳本、預存程式和觸發程式的應用程式，應該對`time`、 `date`、 `smalldate`、 `datetime`、 **datetime2**和`datetimeoffset`資料類型與字元字串資料類型之間的所有轉換使用明確樣式參數的 CONVERT 語句。 例如，下列陳述式在所有日期格式連接設定下的解譯都是一樣的：  
   
         ```  
         SELECT *  

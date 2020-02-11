@@ -15,15 +15,15 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632857"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant 總覽
 
-Data Migration Assistant （DMA）會偵測可能影響新版本 SQL Server 或 Azure SQL Database 中資料庫功能的相容性問題，以協助您升級至新式資料平臺。 DMA 針對您的目標環境建議效能和可靠性，並可讓您將您的架構、資料和非內含性物件從來源伺服器移至目標伺服器。
+Data Migration Assistant （DMA）會偵測可能影響新版本 SQL Server 或 Azure SQL Database 中資料庫功能的相容性問題，以協助您升級至新式資料平臺。 DMA 可為您的目標環境提供效能和可靠性改善的建議，並可讓您將結構描述、資料和非內含的物件從來源伺服器移至目標伺服器。
 
 > [!NOTE]
 > 針對大型遷移（根據資料庫的數量和大小），我們建議您使用[Azure 資料庫移轉服務](/azure/dms/dms-overview)，其可大規模地遷移資料庫。
@@ -32,15 +32,15 @@ Data Migration Assistant （DMA）會偵測可能影響新版本 SQL Server 或 
 
 若要安裝 DMA，請從[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=53595)下載最新版本的工具，然後執行**DataMigrationAssistant .msi**檔案。
 
-## <a name="capabilities"></a>Capabilities
+## <a name="capabilities"></a>功能
 
-- 評估內部部署 SQL Server 實例遷移至 Azure SQL database。 評估工作流程可協助您偵測下列可能會影響 Azure SQL database 遷移的問題，並提供如何解決這些問題的詳細指引。
+- 評估內部部署 SQL Server 實例遷移至 Azure SQL database。評估工作流程可協助您偵測下列可能會影響 Azure SQL database 遷移的問題，並提供如何解決這些問題的詳細指引。
 
-  - 遷移封鎖問題：探索封鎖將內部部署 SQL Server 資料庫移轉至 Azure SQL Database 的相容性問題。 DMA 提供的建議可協助您解決這些問題。
+  - 遷移封鎖問題：探索封鎖將內部部署 SQL Server 資料庫移轉至 Azure SQL Database 的相容性問題。DMA 提供的建議可協助您解決這些問題。
 
-  - 部分支援或不支援的功能：偵測目前在來源 SQL Server 實例上使用的部分支援或不支援的功能。 DMA 提供一組完整的建議、Azure 中可用的替代方法，以及減少步驟，讓您可以將它們併入您的遷移專案。
+  - 部分支援或不支援的功能：偵測目前在來源 SQL Server 實例上使用的部分支援或不支援的功能。DMA 提供一組完整的建議、Azure 中可用的替代方法，以及減少步驟，讓您可以將它們併入您的遷移專案。
 
-- 找出可能影響升級至內部部署 SQL Server 的問題。 這些會描述為相容性問題，並以下列類別進行組織：
+- 找出可能影響升級至內部部署 SQL Server 的問題。這些會描述為相容性問題，並以下列類別進行組織：
 
   - 重大變更
   - 行為變更
@@ -50,7 +50,7 @@ Data Migration Assistant （DMA）會偵測可能影響新版本 SQL Server 或 
 
   - 效能
   - 安全性
-  - 儲存空間
+  - 儲存體
 
 - 將內部部署 SQL Server 實例遷移至裝載于內部部署或 Azure 虛擬機器（VM）且可從內部部署網路存取的新式 SQL Server 實例。 您可以使用 VPN 或其他技術來存取 Azure VM。 遷移工作流程可協助您遷移下列元件：
 
@@ -67,7 +67,7 @@ Data Migration Assistant （DMA）會偵測可能影響新版本 SQL Server 或 
 
   - 資訊問題：偵測在來源套件中使用的部分支援或已淘汰的功能。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 若要執行評量，您必須是 SQL Server**系統管理員（sysadmin** ）角色的成員。
 
@@ -83,9 +83,9 @@ DMA 會取代所有舊版的 SQL Server Upgrade Advisor，而且應該用於大�
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- Windows 上的 SQL Server 2017
+-  Windows 上的 SQL Server 2017
 
-**攻擊**
+**目標**
 
 - SQL Server 2012
 - SQL Server 2014

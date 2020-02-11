@@ -20,12 +20,12 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc9dd813736a2cc06f3108a0b3402e4cef99815e
-ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
+ms.openlocfilehash: 32c5e56526b0e3ee06dc570e35b81bdfb4b14ce7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761093"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761842"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,21 +34,21 @@ ms.locfileid: "74761093"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**檔案名**|**sysname**|主體的名稱，它在資料庫中是唯一的。|  
+|**name**|**sysname**|主體的名稱，它在資料庫中是唯一的。|  
 |**principal_id**|**int**|主體的識別碼，它在資料庫中是唯一的。|  
 |**type**|**char （1）**|主體類型：<br /><br /> A = 應用程式角色<br /><br /> C = 對應至憑證的使用者<br /><br /> E = 來自 Azure Active Directory 的外部使用者<br /><br /> G = Windows 群組<br /><br /> K = 對應至非對稱金鑰的使用者<br /><br /> R = 資料庫角色<br /><br /> S = SQL 使用者<br /><br /> U = Windows 使用者<br /><br /> X = 來自 Azure Active Directory 群組或應用程式的外部群組|  
 |**type_desc**|**Nvarchar （60）**|主體類型的描述。<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
 |**default_schema_name**|**sysname**|當 SQL 名稱未指定結構描述時所要使用的名稱。 非類型 S、U 或 A 的主體，則為 NULL。|  
-|**create_date**|**從中**|建立主體的時間。|  
-|**modify_date**|**從中**|上次修改主體的時間。|  
-|**owning_principal_id**|**int**|擁有這個主體的主體識別碼。 資料庫角色以外的所有主體都必須由**dbo**所擁有。|  
+|**create_date**|**datetime**|建立主體的時間。|  
+|**modify_date**|**datetime**|上次修改主體的時間。|  
+|**owning_principal_id**|**int**|擁有這個主體的主體識別碼。 根據預設，所有固定資料庫角色都是由**dbo**所擁有。|  
 |**sid**|**Varbinary （85）**|主體的 SID (安全性識別碼)。  如果是 SYS 和 INFORMATION SCHEMAS，則為 NULL|  
-|**is_fixed_role**|**一些**|如果是 1，此資料列代表下列其中一個固定資料庫角色的項目：db_owner、db_accessadmin、db_datareader、db_datawriter、db_ddladmin、db_securityadmin、db_backupoperator、db_denydatareader、db_denydatawriter。|  
-|**authentication_type**|**int**|**適用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更新版本。<br /><br /> 代表驗證類型。 以下是可能的值及其描述。<br /><br /> 0：無驗證<br />1：實例驗證<br />2：資料庫驗證<br />3： Windows 驗證|  
-|**authentication_type_desc**|**Nvarchar （60）**|**適用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更新版本。<br /><br /> 驗證類型的描述。 以下是可能的值及其描述。<br /><br /> 無：無驗證<br />實例：實例驗證<br />資料庫：資料庫驗證<br />WINDOWS： Windows 驗證|  
-|**default_language_name**|**sysname**|**適用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更新版本。<br /><br /> 表示此主體的預設語言。|  
-|**default_language_lcid**|**int**|**適用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更新版本。<br /><br /> 表示此主體的預設 LCID。|  
-|**allow_encrypted_value_modifications**|**一些**|**適用**于： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]和更新版本[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，。<br /><br /> 在大量複製作業時隱藏伺服器上的密碼編譯中繼資料檢查。 這可讓使用者在不解密資料的情況下，使用 Always Encrypted 在資料表或資料庫之間大量複製已加密的資料。 預設值為 OFF。 |      
+|**is_fixed_role**|**bit**|如果是 1，此資料列代表下列其中一個固定資料庫角色的項目：db_owner、db_accessadmin、db_datareader、db_datawriter、db_ddladmin、db_securityadmin、db_backupoperator、db_denydatareader、db_denydatawriter。|  
+|**authentication_type**|**int**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 代表驗證類型。 以下是可能的值及其描述。<br /><br /> 0：無驗證<br />1：實例驗證<br />2：資料庫驗證<br />3： Windows 驗證|  
+|**authentication_type_desc**|**Nvarchar （60）**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 驗證類型的描述。 以下是可能的值及其描述。<br /><br /> 無：無驗證<br />實例：實例驗證<br />資料庫：資料庫驗證<br />WINDOWS： Windows 驗證|  
+|**default_language_name**|**sysname**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 表示此主體的預設語言。|  
+|**default_language_lcid**|**int**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 表示此主體的預設 LCID。|  
+|**allow_encrypted_value_modifications**|**bit**|**適用於**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 在大量複製作業時隱藏伺服器上的密碼編譯中繼資料檢查。 這可讓使用者在不解密資料的情況下，使用 Always Encrypted 在資料表或資料庫之間大量複製已加密的資料。 預設值為 OFF。 |      
   
 ## <a name="remarks"></a>備註  
  *PasswordLastSetTime*屬性可用於 SQL Server 的所有支援設定，但只有當 SQL Server 在 Windows Server 2003 或更新版本上執行，而且 CHECK_POLICY 和 CHECK_EXPIRATION 都已啟用時，才可以使用其他屬性。 如需詳細資訊，請參閱[密碼原則](../../relational-databases/security/password-policy.md)。

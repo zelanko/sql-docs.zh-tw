@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 932bb271d7d38a1dfec411dca4ed5b1696ab924f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73763204"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  IBCPSession2：： BCPSetBulkMode 提供[IBCPSession：： &#40;BCPColFmt OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)的替代方法，以指定資料行格式。 不同于 IBCPSession：： BCPColFmt，它會設定個別的資料行格式屬性，IBCPSession2：： BCPSetBulkMode 會設定所有屬性。  
+  IBCPSession2：： BCPSetBulkMode 提供[IBCPSession：： BCPColFmt &#40;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)的替代方法，OLE DB&#41;來指定資料行格式。 不同于 IBCPSession：： BCPColFmt，它會設定個別的資料行格式屬性，IBCPSession2：： BCPSetBulkMode 會設定所有屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -72,7 +72,7 @@ HRESULT BCPSetBulkMode (
   
  下表將列出 *property* 參數的常數。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應至 BCP 中的-c 選項。EXE，並將*eUserDataType*屬性設定為**BCP_TYPE_SQLCHARACTER**來 IBCPSession：： BCPColFmt。|  
 |BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應至 BCP 中的-w 選項。將*eUserDataType*屬性設定為**BCP_TYPE_SQLNCHAR**的 EXE 和 IBCPSession：： BCPColFmt。|  

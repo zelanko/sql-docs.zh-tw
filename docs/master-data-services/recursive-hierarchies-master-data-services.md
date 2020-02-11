@@ -14,17 +14,17 @@ ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ac3df398e486f143b871c736e6f2fee643092b7f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728959"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>遞迴階層 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，遞迴階層是包含遞迴關聯性的衍生階層。 當實體有基於實體本身的網域屬性時，就會有遞迴關聯性。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，遞迴階層是包含遞迴關聯性的衍生階層。 當實體有基於實體本身的網域屬性時，就會有遞迴關聯性。  
   
 ## <a name="recursive-hierarchy-example"></a>遞迴階層範例  
  典型的遞迴階層範例是組織結構。 在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以建立具有稱為經理之網域屬性的員工實體來進行。 經理屬性是從員工清單中擴展。 在這個範例組織中，所有員工都可以是經理。  
@@ -49,7 +49,7 @@ ms.locfileid: "73728959"
   
 -   衍生階層不能包含一個以上的遞迴關聯性。 但是可以擁有其他衍生關聯性 (例如，包含遞迴經理與員工關聯性的衍生階層也可以擁有國家 (地區) 與經理及員工與商店的關聯性)。  
   
--   不能指派成員權限 (在 [階層成員] 索引標籤上) 給遞迴階層中的成員。  
+-   不能指派成員權限 (在 [階層成員]**** 索引標籤上) 給遞迴階層中的成員。  
   
 -   遞迴階層不能包含循環關聯性。 例如，如果 Sandeep 是 Katherine 的經理，Katherine 不能做為 Sandeep 的經理。 此外，Katherine 不能管理她自己。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73728959"
   
 ## <a name="related-content"></a>相關內容  
   
--   [網域屬性 &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [以網域為基礎的屬性 &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
 -   [衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   

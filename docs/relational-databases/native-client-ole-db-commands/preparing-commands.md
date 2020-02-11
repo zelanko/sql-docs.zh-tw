@@ -17,18 +17,19 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5f0e582d0e6ca7e2087f35fa9b8e5005478d0a43
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73790270"
 ---
 # <a name="preparing-commands"></a>準備命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援針對單一命令的最佳化多次執行進行命令準備。不過，命令準備會產生負擔，而且取用者不需要準備命令，即可多次執行命令。 一般而言，如果某個命令將執行三次以上，您就應該準備此命令。  
   
- 基於效能的考量，命令準備會延遲到執行命令為止。 這是預設行為。 在執行命令或執行中繼屬性作業之前，無法得知正在準備之命令中的任何錯誤。 將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 屬性 SSPROP_DEFERPREPARE 設定為 FALSE 可以關閉此預設行為。  
+ 基於效能的考量，命令準備會延遲到執行命令為止。 此為預設行為。 在執行命令或執行中繼屬性作業之前，無法得知正在準備之命令中的任何錯誤。 將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 屬性 SSPROP_DEFERPREPARE 設定為 FALSE 可以關閉此預設行為。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，直接執行命令 (但不先準備命令) 時，系統會建立並快取執行計畫。 如果再次執行了 SQL 陳述式，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會具有高效率演算法，可比對新的陳述式與快取中的現有執行計畫，然後針對該陳述式重複使用此執行計畫。  
   

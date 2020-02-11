@@ -15,40 +15,40 @@ ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 748347b0a5b20f22cf7191213c59d2879df67522
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68118721"
 ---
 # <a name="c-data-types-in-odbc"></a>ODBC 中的 C 資料類型
-ODBC 定義的 C 資料類型所使用的應用程式變數和其對應的型別識別項。 這些使用繫結至結果集資料行和陳述式參數的緩衝區。 例如，假設應用程式想要擷取成字元格式的結果集資料行中的資料。 它會宣告變數與 SQLCHAR * 資料類型，並將此變數繫結 SQL_C_CHAR 的型別識別項的結果集資料行。 如需 C 資料類型和類型識別碼的完整清單，請參閱[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
+ODBC 會定義應用程式變數及其對應類型識別碼所使用的 C 資料類型。 這些是由系結至結果集資料行和語句參數的緩衝區所使用。 例如，假設應用程式想要從結果集資料行中取出字元格式的資料。 它會宣告具有 SQLCHAR * 資料類型的變數，並將此變數系結至具有 SQL_C_CHAR 之類型識別碼的結果集資料行。 如需 C 資料類型和類型識別碼的完整清單，請參閱[附錄 D：資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
- ODBC 也定義成 C 資料類型從每個 SQL 資料類型的預設對應。 例如，資料來源中的 2 位元組的整數會對應至應用程式中的 2 位元組的整數。 若要使用預設對應，應用程式會指定 SQL_C_DEFAULT 型別識別項。 不過，不建議使用這個識別項的互通性的原因。  
+ ODBC 也會定義從每個 SQL 資料類型到 C 資料類型的預設對應。 例如，資料來源中的2位元組整數會對應到應用程式中的2位元組整數。 若要使用預設對應，應用程式會指定 SQL_C_DEFAULT 類型識別碼。 不過，基於互通性的理由，不建議使用此識別碼。  
   
- 在 ODBC 中定義的所有整數 C 資料類型*1.x*所簽署。 不帶正負號的 C 資料類型和其對應的型別識別項，已新增 ODBC 2.0 中。 因此，應用程式和驅動程式需要特別小心處理*1.x*版本。  
+ *已簽署 ODBC 1.x*中定義的所有整數 C 資料類型。 ODBC 2.0 中已加入不帶正負號的 C 資料類型及其對應的類型識別碼。 因此，處理*1.x 版時*，應用程式和驅動程式必須特別小心。  
   
 ## <a name="c-data-type-extensibility"></a>C 資料類型擴充性  
- 在 ODBC 3.8，您可以指定驅動程式特有的 C 資料類型。 這可讓您將 ODBC 應用程式中的特定驅動程式的 C 類型作為繫結 SQL 型別，當您呼叫[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)， [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)，或[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)。 這可能是適用於支援新的伺服器類型，因為現有的 C 資料類型可能無法正確呈現新的伺服器資料類型。 使用驅動程式特有的 C 類型可以增加驅動程式可以執行的轉換數目。  
+ 在 ODBC 3.8 中，您可以指定驅動程式特定的 C 資料類型。 當您呼叫[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)、 [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)或[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)時，這可讓您將 SQL 類型系結為 ODBC 應用程式中的驅動程式特有 C 類型。 這對支援新的伺服器類型很有用，因為現有的 C 資料類型可能無法正確呈現新的伺服器資料類型。 使用驅動程式特定的 C 類型可能會增加驅動程式可執行檔轉換數目。  
   
- 例如，假設資料庫管理系統 (DBMS) 導入新的 SQL 型別**DATETIMEOFFSET**，以代表的日期和時間與時區資訊。 沒有特定的 C 類型會出在該值與 ODBC **DATETIMEOFFSET**。 應用程式必須繫結**DATETIMEOFFSET** SQL_C_BINARY 以及轉換到使用者定義的資料類型。 從 C 資料類型擴充性與符合 ODBC 3.8，驅動程式可以定義新的對應的 C 類型。 例如，針對新 SQL 型別 DATETIMEOFFSET，驅動程式可以定義新對應的 C 類型例如 SQL_C_DATETIMEOFFSET。 然後，應用程式可以做為驅動程式特有的 C 類型繫結的新的 SQL 型別。  
+ 例如，假設資料庫管理系統（DBMS）引進了新的 SQL 型別**DATETIMEOFFSET**，以代表時區資訊的日期和時間。 在 ODBC 中，不會有任何特定 C 類型雖然該值至**DATETIMEOFFSET**。 應用程式必須將**DATETIMEOFFSET**系結為 SQL_C_BINARY，並將它轉換成使用者定義的資料類型。 從具有 C 資料類型擴充性的 ODBC 3.8 開始，驅動程式可以定義新的對應 C 類型。 例如，針對新的 SQL 類型 DATETIMEOFFSET，驅動程式可以定義新的對應 C 類型，例如 SQL_C_DATETIMEOFFSET。 然後，應用程式可以將新的 SQL 類型系結為驅動程式特有的 C 類型。  
   
- C 資料類型會定義驅動程式中，如下所示：  
+ C 資料類型定義于驅動程式中，如下所示：  
   
--   應用程式中，ODBC 驅動程式和驅動程式管理員 ODBC 相容性層級為 3.8 （或更新版本）。  
+-   應用程式的 ODBC 相容性層級（ODBC 驅動程式和驅動程式管理員）為3.8 （或更高版本）。  
   
--   驅動程式特有的 C 類型的資料範圍是 0x4000 和 0x7FFF 之間。  
+-   驅動程式特定 C 類型的資料範圍是介於0x4000 和0x7FFF 之間。  
   
--   驅動程式定義對應至 C 類型的資料結構。  做法是在驅動程式特有的 SDK。  
+-   驅動程式會定義對應至 C 類型之資料的結構。  這可以在驅動程式特定的 SDK 中完成。  
   
- 驅動程式管理員將不會驗證 0x4000 和 0x7FFF; 的範圍中定義的 C 類型驅動程式將會執行驗證和任何資料類型轉換。 但是，如果傳遞給驅動程式管理員 C 類型的資料範圍之間 0x8000 和 0xFFFF 或 0x0000 和 0x3FFF 之間，驅動程式管理員會驗證的 C 資料類型。  
+ 驅動程式管理員不會驗證0x4000 和0x7FFF 範圍內定義的 C 類型;驅動程式將會執行驗證和任何資料類型轉換。 但是，如果傳遞給驅動程式管理員的 C 類型的資料範圍是介於0x0000 和0x3FFF 之間，或是在0x8000 與0xFFFF 之間，驅動程式管理員將會驗證 C 資料類型。  
   
 > [!NOTE]  
->  驅動程式特有的 C 資料類型都應該驅動程式文件中所述。  
+>  驅動程式特有的 C 資料類型應在驅動程式檔中說明。  
   
- 若要指定 ODBC 相容性層級的 3.8，應用程式會呼叫[SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md) SQL_ATTR_ODBC_VERSION 屬性設為**SQL_OV_ODBC3_80**。 若要判斷驅動程式版本，應用程式會呼叫**SQLGetInfo** SQL_DRIVER_ODBC_VER 使用。  
+ 若要指定 ODBC 相容性層級3.8，應用程式會呼叫[SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md) ，並將 SQL_ATTR_ODBC_VERSION 屬性設為**SQL_OV_ODBC3_80**。 為了判斷驅動程式的版本，應用程式會使用 SQL_DRIVER_ODBC_VER 來呼叫**SQLGetInfo** 。  
   
- 如需有關 ODBC 3.8 的詳細資訊，請參閱[What's New in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)。  
+ 如需 ODBC 3.8 的詳細資訊，請參閱[odbc 3.8 的新功能](../../../odbc/reference/what-s-new-in-odbc-3-8.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)

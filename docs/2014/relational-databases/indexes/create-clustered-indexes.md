@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155377"
 ---
 # <a name="create-clustered-indexes"></a>建立叢集索引
@@ -34,7 +34,7 @@ ms.locfileid: "63155377"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法在資料表上建立叢集索引：**  
   
@@ -69,7 +69,7 @@ ms.locfileid: "63155377"
   
 -   叢集索引的索引鍵所包含的 `varchar` 資料行不能在 ROW_OVERFLOW_DATA 配置單位中有現有的資料。 如果在 `varchar` 資料行上建立叢集索引，且現有的資料在 IN_ROW_DATA 配置單位中，則後續在可能發送資料非資料列的資料行上進行的插入或更新動作會失敗。 若要取得可能包含資料列溢位資料之資料表的相關資訊，請使用 [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql) 動態管理函數。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
@@ -86,7 +86,7 @@ ms.locfileid: "63155377"
   
 4.  按一下 [索引鍵資料行]  下的 [新增...]  。  
   
-5.  在 [從 <資料表名稱>  選取資料行]  對話方塊中，選取要加入叢集索引之資料表資料行的核取方塊。  
+5.  在 [**從**_Table_name_選取資料行] 對話方塊中，選取要加入至叢集索引之資料表資料行的核取方塊。  
   
 6.  按一下 [確定]  。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "63155377"
   
 4.  以滑鼠右鍵按一下上面建立的新資料表，然後按一下 [設計]  。  
   
-5.  在 [資料表設計工具]  功能表中，按一下 [索引/索引鍵]  。  
+5.  在 [資料表設計工具]  功能表上，按一下 [索引/索引鍵]  。  
   
 6.  在 [索引/索引鍵]  對話方塊中，按一下 [加入]  。  
   
@@ -110,9 +110,9 @@ ms.locfileid: "63155377"
   
 8.  在方格中，選取 [建立成 CLUSTERED]  ，然後從屬性右邊的下拉式清單中選擇 [是]  。  
   
-9. 按一下 [ **關閉**]。  
+9. 按一下 [關閉]  。  
   
-10. 在 [檔案]  功能表上，按一下 [儲存 _資料表名稱_]  。  
+10. **在 [檔案**] 功能表上，按一下 [**儲存**_table_name_]。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

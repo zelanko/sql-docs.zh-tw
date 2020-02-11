@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bb52fc5c8a3789cc945a2ea850d0849335917e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896629"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>開發具有非同步輸出的自訂轉換元件
@@ -37,14 +37,15 @@ ms.locfileid: "62896629"
   
  可供具有同步輸出之元件使用之上游元件中的資料行會自動提供給此元件的下游元件使用。 因此，具有同步輸出的元件不必定義任何輸出資料行，也可提供資料行和資料列給下一個元件。 就另一方面而言，具有非同步輸出的元件必須定義輸出資料行，並提供資料列給下游元件。 因此，具有非同步輸出的元件在設計和執行階段會有更多的工作要執行，而且元件開發人員會有更多的程式碼要實作。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含數個具有非同步輸出的轉換。 例如，排序轉換會先要求它的所有資料列，然後才能加以排序，並使用非同步輸出達成這個結果。 當它收到所有資料列以後，它會加以排序並將其加入到輸出中。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包含數個具有非同步輸出的轉換。 例如，排序轉換會先要求它的所有資料列，然後才能加以排序，並使用非同步輸出達成這個結果。 當它收到所有資料列以後，它會加以排序並將其加入到輸出中。  
   
  本章節將詳細說明如何開發具有非同步輸出的轉換。 如需來源元件開發的詳細資訊，請參閱[開發自訂來源元件](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)。  
   
 ## <a name="design-time"></a>設計階段  
   
 ### <a name="creating-the-component"></a>建立元件  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> 物件上的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 屬性會識別輸出為同步或非同步。 若要建立非同步輸出，請將輸出加入到元件中，並將 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> 設定為零。 設定這個屬性也會決定資料流程工作是否會同時針對元件的輸入和輸出來配置 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 物件，或者是否會配置單一緩衝區並在兩個物件之間共用。  
+ 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> 物件上的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 屬性會識別輸出為同步或非同步。 若要建立非同步輸出，請將輸出加入到元件中，並將 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> 設定為零。 設定這個屬性也會決定資料流程工作是否會同時針對元件的輸入和輸出來配置 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 物件，或者是否會配置單一緩衝區並在兩個物件之間共用。  
   
  下列範例程式碼顯示一個元件，此元件會在它的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 實作中建立非同步輸出。  
   
@@ -161,7 +162,8 @@ End Sub
 #### <a name="adding-output-rows"></a>加入輸出資料列  
  不論您在收到資料列時還是在收到所有資料列以後，將資料列加入到輸出緩衝區，您都可以在輸出緩衝區上呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddRow%2A> 方法來這樣做。 當您加入此資料列以後，您會在新的資料列中設定每一個資料行的值。  
   
- 因為輸出緩衝區中的資料行有時會多於此元件之輸出資料行集合中的資料行，所以您必須先找出緩衝區內適當資料行的索引，然後才可以設定它的值。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> 屬性的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> 方法會傳回緩衝區資料列中具有指定之歷程識別碼的資料行索引，然後會用它來將此值指派給緩衝區資料行。  
+ 因為輸出緩衝區中的資料行有時會多於此元件之輸出資料行集合中的資料行，所以您必須先找出緩衝區內適當資料行的索引，然後才可以設定它的值。 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> 屬性的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> 方法會傳回緩衝區資料列中具有指定之歷程識別碼的資料行索引，然後會用它來將此值指派給緩衝區資料行。  
   
  在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> 方法或 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> 方法以前所呼叫的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法是 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> 屬性可用時的第一個方法，以及在輸入和輸出緩衝區內尋找資料行之索引的第一個機會。  
   
@@ -318,7 +320,7 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [開發具有同步輸出的自訂轉換元件](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   

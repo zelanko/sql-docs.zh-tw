@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85eb934b93d22acc2534d1eb34aa967cbb4f2714
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774250"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>檢視記錄傳送報表 (SQL Server Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "62774250"
   
 |角色|顯示的資訊|  
 |----------|---------------------------|  
-|監視器|使用此伺服器執行個體作為其監視伺服器的所有主要伺服器及次要伺服器，其名稱及狀態。|  
+|監視|使用此伺服器執行個體作為其監視伺服器的所有主要伺服器及次要伺服器，其名稱及狀態。|  
 |Primary|對於每一個主要資料庫，此為目前伺服器執行個體 (作為主要伺服器) 的狀態與名稱，還有主要資料庫名稱。 報表會顯示備份作業 (儲存在主要伺服器的本機上) 的狀態。<br /><br /> 報表也會針對每一個對應的次要伺服器，各顯示一個資料列。 如果組態使用監視伺服器，且預存程序可以連接到監視伺服器，這些資料列會顯示最新記錄備份的複製狀態及還原狀態。|  
 |次要|對於每一個次要資料庫，此為目前伺服器執行個體 (作為次要伺服器) 的狀態與名稱，還有次要資料庫名稱。<br /><br /> 報表會顯示次要伺服器中的複製及還原作業的狀態。<br /><br /> 報表也會針對所對應的主要伺服器，顯示一個資料列。 如果組態使用監視伺服器，且預存程序可以連接到監視伺服器，此資料列會顯示最新記錄備份的狀態。|  
   

@@ -15,13 +15,13 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ec8ededac012ccb2b3d4b62fc40d84132a6fb882
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056654"
 ---
-# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>使用 DMA 評估企業和合併評估報告
+# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>使用 DMA 評估企業及整合評估報告
 
 下列逐步指示可協助您使用 Data Migration Assistant 來執行成功調整規模的評估，以升級內部部署 SQL Server 或 Azure Vm 上執行的 SQL Server，或遷移至 Azure SQL Database。
 
@@ -33,7 +33,7 @@ ms.locfileid: "74056654"
   - [PowerShell](https://aka.ms/wmf5download) 5.0 版或更新版本。
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) 4.5 或更新版本。
   - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 或更新版本。
-  - [Power BI 桌面](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)。
+  - [Power BI 桌面](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)]。
   - [Azure PowerShell 模組](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - 下載並解壓縮：
   - [DMA 會報告 Power BI 範本](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip)。
@@ -58,7 +58,7 @@ ms.locfileid: "74056654"
    > 其包含的資料夾和 .psm1 檔案必須具有相同的名稱。
 
    > [!IMPORTANT]
-   > 將 PowerShell 檔案儲存到 WindowsPowerShell 目錄之後，您可能需要解除封鎖這些檔案，以確保模組正確載入。 若要解除封鎖 PowerShell 檔案，請在檔案上按一下滑鼠右鍵，選取 [**屬性**]，選取 [**解除封鎖**] 文字方塊，然後選取 **[確定]** 。
+   > 將 PowerShell 檔案儲存到 WindowsPowerShell 目錄之後，您可能需要解除封鎖這些檔案，以確保模組正確載入。 若要解除封鎖 PowerShell 檔案，請在檔案上按一下滑鼠右鍵，選取 [**屬性**]，選取 [**解除封鎖**] 文字方塊，然後選取 **[確定]**。
 
    ![.psm1 檔案屬性](../dma/media//dma-consolidatereports/dma-psm1-file-properties.png)
 
@@ -92,7 +92,7 @@ ms.locfileid: "74056654"
 
 建立名為**EstateInventory**的資料庫和名為**DatabaseInventory**的資料表。 包含此清查資料的資料表可以有任意數目的資料行，只要有下列四個數據行：
 
-- ssSqlProfiler
+- ServerName
 - InstanceName
 - DatabaseName
 - AssessmentFlag
@@ -118,7 +118,7 @@ ms.locfileid: "74056654"
 |**getServerListFrom** | 您的清查。 可能的值為**SqlServer**和**CSV**。<br/>如需詳細資訊，請參閱[建立 SQL server 的清查](#create-inventory)。 |
 |**csvPath** | CSV 清查檔案的路徑。  只有在**getServerListFrom**設定為**CSV**時才會使用。 |
 |**serverName** | 在**getServerListFrom**參數中使用**SqlServer**時，清查的 SQL Server 實例名稱。 |
-|**databaseName** | 主控清查資料表的資料庫。 |
+|**名稱** | 主控清查資料表的資料庫。 |
 |**AssessmentName** | DMA 評估的名稱。 |
 |**TargetPlatform** | 您想要執行的評量目標型別。  可能的值為**AzureSQLDatabase**、 **q l 2012**、 **SQLServer2014**、 **SQLServer2016**、 **SQLServerLinux2017**、 **SQLServerWindows2017**和**ManagedSqlServer**。 |
 |**AuthenticationMethod** | 用來連接到您想要評估之 SQL Server 目標的驗證方法。 可能的值為**SQLAuth**和**WindowsAuth**。 |
@@ -142,7 +142,7 @@ ms.locfileid: "74056654"
 |**serverName** | 將處理資料的 SQL Server 實例。  如果您針對**processTo**參數指定**AzureSQLDatabase** ，則只會包含 SQL Server 名稱（不包括 database.windows.net）。 當您以 Azure SQL Database 為目標時，系統會提示您輸入兩次登入;第一個是您的 Azure 租使用者認證，而第二個則是 Azure SQL Server 的系統管理員登入。 |
 |**CreateDMAReporting** | 要建立以處理 JSON 檔案的臨時資料庫。  如果您指定的資料庫已存在，而且您將此參數設定為其中一個，則不會建立物件。  這個參數對於重新建立已卸載的單一物件很有用。 |
 |**CreateDataWarehouse** | 建立 Power BI 報表將使用的資料倉儲。 |
-|**databaseName** | DMAReporting 資料庫的名稱。 |
+|**名稱** | DMAReporting 資料庫的名稱。 |
 |**warehouseName** | 資料倉儲資料庫的名稱。 |
 |**jsonDirectory** | 包含 JSON 評估檔案的目錄。  如果目錄中有多個 JSON 檔案，則會逐一處理這些檔案。 |
 
@@ -188,7 +188,7 @@ DmaProcessor 函數應該只需要幾秒鐘的時間來處理單一檔案。
 
 - 評量類型（Azure SQL DB、Azure SQL MI、SQL 內部部署） 
 - 執行個體名稱
-- [資料庫名稱]
+- 資料庫名稱
 - 小組名稱
 
 若要存取 [書簽和篩選] 分頁，請在主報表頁面上選取 [篩選] 書簽：

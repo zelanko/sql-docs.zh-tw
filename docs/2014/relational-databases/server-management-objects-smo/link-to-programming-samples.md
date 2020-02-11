@@ -15,10 +15,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 79b262bc97cf674c98361d72b0ceedcaef90bb91
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244521"
 ---
 # <a name="link-to-programming-samples"></a>程式設計範例連結
@@ -26,7 +26,7 @@ ms.locfileid: "75244521"
   
  如需有關如何安裝範例的詳細資訊，請參閱[SQL Server 2012 的 AdventureWorks](https://msftdbprodsamples.codeplex.com/releases/view/55330)。  
   
-|標題|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |BackRest|示範如何備份和還原資料庫。|  
 |ChangeTableOwner|示範如何將擁有權並非 DBO 的所有資料表變更為 DBO。|  

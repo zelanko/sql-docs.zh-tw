@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 25d4aa1e82097dcc4027809c7292587a20862d75
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73981878"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
@@ -45,31 +45,31 @@ fn_get_audit_file ( file_pattern,
   
 ## <a name="arguments"></a>引數  
  *file_pattern*  
- 針對要讀取的稽核檔案集合指定目錄或路徑及檔案名稱。 類型為**Nvarchar （260）** 。 
+ 針對要讀取的稽核檔案集合指定目錄或路徑及檔案名稱。 類型為**Nvarchar （260）**。 
  
  - **SQL Server**：
     
     這個引數必須同時包含路徑 (磁碟機代號或網路共用位置) 以及可包含萬用字元的檔案名稱。 您可以使用單一星號（*），從 audit 檔案集收集多個檔案。 例如：  
   
-    -   **\<路徑 >\\\*** -收集指定位置中的所有 audit 檔案。  
+    -   **路徑>\\ -收集指定位置中的所有 audit \<** 檔案。  
   
-    -   **\<路徑 > \ LoginsAudit_ {GUID}** -收集所有具有指定之名稱和 GUID 配對的 audit 檔案。  
+    -   **path> \ LoginsAudit_ {GUID}-收集所有具有指定之名稱和 GUID 配對的 audit 檔案。 \< **  
   
-    -   **\<路徑 > \ LoginsAudit_ {GUID} _00_29384。 .sqlaudit** -收集特定的 audit 檔案。  
+    -   **path> \ LoginsAudit_ {GUID} _00_29384。 .sqlaudit-收集特定的 audit 檔案。 \< **  
   
  - **Azure SQL Database 或 Azure SQL 資料倉儲**：
  
     這個引數是用來指定 blob URL （包括儲存體端點和容器）。 雖然它不支援星號萬用字元，但是您可以使用部分檔案（blob）名稱前置詞（而不是完整 blob 名稱）來收集以這個前置詞開頭的多個檔案（blob）。 例如：
  
-      - **\<Storage_endpoint\>/\<容器\>/\<ServerName\>/\<DatabaseName\>/** -收集特定資料庫的所有 audit 檔案（blob）。    
+      - ** / \> Storage_endpoint\>\<容器\>ServerName\>-收集特定資料庫的所有 audit files （blob/ \< / \< \< **    
       
-      - **\<Storage_endpoint\>/\<容器\>/\<ServerName\>/\<DatabaseName\>/\<AuditName\>/\<CreationDate\>/\<FileName\>. .xel** -收集特定的 audit 檔案（blob）。
+      - ** \>Storage_endpoint\>\<Container\>ServerName\>DatabaseName\>AuditName CreationDate\>-收集特定的 audit file （blob\>）。/ \< / \< \< / / / \< / \< \< **
   
 > [!NOTE]  
 >  如果傳遞路徑而沒有包含檔案名稱模式，則會產生錯誤。  
   
  *initial_file_name*  
- 指定稽核檔案集合中要開始讀取稽核記錄之特定檔案的路徑和名稱。 類型為**Nvarchar （260）** 。  
+ 指定稽核檔案集合中要開始讀取稽核記錄之特定檔案的路徑和名稱。 類型為**Nvarchar （260）**。  
   
 > [!NOTE]  
 >  *Initial_file_name*引數必須包含有效的專案，或者必須包含預設的 |Null 值。  
@@ -83,29 +83,29 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>傳回的資料表  
  下表描述這個函數可傳回的稽核檔案內容。  
   
-| 資料行名稱 | 型別 | 描述 |  
+| 資料行名稱 | 類型 | 描述 |  
 |-------------|------|-------------|  
-| action_id | **varchar(4)** | 動作的識別碼。 不可為 Null。 |  
-| additional_information | **nvarchar(4000)** | 只套用到單一事件的唯一資訊會以 XML 形式傳回。 少量的可稽核動作有包含這類資訊。<br /><br /> 針對具有相關聯 TSQL 堆疊的動作，以 XML 格式顯示 TSQL 堆疊的單一層級。 此 XML 格式為：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 表示框架的目前巢狀層級。 模組名稱會以三部分格式表示 (database_name、schema_name 和 object_name)。  系統會剖析模組名稱，以將不正確 xml 字元（例如 `'\<'`、`'>'`、`'/'`、`'_x'`）取消。 它們會以 `_xHHHH\_`的形式加以轉義。 HHHH 代表字元的四位數十六進位 UCS-2 碼。<br /><br /> 可為 Null。 當此事件未報告其他資訊時，則會傳回 NULL。 |
-| affected_rows | **bigint** | **適用**于：僅限 AZURE SQL DB<br /><br /> 受執行語句影響的資料列數目。 |  
+| action_id | **Varchar （4）** | 動作的識別碼。 不可為 Null。 |  
+| additional_information | **nvarchar(4000)** | 只套用到單一事件的唯一資訊會以 XML 形式傳回。 少量的可稽核動作有包含這類資訊。<br /><br /> 針對具有相關聯 TSQL 堆疊的動作，以 XML 格式顯示 TSQL 堆疊的單一層級。 此 XML 格式為：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 表示框架的目前巢狀層級。 模組名稱會以三部分格式表示 (database_name、schema_name 和 object_name)。  模組名稱將會被剖析，以轉義不正確 xml `'\<'`字元`'>'`， `'/'`例如`'_x'`、、、。 它們會被轉義為`_xHHHH\_`。 HHHH 代表字元的四位數十六進位 UCS-2 碼。<br /><br /> 可為 Null。 當此事件未報告其他資訊時，則會傳回 NULL。 |
+| affected_rows | **Bigint** | **適用**于：僅限 AZURE SQL DB<br /><br /> 受執行語句影響的資料列數目。 |  
 | application_name | **nvarchar(128)** | **適用**于： AZURE SQL DB + SQL Server （從2017開始）<br /><br /> 執行導致 audit 事件之語句的用戶端應用程式名稱 |  
-| audit_file_offset | **bigint** | **適用于**：僅 SQL Server<br /><br /> 檔案中包含稽核記錄的緩衝區位移。 不可為 Null。 |  
+| audit_file_offset | **Bigint** | **適用于**：僅 SQL Server<br /><br /> 檔案中包含稽核記錄的緩衝區位移。 不可為 Null。 |  
 | audit_schema_version | **int** | 一律為1 |  
-| class_type | **varchar(2)** | 稽核發生所在之可稽核的實體類型。 不可為 Null。 |  
+| class_type | **Varchar （2）** | 稽核發生所在之可稽核的實體類型。 不可為 Null。 |  
 | client_ip | **nvarchar(128)** | **適用**于： AZURE SQL DB + SQL Server （從2017開始）<br /><br />    用戶端應用程式的來源 IP |  
 | connection_id | GUID | **適用**于： AZURE SQL DB 和受控實例<br /><br /> 伺服器中的連接識別碼 |
 | data_sensitivity_information | nvarchar(4000) | **適用**于：僅限 AZURE SQL DB<br /><br /> 由經過審核的查詢所傳回的資訊類型和敏感度標籤，是根據資料庫中的分類資料行。 深入瞭解[Azure SQL Database 資料探索與分類](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
 | database_name | **sysname** | 動作發生所在的資料庫環境。 可為 Null。 針對在伺服器層級發生的審核傳回 Null。 |  
 | database_principal_id | **int** |動作執行所在之資料庫使用者環境的識別碼。 不可為 Null。 如果不適用則傳回 0。 例如，伺服器作業。|
 | database_principal_name | **sysname** | 目前的使用者。 可為 Null。 如果無法使用則傳回 NULL。 |  
-| duration_milliseconds | **bigint** | **適用**于： AZURE SQL DB 和受控實例<br /><br /> 查詢執行持續時間（毫秒） |
+| duration_milliseconds | **Bigint** | **適用**于： AZURE SQL DB 和受控實例<br /><br /> 查詢執行持續時間（毫秒） |
 | event_time | **datetime2** | 可稽核的動作引發時的日期和時間。 不可為 Null。 |  
-| file_name | **varchar(260)** | 記錄來自之稽核記錄檔的路徑和名稱。 不可為 Null。 |
+| file_name | **Varchar （260）** | 記錄來自之稽核記錄檔的路徑和名稱。 不可為 Null。 |
 | is_column_permission | **bit** | 指出這是否為資料行層級權限的旗標。 不可為 Null。 當 permission_bitmask = 0 時會傳回 0。<br /> 1 = true<br /> 0 = false |
 | object_id | **int** | 稽核發生所在之實體的識別碼。 這包括下列項目：<br /> 伺服器物件<br /> 資料庫<br /> 資料庫物件<br /> 結構描述物件<br /> 不可為 Null。 如果此實體為伺服器本身或是稽核並未在物件層級上執行，則會傳回 0。 例如驗證。 |  
 | object_name | **sysname** | 稽核發生所在之實體的名稱。 這包括下列項目：<br /> 伺服器物件<br /> 資料庫<br /> 資料庫物件<br /> 結構描述物件<br /> 可為 Null。 如果此實體為伺服器本身或是稽核並未在物件層級上執行，則會傳回 NULL。 例如驗證。 |
-| permission_bitmask | **varbinary(16)** | 在某些動作中，這就是已授與、拒絕或撤銷的權限。 |
-| response_rows | **bigint** | **適用**于： AZURE SQL DB 和受控實例<br /><br /> 結果集中傳回的資料列數目。 |  
+| permission_bitmask | **Varbinary （16）** | 在某些動作中，這就是已授與、拒絕或撤銷的權限。 |
+| response_rows | **Bigint** | **適用**于： AZURE SQL DB 和受控實例<br /><br /> 結果集中傳回的資料列數目。 |  
 | schema_name | **sysname** | 動作發生所在的結構描述環境。 可為 Null。 針對在架構外發生的審核傳回 Null。 |  
 | sequence_group_id | **varbinary** | **適用于**：僅限 SQL Server （從2016開始）<br /><br />  唯一識別碼 |  
 | sequence_number | **int** | 追蹤單一稽核記錄中太長而無法納入稽核寫入緩衝區內的記錄順序。 不可為 Null。 |  
@@ -122,15 +122,15 @@ fn_get_audit_file ( file_pattern,
 | target_server_principal_id | **int** | GRANT/DENY/REVOKE 作業執行所在的伺服器主體。 不可為 Null。 如果不適用則傳回 0。 |  
 | target_server_principal_name | **sysname** | 動作的目標登入。 可為 Null。 如果不適用則傳回 NULL。 |  
 | target_server_principal_sid | **varbinary** | 目標登入的 SID。 可為 Null。 如果不適用則傳回 NULL。 |  
-| transaction_id | **bigint** | **適用于**：僅限 SQL Server （從2016開始）<br /><br /> 識別單一交易中多個 audit 事件的唯一識別碼 |  
-| user_defined_event_id | **smallint** | **適用于**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本、AZURE SQL DB 和受控實例<br /><br /> 使用者定義的事件識別碼，做為引數傳遞至**sp_audit_write**。 對於系統事件（預設值）為**Null** ，使用者定義事件則為非零。 如需詳細資訊，請參閱[sp_audit_write &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)。 |  
-| user_defined_information | **nvarchar(4000)** | **適用于**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本、AZURE SQL DB 和受控實例<br /><br /> 用來記錄使用者想要使用**sp_audit_write**預存程式記錄在 audit 記錄檔中的任何額外資訊。 |  
+| transaction_id | **Bigint** | **適用于**：僅限 SQL Server （從2016開始）<br /><br /> 識別單一交易中多個 audit 事件的唯一識別碼 |  
+| user_defined_event_id | **smallint** | **適用于**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]及更新版本、Azure SQL DB 和受控實例<br /><br /> 使用者定義的事件識別碼，做為引數傳遞至**sp_audit_write**。 對於系統事件（預設值）為**Null** ，使用者定義事件則為非零。 如需詳細資訊，請參閱[sp_audit_write &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)。 |  
+| user_defined_information | **nvarchar(4000)** | **適用于**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]及更新版本、Azure SQL DB 和受控實例<br /><br /> 用來記錄使用者想要使用**sp_audit_write**預存程式記錄在 audit 記錄檔中的任何額外資訊。 |  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果傳遞至**fn_get_audit_file**的*file_pattern*引數參考了不存在的路徑或檔案，或者如果檔案不是 audit 檔案，就會傳回**MSG_INVALID_AUDIT_FILE**錯誤訊息。  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>權限
 
 - **SQL Server**：需要**CONTROL Server**許可權。  
 - **AZURE SQL DB**：需要**CONTROL DATABASE**許可權。     
@@ -151,7 +151,7 @@ fn_get_audit_file ( file_pattern,
 
 - **Azure SQL Database**
 
-  這個範例會從名為 `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`的檔案讀取：  
+  這個範例會從名`ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`為的檔案讀取：  
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default);
@@ -167,7 +167,7 @@ fn_get_audit_file ( file_pattern,
   GO
   ```  
 
-  這個範例會從 `Sh`開始的伺服器讀取所有的 audit 記錄： 
+  這個範例會從開頭為`Sh`的伺服器讀取所有的 audit 記錄： 
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/Sh',default,default);

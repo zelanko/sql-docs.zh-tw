@@ -20,10 +20,10 @@ ms.assetid: 56793e9c-aa90-452e-88c6-d9b799239888
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0446943767217050753c233b03b5b8031dddd1f7
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982636"
 ---
 # <a name="sysresource_governor_resource_pools-transact-sql"></a>sys.resource_governor_resource_pools (Transact-SQL)
@@ -31,10 +31,10 @@ ms.locfileid: "73982636"
 
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中儲存的資源集區組態。 檢視的每個資料列都會決定集區的組態。  
   
-|資料行名稱|[名稱]|描述|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|資源集區的唯一識別碼。 不可為 Null。|  
-|name|**sysname**|資源集區的名稱。 不可為 Null。|  
+|NAME|**sysname**|資源集區的名稱。 不可為 Null。|  
 |min_cpu_percent|**int**|當 CPU 出現瓶頸時，為資源集區中的所有要求保證的平均 CPU 頻寬。 不可為 Null。|  
 |max_cpu_percent|**int**|當 CPU 出現瓶頸時，針對資源集區中的所有要求所允許的最大平均 CPU 頻寬。 不可為 Null。|  
 |min_memory_percent|**int**|為資源集區中的所有要求保證的記憶體數量。 這不會與其他資源集區共用。 不可為 Null。|  
@@ -43,16 +43,16 @@ ms.locfileid: "73982636"
 |min_iops_per_volume|**int**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> 這個集區之每個磁碟區設定的每秒 I/O 作業數最小值 (IOPS)。 0 = 無保留項目。 不可為 null。|  
 |max_iops_per_volume|**int**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> 這個集區之每個磁碟區設定的每秒 I/O 作業數最大值 (IOPS)。 0 = 無限制。 不可為 null。|  
   
-## <a name="remarks"></a>Remarks  
- 目錄檢視會顯示儲存的中繼資料。 若要查看記憶體中的設定，請使用對應的動態管理檢視 [ [sys.databases] &#40;dm_resource_governor_resource_pools transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。  
+## <a name="remarks"></a>備註  
+ 目錄檢視會顯示儲存的中繼資料。 若要查看記憶體中的設定，請使用對應的動態管理檢視[sys.databases： dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 VIEW ANY DEFINITION 權限檢視內容；需要 CONTROL SERVER 權限變更內容。  
   
 ## <a name="see-also"></a>另請參閱  
- [Resource Governor 目錄檢視&#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
- [dm_resource_governor_resource_pools &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
- [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
- [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)  
+ [Resource Governor 目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
+ [dm_resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
+ [resource_governor_external_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)  
   
   

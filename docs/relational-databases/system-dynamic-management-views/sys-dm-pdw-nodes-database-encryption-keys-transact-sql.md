@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401643"
 ---
 # <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys.databases dm_pdw_nodes_database_encryption_keys （Transact-sql）
@@ -28,11 +28,11 @@ ms.locfileid: "74401643"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|每個節點上實體資料庫的識別碼。|  
 |encryption_state|**int**|指出此節點上的資料庫是否已加密或未加密。<br /><br /> 0 = 沒有資料庫加密金鑰存在，未加密<br /><br /> 1 = 未加密<br /><br /> 2 = 加密進行中<br /><br /> 3 = 已加密<br /><br /> 4 = 金鑰變更進行中<br /><br /> 5 = 解密進行中<br /><br /> 6 = 保護變更進行中（正在變更加密資料庫加密金鑰的憑證）。|  
-|create_date|**從中**|顯示建立加密金鑰的日期。|  
-|regenerate_date|**從中**|顯示重新產生加密金鑰的日期。|  
-|modify_date|**從中**|顯示修改加密金鑰的日期。|  
-|set_date|**從中**|顯示加密金鑰套用到資料庫的日期。|  
-|opened_date|**從中**|顯示上次開啟資料庫索引鍵的日期。|  
+|create_date|**datetime**|顯示建立加密金鑰的日期。|  
+|regenerate_date|**datetime**|顯示重新產生加密金鑰的日期。|  
+|modify_date|**datetime**|顯示修改加密金鑰的日期。|  
+|set_date|**datetime**|顯示加密金鑰套用到資料庫的日期。|  
+|opened_date|**datetime**|顯示上次開啟資料庫索引鍵的日期。|  
 |key_algorithm|**Varchar （？）**|顯示用於金鑰的演算法。|  
 |key_length|**int**|顯示金鑰的長度。|  
 |encryptor_thumbprint|**varbin**|顯示加密程式的指模。|  

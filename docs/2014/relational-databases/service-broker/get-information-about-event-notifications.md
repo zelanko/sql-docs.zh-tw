@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9786faaf44724b1a2452bd5304b63deb2c9ea54e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015310"
 ---
 # <a name="get-information-about-event-notifications"></a>取得事件通知詳細資訊
@@ -29,14 +29,14 @@ ms.locfileid: "63015310"
 -   [sys.event_notifications &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-event-notifications-transact-sql)  
   
 > [!NOTE]  
->  若要檢視中的任何事件通知的中繼資料**sys.event_notifications**建立在資料庫層級，至少您必須擁有下列：控制、 ALTER、 TAKE OWNERSHIP 或 VIEW DEFINITION 權限的資料庫、 是事件通知的擁有者或具有 ALTER ANY DATABASE EVENT NOTIFICATION 權限。 針對特定的佇列上建立的事件通知，至少您必須具備下列：控制、 ALTER、 TAKE OWNERSHIP 或 VIEW DEFINITION 權限的物件、 是事件通知的擁有者或具有 ALTER ANY DATABASE EVENT NOTIFICATION 權限。  
+>  若要檢視在資料庫層級所建立之 **sys.event_notifications** 中任何事件通知的相關中繼資料，您必須至少具有資料庫的 CONTROL、ALTER、TAKE OWNERSHIP 或 VIEW DEFINITION 權限、身為事件通知的擁有者，或是具有 ALTER ANY DATABASE EVENT NOTIFICATION 權限。 如果是特定佇列上建立的事件通知，您至少必須要有以下權限：物件上的 CONTROL、ALTER、TAKE OWNERSHIP 或 VIEW DEFINITION 權限、身為事件通知的擁有者，或是具備 ALTER ANY DATABASE EVENT NOTIFICATION 權限。  
   
  **若要取得伺服器層級的事件通知資訊**  
   
 -   [sys.server_event_notifications &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql)  
   
 > [!NOTE]  
->  最小值，您必須具備下列項目：控制或檢視伺服器上的 ANY DEFINITION 權限、 的登入或事件通知的擁有者或具有 ALTER ANY EVENT NOTIFICATION 權限檢視中的任何事件通知的中繼資料**sys.server_event_notifications**.  
+>  您必須至少具有伺服器的 CONTROL 或 VIEW ANY DEFINITION 權限、身為事件通知的登入或擁有者，或是具有 ALTER ANY EVENT NOTIFICATION 權限，才能檢視 **sys.server_event_notifications**中任何事件通知的相關中繼資料。  
   
  **若要取得所有可以引發事件通知的事件資訊**  
   

@@ -20,14 +20,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1703d70b7760cad2198b3565ce3fc47d44cac409
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768934"
 ---
 # <a name="creating-a-custom-data-flow-component"></a>建立自訂資料流程元件
-  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中，資料流程工作會公開物件模型，讓開發人員透過使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 與受控程式碼建立自訂資料流程元件 (來源、轉換和目的地)。  
+  在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]中，資料流程工作會公開物件模型，讓開發人員可以使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]和 managed 程式碼，建立自訂資料流程元件（來源、轉換和目的地）。  
   
  資料流程工作是由兩個元件所組成：<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 介面以及定義元件之間資料移動的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 物件之集合。  
   
@@ -40,13 +40,14 @@ ms.locfileid: "62768934"
  在執行時，資料流程工作會檢查元件的順序、準備執行計劃以及管理執行工作計劃的工作者執行緒集區。 雖然每個工作者執行緒都會執行資料流程工作內部的某些工作，但是工作者執行緒的主要工作是透過執行階段 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100> 介面來呼叫元件的方法。  
   
 ## <a name="creating-a-component"></a>建立元件  
- 若要建立資料流程元件，您可以從 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 基底類別衍生類別、套用 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 類別，然後覆寫基底類別的適當方法。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> 與 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100> 介面，並為您公開其方法以便在元件中覆寫。  
+ 若要建立資料流程元件，您可以從 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 基底類別衍生類別、套用 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 類別，然後覆寫基底類別的適當方法。 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> 與 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100> 介面，並為您公開其方法以便在元件中覆寫。  
   
  視您的元件使用的物件而定，專案將需要參考下列組件的某些或是全部：  
   
 |功能|要參考的組件|要匯入的命名空間|  
 |-------------|---------------------------|-------------------------|  
-|設計師中|Microsoft.SqlServer.PipelineHost|<xref:Microsoft.SqlServer.Dts.Pipeline>|  
+|資料流|Microsoft.SqlServer.PipelineHost|<xref:Microsoft.SqlServer.Dts.Pipeline>|  
 |資料流程包裝函數|Microsoft.SqlServer.DTSPipelineWrap|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>|  
 |執行階段|Microsoft.SQLServer.ManagedDTS|<xref:Microsoft.SqlServer.Dts.Runtime>|  
 |執行階段包裝函數|Microsoft.SqlServer.DTSRuntimeWrap|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper>|  
@@ -82,7 +83,7 @@ Public Class BasicComponent
 End Class  
 ```  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [開發資料流程元件的使用者介面](developing-a-user-interface-for-a-data-flow-component.md)  

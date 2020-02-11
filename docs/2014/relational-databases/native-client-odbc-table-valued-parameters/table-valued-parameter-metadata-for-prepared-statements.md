@@ -1,5 +1,5 @@
 ---
-title: 針對已備妥的陳述式資料表值參數中繼資料 |Microsoft Docs
+title: 備妥之語句的資料表值參數中繼資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43ef41affecd131626da17ec7d608249437abed6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626512"
 ---
 # <a name="table-valued-parameter-metadata-for-prepared-statements"></a>已備妥之陳述式的資料表值參數中繼資料
-  應用程式可以取得已備妥之程序呼叫透過 SQLNumParams 和 SQLDescribeParam 的中繼資料。 資料表值參數，如*DataTypePtr*設定為 SQL_SS_TABLE。 其他中繼資料可透過 SQL_CA_SS_TYPE_NAME、 SQL_CA_SS_CATALOG_NAME 和 SQL_CA_SS_SCHEMA_NAME 的 SQLGetDescField。  
+  應用程式可以透過 SQLNumParams 和 SQLDescribeParam 取得已備妥之程序呼叫的中繼資料。 若為數據表值參數， *DataTypePtr*會設定為 SQL_SS_TABLE。 SQL_CA_SS_TYPE_NAME、SQL_CA_SS_CATALOG_NAME 和 SQL_CA_SS_SCHEMA_NAME 可以透過 SQLGetDescField 取得額外的中繼資料。  
   
- SQL_CA_SS_TYPE_NAME、 SQL_CA_SS_CATALOG_NAME 和 SQL_CA_SS_SCHEMA_NAME 可以搭配 SQLColumns 來取得與資料表值參數相關聯的資料表類型的資料行中繼資料。 在此情況下，SQL_SOPT_SS_NAME_SCOPE 必須設定為 SQL_SS_NAME_SCOPE_TABLE_TYPE SQLColumns 呼叫之前。 當應用程式完成資料表值參數資料行中繼資料的擷取時，SQL_SOPT_SS_NAME_SCOPE 應該設回預設值 SQL_SS_NAME_SCOPE_TABLE。  
+ SQL_CA_SS_TYPE_NAME、SQL_CA_SS_CATALOG_NAME 和 SQL_CA_SS_SCHEMA_NAME 可以與 SQLColumns 搭配使用，以取得與資料表值參數相關聯之資料表類型的資料行中繼資料。 在此情況下，在呼叫 SQLColumns 之前，必須將 SQL_SOPT_SS_NAME_SCOPE 設為 SQL_SS_NAME_SCOPE_TABLE_TYPE。 當應用程式完成資料表值參數資料行中繼資料的擷取時，SQL_SOPT_SS_NAME_SCOPE 應該設回預設值 SQL_SS_NAME_SCOPE_TABLE。  
   
  SQL_CA_SS_TYPE_NAME、SQL_CA_SS_CATALOG_NAME 和 SQL_CA_SS_SCHEMA_NAME 也可以搭配 CLR 使用者定義型別參數使用。  
   
  您無法針對不是預存程序呼叫的已備妥陳述式來取得資料表值參數中繼資料。 如果您嘗試這樣做，應用程式會傳回 SQL_ERROR，其中包含 SQLSTATE 42000 和「語法錯誤或違規存取」訊息。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料表值參數&#40;ODBC&#41;](table-valued-parameters-odbc.md)  
+ [ODBC&#41;&#40;的資料表值參數](table-valued-parameters-odbc.md)  
   
   

@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: jtoland
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 368372ab7324b11e9f7fdaa6af94d5ba2c0534ad
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056486"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>使用 Data Migration Assistant 遷移 SQL Server 登入
@@ -34,7 +34,7 @@ ms.locfileid: "74056486"
 
 - Data Migration Assistant 目前不支援與獨立安全性憑證（對應至憑證的登入）相關聯的登入、獨立非對稱金鑰（對應至非對稱金鑰的登入），以及對應至認證的登入。
 
-- Data Migration Assistant 不會使用以雙重雜湊標記（\#\#）括住的名稱來移動**sa**登入和伺服器原則，這僅供內部使用。
+- Data Migration Assistant 不會使用**** 以雙重雜湊標記（\#\#）括住的名稱來移動 sa 登入和伺服器原則，這僅供內部使用。
 
 - 根據預設，Data Migration Assistant 會選取要遷移的所有合格登入。 （選擇性）您可以選取要遷移的特定登入。 當 Data Migration Assistant 遷移所有合格的登入時，使用者對應在遷移的資料庫中會保持不變。
 
@@ -54,6 +54,6 @@ ms.locfileid: "74056486"
 
 ## <a name="resources"></a>資源
 
-[Data Migration Assistant （DMA）](../dma/dma-overview.md)
+[Data Migration Assistant (DMA)](../dma/dma-overview.md)
 
 [Data Migration Assistant：設定](../dma/dma-configurationsettings.md)

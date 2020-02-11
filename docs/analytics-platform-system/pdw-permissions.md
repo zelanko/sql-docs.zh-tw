@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d60c6f492b0735e70a2c3103e48ad08953039adc
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400874"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>管理平行處理資料倉儲中的許可權
@@ -22,7 +22,7 @@ ms.locfileid: "74400874"
 ## <a name="BackupRestoreBasics"></a>資料庫引擎許可權的基本概念  
 SQL Server PDW 的資料庫引擎許可權會透過登入在伺服器層級進行管理，並透過資料庫使用者和使用者定義的資料庫角色在資料庫層級進行管理。  
   
-**登錄**  
+**登入**  
 登入是用來登入 SQL Server PDW 的個別使用者帳戶。 SQL Server PDW 支援使用 Windows 驗證和 SQL Server Authentication 的登入。  Windows 驗證登入可以是 SQL Server PDW 所信任之任何網域中的 Windows 使用者或 Windows 群組。 SQL Server 驗證登入是由 SQL Server PDW 定義和驗證，而且必須藉由指定密碼來建立。  
   
 **系統管理員（sysadmin** ）固定伺服器角色的成員（例如**sa**登入）可以連接到資料庫，而不需要對應到資料庫使用者。 它們會對應至**dbo**使用者。 資料庫的擁有者也會對應為**dbo**使用者。  

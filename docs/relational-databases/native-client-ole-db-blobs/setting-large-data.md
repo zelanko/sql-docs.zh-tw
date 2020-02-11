@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 317f6f25e717a49f3b26c4cc09d957f8c38557f0
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73758317"
 ---
 # <a name="setting-large-data"></a>設定大型資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  藉由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，您可以藉由傳遞取用者儲存物件的指標來設定 BLOB 資料。  
+  使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，您可以藉由傳遞取用者儲存物件的指標來設定 BLOB 資料。  
   
  取用者會建立包含資料的儲存物件，並將此儲存物件的指標傳遞給提供者。 接著，提供者會從取用者儲存物件讀取資料，並將其寫入到 BLOB 資料行。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73758317"
   
 2.  在 DBPROPSET_ROWSET 屬性群組中設定屬性，讓資料列集可以更新。  
   
-3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每個資料行一個)。 將 DBBINDING 結構中的 *wType* 項目設定為 DBTYPE_IUNKNOWN，並將 *pObject* 項目設定為指向您所建立的 DBOBJECT 結構。  
+3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每個資料行一個)。 將 DBBINDING 結構中的 *wType* 元素設定為 DBTYPE_IUNKNOWN，並將 *pObject* 元素設定為指向您所建立的 DBOBJECT 結構。  
   
 4.  使用繫結資訊，在結構的 DBBINDINGS 陣列中建立存取子。  
   
@@ -721,7 +721,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [BLOB 與 OLE 物件](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
- [使用大型實值型別](../../relational-databases/native-client/features/using-large-value-types.md)  
+ [Blob 和 OLE 物件](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [使用大數值類型](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

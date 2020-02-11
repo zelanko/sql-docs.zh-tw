@@ -1,5 +1,5 @@
 ---
-title: ParentCatalog 屬性範例 （VC + +） |Microsoft Docs
+title: ParentCatalog 屬性範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 43ae202e-1972-4aab-9cc1-3b6612bad363
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f57167c975635be7c72c8a80cd9ddff9fe244ad4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0f01656c93d6699403657e970034076200255d0f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965572"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76928012"
 ---
 # <a name="parentcatalog-property-example-vc"></a>ParentCatalog 屬性範例 (VC++)
-下列程式碼示範如何使用[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)屬性來存取提供者特有的屬性，再附加到類別目錄的資料表。 屬性是**AutoIncrement**，Microsoft Jet 資料庫中建立自動遞增欄位。  
+下列程式碼示範如何在將資料表附加至目錄之前，使用[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)屬性來存取提供者特定的屬性。 屬性為**自動遞增**，這會在 Microsoft Jet 資料庫中建立自動遞增欄位。  
   
 ```  
 // BeginCreateAutoIncrColumnCpp.cpp  
@@ -94,7 +94,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in CreateAutoIncrColumnX...."<< endl;  
+      cout << "Error occurred in CreateAutoIncrColumnX...."<< endl;  
    }  
   
    m_pCatalog = NULL;  

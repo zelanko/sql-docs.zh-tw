@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c1c89ff79ee0fcac37f7b6e231e957e051c9db2e
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: de3cbb6582ae4fad74bb2440791e51203140796b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289281"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75656595"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 函數
 **標準**  
@@ -55,7 +55,7 @@ SQLRETURN SQLBindCol(
  源要系結的結果集資料行數目。 資料行是以遞增的資料行順序編號，從0開始，其中資料行0是書簽資料行。 如果未使用書簽（也就是，SQL_ATTR_USE_BOOKMARKS 語句屬性設定為 SQL_UB_OFF，則資料行編號會從1開始。  
   
  *目標*  
- 源 \*TargetValuePtr* 緩衝區的 C 資料類型識別碼。 當它從資料來源使用**SQLFetch**、 **SQLFetchScroll**、 **SQLBulkOperations**或**SQLSetPos**來抓取資料時，驅動程式會將資料轉換成此類型。當它使用**SQLBulkOperations**或**SQLSetPos**將資料傳送到資料來源時，驅動程式會轉換此類型的資料。 如需有效 C 資料類型和類型識別碼的清單，請參閱附錄 D：資料類型中的[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)一節。  
+ 源\* *TargetValuePtr*緩衝區的 C 資料類型識別碼。 當它從資料來源使用**SQLFetch**、 **SQLFetchScroll**、 **SQLBulkOperations**或**SQLSetPos**來抓取資料時，驅動程式會將資料轉換成此類型。當它使用**SQLBulkOperations**或**SQLSetPos**將資料傳送到資料來源時，驅動程式會轉換此類型的資料。 如需有效 C 資料類型和類型識別碼的清單，請參閱附錄 D：資料類型中的[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)一節。  
   
  如果*TargetType*引數是 interval 資料類型，則會使用預設的間隔前置精確度（2）和預設間隔秒數精確度（6），分別在 ARD 的 [SQL_DESC_DATETIME_INTERVAL_PRECISION] 和 [SQL_DESC_PRECISION] 欄位中設定，用於資料。 如果 SQL_C_NUMERIC *TargetType*引數，則會將預設的有效位數（驅動程式定義）和預設小數位數（0）（如 [SQL_DESC_PRECISION] 和 [SQL_DESC_SCALE] 欄位中所設定）用於資料。 如果任何預設的有效位數或小數位數不適當，應用程式應該藉由呼叫**SQLSetDescField**或**SQLSetDescRec**來明確設定適當的描述項欄位。  
   
@@ -67,9 +67,9 @@ SQLRETURN SQLBindCol(
  如果*TargetValuePtr*是 null 指標，驅動程式會將資料行的資料緩衝區解除系結。 應用程式可以使用 SQL_UNBIND 選項來呼叫**SQLFreeStmt** ，以將所有資料行解除系結。 如果對**SQLBindCol**的呼叫中的*TargetValuePtr*引數是 null 指標，但是*StrLen_or_IndPtr*引數是有效的值，則應用程式可以解除系結資料行的資料緩衝區，但仍具有系結至該資料行的長度/指標緩衝區。  
   
  *BufferLength*  
- 源 \*TargetValuePtr* 緩衝區的長度（以位元組為單位）。  
+ 源\* *TargetValuePtr*緩衝區的長度（以位元組為單位）。  
   
- 驅動程式會使用 *BufferLength* 來避免在傳回可變長度的資料（例如字元或二進位資料）時，寫入超過 \*TargetValuePtr* 緩衝區的結尾。 請注意，驅動程式會在將字元資料傳回到 \**TargetValuePtr*時，計算 null 終止字元。 \* *TargetValuePtr*因此必須包含空格的 null 終止的字元或驅動程式將會截斷資料。  
+ 驅動程式會使用*BufferLength* ，在傳回可變長度的資料\*（例如字元或二進位資料）時，避免寫入超過*TargetValuePtr*緩衝區的結尾。 請注意，驅動程式會在將字元資料傳回給\* *TargetValuePtr*時，計算 null 終止字元。 \*因此， *TargetValuePtr*必須包含 null 終止字元的空間，否則驅動程式將會截斷資料。  
   
  當驅動程式傳回固定長度的資料（例如整數或日期結構）時，驅動程式會忽略*BufferLength* ，並假設緩衝區夠大，足以容納資料。 因此，應用程式必須為固定長度的資料配置夠大的緩衝區，否則驅動程式將會寫入超過緩衝區的結尾。  
   
@@ -112,14 +112,14 @@ SQLRETURN SQLBindCol(
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLBindCol**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時，可以藉由呼叫具有 SQL_HANDLE_STMT *HandleType*和*StatementHandle* *控制碼*的**SQLGetDiagRec**來取得相關聯的 SQLSTATE 值。 下表列出通常由**SQLBindCol**所傳回的 SQLSTATE 值，並在此函式的內容中說明每一個值;「（DM）」標記法優先于驅動程式管理員所傳回之 SQLSTATEs 的描述。 除非另有說明，否則，與每個 SQLSTATE 值相關聯的傳回碼都是 SQL_ERROR。  
+ 當**SQLBindCol**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時，可以藉由呼叫具有 SQL_HANDLE_STMT *HandleType*和*StatementHandle**控制碼*的**SQLGetDiagRec**來取得相關聯的 SQLSTATE 值。 下表列出通常由**SQLBindCol**所傳回的 SQLSTATE 值，並在此函式的內容中說明每一個值;「（DM）」標記法優先于驅動程式管理員所傳回之 SQLSTATEs 的描述。 除非另有說明，否則，與每個 SQLSTATE 值相關聯的傳回碼都是 SQL_ERROR。  
   
 |SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|驅動程式特定的參考用訊息。 （函數會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |07006|限制的資料類型屬性違規|（DM） *ColumnNumber*引數為0，且*TargetType*引數不 SQL_C_BOOKMARK 或 SQL_C_VARBOOKMARK。|  
 |07009|不正確描述項索引|為引數*ColumnNumber*指定的值超過結果集內的最大資料行數目。|  
-|HY000|一般錯誤|發生錯誤，但沒有任何特定 SQLSTATE，且未定義任何執行特定的 SQLSTATE。 MessageText *緩衝區中的 \*SQLGetDiagRec* 所傳回的錯誤訊息描述錯誤及其原因。|  
+|HY000|一般錯誤|發生錯誤，但沒有任何特定 SQLSTATE，且未定義任何執行特定的 SQLSTATE。 MessageText 緩衝區中的**SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。 * \* *|  
 |HY001|記憶體配置錯誤|驅動程式無法配置支援執行或完成函數所需的記憶體。|  
 |HY003 以及|不正確應用程式緩衝區類型|引數*TargetType*不是有效的資料類型，也不 SQL_C_DEFAULT。|  
 |HY010|函數順序錯誤|（DM）已針對與*StatementHandle*相關聯的連接控制碼呼叫以非同步方式執行的函式。 呼叫**SQLBindCol**時，這個非同步函數仍在執行中。<br /><br /> （DM）已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults** ，並 SQL_PARAM_DATA_AVAILABLE 傳回。 在抓取所有資料流程參數的資料之前，會呼叫這個函式。<br /><br /> （DM）已針對*StatementHandle*呼叫非同步執行的函式，且在呼叫此函式時仍在執行中。<br /><br /> （DM）已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos** ，並傳回 SQL_NEED_DATA。 在傳送資料給所有資料執行中參數或資料行之前，已呼叫此函數。|  
@@ -232,7 +232,7 @@ SQLRETURN SQLBindCol(
 ## <a name="buffer-addresses"></a>緩衝區位址  
  *緩衝區位址*是資料或長度/指標緩衝區的實際位址。 驅動程式會在寫入緩衝區（例如提取時間）之前，先計算緩衝區位址。 其計算方式為下列公式，其使用*TargetValuePtr*和*StrLen_or_IndPtr*引數中指定的位址、系結位移和資料列編號：  
   
- 系結*位址* + 系結*位移*+ （（資料*列數*-1） x*元素大小*）  
+ **  + 系結位址系結*位移*+ （（資料*列數*-1） x*元素大小*）  
   
  公式的變數定義如下表中所述。  
   
@@ -240,7 +240,7 @@ SQLRETURN SQLBindCol(
 |--------------|-----------------|  
 |*系結位址*|針對資料緩衝區，在**SQLBindCol**中使用*TargetValuePtr*引數指定的位址。<br /><br /> 對於長度/指標緩衝區，使用**SQLBindCol**中的*StrLen_or_IndPtr*引數指定的位址。 如需詳細資訊，請參閱「描述元和 SQLBindCol」一節中的「其他留言」。<br /><br /> 如果系結的位址為0，則不會傳回任何資料值，即使前一個公式所計算的位址不是零也一樣。|  
 |*系結位移*|如果使用資料列取向的系結，則儲存在使用 SQL_ATTR_ROW_BIND_OFFSET_PTR 語句屬性指定之位址的值。<br /><br /> 如果使用資料行取向的系結，或 SQL_ATTR_ROW_BIND_OFFSET_PTR 語句屬性的值為 null 指標，則系結*位移*為0。|  
-|*資料列編號*|資料列集中以1為基礎的資料列編號。 如果是預設的單一資料列提取，這就是1。|  
+|*Row Number*|資料列集中以1為基礎的資料列編號。 如果是預設的單一資料列提取，這就是1。|  
 |*元素大小*|系結陣列中元素的大小。<br /><br /> 如果使用資料行取向的系結，這就是長度/指標緩衝區的**sizeof （SQLINTEGER）** 。 對於資料緩衝區，如果資料類型是可變長度，則為**SQLBindCol**中*BufferLength*引數的值，如果資料類型是固定長度，則為資料類型的大小。<br /><br /> 如果使用資料列取向的系結，這就是資料和長度/指標緩衝區的 SQL_ATTR_ROW_BIND_TYPE 語句屬性值。|  
   
 ## <a name="descriptors-and-sqlbindcol"></a>描述項和 SQLBindCol  
@@ -295,7 +295,7 @@ SQLRETURN SQLBindCol(
 #include <sqlext.h>  
   
 #define NAME_LEN 50  
-#define PHONE_LEN 20  
+#define PHONE_LEN 60
   
 void show_error() {  
    printf("error\n");  
@@ -335,17 +335,24 @@ int main() {
                if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {  
   
                   // Bind columns 1, 2, and 3  
-                  retcode = SQLBindCol(hstmt, 1, SQL_C_CHAR, &sCustID, 100, &cbCustID);  
-                  retcode = SQLBindCol(hstmt, 2, SQL_C_CHAR, szName, NAME_LEN, &cbName);  
-                  retcode = SQLBindCol(hstmt, 3, SQL_C_CHAR, szPhone, PHONE_LEN, &cbPhone);   
+                  retcode = SQLBindCol(hstmt, 1, SQL_C_WCHAR, &sCustID, 100, &cbCustID);  
+                  retcode = SQLBindCol(hstmt, 2, SQL_C_WCHAR, szName, NAME_LEN, &cbName);  
+                  retcode = SQLBindCol(hstmt, 3, SQL_C_WCHAR, szPhone, PHONE_LEN, &cbPhone);   
   
                   // Fetch and print each row of data. On an error, display a message and exit.  
-                  for (i ; ; i++) {  
+                  for (int i=0 ; ; i++) {  
                      retcode = SQLFetch(hstmt);  
                      if (retcode == SQL_ERROR || retcode == SQL_SUCCESS_WITH_INFO)  
                         show_error();  
                      if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO)  
-                        wprintf(L"%d: %S %S %S\n", i + 1, sCustID, szName, szPhone);  
+                     {
+                        //replace wprintf with printf
+                        //%S with %ls
+                        //warning C4477: 'wprintf' : format string '%S' requires an argument of type 'char *'
+                        //but variadic argument 2 has type 'SQLWCHAR *'
+                        //wprintf(L"%d: %S %S %S\n", i + 1, sCustID, szName, szPhone);  
+                        printf("%d: %ls %ls %ls\n", i + 1, sCustID, szName, szPhone);  
+                    }    
                      else  
                         break;  
                   }  
@@ -372,14 +379,14 @@ int main() {
   
 ## <a name="related-functions"></a>相關函數  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
-|傳回結果集中資料行的相關資訊|[SQLDescribeCol 函式](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
-|提取資料區塊或透過結果集進行滾動|[SQLFetchScroll 函式](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|傳回結果集中資料行的相關資訊|[SQLDescribeCol 函數](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
+|提取資料區塊或透過結果集進行滾動|[SQLFetchScroll 函數](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |提取多個資料列|[SQLFetch 函式](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|釋放語句上的資料行緩衝區|[SQLFreeStmt 函式](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
-|正在提取部分或所有資料行|[SQLGetData 函式](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
-|傳回結果集資料行的數目|[SQLNumResultCols 函式](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
+|釋放語句上的資料行緩衝區|[SQLFreeStmt 函數](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
+|正在提取部分或所有資料行|[SQLGetData 函數](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
+|傳回結果集資料行的數目|[SQLNumResultCols 函數](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)   

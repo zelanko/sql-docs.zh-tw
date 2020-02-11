@@ -1,5 +1,5 @@
 ---
-title: 系統基底資料表 |Microsoft Docs
+title: 系統基表 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,22 +17,22 @@ ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 43f5e96a280614d3f69472c7d794489bf1a5ba58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029565"
 ---
 # <a name="system-base-tables"></a>系統基底資料表
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  系統基底資料表其實是儲存特定資料庫之中繼資料的基礎資料表。 **主要**資料庫是在這方面的特殊，因為它包含的任何其他資料庫中找不到某些其他資料表。 這些資料表包含整個伺服器範圍所保存的中繼資料。  
+  系統基底資料表其實是儲存特定資料庫之中繼資料的基礎資料表。 **Master**資料庫在這方面是特別的，因為它包含其他任何資料庫中都找不到的其他資料表。 這些資料表包含整個伺服器範圍所保存的中繼資料。  
   
 > [!IMPORTANT]  
 >  系統基底資料表僅用於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 內部，不供一般客戶使用。 它們隨時可以變更，而且不保證其相容性。  
   
 ## <a name="system-base-table-metadata"></a>系統基底資料表中繼資料  
- 在資料庫上具有 CONTROL、 ALTER 或 VIEW DEFINITION 權限授與者可以看到系統基底資料表中繼資料**sys.objects**目錄檢視。 被授與者也可以解析名稱，及藉由使用內建函式，例如物件的系統基底資料表的識別碼[OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md)並[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)。  
+ 具有資料庫之 CONTROL、ALTER 或 VIEW DEFINITION 許可權的被授與者，可以在**sys.databases**目錄檢視中看到系統基表中繼資料。 被授與者也可以使用內建函數（例如[OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md)和[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)）解析系統基表的名稱和物件識別碼。  
   
  若要繫結至系統基底資料表，使用者必須使用專用管理員連接 (DAC)，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 嘗試在不使用 DAC 連接的情況下，從系統基底資料表執行 SELECT 查詢時，會產生錯誤。  
   
@@ -50,17 +50,17 @@ ms.locfileid: "68029565"
 |**sys.sysnsobjs**|存在於每個資料庫中。 每個命名空間範圍的實體都包含一個資料列。 此資料表用於儲存 XML 集合實體。|  
 |**sys.syscolpars**|存在於每個資料庫中。 資料表、檢視或資料表值函數中的每個資料行都包含一個資料列。 對於程序或函數的每個參數，它也包含資料列。|  
 |**sys.systypedsubobjs**|存在於每個資料庫中。 每個輸入的子實體都包含一個資料列。 只有資料分割函數的參數屬於這個類別目錄。|  
-|**sys.sysidxstats**|存在於每個資料庫中。 針對資料表和索引檢視的每個索引或統計資料，各包含一個資料列。<br /><br /> 注意:每個索引 （堆積除外） 都具有相同名稱做為索引的統計資料與相關項目。|  
+|**sys.sysidxstats**|存在於每個資料庫中。 針對資料表和索引檢視的每個索引或統計資料，各包含一個資料列。<br /><br /> 注意：每個索引（堆積除外）都會與與索引同名的統計資料相關聯。|  
 |**sys.sysiscols**|存在於每個資料庫中。 每個保存的索引和統計資料資料行都包含一個資料列。|  
 |**sys.sysscalartypes**|存在於每個資料庫中。 每個使用者自訂或系統類型都包含一個資料列。|  
-|**sys.sysdbreg**|存在於**主要**只有資料庫。 每個註冊的資料庫都包含一個資料列。|  
-|**sys.sysxsrvs**|存在於**主要**只有資料庫。 每個本機、連結或遠端伺服器都包含一個資料列。|  
-|**sys.sysrmtlgns**|此系統基底資料表存在於**主要**只有資料庫。 每個遠端登入對應都包含一個資料列。 這用來將宣告為來自對應伺服器的內送登入對應至實際的本機登入。|  
-|**sys.syslnklgns**|存在於**主要**只有資料庫。 每個連結登入對應都包含一個資料列。 連結登入對應是由從遠端伺服器發出到對應連結伺服器的遠端程序呼叫和分散式查詢所使用。|  
-|**sys.sysxlgns**|存在於**主要**只有資料庫。 每個伺服器主體都包含一個資料列。|  
-|**sys.sysdbfiles**|存在於每個資料庫中。 如果資料行**dbid**為零，資料列代表屬於這個資料庫的檔案。 在 **主要**資料庫、 資料行**dbid**可以是非零。 如果是這個情況，資料列代表主檔案。|  
-|**sys.sysusermsg**|存在於**主要**只有資料庫。 每個資料列都代表一個使用者自訂的錯誤訊息。|  
-|**sys.sysprivs**|存在於每個資料庫中。 每個資料庫或伺服器層級的權限都包含一個資料列。<br /><br /> 注意:伺服器層級權限會儲存在**主要**資料庫。|  
+|**sys.sysdbreg**|僅存在於**master**資料庫中。 每個註冊的資料庫都包含一個資料列。|  
+|**sys.sysxsrvs**|僅存在於**master**資料庫中。 每個本機、連結或遠端伺服器都包含一個資料列。|  
+|**sys.sysrmtlgns**|此系統基表僅存在於**master**資料庫中。 每個遠端登入對應都包含一個資料列。 這用來將宣告為來自對應伺服器的內送登入對應至實際的本機登入。|  
+|**sys.syslnklgns**|僅存在於**master**資料庫中。 每個連結登入對應都包含一個資料列。 連結登入對應是由從遠端伺服器發出到對應連結伺服器的遠端程序呼叫和分散式查詢所使用。|  
+|**sys.sysxlgns**|僅存在於**master**資料庫中。 每個伺服器主體都包含一個資料列。|  
+|**sys.sysdbfiles**|存在於每個資料庫中。 如果資料行**dbid**為零，則資料列代表屬於此資料庫的檔案。 在 master 資料庫中，**資料**行**dbid**可以是非零。 如果是這個情況，資料列代表主檔案。|  
+|**sys.sysusermsg**|僅存在於**master**資料庫中。 每個資料列都代表一個使用者自訂的錯誤訊息。|  
+|**sys.sysprivs**|存在於每個資料庫中。 每個資料庫或伺服器層級的權限都包含一個資料列。<br /><br /> 注意：伺服器層級許可權會儲存在**master**資料庫中。|  
 |**sys.sysowners**|存在於每個資料庫中。 每個資料列都代表一個資料庫主體。|  
 |**sys.sysobjkeycrypts**|存在於每個資料庫中。 與物間相關聯的每個對稱金鑰、加密或密碼編譯屬性都包含一個資料列。|  
 |**sys.syscerts**|存在於每個資料庫中。 資料庫中的每個憑證都包含一個資料列。|  
@@ -70,14 +70,14 @@ ms.locfileid: "68029565"
 |**sys.sysallocunits**|存在於每個資料庫中。 每個儲存配置單位都包含一個資料列。|  
 |**sys.sysrowsets**|存在於每個資料庫中。 索引或堆積的每個資料分割資料列集都包含一個資料列。|  
 |**sys.sysrowsetrefs**|存在於每個資料庫中。 資料列集參考的每個索引都包含一個資料列。|  
-|**sys.syslogshippers**|存在於**主要**只有資料庫。 針對每個資料庫鏡像見證都包含一個資料列。|  
+|**sys.syslogshippers**|僅存在於**master**資料庫中。 針對每個資料庫鏡像見證都包含一個資料列。|  
 |**sys.sysremsvcbinds**|存在於每個資料庫中。 每個遠端服務繫結都包含一個資料列。|  
 |**sys.sysconvgroup**|存在於每個資料庫中。 Service Broker 中的每個服務執行個體都包含一個資料列。|  
 |**sys.sysxmitqueue**|存在於每個資料庫中。 每個 Service Broker 傳輸佇列都包含一個資料列。|  
 |**sys.sysdesend**|存在於每個資料庫中。 Service Broker 轉換的每個傳送端點都包含一個資料列。|  
 |**sys.sysdercv**|存在於每個資料庫中。 Service Broker 轉換的每個接收端點都包含一個資料列。|  
-|**sys.sysendpts**|存在於**主要**只有資料庫。 在伺服器中建立的每個端點都包含一個資料列。|  
-|**sys.syswebmethods**|存在於**主要**只有資料庫。 在 SOAP 之 HTTP 端點 (在伺服器中建立的) 上定義的每個 SOAP 方法都包含一個資料列。|  
+|**sys.sysendpts**|僅存在於**master**資料庫中。 在伺服器中建立的每個端點都包含一個資料列。|  
+|**sys.syswebmethods**|僅存在於**master**資料庫中。 在 SOAP 之 HTTP 端點 (在伺服器中建立的) 上定義的每個 SOAP 方法都包含一個資料列。|  
 |**sys.sysqnames**|存在於每個資料庫中。 每個命名空間或符合 4 位元組識別碼語彙基元的名稱都包含一個資料列。|  
 |**sys.sysxmlcomponent**|存在於每個資料庫中。 每個資料列都代表一個 XML 結構描述元件。|  
 |**sys.sysxmlfacet**|存在於每個資料庫中。 XML 類型定義的每個 XML Facet (限制) 都包含一個資料列。|  

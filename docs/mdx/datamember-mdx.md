@@ -1,5 +1,5 @@
 ---
-title: DataMember (MDX) |Microsoft Docs
+title: DataMember （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4395f0ff113c8549ec2250d5fa87d37090627b3c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892909"
 ---
 # <a name="datamember-mdx"></a>DataMember (MDX)
@@ -32,13 +32,13 @@ Member_Expression.DataMember
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 此函式會在任何階層中的非分葉成員上運作, 並可由[UPDATE CUBE 語句 (MDX)](../mdx/mdx-data-manipulation-update-cube.md)命令用來直接將資料回寫到非分葉成員, 而不是對分葉成員的下階。  
+ 此函式會在任何階層中的非分葉成員上運作，並可由[UPDATE CUBE 語句（MDX）](../mdx/mdx-data-manipulation-update-cube.md)命令用來直接將資料回寫到非分葉成員，而不是對分葉成員的下階。  
   
 > [!NOTE]  
 >  如果指定的成員是分葉成員，或如果非分葉成員沒有相關聯的資料成員，就會傳回指定的成員。  
   
 ## <a name="example"></a>範例  
- 下列範例會在匯出量值中使用**DataMember**函數, 以顯示每個個別員工的銷售配額:  
+ 下列範例會在匯出量值中使用**DataMember**函數，以顯示每個個別員工的銷售配額：  
   
 ```  
 WITH MEMBER measures.InvidualQuota AS   
@@ -50,7 +50,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX 的關鍵概念 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 中的重要概念 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)  
   
   

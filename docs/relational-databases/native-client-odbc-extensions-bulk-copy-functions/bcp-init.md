@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b8e40091f88c4e9fc739f125a2e44715e62c9ee
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782684"
 ---
 # <a name="bcp_init"></a>bcp_init
@@ -70,7 +70,7 @@ Unicode 和 ANSI 名稱：
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 呼叫任何其他大量複製函數之前，請先呼叫**bcp_init** 。 **bcp_init**會針對工作站和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之間的大量資料複製執行必要的初始化。  
+ 呼叫任何其他大量複製函數之前，請先呼叫**bcp_init** 。 **bcp_init**會針對工作站和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之間的資料大量複製，執行必要的初始化。  
   
  必須提供已啟用 ODBC 連接控制碼的**bcp_init**函式，以便搭配大量複製函數使用。 若要啟用控制碼，請在已配置但未連接的連接控制碼上，使用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)搭配 SQL_COPT_SS_BCP 設定為 SQL_BCP_ON。 嘗試在已連接的控制代碼上指派屬性會導致錯誤。  
   
@@ -84,15 +84,16 @@ Unicode 和 ANSI 名稱：
   
 -   複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，資料檔案對於資料庫資料表中的每個資料行都必須有資料。 從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複製時，來自資料庫資料表、檢視或 SELECT 結果集中所有資料行的資料都會複製到資料檔案中。  
   
--   複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，資料行在資料檔案中的序數位置必須與資料行在資料庫資料表中的序數位置相同。 從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]複製時， **bcp_exec**會根據資料庫資料表中資料行的序數位置來放置資料。  
+-   複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，資料行在資料檔案中的序數位置必須與資料行在資料庫資料表中的序數位置相同。 從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]複製時， **bcp_exec**會根據資料庫資料表中資料行的序數位置來放置資料。  
   
--   如果資料庫資料類型的長度是可變的（例如**Varbinary （22）** ），或如果資料庫資料行可以包含 null 值，資料檔案中的資料就會以長度/null 指標作為前置詞。 指標的寬度會根據資料類型和大量複製的版本而改變。  
+-   如果資料庫資料類型的長度是可變的（例如**Varbinary （22）**），或如果資料庫資料行可以包含 null 值，資料檔案中的資料就會以長度/null 指標作為前置詞。 指標的寬度會根據資料類型和大量複製的版本而改變。  
   
  若要變更針對資料檔案指定的資料格式值，請呼叫[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)並[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的大量複製可以針對不包含索引的資料表進行最佳化，方法是，將資料庫復原模式設定為 SIMPLE 或 BULK_LOGGED。 如需詳細資訊，請參閱大量匯入和[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)[中最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的大量複製可以針對不包含索引的資料表進行最佳化，方法是，將資料庫復原模式設定為 SIMPLE 或 BULK_LOGGED。 如需詳細資訊，請參閱大量匯入和[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)[中最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
- 如果沒有使用任何資料檔案，您必須呼叫[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)來指定記憶體中每個資料行之資料的格式和位置，然後使用[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)將資料列複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 如果沒有使用任何資料檔案，您必須呼叫[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)來指定記憶體中每個資料行之資料的格式和位置，然後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)將資料列複製到。  
   
 ## <a name="example"></a>範例  
  此範例顯示如何利用格式檔案使用 ODBC bcp_init 函數。  

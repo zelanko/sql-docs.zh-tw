@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dae8f1d98fb1758e9a9802883def1574bda68a78
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798214"
 ---
 # <a name="list-job-category-information"></a>列出作業類別目錄資訊
-  如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中列出作業類別目錄資訊。  
+  如何使用[!INCLUDE[tsql](../../includes/tsql-md.md)]或 SQL Server 管理物件，在中[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]列出作業類別目錄資訊。  
 
   
 ##  <a name="Security"></a> Security  
@@ -33,7 +33,7 @@ ms.locfileid: "72798214"
   
 2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```sql
     -- returns information about jobs that are administered locally  
@@ -49,6 +49,6 @@ ms.locfileid: "72798214"
   
   
 ##  <a name="SMO"></a>使用 SQL Server 管理物件  
- **若要列出作業類別目錄資訊**  
+ **列出作業類別目錄資訊**  
   
- 透過所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell，使用 `JobCategory` 類別。 如需詳細資訊，[請&#40;參閱&#41; SQL Server 管理物件 SMO 程式設計指南](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)。  
+ 透過所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell，使用 `JobCategory` 類別。 如需詳細資訊，請參閱[SQL Server 管理物件 &#40;SMO&#41; 程式設計手冊](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)。  

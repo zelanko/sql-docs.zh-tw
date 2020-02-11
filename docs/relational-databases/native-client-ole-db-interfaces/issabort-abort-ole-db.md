@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d66d37da3ba2de7f12cefb8f806c44d5dd967003
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73763173"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
@@ -28,9 +28,9 @@ ms.locfileid: "73763173"
 
   取消目前的資料列集加上與目前命令相關聯之任何批次處理的命令。  
   
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者中公開的**ISSAbort**介面提供了**ISSAbort：： Abort**方法，可用於取消目前的資料列集，再加上使用命令批次處理的任何命令，這是一開始產生資料列集，而且尚未完成執行。  
+**ISSAbort**介面（在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者中公開）提供了**ISSAbort：： Abort**方法，可用於取消目前的資料列集，加上使用命令批次處理的任何命令，這是一開始產生資料列集，而且尚未完成執行。  
   
- **ISSAbort**是可在**ICommand：： Execute**或**IOpenRowset：： OpenRowset**所傳回之**IMultipleResults**物件上使用**QueryInterface**的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者特定介面。  
+ **ISSAbort** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是原生用戶端提供者特定的介面，可在**ICommand：： Execute**或**IOpenRowset：： OpenRowset**所傳回的**IMultipleResults**物件上使用**QueryInterface** 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,7 +52,8 @@ HRESULT Abort(void);
   
 ## <a name="return-code-values"></a>傳回碼值  
  S_OK  
- **ISSAbort::Abort** 方法會傳回 S_OK，如果批次遭到取消，則為 DB_E_CANTCANCEL。 如果批次已經遭到取消，就會傳回 DB_E_CANCELED。  
+ 
+  **ISSAbort::Abort** 方法會傳回 S_OK，如果批次遭到取消，則為 DB_E_CANTCANCEL。 如果批次已經遭到取消，就會傳回 DB_E_CANCELED。  
   
  DB_E_CANCELED  
  批次已經遭到取消。  
