@@ -11,21 +11,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ac48f47b7455fd68245cec23c68132e4070835f9
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637762"
 ---
 # <a name="hello-world-sample"></a>Hello World 範例
   這個 Hello World 範例會示範建立、部署和測試以簡單 Common Language Runtime (CLR) 整合為基礎的預存程序過程中所涉及的基本作業。 此範例還示範如何透過由預存程序動態建構及傳回至呼叫端的記錄來傳回資料。  
   
- `HelloWorld` 預存程式會傳回字串 "Hello world！" 在包含一個資料列的結果集中。 這個範例會說明[SqlMetaData](https://go.microsoft.com/fwlink/?LinkID=193572)、 [SqlDataRecord](https://go.microsoft.com/fwlink/?LinkID=193573)和[microsoft](https://go.microsoft.com/fwlink/?LinkID=193571)的類別的一些用途，如下所示：. sql server。  
+ `HelloWorld`預存程式會傳回字串 "Hello world！" 在包含一個資料列的結果集中。 這個範例會說明[SqlMetaData](https://go.microsoft.com/fwlink/?LinkID=193572)、 [SqlDataRecord](https://go.microsoft.com/fwlink/?LinkID=193573)和[microsoft](https://go.microsoft.com/fwlink/?LinkID=193571)的類別的一些用途，如下所示：. sql server。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站[免費取得 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站[免費取得 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
   
 -   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](https://go.microsoft.com/fwlink/?linkid=62796)取得 AdventureWorks 資料庫  
   
@@ -54,7 +55,7 @@ ms.locfileid: "73637762"
   
 -   AdventureWorks 資料庫必須安裝在您所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。  
   
--   如果您不是所使用之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實例的系統管理員，則必須讓系統管理員授與您**CreateAssembly**許可權，才能完成安裝。  
+-   如果您不是所使用之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例的系統管理員，則必須讓系統管理員授與您**CreateAssembly**許可權，才能完成安裝。  
   
 ## <a name="building-the-sample"></a>建立範例  
   
@@ -78,7 +79,7 @@ ms.locfileid: "73637762"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 測試命令腳本複製到檔案中，並將它儲存為範例目錄中的 `test.sql`。  
+7.  將[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令腳本複製到檔案中，並將`test.sql`它儲存成範例目錄中的。  
   
 8.  使用下列命令來執行測試指令碼  
   
@@ -195,6 +196,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [通用語言執行平台 &#40;CLR&#41; 整合的使用案例和範例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Common Language Runtime &#40;CLR&#41; 整合的使用案例和範例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

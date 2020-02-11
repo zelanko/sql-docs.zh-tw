@@ -1,5 +1,5 @@
 ---
-title: sysservers (Transact-sql) |Microsoft Docs
+title: sysservers （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 333be9cb6c86c1db3801ac50159610c6d19d1611
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68941106"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
@@ -42,34 +42,34 @@ ms.locfileid: "68941106"
 |**srvname**|**sysname**|伺服器的名稱。|  
 |**srvproduct**|**sysname**|遠端伺服器的產品名稱。|  
 |**providername**|**nvarchar(128)**|存取這部伺服器的 OLE DB 提供者名稱。|  
-|**datasource**|**nvarchar(4000)**|OLE DB 資料來源值。|  
-|**location**|**nvarchar(4000)**|OLE DB 位置值。|  
+|**源**|**nvarchar(4000)**|OLE DB 資料來源值。|  
+|**位置**|**nvarchar(4000)**|OLE DB 位置值。|  
 |**providerstring**|**nvarchar(4000)**|OLE DB 提供者字串值。|  
 |**schemadate**|**datetime**|上次更新這個資料列的日期。|  
 |**topologyx**|**int**|未使用。|  
 |**topologyy**|**int**|未使用。|  
-|**catalog**|**sysname**|當建立通往 OLE DB 提供者的連接時所用的目錄。|  
+|**目錄**|**sysname**|當建立通往 OLE DB 提供者的連接時所用的目錄。|  
 |**srvcollation**|**sysname**|伺服器的定序。|  
 |**connecttimeout**|**int**|伺服器連接的逾時值設定。|  
 |**querytimeout**|**int**|針對伺服器進行查詢的逾時值設定。|  
-|**srvnetname**|**char(30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**srvnetname**|**char （30）**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**isremote**|**bit**|1 = 伺服器是遠端伺服器。<br /><br /> 0 = 伺服器是連結伺服器。|  
-|**rpc**|**bit**|1 = **sp_serveroption\@rpc**設為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@rpc**設為**false**或**off**。|  
-|**pub**|**bit**|1 = **sp_serveroption\@pub**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@pub**設為**false**或**off**。|  
+|**4**|**bit**|1 = **sp_serveroption\@的 rpc**設為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@rpc**設為**false**或**off**。|  
+|**酒館**|**bit**|1 = **sp_serveroption\@pub**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@pub**設為**false**或**off**。|  
 |**sub**|**bit**|1 = **sp_serveroption\@子**集合設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@sub**設定為**false**或**off**。|  
 |**dist**|**bit**|1 = **sp_serveroption\@dist**設為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@dist**設為**false**或**off**。|  
-|**dpub**|**bit**|1 = **sp_serveroption\@dpub**設為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@dpub**設為**false**或**off**。|  
+|**dpub**|**bit**|1 = **sp_serveroption\@dpub**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@dpub**設定為**false**或**off**。|  
 |**rpcout**|**bit**|1 = **sp_serveroption\@rpc out**設為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@rpc out**設為**false**或**off**。|  
 |**dataaccess**|**bit**|1 = **sp_serveroption\@資料存取**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@資料存取**設定為**false**或**off**。|  
 |**collationcompatible**|**bit**|1 = **sp_serveroption\@定序相容**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@定序相容**設定為**false**或**off**。|  
-|**system**|**bit**|1 = **sp_serveroption\@系統**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@系統**設定為**false**或**off**。|  
+|**筆記本電腦**|**bit**|1 = **sp_serveroption\@系統**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@系統**設定為**false**或**off**。|  
 |**useremotecollation**|**bit**|1 = **sp_serveroption\@遠端定序**設定為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@遠端定序**設為**false**或**off**。|  
 |**lazyschemavalidation**|**bit**|1 = **sp_serveroption\@延遲架構驗證**設為**true**或**on**。<br /><br /> 0 = **sp_serveroption\@延遲架構驗證**設為**false**或**off**。|  
-|**定序**|**sysname**|依 **\@sp_serveroption 定序名稱**設定的伺服器定序。|  
+|**定序**|**sysname**|依**\@sp_serveroption 定序名稱**設定的伺服器定序。|  
 |**nonsqlsub**|bit|0 = 伺服器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體<br /><br /> 1 = 伺服器不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體|  
   
 ## <a name="see-also"></a>另請參閱  
- [將系統資料表對應至 System &#40;Views transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [將系統資料表對應至系統檢視 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的相容性檢視](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

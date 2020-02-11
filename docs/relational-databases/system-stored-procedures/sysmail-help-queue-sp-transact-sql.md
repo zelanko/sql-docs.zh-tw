@@ -18,16 +18,16 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d506d7ea841e211d9ab6fb0715a6a9359cefa83d
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305224"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Database Mail 中有兩個佇列：郵件佇列和狀態佇列。 郵件佇列儲存等候傳送的郵件項目。 狀態佇列儲存已傳送之項目的狀態。 這個預存程序可檢視郵件或狀態佇列的狀態。 如果未指定參數 **\@queue_type** ，則預存程式會針對每個佇列傳回一個資料列。  
+  Database Mail 中有兩個佇列：郵件佇列和狀態佇列。 郵件佇列儲存等候傳送的郵件項目。 狀態佇列儲存已傳送之項目的狀態。 這個預存程序可檢視郵件或狀態佇列的狀態。 如果未指定參數** \@queue_type** ，則預存程式會針對每個佇列傳回一個資料列。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,7 +39,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @queue_type = ] 'queue_type'` 選擇性引數會刪除指定為*queue_type*之類型的電子郵件。 *queue_type*是**Nvarchar （6）** ，沒有預設值。 有效的專案為**mail**和**status**。  
+`[ @queue_type = ] 'queue_type'`選擇性引數會刪除指定為*queue_type*之類型的電子郵件。 *queue_type*是**Nvarchar （6）** ，沒有預設值。 有效的專案為**mail**和**status**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
@@ -48,16 +48,16 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**queue_type**|**nvarchar(6)**|佇列的類型。 可能的值為**mail**和**status**。|  
-|**length**|**int**|指定佇列中的郵件項目數。|  
-|**state**|**nvarchar(64)**|監視器的狀態。 可能的值為**非**使用中（佇列為非使用中）、已**通知**（佇列已通知接收發生），以及**RECEIVES_OCCURRING** （佇列正在接收）。|  
+|**queue_type**|**Nvarchar （6）**|佇列的類型。 可能的值為**mail**和**status**。|  
+|**長**|**int**|指定佇列中的郵件項目數。|  
+|**狀態**|**Nvarchar （64）**|監視器的狀態。 可能的值為**非**使用中（佇列為非使用中）、已**通知**（佇列已通知接收發生），以及**RECEIVES_OCCURRING** （佇列正在接收）。|  
 |**last_empty_rowset_time**|**從中**|佇列上次空的日期和時間。 以軍用時間格式和 GMT 時區表示。|  
 |**last_activated_time**|**從中**|佇列上次啟動的日期和時間。 以軍用時間格式和 GMT 時區表示。|  
   
 ## <a name="remarks"></a>備註  
  針對 Database Mail 進行疑難排解時，請使用**sysmail_help_queue_sp**來查看佇列中有多少專案、佇列的狀態，以及上次啟用的時間。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  根據預設，只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠存取此程式。  
   
 ## <a name="examples"></a>範例  

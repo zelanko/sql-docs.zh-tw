@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7250c27e2ce35abbd15fc334f4f0ac07e94e985b
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73789526"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
@@ -38,7 +38,7 @@ HRESULT Abort(
 ```  
   
 ## <a name="arguments"></a>引數  
- *hChapter*[in]  
+ *hchapter 設定*[in]  
  要中止作業之章節的控制代碼。 如果所呼叫的物件不是資料列集物件，或作業不適用於某個章節，則呼叫端必須將*hchapter 設定*設定為 DB_Null_HCHAPTER。  
   
  *eOperation*[in]  
@@ -69,7 +69,7 @@ HRESULT Abort(
   
  在先前呼叫了**ITransaction：： Commit**或**ITransaction：： abort**的資料列集上呼叫**ISSAsynchStatus：： Abort** ，而且資料列集不會存留在 Commit 或 Abort，而且處於廢止狀態。  
   
- 已在資料列集上呼叫 **ISSAsynchStatus::Abort**，這個資料列集已在其初始化階段非同步地取消。 此資料列集處於廢止狀態。  
+ 已在初始化階段中以非同步方式取消的資料列集上呼叫**ISSAsynchStatus：： Abort** 。 此資料列集處於廢止狀態。  
   
 ## <a name="remarks"></a>備註  
  中止資料列集或資料來源物件的初始化可能會讓該資料列集或資料來源物件處於廢止狀態，因此造成 **IUnknown** 方法以外的所有方法都會傳回 E_UNEXPECTED。 當發生這個情況時，取用者唯一可行的動作就是釋放此資料列集或資料來源物件。  

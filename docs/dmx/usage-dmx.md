@@ -1,5 +1,5 @@
 ---
-title: 使用方式 (DMX) |Microsoft Docs
+title: 使用方式（DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b961282ba6bc25caa260a3e156f843a413a5ef1a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893117"
 ---
 # <a name="usage-dmx"></a>使用方式 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  當您使用資料採礦延伸模組 (DMX) 在中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]定義新的資料採礦模型時, 您必須指定建立模型的資料採礦演算法將如何使用每個資料行。 您可以將資料行指定為下列類型其中之一：  
+  當您使用資料採礦延伸模組（DMX）在中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]定義新的資料採礦模型時，您必須指定建立模型的資料採礦演算法將如何使用每個資料行。 您可以將資料行指定為下列類型其中之一：  
   
 -   **索引鍵**  
   
--   **按鍵順序**  
+-   **Key Sequence**  
   
--   **金鑰時間**  
+-   **Key Time**  
   
--   **Predict**  
+-   **預報**  
   
 -   **PredictOnly**  
   
@@ -36,17 +36,17 @@ ms.locfileid: "68893117"
   
  指定為**Predict**類型的資料行會當做輸入和輸出資料行使用。 指定為**PredictOnly**的資料行只會用來做為輸出資料行。 特定的演算法可能會以不同方式處理 Predict 資料行。  
   
- 如需[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援之資料行使用類型的詳細資訊, 請參閱[採礦模型資料行](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)。  
+ 如需[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援之資料行使用類型的詳細資訊，請參閱[採礦模型資料行](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [資料採礦演算法 &#40;Analysis Services-資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [資料採礦延伸模組 &#40;DMX&#41; 參考](../dmx/data-mining-extensions-dmx-reference.md)   
- [資料採礦延伸&#40;模組&#41; DMX 語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [資料採礦延伸&#40;模組&#41; DMX 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [資料採礦延伸&#40;模組&#41; DMX 運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [資料採礦延伸&#40;模組&#41; DMX 語句參考](../dmx/data-mining-extensions-dmx-statements.md)   
- [資料採礦延伸&#40;模組&#41; DMX 語法慣例](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [&#40;DMX&#41; 語法元素的資料採礦延伸模組](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [資料採礦延伸模組 &#40;DMX&#41; 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [DMX&#41; Operator Reference &#40;的資料採礦延伸模組](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [資料採礦延伸模組 &#40;DMX&#41; 語句參考](../dmx/data-mining-extensions-dmx-statements.md)   
+ [資料採礦延伸模組 &#40;DMX&#41; 語法慣例](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [&#40;DMX&#41;的一般預測函數](../dmx/general-prediction-functions-dmx.md)   
  [DMX 預測查詢的結構和使用方式](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  
   

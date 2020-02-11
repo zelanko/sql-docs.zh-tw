@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011482"
 ---
 # <a name="query-properties-visual-database-tools"></a>查詢屬性 (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "63011482"
 > [!NOTE]  
 >  此主題中的屬性是依分類排列，而非依字母順序排列。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **識別類別目錄**  
  展開以顯示 [名稱]  屬性。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63011482"
  **查詢設計工具分類**  
  展開以顯示其餘屬性。  
   
- **目的資料表**  
+ **目的地資料表**  
  指定要插入資料的資料表名稱。 建立 INSERT 查詢或 MAKE TABLE 查詢時，會出現這份清單。 如果是 INSERT 查詢，請從清單中選取資料表名稱。  
   
  針對 MAKE TABLE 查詢，輸入新資料表的名稱。 若要在其他資料來源中建立目的資料表，請指定完整的資料表名稱，包括目標資料來源名稱、擁有人 (如有需要) 和資料表名稱。  
@@ -83,7 +83,7 @@ ms.locfileid: "63011482"
  指定檢視中會包含 WITH TIES 子句。 如果檢視中包含了 ORDER BY 和以百分比為基礎的 TOP 子句，WITH TIES 非常實用。 如果設定了此選項，而且百分比截止點落在 ORDER BY 子句裡一組相同值的資料列中間，將會擴充檢視以將這些資料列全部包含。 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 (含) 以後版本)。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用參數查詢&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [使用 &#40;Visual Database Tools&#41;的參數查詢](visual-database-tools.md)   
  [設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

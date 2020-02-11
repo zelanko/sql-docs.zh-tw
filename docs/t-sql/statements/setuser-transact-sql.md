@@ -21,10 +21,10 @@ ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 66830b3000d749ab17a5800c3450c5880c5d1aba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68076439"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
@@ -51,7 +51,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
  WITH NORESET  
  指定後續的 SETUSER 陳述式 (不含指定的 *username*) 不應將使用者識別重設為系統管理員或資料庫擁有者。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **sysadmin** 固定伺服器角色的成員或資料庫的擁有者，可以使用 SETUSER 來採用其他使用者的識別，以測試另一位使用者的權限。 db_owner 固定資料庫角色中的成員資格並不夠。  
   
  請只搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者使用 SETUSER。 不支援 Windows 使用者使用 SETUSER。 當利用 SETUSER 來假設使用另一位使用者的識別時，被模擬的使用者會擁有進行模擬的使用者所建立的任何物件。 例如，假設資料庫擁有者使用 **Margaret** 使用者的識別，並建立稱為 **orders** 的資料表，則 **orders** 資料表的擁有者即為 **Margaret**，而不是系統管理員。  

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ce80d7a27384f628af02bfa58abcaa351b569d56
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399814"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>平行處理資料倉儲的 t-sql 語句
@@ -25,20 +25,20 @@ ms.locfileid: "74399814"
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
 * [改變架構](../t-sql/statements/alter-schema-transact-sql.md)
 * [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
-* [建立資料行存放區索引](../t-sql/statements/create-columnstore-index-transact-sql.md)
-* [建立資料庫](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
-* [建立資料庫範圍認證](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-* [建立外部資料源](../t-sql/statements/create-external-data-source-transact-sql.md)
-* [建立外部檔案格式](../t-sql/statements/create-external-file-format-transact-sql.md)
+* [CREATE COLUMNSTORE INDEX](../t-sql/statements/create-columnstore-index-transact-sql.md)
+* [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
+* [CREATE DATABASE SCOPED CREDENTIAL](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+* [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)
+* [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)
 * [建立外部資料表](../t-sql/statements/create-external-table-transact-sql.md)
-* [CREATE 函式](../t-sql/statements/create-function-sql-data-warehouse.md)
-* [建立索引](../t-sql/statements/create-index-transact-sql.md)
-* [建立程式](../t-sql/statements/create-procedure-transact-sql.md)
-* [建立架構](../t-sql/statements/create-schema-transact-sql.md)
+* [CREATE FUNCTION](../t-sql/statements/create-function-sql-data-warehouse.md)
+* [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md)
+* [CREATE PROCEDURE](../t-sql/statements/create-procedure-transact-sql.md)
+* [CREATE SCHEMA](../t-sql/statements/create-schema-transact-sql.md)
 * [建立統計資料](../t-sql/statements/create-statistics-transact-sql.md)
 * [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md)
 * [CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
-* [建立視圖](../t-sql/statements/create-view-transact-sql.md)
+* [CREATE VIEW](../t-sql/statements/create-view-transact-sql.md)
 * [捨棄外部資料源](../t-sql/statements/drop-external-data-source-transact-sql.md)
 * [捨棄外部檔案格式](../t-sql/statements/drop-external-file-format-transact-sql.md)
 * [捨棄外部資料表](../t-sql/statements/drop-external-table-transact-sql.md)
@@ -50,12 +50,12 @@ ms.locfileid: "74399814"
 * [捨棄視圖](../t-sql/statements/drop-view-transact-sql.md)
 * [RENAME](../t-sql/statements/rename-transact-sql.md)
 * [TRUNCATE TABLE](../t-sql/statements/truncate-table-transact-sql.md)
-* [更新統計資料](../t-sql/statements/update-statistics-transact-sql.md)
+* [UPDATE STATISTICS](../t-sql/statements/update-statistics-transact-sql.md)
 
 ## <a name="data-manipulation-language-dml-statements"></a>資料操作語言 (DML) 陳述式
 * [DELETE](../t-sql/statements/delete-transact-sql.md)
-* [插入](../t-sql/statements/insert-transact-sql.md)
-* [更新](../t-sql/queries/update-transact-sql.md)
+* [INSERT](../t-sql/statements/insert-transact-sql.md)
+* [UPDATE](../t-sql/queries/update-transact-sql.md)
 
 ## <a name="database-console-commands"></a>資料庫主控台命令
 * [DBCC DROPCLEANBUFFERS](../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md)
@@ -68,21 +68,21 @@ ms.locfileid: "74399814"
 
 ## <a name="query-statements"></a>查詢陳述式
 * [SELECT](../t-sql/queries/select-transact-sql.md)
-* [使用 common_table_expression](../t-sql/queries/with-common-table-expression-transact-sql.md)
+* [WITH common_table_expression](../t-sql/queries/with-common-table-expression-transact-sql.md)
 * [EXCEPT 和 INTERSECT](../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)
-* [簡要](../t-sql/queries/explain-transact-sql.md)
-* [從](../t-sql/queries/from-transact-sql.md)
+* [EXPLAIN](../t-sql/queries/explain-transact-sql.md)
+* [FROM](../t-sql/queries/from-transact-sql.md)
 * [使用 PIVOT 和 UNPIVOT](../t-sql/queries/from-using-pivot-and-unpivot.md)
 * [GROUP BY](../t-sql/queries/select-group-by-transact-sql.md)
 * [HAVING](../t-sql/queries/select-having-transact-sql.md)
 * [排序依據](../t-sql/queries/select-order-by-clause-transact-sql.md)
 * [件](../t-sql/queries/option-clause-transact-sql.md)
-* [UNION](../t-sql/language-elements/set-operators-union-transact-sql.md)
-* [希望](../t-sql/queries/where-transact-sql.md)
-* [返回頁首](../t-sql/queries/top-transact-sql.md)
+* [並](../t-sql/language-elements/set-operators-union-transact-sql.md)
+* [WHERE](../t-sql/queries/where-transact-sql.md)
+* [頂端](../t-sql/queries/top-transact-sql.md)
 * [別名](../t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md)
 * [搜尋條件](../t-sql/queries/search-condition-transact-sql.md)
-* [個子](../t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md)
+* [子查詢](../t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md)
 
 ## <a name="security-statements"></a>安全性陳述式
 * 權限：[GRANT](../t-sql/statements/grant-transact-sql.md)、[DENY](../t-sql/statements/deny-transact-sql.md)、[REVOKE](../t-sql/statements/revoke-transact-sql.md)
@@ -93,23 +93,23 @@ ms.locfileid: "74399814"
 * [改變主要金鑰](../t-sql/statements/alter-master-key-transact-sql.md)
 * [改變角色](../t-sql/statements/alter-role-transact-sql.md)
 * [ALTER USER](../t-sql/statements/alter-user-transact-sql.md)
-* [備份憑證](../t-sql/statements/backup-certificate-transact-sql.md)
-* [關閉主要金鑰](../t-sql/statements/close-master-key-transact-sql.md)
-* [建立憑證](../t-sql/statements/create-certificate-transact-sql.md)
-* [建立資料庫加密金鑰](../t-sql/statements/create-database-encryption-key-transact-sql.md)
-* [建立登入](../t-sql/statements/create-login-transact-sql.md)
-* [建立主要金鑰](../t-sql/statements/create-master-key-transact-sql.md)
-* [建立角色](../t-sql/statements/create-role-transact-sql.md)
+* [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)
+* [CLOSE MASTER KEY](../t-sql/statements/close-master-key-transact-sql.md)
+* [CREATE CERTIFICATE](../t-sql/statements/create-certificate-transact-sql.md)
+* [CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)
+* [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)
+* [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)
+* [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)
 * [建立使用者](../t-sql/statements/create-user-transact-sql.md)
 * [捨棄憑證](../t-sql/statements/drop-certificate-transact-sql.md)
 * [卸載資料庫加密金鑰](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
-* [捨棄登入](../t-sql/statements/drop-login-transact-sql.md)
-* [捨棄主要金鑰](../t-sql/statements/drop-master-key-transact-sql.md)
+* [DROP LOGIN](../t-sql/statements/drop-login-transact-sql.md)
+* [DROP MASTER KEY](../t-sql/statements/drop-master-key-transact-sql.md)
 * [捨棄角色](../t-sql/statements/drop-role-transact-sql.md)
 * [DROP USER](../t-sql/statements/drop-user-transact-sql.md)
-* [開啟主要金鑰](../t-sql/statements/open-master-key-transact-sql.md)
+* [OPEN MASTER KEY](../t-sql/statements/open-master-key-transact-sql.md)
 
-## <a name="next-steps"></a>接下來的步驟
+## <a name="next-steps"></a>後續步驟
 如需更多的參考資訊，請參閱[t-sql 語言元素](tsql-language-elements.md)和[t-sql 系統檢視](tsql-system-views.md)。
 
 <!--Image references-->

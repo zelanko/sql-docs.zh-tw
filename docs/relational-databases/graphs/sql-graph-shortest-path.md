@@ -19,13 +19,13 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
 ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056405"
 ---
-# <a name="shortest_path-transact-sql"></a>SHORTEST_PATH & Amp;&#40;transact-SQL&AMP;&#41;
+# <a name="shortest_path-transact-sql"></a>SHORTEST_PATH （Transact-sql）
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
   指定以遞迴或重複方式搜尋之圖形的搜尋條件。 在 SELECT 語句中，可以在與圖形節點和邊緣資料表相符的 SHORTEST_PATH 中使用。 
@@ -48,8 +48,8 @@ SHORTEST_PATH 函數可讓您尋找：
 ## <a name="arbitrary-length-pattern"></a>任意長度模式
 此模式包含節點和邊緣，必須重複地進行迴圈，直到達到所需的節點，或在符合模式中所指定的反覆運算次數上限為止。 每次執行查詢時，執行此模式的結果會是已排序的節點集合，以及從開始節點到結束節點的路徑所進行的邊緣。 這是正則運算式樣式語法模式，而且支援下列兩種模式數量詞：
 
-* **' + '** ：重複模式1或多次。 在找到最短路徑後立即終止。
-* **{1，n}** ：重複模式1到 ' n ' 次。 一旦找到最短的，就終止。
+* **' + '**：重複模式1或多次。 在找到最短路徑後立即終止。
+* **{1，n}**：重複模式1到 ' n ' 次。 一旦找到最短的，就終止。
 
 ## <a name="last_node"></a>LAST_NODE
 LAST_NODE （）函數可允許兩個任意長度的遍歷模式的連結。 它可以用於下列情況：    
@@ -85,29 +85,29 @@ STRING_AGG 函式會採用運算式和分隔符號做為輸入，並傳回字串
 ### <a name="last_value"></a>LAST_VALUE
 若要從已進行路徑的最後一個節點來投影屬性，可以使用 LAST_VALUE 彙總函式。 提供邊緣資料表別名做為此函式的輸入是錯誤的，只可以使用節點資料表名稱或別名。
 
-**最後一個節點**：最後一個節點會參考出現在路徑中的最後一個節點，而不考慮 MATCH 述詞中箭號的方向。 例如： `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`。 在這裡，路徑中的最後一個節點會是最後一次造訪的 P 節點。 
+**最後一個節點**：最後一個節點會參考出現在路徑中的最後一個節點，而不考慮 MATCH 述詞中箭號的方向。 例如： `MATCH(SHORTEST_PATH(n(-(e)->p)+) )` 。 在這裡，路徑中的最後一個節點會是最後一次造訪的 P 節點。 
 
-不過，最後一個節點是此模式輸出圖形路徑中的最後 n 個節點： `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
+不過，最後一個節點是此模式輸出圖形路徑中的最後 n 個節點：`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
 ### <a name="sum"></a>SUM
 此函式會傳回所提供節點/邊緣屬性值的總和，或出現在所遍歷路徑中的運算式。
 
 ### <a name="count"></a>COUNT
-此函式會傳回路徑中所需節點/邊緣屬性的非 null 值數目。 COUNT 函數支援具有節點或邊緣資料表別名的 '\*' 運算子。 如果沒有節點或邊緣資料表別名，\* 的用法會不明確，而且會導致錯誤。
+此函式會傳回路徑中所需節點/邊緣屬性的非 null 值數目。 COUNT 函數支援具有節點或\*邊緣資料表別名的 ' ' 運算子。 如果沒有節點或邊緣資料表別名，的使用方式\*就不明確，而且會導致錯誤。
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 
 
-### <a name="avg"></a>AVG
+### <a name="avg"></a>平均
 傳回所提供節點/邊緣屬性值的平均值，或出現在所遍歷路徑中的運算式。
 
-### <a name="min"></a>MIN
+### <a name="min"></a>最小值
 從所提供的節點/邊緣屬性值或在已進行的路徑中出現的運算式，傳回最小值。
 
-### <a name="max"></a>MAX
+### <a name="max"></a>最大值
 從所提供的節點/邊緣屬性值或在已進行的路徑中出現的運算式，傳回最大值。
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 shortest_path 函式只能用在 MATCH 內部。     
 只有 shortest_path 內才支援 LAST_NODE。     
 若要尋找加權最短路徑，則不支援所有路徑或所有最短路徑。         
@@ -137,7 +137,7 @@ FROM (
 WHERE Q.LastNode = 'Alice'
  ```
 
- ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>b.  尋找從指定節點到圖形中所有其他節點的最短路徑。 
+ ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>B.  尋找從指定節點到圖形中所有其他節點的最短路徑。 
  下列範例會尋找 Jacob 在圖形中連接的所有人員，以及從 Jacob 開始到所有這些人員的最短路徑。 
 
  ```

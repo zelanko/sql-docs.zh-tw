@@ -1,5 +1,5 @@
 ---
-title: 正在擷取結果 （進階） |Microsoft Docs
+title: 正在抓取結果（Advanced） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ ms.assetid: bc00c379-71a7-407a-975c-898243f39bb6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22a88a96b856ba0976dcb8600d26f78b772654bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020500"
 ---
 # <a name="retrieving-results-advanced"></a>擷取結果 (進階)
-應用程式可以指定的位移會新增至繫結資料的緩衝區位址和對應的長度/指標緩衝區位址何時**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**呼叫。 這些新增內容的結果判斷這些作業中使用的位址。  
+應用程式可以指定在呼叫**SQLBulkOperations**、 **SQLFetch**、 **SQLFetchScroll**或**SQLSetPos**時，將位移新增至系結的資料緩衝區位址，以及對應的長度/指標緩衝區位址。 這些新增專案的結果會決定這些作業中使用的位址。  
   
- 繫結位移允許應用程式變更繫結，而不會呼叫**SQLBindCol**之前繫結的資料行。 呼叫**SQLBindCol**重新繫結的資料變更的緩衝區位址，而且長度/指標的指標。 重新繫結利用位移，相反地，只要將位移加入現有的繫結的資料緩衝區位址和長度/指標緩衝區位址。 當使用位移時，繫結都是 「 範本 」 的應用程式緩衝區的配置方式和應用程式可以藉由變更位移到不同區域的記憶體中移動這個 「 範本 」。 新的位移可以指定在任何時間，而且永遠會加入到原始的繫結的值。  
+ 系結位移可讓應用程式變更系結，而不需要針對先前系結的資料行呼叫**SQLBindCol** 。 呼叫**SQLBindCol**以重新系結資料會變更緩衝區位址和長度/指示器指標。 另一方面，以位移重新系結，就只會將位移新增至現有的系結資料緩衝區位址和長度/指標緩衝區位址。 使用位移時，系結會是應用程式緩衝區配置方式的「範本」，而應用程式可以藉由變更位移，將此「範本」移至不同的記憶體區域。 可以隨時指定新的位移，而且一律會加入至原始系結的值。  
   
- 若要指定繫結位移，應用程式會將 SQL_ATTR_ROW_BIND_OFFSET_PTR 陳述式屬性設定為 SQLINTEGER 緩衝區的位址。 應用程式呼叫的函式會使用繫結，例如之前**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**，就會將位移 （位元組），在此緩衝區中，只要資料緩衝區位址和長度/指標緩衝區位址都不是 0，，而且只要繫結的資料行結果集中。 位址和位移的總和必須是有效的位址。 （這表示，或兩個位移和加入位移的位址可以是無效，只要其總和會是有效的位址）。SQL_ATTR_ROW_BIND_OFFSET_PTR 陳述式屬性是指標，因此位移的值可以套用至多個一組繫結的資料，當然也可以藉由變更一個位移的值已變更。 應用程式必須確定，指標都有效，直到關閉資料指標。  
+ 若要指定系結位移，應用程式會將 SQL_ATTR_ROW_BIND_OFFSET_PTR 語句屬性設定為 SQLINTEGER 緩衝區的位址。 在應用程式呼叫使用系結的函式（例如**SQLBulkOperations**、 **SQLFetch**、 **SQLFetchScroll**或**SQLSetPos**）之前，只要資料緩衝區位址或長度/指標緩衝區位址都不是0，而且只要系結的資料行位於結果集中，它就會將位移以位元組為單位放置在這個緩衝區中。 位址和位移的總和必須是有效的位址。 （這表示只要或兩者的總和是有效的位址，就會將位移和加入位移的位址設為無效。）SQL_ATTR_ROW_BIND_OFFSET_PTR 語句屬性是一個指標，因此，位移值可以套用至一組以上的系結資料，而這些都可以藉由變更一個位移值來變更。 應用程式必須確定指標保持有效，直到游標關閉為止。  
   
 > [!NOTE]  
->  ODBC 2 不支援繫結位移。*x*驅動程式。  
+>  ODBC 2 不支援系結位移。*x*驅動程式。  
   
  此章節包含下列主題。  
   

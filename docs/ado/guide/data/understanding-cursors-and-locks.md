@@ -1,5 +1,5 @@
 ---
-title: 了解資料指標和鎖定 |Microsoft Docs
+title: 瞭解資料指標和鎖定 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,22 +14,22 @@ ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 41fd90d4f30c080951bd5d68407e38adac482418
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923799"
 ---
 # <a name="understanding-cursors-and-locks"></a>了解資料指標和鎖定
-請務必了解，因此您可以選取應用程式的資料存取需求的最佳且最有效率的資料指標類型，資料指標的運作方式。 較差的資料指標設定可以讓佔緩慢的資料存取作業。  
+請務必瞭解資料指標的運作方式，讓您可以針對應用程式的資料存取需求，選取最佳且最有效率的資料指標類型。 較不佳的資料指標設定可能會讓資料存取作業的輾轉變慢。  
   
- 許多功能的 ADO**資料錄集**物件由型別和資料指標，以及鎖定類型的位置。  
+ ADO**記錄集**物件的許多功能取決於資料指標的類型和位置，以及鎖定類型。  
   
  此章節包含下列主題。  
   
 -   [什麼是資料指標？](../../../ado/guide/data/what-is-a-cursor.md)  
   
--   [類型的資料指標](../../../ado/guide/data/types-of-cursors-ado.md)  
+-   [資料指標的類型](../../../ado/guide/data/types-of-cursors-ado.md)  
   
 -   [資料指標位置的精確度](../../../ado/guide/data/the-significance-of-cursor-location.md)  
   

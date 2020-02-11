@@ -14,38 +14,38 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 748ad4cfe0e399062fd1b13bcf3a05169ef94b1c
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957163"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>將 TDE 保護的資料庫移至另一個 SQL Server
   本主題描述如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，透過透明資料加密 (TDE) 保護資料庫，然後將資料庫移到另一個 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 執行個體。 TDE 會執行資料和記錄檔的即時 I/O 加密和解密。 加密會使用資料庫加密金鑰 (DEK)，此金鑰會儲存在資料庫開機記錄中，以在復原期間提供可用性。 DEK 是對稱金鑰，而其維護安全的方式是使用儲存於伺服器之 `master` 資料庫內的憑證或是受到 EKM 模組所保護的非對稱金鑰。  
   
- **本主題中的**  
+ **本主題內容**  
   
 -   **開始之前：**  
   
      [限制事項](#Restrictions)  
   
-     [安全級](#Security)  
+     [安全性](#Security)  
   
 -   **若要建立以透明資料加密保護的資料庫，請使用：**  
   
-     [SQL Server Management Studio](#SSMSCreate)  
+     [Transact-SQL](#SSMSCreate)  
   
-     [Transact-sql](#TsqlCreate)  
+     [Transact-SQL](#TsqlCreate)  
   
 -   **若要移動資料庫，請使用：**  
   
-     [SQL Server Management Studio](#SSMSMove)  
+     [Transact-SQL](#SSMSMove)  
   
-     [Transact-sql](#TsqlMove)  
+     [Transact-SQL](#TsqlMove)  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a>限制事項  
+###  <a name="Restrictions"></a> 限制事項  
   
 -   移動 TDE 保護的資料庫時，您也必須移動用來開啟 DEK 的憑證或非對稱金鑰。 憑證或非對稱金鑰必須安裝在目的地伺服器`master`的資料庫中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]才能存取資料庫檔案。 如需詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](transparent-data-encryption.md)。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "74957163"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]將此處建立的檔案儲存在**C:\Program FILES\MICROSOFT SQL Server\MSSQL12。** 預設為 MSSQLSERVER\MSSQL\DATA。 您的檔案名稱和位置可能會不同。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
   
 -   需要`CONTROL DATABASE`資料庫的`master`許可權，才能建立資料庫主要金鑰。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "74957163"
   
 ##  <a name="SSMSProcedure"></a>建立透明資料加密所保護的資料庫  
   
-###  <a name="SSMSCreate"></a>使用 SQL Server Management Studio  
+###  <a name="SSMSCreate"></a> 使用 SQL Server Management Studio  
   
 1.  在`master`資料庫中建立資料庫主要金鑰和憑證。 如需詳細資訊，請參閱下面的 **使用 Transact-SQL** 。  
   
@@ -97,15 +97,15 @@ ms.locfileid: "74957163"
      **設定資料庫加密于**  
      將資料庫改變為開啟 (核取) 或關閉 (不核取) TDE。  
   
-8.  完成時按一下 **[確定]**。  
+8.  完成後，請按一下 **[確定]** 。  
   
-###  <a name="TsqlCreate"></a>使用 Transact-sql  
+###  <a name="TsqlCreate"></a> 使用 Transact-SQL  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在 [標準]  列上，按一下 [新增查詢] ****。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [**執行**]。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- Create a database master key and a certificate in the master database.  
@@ -145,23 +145,23 @@ ms.locfileid: "74957163"
     GO  
     ```  
   
- 如需詳細資訊，請參閱：  
+ 如需詳細資訊，請參閱  
   
--   [建立主要金鑰 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
+-   [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
--   [建立憑證 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [備份憑證 &#40;Transact-sql&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)  
+-   [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)  
   
--   [建立資料庫 &#40;SQL Server Transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
+-   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
--   [建立資料庫加密金鑰 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+-   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
--   [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
+-   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
 ##  <a name="TsqlProcedure"></a>若要移動資料庫  
   
-###  <a name="SSMSMove"></a>使用 SQL Server Management Studio  
+###  <a name="SSMSMove"></a> 使用 SQL Server Management Studio  
   
 1.  在 [物件總管] 中，以滑鼠右鍵按一下上方加密的資料庫，指向 [工作]**** ，然後選取 [卸離...]****。  
   
@@ -171,10 +171,10 @@ ms.locfileid: "74957163"
      **要卸離的資料庫**  
      列出要卸離的資料庫。  
   
-     **資料庫名稱**  
+     **Database Name**  
      顯示要卸離的資料庫名稱。  
   
-     **捨棄連接**  
+     **卸除連接**  
      中斷到指定資料庫的連接。  
   
     > [!NOTE]  
@@ -190,16 +190,15 @@ ms.locfileid: "74957163"
      顯示下列狀態其中之一： **就緒** 或 **未就緒**。  
   
      **訊息**  
-     
-  **[訊息]** 資料行可以顯示有關資料庫的資訊，如下所示：  
+     **[訊息]** 資料行可以顯示有關資料庫的資訊，如下所示：  
   
-    -   當資料庫涉及複寫時， **[狀態]** 為 **[尚未備妥]** 且 **[訊息]** 資料行會顯示 **[資料庫已複寫]**。  
+    -   當資料庫涉及複寫時， **[狀態]** 為 **[尚未備妥]** 且 **[訊息]** 資料行會顯示 **[資料庫已複寫]** 。  
   
-    -   當資料庫有一或多個使用中的連接時，**狀態**會是 [**未就緒**]，且 [**訊息**] 資料行會顯示 _<number_of_active_connections>_ 使用中**的連接，** 例如：1個使用中的**連接**。 您必須選取 **[卸除連接]** 中斷任何使用中的連接之後，才能卸離資料庫。  
+    -   當資料庫有一或多個使用中的連線時，[狀態]  為 [未就緒]  且 [訊息]  資料行顯示 [<使用中連線數目> 個使用中的連線]   ，例如：[1 個使用中的連線]  。 您必須選取 **[卸除連接]** 中斷任何使用中的連接之後，才能卸離資料庫。  
   
      若要取得有關訊息的詳細資訊，請按一下超連結文字，以開啟活動監視器。  
   
-2.  按一下 [確定]****。  
+2.  按一下 [確定]  。  
   
 3.  使用 [Windows 檔案總管]，將資料庫檔案從來源伺服器移動或複製到目的地伺服器上相同的位置。  
   
@@ -228,13 +227,13 @@ ms.locfileid: "74957163"
      **MDF 檔案位置**  
      顯示選取之 MDF 檔的路徑和檔案名稱。  
   
-     **資料庫名稱**  
+     **Database Name**  
      顯示資料庫的名稱。  
   
      **附加為**  
      選擇性地針對要附加的資料庫指定不同的名稱。  
   
-     **主人**  
+     **擁有者**  
      提供包含可能的資料庫擁有者的下拉式清單，且您可以選擇性地從中選取不同的擁有者。  
   
      **狀態**  
@@ -252,10 +251,10 @@ ms.locfileid: "74957163"
      **訊息**  
      顯示空白訊息或「找不到檔案」超連結。  
   
-     **載入**  
+     **加入**  
      尋找需要的主要資料庫檔案。 使用者選取 .mdf 檔案之後，適用的資訊會自動填入 **[要附加的資料庫]** 方格的對應欄位中。  
   
-     **取消**  
+     **移除**  
      從 **[要附加的資料庫]** 方格中移除選取的檔案。  
   
      **** 「 _<database_name>_ 」**資料庫詳細資料**  
@@ -276,13 +275,13 @@ ms.locfileid: "74957163"
      **訊息**  
      顯示空白訊息或 **「找不到檔案」** 超連結。  
   
-###  <a name="TsqlMove"></a>使用 Transact-sql  
+###  <a name="TsqlMove"></a> 使用 Transact-SQL  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在 [標準]  列上，按一下 [新增查詢] ****。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [**執行**]。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- Detach the TDE protected database from the source server.   
@@ -317,17 +316,17 @@ ms.locfileid: "74957163"
     GO  
     ```  
   
- 如需詳細資訊，請參閱：  
+ 如需詳細資訊，請參閱  
   
--   [sp_detach_db &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
+-   [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   
--   [建立主要金鑰 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
+-   [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
--   [建立憑證 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [建立資料庫 &#40;SQL Server Transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
+-   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫卸離和附加 &#40;SQL Server&#41;](../../databases/database-detach-and-attach-sql-server.md)  
+ [資料庫卸離與附加 &#40;SQL Server&#41;](../../databases/database-detach-and-attach-sql-server.md)  
   
   

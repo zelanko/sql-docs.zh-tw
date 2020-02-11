@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 669e65a7d27b208d861a33618d889707134dfefa
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400516"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>分析平臺系統中的憑證布建
@@ -21,7 +21,7 @@ ms.locfileid: "74400516"
 
 使用，加密連線的憑證可以透過 SQL Server 用戶端、使用 SQL Server PDW 驅動程式的工具、[管理主控台](monitor-the-appliance-by-using-the-admin-console.md)，以及 Integration Services 載入，協助保護與控制節點的通訊。 
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
 安裝憑證之前，請執行下列動作：  
   
 1.  取得安全憑證。 如果您需要如何取得安全憑證的詳細資訊，請聯絡 Microsoft 支援服務。  

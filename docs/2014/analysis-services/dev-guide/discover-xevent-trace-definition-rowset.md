@@ -11,19 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 826389eafb4fdf6a32e8d3b62ebfc1f333b62d4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62731910"
 ---
-# <a name="discoverxeventtracedefinition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION 資料列集
+# <a name="discover_xevent_trace_definition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION 資料列集
   提供有關伺服器上目前使用中 XEvent 追蹤的資訊。  
   
- **適用於：** 表格式模型、 多維度模型  
+ **適用于：** 表格式模型、多維度模型  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
- `DISCOVER_XEVENT_TRACE_DEFINITION` 資料列集包含下列資料行。  
+ 
+  `DISCOVER_XEVENT_TRACE_DEFINITION` 資料列集包含下列資料行。  
   
 |資料行名稱|類型指標|長度|描述|  
 |-----------------|--------------------|------------|-----------------|  
@@ -42,8 +43,8 @@ ms.locfileid: "62731910"
 |String|DISCOVER_XEVENT_TRACE_DEFINITION|  
   
 ## <a name="see-also"></a>另請參閱  
- [XML for Analysis 結構描述資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/xml-for-analysis-schema-rowsets)   
- [使用 SQL Server 擴充事件&#40;XEvents&#41;若要監視 Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
- [使用動態管理檢視 &#40;DMV&#41; 監視 Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [XML for Analysis 架構資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/xml-for-analysis-schema-rowsets)   
+ [使用 SQL Server 擴充事件 &#40;XEvents&#41; 監視 Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
+ [使用動態管理檢視 &#40;Dmv&#41; 來監視 Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

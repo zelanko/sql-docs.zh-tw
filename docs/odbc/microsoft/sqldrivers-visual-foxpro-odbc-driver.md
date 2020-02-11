@@ -1,5 +1,5 @@
 ---
-title: SQLDrivers (Visual FoxPro ODBC Driver) |Microsoft Docs
+title: SQLDrivers （Visual FoxPro ODBC Driver） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 179b11e0-665f-45a2-b926-c3d870a0dab8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 809ea368225809fa88e6902dd6f437ee81cb39d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053873"
 ---
 # <a name="sqldrivers-visual-foxpro-odbc-driver"></a>SQLDrivers (Visual FoxPro ODBC Driver)
 > [!NOTE]  
->  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
   
  支援：完整  
   
- ODBC API 相容性：層級 2  
+ ODBC API 一致性：層級2  
   
- 列出描述驅動程式和驅動程式屬性的關鍵字。  
+ 列出驅動程式描述和驅動程式屬性關鍵字。  
   
- 如需詳細資訊，請參閱 < [SQLDrivers](../../odbc/reference/syntax/sqldrivers-function.md)中*ODBC 程式設計人員參考*。
+ 如需詳細資訊，請參閱 ODBC 程式設計*人員參考*中的[SQLDrivers](../../odbc/reference/syntax/sqldrivers-function.md) 。

@@ -26,15 +26,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d147e5c6fa257a6397635014d868d75e7c8833dd
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783477"
 ---
 # <a name="processing-statements-that-generate-messages"></a>處理產生訊息的陳述式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] SET 陳述式選項 STATISTICS TIME 和 STATISTICS IO 用於取得協助診斷長時間執行之查詢的資訊。 舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也支援 SHOWPLAN 選項來分析查詢計畫。 ODBC 應用程式可以執行下列陳述式來設定這些選項：  
   
 ```  
@@ -44,7 +45,7 @@ SQLExecDirect(hstmt, "SET STATISTICS TIME ON", SQL_NTS90
 SQLExecDirect(hstmt, "SET STATISTICS IO ON", SQL_NTS);  
 ```  
   
- 當設定統計資料時間或設定執行程式表是 ON 時， **SQLExecute**和**SQLExecDirect**會傳回 SQL_SUCCESS_WITH_INFO，而此時，應用程式可以藉由呼叫**SQLGetDiagRec**來抓取顯示計畫或統計資料時間輸出，直到它傳回 SQL_NO_DATA。 SHOWPLAN 資料的每一行都會以下列格式傳回：  
+ 當設定統計資料時間或設定執行程式表是 ON 時， **SQLExecute**和**SQLExecDirect**會傳回 SQL_SUCCESS_WITH_INFO，而此時，應用程式可以藉由呼叫**SQLGetDiagRec**來抓取顯示計畫或統計資料時間輸出，直到它傳回 SQL_NO_DATA 為止。 SHOWPLAN 資料的每一行都會以下列格式傳回：  
   
 ```  
 szSqlState="01000", *pfNativeError=6223,  
@@ -52,7 +53,8 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
               Table Scan"  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版會將 SHOWPLAN 選項取代成 SHOWPLAN_ALL 和 SHOWPLAN_TEXT，而且這兩個都會傳回輸出當做結果集，而且一組訊息。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版會將 SHOWPLAN 選項取代成 SHOWPLAN_ALL 和 SHOWPLAN_TEXT，而且這兩個都會傳回輸出當做結果集，而且一組訊息。  
   
  STATISTICS TIME 資料的每一行都會以下列格式傳回：  
   
@@ -99,7 +101,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## <a name="using-print-and-raiserror-statements"></a>使用 PRINT 和 RAISERROR 陳述式  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] PRINT 和 RAISERROR 語句也會藉由呼叫**SQLGetDiagRec**來傳回資料。 PRINT 語句會導致 SQL 語句執行傳回 SQL_SUCCESS_WITH_INFO，後續對**SQLGetDiagRec**的呼叫會傳回01000的*SQLState* 。 嚴重性為 10 或更低之 RAISERROR 陳述式的行為與 PRINT 相同。 嚴重性為11或更高的 RAISERROR 會導致執行傳回 SQL_ERROR，而後續的**SQLGetDiagRec**呼叫會傳回*SQLState* 42000。 例如，下列陳述式會傳回 SQL_SUCCESS_WITH_INFO：  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]PRINT 和 RAISERROR 語句也會藉由呼叫**SQLGetDiagRec**來傳回資料。 PRINT 語句會導致 SQL 語句執行傳回 SQL_SUCCESS_WITH_INFO，後續對**SQLGetDiagRec**的呼叫會傳回01000的*SQLState* 。 嚴重性為 10 或更低之 RAISERROR 陳述式的行為與 PRINT 相同。 嚴重性為11或更高的 RAISERROR 會導致執行傳回 SQL_ERROR，而後續的**SQLGetDiagRec**呼叫會傳回*SQLState* 42000。 例如，下列陳述式會傳回 SQL_SUCCESS_WITH_INFO：  
   
 ```  
 SQLExecDirect (hstmt, "PRINT  'Some message' ", SQL_NTS);  
@@ -144,7 +146,7 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
   
  當來自 PRINT 或 RAISERROR 語句的輸出包含在結果集中時，呼叫**SQLGetDiagRec**的時機很重要。 **SQLGetDiagRec**用來抓取 PRINT 或 RAISERROR 輸出的呼叫，必須緊接在接收 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 的語句之後才進行。 僅執行單一 SQL 陳述式時，這是相當直接的，如以上的範例所示。 在這些情況下，呼叫**SQLExecDirect**或**SQLExecute**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，然後可以呼叫**SQLGetDiagRec** 。 當編碼使用迴圈處理 SQL 陳述式的批次輸出時，或執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序時，比較不直接。  
   
- 在此情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對批次或預存程序中執行的每個 SELECT 陳述式傳回一個結果集。 如果批次或程序包含 PRINT 或 RAISERROR 陳述式，這些陳述式的輸出會與 SELECT 陳述式結果集交錯。 如果批次或程式中的第一個語句是 PRINT 或 RAISERROR，則**SQLExecute**或**SQLExecDirect**會傳回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR，而應用程式必須呼叫**SQLGetDiagRec** ，直到它傳回 SQL_NO_DATA取出列印或 RAISERROR 資訊。  
+ 在此情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對批次或預存程序中執行的每個 SELECT 陳述式傳回一個結果集。 如果批次或程序包含 PRINT 或 RAISERROR 陳述式，這些陳述式的輸出會與 SELECT 陳述式結果集交錯。 如果批次或程式中的第一個語句是 PRINT 或 RAISERROR，則**SQLExecute**或**SQLExecDirect**會傳回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR，而應用程式必須呼叫**SQLGetDiagRec** ，直到它傳回 SQL_NO_DATA 以取得列印或 RAISERROR 資訊為止。  
   
  如果 PRINT 或 RAISERROR 語句位於 SQL 語句（例如 SELECT 語句）之後，則在包含錯誤的結果集上[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)位置時，會傳回 PRINT 或 RAISERROR 資訊。 **SQLMoreResults**會根據訊息的嚴重性傳回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR。 藉由呼叫**SQLGetDiagRec**來抓取訊息，直到傳回 SQL_NO_DATA 為止。  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.fn_my_permissions (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases fn_my_permissions （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122627"
 ---
-# <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
+# <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回有效授與安全性實體上主體的權限清單。 相關的函式[HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md)。  
+  傳回有效授與安全性實體上主體的權限清單。 [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md)相關的函式。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,15 +43,15 @@ fn_my_permissions ( securable , 'securable_class' )
   
 ## <a name="arguments"></a>引數  
  *securable*  
- 這是安全性實體的名稱。 如果安全性實體是伺服器或資料庫，這個值應該設為 NULL。 *securable* 為 **sysname** 類型的純量運算式。 *安全性實體*可以是多部分名稱。  
+ 這是安全性實體的名稱。 如果安全性實體是伺服器或資料庫，這個值應該設為 NULL。 *securable* 為 **sysname** 類型的純量運算式。 安全性*實體可以是*多部分名稱。  
   
  '*securable_class*'  
- 這是列出權限之安全性實體的類別名稱。 *securable_class*已**sysname**。 *securable_class*必須是下列其中之一：應用程式角色、 組件、 非對稱金鑰、 憑證、 合約、 資料庫、 端點、 FULLTEXT CATALOG、 登入、 訊息類型、 物件、 遠端服務繫結、 角色、 路由、 結構描述、 伺服器、 服務、 對稱金鑰、 型別、 使用者、 XML 結構描述集合。  
+ 這是列出權限之安全性實體的類別名稱。 *securable_class*是**sysname**。 *securable_class*必須是下列其中一項：應用程式角色、元件、非對稱金鑰、憑證、合約、資料庫、端點、全文檢索目錄、登入、訊息類型、物件、遠端服務系結、角色、路由、架構、伺服器、服務、對稱金鑰、類型、使用者、XML 架構集合。  
   
 ## <a name="columns-returned"></a>傳回的資料行  
- 下表列出的資料行， **fn_my_permissions**傳回。 傳回的每個資料列都會描述安全性實體之目前安全性內容所持有的權限。 如果查詢失敗，則傳回 NULL。  
+ 下表列出**fn_my_permissions**傳回的資料行。 傳回的每個資料列都會描述安全性實體之目前安全性內容所持有的權限。 如果查詢失敗，則傳回 NULL。  
   
-|資料行名稱|type|描述|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|有效授與列出權限的安全性實體名稱。|  
 |subentity_name|**sysname**|如果安全性實體有資料行，則為資料行名稱，否則為 NULL。|  
@@ -70,7 +70,7 @@ fn_my_permissions ( securable , 'securable_class' )
   
  權限評估一律在呼叫端的安全性內容中執行。 若要決定另一個主體是否具有有效權限，呼叫端對該主體必須具有 IMPERSONATE 權限。  
   
- 如果是結構描述層級實體，則接受一、二或三部分非 Null 名稱。 資料庫層級實體，一段式名稱則接受 null 值則表示 「*目前的資料庫*"。 如果是伺服器本身，則 Null 值 (表示「目前伺服器」) 是必要的。 **fn_my_permissions**無法檢查連結的伺服器上的權限。  
+ 如果是結構描述層級實體，則接受一、二或三部分非 Null 名稱。 若為資料庫層級實體，則接受一部分名稱，其 null 值表示「*目前資料庫*」。 如果是伺服器本身，則 Null 值 (表示「目前伺服器」) 是必要的。 **fn_my_permissions**無法檢查連結伺服器上的許可權。  
   
  下列查詢將傳回內建安全性實體類別的清單：  
   
@@ -80,7 +80,7 @@ SELECT DISTINCT class_desc FROM fn_builtin_permissions(default)
 GO  
 ```  
   
- 如果預設提供的值*安全*或是*securable_class*，值會被解譯為 NULL。  
+ 如果將 DEFAULT 當做 [安全性實體] 或 [ *securable_class* *] 的值*提供，則值將會被視為 Null。  
   
 ## <a name="examples"></a>範例  
   
@@ -102,7 +102,7 @@ GO
 ```  
   
 ### <a name="c-listing-effective-permissions-on-a-view"></a>C. 列出檢視表的有效權限  
- 下列範例會傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之 `vIndividualCustomer` 結構描述中 `Sales` 檢視呼叫端的有效權限清單。  
+ 下列範例會傳回 `vIndividualCustomer` 資料庫之 `Sales` 結構描述中 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 檢視呼叫端的有效權限清單。  
   
 ```  
 USE AdventureWorks2012;  
@@ -112,7 +112,7 @@ GO
 ```  
   
 ### <a name="d-listing-effective-permissions-of-another-user"></a>D. 列出其他使用者的有效權限  
- 下列範例會傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之 `Wanida` 結構描述中 `Employee` 資料表資料庫使用者 `HumanResources` 的有效權限清單。 呼叫端需要使用者 `Wanida` 的 IMPERSONATE 權限。  
+ 下列範例會傳回 `Wanida` 資料庫之 `Employee` 結構描述中 `HumanResources` 資料表資料庫使用者 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的有效權限清單。 呼叫端需要使用者 `Wanida` 的 IMPERSONATE 權限。  
   
 ```  
 EXECUTE AS USER = 'Wanida';  
@@ -131,7 +131,7 @@ GO
 ```  
   
 ### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>F. 列出 XML 結構描述集合的有效權限  
- 下列範例會傳回呼叫端的有效權限的清單上名為 XML Schema Collection`ProductDescriptionSchemaCollection`在[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫。  
+ 下列範例會傳回`ProductDescriptionSchemaCollection` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫中名為之 XML 架構集合上呼叫端的有效許可權清單。  
   
 ```  
 USE AdventureWorks2012;  
@@ -149,7 +149,7 @@ GO
 ```  
   
 ### <a name="h-listing-effective-permissions-of-another-login"></a>H. 列出其他登入的有效權限  
- 下列範例會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫之 `WanidaBenshoof` 結構描述中 `Employee` 資料表之 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 登入 `HumanResources` 的有效權限清單。 呼叫端需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `WanidaBenshoof` 的 IMPERSONATE 權限。  
+ 下列範例會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫之 `WanidaBenshoof` 結構描述中 `Employee` 資料表之 `HumanResources` 登入 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的有效權限清單。 呼叫端需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `WanidaBenshoof` 的 IMPERSONATE 權限。  
   
 ```  
 EXECUTE AS LOGIN = 'WanidaBenshoof';  
@@ -160,12 +160,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [安全性函數 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性函數](../../t-sql/functions/security-functions-transact-sql.md)   
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [安全性實體](../../relational-databases/security/securables.md)   
  [權限階層 &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [安全性目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性目錄檢視](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

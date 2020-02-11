@@ -1,5 +1,5 @@
 ---
-title: 使用者選取對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
+title: 使用者選擇對話方塊（Analysis Services-多維度資料） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cae7cb0c9219a49bb22537b632fa9f1686eb7e6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065484"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>使用者選取對話方塊 (Analysis Services - 多維度資料)
-  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，使用 [使用者選取]  對話方塊，即可選取使用者，並針對這些使用者，從 [基於使用方式的最佳化精靈] 的查詢記錄中篩選查詢。  
+  在 ** 和 ** 中，使用 [使用者選取][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)][!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可選取使用者，並針對這些使用者，從 [基於使用方式的最佳化精靈] 的查詢記錄中篩選查詢。  
   
- 若要開啟 [使用者選取]  對話方塊，請在基於使用方式的最佳化精靈中，於 [指定查詢準則]  頁面上，針對 [使用者]  選項按一下省略符號 (...) 按鈕。  
+ 若要開啟 [使用者選取]**** 對話方塊，請在基於使用方式的最佳化精靈中，於 [指定查詢準則]**** 頁面上，針對 [使用者]**** 選項按一下省略符號 (...) 按鈕。  
   
 ## <a name="options"></a>選項。  
- **選取 [使用者]**  
+ **選取使用者**  
  選取使用者，並針對這些使用者從查詢記錄中篩選查詢。  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [指定查詢準則&#40;基於使用方式的最佳化精靈&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+ [Analysis Services 的設計工具和對話方塊 &#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [指定查詢準則 &#40;基於使用方式的優化 Wizard&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
   

@@ -14,10 +14,10 @@ ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a8a16d3730ea9dba7071403051dfc69d87f74473
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728519"
 ---
 # <a name="create-a-collection-master-data-services"></a>建立集合 (Master Data Services)
@@ -35,15 +35,15 @@ ms.locfileid: "73728519"
   
 ### <a name="to-create-a-collection"></a>若要建立集合  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 [模型] 清單中的模型。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 **[模型]** 清單中的模型。  
   
 2.  從 **[版本]** 清單中選取版本。  
   
-3.  按一下 **[總管]** 。  
+3.  按一下 **[總管]**。  
   
-4.  從功能表列指向 [集合]，然後按一下 *entity_name*。  
+4.  從功能表列指向 [集合]****，然後按一下 *entity_name*。  
   
-5.  按一下 **[加入集合]** 。  
+5.  按一下 **[加入集合]**。  
   
 6.  在 **[詳細資料]** 索引標籤的 **[名稱]** 方塊中，輸入集合的名稱。  
   
@@ -51,15 +51,15 @@ ms.locfileid: "73728519"
   
 8.  或者，在 **[描述]** 方塊中，輸入集合的描述。  
   
-9. 按一下 [確定]。  
+9. 按一下 [確定]  。  
   
 ## <a name="next-steps"></a>後續步驟  
   
--   [將成員加入至集合 &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)  
+-   [將成員新增至集合 &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)   
- [刪除成員或集合 &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
+ [&#40;Master Data Services 的集合&#41;](../master-data-services/collections-master-data-services.md)   
+ [&#40;Master Data Services 刪除成員或集合&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [建立明確階層 &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
   

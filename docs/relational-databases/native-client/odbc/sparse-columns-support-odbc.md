@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f5fa48a2ddeb884611b86387e1ea044cf865639
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760626"
 ---
 # <a name="sparse-columns-support-odbc"></a>疏鬆資料行支援 (ODBC)
@@ -29,7 +29,7 @@ ms.locfileid: "73760626"
  新的「執行資料列描述元」（IRD）是一種稱為 SQL_CA_SS_IS_COLUMN_SET 的唯讀 SQLSMALLINT 欄位，可用來判斷資料行是否為 XML **column_set**值。 SQL_CA_SS_IS_COLUMN_SET 會採用 SQL_TRUE 和 SQL_FALSE 值。  
   
 ## <a name="catalog-metadata"></a>目錄中繼資料  
- 已將兩個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定資料行（SS_IS_SPARSE 和 SS_IS_COLUMN_SET）新增至[SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)的結果集。  
+ 已[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]將兩個特定資料行（SS_IS_SPARSE 和 SS_IS_COLUMN_SET）新增至[SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)的結果集。  
   
 ## <a name="odbc-function-support-for-sparse-columns"></a>疏鬆資料行的 ODBC 函數支援  
  下列 ODBC 函數已經更新為支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中的疏鬆資料行：  

@@ -1,5 +1,5 @@
 ---
-title: 移轉 Check 和 Foreign Key 條件約束 |Microsoft Docs
+title: 遷移 Check 和 Foreign Key 條件約束 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,34 +11,34 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774928"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>合併 Check 和外部索引鍵條件約束
-  中不支援 check 和 foreign key 條件約束[!INCLUDE[hek_2](../includes/hek-2-md.md)]在[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 這些建構通常用來強制執行結構描述中的邏輯資料完整性，而且可以是重要維護功能的應用程式的正確性。  
+  [!INCLUDE[hek_2](../includes/hek-2-md.md)]中[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]不支援 Check 和 foreign key 條件約束。 這些結構通常是用來在架構中強制執行邏輯資料完整性，並且對於維護應用程式的功能正確性而言很重要。  
   
- 邏輯的完整性檢查，例如核取資料表和 foreign key 條件約束需要進行額外處理的交易中通常應該避免效能敏感的應用程式。 不過，如果這類檢查是非常重要，您的應用程式，有兩種因應措施。  
+ 資料表上的邏輯完整性檢查（例如 check 和 foreign key 條件約束）需要額外的交易處理，而且通常應該避免對效能敏感的應用程式。 不過，如果這類檢查對您的應用程式很重要，則有兩種因應措施。  
   
-## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>檢查條件約束的插入、 更新或刪除作業之後  
- 此因應措施是開放式，根據大部分的變更不會違反條件約束的假設。 在這個因應措施，，會評估條件約束之前，會先修改資料。 如果違反條件約束時，它會偵測到，但變更將不會回復。  
+## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>在插入、更新或刪除作業之後檢查條件約束  
+ 這個因應措施是開放式的，這是根據大部分變更不違反條件約束的假設。 在此解決方法中，會先修改資料，然後才評估條件約束。 如果違反條件約束，則會偵測到，但不會回復變更。  
   
- 此因應措施的好處是能夠讓對效能的影響降到最低，因為不會封鎖資料修改條件約束檢查。 不過，如果未發生任何違反一或多個條件約束的變更，才能回復這個變更的程序可能需要很長的時間。  
+ 這個因應措施的優點是對效能的影響最小，因為資料修改不會受到條件約束檢查封鎖。 不過，如果違反一個或多個條件約束的變更發生，則回復該變更的程式可能會花很長的時間。  
   
-## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>強制執行條件約束之前插入、 更新或刪除作業  
- 此因應措施是模擬的行為[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]條件約束。 資料修改，就會發生，並檢查失敗就會終止交易之前，會檢查條件約束。 這個方法會產生上修改資料對效能帶來負面影響，但是可確保在資料表內的資料一律符合條件約束。  
+## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>在插入、更新或刪除作業之前強制執行條件約束  
+ 此解決方法會模擬[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]條件約束的行為。 條件約束會在進行資料修改之前檢查，而且如果檢查失敗，則會終止交易。 這個方法會對資料修改產生效能上的負面影響，但會確保資料表內的資料一律符合條件約束。  
   
- 當是正確性很重要的邏輯資料完整性，而且可能違反條件約束的修改時，請使用這個因應措施。 不過，若要保證完整性，所有資料修改必須透過預存程序包含這些項目都發生。 透過臨機操作查詢和其他預存程序的修改不會強制執行這些條件約束，因此可能會違反任何警告。  
+ 當邏輯資料完整性對正確性和違反條件約束的修改可能很重要時，請使用此因應措施。 不過，若要保證完整性，所有資料修改都必須透過包含這些實行原則的預存程式進行。 透過臨機操作查詢和其他預存程式的修改將不會強制執行這些條件約束，因此可能會違反它們而不發出警告。  
   
 ## <a name="sample-code"></a>範例程式碼  
- 下列範例根據 AdventureWorks2012 資料庫。 具體來說，這些範例根據 [Sales]。[SalesOrderDetail] 資料表及其相關聯的核取和 foreign key 條件約束，除了唯一的索引。  
+ 下列範例是以 AdventureWorks2012 資料庫為基礎。 具體而言，這些範例是以 [Sales] 為基礎。[SalesOrderDetail] 資料表和其相關聯的 check 和 foreign key 條件約束（除了唯一索引以外）。  
   
- 內凹作業只是此處指定的預存程序。 預存程序更新和刪除作業應該有類似的結構。  
+ 此處指定的預存程式僅適用于內凹作業。 Update 和 delete 作業的預存程式應具有類似的結構。  
   
-## <a name="table-definition-for-the-workarounds"></a>因應措施的資料表定義  
- 之前轉換成記憶體最佳化的資料表，[Sales] 的定義。[SalesOrderDetail] 如下所示：  
+## <a name="table-definition-for-the-workarounds"></a>解決方法的資料表定義  
+ 轉換成記憶體優化資料表之前，[Sales] 的定義。[SalesOrderDetail] 如下所示：  
   
 ```sql  
 USE [AdventureWorks2012]  
@@ -97,9 +97,9 @@ ALTER TABLE [Sales].[SalesOrderDetail] CHECK CONSTRAINT [CK_SalesOrderDetail_Uni
 GO  
 ```  
   
- 之後將轉換成記憶體最佳化的資料表，[Sales] 的定義。[SalesOrderDetail] 如下所示：  
+ 轉換成記憶體優化資料表之後，[Sales] 的定義。[SalesOrderDetail] 如下所示：  
   
- 請注意，rowguid 不再 ROWGUIDCOL 因為它不支援[!INCLUDE[hek_2](../includes/hek-2-md.md)]。 已移除資料行。 此外，LineTotal 是計算資料行，而且超出本文的討論範圍，因此它也已移除。  
+ 請注意，rowguid 不再是 ROWGUIDCOL，因為不支援此功能[!INCLUDE[hek_2](../includes/hek-2-md.md)]。 已移除資料行。 此外，LineTotal 是一個計算資料行，而且不在本文的範圍內，因此也已被移除。  
   
 ```sql  
 USE [AdventureWorks2012]  
@@ -125,7 +125,7 @@ CREATE TABLE [Sales].[SalesOrderDetail]([SalesOrderID] [int] NOT NULL,
 GO  
 ```  
   
-## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>檢查條件約束的插入、 更新或刪除作業之後  
+## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>在插入、更新或刪除作業之後檢查條件約束  
   
 ```sql  
 USE AdventureWorks2012  
@@ -183,7 +183,7 @@ BEGIN TRANSACTION
 END  
 ```  
   
-## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>強制執行條件約束之前插入、 更新或刪除作業  
+## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>在插入、更新或刪除作業之前強制執行條件約束  
   
 ```sql  
 USE AdventureWorks2012  

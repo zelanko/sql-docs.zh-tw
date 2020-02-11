@@ -1,5 +1,5 @@
 ---
-title: 主要效能指標表示法 （表格式） |Microsoft Docs
+title: 關鍵效能指標標記法（表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0981b473ef29ac709213c1e9eee1cea01f47e2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62795438"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>關鍵效能指標表示法 (表格式)
   KPI 是用來針對目標值，測量由基底量值定義之值的效能。  
   
 ## <a name="key-performance-indicator-representation"></a>關鍵效能指標表示法  
- 在表格式物件模型 關鍵效能指標 kpi-以圖形方式顯示它的用戶端應用程式的其他資訊的量值。 kpi 通常包含有關要取得之目標的資訊、要與目標相比較之量值的狀態，以及有關如何以圖形方式顯示狀態的用戶端工具資訊。  
+ 在表格式物件模型中，關鍵效能指標-kpi-是一個量值，其中包含用戶端應用程式以圖形方式顯示它的其他資訊。 kpi 通常包含有關要取得之目標的資訊、要與目標相比較之量值的狀態，以及有關如何以圖形方式顯示狀態的用戶端工具資訊。  
   
 ### <a name="key-performance-indicator-in-amo"></a>AMO 中的關鍵效能指標  
  當您使用 AMO 管理表格式模型 kpi 時，物件與 AMO 中的 kpi 之間有一對一的相符關係，AMO <xref:Microsoft.AnalysisServices.Kpi> 物件不會用於這個目的；在 AMO 中的表格式模型內，kpi 是由 <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> 集合和 <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> 中其中一個元素內建立的一系列物件所表示。  
@@ -221,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>AMO2Tabular 範例  
- 若要了解如何使用 AMO 建立及操作關鍵效能指標表示法，請參閱 「 AMO 對表格式 」 範例; 的原始程式碼特別要檢查以下的原始程式檔：AddKPIs.cs。 您可以在 Codeplex 上取得範例。 有關此程式碼的重要注意事項：此程式碼的提供目的只是為了支援這裡所說明的邏輯概念，不應該用於實際執行環境，也不應該用於教學以外的其他用途。  
+ 若要了解如何使用 AMO 建立及操作關鍵效能指標表示法，請參閱 AMO 對表格式範例的原始程式碼，特別要檢查以下的原始程式檔：AddKPIs.cs。 您可以在 Codeplex 上取得範例。 有關此程式碼的重要注意事項：此程式碼的提供目的只是為了支援這裡所說明的邏輯概念，不應該用於實際執行環境，也不應該用於教學以外的其他用途。  
   
   

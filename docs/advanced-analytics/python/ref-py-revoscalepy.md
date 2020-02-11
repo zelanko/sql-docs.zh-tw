@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c6de9072c32155446b3ff40df3f81af9073c1090
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706813"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (SQL Server 中的 Python 模組)
@@ -35,7 +35,7 @@ ms.locfileid: "73706813"
 
 **revoscalepy** 模組以 Python 3.5 為基礎，且只有當您安裝下列其中一個Microsoft 產品或下載項目時才會提供：
 
-+ [SQL Server 機器學習服務](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 或更新版本](https://docs.microsoft.com/machine-learning-server/)
 + [適用於資料科學用戶端的 Python 用戶端程式庫](setup-python-client-tools-sql.md)
 
@@ -52,7 +52,7 @@ ms.locfileid: "73706813"
 
 在某些情況下，SQL Server 和 Python 會使用不同的資料類型。 如需 SQL 與 Python 資料類型間的對應清單，請參閱 [Python 與 SQL 的對應資料類型](python-libraries-and-data-types.md)。
 
-| 函數| Description|
+| 函式| 描述|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) |  建立 SQL Server 計算內容物件以將計算推送至遠端執行個體。 數個 **revoscalepy** 函式會以計算內容作為引數。 如需內容切換範例，請參閱[使用 revoscalepy 來建立模型](../tutorials/use-python-revoscalepy-to-create-model.md)。|
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxsqlserverdata) | 根據 SQL Server 查詢或資料表來建立資料物件。 |
@@ -64,7 +64,7 @@ ms.locfileid: "73706813"
 
 ## <a name="2-data-manipulation-etl"></a>2-資料操作 (ETL)
 
-| 函數 | Description |
+| 函式 | 描述 |
 |----------|-------------|
 |[rx_import](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-import) | 將資料匯入至 .xdf 檔案或資料框架。|
 |[rx_data_step](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-data-step) | 將資料從輸入資料集轉換至輸出資料集。|
@@ -73,7 +73,7 @@ ms.locfileid: "73706813"
 
 ## <a name="3-training-and-summarization"></a>3-定型與摘要
 
-| 函數| Description|
+| 函式| 描述|
 | ------- | ---------- |
 |[rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) | 符合隨機梯度提升決策樹|
 |[rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) | 符合分類與迴歸決策樹系|
@@ -88,7 +88,7 @@ ms.locfileid: "73706813"
 
 ## <a name="4-scoring-functions"></a>4-評分函式
 
-| 函數| Description|
+| 函式| 描述|
 | ------- | ---------- |
 | [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 從已定型的模型產生預測|) | 從已定型的模型產生預測，並可用於即時評分。 |
 |[rx_predict_default](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-default) | 使用 rx_lin_mod 和 rx_logit 物件來計算預測值和殘差。 |
@@ -99,7 +99,7 @@ ms.locfileid: "73706813"
 
 封裝在預存程序中的 Python 程式碼可呼叫 **revoscalepy** 中的函式。 大多數開發人員會在本機建置 **revoscalepy**解決方案，然後將完成的 Python 程式碼移轉至預存程序作為部署練習。
 
-在本機執行時，您通常會從命令列或從 Python 開發環境執行 Python 指令碼，然後使用其中一個 **revoscalepy** 函式來指定 SQL Server 計算內容。 您可以將遠端計算內容用於整個程式碼，也可以用於個別函式。 例如，您可以將模型定型卸載至伺服器，以使用最新資料及避免資料移動。
+在本機執行時，您通常會從命令列或從 Python 開發環境執行 Python 指令碼，然後使用其中一個 **revoscalepy** 函式來指定 SQL Server 計算內容。 您可以將遠端計算內容用於整個程式碼，也可以用於個別函式。 例如，您可以將模型定型卸載至伺服器，以使用最新資料並避免資料移動。
 
 當您準備好將 Python 指令碼封裝在預存程序 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 內時，建議您將程式碼重寫成已清楚定義輸入和輸出的單一函式。 
 

@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46da93307d28b5be6aec3fbcbff31322e96ea634
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782393"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
@@ -68,7 +68,7 @@ RETCODE bcp_setbulkmode (
   
  下表將列出 *property* 參數的常數。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應至 BCP 中的-c 選項。EXE，並 bcp_setcolfmt **BCP_FMT_TYPE**屬性設定為**SQLCHARACTER**。|  
 |BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應至 BCP 中的-w 選項。**BCP_FMT_TYPE**屬性設定為**SQLNCHAR**的 EXE 和 bcp_setcolfmt。|  

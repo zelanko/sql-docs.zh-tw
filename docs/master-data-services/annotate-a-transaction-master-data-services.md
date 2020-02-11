@@ -13,61 +13,61 @@ ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 17474c603e437dd0cb2dcfbedf5e444ba50ba3ae
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728786"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>為交易加上註解 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，當您想要提供有關某個交易的支援詳細資料做為歷程記錄時，請為該交易加上註解。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您想要提供有關某個交易的支援詳細資料做為歷程記錄時，請為該交易加上註解。  
   
 > [!NOTE]  
 >  您無法刪除註解。  
   
 ## <a name="prerequisites"></a>Prerequisites  
   
--   若要為所建立的交易加上註解，您必須擁有存取 [總管] 功能區域的權限，而且至少必須擁有您要加上註解之模型物件的**更新**權限。  
+-   若要為所建立的交易加上註解，您必須擁有存取 [總管]**** 功能區域的權限，而且至少必須擁有您要加上註解之模型物件的**更新**權限。  
   
--   若要為所有使用者的交易加上註解，您必須擁有存取 [版本管理] 功能區域的權限，而且必須身為模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   若要為所有使用者的交易加上註解，您必須擁有存取 [版本管理]**** 功能區域的權限，而且必須身為模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 ### <a name="to-annotate-a-transaction-in-explorer"></a>若要在總管中為交易加上註解  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 [模型] 清單中的模型。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 **[模型]** 清單中的模型。  
   
 2.  從 **[版本]** 清單中選取版本。  
   
-3.  按一下 **[總管]** 。  
+3.  按一下 **[總管]**。  
   
-4.  從功能表列指向 [實體]，然後按一下包含成員且具有您要加上註解之交易的實體。  
+4.  從功能表列指向 [實體]****，然後按一下包含成員且具有您要加上註解之交易的實體。  
   
 5.  在方格中，按一下成員的資料列。  
   
-6.  按一下 [檢視交易]。  
+6.  按一下 [檢視交易]****。  
   
-7.  在 [檢視交易] 對話方塊中，按一下您要加上註解的交易。  
+7.  在 [檢視交易]**** 對話方塊中，按一下您要加上註解的交易。  
   
 8.  在對話方塊底部的方塊中，輸入您的註解。  
   
-9. 按一下 [加入註解]。 註解就會顯示在 [註解] 窗格中。  
+9. 按一下 [加入註解]****。 註解就會顯示在 [註解]**** 窗格中。  
   
 ### <a name="to-annotate-a-transaction-in-version-management-administrators-only"></a>若要在版本管理中為交易加上註解 (僅限系統管理員)  
   
-1.  在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]首頁上，按一下 [版本管理]。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，按一下 [版本管理]****。  
   
-2.  在功能表列上，按一下 [交易]。  
+2.  在功能表列上，按一下 [交易]****。  
   
-3.  在 [交易] 窗格中，針對您想要加上註解的交易，按一下方格中的資料列。  
+3.  在 [交易]**** 窗格中，針對您想要加上註解的交易，按一下方格中的資料列。  
   
-4.  在 [交易註解] 窗格的 [註解] 方塊中，輸入您的註解。  
+4.  在 [交易註解]**** 窗格的 [註解]**** 方塊中，輸入您的註解。  
   
-5.  按一下 [確定]。  
+5.  按一下 [確定]  。  
   
 ## <a name="see-also"></a>另請參閱  
- [註解 &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   
+ [批註 &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   
  [交易 &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
   

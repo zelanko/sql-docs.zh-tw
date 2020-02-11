@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: cc87b541b2b6ebf2f6a9068ba35ae0f62f8e9988
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056608"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>使用 Data Migration Assistant，將內部部署 SQL Server 或 Azure Vm 上的 SQL Server 遷移至 Azure SQL Database
@@ -27,13 +27,13 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
 本文提供逐步指示，說明如何使用 Data Migration Assistant，將內部部署 SQL Server 遷移至 Azure SQL Database。
 
-## <a name="create-a-new-migration-project"></a>建立新的遷移專案
+## <a name="create-a-new-migration-project"></a>建立新的移轉專案
 
 1. 在左窗格中，選取 [**新增**（+）]，然後選取 [**遷移**] 專案類型。
 
 2. 將 [來源類型] 設定為**SQL Server** ，並將目標伺服器類型設為**Azure SQL Database**。
 
-3. 選取 [建立]。
+3. 選取 [建立]  。
 
    ![建立遷移專案](../dma/media/NewCreate1.png)
 
@@ -48,7 +48,7 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
     ![選取來源伺服器](../dma/media/select-source-server.png)
 
-3. 選取 [連接]。
+3. 選取 [連接]  。
 
 4. 選取要遷移至 Azure SQL Database 的單一源資料庫。
 
@@ -57,7 +57,7 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
     ![選取源資料庫](../dma/media/select-source-database.png)
 
-5. 選取 **[下一步]** 。
+5. 選取 [下一步]  。
 
 ## <a name="specify-the-target-server-and-database"></a>指定目標伺服器和資料庫
 
@@ -70,7 +70,7 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
      ![選取目標伺服器](../dma/media/select-target-server.png)
 
-3. 選取 [連接]。
+3. 選取 [連接]  。
 
 4. 選取要遷移的單一目標資料庫。
 
@@ -79,7 +79,7 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
     ![選取目標資料庫](../dma/media/select-target-database.png)
 
-5. 選取 **[下一步]** 。
+5. 選取 [下一步]  。
 
 ## <a name="select-schema-objects"></a>選取架構物件
 
@@ -116,10 +116,10 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
 最後一個畫面會顯示整體狀態。
 
-   ![遷移狀態](../dma/media/migration-status.png) 
+   ![移轉狀態](../dma/media/migration-status.png) 
 
 ## <a name="see-also"></a>另請參閱
 
-* [Data Migration Assistant （DMA）](../dma/dma-overview.md)
+* [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 * [Data Migration Assistant：設定](../dma/dma-configurationsettings.md)
 * [Data Migration Assistant：最佳做法](../dma/dma-bestpractices.md)

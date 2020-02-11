@@ -1,5 +1,5 @@
 ---
-title: sys.filetables (TRANSACT-SQL) |Microsoft Docs
+title: filetable （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,10 +20,10 @@ ms.assetid: a740be59-cd52-4707-9ad2-5203669a63ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 791bba2f5ec1830e343acff24fd55628a3f13d2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133996"
 ---
 # <a name="sysfiletables-transact-sql"></a>sys.filetables (Transact-SQL)
@@ -33,9 +33,9 @@ ms.locfileid: "68133996"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**||物件識別碼。 在資料庫中，這是唯一的。<br /><br /> 如需詳細資訊， [j &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|**object_id**||物件識別碼。 在資料庫中，這是唯一的。<br /><br /> 如需詳細資訊，請[&#40;transact-sql&#41;的 sys.databases ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**is_enabled**|**bit**|1 = FileTable 處於「已啟用」狀態。|  
-|**directory_name**|**varchar(255)**|FileTable 的根目錄名稱。|  
+|**directory_name**|**Varchar （255）**|FileTable 的根目錄名稱。|  
 |**filename_collation_id**||這是針對 FileTable 定義的定序識別碼。|  
 |**filename_collation_name**||這是針對 FileTable 定義的定序名稱。|  
   

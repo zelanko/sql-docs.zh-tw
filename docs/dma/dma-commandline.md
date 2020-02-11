@@ -15,15 +15,15 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056620"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>從命令列執行 Data Migration Assistant
 
-在2.1 版和更新版本中，當您安裝 Data Migration Assistant 時，它也會在 *% ProgramFiles%\\Microsoft Data Migration Assistant\\* 中安裝 dmacmd。 使用 dmacmd 以自動模式評估您的資料庫，並將結果輸出至 JSON 或 CSV 檔案。 當評估數個資料庫或大型資料庫時，這個方法特別有用。 
+在2.1 版和更新版本中，當您安裝 Data Migration Assistant 時，它也會在 *% ProgramFiles%\\Microsoft Data Migration Assistant\\*中安裝 dmacmd。 使用 dmacmd 以自動模式評估您的資料庫，並將結果輸出至 JSON 或 CSV 檔案。 當評估數個資料庫或大型資料庫時，這個方法特別有用。 
 
 > [!NOTE]
 > Dmacmd 只支援執行評量。 目前不支援遷移。
@@ -259,7 +259,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 |`/SkuRecommendationCurrencyCode` | 要在其中顯示價格的貨幣（例如「美元」） | Y <br> （適用于最新價格）
 |`/SkuRecommendationOfferName` | 供應專案名稱（例如 "MS-MS-AZR-0017P-Ms-azr-0003p"）。 如需詳細資訊，請參閱[Microsoft Azure 供應專案詳細資料](https://azure.microsoft.com/support/legal/offer-details/)頁面。 | Y <br> （適用于最新價格）
 |`/SkuRecommendationRegionName` | 區功能變數名稱稱（例如 "WestUS"） | Y <br> （適用于最新價格）
-|`/SkuRecommendationSubscriptionId` | 訂閱識別碼。 | Y <br> （適用于最新價格）
+|`/SkuRecommendationSubscriptionId` | 訂用帳戶識別碼。 | Y <br> （適用于最新價格）
 |`/SkuRecommendationDatabasesToRecommend` | 要建議的資料庫清單（以空格分隔）（例如 "Database1" "Database2" "Database3"）。 名稱區分大小寫，且必須以雙引號括住。 如果省略，則會為所有資料庫提供建議。 | N
 |`/AzureAuthenticationTenantId` | 驗證租使用者。 | Y <br> （適用于最新價格）
 |`/AzureAuthenticationClientId` | 用於驗證之 AAD 應用程式的用戶端識別碼。 | Y <br> （適用于最新價格）

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916742"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>估計堆積的大小
@@ -54,10 +54,10 @@ ms.locfileid: "62916742"
   
      ***Variable_Data_Size***  = 2 + (***Num_Variable_Cols*** x 2) + ***Max_Var_Size***  
   
-     加入至 ***Max_Var_Size*** 的位元組是用於追蹤每個可變長度的資料行。 這個公式假設所有可變長度的資料行是 100% 填滿的。 如果您預期可變長度資料行儲存所佔空間的百分比會比較低，您可以經由調整百分比所得的 ***Max_Var_Size*** 值，取得更精確的整體資料表大小。  
+     新增到 ***Max_Var_Size*** 之位元組是用於追蹤每個可變長度的資料行。 這個公式假設所有可變長度的資料行是 100% 填滿的。 如果您預期可變長度資料行儲存所佔空間的百分比會比較低，您可以經由調整百分比所得的 ***Max_Var_Size*** 值，取得更精確的整體資料表大小。  
   
     > [!NOTE]  
-    >  您可以結合使定義的資料表總寬度超過 8,060 個位元組的 `varchar`、`nvarchar`、`varbinary` 或 `sql_variant` 資料行。 這些資料行的每個長度仍必須符合 8,000 個位元組的限制內`varchar`， `nvarchar,``varbinary`，或`sql_variant`資料行。 然而，結合的寬度可能超過資料表中 8,060 位元組的限制。  
+    >  您可以結合使定義的資料表總寬度超過 8,060 個位元組的 `varchar`、`nvarchar`、`varbinary` 或 `sql_variant` 資料行。 這些資料行的每個長度仍然必須落在`varchar`、 `nvarchar,``varbinary`或`sql_variant`資料行的8000位元組限制內。 然而，結合的寬度可能超過資料表中 8,060 位元組的限制。  
   
      如果沒有可變長度資料行，請將 ***Variable_Data_Size*** 設成 0。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62916742"
   
 7.  計算儲存所有資料列所需的分頁數目：  
   
-     ***Num_Pages***  = ***Num_Rows*** / ***Rows_Per_Page***  
+     ***Num_Pages***    = ***Num_Rows ***  / ***Rows_Per_Page***  
   
      估計的分頁數目應該要將小數進位到最接近的整分頁數。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62916742"
   
 -   大型物件 (LOB) 值  
   
-     若要判斷確切使用多少空間來儲存 LOB 資料類型的演算法`varchar(max)`， `varbinary(max)`， `nvarchar(max)`， `text`， **ntextxml**，和`image`值很複雜。 只要加入預期的 LOB 值平均大小，並將此值加入堆積大小總計，這樣就已足夠。  
+     判斷要使用多少空間來儲存 LOB 資料類型`varchar(max)`、 `varbinary(max)`、 `nvarchar(max)`、 `text`、 **Ntextxml**和`image`值的演算法是很複雜的。 只要加入預期的 LOB 值平均大小，並將此值加入堆積大小總計，這樣就已足夠。  
   
 -   壓縮  
   

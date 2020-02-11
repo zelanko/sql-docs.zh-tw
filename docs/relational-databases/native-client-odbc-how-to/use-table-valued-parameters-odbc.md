@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3ea30d6b1e0a90a4feec188698fd452903cf83ce
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73780028"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>使用資料表值參數 (ODBC)
@@ -23,7 +23,7 @@ ms.locfileid: "73780028"
 
   此範例示範如何使用資料表值參數插入多個資料列、搭配多個資料行使用資料表值參數、搭配一個伺服器的呼叫使用資料表值參數。  
   
- 如需資料表值參數的詳細資訊，請參閱[資料表值參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。 如需使用資料表值參數的更多範例，請參閱[ODBC 資料表值參數程式設計範例](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)。  
+ 如需資料表值參數的詳細資訊，請參閱[ODBC&#41;&#40;的資料表值參數](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。 如需使用資料表值參數的更多範例，請參閱[ODBC 資料表值參數程式設計範例](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)。  
   
 ## <a name="example"></a>範例  
  您將需要稱為 TVPDemo 的 ODBC 資料來源。 TVPDemo 的預設資料庫可以是您電腦上的任何測試資料庫。 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，此資料來源必須以 ODBC 驅動程式為基礎。  

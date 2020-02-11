@@ -1,5 +1,5 @@
 ---
-title: 使用 ADO 文件的必要條件 |Microsoft Docs
+title: 使用 ADO 檔的必要條件 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,15 +13,15 @@ ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2bddd5570faefba99c451fc60a7448cbfb7e3216
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923121"
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>使用 ADO 文件的必要條件
-若要使用這份文件，您應該有，最少，因為大部分的指南中的範例以這個語言開發應用程式使用 Microsoft Visual Basic 中，一些經驗。 另外還有以 Microsoft Visual 撰寫一些範例C++、 Java、 Visual Basic Scripting Edition (VBScript) 和 Microsoft JScript。  
+若要使用這份檔，您應該至少擁有使用 Microsoft Visual Basic 開發應用程式的一些經驗，因為本指南中的大部分範例都會以這種語言撰寫。 另外還有一些以 Microsoft Visual C++、JAVA、Visual Basic Scripting Edition （VBScript）和 Microsoft JScript 撰寫的範例。  
   
- 因為 ADO 用來從各種來源存取資料，您還需要一些了解的關聯式資料庫管理系統和線上分析處理 (OLAP) 和基本的熟悉網際網路及網際網路通訊協定。  
+ 因為 ADO 是用來存取各種來源的資料，所以您也必須瞭解關係資料庫管理系統和線上分析處理（OLAP），以及對網際網路和網際網路通訊協定的基本熟悉程度。  
   
- ADO 和相關的 OLE DB 技術為基礎的 Microsoft 元件物件模型 (COM)，因為 COM 的知識可協助您深入了解在 ADO 中的進階的概念。
+ 因為 ADO 和相關的 OLE DB 技術是以 Microsoft 元件物件模型（COM）為基礎，所以 COM 的知識將協助您進一步瞭解 ADO 中的先進概念。

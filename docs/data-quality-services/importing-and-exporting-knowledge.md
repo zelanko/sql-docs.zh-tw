@@ -10,10 +10,10 @@ ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 06f4b140ef90eb3d1ed942e5374643e80fb1b24e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254814"
 ---
 # <a name="importing-and-exporting-knowledge"></a>匯入和匯出知識
@@ -30,20 +30,20 @@ ms.locfileid: "75254814"
   
 |||  
 |-|-|  
-|將知識庫中的定義域匯出至 .dqs 資料檔案|[將網域匯出至 dqs 檔案](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
-|將 .dqs 資料檔案中的定義域匯入現有的知識庫中|[從 dqs 檔案匯入定義域](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
-|將整個知識庫匯出至 .dqs 資料檔案|[將知識庫匯出至 dqs 檔案](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
-|將整個知識庫匯入 .dqs 資料檔案中|[從 dqs 檔案匯入知識庫](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
+|將知識庫中的定義域匯出至 .dqs 資料檔案|[將定義域匯出成 .dqs 檔案](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
+|將 .dqs 資料檔案中的定義域匯入現有的知識庫中|[從 .dqs 檔案匯入定義域](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
+|將整個知識庫匯出至 .dqs 資料檔案|[將知識庫匯出到 .dqs 檔案](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
+|將整個知識庫匯入 .dqs 資料檔案中|[從 .dqs 檔案匯入知識庫](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
 |將 Excel 檔案中的值匯入定義域中|[將 Excel 檔案中的值匯入定義域中](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
-|將 Excel 檔案中的定義域匯入知識庫|[在知識探索中從 Excel 檔案匯入定義域](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
-|將清理期間蒐集的知識匯入知識庫中|[將清理專案值匯入定義域中](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
+|將 Excel 檔案中的定義域匯入知識庫|[在知識探索中匯入 Excel 檔案中的定義域](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
+|將清理期間蒐集的知識匯入知識庫中|[將清理專案值匯入網域](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
   
 ## <a name="related-tasks"></a>相關工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
 |藉由執行知識探索以及以互動方式管理知識來建立知識庫|[建立知識庫](../data-quality-services/building-a-knowledge-base.md)|  
-|建立單一定義域，並將知識加入至定義域。|[管理網域](../data-quality-services/managing-a-domain.md)|  
+|建立單一定義域，並將知識加入至定義域。|[管理定義域](../data-quality-services/managing-a-domain.md)|  
 |建立複合定義域，並將知識加入至定義域。|[管理複合定義域](../data-quality-services/managing-a-composite-domain.md)|  
   
   

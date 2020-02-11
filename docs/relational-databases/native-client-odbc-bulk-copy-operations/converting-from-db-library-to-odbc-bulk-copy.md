@@ -18,16 +18,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7e14018ea62edb5dd262b87ddbea467d1872132
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785193"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>從 DB-Library 轉換成 ODBC 大量複製
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  將 DB-LIBRARY 大量複製程式轉換成 ODBC 很簡單，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式所支援的大量複製函數與 DB-LIBRARY 大量複製函數類似，但有下列例外狀況：  
+  將 DB-LIBRARY 大量複製程式轉換成 ODBC 很簡單，因為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式所支援的大量複製函數與 db-library 大量複製函數類似，但有下列例外狀況：  
   
 -   DB-Library 應用程式會將指向 DBPROCESS 結構的指標當做大量複製函數的第一個參數傳遞。 在 ODBC 應用程式中，DBPROCESS 指標會由 ODBC 連接控制代碼所取代。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73785193"
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不支援 DB-LIBRARY 訊息和錯誤處理常式;您必須呼叫**SQLGetDiagRec** ，以取得 ODBC 大量複製函數所引發的錯誤和訊息。 大量複製函數的 ODBC 版本會傳回標準的大量複製傳回碼 SUCCEED 或 FAILED，而非 ODBC 樣式的傳回碼，例如 SQL_SUCCESS 或 SQL_ERROR。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式不支援 db-library 訊息和錯誤處理常式;您必須呼叫**SQLGetDiagRec** ，以取得 ODBC 大量複製函數所引發的錯誤和訊息。 大量複製函數的 ODBC 版本會傳回標準的大量複製傳回碼 SUCCEED 或 FAILED，而非 ODBC 樣式的傳回碼，例如 SQL_SUCCESS 或 SQL_ERROR。  
   
 -   針對 DB-LIBRARY [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen*參數所指定的值，與 ODBC **bcp_bind**_cbData_參數的轉譯方式不同。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "73785193"
   
     -   以 DB-LIBRARY **dbconvert**函數支援的任何格式的**datetime**和**Smalldatetime**字元字串。  
   
-    -   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端網路公用程式的 [DB-LIBRARY**選項**] 索引標籤上核取 [**使用國際設定**] 方塊時，db-library 大量複製函數也會接受地區設定為用戶端電腦登錄。  
+    -   在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端網路公用程式的 [db-library**選項**] 索引標籤上核取 [**使用國際設定**] 方塊時，db-library 大量複製函數也會接受針對用戶端電腦登錄的地區設定所定義之地區日期格式的日期。  
   
      DB-LIBRARY 大量複製函數不接受 ODBC **datetime**和**Smalldatetime**格式。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "73785193"
 -   以字元格式輸出**money**值時，ODBC 大量複製函數會提供四位數的精確度，而且不會有逗號分隔符號;DB-LIBRARY 版本只提供兩位數的精確度，並包含逗號分隔符號。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行大量複製作業&#40;ODBC&#41; ](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
+ [&#40;ODBC&#41;執行大量複製作業](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

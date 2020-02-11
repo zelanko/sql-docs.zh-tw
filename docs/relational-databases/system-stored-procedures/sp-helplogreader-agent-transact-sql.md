@@ -1,5 +1,5 @@
 ---
-title: sp_helplogreader_agent & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_helplogreader_agent （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b6ecac979077dd83d6549b408c8c9e4d2bd4402f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122441"
 ---
-# <a name="sphelplogreaderagent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
+# <a name="sp_helplogreader_agent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回發行集資料庫的記錄讀取器代理程式作業的屬性。 這個預存程序執行於發行集資料庫的發行者端。  
@@ -37,33 +37,33 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，預設值是 NULL。  
+`[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，預設值是 Null。  
   
 ## <a name="result-sets"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|代理程式的識別碼。|  
-|**name**|**nvarchar(100)**|代理程式的名稱。|  
-|**publisher_security_mode**|**smallint**|這是連接到發行者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證。|  
+|**號**|**int**|代理程式的識別碼。|  
+|**name**|**Nvarchar （100）**|代理程式的名稱。|  
+|**publisher_security_mode**|**smallint**|這是連接到發行者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> ****  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證。|  
 |**publisher_login**|**sysname**|當連接到發行者時所用的登入。|  
-|**publisher_password**|**nvarchar(524)**|基於安全性理由，值為 **\* \* \* \* \* \* \* \* \* \*** 一律為傳回此項目。|  
+|**publisher_password**|**Nvarchar （524）**|** \* \* \* \* \* \* \* \* \* **基於安全性理由，一律會傳回的值。|  
 |**job_id**|**uniqueidentifier**|代理程式作業的唯一識別碼。|  
-|**job_login**|**nvarchar(512)**|是 Windows 帳戶 「 記錄讀取器代理程式執行，這傳回的格式如下*網域*\\*username*。|  
-|**job_password**|**sysname**|基於安全性理由，值為 **\* \* \* \* \* \* \* \* \* \*** 一律為傳回此項目。|  
+|**job_login**|**nvarchar(512)**|這是用來執行記錄讀取器代理程式的 Windows 帳戶，傳回的格式為*domain*\\*username*。|  
+|**job_password**|**sysname**|** \* \* \* \* \* \* \* \* \* **基於安全性理由，一律會傳回的值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
  **sp_helplogreader_agent**用於異動複寫中。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色，在發行者端的成員**db_owner**發行集資料庫的固定的資料庫角色可以執行**sp_helplogreader_agent**.  
+## <a name="permissions"></a>權限  
+ 只有在發行者端的**系統管理員（sysadmin** ）固定伺服器角色成員，或是發行集資料庫之**db_owner**固定資料庫角色的成員，才能夠執行**sp_helplogreader_agent**。  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [sp_addlogreader_agent &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
- [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)  
+ [sp_addlogreader_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
+ [sp_changelogreader_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)  
   
   

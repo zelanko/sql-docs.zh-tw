@@ -1,5 +1,5 @@
 ---
-title: < sp_indexes (TRANSACT-SQL) |Microsoft Docs
+title: sp_indexes （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139923"
 ---
-# <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
+# <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回指定遠端資料表的索引資訊。  
@@ -44,23 +44,23 @@ sp_indexes [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @table_server= ] '*table_server*'  
- 這是連結的伺服器名稱，此伺服器執行所要求之資料表資訊所屬的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *table_server&lt*已**sysname**，沒有預設值。  
+ [ @table_server= ]'*table_server*'  
+ 這是連結的伺服器名稱，此伺服器執行所要求之資料表資訊所屬的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *table_server*是**sysname**，沒有預設值。  
   
- [ @table_name= ] '*table_name*'  
- 這是要為其提供索引資訊的遠端資料表名稱。 *table_name*已**sysname**，預設值是 NULL。 如果是 NULL，便會傳回指定資料庫中的所有資料表。  
+ [ @table_name= ]'*table_name*'  
+ 這是要為其提供索引資訊的遠端資料表名稱。 *table_name*是**sysname**，預設值是 Null。 如果是 NULL，便會傳回指定資料庫中的所有資料表。  
   
- [ @table_schema= ] '*table_schema*'  
- 指定資料表結構描述。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境中，這相當於資料表擁有者。 *table_schema*已**sysname**，預設值是 NULL。  
+ [ @table_schema= ]'*table_schema*'  
+ 指定資料表結構描述。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境中，這相當於資料表擁有者。 *table_schema*是**sysname**，預設值是 Null。  
   
- [ @table_catalog= ] '*table_db*'  
- 在其中的資料庫名稱*table_name*所在。 *table_db*已**sysname**，預設值是 NULL。 如果是 NULL， *table_db*預設值為**主要**。  
+ [ @table_catalog= ]'*table_db*'  
+ 這是*table_name*所在的資料庫名稱。 *table_db*是**sysname**，預設值是 Null。 如果是 Null， *table_db*預設為**master**。  
   
- [ @index_name= ] '*index_name*'  
- 這是要求之資訊所屬的索引名稱。 *索引*已**sysname**，預設值是 NULL。  
+ [ @index_name= ]'*index_name*'  
+ 這是要求之資訊所屬的索引名稱。 *index*是**sysname**，預設值是 Null。  
   
- [ @is_unique= ] '*is_unique*'  
- 這是要傳回資訊的索引類型。 *is_unique*已**元**，預設值是 NULL，而且可以是下列值之一。  
+ [ @is_unique= ]'*is_unique*'  
+ 這是要傳回資訊的索引類型。 *is_unique*是**bit**，預設值是 Null，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -76,17 +76,19 @@ sp_indexes [ @table_server = ] 'table_server'
 |TABLE_SCHEM|**sysname**|資料表的結構描述。|  
 |TABLE_NAME|**sysname**|遠端資料表的名稱。|  
 |NON_UNIQUE|**smallint**|索引是否唯一：<br /><br /> 0 = 唯一<br /><br /> 1 = 不是唯一|  
-|INDEX_QUALIFER|**sysname**|索引擁有者的名稱。 部分 DBMS 產品允許資料表擁有者以外的使用者建立索引。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此資料行一律是相同**TABLE_NAME**。|  
+|INDEX_QUALIFER|**sysname**|索引擁有者的名稱。 部分 DBMS 產品允許資料表擁有者以外的使用者建立索引。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，這個資料行一律與**TABLE_NAME**相同。|  
 |INDEX_NAME|**sysname**|索引的名稱。|  
 |TYPE|**smallint**|索引的類型：<br /><br /> 0 = 資料表的統計資料<br /><br /> 1 = 叢集<br /><br /> 2 = 雜湊<br /><br /> 3 = 其他|  
 |ORDINAL_POSITION|**int**|資料行在索引中的序數位置。 索引中的第一個資料行是 1。 這個資料行一律會傳回值。|  
 |COLUMN_NAME|**sysname**|這是傳回的 TABLE_NAME 的各個資料行之對應資料行名稱。|  
-|ASC_OR_DESC|**varchar**|這是定序所用的順序：<br /><br /> A = 遞增<br /><br /> D = 遞減<br /><br /> NULL = 不適用<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一律傳回 A。|  
+|ASC_OR_DESC|**varchar**|這是定序所用的順序：<br /><br /> A = 遞增<br /><br /> D = 遞減<br /><br /> NULL = 不適用<br /><br /> 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一律傳回 A。|  
 |CARDINALITY|**int**|這是資料表中的資料列數，或索引中的唯一值數目。|  
 |PAGES|**int**|這是用來儲存索引或資料表的頁數。|  
-|FILTER_CONDITION|**nvarchar(** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回值。|  
+|FILTER_CONDITION|**Nvarchar （** 4000 **）**|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回值。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要結構描述的 SELECT 權限。  
   
 ## <a name="examples"></a>範例  
@@ -100,13 +102,13 @@ EXEC sp_indexes @table_server = 'Seattle1',
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [分散式查詢預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_catalogs &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_column_privileges &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [sp_foreignkeys &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [idbschemarowset &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [分散式查詢預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [sp_catalogs &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_column_privileges &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_foreignkeys &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_linkedservers &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_tables_ex &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

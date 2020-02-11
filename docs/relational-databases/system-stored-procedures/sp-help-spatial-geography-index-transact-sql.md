@@ -18,10 +18,10 @@ ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 73bb564880cae238cdbaa7e3c13a1f18ab95dc99
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304871"
 ---
 # <a name="sp_help_spatial_geography_index-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
@@ -44,16 +44,16 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="arguments"></a>引數  
  請參閱[空間索引預存程式的引數和屬性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
-## <a name="properties"></a>[屬性]  
+## <a name="properties"></a>屬性  
  請參閱[空間索引預存程式的引數和屬性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  必須為使用者指派 PUBLIC 角色才能存取此程序。 需要在伺服器和物件上具有 READ ACCESS 權限。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 ## <a name="example"></a>範例  
- 下列範例會使用 `sp_help_spatial_geography_index`，針對 **\@qs**中指定的查詢範例，調查資料表**geography_col**上所定義的**地理位置**空間索引**SIndx_SpatialTable_geography_col2** 。 這個範例只會傳回指定索引的核心屬性。  
+ 下列範例會使用`sp_help_spatial_geography_index`來調查** \@qs**中給定查詢範例在資料表**geography_col**上定義的**地理位置**空間索引**SIndx_SpatialTable_geography_col2** 。 這個範例只會傳回指定索引的核心屬性。  
   
 ```  
 declare @qs geography  

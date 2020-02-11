@@ -1,5 +1,5 @@
-- name: SQL Server 2014 的線上叢書
-  href: books-online-for-sql-server-2014.md
+- name: SQL Server 2014 文件
+  href: index.yml
 - name: Analysis Services +
   href: ../analysis-services/analysis-services.md
 - name: Data Quality Services +
@@ -56,5 +56,5 @@
   href: sql-server-transaction-locking-and-row-versioning-guide.md
 - name: 交易記錄架構與管理
   href: sql-server-transaction-log-architecture-and-management.md
-- name: 案例研究：使用 Microsoft Dynamics ERP 和 SQL Server 2014 複寫建置具有延展性和效能的企業生態系統
+- name: 案例研究：使用 Microsoft Dynamics ERP 和 SQL Server 2014 複寫建置具有延展性和效能的企業生態系統。
   href: case-study-building-an-enterprise-ecosystem.md

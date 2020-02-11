@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eae9e11006a8a832523a7f72bdade6e943e57f50
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784742"
 ---
 # <a name="allocating-an-environment-handle"></a>配置環境控制代碼
@@ -31,6 +31,6 @@ ms.locfileid: "73784742"
  配置環境控制代碼之後，應用程式必須設定環境屬性來指出它將使用的 ODBC 函數呼叫版本。 使用 ODBC 3。*x*函式，請呼叫[SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md)並將*Attribute*參數設定為 SQL_ATTR_ODBC_VERSION，並將*valueptr 是*設為 SQL_OV_ODBC3。  
   
 ## <a name="see-also"></a>另請參閱  
- [與 SQL Server &#40;ODBC 通訊&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+ [與 SQL Server &#40;ODBC&#41;通訊](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

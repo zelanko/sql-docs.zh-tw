@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0290e656105ebb33a7f73fc043beed64f1c25bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520320"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>使用 CDC 來源擷取變更資料
@@ -46,7 +46,7 @@ ms.locfileid: "62520320"
   
     -   **全部**：傳回目前 CDC 範圍中的變更，不含 [更新之前]  值。  
   
-    -   **全部 (含舊值)** ：傳回目前 CDC 處理範圍中的變更，包括舊值 ([更新前]  )。 每個更新作業都有兩個資料列：一個包含更新之前的值，另一個則包含更新之後的值。  
+    -   **全部 (含舊值)** ：傳回目前 CDC 處理範圍中的變更，包括舊值 ([更新之前]  )。 每個更新作業都有兩個資料列：一個包含更新之前的值，另一個則包含更新之後的值。  
   
     -   **淨**：只針對目前 CDC 處理範圍中修改的每個來源資料列傳回一項變更。 如果來源資料列更新了許多次，就會產生結合的變更 (例如，插入+更新會產生為單一更新，而更新+刪除則產生為單一刪除)。 在淨變更處理模式中工作時，您可以將變更分割成刪除、插入和更新輸出，並且以平行方式處理它們，因為單一來源資料列會出現在多個輸出中。  
   
@@ -54,9 +54,9 @@ ms.locfileid: "62520320"
   
     -   **淨 (含合併)** ：這種模式與一般的淨模式很相似，但是插入和更新作業會合併成單一合併作業 (UPSERT)。  
   
-9. 選取針對目前 CDC 內容維護 CDC 狀態的 SSIS 字串封裝變數。 如需 CDC 狀態變數的詳細資訊，請參閱[定義狀態變數](define-a-state-variable.md)。  
+9. 選取針對目前 CDC 內容維護 CDC 狀態的 SSIS 字串封裝變數。 如需 CDC 狀態變數的詳細資訊，請參閱 [定義狀態變數](define-a-state-variable.md)。  
   
-10. 選取 [Include reprocessing indicator column (包含重新處理指標資料行)]  核取方塊即可建立名為 **__$reprocessing** 的特殊輸出資料行。 當 CDC 處理範圍與初始處理範圍 (對應至初始載入週期之 LSN 的範圍) 重疊，或者上一次執行發生錯誤之後重新處理 CDC 處理範圍時，這個資料行的值就是 **true**。 這個指標資料行可讓 SSIS 開發人員在重新處理變更時以不同的方式處理錯誤 (例如，可以忽略刪除不存在的資料列以及在重複索引鍵上失敗的插入等動作)。  
+10. 選取 [Include reprocessing indicator column (包含重新處理指標資料行)]  核取方塊即可建立名為 **__$reprocessing** 的特殊輸出資料行。 當 CDC 處理範圍與初始處理範圍 (對應至初始載入週期之 LSN 的範圍) 重疊，或者上一次執行發生錯誤之後重新處理 CDC 處理範圍時，這個資料行的值就是 **true** 。 這個指標資料行可讓 SSIS 開發人員在重新處理變更時以不同的方式處理錯誤 (例如，可以忽略刪除不存在的資料列以及在重複索引鍵上失敗的插入等動作)。  
   
      如需詳細資訊，請參閱 [CDC 來源自訂屬性](cdc-source-custom-properties.md)。  
   

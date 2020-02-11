@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74684088"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Create a trusted location for PowerPivot sites in Central Administration
@@ -22,7 +22,7 @@ ms.locfileid: "74684088"
   
   
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  您必須是伺服陣列管理員或服務管理員，才能將 URL 指定為信任位置。  
   
  您必須知道包含 PowerPivot 圖庫或儲存活頁簿之其他文件庫的 SharePoint 網站之 URL 位址。 若要取得位址，請開啟包含文件庫的網站，以滑鼠右鍵按一下 [ **PowerPivot 圖庫**]，選取 [**屬性**]，然後複製包含伺服器名稱和網站路徑之位址（URL）的第一個部分。  
@@ -59,7 +59,7 @@ ms.locfileid: "74684088"
   
 10. 此外，請在 [外部資料] 的 [重新整理時警告] 中，清除 [啟用重新整理警告]**** 的核取方塊。 清除此核取方塊可讓 PowerPivot 圖庫略過例行的警告訊息，並改為顯示活頁簿的預覽影像。  
   
-11. 按一下 [確定]****。  
+11. 按一下 [確定]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [PowerPivot 圖庫](../../2014-toc/index.yml)  

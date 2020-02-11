@@ -1,5 +1,5 @@
 ---
-title: 新全文檢索停用字詞表 （一般頁面） |Microsoft Docs
+title: 新增全文檢索停用字詞表（一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,25 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eca5e82b9d23709b45949cfe6af9022f1243ef08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774210"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>新增全文檢索停用字詞表 (一般頁面)
-  使用這個對話方塊，即可建立全文檢索停用字詞表。 *「停用字詞表」* (Stoplist) 是指一組稱為 *「停用字詞」* (Stopword) 的常用字，而使用該停用字詞表之資料表的全文檢索索引會省略這些字。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../relational-databases/search/full-text-search.md)。  
+  使用這個對話方塊，即可建立全文檢索停用字詞表。 
+  *「停用字詞表」* (Stoplist) 是指一組稱為 *「停用字詞」*(Stopword) 的常用字，而使用該停用字詞表之資料表的全文檢索索引會省略這些字。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../relational-databases/search/full-text-search.md)。  
   
- **若要使用 SQL Server Management Studio 來建立停用字詞表**  
+ **使用 SQL Server Management Studio 來建立停用字詞表**  
   
 -   [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../relational-databases/search/full-text-search.md)  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **全文檢索停用字詞表名稱**  
  輸入全文檢索停用字詞表的名稱。  
   
- **[擁有者]**  
+ **擁有者**  
  指定全文檢索停用字詞表的擁有者。 如果您想要將擁有權指派給自己 (亦即，目前的使用者)，請將這個欄位保留空白。  
   
  若要指定不同的使用者，請按一下瀏覽按鈕。  
@@ -47,7 +48,7 @@ ms.locfileid: "62774210"
  **從現有全文檢索停用字詞表建立**  
  新的停用字詞表是藉由複製現有的停用字詞表所建立。  
   
- **來源資料庫**  
+ **源資料庫**  
  指定現有停用字詞表所屬的資料庫名稱。 系統預設會選取目前的資料庫。 (選擇性) 請從清單方塊中選取不同的資料庫。  
   
  **來源停用字詞表**  

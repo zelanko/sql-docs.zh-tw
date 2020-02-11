@@ -22,16 +22,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92ef8c4583db152b2f81a574010a12030680704f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73983074"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  變更目前資料庫中之使用者建立物件的名稱。 這個物件可以是資料表、索引、資料行、別名資料類型或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime （CLR）使用者定義型別。  
+  變更目前資料庫中之使用者建立物件的名稱。 這個物件可以是資料表、索引、資料行、別名資料類型或[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime （CLR）使用者定義型別。  
   
 > [!CAUTION]  
 >  變更物件名稱的任何部分，可能破壞指令碼和預存程序。 我們建議您不要使用陳述式來重新命名預存程序、觸發程序、使用者定義函數或檢視；相反地，請卸除物件，再利用新名稱來重新建立它。  
@@ -47,33 +47,33 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [@objname =]'*object_name*'  
+ [ @objname = ]'*object_name*'  
  這是使用者物件或資料類型目前的完整或非完整名稱。 如果要重新命名的物件是資料表中的資料行， *object_name*必須在 form*資料表. column*或 schema. *table.* 資料行中。 如果要重新命名的物件是索引， *object_name*必須是*table. index*或 schema. table. *index*格式。 如果要重新命名的物件是條件約束， *object_name*必須為*schema. 條件約束*格式。  
   
- 只有在指定限定物件時，才需要引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *object_name*是**Nvarchar （776）** ，沒有預設值。  
+ 只有在指定限定物件時，才需要引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *object_name*是**Nvarchar （776）**，沒有預設值。  
   
- [@newname =]'*new_name*'  
+ [ @newname = ]'*new_name*'  
  這是指定物件的新名稱。 *new_name*必須是一個部分的名稱，而且必須遵循識別碼的規則。 *newname*是**sysname**，沒有預設值。  
   
 > [!NOTE]  
 >  觸發程序名稱的開頭不能是 # 或 ##。  
   
- [@objtype =]'*object_type*'  
- 這是要重新命名的物件類型。 *object_type*是**Varchar （13）** ，預設值是 Null，它可以是下列值之一。  
+ [ @objtype = ]'*object_type*'  
+ 這是要重新命名的物件類型。 *object_type*是**Varchar （13）**，預設值是 Null，它可以是下列值之一。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |COLUMN|要重新命名的資料行。|  
 |DATABASE|使用者定義資料庫。 當重新命名資料庫時，需要這個物件類型。|  
 |INDEX|使用者自訂索引。 重新命名具有統計資料的索引時，也會自動重新命名統計資料。|  
 |OBJECT|在[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中追蹤之類型的專案。 例如，您可以利用 OBJECT 來重新命名物件，其中包括條件約束 (CHECK、FOREIGN KEY、PRIMARY/UNIQUE KEY)、使用者資料表和規則。|  
-|STATISTICS|**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 使用者明確建立的統計資料，或使用索引隱含建立的統計資料。 重新命名索引的統計資料時，也會自動重新命名索引。|  
+|STATISTICS|**適用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更新版本[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]和。<br /><br /> 使用者明確建立的統計資料，或使用索引隱含建立的統計資料。 重新命名索引的統計資料時，也會自動重新命名索引。|  
 |USERDATATYPE|藉由執行[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)或[Sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)加入的[CLR 使用者定義類型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  您只能變更目前資料庫中的物件或資料類型的名稱。 您無法改變大部分系統資料類型和系統物件的名稱。  
   
  每當重新命名 PRIMARY KEY 或 UNIQUE 條件約束時，sp_rename 都會自動重新命名相關聯的索引。 如果是重新命名的索引繫結於 PRIMARY KEY 條件約束，sp_rename 也會自動重新命名 PRIMARY KEY 條件約束。  
@@ -84,7 +84,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  重新命名資料表或資料行之類的物件，不會自動重新命名指向這個物件的參考。 您必須手動修改任何參考重新命名之物件的物件。 例如，如果您重新命名資料表資料行，且有觸發程序參考這個資料行，您必須修改觸發程序來反映新的資料行名稱。 在重新命名物件之前，請利用 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 來列出其相依性。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  若要重新命名物件、資料行和索引，需要物件的 ALTER 權限。 若要重新命名使用者類型，需要這個類型的 CONTROL 權限。 若要重新命名資料庫，需要系統管理員 (sysadmin) 或資料庫建立者 (dbcreator) 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
@@ -99,8 +99,8 @@ EXEC sp_rename 'Sales.SalesTerritory', 'SalesTerr';
 GO  
 ```  
   
-### <a name="b-renaming-a-column"></a>b. 重新命名資料行  
- 下列範例會將 `SalesTerritory` 資料表中的 `TerritoryID` 資料行重新命名為 `TerrID`。  
+### <a name="b-renaming-a-column"></a>B. 重新命名資料行  
+ 下列範例會將`TerritoryID` `SalesTerritory`資料表中的資料行重新`TerrID`命名為。  
   
 ```  
 USE AdventureWorks2012;  
@@ -205,8 +205,8 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
   
 ## <a name="see-also"></a>另請參閱  
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
- [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
+ [sql_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [資料庫引擎預存&#40;程式 transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

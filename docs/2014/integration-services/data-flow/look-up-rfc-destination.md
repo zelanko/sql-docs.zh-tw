@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4badd9c961f5a0d7ca2d3e32185a7ab742628d97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901778"
 ---
 # <a name="look-up-rfc-destination"></a>查閱 RFC 目的地
-  使用 [查閱 RFC 目的地] 對話方塊可以查閱 SAP Netweaver BW 系統中定義的 RFC 目的地。 出現可用的 RFC 目的地清單時，請選取您要的目的地，然後此元件就會將必要的值填入相關聯的選項。  
+  使用 [查閱 RFC 目的地]  對話方塊可以查閱 SAP Netweaver BW 系統中定義的 RFC 目的地。 出現可用的 RFC 目的地清單時，請選取您要的目的地，然後此元件就會將必要的值填入相關聯的選項。  
   
- SAP BW 來源和 SAP BW 目的地都會使用 [查閱 RFC 目的地] 對話方塊。 如需 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 這些元件的詳細資訊，請參閱 [SAP BW 來源](sap-bw-source.md)和 [SAP BW 目的地](sap-bw-destination.md)。  
+ SAP BW 來源和 SAP BW 目的地都會使用 [查閱 RFC 目的地]  對話方塊。 如需 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 這些元件的詳細資訊，請參閱 [SAP BW 來源](sap-bw-source.md) 和 [SAP BW 目的地](sap-bw-destination.md)。  
   
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  
@@ -29,15 +29,15 @@ ms.locfileid: "62901778"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 來源或目的地的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤中，按兩下 SAP BW 來源或目的地。  
+2.  在 [資料流程]  索引標籤中，按兩下 SAP BW 來源或目的地。  
   
-3.  在 [SAP BW 來源編輯器] 或 [SAP BW 目的地編輯器] 中，按一下 [連線管理員] 開啟編輯器的 [連線管理員] 頁面。  
+3.  在 [SAP BW 來源編輯器]  或 [SAP BW 目的地編輯器]  中，按一下 [連線管理員]  開啟編輯器的 [連線管理員]  頁面。  
   
-4.  在 [連線管理員] 頁面的 [RFC 目的地] 群組方塊中，按一下 [查閱] 顯示 [查閱 RFC 目的地] 對話方塊。  
+4.  在 [連線管理員]  頁面的 [RFC 目的地]  群組方塊中，按一下 [查閱]  顯示 [查閱 RFC 目的地]  對話方塊。  
   
-     在 [SAP BW 來源編輯器] 中，只有當 [執行模式] 的值是 [P - 觸發處理鏈結] 或 [W - 等候通知] 時，才會出現 [RFC 目的地] 群組方塊。  
+     在 [SAP BW 來源編輯器]  中，只有當 [執行模式]  的值是 [P - 觸發處理鏈結]  或 [W - 等候通知]  時，才會出現 [RFC 目的地]  群組方塊。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **目的地**  
  檢視 SAP Netweaver BW 系統中定義的 RFC 目的地名稱。  
   

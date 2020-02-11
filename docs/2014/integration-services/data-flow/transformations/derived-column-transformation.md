@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a2767de67eac1a0346f059e1a2c81a5698607dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900511"
 ---
 # <a name="derived-column-transformation"></a>衍生的資料行轉換
@@ -45,7 +45,7 @@ ms.locfileid: "62900511"
 ## <a name="configuration-of-the-derived-column-transformation"></a>設定衍生資料行轉換  
  您可以利用下列方式設定「衍生的資料行」轉換：  
   
--   為每一個要變更的輸入資料行或新資料行提供運算式。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../expressions/integration-services-ssis-expressions.md)。  
+-   為每一個要變更的輸入資料行或新資料行提供運算式。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../expressions/integration-services-ssis-expressions.md)為止。  
   
     > [!NOTE]  
     >  如果運算式參考「衍生的資料行」轉換所覆寫的輸入資料行，則運算式會使用資料行的原始值，而非衍生的值。  
@@ -58,11 +58,11 @@ ms.locfileid: "62900511"
   
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可在 [衍生的資料行轉換編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱[衍生的資料行轉換編輯器](../../derived-column-transformation-editor.md)。  
+ 如需可在 [衍生的資料行轉換編輯器] **** 對話方塊中設定之屬性的詳細資訊，請參閱 [衍生的資料行轉換編輯器](../../derived-column-transformation-editor.md)。  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [轉換自訂屬性](transformation-custom-properties.md)  
   
@@ -77,6 +77,6 @@ ms.locfileid: "62900511"
 ## <a name="related-content"></a>相關內容  
  social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
- 部落格[如何使用 SSIS 分割資料行資料](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html)。  
+ Blog，[如何使用 SSIS 分割資料行資料](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html)。  
   
   

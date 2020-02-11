@@ -42,10 +42,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683607"
 ---
 # <a name="getting-sql-server-assistance"></a>取得 SQL Server 協助
@@ -61,8 +61,7 @@ ms.locfileid: "74683607"
   
  如果您在這些來源中找不到想要尋找的資訊，可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 社群論壇和新聞群組中提出問題，也可以向 [!INCLUDE[msCoName](../includes/msconame-md.md)] 提交支援案例。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書  
+## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書  
  《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》包含了使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 所需的概念和程序。 《線上叢書》也包含了許多語言和程式設計介面的參考資料，可供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用來儲存、擷取、報告和修改資料。  
   
  《線上叢書》可以透過下列方法存取：  

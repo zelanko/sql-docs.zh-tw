@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19efcc8b4381694177d0ec3d64376368e8d23a7d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779773"
 ---
 # <a name="batches-of-statements"></a>陳述式的批次
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 語句的批次包含兩個或多個語句，以分號（;)，內建在傳遞至**SQLExecDirect**或[SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360)函式的單一字串中。 例如：  
+  語句的批次包含兩個或多個語句，以分號（;)，並內建于傳遞至**SQLExecDirect**或[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)的單一字串。 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 例如：  
   
 ```  
 SQLExecDirect(hstmt,   
@@ -48,6 +48,6 @@ szErrorMsg = "[Microsoft][SQL Server Native Server Native Client]Cursor type cha
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [執行語句&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+ [&#40;ODBC&#41;執行語句](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

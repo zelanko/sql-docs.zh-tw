@@ -14,24 +14,26 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8fc10bd6ebb44e0f8b45edb3c669e8216cc313b1
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095561"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>建立、改變和移除使用者定義函數
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
-  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> 物件所提供的功能，可讓使用者以程式設計方式管理 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的使用者定義函數。 使用者定義函數支援輸入和輸出參數，也支援資料表資料行的直接參考。  
+  物件<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>所提供的功能，可讓使用者以程式設計方式管理[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的使用者定義函數。 使用者定義函數支援輸入和輸出參數，也支援資料表資料行的直接參考。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 需要先在資料庫內註冊組件，然後才能在預存程序、使用者定義函數、觸發程序和使用者定義資料類型中使用組件。 SMO 以 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 物件支援此功能。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 需要先在資料庫內註冊組件，然後才能在預存程序、使用者定義函數、觸發程序和使用者定義資料類型中使用組件。 SMO 以 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 物件支援此功能。  
   
- <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> 物件會以 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.AssemblyName%2A>、<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.ClassName%2A> 和 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.MethodName%2A> 屬性參考 .NET 組件。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> 物件會以 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.AssemblyName%2A>、<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.ClassName%2A> 和 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.MethodName%2A> 屬性參考 .NET 組件。  
   
  當 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> 物件參考 .NET 組件時，您必須藉由建立 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 物件並將其加入至 <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection> 物件 (後者屬於 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件) 來註冊該組件。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-basic"></a>在 Visual Basic 中建立純量使用者定義函數  
  這個程式碼範例示範如何在 <xref:System.DateTime> 中，建立及移除具有輸入 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 物件參數和整數傳回類型的純量使用者定義函數。 使用者定義函數會建立在 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 資料庫上。 此範例會建立使用者定義函數 ISOweek，該函數取用日期引數並計算 ISO 週數。 為了讓這個函數能夠正確計算，必須先將資料庫 DATEFIRST 選項設定為 1，才能呼叫該函數。  
@@ -65,7 +67,7 @@ udf.Drop()
 ``` 
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-c"></a>在 Visual C# 中建立純量使用者定義函數  
- 這個程式碼範例示範如何在 <xref:System.DateTime> 中，建立及移除具有輸入 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 物件參數和整數傳回類型的純量使用者定義函數。 使用者定義函數會建立在 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 資料庫上。 本範例會建立使用者定義函數。 `ISOweek`的 COLLATE 子句。 這個函數採用日期引數並計算 ISO 週數。 為了讓這個函數能夠正確計算，必須先將資料庫 `DATEFIRST` 選項設定為 `1` ，才能呼叫該函數。  
+ 這個程式碼範例示範如何在 <xref:System.DateTime> 中，建立及移除具有輸入 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 物件參數和整數傳回類型的純量使用者定義函數。 使用者定義函數會建立在 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 資料庫上。 本範例會建立使用者定義函數。 `ISOweek`. 這個函數採用日期引數並計算 ISO 週數。 為了讓這個函數能夠正確計算，必須先將資料庫 `DATEFIRST` 選項設定為 `1` ，才能呼叫該函數。  
   
 ```csharp  
 {  
@@ -101,7 +103,7 @@ udf.Drop()
 ```  
   
 ## <a name="creating-a-scalar-user-defined-function-in-powershell"></a>在 PowerShell 中建立純量使用者定義函數  
- 這個程式碼範例示範如何在 <xref:System.DateTime> 中，建立及移除具有輸入 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 物件參數和整數傳回類型的純量使用者定義函數。 使用者定義函數會建立在 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 資料庫上。 本範例會建立使用者定義函數。 `ISOweek`的 COLLATE 子句。 這個函數採用日期引數並計算 ISO 週數。 為了讓這個函數能夠正確計算，必須先將資料庫 `DATEFIRST` 選項設定為 `1` ，才能呼叫該函數。  
+ 這個程式碼範例示範如何在 <xref:System.DateTime> 中，建立及移除具有輸入 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 物件參數和整數傳回類型的純量使用者定義函數。 使用者定義函數會建立在 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 資料庫上。 本範例會建立使用者定義函數。 `ISOweek`. 這個函數採用日期引數並計算 ISO 週數。 為了讓這個函數能夠正確計算，必須先將資料庫 `DATEFIRST` 選項設定為 `1` ，才能呼叫該函數。  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

@@ -11,10 +11,10 @@ ms.reviewer: martinle
 ms.custom: seo-dt-2019
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
 ms.openlocfilehash: 7071c9cb46bde6e2d353293cec9f01451c0b4f67
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401279"
 ---
 # <a name="configure-auto-statistics"></a>設定自動統計資料
@@ -75,5 +75,5 @@ FROM
 
 1的傳回值表示設定為 on，而0表示設定為關閉。 
 
-## <a name="next-steps"></a>接下來的步驟
+## <a name="next-steps"></a>後續步驟
 若要查看查詢的執行方式，請參閱監視使用中[查詢](monitoring-active-queries.md)

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d00f864d5e7209bc0865bfbb52bd1231a2c12a9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770414"
 ---
 # <a name="character-map-transformation"></a>字元對應轉換
@@ -36,7 +36,7 @@ ms.locfileid: "62770414"
 ## <a name="mapping-operations"></a>對應作業  
  下表描述「字元對應」轉換支援的對應作業。  
   
-|運算|描述|  
+|作業|描述|  
 |---------------|-----------------|  
 |位元組反轉|反轉位元組的順序。|  
 |全形|將半形字元對應到全形字元。|  
@@ -74,7 +74,7 @@ ms.locfileid: "62770414"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [轉換自訂屬性](transformation-custom-properties.md)  
   

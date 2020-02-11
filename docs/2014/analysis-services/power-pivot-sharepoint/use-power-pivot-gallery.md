@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 880baacd3cf629ee28f55a399fcb02019e836d44
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229231"
 ---
 # <a name="use-powerpivot-gallery"></a>使用 PowerPivot 圖庫
@@ -44,7 +44,7 @@ ms.locfileid: "75229231"
   
  [必要條件](#prereq)  
   
-##  <a name="prereq"></a>要求  
+##  <a name="prereq"></a> 必要條件  
   
 > [!NOTE]  
 >  Power Pivot 圖庫需要 Microsoft Silverlight，  但 Microsoft Edge 瀏覽器不支援 Silverlight。   
@@ -150,7 +150,7 @@ ms.locfileid: "75229231"
   
 3.  按一下右邊的向下箭號，然後選取 **[編輯屬性]**。  
   
-4.  按一下 [儲存]****。 儲存文件會強制快照服務重新產生預覽影像。  
+4.  按一下 [檔案]  。 儲存文件會強制快照服務重新產生預覽影像。  
   
 ##  <a name="bkmk_known_issues"></a>已知問題  
   

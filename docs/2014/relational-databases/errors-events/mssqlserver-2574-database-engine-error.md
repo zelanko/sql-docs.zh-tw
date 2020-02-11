@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48e5aeab043fcfd0e65150ea3a1008d726cb0ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869254"
 ---
-# <a name="mssqlserver2574"></a>MSSQLSERVER_2574
+# <a name="mssqlserver_2574"></a>MSSQLSERVER_2574
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|2574|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC_EMPTY_INDEX_TREE_LEVEL_PAGE|  
-|訊息文字|資料表錯誤：頁面 P_ID 是空的物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID （類型 TYPE）。 這在 B 型樹狀目錄的層級 LEVEL 中是不允許的。|  
+|訊息文字|資料表錯誤: 物件識別碼 O_ID 中的頁面 P_ID 是空的，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE)。 這在 B 型樹狀目錄的層級 LEVEL 中是不允許的。|  
   
 ## <a name="explanation"></a>說明  
  在指定之索引的分葉層級上方的 B 型樹狀目錄頁面是空的，沒有任何資料列。 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中的分葉層級頁面可能會出現這種行為，但是樹狀目錄層級絕對不可能出現這種行為。  

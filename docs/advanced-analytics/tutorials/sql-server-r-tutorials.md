@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7c71ebfbda37e66050f868fa7676d0247e84840e
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74119224"
 ---
 # <a name="sql-server-r-language-tutorials"></a>SQL Server R 語言教學課程
@@ -30,7 +30,7 @@ ms.locfileid: "74119224"
 
 ## <a name="r-quickstarts-and-tutorials"></a>R 快速入門與教學課程
 
-| 連結 | Description |
+| 連結 | 描述 |
 |------|-------------|
 | [快速入門：建立及執行簡易的 R 指令碼](quickstart-r-create-script.md) | 在多項快速入門中，首先說明使用 T-SQL 查詢編輯器 (例如 SQL Server Management Studio) 呼叫 R 函數的基本語法。 |
 | [教學課程：了解適用於資料科學家的資料庫內 R 分析](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | 本教學課程為剛接觸 SQL Server 的 R 開發人員說明如何在 SQL Server 中執行常見的資料科學工作。 載入資料並將其視覺化、將模型定型並儲存至 SQL Server，並使用模型進行預測性分析。 |
@@ -41,7 +41,7 @@ ms.locfileid: "74119224"
 
 ## <a name="code-samples"></a>程式碼範例
 
-| 連結 | Description |
+| 連結 | 描述 |
 |------|-------------|
 | [使用 R 和 SQL Server 建置預測模型](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | 了解滑雪板租賃業如何使用機器學習服務預測未來的租賃業務，這有助於商務方案和人員滿足未來的需求。 |
 | [使用 R 和 SQL Server 執行客戶叢集](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | 根據銷售資料使用無人監督的學習來區隔客戶。 |

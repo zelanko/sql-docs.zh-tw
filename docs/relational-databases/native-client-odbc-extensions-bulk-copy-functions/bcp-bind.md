@@ -19,10 +19,10 @@ ms.reviewer: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 601a584a315eba7013c086dc59c9fb5bfeff8693
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783225"
 ---
 # <a name="bcp_bind"></a>bcp_bind
@@ -52,7 +52,7 @@ RETCODE bcp_bind (
  這是已啟用大量複製的 ODBC 連接控制代碼。  
   
  *pData*  
- 這是已複製之資料的指標。 如果*eDataType*為 SQLTEXT、SQLNTEXT、SQLXML、SQLUDT、SQLCHARACTER、SQLVARCHAR、SQLVARBINARY、SQLBINARY、SQLNCHAR 或 SQLIMAGE，則*PDATA*可以是 Null。 Null *pData*表示 long 資料值將使用[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)以區區塊轉送至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 只有當對應到使用者系結欄位的資料行是 BLOB 資料行時，使用者才應該將*pData*設定為 Null，否則**bcp_bind**將會失敗。  
+ 這是已複製之資料的指標。 如果*eDataType*為 SQLTEXT、SQLNTEXT、SQLXML、SQLUDT、SQLCHARACTER、SQLVARCHAR、SQLVARBINARY、SQLBINARY、SQLNCHAR 或 SQLIMAGE，則*PDATA*可以是 Null。 Null *pData*表示 long 資料值將使用[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)以區區塊轉送[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]至。 只有當對應到使用者系結欄位的資料行是 BLOB 資料行時，使用者才應該將*pData*設定為 Null，否則**bcp_bind**將會失敗。  
   
  如果這些指標出現在資料中，它們會直接出現在資料前的記憶體中。 在此情況下， *pData*參數會指向指標變數，而大量複製會使用指標的寬度（ *cbIndicator*參數）來正確處理使用者資料。  
   
@@ -78,7 +78,7 @@ typedef struct tagBCPBOUNDINT
   
  對於整數之類的固定長度資料類型，此資料類型會指出系統之資料的長度。 因此，如果是固定長度的資料類型， *cbData*可以安全地 SQL_VARLEN_DATA 或資料的長度。  
   
- 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字元和二進位資料類型而言， *cbData*可以是 SQL_VARLEN_DATA、SQL_Null_DATA、某個正值或0。 如果 SQL_VARLEN_DATA *cbData* ，系統會使用長度/null 指標（如果有的話）或結束字元序列來決定資料的長度。 如果同時提供兩者，系統會使用導致複製最少量資料者。 如果*cbData*為 SQL_VARLEN_DATA，則資料行的資料類型為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字元或二進位類型，而且長度指標和結束字元順序都未指定，系統會傳回錯誤訊息。  
+ 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是字元和二進位資料類型， *cbData*可以是 SQL_VARLEN_DATA、SQL_Null_DATA、某個正值或0。 如果 SQL_VARLEN_DATA *cbData* ，系統會使用長度/null 指標（如果有的話）或結束字元序列來決定資料的長度。 如果同時提供兩者，系統會使用導致複製最少量資料者。 如果*cbData*為 SQL_VARLEN_DATA，則資料行的資料類型為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字元或二進位類型，而且長度指標和結束字元順序都未指定，系統會傳回錯誤訊息。  
   
  如果*cbData*為0或正值，則系統會使用*cbData*做為資料長度。 不過，如果除了正的*cbData*值之外，也提供長度指標或結束字元序列，系統會使用導致複製最少量資料的方法來決定資料長度。  
   
@@ -112,16 +112,16 @@ bcp_bind(hdbc, szName, 0,
    sizeof(WCHAR), SQLNCHAR, 2)  
 ```  
   
- 如果系結的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行是寬字元，則不會在[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)上執行任何轉換。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行為 MBCS 字元類型，當資料傳送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，會執行寬字元到多位元組字元的轉換。  
+ 如果系結[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的資料行是寬字元，則不會在[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)上執行任何轉換。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行為 MBCS 字元類型，當資料傳送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，會執行寬字元到多位元組字元的轉換。  
   
  *cbTerm*  
  這是出現在程式變數之結束字元中的位元組計數 (如果有的話)。 如果變數沒有結束字元，請將*cbTerm*設定為0。  
 
 *eDataType*這是程式變數的 C 資料類型。 程式變數中的資料會轉換為資料庫資料行的類型。 如果此參數為 0，則不會執行任何轉換。  
 
-*EDataType*參數是由 sqlncli 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型 token 所列舉，而不是 ODBC C 資料類型枚舉器。 例如，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專屬類型 SQLINT2 來指定兩個位元組的整數 ODBC 類型 SQL_C_SHORT。  
+*EDataType*參數是由 sqlncli 中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型標記所列舉，而不是 ODBC C 資料類型枚舉器。 例如，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專屬類型 SQLINT2 來指定兩個位元組的整數 ODBC 類型 SQL_C_SHORT。  
 
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 在 **_eDataType_** 參數中引進了 SQLXML 和 SQLUDT 資料類型標記的支援。  
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]在**_eDataType_** 參數中引進了 SQLXML 和 SQLUDT 資料類型標記的支援。  
 
 下表列出有效的列舉資料類型和對應的 ODBC C 資料類型。
 
@@ -146,8 +146,8 @@ bcp_bind(hdbc, szName, 0,
 |SQLINT4|int|  
 |SQLINT8|_int64|  
 |SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|  
-|SQLFLT4|float|  
-|SQLFLT8|float|  
+|SQLFLT4|FLOAT|  
+|SQLFLT8|FLOAT|  
 |SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|  
 |SQLDECIMALN|SQL_NUMERIC_STRUCT|  
 |SQLNUMERICN|SQL_NUMERIC_STRUCT|  
@@ -164,7 +164,7 @@ bcp_bind(hdbc, szName, 0,
 |SQLIMAGE|unsigned char *|  
 |SQLUDT|unsigned char *|  
 |SQLUNIQUEID|SQLGUID|  
-|SQLVARIANT|*除了下列以外的任何資料類型：*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
+|SQLVARIANT|*任何資料類型，除了：*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
 |SQLXML|*支援的 C 資料類型：*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|  
 
 *並將 idxservercol*這是要將資料複製到其中的資料庫資料表中，資料行的序數位置。 資料表中的第一個資料行是資料行 1。 資料行的序數位置是由[SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)所報告。  
@@ -175,23 +175,23 @@ bcp_bind(hdbc, szName, 0,
 
 ## <a name="remarks"></a>備註
 
-使用**bcp_bind** ，以快速且有效率的方式，將程式變數中的資料複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的資料表。  
+使用**bcp_bind** ，以快速且有效率的方式，將程式變數中的資料複製到中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的資料表。  
 
-呼叫此或任何其他大量複製函數之前，請先呼叫[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 。 呼叫**bcp_init**會設定用於大量複製的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目標資料表。 呼叫**bcp_init**以與**bcp_bind**和[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)搭配使用時，表示資料檔的**bcp_init** _szDataFile_參數會設定為 Null;**bcp_init**_eDirection_參數設為 DB_IN。  
+呼叫此或任何其他大量複製函數之前，請先呼叫[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 。 呼叫**bcp_init**會設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用於大量複製的目標資料表。 呼叫**bcp_init**以與**bcp_bind**和[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)搭配使用時，表示資料檔的**bcp_init** _szDataFile_參數會設定為 Null;**bcp_init**_eDirection_參數設為 DB_IN。  
 
-針對您要複製的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中的每個資料行，進行個別的**bcp_bind**呼叫。 完成必要的**bcp_bind**呼叫之後，請呼叫**bcp_sendrow** ，將您的程式變數中的資料列傳送至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不支援重新繫結資料行。
+針對您要**** 複製的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表中的每個資料行，建立個別的 bcp_bind 呼叫。 完成必要的**bcp_bind**呼叫之後，請呼叫**bcp_sendrow** ，將您的程式變數中的資料列傳送到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不支援重新繫結資料行。
 
-每當您想要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認可已收到的資料列時，請呼叫[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)。 例如，針對每1000個插入的資料列，或在任何其他間隔呼叫一次**bcp_batch** 。  
+每當您想[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要認可已收到的資料列時，請呼叫[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)。 例如，針對每1000個插入的資料列，或在任何其他間隔呼叫一次**bcp_batch** 。  
 
 當沒有要插入的資料列時，請呼叫[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)。 無法執行這項操作時，會發生錯誤。
 
 以[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)指定的控制項參數設定不會影響**bcp_bind**資料列傳輸。  
 
-如果資料行的*pData*是設為 Null，因為呼叫會將它的值提供給[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)、任何後續的資料行（ *EDATATYPE*設定為 SQLTEXT、SQLNTEXT、SQLXML、SQLUDT、SQLCHARACTER、SQLVARCHAR、SQLVARBINARY、SQLBINARY、SQLNCHAR 或 SQLIMAGE 也必須與設定為 Null 的*pData*系結，而且其值也必須透過呼叫來提供**bcp_moretext**。  
+如果資料行的*pData*是設為 Null，因為[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)的呼叫將會提供它的值，而*EDATATYPE*設定為 SQLTEXT、SQLNTEXT、SQLXML、SQLUDT、SQLCHARACTER、SQLVARCHAR、SQLVARBINARY、SQLBINARY、SQLNCHAR 或 SQLIMAGE 的任何後續資料行，也必須與設定為 Null 的*pData*系結，而且其值也必須由呼叫**bcp_moretext**提供。  
 
-對於新的大數數值型別（例如**Varchar （max）** 、 **Varbinary （max）** 或**Nvarchar （max））** ，您可以使用 SQLCHARACTER、SQLVARCHAR、SQLVARBINARY、SQLBINARY 和 SQLNCHAR 作為*eDataType*參數中的類型指標。  
+對於新的大數數值型別（例如**Varchar （max）**、 **Varbinary （max）** 或**Nvarchar （max））**，您可以使用 SQLCHARACTER、SQLVARCHAR、SQLVARBINARY、SQLBINARY 和 SQLNCHAR 作為*eDataType*參數中的類型指標。  
 
-如果*cbTerm*不是0，任何值（1、2、4或8）對前置詞（*cbIndicator*）都是有效的。 在這種情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 將會搜尋結束字元、計算結束字元的相關資料長度（*i*），並將*cbData*設定為較小的 i 值和前置詞的值。  
+如果*cbTerm*不是0，任何值（1、2、4或8）對前置詞（*cbIndicator*）都是有效的。 在這種情況[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]下，Native Client 將會搜尋結束字元、計算結束字元（*i*）的資料長度，並將*cbData*設定為較小的 i 值和前置詞的值。  
 
 如果*cbTerm*為0，而*cbIndicator* （前置詞）不是0，則*cbIndicator*必須是8。 8位元組前置詞可以採用下列值：  
 
@@ -199,7 +199,7 @@ bcp_bind(hdbc, szName, 0,
 
 - 0xFFFFFFFFFFFFFFFE 會被視為特殊的前置詞值，可用來有效率地將區塊中的資料傳送至伺服器。 包含此特殊前置詞之資料的格式為：  
 
-- < SPECIAL_PREFIX > \<0 或多個資料區塊 > < ZERO_CHUNK >：  
+- <SPECIAL_PREFIX> \<0 個以上的資料區塊> <ZERO_CHUNK>：  
 
 - SPECIAL_PREFIX 是 0xFFFFFFFFFFFFFFFE  
 
@@ -213,9 +213,9 @@ bcp_bind(hdbc, szName, 0,
   
 ## <a name="bcp_bind-support-for-enhanced-date-and-time-features"></a>bcp_bind 支援增強的日期和時間功能
 
-如需有關搭配日期/時間類型的*eDataType*參數使用之類型的詳細資訊，請參閱[OLE DB 和&#40;ODBC&#41;的增強型日期和時間類型的大量複製變更](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
+如需有關與日期/時間類型的*eDataType*參數搭配使用之類型的詳細資訊，請參閱[增強型日期和時間類型的大量複製變更 &#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
 
-如需詳細資訊，請參閱[日期和&#40;時間&#41;改善 ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+如需詳細資訊，請參閱[ODBC&#41;&#40;的日期和時間改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
 
 ## <a name="example"></a>範例
   

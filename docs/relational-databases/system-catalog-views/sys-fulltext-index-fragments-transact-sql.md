@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_index_fragments (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases fulltext_index_fragments （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,16 +24,16 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 295d924422410bbf247d9b96d27b705fdfe3b5d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133823"
 ---
-# <a name="sysfulltextindexfragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
+# <a name="sysfulltext_index_fragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  全文檢索索引會使用稱為 「 內部資料表*全文檢索索引片段*來儲存反向的索引資料。 此檢視表可用來查詢有關這些片段的中繼資料， 此檢視表針對每一個資料表內包含全文檢索索引的每一個全文檢索索引片段各包含一個資料列。  
+  全文檢索索引會使用稱為「*全文檢索索引片段*」的內部資料表來儲存反向索引資料。 此檢視表可用來查詢有關這些片段的中繼資料， 此檢視表針對每一個資料表內包含全文檢索索引的每一個全文檢索索引片段各包含一個資料列。  
  
   
 |資料行名稱|資料類型|描述|  
@@ -44,7 +44,7 @@ ms.locfileid: "68133823"
 |timestamp|**timestamp**|與片段建立有關聯的時間戳記。 最近片段的時間戳記大於較舊片段的時間戳記。|  
 |data_size|**int**|片段的邏輯大小 (以位元組為單位)。|  
 |row_count|**int**|片段中個別資料列的數目。|  
-|status|**int**|片段的狀態，以下其中一項：<br /><br /> 0 = 新建且尚未使用<br /><br /> 1 = 在全文檢索索引母體擴展或合併期間用於插入<br /><br /> 4 = 已關閉。 準備查詢<br /><br /> 6 = 用於合併輸入及準備查詢<br /><br /> 8 = 標示為刪除。 將不會用於查詢和合併來源。<br /><br /> 狀態為 4 或 6 的方法，此片段是邏輯全文檢索索引的一部分，而且可查詢;也就是說，它是*可查詢*片段。|  
+|status|**int**|片段的狀態，以下其中一項：<br /><br /> 0 = 新建且尚未使用<br /><br /> 1 = 在全文檢索索引母體擴展或合併期間用於插入<br /><br /> 4 = 已關閉。 準備查詢<br /><br /> 6 = 用於合併輸入及準備查詢<br /><br /> 8 = 標示為刪除。 將不會用於查詢和合併來源。<br /><br /> 狀態為4或6，表示片段是邏輯全文檢索索引的一部分，而且可以進行查詢。也就是說，它是可*查詢*的片段。|  
   
 ## <a name="remarks"></a>備註  
  sys.fulltext_index_fragments 目錄檢視可用來查詢包含全文檢索索引的片段數。 如果您遇到全文檢索查詢效能緩慢的問題，您可以使用 sys.fulltext_index_fragments 來查詢全文檢索索引中的可查詢片段數 (狀態 = 4 或 6)，如下所示：  
@@ -54,7 +54,7 @@ SELECT table_id, status FROM sys.fulltext_index_fragments
    WHERE status=4 OR status=6;  
 ```  
   
- 如果有許多可查詢的片段存在，Microsoft 建議您重新組織包含全文檢索索引的全文檢索目錄，將這些片段合併在一起。 若要重新組織的全文檢索目錄，請使用[ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name*重新組織。 例如，若要重新組織 `ftCatalog` 資料庫內名為 `AdventureWorks2012` 的全文檢索目錄，請輸入：  
+ 如果有許多可查詢的片段存在，Microsoft 建議您重新組織包含全文檢索索引的全文檢索目錄，將這些片段合併在一起。 若要重新組織全文檢索目錄，請使用[ALTER 全文檢索目錄](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name*重新組織。 例如，若要重新組織 `ftCatalog` 資料庫內名為 `AdventureWorks2012` 的全文檢索目錄，請輸入：  
   
 ```  
 USE AdventureWorks2012;  
@@ -63,11 +63,11 @@ ALTER FULLTEXT CATALOG ftCatalog REORGANIZE;
 GO  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [擴展全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)  
   
   

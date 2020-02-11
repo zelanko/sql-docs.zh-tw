@@ -1,5 +1,5 @@
 ---
-title: 依書籤捲動 |Microsoft Docs
+title: 依書簽滾動 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ ms.assetid: 4862f098-41a4-4bd2-894e-f71bb97f9bc0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d27c46407e2994960af4f6abddd6cdc6f08ec852
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055544"
 ---
 # <a name="scrolling-by-bookmark"></a>依書籤捲動
-在提取資料列時， **SQLFetchScroll**，應用程式可以使用書籤做為基礎選取起始資料列。 這是一個絕對位址的形式，因為它不相依於目前的資料指標位置。 若要捲動到加上書籤的資料列，應用程式會呼叫**SQLFetchScroll**具有*Sqlfetchscroll*要使用 sql_fetch_bookmark。 此作業使用 SQL_ATTR_FETCH_BOOKMARK_PTR 陳述式屬性所指向的書籤。 它會傳回資料列集，從該書籤識別的資料列開始。 應用程式可以指定這項作業中的位移*FetchOffset*呼叫的引數**SQLFetchScroll**。 當指定了位移時，傳回的資料列集的第一個資料列中的數字來決定*FetchOffset*的書籤所識別之資料列數目的引數。 這種使用*FetchOffset*引數不支援 ODBC 2 搭配使用時。*x*驅動程式; 當應用程式呼叫**SQLFetchScroll** ODBC 2。*x*驅動程式搭配*Sqlfetchscroll*設定為要使用 SQL_FETCH_BOOKMARK， *FetchOffset*引數必須設定為 0。
+使用**SQLFetchScroll**來提取資料列時，應用程式可以使用書簽做為選取起始資料列的基礎。 這是一個絕對位址的形式，因為它不相依於目前的資料指標位置。 若要滾動到已加入書簽的資料列，應用程式會使用 SQL_FETCH_BOOKMARK 的*FetchOrientation*來呼叫**SQLFetchScroll** 。 這項作業會使用 SQL_ATTR_FETCH_BOOKMARK_PTR 語句屬性所指向的書簽。 它會傳回資料列集，從該書籤識別的資料列開始。 應用程式可以在呼叫**SQLFetchScroll**的*FetchOffset*引數中，指定此作業的位移。 當指定位移時，會藉由將*FetchOffset*引數中的數位加入書簽所識別的資料列數目來決定所傳回之資料列集的第一個資料列。 搭配 ODBC 2 使用時，不支援使用*FetchOffset*引數。*x*驅動程式;當應用程式在 ODBC 2 中呼叫**SQLFetchScroll**時。*x*驅動程式，並將*FetchOrientation*設定為 SQL_FETCH_BOOKMARK， *FetchOffset*引數必須設定為0。

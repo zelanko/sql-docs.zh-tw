@@ -44,12 +44,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 88ed55a3c2890864e3e9623f3fa53ca3e747350c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: aca31d10c030c360dcd82d6c4851df700bc3c4fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73536178"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74319054"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>安裝 SQL Server 的硬體與軟體需求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -86,8 +86,8 @@ ms.locfileid: "73536178"
 |.NET Framework|最低作業系統包括最低的 .NET Framework。|  
 |網路軟體|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 支援的作業系統有內建的網路軟體。 獨立安裝的具名和預設執行個體均支援下列網路通訊協定：共用記憶體、具名管道和 TCP/IP。<br/><br/> |  
 |硬碟|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 需要至少 6 GB 的可用硬碟空間。<br/><br/> 磁碟空間需求會因為您安裝的 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 元件而有所不同。 如需詳細資訊，請參閱本文章稍後的[硬碟空間需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace)。 如需支援之資料檔案儲存類型的資訊，請參閱 [資料檔案的儲存類型](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)。|  
-|監視器|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 需要 Super-VGA (800x600) 或更高解析度的監視器。|  
-|網際網路|網際網路功能需要網際網路存取 (可能會另行收費)。|  
+|監視|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 需要 Super-VGA (800x600) 或更高解析度的監視器。|  
+|Internet|網際網路功能需要網際網路存取 (可能會另行收費)。|  
 
 > [!NOTE]
 > 由於虛擬化的負擔所致，因此在虛擬機器上執行 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 的速度會比原生方式執行的速度慢。  
@@ -100,8 +100,8 @@ ms.locfileid: "73536178"
   
 |元件|需求|  
 |---------------|-----------------|  
-|記憶體 \*|**最低規格：**<br/><br/> Express 版本：512 MB<br/><br/> 所有其他版本：1 GB<br/><br/> **建議使用：**<br/><br/> Express 版本：1 GB<br/><br/> 所有其他版本：至少 4 GB，並應隨著資料庫大小增加以確保最佳效能。|  
-|處理器速度|**最小值：** x64 處理器：1.4 GHz<br/><br/> **建議使用：** 2.0 GHz 或更快|  
+|記憶體 \*|**最低規格：**<br/><br/> Express 版本：512 MB<br/><br/> 所有其他版本：1 GB<br/><br/> **建議配備：**<br/><br/> Express 版本：1 GB<br/><br/> 所有其他版本：至少 4 GB，並應隨著資料庫大小增加以確保最佳效能。|  
+|處理器速度|**最小值：** x64 處理器：1.4 GHz<br/><br/> **建議配備：** 2.0 GHz 或更快|  
 |處理器類型|x64 處理器：AMD Opteron、AMD Athlon 64、具有 Intel EM64T 支援的 Intel Xeon、具有 EM64T 支援的 Intel Pentium IV|  
   
 > [!NOTE]  
@@ -127,13 +127,16 @@ ms.locfileid: "73536178"
   
 
 | SQL Server 版本：               | Enterprise | 開發人員 | 標準 | Web | Express |  
-| :------------------------       | :--------- | :-------- | :------- | :-- | :------ | 
+| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
 | Windows Server 2019 Datacenter    |    是     |    是    |    是   | 是 |   是   |
 | Windows Server 2019 Standard      |    是     |    是    |    是   | 是 |   是   |
 | Windows Server 2019 Essentials    |    是     |    是    |    是   | 是 |   是   |
 | Windows Server 2016 Datacenter    |    是     |    是    |    是   | 是 |   是   |
 | Windows Server 2016 Standard      |    是     |    是    |    是   | 是 |   是   |
 | Windows Server 2016 Essentials    |    是     |    是    |    是   | 是 |   是   |
+| Windows 10 企業版             |    否      |    是    |    是   | 否  |   是   |
+| Windows 10 Professional           |    否      |    是    |    是   | 否  |   是   |
+| Windows 10 Home                   |    否      |    是    |    是   | 否  |   是   |
 | &nbsp; | &nbsp; |
 
 

@@ -20,10 +20,10 @@ ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 96fb5c880346c534c3b956e577f15622e598d48c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305208"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
@@ -42,7 +42,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
 ## <a name="arguments"></a>引數  
  *lcid*  
- 對應您想要載入同義字 XML 定義之語言地區設定識別碼 (LCID) 的整數。 若要取得伺服器實例上可用語言的 lcid，請使用[fulltext_languages &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)目錄檢視。  
+ 對應您想要載入同義字 XML 定義之語言地區設定識別碼 (LCID) 的整數。 若要取得伺服器實例上可用語言的 Lcid，請使用[fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)目錄檢視。  
   
  **\@loadOnlyIfNotLoaded** = *動作*  
  指定同義字檔案是否會載入內部同義字資料表中，即使已經載入也是一樣。 *動作*為下列其中一項：  
@@ -59,11 +59,11 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  None  
   
 ## <a name="remarks"></a>備註  
- 同義字檔案會自動由使用此同義字的全文檢索查詢載入。 若要避免對全文檢索查詢進行第一次的效能影響，我們建議您執行**sp_fulltext_load_thesaurus_file**。  
+ 同義字檔案會自動由使用此同義字的全文檢索查詢載入。 若要避免對全文檢索查詢進行第一次的效能影響，建議您執行**sp_fulltext_load_thesaurus_file**。  
   
- 使用[sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**' 來更新以全文檢索搜尋註冊的語言清單。  
+ 使用[sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**' 更新以全文檢索搜尋註冊的語言清單。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  只有系統管理員（ **sysadmin** ）固定伺服器角色或系統管理員的成員，才能夠執行**sp_fulltext_load_thesaurus_file**預存程式。  
   
  只有系統管理員能夠更新、修改或刪除同義字檔案。  

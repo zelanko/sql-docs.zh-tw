@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce4dff443e52ef214e7c43f5df7eb50140937c1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140466"
 ---
 # <a name="agent-profiles"></a>代理程式設定檔
@@ -35,7 +35,7 @@ ms.locfileid: "63140466"
  設定檔的名稱。  
   
  **型別**  
- 設定檔的類型：**使用者**（使用者定義） 或**系統**（預先定義）。  
+ 設定檔的類型： **[使用者]** (使用者自訂) 或 **[系統]** (預先定義)。  
   
  **屬性 (...)**  
  按一下即可檢視代理程式設定檔中，每一個參數所使用的值。  

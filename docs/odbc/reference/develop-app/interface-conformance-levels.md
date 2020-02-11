@@ -16,27 +16,27 @@ ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 185e68ed8d083e3ccfbab99369f6a778766a4c09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138905"
 ---
 # <a name="interface-conformance-levels"></a>介面一致性層級
-調節的目的是通知應用程式所提供功能給它的驅動程式。 函式為基礎的層級配置夠無法達到此目標。 在 ODBC 3。*x*，驅動程式就會歸類在根據他們擁有的功能。 支援的功能，才能包含支援此函式;它也可以包含支援所傳回的資訊類型的描述項欄位、 陳述式屬性、"Y"值**SQLGetInfo**，依此類推。  
+「調節」的目的是要通知應用程式可從驅動程式使用哪些功能。 以函式為基礎的調節配置無法充分達成此目標。 在 ODBC 3 中。*x*，驅動程式是根據所擁有的功能來分類。 支援此功能包括支援函式;它也可以包含支援描述項欄位、語句屬性、 **SQLGetInfo**所傳回之資訊類型的 "Y" 值等等。  
   
- 若要簡化的介面一致性的規格，ODBC 會定義三個一致性層級。 若要符合的特定一致性層級，驅動程式必須滿足所有的一致性層級的需求。 使用指定的層級的一致性表示所有層級較低的完整一致性。  
+ 為了簡化介面一致性的規格，ODBC 定義了三個一致性層級。 為了符合特定的一致性層級，驅動程式必須滿足該一致性層級的所有需求。 具有給定層級的一致性意味著完全符合所有較低的層級。  
   
- 一致性層級執行不一定分成整齊地支援特定的 ODBC 函數清單，但指定支援的功能，如下列各節中所列。 若要提供一項功能支援，驅動程式必須支援某些 ODBC 函數呼叫的部分或所有表單 (如需詳細資訊，請參閱[函式一致性](../../../odbc/reference/develop-app/function-conformance.md))，設定特定屬性 (請參閱[屬性一致性](../../../odbc/reference/develop-app/attribute-conformance.md))，以及特定描述項欄位 (請參閱 <<c8> [ 描述項欄位一致性](../../../odbc/reference/develop-app/descriptor-field-conformance.md))。  
+ 一致性層級不一定會整齊地細分為特定 ODBC 函數清單的支援，但請指定下列各節所列的支援功能。 為了提供功能的支援，驅動程式必須支援某些 ODBC 函式的部分或所有形式呼叫（如需詳細資訊，請參閱[函數一致性](../../../odbc/reference/develop-app/function-conformance.md)）、設定特定屬性（請參閱[屬性一致性](../../../odbc/reference/develop-app/attribute-conformance.md)）和特定描述項欄位（請參閱[描述項欄位一致性](../../../odbc/reference/develop-app/descriptor-field-conformance.md)）。  
   
- 應用程式的驅動程式介面一致性層級會藉由探索連接到資料來源，然後呼叫**SQLGetInfo** SQL_ODBC_INTERFACE_CONFORMANCE 選項。  
+ 應用程式會藉由連接到資料來源並使用 SQL_ODBC_INTERFACE_CONFORMANCE 選項呼叫**SQLGetInfo** ，來探索驅動程式的介面一致性層級。  
   
- 驅動程式可自行實作他們所宣告完整的一致性層級以外的功能。 應用程式探索任何這類額外的功能，藉由呼叫**SQLGetFunctions** （若要判斷哪些 ODBC 函式存在） 並**SQLGetInfo** （若要查詢各種其他的 ODBC 功能）。  
+ 驅動程式可自由地在其宣告完成一致性的層級以外執行功能。 應用程式會藉由呼叫**SQLGetFunctions** （判斷有哪些 odbc 函數存在）和**SQLGetInfo** （用來查詢各種其他 odbc 功能）來探索任何這類額外的功能。  
   
- 有三個 ODBC 介面一致性層級：Core、 層級 1 和層級 2。  
+ ODBC 介面的一致性層級有三種：核心、層級1和層級2。  
   
 > [!NOTE]
->  這些一致性層級比 ODBC 2 中的相同名稱的 ODBC API 的一致性層級有不同的需求 *.x*。 ODBC 2 的所有功能特別的是，都隱含 *.x* API 一致性層級 1 現在是核心介面一致性層級的一部分。 如此一來，許多 ODBC 驅動程式可能會報告層級的核心介面一致性。  
+>  這些一致性層級與 ODBC 2.x 中相同名稱的 ODBC API 一致性層級具有不同的*需求。* 特別是，ODBC*2.X API 一致性*層級1所隱含的所有功能現在都是核心介面一致性層級的一部分。 因此，許多 ODBC 驅動程式可能會報告核心層級的介面一致性。  
   
  此章節包含下列主題。  
   

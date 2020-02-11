@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97d6ab997a1ece36919a49243e0f1dc3cc6f3593
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779602"
 ---
 # <a name="edit-checked-in-files"></a>編輯簽入的檔案
-  您通常必須先簽出原始檔控制檔案，才能編輯它們。 不過，您可以設定[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，讓您可以修改尚未簽出檔案。時這麼做，您的變更會保留在記憶體中，直到您儲存檔案。 之後，系統會提示您從原始檔控制中簽出檔案。  
+  您通常必須先簽出原始檔控制檔案，才能編輯它們。 不過，您可以設定[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，讓您可以修改尚未簽出的檔案。這麼做時，您的變更會保留在記憶體中，直到您儲存檔案為止。 之後，系統會提示您從原始檔控制中簽出檔案。  
   
  如果您在進行團隊工作，除非您的原始檔控制提供者支援簽出本機版本，也支援簽出伺服器版本，否則，不建議您允許編輯簽入的檔案。 大部份提供者都不支援本機版本簽出項目。 如果您的提供者不支援簽出本機版本，且您編輯簽入的檔案，您就必須先手動合併在記憶體中的版本和伺服器版本，之後，才能簽入檔案。 在這個情況下，不支援自動合併及提供者輔助的合併。  
   
@@ -29,9 +29,9 @@ ms.locfileid: "62779602"
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-2.  在 **選項**對話方塊方塊中，展開**原始檔控制**l 資料夾，然後按一下**環境**。  
+2.  在 [**選項**] 對話方塊中，展開 [ **Source 控制**l] 資料夾，然後按一下 [**環境**]。  
   
-3.  按一下 **允許簽入的項目編輯**，然後按一下**確定**。  
+3.  按一下 [**允許編輯簽入的專案**]，然後按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理簽入](../../2014/database-engine/manage-checkins.md)   

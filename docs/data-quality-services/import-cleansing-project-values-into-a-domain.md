@@ -12,10 +12,10 @@ ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 34060c3fc5416f7244b400b506faad9097d66880
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241795"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>將清理專案值匯入定義域中
@@ -24,17 +24,17 @@ ms.locfileid: "75241795"
 
   在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中，您可以將清理程序期間，於資料品質清理專案或 Integration Services 封裝 (包含 DQS 清理元件) 中所收集的資料品質知識，匯入定義域中。 如此可確保可靠的知識不會遺失，而且會持續改良知識庫。  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a>要求  
+###  <a name="Prerequisites"></a> 必要條件  
   
 -   若要將清理專案值匯入定義域，您必須已經在 Data Quality Client 或 Integration Services 封裝 (包含 DQS 清理元件) 的清理專案中使用該定義域。  
   
 -   您必須已經順利執行完 Data Quality Client 或 Integration Services 封裝 (包含 DQS 清理元件) 中的清理專案。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能將清理程序期間所收集的資料品質知識匯入定義域中。  
   
 ##  <a name="Import"></a>匯入清理專案值  
@@ -59,7 +59,7 @@ ms.locfileid: "75241795"
   
     -   選取 **[加入 [新增] 索引標籤中的值]** ，除了 **[正確]** 和 **[更正]** 索引標籤中的值以外，也匯入 [新增] 索引標籤中的值。  
   
-    -   按一下 [確定]****。  
+    -   按一下 [確定]  。  
   
 6.  當您返回 **[定義域值]** 索引標籤之後，成功匯入值的訊息隨即顯示。 已經匯入所以對定義域而言為新增的值將會顯示在 **[值]** 資料表中。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "75241795"
   
 9. 若要搜尋特定字串，請在 **[尋找]** 文字方塊中輸入此字串。 按一下向上或向下箭號，逐步瀏覽符合搜尋準則的值。 這些值將會以黃色反白顯示。  
   
-10. 按一下 **[完成]**。  
+10. 按一下 [完成]  。  
   
     > [!NOTE]  
     >  如需有關使用 **[定義域值]** 索引標籤中之值的詳細資訊，請參閱＜ [Change Domain Values](../data-quality-services/change-domain-values.md)＞。  

@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882332"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>在現有發行集中加入和卸除發行項
@@ -33,11 +33,11 @@ ms.locfileid: "73882332"
  新增發行項涉及的動作包括：在發行集中新增發行項、建立發行集的新快照集、同步處理訂閱以套用新發行項的結構描述和資料。  
   
 > [!NOTE]
->  如果您將發行項新增至合併式發行集且現有某發行項相依於新的發行項，則您必須使用 **sp_addmergearticle\@ 和** sp_changemergearticle[ 的 ](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)[processing_order](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 參數來指定兩個發行項的處理順序。 請考慮下列狀況：您發行資料表但未發行該資料表所參考的函數。 如果您未發行該函數，該資料表就無法在「訂閱者」端建立。 當您將函式新增至發行集時：請將 **sp_addmergearticle** 的 **\@processing_order** 參數值指定為 **1**；並將 **sp_changemergearticle** 的 **\@processing_order** 參數值指定為 **2**，指定 **\@article** 參數的資料表名稱。 此處理順序可確保您先在「訂閱者」端建立函數之後才建立相依於此函數的資料表。 您可對每個發行項使用不同的編號，只要函數的編號低於資料表的編號即可。  
+>  如果您將發行項加入至合併式發行集，而且現有發行項相依于新的文章，則您必須使用[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)和[sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)的** \@processing_order**參數，為這兩篇文章指定處理順序。 請考慮下列狀況：您發行資料表但未發行該資料表所參考的函數。 如果您未發行該函數，該資料表就無法在「訂閱者」端建立。 當您將函式新增至發行集時：請將 **sp_addmergearticle** 的 **\@processing_order** 參數值指定為 **1**；並將 **sp_changemergearticle** 的 **\@processing_order** 參數值指定為 **2**，指定 **\@article** 參數的資料表名稱。 此處理順序可確保您先在「訂閱者」端建立函數之後才建立相依於此函數的資料表。 您可對每個發行項使用不同的編號，只要函數的編號低於資料表的編號即可。  
   
 1.  透過下列方法之一新增一或多個發行項：  
   
-    -   [在發行集中新增和卸除發行項 &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)  
+    -   [在發行集中新增和卸載發行項 &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)  
   
     -   [定義發行項](define-an-article.md)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73882332"
   
 -   對於相容性層級低於 90RTM 的合併式發行集，可以在訂閱的初始同步處理之前卸除發行項，無需特殊考量。 如果在同步處理一個或多個訂閱後卸除發行項，則必須卸除、重新建立並同步處理訂閱。  
   
--   對於快照式或交易式發行集，可以在建立訂閱之前卸除發行項，無需特殊考量。 如果在建立一或多個訂閱後卸除發行項，則必須卸除、重新建立並同步處理訂閱。 如需卸除訂閱的詳細資訊，請參閱[訂閱發行集](../subscribe-to-publications.md)和 [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql)。 **sp_dropsubscription** 允許您從訂閱中卸除單一發行項，而非整個訂閱。  
+-   對於快照式或交易式發行集，可以在建立訂閱之前卸除發行項，無需特殊考量。 如果在建立一或多個訂閱後卸除發行項，則必須卸除、重新建立並同步處理訂閱。 如需卸除訂閱的詳細資訊，請參閱[訂閱發行集](../subscribe-to-publications.md)和 [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql)。 **sp_dropsubscription**可讓您從訂用帳戶中卸載單一發行項，而不是整個訂用帳戶。  
   
 1.  從發行集中卸除發行項涉及卸除發行項並建立該發行集的新快照集。 卸除發行項會使目前快照集無效，因此必須建立新快照集。  
   

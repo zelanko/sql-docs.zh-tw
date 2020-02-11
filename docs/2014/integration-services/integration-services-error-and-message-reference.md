@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892656"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 錯誤和訊息參考
@@ -44,7 +44,8 @@ ms.locfileid: "62892656"
 -   [資料流程元件錯誤訊息 (DTSBC_E_*)](#msgPipeline)  
   
 ##  <a name="msgError"></a> 錯誤訊息  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱以 `DTS_E_` 當做開頭。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱以 `DTS_E_` 當做開頭。  
   
 |十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -358,7 +359,7 @@ ms.locfileid: "62892656"
 |0xC001F206|-1073614330|DTS_E_DTSNAME_BEGINSWITHALPHA|物件名稱 "%1" 無效。 名稱開頭必須是字母字元。|  
 |0xC001F207|-1073614329|DTS_E_DTSNAME_BEGINSWITHALPHAUNDERBAR|物件名稱 "%1" 無效。 名稱開頭必須是字母字元或底線 "_"。|  
 |0xC001F208|-1073614328|DTS_E_DTSNAME_ALPHADIGITUNDERBAR|物件名稱 "%1" 無效。 名稱只能包含英數字元或底線 "_"。|  
-|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|物件名稱 "%1" 無效。 名稱不能包含下列任何字元: / \ : ? " \< > &#124;|  
+|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|物件名稱 "%1" 無效。 名稱不能包含下列任何字元: / \ : ? 「 \< > &#124;|  
 |0xC001F420|-1073613792|DTS_E_FAILLOADINGPROPERTY|無法使用預設持續性機制載入值屬性 "%1"。|  
 |0xC001F422|-1073613790|DTS_E_NODELISTENUM_INVALIDCONNMGRTYPE|連接管理員 "%1" 不是 "%2" 類型|  
 |0xC001F423|-1073613789|DTS_E_NODELISTENUM_XPATHISEMPTY|"%1" 是空的|  
@@ -1413,7 +1414,7 @@ ms.locfileid: "62892656"
 |0xC02020D6|-1071636266|DTS_E_TXSAMPLINGINVALIDROWS|對 "%1" 屬性而言，資料列數目 %2!ld! 無效。 必須大於 0。|  
 |0xC02020D7|-1071636265|DTS_E_RAWSTRINGINPUTTOOLONG|要求配接器寫入的字串長度是 %1!I64d! 位元組， 但所有資料的長度必須小於 4294967295 位元組。|  
 |0xC02020D9|-1071636263|DTS_E_ATLEASTONEINPUTMUSTBEMAPPEDTOOUTPUT|沒有輸入對應到輸出。 "%1" 至少必須有一個輸入資料行對應到輸出資料行。|  
-|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|不支援從字碼頁為 %2!d! 的 "%1" 轉換成字碼頁為 %4!d! 的 "%3" 。|  
+|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|不支援從字碼頁為 %2!d! 的 "%1" 轉換成字碼頁為 %4!d! 的 "%3" 上不受支援。|  
 |0xC02020DC|-1071636260|DTS_E_COLUMNNOTMAPPEDTOEXTERNALMETADATACOLUMN|%1 的外部中繼資料行對應無效。  外部中繼資料行識別碼不可以是零。|  
 |0xC02020DD|-1071636259|DTS_E_COLUMNMAPPEDTONONEXISTENTEXTERNALMETADATACOLUMN|%1 對應到不存在的外部中繼資料行。|  
 |0xC02020E5|-1071636251|DTS_E_UNABLETOWRITELOBDATATOBUFFER|對於資料行 "%1"，將類型 DT_TEXT、DT_NTEXT 或 DT_IMAGE 的 Long 物件資料寫入資料流程工作緩衝區失敗。|  
@@ -1459,7 +1460,7 @@ ms.locfileid: "62892656"
 |0xC0204010|-1071628272|DTS_E_CANONLYSETCOMPFLAGSONSOURCE|"%1" 的 ComparisonFlags 屬性無法設定為非零的值，因為 "%2" 不是來源輸出。 輸出資料行 "colname" (ID) 無法將 ComparisonFlags 屬性設定為非零，因為輸出 "outputname" (ID) 不是來源輸出。|  
 |0xC0204011|-1071628271|DTS_E_NONSTRINGCOMPARISONFLAGSNOTZERO|"%1" 的比較旗標必須是零，因為其類型不是字串類型。 對字串類型資料行而言，ComparisonFlags 只能是非零。|  
 |0xC0204012|-1071628270|DTS_E_COMPFLAGSONLYONSORTCOL|"%1" 無法將 ComparisonFlags 屬性設定為非零，因為 SortKeyPosition 已設定為零。 只有當 SortKeyPosition 也是非零時，輸出資料行的 ComparisonFlags 才會是非零。|  
-|0xC0204013|-1071628269|DTS_E_READONLYSTOCKPROPERTY|屬性是唯讀的。|  
+|0xC0204013|-1071628269|DTS_E_READONLYSTOCKPROPERTY|此為唯讀屬性。|  
 |0xC0204014|-1071628268|DTS_E_INVALIDDATATYPE|%1 設定無效的資料類型值 (%2!ld!)。|  
 |0xC0204015|-1071628267|DTS_E_CODEPAGEREQUIRED|"%1" 需要設定字碼頁，但傳遞的值是零。|  
 |0xC0204016|-1071628266|DTS_E_INVALIDSTRINGLENGTH|"%1" 具有無效的長度。 長度必須介於 %2!ld! 至 %3!ld! 之間 。|  
@@ -2018,7 +2019,8 @@ ms.locfileid: "62892656"
 |||DTS_E_COMPONENTINITFAILED|元件 %1!s! 無法初始化，因為錯誤 0x%2!8.8X! "%3!s!"。|  
   
 ##  <a name="msgWarning"></a> 警告訊息  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 警告訊息的符號名稱以 `DTS_W_` 當做開頭。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 警告訊息的符號名稱以 `DTS_W_` 當做開頭。  
   
 |十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2164,7 +2166,8 @@ ms.locfileid: "62892656"
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|資料表 "%1" 已變更。 此資料表可能已加入新的資料行。|  
   
 ##  <a name="msgInfo"></a> 參考用訊息  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 參考用訊息的符號名稱以 `DTS_I_` 當做開頭。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 參考用訊息的符號名稱以 `DTS_I_` 當做開頭。  
   
 |十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2263,7 +2266,8 @@ ms.locfileid: "62892656"
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|OLE DB 目的地 "%1" 的插入認可大小上限屬性設定為 0。 這個屬性設定可能會導致執行中的封裝停止回應。 如需詳細資訊，請參閱 OLE DB 目的地編輯器 (連接管理員頁面) 的 F1 說明主題。|  
   
 ##  <a name="msgGeneral"></a> 一般和事件訊息  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱以 `DTS_MSG_` 當做開頭。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱以 `DTS_MSG_` 當做開頭。  
   
 |十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2302,7 +2306,8 @@ ms.locfileid: "62892656"
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|事件名稱: %1<br /><br /> 訊息: %9<br /><br /> 操作員: %2<br /><br /> 來源名稱: %3<br /><br /> 來源識別碼: %4<br /><br /> 執行識別碼: %5<br /><br /> 開始時間: %6<br /><br /> 結束時間: %7<br /><br /> 資料碼: %8|  
   
 ##  <a name="msgSuccess"></a> 成功訊息  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 成功訊息的符號名稱以 `DTS_S_` 當做開頭。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 成功訊息的符號名稱以 `DTS_S_` 當做開頭。  
   
 |十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2311,7 +2316,8 @@ ms.locfileid: "62892656"
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|在運算式評估期間發生截斷。 截斷是在評估期間發生，可能包含中間步驟的任何點。|  
   
 ##  <a name="msgPipeline"></a> 資料流程元件錯誤訊息  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱是以 `DTSBC_E_` 當做開頭，其中 "BC" 指的是大多數 Microsoft 資料流程元件衍生自的原生基底類別。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱是以 `DTSBC_E_` 當做開頭，其中 "BC" 指的是大多數 Microsoft 資料流程元件衍生自的原生基底類別。  
   
 |十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
