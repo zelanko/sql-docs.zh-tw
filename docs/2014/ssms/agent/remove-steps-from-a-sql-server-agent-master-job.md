@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 12304e532643e536981001da3886460848aec069
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650209"
 ---
-# <a name="remove-steps-from-a-sql-server-agent-master-job"></a>Remove Steps from a SQL Server Agent Master Job
+# <a name="remove-steps-from-a-sql-server-agent-master-job"></a>從 SQL Server Agent 主要作業中移除步驟
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中移除 SQL Server Agent 主要作業的步驟。  
   
  **本主題內容**  
@@ -26,9 +26,9 @@ ms.locfileid: "62650209"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要使用下列項目，從 SQL Server Agent 主要作業中移除步驟：**  
+-   **若要從 SQL Server Agent 主要作業中移除步驟，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -37,9 +37,10 @@ ms.locfileid: "62650209"
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Restrictions"></a> 限制事項  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 主要作業無法同時存在於本機和遠端伺服器內。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 主要作業無法同時存在於本機和遠端伺服器內。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  除非您是系統管理員 ( **sysadmin** ) 固定伺服器角色的成員，否則您只能修改您所擁有的作業。 如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
@@ -54,11 +55,11 @@ ms.locfileid: "62650209"
   
 3.  按一下加號展開 **[作業]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您想要刪除步驟的作業，然後選取 [屬性]  。  
+4.  以滑鼠右鍵按一下您想要刪除步驟的作業，然後選取 [屬性]****。  
   
-5.  在 [作業屬性 -_job_name_]  對話方塊的 [選取頁面]  下，選取 [步驟]  。  
+5.  在 [**作業屬性-**_job_name_ ] 對話方塊的 [**選取頁面**] 底下，選取 [**步驟**]。  
   
-6.  在 **[作業步驟清單]** 底下，選取您想要刪除的作業步驟，然後按一下 **[刪除]** 。  
+6.  在 **[作業步驟清單]** 底下，選取您想要刪除的作業步驟，然後按一下 **[刪除]**。  
   
 7.  完成後，請按一下 **[確定]** 。  
   
@@ -83,6 +84,6 @@ ms.locfileid: "62650209"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 < [sp_delete_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql)。  
+ 如需詳細資訊，請參閱[sp_delete_jobstep &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql)。  
   
   
