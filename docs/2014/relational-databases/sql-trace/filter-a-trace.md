@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714715"
 ---
 # <a name="filter-a-trace"></a>篩選追蹤
@@ -62,9 +62,9 @@ ms.locfileid: "62714715"
   
 |關聯式運算子|運算子符號|描述|  
 |-------------------------|---------------------|-----------------|  
-|相似|相似|指定追蹤事件資料必須和輸入的文字相似。 允許多值。|  
+|相似|LIKE|指定追蹤事件資料必須和輸入的文字相似。 允許多值。|  
 |不相似|不相似|指定追蹤事件資料絕對必須和輸入的文字不相似。 允許多值。|  
-|等於|=|指定追蹤事件資料必須和輸入的值相等。 允許多值。|  
+|Equals|=|指定追蹤事件資料必須和輸入的值相等。 允許多值。|  
 |不等於|<>|指定追蹤事件資料絕對必須和輸入的值不相等。 允許多值。|  
 |大於|>|指定追蹤事件資料必須大於輸入的值。|  
 |大於或等於|>=|指定追蹤事件資料必須大於或等於輸入的值。|  
@@ -114,7 +114,7 @@ ms.locfileid: "62714715"
 |**OwnerID**|=, <>, >=, <=|  
 |**OwnerName**|LIKE、NOT LIKE|  
 |**ParentName**|LIKE、NOT LIKE|  
-|**Permissions**|=, <>, >=, <=|  
+|**權限**|=, <>, >=, <=|  
 |**ProviderName**|LIKE、NOT LIKE|  
 |**Reads**|=, <>, >=, <=|  
 |**RequestID**|=, <>, >=, <=|  
@@ -126,8 +126,8 @@ ms.locfileid: "62714715"
 |**SPID**|=, <>, >=, \<=|  
 |**SqlHandle**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 篩選這個資料行中的事件。 如需詳細資訊，請參閱 [使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**StartTime**|>=, <=|  
-|**狀態**|=, <>, >=, <=|  
-|**成功**|=, <>, >=, <=|  
+|**State**|=, <>, >=, <=|  
+|「成功」 |=, <>, >=, <=|  
 |**TargetLoginName**|LIKE、NOT LIKE|  
 |**TargetLoginSid**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 篩選這個資料行中的事件。 如需詳細資訊，請參閱 [使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**TargetUserName**|LIKE、NOT LIKE|  
@@ -137,7 +137,7 @@ ms.locfileid: "62714715"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup>如果追蹤事件，從**osql**公用程式或**sqlcmd**公用程式，附加 **%** 篩選**TextData**資料行。  
+ <sup>1</sup>如果從**osql**公用程式或**sqlcmd**公用程式追蹤事件，請一律**%** 附加到**TextData**資料行的篩選。  
   
  基於安全機制，「SQL 追蹤」會自動把任何與安全性相關、會影響密碼的預存程序的資訊從追蹤省略。 此安全機制無法設定，也永遠有效。 如此可預防有權限追蹤 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上所有活動的使用者擷取到密碼。  
   

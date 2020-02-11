@@ -1,5 +1,5 @@
 ---
-title: 工作 1：建立資料品質專案 |Microsoft Docs
+title: 工作1：建立資料品質專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,28 +11,28 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 14f45ed2a07ddbc6f4fe7c227e29f34f6ea272ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484898"
 ---
 # <a name="task-1-creating-a-data-quality-project"></a>工作 1：建立資料品質專案
   在這項工作中，您會建立資料品質專案，針對您在本教學課程稍早建立的供應商知識庫來清理 Excel 檔案中的供應商資料。  
   
-1.  在 **資料品質專案** 窗格，在主要頁面上，按一下 **新增資料品質專案**。  
+1.  在主頁面的 [**資料品質專案**] 窗格中，按一下 [**新增資料品質專案**]。  
   
-     ![新增資料品質專案 按鈕上主要頁面](../../2014/tutorials/media/et-creatingadataqualityproject-01.jpg "新增資料品質專案 按鈕在主頁面")  
+     ![主頁面上的 [新增資料品質專案] 按鈕](../../2014/tutorials/media/et-creatingadataqualityproject-01.jpg "主頁面上的 [新增資料品質專案] 按鈕")  
   
-2.  型別**Cleanse Supplier List** for**名稱**的專案。  
+2.  輸入**清理供應商清單**中的專案**名稱**。  
   
-3.  選取 **供應商**for**使用知識庫**欄位。 您將會針對您在本教學課程稍早建立的供應商知識庫來清理供應商輸入資料。  
+3.  針對 [**使用知識庫**] 欄位選取 [**供應商**]。 您將會針對您在本教學課程稍早建立的供應商知識庫來清理供應商輸入資料。  
   
-4.  請確認**清理**當做**活動**底部的右窗格，然後按一下**下一步**。  
+4.  確定已選取 [**清理**] 做為右窗格底部的 [**活動**]，然後按 **[下一步]**。  
   
-     ![選取 新增資料品質專案頁面-清理](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "選取新資料品質專案頁面-清理")  
+     ![[新增資料品質專案] 頁面 - 選取的清理](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "[新增資料品質專案] 頁面 - 選取的清理")  
   
-## <a name="next-step"></a>下一個步驟  
- [工作 2：Excel 資料行對應至 DQS 定義域](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)  
+## <a name="next-step"></a>後續步驟  
+ [工作 2：將 Excel 資料行對應到 DQS 定義域](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)  
   
   

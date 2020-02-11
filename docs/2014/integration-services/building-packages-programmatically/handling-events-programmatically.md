@@ -25,21 +25,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8e0417ddf5c4c09cfffa07b7b76918a89622aec6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771804"
 ---
 # <a name="handling-events-programmatically"></a>以程式設計方式處理事件
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 執行階段會提供在驗證和執行封裝之前、期間和之後所發生的事件集合。 這些事件可使用兩種方式來擷取。 第一個方法是在類別中實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面，並將此類別當做參數提供給封裝的 `Execute` 和 `Validate` 方法。 第二個方法是建立 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 物件，其中可包含當 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 內發生事件時所執行的其他 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 物件 (如工作和迴圈)。 本章節描述這兩個方法，並提供示範其使用方式的程式碼範例。  
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 執行階段會提供在驗證和執行封裝之前、期間和之後所發生的事件集合。 這些事件可使用兩種方式來擷取。 第一個方法是在類別中實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面，並將此類別當做參數提供給封裝的 `Execute` 和 `Validate` 方法。 第二個方法是建立 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 物件，其中可包含當 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 內發生事件時所執行的其他 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 物件 (如工作和迴圈)。 本章節描述這兩個方法，並提供示範其使用方式的程式碼範例。  
   
 ## <a name="receiving-idtsevents-callbacks"></a>接收 IDTSEvents 回撥  
  以程式設計方式建立及執行封裝的開發人員，可以在驗證和執行程序期間使用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面來接收事件通知。 其處理方式是建立一個類別來實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面，並將這個類別當做參數提供給封裝的 `Validate` 和 `Execute` 方法。 然後當事件發生時，執行階段引擎會呼叫此類別的方法。  
   
- <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 類別是一個已經實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面的類別；因此，直接實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 的另一個方法是衍生自 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>，並覆寫您想要回應的特定事件。 然後您可以將您的類別當做參數提供給 <xref:Microsoft.SqlServer.Dts.Runtime.Package> 的 `Validate` 和 `Execute` 方法，以接收事件回撥。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 類別是一個已經實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面的類別；因此，直接實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 的另一個方法是衍生自 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>，並覆寫您想要回應的特定事件。 然後您可以將您的類別當做參數提供給 `Validate` 的 `Execute` 和 <xref:Microsoft.SqlServer.Dts.Runtime.Package> 方法，以接收事件回撥。  
   
- 下列程式碼範例會示範衍生自 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 的類別，並覆寫 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A> 方法。 類別再當作參數提供`Validate`和`Execute`封裝的方法。  
+ 下列程式碼範例會示範衍生自 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 的類別，並覆寫 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A> 方法。 然後，類別會當做 aparameter 提供給封裝`Validate`的`Execute`和方法。  
   
 ```csharp  
 using System;  
@@ -247,7 +247,7 @@ Module Module1
 End Module  
 ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 事件處理常式](../integration-services-ssis-event-handlers.md)   

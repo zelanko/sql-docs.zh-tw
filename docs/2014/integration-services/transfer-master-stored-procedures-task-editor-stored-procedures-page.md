@@ -1,5 +1,5 @@
 ---
-title: 傳送主要預存程序工作編輯器 （預存程序頁面） |Microsoft Docs
+title: 傳送主要預存程式工作編輯器（預存程式頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,24 +15,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f233f0730286a1623ee54c38084d07a2aba903e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054854"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>傳送主要預存程序工作編輯器 (預存程序頁面)
-  使用 [傳送主要預存程序工作編輯器]  對話方塊的 [預存程序]  頁面，即可指定屬性，以將一個或多個使用者定義預存程序從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體之某個執行個體的 **master** 資料庫，複製到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之另一個執行個體的 **master** 資料庫中。 如需這項工作的詳細資訊，請參閱[傳送主要預存程序工作](control-flow/transfer-master-stored-procedures-task.md)。  
+  使用 [傳送主要預存程序工作編輯器]**** 對話方塊的 [預存程序]**** 頁面，即可指定屬性，以將一個或多個使用者定義預存程序從 ** 執行個體之某個執行個體的 **master[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫，複製到 ** 之另一個執行個體的 **master[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中。 如需這項工作的詳細資訊，請參閱 [傳送主要預存程序工作](control-flow/transfer-master-stored-procedures-task.md)。  
   
 > [!NOTE]  
 >  此工作只會從來源伺服器上的 **master** 資料庫，將 **dbo** 擁有的使用者定義預存程序，傳送到目的地伺服器上的 **master** 資料庫。 使用者必須有目的地伺服器上之 **master** 資料庫的 CREATE PROCEDURE 權限，或是目的地伺服器上之 **sysadmin** 固定伺服器角色的成員，才能在目的地伺服器建立預存程序。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **SourceConnection**  
- 在清單中選取 SMO 連線管理員，或按一下 [\<新增連線...>]  建立來源伺服器的新連線。  
+ 在清單中選取 SMO 連線管理員，或按一下** \<[新增連接 ...] >** ，建立與來源伺服器的新連接。  
   
- **DestinationConnection**  
- 在清單中選取一個 SMO 連線管理員，或按一下 [\<新增連線...>]  ，以建立目的地伺服器的新連線。  
+ **[Destinationconnection**  
+ 在清單中選取 SMO 連線管理員，或按一下** \<[新增連接 ...] >** ，以建立目的地伺服器的新連接。  
   
  **IfObjectExists**  
  選取工作應如何處理在目的地伺服器上的 **master** 資料庫中已經存在有相同名稱的使用者定義預存程序。  
@@ -45,7 +45,7 @@ ms.locfileid: "66054854"
 |**Overwrite**|工作會覆寫目的地伺服器上的 **master** 資料庫中有相同名稱的預存程序。|  
 |**Skip**|工作會略過目的地伺服器上的 **master** 資料庫中存在有相同名稱的預存程序。|  
   
- **TransferAllStoredProcedures**  
+ **[Transferallstoredprocedures**  
  選取是否應將來源伺服器上之 **master** 資料庫中的所有使用者定義預存程序，複製到目的地伺服器。  
   
 |值|描述|  
@@ -54,12 +54,12 @@ ms.locfileid: "66054854"
 |**False**|只複製指定的預存程序。|  
   
  **StoredProceduresList**  
- 選取應將來源伺服器上之 **master** 資料庫中的哪些使用者定義預存程序，複製到目的地 **master** 資料庫。 只有 [TransferAllStoredProcedures]  設定為 [False]  時，才能使用此選項。  
+ 選取應將來源伺服器上之 **master** 資料庫中的哪些使用者定義預存程序，複製到目的地 **master** 資料庫。 只有 [TransferAllStoredProcedures]**** 設定為 [False]**** 時，才能使用此選項。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 工作](control-flow/integration-services-tasks.md)   
- [傳送主要預存程序工作編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [傳送主要預存程式工作編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [運算式頁面](expressions/expressions-page.md)   
  [SMO 連線管理員](connection-manager/smo-connection-manager.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 訊息佇列工作編輯器 （傳送頁面） |Microsoft Docs
+title: 訊息佇列工作編輯器（傳送頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057595"
 ---
 # <a name="message-queue-task-editor-send-page"></a>訊息佇列工作編輯器 (傳送頁面)
@@ -28,10 +28,10 @@ ms.locfileid: "66057595"
   
 ## <a name="options"></a>選項。  
  **UseEncryption**  
- 指出是否要加密訊息。 預設為 `False`。  
+ 指出是否要加密訊息。 預設值為 `False`。  
   
  **EncryptionAlgorithm**  
- 如果您選擇使用加密，請指定要使用之加密演算法的名稱。 「訊息佇列」工作可以使用 RC2 和 RC4 演算法。 預設值是 **[RC2]** 。  
+ 如果您選擇使用加密，請指定要使用之加密演算法的名稱。 「訊息佇列」工作可以使用 RC2 和 RC4 演算法。 預設值是 **[RC2]**。  
   
 > [!NOTE]  
 >  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料 (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在最新版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。  
@@ -42,32 +42,32 @@ ms.locfileid: "66057595"
  **MessageType**  
  選取訊息類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|**資料檔訊息**|訊息儲存在檔案中。 選取此值會顯示動態選項 **[DataFileMessage]** 。|  
-|**變數訊息**|訊息儲存在變數中。 選取此值會顯示動態選項 **[VariableMessage]** 。|  
-|**字串訊息**|訊息儲存在訊息佇列工作中。 選取此值會顯示動態選項 **[StringMessage]** 。|  
+|**資料檔案訊息**|訊息儲存在檔案中。 選取此值會顯示動態選項 **[DataFileMessage]**。|  
+|**變數訊息**|訊息儲存在變數中。 選取此值會顯示動態選項 **[VariableMessage]**。|  
+|**字串訊息**|訊息儲存在訊息佇列工作中。 選取此值會顯示動態選項 **[StringMessage]**。|  
   
 ## <a name="messagetype-dynamic-options"></a>MessageType 動態選項  
   
 ### <a name="messagetype--data-file-message"></a>MessageType = 資料檔訊息  
- **[DataFileMessage]**  
- 鍵入資料檔的路徑，或按一下省略符號 **(...)** ，然後尋找檔案。  
+ **[Datafilemessage]**  
+ 鍵入資料檔的路徑，或按一下省略符號 **(...)**，然後尋找檔案。  
   
 ### <a name="messagetype--variable-message"></a>MessageType = 變數訊息  
- **[VariableMessage]**  
- 鍵入變數名稱，或按一下省略符號 **(...)** ，然後選取變數。 變數以逗號分隔。  
+ **[Variablemessage]**  
+ 鍵入變數名稱，或按一下省略符號 **(...)**，然後選取變數。 變數以逗號分隔。  
   
  **相關主題：** 選取變數  
   
 ### <a name="messagetype--string-message"></a>MessageType = 字串訊息  
- **[StringMessage]**  
- 鍵入字串訊息，或按一下省略符號 **(...)** ，然後在 [鍵入字串訊息]  對話方塊中鍵入訊息。  
+ **[Stringmessage]**  
+ 鍵入字串訊息，或按一下省略符號 **(...)**，然後在 [鍵入字串訊息]**** 對話方塊中鍵入訊息。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [訊息佇列工作編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
- [訊息佇列工作編輯器 &#40;接收頁面&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [[訊息佇列工作編輯器] &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [[訊息佇列工作編輯器] &#40;接收頁面&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [運算式頁面](expressions/expressions-page.md)  
   
   

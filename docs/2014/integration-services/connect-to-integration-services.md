@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f355527002ed6d3637a3d1d895eb776c620c971d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060373"
 ---
 # <a name="connect-to-integration-services"></a>連接到 Integration Services
@@ -26,10 +26,10 @@ ms.locfileid: "66060373"
   
 2.  在 **[檢視]** 功能表上，按一下 **[物件總管]** 。  
   
-3.  在 [物件總管] 工具列上，按一下 **[連接]** ，然後按一下 **[Integration Services]** 。  
+3.  在 [物件總管] 工具列上，按一下 **[連接]**，然後按一下 **[Integration Services]**。  
   
 4.  在 **[連接到伺服器]** 對話方塊中，提供伺服器名稱。 您可以使用句號 (.)、(local) 或 `localhost` 表示本機伺服器。  
   
-5.  按一下 **[連接]** 。  
+5.  按一下 [ **連接**]。  
   
   

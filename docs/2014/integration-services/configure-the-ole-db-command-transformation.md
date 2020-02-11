@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c9536e14f20e62b944df44ff943b05edb92e5fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060559"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>設定 OLE DB 命令轉換
@@ -41,7 +41,7 @@ ms.locfileid: "66060559"
   
 8.  在 [字串值編輯器]  中，輸入參數化 SQL 陳述式，並使用問號 (?) 作為每個參數的參數標記。  
   
-9. 按一下 **[重新整理]** 。 當您按一下 [重新整理]  時，轉換會在「外部資料行」集合中為每個參數建立資料行，並設定 DBParamInfoFlags 屬性。  
+9. 按一下 [重新整理]  。 當您按一下 [重新整理]  時，轉換會在「外部資料行」集合中為每個參數建立資料行，並設定 DBParamInfoFlags 屬性。  
   
 10. 按一下 **[輸入與輸出屬性]** 索引標籤。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66060559"
 15. 若要儲存更新的封裝，請按一下 **[檔案]** 功能表上的 **[儲存]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md)   
+ [OLE DB 命令轉換](data-flow/transformations/ole-db-command-transformation.md)   
  [Integration Services 轉換](data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路徑](data-flow/integration-services-paths.md)   
  [資料流程工作](control-flow/data-flow-task.md)  

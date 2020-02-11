@@ -1,5 +1,5 @@
 ---
-title: OData 來源編輯器 （資料行頁面） |Microsoft Docs
+title: OData 來源編輯器（資料行頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f6677fad3df1d1f99e2f78257ea85551f8ae8db3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057334"
 ---
 # <a name="odata-source-editor-columns-page"></a>OData 來源編輯器 (資料行頁面)
-  使用 [OData 來源編輯器]  對話方塊的 [資料行]  頁面，選取要包含在輸出中的外部 (來源) 資料行，並將其對應到輸出資料行。  
+  使用 [OData 來源編輯器]**** 對話方塊的 [資料行]**** 頁面，選取要包含在輸出中的外部 (來源) 資料行，並將其對應到輸出資料行。  
   
 ## <a name="options"></a>選項。  
  **可用的外部資料行**  
@@ -33,8 +33,8 @@ ms.locfileid: "66057334"
  為每個輸出資料行提供唯一的名稱。 預設值為選取的外部 (來源) 資料行的名稱；不過，您也可以選擇任何唯一的、描述性的名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [OData 來源編輯器 (連接頁面)](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [OData 來源編輯器 (錯誤輸出頁面)](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [[OData 來源編輯器] &#40;連接] 頁面&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
+ [[OData 來源編輯器] &#40;錯誤輸出頁面&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [OData 來源](data-flow/odata-source.md)   
  [OData 連接管理員](connection-manager/odata-connection-manager.md)  
   

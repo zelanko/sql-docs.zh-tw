@@ -1,5 +1,5 @@
 ---
-title: SQL 目的地編輯器 （進階頁面） |Microsoft Docs
+title: SQL 目的地編輯器（Advanced Page） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,50 +15,50 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 087f32510b65d7ea505bc4bf816a5ca9edcfe82d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055455"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>SQL 目的地編輯器 (進階頁面)
-  使用 [SQL 目的地編輯器] 對話方塊的 [進階] 頁面，即可指定進階大量插入選項。  
+  使用 [SQL 目的地編輯器]**** 對話方塊的 [進階]**** 頁面，即可指定進階大量插入選項。  
   
  若要深入了解 SQL Server 目的地，請參閱＜ [SQL Server Destination](data-flow/sql-server-destination.md)＞。  
   
 ## <a name="options"></a>選項。  
- **保留識別**  
+ **保留身分識別**  
  指定工作是否應該將值插入識別欄位中。 此屬性的預設值為 `False`。  
   
- **保留 Null**  
+ **保留 null**  
  指定工作是否應該保留 Null 值。 此屬性的預設值為 `False`。  
   
- **資料表鎖定**  
+ **表鎖**  
  指定載入資料時是否鎖定資料表。 此屬性的預設值為 `True`。  
   
  **檢查條件約束**  
  指定工作是否應該檢查條件約束。 此屬性的預設值為 `True`。  
   
- **引發觸發程序**  
+ **引發觸發程式**  
  指定大量插入是否應該引發資料表上的觸發程序。 此屬性的預設值為 `False`。  
   
  **第一個資料列**  
- 指定要插入的第一個資料列。 此屬性的預設值為 **-1**，表示未指派任何值。  
+ 指定要插入的第一個資料列。 這個屬性的預設值為 **-1**，表示未指派任何值。  
   
 > [!NOTE]  
->  清除 [SQL 目的地編輯器] 中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性] 視窗、[進階編輯器] 和物件模型中，請使用 -1。  
+>  清除 [SQL 目的地編輯器]**** 中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性]**** 視窗、[進階編輯器]**** 和物件模型中，請使用 -1。  
   
  **最後一個資料列**  
- 指定要插入的最後一個資料列。 此屬性的預設值為 **-1**，表示未指派任何值。  
+ 指定要插入的最後一個資料列。 這個屬性的預設值為 **-1**，表示未指派任何值。  
   
 > [!NOTE]  
->  清除 [SQL 目的地編輯器] 中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性] 視窗、[進階編輯器] 和物件模型中，請使用 -1。  
+>  清除 [SQL 目的地編輯器]**** 中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性]**** 視窗、[進階編輯器]**** 和物件模型中，請使用 -1。  
   
- **最大錯誤數目**  
- 指定停止大量插入之前可以發生的錯誤數目。 此屬性的預設值為 **-1**，表示未指派任何值。  
+ **錯誤數目上限**  
+ 指定停止大量插入之前可以發生的錯誤數目。 這個屬性的預設值為 **-1**，表示未指派任何值。  
   
 > [!NOTE]  
->  清除 [SQL 目的地編輯器] 中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性] 視窗、[進階編輯器] 和物件模型中，請使用 -1。  
+>  清除 [SQL 目的地編輯器]**** 中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性]**** 視窗、[進階編輯器]**** 和物件模型中，請使用 -1。  
   
  **逾時**  
  指定因逾時而停止大量插入之前要等候的秒數。  
@@ -69,7 +69,7 @@ ms.locfileid: "66055455"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [SQL 目的地編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
- [SQL 目的地編輯器 &#40;對應頁面&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
+ [[SQL 目的地編輯器 &#40;對應] 頁面&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
  [使用 SQL Server 目的地來大量載入資料](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

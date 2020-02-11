@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721650"
 ---
 # <a name="configure-web-synchronization"></a>[設定 Web 同步處理]
@@ -101,7 +101,8 @@ IIS 5.0 版開始支援 Web 同步處理。 但是，IIS 7.0 版不支援「設�
   
  如果您是第一次使用發行者，也必須設定散發者和快照集共用。 每個訂閱者的合併代理程式都必須具有快照集共用的讀取權限。 如需詳細資訊，請參閱[設定散發](configure-distribution.md)和[保護快照集資料夾](security/secure-the-snapshot-folder.md)。  
   
- `gen` 是 websync XML 檔案中的保留字。 請勿嘗試發行包含資料行名稱 `gen` 的資料表。  
+ 
+  `gen` 是 websync XML 檔案中的保留字。 請勿嘗試發行包含資料行名稱 `gen` 的資料表。  
   
 ## <a name="configuring-the-subscription"></a>設定訂閱  
  啟用發行集及設定 IIS 之後，請建立提取訂閱，並指定提取訂閱應利用 IIS 來同步處理。 (只有提取訂閱才支援 Web 同步處理。)  
@@ -124,7 +125,7 @@ IIS 5.0 版開始支援 Web 同步處理。 但是，IIS 7.0 版不支援「設�
   
 -   如果您要複寫大量資料，可能必須調整合併代理程式的批次大小。  
   
- 合併式複寫的批次大小是以 *「層代」* (Generation) 為測量單位，而這是每個發行項的變更集合。 使用指定的批次中的層代編號的-`DownloadGenerationsPerBatch`和-`UploadGenerationsPerBatch`的 「 合併代理程式參數。 如需詳細資訊，請參閱 [Replication Merge Agent](agents/replication-merge-agent.md)。  
+ 合併式複寫的批次大小是以 *「層代」* (Generation) 為測量單位，而這是每個發行項的變更集合。 批次中的層代數目是使用合併代理程式的-`DownloadGenerationsPerBatch`和-`UploadGenerationsPerBatch`參數所指定。 如需詳細資訊，請參閱 [Replication Merge Agent](agents/replication-merge-agent.md)。  
   
  若為大量資料，請針對每個批次參數指定一個少量數目。 我們建議您從 10 這個值開始，然後根據需求和效能進行微調。 一般而言，這些參數都指定於代理程式設定檔中。 如需有關設定檔的詳細資訊，請參閱＜ [Replication Agent Profiles](agents/replication-agent-profiles.md)＞。  
   
@@ -144,7 +145,7 @@ IIS 5.0 版開始支援 Web 同步處理。 但是，IIS 7.0 版不支援「設�
   
      如需有關代理程式所需權限的詳細資訊，請參閱＜ [Replication Agent Security Model](security/replication-agent-security-model.md)＞。  
   
--   請指定網域帳戶，此帳戶應與您在指定「新增訂閱精靈」之 **[Web 伺服器資訊]** 頁面中的帳戶和密碼，或指定 **@internet_url** 及 **@internet_login** 和 [@internet_login](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)＞。 此帳戶必須具有快照集共用的讀取權限。  
+-   當您在 [新增訂閱嚮導] 的 [ **Web 服務器資訊**] 頁面上指定帳戶和密碼，或指定**@internet_url** **@internet_login** [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)的和參數值時，請指定與合併代理程式所使用的相同的網域帳戶。 此帳戶必須具有快照集共用的讀取權限。  
   
 -   每個發行集應使用個別的 IIS 虛擬目錄。  
   

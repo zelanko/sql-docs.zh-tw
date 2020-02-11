@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fafb116e1e5c02d27ad3242edd27064ffae6e401
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010365"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>避免與 FILESTREAM 應用程式中的資料庫作業相衝突
@@ -26,9 +26,9 @@ ms.locfileid: "66010365"
   
 |Transact-SQL 陳述式|開啟以便讀取|開啟以便寫入|  
 |------------------------------|---------------------|----------------------|  
-|使用資料庫中繼資料的 DDL 陳述式，例如 CREATE TABLE、CREATE INDEX、DROP TABLE 和 ALTER TABLE。|Allowed|封鎖並且因逾時而失敗。|  
-|使用資料庫所儲存之資料的 DML 陳述式，例如 UPDATE、DELETE 和 INSERT。|Allowed|拒絕|  
-|SELECT|Allowed|Allowed|  
+|使用資料庫中繼資料的 DDL 陳述式，例如 CREATE TABLE、CREATE INDEX、DROP TABLE 和 ALTER TABLE。|允許|封鎖並且因逾時而失敗。|  
+|使用資料庫所儲存之資料的 DML 陳述式，例如 UPDATE、DELETE 和 INSERT。|允許|拒絕|  
+|SELECT|允許|允許|  
 |COMMIT TRANSACTION|拒絕*|拒絕*|  
 |SAVE TRANSACTION|拒絕*|拒絕*|  
 |ROLLBACK|允許*|允許*|  

@@ -1,5 +1,5 @@
 ---
-title: 步驟 2:建立損毀的檔案 |Microsoft Docs
+title: 步驟 2：建立損毀的檔案 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767380"
 ---
-# <a name="step-2-creating-a-corrupted-file"></a>步驟 2:建立損毀的檔案
+# <a name="step-2-creating-a-corrupted-file"></a>步驟 2：建立損毀檔案
   若要示範組態和轉換錯誤的處理，您必須建立處理時會造成元件失敗的範例一般檔案。  
   
- 在這項工作中，您會建立現有的範例一般檔案的副本。 然後您會在記事本開啟檔案及編輯 [CurrencyID]  資料行，以確定在轉換查閱期間，它無法產生相符者。 在處理新檔案時，查閱失敗會造成 [貨幣索引鍵查閱] 轉換失敗，因而使得其餘的封裝也失敗。 在您建立損毀範例檔案之後，將執行封裝來檢視封裝失敗。  
+ 在這項工作中，您會建立現有的範例一般檔案的副本。 然後您會在記事本開啟檔案及編輯 [CurrencyID]**** 資料行，以確定在轉換查閱期間，它無法產生相符者。 在處理新檔案時，查閱失敗會造成 [貨幣索引鍵查閱] 轉換失敗，因而使得其餘的封裝也失敗。 在您建立損毀範例檔案之後，將執行封裝來檢視封裝失敗。  
   
 ### <a name="to-create-a-corrupted-sample-flat-file"></a>若要建立損毀範例一般檔案  
   
@@ -28,18 +28,18 @@ ms.locfileid: "62767380"
   
      範例資料隨附在 SSIS 課程封裝中。 若要下載範例資料和課程封裝，請執行下列動作。  
   
-    1.  巡覽至 [Integration Services 產品範例](https://go.microsoft.com/fwlink/?LinkID=267527)。  
+    1.  流覽至[Integration Services 的產品範例](https://go.microsoft.com/fwlink/?LinkID=267527)。  
   
     2.  按一下 **[下載]** 索引標籤。  
   
     3.  按一下 SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 檔案。  
   
-2.  使用文字編輯器的尋找和取代功能，來尋找所有執行個體`VEB`並將其取代為`BAD`。  
+2.  使用文字編輯器的 [尋找和取代] 功能來尋找的`VEB`所有實例，並將`BAD`其取代為。  
   
-3.  在與其他範例資料檔案相同的資料夾，將已修改的檔案儲存為`Currency_BAD.txt`。  
+3.  在與其他範例資料檔案相同的資料夾中，將修改過的檔案`Currency_BAD.txt`儲存為。  
   
     > [!IMPORTANT]  
-    >  請確定`Currency_BAD.txt`與其他範例資料檔案儲存在相同的資料夾。  
+    >  請確定`Currency_BAD.txt`與其他範例資料檔案儲存在相同的資料夾中。  
   
 4.  關閉文字編輯器。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62767380"
   
 2.  在 **[偵錯]** 功能表上，按一下 **[停止偵錯]** 。  
   
-3.  在設計介面中，按一下 [執行結果]  索引標籤。  
+3.  在設計介面中，按一下 [執行結果]**** 索引標籤。  
   
 4.  瀏覽記錄並確認已發生下列無法處理的錯誤：  
   

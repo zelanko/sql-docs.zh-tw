@@ -1,5 +1,5 @@
 ---
-title: 更新資料使用 XML Updategram (SQLXML 4.0) |Microsoft Docs
+title: 使用 XML Updategram 更新資料（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -27,14 +27,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d171270a7605c258f9bc347781cd9a4d91c7a348
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014680"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 更新資料 (SQLXML 4.0)
-  當您更新現有的資料時，您必須同時指定 **\<之前>** 並 **\<之後>** 區塊。 在指定的項目 **\<之前>** 並 **\<之後 >** 區塊描述所需的變更。 Updategram 會使用中所指定的項目 **\<之前>** 區塊來識別資料庫中的現有記錄。 中的對應項目 **\<之後 >** 區塊表示記錄在執行更新作業後所呈現的外觀。 這項資訊，updategram 會建立比對的 SQL 陳述式 **\<之後 >** 區塊。 接著，Updategram 會使用此陳述式來更新資料庫。  
+  當您更新現有的** \< ** ** \<** 資料時，您必須在>區塊之前>和之後指定。 在** \<>之前**和** \<之後的>** 區塊中指定的元素會描述所需的變更。 Updategram 會使用** \<before>** 區塊中指定的元素，來識別資料庫中的現有記錄。 ** \<>區塊後**的對應元素會指出記錄在執行更新作業之後的外觀。 在此資訊中，updategram 會建立符合** \<after>** 區塊的 SQL 語句。 接著，Updategram 會使用此陳述式來更新資料庫。  
   
  下列是更新作業的 Updategram 格式：  
   
@@ -54,21 +54,22 @@ ms.locfileid: "66014680"
 ```  
   
  `<updg:before>`  
- 中的項目 **\<之前>** 區塊識別資料庫資料表中的現有記錄。  
+ Before>區塊中的元素會識別資料庫資料表中的現有記錄。 ** \< **  
   
  `<updg:after>`  
- 中的項目 **\<之後>** 區塊描述中指定的記錄 **\<之前>** 區塊應該套用更新之後更新。  
+ After>區塊中的專案會描述套用更新之後， ** \<在之前的>** 區塊中指定的記錄應如何查看。 ** \< **  
   
- `mapping-schema` 屬性會識別 Updategram 所使用的對應結構描述。 如果 updategram 指定對應結構描述，元素和屬性名稱中指定 **\<之前>** 並 **\<之後>** 區塊必須符合結構描述中的名稱。 對應的結構描述會將這些元素或屬性名稱對應到資料庫資料表和資料行名稱。  
+ 
+  `mapping-schema` 屬性會識別 Updategram 所使用的對應結構描述。 如果 updategram 指定對應架構，則在** \<>之前**和** \<之後>** 區塊中指定的元素和屬性名稱必須符合架構中的名稱。 對應的結構描述會將這些元素或屬性名稱對應到資料庫資料表和資料行名稱。  
   
- 如果 Updategram 沒有指定結構描述，Updategram 會使用預設的對應。 在預設的對應， **\<項目名稱 >** 則 updategram 會對應至資料庫資料表和子元素或屬性對應至資料庫資料行中指定。  
+ 如果 Updategram 沒有指定結構描述，Updategram 會使用預設的對應。 在預設的對應中，updategram 中指定的** \<>ElementName**會對應到資料庫資料表，而子項目或屬性則會對應到資料庫資料行。  
   
- 中的項目 **\<之前>** 區塊必須符合資料庫中只有一個資料表資料列。 如果元素符合多個資料表的資料列，或者不符合任何資料表資料列，updategram 會傳回錯誤，並取消整個 **\<同步 >** 區塊。  
+ 在** \<before>** 區塊中的專案，必須符合資料庫中只有一個資料表資料列。 如果元素符合多個資料表資料列，或不符合任何資料表資料列，則 updategram 會傳回錯誤，並取消整個** \<同步處理>** 區塊。  
   
- Updategram 可以包含多個 **\<同步 >** 區塊。 每個 **\<同步 >** 區塊視為交易。 每個 **\<同步>** 區塊可以有多個 **\<之前>** 並 **\<之後>** 區塊。 例如，如果您要更新兩個現有的記錄，您可以指定兩個 **\<之前>** 並 **\<之後>** 配對，各正在更新每一筆記錄。  
+ Updategram 可以包含多個** \<同步>** 區塊。 每個** \<同步>** 區塊都會視為一項交易。 每個** \<同步>** 區塊** \<在>** 和>區塊** \<之後**，都可以有多個。 例如，如果您要更新兩個現有的記錄，您可以在** \<>之前**和** \<>組之後**指定兩個，每個更新的記錄各一個。  
   
 ## <a name="using-the-updgid-attribute"></a>使用 updg:id 屬性  
- 多個項目中指定的時 **\<之前>** 並 **\<之後>** 區塊，使用`updg:id`屬性來標記中的資料列 **\<之前>** 並 **\<之後>** 區塊。 處理邏輯會使用這項資訊來判斷中的哪個記錄 **\<之前>** 區塊中的哪個記錄配對 **\<之後>** 區塊。  
+ 在** \<>** 和** \<>區塊之後**指定多個元素時，請使用`updg:id`屬性來標記** \<之前>** 和** \<>區塊之後**的資料列。 處理邏輯會使用這項資訊來判斷** \<before>** 區塊配對中的哪一筆記錄，以及** \<after>** 區塊中的哪一筆記錄。  
   
  如果下列其中一個項目存在，就不需要 `updg:id` 屬性 (但建議存在)：  
   
@@ -76,18 +77,18 @@ ms.locfileid: "66014680"
   
 -   在 Updategram 中有一或多個針對索引鍵欄位提供的特定值。  
   
- 如果不是在案例中，updategram 會使用索引鍵資料行中所指定`sql:key-fields`配對中的項目 **\<之前>** 並 **\<之後>** 區塊。  
+ 如果是這種情況，則 updategram 會使用在中指定的索引鍵資料`sql:key-fields`行，將中的專案與** \<>之前**和** \<>區塊之後**配對。  
   
  如果對應結構描述沒有識別索引鍵資料行 (透過使用 `sql:key-fields`)，或者如果 Updategram 要更新索引鍵資料行值，您必須指定 `updg:id`。  
   
- 中所識別的資料錄 **\<之前>** 並 **\<之後>** 區塊並沒有相同的順序。 `updg:id`屬性會強制執行中所指定的項目之間的關聯 **\<之前>** 並 **\<之後>** 區塊。  
+ 在** \<>之前**和** \<>組塊之後**識別的記錄不一定要有相同的順序。 屬性會強制在** \<>之前**和** \<>區塊之後**指定的專案之間的關聯。 `updg:id`  
   
- 如果您指定一個項目 **\<之前>** 區塊，並在只有一個對應的項目 **\<之後>** 封鎖，請使用`updg:id`不需要。 不過，建議您無論如何還是指定 `updg:id` 來避免模稜兩可的情況。  
+ 如果您在** \<before>** 區塊中指定一個專案，而且在** \<之後的>** 區塊中只有一個對應的`updg:id`元素，則不需要使用。 不過，建議您無論如何還是指定 `updg:id` 來避免模稜兩可的情況。  
   
 ## <a name="examples"></a>範例  
  使用 Updategram 範例之前，請注意下列事項：  
   
--   大部分的範例都會使用預設對應 (也就是說，Updategram 中不會指定任何對應結構描述)。 如需使用對應結構描述的 updategram 的範例，請參閱[在 Updategram 中指定註解式對應結構描述&#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
+-   大部分的範例都會使用預設對應 (也就是說，Updategram 中不會指定任何對應結構描述)。 如需使用對應架構之 updategram 的更多範例，請參閱[在 Updategram 中指定批註式對應架構 &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
   
 -   大部分的範例會使用 AdventureWorks 範例資料庫。 所有的更新都會套用到此資料庫內的資料表。 您可以還原 AdventureWorks 資料庫。  
   
@@ -107,9 +108,9 @@ ms.locfileid: "66014680"
 </ROOT>  
 ```  
   
- 記錄中所述 **\<之前>** 區塊則代表在資料庫中目前的記錄。 Updategram 會使用指定的資料行值的所有 **\<之前>** 来搜尋的記錄區塊。 在此 updategram 中， **\<之前>** 區塊僅提供 ContactID 資料行; 因此，updategram 會使用這個值來搜尋記錄。 如果您要將 LastName 值加入到此區塊中，Updategram 會同時使用 ContactID 和 LastName 值進行搜尋。  
+ [ ** \<Before>** ] 區塊中所述的記錄代表資料庫中的目前記錄。 Updategram 會使用** \<before>** 區塊中指定的所有資料行值來搜尋記錄。 在此 updategram 中， ** \<before>** 區塊只會提供 ContactID 資料行;因此，updategram 只會使用值來搜尋記錄。 如果您要將 LastName 值加入到此區塊中，Updategram 會同時使用 ContactID 和 LastName 值進行搜尋。  
   
- 在此 updategram 中， **\<之後 >** 區塊提供只有 LastName 資料行值，因為這是唯一的值正在變更。  
+ 在此 updategram 中， ** \<after>** 區塊只會提供 LastName 資料行值，因為這是唯一變更的值。  
   
 ##### <a name="to-test-the-updategram"></a>若要測試 Updategram  
   
@@ -117,7 +118,7 @@ ms.locfileid: "66014680"
   
 2.  建立及使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行 Updategram。  
   
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B. 使用 updg:id 屬性更新多筆記錄  
  在此範例中，updategram 會在 AdventureWorks 資料庫的 HumanResources.Shift 資料表上執行兩個變更：  
@@ -126,7 +127,7 @@ ms.locfileid: "66014680"
   
 -   它會插入名稱為 "Late Morning" 的新輪班，從早上十點開始。  
   
- 在 updategram 中，`updg:id`屬性會建立中的項目之間的關聯 **\<之前>** 並 **\<之後>** 區塊。  
+ 在 updategram 中， `updg:id`屬性會在 **>之前\<** 和** \<>區塊之後**，建立元素之間的關聯。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -145,7 +146,7 @@ ms.locfileid: "66014680"
 </ROOT>  
 ```  
   
- 請注意如何`updg:id`配對的第一個執行個體的屬性\<HumanResources.Shift> 中的項目 **\<之前>** 區塊的第二個執行個體\<HumanResources.Shift > 中的項目 **\<之後>** 區塊。  
+ 請注意， `updg:id`屬性如何將** \<before>** 區塊中\<> HumanResources 的第一個實例，與** \<after>** 區塊中的第二個\<> HumanResources 元素實例配對。  
   
 ##### <a name="to-test-the-updategram"></a>若要測試 Updategram  
   
@@ -153,15 +154,15 @@ ms.locfileid: "66014680"
   
 2.  建立及使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行 Updategram。  
   
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
-### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. 指定多重\<之前> 和\<之後> 區塊  
- 若要避免模稜兩可，您可以撰寫 updategram 範例 B 中使用多個 **\<之前>** 並 **\<之後>** 區塊配對。 指定 **\<之前>** 並 **\<之後>** 組是一種方式的指定最不混亂的多個更新。 此外，如果每一個的 **\<之前>** 並 **\<之後>** 區塊指定最多一個項目，您不必使用`updg:id`屬性。  
+### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. 在> \<之前和\<> 區塊之後指定多個  
+ 為避免不明確，您可以在範例 B 中使用多個** \<>之前**和** \<>** 區塊配對之後，撰寫 updategram。 在** \<>之前**和** \<>組之後**指定，是指定多個更新的一種方式，且最小的混淆。 此外，如果** \<>之前**和** \<之後>** 區塊指定最多一個元素，則不需要使用`updg:id`屬性。  
   
 > [!NOTE]  
->  若要形成配對， **\<之後>** 標籤必須緊接其對應 **\<之前>** 標記。  
+>  若要形成一組配對， ** \<>標記後面**必須緊接在>標記** \<前面**的對應。  
   
- 在下列的 updategram 中，第一個 **\<之前>** 並 **\<之後>** 配對會更新日班的輪班名稱。 第二個配對會插入新的輪班記錄。  
+ 在下列 updategram 中，第一個** \<>之前**和** \<>組之後**，會更新 day shift 的 shift 名稱。 第二個配對會插入新的輪班記錄。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -190,16 +191,16 @@ ms.locfileid: "66014680"
   
 2.  建立及使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行 Updategram。  
   
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
-### <a name="d-specifying-multiple-sync-blocks"></a>D. 指定多個\<同步 > 區塊  
- 您可以指定多個 **\<同步 >** 封鎖在 updategram 中。 每個 **\<同步 >** 指定的區塊是獨立的交易。  
+### <a name="d-specifying-multiple-sync-blocks"></a>D. 指定多\<個同步處理> 區塊  
+ 您可以在 updategram 中指定多個** \<同步>** 區塊。 所指定的每個** \<同步處理>** 區塊都是獨立的交易。  
   
- 在下列的 updategram 中，第一個 **\<同步 >** 區塊會更新 Sales.Customer 資料表中的記錄。 為了簡單起見，Updategram 僅會指定所需的資料行值；識別值 (CustomerID) 以及要更新的值 (SalesPersonID)。  
+ 在下列 updategram 中，第一個** \<同步>** 區塊會更新 Sales. Customer 資料表中的記錄。 為了簡單起見，Updategram 僅會指定所需的資料行值；識別值 (CustomerID) 以及要更新的值 (SalesPersonID)。  
   
- 第二個 **\<同步 >** 區塊會將 Sales.SalesOrderHeader 資料表中的兩筆記錄。 針對這個資料表，SalesOrderID 是 IDENTITY 類型的資料行。 因此，updategram 未指定 SalesOrderID 的值在每個\<Sales.SalesOrderHeader > 項目。  
+ 第二個** \<同步>** 區塊會將兩筆記錄新增至 SalesOrderHeader 資料表。 針對這個資料表，SalesOrderID 是 IDENTITY 類型的資料行。 因此，updategram 不會在每個\<SalesOrderHeader> 元素中指定 SalesOrderID 的值。  
   
- 指定多重 **\<同步 >** 區塊相當實用因為如果第二個 **\<同步 >** 區塊 （交易） 無法將記錄加入到 Sales.SalesOrderHeader 資料表第一個 **\<同步 >** 區塊仍然可以更新 Sales.Customer 資料表中的客戶記錄。  
+ 指定多個** \<同步>** 區塊很有用，因為如果第二個** \<同步處理>** 區塊（交易）無法將記錄新增至 SalesOrderHeader 資料表，第一個** \<同步>** 區塊仍然可以更新 sales. customer 資料表中的客戶記錄。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -256,14 +257,14 @@ ms.locfileid: "66014680"
   
 2.  建立及使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行 Updategram。  
   
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ### <a name="e-using-a-mapping-schema"></a>E. 使用對應的結構描述  
- 在此範例中，Updategram 會使用 `mapping-schema` 屬性指定對應的結構描述 (沒有預設的對應，也就是說，對應結構描述會在 Updategram 中提供所需的元素和屬性對應給資料庫資料表與資料行)。  
+ 在此範例中，Updategram 會使用 `mapping-schema` 屬性指定對應的結構描述  (沒有預設的對應，也就是說，對應結構描述會在 Updategram 中提供所需的元素和屬性對應給資料庫資料表與資料行)。  
   
  在 Updategram 中指定的元素和屬性指的是對應結構描述中的元素和屬性。  
   
- 下列 XSD 對應結構描述擁有 **\<客戶 >** ， **\<順序 >** ，以及 **\<OD >** 元素會對應到資料庫中的 Sales.Customer、 Sales.SalesOrderHeader 和 Sales.SalesOrderDetail 資料表。  
+ 下列 XSD 對應架構具有** \<客戶>**、 ** \<Order>** 和** \<OD>** 專案，這些專案會對應至資料庫中的 customer、SalesOrderHeader 和 SalesOrderDetail 資料表。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -316,7 +317,7 @@ ms.locfileid: "66014680"
 </xsd:schema>  
 ```  
   
- 此對應結構描述 (UpdategramMappingSchema.xml) 會在下列的 Updategram 中指定。 Updategram 會針對特定的訂單，在 Sales.SalesOrderDetail 資料表中加入訂單詳細資料項目。 Updategram 包含巢狀項目：  **\<OD >** 元素內部巢狀 **\<順序 >** 項目。 在這兩個元素之間的主索引鍵/外部索引鍵關聯性會在對應的結構描述中指定。  
+ 此對應結構描述 (UpdategramMappingSchema.xml) 會在下列的 Updategram 中指定。 Updategram 會針對特定的訂單，在 Sales.SalesOrderDetail 資料表中加入訂單詳細資料項目。 Updategram 包含 nested 元素：在** \<Order>** 元素中嵌套的** \<OD>** 元素。 在這兩個元素之間的主索引鍵/外部索引鍵關聯性會在對應的結構描述中指定。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -342,9 +343,9 @@ ms.locfileid: "66014680"
   
 3.  建立及使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行 Updategram。  
   
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
- 如需使用對應結構描述的 updategram 的範例，請參閱[在 Updategram 中指定註解式對應結構描述&#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
+ 如需使用對應架構之 updategram 的更多範例，請參閱[在 Updategram 中指定批註式對應架構 &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
   
 ### <a name="f-using-a-mapping-schema-with-idrefs-attributes"></a>F. 搭配 IDREFS 屬性使用對應的結構描述  
  此範例說明 Updategrams 如何使用對應結構描述中的 IDREFS 屬性更新多個資料表中的記錄。 此範例假設資料庫由下列資料表組成：  
@@ -357,7 +358,7 @@ ms.locfileid: "66014680"
   
  因為一位學生可以註冊許多課程，而且一個課程可以有許多學生，因此需要第三個資料表，也就是 Enrollment 資料表，來代表這個 M:N 關聯性。  
   
- 下列 XSD 對應結構描述透過提供資料表的 XML 檢視 **\<學生 >** ， **\<課程 >** ，以及 **\<註冊>** 項目。 **IDREFS**對應結構描述中的屬性會指定這些項目之間的關聯性。 **StudentIDList**屬性上 **\<課程 >** 項目是**IDREFS**參考 Enrollment 資料表中的 StudentID 資料行的類型屬性。 同樣地， **enrolledin 屬性**屬性上 **\<學生 >** 項目是**IDREFS**參考註冊中的 CourseID 資料行的類型屬性資料表。  
+ 下列 XSD 對應架構會使用** \<學生>**、 ** \<課程>** 和** \<註冊>** 元素，來提供資料表的 XML 視圖。 對應架構中的**IDREFS**屬性會指定這些元素之間的關聯性。 課程>元素上的**StudentIDList**屬性是一個**IDREFS**類型屬性，它會參考註冊資料表中的 StudentID 資料行。 ** \< ** 同樣地， ** \<Student>** 元素上的**EnrolledIn**屬性是一個**IDREFS**類型屬性，它會參考註冊資料表中的 CourseID 資料行。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -435,7 +436,7 @@ ms.locfileid: "66014680"
   
 3.  複製上述的對應結構描述，並將其貼到文字檔中。 將檔案儲存為 SampleSchema.xml。  
   
-4.  將 Updategram (SampleUpdategram) 儲存在前述步驟用於儲存對應結構描述的相同資料夾中 (這個 Updategram 會從 CS102 課程中卸除 StudentID="1" 的學生)。  
+4.  將 Updategram (SampleUpdategram) 儲存在前述步驟用於儲存對應結構描述的相同資料夾中  (這個 Updategram 會從 CS102 課程中卸除 StudentID="1" 的學生)。  
   
     ```  
     <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -454,7 +455,7 @@ ms.locfileid: "66014680"
   
 5.  建立及使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行 Updategram。  
   
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 6.  儲存並執行下列 Updategram，如前述步驟所述。 Updategram 會在 Enrollment 資料表中加入一筆記錄，藉以將 StudentID="1" 的學生加回 CS102 課程。  
   
@@ -552,9 +553,9 @@ ms.locfileid: "66014680"
 </Schema>  
 ```  
   
- 如需使用對應結構描述的 updategram 的範例，請參閱[在 Updategram 中指定註解式對應結構描述&#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
+ 如需使用對應架構之 updategram 的更多範例，請參閱[在 Updategram 中指定批註式對應架構 &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Updategram 安全性考量&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;的 Updategram 安全性考慮](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

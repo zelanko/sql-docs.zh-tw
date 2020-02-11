@@ -22,14 +22,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666928"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在複寫監視器中檢視發行集和訂閱狀態
-  「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器」會顯示發行集和訂閱的狀態資訊：  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器會顯示發行集和訂閱的狀態資訊：  
   
 -   發行集的狀態是由其訂閱的最高優先權狀態所決定。 例如，如果發行集的某個訂閱發生錯誤，而另一個訂閱發生效能問題，則會針對該發行集顯示錯誤狀態。  
   
@@ -53,17 +53,17 @@ ms.locfileid: "62666928"
   
  **檢視發行集和訂閱狀態**  
   
--   複寫監視器：[使用複寫監視器來檢視資訊及執行工作](view-information-and-perform-tasks-replication-monitor.md)。
+-   複寫監視器：[使用複寫監視器來查看資訊及執行](view-information-and-perform-tasks-replication-monitor.md)工作。
   
   
 ## <a name="publication-status-values"></a>發行集狀態值  
  下表按優先權順序顯示發行集狀態值及其對應的圖示。  
   
-|[狀態]|圖示|  
+|狀態|圖示|  
 |------------|----------|  
-|錯誤|![UI 圖示︰錯誤](../media/repl-icon-error.gif "UI 圖示︰錯誤")|  
-|效能嚴重不足|![UI 圖示︰警告](../media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|正在重試失敗的命令|![UI 圖示︰複寫代理程式重試](../media/repl-icon-retry.gif "UI 圖示︰複寫代理程式重試")|  
+|錯誤|![UI 圖示：錯誤](../media/repl-icon-error.gif "UI 圖示：錯誤")|  
+|效能嚴重不足|![UI 圖示：警告](../media/repl-icon-warn.gif "UI 圖示：警告")|  
+|正在重試失敗的命令|![UI 圖示：複寫代理程式重試](../media/repl-icon-retry.gif "UI 圖示：複寫代理程式重試")|  
 |[確定]|無|  
   
 ## <a name="subscription-status-values"></a>訂閱狀態值  
@@ -73,39 +73,39 @@ ms.locfileid: "62666928"
   
 ### <a name="transactional-subscriptions"></a>交易式訂閱  
   
-|[狀態]|圖示|  
+|狀態|圖示|  
 |------------|----------|  
-|錯誤|![UI 圖示︰錯誤](../media/repl-icon-error.gif "UI 圖示︰錯誤")|  
-|效能嚴重不足|![UI 圖示︰警告](../media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|「即將過期/已過期」|![UI 圖示︰警告](../media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|未初始化的訂閱|![UI 圖示︰警告](../media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|正在重試失敗的命令|![UI 圖示︰複寫代理程式重試](../media/repl-icon-retry.gif "UI 圖示︰複寫代理程式重試")|  
-|未執行|![UI 圖示︰複寫代理程式已停止](../media/repl-icon-stopped.gif "UI 圖示︰複寫代理程式已停止")|  
-|執行中|![UI 圖示︰複寫代理程式執行中](../media/repl-icon-running.gif "UI 圖示︰複寫代理程式執行中")|  
+|錯誤|![UI 圖示：錯誤](../media/repl-icon-error.gif "UI 圖示：錯誤")|  
+|效能嚴重不足|![UI 圖示：警告](../media/repl-icon-warn.gif "UI 圖示：警告")|  
+|「即將過期/已過期」|![UI 圖示：警告](../media/repl-icon-warn.gif "UI 圖示：警告")|  
+|未初始化的訂閱|![UI 圖示：警告](../media/repl-icon-warn.gif "UI 圖示：警告")|  
+|正在重試失敗的命令|![UI 圖示：複寫代理程式重試](../media/repl-icon-retry.gif "UI 圖示：複寫代理程式重試")|  
+|未執行|![UI 圖示：複寫代理程式已停止](../media/repl-icon-stopped.gif "UI 圖示：複寫代理程式已停止")|  
+|執行中|![UI 圖示：複寫代理程式執行中](../media/repl-icon-running.gif "UI 圖示：複寫代理程式執行中")|  
   
 ### <a name="merge-subscriptions"></a>合併訂閱  
   
-|[狀態]|圖示|  
+|狀態|圖示|  
 |------------|----------|  
-|錯誤|![UI 圖示︰錯誤](../media/repl-icon-error.gif "UI 圖示︰錯誤")|  
-|效能嚴重不足|![UI 圖示︰警告](../media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|長期執行合併|![UI 圖示︰警告](../media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|「即將過期/已過期」|![UI 圖示︰警告](../media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|未初始化的訂閱|![UI 圖示︰警告](../media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|正在重試失敗的命令|![UI 圖示︰複寫代理程式重試](../media/repl-icon-retry.gif "UI 圖示︰複寫代理程式重試")|  
-|正在同步處理|![UI 圖示︰複寫代理程式執行中](../media/repl-icon-running.gif "UI 圖示︰複寫代理程式執行中")|  
-|未進行同步處理|![UI 圖示︰複寫代理程式已停止](../media/repl-icon-stopped.gif "UI 圖示︰複寫代理程式已停止")|  
+|錯誤|![UI 圖示：錯誤](../media/repl-icon-error.gif "UI 圖示：錯誤")|  
+|效能嚴重不足|![UI 圖示：警告](../media/repl-icon-warn.gif "UI 圖示：警告")|  
+|長期執行合併|![UI 圖示：警告](../media/repl-icon-warn.gif "UI 圖示：警告")|  
+|「即將過期/已過期」|![UI 圖示：警告](../media/repl-icon-warn.gif "UI 圖示：警告")|  
+|未初始化的訂閱|![UI 圖示：警告](../media/repl-icon-warn.gif "UI 圖示：警告")|  
+|正在重試失敗的命令|![UI 圖示：複寫代理程式重試](../media/repl-icon-retry.gif "UI 圖示：複寫代理程式重試")|  
+|正在同步處理|![UI 圖示：複寫代理程式執行中](../media/repl-icon-running.gif "UI 圖示：複寫代理程式執行中")|  
+|未進行同步處理|![UI 圖示：複寫代理程式已停止](../media/repl-icon-stopped.gif "UI 圖示：複寫代理程式已停止")|  
   
 ### <a name="snapshot-subscriptions"></a>快照集訂閱  
   
-|[狀態]|圖示|  
+|狀態|圖示|  
 |------------|----------|  
-|錯誤|![UI 圖示︰錯誤](../media/repl-icon-error.gif "UI 圖示︰錯誤")|  
-|即將過期/已過期|![UI 圖示︰警告](../media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|未初始化的訂閱|![UI 圖示︰警告](../media/repl-icon-warn.gif "UI 圖示︰警告")|  
-|正在重試失敗的命令|![UI 圖示︰複寫代理程式重試](../media/repl-icon-retry.gif "UI 圖示︰複寫代理程式重試")|  
-|正在同步處理|![UI 圖示︰複寫代理程式執行中](../media/repl-icon-running.gif "UI 圖示︰複寫代理程式執行中")|  
-|未進行同步處理|![UI 圖示︰複寫代理程式已停止](../media/repl-icon-stopped.gif "UI 圖示︰複寫代理程式已停止")|  
+|錯誤|![UI 圖示：錯誤](../media/repl-icon-error.gif "UI 圖示：錯誤")|  
+|「即將過期/已過期」|![UI 圖示：警告](../media/repl-icon-warn.gif "UI 圖示：警告")|  
+|未初始化的訂閱|![UI 圖示：警告](../media/repl-icon-warn.gif "UI 圖示：警告")|  
+|正在重試失敗的命令|![UI 圖示：複寫代理程式重試](../media/repl-icon-retry.gif "UI 圖示：複寫代理程式重試")|  
+|正在同步處理|![UI 圖示：複寫代理程式執行中](../media/repl-icon-running.gif "UI 圖示：複寫代理程式執行中")|  
+|未進行同步處理|![UI 圖示：複寫代理程式已停止](../media/repl-icon-stopped.gif "UI 圖示：複寫代理程式已停止")|  
   
 ## <a name="see-also"></a>另請參閱  
  [監視複寫](../monitoring-replication.md)  

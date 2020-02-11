@@ -1,5 +1,5 @@
 ---
-title: 在查詢中的子選擇 |Microsoft Docs
+title: 查詢中的子選擇 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c9fb5d1300b6f50f7ef0a765881896069becf0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073895"
 ---
 # <a name="subselects-in-queries"></a>查詢中的子選擇
@@ -202,7 +202,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|  
 ||Internet Sales Amount|Reseller Sales Amount|  
 |All Customers|$29,358,677.22|$80,450,596.98|  
-|United States|$9,389,789.51|$80,450,596.98|  
+|美國|$9,389,789.51|$80,450,596.98|  
 |Oregon|$1,170,991.54|$80,450,596.98|  
 |Portland|$110,649.54|$80,450,596.98|  
 |Washington|$2,467,248.34|$80,450,596.98|  
@@ -230,7 +230,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|  
 ||Internet Sales Amount|Reseller Sales Amount|  
 |All Customers|$2,467,248.34|$80,450,596.98|  
-|United States|$2,467,248.34|$80,450,596.98|  
+|美國|$2,467,248.34|$80,450,596.98|  
 |Washington|$2,467,248.34|$80,450,596.98|  
 |Seattle|$75,164.86|$80,450,596.98|  
   
@@ -255,9 +255,9 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|元件|Mountain|Road|Touring|  
+||All Products|Accessory|元件|Mountain|路段|Touring|  
 |All Customers|$29,358,677.22|$604,053.30|(Null)|$10,251,183.52|$14,624,108.58|$3,879,331.82|  
-|United States|$9,389,789.51|$217,168.79|(Null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
+|美國|$9,389,789.51|$217,168.79|(Null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
 |Oregon|$1,170,991.54|$30,513.17|(Null)|$443,607.98|$565,372.10|$131,498.29|  
 |Portland|$110,649.54|$2,834.17|(Null)|$47,099.91|$53,917.17|$6,798.29|  
 |Washington|$2,467,248.34|$62,662.92|(Null)|$945,219.38|$1,155,880.07|$303,485.97|  
@@ -280,9 +280,9 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|元件|Mountain|Road|Touring|  
+||All Products|Accessory|元件|Mountain|路段|Touring|  
 |All Customers|$2,467,248.34|$62,662.92|(Null)|$945,219.38|$1,155,880.07|$303,485.97|  
-|United States|$2,467,248.34|$62,662.92|(Null)|$945,219.38|$1,155,880.07|$303,485.97|  
+|美國|$2,467,248.34|$62,662.92|(Null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Washington|$2,467,248.34|$62,662.92|(Null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Seattle|$75,164.86|$2,695.74|(Null)|$19,914.53|$44,820.06|$7,734.54|  
   
@@ -305,7 +305,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Sales Territories|Australia|Canada|Central|Northwest|Southwest|  
+||All Sales Territories|澳大利亞|加拿大|Central|Northwest|Southwest|  
 |All Products|$7,591,495.49|$1,281,059.99|$1,547,298.12|$600,205.79|$1,924,763.50|$2,238,168.08|  
 |Mountain-200 Silver, 38|$1,449,576.15|$248,702.93|$275,052.45|$141,103.65|$349,487.01|$435,230.12|  
 |Mountain-200 Black, 38|$1,722,896.50|$218,024.05|$418,726.43|$123,929.46|$486,694.63|$475,521.93|  
@@ -328,7 +328,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Sales Territories|Australia|Canada|Northwest|Southwest|United Kingdom|  
+||All Sales Territories|澳大利亞|加拿大|Northwest|Southwest|英國|  
 |All Products|$7,938,218.56|$1,096,312.24|$1,474,255.49|$2,042,674.72|$2,238,099.55|$1,086,876.56|  
 |Mountain-200 Silver, 38|$1,520,958.53|$248,702.93|$275,052.45|$349,487.01|$435,230.12|$212,486.03|  
 |Mountain-200 Silver, 42|$1,392,237.14|$198,127.15|$229,679.01|$361,233.58|$407,854.24|$195,343.16|  
@@ -349,6 +349,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   axis 子句中不允許 HAVING 子句；請改用 [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx) 函數運算式。  
   
--   預設的導出的成員不允許在子選擇;不過，這項限制可以變更，以每個工作階段為基礎，在指派值給`SubQueries`中的連接字串屬性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或是`DBPROP_MSMD_SUBQUERIES`中的屬性[支援的 XMLA 屬性&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). 請參閱[子選擇和 Subcube 中導出成員](calculated-members-in-subselects-and-subcubes.md)依據的值的導出成員行為的詳細說明`SubQueries`或`DBPROP_MSMD_SUBQUERIES`。  
+-   根據預設，子選擇中不允許使用匯出成員;不過，您可以在每個會話中變更此限制，方法是將值指派給中`SubQueries` <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>的連接字串屬性， `DBPROP_MSMD_SUBQUERIES`或[&#40;xmla&#41;支援的 xmla 屬性](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)中的屬性。 如需匯出成員之行為的詳細說明，請參閱[子選擇和 subcube 中](calculated-members-in-subselects-and-subcubes.md)的匯出成員，視`SubQueries`或`DBPROP_MSMD_SUBQUERIES`的值而定。  
   
   

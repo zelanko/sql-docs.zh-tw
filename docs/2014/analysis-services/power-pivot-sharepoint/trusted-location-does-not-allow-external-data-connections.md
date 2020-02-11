@@ -1,5 +1,5 @@
 ---
-title: 儲存活頁簿的信任位置不允許外部資料連接。 下列連接無法重新整理：PowerPivot Data | Microsoft Docs
+title: 儲存活頁簿的信任位置不允許外部資料連接。 下列連接無法重新整理： PowerPivot 資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b10a4a80b74bf64741784edc4fc1974dc0464805
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070983"
 ---
 # <a name="the-trusted-location-where-the-workbook-is-stored-does-not-allow-external-data-connections-the-following-connections-failed-to-refresh-powerpivot-data"></a>儲存活頁簿的信任位置不允許外部資料連接。 下列連接無法重新整理：PowerPivot 資料
@@ -25,7 +25,7 @@ ms.locfileid: "66070983"
 |||  
 |-|-|  
 |適用於|PowerPivot for SharePoint|  
-|產品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|產品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|Excel Services 設定為拒絕外部資料存取。|  
 |訊息文字|儲存活頁簿的信任位置不允許外部資料連接。 下列連接無法重新整理：PowerPivot 資料|  
   
@@ -35,18 +35,18 @@ ms.locfileid: "66070983"
 ## <a name="user-action"></a>使用者動作  
  變更組態設定來允許內嵌資料來源。  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]** 。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
   
-2.  按一下 [Excel Services 應用程式]  。  
+2.  按一下 [Excel Services 應用程式]****。  
   
-3.  按一下 [信任的檔案位置]  。  
+3.  按一下 [信任的檔案位置]****。  
   
-4.  按一下 [http://]  或是您想要設定的位置。  
+4.  按一下 [http://]**** 或是您想要設定的位置。  
   
-5.  在 [外部資料] 中，於 [允許外部資料] 內按一下 [信任的資料連線庫與內嵌連線]  。  
+5.  在 [外部資料] 中，於 [允許外部資料] 內按一下 [信任的資料連線庫與內嵌連線]****。  
   
 6.  按一下 [確定]  。  
   
- 或者，您可以針對包含 PowerPivot 活頁簿的網站建立新的信任位置，然後只針對該網站修改組態設定。 如需相關資訊，請參閱 [在管理中心建立 PowerPivot 網站的信任位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+ 或者，您可以針對包含 PowerPivot 活頁簿的網站建立新的信任位置，然後只針對該網站修改組態設定。 如需相關資訊，請參閱 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
   

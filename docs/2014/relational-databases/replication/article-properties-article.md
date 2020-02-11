@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721780"
 ---
 # <a name="article-properties---ltarticlegt"></a>發行項屬性 - &lt;發行項&gt;
@@ -71,7 +71,7 @@ ms.locfileid: "62721780"
  無法為針對點對點異動複寫啟用之發行集內的發行項變更此選項。  
   
  **自動管理識別範圍**  
- 依預設，複寫會管理發行者端和每個訂閱者的所有識別欄位。 每個複寫節點都會被指派一個範圍的識別值 (使用 **[發行者範圍大小]** 和 **[訂閱者範圍大小]** 選項來指定)，以確保給定值只用於一個節點。 如需詳細資訊，請參閱[複寫識別欄位](publish/replicate-identity-columns.md)。  
+ 依預設，複寫會管理發行者端和每個訂閱者的所有識別欄位。 每個複寫節點都會被指派一個範圍的識別值 (使用 **[發行者範圍大小]** 和 **[訂閱者範圍大小]** 選項來指定)，以確保給定值只用於一個節點。 如需詳細資訊，請參閱[複寫識別資料欄](publish/replicate-identity-columns.md)。  
   
 ## <a name="options-for-transactional-publications"></a>交易式發行集的選項  
  **複製 INSERT、UPDATE 和 DELETE 預存程序**  
@@ -85,10 +85,10 @@ ms.locfileid: "62721780"
  如需詳細資訊，請參閱[指定交易式發行項變更的傳播方式](transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   
  **複寫**  
- 此選項僅適用於儲存程序。 它決定是否要複寫預存程序 (CREATE PROCEDURE 陳述式) 或其執行的定義。 如果您複寫程序的執行，程序定義會在初始化訂閱之後複寫到訂閱者端；在發行者端執行程序時，複寫會在訂閱者端執行對應的程序。 這可在執行大量批次作業時大幅提升效能。 如需詳細資訊，請參閱＜ [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md)＞。  
+ 此選項僅適用於儲存程序。 它決定是否要複寫預存程序 (CREATE PROCEDURE 陳述式) 或其執行的定義。 如果您複寫程序的執行，程序定義會在初始化訂閱之後複寫到訂閱者端；在發行者端執行程序時，複寫會在訂閱者端執行對應的程序。 這可在執行大量批次作業時大幅提升效能。 如需詳細資訊，請參閱 [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md)。  
   
 ## <a name="options-for-merge-publications"></a>合併式發行集的選項  
- 合併式發行集的 [發行項屬性]  對話方塊有兩個索引標籤：[屬性]  和 [解析程式]  。  
+ 合併式發行集的 **[發行項屬性]** 對話方塊有兩個索引標籤： **[屬性]** 和 **[解析程式]** 。  
   
 ### <a name="properties-tab"></a>屬性索引標籤  
  **同步處理方向**  
@@ -121,21 +121,21 @@ ms.locfileid: "62721780"
   
 ### <a name="resolver-tab"></a>解析程式索引標籤  
  **使用預設解析程式**  
- 如果您選取預設的解析程式，則會依據指派給每個訂閱者的優先權或第一個寫入發行者的變更來解決衝突，視使用的訂閱類型而定。 如需詳細資訊，請參閱[偵測及解決合併式複寫衝突](merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
+ 如果您選取預設的解析程式，則會依據指派給每個訂閱者的優先權或第一個寫入發行者的變更來解決衝突，視使用的訂閱類型而定。 如需相關資訊，請參閱 [偵測及解決合併式複寫衝突](merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
  **使用自訂解析程式 (已在散發者註冊)**  
- 如果您選擇使用發行項解析程式 (由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供或您自行撰寫)，您必須從清單方塊中選取解析程式。 如需詳細資訊，請參閱＜ [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)＞。  
+ 如果您選擇使用發行項解析程式 (由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供或您自行撰寫)，您必須從清單方塊中選取解析程式。 如需詳細資訊，請參閱 [進階合併式複寫衝突偵測與解決](merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
  如果解析程式需要任何輸入，請在 **[輸入解析程式所需的資訊]** 文字方塊中進行指定。 如需有關 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 自訂解析程式所需之輸入的詳細資訊，請參閱＜ [Microsoft COM-Based Resolvers](merge/advanced-merge-replication-conflict-com-based-resolvers.md)＞。  
   
  **允許訂閱者在視需要同步期間，以互動方式解決衝突**  
- 如果訂閱者會使用視需要同步 (合併式複寫的預設值)，而且您要以互動方式解決衝突，則選取此選項。 在新增訂閱精靈的 **[同步排程]** 頁面上指定視需要同步。 若要以互動方式解決衝突，請使用互動解析程式使用者介面。 如需詳細資訊，請參閱＜ [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)＞。  
+ 如果訂閱者會使用視需要同步 (合併式複寫的預設值)，而且您要以互動方式解決衝突，則選取此選項。 在新增訂閱精靈的 **[同步排程]** 頁面上指定視需要同步。 若要以互動方式解決衝突，請使用互動解析程式使用者介面。 如需詳細資訊，請參閱 [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)。  
   
  **要求在合併前先驗證數位簽章**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供的所有以 COM 為基礎的解析程式都已簽署。 選取此選項即可驗證同步處理時解析程式是有效的。  
   
 ## <a name="options-for-oracle-publications"></a>Oracle 發行集的選項  
- Oracle 發行集的 [發行項屬性]  對話方塊有兩個索引標籤：[屬性]  和 [資料對應]  。 Oracle 發行集並不支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集支援的所有屬性。 如需詳細資訊，請參閱＜ [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)＞。  
+ Oracle 發行集的 **[發行項屬性]** 對話方塊有兩個索引標籤： **[屬性]** 和 **[資料對應]** 。 Oracle 發行集並不支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集支援的所有屬性。 如需詳細資訊，請參閱＜ [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)＞。  
   
 ### <a name="properties-tab"></a>屬性索引標籤  
  **複製 INSERT、UPDATE 和 DELETE 預存程序**  
@@ -170,7 +170,7 @@ ms.locfileid: "62721780"
   
 -   針對某些資料類型，只有一個可能的對應，在此情況下，屬性方格中的資料行為唯讀。  
   
--   對於某些資料類型，有多種類型可供您選擇。 除非您的應用程式需要不同的對應，否則[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您使用預設對應。 如需詳細資訊，請參閱＜ [Data Type Mapping for Oracle Publishers](non-sql/data-type-mapping-for-oracle-publishers.md)＞。  
+-   對於某些資料類型，有多種類型可供您選擇。 除非您的應用程式需要不同的對應，否則[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您使用預設對應。 如需詳細資訊，請參閱 [Data Type Mapping for Oracle Publishers](non-sql/data-type-mapping-for-oracle-publishers.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Create a Publication](publish/create-a-publication.md)   

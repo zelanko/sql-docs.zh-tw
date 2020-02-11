@@ -1,5 +1,5 @@
 ---
-title: SQL Server 屬性 （啟動參數 索引標籤） |Microsoft Docs
+title: SQL Server 屬性（[啟動參數] 索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679158"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 屬性 (啟動參數索引標籤)
@@ -69,7 +69,7 @@ ms.locfileid: "62679158"
 > [!CAUTION]  
 >  某些選擇性參數可能會變更伺服器行為，而且可能會影響效能。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  只有能夠在登錄中變更相關項目的使用者才能使用這個頁面， 包括下列使用者。  
   
 -   本機 Administrators 群組的成員。  
@@ -77,6 +77,6 @@ ms.locfileid: "62679158"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的網域帳戶 (如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 設定為使用網域帳戶來執行的話)。  
   
 ## <a name="books-online-references"></a>線上叢書參考  
- 如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動參數的其他資訊，請參閱＜如何：設定伺服器啟動選項 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態管理員) 」 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
+ 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動參數的其他資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜如何：設定伺服器啟動選項 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員)＞。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 資料流程可以使用運算式設定的屬性 |Microsoft Docs
+title: 可以使用運算式設定的資料流程屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059936"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>可以使用運算式設定的資料流程屬性
@@ -33,9 +33,9 @@ ms.locfileid: "66059936"
   
  您可以使用屬性運算式來為封裝之每個部署的執行個體自訂組態。 您也可以使用屬性運算式來指定封裝的執行階段條件約束，其方法是搭配 **dtexec** 命令提示字元公用程式使用 **/set** 選項。 例如，您可以約束「排序」轉換所使用的 `MaximumThreads`，或是「模糊群組」和「模糊查閱」轉換所使用的 `MaxMemoryUsage`。 如果未受到約束，這些轉換可能會在記憶體中快取大量的資料。  
   
- 若要針對本主題所列的其中一個資料流程物件屬性指定屬性運算式，請顯示資料流程工作的 [屬性]  視窗，其方式是在設計工具的 [控制流程]  介面上選取資料流程工作，或是選取設計工具的 [資料流程]  索引標籤，而不需選取任何個別的元件或路徑。 選取 [運算式]  屬性，然後按一下省略符號 (...)，顯示 [屬性運算式編輯器]  對話方塊。 下拉 [屬性]  清單來選取屬性，然後在 [運算式]  文字方塊中輸入運算式，或是按一下省略符號 (...) 以顯示 [運算式產生器]  對話方塊。  
+ 若要針對本主題所列的其中一個資料流程物件屬性指定屬性運算式，請顯示資料流程工作的 [屬性]**** 視窗，其方式是在設計工具的 [控制流程]**** 介面上選取資料流程工作，或是選取設計工具的 [資料流程]**** 索引標籤，而不需選取任何個別的元件或路徑。 選取 [運算式]**** 屬性，然後按一下省略符號 (...)，顯示 [屬性運算式編輯器]**** 對話方塊。 下拉 [屬性]**** 清單來選取屬性，然後在 [運算式]**** 文字方塊中輸入運算式，或是按一下省略符號 (...) 以顯示 [運算式產生器]**** 對話方塊。  
   
- [屬性]  清單只會針對您已經放在設計工具之 [資料流程]  介面上的那些資料流程物件來顯示可用的屬性。 因此，您無法使用 [屬性]  清單來檢視支援屬性運算式之資料流程物件的所有可能屬性。 例如，如果您已經在設計介面上放置 ADO NET 來源**屬性**清單中包含的項目`[ADO NET Source].[SqlCommand]`屬性。 此清單也會顯示資料流程工作本身的許多屬性。  
+ [屬性]**** 清單只會針對您已經放在設計工具之 [資料流程]**** 介面上的那些資料流程物件來顯示可用的屬性。 因此，您無法使用 [屬性]**** 清單來檢視支援屬性運算式之資料流程物件的所有可能屬性。 例如，如果您已在設計工具介面上放置 ADO NET 來源，則 [**屬性**] 清單會包含`[ADO NET Source].[SqlCommand]`屬性的專案。 此清單也會顯示資料流程工作本身的許多屬性。  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>支援屬性運算式之資料流程物件的屬性  
  可以使用屬性運算式來指定下列清單中的屬性值。  
@@ -70,8 +70,8 @@ ms.locfileid: "66059936"
 |----------------------|--------------|  
 |ADO NET 目的地|TableOrViewName 屬性<br /><br /> BatchSize 屬性<br /><br /> CommandTimeout 屬性|  
 |一般檔案目的地|Header 屬性|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 目的地|TableName 屬性|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 目的地|BulkInsertTableName 屬性<br /><br /> BulkInsertFirstRow 屬性<br /><br /> BulkInsertLastRow 屬性<br /><br /> BulkInsertOrder 屬性<br /><br /> Timeout 屬性|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Compact 目的地|TableName 屬性|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]位置|BulkInsertTableName 屬性<br /><br /> BulkInsertFirstRow 屬性<br /><br /> BulkInsertLastRow 屬性<br /><br /> BulkInsertOrder 屬性<br /><br /> Timeout 屬性|  
   
 ## <a name="related-tasks"></a>相關工作  
   

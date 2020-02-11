@@ -1,5 +1,5 @@
 ---
-title: 表格式模型角色 (SSAS 表格式) |Microsoft Docs
+title: 表格式模型角色（SSAS 表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 433dc3dcde3a0cee2652baa5f1a59997ec7bf55b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066445"
 ---
 # <a name="tabular-model-roles-ssas-tabular"></a>表格式模型角色 (SSAS 表格式)
@@ -24,8 +24,8 @@ ms.locfileid: "66066445"
   
 ## <a name="related-tasks"></a>相關工作  
   
-|工作|描述|  
+|Task|描述|  
 |----------|-----------------|  
-|[使用 SSMS 管理角色 &#40;SSAS 表格式&#41;](manage-roles-by-using-ssms-ssas-tabular.md)|描述如何使用 DAX 來建立角色、加入和移除角色中的成員、變更角色的權限，以及加入、編輯或移除資料列層級篩選。|  
+|[使用 SSMS &#40;SSAS 表格式&#41;管理角色](manage-roles-by-using-ssms-ssas-tabular.md)|描述如何使用 DAX 來建立角色、加入和移除角色中的成員、變更角色的權限，以及加入、編輯或移除資料列層級篩選。|  
   
   

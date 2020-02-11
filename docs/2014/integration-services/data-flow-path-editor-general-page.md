@@ -1,5 +1,5 @@
 ---
-title: 資料流程路徑編輯器 （一般頁面） |Microsoft Docs
+title: 資料流程路徑編輯器（一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059959"
 ---
 # <a name="data-flow-path-editor-general-page"></a>資料流程路徑編輯器 (一般頁面)
@@ -26,12 +26,12 @@ ms.locfileid: "66059959"
   
  使用 **[資料流程路徑編輯器]** 對話方塊的 **[一般]** 節點，即可命名和描述路徑，以及指定路徑註解的選項。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **名稱**  
  提供路徑的唯一名稱。  
   
  **ID**  
- 路徑的歷程識別碼。 此屬性是唯讀的。  
+ 路徑的歷程識別碼。 這個屬性是唯讀的。  
   
  **IdentificationString**  
  識別路徑的字串。 根據前面輸入的名稱自動產生。  
@@ -49,9 +49,9 @@ ms.locfileid: "66059959"
  顯示路徑開頭的輸出。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料流程路徑編輯器&#40;中繼資料 頁面&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
- [資料流程路徑編輯器&#40;資料檢視器頁面&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
+ [資料流程路徑編輯器 &#40;中繼資料頁面&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
+ [資料檢視器頁面 &#40;的資料流程路徑編輯器&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [資料流程](data-flow/data-flow.md)   
- [在套件中使用註釋](use-annotations-in-packages.md)  
+ [使用封裝中的註解](use-annotations-in-packages.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 分散式查詢支援，在結構描述資料列 |Microsoft Docs
+title: 架構資料列集中的分散式查詢支援 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24411ceb757414f1a70f0f10bdf5b2c7660e2cd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667594"
 ---
 # <a name="distributed-query-support-in-schema-rowsets"></a>結構描述資料列集中的分散式查詢支援
-  若要支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分散式查詢中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者**IDBSchemaRowset**介面會傳回連結伺服器上的中繼資料。  
+  為了支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分散式查詢， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者**IDBSchemaRowset**介面會傳回連結伺服器上的中繼資料。  
   
- 如果 DBPROPSET_SQLSERVERSESSION 屬性 SSPROP_QUOTEDCATALOGNAMES 是 VARIANT_TRUE，您就可以針對目錄名稱指定引號識別碼 (例如 "my.catalog")。 依照目錄來限制結構描述資料列集輸出時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會辨識包含連結的伺服器和目錄名稱的兩部分名稱。 下表中的結構描述資料列集，指定兩部分目錄名稱，作為_linked_server_ **。** _目錄_將輸出限制為具名連結伺服器的適用目錄。  
+ 如果 DBPROPSET_SQLSERVERSESSION 屬性 SSPROP_QUOTEDCATALOGNAMES 是 VARIANT_TRUE，您就可以針對目錄名稱指定引號識別碼 (例如 "my.catalog")。 當根據目錄來限制架構資料列集[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]輸出時，Native Client OLE DB 提供者會辨識包含連結伺服器和目錄名稱的兩部分名稱。 針對下表中的架構資料列集，將兩部分的目錄名稱指定為_linked_server_**。**_目錄_會將輸出限制為所指定連結伺服器的適用類別目錄。  
   
 |結構描述資料列集|目錄限制|  
 |-------------------|-------------------------|  
@@ -43,10 +43,10 @@ ms.locfileid: "62667594"
 > [!NOTE]  
 >  若要將結構描述資料列集限制為連結伺服器的所有目錄，請使用語法 *linked_server* (其中句號分隔符號是名稱規格的一部分)。 這個語法相當於針對目錄名稱限制指定 NULL，而且也會在連結的伺服器指出不支援目錄的資料來源時使用。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會定義結構描述資料列集 LINKEDSERVERS，並傳回註冊成連結伺服器的 OLE DB 資料來源的清單。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會定義架構資料列集 LINKEDSERVERS，並傳回註冊為連結伺服器之 OLE DB 資料來源的清單。  
   
 ## <a name="see-also"></a>另請參閱  
- [結構描述資料列集支援 &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)   
- [LINKEDSERVERS 資料列集&#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
+ [架構資料列集支援 &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)   
+ [LINKEDSERVERS 資料列集 &#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
   
   

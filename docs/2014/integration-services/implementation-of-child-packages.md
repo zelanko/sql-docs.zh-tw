@@ -1,5 +1,5 @@
 ---
-title: 子封裝的實作 |Microsoft Docs
+title: 子封裝的執行 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f9eb6860a40f6c47e65beb3fe109255d333d628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058184"
 ---
 # <a name="implementation-of-child-packages"></a>子封裝的實作
@@ -32,7 +32,7 @@ ms.locfileid: "66058184"
   
  設計子封裝時，封裝的設計並無任何限制，您可以放入任何所需的功能。 但是，如果封裝會存取資料，您必須確定執行封裝的伺服器擁有資料的存取權。  
   
- 若要識別執行子封裝的父封裝，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下方案總管中的封裝，然後按一下 [進入點封裝]  。  
+ 若要識別執行子封裝的父封裝，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [方案總管] 中的封裝，然後按一下 **[進入點封裝]**。  
   
  子封裝設計完成之後，下一個步驟是將子封裝部署在遠端伺服器上。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66058184"
   
 -   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]來匯出封裝。  
   
--   為包含想要部署之封裝的專案建立部署公用程式，然後執行「封裝安裝精靈」，將封裝安裝到檔案系統或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體，以部署封裝。 如需詳細資訊，請參閱 <<c0> [ 封裝部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)。</c0>  
+-   為包含想要部署之封裝的專案建立部署公用程式，然後執行「封裝安裝精靈」，將封裝安裝到檔案系統或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體，以部署封裝。 如需詳細資訊，請參閱[&#40;SSIS&#41;的封裝部署](packages/legacy-package-deployment-ssis.md)。  
   
  您必須重複部署到想要使用的每一部遠端伺服器。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66058184"
 ## <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>偵錯 SQL Server Agent 作業和子封裝  
  您可以使用下列其中一種方法來建立 SQL Server Agent 作業及其子封裝：  
   
--   按一下 [偵錯]   / [啟動但不偵錯]  ，以便在 SSIS 設計師中執行每個子套件。  
+-   在 SSIS 設計師中執行每個子封裝，方法是按一下 [ **Debug** / ] [**啟動但不進行調試**]。  
   
 -   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]執行遠端電腦上的個別 SQL Server Agent 作業，以確定封裝執行無誤。  
   
@@ -67,8 +67,8 @@ ms.locfileid: "66058184"
   
 ## <a name="related-content"></a>相關內容  
   
--   部落格文章[SSIS:存取父封裝中的變數](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)，andyleonard.blog 上。  
+-   Blog 專案（SSIS）：在 andyleonard 上[存取父封裝中的變數](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)。  
   
--   文件：[執行封裝工作](../integration-services/control-flow/execute-package-task.md)。  
+-   [執行封裝](../integration-services/control-flow/execute-package-task.md)工作的文章。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 第 3 課：重新命名資料行 |Microsoft Docs
+title: 第3課：重新命名資料行 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070322"
 ---
 # <a name="lesson-3-rename-columns"></a>第 3 課：重新命名資料行
@@ -23,49 +23,49 @@ ms.locfileid: "66070322"
 > [!IMPORTANT]  
 >  重新命名資料行不是完成本教學課程的必要工作；不過，在其餘課程 (尤其是包含建立關聯性的課程，以及使用 DAX 公式建立導出資料行和量值的課程) 會參考本課程中所述的資料行易記名稱。 如果您選擇不重新命名資料行，則必須在第 5、6 和 7 課中編輯 DAX 公式，以便使用本課中提供的原始來源資料行名稱。  
   
- 估計的時間才能完成這一課：**20 分鐘的時間**  
+ 這堂課的預估完成時間：**20 分鐘**  
   
-## <a name="prerequisites"></a>先決條件  
- 本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 2 課：將資料加入](lesson-2-add-data.md)。  
+## <a name="prerequisites"></a>Prerequisites  
+ 本主題是表格式模型教學課程的一部分，請依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 2 課：新增資料](lesson-2-add-data.md)。  
   
 ## <a name="rename-columns"></a>重新命名資料行  
   
 #### <a name="to-rename-columns"></a>若要重新命名資料行  
   
-1.  在模型設計師中，按一下 [Customer]  資料表 (索引標籤)。  
+1.  在模型設計師中，按一下 [Customer]**** 資料表 (索引標籤)。  
   
      當您按一下某個索引標籤時，該資料表會在模型設計師視窗中變成使用中。  
   
-2.  按兩下**CustomerKey**資料行名稱，然後輸入`Customer  Id`，然後按 ENTER 鍵。  
+2.  按兩下 [ **CustomerKey** ] 資料行名稱，然後`Customer  Id`輸入，再按 enter 鍵。  
   
     > [!TIP]  
-    >  您也可以重新命名的資料行**資料行名稱**屬性中的資料行**屬性** 視窗中，或在圖表檢視中。  
+    >  您也可以在資料行的 [**屬性**] 視窗或 [圖表視圖] 中，重新命名資料行**名稱**屬性中的資料行。  
   
-3.  重新命名 [Customer]  資料表中的其餘資料行以及其餘資料表中的資料行，使用易記名稱取帶來原名稱：  
+3.  重新命名 [Customer]**** 資料表中的其餘資料行以及其餘資料表中的資料行，使用易記名稱取帶來原名稱：  
   
-     **Customer 資料表**  
+     **客戶資料表**  
   
     |來源名稱|易記名稱|  
     |-----------------|-------------------|  
     |GeographyKey|Geography Id|  
     |CustomerAlternateKey|Customer Alternate Id|  
-    |FirstName|First Name|  
+    |名字|名字|  
     |MiddleName|Middle Name|  
-    |LastName|Last Name|  
+    |姓氏|姓氏|  
     |NameStyle|Name Style|  
     |BirthDate|Birth Date|  
     |MaritalStatus|Marital Status|  
-    |EmailAddress|Email Address|  
+    |EmailAddress|電子郵件地址|  
     |YearlyIncome|Yearly Income|  
     |TotalChildren|Total Children|  
     |NumberChildrenAtHome|Number of Children At Home|  
-    |EnglishEducation|Education|  
+    |EnglishEducation|教育訓練|  
     |EnglishOccupation|Occupation|  
     |HouseOwnerFlag|Owns House|  
     |NumberCarsOwned|Number of Cars Owned|  
     |AddressLine1|Address Line 1|  
     |AddressLine2|Address Line 2|  
-    |Phone|Phone Number|  
+    |電話|電話號碼|  
     |DateFirstPurchase|Date of First Purchase|  
     |CommuteDistance|Commute Distance|  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66070322"
     |FiscalYear|Fiscal Year|  
     |FiscalSemester|Fiscal Semester|  
   
-     **地理位置**  
+     **區域**  
   
     |來源名稱|易記名稱|  
     |-----------------|-------------------|  
@@ -97,10 +97,10 @@ ms.locfileid: "66070322"
     |StateProvinceName|State Province Name|  
     |CountryRegionCode|Country Region Code|  
     |EnglishCountryRegionName|Country Region Name|  
-    |PostalCode|Postal Code|  
+    |PostalCode|郵遞區號|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **產品**  
+     **Products**  
   
     |來源名稱|易記名稱|  
     |-----------------|-------------------|  
@@ -119,14 +119,14 @@ ms.locfileid: "66070322"
     |DaysToManufacture|Days to Manufacture|  
     |ProductLine|Product Line|  
     |Dealer Price|Dealer Price|  
-    |ModelName|Model Name|  
+    |ModelName|模型名稱|  
     |LargePhoto|Large Photo|  
     |EnglishDescription|描述|  
     |StartDate|Product Start Date|  
     |EndDate|Product End Date|  
-    |[狀態]|Product Status|  
+    |狀態|Product Status|  
   
-     **產品類別目錄**  
+     **產品類別**  
   
     |來源名稱|易記名稱|  
     |-----------------|-------------------|  
@@ -170,7 +170,7 @@ ms.locfileid: "66070322"
     |DueDate|Due Date|  
     |ShipDate|Ship Date|  
   
-## <a name="next-step"></a>下一個步驟  
- 若要繼續本教學課程，請移至下一課：[第 4 課：標記為日期資料表](lesson-3-mark-as-date-table.md)。  
+## <a name="next-step"></a>後續步驟  
+ 若要繼續進行本教學課程，請前往下一課： [第 4 課：標記為日期資料表](lesson-3-mark-as-date-table.md)。  
   
   

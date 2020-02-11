@@ -1,5 +1,5 @@
 ---
-title: 結果集對應至變數在執行 SQL 工作 |Microsoft Docs
+title: 在執行 SQL 工作中將結果集對應至變數 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057763"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>在執行 SQL 工作中將結果集對應至變數
@@ -30,30 +30,30 @@ ms.locfileid: "66057763"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在方案總管  中，按兩下封裝將其開啟。  
+2.  在 **方案總管**中，按兩下封裝將其開啟。  
   
 3.  按一下 **[控制流程]** 索引標籤。  
   
-4.  如果封裝尚未包含執行 SQL 工作，則會加入一個執行 SQL 工作至封裝的控制流程。 如需詳細資訊，請參閱[加入或刪除工作或容器中的控制流程](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  如果封裝尚未包含執行 SQL 工作，則會加入一個執行 SQL 工作至封裝的控制流程。 如需詳細資訊，請參閱[在控制流程中加入或刪除工作或容器](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
 5.  按兩下執行 SQL 工作。  
   
-6.  在 [執行 SQL 工作編輯器]  對話方塊的 [一般]  頁面上，選取 [單一資料列]  、[完整結果集]  或 [XML]  結果集類型。  
+6.  在 [執行 SQL 工作編輯器]**** 對話方塊的 [一般]**** 頁面上，選取 [單一資料列]****、[完整結果集]**** 或 [XML]**** 結果集類型。  
   
      如需不同結果集的描述，請參閱[執行 SQL 工作中的結果集](result-sets-in-the-execute-sql-task.md)  
   
-7.  按一下 [結果集]  。  
+7.  按一下 [結果集]****。  
   
-8.  若要加入結果集對應，請按一下 [加入]  。  
+8.  若要加入結果集對應，請按一下 [加入]****。  
   
-9. 從 [變數名稱]  清單中，選取變數或新建變數。 如需詳細資訊，請參閱[加入、刪除、變更封裝中使用者定義變數的範圍](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)。  
+9. 從 [變數名稱]**** 清單中，選取變數或新建變數。 如需詳細資訊，請參閱[加入、刪除、變更封裝中使用者定義變數的範圍](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)。  
   
      如需可對應至不同結果集之變數資料類型的描述，請參閱 [執行 SQL 工作中的結果集](result-sets-in-the-execute-sql-task.md)。  
   
-     如需如何將變數對應至單一資料行以及將多個變數對應至多個資料行的相關資訊，請參閱[執行 SQL 工作中的結果集](control-flow/execute-sql-task.md)中的**以結果集填入變數**一節。  
+     如需如何將變數對應至單一資料行以及將多個變數對應至多個資料行的相關資訊，請參閱**執行 SQL 工作中的結果集**中的[以結果集填入變數](control-flow/execute-sql-task.md)一節。  
   
-10. 在 [結果名稱]  清單中，選擇性地修改結果集的名稱。  
+10. 在 [結果名稱]**** 清單中，選擇性地修改結果集的名稱。  
   
      一般而言，您可以使用資料行名稱做為結果集名稱，也可以資料行清單中資料行的序數位置做為結果集。 使用資料行名稱做為結果集名稱的功能取決於將該工作設定為使用的提供者。 並非所有的提供者可以使用資料行名稱做為結果集名稱。  
   
@@ -61,10 +61,10 @@ ms.locfileid: "66057763"
   
 ## <a name="see-also"></a>另請參閱  
  [執行 SQL 工作](control-flow/execute-sql-task.md)   
- [中的結果集執行 SQL 工作](result-sets-in-the-execute-sql-task.md)   
+ [執行 SQL 工作中的結果集](result-sets-in-the-execute-sql-task.md)   
  [執行封裝工作](control-flow/execute-package-task.md)   
- [封裝組態](../../2014/integration-services/package-configurations.md)   
- [建立封裝組態](../../2014/integration-services/create-package-configurations.md)   
+ [套件設定](../../2014/integration-services/package-configurations.md)   
+ [建立套件設定](../../2014/integration-services/create-package-configurations.md)   
  [在子封裝中使用變數和參數的值](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
  [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b86b68b0e7273a275c8dd1bd00fe99a7c462a27d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662624"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Errors and Warnings 事件類別目錄 (Database Engine)
@@ -32,7 +32,7 @@ ms.locfileid: "62662624"
 |-----------|-----------------|  
 |[Attention 事件類別](attention-event-class.md)|指出發生 **Attention** 事件。|  
 |[Background Job Error 事件類別](background-job-error-event-class.md)|指出背景作業已異常結束。|  
-|[點陣圖警告事件類別](bitmap-warning-event-class.md)|指出查詢中已經停用點陣圖篩選。|  
+|[Bitmap Warning 事件類別](bitmap-warning-event-class.md)|指出查詢中已經停用點陣圖篩選。|  
 |[Blocked Process Report 事件類別](blocked-process-report-event-class.md)|指出封鎖工作已超出指定的時間量。|  
 |[CPU Threshold Exceeded 事件類別](cpu-threshold-exceeded-event-class.md)|指出資源管理員偵測到超出指定之 CPU 臨界值的查詢。|  
 |[ErrorLog 事件類別](errorlog-event-class.md)|指出錯誤事件已記錄在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中。|  

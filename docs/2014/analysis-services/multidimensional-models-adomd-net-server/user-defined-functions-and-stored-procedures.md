@@ -1,5 +1,5 @@
 ---
-title: 使用者定義函數和預存程序 |Microsoft Docs
+title: 使用者定義函數和預存程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c81d64d8aee6bb44451ab8d2e9a7b671af2ac06a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727854"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>使用者定義函數和預存程序
-  透過 ADOMD.NET 伺服器物件，您可以建立使用者定義函數 (UDF) 或是預存程序[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]來與中繼資料和來自伺服器的資料互動。 這些同處理序 (In-Process) 方法是透過「多維度運算式」(Multidimensional Expressions，MDX) 或「資料採礦延伸模組」(Data Mining Extensions，DMX) 陳述式來呼叫，以提供附加功能，並不會有與網路通訊關聯的延遲。  
+  透過 ADOMD.NET 伺服器物件，您可以建立使用者定義函數（UDF）或預存程式[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，以便與來自伺服器的中繼資料和資料互動。 這些同處理序 (In-Process) 方法是透過「多維度運算式」(Multidimensional Expressions，MDX) 或「資料採礦延伸模組」(Data Mining Extensions，DMX) 陳述式來呼叫，以提供附加功能，並不會有與網路通訊關聯的延遲。  
   
 ## <a name="udf-examples"></a>UDF 範例  
  UDF 是一種可以在 MDX 或 DMX 陳述式的內容中呼叫的方法，可以使用任何數目的參數，並且可以傳回任何類型的資料。  
@@ -81,7 +81,7 @@ public Set RandomSample(Set set, int returnCount)
 }  
 ```  
   
- 在下列 MDX 範例中會呼叫上述範例。 在此 MDX 範例中，五個隨機的州或省會從擷取**Adventure Works**資料庫。  
+ 在下列 MDX 範例中會呼叫上述範例。 在此 MDX 範例中，會從「**艾德公司**」資料庫中取出五個隨機狀態或省份。  
   
 ```  
 SELECT SampleAssembly.RandomSample([Geography].[State-Province].Members, 5) on ROWS,   

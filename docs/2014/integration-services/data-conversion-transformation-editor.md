@@ -15,21 +15,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060046"
 ---
 # <a name="data-conversion-transformation-editor"></a>資料轉換編輯器
-  使用 [資料轉換編輯器]  對話方塊，即可選取要轉換的資料行、選取資料行要轉換成哪一種資料類型，以及設定轉換屬性。  
+  使用 [資料轉換編輯器]**** 對話方塊，即可選取要轉換的資料行、選取資料行要轉換成哪一種資料類型，以及設定轉換屬性。  
   
 > [!NOTE]  
->  `FastParse`的 「 資料轉換 」 轉換之輸出資料行的屬性不適用於**資料轉換編輯器**，但可以透過設定**進階編輯器**。 如需這個屬性的詳細資訊，請參閱 [轉換自訂屬性](data-flow/transformations/transformation-custom-properties.md)的＜資料轉換＞一節。  
+>  [ `FastParse`資料轉換**編輯器**] 中無法使用資料轉換之輸出資料行的屬性，但是可以使用 [**進階編輯器**] 來設定它。 如需這個屬性的詳細資訊，請參閱 [轉換自訂屬性](data-flow/transformations/transformation-custom-properties.md)的＜資料轉換＞一節。  
   
  若要深入了解資料轉換，請參閱 [資料轉換](data-flow/transformations/data-conversion-transformation.md)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **可用的輸入資料行**  
  使用核取方塊選取要轉換的資料行。 您的選取範圍會將輸入資料行加入下列資料表中。  
   
@@ -40,15 +40,15 @@ ms.locfileid: "66060046"
  輸入每一個新資料行的別名。 預設為 `Copy of`，後面接著輸入資料行的名稱；但是您也可以選擇任何唯一的描述性名稱。  
   
  **資料類型**  
- 從清單中選取可用的資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
+ 從清單中選取可用的資料類型。 如需詳細資訊，請參閱[Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
   
  **長度**  
  設定字串資料的資料行長度。  
   
- **有效位數**  
+ **Precision**  
  設定數值資料的有效位數。  
   
- **小數位數**  
+ **調整**  
  設定數值資料的小數位數。  
   
  **字碼頁**  

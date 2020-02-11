@@ -1,5 +1,5 @@
 ---
-title: bcp_readfmt | Microsoft Docs
+title: bcp_readfmt |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76ccc4271877b81ae103a89b5df727b74017d9ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62688664"
 ---
-# <a name="bcpreadfmt"></a>bcp_readfmt
+# <a name="bcp_readfmt"></a>bcp_readfmt
   從指定的格式檔案讀取資料檔格式定義。  
   
 ## <a name="syntax"></a>語法  
@@ -53,16 +53,16 @@ szFormatFile
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 在後`bcp_readfmt`讀取格式值，它會適當地呼叫[bcp_columns](bcp-columns.md)並[bcp_colfmt](bcp-colfmt.md)。 您不需要剖析格式檔案，也不需要進行這些呼叫。  
+ 在`bcp_readfmt`讀取格式值之後，它會對[bcp_columns](bcp-columns.md)和[bcp_colfmt](bcp-colfmt.md)進行適當的呼叫。 您不需要剖析格式檔案，也不需要進行這些呼叫。  
   
- 若要保存格式檔案，呼叫[bcp_writefmt](bcp-writefmt.md)。 呼叫`bcp_readfmt`可以參考已儲存的格式。 如需詳細資訊，請參閱 < [bcp_init](bcp-init.md)。  
+ 若要保存格式檔案，請呼叫[bcp_writefmt](bcp-writefmt.md)。 對的`bcp_readfmt`呼叫可以參考儲存的格式。 如需詳細資訊，請參閱[bcp_init](bcp-init.md)。  
   
- 或者，大量複製公用程式 (**bcp**) 可以將使用者定義的資料格式儲存在您可以參考的檔案中`bcp_readfmt`。 如需詳細資訊**bcp**公用程式和結構**bcp**資料格式檔案，請參閱[大量匯入和匯出的資料 &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md)。  
+ 或者，大量複製公用程式（**bcp**）可以將使用者定義的資料格式儲存在可供`bcp_readfmt`參考的檔案中。 如需**bcp**公用程式和**bcp**資料格式檔案結構的詳細資訊，請參閱[大量匯入和匯出資料 &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md)。  
   
- `BCPDELAYREADFMT`的值*eOption*參數[bcp_control](bcp-control.md)修改 bcp_readfmt 的行為。  
+ Bcp_control `BCPDELAYREADFMT`的*eOption*參數值會修改[](bcp-control.md) bcp_readfmt 的行為。  
   
 > [!NOTE]  
->  格式檔案必須已經產生 4.2 版或更新版本的**bcp**公用程式。  
+>  格式檔案必須已由**bcp**公用程式的4.2 或更新版本所產生。  
   
 ## <a name="example"></a>範例  
   

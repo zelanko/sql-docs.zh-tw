@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832449"
 ---
 # <a name="data-flow-task"></a>資料流程工作
@@ -44,7 +44,9 @@ ms.locfileid: "62832449"
  ![資料流程](../media/mw-dts-09.gif "資料流程")  
   
 ## <a name="log-entries"></a>記錄項目  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供一組可用於所有工作的記錄事件。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 也為許多工作提供自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../custom-messages-for-logging.md)。 資料流程工作包含下列自訂記錄項目：  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供一組可用於所有工作的記錄事件。 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 也為許多工作提供自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../custom-messages-for-logging.md)。 資料流程工作包含下列自訂記錄項目：  
   
 |記錄項目|描述|  
 |---------------|-----------------|  
@@ -66,7 +68,7 @@ ms.locfileid: "62832449"
   
 -   [效能計數器](../performance/performance-counters.md)  
   
--   [Data Flow Performance Features](../data-flow/data-flow-performance-features.md)  
+-   [資料流程效能的功能](../data-flow/data-flow-performance-features.md)  
   
 ### <a name="sample-messages-from-a-data-flow-task"></a>來自資料流程工作的範例訊息  
  下表為非常簡單的封裝列出了記錄項目的範例訊息。 該封裝會使用 OLE DB 來源擷取資料表的資料、使用「排序」轉換來排序資料，以及使用 OLE DB 目的地將資料寫入不同的資料表。  
@@ -86,29 +88,29 @@ ms.locfileid: "62832449"
   
  許多記錄事件會寫入多個項目，並且有些記錄項目的訊息包含複雜的資料。 若要更容易了解和溝通複雜訊息的內容，您可以剖析訊息文字。 視記錄的位置而定，您可以使用 Transact-SQL 陳述式或指令碼元件，將複雜的文字區分成資料行或其他更有用的格式。  
   
- 例如，下表包含剖析成資料行的訊息：「資料列是提供給資料流程元件做為輸入。 :  :1185 :OLE DB 來源輸出 :1180 :排序 :1181 :排序輸入 :76"，剖析為資料行。 這個訊息是在資料列從 OLE DB 來源傳送到「排序」轉換時，由 `OnPipelineRowsSent` 事件寫入。  
+ 例如，下表包含剖析成資料行的訊息：「資料列是提供給資料流程元件做為輸入。 :  : 1185 : OLE DB 來源輸出 : 1180 : 排序 : 1181 : 排序輸入 : 76」。 這個訊息是在資料列從 OLE DB 來源傳送到「排序」轉換時，由 `OnPipelineRowsSent` 事件寫入。  
   
-|「資料行」|描述|值|  
+|資料行|描述|值|  
 |------------|-----------------|-----------|  
 |**PathID**|OLE DB 來源和「排序」轉換之間路徑的 `ID` 屬性的值。|1185|  
 |**PathName**|路徑之 `Name` 屬性的值。|OLE DB 來源輸出|  
 |**ComponentID**|「排序」轉換之 `ID` 屬性的值。|1180|  
-|**ComponentName**|「排序」轉換之 `Name` 屬性的值。|排序|  
+|**ComponentName**|「排序」轉換之 `Name` 屬性的值。|Sort|  
 |**InputID**|「排序」轉換之輸入的 `ID` 屬性的值。|1181|  
 |**InputName**|「排序」轉換之輸入的 `Name` 屬性的值。|排序輸入|  
 |**RowsSent**|已傳送至「排序」轉換之輸入的資料列數目。|76|  
   
 ## <a name="configuration-of-the-data-flow-task"></a>資料流程工作的組態  
- 您可以在 [屬性]  視窗中或以程式設計方式設定屬性。  
+ 您可以在 [屬性]**** 視窗中或以程式設計方式設定屬性。  
   
- 如需如何在 [屬性]  視窗中設定這些屬性的詳細資訊，請按一下下列主題：  
+ 如需如何在 [屬性]**** 視窗中設定這些屬性的詳細資訊，請按一下下列主題：  
   
 -   [設定工作或容器的屬性](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>資料流程工作的程式設計組態  
  如需有關以程式設計方式將資料流程工作加入封裝，並設定資料流程屬性的詳細資訊，請按下列主題：  
   
--   [以程式設計方式加入資料流程工作](../building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
+-   [以程式設計方式新增資料流程工作](../building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>相關工作  
  [設定工作或容器的屬性](../set-the-properties-of-a-task-or-container.md)  

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23ad4cd92d186f43fb1a9dd81e1dbb0727170367
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721130"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>使用快照集初始化訂閱
@@ -25,7 +25,7 @@ ms.locfileid: "62721130"
   
 -   如果快照集用於不使用參數化篩選的快照式發行集、交易式發行集或合併式發行集，則快照集會在大量複製程式 (bcp) 檔案中包含結構描述，還會包含複寫所需的條件約束、擴充屬性、索引、觸發程序和系統資料表。 如需建立和套用快照集的詳細資訊，請參閱[建立和套用快照集](create-and-apply-the-snapshot.md)。  
   
--   若快照集是專為使用參數化篩選的合併式發行集而產生，該快照集會使用兩部份處理建立而成。 首先建立結構描述快照集，其中包含複寫指令碼和已發行物件的結構描述，但不包含資料。 接下來每個訂閱皆以快照集初始化，該快照集中包含從結構描述快照集複製而來的指令碼和結構描述，以及屬於訂閱分割的資料。 如需詳細資訊，請參閱＜ [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md)＞。  
+-   若快照集是專為使用參數化篩選的合併式發行集而產生，該快照集會使用兩部份處理建立而成。 首先建立結構描述快照集，其中包含複寫指令碼和已發行物件的結構描述，但不包含資料。 接下來每個訂閱皆以快照集初始化，該快照集中包含從結構描述快照集複製而來的指令碼和結構描述，以及屬於訂閱分割的資料。 如需詳細資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md)。  
   
  依照您發行集的複寫類型和發行項不同，快照集的組成檔案會不一樣。 這些檔案會複製到設定「散發者」時指定的預設快照集資料夾，或建立發行集時指定的替代快照集資料夾。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62721130"
 ## <a name="snapshot-options"></a>快照集選項  
  使用快照集初始化訂閱時，可以使用下列選項。 您可以：  
   
--   指定代替預設快照集資料夾位置的替代快照集資料夾位置，或同時指定這兩個位置。 如需詳細資訊，請參閱＜ [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md)＞。  
+-   指定代替預設快照集資料夾位置的替代快照集資料夾位置，或同時指定這兩個位置。 如需相關資訊，請參閱 [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md)。  
   
 -   壓縮快照集以儲存在抽取式媒體，或者透過慢速網路傳送。 如需詳細資訊，請參閱＜ [Compressed Snapshots](compressed-snapshots.md)＞。  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667126"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>使用複寫監視器來檢視資訊及執行工作
@@ -30,18 +30,18 @@ ms.locfileid: "62667126"
 
   「複寫監視器」提供下列包含所選取發行集之資訊的索引標籤：  
   
--   **所有訂用帳戶**-此索引標籤會顯示選取之發行集的所有訂用帳戶的相關資訊。  
+-   **所有訂閱**-此索引標籤會顯示所選取發行集之所有訂閱的相關資訊。  
   
--   **代理程式**-此索引標籤會顯示發行集所使用的所有代理程式的相關資訊：  
+-   **代理**程式-此索引標籤會顯示發行集所使用之所有代理程式的相關資訊：  
   
     -   所有發行集所使用的快照集代理程式。    
     -   所有交易式發行集所使用的記錄讀取器代理程式。    
     -   「佇列讀取器代理程式」，由已佇列更新訂閱的交易式發行集使用。  
   
--   **警告** (針對執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 及更新版本的「散發者」)   
+-   **警告**（適用于執行[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]和更新版本的散發者）   
     -   這個索引標籤可用來為代理程式指定警告和警示。  
   
--   **[追蹤 Token]** (對於執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 及更新版本的「散發者」，僅限於異動複寫)。  
+-   **追蹤**token （僅限異動複寫，適用于[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]執行和更新版本的散發者）  
   
      這個索引標籤能讓您測量延遲，在發行者端所認可之交易與在訂閱者端所認可之對應交易之間經過的時間。  
   
@@ -50,23 +50,23 @@ ms.locfileid: "62667126"
 ### <a name="perform-tasks"></a>執行工作
   
 1.  在左窗格中展開發行者群組，展開發行者，然後按一下發行集。    
-2.  若要檢視並修改發行集屬性，請以滑鼠右鍵按一下發行集，然後按一下 **[屬性]** 。    
+2.  若要檢視並修改發行集屬性，請以滑鼠右鍵按一下發行集，然後按一下 **[屬性]**。    
 3.  若要檢視有關訂閱的資訊，請按一下 **[所有訂閱]** 索引標籤。  
   
-     若要檢視和修改訂閱屬性，以滑鼠右鍵按一下訂閱，然後按一下 **[屬性]** 。 您也可以透過這個索引標籤存取更多詳細資訊並可執行工作。如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](view-information-and-perform-tasks-replication-monitor.md)。  
+     若要檢視和修改訂閱屬性，以滑鼠右鍵按一下訂閱，然後按一下 **[屬性]** 。 您也可以存取更詳細的資訊，並在此索引標籤上執行工作。如需詳細資訊，請參閱[使用複寫監視器來查看資訊及執行](view-information-and-perform-tasks-replication-monitor.md)工作。  
   
-4.  若要檢視有關代理程式的詳細資訊，請按一下 **[代理程式]** 索引標籤。您也可以透過這個索引標籤存取更多詳細資訊並可執行工作。如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](view-information-and-perform-tasks-replication-monitor.md)。    
-5.  若要檢視有關代理程式警告與臨界值的詳細資訊，請按一下 **[警告]** 索引標籤。如需詳細資訊，請參閱＜ [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)＞。   
-6.  若要檢視追蹤 Token 的資訊，請按一下 **[追蹤 Token]** 索引標籤。如需如何使用追蹤 Token 的詳細資訊，請參閱＜ [針對異動複寫測量延遲及驗證連接](measure-latency-and-validate-connections-for-transactional-replication.md)＞。  
+4.  若要查看代理程式的相關資訊，請按一下 [**代理**程式] 索引標籤。您也可以存取更詳細的資訊，並在此索引標籤上執行工作。如需詳細資訊，請參閱[使用複寫監視器來查看資訊及執行](view-information-and-perform-tasks-replication-monitor.md)工作。    
+5.  若要查看有關代理程式警告和閾值的資訊，請按一下 [**警告**] 索引標籤。如需詳細資訊，請參閱[在複寫監視器中設定臨界值和警告](set-thresholds-and-warnings-in-replication-monitor.md)。   
+6.  若要查看追蹤標記的相關資訊，請按一下 [**追蹤**token] 索引標籤。如需如何使用追蹤 token 的詳細資訊，請參閱[測量異動複寫的延遲和驗證連接](measure-latency-and-validate-connections-for-transactional-replication.md)。  
   
 ## <a name="for-a-publisher"></a>針對發行者
   「複寫監視器」提供下列顯示所選取「發行者」之資訊的索引標籤：  
   
--   **發行集**-此索引標籤顯示選取之發行者端所有發行集的相關資訊。  
+-   發行集-此索引標籤會顯示所選發行者端所有發行**集的相關**資訊。  
   
--   **訂閱監看清單**-此索引標籤要在選取之發行者端有錯誤、 警告或效能最差的效能，顯示所有可用發行集的訂閱相關的資訊。 執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]之前版本的散發者不會顯示這個索引標籤。  
+-   **訂閱監看清單**-此索引標籤是用來顯示所選發行者端可用的所有發行集之訂閱的相關資訊，其中包含錯誤、警告或效能最差效能。 執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前版本的散發者不會顯示這個索引標籤。  
   
--   **代理程式** 索引標籤-此索引標籤顯示之代理程式和作業的詳細的資訊的所有類型的複寫。 您也可以用這個索引標籤來啟動和停止每個代理程式和工作。  
+-   [**代理**程式] 索引標籤-此索引標籤會顯示有關所有複寫類型所使用之代理程式和作業的詳細資訊。 您也可以用這個索引標籤來啟動和停止每個代理程式和工作。  
   
  若要檢視每一索引標籤上選項的詳細資訊，請按一下右窗格中的索引標籤，然後按一下功能表列上的 **[說明]** 。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](start-the-replication-monitor.md)。  
   
@@ -90,28 +90,28 @@ ms.locfileid: "62667126"
 
   複寫監視器提供下列包含有訂閱資訊的索引標籤：  
   
--   **所有訂用帳戶**-此索引標籤會顯示選取之發行集的所有訂用帳戶的相關資訊。  
+-   **所有訂閱**-此索引標籤會顯示所選取發行集之所有訂閱的相關資訊。  
   
--   **訂閱監看清單**-此索引標籤要在選取之發行者端有錯誤、 警告或效能最差的效能，顯示所有可用發行集的訂閱相關的資訊。 執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]之前版本的散發者不會顯示這個索引標籤。  
+-   **訂閱監看清單**-此索引標籤是用來顯示所選發行者端可用的所有發行集之訂閱的相關資訊，其中包含錯誤、警告或效能最差效能。 執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前版本的散發者不會顯示這個索引標籤。  
   
  如需有關各索引標籤選項的資訊，請按一下右窗格的索引標籤，然後按一下功能表上的 **[說明]** 。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](start-the-replication-monitor.md)。  
   
-### <a name="all-subscriptions-tab"></a>所有訂閱 索引標籤  
+### <a name="all-subscriptions-tab"></a>[所有訂閱] 索引標籤  
   
 1.  在左窗格中展開發行者群組，展開發行者，然後按一下發行集。   
 2.  若要檢視有關訂閱的資訊，請按一下 **[所有訂閱]** 索引標籤。若只要檢視給定狀態中的訂閱，如同步處理，請從 **[顯示]** 下拉式清單中選取某選項。   
-3.  若要檢視和修改訂閱屬性，以滑鼠右鍵按一下訂閱，然後按一下 **[屬性]** 。 您也可以透過這個索引標籤存取更多詳細資訊並可執行工作。如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](view-information-and-perform-tasks-replication-monitor.md)。  
+3.  若要檢視和修改訂閱屬性，以滑鼠右鍵按一下訂閱，然後按一下 **[屬性]** 。 您也可以存取更詳細的資訊，並在此索引標籤上執行工作。如需詳細資訊，請參閱[使用複寫監視器來查看資訊及執行](view-information-and-perform-tasks-replication-monitor.md)工作。  
   
 ### <a name="subscription-watch-list-tab"></a>[訂閱監看清單] 索引標籤  
   
 1.  在左窗格中展開發行者群組，然後按一下發行者。   
 2.  若要檢視有關訂閱的資訊，請按一下 **[訂閱監看清單]** 索引標籤。  
 3.  從 [顯示 \<訂閱類型> 訂閱]  下拉式清單中選取要顯示的訂閱類型。 若只要檢視給定狀態中的訂閱，如同步處理，請從 **[顯示]** 下拉式清單中選取某選項。    
-4.  若要檢視和修改訂閱屬性，以滑鼠右鍵按一下訂閱，然後按一下 **[屬性]** 。 您也可以透過這個索引標籤存取更多詳細資訊並可執行工作。如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](view-information-and-perform-tasks-replication-monitor.md)。  
+4.  若要檢視和修改訂閱屬性，以滑鼠右鍵按一下訂閱，然後按一下 **[屬性]** 。 您也可以存取更詳細的資訊，並在此索引標籤上執行工作。如需詳細資訊，請參閱[使用複寫監視器來查看資訊及執行](view-information-and-perform-tasks-replication-monitor.md)工作。  
 
 ## <a name="for-publication-agents"></a>針對發行集代理程式
 
-  複寫監視器提供 **[代理程式]** 索引標籤，其中包含與選取的發行集相關聯之代理程式的資訊。 散發代理程式和合併代理程式會與訂用帳戶; 相關聯如需詳細資訊，請參閱 < [View Information and Perform Tasks 使用 「 複寫監視器](view-information-and-perform-tasks-replication-monitor.md)。  
+  複寫監視器提供 **[代理程式]** 索引標籤，其中包含與選取的發行集相關聯之代理程式的資訊。 散發代理程式和合併代理程式與訂閱相關聯;如需詳細資訊，請參閱[使用複寫監視器來查看資訊及執行](view-information-and-perform-tasks-replication-monitor.md)工作。  
   
  這個索引標籤會顯示下列代理程式的相關資訊：    
 -   所有發行集所使用的快照集代理程式。    
@@ -133,12 +133,12 @@ ms.locfileid: "62667126"
 
 ## <a name="for-subscription-agents"></a>針對訂閱代理程式
 
-### <a name="view-information-and-perform-tasks"></a>檢視資訊並執行工作
+### <a name="view-information-and-perform-tasks"></a>查看資訊並執行工作
   「複寫監視器」提供了兩種索引標籤，可讓您存取與訂閱相關聯的代理程式之資訊：  
   
--   **所有訂用帳戶**-此索引標籤會顯示選取之發行集的所有訂用帳戶的相關資訊。  
+-   **所有訂閱**-此索引標籤會顯示所選取發行集之所有訂閱的相關資訊。  
   
--   **訂閱監看清單**-此索引標籤要在選取之發行者端有錯誤、 警告或效能最差的效能，顯示所有可用發行集的訂閱相關的資訊。 執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]之前版本的散發者不會顯示這個索引標籤。  
+-   **訂閱監看清單**-此索引標籤是用來顯示所選發行者端可用的所有發行集之訂閱的相關資訊，其中包含錯誤、警告或效能最差效能。 執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前版本的散發者不會顯示這個索引標籤。  
   
  如需有關各索引標籤選項的資訊，請按一下右窗格的索引標籤，然後按一下功能表上的 **[說明]** 。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](start-the-replication-monitor.md)。  
   

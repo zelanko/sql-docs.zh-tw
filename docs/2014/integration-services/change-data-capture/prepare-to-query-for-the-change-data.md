@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 559af9cdd7e7014e114b431dddf25b09dd18dc81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771269"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>準備查詢變更資料
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程中，第三個工作 (也就是最後一個工作) 是準備查詢變更資料，並加入「資料流程」工作。  
   
 > [!NOTE]  
->  控制流程的第二個工作是確保所選間隔的變更資料已就緒。 如需這項工作的詳細資訊，請參閱[判斷變更資料是否就緒](determine-whether-the-change-data-is-ready.md)。 如需設計控制流程之完整程序的描述，請參閱[異動資料擷取 &#40;SSIS&#41;](change-data-capture-ssis.md)。  
+>  控制流程的第二個工作是確保所選間隔的變更資料已就緒。 如需這項工作的詳細資訊，請參閱 [判斷變更資料是否就緒](determine-whether-the-change-data-is-ready.md)。 如需設計控制流程之完整程序的描述，請參閱[異動資料擷取 &#40;SSIS&#41;](change-data-capture-ssis.md)。  
   
 ## <a name="design-considerations"></a>設計考量  
  若要擷取異動資料，您將呼叫 Transact-SQL 資料表值函式，接受間隔的端點做為輸入參數，並傳回指定之間隔的異動資料。 資料流程中的來源元件會呼叫這個函數。 如需此來源元件的資訊，請參閱 [擷取與了解變更資料](retrieve-and-understand-the-change-data.md)。  
@@ -59,7 +59,7 @@ ms.locfileid: "62771269"
     > [!NOTE]  
     >  此程序假設封裝會從單一資料表執行累加式載入。 如果封裝從多個資料表載入，而且擁有包含多個子封裝的父封裝，則會將此工作當做第一個元件，加入到每個子封裝中。 如需詳細資訊，請參閱 [執行多個資料表的累加式載入](perform-an-incremental-load-of-multiple-tables.md)。  
   
-2.  在 [指令碼工作編輯器]  的 [指令碼]  頁面上，選取下列選項：  
+2.  在 **[指令碼工作編輯器]** 的 **[指令碼]** 頁面上，選取下列選項：  
   
     1.  針對 [ReadOnlyVariables]  ，選取 [User::DataReady]  、[User::ExtractStartTime]  和 [User::ExtractEndTime]  。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62771269"
         Dts.Variables["SqlDataQuery"].Value = sqlDataQuery;  
         ```  
   
-         \-或-  
+         \- 或 -  
   
     -   如果您是以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]撰寫程式，輸入下列程式碼行：  
   
@@ -195,7 +195,7 @@ ms.locfileid: "62771269"
   
 -   在 [控制流程]  索引標籤上，加入「資料流程」工作，然後連接串連查詢字串的工作。  
   
-## <a name="next-step"></a>下一個步驟  
+## <a name="next-step"></a>後續步驟  
  準備查詢字串並設定「資料流程」工作後，下一個步驟是建立將從資料庫擷取變更資料的資料表值函式。  
   
  **下一個主題：** [建立函式以擷取變更資料](create-the-function-to-retrieve-the-change-data.md)  

@@ -1,5 +1,5 @@
 ---
-title: 設定 SQL Server ODBC 驅動程式使用說明主題 |Microsoft Docs
+title: 設定 SQL Server ODBC 驅動程式的使用說明主題 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c2e64b667d0bbdc8dd886dc0e9fef9d260d473b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753670"
 ---
 # <a name="configuring-the-sql-server-odbc-driver-how-to-topics"></a>設定 SQL Server ODBC 驅動程式的使用說明主題
@@ -22,9 +22,9 @@ ms.locfileid: "62753670"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [新增資料來源&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
+-   [將資料來源加入 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
--   [刪除資料來源&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)  
+-   [刪除 &#40;ODBC&#41;的資料來源](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC 的使用說明主題](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  

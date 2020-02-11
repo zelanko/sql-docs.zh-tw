@@ -1,5 +1,5 @@
 ---
-title: managed_backup. sp_backup_on_demand (Transact-sql) |Microsoft Docs
+title: managed_backup. sp_backup_on_demand （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70155394"
 ---
-# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup.sp_backup_on_demand & Amp;&#40;transact-SQL&AMP;&#41;
+# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   要求[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]執行指定資料庫的備份。  
   
- 使用此預存程序可執行以[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]設定之資料庫的隨選備份。 這可防止備份鏈和[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]進程中的任何中斷, 並將備份儲存在相同的 Azure Blob 儲存體容器中。  
+ 使用此預存程序可執行以[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]設定之資料庫的隨選備份。 這可防止備份鏈和[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]進程中的任何中斷，並將備份儲存在相同的 Azure Blob 儲存體容器中。  
   
  成功完成備份時，會傳回完整備份檔案路徑。 此路徑包含備份作業所產生之新備份檔案的名稱和位置。  
   
@@ -50,18 +50,18 @@ EXEC managed_backup.sp_backup_on_demand
   
 ##  <a name="Arguments"></a> 引數  
  @database_name  
- 執行備份所在之資料庫的名稱。 @database_name已 **SYSNAME**。  
+ 執行備份所在之資料庫的名稱。 @database_name為**SYSNAME**。  
   
  @type  
- 要執行的備份類型:資料庫或記錄檔。 @type參數是 **NVARCHAR(32)** 。  
+ 要執行的備份類型：資料庫或記錄。 @type參數是**NVARCHAR （32）**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
- 需要**db_backupoperator**資料庫角色中的成員資格、具有**ALTER ANY CREDENTIAL**許可權, 以及**Sp_delete_backuphistory**預存程式的**EXECUTE**許可權。  
+### <a name="permissions"></a>權限  
+ 需要**db_backupoperator**資料庫角色中的成員資格、具有**ALTER ANY CREDENTIAL**許可權，以及**Sp_delete_backuphistory**預存程式的**EXECUTE**許可權。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立資料庫 ' TestDB ' 的資料庫備份要求。 此資料庫已啟用[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  

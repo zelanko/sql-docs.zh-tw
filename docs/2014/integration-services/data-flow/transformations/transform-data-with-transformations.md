@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9fb4014688f1899e813d1df3e677caf9ad7bfbf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770297"
 ---
 # <a name="transform-data-with-transformations"></a>使用轉換來轉換資料
@@ -26,7 +26,7 @@ ms.locfileid: "62770297"
   
  下圖顯示包含一個來源、兩個轉換及一個目的地的簡單資料流程。  
   
- ![Data flow](../../media/mw-dts-08.gif "Data flow")  
+ ![](../../media/mw-dts-08.gif "設計師中")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 轉換提供下列功能：  
   

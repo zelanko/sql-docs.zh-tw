@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073603"
 ---
 # <a name="move-an-analysis-services-database"></a>移動 Analysis Services 資料庫
@@ -43,21 +43,21 @@ ms.locfileid: "66073603"
   
 1.  在 SSMS 的左窗格或右窗格中，找出要移動的資料庫。  
   
-2.  以滑鼠右鍵按一下資料庫，然後選取**卸離...**  
+2.  以滑鼠右鍵按一下資料庫，然後選取 [卸**離**]。  
   
-3.  將密碼指派給要卸離的資料庫，然後按一下 [確定]  執行卸離命令。  
+3.  將密碼指派給要卸離的資料庫，然後按一下 [確定]**** 執行卸離命令。  
   
 4.  您可以使用任何作業系統機制或移動檔案的標準方法，將資料庫資料夾移至新的位置。  
   
-5.  在 SSMS 的左窗格或右窗格中，找出 [資料庫]  資料夾。  
+5.  在 SSMS 的左窗格或右窗格中，找出 [資料庫]**** 資料夾。  
   
-6.  以滑鼠右鍵按一下**資料庫**資料夾，然後選取**附加...**  
+6.  以滑鼠右鍵按一下 [**資料庫**] 資料夾，然後選取 [**附加**]。  
   
-7.  在 [資料夾]  文字方塊中，輸入資料庫資料夾的新位置。 或者，您可以使用瀏覽按鈕 ( **...** ) 來找出資料庫資料夾。  
+7.  在 [資料夾]**** 文字方塊中，輸入資料庫資料夾的新位置。 或者，您可以使用瀏覽按鈕（**...**）來找出資料庫檔案夾。  
   
-8.  選取`ReadWrite`資料庫模式。  
+8.  選取資料庫`ReadWrite`的模式。  
   
-9. 輸入在步驟 3 中使用的密碼，然後按一下 [確定]  執行附加命令。  
+9. 輸入在步驟 3 中使用的密碼，然後按一下 [確定]**** 執行附加命令。  
   
 #### <a name="moving-a-database-programmatically-using-amo"></a>以程式設計方式使用 AMO 來移動資料庫  
   
@@ -144,7 +144,7 @@ ms.locfileid: "66073603"
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [附加和卸離 Analysis Services 資料庫](attach-and-detach-analysis-services-databases.md)   
  [資料庫儲存位置](database-storage-location.md)   
- [資料庫 ReadWriteMode](database-readwritemodes.md)   
+ [資料庫 Readwritemode](database-readwritemodes.md)   
  [Attach 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
  [Detach 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
  [ReadWriteMode 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   

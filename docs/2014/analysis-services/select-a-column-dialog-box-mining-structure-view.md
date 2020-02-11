@@ -1,5 +1,5 @@
 ---
-title: 選取資料行對話方塊 （採礦結構檢視） |Microsoft Docs
+title: 選取資料行對話方塊（採礦結構視圖） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ee69724fbcacad78c6053c1bbdf9c3465482665
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069923"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>選取資料行對話方塊 (採礦結構檢視)
   使用 **[選取資料行]** 對話方塊，即可將資料行加入至採礦結構。 此對話方塊包含的選項會因您是使用 OLAP 採礦模型或關聯式採礦模型而不同。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **來源資料表**  
  作為採礦模型基礎的資料表。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66069923"
  此選項只用於 OLAP 採礦模型。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦結構 檢視&#40;資料採礦模型設計工具&#41;](mining-structure-view-data-mining-model-designer.md)   
- [將資料行新增至採礦結構](data-mining/add-columns-to-a-mining-structure.md)  
+ [&#40;資料採礦模型設計工具的「採礦結構視圖」&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [將資料行加入至採礦結構](data-mining/add-columns-to-a-mining-structure.md)  
   
   

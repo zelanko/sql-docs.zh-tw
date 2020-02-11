@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f27ec0c9fe8078bb11a48114a3d456793271853d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768284"
 ---
 # <a name="general-page"></a>一般頁面
@@ -24,11 +24,11 @@ ms.locfileid: "62768284"
   
  若要開啟 [一般]  頁面，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [工具]  功能表上按一下 [選項]  ，然後展開 [商業智慧設計師]  ，再選取 [Integration Services 設計師]  。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **載入封裝時檢查數位簽章**  
  選取即可讓 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 在載入封裝時檢查數位簽章。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 只會檢查數位簽章是否存在、是否有效，以及是否來自信任的來源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 將不會檢查此封裝在簽署之後是否已經變更。  
   
- 如果您設定 **BlockedSignatureStates** 登錄值，此登錄值會覆寫 [載入封裝時檢查數位簽章]  選項。 如需詳細資訊，請參閱[透過設定登錄值實作簽署原則](implement-a-signing-policy-by-setting-a-registry-value.md)。  
+ 如果您設定 **BlockedSignatureStates** 登錄值，此登錄值會覆寫 [載入封裝時檢查數位簽章]  選項。 如需詳細資訊，請參閱 [透過設定登錄值實作簽署原則](implement-a-signing-policy-by-setting-a-registry-value.md)。  
   
  如需詳細資訊，請參閱 [使用數位簽章來識別封裝的來源](security/identify-the-source-of-packages-with-digital-signatures.md)。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62768284"
   
 -   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] OLE DB 提供者  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client{2}  
   
  [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝升級精靈] 只會更新儲存在連線管理員中的連接字串。 此精靈不會更新使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 運算式語言或使用指令碼工作中之程式碼以動態方式建構的連接字串。  
   
@@ -55,6 +55,6 @@ ms.locfileid: "62768284"
   
 ## <a name="see-also"></a>另請參閱  
  [安全性概觀 (Integration Services)](security/security-overview-integration-services.md)   
- [使用指令碼擴充封裝](extending-packages-scripting/extending-packages-with-scripting.md)  
+ [使用指令碼擴充套件](extending-packages-scripting/extending-packages-with-scripting.md)  
   
   

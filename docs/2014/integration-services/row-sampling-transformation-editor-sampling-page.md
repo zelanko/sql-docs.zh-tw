@@ -1,5 +1,5 @@
 ---
-title: 資料列取樣轉換編輯器 （取樣頁面） |Microsoft Docs
+title: 資料列取樣轉換編輯器（取樣頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30163b4d65ac6a732efb3f7c67a018f433a42ac0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056451"
 ---
 # <a name="row-sampling-transformation-editor-sampling-page"></a>資料列取樣轉換編輯器 (取樣頁面)
@@ -27,7 +27,7 @@ ms.locfileid: "66056451"
   
  若要深入了解資料列取樣轉換，請參閱＜ [Row Sampling Transformation](data-flow/transformations/row-sampling-transformation.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **資料列數目**  
  指定輸入中的資料列數目作為取樣。  
   

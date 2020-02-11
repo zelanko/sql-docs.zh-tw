@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a3994aa8a442f0ec1522bdf2314e0d6023e94bcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667062"
 ---
-# <a name="mssqleng002601"></a>MSSQL_ENG002601
+# <a name="mssql_eng002601"></a>MSSQL_ENG002601
     
 ## <a name="message-details"></a>訊息詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|2601|  
 |事件來源|MSSQLSERVER|  
 |元件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -41,7 +41,7 @@ ms.locfileid: "62667062"
   
 -   已使用具有識別欄位的資料表，但並未適當管理資料行。  
   
--   在合併式複寫中，這項錯誤也可能在插入作業期間系統資料表**MSmerge_contents**; 引發的錯誤如下：無法以唯一索引 'ucl1syccontents'。' 物件 'MSmerge_contents' 中插入重複的索引鍵資料列  
+-   在合併式複寫中，插入系統資料表 **MSmerge_contents**期間也可以發生此錯誤；引發的錯誤與以下類似：無法以唯一索引 'ucl1SycContents' 在物件 'MSmerge_contents' 中插入重複的索引鍵資料列。  
   
 ## <a name="user-action"></a>使用者動作  
  必須依照錯誤產生的原因採取動作：  
