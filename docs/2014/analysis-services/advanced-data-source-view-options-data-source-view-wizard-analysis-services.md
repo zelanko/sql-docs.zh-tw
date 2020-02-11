@@ -1,5 +1,5 @@
 ---
-title: 進階資料來源檢視選項對話方塊 （資料來源檢視精靈） (Analysis Services) |Microsoft Docs
+title: '[高級資料來源視圖選項] 對話方塊（資料來源視圖嚮導）（Analysis Services） |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40a1c9ab87a608aa9d39f77fb4693acdc1b57efa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062848"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>進階資料來源檢視選項對話方塊 (資料來源檢視精靈) (Analysis Services)
+  
   **[進階資料來源檢視選項]** 對話方塊會提供其他控制項，讓您控制資料來源檢視如何從資料來源提取結構描述和關聯性以建立檢視。  
   
- 若要開啟 **[進階資料來源檢視選項]** 對話方塊，在資料來源檢視精靈中，於 **[選取資料來源]** 頁面上，按一下 **[進階]** 。  
+ 若要開啟 **[進階資料來源檢視選項]** 對話方塊，在資料來源檢視精靈中，於 **[選取資料來源]** 頁面上，按一下 **[進階]**。  
   
 ## <a name="options"></a>選項。  
- **擷取關聯性**  
+ **抓取關聯性**  
  指出是否應該從資料來源擷取關聯性詳細資料，並套用至資料來源檢視。 如果您在建立關聯性之後變更此選項，就不會從資料來源檢視中移除現有的關聯性。  
   
  **限制使用結構描述**  
@@ -33,6 +34,6 @@ ms.locfileid: "66062848"
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源](multidimensional-models/data-sources-in-multidimensional-models.md)   
- [支援的資料來源&#40;SSAS 多維度&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [&#40;SSAS 多維度&#41;支援的資料來源](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

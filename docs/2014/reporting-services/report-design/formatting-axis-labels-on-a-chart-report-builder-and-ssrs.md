@@ -28,16 +28,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a98a3496e237de1d4eeb530dfe5e22b70149890
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105850"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的軸標籤 (報表產生器及 SSRS)
   以座標為基礎的圖表類型 (直條圖、橫條圖、區域圖、點圖、折線圖和範圍圖) 具有兩個座標軸，可用來分類及顯示資料關聯性。 每個座標軸都會套用不同類型的格式設定。  
   
- 您可以使用 [軸屬性]  對話方塊或 [屬性] 窗格來設定軸的格式。 以滑鼠右鍵按一下要格式化的軸，然後按一下 [軸屬性]  ，變更軸文字、數值和日期格式、主要和次要刻度、標籤自動調整以及軸線條的粗細、色彩和樣式等值。 若要變更軸標題的值，以滑鼠右鍵按一下軸標題，然後按一下 [軸標題屬性]  。  
+ 您可以使用 [軸屬性]**** 對話方塊或 [屬性] 窗格來設定軸的格式。 以滑鼠右鍵按一下要格式化的軸，然後按一下 [軸屬性]****，變更軸文字、數值和日期格式、主要和次要刻度、標籤自動調整以及軸線條的粗細、色彩和樣式等值。 若要變更軸標題的值，以滑鼠右鍵按一下軸標題，然後按一下 [軸標題屬性]****。  
   
  軸標籤會在圖表上識別主要格線間隔。 根據預設，圖表會使用演算法來決定如何將標籤以最佳化的方式放置在軸上，以避免文字重疊。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66105850"
 |類型目錄欄位類型|描述|範例|  
 |-------------------------|-----------------|-------------|  
 |數值|類別目錄會以數值次序沿著 X 軸繪製。|依員工識別碼排列的銷售報表，沿著 X 軸顯示員工識別碼。|  
-|日期/時間|類別目錄會依時間順序沿著 X 軸繪製。|依月份排列的銷售報表，沿著 X 軸顯示格式化的日期。|  
+|Date/time|類別目錄會依時間順序沿著 X 軸繪製。|依月份排列的銷售報表，沿著 X 軸顯示格式化的日期。|  
 |字串|類別目錄會依出現在資料來源中的次序沿著 X 軸繪製。|依區域排列的銷售報表，沿著 X 軸顯示區域名稱。|  
   
  當放入圖表的類別目錄過多時，所有具有兩個軸的圖表類型都設計成會隱藏某些軸標籤，以產生較清晰的圖表影像並避免標籤互相衝突。  
@@ -77,7 +77,7 @@ ms.locfileid: "66105850"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>圖表如何計算軸標籤的範例  
  此處所示的資料表包含要繪製在直條圖上的範例銷售資料。 [名稱] 欄位會加入至 [類別目錄群組] 區域，而 [數量] 欄位則加入至 [值] 區域。  
   
-|名稱|Quantity|  
+|名稱|數量|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  
@@ -107,9 +107,9 @@ ms.locfileid: "66105850"
   
  有兩種方式可以設定純量軸：  
   
--   在 [軸屬性]  對話方塊中，選取 [純量軸]  選項。 這樣會在軸上沒有資料群組值存在的位置加入數值或日期/時間值。 如需詳細資訊，請參閱[軸屬性對話方塊、軸選項 &#40;報表產生器及 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)。  
+-   在 [軸屬性]**** 對話方塊中，選取 [純量軸]**** 選項。 這樣會在軸上沒有資料群組值存在的位置加入數值或日期/時間值。 如需詳細資訊，請參閱[軸屬性對話方塊、軸選項 &#40;報表產生器及 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)。  
   
--   在 [數列屬性]  對話方塊中，針對 [類別目錄欄位]  選項選取欄位或鍵入運算式。 圖表會針對您所指定之類別目錄欄位中的所有值加入軸間隔。  
+-   在 [數列屬性]**** 對話方塊中，針對 [類別目錄欄位]**** 選項選取欄位或鍵入運算式。 圖表會針對您所指定之類別目錄欄位中的所有值加入軸間隔。  
   
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>從類別目錄軸加入或移除側邊界  
  在橫條圖、直條圖和散佈圖類型中，圖表會自動在 X 軸的端點加入側邊界。 您不可以變更邊界的大小。 在所有其他圖表類型中，圖表中都不會加入側邊界。 如需詳細資訊，請參閱 [加入或移除圖表中的邊界 &#40;報表產生器及 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)。  
@@ -117,11 +117,11 @@ ms.locfileid: "66105850"
 ## <a name="in-this-section"></a>本節內容  
  [將軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
- [在圖表中放置標籤 &#40;報表產生器及 SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
+ [在圖表中放置標籤 &#40;報表產生器和 SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
   
  [指定軸間隔 &#40;報表產生器及 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
- [加入或移除圖表中的邊界 &#40;報表產生器及 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [在圖表中新增或移除邊界 &#40;報表產生器和 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
  [指定對數刻度 &#40;報表產生器及 SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2565e4cc8aa9bddb83af5e8e9077987ebd27663f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195071"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server 中的地區語言版本
@@ -50,9 +50,9 @@ ms.locfileid: "63195071"
   
 1.  如果尚未安裝，請安裝符合當地語系化版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的作業系統 MUI。  
   
-2.  在 [控制台] 中，開啟 **[地區及語言選項]**。  
+2.  在 [控制台] 中，開啟 **[地區及語言選項]** 。  
   
-3.  在 **[語言]** 索引標籤上，針對 **[用於功能表和對話方塊的語言]**，從清單中選取一值。  
+3.  在 **[語言]** 索引標籤上，針對 **[用於功能表和對話方塊的語言]** ，從清單中選取一值。  
   
      這項設定將影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的使用者介面語言，因此它必須符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的當地語系化版本。  
   
@@ -62,9 +62,9 @@ ms.locfileid: "63195071"
   
 1.  如果尚未安裝，請安裝符合當地語系化版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的作業系統 MUI。  
   
-2.  在 [控制台] 中，開啟 **[地區及語言選項]**。  
+2.  在 [控制台] 中，開啟 **[地區及語言選項]** 。  
   
-3.  在 **[地區選項]** 索引標籤上，針對 **[選擇一個項目來符合它的喜好設定]**，從清單中選取一值。  
+3.  在 **[地區選項]** 索引標籤上，針對 **[選擇一個項目來符合它的喜好設定]** ，從清單中選取一值。  
   
      這項設定會影響特定文化專用的資料格式。  
   
@@ -74,16 +74,16 @@ ms.locfileid: "63195071"
   
 1.  如果尚未安裝，請安裝符合當地語系化版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的作業系統 MUI。  
   
-2.  在 [控制台] 中，開啟 **[地區及語言選項]**。  
+2.  在 [控制台] 中，開啟 **[地區及語言選項]** 。  
   
-3.  在 [進階] 索引標籤上，針對 [選擇一個符合於您要使用的非 Unicode 程式語言版本的語言]，從清單中選取一值。  
+3.  在 [進階]  索引標籤上，針對 [選擇一個符合於您要使用的非 Unicode 程式語言版本的語言]  ，從清單中選取一值。  
   
      這項設定可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝選擇最佳預設定序。  
   
 4.  按一下 **[套用]** 來確認變更，並按一下 **[確定]** 來關閉視窗。  
   
 ## <a name="see-also"></a>另請參閱  
- [硬體和 Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
+ [安裝 SQL Server 2014 的硬體和軟體需求](hardware-and-software-requirements-for-installing-sql-server.md)   
  [安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
   
   

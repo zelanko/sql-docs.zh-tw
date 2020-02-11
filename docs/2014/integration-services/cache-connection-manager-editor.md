@@ -1,5 +1,5 @@
 ---
-title: 快取連接管理員編輯器 |Microsoft Docs
+title: 快取連線管理員編輯器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061079"
 ---
 # <a name="cache-connection-manager-editor"></a>快取連接管理員編輯器
@@ -27,18 +27,18 @@ ms.locfileid: "66061079"
   
  查閱轉換會針對參考資料集執行查閱。  
   
- [快取連線管理員編輯器]  對話方塊包含下列索引標籤：  
+ [快取連線管理員編輯器]**** 對話方塊包含下列索引標籤：  
   
--   [一般 索引標籤](#generaltab)  
+-   [[一般] 索引標籤](#generaltab)  
   
 -   [資料行索引標籤](#columnstab)  
   
- 若要深入了解快取連接管理員，請參閱＜ [Cache Connection Manager](connection-manager/cache-connection-manager.md)＞。  
+ 若要深入瞭解快取連線管理員，請參閱快取[連線管理員](connection-manager/cache-connection-manager.md)。  
   
-##  <a name="generaltab"></a> General Tab  
- 使用 [快取連線管理員編輯器]  對話方塊的 [一般]  索引標籤即可指出要從檔案中讀取快取，還是要將快取儲存至檔案。  
+##  <a name="generaltab"></a>[一般] 索引標籤  
+ 使用 [快取連線管理員編輯器]**** 對話方塊的 [一般]**** 索引標籤即可指出要從檔案中讀取快取，還是要將快取儲存至檔案。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **連線管理員名稱**  
  提供唯一的名稱給工作流程中的快取連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   
@@ -66,10 +66,10 @@ ms.locfileid: "66061079"
  **重新整理中繼資料**  
  在快取連接管理員中，刪除資料行中繼資料，然後將選取快取檔案的資料行中繼資料重新填入快取連接管理員。  
   
-##  <a name="columnstab"></a> 資料行索引標籤  
+##  <a name="columnstab"></a>資料行索引標籤  
  使用 **[快取連接管理員編輯器]** 對話方塊的 **[資料行]** 索引標籤即可設定快取中每個資料行的屬性。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **資料行**  
  指定資料行名稱。  
   
@@ -99,6 +99,6 @@ ms.locfileid: "66061079"
  指定資料行類型的字碼頁。 如果適用於資料類型，您可以更新 `Code Page`。  
   
 ## <a name="see-also"></a>另請參閱  
- [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
+ [查閱轉換](data-flow/transformations/lookup-transformation.md)  
   
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158167"
 ---
 # <a name="implementing-an-outer-join"></a>實作外部聯結
@@ -22,7 +22,7 @@ ms.locfileid: "63158167"
   
  此範例使用一個資料表變數來模擬聯結左側的資料指標，並使用另一個資料表變數來建構單一結果集，由於需要建立額外的資料列複本，因此僅適用於處理有限數目的資料列。  
   
- 變數 (@outer) 型別的 t1_type 用來逐一查看的資料列從 t1，使用 while 迴圈模擬資料指標。 變數@result型別的 t1t2_join_type 然後用來建構結果集。  
+ T1_type 類型的@outer變數（）可用來逐一查看 t1 中的資料列，並使用 while 迴圈來模擬資料指標。 然後會@result使用 t1t2_join_type 類型的變數來建立結果集。  
   
  您應該測試這個因應措施的執行效果，以確定其在您的應用程式中如預期般執行。  
   

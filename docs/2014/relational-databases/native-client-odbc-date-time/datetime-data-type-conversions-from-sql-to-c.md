@@ -1,5 +1,5 @@
 ---
-title: 從 SQL 轉換成 C |Microsoft Docs
+title: 從 SQL 轉換為 C |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bd19cb92f2d2f333954adeb97229feb718c4b592
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63207031"
 ---
 # <a name="conversions-from-sql-to-c"></a>從 SQL 轉換成 C
@@ -27,12 +27,12 @@ ms.locfileid: "63207031"
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
-|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_TYPE_DATE|[確定]|12|13|12|13,23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|[確定]|10,23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7,8|[確定]|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|[確定]|21|16|16|  
+|SQL_CHAR|2、3、4、5|2、3、6、7、8|2，3，9，10，11|2、3、6、7|2，3，9，10，11|1|1|1|  
+|SQL_WCHAR|2、3、4、5|2、3、6、7、8|2，3，9，10，11|2、3、6、7|2，3，9，10，11|1|1|1|  
+|SQL_TYPE_DATE|[確定]|12|13|12|13，23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|[確定]|10、23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7、8|[確定]|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18，22|7、8、20|20|7、20|[確定]|21|16|16|  
   
 ## <a name="key-to-symbols"></a>符號的索引鍵  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63207031"
 |[確定]|沒有轉換問題。|  
 |1|適用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的規則。|  
 |2|忽略開頭和尾端空白。|  
-|3|字串會剖析成日期、時間、時區或時區時差，而且小數秒數最多允許 9 位數。 如果剖析了時區時差，時間就會轉換成用戶端時區。 如果此轉換期間發生錯誤，將診斷記錄會產生含有 SQLSTATE 22018 和訊息 「 日期時間欄位溢位 」。|  
+|3|字串會剖析成日期、時間、時區或時區時差，而且小數秒數最多允許 9 位數。 如果剖析了時區時差，時間就會轉換成用戶端時區。 如果在此轉換期間發生錯誤，就會產生含有 SQLSTATE 22018 和訊息「日期時間欄位溢位」的診斷記錄。|  
 |4|如果此值不是有效的日期、時間戳記或時間戳記時差值，就會產生含有 SQLSTATE 22018 和訊息「轉換規格的字元值無效」的診斷記錄。|  
 |5|如果時間不是零，就會產生含有 SQLSTATE 01S07 和訊息「小數位數截斷」的診斷記錄。|  
 |6|如果此值不是有效的時間、時間戳記或時間戳記時差值，就會產生含有 SQLSTATE 22018 和訊息「轉換規格的字元值無效」的診斷記錄。|  
@@ -62,9 +62,9 @@ ms.locfileid: "63207031"
 |21|如果緩衝區夠大，足以容納 SQL_SS_TIMESTAMPOFFSET_STRUCT，此值就會傳回成 SQL_SS_TIMESTAMPOFFSET_STRUCT。 否則，系統會產生含有 SQLSTATE 22003 和訊息「數值超出範圍」的診斷記錄。|  
 |22|在擷取日期之前，此值會轉換成用戶端時區。 這樣做會在其他含有時間戳記時差類型的轉換中提供一致性。 如果進行這項轉換期間發生錯誤，就會產生含有 SQLSTATE 22008 和訊息「日期時間欄位溢位」的診斷記錄。 這可能會產生與簡單截斷所取得之值不同的日期。|  
   
- 本主題中的表格描述傳回用戶端之類型與繫結中之類型之間的轉換。 當做輸出參數，如果在指定的伺服器類型 SQLBindParameter 不符合伺服器上的實際類型、 伺服器將會執行隱含的轉換和類型傳回給用戶端會比對透過 SQLBindParameter 中指定的型別。 這可能會導致非預期的轉換結果與上表所列的不同伺服器的轉換規則時。 例如，必須提供預設日期時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 1900-1-1 而非目前的日期。  
+ 本主題中的表格描述傳回用戶端之類型與繫結中之類型之間的轉換。 針對輸出參數，如果 SQLBindParameter 中指定的伺服器類型與伺服器上的實際類型不符，則伺服器將會執行隱含轉換，而且傳回用戶端的類型將會與透過 SQLBindParameter 指定的類型相符。 當伺服器的轉換規則與上表中所列的不同時，這可能會導致未預期的轉換結果。 例如，必須提供預設日期時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 1900-1-1 而非目前的日期。  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間改善&#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;的日期和時間改善](date-and-time-improvements-odbc.md)  
   
   

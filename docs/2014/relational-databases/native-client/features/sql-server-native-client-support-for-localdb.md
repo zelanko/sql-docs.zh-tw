@@ -1,5 +1,5 @@
 ---
-title: SQL Server Native Client 支援 localdb |Microsoft Docs
+title: LocalDB 的 SQL Server Native Client 支援 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a3f5a8214c2966b1958c3a4ea08edbee5af6a2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225479"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>SQL Server Native Client 對 LocalDB 的支援
@@ -31,7 +31,7 @@ ms.locfileid: "63225479"
   
 -   使用 `sqllocaldb.exe i` 來探索預設執行個體的名稱。  
   
--   使用 `AttachDBFilename` 連接字串關鍵字來指定伺服器應該附加的資料庫檔案。 使用時`AttachDBFilename`，如果您未指定的資料庫名稱**資料庫**連接字串關鍵字，應用程式關閉時，會從 LocalDB 執行個體移除該資料庫。  
+-   使用 `AttachDBFilename` 連接字串關鍵字來指定伺服器應該附加的資料庫檔案。 使用`AttachDBFilename`時，如果您未以**資料庫**連接字串關鍵字來指定資料庫的名稱，當應用程式關閉時，資料庫將會從 LocalDB 實例中移除。  
   
 -   在連接字串中指定 LocalDB 執行個體：  
   
@@ -39,7 +39,7 @@ ms.locfileid: "63225479"
 SERVER=(localdb)\v11.0  
 ```  
   
- 必要時，您可以使用 sqllocaldb.exe 來建立 LocalDB 執行個體。 您也可以使用 sqlcmd.exe，在 LocalDB 執行個體中加入和修改資料庫。 例如， `sqlcmd -S (localdb)\v11.0` 。  
+ 必要時，您可以使用 sqllocaldb.exe 來建立 LocalDB 執行個體。 您也可以使用 sqlcmd.exe，在 LocalDB 執行個體中加入和修改資料庫。 例如： `sqlcmd -S (localdb)\v11.0` 。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 功能](sql-server-native-client-features.md)  

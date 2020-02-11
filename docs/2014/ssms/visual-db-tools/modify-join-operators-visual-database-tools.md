@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232842"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>修改聯結運算子 (Visual Database Tools)
@@ -33,8 +33,8 @@ ms.locfileid: "63232842"
 3.  在 [聯結]  對話方塊中選取新的運算子。  
   
 ## <a name="see-also"></a>另請參閱  
- [自動聯結資料表&#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)   
- [手動聯結資料表&#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)   
+ [自動聯結資料表 &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)   
+ [手動聯結資料表 &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)   
  [使用聯結查詢 &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
   
   

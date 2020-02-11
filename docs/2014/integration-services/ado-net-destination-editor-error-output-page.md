@@ -1,5 +1,5 @@
 ---
-title: ADO NET 目的地編輯器 （錯誤輸出頁面） |Microsoft Docs
+title: ADO NET 目的地編輯器（錯誤輸出頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061772"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>ADO NET 目的地編輯器 (錯誤輸出頁面)
@@ -28,11 +28,11 @@ ms.locfileid: "66061772"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟具有 ADO NET 目的地的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程]  索引標籤中，按兩下 ADO NET 目的地。  
+2.  在 [資料流程]**** 索引標籤中，按兩下 ADO NET 目的地。  
   
-3.  在 **[ADO NET 目的地編輯器]** 中，按一下 **[錯誤輸出]** 。  
+3.  在 **[ADO NET 目的地編輯器]** 中，按一下 **[錯誤輸出]**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **輸入或輸出**  
  檢視輸入的名稱。  
   
@@ -53,11 +53,11 @@ ms.locfileid: "66061772"
  **將這個值設定到選取的資料格**  
  指定發生錯誤或截斷時要對所有選取之資料格採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **Apply**  
+ **套用**  
  將錯誤處理選項套用至選取的資料格。  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO NET 目的地編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [ADO NET 目的地編輯器 &#40;對應頁面&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
+ [ADO NET 目的地編輯器 &#40;對應] 頁面&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   
   

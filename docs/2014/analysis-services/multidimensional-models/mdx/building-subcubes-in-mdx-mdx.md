@@ -1,5 +1,5 @@
 ---
-title: 建置 MDX (MDX) 中的 Subcube |Microsoft Docs
+title: 在 MDX 中建立 Subcube （MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 197ee30aa65179e8a434d04d20a5f5b643b42efd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074722"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>在 MDX 中建立 Subcube (MDX)
@@ -36,7 +36,9 @@ ms.locfileid: "66074722"
 CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression  
 ```  
   
- CREATE SUBCUBE 語法相當簡單。 *Subcube_Identifier* 參數可識別將作為 Subcube 基礎的 Cube。 *Subcube_Expression* 參數可選取將成為 Subcube 的 Cube 部分。  
+ CREATE SUBCUBE 語法相當簡單。 
+  *Subcube_Identifier* 參數可識別將作為 Subcube 基礎的 Cube。 
+  *Subcube_Expression* 參數可選取將成為 Subcube 的 Cube 部分。  
   
  建立 Subcube 之後，此 Subcube 就會成為所有 MDX 查詢的內容，直到工作階段結束或是執行 [DROP SUBCUBE](/sql/mdx/mdx-data-definition-drop-subcube) 陳述式為止。  
   
@@ -53,7 +55,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  此外，Subcube 內的彙總值都是以視覺化的方式總計。 例如，Subcube 包含 `USA`、 `WA`及 `OR`。 因為 Subcube 定義的狀態只有 `USA` 及 `{WA,OR}` ，所以 `WA` 的彙總值將會是 `OR` 的總和。 其他狀態都會被忽略。  
   
- 此外，明確參考 Subcube 外部的資料格，則會傳回在整個 Cube 內容中評估的資料格值。 例如，您可以建立限制在目前年度的 Subcube。 然後，您可以使用 [ParallelPeriod](/sql/mdx/parallelperiod-mdx) 函數比較目前年度與前一個年度。 即使在 subcube 外部，位於前一個年度的值，則會傳回值的差異。  
+ 此外，明確參考 Subcube 外部的資料格，則會傳回在整個 Cube 內容中評估的資料格值。 例如，您可以建立限制在目前年度的 Subcube。 然後，您可以使用 [ParallelPeriod](/sql/mdx/parallelperiod-mdx) 函數比較目前年度與前一個年度。 即使前一年的值位於子工作子資料集外，值的差異還是會傳回。  
   
  最後，如果原始的內容未被覆寫，就會在子選擇的內容中評估曾在子選擇中評估的集合函數。 如果內容會被覆寫，就會在整個 Cube 的內容中評估集合函數。  
   
@@ -67,7 +69,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
  `SELECT [Account].[Account].Members ON 0, Measures.Members ON 1 FROM Budget`  
   
 ## <a name="see-also"></a>另請參閱  
- [建立查詢中的 Cube 內容 &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
- [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [在查詢中建立 Cube 內容 &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
+ [MDX 查詢基本概念 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

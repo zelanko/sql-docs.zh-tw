@@ -1,5 +1,5 @@
 ---
-title: 設定進階屬性 (SSAS) |Microsoft Docs
+title: 設定 Advanced 屬性（SSAS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5afadecc745057344fd86df21b4479dabc1f7685
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068828"
 ---
 # <a name="set-advanced-properties-ssas"></a>設定進階屬性 (SSAS)
-  **[資料表匯入精靈]** 的這個頁面可讓您指定資料來源連接的其他屬性設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]** 。  
+  
+  **[資料表匯入精靈]** 的這個頁面可讓您指定資料來源連接的其他屬性設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
- **提供者**  
+ **都會**  
  選取要用於資料來源連接的提供者。 若要連接至資料來源，您必須先在電腦上安裝適當的提供者。  
   
  **連接字串**  

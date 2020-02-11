@@ -1,5 +1,5 @@
 ---
-title: 原因和解決方案的資料庫引擎錯誤 |Microsoft Docs
+title: 資料庫引擎錯誤的原因和解決方式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 3c52de15f5f5d06590b74182819804750a957e17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065192"
 ---
 # <a name="cause-and-resolution-of-database-engine-errors"></a>導致 Database Engine 錯誤的原因和解決方案
@@ -23,10 +23,10 @@ ms.locfileid: "66065192"
 ## <a name="in-this-section"></a>本節內容  
  本節中的錯誤訊息主題提供錯誤訊息的說明、可能的原因，以及您可以採取哪些動作以更正問題。  
   
-## <a name="reference"></a>參考資料  
- [了解資料庫引擎錯誤](../relational-databases/native-client-ole-db-errors/errors.md)  
+## <a name="reference"></a>參考  
+ [了解 Database Engine 錯誤](../relational-databases/native-client-ole-db-errors/errors.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫引擎事件和錯誤](../relational-databases/errors-events/database-engine-events-and-errors.md)  
+ [Database Engine 事件和錯誤](../relational-databases/errors-events/database-engine-events-and-errors.md)  
   
   

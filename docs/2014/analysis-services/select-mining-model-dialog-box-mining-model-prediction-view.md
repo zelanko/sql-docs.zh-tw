@@ -1,5 +1,5 @@
 ---
-title: 選取採礦模型對話方塊 （採礦模型預測檢視） |Microsoft Docs
+title: 選取 [採礦模型] 對話方塊（[採礦模型預測視圖]） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6e79a86b4438eeacf5c1184b73a5edf0e9ea9d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069410"
 ---
 # <a name="select-mining-model-dialog-box-mining-model-prediction-view"></a>選取採礦模型對話方塊 (採礦模型預測檢視)
@@ -29,6 +29,6 @@ ms.locfileid: "66069410"
 ## <a name="see-also"></a>另請參閱  
  [預測查詢產生器 &#40;資料採礦&#41;](prediction-query-builder-data-mining.md)   
  [資料採礦查詢介面](data-mining/data-mining-query-tools.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [資料採礦延伸模組 &#40;DMX&#41; 語句參考](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

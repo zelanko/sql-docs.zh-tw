@@ -1,5 +1,5 @@
 ---
-title: 設定 Partition Slice 屬性 (Analysis Services) |Microsoft Docs
+title: 設定分割區配量屬性（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2015
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d7b41de3505c3b6e3ccf3886254958ee71e456
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072935"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>設定 Partition Slice 屬性 (Analysis Services)
   資料配量是協助將查詢導向到適當之分割區資料的重要最佳化功能。 明確設定 Slice 屬性可提升查詢效能，方法是覆寫 MOLAP and HOLAP 分割區所產生的預設配量。 此外，Slice 屬性可在處理分割區時，提供額外的驗證檢查。  
   
- 您可以在建立分割區之後但在處理分割區之前，使用 Slice 屬性指定資料配量。 在 [分割區] 索引標籤上，展開量值群組，然後以滑鼠右鍵按一下分割區並選取 **[屬性]**。  
+ 您可以在建立分割區之後但在處理分割區之前，使用 Slice 屬性指定資料配量。 在 [資料分割] 索引標籤上，展開量值群組，然後以滑鼠右鍵按一下資料分割並選取 [屬性]****。  
   
 ## <a name="defining-a-slice"></a>定義配量  
  Slice 屬性的有效值為 MDX 成員、集合或 Tuple。 下列範例說明有效的配量語法：  
@@ -41,11 +41,11 @@ ms.locfileid: "66072935"
 > [!NOTE]  
 >  請注意，資料分割的 Slice 屬性不支援動態多維度運算式 (MDX) 函數 (例如 [Generate &#40;MDX&#41;](/sql/mdx/generate-mdx) 或 [Except &#40;MDX&#41;](/sql/mdx/except-mdx-function))。 您必須使用明確的 Tuple 或成員參考來定義配量。  
 >   
->  比方說，而不是使用[:&#40;範圍&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx)函式來定義範圍，您需要以特定的年份來列舉每個成員。  
+>  例如，您必須依特定年份列舉每個成員，而不是使用[： &#40;範圍&#41; &#40;MDX&#41;](/sql/mdx/range-mdx)函數來定義範圍。  
 >   
 >  如果您需要定義複雜的配量，我們建議您使用 XMLA Alter 指令碼在配量中定義 Tuple。 然後在處理資料分割區之前，您可以使用 ascmd 命令列工具或 SSIS [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) 工作立即執行該指令碼並建立指定集合的成員。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立及管理本機資料分割 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
+ [建立和管理本機資料分割 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
   
   

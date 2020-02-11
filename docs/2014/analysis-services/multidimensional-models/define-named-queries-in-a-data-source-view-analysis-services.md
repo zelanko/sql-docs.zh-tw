@@ -1,5 +1,5 @@
 ---
-title: 定義具名的查詢中的資料來源檢視 (Analysis Services) |Microsoft Docs
+title: 在資料來源視圖中定義指名的查詢（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bbb792ac4e86ae563f80f35f04854f16501b34a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075555"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>在資料來源檢視中定義具名查詢 (Analysis Services)
@@ -35,23 +35,23 @@ ms.locfileid: "66075555"
   
  SQL 查詢中被參考的資料表和資料行不應該限定，或應該只以資料表名稱來限定。 例如，若要參考資料表中的 SaleAmount 資料行， `SaleAmount` 或 `Sales.SaleAmount` 為有效，但 `dbo.Sales.SaleAmount` 會產生錯誤。  
   
- **注意** ：定義查詢 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 資料來源的具名查詢時，包含相關子查詢與 GROUP BY 子句的具名查詢將會失敗。 如需詳細資訊，請參閱 [知識庫中的](https://support.microsoft.com/kb/274729) Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY [!INCLUDE[msCoName](../../includes/msconame-md.md)] (包含相互關聯之子查詢和 GROUP BY 的 SELECT 陳述式發生內部錯誤)。  
+ **注意**定義查詢[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 資料來源的命名查詢時，包含相互關聯子查詢和 GROUP by 子句的已命名查詢將會失敗。 如需詳細資訊，請參閱 [知識庫中的](https://support.microsoft.com/kb/274729) Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY [!INCLUDE[msCoName](../../includes/msconame-md.md)] (包含相互關聯之子查詢和 GROUP BY 的 SELECT 陳述式發生內部錯誤)。  
   
 ## <a name="add-or-edit-a-named-query"></a>加入或編輯具名查詢  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟含有您想在其中加入具名查詢之資料來源檢視的專案，或連接到包含此資料來源檢視的資料庫。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟含有您想在其中加入具名查詢之資料來源檢視的專案，或連接到包含此資料來源檢視的資料庫。  
   
-2.  在方案總管中，展開 [資料來源檢視]  資料夾，然後按兩下資料來源檢視。  
+2.  在方案總管中，展開 [資料來源檢視]**** 資料夾，然後按兩下資料來源檢視。  
   
-3.  在 [資料表]  或 [圖表]  窗格中，以滑鼠右鍵按一下開放區域，然後按一下 [新增具名查詢]  。  
+3.  在 [資料表]**** 或 [圖表]**** 窗格中，以滑鼠右鍵按一下開放區域，然後按一下 [新增具名查詢]****。  
   
-4.  在 [建立具名查詢]  對話方塊中，執行下列動作：  
+4.  在 [建立具名查詢]**** 對話方塊中，執行下列動作：  
   
-    1.  在 [名稱]  文字方塊中，輸入查詢名稱。  
+    1.  在 [名稱]**** 文字方塊中，輸入查詢名稱。  
   
-    2.  可以選擇在 [描述]  文字方塊中輸入查詢的描述。  
+    2.  可以選擇在 [描述]**** 文字方塊中輸入查詢的描述。  
   
-    3.  在 [資料來源]  清單方塊中，選取具名查詢執行時所要針對的資料來源。  
+    3.  在 [資料來源]**** 清單方塊中，選取具名查詢執行時所要針對的資料來源。  
   
     4.  在下方窗格中輸入查詢，或是使用圖形化查詢建立工具來建立查詢。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66075555"
 5.  按一下 [確定]  。 資料表頁首會出現表示兩個重疊資料表的圖示，指出資料表已取代為具名查詢。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的資料來源檢視](data-source-views-in-multidimensional-models.md)   
- [在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [多維度模型中的資料來源視圖](data-source-views-in-multidimensional-models.md)   
+ [定義資料來源視圖中的已命名計算 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

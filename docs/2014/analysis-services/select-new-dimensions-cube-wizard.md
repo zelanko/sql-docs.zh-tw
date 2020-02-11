@@ -1,5 +1,5 @@
 ---
-title: 選取新維度 （Cube 精靈） |Microsoft Docs
+title: 選取新維度（Cube Wizard） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0362322d63e351ab7547a6bb19511c2c10d1df95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069336"
 ---
 # <a name="select-new-dimensions-cube-wizard"></a>選取新維度 (Cube 精靈)
   使用 **[選取新維度]** 頁面，即可選取要建立的新維度。  
   
 ## <a name="options"></a>選項。  
- **Dimensions**  
+ **維度**  
  選取要建立的維度。 根據預設，系統會選取所有維度。  
   
  樹狀結構的根節點代表即將建立的新維度。 將用來建立維度的相關資料表將會顯示在維度節點底下。  
@@ -31,6 +31,6 @@ ms.locfileid: "66069336"
  若要重新命名維度，請按一下維度名稱，然後輸入新名稱。 您無法重新命名資料表。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的 Cube](multidimensional-models/cubes-in-multidimensional-models.md)  
+ [多維度模型中的 cube](multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

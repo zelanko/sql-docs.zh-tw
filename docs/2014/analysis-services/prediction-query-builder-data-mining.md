@@ -1,5 +1,5 @@
 ---
-title: 預測查詢產生器 （資料採礦） |Microsoft Docs
+title: 預測查詢產生器（資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61f0f7c62c6c3f245a87e7e8ce37153f08226a7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070776"
 ---
 # <a name="prediction-query-builder-data-mining"></a>預測查詢產生器 (資料採礦)
@@ -22,24 +22,25 @@ ms.locfileid: "66070776"
   
  如需有關如何使用預測查詢產生器來建立資料採礦查詢的逐步解說，我們建議您檢閱下列教學課程和主題：  
   
--   [基本資料採礦教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)  
+-   [資料採礦基本教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [建立及查詢使用 DMX 資料採礦模型：教學課程&#40;Analysis Services-資料採礦&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [使用 DMX 建立和查詢資料採礦模型：教學課程 &#40;Analysis Services-資料採礦&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
 -   [資料採礦查詢](data-mining/data-mining-queries.md)  
   
--   [資料採礦查詢工作和操作說明](data-mining/data-mining-query-tasks-and-how-tos.md)  
+-   [資料採礦查詢工作和使用說明](data-mining/data-mining-query-tasks-and-how-tos.md)  
   
- **[採礦模型預測]** 檢視擁有下列工具和對話方塊：  
+ 
+  **[採礦模型預測]** 檢視擁有下列工具和對話方塊：  
   
--   [設計窗格&#40;採礦模型預測檢視&#41;](design-pane-mining-model-prediction-view.md)  
+-   [[設計] 窗格 &#40;[採礦模型預測] 視圖&#41;](design-pane-mining-model-prediction-view.md)  
   
--   [查詢窗格&#40;採礦模型預測檢視&#41;](query-pane-mining-model-prediction-view.md)  
+-   [[查詢] 窗格 &#40;[採礦模型預測] 視圖&#41;](query-pane-mining-model-prediction-view.md)  
   
--   [結果窗格&#40;採礦模型預測檢視&#41;](result-pane-mining-model-prediction-view.md)  
+-   [[結果] 窗格 &#40;[採礦模型預測] 視圖&#41;](result-pane-mining-model-prediction-view.md)  
   
--   [選取採礦模型對話方塊&#40;採礦模型預測檢視&#41;](select-mining-model-dialog-box-mining-model-prediction-view.md)  
+-   [&#40;[採礦模型預測視圖] 中選取 [採礦模型] 對話方塊&#41;](select-mining-model-dialog-box-mining-model-prediction-view.md)  
   
--   [儲存資料採礦查詢結果對話方塊&#40;採礦模型預測檢視&#41;](save-data-mining-query-result-dialog-box-mining-model-prediction-view.md)  
+-   [[儲存資料] [挖掘查詢結果] 對話方塊 &#40;[採礦模型預測] 視圖&#41;](save-data-mining-query-result-dialog-box-mining-model-prediction-view.md)  
   
   

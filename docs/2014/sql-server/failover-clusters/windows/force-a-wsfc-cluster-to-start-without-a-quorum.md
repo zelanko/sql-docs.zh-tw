@@ -14,22 +14,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c63930883642cf7f5e675cb57d5f83648a5787a
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797468"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>在無仲裁情況下強制啟動 WSFC 叢集
   本主題描述如何在沒有仲裁的情況下強制啟動 Windows Server 容錯移轉叢集 (WSFC) 叢集節點。  在災害復原和多重子網路案例中，可能需要這個方式才能針對 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體來復原資料及完整重新建立高可用性。  
   
--   **開始之前：** [建議](#Recommendations)、[安全性](#Security)  
+-   **開始之前：**  [建議](#Recommendations)、[安全性](#Security)  
   
--   **使用下列項目在沒有仲裁的情況下強制啟動叢集︰** [使用容錯移轉叢集管理員](#FailoverClusterManagerProcedure)、[使用 PowerShell](#PowerShellProcedure)、[使用 Net.exe](#CommandPromptProcedure)  
+-   **使用下列來強制叢集在沒有仲裁的情況下啟動：**  [使用容錯移轉叢集管理員](#FailoverClusterManagerProcedure)、使用[Powershell](#PowerShellProcedure)、[使用 cluster.exe](#CommandPromptProcedure)  
   
--   **後續操作：** [在沒有仲裁的情況下強制啟動叢集之後](#FollowUp)  
+-   **後續操作**：[在沒有仲裁的情況下強制啟動叢集之後](#FollowUp)    
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="BeforeYouBegin"></a>開始之前  
   
 ###  <a name="Recommendations"></a> 建議  
  除了明確指示的內容以外，如果您從 WSFC 叢集中的任何節點執行本主題的程序，都應該有效。  但是，如果您從打算在無仲裁情況下強制啟動的節點執行這些步驟，您可能會得到更好的結果並避免網路問題發生。  
@@ -37,19 +37,19 @@ ms.locfileid: "72797468"
 ###  <a name="Security"></a> Security  
  使用者必須是屬於 WSFC 叢集之每一個節點上本機 Administrators 群組成員的網域帳戶。  
   
-##  <a name="FailoverClusterManagerProcedure"></a> 使用容錯移轉叢集管理員  
+##  <a name="FailoverClusterManagerProcedure"></a>使用容錯移轉叢集管理員  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>若要在無仲裁情況下強制啟動叢集  
   
 1.  開啟容錯移轉叢集管理員，並連接到所要的叢集節點來強制連線。  
   
-2.  在 [動作] 窗格中，按一下 [強制啟動叢集]，然後按一下 [是 - 強制啟動我的叢集]。  
+2.  在 [動作]**** 窗格中，按一下 [強制啟動叢集]****，然後按一下 [是 - 強制啟動我的叢集]****。  
   
 3.  在左窗格的 **[容錯移轉叢集管理員]** 樹狀目錄中，按一下叢集名稱。  
   
-4.  在摘要窗格中，確認目前 **[仲裁設定]** 值為  **[警告: 叢集正在以 ForceQuorum 狀態執行]** 。  
+4.  在摘要窗格中，確認目前 **[仲裁設定]** 值為  **[警告: 叢集正在以 ForceQuorum 狀態執行]**。  
   
-##  <a name="PowerShellProcedure"></a> 使用 Powershell  
+##  <a name="PowerShellProcedure"></a>使用 Powershell  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>若要在無仲裁情況下強制啟動叢集  
   
@@ -81,7 +81,7 @@ $nodes = Get-ClusterNode -Cluster $node
 $nodes | Format-Table -property NodeName, State, NodeWeight
 ```  
   
-##  <a name="CommandPromptProcedure"></a> 使用 Net.exe  
+##  <a name="CommandPromptProcedure"></a>使用 Net.tcp  
   
 ### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>若要在無仲裁情況下強制啟動叢集  
   
@@ -101,7 +101,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> 後續操作：在沒有仲裁的情況下強制啟動叢集之後  
+##  <a name="FollowUp"></a>後續操作：在沒有仲裁的情況下強制啟動叢集之後  
   
 -   在讓其他節點重新於線上工作之前，您必須重新評估及重新設定 NodeWeight 值，以正確建構新的仲裁。 否則，叢集可能會再次離線。  
   
@@ -121,11 +121,11 @@ net.exe start clussvc /forcequorum
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [檢視容錯移轉叢集的事件和記錄檔](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772342(v=ws.11))  
+-   [查看容錯移轉叢集的事件和記錄檔](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772342(v=ws.11))  
   
--   [Get-ClusterLog 容錯移轉叢集指令程式](https://technet.microsoft.com/library/ee461045.aspx)  
+-   [ClusterLog 容錯移轉叢集 Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
- [透過強制仲裁執行 WSFC 災害復原 &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
+ [透過強制仲裁 &#40;SQL Server 的 WSFC 損毀修復&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [設定叢集仲裁 NodeWeight 設定](configure-cluster-quorum-nodeweight-settings.md)   
- [Windows PowerShell 中由工作焦點列出的容錯移轉叢集指令程式](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
+ [Windows PowerShell 中由工作焦點列出的容錯移轉叢集 Cmdlet](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  

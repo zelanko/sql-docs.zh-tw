@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54a598ab383773a3ada43f0cc44892f42ac3ba2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63222525"
 ---
 # <a name="maximizing-query-editor"></a>將查詢編輯器最大化
@@ -36,9 +36,9 @@ ms.locfileid: "63222525"
   
 1.  按一下 [查詢編輯器] 視窗中的任何位置。  
   
-2.  在 [視窗]  功能表上，按一下 [自動全部隱藏]  。  
+2.  在 [視窗]**** 功能表上，按一下 [自動全部隱藏]****。  
   
-3.  若要還原工具視窗，請開啟每個工具，然後按一下視窗的 [自動隱藏]  按鈕，將它固定成開啟狀態。  
+3.  若要還原工具視窗，請開啟每個工具，然後按一下視窗的 [自動隱藏]**** 按鈕，將它固定成開啟狀態。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [使用註解](lesson-2-4-using-comments.md)  

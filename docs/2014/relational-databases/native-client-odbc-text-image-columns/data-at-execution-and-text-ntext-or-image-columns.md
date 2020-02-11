@@ -1,5 +1,5 @@
 ---
-title: 執行資料和 Text、 ntext 或 Image 資料行 |Microsoft Docs
+title: 資料執行中和 Text、Ntext 或 Image 資料行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,14 +23,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e7c57cf6444e5833b6deee0dcae36d71b7a6430
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195124"
 ---
 # <a name="data-at-execution-and-text-ntext-or-image-columns"></a>資料執行中和 Text、ntext 或 Image 資料行
-  ODBC 資料執行中是一種功能，可讓應用程式針對繫結的資料行或參數使用相當大量的資料。 擷取非常大時**文字**， **ntext**，或**映像**資料行，應用程式可能無法只配置大型緩衝區、 資料行繫結到緩衝區，並擷取資料列。 更新非常大時**文字**， **ntext**，或**映像**資料行，應用程式可能無法只配置大型緩衝區、 將它繫結至在 SQL 中的參數標記陳述式，然後執行陳述式。 在這些情況下，應用程式必須使用[SQLGetData](../native-client-odbc-api/sqlgetdata.md)或是[SQLPutData](../native-client-odbc-api/sqlputdata.md)具有其資料在執行選項。  
+  ODBC 資料執行中是一種功能，可讓應用程式針對繫結的資料行或參數使用相當大量的資料。 當您抓取非常大的**text**、 **Ntext**或**image**資料行時，應用程式可能無法只配置大型緩衝區、將資料行系結至緩衝區，以及提取資料列。 更新非常大的**text**、 **Ntext**或**image**資料行時，應用程式可能無法只配置大型緩衝區、將它系結至 SQL 語句中的參數標記，然後執行語句。 在這些情況下，應用程式必須使用[SQLGetData](../native-client-odbc-api/sqlgetdata.md)或[SQLPutData](../native-client-odbc-api/sqlputdata.md)搭配其資料執行中選項。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理 Text 和 Image 資料行](managing-text-and-image-columns.md)  

@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1a884f7c45accefb248029d148feb8b521e6ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240540"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>組織追蹤內顯示的資料行 (SQL Server Profiler)
-  您可以在追蹤資料表或在 [追蹤檔案屬性]  對話方塊中選取 [組織資料行]  ，以將追蹤內的資料行加以群組；在定義追蹤時，也可以進行群組。 群組資料行可讓您以更佳的方式分析 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤輸出。 如需詳細資訊，請參閱[使用 SQL Server Profiler 檢視和分析追蹤](view-and-analyze-traces-with-sql-server-profiler.md)。  
+  您可以在追蹤資料表或在 [追蹤檔案屬性]  對話方塊中選取 [組織資料行]  ，以將追蹤內的資料行加以群組；在定義追蹤時，也可以進行群組。 群組資料行可讓您以更佳的方式分析 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤輸出。 如需詳細資訊，請參閱 [使用 SQL Server Profiler 檢視和分析追蹤](view-and-analyze-traces-with-sql-server-profiler.md)。  
   
  [組織資料行]  可讓您依照所選取的資料行，來群組追蹤事件，或是群組並彙總追蹤事件。  
   

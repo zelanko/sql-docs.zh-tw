@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14c2fff96c89ee696df1a437f958e4560bfab142
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204536"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>資料表值物件 (資料行) 屬性 (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "63204536"
 >  此主題中的屬性，是依類別目錄的順序排列，而非依字母排列。  
   
 > [!NOTE]  
->  您看到的對話方塊與功能表命令，可能會因您所使用的設定或版本，而與說明中所述不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。  
+>  您看到的對話方塊與功能表命令，可能會因您所使用的設定或版本，而與說明中所述不同。 若要變更您的設定，請在 [工具]  功能表上選擇 [匯入和匯出設定]  。  
   
  **識別類別目錄**  
  展開即可顯示 [名稱]  屬性。  
@@ -55,7 +55,7 @@ ms.locfileid: "63204536"
  **有效位數**  
  顯示數值資料類型所允許的最大位數數目。 這個屬性會顯示 **0** 來表示非數字的資料類型。  
   
- **小數位數**  
+ **調整**  
  若為數值資料類型，顯示可在小數點右邊顯示的最大位數數目。 這個值必須小於或等於有效位數。 這個屬性會顯示 **0** 來表示非數字的資料類型。  
   
  **大小**  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a3ea199f6e2e86f5dc2e51199386f31b93e9377
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63194993"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>參數查詢 (Visual Database Tools)
@@ -65,8 +65,8 @@ WHERE au_fname = %first name% AND
  當您在查詢和檢視表設計工具執行查詢時， [查詢參數對話方塊](query-parameters-dialog-box-visual-database-tools.md) 會出現具名參數清單。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用參數查詢&#40;Visual Database Tools&#41;](query-with-parameters-visual-database-tools.md)   
- [支援的查詢類型&#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
+ [使用 &#40;Visual Database Tools&#41;的參數查詢](query-with-parameters-visual-database-tools.md)   
+ [支援的查詢類型 &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
  [設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

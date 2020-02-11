@@ -10,25 +10,25 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
 ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252131"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server 移轉小幫手
 
-Microsoft SQL Server 移轉小幫手（SSMA）是一種工具，其設計目的是要將資料庫從 Microsoft Access、DB2、MySQL、Oracle 和 SAP ASE 自動遷移至 SQL Server。  
+Microsoft SQL Server 移轉小幫手 (SSMA) 工具的設計目的，是要自動地將資料庫從 Microsoft Access、DB2、MySQL、Oracle 和 SAP ASE 移轉至 SQL Server。  
   
 ## <a name="migration-sources"></a>移轉來源  
   
-- [存取 SQL Server 移轉小幫手](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
+- [適用於 Access 的 SQL Server 移轉小幫手](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
   
-- [適用于 DB2 的 SQL Server 移轉小幫手](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
+- [適用於 DB2 的 SQL Server 移轉小幫手](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
   
-- [適用于 MySQL 的 SQL Server 移轉小幫手](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
+- [適用於 MySQL 的 SQL Server 移轉小幫手](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
   
-- [適用于 Oracle 的 SQL Server 移轉小幫手](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
+- [適用於 Oracle 的 SQL Server 移轉小幫手](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
 - [適用于 SAP ASE 的 SQL Server 移轉小幫手](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
@@ -44,17 +44,17 @@ Microsoft SQL Server 移轉小幫手（SSMA）是一種工具，其設計目的�
 - Windows 和 Linux 上的 SQL Server 2017
 - Windows 和 Linux 上的 SQL Server 2019
 - Azure SQL Database
-- Azure SQL 資料倉儲**
+- Azure SQL 資料倉儲 * *
 
-** 此目標，只有支援 SSMA for Oracle。
+* * 只有 SSMA for Oracle 才支援此目標。
 
 ## <a name="downloads"></a>下載
 
-- [SSMA for Access](https://aka.ms/ssmaforaccess)
-- [SSMA for DB2](https://aka.ms/ssmafordb2)
-- [SSMA for MySql](https://aka.ms/ssmaformysql)
-- [SSMA for Oracle](https://aka.ms/ssmafororacle)
-- [SSMA for SAP ASE](https://aka.ms/ssmaforsybase)
+- [存取的 SSMA](https://aka.ms/ssmaforaccess)
+- [適用于 DB2 的 SSMA](https://aka.ms/ssmafordb2)
+- [適用于 MySql 的 SSMA](https://aka.ms/ssmaformysql)
+- [適用于 Oracle 的 SSMA](https://aka.ms/ssmafororacle)
+- [適用于 SAP ASE 的 SSMA](https://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>取得 SSMA 支援  
 
@@ -84,7 +84,7 @@ Microsoft SQL Server 移轉小幫手（SSMA）是一種工具，其設計目的�
   
 Microsoft 可能擁有本文件集所提及內容中所含之專利權、專利優先權、商標、著作權，或其他智慧財產權。 除非 Microsoft 書面授權合約所明示規定者外，提供本文件集並不授與貴用戶上述專利權、商標、著作權或其他智慧財產權。  
   
-© 2019 Microsoft Corporation. 著作權所有，並保留一切權利。  
+© 2019 Microsoft Corporation。 著作權所有，並保留一切權利。  
   
 Microsoft、Windows、Windows NT、Windows Server、Active Directory、ActiveX、BackOffice、bCentral、BizTalk、DirectX、Excel、Hotmail、IntelliSense、J/Direct、Jscript、Microsoft Press、MSDN、MS-DOS、Outlook、PivotChart、PivotTable、PowerPoint、SharePoint、SQL Server、Visual Basic、Visual C#、Visual C++、Visual FoxPro、Visual InterDev、Visual J#、Visual J++、Visual SourceSafe、Visual Studio、Win32、Win32s、Windows Mobile、Windows Server System 及 WinFX 係 Microsoft Corporation 在美國及 (或) 其他國家/地區的註冊商標或商標。  
   

@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150710"
 ---
 # <a name="monitor-and-tune-for-performance"></a>效能的監視與微調
@@ -41,7 +41,7 @@ ms.locfileid: "63150710"
  持續進行的資料庫效能評估可協助您將回應時間降到最低並產生最大產能，以達最佳效能。 有效率的網路流量、磁碟 I/O 與 CPU 使用量是達到最佳效能的關鍵。 您必須徹底分析應用程式需求、了解資料的邏輯與實體結構、評估資料庫使用，以及商議使用衝突的折衷方案，如線上交易處理 (Online Transaction Processing，OLTP) 之於決策支援。  
   
 ## <a name="benefits-of-monitoring-and-tuning-databases-for-performance"></a>監視和微調資料庫效能的優點  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Microsoft Windows 作業系統提供公用程式，可讓您檢視資料庫的目前狀況，並隨著狀況變更來追蹤效能。 有各種不同的工具和技術，可用來監視[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 了解如何監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可協助您：  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Microsoft Windows 作業系統提供公用程式，可讓您檢視資料庫的目前狀況，並隨著狀況變更來追蹤效能。 有各種工具和技巧可以用來監視[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 了解如何監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可協助您：  
   
 -   判斷是否可以改善效能。 例如，監視常用查詢的回應時間，您可以判斷是否需要變更資料表的查詢或索引。  
   
@@ -73,10 +73,10 @@ ms.locfileid: "63150710"
 |[找出瓶頸](identify-bottlenecks.md)|描述如何監視和追蹤伺服器效能，以找出瓶頸。|  
 |[伺服器效能與活動監視](server-performance-and-activity-monitoring.md)|描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 效能和活動監視工具。|  
 |[顯示並儲存執行計畫](display-and-save-execution-plans.md)|描述如何顯示執行計畫，以及如何將執行計畫儲存至 XML 格式的檔案。|  
-|[使用查詢存放區監視效能](monitoring-performance-by-using-the-query-store.md)|查詢存放區會自動擷取查詢、計劃和執行階段統計資料的歷程記錄，並加以保留供您檢閱。|  
+|[Monitoring Performance By Using the Query Store](monitoring-performance-by-using-the-query-store.md)|查詢存放區會自動擷取查詢、計劃和執行階段統計資料的歷程記錄，並加以保留供您檢閱。|  
   
 ## <a name="see-also"></a>另請參閱  
- [將整個企業的管理自動化](../../ssms/agent/automated-administration-across-an-enterprise.md)   
+ [跨企業進行自動化管理](../../ssms/agent/automated-administration-across-an-enterprise.md)   
  [Database Engine Tuning Advisor](database-engine-tuning-advisor.md)   
  [監視資源使用量 &#40;系統監視器&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

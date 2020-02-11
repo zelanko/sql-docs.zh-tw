@@ -1,5 +1,5 @@
 ---
-title: 基本 MDX 指令碼 (MDX) |Microsoft Docs
+title: 基本 MDX 腳本（MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,19 +16,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8793fe2e63d6867e8e5c12fef6ec73a6f7a27882
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073804"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>基本 MDX 指令碼 (MDX)
-  多維度運算式 (MDX) 指令碼可在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中定義 Cube 的計算處理序。 MDX 指令碼有以下兩種類型：  
+  多維度運算式（MDX）腳本會定義中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]cube 的計算進程。 MDX 指令碼有以下兩種類型：  
   
- **預設的 MDX 指令碼**  
+ **預設的 MDX 腳本**  
  當您建立 Cube 時， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會為那個 Cube 建立預設的 MDX 指令碼。 此指令碼會定義整個 Cube 的計算行程。  
   
- **使用者自訂 MDX 指令碼**  
+ **使用者定義的 MDX 腳本**  
  建立 Cube 之後，您可以增加擴充 Cube 之計算能力的使用者自訂 MDX 指令碼。  
   
 ## <a name="the-default-mdx-script"></a>預設的 MDX 指令碼  
@@ -36,13 +36,14 @@ ms.locfileid: "66073804"
   
  預設的 MDX 指令碼也包含指令碼命令，此命令可以建立命名集、指派，以及「Cube 設計師」中建立的導出成員：  
   
--   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會將指令碼命令直接增加到預設的 MDX 指令碼。  
+-   
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會將指令碼命令直接增加到預設的 MDX 指令碼。  
   
 -   對於 Cube 中的每個命名集，預設的 MDX 指令碼中會有對應的 CREATE SET 陳述式存在。  
   
 -   對於 Cube 中定義的每個導出成員，預設的 MDX 指令碼中會有對應的 CREATE MEMBER 陳述式存在。  
   
- 您可以使用 Cube 設計師的 [計算]  索引標籤，在預設的 MDX 指令碼中、控制指令碼命令、命名集與導出成員的順序。 如需定義預設 MDX 指令碼中儲存之計算的詳細資訊，請參閱[多維度模型中的計算](../calculations-in-multidimensional-models.md)。  
+ 您可以使用 Cube 設計師的 [計算]**** 索引標籤，在預設的 MDX 指令碼中、控制指令碼命令、命名集與導出成員的順序。 如需定義預設 MDX 指令碼中儲存之計算的詳細資訊，請參閱 [多維度模型中的計算](../calculations-in-multidimensional-models.md)。  
   
  如果沒有與 Cube 相關的  MDX 指令碼，Cube 會假設與其相關的是預設的 MDX 指令碼。 因為 Cube 仰賴 MDX 指令碼來決定計算行為，所以 Cube 必須至少與一個 MDX 指令碼相關。 換句話說，沒有與 Cube 相關的 MDX 指令碼，或是與空白 MDX 指令碼相關的 Cube ，無法計算任何資料格。 如果使用 Analysis Services 指令碼語言 (ASSL) 命令，或使用分析管理物件 (AMO)， 透過設計程式的方式建立 Cube，建議您建立會包含該 Cube 的單一 CALCULATE 陳述式的預設 MDX 指令碼。  
   
@@ -52,18 +53,18 @@ ms.locfileid: "66073804"
  所有 MDX 指令碼陳述式  
  在 MDX 指令碼中，MDX 指令碼陳述式可控制計算的內容及範圍，還能管理 MDX 指令碼中其他陳述式的行為。 此類別目錄包括以下陳述式：  
   
--   [CALCULATE](/sql/mdx/mdx-scripting-calculate)  
+-   [算](/sql/mdx/mdx-scripting-calculate)  
   
--   [FREEZE](/sql/mdx/mdx-scripting-freeze)  
+-   [暫時](/sql/mdx/mdx-scripting-freeze)  
   
--   [SCOPE](/sql/mdx/mdx-scripting-scope)  
+-   [範圍](/sql/mdx/mdx-scripting-scope)  
   
  如需 MDX 指令碼陳述式的詳細資訊，請參閱 [MDX 指令碼陳述式 &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx)。  
   
- [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)  
+ [建立成員](/sql/mdx/mdx-data-definition-create-member)  
  CREATE MEMBER 陳述式可建立導出成員。 如需如何建立導出成員的詳細資訊，請參閱[在 MDX 中建立導出成員 &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md)。  
   
- [CREATE SET](/sql/mdx/mdx-data-definition-create-set)  
+ [建立集合](/sql/mdx/mdx-data-definition-create-set)  
  CREATE SET 陳述式可建立命名集。 如需如何建立命名集的詳細資訊，請參閱[在 MDX 中建立命名集 &#40;MDX&#41;](mdx-named-sets-building-named-sets.md)。  
   
  條件陳述式  
@@ -90,7 +91,7 @@ ms.locfileid: "66073804"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 語言參考 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [MDX 指令碼基礎觀念 &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [Mdx 語言參考 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [MDX 腳本基礎 &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

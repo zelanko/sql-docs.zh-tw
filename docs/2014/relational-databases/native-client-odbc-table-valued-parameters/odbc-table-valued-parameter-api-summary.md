@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3c4606fcc4bad9355753b11557a0a4be7706688a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63199863"
 ---
 # <a name="odbc-table-valued-parameter-api-summary"></a>ODBC 資料表值參數 API 摘要
@@ -60,6 +60,6 @@ ms.locfileid: "63199863"
 -   [SQLTables](../native-client-odbc-api/sqltables.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [資料表值參數&#40;ODBC&#41;](table-valued-parameters-odbc.md)  
+ [ODBC&#41;&#40;的資料表值參數](table-valued-parameters-odbc.md)  
   
   

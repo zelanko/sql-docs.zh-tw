@@ -1,5 +1,5 @@
 ---
-title: 使用成員、 Tuple 和集合 (MDX) |Microsoft Docs
+title: 使用成員、元組和集合（MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -28,10 +28,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a8532b20ae5b71a9ef2353893272c628b9a80b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073675"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>使用成員、Tuple 和集合 (MDX)
@@ -107,7 +107,7 @@ FROM [Adventure Works]
   
  如需集合函數的詳細資訊，請參閱 [MDX 函數參考 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)。  
   
-## <a name="array-functions"></a>陣列函數  
+## <a name="array-functions"></a>陣列函式  
  陣列函數會作用於集合並且會傳回陣列。 如需陣列函數的詳細資訊，請參閱 [MDX 函數參考 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)。  
   
 ## <a name="hierarchy-functions"></a>階層函數  
@@ -122,12 +122,12 @@ FROM [Adventure Works]
 ## <a name="numeric-functions"></a>數值函數  
  數值函數會作用在 MDX 運算式以傳回純量值。 例如，[Aggregate &#40;MDX&#41;](/sql/mdx/aggregate-mdx) 函數會彙總指定集合中 Tuple 的量值後，傳回導出的純量值。 如需數值函數的詳細資訊，請參閱 [MDX 函數參考 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)。  
   
-## <a name="string-functions"></a>字串函數  
+## <a name="string-functions"></a>字串函式  
  字串函數會作用在 MDX 運算式以傳回字串。 例如，[UniqueName &#40;MDX&#41;](/sql/mdx/uniquename-mdx) 函數會傳回包含維度、階層、層級或成員唯一名稱的字串值。 如需字串函數的詳細資訊，請參閱 [MDX 函數參考 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 的關鍵概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [MDX 函數參考 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [MDX 中的重要概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [MDX 查詢基本概念 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [Mdx 函數參考 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

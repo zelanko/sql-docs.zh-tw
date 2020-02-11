@@ -1,5 +1,5 @@
 ---
-title: 表格式模型資料分割 (SSAS 表格式) |Microsoft Docs
+title: 表格式模型資料分割（SSAS 表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aaa2b608665e50b25b39d78a39a57bb08b55cf31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066391"
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>表格式模型資料分割 (SSAS 表格式)
@@ -26,7 +26,7 @@ ms.locfileid: "66066391"
   
 -   [優點](#bkmk_benefits)  
   
--   [Permissions](#bkmk_permissions)  
+-   [權限](#bkmk_permissions)  
   
 -   [處理資料分割](#bkmk_process_partitions)  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66066391"
 ##  <a name="bkmk_benefits"></a> 優點  
  有效的模型設計能善加利用分割區，以避免不必要的處理及 Analysis Services 伺服器上之後續處理器的負載，同時，還可確保資料的處理和重新整理頻率能反映資料來源的最新資料。  
   
- 例如，表格式模型可能會有「銷售」資料表，其中包括目前 2011 會計年度的銷售資料與之前會計年度的每份銷售資料。 模型的 Sales 資料表具有下列三個資料分割：  
+ 例如，表格式模型可能會有「銷售」資料表，其中包括目前 2011 會計年度的銷售資料與之前會計年度的每份銷售資料。 模型的 Sales 資料表具有下列三個數據分割：  
   
 |資料分割|來源資料|  
 |---------------|---------------|  
@@ -47,9 +47,9 @@ ms.locfileid: "66066391"
   
  而 Sales2010-2001 資料分割不需要每晚處理；不過，因為之前十個會計年度的銷售資料仍可能會因為產品退貨或其他調整而偶爾變更，所以也必須按時處理，因此 Sales2010-2001 資料分割中的資料會每月處理。 在 SalesOld 資料分割中的資料永遠不會變更，因此只會每年處理一次。  
   
- 當進入 2012年會計年度，新的 Sales2012 資料分割會加入模式的 Sales 資料表中。 之後，您即可將 Sales2011 資料分割和 Sales2010-2001 資料分割合併，並重新命名為 Sales2011-2002。 2001 會計年度的資料即會從新的 Sales2011-2002 資料分割中刪除，並移至 SalesOld 資料分割中。 如此一來，所有資料分割都已經過處理以反映變更。  
+ 輸入2012會計年度時，會將新的 Sales2012 資料分割加入至模式的 Sales 資料表。 之後，您即可將 Sales2011 資料分割和 Sales2010-2001 資料分割合併，並重新命名為 Sales2011-2002。 2001 會計年度的資料即會從新的 Sales2011-2002 資料分割中刪除，並移至 SalesOld 資料分割中。 如此一來，所有資料分割都已經過處理以反映變更。  
   
- 實作您的組織的表格式模型的資料分割策略的方式將主要是取決於您的特定模型的資料處理需求和可用的資源。  
+ 您針對組織的表格式模型執行資料分割策略的方式，主要取決於您特定的模型資料處理需求和可用的資源。  
   
 ##  <a name="bkmk_permissions"></a> 權限  
  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中建立、管理及處理資料分割，您必須具備在安全性角色中定義的適當 Analysis Services 權限。 每個安全性角色都具有下列其中一個權限：  
@@ -57,12 +57,12 @@ ms.locfileid: "66066391"
 |權限|動作|  
 |----------------|-------------|  
 |系統管理員|讀取、處理、建立、複製、合併、刪除|  
-|處理|讀取、處理|  
+|處理程序|讀取、處理|  
 |唯讀|讀取|  
   
  若要深入了解使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在模型撰寫期間建立角色，請參閱 [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md) (角色 (SSAS 表格式))。 若要深入了解使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 管理已部署表格式模型角色的角色成員，請參閱 [Tabular Model Roles &#40;SSAS Tabular&#41;](tabular-model-roles-ssas-tabular.md) (表格式模型角色 (SSAS 表格式))。  
   
-##  <a name="bkmk_process_partitions"></a> 處理資料分割  
+##  <a name="bkmk_process_partitions"></a>處理資料分割  
  您可使用 **的** [資料分割] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 對話方塊或指令碼，讓資料分割可以不受其他資料分割的影響，單獨處理 (重新整理)。 處理的選項如下：  
   
 |模式|描述|  
@@ -75,9 +75,9 @@ ms.locfileid: "66066391"
   
 ##  <a name="bkmk_related_tasks"></a> 相關工作  
   
-|工作|描述|  
+|Task|描述|  
 |----------|-----------------|  
 |[建立及管理表格式模型資料分割 &#40;SSAS 表格式&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)|描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在部署的表格式模型中建立及管理資料分割。|  
-|[處理表格式模型資料分割 &#40;SSAS 表格式&#41;](process-tabular-model-partitions-ssas-tabular.md)|描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在部署的表格式模型中處理資料分割。|  
+|[處理 &#40;SSAS 表格式&#41;的表格式模型資料分割](process-tabular-model-partitions-ssas-tabular.md)|描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在部署的表格式模型中處理資料分割。|  
   
   

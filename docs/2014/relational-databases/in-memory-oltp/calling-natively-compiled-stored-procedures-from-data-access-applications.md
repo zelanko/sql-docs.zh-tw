@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156829"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>從資料存取應用程式呼叫原生編譯預存程序
@@ -31,12 +31,13 @@ ms.locfileid: "63156829"
   
  SqlClient 不支援擷取有關原生編譯預存程序傳回之結果集的僅限結構描述資訊 (中繼資料探索) (CommandType.SchemaOnly)。 請改用 [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前版本的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 不支援擷取有關原生編譯預存程序傳回之結果集的僅限結構描述資訊 (中繼資料探索)。 請改用 [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client{2}  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前版本的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 不支援擷取有關原生編譯預存程序傳回之結果集的僅限結構描述資訊 (中繼資料探索)。 請改用 [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)。  
   
  下列建議適用於使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驅動程式時的原生編譯預存程序呼叫。  
   
- 呼叫一次預存程序的最有效率的方式是使用 `SQLExecDirect` 和 ODBC CALL 子句來發出直接 RPC 呼叫。 請勿使用[!INCLUDE[tsql](../../../includes/tsql-md.md)]`EXECUTE`陳述式。 如果預存程序多次呼叫，備妥的執行更有效率。  
+ 呼叫一次預存程序的最有效率的方式是使用 `SQLExecDirect` 和 ODBC CALL 子句來發出直接 RPC 呼叫。 請勿使用[!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE`語句。 如果預存程序多次呼叫，備妥的執行更有效率。  
   
  多次呼叫 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預存程序最有效率的方式是透過備妥的 RPC 程序呼叫。 備妥的 RPC 呼叫是使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驅動程式，執行如下：  
   
@@ -48,7 +49,8 @@ ms.locfileid: "63156829"
   
 -   使用 `SQLExecute`，執行預存程序多次。  
   
- 下列程式碼片段示範將項目加入訂單的預存程序備妥執行。 `SQLPrepare` 只呼叫一次，而 `SQLExecute` 多次呼叫，每個程序執行各呼叫一次。  
+ 下列程式碼片段示範將項目加入訂單的預存程序備妥執行。 
+  `SQLPrepare` 只呼叫一次，而 `SQLExecute` 多次呼叫，每個程序執行各呼叫一次。  
   
 ```  
 // Bind parameters  

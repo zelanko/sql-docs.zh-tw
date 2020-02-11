@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f90ea08269e79e57c623af41fc2f0fbc09e2fb42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066641"
 ---
 # <a name="restore-from-powerpivot"></a>從 PowerPivot 還原
   您可以在 SQL Server Management Studio 中使用 [從 PowerPivot 還原] 功能，於 Analysis Services 執行個體上建立新的表格式模型資料庫 (以表格式模式執行)，或是從 PowerPivot 活頁簿 (.xlsx) 還原到現有的資料庫。  
   
 > [!NOTE]  
->  SQL Server Data Tools 中的 [從 PowerPivot 匯入] 專案範本提供了類似的功能。 如需詳細資訊，請參閱 <<c0> [ 從 PowerPivot 匯入&#40;SSAS 表格式&#41;](import-from-power-pivot-ssas-tabular.md)。</c0>  
+>  SQL Server Data Tools 中的 [從 PowerPivot 匯入] 專案範本提供了類似的功能。 如需詳細資訊，請參閱[從 PowerPivot 匯入 &#40;SSAS 表格式&#41;](import-from-power-pivot-ssas-tabular.md)。  
   
  使用 [從 PowerPivot 還原] 功能時，請牢記以下事項：  
   
@@ -37,18 +37,18 @@ ms.locfileid: "66066641"
   
 ### <a name="to-restore-from-powerpivot"></a>從 PowerPivot 還原  
   
-1.  在 SSMS 中，您想要還原，Active Directory 執行個體中以滑鼠右鍵按一下**資料庫**，然後按一下**從 PowerPivot 還原**。  
+1.  在 SSMS 中，于您想要還原的 Active Directory 實例中，以滑鼠右鍵按一下 [**資料庫**]，然後按一下 [**從 PowerPivot 還原**]。  
   
-2.  在**從 PowerPivot 還原**對話方塊中，於**還原來源**，請在**備份檔案**，按一下 **瀏覽**，然後選取 .abf 或.xslx若要從還原的檔案。  
+2.  在 [**從 PowerPivot 還原**] 對話方塊的 [**還原來源**] 中，按一下 [**備份檔案**] 中的 **[流覽]**，然後選取要從中還原的 .abf 或 xslx 檔案。  
   
-3.  在 [還原目標]  的 [還原資料庫]  中，輸入新資料庫或現有資料庫的名稱。 如果您沒有指定名稱，就會使用活頁簿的名稱。  
+3.  在 [還原目標]**** 的 [還原資料庫]**** 中，輸入新資料庫或現有資料庫的名稱。 如果您沒有指定名稱，就會使用活頁簿的名稱。  
   
-4.  按一下 [儲存位置]  中的 [瀏覽]  ，然後選取要儲存資料庫的位置。  
+4.  按一下 [儲存位置]**** 中的 [瀏覽]****，然後選取要儲存資料庫的位置。  
   
-5.  在 [選項]  中，保持核取 [包含安全性資訊]  。 從 PowerPivot 活頁簿還原時，這項設定並不適用。  
+5.  在 [選項]**** 中，保持核取 [包含安全性資訊]****。 從 PowerPivot 活頁簿還原時，這項設定並不適用。  
   
 ## <a name="see-also"></a>另請參閱  
  [表格式模型資料庫 &#40;SSAS 表格式&#41;](tabular-model-databases-ssas-tabular.md)   
- [從 PowerPivot 匯入&#40;SSAS 表格式&#41;](import-from-power-pivot-ssas-tabular.md)  
+ [從 PowerPivot 匯入 &#40;SSAS 表格式&#41;](import-from-power-pivot-ssas-tabular.md)  
   
   

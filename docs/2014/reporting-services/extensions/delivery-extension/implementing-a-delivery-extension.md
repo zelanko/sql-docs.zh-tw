@@ -16,19 +16,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cae33496e4dddcaf2d14ba2d87f0d4013795e58f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63165139"
 ---
 # <a name="implementing-a-delivery-extension"></a>實作傳遞延伸模組
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 可讓使用者建立和發行報表，一旦建立和發行，就可以傳遞給各個位置。 除此之外，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括數個傳遞延伸模組以及一個傳遞 API，可讓開發人員建立其他的傳遞延伸模組，以進一步擴充在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的傳遞功能。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]可讓使用者建立和發行報表，一旦建立和發行之後，即可傳遞至不同的位置。 除此之外，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括數個傳遞延伸模組以及一個傳遞 API，可讓開發人員建立其他的傳遞延伸模組，以進一步擴充在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的傳遞功能。  
   
  如需傳遞延伸模組的範例實作，請參閱 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
   
 ## <a name="in-this-section"></a>本節內容  
- [傳遞延伸模組概觀] 傳遞-擴充功能-overview.md)  
+ [傳遞延伸模組總覽] 傳遞-延伸模組-overview.md）  
  介紹如何為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 撰寫自訂傳遞延伸模組。  
   
  [準備實作傳遞延伸模組](preparing-to-implement-a-delivery-extension.md)  
@@ -61,7 +61,7 @@ ms.locfileid: "63165139"
  [部署傳遞延伸模組](deploying-a-delivery-extension.md)  
  描述如何部署您的傳遞延伸模組。  
   
- [對傳遞延伸模組程式碼進行偵錯](debugging-delivery-extension-code.md)  
+ [偵錯傳遞延伸模組程式碼](debugging-delivery-extension-code.md)  
  描述如何偵錯您的傳遞延伸模組中的程式碼。  
   
  [移除傳遞延伸模組](removing-a-delivery-extension.md)  

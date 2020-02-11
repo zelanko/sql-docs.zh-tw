@@ -21,14 +21,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0eac17d30d8a8870d03a0b5b81610fad1344333
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073390"
 ---
 # <a name="parent-child-hierarchy"></a>父子式階層
-  父子式階層是位於包含父屬性之標準維度中的階層。 父屬性描述維度主資料表內的「自我參考關聯性」  或「自我聯結」  。 父子式階層是由單一父屬性所建構的。 因為階層中的層級是從與父屬性相關之成員間的父子式關聯性衍生而來，所以只會將一個層級指派給父子式階層。 父子式階層中之成員的位置是由父屬性 (Attribute) 的 `KeyColumns` 和 `RootMemberIf` 屬性 (Property) 所決定，而層級中之成員的位置是由父屬性 (Attribute) 的 `OrderBy` 屬性 (Property) 所決定。 如需屬性 (attribute) 之屬性 (property) 的詳細資訊，請參閱 [屬性和屬性階層](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
+  父子式階層是位於包含父屬性之標準維度中的階層。 父屬性描述維度主資料表內的「自我參考關聯性」** 或「自我聯結」**。 父子式階層是由單一父屬性所建構的。 因為階層中的層級是從與父屬性相關之成員間的父子式關聯性衍生而來，所以只會將一個層級指派給父子式階層。 父子式階層中之成員的位置是由父屬性 (Attribute) 的 `KeyColumns` 和 `RootMemberIf` 屬性 (Property) 所決定，而層級中之成員的位置是由父屬性 (Attribute) 的 `OrderBy` 屬性 (Property) 所決定。 如需屬性 (attribute) 之屬性 (property) 的詳細資訊，請參閱 [屬性和屬性階層](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
   
  因為在父子式階層內有層級之間的父子式關聯性，所以除了有彙總自子成員的資料以外，部分非分葉成員還可能會有衍生自基礎資料來源的資料。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66073390"
   
  然而，父子式維度會檢查維度主資料表所含的資料，然後評估資料表中之記錄間的父子式關聯性，以建構父子式階層。 如需父子式階層的詳細資訊，請參閱 [使用者階層](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)。  
   
- 父子式階層並不會從用來建立階層的屬性中，衍生出父子式階層中的層級名稱。 相反地，這些維度建立層級名稱會自動使用命名範本的字串運算式，您可以在指定的父屬性，控制如何將屬性產生屬性階層的層級。 如需如何設定父屬性之命名範本的詳細資訊，請參閱 [屬性和屬性階層](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
+ 父子式階層並不會從用來建立階層的屬性中，衍生出父子式階層中的層級名稱。 相反地，這些維度會使用命名範本自動建立層級名稱，也就是您可以在父屬性層級指定的字串運算式，以控制屬性如何產生屬性階層。 如需如何設定父屬性之命名範本的詳細資訊，請參閱 [屬性和屬性階層](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
   
 ## <a name="data-members"></a>資料成員  
  通常，維度中的分葉成員會包含直接衍生自基礎資料來源的資料，而非分葉成員則會包含衍生自子成員上所執行之彙總的資料。  

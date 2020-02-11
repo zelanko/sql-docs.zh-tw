@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1982d7941fd42eeac8a2d6eaa0bb78260c24317
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184261"
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>從追蹤檔案或追蹤資料表衍生範本 (SQL Server Profiler)
@@ -25,7 +25,7 @@ ms.locfileid: "63184261"
   
 ### <a name="to-derive-a-template-from-a-trace-file-or-trace-table"></a>若要從追蹤檔案或追蹤資料表衍生範本  
   
-1.  開啟要做為範本基礎的追蹤檔案或追蹤資料表。 如需詳細資訊，請參閱[開啟追蹤檔案 &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) 或[開啟追蹤資料表 &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)。  
+1.  開啟要做為範本基礎的追蹤檔案或追蹤資料表。 如需詳細資訊，請參閱 [開啟追蹤檔案 &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) 或 [開啟追蹤資料表 &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)隨附的預先定義「微調」範本。  
   
 2.  在 **[檔案]** 功能表中指向 **[另存新檔]** ，然後按一下 **[追蹤範本]** 。  
   

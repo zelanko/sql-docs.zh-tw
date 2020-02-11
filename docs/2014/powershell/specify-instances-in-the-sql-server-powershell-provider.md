@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414d9135989c39ea183d14d2d6f5dfa6e84e6fe6
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797760"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>指定 SQL Server PowerShell 提供者中的執行個體
   針對 SQL Server PowerShell 提供者指定的路徑必須識別 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的執行個體及其執行所在的電腦。 用來指定電腦和執行個體的語法必須符合 SQL Server 識別碼和 Windows PowerShell 路徑的規則。  
   
-1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
+1.  **開始之前：**[限制](#LimitationsRestrictions)事項    
   
-2.  **To specify an instance:**  [Examples](#Examples)  
+2.  **若要指定實例：**  [範例](#Examples)  
   
 ## <a name="before-you-begin"></a>開始之前  
  SQL Server 提供者路徑中接在 SQLSERVER:\SQL 後面的第一個節點是執行 [!INCLUDE[ssDE](../includes/ssde-md.md)]執行個體的電腦名稱。例如：  
@@ -46,9 +46,10 @@ SQLSERVER:\SQL\MyComputer\MyInstance
   
  (local) 中的括號字元通常會被 Windows PowerShell 視為命令。 您必須將其編碼或逸出以在路徑中使用，或使用雙引號括住路徑。 如需詳細資訊，請參閱＜編碼及解碼 SQL Server 識別碼＞。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會要求您一定要指定執行個體名稱。 如果是預設執行個體，您必須指定執行個體名稱 DEFAULT。  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會要求您一定要指定執行個體名稱。 如果是預設執行個體，您必須指定執行個體名稱 DEFAULT。  
   
-##  <a name="Examples"></a> 範例：電腦和執行個體名稱  
+##  <a name="Examples"></a>典型電腦和實例名稱  
  此範例使用 localhost 和 DEFAULT 指定本機電腦上的預設執行個體：  
   
 ```powershell

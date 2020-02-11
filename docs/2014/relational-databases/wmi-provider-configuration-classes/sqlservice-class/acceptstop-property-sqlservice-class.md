@@ -1,5 +1,5 @@
 ---
-title: AcceptStop 屬性 （SqlService 類別） |Microsoft Docs
+title: AcceptStop 屬性（SqlService 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 38da38f867c6266d25f3b5d4c329a3e18a0e7292
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63223343"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>AcceptStop 屬性 (SqlService 類別)
@@ -37,8 +37,8 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
- A [SqlService 類別](sqlservice-class.md)物件，表示服務  
+ *目標*  
+ 代表服務的[SqlService 類別](sqlservice-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定是否可停止服務的布林值：如果可停止服務為 `true`，如果無法停止則為 `false`。  

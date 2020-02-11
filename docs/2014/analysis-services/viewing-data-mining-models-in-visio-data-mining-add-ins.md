@@ -1,5 +1,5 @@
 ---
-title: 檢視資料採礦模型在 Visio 中 （資料採礦增益集） |Microsoft Docs
+title: 在 Visio 中查看資料採礦模型（資料採礦增益集） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,17 +16,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c287e840c07d11a527e980f9f07fb39fb3852739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065523"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>在 Visio 中檢視資料採礦模型 (資料採礦增益集)
   資料採礦的 Visio 圖形可讓您連接到伺服器並建立代表現有資料採礦模型的圖表。 然後，您可以使用 Visio 控制項來自訂圖表，但是也可以向下鑽研資料、公開部分基礎統計資料，以及使用基礎模型。  
   
 ## <a name="building-a-model-diagram"></a>建立模型圖表  
- 當您開啟包含資料採礦的 Visio 圖形的檔案時**圖形**窗格會顯示下列圖形。  
+ 當您開啟包含用於資料採礦之 Visio 圖形的檔案時，[**圖形**] 窗格會顯示下列圖形。  
   
  如果您在開啟 Visio 時沒有看見資料採礦圖形，可以從安裝資料夾開啟範本檔案。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66065523"
 |Visio 圖形|支援的模型|  
 |-----------------|----------------------|  
 |決策樹|請針對以決策樹或線性迴歸演算法為基礎的模型使用此圖形。|  
-|相依性網路|使用此圖形上的任何下列的演算法為基礎的模型：貝氏機率分類、 決策樹或關聯規則。|  
+|相依性網路|請針對以下列任一個演算法為基礎的模型使用此圖形：貝氏機率分類、決策樹或關聯規則。|  
 |叢集|請針對以叢集演算法為基礎的模型使用此圖形。|  
   
  根據採礦模型中的資料類型，精靈可能會提供不同選項。 例如，包含連續數字之資料行的視覺效果方式與類別變數有所不同。  
@@ -77,6 +77,6 @@ ms.locfileid: "66065523"
  [決策樹圖表逐步解說](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [瀏覽模型，在 Excel 中的&#40;SQL Server 資料採礦增益集&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+ [在 Excel 中流覽模型 &#40;SQL Server 資料採礦增益集&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

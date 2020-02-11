@@ -1,5 +1,5 @@
 ---
-title: 使用陳述式 (ODBC) |Microsoft Docs
+title: 使用語句（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 842e862dff7eca85a05df0222989c6ee6390ab89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200322"
 ---
 # <a name="use-a-statement-odbc"></a>使用陳述式 (ODBC)
     
 ### <a name="to-use-a-statement"></a>使用陳述式  
   
-1.  利用 SQL_HANDLE_STMT 的 *HandleType* 來呼叫 [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)，以配置陳述式控制代碼。  
+1.  利用 SQL_HANDLE_STMT 的 [HandleType](https://go.microsoft.com/fwlink/?LinkId=58396) 來呼叫 *SQLAllocHandle*，以配置陳述式控制代碼。  
   
 2.  您可以選擇呼叫 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) 來設定陳述式選項，或是呼叫 [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) 來取得陳述式屬性。  
   
@@ -35,11 +35,11 @@ ms.locfileid: "63200322"
   
 5.  使用 SQLExecDirect 直接執行陳述式  
   
-     \-或-  
+     \- 或 -  
   
      如果此陳述式已備妥，請使用 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 將它執行多次。  
   
-     \-或-  
+     \- 或 -  
   
      呼叫目錄函數，這樣會傳回結果。  
   
@@ -47,11 +47,11 @@ ms.locfileid: "63200322"
   
      透過陳述式的結果集一次提取一個資料列。  
   
-     \-或-  
+     \- 或 -  
   
      透過結果集，利用區塊資料指標一次提取數個資料列。  
   
-     \-或-  
+     \- 或 -  
   
      呼叫 [SQLRowCount](../../native-client-odbc-api/sqlrowcount.md) 來判斷受到 INSERT、UPDATE 或 DELETE 陳述式影響的資料列數。  
   
@@ -67,9 +67,9 @@ ms.locfileid: "63200322"
   
     -   若要重複使用陳述式控制代碼，請移至步驟 2。  
   
-8.  使用 SQL_HANDLE_STMT 的 *HandleType* 呼叫 [SQLFreeHandle](../../native-client-odbc-api/sqlfreehandle.md)，以釋放陳述式控制代碼。  
+8.  使用 SQL_HANDLE_STMT 的 [HandleType](../../native-client-odbc-api/sqlfreehandle.md) 呼叫 *SQLFreeHandle*，以釋放陳述式控制代碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行查詢使用說明主題&#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+ [執行查詢 &#40;ODBC&#41;的使用說明主題](executing-queries-how-to-topics-odbc.md)  
   
   

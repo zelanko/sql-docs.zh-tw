@@ -1,5 +1,5 @@
 ---
-title: 修改篩選 (SQL Server Profiler) |Microsoft Docs
+title: 修改篩選（SQL Server Profiler） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db6d6220fbb0f756b539e63dc2496d9ddb46d9f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63228496"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>修改篩選 (SQL Server Profiler)
@@ -26,7 +26,7 @@ ms.locfileid: "63228496"
   
 ### <a name="to-modify-a-filter"></a>若要修改篩選  
   
-1.  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中，開啟您要修改的追蹤篩選範本。 在 [檔案]  功能表上，按一下 [範本]  ，然後選擇 [編輯範本]  。  
+1.  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，開啟您要修改的追蹤篩選範本。 在 [檔案]  功能表上，按一下 [範本]  ，然後選擇 [編輯範本]  。  
   
 2.  在 [追蹤範本屬性]  對話方塊的 [一般]  索引標籤中，從 [選取範本名稱]  清單中選取範本。  
   

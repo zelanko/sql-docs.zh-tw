@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9d967d1275c7b682c79313b95af06f3088e7acf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075976"
 ---
 # <a name="create-a-currency-type-dimension"></a>建立貨幣類型維度
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，貨幣類型維度是指其屬性代表財務報表所使用之貨幣清單的維度。  
+  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，貨幣類型維度是其屬性代表財務報表用途之貨幣清單的維度。  
   
  貨幣維度可讓您將貨幣轉換功能加入至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的 Cube 中。 若要將貨幣轉換加入至 Cube，您可以使用商業智慧精靈定義多維度運算式 (MDX) 指令碼命令，將貨幣量值轉換成適合用戶端應用程式地區設定的值。 若要建立這個 MDX 指令碼，商業智慧精靈需要下列資訊：  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66075976"
   
 ## <a name="see-also"></a>另請參閱  
  [屬性和屬性階層](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [商業智慧精靈 F1 說明](../business-intelligence-wizard-f1-help.md)   
+ [商業智慧 Wizard F1 說明](../business-intelligence-wizard-f1-help.md)   
  [維度類型](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   

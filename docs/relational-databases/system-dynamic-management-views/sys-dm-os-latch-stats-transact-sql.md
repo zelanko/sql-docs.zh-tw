@@ -19,10 +19,10 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72289409"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
@@ -31,21 +31,21 @@ ms.locfileid: "72289409"
 傳回所有以類別組織之閂鎖等候的相關資訊。 
   
 > [!NOTE]  
-> 若要從 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼叫此，請使用**dm_pdw_nodes_os_latch_stats**的名稱。  
+> 若要從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼叫此，請使用**dm_pdw_nodes_os_latch_stats**的名稱。  
   
-|資料行名稱|[名稱]|描述|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|latch_class|**nvarchar(120)**|閂鎖類別的名稱。|  
-|waiting_requests_count|**bigint**|這個類別中的閂鎖等候數。 這個計數器是從開始閂鎖等候時逐量遞增計算。|  
-|wait_time_ms|**bigint**|這個類別的總閂鎖等候時間 (以毫秒為單位)。<br /><br /> **注意：** 此資料行會在閂鎖等候期間每五分鐘更新一次，並在閂鎖等候結束時更新。|  
-|max_wait_time_ms|**bigint**|這是記憶體物件可以等候這個閂鎖的最長時間。 如果這個值超乎尋常地高，可能是發生內部死結。|  
-|pdw_node_id|**int**|**適用于**： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|latch_class|**Nvarchar （120）**|閂鎖類別的名稱。|  
+|waiting_requests_count|**Bigint**|這個類別中的閂鎖等候數。 這個計數器是從開始閂鎖等候時逐量遞增計算。|  
+|wait_time_ms|**Bigint**|這個類別的總閂鎖等候時間 (以毫秒為單位)。<br /><br /> **注意：** 此資料行會在閂鎖等候期間每五分鐘更新一次，並在閂鎖等候結束時更新。|  
+|max_wait_time_ms|**Bigint**|這是記憶體物件可以等候這個閂鎖的最長時間。 如果這個值超乎尋常地高，可能是發生內部死結。|  
+|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
-## <a name="permissions"></a>Permissions  
-在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上，需要 `VIEW SERVER STATE` 許可權。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高階層級上，需要資料庫中的 `VIEW DATABASE STATE` 許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層上，需要**伺服器管理員**或 Azure Active Directory 的系統**管理員**帳戶。   
+## <a name="permissions"></a>權限  
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  sys.dm_os_latch_stats 可以檢查不同閂鎖類別的相對等候時間和等候次數，來識別閂鎖競爭的來源。 某些情況下，您或許可以解決或減少閂鎖競爭的狀況。 不過有些時候您可能還是必須連絡 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客戶支援服務部門。  
   
 您可以利用 `DBCC SQLPERF` 重設 sys.dm_os_latch_stats 的內容，如下所示：  
@@ -61,14 +61,14 @@ GO
 >  如果重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，將無法保存這些統計資料。 所有的資料都是從上次重設統計資料之後，或是從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動之後開始累加計算。  
   
 ## <a name="latches"></a>銷  
- 閂鎖是與鎖定類似的內部輕量同步處理物件，由各種 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件所使用。 閂鎖主要用來同步處理作業（例如緩衝區或檔案存取）中的資料庫頁面。 每一個閂鎖都與一個配置單位有關。 
+ 閂鎖是一種內部輕量的同步處理物件，類似于各種[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件所使用的鎖定。 閂鎖主要用來同步處理作業（例如緩衝區或檔案存取）中的資料庫頁面。 每一個閂鎖都與一個配置單位有關。 
   
  如果無法立即授與閂鎖要求，就會發生閂鎖等候，因為閂鎖是由另一個處於衝突模式的執行緒所持有。 與鎖定不同的是，閂鎖會在作業之後立即釋出，即使是進行寫入作業也一樣。  
   
  閂鎖是根據元件和使用方式，分成幾個類別。 零個或零個以上特殊類別的閂鎖，可以存在於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的任何一個時間點。  
   
 > [!NOTE]  
-> `sys.dm_os_latch_stats` 不會追蹤立即授與或未等待的閂鎖要求。  
+> `sys.dm_os_latch_stats` 不會追蹤立即授與或是尚未等候就失敗的閂鎖要求。  
   
  下表含有各種閂鎖類別的簡單描述。  
   
@@ -171,7 +171,7 @@ GO
 |SERVICE_BROKER_MIRROR_ROUTE|僅供內部使用。|  
 |TRACE_ID|僅供內部使用。|  
 |TRACE_AUDIT_ID|僅供內部使用。|  
-|追蹤|僅供內部使用。|  
+|TRACE|僅供內部使用。|  
 |TRACE_CONTROLLER|僅供內部使用。|  
 |TRACE_EVENT_QUEUE|僅供內部使用。|  
 |TRANSACTION_DISTRIBUTED_MARK|僅供內部使用。|  
@@ -194,6 +194,6 @@ GO
 |KTM_VIRTUAL_CLOCK|僅供內部使用。|  
   
 ## <a name="see-also"></a>另請參閱  
-[DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
-[SQL Server 作業系統相關的動態管理 Views &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[DBCC SQLPERF &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
+[SQL Server 作業系統相關的動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [SQL Server 的 Latches 物件](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

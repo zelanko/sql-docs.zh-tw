@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209880"
 ---
 # <a name="resource-governor-resource-pool"></a>資源管理員資源集區
@@ -117,10 +117,10 @@ ms.locfileid: "63209880"
 |描述如何刪除資源集區。|[刪除資源集區](delete-a-resource-pool.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [資源管理員](resource-governor.md)   
- [資源管理員工作負載群組](resource-governor-workload-group.md)   
- [資源管理員分類函數](resource-governor-classifier-function.md)   
- [使用範本來設定資源管理員](configure-resource-governor-using-a-template.md)   
+ [Resource Governor](resource-governor.md)   
+ [Resource Governor 工作負載群組](resource-governor-workload-group.md)   
+ [Resource Governor 分類函數](resource-governor-classifier-function.md)   
+ [使用範本設定 Resource Governor](configure-resource-governor-using-a-template.md)   
  [檢視資源管理員屬性](view-resource-governor-properties.md)  
   
   

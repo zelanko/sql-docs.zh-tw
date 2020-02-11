@@ -1,5 +1,5 @@
 ---
-title: 'Issasynchstatus:: Waitforasynchcompletion (OLE DB) |Microsoft Docs'
+title: ISSAsynchStatus：： WaitForAsynchCompletion （OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af77f5f5519a49e2d9a744dceca2857cc88ce8e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192324"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
@@ -43,7 +43,7 @@ HRESULT WaitForAsynchCompletion(
  此方法已成功。  
   
  E_UNEXPECTED  
- 資料列集是在未使用的狀態，因為**itransaction:: Commit**或是**itransaction:: Abort**已呼叫或資料列集已取消在其初始化階段。  
+ 因為已呼叫**ITransaction：： Commit**或**ITransaction：： Abort** ，或資料列集在其初始化階段已取消，所以資料列集處於未使用的狀態。  
   
  DB_E_CANCELED  
  非同步處理已在資料列集擴展或資料來源物件初始化期間取消。  
@@ -55,9 +55,10 @@ HRESULT WaitForAsynchCompletion(
 >  除了以上列出的傳回碼值，**ISSAsynchStatus::WaitForAsynchCompletion** 方法也支援透過核心 OLEDB **ICommand::Execute** 和 **IDBInitialize::Initialize** 方法所傳回的傳回碼值。  
   
 ## <a name="remarks"></a>備註  
- 在逾時值 (以毫秒為單位) 已過，或暫止的作業完成前，**ISSAsynchStatus::WaitForAsynchCompletion** 方法將不會傳回。 **Command** 物件的 **CommandTimeout** 屬性會控制查詢在逾時前執行的秒數。如果搭配 **ISSAsynchStatus::WaitForAsynchCompletion** 方法使用，將會忽略 **CommandTimeout** 屬性。  
+ 在逾時值 (以毫秒為單位) 已過，或暫止的作業完成前，**ISSAsynchStatus::WaitForAsynchCompletion** 方法將不會傳回。 **Command**物件具有**CommandTimeout**屬性，可控制查詢將在超時前執行的秒數。如果搭配**ISSAsynchStatus：： WaitForAsynchCompletion**方法使用，將會忽略**CommandTimeout**屬性。  
   
- 非同步作業會忽略逾時屬性。 **ISSAsynchStatus::WaitForAsynchCompletion** 的逾時參數會指定將控制項傳回給呼叫端前經過的時間上限。 如果這個逾時過期，會傳回 DB_S_ASYNCHRONOUS。 逾時絕不會取消非同步作業。 如果應用程式需要取消沒有在逾時期間內完成的非同步作業，它必須等到逾時，然後明確地取消此作業 (如果有傳回 DB_S_ASYNCHRONOUS)。  
+ 非同步作業會忽略逾時屬性。 
+  **ISSAsynchStatus::WaitForAsynchCompletion** 的逾時參數會指定將控制項傳回給呼叫端前經過的時間上限。 如果這個逾時過期，會傳回 DB_S_ASYNCHRONOUS。 逾時絕不會取消非同步作業。 如果應用程式需要取消沒有在逾時期間內完成的非同步作業，它必須等到逾時，然後明確地取消此作業 (如果有傳回 DB_S_ASYNCHRONOUS)。  
   
 > [!NOTE]  
 >  使用 OLE DB 服務元件時，如果為 DB_S_ASYNCHRONOUS，可能會傳回 S_OK；因此，應用程式應該呼叫 [ISSAsynchStatus::GetStatus](issasynchstatus-getstatus-ole-db.md) 來檢查傳回 S_OK 或 DB_S_ASYNCHRONOUS 時，作業是否完成。  
@@ -66,7 +67,7 @@ HRESULT WaitForAsynchCompletion(
   
  如果作業在逾時過期前完成，傳回的 HRESULT 將會是此作業所傳回的 HRESULT (已經傳回的 HRESULT 已經讓此作業以同步方式執行)。  
   
- 此外，SSPROP_ISSAsynchStatus 屬性已加入到 DBPROPSET_SQLSERVERROWSET 屬性集。 支援 [ISSAsynchStatus](issasynchstatus-ole-db.md) 介面的提供者必須使用 VARIANT_TRUE 的值實作此屬性。  
+ 此外，SSPROP_ISSAsynchStatus 屬性已加入到 DBPROPSET_SQLSERVERROWSET 屬性集。 支援 [ISSAsynchStatus](issasynchstatus-ole-db.md) 介面的提供者必須利用 VARIANT_TRUE 的值實作此屬性。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行非同步作業](../native-client/features/performing-asynchronous-operations.md)   

@@ -1,5 +1,5 @@
 ---
-title: XTP （記憶體中 OLTP） 效能計數器 |Microsoft Docs
+title: XTP （記憶體內部 OLTP）效能計數器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69b24c96e4833a45038bfcae20f0a5fecd0d2340
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151130"
 ---
 # <a name="xtp-in-memory-oltp-performance-counters"></a>XTP (記憶體中 OLTP) 效能計數器
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供物件和計數器，可供效能監視器用來監視記憶體中 OLTP 活動。  
   
-##  <a name="SQLServerPOs"></a> XTP (記憶體中 OLTP) 效能物件  
+##  <a name="SQLServerPOs"></a>XTP （記憶體內部 OLTP）效能物件  
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件。  
   
 |效能物件|描述|  

@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3be08f0962b7440d5cd0812ad365a752aa1b89d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103306"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   針對原生模式設定的報表伺服器會當做應用程式伺服器執行，並透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]元件專門提供所有處理和管理能力。  
   
- 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或報表管理員來管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表。 使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員可在原生模式中管理報表伺服器。  
+ 您可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]或報表管理員來管理[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]報表。 使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員可在原生模式中管理報表伺服器。  
   
  如果報表伺服器是針對 SharePoint 模式所設定，您就必須使用 SharePoint 網站上的內容管理頁面來管理報表、共用資料來源和其他報表伺服器項目。  
   
@@ -38,8 +38,9 @@ ms.locfileid: "66103306"
   
 -   [從報表參考影像資源](#bkmk_referenceimage)  
   
-##  <a name="bkmk_sum"></a> 原生模式摘要  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式安裝包含多項需要管理及維護的伺服器端功能。 此伺服器功能包含以下項目：  
+##  <a name="bkmk_sum"></a>原生模式摘要  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式安裝包含多項需要管理及維護的伺服器端功能。 此伺服器功能包含以下項目：  
   
 -   報表伺服器 Web 服務 (在報表伺服器服務內部執行)。  
   
@@ -55,11 +56,11 @@ ms.locfileid: "66103306"
   
 -   如果您將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝在網域控制站上，您必須是網域管理員。  
   
-##  <a name="bkmk_managecontent"></a> 管理內容  
+##  <a name="bkmk_managecontent"></a>管理內容  
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，內容管理是指報表、模型、資料夾、資源和共用資料來源的管理。 所有的這些項目都可以透過屬性和安全性設定單獨進行管理， 而任何一個項目都可以移至報表伺服器資料夾命名空間內的不同位置。 若要有效管理項目，您必須了解內容管理員所執行的工作。  
   
 > [!NOTE]  
->  內容管理與報表伺服器管理不同。 如需如何管理報表伺服器執行的環境的詳細資訊，請參閱[Administration (Reporting Services)](reporting-services-report-server-native-mode.md)。  
+>  內容管理與報表伺服器管理不同。 如需如何管理報表伺服器執行之環境的詳細資訊，請參閱[管理（Reporting Services）](reporting-services-report-server-native-mode.md)。  
   
  內容管理包括下列工作：  
   
@@ -77,19 +78,20 @@ ms.locfileid: "66103306"
   
 -   藉由建立報表處理排程，並指定何者可依需求執行以及何者要從快取載入，即可平衡伺服器的報表處理負荷。  
   
- 兩個預先定義的角色提供執行管理工作的權限：**系統管理員**並**內容管理員**。 您必須被指派至這兩種角色，才能有效管理報表伺服器內容。 如需這些預先定義角色的詳細資訊，請參閱[角色與權限 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)。  
+ 執行管理工作的權限是透過兩個預先定義角色提供的： **系統管理員** 和 **內容管理員**。 您必須被指派至這兩種角色，才能有效管理報表伺服器內容。 如需這些預先定義角色的詳細資訊，請參閱[角色與權限 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)。  
   
- 用於管理報表伺服器內容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或報表管理員。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可讓您設定預設值和啟用功能。 報表管理員是用來將報表伺服器項目與作業的存取權授與使用者、檢視和使用報表與其他內容類型，以及檢視和使用所有共用項目與報表散發功能。  
+ 用於管理報表伺服器內容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或報表管理員。 
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可讓您設定預設值和啟用功能。 報表管理員是用來將報表伺服器項目與作業的存取權授與使用者、檢視和使用報表與其他內容類型，以及檢視和使用所有共用項目與報表散發功能。  
   
-##  <a name="bkmk_manageresources"></a> 保護和管理資源  
+##  <a name="bkmk_manageresources"></a>保護和管理資源  
  資源是指儲存在報表伺服器上，但並非由報表伺服器所處理的 Managed 項目。 一般而言，資源會提供外部內容給報表使用者。 範例包括 .jpg 檔或 HTML 檔中描述報表所使用之商務規則的影像。 雖然此 JPG 或 HTML 檔會儲存在報表伺服器上，但是報表伺服器會直接將此檔案傳遞至瀏覽器而非先處理它。  
   
  若要將資源加入至報表伺服器，您可以上傳或發行檔案：  
   
-|運算|檔案類型|  
+|作業|檔案類型|  
 |---------------|---------------|  
 |上傳|除了報表定義 (.rdl) 和報表模型 (.smdl) 檔以外，所有檔案都會當做資源上傳。<br /><br /> 若要上傳資源，您必須使用報表管理員 (如果報表伺服器以原生模式執行的話) 或 SharePoint 網站上的應用程式頁面 (如果伺服器以 SharePoint 整合模式執行的話)。 如需詳細資訊，請參閱[上傳檔案或報表 &#40;報表管理員&#41;](../reports/upload-a-file-or-report-report-manager.md) 或[將文件上傳到 SharePoint 文件庫 &#40;SharePoint 模式的 Reporting Services&#41;](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)。|  
-|發行|除了 .rdl、.smdl 和 .rds 資料來源檔案以外，專案中的所有檔案都會當做資源上傳。 若要發行資源，請在報表設計師中，將現有的項目加入至專案，然後將此專案發行至報表伺服器。|  
+|發佈|除了 .rdl、.smdl 和 .rds 資料來源檔案以外，專案中的所有檔案都會當做資源上傳。 若要發行資源，請在報表設計師中，將現有的項目加入至專案，然後將此專案發行至報表伺服器。|  
   
  所有資源都會先在檔案系統上以檔案的形式產生，然後再上傳至報表伺服器。 除了 ASP.NET 所加諸的 4 MB 預設檔案大小限制以外，您可以上傳的檔案類型沒有任何限制。 不過，以資源發行至報表伺服器時，具有對等 MIME 類型之檔案類型的效能會優於其他類型。 例如，當使用者按一下資源時，以 HTML 和 JPG 檔為基礎的資源將在瀏覽器視窗中開啟，HTML 將轉譯成網頁，JPG 將轉譯成影像，供使用者檢視。 反之，沒有對等 MIME 類型的資源 (例如桌上型電腦應用程式檔案) 可能就無法在瀏覽器視窗中轉譯。  
   
@@ -97,7 +99,7 @@ ms.locfileid: "66103306"
   
  資源會連同報表、共用資料來源、共用排程和資料夾一起當做具名項目存在報表伺服器資料夾階層中。 您可以搜尋、檢視、保護和設定資源的屬性，就像處理報表伺服器上所儲存的任何項目一樣。 若要檢視或管理資源，您的角色指派中必須具有檢視資源或管理員資源的工作。  
   
-##  <a name="bkmk_referenceimage"></a> 從報表參考影像資源  
+##  <a name="bkmk_referenceimage"></a>從報表參考影像資源  
  資源可以包含您在報表中參考的影像。 如果報表需求包括使用外部影像，請考慮下列將影像儲存成資源的優點：  
   
 -   報表伺服器資料庫中的集中式儲存。 如果您將報表伺服器資料庫及其內容移至另一部電腦，外部影像會與報表一起移動。 您不需要追蹤儲存在不同電腦之磁碟上的影像檔。  

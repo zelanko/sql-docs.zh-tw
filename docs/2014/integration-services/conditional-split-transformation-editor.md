@@ -1,5 +1,5 @@
 ---
-title: Conditional Split Transformation Editor |Microsoft Docs
+title: 條件式分割轉換編輯器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 920ec41ae30d53853cfb757fb7fc33610953dc86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060890"
 ---
 # <a name="conditional-split-transformation-editor"></a>條件式分割轉換編輯器
@@ -29,7 +29,7 @@ ms.locfileid: "66060890"
   
  若要深入了解條件式分割轉換，請參閱 [條件式分割轉換](data-flow/transformations/conditional-split-transformation.md)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **單**  
  選取資料列並使用右邊的方向鍵來變更評估運算式的順序。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66060890"
   
  此屬性的值可以使用屬性運算式指定。  
   
- **相關主題：** [Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)、[運算子 &#40;SSIS 運算式&#41;](expressions/operators-ssis-expression.md)和[函數 &#40;SSIS 運算式&#41;](expressions/functions-ssis-expression.md)  
+ **相關主題：**[Integration Services &#40;ssis&#41; 運算式](expressions/integration-services-ssis-expressions.md)、 [&#40;ssis 運算式&#41;的運算子](expressions/operators-ssis-expression.md)，以及[&#40;ssis 運算式的函數](expressions/functions-ssis-expression.md)&#41;   
   
  **預設輸出名稱**  
  輸入預設輸出的名稱，或使用預設值。  

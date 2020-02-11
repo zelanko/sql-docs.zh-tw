@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9fb4893304a17be264a0d5bdcb8add2732c7c271
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103274"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 組態檔
@@ -30,7 +30,7 @@ ms.locfileid: "66103274"
 ## <a name="editing-guidelines"></a>編輯指導方針  
  您可以修改此檔案以重新命名記錄檔，或者增加或減少追蹤層級。 請勿修改其他任何設定。 如需指示，請參閱[修改 Reporting Services 設定檔 &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 如需追蹤紀錄的詳細資訊，請參閱 [報表伺服器服務追蹤記錄](report-server-service-trace-log.md)。  
   
-## <a name="example-configuration"></a>範例組態  
+## <a name="example-configuration"></a>設定範例  
  下列範例顯示 ReportingServicesService.exe.config 檔中的設定和預設值。  
   
 ```  
@@ -74,15 +74,16 @@ ms.locfileid: "66103274"
 |設定|描述|  
 |-------------|-----------------|  
 |**RStrace**|指定用於錯誤和追蹤的命名空間。|  
-|**DefaultTraceSwitch**|指定報告到 ReportServerService 追蹤記錄的資訊層級。 每一個層級包括所有較低層級所報告的資訊。 不建議停用追蹤。 有效值包括：<br /><br /> 0= 停用追蹤<br /><br /> 1= 例外狀況和重新啟動<br /><br /> 2= 例外、重新啟動和警告<br /><br /> 3= 例外、重新啟動、警告和狀態訊息 (預設值)<br /><br /> 4= 詳細資訊模式|  
-|**FileName**|指定記錄檔名稱的第一部分。 `Prefix` 所指定的值會完成名稱的其餘部分。 依預設，名稱是 ReportServerService_。|  
-|**FileSizeLimitMb**|指定追蹤記錄的大小上限。 檔案大小的單位為 MB。 有效值為 0 到最大整數。 預設值為 32。|  
+|**Defaulttraceswitch 所**|指定報告到 ReportServerService 追蹤記錄的資訊層級。 每一個層級包括所有較低層級所報告的資訊。 不建議停用追蹤。 有效值包括：<br /><br /> 0= 停用追蹤<br /><br /> 1= 例外狀況和重新啟動<br /><br /> 2= 例外、重新啟動和警告<br /><br /> 3= 例外、重新啟動、警告和狀態訊息 (預設值)<br /><br /> 4= 詳細資訊模式|  
+|**名稱**|指定記錄檔名稱的第一部分。 
+  `Prefix` 所指定的值會完成名稱的其餘部分。 依預設，名稱是 ReportServerService_。|  
+|**FileSizeLimitMb**|指定追蹤記錄的大小上限。 檔案大小的單位為 MB。 有效值為 0 到最大整數。 預設值是 32。|  
 |**KeepFilesForDays**|指定一個天數，超過此天數後，追蹤記錄檔便會被刪除。 有效值為 0 到最大整數。 預設值為 14。|  
 |`Prefix`|指定可區別記錄檔執行個體的產生值。 依預設，會將時間戳記附加至追蹤記錄檔名稱。 此值設定為 "tid, time"。 請勿修改此設定。|  
-|**TraceListeners**|指定輸出追蹤記錄內容的目標。 您可以指定多重目標，每個目標之間請以逗號隔開。 有效值包括：<br /><br /> DebugWindow (預設值)<br /><br /> File (預設值)<br /><br /> StdOut|  
+|**Tracelistener**|指定輸出追蹤記錄內容的目標。 您可以指定多重目標，每個目標之間請以逗號隔開。 有效值包括：<br /><br /> DebugWindow (預設值)<br /><br /> File (預設值)<br /><br /> StdOut|  
 |**TraceFileMode**|指定追蹤記錄中是否要包含 24 小時內的資料。 每個元件每一天只能有一份追蹤記錄。 此值設定為「Unique (預設值)」。 請勿修改此值。|  
-|**Components**|指定建立追蹤記錄的元件。 預設值是 `all`。 此設定的其他有效值包括內部元件的名稱。 請勿修改此值。|  
-|**執行階段**|指定支援與前版回溯相容的組態設定。 執行階段設定是用來重新導向以新版為前版 Microsoft.ReportingServices.Interfaces 之目標的要求。<br /><br /> 本節中的所有組態設定會在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 產品文件集中加以描述。 如需詳細資訊，請在 MSDN 網站上或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 文件集中搜尋「執行階段結構描述設定」。|  
+|**元件**|指定建立追蹤記錄的元件。 預設值是 `all`。 此設定的其他有效值包括內部元件的名稱。 請勿修改此值。|  
+|**運行**|指定支援與前版回溯相容的組態設定。 執行階段設定是用來重新導向以新版為前版 Microsoft.ReportingServices.Interfaces 之目標的要求。<br /><br /> 本節中的所有組態設定會在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 產品文件集中加以描述。 如需詳細資訊，請在 MSDN 網站上或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 文件集中搜尋「執行階段結構描述設定」。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態檔](reporting-services-configuration-files.md)   

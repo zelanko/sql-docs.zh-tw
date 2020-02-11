@@ -1,5 +1,5 @@
 ---
-title: 設定大型資料 (OLE DB) |Microsoft Docs
+title: 設定大型資料（OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63218666"
 ---
 # <a name="set-large-data-ole-db"></a>設定大型資料 (OLE DB)
@@ -27,17 +27,17 @@ ms.locfileid: "63218666"
  此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
   
 ## <a name="procedures"></a>程序  
   
 #### <a name="to-set-blob-data"></a>設定 BLOB 資料  
   
-1.  建立一個 DBOBJECT 結構，描述如何存取 BLOB 資料行。 設定**dwFlag**元素的 DBOBJECT 結構設定為 STGM_READ，並將 iid 元素設定為`IID_ISequentialStream`（要公開的介面）。  
+1.  建立一個 DBOBJECT 結構，描述如何存取 BLOB 資料行。 將 DBOBJECT 結構的**dwFlag**元素設定為 STGM_READ，並將 iid 元素設定為`IID_ISequentialStream` （要公開的介面）。  
   
 2.  在 DBPROPSET_ROWSET 屬性群組中設定屬性，讓資料列集可以更新。  
   
-3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每個資料行一個)。 將 DBBINDING 結構中的 **wType** 項目設定為 DBTYPE_IUNKNOWN，並將 **pObject** 項目設定為指向您所建立的 DBOBJECT 結構。  
+3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每個資料行一個)。 將 DBBINDING 結構中的 **wType** 元素設定為 DBTYPE_IUNKNOWN，並將 **pObject** 元素設定為指向您所建立的 DBOBJECT 結構。  
   
 4.  使用繫結資訊，在結構的 DBBINDINGS 陣列中建立存取子。  
   

@@ -1,5 +1,5 @@
 ---
-title: 將註解加入封裝 |Microsoft Docs
+title: 將注釋新增至套件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5c407efc18790b4d8ed8912e47248f4d04de9fca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062096"
 ---
 # <a name="add-an-annotation-to-a-package"></a>將註解加入封裝
@@ -48,6 +48,6 @@ ms.locfileid: "66062096"
 8.  若要儲存更新的封裝，請按一下 **[檔案]** 功能表上的 **[全部儲存]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [在套件中使用註釋](use-annotations-in-packages.md)  
+ [使用封裝中的註解](use-annotations-in-packages.md)  
   
   

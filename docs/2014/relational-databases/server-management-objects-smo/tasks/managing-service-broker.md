@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e74e1530efc8e6000a9edf8882cf37cc60b1f1e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63226197"
 ---
 # <a name="managing-service-broker"></a>管理 Service Broker
@@ -26,19 +26,27 @@ ms.locfileid: "63226197"
   
  在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Database.ServiceBroker%2A> 物件是最上層的類別，其下則為所有 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 功能所在之處。 對於參與分散式訊息應用程式的每個資料庫而言，都需要 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 實作。 因此，<xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceBroker> 物件是 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件的子系。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceBroker> 物件包含下列物件的集合，用於定義 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 實作：  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceBroker> 物件包含下列物件的集合，用於定義 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 實作：  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Broker.MessageType> 物件代表定義訊息內容的訊息類型。  
+-   
+  <xref:Microsoft.SqlServer.Management.Smo.Broker.MessageType> 物件代表定義訊息內容的訊息類型。  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Broker.MessageTypeMapping> 物件代表指定給定交談中訊息方向和類型的合約。  
+-   
+  <xref:Microsoft.SqlServer.Management.Smo.Broker.MessageTypeMapping> 物件代表指定給定交談中訊息方向和類型的合約。  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceQueue> 物件會在傳送訊息前以及收到訊息後儲存訊息。 它們提供服務之間的非同步通訊，以及其他優點，如自動鎖定同一交談群組中的訊息。  
+-   
+  <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceQueue> 物件會在傳送訊息前以及收到訊息後儲存訊息。 它們提供服務之間的非同步通訊，以及其他優點，如自動鎖定同一交談群組中的訊息。  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Broker.BrokerService> 物件代表 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 服務，也就是交談的可定址端點。 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 訊息會從某個服務傳送至另一個服務。 服務會指定要保存訊息的佇列，並指定哪個服務可做為目標的合約。  
+-   
+  <xref:Microsoft.SqlServer.Management.Smo.Broker.BrokerService> 物件代表 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 服務，也就是交談的可定址端點。 
+  [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 訊息會從某個服務傳送至另一個服務。 服務會指定要保存訊息的佇列，並指定哪個服務可做為目標的合約。  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Broker.RemoteServiceBinding> 物件代表 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 在與遠端服務進行通訊時，用於安全性與驗證的設定。  
+-   
+  <xref:Microsoft.SqlServer.Management.Smo.Broker.RemoteServiceBinding> 物件代表 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 在與遠端服務進行通訊時，用於安全性與驗證的設定。  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceRoute> 物件代表 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 路由，其中包含服務的位置資訊以及所定義的資料庫。 訊息傳遞需要路由。 根據預設，每個資料庫包含的路由都會將位置指定為目前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
+-   
+  <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceRoute> 物件代表 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 路由，其中包含服務的位置資訊以及所定義的資料庫。 訊息傳遞需要路由。 根據預設，每個資料庫包含的路由都會將位置指定為目前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.SqlServer.Management.Smo.Broker>   

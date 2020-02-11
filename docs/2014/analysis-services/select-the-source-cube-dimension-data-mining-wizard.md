@@ -1,5 +1,5 @@
 ---
-title: 選取來源 Cube 維度 （資料採礦精靈） |Microsoft Docs
+title: 選取來源 Cube 維度（資料採礦嚮導） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bdb61763a49bad7eae1a49a01633ec8f45e27642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069225"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>選取來源 Cube 維度 (資料採礦精靈)
-  使用 [選取來源 Cube 維度]  頁面，即可從包含您要分析之案例的 Cube 中選取維度。 例如，如果您要建立根據人口統計分析客戶購買行為的模型，您要選取 [客戶] 維度，其中通常包含每個客戶的唯一記錄，以及表示人口統計的各種屬性，例如性別、居住地或收入。 在此精靈的後半部，您將有機會加入與此案例資料表相關的資料表：例如，您可以加入顯示客戶已購買之產品的巢狀資料表。  
+  使用 [選取來源 Cube 維度]**** 頁面，即可從包含您要分析之案例的 Cube 中選取維度。 例如，如果您要建立根據人口統計分析客戶購買行為的模型，您要選取 [客戶] 維度，其中通常包含每個客戶的唯一記錄，以及表示人口統計的各種屬性，例如性別、居住地或收入。 在此精靈的後半部，您將有機會加入與此案例資料表相關的資料表：例如，您可以加入顯示客戶已購買之產品的巢狀資料表。  
   
 > [!NOTE]  
->  唯有在精靈的 [選取定義方法]  頁面上選取了 [從現有的 Cube]  之後，才會顯示這個頁面。  
+>  唯有在精靈的 [選取定義方法] **** 頁面上選取了 [從現有的 Cube] **** 之後，才會顯示這個頁面。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **選取來源 Cube 維度**  
  選取提供採礦結構之來源資料的 Cube 維度。  
   
@@ -39,8 +39,8 @@ ms.locfileid: "66069225"
  如果您選擇的維度不包含建立資料採礦模型所需的所有相關屬性，您可能需要修改維度。 如需詳細資訊，請參閱 [定義資料庫維度](multidimensional-models/define-database-dimensions.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦精靈 F1 說明&#40;Analysis Services-資料採礦&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [建立資料採礦結構&#40;資料採礦精靈&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
- [選取案例索引鍵&#40;資料採礦精靈&#41;](select-the-case-key-data-mining-wizard.md)  
+ [資料採礦嚮導 F1 說明 &#40;Analysis Services-資料採礦&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [建立資料採礦結構 &#40;資料採礦嚮導&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
+ [選取 [資料採礦嚮導] &#40;[案例金鑰]&#41;](select-the-case-key-data-mining-wizard.md)  
   
   

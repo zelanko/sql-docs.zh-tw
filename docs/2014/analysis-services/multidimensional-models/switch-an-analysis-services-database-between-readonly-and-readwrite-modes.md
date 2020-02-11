@@ -1,5 +1,5 @@
 ---
-title: 切換 ReadOnly 和 ReadWrite 模式之間的 Analysis Services 資料庫 |Microsoft Docs
+title: 在 ReadOnly 和 ReadWrite 模式之間切換 Analysis Services 資料庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072890"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>在 ReadOnly 和 ReadWrite 模式之間切換 Analysis Services 資料庫
@@ -38,24 +38,24 @@ ms.locfileid: "66072890"
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的左窗格或右窗格中，找出要切換的資料庫。  
   
-2.  以滑鼠右鍵按一下資料庫，然後選取**屬性**。 尋找資料庫資料夾並記下位置。 空白的資料庫儲存位置是表示該資料庫資料夾位於伺服器資料中。  
+2.  以滑鼠右鍵按一下資料庫，然後選取 [**屬性**]。 尋找資料庫資料夾並記下位置。 空白的資料庫儲存位置是表示該資料庫資料夾位於伺服器資料中。  
   
     > [!IMPORTANT]  
     >  一旦資料庫卸離之後，[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 便無法再協助您取得資料庫位置。  
   
-3.  以滑鼠右鍵按一下資料庫，然後選取**卸離...**  
+3.  以滑鼠右鍵按一下資料庫，然後選取 [卸**離**]。  
   
-4.  將密碼指派給要卸離的資料庫，然後按一下 [確定]  執行卸離命令。  
+4.  將密碼指派給要卸離的資料庫，然後按一下 [確定]**** 執行卸離命令。  
   
-5.  找出**資料庫**的左或右窗格中的資料夾[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
+5.  在的**** 左窗格或右窗格中，找出[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)][資料庫] 資料夾。  
   
-6.  以滑鼠右鍵按一下**資料庫**資料夾，然後選取**附加...**  
+6.  以滑鼠右鍵按一下 [**資料庫**] 資料夾，然後選取 [**附加**]。  
   
-7.  在 [資料夾]  文字方塊中，輸入資料庫資料夾的原始位置。 或者，您可以使用瀏覽按鈕 ( **...** ) 來找出資料庫資料夾。  
+7.  在 [資料夾]**** 文字方塊中，輸入資料庫資料夾的原始位置。 或者，您可以使用瀏覽按鈕（**...**）來找出資料庫檔案夾。  
   
 8.  選取資料庫的讀取/寫入模式。  
   
-9. 步驟 3 中輸入所用的密碼，然後按一下**確定**執行 attach 命令。  
+9. 輸入在步驟3中使用的密碼，然後按一下 **[確定]** 以執行 [附加] 命令。  
   
 #### <a name="to-switch-the-readwrite-mode-to-a-database-programmatically-using-amo"></a>以程式設計方式使用 AMO 來切換資料庫的讀取/寫入模式  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66072890"
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的左窗格或右窗格中，找出要切換的資料庫。  
   
-2.  以滑鼠右鍵按一下資料庫，然後選取**屬性**。 尋找資料庫資料夾並記下位置。 空白的資料庫儲存位置是表示該資料庫資料夾位於伺服器資料中。  
+2.  以滑鼠右鍵按一下資料庫，然後選取 [**屬性**]。 尋找資料庫資料夾並記下位置。 空白的資料庫儲存位置是表示該資料庫資料夾位於伺服器資料中。  
   
     > [!IMPORTANT]  
     >  一旦資料庫卸離之後，[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 便無法再協助您取得資料庫位置。  
@@ -171,7 +171,7 @@ ms.locfileid: "66072890"
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [附加和卸離 Analysis Services 資料庫](attach-and-detach-analysis-services-databases.md)   
  [資料庫儲存位置](database-storage-location.md)   
- [資料庫 ReadWriteMode](database-readwritemodes.md)   
+ [資料庫 Readwritemode](database-readwritemodes.md)   
  [Attach 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
  [Detach 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
  [ReadWriteMode 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   

@@ -1,5 +1,5 @@
 ---
-title: 表格式模型資料庫 (SSAS 表格式) |Microsoft Docs
+title: 表格式模型資料庫（SSAS 表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24c9487484857d61acede622b1467a1d8c0b7345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066415"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>表格式模型資料庫 (SSAS 表格式)
@@ -24,18 +24,18 @@ ms.locfileid: "66066415"
  表格式模型資料庫比多維度資料庫更容易建置，尤其是當您擁有關聯式資料庫背景時。 除此之外，管理工作與多維度資料庫的資料庫管理很相似，但不完全相同。 相同的工具和方法都適用。  
   
 ## <a name="related-content"></a>相關內容  
- [表格式模型方案 &#40;SSAS 表格式&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [&#40;SSAS 表格式&#41;的表格式模型方案](../tabular-model-solutions-ssas-tabular.md)  
   
  [表格式模型資料存取](tabular-model-data-access.md)  
   
 ## <a name="related-tasks"></a>相關工作  
  [處理資料庫、資料表或資料分割](process-database-table-or-partition-analysis-services.md)  
   
- [表格式模型角色 &#40;SSAS 表格式&#41;](tabular-model-roles-ssas-tabular.md)  
+ [&#40;SSAS 表格式&#41;的表格式模型角色](tabular-model-roles-ssas-tabular.md)  
   
  [表格式模型資料分割 &#40;SSAS 表格式&#41;](tabular-model-partitions-ssas-tabular.md)  
   
- [為表格式模型資料庫設定記憶體內部或 DirectQuery 存取](enable-directquery-mode-in-ssms.md)  
+ [為表格式模型資料庫設定 In-Memory 或 DirectQuery 存取](enable-directquery-mode-in-ssms.md)  
   
  [連接到表格式模型資料庫 &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
   

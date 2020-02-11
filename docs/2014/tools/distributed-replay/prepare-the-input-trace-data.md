@@ -1,5 +1,5 @@
 ---
-title: 準備輸入的追蹤資料 |Microsoft Docs
+title: 準備輸入追蹤資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7af5d166ec3bc059bc2628512564d92fd4cc6cad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150001"
 ---
 # <a name="prepare-the-input-trace-data"></a>準備輸入追蹤資料
-  您必須先從 Distributed Replay 管理工具起始前置處理階段，準備輸入追蹤資料，才能透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能啟動分散式重新執行。 在前置處理階段中，分散式重新執行控制器會處理追蹤資料並產生中繼檔案：  
+  您必須先從 distributed replay 管理工具起始[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]前置處理階段，以準備輸入追蹤資料，才能使用 Distributed Replay 功能來啟動分散式重新執行。 在前置處理階段中，分散式重新執行控制器會處理追蹤資料並產生中繼檔案：  
   
- ![Distributed replay 前置處理階段](../../database-engine/media/preprocess.gif "Distributed replay 前置處理階段")  
+ ![Distributed Replay 前置處理階段](../../database-engine/media/preprocess.gif "Distributed Replay 前置處理階段")  
   
  如需前置處理階段的詳細資訊，請參閱 [SQL Server Distributed Replay](sql-server-distributed-replay.md)。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "63150001"
   
 ### <a name="to-prepare-the-input-trace-data"></a>若要準備輸入追蹤資料  
   
-1.  **（選擇性）修改前置處理組態設定**:如果您想要修改前置處理組態設定，例如是否篩選系統工作階段，或設定最大閒置時間，您必須修改`<PreprocessModifiers>`XML 為基礎的前置處理組態檔中，元素`DReplay.exe.preprocess.config`。 如果您修改前置處理組態檔，我們建議您修改複本，而不是原始版本。 若要修改設定，請執行下列步驟：  
+1.  **（選擇性）修改前置處理設定設定**：如果您想要修改前置處理設定（例如是否要篩選系統會話或設定最大閒置時間），您必須修改以 XML `<PreprocessModifiers>`為基礎的前置處理設定檔案的元素`DReplay.exe.preprocess.config`。 如果您修改前置處理組態檔，我們建議您修改複本，而不是原始版本。 若要修改設定，請執行下列步驟：  
   
     1.  建立預設前置處理組態檔 `DReplay.exe.preprocess.config`的複本，並重新命名新的檔案。 預設前置處理組態檔位於管理工具的安裝資料夾。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "63150001"
   
      如需前置處理組態檔的詳細資訊，請參閱 [設定 Distributed Replay](configure-distributed-replay.md)。  
   
-2.  **起始前置處理階段**:若要準備輸入的追蹤資料，您必須執行系統管理工具**前置處理**選項。 如需詳細資訊，請參閱[前置處理選項 &#40;Distributed Replay 管理工具&#41;](preprocess-option-distributed-replay-administration-tool.md)。  
+2.  **起始**前置處理階段：若要準備輸入追蹤資料，您必須以前置**處理選項執行**管理工具。 如需詳細資訊，請參閱[前置處理選項 &#40;Distributed Replay 管理工具&#41;](preprocess-option-distributed-replay-administration-tool.md)。  
   
     1.  開啟 Windows 命令提示字元公用程式 (`CMD.exe`)，並瀏覽至 Distributed Replay 管理工具 (`DReplay.exe`) 的安裝位置。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "63150001"
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Distributed Replay 需求](distributed-replay-requirements.md)   
- [管理工具命令列選項 &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [系統管理工具命令列選項 &#40;Distributed Replay 公用程式&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [設定 Distributed Replay](configure-distributed-replay.md)  
   
   

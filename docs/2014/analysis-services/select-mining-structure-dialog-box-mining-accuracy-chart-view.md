@@ -1,5 +1,5 @@
 ---
-title: 選取採礦結構對話方塊 （採礦精確度圖表檢視） |Microsoft Docs
+title: 選取 [採礦結構] 對話方塊（挖掘精確度圖表視圖） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 833410b6daa15924f0875cee77ad432aa9fac369
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069485"
 ---
 # <a name="select-mining-structure-dialog-box-mining-accuracy-chart-view"></a>選取採礦結構對話方塊 (採礦精確度圖表檢視)
@@ -30,8 +30,8 @@ ms.locfileid: "66069485"
  此對話方塊包含存在於 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫上，每個採礦結構的樹狀檢視清單。 雖然您可以展開每個採礦結構，以瀏覽存在於採礦結構中的採礦模型，但您只能使用此對話方塊來選取採礦結構。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦精確度圖表設計師&#40;資料採礦&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [測試及驗證工作與操作方法&#40;資料採礦&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [測試及驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [&#40;資料採礦&#41;的挖掘精確度圖表設計工具](mining-accuracy-chart-designer-data-mining.md)   
+ [測試和驗證工作，以及如何 &#40;資料採礦&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [測試和驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

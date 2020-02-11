@@ -1,5 +1,5 @@
 ---
-title: 存取 Integration Services 服務 |Microsoft Docs
+title: Integration Services 服務的存取權 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,16 +20,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e3654be0afe51be6566a09897a2656dd53c77696
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062240"
 ---
 # <a name="access-to-the-integration-services-service"></a>對 Integration Services 服務的存取權
   封裝保護等級可限制已獲允許編輯和執行封裝的人員。 您需要額外的保護措施來限制有誰能夠檢視目前在伺服器上執行的封裝清單，以及有誰能夠停止目前在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中執行的封裝。  
   
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 會使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務列出正在執行封裝。 Windows Administrators 群組的成員可以檢視和停止所有目前正在執行封裝。 非 Administrators 群組成員的使用者只能檢視和停止他們所啟動的封裝。  
+ 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 會使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務列出正在執行封裝。 Windows Administrators 群組的成員可以檢視和停止所有目前正在執行封裝。 非 Administrators 群組成員的使用者只能檢視和停止他們所啟動的封裝。  
   
  限制存取執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務的電腦很重要，特別是可列舉遠端資料夾的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務。 任何已驗證的使用者都可以要求列舉封裝。 服務即使找不到該服務，仍會列舉資料夾。 這些資料夾名稱對惡意使用者可能很有用。 如果管理員已設定服務來列舉遠端電腦上的資料夾，則使用者還可查看他們通常無法看到的資料夾名稱。  
   

@@ -1,5 +1,5 @@
 ---
-title: 取代的資料表或具名的查詢中的資料來源檢視 (Analysis Services) |Microsoft Docs
+title: 取代資料來源視圖中的資料表或已命名的查詢（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9f1863fc3d707614b7c957dc5ef49561272d6e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073133"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>取代資料來源檢視中的資料表或具名查詢 (Analysis Services)
@@ -33,29 +33,29 @@ ms.locfileid: "66073133"
 > [!IMPORTANT]  
 >  如果您在資料來源中重新命名資料表，請遵循取代資料表的步驟，並在重新整理 DSV 之前，將重新命名的資料表指定 DSV 中的相對應資料表的來源。 完成取代及重新命名程序會在 DSV 中保留資料表、資料表的參考和資料表的關聯性。 否則，當您重新整理 DSV 時，資料來源中重新命名的資料表會被解譯為已刪除。 如需詳細資訊，請參閱[在資料來源檢視中重新整理結構描述 &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)。  
   
-##  <a name="bkmk_nq"></a> 以具名查詢取代資料表  
+##  <a name="bkmk_nq"></a>以已命名的查詢取代資料表  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟含有您想在其中取代資料表或具名查詢之資料來源檢視的專案，或連接到包含此資料來源檢視的資料庫。  
   
-2.  在方案總管中，展開 [資料來源檢視]  資料夾，然後按兩下資料來源檢視。  
+2.  在方案總管中，展開 [資料來源檢視]**** 資料夾，然後按兩下資料來源檢視。  
   
-3.  開啟 [建立具名查詢]  對話方塊。 在 [資料表]  或 [圖表]  窗格中，以滑鼠右鍵按一下您想要取代的資料表，並指向 [取代資料表]  ，然後按一下 [使用新具名查詢]  。  
+3.  開啟 [建立具名查詢]**** 對話方塊。 在 [資料表]**** 或 [圖表]**** 窗格中，以滑鼠右鍵按一下您想要取代的資料表，並指向 [取代資料表]****，然後按一下 [使用新具名查詢]****。  
   
-4.  在 [建立具名查詢]  對話方塊中，定義具名查詢，然後按一下 [確定]  。  
+4.  在 [建立具名查詢]**** 對話方塊中，定義具名查詢，然後按一下 [確定]****。  
   
 5.  儲存已修改的資料來源檢視。  
   
 ## <a name="replace-a-table-or-named-query-with-a-table"></a>以資料表取代資料表或具名查詢  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟含有您想在其中取代資料表或具名查詢之資料來源檢視的專案，或連接到包含此資料來源檢視的資料庫。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟含有您想在其中取代資料表或具名查詢之資料來源檢視的專案，或連接到包含此資料來源檢視的資料庫。  
   
-2.  在方案總管中，展開 [資料來源檢視]  資料夾，然後按兩下資料來源檢視。  
+2.  在方案總管中，展開 [資料來源檢視]**** 資料夾，然後按兩下資料來源檢視。  
   
-3.  開啟 [使用其他資料表取代]  對話方塊。 在 [資料表]  或 [圖表]  窗格中，以滑鼠右鍵按一下您想要取代的資料表或具名查詢，並指向 [取代資料表]  ，然後按一下 [使用其他資料表]  。  
+3.  開啟 [使用其他資料表取代]**** 對話方塊。 在 [資料表]**** 或 [圖表]**** 窗格中，以滑鼠右鍵按一下您想要取代的資料表或具名查詢，並指向 [取代資料表]****，然後按一下 [使用其他資料表]****。  
   
-4.  在 [使用其他資料表取代]  對話方塊中：  
+4.  在 [使用其他資料表取代]**** 對話方塊中：  
   
-    1.  在 [資料來源]  下拉式清單方塊中，選取想要的資料來源  
+    1.  在 [資料來源]**** 下拉式清單方塊中，選取想要的資料來源  
   
     2.  選取您想要用來取代資料表或具名查詢的資料表。  
   

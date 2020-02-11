@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b49b24db5dfa3c9b522247024e0cbb8dbd1a81d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151268"
 ---
 # <a name="view-plan-guide-properties"></a>檢視計畫指南屬性
@@ -29,7 +29,7 @@ ms.locfileid: "63151268"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法來檢視計畫指南的屬性：**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "63151268"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  目錄檢視內中繼資料的可見性會限制在使用者所擁有的安全性實體，或已授與使用者某些權限的安全性實體。  
@@ -80,7 +80,7 @@ ms.locfileid: "63151268"
      **範圍類型**  
      顯示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳列式中出現的實體類型。 這會指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式要與計畫指南比對相符的內容。 可能的值是 **OBJECT**、 **SQL**，以及 **TEMPLATE**。  
   
-     **Statement**  
+     **陳述式**  
      顯示對照套用計畫指南的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
 4.  按一下 [確定]  。  

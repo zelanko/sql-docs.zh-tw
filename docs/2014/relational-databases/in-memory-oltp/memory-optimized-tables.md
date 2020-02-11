@@ -11,13 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9123bf89f75fce68a6edd8ba1becd141821fe326
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158758"
 ---
 # <a name="memory-optimized-tables"></a>記憶體最佳化的資料表
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體中 OLTP 可透過有效率的記憶體最佳化資料存取、商務邏輯的原生編譯以及不需鎖定與閂鎖的演算法，協助提升 OLTP 應用程式的效能。 記憶體中 OLTP 功能包括記憶體最佳化資料表和資料表類型，以及 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序的原生編譯，能夠有效率地存取這些資料表。  
   
  如需有關記憶體最佳化的資料表的詳細資訊，請參閱：  
@@ -34,7 +35,7 @@ ms.locfileid: "63158758"
   
      升級記憶體最佳化資料表的方針 (包含變更資料行、索引及 bucket_count)。  
   
--   [了解經記憶體最佳化的資料表上的交易](../../database-engine/understanding-transactions-on-memory-optimized-tables.md)  
+-   [了解記憶體最佳化資料表上的交易](../../database-engine/understanding-transactions-on-memory-optimized-tables.md)  
   
      本節提供數個有關對記憶體最佳化資料表執行交易的主題，包含交易隔離等級，以及跨容器的交易。  
   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 14c34bb0d7520b914d8dbfc1cfc8174341722ece
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150980"
 ---
 # <a name="xtp-phantom-processor"></a>XTP 虛設處理器
@@ -32,6 +32,6 @@ ms.locfileid: "63150980"
 |**啟動的虛設掃描/秒**|(平均) 每秒啟動的虛設掃描次數。|  
   
 ## <a name="see-also"></a>另請參閱  
- [XTP&#40;記憶體內部 OLTP&#41;效能計數器](../../integration-services/performance/performance-counters.md)  
+ [XTP &#40;記憶體內部 OLTP&#41; 效能計數器](../../integration-services/performance/performance-counters.md)  
   
   

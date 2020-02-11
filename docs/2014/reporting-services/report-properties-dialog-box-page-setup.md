@@ -1,5 +1,5 @@
 ---
-title: 報表屬性對話方塊、 版面設定 |Microsoft Docs
+title: 報表屬性對話方塊、版面設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 695515ddefa550d6d20476e681088d6bcd926a3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104380"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>報表屬性對話方塊、版面設定
-  選取 **版面**上**報表屬性**，來設定整個報表的分頁選項的對話方塊。  
+  選取 [**報表屬性**] 對話方塊上的 [**版面設定]** ，即可設定整個報表的頁面選項。  
   
-## <a name="options"></a>選項  
- **英吋為單位**  
+## <a name="options"></a>選項。  
+ **英吋**  
  以英吋為單位指定頁面大小。 依預設，您的本機設定會決定選取的頁面單位。  
   
- **公分為單位**  
+ **公分**  
  以公分為單位指定頁面大小。 依預設，您的本機設定會決定選取的頁面單位。  
   
  **縱向**  
@@ -40,21 +40,21 @@ ms.locfileid: "66104380"
  從可在「寬度」和「高度」控制項中自動輸入大小的清單選取大小。 或者，選取 **[自訂大小]** ，然後變更「寬度」和「高度」控制項，以反映您要使用的大小。  
   
  **寬度**  
- 顯示 [紙張類型]  清單中選取之紙張大小的寬度。  
+ 顯示 [紙張類型]**** 清單中選取之紙張大小的寬度。  
   
  **高度**  
- 顯示 [紙張類型]  清單中選取之紙張大小的高度。  
+ 顯示 [紙張類型]**** 清單中選取之紙張大小的高度。  
   
- **頂端**  
+ **返回頁首**  
  設定報表頂端和報表第一行頂端之間的距離。  
   
- **底部**  
+ **下**  
  設定報表底部和報表最後一行底部之間的距離。  
   
- **Left**  
+ **左面**  
  設定報表左邊緣和報表資料列左邊緣之間的距離。  
   
- **Right**  
+ **再**  
  設定報表右邊緣和報表資料列右邊緣之間的距離。  
   
 ## <a name="see-also"></a>另請參閱  

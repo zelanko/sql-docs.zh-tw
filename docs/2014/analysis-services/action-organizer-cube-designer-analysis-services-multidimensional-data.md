@@ -1,5 +1,5 @@
 ---
-title: 動作組合管理 （動作索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
+title: 動作召集人（動作索引標籤、Cube 設計工具）（Analysis Services 多維度資料） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05d48f3d23ce9e8c3eca83396d9413d82717fa3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062924"
 ---
 # <a name="action-organizer-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>動作組合管理 (動作索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
@@ -26,24 +26,24 @@ ms.locfileid: "66062924"
  **清單**  
  顯示動作的名稱。  
   
- 選取動作以顯示 **[動作表單編輯器]** ，選取鑽研動作以顯示 **[鑽研動作表單編輯器]** ，或選取報表動作以顯示 **[報表動作表單編輯器]** 。  
+ 選取動作以顯示 **[動作表單編輯器]**，選取鑽研動作以顯示 **[鑽研動作表單編輯器]**，或選取報表動作以顯示 **[報表動作表單編輯器]**。  
   
-## <a name="context-menu"></a>操作功能表  
- 以滑鼠右鍵按一下 [動作組合管理]  窗格中的動作，即可顯示提供下列選項的內容功能表：  
+## <a name="context-menu"></a>內容功能表  
+ 以滑鼠右鍵按一下 [動作組合管理]**** 窗格中的動作，即可顯示提供下列選項的內容功能表：  
   
- **新的動作**  
- 按一下以顯示 [動作表單編輯器]  窗格並建立新的動作。  
+ **新增動作**  
+ 按一下以顯示 [動作表單編輯器]**** 窗格並建立新的動作。  
   
  **新增鑽研動作**  
- 按一下以顯示 [Drillthrough Action Form Editor (鑽研動作表單編輯器)]  ，然後建立新的鑽研動作。  
+ 按一下以顯示 [Drillthrough Action Form Editor (鑽研動作表單編輯器)]****，然後建立新的鑽研動作。  
   
  **新增報表動作**  
- 按一下以顯示 [Report Action Form Editor (報表動作表單編輯器)]  ，然後建立新的報表動作。  
+ 按一下以顯示 [Report Action Form Editor (報表動作表單編輯器)]****，然後建立新的報表動作。  
   
  **刪除**  
- 按一下以顯示 [刪除物件]  對話方塊，然後刪除選取的動作。  
+ 按一下以顯示 [刪除物件]**** 對話方塊，然後刪除選取的動作。  
   
 > [!NOTE]  
->  唯有選取 [動作組合管理]  窗格時，才會啟用此選項。  
+>  唯有選取 [動作組合管理]**** 窗格時，才會啟用此選項。  
   
   

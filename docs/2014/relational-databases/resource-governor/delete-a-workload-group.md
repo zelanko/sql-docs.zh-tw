@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63215794"
 ---
 # <a name="delete-a-workload-group"></a>刪除工作負載群組
@@ -79,7 +79,7 @@ ms.locfileid: "63215794"
   
     -   在您已經發出 `DROP WORKLOAD GROUP` 陳述式但決定您不要明確地停止工作階段以套用變更的案例中，您可以使用您發出 DROP 陳述式前的相同名稱重新建立群組，然後將該群組移到原始的資源集區。  
   
-3.  執行`ALTER RESOURCE GOVERNOR RECONFIGURE`陳述式。  
+3.  執行`ALTER RESOURCE GOVERNOR RECONFIGURE`語句。  
   
 ### <a name="example-transact-sql"></a>範例 &#40;Transact-SQL&#41;  
  下列範例會卸除名稱為 `groupAdhoc`的工作負載群組。  

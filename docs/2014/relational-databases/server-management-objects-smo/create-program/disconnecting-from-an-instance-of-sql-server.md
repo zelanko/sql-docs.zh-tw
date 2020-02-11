@@ -1,5 +1,5 @@
 ---
-title: 從 SQL Server 的執行個體中斷連接 |Microsoft Docs
+title: 中斷與 SQL Server 實例的連線 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7783fa93912c305403cc34ad6e52668123d164ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192069"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>從 SQL Server 的執行個體中斷連接
@@ -31,7 +31,7 @@ ms.locfileid: "63192069"
 ## <a name="disconnecting-from-an-instance-of-sql-server-for-rmo"></a>從 RMO 的 SQL Server 執行個體中斷連接  
  在使用 RMO 進行程式開發時關閉伺服器連接，與使用 SMO 時稍有不同。  
   
- 因為 RMO 物件的伺服器連接由維護<xref:Microsoft.SqlServer.Management.Common.ServerConnection>物件，這個物件也會從執行個體中斷連線時[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]您使用 RMO 進行程式設計時。 若要使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件關閉連接，請呼叫 RMO 物件的 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> 方法。 在關閉連接之後，就無法使用 RMO 物件。  
+ 由於 RMO 物件的伺服器連接是由<xref:Microsoft.SqlServer.Management.Common.ServerConnection>物件維護，因此[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]當您使用 RMO 進行程式設計時，也會使用這個物件來與的實例中斷連接。 若要使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件關閉連接，請呼叫 RMO 物件的 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> 方法。 在關閉連接之後，就無法使用 RMO 物件。  
   
 ## <a name="example"></a>範例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

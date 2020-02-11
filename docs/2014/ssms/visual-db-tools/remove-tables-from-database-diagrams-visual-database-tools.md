@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 776d5fae1aa295f15238397b439cca1015ebe99c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63180732"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>從資料庫圖表移除資料表 (Visual Database Tools)
@@ -28,7 +28,7 @@ ms.locfileid: "63180732"
   
 1.  在資料庫圖表中，選取要移除的資料表。  
   
-2.  以滑鼠右鍵按一下資料表，然後從快速鍵功能表選擇 [從圖表中移除資料表]  。  
+2.  以滑鼠右鍵按一下資料表，然後從快速鍵功能表選擇 [從圖表中移除資料表]****。  
   
      -或-  
   
@@ -39,7 +39,7 @@ ms.locfileid: "63180732"
  資料表會從圖表中移除，但它仍繼續存在資料庫中。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用資料庫圖表&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [刪除資料表 &#40;Database Engine&#41;](../../relational-databases/tables/delete-tables-database-engine.md)  
+ [使用資料庫關係圖 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [刪除資料表 &#40;資料庫引擎&#41;](../../relational-databases/tables/delete-tables-database-engine.md)  
   
   

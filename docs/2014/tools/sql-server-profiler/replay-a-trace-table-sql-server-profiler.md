@@ -1,5 +1,5 @@
 ---
-title: 重新執行追蹤資料表 (SQL Server Profiler) |Microsoft Docs
+title: 重新執行追蹤資料表（SQL Server Profiler） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e80a18cef595ae3543aba8a656aca9267607e38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240485"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>重新執行追蹤資料表 (SQL Server Profiler)
-  重新執行是開啟儲存的追蹤並重新執行該追蹤的能力。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 多執行緒播放引擎功能，可以模擬使用者連接及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 重新執行在排解應用程式或處理序的疑難問題時很有用。 您識別問題並實作更正時，針對更正的應用程式或處理序執行發現可能問題的追蹤。 然後，重新執行原始追蹤並比較結果。  
+  重新執行是開啟儲存的追蹤並重新執行該追蹤的能力。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 具有多執行緒播放引擎的功能，可以模擬使用者連線及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 重新執行在排解應用程式或處理序的疑難問題時很有用。 您識別問題並實作更正時，針對更正的應用程式或處理序執行發現可能問題的追蹤。 然後，重新執行原始追蹤並比較結果。  
   
  除了您要監視的其他任何事件類別以外，還必須擷取特定的事件類別以便重新執行。 依預設，如果您使用 **TSQL_Replay** 追蹤範本，就會擷取這些事件。 如需詳細資訊，請參閱 [Replay Requirements](replay-requirements.md)。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "63240485"
   
     -   [儲存至檔案]  ，指定用來儲存重新執行的檔案。  
   
-    -   [儲存至資料表]  ，會指定要儲存重新執行的資料庫資料表。  
+    -   [儲存至資料表]  ，指定用來儲存重新執行的資料庫資料表。  
   
 5.  選擇 [以追蹤事件的順序重新執行事件]  或 [使用多執行緒重新執行事件]  。 下列資料表說明這些設定之間的差異。  
   

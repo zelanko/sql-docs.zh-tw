@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3a70d58caba2b2a443f0017c52611331e9257972
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157475"
 ---
 # <a name="configure-parallel-index-operations"></a>設定平行索引作業
@@ -35,7 +35,7 @@ ms.locfileid: "63157475"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要設定平行處理原則的最大程度，使用：**  
   
@@ -71,9 +71,9 @@ ms.locfileid: "63157475"
   
 -   在 ALTER INDEX REORGANIZE 陳述式中無法指定 MAXDOP 索引選項。  
   
--   如果查詢最佳化工具將平行處理原則的程度套用至建立作業，則需要排序的資料分割索引作業可能需要更多的記憶體。 平行處理原則的程度愈高，所需的記憶體就愈大。 如需詳細資訊，請參閱 [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)。  
+-   如果查詢最佳化工具將平行處理原則的程度套用至建立作業，則需要排序的資料分割索引作業可能需要更多的記憶體。 平行處理原則的程度愈高，所需的記憶體就愈大。 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)＞。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。  
@@ -90,11 +90,11 @@ ms.locfileid: "63157475"
   
 4.  展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下要設定平行處理原則最大程度的索引，然後選取 [屬性]  。  
+5.  以滑鼠右鍵按一下要設定平行處理原則最大程度的索引，然後選取 [屬性]****。  
   
-6.  在 **[選取頁面]** 底下，選取 **[選項]** 。  
+6.  在 **[選取頁面]** 底下，選取 **[選項]**。  
   
-7.  選取 **[平行處理原則的最大程度]** ，然後輸入介於 1 和 64 之間的一些值。  
+7.  選取 **[平行處理原則的最大程度]**，然後輸入介於 1 和 64 之間的一些值。  
   
 8.  按一下 [確定]  。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63157475"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)。  
+ 如需詳細資訊，請參閱[ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)。  
   
 #### <a name="set-max-degree-of-parallelism-on-a-new-index"></a>在新索引上設定平行處理原則的最大程度  
   

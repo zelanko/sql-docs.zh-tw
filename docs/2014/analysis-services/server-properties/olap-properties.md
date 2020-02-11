@@ -96,16 +96,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b26323f99d0b31cdb31e12b64eabdd2a855d907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068864"
 ---
 # <a name="olap-properties"></a>OLAP 屬性
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的 OLAP 伺服器屬性。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  
   
- **適用於：** 僅限多維度伺服器模式  
+ **適用物件：** 僅限多維度伺服器模式  
   
 ## <a name="memory"></a>記憶體  
  `DefaultPageSizeForData`  
@@ -196,7 +197,7 @@ ms.locfileid: "66068864"
  `PartitionLatencyAccuracy`  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## <a name="process"></a>處理  
+## <a name="process"></a>處理程序  
  `AggregationMemoryLimitMax`  
  此為帶正負號的 64 位元雙精確度浮點數屬性，定義可專用於彙總處理的記憶體數量上限 (以實體記憶體的百分比表示)。  
   
@@ -327,7 +328,7 @@ ms.locfileid: "66068864"
   
      請注意，這些快取所使用的記憶體會視為不可壓縮，而且會計入 **TotalMemoryLimit**。  
   
--   會影響伺服器上的所有資料庫。 **DimensionPropertyCachesize** 是伺服器範圍屬性。 變更此屬性會影響在目前執行個體上執行的所有資料庫。  
+-   會影響伺服器上的所有資料庫。 **DimensionPropertyCachesize**是伺服器範圍的屬性。 變更此屬性會影響在目前執行個體上執行的所有資料庫。  
   
  估計維度快取需求的方式：  
   
@@ -431,7 +432,7 @@ ms.locfileid: "66068864"
  `DataCache\ MemoryModel\ Tax`  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## <a name="jobs"></a>中稱為  
+## <a name="jobs"></a>工作  
  `ProcessAggregation\ MemoryModel\ Income`  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
@@ -478,7 +479,7 @@ ms.locfileid: "66068864"
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 中設定伺服器屬性](server-properties-in-analysis-services.md)   
- [判斷 Analysis Services 執行個體的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [在 Analysis Services 中設定伺服器屬性](server-properties-in-analysis-services.md)   
+ [判斷 Analysis Services 實例的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

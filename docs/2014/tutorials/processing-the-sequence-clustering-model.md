@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188136"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>處理時序群集模型
@@ -24,24 +24,24 @@ ms.locfileid: "63188136"
   
 ### <a name="to-process-the-mining-structure-and-model"></a>若要處理採礦結構和模型  
   
-1.  在 **採礦模型**功能表[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，選取**處理採礦結構和所有模型**。  
+1.  在的 [**採礦模型**] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]功能表上，選取 [**處理採礦結構] 和 [所有模型**]。  
   
-2.  警告訊息，詢問您是否想要建置和部署專案，按一下**是**。  
+2.  在詢問您是否要建立及部署專案的警告中，按一下 [**是]**。  
   
-3.  在 [**處理採礦結構 – Sequence Clustering with Region** ] 對話方塊中，按一下**執行**。  
+3.  在 [**以區域處理採礦結構-時序群集**] 對話方塊中，按一下 [**執行**]。  
   
-     **處理進度**對話方塊會開啟以顯示模型處理的相關資訊。 處理新的結構和模型可能需要花一些時間。  
+     [**處理進度**] 對話方塊隨即開啟，以顯示模型處理的相關資訊。 處理新的結構和模型可能需要花一些時間。  
   
-4.  已完成處理之後，請按一下**關閉**以結束**處理進度** 對話方塊。  
+4.  處理完成之後，按一下 [**關閉**] 以結束 [**處理進度**] 對話方塊。  
   
-5.  按一下 [**關閉**以結束**處理採礦結構 – Sequence Clustering with Region** ] 對話方塊。  
+5.  再按一次 [關閉] 以**結束**[**處理常式] [結構-時序群集與區域**] 對話方塊。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [探索時序群集模型&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
+ [探索時序群集模型 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦設計師](../../2014/analysis-services/data-mining/data-mining-designer.md)   
- [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [處理需求和考量 (資料採礦)](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [資料採礦設計工具](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Microsoft 時序群集演算法](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [&#40;資料採礦&#41;的處理需求和考慮](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

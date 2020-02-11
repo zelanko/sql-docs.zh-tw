@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2ef120e0142b3ccabb03fe8750b02713601d7fd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63224479"
 ---
 # <a name="copy-queries-visual-database-tools"></a>複製查詢 (Visual Database Tools)
@@ -38,9 +38,9 @@ ms.locfileid: "63224479"
 6.  按一下滑鼠右鍵，然後從快速鍵功能表按一下 [貼上]  。  
   
 ## <a name="see-also"></a>另請參閱  
- [重新命名查詢&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [清除查詢結果&#40;Visual Database Tools&#41;](clear-query-results-visual-database-tools.md)   
- [儲存查詢&#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
+ [&#40;Visual Database Tools&#41;重新命名查詢](visual-database-tools.md)   
+ [&#40;Visual Database Tools&#41;清除查詢結果](clear-query-results-visual-database-tools.md)   
+ [&#40;Visual Database Tools&#41;儲存查詢](save-queries-visual-database-tools.md)   
  [使用查詢執行基本作業 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

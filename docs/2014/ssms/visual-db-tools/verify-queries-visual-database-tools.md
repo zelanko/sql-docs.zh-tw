@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a9f959d3c4b61a6231a0d4b3806b57cfa935445e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204587"
 ---
 # <a name="verify-queries-visual-database-tools"></a>驗證查詢 (Visual Database Tools)
@@ -39,7 +39,7 @@ ms.locfileid: "63204587"
 -   在 [SQL]  窗格按一下滑鼠右鍵，然後從快速鍵功能表選取 [驗證 SQL 語法]  。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行查詢&#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
+ [&#40;Visual Database Tools 執行查詢&#41;](run-queries-visual-database-tools.md)   
  [使用查詢執行基本作業 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

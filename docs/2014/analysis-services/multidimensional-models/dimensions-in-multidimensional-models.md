@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 520d6f11e5a472d5337a3747cc73c1d3656171c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075183"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>多維度模型中的維度
@@ -35,7 +35,7 @@ ms.locfileid: "66075183"
  建立 Cube 時，也可以將資料庫中的任何現有維度加入新的 Cube 中。 這些維度可能是先前已經為其他 Cube 定義的維度，或已由維度精靈定義的維度。 定義資料庫維度之後，您可以在維度設計師中修改並設定資料庫維度。 您也可以在 Cube 設計師中自訂有限範圍的 Cube 維度。  
   
 > [!NOTE]  
->  此外，您也可以透過使用 XMLA 或分析管理物件 (AMO)，以程式設計方式設計並設定維度、屬性和階層。 如需詳細資訊，請參閱 < [Analysis Services Scripting Language &#40;ASSL&#41;參考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)並[使用分析管理物件開發&#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)。  
+>  此外，您也可以透過使用 XMLA 或分析管理物件 (AMO)，以程式設計方式設計並設定維度、屬性和階層。 如需詳細資訊，請參閱[Analysis Services 指令碼語言 &#40;ASSL&#41; 參考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)和[流量分析管理物件 &#40;AMO&#41;進行開發](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)。  
   
 ## <a name="in-this-section"></a>本節內容  
  下表描述此章節的主題。  
@@ -43,7 +43,7 @@ ms.locfileid: "66075183"
  [定義資料庫維度](define-database-dimensions.md)  
  描述如何使用維度設計師修改及設定資料庫維度。  
   
- [維度屬性內容參考](dimension-attribute-properties-reference.md)  
+ [維度屬性 (attribute) 屬性 (property) 參考](dimension-attribute-properties-reference.md)  
  描述如何使用維度設計師來定義、修改及設定資料庫維度屬性。  
   
  [定義屬性關聯性](attribute-relationships-define.md)  
@@ -56,6 +56,6 @@ ms.locfileid: "66075183"
  描述如何使用 [商業智慧精靈] 來增強資料庫維度。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的 Cube](cubes-in-multidimensional-models.md)  
+ [多維度模型中的 cube](cubes-in-multidimensional-models.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 使用者定義成員屬性 (MDX) |Microsoft Docs
+title: 使用者自訂成員屬性（MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074254"
 ---
 # <a name="user-defined-member-properties-mdx"></a>使用者自訂成員屬性 (MDX)
@@ -30,14 +30,15 @@ ms.locfileid: "66074254"
 -   若要以程式設計方式加入使用者定義的成員屬性，您的應用程式可以使用分析管理物件 (AMO)，或 XML for Analysis (XMLA) 及 Analysis Services 指令碼語言 (ASSL) 的組合。 如需詳細資訊，請參閱 [屬性關聯性](../../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
   
 ## <a name="retrieving-user-defined-member-properties"></a>擷取使用者自訂成員屬性  
- 您可以擷取使用的使用者自訂成員屬性`PROPERTIES`關鍵字或[屬性](/sql/mdx/properties-mdx)函式。  
+ 您可以使用`PROPERTIES`關鍵字或[properties](/sql/mdx/properties-mdx)函數來抓取使用者自訂成員屬性。  
   
 ### <a name="using-the-properties-keyword-to-retrieve-user-defined-member-properties"></a>使用 PROPERTIES 關鍵字擷取使用者自訂成員屬性  
  擷取使用者自訂成員屬性的語法，跟用以擷取內建層級成員屬性的語法類似，如以下語法所示：  
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- `PROPERTIES` 關鍵字會在座標軸規格的集合運算式後面出現。 例如，以下的 MDX 查詢 `PROPERTIES` 關鍵字會擷取 `List Price` 與 `Dealer Price` 使用者自訂成員屬性，並且在識別 1 月份銷售之產品的集合運算式之後顯示：  
+ 
+  `PROPERTIES` 關鍵字會在座標軸規格的集合運算式後面出現。 例如，以下的 MDX 查詢 `PROPERTIES` 關鍵字會擷取 `List Price` 與 `Dealer Price` 使用者自訂成員屬性，並且在識別 1 月份銷售之產品的集合運算式之後顯示：  
   
 ```  
 SELECT   
@@ -68,6 +69,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>另請參閱  
  [使用成員屬性 &#40;MDX&#41;](mdx-member-properties.md)   
- [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)  
+ [MDX&#41;的屬性 &#40;](/sql/mdx/properties-mdx)  
   
   

@@ -15,29 +15,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ea811151e9c81ed515b774f279297d236c608f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188736"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
-  當要求資料列識別碼 (*IdentifierType* SQL_BEST_ROWID)， **SQLSpecialColumns**針對 SQL_SCOPE_CURROW 以外的任何要求範圍傳回空的結果集 （無資料列）。 產生的結果集表示資料行只有在這個範圍中才是有效的。  
+  當要求資料列識別碼（*IdentifierType* SQL_BEST_ROWID）時， **SQLSpecialColumns**會針對除了 SQL_SCOPE_CURROW 以外的任何要求範圍，傳回空的結果集（無資料列）。 產生的結果集表示資料行只有在這個範圍中才是有效的。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援識別碼的虛擬資料行。 **SQLSpecialColumns**結果集將會將所有資料行識別為 SQL_PC_NOT_PSEUDO。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援識別碼的虛擬資料行。 **SQLSpecialColumns**結果集會將所有資料行識別為 SQL_PC_NOT_PSEUDO。  
   
- **SQLSpecialColumns**可以在靜態資料指標上執行。 嘗試執行**SQLSpecialColumns**上可更新 （索引鍵集驅動或動態） 會傳回 SQL_SUCCESS_WITH_INFO，指出資料指標類型已經變更。  
+ **SQLSpecialColumns**可以在靜態資料指標上執行。 嘗試在可更新的（索引鍵集驅動或動態）上執行**SQLSpecialColumns**時，會傳回 SQL_SUCCESS_WITH_INFO 表示資料指標類型已變更。  
   
 ## <a name="sqlspecialcolumns-support-for-enhanced-date-and-time-features"></a>增強型日期和時間功能的 SQLSpecialColumns 支援  
- 如需值的資訊傳回的資料行 DATA_TYPE、 TYPE_NAME、 COLUMN_SIZE、 BUFFER_LENGTH 和 DECIMAL_DIGTS 日期/時間類型，請參閱 < [Catalog Metadata](../native-client-odbc-date-time/metadata-catalog.md)。  
+ 如需日期/時間類型 DATA_TYPE、TYPE_NAME、COLUMN_SIZE、BUFFER_LENGTH 和 DECIMAL_DIGTS 之資料行傳回值的相關資訊，請參閱[目錄中繼資料](../native-client-odbc-date-time/metadata-catalog.md)。  
   
- 如需詳細資訊，請參閱 <<c0> [ 日期和時間改善&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。</c0>  
+ 如需更多一般資訊，請參閱[ODBC&#41;&#40;的日期和時間改善](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlspecialcolumns-support-for-large-clr-udts"></a>大型 CLR UDT 的 SQLSpecialColumns 支援  
- **SQLSpecialColumns**支援大型 CLR 使用者定義型別 (Udt)。 如需詳細資訊，請參閱 < [Large CLR User-Defined 類型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLSpecialColumns**支援大型 CLR 使用者定義型別（udt）。 如需詳細資訊，請參閱[&#40;ODBC&#41;的大型 CLR 使用者定義類型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLSpecialColumns 函數](https://go.microsoft.com/fwlink/?LinkId=59371)   
+ [SQLSpecialColumns 函式](https://go.microsoft.com/fwlink/?LinkId=59371)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

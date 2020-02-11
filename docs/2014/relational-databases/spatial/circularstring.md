@@ -11,17 +11,18 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: b3eacaba2ad0ddc2c0475d29b151d0a50be98fc0
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688711"
 ---
 # <a name="circularstring"></a>CircularString
+  
   `CircularString` 是零個或多個連續圓弧線段的集合。 圓弧線段是指由二維平面中三個點所定義的弧形線段。第一個點不得與第三個點相同。 如果圓弧線段的三個點都是共線，此圓弧線段就會被視為直線線段。  
   
 > [!IMPORTANT]  
->  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引進的新空間功能（包括 `CircularString` 子類型）的詳細描述和範例，請下載技術白皮書： [SQL Server 2012 中的新空間功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
+>  如需中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]引進的新空間功能（包括`CircularString`子類型）的詳細描述和範例，請下載技術白皮書： [SQL Server 2012 中的新空間功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
   
 ## <a name="circularstring-instances"></a>CircularString 執行個體  
  下圖顯示有效的 `CircularString` 執行個體：  
@@ -29,7 +30,7 @@ ms.locfileid: "72688711"
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### <a name="accepted-instances"></a>已接受的執行個體  
- 如果 `CircularString` 實例是空的或包含奇數的點（n），其中 n > 1，則會接受。 下面是已接受的 `CircularString` 執行個體。  
+ 如果`CircularString`實例是空的或包含奇數的點（n），其中 n > 1，則會接受實例。 下面是已接受的 `CircularString` 執行個體。  
   
 ```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
@@ -37,7 +38,8 @@ DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';  
 ```  
   
- `@g3` 顯示 `CircularString` 執行個體可被系統接受但卻無效。 系統無法接受下列 CircularString 執行個體宣告。 這個宣告會擲回 `System.FormatException`。  
+ 
+  `@g3` 顯示 `CircularString` 執行個體可被系統接受但卻無效。 系統無法接受下列 CircularString 執行個體宣告。 這個宣告會擲回 `System.FormatException`。  
   
 ```sql
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';  
@@ -66,7 +68,9 @@ DECLARE @g4 geometry = 'CIRCULARSTRING(1 1, 2 2, 2 2)';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();  
 ```  
   
- `CircularString` 執行個體至少必須包含兩個圓弧線段，才能定義完整的圓形。 `CircularString` 執行個體無法使用單一圓弧線段 (例如 (1 1, 3 1, 1 1)) 來定義完整的圓形。 您可以使用 (1 1, 2 2, 3 1, 2 0, 1 1) 來定義圓形。  
+ 
+  `CircularString` 執行個體至少必須包含兩個圓弧線段，才能定義完整的圓形。 
+  `CircularString` 執行個體無法使用單一圓弧線段 (例如 (1 1, 3 1, 1 1)) 來定義完整的圓形。 您可以使用 (1 1, 2 2, 3 1, 2 0, 1 1) 來定義圓形。  
   
  下列範例會顯示無效的 CircularString 執行個體。  
   
@@ -95,7 +99,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING EMPTY');  
 ```  
   
-### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>b. 使用 CircularString 搭配一個圓弧線段來具現化 Geometry 執行個體  
+### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>B. 使用 CircularString 搭配一個圓弧線段來具現化 Geometry 執行個體  
  下列範例會示範如何建立具有單一圓弧線段 (半圓形) 的 `CircularString` 執行個體：  
   
 ```sql  
@@ -133,7 +137,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- 請注意，`CircularString` 範例的值接近 2&#x03c0; （2 * pi），這是圓形的實際圓周。  
+ 請注意，此`CircularString`範例的值接近 2&#x03c0; （2 * pi），這是圓形的實際圓周。  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. 在相同的陳述式中使用 CircularString 來宣告和具現化 Geometry 執行個體  
  這個程式碼片段會示範如何在相同的陳述式中使用 `geometry` 來宣告和具現化 `CircularString` 執行個體：  
@@ -171,7 +175,7 @@ SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);
  [STNumPoints &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)   
  [STIsRing &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/stisring-geometry-data-type)   
  [STIsClosed &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)   
- [STPointOnSurface &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
+ [STPointOnSurface &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
  [LineString](linestring.md)  
   
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63207055"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>複寫管理員的常見問題集
@@ -26,7 +26,7 @@ ms.locfileid: "63207055"
 ## <a name="configuring-replication"></a>設定複寫  
   
 ### <a name="does-activity-need-to-be-stopped-on-a-database-when-it-is-published"></a>當活動發行後，是否需要在資料庫中停止該活動？  
- 資料分割 在建立發行集期間，可在資料庫中繼續保留活動。 請注意，產生快照集可能需要大量資源，因此最好在資料庫中活動較少的時間產生快照集 (依預設，在您完成「新增發行集精靈」時產生快照集)。  
+ 否。 在建立發行集期間，可在資料庫中繼續保留活動。 請注意，產生快照集可能需要大量資源，因此最好在資料庫中活動較少的時間產生快照集 (依預設，在您完成「新增發行集精靈」時產生快照集)。  
   
 ### <a name="are-tables-locked-during-snapshot-generation"></a>資料表是否在快照集產生期間鎖定？  
  鎖定的時間長短視所用的複寫類型而定：  
@@ -54,7 +54,7 @@ ms.locfileid: "63207055"
 -   如果「散發代理程式」或「合併代理程式」設定為根據排程或視需要執行，並且在執行代理程式時沒有可用的快照集，則代理程式將關閉並顯示一則訊息，說明快照集尚無法使用。 您必須在完成「快照集代理程式」後再次執行代理程式以套用快照集。 如需執行代理程式的詳細資訊，請參閱[同步處理發送訂閱](../synchronize-a-push-subscription.md)、[同步處理提取訂閱](../synchronize-a-pull-subscription.md)和[複寫代理程式可執行檔概念](../concepts/replication-agent-executables-concepts.md)。  
   
 ### <a name="should-i-script-my-replication-configuration"></a>我是否應為我的複寫組態編寫指令碼？  
- 是的。 編寫複寫組態的指令碼是複寫拓撲之任何損毀復原計劃的主要部分。 如需有關編寫指令碼的詳細資訊，請參閱＜ [Scripting Replication](../scripting-replication.md)＞。  
+ 是。 編寫複寫組態的指令碼是複寫拓撲之任何損毀復原計劃的主要部分。 如需有關編寫指令碼的詳細資訊，請參閱＜ [Scripting Replication](../scripting-replication.md)＞。  
   
 ### <a name="what-recovery-model-is-required-on-a-replicated-database"></a>複寫的資料庫中需要什麼復原模式？  
  使用下列任何一種復原模式的複寫都能正常運作：簡單、大量記錄或完整。 合併式複寫會透過將資訊儲存於中繼資料表來追蹤變更。 異動複寫則透過標記交易記錄來追蹤變更，但此標記處理序不受復原模式影響。  
@@ -86,7 +86,7 @@ ms.locfileid: "63207055"
  是，但有一些限制。 如需詳細資訊，請參閱[發行資料和資料庫物件](../publish/publish-data-and-database-objects.md)主題中的＜在多個發行集中發行資料表＞一節。  
   
 ### <a name="can-multiple-publications-use-the-same-distribution-database"></a>多個發行集是否可以使用相同的散發資料庫？  
- 是的。 可以使用相同散發資料庫的發行集沒有數量或類型的限制。 給定「發行者」的所有發行集必須使用相同的「散發者」和散發資料庫。  
+ 是。 可以使用相同散發資料庫的發行集沒有數量或類型的限制。 給定「發行者」的所有發行集必須使用相同的「散發者」和散發資料庫。  
   
  如果您有多個發行集，則可在「散發者」端設定多個散發資料庫，以確定每個散發資料庫中的資料流程來自單一發行集。 使用 [散發者屬性]  對話方塊或 [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) 以新增散發資料庫。 如需存取對話方塊的詳細資訊，請參閱[檢視和修改散發者和發行者屬性](../view-and-modify-distributor-and-publisher-properties.md)。  
   
@@ -94,19 +94,19 @@ ms.locfileid: "63207055"
  此資訊可透過 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]和數個複寫預存程序獲得。 如需詳細資訊，請參閱 [Distributor and Publisher Information Script](distributor-and-publisher-information-script.md)。  
   
 ### <a name="does-replication-encrypt-data"></a>複寫是否會加密資料？  
- 資料分割 複寫不會對儲存在資料庫或透過網路傳送的資料加密。 如需詳細資訊，請參閱主題的 < 加密 > 一節[SQL Server 複寫安全性](../security/view-and-modify-replication-security-settings.md)。  
+ 否。 複寫不會對儲存在資料庫或透過網路傳送的資料加密。 如需詳細資訊，請參閱[SQL Server 複寫安全性](../security/view-and-modify-replication-security-settings.md)主題的「加密」一節。  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>如何透過網際網路複寫資料？  
  使用下列方式，透過網際網路複寫資料：  
   
 -   虛擬私人網路 (VPN)。 如需詳細資訊，請參閱[使用 VPN 透過網際網路發行資料](../publish-data-over-the-internet-using-vpn.md)。  
   
--   合併式複寫的 Web 同步處理選項。 如需詳細資訊，請參閱 [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)。  
+-   合併式複寫的 Web 同步處理選項。 如需詳細資訊，請參閱＜ [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)＞。  
   
  所有類型的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫都可以透過 VPN 複寫資料，但是您若是使用合併式複寫，則應考慮 Web 同步處理。  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>如果連接斷開，則複寫是否會繼續？  
- 是的。 如果連接斷開，複寫處理會從它停止的地方繼續。 如果您在不可靠的網路中使用合併式複寫，請考慮使用邏輯記錄，它可確保相關變更作為一個單位進行處理。 如需詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](../merge/group-changes-to-related-rows-with-logical-records.md)。  
+ 是。 如果連接斷開，複寫處理會從它停止的地方繼續。 如果您在不可靠的網路中使用合併式複寫，請考慮使用邏輯記錄，它可確保相關變更作為一個單位進行處理。 如需詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](../merge/group-changes-to-related-rows-with-logical-records.md)。  
   
 ### <a name="does-replication-work-over-low-bandwidth-connections-does-it-use-compression"></a>複寫是否透過低頻寬連接執行？ 它是否使用壓縮？  
  是，複寫透過低頻寬連接執行。 對於透過 TCP/IP 的連接，它使用由通訊協定提供的壓縮，但不提供其他壓縮。 對於透過 HTTPS 的 Web 同步處理連接，它使用由通訊協定提供的壓縮，同時還提供對 XML 檔案 (用於複寫變更) 的其他壓縮。  
@@ -114,10 +114,10 @@ ms.locfileid: "63207055"
 ## <a name="logins-and-object-ownership"></a>登入和物件擁有權  
   
 ### <a name="are-logins-and-passwords-replicated"></a>登入和密碼是否會被複寫？  
- 資料分割 您可以建立 DTS 封裝以將登入和密碼從「發行者」傳送給一個或多個「訂閱者」。  
+ 否。 您可以建立 DTS 封裝以將登入和密碼從「發行者」傳送給一個或多個「訂閱者」。  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>結構描述什麼是以及它們是如何進行複寫的？  
- 從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *「結構描述」* 具有兩重含義：  
+ 從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 開始，「結構描述」  有兩種意義：  
   
 -   物件的定義，例如 CREATE TABLE 陳述式。 依預設，複寫將所有複寫物件的定義複製到「訂閱者」。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "63207055"
   
 -   針對使用字元模式快照集之發行集內的發行項 (用於非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者和 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 訂閱者)：依預設，會將擁有者保留空白。 擁有者預設為與散發代理程式或合併代理程式用於連接到訂閱者之帳戶相關聯的擁有者。  
   
- 物件擁有者可以透過 [發行項屬性 -\<發行項>] **** 對話方塊和透過下列預存程序變更︰**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](../publish/view-and-modify-publication-properties.md)、[定義發行項](../publish/define-an-article.md)和[檢視和修改發行項屬性](../publish/view-and-modify-article-properties.md)。  
+ 物件擁有者可以透過 **[發行項屬性 -\<***發行項***>]** 對話方塊和透過下列預存程序變更︰**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](../publish/view-and-modify-publication-properties.md)、[定義發行項](../publish/define-an-article.md)和[檢視和修改發行項屬性](../publish/view-and-modify-article-properties.md)。  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>如何將訂閱資料庫中的授權設定為與發行集資料庫中的授權相符？  
  依預設，複寫不執行訂閱資料庫中的 GRANT 陳述式。 如果您要使訂閱資料庫中的授權與發行集資料庫中的授權相符，請使用以下其中一種方法：  
@@ -151,7 +151,7 @@ ms.locfileid: "63207055"
   
 -   指定在重新初始化訂閱時不應卸除物件。 在重新初始化之前，執行下列其中一項：  
   
-    -   執行 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) 或 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定**sp_changearticle**參數的 'pre_creation_cmd' (**sp_changemergearticle**) 或 'pre_creation_command' ( **@property** )，以及 **@value** 。  
+    -   執行 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) 或 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 為參數指定 ' pre_creation_cmd ' （**sp_changearticle**）或 ' pre_creation_command ' （**sp_changemergearticle**）的值， **@property**並為參數**@value**指定 ' none '、' delete ' 或 ' 截斷 ' 的值。  
   
     -   在 [發行項屬性 - \<發行項>]  對話方塊的 [目的地物件]  區段中，選取 [不要變更現有物件]  、[刪除資料。  如果發行項有資料列篩選，僅刪除符合篩選的資料。] 或 [截斷現有物件中的所有資料]  作為 [如果名稱使用中，則採取動作]  選項的值。 如需存取這個對話方塊的詳細資訊，請參閱[檢視和修改發行集屬性](../publish/view-and-modify-publication-properties.md)。  
   
@@ -164,10 +164,10 @@ ms.locfileid: "63207055"
  對於異動複寫，大量插入將被追蹤並同其他插入一樣進行複寫。 對於合併式複寫，您必須確定正確更新變更追蹤中繼資料。  
   
 ### <a name="are-there-any-replication-considerations-for-backup-and-restore"></a>是否有任何備份和還原的複寫考量？  
- 是的。 對於涉及複寫的資料庫有許多特殊的考量。 如需詳細資訊，請參閱 [備份及還原複寫的資料庫](back-up-and-restore-replicated-databases.md)。  
+ 是。 對於涉及複寫的資料庫有許多特殊的考量。 如需詳細資訊，請參閱 [備份及還原複寫的資料庫](back-up-and-restore-replicated-databases.md)。  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>複寫是否會影響交易記錄的大小？  
- 合併式複寫和快照式複寫不會影響交易記錄大小，但異動複寫會影響。 如果資料庫包含一個或多個交易式發行集，則除非已將所有與發行集相關的交易傳遞至散發資料庫，否則不會截斷記錄檔。 如果交易記錄變得很大，而且「記錄讀取器代理程式」依排程執行，請考慮縮短兩次執行間的間隔或設定其以連續模式執行。 或者將它設定為以連續模式執行。 如果已將其設定為在連續模式下執行 (預設值)，則請確定它正在執行。 如需有關如何檢查記錄讀取器代理程式狀態的詳細資訊，請參閱[View Information and Perform Tasks 使用 「 複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+ 合併式複寫和快照式複寫不會影響交易記錄大小，但異動複寫會影響。 如果資料庫包含一個或多個交易式發行集，則除非已將所有與發行集相關的交易傳遞至散發資料庫，否則不會截斷記錄檔。 如果交易記錄變得很大，而且「記錄讀取器代理程式」依排程執行，請考慮縮短兩次執行間的間隔或設定其以連續模式執行。 或者將它設定為以連續模式執行。 如果已將其設定為在連續模式下執行 (預設值)，則請確定它正在執行。 如需有關檢查記錄讀取器代理程式狀態的詳細資訊，請參閱[使用複寫監視器來查看資訊及執行](../monitor/view-information-and-perform-tasks-replication-monitor.md)工作。  
   
  此外，如果您已在發行集資料庫或散發資料庫中設定選項 'sync with backup'，則除非已備份所有交易，否則交易記錄不會被截斷。 如果交易記錄變得很大，並且您已設定此選項，則請考慮縮短兩次交易記錄備份之間的間隔。 如需涉及異動複寫之備份和還原資料庫的詳細資訊，請參閱[備份與還原快照集和異動複寫的策略](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "63207055"
  首先使用 [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)、[sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) 或 [發行集屬性 - \<發行集>]  對話方塊從發行集中卸除發行項，然後使用 `DROP <Object>` 將其從資料庫中卸除。 訂閱已加入之後，不可從快照集或交易式發行集卸除發行項，必須先卸除訂閱。 如需詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>如何在已發行的資料表中新增或卸除資料行？  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援在已發行物件上進行各種結構描述變更，包括新增和卸除資料行。 例如，在發行者端執行 ALTER TABLE ...DROP COLUMN，並將陳述式複寫至訂閱者，然後執行以卸除資料行。 執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本的「訂閱者」支援透過預存程序 [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) 和 [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql)新增和卸除資料行。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../publish/make-schema-changes-on-publication-databases.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援在已發行物件上進行各種結構描述變更，包括新增和卸除資料行。 例如，執行 ALTER TABLE .。。在發行者端放置資料行，並將語句複寫至訂閱者，然後執行以卸載資料行。 執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本的「訂閱者」支援透過預存程序 [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) 和 [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql)新增和卸除資料行。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../publish/make-schema-changes-on-publication-databases.md)。  
   
 ## <a name="replication-maintenance"></a>複寫維護  
   
@@ -207,7 +207,7 @@ ms.locfileid: "63207055"
  從資料庫中移除複寫所需採取的動作視資料庫是否用作發行集資料庫、訂閱資料庫或兩者而定。  
   
 ### <a name="how-do-i-determine-whether-there-are-transactions-or-rows-to-be-replicated"></a>如何確定是否有要複寫的交易或資料列？  
- 對於異動複寫，請使用預存程序或「複寫監視器」中的 **[未散發的命令]** 索引標籤。 如需詳細資訊，請參閱 <<c0> [ 檢視複寫的命令和散發資料庫中的其他資訊&#40;Replication TRANSACT-SQL Programming&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md)並[View Information and Perform Tasks 使用複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。</c0>  
+ 對於異動複寫，請使用預存程序或「複寫監視器」中的 **[未散發的命令]** 索引標籤。 如需詳細資訊，請參閱[在散發資料庫中查看已複寫的命令和其他資訊 &#40;複寫 transact-sql 程式設計&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)和[使用複寫監視器來查看資訊及執行](../monitor/view-information-and-perform-tasks-replication-monitor.md)工作。  
   
  對於合併式複寫，請使用預存程序 **sp_showpendingchanges**。 如需詳細資訊，請參閱 [sp_showpendingchanges &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)。  
   
@@ -218,15 +218,15 @@ ms.locfileid: "63207055"
   
 -   估計將命令傳遞給訂閱者所需的時間量。 如果此值大於產生快照集並將其套用至訂閱者所需的時間量，則請考慮重新初始化訂閱者。 如需詳細資訊，請參閱 [重新初始化訂閱](../reinitialize-subscriptions.md)。  
   
- 如需詳細資訊，請參閱 < [sp_replmonitorsubscriptionpendingcmds &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql)並[View Information and Perform Tasks 使用 「 複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+ 如需詳細資訊，請參閱[sp_replmonitorsubscriptionpendingcmds &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql)和[使用複寫監視器來查看資訊及執行](../monitor/view-information-and-perform-tasks-replication-monitor.md)工作。  
   
 ## <a name="replication-and-other-database-features"></a>複寫與其他資料庫功能  
   
 ### <a name="does-replication-work-in-conjunction-with-log-shipping-and-database-mirroring"></a>複寫是否與記錄傳送和資料庫鏡像一起使用？  
- 是的。 如需詳細資訊，請參閱[記錄傳送和複寫 &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md) 和[資料庫鏡像和複寫 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
+ 是。 如需詳細資訊，請參閱[記錄傳送和複寫 &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md) 和[資料庫鏡像和複寫 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
 ### <a name="does-replication-work-in-conjunction-with-clustering"></a>複寫是否與群集一起使用？  
- 是的。 無需特殊考量，因為所有資料儲存在群集的一組磁碟中。  
+ 是。 無需特殊考量，因為所有資料儲存在群集的一組磁碟中。  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫管理常見問題集](frequently-asked-questions-for-replication-administrators.md)   

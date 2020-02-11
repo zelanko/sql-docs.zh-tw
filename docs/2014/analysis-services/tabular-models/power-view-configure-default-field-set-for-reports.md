@@ -1,5 +1,5 @@
 ---
-title: 設定 Power View 報表 (SSAS 表格式) 的預設欄位集 |Microsoft Docs
+title: 設定 Power View 報表的預設欄位集（SSAS 表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37571e141395afe255329edc10edeaeaed121710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066884"
 ---
 # <a name="configure-default-field-set-for-power-view-reports-ssas-tabular"></a>設定 Power View 報表的預設欄位集 (SSAS 表格式)
@@ -30,19 +30,19 @@ ms.locfileid: "66066884"
   
 #### <a name="to-add-a-default-field-set"></a>若要加入預設欄位集  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，按一下您要設定預設欄位清單的資料表 (索引標籤)。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，按一下您要設定預設欄位清單的資料表 (標籤)。  
   
-2.  在 [屬性]  視窗中，於 [預設欄位集]  屬性上按一下 [按一下可編輯]  。  
+2.  在 [屬性]**** 視窗中，於 [預設欄位集]**** 屬性上按一下 [按一下可編輯]****。  
   
 3.  在 [預設欄位集] 對話方塊中，選取一個或多個欄位。 您可以選擇資料表中的任何欄位，包括量值在內。 按住 SHIFT 鍵選取範圍，或按 CTRL 鍵選取個別欄位。  
   
-4.  按一下 [加入]  將它們加入預設欄位集。  
+4.  按一下 [加入]**** 將它們加入預設欄位集。  
   
 5.  使用向上箭號與向下箭號按鈕，指定欄位清單中的順序。 欄位會依欄位集定義的順序加入至報告。  
   
 6.  針對活頁簿中的其他資料表重複這些步驟。  
   
-## <a name="next-step"></a>下一個步驟  
+## <a name="next-step"></a>後續步驟  
  您建立預設欄位集之後，可以透過指定預設標籤、預設影像、預設群組行為，或包含相同值的資料列是否群組在一資料列或是個別列出，進一步影響報表設計體驗。 如需詳細資訊，請參閱[設定 Power View 報表的資料表行為屬性 &#40;SSAS 表格式&#41;](power-view-configure-table-behavior-properties-for-reports.md)。  
   
   

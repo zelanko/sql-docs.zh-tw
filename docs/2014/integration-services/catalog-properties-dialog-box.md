@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061106"
 ---
 # <a name="catalog-properties-dialog-box"></a>目錄屬性對話方塊
-  使用 [目錄屬性] 對話方塊來設定 SSISDB 目錄。 目錄屬性定義如何加密敏感性資料，如何保留作業和專案版本設定資料，以及何時驗證作業逾時。SSISDB 目錄是 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案、封裝、參數與環境的中央儲存和管理點。  
+  使用 [目錄屬性] 對話方塊來設定 SSISDB 目錄。 目錄屬性會定義機密資料的加密方式、保留作業和專案版本設定資料的方式，以及驗證作業何時超時。SSISDB 目錄是[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]專案、封裝、參數與環境的中央儲存和管理點。  
   
  您也可以在 catalog.catalog_property 檢視表中檢視目錄屬性，以及使用 catalog.configure_catalog 預存程序來設定屬性。 如需詳細資訊，請參閱 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) 和 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)。  
   
@@ -29,21 +29,21 @@ ms.locfileid: "66061106"
   
  **您想要做什麼事？**  
   
--   [開啟目錄屬性對話方塊](#open_dialog)  
+-   [開啟 [目錄屬性] 對話方塊](#open_dialog)  
   
 -   [設定選項](#options)  
   
-##  <a name="open_dialog"></a> 開啟目錄屬性對話方塊  
+##  <a name="open_dialog"></a>開啟 [目錄屬性] 對話方塊  
   
-1.  開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
+1.  開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]  
   
 2.  連接 Microsoft SQL Server Database Engine。  
   
-3.  在物件總管中，展開 [Integration Services]  節點，並以滑鼠右鍵按一下 [SSISDB]  ，然後按一下 [屬性]  。  
+3.  在物件總管中，展開 [Integration Services]**** 節點，並以滑鼠右鍵按一下 [SSISDB]****，然後按一下 [屬性]****。  
   
 ##  <a name="options"></a> 設定選項  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  下表描述對話方塊中的特定屬性，以及 catalog.catalog_property 檢視表中的對應屬性。  
   
 |屬性名稱 (目錄屬性對話方塊)|屬性名稱 (catalog.catalog_property 檢視表)|描述|  

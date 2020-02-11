@@ -1,5 +1,5 @@
 ---
-title: 大量插入工作編輯器 （一般頁面） |Microsoft Docs
+title: 大量插入工作編輯器（一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b67b5eaf0d6927a0ed009498fd1b81c3aabd3354
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061134"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>大量插入工作編輯器 (一般頁面)
@@ -38,8 +38,8 @@ ms.locfileid: "66061134"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [大量插入工作編輯器 &#40;連接頁面&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
- [大量插入工作編輯器 &#40;選項頁面&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
+ [[大量插入工作編輯器] &#40;連接] 頁面&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
+ [[大量插入工作編輯器] &#40;選項] 頁面&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
  [運算式頁面](expressions/expressions-page.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [控制流程](control-flow/control-flow.md)  

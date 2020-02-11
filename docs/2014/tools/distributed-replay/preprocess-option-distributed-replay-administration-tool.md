@@ -11,18 +11,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f5f4492dc18a93ab1fea9d34287eb90703bc3d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149910"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>前置處理選項 (Distributed Replay 管理工具)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具， `DReplay.exe`，是命令列工具，可用來與 distributed 的 replay controller 通訊。 本主題描述 **preprocess** 命令列選項與對應的語法。  
+  Distributed Replay 管理工具`DReplay.exe`是命令列工具，可讓您用來與 Distributed Replay controller 通訊。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本主題描述 **preprocess** 命令列選項與對應的語法。  
   
- **preprocess** 選項會起始前置處理階段。 在這個階段中，控制器會準備輸入追蹤資料，以便對目標伺服器重新執行。  
+ 
+  **preprocess** 選項會起始前置處理階段。 在這個階段中，控制器會準備輸入追蹤資料，以便對目標伺服器重新執行。  
   
- ![主題連結圖示](../../database-engine/media/topic-link.gif "主題連結圖示") 如需管理工具語法所使用之語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。  
+ ![主題連結圖示](../../database-engine/media/topic-link.gif "主題連結圖示")如需與管理工具語法搭配使用之語法慣例的詳細資訊，請參閱 transact-sql[語法慣例 &#40;transact-sql&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,13 +34,14 @@ ms.locfileid: "63149910"
 ```  
   
 #### <a name="parameters"></a>參數  
- **-m** *controller*  
+ **-m** *控制器*  
  指定控制器的電腦名稱。 您可以使用 "`localhost`" 或 "`.`" 表示本機電腦。  
   
  如果未指定 **-m** 參數，則會使用本機電腦。  
   
  **-i** *input_trace_file*  
- 指定控制器上輸入追蹤檔案的完整路徑，例如 `D:\Mytrace.trc`。 **-i** 是必要參數。  
+ 指定控制器上輸入追蹤檔案的完整路徑，例如 `D:\Mytrace.trc`。 
+  **-i** 是必要參數。  
   
  如果相同的目錄中存在換用檔案，系統就會自動載入並使用它們。 這些檔案必須遵循檔案換用命名慣例，例如：`Mytrace.trc`、`Mytrace_1.trc`、`Mytrace_2.trc`、`Mytrace_3.trc`... `Mytrace_n.trc`。  
   
@@ -47,7 +49,8 @@ ms.locfileid: "63149910"
 >  如果您要在控制器以外的電腦上使用管理工具，就必須將輸入追蹤檔案複製到控制器，以便針對此參數使用本機路徑。  
   
  **-d** *controller_working_dir*  
- 指定控制器上儲存中繼檔案的目錄。 **-d** 是必要參數。  
+ 指定控制器上儲存中繼檔案的目錄。 
+  **-d** 是必要參數。  
   
  下列為適用需求：  
   
@@ -72,7 +75,9 @@ ms.locfileid: "63149910"
  如果未指定 **-f** ，則預設間隔為 30 秒。  
   
 ## <a name="examples"></a>範例  
- 在此範例中，前置處理階段是使用所有預設設定來起始。 `localhost` 值指出控制器服務與管理工具在同一部電腦上執行。 *input_trace_file* 參數會指定輸入追蹤資料的位置 `c:\mytrace.trc`。 因為沒有涉及任何追蹤檔案篩選，所以必須指定 **-c** 參數。  
+ 在此範例中，前置處理階段是使用所有預設設定來起始。 
+  `localhost` 值指出控制器服務與管理工具在同一部電腦上執行。 
+  *input_trace_file* 參數會指定輸入追蹤資料的位置 `c:\mytrace.trc`。 因為沒有涉及任何追蹤檔案篩選，所以必須指定 **-c** 參數。  
   
 ```  
 dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir  
@@ -98,7 +103,7 @@ dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay
 </Options>  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  您必須以互動使用者、本機使用者或網域使用者帳戶來執行管理工具。 若要使用本機使用者帳戶，管理工具和控制器必須在同一部電腦上執行。  
   
  如需詳細資訊，請參閱 [Distributed Replay 安全性](distributed-replay-security.md)。  

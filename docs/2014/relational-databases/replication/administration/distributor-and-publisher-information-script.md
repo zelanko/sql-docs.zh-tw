@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35b7c489b49a4463dc0b12f1469d1310f5d26fef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63186986"
 ---
 # <a name="distributor-and-publisher-information-script"></a>散發者與發行者資訊指定碼
@@ -25,7 +25,7 @@ ms.locfileid: "63186986"
   
 -   變更 `use AdventureWorks2012` 行以使用您的發行集資料庫之名稱。  
   
--   從 `exec sp_helparticle @publication='<PublicationName>'` 行移除註解 (`--`)，並使用發行集的名稱取代 \<發行集名稱>。  
+-   從 `--` 行移除註解 (`exec sp_helparticle @publication='<PublicationName>'`)，並使用發行集的名稱取代 \<發行集名稱>。  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  

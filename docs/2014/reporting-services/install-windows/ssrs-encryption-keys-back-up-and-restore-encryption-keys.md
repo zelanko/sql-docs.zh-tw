@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 72400601ebb6b9a01b4db09ea9799b64e9c5e1c9
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796399"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>備份與還原 Reporting Services 加密金鑰
   在報表伺服器組態中，建立用於加密機密資訊的對稱金鑰備份副本是很重要的一部分。 許多例行作業都需要金鑰的備份副本，這備份副本可以讓您在新安裝中重複使用現有的報表伺服器資料庫。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
   
  發生下列任何事件時，就必須還原加密金鑰的備份副本。  
   
@@ -46,26 +46,27 @@ ms.locfileid: "72796399"
 ## <a name="backing-up-the-encryption-keys"></a>備份加密金鑰  
  備份對稱金鑰的程序是將金鑰寫入您指定的檔案，然後使用您提供的密碼將金鑰加密。 對稱金鑰絕不能以未加密的狀態儲存，因此您將金鑰儲存到磁碟時，必須提供密碼將其加密。 檔案建立之後，您必須將其儲存在安全的位置，並 **記住用來解除檔案鎖定的密碼** 。 若要備份對稱金鑰，您可以使用下列工具：  
   
- **原生模式** ：Reporting Services 組態管理員或 **rskeymgmt** 公用程式。  
+ **原生模式：** 可能是 Reporting Services 組態管理員或**rskeymgmt**公用程式。  
   
- **SharePoint 模式** ：SharePoint 管理中心頁面或 PowerShell。  
+ **SharePoint 模式：** SharePoint 管理中心頁面或 PowerShell。  
   
-####  <a name="bkmk_backup_sharepoint"></a> 備份 SharePoint 模式報表伺服器  
+####  <a name="bkmk_backup_sharepoint"></a>備份 SharePoint 模式報表伺服器  
  對於 SharePoint 模式報表伺服器，您可以使用 PowerShell 命令，或使用適用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面。 如需詳細資訊，請參閱[管理 Reporting Services SharePoint 服務應用程式](../manage-a-reporting-services-sharepoint-service-application.md)的＜金鑰管理＞一節  
   
-####  <a name="bkmk_backup_configuration_manager"></a> 備份加密金鑰 - Reporting Services 組態管理員 (原生模式)  
+####  <a name="bkmk_backup_configuration_manager"></a>備份加密金鑰-Reporting Services 組態管理員（原生模式）  
   
 1.  啟動 Reporting Services 組態管理員，然後連接到您要設定的報表伺服器執行個體。  
   
-2.  按一下 **[加密金鑰]** ，然後按一下 **[備份]** 。  
+2.  按一下 **[加密金鑰]**，然後按一下 **[備份]**。  
   
 3.  輸入增強式密碼。  
   
-4.  指定要包含儲存之金鑰的檔案。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將 .snk 副檔名附加到這個檔案。 可以考慮將檔案儲存到磁碟上，使其與報表伺服器分開。  
+4.  指定要包含儲存之金鑰的檔案。 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將 .snk 副檔名附加到這個檔案。 可以考慮將檔案儲存到磁碟上，使其與報表伺服器分開。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_backup_rskeymgmt"></a> 備份加密金鑰 - rskeymgmt (原生模式)  
+####  <a name="bkmk_backup_rskeymgmt"></a>備份加密金鑰-rskeymgmt （原生模式）  
   
 1.  在主控報表伺服器的本機電腦上，執行 **[rskeymgmt.exe]** 。 您必須使用 `-e` 擷取引數來複製金鑰、提供檔案名稱，並指定密碼。 下列範例說明您必須指定的引數：  
   
@@ -86,11 +87,11 @@ ms.locfileid: "72796399"
   
  若要還原加密金鑰，檔案上必須有一個加密金鑰的副本。 您也必須知道解除鎖定儲存之副本的密碼。 如果您有金鑰和密碼，就可以執行 Reporting Services 組態工具或 **rskeymgmt** 公用程式來還原金鑰。 對稱金鑰必須和鎖定與解除鎖定目前儲存在報表伺服器資料庫中之加密資料的金鑰相同。 如果您還原無效的副本，報表伺服器將無法存取目前儲存在報表伺服器資料庫中的加密資料。 萬一發生這種情形，如果無法還原有效的金鑰，就必須刪除所有的加密值。 如果因故無法還原加密金鑰 (例如，您若沒有備份副本)，則必須刪除現有的金鑰和加密內容。 如需詳細資訊，請參閱[刪除和重新建立加密金鑰 &#40;SSRS 設定管理員&#41;](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)。 如需建立對稱金鑰的詳細資訊，請參閱[初始化報表伺服器 &#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-initialize-a-report-server.md)。  
   
-####  <a name="bkmk_restore_configuration_manager"></a> 還原加密金鑰 - Reporting Services 組態管理員 (原生模式)  
+####  <a name="bkmk_restore_configuration_manager"></a>還原加密金鑰-Reporting Services 組態管理員（原生模式）  
   
 1.  啟動 Reporting Services 組態管理員，然後連接到您要設定的報表伺服器執行個體。  
   
-2.  在 [加密金鑰] 頁面上，按一下 **[還原]** 。  
+2.  在 [加密金鑰] 頁面上，按一下 [**還原**]。  
   
 3.  選取包含備份副本的 .snk 檔案。  
   
@@ -98,7 +99,7 @@ ms.locfileid: "72796399"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_restore_rskeymgmt"></a> 還原加密金鑰 - rskeymgmt (原生模式)  
+####  <a name="bkmk_restore_rskeymgmt"></a>還原加密金鑰-rskeymgmt （原生模式）  
   
 1.  在主控報表伺服器的本機電腦上，執行 **[rskeymgmt.exe]** 。 使用 `-a` 引數還原金鑰。 您必須提供完整的檔案名稱，並指定密碼。 下列範例說明您必須指定的引數：  
   
@@ -106,5 +107,5 @@ ms.locfileid: "72796399"
     rskeymgmt -a -f d:\rsdbkey.snk -p<password>  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
