@@ -2,8 +2,7 @@
 title: 執行 SQL Server 遷移評估
 titleSuffix: Data Migration Assistant
 description: 瞭解如何使用 Data Migration Assistant 來評估內部部署 SQL Server，然後再遷移至另一個 SQL Server 或 Azure SQL Database
-ms.custom: seo-lt-2019
-ms.date: 12/10/2019
+ms.date: 01/15/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,16 +14,17 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: b6d9fd3f31885641451b3ade2f0f4543d9f44455
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8b01469536655fc351ecf742ed284f3f6c68f707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75001903"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76037171"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>使用 Data Migration Assistant 來執行 SQL Server 移轉評估
 
-下列逐步指示可協助您執行第一次評估，以遷移至內部部署 SQL Server、SQL Server 在 Azure VM 上執行，或使用 Data Migration Assistant 來 Azure SQL Database。
+下列逐步指示可協助您執行第一個評估，以遷移至內部部署 SQL Server、SQL Server 在 Azure VM 上執行，或使用 Data Migration Assistant 來 Azure SQL Database。
 
    > [!NOTE]
    > Data Migration Assistant 5.0 版引進了在應用程式代碼中分析資料庫連接和內嵌 SQL 查詢的支援。 如需詳細資訊，請參閱[使用 Data Migration Assistant 評估應用程式資料存取層](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430)的 blog 文章。
@@ -114,6 +114,9 @@ ms.locfileid: "75001903"
 
     ![新增來源並開始評估](../dma/media/dma-assesssqlonprem/select-database1.png)
 
+> [!NOTE]
+> 您可以同時執行多個評估，並開啟 [所有評估]**** 頁面來檢視這些評估的狀態。
+
 ## <a name="view-results"></a>檢視結果
 
 評量的持續時間取決於新增的資料庫數目和每個資料庫的架構大小。 每個資料庫一旦出現就會顯示結果。
@@ -156,4 +159,6 @@ ms.locfileid: "75001903"
 
 在所有資料庫完成評估之後，請選取 [**匯出報表**]，將結果匯出至 JSON 檔案或 CSV 檔案。 然後您就可以方便地分析資料。
 
-您可以同時執行多個評估，並開啟 [所有評估]**** 頁面來檢視這些評估的狀態。
+## <a name="save-and-load-assessments"></a>儲存並載入評量
+
+除了匯出評估結果之外，您還可以將評估詳細資料儲存至檔案，並載入評估檔案以供日後審查。  如需詳細資訊，請參閱[使用 Data Migration Assistant 儲存和載入評](../dma/dma-save-load-assessments.md)量一文。

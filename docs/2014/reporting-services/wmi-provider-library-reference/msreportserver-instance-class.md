@@ -20,13 +20,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a88146da815b97cecbdef598d0c75f1f95fcb54c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097214"
 ---
-# <a name="msreportserverinstance-class"></a>MSReportServer_Instance 類別
+# <a name="msreportserver_instance-class"></a>MSReportServer_Instance 類別
   MSReportServer_Instance 類別提供用戶端所需的基本資訊，以連接至安裝的報表伺服器。  
   
  如需此類型的所有成員清單，請參閱 [MSReportServer_Instance 成員](msreportserver-instance-members.md)  
@@ -45,9 +45,9 @@ public class MSReportServer_Instance
  此類型的任何公用靜態 (在**中為** 共用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) 成員都具備多執行緒作業安全。 不保證任何執行個體成員安全執行緒。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
- **平台：** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **平臺：**[!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_Instance 成員](msreportserver-instance-members.md)  

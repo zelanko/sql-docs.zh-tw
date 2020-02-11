@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5fd06c01ddbb92679bc728350850f487b1ad5db8
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73766044"
 ---
 # <a name="set-large-data-ole-db"></a>設定大型資料 (OLE DB)
@@ -27,20 +27,20 @@ ms.locfileid: "73766044"
   
  若要傳遞自己的儲存物件指標，取用者會建立一個繫結 BLOB 資料行值的存取子，然後呼叫 **IRowsetChange::SetData** 或 **IRowsetChange::InsertRow** 方法。  
   
- 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server 範例和社群專案](https://go.microsoft.com/fwlink/?LinkID=85384)首頁下載。  
+ 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
   
 ## <a name="procedures"></a>程序  
   
 #### <a name="to-set-blob-data"></a>設定 BLOB 資料  
   
-1.  建立一個 DBOBJECT 結構，描述如何存取 BLOB 資料行。 將 DBOBJECT 結構的 **dwFlag** 項目設定為 STGM_READ，並將 iid 項目設定為 **IID_ISequentialStream** (要公開的介面)。  
+1.  建立一個 DBOBJECT 結構，描述如何存取 BLOB 資料行。 將 DBOBJECT 結構的**dwFlag**元素設定為 STGM_READ，並將 iid 元素設定為**IID_ISequentialStream** （要公開的介面）。  
   
 2.  在 DBPROPSET_ROWSET 屬性群組中設定屬性，讓資料列集可以更新。  
   
-3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每個資料行一個)。 將 DBBINDING 結構中的 **wType** 項目設定為 DBTYPE_IUNKNOWN，並將 **pObject** 項目設定為指向您所建立的 DBOBJECT 結構。  
+3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每個資料行一個)。 將 DBBINDING 結構中的 **wType** 元素設定為 DBTYPE_IUNKNOWN，並將 **pObject** 元素設定為指向您所建立的 DBOBJECT 結構。  
   
 4.  使用繫結資訊，在結構的 DBBINDINGS 陣列中建立存取子。  
   
@@ -50,8 +50,8 @@ ms.locfileid: "73766044"
 
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>說明  
- 使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
+### <a name="description"></a>描述  
+ 使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連線到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
 ### <a name="code"></a>程式碼  
   

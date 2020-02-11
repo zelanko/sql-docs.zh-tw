@@ -1,5 +1,5 @@
 ---
-title: 指定事件轉送伺服器 (SQL Server Management Studio) |Microsoft Docs
+title: 指定事件轉送伺服器（SQL Server Management Studio） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b79da95e2709e2bb5ff3a3d76cac06b2a4268f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189388"
 ---
 # <a name="designate-an-events-forwarding-server-sql-server-management-studio"></a>指定事件轉送伺服器 (SQL Server Management Studio)
-  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將事件轉送到哪一部伺服器。 請注意，事件轉送適用於在伺服器之間轉送的事件，而不適用於在單一電腦上裝載之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間轉送的事件。 同時請注意，若要接收轉送的事件，則警示管理伺服器必須是預設的 SQL Server 執行個體。  
+  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在中指定將事件轉送到哪一台伺服器。 請注意，事件轉送適用於在伺服器之間轉送的事件，而不適用於在單一電腦上裝載之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間轉送的事件。 同時請注意，若要接收轉送的事件，則警示管理伺服器必須是預設的 SQL Server 執行個體。  
   
  **本主題內容**  
   
@@ -30,13 +30,13 @@ ms.locfileid: "68189388"
   
      [安全性](#Security)  
   
--   **若要使用下列項目指定事件轉送伺服器：**  
+-   **若要指定事件轉送伺服器，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
@@ -47,9 +47,9 @@ ms.locfileid: "68189388"
   
 1.  在 **[物件總管]** 中，按一下加號展開伺服器，從此伺服器轉送事件到另一部伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後選取 [屬性]  。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]****，然後選取 [屬性]****。  
 
-3.  在 [SQL Server Agent 屬性 - <伺服器名稱>]   對話方塊的 [選取頁面]  下，選取 [進階]  。  
+3.  在 [ **SQL Server Agent 屬性-**_server_name_ ] 對話方塊的 [**選取頁面**] 底下，選取 [ **Advanced**]。  
 
 4.  在 **[SQL Server 事件轉送]** 下，選取 **[轉送事件到另一部伺服器]** 核取方塊。  
   

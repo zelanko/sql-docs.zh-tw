@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d43e86596e30352286cb94e8994177247856a7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206977"
 ---
 # <a name="modify-a-partition-function"></a>修改資料分割函數
@@ -43,7 +43,7 @@ ms.locfileid: "68206977"
   
 -   ALTER PARTITION FUNCTION 只能用來將一個資料分割拆解成兩個，或將兩個資料分割合併為一個。 若要變更資料表或索引的資料分割方式 (例如，從 10 個資料分割變更成 5 個)，您可以使用下列任何一個選項：  
   
-    -   使用所需的資料分割函數來建立新的資料分割資料表，然後再使用 INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [管理資料分割精靈]  ，將舊資料表中的資料插入新資料表中。  
+    -   使用所需的資料分割函數來建立新的資料分割資料表，然後再使用 INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或 **中的** [管理資料分割精靈] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，將舊資料表中的資料插入新資料表中。  
   
     -   建立堆積的資料分割叢集索引。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68206977"
   
 -   ALTER PARTITION FUNCTION 所影響的所有檔案群組都必須在線上。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  下列中的任何權限都可用來執行 ALTER PARTITION FUNCTION：  

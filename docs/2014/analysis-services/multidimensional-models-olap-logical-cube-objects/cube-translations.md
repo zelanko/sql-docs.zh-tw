@@ -18,18 +18,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c34024f61f5c7b42030e0acb848783e1acae3d6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62728496"
 ---
 # <a name="cube-translations"></a>Cube 翻譯
-  翻譯是一種簡單的機制，用來將顯示的標籤和標題從某個語言變成另一個語言。 每一個翻譯都會定義成一組值：具有翻譯文字的字串以及具有語言識別碼的數字。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的所有物件都可使用翻譯。 維度也可以將屬性值翻譯。 用戶端應用程式負責尋找使用者已定義的語言設定，並將所有標題和標籤切換成以該語言顯示。 物件可以有您想要的任何翻譯數目。  
+  翻譯是一種簡單的機制，用來將顯示的標籤和標題從某個語言變成另一個語言。 每一個翻譯都會定義成一組值：具有翻譯文字的字串以及具有語言識別碼的數字。 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的所有物件都可使用翻譯。 維度也可以將屬性值翻譯。 用戶端應用程式負責尋找使用者已定義的語言設定，並將所有標題和標籤切換成以該語言顯示。 物件可以有您想要的任何翻譯數目。  
   
  簡單的 <xref:Microsoft.AnalysisServices.Translation> 物件是由語言識別碼和翻譯的標題所組成。 語言識別碼是具有語言識別碼的 `Integer`。 翻譯的標題則是翻譯的文字。  
   
- 在  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，cube 翻譯是 cube 物件，例如，標題或顯示資料夾名稱的特定語言表示法。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也支援維度和成員名稱的翻譯。  
+ 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，cube 轉譯是 cube 物件名稱的特定語言標記法，例如標題或顯示資料夾。 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也支援維度和成員名稱的翻譯。  
   
  翻譯會針對可支援多種語言的用戶端應用程式，提供伺服器支援。 通常會有不同國家 (地區) 的使用者檢視 Cube 資料。 可將 Cube 的各種元素翻譯成不同語言則十分有用，如此這些使用者就可檢視和了解 Cube 的中繼資料。 例如，法國的商務使用者使用法文地區設定的工作站存取 Cube 時，就可用法文檢視物件屬性值。 同樣地，德國的商務使用者使用德文地區設定的工作站存取相同 Cube 時，就可用德文檢視物件屬性值。  
   
@@ -37,7 +39,7 @@ ms.locfileid: "62728496"
   
 ## <a name="see-also"></a>另請參閱  
  [維度翻譯](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
- [翻譯&#40;Analysis Services&#41;](../translations-analysis-services.md)   
- [全球化秘訣和最佳做法 &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
+ [翻譯 &#40;Analysis Services&#41;](../translations-analysis-services.md)   
+ [&#40;Analysis Services 的全球化秘訣和最佳作法&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
   
   
