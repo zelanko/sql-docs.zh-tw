@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d016e4f45a91a61c5918a4bfdfb9dd1073521c02
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056316"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>使用 Unicode 字元格式匯入或匯出資料 (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "74056316"
 ## 使用 Unicode 字元格式的注意事項<a name="considerations"></a>
 使用字元格式時，請考慮下列事項：  
 
-* [bcp 公用程式](../../tools/bcp-utility.md)預設會使用定位字元分隔字元資料欄位，並使用新行字元終止記錄。  如需如何指定其他結束字元的相關資訊，請參閱[指定欄位與資料列結束字元 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。
+* [bcp 公用程式](../../tools/bcp-utility.md) 預設會使用定位字元分隔字元資料欄位，並使用新行字元終止記錄。  如需如何指定其他結束字元的相關資訊，請參閱[指定欄位與資料列結束字元 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。
 
 * 儲存在 Unicode 字元格式資料檔的 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 資料，其操作方式和在字元格式資料檔中相同，不同之處在於資料是儲存為 [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) ，而非 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 資料。 如需詳細資訊，請參閱 [定序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。  
 
@@ -67,7 +67,7 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
 
 * 使用原生格式重新匯出資料。
 
-* 使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)。  以下是這些因應措施的範例。您可以參閱 [對非 XML 格式檔案使用 BULK INSERT 與 Unicode 字元格式](#bulk_widechar_fmt) [對非 XML 格式檔案使用 OPENROWSET 與 Unicode 字元格式](#openrowset_widechar_fmt)。
+* 使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)。  以下是這些因應措施的範例。您可以參閱 [對非 XML 格式檔案使用 BULK INSERT 與 Unicode 字元格式](#bulk_widechar_fmt)[對非 XML 格式檔案使用 OPENROWSET 與 Unicode 字元格式](#openrowset_widechar_fmt)。
  
 * 在目的地資料表中手動插入第一筆記錄，然後使用 **-F 2** 參數強制匯入從第二筆記錄開始。
 
@@ -82,11 +82,11 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
   
 下列命令列選項支援 Unicode 字元格式：  
   
-|命令|選項|Description|  
+|Command|選項|描述|  
 |-------------|------------|-----------------|  
 |bcp|**-w**|使用 Unicode 字元格式。|  
 |BULK INSERT|DATAFILETYPE **='widechar'**|大量匯入資料時，使用 Unicode 字元格式。|  
-|OPENROWSET|不適用|必須使用格式檔案|
+|OPENROWSET|N/A|必須使用格式檔案|
   
 > [!NOTE]
 >  或者，您可以在格式檔案中按照每個欄位指定格式。 如需詳細資訊，請參閱 [匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)＞。
@@ -238,10 +238,10 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
 -   [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 公用程式](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [定序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

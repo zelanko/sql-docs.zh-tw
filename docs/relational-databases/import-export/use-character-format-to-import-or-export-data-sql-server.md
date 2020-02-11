@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 4d380954be720a6cb839b0c4259a408733f8e176
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056329"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字元格式匯入或匯出資料 (SQL Server)
@@ -54,20 +54,20 @@ ms.locfileid: "74056329"
   
 -   若要避免在轉換期間遺失擴充字元，請使用 Unicode 字元格式，或指定字碼頁。  
   
--   所有儲存在字元格式檔案中的 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 資料，會在沒有中繼資料的情況下儲存。 每個資料值會根據隱含資料轉換的規則，轉換成 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 格式。 匯入 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 資料行時，資料會以 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)格式匯入。 要匯入的資料行如果不是採用 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 資料類型，則會使用隱含轉換將資料從 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 轉換過來。 如需資料轉換的詳細資訊，請參閱[資料類型轉換 &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)。  
+-   所有儲存在字元格式檔案中的 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 資料，會在沒有中繼資料的情況下儲存。 每個資料值會根據隱含資料轉換的規則，轉換成 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 格式。 匯入 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 資料行時，資料會以 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)格式匯入。 要匯入的資料行如果不是採用 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)資料類型，則會使用隱含轉換將資料從 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 轉換過來。 如需資料轉換的詳細資訊，請參閱[資料類型轉換 &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)。  
   
--   [bcp 公用程式](../../tools/bcp-utility.md)會將 [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 值匯出成小數點後 4 位數的字元格式資料檔案，但不會使用任何數字分位符號 (例如逗點分隔符號)。 例如， [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 資料行包含的值 1,234,567.123456，會採用 1234567.1235 的字元字串，大量匯出到資料檔。  
+-   [bcp 公用程式](../../tools/bcp-utility.md) 會將 [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 值匯出成小數點後 4 位數的字元格式資料檔案，但不會使用任何數字分位符號 (例如逗點分隔符號)。 例如， [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 資料行包含的值 1,234,567.123456，會採用 1234567.1235 的字元字串，大量匯出到資料檔。  
   
 ## 字元格式的命令選項<a name="command_options"></a>  
-您可以將字元格式資料匯入資料表，方法是使用 [bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)。對於 [bcp](../../tools/bcp-utility.md) 命令或 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 陳述式，您可以在陳述式中指定資料格式。  對於 [INSERT...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 陳述式。您必須在格式檔案中指定資料格式。  
+您可以將字元格式資料匯入資料表，方法是使用 [bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)。對於 [bcp](../../tools/bcp-utility.md) 命令或 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 陳述式，您可以在陳述式中指定資料格式。  對於 [INSERT...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 陳述式，您必須在格式檔案中指定資料格式。  
   
 下列命令列選項支援字元格式：  
   
-|命令|選項|Description|  
+|Command|選項|描述|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|指定 bcp 公用程式使用字元資料。\*|  
 |BULK INSERT|DATAFILETYPE **='char'**|於大量匯入資料時使用字元格式。|  
-|OPENROWSET|不適用|必須使用格式檔案|
+|OPENROWSET|N/A|必須使用格式檔案|
   
  \*若要將字元 ( **-c**) 資料載入與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端相容的格式，請使用 **-V** 切換。 如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
    
@@ -219,7 +219,7 @@ SELECT * FROM TestDatabase.dbo.myChar;
 -   [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 公用程式](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
