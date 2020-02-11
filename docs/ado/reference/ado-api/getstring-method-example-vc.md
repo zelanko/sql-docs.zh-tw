@@ -1,5 +1,5 @@
 ---
-title: GetString 方法範例 （VC + +） |Microsoft Docs
+title: GetString 方法範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 501b58a0d4e69ba7ea843441d866f8580858ea5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932442"
 ---
 # <a name="getstring-method-example-vc"></a>GetString 方法範例 (VC++)
-此範例示範[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法。  
+這個範例示範[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法。  
   
- 假設您正在偵錯資料存取問題，並想既快速又簡單的方式列印目前內容的小型[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+ 假設您正在進行資料存取問題的調試，而且想要快速且簡單的方式來列印小型[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的目前內容。  
   
 ## <a name="example"></a>範例  
   
@@ -175,7 +175,7 @@ void PrintComError(_com_error &e) {
 MD  
 ```  
   
-## <a name="sample-output"></a>範例輸出  
+## <a name="sample-output"></a>取樣輸出  
   
 ```  
 Enter a state (CA, IN, KS, MD, MI, OR, TN, UT): State = 'md'  
@@ -184,5 +184,5 @@ Sylvia   Panteley   1956 Arlington Pl.   Rockville
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [GetString 方法 (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
+ [GetString 方法（ADO）](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

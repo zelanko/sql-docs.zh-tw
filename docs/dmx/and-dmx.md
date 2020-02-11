@@ -1,5 +1,5 @@
 ---
-title: 和 (DMX) |Microsoft Docs
+title: 和（DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e0c727e6a6f981dd2862575bfb4943b104196080
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913741"
 ---
 # <a name="and-dmx"></a>AND (DMX)
@@ -48,8 +48,8 @@ Expression1 AND Expression2
 |FALSE|FALSE|FALSE|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [邏輯運算子&#40;DMX&#41;](../dmx/operators-logical.md)   
- [運算子&#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [DMX&#41; Operator Reference &#40;的資料採礦延伸模組](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [&#40;DMX&#41;的邏輯運算子](../dmx/operators-logical.md)   
+ [DMX&#41;&#40;的運算子](../dmx/operators-dmx.md)  
   
   

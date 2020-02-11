@@ -16,23 +16,23 @@ ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 562e79590a2a5f1f5e9bb609b9a0ad0ea8b2bfd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928680"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
-指定選項，開啟[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。 值可以結合 OR 運算。  
+指定用來開啟[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)物件的選項。 這些值可以與或作業結合。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adOpenStreamAsync**|1|會開啟**Stream**處於非同步模式下的物件。|  
-|**adOpenStreamFromRecord**|4|識別的內容*來源*已開啟的參數[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件。 預設行為是將*來源*做為直接指向的節點樹狀結構中的 URL。 開啟與該節點相關聯的預設資料流。|  
-|**adOpenStreamUnspecified**|-1|預設值。 指定左**Stream**物件使用預設選項。|  
+|**adOpenStreamAsync**|1|以非同步模式開啟**資料流程**物件。|  
+|**adOpenStreamFromRecord**|4|將*來源*參數的內容識別為已開啟的[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件。 預設行為是將*Source*視為直接指向樹狀結構中之節點的 URL。 隨即開啟與該節點相關聯的預設資料流程。|  
+|**adOpenStreamUnspecified**|-1|預設。 指定以預設選項開啟**資料流程**物件。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- 這些常數不需要 ADO/WFC 對等項目。  
+## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
+ 這些常數沒有 ADO/WFC 對應項。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Open 方法 (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)

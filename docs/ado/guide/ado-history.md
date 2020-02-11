@@ -13,64 +13,64 @@ ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a84ccbb97c26ea92f31212933aac79bde2784b72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67927162"
 ---
-# <a name="ado-features-for-each-release"></a>針對每個發行項 ADO 功能
+# <a name="ado-features-for-each-release"></a>每個版本的 ADO 功能
 
-本主題列出每個 ADO、 ADO MD 和 ADOX 版本所引進的新功能。
+本主題列出每個 ADO、ADO MD 和 ADOX 版本所引進的新功能。
 
-## <a name="ado-60"></a>ADO 6.0
+## <a name="ado-60"></a>ADO 6。0
 
- ADO 6.0 會包含在 Windows Vista、 Windows Data Access Components (Windows DAC) 6.0 的一部分。 ADO 6.0 是功能上相當於 ADO 2.8。
+ ADO 6.0 隨附于 Windows Vista，屬於 Windows Data Access Components （Windows DAC）6.0。 ADO 6.0 在功能上相當於 ADO 2.8。
 
-## <a name="ado-28"></a>ADO 2.8
+## <a name="ado-28"></a>ADO 2。8
 
- ADO 2.8 已包含在 Windows XP 和 Windows Server 2003，做為一部分的 Microsoft Data Access Components (MDAC) 2.8。 MDAC 2.8 轉散發版本也會提供;請注意，應該只在 Windows 2000 上安裝這個可轉散發套件的版本。 ADO 2.8 解決數個安全性相關考量：
+ ADO 2.8 隨附于 Windows XP 和 Windows Server 2003，做為 Microsoft Data Access Components （MDAC）2.8 的一部分。 也提供可轉散發版本的 MDAC 2.8;請注意，此可轉散發版本應僅安裝在 Windows 2000 上。 ADO 2.8 解決幾個與安全性相關的考慮：
 
- *硬碟機的存取不允許外部受信任的區域。*
-跨網域指令碼包含不受信任的網站，停用下列作業：**Stream.SaveToFile**， **Stream.LoadFromFile**， **Recordset.Save**，和**Recordset.Open**搭配使用**adCmdFile**旗標或使用 Microsoft OLE DB 持續性提供者 (MSPersist)。
+ *不允許在受信任區域外存取硬碟。*
+在涉及非信任網站的跨網域腳本中，下列作業已停用： **SaveToFile**、 **LoadFromFile**、**記錄集、儲存**和**記錄集。開啟**時，與**AdCmdFile**旗標或 Microsoft OLE DB 持續性提供者（MSPersist）搭配使用。
 
- **Recordset.Open** _，_ **Recordset.Save** _，_ **Stream.SaveToFile** _，以及_ **Stream.LoadFromFile** _作用於實體的檔案。_
-這些方法現在會驗證檔案控制代碼會指向實體的檔案。
+ **記錄集。開啟** _、_  **記錄集** _、儲存、_  **SaveToFile** _和_  **資料流程。 LoadFromFile**  _只會在實體檔案上操作。_
+這些方法現在會驗證檔案控制代碼僅指向實體檔案。
 
- **Recordset.ActiveCommand** _會傳回錯誤時叫用從 HTML/ASP 網頁。_
-這可防止**命令**誤用物件。
+ **ActiveCommand**會_在從 HTML/ASP 頁面叫用時傳回錯誤。_  
+這可防止**命令**物件被誤用。
 
- _數目_**資料錄集**_傳回巢狀_**圖形**_命令有上限。_
-巢狀的 shape 命令現在會傳回最多 512**資料錄集**。 這表示**圖形**命令不再任意深度巢狀。 相反地，層級的深度上限為 512，每個命令會產生單一 （子系），如果**資料錄集**。 如果任何層級**圖形**命令會傳回多個**資料錄集**，深度最大程度會小於 512。
+ 「_嵌套_**圖形**」命令所傳回的**記錄集**_數目__具有上限。_        
+「嵌套圖形」命令現在會傳回最多512個**記錄集**。 這表示**圖形**命令無法再以任何深度加以嵌套。 相反地，如果每個命令都會產生單一（子）**記錄集**，則最大層級深度為512。 如果任何層級的**Shape**命令傳回多個**記錄集**，則深度的最大層級將會小於512。
 
-## <a name="ado-27"></a>ADO 2.7
+## <a name="ado-27"></a>ADO 2。7
 
- *64 位元平台支援*ADO 2.7 引進了適用於 64 位元處理器的支援。
+ *64 位平臺支援*ADO 2.7 引進64位處理器的支援。
 
-## <a name="ado-26"></a>ADO 2.6
+## <a name="ado-26"></a>ADO 2。6
 
- **CubDef.GetSchemaObject**_方法_從 ADO 2.6 開始，ADO MD 物件可以擷取使用唯一的名稱，必須按照[UniqueName 屬性 (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)。 不需要知道，父物件的名稱和父集合不需要填入，以擷取結構描述物件。 請參閱[GetSchemaObject 方法 (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)。
+ 從 ADO 2.6 開始的**CubDef**_方法_，可以使用唯一的名稱來抓取 ADO MD 物件，如[UniqueName 屬性（ADO MD）](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)所指定。   父物件的名稱不需要是已知的，而且不需要填入父集合來抓取架構物件。 請參閱[GetSchemaObject 方法（ADO MD）](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)。
 
- *命令資料流* **命令**物件使用的替代方式為資料流格式支援命令**CommandText**屬性。 [CommandStream 屬性 (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md)可用來指定 XML 範本或 updategram 做**命令**輸入 Microsoft OLE DB provider for SQL Server。
+ *命令資料流程***命令**物件支援以資料流程格式表示的命令，做為使用**CommandText**屬性的替代方式。 [CommandStream 屬性（ADO）](../../ado/reference/ado-api/commandstream-property-ado.md)可以用來指定 XML 範本或 updategram 做為適用于 SQL Server 的 Microsoft OLE DB 提供者的**命令**輸入。
 
- **方言**_屬性_[方言](../../ado/reference/ado-api/dialect-property.md)是新的屬性，定義的語法和一般規則提供者會使用來剖析字串或資料流。
+ **方言**_屬性_[方言](../../ado/reference/ado-api/dialect-property.md)是新的屬性，可定義提供者用來剖析字串或資料流程的語法和一般規則。  
 
- **Command.Execute**_方法_ [Execute 方法](../../ado/reference/ado-api/execute-method-ado-command.md)的 ADO**命令**已增強用於輸入和輸出資料流的物件。
+ **命令。 execute**_方法_已增強 ADO **Command**物件的[Execute 方法](../../ado/reference/ado-api/execute-method-ado-command.md)，以使用資料流程進行輸入和輸出。  
 
- *欄位 statusvalues*如果使用者修改時，發生 DB_E_ERRORSOCCURRED 錯誤**欄位**的**資料錄集**，現在將會填滿 ADO **Field.Status**適當的狀態資訊的屬性，讓使用者將會有何問題的詳細資訊。 請參閱[Status 屬性 (ADO Field)](../../ado/reference/ado-api/status-property-ado-field.md)。
+ *欄位 statusvalues*如果使用者在修改**記錄集**的**欄位**時發生 DB_E_ERRORSOCCURRED 錯誤，ADO 現在會將**欄位. status**屬性填入適當的狀態資訊，讓使用者能夠取得錯誤的詳細資訊。 請參閱[Status 屬性（ADO Field）](../../ado/reference/ado-api/status-property-ado-field.md)。
 
- **NamedParameters**_屬性_ [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md)是新的屬性**命令**物件，表示提供者應該使用名為參數。
+ **NamedParameters**  _屬性_ [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md)是**命令**物件的新屬性，它會指出提供者應該使用具名引數。
 
- *資料流中的結果集*ADO 可以從資料來源中傳回結果集**Stream**，而非**資料錄集**物件。 您可以使用最新版本的 Microsoft OLE DB provider for SQL Server，您可以取得 XML 結果從提供者所執行的"XML"的查詢。 A **Stream**接收結果集可以使用做為來源的"XML"命令來開啟。 請參閱[將資料流結果集擷取](../../ado/guide/data/retrieving-resultsets-into-streams.md)。
+ *資料流程中的結果*集ADO 可以從**資料流程**中的資料來源傳回結果集，而不是從**Recordset**物件傳回。 使用適用于 SQL Server 的 Microsoft OLE DB 提供者的最新版本，您可以藉由執行「For XML」查詢，從提供者取得 XML 結果。 接收結果集的**資料流程**可以使用 "For XML" 命令當做來源來開啟。 請參閱將結果集抓取[到資料流程中](../../ado/guide/data/retrieving-resultsets-into-streams.md)。
 
- *單一資料列結果集*ADO**記錄**物件現在已可開啟上一個命令字串或**命令**從提供者會傳回一個資料列的物件。 這會導致使用 MDAC 2.6 提供者的改善效能。 請參閱[Open 方法 (ADO Record)](../../ado/reference/ado-api/open-method-ado-record.md)。
+ *單一資料列結果集*您現在可以在命令字串或**命令**物件上開啟 ADO**記錄**物件，該物件會從提供者傳回一個資料列。 這會導致 MDAC 2.6 提供者的效能提升。 請參閱[Open 方法（ADO Record）](../../ado/reference/ado-api/open-method-ado-record.md)。
 
-## <a name="ado-25"></a>ADO 2.5
+## <a name="ado-25"></a>ADO 2。5
 
- **資料錄**_物件_ADO 2.5 引進了**記錄**物件來表示和管理的資料列**資料錄集**或資料提供者，或物件的封裝半結構化的資料，例如檔案或目錄。
+ **Record** _物件_ADO 2.5 引進**記錄**物件，以表示和管理**記錄集**或資料提供者中的資料列，或是封裝半結構化資料（例如檔案或目錄）的物件。
 
- **Stream** _物件_ADO 2.5 也導入了**Stream**物件來代表二進位或文字資料流。
+ **Stream** _物件_ADO 2.5 也引進**資料流程**物件，以代表二進位或文字資料的資料流程。
 
- *URL 繫結*ADO 2.5 引進了使用的 URL，做為連接字串和命令的文字，來命名的資料存放區物件的替代方案。 URL 可以搭配現有**連接**並**資料錄集**物件，以及使用新**記錄**和**Stream**物件。
+ *URL*系結ADO 2.5 引進了 URL 的使用，做為連接字串和命令文字的替代方式，以命名資料存放區物件。 URL 可以與現有的**連接**和**記錄集**物件搭配使用，以及使用新的**記錄**和**資料流程**物件。
 
- *支援 URL 繫結的資料提供者*ADO 2.5 支援 OLE DB 提供者所辨識的 URL 配置。 這包括 OLE DB Provider for Internet Publishing，存取 Windows 2000 檔案系統，並識別現有的 HTTP 配置時。
+ *支援 URL 系結的資料提供者*ADO 2.5 支援可辨識 URL 配置的 OLE DB 提供者。 這包括網際網路發佈的 OLE DB 提供者，它會存取 Windows 2000 檔案系統並辨識現有的 HTTP 配置。
