@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232317"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
@@ -23,7 +23,7 @@ ms.locfileid: "75232317"
 ## <a name="requirements-components-and-concepts"></a>需求、元件和概念  
  **本節內容：**  
   
--   [安全級](#security)  
+-   [安全性](#security)  
   
 -   [重要元件和概念簡介](#intorkeyconcepts)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "75232317"
   
 -   [SQL Server 元件](#sqlserver)  
   
--   [一定](#limitations)  
+-   [限制](#limitations)  
   
 -   [支援 Backup/Restore 語句](#Support)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "75232317"
   
 -   [使用 SQL Server Management Studio 從 Azure 儲存體還原](sql-server-backup-to-url.md#RestoreSSMS)  
   
-###  <a name="security"></a>安全級  
+###  <a name="security"></a> Security  
  以下是備份至 Azure Blob 儲存體服務或從中還原時的安全性考慮和需求。  
   
 -   建立 Azure Blob 儲存體服務的容器時，建議您將存取權設定為 [**私**用]。 將存取權設定為 [私用] 可限制只有能夠提供必要資訊向 Azure 帳戶驗證的使用者或帳戶，才有存取權。  
@@ -88,7 +88,7 @@ ms.locfileid: "75232317"
   
  如需使用認證之其他範例的詳細資訊，請參閱[建立 SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
-###  <a name="limitations"></a>一定  
+###  <a name="limitations"></a> 限制  
   
 -   不支援備份至進階儲存體。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "75232317"
   
 |||||  
 |-|-|-|-|  
-|Backup/Restore 陳述式|支援|例外狀況|評價|  
+|Backup/Restore 陳述式|支援|例外狀況|註解|  
 |備份|&#x2713;|不支援 BLOCKSIZE 和 MAXTRANSFERSIZE。|需要指定 WITH CREDENTIAL|  
 |RESTORE|&#x2713;||需要指定 WITH CREDENTIAL|  
 |RESTORE FILELISTONLY|&#x2713;||需要指定 WITH CREDENTIAL|  
@@ -141,7 +141,7 @@ ms.locfileid: "75232317"
   
 |||||  
 |-|-|-|-|  
-|引數|支援|Exception|評價|  
+|引數|支援|Exception|註解|  
 |DATABASE|&#x2713;|||  
 |記錄|&#x2713;|||  
 ||  
@@ -177,7 +177,7 @@ ms.locfileid: "75232317"
   
 |||||  
 |-|-|-|-|  
-|引數|支援|例外狀況|評價|  
+|引數|支援|例外狀況|註解|  
 |DATABASE|&#x2713;|||  
 |記錄|&#x2713;|||  
 |FROM (URL)|&#x2713;||FROM URL 引數是用來指定備份檔案的 URL 路徑。|  
@@ -240,7 +240,7 @@ ms.locfileid: "75232317"
   
  [備份資料庫 &#40;備份選項頁面&#41;](back-up-database-backup-options-page.md)  
   
- [建立認證-向 Azure 儲存體驗證](create-credential-authenticate-to-azure-storage.md)  
+ [建立認證 - 向 Azure 儲存體驗證](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a>使用維護計畫 Wizard SQL Server 備份至 URL  
  與先前所述的備份工作類似，SQL Server Management Studio 中的維護計畫 Wizard 已增強為包含**URL**作為其中一個目的地選項，以及備份至 Azure 儲存體（例如 SQL 認證）所需的其他支持對象。 如需詳細資訊，請參閱＜ **Using Maintenance Plan Wizard** ＞中的＜ [定義備份工作](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)＞一節。  
@@ -803,4 +803,4 @@ ms.locfileid: "75232317"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 備份至 URL 的最佳作法和疑難排解](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
- [&#40;SQL Server 的系統資料庫備份與還原&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
+ [系統資料庫的備份與還原 &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   

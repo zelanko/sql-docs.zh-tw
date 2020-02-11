@@ -1,5 +1,5 @@
 ---
-title: 範例指定 CDATA 指示詞 | Microsoft Docs
+title: 範例：指定 CDATA 指示詞 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa5cec5be4153547d60e1592c21f00470ab1a5fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287765"
 ---
-# <a name="example-specifying-the-cdata-directive"></a>範例指定 CDATA 指示詞
+# <a name="example-specifying-the-cdata-directive"></a>範例：指定 CDATA 指示詞
   如果指示詞設為 **CDATA**，包含的資料將不會進行實體編碼，但會放在 CDATA 區段中。 **CDATA** 屬性必須沒有名稱。  
   
  以下查詢會將產品型號摘要描述包裝在 CDATA 區段中。  
