@@ -1,5 +1,5 @@
 ---
-title: CASE 陳述式 (MDX) |Microsoft Docs
+title: CASE 語句（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 756300f1efc93e47a7af3913b34d9318cbe5e559
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016829"
 ---
 # <a name="case-statement-mdx"></a>CASE 陳述式 (MDX)
@@ -48,7 +48,7 @@ END
  解析成純量值的多維度運算式 (MDX) 運算式。  
   
  *when_expression*  
- 指定的純量值，針對*input_expression*評估時，當評估為 true，會傳回純量值*else_result_expression*。  
+ 針對評估*input_expression*的指定純量值，評估為 true 時，會傳回*else_result_expression*的純量值。  
   
  *when_true_result_expression*  
  當 WHEN 子句評估為 true 時，所傳回的純量值。  
@@ -63,9 +63,9 @@ END
  如果沒有 ELSE 子句，而且所有 WHEN 子句都評估為 false，則結果會是空的資料格。  
   
 ## <a name="simple-case-expression"></a>簡單的 CASE 運算式  
- MDX 會評估簡單 case 運算式，藉由解決*input_expression*為純量值。 然後比較此純量值的純量值*when_expression*。 如果兩個純量值相符，CASE 陳述式傳回的值*when_true_expression*。 如果兩個純量值不符，則會評估下一個 WHEN 子句。 如果所有 WHEN 子句評估為 false，值*else_result_expression* ELSE 子句，如果有的話，會傳回。  
+ MDX 會藉由將*input_expression*解析成純量值，來評估簡單的 case 運算式。 然後，此純量值會與*when_expression*的純量值進行比較。 如果兩個純量值相符，則 CASE 語句會傳回*when_true_expression*的值。 如果兩個純量值不符，則會評估下一個 WHEN 子句。 如果所有 WHEN 子句都評估為 false，則會傳回 ELSE 子句中*else_result_expression*的值（如果有的話）。  
   
- 在下列範例中，會針對數個 WHEN 子句來評估 Reseller Order Count 量值，並根據每年 Reseller Order Count 量值來傳回結果。 Reseller Order Count 值不符合指定的純量值*when_expression* WHEN 子句的純量值*else_result_expression*會傳回。  
+ 在下列範例中，會針對數個 WHEN 子句來評估 Reseller Order Count 量值，並根據每年 Reseller Order Count 量值來傳回結果。 若轉售商訂單計數值不符合 WHEN 子句的*when_expression*中指定的純量值，則會傳回*else_result_expression*的純量值。  
   
 ```  
 WITH MEMBER [Measures].x AS   
@@ -88,7 +88,7 @@ WHERE [Measures].x
 ## <a name="searched-case-expression"></a>搜尋的 CASE 運算式  
  若要使用 CASE 運算式來執行更複雜的評估，請使用搜尋的 CASE 運算式。 此搜尋運算式的變化讓您能評估輸入運算式是否在值範圍內。 MDX 會以 WHEN 子句出現在 CASE 陳述式中的順序，來評估這些子句。  
   
- 在下列範例中，評估 Reseller Order Count 量值對指定*Boolean_expression*每數個 WHEN 子句。 根據每年 Reseller Order Count 量值來傳回結果。 因為 WHEN 子句是依出現順序評估，所以大於 6 的所有值都會被輕易指定 "VERY LARGE" 值，而不需明確指定每個值。 如未指定 WHEN 子句的純量值 Reseller Order Count 值*else_result_expression*會傳回。  
+ 在下列範例中，會針對數個 WHEN 子句的指定*Boolean_expression*評估「轉售商訂單計數」量值。 根據每年 Reseller Order Count 量值來傳回結果。 因為 WHEN 子句是依出現順序評估，所以大於 6 的所有值都會被輕易指定 "VERY LARGE" 值，而不需明確指定每個值。 對於在 WHEN 子句中未指定的轉售商訂單計數值，會傳回*else_result_expression*的純量值。  
   
 ```  
 WITH MEMBER [Measures].x AS   
@@ -106,6 +106,6 @@ WHERE [Measures].x
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 指令碼陳述式 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [Mdx 腳本語句 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

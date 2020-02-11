@@ -11,25 +11,28 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 822dc7f3d66afc44c187d199674a22f20977f535
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74055909"
 ---
 # <a name="array-parameter-sample"></a>陣列參數範例
   有時，在資料庫中建立、更新或刪除一組資料列非常有用。 您可以使用數種方法實現此目標。 其中之一便是從用戶端將資訊的陣列，傳遞至使用 Common Language Runtime (CLR) 整合使用者自訂資料類型之伺服器上的 CLR 整合預存程序。 此類使用者自訂資料類型的性質將提供給伺服器的資料大小限制在 8000 位元組。 因此，此方法無法滿足大型或複雜的資料。 如果管理的資料較小而且簡單，則相較於呼叫每一個資料列的預存程序，此方法會更有效。 藉由傳遞陣列，對於順序重要的那些應用程式可保留資料的順序。此範例包含下列項目：  
   
-1.  `ContactTypeNames` 使用者定義資料類型。 包含所要求之連絡人類型名稱的清單。  
+1.  
+  `ContactTypeNames` 使用者定義資料類型。 包含所要求之連絡人類型名稱的清單。  
   
 2.  實作成 Microsoft Visual C# 或 Microsoft Visual Basic 方法的 `usp_EnsureContactTypeNames` 預存程序。 這會接受 `ContactTypeNames` 使用者定義資料類型的執行個體，並在 `Person.ContactType` 資料表中插入可存放任何連絡人名稱的新資料列，這些連絡人名稱包含在該資料表所沒有的使用者定義資料類型執行個體中。  
   
-3.  `TestArrayParameter` 主控台應用程式。 這會根據所傳入之命令列參數建立 `ContactTypeNames` 使用者定義資料類型的執行個體，然後叫用 `usp_EnsureContactTypeNames` 預存程序，方法是將使用者定義資料類型的執行個體做為參數進行傳遞。  
+3.  
+  `TestArrayParameter` 主控台應用程式。 這會根據所傳入之命令列參數建立 `ContactTypeNames` 使用者定義資料類型的執行個體，然後叫用 `usp_EnsureContactTypeNames` 預存程序，方法是將使用者定義資料類型的執行個體做為參數進行傳遞。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站[免費取得 ](https://www.microsoft.com/download/details.aspx?id=42299) Express  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站[免費取得 ](https://www.microsoft.com/download/details.aspx?id=42299) Express  
   
 -   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](https://archive.codeplex.com/?p=SqlServerSamples)取得 AdventureWorks 資料庫  
   
@@ -715,6 +718,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [通用語言執行平台 &#40;CLR&#41; 整合的使用案例和範例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Common Language Runtime &#40;CLR&#41; 整合的使用案例和範例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

@@ -15,16 +15,17 @@ ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: b7440834e5f12cd18081687aa584a8dcfe3ce2e8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728282"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>衍生階層 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 衍生階層衍生自已存在於模型中實體之間的網域屬性關聯性。  
   
  您可以建立衍生階層，以反白顯示模型中任何現有的網域屬性關聯性。  
@@ -62,7 +63,7 @@ ms.locfileid: "73728282"
   
  在衍生階層中，您可以反白顯示 Product 與 Subcategory 之間的關聯性，然後反白顯示 Subcategory 與 Category 之間的關聯性。 當您在此階層中檢視成員時，樹狀結構中的每個層級都包含相同實體中的成員。  
   
- ![山區自行車衍生階層範例](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "山區自行車衍生階層範例")  
+ ![越野車衍生的階層範例](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "越野車衍生的階層範例")  
   
  這種類型的階層可防止您將成員移到無效的層級。 例如，您可以將某個子類別目錄 Road Bikes 中的 Road-650 自行車移到另一個子類別目錄 Mountain Bikes。 您無法像 1 {Bikes} 一樣直接移動類別目錄底下的 Road-650。 每當您在階層樹狀結構中移動成員時，該成員的網域屬性值都會隨之變更，以反映這個移動作業。  
   
@@ -82,16 +83,16 @@ ms.locfileid: "73728282"
   
 ## <a name="related-content"></a>相關內容  
   
--   [網域屬性 &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [以網域為基礎的屬性 &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
 -   [明確階層 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
 -   [遞迴階層 &#40;Master Data Services&#41;](../master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [具有明確頂層的衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [具有明確大寫的衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
 -   [在衍生階層中顯示多對多關聯性 &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)  
   
--   [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
+-   [&#40;Master Data Services 的集合&#41;](../master-data-services/collections-master-data-services.md)  
   
   

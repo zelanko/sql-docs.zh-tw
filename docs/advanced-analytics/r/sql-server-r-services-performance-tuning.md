@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 4d7b6b91ac3aeaa45c5e6c3e05c12176f5f60b28
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727356"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>SQL Server 中 R 的效能微調
@@ -32,7 +32,7 @@ ms.locfileid: "73727356"
 + 第三篇文章會說明 R 程式碼和資源為了運作化所進行的最佳化。
 + 第四篇文章則會詳細說明測試方法，並報告結果和結論。
 
-**適用於：** SQL Server 2016 R Services、SQL Server 機器學習服務
+**適用範圍：** SQL Server 2016 R Services、SQL Server 機器學習服務
 
 ## <a name="performance-goals-and-targeted-scenarios"></a>效能目標和標的案例
 
@@ -83,7 +83,7 @@ SQL Server 2017 則已宣佈會支援使用相同的架構來執行 Python 指�
 
 - 微調分析模型以避免效率不佳。 可能的最佳化範圍取決於 R 程式碼的複雜度，以及您所使用的套件和資料。 主要工作包括消除成本高昂的資料轉換，或將資料準備或特徵工程工作從 R 或 Python 卸載至 ETL 流程或 SQL。 您也可以重構指令碼、排除內嵌套件安裝、將 R 程式碼分成個別程序來進行定型、評分和評估，或將程式碼簡化為預存程序以便更有效率地運作。
 
-## <a name="articles-in-this-series"></a>本系列的文章
+## <a name="articles-in-this-series"></a>此系列中的文章
 
 + [SQL Server 中 R 的效能微調 - 硬體](../r/sql-server-configuration-r-services.md)
 

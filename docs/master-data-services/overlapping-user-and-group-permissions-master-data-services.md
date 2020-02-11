@@ -15,10 +15,10 @@ ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2df45ce2a08e545bc7da11ab3f97df8aa86b0c26
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727942"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>重疊的使用者和群組的權限 (Master Data Services)
@@ -33,14 +33,14 @@ ms.locfileid: "73727942"
   
  如果使用者是多個群組的成員，而且這些群組擁有 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]的存取權，將適用以下規則：  
   
--   **拒絕** 會覆寫所有其他的權限。 如果一個群組的物件權限是 **拒絕** ，則有效權限是拒絕。  
+-   [**拒絕**] 會覆寫所有其他許可權。 如果一個群組的物件權限是 **拒絕** ，則有效權限是拒絕。  
   
--   存取權限是群組之所有有效權限的聯集。 如果一個群組的物件權限是**建立**，另一個群組是**更新**，則有效權限是**建立**和**更新**。  
+-   存取權限是群組之所有有效權限的聯集。 如果一個群組的物件權限是 **建立** ，另一個群組是 **更新** ，則有效權限是 **建立** 和 **更新**。  
   
- 這些規則同時適用於[模型] 和 [階層成員] 索引標籤。 系統會解析每個索引標籤的權限，然後加以結合。 如需詳細資訊，請參閱[如何決定權限 &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)。  
+ 這些規則同時適用於[模型]**** 和 [階層成員]**** 索引標籤。 系統會解析每個索引標籤的權限，然後加以結合。 如需詳細資訊，請參閱 [如何決定權限 &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)。  
   
 > [!NOTE]  
->  您可以在使用者介面中，檢視使用者和群組重疊權限的解析。 [模型] 和 [階層成員] 索引標籤都有下拉式清單，您可以從中選取 [有效] 來檢視有效的權限。  
+>  您可以在使用者介面中，檢視使用者和群組重疊權限的解析。 [模型]**** 和 [階層成員]**** 索引標籤都有下拉式清單，您可以從中選取 [有效]**** 來檢視有效的權限。  
   
 ## <a name="example-1"></a>範例 1  
  ![mds_conc_user_group_ex_1](../master-data-services/media/mds-conc-user-group-ex-1.gif "mds_conc_user_group_ex_1")  
@@ -82,7 +82,7 @@ ms.locfileid: "73727942"
  結果：使用者的有效權限為成員的 **更新** 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [如何決定權限 &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [重疊的模型和成員的權限 &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [如何判斷許可權 &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
+ [重迭的模型和成員許可權 &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

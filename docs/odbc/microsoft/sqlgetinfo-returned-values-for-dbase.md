@@ -17,17 +17,17 @@ ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 247928cfbc7e051853bba0c7f49644a1a6203614
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68794679"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>dBASE 的 SQLGetInfo 傳回值
-下表列出*fInfoType*引數的 C 語言 #defines 和**SQLGetInfo**傳回的對應值。 藉由將列出的 C 語言 #defines 傳遞至*fInfoType*引數中的**SQLGetInfo** , 即可抓取這項資訊。 如需**SQLGetInfo**所傳回之值的詳細資訊, 請參閱 ODBC 程式設計*人員參考*。  
+下表列出*fInfoType*引數的 C 語言 #defines 和**SQLGetInfo**傳回的對應值。 藉由將列出的 C 語言 #defines 傳遞至*fInfoType*引數中的**SQLGetInfo** ，即可抓取這項資訊。 如需**SQLGetInfo**所傳回之值的詳細資訊，請參閱 ODBC 程式設計*人員參考*。  
   
 > [!NOTE]  
->  其中**SQLGetInfo**傳回32位位元遮罩, 分隔號 (&#124;) 代表位 or。  
+>  其中**SQLGetInfo**傳回32位位元遮罩，分隔號（&#124;）代表位 or。  
   
 |InfoType|傳回值|  
 |--------------|--------------------|  
@@ -48,7 +48,7 @@ ms.locfileid: "68794679"
 |SQL_CATALOG_USAGE|多個值|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
-|SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NON_NULL|  
+|SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NON_Null|  
 |SQL_CONVERT_BIGINT|0|  
 |SQL_CONVERT_BINARY|多個值|  
 |SQL_CONVERT_BIT|0|  
@@ -81,8 +81,8 @@ ms.locfileid: "68794679"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|來自 Odbc 的 DSN, 如果在 Odbc 中使用 DRIVER 關鍵字, 則為 ""。|  
-|SQL_DATA_SOURCE_READ_ONLY|"N" (這取決於資料來源)。|  
+|SQL_DATA_SOURCE_NAME|來自 Odbc 的 DSN，如果在 Odbc 中使用 DRIVER 關鍵字，則為 ""。|  
+|SQL_DATA_SOURCE_READ_ONLY|"N" （這取決於資料來源）。|  
 |SQL_DATABASE_NAME|目前的資料庫目錄|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|DBASE|  
@@ -94,9 +94,9 @@ ms.locfileid: "68794679"
 |SQL_DRIVER_HENV|由驅動程式管理員處理。|  
 |SQL_DRIVER_HLIB|由驅動程式管理員處理。|  
 |SQL_DRIVER_HSTMT|由驅動程式管理員處理。|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_NAME|"OdbcJt32"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn*" (*nnnn*指定組建日期)|  
+|SQL_DRIVER_VER|"4.00.*nnnn*" （*nnnn*指定組建日期）|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -110,8 +110,8 @@ ms.locfileid: "68794679"
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT|  
 |SQL_GETDATA_EXTENSIONS|多個值|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
-|SQL_IDENTIFIER_CASE|SQL_IC_UPPER (在混合大小寫中會傳回限定詞, 讓 Windows NT 可以找到目錄)。|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (後引號)|  
+|SQL_IDENTIFIER_CASE|SQL_IC_UPPER （在混合案例中會傳回限定詞，讓 Windows NT 可以找到目錄）。|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" （後引號）|  
 |SQL_KEYWORDS|多個值|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -119,7 +119,7 @@ ms.locfileid: "68794679"
 |SQL_MAX_CHAR_LITERAL_LEN|254|  
 |SQL_MAX_COLUMN_NAME_LEN|10|  
 |SQL_MAX_COLUMNS_IN_GROUP_BY|10|  
-|SQL_MAX_COLUMNS_IN_INDEX|0 (限制未知或不適用)|  
+|SQL_MAX_COLUMNS_IN_INDEX|0（限制未知或不適用）|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
 |SQL_MAX_COLUMNS_IN_TABLE|255|  
@@ -141,7 +141,7 @@ ms.locfileid: "68794679"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|多個值|  
-|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ 一致性|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|從驅動程式管理員|  
 |SQL_OJ_CAPABILITIES|多個值|  
@@ -156,7 +156,7 @@ ms.locfileid: "68794679"
 |SQL_SCROLL_OPTIONS|多個值|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|DBASE|  
-|SQL_SPECIAL_CHARACTERS|"~\` \@ }{\?" ';:/<,.!\>'#$%^& \* \_ -+= \\\[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|\` \@ #$%^&"~\* \? / } {\> " ';：<,.! '\_ -+= \\\[] &#124; "|  
 |SQL_STRING_FUNCTIONS|多個值|  
 |SQL_SUBQUERIES|多個值|  
 |SQL_SYSTEM_FUNCTIONS|0|  

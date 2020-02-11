@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84918dd3f50d129485911fc880e67c0152fa905c
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882250"
 ---
-# <a name="replicate-schema-changes"></a>Replicate Schema Changes
+# <a name="replicate-schema-changes"></a>複寫結構描述變更
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中複寫結構描述變更。  
   
- 如果您想要針對發行的發行項進行以下的結構描述變更，這些變更預設會傳播到 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者：  
+ 如果您對已發行的文章進行下列架構變更，則預設會將它們傳播到[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]訂閱者：  
   
 -   ALTER TABLE  
   
@@ -41,9 +41,9 @@ ms.locfileid: "73882250"
   
      [限制事項](#Restrictions)  
   
--   **若要複寫結構描述變更，請使用：**  
+-   **若要複寫架構變更，請使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73882250"
   
 #### <a name="to-disable-replication-of-schema-changes"></a>若要停用結構描述變更的複寫  
   
-1.  在 [發行集屬性 - **發行集>]** **對話方塊的 [訂閱選項]\<** 頁面上，將 [複寫結構描述變更] 屬性的值設定為 [False]。  
+1.  在 [發行集屬性 - **發行集>]**** 對話方塊的 [訂閱選項]\<** 頁面上，將 [複寫結構描述變更]**** 屬性的值設定為 [False]****。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -69,30 +69,30 @@ ms.locfileid: "73882250"
   
 #### <a name="to-create-a-snapshot-or-transactional-publication-that-does-not-replicate-schema-changes"></a>建立不會複寫結構描述變更的快照式或交易式發行集  
   
-1.  在發行集資料庫的發行者上，執行[sp_addpublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)，針對 **\@replicate_ddl**指定**0**的值。 如需詳細資訊，請參閱 [Create a Publication](create-a-publication.md)。  
+1.  在發行集資料庫的發行者上，執行[sp_addpublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)，為** \@replicate_ddl**指定**0**的值。 如需詳細資訊，請參閱[建立發行集](create-a-publication.md)。  
   
 #### <a name="to-create-a-merge-publication-that-does-not-replicate-schema-changes"></a>建立不會複寫結構描述變更的合併式發行集  
   
-1.  在發行集資料庫的發行者上，執行[sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)，針對 **\@replicate_ddl**指定**0**的值。 如需詳細資訊，請參閱 [Create a Publication](create-a-publication.md)。  
+1.  在發行集資料庫的發行者上，執行[sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)，為** \@replicate_ddl**指定**0**的值。 如需詳細資訊，請參閱[建立發行集](create-a-publication.md)。  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-snapshot-or-transactional-publication"></a>暫時停用快照式或交易式發行集的複寫結構描述變更  
   
-1.  針對具有架構變更複寫的發行集，請[執行&#40;sp_changepublication transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，針對 **\@屬性**指定**replicate_ddl**的值，並針對 **\@值**指定**0**的值。  
+1.  針對具有架構變更複寫的發行集，請執行[sp_changepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，為** \@屬性**指定**replicate_ddl**的值，並為** \@值**指定**0**的值。  
   
 2.  在發行的物件上執行 DDL 命令。  
   
-3.  選擇性藉由執行[ &#40;sp_changepublication&#41;transact-sql](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)來重新啟用複寫架構變更，並為 **\@屬性**指定**replicate_ddl**的值，並為 **\@值**指定**1**的值。  
+3.  選擇性藉由執行[sp_changepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)來重新啟用複寫架構變更，為** \@屬性**指定**replicate_ddl**的值，並為** \@值**指定**1**的值。  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-merge-publication"></a>暫時停用合併式發行集的複寫結構描述變更  
   
-1.  針對具有架構變更複寫的發行集，請[執行&#40;sp_changemergepublication transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，針對 **\@屬性**指定**replicate_ddl**的值，並針對 **\@值**指定**0**的值。  
+1.  針對具有架構變更複寫的發行集，請執行[sp_changemergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，為** \@屬性**指定**replicate_ddl**的值，並為** \@值**指定**0**的值。  
   
 2.  在發行的物件上執行 DDL 命令。  
   
-3.  選擇性藉由執行[ &#40;sp_changemergepublication&#41;transact-sql](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)來重新啟用複寫架構變更，並為 **\@屬性**指定**replicate_ddl**的值，並為 **\@值**指定**1**的值。  
+3.  選擇性藉由執行[sp_changemergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)來重新啟用複寫架構變更，為** \@屬性**指定**replicate_ddl**的值，並為** \@值**指定**1**的值。  
   
 ## <a name="see-also"></a>另請參閱  
- [對發行集資料庫進行結構描述變更](make-schema-changes-on-publication-databases.md)   
+ [對發行集資料庫進行架構變更](make-schema-changes-on-publication-databases.md)   
  [對發行集資料庫進行結構描述變更](make-schema-changes-on-publication-databases.md)  
   
   

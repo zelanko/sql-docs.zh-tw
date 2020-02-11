@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9157db745b999711966f0019747ba1d61823569e
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400917"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>監視使用中查詢-平行處理資料倉儲
 本文說明如何使用管理主控台和 SQL Server PDW 系統檢視來監視作用中的查詢。 如需這些工具的資訊，請參閱[使用管理主控台](monitor-the-appliance-by-using-the-admin-console.md)和[系統檢視](tsql-system-views.md)來監視設備。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
 不論用來監視作用中查詢的方法為何，登入都必須具有[授與許可權以使用管理主控台](grant-permissions.md#grant-permissions-to-use-the-admin-console)中的「使用所有管理主控台」中所述的許可權。  
   
 ## <a name="PermsAdminConsole"></a>監視使用中查詢  

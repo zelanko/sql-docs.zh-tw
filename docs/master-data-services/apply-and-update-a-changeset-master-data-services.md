@@ -11,10 +11,10 @@ ms.assetid: 3a6a3cf2-1e77-43d3-a64a-855ae51258e7
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: b0e937ff9222553c42eacefc173dfec90bb6ebc6
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728776"
 ---
 # <a name="apply-and-update-a-changeset-master-data-services"></a>套用及更新變更集 (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "73728776"
   
 ## <a name="prerequisites"></a>Prerequisites  
   
--   您必須擁有存取 **[總管]** 功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
+-   您必須擁有存取 **[總管]** 功能區域的權限。 如需詳細資訊，請參閱[功能區域許可權 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
 -   您必須至少具有實體或其中一個屬性的更新存取權。  
   
@@ -35,19 +35,19 @@ ms.locfileid: "73728776"
   
 ## <a name="to-apply-and-update-a-changeset"></a>套用及更新變更集  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下 [Explorer]。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下 [Explorer] ****。  
   
-2.  按一下 [實體] 功能表中的實體。  
+2.  按一下 [實體] **** 功能表中的實體。  
   
-3.  在右窗格中，選取 [變更集]，然後按兩下您要檢視及變更的變更集。  
+3.  在右窗格中，選取 [變更集]****，然後按兩下您要檢視及變更的變更集。  
   
-4.  按一下 **[套用]** 。  
+4.  按一下 [套用]  。  
   
      暫止的變更會套用至方格中的實體成員。 暫止的變更會反白顯示。  
   
      建立、刪除及更新成員會在變更集中產生變更。  
   
-5.  若要還原暫止的變更，請在 [變更集] 窗格中，以滑鼠右鍵按一下方格，然後按一下 [還原]。  
+5.  若要還原暫止的變更，請在 [變更集]**** 窗格中，以滑鼠右鍵按一下方格，然後按一下 [還原]****。  
   
 ## <a name="next-steps"></a>後續步驟  
  [認可或提交變更集 &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  

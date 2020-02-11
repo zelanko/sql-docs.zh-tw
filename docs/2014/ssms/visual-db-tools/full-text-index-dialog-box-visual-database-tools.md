@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028408"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>全文檢索索引對話方塊 (Visual Database Tools)
@@ -26,23 +26,23 @@ ms.locfileid: "63028408"
 >  若要建立全文檢索索引，您必須先對使用外部工具的資料庫建立全文檢索，例如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Enterprise Manager。  
   
 > [!NOTE]  
->  並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用全文檢索索引功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用全文檢索索引功能。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="options"></a>選項。  
  **選取的全文檢索索引**  
  列出現有的全文檢索索引。 選取索引，在方格右側顯示其屬性。 如果清單是空的，表示資料表尚未定義全文檢索關聯性。  
   
- **[加入]**  
+ **加入**  
  建立新的全文檢索索引。  
   
  **刪除**  
- 刪除在 [選取的全文檢索索引] 清單中所選取的全文檢索索引。  
+ 刪除在 [選取的全文檢索索引]  清單中所選取的全文檢索索引。  
   
  **一般類別目錄**  
- 展開時會顯示 [資料行] 和 [全文檢索資料庫目錄名稱]。  
+ 展開時會顯示 [資料行]  和 [全文檢索資料庫目錄名稱]  。  
   
  **資料行**  
- 顯示可使用全文檢索搜尋資料行的逗號分隔清單。 若要查看完整清單，請按一下屬性欄位左邊的省略符號按鈕 (**...**)。  
+ 顯示可使用全文檢索搜尋資料行的逗號分隔清單。 若要查看完整清單，請按一下屬性欄位左邊的省略符號按鈕 ( **...** )。  
   
  **全文檢索資料庫目錄名稱**  
  顯示全文檢索索引儲存位置的全文檢索資料庫目錄名稱。 若要將索引儲存到不同的目錄，請按目錄名稱，然後從下拉式清單選擇另外一個目錄名稱。  
@@ -59,7 +59,7 @@ ms.locfileid: "63028408"
  **資料表設計工具類別目錄**  
  展開時會顯示指示索引如何執行的屬性。  
   
- **作用中**  
+ **使用中**  
  指示是否能夠使用這個全文檢索索引執行全文檢索搜尋。  
   
  **變更追蹤設定**  
@@ -87,13 +87,13 @@ ms.locfileid: "63028408"
  顯示下一個搜耙將會開始的日期和時間。  
   
  **目前或上一個搜耙的類型**  
- 顯示目前或最近搜耙的類型：[完整]、[累加]、[更新] 或 [自動傳播]。  
+ 顯示目前或最近搜耙的類型：[完整]、[累加]、[更新] 或 [自動傳用]。  
   
  **唯一索引名稱**  
  顯示這個資料庫中擁有唯一單一資料行索引的所有資料行名稱的清單。 這些資料行可用來建立全文檢索索引。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用全文檢索索引精靈](../../relational-databases/search/use-the-full-text-indexing-wizard.md)   
+ [使用全文檢索索引 Wizard](../../relational-databases/search/use-the-full-text-indexing-wizard.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
   

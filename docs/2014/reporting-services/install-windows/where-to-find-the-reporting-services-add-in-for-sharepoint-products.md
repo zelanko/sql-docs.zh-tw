@@ -12,40 +12,41 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/16/2015
 ms.openlocfilehash: adee6ee7d0d769d8e87e228c475b224a3e78675b
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637871"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置
 
-適用於 SharePoint 產品與技術 (rsSharePoint.msi) 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 增益集是一種 Web 下載，它提供將報表伺服器與 SharePoint 部署相整合的功能。  
+適用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]于 sharepoint 產品和技術（rssharepoint.msi .msi）的（SSRS）增益集是一種 Web 下載，它提供將報表伺服器與 SharePoint 部署整合的功能。  
   
 > [!IMPORTANT]  
->  如需支援的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集、報表伺服器和 SharePoint 組合的清單，請參閱。如需詳細資訊，請參閱[支援的 SharePoint 和 Reporting Services 伺服器和增益集&#40;的組合 SQL Server 2014&#41;](supported-combinations-of-sharepoint-and-reporting-services-server.md)。  
+>  如需支援的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]增益集、報表伺服器和 sharepoint 組合的清單，請參閱支援的[SharePoint 和 Reporting Services 伺服器與增益集的組合 &#40;SQL Server 2014&#41;](supported-combinations-of-sharepoint-and-reporting-services-server.md)。  
   
-##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 適用於 SharePoint 產品的 Reporting Services 增益集  
+##  <a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]適用于 SharePoint 產品的 Reporting Services 增益集  
  若要下載並安裝此增益集，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心：  
   
--   [適用於 Microsoft SharePoint 的 Microsoft® SQL Server 2014 Reporting Services 增益集](https://www.microsoft.com/download/details.aspx?id=53162)  
+-   [適用于 Microsoft SharePoint 的 microsoft® SQL Server 2014 Reporting Services 增益集](https://www.microsoft.com/download/details.aspx?id=53162)  
   
  您也可以從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 安裝精靈中取得此增益集的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 版本：  
   
--   在安裝精靈的 **[特徵選取]** 頁面上，選取 **[適用於 SharePoint 產品的 Reporting Services 增益集]** 。  
+-   在安裝精靈的 **[特徵選取]** 頁面上，選取 **[適用於 SharePoint 產品的 Reporting Services 增益集]**。  
   
--   如果是從命令提示字元進行安裝，請使用 **RS_SHPWFE** 選項來安裝此增益集。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令提示字元安裝的詳細資訊，請參閱[Reporting Services SharePoint 模式和原生模式的命令提示字元安裝](install-reporting-services-at-the-command-prompt.md)。  
+-   如果是從命令提示字元進行安裝，請使用 **RS_SHPWFE** 選項來安裝此增益集。 如需[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]命令提示字元安裝的詳細資訊，請參閱[Reporting Services SharePoint 模式和原生模式的命令提示字元安裝](install-reporting-services-at-the-command-prompt.md)。  
   
-##  <a name="bkmk_sql11sp1"></a> [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 適用於 SharePoint 產品的 Reporting Services 增益集  
- [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 版本的增益集和報表伺服器加入了 SharePoint Server 2013 的支援。  
+##  <a name="bkmk_sql11sp1"></a>[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]適用于 SharePoint 產品的 Reporting Services 增益集  
+ 
+  [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 版本的增益集和報表伺服器加入了 SharePoint Server 2013 的支援。  
   
  若要下載並安裝此增益集，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心：  
   
--   **SP1 增益集：**  [適用於 Microsoft® SharePoint® 的 Microsoft® SQL Server® 2012 SP1 Reporting Services 增益集](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583).  
+-   **SP1 增益集：** microsoft[® SQL SERVER® 2012 SP1 Reporting Services 適用于 microsoft® SharePoint®](https://www.microsoft.com/download/details.aspx?id=35583)（https://www.microsoft.com/download/details.aspx?id=35583)）的增益集。    
   
--   **SP1：**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=35575) (https://www.microsoft.com/download/details.aspx?id=35575)。  
+-   **SP1：**  [Microsoft® SQL Server® 2012 Service PACK 1 （SP1）](https://www.microsoft.com/download/details.aspx?id=35575) （https://www.microsoft.com/download/details.aspx?id=35575)。  
   
-##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 適用於 SharePoint 2010 產品的 Reporting Services 增益集  
+##  <a name="bkmk_sql11"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]適用于 SharePoint 2010 產品的 Reporting Services 增益集  
  從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本開始，增益集可以在 [SQL Server 安裝精靈] 的 [特徵選取] 頁面中一併安裝。 如果您要分別下載和安裝增益集，可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心的 [適用於 Microsoft® SharePoint® 技術 2010 的 Microsoft® SQL Server® 2012 Reporting Services 增益集](https://go.microsoft.com/fwlink/?LinkID=207242) 頁面線上取得這個檔案的最新版本。  
   
 ##  <a name="bkmk_sql2008r2"></a>適用于 SharePoint 2010 產品的 SQL Server 2008 R2 Reporting Services 增益集  
@@ -65,8 +66,8 @@ ms.locfileid: "73637871"
  您可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心的 [適用 Microsoft SharePoint 技術的 Microsoft SQL Server 2008 Reporting Services 增益集](https://www.microsoft.com/download/details.aspx?id=622)線上取得這個檔案的最新版本。  
   
 ## <a name="see-also"></a>另請參閱  
- [安裝或卸載適用&#40;于 sharepoint sharepoint 2010 和 sharepoint 2013&#41;的 Reporting Services 增益集](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [將報表伺服器內容類型加入至 SharePoint &#40;整合模式&#41; Reporting Services 的程式庫](../add-reporting-services-content-types-to-a-sharepoint-library.md)   
- [解除安裝 Reporting Services 增益集之後，就無法瀏覽 SharePoint 頁面的非預設區域](https://support.microsoft.com/kb/2009212)  
+ [安裝或卸載適用于 SharePoint &#40;SharePoint 2010 和 SharePoint 2013 的 Reporting Services 增益集&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
+ [將報表伺服器內容類型加入至 SharePoint 整合模式下的程式庫 &#40;Reporting Services&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)   
+ [卸載 Reporting Services 增益集之後，您無法在非預設區域中流覽 SharePoint 頁面](https://support.microsoft.com/kb/2009212)  
   
   

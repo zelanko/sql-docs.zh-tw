@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 68c731767a83acbd4b7df84843f2c140c5a63d3e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727705"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>在 SQL Server 中使用啟動控制板和執行外部指令碼的常見問題
@@ -131,9 +131,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 4. 重新啟動服務通常會修正問題，讓機器學習服務指令碼可以執行。 如果重新啟動無法修正問題，請記下 [二進位路徑]  屬性中的路徑和引數，然後執行以下動作：
 
-    A. 檢閱 launcher 的 .config 檔案，並確定工作目錄是有效的。
+    a. 檢閱 launcher 的 .config 檔案，並確定工作目錄是有效的。
 
-    B. 確定啟動控制板使用的 Windows 群組能夠連線到 SQL Server 執行個體。
+    b. 確定啟動控制板使用的 Windows 群組能夠連線到 SQL Server 執行個體。
 
     c. 如果您對服務屬性進行任何變更，請重新啟動啟動控制板服務。
 

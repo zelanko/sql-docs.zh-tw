@@ -14,10 +14,10 @@ ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6441012078592ba42c8449c794462b06bed845bb
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729230"
 ---
 # <a name="hierarchies-master-data-services"></a>階層 (Master Data Services)
@@ -40,7 +40,7 @@ ms.locfileid: "73729230"
   
 -   來自單一實體的不完全階層，這些階層稱為明確階層。 如需詳細資訊，請參閱 [明確階層 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)。  
   
--   來自根據實體與及其屬性之間現有關聯性之多個實體的層級型階層，這些階層稱為衍生階層。 如需詳細資訊，請參閱[衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)。  
+-   來自根據實體與及其屬性之間現有關聯性之多個實體的層級型階層，這些階層稱為衍生階層。 如需詳細資訊，請參閱 [衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)。  
   
 > [!NOTE]  
 >  階層中的所有成員都必須在相同的模型中。  
@@ -53,7 +53,7 @@ ms.locfileid: "73729230"
 ## <a name="hierarchy-example"></a>階層範例  
  在下列範例中，產品成員是依子類別目錄成員分組。  
   
- ![依子類別目錄分組的階層範例](../master-data-services/media/mds-conc-hierarchy.gif "依子類別目錄分組的階層範例")  
+ ![依子類別目錄分組之階層的範例](../master-data-services/media/mds-conc-hierarchy.gif "依子類別目錄分組之階層的範例")  
   
 ## <a name="related-tasks"></a>相關工作  
   
@@ -71,8 +71,8 @@ ms.locfileid: "73729230"
   
 -   [遞迴階層 &#40;Master Data Services&#41;](../master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [具有明確頂層的衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [具有明確大寫的衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
--   [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
+-   [&#40;Master Data Services 的集合&#41;](../master-data-services/collections-master-data-services.md)  
   
   

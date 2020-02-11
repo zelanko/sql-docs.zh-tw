@@ -21,13 +21,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 304cd31b4d89d56bee5dbc903c784ee4bf7af5fe
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637520"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 決策樹演算法技術參考
+  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法是一種混合式演算法，其中併入建立樹狀結構的不同方法，並支援多種分析工作，包括迴歸、分類以及關聯。 Microsoft 決策樹演算法支援製作離散和連續屬性的模型。  
   
  本主題說明演算法的實作、描述如何針對不同的工作自訂演算法的行為，以及提供查詢決策樹模型其他資訊的連結。  
@@ -35,7 +36,7 @@ ms.locfileid: "73637520"
 ## <a name="implementation-of-the-decision-trees-algorithm"></a>實作決策樹演算法  
  Microsoft 決策樹演算法將貝氏方法套用至學習因果互動模型，取得模型的近似事後分佈。 如需這種方法的詳細說明，請參閱 Microsoft Research 網站上由 [結構和參數學習](https://go.microsoft.com/fwlink/?LinkId=237640&clcid=0x409)提供的文件。  
   
- 評估學習所需之 *「優先」* (Priors) 資訊值的方法，是根據 *「可能性相等」* (Likelihood Equivalence) 的假設。 此假設認為，資料無法協助您區分代表條件式獨立之相同判斷提示的網路結構。 每個案例都假設擁有一個單一的貝氏優先網路以及對於該網路之信心的單一量值。  
+ 評估學習所需之 *「優先」* (Priors) 資訊值的方法，是根據 *「可能性相等」*(Likelihood Equivalence) 的假設。 此假設認為，資料無法協助您區分代表條件式獨立之相同判斷提示的網路結構。 每個案例都假設擁有一個單一的貝氏優先網路以及對於該網路之信心的單一量值。  
   
  使用這些優先網路，演算法就可以根據目前的定型資料，計算網路結構的相對 *「事後機率」* (Posterior Probabilities)，並識別事後機率最高的網路結構。  
   
@@ -96,10 +97,11 @@ ms.locfileid: "73637520"
     >  您可以使用  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 中所提供的資料瀏覽工具，將資料中的值分佈視覺化，並在開始資料採礦前，將您的值正確分組。 如需詳細資訊，請參閱 [資料分析工作和檢視器](../../integration-services/control-flow/data-profiling-task-and-viewer.md)。 您也可以使用 [適用於 Excel 2007 的資料採礦增益集](https://www.microsoft.com/download/details.aspx?id=8569)瀏覽、分組，以及重新標示 Microsoft Excel 中的資料。  
   
 ## <a name="customizing-the-decision-trees-algorithm"></a>自訂決策樹演算法  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援會影響所產生之採礦模型效能和精確度的參數。 您也可以設定採礦模型資料行或採礦結構資料行上的模型旗標來控制處理資料的方式。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援會影響所產生之採礦模型效能和精確度的參數。 您也可以設定採礦模型資料行或採礦結構資料行上的模型旗標來控制處理資料的方式。  
   
 > [!NOTE]  
->  Microsoft 決策樹演算法可用於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中，但是 Microsoft 決策樹演算法自訂行為的某些進階參數只能在特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中使用。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)。  
+>  Microsoft 決策樹演算法可用於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中，但是 Microsoft 決策樹演算法自訂行為的某些進階參數只能在特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中使用。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ### <a name="setting-algorithm-parameters"></a>設定演算法參數  
  下表描述可以搭配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法使用的參數。  
@@ -124,7 +126,7 @@ ms.locfileid: "73637520"
  *MAXIMUM_INPUT_ATTRIBUTES*  
  定義演算法在叫用特徵選取之前，可以處理的輸入屬性數目。  
   
- 預設值是 255。  
+ 預設值為 255。  
   
  將此值設定為 0 可關閉特徵選取。  
   
@@ -133,7 +135,7 @@ ms.locfileid: "73637520"
  *MAXIMUM_OUTPUT_ATTRIBUTES*  
  定義演算法在叫用特徵選取之前，可以處理的輸出屬性數目。  
   
- 預設值是 255。  
+ 預設值為 255。  
   
  將此值設定為 0 可關閉特徵選取。  
   
@@ -142,14 +144,14 @@ ms.locfileid: "73637520"
  *MINIMUM_SUPPORT*  
  決定要在決策樹中產生分岔所需的最小分葉案例數目。  
   
- 預設值是 10。  
+ 預設值為 10。  
   
  如果資料集非常大，您可能需要增加這個值以防止過度膨脹。  
   
  *SCORE_METHOD*  
- 決定用來計算分岔準則的方法。 下列是可以使用的選項：  
+ 決定用來計算分岔準則的方法。 有下列選項可供使用：  
   
-|ID|[名稱]|  
+|ID|名稱|  
 |--------|----------|  
 |1|熵|  
 |3|使用 K2 優先的貝氏|  
@@ -160,18 +162,19 @@ ms.locfileid: "73637520"
  如需這些計分方法的說明，請參閱＜ [Feature Selection](../../sql-server/install/feature-selection.md)＞。  
   
  *SPLIT_METHOD*  
- 決定用來分岔節點的方法。 下列是可以使用的選項：  
+ 決定用來分岔節點的方法。 有下列選項可供使用：  
   
-|ID|[名稱]|  
+|ID|名稱|  
 |--------|----------|  
-|1|**Binary:** 表示不管屬性的實際數目為何，樹狀結構都會分岔為兩個分支。|  
-|2|**Complete:** 表示樹狀結構可以建立與屬性值一樣多的分岔。|  
-|3|**Both:** 指定 Analysis Services 可以決定應該使用二進位還是完整分岔來產生最佳的結果。|  
+|1|**Binary：** 表示不論屬性的實際值數目為何，樹狀結構都應該分割成兩個分支。|  
+|2|**完成：** 表示樹狀結構可以建立與屬性值一樣多的分割。|  
+|3|**兩者：** 指定 Analysis Services 可以判斷是否應該使用二進位或完整分割來產生最佳的結果。|  
   
- 預設值是 3。  
+ 預設值為 3。  
   
 ### <a name="modeling-flags"></a>模型旗標  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援下列模型旗標。 當您建立採礦結構或採礦模型時，您會定義模型旗標來指定分析期間要如何處理每個資料行中的值。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援下列模型旗標。 當您建立採礦結構或採礦模型時，您會定義模型旗標來指定分析期間要如何處理每個資料行中的值。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)。  
   
 |模型旗標|描述|  
 |-------------------|-----------------|  
@@ -191,7 +194,8 @@ ms.locfileid: "73637520"
  決策樹模型必須包含索引鍵資料行、輸入資料行和至少一個可預測資料行。  
   
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)。  
   
 |資料行|內容類型|  
 |------------|-------------------|  
@@ -202,8 +206,8 @@ ms.locfileid: "73637520"
 >  系統支援 Cyclical 和 Ordered 內容類型，但是演算法將它們視為離散值，因此不會執行特殊處理。  
   
 ## <a name="see-also"></a>另請參閱  
- [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)   
+ [Microsoft 決策樹演算法](microsoft-decision-trees-algorithm.md)   
  [決策樹模型查詢範例](decision-trees-model-query-examples.md)   
- [決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [&#40;Analysis Services 的決策樹模型的模型內容-資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

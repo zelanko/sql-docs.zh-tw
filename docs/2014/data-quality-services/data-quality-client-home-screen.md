@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8d12e45d2f2b7ee3d3f06cf8820495e40cf9fbd3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154477"
 ---
 # <a name="data-quality-client-home-screen"></a>Data Quality Client 首頁畫面
@@ -38,7 +38,7 @@ ms.locfileid: "70154477"
   
  您僅能開啟您鎖定的知識庫並進行編輯。 若是如此，知識庫將會以關閉時所處的狀態開啟，並將該狀態顯示在括弧中。 如果某個知識庫遭到鎖定，而且不是您鎖定的，則僅能以唯讀模式開啟該知識庫。  
   
-### <a name="data-quality-projects"></a>Data Quality Projects  
+### <a name="data-quality-projects"></a>資料品質專案  
  資料品質專案是 DQS 透過電腦輔助的資料更正和互動式資料清理，執行資料清理或資料比對的程序。  
   
  **新增資料品質專案**  
@@ -47,21 +47,21 @@ ms.locfileid: "70154477"
  **開啟資料品質專案**  
  開啟專案，讓您可以執行資料清理或資料比對。 按一下 **[開啟資料品質專案]** 按鈕可顯示 **[開啟資料品質專案]** 頁面，此頁面會顯示現有專案的清單，及其屬性、目前狀態、知識庫與其定義域和比對原則規則的詳細資料。 選取專案，然後從 **[開啟資料品質專案]** 來開啟它。  
   
- **最近使用的資料品質專案**  
+ **最近的資料品質專案**  
  從畫面上的清單選取已經建立的專案。 您僅能開啟您鎖定的專案。 若是如此，專案將會以關閉時所處的狀態開啟，並將該狀態顯示在括弧中。 如果該專案已完成，將會在活動的「匯出」步驟開啟。  
   
 ### <a name="administration"></a>系統管理  
  DQS 管理可讓您監視、設定及維護 DQS。  
   
- **活動監控**  
+ **活動監視**  
  顯示與連接之 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]相關的所有目前和歷程記錄活動的狀態檢視。 監視的活動類型包含知識管理、資料品質專案和以 SSIS 為基礎的資料更正。  
   
  **組態**  
  顯示參考資料服務帳戶的設定屬性（透過 Azure Marketplace 並直接參考資料服務）、一般設定（互動式清理、比對和程式碼剖析）和記錄嚴重性設定。  
   
 ## <a name="see-also"></a>另請參閱  
- [DQS 知識庫與定義域](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)   
- [資料品質專案 &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md)   
- [DQS 管理](../../2014/data-quality-services/dqs-administration.md)  
+ [DQS 知識庫和定義域](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)   
+ [&#40;DQS&#41;的資料品質專案](../../2014/data-quality-services/data-quality-projects-dqs.md)   
+ [dqs 管理](../../2014/data-quality-services/dqs-administration.md)  
   
   

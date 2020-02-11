@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef709a48f0c5c162e971cebbdf5d49c4417250ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889831"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services 封裝所記錄的事件
@@ -76,7 +76,7 @@ ms.locfileid: "62889831"
 |12258|DTS_MSG_EVENTLOGENTRY_INFORMATION|事件名稱: %1%r 訊息: %9%r 操作員: %2%r 來源名稱: %3%r 來源識別碼: %4%r 執行識別碼: %5%r 開始時間: %6%r 結束時間: %7%r 資料碼: %8|這則訊息會報告與錯誤或警告沒有關聯的參考用訊息。|  
   
 ## <a name="related-tasks"></a>相關工作  
- 如需如何即時檢視記錄項目的詳細資訊，請參閱[檢視記錄事件視窗中的記錄項目](../view-log-entries-in-the-log-events-window.md)。  
+ 如需如何即時檢視記錄項目的詳細資訊，請參閱 [檢視記錄事件視窗中的記錄項目](../view-log-entries-in-the-log-events-window.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 服務所記錄的事件](../service/events-logged-by-the-integration-services-service.md)  

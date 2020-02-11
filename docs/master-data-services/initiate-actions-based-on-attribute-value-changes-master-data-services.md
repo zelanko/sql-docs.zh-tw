@@ -14,10 +14,10 @@ ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a83b51479aadc92941da073e5bf9f0da394691ff
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729171"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>根據屬性值變更來起始動作 (Master Data Services)
@@ -31,56 +31,56 @@ ms.locfileid: "73729171"
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
--   您的屬性必須位於變更追蹤群組。 如需詳細資訊，請參閱 [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) 。  
+-   您的屬性必須位於變更追蹤群組。 如需詳細資訊，請參閱 [將屬性加入至變更追蹤群組 &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) 。  
   
 ### <a name="to-create-a-business-rule-to-initiate-actions-based-on-attribute-value-changes"></a>若要建立商務規則，以根據屬性值變更來起始動作  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
-2.  從功能表列，指向 [管理]，然後按一下 [商務規則]。  
+2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]**。  
   
-3.  在 [商務規則維護] 頁面上，選取 [模型] 清單中的模型。  
+3.  在 [商務規則維護]**** 頁面上，選取 [模型]**** 清單中的模型。  
   
-4.  從 [實體] 清單中選取實體。  
+4.  從 [實體]**** 清單中選取實體。  
   
-5.  從 [成員類型] 清單中，選取要套用商務規則的成員類型。  
+5.  從 [成員類型]**** 清單中，選取要套用商務規則的成員類型。  
   
-6.  從 [屬性] 清單中，選取屬性或保留預設值 [全部]。  
+6.  從 [屬性]**** 清單中，選取屬性或保留預設值 [全部]****。  
   
-7.  按一下 [加入商務規則]。  
+7.  按一下 [加入商務規則]****。  
   
-8.  按一下 [編輯選取的商務規則]。  
+8.  按一下 [編輯選取的商務規則]****。  
   
-9. 在 [元件] 窗格中，展開 [條件] 節點。  
+9. 在 [元件]**** 窗格中，展開 [條件]**** 節點。  
   
-10. 將 [數值比較] 節點底下的 [已變更] 拖曳至 [IF] 窗格的 [條件] 標籤。  
+10. 將 [數值比較]**** 節點底下的 [已變更]**** 拖曳至 [IF]**** 窗格的 [條件]**** 標籤。  
   
-11. 在 [編輯條件] 窗格的 [變更追蹤群組] 方塊中，輸入已指派為必要條件的變更追蹤群組編號。  
+11. 在 [編輯條件]**** 窗格的 [變更追蹤群組]**** 方塊中，輸入已指派為必要條件的變更追蹤群組編號。  
   
-12. 在 [編輯條件] 窗格中，按一下 [儲存項目]。  
+12. 在 [編輯條件]**** 窗格中，按一下 [儲存項目]****。  
   
-13. 在 [元件] 窗格中，展開 [動作] 節點。  
+13. 在 [元件]**** 窗格中，展開 [動作]**** 節點。  
   
-14. 按一下動作並將它拖曳至 [THEN] 窗格的 [動作] 標籤。  
+14. 按一下動作並將它拖曳至 [THEN]**** 窗格的 [動作]**** 標籤。  
   
-15. 在 [屬性] 窗格中，按一下屬性並將它拖曳至 [編輯動作] 窗格的 [選取屬性] 標籤。  
+15. 在 [屬性]**** 窗格中，按一下屬性並將它拖曳至 [編輯動作]**** 窗格的 [選取屬性]**** 標籤。  
   
-16. 在 [編輯動作] 窗格中，完成任何必要欄位。  
+16. 在 [編輯動作]**** 窗格中，完成任何必要欄位。  
   
-17. 在 [編輯動作] 窗格中，按一下 [儲存項目]。  
+17. 在 [編輯動作]**** 窗格中，按一下 [儲存項目]****。  
   
-18. 按一下 [上一步]。  
+18. 按一下 [上一步]****。  
   
-19. (選擇性) 在 [商務規則維護] 頁面上，針對包含商務規則的資料列，按兩下 [名稱]、[描述] 或 [通知] 資料行中的資料格，以更新值。  
+19. (選擇性) 在 [商務規則維護]**** 頁面上，針對包含商務規則的資料列，按兩下 [名稱]****、[描述]**** 或 [通知]**** 資料行中的資料格，以更新值。  
   
     > [!NOTE]  
     >  只針對包含驗證動作的規則才傳送通知。  
   
-20. 按一下 [發行商務規則]。  
+20. 按一下 [發行商務規則]****。  
   
-21. 在確認對話方塊中按一下 **[確定]** 。 規則狀態會變更為 [作用中]。  
+21. 在確認對話方塊中按一下 **[確定]**。 規則狀態會變更為 [作用中]****。  
   
 ## <a name="next-steps"></a>後續步驟  
   
@@ -91,7 +91,7 @@ ms.locfileid: "73729171"
     -   [根據商務規則驗證版本 &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [將屬性加入至變更追蹤群組 &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   
+ [將屬性新增至變更追蹤群組 &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   
  [商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

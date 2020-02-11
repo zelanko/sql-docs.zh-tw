@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b284fdcef506924c26e452196db6e9518faa1351
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400959"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>監視載入平行處理資料倉儲
@@ -26,7 +26,7 @@ ms.locfileid: "74400959"
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
 不論用來監視負載的方法為何，登入都必須具有存取基礎資料來源的許可權。 
 
 <!-- MISSING LINKS
@@ -51,9 +51,9 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
   
 -   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
   
--   [sys. pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
 ### <a name="to-monitor-loads-by-using-system-views"></a>若要使用系統檢視來監視負載  
 若要使用 SQL Server PDW views 來監視作用中和最近的負載，請遵循下列步驟。 針對使用的每個系統檢視，請參閱該視圖的檔，以取得此視圖所傳回之資料行和可能值的相關資訊。  

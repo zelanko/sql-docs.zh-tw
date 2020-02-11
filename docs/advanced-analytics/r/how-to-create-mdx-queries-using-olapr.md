@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6934d3ae816df23d68843eb49d5eca8c95d83d57
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727453"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何在 R 中使用 olapR 建立 MDX 查詢
@@ -193,10 +193,10 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 
 | 結果  |
 | ----|
-| _配件_|
-|_腳踏車_|
-|_服裝_|
-|_元件_|
+| _Accessories_|
+|_Bikes_|
+|_Clothing_|
+|_Components_|
 |-> 組件元件|
 |-> 組件元件|
 

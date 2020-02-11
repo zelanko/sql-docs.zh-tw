@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015770"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段
@@ -100,7 +100,7 @@ ms.locfileid: "63015770"
 ## <a name="to-create-the-extended-events-session"></a>若要建立擴充事件工作階段  
  使用查詢編輯器建立「擴充事件」工作階段，並將輸出寫入檔案目標。 下列步驟說明單一查詢，連同示範如何建立查詢的說明。 如需完整查詢範例，請參閱本主題的＜範例＞一節。  
   
-1.  加入陳述式來建立事件工作階段，使用您想要用於「擴充事件」工作階段的名稱來取代*session_name* 。  
+1.  加入語句來建立事件會話，以您要用於「擴充事件」會話的名稱取代 s*ession_name* 。  
   
     ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -248,6 +248,6 @@ ADD TARGET package0.asynchronous_file_target
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [檢視同等於 SQL 追蹤事件類別的擴充事件項目](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
+ [檢視同等於 SQL 追蹤事件類別的擴充事件](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

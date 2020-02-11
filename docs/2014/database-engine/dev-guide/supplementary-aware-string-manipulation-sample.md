@@ -10,20 +10,21 @@ ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbbcb468a4de093b6664c71e20716ea62e2b1fc3
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 2df5fa785f715dbf63c7682148c20bbaf971d0c1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637711"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76928097"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>增補感知的字串操作範例
-  這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 範例會示範補充字元感知的字串處理。 此範例顯示五個 Transact-SQL 字串函數的實作，這些字串函數提供的字串操作函數與內建函數相同，但是具有用於處理 Unicode 和補充字串的額外補充字元感知功能。 這五個函式是透鏡（）、`lefts(), rights(), subs()` 和 `replace_s()`，相當於內建函數 `LEN(), LEFT(), RIGHT(), SUBSTRING()` 和 `REPLACE()` 字串函數。  
+  這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 範例會示範補充字元感知的字串處理。 此範例顯示五個 Transact-SQL 字串函數的實作，這些字串函數提供的字串操作函數與內建函數相同，但是具有用於處理 Unicode 和補充字串的額外補充字元感知功能。 這五個函數都是透鏡（ `lefts(), rights(), subs()` ） `replace_s()` ，而這相當於內建函數`LEN(), LEFT(), RIGHT(), SUBSTRING()`和`REPLACE()`字串函式。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站[免費取得 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站[免費取得 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
   
 -   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](https://go.microsoft.com/fwlink/?linkid=62796)取得 AdventureWorks 資料庫  
   
@@ -78,7 +79,7 @@ ms.locfileid: "73637711"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 測試命令腳本複製到檔案中，並將它儲存為範例目錄中的 `test.sql`。  
+7.  將[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令腳本複製到檔案中，並將`test.sql`它儲存成範例目錄中的。  
   
 8.  使用下列命令來執行測試指令碼  
   
@@ -151,7 +152,7 @@ if (length < 0)
             if ((start + length) <= 1)  
                 return (String.Empty);  
   
-// The 2 if statements below guarentee that the result will match the substring function in   
+// The 2 if statements below guarantee that the result will match the substring function in   
 // Transact-SQL which will initialize start to 1 by subtracting from the length.  
             if (start <= 0 && length > 0)  
                 length--;  
@@ -352,7 +353,7 @@ Public NotInheritable Class SurrogateStringFunction
             Return String.Empty  
         End If  
   
-        ' The 2 if statements below guarentee that the result will match the substring function in   
+        ' The 2 if statements below guarantee that the result will match the substring function in   
         ' Transact-SQL which will initialize start to 1 by subtracting from the length.  
         If start <= 0 AndAlso length > 0 Then  
             length -= 1  
@@ -686,6 +687,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [通用語言執行平台 &#40;CLR&#41; 整合的使用案例和範例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Common Language Runtime &#40;CLR&#41; 整合的使用案例和範例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69634554"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升級 SQL Server 執行個體中的機器學習 (R 和 Python) 元件
@@ -250,7 +250,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 2. 安裝程式會識別用於解除繫結之候選項目的本機執行個體。
 3. 取消選取您想要還原為原始設定之執行個體旁的核取方塊。
 4. 接受授權合約。 即使在安裝時，您也必須表示您接受授權條款。
-5. 按一下 **[完成]** 。 該程序需要一段時間。
+5. 按一下 [完成]  。 該程序需要一段時間。
 
 #### <a name="bkmk_cmdunbind"></a> 使用命令列解除繫結
 
@@ -278,15 +278,15 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## <a name="sqlbindrexe-command-syntax"></a>SqlBindR.exe 命令語法
 
-### <a name="usage"></a>使用方式
+### <a name="usage"></a>使用量
 
 `sqlbindr [/list] [/bind <SQL_instance_ID>] [/unbind <SQL_instance_ID>]`
 
 ### <a name="parameters"></a>參數
 
-|[屬性]|Description|
+|名稱|描述|
 |------|------|
-|*list*| 顯示目前電腦上所有 SQL 資料庫執行個體識別碼的清單|
+|list | 顯示目前電腦上所有 SQL 資料庫執行個體識別碼的清單|
 |*bind*| 將指定的 SQL 資料庫執行個體升級到最新版 R Server，並確保執行個體自動取得 R Server 的未來升級|
 |*unbind*|從指定的 SQL 資料庫執行個體解除安裝最新版的 R Server，並防止未來的 R Server 升級影響執行個體|
 

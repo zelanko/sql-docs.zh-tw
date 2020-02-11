@@ -1,6 +1,6 @@
 ---
-title: sys.fn_PageResCracker (Transact-SQL) | Microsoft Docs
-description: Sys.fn_PageResCracker 系統函式的文件。
+title: sys.databases fn_PageResCracker （Transact-sql） |Microsoft Docs
+description: Sys. fn_PageResCracker 系統函數的檔。
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -26,16 +26,16 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: 6d8203979a0afdca1ae78b9bd51723c906c40ea2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68267068"
 ---
-# <a name="sysfnpagerescracker-transact-sql"></a>sys.fn_PageResCracker (Transact-SQL)
+# <a name="sysfn_pagerescracker-transact-sql"></a>sys.databases fn_PageResCracker （Transact-sql）
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-傳回`db_id`， `file_id`，並`page_id`針對給定`page_resource`值。 
+傳回指定`db_id` `page_resource`值`file_id`的、 `page_id`和。 
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ sys.fn_PageResCracker ( page_resource )
   
 ## <a name="arguments"></a>引數  
 *page_resource*    
-是 8 位元組十六進位格式的資料庫頁面資源。
+這是資料庫頁面資源的8位元組十六進位格式。
   
 ## <a name="tables-returned"></a>傳回的資料表  
   
@@ -57,16 +57,16 @@ sys.fn_PageResCracker ( page_resource )
 |page_id|**int**|頁面識別碼|  
   
 ## <a name="remarks"></a>備註  
-`sys.fn_PageResCracker` 用來將資料庫頁面的 8 位數十六進位表示法轉換成資料列集，其中包含資料庫識別碼，檔案識別碼和頁面的頁面識別碼。   
+`sys.fn_PageResCracker`是用來將資料庫頁面的8位元組十六進位表示轉換成包含頁面之資料庫識別碼、檔案識別碼和頁面識別碼的資料列集。   
 
-您可以取得有效的頁面資源中`page_resource`資料行[sys.dm_exec_requests &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)動態管理檢視或[sys.sysprocesses &#40;&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)系統檢視表。 如果使用無效的頁面資源傳回為 NULL。  
-主要用法`sys.fn_PageResCracker`是用以協助這些檢視之間的聯結和[sys.dm_db_page_info &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)動態管理函數，以取得資訊 頁面上，例如它所屬的物件。
+您可以從 sys.databases 的資料`page_resource`行取得有效的頁面資源[dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)動態管理檢視或[sysprocesses &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)系統檢視。 如果使用不正確頁面資源，則傳回值為 Null。  
+的主要用途`sys.fn_PageResCracker`是加速這些 views 與 sys.databases 之間的聯結， [dm_db_page_info &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)動態管理函數，以取得頁面的相關資訊，例如它所屬的物件。
   
-## <a name="permissions"></a>Permissions  
-使用者需求`VIEW SERVER STATE`伺服器的權限。  
+## <a name="permissions"></a>權限  
+使用者需要`VIEW SERVER STATE`伺服器的許可權。  
   
 ## <a name="examples"></a>範例  
-`sys.fn_PageResCracker`函式可以用於搭配[sys.dm_db_page_info &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)若要疑難排解頁面相關的等候和中的封鎖[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  下列指令碼是如何使用這些函式，收集資料庫目前正在等候頁面資源的某些類型的所有作用中要求的頁面資訊的範例。 
+函式可與 sys.databases 搭配使用， [dm_db_page_info &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)來針對頁面相關的等候和封鎖進行疑難排解[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sys.fn_PageResCracker`  下列腳本是一個範例，說明如何使用這些函式來收集目前正在等待某種頁面資源類型之所有使用中要求的資料庫頁面資訊。 
   
 ```sql  
 SELECT page_info.* 
@@ -76,8 +76,8 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 1) AS page_info
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.dm_db_page_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)  
- [sys.sysprocesses &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [dm_db_page_info &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)  
+ [sysprocesses &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

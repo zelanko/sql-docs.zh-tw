@@ -1,5 +1,5 @@
 ---
-title: 關於 SQL Server 授權條款 (SSCM) |Microsoft Docs
+title: 關於 SQL Server 授權條款（SSCM） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,30 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035317"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>關於 SQL Server 授權條款 (SSCM)
-  在安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)]時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 軟體授權條款會複製到本機電腦。 如果在同一部電腦上安裝了相同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本和語言的多個執行個體，一份授權條款便可適用於該版本和語言的所有執行個體。 這些檔案會寫入至： %ProgramFiles%\Microsoft SQL Server\110\License Terms\ or %programfiles (x86) %\Microsoft SQL Server\110\License 條款\\。  
+  在安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)]時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 軟體授權條款會複製到本機電腦。 如果在同一部電腦上安裝了相同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本和語言的多個執行個體，一份授權條款便可適用於該版本和語言的所有執行個體。 檔案會寫入至：%ProgramFiles%\Microsoft SQL Server\110\License 詞彙 \ 或% ProgramFiles （x86）% \ Microsoft SQL Server\110\License 條款\\。  
   
  如果在同一部電腦上安裝了相同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本和語言的多個執行個體，一份授權條款便可適用於該版本和語言的所有執行個體。  
   
  授權條款檔案名稱會指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 語言版本。 例如：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer (英文版) 適用的 License_DEV_ENU.txt。  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer (英文版) 適用的 License_DEV_ENU.txt。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard (義大利文版) 適用的 License_STD_ITA.txt。  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard (義大利文版) 適用的 License_STD_ITA.txt。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor (日文版) 適用的 License_UA_JPN.txt。  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor (日文版) 適用的 License_UA_JPN.txt。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (英文版) 適用的 License_SQLNCLI_ENU.txt。  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (英文版) 適用的 License_SQLNCLI_ENU.txt。  
   
 -   SQLXML (韓文版) 適用的 License_SQLXML4_KOR.txt。  
   
@@ -79,6 +83,6 @@ ms.locfileid: "63035317"
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft SQL Server 隱私權聲明](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
- [文件的法律注意事項](../../../2014/getting-started/legal-notice-for-documentation.md)  
+ [文件集的法律注意事項](../../../2014/getting-started/legal-notice-for-documentation.md)  
   
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 44490a19763f69a4ed88d15aacdfba853db8c040
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856473"
 ---
 # <a name="job-activity-monitor-refresh"></a>作業活動監視器重新整理
@@ -24,7 +24,7 @@ ms.locfileid: "62856473"
   
  若要開啟此對話方塊，請在作業活動監視器的 **[狀態]** 區段中按一下 **[檢視重新整理設定]** 。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **自動重新整理間隔**  
  勾選即可起始活動監視器資訊的自動重新整理功能。 依預設，此功能是關閉的。  
   
