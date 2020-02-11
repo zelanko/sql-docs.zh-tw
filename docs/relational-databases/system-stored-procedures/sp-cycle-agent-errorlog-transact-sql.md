@@ -1,5 +1,5 @@
 ---
-title: sp_cycle_agent_errorlog (TRANSACT-SQL) |Microsoft Docs
+title: sp_cycle_agent_errorlog （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c95cc2db84bdf059437a45e2719bbc63d6eb6829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108356"
 ---
-# <a name="spcycleagenterrorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
+# <a name="sp_cycle_agent_errorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   關閉目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 錯誤記錄檔，依照類似伺服器重新啟動的方式來循環處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 錯誤記錄副檔名的號碼。 新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 錯誤記錄會有一行指出已建立新記錄。  
@@ -39,18 +39,18 @@ sp_cycle_agent_errorlog
 ```  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
  None  
   
 ## <a name="remarks"></a>備註  
- 每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式會啟動，目前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 錯誤記錄檔已重新命名為**SQLAgent.1**;**SQLAgent.1**會變成**SQLAgent.2**， **SQLAgent.2**會成為**SQLAgent.3**，依此類推。 **sp_cycle_agent_errorlog**可讓您循環錯誤記錄檔，不需停止和啟動伺服器。  
+ 每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]啟動代理程式時，目前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 agent 錯誤記錄檔都會重新命名為**SQLAgent。 1**;**SQLAgent**會變成**SQLAgent。 2**， **SQLAgent**會變成**SQLAgent。 3**，依此類推。 **sp_cycle_agent_errorlog**可讓您迴圈錯誤記錄檔，而不需要停止和啟動伺服器。  
   
- 這個預存程序必須從執行**msdb**資料庫。  
+ 這個預存程式必須從**msdb**資料庫中執行。  
   
-## <a name="permissions"></a>Permissions  
- 執行權限**sp_cycle_agent_errorlog**的成員僅限於**sysadmin**固定的伺服器角色。  
+## <a name="permissions"></a>權限  
+ **Sp_cycle_agent_errorlog**的執行許可權僅限於**系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
  下列範例會循環處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 錯誤記錄。  
@@ -64,6 +64,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_cycle_errorlog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cycle-errorlog-transact-sql.md)  
+ [sp_cycle_errorlog &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cycle-errorlog-transact-sql.md)  
   
   

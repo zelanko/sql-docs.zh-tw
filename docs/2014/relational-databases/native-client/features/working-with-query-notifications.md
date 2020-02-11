@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206597"
 ---
 # <a name="working-with-query-notifications"></a>使用查詢通知
@@ -37,7 +37,7 @@ ms.locfileid: "68206597"
   
  `service=<service-name>[;(local database=<database> | broker instance=<broker instance>)]`  
   
- 例如:  
+ 例如：  
   
  `service=mySSBService;local database=mydb`  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68206597"
   
  通知只會傳送一次。 如果要持續接到資料變更的通知，必須在處理過每個通知之後重新執行查詢，以建立新的訂閱。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用原生用戶端應用程式通常收到的通知[!INCLUDE[tsql](../../../includes/tsql-md.md)][接收](/sql/t-sql/statements/receive-transact-sql)命令從通知選項所指定之服務的相關佇列讀取通知。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端應用程式通常會使用[!INCLUDE[tsql](../../../includes/tsql-md.md)] [receive](/sql/t-sql/statements/receive-transact-sql)命令，從與通知選項中指定之服務相關聯的佇列讀取通知，以接收通知。  
   
 > [!NOTE]  
 >  您必須在需要通知的查詢中限定資料表名稱，例如 `dbo.myTable`。 資料表名稱必須使用兩部分的名稱來加以限定。 如果使用三或四部份的名稱，則訂閱無效。  
@@ -65,23 +65,23 @@ CREATE SERVICE myService ON QUEUE myQueue
 >  服務必須使用預先定義的合約 `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification` (如上所示)。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 提供者  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援在資料列集修改時取用者通知。 使用者會在資料列集修改的每個階段以及嘗試進行任何變更時收到通知。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援在資料列集修改時使用取用者通知。 使用者會在資料列集修改的每個階段以及嘗試進行任何變更時收到通知。  
   
 > [!NOTE]  
->  將通知查詢傳遞到 「 server 含**icommand:: Execute**是唯一有效的方式訂閱查詢通知使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者。  
+>  使用**ICommand：： Execute**將通知查詢傳遞至伺服器，是使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者來訂閱查詢通知的唯一有效方法。  
   
-### <a name="the-dbpropsetsqlserverrowset-property-set"></a>DBPROPSET_SQLSERVERROWSET 屬性集  
- 為了透過 OLE DB 支援查詢通知[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端會將下列的新屬性加入至 DBPROPSET_SQLSERVERROWSET 屬性集。  
+### <a name="the-dbpropset_sqlserverrowset-property-set"></a>DBPROPSET_SQLSERVERROWSET 屬性集  
+ 為了透過 OLE DB 支援查詢通知， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會將下列新屬性新增至 DBPROPSET_SQLSERVERROWSET 屬性集。  
   
-|名稱|type|描述|  
+|名稱|類型|描述|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|查詢通知要維持使用中的秒數。<br /><br /> 預設值為 432000 秒 (5 天)。 最小值為 1 秒，最大值為 2^31-1 秒。|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|通知的訊息文字。 這是使用者定義的，而且沒有預先定義的格式。<br /><br /> 根據預設，字串是空的。 您可以使用 1-2000 個字元指定訊息。|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查詢通知選項。 這些是使用 *name*=*value* 語法在字串中指定。 使用者負責建立此服務以及從佇列讀取通知。<br /><br /> 預設為空字串。|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查詢通知選項。 這些是在*名稱*=*值*語法的字串中指定。 使用者負責建立此服務以及從佇列讀取通知。<br /><br /> 預設值是空字串。|  
   
  無論陳述式是以使用者交易或自動認可執行，或者陳述式在其中執行的交易是否已經認可或回復，系統閱永遠都會認可通知訂閱。 伺服器通知會在發生下列任何無效通知條件時觸發：基礎資料或結構描述變更，或達到逾時期限 (視何者為先)。 通知註冊會在觸發之後立刻刪除。 因此在接到通知後，應用程式必須再進行一次訂閱，才能接到進一步的更新。  
   
- 其他的連接或執行緒可以檢查目的地佇列是否有通知。 例如:  
+ 其他的連接或執行緒可以檢查目的地佇列是否有通知。 例如：  
   
 ```  
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   
@@ -95,17 +95,17 @@ RECEIVE * FROM MyQueue
   
  如果佇列是空的，這個陳述式會立刻傳回空的結果集；否則會傳回所有的佇列通知。  
   
- 如果 SSPROP_QP_NOTIFICATION_MSGTEXT 和 SSPROP_QP_NOTIFICATION_OPTIONS 非 NULL 且不是空的，則每次執行命令時，都會將包含以上定義的三個屬性的查詢通知 TDS 標頭傳送到伺服器。 如果其中任一項為 Null (或是空的)，則該標頭不會傳送且會引發 DB_E_ERRORSOCCURRED (如果這兩個屬性都標示為選擇性的，則會引發 DB_S_ERRORSOCCURRED)，而且狀態值會設定為 DBPROPSTATUS_BADVALUE。 在執行/準備時會進行驗證。 同樣地，當針對 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本連接設定查詢通知屬性時，會引發 DB_S_ERRORSOCCURED。 狀態值在這種情況下是 DBPROPSTATUS_NOTSUPPORTED。  
+ 如果 SSPROP_QP_NOTIFICATION_MSGTEXT 和 SSPROP_QP_NOTIFICATION_OPTIONS 非 NULL 且不是空的，則每次執行命令時，都會將包含以上定義的三個屬性的查詢通知 TDS 標頭傳送到伺服器。 如果其中任一項為 Null (或是空的)，則該標頭不會傳送且會引發 DB_E_ERRORSOCCURRED (如果這兩個屬性都標示為選擇性的，則會引發 DB_S_ERRORSOCCURRED)，而且狀態值會設定為 DBPROPSTATUS_BADVALUE。 在執行/準備時會進行驗證。 同樣地，當針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本連接設定查詢通知屬性時，會引發 DB_S_ERRORSOCCURED。 狀態值在這種情況下是 DBPROPSTATUS_NOTSUPPORTED。  
   
  初始化訂閱並不保證後續的訊息能成功傳遞。 此外，系統也不會對所指定服務名稱的有效性進行檢查。  
   
 > [!NOTE]  
 >  陳述式的準備永遠都不會初始化訂閱，只有陳述式的執行才會造成初始化，此外使用 OLE DB 核心服務也不會影響查詢通知。  
   
- 如需有關 DBPROPSET_SQLSERVERROWSET 屬性集的詳細資訊，請參閱 <<c0> [ 資料列集屬性和行為](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)。  
+ 如需 DBPROPSET_SQLSERVERROWSET 屬性集的詳細資訊，請參閱資料列[集屬性和行為](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驅動程式  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援查詢通知，透過三個新屬性來加入[SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md)並[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)函式：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式透過將三個新屬性新增至[SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md)和[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)函數，來支援查詢通知：  
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
   
@@ -113,7 +113,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- 如果 SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT 和 SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS 並非 NULL，則每次執行命令時，都會將包含上述定義的三個屬性的查詢通知 TDS 標頭傳送到伺服器。 如果其中任一項為 Null，則不會傳送標頭，而會傳回 SQL_SUCCESS_WITH_INFO。 驗證發生於[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)， **SqlExecDirect**，並**SqlExecute**，則所有失敗如果不是有效屬性。 同樣地，當針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本設定這些查詢通知屬性時，執行會失敗且引發 SQL_SUCCESS_WITH_INFO。  
+ 如果 SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT 和 SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS 並非 NULL，則每次執行命令時，都會將包含上述定義的三個屬性的查詢通知 TDS 標頭傳送到伺服器。 如果其中任一項為 Null，則不會傳送標頭，而會傳回 SQL_SUCCESS_WITH_INFO。 驗證會在[SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360)函式、 **SqlExecDirect**和**SqlExecute**上進行，而且如果屬性無效，這些會失敗。 同樣地，當針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本設定這些查詢通知屬性時，執行會失敗且引發 SQL_SUCCESS_WITH_INFO。  
   
 > [!NOTE]  
 >  訂閱永遠都不會因為準備陳述式而初始化，但可能會因為執行陳述式而初始化。  
@@ -131,7 +131,7 @@ RECEIVE * FROM MyQueue
   
  如果訂閱要求是針對批次或預存程序所建立的，就會針對批次或預存程序內執行的每個陳述式建立個別的訂閱要求。 EXECUTE 陳述式不會註冊通知，不過會將通知要求傳送至執行的命令。 如果它是批次，內容就會套用至執行的陳述式，而且適用上述的相同規則。  
   
- 提交的查詢通知由同一位使用者在相同的資料庫內容下提交且具有相同的範本、 相同的參數值、 相同通知識別碼和相同的傳送位置的現有的作用中訂用帳戶，將會更新現有的訂用帳戶，重設新指定的逾時。這表示，如果針對相同的查詢要求通知，則只有一個會傳送通知。 這適用於批次中重複的查詢，或預存程序中多次呼叫的查詢。  
+ 提交在相同資料庫內容下由相同使用者提交之通知的查詢，並具有相同的範本、相同的參數值、相同的通知識別碼，以及現有作用中訂閱的相同傳遞位置，將會更新現有的訂用帳戶，重設新指定的超時時間。這表示如果要求相同查詢的通知，則只會傳送一則通知。 這適用於批次中重複的查詢，或預存程序中多次呼叫的查詢。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 功能](sql-server-native-client-features.md)  

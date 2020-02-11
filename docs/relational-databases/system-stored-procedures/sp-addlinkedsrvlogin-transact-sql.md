@@ -1,5 +1,5 @@
 ---
-title: sp_addlinkedsrvlogin & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_addlinkedsrvlogin （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68072673"
 ---
-# <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
+# <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   建立或更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本機執行個體登入與遠端伺服器安全性帳戶之間的對應。  
@@ -43,21 +43,21 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
   
 ## <a name="arguments"></a>引數  
  `[ @rmtsrvname = ] 'rmtsrvname'`  
- 這是登入對應所套用的連結伺服器名稱。 *rmtsrvname&lt*已**sysname**，沒有預設值。  
+ 這是登入對應所套用的連結伺服器名稱。 *rmtsrvname*是**sysname**，沒有預設值。  
   
  `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
- 決定是否連接到*rmtsrvname&lt*模擬本機登入或明確提交登入和密碼。 資料類型是**varchar (** 8 **)** ，預設值是 TRUE。  
+ 決定是否藉由模擬本機登入或明確地提交登入和密碼來連接到*rmtsrvname* 。 資料類型為**Varchar （** 8 **）**，預設值為 TRUE。  
   
- 值為 TRUE 可讓您指定登入使用他們自己的認證來連接到*rmtsrvname&lt*，使用*rmtuser&lt*並*rmtpassword&lt*引數被忽略。 FALSE 指定*rmtuser&lt*並*rmtpassword&lt*引數用來連接到*rmtsrvname&lt*指定*locallogin*. 如果*rmtuser&lt*並*rmtpassword&lt*也會設為 NULL、 沒有登入或密碼用來連接到連結的伺服器。  
+ TRUE 值指定登入使用自己的認證來連接到*rmtsrvname*，並忽略*rmtuser*和*rmtpassword*引數。 FALSE 指定*rmtuser*和*rmtpassword*引數用來連接到指定*locallogin*的*rmtsrvname* 。 如果*rmtuser*和*rmtpassword*也設定為 Null，則不會使用登入或密碼來連接到連結的伺服器。  
   
  `[ @locallogin = ] 'locallogin'`  
- 這是本機伺服器上的登入。 *locallogin*已**sysname**，預設值是 NULL。 NULL 可讓您指定這個項目會套用到所有的本機登入，連接到*rmtsrvname&lt*。 如果不是 NULL， *locallogin*可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 登入。 必須以直接方式或透過其被授與存取權限之 Windows 群組的成員資格，來授與 Windows 登入存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的權限。  
+ 這是本機伺服器上的登入。 *locallogin*是**sysname**，預設值是 Null。 Null 指定此專案會套用至所有連接到*rmtsrvname*的本機登入。 如果不是 Null， *locallogin*可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 登入。 必須以直接方式或透過其被授與存取權限之 Windows 群組的成員資格，來授與 Windows 登入存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的權限。  
   
  `[ @rmtuser = ] 'rmtuser'`  
- 用來連接到遠端登入*rmtsrvname&lt*當@useself為 FALSE。 遠端伺服器時的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不使用 Windows 驗證*rmtuser&lt*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入。 *rmtuser&lt*已**sysname**，預設值是 NULL。  
+ 這是當為 FALSE 時@useself ，用來連接到*rmtsrvname*的遠端登入。 當遠端伺服器是不使用 Windows 驗證[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的實例時， *rmtuser*就是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入。 *rmtuser*是**sysname**，預設值是 Null。  
   
  `[ @rmtpassword = ] 'rmtpassword'`  
- 密碼相關聯*rmtuser&lt*。 *rmtpassword&lt*已**sysname**，預設值是 NULL。  
+ 這是與*rmtuser*相關聯的密碼。 *rmtpassword*是**sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -66,11 +66,12 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  當使用者登入本機伺服器並執行存取連結伺服器資料表的分散式查詢時，本機伺服器必須代表使用者登入連結伺服器來存取該資料表。 使用 sp_addlinkedsrvlogin 來指定本機伺服器用來登入連結伺服器的登入認證。  
   
 > [!NOTE]  
->  若要在連結的伺服器上使用資料表時建立最佳查詢計畫，查詢處理器必須具有連結伺服器的資料分佈統計資料。 對於資料表之任何資料行擁有受限權限的使用者可能沒有足夠的權限來取得所有有用的統計資料，而且可能會收到效率較低的查詢計畫並遇到效能不佳的情況。 如果連結的伺服器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，則使用者必須擁有資料表，或者使用者必須是連結伺服器之系統管理員 (sysadmin) 固定伺服器角色、db_owner 固定資料庫角色或 db_ddladmin 固定資料庫角色的成員，才能取得所有可用的統計資料。 SQL Server 2012 SP1 會修改取得統計資料的權限限制，以及允許具有 SELECT 權限的使用者存取可透過 DBCC SHOW_STATISTICS 提供的統計資料。 如需詳細資訊，請參閱下的 [權限] 區段[DBCC SHOW_STATISTICS &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)。  
+>  若要在連結的伺服器上使用資料表時建立最佳查詢計畫，查詢處理器必須具有連結伺服器的資料分佈統計資料。 對於資料表之任何資料行擁有受限權限的使用者可能沒有足夠的權限來取得所有有用的統計資料，而且可能會收到效率較低的查詢計畫並遇到效能不佳的情況。 如果連結的伺服器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，則使用者必須擁有資料表，或者使用者必須是連結伺服器之系統管理員 (sysadmin) 固定伺服器角色、db_owner 固定資料庫角色或 db_ddladmin 固定資料庫角色的成員，才能取得所有可用的統計資料。 SQL Server 2012 SP1 會修改取得統計資料的權限限制，以及允許具有 SELECT 權限的使用者存取可透過 DBCC SHOW_STATISTICS 提供的統計資料。 如需詳細資訊，請參閱[DBCC SHOW_STATISTICS &#40;transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)的許可權一節。  
   
- 藉由執行 sp_addlinkedserver，自動在本機伺服器的所有登入及連結伺服器的遠端登入之間建立預設對應。 預設對應指出代表登入連接至連結伺服器時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用本機登入的使用者認證。 這相當於執行使用 sp_addlinkedsrvlogin@useself設定為 **，則為 true**連結的伺服器，而不指定本機使用者名稱。 sp_addlinkedsrvlogin 僅適用於變更預設對應或新增特定本機登入的對應。 若要刪除預設對應或任何其他對應，請使用 sp_droplinkedsrvlogin。  
+ 藉由執行 sp_addlinkedserver，自動在本機伺服器的所有登入及連結伺服器的遠端登入之間建立預設對應。 預設對應指出代表登入連接至連結伺服器時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用本機登入的使用者認證。 這相當於針對連結伺服器執行@useself設定為**true**的 sp_addlinkedsrvlogin，而不指定本機使用者名稱。 sp_addlinkedsrvlogin 僅適用於變更預設對應或新增特定本機登入的對應。 若要刪除預設對應或任何其他對應，請使用 sp_droplinkedsrvlogin。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不需要使用 sp_addlinkedsrvlogin 來建立預定的登入對應，而是在下列所有條件都存在時，可以自動利用發出查詢之使用者的 Windows 安全性認證 (Windows 使用者名稱及密碼) 來連接至連結伺服器：  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不需要使用 sp_addlinkedsrvlogin 來建立預定的登入對應，而是在下列所有條件都存在時，可以自動利用發出查詢之使用者的 Windows 安全性認證 (Windows 使用者名稱及密碼) 來連接至連結伺服器：  
   
 -   使用者利用 Windows 驗證模式連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
@@ -85,7 +86,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
   
  sp_addlinkedsrvlogin 無法在使用者自訂交易內執行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要伺服器的 ALTER ANY LOGIN 權限。  
   
 ## <a name="examples"></a>範例  
@@ -97,7 +98,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 EXEC sp_addlinkedsrvlogin 'Accounts';  
 ```  
   
- 或  
+ Or  
   
 ```  
 EXEC sp_addlinkedsrvlogin 'Accounts', 'true';  
@@ -117,9 +118,9 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'false', 'Domain\Mary', 'MaryP', 'd89q3w4u
 >  這個範例不使用 Windows 驗證。 密碼會以未經加密的方式傳輸。 在儲存於磁碟的資料來源定義和指令碼中、備份中和記錄檔中，可能看得見密碼。 請勿在這種連接中使用管理員密碼。 如需您環境的特定安全性指引，請洽詢網路管理員。  
   
 ## <a name="see-also"></a>另請參閱  
- [連結的伺服器目錄檢視&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
+ [連結伺服器目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_droplinkedsrvlogin &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
+ [sp_droplinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 540cf25a150349c7b6399975d20d10bc202ed935
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952176"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>加密金鑰 (SSRS 原生模式)
@@ -28,7 +28,7 @@ ms.locfileid: "71952176"
   
 -   設定新的報表伺服器執行個體，來共用或使用現有的報表伺服器資料庫。  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式。  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式。  
   
 > [!IMPORTANT]  
 >  定期變更 Reporting Services 加密金鑰是安全性最佳作法。 建議您在進行 Reporting Services 的主要版本升級之後，立即變更金鑰。 在升級之後變更金鑰可將升級循環以外，由變更 Reporting Services 加密金鑰所造成的其他服務中斷減至最少。  
@@ -48,10 +48,10 @@ ms.locfileid: "71952176"
  **備份**  
  將對稱金鑰複製到您指定的檔案。 對稱金鑰絕不會以純文字的方式儲存。 您必須輸入密碼來保護該檔案。  
   
- **Restore**  
+ **還原**  
  將對稱金鑰先前儲存的副本套用到報表伺服器資料庫。 您必須提供密碼來解除鎖定該檔案。  
   
- 您目前連接到報表伺服器執行個體之對稱金鑰的先前副本，已用還原的版本加以覆寫。 還原對稱金鑰之後，您必須初始化使用報表伺服器資料庫的所有報表伺服器。 如需初始化報表伺服器的詳細資訊，請參閱[初始化報表&#40;伺服器 SSRS&#41;Configuration Manager](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
+ 您目前連接到報表伺服器執行個體之對稱金鑰的先前副本，已用還原的版本加以覆寫。 還原對稱金鑰之後，您必須初始化使用報表伺服器資料庫的所有報表伺服器。 如需初始化報表伺服器的詳細資訊，請參閱[&#40;SSRS Configuration Manager&#41;初始化報表伺服器](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
  **更改**  
  重新建立對稱金鑰，並重新加密報表伺服器資料庫中的所有加密值。 請務必在重新建立對稱金鑰之前，先停止報表伺服器服務。  
@@ -60,7 +60,7 @@ ms.locfileid: "71952176"
   
  請注意，如果您有許多資料來源和訂閱，重新產生對稱金鑰可能是一個長時間執行的處理序。  
   
- **Delete**  
+ **刪除**  
  刪除對稱金鑰和所有加密的內容，其中包含連接字串和預存認證。 如果您無法還原對稱金鑰，就應只刪除該金鑰。  
   
  刪除對稱金鑰之後，您必須重新輸入遺漏的連接字串和報表中的預存認證，以及不再具有這些值的共用資料來源。 您也必須更新使用儲存加密資料之傳遞延伸模組的所有訂閱。 其中包含檔案共用傳遞延伸模組，以及使用加密值的任何協力廠商傳遞延伸模組。  
@@ -68,10 +68,10 @@ ms.locfileid: "71952176"
  沒有自動的方式能更新此資訊。 使用預存認證和連接字串的每個報表、訂閱以及共用資料來源，都必須一次更新一個。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 組態管理員 F1 說明主題&#40;SSRS 原生&#41;模式](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Reporting Services 組態管理員 &#40;SSRS 原生模式的 F1 說明主題&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [刪除和重新建立加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [初始化報表伺服器 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [將報表伺服器初始化 &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [將加密的報表伺服器資料儲存 &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

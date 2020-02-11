@@ -1,5 +1,5 @@
 ---
-title: sp_get_query_template (TRANSACT-SQL) |Microsoft Docs
+title: sp_get_query_template （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124075"
 ---
-# <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
+# <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回查詢的參數化格式。 傳回的結果會模擬使用強制參數化所產生之參數化形式的查詢。 當您建立 TEMPLATE 計畫指南時，主要，則會使用 sp_get_query_template。  
+  傳回查詢的參數化格式。 傳回的結果會模擬使用強制參數化所產生之參數化形式的查詢。 sp_get_query_template 主要用於當您建立 TEMPLATE 計畫指南時。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,24 +43,24 @@ sp_get_query_template
   
 ## <a name="arguments"></a>引數  
  '*query_text*'  
- 這是要產生參數化版本的查詢。 '*query_text*' 必須括在單引號中，且前面必須有 N Unicode 規範。 N'*query_text*' 的值指派給@querytext參數。 這屬於類型**nvarchar （max)** 。  
+ 這是要產生參數化版本的查詢。 '*query_text*' 必須以單引號括住，且前面加上 N Unicode 規範。 N '*query_text*' 是指派給@querytext參數的值。 這是**Nvarchar （max）** 類型。  
   
  @templatetext  
- 是輸出參數的型別**nvarchar （max)** 指示，以接收的參數化的格式提供*query_text*字串常值。  
+ 是**Nvarchar （max）** 類型的輸出參數，如所示，以字串常值的形式接收*query_text*的參數化格式。  
   
  @parameters  
- 是輸出參數的型別**nvarchar （max)** 指示，以接收中已參數化之參數名稱和資料類型的字串常值提供@templatetext。  
+ 是**Nvarchar （max）** 類型的輸出參數，如所示，用來接收已參數化之參數名稱和資料類型的字串常值@templatetext。  
   
 ## <a name="remarks"></a>備註  
  當發生下列情況時，sp_get_query_template 會傳回錯誤：  
   
--   它不會參數化中的任何常數常值*query_text*。  
+-   它不會將*query_text*中的任何常數常值參數化。  
   
--   *query_text*是 NULL，不是 Unicode 字串，語法無效或無法編譯。  
+-   *query_text*為 Null，而不是 Unicode 字串、語法無效或無法編譯。  
   
- 如果 sp_get_query_template 傳回錯誤，它不會修改的值@templatetext和@parameters輸出參數。  
+ 如果 sp_get_query_template 傳回錯誤，則不會修改@templatetext和@parameters輸出參數的值。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 public 資料庫角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
@@ -114,7 +114,7 @@ SELECT @my_parameters;
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [使用計畫指南指定查詢參數化行為](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   
   

@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f6c2580e17c204b534ec4c8ebadec3a1e992a4d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196460"
 ---
 # <a name="delete-user-defined-functions"></a>刪除使用者定義函數
@@ -42,7 +42,7 @@ ms.locfileid: "68196460"
   
 -   如果有計算資料行參考這個函數，而且已經產生索引，就無法刪除函數。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要函數所屬結構描述的 ALTER 權限，或函數的 CONTROL 權限。  
@@ -68,7 +68,7 @@ ms.locfileid: "68196460"
 5.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
   
     > [!IMPORTANT]  
-    >  在 [刪除物件]  對話方塊中按一下 [顯示相依性]  ，開啟 _function_name_[相依性]  對話方塊。 這就會顯示相依於函數的所有物件以及函數所相依的所有物件。  
+    >  按一下 [**刪除物件**] 對話方塊中的 [**顯示**相依性]，開啟 [ _function_name_相依**性] 對話方塊**。 這就會顯示相依於函數的所有物件以及函數所相依的所有物件。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

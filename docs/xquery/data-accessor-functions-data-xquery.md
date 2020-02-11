@@ -1,5 +1,5 @@
 ---
-title: data 函數 (XQuery) |Microsoft Docs
+title: data 函數（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7376c57f809fa97168b27b158678d931a696b5df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038976"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>資料存取子函式 - data (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  傳回指定的每個項目的具類型的值 *$arg*。  
+  針對 *$arg*所指定的每個專案，傳回具類型的值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -55,19 +55,19 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
   
 -   如果屬性節點是具有 XML 結構描述類型的類型，它的具類型值也隨之為具類型值。  
   
--   如果屬性節點是不具型別，其具類型的值相當於傳回的執行個體的字串值**xdt: untypedatomic**。  
+-   如果 [屬性] 節點不具類型，其具類型的值會等於當做 xdt 的實例傳回的字串值 **： untypedAtomic**。  
   
--   如果尚未輸入項目節點，其具類型的值相當於傳回的執行個體的字串值**xdt: untypedatomic**。  
+-   如果尚未輸入元素節點，其具類型的值會等於當做**xdt： untypedAtomic**的實例傳回的字串值。  
   
  下列規定適用於具類型的元素節點：  
   
--   如果項目具有簡單內容型別**data （)** 傳回項目的具類型的值。  
+-   如果專案具有簡單的內容類型， **data （）** 就會傳回元素的具類型值。  
   
--   如果節點是複雜類型，包括 xs: anytype， **data （)** 傳回靜態錯誤。  
+-   如果節點是複雜型別（包括 xs： anyType）， **data （）** 就會傳回靜態錯誤。  
   
- 雖然使用**data （)** 函式通常是選擇性的如下列範例中，指定所示**data （)** 函式可明確增加查詢可讀性。 如需詳細資訊，請參閱 < [XQuery 基本概念](../xquery/xquery-basics.md)。  
+ 雖然使用**data （）** 函數通常是選擇性的，如下列範例所示，指定**data （）** 函數會明確增加查詢可讀性。 如需詳細資訊，請參閱[XQuery 基本概念](../xquery/xquery-basics.md)。  
   
- 您無法指定**data （)** 上建構 XML，如下列所示：  
+ 您不能在已構造的 XML 上指定**data （）** ，如下所示：  
   
 ```  
 declare @x xml  
@@ -76,10 +76,10 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
 ```  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型資料行中的 AdventureWorks 資料庫。  
+ 本主題針對儲存在 AdventureWorks 資料庫的各種**xml**類型資料行中的 xml 實例提供 XQuery 範例。  
   
 ### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. 使用 data() XQuery 函數擷取節點的具類型值  
- 下列查詢說明如何**data （)** 函數用來擷取屬性、 項目，以及文字節點的值：  
+ 下列查詢說明如何使用**data （）** 函數來取出屬性、專案和文位元組點的值：  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -104,7 +104,7 @@ WHERE ProductModelID = 19
 <Root ProductID="19" Feature="parts and labor"/>  
 ```  
   
- 如所述， **data （)** 函式是選擇性的當您建構屬性時。 如果您未指定**data （)** 函式，它會隱含假設。 下列查詢產生與上一個查詢相同的結果：  
+ 如前所述，當您要建立屬性時， **data （）** 函數是選擇性的。 如果您未指定**data （）** 函數，則會隱含假設。 下列查詢產生與上一個查詢相同的結果：  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -123,9 +123,9 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 下列範例說明中的執行個體**data （)** 函式是必要。  
+ 下列範例說明需要**data （）** 函數的實例。  
   
- 在下列查詢中， **$pd / pd/p1:specifications/material / 材料**會傳回 <`Material`> 項目。 此外，**資料 ($pd/pd/p1:specifications/material/Material)** 傳回的字元資料類型為 xdt: untypedatomic，因為 <`Material`> 是不具型別。 當輸入是不具型別、 結果**data （)** 型別為**xdt: untypedatomic**。  
+ 在下列查詢中， **$pd/p1：規格/材質**會傳回 <`Material`> 元素。 此外，**資料（$pd/p1：規格/材質）** 會傳回類型為 Xdt： untypedAtomic 的字元資料， `Material`因為 <> 不具類型。 當輸入不具類型時， **data （）** 的結果會輸入為**xdt： untypedAtomic**。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -149,7 +149,7 @@ WHERE ProductModelID = 19
 </Root>  
 ```  
   
- 在下列查詢中， **data($pd/p1:Features/wm:Warranty)** 會傳回靜態錯誤，因為 <`Warranty`> 是複雜類型的項目。  
+ 在下列查詢中，**資料（$pd/p1： Features/wm：質保）** 會傳回靜態錯誤，因為 <`Warranty`> 是複雜的類型元素。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -167,6 +167,6 @@ WHERE ProductModelID = 23
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [針對 xml 資料類型的 XQuery 函式](../xquery/xquery-functions-against-the-xml-data-type.md)  
+ [針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

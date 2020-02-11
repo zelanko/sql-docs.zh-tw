@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 237838d4d9780c6180adebcae264949b10af94e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63061235"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile 事件類別
@@ -59,7 +59,7 @@ ms.locfileid: "63061235"
 |XactSequence|`bigint`|描述目前交易的 Token。|50|是|  
   
 ## <a name="see-also"></a>另請參閱  
- [SP:Recompile 事件類別](sp-recompile-event-class.md)   
+ [SP：重新編譯事件類別](sp-recompile-event-class.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

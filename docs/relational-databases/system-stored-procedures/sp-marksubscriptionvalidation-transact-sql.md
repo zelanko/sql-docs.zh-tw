@@ -1,5 +1,5 @@
 ---
-title: sp_marksubscriptionvalidation & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_marksubscriptionvalidation （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bb8c38d24fbf6c96c61a7b2e83874d15218797c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68092668"
 ---
-# <a name="spmarksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
+# <a name="sp_marksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   將目前開啟交易標示成指定訂閱者的訂閱層級驗證交易。 這個預存程序執行於發行集資料庫的發行者端。  
@@ -40,34 +40,34 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
   
-`[ @subscriber = ] 'subscriber'` 是訂閱者的名稱。 *訂閱者*是 sysname，沒有預設值。  
+`[ @subscriber = ] 'subscriber'`這是訂閱者的名稱。 *訂閱者*是 sysname，沒有預設值。  
   
-`[ @destination_db = ] 'destination_db'` 是目的地資料庫的名稱。 *destination_db*已**sysname**，沒有預設值。  
+`[ @destination_db = ] 'destination_db'`這是目的地資料庫的名稱。 *destination_db*是**sysname**，沒有預設值。  
   
-`[ @publisher = ] 'publisher'` 指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
+`[ @publisher = ] 'publisher'`指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  *發行者*不應該用於所屬的發行集[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
+>  *發行者*不應用於屬於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者的發行集。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
  **sp_marksubscriptionvalidation**用於異動複寫中。  
   
  **sp_marksubscriptionvalidation**不支援非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者。  
   
- 針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者，您無法執行**sp_marksubscriptionvalidation**從明確交易內。 這是因為在用來存取發行者的連結伺服器連接上，不支援使用明確的交易。  
+ 對於非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者，您無法從明確交易內執行**sp_marksubscriptionvalidation** 。 這是因為在用來存取發行者的連結伺服器連接上，不支援使用明確的交易。  
   
- **sp_marksubscriptionvalidation**必須一起搭配使用[sp_article_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)，指定值**1**如*subscription_level*，而且可以搭配其他呼叫**sp_marksubscriptionvalidation**來標示其他訂閱者目前開啟的交易。  
+ **sp_marksubscriptionvalidation**必須與[sp_article_validation &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)一起使用，針對*subscription_level*指定**1**的值，而且**可以與其他**呼叫一起使用，以對其他訂閱者標記目前開啟的交易。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_marksubscriptionvalidation**。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_marksubscriptionvalidation**。  
   
 ## <a name="example"></a>範例  
- 下列查詢適用於發行資料庫，以用來封裝訂閱層級的驗證命令。 這些命令由指定訂閱者的散發代理程式所收取。 請注意，第一項交易會驗證 '**art1**'，第二個交易會驗證'**art2**'。 也請注意，呼叫**sp_marksubscriptionvalidation**並[sp_article_validation &#40;-&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)已封裝在交易中。 我們建議您只有一個呼叫[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)每筆交易。 這是因為[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)對來源資料表在交易期間保持共用的資料表鎖定。 您應該盡量縮短交易時間，盡可能使其同時發生。  
+ 下列查詢適用於發行資料庫，以用來封裝訂閱層級的驗證命令。 這些命令由指定訂閱者的散發代理程式所收取。 請注意，第一個交易會驗證發行項 '**art1**'，而第二筆交易則會驗證 '**art2**'。 另請注意， **sp_marksubscriptionvalidation**和[sp_article_validation &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)的呼叫已封裝在交易中。 我們建議您只在每一筆交易[sp_article_validation &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)呼叫一次。 這是因為在交易期間， [sp_article_validation &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)保存來源資料表的共用資料表鎖定。 您應該盡量縮短交易時間，盡可能使其同時發生。  
   
 ```  
 begin tran  

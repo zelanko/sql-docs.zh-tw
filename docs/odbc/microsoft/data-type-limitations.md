@@ -1,5 +1,5 @@
 ---
-title: 資料類型的限制 |Microsoft Docs
+title: 資料類型限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64d16a9181c475427677371d1e6e180570225b7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096457"
 ---
 # <a name="data-type-limitations"></a>資料類型限制
-Microsoft ODBC 桌面資料庫驅動程式以強制資料類型有以下限制：  
+Microsoft ODBC 桌面資料庫驅動程式會對資料類型施加下列限制：  
   
 |資料類型|描述|  
 |---------------|-----------------|  
-|所有的資料類型|類型轉換失敗可能會造成影響的資料行設為 NULL。|  
-|BINARY|建立零長度的二進位資料行時，實際上會傳回 255 個位元組的二進位資料行。|  
-|DATE|DATE 資料類型無法轉換成另一種資料類型 （或本身），由轉換函式。|  
-|十進位 （精確數值）|不支援。|  
-|浮點資料類型|浮點數中的小數位數可能會受限於數字格式的 Windows 控制台中的國際區段中設定。|  
-|NUMERIC|支援最大有效位數和小數位數 28。|  
-|TIMESTAMP|TIMESTAMP 資料類型無法轉換以本身，CONVERT 函式。|  
-|TINYINT|TINYINT 值一律是不帶正負號。|  
-|零長度字串|DBASE、 Microsoft Excel、 Paradox、 或 Textdriver 使用時，長度為零的字串插入資料行實際插入 null 值改為。|
+|所有資料類型|類型轉換失敗可能會導致受影響的資料行設定為 Null。|  
+|BINARY|建立長度為零的二進位資料行實際上會傳回255位元組的二進位資料行。|  
+|日期|DATE 資料類型無法透過 CONVERT 函數轉換成另一個資料類型（或其本身）。|  
+|DECIMAL （精確數值）|不支援。|  
+|浮點資料類型|浮點數中的小數位數，可能會受限於 Windows [控制台] 的 [國際] 區段中設定的數位格式。|  
+|NUMERIC|支援最大有效位數和小數位數28。|  
+|timestamp|TIMESTAMP 資料類型無法透過 CONVERT 函數轉換成本身。|  
+|TINYINT|TINYINT 值一律不帶正負號。|  
+|長度為零的字串|使用 dBASE、Microsoft Excel、Paradox 或 Textdriver 時，將長度為零的字串插入資料行中，實際上會改為插入 Null。|

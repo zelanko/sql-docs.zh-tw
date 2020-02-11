@@ -1,5 +1,5 @@
 ---
-title: C 轉換為 SQL：時間 |Microsoft Docs
+title: C 到 SQL：時間 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,30 +15,30 @@ ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4a3734ff8d9f0cb120e1d33433ee3a301bb59ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019298"
 ---
-# <a name="c-to-sql-time"></a>C 轉換為 SQL：Time
-時間 ODBC C 資料類型的識別項是：  
+# <a name="c-to-sql-time"></a>C 到 SQL：時間
+Time ODBC C 資料類型的識別碼為：  
   
  SQL_C_TYPE_TIME  
   
- 下表顯示 ODBC SQL 時間 C 資料可能會轉換成的資料類型。 如需資料行和資料表中的詞彙說明，請參閱 <<c0> [ 轉換將資料從 C 到 SQL 資料類型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
+ 下表顯示 C 資料可能轉換成的 ODBC SQL 資料類型。 如需資料表中的資料行和詞彙的說明，請參閱將[資料從 C 轉換成 SQL 資料類型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
   
-|SQL 型別識別項|測試|SQLSTATE|  
+|SQL 類型識別碼|測試|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|資料行的位元組長度 > = 8<br /><br /> 資料行的位元組長度 < 8<br /><br /> 資料值不是有效的時間|n/a<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|資料行的字元長度 > = 8<br /><br /> 資料行的字元長度 < 8<br /><br /> 資料值不是有效的時間|n/a<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_TIME|資料值為有效的時間<br /><br /> 資料值不是有效的時間|n/a<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|資料值為有效的時間 [a]<br /><br /> 資料值不是有效的時間|n/a<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|資料行位元組長度 >= 8<br /><br /> 資料行位元組長度 < 8<br /><br /> 資料值不是有效的時間|n/a<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|資料行字元長度 >= 8<br /><br /> 資料行字元長度 < 8<br /><br /> 資料值不是有效的時間|n/a<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_TIME|資料值是有效的時間<br /><br /> 資料值不是有效的時間|n/a<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|資料值是有效的時間 [a]<br /><br /> 資料值不是有效的時間|n/a<br /><br /> 22007|  
   
- [a] 部分的時間戳記設為目前日期和時間戳記部分已設定為零的小數秒的日期。  
+ [a] 時間戳記的日期部分設定為目前的日期，而時間戳記的小數秒部分設定為零。  
   
- 如需哪些值是有效 SQL_C_TYPE_TIME 結構中的資訊，請參閱[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)稍早在本附錄中。  
+ 如需 SQL_C_TYPE_TIME 結構中有效值的相關資訊，請參閱本附錄稍早的[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)。  
   
- 當時間 C 資料轉換成字元 SQL 資料時，產生的字元資料是在 「*hh*:*mm*:*ss*」 格式。  
+ 當時間 C 資料轉換成字元 SQL 資料時，產生的字元資料會採用 "*hh*：*mm*：*ss*" 格式。  
   
- 從 C 資料類型，並假設資料緩衝區的大小，是時間 C 資料類型大小的時間轉換的資料時，驅動程式就會忽略長度/指標值。 傳入的長度/指標值無效*Strlen_or_ind&lt*中的引數**SQLPutData**並使用指定的緩衝區中*StrLen_or_IndPtr*引數中**SQLBindParameter**。 使用指定的資料緩衝區*DataPtr*中的引數**SQLPutData**並*ParameterValuePtr*中的引數**SQLBindParameter**.
+ 當您從 time C 資料類型轉換資料時，驅動程式會忽略長度/指標值，並假設資料緩衝區的大小是 C 資料類型的大小。 長度/指標值會傳入**SQLPutData**中的*StrLen_or_Ind*引數，以及在**SQLBindParameter**中使用*StrLen_or_IndPtr*引數指定的緩衝區。 資料緩衝區會使用**SQLPutData**中的*DataPtr*引數和**SQLBindParameter**中的*ParameterValuePtr*引數來指定。

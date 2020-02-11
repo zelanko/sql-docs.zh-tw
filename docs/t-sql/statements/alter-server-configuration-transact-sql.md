@@ -21,10 +21,10 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72006072"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
@@ -146,7 +146,7 @@ NUMANODE = \<NUMA_node_range_spec>
 DIAGNOSTICS LOG  
 啟動或停止記錄 sp_server_diagnostics 程序所擷取的診斷資料。 這個引數也會設定 SQLDIAG 記錄設定參數，例如，記錄檔換用計數、記錄檔大小和檔案位置。 如需詳細資訊，請參閱 [檢視及閱讀容錯移轉叢集執行個體診斷記錄檔](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)。  
   
-ON  
+開啟  
 在 PATH 檔案選項中指定的位置上，啟動 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 記錄診斷資料。 這個引數是預設值。  
   
 OFF  
@@ -220,7 +220,7 @@ LOCAL
   
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 起)。    
   
-ON  
+開啟  
 啟用緩衝集區延伸模組選項。 此選項會使用非揮發性儲存體來擴充緩衝集區的大小。 非揮發性儲存體 (例如固態硬碟 (SSD)) 會在集區中保存清除資料頁面。 如需此功能的詳細資訊，請參閱[緩衝集區延伸](../../database-engine/configure-windows/buffer-pool-extension.md)。並非每個 SQL Server 版本都提供緩衝集區延伸。 如需詳細資訊，請參閱 [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 FILENAME = 'os_file_path_and_name'  
@@ -241,7 +241,7 @@ OFF
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起)。  
   
-ON  
+開啟  
 啟用自動資料分割，將大型的 NUMA 硬體節點分割成較小的 NUMA 節點。 您需要重新啟動資料庫引擎，才能變更執行中的值。  
   
 OFF  
@@ -260,7 +260,7 @@ OFF
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起)。
 
-ON <br>
+開啟 <br>
 啟用所有屬於[記憶體內部資料庫](../../relational-databases/in-memory-database.md)功能系列的執行個體層級功能。 目前這包括[經記憶體最佳化的 tempdb 中繼資料](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)和[混合式緩衝集區](../../database-engine/configure-windows/hybrid-buffer-pool.md)。 需要重新開機才會生效。
 
 OFF <br>
@@ -294,7 +294,7 @@ HYBRID_BUFFER_POOL = ON | OFF <br>
   
 ## <a name="examples"></a>範例  
   
-|類別目錄|代表性語法元素|  
+|類別|代表性語法元素|  
 |--------------|------------------------------|  
 |[設定處理序相似性](#Affinity)|CPU • NUMANODE • AUTO|  
 |[設定診斷記錄檔選項](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  

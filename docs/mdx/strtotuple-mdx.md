@@ -1,5 +1,5 @@
 ---
-title: StrToTuple (MDX) |Microsoft Docs
+title: StrToTuple （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 232d1e94892165430867ec5217f8c87ccd625b48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036710"
 ---
 # <a name="strtotuple-mdx"></a>StrToTuple (MDX)
 
 
-  傳回多維度運算式 (MDX） 格式化的字串所指定的 tuple。  
+  傳回由多維度運算式（MDX）格式化字串所指定的元組。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,9 +32,9 @@ StrToTuple(Tuple_Specification [,CONSTRAINED] )
  直接或間接指定 Tuple 的有效字串運算式。  
   
 ## <a name="remarks"></a>備註  
- **StrToTuple**函式會傳回指定的集合。 **StrToTuple**函式通常會搭配使用者定義函數使用來自外部函數的 tuple 規格傳回至 MDX 陳述式。  
+ **StrToTuple**函數會傳回指定的集合。 **StrToTuple**函數通常會搭配使用者自訂函數使用，將來自外部函數的元組規格傳回至 MDX 語句。  
   
--   使用 CONSTRAINED 旗標時，Tuple 規格必須包含限定或未限定成員名稱。 這個旗標用於降低遭到由指定字串發動資料隱碼攻擊的風險。 如果提供的字串不是直接解析成限定或未限定成員名稱，就會出現下列錯誤：「 CONSTRAINED 所加諸的限制違反了 STRTOTUPLE 函數中的旗標。 」  
+-   使用 CONSTRAINED 旗標時，Tuple 規格必須包含限定或未限定成員名稱。 這個旗標用於降低遭到由指定字串發動資料隱碼攻擊的風險。 如果所提供的字串不能直接解析成限定或未限定成員名稱，會出現下列錯誤：「違反了 STRTOTUPLE 函數中 CONSTRAINED 旗標所加諸的限制。」  
   
 -   沒有使用 CONSTRAINED 旗標時，指定的 Tuple 會解析成傳回 Tuple 的有效 MDX 運算式。  
   
@@ -75,6 +75,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

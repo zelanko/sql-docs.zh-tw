@@ -20,10 +20,10 @@ ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c3ec0de44aacbcfb2d4e6b96d7525da900017e01
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253546"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (擴充預存程序 API)
@@ -58,7 +58,7 @@ len
  *srvproc*  
  這是 SRV_PROC 結構的指標，也是特定用戶端連接的控制代碼 (在這個狀況之下，該控制代碼會收到遠端預存程序呼叫)。 擴充預存程序 API 程式庫會使用該結構所包含的資訊來管理應用程式與用戶端之間的通訊和資料。  
   
- *位*  
+ *n*  
  表示要設定的參數數目。 第一個參數是 1。  
   
  *data*  
@@ -67,7 +67,7 @@ len
  *len*  
  指定要傳回之資料的實際長度。 如果參數的資料類型具有固定長度，而且不允許 null 值 (例如 *srvbit* 或 *srvint1*)，則會忽略 *len*。  
   
-## <a name="returns"></a>Returns  
+## <a name="returns"></a>傳回值  
  如果參數值設定成功則會傳回 SUCCEED，否則會傳回 FAIL。 目前沒有任何遠端預存程序、沒有第 *n* 個遠端預存程序參數、此參數並非傳回參數，以及 *len* 引數不合法時，會傳回 FAIL。  
   
  如果 *len* 是 0，它會傳回 NULL。 將 *len* 設定為 0 是將 NULL 傳回給用戶端的唯一方法。  

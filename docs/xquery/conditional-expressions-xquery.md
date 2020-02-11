@@ -1,5 +1,5 @@
 ---
-title: 條件運算式 (XQuery) |Microsoft Docs
+title: 條件運算式（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -20,16 +20,16 @@ ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039014"
 ---
 # <a name="conditional-expressions-xquery"></a>條件運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XQuery 支援下列的條件式**if--e**陳述式：  
+  XQuery 支援下列條件**式 if-then-else**語句：  
   
 ```  
 if (<expression1>)  
@@ -39,7 +39,7 @@ else
   <expression3>  
 ```  
   
- 視 `expression1` 有效的布林值而定，將評估 `expression2` 或 `expression3`。 例如:  
+ 視 `expression1` 有效的布林值而定，將評估 `expression2` 或 `expression3`。 例如：  
   
 -   如果測試運算式 `expression1` 產生空白時序，結果即為 False。  
   
@@ -49,13 +49,13 @@ else
   
 -   否則，就會引發靜態錯誤。  
   
- 同時應注意下列項目：  
+ 另請注意下列事項：  
   
 -   測試運算式必須在括號內。  
   
--   **其他**必須是運算式。 如果您不需要它，您可以傳回 " ( ) "，如本主題中的範例所說明。  
+-   需要**else**運算式。 如果您不需要它，您可以傳回 " ( ) "，如本主題中的範例所說明。  
   
- 例如，下列查詢針對所指定**xml**類型變數。 **如果**測試條件的 SQL 變數的值 (@v) 內使用中的 XQuery 運算式[（） 函數](../xquery/xquery-extension-functions-sql-variable.md)擴充程式函式。 如果變數的值會是 「 FirstName 」，它會傳回 <`FirstName`> 項目。 否則，它會傳回 <`LastName`> 項目。  
+ 例如，下列查詢是針對**xml**類型變數所指定。 **If**條件會使用[SQL： variable （）函數](../xquery/xquery-extension-functions-sql-variable.md)延伸@v函數，測試 XQuery 運算式內 SQL 變數（）的值。 如果變數值為 "FirstName"，則會傳回 <`FirstName`> 元素。 否則，它會傳回 <`LastName`> 元素。  
   
 ```  
 declare @x xml  
@@ -80,7 +80,7 @@ if ( sql:variable("@v")="FirstName" ) then
 <FirstName>fname</FirstName>  
 ```  
   
- 下列查詢會從特定產品型號的產品目錄描述擷取前兩個功能的描述。 它有更多的功能文件中，新增 <`there-is-more`> 具有空白內容項目。  
+ 下列查詢會從特定產品型號的產品目錄描述擷取前兩個功能的描述。 如果檔中有更多的功能，它會加入具有`there-is-more`空白內容的 <> 元素。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -104,7 +104,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 在上一個查詢中中的條件**如果**運算式會檢查是否有兩個以上的子元素中 <`Features`>。 如果是，它會傳回結果中的 `\<there-is-more/>` 元素。  
+ 在上一個查詢中， **if**運算式中的條件會檢查 <`Features`> 中是否有兩個以上的子項目。 如果是，它會傳回結果中的 `\<there-is-more/>` 元素。  
   
  以下是結果：  
   
@@ -122,7 +122,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- 在下列查詢中，<`Location`> 如果工作中心位置未指定安裝時間，便會傳回 LocationID 屬性值的元素。  
+ 在下列查詢中，如果工作`Location`中心位置未指定設定時數，則會傳回具有 LocationID 屬性的 <> 元素。  
   
 ```  
 SELECT Instructions.query('  
@@ -149,7 +149,7 @@ where ProductModelID=7
 <WorkCenterLocation LocationID="60" />  
 ```  
   
- 此查詢可以撰寫沒有**如果**子句，如下列範例所示：  
+ 您可以不搭配**if**子句來撰寫此查詢，如下列範例所示：  
   
 ```  
 SELECT Instructions.query('  

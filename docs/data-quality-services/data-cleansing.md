@@ -10,10 +10,10 @@ ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 46ca0fe453548cab780d1e2b32c6a8d98a32de11
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251768"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
@@ -99,7 +99,7 @@ ms.locfileid: "75251768"
   
  在清理資料品質專案精靈中匯出 **[匯出]** 頁面上已清理的資料時，您可以透過選取 **[標準化輸出]** 核取方塊，指定是否要以標準化格式匯出已清理的資料。 根據預設，已清理的資料會以標準化格式匯出，亦即，選取該核取方塊。 如需匯出已清理資料的詳細資訊，請參閱[使用 DQS &#40;內部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)。  
   
-##  <a name="Related"></a>相關工作  
+##  <a name="Related"></a> 相關工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  

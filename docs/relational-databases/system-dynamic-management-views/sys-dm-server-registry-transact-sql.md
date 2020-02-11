@@ -1,5 +1,5 @@
 ---
-title: sys.dm_server_registry (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_server_registry （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d8b91540724b30ac42f0f8c4302e58b3d40ec066
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090717"
 ---
-# <a name="sysdmserverregistry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
+# <a name="sysdm_server_registry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回儲存在目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之 Windows 登錄中的組態和安裝資訊。 針對每個登錄機碼各傳回一個資料列。 使用動態管理檢視傳回所需資訊 (例如主機上可用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務) 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的網路組態值。  
@@ -33,12 +33,12 @@ ms.locfileid: "68090717"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|登錄機碼名稱。 可為 Null。|  
-|value_name|**nvarchar(256)**|機碼值名稱。 這是所示的項目**名稱**資料行的登錄編輯程式。 可為 Null。|  
-|value_data|**sql_variant**|索引鍵資料的值。 這是所顯示的值**資料**資料行的指定項目 登錄編輯器。 可為 Null。|  
+|value_name|**nvarchar(256)**|機碼值名稱。 這是 [登錄編輯程式] 的 [**名稱**] 資料行中所顯示的專案。 可為 Null。|  
+|value_data|**sql_variant**|索引鍵資料的值。 這是指定專案之登錄編輯程式的**資料**行中所顯示的值。 可為 Null。|  
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>權限  
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ## <a name="examples"></a>範例  
@@ -89,6 +89,6 @@ WHERE registry_key LIKE N'%SuperSocketNetLib%';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.dm_server_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
+ [dm_server_services &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_delete_database_backuphistory (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_database_backuphistory （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff85b52e0b0ed6715b64287f0c0e5abd5a0ae9c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085807"
 ---
-# <a name="spdeletedatabasebackuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
+# <a name="sp_delete_database_backuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   從備份及還原記錄資料表中刪除指定資料庫的相關資訊。  
@@ -39,7 +39,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @database_name = ] database_name` 指定備份和還原作業所涉及的資料庫的名稱。 *database_name*已**sysname**，沒有預設值。  
+`[ @database_name = ] database_name`指定與備份和還原作業相關的資料庫名稱。 *database_name*是**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -48,7 +48,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
  None  
   
 ## <a name="remarks"></a>備註  
- **sp_delete_database_backuphistory**必須從執行**msdb**資料庫。  
+ **sp_delete_database_backuphistory**必須從**msdb**資料庫中執行。  
   
  這個預存程序會影響下列資料表：  
   
@@ -68,7 +68,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
   
 -   [restorehistory](../../relational-databases/system-tables/restorehistory-transact-sql.md)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
@@ -82,7 +82,7 @@ EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2012';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_delete_backuphistory &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
- [備份記錄與標頭資訊 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
+ [sp_delete_backuphistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
+ [備份歷程記錄和標頭資訊 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

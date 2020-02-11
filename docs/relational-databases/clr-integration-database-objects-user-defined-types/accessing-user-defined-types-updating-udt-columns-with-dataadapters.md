@@ -23,18 +23,18 @@ ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 2154f5f81842cf8cefd5eac71f42837cbf33da31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028384"
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>存取使用者定義型別 - 使用 DataAdapter 更新 UDT 資料行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用支援使用者定義型別 (Udt) 的**System.Data.DataSet**並**System.Data.SqlClient.SqlDataAdapter**來擷取和修改資料。  
+  使用者定義型別（Udt）可透過使用**SqlClient 和 SqlDataAdapter**來取得及修改**資料，藉**此提供支援。  
   
 ## <a name="populating-a-dataset"></a>填入資料集  
- 您可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式來選取 UDT 資料行值，以使用資料配接器填入資料集。 下列範例假設您有**點**定義具有下列結構及某些範例資料的資料表。 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式會建立**點**資料表並插入幾個資料列。  
+ 您可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式來選取 UDT 資料行值，以使用資料配接器填入資料集。 下列範例假設您的**Points**資料表定義了下列結構和一些範例資料。 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]語句會建立**Points**資料表並插入幾個資料列。  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -46,7 +46,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- 下列 ADO.NET 程式碼片段會擷取有效的連接字串，建立新**SqlDataAdapter**，並於其中填入**System.Data.DataTable**使用的資料列的資料從**點**資料表。  
+ 下列 ADO.NET 程式碼片段會抓取有效的連接字串、建立新的**SqlDataAdapter**，然後將**Points**資料表中的資料列填入**system.web** 。  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -63,16 +63,16 @@ da.Fill(datTable);
 ```  
   
 ## <a name="updating-udt-data-in-a-dataset"></a>更新資料集中的 UDT 資料  
- 您可以使用兩種方法來更新中的 UDT 資料行**資料集**:  
+ 您可以使用兩種方法來更新 DataSet 中的 UDT**資料**行：  
   
--   提供自訂**InsertCommand**， **UpdateCommand**並**DeleteCommand**物件**SqlDataAdapter**物件。  
+-   提供**SqlDataAdapter**物件的自訂**InsertCommand**、 **UpdateCommand**和**DeleteCommand**物件。  
   
--   使用命令產生器 (**System.Data.SqlClient.SqlCommandBuilder**) 為您自動建立 INSERT、 UPDATE 和 DELETE 命令。 為了進行衝突偵測，新增**時間戳記**資料行 (別名**rowversion**) 以[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]包含 UDT 的資料表。 **時間戳記**資料類型可讓您將加上版本戳記資料表資料列，而且保證資料庫內是唯一的。 當資料表中的值變更時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動更新受此變更影響之資料列的 8 位元組二進位數字。  
+-   使用命令產生器（**SqlClient. SqlCommandBuilder**）為您自動建立 INSERT、UPDATE 和 DELETE 命令。 若要進行衝突偵測，請將**時間戳記**資料行（別名**rowversion**）新增[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]至包含 UDT 的資料表。 **Timestamp**資料類型可讓您針對資料表中的資料列進行版本戳記，並保證它在資料庫中是唯一的。 當資料表中的值變更時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動更新受此變更影響之資料列的 8 位元組二進位數字。  
   
- 請注意， **SqlCommandBuilder**不會考慮衝突偵測的 UDT，除非發生**時間戳記**基礎資料表中的資料行。 因為 UDT 不一定可比較，所以當使用「比較原始值」選項來產生命令時，不會包括在 WHERE 子句中。  
+ 請注意，除非基礎資料表中有**timestamp**資料行，否則**SqlCommandBuilder**不會考慮衝突偵測的 UDT。 因為 UDT 不一定可比較，所以當使用「比較原始值」選項來產生命令時，不會包括在 WHERE 子句中。  
   
 ### <a name="example"></a>範例  
- 下列範例需要建立第二個表格包含**點**UDT 資料行，以及**時間戳記**資料行。 這兩個資料表都用來說明如何建立自訂的命令物件來更新資料，以及如何使用更新**時間戳記**資料行。 執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以建立第二個資料表，並在其中填入範例資料。  
+ 下列範例需要建立包含**Point** UDT 資料行和**timestamp**資料行的第二個數據表。 這兩個數據表都是用來說明如何建立自訂命令物件來更新資料，以及如何使用**timestamp**資料行進行更新。 執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以建立第二個資料表，並在其中填入範例資料。  
   
 ```  
 CREATE TABLE dbo.Points_ts (id int PRIMARY KEY, p Point, ts timestamp);  
@@ -85,9 +85,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  下列 ADO.NET 範例有兩個方法：  
   
--   **UserProvidedCommands**，示範如何提供**InsertCommand**， **UpdateCommand**，和**DeleteCommand**更新物件**點**中的 UDT**點**資料表 (不含**時間戳記**資料行)。  
+-   **UserProvidedCommands**，它會示範如何提供**InsertCommand**、 **UpdateCommand**和**DeleteCommand**物件，以更新**Points**資料表中的**Point** UDT （不包含**時間戳記**資料行）。  
   
--   **CommandBuilder**，其中示範如何使用**SqlCommandBuilder**中**Points_ts**資料表，其中包含**timestamp**資料行。  
+-   **CommandBuilder**，示範如何在包含**timestamp**資料行的**Points_ts**資料表中使用**SqlCommandBuilder** 。  
   
 ```vb  
 Imports System  

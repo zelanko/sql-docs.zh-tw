@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 744ebc5411e626c083676440502489029e888a28
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798192"
 ---
 # <a name="make-a-target-server"></a>設為目標伺服器
@@ -35,7 +35,7 @@ ms.locfileid: "72798192"
   
      [安全性](#Security)  
   
--   **若要設定目標伺服器，使用：**  
+-   **若要建立目標伺服器，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -45,10 +45,10 @@ ms.locfileid: "72798192"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  具有與 Proxy 相關聯之步驟的散發式作業，而該 Proxy 是在目標伺服器上的 Proxy 帳戶內容下執行 。 請確保符合以下條件，否則與 Proxy 相關聯之作業步驟將不會從主要伺服器下載至目標：  
   
--   主伺服器登錄子機碼 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL server Agent\AllowDownloadedJobsToMatchProxyName** （REG_DWORD）設定為1（true）。 依預設，這個子機碼設為 0 (False)。  
+-   主伺服器登錄子機碼**\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\<SQL Server*instance_name*> \sql server Agent\AllowDownloadedJobsToMatchProxyName** （REG_DWORD）已設定為1（true）。 依預設，這個子機碼設為 0 (False)。  
   
 -   存在於目標伺服器上的 Proxy 帳戶，而該帳戶名稱與執行作業步驟之主要伺服器上的 Proxy 帳戶名稱相同。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72798192"
      若要解決這個錯誤，請確定目標伺服器上有 Proxy 帳戶，且帳戶名稱與執行該作業步驟的主要伺服器 Proxy 帳戶相同。  
   
 ####  <a name="Permissions"></a> 權限  
- `sysadmin`這個程序的執行權限預設會授與系統管理員 () 固定伺服器角色的成員。  
+ 執行此程式的許可權預設為`sysadmin`固定伺服器角色的成員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -71,7 +71,8 @@ ms.locfileid: "72798192"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]、指向 [多重伺服器管理]，然後按一下 [設為目標伺服器]。 **[目標伺服器精靈]** 將引導您執行將此伺服器設定為目標伺服器的程序。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]****、指向 [多重伺服器管理]****，然後按一下 [設為目標伺服器]****。 
+  **[目標伺服器精靈]** 將引導您執行將此伺服器設定為目標伺服器的程序。  
   
 3.  從 **[選取主要伺服器]** 頁面選取此目標伺服器將接收作業來源的主要伺服器。  
   
@@ -83,7 +84,7 @@ ms.locfileid: "72798192"
   
 4.  從 **[主要伺服器登入認證]** 頁面建立目標伺服器上的新登入 (如有需要)。  
   
-     **如有必要，請建立新的登入，並指派存取 MSX 的權限給該登入**  
+     **視需要建立新的登入，並將其許可權指派給 MSX**  
      如果指定的登入並不存在，就會在目標伺服器上建立新的登入。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  

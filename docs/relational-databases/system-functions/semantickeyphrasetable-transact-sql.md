@@ -1,5 +1,5 @@
 ---
-title: semantickeyphrasetable & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: semantickeyphrasetable （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bfde3ee5d26557759bd881bce34a69b6ecf98dd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68140565"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
@@ -45,12 +45,12 @@ SEMANTICKEYPHRASETABLE
 ```  
   
 ##  <a name="Arguments"></a> 引數  
- **table**  
+ **目錄**  
  這是已啟用全文檢索和語意索引之資料表的名稱。  
   
  這個名稱可以是一到四個部分名稱，但不允許遠端伺服器名稱。  
   
- **column**  
+ **排**  
  應傳回結果之索引資料行的名稱。 資料行必須啟用語意索引。  
   
  **column_list**  
@@ -72,10 +72,10 @@ SEMANTICKEYPHRASETABLE
 |**column_id**|**int**|從中擷取及索引目前主要片語之資料行的識別碼。<br /><br /> 如需如何從 column_id 擷取資料行名稱 (反之亦然) 的詳細資料，請參閱 COL_NAME 及 COLUMNPROPERTY 函數。|  
 |**document_key**|**\***<br /><br /> 此索引鍵與來源資料表中的唯一索引鍵類型相同。|要從中索引目前主要片語之文件或資料列的唯一索引鍵值。|  
 |**keyphrase**|**NVARCHAR**|在 column_id 所指定之資料行中所找到，關聯至 document_key 指定之文件的主要片語。|  
-|**score**|**REAL**|此主要片語與索引資料行的相同文件中所有其他主要片語之間關聯性的相對值。<br /><br /> 此值是 [0.0, 1.0] 範圍內的小數值，分數愈高表示權重愈高。1.0 為滿分。|  
+|**成績**|**即時**|此主要片語與索引資料行的相同文件中所有其他主要片語之間關聯性的相對值。<br /><br /> 此值是 [0.0, 1.0] 範圍內的小數值，分數愈高表示權重愈高。1.0 為滿分。|  
   
 ## <a name="general-remarks"></a>一般備註  
- 如需詳細資訊，請參閱 <<c0> [ 使用語意搜尋的文件中尋找主要片語](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)。  
+ 如需詳細資訊，請參閱[使用語義搜尋在檔中尋找主要片語](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)。  
   
 ## <a name="metadata"></a>中繼資料  
  如需有關語意關鍵片語擷取和母體擴展的詳細資訊和狀態，請查詢下列動態管理檢視：  
@@ -86,12 +86,12 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>權限  
  需要建立全文檢索和語意索引之基底資料表的 SELECT 權限。  
   
 ## <a name="examples"></a>範例  
   
-###  <a name="HowToTopPhrases"></a> 範例 1：尋找在特定文件中的前幾個關鍵片語  
+###  <a name="HowToTopPhrases"></a>範例1：在特定檔中尋找前幾個主要片語  
  下列範例會從 AdventureWorks 範例資料庫之 Production.Document 資料表 Document 資料行 @DocumentId 變數所指定的文件中，擷取前 10 個主要片語。 @DocumentId 變數是指來自全文檢索索引之索引鍵資料行的值。 **SEMANTICKEYPHRASETABLE** 函數會使用索引搜尋有效率地擷取這些結果，而不會使用資料表掃描。 此範例假設已針對全文檢索與語意索引配置資料行。  
   
 ```sql  
@@ -106,7 +106,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="HowToTopDocuments"></a> 範例 2：找到包含特定關鍵片語的最上層文件  
+###  <a name="HowToTopDocuments"></a>範例2：尋找包含特定關鍵字組的前幾份檔  
  下列範例會從 AdventureWorks 範例資料庫 Production.Document 資料表的 Document 資料行中，擷取前 25 份包含主要片語的 "Bracket" 的文件。 此範例假設已針對全文檢索與語意索引配置資料行。  
   
 ```sql  

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06b9dac5f9074b335afff7c6b71980618a3020ce
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782865"
 ---
 # <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>將主要資料庫從可用性群組移除 (SQL Server)
@@ -33,25 +33,25 @@ ms.locfileid: "72782865"
   
      [安全性](#Security)  
   
--   **若要使用下列項目移除可用性資料庫：**  
+-   **若要移除可用性資料庫，請使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
      [PowerShell](#PowerShellProcedure)  
   
--   **待處理：** [從可用性群組中移除可用性資料庫之後](#FollowUp)  
+-   **後續操作：**  [從可用性群組中移除可用性資料庫之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件和限制  
+###  <a name="Prerequisites"></a>必要條件和限制  
   
 -   只有在主要複本上才支援這個工作。 您必須連接到裝載主要複本的伺服器執行個體。  
   
 ###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -69,9 +69,9 @@ ms.locfileid: "72782865"
   
     -   若要移除單一資料庫，請在 **[物件總管]** 窗格或 **[物件總管詳細資料]** 窗格中選取它。  
   
-5.  以滑鼠右鍵按一下選取的一或多個資料庫，然後在命令功能表中選取 [從可用性群組移除資料庫]。  
+5.  以滑鼠右鍵按一下選取的一或多個資料庫，然後在命令功能表中選取 [從可用性群組移除資料庫]****。  
   
-6.  在 **[從可用性群組移除資料庫]** 對話方塊中，若要移除所有列出的資料庫，請按一下 **[確定]** 。 如果您不要移除所有列出的資料庫，請按一下 **[取消]** 。  
+6.  在 **[從可用性群組移除資料庫]** 對話方塊中，若要移除所有列出的資料庫，請按一下 **[確定]**。 如果您不要移除所有列出的資料庫，請按一下 **[取消]**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要移除可用性資料庫**  
@@ -82,7 +82,8 @@ ms.locfileid: "72782865"
   
      ALTER AVAILABILITY GROUP *group_name* REMOVE DATABASE *availability_database_name*  
   
-     *group_name* 是可用性群組的名稱，而 *database_name* 是要移除的資料庫名稱。  
+     
+  *group_name* 是可用性群組的名稱，而 *database_name* 是要移除的資料庫名稱。  
   
      下列範例會從 `Db6` 可用性群組中移除名稱為 `MyAG` 的資料庫。  
   
@@ -104,13 +105,13 @@ ms.locfileid: "72782865"
     ```  
   
     > [!NOTE]  
-    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 指令程式。 如需詳細資訊，請參閱＜ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)＞。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
- **若要設定和使用 SQL Server PowerShell 提供者**  
+ **若要設定及使用 SQL Server PowerShell 提供者**  
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 待處理：從可用性群組中移除可用性資料庫之後  
+##  <a name="FollowUp"></a>後續操作：從可用性群組中移除可用性資料庫之後  
  從可用性群組中移除可用性資料庫，會結束先前主要資料庫和對應的次要資料庫之間的資料同步處理。 先前主要資料庫會保持上線狀態。 每個對應的次要資料庫處於 RESTORING 狀態。  
   
  此時有替代方法可處理移除的次要資料庫：  
@@ -124,5 +125,5 @@ ms.locfileid: "72782865"
      如需詳細資訊，請參閱[復原資料庫而不還原資料 &#40;Transact-SQL&#41;](../../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [將次要資料庫從可用性群組移除 &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md)  

@@ -13,25 +13,25 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6de7b5c8f9cdc7162eb9c6a8ddd214d0486255c6
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175961"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>建立認證 - 向 Azure 儲存體驗證
-  使用 [備份至 URL - 建立認證] 對話方塊建立新的 SQL 認證。  
+  使用 [備份至 URL - 建立認證]  對話方塊建立新的 SQL 認證。  
   
- 使用此對話方塊建立認證時, 您必須提供已新增至本機憑證存放區的 Azure 管理憑證, 或已下載至您電腦的發行設定檔, 以驗證訂用帳戶和儲存體帳戶資訊。  
+ 使用此對話方塊建立認證時，您必須提供新增至本機憑證存放區的 Azure 管理憑證或下載到電腦上的發行設定檔，以驗證訂用帳戶和儲存體帳戶資訊。  
   
  **SQL 認證**  
  指定您要建立之 SQL 認證的名稱。  
   
 ## <a name="azure-credentials"></a>Azure 認證  
  **管理憑證**  
- 使用此選項可指定本機憑證存放區中的憑證, 以符合來自 Azure 的管理憑證。 如需有關 Azure 管理憑證的詳細資訊, 請參閱[建立及上傳 azure 的管理憑證](https://go.microsoft.com/fwlink/?LinkId=320781)。  
+ 使用這個選項可從本機憑證存放區指定憑證，該憑證符合來自 Azure 的管理憑證。 如需 Azure 管理憑證的詳細資訊，請參閱[建立及上傳 Azure 的管理憑證](https://go.microsoft.com/fwlink/?LinkId=320781)。  
   
- **訂閱**  
+ **訂用帳戶**  
  選取、輸入或貼上符合本機憑證存放區之管理憑證的 Azure 訂用帳戶識別碼。  
   
  **發行設定檔**  

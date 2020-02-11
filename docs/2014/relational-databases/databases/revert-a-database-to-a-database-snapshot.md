@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916706"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>將資料庫還原成資料庫快照集
@@ -27,9 +27,9 @@ ms.locfileid: "62916706"
   
      [限制事項](#Restrictions)  
   
-     [必要條件](#Prerequisites)  
+     [先決條件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要將資料庫還原成資料庫快照集，請使用下列方式：** [Transact-SQL](#TsqlProcedure)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62916706"
   
  在還原資料庫之前，請仔細考慮以下限制：  
   
--   還原不適用於媒體復原。 . 資料庫快照集是不完整的資料庫檔案複本，因此如果資料庫或資料庫快照集已損毀，很可能無法從快照集還原。 此外，即使可以還原，但是在損毀的情況下還原也不太可能會更正問題。 因此，建立定期備份和測試還原計畫是保護資料庫的基本措施。 如需詳細資訊，請參閱 [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
+-   還原不適用於媒體復原。 . 資料庫快照集是不完整的資料庫檔案複本，因此如果資料庫或資料庫快照集已損毀，很可能無法從快照集還原。 此外，即使可以還原，但是在損毀的情況下還原也不太可能會更正問題。 因此，建立定期備份和測試還原計畫是保護資料庫的基本措施。 如需詳細資訊，請參閱 [SQL Server 資料庫的備份與還原](../backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
     > [!NOTE]  
     >  如果您必須能夠將來源資料庫還原到您建立資料庫快照集當時的時間點，請使用完整復原模式並實作可讓您執行此作業的備份原則。  
@@ -74,11 +74,11 @@ ms.locfileid: "62916706"
     > [!NOTE]  
     >  如果資料庫已損毀，您就必須從備份還原資料庫。 如需詳細資訊，請參閱[完整資料庫還原 &#40;簡單復原模式&#41;](../backup-restore/complete-database-restores-simple-recovery-model.md) 或[完整資料庫還原 &#40;完整復原模式&#41;](../backup-restore/complete-database-restores-full-recovery-model.md)。  
   
--   識別在發生錯誤之前建立的最近快照集。 如需詳細資訊，請參閱 [檢視資料庫快照集 &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md).  
+-   識別在發生錯誤之前建立的最近快照集。 如需詳細資訊，請參閱 [檢視資料庫快照集 &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md)中之資料庫的快照集。  
   
--   卸除目前存在資料庫上的任何其他快照集。 如需詳細資訊，請參閱 [卸除資料庫快照集 &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md).  
+-   卸除目前存在資料庫上的任何其他快照集。 如需詳細資訊，請參閱 [卸除資料庫快照集 &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)執行個體。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  任何擁有來源資料庫之 RESTORE DATABASE 權限的使用者都可以將它還原成建立資料庫快照集時的狀態。  
@@ -89,7 +89,7 @@ ms.locfileid: "62916706"
 > [!NOTE]  
 >  如需此程序的範例，請參閱本節稍後的 [範例 (Transact-SQL)](#TsqlExample)。  
   
-1.  識別您要將資料庫還原成哪一個資料庫快照集。 您可以檢視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中之資料庫的快照集 (請參閱 [檢視資料庫快照集 &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md))。 此外，您可以從 **sys.databases &#40;Transact-SQL&#41;** 目錄檢視的 [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 資料行中，識別某個檢視的來源資料庫。  
+1.  識別您要將資料庫還原成哪一個資料庫快照集。 您可以檢視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中之資料庫的快照集 (請參閱 [檢視資料庫快照集 &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md))。 此外，您可以從 **sys.databases &#40;Transact-SQL&#41;** 目錄檢視的 [sys.databases &amp;#40;Transact-SQL&amp;#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 資料行中，識別某個檢視的來源資料庫。  
   
 2.  卸除任何其他資料庫快照集。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62916706"
   
      其中 *database_name* 是來源資料庫，而 *database_snapshot_name* 是要用來還原資料庫的快照集名稱。 請注意，在此陳述式中，您必須指定快照名稱，而非備份裝置。  
   
-     如需詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
+     如需詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)備份。  
   
     > [!NOTE]  
     >  在還原作業期間，將無法使用快照和來源資料庫。 來源資料庫和快照集都會標示為「還原中」。 如果還原作業期間發生錯誤，它會在資料庫重新啟動時嘗試完成還原。  

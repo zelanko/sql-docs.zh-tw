@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 056f9adb309f4f65ed1553efa80db597e7598e02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63050950"
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted 事件類別
@@ -52,7 +52,7 @@ ms.locfileid: "63050950"
 |ObjectName|`nvarchar`|正在參考之物件的名稱。|34|是|  
 |ObjectType|`int`|代表參與事件之物件類型的值。 這個值會對應到 sys.objects 目錄檢視中的類型資料行。 針對各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
 |Offset|`int`|預存程序或批次內之陳述式的起始位移。|61|是|  
-|Reads|`bigint`|伺服器代表事件執行的邏輯磁碟讀取數。|16|是|  
+|讀取|`bigint`|伺服器代表事件執行的邏輯磁碟讀取數。|16|是|  
 |RequestID|`int`|包含陳述式之要求的識別碼。|49|是|  
 |RowCounts|`bigint`|受到事件影響的資料列數目。|48|是|  
 |ServerName|`nvarchar`|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
@@ -62,7 +62,7 @@ ms.locfileid: "63050950"
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
 |TextData|`ntext`|與追蹤中所擷取的事件類別有關的文字值。|1|是|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
-|Writes|`bigint`|伺服器代表事件執行的實體磁碟寫入數。|17|是|  
+|寫入|`bigint`|伺服器代表事件執行的實體磁碟寫入數。|17|是|  
 |XactSequence|`bigint`|描述目前交易的 Token。|50|是|  
   
 ## <a name="see-also"></a>另請參閱  

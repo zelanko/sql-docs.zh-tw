@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_enable_db & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.databases sp_cdc_enable_db （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 87cb8f207d85220b88ef00d65fd4704b21becf63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106498"
 ---
-# <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
+# <a name="syssp_cdc_enable_db-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   啟用目前資料庫的異動資料擷取。 您必須先針對資料庫執行這個程序，然後才能針對該資料庫中的任何資料表啟用異動資料擷取。 異動資料擷取會記錄套用至已啟用資料表的插入、更新和刪除活動，並以方便取用的關聯式格式提供變更的詳細資料。 系統會針對修改的資料列擷取鏡像追蹤來源資料表之資料行結構的資料行資訊，以及將變更套用至目標環境所需的中繼資料。  
@@ -52,11 +52,11 @@ sys.sp_cdc_enable_db
  None  
   
 ## <a name="remarks"></a>備註  
- 無法在啟用異動資料擷取[系統資料庫](../../relational-databases/databases/system-databases.md)或散發資料庫。  
+ 無法在[系統資料庫](../../relational-databases/databases/system-databases.md)或散發資料庫上啟用變更資料捕獲。  
   
- sys.sp_cdc_enable_db 會建立具有整個資料庫範圍的異動資料擷取物件，包括中繼資料資料表和 DDL 觸發程序。 它也會建立 cdc 結構描述和 cdc 資料庫使用者，並設定 is_cdc_enabled 資料行中的資料庫項目[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目錄檢視，以 1。  
+ sys.sp_cdc_enable_db 會建立具有整個資料庫範圍的異動資料擷取物件，包括中繼資料資料表和 DDL 觸發程序。 它也會建立 cdc 架構和 cdc 資料庫使用者，並將[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目錄檢視中資料庫專案的 is_cdc_enabled 資料行設定為1。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要系統管理員 (sysadmin) 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
@@ -70,6 +70,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.sp_cdc_disable_db &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
+ [sp_cdc_disable_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
   
   

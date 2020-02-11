@@ -1,5 +1,5 @@
 ---
-title: DrilledDown 屬性 (ADO MD) |Microsoft Docs
+title: DrilledDown 屬性（ADO MD） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,24 +17,24 @@ ms.assetid: bf39dd36-fc7a-4f6e-86c0-fa71430c0d86
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f1175d2a70c376e3da1e079e4a3eb93a39235758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938463"
 ---
 # <a name="drilleddown-property-ado-md"></a>DrilledDown 屬性 (ADO MD)
-指出是否子系緊接[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)軸上。  
+指出子系是否緊接在軸的[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)後面。  
   
 ## <a name="return-values"></a>傳回值  
- 傳回**布林**值，並處於唯讀狀態。 **DrilledDown**會傳回 **，則為 True**如果軸上的目前成員沒有子成員。 **DrilledDown**會傳回**False**如果目前成員的軸上的一個或多個子成員。  
+ 傳回**布林**值，而且是唯讀的。 如果軸上沒有目前成員的子成員，則**DrilledDown**會傳回**True** 。 如果目前成員在軸上有一個或多個子成員，則**DrilledDown**會傳回**False** 。  
   
 ## <a name="remarks"></a>備註  
- 使用**DrilledDown**屬性來判斷是否有至少一個子系緊接這個成員在軸上的這個成員。 顯示成員時，這項資訊是很有用。  
+ 您可以使用**DrilledDown**屬性，判斷這個成員緊接在此成員的軸上，是否至少有一個子系。 此資訊在顯示成員時很有用。  
   
- 這個屬性才支援[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)屬於物件[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)物件。 從參考這個屬性時，就會發生錯誤**成員**屬於物件[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)物件。  
+ 只有屬於[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)物件的[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)物件才支援這個屬性。 當這個屬性是從屬於[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)物件的**成員**物件參考時，就會發生錯誤。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Member 物件 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
 ## <a name="see-also"></a>另請參閱  

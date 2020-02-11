@@ -1,5 +1,5 @@
 ---
-title: 正在中斷連接的資料來源或驅動程式 |Microsoft Docs
+title: 從資料來源或驅動程式中斷連線 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a01220b6a4f15ee3770b844f41e7ddc5399f5f86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039766"
 ---
 # <a name="disconnecting-from-a-data-source-or-driver"></a>從資料來源或驅動程式中斷連線
-當應用程式完成使用資料來源時，它會呼叫**SQLDisconnect**。 **SQLDisconnect**釋放連接配置的任何陳述式，並從資料來源中斷驅動程式。 如果交易正在處理中，它會傳回錯誤。  
+當應用程式完成使用資料來源時，它會呼叫**SQLDisconnect**。 **SQLDisconnect**會釋放在連接上配置的任何語句，並中斷驅動程式與資料來源的連線。 如果交易正在處理中，它會傳回錯誤。  
   
- 中斷連接之後，應用程式可以呼叫**SQLFreeHandle**來釋放連接。 釋出連線，之後應用程式的程式設計錯誤的 ODBC 函式; 呼叫中使用的連接控制代碼如此一來，所以都未定義，但可能嚴重的後果。 當**SQLFreeHandle**會呼叫結構用來儲存連線資訊的驅動程式版本。  
+ 中斷連線之後，應用程式可以呼叫**SQLFreeHandle**來釋放連接。 在釋放連接之後，應用程式設計錯誤是在 ODBC 函式的呼叫中使用連接的控制碼。這麼做並沒有定義，但可能會產生嚴重的後果。 呼叫**SQLFreeHandle**時，驅動程式會釋放用來儲存連接相關資訊的結構。  
   
- 應用程式也可以重複使用的連接，連接到不同的資料來源，或是重新連線到相同的資料來源。 決定来保持連接，而不中斷連線或重新連線之後，需要應用程式寫入器，請考慮每個選項; 的相對成本同時連接到資料來源，並維持連接狀態可以是相當耗成本，視連接媒體而定。 在正確的權衡取捨時，應用程式也必須進行假設可能性並進一步作業相同的資料來源上的時間。
+ 應用程式也可以重複使用連接，以連接到不同的資料來源，或重新連接到相同的資料來源。 決定維持線上狀態，而不是在稍後中斷連接和重新連接，需要應用程式寫入器考慮每個選項的相對成本;連接到資料來源和剩餘連接的工作，可能會相對於連接媒體而耗費較高的成本。 在進行正確的取捨時，應用程式也必須針對相同資料來源上的進一步作業做出可能性和時間的假設。

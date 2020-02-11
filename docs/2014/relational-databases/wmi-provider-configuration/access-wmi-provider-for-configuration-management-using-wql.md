@@ -1,5 +1,5 @@
 ---
-title: 存取 WMI 提供者使用 WQL 的組態管理 |Microsoft Docs
+title: 使用 WQL 存取設定管理的 WMI 提供者 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: adec01de84122552812e5b1b28277d0d399fee56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195867"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>使用 WQL 存取組態管理的 WMI 提供者
@@ -29,13 +29,13 @@ ms.locfileid: "68195867"
   
 ### <a name="querying-services-using-wbemtest"></a>使用 WBEMtest 查詢服務  
   
-1.  從**開始**功能表上，按一下**執行**，然後輸入`WBEMtest`。  
+1.  在 [**開始**] 功能表中，按一下 [**執行**] `WBEMtest`，然後輸入。  
   
-2.  [WBEMtest.exe] 對話方塊隨即出現。 按一下 **[連接]** 。  
+2.  [WBEMtest.exe] 對話方塊隨即出現。 按一下 [ **連接**]。  
   
-3.  在第一個文字欄位中，輸入電腦管理的 WMI 提供者命名空間：root\Microsoft\SqlServer\ComputerManagement11。 按一下 **[連接]** 。  
+3.  在第一個文字欄位中，輸入電腦管理的 WMI 提供者命名空間：root\Microsoft\SqlServer\ComputerManagement11。 按一下 [ **連接**]。  
   
-4.  按一下 **查詢**。 輸入查詢，以傳回本機電腦上執行的目前服務：**選取\*FROM SqlService。** 按一下 **[套用]** 。  
+4.  按一下 **[查詢]**。 輸入會傳回目前在本機電腦上執行之服務的查詢：**選取\* [從 SqlService]。** 按一下 [套用]  。  
   
 5.  加入 `WHERE ServiceName = "MSSQLSERVER"` 來進一步精簡查詢。  
   

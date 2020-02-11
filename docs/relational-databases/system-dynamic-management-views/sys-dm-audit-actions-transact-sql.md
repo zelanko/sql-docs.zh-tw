@@ -1,5 +1,5 @@
 ---
-title: sys.dm_audit_actions (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_audit_actions （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,30 +19,30 @@ ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e6a6c91cb31c9c3036bc95239f0aff9c75fda7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936970"
 ---
-# <a name="sysdmauditactions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
+# <a name="sysdm_audit_actions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  傳回稽核記錄檔中可報告的每一個稽核動作及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 中可設定之每一個稽核動作群組的資料列。 如需詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]稽核，請參閱 < [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+  傳回稽核記錄檔中可報告的每一個稽核動作及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 中可設定之每一個稽核動作群組的資料列。 如需有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 的詳細資訊，請參閱[SQL Server audit &#40;資料庫引擎&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**action_id**|**varchar(4)**|稽核動作的識別碼。 與相關**action_id**每一筆稽核記錄寫入值。 可為 Null。 稽核群組為 NULL。|  
+|**action_id**|**Varchar （4）**|稽核動作的識別碼。 與寫入每個 audit 記錄的**action_id**值相關。 可為 Null。 稽核群組為 NULL。|  
 |**action_in_log**|**bit**|指示動作是否可寫入稽核記錄檔。 其值如下：<br /><br /> 1 = 是<br /><br /> 0 = 否|  
 |**name**|**sysname**|稽核動作或稽核群組的名稱。 不可為 Null。|  
-|**class_desc**|**nvarchar(120)**|稽核動作套用之物件的類別名稱。 可以是任何一個伺服器、資料庫或結構描述範圍物件，但是不包括結構描述物件。 不可為 Null。|  
-|**parent_class_desc**|**nvarchar(120)**|class_desc 所描述之物件的父類別名稱。 如果 class_desc 是伺服器則為 NULL。|  
-|**covering_parent_action_name**|**nvarchar(120)**|稽核動作名稱，或是包含此資料列中所述之稽核動作的稽核群組名稱。 這是用來建立動作的階層及涵蓋的動作。 可為 Null。|  
-|**configuration_level**|**nvarchar(10)**|指示此資料列中指定的動作或動作群組可在群組或動作層級上設定。 如果此動作無法設定，則為 NULL。|  
-|**containing_group_name**|**nvarchar(120)**|包含指定之動作的稽核群組名稱。 如果名稱中的值是群組，則為 NULL。|  
+|**class_desc**|**Nvarchar （120）**|稽核動作套用之物件的類別名稱。 可以是任何一個伺服器、資料庫或結構描述範圍物件，但是不包括結構描述物件。 不可為 Null。|  
+|**parent_class_desc**|**Nvarchar （120）**|class_desc 所描述之物件的父類別名稱。 如果 class_desc 是伺服器則為 NULL。|  
+|**covering_parent_action_name**|**Nvarchar （120）**|稽核動作名稱，或是包含此資料列中所述之稽核動作的稽核群組名稱。 這是用來建立動作的階層及涵蓋的動作。 可為 Null。|  
+|**configuration_level**|**Nvarchar （10）**|指示此資料列中指定的動作或動作群組可在群組或動作層級上設定。 如果此動作無法設定，則為 NULL。|  
+|**containing_group_name**|**Nvarchar （120）**|包含指定之動作的稽核群組名稱。 如果名稱中的值是群組，則為 NULL。|  
   
-## <a name="permissions"></a>Permissions  
- 主體必須具有**選取**權限。 根據預設值，這會授與給 Public。  
+## <a name="permissions"></a>權限  
+ 主體必須具有**SELECT**許可權。 根據預設值，這會授與給 Public。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   

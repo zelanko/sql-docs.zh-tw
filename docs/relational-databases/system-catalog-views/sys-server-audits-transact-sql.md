@@ -1,5 +1,5 @@
 ---
-title: sys.server_audits (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases server_audits （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0a00f6843a0ef379c12aa1d1d00df9380efbd139
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124999"
 ---
-# <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
+# <a name="sysserver_audits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   針對伺服器執行個體中的每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 稽核各包含一個資料列。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
@@ -35,20 +35,20 @@ ms.locfileid: "68124999"
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|稽核的識別碼。|  
 |**name**|**sysname**|稽核的名稱。|  
-|**audit_guid**|**uniqueidentifier**|用來列舉具有成員伺服器稽核的 GUID&#124;資料庫稽核規格，在伺服器啟動和資料庫附加作業。|  
+|**audit_guid**|**uniqueidentifier**|用來在伺服器啟動和資料庫附加作業期間，用來列舉成員伺服器&#124;資料庫審核規格之審核的 GUID。|  
 |**create_date**|**datetime**|建立稽核的 UTC 日期。|  
 |**modify_date**|**datetime**|上次修改稽核的 UTC 日期。|  
 |**principal_id**|**int**|對伺服器註冊之稽核擁有者的識別碼。|  
-|**type**|**char(2)**|稽核類型：<br /><br /> SL-NT 安全性事件記錄檔<br /><br /> AL-NT 應用程式事件記錄檔<br /><br /> FL-檔案系統上的檔案|  
-|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION LOG<br /><br /> FILE|  
-|**on_failure**|**tinyint**|寫入動作項目失敗：<br /><br /> 0-繼續<br /><br /> 1-關閉伺服器執行個體<br /><br /> 2-讓作業失敗|  
-|**on_failure_desc**|**nvarchar(60)**|寫入動作項目失敗：<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
+|**type**|**char （2）**|稽核類型：<br /><br /> SL-NT 安全性事件記錄檔<br /><br /> AL-NT 應用程式事件記錄檔<br /><br /> FL-檔案系統上的檔案|  
+|**type_desc**|**Nvarchar （60）**|SECURITY LOG<br /><br /> APPICATION LOG<br /><br /> FILE|  
+|**on_failure**|**tinyint**|寫入動作項目失敗：<br /><br /> 0-繼續<br /><br /> 1-關閉伺服器實例<br /><br /> 2-失敗作業|  
+|**on_failure_desc**|**Nvarchar （60）**|寫入動作項目失敗：<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0-已停用<br /><br /> 1 - 已啟用|  
 |**queue_delay**|**int**|寫入磁碟前等候的最大時間值 (以毫秒計)。 如果為 0，則表示稽核將會保證寫入，然後事件才可以繼續。|  
-|**predicate**|**nvarchar(3000)**|套用至事件的述詞運算式。|  
+|**推斷**|**Nvarchar （3000）**|套用至事件的述詞運算式。|  
   
-## <a name="permissions"></a>Permissions  
- 具有主體**ALTER ANY SERVER AUDIT**或是**VIEW ANY DEFINITION**權限可以存取這份目錄檢視。 此外，不應拒絕主體**VIEW ANY DEFINITION**權限。  
+## <a name="permissions"></a>權限  
+ 具有**ALTER ANY SERVER AUDIT**或**VIEW any DEFINITION**許可權的主體可存取此目錄檢視。 此外，主體不得被拒絕**VIEW ANY DEFINITION**許可權。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   

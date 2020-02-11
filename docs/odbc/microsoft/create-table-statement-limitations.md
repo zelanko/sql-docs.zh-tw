@@ -1,5 +1,5 @@
 ---
-title: 建立資料表陳述式限制 |Microsoft Docs
+title: CREATE TABLE 語句限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: c5067855-20c9-456f-8d63-f375b4297f2e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db5d2cb8decde9828acd3005551717ac9f6cef32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096587"
 ---
 # <a name="create-table-statement-limitations"></a>CREATE TABLE 陳述式限制
-使用 Microsoft Access、 Microsoft Excel 或 Paradoxdriver 時，文字或二進位資料行長度未指定 （或指定為 0），資料行的長度會設定為 255。  
+當使用 Microsoft Access、Microsoft Excel 或 Paradoxdriver 時，如果未指定 text 或 binary 資料行的長度（或指定為0），則資料行長度將會設定為255。  
   
- 使用 dBASE 驅動程式時，文字或二進位資料行長度未指定 （或指定為 0），資料行長度將會設定為 254。  
+ 當使用 dBASE 驅動程式，而且未指定 text 或 binary 資料行的長度（或指定為0）時，資料行長度將會設定為254。  
   
- 支援最多 255 個資料行。  
+ 最多支援255個數據行。  
   
- 無法建立 MicrosoftExcel 5.0、 7.0、 或 97 中的資料來源時，工作表上使用 Microsoft Excel 驅動程式時，先前已卸除工作表同名。 存取版本 5.0、 7.0、 或 97 工作表使用 Microsoft Excel 驅動程式時，DROP TABLE 陳述式就會清除工作表中，但不會刪除工作表名稱。  
+ 當 Microsoft Excel 驅動程式在 MicrosoftExcel 5.0、7.0 或97資料來源上使用時，無法使用與先前卸載的工作表相同的名稱來建立工作表。 當 Microsoft Excel 驅動程式用來存取5.0、7.0 或97版工作表時，DROP TABLE 語句會清除工作表，但不會刪除工作表名稱。  
   
- 使用 Paradox 驅動程式時，就無法加入資料行的資料表上定義索引之後。 如果 CREATE TABLE 陳述式的引數清單的第一個資料行建立索引，第二個資料行不能包含引數清單中。
+ 當使用 Paradox 驅動程式時，一旦在資料表上定義索引之後，就無法加入資料行。 如果 CREATE TABLE 語句之引數清單的第一個資料行建立索引，第二個數據行就不能包含在引數清單中。

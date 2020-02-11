@@ -14,11 +14,11 @@ ms.assetid: 02e0394e-ddd7-47ae-9180-b4d8a3b648ef
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c8ab2c4f7e66338c792fb62f9192cf312c5d19e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085483"
 ---
 # <a name="jet-outer-joins"></a>Jet：外部聯結
-SELECT 陳述式可以包含 OUTER JOIN 子句的清單。 支援巢狀外部聯結。 如需有關外部聯結的詳細資訊，請參閱 < *Microsoft Jet Database Engine 程式設計人員指南*。
+SELECT 語句可以包含外部聯結子句的清單。 支援嵌套的外部聯結。 如需外部聯結的詳細資訊，請參閱《 *Microsoft Jet 資料庫引擎程式設計人員指南》*。

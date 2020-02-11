@@ -1,5 +1,5 @@
 ---
-title: 子集合 (MDX) |Microsoft Docs
+title: 子集（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b1f9a79c0e0ba6d578b82d7b1d072f3543888a1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036698"
 ---
 # <a name="subset-mdx"></a>Subset (MDX)
@@ -31,19 +31,19 @@ Subset(Set_Expression, Start [ ,Count ] )
  *Set_Expression*  
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
- *啟動*  
+ *Start*  
  有效的數值運算式，會指定要傳回之第一個 Tuple 的位置。  
   
  *計數*  
  有效的數值運算式，會指定要傳回的 Tuple 數目。  
   
 ## <a name="remarks"></a>備註  
- 從指定的集合**子集**函式會傳回包含指定的 tuple，開始於指定的起始位置數目的子集。 開始位置是根據以零為基底的索引，也就是說，零 (0) 對應至指定集合中的第一個 Tuple，1 對應至第二個，依此類推。  
+ 從指定的集合中，**子集**函數會從指定的開始位置開始，傳回包含指定之元組數目的子集。 開始位置是根據以零為基底的索引，也就是說，零 (0) 對應至指定集合中的第一個 Tuple，1 對應至第二個，依此類推。  
   
- 如果*計數*未指定，則函數會傳回所有來自 tuple*開始*至集合結尾。  
+ 如果未指定*Count* ，則函式會傳回從*開始*到集合結尾的所有元組。  
   
 ## <a name="example"></a>範例  
- 下列範例不考慮階層，而根據 Reseller Gross Profit 傳回前五名產品銷售子類別的 Reseller Sales 量值。 **子集**函數用來在結果中傳回的前五個集合，使用排序結果之後**順序**函式。  
+ 下列範例不考慮階層，而根據 Reseller Gross Profit 傳回前五名產品銷售子類別的 Reseller Sales 量值。 只有在使用**Order**函數排序結果之後，才會使用**子集**函數來傳回結果中的前五個集合。  
   
 ```  
 SELECT Subset  
@@ -59,6 +59,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

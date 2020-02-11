@@ -1,5 +1,5 @@
 ---
-title: 專案設定 （類型對應） (MySQLToSQL) |Microsoft Docs
+title: 專案設定（類型對應）（MySQLToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,199 +10,199 @@ ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138332"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>專案設定 (類型對應) (MySQLToSQL)
-型別對應的專案設定可讓您設定 SSMA 專案的預設型別對應。  
+[類型對應專案] 設定可讓您設定 SSMA 專案的預設類型對應。  
 
-型別對應會在 專案設定和預設專案設定對話方塊上市：  
+在 [專案設定] 和 [預設專案設定] 對話方塊中，可以使用 [類型對應]：  
   
--   使用 [專案設定] 對話方塊來設定目前專案的組態選項。 若要存取型別對應設定值，在 工具 功能表中，選取 專案設定，然後按一下類型對應的左窗格中。  
+-   使用 [專案設定] 對話方塊，即可設定目前專案的配置選項。 若要存取 [類型對應] 設定，請在 [工具] 功能表上選取 [專案設定]，然後按一下左窗格中的 [類型對應]。  
   
--   使用 [預設專案設定] 對話方塊中設定的所有專案的組態選項。 若要存取的型別對應設定，請在 [工具] 功能表中，選取預設專案設定，其設定被要求檢視 / 變更從選取的移轉專案類型**移轉目標版本**下拉式清單，然後再按一下類型在左窗格中的對應。  
+-   使用 [預設專案設定] 對話方塊，即可設定所有專案的設定選項。 若要存取型別對應設定，請在 [工具] 功能表上，選取 [預設專案設定]，從 [**遷移目標版本**] 下拉式下選取需要查看其設定的 [遷移專案類型]/changed，然後按一下左窗格中的 [類型對應]。  
   
 ## <a name="options"></a>選項。  
   
 ##### <a name="source-type"></a>來源類型  
-它是 MySQL 資料類型，必須對應到目標資料庫的資料類型。  
+這是 MySQL 資料類型，必須對應到目標資料庫資料類型。  
   
 ##### <a name="target-type"></a>目標類型  
-目標資料庫資料類型指定的 MySQL 資料類型。  
+指定之 MySQL 資料類型的目標資料庫資料類型。  
   
-##### <a name="add"></a>加入  
-按一下以新增的資料類型對應清單。  
+##### <a name="add"></a>加  
+按一下即可將資料類型加入至 [對應] 清單。  
   
 ##### <a name="edit"></a>編輯  
-按一下以編輯選取的資料類型對應清單中。  
+按一下即可編輯 [對應] 清單中選取的資料類型。  
   
 ##### <a name="remove"></a>移除  
-按一下即可從對應清單中移除選取的資料類型對應。  
+按一下即可從 [對應] 清單中移除選取的資料類型對應。  
   
 ##### <a name="reset-to-default"></a>重設為預設值  
-按一下以重設 SSMA 的預設值的類型對應清單。  
+按一下即可將 [類型對應] 清單重設為 SSMA 預設值。  
   
 ## <a name="type-mappings"></a>型別對應  
-下表顯示預設值之間的對應來源和目標資料類型  
+下表顯示來源和目標資料類型之間的預設對應  
   
 |||  
 |-|-|  
 |**MySQL 資料類型**|**SQL Server 資料類型**|  
 |BIGINT|BIGINT|  
-|bigint [*..255]|BIGINT|  
-|BINARY|[1] 的二進位檔|  
-|binary[0..1]|[1] 的二進位檔|  
-|binary[2..255]|binary[*]|  
-|bit|[1] 的二進位檔|  
-|bit[0..8]|[1] 的二進位檔|  
-|bit[17..24]|二進位 [3]|  
-|bit[25..32]|binary[4]|  
-|bit[33..40]|binary[5]|  
-|bit[41..48]|binary[6]|  
-|bit[49..56]|二進位 [7]|  
-|bit[57..64]|binary[8]|  
-|bit[9..16]|binary[2]|  
+|Bigint [*.。255]|BIGINT|  
+|BINARY|二進位檔 [1]|  
+|binary [0 ..1]|二進位檔 [1]|  
+|binary [2.. 255]|binary [*]|  
+|bit|二進位檔 [1]|  
+|位 [0 ... 8]|二進位檔 [1]|  
+|bit [17.. 24]|二進位檔 [3]|  
+|位 [25： 32]|二進位檔 [4]|  
+|位 [33.. 40]|二進位檔 [5]|  
+|位 [41.. 48]|二進位檔 [6]|  
+|bit [49. 56]|二進位檔 [7]|  
+|bit [57.. 64]|二進位檔 [8]|  
+|位 [9.. 16]|二進位檔 [2]|  
 |blob|varbinary(max)|  
-|blob[0..1]|varbinary[1]|  
-|blob[2..8000]|varbinary[*]|  
-|blob[8001..*]|varbinary(max)|  
+|blob [0 ..1]|Varbinary [1]|  
+|blob [2. 8000]|Varbinary [*]|  
+|blob [8001 ... *]|varbinary(max)|  
 |bool|bit|  
 |boolean|bit|  
-|char|nchar[1]|  
-|char 位元組|[1] 的二進位檔|  
-|char 位元組 [0..1]|[1] 的二進位檔|  
-|char 位元組 [2..255]|binary[*]|  
-|char[0..1]|nchar[1]|  
-|char[2..255]|nchar[*]|  
-|character|nchar[1]|  
-|字元不同 [0..1]|nvarchar[1]|  
-|字元不同 [2..255]|NVARCHAR|  
-|character[0..1]|nchar[1]|  
-|character[2..255]|nchar[*]|  
+|char|Nchar [1]|  
+|char 位元組|二進位檔 [1]|  
+|char byte [0 ..1]|二進位檔 [1]|  
+|char byte [2.. 255]|binary [*]|  
+|char [0 ..1]|Nchar [1]|  
+|char [2.. 255]|Nchar [*]|  
+|character|Nchar [1]|  
+|字元變動 [0 ..1]|Nvarchar [1]|  
+|字元變動 [2.. 255]|NVARCHAR|  
+|字元 [0 ..1]|Nchar [1]|  
+|字元 [2.. 255]|Nchar [*]|  
 |date|date|  
-|datetime|datetime2[0]|  
+|Datetime|datetime2 [0]|  
 |dec|decimal|  
-|dec [*..65]|decimal[*][0]|  
-|dec [*..65][\*..30]|decimal[*][\*]|  
+|dec [*.。65]|decimal [*] [0]|  
+|dec [*.。65] [\*.。大約|decimal [*] [\*]|  
 |decimal|decimal|  
-|小數 [*..65]|decimal[*][0]|  
-|小數 [*..65][\*..30]|decimal[*][\*]|  
+|decimal [*.。65]|decimal [*] [0]|  
+|decimal [*.。65] [\*.。大約|decimal [*] [\*]|  
 |double|float [53]|  
 |雙精度|float [53]|  
-|雙精確度 [*..255][\*..30]|數字 [*][\*]|  
-|double [*..255][\*..30]|數字 [*][\*]|  
-|已修正|NUMERIC|  
-|修正 [*..65][\*..30]|數字 [*][\*]|  
-|FLOAT|float[24]|  
-|float [*..255][\*..30]|數字 [*][\*]|  
-|float [*..53]|float [53]|  
-|ssNoversion|ssNoversion|  
-|int [*..255]|ssNoversion|  
-|integer|ssNoversion|  
-|整數 [*..255]|ssNoversion|  
+|雙精確度 [*.。255] [\*.。大約|數值 [*] [\*]|  
+|double [*.。255] [\*.。大約|數值 [*] [\*]|  
+|fixed|NUMERIC|  
+|已修正 [*.。65] [\*.。大約|數值 [*] [\*]|  
+|FLOAT|float [24]|  
+|float [*.。255] [\*.。大約|數值 [*] [\*]|  
+|float [*.。53]|float [53]|  
+|int|int|  
+|int [*.。255]|int|  
+|integer|int|  
+|整數 [*.。255]|int|  
 |longblob|varbinary(max)|  
-|長文字|nvarchar(max)|  
+|longtext|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
-|mediumint|ssNoversion|  
-|mediumint [*..255]|ssNoversion|  
+|mediumint|int|  
+|mediumint[*..255]|int|  
 |mediumtext|nvarchar(max)|  
-|national char|nchar[1]|  
-|national char [0..1]|nchar[1]|  
-|national char [2..255]|nchar[*]|  
-|國家字元集|nchar[1]|  
-|不同的國家字元集|nvarchar[1]|  
-|國家字元不同 [0..1]|nvarchar[1]|  
-|國家字元不同 [2..4000]|nvarchar[*]|  
-|不同的國家字元集 [4001..*]|nvarchar(max)|  
-|國家字元集 [0..1]|nchar[1]|  
-|國家字元集 [2..255]|nchar[*]|  
-|national varchar|nvarchar[1]|  
-|national varchar [0..1]|nvarchar[1]|  
-|national varchar [2..4000]|nvarchar[*]|  
-|national varchar [4001..*]|nvarchar(max)|  
-|NCHAR|nchar[1]|  
-|nchar varchar|nvarchar[1]|  
-|nchar varchar [0..1]|nvarchar[1]|  
-|nchar varchar [2..4000]|nvarchar[*]|  
-|nchar varchar [4001..*]|nvarchar(max)|  
-|nchar[0..1]|nchar[1]|  
-|nchar[2..255]|nchar[*]|  
+|國家/地區|Nchar [1]|  
+|國家字元 [0 ..1]|Nchar [1]|  
+|國家 char [2.. 255]|Nchar [*]|  
+|國家字元|Nchar [1]|  
+|國家字元變動|Nvarchar [1]|  
+|國家字元改變 [0 ..1]|Nvarchar [1]|  
+|國家字元改變 [2.. 4000]|Nvarchar [*]|  
+|國家字元變動 [4001 ... *]|nvarchar(max)|  
+|國家字元 [0 ..1]|Nchar [1]|  
+|國家字元 [2.. 255]|Nchar [*]|  
+|全國 Varchar|Nvarchar [1]|  
+|全國 Varchar [0 ..1]|Nvarchar [1]|  
+|全國 Varchar [2.. 4000]|Nvarchar [*]|  
+|全國 Varchar [4001.. *]|nvarchar(max)|  
+|NCHAR|Nchar [1]|  
+|Nchar Varchar|Nvarchar [1]|  
+|Nchar Varchar [0 ..1]|Nvarchar [1]|  
+|Nchar Varchar [2.. 4000]|Nvarchar [*]|  
+|Nchar Varchar [4001.. *]|nvarchar(max)|  
+|Nchar [0 ..1]|Nchar [1]|  
+|Nchar [2.. 255]|Nchar [*]|  
 |NUMERIC|NUMERIC|  
-|數字 [*..65]|numeric[*][0]|  
-|數字 [*..65][\*..30]|數字 [*][\*]|  
-|NVARCHAR|nvarchar[1]|  
-|nvarchar[0..1]|nvarchar[1]|  
-|nvarchar[2..4000]|nvarchar[*]|  
-|nvarchar[4001..*]|nvarchar(max)|  
-|REAL|float [53]|  
-|實際 [*..255][\*..30]|數字 [*][\*]|  
-|序列|BIGINT|  
-|SMALLINT|SMALLINT|  
-|smallint [*..255]|SMALLINT|  
+|數值 [*.。65]|數值 [*] [0]|  
+|數值 [*.。65] [\*.。大約|數值 [*] [\*]|  
+|NVARCHAR|Nvarchar [1]|  
+|Nvarchar [0 ..1]|Nvarchar [1]|  
+|Nvarchar [2.. 4000]|Nvarchar [*]|  
+|Nvarchar [4001.. *]|nvarchar(max)|  
+|real|float [53]|  
+|real [*.。255] [\*.。大約|數值 [*] [\*]|  
+|serial|BIGINT|  
+|smallint|smallint|  
+|Smallint [*.。255]|smallint|  
 |text|nvarchar(max)|  
-|text[0..1]|nvarchar[1]|  
-|text[2..4000]|nvarchar[*]|  
-|text[4001..*]|nvarchar(max)|  
+|文字 [0 ..1]|Nvarchar [1]|  
+|文字 [2.. 4000]|Nvarchar [*]|  
+|文字 [4001.. *]|nvarchar(max)|  
 |time|time|  
-|timestamp|datetime|  
-|tinyblob|varbinary[255]|  
-|TINYINT|SMALLINT|  
-|tinyint [*..255]|SMALLINT|  
-|tinytext|nvarchar[255]|  
-|不帶正負號的 bigint|BIGINT|  
-|不帶正負號的 bigint [*..255]|BIGINT|  
-|不帶正負號的 12 月|decimal|  
-|不帶正負號的 dec [*..65]|decimal[*][0]|  
-|不帶正負號的 dec [*..65][\*..30]|decimal[*][\*]|  
+|timestamp|Datetime|  
+|tinyblob|Varbinary [255]|  
+|tinyint|smallint|  
+|Tinyint [*.。255]|smallint|  
+|tinytext|Nvarchar [255]|  
+|不帶正負號的 Bigint|BIGINT|  
+|不帶正負號的 Bigint [*.。255]|BIGINT|  
+|不帶正負號的 dec|decimal|  
+|不帶正負號的 dec [*.。65]|decimal [*] [0]|  
+|不帶正負號的 dec [*.。65] [\*.。大約|decimal [*] [\*]|  
 |不帶正負號的十進位|decimal|  
-|不帶正負號的十進位 [*..65]|decimal[*][0]|  
-|不帶正負號的十進位 [*..65][\*..30]|decimal[*][\*]|  
-|不帶正負號的雙精度浮點數|float [53]|  
-|不帶正負號的雙精度|float [53]|  
-|不帶正負號雙精確度 [*..255][\*..30]|數字 [*][\*]|  
-|不帶正負號 double [*..255][\*..30]|數字 [*][\*]|  
-|不帶正負號固定|NUMERIC|  
-|不帶正負號固定 [*..65][\*..30]|數字 [*][\*]|  
-|不帶正負號的浮點數|float[24]|  
-|不帶正負號的浮點數 [*..255][\*..30]|數字 [*][\*]|  
-|不帶正負號的浮點數 [*..53]|float [53]|  
+|不帶正負號的十進位 [*.。65]|decimal [*] [0]|  
+|不帶正負號的十進位 [*.。65] [\*.。大約|decimal [*] [\*]|  
+|不帶正負號的 double|float [53]|  
+|不帶正負號的雙精確度|float [53]|  
+|不帶正負號的雙精確度 [*.。255] [\*.。大約|數值 [*] [\*]|  
+|不帶正負號的 double [*.。255] [\*.。大約|數值 [*] [\*]|  
+|不帶正負號的固定|NUMERIC|  
+|不帶正負號的固定 [*.。65] [\*.。大約|數值 [*] [\*]|  
+|不帶正負號的 float|float [24]|  
+|不帶正負號的浮點數 [*.。255] [\*.。大約|數值 [*] [\*]|  
+|不帶正負號的浮點數 [*.。53]|float [53]|  
 |不帶正負號的整數|BIGINT|  
-|不帶正負號的 int [*..255]|BIGINT|  
+|不帶正負號的 int [*.。255]|BIGINT|  
 |不帶正負號的整數|BIGINT|  
-|不帶正負號的整數 [*..255]|BIGINT|  
-|不帶正負號的 mediumint|ssNoversion|  
-|不帶正負號的 mediumint [*..255]|ssNoversion|  
-|不帶正負號的數字|NUMERIC|  
-|不帶正負號的數字 [*..65]|numeric[*][0]|  
-|不帶正負號的數字 [*..65][\*..30]|數字 [*][\*]|  
-|不帶正負號實數|float [53]|  
-|未簽署的真實 [*..255[[\*..30]|數字 [*][\*]|  
-|不帶正負號的 smallint|ssNoversion|  
-|不帶正負號的 smallint [*..255]|ssNoversion|  
-|不帶正負號的 tinyint|TINYINT|  
-|不帶正負號的 tinyint [*..255]|TINYINT|  
-|varbinary[0..1]|varbinary[1]|  
-|varbinary[2..8000]|varbinary[*]|  
-|varbinary[8001..*]|varbinary(max)|  
-|varchar[0..1]|nvarchar[1]|  
-|varchar[2..4000]|nvarchar[*]|  
-|varchar[4001..*]|nvarchar(max)|  
-|year|SMALLINT|  
-|year[2..2]|SMALLINT|  
-|year[4..4]|SMALLINT|  
+|不帶正負號的整數 [*.。255]|BIGINT|  
+|不帶正負號的 mediumint|int|  
+|未簽署的 mediumint [*.。255]|int|  
+|不帶正負號的數值|NUMERIC|  
+|不帶正負號的數值 [*.。65]|數值 [*] [0]|  
+|不帶正負號的數值 [*.。65] [\*.。大約|數值 [*] [\*]|  
+|不帶正負號的實數|float [53]|  
+|不帶正負號的 real [*.。255 [[\*.。大約|數值 [*] [\*]|  
+|不帶正負號的 Smallint|int|  
+|不帶正負號的 Smallint [*.。255]|int|  
+|不帶正負號的 Tinyint|tinyint|  
+|不帶正負號的 Tinyint [*.。255]|tinyint|  
+|Varbinary [0 ..1]|Varbinary [1]|  
+|Varbinary [2. 8000]|Varbinary [*]|  
+|Varbinary [8001 ... *]|varbinary(max)|  
+|Varchar [0 ..1]|Nvarchar [1]|  
+|Varchar [2.. 4000]|Nvarchar [*]|  
+|Varchar [4001.. *]|nvarchar(max)|  
+|年|smallint|  
+|year [2 ... 2]|smallint|  
+|year [4.. 4]|smallint|  
   
-##### <a name="add"></a>加入  
-按一下以新增的資料類型對應清單。  
+##### <a name="add"></a>加  
+按一下即可將資料類型加入至 [對應] 清單。  
   
 ##### <a name="edit"></a>編輯  
-按一下以編輯 [對應] 清單中的資料類型。  
+按一下即可編輯 [對應] 清單中的資料類型。  
   
 ##### <a name="remove"></a>移除  
-按一下即可從對應清單中移除選取的資料類型對應。  
+按一下即可從 [對應] 清單中移除選取的資料類型對應。  
   
 ##### <a name="reset-to-default"></a>重設為預設值  
-按一下以重設為 SSMA 預設值的所有資料類型對應。  
+按一下即可將所有資料類型對應重設為 SSMA 預設值。  
   

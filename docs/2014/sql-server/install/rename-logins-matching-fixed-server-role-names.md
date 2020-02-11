@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278212"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>重新命名符合固定伺服器角色名稱的登入
@@ -31,7 +31,7 @@ ms.locfileid: "72278212"
 ## <a name="description"></a>描述  
  下列固定伺服器角色名稱已保留，無法當做使用者自訂登入名稱使用。  
   
--   **sysadmin**  
+-   **系統管理員 (sysadmin)**  
   
 -   **serveradmin**  
   
@@ -60,10 +60,10 @@ ms.locfileid: "72278212"
   
 2.  卸除登入。  
   
-3.  使用**sp_addlogin**系統程式來建立新的登入。 針對每個對應的登入，在 **\@SID**參數中指定步驟1中傳回的 sid。  
+3.  使用**sp_addlogin**系統程式來建立新的登入。 針對每個對應的登入， ** \@在 sid**參數中指定步驟1中傳回的 sid。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫引擎升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 Upgrade Advisor &#91;新的&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

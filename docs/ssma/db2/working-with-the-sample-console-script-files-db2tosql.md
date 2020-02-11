@@ -1,5 +1,5 @@
 ---
-title: 使用範例主控台指令碼檔 (DB2ToSQL) |Microsoft Docs
+title: 使用範例主控台腳本檔案（DB2ToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,74 +10,74 @@ ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ca2a595eb57d01554aa8389b002fcd6f8422b9da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086167"
 ---
-# <a name="working-with-the-sample-console-script-files-db2tosql"></a>使用範例主控台指令碼檔 (DB2ToSQL)
-幾個範例檔案，以及產品提供的使用者參考和使用方式。 本章節描述的方式，輕鬆地自訂這些指令碼，以符合使用者需求。  
+# <a name="working-with-the-sample-console-script-files-db2tosql"></a>使用範例主控台指令檔（DB2ToSQL）
+已提供一些範例檔案以及使用者參考和使用方式的產品。 本節說明可輕鬆自訂這些腳本以符合使用者需求的方式。  
   
-## <a name="sample-console-script-files"></a>範例主控台指令碼檔  
-使用者參考已提供下列範例主控台指令碼檔涵蓋不同的案例：  
+## <a name="sample-console-script-files"></a>範例主控台腳本檔案  
+下列範例主控台腳本檔案已針對使用者參考提供涵蓋的不同案例：  
   
--   ServersConnectionFileSample.xml  
+-   ServersConnectionFileSample .xml  
   
--   VariableValueFileSample.xml  
+-   VariableValueFileSample .xml  
   
--   AssessmentReportGenerationSample.xml  
+-   AssessmentReportGenerationSample .xml  
   
--   SqlStatementConversionSample.xml  
+-   SqlStatementConversionSample .xml  
   
--   ConversionAndDataMigrationSample.xml  
+-   ConversionAndDataMigrationSample .xml  
   
-1.  **ServersConnectionFileSample.xml:**  
+1.  **ServersConnectionFileSample .xml：**  
   
-    -   此範例可讓來源和目標資料庫的連線使用不同的模式，使用者可以選取任何根據需求的模式。 此範例包含伺服器定義。  
+    -   這個範例會為來源和目標資料庫提供不同的連線模式，而使用者可以依據需求選取任何模式。 這個範例包含伺服器定義。  
   
-    -   使用者可以連接到所需的資料庫，只要變更所需的來源和目標伺服器定義的值。 在範例中提供所有已提供值，變數的值中，您可以使用哪些**VariableValueFileSample.xml**。  可以從使用者的處理伺服器連線檔案中移除所有其他連接參數。  
+    -   只要將值變更為所需的來源和目標伺服器定義，使用者就可以連接到所需的資料庫。 在範例中，提供的所有值都是**VariableValueFileSample**中可用的變數值。  所有其他連接參數可以從使用者的工作伺服器連接檔案中移除。  
   
-    -   如需有關如何連接到來源和目標伺服器的詳細資訊，請參閱 <<c0> [ 建立伺服器連線檔案&#40;DB2ToSQL&#41; ](../../ssma/db2/creating-the-server-connection-files-db2tosql.md) 。</c0>  
+    -   如需連接到來源和目標伺服器的詳細資訊，請參閱[&#40;DB2ToSQL&#41;建立伺服器連接](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)檔案。  
   
-2.  **VariableValueFileSample.xml:** 已使用範例主控台中的所有變數指令都碼檔案和`ServersConnectionFileSample.xml`已定序，此檔案中。 使用者已取代範例變數的範例主控台指令碼的執行值與使用者定義的並將這個檔案傳遞做為其他命令列引數，以及指令碼檔案。  
+2.  **VariableValueFileSample .xml：** 已在範例主控台腳本檔案中使用，且`ServersConnectionFileSample.xml`已在此檔案中自動分頁的所有變數。 若要執行範例主控台腳本，使用者必須使用使用者定義的值來取代範例變數值，並將此檔案當做額外的命令列引數，連同腳本檔案一起傳遞。  
   
-    如需有關變數值檔案的詳細資訊，請參閱[建立變數值檔案&#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)。  
+    如需變數值檔案的詳細資訊，請參閱[&#40;DB2ToSQL&#41;建立變數值](../../ssma/db2/creating-variable-value-files-db2tosql.md)檔案。  
   
-3.  **AssessmentReportGenerationSample.xml:** 此範例中，可讓使用者產生的 xml 評定報告可以用於由使用者分析他開始轉換並移轉資料之前。  
+3.  **AssessmentReportGenerationSample .xml：** 這個範例可讓使用者在開始轉換和遷移資料之前，產生可供使用者用來進行分析的 xml 評估報告。  
   
-    在`generate-assessment-report`命令的使用者具有 mandatorily 變更變數的值 (請參閱**VariableValueFileSample.xml**) 中`object-name`屬性加入資料庫使用者所使用的名稱所。 根據指定的物件種類`object-type`值也會變更。  
+    在使用者`generate-assessment-report`必須 mandatorily 的命令中，將`object-name`屬性中的變數值（請參閱**VariableValueFileSample**）變更為使用者正在使用的資料庫名稱。 視指定的物件類型而定，此`object-type`值也必須一併變更。  
   
-    如果使用者需要評估多個物件 / 資料庫他可以指定多個`metabase-object`節點中所示`generate-assessment-report`命令的範例 4 的範例主控台指令碼檔案。  
+    如果使用者必須評估多個物件/資料庫，他可以指定多`metabase-object`個節點，如範例`generate-assessment-report`主控台指令檔的範例4所示。  
   
-    如需有關如何產生報告的詳細資訊，請參閱 <<c0> [ 產生的報表&#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)。</c0>  
+    如需產生報表的詳細資訊，請參閱[&#40;DB2ToSQL&#41;產生報表](../../ssma/db2/generating-reports-db2tosql.md)。  
   
-    **注意：**  
+    **紀錄**  
   
-    請確定變數值檔案的命令列引數傳遞至主控台應用程式，且 VariableValueFileSample.xml 會更新指定的使用者值。  
+    請確定將變數值檔案命令列引數傳遞至主控台應用程式，並以使用者指定的值更新 VariableValueFileSample。  
   
-    請確認伺服器連線檔案命令列引數傳遞至主控台應用程式，然後 ServersConnectionFileSample.xml 已包含正確的伺服器參數值。  
+    請確定伺服器連接檔案命令列引數已傳遞至主控台應用程式，且 ServersConnectionFileSample 使用正確的伺服器參數值進行更新。  
   
-4.  **SqlStatementConversionSample.xml:** 此範例可讓使用者產生對應`t-sql`來源資料庫的指令碼`sql`提供作為輸入的命令。  
+4.  **SqlStatementConversionSample .xml：** 這個範例可讓使用者針對提供做為`t-sql`輸入的源資料庫`sql`命令，產生對應的腳本。  
   
-    在`convert-sql-statement`命令的使用者具有 mandatorily 變更變數的值 (請參閱**VariableValueFileSample.xml**) 中`context`屬性正被使用者所使用的資料庫名稱。 使用者也必須變更`sql`屬性值的來源資料庫`sql`他/她需要轉換的命令。  
+    在`convert-sql-statement`命令中，使用者必須 mandatorily 將`context`屬性中的變數值（請參閱**VariableValueFileSample**）變更為使用者正在使用的資料庫名稱。 使用者也必須將`sql`屬性值變更為其需要轉換的源資料庫`sql`命令。  
   
-    使用者也可以提供要轉換的 sql 檔案。 這已在說明`convert-sql-statement`命令的範例 4 的範例主控台指令碼檔案。  
+    使用者也可以提供要轉換的 sql 檔案。 範例主控台腳本檔案的`convert-sql-statement`範例4中已說明這種情況。  
   
     > [!NOTE]  
-    > 請確定變數值檔案的命令列引數傳遞至主控台應用程式，且 VariableValueFileSample.xml 會更新指定的使用者值。  
+    > 請確定將變數值檔案命令列引數傳遞至主控台應用程式，並以使用者指定的值更新 VariableValueFileSample。  
   
-5.  **ConversionAndDataMigrationSample.xml:** 此範例可讓使用者從資料移轉至轉換執行端對端移轉。 一個強制屬性值，這些使用者必須先變更清單如下：  
+5.  **ConversionAndDataMigrationSample .xml：** 這個範例可讓使用者執行端對端遷移，使其無法轉換為資料移轉。 如下所示，需要變更的必要屬性值清單如下：  
   
     |命令名稱|描述|屬性|  
     |----------------|---------------|-------------|  
-    |`map-schema`|目標結構描述的來源資料庫的結構描述對應。|`source-schema:` 指定轉換所需的來源資料庫。<br /><br />`sql-server-schema`:指定要移轉至目標資料庫|  
-    |`convert-schema`|執行從來源到目標結構描述的結構描述轉換。<br /><br />如果使用者需要評估多個物件 / 資料庫他可以指定多個`metabase-object`節點中所示`convert-schema`命令的範例 4 的範例主控台指令碼檔案。|`object-name`:指定來源資料庫/物件轉換所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更 `object-name`|  
-    |`synchronize-target`|會使用目標資料庫，同步處理的目標物件。<br /><br />如果使用者需要評估多個物件 / 資料庫他可以指定多個`metabase-object`節點中所示`synchronize-target`命令的範例 3 的範例主控台指令碼檔案。|`object-name:` 指定 sql server 資料庫/物件建立時所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更 `object-name`|  
-    |`migrate-data`|將來源資料移轉至目標。<br /><br />如果使用者需要評估多個物件 / 資料庫他可以指定多個`metabase-object`節點中所示`migrate-data`命令的範例 2 的範例主控台指令碼檔案。|`object-name:` 指定來源資料庫/資料表移轉所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更 `object-name`|  
+    |`map-schema`|源資料庫與目標架構的架構對應。|`source-schema:`指定需要轉換的源資料庫。<br /><br />`sql-server-schema`：指定要遷移至的目標資料庫|  
+    |`convert-schema`|執行從來源到目標架構的架構轉換。<br /><br />如果使用者必須評估多個物件/資料庫，他可以指定多`metabase-object`個節點，如範例`convert-schema`主控台指令檔的範例4所示。|`object-name`：指定需要轉換的源資料庫/物件名稱。 確定對應`object-type`的已根據指定的物件類型而變更。`object-name`|  
+    |`synchronize-target`|同步處理目標物件與目標資料庫。<br /><br />如果使用者必須評估多個物件/資料庫，他可以指定多`metabase-object`個節點，如範例`synchronize-target`主控台指令檔的範例3所示。|`object-name:`指定需要建立的 sql server 資料庫/物件名稱。 確定對應`object-type`的已根據指定的物件類型而變更。`object-name`|  
+    |`migrate-data`|將源資料移轉至目標。<br /><br />如果使用者必須評估多個物件/資料庫，他可以指定多`metabase-object`個節點，如範例`migrate-data`主控台指令檔的範例2中所示。|`object-name:`指定需要遷移的源資料庫/資料表名稱。 確定對應`object-type`的已根據指定的物件類型而變更。`object-name`|  
   
 ## <a name="see-also"></a>另請參閱  
-[建立變數值檔案&#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
-[建立伺服器連線檔案&#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
-[產生報告&#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)  
+[建立變數值檔案 &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
+[&#40;DB2ToSQL 建立伺服器連接檔案&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
+[&#40;DB2ToSQL&#41;產生報表](../../ssma/db2/generating-reports-db2tosql.md)  
   

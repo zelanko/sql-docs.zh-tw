@@ -1,5 +1,5 @@
 ---
-title: sp_getqueuedrows (TRANSACT-SQL) |Microsoft Docs
+title: sp_getqueuedrows （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ad7521eed3cd25d067e3ea253ff2a4362350c889
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68123944"
 ---
-# <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
+# <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   擷取訂閱者有更新在佇列中暫止的資料列。 這個預存程序執行於訂閱資料庫的訂閱者端。  
@@ -39,36 +39,36 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @tablename = ] 'tablename'` 為資料表的名稱。 *tablename*已**sysname**，沒有預設值。 這份資料表必須在佇列訂閱中。  
+`[ @tablename = ] 'tablename'`這是資料表的名稱。 *tablename*是**sysname**，沒有預設值。 這份資料表必須在佇列訂閱中。  
   
-`[ @owner = ] 'owner'` 是訂用帳戶擁有者。 *擁有者*已**sysname**，預設值是 NULL。  
+`[ @owner = ] 'owner'`是訂用帳戶擁有者。 *owner*是**sysname**，預設值是 Null。  
   
-`[ @tranid = ] 'transaction_id'` 可讓交易識別碼。 所要篩選輸出 *transaction_id*已**nvarchar(70)** ，預設值是 NULL。 如果指定的話，便會顯示佇列命令的相關聯交易識別碼。 如果是 NULL，便會顯示佇列中的所有命令。  
+`[ @tranid = ] 'transaction_id'`允許以交易識別碼來篩選輸出。 *transaction_id*是**Nvarchar （70）**，預設值是 Null。 如果指定的話，便會顯示佇列命令的相關聯交易識別碼。 如果是 NULL，便會顯示佇列中的所有命令。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
  顯示目前至少有訂閱資料表的一項佇列交易的所有資料列。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**動作**|**nvarchar(10)**|進行同步處理時所採取的動作類型。<br /><br /> INS= 插入<br /><br /> DEL = 刪除<br /><br /> UPD = 更新|  
-|**tranid**|**nvarchar(70)**|用來執行命令的交易識別碼。|  
-|**表格欄 1...n**||指定的資料表中的每個資料行的值*tablename*。|  
+|**動作**|**Nvarchar （10）**|進行同步處理時所採取的動作類型。<br /><br /> INS= 插入<br /><br /> DEL = 刪除<br /><br /> UPD = 更新|  
+|**Tranid**|**Nvarchar （70）**|用來執行命令的交易識別碼。|  
+|**table column1...n**||*Tablename*中指定之資料表的每個資料行的值。|  
 |**msrepl_tran_version**|**uniqueidentifier**|這個資料行用來追蹤複寫資料的變更，以及在發行者端執行衝突偵測。 這個資料行會自動加入資料表中。|  
   
 ## <a name="remarks"></a>備註  
- **sp_getqueuedrows**在參與佇列更新訂閱者使用。  
+ **sp_getqueuedrows**是在參與佇列更新的訂閱者端使用。  
   
- **sp_getqueuedrows**訂用帳戶的指定資料表的資料列資料庫，尋找參與佇列更新，但目前尚未解決佇列讀取器代理程式。  
+ **sp_getqueuedrows**在訂閱資料庫上尋找已參與佇列更新，但目前尚未由佇列讀取器代理程式解析的指定資料表的資料列。  
   
-## <a name="permissions"></a>Permissions  
- **sp_getqueuedrows**要求中指定之資料表的 SELECT 權限*tablename*。  
+## <a name="permissions"></a>權限  
+ **sp_getqueuedrows**需要*tablename*中指定之資料表的 SELECT 許可權。  
   
 ## <a name="see-also"></a>另請參閱  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [佇列更新衝突偵測和解決方法](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
+ [佇列更新衝突偵測和解決](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

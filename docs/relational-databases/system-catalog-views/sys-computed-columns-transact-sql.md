@@ -1,5 +1,5 @@
 ---
-title: sys.computed_columns (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases computed_columns （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,29 +21,29 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9e55274d1e6dfa34a3cfb92317bb4f205cfdd964
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68109567"
 ---
-# <a name="syscomputedcolumns-transact-sql"></a>sys.computed_columns (Transact-SQL)
+# <a name="syscomputed_columns-transact-sql"></a>sys.computed_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  包含一個資料列的每個資料行中找到**sys.columns**也就是計算資料行。  
+  針對在**sys.databases**中找到的每個資料行，各包含一個資料列。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**\<繼承資料行 >**||**Sys.computed_columns**檢視會傳回所有資料行**sys.columns**檢視。 另外亦將傳回以下所述的其他資料行。 如需資料行的描述， **sys.computed_columns**檢視繼承自**sys.columns**，請參閱[sys.columns &#40;-&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)。 值**sys.computer_columns**資料行一律會設為 1 **sys.computed_columns**檢視。|  
-|**定義**|**nvarchar(max)**|定義這個計算資料行的 SQL 文字。|  
+|**\<繼承的資料行>**||[ **Sys.databases] computed_columns**視圖會傳回 [ **sys.databases** ] 視圖中的所有資料行。 另外亦將傳回以下所述的其他資料行。 如需**sys. computed_columns** view 繼承自**sys.databases**之資料行的描述，請參閱[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)。 在 [ **computed_columns** ] 視圖中， **is_computed**資料行的值一律會設定為1。|  
+|**清晰**|**nvarchar(max)**|定義這個計算資料行的 SQL 文字。|  
 |**uses_database_collation**|**bit**|1 = 資料行定義須依據資料庫的預設定序進行正確評估；否則為 0。 這種相依性可以防止資料庫預設定序變更。|  
 |**is_persisted**|**bit**|計算資料行是保存計算資料行。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

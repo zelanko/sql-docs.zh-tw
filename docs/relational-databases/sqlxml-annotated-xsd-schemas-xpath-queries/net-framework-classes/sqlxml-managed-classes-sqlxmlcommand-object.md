@@ -32,10 +32,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eb307599c48c72697f696e78eb7ed988dc03ca37
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252645"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>SQLXML 受控類別 - SqlXmlCommand 物件
@@ -52,7 +52,7 @@ public SqlXmlCommand(string cnString)
   
  如需實用範例，請參閱[&#40;SQLXML Managed 類別&#41;執行 SQL 查詢](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)。  
   
-## <a name="methods"></a>Methods  
+## <a name="methods"></a>方法  
  TheSqlXmlCommand 物件支援數種方法，包括下列執行命令的方法：  
   
  void ExecuteNonQuery （）  
@@ -75,7 +75,7 @@ public SqlXmlCommand(string cnString)
  void ClearParameters （）  
  清除針對給定命令物件建立的參數。 如果您要在相同的命令物件上執行多個查詢，這個方法相當實用。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>屬性  
  SqlXmlCommand 物件也支援下列屬性：  
   
  ClientSideXml  

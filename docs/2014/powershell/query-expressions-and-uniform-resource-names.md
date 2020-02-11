@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782756"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查詢運算式和統一的資源名稱
@@ -41,7 +41,7 @@ ms.locfileid: "72782756"
 ```  
   
 ## <a name="arguments"></a>引數  
- *物件*  
+ *Object*  
  指定運算式字串之該節點所代表的物件類型。 每個物件都代表這些 SMO 物件模型命名空間的集合類別：  
   
  <xref:Microsoft.SqlServer.Management.Smo>  
@@ -63,7 +63,7 @@ ms.locfileid: "72782756"
  例如，您可以指定 Server 來代表 **ServerCollection** 類別，或指定 Database 來代表 **DatabaseCollection** 類別。  
   
  \@*PropertyName*  
- 指定與 *Object* 中指定物件相關聯之類別的其中一個屬性名稱。 屬性的名稱必須以 \@ 字元當作前置詞。 例如，您可以指定 \@IsAnsiNull 來代表 **Database** 類別屬性 **IsAnsiNull**。  
+ 指定與 *Object*中指定物件相關聯之類別的其中一個屬性名稱。 屬性的名稱必須以 \@ 字元當作前置詞。 例如，您可以指定 \@IsAnsiNull 來代表 **Database** 類別屬性 **IsAnsiNull**。  
   
  \@*BooleanPropertyName*=true()  
  列舉指定之布林屬性設定為 TRUE 的所有物件。  
@@ -98,7 +98,7 @@ ms.locfileid: "72782756"
  not(\<*PropertyExpression*>)  
  執行 *PropertyExpression*評估值的否定運算，並且列舉不符合 *PropertyExpression*中指定之條件的所有物件。 例如，not(contains(\@Name, 'xyz')) 會列舉名稱中沒有 xyz 字串的所有物件。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  查詢運算式是列舉 SMO 模型階層中之節點的字串。 每個節點都具有指定準則的篩選運算式，用於決定要列舉位於該節點的哪些物件。 查詢運算式是以 XPath 運算式語言建立模型。 查詢運算式會實作 XPath 所支援之運算式的小型子集，而且也具有在 XPath 中找不到的某些延伸模組。 XPath 運算式是字串，其中指定一組用來列舉 XML 文件之一個或多個標記的準則。 如需有關 XPath 的詳細資訊，請參閱 [W3C XPath Language](http://www.w3.org/TR/xpath20/)(W3C XPath 語言)。  
   
  查詢運算式必須以伺服器物件的絕對參考為開頭。 不允許使用含有前置 / 的相對運算式。 在查詢運算式中指定之物件的順序必須遵循相關聯物件模型中之集合物件的階層。 例如，在 Microsoft.SqlServer.Management.Smo 命名空間中參考物件的查詢運算式必須以伺服器節點為開頭，後面接著資料庫節點等項目。  
@@ -121,7 +121,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
 Server[@Name='MYCOMPUTER']/Database[@AutoClose=false()]  
 ```  
   
-### <a name="b-enumerating-objects-using-contains"></a>b. 使用 contains 列舉物件  
+### <a name="b-enumerating-objects-using-contains"></a>B. 使用 contains 列舉物件  
  這個查詢運算式會列舉不區分大小寫而且名稱具有 'm' 字元的所有資料庫。  
   
 ```  
