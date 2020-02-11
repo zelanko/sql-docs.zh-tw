@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7a18a44a0f71254342f8fc29c38f0993fc05bfb
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637899"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼
   本主題將討論如何取得將屬性加入至搜尋屬性清單，使全文檢索搜尋能夠進行搜尋所需的值。 這些值包括文件屬性的屬性集 GUID 和屬性整數識別碼。  
   
- 由 Ifilter 從二進位資料（也就是儲存在 `varbinary`、`varbinary(max)` （包括 `FILESTREAM`）或 `image` 資料類型資料行中）所解壓縮的檔案屬性可供全文檢索搜尋使用。 若要使擷取的屬性可搜尋，則必須手動將屬性加入至搜尋屬性清單。 同時，搜尋屬性清單必須與一個或多個全文檢索索引產生關聯。 如需詳細資訊，請參閱 [使用搜索屬性清單搜索文件屬性](search-document-properties-with-search-property-lists.md)。  
+ Ifilter 從二進位資料（也就是儲存`varbinary`在、 `varbinary(max)` （包括`FILESTREAM`）或`image`資料類型資料行中的資料）解壓縮的檔案屬性可供全文檢索搜尋之用。 若要使擷取的屬性可搜尋，則必須手動將屬性加入至搜尋屬性清單。 同時，搜尋屬性清單必須與一個或多個全文檢索索引產生關聯。 如需詳細資訊，請參閱 [使用搜索屬性清單搜索文件屬性](search-document-properties-with-search-property-lists.md)。  
   
  在屬性清單中加入可用屬性之前，您必須先找到有關屬性的兩項資訊：  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73637899"
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|給定項目的一位或多位作者。|  
 |Tags|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|指派給項目的關鍵字集合 (也稱為標記)。|  
-|型別|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|以正式類型為基礎的認知檔案類型。|  
+|類型|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|以正式類型為基礎的認知檔案類型。|  
 |Title|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|項目的標題。 例如文件的標題、郵件的主旨、相片的標題或音樂曲目的名稱。|  
   
  為了鼓勵檔案格式的一致性，Microsoft 已經針對許多文件類別識別了常用且高優先順序的文件屬性子集。 這些類別包括通訊、連絡人、文件、音樂檔案、圖片和視訊。 如需每個類別目錄前幾項排名屬性的詳細資訊，請參閱 Windows Search 文件集中的 [system-defined properties for custom file formats](https://go.microsoft.com/fwlink/?LinkId=144336) (自訂檔案格式的系統定義屬性)。  

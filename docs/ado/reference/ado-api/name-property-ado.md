@@ -1,5 +1,5 @@
 ---
-title: Name 屬性 (ADO) |Microsoft Docs
+title: Name 屬性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,30 +17,30 @@ ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a919bb377eee2da1c3c1a65e85ddfb9807ed8d50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918028"
 ---
 # <a name="name-property-ado"></a>Name 屬性 (ADO)
-表示物件的名稱。  
+指出物件的名稱。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**字串**值，指出物件的名稱。  
+ 設定或傳回表示物件名稱的**字串**值。  
   
 ## <a name="remarks"></a>備註  
- 使用**名稱**屬性來指派的名稱，或擷取的名稱**命令**，**屬性**，**欄位**，或**參數**物件。  
+ 使用 [**名稱**] 屬性可將名稱指派給或取出**命令**、**屬性**、**欄位**或**參數**物件的名稱。  
   
- 值會是讀取/寫入 on**命令**物件和唯讀**屬性**物件。  
+ 在**命令**物件上的值是讀取/寫入，而在**屬性**物件上為唯讀。  
   
- 針對**欄位**物件，**名稱**是通常是唯讀。 不過，對於新**欄位**附加到的物件[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)集合[記錄](../../../ado/reference/ado-api/record-object-ado.md)，**名稱**是讀取/寫入之後才[值](../../../ado/reference/ado-api/value-property-ado.md)屬性**欄位**已指定與此資料提供者已成功地加入新**欄位**藉由呼叫[更新](../../../ado/reference/ado-api/update-method.md)方法**欄位**集合。  
+ 如果是**欄位**物件，**名稱**通常是唯讀的。 不過，對於已附加至[記錄](../../../ado/reference/ado-api/record-object-ado.md)之[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合的新**欄位**物件，只有在指定**欄位**的[Value](../../../ado/reference/ado-api/value-property-ado.md)屬性，且資料提供者已藉由呼叫**Fields**集合的[Update](../../../ado/reference/ado-api/update-method.md)方法來成功加入新**欄位**之後，**名稱**才會是讀取/寫入。  
   
- 針對**參數**物件尚未附加至[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)集合**名稱**屬性是讀取/寫入。 為附加**參數**物件和所有其他物件**名稱**屬性是唯讀的。 若要在集合中是唯一沒有名稱。  
+ 對於尚未附加至[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)集合的**參數**物件， **Name**屬性是讀取/寫入。 對於附加的**參數**物件和所有其他物件而言， **Name**屬性是唯讀的。 名稱在集合中不需要是唯一的。  
   
- 您可以擷取**名稱**由序數參考之後, 您可以對物件直接依名稱參考物件的屬性。 例如，如果`rstMain.Properties(20).Name`會產生`Updatability`，您可以接著參考此屬性維持`rstMain.Properties("Updatability")`。  
+ 您可以使用序數參考抓取物件的**Name**屬性，之後您就可以直接依名稱參考該物件。 例如，如果`rstMain.Properties(20).Name`產生`Updatability`，您之後就可以將這個屬性稱為。 `rstMain.Properties("Updatability")`  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
   
 |||  
 |-|-|  
@@ -48,5 +48,5 @@ ms.locfileid: "67918028"
 |[Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)|[Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [Attributes 和 Name 屬性範例 (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Attributes 和 Name 屬性範例 （VC + +）](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
+ [Attributes 和 Name 屬性範例（VB）](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
+ [Attributes 和 Name 屬性範例（VC + +）](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

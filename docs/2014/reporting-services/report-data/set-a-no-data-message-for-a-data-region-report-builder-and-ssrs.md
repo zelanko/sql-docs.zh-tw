@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f2660582b03a121a81976d6bbc12afc1213877c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107090"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>在資料區域中設定沒有資料的訊息 (報表產生器及 SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107090"
   
 1.  在 [設計] 檢視中，按一下設計介面上的資料表、矩陣或清單資料區或子報表來加以選取。 [屬性] 窗格會顯示所選取項目的屬性。  
   
-2.  在 [屬性] 窗格中，輸入您想要顯示中的訊息文字`NoRowsMessage`屬性欄位。  
+2.  在 [屬性] 窗格中，輸入您想要在 [屬性] 欄位中`NoRowsMessage`顯示為訊息的文字。  
   
      另外，您也可以從下拉式清單按一下 [運算式]  ，開啟 [運算式]  對話方塊，然後建立運算式。  
   
@@ -35,9 +35,9 @@ ms.locfileid: "66107090"
   
 1.  在 [設計] 檢視中，按一下設計介面上的圖表加以選取。 [屬性] 窗格會顯示所選取項目的屬性。  
   
-2.  在 [屬性] 窗格中，展開節點`NoDataMessage`。  
+2.  在 [屬性] 窗格中，展開的`NoDataMessage`節點。  
   
-3.  在  **Caption**，輸入您想要顯示為訊息中的文字`NoDataMessage`屬性欄位。  
+3.  在 [**標題**] 中，輸入您想要在 [屬性] 欄位`NoDataMessage`中顯示為訊息的文字。  
   
      另外，您也可以從下拉式清單按一下 [運算式]  ，開啟 [運算式]  對話方塊，然後建立運算式。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66107090"
   
 1.  在 [設計] 檢視中，按一下設計介面上的子報表加以選取。 [屬性] 窗格會顯示所選取項目的屬性。  
   
-2.  在 [屬性] 窗格中，輸入您想要顯示中的訊息文字`NoRowsMessage`屬性欄位。  
+2.  在 [屬性] 窗格中，輸入您想要在 [屬性] 欄位中`NoRowsMessage`顯示為訊息的文字。  
   
      另外，您也可以從下拉式清單按一下 [運算式]  ，開啟 [運算式]  對話方塊，然後建立運算式。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66107090"
   
 1.  在 [設計] 檢視中，按一下地圖上的色階加以選取。 [屬性] 窗格會顯示所選取項目的屬性。  
   
-2.  在 [屬性] 窗格中，在`NoDataText`，輸入您想要顯示為不含資料值的色彩標籤的文字。  
+2.  在 [屬性] 窗格的`NoDataText`[] 中，輸入您要顯示成色彩標籤的文字（不含資料值）。  
   
      另外，您也可以從下拉式清單按一下 [運算式]  ，開啟 [運算式]  對話方塊，然後建立運算式。  
   

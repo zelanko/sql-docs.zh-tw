@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d1eb74eca33bc92152ea08fad2303b9a8b4ba48e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243094"
 ---
 # <a name="error-list-window-management-studio"></a>錯誤清單視窗 (Management Studio)
@@ -75,16 +75,16 @@ ms.locfileid: "75243094"
  **預設順序**  
  顯示指示項目產生順序的整數。  
   
- **描述**  
+ **說明**  
  顯示錯誤項目的文字。 冗長的描述會切換到下一行。  
   
- **文字檔**  
+ **檔案**  
  顯示產生錯誤的指令碼檔案名稱。  
   
- **連線**  
+ **折線圖**  
  顯示指示包含錯誤之程式碼行的整數。  
   
- **排**  
+ **資料行**  
  顯示指示程式碼行中之錯誤位置的整數。  
   
  **專案**  

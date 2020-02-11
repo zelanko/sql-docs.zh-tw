@@ -18,10 +18,10 @@ ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: da797051ba3ce9c8a0d818388c999e89c7300e9f
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659497"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>SetStringValue 方法 (SqlServiceAdvancedProperty 類別)
@@ -36,12 +36,12 @@ object.SetStringValue(StrValue)
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
+ *目標*  
  代表進階屬性的 [SqlServiceAdvancedProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 物件。  
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |*StrValue*|指定進階屬性值的字串值。|  
   
@@ -52,6 +52,6 @@ object.SetStringValue(StrValue)
  屬性值類型必須是**字串**，才能夠將屬性設定為字串值。  
   
 ## <a name="see-also"></a>另請參閱  
- [啟動和停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [啟動及停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

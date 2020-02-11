@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705759"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server 擴充的事件工作階段
@@ -31,16 +31,16 @@ ms.locfileid: "62705759"
 ## <a name="session-states"></a>工作階段狀態  
  下圖顯示擴充事件工作階段的各個狀態。  
   
- ![擴充的事件工作階段狀態](../../database-engine/media/xesessionstate.gif "擴充的事件工作階段狀態")  
+ ![擴充事件工作階段狀態](../../database-engine/media/xesessionstate.gif "擴充事件工作階段狀態")  
   
  在上圖中，請注意在針對事件工作階段發出不同的 DDL 命令時，該工作階段狀態就會變更。 下表說明這些狀態變更所代表的意義。  
   
 |圖例標籤|DDL 陳述式|描述|  
 |------------------------|-------------------|-----------------|  
 |建立|CREATE EVENT SESSION|主機處理序會建立工作階段物件，此物件包含由 CREATE EVENT SESSION 所提供的中繼資料。 主機處理序會驗證工作階段定義、驗證使用者權限等級，並將中繼資料儲存在 master 資料庫內。 此時，工作階段不在使用中。|  
-|Alter|ALTER EVENT SESSION, STATE=START|主機處理序會啟動工作階段。 主機處理序會讀取儲存的中繼資料、驗證工作階段定義、驗證使用者權限等級，並建立工作階段。 會載入工作階段物件 (如事件和目標)，且事件處理為使用中。|  
-|Alter|ALTER EVENT SESSION, STATE=STOP|主機處理序會停止使用中工作階段，並保留中繼資料。|  
-|Drop|DROP EVENT SESSION|根據工作階段是否在使用中，Drop (DROP SESSION) 將會刪除中繼資料並關閉使用中工作階段，或是刪除工作階段中繼資料。|  
+|變更|ALTER EVENT SESSION, STATE=START|主機處理序會啟動工作階段。 主機處理序會讀取儲存的中繼資料、驗證工作階段定義、驗證使用者權限等級，並建立工作階段。 會載入工作階段物件 (如事件和目標)，且事件處理為使用中。|  
+|變更|ALTER EVENT SESSION, STATE=STOP|主機處理序會停止使用中工作階段，並保留中繼資料。|  
+|卸除|DROP EVENT SESSION|根據工作階段是否在使用中，Drop (DROP SESSION) 將會刪除中繼資料並關閉使用中工作階段，或是刪除工作階段中繼資料。|  
   
 > [!NOTE]  
 >  ALTER EVENT SESSION 和 DROP EVENT SESSION 都可以套用到中繼資料或是使用中工作階段和中繼資料。  
@@ -50,7 +50,7 @@ ms.locfileid: "62705759"
   
  下圖顯示工作階段內容以及封裝與工作階段之間的關聯性。  
   
- ![工作階段中物件並存和共用。](../../database-engine/media/xesessions.gif "工作階段中物件並存和共用。")  
+ ![工作階段中的物件並存和共用。](../../database-engine/media/xesessions.gif "工作階段中的物件並存和共用。")  
   
  在上圖中，請注意：  
   

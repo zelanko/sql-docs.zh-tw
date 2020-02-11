@@ -1,5 +1,5 @@
 ---
-title: 桌面資料庫驅動程式搭配使用的檔案 |Microsoft Docs
+title: 要與桌面資料庫驅動程式搭配使用的檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ ms.assetid: c936b9e9-e965-4437-a205-833413320940
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98df4ed5de9cc38f017c2fb9c577d12c067c5ebf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063683"
 ---
 # <a name="files-to-use-with-the-desktop-database-drivers"></a>與桌面資料庫驅動程式搭配使用的檔案
-ODBC 桌面資料庫驅動程式可搭配 Microsoft Jet 資料庫引擎、 可安裝 ISAM 檔案，以及 Microsoft ODBC 檔。 並非所有需要重新發佈的產品，而不是所有核心元件。  
+ODBC 桌面資料庫驅動程式會與 Microsoft Jet 資料庫引擎、可安裝的 ISAM 檔案和 Microsoft ODBC 檔案搭配使用。 產品的轉散發並非全部必要，而且並非全部都是核心元件。  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
 |每個桌面資料庫驅動程式所使用的檔案|ODBC 驅動程式檔案|  
 |每個桌面資料庫驅動程式所使用的 Microsoft Jet 檔案|Microsoft Jet 檔案|  
-|Iisam 開啟驅動程式檔案，以便提供 Microsoft Jet 和其他 DBMS 之間的資料存取|可安裝的 ISAM 驅動程式檔案|
+|可在 Microsoft Jet 與其他 DBMS 之間提供資料存取的 IISAM 驅動程式檔案|可安裝的 ISAM 驅動程式檔案|

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 02b55465cc4aed912e6e955883ca8fdbfa4be870
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228214"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>在原生編譯的預存程序中實作 OR 運算子
@@ -246,5 +246,5 @@ GO
  如果您在 WHERE 子句或 JOIN 條件中有多個 OR 運算子，模擬此行為所必須執行的查詢數目可能會以指數方式遞增。 這樣可能會降低查詢效能，也可能會增加記憶體使用量，因為必須使用記憶體最佳化資料表變數。  
   
 ## <a name="see-also"></a>另請參閱  
- [原生編譯預存程式的遷移問題](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
+ [原生編譯預存程序的移轉問題](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
   

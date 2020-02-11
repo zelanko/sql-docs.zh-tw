@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7591cff38ac08d9fd36d7b39f180613fbdd12961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63066436"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>記憶體中 OLTP 的 SQL Server 管理物件支援
@@ -55,7 +55,7 @@ ms.locfileid: "63066436"
 -   <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>  
   
 ## <a name="code-sample"></a>程式碼範例  
- 此範例會執行下列各項：  
+ 此範例會執行下列動作：  
   
 -   建立具有記憶體最佳化檔案群組和記憶體最佳化檔案的資料庫。  
   

@@ -1,5 +1,5 @@
 ---
-title: dbo.systargetservers (TRANSACT-SQL) |Microsoft Docs
+title: dbo. systargetservers （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,10 +20,10 @@ ms.assetid: 479d1314-be37-4d19-ac9c-419fc9110e53
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3c6304b108d75d6fe9ba00ccccdae322bf7cedde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68095845"
 ---
 # <a name="dbosystargetservers-transact-sql"></a>dbo.systargetservers (Transact-SQL)
@@ -35,13 +35,13 @@ ms.locfileid: "68095845"
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|伺服器識別碼。|  
 |**server_name**|**sysname**|伺服器名稱。|  
-|**location**|**nvarchar(200)**|指定之目標伺服器的位置。|  
+|**位置**|**nvarchar(200)**|指定之目標伺服器的位置。|  
 |**time_zone_adjustment**|**int**|相對於格林威治標準時間 (GMT) 的時間調整間隔 (小時)。|  
 |**enlist_date**|**datetime**|編列指定的目標伺服器之日期和時間。|  
-|**last_poll_date**|**datetime**|日期和時間指定的目標伺服器前次輪詢多伺服器的**sysdownloadlist**要執行之工作的系統資料表。|  
-|**status**|**int**|目標伺服器的狀態：<br /><br /> **1** = 正常<br /><br /> **2** = 暫止的重新同步<br /><br /> **4** = 可能離線|  
+|**last_poll_date**|**datetime**|指定的目標伺服器上次輪詢多伺服器**sysdownloadlist**系統資料表以執行作業的日期和時間。|  
+|**狀態**|**int**|目標伺服器的狀態：<br /><br /> **1** = 一般<br /><br /> **2** = 重新同步處理暫止<br /><br /> **4** = 可疑離線|  
 |**local_time_at_last_poll**|**datetime**|前次輪詢目標伺服器來尋找作業的日期和時間。|  
-|**enlisted_by_nt_user**|**nvarchar(100)**|執行之人員的使用者名稱**sp_msx_enlist**目標伺服器上。|  
+|**enlisted_by_nt_user**|**Nvarchar （100）**|在目標伺服器上執行**sp_msx_enlist**之人員的使用者名稱。|  
 |**poll_internal**|**int**|目標伺服器經過多久 (秒) 之後，便輪詢主要伺服器來尋找新的下載指示。|  
   
   

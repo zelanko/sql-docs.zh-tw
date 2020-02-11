@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 643de4d56692687b7c88b88c712fb1cc478eb0a1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0a31afef0924e4eda2b2eb9fbe5d27f7f4ab9f51
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727375"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74200408"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>在 SQL Server 上設定用於 R 開發的資料科學用戶端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +218,7 @@ SSMS 是個別的下載，很適合用來建立及執行 SQL Server 上的預存
 
 如果您還沒有用來處理 R 的慣用 IDE，建議您使用 **Visual Studio R 工具**。
 
-+ [下載 Visual Studio R 工具 (RTVS)](https://visualstudio.microsoft.com/vs/features/rtvs/)
++ [下載 Visual Studio R 工具 (RTVS)](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019)
 + [安裝指示](https://docs.microsoft.com/visualstudio/rtvs/installing-r-tools-for-visual-studio) - Visual Studio 的數個版本中都有提供 RTVS。
 + [開始使用 Visual Studio R 工具](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r)
 

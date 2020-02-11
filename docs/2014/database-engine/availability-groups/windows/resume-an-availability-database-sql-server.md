@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5e6a5792c7e18013dba5cc4c0963dc6d045410f0
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782914"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>繼續可用性資料庫 (SQL Server)
@@ -36,9 +36,9 @@ ms.locfileid: "72782914"
   
      [必要條件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要使用下列項目繼續次要資料庫：**  
+-   **若要繼續次要資料庫，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72782914"
 ###  <a name="Restrictions"></a> 限制事項  
  一旦裝載目標資料庫的複本接受 RESUME 命令之後，就會將其傳回，但繼續資料庫實際上是以非同步方式進行。  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> 必要條件  
   
 -   您必須連接到裝載要繼續之資料庫的伺服器執行個體。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72782914"
   
 ###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
   
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
@@ -77,9 +77,9 @@ ms.locfileid: "72782914"
   
 3.  展開可用性群組。  
   
-4.  展開 [可用性資料庫] 節點、以滑鼠右鍵按一下資料庫，然後按一下 [繼續進行資料移動]。  
+4.  展開 [可用性資料庫]**** 節點、以滑鼠右鍵按一下資料庫，然後按一下 [繼續進行資料移動]****。  
   
-5.  在 **[繼續進行資料移動]** 對話方塊中，按一下 **[確定]** 。  
+5.  在 **[繼續進行資料移動]** 對話方塊中，按一下 **[確定]**。  
   
 > [!NOTE]  
 >  若要繼續此複本位置的其他資料庫，請針對每個資料庫重複步驟 4 和 5。  
@@ -91,7 +91,7 @@ ms.locfileid: "72782914"
   
 2.  使用下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr)陳述式，繼續次要資料庫：  
   
-     ALTER DATABASE *database_name* SET HADR RESUME  
+     ALTER DATABASE *database_name*設定 HADR RESUME  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
 
@@ -110,7 +110,7 @@ ms.locfileid: "72782914"
     > [!NOTE]  
     >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
- **若要設定和使用 SQL Server PowerShell 提供者**  
+ **若要設定及使用 SQL Server PowerShell 提供者**  
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
@@ -118,5 +118,5 @@ ms.locfileid: "72782914"
   
 -   [暫止可用性資料庫 &#40;SQL Server&#41;](suspend-an-availability-database-sql-server.md)  
   
-## <a name="see-also"></a>請參閱  
- [AlwaysOn 可用性群組&#40;SQL Server 總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>另請參閱  
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)  

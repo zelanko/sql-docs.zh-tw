@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5ccacd7bb6fabf6c7eed0cee02ddb34979f14a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205548"
 ---
 # <a name="support-for-large-udts"></a>支援大型 UDT
@@ -22,7 +22,7 @@ ms.locfileid: "68205548"
   
  此範例不適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 如需有關大型 Udt 的支援的詳細資訊，請參閱[Large CLR User-Defined 類型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ 如需大型 Udt 支援的詳細資訊，請參閱[&#40;ODBC&#41;的大型 CLR 使用者定義類型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="example"></a>範例  
  第一個程式碼清單是 C# 原始程式碼。 請將它貼入名為 LargeStringUDT.cs 的檔案，然後將它編譯成 DLL。 接著，將 LargeStringUDT.dll 複製到 C 磁碟機的根目錄。  

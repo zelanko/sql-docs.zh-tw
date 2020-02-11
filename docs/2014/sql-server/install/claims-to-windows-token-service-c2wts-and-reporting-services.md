@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0ec82b7cca2062e1ed918e300eeb76dad16cbb20
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245616"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>對 Windows Token 服務 (C2WTS) 和 Reporting Services 的宣告
@@ -37,7 +37,7 @@ ms.locfileid: "75245616"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
   
 > [!NOTE]  
 >  注意：在某些伺服器陣列拓撲中，部分組態步驟可能會有所變更或無法使用。 例如單一伺服器安裝並不支援 Windows Identity Foundation c2WTS 服務，因此即無法在此伺服器陣列組態使用對 Windows Token 委派的宣告。  

@@ -14,10 +14,10 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 144a2b57fa671842f284445dee859e689e8adbe1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254822"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>將 Excel 檔案中的值匯入定義域中
@@ -32,14 +32,14 @@ ms.locfileid: "75254822"
   
 -   將值匯入現有且已填入的定義域中，此時只會匯入新的值。 系統將不會匯入已經存在的所有值。  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a>要求  
+###  <a name="Prerequisites"></a> 必要條件  
  若要從 Excel 檔案匯入定義域，安裝 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式的電腦上必須已安裝 Excel，才能匯入定義域值或完整定義域；您必須已經使用定義域值建立 Excel 檔案 (請參閱＜ [How the import works](#How)＞)；而且您必須已經建立及開啟要匯入定義域到其中的知識庫。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_administrator 角色，才能從 Excel 檔案匯入定義域值。  
   
 ##  <a name="Import"></a>將 Excel 檔案中的值匯入定義域中  
@@ -62,7 +62,7 @@ ms.locfileid: "75254822"
   
 9. 如果試算表中的第一個資料列代表定義域名稱，而且所有其他資料列都代表有效的定義域值，請選取 **[使用第一個資料列做為標頭]** 。  
   
-10. 按一下 [確定]****。 此時，系統會顯示進度列，其中指出已經成功匯入的值數目、未匯入的數目，以及值的總數。 按一下 **[取消]** 按鈕即可取消進度。  
+10. 按一下 [確定]  。 此時，系統會顯示進度列，其中指出已經成功匯入的值數目、未匯入的數目，以及值的總數。 按一下 **[取消]** 按鈕即可取消進度。  
   
 11. 確認「匯入完成」已顯示在 [匯入定義域值]**** 對話方塊中。 您可以在此對話方塊中查看已成功匯入的值，以及未匯入的值。 它會指出檔案的名稱和檔案的路徑、作業的完成狀態、已經成功匯入的值數目、未匯入的值數目，以及已處理的值總數。  
   

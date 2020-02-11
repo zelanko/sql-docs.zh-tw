@@ -1,5 +1,5 @@
 ---
-title: ActualSize 和 DefinedSize 屬性範例 （VC + +） |Microsoft Docs
+title: ActualSize 和 DefinedSize 屬性範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 340f471215e9f8ec8bf4f0feaabec5cce559a9a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921476"
 ---
-# <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize 和 DefinedSize 屬性範例 （VC + +）
-這個範例會使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)並[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)来顯示的已定義的大小和實際大小 欄位的屬性。  
+# <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize 和 DefinedSize 屬性範例（VC + +）
+這個範例會使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)和[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)屬性，顯示欄位的定義大小和實際大小。  
   
 ## <a name="example"></a>範例  
   
@@ -128,24 +128,24 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **存放區名稱：Eric 讀取書籍**  
+ **存放區名稱： Eric 閱讀書籍**  
 **定義的大小：40**  
 **實際大小：19**  
-**存放區名稱：Barnum 的**  
+**存放區名稱： Barnum**  
 **定義的大小：40**  
 **實際大小：8**  
-**存放區名稱：新聞與 Brews**  
+**商店名稱：新聞 & Brews**  
 **定義的大小：40**  
 **實際大小：12**  
-**存放區名稱：文件-U-Mat:品質洗衣和書籍**  
+**商店名稱： Doc-U-中：品質總和書籍**  
 **定義的大小：40**  
 **實際大小：36**  
-**存放區名稱：Fricative Bookshop**  
+**存放區名稱： Fricative Bookshop**  
 **定義的大小：40**  
 **實際大小：18**  
-**存放區名稱：Bookbeat**  
+**存放區名稱： Bookbeat**  
 **定義的大小：40**  
 **實際大小：8**   
 ## <a name="see-also"></a>另請參閱  
- [ActualSize 屬性 (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
+ [ActualSize 屬性（ADO）](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [DefinedSize 屬性](../../../ado/reference/ado-api/definedsize-property.md)

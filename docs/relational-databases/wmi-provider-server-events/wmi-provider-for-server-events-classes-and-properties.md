@@ -15,10 +15,10 @@ ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 08b18a3a5805b37a371d6fa17850584d6f4953fd
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74164916"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>伺服器事件類別和屬性的 WMI 提供者
@@ -27,7 +27,7 @@ ms.locfileid: "74164916"
   
  若要得知可以從事件或事件群組查詢哪些屬性，請參考事件結構描述。 根據預設，事件結構描述會安裝在以下目錄：[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
   
- 或者，您可以參考在[https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100)發佈的事件架構。  
+ 或者，您可以參考發佈于[https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100)的事件架構。  
   
  例如，藉由參考 ALTER_DATABASE 事件，您將瞭解其父事件是 DDL_SERVER_LEVEL_EVENTS 而其屬性為**TSQLCommand**和**DatabaseName**。 此事件也會繼承屬性**SQLInstance**、 **PostTime**、 **ComputerName**、 **SPID**和**LoginName**。 此事件沒有任何子事件。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "74164916"
   
  **資料定義語言事件和事件群組**  
   
- ![伺服器事件的 WMI 提供者事件樹狀結構](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "伺服器事件的 WMI 提供者事件樹狀結構")  
+ ![WMI Provider for Server Events 事件樹](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "WMI Provider for Server Events 事件樹")  
   
  **追蹤事件和事件群組**  
   

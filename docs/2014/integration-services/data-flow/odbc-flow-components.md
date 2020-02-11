@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e42099ede229ef7d0b10cf8d88b4ac92c60d3370
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901428"
 ---
 # <a name="odbc-flow-components"></a>ODBC 流程元件
@@ -48,7 +48,7 @@ ms.locfileid: "62901428"
   
  ODBC 來源  
   
- ODBC 來源編輯器 (連線管理員頁面)  
+ ODBC 來源編輯器 (連接管理員頁面)  
   
  ODBC 來源編輯器 (錯誤輸出頁面)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62901428"
   
  ODBC 目的地  
   
- ODBC 目的地編輯器 (連線管理員頁面)  
+ ODBC 目的地編輯器 (連接管理員頁面)  
   
  ODBC 目的地編輯器 (錯誤輸出頁面)  
   
@@ -110,8 +110,8 @@ ms.locfileid: "62901428"
 |SQL_DOUBLE|DT_R8|  
 |SQL_FLOAT|DT_R8|  
 |SQL_REAL|DT_R4|  
-|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|數值資料類型會對應至 DT_NUMERIC P 是大於或等於 38 而且 S 大於或等於 0 而且 S 小於或等於 p。當至少下列其中一項條件成立時，數值資料類型會對應至 DT_R8:<br /><br />有效位數大於 38<br /><br />小數位數小於零<br /><br />小數位數大於 38<br /><br />小數位數大於有效位數<br /><br /><br /><br />請注意它宣告為 money 資料類型時，將數值資料類型會對應至 DT_CY。|  
-|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Decimal 資料類型會對應至 DT_NUMERIC P 是大於或等於 38 而且 S 大於或等於 0 而且 S 小於或等於 p。當至少下列其中一項條件成立時，則 decimal 資料類型會對應至 DT_R8:<br /><br />有效位數大於 38<br /><br />小數位數小於零<br /><br />小數位數大於 38<br /><br />小數位數大於有效位數<br /><br />請注意它宣告為 money 資料類型時，則 decimal 資料類型會對應至 DT_CY。|  
+|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|當 P 大於或等於38，而且 S 大於或等於0，而且 S 小於或等於 P 時，數值資料類型會對應至 DT_NUMERIC。當下列至少一項為真時，數值資料類型會對應至 DT_R8：<br /><br />有效位數大於 38<br /><br />小數位數小於零<br /><br />小數位數大於 38<br /><br />小數位數大於有效位數<br /><br /><br /><br />請注意，數值資料類型在宣告為 money 資料類型時，會對應至 DT_CY。|  
+|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|當 P 大於或等於38，而且 S 大於或等於0，而且 S 小於或等於 P 時，decimal 資料類型會對應至 DT_NUMERIC。當下列至少一項為真時，decimal 資料類型會對應至 DT_R8：<br /><br />有效位數大於 38<br /><br />小數位數小於零<br /><br />小數位數大於 38<br /><br />小數位數大於有效位數<br /><br />請注意，當 decimal 資料類型宣告為 money 資料類型時，它會對應到 DT_CY。|  
 |SQL_DATE<br /><br />SQL_TYPE_DATE|DT_DBDATE|  
 |SQL_TIME<br /><br />SQL_TYPE_TIME|DT_DBTIME|  
 |SQL_TIMESTAMP<br /><br />SQL_TYPE_TIMESTAMP|DT_DBTIMESTAMP<br /><br />DT_DBTIMESTAMP2|如果小數位數大於 3，則 SQL_TIMESTAMP 資料類型會對應至 DT_DBTIMESTAMP2。 在所有其他情況下，它們會對應至 DT_DBTIMESTAMP。|  

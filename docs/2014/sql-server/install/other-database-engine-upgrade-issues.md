@@ -1,5 +1,5 @@
 ---
-title: 其他 Database Engine 升級問題 |Microsoft Docs
+title: 其他資料庫引擎升級問題 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f247f9addde6baa949f3260d7a9d9f86ce0c5bff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093703"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>其他 Database Engine 升級問題
@@ -27,7 +27,7 @@ ms.locfileid: "66093703"
   
 -   BACKUP LOG 的 NO_LOG 和 TRUNCATE_ONLY 選項  
   
--   BACKUP TRANSACTION  
+-   BACKUP TRANSACTION   
   
 -   RESTORE TRANSACTION  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66093703"
 ## <a name="new-data-types"></a>新的資料類型  
  下面是保留的系統類型。 請在升級之前或之後，重新命名現有且衝突的使用者定義型別。  
   
--   Geography  
+-   [地理位置]  
   
 -   幾何  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66093703"
 -   HierarchyID  
   
 ## <a name="target-table-of-the-output-into-clause-cannot-have-any-defined-triggers"></a>OUTPUT INTO 子句的目標資料表不得具有任何已定義的觸發程序  
- 不支援 OUTPUT INTO 目標資料表時的資料表有任何啟用的觸發程序。  
+ 當資料表有任何啟用的觸發程式不受支援時，輸出至目標資料表。  
   
 ## <a name="compile-time-error-for-udfs-when-the-target-of-an-output-into-clause-is-a-table"></a>當 OUTPUT INTO 子句的目標是資料表時，就會針對 UDF 發生編譯時間錯誤  
  使用者定義函數 (UDF) 無法用於執行修改資料庫狀態的動作。 例如，UDF 無法針對任何物件 (資料表變數除外) 執行任何 DDL (CREATE/ALTER/DROP) 或 DML (INSERT/UPDATE/DELETE) 動作。  
@@ -72,9 +72,9 @@ ms.locfileid: "66093703"
  MERGE 現在是完整的保留關鍵字。 應用程式不能再具有名為 MERGE 的物件 (資料表、資料行等等)。  
   
 ## <a name="rename-cdc-schema"></a>重新命名 CDC 結構描述  
- 有名稱為 CDC 的結構描述。 此結構描述名稱不能在用於**異動資料擷取**啟用資料庫。  
+ 有名稱為 CDC 的結構描述。 如果已針對資料庫啟用**變更資料捕獲**，就不能使用這個架構名稱。  
   
- 啟用之前，您必須卸除 CDC 結構描述**異動資料擷取**資料庫。 您可以在升級之前或之後完成此步驟。 若要卸除此結構描述，請使用下列步驟：  
+ 您必須先卸載 CDC 架構，才能啟用資料庫的**變更資料捕獲**。 您可以在升級之前或之後完成此步驟。 若要卸除此結構描述，請使用下列步驟：  
   
 1.  使用 ALTER SCHEMA，將這些物件從 CDC 結構描述傳送至新的結構描述名稱。  
   
@@ -85,6 +85,6 @@ ms.locfileid: "66093703"
 4.  使用 DROP SCHEMA 來卸除 CDC 結構描述。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫引擎升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
+ [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

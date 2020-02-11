@@ -15,17 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a0d70b1748ddc597aa7a2676e5e2f938c235442
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782389"
 ---
 # <a name="creating-altering-and-removing-tables"></a>建立、改變和移除資料表
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO) 中，資料表是由 <xref:Microsoft.SqlServer.Management.Smo.Table> 物件表示。 在 SMO 物件階層中，<xref:Microsoft.SqlServer.Management.Smo.Table> 物件位於 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件之下。  
   
 ## <a name="example"></a>範例  
- 若要使用所提供的任何程式碼範例，您必須選擇可用於建立應用程式的程式設計環境、範本和計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 VISUAL BASIC SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何程式碼範例，您必須選擇可用於建立應用程式的程式設計環境、範本和計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 VISUAL BASIC SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 Visual Studio .Net 中建立 VISUAL C&#35; SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>在 Visual Basic 中建立、改變和移除資料表  
  此程式碼範例所建立的資料表擁有數個具有不同類型和用途的資料行。 此程式碼也提供如何建立識別欄位、如何建立主索引鍵以及如何改變資料表屬性的範例。  
@@ -133,5 +133,5 @@ $tb.Alter()
 $tb.Drop()  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.SqlServer.Management.Smo.Table>

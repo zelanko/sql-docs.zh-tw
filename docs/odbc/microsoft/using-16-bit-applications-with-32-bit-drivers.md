@@ -1,5 +1,5 @@
 ---
-title: 使用 16 位元應用程式與 32 位元驅動程式 |Microsoft Docs
+title: 搭配使用16位應用程式與32位驅動程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,52 +14,52 @@ ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4be5d2cacaeca7cf53caa330a126284370ec80f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088189"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>搭配使用 16 位元應用程式與 32 位元驅動程式
 > [!IMPORTANT]  
->  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 32 位元或 64 位元驅動程式管理員。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用32位或64位驅動程式管理員。  
   
- 只要 32 位元驅動程式不會明確呼叫建立執行緒的 Win32 API 函式可以在以 Windows 為基礎的系統上執行 32 位元驅動程式 16 位元應用程式。 Windows on Windows (WOW) 子系統上的以 16 位元模式執行的應用程式，並解析 16 位元作業系統的呼叫。 ODBC thunking Dll 解決 16 位元呼叫從 32 位元驅動程式應用程式。 16 位元應用程式使用 Windows API，以及 32 位元驅動程式會使用 Win32 API。  
+ 只要32位驅動程式未明確呼叫建立執行緒的 WIN32 API 函式，您就可以在 Windows 系統上執行具有32位驅動程式的16位應用程式。 Windows on Windows （WOW）子系統會在16位模式中執行應用程式，並將16位呼叫解析為作業系統。 ODBC Thunking Dll 可將應用程式的16位呼叫解析為32位驅動程式。 16位應用程式會使用 Windows API，而32位驅動程式會使用 WIN32 API。  
   
-## <a name="architecture"></a>Architecture  
- 下圖顯示如何為 16 位元應用程式與 32 位元驅動程式通訊。 16 位元驅動程式管理員之間的 32 位元驅動程式是泛型 thunking 轉換為 32 位元 ODBC 呼叫的 16 位元 ODBC 呼叫的 Dll。  
+## <a name="architecture"></a>架構  
+ 下圖顯示16位應用程式如何與32位驅動程式通訊。 在16位驅動程式管理員和32位驅動程式之間，是將16位 ODBC 呼叫轉換成32位 ODBC 呼叫的一般 Thunking Dll。  
   
- ![如何 16&#45;位元應用程式與 32 通訊&#45;位元驅動程式](../../odbc/microsoft/media/sdka2.gif "sdka2")  
+ ![16個&#45;位應用程式如何與 32&#45;位驅動程式通訊](../../odbc/microsoft/media/sdka2.gif "sdka2")  
   
 > [!NOTE]  
->  16 位元應用程式與 32 位元驅動程式互動時，每當 32 位元驅動程式管理員一律會傳回"2.0"的 ODBC 版本與驅動程式支援。  
+>  每當16位應用程式與32位驅動程式互動時，32位驅動程式管理員一律會傳回 "2.0" 做為驅動程式所支援的 ODBC 版本。  
   
 ## <a name="administration"></a>系統管理  
- 您可以使用 ODBC 資料來源管理員來管理資料來源的 32 位元驅動程式。 若要開啟 ODBC 管理員身分執行 Microsoft® Windows® 2000年的電腦上，開啟 Windows 控制台中，按兩下**系統管理工具**，然後按兩下**資料來源 (ODBC)** 。 在電腦上執行舊版的 Microsoft Windows，名為圖示**32 位元 ODBC**簡稱**ODBC**。  
+ 您可以使用 [ODBC 資料來源管理員] 來管理32位驅動程式的資料來源。 若要在執行 Microsoft® Windows®2000的電腦上開啟 ODBC 系統管理員，請開啟 Windows [控制台]，按兩下 [系統**管理工具**]，然後按兩下 **[資料來源（ODBC）**]。 在執行舊版 Microsoft Windows 的電腦上，此圖示的名稱為**32 位 ODBC**或單純的**odbc**。  
   
- 下圖顯示的 16 位元應用程式如何呼叫 32 位元驅動程式安裝程式 DLL。 16 位元安裝程式 DLL 與 32 位元驅動程式安裝程式 DLL 會是泛型的 thunk DLL，將轉換的 16 位元安裝程式 DLL 會呼叫 32 位元安裝程式 DLL 呼叫。  
+ 下圖顯示16位應用程式如何呼叫32位驅動程式安裝 DLL。 在16位安裝程式 DLL 和32位驅動程式安裝程式 DLL 之間，是將16位安裝程式 DLL 呼叫轉換成32位安裝程式 DLL 呼叫的一般 Thunking DLL。  
   
- ![如何 16&#45;會呼叫 32 位元應用程式&#45;位元驅動程式安裝 DLL](../../odbc/microsoft/media/sdka3.gif "sdka3")  
+ ![16&#45;位應用程式如何呼叫 32&#45;位驅動程式安裝 DLL](../../odbc/microsoft/media/sdka3.gif "sdka3")  
   
- 在 Windows (thunking 的 16 位元為 32 位元) 上的 Windows，其他的 thunk DLL，名為 Ds32gt.dll 轉換的 16 位元引數值傳遞 32 位元安裝程式 DLL 回 16 位元。  
+ 在 windows on Windows （16位到32位的 Thunking）中，名為 Ds32gt 的其他 Thunking DLL 會將透過32位安裝 DLL 傳遞的16位引數值轉換回16位。  
   
 ## <a name="components"></a>元件  
- MDAC 2.8 SP1 SDK 的 ODBC 元件包含下列檔案來執行 32 位元驅動程式的 16 位元應用程式。 這些元件是在 \Redist 目錄中。  
+ MDAC 2.8 SP1 SDK 的 ODBC 元件包含下列檔案，可執行具有32位驅動程式的16位應用程式。 這些元件位於 \Redist 目錄中。  
   
-|[檔案名稱]|描述|  
+|檔案名稱|描述|  
 |---------------|-----------------|  
-|Odbc16gt.dll|16 位元 ODBC 泛型 thunk DLL|  
-|Odbc32gt.dll|32 位元 ODBC 泛型 thunk DLL|  
-|Odbccp32.dll|32 位元安裝程式 DLL|  
-|Odbcad32.exe|32 位元系統管理員 」 程式|  
-|Odbcinst.hlp|安裝程式說明檔|  
-|Ds16gt.dll|泛型 thunking DLL 的 16 位元驅動程式設定|  
-|Ctl3d32.dll|32 位元三維的視窗樣式文件庫|  
+|Odbc16gt .dll|16位 ODBC 泛型 Thunking DLL|  
+|Odbc32gt .dll|32位 ODBC 泛型 Thunking DLL|  
+|Odbccp32 .dll|32位安裝程式 DLL|  
+|Odbcad32.exe .exe|32位系統管理員程式|  
+|Odbcinst .hlp|安裝程式說明檔|  
+|Ds16gt .dll|16位驅動程式安裝程式一般 Thunking DLL|  
+|Ctl3d32 .dll|32位三維視窗樣式程式庫|  
   
- 此外，將下列檔案和 16 位元 ODBC 2.10 驅動程式管理員 中，這不是 ODBC 3.51 的一部分，所需的而且應以 16 位元應用程式安裝。  
+ 此外，下列檔案以及不屬於 ODBC 3.51 的16位 ODBC 2.10 驅動程式管理員，都是必要的，而且應該與16位應用程式一起安裝。  
   
-|[檔案名稱]|描述|  
+|檔案名稱|描述|  
 |---------------|-----------------|  
-|Odbc.dll|16 位元驅動程式管理員|  
-|Odbcinst.dll|16 位元安裝程式 DLL|  
-|Odbcadm.exe|16 位元 ODBC 管理員程式|
+|Odbc .dll|16位驅動程式管理員|  
+|Odbcinst .dll|16位安裝程式 DLL|  
+|Odbcadm .exe|16位 ODBC 系統管理員程式|

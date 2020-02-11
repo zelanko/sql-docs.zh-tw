@@ -2,7 +2,7 @@
 title: 在命令提示字元中執行資料庫測試助理
 description: 在命令提示字元中執行資料庫測試助理
 ms.custom: seo-lt-2019
-ms.date: 11/22/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: f5a0f7441dd17aec2587c772a678a3681fd3b423
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.openlocfilehash: 8055ae8b66c2f2b59f18b0ee40dcac8753c0eb7c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74317725"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831754"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>在命令提示字元中執行資料庫測試助理
 
@@ -29,7 +29,7 @@ ms.locfileid: "74317725"
 
 `Deacmd.exe -o startcapturetrace -s <SQLServerInstance> -e <encryptconnection> -u <trustservercertificate> -d <database name> -p <trace file path> -f <trace file name> -t <Max duration>`
 
-**實例**
+**範例**
 
 `Deacmd.exe -o startcapturetrace -s localhost -e -d adventureworks -p c:\test -f sql2008capture -t 60`
 
@@ -71,7 +71,7 @@ ms.locfileid: "74317725"
 
 `Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -s <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
 
-**實例**
+**範例**
 
 `Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -s localhost -e`
 

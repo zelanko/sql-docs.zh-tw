@@ -1,5 +1,5 @@
 ---
-title: sp_dropanonymousagent & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_dropanonymousagent （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: 7e82023ed750c77d87a2536debfb5fceb7321db4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911957"
 ---
-# <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
+# <a name="sp_dropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
@@ -37,20 +37,20 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @subid = ] sub_id` 是匿名訂閱的全域識別碼。 *sub_id*已**uniqueidentifier**，沒有預設值。 此識別碼可以擷取 「 訂閱者 」 使用**sp_helppullsubscription**。 中的值**subid**傳回的結果集的欄位是這個全域識別碼。  
+`[ @subid = ] sub_id`這是匿名訂閱的全域識別碼。 *sub_id*是**uniqueidentifier**，沒有預設值。 您可以使用**sp_helppullsubscription**，在訂閱者端抓取此識別碼。 傳回之結果集的**subid**欄位中的值是這個全域識別碼。  
   
-`[ @type = ] type` 是訂用帳戶的類型。 *型別*已**int**，沒有預設值。 有效值**1**或是**2**。 指定**1**，如果快照式複寫或異動複寫使用 「 散發代理程式。 指定**2**，如果合併式複寫使用 「 合併代理程式。  
+`[ @type = ] type`這是訂用帳戶的類型。 *類型*為**int**，沒有預設值。 有效值為**1**或**2**。 如果快照式複寫或使用散發代理程式的異動複寫，請指定**1**。 如果使用合併代理程式合併式複寫，請指定**2**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_dropanonymousagent**用於所有類型的複寫。  
+ **sp_dropanonymousagent**用於所有類型的複寫中。  
   
  這個預存程序只能用來卸除匿名訂閱代理程式，無法用來卸除已知的訂閱。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**db_owner**散發資料庫中的固定的資料庫角色可以執行**sp_dropanonymousagent**。  
+## <a name="permissions"></a>權限  
+ 只有散發資料庫中**db_owner**固定資料庫角色的成員，才能夠執行**sp_dropanonymousagent**。  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

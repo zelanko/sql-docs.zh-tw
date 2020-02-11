@@ -12,10 +12,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 2ae652f584ceaad62379256f822527a316c30f89
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401728"
 ---
 # <a name="syspdw_replicated_table_cache_state-transact-sql"></a>sys.pdw_replicated_table_cache_state (Transact-SQL)
@@ -39,6 +39,6 @@ SELECT t.[name], p.[object_id], p.[state]
 
 
 
-## <a name="next-steps"></a>接下來的步驟  
+## <a name="next-steps"></a>後續步驟  
  如需 SQL 資料倉儲和平行處理資料倉儲的所有目錄檢視清單，請參閱[SQL 資料倉儲和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)。   
   

@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_parameter (TRANSACT-SQL) |Microsoft Docs
+title: managed_backup. fn_get_parameter （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 18a42273218bb73de55694b9b54877a4f2e0f669
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68140646"
 ---
-# <a name="managedbackupfngetparameter-transact-sql"></a>managed_backup.fn_get_parameter & Amp;#40;transact-SQL&AMP;#41;
+# <a name="managed_backupfn_get_parameter-transact-sql"></a>managed_backup. fn_get_parameter （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   傳回內含 0、1 或更多資料列參數和值組的資料表。  
@@ -46,18 +46,18 @@ managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )
   
 ##  <a name="Arguments"></a> 引數  
  parameter_name  
- 參數的名稱。 是 parameter_name **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。 如果將 NULL 或空字串當做引數提供給函數，則會傳回所有設定之 Smart Admin 參數的名稱/值組。  
+ 參數名稱。 parameter_name 為**NVARCHAR （128）**。 如果將 NULL 或空字串當做引數提供給函數，則會傳回所有設定之 Smart Admin 參數的名稱/值組。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|parameter_name|NVARCHAR(128)|參數的名稱。 以下是傳回的目前參數清單：<br/><br/>**FileRetentionDebugXevent**<br/><br/>**SSMBackup2WADebugXevent**<br/><br/>**SSMBackup2WANotificationEmailIds**<br/><br/>**SSMBackup2WAEnableUserDefinedPolicy**<br/><br/>**SSMBackup2WAEverConfigured**<br/><br/>**StorageOperationDebugXevent**|  
+|parameter_name|NVARCHAR(128)|參數名稱。 以下是傳回的目前參數清單：<br/><br/>**FileRetentionDebugXevent**<br/><br/>**SSMBackup2WADebugXevent**<br/><br/>**SSMBackup2WANotificationEmailIds**<br/><br/>**SSMBackup2WAEnableUserDefinedPolicy**<br/><br/>**SSMBackup2WAEverConfigured**<br/><br/>**StorageOperationDebugXevent**|  
 |parameter_value|NVARCHAR(128)|參數的目前設定值。|  
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>權限  
  需要函數的 SELECT 權限。  
   
 ## <a name="examples"></a>範例  

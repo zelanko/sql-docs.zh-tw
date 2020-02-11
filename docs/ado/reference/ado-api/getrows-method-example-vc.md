@@ -1,5 +1,5 @@
 ---
-title: GetRows 方法範例 （VC + +） |Microsoft Docs
+title: GetRows 方法範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1f49de41c0735f53323c1f9ba75c6f2257439b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932500"
 ---
 # <a name="getrows-method-example-vc"></a>GetRows 方法範例 (VC++)
-這個範例會使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法來擷取指定的資料列數[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)和要使用產生的資料填入的陣列。 **GetRows**方法會傳回所需的資料列數目小於在兩個情況下： 可能是如果[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)已達到，或如果**GetRows**嘗試擷取已記錄刪除由其他使用者。 此函數會傳回**False**只有當第二個案例，就會發生。 若要執行此程序需要 GetRowsOK 函式。  
+這個範例會使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法，從[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)取出指定數目的資料列，並在陣列中填入產生的資料。 在兩種情況下， **getrows**方法會傳回小於所需的資料列數目：如果已達到[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ，或**getrows**嘗試抓取由另一位使用者刪除的記錄，則為。 只有在發生第二個案例時，函數才會傳回**False** 。 需要 GetRowsOK 函數才能執行此程式。  
   
 ## <a name="example"></a>範例  
   
@@ -235,7 +235,7 @@ void PrintComError(_com_error &e) {
 0  
 ```  
   
-## <a name="sample-output"></a>範例輸出  
+## <a name="sample-output"></a>取樣輸出  
   
 ```  
 2 record(s) found.  
@@ -244,6 +244,6 @@ Pedro Afonso, 12/24/1990
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [BOF、 EOF 屬性 (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [GetRows 方法 (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
+ [BOF、EOF 屬性（ADO）](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+ [GetRows 方法（ADO）](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

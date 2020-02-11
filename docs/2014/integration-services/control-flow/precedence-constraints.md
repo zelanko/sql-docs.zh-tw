@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da27e10af2a5483583976a13e54bf9087c20e9b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831696"
 ---
 # <a name="precedence-constraints"></a>優先順序條件約束
@@ -31,9 +31,9 @@ ms.locfileid: "62831696"
   
  ![以優先順序條件約束連接的可執行檔](../media/ssis-pcsimple.gif "以優先順序條件約束連接的可執行檔")  
   
- 在線性控制流程 (即沒有分支的控制流程) 中，優先順序條件約束單獨管理工作執行的順序。 在控制流程分支中，[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段引擎決定直接跟隨在分支後面的工作和容器之執行順序。 執行階段引擎也決定控制流程中未連接的工作流程之執行順序。  
+ 在線性控制流程 (即沒有分支的控制流程) 中，優先順序條件約束單獨管理工作執行的順序。 在控制流程分支中， [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段引擎決定直接跟隨在分支後面的工作和容器之執行順序。 執行階段引擎也決定控制流程中未連接的工作流程之執行順序。  
   
- 除僅封裝單一工作的工作主機容器之外，[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 的巢狀容器架構會啟用所有容器，用以包含每個都具有其各自控制流程的其他容器。 「For 迴圈」容器、「Foreach 迴圈」容器和「時序」容器可以包含多個工作和其他容器，而工作和其他容器進而可以包含多個工作和容器。 例如，具有「指令碼」工作和「時序」容器的封裝具有連結「指令碼」工作和「時序」容器的優先順序條件約束。 「時序」容器包括三個「指令碼」工作，且其優先順序條件約束會將這三個「指令碼」工作連結至一個控制流程。 下圖顯示具有兩個巢狀層級之封裝中的優先順序條件約束。  
+ 除僅封裝單一工作的工作主機容器之外， [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 的巢狀容器架構會啟用所有容器，用以包含每個都具有其各自控制流程的其他容器。 「For 迴圈」容器、「Foreach 迴圈」容器和「時序」容器可以包含多個工作和其他容器，而工作和其他容器進而可以包含多個工作和容器。 例如，具有「指令碼」工作和「時序」容器的封裝具有連結「指令碼」工作和「時序」容器的優先順序條件約束。 「時序」容器包括三個「指令碼」工作，且其優先順序條件約束會將這三個「指令碼」工作連結至一個控制流程。 下圖顯示具有兩個巢狀層級之封裝中的優先順序條件約束。  
   
  ![封裝中的優先順序條件約束](../media/mw-dts-12.gif "封裝中的優先順序條件約束")  
   
@@ -50,7 +50,8 @@ ms.locfileid: "62831696"
 -   指定只評估優先順序條件約束，還是同時評估套用至條件約束可執行檔的其他條件約束。  
   
 ## <a name="evaluation-operations"></a>評估作業  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供下列評估作業：  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供下列評估作業：  
   
 -   僅使用優先順序可執行檔之執行結果的條件約束，以決定條件約束可執行檔是否執行。 優先順序可執行檔的執行結果可以是完成、成功或失敗。 這是預設作業。  
   
@@ -60,7 +61,8 @@ ms.locfileid: "62831696"
   
 -   運算式或條件約束，此條件約束會使用優先順序可執行檔的執行結果或評估運算式的傳回結果。  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師使用色彩識別優先順序條件約束的類型。 「成功」條件約束為綠色，「失敗」條件約束為紅色，而「完成」條件約束則為藍色。 若要在顯示條件約束類型的 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中顯示文字標籤，則必須設定 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 的協助工具功能。  
+ 
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師使用色彩識別優先順序條件約束的類型。 「成功」條件約束為綠色，「失敗」條件約束為紅色，而「完成」條件約束則為藍色。 若要在顯示條件約束類型的 [ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中顯示文字標籤，則必須設定 [ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 的協助工具功能。  
   
  運算式必須為有效的 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 運算式，並且它可以包括函數、運算子、系統和自訂變數。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../expressions/integration-services-ssis-expressions.md)和 [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)。  
   
@@ -79,7 +81,7 @@ ms.locfileid: "62831696"
 ## <a name="configuration-of-the-precedence-constraint"></a>優先順序條件約束的組態  
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可在 [ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中設定之屬性的詳細資訊，請參閱 [優先順序條件約束編輯器](../precedence-constraint-editor.md)。  
+ 如需可在 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中設定之屬性的詳細資訊，請參閱[優先順序條件約束編輯器](../precedence-constraint-editor.md)。  
   
  如需以程式設計方式設定這些屬性的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>。  
   
@@ -88,7 +90,7 @@ ms.locfileid: "62831696"
   
 -   [設定優先順序條件約束的屬性](../set-the-properties-of-a-precedence-constraint.md)  
   
--   [使用捷徑功能表來設定優先順序條件約束的值](../set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)  
+-   [使用快速鍵功能表來設定優先順序條件約束的值](../set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)  
   
 -   [使用預設的優先順序條件約束來連接工作和容器](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)  
   

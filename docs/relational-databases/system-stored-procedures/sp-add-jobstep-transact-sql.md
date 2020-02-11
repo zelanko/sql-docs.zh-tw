@@ -18,10 +18,10 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74412852"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
@@ -30,10 +30,10 @@ ms.locfileid: "74412852"
 
   將步驟（作業）新增至 SQL 代理程式作業。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [transact-sql 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > 在[Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，大部分（但不是全部） SQL Server Agent 作業類型都受到支援。 如需詳細資訊，請參閱[Azure SQL Database 受控執行個體與 SQL Server 的 t-sql 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+  > 在[Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，大部分（但不是全部） SQL Server Agent 作業類型都受到支援。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
   
 ## <a name="syntax"></a>語法  
   
@@ -115,7 +115,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**1** （預設值）|成功而結束|  
 |**2**|失敗而結束|  
 |**第**|移至下一步驟|  
-|**4gb**|移至步驟*on_success_step_id*|  
+|**4**|移至步驟*on_success_step_id*|  
   
 `[ @on_success_step_id = ] success_step_id`當步驟成功且*success_action*為**4**時，此作業中要執行之步驟的識別碼。 *success_step_id*是**int**，預設值是**0**。  
   
@@ -123,10 +123,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 |值|描述 (動作)|  
 |-----------|----------------------------|  
-|**sha-1**|成功而結束|  
+|**1**|成功而結束|  
 |**2** （預設值）|失敗而結束|  
 |**第**|移至下一步驟|  
-|**4gb**|移至步驟*on_fail_step_id*|  
+|**4**|移至步驟*on_fail_step_id*|  
   
 `[ @on_fail_step_id = ] fail_step_id`如果步驟失敗且*fail_action*為**4**時，此作業中要執行之步驟的識別碼。 *fail_step_id*是**int**，預設值是**0**。  
   
@@ -150,7 +150,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |-----------|-----------------|  
 |**0** （預設值）|覆寫輸出檔|  
 |**2**|附加至輸出檔。|  
-|**4gb**|將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟輸出寫入步驟記錄。|  
+|**4**|將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟輸出寫入步驟記錄。|  
 |**8**|將記錄寫入資料表 (覆寫現有的記錄)。|  
 |**1600**|將記錄寫入資料表 (附加至現有的記錄)。|  
 |**32**|將所有輸出寫入作業記錄|  
@@ -164,7 +164,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
  **sp_add_jobstep**必須從**msdb**資料庫中執行。  
@@ -215,6 +215,6 @@ GO
  [sp_help_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [sp_update_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

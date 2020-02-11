@@ -1,5 +1,5 @@
 ---
-title: 記憶體最佳化資料表中的交易 |Microsoft Docs
+title: 記憶體優化資料表中的交易 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc72eeeb154749b0e889b495fab79bb8bf86db10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843094"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>記憶體最佳化的資料表中的交易
@@ -50,7 +50,8 @@ ms.locfileid: "62843094"
  此外，如果某筆交易 (TxA) 讀取的資料列已由另一筆交易 (TxB) 插入或修改，而且正在認可中，它會樂觀地假設該另一筆交易會認可，而不是等候認可發生。 在此情況下，交易 TxA 會相依於交易 TxB 的認可。  
   
 ## <a name="conflict-detection-validation-and-commit-dependency-checks"></a>衝突偵測、驗證和認可相依性檢查  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會偵測並行交易之間的衝突以及隔離等級違規，而且將會終止其中一個衝突的交易。 此交易將必須重試。 (如需詳細資訊，請參閱 < [Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。)  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會偵測並行交易之間的衝突以及隔離等級違規，而且將會終止其中一個衝突的交易。 此交易將必須重試。 （如需詳細資訊，請參閱[記憶體優化資料表上交易的重試邏輯方針](../relational-databases/in-memory-oltp/memory-optimized-tables.md)）。  
   
  系統會樂觀地假設交易隔離沒有任何衝突和違規。 如果發生的任何衝突可能導致資料庫的不一致或可能違反交易隔離，系統會偵測到這些衝突，並且終止交易。  
   
@@ -70,7 +71,7 @@ ms.locfileid: "62843094"
 ### <a name="transaction-lifetime"></a>交易存留期間  
  上表所提及的失敗可能會發生在交易期間的不同時間點。 下圖說明存取記憶體最佳化的資料表的交易階段。  
   
- ![交易的存留期。](../../2014/database-engine/media/hekaton-transactions.gif "的異動存留期。")  
+ ![交易的存留期間。](../../2014/database-engine/media/hekaton-transactions.gif "交易的存留期間。")  
 存取記憶體最佳化的資料表的交易存留期間。  
   
 #### <a name="regular-processing"></a>正常處理  
@@ -82,7 +83,7 @@ ms.locfileid: "62843094"
   
  此錯誤會終止交易 (即便 XACT_ABORT 為 OFF)，這表示交易將在使用者工作階段結束時回復。 無法認可注定失敗的交易，且僅支援不寫入記錄及不存取記憶體最佳化資料表的讀取作業。  
   
-#####  <a name="cd"></a> 認可相依性  
+#####  <a name="cd"></a>認可相依性  
  在正常處理期間，交易可讀取其他交易在驗證或認可階段寫入但是尚未認可的資料列。 這些資料列是可見的，因為在驗證階段開始就已經指派交易的邏輯結束時間。  
   
  如果交易讀取這類未認可的資料列，它將會相依於該筆交易的認可。 這有兩個主要的含意：  
@@ -96,10 +97,10 @@ ms.locfileid: "62843094"
 #### <a name="validation-phase"></a>驗證階段  
  在驗證階段，系統會驗證要求的交易隔離等級所需的假設在交易的邏輯開始和邏輯結束之間是否成立。  
   
- 在驗證階段開始，系統會指派邏輯結束時間給交易。 其他交易會在邏輯結束時間看到資料庫中寫入的資料列版本。 如需詳細資訊，請參閱 <<c0> [ 認可相依性](#cd)。  
+ 在驗證階段開始，系統會指派邏輯結束時間給交易。 其他交易會在邏輯結束時間看到資料庫中寫入的資料列版本。 如需詳細資訊，請參閱[認可](#cd)相依性。  
   
 ##### <a name="repeatable-read-validation"></a>可重複的讀取驗證  
- 如果交易的隔離等級是 REPEATABLE READ 或 SERIALIZABLE，或者 REPEATABLE READ 或 SERIALIZABLE 隔離之下存取資料表 (如需詳細資訊，請參閱一節的個別作業隔離在[交易隔離等級](../../2014/database-engine/transaction-isolation-levels.md))，系統會驗證讀取是否可重複。 這表示，它會驗證交易所讀取的資料列版本在交易的邏輯結束時間依然是有效的資料列版本。  
+ 如果交易的隔離等級是可重複讀取或可序列化的，或如果是在可重複讀取或可序列化隔離下存取資料表（如需詳細資訊，請參閱隔離[交易隔離等級](../../2014/database-engine/transaction-isolation-levels.md)中的個別作業一節），系統會驗證讀取是否可重複。 這表示，它會驗證交易所讀取的資料列版本在交易的邏輯結束時間依然是有效的資料列版本。  
   
  如果有任何資料列已更新或變更，交易就無法認可而且會出現錯誤 41305 (「目前交易無法認可，因為可重複的讀取驗證失敗。」)。  
   
@@ -132,6 +133,6 @@ ms.locfileid: "62843094"
 -   記憶體最佳化資料表不支援鎖定。 記憶體最佳化的資料表不支援透過鎖定提示的明確鎖定 (例如 TABLOCK、XLOCK 和 ROWLOCK)。  
   
 ## <a name="see-also"></a>另請參閱  
- [了解經記憶體最佳化的資料表上的交易](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)  
+ [了解記憶體最佳化資料表上的交易](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)  
   
   

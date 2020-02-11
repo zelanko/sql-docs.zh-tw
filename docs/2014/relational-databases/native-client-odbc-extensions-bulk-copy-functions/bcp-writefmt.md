@@ -1,5 +1,5 @@
 ---
-title: bcp_writefmt | Microsoft Docs
+title: bcp_writefmt |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d4a5067598b475ed8fe103606088d0e4d6d0554
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689411"
 ---
-# <a name="bcpwritefmt"></a>bcp_writefmt
+# <a name="bcp_writefmt"></a>bcp_writefmt
   建立包含目前大量複製資料檔格式之描述的格式檔。  
   
 ## <a name="syntax"></a>語法  
@@ -53,14 +53,14 @@ szFormatFile
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 格式檔案會指定大量複製所建立之資料檔的資料格式。 若要呼叫[bcp_columns](bcp-columns.md)並[bcp_colfmt](bcp-colfmt.md)定義的資料檔案格式。 **bcp_writefmt**將此定義儲存在所參照的檔案*szFormatFile*。 如需詳細資訊，請參閱 < [bcp_init](bcp-init.md)。  
+ 格式檔案會指定大量複製所建立之資料檔的資料格式。 呼叫[bcp_columns](bcp-columns.md)和[bcp_colfmt](bcp-colfmt.md)定義資料檔案的格式。 **bcp_writefmt**會將此定義儲存在*szformatfile 中*所參考的檔案中。 如需詳細資訊，請參閱[bcp_init](bcp-init.md)。  
   
- 如需結構的詳細資訊**bcp**資料格式檔案，請參閱[匯入和匯出大量資料使用 bcp 公用程式&#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)。  
+ 如需**bcp**資料格式檔案結構的詳細資訊，請參閱[使用 bcp 公用程式匯入和匯出大量資料 &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)。  
   
- 若要載入已儲存的格式檔案，請使用[bcp_readfmt](bcp-readfmt.md)。  
+ 若要載入儲存的格式檔案，請使用[bcp_readfmt](bcp-readfmt.md)。  
   
 > [!NOTE]  
->  所產生的格式檔案**bcp_writefmt**程式版本才支援**bcp**公用程式隨附[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0 和更新版本。  
+>  只有與7.0 版和更新版本一起[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]散發的**bcp**公用程式版本才支援**bcp_writefmt**所產生的格式檔案。  
   
 ## <a name="example"></a>範例  
   

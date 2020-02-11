@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ce2b4a14d78c4e855c4af1d8b5fdd972b1d28c27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898325"
 ---
 # <a name="data-truncation-ssis"></a>資料截斷 (SSIS)
@@ -34,6 +34,6 @@ ms.locfileid: "62898325"
  運算式評估工具會識別可能導致截斷的明確轉換，並在剖析運算式時發出警告。 例如，如果將 30 個字元的字串轉換成 20 個字元的字串，則運算式評估工具會向您發出警告。  
   
 > [!NOTE]  
->  在執行階段不會檢查截斷；資料會在沒有任何警告下遭截斷。 不過，多數資料配接器和轉換支援錯誤輸出，可處理錯誤資料列的配置。 如需處理資料截斷的詳細資訊，請參閱 <<c0> [ 處理資料中的錯誤](../data-flow/error-handling-in-data.md)。  
+>  在執行階段不會檢查截斷；資料會在沒有任何警告下遭截斷。 不過，多數資料配接器和轉換支援錯誤輸出，可處理錯誤資料列的配置。 如需處理資料截斷的詳細資訊，請參閱[處理資料中的錯誤](../data-flow/error-handling-in-data.md)。  
   
   

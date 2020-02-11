@@ -1,5 +1,5 @@
 ---
-title: sys.fn_get_sql (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases fn_get_sql （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,19 +24,19 @@ ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 58cb9c4b35329a24db954460097dca5f7d87e4f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120256"
 ---
-# <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
+# <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回指定 SQL 控制代碼之 SQL 陳述式的文字。  
   
 > [!IMPORTANT]  
->  未來的 Microsoft SQL Server 版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 sys.dm_exec_sql_text。 如需詳細資訊，請參閱 < [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)。  
+>  未來的 Microsoft SQL Server 版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 sys.dm_exec_sql_text。 如需詳細資訊，請參閱[dm_exec_sql_text &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)。  
   
  
   
@@ -51,7 +51,7 @@ sys.fn_get_sql ( SqlHandle )
   
 ## <a name="arguments"></a>引數  
  *SqlHandle*  
- 控制代碼值。 *Sqlhandle&lt*已**varbinary(64)** 沒有預設值。  
+ 控制代碼值。 *SqlHandle*是**Varbinary （64）** ，沒有預設值。  
   
 ## <a name="tables-returned"></a>傳回的資料表  
   
@@ -64,21 +64,21 @@ sys.fn_get_sql ( SqlHandle )
 |text|**text**|這是 SQL 陳述式的文字。 加密物件的這個值是 NULL。|  
   
 ## <a name="remarks"></a>備註  
- 您可以取得有效的 SQL 控制代碼的 sql_handle 資料行從[sys.dm_exec_requests &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)動態管理檢視。  
+ 您可以從 dm_exec_requests sys.databases 的 sql_handle 資料行取得有效的 SQL 控制碼[&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)動態管理檢視。  
   
- 如果您傳遞的控制代碼，不再存在於快取，fn_get_sq**l**傳回空的結果集。 如果您傳遞無效的控制代碼，批次會停止，且會傳回錯誤訊息。  
+ 如果您傳遞不再存在於快取中的控制碼，fn_get_sq**l**會傳回空的結果集。 如果您傳遞無效的控制代碼，批次會停止，且會傳回錯誤訊息。  
   
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]無法快取某些[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式，例如大量複製陳述式和字串常值大於 8 KB 的陳述式。 這些陳述式的控制代碼無法利用 fn_get_sql 來擷取。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]無法快取某些[!INCLUDE[tsql](../../includes/tsql-md.md)]語句，例如具有大於 8 KB 之字串常值的大量複製語句和語句。 這些陳述式的控制代碼無法利用 fn_get_sql 來擷取。  
   
- **文字**結果集的資料行的篩選出可能含有密碼的文字。 如需儲存之安全性相關資訊的程序未受監視，請參閱[篩選追蹤](../../relational-databases/sql-trace/filter-a-trace.md)。  
+ 結果集的**文字**資料行會針對可能包含密碼的文字進行篩選。 如需未受監視之安全性相關預存程式的詳細資訊，請參閱[篩選追蹤](../../relational-databases/sql-trace/filter-a-trace.md)。  
   
- Fn_get_sql 函數會傳回類似的資訊[DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)命令。 以下是何時因無法使用 DBCC INPUTBUFFER 而能夠使用 fn_get_sql 函數的範例：  
+ Fn_get_sql 函數會傳回類似于[DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)命令的資訊。 以下是何時因無法使用 DBCC INPUTBUFFER 而能夠使用 fn_get_sql 函數的範例：  
   
 -   當事件超出 255 個字元時。  
   
 -   當您必須傳回預存程序的最高目前巢狀層級時。 例如，有名稱為 sp_1 和 sp_2 的兩個預存程序。 如果 sp_1 呼叫 sp_2，且您在 sp_2 執行時，從 sys.dm_exec_requests 動態管理檢視中取得控制代碼，fn_get_sql 函數會傳回 sp_2 的相關資訊。 另外，fn_get_sql 函數還會傳回最高目前巢狀層級的預存程序完整文字。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  使用者需要伺服器的 VIEW SERVER STATE 權限。  
   
 ## <a name="examples"></a>範例  
@@ -94,8 +94,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [DBCC INPUTBUFFER &#40;Transact SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [sys.sysprocesses &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [DBCC INPUTBUFFER &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
+ [sysprocesses &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

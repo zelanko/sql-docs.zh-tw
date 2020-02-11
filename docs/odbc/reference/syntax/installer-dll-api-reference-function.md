@@ -13,20 +13,20 @@ ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4478595fe34e81919a67c37a7f0a714329a5ea44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67906216"
 ---
 # <a name="installer-dll-api-reference-function"></a>安裝程式 DLL API 參考函式
-本章節描述在安裝程式 DLL API 函數的語法。 安裝程式 DLL API 是由 20 函式所組成。 這些函式，其中三個**SQLGetTranslator**， **SQLRemoveDSNFromIni**，並**SQLWriteDSNToIni**，只能由安裝程式 Dll 會呼叫。 安裝和管理程式會呼叫其他函式。  
+本節說明安裝程式 DLL API 中的函數語法。 安裝程式 DLL API 包含20個函數。 其中三個函式（ **SQLGetTranslator**、 **SQLRemoveDSNFromIni**和**SQLWriteDSNToIni**）只會由安裝程式 dll 呼叫。 安裝程式和管理程式會呼叫其他函式。  
   
- 它引進的 ODBC 版本會標示每個函式。  
+ 每個函式都會標示其引進的 ODBC 版本。  
   
  此章節包含下列主題。  
   
--   [SQLConfigDataSource 函式](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)  
+-   [SQLConfigDataSource 函數 (英文)](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)  
   
 -   [SQLConfigDriver 函式](../../../odbc/reference/syntax/sqlconfigdriver-function.md)  
   

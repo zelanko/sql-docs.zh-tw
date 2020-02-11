@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe7b988590de54a3cb02aa540b244e1f56f3ba24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054128"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>估計叢集索引的大小
@@ -174,21 +174,21 @@ ms.locfileid: "66054128"
   
 7.  計算索引中的層級數目：  
   
-     ***Non-leaf_levels&lt*** = 1 + 記錄 Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***非 leaf_Levels*** = 1 + log Index_Rows_Per_Page （***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***）  
   
      將這個值無條件向上進位到最近的整數。 此值不包含叢集索引的分葉層級。  
   
 8.  計算索引中的非分葉頁面數目：  
   
-     ***Num_Index_Pages =*** ∑Level ***(Num_Leaf_Pages / (Index_Rows_Per_Page***<sup>Level</sup>***))***  
+     ***Num_Index_Pages =*** ∑層級 ***（Num_Leaf_Pages/（Index_Rows_Per_Page***<sup>層級</sup>***））***  
   
      其中 1 <= Level <= ***Non-leaf_Levels***  
   
      將每個被加數無條件向上進位到最近的整數。 簡單舉例說明，假設有個索引，其中 ***Num_Leaf_Pages*** = 1000 和 ***Index_Rows_Per_Page*** = 25。 分葉層級上方的第一個索引層級會儲存 1000 個索引資料列，這是每個分葉頁面的一個索引資料列，而且每個頁面可以容納 25 個索引資料列。 這表示儲存這 1000 個索引資料列需要 40 頁。 索引的下一個層級必須儲存 40 個資料列， 這表示它需要 2 頁。 索引的最後一個層級必須儲存 2 個資料列。 這表示它需要 1 頁。 這會提供 43 個非分葉索引頁面。 在上述公式中使用這些數字時，結果如下：  
   
-     ***Non-leaf_levels*** = 1 + log25 (1000年 / 25) = 3  
+     ***非 leaf_Levels*** = 1 + log25 （1000/25） = 3  
   
-     ***Num_Index_Pages*** = 1000年 /(25<sup>3</sup>) + 1000年 / (25<sup>2</sup>) + 1000年 / (25<sup>1</sup>) = 1 + 2 + 40 = 43，這是此範例中所述的頁數。  
+     ***Num_Index_Pages*** = 1000/（25<sup>3</sup>） + 1000/（25<sup>2</sup>） + 1000/（25<sup>1</sup>） = 1 + 2 + 40 = 43，這是範例中所描述的頁面數目。  
   
 9. 計算索引的大小 (每個分頁共有 8192 個位元組)：  
   

@@ -12,10 +12,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: df0fd7cb27977679a6ca879d7ae01045ed3fa8c8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727133"
 ---
 # <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>教學課程：使用 SQL Server Machine Learning 服務在 Python 中部署模型以分類客戶
@@ -31,13 +31,13 @@ ms.locfileid: "73727133"
 在本文中，您將學會如何：
 
 > [!div class="checklist"]
-> * 建立會產生模型的預存程序
+> * 建立一個會產生模型的預存程序
 > * 在 SQL Server 中執行群集
 > * 使用群集資訊
 
 在[第一部分](python-clustering-model.md)中，您已安裝必要條件並還原範例資料庫。
 
-在[第二部分](python-clustering-model-prepare-data.md)中，您已了解如何準備 SQL 資料庫中的資料，以執行群集。
+在[第二部分](python-clustering-model-prepare-data.md)，您已了解如何準備 SQL 資料庫中的資料，以執行叢集。
 
 在[第三部分](python-clustering-model-build.md)中，您已了解如何在 Python 中建立和定型 K-Means 群集模型。
 
@@ -45,7 +45,7 @@ ms.locfileid: "73727133"
 
 * 本教學課程系列的第四部分假設您已滿足[**第一部分**](python-clustering-model.md)的必要條件，並已完成[**第二部分**](python-clustering-model-prepare-data.md)和[**第三部分**](python-clustering-model-build.md)中的步驟。
 
-## <a name="create-a-stored-procedure-that-generates-the-model"></a>建立會產生模型的預存程序
+## <a name="create-a-stored-procedure-that-generates-the-model"></a>建立一個會產生模型的預存程序
 
 執行下列 T-SQL 指令碼來建立預存程序。 此程序會重新建立您在本教學課程系列的第一部分和第二部分中所開發的步驟：
 
@@ -181,7 +181,7 @@ SELECT customer.[c_email_address], customer.c_customer_sk
 
 在本教學課程系列的第四部分中，您已完成下列步驟：
 
-* 建立會產生模型的預存程序
+* 建立一個會產生模型的預存程序
 * 在 SQL Server 中執行群集
 * 使用群集資訊
 

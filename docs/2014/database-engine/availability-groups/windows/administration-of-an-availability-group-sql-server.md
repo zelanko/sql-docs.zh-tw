@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8d826201f44bb666050f5229b4824b5c2198dc0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229000"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>可用性群組的管理 (SQL Server)
@@ -43,24 +43,24 @@ ms.locfileid: "75229000"
 -   針對作業系統升級進行 AlwaysOn 可用性群組的跨叢集移轉  
   
   
-##  <a name="RelatedTasks"></a>相關工作  
- **若要設定現有的可用性群組**  
+##  <a name="RelatedTasks"></a> 相關工作  
+ **設定現有的可用性群組**  
   
 -   [將次要複本加入至可用性群組 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [將次要複本從可用性群組中移除 &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
+-   [將次要複本從可用性群組移除 &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
   
--   [將資料庫新增至可用性群組 &#40;SQL Server&#41;](availability-group-add-a-database.md)  
+-   [將資料庫加入至可用性群組 &#40;SQL Server&#41;](availability-group-add-a-database.md)  
   
--   [從可用性群組中移除次要資料庫 &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md)  
+-   [將次要資料庫從可用性群組移除 &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md)  
   
--   [從可用性群組中移除主資料庫 &#40;SQL Server&#41;](remove-a-primary-database-from-an-availability-group-sql-server.md)  
+-   [將主要資料庫從可用性群組移除 &#40;SQL Server&#41;](remove-a-primary-database-from-an-availability-group-sql-server.md)  
   
 -   [設定彈性容錯移轉原則，以控制自動容錯移轉 &#40;AlwaysOn 可用性群組的條件&#41;](configure-flexible-automatic-failover-policy.md)  
   
  **若要管理可用性群組**  
   
--   [在可用性複本上設定備份 &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
+-   [設定可用性複本的備份 &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
 -   [執行可用性群組的已規劃手動容錯移轉 &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)  
   
@@ -74,29 +74,29 @@ ms.locfileid: "75229000"
   
 -   [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [將次要複本從可用性群組中移除 &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
+-   [將次要複本從可用性群組移除 &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
   
 -   [變更可用性複本的可用性模式 &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
   
 -   [變更可用性複本的容錯移轉模式 &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
--   [在可用性複本上設定備份 &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
+-   [設定可用性複本的備份 &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
--   [設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
+-   [設定可用性複本的唯讀存取 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
 -   [設定可用性群組的唯讀路由 &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
--   [變更可用性複本的會話超時時間 &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
+-   [變更可用性複本的工作階段逾時期限 &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
  **若要管理可用性資料庫**  
   
--   [將資料庫新增至可用性群組 &#40;SQL Server&#41;](availability-group-add-a-database.md)  
+-   [將資料庫加入至可用性群組 &#40;SQL Server&#41;](availability-group-add-a-database.md)  
   
 -   [將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
--   [從可用性群組中移除主資料庫 &#40;SQL Server&#41;](remove-a-primary-database-from-an-availability-group-sql-server.md)  
+-   [將主要資料庫從可用性群組移除 &#40;SQL Server&#41;](remove-a-primary-database-from-an-availability-group-sql-server.md)  
   
--   [從可用性群組中移除次要資料庫 &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md)  
+-   [將次要資料庫從可用性群組移除 &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md)  
   
 -   [暫止可用性資料庫 &#40;SQL Server&#41;](suspend-an-availability-database-sql-server.md)  
   
@@ -108,20 +108,20 @@ ms.locfileid: "75229000"
   
  **支援將可用性群組遷移至新的 WSFC 叢集（跨叢集遷移）**  
   
--   [變更伺服器實例的 HADR 叢集內容 &#40;SQL Server&#41;](change-the-hadr-cluster-context-of-server-instance-sql-server.md)  
+-   [變更伺服器執行個體的 HADR 叢集內容 &#40;SQL Server&#41;](change-the-hadr-cluster-context-of-server-instance-sql-server.md)  
   
 -   [讓可用性群組離線 &#40;SQL Server&#41;](../../take-an-availability-group-offline-sql-server.md)  
   
   
-##  <a name="RelatedContent"></a>相關內容  
+##  <a name="RelatedContent"></a> 相關內容  
   
--   **網路**  
+-   **部落格：**  
   
      [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 工程師 Blog](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
--   **視頻**  
+-   **影片：**  
   
      [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第 1 部：新一代高可用性解決方案簡介](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
@@ -129,19 +129,19 @@ ms.locfileid: "75229000"
   
 -   **白皮書：**  
   
-     [適用于 SQL Server 2012 的 Microsoft 技術白皮書](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft 的 SQL Server 2012 白皮書](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server 客戶諮詢小組白皮書](http://sqlcat.com/)  
+     [SQL Server 客戶諮詢團隊白皮書](http://sqlcat.com/)  
   
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [設定 AlwaysOn 可用性群組 &#40;SQL Server 的伺服器實例&#41;](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)  
- [建立和設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
+ [建立及設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [作用中次要資料庫：次要複本上的備份 &#40;AlwaysOn 可用性群組&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
- [可用性群組接聽程式、用戶端連接和應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [AlwaysOn 可用性群組 &#40;SQL Server 的操作問題 AlwaysOn 原則&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [監視可用性群組 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組：互通性 &#40;SQL Server&#41;](always-on-availability-groups-interoperability-sql-server.md)   

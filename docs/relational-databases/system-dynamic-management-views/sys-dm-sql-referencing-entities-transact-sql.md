@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bd09706d1b3de9ebe4a5b333f79be9644c433e7c
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982345"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
@@ -65,22 +65,22 @@ sys.dm_sql_referencing_entities (
   
  *schema_name*是必要的，除非 PARTITION_FUNCTION 參考的類別。  
   
- *schema_name。 referenced_entity_name*是**Nvarchar （517）** 。  
+ *schema_name。 referenced_entity_name*是**Nvarchar （517）**。  
   
- *< referenced_class >* ：： = {OBJECT |類型 |XML_SCHEMA_COLLECTION |PARTITION_FUNCTION}  
+ *<referenced_class>* ：： = {OBJECT |類型 |XML_SCHEMA_COLLECTION |PARTITION_FUNCTION}  
  這是受參考實體的類別。 每個陳述式只能指定一個類別。  
   
- *< referenced_class >* 是**Nvarchar**（60）。  
+ *<referenced_class>* 是**Nvarchar**（60）。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|[名稱]|描述|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |referencing_schema_name|**sysname**|參考實體所屬的結構描述。 可為 Null。<br /><br /> 若為資料庫層級與伺服器層級 DDL 觸發程序，則為 NULL。|  
 |referencing_entity_name|**sysname**|參考實體的名稱。 不可為 Null。|  
 |referencing_id|**int**|參考實體的識別碼。 不可為 Null。|  
 |referencing_class|**tinyint**|參考實體的類別。 不可為 Null。<br /><br /> 1 = 物件<br /><br /> 12 = 資料庫層級 DDL 觸發程序<br /><br /> 13 = 伺服器層級 DDL 觸發程序|  
-|referencing_class_desc|**nvarchar(60)**|參考實體之類別的描述。<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
+|referencing_class_desc|**Nvarchar （60）**|參考實體之類別的描述。<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|指出在執行階段發生之受參考實體識別碼的解析，因為它會相依於呼叫端的結構描述。<br /><br /> 1 = 參考實體可能會參考此實體。不過，受參考實體識別碼的解析是呼叫端相依而且無法判斷。 只有預存程序的非結構描述繫結參考、擴充預存程序，或在 EXECUTE 陳述式內部呼叫的使用者定義函數，才會發生這個事件。<br /><br /> 0 = 受參考的實體不是呼叫端相依。|  
   
 ## <a name="exceptions"></a>例外狀況  
@@ -96,21 +96,24 @@ sys.dm_sql_referencing_entities (
   
  當指定的受參考實體是已編號的預存程序時，就會傳回錯誤。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  下表將列出建立並維護相依性資訊的實體類型。 系統不會針對規則、預設值、暫存資料表、暫存預存程序或系統物件建立或維護相依性資訊。  
   
 |實體類型|參考實體|受參考的實體|  
 |-----------------|------------------------|-----------------------|  
-|[資料表]|是*|是|  
-|[檢視]|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序**|是|是|  
+|Table|是*|是|  
+|檢視|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程式 * *|是|是|  
 |CLR 預存程序|否|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 使用者定義函數|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)]使用者定義函數|是|是|  
 |CLR 使用者定義函數|否|是|  
 |CLR 觸發程序 (DML 和 DDL)|否|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 觸發程序|是|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 資料庫層級 DDL 觸發程序|是|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器層級 DDL 觸發程序|是|否|  
+|
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] DML 觸發程序|是|否|  
+|
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料庫層級 DDL 觸發程序|是|否|  
+|
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器層級 DDL 觸發程序|是|否|  
 |擴充預存程序|否|是|  
 |佇列|否|是|  
 |同義字|否|是|  
@@ -118,11 +121,11 @@ sys.dm_sql_referencing_entities (
 |XML 結構描述集合|否|是|  
 |分割區函數|否|是|  
   
- 只有在參考計算資料行、CHECK 條件約束或 DEFAULT 條件約束的定義中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組、使用者定義型別或 XML 架構集合時，才會將資料表當做參考實體進行追蹤。 \*  
+ \*只有當資料表參考計算資料行、CHECK 條件約束或 DEFAULT [!INCLUDE[tsql](../../includes/tsql-md.md)]條件約束的定義中的模組、使用者定義型別或 XML 架構集合時，才會將它當做參考實體進行追蹤。  
   
  ** 所包含之整數值大於 1 的編號預存程序不會當做參考或受參考的實體進行追蹤。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
   
 ### <a name="includesskatmaiincludessskatmai-mdmd---includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
@@ -153,8 +156,8 @@ FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');
 GO  
 ```  
   
-### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>b. 傳回參考給定類型的實體  
- 下列範例會傳回參考別名類型 `dbo.Flag` 的實體。 結果集會顯示有兩個預存程序使用這個類型。 `dbo.Flag` 類型也會用於 `HumanResources.Employee` 資料表中數個數據行的定義中。不過，因為此類型不在計算資料行的定義、CHECK 條件約束或資料表的 DEFAULT 條件約束中，所以 `HumanResources.Employee` 資料表不會傳回任何資料列。  
+### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. 傳回參考給定類型的實體  
+ 下列範例會傳回參考別名類型 `dbo.Flag` 的實體。 結果集會顯示有兩個預存程序使用這個類型。 此`dbo.Flag`類型也用於`HumanResources.Employee`資料表中數個數據行的定義中。不過，因為此類型不在計算資料行的定義、CHECK 條件約束或資料表的 DEFAULT 條件約束中，所以不會傳回`HumanResources.Employee`資料表的任何資料列。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -175,7 +178,7 @@ GO
  ``` 
  
 ## <a name="see-also"></a>另請參閱  
- [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
+ [dm_sql_referenced_entities &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
   
