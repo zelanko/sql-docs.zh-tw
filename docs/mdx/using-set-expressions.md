@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893499"
 ---
 # <a name="using-set-expressions"></a>使用集合運算式
@@ -22,7 +22,7 @@ ms.locfileid: "68893499"
   
  由零個或多個明確指定的 Tuple 而構成之集合的完整運算式 (嵌在大括號中)：  
   
- {[{ *Tuple_expression*  |  *Member_expression* } [, { *Tuple_expression*  |  *Member_expression* }] ...]}  
+ {[{ *Tuple_expression* | *Member_expression* } [，{ *Tuple_expression* | *Member_expression* }] ...]}  
   
  集合運算式中指定的成員運算式可轉換成單一成員 Tuple 運算式。  
   
@@ -49,17 +49,17 @@ ms.locfileid: "68893499"
   
  是由 Measures 維度中的兩個成員所組成。 在資料列軸上，  
   
- {([Product]。[產品類別]。[Category]. & [4], [Date]。[行事曆]。[Calendar Year]. & [2004])、  
+ {（[Product]。[產品類別]。[Category]. & [4]，[Date]。[行事曆]。[Calendar Year]. & [2004]），  
   
- ([Product]。[產品類別]。[Category]. & [1], [Date]。[行事曆]。[Calendar Year]. & [2003])、  
+ （[Product]。[產品類別]。[Category]. & [1]，[Date]。[行事曆]。[Calendar Year]. & [2003]），  
   
- ([Product]。[產品類別]。[Category]. & [3]、[Date]。[行事曆]。[Calendar Year]. & [2004])}  
+ （[Product]。[產品類別]。[Category]. & [3]、[Date]。[行事曆]。[Calendar Year]. & [2004]）}  
   
  是由三個 tuple 所組成，每一個 tuple 都包含 Product 維度之 Product Category 階層上之成員及 Date 維度之 Calendar 階層上之成員的兩個明確參考。  
   
- 如需傳回集合的函式範例, 請參閱[使用成員、元組和&#40;設定&#41;MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)。  
+ 如需傳回集合的函式範例，請參閱[使用成員、元組和 set &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)。  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
+ [MDX&#41;&#40;的運算式](../mdx/expressions-mdx.md)  
   
   

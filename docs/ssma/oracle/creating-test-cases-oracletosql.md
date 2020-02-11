@@ -1,5 +1,5 @@
 ---
-title: 建立測試案例 (OracleToSQL) |Microsoft Docs
+title: 建立測試案例（OracleToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,35 +13,35 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 697f7049a60aa7ae2b8c89d1fb6c5ce8e3d29312
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266128"
 ---
 # <a name="creating-test-cases-oracletosql"></a>建立測試案例 (OracleToSQL)
-使用測試案例精靈以建立測試。 此精靈可讓您建立測試案例，藉由選擇測試並確認物件和測試的參數。  
+使用 [測試案例] Wizard 建立測試。 此 wizard 可讓您藉由選擇已測試和已驗證的物件，並藉由指定測試參數來建立測試案例。  
   
-## <a name="starting-the-test-case-wizard"></a>啟動測試實例精靈  
-若要啟動測試案例精靈按一下**新測試案例...** 從**Tester**功能表。  
+## <a name="starting-the-test-case-wizard"></a>啟動測試案例嚮導  
+若要啟動測試案例，請按一下 [測試**人員**] 功能表中的 [**新增測試案例 ...** ]。  
   
-啟動時，精靈就會尋找結構描述 SSMATESTER_ORACLE 來源 Oracle 伺服器上。 它是用來儲存輔助物件 Tester 延伸結構描述。 如果測試案例精靈找不到 SSMATESTER_ORACLE，它會顯示建立結構描述所提出的對話方塊視窗。 （這種情況通常發生在 SSMA 軟體測試人員第一次執行期間。）  
+啟動時，嚮導會尋找來源 Oracle 伺服器上的架構 SSMATESTER_ORACLE。 這是用來儲存輔助物件的測試人員延伸模組架構。 如果 [測試案例嚮導] 找不到 SSMATESTER_ORACLE，就會顯示建議建立架構的交談視窗。 （這種情況通常會在第一次執行 SSMA 測試器時發生）。  
   
-如果您收到對話方塊視窗中，按一下**是**來源伺服器上建立 SSMATESTER_ORACLE 結構描述。 請注意，您必須建立新的使用者，並在此使用者的結構描述中建立物件的 Oracle 權限。  
+如果您看到交談視窗，請按一下 [**是**]，在來源伺服器上建立 SSMATESTER_ORACLE 架構。 請注意，您必須具有 Oracle 許可權，才能建立新的使用者，並在此使用者的架構中建立物件。  
   
-## <a name="overview-of-creating-test-cases-using-the-wizard"></a>建立使用精靈的測試案例的概觀  
-建立測試案例的程序是由五個步驟所組成：  
+## <a name="overview-of-creating-test-cases-using-the-wizard"></a>使用 Wizard 建立測試案例的總覽  
+建立測試案例的套裝程式含五個步驟：  
   
-1.  [將測試案例初始化&#40;OracleToSQL&#41;](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
+1.  [&#40;OracleToSQL&#41;初始化測試案例](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
   
-2.  [選取並設定要測試的物件&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+2.  [選取並設定要測試的物件 &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
-3.  [選取並設定受影響的物件&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+3.  [選取並設定受影響的物件 &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
-4.  [自訂呼叫順序&#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
+4.  [自訂呼叫順序 &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
-5.  [完成測試案例準備&#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+5.  [完成測試案例準備 &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[測試移轉的資料庫物件&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[&#40;OracleToSQL&#41;測試遷移的資料庫物件](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

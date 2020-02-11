@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7c9a628f912f382f3ee8a87276aa34d0e54e37ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033637"
 ---
 # <a name="update-statistics"></a>更新統計資料
@@ -29,7 +29,7 @@ ms.locfileid: "63033637"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目更新統計資料物件：**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "63033637"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  如果使用 UPDATE STATISTICS 或透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]進行變更，需要資料表或檢視表的 ALTER 權限。 如果使用 `sp_updatestats`，需要 **系統管理員** 固定伺服器角色的成員資格或資料庫 (**dbo**) 的擁有權。  
@@ -58,7 +58,7 @@ ms.locfileid: "63033637"
   
 5.  以滑鼠右鍵按一下要更新的統計資料物件，然後選取 [屬性]  。  
   
-6.  在 **統計資料屬性-** _statistics_name_對話方塊中，選取**更新這些資料行的統計資料**核取方塊，然後按一下  **確定**.  
+6.  在 [**統計資料屬性-**_statistics_name_ ] 對話方塊中，選取 [**更新這些資料行的統計資料**] 核取方塊，然後按一下 **[確定]**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63033637"
   
 2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -94,7 +94,7 @@ ms.locfileid: "63033637"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)。  
+ 如需詳細資訊，請參閱 [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)所建立的資料庫維護計畫。  
   
 #### <a name="to-update-all-statistics-in-a-database"></a>若要更新資料庫中的所有統計資料  
   

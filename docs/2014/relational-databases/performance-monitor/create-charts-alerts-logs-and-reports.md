@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f36f1a3df7eae3fd363aa5e2bc4b5ae13f36ae2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032402"
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>建立圖表、警示、記錄和報表
@@ -51,7 +51,7 @@ ms.locfileid: "63032402"
 ## <a name="alerts"></a>警示  
  使用警示，可讓「系統監視器」追蹤特定事件，並依要求在發生事件時進行通知。 警示記錄檔可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，監視所選取計數器和物件執行個體的目前效能。 如果計數器超出給定值，記錄檔便會記錄事件的日期和時間。 事件也可以產生網路警示。 您可以在事件第一次發生或每次發生時，指定要執行的程式。 例如，警示可以傳送網路訊息給所有系統管理員，告知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的磁碟空間不足。  
   
-## <a name="logs"></a>記錄檔  
+## <a name="logs"></a>記錄  
  記錄檔可讓您記錄選定物件和電腦的目前活動資訊，以供日後檢視與分析。 您可將多個系統的資料收集到一個記錄檔內。 例如，您可以建立不同的記錄檔來累積各種電腦上選取物件的效能資訊，以供日後分析。 您可將這些選取資料存到一個檔名底下，當您想要建立相似資訊的另一個記錄檔以進行比較時，就可重複使用它們。  
   
  記錄檔提供許多資訊，可用於疑難排解或規劃上。 目前活動的圖表、警示與報表可提供立即的回應，而記錄檔則可讓您長期追蹤計數器。 因此，您可以更詳盡地檢查資訊，並記錄系統的效能。  

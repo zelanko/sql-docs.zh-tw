@@ -17,23 +17,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 471549e5a42f8d08a62da37c4e98e66bc9b67413
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148766"
 ---
 # <a name="calling-methods"></a>呼叫方法
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  方法會執行與物件相關的特定工作, 例如在資料庫上發出**檢查點**, 或要求實例的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]登入列舉清單。  
+  方法會執行與物件相關的特定工作，例如在資料庫上發出**檢查點**，或要求實例的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]登入列舉清單。  
   
  方法會在物件上執行作業。 方法可以採用參數，而且通常有一個傳回值。 傳回值可以是簡單資料類型、複雜物件，或包含許多成員的結構。  
   
  使用例外狀況處理來偵測方法是否成功。 如需詳細資訊，請參閱 [Handling SMO Exceptions](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-exceptions.md)。  
   
 ## <a name="examples"></a>範例  
-如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊, 請參閱[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
  
   
 ## <a name="using-a-simple-smo-method-in-visual-basic"></a>在 Visual Basic 中使用簡單 SMO 方法  
@@ -68,7 +68,8 @@ db.Create();
  }  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-basic"></a>在 Visual Basic 中搭配參數使用 SMO 方法  
- <xref:Microsoft.SqlServer.Management.Smo.Table> 物件有一個稱為 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 **FillFactor**的數值參數。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Table> 物件有一個稱為 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 **FillFactor**的數值參數。  
   
 ```VBNET
 Dim srv As Server  
@@ -79,7 +80,8 @@ tb.RebuildIndexes(70)
 ```  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-c"></a>在 Visual C# 中搭配參數使用 SMO 方法  
- <xref:Microsoft.SqlServer.Management.Smo.Table> 物件有一個稱為 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 `FillFactor`的數值參數。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Table> 物件有一個稱為 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 `FillFactor`的數值參數。  
   
 ```csharp  
 {   
@@ -94,7 +96,8 @@ tb.RebuildIndexes(70);
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-basic"></a>在 Visual Basic 中使用傳回 DataTable 物件的列舉方法  
  本節描述如何呼叫列舉方法，以及如何處理傳回之 <xref:System.Data.DataTable> 物件中的資料。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法會傳回 <xref:System.Data.DataTable> 物件，此物件需要進一步導覽，才能存取有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的所有可用定序資訊。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法會傳回 <xref:System.Data.DataTable> 物件，此物件需要進一步導覽，才能存取有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的所有可用定序資訊。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.  
@@ -118,7 +121,9 @@ Next
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-c"></a>在 Visual C# 中使用傳回 DataTable 物件的列舉方法  
  本節描述如何呼叫列舉方法，以及如何處理傳回之 <xref:System.Data.DataTable> 物件中的資料。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法會傳回系統 <xref:System.Data.DataTable> 物件。 <xref:System.Data.DataTable> 物件需要進一步導覽，才能存取有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的所有可用定序資訊。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法會傳回系統 <xref:System.Data.DataTable> 物件。 
+  <xref:System.Data.DataTable> 物件需要進一步導覽，才能存取有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的所有可用定序資訊。  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   
@@ -142,7 +147,8 @@ foreach ( r in d.Rows) {
 ```  
   
 ## <a name="constructing-an-object-in-visual-basic"></a>在 Visual Basic 中建構物件  
- 任何物件的建構函式都可以使用 **New** 運算子來呼叫。 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件建構函式會超載，而範例中所使用的 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件建構函式版本會採用兩個參數：資料庫所屬的 <xref:Microsoft.SqlServer.Management.Smo.Server> 父物件，以及代表新資料庫名稱的字串。  
+ 任何物件的建構函式都可以使用 **New** 運算子來呼叫。 
+  <xref:Microsoft.SqlServer.Management.Smo.Database> 物件建構函式會超載，而範例中所使用的 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件建構函式版本會採用兩個參數：資料庫所屬的 <xref:Microsoft.SqlServer.Management.Smo.Server> 父物件，以及代表新資料庫名稱的字串。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -157,7 +163,8 @@ Console.WriteLine(d.Name)
 ```
   
 ## <a name="constructing-an-object-in-visual-c"></a>在 Visual C# 中建構物件  
- 任何物件的建構函式都可以使用 **New** 運算子來呼叫。 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件建構函式會超載，而範例中所使用的 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件建構函式版本會採用兩個參數：資料庫所屬的 <xref:Microsoft.SqlServer.Management.Smo.Server> 父物件，以及代表新資料庫名稱的字串。  
+ 任何物件的建構函式都可以使用 **New** 運算子來呼叫。 
+  <xref:Microsoft.SqlServer.Management.Smo.Database> 物件建構函式會超載，而範例中所使用的 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件建構函式版本會採用兩個參數：資料庫所屬的 <xref:Microsoft.SqlServer.Management.Smo.Server> 父物件，以及代表新資料庫名稱的字串。  
   
 ```csharp  
 {   
@@ -179,7 +186,8 @@ Console.WriteLine(d.Name);
 ```  
   
 ## <a name="copying-an-smo-object-in-visual-basic"></a>在 Visual Basic 中複製 SMO 物件  
- 此程式碼範例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法來建立 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件的複本。 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接。  
+ 此程式碼範例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法來建立 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件的複本。 
+  <xref:Microsoft.SqlServer.Management.Smo.Server> 物件代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接。  
   
 ```VBNET  
 'Connect to the local, default instance of SQL Server.
@@ -195,7 +203,8 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString)
 ```
   
 ## <a name="copying-an-smo-object-in-visual-c"></a>在 Visual C# 中複製 SMO 物件  
- 此程式碼範例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法來建立 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件的複本。 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接。  
+ 此程式碼範例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法來建立 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件的複本。 
+  <xref:Microsoft.SqlServer.Management.Smo.Server> 物件代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接。  
   
 ```csharp  
 {   

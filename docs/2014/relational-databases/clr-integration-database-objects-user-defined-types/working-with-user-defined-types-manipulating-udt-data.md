@@ -30,17 +30,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 11aa57037a1ea92bd72ed2eaa581d34baff8a122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874308"
 ---
 # <a name="manipulating-udt-data"></a>操作 UDT 資料
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 在修改使用者定義型別 (UDT) 資料行中的資料時，不會提供 INSERT、UPDATE 或 DELETE 陳述式的特定語法。 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 或 CONVERT 函數可用來將原生資料類型轉換為 UDT 類型。  
+  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 在修改使用者定義型別 (UDT) 資料行中的資料時，不會提供 INSERT、UPDATE 或 DELETE 陳述式的特定語法。 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 或 CONVERT 函數可用來將原生資料類型轉換為 UDT 類型。  
   
 ## <a name="inserting-data-in-a-udt-column"></a>將資料插入 UDT 資料行  
- 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式會將範例資料插入到三個資料列**點**資料表。 **點**資料型別包含 X 及 Y 整數值公開為 UDT 的屬性。 您必須使用 CAST 或 CONVERT 函式，將逗號分隔 X 和 Y 值來**點**型別。 前兩個陳述式使用 CONVERT 函數，將字串值轉換成**點**類型，而第三個陳述式則使用 CAST 函式：  
+ 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]語句會將三個範例資料列插入至**Points**資料表。 **Point**資料類型是由會公開為 UDT 屬性的 X 和 Y 整數值所組成。 您必須使用 CAST 或 CONVERT 函數，將以逗號分隔的 X 和 Y 值轉換為**Point**類型。 前兩個語句使用 CONVERT 函式，將字串值轉換為**Point**類型，而第三個語句則使用 CAST 函數：  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -55,7 +57,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- 若要查看以可讀取的格式顯示輸出，請呼叫`ToString`方法**點**UDT，將值轉換為其字串表示。  
+ 若要查看以可讀取格式顯示的輸出，請`ToString`呼叫**Point** UDT 的方法，將值轉換為其字串表示。  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -82,7 +84,7 @@ SELECT ID, CONVERT(varchar, PointValue)
 FROM dbo.Points;  
 ```  
   
- **點**UDT 會公開為屬性，您可以選取個別的 X 和 Y 座標。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式分別選取 X 及 Y 座標：  
+ **Point** UDT 會將其 X 和 Y 座標公開為屬性，然後您就可以個別選取。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式分別選取 X 及 Y 座標：  
   
 ```  
 SELECT ID, PointValue.X AS xVal, PointValue.Y AS yVal   
@@ -129,7 +131,7 @@ SELECT @PointValue.ToString() AS PointValue;
  使用 SELECT 與 SET 進行變數指派的差異在於，SELECT 可讓您在一個 SELECT 陳述式中指派多個變數，而 SET 語法要求每個變數指派都具有自己的 SET 陳述式。  
   
 ## <a name="comparing-data"></a>比較資料  
- 定義類別時如果已將 `IsByteOrdered` 屬性設為 `true`，則可使用比較運算子比較 UDT 中的值。 如需詳細資訊，請參閱 <<c0> [ 建立使用者定義型別](creating-user-defined-types.md)。  
+ 定義類別時如果已將 `IsByteOrdered` 屬性設為 `true`，則可使用比較運算子比較 UDT 中的值。 如需詳細資訊，請參閱[建立使用者定義型](creating-user-defined-types.md)別。  
   
 ```  
 SELECT ID, PointValue.ToString() AS Points   
@@ -156,7 +158,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>叫用 UDT 方法  
- 您也可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中叫用 UDT 中定義的方法。 **點**類別包含三個方法︰ `Distance`， `DistanceFrom`，和`DistanceFromXY`。 定義這三種方法的程式碼清單，請參閱 < [< 類型](creating-user-defined-types-coding.md)。  
+ 您也可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中叫用 UDT 中定義的方法。 **Point**類別包含三個方法： `Distance` `DistanceFrom`、和`DistanceFromXY`。 如需定義這三種方法的程式代碼清單，請參閱[編碼使用者定義類型](creating-user-defined-types-coding.md)。  
   
  下列的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會呼叫 `PointValue.Distance` 方法：  
   
@@ -167,7 +169,7 @@ SELECT ID, PointValue.X AS [Point.X],
 FROM dbo.Points;  
 ```  
   
- 結果會顯示在`Distance`資料行：  
+ 結果會顯示在資料`Distance`行中：  
   
 ```  
 IDXYDistance  
@@ -177,7 +179,7 @@ IDXYDistance
 319999.0050503762308  
 ```  
   
- `DistanceFrom`方法會採用的引數**點**資料型別，並顯示從指定的點到 PointValue 的距離：  
+ `DistanceFrom`方法接受**Point**資料類型的引數，並顯示從指定點到 PointValue 的距離：  
   
 ```  
 SELECT ID, PointValue.ToString() AS Pnt,  
@@ -195,7 +197,8 @@ ID PntDistanceFromPoint
 31,990  
 ```  
   
- `DistanceFromXY` 方法將個別點視為引數：  
+ 
+  `DistanceFromXY` 方法將個別點視為引數：  
   
 ```  
 SELECT ID, PointValue.X as X, PointValue.Y as Y,   
@@ -264,6 +267,6 @@ WHERE ID = 2
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [在 SQL Server 中使用使用者定義型別](working-with-user-defined-types-in-sql-server.md)  
+ [使用 SQL Server 中的使用者定義型別](working-with-user-defined-types-in-sql-server.md)  
   
   

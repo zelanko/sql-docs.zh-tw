@@ -15,16 +15,16 @@ ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3387b4fa48eb1a04102daadcc08f971765d7ca2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037778"
 ---
 # <a name="c-interval-structure"></a>C 間隔結構
-每個 C 間隔資料類型中所列[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)區段以包含間隔的資料使用相同的結構。 當**SQLFetch**， **SQLFetchScroll**，或**SQLGetData**是呼叫，此驅動程式到 SQL_INTERVAL_STRUCT 結構會傳回資料，會使用所指定的值應用程式的 C 資料類型 (在呼叫**SQLBindCol**， **SQLGetData**，或**SQLBindParameter**) 來解譯 SQL_INTERVAL_STRUCT 的內容並於其中填入*interval_type*結構欄位*enum* C 類型的對應值。 請注意，驅動程式不會讀取*interval_type*欄位來決定間隔的類型; 它們擷取 SQL_DESC_CONCISE_TYPE 描述項欄位的值。 參數資料的使用結構時，驅動程式會使用 APD SQL_DESC_CONCISE_TYPE 欄位中的應用程式所指定的值解譯內容 SQL_INTERVAL_STRUCT，即使應用程式設定的值*interval_type*欄位設為不同的值。  
+[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)一節中所列的每個 c 間隔資料類型，都會使用相同的結構來包含間隔資料。 當呼叫**SQLFetch**、 **SQLFetchScroll**或**SQLGetData**時，驅動程式會將資料傳回 SQL_INTERVAL_STRUCT 結構、使用應用程式針對 c 資料類型（在**SQLBindCol**、 **SQLGetData**或**SQLBindParameter**的呼叫中）所指定的值來解讀 SQL_INTERVAL_STRUCT 的內容，並使用對應至 c 類型的*列舉*值來填入結構的*interval_type*欄位。 請注意，驅動程式不會讀取 [ *interval_type* ] 欄位來判斷間隔的類型;它們會抓取 [SQL_DESC_CONCISE_TYPE 描述項] 欄位的值。 當此結構用於參數資料時，驅動程式會使用 APD 之 [SQL_DESC_CONCISE_TYPE] 欄位中的應用程式所指定的值來解讀 SQL_INTERVAL_STRUCT 的內容，即使應用程式將*interval_type*欄位的值設定為不同的值亦然。  
   
- 這個結構被定義，如下所示：  
+ 此結構定義如下：  
   
 ```  
 typedef struct tagSQL_INTERVAL_STRUCT  
@@ -69,4 +69,4 @@ typedef struct tagSQL_DAY_SECOND
 } SQL_DAY_SECOND_STRUCT;  
 ```  
   
- *Interval_type* SQL_INTERVAL_STRUCT 欄位指出應用程式等位中保留哪些結構以及相關的結構成員項目。 *Interval_sign*欄位具有 SQL_FALSE 的值，如果間隔的開頭欄位是不帶正負號; 如果這是 SQL_TRUE，[前置] 欄位是負數。 前置欄位本身中的值一律是不帶正負號，不論值為何*interval_sign*。 *Interval_sign*欄位做為正負號位元。
+ SQL_INTERVAL_STRUCT 的 [ *interval_type* ] 欄位會向應用程式指出在聯集中保留的結構，以及結構的哪些成員相關。 如果間隔前置欄位不帶正負號， *interval_sign*欄位會有 SQL_FALSE 的值;如果 SQL_TRUE，則前置欄位為負數。 不論*interval_sign*的值為何，前置欄位本身的值永遠都是不帶正負號的。 [ *Interval_sign* ] 欄位會作為符號位。

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3fc1a9beb0468f50291854d8eb5cd0e3bf9ba8d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768804"
 ---
 # <a name="-parentheses-ssis-expression"></a>() (括號) (SSIS 運算式)
@@ -36,7 +36,7 @@ ms.locfileid: "62768804"
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 任何有效的運算式。  
+ 為任何有效運算式。  
   
 ## <a name="result-types"></a>結果類型  
  *expression*的資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](../data-flow/integration-services-data-types.md)。  

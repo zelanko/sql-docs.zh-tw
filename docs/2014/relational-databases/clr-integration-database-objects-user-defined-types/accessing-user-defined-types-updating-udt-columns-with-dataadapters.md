@@ -24,17 +24,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 82ac3490f80cf8683a6aebcea75004503a4d5ad4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919638"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>以 DataAdapter 更新 UDT 資料行
   可藉由使用 `System.Data.DataSet` 和 `System.Data.SqlClient.SqlDataAdapter` 擷取與修改資料，以支援使用者定義型別 (UDT)。  
   
 ## <a name="populating-a-dataset"></a>填入資料集  
- 您可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式來選取 UDT 資料行值，以使用資料配接器填入資料集。 下列範例假設您有**點**定義具有下列結構及某些範例資料的資料表。 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式會建立**點**資料表並插入幾個資料列。  
+ 您可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式來選取 UDT 資料行值，以使用資料配接器填入資料集。 下列範例假設您的**Points**資料表定義了下列結構和一些範例資料。 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]語句會建立**Points**資料表並插入幾個資料列。  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -46,7 +46,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- 下列 ADO.NET 程式碼片段會擷取有效的連接字串，建立新`SqlDataAdapter`，並於其中填入`System.Data.DataTable`與資料的資料列**點**資料表。  
+ 下列 ADO.NET 程式碼片段會抓取有效的連接字串、建立新`SqlDataAdapter`的，並`System.Data.DataTable`使用**Points**資料表中的資料列填入。  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -67,7 +67,8 @@ da.Fill(datTable);
   
 -   為 `InsertCommand` 物件提供自訂 `UpdateCommand`、`DeleteCommand` 及 `SqlDataAdapter` 物件。  
   
--   使用命令產生器 (`System.Data.SqlClient.SqlCommandBuilder`)，以自動建立 INSERT、UPDATE 及 DELETE 命令。 為了進行衝突偵測，請將 `timestamp` 資料行 (別名 `rowversion`) 加入到包含 UDT 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。 `timestamp` 資料類型可以讓您對資料表中的資料列加上版本戳記，而且可保證它在資料庫內是唯一的。 當資料表中的值變更時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動更新受此變更影響之資料列的 8 位元組二進位數字。  
+-   使用命令產生器 (`System.Data.SqlClient.SqlCommandBuilder`)，以自動建立 INSERT、UPDATE 及 DELETE 命令。 為了進行衝突偵測，請將 `timestamp` 資料行 (別名 `rowversion`) 加入到包含 UDT 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。 
+  `timestamp` 資料類型可以讓您對資料表中的資料列加上版本戳記，而且可保證它在資料庫內是唯一的。 當資料表中的值變更時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動更新受此變更影響之資料列的 8 位元組二進位數字。  
   
  請注意，除非在基底資料表中有 `SqlCommandBuilder` 資料行，否則 `timestamp` 不會考慮衝突偵測的 UDT。 因為 UDT 不一定可比較，所以當使用「比較原始值」選項來產生命令時，不會包括在 WHERE 子句中。  
   
@@ -85,9 +86,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  下列 ADO.NET 範例有兩個方法：  
   
--   `UserProvidedCommands`其中會示範如何提供`InsertCommand`， `UpdateCommand`，和`DeleteCommand`更新的物件`Point`中的 UDT**點**資料表 (不含`timestamp`資料行)。  
+-   `UserProvidedCommands`，示範如何`InsertCommand`提供、和`UpdateCommand` `DeleteCommand`物件，以便在**點**資料表（ `Point`不包含資料`timestamp`行）中更新 UDT。  
   
--   `CommandBuilder`其中示範如何使用`SqlCommandBuilder`中**Points_ts**資料表，其中包含`timestamp`資料行。  
+-   `CommandBuilder`，示範如何`SqlCommandBuilder`在包含資料`timestamp`行的**Points_ts**資料表中使用。  
   
 ```vb  
 Imports System  

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb841d187385724ea31b5a7db86fcb323bf10663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126234"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>在 Windows 應用程式中使用 URL 存取
@@ -31,7 +31,7 @@ ms.locfileid: "63126234"
 -   使用 Windows Form 上的 <xref:System.Windows.Forms.WebBrowser> 控制項顯示報表。  
   
 ## <a name="starting-internet-explorer-from-a-windows-form"></a>從 Windows Form 啟動 Internet Explorer  
- 您可以使用 <xref:System.Diagnostics.Process> 類別來存取正在電腦上執行的處理序。 <xref:System.Diagnostics.Process> 類別是有用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 建構，可啟動、停止、控制和監視應用程式。 若要監視在報表伺服器資料庫中的特定報表，您可以啟動 **IExplore** 處理序，將 URL 傳遞給報表。 下列程式碼範例可用以啟動 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer，並在使用者按一下 Windows Form 上的按鈕時，傳遞特定的報表 URL。  
+ 您可以使用 <xref:System.Diagnostics.Process> 類別來存取正在電腦上執行的處理序。 <xref:System.Diagnostics.Process>類別是用來啟動[!INCLUDE[msCoName](../../includes/msconame-md.md)] 、停止、控制和監視應用程式的實用[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]結構。 若要監視在報表伺服器資料庫中的特定報表，您可以啟動 **IExplore** 處理序，將 URL 傳遞給報表。 下列程式碼範例可用以啟動 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer，並在使用者按一下 Windows Form 上的按鈕時，傳遞特定的報表 URL。  
   
 ```vb  
 Private Sub viewReportButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles viewReportButton.Click  
@@ -87,17 +87,17 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 ###### <a name="to-add-the-webbrowser-control-to-your-windows-form"></a>將 WebBrowser 控制項加入 Windows Form  
   
-1.  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 建立新的 Windows 應用程式。  
+1.  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)]或[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]中建立新的 Windows 應用程式。  
   
-2.  在 [工具箱]  對話方塊中找出 <xref:System.Windows.Forms.WebBrowser> 控制項。  
+2.  在 [工具箱]<xref:System.Windows.Forms.WebBrowser>** 對話方塊中找出 ** 控制項。  
   
-     如果看不到 [工具箱]  ，可以按一下 [檢視]  功能表項目，並選取 [工具箱]  來存取。  
+     如果看不到 [工具箱]****，可以按一下 [檢視]**** 功能表項目，並選取 [工具箱]**** 來存取。  
   
 3.  將 <xref:System.Windows.Forms.WebBrowser> 控制項拖曳至 Windows Form 的設計介面。  
   
      名為 webBrowser1 的 <xref:System.Windows.Forms.WebBrowser> 控制項會新增至 Form  
   
- 您可以呼叫其 **Navigate** 方法，將 <xref:System.Windows.Forms.WebBrowser> 控制項導向 URL。 您可以在執行階段將特定的 URL 存取字串指派到 <xref:System.Windows.Forms.WebBrowser> 控制項，如下列範例所示。  
+ 您可以呼叫其 <xref:System.Windows.Forms.WebBrowser>Navigate** 方法，將 ** 控制項導向 URL。 您可以在執行階段將特定的 URL 存取字串指派到 <xref:System.Windows.Forms.WebBrowser> 控制項，如下列範例所示。  
   
 ```vb  
 Dim url As String = "http://localhost/reportserver?/" & _  
@@ -114,8 +114,8 @@ webBrowser1.Navigate(url);
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [將 Reporting Services 整合到應用程式](../application-integration/integrating-reporting-services-into-applications.md)   
- [使用 URL 存取整合 Reporting Services](integrating-reporting-services-using-url-access.md)   
+ [將 Reporting Services 整合至應用程式](../application-integration/integrating-reporting-services-into-applications.md)   
+ [使用 URL 存取來整合 Reporting Services](integrating-reporting-services-using-url-access.md)   
  [使用 SOAP 整合 Reporting Services](integrating-reporting-services-using-soap.md)   
  [使用 ReportViewer 控制項整合 Reporting Services](integrating-reporting-services-using-reportviewer-controls.md)   
  [URL 存取 &#40;SSRS&#41;](../url-access-ssrs.md)  

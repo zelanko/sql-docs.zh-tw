@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: de53acd4ef3d9feb6ed1a5026d8890f83e88d557
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148730"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>從 SQL Server 的執行個體中斷連接
@@ -29,19 +29,19 @@ ms.locfileid: "70148730"
   您並不需要以手動方式關閉和中斷 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO) 物件的連接。 連接會視需要開啟和關閉。  
   
 ## <a name="connection-pooling"></a>連接共用  
- 呼叫[Connect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.connect)方法時, 不會自動釋放連接。 必須明確呼叫[Disconnect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)方法, 才能釋放與連接集區的連接。 此外，您也可以要求非共用連接。 若要這麼做, 您可以設定參考[ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)物件之<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>屬性的[NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)屬性。  
+ 呼叫[Connect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.connect)方法時，不會自動釋放連接。 必須明確呼叫[Disconnect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)方法，才能釋放與連接集區的連接。 此外，您也可以要求非共用連接。 若要這麼做，您可以設定參考[ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)物件之<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>屬性的[NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)屬性。  
   
 ## <a name="disconnecting-from-an-instance-of-sql-server-for-rmo"></a>從 RMO 的 SQL Server 執行個體中斷連接  
  在使用 RMO 進行程式開發時關閉伺服器連接，與使用 SMO 時稍有不同。  
   
- 由於 RMO 物件的伺服器連接是由[ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)物件維護, 因此[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]當您使用 RMO 進行程式設計時, 也會使用這個物件來與的實例中斷連接。 若要使用[ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)物件關閉連接, 請呼叫 RMO 物件的[Disconnect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)方法。 在關閉連接之後，就無法使用 RMO 物件。  
+ 由於 RMO 物件的伺服器連接是由[ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)物件維護，因此[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]當您使用 RMO 進行程式設計時，也會使用這個物件來與的實例中斷連接。 若要使用[ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)物件關閉連接，請呼叫 RMO 物件的[Disconnect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)方法。 在關閉連接之後，就無法使用 RMO 物件。  
   
 ## <a name="example"></a>範例  
-如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊, 請參閱[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
  
   
 ## <a name="closing-and-disconnecting-an-smo-object-in-visual-basic"></a>在 Visual Basic 中關閉和中斷 SMO 物件的連接  
- 這個程式碼範例示範如何藉由設定<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>物件屬性的[NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)屬性, 來要求非集區連接。  
+ 這個程式碼範例示範如何藉由設定<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>物件屬性的[NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)屬性，來要求非集區連接。  
   
 ```VBNET
 Dim srv As Server
@@ -57,7 +57,7 @@ srv.ConnectionContext.Disconnect()
 ```
   
 ## <a name="closing-and-disconnecting-an-smo-object-in-visual-c"></a>在 Visual C# 中關閉和中斷 SMO 物件的連接  
- 這個程式碼範例示範如何藉由設定<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>物件屬性的[NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)屬性, 來要求非集區連接。  
+ 這個程式碼範例示範如何藉由設定<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>物件屬性的[NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)屬性，來要求非集區連接。  
   
 ```csharp  
 {   

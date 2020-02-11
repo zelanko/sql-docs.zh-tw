@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1ddc919b4658395c6a4268f03131bc92291f1b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832880"
 ---
 # <a name="cdc-control-task"></a>CDC 控制工作
@@ -28,7 +28,7 @@ ms.locfileid: "62832880"
   
  下列作業會處理初始載入和變更處理的同步處理：  
   
-|運算|描述|  
+|作業|描述|  
 |---------------|-----------------|  
 |ResetCdcState|此作業是用來重設與目前 CDC 內容相關聯的永續性 CDC 狀態。 執行此作業之後，LSN 時間戳記 `sys.fn_cdc_get_max_lsn` 資料表中的目前最大 LSN 就會變成下一個處理範圍的範圍開頭。 此作業需要來源資料庫的連接。|  
 |MarkInitialLoadStart|在初始載入封裝開始時使用此作業，以便在初始載入封裝開始讀取來源資料表之前記錄來源資料庫中目前的 LSN。 這需要來源資料庫的連接，以呼叫 `sys.fn_cdc_get_max_lsn`。<br /><br /> 如果您在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (亦即，非 Oracle) 上工作時選取了 MarkInitialLoadStart，連線管理員中指定的使用者就必須是 db_owner 或系統管理員。|  
@@ -37,10 +37,10 @@ ms.locfileid: "62832880"
   
  下列作業用來管理處理範圍：  
   
-|運算|描述|  
+|作業|描述|  
 |---------------|-----------------|  
 |GetProcessingRange|此作業是在叫用使用 CDC 來源資料流程的資料流程之前使用。 叫用此作業時，它會建立 CDC 來源資料流程所讀取的 LSN 範圍。 此範圍會儲存在資料流程處理期間 CDC 來源所使用的 SSIS 封裝變數中。<br /><br /> 如需儲存之狀態的詳細資訊，請參閱 [定義狀態變數](../data-flow/define-a-state-variable.md)。|  
-|MarkProcessedRange|所解碼的字元：在每個 CDC 執行之後 (CDC 資料流程順利完成之後) 執行此作業，以便記錄 CDC 執行期間完整處理的最後一個 LSN。 下次執行 GetProcessingRange 時，這個位置就是下一個處理範圍的開頭。|  
+|MarkProcessedRange|在每個 CDC 執行之後 (CDC 資料流程順利完成之後) 執行此作業，以便記錄 CDC 執行期間完整處理的最後一個 LSN。 下次執行 GetProcessingRange 時，這個位置就是下一個處理範圍的開頭。|  
   
 ## <a name="handling-cdc-state-persistency"></a>處理 CDC 狀態持續性  
  CDC 控制工作會在啟動之間維護永續性狀態。 儲存在 CDC 狀態中的資訊用來決定及維護 CDC 封裝的處理範圍，以及用於偵測錯誤狀態。 永續性狀態儲存為字串。 如需詳細資訊，請參閱 [定義狀態變數](../data-flow/define-a-state-variable.md)。  

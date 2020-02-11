@@ -1,5 +1,5 @@
 ---
-title: Filestream 和 FileTable 函數 (TRANSACT-SQL) |Microsoft Docs
+title: Filestream 和 FileTable 函數（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 71f729df-d340-4cf9-9a6d-305fcb39b009
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d75b811ba670c72aa4ce1ed15041b0b628f3f529
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042879"
 ---
 # <a name="filestream-and-filetable-functions-transact-sql"></a>Filestream 和 FileTable 函數 (Transact-SQL)

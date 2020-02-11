@@ -19,20 +19,20 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128757"
 ---
 # <a name="permissions-database-engine"></a>權限 (Database Engine)
   每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性實體都具有可授與主體的關聯權限。 此主題提供下列資訊：  
   
--   [權限命名慣例](#_conventions)  
+-   [許可權命名慣例](#_conventions)  
   
--   [與特定安全性實體的權限](#_securables)  
+-   [與特定安全性實體關聯的權限](#_securables)  
   
--   [SQL Server 權限](#_permissions)  
+-   [SQL Server 許可權](#_permissions)  
   
 -   [權限檢查演算法](#_algorithm)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "63128757"
      需要物件的 REFERENCES 權限，才能建立具有可參考該物件之 `WITH SCHEMABINDING` 的 FUNCTION 或 VIEW。  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 權限的圖表  
- 如需所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 權限的 PDF 格式海報大小圖表，請參閱 [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)。  
+ 如需 pdf 格式之所有[!INCLUDE[ssDE](../../includes/ssde-md.md)]許可權的海報大小圖表，請[https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)參閱。  
   
 ##  <a name="_securables"></a> 適用於特定安全性實體的權限  
  下表列出主要的權限類別，以及這些類別的權限適用的安全性實體。  
@@ -104,19 +104,19 @@ ms.locfileid: "63128757"
 |UPDATE|同義字<br /><br /> 資料表與資料行<br /><br /> 檢視表與資料行<br /><br /> 順序物件|  
 |REFERENCES|純量與彙總函式 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 佇列<br /><br /> 資料表與資料行<br /><br /> 資料表值函數 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR) 及資料行<br /><br /> 類型<br /><br /> 檢視表與資料行<br /><br /> 順序物件|  
 |Insert|同義字<br /><br /> 資料表與資料行<br /><br /> 檢視表與資料行|  
-|DELETE|同義字<br /><br /> 資料表與資料行<br /><br /> 檢視表與資料行|  
+|刪除|同義字<br /><br /> 資料表與資料行<br /><br /> 檢視表與資料行|  
 |執行 CREATE 陳述式之前，請先執行|程序 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)<br /><br /> 純量與彙總函式 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)<br /><br /> 同義字<br /><br /> CLR 類型|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 佇列|  
 |VIEW DEFINITION|可用性群組<br /><br /> 程序 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 佇列<br /><br /> 純量與彙總函式 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)<br /><br /> 登入、使用者和角色<br /><br /> 同義字<br /><br /> 資料表<br /><br /> 資料表值函式 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)<br /><br /> 檢視<br /><br /> 順序物件|  
 |ALTER|可用性群組<br /><br /> 程序 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)<br /><br /> 純量與彙總函式 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)<br /><br /> 順序物件<br /><br /> 登入、使用者和角色<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 佇列<br /><br /> 資料表<br /><br /> 資料表值函式 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)<br /><br /> 檢視|  
 |TAKE OWNERSHIP|可用性群組<br /><br /> 角色<br /><br /> 程序 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)<br /><br /> 純量與彙總函式 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)<br /><br /> 伺服器角色<br /><br /> 同義字<br /><br /> 資料表<br /><br /> 資料表值函式 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)<br /><br /> 檢視<br /><br /> 順序物件|  
 |CONTROL|可用性群組<br /><br /> 程序 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)<br /><br /> 純量與彙總函式 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)<br /><br /> 登入、使用者和角色<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 佇列<br /><br /> 同義字<br /><br /> 資料表<br /><br /> 資料表值函式 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)<br /><br /> 檢視<br /><br /> 順序物件|  
-|IMPERSONATE|登入及使用者|  
+|IMPERSONATE|登入和使用者|  
   
 > [!CAUTION]  
 >  在安裝時為系統物件授與的預設權限，經過仔細評估可能面臨的威脅，因此在強化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的過程中無須改變。 系統物件的任何權限變更，都可能會限制或破壞其功效，而可能會讓您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝處於不支援的狀態。  
   
-##  <a name="_permissions"></a> SQL Server 和 SQL Database 權限  
+##  <a name="_permissions"></a>SQL Server 和 SQL Database 許可權  
  下表提供完整的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 權限清單。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 權限僅供支援的基底安全性實體之用。 無法在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中授與伺服器層級權限，不過，在某些情況下，會改為提供資料庫權限。  
   
 |基底安全性實體|基底安全性實體上更細微的權限|權限類型代碼|包含基底安全性實體的安全性實體|容器安全性實體上隱含基底安全性實體之小權限的權限|  
@@ -157,7 +157,7 @@ ms.locfileid: "63128757"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 注意:只適用於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 注意：僅適用于[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "63128757"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> 注意:只適用於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> 注意：僅適用于[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -201,10 +201,10 @@ ms.locfileid: "63128757"
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
+|DATABASE|刪除|DL|SERVER|CONTROL SERVER|  
 |DATABASE|執行 CREATE 陳述式之前，請先執行|EX|SERVER|CONTROL SERVER|  
 |DATABASE|Insert|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 注意:只適用於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用 ALTER ANY CONNECTION。|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 注意：僅適用于[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用 ALTER ANY CONNECTION。|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -213,11 +213,11 @@ ms.locfileid: "63128757"
 |DATABASE|UPDATE|UP|SERVER|CONTROL SERVER|  
 |DATABASE|VIEW DATABASE STATE|VWDS|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
-|ENDPOINT|ALTER|AL|SERVER|ALTER ANY ENDPOINT|  
-|ENDPOINT|CONNECT|CO|SERVER|CONTROL SERVER|  
-|ENDPOINT|CONTROL|CL|SERVER|CONTROL SERVER|  
-|ENDPOINT|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
-|ENDPOINT|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
+|端點|ALTER|AL|SERVER|ALTER ANY ENDPOINT|  
+|端點|CONNECT|CO|SERVER|CONTROL SERVER|  
+|端點|CONTROL|CL|SERVER|CONTROL SERVER|  
+|端點|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
+|端點|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |FULLTEXT CATALOG|ALTER|AL|DATABASE|ALTER ANY FULLTEXT CATALOG|  
 |FULLTEXT CATALOG|CONTROL|CL|DATABASE|CONTROL|  
 |FULLTEXT CATALOG|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -228,10 +228,10 @@ ms.locfileid: "63128757"
 |FULLTEXT STOPLIST|REFERENCES|RF|DATABASE|REFERENCES|  
 |FULLTEXT STOPLIST|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|登入|ALTER|AL|SERVER|ALTER ANY LOGIN|  
-|登入|CONTROL|CL|SERVER|CONTROL SERVER|  
-|登入|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
-|登入|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
+|LOGIN|ALTER|AL|SERVER|ALTER ANY LOGIN|  
+|LOGIN|CONTROL|CL|SERVER|CONTROL SERVER|  
+|LOGIN|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
+|LOGIN|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
 |MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -239,7 +239,7 @@ ms.locfileid: "63128757"
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|DELETE|  
+|OBJECT|刪除|DL|SCHEMA|刪除|  
 |OBJECT|執行 CREATE 陳述式之前，請先執行|EX|SCHEMA|執行 CREATE 陳述式之前，請先執行|  
 |OBJECT|Insert|IN|SCHEMA|Insert|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
@@ -269,7 +269,7 @@ ms.locfileid: "63128757"
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
-|SCHEMA|DELETE|DL|DATABASE|DELETE|  
+|SCHEMA|刪除|DL|DATABASE|刪除|  
 |SCHEMA|執行 CREATE 陳述式之前，請先執行|EX|DATABASE|執行 CREATE 陳述式之前，請先執行|  
 |SCHEMA|Insert|IN|DATABASE|Insert|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -331,10 +331,10 @@ ms.locfileid: "63128757"
 |TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
 |TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
-|使用者|ALTER|AL|DATABASE|ALTER ANY USER|  
-|使用者|CONTROL|CL|DATABASE|CONTROL|  
-|使用者|IMPERSONATE|IM|DATABASE|CONTROL|  
-|使用者|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
+|USER|ALTER|AL|DATABASE|ALTER ANY USER|  
+|USER|CONTROL|CL|DATABASE|CONTROL|  
+|USER|IMPERSONATE|IM|DATABASE|CONTROL|  
+|USER|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|執行 CREATE 陳述式之前，請先執行|EX|SCHEMA|執行 CREATE 陳述式之前，請先執行|  

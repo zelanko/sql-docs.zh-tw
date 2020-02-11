@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5e763c930a37e90d1bf23c186fa5db8a16c5e971
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067884"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>檢查條件約束運算式對話方塊 (Visual Database Tools)
   當附加檢查條件約束至資料表或資料行時，必須包含 SQL 運算式。 在提供的方塊中輸入檢查條件約束運算式。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
- 運算式  
+ 運算是  
  輸入運算式  
   
  您可以建立簡單的條件約束運算式以檢查簡單條件的資料，或是可以建立使用布林運算子的複雜運算式，檢查數種條件的資料。 例如，假設 authors 資料表有 zip 資料行，而其中需要 5 位數的字串。 這個簡單的條件約束運算式保證只會允許 5 位數的資料：  
@@ -62,8 +62,8 @@ NOT (payment_method = 'credit card') OR
 |column_name|指定資料行。|  
 |函數|內建函數。|  
 |! 運算子之後|算術、位元、比較或字串運算子。|  
-|與|使用於布林運算式中，用於連接兩個運算式。 當兩個運算式都是 true 時傳回結果。<br /><br /> 當 AND 和 OR 同時在陳述式中使用時，會先處理 AND。 您可以使用括號來變更執行的順序。|  
-|或|使用於布林運算式中，用於連接兩個條件。 當任一條件為 true 時，傳回結果。<br /><br /> 當 AND 和 OR 同時在陳述式中使用時，OR 是在 AND 之後進行檢驗。 您可以使用括號來變更執行的順序。|  
+|AND|使用於布林運算式中，用於連接兩個運算式。 當兩個運算式都是 true 時傳回結果。<br /><br /> 當 AND 和 OR 同時在陳述式中使用時，會先處理 AND。 您可以使用括號來變更執行的順序。|  
+|OR|使用於布林運算式中，用於連接兩個條件。 當任一條件為 true 時，傳回結果。<br /><br /> 當 AND 和 OR 同時在陳述式中使用時，OR 是在 AND 之後進行檢驗。 您可以使用括號來變更執行的順序。|  
 |NOT|否定任何布林運算式 (可以包括關鍵字，例如 LIKE、NULL、BETWEEN、IN 和 EXISTS)。<br /><br /> 當在陳述式中使用一個以上的邏輯運算子時，會首先處理 NOT。 您可以使用括號來變更執行的順序。|  
   
 ## <a name="see-also"></a>另請參閱  

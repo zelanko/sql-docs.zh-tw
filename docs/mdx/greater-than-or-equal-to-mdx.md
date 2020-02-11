@@ -1,5 +1,5 @@
 ---
-title: '&gt;= (大於或等於) (MDX) |Microsoft Docs'
+title: '&gt;= （大於或等於）（MDX） |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0e8599378367dd47bd5858c09327795a25852105
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005846"
 ---
-# <a name="gt-greater-than-or-equal-to-mdx"></a>&gt;= (大於或等於) (MDX)
+# <a name="gt-greater-than-or-equal-to-mdx"></a>&gt;= （大於或等於）（MDX）
 
 
   執行比對作業，判定某個多維度運算式 (MDX) 運算式的值是否大於或等於另一個 MDX 運算式的值。  
@@ -34,11 +34,11 @@ MDX_Expression >= MDX_Expression
 ## <a name="return-value"></a>傳回值  
  布林值根據以下條件而定：  
   
--   **true**的第一個參數是否大於或等於第二個參數的值的值。  
+-   如果第一個參數的值大於或等於第二個參數的值，**則為 true** 。  
   
--   **false**如果第一個參數的值小於第二個參數的值。  
+-   如果第一個參數的值低於第二個參數的值，則**為 false** 。  
   
--   **true**如果這兩個參數都是 null，或是一個參數為 null，而另一個參數為 0。  
+-   如果兩個參數都是 null，或是其中一個參數為 null，而另一個參數為0，則**為 true** 。  
   
 ## <a name="examples"></a>範例  
  以下範例示範此運算子的用法。  
@@ -61,6 +61,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Mdx 運算子參考 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

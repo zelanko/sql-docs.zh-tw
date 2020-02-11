@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62989060"
 ---
 # <a name="filter-published-data"></a>篩選發行的資料
@@ -56,7 +56,7 @@ ms.locfileid: "62989060"
   
 -   聯結篩選，僅適用於合併式複寫。  
   
-     聯結篩選可用於將一個發行資料表的資料列篩選擴充到另一個資料表。 如需詳細資訊，請參閱 [Join Filters](../merge/join-filters.md)。  
+     聯結篩選可用於將一個發行資料表的資料列篩選擴充到另一個資料表。 如需相關資訊，請參閱 [Join Filters](../merge/join-filters.md)。  
   
 ## <a name="static-row-filters"></a>靜態資料列篩選  
  下圖顯示篩選後發行集中僅包含資料列 2、3、6 的發行資料表。  
@@ -72,7 +72,7 @@ ms.locfileid: "62989060"
     > [!NOTE]  
     >  交易式發行集的資料列篩選可能會顯著增加負擔，因為已發行資料表的所有寫入記錄資料列都要進行發行項篩選子句評估，以決定是否應複寫資料列。 如果每個複寫節點均可支援完全資料載入，且整個資料集非常小，則應避免交易式發行集中的資料列篩選。  
   
--   對於合併式複寫，請使用參數化資料列篩選器，不要使用靜態資料列篩選建立多個發行集。 如需詳細資訊，請參閱 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)。  
+-   對於合併式複寫，請使用參數化資料列篩選器，不要使用靜態資料列篩選建立多個發行集。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
  若要定義或修改靜態資料列篩選，請參閱＜ [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)＞。  
   
@@ -93,14 +93,16 @@ ms.locfileid: "62989060"
 |-----------------|-------------------------------------|  
 |主索引鍵資料行|交易式發行集中的所有資料表均需要主索引鍵資料行。 合併式發行集中的資料表不需要主索引鍵，但如果主索引鍵資料行存在，則無法被篩選。|  
 |外部索引鍵資料行|所有使用「新增發行集精靈」建立的發行集。 您可以使用 Transact-SQL 預存程序篩選外部索引鍵資料行。 如需詳細資訊，請參閱＜ [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)＞。|  
-|**rowguid** 資料行|合併式發行集<sup>1</sup>|  
-|**msrepl_tran_version** 資料行|允許可更新訂閱的快照式及交易式發行集|  
+|
+  **rowguid** 資料行|合併式發行集<sup>1</sup>|  
+|
+  **msrepl_tran_version** 資料行|允許可更新訂閱的快照式及交易式發行集|  
 |不允許 NULL 以及未設定預設值或 IDENTITY 屬性的資料行。|允許可更新訂閱的快照式及交易式發行集|  
 |具有唯一條件約束或索引的資料行|允許可更新訂閱的快照式及交易式發行集|  
 |SQL Server 7.0 合併式發行集中的所有資料行|在 SQL Server 7.0 合併式發行集中無法篩選資料行。|  
 |時間戳記|允許可更新訂閱的 SQL Server 7.0 快照式或交易式發行集|  
   
- <sup>1</sup>如果您要在合併式發行集中發行的資料表，且該資料表已包含資料類型的資料行`uniqueidentifier`與`ROWGUIDCOL`屬性集複寫可以使用此資料行而不是建立額外的資料行名為**rowguid**。 在此情況下，必須發行現有資料行。  
+ <sup>1</sup>如果您要發行合併式發行集中的資料表，且該資料表已包含已設定`uniqueidentifier` `ROWGUIDCOL`屬性之資料類型的資料行，則複寫可以使用此資料行，而不是建立名為**rowguid**的其他資料行。 在此情況下，必須發行現有資料行。  
   
  若要定義或修改資料行篩選，請參閱＜ [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)＞中的「使用 HOST_NAME() 進行篩選」一節。  
   
@@ -129,7 +131,9 @@ ms.locfileid: "62989060"
   
 -   異動複寫可讓您將索引檢視複寫為檢視或資料表。 如果將檢視複寫為資料表，則無法從資料表篩選資料行。  
   
- 資料列篩選並非設計為跨資料庫運作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會刻意將 `sp_replcmds` (在底下執行的篩選) 的執行範圍限制為資料庫擁有者 (`dbo`)。 `dbo` 沒有跨資料庫權限。 透過 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 加入的 CDC (異動資料擷取)，`sp_replcmds` 邏輯會將使用者可以傳回及查詢的資訊填入變更追蹤資料表。 基於安全性理由[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會限制這個邏輯的執行，讓惡意`dbo`無法劫持這個執行路徑。 例如，惡意 `dbo` 可能會加入 CDC 資料表的觸發程序，然後這些觸發程序就會在呼叫 `sp_replcmds` 的使用者內容底下執行 (在本例中，即為 Logreader 代理程式)。  如果用來執行代理程式的帳戶擁有更高的權限，惡意 `dbo` 可能會提高其權限。  
+ 資料列篩選並非設計為跨資料庫運作。 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會刻意將 `sp_replcmds` (在底下執行的篩選) 的執行範圍限制為資料庫擁有者 (`dbo`)。 
+  `dbo` 沒有跨資料庫權限。 透過 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 加入的 CDC (異動資料擷取)，`sp_replcmds` 邏輯會將使用者可以傳回及查詢的資訊填入變更追蹤資料表。 基於安全性理由， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會限制這個邏輯的執行，讓惡意`dbo`的無法劫持此執行路徑。 例如，惡意 `dbo` 可能會加入 CDC 資料表的觸發程序，然後這些觸發程序就會在呼叫 `sp_replcmds` 的使用者內容底下執行 (在本例中，即為 Logreader 代理程式)。  如果用來執行代理程式的帳戶擁有更高的權限，惡意 `dbo` 可能會提高其權限。  
   
 ## <a name="see-also"></a>另請參閱  
  [發行資料和資料庫物件](publish-data-and-database-objects.md)  

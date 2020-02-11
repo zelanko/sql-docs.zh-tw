@@ -1,5 +1,5 @@
 ---
-title: not 函數 (XQuery) |Microsoft Docs
+title: not 函數（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038909"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>布林值的相關函式 - not 函式 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  如果為 true 的有效布林值 *$arg*為 false，而且會傳回 FALSE，如果有效的布林值 *$arg*為 true。  
+  如果 *$arg*的有效布林值為 false，則傳回 TRUE，如果 *$Arg*的有效布林值為 TRUE，則傳回 false。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,10 +41,10 @@ fn:not($arg as item()*) as xs:boolean
  具有效布林值的一連串項目。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的 AdventureWorks 資料庫。  
+ 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存在 AdventureWorks 資料庫的各種**xml**類型資料行中。  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. 使用 not （） XQuery 函數尋找的產品型號目錄描述不包含\<規格 > 項目。  
- 下列查詢會建構 XML，其中包含其目錄描述不包含產品型號的產品型號識別碼 <`Specifications`> 項目。  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. 使用 not （） XQuery 函數尋找其目錄描述不包含規格> 元素的\<產品型號。  
+ 下列查詢會針對其目錄描述不包含 <`Specifications`> 元素的產品型號，建立包含產品型號識別碼的 XML。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -61,18 +61,18 @@ WHERE CatalogDescription.exist('
   
  請注意下列項目是從上一個查詢而來：  
   
--   因為此文件使用了命名空間，所以此範例會使用 WITH NAMESPACES 陳述式。 另一個選項是使用**宣告的命名空間**中的關鍵字[XQuery 初構](../xquery/modules-and-prologs-xquery-prolog.md)定義前置詞。  
+-   因為此文件使用了命名空間，所以此範例會使用 WITH NAMESPACES 陳述式。 另一個選項是在[XQuery](../xquery/modules-and-prologs-xquery-prolog.md)初構中使用**declare namespace**關鍵字來定義前置詞。  
   
--   然後查詢會建構 XML，其中包含 <`Product`> 項目及其**ProductModelID**屬性。  
+-   然後，此查詢會建立包含 <`Product`> 元素及其**PRODUCTMODELID**屬性的 XML。  
   
--   WHERE 子句使用[exist （） 方法 （XML 資料類型）](../t-sql/xml/exist-method-xml-data-type.md)篩選資料列。 **Exist （)** 方法會傳回 True，如果有\<p > 項目沒有\<規格 > 子項目。 請注意，使用**not （)** 函式。  
+-   WHERE 子句會使用[存在（）方法（XML 資料類型）](../t-sql/xml/exist-method-xml-data-type.md)來篩選資料列。 如果有 ProductDescription> 元素沒有> 子項目的\< \<規格，則**存在（）** 方法會傳回 True。 請注意**not （）** 函數的用法。  
   
- 此結果集是空的因為每個產品型號目錄描述包含\<規格 > 項目。  
+ 此結果集是空的，因為每個產品型號目錄描述\<都包含> 元素的規格。  
   
 ### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>B. 使用 not() XQuery 函數擷取沒有 MachineHours 屬性的工作中心位置  
  以下查詢是針對 Instructions 資料行而指定。 此資料行儲存了產品型號的製造指示。  
   
- 對於特定的產品型號，此查詢會擷取未指定 MachineHours 的工作中心位置。 也就是屬性**MachineHours**未指定\<位置 > 項目。  
+ 對於特定的產品型號，此查詢會擷取未指定 MachineHours 的工作中心位置。 也就是說，不會針對**** \<Location> 元素指定屬性 MachineHours。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -89,9 +89,9 @@ WHERE ProductModelID=7
   
  請記下前一個查詢中的以下事項：  
   
--   **Declarenamespace**中[XQuery 初構](../xquery/modules-and-prologs-xquery-prolog.md)定義 Adventure Works 製造指示命名空間前置詞。 其代表的命名空間跟製造指示文件中使用的相同。  
+-   [XQuery](../xquery/modules-and-prologs-xquery-prolog.md)初構中的**declarenamespace**定義了「艾德作品製造指示」的命名空間前置詞。 其代表的命名空間跟製造指示文件中使用的相同。  
   
--   在查詢中，**不 (@MachineHours)** 述詞傳回 True，如果沒有任何**MachineHours**屬性。  
+-   在查詢中，如果沒有**MachineHours**屬性， **not （@MachineHours）** 述詞就會傳回 True。  
   
  以下是結果：  
   
@@ -106,9 +106,9 @@ ProductModelID Result
 ### <a name="implementation-limitations"></a>實作限制  
  以下為其限制：  
   
--   **Not （)** 函式只支援類型 xs: boolean 或 node （） * 中，或空的序列的引數。  
+-   **Not （）** 函數只支援 xs： boolean 或 node （） * 或空序列類型的引數。  
   
 ## <a name="see-also"></a>另請參閱  
- [針對 xml 資料類型的 XQuery 函式](../xquery/xquery-functions-against-the-xml-data-type.md)  
+ [針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

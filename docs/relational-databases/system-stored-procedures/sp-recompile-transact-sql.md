@@ -1,5 +1,5 @@
 ---
-title: sp_recompile (TRANSACT-SQL) |Microsoft Docs
+title: sp_recompile （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f9b72c1a97c17f975144ad0fd364260afab1fb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002560"
 ---
-# <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
+# <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   在下次執行預存程序、觸發程序以及使用者定義函數時，重新編譯它們。 其運作方式是從程序快取中卸除現有的計畫，以便強制在下次執行程序或觸發程序時建立新的計畫。 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 集合中，系統會記錄 SP:CacheInsert 事件而非 SP:Recompile 事件。  
@@ -40,8 +40,8 @@ sp_recompile [ @objname = ] 'object'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @objname=] '*物件*'  
- 目前資料庫中之預存程序、觸發程序、資料表、檢視表或使用者定義函數的限定或非限定名稱。 *物件*已**nvarchar(776)** ，沒有預設值。 如果*物件*預存程序、 觸發程序或使用者定義函數、 預存程序，觸發程序名稱，或函式將會在下次執行時重新編譯。 如果*物件*是資料表或檢視的所有預存的程序、 觸發程序的名稱或參考資料表或檢視表的使用者定義函式將會在執行下一次重新編譯。  
+ [ @objname= ]'*object*'  
+ 目前資料庫中之預存程序、觸發程序、資料表、檢視表或使用者定義函數的限定或非限定名稱。 *物件*是**Nvarchar （776）**，沒有預設值。 如果*object*是預存程式、觸發程式或使用者定義函數的名稱，則會在下次執行時重新編譯預存程式、觸發程式或函數。 如果*object*是資料表或視圖的名稱，則會在下次執行時重新編譯參考資料表或 view 的所有預存程式、觸發程式或使用者自訂函數。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)  
@@ -54,7 +54,7 @@ sp_recompile [ @objname = ] 'object'
 > [!NOTE]  
 >  當重新編譯預存程序、觸發程序以及使用者定義函數有利時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動執行這個動作。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要指定之物件的 ALTER 權限。  
   
 ## <a name="examples"></a>範例  
@@ -68,7 +68,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
+ [CREATE PROCEDURE &#40;Transact-sql&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

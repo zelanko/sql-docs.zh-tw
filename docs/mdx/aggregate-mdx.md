@@ -1,5 +1,5 @@
 ---
-title: 彙總 (MDX) |Microsoft Docs
+title: 匯總（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017176"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
@@ -37,14 +37,14 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 ## <a name="remarks"></a>備註  
  如果已指定空的 Tuple 集合或空的集合，此函數會傳回空白值。  
   
- 下表描述如何**彙總**函式使用不同的彙總函式的行為。  
+ 下表描述**聚合**函數如何與不同的彙總函式搭配運作。  
   
 |彙總運算子|結果|  
 |--------------------------|------------|  
 |Sum|傳回集合上的值總和。|  
 |Count|傳回集合上的值計數。|  
-|Max|傳回集合上的最大值。|  
-|Min|傳回集合上的最小值。|  
+|最大值|傳回集合上的最大值。|  
+|最小值|傳回集合上的最小值。|  
 |局部加總彙總函式|將形狀投射到時間座標軸後，傳回在集合上局部加總行為的計算。|  
 |Distinct Count|當 Slicer 座標軸包含一個集合時，彙總提供給 Subcube 的事實資料。<br /><br /> 傳回集合中每個成員的相異計數。 結果相依於所彙總之資料格的安全性，而非計算所需之資料格的安全性。 集合上的資料格安全性會產生錯誤；指定集合之資料粒度以下的資料格安全性會被忽略。 集合上的計算會產生錯誤。 資料的資料粒度以下的計算會被忽略。 相異計數含成員及其一個或多個子系的集合，會傳回提供給子成員之事實的相異計數。|  
 |無法彙總的屬性。|傳回值的總和。|  
@@ -55,7 +55,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |指派|指派是根據量值彙總函式進行彙總。 如果量值彙總函式是相異計數，則指派是加總的。|  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回的總和`Measures.[Order Quantity]`成員前, 八個月 2003年日曆年度中包含在彙總`Date`維度中，從**Adventure Works** cube。  
+ 下列範例會從「**艾德公司**」 `Measures.[Order Quantity]` cube 中傳回成員的總和（在`Date`維度中包含的前八2003個月內）。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -93,7 +93,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- 下列範例會根據使用彙總函式評估之使用者選取的 State-Province 成員值，傳回上一個時間週期銷售值衰退的轉售商計數。 **Hierarchize**並**DrillDownLevel**函式用來傳回的衰退銷售 [產品] 維度中產品類別目錄值。  
+ 下列範例會根據使用彙總函式評估之使用者選取的 State-Province 成員值，傳回上一個時間週期銷售值衰退的轉售商計數。 **Hierarchize**和**DrillDownLevel**函數是用來傳回 product 維度中產品類別目錄的拒絕銷售值。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   
@@ -123,14 +123,14 @@ WHERE ([Geography].[State-Province].x,
   
 ## <a name="see-also"></a>另請參閱  
  [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
- [Children &#40;MDX&#41;](../mdx/children-mdx.md)   
+ [&#40;MDX&#41;的子系](../mdx/children-mdx.md)   
  [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [Count &#40;集合&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [&#40;&#41; &#40;MDX&#41;設定計數](../mdx/count-set-mdx.md)   
+ [篩選 &#40;MDX&#41;](../mdx/filter-mdx.md)   
  [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
  [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
+ [MDX&#41;的屬性 &#40;](../mdx/properties-mdx.md)   
  [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

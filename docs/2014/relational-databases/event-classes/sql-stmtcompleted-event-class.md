@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 62dc29f8143f92fc9674ed10c092dc6ad08570fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63060359"
 ---
 # <a name="sqlstmtcompleted-event-class"></a>SQL:StmtCompleted 事件類別
@@ -31,7 +31,7 @@ ms.locfileid: "63060359"
 |ApplicationName|`nvarchar`|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |ClientProcessID|`int`|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供用戶端處理序識別碼，這個資料行就會擴展。|9|是|  
 |CPU|`int`|事件所用的 CPU 時間 (以毫秒為單位)。|18|是|  
-|DatabaseID|`int`|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在追蹤中擷取 ServerName 資料行，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
+|DatabaseID|`int`|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]如果在追蹤中捕捉到 ServerName 資料行，而且伺服器可供使用，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |DatabaseName|`nvarchar`|正在執行使用者陳述式的資料庫名稱。|35|是|  
 |Duration|`bigint`|事件所花費的時間量 (以百萬分之一秒為單位)。|13|是|  
 |EndTime|`datetime`|事件結束的時間。|15|是|  
@@ -49,7 +49,7 @@ ms.locfileid: "63060359"
 |NTDomainName|`nvarchar`|使用者所隸屬的 Windows 網域。|7|是|  
 |NTUserName|`nvarchar`|Windows 使用者名稱。|6|是|  
 |Offset|`int`|預存程序或批次內之陳述式的起始位移。|61|是|  
-|Reads|`bigint`|SQL 陳述式發出的頁面讀取數目。|16|是|  
+|讀取|`bigint`|SQL 陳述式發出的頁面讀取數目。|16|是|  
 |RequestID|`int`|包含陳述式之要求的識別碼。|49|是|  
 |RowCounts|`bigint`|事件所影響的資料列數目。|48|是|  
 |ServerName|`nvarchar`|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
@@ -58,7 +58,7 @@ ms.locfileid: "63060359"
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
 |TextData|`ntext`|已執行的陳述式文字。|1|是|  
 |TransactionID|`bigint`|如果陳述式是在交易內執行的，就會是交易的識別碼。|4|是|  
-|Writes|`bigint`|SQL 陳述式發出的頁面寫入數目。|17|是|  
+|寫入|`bigint`|SQL 陳述式發出的頁面寫入數目。|17|是|  
 |XactSequence|`bigint`|描述目前交易的 Token。|50|是|  
   
 ## <a name="see-also"></a>另請參閱  

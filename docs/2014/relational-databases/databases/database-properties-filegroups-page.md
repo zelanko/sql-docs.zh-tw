@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b8de45556d3c19ee8460b33e7f07ceb485b37597
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917114"
 ---
 # <a name="database-properties-filegroups-page"></a>資料庫屬性 (檔案群組頁面)
@@ -24,9 +24,9 @@ ms.locfileid: "62917114"
   
  資料列檔案群組包含一般的資料和記錄檔。 FILESTREAM 資料檔案群組包含 FILESTREAM 資料檔案。 當您使用 FILESTREAM 儲存體時，這些資料檔案會儲存有關二進位大型物件 (BLOB) 資料如何儲存在檔案系統上的資訊。 對於這兩種類型的檔案群組而言，選項都是相同的。  
   
- 如果未啟用 FILESTREAM，將無法使用 [Filestream]  區段。 您可以使用[伺服器屬性 (進階頁面)](../../database-engine/configure-windows/server-properties-advanced-page.md) 來啟用 FILESTREAM 儲存體。  
+ 如果未啟用 FILESTREAM，將無法使用 [Filestream]  區段。 您可以使用 [伺服器屬性 (進階頁面)](../../database-engine/configure-windows/server-properties-advanced-page.md)來啟用 FILESTREAM 儲存體。  
   
- 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何使用資料列檔案群組的相關資訊，請參閱[資料庫檔案與檔案群組](database-files-and-filegroups.md)。 如需 FILESTREAM 資料和檔案群組的詳細資訊，請參閱 [FILESTREAM &#40;SQL Server&#41;](../blob/filestream-sql-server.md)。  
+ 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何使用資料列檔案群組的相關資訊，請參閱 [資料庫檔案與檔案群組](database-files-and-filegroups.md)。 如需 FILESTREAM 資料和檔案群組的詳細資訊，請參閱 [FILESTREAM &#40;SQL Server&#41;](../blob/filestream-sql-server.md)。  
   
  記憶體最佳化檔案群組是讓資料庫包含一個或多個記憶體最佳化資料表的必要條件。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62917114"
  **預設值**  
  選取即可讓這個檔案群組成為預設的檔案群組。 您可以有一個預設的資料列檔案群組，以及一個預設的 FILESTREAM 資料檔案群組。  
   
- **[加入]**  
+ **加入**  
  將新的空白資料列加入列出資料庫之檔案群組的方格中。  
   
  **移除**  
@@ -56,7 +56,7 @@ ms.locfileid: "62917114"
  **Filestream 檔案**  
  顯示記憶體最佳化資料檔案群組中的檔案 (容器) 數目。 您可以在 [檔案]  頁面中加入容器。  
   
- **[加入]**  
+ **加入**  
  將新的空白資料列加入列出資料庫之檔案群組的方格中。  
   
  **移除**  

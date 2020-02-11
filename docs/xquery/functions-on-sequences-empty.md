@@ -1,5 +1,5 @@
 ---
-title: 空白函數 (XQuery) |Microsoft Docs
+title: empty 函數（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 888739807a79163a8188f3b2f27b7f7860032bc4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004669"
 ---
 # <a name="functions-on-sequences---empty"></a>序列的相關函式 - empty
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  如果為 true 的值 *$arg*是空的序列。 否則，此函數會傳回 False。  
+  如果 *$arg*的值是空的序列，則傳回 True。 否則，此函數會傳回 False。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,13 +39,13 @@ fn:empty($arg as item()*) as xs:boolean
  項目序列。 如果序列是空的，則函數會傳回 True。 否則，此函數會傳回 False。  
   
 ## <a name="remarks"></a>備註  
- **Fn:exists()** 函式不支援。 或者， **not （)** 函式可用。  
+ 不支援**fn： exists （）** 函數。 或者，也可以使用**not （）** 函數。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的 AdventureWorks 資料庫。  
+ 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存在 AdventureWorks 資料庫的各種**xml**類型資料行中。  
   
 ### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. 使用 empty() XQuery 函數來決定是否出現屬性  
- 在 產品型號 7 的製造程序，此查詢會傳回不需要的所有工作中心位置**MachineHours**屬性。  
+ 在產品型號7的製造過程中，此查詢會傳回所有沒有**MachineHours**屬性的工作中心位置。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -74,7 +74,7 @@ ProductModelID      Result
                <Location LocationID="60" LaborHrs="4"/>  
 ```  
   
- 如果稍微經過修改，下列查詢會傳回"NotFound" **MachineHour**屬性不存在：  
+ 如果**MachineHour**屬性不存在，下列已稍微修改的查詢會傳回 "NotFound"：  
   
 ```  
 SELECT ProductModelID, Instructions.query('  

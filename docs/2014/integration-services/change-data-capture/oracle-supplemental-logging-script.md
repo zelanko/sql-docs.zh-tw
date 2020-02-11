@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c8f876852ff78e254bdff7ed687d2196d01d9c1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835345"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 補充記錄指令碼
@@ -24,7 +24,7 @@ ms.locfileid: "62835345"
   
  根據組織內的 Oracle DBA 政策而定，執行補充記錄指令碼可能需要 Oracle DBA 審查及核准。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  以下是如何執行指令碼的可用選項。  
   
  **執行指令碼**  
@@ -33,7 +33,7 @@ ms.locfileid: "62835345"
  **另存新檔**  
  將指令碼儲存至文字檔。 如果 Oracle 資料庫管理員 (DBA) 需要檢查及執行補充記錄指令碼，就會使用這個方式。此程式可讓您將指令碼儲存成文字檔，之後可以將此文字檔透過電子郵件或其他方式傳送給 Oracle DBA 以供日後執行 (使用 SQL*Plus Oracle 公用程式或其他工具，在 Oracle 資料庫上執行指令碼)。  
   
- **[複製]**  
+ **複製**  
  將指令碼複製到剪貼簿。 備妥之後，您可以將指令碼貼到所需的任何位置，萬一 Oracle 資料庫管理員 (DBA) 需要檢查及執行補充記錄指令碼時，就可以派上用場。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -18,13 +18,13 @@ ms.assetid: 667d92ec-fed9-4028-81d4-bb9ba867356a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e6d053e4d2a5520432c4c1debbafb35fdb17bc4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016746"
 ---
 # <a name="static-sql"></a>靜態 SQL
-內嵌的 SQL 中所示[內嵌 SQL 範例](../../odbc/reference/embedded-sql-example.md)稱為靜態 SQL。 因為在程式中的 SQL 陳述式都是靜態的所以稱為靜態 SQL也就是說，不會變更每個執行程式的時間。 上一節所述，編譯程式的其餘部分時，會編譯這些陳述式。  
+[內嵌 Sql 範例](../../odbc/reference/embedded-sql-example.md)中所示的內嵌 sql 稱為靜態 SQL。 因為程式中的 SQL 語句是靜態的，所以稱為靜態 SQL;也就是說，它們不會在每次執行程式時變更。 如上一節所述，編譯器的其餘部分時，會編譯這些語句。  
   
- 靜態 SQL 也適用於多種情況，而且可用在任何可以在程式的設計階段決定的資料存取的應用程式。 例如，訂單項目計劃一律使用相同的陳述式來插入新的順序，和航班訂位系統一律使用相同的陳述式來變更可保留座位的狀態。 每個陳述式會透過主應用程式變數中; 使用一般化不同的值，請插入銷售訂單，並可保留不同的基座。 由於這類陳述式可以是硬式編碼在程式中，這類程式會有陳述式需要進行剖析、 驗證和最佳化一次，在編譯時期的優點。 這會導致相當快速的程式碼。
+ 靜態 SQL 在許多情況下都能順利運作，而且可以用於任何可在程式設計時間判斷資料存取的應用程式中。 例如，訂單輸入程式一律會使用相同的語句來插入新訂單，而航空公司保留系統一律會使用相同的語句，將基座的狀態從 [可用] 變更為 [保留]。 這些語句都會透過使用主機變數來一般化;不同的值可以插入銷售訂單中，而且可以保留不同的基座。 因為這類語句可以在程式中硬式編碼，所以這類程式的優點是必須在編譯時期剖析、驗證和優化語句一次。 這會產生相對較快速的程式碼。

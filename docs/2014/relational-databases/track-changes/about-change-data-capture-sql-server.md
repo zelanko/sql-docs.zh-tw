@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b2539995f50e31e7342a4cd27fe7277a103d041f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211734"
 ---
 # <a name="about-change-data-capture-sql-server"></a>關於異動資料擷取 (SQL Server)
@@ -29,21 +29,21 @@ ms.locfileid: "68211734"
 ## <a name="change-data-capture-data-flow"></a>異動資料擷取資料流程  
  下圖顯示異動資料擷取的主要資料流程。  
   
- ![Change data capture data flow](../../database-engine/media/cdcdataflow.gif "Change data capture data flow")  
+ ![異動資料擷取資料流程](../../database-engine/media/cdcdataflow.gif "異動資料擷取資料流程")  
   
  異動資料擷取的變更資料來源是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄。 當插入、更新和刪除作業套用至追蹤來源資料表時，描述這些變更的項目就會加入記錄。 此記錄會當做擷取程序的輸入。 這樣就會讀取記錄並將變更之相關資訊新增至追蹤資料表的相關聯變更資料表。 系統會提供一些函數，以便列舉指定之範圍內出現在變更資料表中的變更，並以篩選結果集的形式傳回此資訊。 應用程式處理序通常會使用篩選結果集，在某些外部環境中更新來源的表示法。  
   
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>了解異動資料擷取和擷取執行個體  
  您必須先針對資料庫明確啟用異動資料擷取，然後才能追蹤該資料庫內部任何個別資料表的變更。 這項作業是使用 [sys.sp_cdc_enable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)預存程序完成的。 啟用資料庫之後，您就可以使用 [sys.sp_cdc_enable_table](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)預存程序，將來源資料表識別為追蹤資料表。 當某個資料表啟用異動資料擷取時，系統就會建立相關聯的擷取執行個體，以便支援來源資料表中變更資料的散播。 此擷取執行個體包含一個變更資料表以及最多兩個查詢函數。 描述擷取執行個體之組態詳細資料的中繼資料會包含在異動資料擷取中繼資料資料表 `cdc.change_tables`、`cdc.index_columns` 和 `cdc.captured_columns` 中。 您可以使用 [sys.sp_cdc_help_change_data_capture](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql)預存程序來擷取這項資訊。  
   
- 與擷取執行個體相關聯的所有物件都會建立在啟用資料庫的異動資料擷取結構描述中。 擷取執行個體名稱的需求包括，它必須是有效的物件名稱，而且它在資料庫擷取執行個體中必須是唯一的。 預設名稱為來源資料表的 \<結構描述名稱_資料表名稱>   。 其相關聯變更資料表的命名方式是將 `_CT` 附加至擷取執行個體名稱。 用來查詢所有變更之函數的命名方式是在擷取執行個體名稱前面加上 `fn_cdc_get_all_changes_`。 如果擷取執行個體設定為支援`net changes`，則`net_changes`查詢函式也會建立，而且前面加上**fn_cdc_get_net_changes\_** 擷取執行個體名稱。  
+ 與擷取執行個體相關聯的所有物件都會建立在啟用資料庫的異動資料擷取結構描述中。 擷取執行個體名稱的需求包括，它必須是有效的物件名稱，而且它在資料庫擷取執行個體中必須是唯一的。 根據預設，此名稱為\<來源資料表的*架構名稱*_*資料表名稱*>。 其相關聯變更資料表的命名方式是將 `_CT` 附加至擷取執行個體名稱。 用來查詢所有變更之函數的命名方式是在擷取執行個體名稱前面加上 `fn_cdc_get_all_changes_`。 如果將 capture 實例設定為支援`net changes`，也會`net_changes`藉由在 capture 實例名稱前面加上**fn_cdc_get_net_changes\_ ** ，來建立並命名查詢函數。  
   
 ## <a name="change-table"></a>變更資料表  
  異動資料擷取變更資料表的前五個資料行是中繼資料行。 這些資料行會提供與已記錄之變更相關的額外資訊。 其餘資料行則會鏡像來源資料表中識別之擷取資料行的名稱，通常也會鏡像其類型。 這些資料行會保存從來源資料表中蒐集的擷取資料行資料。  
   
  套用到來源資料表的每個插入或刪除作業會顯示成變更資料表中的單一資料列。 插入作業所產生之資料列的資料行包含插入之後的資料行值。 刪除作業所產生之資料列的資料行包含刪除之前的資料行值。 更新作業需要一個資料列項目來識別更新之前的資料行值，和第二個資料列項目來識別更新之後的資料行值。  
   
- 變更資料表中的每個資料列也會包含其他中繼資料，以便允許解譯變更活動。 資料行 __$start_lsn 會識別指派給變更的認可記錄序號 (LSN)。 認可 LSN 會識別在相同交易中認可的變更，而且會為這些交易排序。 資料行 \_\_$seqval 可用於排序在相同交易中發生的其他變更。 資料行 \_\_$operation 會記錄與變更建立關聯的作業：1 = 刪除、2 = 插入、3 = 更新 (建立映像前)，以及 4 = 更新 (建立映像後)。 資料行 \_\_$update_mask 是變數位元遮罩，其中每個擷取資料行都有一個定義的位元。 若是插入和刪除項目，更新遮罩永遠會設定所有位元。 不過，更新資料列將僅會設定對應到已變更之資料行的位元。  
+ 變更資料表中的每個資料列也會包含其他中繼資料，以便允許解譯變更活動。 資料行 __$start_lsn 會識別指派給變更的認可記錄序號 (LSN)。 認可 LSN 會識別在相同交易中認可的變更，而且會為這些交易排序。 資料行 \_\_$seqval 可用於排序在相同交易中發生的其他變更。 資料行 \_\_$operation 會記錄與變更相關聯的作業：1 = 刪除、2 = 插入、3 = 更新 (建立資料影像前)，以及 4 = 更新 (建立資料影像後)。 資料行 \_\_$update_mask 是變數位元遮罩，其中每個擷取資料行都有一個定義的位元。 若是插入和刪除項目，更新遮罩永遠會設定所有位元。 不過，更新資料列將僅會設定對應到已變更之資料行的位元。  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>資料庫的異動資料擷取有效性間隔  
  資料庫的異動資料擷取有效性間隔就是擷取執行個體可以使用變更資料的時間範圍。 有效性間隔會在您建立資料庫資料表的第一個擷取執行個體時開始，並且繼續到目前的時間。  

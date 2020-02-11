@@ -1,5 +1,5 @@
 ---
-title: 步驟 4：測試第 2 課的教學課程封裝 |Microsoft Docs
+title: 步驟 4：測試第 2 課的教學課程封裝 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a9b8361c83201fa2e3c6aa0c6a091e09f7c12f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767476"
 ---
 # <a name="step-4-testing-the-lesson-2-tutorial-package"></a>步驟 4：測試第 2 課的教學課程封裝
@@ -30,17 +30,17 @@ ms.locfileid: "62767476"
   
  **控制流程**  
   
- ![套件中的控制流程](../../2014/tutorials/media/task4lesson2control.gif "套件中的控制流程")  
+ ![封裝中的控制流程](../../2014/tutorials/media/task4lesson2control.gif "封裝中的控制流程")  
   
  **資料流程**  
   
- ![套件中的資料流程](../../2014/tutorials/media/task9lesson1data.gif "套件中的資料流程")  
+ ![封裝中的資料流程](../../2014/tutorials/media/task9lesson1data.gif "封裝中的資料流程")  
   
 ### <a name="to-test-the-lesson-2-tutorial-package"></a>若要測試第 2 課的教學課程封裝  
   
-1.  在 **[方案總管]** 中，以滑鼠右鍵按一下 **[Lesson 2.dtsx]** ，然後按一下 **[執行封裝]** 。  
+1.  在 **[方案總管]** 中，以滑鼠右鍵按一下 **[Lesson 2.dtsx]** ，然後按一下 **[執行封裝]**。  
   
-     此時會執行封裝。 您可以在 [輸出] 視窗中確認每一個迴圈的狀態，或按一下 **[進度]** 索引標籤來確認。例如，您會看到有 1097 行已從 Currency_VEB.txt 檔案加入目的地資料表中。  
+     此時會執行封裝。 您可以在 [輸出] 視窗中驗證每個迴圈的狀態，或按一下 [**進度**] 索引標籤來確認。例如，您可以看到1097行已從檔案 Currency_VEB .txt 加入目的地資料表。  
   
 2.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]** 。  
   
@@ -48,6 +48,6 @@ ms.locfileid: "62767476"
  [第 5 課：加入封裝部署模型的封裝組態](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [執行專案和封裝](packages/run-integration-services-ssis-packages.md)  
+ [執行專案和套件](packages/run-integration-services-ssis-packages.md)  
   
   

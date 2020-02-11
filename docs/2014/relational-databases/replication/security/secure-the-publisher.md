@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201b1496444888b207a1a72be640b9705ff1059d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960135"
 ---
 # <a name="secure-the-publisher"></a>保護發行者
@@ -33,7 +33,7 @@ ms.locfileid: "62960135"
   
 -   佇列讀取器代理程式  
   
--   [合併代理程式]  
+-   合併代理程式  
   
  我們建議您為這些代理程式提供適當的登入，遵循授與所需最小權限的原則，並保護所有密碼的儲存。 如需有關各代理程式需要的權限資訊，請參閱＜ [Replication Agent Security Model](replication-agent-security-model.md)＞。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62960135"
  PAL 是在發行者端保護發行集安全的主要機制。 PAL 功能類似於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 存取控制清單。 建立發行集之後，複寫便會建立此發行集的 PAL。 PAL 可進行設定，使其包含已授與了對發行集存取權的登入與群組清單。 當代理程式連接到「發行者」或「散發者」並要求存取發行集時，便會將 PAL 上的驗證資訊與代理程式提供的「發行者」登入進行比較。 這項處理序藉由防止用戶端工具使用「發行者」與「散發者」登入在「發行者」上直接進行修改，為「發行者」提供了額外的安全性。  
   
 > [!NOTE]  
->  複寫會在「發行者」上為每個發行集建立角色，以強制賦予 PAL 成員資格。 該角色的名稱格式為 **Msmerge_**_\<發行集識別碼>_ (合併式複寫) 及 **MSReplPAL_**_\<發行集資料庫識別碼>_**_**_\<發行集識別碼>_ (異動複寫和快照式複寫)。  
+>  複寫會在「發行者」上為每個發行集建立角色，以強制賦予 PAL 成員資格。 該角色的名稱格式為 **Msmerge_** _\<發行集識別碼>_ (合併式複寫) 及 **MSReplPAL_** _\<發行集資料庫識別碼>_ **_** _\<發行集識別碼>_ (異動複寫和快照式複寫)。  
   
  根據預設，下列登入包含在 PAL 內：建立發行集時的 **sysadmin** (系統管理員) 固定伺服器角色成員，以及用來建立發行集的登入。 依預設，對於發行集資料庫上所有 **系統管理員 (sysadmin)** 固定伺服器角色或 **db_owner** 固定資料庫角色的成員，其登入均可訂閱發行集而不需將其明確加入 PAL 中。  
   

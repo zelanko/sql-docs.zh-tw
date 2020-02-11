@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414ff334139919e08b06291ec910f8531c70cd55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63136277"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>建立及附加排程至作業
@@ -44,7 +44,7 @@ ms.locfileid: "63136277"
   
 -   某個特定的日期和時間。  
   
--   執行循環排程時。  
+-   依照週期性排程。  
   
  除了作業排程之外，您也可以建立警示，讓它藉由執行作業而回應事件。  
   
@@ -75,11 +75,12 @@ ms.locfileid: "63136277"
  當您將排程附加至作業之後，可以變更排程開始日期。  
   
 ## <a name="cpu-idle-schedules"></a>CPU 閒置排程  
- 為最大化 CPU 資源，您可以為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 定義 CPU 閒置條件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用 CPU 閒置條件設定來判斷執行作業的最佳時間。 例如，您可以將重建索引作業排程在 CPU 閒置時間與慢速實際執行期間發生。  
+ 為最大化 CPU 資源，您可以為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 定義 CPU 閒置條件。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用 CPU 閒置條件設定來判斷執行作業的最佳時間。 例如，您可以將重建索引作業排程在 CPU 閒置時間與慢速實際執行期間發生。  
   
  定義作業在 CPU 閒置時間執行之前，請先判斷正常處理時的 CPU 負載。 如果要判斷負載，請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 或效能監視器來監視伺服器流量並收集統計資料。 您可以使用所收集的資訊來設定 CPU 閒置時間百分比與期間。  
   
- 定義 CPU 閒置條件時，請以低於正常 CPU 使用量 (在指定時間) 的百分比來指定。 接著，設定時間量。 當 CPU 使用量在指定的時間內低於指定的百分比時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會啟動所有具有 CPU 閒置時間排程的作業。 如需有關使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]或效能監視器來監視 CPU 使用量，請參閱[監視 CPU 使用量](../../relational-databases/performance-monitor/monitor-cpu-usage.md)。  
+ 定義 CPU 閒置條件時，請以低於正常 CPU 使用量 (在指定時間) 的百分比來指定。 接著，設定時間量。 當 CPU 使用量在指定的時間內低於指定的百分比時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會啟動所有具有 CPU 閒置時間排程的作業。 如需使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]或效能監視器來監視 cpu 使用量的詳細資訊，請參閱[監視 cpu 使用量](../../relational-databases/performance-monitor/monitor-cpu-usage.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
   
@@ -87,11 +88,11 @@ ms.locfileid: "63136277"
 |-|-|  
 |**說明**|**主題**|  
 |描述如何建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的排程。|[Create a Schedule](create-a-schedule.md)|  
-|描述如何排程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。|[排程作業](schedule-a-job.md)|  
-|說明如何定義伺服器的 CPU 閒置條件。|[設定 CPU 閒置與持續時間 &#40;SQL Server Management Studio&#41;](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
+|描述如何排程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。|[排定作業執行時間](schedule-a-job.md)|  
+|說明如何定義伺服器的 CPU 閒置條件。|[將 CPU 閒置時間和持續時間 &#40;SQL Server Management Studio&#41;](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_help_jobschedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   
- [dbo.sysjobschedules &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
+ [sp_help_jobschedule &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   
+ [sysjobschedules &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
   
   

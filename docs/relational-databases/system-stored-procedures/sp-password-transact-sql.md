@@ -1,5 +1,5 @@
 ---
-title: sp_password (TRANSACT-SQL) |Microsoft Docs
+title: sp_password （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c02b9327dbff75e3c0816bb3eec19e3cb3135d50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008915"
 ---
-# <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
+# <a name="sp_password-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  加入或變更的密碼[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入。  
+  加入或變更[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入的密碼。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)改。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,24 +44,24 @@ sp_password [ [ @old = ] 'old_password' , ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @old = ] 'old_password'` 這是舊的密碼。 *old_password*已**sysname**，預設值是 NULL。  
+`[ @old = ] 'old_password'`這是舊密碼。 *old_password*是**sysname**，預設值是 Null。  
   
-`[ @new = ] 'new_password'` 這是新的密碼。 *new_password*已**sysname**，沒有預設值。 *old_password*必須指定是否沒有使用具名的參數。  
+`[ @new = ] 'new_password'`這是新的密碼。 *new_password*是**sysname**，沒有預設值。 如果未使用具名引數，則必須指定*old_password* 。  
   
 > [!IMPORTANT]  
->  請勿使用 NULL 密碼。 請使用增強式密碼。 如需詳細資訊，請參閱 [Strong Passwords](../../relational-databases/security/strong-passwords.md)。  
+>  請勿使用 NULL 密碼。 請使用增強式密碼。 如需詳細資訊，請參閱 [增強式密碼](../../relational-databases/security/strong-passwords.md)。  
   
-`[ @loginame = ] 'login'` 是受到密碼變更的登入名稱。 *login* 是預設值為 NULL 的 **sysname**。 *登入*必須已經存在，而且可以只指定的成員**sysadmin**或是**securityadmin**固定伺服器角色。  
+`[ @loginame = ] 'login'`這是受到密碼變更影響的登入名稱。 *login*是**sysname**，預設值是 Null。 *登*入必須已經存在，而且只能由**sysadmin**或**securityadmin**固定伺服器角色的成員來指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_password**呼叫 ALTER LOGIN。 這個陳述式支援其他選項。 如需有關變更密碼的資訊，請參閱[ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)。  
+ **sp_password**會呼叫 ALTER LOGIN。 這個陳述式支援其他選項。 如需變更密碼的詳細資訊，請參閱[ALTER LOGIN &#40;transact-sql&#41;](../../t-sql/statements/alter-login-transact-sql.md)。  
   
- **sp_password**無法在使用者自訂交易內執行。  
+ **sp_password**不能在使用者自訂交易內執行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 ALTER ANY LOGIN 權限。 若要在不提供舊密碼的情況下重設密碼，或是被變更的登入具有 CONTROL SERVER 權限，則也需要 CONTROL SERVER 權限。  
   
  主體可以變更本身的密碼。  
@@ -87,13 +87,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [建立登入 &#40;Transact-sql&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [sp_addlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
+ [sp_adduser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
+ [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_revokelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

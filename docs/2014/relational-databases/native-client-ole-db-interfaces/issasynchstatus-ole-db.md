@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus (OLE DB) |Microsoft Docs
+title: ISSAsynchStatus （OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -17,23 +17,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aeb6c6c789bfe1ca2af5616fb0a1ef9785700224
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127762"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
-  **ISSAsynchStatus**公開支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]非同步作業。 這是選擇性的介面，繼承自核心的 OLE DB 介面**IDBAsynchStatus**。 除了繼承自 **IDBAsynchStatus** 的 **Abort** 和 **GetStatus** 方法之外，**ISSAsynchStatus** 還提供一個新方法，用來等到非同步作業完成或發生逾時。  
+  **ISSAsynchStatus**會公開對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]非同步作業的支援。 這是選擇性的介面，繼承自核心 OLE DB 介面**IDBAsynchStatus**。 除了繼承自 **IDBAsynchStatus** 的 **Abort** 和 **GetStatus** 方法之外，**ISSAsynchStatus** 還提供一個新方法，用來等到非同步作業完成或發生逾時。  
   
 |方法|描述|  
 |------------|-----------------|  
-|[ISSAsynchStatus::Abort &#40;OLE DB&#41;](issasynchstatus-abort-ole-db.md)|取消非同步執行的作業。|  
-|[ISSAsynchStatus::GetStatus &#40;OLE DB&#41;](issasynchstatus-getstatus-ole-db.md)|傳回以非同步方式執行作業的狀態。|  
-|[ISSAsynchStatus::WaitForAsynchCompletion &#40;OLE DB&#41;](issasynchstatus-waitforasynchcompletion-ole-db.md)|等到非同步執行的作業完成或發生逾時為止。|  
+|[ISSAsynchStatus：： Abort &#40;OLE DB&#41;](issasynchstatus-abort-ole-db.md)|取消非同步執行的作業。|  
+|[ISSAsynchStatus：： GetStatus &#40;OLE DB&#41;](issasynchstatus-getstatus-ole-db.md)|傳回以非同步方式執行作業的狀態。|  
+|[ISSAsynchStatus：： WaitForAsynchCompletion &#40;OLE DB&#41;](issasynchstatus-waitforasynchcompletion-ole-db.md)|等到非同步執行的作業完成或發生逾時為止。|  
   
 ## <a name="remarks"></a>備註  
- **ISSAsynchStatus::GetStatus** 方法的 **ISSAsynchStatus** 實作與 **IDBAsynchStatus::GetStatus** 方法相同，不同的是如果中止資料來源物件的初始化，便會傳回 E_UNEXPECTED，而不是 DB_E_CANCELED (雖然 **ISSAsynchStatus::WaitForAsynchCompletion** 會傳回 DB_E_CANCELED)。 這是因為資料來源物件在中止作業後不會保留在一般的狀態，如此可以讓系統嘗試進一步的初始化作業。  
+ 
+  **ISSAsynchStatus::GetStatus** 方法的 **ISSAsynchStatus** 實作與 **IDBAsynchStatus::GetStatus** 方法相同，不同的是如果中止資料來源物件的初始化，便會傳回 E_UNEXPECTED，而不是 DB_E_CANCELED (雖然 **ISSAsynchStatus::WaitForAsynchCompletion** 會傳回 DB_E_CANCELED)。 這是因為資料來源物件在中止作業後不會保留在一般的狀態，如此可以讓系統嘗試進一步的初始化作業。  
   
  下列方法支援在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用非同步執行：  
   
@@ -41,10 +42,10 @@ ms.locfileid: "63127762"
   
 -   **IOpenRowset::OpenRowset**  
   
--   **IMultipleResults::GetResult**  
+-   **IMultipleResults：： GetResult**  
   
 ## <a name="see-also"></a>另請參閱  
- [介面&#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)   
+ [介面 &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)   
  [執行非同步作業](../native-client/features/performing-asynchronous-operations.md)  
   
   

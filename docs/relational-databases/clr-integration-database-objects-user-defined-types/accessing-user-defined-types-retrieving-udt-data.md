@@ -1,5 +1,5 @@
 ---
-title: 擷取 UDT 資料 |Microsoft Docs
+title: 正在抓取 UDT 資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,10 +22,10 @@ ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e5ceaa0e9812ba69820b8ac912ba8b5441cc73fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68009605"
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>存取使用者定義型別 - 擷取 UDT 資料
@@ -33,28 +33,28 @@ ms.locfileid: "68009605"
   為了在用戶端上建立使用者定義型別 (UDT)，用戶端應用程式必須提供在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中登錄為 UDT 的組件。 您可以將 UDT 組件置於與應用程式相同的目錄中，或置於全域組件快取 (GAC) 中。 您還可以在專案中設定組件的參考。  
   
 ## <a name="requirements-for-using-udts-in-adonet"></a>在 ADO.NET 中使用 UDT 的需求  
- 載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的組件與用戶端上的組件必須相容，才可以在用戶端上建立 UDT。 使用定義的 udt**原生**序列化格式的組件必須結構相容。 使用定義的組件**UserDefined**格式，組件必須位於用戶端。  
+ 載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的組件與用戶端上的組件必須相容，才可以在用戶端上建立 UDT。 若為使用**原生**序列化格式定義的 udt，則元件必須與結構相容。 若為以**使用者**設定格式定義的元件，則必須可在用戶端上使用此元件。  
   
  不需藉助用戶端上的 UDT 組件複本，便可從資料表的 UDT 資料行中擷取未經處理的資料。  
   
 > [!NOTE]  
->  **SqlClient**可能無法載入 UDT 版本不相符或其他問題發生時的 UDT。 在此情況下，請使用一般疑難排解機制，判斷呼叫應用程式找不到包含 UDT 之組件的原因。 如需詳細資訊，請閱讀 .NET Framework 文件集中名為＜診斷 Managed 偵錯助理的錯誤＞的主題。  
+>  當 UDT 版本或其他問題不相符時， **SqlClient**可能無法載入 udt。 在此情況下，請使用一般疑難排解機制，判斷呼叫應用程式找不到包含 UDT 之組件的原因。 如需詳細資訊，請閱讀 .NET Framework 文件集中名為＜診斷 Managed 偵錯助理的錯誤＞的主題。  
   
 ## <a name="accessing-udts-with-a-sqldatareader"></a>使用 SqlDataReader 存取 UDT  
- A **System.Data.SqlClient.SqlDataReader**可以從用戶端程式碼用來擷取結果集，其中包含 UDT 資料行，其會公開為物件的執行個體。  
+ 您可以從用戶端程式代碼使用**SqlClient. SqlDataReader**來抓取包含 UDT 資料行的結果集，此資料行會公開為物件的實例。  
   
 ### <a name="example"></a>範例  
- 此範例示範如何使用**Main**方法來建立新**SqlDataReader**物件。 該程式碼範例內會發生下列動作：  
+ 這個範例顯示如何使用**Main**方法來建立新的**SqlDataReader**物件。 該程式碼範例內會發生下列動作：  
   
-1.  Main 方法建立新**SqlDataReader**物件，並擷取 Point 資料表，其具有名為 Point 的 UDT 資料行的值。  
+1.  Main 方法會建立新的**SqlDataReader**物件，並從 Points 資料表中抓取值，其中包含名為 POINT 的 UDT 資料行。  
   
 2.  Point UDT 公開定義為整數的 X 及 Y 座標。  
   
-3.  定義 UDT**距離**方法並**GetDistanceFromXY**方法。  
+3.  UDT 會定義**距離**方法和**GetDistanceFromXY**方法。  
   
 4.  範例程式碼會擷取主索引鍵及 UDT 資料行的值，以示範 UDT 的功能。  
   
-5.  範例程式碼會呼叫**Point.Distance**並**Point.GetDistanceFromXY**方法。  
+5.  範例程式碼會呼叫**point**和**point. GetDistanceFromXY**方法。  
   
 6.  結果顯示在主控台視窗中。  
   
@@ -157,10 +157,10 @@ static void Main()
 ```  
   
 ## <a name="binding-udts-as-bytes"></a>以位元組繫結 UDT  
- 在某些情況下，您可能要從 UDT 資料行擷取未經處理資料。 可能該型別在本機不可使用，或您不想要具現化 UDT 的執行個體。 您可以讀取的未經處理位元組至位元組陣列，使用**GetBytes**方法**SqlDataReader**。 此方法可將指定資料行位移的位元組資料流，讀取至始於指定緩衝區位移的陣列緩衝區。 另一個選項是使用其中一種**GetSqlBytes**或是**GetSqlBinary**方法，讀取所有的單一作業中的內容。 在任何一種情況中，都不會具現化 UDT 物件，所以您無需設定用戶端組件的 UDT 參考。  
+ 在某些情況下，您可能要從 UDT 資料行擷取未經處理資料。 可能該型別在本機不可使用，或您不想要具現化 UDT 的執行個體。 您可以使用**SqlDataReader**的**GetBytes**方法，將原始位元組讀取到位元組陣列中。 此方法可將指定資料行位移的位元組資料流，讀取至始於指定緩衝區位移的陣列緩衝區。 另一個選項是使用其中一個**GetSqlBytes**或**GetSqlBinary**方法，並在單一作業中讀取所有內容。 在任何一種情況中，都不會具現化 UDT 物件，所以您無需設定用戶端組件的 UDT 參考。  
   
 ### <a name="example"></a>範例  
- 此範例示範如何擷取**點**做為未經處理位元組到位元組陣列，使用的資料**SqlDataReader**。 程式碼會使用**System.Text.StringBuilder**以將未經處理位元組轉換成要在主控台視窗中顯示的字串表示。  
+ 這個範例示範如何使用**SqlDataReader**，將**點**資料以未經處理的位元組形式捕獲到位元組陣列。 程式碼會使用**system.servicemodel，將**原始位元組轉換成字串表示，以顯示在主控台視窗中。  
   
 ```vb  
 Option Explicit On  
@@ -266,7 +266,7 @@ class GetRawBytes
 ```  
   
 ### <a name="example-using-getsqlbytes"></a>使用 GetSqlBytes 的範例  
- 此範例示範如何擷取**點**資料當做在單一作業中使用的未經處理位元組**GetSqlBytes**方法。 程式碼會使用**StringBuilder**以將未經處理位元組轉換成要在主控台視窗中顯示的字串表示。  
+ 這個範例示範如何使用**GetSqlBytes**方法，在單一作業中以原始位元組形式抓取**點**資料。 程式碼會使用**StringBuilder** ，將原始位元組轉換成字串表示，以顯示在主控台視窗中。  
   
 ```vb  
 Option Explicit On  
@@ -374,13 +374,13 @@ class GetRawBytes
  在 ADO.NET 程式碼中，UDT 可以同時當做輸入及輸出參數使用。  
   
 ## <a name="using-udts-in-query-parameters"></a>在查詢參數中使用 UDT  
- 設定時，可以做為參數值使用 Udt **SqlParameter** for **System.Data.SqlClient.SqlCommand**物件。 **SqlDbType.Udt**列舉**SqlParameter**物件用來指示此參數在呼叫時，會是 UDT**新增**方法，以**參數**集合。 **UdtTypeName**屬性**SqlCommand**物件用來指定在資料庫中的 UDT 的完整格式的名稱*database.schema_name.object_name*語法。 儘管並非必須如此，但使用完整名稱可消除程式碼的模稜兩可性。  
+ 當設定**SqlClient**物件的**SqlParameter**時，可以使用 udt 做為參數值。 **SqlParameter**物件的**SqlDbType**列舉是用來指出在呼叫**Add**方法至**Parameters**集合時，參數是 Udt。 **SqlCommand**物件的**UdtTypeName**屬性是用來指定資料庫中 UDT 的完整名稱，使用*schema_name. object_name*語法。 儘管並非必須如此，但使用完整名稱可消除程式碼的模稜兩可性。  
   
 > [!NOTE]  
 >  UDT 組件的本機複本必須可讓用戶端專案使用。  
   
 ### <a name="example"></a>範例  
- 在此範例程式碼會建立**SqlCommand**並**SqlParameter**將資料插入資料表中的 UDT 資料行的物件。 程式碼會使用**SqlDbType.Udt**列舉，來指定資料類型，而**UdtTypeName**屬性**SqlParameter**物件來指定完整格式的名稱在資料庫中的 UDT。  
+ 此範例中的程式碼會建立**SqlCommand**和**SqlParameter**物件，以將資料插入資料表中的 UDT 資料行。 程式碼會使用**SqlDbType**來指定資料類型，以及**SqlParameter**物件的**UdtTypeName**屬性，以指定資料庫中 Udt 的完整名稱。  
   
 ```vb  
 Option Explicit On  

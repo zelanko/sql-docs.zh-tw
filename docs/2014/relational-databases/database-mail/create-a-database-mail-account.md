@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917725"
 ---
 # <a name="create-a-database-mail-account"></a>建立 Database Mail 帳戶
@@ -25,9 +25,9 @@ ms.locfileid: "62917725"
   
 -   **開始之前：** [必要條件](#Prerequisites)  
   
--   **建立 Database Mail 帳戶，使用：** [Database Mail 設定精靈](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **使用下列項目建立 Database Mail 帳戶：** [Database Mail 設定精靈](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：** [若要設定 Database Mail 的後續步驟](#FollowUp)  
+-   **後續操作：** [設定 Database Mail 的後續步驟](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -84,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> 後續操作：若要設定 Database Mail 的後續步驟  
+##  <a name="FollowUp"></a> 後續操作：設定 Database Mail 的後續步驟  
   
 -   [建立 Database Mail 設定檔](create-a-database-mail-profile.md)  
   

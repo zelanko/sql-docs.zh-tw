@@ -19,20 +19,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de1226d675859312e1ccaf908141586f865c8946
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028385"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>SQL Server Native Client ODBC 資料來源
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源名稱 (DSN) 會識別 ODBC 資料來源，其中包含 ODBC 應用程式需要連接到特定伺服器之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的所有資訊。 有兩個方式可以定義 ODBC 資料來源名稱：  
   
--   用戶端電腦上，開啟 控制台 中 系統管理工具，然後按兩下**資料來源 (ODBC)** 。 這樣會開啟「ODBC 資料來源管理員」來建立 DSN。  
+-   在用戶端電腦上，開啟 [控制台] 中的 [系統管理工具]，然後按兩下 **[資料來源（ODBC）**]。 這樣會開啟「ODBC 資料來源管理員」來建立 DSN。  
   
 -   在 ODBC 應用程式中，呼叫[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源包含：  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源包含：  
   
 -   資料來源的名稱。  
   
@@ -45,6 +47,6 @@ ms.locfileid: "63028385"
  透過資料來源連接時，不需要 ODBC 應用程式。 不過，應用程式必須提供相同的連接資訊給驅動程式會在 DSN 中找到的 ODBC 連接函數。  
   
 ## <a name="see-also"></a>另請參閱  
- [與 SQL Server 通訊&#40;ODBC&#41;](communicating-with-sql-server-odbc.md)  
+ [與 SQL Server &#40;ODBC&#41;通訊](communicating-with-sql-server-odbc.md)  
   
   

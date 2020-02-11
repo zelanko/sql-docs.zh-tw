@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769004"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>使用指令碼元件剖析非標準文字檔案格式
@@ -35,7 +35,7 @@ ms.locfileid: "62769004"
 ##  <a name="example1"></a> 範例 1：剖析以資料列分隔的記錄  
  這則範例將示範如何取得每個資料行都以個別行顯示的文字檔案，並且使用指令碼元件，將它剖析成目的地資料表。  
   
- 如需如何設定使用的指令碼元件為資料流程中的資料轉換的詳細資訊，請參閱[使用指令碼元件建立同步轉換](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[建立非同步使用指令碼元件轉換](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
+ 如需如何設定腳本元件做為資料流程中的轉換的詳細資訊，請參閱[使用腳本元件建立同步轉換](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[使用腳本元件建立異步轉換](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
   
 #### <a name="to-configure-this-script-component-example"></a>設定此指令碼元件範例  
   
@@ -94,19 +94,19 @@ ms.locfileid: "62769004"
   
 11. 在 [指令碼轉換編輯器]  的 [輸入資料行]  頁面上，選取單一可用的輸入資料行。  
   
-12. 在上**輸入和輸出**頁面**指令碼轉換編輯器**，選取 Output 0 並將其`SynchronousInputID`為 None。 建立 5 個輸出資料行，全部都屬於字串 [DT_STR] 類型而且長度為 32：  
+12. 在 [**腳本轉換編輯器**] 的 [**輸入和輸出**] 頁面上，選取 [輸出`SynchronousInputID` 0]，並將其設定為 [無]。 建立 5 個輸出資料行，全部都屬於字串 [DT_STR] 類型而且長度為 32：  
   
-    -   FirstName  
+    -   名字  
   
-    -   LastName  
+    -   姓氏  
   
-    -   標題  
+    -   Title  
   
-    -   [縣/市]  
+    -   City  
   
     -   StateProvince  
   
-13. 在上**指令碼**頁面**指令碼轉換編輯器**，按一下 **編輯指令碼**並輸入所示的程式碼`ScriptMain`類別的範例。 關閉指令碼開發環境以及 [指令碼轉換編輯器]  。  
+13. 在 [**腳本轉換編輯器**] 的 [**腳本**] 頁面上，按一下 [**編輯腳本**]，然後`ScriptMain`輸入範例的類別中所顯示的程式碼。 關閉指令碼開發環境以及 [指令碼轉換編輯器]  。  
   
 14. 將 SQL Server 目的地加入至資料流程。 將它設定為使用 OLE DB 連接管理員和 RowDelimitedData 資料表。 將指令碼元件的輸出連接至這個目的地。  
   
@@ -193,7 +193,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
 > [!CAUTION]  
 >  這則範例僅供示範使用。 如果您執行此範例多次，它就會將重複的索引鍵值插入目的地資料表中。  
   
- 如需如何設定使用的指令碼元件為資料流程中的資料轉換的詳細資訊，請參閱[使用指令碼元件建立同步轉換](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[建立非同步使用指令碼元件轉換](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
+ 如需如何設定腳本元件做為資料流程中的轉換的詳細資訊，請參閱[使用腳本元件建立同步轉換](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[使用腳本元件建立異步轉換](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
   
 #### <a name="to-configure-this-script-component-example"></a>設定此指令碼元件範例  
   
@@ -253,7 +253,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 11. 在 [指令碼轉換編輯器]  的 [輸入資料行]  頁面上，選取單一可用的輸入資料行。  
   
-12. 在上**輸入和輸出**頁面**指令碼轉換編輯器**，選取 Output 0、 將它重新命名為 ParentRecords，並將其`SynchronousInputID`為 None。 建立 2 個輸出資料行：  
+12. 在 [**腳本轉換編輯器**] 的 [**輸入和輸出**] 頁面上，選取 [輸出 0]，將它重新`SynchronousInputID`命名為 ParentRecords，並將其設定為 [無]。 建立 2 個輸出資料行：  
   
     -   ParentID (主索引鍵)，屬於四位元組帶正負號的整數 [DT_I4] 類型  
   
@@ -346,7 +346,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用指令碼元件建立同步轉換](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  

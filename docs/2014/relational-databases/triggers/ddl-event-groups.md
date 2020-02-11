@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211722"
 ---
 # <a name="ddl-event-groups"></a>DDL 事件群組
@@ -27,12 +27,12 @@ ms.locfileid: "68211722"
 > [!NOTE]  
 >  執行類似 DDL 作業的某些系統預存程序也可以引發 DDL 觸發程序或事件通知。 請測試 DDL 觸發程序和事件通知，以判斷它們對執行之系統預存程序的回應。 例如，CREATE TYPE 陳述式與 **sp_addtype** 預存程序都會引發在 CREATE_TYPE 事件上建立的 DDL 觸發程序或事件通知。  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>事件  
  列在 DDL_DATABASE_LEVEL_EVENTS 底下的事件會在伺服器 (執行個體) 或資料庫層級執行。 列在 DDL_SERVER_LEVEL_EVENTS 底下的事件只能在伺服器層級執行。  
   
 ||||  
 |-|-|-|  
-|parent_type|type|name|  
+|parent_type|type|NAME|  
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  
 |10001|10016|&#124;    DDL_DATABASE_LEVEL_EVENTS|  

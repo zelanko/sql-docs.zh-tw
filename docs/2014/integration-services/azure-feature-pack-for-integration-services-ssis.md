@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 536dce64880c1e70b1b8a0c4b419811c1b32a975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772116"
 ---
 # <a name="azure-feature-pack"></a>Azure 功能套件
@@ -65,15 +65,15 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure 是一個延伸模
     
     -   [Azure Data Lake Store 目的地](../../2014/integration-services/azure-data-lake-store-destination.md)
   
--   Azure Blob 列舉值與 ADLS 檔案列舉值。 請參閱 [Foreach Loop Container](control-flow/foreach-loop-container.md)。  
+-   Azure Blob 列舉值 & ADLS 檔案列舉值。 請參閱[Foreach 迴圈容器](control-flow/foreach-loop-container.md)。  
   
  
 ## <a name="download-the-feature-pack"></a>下載功能套件  
 下載 SQL Server Integration Services (SSIS) Feature Pack for Azure。  
   
--   [Microsoft SQL Server 2014 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47366)  
+-   [Azure 的 Microsoft SQL Server 2014 Integration Services 功能套件](https://www.microsoft.com/download/details.aspx?id=47366)  
 
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
 您必須先安裝下列必要條件，再安裝這個功能套件。  
   
 -   SQL Server Integration Services  

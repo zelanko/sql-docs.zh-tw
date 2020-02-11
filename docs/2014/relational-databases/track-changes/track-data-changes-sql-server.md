@@ -34,14 +34,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63073899"
 ---
 # <a name="track-data-changes-sql-server"></a>追蹤資料變更 (SQL Server)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供兩個追蹤資料庫資料變更的功能： [異動資料擷取](#Capture) 和 [變更追蹤](#Tracking)。 這些功能可協助應用程式判斷對資料庫中使用者資料表所做的 DML 變更 (插入、更新和刪除作業)。 可在同一個資料庫上啟用異動資料擷取和變更追蹤；無需特殊考量。 版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援異動資料擷取和變更追蹤，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供兩個追蹤資料庫資料變更的功能： [異動資料擷取](#Capture) 和 [變更追蹤](#Tracking)。 這些功能可協助應用程式判斷對資料庫中使用者資料表所做的 DML 變更 (插入、更新和刪除作業)。 可在同一個資料庫上啟用異動資料擷取和變更追蹤；無需特殊考量。 針對支援變更資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]捕獲和變更追蹤的版本，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>使用異動資料擷取或變更追蹤的優點  
  在資料庫中查詢已經變更之資料的能力，是讓某些應用程式具有效率的重要需求。 一般而言，若要判斷資料變更，應用程式開發人員必須使用觸發程序、時間戳記資料行和其他資料表的組合，在其應用程式中實作自訂追蹤方法。 不過，建立這些應用程式通常需要實作大量工作、導致結構描述更新，而且經常會產生很高的效能負擔。  
@@ -65,7 +65,7 @@ ms.locfileid: "63073899"
 ## <a name="feature-differences-between-change-data-capture-and-change-tracking"></a>異動資料擷取與變更追蹤之間的功能差異  
  下表將列出異動資料擷取與變更追蹤之間的功能差異。 異動資料擷取中的追蹤機制包含從交易記錄中以非同步方式擷取變更，以便在 DML 作業之後可以使用變更。 但是，在變更追蹤中，其追蹤機制包含以同步方式追蹤變更而且與 DML 並列執行，以便可以立即使用變更資訊。  
   
-|功能|異動資料擷取|變更追蹤|  
+|功能|變更資料擷取|變更追蹤|  
 |-------------|-------------------------|---------------------|  
 |**追蹤的變更**|||  
 |DML 變更|是|是|  
@@ -74,18 +74,19 @@ ms.locfileid: "63073899"
 |資料行是否已變更|是|是|  
 |DML 類型|是|是|  
   
-##  <a name="Capture"></a> Change Data Capture  
+##  <a name="Capture"></a> 異動資料擷取  
  異動資料擷取會透過擷取進行 DML 變更的事實以及變更的實際資料，提供使用者資料表的歷程記錄變更資訊。 這些變更是使用讀取交易記錄而且對系統影響很小的非同步處理序擷取的。  
   
- 如下圖所示，對使用者資料表所做的變更會擷取在對應的變更資料表中。 這些變更資料表會提供一段時間內變更的歷程記錄檢視。 [所提供的](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)異動資料擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 函數可讓您方便且有系統地取用變更資料。  
+ 如下圖所示，對使用者資料表所做的變更會擷取在對應的變更資料表中。 這些變更資料表會提供一段時間內變更的歷程記錄檢視。 
+  [所提供的](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)異動資料擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 函數可讓您方便且有系統地取用變更資料。  
   
- ![變更資料擷取的概念圖例](../../database-engine/media/cdcart1.gif "變更資料擷取的概念圖例")  
+ ![異動資料擷取的概念圖例](../../database-engine/media/cdcart1.gif "異動資料擷取的概念圖例")  
   
 ### <a name="security-model"></a>安全性模型  
  本節描述異動資料擷取安全性模型。  
   
  **組態和管理**  
- 若要啟用或停用變更資料擷取資料庫的呼叫端[sys.sp_cdc_enable_db &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)或[sys.sp_cdc_disable_db &#40;-&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)必須是固定的伺服器成員`sysadmin`角色。 啟用和停用在資料表層級的異動資料擷取需要的呼叫端[sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)並[sys.sp_cdc_disable_table &#40;-&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql)必須 sysadmin 角色的成員或成員資料庫的`database db_owner`角色。  
+ 若要啟用或停用資料庫的變更資料捕獲， [sys. sp_cdc_enable_db 的呼叫端 &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)或[Sys.databases sp_cdc_disable_db &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)必須是固定伺服器`sysadmin`角色的成員。 若要在資料表層級啟用和停用變更資料捕獲，必須要有 sys.databases 的呼叫端[sp_cdc_enable_table &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)和[Sp_cdc_disable_table sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql)為系統管理員（sysadmin）角色的成員或資料庫`database db_owner`角色的成員。  
   
  只有伺服器 `sysadmin` 角色的成員和 `database db_owner` 角色的成員才能使用這些預存程序來支援異動資料擷取作業的管理。  
   
@@ -103,7 +104,7 @@ ms.locfileid: "63073899"
 |疏鬆資料行|是|使用資料行集時，不支援擷取變更。|  
 |計算資料行|否|不會追蹤對計算資料行所做的變更。 此資料行將以適當的類型顯示在變更資料表中，但是將具有 NULL 值。|  
 |XML|是|不會追蹤對個別 XML 元素所做的變更。|  
-|timestamp|是|變更資料表中的資料類型會轉換成二進位。|  
+|時間戳記|是|變更資料表中的資料類型會轉換成二進位。|  
 |BLOB 資料類型|是|只有當資料行本身變更時，才會儲存 BLOB 資料行的先前影像。|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>異動資料擷取和其他 SQL Server 功能  
@@ -125,7 +126,7 @@ ms.locfileid: "63073899"
  如需資料庫鏡像的詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
 #### <a name="transactional-replication"></a>異動複寫  
- 雖然變更資料擷取和異動複寫可以同時存在同一個資料庫中，但是同時啟用這兩項功能時，系統會以不同的方式處理變更資料表的擴展。 變更資料擷取和異動複寫一定會使用相同的程序 [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)，從交易記錄中讀取變更。 單獨啟用變更資料擷取時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業就會呼叫 `sp_replcmds`。 當相同的資料庫上同時啟用這兩項功能時，「 記錄讀取器代理程式會呼叫`sp_replcmds`。 這個代理程式會同時擴展變更資料表和散發資料庫資料表。 如需詳細資訊，請參閱 [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)。  
+ 雖然變更資料擷取和異動複寫可以同時存在同一個資料庫中，但是同時啟用這兩項功能時，系統會以不同的方式處理變更資料表的擴展。 變更資料擷取和異動複寫一定會使用相同的程序 [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)，從交易記錄中讀取變更。 單獨啟用變更資料擷取時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業就會呼叫 `sp_replcmds`。 當相同的資料庫上同時啟用這兩項功能時， `sp_replcmds`記錄讀取器代理程式會呼叫。 這個代理程式會同時擴展變更資料表和散發資料庫資料表。 如需詳細資訊，請參閱 [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)。  
   
  假設您在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫上啟用了變更資料擷取，而且有兩份資料表啟用了擷取。 為了擴展變更資料表，擷取作業會呼叫 `sp_replcmds`。 資料庫啟用了異動複寫，而且建立了發行集。 此時，會針對資料庫建立記錄讀取器代理程式，並且刪除擷取作業。 記錄讀取器代理程式會繼續掃描記錄，從變更資料表所認可的最後一個記錄序號開始。 如此可確保變更資料表中的資料保持一致。 如果這個資料庫停用了異動複寫，系統就會移除記錄讀取器代理程式並且重新建立擷取作業。  
   
@@ -150,7 +151,7 @@ ms.locfileid: "63073899"
  您可以使用 [sys.sp_cdc_disable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) ，從還原或附加的資料庫中移除變更資料擷取。  
  
 
-  ##  <a name="Tracking"></a> Change Tracking  
+  ##  <a name="Tracking"></a> 變更追蹤  
  變更追蹤會擷取資料表中資料列變更的事實，但是不會擷取變更的資料。 這項功能可讓應用程式使用直接從使用者資料表中取得的最新資料列資料，判斷已經變更的資料列。 因此，與異動資料擷取相較之下，變更追蹤在它可回答的歷程記錄問題方面具有較多限制。 不過，對於不需要歷程記錄資訊的應用程式而言，由於不會擷取變更的資料，因此儲存負擔會非常低。 這項功能會使用同步追蹤機制來追蹤變更。 其設計目的是要對 DML 作業產生最低負擔。  
   
  下圖將顯示使用變更追蹤所獲益的同步處理狀況。 在此狀況中，應用程式需要下列資訊：自從資料表上次同步處理以來已經變更的所有資料表資料列，以及只有目前的資料列資料。 由於使用了同步機制來追蹤變更，因此應用程式可以執行雙向同步處理，而且能夠可靠地偵測出可能已經發生的任何衝突。  
@@ -168,18 +169,18 @@ ms.locfileid: "63073899"
   
 -   [Microsoft Sync Framework 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     提供 [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 和 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的完整文件集。 在 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)] 的文件中，＜如何：使用 SQL Server 變更追蹤＞主題包含了詳細資訊和程式碼範例。  
+     提供 [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 和 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的完整文件集。 在 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的文件集中，＜如何：使用 SQL Server 變更追蹤＞主題包含了詳細資訊和程式碼範例。  
   
   
 ## <a name="related-tasks-required"></a>相關工作 (必要)  
   
 |||  
 |-|-|  
-|**工作**|**主題**|  
+|**Task**|**主題**|  
 |提供異動資料擷取的概觀。|[關於異動資料擷取 &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)|  
 |描述如何在資料庫或資料表上啟用及停用異動資料擷取。|[啟用和停用異動資料擷取 &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-data-capture-sql-server.md)|  
 |描述如何管理及監視異動資料擷取。|[管理和監視異動資料擷取 &#40;SQL Server&#41;](../track-changes/administer-and-monitor-change-data-capture-sql-server.md)|  
-|描述如何處理可用於異動資料擷取取用者的變更資料。 此主題涵蓋驗證 LSN 界限、查詢函數和查詢函數案例。|[使用變更資料 &#40;SQL Server&#41;](../track-changes/work-with-change-data-sql-server.md)|  
+|描述如何處理可用於異動資料擷取取用者的變更資料。 此主題涵蓋驗證 LSN 界限、查詢函數和查詢函數案例。|[使用異動資料 &#40;SQL Server&#41;](../track-changes/work-with-change-data-sql-server.md)|  
 |提供變更追蹤的概觀。|[關於變更追蹤 &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)|  
 |描述如何在資料庫或資料表上啟用及停用變更追蹤。|[啟用和停用變更追蹤 &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)|  
 |描述如何管理變更追蹤、設定安全性，以及判斷使用變更追蹤對儲存和效能產生的影響。|[管理變更追蹤 &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)|  

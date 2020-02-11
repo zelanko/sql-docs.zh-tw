@@ -1,5 +1,5 @@
 ---
-title: sp_helpextendedproc (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpextendedproc （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dcbe6d187b56b0b15ae829eeecf1811b02dfee7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67943500"
 ---
-# <a name="sphelpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
+# <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   報告目前定義的擴充預存程序及程序 (函數) 所屬之動態連結程式庫 (DLL) 的名稱。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [CLR 整合](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) 。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用[CLR 整合](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +42,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @funcname = ] 'procedure'` 是報告資訊的擴充預存程序的名稱。 *程序*已**sysname**，預設值是 NULL。  
+`[ @funcname = ] 'procedure'`這是報告的資訊所屬的擴充預存程式名稱。 程式是**sysname**，預設*值是 Null* 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -55,10 +55,10 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 |**dll**|**nvarchar(255)**|DLL 的名稱。|  
   
 ## <a name="remarks"></a>備註  
- 當*程序*指定，則**sp_helpextendedproc**報告指定擴充預存程序。 未提供這個參數時**sp_helpextendedproc**所屬的傳回所有擴充預存程序名稱，以及每個擴充預存程序的 DLL 名稱。  
+ 當指定了*procedure*時， **sp_helpextendedproc**會報告指定的擴充預存程式。 未提供此參數時， **sp_helpextendedproc**會傳回所有擴充預存程式名稱，以及每個擴充預存程式所屬的 DLL 名稱。  
   
-## <a name="permissions"></a>Permissions  
- 若要執行的權限**sp_helpextendedproc**授與**公用**。  
+## <a name="permissions"></a>權限  
+ 執行**sp_helpextendedproc**的許可權會授與**public**。  
   
 ## <a name="examples"></a>範例  
   
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-reporting-help-on-a-single-extended-stored-procedure"></a>B. 報告單一擴充預存程序的說明  
- 下列範例會報告`xp_cmdshell`擴充預存程序。  
+ 下列範例會報告`xp_cmdshell`擴充預存程式。  
   
 ```  
 USE master;  
@@ -83,8 +83,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
- [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
+ [sp_addextendedproc &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
+ [sp_dropextendedproc &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -13,18 +13,18 @@ ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee8f9b9879a3533e8196bbc89f8ae0b0a132293a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036094"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID 函式
-**合規性**  
- 導入的版本：ODBC 3.81 標準合規性：ODBC  
+**標準**  
+ 引進的版本： ODBC 3.81 標準合規性： ODBC  
   
  **摘要**  
- **SQLCleanupConnectionPoolID**通知逾時的集區識別碼的驅動程式。集區識別碼可以逾時，每當該集區識別碼相關聯的集區中的所有連線都已逾時。請參閱[Microsoft Data Access Components 中的共用](https://msdn.microsoft.com/library/ms810829.aspx)取得的連接逾時的詳細資訊。  
+ **SQLCleanupConnectionPoolID**會通知驅動程式，集區識別碼已超時。當集區中與該集區識別碼相關聯的所有連線都已超時時，集區識別碼可能會超時。如需連接逾時的詳細資訊，請參閱[Microsoft 資料存取元件中](https://msdn.microsoft.com/library/ms810829.aspx)的共用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,29 +37,29 @@ SQLRETURN  SQLCleanupConnectionPoolID (
   
 ## <a name="arguments"></a>引數  
  *EnvironmentHandle*  
- [輸入]集區的環境控制代碼。  
+ 源集區的環境控制碼。  
   
  *PoolID*  
- [輸入]逾時的集區識別碼相關聯的集區。  
+ 源與已計時的集區識別碼相關聯的集區。  
   
 ## <a name="returns"></a>傳回值  
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
- 驅動程式管理員不會處理從傳回的診斷資訊**SQLCleanupConnectionPoolID**。  
+ 驅動程式管理員不會處理從**SQLCleanupConnectionPoolID**傳回的診斷資訊。  
   
  應用程式無法接收驅動程式所傳回的錯誤訊息。  
   
 ## <a name="remarks"></a>備註  
- **SQLCleanupConnectionPoolID**可呼叫在任何時間，但驅動程式管理員可保證沒有其他執行緒正在同時呼叫**SQLGetPoolID**並沒有任何其他執行緒同時呼叫**SQLRateConnection**並**SQLPoolConnect**與連接資訊的語彙基元，指派該集區識別碼。 因此，驅動程式必須確定此函式是安全執行緒。  
+ 您可以隨時呼叫**SQLCleanupConnectionPoolID** ，但驅動程式管理員保證沒有其他執行緒同時呼叫**SQLGetPoolID** ，而且沒有其他執行緒同時呼叫**SQLRateConnection**和**SQLPOOLCONNECT** ，以及使用該集區識別碼指派的連接資訊權杖。 因此，驅動程式必須確保此函式具備執行緒安全。  
   
- 驅動程式可以清除集區識別碼相關聯的資源  
+ 驅動程式可以清除與集區識別碼相關聯的資源。  
   
- 應用程式不應該直接呼叫此函式。 支援可感知驅動程式的連接共用的 ODBC 驅動程式必須實作此函式。  
+ 應用程式不應直接呼叫此函式。 支援可感知驅動程式之連接共用的 ODBC 驅動程式必須實作用此函式。  
   
- 包含 ODBC 驅動程式開發的 sqlspi.h。  
+ 包含適用于 ODBC 驅動程式開發的 sqlspi。  
   
 ## <a name="see-also"></a>另請參閱  
  [開發 ODBC 驅動程式](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [可感知驅動程式的連接共用](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
- [在 ODBC 驅動程式中開發連接集區覺察](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)
+ [驅動程式感知的連接共用](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
+ [在 ODBC 驅動程式中開發連線集區覺察](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

@@ -21,16 +21,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ed4abfe8914c7f6b1dc3e22de7a321419b8d9cee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127116"
 ---
-# <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (擴充預存程序 API)
+# <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (擴充預存程序 API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
  傳回資料庫連接的相關資訊。  
   
@@ -55,7 +56,7 @@ len
  *srvproc*  
  識別資料庫連接的指標。  
   
- *field*  
+ *欄位*  
  指定連接上要傳回的資料。  
   
 |值|傳回值|  
@@ -72,11 +73,15 @@ len
 |SRV_NETWORK_CONNECTION|傳遞到用於目前 *srvproc* 連線之網路程式庫 DLL 的連接字串。|  
 |SRV_PIPEHANDLE|包含連接用戶端之管道控制碼的字串，如果用戶端連接到不使用具名管道的網路，則為 NULL。 若要搭配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用此控制碼當做有效的管道控制碼，請將此字串轉換為整數。|  
 |SRV_RMTSERVER|用戶端處理序所登入的伺服器。 如果登入來自用戶端，此值為空字串。|  
-|SRV_ROWSENT|*srvproc* 已經針對目前結果集所傳送的資料列數目。|  
-|SRV_SPID|*srvproc* 的伺服器執行緒識別碼。 對於擴充預存程序，此值與 **sys.sysprocesses** 的 **kpid** 資料行相同，而且可以隨時變更。|  
+|SRV_ROWSENT|
+  *srvproc* 已經針對目前結果集所傳送的資料列數目。|  
+|SRV_SPID|
+  *srvproc* 的伺服器執行緒識別碼。 對於擴充預存程序，此值與 **sys.sysprocesses** 的 **kpid** 資料行相同，而且可以隨時變更。|  
 |SRV_SPROC_CODEPAGE|伺服器用於解譯多位元組資料的字碼頁。|  
-|SRV_STATUS|*srvproc* 的目前狀態：執行中或已關閉|  
-|SRV_TYPE|*srvproc* 的連線類型。 如果傳回伺服器，*srvproc* 來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 如果傳回用戶端，*srvproc* 來自 DB 程式庫或 ODBC 用戶端。|  
+|SRV_STATUS|
+  *srvproc* 的目前狀態：執行中或已關閉|  
+|SRV_TYPE|
+  *srvproc* 的連線類型。 如果傳回伺服器，*srvproc* 來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 如果傳回用戶端，*srvproc* 來自 DB 程式庫或 ODBC 用戶端。|  
 |SRV_USER|連接的使用者名稱。|  
 |||  
   
@@ -87,6 +92,6 @@ len
  以 Null 結束的字串指標，其中包含指定之欄位在 SRV_PROC 結構中的目前值。 如果欄位是空的，則會傳回空字串的有效指標，而且 *len* 包含 0。 如果欄位不明，會傳回 NULL，而且 *len* 包含值 -1。  
   
 > [!IMPORTANT]  
->  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱[資訊安全開發人員中心](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
+>  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱[資訊安全開發人員中心](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
   

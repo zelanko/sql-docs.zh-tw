@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 42e16066a08c0b30fd8b43eaf481525c4f510b80
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69652270"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>什麼是 SQL Server 巨量資料叢集中的主要執行個體？
@@ -24,7 +24,7 @@ ms.locfileid: "69652270"
 
 SQL Server 主要執行個體提供下列功能：
 
-## <a name="connectivity"></a>連接性
+## <a name="connectivity"></a>連線能力
 
 SQL Server 主要執行個體為叢集提供可從外部存取的 TDS 端點。 您可以將應用程式或 SQL Server 工具 (例如 Azure Data Studio 或 SQL Server Management Studio) 連線到此端點，就像其他 SQL Server 執行個體一樣。
 

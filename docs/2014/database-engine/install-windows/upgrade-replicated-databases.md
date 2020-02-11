@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775314"
 ---
 # <a name="upgrade-replicated-databases"></a>升級複寫的資料庫
@@ -69,7 +69,7 @@ ms.locfileid: "62775314"
   
 -   [建立和套用初始快照集](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
--   [複寫代理程式可執行檔概念](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
  如需有關執行合併代理程式的詳細資訊，請參閱下列主題：  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62775314"
  在使用合併式複寫的拓撲中升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後，如果您想要使用新功能，請變更任何發行集的發行集相容性層級。  
   
 ## <a name="upgrading-to-standard-workgroup-or-express-editions"></a>升級至 Standard、Workgroup 或 Express Edition  
- 從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的一個版本升級到另一個版本之前，請確認您目前使用的功能在您想要升級後的版本中受到支援。 如需詳細資訊，請參閱一節中的複寫上[支援的 SQL Server 2014 的版本功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的一個版本升級到另一個版本之前，請確認您目前使用的功能在您想要升級後的版本中受到支援。 如需詳細資訊，請參閱[SQL Server 2014 版本支援的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)中的複寫一節。  
   
 ## <a name="web-synchronization-for-merge-replication"></a>合併式複寫的 Web 同步處理  
  合併式複寫的 Web 同步處理選項要求，必須將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (replisapi.dll) 複製到用於同步處理之 Internet Information Services (IIS) 伺服器上的虛擬目錄。 當您設定 Web 同步處理時，「設定 Web 同步處理精靈」會將檔案複製到虛擬目錄。 如果您升級安裝在 IIS 伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，就必須將 replisapi.dll 從 COM 目錄手動複製到 IIS 伺服器上的虛擬目錄。 如需設定 Web 同步處理的詳細資訊，請參閱 [設定 Web 同步處理](../../../2014/relational-databases/replication/configure-web-synchronization.md)。  
@@ -92,6 +92,6 @@ ms.locfileid: "62775314"
  [複寫管理常見問題集](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [複寫回溯相容性](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
  [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [升級到 SQL Server 2014](upgrade-sql-server.md)  
+ [升級為 SQL Server 2014](upgrade-sql-server.md)  
   
   

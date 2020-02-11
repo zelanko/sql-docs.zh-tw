@@ -1,5 +1,5 @@
 ---
-title: 示範：記憶體中 OLTP 的效能改善 |Microsoft Docs
+title: 示範：記憶體內部 OLTP 的效能改善 | Microsoft 文件
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071783"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>示範：記憶體內部 OLTP 的效能改善
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>示範：記憶體中 OLTP 的效能改善
   此範例說明使用記憶體中 OLTP 時的效能改進，方法是比較對記憶體最佳化和傳統以磁碟為基礎的資料表執行相同的 Transact-SQL 查詢時，兩者的回應時間有何差異。 此外也會建立原生編譯的預存程序 (根據相同的查詢)，然後執行以示範您通常在使用原生編譯的預存程序來查詢記憶體最佳化資料表時，可獲得最佳的回應時間。 此範例僅顯示在記憶體最佳化資料表中存取資料時的其中一個效能改進層面；即執行插入時的資料存取效率。 此範例為單一執行緒且未利用記憶體中 OLTP 的並行優點。 工作負載若是使用並行作業，將會有更高幅度的效能提升。  
   
 > [!NOTE]  
@@ -182,13 +182,13 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
  預期的結果會提供實際的回應時間，顯示使用記憶體最佳化資料表和原生編譯的預存程序，為何通常在回應時間上都可優於針對傳統以磁碟為基礎的資料表執行相同的工作負載。  
   
 ## <a name="see-also"></a>另請參閱  
- [為了示範記憶體內部 OLTP 的 AdventureWorks 延伸模組](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
- [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](in-memory-oltp-in-memory-optimization.md)   
- [記憶體最佳化資料表](memory-optimized-tables.md)   
+ [示範記憶體內部 OLTP 的 AdventureWorks 擴充功能](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
+ [記憶體內部 OLTP &#40;記憶體內部優化&#41;](in-memory-oltp-in-memory-optimization.md)   
+ [記憶體優化資料表](memory-optimized-tables.md)   
  [原生編譯的預存程序](natively-compiled-stored-procedures.md)   
- [使用記憶體最佳化資料表的需求](requirements-for-using-memory-optimized-tables.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [使用記憶體優化資料表的需求](requirements-for-using-memory-optimized-tables.md)   
+ [建立資料庫 &#40;SQL Server Transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
- [CREATE PROCEDURE 和記憶體最佳化的資料表](/sql/t-sql/statements/create-procedure-transact-sql)  
+ [建立程式和記憶體優化資料表](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_configure & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_syspolicy_configure （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5aa9801d312e5f862cb6274659496aff10c774ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010503"
 ---
-# <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
+# <a name="sp_syspolicy_configure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   設定以原則為基礎的管理設定，例如是否啟用以原則為基礎的管理。  
@@ -40,9 +40,9 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'name'` 是您想要設定之設定的名稱。 *名稱*已**sysname**、 為必要項，並不能是 NULL 或空字串。  
+`[ @name = ] 'name'`這是您想要設定的設定名稱。 *name*是**sysname**，必須是，而且不能是 Null 或空字串。  
   
- *名稱*可以是下列值之一：  
+ *名稱*可以是下列任何值：  
   
 -   'Enabled' - 判斷是否啟用以原則為基礎的管理。  
   
@@ -50,35 +50,35 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess' - 指定以原則為基礎的管理是否會記錄成功的原則評估。  
   
-`[ @value = ] value` 為指定的值相關聯的值*名稱*。 *值*已**sql_variant**，而且需要。  
+`[ @value = ] value`這是與指定的*名稱*值相關聯的值。 *值*為**SQL_variant**，且為必要。  
   
--   如果您指定 'Enabled'*名稱*，您可以使用下列值：  
+-   如果您為 [*名稱*] 指定 [Enabled]，可以使用下列其中一個值：  
   
     -   0 = 停用以原則為基礎的管理  
   
     -   1 = 啟用以原則為基礎的管理  
   
--   如果您指定 'HistoryRententionInDays'*名稱*，成為整數值中指定的天數。  
+-   如果您為 [*名稱*] 指定 ' HistoryRententionInDays '，請將天數指定為整數值。  
   
--   如果您指定 'LogOnSuccess'*名稱*，您可以使用下列值：  
+-   如果您為 [*名稱*] 指定 ' LogOnSuccess '，您可以使用下列其中一個值：  
   
     -   0 = 只記錄失敗的原則評估。  
   
     -   1 = 成功和失敗的原則評估都會記錄。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
  您必須在 msdb 系統資料庫的內容中執行 sp_syspolicy_configure。  
   
  若要檢視這些設定的目前值，請查詢 msdb.dbo.syspolicy_configuration 系統檢視表。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 PolicyAdministratorRole 固定資料庫角色中的成員資格。  
   
 > [!IMPORTANT]  
->  可能會提高認證：PolicyAdministratorRole 角色中的使用者可以建立伺服器觸發程序以及排程可能會影響作業的執行個體的原則執行[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 例如，PolicyAdministratorRole 角色中的使用者可以建立防止在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中建立大部分物件的原則。 由於可能會提高認證，因此 PolicyAdministratorRole 角色應該只授與可控制 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態的受信任使用者。  
+>  可能會提高認證：PolicyAdministratorRole 角色中的使用者可以建立伺服器觸發程序以及排程可能會影響 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體作業的原則執行。 例如，PolicyAdministratorRole 角色中的使用者可以建立防止在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中建立大部分物件的原則。 由於可能會提高認證，因此 PolicyAdministratorRole 角色應該只授與可控制 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態的受信任使用者。  
   
 ## <a name="examples"></a>範例  
  下列範例會啟用以原則為基礎的管理。  
@@ -109,9 +109,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [以原則為基礎的管理預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_set_config_enabled &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
- [sp_syspolicy_set_config_history_retention &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
- [sp_syspolicy_set_log_on_success &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-log-on-success-transact-sql.md)  
+ [以原則為基礎的管理預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_set_config_enabled &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
+ [sp_syspolicy_set_config_history_retention &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
+ [sp_syspolicy_set_log_on_success &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-log-on-success-transact-sql.md)  
   
   

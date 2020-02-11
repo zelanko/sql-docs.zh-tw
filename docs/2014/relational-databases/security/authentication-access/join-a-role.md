@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d1c846f7ed60bbecac64021e9a881312e1f1f64c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011350"
 ---
 # <a name="join-a-role"></a>加入角色
@@ -43,7 +43,7 @@ ms.locfileid: "63011350"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要將角色指派給登入和資料庫使用，使用：**  
   
@@ -59,10 +59,10 @@ ms.locfileid: "63011350"
   
 -   您可以在 sys.database_role_members 和 sys.database_principals 目錄檢視中，看到資料庫角色。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
- 需要`ALTER ANY ROLE`資料庫上的權限`ALTER`權限的角色或中的成員資格**db_securityadmin**。  
+ 需要`ALTER ANY ROLE`資料庫的許可權、 `ALTER`角色的許可權，或**db_securityadmin**的成員資格。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -76,9 +76,9 @@ ms.locfileid: "63011350"
   
 4.  以滑鼠右鍵按一下要編輯的角色，並且選取 [屬性]  。  
   
-5.  在 **伺服器角色屬性-** _server_role_name_對話方塊中，於**成員**頁面上，按一下**新增**。  
+5.  在 [**伺服器角色屬性-**_server_role_name_ ] 對話方塊的 [**成員**] 頁面上，按一下 [**新增**]。  
   
-6.  在 [選取伺服器登入或角色]  對話方塊中，於 [輸入要選取的物件名稱 (範例)]  底下輸入要加入至此伺服器角色的登入或伺服器角色。 或者，按一下 [瀏覽]  並選取 [瀏覽物件]  對話方塊中任何或所有可用的物件。 按一下 [ **[確定]** 以返回**伺服器角色屬性-** _server_role_name_ ] 對話方塊。  
+6.  在 [選取伺服器登入或角色]  對話方塊中，於 [輸入要選取的物件名稱 (範例)]  底下輸入要加入至此伺服器角色的登入或伺服器角色。 或者，按一下 [瀏覽]  並選取 [瀏覽物件]  對話方塊中任何或所有可用的物件。 按一下 **[確定**]，返回 [**伺服器角色屬性-**_server_role_name_ ] 對話方塊。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -98,9 +98,9 @@ ms.locfileid: "63011350"
   
 7.  以滑鼠右鍵按一下要編輯的角色，並且選取 [屬性]  。  
   
-8.  在 **資料庫角色屬性-** _database_role_name_對話方塊中，於**一般**頁面上，按一下**新增**。  
+8.  在 [**資料庫角色屬性-**_database_role_name_ ] 對話方塊的 [**一般**] 頁面中，按一下 [**新增**]。  
   
-9. 在 [選取資料庫使用者或角色]  對話方塊中，於 [輸入要選取的物件名稱 (範例)]  底下輸入要加入至此資料庫角色的登入或資料庫角色。 或者，按一下 [瀏覽]  並選取 [瀏覽物件]  對話方塊中任何或所有可用的物件。 按一下 [ **[確定]** 以返回**資料庫角色屬性-** _database_role_name_ ] 對話方塊。  
+9. 在 [選取資料庫使用者或角色]  對話方塊中，於 [輸入要選取的物件名稱 (範例)]  底下輸入要加入至此資料庫角色的登入或資料庫角色。 或者，按一下 [瀏覽]  並選取 [瀏覽物件]  對話方塊中任何或所有可用的物件。 按一下 **[確定**]，返回 [**資料庫角色屬性-**_database_role_name_ ] 對話方塊。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

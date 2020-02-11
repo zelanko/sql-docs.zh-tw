@@ -1,5 +1,5 @@
 ---
-title: 專案設定 （轉換） (SybaseToSQL) |Microsoft Docs
+title: 專案設定（轉換）（SybaseToSQL） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,146 +10,146 @@ ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5d4936638fc9e283caafffc2f2a7cfdbed396920
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028759"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>專案設定 (轉換) (SybaseToSQL)
-[轉換] 頁面**專案設定** 對話方塊中包含自訂 SSMA 如何轉換 Sybase Adaptive Server Enterprise (ASE) 語法來設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 的語法。  
+[**專案設定**] 對話方塊的 [轉換] 頁面包含自訂 SSMA 如何將 Sybase 調適型伺服器 ENTERPRISE （ASE） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]語法轉換為或 SQL Azure 語法的設定。  
   
-[轉換] 窗格位於**專案設定**並**預設專案設定**對話方塊：  
+[轉換] 窗格可在 [**專案設定**] 和 [**預設專案設定**] 對話方塊中使用：  
   
--   如果您想要在指定所有的 SSMA 專案設定**工具**功能表上，選取**預設專案設定**，按一下 **一般**在底部的左的窗格中，然後按一下**轉換**。  
+-   如果您想要指定所有 SSMA 專案的設定，請在 [**工具**] 功能表上，選取 [**預設專案設定**]，按一下左窗格底部的 **[一般**]，然後按一下 [**轉換**]。  
   
--   若要指定目前的專案中，設定**工具**功能表上，選取**專案設定**，按一下 **一般**底部的左窗格中，然後按一下  **轉換**。  
+-   若要指定目前專案的設定，請在 [**工具**] 功能表上，選取 [**專案設定**]，按一下左窗格底部的 **[一般**]，然後按一下 [**轉換**]。  
   
 ## <a name="miscellaneous-options"></a>其他選項  
 **@@ERROR**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 和 ASE 會使用不同的錯誤碼。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure 和 ASE 使用不同的錯誤碼。  
   
-使用此設定可指定類型的訊息 （「 警告 」 或 「 錯誤 」），在 [輸出] 或 [錯誤清單] 窗格中遇到的參考時顯示的 SSMA **@@ERROR**  ASE 程式碼中。  
+使用此設定來指定在 ASE 程式碼中遇到 **@@ERROR **的參考時，SSMA 顯示在 [輸出] 或 [錯誤清單] 窗格中的訊息類型（警告或錯誤）。  
   
--   如果您選取**轉換，並以警告標記**，SSMA 會轉換這些陳述式，並將它們標示的警告註解。  
+-   如果您選取 [**轉換] 和 [以警告標示**]，SSMA 會轉換語句，並以警告註解標記它們。  
   
--   如果您選取**含有錯誤標示**，SSMA 會跳過轉換和標記陳述式與錯誤註解。  
+-   如果您選取 [**標記錯誤**]，SSMA 將會略過轉換，並以錯誤註解標記語句。  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
-**預設/開放式模式：** 轉換，並以警告標記  
+**預設/開放式模式：** 具有警告的 Convert 和 mark  
   
-**完整模式：** 以錯誤標記  
+**完整模式：** 有錯誤的標記  
   
 **LIKE 運算子的轉換**  
-指定是否要轉換運算元，以符合 Sybase ASE 的行為類似。 重點是 Sybase 會修剪尾端空格的 like 模式。 因應措施是運算式的對最大有效位數的固定的長度資料類型進行轉換的右邊。  
+指定是否要轉換 LIKE 運算元，以符合 Sybase ASE 行為。 重點是，Sybase 會修剪類似模式中的尾端空白。 因應措施是將 right 運算式轉換成具有最大有效位數的固定長度資料類型。  
   
--   選取 **簡單的轉換**来轉換的運算式，而不需要任何更正。  
+-   選取 [**簡單轉換**] 以轉換運算式，而不進行任何更正。  
   
--   若要使用 ASE 行為選取**轉換成固定長度。**  
-  
-當您在 [模式] 方塊中選取轉換模式時，SSMA 會套用下列設定：  
-  
-**預設/開放式模式**:簡單的轉換  
-  
-**完整模式**:轉換成固定長度  
-  
-**轉換或轉型為數字類型的空字串**  
-指定如何處理空的或空白字串做為資料型別引數的數值類型的 CONVERT 或 CAST 運算式內。 此設定有下列選項：  
-  
--   選取 **簡單的轉換**来轉換的運算式，而不需要任何更正。  
-  
--   如果**空字串為零的數字**已選取，則字串參數 {s} 將取代案例 ltrim(rtrim({s})) 時 「 」 然後 0 else {s} 結束運算式  
+-   若要使用 ASE 行為，請選取 [**轉換成固定長度]。**  
   
 當您在 [模式] 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
-**預設/開放式模式**:簡單的轉換  
+**預設/開放式模式**：簡單轉換  
   
-**完整模式**:以零數值的空字串  
+**Full 模式**：轉換成固定長度  
   
-**NULL 串連**  
-此設定會指定如何將轉換與 NULL 串連的字串。 針對此特定的設定，就可以設定下列選項：  
+**將空字串轉換或轉換為數數值型別**  
+指定如何處理轉換或轉換運算式中的空白或空白字串，並以數數值型別做為資料類型引數。 此設定可使用下列選項：  
   
--   **換行 ISNULL 函數：** 如果設定此選項時，每個非常 'string_expression' 中串連會包裝與 ISNULL(string_expression) 和 Null 將會取代為空字串。  
+-   選取 [**簡單轉換**] 以轉換運算式，而不進行任何更正。  
+  
+-   如果選取**空字串做為零數值**，則在 "" then 0 else {s} 結束運算式時，字串參數 {s} 會取代為 case ltrim （{s}））  
+  
+當您在 [模式] 方塊中選取轉換模式時，SSMA 會套用下列設定：  
+  
+**預設/開放式模式**：簡單轉換  
+  
+**Full 模式**：空字串為零數值  
+  
+**Null 的串連**  
+此設定會指定如何將字串串連轉換成 Null。 您可以針對此特定設定來設定下列選項：  
+  
+-   **使用 ISNull 函數來包裝：** 如果設定此選項，串連中的每個非常數 ' string_expression ' 都會以 ISNull （string_expression）包裝，而 Null 會以空字串取代。  
   
 -   **保留目前的語法**  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
 **預設/開放式模式：** 保留目前的語法  
   
-**完整模式：** 換行 ISNULL 函數  
+**完整模式：** 使用 ISNull 函數包裝  
   
-**空字串轉換**  
-此設定會指定如何將空字串轉換。 針對此特定的設定，就可以設定下列選項：  
+**空字串的轉換**  
+此設定會指定如何轉換空字串。 您可以針對此特定設定來設定下列選項：  
   
 -   **以空格取代所有字串運算式**  
   
--   **以空格取代空的字串常數**  
+-   **以空格取代空字串常數**  
   
--   若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 的行為，選取**保留目前的語法**。  
+-   若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure 行為，請選取 [**保留目前的語法**]。  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
 **預設/開放式模式：** 保留目前的語法  
   
 **完整模式：** 以空格取代所有字串運算式  
   
-**轉換和轉換的二進位字串轉換**  
-數字的二進位值轉換可以在不同的平台上傳回不同的值。 例如，在 x86 處理器，CONVERT (integer，0x00000100) 會傳回在 ASE 中的 65536，以及使用中的 256 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此外，ASE 也會傳回位元組順序而異。  
+**轉換和轉換二進位字串轉換**  
+將二進位值轉換成數位，可以在不同的平臺上傳回不同的值。 例如，在 x86 處理器上，CONVERT （integer，0x00000100）會在 ASE 中傳回65536， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並在中傳回256。 根據位元組順序，ASE 也會傳回不同的值。  
   
-使用此設定，來控制如何 SSMA 會將轉換的轉換和包含二進位值的 CASE 運算式：  
+使用此設定來控制 SSMA 如何轉換包含二進位值的 CONVERT 和 CASE 運算式：  
   
--   選取 **簡單的轉換**轉換沒有任何警告或修正的運算式。 如果您知道 ASE 伺服器已不需要任何變更的二進位值的位元組順序，請使用此設定。  
+-   選取 [**簡單轉換**] 以轉換運算式，而不會出現任何警告或修正。 如果您知道 ASE 伺服器的位元組順序不需要任何二進位值的變更，請使用此設定。  
   
--   選取 **轉換，並更正**能夠轉換，並更正用於運算式上的 SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 常值常數的位元組順序會反轉。 將標示 （例如二進位變數和資料行） 的其他所有二進位值，但發生錯誤。 如果您知道 ASE 伺服器有需要變更為二進位值的位元組順序，請使用此值。  
+-   選取 [**轉換] 和 [更正**] 以讓 SSMA 轉換，並更正[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]運算式以用於。 常值常數中的位元組順序將會反轉。 所有其他的二進位值（例如二進位變數和資料行）都會標示錯誤。 如果您知道 ASE 伺服器具有需要變更二進位值的位元組順序，請使用此值。  
   
--   選取 **轉換，並以警告標記**有 SSMA 轉換並更正運算式，並標示所有轉換的警告註解的運算式。  
+-   選取 [**轉換] 和 [標記為警告**]，讓 SSMA 轉換並更正運算式，並以警告註解標記所有已轉換的運算式。  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
-**預設模式：** 轉換，並以警告標記  
+**預設模式：** 具有警告的 Convert 和 mark  
   
-**開放式的模式：** 簡單的轉換  
+**開放式模式：** 簡單轉換  
   
-**完整模式：** 轉換並更正  
+**完整模式：** 轉換和更正  
   
 **動態 SQL**  
-您可以使用此設定來指定 SSMA 在遇到 ASE 程式碼中的動態 SQL 時，要顯示在 [輸出] 或 [錯誤清單] 窗格中的訊息 （「 警告 」 或 「 錯誤 」） 的類型。  
+使用此設定可指定在 ASE 程式碼中遇到動態 SQL 時，SSMA 顯示在 [輸出] 或 [錯誤清單] 窗格中的訊息類型（警告或錯誤）。  
   
--   如果您選取**轉換，並以警告標記**，SSMA 會轉換動態 SQL，並將標示的警告註解的陳述式。  
+-   如果您選取 [**轉換] 和 [以警告標示**]，SSMA 會轉換動態 SQL 並將語句標記為警告批註。  
   
--   如果您選取**含有錯誤標示**，SSMA 會跳過轉換和標記陳述式與錯誤註解。  
+-   如果您選取 [**標記錯誤**]，SSMA 將會略過轉換，並以錯誤註解標記語句。  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
-**預設/開放式模式：** 轉換，並以警告標記  
+**預設/開放式模式：** 具有警告的 Convert 和 mark  
   
-**完整模式：** 以錯誤標記  
+**完整模式：** 有錯誤的標記  
   
-**等號比較檢查轉換**  
-在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure，如果的 ANSI_NULLS 設定為 on， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ 任何相等比較包含 null 值時，SQL Azure 會傳回 UNKNOWN。 如果 ANSI_NULLS 是 off 時，包含 null 值的相等比較，則為 true 時傳回相比較的資料行和運算式或兩個運算式都是 null。 預設值 （ANSINULL 關閉） Sybase ASE 等號比較行為類似[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 以 ANSI_NULLS OFF。  
+**相等檢查轉換**  
+在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/sql Azure 中，如果 ANSI_NullS 設定為 on， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當任何相等比較包含 null 值時，/sql AZURE 就會傳回 UNKNOWN。 如果 ANSI_NullS 為 off，則在比較的資料行和運算式或兩個運算式都是 null 時，包含 null 值的相等比較會傳回 true。 根據預設（ANSINull OFF），Sybase ASE 相等比較的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]運作方式類似/SQL Azure，ANSI_NullS 關閉。  
   
--   如果您選取**簡單的轉換**，SSMA 會將轉換的 ASE 程式碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 的語法，而不需額外的檢查 null 值。 如果 ANSI_NULLS 是 off，在使用這個設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure，或如果您想要修改每個案例為基礎的相等比較。  
+-   如果您選取 [**簡單轉換**]，SSMA 會將 ASE 程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代碼轉換成/SQL Azure 語法，而不需要額外檢查 null 值。 如果 ANSI_NullS 在/SQL Azure 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]關閉，或者您想要以每個案例為基礎修訂相等比較，請使用此設定。  
   
--   如果您選取**考慮 NULL 值**，SSMA 會藉由使用 IS NULL 和 IS NOT NULL 子句新增檢查 null 值。  
+-   如果您選取 [**考慮 null 值**]，SSMA 會使用 is Null 和 IS NOT Null 子句來新增 Null 值的檢查。  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
-**預設/開放式模式：** 簡單的轉換  
+**預設/開放式模式：** 簡單轉換  
   
-**完整模式：** 請考慮 NULL 值  
+**完整模式：** 考慮 Null 值  
   
 **格式字串**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 不會再支援*format_string* PRINT 和 RAISERROR 陳述式中的引數。 *Format_string*變數支援直接在字串中，將可置換的參數，並且將在執行階段參數。 相反地，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用字串常值或建置使用變數的字串中需要完整的字串。 如需詳細資訊，請參閱 「 列印 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 」 中的主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure 不再支援 PRINT 和 RAISERROR 語句中的*format_string*引數。 支援的*format_string*變數會將可取代的參數直接放在字串中，然後在執行時間取代參數。 相反地[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，需要使用字串常值或使用變數所建立的字串來要求完整字串。 如需詳細資訊，請參閱《線上[!INCLUDE[tsql](../../includes/tsql-md.md)]叢書》中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的「列印（）」主題。  
   
-當遇到 SSMA *format_string*引數，它可以建置字串常值使用的變數或建立新的變數並建立使用該變數的字串。  
+當 SSMA 遇到*format_string*引數時，可以使用變數建立字串常值，或建立新的變數，並使用該變數來建立字串。  
   
--   若要使用 PRINT 和 RAISERROR 函式的字串常值，請選取**建立新的字串**。  
+-   若要針對 PRINT 和 RAISERROR 函數使用字串常值，請選取 [**建立新字串**]。  
   
-    在此模式中，如果 PRINT 或 RAISERROR 陳述式不會使用預留位置和本機變數、 陳述式不變。 雙百分比字元 （%）會變更為單一的百分比字元 %列印字串常值中。  
+    在此模式中，如果 PRINT 或 RAISERROR 語句不使用預留位置和區域變數，則語句不會變更。 雙百分比字元（%%）會變更為列印字串常值中的單一百分比字元%。  
   
-    如果 PRINT 或 RAISERROR 陳述式會使用預留位置和一個或多個本機變數，如下列範例所示：  
+    如果 PRINT 或 RAISERROR 語句使用預留位置和一或多個本機變數，如下列範例所示：  
   
     ```  
     PRINT 'Total: %1!%%', @percent  
@@ -159,12 +159,12 @@ ms.locfileid: "68028759"
     ```  
     PRINT 'Total: '+ CAST(@percent AS varchar(max)) + '%'  
     ```  
-    如果*format_string*是變數，例如，下列陳述式中：  
+    如果*format_string*為變數，如下列語句所示：  
   
     ```  
     PRINT @fmt, @arg1, @arg2  
     ```  
-    SSMA 會無法執行簡單的字串轉換，並必須建立新的變數：  
+    SSMA 無法執行簡單的字串轉換，而且必須建立新的變數：  
   
     ```  
     DECLARE @print_format_1 varchar(max)  
@@ -178,13 +178,13 @@ ms.locfileid: "68028759"
         CAST (@arg2 AS varchar(max)))  
     PRINT @print_format_1  
     ```  
-    當使用**建立新的字串**模式中，SSMA 假設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]選項 CONCAT_NULL_YIELDS_NULL 為 OFF。 因此，SSMA 不會檢查 null 引數。  
+    當它使用 [**建立新的字串**模式] 時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA 會假設 CONCAT_Null_YIELDS_Null 的選項為 OFF。 因此，SSMA 不會檢查是否有 null 引數。  
   
--   若要建置新的變數，每個 PRINT 和 RAISERROR 陳述式，並再將該變數用於字串值的 SSMA，請選取**建立新的變數**。  
+-   若要讓 SSMA 為每個 PRINT 和 RAISERROR 語句建立新的變數，然後使用該變數作為字串值，請選取 [**建立新變數**]。  
   
-    在此模式中，如果 PRINT 或 RAISERROR 陳述式不會使用預留位置和區域變數，SSMA 會取代所有雙百分比字元 （%）使用單一的百分比字元來遵守[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 的語法。  
+    在此模式中，如果 PRINT 或 RAISERROR 語句不使用預留位置和區域變數，SSMA 會取代所有雙重百分比字元（%%）使用單一百分比字元來符合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure 語法。  
   
-    如果 PRINT 或 RAISERROR 陳述式會使用預留位置和一個或多個本機變數，如下列範例所示：  
+    如果 PRINT 或 RAISERROR 語句使用預留位置和一或多個本機變數，如下列範例所示：  
   
     ```  
     PRINT 'Total: %1!%%', @percent  
@@ -199,12 +199,12 @@ ms.locfileid: "68028759"
         ISNULL(CAST (@percent AS VARCHAR(max)), ''))  
     PRINT @print_format_1  
     ```  
-    如果*format_string*是變數，例如，下列陳述式中：  
+    如果*format_string*為變數，如下列語句所示：  
   
     ```  
     PRINT @fmt, @arg1, @arg2  
     ```  
-    SSMA 會建立新的變數，如下所示，檢查每個引數中的 null 值：  
+    SSMA 會建立新的變數，如下所示，在每個引數中檢查是否有 null 值：  
   
     ```  
     DECLARE @print_format_1 varchar(max)  
@@ -219,231 +219,231 @@ ms.locfileid: "68028759"
     PRINT @print_format_1  
     ```  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
-**預設/開放式模式：** 建立新的字串  
+**預設/開放式模式：** 建立新字串  
   
-**完整模式：** 建立新的變數  
+**完整模式：** 建立新變數  
   
-**明確值插入 timestamp 資料行**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 不支援外顯值插入 timestamp 資料行。  
+**將明確的值插入 timestamp 資料行**  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure 不支援將明確的值插入時間戳記資料行。  
   
--   若要排除的 INSERT 陳述式中的時間戳記資料行，請選取**排除資料行**。  
+-   若要從 INSERT 語句中排除 timestamp 資料行，請選取 [**排除資料行**]。  
   
--   在 INSERT 陳述式中的時間戳記資料行是每次列印一則錯誤訊息，請選取**含有錯誤標示**。 在此模式中，INSERT 陳述式不會被轉換，系統會以錯誤的註解標示。  
+-   若要在每次時間戳記資料行位於 INSERT 語句時列印錯誤訊息，請選取 [**標記錯誤**]。 在此模式中，不會轉換 INSERT 語句，而且會以錯誤註解標記。  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
 **預設/開放式模式：** 排除資料行  
   
-**完整模式：** 以錯誤標記  
+**完整模式：** 有錯誤的標記  
   
-**儲存程序中所定義的暫存物件**  
-此設定指定是否出現在程序的暫存物件定義應該儲存在來源中繼資料轉換期間。  
+**儲存程式中定義的暫存物件**  
+此設定會指定是否應該在轉換期間，將出現在程式中的暫存物件定義儲存在來源中繼資料中。  
   
--   選取 **是**儲存至中繼資料。  
+-   選取 **[是]** 以儲存至中繼資料。  
   
--   選取  **No**如果不需要存放物件。  
+-   如果不需要儲存物件，請選取 [**否**]。  
   
-**預設/開放式模式：** 是  
+**預設/開放式模式：** 是的  
   
-**完整模式：** 否  
+**完整模式：** 不  
   
 **Proxy 資料表轉換**  
-指定是否 ASE proxy 資料表轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 資料表或未轉換和程式碼會以錯誤的註解標記。  
+指定 ASE proxy 資料表是否轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure 資料表，或不會轉換，而且程式碼會以錯誤註解標記。  
   
--   選取 **轉換**來將 proxy 資料表轉換成一般的資料表。  
+-   選取 [**轉換**]，將 proxy 資料表轉換成一般資料表。  
   
--   選取 **含有錯誤標示**只是將 proxy 資料表程式碼使用錯誤註解。  
+-   選取 [**標記錯誤**]，直接將 proxy 資料表程式碼標示為錯誤批註。  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
-**預設/開放式/Full 模式：** 以錯誤標記  
+**預設/開放式/完整模式：** 有錯誤的標記  
   
-**RAISERROR 基底的訊息數目**  
-ASE 使用者訊息會儲存在每個資料庫。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者的郵件會集中儲存並可透過**sys.messages**目錄檢視。 除了 ASE 使用者訊息開始 20000，但[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開始 50001 的錯誤訊息。  
+**RAISERROR 基底訊息編號**  
+ASE 使用者訊息會儲存在每個資料庫中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者訊息會集中儲存，並可透過**sys.databases**目錄檢視取得。 此外，ASE 使用者訊息會從20000開始， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]但錯誤訊息會從50001開始。  
   
-此設定會指定要新增要將它轉換成的 ASE 使用者訊息數目的數字[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者訊息。 如果您[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具有使用者訊息**sys.messages**目錄檢視中，您可能必須變更此數字較高的值。 這是讓轉換後的訊息數字未與現有的訊息編號衝突。  
+此設定會指定要新增至 ASE 使用者訊息編號的數位，以將它轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]成使用者訊息。 如果您[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的使用者訊息位於**sys.databases**目錄檢視中，您可能必須將此數位變更為較高的值。 如此一來，轉換後的訊息編號就不會與現有的訊息號碼衝突。  
   
-請注意下列事項：  
+請注意：  
   
--   ASE 中的訊息 17000 19999 的範圍是從 sysmessages 系統資料表並不會轉換。  
+-   範圍17000-19999 中的 ASE 訊息來自于 sysmessages 系統資料表，而且不會轉換。  
   
--   如果 RAISERROR 陳述式中參考的訊息編號為常數，SSMA 會將常數，以判斷新的使用者訊息數目的基底的訊息數目。  
+-   如果 RAISERROR 語句中所參考的訊息編號是常數，SSMA 會將基底訊息編號加入至常數，以判斷新的使用者訊息編號。  
   
--   如果變數或運算式所參考的訊息編號，SSMA 會建立中繼的本機變數。  
+-   如果所參考的訊息編號是變數或運算式，則 SSMA 會建立中繼區域變數。  
   
--   在開放式模式中，SSMA 假設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]選項 CONCAT_NULL_YIELDS_NULL 已關閉，而且可為 null 的引數不會檢查。  
+-   在開放式模式中，SSMA 會假設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]選項 CONCAT_Null_YIELDS_Null 為關閉，且不會檢查 Null 引數。  
   
--   在完整模式中，SSMA 會檢查 null 引數。  
+-   在完整模式中，SSMA 會檢查是否有 null 引數。  
   
--   RAISERROR 與 ERRORDATA*清單*不會被轉換。  
+-   未轉換具有 ERRORDATA*清單*的 RAISERROR。  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
-**預設/開放式/Full 模式：** 30001  
+**預設/開放式/完整模式：** 30001  
   
 **系統物件**  
-您可以使用此設定來指定 SSMA 在遇到使用 ASE 系統物件時，要顯示在 [輸出] 或 [錯誤清單] 窗格中的訊息 （「 警告 」 或 「 錯誤 」） 的類型。  
+使用此設定可指定 SSMA 在遇到 ASE 系統物件的使用時，顯示在 [輸出] 或 [錯誤清單] 窗格中的訊息類型（警告或錯誤）。  
   
--   如果您選取**轉換，並以警告標記**，SSMA 會將轉換的系統物件的參考，並會標示警告註解的陳述式。  
+-   如果您選取 [**轉換] 和 [以警告標示**]，SSMA 會將參考轉換成系統物件，並將具有警告批註的語句標記為。  
   
--   如果您選取**含有錯誤標示**，SSMA 不會將轉換的系統物件的參考，並會將標示為使用錯誤註解的陳述式。  
+-   如果您選取 [**標記錯誤**]，SSMA 將不會轉換系統物件的參考，而且會標示具有錯誤批註的語句。  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
-**預設/開放式模式：** 轉換，並以警告標記  
+**預設/開放式模式：** 具有警告的 Convert 和 mark  
   
-**完整模式：** 以錯誤標記  
+**完整模式：** 有錯誤的標記  
   
-**無法解析識別項**  
-您可以使用此設定來指定 SSMA 會顯示在 [輸出] 或 [錯誤清單] 窗格中，當無法解析識別項的訊息 （「 警告 」 或 「 錯誤 」） 的類型。  
+**無法解析的識別碼**  
+使用此設定可指定 SSMA 在無法解析識別碼時，顯示在 [輸出] 或 [錯誤清單] 窗格中的訊息類型（警告或錯誤）。  
   
--   如果您選取**轉換，並以警告標記**，SSMA 會嘗試轉換無法解析識別項參考，並會標示警告註解的陳述式。  
+-   如果您選取 [**轉換] 和 [以警告標示**]，SSMA 會嘗試將參考轉換為無法解析的識別碼，並將具有警告批註的語句標記為。  
   
--   如果您選取**含有錯誤標示**，SSMA 不會轉換無法解析識別項參考，並會將標示為使用錯誤註解的陳述式。  
+-   如果您選取 [**標記錯誤**]，SSMA 將不會將參考轉換為無法解析的識別碼，而且會將具有錯誤批註的語句標記為。  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
-**預設/開放式模式：** 轉換，並以警告標記  
+**預設/開放式模式：** 具有警告的 Convert 和 mark  
   
-**完整模式：** 以錯誤標記  
+**完整模式：** 有錯誤的標記  
   
-## <a name="system-function-options"></a>系統函式選項  
-**CHARINDEX 函式**  
-在 ASE 中，則 CHARINDEX 會傳回 NULL，只有當輸入的所有運算式都是 NULL。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ 如果任何輸入的運算式為 NULL，SQL Azure 會傳回 NULL。  
+## <a name="system-function-options"></a>系統函數選項  
+**CHARINDEX 函數**  
+在 ASE 中，只有在所有輸入運算式都是 Null 時，CHARINDEX 才會傳回 Null。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果任何輸入運算式為 Null，則 SQL Azure 會傳回 Null。  
   
--   若要使用 ASE 行為，請選取**Replace 函式**。 CHARINDEX 函式所有呼叫會使用 CHARINDEX_VARCHAR 或 CHARINDEX_NVARCHAR 根據傳遞的參數型別 （在中建立結構描述名稱 's2ss' 的使用者資料庫） 來模擬 Sybase ASE 行為的使用者定義函式的呼叫都取代。  
+-   若要使用 ASE 行為，請選取 [**取代**函式]。 所有對 CHARINDEX 函式的呼叫都會以 CHARINDEX_VARCHAR 或 CHARINDEX_NVARCHAR 使用者定義函式的呼叫來取代，這是根據傳遞的參數類型（在架構名稱的 2ss ' 底下的使用者資料庫中建立）來模擬 Sybase ASE 行為。  
   
--   若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 的行為，選取**保留目前的語法**。  
+-   若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure 行為，請選取 [**保留目前的語法**]。  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
 **預設/開放式模式：** 保留目前的語法  
   
-**完整模式：** 取代函式  
+**完整模式：** Replace 函式  
   
 **DATALENGTH 函數**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] / SQL Azure 和 ASE 的單一空格的值時，DATALENGTH 函數所傳回的值不同。 在此情況下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 會傳回 0，ASE 會傳回 1。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當值為單一空格時，DATALENGTH 函數所傳回的值會有所不同/SQL Azure 和 ASE。 在此情況下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，/SQL Azure 會傳回0，而 ASE 會傳回1。  
   
--   若要使用 ASE 行為，請選取**Replace 函式**。 若要模擬 Sybase ASE 行為的 CASE 運算式會替換 DATALENGTH 函式所有呼叫。  
+-   若要使用 ASE 行為，請選取 [**取代**函式]。 所有對 DATALENGTH 函式的呼叫都會以 CASE 運算式來取代，以模擬 Sybase ASE 行為。  
   
--   若要使用預設值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 的行為，選取**保留目前的語法**。  
+-   若要使用預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure 行為，請選取 [**保留目前的語法**]。  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
 **預設/開放式模式：** 保留目前的語法  
   
-**完整模式：** 取代函式  
+**完整模式：** Replace 函式  
   
 **INDEX_COL 函數**  
-ASE 支援選擇性*user_id*引數，INDEX_COL 函式; 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 不支援這個引數。 如果您使用*user_id*引數，此函式不能轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 的語法。  
+ASE 支援 INDEX_COL 函數的選擇性*user_id*引數;不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure 不支援此引數。 如果您使用*user_id*引數，則此函式無法轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]成/SQL Azure 語法。  
   
--   若要使用 ASE 行為，請選取**Convert 函數**。 如果包含的程式碼*user_id*引數，SSMA 會顯示錯誤。  
+-   若要使用 ASE 行為，請選取 [**轉換函數**]。 如果程式碼包含*user_id*引數，SSMA 將會顯示錯誤。  
   
--   若要顯示的錯誤訊息，每次在遇到該 INDEX_COL，請選取**含有錯誤標示**。 SSMA 會將轉換的函式的參考，並會將標示為錯誤的註解的陳述式。  
+-   若要在每次遇到 INDEX_COL 時顯示錯誤訊息，請選取 [**標記錯誤**]。 SSMA 不會將參考轉換為函式，且會將具有錯誤批註的語句標記為。  
   
-**預設/開放式/Full 模式：** 以錯誤標記  
+**預設/開放式/完整模式：** 有錯誤的標記  
   
 **INDEX_COLORDER 函式**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 並沒有 INDEX_COLORDER 系統函式。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure 沒有 INDEX_COLORDER 的系統函數。  
   
--   若要使用 ASE 行為，請選取**Convert 函數**。 INDEX_COLORDER 函式所有呼叫會使用相同的名稱 （結構描述名稱 's2ss' 下的使用者資料庫中建立） 的 INDEX_COLORDER 可模擬 Sybase ASE 行為的使用者定義函式的呼叫都取代。  
+-   若要使用 ASE 行為，請選取 [**轉換函數**]。 對 INDEX_COLORDER 函式的所有呼叫都會以呼叫使用者定義 INDEX_COLORDER 函數（在架構名稱為 2ss ' 的使用者資料庫中建立）來取代，以模擬 Sybase ASE 行為。  
   
--   若要列印一則錯誤訊息，每次在遇到該 INDEX_COLORDER，請選取**含有錯誤標示**。 SSMA 會將轉換的函式的參考，並會將標示為錯誤的註解的陳述式。  
+-   若要在每次遇到 INDEX_COLORDER 時列印錯誤訊息，請選取 [**標記錯誤**]。 SSMA 不會將參考轉換為函式，且會將具有錯誤批註的語句標記為。  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
-**預設/開放式/Full 模式：** 以錯誤標記  
+**預設/開放式/完整模式：** 有錯誤的標記  
   
-**LEFT 和 RIGHT 函式**  
-左邊和右邊的函式在 Sybase 中行為不同負數長度參數。  
+**LEFT 和 RIGHT 函數**  
+Sybase 中的 Left 和 Right 函式會以不同的方式來表示負值長度參數。  
   
--   若要使用 ASE 行為，請選取**取代的函式**。 長度參數取代使用 CASE 運算式會傳回負數的值為 null。  
+-   若要使用 ASE 行為，請選取 [**取代**函式]。 然後，會以 CASE 運算式取代 length 參數，這會傳回負數值的 null。  
   
--   若要使用 SQL Server 行為，請選取**保留目前的語法**  
+-   若要使用 SQL Server 行為，請選取 [**保留目前的語法**]  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
 **預設/開放式模式：** 保留目前的語法  
   
-**完整模式：** 取代函式  
+**完整模式：** Replace 函式  
   
 > [!NOTE]  
-> 如果常值，而不是複雜運算式的長度參數，長度值會一律會取代 null，不論專案設定。  
+> 如果 length 參數是常值，而不是複雜運算式，則不論專案設定，長度值一律會以 null 取代。  
   
 **NEXT_IDENTITY 函式**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 並沒有 NEXT_IDENTITY 系統函式。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure 沒有 NEXT_IDENTITY 的系統函數。  
   
--   若要使用 ASE 行為，請選取**轉換的函式**。 NEXT_IDENTITY 函式所有呼叫都取代運算式 （IDENT_CURRENT(parameter Value) + IDENT_INCR(parameter Value) 可模擬 Sybase ASE 行為。  
+-   若要使用 ASE 行為，請選取 [**轉換函數**]。 NEXT_IDENTITY 函式的所有呼叫都會以運算式（IDENT_CURRENT （參數值） + IDENT_INCR （參數值）取代，這會模擬 Sybase ASE 行為。  
   
--   若要列印一則錯誤訊息，每次在遇到該 NEXT_IDENTITY，請選取**含有錯誤標示**。 SSMA 會將轉換的函式的參考，並會將標示為錯誤的註解的陳述式。  
+-   若要在每次遇到 NEXT_IDENTITY 時列印錯誤訊息，請選取 [**標記錯誤**]。 SSMA 不會將參考轉換為函式，且會將具有錯誤批註的語句標記為。  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
-**預設/開放式/Full 模式：** 以錯誤標記  
+**預設/開放式/完整模式：** 有錯誤的標記  
   
-**PATINDEX 函式**  
-指定是否要將轉換 PATINDEX 函式，以符合 Sybase ASE 的行為。 重點是 Sybase 會修剪尾端空格的搜尋模式。 因應措施是對型別轉換為固定長度資料類型最大有效位數，並套用 rtrim 函式可搜尋模式的值運算式。  
+**PATINDEX 函數**  
+指定是否要轉換 PATINDEX 函式，以符合 Sybase ASE 行為。 重點是，Sybase 會修剪搜尋模式中的尾端空白。 因應措施是將值運算式轉換成具有最大精確度的固定長度資料類型，並將 rtrim 函數套用至搜尋模式。  
   
--   若要使用 ASE 行為 select**使用**。  
+-   若要使用 ASE 行為，請選取 [**使用**]。  
   
--   若要使用預設值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 的行為，選取**請勿使用**。  
+-   若要使用預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure 行為，請選取 [**不使用**]。  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
-**預設/開放式模式：** 請勿使用  
+**預設/開放式模式：** 不要使用  
   
 **完整模式：** 使用  
   
-**REPLICATE 函式**  
-REPLICATE 函式會重複指定次數的字串。 在 ASE 中，如果您指定要重複字串多次，則結果為 null。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure，結果為空字串。  
+**REPLICATE 函數**  
+複寫函數會以指定的次數重複字串。 在 ASE 中，如果您指定要重複字串零次，結果會是 null。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure 中，結果是空字串。  
   
--   若要使用 ASE 行為，請選取**Replace 函式**。 複寫函式所有呼叫會使用 REPLICATE_VARCHAR 或 REPLICATE_NVARCHAR 根據傳遞的參數型別 （在中建立結構描述名稱 's2ss' 的使用者資料庫） 來模擬 Sybase ASE 行為的使用者定義函式的呼叫都取代。  
+-   若要使用 ASE 行為，請選取 [**取代**函式]。 所有對複寫函式的呼叫都會以 REPLICATE_VARCHAR 或 REPLICATE_NVARCHAR 使用者定義函數的呼叫來取代，這是根據傳遞的參數類型（在架構名稱的 2ss ' 底下的使用者資料庫中建立）來模擬 Sybase ASE 行為。  
   
--   若要使用預設值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 的行為，選取**取代函式**。  
+-   若要使用預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure 行為，請選取 [**取代函數**]。  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
-**預設/開放式模式/Full 模式：** 取代函式  
+**預設/開放式模式/完整模式：** Replace 函式  
   
-**TRIM （LTRIM、 RTRIM） 函式**  
-此設定指定是否將 Trim （LTRIM、 RTRIM） 函式的呼叫取代 Sybase ASE-對等項目語法函式，或保留目前的語法。 針對此特定的設定有下列選項：  
+**TRIM （LTRIM，RTRIM）函數**  
+此設定會指定是否要將 Trim （LTRIM，RTRIM）函數的呼叫取代為 Sybase ASE 對等語法函式，或保留目前的語法。 此特定設定有下列選項：  
   
--   **取代函式**  
+-   **Replace 函式**  
   
 -   **保留目前的語法**  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
-**預設/開放式模式/Full 模式：** 取代函式  
+**預設/開放式模式/完整模式：** Replace 函式  
   
-**SUBSTRING 函式**  
-在 ASE 中，此函式`SUBSTRING(expression, start, length)`指定開始值大於運算式中的字元數，則長度會等於零，則傳回 NULL。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 對等的運算式會傳回空字串。  
+**SUBSTRING 函數**  
+在 ASE 中，如果`SUBSTRING(expression, start, length)`指定的起始值大於 expression 中的字元數，或長度等於零，此函數會傳回 Null。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure 中，對等運算式會傳回空字串。  
   
--   若要使用 ASE 行為，請選取**Replace 函式**。 SUBSTRING 函式所有呼叫會使用 SUBSTRING_VARCHAR SUBSTRING_NVARCHAR 或 SUBSTRING_VARBINARY 傳遞 （結構描述名稱 's2ss' 的使用者資料庫中建立），來模擬的參數類型為基礎的使用者定義函式的呼叫都取代Sybase ASE 行為。  
+-   若要使用 ASE 行為，請選取 [**取代**函式]。 所有對 SUBSTRING 函式的呼叫都會以 SUBSTRING_VARCHAR 或 SUBSTRING_NVARCHAR 或 SUBSTRING_VARBINARY 使用者定義函數的呼叫來取代，這是根據傳遞的參數類型（在架構名稱的 2ss ' 底下的使用者資料庫中建立）來模擬Sybase ASE 行為。  
   
--   若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 的行為，選取**保留目前的語法**。  
+-   若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure 行為，請選取 [**保留目前的語法**]。  
   
-當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
+當您在 [**模式]** 方塊中選取轉換模式時，SSMA 會套用下列設定：  
   
 **預設/開放式模式：** 保留目前的語法  
   
-**完整模式：** 取代函式  
+**完整模式：** Replace 函式  
   
 ## <a name="tables"></a>TABLES  
-**加入主索引鍵**  
-建立新的主索引鍵中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料表，如果 Access 資料表沒有主索引鍵或唯一索引。  
+**新增主要金鑰**  
+如果 Access 資料表沒有主鍵或唯一[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]索引，則在或 SQL Azure 資料表中建立新的主要金鑰。  
   
--   **預設模式**:False  
+-   **預設模式**： False  
   
--   **開放式模式**:False  
+-   **開放式模式**： False  
   
--   **完整模式**:True  
+-   **完整模式**： True  
   
 > [!NOTE]  
-> 當連接到 SQL Azure，這是預設為 True。  
+> 連線到 SQL Azure 時，預設為 True。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用者介面參考&#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
+[&#40;SybaseToSQL&#41;的使用者介面參考](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
   

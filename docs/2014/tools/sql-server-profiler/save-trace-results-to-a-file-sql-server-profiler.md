@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 206ba778a5c131ac4f9260ed37de63b29de86820
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63025685"
 ---
 # <a name="save-trace-results-to-a-file-sql-server-profiler"></a>將追蹤結果儲存至檔案 (SQL Server Profiler)
@@ -25,7 +25,7 @@ ms.locfileid: "63025685"
   
 ### <a name="to-save-trace-results-to-a-file"></a>若要將追蹤結果儲存至檔案  
   
-1.  在 [檔案]  功能表上按一下 [新增追蹤]  ，然後連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
+1.  在 [檔案]  功能表上，按一下 [新增追蹤]  ，接著連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
      會出現 [追蹤屬性] **[追蹤屬性]** 對話方塊。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63025685"
   
      [另存新檔]  對話方塊隨即出現。  
   
-4.  在 [另存新檔]  對話方塊中指定路徑和檔名。 按一下 **[儲存].**  
+4.  在 [另存新檔]  對話方塊中指定路徑和檔名。 按一下 [儲存]  。  
   
     > [!NOTE]  
     >  請確定 SQL Server 服務具有足夠的權限，可將檔案寫入指定的目錄。  

@@ -1,5 +1,5 @@
 ---
-title: WillConnect 事件 (ADO) |Microsoft Docs
+title: WillConnect 事件（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,16 +17,16 @@ ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fc1ac74e7e3d521bae587957f5f95771e5a5268
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67945852"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect 事件 (ADO)
-**WillConnect**連線開始前，會呼叫事件。  
+**WillConnect**事件會在連接開始之前呼叫。  
   
- **適用於：** [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ **適用于：** [CONNECTION 物件（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,32 +37,32 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
   
 #### <a name="parameters"></a>參數  
  *ConnectionString*  
- A**字串**，其中包含暫止連接的連接資訊。  
+ 包含暫止連接之連接資訊的**字串**。  
   
  *UserID*  
- A**字串**，其中包含暫止連線的使用者名稱。  
+ 包含暫止連接之使用者名稱的**字串**。  
   
  *密碼*  
- A**字串**，其中包含暫止連線的密碼。  
+ 包含暫止連接之密碼的**字串**。  
   
- *選項。*  
- A**長**值，指出提供者應該如何評估*ConnectionString*。 您只能選擇**adAsyncOpen**。  
+ *選項*  
+ 指出提供者應該如何評估*ConnectionString*的**Long**值。 您的唯一選項是**adAsyncOpen**。  
   
  *adStatus*  
  [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)狀態值。  
   
- 呼叫此事件時，此參數設為**adStatusOK**預設。 它會設定為**adStatusCantDeny**如果事件無法要求取消暫止的作業。  
+ 呼叫這個事件時，預設會將此參數設定為**adStatusOK** 。 如果事件無法要求取消暫止的作業，則會設定為**adStatusCantDeny** 。  
   
- 這個事件會傳回之前，請將此參數設定為**adStatusUnwantedEvent**以避免後續的通知。 將此參數設定為**adStatusCancel**要求造成此通知的取消連接作業。  
+ 在此事件傳回之前，請將此參數設定為**adStatusUnwantedEvent** ，以防止後續的通知。 將此參數設定為**adStatusCancel** ，以要求導致取消此通知的連接作業。  
   
  *pConnection*  
- [連線](../../../ado/reference/ado-api/connection-object-ado.md)物件套用此事件通知。 變更的參數**連接**依**WillConnect**事件處理常式不會影響**連接**。  
+ 套用此事件通知的[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。 **WillConnect**事件處理常式對**連接**的參數所做的變更，不會影響到**連接**。  
   
 ## <a name="remarks"></a>備註  
- 當**WillConnect**呼叫時， *ConnectionString*， *UserID*，*密碼*，以及*選項*參數會設定為建立方法的作業，導致此事件 （暫止的連接），並可以在之前的事件會傳回變更的值。 **WillConnect**可能會傳回取消暫止連接要求。  
+ 呼叫**WillConnect**時， *ConnectionString*、 *UserID*、 *Password*和*Options*參數會設定為造成此事件之作業所建立的值（擱置連接），而且可以在事件傳回之前變更。 **WillConnect**可能會傳回暫止的連接已取消的要求。  
   
- 當取消這個事件時， **ConnectComplete**用來呼叫其*adStatus*參數設定為**adStatusErrorsOccurred**。  
+ 當此事件取消時，將會呼叫**ConnectComplete** ，並將其*adStatus*參數設定為**adStatusErrorsOccurred**。  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [ADO 事件模型範例（VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)

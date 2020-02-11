@@ -1,5 +1,5 @@
 ---
-title: 步驟 5：測試第 4 課的教學課程封裝 |Microsoft Docs
+title: 步驟 5：測試第 4 課的教學課程封裝
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fab91a2df7d0401e8301589b1dd0d21027e579c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891284"
 ---
 # <a name="step-5-testing-the-lesson-4-tutorial-package"></a>步驟 5：測試第 4 課的教學課程封裝
@@ -30,11 +30,11 @@ ms.locfileid: "62891284"
   
  **控制流程**  
   
- ![套件中的控制流程](../../2014/tutorials/media/task4lesson2control.gif "套件中的控制流程")  
+ ![封裝中的控制流程](../../2014/tutorials/media/task4lesson2control.gif "封裝中的控制流程")  
   
  **資料流程**  
   
- ![套件中的資料流程](../../2014/tutorials/media/task5lesson5data.gif "套件中的資料流程")  
+ ![封裝中的資料流程](../../2014/tutorials/media/task5lesson5data.gif "封裝中的資料流程")  
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>若要執行第 4 課的教學課程封裝  
   

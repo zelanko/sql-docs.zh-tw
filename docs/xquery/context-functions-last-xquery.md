@@ -1,5 +1,5 @@
 ---
-title: last 函數 (XQuery) |Microsoft Docs
+title: last 函數（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 04cb465c5180b829ff7d125c1695c3865c3f33c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039000"
 ---
 # <a name="context-functions---last-xquery"></a>內容函式 - last (XQuery)
@@ -35,13 +35,13 @@ fn:last() as xs:integer
 ```  
   
 ## <a name="remarks"></a>備註  
- 在 SQL Server **fn:last()** 只能用於內容相依述詞的內容。 具體而言，它只能在括號 (`[ ]`) 內使用。  
+ 在 SQL Server 中， **fn： last （）** 只能用於內容相依述詞的內容中。 具體而言，它只能在括號 (`[ ]`) 內使用。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的 AdventureWorks 資料庫。  
+ 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存在 AdventureWorks 資料庫的各種**xml**類型資料行中。  
   
 ### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>A. 使用 last() XQuery 函數以擷取最後兩個製造步驟  
- 下列查詢會擷取特定產品型號的最後兩個製造步驟。 值，所傳回的製造步驟數目**last （)** 函式以擷取最後兩個製造步驟時，會在此查詢。  
+ 下列查詢會擷取特定產品型號的最後兩個製造步驟。 在此查詢中，會使用**最後一個（）** 函數所傳回的值（製造步驟數目）來抓取最後兩個製造步驟。  
   
 ```  
 SELECT ProductModelID, Instructions.query('   
@@ -59,7 +59,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- 在上述查詢中， **last （)** 函式中 /`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]`傳回製造步驟數目。 此值是用以擷取工作中心位置的最後一個製造步驟。  
+ 在上述查詢中，/`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]`中的**最後一個（）** 函數會傳回製造步驟的數目。 此值是用以擷取工作中心位置的最後一個製造步驟。  
   
  以下是結果：  
   
@@ -78,6 +78,6 @@ ProductModelID Result
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [針對 xml 資料類型的 XQuery 函式](../xquery/xquery-functions-against-the-xml-data-type.md)  
+ [針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 431124cff2fcf293ccf1e8e8bcb74321245a661e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032287"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 函數
   傳回電腦上所有可用的 SQL Server Express LocalDB 版本。  
   
- **標頭檔：** sqlncli.h  
+ **標頭檔：** sqlncli。h  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,10 +36,10 @@ ms.locfileid: "63032287"
   
 ## <a name="parameters"></a>參數  
  *pVersionNames*  
- [輸出]包含使用者的工作站可用 LocalDB 版本的名稱。  
+ 輸出包含使用者工作站上可用的 LocalDB 版本名稱。  
   
  *lpdwNumberOfVersions*  
- [輸入/輸出]在輸入上保存的版本中的位置數目*pVersionNames*緩衝區。   
+ [輸入/輸出]在輸入時，會保留*pVersionNames*緩衝區中版本的插槽數目。   
 在輸出時，保存現有 LocalDB 版本的數目。  
   
 ## <a name="returns"></a>傳回值  
@@ -56,10 +56,10 @@ ms.locfileid: "63032287"
  輸入緩衝區太短，且未要求截斷。  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
- 發生意外的錯誤。 請參閱事件記錄檔，以取得詳細資料。  
+ 發生意外錯誤。 請參閱事件記錄檔，以取得詳細資料。  
   
 ## <a name="remarks"></a>備註  
- 使用 LocalDB API 的程式碼範例，請參閱 < [SQL Server Express LocalDB 參考](../sql-server-express-localdb-reference.md)。  
+ 如需使用 LocalDB API 的程式碼範例，請參閱[SQL Server Express Localdb 參考](../sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Express LocalDB 標頭和版本資訊](sql-server-express-localdb-header-and-version-information.md)  

@@ -1,5 +1,5 @@
 ---
-title: 執行 SSMA 主控台 (SybaseToSQL) |Microsoft Docs
+title: 執行 SSMA 主控台（SybaseToSQL） |Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -19,31 +19,31 @@ ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029150"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>執行 SSMA 主控台 (SybaseToSQL)
-Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 SSMA 活動。 後續章節將詳細說明相同。  
+Microsoft 為您提供了一組健全的腳本檔案命令，以執行和控制 SSMA 活動。 後續章節會詳細說明相同的情況。  
   
-## <a name="script-file-commands"></a>指令碼檔案命令  
-主控台應用程式會使用某些標準的指令碼檔命令為列舉這一節。  
+## <a name="script-file-commands"></a>指令檔命令  
+主控台應用程式會使用本節中所列舉的特定標準腳本檔案命令。  
   
 ## <a name="project-commands"></a>專案命令  
-建立專案、 開啟、 儲存及結束專案的專案的命令控制代碼。  
+專案命令會處理建立專案、開啟、儲存和結束專案。  
   
 ### <a name="create-new-project"></a>create-new-project  
 此命令會建立新的 SSMA 專案。  
   
--   `project-folder` 表示取得建立之專案的資料夾。  
+-   `project-folder`表示要建立之專案的資料夾。  
   
--   `project-name` 表示專案的名稱。 {string}  
+-   `project-name`表示專案的名稱。 {string}  
   
--   `overwrite-if-exists`選擇性的屬性會指出是否應該覆寫現有的專案。 {布林值}  
+-   `overwrite-if-exists`選擇性屬性指出是否應該覆寫現有的專案。 true  
   
--   `project-type:`選擇性屬性。 表示專案類型，「 sql-server 2005 的 「 專案或 「 sql-server 2008 的 「 專案或 「 sql-server 2012 的 「 專案或 「 sql-server 2014 的 「 專案或 [sql azure] 專案。 預設值是 「 sql server-2008 年。 」  
+-   `project-type:`選擇性屬性。 表示專案類型，也就是 "sql-server-2005" 專案或 "sql-伺服器-2008" 專案或 "sql-伺服器-2012" 專案或 "sql----2014" 專案或 "sql-azure" 專案。 預設值為 "sql-server-2008"。  
   
 **語法範例：**  
   
@@ -59,16 +59,16 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
    project-type="<sql-server-2008/sql-server-2005/sql-server-2012/sql-server-2014/sql-azure>"  
 />  
 ```  
-' 覆寫-if-exists' 屬性是**false**預設。  
+屬性「覆寫-如果-exists」預設為**false** 。  
   
-[專案類型] 屬性是**sql server 2008**預設。  
+屬性 ' 專案類型 ' 預設為**sql-伺服器-2008** 。  
   
-### <a name="open-project"></a>開啟專案  
+### <a name="open-project"></a>開啟-專案  
 此命令會開啟專案。
 
--   `project-folder` 表示取得建立之專案的資料夾。 如果指定的資料夾不存在，則命令會失敗。  {string}  
+-   `project-folder`表示要建立之專案的資料夾。 如果指定的資料夾不存在，則此命令會失敗。  {string}  
   
--   `project-name` 表示專案的名稱。 如果指定的專案不存在，則命令會失敗。  {string}  
+-   `project-name`表示專案的名稱。 如果指定的專案不存在，則此命令會失敗。  {string}  
   
 **語法範例：**  
   
@@ -82,10 +82,10 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 />  
 ```  
 > [!NOTE]  
-> SSMA for SAP ASE 主控台應用程式支援回溯相容性。 您可以使用它來開啟 建立的前一版的 SSMA 專案。  
+> SSMA for SAP ASE 主控台應用程式支援回溯相容性。 您可以使用它來開啟先前版本 SSMA 所建立的專案。  
   
 ### <a name="save-project"></a>save-project  
-此命令會將儲存移轉專案。  
+此命令會儲存遷移專案。  
   
 **語法範例：**  
   
@@ -93,8 +93,8 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 <save-project/>  
 ```  
   
-### <a name="close-project"></a>關閉專案  
-此命令會關閉移轉專案。  
+### <a name="close-project"></a>關閉-專案  
+此命令會關閉 [遷移] 專案。  
   
 **語法範例：**  
   
@@ -103,21 +103,21 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
   if-modified="<save/error/ignore>"   (optional)  
 />  
 ```  
-「 如果修改 」 的屬性是選擇性的**忽略**預設。  
+屬性 ' if-modified ' 是選擇性的，預設為**忽略**。  
   
-## <a name="database-connection-commands"></a>資料庫連線命令  
-資料庫連接命令可以幫助連接到資料庫。  
+## <a name="database-connection-commands"></a>資料庫連接命令  
+資料庫連接命令有助於連接到資料庫。  
   
 > [!NOTE]  
-> - **瀏覽**主控台中不支援的 ui 功能。  
-> - 如需有關建立指令碼檔的詳細資訊，請參閱[建立指令碼檔案&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)。  
+> - 主控台不支援 UI 的**流覽**功能。  
+> - 如需「建立腳本檔」的詳細資訊，請參閱[&#40;SybaseToSQL&#41;建立腳本](../../ssma/sybase/creating-script-files-sybasetosql.md)檔。  
   
-### <a name="connect-source-database"></a>connect-source-database  
-此命令會執行來源資料庫的連接，並載入高層級的中繼資料的來源資料庫，而非全部的中繼資料。
+### <a name="connect-source-database"></a>連接-來源-資料庫  
+此命令會執行源資料庫的連接，並載入源資料庫的高階中繼資料，但不是所有中繼資料。
   
-如果無法建立來源的連接，則會產生錯誤和主控台應用程式會停止進一步執行。
+如果無法建立與來源的連接，則會產生錯誤，而且主控台應用程式會停止執行。
   
-從伺服器連線檔案或指令碼檔案的每個連線伺服器一節中所定義的名稱屬性，擷取伺服器定義。  
+伺服器定義是從伺服器連接檔案或腳本檔案之伺服器區段中的每個連接所定義的名稱屬性中取得。  
   
 **語法範例：**  
   
@@ -125,12 +125,12 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 <connect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="force-load-sourcetarget-database"></a>force-load-source/target-database  
-此命令會載入來源的中繼資料，且有助於處理離線移轉專案。  
+### <a name="force-load-sourcetarget-database"></a>強制載入-來源/目標-資料庫  
+此命令會載入來源中繼資料，並且適用于離線處理遷移專案。  
   
-如果無法建立來源/目標的連線，則會產生錯誤和主控台應用程式會停止進一步執行。  
+如果無法建立與來源/目標的連接，則會產生錯誤，而且主控台應用程式會停止執行。  
   
-此命令需要一個或多個的 metabase 節點做為命令列參數。  
+此命令需要一個或數個資料庫節點做為命令列參數。  
   
 **語法範例：**  
   
@@ -142,10 +142,10 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 </force-load>  
 ```  
   
-### <a name="reconnect-source-database"></a>reconnect-source-database  
-此命令會重新連線至來源資料庫，但不會載入與連接來源資料庫命令的任何中繼資料。  
+### <a name="reconnect-source-database"></a>重新連接-來源-資料庫  
+此命令會重新連接至源資料庫，但不會載入任何中繼資料，就像 [連接-來源-資料庫] 命令一樣。  
   
-如果 （重新） 與來源的連接無法建立，則會產生錯誤和主控台應用程式會停止進一步執行。  
+如果無法建立與來源的（re）連線，就會產生錯誤，而且主控台應用程式會停止執行。  
   
 **語法範例：**  
   
@@ -153,12 +153,12 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="connect-target-database"></a>connect-target-database  
-此命令會連線到目標 SQL Server 資料庫，並完全載入目標資料庫的高層級的中繼資料，但不是中繼資料。  
+### <a name="connect-target-database"></a>連接-目標-資料庫  
+此命令會連接到目標 SQL Server 資料庫，並載入目標資料庫的高階中繼資料，而不是整個中繼資料。  
   
-如果無法連線到目標，則會產生錯誤和主控台應用程式會停止進一步執行。  
+如果無法建立與目標的連接，則會產生錯誤，而且主控台應用程式會停止執行。  
   
-從伺服器連線檔案或指令碼檔案的每個連線伺服器一節中所定義的名稱屬性，擷取伺服器定義。  
+伺服器定義是從伺服器連接檔案或腳本檔案之伺服器區段中的每個連接所定義的名稱屬性中取得。  
   
 **語法範例：**  
   
@@ -166,11 +166,11 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 <connect-target-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="reconnect-target-database"></a>reconnect-target-database  
+### <a name="reconnect-target-database"></a>重新連接-目標-資料庫  
   
-此命令會重新連線到目標資料庫，但不會載入任何中繼資料，不同於連接目標資料庫命令。  
+此命令會重新連接至目標資料庫，但不會載入任何中繼資料，不同于連接目標資料庫命令。  
   
-如果 （重新） 連線到目標不能建立，則會產生錯誤和主控台應用程式會停止進一步執行。  
+如果無法建立（re）與目標的連接，則會產生錯誤，而且主控台應用程式會停止執行。  
   
 **語法範例：**  
   
@@ -179,35 +179,35 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 ```  
   
 ## <a name="report-commands"></a>報表命令  
-報表命令產生的各種 SSMA 主控台活動效能的報告。  
+報告命令會針對各種 SSMA 主控台活動的效能產生報告。  
   
-### <a name="generate-assessment-report"></a>generate-assessment-report  
+### <a name="generate-assessment-report"></a>產生-評量-報告  
   
-此命令會產生來源資料庫上的評估報告。  
+此命令會在源資料庫上產生評量報告。  
   
-如果執行此命令會產生錯誤，並在主控台應用程式結束之前，不會執行來源資料庫連接。  
+如果在執行此命令之前未執行源資料庫連接，則會產生錯誤並結束主控台應用程式。  
   
-無法連線至來源資料庫伺服器在命令執行時，也會導致終止的主控台應用程式。  
+在命令執行期間無法連接到源資料庫伺服器，也會導致終止主控台應用程式。  
   
--   `conversion-report-folder:` 指定可以儲存評定報表的資料夾。 （選擇性屬性）  
+-   `conversion-report-folder:`指定可儲存評量報告的資料夾。 （選擇性屬性）  
   
--   `object-name:` 指定考慮用於評估報表產生 （支援個別的物件名稱或群組物件名稱） 的物件。  
+-   `object-name:`指定針對評估報告產生所考慮的物件（支援個別物件名稱或群組物件名稱）。  
   
--   `object-type:` 指定物件中所呼叫的物件名稱屬性 （如果已指定物件類別，則物件類型會是 「 類別 」） 的類型。  
+-   `object-type:`指定物件名稱屬性中所呼叫物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
   
--   `conversion-report-overwrite:` 指定是否要覆寫評估報告資料夾，如果已經存在。  
+-   `conversion-report-overwrite:`指定是否要覆寫評估報告資料夾（如果已經存在）。  
   
-    **預設值：** ，則為 false。 （選擇性屬性）  
+    **預設值：** false。 （選擇性屬性）  
   
--   `write-summary-report-to:` 指定將產生報告的路徑。  
+-   `write-summary-report-to:`指定將產生報表的路徑。  
   
-    如果只提及，資料夾路徑，然後檔案名稱**AssessmentReport&lt;n&gt;。XML**建立。 （選擇性屬性）  
+    如果只提及資料夾路徑，則依名稱**&lt;AssessmentReport n&gt;。** 已建立 XML。 （選擇性屬性）  
   
-    報表建立具有兩個其他的子類別目錄：  
+    報表建立有兩個進一步的子類別：  
   
-    -   `report-errors` （="true/false"，預設值為"false"（也就是選擇性屬性））  
+    -   `report-errors`（= "true/false"，預設值為 "false" （選擇性屬性））  
   
-    -   `verbose` （="true/false"，預設值為"false"（也就是選擇性屬性））  
+    -   `verbose`（= "true/false"，預設值為 "false" （選擇性屬性））  
   
 **語法範例：**  
   
@@ -247,33 +247,33 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 </generate-assessment-report>  
 ```  
   
-## <a name="migration-commands"></a>移轉命令  
-[移轉] 命令將目標資料庫結構描述轉換成來源結構描述，並將資料移轉到目標伺服器。  
+## <a name="migration-commands"></a>遷移命令  
+遷移命令會將目標資料庫架構轉換成來源架構，並將資料移轉至目標伺服器。  
   
-### <a name="convert-schema"></a>convert-schema  
-此命令會執行從來源到目標結構描述的結構描述轉換。  
+### <a name="convert-schema"></a>轉換-架構  
+此命令會執行從來源到目標架構的架構轉換。  
   
-如果來源或目標資料庫連接不會執行此命令之前執行，或在來源或目標的 「 資料庫 」 伺服器的連線失敗命令執行期間，會產生錯誤，並在主控台應用程式結束。  
+如果在執行此命令之前未執行來源或目標資料庫連接，或來源或目標資料庫伺服器的連接在命令執行期間失敗，則會產生錯誤並結束主控台應用程式。  
   
--   `conversion-report-folder:` 指定可以在儲存評定報表的資料夾。 （選擇性屬性）  
+-   `conversion-report-folder:`指定可儲存評量報告的資料夾。 （選擇性屬性）  
   
--   `object-name:` 指定來源物件視為轉換結構描述 （支援個別的物件名稱或群組物件名稱）。  
+-   `object-name:`指定轉換架構時所考慮的來源物件（支援個別物件名稱或群組物件名稱）。  
   
--   `object-type:` 指定物件中所呼叫的物件名稱屬性 （如果已指定物件類別，則物件類型會是 「 類別 」） 的類型。  
+-   `object-type:`指定物件名稱屬性中所呼叫物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
   
--   `conversion-report-overwrite:` 指定是否要覆寫評估報告資料夾，如果已經存在。  
+-   `conversion-report-overwrite:`指定是否要覆寫評估報告資料夾（如果已經存在）。  
   
-    **預設值：** ，則為 false。 （選擇性屬性）  
+    **預設值：** false。 （選擇性屬性）  
   
--   `write-summary-report-to:` 指定產生的摘要報告的路徑。  
+-   `write-summary-report-to:`指定將產生摘要報告的路徑。  
   
-    如果只提及，資料夾路徑，然後檔案名稱**SchemaConversionReport&lt;n&gt;。XML**建立。 （選擇性屬性）  
+    如果只提及資料夾路徑，則依名稱**&lt;SchemaConversionReport n&gt;。** 已建立 XML。 （選擇性屬性）  
   
-    報表建立具有兩個其他的子類別目錄：  
+    報表建立有兩個進一步的子類別：  
   
-    -   `report-errors` （="true/false"，預設值為"false"（也就是選擇性屬性））  
+    -   `report-errors`（= "true/false"，預設值為 "false" （選擇性屬性））  
   
-    -   `verbose` （="true/false"，預設值為"false"（也就是選擇性屬性））  
+    -   `verbose`（= "true/false"，預設值為 "false" （選擇性屬性））  
   
 **語法範例：**  
   
@@ -311,22 +311,22 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 </convert-schema>  
 ```  
   
-### <a name="migrate-data"></a>migrate-data  
-此命令會將來源資料移轉至目標。  
+### <a name="migrate-data"></a>遷移-資料  
+此命令會將源資料移轉至目標。  
   
--   `object-name:` 指定來源物件視為移轉資料 （支援個別的物件名稱或群組物件名稱）。  
+-   `object-name:`指定針對遷移資料所考慮的來源物件（支援個別物件名稱或群組物件名稱）。  
   
--   `object-type:` 指定物件中所呼叫的物件名稱屬性 （如果已指定物件類別，則物件類型會是 「 類別 」） 的類型。  
+-   `object-type:`指定物件名稱屬性中所呼叫物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
   
--   `write-summary-report-to:` 指定將產生報告的路徑。  
+-   `write-summary-report-to:`指定將產生報表的路徑。  
   
-    如果只提及，資料夾路徑，然後檔案名稱**DataMigrationReport&lt;n&gt;。XML**建立。 （選擇性屬性）  
+    如果只提及資料夾路徑，則依名稱**&lt;DataMigrationReport n&gt;。** 已建立 XML。 （選擇性屬性）  
   
-    報表建立具有兩個其他的子類別目錄：  
+    報表建立有兩個進一步的子類別：  
   
-    -   `report-errors` （="true/false"，預設值為"false"（也就是選擇性屬性））  
+    -   `report-errors`（= "true/false"，預設值為 "false" （選擇性屬性））  
   
-    -   `verbose` （="true/false"，預設值為"false"（也就是選擇性屬性））  
+    -   `verbose`（= "true/false"，預設值為 "false" （選擇性屬性））  
   
 **語法範例：**  
   
@@ -365,18 +365,18 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
   report-errors="<true/false>" verbose="<true/false>"/>  
 ```  
   
-## <a name="migration-preparation-command"></a>移轉準備命令  
-開始在來源和目標資料庫之間的結構描述對應的移轉準備命令。  
+## <a name="migration-preparation-command"></a>遷移準備命令  
+[遷移準備] 命令會起始來源與目標資料庫之間的架構對應。  
   
 > [!NOTE]  
-> [移轉] 命令設定預設的主控台輸出會是 'Full' 輸出報表不詳細的錯誤報告：只有在來源物件樹狀結構根節點的摘要。  
+> 遷移命令的預設主控台輸出設定是「完整」輸出報告，沒有詳細的錯誤報表： [僅限來源物件樹狀結構根節點的摘要]。  
   
-### <a name="map-schema"></a>對應結構描述  
-這個命令會提供結構描述對應到目標結構描述的來源資料庫。  
+### <a name="map-schema"></a>對應架構  
+此命令提供源資料庫與目標架構的架構對應。  
   
--   `source-schema` 指定要移轉的來源結構描述。  
+-   `source-schema`指定要遷移的來源架構。  
   
--   `sql-server-schema` 指定將會移轉的來源結構描述的目標結構描述。  
+-   `sql-server-schema`指定要將來源架構遷移至其中的目標架構。  
   
 **語法範例：**  
   
@@ -386,32 +386,32 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 sql-server-schema="<target-schema>"/>  
 ```  
   
-## <a name="manageability-commands"></a>管理命令  
-管理能力命令可以幫助與來源資料庫同步處理目標資料庫物件。  
+## <a name="manageability-commands"></a>管理性命令  
+管理性命令有助於同步處理目標資料庫物件與源資料庫。  
   
 > [!NOTE]  
-> [移轉] 命令設定預設的主控台輸出會是 'Full' 輸出報表不詳細的錯誤報告：只有在來源物件樹狀結構根節點的摘要。  
+> 遷移命令的預設主控台輸出設定是「完整」輸出報告，沒有詳細的錯誤報表： [僅限來源物件樹狀結構根節點的摘要]。  
   
-### <a name="synchronize-target"></a>同步處理目標  
-此命令會使用目標資料庫，同步處理的目標物件。  
+### <a name="synchronize-target"></a>同步處理-目標  
+此命令會將目標物件與目標資料庫同步處理。  
  
-如果針對來源資料庫執行此命令時，發生錯誤。  
+如果此命令是針對源資料庫執行，就會發生錯誤。  
   
-如果目標資料庫連接不會再執行此命令執行，或在目標資料庫伺服器的連線失敗命令執行期間，會產生錯誤，則主控台應用程式結束。  
+如果在執行此命令之前未執行目標資料庫連接，或與目標資料庫伺服器的連接在命令執行期間失敗，則會產生錯誤並結束主控台應用程式。  
   
--   `object-name:` 指定同步處理目標資料庫 （支援個別的物件名稱或群組物件名稱） 被視為目標物件。  
+-   `object-name:`指定與目標資料庫進行同步處理時所考慮的目標物件（支援個別物件名稱或群組物件名稱）。  
   
--   `object-type:` 指定物件中所呼叫的物件名稱屬性 （如果已指定物件類別，則物件類型會是 「 類別 」） 的類型。  
+-   `object-type:`指定物件名稱屬性中所呼叫物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
   
--   `on-error:` 指定是否要指定同步處理錯誤視為警告或錯誤。 錯誤的可用選項：  
+-   `on-error:`指定是否要將同步處理錯誤指定為警告或錯誤。 發生錯誤的可用選項：  
   
-    -   report-total-as-warning  
+    -   報告--as 警告  
   
-    -   report-each-as-warning  
+    -   報告-每個警告  
   
-    -   失敗指令碼  
+    -   fail-腳本  
   
--   `report-errors-to:` 指定同步處理作業 （也就是選擇性屬性） 的錯誤報表的位置。 如果只指定資料夾路徑，然後檔案名稱**TargetSynchronizationReport.XML**建立。  
+-   `report-errors-to:`指定同步處理作業的錯誤報表位置（選擇性屬性）。 如果只指定資料夾路徑，則會建立依名稱**TargetSynchronizationReport**的檔案。  
   
 **語法範例：**  
   
@@ -453,26 +453,26 @@ fail-script>" (optional)
 </synchronize-target>  
 ```  
   
-### <a name="refresh-from-database"></a>refresh-from-database  
-此命令會重新整理資料庫的來源物件。  
+### <a name="refresh-from-database"></a>從資料庫重新整理  
+此命令會從資料庫重新整理來源物件。  
   
-如果針對目標資料庫執行此命令時，會產生錯誤。  
+如果此命令是針對目標資料庫執行，則會產生錯誤。  
   
-此命令需要一個或多個的 metabase 節點做為命令列參數。  
+此命令需要一個或數個資料庫節點做為命令列參數。  
   
--   `object-name:` 指定的來源物件，視為可重新整理從來源資料庫 （支援個別的物件名稱或群組物件名稱）。  
+-   `object-name:`指定從源資料庫重新整理所考慮的來源物件（支援個別物件名稱或群組物件名稱）。  
   
--   `object-type:` 指定的屬性中指定的物件名稱 （如果已指定物件類別，則物件類型會是 「 類別 」） 的物件型別。  
+-   `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
   
--   `on-error:` 指定是否要呼叫重新整理錯誤視為警告或錯誤。 錯誤的可用選項：  
+-   `on-error:`指定是否要將重新整理錯誤當做警告或錯誤來呼叫。 發生錯誤的可用選項：  
   
-    -   report-total-as-warning  
+    -   報告--as 警告  
   
-    -   report-each-as-warning  
+    -   報告-每個警告  
   
-    -   失敗指令碼  
+    -   fail-腳本  
   
--   `report-errors-to:` 指定的錯誤報表重新整理作業 （也就是選擇性屬性） 的位置。 如果只指定資料夾路徑，然後檔案名稱**SourceDBRefreshReport.XML**建立。  
+-   `report-errors-to:`指定重新整理作業的錯誤報表位置（選擇性屬性）。 如果只指定資料夾路徑，則會建立依名稱**SourceDBRefreshReport**的檔案。  
   
 **語法範例：**  
   
@@ -510,23 +510,23 @@ fail-script>" (optional)
 </refresh-from-database>  
 ```  
   
-## <a name="script-generation-commands"></a>指令碼產生命令  
-產生指令碼命令執行雙重工作： 它們說明將主控台輸出指令碼檔案的儲存及它們 T-SQL 輸出記錄至主控台或檔案，根據您指定的參數。  
+## <a name="script-generation-commands"></a>腳本產生命令  
+腳本產生命令會執行雙重工作：它們可協助您將主控台輸出儲存在腳本檔案中，並根據您指定的參數，將 T-sql 輸出記錄到主控台或檔案。  
   
-### <a name="save-as-script"></a>save-as-script  
-此命令用來儲存到檔案物件的指令碼所述當 metabase target。 我們取得的指令碼，並在目標資料庫上執行相同，這是替代同步處理命令。  
+### <a name="save-as-script"></a>另存新檔-腳本  
+此命令是用來將物件的腳本儲存到當 [中繼檔 = 目標] 時所提到的檔案。 這是 [同步處理] 命令的替代方法，我們會取得腳本，並在目標資料庫上執行相同的作業。  
   
-此命令需要一個或多個的 metabase 節點做為命令列參數。  
+此命令需要一個或數個資料庫節點做為命令列參數。  
   
--   `object-name:` 指定的物件的指令碼是儲存 （支援個別的物件名稱或群組物件名稱）。  
+-   `object-name:`指定要儲存其腳本的物件（支援個別物件名稱或群組物件名稱）。  
   
--   `object-type:` 指定物件中所呼叫的物件名稱屬性 （如果已指定物件類別，則物件類型會是 「 類別 」） 的類型。  
+-   `object-type:`指定物件名稱屬性中所呼叫物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
   
--   `metabase:` 指定是否在來源或目標 metabase。  
+-   `metabase:`指定它是否為來源或目標元資料庫。  
   
--   `destination:` 指定的路徑或指令碼必須儲存所在的資料夾。 如果未指定檔案名稱，則將提供格式 （object_name 屬性值）.out 中的檔案名稱。
+-   `destination:`指定必須儲存腳本的路徑或資料夾。 如果未提供檔案名，則會提供格式（object_name 屬性值）的檔案名。將會提供 out。
   
--   `overwrite:` 如果為 true，則它會覆寫相同的檔案名稱若有的話。 它可以有值 (true/false)。  
+-   `overwrite:`若為 true，則會覆寫相同的檔案名（如果存在的話）。 它可以有值（true/false）。  
   
 **語法範例：**  
   
@@ -561,36 +561,36 @@ fail-script>" (optional)
 </save-as-script>  
 ```  
   
-### <a name="convert-sql-statement"></a>convert-sql-statement
-此命令會將轉換的 SQL 陳述式。  
+### <a name="convert-sql-statement"></a>convert-sql 語句
+此命令會轉換 SQL 語句。  
   
--   `context` 指定的結構描述名稱。  
+-   `context`指定架構名稱。  
   
--   `destination` 指定輸出是否應該儲存在檔案中。  
+-   `destination`指定是否應該將輸出儲存在檔案中。  
   
-    如果未指定此屬性，則已轉換的 T-SQL 陳述式會顯示在主控台上。 （選擇性屬性）  
+    如果未指定這個屬性，則會在主控台上顯示轉換的 T-sql 語句。 （選擇性屬性）  
   
--   `conversion-report-folder` 指定可以儲存評定報表的資料夾。 （選擇性屬性）  
+-   `conversion-report-folder`指定可儲存評量報告的資料夾。 （選擇性屬性）  
   
--   `conversion-report-overwrite` 指定是否要覆寫評估報告資料夾，如果已經存在。  
+-   `conversion-report-overwrite`指定是否要覆寫評估報告資料夾（如果已經存在）。  
   
-    **預設值：** ，則為 false。 （選擇性屬性）  
+    **預設值：** false。 （選擇性屬性）  
   
--   `write-converted-sql-to` 應該儲存已轉換的 T-SQL 中指定的檔案 （或） 資料夾路徑。 與指定的資料夾路徑時`sql-files`屬性，每個原始程式檔有對應的目標指定的資料夾下建立的 T-SQL 檔案。 與指定的資料夾路徑時`sql`屬性，指定的資料夾下名為 Result.out 檔案寫入已轉換的 T-SQL。  
+-   `write-converted-sql-to`指定要儲存已轉換之 T-sql 的檔案（或）資料夾路徑。 當資料夾路徑與`sql-files`屬性一起指定時，每個原始程式檔都會在指定的資料夾下建立對應的目標 t-sql 檔案。 當資料夾路徑與`sql`屬性一併指定時，已轉換的 t-sql 會寫入名為 Result 的檔案中指定的資料夾底下。  
   
--   `sql` 指定要轉換的 Sybase sql 陳述式可以分隔一或多個陳述式，使用 「; 」  
+-   `sql`指定要轉換的 Sybase sql 語句，可以使用 ";" 分隔一或多個語句  
   
--   `sql-files` 指定必須轉換到 T-SQL 程式碼的 sql 檔案的路徑。  
+-   `sql-files`指定必須轉換成 T-sql 程式碼之 sql 檔案的路徑。  
   
--   `write-summary-report-to` 指定的路徑會產生摘要的報表。 如果只提及，資料夾路徑，然後檔案名稱**ConvertSQLReport.XML**建立。 （選擇性屬性）  
+-   `write-summary-report-to`指定將產生摘要報告的路徑。 如果只提及資料夾路徑，則會建立依名稱**ConvertSQLReport**的檔案。 （選擇性屬性）  
   
-    建立摘要報表會有兩個其他的子類別，也就是：  
+    建立摘要報表有兩個進一步的子類別，亦即：  
   
-    -   報告錯誤 （="true/false"，預設值為"false"（也就是選擇性屬性））。  
+    -   報告-錯誤（= "true/false"，預設值為 "false" （選擇性屬性））。  
   
-    -   詳細資訊 （="true/false"，預設值為"false"（也就是選擇性屬性））。  
+    -   verbose （= "true/false"，預設值為 "false" （選擇性屬性））。  
   
-此命令需要一個或多個的 metabase 節點做為命令列參數。  
+此命令需要一個或數個資料庫節點做為命令列參數。  
   
 **語法範例：**  
   
@@ -661,15 +661,15 @@ fail-script>" (optional)
 ```  
   
 ## <a name="next-steps"></a>後續步驟  
-如需命令列選項的資訊，請參閱[SSMA 主控台 (AccessToSQL) 中的命令列選項](../access/command-line-options-in-ssma-console-accesstosql.md)。  
+如需命令列選項的詳細資訊，請參閱[SSMA 主控台中的命令列選項（AccessToSQL）](../access/command-line-options-in-ssma-console-accesstosql.md)。  
   
-如需範例主控台指令碼檔案資訊，請參閱[使用範例主控台指令碼檔&#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)  
+如需範例主控台腳本檔案的詳細資訊，請參閱[使用範例主控台腳本檔案 &#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)  
   
-下一個步驟取決於您的專案需求：  
+下一步取決於您的專案需求：  
   
--   指定的密碼或匯出 / 匯入的密碼，請參閱 <<c0> [ 管理的密碼&#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)。</c0>  
+-   如需指定密碼或匯出/匯入密碼，請參閱[&#40;SybaseToSQL&#41;管理密碼](../../ssma/sybase/managing-passwords-sybasetosql.md)。  
   
--   要產生報表，請參閱[產生的報表&#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)。  
+-   如需產生報表，請參閱[&#40;SybaseToSQL&#41;產生報表](../../ssma/sybase/generating-reports-sybasetosql.md)。  
   
--   如需疑難排解主控台中的問題，請參閱[疑難排解&#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)。  
+-   如需主控台的疑難排解問題，請參閱[&#40;SybaseToSQL&#41;的疑難排解](../../ssma/sybase/troubleshooting-sybasetosql.md)。  
   

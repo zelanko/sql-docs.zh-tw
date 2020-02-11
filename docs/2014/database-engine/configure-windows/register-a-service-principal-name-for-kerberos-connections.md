@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781993"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>註冊 Kerberos 連接的服務主體名稱
@@ -71,25 +71,25 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **具名執行個體**  
   
--   *MSSQLSvc/FQDN*:[_port_ **|** _instancename_]，其中：  
+-   *MSSQLSvc/FQDN*： [_port_**|**_instancename_]，其中：  
   
     -   *MSSQLSvc* 是所註冊的服務。  
   
-    -   *FQDN* 是伺服器的完整網域名稱。  
+    -   *FQDN*是伺服器的完整功能變數名稱。  
   
-    -   *port* 是 TCP 通訊埠編號。  
+    -   *port*是 TCP 通訊埠編號。  
   
-    -   *instancename* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。  
+    -   *instancename*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例的名稱。  
   
  **預設執行個體**  
   
--   *MSSQLSvc/FQDN*:_port_ **|** _MSSQLSvc/FQDN_，其中：  
+-   *MSSQLSvc/fqdn*：_port_**|**_MSSQLSvc/fqdn_，其中：  
   
     -   *MSSQLSvc* 是所註冊的服務。  
   
-    -   *FQDN* 是伺服器的完整網域名稱。  
+    -   *FQDN*是伺服器的完整功能變數名稱。  
   
-    -   *port* 是 TCP 通訊埠編號。  
+    -   *port*是 TCP 通訊埠編號。  
   
  新的 SPN 格式不需要通訊埠編號。 這表示，不使用通訊埠編號的多重通訊埠伺服器或通訊協定可以使用 Kerberos 驗證。  
   
@@ -98,14 +98,14 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 |||  
 |-|-|  
-|MSSQLSvc/*fqdn:port*|使用 TCP 時，此為提供者產生的預設 SPN。 *port* 是 TCP 通訊埠編號。|  
+|MSSQLSvc/*fqdn：埠*|使用 TCP 時，此為提供者產生的預設 SPN。 *port* 是 TCP 通訊埠編號。|  
 |MSSQLSvc/*fqdn*|使用 TCP 以外的通訊協定時，此為提供者針對預設執行個體所產生的預設 SPN。 *fqdn* 是完整網域名稱。|  
-|MSSQLSvc/*fqdn:InstanceName*|使用 TCP 以外的通訊協定時，此為提供者針對具名執行個體所產生的預設 SPN。 *InstanceName* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的名稱。|  
+|MSSQLSvc/*fqdn： InstanceName*|使用 TCP 以外的通訊協定時，此為提供者針對具名執行個體所產生的預設 SPN。 *InstanceName*是實例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名稱。|  
   
 ##  <a name="Auto"></a> 自動 SPN 註冊  
- 當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體啟動時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試註冊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的 SPN。 當此執行個體停止時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試取消註冊 SPN。 如果是 TCP/IP 連接，SPN 會以 MSSQLSvc/\<FQDN>  :\<tcpport>  格式註冊。具名執行個體和預設執行個體都會註冊為 MSSQLSvc  (根據 \<tcpport>  值來區分執行個體)。  
+ 當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體啟動時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試註冊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的 SPN。 當此執行個體停止時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試取消註冊 SPN。 如果是 TCP/IP 連接，SPN 會以 MSSQLSvc/*FQDN>\<* :*tcpport>\<* 格式註冊。具名執行個體和預設執行個體都會註冊為 MSSQLSvc  (根據 *tcpport>\<* 值來區分執行個體)。  
   
- 支援 Kerberos 的其他連接中格式註冊的 SPN *MSSQLSvc /\<FQDN >* : *\<執行個體名稱 >* 的具名執行個體。 用來註冊預設執行個體的格式為 MSSQLSvc/\<FQDN>  。  
+ 對於支援 Kerberos 的其他連接，SPN 會以*MSSQLSvc/\<FQDN*的格式註冊，>：*\<instancename>* 用於已命名的實例。 用來註冊預設執行個體的格式為 MSSQLSvc/*FQDN>\<* 。  
   
  如果服務帳戶缺少這些動作所需的權限，可能需要手動介入才能註冊或取消註冊 SPN。  
   
@@ -120,7 +120,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 setspn -A MSSQLSvc/myhost.redmond.microsoft.com:1433 accountname  
 ```  
   
- **注意** 如果 SPN 已存在，必須先將它刪除以後才可以重新註冊。 您可以搭配 `setspn` 參數使用 `-D` 命令來進行這項處理。 下列範例說明如何手動註冊以新執行個體為基礎的 SPN。 若為預設執行個體，請使用：  
+ **注意**如果 SPN 已經存在，必須先將它刪除，然後才能重新註冊。 您可以搭配 `setspn` 參數使用 `-D` 命令來進行這項處理。 下列範例說明如何手動註冊以新執行個體為基礎的 SPN。 若為預設執行個體，請使用：  
   
 ```  
 setspn -A MSSQLSvc/myhost.redmond.microsoft.com accountname  
@@ -135,7 +135,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename accountname
 ##  <a name="Client"></a> 用戶端連接  
  用戶端驅動程式內可支援使用者指定的 SPN。 但是，如果未提供 SPN，將會根據用戶端連接的類型來自動產生 SPN。 如果是 TCP 連接，將會針對具名和預設執行個體使用 *MSSQLSvc*/*FQDN*:[*port*] 格式的 SPN。  
   
- 如果是具名管道和共用記憶體的連接，將會針對具名執行個體使用 *MSSQLSvc*/*FQDN*:*instancename* 格式的 SPN，並針對預設執行個體使用 *MSSQLSvc*/*FQDN* 格式的 SPN。  
+ 針對具名管道和共用記憶體連接，會將*MSSQLSvc*/*fqdn*：*instancename*格式的 SPN 用於已命名的實例，而*MSSQLSvc*/*FQDN*則用於預設實例。  
   
  **將服務帳戶當做 SPN 使用**  
   
@@ -158,8 +158,8 @@ WHERE session_id = @@SPID;
   
 |狀況|驗證方法|  
 |--------------|---------------------------|  
-|SPN 會對應到正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。 例如，Local System 或 NETWORK SERVICE。<br /><br /> 注意:已註冊之 SPN 對應的帳戶是執行 SQL Server 服務帳戶的正確表示。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
-|SPN 是正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。<br /><br /> 注意:已註冊之 SPN 對應的帳戶是執行 SQL Server 服務帳戶的正確表示。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
+|SPN 會對應到正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。 例如，Local System 或 NETWORK SERVICE。<br /><br /> 注意：正確表示已註冊之 SPN 對應的帳戶就是執行 SQL Server 服務的帳戶。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
+|SPN 是正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。<br /><br /> 注意：正確表示已註冊之 SPN 對應的帳戶就是執行 SQL Server 服務的帳戶。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
 |SPN 對應到不正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。|驗證失敗。|  
 |SPN 查閱失敗或是未對應到正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶，或者不是正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。|本機和遠端連接都會使用 NTLM。|  
   

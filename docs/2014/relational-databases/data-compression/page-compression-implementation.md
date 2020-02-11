@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 65777f25066cfb42093313b90ac198c6bc1796a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918207"
 ---
 # <a name="page-compression-implementation"></a>頁面壓縮實作
@@ -57,7 +57,7 @@ ms.locfileid: "62918207"
 ## <a name="dictionary-compression"></a>字典壓縮  
  在完成前置詞壓縮後，就會套用字典壓縮。 字典壓縮會搜尋頁面上的任何位置是否有重複的值，然後將它們儲存在 CI 區域中。 與前置詞壓縮不同的是，字典壓縮並不是限定於單一資料行。 字典壓縮可以取代頁面上任何位置的重複值。 下列圖例顯示相同頁面在字典壓縮後的狀況。  
   
- ![前置詞壓縮後的頁面](../media/tblcompression3.gif "前置詞壓縮後的頁面")  
+ ![字典壓縮後的頁面](../media/tblcompression3.gif "字典壓縮後的頁面")  
   
  請注意，值 4b 已由頁面的不同資料行參考。  
   
