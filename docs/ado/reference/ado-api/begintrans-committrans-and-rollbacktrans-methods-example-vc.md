@@ -1,5 +1,5 @@
 ---
-title: BeginTrans、 CommitTrans 和 RollbackTrans 方法範例 （VC + +） |Microsoft Docs
+title: BeginTrans、CommitTrans 和 RollbackTrans 方法範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f99cab327d9171aaa53b6c273c4a519bf13680b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d91809adccee64e6f9ed4b9c2501718e82c31a4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920422"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76940445"
 ---
-# <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans、 CommitTrans 和 RollbackTrans 方法範例 （VC + +）
-這個範例會變更活頁簿的類型中的所有的心理書籍***標題***資料庫資料表。 之後[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法會啟動交易，隔離所做的所有變更***標題***資料表[CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法會將儲存所做的變更。 您可以使用[Rollback](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法，以使用儲存的變更復原[更新](../../../ado/reference/ado-api/update-method.md)方法。  
+# <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans、CommitTrans 和 RollbackTrans 方法範例（VC + +）
+這個範例會變更資料庫之 [***標題***] 資料表中所有心理學書籍的書籍類型。 在[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法啟動會隔離所有對***Titles***資料表所做之變更的交易之後， [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法會儲存變更。 您可以使用[Rollback](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法來復原使用[Update](../../../ado/reference/ado-api/update-method.md)方法儲存的變更。  
   
 ## <a name="example"></a>範例  
   
@@ -196,7 +196,7 @@ void BeginTransX() {
          printf("%s -  %s\n", titlrs.m_szT_title, titlrs.m_szT_type);  
          rstTitles->MoveNext();  
       }  
-      // Restore original data becasue this is a demonstration.  
+      // Restore original data because this is a demonstration.  
       rstTitles->MoveFirst();  
   
       while (VARIANT_FALSE == rstTitles->EndOfFile) {  
@@ -267,5 +267,5 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [BeginTrans、 CommitTrans 和 RollbackTrans 方法 (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [BeginTrans、CommitTrans 和 RollbackTrans 方法（ADO）](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [Update 方法](../../../ado/reference/ado-api/update-method.md)

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e0b418e44436912b5ed1368ad7a316951872266
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519196"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
@@ -41,7 +41,7 @@ ms.locfileid: "62519196"
 </soap:Envelope>  
 ```  
   
- SOAP 本身需要將訊息放入 `Envelope` 元素中，並且在 `Body` 元素中含有大量的訊息。 在此範例中，本文包含對 <xref:ReportService2010.ReportingService2010.DeleteItem%2A> 方法的呼叫，這需要代表要刪除的項目路徑之字串參數。 您可以建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 用戶端 Proxy 類別，將所有的 SOAP 作業封裝成方法。 下列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 方法代表稍早指定的 SOAP 範例。  
+ SOAP 本身需要將訊息放入 `Envelope` 元素中，並且在 `Body` 元素中含有大量的訊息。 在此範例中，本文包含對 <xref:ReportService2010.ReportingService2010.DeleteItem%2A> 方法的呼叫，這需要代表要刪除的項目路徑之字串參數。 您可以建立客戶[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]端 proxy 類別，將所有 SOAP 作業封裝成方法。 下列[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)]方法代表稍早指定的 SOAP 範例。  
   
 ```  
 public void DeleteItem(string item);  
@@ -57,12 +57,13 @@ public void DeleteItem(string item);
 </soap:Envelope>  
 ```  
   
- <xref:ReportService2010.ReportingService2010.DeleteItem%2A> 方法沒有傳回值，所以會傳回空的回應。  
+ 
+  <xref:ReportService2010.ReportingService2010.DeleteItem%2A> 方法沒有傳回值，所以會傳回空的回應。  
   
 ## <a name="see-also"></a>另請參閱  
  [存取 SOAP API](accessing-the-soap-api.md)   
  [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   
- [Reporting Services Report Server](../reporting-services-report-server.md)   
+ [Reporting Services 報表伺服器](../reporting-services-report-server.md)   
  [報表伺服器 Web 服務](report-server-web-service.md)  
   
   

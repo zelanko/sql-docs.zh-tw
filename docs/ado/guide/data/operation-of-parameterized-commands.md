@@ -1,5 +1,5 @@
 ---
-title: 參數化命令的作業 |Microsoft Docs
+title: 參數化命令的操作 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,20 +14,20 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7d4399a8cf279ed2283061fff9064ffcc1adfba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924730"
 ---
 # <a name="operation-of-parameterized-commands"></a>參數化命令的作業
-如果您正在使用大型的子系**資料錄集**，特別是相較於父代的大小**資料錄集**，但需要存取只有少數子章節中，您可能會發現它使用更有效率參數化的命令。  
+如果您使用的是大型子**記錄集**，特別是與父**記錄集**的大小相比較，但只需要存取一些子章節，您可能會發現使用參數化命令會更有效率。  
   
- A*非參數化命令*擷取整個父系和子系**資料錄集**將的章節資料行附加至其父代，然後指派每個父資料列的相關的子章節的參考.  
+ *非參數化命令*會同時抓取整個父系和子**記錄集**、將章節資料行附加至父系，然後針對每個父資料列指派相關子章節的參考。  
   
- A*參數化命令*擷取整個父代**資料錄集**，但擷取的一章**資料錄集**章節資料行存取時。 這項差異，在擷取策略可以產生顯著的效能效益。  
+ *參數化命令*會抓取整個父**記錄集**，但只有在存取章節資料行時，才會抓取章節**記錄集**。 這項抓取策略的差異可能會產生顯著的效能優勢。  
   
- 例如，您可以指定下列作業：  
+ 例如，您可以指定下列各項：  
   
 ```  
 SHAPE {SELECT * FROM customer}   
@@ -35,26 +35,26 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- 父和子資料表具有資料行名稱以常見*cust_id*。 *子命令*具有"？"預留位置，在 RELATE 子句參考 (也就是"...參數 0"）。  
+ 父系和子資料工作表的資料行名稱為 common， *cust_id*。 *子命令*具有「？」預留位置，其中的「關聯」子句會參考它（也就是「.。。參數 0 "）。  
   
 > [!NOTE]
->  參數子句僅屬於圖形命令語法。 它所關聯的其中一個 ADO[參數](../../../ado/reference/ado-api/parameter-object.md)物件或[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。  
+>  PARAMETER 子句僅適用于 shape 命令語法。 它不會與 ADO[參數](../../../ado/reference/ado-api/parameter-object.md)物件或[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)集合相關聯。  
   
- 參數化的圖形命令執行時，會發生下列情況：  
+ 執行參數化圖形命令時，會發生下列情況：  
   
-1.  *父命令*會執行並傳回父代**資料錄集**Customers 資料表中。  
+1.  *父-命令*會執行，並從 Customers 資料表傳回父**記錄集**。  
   
-2.  章節資料行附加至父代**資料錄集**。  
+2.  [章節] 資料行會附加至父**記錄集**。  
   
-3.  存取父資料列的章節資料行時，*子命令*使用 customer.cust_id 的值做為參數的值來執行。  
+3.  存取父資料列的 [章節] 資料行時，會使用 customer 的值來執行*子命令*。 cust_id 做為參數的值。  
   
-4.  步驟 3 中建立的資料提供者資料列中的所有資料列會用來填入子系**資料錄集**。 在此範例中，這會是其 cust_id 等於 customer.cust_id 值的 「 訂單 」 資料表中的所有資料列。 根據預設，子系**Recordset**s 會快取在用戶端到父系的所有參考**資料錄集**會釋出。 若要變更此行為，將**Recordset** [動態屬性](../../../ado/reference/ado-api/ado-dynamic-property-index.md)**快取子資料列**到**False**。  
+4.  在步驟3中建立之資料提供者資料列集內的所有資料列都會用來填入子**記錄集**。 在此範例中，這是 Orders 資料表中的所有資料列，其中 cust_id 等於 customer 的值。 cust_id。 根據預設，子**記錄集**的會在用戶端上快取，直到父**記錄集**的所有參考都已釋放為止。 若要變更此行為，請將**記錄集**[動態屬性](../../../ado/reference/ado-api/ado-dynamic-property-index.md)快取**子資料列**設定為**False**。  
   
-5.  擷取的子資料列的參考 (也就是子系的章節**Recordset**) 放在目前的資料列的父代的章節資料行**資料錄集**。  
+5.  所抓取之子資料列的參考（也就是子**記錄集**的章節）會放在父**記錄集**目前資料列的 [章節] 資料行中。  
   
-6.  存取另一個資料列的章節資料行時，會重複步驟 3-5。  
+6.  存取另一個資料列的章節資料行時，會重複步驟3-5。  
   
- **快取子資料列**動態屬性設定為 **，則為 True**預設。 快取行為，會根據查詢的參數值而有所不同。 在具有單一參數，子查詢**資料錄集**給定的參數值將會快取之間值的子系的要求。 下列程式碼示範：  
+ [快取**子資料列**] 動態屬性預設會設定為 [ **True** ]。 快取行為會依據查詢的參數值而有所不同。 在具有單一參數的查詢中，指定參數值的子**記錄集**會在具有該值的子系的要求之間快取。 下列程式碼將示範此作業：  
   
 ```  
 SCmd = "SHAPE {select * from customer} " & _  
@@ -67,14 +67,14 @@ Rst1.MoveNext      ' Next cust_id passed to Param 0, & new rs fetched
 Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.  
 ```  
   
- 在具有兩個或多個參數的查詢，只有當所有參數值都符合快取的值，會使用快取子系。  
+ 在具有兩個或多個參數的查詢中，只有在所有參數值都符合快取的值時，才會使用快取的子系。  
   
-## <a name="parameterized-commands-and-complex-parent-child-relations"></a>參數化的命令和複雜的父代子關聯性  
- 除了使用參數化的命令，以改善效能的等聯結 （equi-join） 型別階層架構，參數化的命令可用來支援更複雜的父子式關聯性。 例如，假設兩個資料表的小小的聯盟資料庫： 其中一個小組 （team_id、 team_name） 和其他的遊戲 （日期、 home_team、 visiting_team） 所組成。  
+## <a name="parameterized-commands-and-complex-parent-child-relations"></a>參數化命令和複雜的父子式關聯  
+ 除了使用參數化命令來改善等聯結類型階層的效能之外，參數化命令也可以用來支援更複雜的父子關聯性。 例如，假設有一個小聯盟資料庫包含兩個數據表：一個由小組（team_id、team_name）和其他遊戲（日期、home_team、visiting_team）組成。  
   
- 使用非參數化的階層，沒有任何方法可以與小組及遊戲的資料表的方式相關的子系**資料錄集**每個小組包含其完整的排程。 您可以建立包含主排程或 road 排程，但不是能兩者都包含的章節。 這是因為 RELATE 子句會限制您的表單的父子式關聯性 (pc1 = cc1) AND (pc2 = pc2)。 因此，如果您的命令包含"RELATE team_id TO home_team，team_id TO visiting_team 」，您會取得的遊戲，小組已播放本身。 您想要為"(team_id=home_team) 或者 (team_id = visiting_team) 」，但 Shape 提供者不支援 OR 子句。  
+ 使用非參數化階層時，無法建立小組和遊戲資料表的關聯性，因為每個小組的子**記錄集**都包含完整的排程。 您可以建立包含主排程或道路排程的章節，但不能兩者都有。 這是因為「關聯」子句會限制您對表單的父子式關聯性（pc1 = cc1）和（pc2 = pc2）。 因此，如果您的命令包含「關聯 team_id 至 home_team，team_id visiting_team」，您就只會收到小組自行播放的遊戲。 您想要的是 "（team_id = home_team）或（team_id = visiting_team）"，但圖形提供者不支援或子句。  
   
- 若要取得所要的結果，您可以使用參數化的命令。 例如:  
+ 若要取得想要的結果，您可以使用參數化命令。 例如：  
   
 ```  
 SHAPE {SELECT * FROM teams}   
@@ -83,12 +83,12 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
                team_id TO PARAMETER 1)   
 ```  
   
- 此範例會利用 SQL WHERE 子句，獲得您需要更大的彈性。  
+ 這個範例會利用 SQL WHERE 子句的更大彈性來取得您所需的結果。  
   
 > [!NOTE]
->  當使用 WHERE 子句，參數可以不使用 SQL 資料類型為 text、 ntext 和 image 或會產生錯誤，包含下列描述： `Invalid operator for data type`。  
+>  使用 WHERE 子句時，參數無法使用 text、Ntext 和 image 的 SQL 資料類型，否則會產生包含下列描述的錯誤： `Invalid operator for data type`。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料成形範例](../../../ado/guide/data/data-shaping-example.md)   
- [正式 Shape 文法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [正式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

@@ -1,5 +1,5 @@
 ---
-title: 使用 AddNew 新增記錄 |Microsoft Docs
+title: 使用 AddNew 加入記錄 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,24 +15,24 @@ ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36f6bad9a8f0d74a81d02ce64c78d7a91ddc0fa8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926287"
 ---
-# <a name="adding-records-using-addnew-method"></a>新增記錄使用 AddNew 方法
-這是基本語法**AddNew**方法：
+# <a name="adding-records-using-addnew-method"></a>使用 AddNew 方法加入記錄
+這是**AddNew**方法的基本語法：
 
- *資料錄集*。AddNew *FieldList*，*值*
+ *記錄集*。AddNew *FieldList*，*值*
 
- *FieldList*並*值*引數是選擇性。 *FieldList*單一名稱或名稱的陣列或欄位的新記錄中的序數位置。
+ *FieldList*和*Values*引數是選擇性的。 *FieldList*可以是單一名稱，或是新記錄中欄位的名稱陣列或序數位置。
 
- *值*引數是單一值或陣列的新記錄中欄位的值。
+ *Values*引數可以是單一值或新記錄中欄位的值陣列。
 
- 一般而言，當您想要新增單一記錄，您會呼叫**AddNew**不含任何引數的方法。 具體來說，您會呼叫**AddNew**; set**值**每個新的記錄; 中的欄位，然後再呼叫**Update**或是**UpdateBatch**，或兩者。 您可以確定您**Recordset**支援使用加入新的記錄**支援**屬性**adAddNew**列舉的常數。
+ 一般而言，當您想要加入單一記錄時，您會呼叫**AddNew**方法，而不需要任何引數。 具體來說，您會呼叫**AddNew**;設定新記錄中每個欄位的**值**;然後呼叫**Update**或**UpdateBatch**，或兩者。 您可以使用**支援**具有**adAddNew**列舉常數的屬性，確保**記錄集**支援加入新記錄。
 
- 下列程式碼會使用這項技術範例新增新的託運商**資料錄集**。 SQL Server 會自動提供即貨運公司編號欄位值。 因此，程式碼不會嘗試提供新的資料錄的欄位值。
+ 下列程式碼會使用這項技術，將新的貨主加入至範例**記錄集**。 SQL Server 會自動提供 ShipperID 域值。 因此，程式碼不會嘗試提供新記錄的域值。
 
 ```
 'BeginAddNew1.1
@@ -48,4 +48,4 @@ End If
 ```
 
 ## <a name="remarks"></a>備註
- 因為此程式碼會使用已中斷連接**資料錄集**與 批次模式中建立用戶端資料指標，您必須重新連線**資料錄集**與新的資料來源**連接**物件，您可以呼叫才能**UpdateBatch**方法，以變更公佈到資料庫。 這會輕鬆地透過新的函式**GetNewConnection**。
+ 因為此程式碼會在批次模式中使用已中斷連接的**記錄集**與用戶端資料指標，所以您必須先使用新的**連接**物件，將**記錄集**重新連接至資料來源，然後才能呼叫**UpdateBatch**方法將變更公佈到資料庫。 您可以使用新的函式**GetNewConnection**輕鬆完成這項作業。

@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a4e91d05bf851d425bf61dba0037cee8c48eb5ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626773"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>訂閱，發行者到散發者記錄 (交易式訂閱)
   **[發行者到散發者記錄]** 索引標籤會顯示關於記錄讀取器代理程式的詳細資訊，其中包括狀態、記錄、資訊性訊息，以及任何錯誤訊息。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  從 **[檢視]** 功能表選取要檢視的記錄讀取器代理程式工作階段，然後在標示為 **[記錄讀取器代理程式的工作階段]** 的方格中，選取一個特定的工作階段。 有關這個工作階段的詳細資訊，會顯示在標示為 **[所選取工作階段中的動作]** 之方格中。 如果選取的工作階段結束時發生錯誤， **[所選取之工作階段的錯誤詳細資料或訊息]** 的文字區域也會顯示。  
   
- **[檢視]**  
+ **檢視**  
  選取要檢視的記錄讀取器代理程式工作階段。 記錄讀取器代理程式通常會連續執行，因此可能只會有一個工作階段可供檢視。  
   
  **狀態**  
@@ -33,7 +33,7 @@ ms.locfileid: "62626773"
   
 -   錯誤  
   
--   已完成  
+-   Completed  
   
 -   正在重試  
   

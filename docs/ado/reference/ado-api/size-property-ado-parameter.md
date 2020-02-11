@@ -1,5 +1,5 @@
 ---
-title: Size 屬性 (ADO Parameter) |Microsoft Docs
+title: Size 屬性（ADO 參數） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,34 +16,34 @@ ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3796f772dedb961ec34eb0639034350989f99142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931058"
 ---
 # <a name="size-property-ado-parameter"></a>Size 屬性 (ADO 參數)
-表示的最大的大小，以位元組或字元，[參數](../../../ado/reference/ado-api/parameter-object.md)物件。  
+指出[參數](../../../ado/reference/ado-api/parameter-object.md)物件的大小上限（以位元組或字元為單位）。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**長**值，指出在的中值的字元或位元組的大小上限**參數**物件。  
+ 設定或傳回**Long**值，指出**參數**物件中值的大小上限（以位元組或字元表示）。  
   
 ## <a name="remarks"></a>備註  
- 使用**大小**屬性來判斷的值寫入的大小上限，或從讀取[值](../../../ado/reference/ado-api/value-property-ado.md)屬性**參數**物件。  
+ 使用**Size**屬性來判斷寫入或讀取**參數**物件之[Value](../../../ado/reference/ado-api/value-property-ado.md)屬性的值大小上限。  
   
- 如果您指定的可變長度資料類型**參數**物件 (例如，任何**字串**類型，例如**adVarChar**)，您必須設定物件的**大小**屬性，才能將它附加[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)集合; 否則會發生錯誤。  
+ 如果您為**參數**物件指定可變長度的資料類型（例如，任何**字串**類型，例如**adVarChar**），您必須先設定物件的**Size**屬性，再將它附加至[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。否則，就會發生錯誤。  
   
- 如果您已經有附加**參數**物件**參數**集合[命令](../../../ado/reference/ado-api/command-object-ado.md)物件，而且您變更其類型為可變長度資料類型，您必須設定**參數**物件的**大小**屬性，才能執行**命令**物件; 否則會發生錯誤。  
+ 如果您已經將**參數**物件附加至[Command](../../../ado/reference/ado-api/command-object-ado.md)物件的**Parameters**集合，並且將其類型變更為可變長度的資料類型，則必須先設定**參數**物件的**Size**屬性，再執行**Command**物件。否則，就會發生錯誤。  
   
- 如果您使用[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)從提供者，並取得參數資訊的方法會傳回一或多個可變長度資料類型**參數**物件時，ADO 可能配置的記憶體為基礎的參數在其最大潛在大小，這可能會在執行期間造成錯誤。 若要避免錯誤，您應該明確設定**大小**這些參數執行命令之前的屬性。  
+ 如果您使用[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法從提供者取得參數資訊，並傳回一或多個可變長度的資料類型**參數**物件，ADO 可能會根據其最大可能大小來配置參數的記憶體，這可能會在執行期間造成錯誤。 若要避免發生錯誤，您應該在執行命令之前，先明確設定這些參數的**Size**屬性。  
   
- **大小**屬性是讀取/寫入。  
+ **Size**屬性為讀取/寫入。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向屬性範例 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向屬性範例 （VC + +）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向屬性範例 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 屬性範例（VB）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 屬性範例（VC + +）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 屬性範例（JScript）](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
  [Size 屬性 (ADO Stream)](../../../ado/reference/ado-api/size-property-ado-stream.md)

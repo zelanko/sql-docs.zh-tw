@@ -1,5 +1,5 @@
 ---
-title: 建立伺服器連線檔案 (OracleToSQL) |Microsoft Docs
+title: 建立伺服器連接檔案（OracleToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,16 +14,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: d7316721cedc7a3546439fe27048126ad2805582
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266114"
 ---
 # <a name="creating-the-server-connection-files-oracletosql"></a>建立伺服器連線檔案 (OracleToSQL)
-伺服器一節的指令碼檔案或不同的伺服器連線檔案中，可以指定伺服器的資訊。 伺服器連接檔案的命令列參數即`-c <serverconnectionfile>`。 如果存在於指令碼檔案與伺服器連線檔案相同的伺服器識別碼，則會視為在指令碼檔案中的伺服器定義。  
+您可以在腳本檔案的 [伺服器] 區段中，或在個別的伺服器連接檔案中指定伺服器資訊。 伺服器連接檔案的命令列參數是、 `-c <serverconnectionfile>`。 如果腳本檔案和伺服器連接檔案中同時出現相同的伺服器識別碼，則會考慮腳本檔案中的伺服器定義。  
   
-**範例 1:**  
+**範例：1**  
   
 ```  
 <!--Sample of server connection file commands -->  
@@ -102,8 +102,8 @@ ms.locfileid: "68266114"
 </sql-server>  
 ```  
   
-## <a name="next-step"></a>下一個步驟  
-操作主控台的下一個步驟是[執行 SSMA 主控台&#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+## <a name="next-step"></a>後續步驟  
+操作主控台的下一個步驟是[執行 SSMA 主控台，&#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [執行 SSMA 主控台](executing-the-ssma-console-oracletosql.md)  

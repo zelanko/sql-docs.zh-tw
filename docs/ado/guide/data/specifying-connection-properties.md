@@ -14,14 +14,14 @@ ms.assetid: 49456201-b085-4851-9686-e814136b07be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5aee5946f3087956a0117b88f4044ef8a6c9bd9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924132"
 ---
 # <a name="specifying-connection-properties"></a>指定連線屬性
-您可以提供所指定的資訊的大部分[連接字串](../../../ado/guide/data/creating-a-connection-string.md)藉由設定屬性**連線**之前開啟連接的物件。 例如，您可以達到相同的效果中的連接字串所述[建立的連接字串](../../../ado/guide/data/creating-a-connection-string.md)使用下列程式碼。  
+您可以在開啟連接之前設定**連接**物件的屬性，藉以提供[連接字串](../../../ado/guide/data/creating-a-connection-string.md)所指定的許多資訊。 例如，您可以使用下列程式碼，達到與[建立連接字串](../../../ado/guide/data/creating-a-connection-string.md)中所討論的連接字串相同的效果。  
   
 ```  
 With objConn  
@@ -33,7 +33,7 @@ With objConn
 End With  
 ```  
   
- 只有在您開啟連接之後，才設定 DefaultDatabase。  
+ 只有在您開啟連接之後，才會設定 DefaultDatabase。  
   
 > [!NOTE]
->  在 ADO 中您必須使用包含分號的密碼 （";"），除非密碼包含在單引號中。
+>  在 ADO 中，除非密碼以單引號括住，否則您不得使用包含分號（";"）的密碼。

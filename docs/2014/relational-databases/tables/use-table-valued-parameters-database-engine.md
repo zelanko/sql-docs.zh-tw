@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211766"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>使用資料表值參數 (Database Engine)
@@ -66,20 +66,21 @@ ms.locfileid: "68211766"
 ##  <a name="Restrictions"></a> 限制  
  資料表值參數有下列限制：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會維護資料表值參數之資料行上的統計資料。  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會維護資料表值參數之資料行上的統計資料。  
   
 -   資料表值參數必須當做輸入 READONLY 參數傳遞給 [!INCLUDE[tsql](../../includes/tsql-md.md)] 常式。 您不能在常式主體內針對資料表值參數執行 DML 作業，例如 UPDATE、DELETE 或 INSERT。  
   
 -   您不能使用資料表值參數當做 SELECT INTO 或 INSERT EXEC 陳述式的目標。 資料表值參數可以在 SELECT INTO 的 FROM 子句中或是 INSERT EXEC 字串或預存程序內。  
   
-##  <a name="BulkInsert"></a> 資料表值參數與BULK INSERT 作業的比較  
+##  <a name="BulkInsert"></a>資料表值參數與 BULK INSERT 作業的比較  
  使用資料表值參數可以和使用以集合為基礎之變數的其他方式相比較；但是，對於大型資料集而言，使用資料表值參數通常可以更快速。 與大量作業 (其啟動成本高於資料表值參數) 相較之下，當插入 1000 個以下的資料列時，資料表值參數會有很不錯的執行效能。  
   
  重複使用的資料表值參數會因為暫存資料表快取而獲益。 這種資料表快取提供了比同等的 BULK INSERT 作業更好的延展性。 藉由使用小型資料列插入作業，可能會因為使用參數清單或批次處理的陳述式 (而非 BULK INSERT 作業或資料表值參數) 而有效能上的小獲益。 但是，這些方法的便利性不如程式，而且當資料列增加時，效能會快速降低。  
   
  資料表值參數的執行效能等於或優於同等的參數陣列實作。  
   
-##  <a name="Example"></a> 範例  
+##  <a name="Example"></a>實例  
  下列範例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 並示範如何建立資料表值參數類型、宣告變數來參考它、填入參數清單，然後將值傳遞給預存程序。  
   
 ```  
@@ -121,11 +122,11 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
+ [DECLARE @local_variable &#40;transact-sql&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
  [sys.types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)   
- [sys.parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)   
- [sys.parameter_type_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)   
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
+ [&#40;Transact-sql&#41;的 sys.databases 參數](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)   
+ [parameter_type_usages &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)   
+ [CREATE PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   
   

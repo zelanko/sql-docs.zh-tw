@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bb04374ede05406fdf6d273a76a246bb35f5dac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637864"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 子句的基本語法
@@ -29,7 +29,7 @@ ms.locfileid: "62637864"
 > [!IMPORTANT]  
 >  FOR XML 選項的 XMLDATA 指示詞已被取代。 在 RAW 和 AUTO 模式的情況下，請使用 XSD 產生。 EXPLICT 模式中沒有 XMLDATA 指示詞的替代項目。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- 以下是 [FOR 子句 (Transact-SQL)](/sql/t-sql/queries/select-for-clause-transact-sql)中所述的基本語法：  
+ 以下是[FOR 子句（transact-sql）](/sql/t-sql/queries/select-for-clause-transact-sql)中所述的基本語法：  
   
 ```  
 [ FOR { BROWSE | <XML> } ]  
@@ -88,7 +88,7 @@ XML
  TYPE  
  指定查詢以 **xml** 類型傳回結果。 如需詳細資訊，請參閱 [FOR XML 查詢中的 TYPE 指示詞](type-directive-in-for-xml-queries.md)。  
   
- ROOT [('*RootName*')]  
+ 根 [（'*RootName*'）]  
  指定將單一最上層元素加入產生的 XML。 您可以選擇性地指定要產生的根元素名稱。 預設值是 "root"。  
   
 ## <a name="see-also"></a>另請參閱  

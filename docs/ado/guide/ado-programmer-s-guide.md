@@ -13,14 +13,14 @@ ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91200b79a075f594968fd5700993d96219e35b40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67927043"
 ---
 # <a name="ado-programmers-guide-for-using-ado-objects"></a>使用 ADO 物件的 ADO 程式設計人員指南
-這份文件提供如何使用 ADO 物件從各種資料來源的資料搭配使用的概觀。 首先，簡介摘要說明新功能，以及安裝、 使用及轉散發 ADO 元件的需求。 以下章節會討論各種類型的 ADO 物件使用。 最後，附錄中會討論各種 Microsoft 提供的資料和服務提供者，錯誤訊息，以及提示有關如何使用 ADO 多種程式設計語言的詳細資訊，除了範例和詞彙。
+本檔提供如何使用 ADO 物件來處理來自各種資料來源之資料的總覽。 首先，簡介會摘要說明新功能，以及安裝、使用和轉散發 ADO 元件的需求。 下一節將討論各種類型的 ADO 物件的用法。 最後，附錄會討論各種 Microsoft 提供的資料和服務提供者、錯誤訊息，以及有關如何在數種程式設計語言中使用 ADO 的秘訣，以及範例和詞彙。
 
  此章節包含下列主題。
 
@@ -28,7 +28,7 @@ ms.locfileid: "67927043"
 
 -   [ActiveX Data Objects (ADO)](../../ado/guide/data/activex-data-objects-ado.md)
 
--   [遠端資料服務 (RDS)](../../ado/guide/remote-data-service/remote-data-service-rds.md)
+-   [遠端資料服務（RDS）](../../ado/guide/remote-data-service/remote-data-service-rds.md)
 
 -   [ADO (多維度) (ADO MD)](../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)
 

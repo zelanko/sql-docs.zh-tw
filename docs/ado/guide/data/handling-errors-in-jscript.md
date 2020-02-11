@@ -1,5 +1,5 @@
 ---
-title: 處理 JScript 的錯誤 |Microsoft Docs
+title: 處理 JScript 中的錯誤 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a92077bf72c025fa183292525b3bd756a4bf4b87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925177"
 ---
 # <a name="handling-errors-in-jscript"></a>處理 JScript 的錯誤
-您的 Microsoft® JScript® 程式碼必須檢查**計數**屬性**連線**物件的**錯誤**集合。 如果值大於 0，逐一查看集合，並列印的值，如同在任何其他語言。  
+您的 Microsoft® JScript®程式碼必須檢查**連接**物件的**Errors**集合的**Count**屬性。 如果值大於0，請逐一查看集合並列印值，如同您在任何其他語言中所做的一樣。  
   
 ```  
 <!-- BeginErrorExampleJS -->  

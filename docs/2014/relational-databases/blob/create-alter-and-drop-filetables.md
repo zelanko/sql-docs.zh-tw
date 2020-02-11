@@ -14,17 +14,17 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 494eabcd54e7a8c28b3a68e99efca72ef80eb9e1
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b810a3785c41356042639c4fdb79b4f6cf28d871
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811245"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76934804"
 ---
 # <a name="create-alter-and-drop-filetables"></a>建立、改變及卸除 FileTable
   描述如何建立新的 FileTable，或是改變或卸除現有的 FileTable。  
   
-##  <a name="BasicsCreate"></a> 建立 FileTable  
+##  <a name="BasicsCreate"></a>建立 FileTable  
  FileTable 是一種特殊化使用者資料表，它具有預先定義且固定的結構描述。 這個結構描述會儲存 FILESTREAM 資料、檔案和目錄資訊，以及檔案屬性。 如需有關 FileTable 結構描述的詳細資訊，請參閱＜ [FileTable Schema](filetable-schema.md)＞。  
   
  您可以使用 Transact-SQL 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來建立新的 FileTable。 因為 FileTable 具有固定的結構描述，所以您不需要指定資料行的清單。 用於建立 FileTable 的簡單語法可讓您指定：  
@@ -35,9 +35,9 @@ ms.locfileid: "68811245"
   
 -   要用於 3 個自動建立的主索引鍵條件約束和唯一條件約束的名稱。  
   
-###  <a name="HowToCreate"></a> 如何：建立 FileTable  
- **使用 Transact-SQL 建立 FileTable**  
- 您可以使用 **AS FileTable** 選項來呼叫 [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) 陳述式，藉以建立 FileTable。 因為 FileTable 具有固定的結構描述，所以您不需要指定資料行的清單。 您可以針對新的 FileTable 指定下列設定：  
+###  <a name="HowToCreate"></a>如何：建立 FileTable  
+ **使用 Transact-sql 建立 FileTable**  
+ 您可以使用 [AS FileTable](/sql/t-sql/statements/create-table-transact-sql) 選項來呼叫 **CREATE TABLE &#40;Transact-SQL&#41;** 陳述式，藉以建立 FileTable。 因為 FileTable 具有固定的結構描述，所以您不需要指定資料行的清單。 您可以針對新的 FileTable 指定下列設定：  
   
 1.  **FILETABLE_DIRECTORY**。 指定目錄，以做為 FileTable 中儲存之所有檔案和目錄的根目錄。 在資料庫的所有 FileTable 目錄名稱之間，此名稱必須是唯一的。 不論目前的定序設定為何，唯一性的比較都不區分大小寫。  
   
@@ -84,11 +84,11 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 建立 FileTable**  
- 在物件總管中，展開選取之資料庫底下的物件、以滑鼠右鍵按一下 [資料表] 資料夾，然後選取 [New FileTable (新增 FileTable)]。  
+ 在物件總管中，展開選取之資料庫底下的物件、以滑鼠右鍵按一下 [資料表]**** 資料夾，然後選取 [New FileTable (新增 FileTable)]****。  
   
  此選項會開啟新的指令碼視窗，其中包含您可以自訂及執行以建立 FileTable 的 Transact-SQL 指令碼範本。 使用 **[查詢]** 功能表上的 **[指定範本參數的值]** 選項，輕鬆地自訂指令碼。  
   
-###  <a name="ReqCreate"></a> 建立 FileTable 的需求和限制  
+###  <a name="ReqCreate"></a>建立 FileTable 的需求和限制  
   
 -   您無法改變現有的資料表，以便將它轉換成 FileTable。  
   
@@ -102,13 +102,13 @@ GO
   
 -   您無法將 FileTable 建立成暫存資料表。  
   
-##  <a name="BasicsAlter"></a> 改變 FileTable  
+##  <a name="BasicsAlter"></a>改變 FileTable  
  因為 FileTable 具有預先定義且固定的結構描述，所以您無法加入或變更其資料行。 不過，您可以在 FileTable 中加入自訂索引、觸發程序、條件約束及其他選項。  
   
  如需使用 ALTER TABLE 陳述式啟用或停用 FileTable 命名空間 (包括系統定義的條件約束) 的相關資訊，請參閱 [管理 FileTable](manage-filetables.md)。  
   
-###  <a name="HowToChange"></a> 如何：變更 FileTable 的目錄  
- **使用 Transact-SQL 變更 FileTable 的目錄**  
+###  <a name="HowToChange"></a>如何：變更 FileTable 的目錄  
+ **使用 Transact-sql 變更 FileTable 的目錄**  
  呼叫 ALTER TABLE 陳述式，並提供有效的新 **FILETABLE_DIRECTORY** SET 選項值。  
   
  **範例**  
@@ -120,9 +120,9 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 變更 FileTable 的目錄**  
- 在物件總管中，以滑鼠右鍵按一下 [FileTable]，並選取 [屬性] 開啟 [資料表屬性] 對話方塊。 在 **[FileTable]** 頁面上，輸入 **[FileTable 目錄名稱]** 的新值。  
+ 在物件總管中，以滑鼠右鍵按一下 [FileTable]，並選取 [屬性]**** 開啟 [資料表屬性]**** 對話方塊。 在 **[FileTable]** 頁面上，輸入 **[FileTable 目錄名稱]** 的新值。  
   
-###  <a name="ReqAlter"></a> 改變 FileTable 的需求和限制  
+###  <a name="ReqAlter"></a>改變 FileTable 的需求和限制  
   
 -   您無法改變 **FILETABLE_COLLATE_FILENAME**的值。  
   
@@ -130,7 +130,7 @@ GO
   
 -   您無法將新的使用者資料行、計算資料行或已保存的計算資料行加入至 FileTable。  
   
-##  <a name="BasicsDrop"></a> 卸除 FileTable  
+##  <a name="BasicsDrop"></a>卸載 FileTable  
  您可以使用 [DROP TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-table-transact-sql) 陳述式的一般語法來卸除 FileTable。  
   
  當您卸除 FileTable 時，也會一併卸除下列物件：  
@@ -141,7 +141,7 @@ GO
   
  如果 FileTable 的檔案命名空間中存在開啟的檔案控制代碼，DROP TABLE 命令就會失敗。 如需關閉開啟之控制代碼的相關資訊，請參閱 [管理 FileTable](manage-filetables.md)。  
   
-##  <a name="BasicsOtherObjects"></a> 當您建立 FileTable 時也會建立其他資料庫物件  
+##  <a name="BasicsOtherObjects"></a>當您建立 FileTable 時，會建立其他資料庫物件  
  當您建立新的 FileTable 時，也會建立一些系統定義的索引和條件約束。 您不能改變或卸除這些物件，只有當 FileTable 本身卸除時它們才會消失。 若要查看這些物件的清單，請查詢目錄檢視 [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql)。  
   
 ```sql  
@@ -156,17 +156,17 @@ SELECT OBJECT_NAME(parent_object_id) AS 'FileTable', OBJECT_NAME(object_id) AS '
 GO  
 ```  
   
- **建立新 FileTable 時所建立的索引**  
+ **當您建立新的 FileTable 時所建立的索引**  
  當您建立新的 FileTable 時，也會建立下列系統定義的索引：  
   
 |||  
 |-|-|  
 |**資料行**|**索引類型**|  
-|[path_locator] ASC|主要金鑰, 非叢集|  
-|[parent_path_locator] ASC、<br /><br /> [name] ASC|唯一、非叢集|  
-|[stream_id] ASC|唯一、非叢集|  
+|[path_locator] ASC|主索引鍵，非叢集|  
+|[parent_path_locator] ASC、<br /><br /> [name] ASC|唯一，非叢集|  
+|[stream_id] ASC|唯一，非叢集|  
   
- **建立新 FileTable 時所建立的條件約束**  
+ **當您建立新的 FileTable 時所建立的條件約束**  
  當您建立新的 FileTable 時，也會建立下列系統定義的條件約束：  
   
 |條件約束|強制執行|  
@@ -175,11 +175,11 @@ GO
 |檢查條件約束|系統定義的檢查條件約束會強制執行下列需求：<br /><br /> 有效的檔案名稱。<br /><br /> 有效的檔案屬性。<br /><br /> 父物件必須是目錄。<br /><br /> 在檔案操作期間，會鎖定命名空間階層。|  
   
  **系統定義之條件約束的命名慣例**  
- 上述之系統定義條件約束的命名格式為 **\<條件約束類型>_\<資料表名稱>[\_\<資料行名稱>]\_\<唯一碼>** ，其中：  
+ 上述系統定義的條件約束是以** \<constraintType>_\<tablename>\_\<[columnname>]\_\<唯一碼>** 的格式命名，其中：  
   
--   其中的 <條件約束類型> 是 CK (檢查條件約束)、DF (預設條件約束)、FK (外部索引鍵)、PK (主索引鍵) 或 UQ (唯一條件約束)。  
+-   *<constraint_type>* 是 CK （檢查條件約束）、DF （預設條件約束）、FK （外鍵）、PK （主鍵）或 UQ （unique 條件約束）。  
   
--   *\<唯一碼>* 是讓名稱成為唯一名稱的系統產生字串。 這個字串可能會包含 FileTable 名稱和唯一識別碼。  
+-   唯一碼>是系統產生的字串，讓名稱成為唯一的。 * \< * 這個字串可能會包含 FileTable 名稱和唯一識別碼。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理 FileTable](manage-filetables.md)  

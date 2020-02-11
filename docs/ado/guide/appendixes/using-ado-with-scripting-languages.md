@@ -1,5 +1,5 @@
 ---
-title: 使用 ADO 與指令碼語言 |Microsoft Docs
+title: 使用 ADO 搭配指令碼語言 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,58 +14,58 @@ ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b322dacbf85ec24b58e315ecbbf9d547d1481f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926483"
 ---
 # <a name="using-ado-with-scripting-languages"></a>搭配使用 ADO 與指令碼語言
-在指令碼環境中，ADO 可讓您公開資料，透過伺服器端指令碼。 在此案例中，ADO，基礎 OLE DB 提供者，它會使用，並參考指定的資料存放區所需的其他任何元件會安裝在執行 Internet Information Services (IIS) 伺服器。 ADO 使用 Active Server Pages (ASP)，是可以產生 HTML，例如指令碼中參考的元件。 此 HTML 內容可以透過 HTTP 傳遞至用戶端 Web 瀏覽器。 使用指令碼，網頁就可以將動作傳送回伺服器端指令碼，可讓您更新、 周遊，或檢視特定的資料。  
+在腳本環境中，ADO 可讓您透過伺服器端腳本來公開資料。 在此案例中，ADO 會使用其所用的基礎 OLE DB 提供者，而參考指定資料存放區所需的任何其他元件都會安裝在執行 Internet Information Services （IIS）的伺服器上。 使用 Active Server Pages （ASP），ADO 是腳本中所參考的元件，可以產生 HTML，例如。 這個 HTML 內容可以透過 HTTP 傳遞至用戶端網頁瀏覽器。 藉由使用腳本，網頁可以將動作傳送回伺服器端腳本，讓您可以更新、流覽或查看特定資料。  
   
- 在網頁上使用 ActiveX 物件之前，務必知道值，指出物件是否安全的。 當物件被視為安全的時表示的控制項無法在使用者電腦上進行任何有害的動作，因此可以執行而不要求使用者核准。 下表列出 ADO 物件，並指出它們是否安全的。  
+ 在網頁中使用 ActiveX 物件之前，請務必瞭解物件是否可安全進行腳本處理。 當物件被視為安全進行腳本處理時，這表示控制項無法在使用者的電腦上採取任何有害動作，因此可以在不要求使用者核准的情況下執行。 下表列出 ADO 物件，並指出它們是否安全地進行腳本處理。  
   
-|Object|指令碼處理安全嗎？|  
+|Object|安全地進行腳本處理嗎？|  
 |------------|-------------------------|  
 |ADO 連接|是|  
 |ADO 命令|否|  
 |ADO 參數|否|  
-|ADO 資料錄集|是|  
-|ADO 資料錄|是|  
-|ADO Stream|是|  
+|ADO 記錄集|是|  
+|ADO 記錄|是|  
+|ADO 資料流程|是|  
 |ADO 錯誤|否|  
 |ADOX 目錄|否|  
-|ADOX 資料格集|否|  
+|ADOX 集格|否|  
 |RDS DataControl|是|  
-|RDS 資料空間|是|  
+|RDS 空間|是|  
 |RDS DataFactory|否|  
   
- 下表列出包含與 Windows DAC/MDAC、 提供者，並指出它們是否安全的。  
+ 下表列出 Windows DAC/MDAC 隨附的提供者，並指出它們是否安全地進行腳本處理。  
   
-|提供者|指令碼處理安全嗎？|  
+|提供者|安全地進行腳本處理嗎？|  
 |--------------|-------------------------|  
-|形狀圖|是|  
-|保存|是|  
-|遠端|是|  
-|OLE DB Provider for SQL Server (SQLOLEDB)|否|  
-|OLE DB Provider for ODBC (MSDASQL)|否|  
+|形狀|是|  
+|Persist|是|  
+|Remote|是|  
+|SQL Server 的 OLE DB 提供者（SQLOLEDB）|否|  
+|ODBC 的 OLE DB 提供者（MSDASQL）|否|  
   
 ## <a name="odbc-data-sources"></a>ODBC 資料來源  
- 一個顯著的差異，指令碼和非指令碼的 ADO 程式碼之間會是 ODBC 資料來源時，如果使用。 對於非指令碼的應用程式，您可以建立 「 使用者 DSN 中 ODBC 資料來源管理員 」 中。 在 IIS 下執行的指令碼，您必須建立系統 DSN;否則您的指令碼將無法辨識您所建立的資料來源。 這適用於任何 ADO 指令碼應用程式中使用 Microsoft OLE DB Provider for ODBC，透過 Microsoft IIS。  
+ 腳本和非腳本 ADO 程式碼之間有一項明顯的差異，就是 ODBC 資料來源（如果有使用的話）。 若為非腳本應用程式，您可以在 ODBC 資料來源管理員中建立使用者 DSN。 對於在 IIS 底下執行的腳本，您必須建立系統 DSN;否則，您的腳本將無法辨識您所建立的資料來源。 這適用于使用 Microsoft OLE DB Provider for ODBC 透過 Microsoft IIS 的任何 ADO 腳本應用程式。  
   
 ## <a name="referencing-the-ado-library"></a>參考 ADO 程式庫  
- 不適用與指令碼語言。  
+ 不適用指令碼語言。  
   
-## <a name="handling-events"></a>處理事件  
- 不適用與指令碼語言。  
+## <a name="handling-events"></a>錯誤事件  
+ 不適用指令碼語言。  
   
- 下列主題包含有關搭配使用 ADO 與指令碼語言更具體資訊：  
+ 下列主題包含有關搭配使用 ADO 與指令碼語言的更多特定資訊：  
   
 -   [VBScript ADO 程式設計](../../../ado/guide/appendixes/vbscript-ado-programming.md)  
   
 -   [JScript ADO 程式設計](../../../ado/guide/appendixes/jscript-ado-programming.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [使用 ADO 與 Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
+ [Microsoft ActiveX Data Objects （ADO）](../../../ado/microsoft-activex-data-objects-ado.md)   
+ [搭配使用 ADO 與 Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [搭配使用 ADO 與 Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   

@@ -13,29 +13,29 @@ ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ff18386cb9da4edbeaa8930d138ba9951965ee0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928558"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 列舉常數
-若要協助偵錯，ADOX 列舉常數會列出每個常數的值。 不過，這個值只是單純的建議，，而且可能會從一個版本 ADOX 變更到另一個。 名稱，而非實際的值，列舉常數時，應該僅相依於您的程式碼。  
+為協助進行偵錯工具，ADOX 列舉常數會列出每個常數的值。 不過，此值純粹是諮詢，而且可能會從一個 ADOX 版本變更為另一個。 您的程式碼應該只取決於列舉常數的名稱，而不是實際的值。  
   
- 會定義下列的列舉的常數。  
+ 已定義下列列舉常數。  
   
-|列舉型別|描述|  
+|列舉|描述|  
 |-----------------|-----------------|  
-|[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|指定當執行動作的類型**SetPermissions**呼叫。|  
-|[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|指定具有 null 值的記錄都編製索引。|  
-|[ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md)|指定的特性**資料行**。|  
-|[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)|指定的資料型別**欄位**，**參數**，或**屬性**。|  
-|[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)|指定物件會列印文件的繼承，請使用設定的權限**SetPermissions**。|  
-|[KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md)|指定的型別**金鑰**： 主要、 外部索引鍵，或唯一。|  
-|[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)|指定要設定權限或擁有權的資料庫物件的類型。|  
-|[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)|指定物件的權限或群組或使用者的權限。|  
-|[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|指定要時遵循的規則**金鑰**會被刪除。|  
-|[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)|指定索引的資料行的排序順序。|  
+|[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|指定呼叫**SetPermissions**時所要執行的動作類型。|  
+|[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|指定是否要為具有 null 值的記錄編制索引。|  
+|[ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md)|指定資料**行**的特性。|  
+|[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)|指定**欄位**、**參數**或**屬性**的資料類型。|  
+|[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)|指定物件如何繼承使用**SetPermissions**所設定的許可權。|  
+|[KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md)|指定索引**鍵**的類型： [主要]、[外部] 或 [唯一]。|  
+|[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)|指定要設定其許可權或擁有權的資料庫物件類型。|  
+|[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)|指定物件上群組或使用者的許可權。|  
+|[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|指定刪除**金鑰**時要遵循的規則。|  
+|[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)|指定索引資料行的排序次序。|  
   
 ## <a name="see-also"></a>另請參閱  
  [ADOX API 參考](../../../ado/reference/adox-api/adox-api-reference.md)   

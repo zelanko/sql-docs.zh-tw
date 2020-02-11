@@ -16,33 +16,33 @@ ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 624fa1976792a700342a114f82aa5ca6b75c70ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931565"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
-指定的屬性[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件。  
+指定[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件的屬性。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adPropNotSupported**|0|指出提供者不支援的屬性。|  
-|**adPropRequired**|1|表示使用者在初始化資料來源之前，必須指定此屬性的值。|  
-|**adPropOptional**|2|表示使用者不需要初始化資料來源之前指定這個屬性的值。|  
-|**adPropRead**|512|表示使用者可以讀取的屬性。|  
+|**adPropNotSupported**|0|表示提供者不支援此屬性。|  
+|**adPropRequired**|1|表示在初始化資料來源之前，使用者必須指定此屬性的值。|  
+|**adPropOptional**|2|表示在初始化資料來源之前，使用者不需要指定這個屬性的值。|  
+|**adPropRead**|512|表示使用者可以讀取屬性。|  
 |**adPropWrite**|1024|表示使用者可以設定屬性。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- 封裝： **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
+ Package： **.com. wfc. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums.PropertyAttributes.NOTSUPPORTED|  
-|AdoEnums.PropertyAttributes.REQUIRED|  
+|AdoEnums. PropertyAttributes. 必要|  
 |AdoEnums.PropertyAttributes.OPTIONAL|  
 |AdoEnums.PropertyAttributes.READ|  
 |AdoEnums.PropertyAttributes.WRITE|  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Attributes 屬性 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

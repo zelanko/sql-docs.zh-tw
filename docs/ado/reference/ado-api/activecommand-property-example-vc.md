@@ -1,5 +1,5 @@
 ---
-title: ActiveCommand 屬性範例 （VC + +） |Microsoft Docs
+title: ActiveCommand 屬性範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8d189646cc421eb05d9f49d2da08dfe39d9cb34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921639"
 ---
 # <a name="activecommand-property-example-vc"></a>ActiveCommand 屬性範例 (VC++)
-此範例示範[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)屬性。  
+這個範例會示範[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)屬性。  
   
- 有一個副程式[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)物件，其**ActiveCommand**屬性用來顯示命令文字和參數，建立**資料錄集**。  
+ 副程式會提供一個[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，其**ActiveCommand**屬性會用來顯示建立**記錄集**的命令文字和參數。  
   
 ## <a name="example"></a>範例  
   
@@ -212,7 +212,7 @@ void PrintComError(_com_error &e) {
 Ringer  
 ```  
   
-## <a name="sample-output"></a>範例輸出  
+## <a name="sample-output"></a>取樣輸出  
   
 ```  
 Command text = 'SELECT * FROM authors WHERE au_lname = ?'  
@@ -221,5 +221,5 @@ Name = 'Anne  Ringer'
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ActiveCommand 屬性 (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
+ [ActiveCommand 屬性（ADO）](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

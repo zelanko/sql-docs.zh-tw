@@ -1,5 +1,5 @@
 ---
-title: sp_fkeys (TRANSACT-SQL) |Microsoft Docs
+title: sp_fkeys （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb5f684321a11d56a419ae73be0bfb2950fb9939
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124395"
 ---
-# <a name="spfkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
+# <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回目前環境的邏輯外部索引鍵資訊。 這個程序會顯示包括已停用之外部索引鍵的外部索引鍵關聯性。  
@@ -44,27 +44,27 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @pktable_name=] '*pktable_name&lt*'  
- 這是用來傳回目錄資訊的資料表名稱，含主索引鍵。 *pktable_name&lt*已**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 這個參數或*fktable_name*必須提供參數，或兩者。  
+ [ @pktable_name=]'*pktable_name*'  
+ 這是用來傳回目錄資訊的資料表名稱，含主索引鍵。 *pktable_name*是**sysname**，預設值是 Null。 不支援萬用字元的模式比對。 必須提供這個參數或*fktable_name*參數（或兩者）。  
   
- [ @pktable_owner=] '*pktable_owner&lt*'  
- 是用來傳回目錄資訊 （含主索引鍵） 資料表的擁有者名稱。 *pktable_owner&lt*已**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 如果*pktable_owner&lt*未指定，套用基礎 dbms 的預設資料表可見性規則。  
+ [ @pktable_owner=]'*pktable_owner*'  
+ 這是用來傳回目錄資訊之資料表（含主鍵）的擁有者名稱。 *pktable_owner*是**sysname**，預設值是 Null。 不支援萬用字元的模式比對。 如果未指定*pktable_owner* ，就會套用基礎 DBMS 的預設資料表可見度規則。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的資料行。 如果*pktable_owner&lt*未指定且目前使用者並未擁有指定的資料表*pktable_name&lt*，此程序會尋找具有指定的資料表*pktable_name&lt*資料庫擁有者所擁有。 如果資料表存在，就會傳回它的資料行。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的資料行。 如果未指定*pktable_owner* ，而且目前的使用者並未擁有具有指定*pktable_name*的資料表，則程式會尋找資料庫擁有者所擁有之指定*pktable_name*的資料表。 如果資料表存在，就會傳回它的資料行。  
   
- [ @pktable_qualifier =] '*pktable_qualifier&lt*'  
- 這是資料表 (含主索引鍵) 限定詞的名稱。 *pktable_qualifier&lt*是 sysname，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (*qualifier.owner.name*)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個限定詞代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+ [ @pktable_qualifier =]'*pktable_qualifier*'  
+ 這是資料表 (含主索引鍵) 限定詞的名稱。 *pktable_qualifier*是 sysname，預設值是 Null。 各種 DBMS 產品都支援三部分的資料表命名（*qualifier.owner.name*）。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個限定詞代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
- [ @fktable_name=] '*fktable_name*'  
- 這是用來傳回目錄資訊之資料表 (含外部索引鍵) 的名稱。 *fktable_name*是 sysname，預設值是 NULL。 不支援萬用字元的模式比對。 這個參數或*pktable_name&lt*必須提供參數，或兩者。  
+ [ @fktable_name=]'*fktable_name*'  
+ 這是用來傳回目錄資訊之資料表 (含外部索引鍵) 的名稱。 *fktable_name*是 sysname，預設值是 Null。 不支援萬用字元的模式比對。 必須提供這個參數或*pktable_name*參數（或兩者）。  
   
- [ @fktable_owner =] '*fktable_owner*'  
- 這是用來傳回目錄資訊之資料表 (含外部索引鍵) 的擁有者名稱。 *fktable_owner*已**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 如果*fktable_owner*未指定，套用基礎 dbms 的預設資料表可見性規則。  
+ [ @fktable_owner =]'*fktable_owner*'  
+ 這是用來傳回目錄資訊之資料表 (含外部索引鍵) 的擁有者名稱。 *fktable_owner*是**sysname**，預設值是 Null。 不支援萬用字元的模式比對。 如果未指定*fktable_owner* ，就會套用基礎 DBMS 的預設資料表可見度規則。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的資料行。 如果*fktable_owner*未指定且目前使用者並未擁有指定的資料表*fktable_name*，此程序會尋找具有指定的資料表*fktable_name*資料庫擁有者所擁有。 如果資料表存在，就會傳回它的資料行。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的資料行。 如果未指定*fktable_owner* ，而且目前的使用者並未擁有具有指定*fktable_name*的資料表，則程式會尋找資料庫擁有者所擁有之指定*fktable_name*的資料表。 如果資料表存在，就會傳回它的資料行。  
   
- [ @fktable_qualifier=] '*fktable_qualifier*'  
- 這是資料表 (含外部索引鍵) 限定詞的名稱。 *fktable_qualifier*已**sysname**，預設值是 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個限定詞代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+ [ @fktable_qualifier= ]'*fktable_qualifier*'  
+ 這是資料表 (含外部索引鍵) 限定詞的名稱。 *fktable_qualifier*是**sysname**，預設值是 Null。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個限定詞代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
@@ -82,12 +82,14 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 |FKTABLE_NAME|**sysname**|資料表 (含外部索引鍵) 的名稱。 這個欄位一律會傳回值。|  
 |FKCOLUMN_NAME|**sysname**|對於傳回之 TABLE_NAME 的每個資料行而言，這是外部索引鍵資料行的名稱。 這個欄位一律會傳回值。|  
 |KEY_SEQ|**smallint**|資料行在多重資料行主索引鍵中的序號。 這個欄位一律會傳回值。|  
-|UPDATE_RULE|**smallint**|當 SQL 作業是更新時，外部索引鍵所套用的動作。  可能的值如下：<br /> 0=外部索引鍵的 CASCADE 變更。<br /> 1=如果外部索引鍵存在，則是 NO ACTION 變更。<br />   2 = 設為 null <br /> 3 = 設為預設值 |  
-|DELETE_RULE|**smallint**|當 SQL 作業是刪除時，外部索引鍵所套用的動作。 可能的值如下：<br /> 0=外部索引鍵的 CASCADE 變更。<br /> 1=如果外部索引鍵存在，則是 NO ACTION 變更。<br />   2 = 設為 null <br /> 3 = 設為預設值 |  
-|FK_NAME|**sysname**|外部索引鍵識別碼。 如果不適用於資料來源的話，它便是 NULL。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 FOREIGN KEY 條件約束名稱。|  
-|PK_NAME|**sysname**|主索引鍵識別碼。 如果不適用於資料來源的話，它便是 NULL。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 PRIMARY KEY 條件約束名稱。|  
+|UPDATE_RULE|**smallint**|當 SQL 作業是更新時，外部索引鍵所套用的動作。  可能的值：<br /> 0=外部索引鍵的 CASCADE 變更。<br /> 1=如果外部索引鍵存在，則是 NO ACTION 變更。<br />   2 = 設定 null <br /> 3 = 設定預設值 |  
+|DELETE_RULE|**smallint**|當 SQL 作業是刪除時，外部索引鍵所套用的動作。 可能的值：<br /> 0=外部索引鍵的 CASCADE 變更。<br /> 1=如果外部索引鍵存在，則是 NO ACTION 變更。<br />   2 = 設定 null <br /> 3 = 設定預設值 |  
+|FK_NAME|**sysname**|外部索引鍵識別碼。 如果不適用於資料來源的話，它便是 NULL。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 FOREIGN KEY 條件約束名稱。|  
+|PK_NAME|**sysname**|主索引鍵識別碼。 如果不適用於資料來源的話，它便是 NULL。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 PRIMARY KEY 條件約束名稱。|  
   
- 傳回的結果會依 FKTABLE_QUALIFIER、 FKTABLE_OWNER、 FKTABLE_NAME 和 KEY_SEQ 來排序。  
+ 傳回的結果依  FKTABLE_QUALIFIER、FKTABLE_OWNER、FKTABLE_NAME 和 KEY_SEQ 來排序。  
   
 ## <a name="remarks"></a>備註  
  您可以遵照下列步驟來實作含已停用之外部索引鍵之資料表的應用程式編碼：  
@@ -98,10 +100,10 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
 如果提供了主索引鍵資料表名稱，且外部索引鍵資料表名稱是 NULL，sp_fkeys 會傳回所有含有指向給定資料表的外部索引鍵之資料表。 如果提供了外部索引鍵資料表名稱，且主索引鍵資料表名稱是 NULL，sp_fkeys 會傳回所有透過主索引鍵/外部索引鍵關聯性來與外部索引鍵資料表中之外部索引鍵產生關聯的資料表。  
   
-Sp_fkeys 預存程序相當於 ODBC 中的 SQLForeignKeys。  
+sp_fkeys 預存程序相當於 ODBC 中的 SQLForeignKeys。  
   
-## <a name="permissions"></a>Permissions  
- 需要`SELECT`結構描述權限。  
+## <a name="permissions"></a>權限  
+ 需要`SELECT`架構的許可權。  
   
 ## <a name="examples"></a>範例  
  下列範例會擷取 `HumanResources.Department` 資料庫之 `AdventureWorks2012` 資料表的外部索引鍵清單。  
@@ -114,16 +116,16 @@ EXEC sp_fkeys @pktable_name = N'Department'
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會擷取 `DimDate` 資料庫之 `AdventureWorksPDW2012` 資料表的外部索引鍵清單。 會傳回任何資料列，因為[!INCLUDE[ssDW](../../includes/ssdw-md.md)]不支援外部索引鍵。  
+ 下列範例會擷取 `DimDate` 資料庫之 `AdventureWorksPDW2012` 資料表的外部索引鍵清單。 不會傳回任何資料[!INCLUDE[ssDW](../../includes/ssdw-md.md)]列，因為不支援外鍵。  
   
 ```sql  
 EXEC sp_fkeys @pktable_name = N'DimDate;  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄預存程式](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_pkeys &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
+ [sp_pkeys &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
   
   
 

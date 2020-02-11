@@ -1,5 +1,5 @@
 ---
-title: 操作員屬性：新增操作員 （通知頁面） |Microsoft Docs
+title: 操作員屬性：新增操作員（通知頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a04465712667205674ddd8ea8bab7d82c3250261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62630697"
 ---
 # <a name="operator-properties-new-operator-notifications-page"></a>操作員屬性：新增操作員 (通知頁面)
@@ -26,7 +26,7 @@ ms.locfileid: "62630697"
  **警示**  
  檢視執行個體中的警示。  
   
- **作業**  
+ **工作**  
  檢視執行個體中的作業。  
   
  **警示清單**  
@@ -37,10 +37,10 @@ ms.locfileid: "62630697"
   
  下列選項在警示清單和作業清單中均可以使用：  
   
- **電子郵件**  
+ **位址**  
  使用電子郵件通知此操作員。  
   
- **呼叫器**  
+ **尋呼**  
  將電子郵件傳送至呼叫器位址，來通知此操作員。  
   
  **Net send**  

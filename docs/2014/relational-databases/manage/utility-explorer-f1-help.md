@@ -13,25 +13,25 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 402622033abd307d71b0dac8894ff4f6facebef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467852"
 ---
 # <a name="utility-explorer-f1-help"></a>公用程式總管 F1 說明
   下列主題說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式的功能和關聯的作業。  
   
 ## <a name="in-this-section"></a>本節內容  
- [公用程式儀表板&#40;SQL Server 公用程式&#41;](../../database-engine/utility-dashboard-sql-server-utility.md)  
+ [公用程式儀表板 &#40;SQL Server 公用程式&#41;](../../database-engine/utility-dashboard-sql-server-utility.md)  
   
- [部署資料層應用程式詳細資料&#40;SQL Server 公用程式&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)  
+ [部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)  
   
- [受控執行個體詳細資料&#40;SQL Server 公用程式&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)  
+ [受管理的執行個體詳細資料 &#40;SQL Server 公用程式&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)  
   
  [公用程式管理 &#40;SQL Server 公用程式&#41;](../../database-engine/utility-administration-sql-server-utility.md)  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  [建立 SQL Server 公用程式控制點 &#40;SQL Server 公用程式&#41;](create-a-sql-server-utility-control-point-sql-server-utility.md)  
   
  [連接至 SQL Server 公用程式](connect-to-a-sql-server-utility.md)  

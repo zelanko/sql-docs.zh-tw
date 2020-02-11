@@ -1,5 +1,5 @@
 ---
-title: 更新資料 |Microsoft Docs
+title: 正在更新資料 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,20 +14,20 @@ ms.assetid: 6508e4e9-e33a-4dad-b340-5d632fd78a91
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5bd3b72e897b8ae12441c7cf28d1995eb45318d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923696"
 ---
 # <a name="updating-data"></a>更新資料
-更新行為和功能主要是依據更新模式 （鎖定型別）、 資料指標類型，以及資料指標位置。  
+更新行為和功能主要取決於更新模式（鎖定類型）、資料指標類型和資料指標位置。  
   
- 使用**更新**方法來儲存您對目前記錄的任何變更**資料錄集**物件，因為呼叫**AddNew**方法或變更任何欄位值在現有的記錄。 **資料錄集**物件必須支援更新。  
+ 使用**Update**方法來儲存您對**記錄集**物件的目前記錄所做的任何變更，因為呼叫**AddNew**方法或變更現有記錄中的任何域值。 **記錄集**物件必須支援更新。  
   
- 如果**Recordset**物件支援的批次更新，直到您呼叫，在本機，您可以快取讓一或多個記錄的多個變更**UpdateBatch**方法。 如果您正在編輯目前的記錄，或加入新的記錄，當您呼叫**UpdateBatch**方法，ADO 會自動會呼叫**更新**方法，將任何暫止的變更儲存至目前的記錄之前傳輸批次的變更提供者。  
+ 如果**記錄集**物件支援批次更新，您可以在本機快取一或多筆記錄的多個變更，直到您呼叫**UpdateBatch**方法為止。 如果您要在呼叫**UpdateBatch**方法時編輯目前的記錄或加入新的記錄，ADO 會自動呼叫**Update**方法，將任何暫止的變更儲存至目前的記錄，再將批次變更傳送給提供者。  
   
- 目前的記錄會保留目前之後呼叫**更新**或是**UpdateBatch**方法。  
+ 在您呼叫**Update**或**UpdateBatch**方法之後，目前的記錄仍維持最新。  
   
  此章節包含下列主題。  
   

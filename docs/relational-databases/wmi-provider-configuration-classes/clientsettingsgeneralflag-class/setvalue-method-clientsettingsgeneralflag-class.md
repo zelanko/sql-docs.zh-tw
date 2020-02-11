@@ -18,10 +18,10 @@ ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: a3f5fce9c795591ca7f8af41762fc9e9438aba2b
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660115"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>SetValue 方法 (ClientSettingsGeneralFlag 類別)
@@ -36,14 +36,14 @@ object.SetValue(Value)
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
+ *目標*  
  表示伺服器設定之一般旗標的 [ClientSettingsGeneralFlag 類別](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) 物件。  
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
-|*Value*|指定旗標之值的布林值。|  
+|*ReplTest1*|指定旗標之值的布林值。|  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  **Uint32**值，如果已成功修改服務，則為0，如果不支援要求則為1，以及其他指示錯誤的任何數位。  

@@ -10,12 +10,12 @@ ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26d88f2123d87d462ff7f83d0736c182885bf250
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 868fb0f7176faf1c1e795b8efe43f8b6d4cdb3f5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75225349"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918100"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>檢查清單：使用 PowerShell 驗證 PowerPivot for SharePoint
   一定要通過穩固的驗證測試來確認您的服務和資料可運作， [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 安裝或復原作業才會是完整的。 在本文中，我們會示範如何使用 Windows PowerShell 執行這些步驟。 我們將每個步驟放在各自的章節中，好讓您可以直接前往特定工作。 例如，請執行本主題＜ [資料庫](#bkmk_databases) ＞一節中的指令碼來驗證服務應用程式和內容資料庫的名稱，以便排程這些應用程式或資料庫進行維護或備份。  
@@ -32,7 +32,7 @@ ms.locfileid: "75225349"
   
 |||  
 |-|-|  
-|[準備您的 PowerShell 環境](#bkmk_prerequisites)<br /><br /> [徵兆和建議的動作](#bkmk_symptoms)<br /><br /> **（A）** [Analysis Services Windows 服務](#bkmk_windows_service)<br /><br /> **（B）** [PowerPivotSystemService 和 PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **（C）** [PowerPivot 服務應用程式和](#bkmk_powerpivot_service_application)proxy<br /><br /> **（D）** [資料庫](#bkmk_databases)<br /><br /> [SharePoint 功能](#bkmk_features)<br /><br /> [計時器工作](#bkmk_timer_jobs)<br /><br /> [健全狀況規則](#bkmk_health_rules)<br /><br /> **（E）** [Windows 和 ULS 記錄](#bkmk_logs)<br /><br /> [MSOLAP 提供者](#bkmk_msolap)<br /><br /> [ADOMD.Net 用戶端程式庫](#bkmk_adomd)<br /><br /> [健全狀況資料收集規則](#bkmk_health_collection)<br /><br /> [解決方案](#bkmk_solutions)<br /><br /> [手動驗證步驟](#bkmk_manual)<br /><br /> [其他資源](#bkmk_more_resources)<br /><br /> [完整的 PowerShell 腳本](#bkmk_full_script)|![powershell 的 powerpivot 驗證](../../../sql-server/install/media/ssas-powershell-component-verification.png "powershell 的 powerpivot 驗證")|  
+|[準備您的 PowerShell 環境](#bkmk_prerequisites)<br /><br /> [徵兆和建議的動作](#bkmk_symptoms)<br /><br /> **（A）** [Analysis Services Windows 服務](#bkmk_windows_service)<br /><br /> **（B）** [PowerPivotSystemService 和 PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **（C）** [PowerPivot 服務應用程式和](#bkmk_powerpivot_service_application)proxy<br /><br /> **（D）** [資料庫](#bkmk_databases)<br /><br /> [SharePoint 功能](#bkmk_features)<br /><br /> [計時器工作](#bkmk_timer_jobs)<br /><br /> [健全狀況規則](#bkmk_health_rules)<br /><br /> **（E）** [Windows 和 ULS 記錄](#bkmk_logs)<br /><br /> [MSOLAP 提供者](#bkmk_msolap)<br /><br /> [ADOMD.Net 用戶端程式庫](#bkmk_adomd)<br /><br /> [健全狀況資料收集規則](#bkmk_health_collection)<br /><br /> [方案](#bkmk_solutions)<br /><br /> [手動驗證步驟](#bkmk_manual)<br /><br /> [其他資源](#bkmk_more_resources)<br /><br /> [完整的 PowerShell 腳本](#bkmk_full_script)|![powershell 的 powerpivot 驗證](../../../sql-server/install/media/ssas-powershell-component-verification.png "powershell 的 powerpivot 驗證")|  
   
 ##  <a name="bkmk_prerequisites"></a>準備您的 PowerShell 環境  
  本節的步驟會準備您的 PowerShell 環境。 根據目前設定指令碼環境的方式，可能不需要這些步驟。  
@@ -303,7 +303,7 @@ Category    : Data Refresh
 EventID     : 43  
 Level       : High  
 Correlation : 5755879c-7cab-e097-8f80-f27895d44a77  
-Message     : The following error occured when working with the service application, Default PowerPivot Service Application. Skipping the service application..  
+Message     : The following error occurred when working with the service application, Default PowerPivot Service Application. Skipping the service application..  
   
 Timestamp   : 4/14/2014 7:15:02 PM  
 Area        : PowerPivot Service  
@@ -415,7 +415,7 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
   
  [使用 Windows PowerShell 管理 Excel Services （SharePoint Server 2010）](https://technet.microsoft.com/library/ff191201\(v=office.14\).aspx)  
   
- [查看和讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+ [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
  [使用 Get-evenlog Cmdlet](https://technet.microsoft.com/library/ee176846.aspx)  
   
@@ -460,7 +460,7 @@ Get-SPExcelServiceApplication | Select typename,  DisplayName, status
 #Write-Host ""  
 Write-Host -ForegroundColor Green "PowerPivot Service Application pool"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
-# the following assumes there is only 1 PowerPivot Service Application, and returns that applicaitons pool name.  if you have more than one, use the 2nd version  
+# the following assumes there is only 1 PowerPivot Service Application, and returns that application's pool name.  if you have more than one, use the 2nd version  
 $poolname = [string](Get-PowerPivotServiceApplication | Select -Property applicationpool)  
 $position = $poolname.lastindexof("=")  
 $poolname = $poolname.substring($position+1)  

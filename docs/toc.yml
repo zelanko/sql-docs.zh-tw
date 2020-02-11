@@ -60,12 +60,20 @@
               href: big-data-cluster/deploy-big-data-tools.md
             - name: 安裝 azdata
               items:
-                - name: 使用 Windows Installer
-                  href: big-data-cluster/deploy-install-azdata-installer.md
-                - name: 使用 Linux 套件管理員
-                  href: big-data-cluster/deploy-install-azdata-linux-package.md
-                - name: 使用 pip
+                - name: 安裝
                   href: big-data-cluster/deploy-install-azdata.md
+                - name: macOS
+                  href: big-data-cluster/deploy-install-azdata-macos.md
+                - name: Windows
+                  href: big-data-cluster/deploy-install-azdata-installer.md
+                - name: Linux 搭配 APT
+                  href: big-data-cluster/deploy-install-azdata-linux-package.md
+                - name: Linux 搭配 YUM
+                  href: big-data-cluster/deploy-install-azdata-yum.md
+                - name: Linux 搭配 Zypper
+                  href: big-data-cluster/deploy-install-azdata-zypper.md
+                - name: 使用 pip
+                  href: big-data-cluster/deploy-install-azdata-pip.md
         - name: 部署
           items:
             - name: 部署指導
@@ -110,13 +118,13 @@
           href: big-data-cluster/concept-master-instance.md
         - name: 資料集區
           href: big-data-cluster/concept-data-pool.md
-        - name: 存放集區
+        - name: 儲存體集區
           href: big-data-cluster/concept-storage-pool.md
         - name: 計算集區
           href: big-data-cluster/concept-compute-pool.md
         - name: 安全性
           href: big-data-cluster/concept-security.md
-    - name: 使用說明指南
+    - name: 操作指南
       items:
         - name: 組態
           items:
@@ -186,9 +194,15 @@
               href: big-data-cluster/manage-notebooks.md
             - name: 使用控制器儀表板來管理
               href: big-data-cluster/manage-with-controller-dashboard.md
+            - name: 安全性
+              items:
+                - name: 更新 AZDATA_PASSWORD
+                  href: big-data-cluster/change-azdata-password.md
+                - name: 管理使用者的存取
+                  href: big-data-cluster/manage-user-access.md
         - name: Notebooks
           items:
-            - name: Notebooks 概觀
+            - name: 筆記本概觀
               href: big-data-cluster/notebooks-guidance.md
             - name: Notebook 教學課程
               href: big-data-cluster/tutorial-notebook-spark.md
@@ -268,7 +282,7 @@
                   href: big-data-cluster/reference-azdata-bdc-sql.md
                 - name: bdc status
                   href: big-data-cluster/reference-azdata-bdc-status.md
-- name: 商務持續性
+- name: 業務持續性
   items:
     - name: 概觀
       href: database-engine/sql-server-business-continuity-dr.md
@@ -404,7 +418,7 @@
                   href: relational-databases/backup-restore/create-an-encrypted-backup.md
                 - name: 備份壓縮以限制 CPU 使用量 (T-SQL)
                   href: relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md
-                - name: 設定到期日
+                - name: 設定到期日期
                   href: relational-databases/backup-restore/set-the-expiration-date-on-a-backup-sql-server.md
                 - name: 檢視集合中的資料與記錄檔
                   href: relational-databases/backup-restore/view-the-data-and-log-files-in-a-backup-set-sql-server.md
@@ -588,7 +602,7 @@
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-requestbuffers.md
                     - name: SignalAbort
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-signalabort.md
-    - name: AlwaysOn 可用性群組
+    - name: Always On 可用性群組
       href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
       items:
         - name: 概觀
@@ -603,14 +617,14 @@
               href: database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md
         - name: 快速入門
           items:
-            - name: 使用者入門
+            - name: 開始使用
               href: database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md
             - name: 建立與設定
               href: database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md
               items:
                 - name: 精靈
                   href: database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md
-                - name: 對話方塊
+                - name: 對話
                   href: database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md
                 - name: T-SQL
                   href: database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md
@@ -670,7 +684,7 @@
                   href: database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md
                 - name: 建立叢集 DTC
                   href: database-engine/availability-groups/windows/create-clustered-dtc-for-an-always-on-availability-group.md
-            - name: 監視器
+            - name: 監視
               href: database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md
               items:
                 - name: AlwaysOn 儀表板
@@ -689,7 +703,7 @@
               items:
                 - name: 新增資料庫
                   items:
-                    - name: 對話方塊
+                    - name: 對話
                       href: database-engine/availability-groups/windows/availability-group-add-a-database.md
                     - name: 精靈
                       href: database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md
@@ -765,7 +779,7 @@
                   href: database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md
                 - name: 工作階段期間複本之間可能發生的失敗
                   href: database-engine/availability-groups/windows/possible-failures-during-sessions-between-availability-replicas-sql-server.md
-            - name: 連接性
+            - name: 連線能力
               items:
                 - name: 用戶端連線
                   href: database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md
@@ -893,11 +907,11 @@
               items:
                 - name: 監視可用性群組的效能
                   href: database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md
-                - name: 疑難排解：可用性群組已超過 RPO
+                - name: 疑難排解：可用性群組超過 RPO
                   href: database-engine/availability-groups/windows/troubleshoot-availability-group-exceeded-rpo.md
-                - name: 疑難排解：可用性群組已超過 RTO
+                - name: 疑難排解：可用性群組超過 RTO
                   href: database-engine/availability-groups/windows/troubleshoot-availability-group-exceeded-rto.md
-                - name: 疑難排解：對主要複本的變更未反映在次要複本上
+                - name: 疑難排解：對主要的變更未反映在次要複本上
                   href: database-engine/availability-groups/windows/troubleshoot-primary-changes-not-reflected-on-secondary.md
                 - name: 對進行疑難排解有助益的工具
                   href: database-engine/availability-groups/windows/useful-tools-for-troubleshooting.md
@@ -940,7 +954,7 @@
                 - name: 移除叢集
                   href: sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md
                 - name: 升級叢集
-                  href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
+                  href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
                 - name: 移轉到 Windows Server 2012 與 2016
                   href: sql-server/failover-clusters/windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
             - name: 組態
@@ -977,8 +991,6 @@
           items:
             - name: 組態
               items:
-                - name: 升級
-                  href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
                 - name: 仲裁模型與投票
                   href: sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
                 - name: 多重子網路叢集
@@ -1165,7 +1177,7 @@
               href: database-engine/log-shipping/remove-log-shipping-sql-server.md
             - name: 檢視報表
               href: database-engine/log-shipping/view-the-log-shipping-report-sql-server-management-studio.md
-            - name: 監視器
+            - name: 監視
               href: database-engine/log-shipping/monitor-log-shipping-transact-sql.md
             - name: 容錯移轉到次要
               href: database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md
@@ -1210,7 +1222,7 @@
       items:
         - name: 概觀
           href: relational-databases/databases/databases.md
-        - name: 使用說明指南
+        - name: 操作指南
           items:
             - name: 管理
               items:
@@ -1294,7 +1306,7 @@
                   href: relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md
         - name: 概念
           items:
-            - name: 管理
+            - name: 管理性
               items:
                 - name: 複製資料庫至其他伺服器
                   href: relational-databases/databases/copy-databases-to-other-servers.md
@@ -1410,7 +1422,7 @@
               href: relational-databases/blob/filestream-ddl-functions-stored-procedures-and-views.md
         - name: FileTable
           items:
-            - name: 先決條件
+            - name: Prerequisites
               href: relational-databases/blob/enable-the-prerequisites-for-filetable.md
             - name: 建立、改變與卸除
               href: relational-databases/blob/create-alter-and-drop-filetables.md
@@ -1533,9 +1545,9 @@
     - name: 空間資料
       href: relational-databases/spatial/spatial-data-sql-server.md
       items:
-        - name: 資料型別
+        - name: 資料類型
           href: relational-databases/spatial/spatial-data-types-overview.md
-        - name: 點
+        - name: Point
           href: relational-databases/spatial/point.md
         - name: LineString
           href: relational-databases/spatial/linestring.md
@@ -1543,7 +1555,7 @@
           href: relational-databases/spatial/circularstring.md
         - name: CompoundCurve
           href: relational-databases/spatial/compoundcurve.md
-        - name: 多邊形
+        - name: Polygon
           href: relational-databases/spatial/polygon.md
         - name: CurvePolygon
           href: relational-databases/spatial/curvepolygon.md
@@ -1699,12 +1711,12 @@
               href: relational-databases/tables/disable-check-constraints-for-replication.md
             - name: 停用 INSERT 與 UPDATE 的條件約束
               href: relational-databases/tables/disable-check-constraints-with-insert-and-update-statements.md
-        - name: 時態表
+        - name: 暫存資料表
           href: relational-databases/tables/temporal-tables.md
           items:
             - name: 建立及管理
               items:
-                - name: 使用者入門
+                - name: 開始使用
                   href: relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md
                 - name: 建立
                   href: relational-databases/tables/creating-a-system-versioned-temporal-table.md
@@ -1737,7 +1749,7 @@
                   href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
                 - name: 使用
                   href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
-                - name: 監視器
+                - name: 監視
                   href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
                 - name: 效能考量
                   href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
@@ -1747,7 +1759,7 @@
               href: relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md
             - name: 第 1 課：將資料表轉換為階層式結構
               href: relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md
-            - name: 第 2 課：在階層式資料表中建立與管理資料
+            - name: 第 2 課：在階層式資料表中建立及管理資料
               href: relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
         - name: 參考
           items:
@@ -1760,7 +1772,7 @@
     - name: 追蹤變更
       href: relational-databases/track-changes/track-data-changes-sql-server.md
       items:
-        - name: 異動資料擷取
+        - name: 變更資料擷取
           href: relational-databases/track-changes/about-change-data-capture-sql-server.md
           items:
             - name: 啟用與停用
@@ -1973,11 +1985,11 @@
                   href: relational-databases/xml/example-retrieving-product-model-information-as-xml.md
                 - name: 範例：使用 ELEMENTS 指示詞指定 XSINIL
                   href: relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md
-                - name: 範例：使用 XMLDATA 與 XMLSCHEMA 選項要求結構描述作為結果
+                - name: 範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述作為結果
                   href: relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
                 - name: 範例：擷取二進位資料
                   href: relational-databases/xml/example-retrieving-binary-data.md
-                - name: 範例：為 <row> 元素重新命名
+                - name: 範例：重新命名 <row> 項目
                   href: relational-databases/xml/example-renaming-the-row-element.md
                 - name: 範例：為 FOR XML 產生的 XML 指定根元素
                   href: relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
@@ -1990,7 +2002,7 @@
                   href: relational-databases/xml/use-the-binary-base64-option.md
                 - name: 用來形成傳回之 XML 的 AUTO 模式啟發式方法
                   href: relational-databases/xml/auto-mode-heuristics-in-shaping-returned-xml.md
-                - name: '範例:使用 AUTO 模式'
+                - name: 範例：使用 AUTO 模式
                   href: relational-databases/xml/examples-using-auto-mode.md
             - name: EXPLICIT 模式
               href: relational-databases/xml/use-explicit-mode-with-for-xml.md
@@ -2032,7 +2044,7 @@
                   href: relational-databases/xml/columns-that-contain-a-null-value-by-default.md
                 - name: PATH 模式中的命名空間支援
                   href: relational-databases/xml/namespace-support-in-path-mode.md
-                - name: '範例:使用 PATH 模式'
+                - name: 範例：使用 PATH 模式
                   href: relational-databases/xml/examples-using-path-mode.md
             - name: 巢狀查詢
               href: relational-databases/xml/use-nested-for-xml-queries.md
@@ -2063,7 +2075,7 @@
         - name: OPENXML
           href: relational-databases/xml/openxml-sql-server.md
           items:
-            - name: '範例:使用 OPENXML'
+            - name: 範例：使用 OPENXML
               href: relational-databases/xml/examples-using-openxml.md
             - name: 指定中繼屬性
               href: relational-databases/xml/specify-metaproperties-in-openxml.md
@@ -2091,7 +2103,7 @@
           href: relational-databases/data-tier-applications/extract-a-dac-from-a-database.md
         - name: 匯入 BACPAC 檔案以建立新的使用者資料庫
           href: relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md
-        - name: 監視器
+        - name: 監視
           href: relational-databases/data-tier-applications/monitor-data-tier-applications.md
         - name: 將資料庫註冊為 DAC
           href: relational-databases/data-tier-applications/register-a-database-as-a-dac.md
@@ -2108,7 +2120,7 @@
       items:
         - name: 概觀
           items:
-            - name: 使用者入門
+            - name: 開始使用
               href: relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md
             - name: 整合程式設計概念
               href: relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md
@@ -2212,7 +2224,7 @@
           items:
             - name: 管理
               href: relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md
-            - name: Alter
+            - name: 變更
               href: relational-databases/clr-integration/assemblies/altering-an-assembly.md
             - name: 建立
               href: relational-databases/clr-integration/assemblies/creating-an-assembly.md
@@ -2239,7 +2251,7 @@
               href: relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md
         - name: 資料庫物件
           items:
-            - name: 建置
+            - name: Build
               href: relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md
             - name: 偵錯
               href: relational-databases/clr-integration/debugging-clr-database-objects.md
@@ -2267,7 +2279,7 @@
           items:
             - name: 運作方式
               href: relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md
-            - name: 加入
+            - name: 加
               href: relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md
             - name: 建立
               href: relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md
@@ -2286,7 +2298,7 @@
         - name: 參考
           href: relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md
           items:
-            - name: 資料型別
+            - name: 資料類型
               href: relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md
             - name: srv_* 擴充預存程序 API
               items:
@@ -2473,7 +2485,7 @@
               href: relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md
             - name: 路徑運算式
               href: relational-databases/json/json-path-expressions-sql-server.md
-            - name: 常見的問題
+            - name: 常見問題
               href: relational-databases/json/solve-common-issues-with-json-in-sql-server.md
         - name: OPENJSON
           items:
@@ -2524,7 +2536,7 @@
           items:
             - name: Extensibility Framework
               href: language-extensions/concepts/extensibility-framework.md
-        - name: 使用說明指南
+        - name: 操作指南
           items:
             - name: 從 SQL Server 呼叫 Java
               href: language-extensions/how-to/call-java-from-sql.md
@@ -2547,7 +2559,7 @@
               href: relational-databases/native-client/system-requirements-for-sql-server-native-client.md
             - name: 使用 SQL Server Native Client 的時機
               href: relational-databases/native-client/when-to-use-sql-server-native-client.md
-        - name: 功能
+        - name: 特性
           href: relational-databases/native-client/features/sql-server-native-client-features.md
           items:
             - name: 診斷資訊擴充事件
@@ -2599,7 +2611,7 @@
         - name: 應用程式
           href: relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md
           items:
-            - name: Components
+            - name: 元件
               href: relational-databases/native-client/applications/components-of-sql-server-native-client.md
             - name: 使用原生用戶端連線到 Azure SQL
               href: relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
@@ -2745,7 +2757,7 @@
               href: relational-databases/native-client-ole-db-tables-indexes/dropping-a-sql-server-table.md
             - name: 移除資料行
               href: relational-databases/native-client-ole-db-tables-indexes/removing-a-column-from-a-sql-server-table.md
-        - name: 資料型別
+        - name: 資料類型
           href: relational-databases/native-client-ole-db-data-types/data-types-ole-db.md
           items:
             - name: ITableDefinition 中的對應
@@ -2974,7 +2986,7 @@
                   href: relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md
                 - name: 取得相互 Kerberos 驗證
                   href: relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md
-                - name: 如何：將資料列插入 Geography 資料行
+                - name: 如何：將資料列插入至 Geography 資料行
                   href: relational-databases/native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
                 - name: 管理 Text 與 Image 資料行 - 使用資料執行中資料行
                   href: relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md
@@ -3296,11 +3308,11 @@
         - name: Text 與 Image 資料行
           href: relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md
           items:
-            - name: 繫結與未繫結的 Text 與 Image 資料行
+            - name: 繫結與未繫結的文字與影像資料行比較
               href: relational-databases/native-client-odbc-text-image-columns/bound-vs-unbound-text-and-image-columns.md
             - name: 資料執行中與 Text、ntext 或 Image 資料行
               href: relational-databases/native-client-odbc-text-image-columns/data-at-execution-and-text-ntext-or-image-columns.md
-            - name: 已記錄與未記錄的修改
+            - name: 已記錄及未記錄的修改
               href: relational-databases/native-client-odbc-text-image-columns/logged-vs-unlogged-modifications.md
         - name: 資料表值參數
           href: relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md
@@ -3517,7 +3529,7 @@
           items:
             - name: 用戶端與伺服器端
               href: relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md
-            - name: 用戶端與伺服器端
+            - name: 用戶端與伺服器端的比較
               href: relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
             - name: 用戶端
               href: relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md
@@ -4203,7 +4215,6 @@
             - name: SQL Server 的本機稽核
               href: sql-server/usage-and-diagnostic-data-in-local-audit.md
     - name: 安裝 SQL Server
-      href: database-engine/install-windows/installation-for-sql-server.md
       items:
         - name: 概觀
           href: database-engine/install-windows/install-sql-server.md
@@ -4261,11 +4272,9 @@
         - name: 支援的版本與版本升級 - SQL Server 2017
           href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
         - name: 支援的版本與版本升級 - SQL Server 2016
-          href: database-engine/install-windows/supported-version-and-edition-upgrades.md
+          href: database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016
         - name: 執行 Data Migration Assistant 準備進行升級
           href: database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md
-        - name: 從 SQL 2005、2008 或 2008 R2 升級
-          href: database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md
         - name: Analysis Services
           href: database-engine/install-windows/upgrade-analysis-services.md
         - name: Data Quality Services
@@ -4299,6 +4308,13 @@
               href: relational-databases/performance/upgrade-dbcompat-using-qta.md
             - name: 適用於 SQL Server 的最新更新
               href: database-engine/install-windows/latest-updates-for-microsoft-sql-server.md
+    - name: 結束支援
+      items:
+        - name: 概觀
+          href: sql-server/end-of-support/sql-server-end-of-life-overview.md
+          displayName: 'end of support, end of life'
+        - name: 延伸安全性更新
+          href: sql-server/end-of-support/sql-server-extended-security-updates.md
     - name: 組態
       href: database-engine/configure-windows/database-engine-instances-sql-server.md
       items:
@@ -4324,6 +4340,8 @@
           href: relational-databases/in-memory-database.md
         - name: 混合式緩衝集區
           href: database-engine/configure-windows/hybrid-buffer-pool.md
+        - name: 新增保存的記錄緩衝區
+          href: relational-databases/databases/add-persisted-log-buffer.md
         - name: 變更伺服器驗證模式
           href: database-engine/configure-windows/change-server-authentication-mode.md
         - name: SQL 寫入器服務
@@ -4609,6 +4627,8 @@
               href: database-engine/configure-windows/server-properties-advanced-page.md
 - name: 移轉與載入資料
   items:
+    - name: 移轉文件
+      href: sql-server/migrate/index.yml
     - name: SQL Server Integration Services (SSIS) >
       href: integration-services/index.md
     - name: 大量複製公用程式 (bcp)
@@ -4785,11 +4805,11 @@
               href: relational-databases/replication/deprecated-features-in-sql-server-replication.md
             - name: 重大變更
               href: relational-databases/replication/breaking-changes-in-sql-server-replication.md
-            - name: 最佳做法
+            - name: 最佳作法
               href: relational-databases/replication/administration/best-practices-for-replication-administration.md
             - name: 常見問題集
               href: relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md
-        - name: 使用說明指南
+        - name: 操作指南
           items:
             - name: 設定複寫
               items:
@@ -4951,7 +4971,7 @@
                   href: relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md
                 - name: 命令提示字元參數
                   href: relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md
-            - name: 監視器
+            - name: 監視
               href: relational-databases/replication/monitor/monitoring-replication.md
               items:
                 - name: 監視複寫代理程式
@@ -5019,7 +5039,7 @@
                   href: relational-databases/replication/security/secure-the-distributor.md
                 - name: 發行者
                   href: relational-databases/replication/security/secure-the-publisher.md
-                - name: 訂閱者
+                - name: 用戶
                   href: relational-databases/replication/security/secure-the-subscriber.md
                 - name: 快照集資料夾
                   href: relational-databases/replication/security/secure-the-snapshot-folder.md
@@ -5220,7 +5240,7 @@
                   href: relational-databases/replication/security/replication-agent-security-model.md
                 - name: 安全性角色需求
                   href: relational-databases/replication/security/security-role-requirements-for-replication.md
-                - name: 最佳做法
+                - name: 最佳作法
                   href: relational-databases/replication/security/replication-security-best-practices.md
             - name: 非 SQL 複寫
               href: relational-databases/replication/non-sql/heterogeneous-database-replication.md
@@ -5317,7 +5337,7 @@
                       href: relational-databases/replication/publication-properties-subscription-options.md
                 - name: 發行項屬性
                   href: relational-databases/replication/article-properties-article.md
-                - name: 訂閱屬性
+                - name: 訂用帳戶屬性
                   href: relational-databases/replication/subscription-properties-subscriber.md
                 - name: 篩選設定
                   href: relational-databases/replication/filter-settings.md
@@ -5769,7 +5789,7 @@
                   href: sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md
                 - name: 設定相容的功能
                   href: sql-server/stretch-database/configure-compatible-sql-server-features-with-stretch-database.md
-        - name: 如何
+        - name: 作法
           items:
             - name: 啟用
               items:
@@ -5810,10 +5830,10 @@
       items:
         - name: 工作負載比較概觀
           href: dea/database-experimentation-assistant-get-started.md
-        - name: 擷取追蹤
-          href: dea/database-experimentation-assistant-capture-trace.md
         - name: 設定重新執行
           href: dea/database-experimentation-assistant-configure-replay.md
+        - name: 擷取追蹤
+          href: dea/database-experimentation-assistant-capture-trace.md
         - name: 重新執行追蹤
           href: dea/database-experimentation-assistant-replay-trace.md
         - name: 建立報表
@@ -5831,6 +5851,8 @@
           href: dma/dma-assesssqlonprem.md
         - name: 存取 SQL Server Integration Services (SSIS)
           href: dma/dma-assess-ssis.md
+        - name: 儲存並載入評量
+          href: dma/dma-save-load-assessments.md
         - name: 識別適合的 Azure SQL Database SKU
           href: dma/dma-sku-recommend-sql-db.md
         - name: 將 SQL Server 升級至較新版本
@@ -5841,667 +5863,18 @@
           href: dma/dma-migrateserverlogins.md
         - name: 評定 SQL Server 資料資產的 Azure SQL Database 整備程式
           href: dma/dma-assess-sql-data-estate-to-sqldb.md
-        - name: 最佳做法
+        - name: 最佳作法
           href: dma/dma-bestpractices.md
         - name: 合併評定報告
           href: dma/dma-consolidatereports.md
-        - name: 評定的 Power BI 報表
-          href: dma/dma-powerbiassesreport.md
+        - name: 評估應用程式的資料存取層
+          href: dma/dma-assess-app-data-layer.md
         - name: 從命令列執行
           href: dma/dma-commandline.md
         - name: 進行設定
           href: dma/dma-configurationsettings.md
     - name: SQL Server 移轉小幫手 (SSMA)
-      href: ssma/sql-server-migration-assistant.md
-      items:
-        - name: 存取
-          href: ssma/access/sql-server-migration-assistant-for-access-accesstosql.md
-          items:
-            - name: 安裝 SSMA
-              href: ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md
-            - name: 使用者入門
-              href: ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md
-            - name: 新功能
-              href: ssma/access/what-s-new-in-ssma-for-access-accesstosql.md
-            - name: 準備 Access 資料庫
-              href: ssma/access/preparing-access-databases-for-migration-accesstosql.md
-            - name: 不相容的 Access 功能
-              href: ssma/access/incompatible-access-features-accesstosql.md
-            - name: SSMA 中的新 GUI 功能
-              href: ssma/access/new-gui-features-in-ssma-for-access-to-sql.md
-            - name: Access 清查結構描述
-              href: ssma/access/access-inventory-schemas-accesstosql.md
-            - name: 儲存中繼資料
-              href: ssma/access/save-metadata-accesstosql.md
-            - name: 連線到 SQL Server
-              href: ssma/access/connecting-to-sql-server-accesstosql.md
-            - name: 將 Access 資料移轉到 Azure SQL DB
-              href: ssma/access/migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md
-            - name: 建立與管理專案
-              href: ssma/access/creating-and-managing-projects-accesstosql.md
-            - name: 使用 SSMA for Access 主控台
-              href: ssma/access/working-with-ssma-for-access-console-accesstosql.md
-            - name: 新增與移除資料庫檔案
-              href: ssma/access/adding-and-removing-access-database-files-accesstosql.md
-            - name: 轉換 Access 資料庫物件
-              href: ssma/access/converting-access-database-objects-accesstosql.md
-            - name: 法律注意事項
-              href: ssma/access/legal-notice-ssma-for-access.md
-            - name: 連接至 SQL Server
-              href: ssma/access/connect-to-sql-server-accesstosql.md
-            - name: 全域設定
-              href: ssma/access/global-settings-output-window-accesstosql.md
-            - name: 新增專案 (SSMA)
-              href: ssma/access/new-project-ssma-accesstosql.md
-            - name: SSMA 主控台中的命令列選項
-              href: ssma/access/command-line-options-in-ssma-console-accesstosql.md
-            - name: 連線到 Azure SQL DB
-              href: ssma/access/connect-to-azure-sql-db-accesstosql.md
-            - name: 評定報告
-              href: ssma/access/assessment-report-accesstosql.md
-            - name: 對應來源與目標資料類型
-              href: ssma/access/mapping-source-and-target-data-types-accesstosql.md
-            - name: 管理密碼
-              href: ssma/access/managing-passwords-accesstosql.md
-            - name: 資料移轉報告
-              href: ssma/access/data-migration-report-accesstosql.md
-            - name: 使用者介面參考
-              href: ssma/access/user-interface-reference-accesstosql.md
-            - name: 使用範例主控台指令碼檔
-              href: ssma/access/working-sample-console-script-filesexecuting-ssma-console-accesstosql.md
-            - name: 產生報表
-              href: ssma/access/generating-reports-accesstosql.md
-            - name: 執行 SSMA 主控台
-              href: ssma/access/executing-the-ssma-console-accesstosql.md
-            - name: 評定 Access 資料庫物件的轉換
-              href: ssma/access/assessing-access-database-objects-for-conversion-accesstosql.md
-            - name: 建立伺服器連線檔案
-              href: ssma/access/creating-the-server-connection-files-accesstosql.md
-            - name: 將 Access 應用程式連結到 Azure SQL DB
-              href: ssma/access/linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md
-            - name: 建立變數值檔案
-              href: ssma/access/creating-variable-value-files-accesstosql.md
-            - name: 編輯類型對應
-              href: ssma/access/edit-type-mapping-accesstosql.md
-            - name: 匯出 Access 清查
-              href: ssma/access/exporting-an-access-inventory-accesstosql.md
-            - name: 將 Access 資料庫移轉到 Azure SQL DB
-              href: ssma/access/migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md
-            - name: 對應來源與目標資料庫
-              href: ssma/access/mapping-source-and-target-databases-accesstosql.md
-            - name: 建立指令碼檔
-              href: ssma/access/creating-script-files-accesstosql.md
-            - name: 尋找資料庫精靈 (驗證選取項目)
-              href: ssma/access/find-databases-wizard-verify-selection-accesstosql.md
-            - name: 移轉精靈
-              href: ssma/access/migration-wizard-accesstosql.md
-            - name: 轉換、載入與移轉
-              href: ssma/access/convert-load-and-migrate-accesstosql.md
-            - name: 將轉換的資料庫物件載入 SQL Server
-              href: ssma/access/loading-converted-database-objects-into-sql-server-accesstosql.md
-            - name: 進階物件選取項目
-              href: ssma/access/advanced-object-selection-accesstosql.md
-            - name: 開始使用 SQL Server 移轉小幫手
-              href: ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md
-            - name: 從資料庫重新整理
-              href: ssma/access/refresh-from-database-accesstosql.md
-            - name: 尋找資料庫精靈 (選取檔案)
-              href: ssma/access/find-databases-wizard-select-files-accesstosql.md
-            - name: 快速鍵
-              href: ssma/access/shortcut-keys-accesstosql.md
-            - name: 連線到 Azure SQL DB
-              href: ssma/access/connecting-to-azure-sql-db-accesstosql.md
-            - name: 設定轉換與移轉選項
-              href: ssma/access/setting-conversion-and-migration-options-accesstosql.md
-            - name: 疑難排解
-              href: ssma/access/troubleshooting-accesstosql.md
-            - name: 功能表命令與其他快速鍵
-              href: ssma/access/menu-commands-and-other-shortcut-keys-accesstosql.md
-            - name: 尋找資料庫精靈 (選取位置)
-              href: ssma/access/find-databases-wizard-select-locations-accesstosql.md
-            - name: 附錄 - 1
-              href: ssma/access/appendix-1-accesstosql.md
-            - name: 專案設定
-              items:
-                - name: 移轉
-                  href: ssma/access/project-settings-migration-accesstosql.md
-                - name: GUI
-                  href: ssma/access/project-settings-gui-accesstosql.md
-                - name: 轉換
-                  href: ssma/access/project-settings-conversion-accesstosql.md
-                - name: Azure SQL DB
-                  href: ssma/access/project-settings-azure-sql-db-accesstosql.md
-                - name: 類型對應
-                  href: ssma/access/project-settings-type-mapping-accesstosql.md
-                - name: 載入物件
-                  href: ssma/access/project-settings-loading-objects-accesstosql.md
-            - name: 全域設定
-              items:
-                - name: 對話方塊
-                  href: ssma/access/global-settings-dialogs-accesstosql.md
-                - name: 記錄
-                  href: ssma/access/global-settings-logging-accesstosql.md
-                - name: 編輯器
-                  href: ssma/access/global-settings-editor-accesstosql.md
-        - name: DB2
-          href: ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md
-          items:
-            - name: 安裝 SSMA
-              href: ssma/db2/installing-ssma-for-db2-db2tosql.md
-            - name: 使用者入門
-              href: ssma/db2/getting-started-with-ssma-for-db2-console-db2tosql.md
-            - name: 新功能
-              href: ssma/db2/what-s-new-in-ssma-for-db2-db2tosql.md
-            - name: 新的 GUI 功能
-              href: ssma/db2/new-gui-features-in-ssma-for-db2-db2tosql.md
-            - name: 安裝 SSMA for DB2 用戶端
-              href: ssma/db2/installing-ssma-for-db2-client-db2tosql.md
-            - name: 使用者介面參考
-              href: ssma/db2/user-interface-reference-db2tosql.md
-            - name: 編輯類型對應
-              href: ssma/db2/edit-type-mapping-db2tosql.md
-            - name: 將轉換的資料庫物件載入 SQL Server
-              href: ssma/db2/loading-converted-database-objects-into-sql-server-db2tosql.md
-            - name: 設定專案選項
-              href: ssma/db2/setting-project-options-db2tosql.md
-            - name: 建立指令碼檔
-              href: ssma/db2/creating-script-files-db2tosql.md
-            - name: 疑難排解
-              href: ssma/db2/troubleshooting-db2tosql.md
-            - name: 對應 DB2 與 SQL Server 資料類型
-              href: ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md
-            - name: 法律注意事項
-              href: ssma/db2/legal-notice-db2tosql.md
-            - name: 在 SQL Server 上安裝 SSMA 元件
-              href: ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md
-            - name: 執行 SSMA 主控台
-              href: ssma/db2/executing-the-ssma-console-db2tosql.md
-            - name: 快速鍵
-              href: ssma/db2/shortcut-keys-db2tosql.md
-            - name: 進階物件選取項目
-              href: ssma/db2/advanced-object-selection-db2tosql.md
-            - name: 連接至 SQL Server
-              href: ssma/db2/connect-to-sql-server-db2tosql.md
-            - name: 連線到 SQL Server
-              href: ssma/db2/connecting-to-sql-server-db2etosql.md
-            - name: 評定報告
-              href: ssma/db2/assessment-report-db2tosql.md
-            - name: 連線到 DB2
-              href: ssma/db2/connect-to-db2-db2tosql.md
-            - name: 儲存中繼資料
-              href: ssma/db2/save-metadata-db2tosql.md
-            - name: 評定 DB2 結構描述的轉換
-              href: ssma/db2/assessing-db2-schemas-for-conversion-db2tosql.md
-            - name: 轉換 DB2 結構描述
-              href: ssma/db2/converting-db2-schemas-db2tosql.md
-            - name: SQL Server 移轉小幫手
-              href: ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md
-            - name: 產生報表
-              href: ssma/db2/generating-reports-db2tosql.md
-            - name: 建立伺服器連線檔案
-              href: ssma/db2/creating-the-server-connection-files-db2tosql.md
-            - name: 新增專案
-              href: ssma/db2/new-project-db2tosql.md
-            - name: 從資料庫重新整理
-              href: ssma/db2/refresh-from-database-db2tosql.md
-            - name: 連線到 DB2 資料庫
-              href: ssma/db2/connecting-to-db2-database-db2tosql.md
-            - name: 使用範例主控台指令碼檔
-              href: ssma/db2/working-with-the-sample-console-script-files-db2tosql.md
-            - name: 資料移轉設定
-              href: ssma/db2/data-migration-settings-db2tosql.md
-            - name: 管理密碼
-              href: ssma/db2/managing-passwords-db2tosql.md
-            - name: 移除 SSMA for DB2 元件
-              href: ssma/db2/removing-ssma-for-db2-components-db2tosql.md
-            - name: 開始使用 SSMA for DB2
-              href: ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md
-            - name: 資料移轉報告
-              href: ssma/db2/data-migration-report-db2tosql.md
-            - name: 使用 SSMA for Oracle 主控台
-              href: ssma/db2/working-with-ssma-for-oracle-console-db2tosql.md
-            - name: SSMA 主控台中的命令列選項
-              href: ssma/db2/command-line-options-in-ssma-console-db2tosql.md
-            - name: 將 DB2 資料庫移轉到 SQL Server
-              href: ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md
-            - name: 功能表命令與其他快速鍵
-              href: ssma/db2/menu-commands-and-other-shortcut-keys-db2tosql.md
-            - name: 建立變數值檔案
-              href: ssma/db2/creating-variable-value-files-db2tosql.md
-            - name: 使用 SSMA 專案
-              href: ssma/db2/working-with-ssma-projects-db2tosql.md
-            - name: 將 DB2 結構描述對應到 SQL Server 結構描述
-              href: ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md
-            - name: 附錄 - 1
-              href: ssma/db2/appendix-1-db2tosql.md
-            - name: 專案設定
-              items:
-                - name: 移轉
-                  href: ssma/db2/project-settings-migration-db2tosql.md
-                - name: 類型對應
-                  href: ssma/db2/project-settings-type-mapping-db2tosql.md
-                - name: 轉換
-                  href: ssma/db2/project-settings-conversion-db2tosql.md
-                - name: 載入系統物件
-                  href: ssma/db2/project-settings-loading-system-objects-db2tosql.md
-                - name: GUI
-                  href: ssma/db2/project-settings-gui-db2tosql.md
-                - name: Synchronization
-                  href: ssma/db2/project-settings-synchronization-db2tosql.md
-            - name: 全域設定
-              href: ssma/db2/global-settings-dialogs-db2tosql.md
-              items:
-                - name: 編輯器
-                  href: ssma/db2/global-settings-editor-db2tosql.md
-                - name: 輸出視窗
-                  href: ssma/db2/global-settings-output-window-db2tosql.md
-                - name: 記錄
-                  href: ssma/db2/global-settings-logging-db2tosql.md
-        - name: mySQL
-          href: ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md
-          items:
-            - name: 安裝 SSMA
-              href: ssma/mysql/installing-ssma-for-mysql-mysqltosql.md
-            - name: 開始使用 SSMA for MySQL
-              href: ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md
-            - name: 法律注意事項
-              href: ssma/mysql/legal-notice-mysqltosql.md
-            - name: 轉換設定
-              href: ssma/mysql/conversion-settings-mysqltosql.md
-            - name: 安裝 SSMA for MySQL 用戶端
-              href: ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md
-            - name: 執行 SSMA 主控台
-              href: ssma/mysql/executing-the-ssma-console-mysqltosql.md
-            - name: 建立伺服器連線檔案
-              href: ssma/mysql/creating-the-server-connection-files-mysqltosql.md
-            - name: SQL 模式
-              href: ssma/mysql/sql-modes-mysqltosql.md
-            - name: 連接至 SQL Server
-              href: ssma/mysql/connect-to-sql-server-mysqltosql.md
-            - name: 連線到 Azure SQL DB
-              href: ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md
-            - name: 建立指令碼檔
-              href: ssma/mysql/creating-script-files-mysqltosql.md
-            - name: 將轉換的資料庫物件載入 SQL Server
-              href: ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md
-            - name: 轉換 MySQL 資料庫
-              href: ssma/mysql/converting-mysql-databases-mysqltosql.md
-            - name: 移轉到 SQL Server - Azure SQL DB
-              href: ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md
-            - name: SSMA 主控台中的命令列選項
-              href: ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md
-            - name: 使用 SSMA 專案
-              href: ssma/mysql/working-with-ssma-projects-mysqltosql.md
-            - name: 資料移轉設定
-              href: ssma/mysql/data-migration-settings-mysqltosql.md
-            - name: 儲存中繼資料
-              href: ssma/mysql/save-metadata-mysqltosql.md
-            - name: 功能表命令與其他快速鍵
-              href: ssma/mysql/menu-commands-and-other-shortcut-keys-mysqltosql.md
-            - name: 疑難排解
-              href: ssma/mysql/troubleshooting-mysqltosql.md
-            - name: 連線到 MySQL
-              href: ssma/mysql/connect-to-mysql-mysqltosql.md
-            - name: 移除 SSMA for MySQL 元件
-              href: ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md
-            - name: 連線到 Azure SQL DB
-              href: ssma/mysql/connect-to-azure-sql-db-mysqltosql.md
-            - name: 將 MySQL 資料庫移轉到 Azure SQL DB
-              href: ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md
-            - name: 使用範例主控台指令碼檔
-              href: ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md
-            - name: 新增專案
-              href: ssma/mysql/new-project-ssma-mysqltosql.md
-            - name: 在 SQL Server 上安裝 SSMA 元件
-              href: ssma/mysql/installing-ssma-components-on-sql-server-mysqltosql.md
-            - name: 將 MySQL 資料庫對應到 SQL Server 結構描述
-              href: ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md
-            - name: 從資料庫重新整理
-              href: ssma/mysql/refresh-from-database-mysqltosql.md
-            - name: 快速鍵
-              href: ssma/mysql/shortcut-keys-mysqltosql.md
-            - name: 評定報告
-              href: ssma/mysql/assessment-report-mysqltosql.md
-            - name: 資料移轉報告
-              href: ssma/mysql/data-migration-report-mysqltosql.md
-            - name: 管理密碼
-              href: ssma/mysql/managing-passwords-mysqltosql.md
-            - name: 進階物件選取項目
-              href: ssma/mysql/advanced-object-selection-mysqltosql.md
-            - name: 使用者介面參考
-              href: ssma/mysql/user-interface-reference-mysqltosql.md
-            - name: 附錄 - 1
-              href: ssma/mysql/appendix-1-mysqltosql.md
-            - name: 評定 MySQL 資料庫的轉換
-              href: ssma/mysql/assessing-mysql-databases-for-conversion-mysqltosql.md
-            - name: 使用 SSMA for MySQL 主控台
-              href: ssma/mysql/working-with-ssma-for-mysql-console-mysqltosql.md
-            - name: 開始使用 SSMA for MySQL 主控台
-              href: ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md
-            - name: 對應 MySQL 與 SQL Server 字元集
-              href: ssma/mysql/mapping-mysql-and-sql-server-character-set-mysqltosql.md
-            - name: 建立變數值檔案
-              href: ssma/mysql/creating-variable-value-files-mysqltosql.md
-            - name: 產生報表
-              href: ssma/mysql/generating-reports-mysqltosql.md
-            - name: 編輯類型對應
-              href: ssma/mysql/edit-type-mapping-mysqltosql.md
-            - name: 對應 MySQL 與 SQL Server 資料類型
-              href: ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md
-            - name: SSMA for MySQL 的新功能
-              href: ssma/mysql/what-s-new-in-ssma-for-mysql-mysqltosql.md
-            - name: SSMA for MySQL 中的新 GUI 功能
-              href: ssma/mysql/new-gui-features-in-ssma-for-mysql-mysqltosql.md
-            - name: 設定專案選項
-              href: ssma/mysql/setting-project-options-mysqltosql.md
-            - name: 連線到 MySQL
-              href: ssma/mysql/connecting-to-mysql-mysqltosql.md
-            - name: 連線到 SQL Server
-              href: ssma/mysql/connecting-to-sql-server-mysqltosql.md
-            - name: 專案設定
-              items:
-                - name: GUI
-                  href: ssma/mysql/project-settings-gui-mysqltosql.md
-                - name: Azure SQL DB
-                  href: ssma/mysql/project-settings-azure-sql-db-mysqltosql.md
-                - name: 類型對應
-                  href: ssma/mysql/project-settings-type-mapping-mysqltosql.md
-                - name: 移轉
-                  href: ssma/mysql/project-settings-migration-mysqltosql.md
-                - name: Synchronization
-                  href: ssma/mysql/project-settings-synchronization-mysqltosql.md
-                - name: 轉換
-                  href: ssma/mysql/project-settings-conversion-mysqltosql.md
-            - name: 全域設定
-              href: ssma/mysql/global-settings-output-window-mysqltosql.md
-              items:
-                - name: 對話方塊
-                  href: ssma/mysql/global-settings-dialogs-mysqltosql.md
-                - name: 記錄
-                  href: ssma/mysql/global-settings-logging-mysqltosql.md
-                - name: 編輯器
-                  href: ssma/mysql/global-settings-editor-mysqltosql.md
-        - name: Oracle
-          href: ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md
-          items:
-            - name: SSMA 的新功能
-              href: ssma/oracle/what-s-new-in-ssma-for-oracle-oracletosql.md
-            - name: 安裝 SSMA
-              href: ssma/oracle/installing-ssma-for-oracle-oracletosql.md
-            - name: 使用者入門
-              href: ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md
-            - name: 將 Oracle HR 結構描述轉換為 SQL Server
-              href: ssma/oracle/sql-server-linux-convert-from-oracle.md
-            - name: 法律注意事項
-              href: ssma/oracle/legal-notice-ssma-for-oracle.md
-            - name: 安裝 SSMA for Oracle 用戶端
-              href: ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md
-            - name: SSMA 中的新 GUI 功能
-              href: ssma/oracle/new-gui-features-in-ssma-for-oracle-oracletosql.md
-            - name: 執行測試案例
-              href: ssma/oracle/running-test-cases-oracletosql.md
-            - name: 功能表命令與其他快速鍵
-              href: ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql.md
-            - name: 使用測試存放庫
-              href: ssma/oracle/using-test-repositories-oracletosql.md
-            - name: 建立變數值檔案
-              href: ssma/oracle/creating-variable-value-files-oracletosql.md
-            - name: 測試移轉的資料庫物件
-              href: ssma/oracle/testing-migrated-database-objects-oracletosql.md
-            - name: 使用 SSMA 專案
-              href: ssma/oracle/working-with-ssma-projects-oracletosql.md
-            - name: 連線到 Oracle 資料庫
-              href: ssma/oracle/connecting-to-oracle-database-oracletosql.md
-            - name: 將 Oracle 資料移轉到 SQL Server
-              href: ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md
-            - name: 轉換 Oracle 結構描述
-              href: ssma/oracle/converting-oracle-schemas-oracletosql.md
-            - name: 資料移轉報告
-              href: ssma/oracle/data-migration-report-oracletosql.md
-            - name: 產生報表
-              href: ssma/oracle/generating-reports-oracletosql.md
-            - name: 進階物件選取項目
-              href: ssma/oracle/advanced-object-selection-oracletosql.md
-            - name: 使用範例主控台指令碼檔
-              href: ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md
-            - name: SSMA 主控台中的命令列選項
-              href: ssma/oracle/command-line-options-in-ssma-console-oracletosql.md
-            - name: 快速鍵
-              href: ssma/oracle/shortcut-keys-oracle-to-sql.md
-            - name: 將轉換的資料庫物件載入 SQL Server
-              href: ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md
-            - name: 設定專案選項
-              href: ssma/oracle/setting-project-options-oracletosql.md
-            - name: 管理備份
-              href: ssma/oracle/managing-backups-oracletosql.md
-            - name: 儲存中繼資料
-              href: ssma/oracle/save-metadata-oracletosql.md
-            - name: 自訂呼叫順序
-              href: ssma/oracle/customizing-calls-order-oracletosql.md
-            - name: 資料移轉設定
-              href: ssma/oracle/data-migration-settings-oracletosql.md
-            - name: 檢視測試案例報表
-              href: ssma/oracle/viewing-test-case-reports-oracletosql.md
-            - name: 管理密碼
-              href: ssma/oracle/managing-passwords-oracletosql.md
-            - name: 移除 SSMA for Oracle 元件
-              href: ssma/oracle/removing-ssma-for-oracle-components-oracletosql.md
-            - name: 從資料庫重新整理
-              href: ssma/oracle/refresh-from-database-oracletosql.md
-            - name: 執行 SSMA 主控台
-              href: ssma/oracle/executing-the-ssma-console-oracletosql.md
-            - name: 編輯類型對應
-              href: ssma/oracle/edit-type-mapping-oracletosql.md
-            - name: 開始使用 SSMA for Oracle 主控台
-              href: ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md
-            - name: 建立指令碼檔
-              href: ssma/oracle/creating-script-files-oracletosql.md
-            - name: 選取與設定受影響的物件
-              href: ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md
-            - name: 連接至 SQL Server
-              href: ssma/oracle/connect-to-sql-server-oracletosql.md
-            - name: 使用 SSMA for Oracle 主控台
-              href: ssma/oracle/working-with-ssma-for-oracle-console-oracletosql.md
-            - name: 評定 Oracle 結構描述的轉換
-              href: ssma/oracle/assessing-oracle-schemas-for-conversion-oracletosql.md
-            - name: 將測試案例初始化
-              href: ssma/oracle/initializing-test-cases-oracletosql.md
-            - name: 在 SQL Server 上安裝 SSMA 元件
-              href: ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md
-            - name: 完成測試案例準備
-              href: ssma/oracle/finishing-test-case-preparation-oracletosql.md
-            - name: 選取與設定要測試的物件
-              href: ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md
-            - name: 連線到 Oracle
-              href: ssma/oracle/connect-to-oracle-oracletosql.md
-            - name: 建立測試案例
-              href: ssma/oracle/creating-test-cases-oracletosql.md
-            - name: 疑難排解
-              href: ssma/oracle/troubleshooting-oracletosql.md
-            - name: 將 Oracle 資料庫移轉到 SQL Server
-              href: ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md
-            - name: 連線到 SQL Server
-              href: ssma/oracle/connecting-to-sql-server-oracletosql.md
-            - name: 評定報告
-              href: ssma/oracle/assessment-report-oracletosql.md
-            - name: 新增專案
-              href: ssma/oracle/new-project-oracletosql.md
-            - name: 使用者介面參考
-              href: ssma/oracle/user-interface-reference-oracletosql.md
-            - name: 將 Oracle 結構描述對應到 SQL Server 結構描述
-              href: ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md
-            - name: 對應 Oracle 與 SQL Server 資料類型
-              href: ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md
-            - name: 建立伺服器連線檔案
-              href: ssma/oracle/creating-the-server-connection-files-oracletosql.md
-            - name: 附錄 - 1
-              href: ssma/oracle/appendix-1-oracletosql.md
-            - name: 專案設定
-              items:
-                - name: 轉換
-                  href: ssma/oracle/project-settings-conversion-oracletosql.md
-                - name: 載入系統物件
-                  href: ssma/oracle/project-settings-loading-system-objects-oracletosql.md
-                - name: Synchronization
-                  href: ssma/oracle/project-settings-synchronization-oracletosql.md
-                - name: GUI
-                  href: ssma/oracle/project-settings-gui-oracletosql.md
-                - name: 類型對應
-                  href: ssma/oracle/project-settings-type-mapping-oracletosql.md
-                - name: 移轉
-                  href: ssma/oracle/project-settings-migration-oracletosql.md
-            - name: 全域設定
-              items:
-                - name: 測試人員
-                  href: ssma/oracle/global-settings-tester-oracletosql.md
-                - name: 編輯器
-                  href: ssma/oracle/global-settings-editor-oracletosql.md
-                - name: 記錄
-                  href: ssma/oracle/global-settings-logging-oracletosql.md
-                - name: 對話方塊
-                  href: ssma/oracle/global-settings-dialogs-oracletosql.md
-                - name: 輸出視窗
-                  href: ssma/oracle/global-settings-output-window-oracletosql.md
-        - name: Sybase
-          href: ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md
-          items:
-            - name: 安裝 SSMA
-              href: ssma/sybase/installing-ssma-for-sybase-sybasetosql.md
-            - name: 開始使用 SSMA for Sybase
-              href: ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md
-            - name: 開始使用 SSMA for Sybase 主控台
-              href: ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md
-            - name: 法律注意事項
-              href: ssma/sybase/legal-notice-ssma-for-sybase.md
-            - name: SSMA 的新功能
-              href: ssma/sybase/what-s-new-in-ssma-for-sybase-sybasetosql.md
-            - name: 安裝 SSMA for Sybase 用戶端
-              href: ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md
-            - name: SSMA 中的新 GUI 功能
-              href: ssma/sybase/new-gui-features-in-ssma-for-sybase-sybasetosql.md
-            - name: 新增專案
-              href: ssma/sybase/new-project-sybasetosql.md
-            - name: 將測試案例初始化
-              href: ssma/sybase/initializing-test-cases-sybasetosql.md
-            - name: 使用範例主控台指令碼檔
-              href: ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md
-            - name: 將 Sybase ASE 資料庫移轉到 Azure SQL DB
-              href: ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md
-            - name: 評定 Sybase ASE 資料庫物件的轉換
-              href: ssma/sybase/assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md
-            - name: 執行 SSMA 主控台
-              href: ssma/sybase/executing-the-ssma-console-sybasetosql.md
-            - name: 建立指令碼檔
-              href: ssma/sybase/creating-script-files-sybasetosql.md
-            - name: 全域設定
-              href: ssma/sybase/global-settings-dialogs-sybasetosql.md
-            - name: 連線到 SQL Server
-              href: ssma/sybase/connecting-to-sql-server-sybasetosql.md
-            - name: 進階物件選取項目
-              href: ssma/sybase/advanced-object-selection-sybasetosql.md
-            - name: 專案設定 (GUI)
-              href: ssma/sybase/project-settings-gui-sybasetosql.md
-            - name: 檢視測試案例報表
-              href: ssma/sybase/viewing-test-case-reports-sybasetosql.md
-            - name: 使用 SSMA for Sybase 主控台
-              href: ssma/sybase/working-with-ssma-for-sybase-console-sybasetosql.md
-            - name: 使用測試存放庫
-              href: ssma/sybase/using-test-repositories-sybasetosql.md
-            - name: 資料移轉報告
-              href: ssma/sybase/data-migration-report-sybasetosql.md
-            - name: 建立測試案例
-              href: ssma/sybase/creating-test-cases-sybasetosql.md
-            - name: 儲存中繼資料
-              href: ssma/sybase/save-metadata-sybasetosql.md
-            - name: 評定報告
-              href: ssma/sybase/assessment-report-sybasetosql.md
-            - name: 移除 SSMA for Sybase 元件
-              href: ssma/sybase/removing-ssma-for-sybase-components-sybasetosql.md
-            - name: 連線到 Sybase ASE
-              href: ssma/sybase/connecting-to-sybase-ase-sybasetosql.md
-            - name: 選取與設定受影響的物件
-              href: ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md
-            - name: 連線到 Azure SQL DB
-              href: ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md
-            - name: 管理密碼
-              href: ssma/sybase/managing-passwords-sybasetosql.md
-            - name: 設定專案選項
-              href: ssma/sybase/setting-project-options-sybasetosql.md
-            - name: 連線到 Azure SQL DB
-              href: ssma/sybase/connect-to-azure-sql-db-sybasetosql.md
-            - name: 資料移轉設定
-              href: ssma/sybase/data-migration-settings-sybasetosql.md
-            - name: 完成測試案例準備
-              href: ssma/sybase/finishing-test-case-preparation-sybasetosql.md
-            - name: 選取與設定要測試的物件
-              href: ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md
-            - name: 疑難排解
-              href: ssma/sybase/troubleshooting-sybasetosql.md
-            - name: 對應 Sybase ASE 與 SQL Server 資料類型
-              href: ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
-            - name: 在 SQL Server 上安裝 SSMA 元件
-              href: ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md
-            - name: 將 Sybase ASE 資料移轉到 Azure SQL DB
-              href: ssma/sybase/migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md
-            - name: 連線到 Sybase
-              href: ssma/sybase/connect-to-sybase-sybasetosql.md
-            - name: 編輯類型對應
-              href: ssma/sybase/edit-type-mapping-sybasetosql.md
-            - name: 轉換 Sybase ASE 資料庫物件
-              href: ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md
-            - name: 將轉換的資料庫物件載入 SQL Server
-              href: ssma/sybase/loading-converted-database-objects-into-sql-server-sybasetosql.md
-            - name: 測試移轉的資料庫物件
-              href: ssma/sybase/testing-migrated-database-objects-sybasetosql.md
-            - name: 自訂呼叫順序
-              href: ssma/sybase/customizing-calls-order-sybasetosql.md
-            - name: 使用者介面參考
-              href: ssma/sybase/user-interface-reference-sybasetosql.md
-            - name: 建立變數值檔案
-              href: ssma/sybase/creating-variable-value-files-sybasetosql.md
-            - name: 建立伺服器連線檔案
-              href: ssma/sybase/creating-the-server-connection-files-sybasetosql.md
-            - name: SSMA 主控台中的命令列選項
-              href: ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md
-            - name: 連接至 SQL Server
-              href: ssma/sybase/connect-to-sql-server-sybasetosql.md
-            - name: 快速鍵
-              href: ssma/sybase/shortcut-keys-sybase-to-sql.md
-            - name: 將 Sybase ASE 結構描述對應到 SQL Server 結構描述
-              href: ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md
-            - name: 管理備份
-              href: ssma/sybase/managing-backups-sybasetosql.md
-            - name: 功能表命令與其他快速鍵
-              href: ssma/sybase/menu-commands-and-other-shortcut-keys-sybase-to-sql.md
-            - name: 執行測試案例
-              href: ssma/sybase/running-test-cases-sybasetosql.md
-            - name: 產生報表
-              href: ssma/sybase/generating-reports-sybasetosql.md
-            - name: 使用 SSMA 專案
-              href: ssma/sybase/working-with-ssma-projects-sybasetosql.md
-            - name: 附錄 - 1
-              href: ssma/sybase/appendix-1-sybasetosql.md
-            - name: 專案設定
-              items:
-                - name: 轉換
-                  href: ssma/sybase/project-settings-conversion-sybasetosql.md
-                - name: 類型對應
-                  href: ssma/sybase/project-settings-type-mapping-sybasetosql.md
-                - name: Synchronization
-                  href: ssma/sybase/project-settings-synchronization-sybasetosql.md
-                - name: Azure SQL DB
-                  href: ssma/sybase/project-settings-azure-sql-db-sybasetosql.md
-                - name: (移轉
-                  href: ssma/sybase/project-settings-migration-sybasetosql.md
-            - name: 全域設定
-              href: ssma/sybase/global-settings-output-window-sybasetosql.md
-              items:
-                - name: 編輯器
-                  href: ssma/sybase/global-settings-editor-sybasetosql.md
-                - name: 記錄
-                  href: ssma/sybase/global-settings-logging-sybasetosql.md
-                - name: 測試人員
-                  href: ssma/sybase/global-settings-tester-sybasetosql.md
+      href: ssma/toc.yml
 - name: 管理、監視與調整
   items:
     - name: 管理
@@ -6510,7 +5883,7 @@
           items:
             - name: 概觀
               href: relational-databases/accelerated-database-recovery-concepts.md
-            - name: 管理
+            - name: 管理性
               href: relational-databases/accelerated-database-recovery-management.md
         - name: 中央管理伺服器
           href: relational-databases/administer-multiple-servers-using-central-management-servers.md
@@ -6583,7 +5956,7 @@
                   href: relational-databases/maintenance-plans/maintenance-plan-design-tab.md
                 - name: 報告與記錄頁面
                   href: relational-databases/maintenance-plans/maintenance-plan-reporting-and-logging-page.md
-                - name: 管理連接
+                - name: 管理連線
                   href: relational-databases/maintenance-plans/maintenance-plan-manage-connections.md
                 - name: 備份資料庫工作
                   href: relational-databases/maintenance-plans/options-in-the-back-up-database-task-for-maintenance-plan.md
@@ -6730,12 +6103,12 @@
                   href: relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md
                 - name: 確認最大工作者執行緒設定
                   href: relational-databases/policy-based-management/verify-max-worker-threads-setting.md
-            - name: 教學課程：使用原則式管理來管理伺服器
+            - name: 教學課程：使用以原則為基礎的管理來管理伺服器
               href: relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
               items:
-                - name: 第 1 課：建立與套用 Off By Default 原則
+                - name: 第 1 課：建立及套用預設關閉原則
                   href: relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md
-                - name: 第 2 課：建立與套用命名標準原則
+                - name: 第 2 課：建立及套用命名標準原則
                   href: relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
             - name: 參考
               items:
@@ -6847,7 +6220,7 @@
               href: relational-databases/manage/utility-explorer-f1-help.md
         - name: SQL 評定 API
           href: sql-assessment-api/sql-assessment-api-overview.md
-    - name: 監視器
+    - name: 監視
       href: relational-databases/performance/monitor-and-tune-for-performance.md
       items:
         - name: 監視 SQL Server 元件
@@ -6902,7 +6275,7 @@
           items:
             - name: 快速入門
               items:
-                - name: 快速入門：SQL Server 中的延伸事件
+                - name: 快速入門：SQL Server 中的擴充事件
                   href: relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
             - name: 教學課程
               items:
@@ -6926,7 +6299,7 @@
                   href: relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md
                 - name: 工具
                   href: relational-databases/extended-events/extended-events-tools.md
-            - name: 使用說明指南
+            - name: 操作指南
               items:
                 - name: 管理 XEvent 工作階段
                   href: relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md
@@ -6984,7 +6357,7 @@
           items:
             - name: 記憶體內部 OLTP
               href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
-            - name: 最佳作法
+            - name: 最佳做法
               href: relational-databases/performance/best-practice-with-the-query-store.md
             - name: 使用案例
               href: relational-databases/performance/query-store-usage-scenarios.md
@@ -7053,7 +6426,7 @@
                       items:
                         - name: 警示
                           href: relational-databases/performance-monitor/sql-server-agent-alerts-object.md
-                        - name: 中稱為
+                        - name: 工作
                           href: relational-databases/performance-monitor/sql-server-agent-jobs-object.md
                         - name: JobSteps
                           href: relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md
@@ -7168,7 +6541,7 @@
                   href: relational-databases/performance/performance-improvements-using-dta-recommendations.md
             - name: 操作方式
               items:
-                - name: 啟動
+                - name: Start
                   href: relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md
                 - name: 使用輸出
                   href: relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md
@@ -7245,7 +6618,7 @@
                       href: relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md
                     - name: 純量使用者定義函式
                       href: relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md
-                    - name: 最佳做法
+                    - name: 最佳作法
                       href: relational-databases/in-memory-oltp/best-practices-for-calling-natively-compiled-stored-procedures.md
                     - name: 解譯的記憶體內部資料表存取
                       href: relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
@@ -7263,7 +6636,7 @@
                       href: relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md
                     - name: Backup
                       href: relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md
-                    - name: 檢查點
+                    - name: Checkpoint
                       href: relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md
                     - name: 高可用性
                       href: relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md
@@ -7309,7 +6682,7 @@
                   href: relational-databases/in-memory-oltp/application-level-partitioning.md
                 - name: 效能示範
                   href: relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md
-                - name: 監視和疑難排解
+                - name: 監視及疑難排解
                   href: relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md
             - name: 範例
               items:
@@ -7323,7 +6696,7 @@
                   href: relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
                 - name: '記憶體內部的 SMO C#'
                   href: relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md
-            - name: 使用說明指南
+            - name: 操作指南
               items:
                 - name: 記憶體最佳化資料表
                   href: relational-databases/in-memory-oltp/altering-memory-optimized-tables.md
@@ -7481,7 +6854,7 @@
               href: relational-databases/polybase/polybase-pushdown-computation.md
             - name: 向外延展群組
               href: relational-databases/polybase/polybase-scale-out-groups.md
-        - name: 使用說明指南
+        - name: 操作指南
           items:
             - name: 安裝
               items:
@@ -7656,7 +7029,7 @@
       displayName: MDS
       href: master-data-services/master-data-services-overview-mds.md
       items:
-        - name: 使用者入門
+        - name: 開始使用
           items:
             - name: 追蹤
               href: master-data-services/tracing-master-data-services.md
@@ -8148,7 +7521,7 @@
                       href: relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
                     - name: 使用 SSMS 佈建 Always Encrypted 金鑰
                       href: relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md
-                    - name: 使用 Provision 佈建 Always Encrypted 金鑰
+                    - name: 使用 PowerShell 佈建 Always Encrypted 金鑰
                       href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
                 - name: 輪替 Always Encrypted 金鑰
                   items:
@@ -8162,7 +7535,7 @@
                       href: relational-databases/security/encryption/always-encrypted-wizard.md
                     - name: 使用 Always Encrypted 與 PowerShell 設定資料行加密
                       href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
-                    - name: 使用 Always Encrypted 與 DAC 封裝設定資料行加密
+                    - name: 使用 Always Encrypted 與 DAC 套件設定資料行加密
                       href: relational-databases/security/encryption/configure-always-encrypted-using-dacpac.md
                 - name: 使用 Always Encrypted 查詢資料行
                   items:
@@ -8176,7 +7549,7 @@
                       href: relational-databases/security/encryption/always-encrypted-migrate-using-backup-restore.md
                     - name: 使用匯入和匯出精靈移轉資料
                       href: relational-databases/security/encryption/always-encrypted-migrate-using-import-export-wizard.md
-                    - name: 使用 Always Encrypted 將已加密資料大量載入資料行
+                    - name: 使用 Always Encrypted 將大量的加密資料載入資料行
                       href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
                 - name: 使用 Always Encrypted 開發應用程式
                   items:
@@ -8193,7 +7566,11 @@
                       items:
                         - name: 規劃主機守護者服務證明
                           href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
-                - name: 為具有安全記憶體保護區的 Always Encrypted 管理金鑰
+                        - name: 部署主機守護者服務
+                          href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md
+                        - name: 向主機守護者服務註冊電腦
+                          href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-register.md
+                - name: 針對具有安全記憶體保護區的 Always Encrypted 管理金鑰
                   items:
                     - name: 管理已啟用記憶體保護區的金鑰
                       href: relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md
@@ -8207,7 +7584,7 @@
                       href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md
                     - name: 使用 Transact-SQL 就地設定資料行加密
                       href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql.md
-                    - name: 為現有的已加密資料行啟用具有安全記憶體保護區的 Always Encrypted
+                    - name: 為現有加密資料行啟用具有安全記憶體保護區的 Always Encrypted
                       href: relational-databases/security/encryption/always-encrypted-enclaves-enable-for-encrypted-columns.md
                 - name: 使用具有安全記憶體保護區的 Always Encrypted 查詢資料行
                   items:
@@ -8287,7 +7664,7 @@
         - name: 驗證存取
           href: relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md
           items:
-            - name: 主體
+            - name: Principals
               href: relational-databases/security/authentication-access/principals-database-engine.md
             - name: 伺服器層級角色
               href: relational-databases/security/authentication-access/server-level-roles.md
@@ -8369,13 +7746,14 @@
         - name: 權限或安全性實體頁面
           href: relational-databases/security/permissions-or-securables-page.md
 - name: 工具
-  href: tools/overview-sql-tools.md
   items:
+    - name: 概觀
+      href: tools/overview-sql-tools.md
     - name: Azure Data Studio
       href: azure-data-studio/what-is.md
       items:
         - name: 安裝
-          href: azure-data-studio/download.md
+          href: azure-data-studio/download-azure-data-studio.md
         - name: 版本資訊
           href: azure-data-studio/release-notes-azure-data-studio.md
         - name: 快速入門
@@ -8400,7 +7778,7 @@
               href: azure-data-studio/tutorial-build-custom-insight-sql-server.md
             - name: 備份與還原
               href: azure-data-studio/tutorial-backup-restore-sql-server.md
-        - name: 使用說明指南
+        - name: 操作指南
           items:
             - name: 儀表板與見解小工具
               href: azure-data-studio/insight-widgets.md
@@ -8630,7 +8008,7 @@
     - name: SQL Server 組態管理員
       href: tools/configuration-manager/sql-server-services.md
       items:
-        - name: 說明
+        - name: 説明
           href: tools/configuration-manager/sql-server-configuration-manager-help.md
         - name: SQL Server Browser 服務
           href: tools/configuration-manager/sql-server-browser-service.md
@@ -8768,7 +8146,7 @@
                   href: tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md
                 - name: 使用 TCP IP 建立有效的連接字串
                   href: tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md
-        - name: 錯誤記錄檔
+        - name: 錯誤記錄
           href: tools/configuration-manager/monitoring-the-error-logs.md
           items:
             - name: 檢視 SQL Server 錯誤記錄
@@ -8822,7 +8200,7 @@
               href: ssdt/check-for-updates-dialog-box.md
             - name: 資料庫專案設定
               href: ssdt/database-project-settings.md
-            - name: 如何：瀏覽 SQL Server 資料庫專案中的物件
+            - name: HOW TO：瀏覽 SQL Server 資料庫專案中的物件
               href: ssdt/how-to-browse-objects-in-a-sql-server-database-project.md
             - name: 資料工具作業視窗
               href: ssdt/data-tools-operations-window.md
@@ -8832,7 +8210,7 @@
               href: ssdt/how-to-create-a-new-database-project.md
             - name: 如何：使用結構描述比較，比較不同的資料庫定義
               href: ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md
-            - name: 如何：建置與部署到本機資料庫
+            - name: 如何：建置及部署至本機資料庫
               href: ssdt/how-to-build-and-deploy-to-a-local-database.md
             - name: 如何：在專案中使用 Microsoft SQL Server 2012 物件
               href: ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md
@@ -8840,11 +8218,11 @@
               href: ssdt/how-to-work-with-clr-database-objects.md
             - name: 如何：建立專案的快照集
               href: ssdt/how-to-create-a-snapshot-of-a-project.md
-            - name: 如何：變更目標平台與發行資料庫專案
+            - name: 如何：變更目標平台及發行資料庫專案
               href: ssdt/how-to-change-target-platform-and-publish-a-database-project.md
             - name: 如何：將 Visual Studio 2010 資料庫專案轉換成 SQL Server 資料庫專案，並將目標重定為不同的平台
               href: ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md
-            - name: 如何：指定預先部署或部署後指令碼
+            - name: HOW TO：指定預先部署或部署後指令碼
               href: ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md
             - name: 使用命令列工具進行專案導向的資料庫開發
               href: ssdt/project-oriented-database-development-using-command-line-tools.md
@@ -8854,11 +8232,11 @@
             - name: 連接的資料庫開發
               href: ssdt/connected-database-development.md
               items:
-                - name: 如何：連線到資料庫與瀏覽現有的物件
+                - name: 如何：連線到資料庫及瀏覽現有的物件
                   href: ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md
                 - name: 如何：使用資料表設計工具建立資料庫物件
                   href: ssdt/how-to-create-database-objects-using-table-designer.md
-                - name: 如何：使用 Power Buffer 更新連線的資料庫
+                - name: 如何：使用 Power Buffer 更新連接的資料庫
                   href: ssdt/how-to-update-a-connected-database-with-power-buffer.md
                 - name: 篩選與排序對話方塊
                   href: ssdt/filter-and-sort-dialog-box.md
@@ -8866,9 +8244,9 @@
                   href: ssdt/how-to-create-new-database-objects-using-queries.md
                 - name: 如何：使用查詢編輯現有的資料表
                   href: ssdt/how-to-edit-an-existing-table-using-queries.md
-                - name: 如何：檢視與編輯資料表中的資料
+                - name: 如何：檢視及編輯資料表中的資料
                   href: ssdt/how-to-view-and-edit-data-in-a-table.md
-                - name: 如何：刪除物件與解析相依性
+                - name: 如何：刪除物件及解析相依性
                   href: ssdt/how-to-delete-objects-and-resolve-dependencies.md
                 - name: 如何：複製現有的資料庫
                   href: ssdt/how-to-clone-an-existing-database.md
@@ -8877,13 +8255,13 @@
             - name: 使用參考資料庫中的資料比較與同步一或多個資料表中的資料
               href: ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md
               items:
-                - name: 如何：比較與同步兩個資料庫的資料
+                - name: 如何：比較及同步兩個資料庫的資料
                   href: ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md
                 - name: 如何：檢視資料差異
                   href: ssdt/how-to-view-data-differences.md
                 - name: 使用 T-SQL 編輯器編輯與執行指令碼
                   href: ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md
-                - name: 如何：在 T-SQL 指令碼中設定大綱與新增程式碼片段
+                - name: 如何：在 T-SQL 指令碼中設定大綱及新增程式碼片段
                   href: ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md
                 - name: 如何：在指令碼之間巡覽
                   href: ssdt/how-to-navigate-between-scripts.md
@@ -8891,7 +8269,7 @@
                   href: ssdt/how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md
                 - name: 如何：執行部分查詢
                   href: ssdt/how-to-execute-a-partial-query.md
-                - name: 如何：針對預存程序進行偵錯
+                - name: 如何：偵錯預存程序
                   href: ssdt/how-to-debug-stored-procedures.md
                 - name: 分析指令碼效能
                   href: ssdt/analyze-script-performance.md
@@ -8905,7 +8283,7 @@
             - name: 使用 SQL Server 單元測試驗證資料庫程式碼
               href: ssdt/verifying-database-code-by-using-sql-server-unit-tests.md
               items:
-                - name: 逐步解說：建立與執行 SQL Server 單元測試
+                - name: 逐步解說：建立並執行 SQL Server 單元測試
                   href: ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md
                 - name: 建立與定義 SQL Server 單元測試
                   href: ssdt/creating-and-defining-sql-server-unit-tests.md
@@ -8918,19 +8296,19 @@
                       href: ssdt/using-test-conditions-in-sql-server-unit-tests.md
                     - name: 在 SQL Server 單元測試中使用 T-SQL 判斷提示
                       href: ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md
-                    - name: 如何：建立 SQL Server 資料庫單元測試的測試專案
+                    - name: HOW TO：建立 SQL Server 資料庫單元測試的測試專案
                       href: ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md
-                    - name: 如何：建立空白 SQL Server 單元測試
+                    - name: HOW TO：建立空白 SQL Server 單元測試
                       href: ssdt/how-to-create-an-empty-sql-server-unit-test.md
-                    - name: 如何：建立針對函式、觸發程序與預存程序的 SQL Server 單元測試
+                    - name: 如何：針對函式、觸發程序與預存程序建立 SQL Server 單元測試
                       href: ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md
-                    - name: 如何：將測試條件新增至 SQL Server 單元測試
+                    - name: HOW TO：將測試條件加入至 SQL Server 單元測試
                       href: ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md
-                    - name: 如何：開啟要編輯的 SQL Server 單元測試
+                    - name: HOW TO：開啟要編輯的 SQL Server 單元測試
                       href: ssdt/how-to-open-a-sql-server-unit-test-to-edit.md
-                    - name: 如何：撰寫在單一交易範圍內執行的 SQL Server 單元測試
+                    - name: HOW TO：撰寫在單一交易範圍內執行的 SQL Server 單元測試
                       href: ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md
-                    - name: 如何：設定 SQL Server 單元測試執行
+                    - name: HOW TO：設定 SQL Server 單元測試執行
                       href: ssdt/how-to-configure-sql-server-unit-test-execution.md
                     - name: 連接字串與權限概觀
                       href: ssdt/overview-of-connection-strings-and-permissions.md
@@ -8939,11 +8317,11 @@
                 - name: 執行 SQL Server 單元測試
                   href: ssdt/running-sql-server-unit-tests.md
                   items:
-                    - name: 如何：針對資料庫物件進行偵錯
+                    - name: HOW TO：偵錯資料庫物件
                       href: ssdt/how-to-debug-database-objects.md
-                    - name: 如何：從 Team Foundation Build 執行 SQL Server 單元測試
+                    - name: HOW TO：從 Team Foundation Build 執行 SQL Server 單元測試
                       href: ssdt/how-to-run-sql-server-unit-tests-from-team-foundation-build.md
-                    - name: 如何：執行 SQL Server 單元測試
+                    - name: HOW TO：執行 SQL Server 單元測試
                       href: ssdt/how-to-run-sql-server-unit-tests.md
                     - name: 解譯 SQL Server 單元測試結果
                       href: ssdt/interpreting-sql-server-unit-test-results.md
@@ -8952,11 +8330,11 @@
                 - name: SQL Server 單元測試的自訂測試條件
                   href: ssdt/custom-test-conditions-for-sql-server-unit-tests.md
                   items:
-                    - name: 如何：建立 SQL Server 單元測試設計工具的測試條件
+                    - name: HOW TO：建立 SQL Server 單元測試設計工具的測試條件
                       href: ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md
                     - name: 逐步解說：使用自訂測試條件來驗證預存程序的結果
                       href: ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md
-                    - name: 如何：將 Visual Studio 2010 自訂測試條件從舊版升級至 SQL Server Data Tools
+                    - name: HOW TO：將 Visual Studio 2010 自訂測試條件從舊版升級至 SQL Server Data Tools
                       href: ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md
                 - name: 疑難排解 SQL Server 資料庫單元測試的問題
                   href: ssdt/troubleshooting-sql-server-database-unit-testing-issues.md
@@ -8968,16 +8346,16 @@
                   items:
                     - name: 逐步解說：擴充資料庫專案組建，以產生模型統計資料
                       href: ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md
-                    - name: 逐步解說：擴充資料庫專案部署以分析部署計劃
+                    - name: 逐步解說：擴充資料庫專案部署以分析部署計畫
                       href: ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md
-                    - name: 逐步解說：擴充資料庫專案部署以修改部署計劃
+                    - name: 逐步解說：擴充資料庫專案部署以修改部署計畫
                       href: ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md
                 - name: 資料庫程式碼分析規則的擴充性概觀
                   href: ssdt/overview-of-extensibility-for-database-code-analysis-rules.md
                   items:
                     - name: 為 SQL Server 編寫自訂靜態程式碼分析規則組件的逐步解說
                       href: ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md
-                - name: 如何：安裝與管理功能延伸模組
+                - name: 如何：安裝及管理功能延伸模組
                   href: ssdt/how-to-install-and-manage-feature-extensions.md
             - name: SQL Server Data Tools 的必要權限
               href: ssdt/required-permissions-for-sql-server-data-tools.md
@@ -9430,7 +8808,7 @@
                       href: ssms/agent/create-an-operator.md
                     - name: 建立排程並附加至作業
                       href: ssms/agent/create-and-attach-schedules-to-jobs.md
-                    - name: 中稱為
+                    - name: 工作
                       href: ssms/agent/create-jobs.md
                 - name: 脫離
                   items:
@@ -9456,7 +8834,7 @@
                       href: ssms/agent/delete-an-alert.md
                     - name: 操作員
                       href: ssms/agent/delete-an-operator.md
-                    - name: 中稱為
+                    - name: 工作
                       href: ssms/agent/delete-jobs.md
                     - name: 一或多個作業
                       href: ssms/agent/delete-one-or-more-jobs.md
@@ -9480,7 +8858,7 @@
                       href: ssms/agent/edit-an-alert.md
                     - name: 編輯操作員
                       href: ssms/agent/edit-an-operator.md
-                - name: Set
+                - name: 設定
                   items:
                     - name: SQL Server Agent 服務的別名
                       href: ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md
@@ -10338,6 +9716,10 @@
       items:
         - name: 擴充功能與工具
           href: tools/download-sql-feature-packs.md
+    - name: Visual Studio Code
+      items:
+        - name: T-SQL 指令碼
+          href: visual-studio-code/sql-server-develop-use-vscode.md
 - name: 教學課程
   items:
     - name: SQL Server
@@ -10345,12 +9727,12 @@
     - name: Database Engine
       href: relational-databases/database-engine-tutorials.md
       items:
-        - name: 使用者入門
+        - name: 開始使用
           href: relational-databases/tutorial-getting-started-with-the-database-engine.md
           items:
-            - name: 第 1 課：連線到資料庫引擎
+            - name: 第 1 課：連接到 Database Engine
               href: relational-databases/lesson-1-connecting-to-the-database-engine.md
-            - name: 第 2 課：從另一部電腦連線
+            - name: 第 2 課：從另一部電腦連接
               href: relational-databases/lesson-2-connecting-from-another-computer.md
         - name: 使用憑證簽署預存程序
           href: relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
@@ -10361,11 +9743,11 @@
     - name: 撰寫 T-SQL 陳述式
       href: t-sql/tutorial-writing-transact-sql-statements.md
       items:
-        - name: 第 1 課：建立及查詢資料庫物件
+        - name: 課程 1：建立及查詢資料庫物件
           href: t-sql/lesson-1-creating-database-objects.md
-        - name: 第 2 課：設定資料庫物件的權限
+        - name: 課程 2：設定資料庫物件的權限
           href: t-sql/lesson-2-configuring-permissions-on-database-objects.md
-        - name: 第 3 課：刪除資料庫物件
+        - name: 課程 3：刪除資料庫物件
           href: t-sql/lesson-3-deleting-database-objects.md
 - name: Linux 上的 SQL Server
   href: linux/sql-server-linux-overview.md
@@ -10425,7 +9807,7 @@
               href: linux/sql-server-linux-shared-disk-cluster-configure-nfs.md
             - name: SMB
               href: linux/sql-server-linux-shared-disk-cluster-configure-smb.md
-        - name: 操作容錯移轉叢集執行個體 - Linux 上的 SQL Server
+        - name: 操作容錯移轉叢集執行個體
           href: linux/sql-server-linux-shared-disk-cluster-operate.md
         - name: 部署 Pacemaker 叢集
           href: linux/sql-server-linux-deploy-pacemaker-cluster.md
@@ -10467,7 +9849,7 @@
               href: linux/sql-server-linux-configure-pmem.md
             - name: 設定將使用量和診斷資料傳送給 Microsoft
               href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
-        - name: '[設定 SSIS 記錄]'
+        - name: 容器
           items:
             - name: 設定 Docker 容器
               href: linux/sql-server-linux-configure-docker.md
@@ -10582,7 +9964,7 @@
               href: linux/sql-server-linux-encrypted-connections.md
         - name: 效能
           items:
-            - name: 最佳做法
+            - name: 最佳作法
               href: linux/sql-server-linux-performance-best-practices.md
             - name: 開始使用效能功能
               href: linux/sql-server-linux-performance-get-started.md
@@ -10633,11 +10015,13 @@
   items:
     - name: 學習
       items:
+        - name: 教育性資源
+          href: sql-server/educational-sql-resources.yml
         - name: Microsoft Virtual Academy >>
           href: 'https://mva.microsoft.com/product-training/sql-server'
         - name: Channel 9 上的 SQL >>
           href: 'https://channel9.msdn.com/Search'
-    - name: 說明
+    - name: 説明
       items:
         - name: 取得說明
           href: sql-server/sql-server-get-help.md
@@ -10671,11 +10055,13 @@
           href: sql-server/sql-server-docs-contribute.md
     - name: 合作夥伴
       items:
+        - name: 巨量資料叢集
+          href: sql-server/partner-big-data-cluster.md
         - name: 監視
           href: sql-server/partner-monitor-sql-server.md
         - name: 高可用性與災害復原
           href: sql-server/partner-hadr-sql-server.md
-        - name: 管理
+        - name: 管理性
           href: sql-server/partner-management-sql-server.md
         - name: 部署
           href: sql-server/partner-dev-sql-server.md
@@ -11687,25 +11073,25 @@
               href: relational-databases/event-classes/dtctransaction-event-class.md
             - name: SQLTransaction 事件類別
               href: relational-databases/event-classes/sqltransaction-event-class.md
-            - name: TM：Begin Tran Completed 事件類別
+            - name: 'TM: Begin Tran Completed 事件類別'
               href: relational-databases/event-classes/tm-begin-tran-completed-event-class.md
-            - name: TM：Begin Tran Starting 事件類別
+            - name: 'TM: Begin Tran Starting 事件類別'
               href: relational-databases/event-classes/tm-begin-tran-starting-event-class.md
-            - name: TM：Commit Tran Completed 事件類別
+            - name: 'TM: Commit Tran Completed 事件類別'
               href: relational-databases/event-classes/tm-commit-tran-completed-event-class.md
-            - name: TM：Commit Tran Starting 事件類別
+            - name: 'TM: Commit Tran Starting 事件類別'
               href: relational-databases/event-classes/tm-commit-tran-starting-event-class.md
-            - name: TM：Promote Tran Completed 事件類別
+            - name: 'TM: Promote Tran Completed 事件類別'
               href: relational-databases/event-classes/tm-promote-tran-completed-event-class.md
-            - name: TM：Promote Tran Starting 事件類別
+            - name: 'TM: Promote Tran Starting 事件類別'
               href: relational-databases/event-classes/tm-promote-tran-starting-event-class.md
-            - name: TM：Rollback Tran Completed 事件類別
+            - name: 'TM: Rollback Tran Completed 事件類別'
               href: relational-databases/event-classes/tm-rollback-tran-completed-event-class.md
-            - name: TM：Rollback Tran Starting 事件類別
+            - name: 'TM: Rollback Tran Starting 事件類別'
               href: relational-databases/event-classes/tm-rollback-tran-starting-event-class.md
-            - name: TM：Save Tran Completed 事件類別
+            - name: 'TM: Save Tran Completed 事件類別'
               href: relational-databases/event-classes/tm-save-tran-completed-event-class.md
-            - name: TM：Save Tran Starting 事件類別
+            - name: 'TM: Save Tran Starting 事件類別'
               href: relational-databases/event-classes/tm-save-tran-starting-event-class.md
             - name: TransactionLog 事件類別
               href: relational-databases/event-classes/transactionlog-event-class.md
@@ -11828,8 +11214,6 @@
               href: relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md
             - name: sys.resource_usage
               href: relational-databases/system-catalog-views/sys-resource-usage-azure-sql-database.md
-            - name: dbo.server_quotas
-              href: relational-databases/system-catalog-views/dbo-server-quotas-azure-sql-database.md
             - name: sys.server_resource_stats
               href: relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database.md
         - name: 變更追蹤
@@ -12528,7 +11912,7 @@
           href: relational-databases/system-compatibility-views/sys-systypes-transact-sql.md
         - name: sys.sysusers
           href: relational-databases/system-compatibility-views/sys-sysusers-transact-sql.md
-    - name: 系統動態管理檢視 +
+    - name: 系統動態管理檢視
       href: relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
       items:
         - name: AlwaysOn 可用性群組
@@ -13139,7 +12523,7 @@
               href: relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md
             - name: sys.dm_tran_version_store_space_usage
               href: relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md
-    - name: 系統函數
+    - name: 系統函式
       href: relational-databases/system-functions/system-functions-category-transact-sql.md
       items:
         - name: AlwaysOn 可用性群組
@@ -13215,7 +12599,7 @@
               href: relational-databases/system-functions/getpathlocator-transact-sql.md
             - name: PathName
               href: relational-databases/system-functions/pathname-transact-sql.md
-        - name: 受管理備份
+        - name: 受控備份
           href: relational-databases/system-functions/managed-backup-functions-transact-sql.md
           items:
             - name: managed_backup.fn_backup_db_config
@@ -13952,7 +13336,7 @@
               href: relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md
             - name: sp_upgrade_log_shipping
               href: relational-databases/system-stored-procedures/sp-upgrade-log-shipping-transact-sql.md
-        - name: 受管理備份
+        - name: 受控備份
           href: relational-databases/system-stored-procedures/managed-backup-stored-procedures-transact-sql.md
           items:
             - name: managed_backup.sp_backup_config_basic
@@ -14849,7 +14233,7 @@
               href: relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md
             - name: sys.sp_rda_test_connection
               href: relational-databases/system-stored-procedures/sys-sp-rda-test-connection-transact-sql.md
-        - name: 時態表
+        - name: 暫存資料表
           items:
             - name: sys.sp_cleanup_temporal_history
               href: relational-databases/system-stored-procedures/temporal-table-sys-sp-cleanup-temporal-history.md
@@ -15241,9 +14625,9 @@
         - name: 日期與時間
           href: t-sql/data-types/date-and-time-types.md
           items:
-            - name: 日期
+            - name: date
               href: t-sql/data-types/date-transact-sql.md
-            - name: DATETIME
+            - name: Datetime
               href: t-sql/data-types/datetime-transact-sql.md
             - name: datetime2
               href: t-sql/data-types/datetime2-transact-sql.md
@@ -15403,7 +14787,7 @@
                   href: t-sql/spatial-geography/isvaliddetailed-geography-data-type.md
                 - name: Lat
                   href: t-sql/spatial-geography/lat-geography-data-type.md
-                - name: 長整數
+                - name: long
                   href: t-sql/spatial-geography/long-geography-data-type.md
                 - name: M
                   href: t-sql/spatial-geography/m-geography-data-type.md
@@ -15469,7 +14853,7 @@
                   href: t-sql/spatial-geography/null-geography-data-type.md
                 - name: 剖析
                   href: t-sql/spatial-geography/parse-geography-data-type.md
-                - name: 點
+                - name: Point
                   href: t-sql/spatial-geography/point-geography-data-type.md
             - name: 靜態彙總地理方法
               href: t-sql/spatial-geography/static-aggregate-geography-methods.md
@@ -15665,7 +15049,7 @@
                   href: t-sql/spatial-geometry/null-geometry-data-type.md
                 - name: 剖析
                   href: t-sql/spatial-geometry/parse-geometry-data-type.md
-                - name: 點
+                - name: Point
                   href: t-sql/spatial-geometry/point-geometry-data-type.md
             - name: 靜態彙總幾何方法
               href: t-sql/spatial-geometry/static-aggregate-geometry-methods.md
@@ -15822,7 +15206,7 @@
               href: t-sql/database-console-commands/dbcc-updateusage-transact-sql.md
             - name: DBCC USEROPTIONS
               href: t-sql/database-console-commands/dbcc-useroptions-transact-sql.md
-        - name: 函數
+        - name: 函式
           href: t-sql/functions/functions.md
           items:
             - name: ODBC 純量
@@ -15832,7 +15216,7 @@
               items:
                 - name: APPROX_COUNT_DISTINCT
                   href: t-sql/functions/approx-count-distinct-transact-sql.md
-                - name: AVG
+                - name: 平均
                   href: t-sql/functions/avg-transact-sql.md
                 - name: CHECKSUM_AGG
                   href: t-sql/functions/checksum-agg-transact-sql.md
@@ -15844,9 +15228,9 @@
                   href: t-sql/functions/grouping-transact-sql.md
                 - name: GROUPING_ID
                   href: t-sql/functions/grouping-id-transact-sql.md
-                - name: MAX
+                - name: 最大值
                   href: t-sql/functions/max-transact-sql.md
-                - name: MIN
+                - name: 最小值
                   href: t-sql/functions/min-transact-sql.md
                 - name: STDEV
                   href: t-sql/functions/stdev-transact-sql.md
@@ -16041,7 +15425,7 @@
                   href: t-sql/functions/getutcdate-transact-sql.md
                 - name: ISDATE
                   href: t-sql/functions/isdate-transact-sql.md
-                - name: MONTH
+                - name: 月
                   href: t-sql/functions/month-transact-sql.md
                 - name: SMALLDATETIMEFROMPARTS
                   href: t-sql/functions/smalldatetimefromparts-transact-sql.md
@@ -16057,7 +15441,7 @@
                   href: t-sql/functions/timefromparts-transact-sql.md
                 - name: TODATETIMEOFFSET
                   href: t-sql/functions/todatetimeoffset-transact-sql.md
-                - name: YEAR
+                - name: 年
                   href: t-sql/functions/year-transact-sql.md
             - name: JSON
               href: t-sql/functions/json-functions-transact-sql.md
@@ -16095,7 +15479,7 @@
                   href: t-sql/functions/exp-transact-sql.md
                 - name: FLOOR
                   href: t-sql/functions/floor-transact-sql.md
-                - name: LOG
+                - name: 記錄
                   href: t-sql/functions/log-transact-sql.md
                 - name: LOG10
                   href: t-sql/functions/log10-transact-sql.md
@@ -16228,7 +15612,6 @@
                 - name: PUBLISHINGSERVERNAME
                   href: t-sql/functions/replication-functions-publishingservername.md
             - name: 資料列集
-              href: t-sql/functions/rowset-functions-transact-sql.md
               items:
                 - name: OPENDATASOURCE
                   href: t-sql/functions/opendatasource-transact-sql.md
@@ -16656,7 +16039,7 @@
                       href: t-sql/language-elements/or-transact-sql.md
                     - name: SOME | ANY
                       href: t-sql/language-elements/some-any-transact-sql.md
-                - name: '::(範圍解析)'
+                - name: ':: (範圍解析)'
                   href: t-sql/language-elements/scope-resolution-operator-transact-sql.md
                 - name: String
                   href: t-sql/language-elements/string-operators-transact-sql.md
@@ -16857,7 +16240,7 @@
                   href: t-sql/statements/alter-database-scoped-configuration-transact-sql.md
                 - name: DATABASE SET 選項
                   href: t-sql/statements/alter-database-transact-sql-set-options.md
-                - name: ENDPOINT
+                - name: 端點
                   href: t-sql/statements/alter-endpoint-transact-sql.md
                 - name: EVENT SESSION
                   href: t-sql/statements/alter-event-session-transact-sql.md
@@ -16881,7 +16264,7 @@
                   href: t-sql/statements/alter-index-transact-sql.md
                 - name: INDEX (選擇性 XML 索引)
                   href: t-sql/statements/alter-index-selective-xml-indexes.md
-                - name: 登入
+                - name: LOGIN
                   href: t-sql/statements/alter-login-transact-sql.md
                 - name: MASTER KEY
                   href: t-sql/statements/alter-master-key-transact-sql.md
@@ -16953,7 +16336,7 @@
                   href: t-sql/statements/alter-xml-schema-collection-transact-sql.md
             - name: 備份與還原
               items:
-                - name: BACKUP
+                - name: 備份
                   href: t-sql/statements/backup-transact-sql.md
                 - name: BACKUP CERTIFICATE
                   href: t-sql/statements/backup-certificate-transact-sql.md
@@ -17019,7 +16402,7 @@
                   href: t-sql/statements/create-database-scoped-credential-transact-sql.md
                 - name: DEFAULT
                   href: t-sql/statements/create-default-transact-sql.md
-                - name: ENDPOINT
+                - name: 端點
                   href: t-sql/statements/create-endpoint-transact-sql.md
                 - name: EVENT NOTIFICATION
                   href: t-sql/statements/create-event-notification-transact-sql.md
@@ -17051,7 +16434,7 @@
                   href: t-sql/statements/create-function-sql-data-warehouse.md
                 - name: INDEX
                   href: t-sql/statements/create-index-transact-sql.md
-                - name: 登入
+                - name: LOGIN
                   href: t-sql/statements/create-login-transact-sql.md
                 - name: MASTER KEY
                   href: t-sql/statements/create-master-key-transact-sql.md
@@ -17179,7 +16562,7 @@
                   href: t-sql/statements/drop-database-scoped-credential-transact-sql.md
                 - name: DEFAULT
                   href: t-sql/statements/drop-default-transact-sql.md
-                - name: ENDPOINT
+                - name: 端點
                   href: t-sql/statements/drop-endpoint-transact-sql.md
                 - name: EXTERNAL DATA SOURCE
                   href: t-sql/statements/drop-external-data-source-transact-sql.md
@@ -17209,7 +16592,7 @@
                   href: t-sql/statements/drop-index-transact-sql.md
                 - name: INDEX (選擇性 XML 索引)
                   href: t-sql/statements/drop-index-selective-xml-indexes.md
-                - name: 登入
+                - name: LOGIN
                   href: t-sql/statements/drop-login-transact-sql.md
                 - name: MASTER KEY
                   href: t-sql/statements/drop-master-key-transact-sql.md
@@ -17283,7 +16666,7 @@
                   href: t-sql/statements/close-master-key-transact-sql.md
                 - name: CLOSE SYMMETRIC KEY
                   href: t-sql/statements/close-symmetric-key-transact-sql.md
-                - name: DENY
+                - name: 拒絕
                   href: t-sql/statements/deny-transact-sql.md
                 - name: DENY 組件權限
                   href: t-sql/statements/deny-assembly-permissions-transact-sql.md
@@ -17371,7 +16754,7 @@
                   href: t-sql/statements/open-master-key-transact-sql.md
                 - name: OPEN SYMMETRIC KEY
                   href: t-sql/statements/open-symmetric-key-transact-sql.md
-                - name: '權限:GRANT、DENY、REVOKE (Azure SQL 資料倉儲、平行處理資料倉儲)'
+                - name: 權限：GRANT、DENY、REVOKE (Azure SQL 資料倉儲、平行處理資料倉儲)
                   href: t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: REVERT
                   href: t-sql/statements/revert-transact-sql.md
@@ -17675,3 +17058,5 @@
               href: xquery/string-search-in-xquery.md
             - name: 處理 XQuery 中的命名空間
               href: xquery/handling-namespaces-in-xquery.md
+- name: 知識庫支援
+  href: kb-support/toc.yml

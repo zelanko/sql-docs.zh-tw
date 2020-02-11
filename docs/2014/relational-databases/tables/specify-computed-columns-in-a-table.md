@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211800"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定資料表中的計算資料行
-  計算資料行是一個虛擬資料行，除非資料行標示了 PERSISTED，否則，並未實際儲存在資料表中。 計算資料行運算式可以使用來自其他資料行的資料來計算其所屬資料行的值。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中指定計算資料行的運算式。  
+  計算資料行是一個虛擬資料行，除非資料行標示了 PERSISTED，否則，並未實際儲存在資料表中。 計算資料行運算式可以使用來自其他資料行的資料來計算其所屬資料行的值。 您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中指定計算資料行的運算式。  
   
  **本主題內容**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68211800"
   
 -   計算資料行不能是 INSERT 或 UPDATE 陳述式的目標。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
@@ -66,7 +66,7 @@ ms.locfileid: "68211800"
   
 5.  藉由從 [Is Persisted]  子屬性的下拉式清單中選擇 [是]  或 [否]  ，指示資料是否為永續性。  
   
-6.  在 [檔案]  功能表上，按一下 [儲存]  _table name_。  
+6.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>若要將計算資料行定義新增至現有資料行  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68211800"
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。 此範例會建立包含計算資料行的資料表，該計算資料行會乘以 `QtyAvailable` 資料行的值乘 `UnitPrice` 資料行的值。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 此範例會建立包含計算資料行的資料表，該計算資料行會乘以 `QtyAvailable` 資料行的值乘 `UnitPrice` 資料行的值。  
   
     ```  
     CREATE TABLE dbo.Products   
@@ -111,7 +111,7 @@ ms.locfileid: "68211800"
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。 下列範例會將新的資料行加入至上一個範例中建立的資料表。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 下列範例會將新的資料行加入至上一個範例中建立的資料表。  
   
     ```  
     ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.35);  
@@ -124,7 +124,7 @@ ms.locfileid: "68211800"
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  若要將現有的資料行變更為計算資料行，您必須卸除並重新建立計算資料行。 將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。 下列範例會修改上一個範例中加入的資料行。  
+3.  若要將現有的資料行變更為計算資料行，您必須卸除並重新建立計算資料行。 將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 下列範例會修改上一個範例中加入的資料行。  
   
     ```  
     ALTER TABLE dbo.Products DROP COLUMN RetailValue;  
@@ -133,6 +133,6 @@ ms.locfileid: "68211800"
   
     ```  
   
-     如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)。  
+     如需詳細資訊，請參閱[ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)。  
   
 ###  <a name="TsqlExample"></a>  

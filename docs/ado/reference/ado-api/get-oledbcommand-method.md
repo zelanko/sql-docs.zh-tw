@@ -13,14 +13,14 @@ ms.assetid: 23d551f5-3d5b-434b-ade6-fef15f1710e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d32d79b0a0481d2ade05a78c80d72587817a04b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918576"
 ---
-# <a name="getoledbcommand-method"></a>get_OLEDBCommand 方法
-傳回基礎 OLE DB 命令，先傳播至 OLE DB 命令的 ADO 命令上設定任何參數資訊。  
+# <a name="get_oledbcommand-method"></a>get_OLEDBCommand 方法
+傳回基礎 OLE DB 命令，先將 ADO 命令上設定的任何參數資訊傳播至 OLE DB 命令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,7 +33,7 @@ HRESULT get_OLEDBCommand(
   
 #### <a name="parameters"></a>參數  
  *ppOLEDBCommand*  
- [out]將在其中寫入基礎 OLE DB 命令的 IUnknown 指標的指標位置指標。  
+ 脫銷指標位置的指標，其中將會寫入基礎 OLE DB 命令的 IUnknown 指標。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [IADOCommandConstruction](https://msdn.microsoft.com/d8e54333-00eb-4b72-bf4a-ca92c7ca5f86)

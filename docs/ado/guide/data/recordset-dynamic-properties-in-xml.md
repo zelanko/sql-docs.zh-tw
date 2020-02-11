@@ -1,5 +1,5 @@
 ---
-title: 在 XML 中的資料錄集動態屬性 |Microsoft Docs
+title: XML 中的記錄集動態屬性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,22 +13,22 @@ ms.assetid: 52f8e379-812a-4db8-9210-94458926301c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a058a2d0c5a808f29807744c6ba01f658bebc120
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924449"
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>XML 中的資料錄集動態屬性
-下列的資料錄集提供者特定屬性 （從用戶端資料指標引擎） 目前會保存為 XML 格式：  
+下列記錄集提供者特定的屬性（來自用戶端資料指標引擎）目前會保存為 XML 格式：  
   
--   更新重新同步處理  
+-   更新重新同步  
   
 -   Unique Table  
   
--   唯一的結構描述  
+-   唯一的架構  
   
--   唯一的目錄  
+-   唯一目錄  
   
 -   重新同步命令  
   
@@ -42,11 +42,11 @@ ms.locfileid: "67924449"
   
 -   UpdateCriteria  
   
--   調整形狀名稱  
+-   重新調整名稱  
   
 -   AutoRecalc  
   
- 這些屬性會儲存在結構描述區段中，為要保存資料錄集的項目定義的屬性。 這些屬性的資料列集結構描述命名空間中定義，而且必須具有前置詞"rs:"。  
+ 這些屬性會儲存在架構區段中，做為要保存之記錄集的元素定義屬性。 這些屬性是在資料列集架構命名空間中定義，而且必須具有前置詞 "rs："。  
   
 ## <a name="see-also"></a>另請參閱  
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)
