@@ -1,5 +1,5 @@
 ---
-title: sp_setnetname (TRANSACT-SQL) |Microsoft Docs
+title: sp_setnetname （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03282ae181ec9fc032e5f64549840d3d292b385e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104403"
 ---
-# <a name="spsetnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
+# <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  以設定網路名稱**sys.servers**遠端執行個體的實際網路電腦名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 這個程序可用來啟用對於網路名稱含有無效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼之電腦的遠端預存程序呼叫。  
+  將**sys.databases**中的網路名稱設定為遠端實例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實際網路電腦名稱稱。 這個程序可用來啟用對於網路名稱含有無效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼之電腦的遠端預存程序呼叫。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,11 +41,11 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>引數  
- **@server = '** *server* **'**  
- 這是使用者編寫的遠端預存程序呼叫語法所參考的遠端伺服器名稱。 中的一個資料列**sys.servers**必須有使用此*server*。 *server* 是 **sysname**，沒有預設值。  
+ ** ** @server = '** server **'**  
+ 這是使用者編寫的遠端預存程序呼叫語法所參考的遠端伺服器名稱。 在**sys.databases**中，只有一個資料列必須已經存在，才能使用此*伺服器*。 *伺服器*是**sysname**，沒有預設值。  
   
- **@netname ='** *network_name* **'**  
- 這是遠端預存程序呼叫的目標電腦網路名稱。 *network_name*已**sysname**，沒有預設值。  
+ ** ** @netname = '** network_name **'**  
+ 這是遠端預存程序呼叫的目標電腦網路名稱。 *network_name*是**sysname**，沒有預設值。  
   
  這個名稱必須符合 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 電腦名稱，且這個名稱可以包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼不允許使用的字元。  
   
@@ -58,7 +58,7 @@ sp_setnetname
 ## <a name="remarks"></a>備註  
  如果電腦名稱包含無效的識別碼，有些對 Windows 電腦的遠端預存程序呼叫可能會發生問題。  
   
- 由於連結伺服器和遠端伺服器在相同命名空間中，因此，它們的名稱不能相同。 不過，您可以定義連結的伺服器和遠端伺服器針對指定的伺服器指派不同的名稱，並利用**sp_setnetname**其中一個網路名稱設定為基礎的伺服器網路名稱。  
+ 由於連結伺服器和遠端伺服器在相同命名空間中，因此，它們的名稱不能相同。 不過，您可以藉由指派不同的名稱，以及使用**sp_setnetname**將其中一個的網路名稱設定為基礎伺服器的網路名稱，為指定的伺服器定義連結伺服器和遠端伺服器。  
   
 ```  
 --Assume sqlserv2 is actual name of SQL Server   
@@ -71,10 +71,10 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 ```  
   
 > [!NOTE]  
->  使用**sp_setnetname**指回到本機伺服器的 連結的伺服器不支援。 這個方式所參考的伺服器無法參與分散式交易。  
+>  不支援使用**sp_setnetname**將連結的伺服器指向本機伺服器。 這個方式所參考的伺服器無法參與分散式交易。  
   
-## <a name="permissions"></a>Permissions  
- 需要的成員資格**sysadmin**並**setupadmin**固定伺服器角色。  
+## <a name="permissions"></a>權限  
+ 需要**sysadmin**和**setupadmin**固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會顯示在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，用來發出遠端預存程序呼叫的一般管理順序。  
@@ -88,9 +88,9 @@ EXEC Win_1.master.dbo.sp_who;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
