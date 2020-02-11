@@ -18,10 +18,10 @@ ms.assetid: 637dd734-c294-4bfd-892d-882bac4708f5
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e538a7cfb9b922bd7960fa5833f5a3c3d14da918
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660022"
 ---
 # <a name="propertystrvalue-property-sqlserviceadvancedproperty-class"></a>PropertyStrValue 屬性 (SqlServiceAdvancedProperty 類別)
@@ -36,7 +36,7 @@ object.PropertyStrValue [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
+ *目標*  
  代表 advanced 屬性的[SqlServiceAdvancedProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
@@ -45,6 +45,6 @@ object.PropertyStrValue [= value]
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [啟動和停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [啟動及停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

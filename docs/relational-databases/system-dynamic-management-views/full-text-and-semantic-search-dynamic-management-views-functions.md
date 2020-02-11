@@ -1,5 +1,5 @@
 ---
-title: 全文檢索和語意搜尋動態管理檢視函式 |Microsoft Docs
+title: 全文檢索和語義搜尋動態管理檢視-函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ff24122c1a551d6da1ce4ad1ddbb7771e2183c70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130773"
 ---
-# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>全文檢索和語意搜尋動態管理檢視函式
+# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>全文檢索和語義搜尋動態管理 Views-函數
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   本節包含與全文檢索搜尋和語意搜尋相關的下列動態管理檢視和函數。  
@@ -43,7 +43,7 @@ ms.locfileid: "68130773"
  傳回給定資料表之全文檢索索引中的所有屬性相關內容。 這包括與該全文檢索索引相關聯的搜尋屬性清單所註冊之任何屬性的一切所屬資料。  
   
  sys.dm_fts_index_keywords_position_by_document  
- 傳回文件中的關鍵字的位置。  
+ 傳回檔中關鍵字的位置。  
   
  [sys.dm_fts_index_population](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  
  傳回有關目前進行中之全文檢索索引母體擴展的資訊。  
@@ -69,6 +69,6 @@ ms.locfileid: "68130773"
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [系統檢視表&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [&#40;Transact-sql&#41;的系統檢視](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 25c3b5e7-0301-4f7b-9635-b3db06dad1e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 60ecd0972659f69461b6f94b7e3f24c99bcf8cec
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73658902"
 ---
 # <a name="propertyname-property-clientnetworkprotocolproperty-class"></a>PropertyName 屬性 (ClientNetworkProtocolProperty 類別)
@@ -36,8 +36,8 @@ object.PropertyName [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
- [ClientNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)物件，代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端所使用之網路通訊協定的屬性。  
+ *目標*  
+ [ClientNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)物件，代表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端所使用之網路通訊協定的屬性。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定目前屬性名稱的字串值。  

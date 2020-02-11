@@ -1,5 +1,5 @@
 ---
-title: sys.sysfilegroups (TRANSACT-SQL) |Microsoft Docs
+title: sysfilegroups （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5388533ed665548eaaac3c25976271750d1348c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053480"
 ---
 # <a name="syssysfilegroups-transact-sql"></a>sys.sysfilegroups (Transact-SQL)
@@ -38,12 +38,12 @@ ms.locfileid: "68053480"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**groupid**|**smallint**|每個資料庫的唯一群組識別碼。|  
-|**allocpolicy**|**smallint**|已保留|  
-|**status**|**int**|0x8 = 唯讀<br /><br /> 0x10 = 預設值|  
+|**allocpolicy**|**smallint**|Reserved|  
+|**狀態**|**int**|0x8 = 唯讀<br /><br /> 0x10 = 預設值|  
 |**groupname**|**sysname**|檔案群組的名稱。|  
   
 ## <a name="see-also"></a>另請參閱  
- [將系統資料表對應至系統檢視表&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [將系統資料表對應至系統檢視 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的相容性檢視](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

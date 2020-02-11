@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721680"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>建立和套用初始快照集
@@ -44,7 +44,7 @@ ms.locfileid: "62721680"
   
 3.  以滑鼠右鍵按一下您要為其建立快照集的發行集，然後按一下 **[檢視快照集代理程式的狀態]** 。  
   
-4.  在 [檢視快照集代理程式的狀態 - \<發行集>]  對話方塊中，按一下 [啟動]  。  
+4.  在 [檢視快照集代理程式的狀態 - **發行集>]\<** 對話方塊中，按一下 [啟動]  。  
   
  快照集代理程式產生完快照集後，就會顯示一個訊息，例如「[100%] 已產生 17 個發行項的快照集」。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "62721680"
   
 1.  在複寫監視器的左窗格中展開發行者群組，然後展開發行者。  
   
-2.  以滑鼠右鍵按一下要產生快照集的發行集，然後按一下 **[產生快照集]** 。  
+2.  以滑鼠右鍵按一下要產生快照集的發行集，然後按一下 **[產生快照集]**。  
   
-3.  若要檢視快照集代理程式的狀態，請按一下 **[代理程式]** 索引標籤。如需詳細資訊，請以滑鼠右鍵按一下方格中的「快照集代理程式」，然後按一下 **[檢視詳細資料]** 。  
+3.  若要查看快照集代理程式的狀態，請按一下 [**代理**程式] 索引標籤。如需詳細資訊，請以滑鼠右鍵按一下方格中的快照集代理程式，然後按一下 [**查看詳細資料**]。  
   
 #### <a name="to-apply-a-snapshot"></a>若要套用快照集  
   
@@ -78,13 +78,13 @@ ms.locfileid: "62721680"
   
 1.  建立快照式、交易式或合併式發行集。 如需詳細資訊，請參閱[建立發行集](publish/create-a-publication.md)。  
   
-2.  執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 指定 **@publication** 及下列參數：  
+2.  執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 指定**@publication**和下列參數：  
   
-    -   **@job_login，它會指定**散發者上的快照集代理程式執行時所用的 Windows 驗證認證。  
+    -   ，指定在散發者端執行快照集代理程式時所用的 Windows 驗證認證。 ** @job_login **  
   
-    -   **@job_password** ，它是提供之 Windows 認證的密碼。  
+    -   ，這是所提供之 Windows 認證的密碼。 ** @job_password **  
   
-    -   (選擇性) 如果代理程式在連接到發行者時將使用「SQL Server 驗證」，會將 **@publisher_security_mode** 設定為 **@publisher_security_mode** 的值。 在此情況下，您也必須針對 **@publisher_login** ＞和＜ **@publisher_password** 。  
+    -   (選擇性) 如果代理程式在連接到發行者時將使用「SQL Server 驗證」，會將 **@publisher_security_mode** 設定為 **@publisher_security_mode** 的值。 在此情況下，您也必須指定**@publisher_login**和**@publisher_password**的 SQL Server Authentication 登入資訊。  
   
     -   (選擇性) 快照集代理程式作業的同步排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](specify-synchronization-schedules.md)。  
   
@@ -103,11 +103,11 @@ ms.locfileid: "62721680"
   
 3.  從命令提示字元或批次檔中，執行 [snapshot.exe](agents/replication-snapshot-agent.md) 來啟動 **複寫合併代理程式**，並指定下列命令列引數：  
   
-    -   **-Publication**  
+    -   **-發行集**  
   
-    -   **-Publisher**  
+    -   **-發行者**  
   
-    -   **-Distributor**  
+    -   **-散發者**  
   
     -   **-PublisherDB**  
   
@@ -119,13 +119,13 @@ ms.locfileid: "62721680"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
+    -   **-DistributorSecurityMode** = **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** =  **@publisher_security_mode**  
+    -   **-PublisherSecurityMode** = **0**  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
  此範例會示範如何建立交易式發行集，並針對新的發行集加入快照集代理程式作業 (使用 **sqlcmd** 指令碼變數)。 此範例也會啟動此作業。  
@@ -175,9 +175,11 @@ ms.locfileid: "62721680"
   
     -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> - 散發者的名稱  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 表示連接到發行者時會使用 Windows 驗證的 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 值或是 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 的值； <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> 的值表示連接到發行者時會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 建議使用 Windows 驗證。  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 表示連接到發行者時會使用 Windows 驗證的 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 值或是 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 的值； <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> 的值表示連接到發行者時會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 建議使用 Windows 驗證。  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 表示連接到散發者時會使用 Windows 驗證的 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 值或是 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 的值； <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> 的值表示連接到散發者時會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 建議使用 Windows 驗證。  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 表示連接到散發者時會使用 Windows 驗證的 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 值或是 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 的值； <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> 的值表示連接到散發者時會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 建議使用 Windows 驗證。  
   
 2.  針對 <xref:Microsoft.SqlServer.Replication.ReplicationType.Transactional> 設定 <xref:Microsoft.SqlServer.Replication.ReplicationType.Snapshot> 或 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>的值。  
   
@@ -209,9 +211,11 @@ ms.locfileid: "62721680"
   
     -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> - 散發者的名稱  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 表示連接到發行者時會使用 Windows 驗證的 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 值或是 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 的值； <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> 的值表示連接到發行者時會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 建議使用 Windows 驗證。  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 表示連接到發行者時會使用 Windows 驗證的 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 值或是 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 的值； <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> 的值表示連接到發行者時會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 建議使用 Windows 驗證。  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 表示連接到散發者時會使用 Windows 驗證的 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 值或是 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 的值； <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> 的值表示連接到散發者時會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 建議使用 Windows 驗證。  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 表示連接到散發者時會使用 Windows 驗證的 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 值或是 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 的值； <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> 的值表示連接到散發者時會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 建議使用 Windows 驗證。  
   
 2.  為 <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge> 設定 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>的值。  
   
@@ -232,9 +236,9 @@ ms.locfileid: "62721680"
   
 ## <a name="see-also"></a>另請參閱  
  [Create a Publication](publish/create-a-publication.md)   
- [建立提取訂閱](create-a-pull-subscription.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
- [Specify Synchronization Schedules](specify-synchronization-schedules.md)   
+ [指定同步處理排程](specify-synchronization-schedules.md)   
  [建立並套用快照集](create-and-apply-the-snapshot.md)   
  [使用快照集初始化訂閱](initialize-a-subscription-with-a-snapshot.md)   
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   

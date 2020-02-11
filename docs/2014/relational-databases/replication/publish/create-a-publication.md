@@ -16,13 +16,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87fc7802ea79a73c452f515f72f553850f017bb6
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882327"
 ---
-# <a name="create-a-publication"></a>Create a Publication
+# <a name="create-a-publication"></a>建立發行集
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來建立 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的發行集。  
   
  **本主題內容**  
@@ -33,9 +33,9 @@ ms.locfileid: "73882327"
   
      [安全性](#Security)  
   
--   **若要建立發行集並定義發行項，請使用：**  
+-   **若要使用下列專案建立發行集並定義發行項：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73882327"
   
 ###  <a name="Restrictions"></a> 限制事項  
   
--   發行集與發行項名稱不能包含下列任何字元：%、\*、[、]、|、:、"、? ，'，\，/，\<，>。 如果資料庫中的物件包含這些字元的任何一個，而且您要複寫它們，則必須指定一個不同於 [發行項屬性 - **發行項>]\<** 對話方塊中之物件名稱的發行項名稱，您可以從精靈的 [發行項] 頁面存取此對話方塊。  
+-   發行集與發行項名稱不能包含下列任何字元：%、\*、[、]、|、:、"、? 、'、\、/、 \< >。 如果資料庫中的物件包含這些字元的任何一個，而且您要複寫它們，則必須指定一個不同於 [發行項屬性 - **發行項>]\<** 對話方塊中之物件名稱的發行項名稱，您可以從精靈的 [發行項]**** 頁面存取此對話方塊。  
   
 ###  <a name="Security"></a> Security  
  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
@@ -55,11 +55,11 @@ ms.locfileid: "73882327"
   
 #### <a name="to-create-a-publication-and-define-articles"></a>建立發行集並定義發行項  
   
-1.  連接到 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]的發行者，然後展開伺服器節點。  
+1.  連接到 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中的發行者，然後展開伺服器節點。  
   
 2.  展開 **[複寫]** 資料夾，然後以滑鼠右鍵按一下 **[本機發行集]** 資料夾。  
   
-3.  按一下 **[新增發行集]** 。  
+3.  按一下 **[新增發行集]**。  
   
 4.  遵循「新增發行集精靈」中的頁面，執行：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73882327"
   
          如果指定另一台伺服器扮演「散發者」角色，則必須在 **[管理密碼]** 頁面輸入密碼才能從「發行者」連接到「散發者」。 此密碼必須符合發行者於遠端散發者啟用時所指定的密碼。  
   
-         如需詳細資訊，請參閱[設定散發](../configure-distribution.md)。  
+         如需詳細資訊，請參閱 [Configure Distribution](../configure-distribution.md)＞。  
   
     -   選擇發行集資料庫。  
   
@@ -83,11 +83,14 @@ ms.locfileid: "73882327"
   
     -   指定下列複寫代理程式執行時使用的認證，並建立連接：  
   
-         \- 快照集代理程式 (針對所有發行集)。  
+         
+  \- 快照集代理程式 (針對所有發行集)。  
   
-         \- 記錄讀取器代理程式 (針對所有交易式發行集)。  
+         
+  \- 記錄讀取器代理程式 (針對所有交易式發行集)。  
   
-         \- 佇列讀取器代理程式 (針對允許更新訂閱的交易式發行集)。  
+         
+  \- 佇列讀取器代理程式 (針對允許更新訂閱的交易式發行集)。  
   
          如需相關資訊，請參閱 [Replication Agent Security Model](../security/replication-agent-security-model.md) 以及 [Replication Security Best Practices](../security/replication-security-best-practices.md)。  
   
@@ -108,45 +111,45 @@ ms.locfileid: "73882327"
   
     -   如果您不確定發行的資料庫是否有記錄讀取器代理程式作業存在，請在發行集資料庫的發行者端執行 [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql)。  
   
-    -   如果結果集是空的，請建立記錄讀取器代理程式作業。 在發行者端，執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)。 為 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]**job_name\@ 和** **password\@ 指定執行代理程式所使用的**  Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為publisher_security_mode **指定 \@0** 值，並為 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]publisher_login **和 \@** publisher_password**指定 \@** 的登入資訊。 請繼續進行步驟 3。  
+    -   如果結果集是空的，請建立記錄讀取器代理程式作業。 在發行者端，執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] **針對\@job_name** **和\@密碼**指定執行代理程式所用的 Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為 **** publisher_security_mode** 指定 \@0** 值，並為 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]publisher_login** 和 \@** publisher_password** 指定 \@** 的登入資訊。 請繼續進行步驟 3。  
   
-3.  在發行者端，執行 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)。 指定 **\@發行**集的發行集名稱，並針對 **\@repl_freq**參數，為快照式發行集指定 `snapshot` 的值，或為交易式發行集指定 `continuous` 的值。 指定任何其他發行集選項。 這樣會定義此發行集。  
+3.  在發行者端，執行 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)。 指定** \@發行**集的發行集名稱，並針對** \@repl_freq**參數，針對快照式發行集`snapshot`指定的值，或`continuous`針對交易式發行集指定的值。 指定任何其他發行集選項。 這樣會定義此發行集。  
   
     > [!NOTE]  
     >  發行集名稱不能包含下列字元：  
     >   
-    >  % * [ ] | : " ? \/\< >  
+    >  % * [ ] | : " ? \ / \< >  
   
-4.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 為 **\@publication** 指定步驟 3 中所使用的發行集名稱，並為 **\@snapshot_job_name** 和 **\@password** 指定快照集代理程式執行時所使用的 Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為publisher_security_mode **指定 \@0** 值，並為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**publisher_login\@ 和** **publisher_password\@ 指定**  的登入資訊。 這麼做會為發行集建立快照集代理程式作業。  
+4.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 指定用於** \@發行**的步驟3中所使用的發行集名稱，以及用來執行** \@snapshot_job_name**和** \@密碼**之快照集代理程式的 Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為 **** publisher_security_mode** 指定 \@0** 值，並為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**publisher_login\@ 和 ****publisher_password\@ 指定 ** 的登入資訊。 這麼做會為發行集建立快照集代理程式作業。  
   
     > [!IMPORTANT]  
     >  當利用遠端散發者來設定發行者時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
-5.  將發行項加入至發行集。 如需詳細資訊，請參閱 [Define an Article](define-an-article.md)。  
+5.  將發行項加入至發行集。 如需詳細資訊，請參閱 [定義發行項](define-an-article.md)。  
   
-6.  啟動快照集代理程式作業來產生此發行集的初始快照集。 如需詳細資訊，請參閱 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)。  
+6.  啟動快照集代理程式作業來產生此發行集的初始快照集。 如需詳細資訊，請參閱 [建立和套用初始快照集](../create-and-apply-the-initial-snapshot.md)。  
   
 #### <a name="to-create-a-merge-publication"></a>建立合併式發行集  
   
 1.  在發行者端執行 [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)，以便使用合併式複寫來啟用目前資料庫的發行集。  
   
-2.  在發行集資料庫的發行者端，執行 [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)。 為 **\@publication** 指定發行集的名稱，並指定其他任何發行集選項。 這樣會定義此發行集。  
+2.  在發行集資料庫的發行者端，執行 [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)。 為發行集指定發行集的** \@名稱，以及**任何其他發行集選項。 這樣會定義此發行集。  
   
     > [!NOTE]  
     >  發行集名稱不能包含下列字元：  
     >   
-    >  % * [ ] | : " ? \/\< >  
+    >  % * [ ] | : " ? \ / \< >  
   
-3.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 為 **\@publication** 指定步驟 2 中所使用的發行集名稱，並為 **\@snapshot_job_name** 和 **\@password** 指定快照集代理程式執行時所使用的 Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為publisher_security_mode **指定 \@0** 值，並為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**publisher_login\@ 和** **publisher_password\@ 指定**  的登入資訊。 這麼做會為發行集建立快照集代理程式作業。  
+3.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 指定用於** \@發行**的步驟2中所使用的發行集名稱，以及用來執行** \@snapshot_job_name**和** \@密碼**之快照集代理程式的 Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為 **** publisher_security_mode** 指定 \@0** 值，並為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]publisher_login** 和 \@** publisher_password** 指定 \@** 的登入資訊。 這麼做會為發行集建立快照集代理程式作業。  
   
     > [!IMPORTANT]  
     >  當利用遠端散發者來設定發行者時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
-4.  將發行項加入至發行集。 如需詳細資訊，請參閱 [Define an Article](define-an-article.md)。  
+4.  將發行項加入至發行集。 如需詳細資訊，請參閱 [定義發行項](define-an-article.md)。  
   
-5.  啟動快照集代理程式作業來產生此發行集的初始快照集。 如需詳細資訊，請參閱 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)。  
+5.  啟動快照集代理程式作業來產生此發行集的初始快照集。 如需詳細資訊，請參閱 [建立和套用初始快照集](../create-and-apply-the-initial-snapshot.md)。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  此範例會建立交易式發行集。 指令碼變數是用來傳遞建立快照集代理程式作業和記錄讀取器代理程式作業所需的 Windows 認證。  
   
  [!code-sql[HowTo#sp_AddTranPub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranpub)]  
@@ -171,7 +174,7 @@ ms.locfileid: "73882327"
     -   設定 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> 或 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> 欄位，以提供執行記錄讀取器代理程式所使用之 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 帳戶的認證。  
   
         > [!NOTE]  
-        >  當發行集是由 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> 固定伺服器角色的成員所建立時，不需要設定 `sysadmin`。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需相關資訊，請參閱 [Replication Agent Security Model](../security/replication-agent-security-model.md)。  
+        >  當發行集是由 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> 固定伺服器角色的成員所建立時，不需要設定 `sysadmin`。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../security/replication-agent-security-model.md)。  
   
     -   (選擇性) 在使用「SQL Server 驗證」連接到「發行者」時，設定 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (或 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A> ) 欄位。  
   
@@ -185,23 +188,25 @@ ms.locfileid: "73882327"
   
     -   將 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>設定為發行集名稱。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublicationType> 或 <xref:Microsoft.SqlServer.Replication.PublicationType.Transactional> 的 <xref:Microsoft.SqlServer.Replication.PublicationType.Snapshot>。  
+    -   
+  <xref:Microsoft.SqlServer.Replication.PublicationType> 或 <xref:Microsoft.SqlServer.Replication.PublicationType.Transactional> 的 <xref:Microsoft.SqlServer.Replication.PublicationType.Snapshot>。  
   
-    -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 欄位，可提供執行快照集代理程式所使用之 Windows 帳戶的認證。 當快照集代理程式要連接本機散發者及進行任何遠端連接 (使用 Windows 驗證) 時，也會使用此帳戶。  
+    -   
+  <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 欄位，以提供執行快照集代理程式所使用之 Windows 帳戶的認證。 當快照集代理程式要連接本機散發者及進行任何遠端連接 (使用 Windows 驗證) 時，也會使用此帳戶。  
   
         > [!NOTE]  
-        >  當發行集是由 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 固定伺服器角色的成員所建立時，不需要設定 `sysadmin`。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需相關資訊，請參閱 [Replication Agent Security Model](../security/replication-agent-security-model.md)。  
+        >  當發行集是由 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 固定伺服器角色的成員所建立時，不需要設定 `sysadmin`。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../security/replication-agent-security-model.md)。  
   
-    -   (選擇性) 在使用「SQL Server 驗證」連接到發行者時，請設定 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (或 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> ) 欄位。  
+    -   (選擇性) 使用「SQL Server 驗證」連線至發行者時，<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 或 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> 欄位。  
   
     -   (選擇性) 使用包含的邏輯 OR 運算子 (Visual C# 中的 `|` 和 Visual Basic 中的 `Or`)，並使用排除的邏輯 OR 運算子 (Visual C# 中的 `^` 和 Visual Basic 中的 `Xor`)，為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性設定 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
   
-    -   (選擇性) 當散發者為非 SQL Server 散發者時，將 <xref:Microsoft.SqlServer.Replication.TransPublication.PublisherName%2A> 設定為散發者的名稱。  
+    -   (選擇性) 當發行者為非 SQL Server 發行者時，<xref:Microsoft.SqlServer.Replication.TransPublication.PublisherName%2A> 的發行者名稱。  
   
 6.  呼叫 <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> 方法來建立發行集。  
   
     > [!IMPORTANT]  
-    >  當利用遠端散發者來設定發行者時，提供給所有屬性的值 (包括 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再呼叫 <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> 方法。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
+    >  當利用遠端散發者來設定發行者時，提供給所有屬性的值 (包括 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連線，然後再呼叫 <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> 方法。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
 7.  呼叫 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> 方法來為發行集建立快照集代理程式作業。  
   
@@ -221,17 +226,18 @@ ms.locfileid: "73882327"
   
     -   將 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>設定為發行集名稱。  
   
-    -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 欄位，可提供執行快照集代理程式所使用之 Windows 帳戶的認證。 當快照集代理程式要連接本機散發者及進行任何遠端連接 (使用 Windows 驗證) 時，也會使用此帳戶。  
+    -   
+  <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 欄位，以提供執行快照集代理程式所使用之 Windows 帳戶的認證。 當快照集代理程式要連接本機散發者及進行任何遠端連接 (使用 Windows 驗證) 時，也會使用此帳戶。  
   
         > [!NOTE]  
-        >  當發行集是由 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 固定伺服器角色的成員所建立時，不需要設定 `sysadmin`。 如需相關資訊，請參閱 [Replication Agent Security Model](../security/replication-agent-security-model.md)。  
+        >  當發行集是由 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 固定伺服器角色的成員所建立時，不需要設定 `sysadmin`。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../security/replication-agent-security-model.md)。  
   
     -   (選擇性) 使用包含的邏輯 OR 運算子 (Visual C# 中的 `|` 和 Visual Basic 中的 `Or`)，並使用排除的邏輯 OR 運算子 (Visual C# 中的 `^` 和 Visual Basic 中的 `Xor`)，為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性設定 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
   
 5.  呼叫 <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> 方法來建立發行集。  
   
     > [!IMPORTANT]  
-    >  當利用遠端散發者來設定發行者時，提供給所有屬性的值 (包括 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再呼叫 <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> 方法。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
+    >  當利用遠端散發者來設定發行者時，提供給所有屬性的值 (包括 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連線，然後再呼叫 <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> 方法。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
 6.  呼叫 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> 方法來為發行集建立快照集代理程式作業。  
   
@@ -249,12 +255,12 @@ ms.locfileid: "73882327"
  [!code-vb[HowTo#rmo_vb_CreateMergePub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepub)]  
   
 ## <a name="see-also"></a>另請參閱  
- [以指令碼變數使用 sqlcmd](../../scripting/sqlcmd-use-with-scripting-variables.md)   
+ [搭配腳本變數使用 sqlcmd](../../scripting/sqlcmd-use-with-scripting-variables.md)   
  [發行資料和資料庫物件](publish-data-and-database-objects.md)   
- [複寫管理物件概念](../concepts/replication-management-objects-concepts.md)   
- [定義發行項](define-an-article.md)   
- [檢視和修改發行集屬性](view-and-modify-publication-properties.md)   
- [設定散發](../configure-distribution.md)   
+ [Replication Management Objects Concepts](../concepts/replication-management-objects-concepts.md)   
+ [Define an Article](define-an-article.md)   
+ [檢視及修改發行集屬性](view-and-modify-publication-properties.md)   
+ [[設定散發]](../configure-distribution.md)   
  [保護散發者](../security/secure-the-distributor.md)   
  [保護發行者](../security/secure-the-publisher.md)  
   

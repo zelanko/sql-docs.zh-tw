@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 349e3313a194aa45ae26a106b1f61d7df7ac1f46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211363"
 ---
-# <a name="modify-a-sql-server-agent-proxy"></a>Modify a SQL Server Agent Proxy
-  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy。  
+# <a name="modify-a-sql-server-agent-proxy"></a>修改 SQL Server Agent Proxy
+  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]，在中修改 Agent proxy。  
   
  **本主題內容**  
   
@@ -31,7 +31,7 @@ ms.locfileid: "68211363"
   
      [安全性](#Security)  
   
--   **若要使用下列項目修改 SQL Server Agent Proxy：**  
+-   **若要使用下列內容修改 SQL Server Agent proxy：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68211363"
   
 -   如果使用者的登入身分可以存取 Proxy，或者使用者隸屬於可存取 Proxy 的角色，該使用者就可以使用作業步驟中的 Proxy。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  只有 **sysadmin** 固定伺服器角色的成員才能建立、修改或刪除 Proxy 帳戶。  
@@ -66,7 +66,7 @@ ms.locfileid: "68211363"
   
 5.  以滑鼠右鍵按一下要修改的 Proxy 帳戶，然後選取 [屬性]  。  
   
-6.  在 [<Proxy 名稱> Proxy 帳戶屬性]   對話方塊中，視需要變更 Proxy 帳戶。 如需有關此對話方塊之選項的詳細資訊，請參閱[建立 SQL Server Agent Proxy](create-a-sql-server-agent-proxy.md)。  
+6.  在 [ _proxy_name_**proxy 帳戶屬性**] 對話方塊中，視需要對 proxy 帳戶進行變更。 如需有關此對話方塊之選項的詳細資訊，請參閱 [建立 SQL Server Agent Proxy](create-a-sql-server-agent-proxy.md)。  
   
 7.  完成後，請按一下 **[確定]** 。  
   
@@ -90,6 +90,6 @@ ms.locfileid: "68211363"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 < [sp_update_proxy &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-proxy-transact-sql)。  
+ 如需詳細資訊，請參閱[sp_update_proxy &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-proxy-transact-sql)。  
   
   

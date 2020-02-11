@@ -13,29 +13,29 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 661d7ab65afca258424af300debde328b8f01fee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761703"
 ---
-# <a name="mssqlserver9692"></a>MSSQLSERVER_9692
+# <a name="mssqlserver_9692"></a>MSSQLSERVER_9692
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|9692|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|SB2_CANT_LISTEN_PORT_IN_USE|  
-|訊息文字|%S_MSG 通訊協定傳輸無法在通訊埠 %d 上接聽，因為它正由另一個處理序所使用。|  
+|訊息文字|%S_MSG 通訊協定傳輸無法在連接埠 %d 上接聽，因為它正由另一個處理序所使用。|  
   
 ## <a name="explanation"></a>說明  
  電腦上的另一個程式正在使用指定的 TCP 通訊埠。  
   
 ## <a name="user-action"></a>使用者動作  
- 執行`netstat -aon`來判斷哪一個程式正在使用連接埠。 停用該應用程式，或者為 Service Broker 指定不同的通訊埠。  
+ 執行`netstat -aon`以判斷哪一個程式正在使用該埠。 停用該應用程式，或者為 Service Broker 指定不同的通訊埠。  
   
   

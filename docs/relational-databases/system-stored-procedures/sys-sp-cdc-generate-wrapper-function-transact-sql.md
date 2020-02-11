@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_generate_wrapper_function & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.databases sp_cdc_generate_wrapper_function （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 074e114f81db6615a04240f10447a3f711a51cf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083748"
 ---
-# <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
+# <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   針對可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用的異動資料擷取查詢函數產生可建立包裝函數的指令碼。 產生之包裝函數所支援的 API 可讓您將查詢間隔指定為日期時間間隔。 這樣可讓此函數方便用於許多倉儲應用程式中，包括由使用異動資料擷取技術來判斷累加式載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝設計師所開發的應用程式。  
@@ -50,17 +50,17 @@ sys.sp_cdc_generate_wrapper_function
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @capture_instance=] '*capture_instance*'  
- 這是即將產生指令碼的擷取執行個體。 *capture_instance*已**sysname**且具有預設值是 NULL。 如果您省略了此值或將它明確設定為 NULL，系統就會針對所有擷取執行個體產生包裝函數指令碼。  
+ [ @capture_instance= ]'*capture_instance*'  
+ 這是即將產生指令碼的擷取執行個體。 *capture_instance*為**sysname** ，且預設值為 Null。 如果您省略了此值或將它明確設定為 NULL，系統就會針對所有擷取執行個體產生包裝函數指令碼。  
   
- [ @closed_high_end_point=] *high_end_pt_flag*  
- 這是旗標位元，它會指出認可時間等於高端點的變更是否要由產生的程序包含在擷取間隔中。 *high_end_pt_flag*已**元**和其預設值為 1，表示應該包含端點。 值為 0 表示所有認可時間都將確實小於高端點。  
+ [ @closed_high_end_point= ]*high_end_pt_flag*  
+ 這是旗標位元，它會指出認可時間等於高端點的變更是否要由產生的程序包含在擷取間隔中。 *high_end_pt_flag*是**bit** ，預設值是1，表示應該包含端點。 值為 0 表示所有認可時間都將確實小於高端點。  
   
- [ @column_list=] '*column_list*'  
- 這是即將包含在包裝函數所傳回之結果集中的已擷取資料行清單。 *column_list*已**nvarchar （max)** 且具有預設值是 NULL。 當您指定了 NULL 時，就會包含所有已擷取的資料行。  
+ [ @column_list= ]'*column_list*'  
+ 這是即將包含在包裝函數所傳回之結果集中的已擷取資料行清單。 *column_list*是**Nvarchar （max）** ，且預設值為 Null。 當您指定了 NULL 時，就會包含所有已擷取的資料行。  
   
- [ @update_flag_list=] '*update_flag_list*'  
- 這是更新旗標包含在包裝函數所傳回之結果集中的已包含資料行清單。 *update_flag_list*已**nvarchar （max)** 且具有預設值是 NULL。 當您指定了 NULL 時，就不會包含任何更新旗標。  
+ [ @update_flag_list= ]'*update_flag_list*'  
+ 這是更新旗標包含在包裝函數所傳回之結果集中的已包含資料行清單。 *update_flag_list*是**Nvarchar （max）** ，且預設值為 Null。 當您指定了 NULL 時，就不會包含任何更新旗標。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -69,7 +69,7 @@ sys.sp_cdc_generate_wrapper_function
   
 |資料行名稱|資料行類型|描述|  
 |-----------------|-----------------|-----------------|  
-|**function_name**|**nvarchar(145)**|產生之函數的名稱。|  
+|**function_name**|**Nvarchar （145）**|產生之函數的名稱。|  
 |**create_script**|**nvarchar(max)**|這是建立擷取執行個體包裝函數的指令碼。|  
   
 ## <a name="remarks"></a>備註  
@@ -105,6 +105,6 @@ DEALLOCATE #hfunctions;
   
 ## <a name="see-also"></a>另請參閱  
  [異動資料擷取預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
- [異動資料擷取&#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
+ [變更 Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
   
   

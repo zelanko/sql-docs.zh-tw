@@ -1,5 +1,5 @@
 ---
-title: 升級將修改使用 Message Queuing 的佇列更新訂閱 |Microsoft Docs
+title: 升級將會修改使用訊息佇列的佇列更新訂閱 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1c723050f9e860534c5298df9a487337e319ff91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091406"
 ---
 # <a name="upgrading-will-modify-queued-updating-subscriptions-that-use-message-queuing"></a>升級將會修改使用 Message Queuing 的佇列更新訂閱
   Upgrade Advisor 偵測到您可能有一或多個使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (也稱為 MSMQ) 的佇列更新訂閱。 複寫不再支援訊息佇列，因此將會修改訂閱以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 佇列。  
   
- 值**sql**允許。 在升級期間，系統會將使用訊息佇列的現有發行集修改為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 佇列。 如果您有應用程式是依賴使用 Message Queuing 的佇列更新，這些應用程式都需要重寫，以配合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 佇列。 如需有關佇列更新訂閱的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜異動複寫的可更新訂閱＞。  
+ 只允許**sql**值。 在升級期間，系統會將使用訊息佇列的現有發行集修改為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 佇列。 如果您有應用程式是依賴使用 Message Queuing 的佇列更新，這些應用程式都需要重寫，以配合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 佇列。 如需有關佇列更新訂閱的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜異動複寫的可更新訂閱＞。  
   
  當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在升級時，如果 Message Queuing 服務正在執行，升級會移除現有的 Message Queuing 訂閱佇列。  
   

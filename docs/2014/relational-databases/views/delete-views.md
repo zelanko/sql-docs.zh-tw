@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7e727451fb0f9dc7a3d0726a2cb0fa2d6adf997
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196412"
 ---
 # <a name="delete-views"></a>刪除檢視
@@ -35,7 +35,7 @@ ms.locfileid: "68196412"
   
 -   在利用 `DROP TABLE` 來卸除的資料表中，您必須利用 `DROP VIEW`來明確卸除任何檢視。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 SCHEMA 的 ALTER 權限或 OBJECT 的 CONTROL 權限。  
@@ -51,7 +51,7 @@ ms.locfileid: "68196412"
 3.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
   
     > [!IMPORTANT]  
-    >  在 [刪除物件]  對話方塊中按一下 [顯示相依性]  ，開啟 [<檢視名稱>  相依性]  對話方塊。 這就會顯示相依於檢視的所有物件以及檢視所相依的所有物件。  
+    >  按一下 [**刪除物件**] 對話方塊中的 [**顯示**相依性]，開啟 [ _view_name_相依**性] 對話方塊**。 這就會顯示相依於檢視的所有物件以及檢視所相依的所有物件。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

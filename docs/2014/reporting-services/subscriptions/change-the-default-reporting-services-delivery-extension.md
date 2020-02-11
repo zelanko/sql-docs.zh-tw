@@ -13,23 +13,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e37dcf69a09d92236e0b8f4f97cb99541f1c7532
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783246"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>變更預設 Reporting Services 傳遞延伸模組
   您可以修改 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態設定，以變更訂閱定義頁面的 **[傳遞者]** 清單中所顯示的預設傳遞延伸模組。 例如，您可以修改組態，使得在使用者建立新的訂閱時依預設會選取檔案共用傳遞，而不是電子郵件傳遞。 您也可以變更傳遞延伸模組在使用者介面中列出的順序。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 原生模式 | [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]原生模式 |[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包含電子郵件和 Windows 檔案共用傳遞延伸模組。 如果您部署了自訂或協力廠商延伸模組來支援自訂傳遞，那麼報表伺服器可能會有其他的傳遞延伸模組。 傳遞延伸模組是否可用取決於該模組是否部署於報表伺服器。  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包含電子郵件和 Windows 檔案共用傳遞延伸模組。 如果您部署了自訂或協力廠商延伸模組來支援自訂傳遞，那麼報表伺服器可能會有其他的傳遞延伸模組。 傳遞延伸模組是否可用取決於該模組是否部署於報表伺服器。  
   
 ## <a name="default-native-mode-report-server-configuration"></a>預設原生模式報表伺服器組態  
  在 **[傳遞者]** 清單的 [報表管理員] 中顯示傳遞延伸模組的順序，是根據 **RSReportServer.config** 檔中傳遞延伸模組項目的順序而定。 例如，下圖在清單中會先顯示電子郵件，並依預設加以選取。  
   
- ![傳遞延伸模組的預設清單](../media/ssrs-default-delivery.png "傳遞延伸模組的預設清單")  
+ ![預設的傳遞延伸模組清單](../media/ssrs-default-delivery.png "預設的傳遞延伸模組清單")  
   
  以下是 **RSReportServer.config** 的預設區段，會控制預設傳遞延伸模組及其在報表管理員中的顯示順序。 請注意，電子郵件會先出現在檔案中，並且設為預設值。  
   
@@ -53,7 +54,7 @@ ms.locfileid: "72783246"
   
      在文字編輯器中開啟 RSReportServer.config 檔。 如需組態檔的詳細資訊，請參閱＜ [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)＞。 組態變更之後，UI 會如下圖所示：  
   
-     ![已修改的傳遞延伸模組清單](../media/ssrs-modified-delivery.png "已修改的傳遞延伸模組清單")  
+     ![修改過的傳遞延伸模組清單](../media/ssrs-modified-delivery.png "修改過的傳遞延伸模組清單")  
   
 2.  修改 DeliveryUI 區段使其如下列範例所示，並記下主要變更：  
   
@@ -87,16 +88,17 @@ ms.locfileid: "72783246"
   
      **事件識別碼：** 109  
   
-     **來源** ：報表伺服器 Windows 服務 (執行個體名稱)  
+     **來源：** 報表伺服器 Windows 服務（實例名稱）  
   
      已修改 RSReportServer.config 檔  
   
 ## <a name="sharepoint-mode-report-servers"></a>SharePoint 模式報表伺服器  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式會在 SharePoint 服務應用程式資料庫中儲存延伸模組資訊，而不是在 RsrReportServer.config 檔中儲存。 在 SharePoint 模式中，傳遞延伸模組組態會使用 PowerShell 進行修改。  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式會在 SharePoint 服務應用程式資料庫中儲存延伸模組資訊，而不是在 RsrReportServer.config 檔中儲存。 在 SharePoint 模式中，傳遞延伸模組組態會使用 PowerShell 進行修改。  
   
 #### <a name="configure-the-default-delivery-extension"></a>設定預設傳遞延伸模組  
   
-1.  開啟 **[SharePoint 管理命令介面]** 。  
+1.  開啟 **[SharePoint 管理命令介面]**。  
   
 2.  如果您已知道 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務應用程式的名稱，您可以略過此步驟。 使用下列 PowerShell，列出您 SharePoint 伺服器陣列中的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務應用程式。  
   
@@ -116,4 +118,4 @@ ms.locfileid: "72783246"
  [Rsreportserver.config 設定檔](../report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 中的檔案共用傳遞](file-share-delivery-in-reporting-services.md)   
  [Reporting Services 中的電子郵件傳遞](e-mail-delivery-in-reporting-services.md)   
- [設定報表伺服器用於以電子郵件&#40;傳遞 SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [針對 &#40;SSRS Configuration Manager 的電子郵件傳遞設定報表伺服器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  

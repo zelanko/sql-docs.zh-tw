@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 02023482a2f3537872b50ac70f8bfd68d2128e1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832963"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 處理工作
@@ -35,7 +35,8 @@ ms.locfileid: "62832963"
   
 -   表格式模型會忽略批次處理設定。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括多項執行商業智慧作業的工作，例如執行「資料定義語言」(Data Definition Language，DDL) 和執行資料採礦預測查詢。 如需有關相關之商業智慧工作的詳細資訊，請按下列其中一個主題：  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括多項執行商業智慧作業的工作，例如執行「資料定義語言」(Data Definition Language，DDL) 和執行資料採礦預測查詢。 如需有關相關之商業智慧工作的詳細資訊，請按下列其中一個主題：  
   
 -   [Analysis Services 執行 DDL 工作](analysis-services-execute-ddl-task.md)  
   
@@ -57,7 +58,7 @@ ms.locfileid: "62832963"
   
  此工作經常用來搭配將資料載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的「大量插入」工作使用，或搭配實作將資料載入資料表之資料流程的資料流程工作使用。 例如，資料流程工作可能包含從線上交易處理 (OLTP) 資料庫擷取資料，並將資料載入資料倉儲中事實資料表的資料流程，而在此之後，會呼叫「 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 處理」工作處理於資料倉儲上建立的 Cube。  
   
- 「 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 處理」工作會使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連線管理員連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體。 如需相關資訊，請參閱 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md)。  
+ 「 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]處理」工作會[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用連接管理員連接到的實例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 如需相關資訊，請參閱 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md)。  
   
 ## <a name="error-handling"></a>錯誤處理  
   
@@ -68,7 +69,7 @@ ms.locfileid: "62832963"
   
 -   [Analysis Services 處理工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Analysis Services 處理工作編輯器 &#40;Analysis Services 頁面&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
+-   [Analysis Services 處理工作編輯器 &#40;Analysis Services] 頁面&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

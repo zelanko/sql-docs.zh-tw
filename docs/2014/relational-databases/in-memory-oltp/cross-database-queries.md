@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d8739a95f0676adfdbc890512aeb5246565bacdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071587"
 ---
 # <a name="cross-database-queries"></a>跨資料庫查詢
@@ -22,7 +22,7 @@ ms.locfileid: "63071587"
   
  資料表變數並非交易式。 因此，記憶體最佳化資料表變數可以在跨資料庫查詢中使用，也因而有助於將某個資料庫中的資料移至另一個資料庫的記憶體最佳化資料表中。 您可以使用兩筆交易。 在第一筆交易中，將資料從遠端資料表插入變數中。 在第二筆交易中，從變數中將資料插入本機記憶體最佳化資料表。  
   
- 例如，若要複製的資料列中，資料庫 db1 中資料表 t1 到 db2 中的資料表 t2 使用變數@v1的型別 dbo.tt1，您可以使用類似：  
+ 例如，若要從資料庫 db1 中的資料表 t1，將資料列複製到 db2 中的資料表@v1 t2，請使用 tt1 類型的變數，您可以使用類似下列的專案：  
   
 ```sql  
 USE db2   

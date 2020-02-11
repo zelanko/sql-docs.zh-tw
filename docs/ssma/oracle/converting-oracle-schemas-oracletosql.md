@@ -1,5 +1,5 @@
 ---
-title: 轉換 Oracle 結構描述 (OracleToSQL) |Microsoft Docs
+title: 轉換 Oracle 架構（OracleToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,109 +13,109 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 638c16de8312456410c14e38fa632085e504913e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266146"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>轉換 Oracle 結構描述 (OracleToSQL)
-您已經連接到 Oracle 之後，連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並設定專案和對應的資料選項，您可以將轉換至 Oracle 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫物件。  
+當您連接到 Oracle、連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並設定專案和資料對應選項之後，就可以將 Oracle 資料庫物件轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫物件。  
   
-## <a name="the-conversion-process"></a>轉換程序  
-轉換的資料庫物件從 Oracle 取得的物件定義、 將它們轉換成類似[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件，並接著將這項資訊載入至 SSMA 中繼資料。 它不會載入到執行個體資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您接著可以檢視的物件和其屬性，使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管。  
+## <a name="the-conversion-process"></a>轉換程式  
+轉換資料庫物件會從 Oracle 取得物件定義、將其轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]類似的物件，然後將此資訊載入至 SSMA 中繼資料。 它不會將資訊載入的實例中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 接著，您可以使用 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料瀏覽器] 來查看物件及其屬性。  
   
-在轉換期間 SSMA 會列印訊息輸出至 [輸出] 窗格和 [錯誤清單] 窗格中的錯誤訊息。 使用輸出和錯誤的資訊來判斷是否需要修改您的 Oracle 資料庫或您的轉換程序，以便取得所需的轉換結果。  
+在轉換期間，SSMA 會將輸出訊息列印到 [輸出] 窗格，並在 [錯誤清單] 窗格中顯示錯誤訊息。 使用輸出和錯誤資訊來判斷您是否必須修改 Oracle 資料庫或轉換程式，以取得所需的轉換結果。  
   
 ## <a name="setting-conversion-options"></a>設定轉換選項  
-在轉換前的物件，檢閱中的專案轉換選項**專案設定** 對話方塊。 藉由使用這個對話方塊中，您可以設定 SSMA 如何將轉換函式和全域變數。 如需詳細資訊，請參閱 <<c0> [ 專案設定&#40;轉換&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)。</c0>  
+在轉換物件之前，請先查看 [**專案設定**] 對話方塊中的 [專案轉換] 選項。 藉由使用此對話方塊，您可以設定 SSMA 如何轉換函式和全域變數。 如需詳細資訊，請參閱[&#40;轉換&#41; &#40;OracleToSQL&#41;的專案設定](../../ssma/oracle/project-settings-conversion-oracletosql.md)。  
   
 ## <a name="conversion-results"></a>轉換結果  
-下表顯示哪些 Oracle 物件會轉換，並產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件：  
+下表顯示轉換的 Oracle 物件，以及產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的物件：  
   
 |||  
 |-|-|  
-|Oracle 物件|產生的 SQL Server 物件|  
-|函式|如果函式可以直接轉換成[!INCLUDE[tsql](../../includes/tsql-md.md)]，SSMA 建立函式。<br /><br />在某些情況下，函式必須轉換成預存程序。 在此情況下，SSMA 所建立的預存程序和函式來呼叫預存程序。|  
-|程序|如果此程序可以直接轉換成[!INCLUDE[tsql](../../includes/tsql-md.md)]，SSMA 建立預存程序。<br /><br />在某些情況下，必須在自發交易中呼叫預存程序。 在此情況下，SSMA 會建立兩個預存程序： 實作程序，和另一個則用來呼叫實作的其中一個預存程序。|  
-|Packages|SSMA 會建立一組預存程序和已整合在一起以類似的物件名稱的函式。|  
-|序列|SSMA 建立順序物件 （SQL Server 2012 或 SQL Server 2014），或模擬 Oracle 序列。|  
-|具有相依的物件，例如索引和觸發程序的資料表|SSMA 會建立資料表，與相依的物件。|  
-|檢視與相依的物件，例如觸發程序|SSMA 會建立具有相依物件的檢視。|  
-|具體化的檢視|**SSMA 會建立 SQL server 上的索引檢視表，但有些例外狀況。如果具體化的檢視包含一或多個下列建構函式，轉換將會失敗：**<br /><br />使用者定義函數<br /><br />不具決定性的欄位 / 函式 / 運算式在 SELECT、 位置或 GROUP BY 子句<br /><br />選取 * 中的浮點數資料行的使用方式，或 GROUP BY 子句 （上一期的特殊情況）<br /><br />自訂資料類型 （包括巢狀資料表）<br /><br />COUNT (distinct&lt;欄位&gt;)<br /><br />FETCH<br /><br />OUTER 聯結 (LEFT、RIGHT 或 FULL)<br /><br />子查詢，其他的檢視<br /><br />過去，排名、 潛在客戶、 記錄<br /><br />MIN、MAX<br /><br />UNION、 減號，INTERSECT<br /><br />HAVING|  
-|觸發程序|**SSMA 會建立觸發程序根據下列規則：**<br /><br />之前觸發程序會轉換成，而不是觸發程序。<br /><br />AFTER 觸發程序會轉換為 AFTER 觸發程序。<br /><br />INSTEAD OF 觸發程序會轉換成，而不是觸發程序。 多個 INSTEAD OF 觸發程序定義在同一個作業會結合成一個觸發程序。<br /><br />資料列層級觸發程序會模擬使用資料指標。<br /><br />階層式的觸發程序會轉換成多個個別的觸發程序。|  
-|同義字|**同義字會針對下列物件類型：**<br /><br />資料表和物件的資料表<br /><br />檢視和物件的檢視<br /><br />預存程序<br /><br />函式<br /><br />**下列物件的同義字會判斷已解決，並直接物件參考所取代：**<br /><br />序列<br /><br />Packages<br /><br />Java 類別結構描述物件<br /><br />使用者定義的物件類型<br /><br />為另一個同義字的同義字無法移轉，並將標示為錯誤。<br /><br />同義字不會建立 Materialized 檢視。|  
-|使用者定義型別|**SSMA 不提供支援的使用者定義型別轉換。使用者定義型別，其使用方式納入 PL/SQL 程式會標有特殊的轉換錯誤的下列規則：**<br /><br />資料表資料行的使用者定義型別會轉換為 varchar （8000）。<br /><br />引數的使用者定義型別，預存程序或函式會轉換為 varchar （8000）。<br /><br />PL/SQL 區塊中的使用者定義類型的變數會轉換為 varchar （8000）。<br /><br />物件表會轉換成標準的資料表。<br /><br />物件檢視會轉換成標準的檢視。|  
+|Oracle 物件|產生 SQL Server 物件|  
+|函式|如果函式可以直接轉換成[!INCLUDE[tsql](../../includes/tsql-md.md)]，則 SSMA 會建立函式。<br /><br />在某些情況下，函數必須轉換成預存程式。 在此情況下，SSMA 會建立一個預存程式，以及一個呼叫預存程式的函數。|  
+|程序|如果程式可以直接轉換成[!INCLUDE[tsql](../../includes/tsql-md.md)]，則 SSMA 會建立預存程式。<br /><br />在某些情況下，必須在自發交易中呼叫預存程式。 在此情況下，SSMA 會建立兩個預存程式：一個用來執行程式，另一個則用來呼叫執行預存程式。|  
+|Packages|SSMA 會建立一組預存程式和函式，並透過類似的物件名稱進行整合。|  
+|序列|SSMA 會建立順序物件（SQL Server 2012 或 SQL Server 2014）或模擬 Oracle 序列。|  
+|具有相依物件（例如索引和觸發程式）的資料表|SSMA 會建立具有相依物件的資料表。|  
+|具有相依物件的視圖，例如觸發程式|SSMA 會建立具有相依物件的 views。|  
+|具體化視圖|**SSMA 會在 SQL server 上建立索引的視圖，但有一些例外狀況。如果具體化視圖包含下列一或多個結構，轉換就會失敗：**<br /><br />使用者定義函數<br /><br />SELECT、WHERE 或 GROUP BY 子句中的不具決定性的欄位/函數/運算式<br /><br />SELECT *、WHERE 或 GROUP BY 子句中的 Float 資料行使用方式（先前問題的特殊案例）<br /><br />自訂資料類型（包括 nested 資料表）<br /><br />計數（相異&lt;欄位&gt;）<br /><br />FETCH<br /><br />OUTER 聯結 (LEFT、RIGHT 或 FULL)<br /><br />子查詢，其他視圖<br /><br />OVER、RANK、LEAD、LOG<br /><br />MIN、MAX<br /><br />UNION、減號、INTERSECT<br /><br />HAVING|  
+|觸發程序|**SSMA 會根據下列規則建立觸發程式：**<br /><br />觸發程式轉換成 INSTEAD of 觸發程式之前。<br /><br />AFTER 觸發程式會轉換成 AFTER 觸發程式。<br /><br />INSTEAD of 觸發程式會轉換成 INSTEAD of 觸發程式。 在相同作業上定義的多個 INSTEAD of 觸發程式會合並成一個觸發程式。<br /><br />資料列層級觸發程式是使用資料指標來模擬。<br /><br />串聯式觸發程式會轉換成多個個別的觸發程式。|  
+|同義字|**同義字是針對下列物件類型所建立：**<br /><br />資料表和物件資料表<br /><br />視圖和物件檢視<br /><br />預存程序<br /><br />函式<br /><br />**下列物件的同義字會解析並由直接物件參考取代：**<br /><br />序列<br /><br />Packages<br /><br />JAVA 類別架構物件<br /><br />使用者定義物件類型<br /><br />另一個同義字的同義字無法遷移，而且將會標示為錯誤。<br /><br />不會針對具體化視圖建立同義字。|  
+|使用者定義型別|**SSMA 不支援使用者定義類型的轉換。使用者定義型別，包括其在 PL/SQL 程式中的使用方式，會以下列規則引導的特殊轉換錯誤來標示：**<br /><br />使用者定義類型的資料表資料行會轉換成 VARCHAR （8000）。<br /><br />預存程式或函數的使用者定義型別引數會轉換成 VARCHAR （8000）。<br /><br />PL/SQL 區塊中使用者定義類型的變數會轉換成 VARCHAR （8000）。<br /><br />物件資料表會轉換成標準資料表。<br /><br />物件檢視會轉換成標準的視圖。|  
   
-## <a name="converting-oracle-database-objects"></a>轉換 Oracle 資料庫物件  
-若要將 Oracle 資料庫物件的轉換，您先選取您想要轉換，該物件，然後就會執行轉換的 SSMA。 若要檢視轉換期間的輸出訊息上**檢視**功能表上，選取**輸出**。  
+## <a name="converting-oracle-database-objects"></a>轉換 Oracle Database 物件  
+若要轉換 Oracle 資料庫物件，請先選取您想要轉換的物件，然後讓 SSMA 執行轉換。 若要在轉換期間查看輸出訊息，請在 [ **view** ] 功能表上選取 [**輸出**]。  
   
 **若要將 Oracle 物件轉換成 SQL Server 語法**  
   
-1.  在 Oracle 中繼資料總管 中，展開 Oracle 伺服器，然後再展開**結構描述**。  
+1.  在 [Oracle 中繼資料 Explorer] 中，展開 Oracle 伺服器，然後展開 [**架構**]。  
   
 2.  選取要轉換的物件：  
   
-    -   若要將所有的結構描述的轉換，選取核取方塊旁**結構描述**。  
+    -   若要轉換所有架構，請選取 [**架構**] 旁的核取方塊。  
   
-    -   若要轉換，或略過資料庫，選取結構描述名稱旁邊的核取方塊。  
+    -   若要轉換或省略資料庫，請選取架構名稱旁的核取方塊。  
   
-    -   若要轉換，或略過的物件類別，展開結構描述，然後選取或清除類別旁的核取方塊。  
+    -   若要轉換或省略物件的類別目錄，請展開架構，然後選取或清除類別旁的核取方塊。  
   
-    -   轉換或省略個別物件，依序展開 [分類] 資料夾中，然後選取或清除物件旁的核取方塊。  
+    -   若要轉換或省略個別物件，請展開 [類別目錄] 資料夾，然後選取或清除物件旁的核取方塊。  
   
-3.  若要將所有選取的物件，以滑鼠右鍵按一下**結構描述**，然後選取**轉換的結構描述**。  
+3.  若要轉換所有選取的物件，以滑鼠右鍵按一下 [**架構**]，然後選取 [**轉換架構**]。  
   
-    您也可以轉換個別物件或類別目錄的物件，該物件或其父資料夾上按一下滑鼠右鍵，然後選取**轉換的結構描述**。  
+    您也可以用滑鼠右鍵按一下物件或其父資料夾，然後選取 [**轉換架構**]，來轉換個別物件或物件類別。  
   
-## <a name="viewing-conversion-problems"></a>檢視轉換的問題  
-某些 Oracle 物件可能不會轉換。 您可以檢視摘要轉換報告，以判斷轉換成功比率。  
+## <a name="viewing-conversion-problems"></a>流覽轉換問題  
+某些 Oracle 物件可能無法轉換。 您可以藉由查看摘要轉換報告來判斷轉換成功率。  
   
-**若要檢視摘要報表**  
+**若要查看摘要報表**  
   
-1.  在 Oracle 中繼資料總管 中，選取**結構描述**。  
+1.  在 [Oracle 中繼資料 Explorer] 中，選取 [**架構**]。  
   
-2.  在右窗格中，選取**報表** 索引標籤。  
+2.  在右窗格中，選取 [**報表**] 索引標籤。  
   
-    此報告會顯示所有的資料庫物件尚未評估或轉換的摘要的評定報告。 您也可以檢視個別物件的摘要報告：  
+    此報告會顯示已評估或轉換之所有資料庫物件的摘要評量報告。 您也可以查看個別物件的摘要報告：  
   
-    -   若要檢視報表中的個別結構描述，請在 Oracle 中繼資料總管 中選取的結構描述。  
+    -   若要查看個別架構的報表，請在 [Oracle 中繼資料瀏覽器] 中選取架構。  
   
-    -   若要檢視報表中的個別物件，請在 Oracle 中繼資料總管 中選取的物件。 有轉換問題的物件具有紅色錯誤圖示。  
+    -   若要查看個別物件的報表，請在 [Oracle 中繼資料瀏覽器] 中選取物件。 具有轉換問題的物件會有紅色錯誤圖示。  
   
-針對無法轉換的物件，您可以檢視導致轉換失敗的語法。  
+針對轉換失敗的物件，您可以查看導致轉換失敗的語法。  
   
-**若要檢視個別轉換的問題**  
+**若要查看個別轉換問題**  
   
-1.  在 Oracle 中繼資料總管 中，依序展開**結構描述**。  
+1.  在 [Oracle 中繼資料 Explorer] 中，展開 [**架構**]。  
   
-2.  展開結構描述會顯示紅色錯誤圖示。  
+2.  展開顯示紅色錯誤圖示的架構。  
   
-3.  在結構描述中，展開一個資料夾具有紅色錯誤圖示。  
+3.  在架構底下，展開具有紅色錯誤圖示的資料夾。  
   
 4.  選取具有紅色錯誤圖示的物件。  
   
-5.  在右窗格中，按一下**報表** 索引標籤。  
+5.  在右窗格中，按一下 [**報表**] 索引標籤。  
   
-6.  在頂端**報表** 索引標籤上是下拉式清單。 如果此清單會顯示**統計資料**，變更選取範圍往**來源**。  
+6.  在 [**報表**] 索引標籤的頂端是下拉式清單。 如果清單顯示**統計資料**，請將選取範圍變更為 [**來源**]。  
   
-    SSMA 會顯示在原始程式碼和數個按鈕正上方的程式碼。  
+    SSMA 會在程式碼的正上方顯示原始程式碼和數個按鈕。  
   
-7.  按一下 [**下一個問題**] 按鈕。 這是指向右側的箭號紅色錯誤圖示。  
+7.  按一下 [**下一個問題]** 按鈕。 這是紅色錯誤圖示，其中有指向右側的箭號。  
   
-    SSMA 會反白顯示在目前的物件中找到的第一個有問題的來源程式碼。  
+    SSMA 會反白顯示它在目前物件中找到的第一個有問題的原始碼。  
   
-每個項目無法轉換，您必須決定您想要與該物件：  
+針對每個無法轉換的專案，您必須決定要如何處理該物件：  
   
--   您可以在修改程序的原始程式碼**SQL**  索引標籤。  
+-   您可以在 [ **SQL** ] 索引標籤上修改程式的原始程式碼。  
   
--   您可以修改以移除或修改有問題的程式碼的 Oracle 資料庫中的物件。 若要更新的程式碼載入 SSMA 中，您必須更新的中繼資料。 如需詳細資訊，請參閱 <<c0> [ 連接到 Oracle 資料庫&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)。</c0>  
+-   您可以修改 Oracle 資料庫中的物件，以移除或修改有問題的程式碼。 若要將更新的程式碼載入至 SSMA，您必須更新中繼資料。 如需詳細資訊，請參閱[連接到 Oracle Database &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)。  
   
--   您可以從移轉排除的物件。 在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管，Oracle 中繼資料總管 中，清除項目旁的核取方塊，然後再載入到物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並將資料從 Oracle 移轉。  
+-   您可以從遷移中排除物件。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [中繼資料瀏覽器] 和 [Oracle 中繼資料 explorer] 中，清除專案旁的複選[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]框，然後再將物件載入並從 Oracle 遷移資料。  
   
-## <a name="next-step"></a>下一個步驟  
-移轉程序的下一個步驟是[已轉換的物件載入 SQL Server](loading-converted-database-objects-into-sql-server-oracletosql.md)。  
+## <a name="next-step"></a>後續步驟  
+遷移程式的下一個步驟是將已[轉換的物件載入 SQL Server](loading-converted-database-objects-into-sql-server-oracletosql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[移轉的 Oracle 資料庫到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[將 Oracle 資料庫移轉至 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

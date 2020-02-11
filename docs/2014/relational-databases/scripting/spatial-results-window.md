@@ -11,19 +11,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8c554959fedba58f743f1dd37d3c97554d0f00d3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243245"
 ---
 # <a name="spatial-results-window"></a>空間結果視窗
-  [**空間結果**] 視窗會提供用來查看空間資料的視覺化對應工具。 若要檢視空間結果，您的查詢結果必須包含一個具有幾何或地理位置資料的空間資料行。  
+  [空間結果]  視窗會提供檢視空間資料的視覺化對應工具。 若要檢視空間結果，您的查詢結果必須包含一個具有幾何或地理位置資料的空間資料行。  
   
 > [!NOTE]  
->  只有當您的結果傳回至 [結果]**** 視窗中的方格時，才能使用 [空間結果]**** 視窗。 如果您指定要將結果傳回成文字，就無法使用這個視窗。  
+>  只有當您的結果傳回至 [結果]  視窗中的方格時，才能使用 [空間結果]  視窗。 如果您指定要將結果傳回成文字，就無法使用這個視窗。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **選取空間資料行**  
  在查詢結果的空間資料行中，指定您想要檢視的空間資料行。 一次只能選取一個資料行。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "75243245"
   
  幾何資料無法使用此選項。  
   
- **貼近**  
+ **Zoom**  
  在指數刻度上調整對應顯示。  
   
  **顯示格線**  
@@ -49,9 +49,9 @@ ms.locfileid: "75243245"
 >  您無法標示 Point 執行個體。  
   
 ## <a name="see-also"></a>另請參閱  
- [查看物件總管中的空間資料](view-spatial-data-in-object-explorer.md)   
+ [檢視物件總管中的空間資料](view-spatial-data-in-object-explorer.md)   
  [空間資料 &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
- [資料庫引擎查詢編輯器 &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
- [查詢和文字編輯器 &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
+ [Database Engine 查詢編輯器 &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
+ [查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

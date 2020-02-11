@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 45d4cd390e0369d8289ed9e58de01b7a02f752c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196742"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主要與外部索引鍵條件約束
@@ -27,13 +27,13 @@ ms.locfileid: "68196742"
   
  本主題包含下列各節。  
   
- [主索引鍵條件約束](../tables/primary-and-foreign-key-constraints.md#PKeys)  
+ [Primary Key 條件約束](../tables/primary-and-foreign-key-constraints.md#PKeys)  
   
- [Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md#FKeys)  
+ [Foreign Key 條件約束](../tables/primary-and-foreign-key-constraints.md#FKeys)  
   
  [相關工作](../tables/primary-and-foreign-key-constraints.md#Tasks)  
   
-##  <a name="PKeys"></a> 主索引鍵條件約束  
+##  <a name="PKeys"></a>Primary Key 條件約束  
  資料表中通常會有一個或多個資料行包含可唯一識別資料表中每個資料列的值。 此資料行稱為資料表的主索引鍵 (PK)，強制資料表具有實體完整性。 主索引鍵條件約束保證唯一的資料，因此通常是定義在識別欄位上。  
   
  當您為資料表指定主索引鍵條件約束時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會自動為主索引鍵資料行建立唯一的索引，以強制資料的唯一性。 當主索引鍵用於查詢時，此索引也可讓您快速地存取資料。 若主索引鍵條件約束定義於多個資料行，則某個資料行內的值可能會重複，但主索引鍵條件約束定義中所有資料行的每個值組合都必須是唯一的。  
@@ -54,10 +54,12 @@ ms.locfileid: "68196742"
   
 -   如果在 CLR 使用者定義的類型資料行上定義主索引鍵，類型的實作必須支援二進位排序。  
   
-##  <a name="FKeys"></a> Foreign Key Constraints  
+##  <a name="FKeys"></a>Foreign Key 條件約束  
  外部索引鍵 (FK) 是可用來建立與強制兩資料表的資料之間連結的一個資料行或資料行組合，以控制外部索引鍵資料表中可儲存的資料。 在外部索引鍵參考中，當存放一個資料表的主索引鍵值的資料行被另一個資料表的資料行參考時，兩資料表之間會建立連結。 此資料行會成為第二個資料表的外部索引鍵。  
   
- 例如， **Sales.SalesOrderHeader** 資料表具有與 **Sales.SalesPerson** 資料表的外部索引鍵連結，因為銷售訂單與銷售人員之間存在邏輯關聯性。 **SalesOrderHeader** 資料表中的 **SalesPersonID** 資料行符合 **SalesPerson** 資料表的主索引鍵資料行。 **SalesOrderHeader** 資料表中的 **SalesPersonID** 資料行是 **SalesPerson** 資料表的外部索引鍵。 透過建立這個外部索引鍵關聯性，如果 **SalesPersonID** 的值尚未存在於 **SalesPerson** 資料表中，就不能將其插入至 **SalesOrderHeader** 資料表。  
+ 例如， **Sales.SalesOrderHeader** 資料表具有與 **Sales.SalesPerson** 資料表的外部索引鍵連結，因為銷售訂單與銷售人員之間存在邏輯關聯性。 
+  **SalesOrderHeader** 資料表中的 **SalesPersonID** 資料行符合 **SalesPerson** 資料表的主索引鍵資料行。 
+  **SalesOrderHeader** 資料表中的 **SalesPersonID** 資料行是 **SalesPerson** 資料表的外部索引鍵。 透過建立這個外部索引鍵關聯性，如果 **SalesPersonID** 的值尚未存在於 **SalesPerson** 資料表中，就不能將其插入至 **SalesOrderHeader** 資料表。  
   
 ### <a name="indexes-on-foreign-key-constraints"></a>外部索引鍵條件約束上的索引  
  與主索引鍵條件約束不同，建立外部索引鍵條件約束並不會自動建立對應的索引。 不過，基於下列原因，在外部索引鍵上手動建立索引通常很有幫助：  
@@ -75,7 +77,8 @@ ms.locfileid: "68196742"
  使用串聯式參考完整性條件約束，就可以定義使用者嘗試刪除或更新現有外部索引鍵所指向的索引鍵時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 所採取的動作。 可以定義下列串聯式動作。  
   
  NO ACTION  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會引發錯誤，而且會回復對父資料表中資料列的刪除或更新動作。  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會引發錯誤，而且會回復對父資料表中資料列的刪除或更新動作。  
   
  CASCADE  
  更新或刪除父資料表中的對應資料列時，也會更新或刪除參考資料表中的該資料列。 如果 `timestamp` 資料行是外部索引鍵或被參考索引鍵的一部分，就無法指定 CASCADE。 如果資料表有 INSTEAD OF DELETE 觸發程序，則不能指定 ON DELETE CASCADE。 如果資料表有 INSTEAD OF UPDATE 觸發程序，則不能指定 ON UPDATE CASCADE。  
@@ -110,7 +113,7 @@ ms.locfileid: "68196742"
 ##  <a name="Tasks"></a> 相關工作  
  下表列出與主索引鍵和外部索引鍵條件約束相關聯的一般工作。  
   
-|工作|主題|  
+|Task|主題|  
 |----------|-----------|  
 |描述如何建立主索引鍵。|[建立主索引鍵](../tables/create-primary-keys.md)|  
 |描述如何刪除主索引鍵。|[刪除主索引鍵](../tables/delete-primary-keys.md)|  

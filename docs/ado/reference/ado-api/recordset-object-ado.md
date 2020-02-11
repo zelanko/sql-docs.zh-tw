@@ -1,5 +1,5 @@
 ---
-title: 資料錄集物件 (ADO) |Microsoft Docs
+title: Recordset 物件（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,68 +16,68 @@ ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e76bc993b6f3fed781b8458bc7cf4a70081cd167
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931369"
 ---
 # <a name="recordset-object-ado"></a>Recordset 物件 (ADO)
-代表整個記錄集的基底資料表或執行命令的結果。 在任何時候**資料錄集**物件是指單一資料錄和目前的記錄集內。  
+代表基表的整組記錄或已執行命令的結果。 **記錄集**物件隨時只會參考集合中的單一記錄做為目前的記錄。  
   
 ## <a name="remarks"></a>備註  
- 您使用**資料錄集**來操作資料提供者的物件。 當您使用 ADO 時，您操作資料使用幾乎完全**資料錄集**物件。 所有**資料錄集**物件所組成 （資料列） 的記錄和欄位 （資料行）。 根據提供者所支援的功能有些**資料錄集**方法或屬性可能無法使用。  
+ 您可以使用**記錄集**物件來操作提供者的資料。 使用 ADO 時，您幾乎可以使用**記錄集**物件來運算元據。 所有記錄**集**物件都是由記錄（資料列）和欄位（資料行）所組成。 視提供者支援的功能而定，某些**記錄集**方法或屬性可能無法使用。  
   
- ADODB。資料錄集是應該用來建立的 ProgID**資料錄集**物件。 參考過期的 ADOR 的現有應用程式。資料錄集 ProgID 會繼續運作而不需要重新編譯，但開發新程式時應該參考 ADODB。資料錄集。  
+ ADODB.記錄集是應該用來建立**記錄集**物件的 ProgID。 參考過時 ADOR 的現有應用程式。記錄集 ProgID 會繼續正常執行，而不需要重新編譯，但新的開發應參考 ADODB。集中.  
   
- 有在 ADO 中定義的四種不同的資料指標類型：  
+ ADO 中定義了四種不同的資料指標類型：  
   
--   **動態資料指標**可讓您檢視新增、 變更及刪除由其他使用者，可讓所有類型的移動**資料錄集**不依賴書籤 」; 而且可都讓書籤，如果提供者支援它們。  
+-   **動態資料指標**可讓您查看其他使用者的新增、變更和刪除;允許透過不依賴書簽的**記錄集**進行所有類型的移動;如果提供者支援，則會允許書簽。  
   
--   **索引鍵集資料指標**Behaves 等動態資料指標，但它會阻止您看到的記錄，讓其他使用者，加上其他使用者刪除的記錄會防止存取。 由其他使用者的資料變更仍會顯示。 它一律支援書籤，並因此可讓所有類型的移動**資料錄集**。  
+-   索引**鍵集資料指標**的行為就像動態資料指標，但它會防止您看到其他使用者新增的記錄，並防止存取其他使用者所刪除的記錄。 其他使用者的資料變更仍會顯示。 它一律支援書簽，因此可讓所有類型的移動都通過**記錄集**。  
   
--   **靜態資料指標**提供一組您用來尋找資料，或產生報表記錄的靜態複本，一律可讓書籤，因此便可透過移動的所有類型**資料錄集**。 新增、 變更或刪除由其他使用者將不會顯示的。 這是唯一的型別，當您開啟用戶端時，允許的資料指標**資料錄集**物件。  
+-   **靜態資料指標**提供一組記錄的靜態複本，供您用來尋找資料或產生報表;一律允許書簽，因此允許所有類型的動作通過**記錄集**。 其他使用者的新增、變更或刪除將不會顯示。 當您開啟用戶端**記錄集**物件時，這是唯一允許的資料指標類型。  
   
--   **順向資料指標**可讓您只透過向前捲動**資料錄集**。 新增、 變更或刪除由其他使用者將不會顯示的。 這可改善效能，在您需要僅單一通過**資料錄集**。  
+-   順**向資料指標**可讓您只向前快轉到**記錄集**。 其他使用者的新增、變更或刪除將不會顯示。 這會在您只需要透過**記錄集**進行單一傳遞的情況下改善效能。  
   
- 設定[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)屬性，在開啟之前**資料錄集**選擇資料指標類型，或傳遞*CursorType*引數與[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法。 某些提供者不支援所有的資料指標類型。 請檢查提供者的文件。 如果您未指定資料指標類型，ADO 會開啟預設的順向資料指標。  
+ 在開啟**記錄集**之前設定[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)屬性，以選擇資料指標類型，或使用[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法傳遞*CursorType*引數。 有些提供者不支援所有資料指標類型。 查看提供者的檔。 如果您未指定資料指標類型，ADO 預設會開啟順向資料指標。  
   
- 如果[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**以開啟**資料錄集**，則**UnderlyingValue** 屬性[欄位](../../../ado/reference/ado-api/field-object.md)中所傳回的物件沒有**資料錄集**物件。 某些提供者 （例如 OLE DB 搭配使用 Microsoft SQL Server 的 Microsoft ODBC 提供者） 搭配使用時，您可以建立**Recordset**獨立於先前定義的物件[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，並傳遞連接字串**開啟**方法。 仍會建立 ADO[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件，但它不會將該物件指派給物件變數。 不過，如果您開啟多個**Recordset**物件，在相同的連線，您應該明確地建立並開啟**連線**物件; 此指派**連接**給物件變數的物件。 開啟時如果您不使用此物件變數您**資料錄集**物件，建立新的 ADO**連線**每個物件新增**資料錄集**，即使您傳遞相同連接字串。  
+ 如果[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**AdUseClient**以開啟**記錄集**，則傳回的**記錄集**物件中將無法使用[欄位](../../../ado/reference/ado-api/field-object.md)物件上的**UnderlyingValue**屬性。 搭配某些提供者（例如適用于 OLE DB 的 Microsoft ODBC 提供者與 Microsoft SQL Server）一起使用時，您可以透過使用**Open**方法傳遞連接字串，來建立與先前定義的[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件無關的**記錄集**物件。 ADO 仍然會建立[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，但不會將該物件指派給物件變數。 不過，如果您要在相同的連接上開啟多個**記錄集**物件，您應該明確地建立並開啟**連接**物件;這會將**連接**物件指派給物件變數。 如果您在開啟**記錄集**物件時未使用這個物件變數，ADO 會針對每個新的**記錄集**建立新的**連接**物件，即使您傳遞相同的連接字串也一樣。  
   
- 您可以建立多個**資料錄集**物件所需。  
+ 您可以視需要建立多個**記錄集**物件。  
   
- 當您開啟**資料錄集**，目前的記錄位於第一筆記錄 （如果有的話） 和[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)並[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)屬性設為**False**. 如果不有任何記錄， **BOF**並**EOF**屬性設定為**True**。  
+ 當您開啟**記錄集**時，目前的記錄會定位於第一個記錄（如果有的話），而[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)和[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)屬性會設定為**False**。 如果沒有任何記錄，則**BOF**和**EOF**屬性設定為**True**。  
   
- 您可以使用[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， **MoveLast**， **MoveNext**，以及**MovePrevious**方法，而[移動](../../../ado/reference/ado-api/move-method-ado.md)方法;而[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)， [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)，並[篩選](../../../ado/reference/ado-api/filter-property.md)重新定位的目前的記錄，假設提供者支援的相關屬性功能。 順**Recordset**僅支援物件[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法。 當您使用**移動**方法，以瀏覽每一筆記錄 (或列舉**資料錄集**)，您可以使用**BOF**並**EOF**屬性決定是否您已移動超過的開頭或結尾**資料錄集**。  
+ 您可以使用[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 **MoveLast**、 **MoveNext**和**MovePrevious**方法;[Move](../../../ado/reference/ado-api/move-method-ado.md)方法;和 [ [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)]、[ [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)] 和 [[篩選](../../../ado/reference/ado-api/filter-property.md)] 屬性，以重新調整目前的記錄，假設提供者支援相關的功能。 順向**記錄集**物件只支援[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法。 當您使用**Move**方法來流覽每一筆記錄（或列舉**記錄集**）時，您可以使用**BOF**和**EOF**屬性來判斷您是否已移至**記錄集**的開頭或結尾之外。  
   
- 之前使用的任何功能**Recordset**物件，您必須呼叫**支援**来驗證的功能也支援或提供的物件上的方法。 您不能使用的功能時**支援**方法會傳回 false。 例如，您可以使用**MovePrevious**方法才`Recordset.Supports(adMovePrevious)`會傳回**True**。 否則，您會收到錯誤，因為**資料錄集**物件可能已關閉，且功能呈現執行個體上無法使用。 如果您有興趣的功能不受支援，**支援**會傳回 false 以及。 在此情況下，您應該避免上呼叫對應的屬性或方法**資料錄集**物件。  
+ 在使用**記錄集**物件的任何功能之前，您必須先在物件上呼叫**支援**方法，以確認功能已受到支援或可供使用。 當**支援**的方法傳回 false 時，您不能使用此功能。 例如，只有在傳回**True**時**** `Recordset.Supports(adMovePrevious)` ，才可以使用 MovePrevious 方法。 否則，您將會收到錯誤，因為**記錄集**物件可能已關閉，而且在實例上呈現無法使用的功能。 如果您感興趣的功能不受支援，則**支援**也會傳回 false。 在此情況下，您應該避免在**記錄集**物件上呼叫對應的屬性或方法。  
   
- **資料錄集**物件可支援兩種類型的更新： 即時和批次。 在立即更新，所有資料變更會立即都寫入基礎資料來源之後呼叫[更新](../../../ado/reference/ado-api/update-method.md)方法。 您也可以為參數傳遞值的陣列[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)並**更新**方法，並同時更新記錄中的數個欄位。  
+ **記錄集**物件可以支援兩種類型的更新：立即和批次處理。 在立即更新中，一旦您呼叫[Update](../../../ado/reference/ado-api/update-method.md)方法，資料的所有變更都會立即寫入基礎資料來源。 您也可以使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)和**Update**方法將值陣列當做參數傳遞，並同時更新記錄中的數個欄位。  
   
- 如果提供者支援批次更新，您可以快取多個記錄的變更，然後再將它們傳輸至資料庫的單一呼叫中的提供者[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法。 這會套用到與所做的變更**AddNew**，**更新**，並[刪除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)方法。 在您呼叫後**UpdateBatch**方法，您可以使用[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)屬性，以檢查是否有任何的資料衝突，若要解決這些問題。  
+ 如果提供者支援批次更新，您可以讓提供者快取變更為一個以上的記錄，然後使用[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法將它們傳輸到資料庫的單一呼叫中。 這適用于使用**AddNew**、 **Update**和[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)方法所做的變更。 呼叫**UpdateBatch**方法之後，您可以使用[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)屬性來檢查是否有任何資料衝突，以便解決問題。  
   
 > [!NOTE]
->  若要執行查詢，而不使用[命令](../../../ado/reference/ado-api/command-object-ado.md)物件，傳遞至查詢字串**開啟**方法**資料錄集**物件。 不過，**命令**物件時，需要您想要保存的命令文字和重新執行，或使用查詢參數。  
+>  若要在不使用[Command](../../../ado/reference/ado-api/command-object-ado.md)物件的情況下執行查詢，請將查詢字串傳遞至**記錄集**物件的**Open**方法。 不過，當您想要保存命令文字並重新執行它，或使用查詢參數時，需要**command**物件。  
   
- [模式](../../../ado/reference/ado-api/mode-property-ado.md)屬性會管理存取權限。  
+ [Mode](../../../ado/reference/ado-api/mode-property-ado.md)屬性會控管存取權限。  
   
- **欄位**集合是預設成員**資料錄集**物件。 如此一來，下列兩個程式碼陳述式是相等的。  
+ **Fields**集合是**記錄集**物件的預設成員。 因此，下列兩個程式碼語句是相等的。  
   
 ```  
 Debug.Print objRs.Fields.Item(0)  ' Both statements print   
 Debug.Print objRs(0)              '  the Value of Item(0).  
 ```  
   
- 當**資料錄集**跨處理序，只會傳遞的物件**資料列集**值封送處理，以及的屬性**資料錄集**物件會被忽略。 Unmarshalling，期間**資料列集**解除封裝到新建**資料錄集**物件，也會設定其屬性設為預設值。  
+ 在進程之間傳遞**記錄集**物件時，只會封送**處理資料列集值**，而**記錄集**物件的屬性則會被忽略。 在 unmarshalling 期間，資料列**集**會解壓縮到新建立的**記錄集**物件中，這也會將其屬性設定為預設值。  
   
- **資料錄集**物件而言是安全的指令碼。  
+ **記錄集**物件可安全地進行腳本處理。  
   
  本章節包含下列主題。  
   
--   [資料錄集物件屬性、 方法和事件](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)  
+-   [Recordset 物件屬性、方法和事件](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
+ [Connection 物件（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Fields 集合（ADO）](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Properties 集合（ADO）](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)

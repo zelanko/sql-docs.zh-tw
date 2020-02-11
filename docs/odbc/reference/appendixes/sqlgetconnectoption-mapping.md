@@ -14,41 +14,41 @@ ms.assetid: e3792fe4-a955-473a-a297-c1b2403660c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d0533a0ee616d4097793eca46c7d45a269142737
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086402"
 ---
 # <a name="sqlgetconnectoption-mapping"></a>SQLGetConnectOption 對應
-當應用程式呼叫**SQLGetConnectOption**透過 ODBC *3.x*驅動程式，會呼叫  
+當應用程式*透過 ODBC 3.x 驅動程式呼叫* **SQLGetConnectOption**時，呼叫  
   
 ```  
 SQLGetConnectOption(hdbc, fOption, pvParam)   
 ```  
   
- 會對應，如下所示：  
+ 對應如下：  
   
--   如果*fOption*指出傳回的字串，此驅動程式管理員會呼叫 ODBC 定義的連接選項  
+-   如果*fOption*表示會傳回字串的 ODBC 定義連接選項，驅動程式管理員會呼叫  
   
     ```  
     SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
--   如果*fOption*指出傳回 32 位元整數值，此驅動程式管理員會呼叫 ODBC 定義的連接選項  
+-   如果*fOption*表示 ODBC 定義的連接選項，它會傳回32位的整數值，驅動程式管理員會呼叫  
   
     ```  
     SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, 0, NULL)  
     ```  
   
--   如果*fOption*表示驅動程式定義的陳述式選項，此驅動程式管理員會呼叫  
+-   如果*fOption*表示驅動程式定義的語句選項，驅動程式管理員會呼叫  
   
     ```  
     SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
- 在上述三種情況下， *ConnectionHandle*引數設定中的值為*hdbc*，則*屬性*引數設定中的值為*fOption*，而*ValuePtr*引數設定為相同的值*pvParam*。  
+ 在上述三種情況中， *ConnectionHandle*引數會設定為*hdbc*中的值，而*屬性*引數會設定為*fOption*中的值，而*valueptr 是*引數會設定為與*pvParam*相同的值。  
   
- 如 ODBC 定義的字串連接選項，請設定驅動程式管理員*Columnsize*呼叫中的引數**SQLGetConnectAttr**預先定義的最大長度 (SQL_MAX_OPTION_STRING_LENGTH);非連線選項，如*Columnsize*設為 0。  
+ 針對 ODBC 定義的字串連接選項，驅動程式管理員會將**SQLGetConnectAttr**呼叫中的*BufferLength*引數設定為預先定義的最大長度（SQL_MAX_OPTION_STRING_LENGTH）;若為非字串連接選項， *BufferLength*會設定為0。  
   
- 適用於 ODBC *3.x*驅動程式，則驅動程式管理員不會再檢查，看看是否*選項*介於 SQL_CONN_OPT_MIN 和 SQL_CONN_OPT_MAX，或大於 SQL_CONNECT_OPT_DRVR_START。 此驅動程式必須檢查的選項值的有效性。
+ 對於 ODBC 3.x 驅動程式，*驅動程式管理員*不會再檢查 SQL_CONN_OPT_MIN 和 SQL_CONN_OPT_MAX 之間是否有*選項*，或是大於 SQL_CONNECT_OPT_DRVR_START。 驅動程式必須檢查選項值的有效性。

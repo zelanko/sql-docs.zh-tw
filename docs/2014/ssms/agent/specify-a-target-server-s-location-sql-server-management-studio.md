@@ -1,5 +1,5 @@
 ---
-title: 指定目標伺服器&#39;s 位置 (SQL Server Management Studio) |Microsoft Docs
+title: 指定目標伺服器&#39;s 位置（SQL Server Management Studio） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1d08c7f660d4deee887f95a06a7848f6d40b2d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211330"
 ---
 # <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>指定目標伺服器的位置 (SQL Server Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "68211330"
   
      [安全性](#Security)  
   
--   **若要使用下列項目指定目標伺服器的位置：**  
+-   **若要指定目標伺服器的位置，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68211330"
 ###  <a name="Restrictions"></a> 限制事項  
  執行此動作會編輯登錄。 您最好不要手動編輯登錄，因為不當或不正確的變更會使系統發生嚴重的組態問題。 因此，只有資深使用者才應該利用登錄編輯器程式來編輯登錄。 如需詳細資訊，請參閱 Microsoft Windows 文件集。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
@@ -53,11 +53,11 @@ ms.locfileid: "68211330"
   
 1.  在 **[物件總管]** 中，按一下加號，展開要指定目標伺服器位置的主要伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]  、指向 [多伺服器管理]  ，然後選取 [管理目標伺服器]  。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]****、指向 [多伺服器管理]****，然後選取 [管理目標伺服器]****。  
   
-3.  以滑鼠右鍵按一下目標伺服器，然後選取 [屬性]  。  
+3.  以滑鼠右鍵按一下目標伺服器，然後選取 [屬性]****。  
   
-4.  在 **[位置]** 方塊中輸入伺服器的位置，再按一下 **[確定]** 。  
+4.  在 **[位置]** 方塊中輸入伺服器的位置，再按一下 **[確定]**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -79,6 +79,6 @@ ms.locfileid: "68211330"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 < [sp_msx_enlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)。  
+ 如需詳細資訊，請參閱[sp_msx_enlist &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)。  
   
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d0e5ffc088918924ae08d4fde2cc7064de1abcbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484265"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>從 .dqs 檔案匯入定義域
@@ -29,29 +29,29 @@ ms.locfileid: "65484265"
 ###  <a name="Prerequisites"></a> 必要條件  
  若要從 .dqs 檔案匯入定義域，您必須已將一個單一定義域或是一個複合定義域 (包含多個單一定義域) 匯出到 .dqs 檔案。 此 .dqs 檔案只能包含一個定義域。 您也必須已建立及開啟知識庫，才能將定義域匯入其中。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能從 .dqs 資料檔匯入定義域。  
   
-##  <a name="Import"></a> Import a domain from a .dqs file  
+##  <a name="Import"></a>從 dqs 檔案匯入定義域  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，於 [定義域管理] 活動中開啟知識庫。  
   
 3.  按一下 **[從資料檔匯入定義域]** 圖示。  
   
-4.  在 **[從資料檔匯入]** 對話方塊中，移至包含您要匯入之檔案的資料夾，然後選取檔案 (檔案類型為 DQS 檔案)，再按一下 **[開啟]** 。  
+4.  在 **[從資料檔匯入]** 對話方塊中，移至包含您要匯入之檔案的資料夾，然後選取檔案 (檔案類型為 DQS 檔案)，再按一下 **[開啟]**。  
   
-5.  在 **[匯入定義域]** 對話方塊中，按一下 **[確定]** 。  
+5.  在 **[匯入定義域]** 對話方塊中，按一下 **[確定]**。  
   
     > [!NOTE]  
     >  只有當匯入的來源 .dqs 檔案只包含一個單一定義域或是一個複合定義域 (包含多個單一定義域) 時，匯入作業才會成功。  
   
 6.  確認您匯入的定義域顯示在 **[定義域]** 清單中。 如果您匯入複合定義域，請確認此複合定義域以及其中包含的單一定義域全都位於 **[定義域]** 清單中。  
   
-##  <a name="FollowUp"></a> 後續操作：從 .dqs 檔案匯入定義域之後  
+##  <a name="FollowUp"></a>後續操作：從 dqs 檔案匯入定義域之後  
  當您從 .dqs 檔案匯入定義域之後，您可以將知識加入至定義域，或是在清理或比對專案中使用定義域 (根據定義域的內容而定)。 如需詳細資訊，請參閱[執行知識探索](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../../2014/data-quality-services/managing-a-domain.md)、[管理複合定義域](../../2014/data-quality-services/managing-a-composite-domain.md)、[建立比對原則](../../2014/data-quality-services/create-a-matching-policy.md)、[資料清理](../../2014/data-quality-services/data-cleansing.md)或[資料比對](../../2014/data-quality-services/data-matching.md)。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: bcp_init | Microsoft Docs
+title: bcp_init |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689069"
 ---
-# <a name="bcpinit"></a>bcp_init
+# <a name="bcp_init"></a>bcp_init
   初始化大量複製作業。  
   
 ## <a name="syntax"></a>語法  
@@ -56,17 +56,17 @@ eDirection
  這是已啟用大量複製的 ODBC 連接控制代碼。  
   
  *szTable*  
- 這是要來回複製之資料庫資料表的名稱。 此名稱也可以包含資料庫名稱或擁有者名稱。 例如， **pubs.gracie.titles**， **pubs...標題**， **gracie.titles**，以及**標題**都是合法的資料表名稱。  
+ 這是要來回複製之資料庫資料表的名稱。 此名稱也可以包含資料庫名稱或擁有者名稱。 例如， **gracie. 標題**、 **pubs.。標題**、 **gracie**和**標題**都是合法的資料表名稱。  
   
- 如果*eDirection*為 DB_OUT， *szTable*也可以為資料庫檢視的名稱。  
+ 如果*eDirection*為 DB_OUT， *szTable*也可以是資料庫檢視的名稱。  
   
- 如果*eDirection*為 DB_OUT，而且使用指定的 SELECT 陳述式[bcp_control](bcp-control.md)之前[bcp_exec](bcp-exec.md)呼叫時， **bcp_init** _szTable_必須設為 NULL。  
+ 如果 DB_OUT *eDirection* ，而且在呼叫[bcp_exec](bcp-exec.md)之前使用[bcp_control](bcp-control.md)來指定 SELECT 語句， **bcp_init**_szTable_必須設定為 Null。  
   
  *szDataFile*  
- 這是要來回複製之使用者檔案的名稱。 如果在複製資料時直接從變數使用[bcp_sendrow](bcp-sendrow.md)，將*szDataFile*為 NULL。  
+ 這是要來回複製之使用者檔案的名稱。 如果要使用[bcp_sendrow](bcp-sendrow.md)直接從變數複製資料，請將*SZDATAFILE*設定為 Null。  
   
  *szErrorFile*  
- 這是錯誤檔案的名稱，該檔案會以進度訊息、錯誤訊息，以及因為任何原因而無法從使用者檔案複製到資料表之任何資料列的複本。 若 NULL 作為傳遞*szErrorFile*，會使用任何錯誤檔案。  
+ 這是錯誤檔案的名稱，該檔案會以進度訊息、錯誤訊息，以及因為任何原因而無法從使用者檔案複製到資料表之任何資料列的複本。 如果將 Null 當做*szErrorFile*傳遞，則不會使用任何錯誤檔案。  
   
  *eDirection*  
  這是複製的方向，DB_IN 或 DB_OUT。 DB_IN 表示從程式變數或使用者檔案複製到資料表。 DB_OUT 表示從資料庫資料表複製到使用者檔案。 您必須利用 DB_OUT 指定使用者檔案名稱。  
@@ -75,29 +75,30 @@ eDirection
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 呼叫**bcp_init**再呼叫其他任何大量複製函數。 **bcp_init**大量複製到工作站之間的資料執行必要的初始化和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 呼叫任何其他大量複製函數之前，請先呼叫**bcp_init** 。 **bcp_init**會針對工作站和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之間的資料大量複製，執行必要的初始化。  
   
- **Bcp_init**函式必須提供具有啟用大量複製函數搭配 ODBC 連接控制代碼。 若要啟用控制代碼，請使用[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) sql_copt_ss_bcp 設定為 sql_bcp_on 設定上的已配置但未連接的連接控制代碼。 嘗試在已連接的控制代碼上指派屬性會導致錯誤。  
+ 必須提供已啟用 ODBC 連接控制碼的**bcp_init**函式，以便搭配大量複製函數使用。 若要啟用控制碼，請在已配置但未連接的連接控制碼上，使用[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)搭配 SQL_COPT_SS_BCP 設定為 SQL_BCP_ON。 嘗試在已連接的控制代碼上指派屬性會導致錯誤。  
   
- 指定資料檔案時， **bcp_init**會檢查資料庫來源或目標資料表，不是資料檔案的結構。 **bcp_init**指定基礎資料庫資料表、 檢視或 SELECT 結果集中每個資料行的資料檔案的資料格式值。 這個指定包括每個資料行的資料類型、資料中是否有長度或 null 指標和結束字元位元組字串，以及固定長度資料類型的寬度。 **bcp_init**設定這些值，如下所示：  
+ 當指定資料檔案時， **bcp_init**會檢查資料庫來源或目標資料表的結構，而不是資料檔案。 **bcp_init**會根據資料庫資料表、VIEW 或 SELECT 結果集中的每個資料行，指定資料檔案的資料格式值。 這個指定包括每個資料行的資料類型、資料中是否有長度或 null 指標和結束字元位元組字串，以及固定長度資料類型的寬度。 **bcp_init**設定這些值，如下所示：  
   
--   指定的資料類型為資料行在資料庫資料表、檢視或 SELECT 結果集中的資料類型。 資料類型會由 sqlncli.h 中所指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生資料類型列舉。 資料本身會以其電腦格式表示。 也就是從資料行的資料**整數**大四位元組順序表示的資料型別-或由小到大陊咈鼣砫建立資料檔案。  
+-   指定的資料類型為資料行在資料庫資料表、檢視或 SELECT 結果集中的資料類型。 資料類型會由 sqlncli.h 中所指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生資料類型列舉。 資料本身會以其電腦格式表示。 也就是說，來自**integer**資料類型之資料行的資料會根據建立資料檔案的電腦，以四個位元組的序列來表示。  
   
--   如果資料庫資料類型的長度是固定的，資料檔案資料的長度也是固定的。 處理資料的大量複製函數 (例如[bcp_exec](bcp-exec.md)) 剖析中的資料庫資料表、 檢視或 SELECT 資料行清單中指定的資料長度相同的資料檔案中的資料長度的資料列。 例如，定義為資料庫資料行的資料**char(13**必須針對每個檔案中的資料列的 13 個字元表示。 如果資料庫資料行允許使用 Null 值，固定長度的資料前置詞可以是 Null 指標。  
+-   如果資料庫資料類型的長度是固定的，資料檔案資料的長度也是固定的。 處理資料的大量複製函式（例如， [bcp_exec](bcp-exec.md)）會剖析資料列，該資料列預期資料檔中的資料長度必須與資料庫資料表、VIEW 或 SELECT 資料行清單中指定的資料長度相同。 例如，針對檔案中的每個資料列，定義為**char （13）** 之資料庫資料行的資料必須以13個字元表示。 如果資料庫資料行允許使用 Null 值，固定長度的資料前置詞可以是 Null 指標。  
   
 -   定義結束字元位元組順序時，結束字元位元組順序的長度會設定為 0。  
   
 -   複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，資料檔案對於資料庫資料表中的每個資料行都必須有資料。 從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複製時，來自資料庫資料表、檢視或 SELECT 結果集中所有資料行的資料都會複製到資料檔案中。  
   
--   複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，資料行在資料檔案中的序數位置必須與資料行在資料庫資料表中的序數位置相同。 從複製時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **bcp_exec**會根據資料庫資料表中的資料行的序數位置的資料。  
+-   複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，資料行在資料檔案中的序數位置必須與資料行在資料庫資料表中的序數位置相同。 從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]複製時， **bcp_exec**會根據資料庫資料表中資料行的序數位置來放置資料。  
   
--   如果資料庫資料類型的長度是變數 (例如**varbinary(22)** ) 或者如果資料庫資料行可以包含 null 值，資料檔案中的資料的前置詞為長度 /null 指標。 指標的寬度會根據資料類型和大量複製的版本而改變。  
+-   如果資料庫資料類型的長度是可變的（例如**Varbinary （22）**），或如果資料庫資料行可以包含 null 值，資料檔案中的資料就會以長度/null 指標作為前置詞。 指標的寬度會根據資料類型和大量複製的版本而改變。  
   
- 若要變更針對資料檔指定的資料格式值，請呼叫[bcp_columns](bcp-columns.md)並[bcp_colfmt](bcp-colfmt.md)。  
+ 若要變更針對資料檔案指定的資料格式值，請呼叫[bcp_columns](bcp-columns.md)並[bcp_colfmt](bcp-colfmt.md)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的大量複製可以針對不包含索引的資料表進行最佳化，方法是，將資料庫復原模式設定為 SIMPLE 或 BULK_LOGGED。 如需詳細資訊，請參閱 <<c0> [ 大量匯入採用最低限度記錄的必要條件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)並[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql)。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的大量複製可以針對不包含索引的資料表進行最佳化，方法是，將資料庫復原模式設定為 SIMPLE 或 BULK_LOGGED。 如需詳細資訊，請參閱大量匯入和[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql)[中最低限度記錄的必要條件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
- 如果使用的資料檔案時，您必須呼叫[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)若要指定的格式和位置在記憶體中的資料為每個資料行，然後將複製的資料列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[bcp_sendrow](bcp-sendrow.md)。  
+ 如果沒有使用任何資料檔案，您必須呼叫[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)來指定記憶體中每個資料行之為的格式和位置，然後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[bcp_sendrow](bcp-sendrow.md)將資料列複製到。  
   
 ## <a name="example"></a>範例  
  此範例顯示如何利用格式檔案使用 ODBC bcp_init 函數。  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 895d4a86ed359e0737641e83ea17e77a6c70cb4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076407"
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>建立具有多維度資料來源的 Power View 報表
@@ -26,6 +26,6 @@ ms.locfileid: "66076407"
   
 #### <a name="create-a-new-blank-power-view-report"></a>建立新的空白 Power View 報表  
   
--   在 SharePoint 文件庫中，按一下 .rsds 共用報表資料來源連接 (連接到多維度模型的 .rsds) 旁邊的箭頭，然後按一下 [建立 Power View 報表]  。  
+-   在 SharePoint 文件庫中，按一下 .rsds 共用報表資料來源連接 (連接到多維度模型的 .rsds) 旁邊的箭頭，然後按一下 [建立 Power View 報表]****。  
   
   

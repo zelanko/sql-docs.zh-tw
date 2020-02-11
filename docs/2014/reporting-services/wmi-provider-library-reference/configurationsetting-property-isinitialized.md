@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4ee60bcfc801cb3b9e886aa11e03ed9213712bdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097640"
 ---
-# <a name="isinitialized-property-wmi-msreportserverconfigurationsetting"></a>IsInitialized 屬性 (WMI MSReportServer_ConfigurationSetting)
+# <a name="isinitialized-property-wmi-msreportserver_configurationsetting"></a>IsInitialized 屬性 (WMI MSReportServer_ConfigurationSetting)
   指出報表伺服器執行個體是否已初始化。 唯讀。  
   
 ## <a name="syntax"></a>語法  
@@ -39,13 +39,14 @@ public Boolean DatabaseLogonName;
 ```  
   
 ## <a name="property-values"></a>屬性值  
- `Boolean` 物件指出報表伺服器執行個體是否已初始化。  
+ 
+  `Boolean` 物件指出報表伺服器執行個體是否已初始化。  
   
 ## <a name="example-code"></a>範例程式碼  
  [MSReportServer_ConfigurationSetting 類別](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

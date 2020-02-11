@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196680"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>唯一條件約束與檢查條件約束
@@ -45,13 +45,13 @@ ms.locfileid: "68196680"
   
  您可以將多個 CHECK 條件約束套用到單一資料行。 您也可以在資料表層級建立單一 CHECK 條件約束，將它套用到多個資料行。 例如，多重資料行的 CHECK 條件約束可用來確認 **country_region** 資料行值為 **USA** 的任何資料列，其 **state** 資料行內也會有兩個字元的值。 這允許可在某一個位置上檢查多個條件。  
   
- CHECK 條件約束類似於 FOREIGN KEY 條件約束，用來控制放入資料行的值。 不同之處在於它們如何判定哪些值有效：FOREIGN KEY 條件約束從另一個資料表取得有效值清單，而 CHECK 條件約束判斷有效的值，從邏輯運算式。  
+ CHECK 條件約束類似於 FOREIGN KEY 條件約束，用來控制放入資料行的值。 其間的差異在於它們如何判定哪些值有效：FOREIGN KEY 條件約束從另一個資料表取得有效值清單，而 CHECK 條件約束則會從邏輯運算式來判定有效值。  
   
 > [!CAUTION]  
 >  包括明確或隱含資料類型轉換的條件約束可能會導致某些作業失敗。 例如，在資料分割切換來源的資料表上所定義的此類條件約束，可能會導致 ALTER TABLE...SWITCH 作業失敗。 應避免在條件約束定義中進行資料類型轉換。  
   
 ### <a name="limitations-of-check-constraints"></a>CHECK 條件約束的限制  
- CHECK 條件約束會拒絕評估為 FALSE 的值。 因為 Null 值會評估為 UNKNOWN，所以若其出現於運算式中，可能會覆寫條件約束。 例如，假設您在上放置條件約束`int`資料行**MyColumn**指定**MyColumn**可包含 10 這個值 (**MyColumn = 10**)。 如果您將 NULL 值插入 **MyColumn**，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會插入 NULL 且不會傳回錯誤。  
+ CHECK 條件約束會拒絕評估為 FALSE 的值。 因為 Null 值會評估為 UNKNOWN，所以若其出現於運算式中，可能會覆寫條件約束。 例如，假設您將條件約束放在資料`int`行**MyColumn**上，指定**MyColumn**只能包含10這個值（**MyColumn = 10**）。 如果您將 NULL 值插入 **MyColumn**，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會插入 NULL 且不會傳回錯誤。  
   
  CHECK 條件約束會針對資料表中的所有資料列進行檢查，當檢查的條件不為 FALSE 時，會傳回 TRUE。 CHECK 條件約束可在資料列層級運作。 如果剛建立的資料表沒有任何資料列，則這個資料表上的任何 CHECK 條件約束都將視為有效。 這種情況可能會產生非預期結果，如下列範例所示。  
   
@@ -89,13 +89,13 @@ DELETE CheckTbl WHERE col1 = 10;
 > [!NOTE]  
 >  如果資料表是要發佈以進行複寫，則必須使用 Transact-SQL 陳述式 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 或 SQL Server 管理物件 (SMO) 變更結構描述。 使用 [資料表設計工具] 或 [資料庫圖表設計工具] 變更結構描述時，會嘗試卸除並重新建立資料表。 您無法卸除已發行的物件，因此結構描述變更將會失敗。  
   
-|工作|主題|  
+|Task|主題|  
 |----------|-----------|  
 |描述如何建立唯一的條件約束。|[建立唯一的條件約束](../tables/create-unique-constraints.md)|  
 |描述如何修改唯一的條件約束。|[修改唯一的條件約束](../tables/modify-unique-constraints.md)|  
 |描述如何刪除唯一條件約束。|[刪除唯一的條件約束](../tables/delete-unique-constraints.md)|  
 |描述如何在複寫代理程式在資料表中插入或更新資料時，停用檢查條件約束。|[停用複寫的檢查條件約束](../tables/disable-check-constraints-for-replication.md)|  
-|描述如何在加入資料表資料、更新資料表資料或刪除資料表資料時，停用檢查條件約束。|[使用 INSERT 與 UPDATE 陳述式停用檢查條件約束](../tables/disable-check-constraints-with-insert-and-update-statements.md)|  
+|描述如何在加入資料表資料、更新資料表資料或刪除資料表資料時，停用檢查條件約束。|[停用 INSERT 與 UPDATE 陳述式的檢查條件約束](../tables/disable-check-constraints-with-insert-and-update-statements.md)|  
 |描述如何變更條件約束運算式或啟用或停用特定條件之條件約束的選項。|[修改檢查條件約束](../tables/modify-check-constraints.md)|  
 |描述如何刪除檢查條件約束。|[刪除檢查條件約束](../tables/delete-check-constraints.md)|  
 |描述如何檢視檢查條件約束的屬性。|[唯一條件約束與檢查條件約束](../tables/unique-constraints-and-check-constraints.md)|  

@@ -10,10 +10,10 @@ ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: b84c1cee7dd805e68e0742c72980d7fb8a55c54b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251644"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 知識庫與定義域
@@ -150,7 +150,7 @@ ms.locfileid: "75251644"
 |-|-|  
 |建立知識、開啟知識、將知識加入至知識庫，以及在知識庫上執行探索|[建立知識庫](../data-quality-services/building-a-knowledge-base.md)|  
 |在定義域和知識庫上執行匯入和匯出作業|[匯入和匯出知識](../data-quality-services/importing-and-exporting-knowledge.md)|  
-|建立單一定義域、定義域規則、以詞彙為基礎的關聯，以及變更定義域值|[管理網域](../data-quality-services/managing-a-domain.md)|  
+|建立單一定義域、定義域規則、以詞彙為基礎的關聯，以及變更定義域值|[管理定義域](../data-quality-services/managing-a-domain.md)|  
 |建立複合定義域、建立跨定義域規則，以及使用值關聯|[管理複合定義域](../data-quality-services/managing-a-composite-domain.md)|  
 |使用內建到 DQS 中的預設 DQS 資料知識庫|[使用 DQS 預設知識庫](../data-quality-services/using-the-dqs-default-knowledge-base.md)|  
   

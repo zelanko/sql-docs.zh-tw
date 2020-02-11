@@ -14,17 +14,17 @@ ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d985786e4743b8bcc691cf6888c24153f5cb5f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019068"
 ---
 # <a name="cursor-library-code-example"></a>資料指標程式庫程式碼範例
 > [!IMPORTANT]  
->  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
   
- 下列範例會使用資料指標程式庫來擷取 「 訂單 」 資料表中的每筆訂單識別碼、 開啟的日期和狀態。 然後，它會顯示 20 個資料列的資料。 如果使用者更新這項資料，程式碼會更新資料列集的緩衝區，並執行定位的 update 陳述式。 最後，它會提示使用者輸入方向捲動，並重複此程序。  
+ 下列範例會使用資料指標程式庫來抓取 ORDERS 資料表中的每個訂單識別碼、開啟日期和狀態。 然後，它會顯示20個數據列。 如果使用者更新此資料，則程式碼會更新資料列集緩衝區，並執行定位的 update 語句。 最後，它會提示使用者滾動並重複處理常式。  
   
 ```  
 #define ROWS 20  

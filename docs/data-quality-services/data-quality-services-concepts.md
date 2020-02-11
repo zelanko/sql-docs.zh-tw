@@ -10,10 +10,10 @@ ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: a9f1ab0eaca67eb1e5266f11381f316607031635
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251715"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
@@ -46,7 +46,7 @@ ms.locfileid: "75251715"
 ##  <a name="Projects"></a>資料品質專案概念  
  資料管理人會在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式中使用資料品質專案來執行資料品質作業 (清理和比對)。  
   
- **資料清理**  
+ **Data Cleansing**  
   
  DQS 中的資料清理是根據 DQS 知識庫中的知識來完成。 DQS 中的資料清理是兩個步驟的程序：  
   
@@ -73,7 +73,7 @@ ms.locfileid: "75251715"
   
  活動監控會顯示在某個資料範圍內執行之每項活動的狀態、提供每項活動的資料，並且讓 DQS 系統管理員控制活動。 如需詳細資訊，請參閱 [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md)。  
   
- **配置**  
+ **組態**  
   
  [組態] 選項可讓您：  
   

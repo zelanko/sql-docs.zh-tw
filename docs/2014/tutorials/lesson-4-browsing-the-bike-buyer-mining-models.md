@@ -1,5 +1,5 @@
 ---
-title: 第 4 課：瀏覽 Bike Buyer 採礦模型 |Microsoft Docs
+title: 第4課：流覽自行車購買者採礦模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63070876"
 ---
-# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>第 4 課：瀏覽自行車買主採礦模型
-  在這一課，您將使用[SELECT (DMX)](/sql/dmx/select-dmx)陳述式來探索決策樹和群集採礦的內容模型中建立您[第 2 課：將採礦模型加入預測採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)。  
+# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>第 4 課：瀏覽 Bike Buyer 採礦模型
+  在這一課，您將使用[SELECT （DMX）](/sql/dmx/select-dmx)語句來流覽決策樹中的內容，以及在[第2課：將採礦模型加入至預測性採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)中所建立的叢集化採礦模型。  
   
- 包含在採礦模型中的資料行不是採礦結構所定義的資料行，而是描述該演算法所發現的趨勢和模式的一組特定資料行。 這些採礦模型資料行所述[DMSCHEMA_MINING_MODEL_CONTENT 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)結構描述資料列。 例如，內容結構描述資料列集的 MODEL_NAME 資料行包含採礦模型的名稱。 若為群集採礦模型，NODE_CAPTION 資料行包含每一個群集的名稱，NODE_DESCRIPTION 資料行包含每一個群集之特性的描述。 您可以利用 SELECT FROM 瀏覽這些資料行\<模型 >。在 DMX 中的陳述式內容。 您也可以使用此陳述式來探索用來建立採礦模型的資料。 您必須在採礦結構中啟用鑽研，才能使用此陳述式。 如需有關此陳述式的詳細資訊，請參閱[FROM&#60;模型&#62;。案例&#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)。  
+ 包含在採礦模型中的資料行不是採礦結構所定義的資料行，而是描述該演算法所發現的趨勢和模式的一組特定資料行。 DMSCHEMA_MINING_MODEL_CONTENT 資料列[集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)架構資料列集中會描述這些採礦模型資料行。 例如，內容結構描述資料列集的 MODEL_NAME 資料行包含採礦模型的名稱。 若為群集採礦模型，NODE_CAPTION 資料行包含每一個群集的名稱，NODE_DESCRIPTION 資料行包含每一個群集之特性的描述。 您可以使用 [從\<模型選取]> 來流覽這些資料行。DMX 中的 CONTENT 語句。 您也可以使用此陳述式來探索用來建立採礦模型的資料。 您必須在採礦結構中啟用鑽研，才能使用此陳述式。 如需語句的詳細資訊，請參閱[SELECT FROM &#60;model&#62;。&#40;DMX&#41;的案例](/sql/dmx/select-from-model-content-dmx)。  
   
  您也可以使用 SELECT DISTINCT 陳述式來傳回分隔資料行的所有狀態。 例如，如果您在性別資料行執行此作業，該查詢將傳回 `male` 和 `female`。  
   
@@ -34,9 +34,9 @@ ms.locfileid: "63070876"
 -   探索特定分隔資料行可用的不同狀態  
   
 ## <a name="returning-the-content-of-a-mining-model"></a>傳回採礦模型的內容  
- 在這一課，您可以使用[FROM&#60;模型&#62;。內容&#40;DMX&#41; ](/sql/dmx/select-from-model-dimension-content-dmx)陳述式來傳回群集模型的內容。  
+ 在這一課，您會使用[&#60;模型&#62; 中的 [選取]。CONTENT &#40;DMX&#41;](/sql/dmx/select-from-model-dimension-content-dmx)語句，以傳回群集模型的內容。  
   
- 以下是 SELECT FROM 的一般範例\<模型 >。內容的陳述式：  
+ 以下是 SELECT FROM \<model> 的一般範例。CONTENT 語句：  
   
 ```  
 SELECT <select list> FROM [<mining model>].CONTENT  
@@ -49,7 +49,7 @@ WHERE <where clause>
 SELECT <select list> FROM [<mining model].CONTENT  
 ```  
   
- 採礦模型名稱旁邊的 .CONTENT 子句指定您要從採礦模型傳回內容。 如需有關採礦模型中包含的資料行的詳細資訊，請參閱[DMSCHEMA_MINING_MODEL_CONTENT 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)。  
+ 採礦模型名稱旁邊的 .CONTENT 子句指定您要從採礦模型傳回內容。 如需有關「採礦模型」中所包含之資料行的詳細資訊，請參閱 DMSCHEMA_MINING_MODEL_CONTENT 資料列[集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)。  
   
  您可以選擇性地使用程式碼的最後一行來篩選陳述式傳回的結果：  
   
@@ -63,15 +63,15 @@ WHERE <where clause>
 WHERE NODE_SUPPORT > 100  
 ```  
   
- 如需使用 WHERE 陳述式的詳細資訊，請參閱 <<c0> [ 選取&#40;DMX&#41;](/sql/dmx/select-dmx)。</c0>  
+ 如需使用 WHERE 語句的詳細資訊，請參閱[SELECT &#40;DMX&#41;](/sql/dmx/select-dmx)。  
   
 #### <a name="to-return-the-content-of-the-clustering-mining-model"></a>若要傳回群集採礦模型的內容  
   
-1.  中**物件總管**，以滑鼠右鍵按一下執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查詢**，然後按一下**DMX**。  
+1.  在**物件總管**中，以滑鼠右鍵按一下的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]實例，指向 [追加**查詢**]，然後按一下 [ **DMX**]。  
   
      此時會開啟 [查詢編輯器] 且包含新的空白查詢。  
   
-2.  將 SELECT FROM 的一般範例複製\<模型 >。內容到空白查詢的陳述式。  
+2.  複製 SELECT FROM \<model> 的一般範例。CONTENT 語句放入空白查詢中。  
   
 3.  取代下列項目：  
   
@@ -79,13 +79,13 @@ WHERE NODE_SUPPORT > 100
     <select list>   
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     *  
     ```  
   
-     您也可以取代 * 任何資料行中包含一份[DMSCHEMA_MINING_MODEL_CONTENT 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)。  
+     您也可以使用 DMSCHEMA_MINING_MODEL_CONTENT 資料列集內所包含之任何資料[行](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)的清單來取代 *。  
   
 4.  取代下列項目：  
   
@@ -93,7 +93,7 @@ WHERE NODE_SUPPORT > 100
     [<mining model>]   
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     [Clustering]  
@@ -105,18 +105,18 @@ WHERE NODE_SUPPORT > 100
     SELECT * FROM [Clustering].CONTENT  
     ```  
   
-5.  在 **檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
+5.  **在 [檔案**] 功能表上，按一下 [**將 DMXQuery1 另存為**]。  
   
-6.  在 [**另存新檔**] 對話方塊中，瀏覽至適當的資料夾，並將檔案命名`SELECT_CONTENT.dmx`。  
+6.  在 [**另存**新檔] 對話方塊中，流覽至適當的資料夾，並`SELECT_CONTENT.dmx`將檔案命名為。  
   
-7.  在工具列上，按一下**Execute**  按鈕。  
+7.  在工具列上，按一下 [**執行**] 按鈕。  
   
      此查詢會傳回採礦模型的內容。  
   
 ## <a name="use-drillthrough"></a>使用鑽研  
- 下一步是使用鑽研陳述式來傳回用來培訓決策樹採礦模型的案例取樣。 在這一課，您可以使用[FROM&#60;模型&#62;。案例&#40;DMX&#41; ](/sql/dmx/select-from-model-content-dmx)陳述式來傳回決策樹模型的內容。  
+ 下一步是使用鑽研陳述式來傳回用來培訓決策樹採礦模型的案例取樣。 在這一課，您會使用[&#60;模型&#62; 中的 [選取]。案例 &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)語句，以傳回決策樹模型的內容。  
   
- 以下是 SELECT FROM 的一般範例\<模型 >。CASES 陳述式：  
+ 以下是 SELECT FROM \<model> 的一般範例。案例語句：  
   
 ```  
 SELECT <select list>   
@@ -138,15 +138,15 @@ SELECT <select list> FROM [<mining model>].CASES
 WHERE IsInNode('<node id>')  
 ```  
   
- 如需有關搭配 IsInNode 使用 WHERE 陳述式的詳細資訊，請[FROM&#60;模型&#62;。案例&#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)。  
+ 如需搭配 IsInNode 使用 WHERE 語句的詳細資訊，請參閱[SELECT FROM &#60;model&#62;。&#40;DMX&#41;的案例](/sql/dmx/select-from-model-content-dmx)。  
   
 #### <a name="to-return-the-cases-that-were-used-to-train-the-mining-model"></a>若要傳回用來培訓採礦模型的案例  
   
-1.  中**物件總管**，以滑鼠右鍵按一下執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查詢**，然後按一下**DMX**。  
+1.  在**物件總管**中，以滑鼠右鍵按一下的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]實例，指向 [追加**查詢**]，然後按一下 [ **DMX**]。  
   
      此時會開啟 [查詢編輯器] 且包含新的空白查詢。  
   
-2.  將 SELECT FROM 的一般範例複製\<模型 >。到空白查詢的情況下陳述式。  
+2.  複製 SELECT FROM \<model> 的一般範例。案例語句放入空白查詢中。  
   
 3.  取代下列項目：  
   
@@ -154,7 +154,7 @@ WHERE IsInNode('<node id>')
     <select list>   
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     *  
@@ -168,7 +168,7 @@ WHERE IsInNode('<node id>')
     [<mining model>]   
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     [Decision Tree]  
@@ -181,11 +181,11 @@ WHERE IsInNode('<node id>')
     FROM [Decision Tree].CASES  
     ```  
   
-5.  在 **檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
+5.  **在 [檔案**] 功能表上，按一下 [**將 DMXQuery1 另存為**]。  
   
-6.  在 [**另存新檔**] 對話方塊中，瀏覽至適當的資料夾，並將檔案命名`SELECT_DRILLTHROUGH.dmx`。  
+6.  在 [**另存**新檔] 對話方塊中，流覽至適當的資料夾，並`SELECT_DRILLTHROUGH.dmx`將檔案命名為。  
   
-7.  在工具列上，按一下**Execute**  按鈕。  
+7.  在工具列上，按一下 [**執行**] 按鈕。  
   
      該查詢會傳回用來培訓決策樹採礦模型的來源資料。  
   
@@ -209,7 +209,7 @@ SELECT DISTINCT [<column>]
   
 #### <a name="to-return-the-states-of-a-discrete-column"></a>若要傳回分隔資料行的狀態  
   
-1.  中**物件總管**，以滑鼠右鍵按一下執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查詢**，然後按一下**DMX**。  
+1.  在**物件總管**中，以滑鼠右鍵按一下的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]實例，指向 [追加**查詢**]，然後按一下 [ **DMX**]。  
   
      此時會開啟 [查詢編輯器] 且包含新的空白查詢。  
   
@@ -221,7 +221,7 @@ SELECT DISTINCT [<column>]
     [<column,name>   
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     [Bike Buyer]  
@@ -233,7 +233,7 @@ SELECT DISTINCT [<column>]
     [<mining model>]   
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     [Decision Tree]  
@@ -246,11 +246,11 @@ SELECT DISTINCT [<column>]
     FROM [Decision Tree]  
     ```  
   
-5.  在 **檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
+5.  **在 [檔案**] 功能表上，按一下 [**將 DMXQuery1 另存為**]。  
   
-6.  在 [**另存新檔**] 對話方塊中，瀏覽至適當的資料夾，並將檔案命名`SELECT_DISCRETE.dmx`。  
+6.  在 [**另存**新檔] 對話方塊中，流覽至適當的資料夾，並`SELECT_DISCRETE.dmx`將檔案命名為。  
   
-7.  在工具列上，按一下**Execute**  按鈕。  
+7.  在工具列上，按一下 [**執行**] 按鈕。  
   
      該查詢會傳回 Bike Buyer 資料行的可能狀態。  
   

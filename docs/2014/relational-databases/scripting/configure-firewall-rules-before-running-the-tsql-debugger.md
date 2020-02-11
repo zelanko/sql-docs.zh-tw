@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245194"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>設定 Transact-SQL 偵錯工具
@@ -162,10 +162,10 @@ ms.locfileid: "75245194"
 * 伺服器必須透過 RPC 回應用戶端。 執行 SQL Server 服務的帳戶應該要有用戶端的驗證許可權。  
   
 ## <a name="see-also"></a>另請參閱  
- [Transact-sql 偵錯工具](transact-sql-debugger.md)   
+ [Transact-SQL 偵錯工具](transact-sql-debugger.md)   
  [執行 Transact-sql 偵錯工具](run-the-transact-sql-debugger.md)   
  [逐步執行 Transact-sql 程式碼](step-through-transact-sql-code.md)   
- [Transact-sql 偵錯工具資訊](transact-sql-debugger-information.md)   
- [資料庫引擎查詢編輯器 &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
+ [Transact-SQL 偵錯工具資訊](transact-sql-debugger-information.md)   
+ [Database Engine 查詢編輯器 &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

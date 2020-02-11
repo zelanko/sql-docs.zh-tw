@@ -1,5 +1,5 @@
 ---
-title: 指定查詢軸 (MDX) 的內容 |Microsoft Docs
+title: 指定查詢座標軸的內容（MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 892198c217918fd2b2a374261c6eac5e31d0a428
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074077"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>指定查詢座標軸的內容 (MDX)
@@ -71,7 +71,7 @@ FROM [Adventure Works]
   
 ```  
   
- 在設定定義之前使用的 NON EMPTY 關鍵字是從軸中移除所有空白 Tuple 的簡單方式。 比方說，我們到目前為止所看到的範例中沒有資料在 2004 年 8 月從 cube 中及更新版本。 若要從任何資料行都沒有資料的資料格集中移除所有資料列，只要在設定 Rows 軸定義之前加入 NON EMPTY 即可，如下所示：  
+ 在設定定義之前使用的 NON EMPTY 關鍵字是從軸中移除所有空白 Tuple 的簡單方式。 例如，在我們最近看到的範例中，自2004年8月起的 cube 中沒有任何資料。 若要從任何資料行都沒有資料的資料格集中移除所有資料列，只要在設定 Rows 軸定義之前加入 NON EMPTY 即可，如下所示：  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -115,6 +115,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [指定 Slicer 軸的內容 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [指定交叉分析篩選器軸的內容 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   
