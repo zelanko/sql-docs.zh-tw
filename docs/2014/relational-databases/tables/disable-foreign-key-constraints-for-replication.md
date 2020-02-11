@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2cd2e4f3e5ee16c02ba48c6cd8ced98c06133dfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761079"
 ---
 # <a name="disable-foreign-key-constraints-for-replication"></a>停用複寫的外部索引鍵條件約束
@@ -31,7 +31,7 @@ ms.locfileid: "62761079"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法，停用複寫的外部索引鍵條件約束：**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62761079"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
@@ -56,7 +56,7 @@ ms.locfileid: "62761079"
   
 3.  在 **[外部索引鍵關聯性]** 對話方塊中，針對 **[強制複寫]** 選取 **[否]** 值。  
   
-4.  按一下 [ **關閉**]。  
+4.  按一下 [關閉]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
