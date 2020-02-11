@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_config_schedule & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: managed_backup. sp_backup_config_schedule （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 52df69439cecad5fddf3d38b8852a1ce86cc4dbd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942076"
 ---
-# <a name="managedbackupspbackupconfigschedule-transact-sql"></a>managed_backup.sp_backup_config_schedule (Transact-SQL)
+# <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  設定自動或自訂排程選項[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
+  設定的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]自動或自訂排程選項。  
     
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,39 +49,39 @@ EXEC managed_backup.sp_backup_config_schedule
   
 ##  <a name="Arguments"></a> 引數  
  @database_name  
- 啟用特定資料庫上的受管理的備份的資料庫名稱。 如果是 NULL 或 *，則此受管理的備份套用至伺服器上的所有資料庫。  
+ 在特定資料庫上啟用受管理備份的資料庫名稱。 如果是 Null 或 *，則此受管理的備份會套用至伺服器上的所有資料庫。  
   
  @scheduling_option  
- 系統控制備份排程中指定 'System'。 其他參數所定義的自訂排程，請指定 'Custom'。  
+ 針對系統控制的備份排程指定 [系統]。 針對其他參數所定義的自訂排程，指定「自訂」。  
   
  @full_backup_freq_type  
- 受管理的備份作業，可以設定為 'Daily' 或 '每週' 頻率類型。  
+ 受管理備份作業的頻率類型，可以設定為「每日」或「每週」。  
   
  @days_of_week  
- 每週備份天數時@full_backup_freq_type設為每週。 指定完整的字串名稱，例如 「 星期一 」。  您也可以指定 超過一天名稱，並以管道分隔。 比方說 N'Monday |星期三 |星期五 '。  
+ 當設定為 [每週] 時@full_backup_freq_type ，備份的星期幾。 指定完整的字串名稱，例如「星期一」。  您也可以指定超過一天的名稱，並以分隔號分隔。 例如 N'Monday |星期三 |星期五 '。  
   
  @backup_begin_time  
- 備份時間範圍開始時間。 備份將不會啟動時間視窗中，由組合所定義的外部@backup_begin_time和@backup_duration。  
+ [備份] 視窗的開始時間。 備份不會在時間範圍外啟動，而是由@backup_begin_time和@backup_duration的組合所定義。  
   
  @backup_duration  
- 備份時間範圍持續時間。 請注意，則備份將會完成所定義的時間間隔不能保證@backup_begin_time和@backup_duration。 在此時間範圍內啟動，但超過視窗的持續時間的備份作業將不會取消。  
+ 備份時間範圍的持續時間。 請注意， @backup_begin_time並不保證備份會在和@backup_duration所定義的時間範圍內完成。 在此時間範圍內啟動但超過視窗持續時間的備份作業將不會取消。  
   
  @log_backup_freq  
- 這會決定交易記錄備份的頻率。 這些備份會在定期間隔中，而不是在指定的資料庫備份的排程。 @log_backup_freq 可以是分鐘或小時，0 是有效的這表示沒有記錄備份。 停用記錄檔備份只會適用於使用簡單復原模式的資料庫。  
+ 這會決定交易記錄備份的頻率。 這些備份會定期執行，而不是依照針對資料庫備份所指定的排程進行。 @log_backup_freq可以是分鐘或小時，0是有效的，表示沒有記錄備份。 停用記錄備份只適用于具有簡單復原模式的資料庫。  
   
 > [!NOTE]  
->  如果設為 full，從簡單變更復原模式，您需要重新設定從 0 log_backup_freq，設為非零值。  
+>  如果復原模式從 [簡單] 變更為 [完整]，您必須將 log_backup_freq 從0重新設定為非零值。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
- 需要的成員資格**db_backupoperator**資料庫角色，使用**ALTER ANY CREDENTIAL**權限，並**EXECUTE**的權限**sp_delete_backuphistory**預存程序。  
+### <a name="permissions"></a>權限  
+ 需要**db_backupoperator**資料庫角色中的成員資格、具有**ALTER ANY CREDENTIAL**許可權，以及**Sp_delete_backuphistory**預存程式的**EXECUTE**許可權。  
   
 ## <a name="see-also"></a>另請參閱  
- [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
- [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
+ [managed_backup. sp_backup_config_basic （Transact-sql）](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
+ [managed_backup。 sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
   
   
