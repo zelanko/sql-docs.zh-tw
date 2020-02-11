@@ -17,16 +17,16 @@ ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 829f924d8d4893d45a48c193cd27fdd7ac261e3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939717"
 ---
 # <a name="text-file-data-types"></a>文字檔資料類型
-下表顯示如何將文字資料型別對應至 ODBC SQL 資料類型。 請注意，並非所有的 ODBC SQL 資料類型都支援 ODBC 文字驅動程式。  
+下表顯示文字資料類型對應至 ODBC SQL 資料類型的方式。 請注意，ODBC 文字驅動程式並不支援所有的 ODBC SQL 資料類型。  
   
-|文字資料類型|ODBC 資料類型|  
+|Text 資料類型|ODBC 資料類型|  
 |--------------------|--------------------|  
 |CHAR|SQL_VARCHAR|  
 |DATETIME|SQL_TIMESTAMP|  
@@ -35,16 +35,16 @@ ms.locfileid: "67939717"
 |LONGCHAR|SQL_LONGVARCHAR|  
   
 > [!NOTE]  
->  **SQLGetTypeInfo**傳回 ODBC 資料類型。 附錄 D 中的所有轉換*ODBC 程式設計人員參考*支援上表中列出的 SQL 資料類型。  
+>  **SQLGetTypeInfo**會傳回 ODBC 資料類型。 針對上表所列的 SQL 資料類型，支援 ODBC 程式設計*人員參考*附錄 D 中的所有轉換。  
   
- 下表顯示在文字資料型別上的限制。  
+ 下表顯示文字資料類型的限制。  
   
 |資料類型|描述|  
 |---------------|-----------------|  
-|CHAR|建立 CHAR 資料行的零或未指定的長度實際上會傳回 255 位元資料行。<br /><br /> CHAR 資料行可能會或可能沒有雙引號分隔符號的開頭和結尾; 分隔的檔案中在固定長度的檔案，不會使用雙引號做為分隔符號。|  
-|DATETIME|MM-DD-YY （例如，01-17-92）<br /><br /> MMM DD YY (例如，年 1 月-17-92)<br /><br /> DD-MMM-YY (比方說，17-年 1 月-92)<br /><br /> -YYYY-MM-DD （例如 1992年-01-17）<br /><br /> MMM YYYY-MM-DD （例如 1992 年 1 月 17）<br /><br /> 在資料表中不允許混合的日期分隔符號。<br /><br /> 文字 ISAM 格式化日期時間欄位美國或歐洲的格式，在 Windows 控制台中的國際設定而定。|  
-|FLOAT|最大寬度包括正負號和小數點。 在 Schema.ini，寬度表示，如下所示：<br /><br /> 14.083 為 FLOAT 寬度 6<br /><br /> -14.083 為 FLOAT 寬度 7<br /><br /> +14.083 為 FLOAT 寬度 7<br /><br /> 14083。 是 FLOAT 寬度為 6<br /><br /> ODBC 一律會傳回 8 浮點數資料行。<br /><br /> 浮點數資料行也可以以科學記號標記法，例如：<br /><br /> -3.04E + 2 是 Float 寬度 8<br /><br /> 25E4 為 Float 寬度 4<br /><br /> **請注意**十進位和科學標記法不能混合的資料行中。<br /><br /> NULL 值都由固定長度的檔案中的空白填補字串，並分隔檔案中省略了。<br /><br /> 浮點數資料可以被填補空格。|  
-|INTEGER|整數資料行的有效值為-32766 到 32767。<br /><br /> 在 Schema.ini，寬度表示，如下所示：<br /><br /> 14083 為整數寬度 5<br /><br /> 0 是整數寬度 1<br /><br /> ODBC 一律會傳回 4 個整數資料行。<br /><br /> 最大寬度包括正負號。 整數資料行的最大寬度為 11，，雖然寬度可能需要更多，因為允許固定格式資料表中的空白。|  
-|LONGCHAR|理論上限制之寬度的 LONGCHAR 中的資料行是固定長度或分隔的資料表是 65500 K。 文字 ISAM 是更容易就能提供可靠的支援，最多約 32k。|  
+|CHAR|建立零或未指定長度的 CHAR 資料行，實際上會傳回255位資料行。<br /><br /> 在分隔的檔案中，CHAR 資料行的開頭和結尾不一定會有雙引號分隔符號;在固定長度的檔案中，不會使用雙引號做為分隔符號。|  
+|DATETIME|MM-DD-YY （例如，01-17-92）<br /><br /> MMM-DD-YY （例如，Jan-17-92）<br /><br /> DD-MMM-YY （例如，17-Jan-92）<br /><br /> YYYY-MM-DD （例如，1992-01-17）<br /><br /> YYYY MMM-DD （例如，1992-Jan-17）<br /><br /> 資料表中不允許有混合的日期分隔符號。<br /><br /> 文字 [ISAM] 會根據 Windows [控制台] 中的 [國際] 設定，格式化 [美國] 或 [歐洲] 格式的日期時間欄位。|  
+|FLOAT|最大寬度包含正負號和小數點。 在 schema.ini 中，寬度的表示方式如下：<br /><br /> 14.083 為 FLOAT 寬度6<br /><br /> -14.083 為 FLOAT 寬度7<br /><br /> + 14.083 是浮動寬度7<br /><br /> 14083。是 FLOAT 寬度6<br /><br /> ODBC 的 FLOAT 資料行一律會傳回8。<br /><br /> FLOAT 資料行也可以是科學記號標記法，例如：<br /><br /> -3.04 e + 2 是 Float 寬度8<br /><br /> 25E4 是 Float 寬度4<br /><br /> **注意**十進位和科學標記法不能在資料行中混用。<br /><br /> Null 值是以固定長度檔案中空白填補的字串表示，並在分隔的檔案中省略。<br /><br /> 浮動資料可以填補開頭的空白。|  
+|INTEGER|整數資料行的有效值為32767到-32766。<br /><br /> 在 schema.ini 中，寬度的表示方式如下：<br /><br /> 14083是整數寬度5<br /><br /> 0是整數寬度1<br /><br /> 對於整數資料行，ODBC 一律會傳回4。<br /><br /> 寬度上限包含正負號。 整數資料行的最大寬度為11，雖然寬度可能會因為固定格式資料表中允許的空白而增加。|  
+|LONGCHAR|在固定長度或分隔的資料表中，LONGCHAR 資料行寬度的理論限制為65500K。 Text ISAM 較可能提供可靠的支援（最多大約32K）。|  
   
- 資料型別上的更多限制可在[資料型別限制](../../odbc/microsoft/data-type-limitations.md)。
+ 您可以在[資料類型限制](../../odbc/microsoft/data-type-limitations.md)中找到更多有關資料類型的限制。

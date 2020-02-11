@@ -1,5 +1,5 @@
 ---
-title: sp_filestream_force_garbage_collection (Transact-SQL) |Microsoft Docs
+title: sp_filestream_force_garbage_collection （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942289"
 ---
-# <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
+# <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   強制執行 FILESTREAM 記憶體回收行程，刪除任何不必要的 FILESTREAM 檔案。  
   
- 在 FILESTREAM 容器內所有已刪除的檔案都已經由記憶體回收行程清除之前，無法移除容器。 FILESTREAM 記憶體回收行程會自動執行。 不過，如果您需要移除容器之前，記憶體回收行程已執行，您可以使用 sp_filestream_force_garbage_collection 手動執行記憶體回收行程。  
+ 在 FILESTREAM 容器內所有已刪除的檔案都已經由記憶體回收行程清除之前，無法移除容器。 FILESTREAM 記憶體回收行程會自動執行。 不過，如果您需要在垃圾收集行程執行之前移除容器，您可以使用 sp_filestream_force_garbage_collection 手動執行垃圾收集行程。  
   
   
 ## <a name="syntax"></a>語法  
@@ -46,10 +46,11 @@ sp_filestream_force_garbage_collection
  表示要執行記憶體回收行程之資料庫的名稱。  
   
 > [!NOTE]  
-> `@dbname` 已**sysname**。 如果未指定，則假設目前的資料庫。  
+> `@dbname`為**sysname**。 如果未指定，則假設目前的資料庫。  
   
  `[ @filename = ] 'logical_file_name'`  
- 指定要執行記憶體回收行程之 FILESTREAM 容器的邏輯名稱。 `@filename` 是選擇性的。 如果未不指定任何邏輯的檔名，則記憶體回收行程會清除指定之資料庫中的所有 FILESTREAM 容器。  
+ 指定要執行記憶體回收行程之 FILESTREAM 容器的邏輯名稱。 
+  `@filename` 為選擇性。 如果未指定邏輯檔案名，垃圾收集行程就會清除指定之資料庫中的所有 FILESTREAM 容器。  
   
 ## <a name="return-code-values"></a>傳回碼值  
   
@@ -65,8 +66,8 @@ sp_filestream_force_garbage_collection
 |-----------|-----------------|  
 |*file_name*|指出 FILESTREAM 容器名稱|  
 |*num_collected_items*|指出在這個容器中已進行記憶體回收 (已刪除) 的 FILESTREAM 項目 (檔案/目錄) 的數目。|  
-|*num_marked_for_collection_items*|指出在這個容器中已標示為記憶體回收的 FILESTREAM 項目 (檔案/目錄) 的數目。 這些項目未被刪除，但可能有資格獲得刪除下列記憶體回收階段。|  
-|*num_unprocessed_items*|指出在這個 FILESTREAM 容器中適合記憶體回收但未處理的 FILESTREAM 項目 (檔案或目錄) 的數目。 項目可能因各種原因未處理，包括下列：<br /><br /> 因為尚未進行記錄備份或檢查點而需要確定的檔案。<br /><br /> 在 FULL 或 BULK_LOGGED 復原模式中的檔案。<br /><br /> 有長時間執行的使用中交易。<br /><br /> 複寫記錄讀取器作業尚未執行。 請參閱技術白皮書[SQL Server 2008 中的 FILESTREAM 儲存體](https://go.microsoft.com/fwlink/?LinkId=209156)如需詳細資訊。|  
+|*num_marked_for_collection_items*|指出在這個容器中已標示為記憶體回收的 FILESTREAM 項目 (檔案/目錄) 的數目。 這些專案尚未刪除，但可能符合垃圾收集階段的刪除資格。|  
+|*num_unprocessed_items*|指出在這個 FILESTREAM 容器中適合記憶體回收但未處理的 FILESTREAM 項目 (檔案或目錄) 的數目。 項目可能因各種原因未處理，包括下列：<br /><br /> 因為尚未進行記錄備份或檢查點而需要確定的檔案。<br /><br /> 在 FULL 或 BULK_LOGGED 復原模式中的檔案。<br /><br /> 有長時間執行的使用中交易。<br /><br /> 複寫記錄讀取器工作尚未執行。 如需詳細資訊，請參閱[SQL Server 2008 中的《 FILESTREAM Storage](https://go.microsoft.com/fwlink/?LinkId=209156) 》（技術白皮書）。|  
 |*last_collected_xact_seqno*|傳回指定 FILESTREAM 容器中已進行記憶體回收之檔案的最後一個對應記錄序號 (LSN)。|  
   
 ## <a name="remarks"></a>備註  
@@ -77,12 +78,12 @@ sp_filestream_force_garbage_collection
   
 只能在不同的容器或不同的資料庫上同時執行此預存程序的多個引動過程。  
 
-由於 2 階段作業，預存程序都應該執行兩次，實際上會刪除基礎 Filestream 檔案。  
+由於2個階段的作業，應該執行兩次預存程式，以實際刪除基礎 Filestream 檔案。  
 
-記憶體回收 (GC) 會依賴截斷記錄。 因此，如果檔案已使用完整復原模式在資料庫上最近刪除的則會 GC ed 之後，才執行這些交易記錄部分的記錄備份的記錄部分標示為非作用中。 在資料庫上使用簡單復原模式，記錄截斷就會發生之後`CHECKPOINT`已針對資料庫發出。  
+垃圾收集（GC）依賴記錄截斷。 因此，如果最近使用完整復原模式在資料庫上刪除檔案，只有在取得這些交易記錄部分的記錄備份，且記錄部分標示為非作用中時，才會成為 GC。 在使用簡單復原模式的資料庫上，對資料庫發出之後`CHECKPOINT` ，會發生記錄截斷。  
 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 db_owner 資料庫角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
@@ -106,7 +107,7 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[Filestream](../../relational-databases/blob/filestream-sql-server.md)
+[檔案資料流](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream 及 FileTable 動態管理檢視 (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Filestream 和 FileTable 目錄檢視 (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)

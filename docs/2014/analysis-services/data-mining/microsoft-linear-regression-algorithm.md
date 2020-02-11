@@ -1,5 +1,5 @@
 ---
-title: Microsoft 線性迴歸演算法 |Microsoft Docs
+title: Microsoft 線性回歸演算法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df1b3616a85d93b4c5fa814ee759880077c03b8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084034"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 線性迴歸演算法
+  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的變異形式，可幫助您計算相依與獨立變數之間的線性關聯性，然後使用該關聯性進行預測。  
   
  關聯性會以最能夠代表一系列資料的線性方程式表示。 例如，下列圖表中的線條是最佳的資料線性表示法。  
   
- ![模型一組資料列](../media/linear-regression.gif "模型一組資料列")  
+ ![模式化一組資料的線條](../media/linear-regression.gif "模式化一組資料的線條")  
   
  圖表中的每一個資料點都有錯誤，與它到迴歸線的距離相關聯。 迴歸方程式中的係數 a 和 b 會調整迴歸線的角度和位置。 您可以調整 a 和 b，直到與所有點相關聯的錯誤總和達到最小值為止，以取得迴歸方程式。  
   
@@ -39,21 +40,22 @@ ms.locfileid: "66084034"
  雖然有許多方法可計算線性迴歸，而不需要資料採礦工具，但是針對這項工作使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法的好處在於，變數之間所有可能的關聯性都會自動計算出來，並加以測試。 您不必選取計算方法，例如最小平方的解決方式。 但是，在有多個因數影響結果的狀況下，線性迴歸可能會過於簡化關聯性。  
   
 ## <a name="how-the-algorithm-works"></a>演算法的運作方式  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的變異形式。 當您選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法時，會叫用特殊形式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法，其參數會限制此演算法的行為，而且需要某些輸入資料類型。 此外，在線性迴歸模型中，整個資料集都會用來計算初始行程內的關聯性，而標準決策樹模型則會將資料重複分割成較小的子集或樹狀結構。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的變異形式。 當您選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法時，會叫用特殊形式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法，其參數會限制此演算法的行為，而且需要某些輸入資料類型。 此外，在線性迴歸模型中，整個資料集都會用來計算初始行程內的關聯性，而標準決策樹模型則會將資料重複分割成較小的子集或樹狀結構。  
   
 ## <a name="data-required-for-linear-regression-models"></a>線性迴歸模型所需的資料  
  當您準備資料以供線性迴歸模型使用時，您需要了解特定演算法的需求。 其中包括所需的資料數量及資料的使用方式。 此模型類型的需求如下：  
   
--   **單一索引鍵資料行** ：每個模型都必須包含一個能唯一識別每一筆記錄的數值或文字資料行。 不允許複合的索引鍵。  
+-   **單一索引鍵資料行**每個模型都必須包含一個可唯一識別每一筆記錄的數值或文字資料行。 不允許複合的索引鍵。  
   
--   **可預測資料行** ：至少需要一個可預測資料行。 您可以在模型中加入多個可預測的屬性，但是這些可預測的屬性必須是連續數值資料類型。 即使資料的原生儲存體為數值，您還是不能將日期時間資料類型當做可預測的屬性使用。  
+-   **可預測資料行**至少需要一個可預測資料行。 您可以在模型中加入多個可預測的屬性，但是這些可預測的屬性必須是連續數值資料類型。 即使資料的原生儲存體為數值，您還是不能將日期時間資料類型當做可預測的屬性使用。  
   
--   **輸入資料行** ：輸入資料行必須包含連續數值資料，而且必須為它指派適當的資料類型。  
+-   **輸入資料行**輸入資料行必須包含連續數值資料，並為其指派適當的資料類型。  
   
  如需詳細資訊，請參閱的 [Microsoft 線性迴歸演算法技術參考](microsoft-linear-regression-algorithm-technical-reference.md)的＜需求＞一節。  
   
 ## <a name="viewing-a-linear-regression-model"></a>檢視線性迴歸模型  
- 若要瀏覽此模型，您可使用 [Microsoft 樹狀檢視器]  。 線性迴歸模型的樹狀結構非常簡單，其中包含有關單一節點內所包含之迴歸方程式的所有資訊。 如需詳細資訊，請參閱 [使用 Microsoft 樹狀檢視器瀏覽模型](browse-a-model-using-the-microsoft-tree-viewer.md)。  
+ 若要瀏覽此模型，您可使用 [Microsoft 樹狀檢視器]****。 線性迴歸模型的樹狀結構非常簡單，其中包含有關單一節點內所包含之迴歸方程式的所有資訊。 如需詳細資訊，請參閱 [使用 Microsoft 樹狀檢視器瀏覽模型](browse-a-model-using-the-microsoft-tree-viewer.md)。  
   
  如果您想要知道此方程式的詳細資料，也可以使用 [Microsoft 一般內容樹狀檢視器](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)來檢視係數和其他詳細資料。  
   
@@ -77,9 +79,9 @@ ms.locfileid: "66084034"
 -   支援 OLAP 採礦模型的使用。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft 線性迴歸演算法技術參考](microsoft-linear-regression-algorithm-technical-reference.md)   
- [線性迴歸模型查詢範例](linear-regression-model-query-examples.md)   
- [線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [資料採礦演算法 &#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Microsoft 線性回歸演算法技術參考](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [線性回歸模型查詢範例](linear-regression-model-query-examples.md)   
+ [線性回歸模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

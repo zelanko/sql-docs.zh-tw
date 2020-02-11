@@ -14,17 +14,17 @@ ms.assetid: 28cb324c-e1c3-4b5c-bc3e-54df87037317
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bcb7c39d39492b91c0b62c5eff2229eb5f61df6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987832"
 ---
 # <a name="odbc-static-cursors"></a>ODBC 靜態資料指標
-靜態資料指標是其中一個結果集似乎是靜態。 它通常無法偵測到的成員資格、 順序或結果集資料指標開啟後的值所做的變更。 例如，假設在靜態資料指標提取資料列和另一個應用程式，然後更新該資料列。 如果靜態資料指標 refetches 資料列，則它所看到的值會是不變，即使由其他應用程式所做的變更。  
+靜態資料指標是結果集似乎是靜態的。 在開啟資料指標之後，它通常不會偵測到結果集的成員資格、順序或值所做的變更。 例如，假設靜態資料指標提取一個資料列，然後另一個應用程式更新該資料列。 如果靜態資料指標 refetches 資料列，則不論另一個應用程式所做的變更為何，它所看到的值都會保持不變。  
   
- 靜態資料指標可以偵測到自己的更新、 刪除和插入，雖然不需要執行這項操作。 透過 SQL_STATIC_SENSITIVITY 選項中是否有特定的靜態資料指標偵測這些變更回報**SQLGetInfo**。 靜態資料指標永遠不會偵測其他更新、 刪除和插入。  
+ 靜態資料指標可以偵測自己的更新、刪除和插入，但不需要這麼做。 特定靜態資料指標是否偵測到這些變更是透過**SQLGetInfo**中的 SQL_STATIC_SENSITIVITY 選項來報告。 靜態資料指標永遠不會偵測到其他更新、刪除和插入。  
   
- Sql_attr_row_status_ptr 設定陳述式屬性所指定之資料列狀態陣列可以包含 SQL_ROW_SUCCESS、 SQL_ROW_SUCCESS_WITH_INFO 或 SQL_ROW_ERROR 的任何資料列。 它會傳回 SQL_ROW_UPDATED、 SQL_ROW_DELETED 或 SQL_ROW_ADDED 更新、 刪除或插入游標處，假設資料指標可以偵測這類變更的資料列。  
+ SQL_ATTR_ROW_STATUS_PTR 語句屬性所指定的資料列狀態陣列可以包含任何資料列的 SQL_ROW_SUCCESS、SQL_ROW_SUCCESS_WITH_INFO 或 SQL_ROW_ERROR。 它會針對資料指標所更新、刪除或插入的資料列，傳回 SQL_ROW_UPDATED、SQL_ROW_DELETED 或 SQL_ROW_ADDED，假設資料指標可以偵測這類變更。  
   
- 靜態資料指標通常會實作藉由鎖定結果集的資料列，或藉由複製，或快照集，結果的設定。 雖然鎖定資料列是很簡單，它會有大幅降低並行的缺點。 製作複本允許更高的並行處理和可讓資料指標來追蹤它自己的更新、 刪除和插入所修改該複本。 不過，複本會耗費更多資源並為該資料其他人已變更，可以偏離基礎資料。
+ 靜態資料指標通常是藉由鎖定結果集內的資料列，或製作結果集的複本或快照集來執行。 雖然鎖定資料列相當容易，但它具有大幅減少並行的缺點。 建立複本可提供更高的平行存取權，並可讓游標藉由修改複本來追蹤自己的更新、刪除和插入。 不過，複製的成本較高，而且可以與基礎資料分離，因為其他人會變更資料。

@@ -20,13 +20,13 @@ ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 79fc54e65b6e014575b5942a573c4077e8a9c5d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041816"
 ---
-# <a name="set-contextinfo-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
+# <a name="set-context_info-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   最多可讓 128 個位元組的二進位資訊與目前的工作階段或連接發生關聯。  
@@ -47,7 +47,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
  **@** *binary_var*  
  這是用來存放要與目前工作階段或連線的內容值建立關聯的 **varbinary** 或 **binary** 變數。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  擷取目前工作階段的內容資訊，最好的方法是使用 CONTEXT_INFO 函數。 工作階段內容資訊也儲存在下列系統檢視的 **context_info** 資料行中：  
   
 -   **sys.dm_exec_requests**  

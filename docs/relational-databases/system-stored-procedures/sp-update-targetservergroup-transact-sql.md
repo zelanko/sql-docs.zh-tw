@@ -1,5 +1,5 @@
 ---
-title: sp_update_targetservergroup (TRANSACT-SQL) |Microsoft Docs
+title: sp_update_targetservergroup （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 330f044d832bf039028cb3d7e92d8929e28e6e79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946630"
 ---
-# <a name="spupdatetargetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
+# <a name="sp_update_targetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   變更指定目標伺服器群組的名稱。  
@@ -41,18 +41,18 @@ sp_update_targetservergroup
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'current_name'` 目標伺服器群組的名稱。 *current_name*已**sysname**，沒有預設值。  
+`[ @name = ] 'current_name'`目標伺服器群組的名稱。 *current_name*是**sysname**，沒有預設值。  
   
-`[ @new_name = ] 'new_name'` 目標伺服器群組新名稱。 *new_name*已**sysname**，沒有預設值。  
+`[ @new_name = ] 'new_name'`目標伺服器群組的新名稱。 *new_name*是**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
-## <a name="permissions"></a>Permissions  
- 若要執行這個預存程序，使用者必須授與**sysadmin**固定的伺服器角色。  
+## <a name="permissions"></a>權限  
+ 若要執行這個預存程式，使用者必須被授與**系統管理員（sysadmin** ）固定伺服器角色。  
   
 ## <a name="remarks"></a>備註  
- **sp_update_targetservergroup**必須從執行**msdb**資料庫。  
+ **sp_update_targetservergroup**必須從**msdb**資料庫中執行。  
   
 ## <a name="examples"></a>範例  
  下列範例會將目標伺服器群組的名稱 `Servers Processing Customer Orders` 改成 `Local Servers Processing Customer Orders`。  
@@ -68,9 +68,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
- [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
- [sp_help_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   
+ [sp_add_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
+ [sp_delete_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
+ [sp_help_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

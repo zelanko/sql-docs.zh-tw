@@ -1,5 +1,5 @@
 ---
-title: 傳回陣列參數，從預存程序 |Microsoft Docs
+title: 從預存程式傳回陣列參數 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be89e4c9cc544048dada325c563ac1faa6cfd2d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987978"
 ---
 # <a name="returning-array-parameters-from-stored-procedures"></a>從預存程序傳回陣列參數
 > [!IMPORTANT]  
->  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用所提供的 ODBC 驅動程式。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 Oracle 所提供的 ODBC 驅動程式。  
   
- 在 Oracle 7.3 沒有辦法從 PL/SQL 程式存取以外的 PL/SQL 記錄類型。 如果在封裝的程序或函式定義為 PL/SQL 記錄類型的正式引數，它不該做為參數的型式引數繫結。 使用在 Microsoft ODBC Driver for Oracle 的 PL/SQL 資料表型別，可叫用含有正確逸出序列的程序中的陣列參數。  
+ 在 Oracle 7.3 中，沒有任何方法可以存取 pl/sql 記錄類型，但 PL/SQL 程式除外。 如果封裝的程式或函式具有定義為 PL/SQL 記錄類型的正式引數，就無法將該正式引數系結為參數。 使用 Microsoft ODBC Driver for Oracle 中的 PL/SQL 資料表類型，從包含正確逸出序列的程式叫用陣列參數。  
   
- 若要叫用程序，請使用下列語法：  
+ 若要叫用程式，請使用下列語法：  
   
 ```  
 {call  <package-name>.<proc-or-func>;  
@@ -35,13 +35,13 @@ ms.locfileid: "67987978"
 ```  
   
 > [!NOTE]  
->  \<最大記錄要求 > 參數必須是大於或等於出現在結果集中的資料列數目。 否則，Oracle，就會傳回錯誤驅動程式傳遞給使用者。  
+>  要求\<的最大記錄> 參數必須大於或等於結果集中出現的資料列數目。 否則，Oracle 會傳回由驅動程式傳遞給使用者的錯誤。  
 >   
->  PL/SQL 記錄不能做為陣列參數。 每個陣列參數可代表資料庫資料表只有一個資料行。  
+>  PL/SQL 記錄不能當做陣列參數使用。 每個陣列參數只能表示資料庫資料表的一個資料行。  
   
- 下列範例會定義內含傳回不同結果集的兩個程序的封裝，，然後提供兩種方式可從封裝中傳回結果集。  
+ 下列範例會定義一個封裝，其中包含兩個會傳回不同結果集的程式，然後提供兩種方法來從封裝傳回結果集。  
   
-## <a name="package-definition"></a>封裝定義：  
+## <a name="package-definition"></a>套件定義：  
   
 ```  
 CREATE OR REPLACE PACKAGE SimplePackage AS  
@@ -105,7 +105,7 @@ END proc2;
 END SimplePackage;  
 ```  
   
-#### <a name="to-invoke-procedure-proc1"></a>若要叫用程序 PROC1  
+#### <a name="to-invoke-procedure-proc1"></a>若要叫用程式 PROC1  
   
 1.  傳回單一結果集中的所有資料行：  
   
@@ -113,15 +113,15 @@ END SimplePackage;
     {call SimplePackage.Proc1( {resultset  3, o_id , ao_course, ao_dept  } ) }  
     ```  
   
-2.  傳回每個資料行做為單一結果集：  
+2.  以單一結果集的形式傳回每個資料行：  
   
     ```  
     {call SimplePackage.Proc1( {resultset 3, o_id},  {resultset 3, ao_course}, {resultset 3, ao_dept} ) }  
     ```  
   
-     這會傳回三個結果集，每個資料行。  
+     這會傳回三個結果集，每個資料行各一個。  
   
-#### <a name="to-invoke-procedure-proc2"></a>若要叫用程序 PROC2  
+#### <a name="to-invoke-procedure-proc2"></a>若要叫用程式 PROC2  
   
 1.  傳回單一結果集中的所有資料行：  
   
@@ -129,13 +129,13 @@ END SimplePackage;
     {call SimplePackage.Proc2( 5 , {resultset  5, ao_Arg2, ao_Arg3} ) }  
     ```  
   
-2.  傳回每個資料行做為單一結果集：  
+2.  以單一結果集的形式傳回每個資料行：  
   
     ```  
     {call SimplePackage.Proc2( 5 , {resultset 5, ao_Arg2}, {resultset 5, ao_Arg3} ) }  
     ```  
   
- 請確定您的應用程式可以擷取所有結果集使用[SQLMoreResults](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) API。 如需詳細資訊，請參閱*ODBC 程式設計人員參考*。  
+ 請確定您的應用程式會使用[SQLMoreResults](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) API 來提取所有結果集。 如需詳細資訊，請參閱*ODBC 程式設計人員參考*。  
   
 > [!NOTE]  
->  在 ODBC Driver for Oracle 2.0 版中，Oracle 函數傳回 PL/SQL 陣列不能傳回結果集。
+>  在 Oracle 2.0 版的 ODBC 驅動程式中，傳回 PL/SQL 陣列的 Oracle 函數不能用來傳回結果集。

@@ -1,5 +1,5 @@
 ---
-title: EOS 和 LineSeparator 屬性和 SkipLine 方法範例 (VB) |Microsoft Docs
+title: EOS 和 LineSeparator 屬性和 SkipLine 方法範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d2a9c5f4f07b22f11869a21fc4855f4ae21b25c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933066"
 ---
-# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS 和 LineSeparator 屬性和 SkipLine 方法範例 (VB)
-此範例示範如何操作文字資料流一行一次。 變更從預設歸位字元/換行的行分隔符號的影響 (**adCRLF**) 來只是換行字元 (**adLF**) 或歸位字元 (**adCR**) 所示。  
+# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS 和 LineSeparator 屬性和 SkipLine 方法範例（VB）
+這個範例示範如何一次操作一行的文字資料流程。 會顯示將線條分隔符號從預設的換行字元傳回/換行字元（**adCRLF**）變更為直接換行字元（**adLF**）或回車（**adCR**）的效果。  
   
 ```  
 'BeginSkipLineVB  
@@ -114,5 +114,5 @@ End Sub
   
 ## <a name="see-also"></a>另請參閱  
  [EOS 屬性](../../../ado/reference/ado-api/eos-property.md)   
- [LineSeparator 屬性 (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
+ [LineSeparator 屬性（ADO）](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
  [SkipLine 方法](../../../ado/reference/ado-api/skipline-method.md)

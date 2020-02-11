@@ -11,20 +11,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac28a67051299b0dbdfc7010d9abe20d0d2d2493
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058167"
 ---
 # <a name="import-an-integration-services-project"></a>匯入 Integration Services 專案
-  使用 [[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 匯入專案精靈]  從現有的部署檔 (.ispac)，或從部署到 Integration Services 目錄的專案建立一個專案。 當您沒有專案的原始副本，但又想從 .ispac 檔或 SSISDB 目錄建立一個專案時，此功能特別有用。  
+  使用 [[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 匯入專案精靈]**** 從現有的部署檔 (.ispac)，或從部署到 Integration Services 目錄的專案建立一個專案。 當您沒有專案的原始副本，但又想從 .ispac 檔或 SSISDB 目錄建立一個專案時，此功能特別有用。  
   
 ### <a name="to-import-a-project"></a>若要匯入專案  
   
-1.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中，按一下 [檔案]  功能表上的 [新增]   > [專案]  。  
+1.  在[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中，**按一下 [檔案**] 功能表上的 [**新增** > **專案**]。  
   
-2.  在 **[新增專案]** 視窗的 **[已安裝的範本]** 區域中，展開 **[Business Intelligence]** ，然後按一下 **[Integration Services]** 。  
+2.  在 **[新增專案]** 視窗的 **[已安裝的範本]** 區域中，展開 **[Business Intelligence]**，然後按一下 **[Integration Services]**。  
   
 3.  從專案類型清單中選取 **[Integration Services 匯入專案精靈]** 。  
   
@@ -38,11 +38,11 @@ ms.locfileid: "66058167"
   
 8.  按 **[下一步]** ，切換到 **[選取來源]** 頁面。  
   
-9. 如果您要從 **.ispac** 檔匯入，請在 **[路徑]** 文字方塊中輸入路徑，包括檔案名稱。 按一下 **[瀏覽]** 導覽到您希望儲存方案的資料夾，並在 **[檔案名稱]** 文字方塊中輸入檔案名稱，然後按一下 **[開啟]** 。  
+9. 如果您要從 **.ispac** 檔匯入，請在 **[路徑]** 文字方塊中輸入路徑，包括檔案名稱。 按一下 **[瀏覽]** 導覽到您希望儲存方案的資料夾，並在 **[檔案名稱]** 文字方塊中輸入檔案名稱，然後按一下 **[開啟]**。  
   
      如果您要從 **[Integration Services 目錄]** 匯入，請在 **[伺服器名稱]** 文字方塊中輸入資料庫執行個體名稱，或按一下 **[瀏覽]** ，然後選取包含該目錄的資料庫執行個體。  
   
-     按一下 **[路徑]** 文字方塊旁的 **[瀏覽]** 、展開目錄中的資料夾、選取您要匯入的專案，然後按一下 **[確定]** 。  
+     按一下 **[路徑]** 文字方塊旁的 **[瀏覽]** 、展開目錄中的資料夾、選取您要匯入的專案，然後按一下 **[確定]**。  
   
      按 **[下一步]** ，切換到 **[檢閱]** 頁面。  
   

@@ -1,5 +1,5 @@
 ---
-title: SSMA 主控台 (DB2ToSQL) 中的命令列選項 |Microsoft Docs
+title: SSMA 主控台中的命令列選項（DB2ToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,25 +10,25 @@ ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 51c0253dce8e95a5a25110b47b348397c967af94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938266"
 ---
-# <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 主控台 (DB2ToSQL) 中的命令列選項
-Microsoft 為您提供執行及控制 SSMA 活動的一組健全命令列選項。 後續章節將詳細說明相同。  
+# <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 主控台中的命令列選項（DB2ToSQL）
+Microsoft 為您提供了健全的設定命令列選項，以執行和控制 SSMA 活動。 後續章節會詳細說明相同的情況。  
   
 ## <a name="command-line-options-in-ssma-console"></a>SSMA 主控台中的命令列選項  
-此處所述是主控台命令的選項。  
+此處說明的主控台命令選項。  
   
-本節中，為了 「 選項 」 一詞也稱為 'switch'。  
+基於此章節的目的，「選項」一詞也稱為「參數」。  
   
-選項不區分大小寫和可能的開頭是 ' **-** ' **/** ' 字元。  
+選項不區分大小寫，而且開頭可能是 '**-**' 或 '**/**' 字元。  
   
-如果指定了選項，就一定要指定對應的選項參數。  
+如果指定了選項，就會強制指定對應的選項參數。  
   
-選項參數必須以泛空白字元分隔從選項中的字元。  
+選項參數必須與選項字元以空白字元分隔。  
   
 **語法範例：**  
   
@@ -36,23 +36,23 @@ Microsoft 為您提供執行及控制 SSMA 活動的一組健全命令列選項�
   
 `C:\> SSMAforDB2Console.EXE -s "C Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \AssessmentReportGenerationSample.xml" -v "C Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \VariableValueFileSample.xml" -c "C Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ServersConnectionFileSample.xml"`  
   
-包含空格的資料夾或檔案名稱應指定雙引號括住。  
+包含空格的資料夾或檔案名應該以雙引號來指定。  
   
-命令列項目和錯誤訊息的輸出會儲存在 STDOUT 或指定的檔案。  
+命令列專案和錯誤訊息的輸出會儲存在 STDOUT 或指定的檔案中。  
   
-### <a name="script-file-option--sscript"></a>指令碼檔案的選項:-s/指令碼  
-必要的參數，指令碼檔案的路徑/名稱指定要由 SSMA 執行的命令順序的指令碼。  
+### <a name="script-file-option--sscript"></a>指令檔選項：-s/腳本  
+強制參數，腳本檔案路徑/名稱會指定 SSMA 要執行的命令順序腳本。  
   
 **語法範例：**  
   
 `C:\>SSMAforDB2Console.EXE -s "C Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml"`  
   
-### <a name="variable-value-file-option--vvariable"></a>變數值檔案的選項:-v/變數  
-此檔案包含在指令碼檔案中使用的變數。 這是選用參數。 如果變數不是變數的檔案中宣告，並使用指令碼檔案中，應用程式就會產生錯誤，並結束主控台執行。  
+### <a name="variable-value-file-option--vvariable"></a>變數值檔案選項：-v/變數  
+此檔案包含腳本檔案中使用的變數。 這是選擇性參數。 如果變數未在變數檔案中宣告並用於腳本檔案中，應用程式會產生錯誤，並結束主控台執行。  
   
 **語法範例：**  
   
--   定義多個變數值檔案，可能是一個預設值，另一個執行個體特定值時適用的變數。 最後一個命令列引數中指定的變數檔案會接受喜好設定，以防萬一發生重複的變數：  
+-   定義于多個變數值檔案中的變數，可能是一個具有預設值的變數，以及另一個具有實例特定值（如果適用的話）。 在命令列引數中指定的最後一個變數檔案會採用喜好設定，以防有重複的變數：  
   
     `C:\>SSMAforDB2Console.EXE -s`  
   
@@ -60,14 +60,14 @@ Microsoft 為您提供執行及控制 SSMA 活動的一組健全命令列選項�
   
     `projects\global_variablevaluefile.xml -v "c:\migrationprojects\instance_variablevaluefile.xml"`  
   
-### <a name="server-connection-file-option--cserverconnection"></a>伺服器連接檔案的選項:-c/serverconnection  
-此檔案包含每一部伺服器的伺服器連接資訊。 每個伺服器定義會識別唯一的伺服器識別碼。 連接的指令碼檔案中所參考的伺服器識別碼與命令相關。  
+### <a name="server-connection-file-option--cserverconnection"></a>伺服器連接檔案選項：-c/serverconnection  
+此檔案包含每部伺服器的伺服器連接資訊。 每個伺服器定義都是由唯一的伺服器識別碼所識別。 伺服器識別碼會在腳本檔案中針對連接相關的命令參考。  
   
-伺服器定義可以是伺服器連線檔案和/或指令碼檔案的一部分。 指令碼檔案中的伺服器識別碼的優先順序高於伺服器連線檔案中，如果有重複的伺服器識別碼。  
+伺服器定義可以是伺服器連接檔案和/或腳本檔案的一部分。 腳本檔案中的伺服器識別碼優先于伺服器連接檔案，以防伺服器識別碼重複。  
   
 **語法範例：**  
   
--   伺服器識別碼之指令檔中且定義不同的伺服器連線檔案中，伺服器連線檔案會使用變數值檔案中定義的變數：  
+-   伺服器識別碼會在腳本檔案中使用，而且會定義在個別的伺服器連接檔案中，而伺服器連接檔案會使用變數值檔案中所定義的變數：  
   
     `C:\>SSMAforDB2Console.EXE -s "C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  -v`  
   
@@ -75,16 +75,16 @@ Microsoft 為您提供執行及控制 SSMA 活動的一組健全命令列選項�
   
     `c:\SsmaProjects\myserverconnectionsfile1.xml`  
   
--   伺服器定義內嵌在指令碼檔案中：  
+-   伺服器定義內嵌在腳本檔案中：  
   
     `C:\>SSMAforDB2Console.EXE -s "C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml"`  
   
-### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 輸出選項:-x / xmloutput [xmloutputfile]  
-此命令用來輸出至主控台或至 xml 檔案的 xml 格式的命令輸出訊息。  
+### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 輸出選項：-x/xmloutput [xmloutputfile]  
+此命令是用來將 xml 格式的命令輸出訊息輸出至主控台或 xml 檔案。  
   
-有兩個選項可供 xmloutput， 報導..,：  
+有兩個選項可供 xmloutput、視覺效果：  
   
--   如果 xmloutput 切換之後提供檔案路徑，則會輸出重新導向至檔案。  
+-   如果 filepath 是在 xmloutput 參數之後提供，則會將輸出重新導向至檔案。  
   
     **語法範例：**  
   
@@ -92,14 +92,14 @@ Microsoft 為您提供執行及控制 SSMA 活動的一組健全命令列選項�
   
     `"C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  -x d:\xmloutput\project1output.xml`  
   
--   如果沒有檔案路徑會提供 xmloutput 切換之後 xmlout 會顯示在主控台本身。  
+-   如果 xmloutput 參數之後未提供 filepath，則 xmlout 會顯示在主控台本身。  
   
     **語法範例：**  
   
     `C:\>SSMAforDB2Console.EXE -s "C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  -xmloutput`  
   
-### <a name="log-file-option--llog"></a>記錄檔選項:-l/記錄檔  
-在主控台應用程式中的所有 SSMA 作業取得都記錄在記錄檔。 這是選用參數。 如果在命令列指定記錄檔和其路徑，取得產生記錄檔，在指定的位置。 否則，它會產生在其預設位置。  
+### <a name="log-file-option--llog"></a>記錄檔選項：-l/log  
+主控台應用程式中的所有 SSMA 作業都會記錄在記錄檔中。 這是選擇性參數。 如果記錄檔及其路徑是在命令列中指定，則會在指定的位置產生記錄檔。 否則，它會在其預設位置中產生。  
   
 **語法範例：**  
   
@@ -107,8 +107,8 @@ Microsoft 為您提供執行及控制 SSMA 活動的一組健全命令列選項�
   
 `"C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  -l c:\SsmaProjects\migration1.log`  
   
-### <a name="project-environment-folder-option--eprojectenvironment"></a>專案環境資料夾的選項:-e/projectenvironment  
-這表示目前的 SSMA 專案的專案環境設定 資料夾。 這個參數是選擇性的。  
+### <a name="project-environment-folder-option--eprojectenvironment"></a>專案環境資料夾選項：-e/projectenvironment  
+這表示目前 SSMA 專案的 [專案環境設定] 資料夾。 這個參數是選擇性的。  
   
 **語法範例：**  
   
@@ -116,57 +116,57 @@ Microsoft 為您提供執行及控制 SSMA 活動的一組健全命令列選項�
   
 `"C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  -e c:\SsmaProjects\CommonEnvironment`  
   
-### <a name="secure-password-option--psecurepassword"></a>安全的密碼選項:-p/securepassword  
-這個選項表示伺服器連接的加密的密碼。 不同於其他所有選項： 選項或都不會執行任何指令碼有助於移轉相關的任何活動，但可協助管理移轉專案中使用的伺服器連接的密碼加密。  
+### <a name="secure-password-option--psecurepassword"></a>安全密碼選項：-p/securepassword  
+此選項表示伺服器連接的加密密碼。 它與所有其他選項不同：此選項不會在任何遷移相關的活動中執行任何腳本或協助，但有助於管理用於遷移專案中之伺服器連接的密碼加密。  
   
-您無法輸入任何其他選項和密碼，做為命令列參數。 否則，它會導致錯誤。 如需詳細資訊，請參閱[管理密碼](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94)一節。  
+您不能輸入任何其他選項或密碼做為命令列參數。 否則，它會導致錯誤。 如需詳細資訊，請參閱[管理密碼](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94)一節。  
   
-支援下列子選項`-p/securepassword`:  
+以下是支援的子選項`-p/securepassword`：  
   
--   若要將密碼保護的儲存體指定的伺服器識別碼，或在伺服器連線檔案中定義的所有伺服器 id。 -Overwrite 選項下, 面，更新密碼，如果已經存在：  
+-   針對指定的伺服器識別碼或伺服器連接檔案中定義的所有伺服器識別碼，將密碼新增至受保護的存放裝置。 下面的-overwrite 選項會更新密碼（如果已存在）：  
   
     `-p|-securepassword -a|add    {"<server_id>[, .n]"|all}` `-c|-serverconnection <server-connection-file> [-v|variable <variable-value-file>]``[-o|overwrite]`  
   
     `-p|-securepassword -a|add    {"<server_id>[, .n]"|all}``-s|-script <server-connection-file> [-v|variable <variable-value-file>] [-o|overwrite]`  
   
--   若要從受保護的儲存體指定的伺服器識別碼或所有的伺服器識別碼移除加密的密碼：  
+-   若要從指定伺服器識別碼或所有伺服器識別碼的受保護存放裝置中移除加密的密碼：  
   
     `-p/securepassword -r/remove {<server_id> [, ...n] | all}`  
   
--   若要顯示的加密密碼的伺服器識別碼的清單：  
+-   若要顯示已加密密碼的伺服器識別碼清單：  
   
     `-p/securepassword -l/list`  
   
--   若要匯出受保護的儲存體加密的檔案中儲存的密碼。 這個檔案是以使用者指定的複雜密碼加密。  
+-   將儲存在受保護儲存體中的密碼匯出至加密的檔案。 此檔案會使用使用者指定的傳遞片語進行加密。  
   
     `-p/securepassword -e/export {<server-id> [, ...n] | all} <encrypted-password -file>`  
   
--   加密-稍早匯出檔案匯入本機受保護的儲存體，使用使用者指定的複雜密碼。 一旦解密檔案，它會儲存在新的檔案，接著，在本機電腦上加密。  
+-   先前匯出的加密檔案會使用使用者指定的傳遞片語匯入到本機受保護的存放裝置。 一旦檔案解密之後，它就會儲存在新的檔案中，而該檔案接著會在本機電腦上加密。  
   
     `-p/securepassword -i/import {<server-id> [, ...n] | all} <encrypted-password -file>`  
   
-    可以使用逗號分隔符號來指定多個伺服器識別碼。  
+    您可以使用逗號分隔字元來指定多個伺服器識別碼。  
   
-### <a name="help-option--help"></a>[說明] 選項:-？ / 協助  
-顯示 SSMA 主控台選項的語法的摘要：  
+### <a name="help-option--help"></a>說明選項：-？/Help  
+顯示 SSMA 主控台選項的語法摘要：  
   
 `C:\>SSMAforDB2Console.EXE -?`  
   
-SSMA 主控台命令列選項以表格形式顯示，請參閱[附錄-1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)。  
+如需 SSMA 主控台命令列選項的表格式顯示，請參閱[附錄-1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)。  
   
-### <a name="securepassword-help-option--securepassword--help"></a>SecurePassword 說明選項:-securepassword-？ / 協助  
-顯示 SSMA 主控台選項的語法的摘要：  
+### <a name="securepassword-help-option--securepassword--help"></a>SecurePassword 說明選項：-SecurePassword-？/Help  
+顯示 SSMA 主控台選項的語法摘要：  
   
 `C:\>SSMAforDB2Console.EXE -securepassword -?`  
   
-SSMA 主控台命令列選項以表格形式顯示，請參閱[附錄-1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)  
+如需 SSMA 主控台命令列選項的表格式顯示，請參閱[附錄-1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)  
   
-### <a name="next-step"></a>下一個步驟  
-下一個步驟取決於您的專案需求：  
+### <a name="next-step"></a>後續步驟  
+下一步取決於您的專案需求：  
   
-1.  指定的密碼或匯出 / 匯入的密碼，請參閱 <<c0> [ 管理的密碼&#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md)。</c0>  
+1.  如需指定密碼或匯出/匯入密碼，請參閱[&#40;DB2ToSQL&#41;管理密碼](../../ssma/db2/managing-passwords-db2tosql.md)。  
   
-2.  要產生報表，請參閱[產生的報表&#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)。  
+2.  如需產生報表，請參閱[&#40;DB2ToSQL&#41;產生報表](../../ssma/db2/generating-reports-db2tosql.md)。  
   
-3.  如需疑難排解主控台中的問題，請參閱[疑難排解&#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)。  
+3.  如需主控台的疑難排解問題，請參閱[&#40;DB2ToSQL&#41;的疑難排解](../../ssma/db2/troubleshooting-db2tosql.md)。  
   

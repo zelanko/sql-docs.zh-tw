@@ -1,5 +1,5 @@
 ---
-title: XQuery 中的搜尋的字串 |Microsoft Docs
+title: XQuery 中的字串搜尋 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b34570120b22cea1ca12eaf146d41b596e43aecf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946252"
 ---
 # <a name="string-search-in-xquery"></a>XQuery 中的字串搜尋
@@ -44,7 +44,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 在上述查詢中，`where`中，FLOWR 運算式會篩選的結果`for`運算式，傳回的項目只滿足**contains （)** 條件。  
+ 在上一個查詢中， `where` FLOWR 運算式中的會篩選`for`運算式的結果，並只傳回符合**contains （）** 條件的元素。  
   
  以下是結果：  
   

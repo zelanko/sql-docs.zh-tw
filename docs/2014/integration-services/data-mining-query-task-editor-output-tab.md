@@ -1,5 +1,5 @@
 ---
-title: 資料採礦查詢工作編輯器 (輸出索引標籤) |Microsoft Docs
+title: 資料採礦查詢工作編輯器（輸出索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b381ec722125bfa6ad8a4b8102e2fa3b7a5c309
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890462"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>資料採礦查詢工作編輯器 (輸出索引標籤)
@@ -33,12 +33,12 @@ ms.locfileid: "68890462"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **描述**  
+ **說明**  
  輸入資料採礦查詢工作的描述。  
   
 ## <a name="output-tab-options"></a>輸出索引標籤選項  
  **[連接]**  
- 在清單中選取連線管理員，或按一下 [新增] 來建立新的連線管理員。  
+ 在清單中選取連線管理員，或按一下 [新增]**** 來建立新的連線管理員。  
   
  **新增**  
  建立新的連接管理員。 只能使用 ADO.NET 和 OLE DB 連接管理員類型。  
@@ -46,13 +46,13 @@ ms.locfileid: "68890462"
  **輸出資料表**  
  指定供預測查詢撰寫其結果的資料表。  
   
- **卸除並重新建立輸出資料表**  
+ **卸載並重新建立輸出資料表**  
  指出預測查詢是否應藉由卸除然後重新建立資料表，來覆寫目的地資料表的內容。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [資料採礦查詢工作編輯器 &#40;採礦模型索引標籤&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [資料採礦查詢工作編輯器 &#40;查詢索引標籤&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [資料採礦查詢工作編輯器 &#40;[模型] 索引標籤&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [[資料採礦查詢工作編輯器] &#40;查詢] 索引標籤&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
  [資料採礦設計師](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

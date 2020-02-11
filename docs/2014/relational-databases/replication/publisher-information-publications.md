@@ -1,5 +1,5 @@
 ---
-title: '[發行者資訊] 對話方塊中 SQL Server 複寫 |Microsoft Docs'
+title: SQL Server 複寫 [發行者資訊] 對話方塊 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,25 +13,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 344b899905e844312ee6e5a66455fc2fa14b446f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63462521"
 ---
 # <a name="sql-server-replication-publisher-information-dialog-box"></a>SQL Server 複寫 [發行者資訊] 對話方塊
   **[發行集]** 索引標籤可以提供在左窗格中所選取發行者之所有發行集的摘要資訊。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  
   
--   **排序**：在 [排序資料行]  對話方塊中排序一個或多個資料行。  
+-   **排序**：在 **[排序資料行]** 對話方塊中排序一個或多個資料行。  
   
--   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及這些資料行在 [選擇資料行]  對話方塊中的顯示順序。  
+-   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及在 **[選擇資料行]** 對話方塊中顯示這些資料行所依循的順序。  
   
--   **篩選**：根據 [篩選設定]  對話方塊中的資料行值，篩選方格中的資料列。  
+-   **篩選**：根據 **[篩選設定]** 對話方塊中的資料行值，篩選方格中的資料列。  
   
--   **清除篩選**：清除所有篩選設定方格。  
+-   **清除篩選**：清除方格的所有篩選設定。  
   
  篩選設定是每個方格特有的設定。 資料行選取和排序會套用至所有相同類型的方格，例如每個發行者的發行集方格。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "63462521"
  **[效能嚴重不足]** 狀態值與交易式訂閱和合併訂閱有關；對交易式訂閱而言，唯有已設定臨界值時，才會顯示此狀態值。 如需效能測量和設定閾值的資訊，請參閱[使用複寫監視器監視效能](monitor/monitor-performance-with-replication-monitor.md)和[在複寫監視器中設定閾值和警告](monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
  **發行集**  
- 每個發行集的名稱，格式為 *PublicationDatabaseName:PublicationName*。  
+ 每個發行集的名稱，格式為 *PublicationDatabaseName: PublicationName*。  
   
- **訂閱**  
+ **訂用帳戶**  
  每一個發行集的訂閱數目。  
   
  **正在同步處理**  
@@ -64,7 +64,7 @@ ms.locfileid: "63462521"
 -   對快照式複寫而言，「正在同步處理」表示散發代理程式正在執行，且目前正在複寫資料。  
   
  **目前的平均效能** 和 **目前最差效能**  
- 僅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 分別代表發行集之所有訂閱的平均效能評比和最差效能評比。 評比是以複寫監視器最近使用的度量單位為基礎，並不反映訂閱經過一段時間的效能。  
+ 僅限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 分別代表發行集之所有訂閱的平均效能評比和最差效能評比。 評比是以複寫監視器最近使用的度量單位為基礎，並不反映訂閱經過一段時間的效能。  
   
  對異動複寫而言，複寫監視器只會顯示已定義效能臨界值之發行集的值。 如果發行集未定義效能臨界值，則此資料行會顯示 **[未啟用]** 。 對合併式複寫而言，在相同連接類型 (撥號或 LAN) 上發生過五次同步處理，且每次同步處理都具有 50 或更多個變更之後，複寫監視器才會顯示值。 如果具有 50 或更多個變更的同步處理少於五次，或者最近的同步處理少於 50 個變更，則此資料行為空白。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "63462521"
   
 -   差  
   
--   嚴重  
+-   重大  
   
  如需如何定義效能評比和如何設定效能閾值的詳細資訊，請參閱[使用複寫監視器監視效能](monitor/monitor-performance-with-replication-monitor.md)。  
   

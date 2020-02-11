@@ -1,5 +1,5 @@
 ---
-title: 建立採礦模型的複本 |Microsoft Docs
+title: 建立一份採礦模型的複本 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7464c7d780a420b0f95b59ebde02494bd40661e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084214"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>建立採礦模型的複本
@@ -39,7 +39,7 @@ ms.locfileid: "66084214"
   
      -或-  
   
-     選取此模型。 在 [採礦模型]  功能表上，選取 [新增採礦模型]  。  
+     選取此模型。 在 [採礦模型]**** 功能表上，選取 [新增採礦模型]****。  
   
 4.  輸入新採礦模型的名稱，然後選取演算法。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -47,19 +47,19 @@ ms.locfileid: "66084214"
   
 1.  選取採礦模型。  
   
-2.  在 [**屬性**] 視窗中，按一下文字方塊，讓**篩選**屬性，然後按一下 [組建 **（...）** ] 按鈕。  
+2.  在 [**屬性**] 視窗中，按一下 [**篩選**] 屬性的文字方塊，然後按一下 [組建] **（...）** 按鈕。  
   
 3.  變更篩選條件。  
   
      如需如何使用篩選編輯器對話方塊的詳細資訊，請參閱 [將篩選套用至採礦模型](apply-a-filter-to-a-mining-model.md)。  
   
-4.  在 [**屬性**視窗，請在`AlgorithmParameters`] 文字方塊中，按一下**設定參數**，和變更演算法參數，如有必要。  
+4.  在 [**屬性**] 視窗的文字方塊`AlgorithmParameters`中，按一下 [**設定參數**]，並視需要變更演算法參數。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](mining-models-analysis-services-data-mining.md)   
- [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)   
+ [&#40;Analysis Services 的採礦模型篩選-資料採礦&#41;](mining-models-analysis-services-data-mining.md)   
+ [採礦模型工作和操作說明](mining-model-tasks-and-how-tos.md)   
  [從採礦模型刪除篩選](delete-a-filter-from-a-mining-model.md)  
   
   

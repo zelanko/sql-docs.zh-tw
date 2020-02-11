@@ -1,5 +1,5 @@
 ---
-title: 陳述式選項 |Microsoft Docs
+title: 語句選項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,26 +15,26 @@ ms.assetid: cd73b769-c8b5-43e0-9f80-b3011b7a6162
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3bf99aace8b058e429898846466294cc42612070
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948836"
 ---
 # <a name="statement-options"></a>陳述式選項
 > [!IMPORTANT]  
->  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用所提供的 ODBC 驅動程式。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 Oracle 所提供的 ODBC 驅動程式。  
   
- 這些選項可讓自訂應用程式內的特定執行陳述式。  
+ 這些選項可讓您自訂應用程式內的特定執行語句。  
   
-|陳述式選項|注意|  
+|語句選項|注意|  
 |----------------------|-----------|  
-|SQL_BIND_TYPE|不能超過 2,147,483,647 個位元組或可用的記憶體。|  
-|SQL_CONCURRENCY|允許的值，請參閱[資料指標類型和並行組合](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)。|  
-|SQL_CURSOR_TYPE|驅動程式不允許 SQL_CURSOR_DYNAMIC。 請參閱[SQLSetScrollOptions](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)如需詳細資訊。 允許的值，請參閱[資料指標類型和並行組合](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)。|  
-|SQL_GET_BOOKMARK|傳回 32 位元整數值，是目前的記錄數目的書籤。 僅; get無法設定。|  
-|SQL_KEYSET_SIZE|可以是只能設為 0。|  
-|SQL_MAX_ROWS|若要從結果中傳回的資料列的數目上限設定。|  
-|SQL_ROW_NUMBER|傳回 32 位元整數，指定目前的資料列結果集內的位置。 僅; get無法設定。|  
-|SQL_ROWSET_SIZE|不能超過 4,294,967,296 的資料列;不過，您必須將虛擬記憶體不足，無法在您的電腦，以處理您的要求。|  
-|SQL_USE_BOOKMARKS|支援 SQL_USE_BOOKMARKS 設 SQL_UB_ON，並公開固定長度書籤。|
+|SQL_BIND_TYPE|不能超過2147483647個位元組或可用的記憶體。|  
+|SQL_CONCURRENCY|如需允許的值，請參閱資料[指標類型和並行組合](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)。|  
+|SQL_CURSOR_TYPE|驅動程式不允許 SQL_CURSOR_DYNAMIC。 如需詳細資訊，請參閱[SQLSetScrollOptions](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) 。 如需允許的值，請參閱資料[指標類型和並行組合](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)。|  
+|SQL_GET_BOOKMARK|傳回32位的整數值，這是目前記錄號碼的書簽。 僅取得;無法設定。|  
+|SQL_KEYSET_SIZE|只能設定為0。|  
+|SQL_MAX_ROWS|要從結果集傳回的最大資料列數目。|  
+|SQL_ROW_NUMBER|傳回32位整數，指定結果集內目前資料列的位置。 僅取得;無法設定。|  
+|SQL_ROWSET_SIZE|不能超過4294967296個數據列;不過，您的電腦上必須有足夠的虛擬記憶體，才能處理您的要求。|  
+|SQL_USE_BOOKMARKS|支援將 SQL_USE_BOOKMARKS 設定為 SQL_UB_ON 並公開固定長度的書簽。|

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2425c15428dbaa05e9d29b2d9a89f8fc7d68f6c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054725"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>在子封裝中使用變數和參數的值
@@ -40,7 +40,7 @@ ms.locfileid: "66054725"
   
 3.  在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，若要定義變數的範圍，請執行下列其中之一：  
   
-    -   若要將範圍設為封裝，請按一下 [控制流程]  索引標籤之設計介面上的任意位置。  
+    -   若要將範圍設為封裝，按一下 [控制流程]**** 索引標籤之設計介面上的任意位置。  
   
     -   若要將範圍設定為「執行封裝」工作的父容器，請按一下該容器。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66054725"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，若要將範圍設定為封裝，請按一下 [控制流程]  索引標籤之設計介面上的任意位置。  
+3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，若要將範圍設定為封裝，請按一下 [控制流程]**** 索引標籤之設計介面上的任意位置。  
   
 4.  加入及設定變數。  
   
@@ -70,43 +70,43 @@ ms.locfileid: "66054725"
   
 ### <a name="to-add-a-parent-package-configuration-to-a-child-package"></a>若要將父封裝組態加入子封裝  
   
-1.  如果子封裝尚未開啟，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中開啟它。  
+1.  如果子封裝尚未開啟，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中開啟它。  
   
-2.  按一下 [控制流程]  索引標籤之設計介面中的任意位置。  
+2.  按一下 [控制流程]**** 索引標籤之設計介面中的任意位置。  
   
 3.  在 [SSIS]  功能表上，按一下 [封裝組態]  。  
   
-4.  在 [封裝組態組合管理]  對話方塊中，選取 [啟用封裝組態]  ，然後按一下 [加入]  。  
+4.  在 [封裝組態組合管理]**** 對話方塊中，選取 [啟用封裝組態]****，然後按一下 [加入]****。  
   
-5.  在 [封裝組態精靈] 的歡迎使用頁面上，按一下 [下一步]  。  
+5.  在 [封裝組態精靈] 的歡迎使用頁面上，按一下 [下一步]****。  
   
-6.  在 [選取組態類型] 頁面的 [組態類型]  清單中，選取 [父封裝變數]  ，然後執行下列其中之一：  
+6.  在 [選取組態類型] 頁面的 [組態類型]**** 清單中，選取 [父封裝變數]****，然後執行下列其中之一：  
   
-    -   選取 [直接指定組態設定]  ，然後在 [父變數]  方塊中，提供組態中所要使用之父封裝的變數名稱。  
+    -   選取 [直接指定組態設定]****，然後在 [父變數]**** 方塊中，提供組態中所要使用之父封裝的變數名稱。  
   
         > [!IMPORTANT]  
         >  變數名稱會區分大小寫。  
   
-    -   選取 [組態位置儲存在環境變數中]  ，然後在 [環境變數清單]  中選取包含變數名稱的環境變數。  
+    -   選取 [組態位置儲存在環境變數中]****，然後在 [環境變數清單]**** 中選取包含變數名稱的環境變數。  
   
-7.  按一下 [下一步]  。  
+7.  按 [下一步]  。  
   
-8.  在 [選取目標屬性] 頁面上，依序展開 [變數]  節點及要設定之變數的 [屬性]  節點，然後按一下組態所要設定的屬性。  
+8.  在 [選取目標屬性] 頁面上，依序展開 [變數]**** 節點及要設定之變數的 [屬性]**** 節點，然後按一下組態所要設定的屬性。  
   
-9. 按一下 [下一步]  。  
+9. 按 [下一步]  。  
   
 10. (選擇性) 在 [正在完成精靈] 頁面上，修改組態的預設名稱並檢閱組態資訊。  
   
-11. 按一下 [完成]  以完成精靈，並返回 [封裝組態組合管理]  對話方塊。  
+11. 按一下 [完成]**** 以完成精靈，並返回 [封裝組態組合管理]**** 對話方塊。  
   
-12. 在 [封裝組態組合管理]  對話方塊中，[組態]  方塊會列出新的組態。  
+12. 在 [封裝組態組合管理]**** 對話方塊中，[組態]**** 方塊會列出新的組態。  
   
-13. 按一下 [ **關閉**]。  
+13. 按一下 [關閉]  。  
   
 ## <a name="see-also"></a>另請參閱  
- [封裝組態](../../2014/integration-services/package-configurations.md)   
- [建立封裝組態](../../2014/integration-services/create-package-configurations.md)   
+ [套件設定](../../2014/integration-services/package-configurations.md)   
+ [建立套件設定](../../2014/integration-services/create-package-configurations.md)   
  [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)   
- [在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)  
+ [在套件中使用變數](../../2014/integration-services/use-variables-in-packages.md)  
   
   

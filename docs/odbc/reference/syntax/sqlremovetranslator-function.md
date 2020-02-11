@@ -20,18 +20,18 @@ ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8a577a868f7b56a6677da3cb12cfb29057ea66f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68024517"
 ---
 # <a name="sqlremovetranslator-function"></a>SQLRemoveTranslator 函式
-**合規性**  
- 導入的版本：ODBC 3.0  
+**標準**  
+ 引進的版本： ODBC 3。0  
   
  **摘要**  
- **SQLRemoveTranslator**移除轉譯器的相關資訊 Odbcinst.ini 這一節的系統資訊和遞減，轉譯器元件使用計數 1。  
+ **SQLRemoveTranslator**會從系統資訊的 Odbcinst 區段移除翻譯工具的相關資訊，並將翻譯工具的元件使用量計數遞減1。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,29 +44,29 @@ BOOL SQLRemoveTranslator(
   
 ## <a name="arguments"></a>引數  
  *lpszTranslator*  
- [輸入]轉譯程式註冊中的系統資訊的 Odbcinst.ini 索引鍵的名稱。  
+ 源在系統資訊的 Odbcinst 機碼中註冊的翻譯工具名稱。  
   
  *lpdwUsageCount*  
- [輸出]轉譯程式呼叫此函式之後的使用計數。  
+ 輸出在呼叫此函式之後，翻譯工具的使用計數。  
   
 ## <a name="returns"></a>傳回值  
- 如果成功，FALSE 如果失敗，則函數會傳回 TRUE。 如果系統資訊 中的項目不存在，此函式呼叫時，此函式會傳回 FALSE。  
+ 如果成功，函式會傳回 TRUE，如果失敗，則傳回 FALSE。 如果在呼叫此函式時，系統資訊中沒有任何專案存在，此函數會傳回 FALSE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLRemoveTranslator**會傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的此函式。  
+ 當**SQLRemoveTranslator**傳回 FALSE 時，可以藉由呼叫**SQLInstallerError**來取得相關聯* \*的 pfErrorCode*值。 下表列出可由**SQLInstallerError**傳回的* \*pfErrorCode*值，並在此函式的內容中說明每一個值。  
   
 |*\*pfErrorCode*|錯誤|描述|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|一般的安裝程式錯誤|發生錯誤，其中沒有特定的安裝程式錯誤。|  
-|ODBC_ERROR_COMPONENT_NOT_FOUND|在登錄中找不到的元件|安裝程式無法移除 translator 資訊，因為在登錄中不存在或找不到登錄中。|  
-|ODBC_ERROR_INVALID_NAME|無效的驅動程式或轉譯器名稱|*LpszTranslator*引數無效。|  
-|ODBC_ERROR_USAGE_UPDATE_FAILED|無法遞增或遞減的元件使用計數|安裝程式無法以遞減的驅動程式的使用計數。|  
-|ODBC_ERROR_OUT_OF_MEM|記憶體不足|由於記憶體不足，安裝程式無法執行函式。|  
+|ODBC_ERROR_GENERAL_ERR|一般安裝程式錯誤|發生錯誤，但沒有特定的安裝程式錯誤。|  
+|ODBC_ERROR_COMPONENT_NOT_FOUND|在登錄中找不到元件|安裝程式無法移除翻譯工具資訊，因為它不存在於登錄中，或在登錄中找不到。|  
+|ODBC_ERROR_INVALID_NAME|驅動程式或 translator 名稱無效|*LpszTranslator*引數無效。|  
+|ODBC_ERROR_USAGE_UPDATE_FAILED|無法遞增或遞減元件使用量計數|安裝程式無法遞減驅動程式的使用計數。|  
+|ODBC_ERROR_OUT_OF_MEM|記憶體不足|因為記憶體不足，所以安裝程式無法執行函數。|  
   
 ## <a name="comments"></a>註解  
- **SQLRemoveTranslator**補充[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)元件使用函式和更新的系統資訊中的計數。 只能從安裝應用程式，就應該呼叫此函式。  
+ **SQLRemoveTranslator**會補充[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)函數，並更新系統資訊中的元件使用計數。 此函式只能從安裝應用程式呼叫。  
   
- **SQLRemoveTranslator**會減 1 的元件使用計數。 如果元件使用計數變成 0，將會移除在系統資訊中的轉譯程式項目。 轉譯程式項目是在 [系統資訊] 下的 translator 名稱中的下列位置：  
+ **SQLRemoveTranslator**會將元件使用計數遞減1。 如果元件使用計數設為0，系統資訊中的 translator 專案就會被移除。 Translator 專案位於系統資訊的下列位置中，位於 translator 名稱底下：  
   
  `HKEY_LOCAL_MACHINE`  
   
@@ -76,12 +76,12 @@ BOOL SQLRemoveTranslator(
   
  `Odbcinst.ini`  
   
- **SQLRemoveTranslator**實際上不會移除任何檔案。 呼叫端程式負責刪除檔案，和維護的檔案使用計數。 僅元件使用計數和檔案使用計數已達到零之後實際刪除的檔案。 可以刪除某些元件中的檔案，與其他人不會刪除，取決於是否有遞增檔案使用計數的其他應用程式所使用的檔案。  
+ **SQLRemoveTranslator**實際上不會移除任何檔案。 呼叫程式會負責刪除檔案，並維護檔案使用計數。 只有在元件使用計數和檔案使用量計數都達到零之後，才會實際刪除檔案。 元件中的某些檔案可以刪除，而其他檔案則不會刪除，這取決於是否有其他應用程式使用檔案使用計數而增加。  
   
- **SQLRemoveTranslator**也稱為升級的程序的一部分。 如果應用程式偵測到它必須執行升級，而且它先前已安裝驅動程式，應該移除，然後重新安裝驅動程式。 **SQLRemoveTranslator**第一次應該呼叫以遞減的元件使用計數，然後**SQLInstallTranslatorEx**應該呼叫要遞增的元件使用計數。 應用程式安裝程式必須實際的舊檔案的新檔案取代。 檔案使用計數會維持不變，並使用較舊的版本檔案的其他應用程式現在會使用較新版本。  
+ **SQLRemoveTranslator**也會在升級過程中呼叫。 如果應用程式偵測到它必須執行升級，而且先前已安裝驅動程式，則應該移除該驅動程式，然後重新安裝。 應該先呼叫**SQLRemoveTranslator**以遞減元件使用計數，然後再呼叫**SQLInstallTranslatorEx**以遞增元件使用計數。 應用程式安裝程式必須實際以新的檔案取代舊的檔案。 檔案使用計數會維持不變，而使用舊版檔案的其他應用程式現在會使用較新的版本。  
   
 ## <a name="related-functions"></a>相關函數  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
-|安裝的轉譯器|[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|
+|安裝翻譯工具|[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|

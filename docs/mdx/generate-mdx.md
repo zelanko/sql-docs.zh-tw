@@ -1,5 +1,5 @@
 ---
-title: 產生 (MDX) |Microsoft Docs
+title: 產生（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005901"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
@@ -41,17 +41,17 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *String_Expression*  
  有效的字串運算式，這通常是指定集合中每個 Tuple 的目前成員名稱 (CurrentMember.Name)。  
   
- *分隔符號*  
+ *為止*  
  以字串運算式表示的有效分隔符號。  
   
 ## <a name="remarks"></a>備註  
- 如果未指定第二個集合，則**產生**函式會傳回套用至第一個集合，每個 tuple 的第二個集合中的 tuple 所產生的集合和聯集，然後將聯結所產生的設定。 如果**所有**指定，則此函式會保留在結果集中的重複項。  
+ 如果指定第二個集合，則**產生**函數會傳回一個集合，其方式是將第二個集合中的元組套用至第一個集合中的每個元組，然後依 union 聯結產生的集合。 如果指定**ALL** ，則函式會在結果集中保留重複的專案。  
   
- 如果指定的字串運算式，則**產生**函式會傳回所指定的字串運算式，對第一個集合，每個 tuple 評估，然後串連結果產生的字串。 另外，也可以選擇字串分隔符號，在產生的串連字串中分隔每個結果。  
+ 如果指定字串運算式，則**產生**函數會傳回一個字串，方法是針對第一個集合中的每個元組評估指定的字串運算式，然後串連結果。 另外，也可以選擇字串分隔符號，在產生的串連字串中分隔每個結果。  
   
 ## <a name="examples"></a>範例  
   
-### <a name="set"></a>將  
+### <a name="set"></a>設定  
  在以下範例中，查詢會傳回包含 Measure Internet Sales 數量四次的集合，因為 [Date].[Calendar Year].[Calendar Year].MEMBERS 集合中有四個成員：  
   
 ```  
@@ -72,7 +72,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- 最常見的實際用法**產生**評估複雜設定成員的集合運算式，例如 TopCount。 下列範例查詢會針對資料列上的每一個 Calendar Year 顯示前 10 大產品：  
+ 「**產生**」最常見的實際用法是針對一組成員評估複雜的集合運算式，例如 TopCount。 下列範例查詢會針對資料列上的每一個 Calendar Year 顯示前 10 大產品：  
   
 ```  
 SELECT   
@@ -89,7 +89,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
- 請注意，不同的前 10 個會顯示每年，而且使用**產生**是唯一的方法來取得這個結果。 只是交叉聯結 Calendar Years 以及前 10 大產品集合將會顯示所有年度的前 10 大產品，每一年都會重複，如以下範例所示：  
+ 請注意，每年會顯示不同的前10個，而且使用 [**產生**] 是取得此結果的唯一方式。 只是交叉聯結 Calendar Years 以及前 10 大產品集合將會顯示所有年度的前 10 大產品，每一年都會重複，如以下範例所示：  
   
 ```  
 SELECT   
@@ -105,7 +105,7 @@ FROM [Adventure Works]
 ```  
   
 ### <a name="string"></a>String  
- 下列範例示範使用**產生**傳回的字串：  
+ 下列範例示範如何使用「**產生**」來傳回字串：  
   
 ```  
 WITH   
@@ -124,9 +124,9 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  這種**產生**函式有助於進行偵錯計算，因為它可讓您傳回集合中顯示的所有成員名稱的字串。 這可能是更方便閱讀比一組嚴格 MDX 表示法， [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md)函式會傳回。  
+>  這種形式的**產生**函數在偵測計算時很有用，因為它可讓您傳回字串，以顯示集合中所有成員的名稱。 這可能比[SetToStr &#40;MDX&#41;](../mdx/settostr-mdx.md)函式所傳回之集合的嚴格 MDX 表示方式更容易閱讀。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

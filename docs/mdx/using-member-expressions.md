@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8d40d6a3b6cacb65cf1463b0eeb8b29e59e079e4
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893509"
 ---
 # <a name="using-member-expressions"></a>使用成員運算式
@@ -20,7 +20,7 @@ ms.locfileid: "68893509"
 
   成員運算式包含成員識別碼、成員函數或可轉換為成員的運算式。  
   
- 成員識別碼可以有許多不同格式。 最簡單的成員識別碼形式是由成員的名稱所組成。 例如:  
+ 成員識別碼可以有許多不同格式。 最簡單的成員識別碼形式是由成員的名稱所組成。 例如：  
   
 ```  
 SELECT Amount ON 0  
@@ -56,12 +56,12 @@ Dimension_Name
   
 ```  
   
- 存在著許多會傳回成員的 MDX 函數。 如需完整清單, 請參閱[Mdx 函數&#40;參考&#41; mdx](../mdx/mdx-function-reference-mdx.md)  
+ 存在著許多會傳回成員的 MDX 函數。 如需完整清單，請參閱[Mdx 函數參考 &#40;mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
 > [!NOTE]  
->  如需成員名稱和成員索引鍵的詳細資訊, 請參閱[使用成員、元組&#40;和&#41;設定 MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)。  
+>  如需成員名稱和成員索引鍵的詳細資訊，請參閱[使用成員、元組和 set &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)。  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
+ [MDX&#41;&#40;的運算式](../mdx/expressions-mdx.md)  
   
   

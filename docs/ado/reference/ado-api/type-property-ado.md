@@ -1,5 +1,5 @@
 ---
-title: 輸入屬性 (ADO) |Microsoft Docs
+title: Type 屬性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,31 +17,31 @@ ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ee1058299becb4a7a4234debc097516cb02dd41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937860"
 ---
 # <a name="type-property-ado"></a>Type 屬性 (ADO)
-表示作業的類型或資料類型的[參數](../../../ado/reference/ado-api/parameter-object.md)，[欄位](../../../ado/reference/ado-api/field-object.md)，或[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件。  
+表示[參數](../../../ado/reference/ado-api/parameter-object.md)、[欄位](../../../ado/reference/ado-api/field-object.md)或[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件的操作類型或資料類型。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
  設定或傳回[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)值。  
   
 ## <a name="remarks"></a>備註  
- 針對**參數**物件，**型別**屬性是讀取/寫入。 對新**欄位**附加到的物件[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)集合[記錄](../../../ado/reference/ado-api/record-object-ado.md)，**類型**之後，才是讀取/寫入[值](../../../ado/reference/ado-api/value-property-ado.md)屬性**欄位**已指定與此資料提供者已成功地加入新**欄位**藉由呼叫[更新](../../../ado/reference/ado-api/update-method.md)的方法**欄位**集合。  
+ 針對**參數**物件，**類型**屬性為讀取/寫入。 對於已附加至[記錄](../../../ado/reference/ado-api/record-object-ado.md)之[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合的新**欄位**物件，只有在指定**欄位**的[Value](../../../ado/reference/ado-api/value-property-ado.md)屬性，且資料提供者已藉由呼叫**Fields**集合的[Update](../../../ado/reference/ado-api/update-method.md)方法來成功加入新**欄位**之後，**類型**才為讀取/寫入。  
   
- 對於所有其他物件，**型別**屬性是唯讀的。  
+ 對於其他所有物件，**類型**屬性是唯讀的。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
   
 ||||  
 |-|-|-|  
 |[Field 物件](../../../ado/reference/ado-api/field-object.md)|[Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)|[Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [Type 屬性範例 (Field) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
- [Type 屬性範例 (Property) （VC + +）](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
- [RecordType 屬性 (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
+ [Type 屬性範例（Field）（VB）](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
+ [Type 屬性範例（Property）（VC + +）](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
+ [RecordType 屬性（ADO）](../../../ado/reference/ado-api/recordtype-property-ado.md)   
  [Type 屬性 (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)

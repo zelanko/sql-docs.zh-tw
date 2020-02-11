@@ -1,5 +1,5 @@
 ---
-title: 輸入屬性範例 (Property) (VB) |Microsoft Docs
+title: Type 屬性範例（Property）（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8def5c7089be85c9b6eb7700a8a5bcdaeebe99e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937853"
 ---
 # <a name="type-property-example-property-vb"></a>Type 屬性範例 (Property) (VB)
-此範例示範[型別](../../../ado/reference/ado-api/type-property-ado.md)屬性。 它是用於列出集合中的類型與名稱類似的公用程式模型[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)，[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)，依此類推。  
+這個範例會示範[Type](../../../ado/reference/ado-api/type-property-ado.md)屬性。 它是公用程式的模型，用來列出集合的名稱和類型，例如[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)、[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)等等。  
   
- 我們不需要開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)若要存取其**屬性**集合; 他們回到存在時**資料錄集**物件具現化。 不過，設定[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設**adUseClient**數個動態將屬性加入至**資料錄集**物件的**屬性**集合，讓範例更有趣。 為了說明，我們明確地使用[項目](../../../ado/reference/ado-api/item-property-ado.md)屬性來存取每個[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件。  
+ 我們不需要開啟[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)來存取其**Properties**集合;當**記錄集**物件具現化時，它們就會存在。 不過，將[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**會將數個動態屬性加入至**記錄集**物件的**properties**集合，讓範例更有趣。 為了方便說明，我們會明確地使用[Item](../../../ado/reference/ado-api/item-property-ado.md)屬性來存取每個[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件。  
   
 ```  
 'BeginTypePropertyVB  
@@ -148,5 +148,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
+ [Property 物件（ADO）](../../../ado/reference/ado-api/property-object-ado.md)   
  [Type 屬性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

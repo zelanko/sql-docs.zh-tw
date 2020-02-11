@@ -17,14 +17,14 @@ ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cce5ab3b735d3c641da4a6234e860d0528f107c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936709"
 ---
 # <a name="supports-method"></a>Supports 方法
-判斷指定[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件支援特定類型的功能。  
+判斷指定的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件是否支援特定類型的功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,22 +34,22 @@ boolean = recordset.Supports(CursorOptions )
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 傳回**布林**值，指出是否所有的功能，由識別*CursorOptions*提供者所支援的引數。  
+ 傳回**布林**值，指出提供者是否支援*CursorOptions*引數所識別的所有功能。  
   
 #### <a name="parameters"></a>參數  
  *CursorOptions*  
- A**長**運算式，其中包含一或多個[CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)值。  
+ 包含一個或多個[CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)值的**長**運算式。  
   
 ## <a name="remarks"></a>備註  
- 使用**支援**方法，以判斷哪些類型的功能**資料錄集**物件支援。 如果**Recordset**物件支援的功能，其對應的常數位於*CursorOptions*，則**支援**方法會傳回**True**. 否則，它會傳回**False**。  
+ 使用**支援**方法來判斷**記錄集**物件所支援的功能類型。 如果**記錄集**物件支援其對應常數在*CursorOptions*中的功能，**支援**方法會傳回**True**。 否則，它會傳回**False**。  
   
 > [!NOTE]
->  雖然**支援**方法可能會傳回 **，則為 True**針對指定的功能，它並不保證，提供者可以提供此功能在所有情況下。 **支援**方法只會傳回是否提供者可支援指定的功能，假設某些條件成立。 例如，**支援**方法可能表示**資料錄集**物件支援的更新，即使資料指標以多個資料表聯結，其中的某些資料行不是可更新為基礎。  
+>  雖然針對指定的功能，**支援**方法可能會傳回**True** ，但並不保證提供者可以在所有情況下提供此功能。 **支援**方法只會傳回提供者是否可支援指定的功能（假設符合特定條件）。 例如，**支援**方法可能會指出即使資料指標是以多個資料表聯結為基礎，**記錄集**物件還是支援更新，某些資料行則無法更新。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Supports 方法範例 (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
- [Supports 方法範例 （VC + +）](../../../ado/reference/ado-api/supports-method-example-vc.md)   
+ [支援方法範例（VB）](../../../ado/reference/ado-api/supports-method-example-vb.md)   
+ [支援方法範例（VC + +）](../../../ado/reference/ado-api/supports-method-example-vc.md)   
  [CursorType 屬性 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)

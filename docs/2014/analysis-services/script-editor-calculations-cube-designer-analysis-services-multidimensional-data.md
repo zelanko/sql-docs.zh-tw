@@ -1,5 +1,5 @@
 ---
-title: 指令碼編輯器 （計算索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
+title: 腳本編輯器（計算索引標籤，Cube 設計工具）（Analysis Services 多維度資料） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,29 +13,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d1546f9f708a32f6467b0f01c8b0644b610505e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069971"
 ---
 # <a name="script-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>指令碼編輯器 (計算索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
-  在 Cube 設計師中，使用 [計算]  索引標籤上的 [指令碼編輯器]  窗格，即可修改指令碼命令的運算式 (於表單檢視中)，或修改整個 Cube 指令碼 (於指令碼檢視中)。  
+  在 Cube 設計師中，使用 [計算]**** 索引標籤上的 [指令碼編輯器]**** 窗格，即可修改指令碼命令的運算式 (於表單檢視中)，或修改整個 Cube 指令碼 (於指令碼檢視中)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 |詞彙|定義|  
 |----------|----------------|  
-|**運算式**|針對 [中繼資料]  窗格中所選取的指令碼命令 (於表單檢視中)，或整個 Cube 指令碼 (於指令碼檢視中)，鍵入多維度運算式 (MDX) 的運算式和陳述式。<br /><br /> 從 **[計算工具]** 窗格中，將選取的元素拖曳到這個選項，以包括所選元素的 MDX 語法。|  
+|**運算式**|針對 [中繼資料]**** 窗格中所選取的指令碼命令 (於表單檢視中)，或整個 Cube 指令碼 (於指令碼檢視中)，鍵入多維度運算式 (MDX) 的運算式和陳述式。<br /><br /> 從 **[計算工具]** 窗格中，將選取的元素拖曳到這個選項，以包括所選元素的 MDX 語法。|  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度運算式 &#40;MDX&#41 參考](/sql/mdx/multidimensional-expressions-mdx-reference)   
- [Cube 設計師&#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [工具列&#40;計算索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [指令碼組合管理&#40;計算索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [計算工具&#40;計算索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
- [導出成員表單編輯器&#40;計算索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [命名集表單編輯器&#40;計算索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [計算&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)  
+ [&#40;MDX&#41; 參考的多維度運算式](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Cube 設計工具 &#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [工具列 &#40;計算] 索引標籤，Cube 設計師&#41; &#40;Analysis Services 多維度資料&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [腳本召集人 &#40;計算] 索引標籤、Cube 設計工具&#41; &#40;Analysis Services 多維度資料&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [計算工具 &#40;計算] 索引標籤，Cube 設計師&#41; &#40;Analysis Services 多維度資料&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
+ [匯出成員表單編輯器 &#40;計算] 索引標籤、Cube 設計工具&#41; &#40;Analysis Services 多維度資料&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [命名集表單編輯器 &#40;計算] 索引標籤，Cube 設計工具&#41; &#40;Analysis Services 多維度資料&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [&#40;Cube 設計師的計算&#41; &#40;Analysis Services 多維度資料&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

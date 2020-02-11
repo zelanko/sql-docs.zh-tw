@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211999"
 ---
 # <a name="create-a-resource-pool"></a>建立資源集區
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]來建立資源集區。  
   
--   **開始之前：** [限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
+-   **開始之前：**  [限制](#LimitationsRestrictions)事項、[許可權](#Permissions)  
   
--   **若要建立資源集區，請使用下列方式：** [SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
+-   **若要建立資源集區，請使用：**  [SQL Server Management Studio](#CreRPProp)、 [transact-sql](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -37,23 +37,23 @@ ms.locfileid: "68211999"
 ###  <a name="Permissions"></a> 權限  
  建立資源集區需要 CONTROL SERVER 權限。  
   
-##  <a name="CreRPProp"></a> 使用 SQL Server Management Studio 建立資源集區  
- **若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="CreRPProp"></a>使用 SQL Server Management Studio 建立資源集區  
+ **若要使用來建立資源集區[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
   
-2.  以滑鼠右鍵按一下 [資源管理員]  ，然後按一下 [屬性]  。  
+2.  以滑鼠右鍵按一下 [資源管理員]****，然後按一下 [屬性]****。  
   
 3.  在 **[資源集區]** 方格中，按一下空白資料列的第一個資料行。 這個資料行標示有星號 (*)。  
   
-4.  按兩下 [名稱]  資料行中的空白儲存格。 輸入您想要用於資源集區的名稱。  
+4.  按兩下 [名稱]**** 資料行中的空白儲存格。 輸入您想要用於資源集區的名稱。  
   
 5.  在資料列中按一下或按兩下要變更的任何其他資料格，然後輸入新值。  
   
-6.  若要儲存變更，請按一下 **[確定]** 。  
+6.  若要儲存變更，請按一下 **[確定]**。  
   
-##  <a name="CreRPTSQL"></a> 使用 Transact-SQL 建立資源集區  
- **若要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
+##  <a name="CreRPTSQL"></a>使用 Transact-sql 建立資源集區  
+ **若要使用來建立資源集區[!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  執行 `CREATE RESOURCE POOL` 陳述式，並指定要設定的屬性值。  
   
@@ -71,15 +71,15 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資源管理員](resource-governor.md)   
- [啟用資源管理員](enable-resource-governor.md)   
- [Resource Governor Resource Pool](resource-governor-resource-pool.md)   
+ [Resource Governor](resource-governor.md)   
+ [啟用 Resource Governor](enable-resource-governor.md)   
+ [Resource Governor 資源集區](resource-governor-resource-pool.md)   
  [變更資源集區設定](change-resource-pool-settings.md)   
  [刪除資源集區](delete-a-resource-pool.md)   
- [使用範本來設定資源管理員](configure-resource-governor-using-a-template.md)   
- [資源管理員工作負載群組](resource-governor-workload-group.md)   
- [資源管理員分類函數](resource-governor-classifier-function.md)   
- [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [使用範本設定 Resource Governor](configure-resource-governor-using-a-template.md)   
+ [Resource Governor 工作負載群組](resource-governor-workload-group.md)   
+ [Resource Governor 分類函數](resource-governor-classifier-function.md)   
+ [建立資源集區 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

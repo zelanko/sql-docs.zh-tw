@@ -1,5 +1,5 @@
 ---
-title: sys.database_audit_specifications (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases database_audit_specifications （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2a01e41c67c937a0a6d85e9f5c46427ab149b65b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67940201"
 ---
-# <a name="sysdatabaseauditspecifications-transact-sql"></a>sys.database_audit_specifications (Transact-SQL)
+# <a name="sysdatabase_audit_specifications-transact-sql"></a>sys.database_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含有關伺服器執行個體上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 稽核內之資料庫稽核規格的資訊。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
@@ -43,8 +43,8 @@ ms.locfileid: "67940201"
 ## <a name="remarks"></a>備註  
  如果資料庫為唯讀模式，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 功能無法加入資料庫稽核規格。  
   
-## <a name="permissions"></a>Permissions  
- 具有主體**ALTER ANY DATABASE AUDIT**或是**VIEW DEFINITION**權限、 dbo 角色以及 db_owners 固定的資料庫角色的成員具有存取此目錄檢視。 此外，不應拒絕主體**VIEW DEFINITION**權限。  
+## <a name="permissions"></a>權限  
+ 具有**ALTER ANY DATABASE AUDIT**或**VIEW DEFINITION**許可權的主體、dbo 角色和 db_owners 固定資料庫角色的成員，都可以存取此目錄檢視。 此外，主體不得被拒絕**VIEW DEFINITION**許可權。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   

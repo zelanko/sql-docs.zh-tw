@@ -1,5 +1,5 @@
 ---
-title: ceiling 函數 (XQuery) |Microsoft Docs
+title: 上限函數（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946572"
 ---
 # <a name="numeric-values-functions---ceiling"></a>數值函式 - ceiling 
@@ -39,19 +39,19 @@ fn:ceiling ( $arg as numeric?) as numeric?
  會套用函數的數字。  
   
 ## <a name="remarks"></a>備註  
- 如果類型 *$arg*是三個字的基底類型，其中**xs: float**， **xs: double**，或**xs: decimal**，傳回的型別是相同 *$arg*型別。  
+ 如果 *$arg*的類型是三個數值基底類型之一（ **xs： float**、 **xs： double**或**xs： decimal**），則傳回類型與 *$arg*類型相同。  
   
- 如果類型 *$arg*是型別衍生自其中一個數字的類型，傳回的類型是基底的數值類型。  
+ 如果 *$arg*的類型是衍生自其中一個數數值型別的類型，則傳回類型會是基底數數值型別。  
   
- Fn: floor、 fn: ceiling 或 fn: round 函數的輸入是否**xdt: untypedatomic**，它會隱含地轉換為**xs: double**。  
+ 如果 fn： floor、fn：天花板或 fn： round 函數的輸入是**xdt： untypedAtomic**，它會隱含地轉換為**xs： double**。  
   
  任何其他類型都會產生靜態錯誤。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的 AdventureWorks 資料庫。  
+ 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存在 AdventureWorks 資料庫的各種**xml**類型資料行中。  
   
 ### <a name="a-using-the-ceiling-xquery-function"></a>A. 使用 ceiling() XQuery 函數  
- 對於「產品型號 7」，此查詢傳回產品型號之製造過程中的工作中心位置的清單。 如有記載，則此查詢會針對每一個工作中心位置，傳回位置識別碼、工時和批量。 此查詢會使用**ceiling**函數傳回工時，做為值型別的**十進位**。  
+ 對於「產品型號 7」，此查詢傳回產品型號之製造過程中的工作中心位置的清單。 如有記載，則此查詢會針對每一個工作中心位置，傳回位置識別碼、工時和批量。 此查詢會使用**上限**函數，以**decimal**類型的值來傳回勞動時數。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -73,13 +73,13 @@ WHERE ProductModelID=7
   
 -   AWMI 命名空間前置詞代表 Adventure Works Manufacturing Instructions。 此前置詞是指要查詢之文件中使用的相同命名空間。  
   
--   **指示**已**xml**類型資料行。 因此， [query （） 方法 （XML 資料類型）](../t-sql/xml/query-method-xml-data-type.md)用來指定 XQuery。 XQuery 陳述式是指定成查詢方法的引數。  
+-   **指示**是**xml**類型資料行。 因此， [query （）方法（XML 資料類型）](../t-sql/xml/query-method-xml-data-type.md)會用來指定 XQuery。 XQuery 陳述式是指定成查詢方法的引數。  
   
--   **for...傳回**是迴圈建構。 在查詢中， **for**迴圈識別一份\<位置 > 項目。 針對每個工作中心位置，**傳回**中的陳述式**如**迴圈描述要產生的 XML:  
+-   **針對 .。。return**是迴圈結構。 在查詢中， **for**迴圈會識別> 元素的\<位置清單。 針對每個工作中心位置，「 **for**迴圈」中的**return**語句描述要產生的 XML：  
   
-    -   A\<位置 > 有 LocationID 和 LaborHrs 屬性的項目。 大括號 ({ }) 內的相對應運算式從文件中擷取必要值。  
+    -   具有\<LocationID 和 LaborHrs 屬性的位置> 元素。 大括號 ({ }) 內的相對應運算式從文件中擷取必要值。  
   
-    -   {$i/@LotSize } 運算式從文中擷取 LotSize 屬性文件中，如果有的話。  
+    -   {$i/@LotSize } 運算式會從檔中抓取 LotSize 屬性（如果有的話）。  
   
     -   以下是結果：  
   
@@ -97,10 +97,10 @@ ProductModelID Result
 ### <a name="implementation-limitations"></a>實作限制  
  以下為其限制：  
   
--   **Ceiling （)** 函式會將所有的整數值對應至 xs: decimal。  
+-   **上限（）** 函數會將所有整數值對應至 xs： decimal。  
   
 ## <a name="see-also"></a>另請參閱  
- [floor 函式&#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
- [round 函式&#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)  
+ [floor 函數 &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
+ [round 函數 &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)  
   
   

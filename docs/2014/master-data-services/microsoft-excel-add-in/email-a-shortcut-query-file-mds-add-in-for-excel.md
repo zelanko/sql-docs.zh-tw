@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8d8e6a882899993ef91659d44456ca95fbb19094
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478897"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>以電子郵件傳送捷徑查詢檔案 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，當您想要確定其他人與您使用的資料相同時，請將捷徑查詢檔案以電子郵件傳送給其他人。 您應該共用查詢，而不是儲存工作表並以電子郵件傳送。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須已安裝 Outlook 2010 或更新版本。  
@@ -29,15 +29,15 @@ ms.locfileid: "65478897"
   
 ### <a name="to-send-a-shortcut-query-file"></a>若要傳送捷徑查詢檔案  
   
-1.  確定工作表中的資料是使用您想要共用的格式。 如需有關篩選的資料和重新排序資料行的詳細資訊，請參閱 <<c0> [ 載入之前篩選資料&#40;MDS 增益集適用於 Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md)並[重新排序資料行&#40;MDS 增益集適用於 Excel&#41; ](reorder-columns-mds-add-in-for-excel.md).</c0>  
+1.  確定工作表中的資料是使用您想要共用的格式。 如需篩選資料和重新排列資料行的詳細資訊，請參閱[&#40;載入適用于 excel 的 Mds 增益集之前的篩選資料&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)和[針對 Excel&#41;重新排序 &#40;mds 增益集的資料行](reorder-columns-mds-add-in-for-excel.md)。  
   
-2.  在 [儲存和傳送]  群組中，按一下 [傳送查詢]  。 隨即開啟電子郵件，並附加捷徑查詢檔案。  
+2.  在 [儲存和傳送]**** 群組中，按一下 [傳送查詢]****。 隨即開啟電子郵件，並附加捷徑查詢檔案。  
   
 ## <a name="next-steps"></a>後續步驟  
   
 -   若要開啟捷徑查詢檔案，電子郵件收件者必須已安裝 MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 。 收件者可以按兩下檔案，將它開啟。  
   
 ## <a name="see-also"></a>另請參閱  
- [捷徑查詢檔案 &#40;適用於 Excel 的 MDS 增益集&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
+ [&#40;適用于 Excel 的 MDS 增益集的快捷方式查詢檔案&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_polybase_leave_group & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_polybase_leave_group （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0071746f2d65dd0c9c699beeacf404bf3dd7bb65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67941929"
 ---
-# <a name="sppolybaseleavegroup-transact-sql"></a>sp_polybase_leave_group & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  移除 PolyBase 向外延展計算群組中的 SQL Server 執行個體。 
+  從 PolyBase 群組中移除 SQL Server 實例，以進行相應放大計算。 
  
- SQL Server 執行個體必須具有[PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)安裝的功能。  PolyBase 可讓非 SQL Server 資料來源，例如 Hadoop 和 Azure blob 儲存體的整合。 另請參閱[sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)。  
+ SQL Server 實例必須安裝[PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)功能。  PolyBase 可整合非 SQL Server 的資料來源，例如 Hadoop 和 Azure blob 儲存體。 另請參閱[sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,16 +40,16 @@ sp_polybase_leave_group;
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
-## <a name="permissions"></a>Permissions  
- 需要 CONTROL SERVER 權限。  
+## <a name="permissions"></a>權限  
+ 需要 CONTROL SERVER 許可權。  
   
 ## <a name="remarks"></a>備註  
- 您只可以從群組移除計算節點。  
+ 您只能從群組中移除計算節點。  
   
- 執行預存程序之後, 重新啟動電腦上的 PolyBase 引擎和 PolyBase Data Movement Service。 若要確認在前端節點上執行下列 DMV: **sys.dm_exec_compute_nodes**。  
+ 執行預存程式之後，請重新開機 PolyBase 引擎並在電腦上 PolyBase 資料移動服務。 若要確認在前端節點上執行下列 DMV： **sys. dm_exec_compute_nodes**。  
   
 ## <a name="example"></a>範例  
- 此範例從 PolyBase 群組中移除目前的電腦。  
+ 此範例會從 PolyBase 群組中移除目前的電腦。  
   
 ```sql  
 EXEC sp_polybase_leave_group ;  

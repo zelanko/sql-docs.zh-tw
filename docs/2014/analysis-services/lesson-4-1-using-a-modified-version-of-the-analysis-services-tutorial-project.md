@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493946"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>使用 Analysis Services 教學課程專案的已修改版本
@@ -24,9 +24,9 @@ ms.locfileid: "69493946"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>下載並解壓縮專案檔案  
   
-1.  [按一下這裡](https://go.microsoft.com/fwlink/?LinkID=221866)前往下載頁面，此頁面會提供此教學課程隨附的範例專案。 本教學課程專案已包含於 **Analysis Services Tutorial SQL Server 2012** 下載中。  
+1.  [按一下這裡](https://go.microsoft.com/fwlink/?LinkID=221866)以移至下載頁面，其中提供本教學課程隨附的範例專案。 本教學課程專案已包含於 **Analysis Services Tutorial SQL Server 2012** 下載中。  
   
-2.  按一下 [Analysis Services Tutorial SQL Server 2012]，下載包含適用於此教學課程之專案的套件。  
+2.  按一下 [Analysis Services Tutorial SQL Server 2012]****，下載包含適用於此教學課程之專案的套件。  
   
      根據預設，.zip 檔案會儲存至 [下載] 資料夾。 您必須將 .zip 檔案移至路徑較短的位置 (例如，建立 C:\Tutorials 資料夾來儲存檔案)。  接著，您可以解壓縮包含在 .zip 檔案中的檔案。 如果您嘗試從路徑較長的 [下載] 資料夾解壓縮檔案，將會獲得課程 1。  
   
@@ -34,15 +34,15 @@ ms.locfileid: "69493946"
   
 4.  將 **Analysis Services Tutorial SQL Server 2012.zip** 移動到子資料夾。  
   
-5.  以滑鼠右鍵按一下該檔案，然後選取 [Extract All(全部解壓縮)]。  
+5.  以滑鼠右鍵按一下該檔案，然後選取 [Extract All(全部解壓縮)]****。  
   
 6.  瀏覽至 **Lesson 4 Start** 資料夾以尋找 **Analysis Services Tutorial.sln** 檔案。  
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>載入和處理增強型專案  
   
-1.  在[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]的 [檔案 ] 功能表上, 按一下 [**關閉方案**] 以關閉您不會使用的檔案。  
+1.  在[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]**的 [檔案**] 功能表上，按一下 [**關閉方案**] 以關閉您不會使用的檔案。  
   
-2.  在 [檔案] 功能表上，指向 [開啟舊檔]，再按一下 [專案/方案]。  
+2.  在 [檔案]  功能表上，指向 [開啟舊檔]  ，再按一下 [專案/方案]  。  
   
 3.  瀏覽到您解壓縮教學課程專案檔案的位置。  
   
@@ -56,44 +56,45 @@ ms.locfileid: "69493946"
 ### <a name="data-source-view"></a>[資料來源檢視]  
  增強型專案中的資料來源檢視多包含一個事實資料表及四個維度資料表，它們來自 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫。  
   
- 請注意, 在 [資料來源] 視圖中有十\<個數據表時, 所有資料表 > 圖表會變得很擁擠。 以致於不容易了解資料表之間的關聯性及尋找特定資料表。 為了解決這個問題，資料表分成兩個邏輯圖表：[網際網路銷售] 圖表和 [轉售商銷售] 圖表。 這些圖表各以單一事實資料表為中心。 建立邏輯圖表可讓您檢視及使用資料來源檢視中的資料表的特定子集，而不是檢視單一圖表中的所有資料表及其關聯性。  
+ 請注意，在 [資料來源] 視圖中有十\<個數據表時，所有資料表> 圖表會變得很擁擠。 以致於不容易了解資料表之間的關聯性及尋找特定資料表。 為了解決這個問題，資料表分成兩個邏輯圖表：[網際網路銷售]**** 圖表和 [轉售商銷售]**** 圖表。 這些圖表各以單一事實資料表為中心。 建立邏輯圖表可讓您檢視及使用資料來源檢視中的資料表的特定子集，而不是檢視單一圖表中的所有資料表及其關聯性。  
   
 #### <a name="internet-sales-diagram"></a>Internet Sales 圖表  
- [網際網路銷售] 圖表包含透過網際網路直接向客戶銷售 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 產品之相關資料表。 圖表中的資料表為 4 個維度資料表和 1 個事實資料表，這些是您在第 1 課新增至 **Adventure Works DW 2012** 資料來源檢視中的資料表。 這些資料表如下：  
+ [網際網路銷售]**** 圖表包含透過網際網路直接向客戶銷售 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 產品之相關資料表。 圖表中的資料表為 4 個維度資料表和 1 個事實資料表，這些是您在第 1 課新增至 **Adventure Works DW 2012** 資料來源檢視中的資料表。 這些資料表如下：  
   
--   **地理位置**  
+-   **區域**  
   
 -   **客戶**  
   
 -   **日期**  
   
--   **產品**  
+-   **Products**  
   
 -   **InternetSales**  
   
 #### <a name="reseller-sales-diagram"></a>轉售商銷售圖表  
- [轉售商銷售] 圖表包含與轉售商銷售 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 產品有關的資料表。 此圖表包含下列七個維度資料表及一個事實資料表，它們來自 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫：  
+ [轉售商銷售]**** 圖表包含與轉售商銷售 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 產品有關的資料表。 此圖表包含下列七個維度資料表及一個事實資料表，它們來自 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫：  
   
--   **轉售商**  
+-   **Reseller**  
   
--   **促銷**  
+-   **升級**  
   
 -   **SalesTerritory**  
   
--   **Geography**  
+-   **區域**  
   
 -   **日期**  
   
--   **產品**  
+-   **Products**  
   
 -   **員工**  
   
 -   **ResellerSales**  
   
- 請注意，**DimGeography**、**DimDate** 和 **DimProduct** 資料表同時用於 [網際網路銷售額] 圖表和 [轉售商銷售] 圖表。 維度資料表可連結至多個事實資料表。  
+ 請注意，**DimGeography**、**DimDate** 和 **DimProduct** 資料表同時用於 [網際網路銷售額]**** 圖表和 [轉售商銷售]**** 圖表。 維度資料表可連結至多個事實資料表。  
   
 ### <a name="database-and-cube-dimensions"></a>資料庫和 Cube 維度  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案包含 5 個新資料庫維度， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 包含這 5 個與 Cube 維度相同的維度。 這些維度已定義為具有階層和屬性，這些已使用具名計算、構成要素成員索引鍵和顯示資料夾來修改過。 下列清單描述的是新的維度。  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案包含 5 個新資料庫維度， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 包含這 5 個與 Cube 維度相同的維度。 這些維度已定義為具有階層和屬性，這些已使用具名計算、構成要素成員索引鍵和顯示資料夾來修改過。 下列清單描述的是新的維度。  
   
  Reseller 維度  
  Reseller 維度是依據 **Adventure Works DW 2012** 資料來源檢視中的 **Reseller** 資料表。  
@@ -111,7 +112,8 @@ ms.locfileid: "69493946"
  Geography 維度是依據 **Adventure Works DW 2012** 資料來源檢視中的 **Geography** 資料表。  
   
 #### <a name="analysis-services-cube"></a>Analysis Services Cube  
- **Analysis Services Tutorial** Cube 現在包含兩個量值群組：以 **InternetSales** 資料表為基礎的原始量值群組，和以 **Adventure Works DW 2012** 資料來源檢視中的 **ResellerSales** 資料表為基礎的另一個量值群組。  
+ 
+  **Analysis Services Tutorial** Cube 現在包含兩個量值群組：以 **InternetSales** 資料表為基礎的原始量值群組，和以 **Adventure Works DW 2012** 資料來源檢視中的 **ResellerSales** 資料表為基礎的另一個量值群組。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [定義父子式階層中父屬性 (Attribute) 的屬性 (Property)](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 

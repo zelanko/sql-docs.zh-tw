@@ -1,5 +1,5 @@
 ---
-title: UpdateBatch 和 CancelBatch 方法範例 （VC + +） |Microsoft Docs
+title: UpdateBatch 和 CancelBatch 方法範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a487ce96f20f574d5b3996e9e3948e423601cb10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942911"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>UpdateBatch 和 CancelBatch 方法範例 (VC++)
-此範例示範[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法搭配[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法。  
+這個範例會將[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法與[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法一起示範。  
   
 ```  
 // BeginUpdateBatchCpp.cpp  
@@ -211,5 +211,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [CancelBatch 方法 (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
+ [CancelBatch 方法（ADO）](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)

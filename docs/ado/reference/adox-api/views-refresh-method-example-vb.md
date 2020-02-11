@@ -1,5 +1,5 @@
 ---
-title: Views Refresh 方法範例 (VB) |Microsoft Docs
+title: Views Refresh 方法範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0d50c8cab60ddf1839c5683023af0b90ebe527c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964739"
 ---
 # <a name="views-refresh-method-example-vb"></a>Views Refresh 方法範例 (VB)
-下列程式碼示範如何重新整理[檢視](../../../ado/reference/adox-api/views-collection-adox.md)的集合[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)。 這必要的前[檢視](../../../ado/reference/adox-api/view-object-adox.md)物件從**目錄**可以存取。  
+下列程式碼顯示如何重新整理[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)的[Views](../../../ado/reference/adox-api/views-collection-adox.md)集合。 這是必要的，才可存取**目錄**中的[View](../../../ado/reference/adox-api/view-object-adox.md)物件。  
   
 ```  
 ' BeginViewsRefreshVB  
@@ -56,5 +56,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
+ [Refresh 方法（ADO）](../../../ado/reference/ado-api/refresh-method-ado.md)   
  [Views 集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

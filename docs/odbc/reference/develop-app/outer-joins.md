@@ -14,26 +14,26 @@ ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a4bf875b3afd21f6b8cb211c999401b0ecb80879
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987810"
 ---
 # <a name="outer-joins"></a>外部聯結
-ODBC 支援 SQL-92 左、 右方和完整外部聯結語法。 外部聯結的逸出序列是  
+ODBC 支援 SQL-92 left、right 和 full outer join 語法。 外部聯結的 escape 序列是  
   
- **{oj** _outer-join_ **}**  
+ **{oj** _outer-join_**}**  
   
- 何處*外部聯結*是  
+ 其中*外部聯結*是  
   
- *資料表參考*{**LEFT&#124;權限&#124;完整} 外部聯結**{*資料表參考* &#124; *外部聯結*} **ON** _搜尋條件_  
+ *資料表-參考*{**LEFT &#124; RIGHT &#124; FULL} 外部聯結**{*資料表參考*&#124;*外部聯結*}**的**_搜尋條件_  
   
- *資料表引用*指定資料表名稱，並*搜尋條件*指定之間的聯結條件*資料表參考*。  
+ *資料表參考*會指定資料表名稱，而*搜尋條件*會指定*資料表參考*之間的聯結條件。  
   
- 外部聯結要求必須出現在之後**FROM**關鍵字，以及之前**其中**子句 （如果有的話）。 如需完整語法的資訊，請參閱[外部聯結逸出序列](../../../odbc/reference/appendixes/outer-join-escape-sequence.md)附錄 c:SQL 文法。  
+ 外部聯結要求必須出現在**from**關鍵字之後和**WHERE**子句（如果有的話）的前面。 如需完整的語法資訊，請參閱附錄 C： SQL 文法中的[外部聯結轉義順序](../../../odbc/reference/appendixes/outer-join-escape-sequence.md)。  
   
- 例如，下列 SQL 陳述式建立相同的結果集，會列出所有的客戶，並顯示具有開啟的訂單。 第一個陳述式會使用逸出序列的語法。 第二個陳述式會使用適用於 Oracle 的原生的語法，而且不具互通性。  
+ 例如，下列 SQL 語句會建立相同的結果集，以列出所有客戶，並顯示有開啟訂單的。 第一個語句使用 escape 序列語法。 第二個語句使用 Oracle 的原生語法，而且無法互通。  
   
 ```  
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status  
@@ -45,4 +45,4 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
    WHERE (Orders.Status='OPEN') AND (Customers.CustID= Orders.CustID(+))  
 ```  
   
- 若要判斷的外部資料來源及驅動程式支援的聯結類型，應用程式會呼叫**SQLGetInfo** SQL_OJ_CAPABILITIES 具有旗標。 可能支援的外部聯結類型會左右，、 完整或巢狀外部聯結;外部聯結中的資料行名稱在這**ON**子句不需要在其各自的資料表名稱的順序相同**OUTER JOIN**子句; 搭配外部聯結，以及使用的外部聯結的內部聯結任何 ODBC 的比較運算子。 如果 SQL_OJ_CAPABILITIES 資訊類型會傳回 0，則支援外部聯結子句。
+ 為了判斷資料來源和驅動程式支援的外部聯結類型，應用程式會使用 SQL_OJ_CAPABILITIES 旗標來呼叫**SQLGetInfo** 。 可能支援的外部聯結類型包括 left、right、full 或 nested outer join;**ON**子句中的資料行名稱與**外部聯結**子句中的個別資料表名稱順序不相同的外部聯結;內部聯結搭配外部聯結使用;和使用任何 ODBC 比較運算子的外部聯結。 如果 SQL_OJ_CAPABILITIES 資訊類型傳回0，則不支援任何外部聯結子句。

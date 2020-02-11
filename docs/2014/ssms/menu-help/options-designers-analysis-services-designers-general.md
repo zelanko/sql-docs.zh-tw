@@ -1,5 +1,5 @@
 ---
-title: 選項 （設計工具-Analysis Services 設計工具-一般） |Microsoft Docs
+title: 選項（設計工具-Analysis Services 設計工具-一般） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3378dd7ada96b1885d802804a6e2e2e3dcbd0891
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283645"
 ---
-# <a name="options-designers-analysis-services-designers-general"></a>選項 （設計工具-Analysis Services 設計工具-一般）
+# <a name="options-designers-analysis-services-designers-general"></a>選項（設計工具-Analysis Services 設計工具-一般）
   使用 [設計師]  、[維護計畫]  、[Analysis Services]  、[一般]  頁面，來決定 Analysis Services 設計師的預設行為。  
   
-## <a name="connectivity"></a>連接性  
+## <a name="connectivity"></a>連線能力  
  查詢逾時  
  在產生錯誤之前，設計師等候查詢回應所需的秒數。  
   

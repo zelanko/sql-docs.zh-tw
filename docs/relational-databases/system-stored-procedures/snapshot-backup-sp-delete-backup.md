@@ -1,5 +1,5 @@
 ---
-title: sp_delete_backup & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_delete_backup （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2015
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 808e50ae-ff6e-4520-9ce2-530591d3d59b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 49eb0906a9a5af1fec2abfeec3ef58845b605e69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67941827"
 ---
-# <a name="spdeletebackup-transact-sql"></a>sp_delete_backup & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sp_delete_backup-transact-sql"></a>sp_delete_backup （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  刪除所有快照集和備份檔案包含從指定的資料庫設定的快照集備份。 此系統預存程序是唯一的建議的方法，來管理快照集備份組。 如需詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
+  從指定的資料庫中，刪除組成快照集備份組的所有快照和備份檔案。 這個系統預存程式是唯一建議用來管理快照集備份組的方法。 如需詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -36,17 +36,17 @@ sys.sp_delete_backup
 ```  
   
 ## <a name="arguments"></a>引數  
- *[ @backup_url = ] backup_meta_file_url*  
- 備份會遭到刪除，這會刪除所有快照集，其中包含指定的備份組包括備份檔案本身的 URL。  
+ *[ @backup_url =] backup_meta_file_url*  
+ 要刪除之備份的 URL，這會刪除組成指定備份組的所有快照，包括備份檔案本身。  
   
- *[ @db_name =] 資料庫名稱*  
- 包含要刪除的快照集之資料庫的名稱。 當資料庫已提供名稱，系統會驗證備份 URL 提供指定之資料庫的備份 URL，並使用[sp_delete_backup_file_snapshot &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)來刪除每個快照集。 如果沒有提供資料庫名稱時，不會執行這項資料庫檢查。  
+ *[ @db_name =] database_name*  
+ 包含要刪除之快照集的資料庫名稱。 提供資料庫名稱時，系統會驗證所提供的備份 URL 是指定資料庫的備份 URL，並使用[sp_delete_backup_file_snapshot &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)來刪除每個快照集。 如果未提供任何資料庫名稱，則不會執行此資料庫檢查。  
   
-## <a name="permissions"></a>Permissions  
- 需要 ALTER ANY DATABASE 權限或指定的資料庫上的 ALTER 權限。  
+## <a name="permissions"></a>權限  
+ 需要指定資料庫的 ALTER ANY DATABASE 許可權或 ALTER 許可權。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.fn_db_backup_file_snapshots &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   
- [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)  
+ [fn_db_backup_file_snapshots &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   
+ [sp_delete_backup_file_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)  
   
   

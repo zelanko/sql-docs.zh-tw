@@ -1,5 +1,5 @@
 ---
-title: Axis 物件 (ADO MD) |Microsoft Docs
+title: Axis 物件（ADO MD） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,34 +16,34 @@ ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf2b072acfda34ebdcafc1af82cd90c6be5d2537
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939963"
 ---
 # <a name="axis-object-ado-md"></a>Axis 物件 (ADO MD)
-表示位置或包含一或多個維度的成員可選取的資料格集的篩選座標軸。  
+表示儲存格集的位置或篩選軸，其中包含一或多個維度的選取成員。  
   
 ## <a name="remarks"></a>備註  
- **軸**物件可以包含之[軸](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)集合，或由[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)屬性[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。  
+ **Axis**物件可包含在[座標軸](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)集合中，或由[集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)的[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)屬性傳回。  
   
- 使用集合和屬性的**軸**物件時，您可以執行下列動作：  
+ 使用**Axis**物件的集合和屬性，您可以執行下列動作：  
   
--   找出**軸**具有[名稱](../../../ado/reference/ado-md-api/name-property-ado-md.md)屬性。  
+-   使用[Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)屬性來識別**軸**。  
   
--   逐一查看每個位置，沿著**軸**使用[位置](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)集合。  
+-   使用[位置](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)集合逐一查看**軸**上的每個位置。  
   
--   取得維度的數目上**軸**具有[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)屬性。  
+-   取得**軸**上具有[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)屬性的維度數目。  
   
--   取得提供者特定屬性的**軸**與標準的 ADO[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
+-   使用標準的 ADO[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合，取得**座標軸**的提供者專屬屬性。  
   
  本章節包含下列主題。  
   
--   [屬性、 方法和事件](../../../ado/reference/ado-md-api/axis-object-properties-methods-and-events.md)  
+-   [屬性、方法和事件](../../../ado/reference/ado-md-api/axis-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Axis 範例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [Axes 集合 (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
- [Positions 集合 (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
+ [Axis 範例（VBScript）](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+ [軸集合（ADO MD）](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
+ [位置集合（ADO MD）](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
  [Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: sp_changelogreader_agent (Transact-sql) |Microsoft Docs
+title: sp_changelogreader_agent （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/15/2018
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf2a18543f6f5db30e36965c9e399968402292e1
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68768876"
 ---
-# <a name="spchangelogreaderagent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
+# <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   變更記錄讀取器代理程式的安全性屬性。 這個預存程序執行於發行集資料庫的發行者端。  
@@ -43,43 +43,43 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_login = ] 'job_login'`這是用來執行代理程式之帳戶的登入。 *job_login*是**Nvarchar (257)** , 預設值是 Null。 在 Azure SQL Database 受控執行個體上, 使用 SQL Server 帳戶。 *這無法針對非*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者進行變更 *。*  
+`[ @job_login = ] 'job_login'`這是用來執行代理程式之帳戶的登入。 *job_login*是**Nvarchar （257）**，預設值是 Null。 在 Azure SQL Database 受控執行個體上，使用 SQL Server 帳戶。 *這無法針對非*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *發行者*進行變更。  
   
-`[ @job_password = ] 'job_password'`這是用來執行代理程式之帳戶的密碼。 *job_password*是**sysname**, 預設值是 Null。  
+`[ @job_password = ] 'job_password'`這是用來執行代理程式之帳戶的密碼。 *job_password*是**sysname**，預設值是 Null。  
   
 > [!IMPORTANT]  
 >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
-`[ @publisher_security_mode = ] publisher_security_mode`這是連接到發行者時, 代理程式所使用的安全性模式。 *publisher_security_mode*是**Smallint**, 預設值是 Null。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證, **1**指定 Windows 驗證。  
+`[ @publisher_security_mode = ] publisher_security_mode`這是連接到發行者時，代理程式所使用的安全性模式。 *publisher_security_mode*是**Smallint**，預設值是 Null。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證， **1**指定 Windows 驗證。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'`這是連接到發行者時所使用的登入。 *publisher_login*是**sysname**, 預設值是 Null。 當*publisher_security_mode*為**0**時, 必須指定*publisher_login* 。 如果*publisher_login*為 Null, 而*publisher_security_mode*為**1**, 則連接到發行者時, 會使用*job_login*中指定的 Windows 帳戶。  
+`[ @publisher_login = ] 'publisher_login'`這是連接到發行者時所使用的登入。 *publisher_login*是**sysname**，預設值是 Null。 當*publisher_security_mode*為**0**時，必須指定*publisher_login* 。 如果*publisher_login*是 Null，而且*publisher_security_mode*是**1**，則連接到發行者時，會使用*job_login*中指定的 Windows 帳戶。  
   
-`[ @publisher_password = ] 'publisher_password'`這是連接到發行者時所使用的密碼。 *publisher_password*是**sysname**, 預設值是 Null。  
+`[ @publisher_password = ] 'publisher_password'`這是連接到發行者時所使用的密碼。 *publisher_password*是**sysname**，預設值是 Null。  
   
 > [!IMPORTANT]  
 >  請勿使用空白密碼。 請使用增強式密碼。 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
-`[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**, 預設值是 Null。 只支援非 SQL Server 發行者使用這個參數。  
+`[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，預設值是 Null。 只支援非 SQL Server 發行者使用這個參數。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** (成功) 或**1** (失敗)  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
  **sp_changelogreader_agent**用於異動複寫中。  
   
- **sp_changelogreader_agent**是用來變更用來執行記錄讀取器代理程式的 Windows 帳戶。 您可以變更現有 Windows 登入的密碼，或者提供新的 Windows 登入和密碼。  
+ **sp_changelogreader_agent**是用來變更執行記錄讀取器代理程式所使用的 Windows 帳戶。 您可以變更現有 Windows 登入的密碼，或者提供新的 Windows 登入和密碼。  
   
  變更代理程式的登入或密碼之後，您必須先停止並重新啟動代理程式，變更才會生效。  
   
-## <a name="permissions"></a>Permissions  
- 只有**系統管理員 (sysadmin** ) 固定伺服器角色或**db_owner**固定資料庫角色的成員, 才能夠執行**sp_changelogreader_agent**。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_changelogreader_agent**。  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
+ [sp_helplogreader_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
  [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
   
   

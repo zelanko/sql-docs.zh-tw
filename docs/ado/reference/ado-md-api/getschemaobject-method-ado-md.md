@@ -1,5 +1,5 @@
 ---
-title: GetSchemaObject 方法 (ADO MD) |Microsoft Docs
+title: GetSchemaObject 方法（ADO MD） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 690c81a46c62c8844780e82b5c82a0ff7301105d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949768"
 ---
 # <a name="getschemaobject-method-ado-md"></a>GetSchemaObject 方法 (ADO MD)
-擷取的 ADO MD 結構描述物件 ([維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)，[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)，[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)，或[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)) 依其[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md).  
+依[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)，抓取 ADO MD 架構物件（[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) [、階層、](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)或[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,15 +35,15 @@ Set object = CubeDef.GetSchemaObject (ObjType, UniqueName)
   
 #### <a name="parameters"></a>參數  
  *ObjType*  
- A [SchemaObjectTypeEnum](../../../ado/reference/ado-md-api/schemaobjecttypeenum.md)值，指定哪些類型的結構描述物件 （維度、 階層、 層級或成員） 擷取。  
+ [SchemaObjectTypeEnum](../../../ado/reference/ado-md-api/schemaobjecttypeenum.md)值，指定要抓取的架構物件類型（維度、階層、層級或成員）。  
   
  *UniqueName*  
- A**字串**指定**UniqueName**要擷取之物件的屬性值。  
+ **字串**，指定要抓取之物件的**UniqueName**屬性值。  
   
 ## <a name="remarks"></a>備註  
- **GetSchemaObject**擷取使用其唯一的名稱，而所指定的物件**UniqueName**屬性。 不需要知道，父物件的名稱和父集合不需要填入，以擷取結構描述物件。  
+ **GetSchemaObject**會使用其唯一名稱來抓取物件，如**UniqueName**屬性所指定。 父物件的名稱不需要是已知的，而且不需要填入父集合來抓取架構物件。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [CubeDef 物件 (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,5 +1,5 @@
 ---
-title: 自動化 (XQuery) |Microsoft Docs
+title: 不可部分完成（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e034e6464e395c1516eed874ed1c0cff2c32238f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985703"
 ---
 # <a name="atomization-xquery"></a>自動化 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  自動化是擷取項目的具類型值之處理序。 此處理序在某些情況下是隱含的。 有些 XQuery 運算子 (例如算術和比較運算子) 與此處理序相依。 例如，當您套用至節點的直接的算術運算子，節點的具類型的值第一個擷取隱含叫用[資料函式](../xquery/data-accessor-functions-data-xquery.md)。 這將會以運算元將不可部份完成值傳遞至算術運算子。  
+  自動化是擷取項目的具類型值之處理序。 此處理序在某些情況下是隱含的。 有些 XQuery 運算子 (例如算術和比較運算子) 與此處理序相依。 例如，當您將算術運算子直接套用至節點時，節點的具類型值會先隱含叫用[資料函數](../xquery/data-accessor-functions-data-xquery.md)來取得。 這將會以運算元將不可部份完成值傳遞至算術運算子。  
   
- 例如，下列查詢會傳回 LaborHours 屬性的總計。 在此情況下， **data （)** 會隱含地套用至屬性節點。  
+ 例如，下列查詢會傳回 LaborHours 屬性的總計。 在此情況下，**資料（）** 會隱含套用至屬性節點。  
   
 ```  
 declare @x xml  
@@ -39,17 +39,17 @@ set @x='<ROOT><Location LID="1" SetupTime="1.1" LaborHours="3.3" />
 SELECT @x.query('sum(/ROOT/Location/@LaborHours)')  
 ```  
   
- 雖然並非必要，您也可以明確指定**data （)** 函式：  
+ 雖然並非必要，但您也可以明確指定**data （）** 函數：  
   
 ```  
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- 另一個隱含自動化的範例是當您使用算術運算子時。 **+** 運算子需要不可部份完成值，以及**data （)** 會隱含套用至擷取 LaborHours 屬性的不可部份完成值。 查詢針對 Instructions 資料行所指定**xml** ProductModel 資料表中的型別。 下列查詢會傳回 LaborHours 屬性三次。 在查詢中，請注意下列項目：  
+ 另一個隱含自動化的範例是當您使用算術運算子時。 運算子**+** 需要不可部分完成的值，而且會隱含地套用**data （）** ，以取得 LaborHours 屬性的不可部分完成值。 查詢是針對 ProductModel 資料表中**xml**類型的 [指示] 資料行所指定。 下列查詢會傳回 LaborHours 屬性三次。 在查詢中，請注意下列項目：  
   
 -   在建構 OrignialLaborHours 屬性時，自動化會隱含套用至 (`$WC/@LaborHours`) 所傳回的單一序列。 LaborHours 屬性具類型的值會指派給 OrignialLaborHours。  
   
--   在建構 UpdatedLaborHoursV1 屬性時，算術運算子需要不可部份完成值。 因此， **data （)** 會隱含套用至所傳回的 LaborHours 屬性 (`$WC/@LaborHours`)。 接著就會在屬性中加入不可部份完成值 1。 屬性 UpdatedLaborHoursV2 的建構會顯示明確的應用程式的**data （)** ，但並非必要。  
+-   在建構 UpdatedLaborHoursV1 屬性時，算術運算子需要不可部份完成值。 因此，**資料（）** 會隱含地套用至（`$WC/@LaborHours`）所傳回的 LaborHours 屬性。 接著就會在屬性中加入不可部份完成值 1。 [屬性 UpdatedLaborHoursV2] 的結構會顯示資料的明確應用 **（）**，但不是必要的。  
   
 ```  
 SELECT Instructions.query('  
@@ -74,11 +74,11 @@ where ProductModelID=7
   
  自動化會產生簡單類型的執行個體、空集合或是靜態類型錯誤。  
   
- 不可部分完成也會發生在比較運算式參數傳遞至函式，函式，所傳回的值**cast （)** 運算式和子句所傳遞的順序排序的運算式。  
+ 不可部分完成也會發生在傳遞至函式的比較運算式參數、函式所傳回的值、 **cast （）** 運算式，以及 order by 子句中傳遞的排序運算式。  
   
 ## <a name="see-also"></a>另請參閱  
  [XQuery 基本概念](../xquery/xquery-basics.md)   
- [比較運算式&#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)   
- [針對 xml 資料類型的 XQuery 函式](../xquery/xquery-functions-against-the-xml-data-type.md)  
+ [&#40;XQuery&#41;的比較運算式](../xquery/comparison-expressions-xquery.md)   
+ [針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

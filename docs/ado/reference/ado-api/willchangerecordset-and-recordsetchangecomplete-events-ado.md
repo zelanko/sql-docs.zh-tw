@@ -1,5 +1,5 @@
 ---
-title: WillChangeRecordset 和 RecordsetChangeComplete 事件 (ADO) |Microsoft Docs
+title: WillChangeRecordset 和 RecordsetChangeComplete 事件（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +20,14 @@ ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd4e2f1485c18ce1fecc76d4eb23aa4132d85329
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938681"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset 和 RecordsetChangeComplete 事件 (ADO)
-**WillChangeRecordset**事件會被呼叫之前暫止的作業會變更[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 **RecordsetChangeComplete**事件之後，呼叫**資料錄集**已變更。  
+在暫止的作業變更[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)之前，會呼叫**WillChangeRecordset**事件。 **RecordsetChangeComplete**事件是在**記錄集**變更後呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,32 +39,32 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>參數  
  *adReason*  
- [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md)值，指定此事件的原因。 其值可以是**adRsnRequery**， **adRsnResynch**， **adRsnClose**， **adRsnOpen**。  
+ [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md)值，指定此事件的原因。 其值可以是**adRsnRequery**、 **adRsnResynch**、 **adRsnClose**、 **adRsnOpen**。  
   
  *adStatus*  
  [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)狀態值。  
   
- 當**WillChangeRecordset**是呼叫，此參數設為**adStatusOK**如果造成事件的作業已順利完成。 它會設定為**adStatusCantDeny**如果此事件不能要求取消暫止的作業。  
+ 當呼叫**WillChangeRecordset**時，如果造成事件的作業成功，此參數會設定為**adStatusOK** 。 如果此事件無法要求取消暫止的作業，則會設定為**adStatusCantDeny** 。  
   
- 當**RecordsetChangeComplete**是呼叫，此參數設為**adStatusOK**造成事件的作業成功，則**adStatusErrorsOccurred**如果作業失敗，或是**adStatusCancel**如果與先前接受的作業相關聯**WillChangeRecordset**事件已被取消。  
+ 當呼叫**RecordsetChangeComplete**時，如果造成事件的作業成功，則會將此參數設定為**adStatusOK** ，如果作業失敗則為**adStatusErrorsOccurred** ; 如果已取消與先前接受之**WillChangeRecordset**事件關聯的作業，則會**adStatusCancel** 。  
   
- 再**WillChangeRecordset**傳回，這個參數設定為**adStatusCancel**要求取消暫止的作業，或將此參數設定來防止 adStatusUnwantedEvent 後續通知。  
+ 在**WillChangeRecordset**傳回之前，請將此參數設定為**adStatusCancel** ，以要求取消暫止的作業，或將此參數設定為 adStatusUnwantedEvent，以防止後續的通知。  
   
- 之前**WillChangeRecordset**或是**RecordsetChangeComplete**傳回時，會將此參數設定為**adStatusUnwantedEvent**以避免後續的通知。  
+ 在**WillChangeRecordset**或**RecordsetChangeComplete**傳回之前，請將此參數設定為**adStatusUnwantedEvent** ，以防止後續的通知。  
   
  *pError*  
- [錯誤](../../../ado/reference/ado-api/error-object.md)物件。 它說明如果發生錯誤的值*adStatus*是**adStatusErrorsOccurred**; 否則它不會設定。  
+ [錯誤](../../../ado/reference/ado-api/error-object.md)物件。 它會描述*adStatus*的值為**adStatusErrorsOccurred**時所發生的錯誤。否則不會設定。  
   
  *pRecordset*  
- A**資料錄集**物件。 **資料錄集**如發生此事件。  
+ **記錄集**物件。 發生此事件的**記錄集**。  
   
 ## <a name="remarks"></a>備註  
- A **WillChangeRecordset**或是**RecordsetChangeComplete**事件可能會發生因為**資料錄集** [Requery](../../../ado/reference/ado-api/requery-method.md)或[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法。  
+ **WillChangeRecordset**或**RecordsetChangeComplete**事件可能是因為**記錄集**重新[查詢](../../../ado/reference/ado-api/requery-method.md)或[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法所造成。  
   
- 如果提供者不支援書籤**RecordsetChange**事件通知，就會發生每個提供者會擷取新的資料列的時間。 這個事件的頻率取決於**RecordsetCacheSize**屬性。  
+ 如果提供者不支援書簽，每次從提供者抓取新的資料列時，就會發生**RecordsetChange**事件通知。 這個事件的頻率取決於**RecordsetCacheSize**屬性。  
   
- 您必須設定**adStatus**參數來**adStatusUnwantedEvent**每個可能**adReason**完全停止，其中包含的任何事件的事件通知的值**adReason**參數。  
+ 您必須針對每個可能的**adReason**值，將**adStatus**參數設定為**adStatusUnwantedEvent** ，以完全停止包含**adReason**參數之任何事件的事件通知。  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [ADO 事件模型範例（VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)

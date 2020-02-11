@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083506"
 ---
 # <a name="mining-model-properties"></a>採礦模型屬性
@@ -32,7 +32,7 @@ ms.locfileid: "66083506"
   
 -   在模型上定義篩選的屬性，可用來定型模型。  
   
- 採礦模型的屬性一開始是在您建立模型時所定義；但是，您之後可以更改大多數的屬性，包括演算法參數、篩選以及資料行使用方式屬性。 您可藉由使用資料採礦設計師的 [採礦模型]  索引標籤或使用 AMO 或 XMLA 來變更屬性。  
+ 採礦模型的屬性一開始是在您建立模型時所定義；但是，您之後可以更改大多數的屬性，包括演算法參數、篩選以及資料行使用方式屬性。 您可藉由使用資料採礦設計師的 [採礦模型]**** 索引標籤或使用 AMO 或 XMLA 來變更屬性。  
   
  每當您變更模型的任何屬性時，您都必須重新處理模型，才能在模型中反映變更。 即使變更只牽涉到中繼資料 (例如資料行別名或描述)，也需要重新處理。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66083506"
 |--------------|-----------------|  
 |**演算法**|設定採礦模型的演算法類型。|  
 |**AlgorithmParameters**|設定每一種演算法類型可用的演算法參數的值。|  
-|**篩選**|設定篩選以套用至用於培訓及測試採礦模型的資料。 篩選定義會與模型一起儲存，並在建立預測查詢或測試模型正確性時選擇性地使用。<br /><br /> 在培訓模型時，模型篩選並非選擇性的。|  
+|**Filter**|設定篩選以套用至用於培訓及測試採礦模型的資料。 篩選定義會與模型一起儲存，並在建立預測查詢或測試模型正確性時選擇性地使用。<br /><br /> 在培訓模型時，模型篩選並非選擇性的。|  
 |**名稱**|設定採礦模型的名稱。|  
 |**AllowDrillThrough**|指定採礦模型上是否啟用鑽研。|  
   
@@ -55,16 +55,16 @@ ms.locfileid: "66083506"
 |**說明**|描述採礦資料行的目的。|  
 |**名稱**|設定採礦模型資料行的名稱。 您可以輸入新名稱，為採礦模型資料行提供別名。|  
 |**ModelingFlags**|設定資料行的任何演算法特定旗標。|  
-|**SourceColumnID**|代表模型資料行所依據之採礦結構資料行的名稱。<br /><br /> 此屬性是唯讀的。|  
-|**Usage**|設定採礦模型如何使用資料行。|  
+|**SourceColumnID**|代表模型資料行所依據之採礦結構資料行的名稱。<br /><br /> 這個屬性是唯讀的。|  
+|**使用量**|設定採礦模型如何使用資料行。|  
   
 ## <a name="see-also"></a>另請參閱  
  [採礦模型資料行](mining-model-columns.md)   
- [採礦結構 &#40;Analysis Services - 資料採礦&#41;](mining-structures-analysis-services-data-mining.md)   
- [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)   
+ [&#40;Analysis Services 的採礦結構-資料採礦&#41;](mining-structures-analysis-services-data-mining.md)   
+ [採礦模型工作和操作說明](mining-model-tasks-and-how-tos.md)   
  [變更採礦模型的屬性](change-the-properties-of-a-mining-model.md)   
- [資料採礦工具。](data-mining-tools.md)   
- [建立關聯式採礦結構](create-a-relational-mining-structure.md)   
+ [資料採礦工具](data-mining-tools.md)   
+ [建立關聯式的採礦結構](create-a-relational-mining-structure.md)   
  [建立模型資料行的別名](create-an-alias-for-a-model-column.md)  
   
   

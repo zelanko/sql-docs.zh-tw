@@ -1,5 +1,5 @@
 ---
-title: Filter 和 RecordCount 屬性範例 （VC + +） |Microsoft Docs
+title: Filter 和 RecordCount 屬性範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38f7dc64507e79704a62f321d7513419cc3c15d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932662"
 ---
-# <a name="filter-and-recordcount-properties-example-vc"></a>Filter 和 RecordCount 屬性範例 （VC + +）
-這個範例會使用[篩選條件](../../../ado/reference/ado-api/filter-property.md)屬性，以開啟新[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)根據指定的條件套用至現有**資料錄集**。 它會使用[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)屬性，以在兩個顯示的記錄數目**資料錄集**。 若要執行此程序需要 FilterField 函式。  
+# <a name="filter-and-recordcount-properties-example-vc"></a>Filter 和 RecordCount 屬性範例（VC + +）
+這個範例會使用[Filter](../../../ado/reference/ado-api/filter-property.md)屬性，根據套用至現有**記錄集**的指定條件來開啟新的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它會使用[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)屬性來顯示兩個**記錄集中**的記錄數目。 需要 FilterField 函數才能執行此程式。  
   
 ## <a name="example"></a>範例  
   
@@ -286,7 +286,7 @@ void PrintComError(_com_error &e) {
 USA  
 ```  
   
-## <a name="sample-output"></a>範例輸出  
+## <a name="sample-output"></a>取樣輸出  
   
 ```  
 Orders in original recordset:  
@@ -303,6 +303,6 @@ Scootney Books, USA
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [篩選屬性](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount 屬性 (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
+ [Filter 屬性](../../../ado/reference/ado-api/filter-property.md)   
+ [RecordCount 屬性（ADO）](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

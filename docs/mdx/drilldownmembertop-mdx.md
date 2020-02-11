@@ -1,5 +1,5 @@
 ---
-title: DrilldownMemberTop (MDX) |Microsoft Docs
+title: DrilldownMemberTop （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1ebb3054ab25729ef5d75034dbee1d720f4dd928
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68031245"
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop (MDX)
@@ -40,27 +40,27 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
  *Numeric_Expression*  
  有效的數值運算式，這通常是傳回數字之資料格座標的多維度運算式 (MDX) 運算式。  
   
- *Hierarchy*  
+ *階層*  
  傳回階層的有效多維度運算式 (MDX) 運算式。  
   
- *遞迴*  
+ *式*  
  表示遞迴比較集合的關鍵字。  
   
  *Include_Calc_Members*  
  讓導出成員包含在向下鑽研結果中的關鍵字。  
   
 ## <a name="remarks"></a>備註  
- 如果指定數值運算式，則**DrilldownMemberTop**函式，會以遞減排序順序，根據值的數值運算式的第一個集合中每個成員的子系的子集合上評估成員。 如果沒有指定數值運算式，此函數會根據子成員集合所代表的資料格值 (由查詢內容所決定)，以遞減的順序來排序第一個集合中每個成員的子系。 此行為類似 TopCount 和 Head (MDX) 函數，這些函數會依自然順序傳回成員的集合，不進行任何排序。  
+ 如果指定了數值運算式， **DrilldownMemberTop**函數會根據子成員集合評估的數值運算式的值，以遞減的順序來排序第一個集合中每個成員的子系。 如果沒有指定數值運算式，此函數會根據子成員集合所代表的資料格值 (由查詢內容所決定)，以遞減的順序來排序第一個集合中每個成員的子系。 此行為類似 TopCount 和 Head (MDX) 函數，這些函數會依自然順序傳回成員的集合，不進行任何排序。  
   
- 完成排序之後， **DrilldownMemberTop**函式會傳回一組包含父成員中指定的子成員數目*計數*最高值及包含在兩個集合.  
+ 排序之後， **DrilldownMemberTop**函數會傳回一個集合，其中包含父成員，以及在 [*計數*] 中指定之子成員的數目，其值最高，且包含在這兩個集合中。  
   
- 如果**遞迴**指定，則函式會如先前所述來排序第一個集合，然後遞迴比較第一個集合的成員，如同在階層中，針對第二個集合的組織方式。 函式會擷取第一個集合並且也出現在第二個集合中每個成員的子系的最高數目。  
+ 如果指定了**RECURSIVE** ，此函式會排序第一個集合（如先前所述），然後以遞迴方式將第一個集合的成員（如階層中的組織）與第二個集合進行比對。 函式會針對第一個集合中同時出現在第二個集合中的每個成員，抓取最上層的子係數目。  
   
  第一個集合可以包含 Tuple，而非成員。 Tuple 向下鑽研是 OLE DB 的延伸模組，而且會傳回 Tuple 集合而不是傳回成員。  
   
- **DrilldownMemberTop**函數很相似[DrilldownMember](../mdx/drilldownmember-mdx.md)函式，但不包括每個成員的所有子系中第一個集合並且也出現在第二個集合，也就是**DrilldownMemberTop**函式會傳回每個成員的子成員的最高數目。  
+ **DrilldownMemberTop**函數與[DrilldownMember](../mdx/drilldownmember-mdx.md)函數類似，但不是包含第一個集合中同時也出現在第二個集合中之每個成員的所有子系，而**DrilldownMemberTop**函數會傳回每個成員的最高子成員數目。  
   
- 查詢 XMLA 屬性 MdpropMdxDrillFunctions，可讓您確認伺服器提供鑽研函數; 支援的層級請參閱[支援的 XMLA 屬性&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)如需詳細資訊。  
+ 查詢 XMLA 屬性 MdpropMdxDrillFunctions 可讓您驗證服務器為鑽孔函數提供的支援層級;如需詳細資訊，請參閱[支援的 Xmla 屬性 &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 。  
   
 ## <a name="example"></a>範例  
  下列範例會向下鑽研至 clothing 類別目錄，以傳回出貨訂單中，數量排名前三名的子類別目錄。  
@@ -79,6 +79,6 @@ WHERE [Measures].[Reseller Order Quantity]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

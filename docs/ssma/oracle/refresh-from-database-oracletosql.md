@@ -1,5 +1,5 @@
 ---
-title: 從資料庫 (OracleToSQL) 重新整理 |Microsoft Docs
+title: 從資料庫重新整理（OracleToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,45 +11,45 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ba9a56c5fb47be4db081aebb3753db2c3e9ed6ad
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266538"
 ---
 # <a name="refresh-from-database-oracletosql"></a>從資料庫重新整理 (OracleToSQL)
-**從資料庫重新整理**對話方塊可讓您選取要從 Oracle 資料庫重新整理的物件。 在對話方塊中的資料列的色彩標示根據中繼資料的狀態：  
+[**從資料庫**重新整理] 對話方塊可讓您選取要從 Oracle 資料庫中重新整理的物件。 對話方塊中的資料列會根據中繼資料的狀態，以色彩標示：  
   
--   如果在本機和 Oracle 資料庫中，已變更物件中繼資料，資料列會變成藍色。  
+-   如果物件中繼資料在本機和 Oracle 資料庫中已變更，則資料列會是藍色。  
   
--   如果 Oracle 資料庫中，但不是在 SSMA 中，已變更物件中繼資料，資料列就會為黃色。  
+-   如果 Oracle 資料庫中的物件中繼資料已變更，而不是在 SSMA 中，則該資料列為黃色。  
   
--   如果已在本機變更物件中繼資料，但不是會在 Oracle 資料庫時，資料列是綠色。  
+-   如果物件中繼資料已在本機變更，而不是在 Oracle 資料庫中，則該資料列為綠色。  
   
--   如果是新的 Oracle 資料庫中的物件，該資料列是粉紅色。  
+-   如果物件在 Oracle 資料庫中是新的，則該資料列為粉紅色。  
   
-您可以指定中的預設物件重新整理設定**專案設定** 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 專案設定&#40;同步處理&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)。</c0>  
+您可以在 [**專案設定**] 對話方塊中指定預設物件重新整理設定。 如需詳細資訊，請參閱[&#40;同步處理&#41; &#40;OracleToSQL&#41;的專案設定](../../ssma/oracle/project-settings-synchronization-oracletosql.md)。  
   
-若要存取**從資料庫重新整理** 對話方塊中，以滑鼠右鍵按一下物件，在 Oracle 中繼資料總管，然後按一下**從資料庫重新整理**。  
+若要存取 [**從資料庫**重新整理] 對話方塊，請以滑鼠右鍵按一下 [Oracle Metadata Explorer] 中的物件，然後按一下 [**從資料庫**重新整理]。  
   
 ## <a name="options"></a>選項。  
-**摺疊 （-）**  
-摺疊所有的物件群組，若要隱藏個別的物件。  
+**Collapse （-）**  
+折迭所有物件群組以隱藏個別物件。  
   
-**展開 （+）**  
-展開以顯示個別物件的所有物件群組。  
+**展開（+）**  
+展開 [所有物件群組] 以顯示個別物件。  
   
 **隱藏/顯示相等的物件**  
-如果物件中繼資料相同的 Oracle 資料庫中，並在 SSMA 中，會隱藏清單中的物件。  
+如果 Oracle 資料庫和 SSMA 中的物件中繼資料相同，就隱藏清單中的物件。  
   
-**從資料庫 （箭號按鈕） 重新整理**  
-指定所選物件的中繼資料，應該更新 SSMA 中使用的箭號按鈕。  
+**從資料庫重新整理（箭號按鈕）**  
+使用箭號按鈕來指定要在 SSMA 中更新所選物件的中繼資料。  
   
-**從資料庫中執行 重新整理 (X 按鈕）**  
-您可以使用 [X] 按鈕，指定不應在 SSMA 中更新所選物件的中繼資料。  
+**不要從資料庫重新整理（X 按鈕）**  
+使用 [X] 按鈕，指定不應在 SSMA 中更新所選物件的中繼資料。  
   
 **圖例**  
-顯示**圖例** 對話方塊。 圖例會包含資料列的色彩和中繼資料狀態之間的對應。  
+顯示 [**圖例**] 對話方塊。 圖例包含資料列色彩和中繼資料狀態之間的對應。  
   
-保留**圖例**對話方塊的上方**從資料庫重新整理**對話方塊中，選取**顯示在最上層**核取方塊。  
+若要將 [**圖例**] 對話方塊保留在 [**從資料庫**重新整理] 對話方塊的頂端，請選取 [**在頂端顯示**] 核取方塊。  
   

@@ -1,5 +1,5 @@
 ---
-title: 編製索引的集合 (ADOX) |Microsoft Docs
+title: 索引集合（ADOX） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,34 +17,34 @@ ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e84f49d5ad2d88ebb88417ae01046c0bcfd8006
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966043"
 ---
 # <a name="indexes-collection-adox"></a>Indexes 集合 (ADOX)
-包含所有[Index](../../../ado/reference/adox-api/index-object-adox.md)資料表的物件。  
+包含資料表的所有[索引](../../../ado/reference/adox-api/index-object-adox.md)物件。  
   
 ## <a name="remarks"></a>備註  
- [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md)方法**索引**集合都是唯一的 ADOX。 您可以：  
+ 對於 ADOX 而言，**索引**集合的[Append](../../../ado/reference/adox-api/append-method-adox-indexes.md)方法是唯一的。 您可以：  
   
--   將新的索引加入至集合**Append**方法。  
+-   使用**Append**方法，將新的索引新增至集合。  
   
- 其餘的屬性和方法是標準的 ADO 集合。 您可以：  
+ 其餘的屬性和方法都是 ADO 集合的標準。 您可以：  
   
--   存取索引集合中具有[項目](../../../ado/reference/ado-api/item-property-ado.md)屬性。  
+-   使用[Item](../../../ado/reference/ado-api/item-property-ado.md)屬性存取集合中的索引。  
   
--   傳回與集合中包含的索引數目[計數](../../../ado/reference/ado-api/count-property-ado.md)屬性。  
+-   傳回包含在集合中具有[Count](../../../ado/reference/ado-api/count-property-ado.md)屬性的索引數目。  
   
--   移除集合中的索引[刪除](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法。  
+-   使用[Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法，從集合中移除索引。  
   
--   更新以反映與目前的資料庫結構描述集合中的物件[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)方法。  
+-   更新集合中的物件，以使用[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法來反映目前的資料庫架構。  
   
  本章節包含下列主題。  
   
 -   [Indexes 集合屬性、方法和事件](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Indexes Append 方法範例 (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
+ [索引附加方法範例（VB）](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Index 物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

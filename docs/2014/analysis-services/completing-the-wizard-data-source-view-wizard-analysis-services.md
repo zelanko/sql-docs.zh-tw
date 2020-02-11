@@ -1,5 +1,5 @@
 ---
-title: 正在完成精靈 （資料來源檢視精靈） (Analysis Services) |Microsoft Docs
+title: 正在完成嚮導（資料來源視圖嚮導）（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5dce0aa56997537e4911b0607ca9fba392dd847
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087636"
 ---
 # <a name="completing-the-wizard-data-source-view-wizard-analysis-services"></a>正在完成精靈 (資料來源檢視精靈) (Analysis Services)
@@ -30,6 +30,6 @@ ms.locfileid: "66087636"
  顯示資料來源檢視中包含的資料表和檢視。 按 **[上一步]** 即可進行變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料來源檢視精靈 F1 說明&#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)  
+ [資料來源 View Wizard F1 說明 &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)  
   
   

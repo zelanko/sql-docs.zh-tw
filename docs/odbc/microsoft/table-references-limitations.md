@@ -14,11 +14,11 @@ ms.assetid: de674d5e-a16a-4cf1-b7e7-0222ef19a6f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 838c80fada6dbbff67ea01c38192db4c78d3c45f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939729"
 ---
 # <a name="table-references-limitations"></a>資料表參考限制
-16 的資料表參考的最多可以包含在查詢中的任何陳述式。
+在任何查詢語句中，最多可以包含16個數據表參考。

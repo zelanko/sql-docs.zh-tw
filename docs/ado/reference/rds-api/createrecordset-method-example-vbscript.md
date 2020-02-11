@@ -1,5 +1,5 @@
 ---
-title: CreateRecordset 方法範例 (VBScript) |Microsoft Docs
+title: CreateRecordset 方法範例（VBScript） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dde6e14283195ef3b56d545a58a95c307774223
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964522"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>CreateRecordset 方法範例 (VBScript)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 此程式碼範例會建立[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)伺服器端上。 它有四個資料列的兩個資料行。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**CreateRecordsetVBS.asp**。  
+ 這個程式碼範例會在伺服器端建立[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它有兩個數據行，每個都有四個數據列。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，並將其儲存為**CreateRecordsetVBS。**  
   
 ```  
 <!-- BeginCreateRecordsetVBS -->  
@@ -168,7 +168,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [CreateRecordset 方法 (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
+ [CreateRecordset 方法（RDS）](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
 
 
