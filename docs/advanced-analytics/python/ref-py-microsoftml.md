@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7ecbfd2edd20a312fc8a6d451938f1407585ded5
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706951"
 ---
 # <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (SQL Server 中的 Python 模組)
@@ -30,14 +30,14 @@ ms.locfileid: "73706951"
 
 **microsoftml** 模組以 Python 3.5 為基礎，且只有當您安裝下列其中一個Microsoft 產品或下載項目時才會提供：
 
-+ [SQL Server 機器學習服務](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 或更新版本](https://docs.microsoft.com/machine-learning-server/)
 + [適用於資料科學用戶端的 Python 用戶端程式庫](setup-python-client-tools-sql.md)
 
 > [!NOTE]
 > 在 SQL Server 2017 中，完整產品發行版本僅適用於 Windows。 在 [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md) 中，**microsoftml** 則同時支援 Windows 和 Linux。
 
-## <a name="package-dependencies"></a>套件依存性
+## <a name="package-dependencies"></a>套件相依性
 
 **microsoftml** 中的演算法在下列方面倚賴 [revoscalepy](ref-py-revoscalepy.md)：
 
@@ -52,7 +52,7 @@ ms.locfileid: "73706951"
 
 ## <a name="1-training-functions"></a>1-定型函式
 
-| 函數 | Description |
+| 函式 | 描述 |
 |----------|-------------|
 |[microsoftml.rx_ensemble](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-ensemble) | 將一整團模型定型。 |
 |[microsoftml.rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)  | 隨機樹系。 |
@@ -68,14 +68,14 @@ ms.locfileid: "73706951"
 
 ### <a name="categorical-variable-handling"></a>類別目錄變數處理
 
-| 函數 | Description |
+| 函式 | 描述 |
 |----------|-------------|
 |[microsoftml.categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical) | 將文字資料行轉換成類別。 |
 |[microsoftml.categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash) | 將文字資料行雜湊並轉換成類別。 |
 
 ### <a name="schema-manipulation"></a>結構描述操作
 
-| 函數 | Description |
+| 函式 | 描述 |
 |----------|-------------|
 |[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | 將多個資料行串連成單一向量。 |
 |[microsoftml.drop_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/drop-columns) | 置放來自資料集的資料行。 |
@@ -84,7 +84,7 @@ ms.locfileid: "73706951"
 
 ### <a name="variable-selection"></a>變數選取
 
-| 函數 | Description |
+| 函式 | 描述 |
 |----------|-------------|
 |[microsoftml.count_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/count-select) |以計數為基礎的特徵選取。 |
 |[microsoftml.mutualinformation_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/mutualinformation-select) | 以相互資訊為基礎的特徵選取。 |
@@ -92,7 +92,7 @@ ms.locfileid: "73706951"
 
 ### <a name="text-analytics"></a>文字分析
 
-| 函數 | Description |
+| 函式 | 描述 |
 |----------|-------------|
 |[microsoftml.featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text) | 將文字資料行轉換成數值特徵。 |
 |[microsoftml.get_sentiment](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/get-sentiment) | 情感分析。 |
@@ -100,7 +100,7 @@ ms.locfileid: "73706951"
 
 ### <a name="image-analytics"></a>影像分析 
 
-| 函數 | Description |
+| 函式 | 描述 |
 |----------|-------------|
 |[microsoftml.load_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/load-image) | 載入影像。 |
 |[microsoftml.resize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/resize-image) | 調整影像的大小。 |
@@ -109,7 +109,7 @@ ms.locfileid: "73706951"
 
 ### <a name="featurization-functions"></a>特徵化函式
 
-| 函數 | Description |
+| 函式 | 描述 |
 |----------|-------------|
 |[microsoftml.rx_featurize](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-featurize) | 資料來源的資料轉換 |
 
@@ -117,7 +117,7 @@ ms.locfileid: "73706951"
 
 ## <a name="3-scoring-functions"></a>3-評分函式
 
-| 函數 | Description |
+| 函式 | 描述 |
 |----------|-------------|
 |[microsoftml.rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-predict) | 使用 Microsoft 機器學習模型進行評分 |
 

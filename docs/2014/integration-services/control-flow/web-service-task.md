@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829408"
 ---
 # <a name="web-service-task"></a>Web 服務工作
@@ -64,11 +64,11 @@ ms.locfileid: "62829408"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Web 服務工作編輯器 &#40;[一般] 頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [&#40;一般頁面&#41;的 Web 服務工作編輯器](../general-page-of-integration-services-designers-options.md)  
   
--   [Web 服務工作編輯器 &#40;[輸入] 頁面&#41;](../web-service-task-editor-input-page.md)  
+-   [Web 服務工作編輯器 &#40;輸入頁面&#41;](../web-service-task-editor-input-page.md)  
   
--   [Web 服務工作編輯器 &#40;[輸出] 頁面&#41;](../web-service-task-editor-output-page.md)  
+-   [[Web 服務工作編輯器] &#40;[輸出] 頁面&#41;](../web-service-task-editor-output-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   
@@ -82,8 +82,8 @@ ms.locfileid: "62829408"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>相關內容  
- 影片，[如何：technet.microsoft.com 上的影片：使用 Web 服務工作呼叫 Web 服務) (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=259642) \(英文\)。  
+ technet.microsoft.com 上的影片： [How to: Call a Web Service by Using the Web Service Task](https://go.microsoft.com/fwlink/?LinkId=259642)(如何：使用 Web 服務工作呼叫 Web 服務) (SQL Server 影片)。  
   
- [如何使用 Web 服務，透過 SSIS 套件](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/)。  
+ [如何透過 SSIS 套件使用 Web 服務](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/)。  
   
   

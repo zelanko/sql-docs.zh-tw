@@ -12,16 +12,16 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 47d7aca62ddbf2637b54d77171a08817b842555c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008908"
 ---
-# <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>sp_pdw_database_encryption （SQL 資料倉儲）
+# <a name="sp_pdw_database_encryption-sql-data-warehouse"></a>sp_pdw_database_encryption （SQL 資料倉儲）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  使用**sp_pdw_database_encryption**上啟用透明資料加密，如[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]應用裝置。 當**sp_pdw_database_encryption**設定為 1，使用**ALTER DATABASE**使用 TDE 加密資料庫的陳述式。  
+  使用**sp_pdw_database_encryption**在[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]設備上啟用透明資料加密。 當**sp_pdw_database_encryption**設為1時，請使用**ALTER database**語句，利用 TDE 來加密資料庫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,25 +32,25 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ```  
   
 #### <a name="parameters"></a>參數  
-`[ @enabled = ] enabled` 判斷是否已啟用透明資料加密。 *已啟用*已**int**，而且可以是下列值之一：  
+`[ @enabled = ] enabled`決定是否啟用透明資料加密。 *enabled*是**int**，它可以是下列其中一個值：  
   
 -   0 = 已停用  
   
 -   1 = 已啟用  
   
- 執行**sp_pdw_database_encryption**沒有參數傳回做為純量結果集的應用裝置上的 TDE 的目前狀態：啟用為停用，0 或 1。  
+ 執行不含參數的**sp_pdw_database_encryption** ，會以純量結果集的形式傳回設備上 TDE 的目前狀態：0表示已停用，或1表示已啟用。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- 當使用啟用 TDE **sp_pdw_database_encryption**，tempdb 資料庫卸除、 重新建立並加密。 基於這個理由，TDE 時，無法啟用應用裝置上沒有其他作用中工作階段使用 tempdb。 啟用或停用應用裝置上的 TDE 是設備，在大部分情況下的狀態變更動作預期要執行一次在設備存留期，而且應用裝置上沒有流量時執行。  
+ 當使用**sp_pdw_database_encryption**啟用 TDE 時，會卸載 tempdb 資料庫、重新建立和加密。 基於這個理由，在有其他使用 tempdb 的作用中會話時，無法在設備上啟用 TDE。 在設備上啟用或停用 TDE 是一個動作，它會變更設備的狀態，在大多數情況下，預期會在設備生命週期中執行一次，而且應該在設備上沒有流量時執行。  
   
-## <a name="permissions"></a>Permissions  
- 需要的成員資格**sysadmin**固定資料庫角色，或**CONTROL SERVER**權限。  
+## <a name="permissions"></a>權限  
+ 需要**系統管理員（sysadmin** ）固定資料庫角色中的成員資格，或**CONTROL SERVER**許可權。  
   
 ## <a name="example"></a>範例  
- 下列範例會在應用裝置上啟用 TDE。  
+ 下列範例會在設備上啟用 TDE。  
   
 ```sql  
 EXEC sys.sp_pdw_database_encryption 1;  

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b5fe3b032491371eb53a5f1663e8e6778ce60871
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785834"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
@@ -33,7 +33,7 @@ ms.locfileid: "73785834"
  **SQLProcedures**會傳回名稱符合*ProcName*且可由目前使用者執行，或是目前使用者已被授與 VIEW DEFINITION 許可權之任何程式的相關資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLProcedures 函數](https://go.microsoft.com/fwlink/?LinkId=59364)   
+ [SQLProcedures 函式](https://go.microsoft.com/fwlink/?LinkId=59364)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

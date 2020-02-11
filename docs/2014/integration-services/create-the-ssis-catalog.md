@@ -11,14 +11,15 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8db507966f9b3323e415ca7f2abfe4a12601c1c
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798024"
 ---
 # <a name="create-the-ssis-catalog"></a>建立 SSIS 目錄
-  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中設計和測試封裝之後，可以將包含封裝的專案，部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 在您將專案部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器之前，該伺服器必須包含 `SSISDB` 目錄。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 的安裝程式不會自動建立目錄，您必須依照下列指示手動建立目錄。  
+  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中設計和測試封裝之後，可以將包含封裝的專案，部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 在您將專案部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器之前，該伺服器必須包含 `SSISDB` 目錄。 
+  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 的安裝程式不會自動建立目錄，您必須依照下列指示手動建立目錄。  
   
  您可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中建立 SSISDB 目錄。 您也可以使用 Windows PowerShell 以程式設計方式建立目錄。  
   
@@ -28,19 +29,19 @@ ms.locfileid: "72798024"
   
 2.  連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine。  
   
-3.  在物件總管中，展開伺服器節點，以滑鼠右鍵按一下 [Integration Services 目錄] 節點，然後按一下 [建立目錄]。  
+3.  在物件總管中，展開伺服器節點，以滑鼠右鍵按一下 [Integration Services 目錄]**** 節點，然後按一下 [建立目錄]****。  
   
-4.  按一下 **[啟用 CLR 整合]** 。  
+4.  按一下 **[啟用 CLR 整合]**。  
   
      目錄便會使用 CLR 預存程序。  
   
-5.  按一下 [在 SQL Server 啟動時允許自動執行 Integration Services 預存程序]，讓 [catalog.startup](/sql/integration-services/system-stored-procedures/catalog-startup) 預存程序會在每次 [!INCLUDE[ssIS](../includes/ssis-md.md)] 伺服器執行個體重新啟動時執行。  
+5.  按一下 [在 SQL Server 啟動時允許自動執行 Integration Services 預存程序]****，讓 [catalog.startup](/sql/integration-services/system-stored-procedures/catalog-startup) 預存程序會在每次 [!INCLUDE[ssIS](../includes/ssis-md.md)] 伺服器執行個體重新啟動時執行。  
   
      預存程序會執行 SSISDB 目錄之作業狀態的維護。 它會在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 伺服器執行個體效能降低時，修正正在執行之任何封裝的狀態。  
   
-6.  輸入密碼，然後按一下 **[確定]** 。  
+6.  輸入密碼，然後按一下 **[確定]**。  
   
-     此密碼保護用來加密目錄資料的資料庫主要金鑰。 請將密碼儲存在安全位置。 建議您同時備份資料庫主要金鑰。 如需詳細資訊，請參閱 [備份資料庫主要金鑰](../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
+     此密碼保護用來加密目錄資料的資料庫主要金鑰。 請將密碼儲存在安全位置。 建議您同時備份資料庫主要金鑰。 如需相關資訊，請參閱 [Back Up a Database Master Key](../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
   
 ### <a name="to-create-the-ssisdb-catalog-programmatically"></a>若要以程式設計方式建立 SSISDB 目錄  
   
@@ -71,4 +72,4 @@ ms.locfileid: "72798024"
   
 ## <a name="see-also"></a>另請參閱  
  [SSIS 目錄](catalog/ssis-catalog.md)   
- [備份、還原和移動 SSIS 目錄](../../2014/integration-services/backup-restore-and-move-the-ssis-catalog.md)  
+ [備份、 還原和移動的 SSIS 目錄](../../2014/integration-services/backup-restore-and-move-the-ssis-catalog.md)  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a0f7e10a39896efffa5159911ebd753b1d649e45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768577"
 ---
 # <a name="coding-a-custom-log-provider"></a>撰寫自訂記錄提供者的程式碼
@@ -132,7 +132,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>寫入記錄項目  
- 每次封裝中的物件呼叫其中一個事件介面上的 Fire\<event> 方法來引發事件時，就會呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法。 每個引發的事件都會帶有關於其內容且通常是說明訊息的資訊。 不過，並不是每次呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法都包括每個方法參數的資訊。 例如，有些其名稱字面意義明白的標準事件並未提供 MessageText，而且 DataCode 與 DataBytes 是為了提供選擇性的補充資訊。  
+ 每次封裝中的物件呼叫其中一個事件介面上的 Fire<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>event> 方法來引發事件時，就會呼叫 \< 方法。 每個引發的事件都會帶有關於其內容且通常是說明訊息的資訊。 不過，並不是每次呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法都包括每個方法參數的資訊。 例如，有些其名稱字面意義明白的標準事件並未提供 MessageText，而且 DataCode 與 DataBytes 是為了提供選擇性的補充資訊。  
   
  下列程式碼範例會實作 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法，並將事件寫入上一節所開啟的資料流。  
   
@@ -188,7 +188,7 @@ Public Overrides  Sub CloseLog()
 End Sub  
 ```  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立自訂記錄提供者](creating-a-custom-log-provider.md)   

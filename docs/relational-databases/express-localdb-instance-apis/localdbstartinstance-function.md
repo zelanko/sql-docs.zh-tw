@@ -1,5 +1,5 @@
 ---
-title: LocalDBStartInstance 函數 |Microsoft Docs
+title: LocalDBStartInstance 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b06364adefd62b4267d43bac50d79f8f1d37958a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022096"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   啟動指定的 SQL Server Express LocalDB 執行個體。  
   
- **標頭檔：** sqlncli.h  
+ **標頭檔：** sqlncli。h  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +50,7 @@ HRESULT LocalDBStartInstance(
  [輸出] 儲存 LocalDB 執行個體連接字串的緩衝區。  
   
  *lpcchSqlConnection*  
- [輸入/輸出]輸入包含的大小*wszSqlConnection*以字元為單位，包括任何尾端的 null 值的緩衝區。 輸出時，如果指定的緩衝區大小太小，則會包含所需的緩衝區大小 (以字元為單位)，包括尾端的 Null。  
+ [輸入/輸出][輸入] 包含*wszSqlConnection*緩衝區的大小（以字元為單位），包括任何尾端的 null。 輸出時，如果指定的緩衝區大小太小，則會包含所需的緩衝區大小 (以字元為單位)，包括尾端的 Null。  
   
 ## <a name="returns"></a>傳回值  
  S_OK  
@@ -102,19 +102,19 @@ HRESULT LocalDBStartInstance(
  無法建立自動執行個體。 請參閱 Windows 應用程式事件記錄檔，以取得錯誤詳細資料。  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
- 發生意外的錯誤。 請參閱事件記錄檔，以取得詳細資料。  
+ 發生意外錯誤。 請參閱事件記錄檔，以取得詳細資料。  
   
 ## <a name="details"></a>詳細資料  
- 這兩個連接緩衝區引數 (*wszSqlConnection*) 和連接緩衝區大小引數 (*lpcchSqlConnection*) 是選擇性的。 下表顯示使用這些引數的選項及其結果。  
+ 連接緩衝區引數（*wszSqlConnection*）和連接緩衝區大小引數（*lpcchSqlConnection*）都是選擇性的。 下表顯示使用這些引數的選項及其結果。  
   
-|緩衝區|緩衝區大小|基本原理|Action|  
+|Buffer|緩衝區大小|基本原理|動作|  
 |------------|-----------------|---------------|------------|  
-|NULL|NULL|使用者想要啟動的執行個體，但不需要管道名稱。|啟動執行個體 (不傳回管道且不傳回所需的緩衝區大小)。|  
+|NULL|NULL|使用者想要啟動實例，而不需要管道名稱。|啟動執行個體 (不傳回管道且不傳回所需的緩衝區大小)。|  
 |NULL|存在|使用者要求輸出緩衝區大小。 (在下一個呼叫中，使用者可能會要求實際啟動。)|傳回所需的緩衝區大小 (不啟動且不傳回管道)。 結果為 S_OK。|  
 |存在|NULL|不允許；輸入不正確。|傳回的結果為 LOCALDB_ERROR_INVALID_PARAMETER。|  
-|存在|存在|使用者想要啟動執行個體，且在啟動後，需要管道名稱以連接至此執行個體。|檢查緩衝區大小、啟動執行個體，然後傳回緩衝區中的管道名稱。 <br />緩衝區大小引數傳回的長度"server ="字串，不包括結束的 null 值。|  
+|存在|存在|使用者想要啟動執行個體，且在啟動後，需要管道名稱以連接至此執行個體。|檢查緩衝區大小、啟動執行個體，然後傳回緩衝區中的管道名稱。 <br />緩衝區大小引數會傳回 "server =" 字串的長度，不包括終止的 null。|  
   
- 使用 LocalDB API 的程式碼範例，請參閱 < [SQL Server Express LocalDB 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 如需使用 LocalDB API 的程式碼範例，請參閱[SQL Server Express Localdb 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Express LocalDB 標頭和版本資訊](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

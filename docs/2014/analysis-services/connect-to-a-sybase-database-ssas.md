@@ -1,5 +1,5 @@
 ---
-title: 連接到 Sybase 資料庫 (SSAS) |Microsoft Docs
+title: 連接到 Sybase 資料庫（SSAS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0305b7d205b6de84ef72edd481df01e725df826b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087175"
 ---
 # <a name="connect-to-a-sybase-database-ssas"></a>連接到 Sybase 資料庫 (SSAS)
-  **[資料表匯入精靈]** 的這個頁面可讓您指定連接到 Sybase 資料庫的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]** 。  
+  
+  **[資料表匯入精靈]** 的這個頁面可讓您指定連接到 Sybase 資料庫的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
   
  若要連接至資料來源，您必須先在電腦上安裝適當的提供者。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "66087175"
  從資料庫清單中選取資料庫。  
   
  **進階**  
- 使用 **[設定進階屬性]** 對話方塊設定其他連接屬性。 如需詳細資訊，請參閱[設定進階屬性 &#40;SSAS&#41;](set-advanced-properties-ssas.md)。  
+ 使用 [**設定高級屬性**] 對話方塊來設定其他連接屬性。 如需詳細資訊，請參閱[設定進階屬性 &#40;SSAS&#41;](set-advanced-properties-ssas.md)。  
   
  **測試連接**  
  嘗試使用目前的設定建立與資料來源之間的連接。 顯示一則訊息，指出連接是否成功。  

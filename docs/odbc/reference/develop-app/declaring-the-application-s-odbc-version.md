@@ -1,5 +1,5 @@
 ---
-title: 宣告應用程式&#39;的 ODBC 版本 s |Microsoft Docs
+title: 宣告應用程式&#39;s ODBC 版本 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ea97e3cd7a8fee3b3397524bf2c48c428d6a0be0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076846"
 ---
-# <a name="declaring-the-application39s-odbc-version"></a>宣告應用程式&#39;s 的 ODBC 版本
-應用程式配置連接之前，它必須設定 SQL_ATTR_ODBC_VERSION 環境屬性。 這個屬性會指出應用程式遵循 ODBC *2.x*或 ODBC *3.x*規格，使用下列項目時：  
+# <a name="declaring-the-application39s-odbc-version"></a>宣告應用程式&#39;s ODBC 版本
+在應用程式佈建連接之前，必須先設定 SQL_ATTR_ODBC_VERSION 環境屬性。 此屬性說明當使用下列專案時，應用程式會遵循 ODBC *2.x 或 odbc* *3.x 規格：*  
   
--   **Sqlstate**。 SQLSTATE 值的不同於 ODBC *2.x*和 ODBC *3.x*。  
+-   **SQLSTATEs**。 ODBC *2.x 和 odbc* 3.x 中的許多 SQLSTATE 值都不同 *。*  
   
--   **日期、 時間和時間戳記類型識別碼**。 下表顯示日期、 時間和時間戳記的資料型別識別項在 ODBC *2.x*和 ODBC *3.x*。  
+-   **日期、時間和時間戳記類型識別碼**。 下表顯示 ODBC 2.x*和 odbc 3.x*中的日期、*時間和時間*戳資料的類型識別碼。  
   
     |ODBC *2.x*|ODBC *3.x*|  
     |----------------|----------------|  
@@ -37,14 +37,14 @@ ms.locfileid: "68076846"
     |SQL_DATE|SQL_TYPE_DATE|  
     |SQL_TIME|SQL_TYPE_TIME|  
     |SQL_TIMESTAMP|SQL_TYPE_TIMESTAMP|  
-    |**C 類型識別項**||  
+    |**C 類型識別碼**||  
     |SQL_C_DATE|SQL_C_TYPE_DATE|  
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   _CatalogName_**引數中 SQLTables**。 在 ODBC *2.x*中的萬用字元 （"%"和"_"） *CatalogName*引數將依字面解譯。 在 ODBC *3.x*，它們會被視為萬用字元。 因此，應用程式遵循 ODBC *2.x*規格不能使用這些因為萬用字元的字元，並不會逸出它們時使用它們做為常值。 接下來的 ODBC 應用程式*3.x*規格可以使用這些動作當做萬用字元的字元或逸出它們，並將其當做常值。 如需詳細資訊，請參閱 <<c0> [ 目錄函式中的引數](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)。  
+-   _ _ **SQLTables 中的 CatalogName 引數**。   在 ODBC *2.x 中，* *CatalogName*引數中的萬用字元（"%" 和 "_"）會以字面方式處理。 在 ODBC *3.x 中，* 它們會被視為萬用字元。 因此，*遵循 ODBC 2.x*規格的應用程式不能使用這些做為萬用字元，而且在使用它們做為常值時，不會將它們換用。 遵循*ODBC 3.x*規格的應用程式可以使用這些字元做為萬用字元，或將它們當做常值使用。 如需詳細資訊，請參閱[目錄函數中的引數](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)。  
   
- ODBC *3.x*驅動程式管理員和 ODBC *3.x*驅動程式檢查應用程式會寫入至其中的 ODBC 規格的版本，並據以回應。 例如，如果應用程式會遵循 ODBC *2.x*規格並呼叫**SQLExecute**再呼叫**SQLPrepare**，ODBC *3.x*驅動程式管理員會傳回 SQLSTATE S1010 （函數順序錯誤）。 如果應用程式會遵循 ODBC *3.x*規格，驅動程式管理員會傳回 SQLSTATE HY010 （函數順序錯誤）。 如需詳細資訊，請參閱 <<c0> [ 回溯相容性與標準相容性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。  
+ ODBC 3.x*驅動程式*管理員*和 odbc* 3.x 驅動程式會檢查應用程式所寫入的 ODBC 規格版本，並據以回應。 例如，如果應用程式*遵循 ODBC 2.x*規格，並在呼叫**SQLPrepare**之前呼叫**SQLExecute** ，*則 ODBC 3.X*驅動程式管理員會傳回 SQLSTATE S1010 （函數序列錯誤）。 如果應用程式*遵循 ODBC 3.x*規格，驅動程式管理員會傳回 SQLSTATE HY010 （函數序列錯誤）。 如需詳細資訊，請參閱回溯[相容性和標準合規性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。  
   
 > [!IMPORTANT]  
->  應用程式，請依照下列 ODBC *3.x*規格必須使用條件式的程式碼，以避免使用 ODBC 的新功能*3.x*使用 ODBC 時*2.x*驅動程式。 ODBC *2.x*驅動程式不支援 ODBC 的新功能*3.x*只是因為應用程式宣告，它會遵循 ODBC *3.x*規格。 此外，ODBC *3.x*驅動程式不會停止支援 ODBC 的新功能*3.x*只是因為應用程式宣告，它會遵循 ODBC *2.x*規格。
+>  遵循 ODBC 3.x 規格的應用程式必須使用條件*式程式碼*，以*避免在使用 odbc 2.x*驅動程式時*使用 odbc 3.x*的新功能。 ODBC *2.x 驅動程式不支援 odbc 3.x*的新功能，*只是*因為應用程式宣告它遵循 odbc *3.x 規格。* 此外，ODBC *3.x 驅動程式*不會停止支援 odbc 3.x 的新功能， ** 因為應用程式會宣告它遵循 odbc *2.x 規格。*

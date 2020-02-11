@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0f2de1f7003e61dbdc8e82f7a9b549fd42c77fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917268"
 ---
 # <a name="delete-data-or-log-files-from-a-database"></a>刪除資料庫的資料或記錄檔
@@ -35,7 +35,7 @@ ms.locfileid: "62917268"
   
 -   在刪除檔案之前，檔案必須空白。 如需詳細資訊，請參閱 [壓縮檔案](shrink-a-file.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
@@ -62,7 +62,7 @@ ms.locfileid: "62917268"
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會移除 `test1dat4` 檔案。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會移除 `test1dat4`檔案。  
   
  [!code-sql[DatabaseDDL#AlterDatabase4](../../snippets/tsql/SQL14/tsql/databaseddl/transact-sql/alterdatabase.sql#alterdatabase4)]  
   

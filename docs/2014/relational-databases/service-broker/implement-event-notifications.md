@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c5b17b45b50634806c60e5064efc6ebd9d03f8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68197752"
 ---
 # <a name="implement-event-notifications"></a>實作事件通知
@@ -86,7 +86,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  在此情況下，事件通知會引發兩次：CREATE_SCHEMA 事件發生時，一次，一次在 CREATE_TABLE 事件發生時。 我們建議您避免在 CREATE_SCHEMA 事件和任何對應 CREATE SCHEMA  定義的 <schema_element> 文字上建立事件通知，或在應用程式中建立邏輯，以避免擷取不想要的事件資料。  
+>  在此案例中，事件通知引發了兩次：一次是在 CREATE_SCHEMA 事件發生時，一次只在 CREATE_TABLE 事件發生時。 我們建議您避免在 CREATE_SCHEMA 事件和任何對應 CREATE SCHEMA  定義的 <schema_element> 文字上建立事件通知，或在應用程式中建立邏輯，以避免擷取不想要的事件資料。  
   
  **若要建立事件通知**  
   

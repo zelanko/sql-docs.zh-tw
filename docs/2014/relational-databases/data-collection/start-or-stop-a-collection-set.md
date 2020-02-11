@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 96f5a873e8d172254e1ea18abbd0c570b27a35ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918438"
 ---
 # <a name="start-or-stop-a-collection-set"></a>啟動或停止收集組
@@ -33,7 +33,7 @@ ms.locfileid: "62918438"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目啟動或停止收集組：**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62918438"
   
 -   若要取得收集組的相關資訊，請查詢 [syscollector_collection_sets](/sql/relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql) 目錄檢視。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 **dc_operator** 固定資料庫角色中的成員資格。 如果收集組沒有 Proxy 帳戶，就需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
@@ -76,7 +76,7 @@ ms.locfileid: "62918438"
   
 1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]** 和 **[系統資料收集組]** 。  
   
-2.  以滑鼠右鍵按一下您要停止的收集組，然後按一下 [停止資料收集組]  。  
+2.  以滑鼠右鍵按一下您要停止的收集組，然後按一下 **[停止資料收集組]** 。  
   
      訊息方塊會顯示此動作的結果，而此收集組圖示上的紅色圓圈會指示此收集組已經停止。  
   

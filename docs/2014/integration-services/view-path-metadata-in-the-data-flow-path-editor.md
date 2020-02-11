@@ -1,5 +1,5 @@
 ---
-title: 在 資料流程路徑編輯器檢視路徑中繼資料 |Microsoft Docs
+title: 在資料流程路徑編輯器中查看路徑中繼資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d01cf5aa2a57ace05cdf7d6da02f1f082d77b0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054490"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>在資料流程路徑編輯器中檢視路徑中繼資料
@@ -29,13 +29,13 @@ ms.locfileid: "66054490"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  按一下 [資料流程]  索引標籤，然後按兩下路徑。  
+3.  按一下 [資料流程]**** 索引標籤，然後按兩下路徑。  
   
-4.  在 **[資料流程路徑編輯器]** 對話方塊中，按一下 **[中繼資料]** 。  
+4.  在 **[資料流程路徑編輯器]** 對話方塊中，按一下 **[中繼資料]**。  
   
 5.  檢視路徑中繼資料，包括每個資料行的資料行名稱、資料類型、有效位數、小數位數、長度、字碼頁，以及來源元件名稱。  
   
-6.  若要複製中繼資料，請按一下 **[複製至剪貼簿]** 。  
+6.  若要複製中繼資料，請按一下 **[複製至剪貼簿]**。  
   
 7.  按一下 [確定]  。  
   

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ffda3be2194b26b46f9633c3bdf76d60d36ce73c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871912"
 ---
 # <a name="delete-a-database"></a>刪除資料庫
@@ -33,11 +33,11 @@ ms.locfileid: "62871912"
   
      [限制事項](#Restrictions)  
   
-     [必要條件](#Prerequisites)  
+     [先決條件](#Prerequisites)  
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法刪除資料庫：**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62871912"
   
 ###  <a name="Prerequisites"></a> 必要條件  
   
--   刪除資料庫上的資料庫快照集。 如需詳細資訊，請參閱[卸除資料庫快照集 &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)。  
+-   刪除資料庫上的資料庫快照集。 如需詳細資訊，請參閱 [卸除資料庫快照集 &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)執行個體。  
   
 -   如果資料庫有相關的記錄傳送，請移除記錄傳送。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62871912"
   
 -   請考慮為資料庫進行完整備份。 已刪除的資料庫只能透過還原備份來重新建立。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  若要執行 DROP DATABASE，使用者至少必須對該資料庫具備 CONTROL 權限。  

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721670"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>為非 SQL Server 訂閱者建立訂閱
@@ -26,7 +26,7 @@ ms.locfileid: "62721670"
   
  **本主題內容**  
   
--   **若要針對非 SQL Server 訂閱者建立訂閱，請使用：**  
+-   **若要為非 SQL Server 的訂閱者建立訂閱，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -39,13 +39,13 @@ ms.locfileid: "62721670"
   
 2.  使用「新增發行集精靈」建立發行集。 如需建立發行集的詳細資訊，請參閱[建立發行集](publish/create-a-publication.md)和[從 Oracle 資料庫建立發行集](publish/create-a-publication-from-an-oracle-database.md)。 在「新增發行集精靈」中指定下列選項：  
   
-    -   在 **[發行集類型]** 頁面上，選取 **[快照集發行集]** 或 **[交易式發行集]** 。  
+    -   在 **[發行集類型]** 頁面上，選取 **[快照集發行集]** 或 **[交易式發行集]**。  
   
-    -   在 **[快照集代理程式]** 頁面上，清除 **[立即建立快照集]** 。  
+    -   在 **[快照集代理程式]** 頁面上，清除 **[立即建立快照集]**。  
   
          為非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者啟用發行集後建立快照集，以確定「快照集代理程式」會產生適用於非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的快照集與初始化指令碼。  
   
-3.  使用 [發行集屬性 - \<發行集名稱>]  對話方塊，啟用非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發行集。 如需有關此步驟的詳細資訊，請參閱＜ [Publication Properties, Subscription Options](publication-properties-subscription-options.md) ＞。  
+3.  使用 [發行集屬性 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行集名稱>]**\< 對話方塊，啟用非 ** 訂閱者的發行集。 如需有關此步驟的詳細資訊，請參閱＜ [Publication Properties, Subscription Options](publication-properties-subscription-options.md) ＞。  
   
 4.  使用「新增訂閱精靈」建立訂閱。 本主題提供有關這個步驟的詳細資訊。  
   
@@ -61,24 +61,25 @@ ms.locfileid: "62721670"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
   
-3.  以滑鼠右鍵按一下發行集，然後再按一下 **[屬性]** 。  
+3.  以滑鼠右鍵按一下發行集，然後再按一下 **[屬性]**。  
   
 4.  在 **[訂閱選項]** 頁面中，為 **[允許非 SQL Server 訂閱者]** 選項選取 **[True]** 值。 選取此選項會變更某些屬性，使發行集能與非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者相容。  
   
     > [!NOTE]  
     >  選取 **[True]** 會將 **pre_creation_cmd** 發行項屬性值設為 'drop'。 這項設定會指定當複寫符合發行項中的資料表名稱時，應該要卸除「訂閱者」端的資料表。 如果您在「訂閱者」端有想要保留的現有資料表，請針對每一個發行項使用 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) 預存程序，並為 **pre_creation_cmd**指定 'none' 值： `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`。  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 將會提示您為發行集建立新快照集。 如果不想此時建立快照集，請稍後使用下一個「如何」程序中描述的步驟。  
+5.  
+  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 將會提示您為發行集建立新快照集。 如果不想此時建立快照集，請稍後使用下一個「如何」程序中描述的步驟。  
   
 #### <a name="to-create-a-subscription-for-a-non-sql-server-subscriber"></a>為非 SQL Server 訂閱者建立訂閱  
   
 1.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
   
-2.  以滑鼠右鍵按一下適當的發行集，然後再按一下 **[新增訂閱]** 。  
+2.  以滑鼠右鍵按一下適當的發行集，然後再按一下 **[新增訂閱]**。  
   
 3.  在 **[散發代理程式位置]** 頁面中，確定已選取 **[在散發者端執行所有代理程式]** 。 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者不支援在「訂閱者」端執行代理程式。  
   
-4.  在 **[訂閱者]** 頁面中，按一下 **[加入訂閱者]** 然後按一下 **[加入非 SQL Server 訂閱者]** 。  
+4.  在 **[訂閱者]** 頁面中，按一下 **[加入訂閱者]** 然後按一下 **[加入非 SQL Server 訂閱者]**。  
   
 5.  在 **[加入非 SQL Server 訂閱者]** 對話方塊中，選取「訂閱者」類型。  
   
@@ -90,21 +91,21 @@ ms.locfileid: "62721670"
   
      此精靈不會驗證在此步驟中輸入的資料來源名稱和在步驟 9 中指定的認證。 為訂閱執行「散發代理程式」後，複寫才會使用它們。 透過使用用戶端工具 (如 Oracle 的 **sqlplus** ) 連接到「訂閱者」，來確定所有值都已經過測試。 如需相關資訊，請參閱 [Oracle Subscribers](non-sql/oracle-subscribers.md) 及 [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)。  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 在精靈的 **[訂閱者]** 頁面中，「訂閱者」即會顯示在 **[訂閱者]** 資料行中，且在 **[訂閱資料庫]** 資料行中只能讀取 **[(預設的目的地)]** ：  
+7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]在 wizard 的 [**訂閱者**] 頁面上，訂閱者現在會顯示在 [**訂閱資料庫] 資料**行中具有唯讀 **（預設目的地）** 的 [**訂閱者**] 資料行：  
   
     -   在 Oracle 中，伺服器最多只有一個資料庫，所以不需要指定資料庫。  
   
     -   對於 IBM DB2，在 DB2 連接字串的 **初始資料目錄** 屬性中指定資料庫，可在這個處理稍後描述的 **[其他連接選項]** 欄位中輸入。  
   
-8.  在 [散發代理程式安全性]  頁面中，按一下「訂閱者」旁的屬性按鈕 ([...]  )，以存取 [散發代理程式安全性]  對話方塊。  
+8.  在 [散發代理程式安全性]**** 頁面中，按一下「訂閱者」旁的屬性按鈕 ([...]****)，以存取 [散發代理程式安全性]**** 對話方塊。  
   
 9. 在 **[散發代理程式安全性]** 對話方塊中：  
   
-    -   在 **[處理帳戶]** 、 **[密碼]** 及 **[確認密碼]** 欄位中，輸入「散發代理程式」應執行並與「訂閱者」建立本機連接所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶和密碼。  
+    -   在 **[處理帳戶]**、 **[密碼]** 及 **[確認密碼]** 欄位中，輸入「散發代理程式」應執行並與「訂閱者」建立本機連接所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶和密碼。  
   
          帳戶要求具有以下最小權限：散發資料庫中 **db_owner** 固定資料庫角色的成員；發行集存取清單 (PAL) 的成員；快照集共用的讀取權限；以及對 OLE DB 提供者之安裝目錄的讀取權限。 如需 PAL 的詳細資訊，請參閱[保護發行者](security/secure-the-publisher.md)。  
   
-    -   在 **[連接到訂閱者]** 下的 **[登入]** 、 **[密碼]** 及 **[確認密碼]** 欄位中，輸入用來連接到「訂閱者」的登入和密碼。 此登入必須已經設定，還必須具有在訂閱資料庫中建立物件的足夠權限。  
+    -   在 **[連接到訂閱者]** 下的 **[登入]**、 **[密碼]** 及 **[確認密碼]** 欄位中，輸入用來連接到「訂閱者」的登入和密碼。 此登入必須已經設定，還必須具有在訂閱資料庫中建立物件的足夠權限。  
   
     -   在 **[其他連接選項]** 欄位中，以連接字串形式指定「訂閱者」的任何連接選項 (Oracle 不需要其他選項)。 每個選項應以分號分隔。 以下為 DB2 連接字串的範例 (分行符號僅為便於閱讀)：  
   
@@ -115,9 +116,9 @@ ms.locfileid: "62721670"
         Persist Security Info=False;Connection Pooling=True;  
         ```  
   
-         字串中的大多數選項是您設定之 DB2 伺服器的專用選項，但 **將二進位當作字元處理** 選項，應一律設定為 [False]  。 需要為 **初始目錄** 選項指定值，以便識別訂閱資料庫。  
+         字串中的大多數選項是您設定之 DB2 伺服器的專用選項，但 **將二進位當作字元處理** 選項，應一律設定為 [False] ****。 需要為 **初始目錄** 選項指定值，以便識別訂閱資料庫。  
   
-10. 在 **[同步排程]** 頁面中，從 **[代理程式排程]** 功能表中選取「散發代理程式」的排程 (排程通常為 **[連續執行]** )。  
+10. 在 **[同步排程]** 頁面中，從 **[代理程式排程]** 功能表中選取「散發代理程式」的排程 (排程通常為 **[連續執行]**)。  
   
 11. 在 **[初始化訂閱]** 頁面中，指定是否應初始化訂閱以及初始化的時間 (如果是的話)：  
   
@@ -129,15 +130,15 @@ ms.locfileid: "62721670"
   
 #### <a name="to-retain-tables-at-the-subscriber"></a>將資料表保留在訂閱者端  
   
--   依預設，若啟用非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發行集，就會將 **pre_creation_cmd** 發行項屬性的值設定為 'drop'。 這項設定會指定當複寫符合發行項中的資料表名稱時，應該要卸除「訂閱者」端的資料表。 如果您在訂閱者端有想要保留的現有資料表，請針對每一個發行項使用 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) 預存程序，並為 **pre_creation_cmd**指定 'none' 值。 `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`。  
+-   依預設，若啟用非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發行集，就會將 **pre_creation_cmd** 發行項屬性的值設定為 'drop'。 這項設定會指定當複寫符合發行項中的資料表名稱時，應該要卸除「訂閱者」端的資料表。 如果您在訂閱者端有想要保留的現有資料表，請針對每一個發行項使用 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) 預存程序，並為 **pre_creation_cmd**指定 'none' 值。 `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
   
 #### <a name="to-generate-a-snapshot-for-the-publication"></a>產生發行集的快照集  
   
 1.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
   
-2.  以滑鼠右鍵按一下發行集，然後再按一下 **[檢視快照集代理程式的狀態]** 。  
+2.  以滑鼠右鍵按一下發行集，然後再按一下 **[檢視快照集代理程式的狀態]**。  
   
-3.  在 [檢視快照集代理程式的狀態 - \<發行集>]  對話方塊中，按一下 [啟動]  。  
+3.  在 [檢視快照集代理程式的狀態 - **發行集>]\<** 對話方塊中，按一下 [啟動]  。  
   
  「快照集代理程式」完成產生快照集後，會顯示一個訊息，例如「[100%] 已產生了 17 個發行項的快照集」。  
   
@@ -151,31 +152,31 @@ ms.locfileid: "62721670"
   
 1.  同時在發行者和散發者上針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者安裝最近的 OLE DB 提供者。 如需 OLE DB 提供者的複寫需求，請參閱＜ [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)＞、＜ [Oracle Subscribers](non-sql/oracle-subscribers.md)＞、＜ [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)＞。  
   
-2.  在發行集資料庫的發行者端，藉由執行 [sp_helppublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql) 來確認發行集支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。  
+2.  在發行集資料庫的發行者端，藉由執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_helppublication &#40;Transact-SQL&#41;[ 來確認發行集支援非 ](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql) 訂閱者。  
   
     -   如果 `enabled_for_het_sub` 的值為 1，表示支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。  
   
-    -   如果的值`enabled_for_het_sub`為 0，執行[sp_changepublication &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，並指定`enabled_for_het_sub`如 **@property** 並`true`的 **@value** .  
+    -   如果的值`enabled_for_het_sub`是0，請執行[sp_changepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，為指定`enabled_for_het_sub` ， **@property**並`true`針對。 **@value**  
   
         > [!NOTE]  
         >  在將 `enabled_for_het_sub` 變更為 `true` 之前，您必須先卸除此發行集的任何現有訂閱。 當此發行集同時支援更新訂閱時，您無法將 `enabled_for_het_sub` 設定為 `true`。 變更 `enabled_for_het_sub` 會影響其他發行集屬性。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)。  
   
-3.  在發行集資料庫的發行者端，執行 [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication** 、 **@subscriber** 、 **[訂閱資料庫]** @property **@destination_db** 、 **@subscription_type** @property **@subscription_type** 值，以及 **@subscriber_type** (指定 OLE DB 提供者) 的值 3。  
+3.  在發行集資料庫的發行者端，執行 [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定**@publication**、 **@subscriber**、的 **（預設目的地）** 值**@destination_db**、的**push**值**@subscription_type**，以及的值 3 **@subscriber_type** （指定 OLE DB 提供者）。  
   
 4.  在發行集資料庫的發行者端，執行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定下列項目：  
   
-    -   **@subscriber** 和 **@publication** 參數。  
+    -   **@subscriber**和**@publication**參數。  
   
-    -   (選擇性) **[訂閱資料庫]** @property **@subscriber_db** 、  
+    -   的 **（預設目的地）** 值**@subscriber_db**，  
   
-    -   針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] @subscriber_provider **@subscriber_provider** 、 **@subscriber_datasrc** 、 **@subscriber_location** 、 **@subscriber_provider_string** 及 **@subscriber_catalog** 中針對非 SQL Server 訂閱者建立訂閱。  
+    -   **@subscriber_provider**、 **@subscriber_datasrc**、 **@subscriber_location**、 **@subscriber_provider_string**和**@subscriber_catalog**之非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料來源的屬性。  
   
-    -   將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認證，「散發者」上的「散發代理程式」執行時會針對 **@job_login** ，並將 **@job_password** ＞。  
+    -   在[!INCLUDE[msCoName](../../includes/msconame-md.md)]散發者端用來**@job_login**執行和**@job_password**之散發代理程式的 Windows 認證。  
   
         > [!NOTE]  
-        >  使用「Windows 整合式驗證」建立的連接一律使用由 **@job_login** 及 **@job_password** 中針對非 SQL Server 訂閱者建立訂閱。 散發代理程式一律使用「Windows 整合式驗證」建立與散發者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
+        >  使用「Windows 整合式驗證」建立的連接一律使用由**@job_login**和**@job_password**指定的 Windows 認證。 散發代理程式一律使用「Windows 整合式驗證」建立與散發者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
   
-    -   (選擇性) **@subscriber_security_mode** @property **@subscriber_security_mode** ，以及 **@subscriber_login** 及 **@subscriber_password** 中針對非 SQL Server 訂閱者建立訂閱。  
+    -   的值為**0** ， **@subscriber_security_mode**且和的 OLE DB 提供者登**@subscriber_login**入**@subscriber_password**資訊。  
   
     -   此訂閱之散發代理程式作業的排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](specify-synchronization-schedules.md)。  
   
@@ -183,9 +184,9 @@ ms.locfileid: "62721670"
     >  利用遠端「散發者」來建立「發行者」上的發送訂閱時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字格式傳給「散發者」。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)   
- [Oracle Subscribers](non-sql/oracle-subscribers.md)   
- [其他非 SQL Server 訂閱者](non-sql/other-non-sql-server-subscribers.md)   
+ [IBM DB2 訂閱者](non-sql/ibm-db2-subscribers.md)   
+ [Oracle 訂閱者](non-sql/oracle-subscribers.md)   
+ [其他非 SQL Server 的訂閱者](non-sql/other-non-sql-server-subscribers.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
  [複寫安全性最佳作法](security/replication-security-best-practices.md)  
   

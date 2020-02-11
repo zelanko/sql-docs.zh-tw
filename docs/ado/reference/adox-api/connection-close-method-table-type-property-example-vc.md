@@ -1,5 +1,5 @@
 ---
-title: 連接的 Close 方法、 Table Type 屬性範例 （VC + +） |Microsoft Docs
+title: Connection Close 方法、Table Type 屬性範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4ff8cf50279d9be6b3ed334982e2140f0bd41f4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 980b0eb874781c50f8881f2dc5e4b295d6ba2a87
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966693"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76910509"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Connection Close 方法、Table Type 屬性範例 (VC++)
-設定[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)屬性設**Nothing**應該 「 關閉 」 目錄。 相關聯的集合是空的。 從目錄中的結構描述物件所建立的任何物件會被遺棄。 任何已快取這些物件的屬性仍然可以使用，但嘗試讀取屬性需要呼叫提供者將會失敗。  
+將 [ [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) ] 屬性設定為 [**無**] 時，應該會「關閉」目錄。 相關聯的集合將會是空的。 從目錄中的架構物件建立的任何物件將會孤立。 已快取之物件上的任何屬性仍然可以使用，但嘗試讀取需要呼叫提供者的屬性將會失敗。  
   
 ```  
 // BeginCloseConnectionCpp.cpp  
@@ -92,7 +92,7 @@ void CloseConnectionByNothingX() {
       printf("\nError\n\tSource :  %s \n\tdescription : %s \n", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in CloseConnectionByNothingX...." << endl;  
+      cout << "Error occurred in CloseConnectionByNothingX...." << endl;  
    }  
 }  
   
@@ -137,7 +137,7 @@ void CloseConnectionX() {
       printf("\nError\n\tSource :  %s \n\tdescription : %s \n", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in CloseConnectionX...." << endl;  
+      cout << "Error occurred in CloseConnectionX...." << endl;  
    }  
 }  
 ```  

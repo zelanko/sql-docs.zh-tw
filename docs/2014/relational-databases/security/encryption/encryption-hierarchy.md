@@ -17,18 +17,18 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 0c34eafe153c5361df1945b55094737fa529f617
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957208"
 ---
-# <a name="encryption-hierarchy"></a>Encryption Hierarchy
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用階層式加密與金鑰管理基礎結構來加密資料。 在某一階層執行加密時，會使用憑證、非對稱金鑰、對稱金鑰的組合來加密該階層下的所有階層。 非對稱金鑰和對稱金鑰可以儲存在可延伸金鑰管理 (EKM) 模組內 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的外部。  
+# <a name="encryption-hierarchy"></a>加密階層
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用階層式加密與金鑰管理基礎結構來加密資料。 在某一階層執行加密時，會使用憑證、非對稱金鑰、對稱金鑰的組合來加密該階層下的所有階層。 非對稱金鑰和對稱金鑰可以儲存在可延伸金鑰管理 (EKM) 模組內 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的外部。  
   
  下圖顯示每一層的加密階層為該層以下的所有階層進行加密，並顯示最常見的加密組態。 階層開始的存取通常受到密碼保護。  
   
- ![在堆疊中顯示部分加密組合](../../../database-engine/media/encryption-hierarchy-stack.gif "在堆疊中顯示部分加密組合")  
+ ![在堆疊中顯示部分加密組合。](../../../database-engine/media/encryption-hierarchy-stack.gif "在堆疊中顯示部分加密組合。")  
   
  請記住以下概念：  
   
@@ -46,7 +46,7 @@ ms.locfileid: "74957208"
   
  下圖以其他方式顯示相同的資訊。  
   
- ![在滾輪中顯示部分加密組合](../../../database-engine/media/encryption-hierarchy-wheel.gif "在滾輪中顯示部分加密組合")  
+ ![在滾輪中顯示部分加密組合。](../../../database-engine/media/encryption-hierarchy-wheel.gif "在滾輪中顯示部分加密組合。")  
   
  此圖說明下列其他概念：  
   
@@ -55,10 +55,9 @@ ms.locfileid: "74957208"
 -   EKM 中的對稱和非對稱金鑰可以保護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]內儲存之對稱和非對稱金鑰的存取。 與 EKM 相關的虛線表示 EKM 內的金鑰可以取代 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]內儲存的對稱和非對稱金鑰。  
   
 ## <a name="encryption-mechanisms"></a>加密機制  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供下列加密機制：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供下列加密機制：  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)]函式  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函數  
   
 -   非對稱金鑰  
   
@@ -80,7 +79,7 @@ ms.locfileid: "74957208"
   
 -   有效期間。 憑證在這段期間內都會視為有效。  
   
-     超過這段期間憑證則無效；每個憑證都包含 [有效期限自]**** 與 [有效期限至]**** 日期。 這些日期會指定有效期間。 當憑證的有效期過期時，憑證的主體應該要求取得新憑證。  
+     超過這段期間憑證則無效；每個憑證都包含 [有效期限自]  與 [有效期限至]  日期。 這些日期會指定有效期間。 當憑證的有效期過期時，憑證的主體應該要求取得新憑證。  
   
 -   簽發者識別資訊。  
   
@@ -106,12 +105,12 @@ ms.locfileid: "74957208"
  透明資料加密 (TDE) 是使用對稱金鑰的特殊加密案例。 TDE 會使用稱為資料庫加密金鑰的對稱金鑰加密整個資料庫。 資料庫加密金鑰受到其他金鑰或憑證的保護，這些金鑰或憑證則受到資料庫主要金鑰或是儲存於 EKM 模組內的非對稱金鑰的保護。 如需詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](transparent-data-encryption.md)。  
   
 ## <a name="related-content"></a>相關內容  
- [保護 SQL Server](../securing-sql-server.md)  
+ [保護 SQL Server 的安全](../securing-sql-server.md)  
   
- [&#40;Transact-sql&#41;的安全性函數](/sql/t-sql/functions/security-functions-transact-sql)  
+ [安全性函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)  
   
 ## <a name="see-also"></a>另請參閱  
- [許可權階層 &#40;資料庫引擎&#41;](../permissions-hierarchy-database-engine.md)   
+ [權限階層 &#40;Database Engine&#41;](../permissions-hierarchy-database-engine.md)   
  [安全性實體](../securables.md)  
   
   

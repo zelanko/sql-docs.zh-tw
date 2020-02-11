@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f88c78aa67d65eb84bfaa282fe46a122dd2a382a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63306030"
 ---
 # <a name="modify-queries-visual-database-tools"></a>修改查詢 (Visual Database Tools)
@@ -25,17 +25,17 @@ ms.locfileid: "63306030"
   
 ### <a name="to-open-a-query"></a>若要開啟查詢  
   
-1.  在 [檢視]  功能表上，按一下 [方案總管]  。  
+1.  在 **[檢視]** 功能表上，按一下 **[方案總管]** 。  
   
 2.  在方案總管中，在要開啟的查詢上按一下滑鼠右鍵，然後按一下 **[開啟]** 。  
   
-3.  若要修改查詢設計工具中的查詢，可反白顯示 SQL 陳述式，在反白顯示的區域上按一下滑鼠右鍵，然後選取 [在編輯器中設計查詢]   
+3.  若要修改查詢設計工具中的查詢，可反白顯示 SQL 陳述式，在反白顯示的區域上按一下滑鼠右鍵，然後選取 **[在編輯器中設計查詢]**  
   
  [查詢設計工具] 會開始讓您進行修改。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行查詢&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [在 [結果] 窗格中的資料搭配使用&#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
+ [&#40;Visual Database Tools 執行查詢&#41;](visual-database-tools.md)   
+ [使用 [結果] 窗格中的資料 &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
  [使用查詢執行基本作業 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

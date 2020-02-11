@@ -1,5 +1,5 @@
 ---
-title: Service Broker 與 AlwaysOn 可用性群組 (SQL Server) |Microsoft Docs
+title: 具有 AlwaysOn 可用性群組的 Service Broker （SQL Server） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fdf98d461039c5c6fb4f25c8cdf543422e5a0a2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788528"
 ---
 # <a name="service-broker-with-alwayson-availability-groups-sql-server"></a>Service Broker 與 AlwaysOn 可用性群組 (SQL Server)
@@ -25,17 +25,17 @@ ms.locfileid: "62788528"
   
  **本主題內容：**  
   
--   [讓可用性群組中之服務接收遠端訊息的需求](#ReceiveRemoteMessages)  
+-   [可用性群組中服務接收遠端訊息的需求](#ReceiveRemoteMessages)  
   
 -   [將訊息傳送至可用性群組中之遠端服務的需求](#SendRemoteMessages)  
   
-##  <a name="ReceiveRemoteMessages"></a> 讓可用性群組中之服務接收遠端訊息的需求  
+##  <a name="ReceiveRemoteMessages"></a>可用性群組中服務接收遠端訊息的需求  
   
 1.  **確定可用性群組擁有接聽程式。**  
   
      如需詳細資訊，請參閱 [建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)。  
   
-2.  **確定 Service Broker 端點存在而且設定正確。**  
+2.  **請確定 Service Broker 端點存在且已正確設定。**  
   
      在裝載可用性群組之可用性複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上，依照下列方式設定 Service Broker 端點：  
   
@@ -55,9 +55,9 @@ ms.locfileid: "62788528"
         FOR SERVICE_BROKER (AUTHENTICATION = WINDOWS)  
     ```  
   
-     如需詳細資訊，請參閱 [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)的相關資訊。  
+     如需詳細資訊，請參閱 [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)。  
   
-3.  **授與端點的 CONNECT 權限。**  
+3.  **授與端點的 CONNECT 許可權。**  
   
      將 Service Broker 端點的 CONNECT 權限授與 PUBLIC 或登入。  
   
@@ -69,14 +69,14 @@ ms.locfileid: "62788528"
   
      如需詳細資訊，請參閱 [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)的相關資訊。  
   
-4.  **確定 msdb 包含 AutoCreatedLocal 路由或特定服務的路由。**  
+4.  **請確定 msdb 包含 AutoCreatedLocal 路由或特定服務的路由。**  
   
     > [!NOTE]  
-    >  根據預設，每個使用者資料庫 (包括 **msdb**) 都包含 **AutoCreatedLocal**路由。 此路由會比對所有服務名稱和 Broker 執行個體，並指定訊息應在目前執行個體內傳遞。 **AutoCreatedLocal** 的優先權低於明確指定與遠端執行個體通訊之特定服務的路由。  
+    >  根據預設，每個使用者資料庫 (包括 **msdb**) 都包含 **AutoCreatedLocal**路由。 此路由會比對所有服務名稱和 Broker 執行個體，並指定訊息應在目前執行個體內傳遞。 **AutoCreatedLocal**的優先權低於明確指定與遠端實例通訊之特定服務的路由。  
   
      如需建立路由的相關資訊，請參閱 [Service Broker 路由範例](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (在 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 版本的《線上叢書》中) 和 [CREATE ROUTE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql)的相關資訊。  
   
-##  <a name="SendRemoteMessages"></a> 將訊息傳送至可用性群組中之遠端服務的需求  
+##  <a name="SendRemoteMessages"></a>將訊息傳送至可用性群組中之遠端服務的需求  
   
 1.  **建立目標服務的路由。**  
   
@@ -97,13 +97,13 @@ ms.locfileid: "62788528"
   
      如需詳細資訊，請參閱 [CREATE ROUTE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql)的相關資訊。  
   
-2.  **確定 msdb 包含 AutoCreatedLocal 路由或特定服務的路由。** (如需詳細資訊，請參閱本主題稍早的 [讓可用性群組中之服務接收遠端訊息的需求](#ReceiveRemoteMessages)。)  
+2.  **請確定 msdb 包含 AutoCreatedLocal 路由或特定服務的路由。** (如需詳細資訊，請參閱本主題稍早的 [讓可用性群組中之服務接收遠端訊息的需求](#ReceiveRemoteMessages)。)  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
--   [CREATE ROUTE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql)  
+-   [CREATE ROUTE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-route-transact-sql)  
   
 -   [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)  
   
@@ -111,10 +111,10 @@ ms.locfileid: "62788528"
   
 -   [建立及設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [設定登入帳戶，資料庫鏡像或 AlwaysOn 可用性群組&#40;SQL Server&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
+-   [設定資料庫鏡像的登入帳戶，或 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [SQL Server Service Broker](../../configure-windows/sql-server-service-broker.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 工作 6：匯入值從 Cleanse Supplier List 專案 |Microsoft Docs
+title: 工作6：從清理供應商清單專案匯入值 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,24 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489089"
 ---
-# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>工作 6：從清理供應商清單專案匯入值
-  在這項工作中，您會匯入清理程序期間所收集的資料品質知識。 請參閱[清理專案值匯入定義域](https://msdn.microsoft.com/library/hh479581.aspx)如需詳細資訊。 您也將知識庫匯出到 DQS 檔案之前發行更新**供應商**知識庫。  
+# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>工作 6：從 Cleanse Supplier List 專案匯入值
+  在這項工作中，您會匯入清理程序期間所收集的資料品質知識。 如需詳細資訊，請參閱[將清理專案值匯入定義域](https://msdn.microsoft.com/library/hh479581.aspx)主題。 您也會將知識庫匯出到 DQS 檔案，然後再發行更新的**供應商**知識庫。  
   
-1.  中的主頁面**DQS 用戶端**，按一下**向右箭號**旁**供應商**下**最近使用的知識庫**按一下**定義域管理**。  
+1.  在**DQS 用戶端**的主頁面中，按一下 [**最近使用的知識庫**] 底下 [**供應商**] 旁**的向右箭**號，然後按一下 [**定義域管理**]。  
   
-2.  按一下  **Contact Email**中的網域，並切換至清單**定義域值**右窗格中的索引標籤。  
+2.  按一下網域清單中的 [**連絡人電子郵件**]，然後切換至右窗格中的 [**定義域值**] 索引標籤。  
   
-3.  按一下 **向下箭號**旁**匯入值**工具列，然後按一下 圖示**匯入專案值**。  
+3.  按一下工具列上 [匯**入值**] 圖示旁的**向下箭**號，然後按一下 [匯**入專案值**]。  
   
-     ![匯入專案值 工具列按鈕](../../2014/tutorials/media/et-importingvaluesfromthecslistproject-01.jpg "匯入專案值 工具列按鈕")  
+     ![[匯入專案值] 工具列按鈕](../../2014/tutorials/media/et-importingvaluesfromthecslistproject-01.jpg "[匯入專案值] 工具列按鈕")  
   
-4.  在 **匯入專案值**對話方塊中，選取**Cleanse Supplier List**專案，然後按一下**確定**。  
+4.  在 [匯**入專案值**] 對話方塊中，選取 [**清理供應商清單**] 專案，然後按一下 **[確定]**。  
   
 5.  請注意，所有電子郵件都會匯入，連同您在互動式清理過程中所做的兩項更正。 請捲動來查看這兩項更正。  
   
@@ -37,34 +37,34 @@ ms.locfileid: "65489089"
     |bobby0@adventure-work.com|bobby0@adventure-works.com|  
     |tad0@adventure-work.com|tad0@adventure-works.com|  
   
-6.  重複上述步驟來匯入專案值**國家/地區**網域，請注意，新的項目加入更正**United State**來**美國**(與 's')。  
+6.  重複先前的步驟來匯入**Country**定義域的專案值，並注意是否已新增專案以將**美國**更正為美國 **（含**' s '）。  
   
     |值|更正為|  
     |-----------|----------------|  
-    |United State|United States|  
+    |United State|美國|  
   
-7.  若要查看舊的定義域值，請清除**只顯示新**核取方塊。  
+7.  若要查看舊的定義域值，請清除 [**只顯示新**的] 核取方塊。  
   
-8.  重複上述步驟來匯入專案值**Supplier Name**網域。 根據預設，您在匯入之後只會看到新值。 若要查看所有值，請清除**只顯示新**核取方塊。 您已擴充**供應商**與您從清理活動學到的知識庫。 當知識庫越來越強大，清理結果就會越好。  
+8.  重複先前的步驟，為**供應商名稱**網域匯入專案值。 根據預設，您在匯入之後只會看到新值。 若要查看所有值，請清除 [**只顯示新**的] 核取方塊。 您已使用從清理活動中學到的內容，擴充了**供應商**知識庫。 當知識庫越來越強大，清理結果就會越好。  
   
     > [!NOTE]  
     >  它不可能是複合定義域的匯入值。  
   
-9. 按一下 **匯出知識庫**工具列，然後按一下圖示**匯出知識庫**。  
+9. 按一下工具列上的 [**匯出知識庫**] 圖示，然後按一下 [**匯出知識庫**]。  
   
-     ![匯出知識庫 功能表](../../2014/tutorials/media/et-importingvaluesfromthecslistproject-02.jpg "匯出知識庫 功能表")  
+     ![[匯出知識庫] 功能表](../../2014/tutorials/media/et-importingvaluesfromthecslistproject-02.jpg "[匯出知識庫] 功能表")  
   
-10. 瀏覽至 [教學課程] 資料夾，型別**Suppliers.dqs** for**檔案名稱**，然後按一下**儲存**。 您可以使用這個 DQS 檔案，根據它來建立新的知識庫。  
+10. 流覽至 [教學課程] 資料夾，在 [**檔案名**] 中輸入 [**供應商. dqs** ]，然後按一下 [**儲存**]。 您可以使用這個 DQS 檔案，根據它來建立新的知識庫。  
   
-11. 按一下  **確定**以關閉**匯出知識庫-供應商**訊息方塊。  
+11. 按一下 **[確定]** 以關閉 [**匯出知識庫-供應商**] 訊息方塊。  
   
-12. 按一下 **完成**完成的活動。  
+12. 按一下 **[完成]** 以完成活動。  
   
-13. 按一下 [發行]  。  
+13. 按一下 **[發行]**。  
   
-14. 按一下 **確定**訊息方塊上。  
+14. 在訊息方塊上按一下 **[確定]** 。  
   
-## <a name="next-step"></a>下一個步驟  
- [第 3 課：比對資料來移除重複項目從供應商清單](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
+## <a name="next-step"></a>後續步驟  
+ [第 3 課：比對資料，以便從供應商清單中移除重複項](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
   
   

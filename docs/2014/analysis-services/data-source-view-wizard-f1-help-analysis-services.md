@@ -1,5 +1,5 @@
 ---
-title: 資料來源檢視精靈 F1 說明 (Analysis Services) |Microsoft Docs
+title: 資料來源 View Wizard F1 說明（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01074111cd4944f9b74137dd371e00343e37f15b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082510"
 ---
 # <a name="data-source-view-wizard-f1-help-analysis-services"></a>資料來源檢視精靈 F1 說明 (Analysis Services)
   使用資料來源檢視精靈即可建立資料來源檢視，在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中用於下列商業智慧專案：  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]專案  
   
 -   報表模型專案  
   
@@ -38,19 +38,19 @@ ms.locfileid: "66082510"
   
 -   命名並儲存資料來源檢視。  
   
- 建立資料來源檢視之後，您可以使用資料來源檢視設計師，在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中變更檢視的屬性。 如需資料來源檢視設計工具的詳細資訊，請參閱 [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](data-source-view-designer-analysis-services-multidimensional-data.md) (資料來源檢視設計工具 (Analysis Services - 多維度資料))。  
+ 建立資料來源檢視之後，您可以使用資料來源檢視設計師，在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中變更檢視的屬性。 如需資料來源檢視設計工具的詳細資訊，請參閱[資料來源檢視設計工具 &#40;Analysis Services - 多維度資料&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [選取資料來源&#40;資料來源檢視精靈&#41; &#40;Analysis Services&#41;](select-a-data-source-data-source-view-wizard-analysis-services.md)  
+-   [選取資料來源 &#40;資料來源 View Wizard&#41; &#40;Analysis Services&#41;](select-a-data-source-data-source-view-wizard-analysis-services.md)  
   
--   [名稱比對&#40;資料來源檢視精靈&#41; &#40;Analysis Services&#41;](name-matching-data-source-view-wizard-analysis-services.md)  
+-   [&#40;資料來源 View Wizard 的名稱比對&#41; &#40;Analysis Services&#41;](name-matching-data-source-view-wizard-analysis-services.md)  
   
--   [選取資料表和檢視&#40;資料來源檢視精靈&#41; &#40;Analysis Services&#41;](select-tables-and-views-data-source-view-wizard-analysis-services.md)  
+-   [選取資料表和 Views &#40;資料來源 View Wizard&#41; &#40;Analysis Services&#41;](select-tables-and-views-data-source-view-wizard-analysis-services.md)  
   
--   [完成精靈&#40;資料來源檢視精靈&#41; &#40;Analysis Services&#41;](completing-the-wizard-data-source-view-wizard-analysis-services.md)  
+-   [完成 Wizard &#40;資料來源 View Wizard&#41; &#40;Analysis Services&#41;](completing-the-wizard-data-source-view-wizard-analysis-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 精靈&#40;多維度資料&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Analysis Services 的 &#40;多維度資料的嚮導&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

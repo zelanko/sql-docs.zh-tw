@@ -1,5 +1,5 @@
 ---
-title: Upgrade Advisor How-to Topics&lt |Microsoft Docs
+title: Upgrade Advisor 的使用說明主題 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fe326421861cfd3c38dbf0fb0a6042d05945d022
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091613"
 ---
 # <a name="upgrade-advisor-how-to-topics"></a>Upgrade Advisor 使用說明主題
@@ -34,9 +34,9 @@ ms.locfileid: "66091613"
   
  [如何：篩選報表](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
- [如何：將報表匯出](../../../2014/sql-server/install/how-to-export-reports.md)  
+ [如何：匯出報表](../../../2014/sql-server/install/how-to-export-reports.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [使用升級建議程式](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [使用 Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

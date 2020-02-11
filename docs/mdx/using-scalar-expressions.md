@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b87fad1b9c568f4ebd5f65ef3705001b12d26693
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038046"
 ---
 # <a name="using-scalar-expressions"></a>使用純量運算式
@@ -69,6 +69,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
+ [MDX&#41;&#40;的運算式](../mdx/expressions-mdx.md)  
   
   

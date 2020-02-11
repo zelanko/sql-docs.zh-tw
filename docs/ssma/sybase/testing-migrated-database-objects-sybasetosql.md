@@ -1,5 +1,5 @@
 ---
-title: 測試移轉的資料庫物件 (SybaseToSQL) |Microsoft Docs
+title: 測試遷移的資料庫物件（SybaseToSQL） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6fb469dfcaaec33a03681bfb64f411851df0400e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020910"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>測試移轉的資料庫物件 (SybaseToSQL)
-Microsoft SQL Server Migration Assistant for Sybase Tester （SSMA 測試器） 會自動測試資料庫物件轉換和 SSMA 所做的資料移轉。 所有 SSMA 的移轉步驟都完成之後，使用 SSMA 軟體測試人員確認已轉換的物件執行相同的方式，而且所有的資料已正確移轉。  
+Sybase 測試器（SSMA 測試器）的 Microsoft SQL Server 移轉小幫手會自動測試資料庫物件轉換和 SSMA 所進行的資料移轉。 完成所有 SSMA 的遷移步驟之後，請使用 SSMA 測試人員來驗證轉換的物件是否以相同的方式運作，以及是否已正確傳輸所有資料。  
   
 > [!NOTE]  
-> 在 Azure 連線能力的情況下，測試人員元件已停用。  
+> 在 Azure 連線的情況下，會停用測試人員元件。  
   
-使用 SSMA 軟體測試人員，您可以測試下列物件類型：  
+您可以使用 SSMA 測試器測試下列物件類型：  
   
 -   資料表  
   
@@ -30,36 +30,36 @@ Microsoft SQL Server Migration Assistant for Sybase Tester （SSMA 測試器） 
   
 -   檢視。  
   
--   獨立陳述式。  
+-   獨立語句。  
   
-SSMA 軟體測試人員執行在 Sybase 和 SQL Server 中的其對應項目上進行測試所選取的物件。 在那之後，它會比較的結果，根據下列準則：  
+SSMA 測試器會執行選取要在 Sybase 上測試的物件，以及其在 SQL Server 中的對應專案。 之後，它會根據下列準則來比較結果：  
   
 -   資料表資料中的變更是否相同？  
   
--   完全相同的程序和函式的輸出參數的值？  
+-   程式和函式的輸出參數值是否相同？  
   
--   函式會傳回相同的結果嗎？  
+-   函數會傳回相同的結果嗎？  
   
--   會將結果集相同嗎？  
+-   結果集是否相同？  
   
 > [!NOTE]  
-> 注意 ！ 絕對不要在實際系統上使用 SSMA 軟體測試人員。 在測試執行期間會修改來源結構描述和資料。 同時，原始狀態的完整還原可能無法針對某些類型的測試的程式碼。  
+> 加! 絕對不要在生產系統上使用 SSMA 測試器。 在測試器執行期間，會修改來源架構和資料。 同時，針對某些類型的已測試程式碼，完全還原原始狀態是不可能的。  
   
-## <a name="prerequisites"></a>必要條件  
-如果您想要使用 SSMA Tester，安裝 SSMA Sybase 延伸模組套件，與**安裝的軟體測試人員資料庫**開啟選項。  
+## <a name="prerequisites"></a>Prerequisites  
+如果您想要使用 SSMA 測試器，請在開啟 [**安裝測試器資料庫**] 選項的情況下安裝 SSMA Sybase 延伸模組套件。  
   
-此外，請檢查下列各項：  
+此外，請確認下列事項：  
   
--   Sybase OLE DB 提供者安裝在電腦上其中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行。  
+-   Sybase OLE DB 提供者安裝在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行的電腦上。  
   
--   已啟用 common Language Runtime (CLR) 整合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Database Engine。  
+-   已在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫引擎上啟用 Common Language RUNTIME （CLR）整合。  
   
-請注意，目前版本的 SSMA Tester 不支援平行執行不同的使用者在相同的來源或目標伺服器上。  
+請注意，目前版本的 SSMA 測試器不支援由相同來源或目標伺服器上的不同使用者進行平行執行。  
   
-## <a name="getting-started"></a>使用者入門  
-[建立測試案例&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-test-cases-sybasetosql.md)  
+## <a name="getting-started"></a>開始使用  
+[&#40;SybaseToSQL&#41;建立測試案例](../../ssma/sybase/creating-test-cases-sybasetosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[SQL Server 上安裝 SSMA 元件&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
-[專案設定&#40;轉換&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
+[在 SQL Server &#40;SybaseToSQL 上安裝 SSMA 元件&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
+[專案設定 &#40;轉換&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
   

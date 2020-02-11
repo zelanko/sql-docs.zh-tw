@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan_db (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_maintenance_plan_db （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e3f0afcd0007dc0e61424449e87851ca562b0cdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68009198"
 ---
-# <a name="spaddmaintenanceplandb-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
+# <a name="sp_add_maintenance_plan_db-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   將資料庫關聯於維護計畫。  
@@ -45,21 +45,21 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @plan_id = ] 'plan_id'` 指定維護計畫的計畫識別碼。 *plan_id*已**uniqueidentifier**，而且必須是有效的識別碼。  
+`[ @plan_id = ] 'plan_id'`指定維護計畫的計畫識別碼。 *plan_id*是**uniqueidentifier**，而且必須是有效的識別碼。  
   
-`[ @db_name = ] 'database_name'` 指定要加入至 維護計畫的資料庫名稱。 資料庫必須先建立好或已存在，才能加入計畫中。 *database_name* 為 **sysname**。  
+`[ @db_name = ] 'database_name'`指定要加入至維護計畫的資料庫名稱。 資料庫必須先建立好或已存在，才能加入計畫中。 *database_name*是**sysname**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_add_maintenance_plan_db**必須從執行**msdb**資料庫。  
+ **sp_add_maintenance_plan_db**必須從**msdb**資料庫中執行。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行**sp_add_maintenance_plan_db**。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_add_maintenance_plan_db**。  
   
 ## <a name="examples"></a>範例  
- 這個範例會新增**AdventureWorks2012**資料庫中建立的維護計畫**sp_add_maintenance_plan**。  
+ 這個範例會將**AdventureWorks2012**資料庫新增至**sp_add_maintenance_plan**中建立的維護計畫。  
   
 ```  
 EXECUTE   sp_add_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC',N'AdventureWorks2012';  
@@ -67,6 +67,6 @@ EXECUTE   sp_add_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC',N'A
   
 ## <a name="see-also"></a>另請參閱  
  [維護計畫](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [資料庫維護計畫預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [資料庫維護計畫預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

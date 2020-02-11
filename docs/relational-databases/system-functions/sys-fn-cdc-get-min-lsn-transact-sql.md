@@ -1,5 +1,5 @@
 ---
-title: sys.fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs
+title: sys.databases fn_cdc_get_min_lsn （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046398"
 ---
-# <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
+# <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回從指定的擷取執行個體的 start_lsn column 值[cdc.change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)系統資料表。 這個值代表擷取執行個體的有效性間隔低端點。  
+  從[cdc. change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)系統資料表中，傳回指定之 capture 實例的 start_lsn 資料行值。 這個值代表擷取執行個體的有效性間隔低端點。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,23 +43,23 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
   
 ## <a name="arguments"></a>引數  
  **'** *capture_instance_name* **'**  
- 這是擷取執行個體的名稱。 *capture_instance_name*已**sysname**。  
+ 這是擷取執行個體的名稱。 *capture_instance_name*是**sysname**。  
   
-## <a name="return-types"></a>傳回類型  
- **binary(10)**  
+## <a name="return-types"></a>傳回型別  
+ **binary （10）**  
   
 ## <a name="remarks"></a>備註  
  當擷取執行個體不存在，或者呼叫端未經授權，無法存取與擷取執行個體相關聯的變更資料時，便傳回 0x00000000000000000000。  
   
  這個函數通常是用於識別與擷取執行個體相關聯之異動資料擷取時間表的低端點。 您也可以在要求變更資料之前，使用這個函數來驗證查詢範圍的端點是否都位於擷取執行個體時間表之內。 請您務必執行這類檢查，因為在變更資料表上執行清除時，擷取執行個體的低端點就會變更。 如果變更資料要求之間的時間很長，即使是上一次變更資料要求時設定為高端點的低端點也可能位於目前時間表以外。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要系統管理員 (sysadmin) 固定伺服器角色或 db_owner 固定資料庫角色中的成員資格。 若為所有其他使用者，則需要來源資料表中所有擷取資料行的 SELECT 權限，而且如果定義了擷取執行個體的控制角色，便需要該資料庫角色的成員資格。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-returning-the-minimum-lsn-value-for-a-specified-capture-instance"></a>A. 針對指定的擷取執行個體傳回最小 LSN 值  
- 下列範例會針對 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的擷取執行個體 `HumanResources_Employee` 傳回最小 LSN 值。  
+ 下列範例會針對 `HumanResources_Employee` 資料庫中的擷取執行個體 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 傳回最小 LSN 值。  
   
 ```  
 USE AdventureWorks2-12;  
@@ -95,7 +95,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.fn_cdc_get_max_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
+ [fn_cdc_get_max_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

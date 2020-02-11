@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 835057cdef6b7d2a336b64480515a5046cfde070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875761"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>復原到記錄序號 (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62875761"
   
  交易記錄中的每一筆記錄都由記錄序號 (LSN) 加以唯一識別。 LSN 是經過排序的，因此如果 LSN2 大於 LSN1，表示 LSN2 所參考記錄中描述的變更，發生在記錄 LSN1 所描述的變更之後。  
   
- 發生重大事件時的記錄 LSN，有助於建構正確的還原順序。 因為 LSNs 經過排序，所以可以進行相等和不等比較 (亦即， **\<** 、 **>** 、 **=** 、 **\<=** 、 **>=** )。 要建構還原順序時，這種比較很有用。  
+ 發生重大事件時的記錄 LSN，有助於建構正確的還原順序。 因為 Lsn 經過排序，所以可以進行相等和不等比較（也就是**\<** **>**、、 **=**、 ** \< **、 **>=**）。 要建構還原順序時，這種比較很有用。  
   
 > [!NOTE]  
 >  LSN 是資料類型 `numeric`(25,0) 的值。 數學運算 (例如：加、減) 在此沒有意義，且絕不能搭配 LSN 使用。  
@@ -52,7 +52,7 @@ ms.locfileid: "62875761"
   
 -   [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)  
   
--   [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)； [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
+-   [sys. database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql);[sys. master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
 -   [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   
@@ -64,11 +64,11 @@ ms.locfileid: "62875761"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>還原至 LSN 所用的 Transact-SQL 語法  
  使用 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 陳述式，您可以在 LSN 上或剛好就在它之前停止，如下所述：  
   
--   使用 WITH STOPATMARK **='** lsn: _<lsn_number>_ **'** 子句，其中 lsn: *\<lsnNumber>* 是會指定包含所指定的 LSN 的記錄檔記錄為復原點的字串。  
+-   使用 WITH STOPATMARK **= '** lsn：_<lsn_number>_ **'** 子句，其中 lsn：*\<lsnnumber>>* 是字串，指定包含指定 lsn 的記錄是復原點。  
   
      STOPATMARK 會向前復原到 LSN，並且將該筆記錄納入向前復原中。  
   
--   使用 WITH STOPBEFOREMARK **='** lsn: _<lsn_number>_ **'** 子句，其中 lsn: *\<lsnNumber>* 是會指定緊接在包含指定的 LSN 號碼的記錄檔記錄之前的記錄檔記錄為復原點的字串。  
+-   使用 WITH STOPBEFOREMARK **= '** lsn：_<lsn_number>_ **'** 子句，其中 lsn：*\<lsnnumber>>* 是字串，指定緊接在包含指定 lsn 編號的記錄檔記錄之前的記錄是復原點。  
   
      STOPBEFOREMARK 會向前復原到 LSN，並且從向前復原中排除該筆記錄。  
   
@@ -85,7 +85,7 @@ GO
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
--   [還原資料庫備份&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [還原資料庫備份 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [備份交易記錄 &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   

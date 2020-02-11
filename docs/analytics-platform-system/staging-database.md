@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dcd7f95833695cc5f9f791d83a6221c35e88f58e
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400287"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>在平行處理資料倉儲（PDW）中使用臨時資料庫
@@ -38,7 +38,7 @@ SQL Server 平行處理資料倉儲（PDW）會使用臨時資料庫，在載入
   
 -   若要載入 rowstore 叢集索引，臨時表是 rowstore 叢集索引。  
   
-## <a name="Permissions"></a>無權  
+## <a name="Permissions"></a>Permissions  
 需要在臨時資料庫上建立許可權（用於建立臨時表）。 
 
 <!-- MISSING LINKS
@@ -61,7 +61,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
   
     -   記錄檔大小通常類似于複寫的資料表大小。  
   
-## <a name="Examples"></a>典型  
+## <a name="Examples"></a>範例  
   
 ### <a name="a-create-a-staging-database"></a>A. 建立臨時資料庫 
 下列範例會建立臨時資料庫 Stagedb，以便與設備上的所有負載搭配使用。 假設您估計五個大小為 5 GB 的複寫資料表會同時載入。 此並行會導致複寫的大小至少配置 25 GB。 假設您估計6個大小為100、200、400、500、500和 550 GB 的分散式資料表會同時載入。 此並行處理會導致分配至少 2250 GB 的分散式資料表大小。  

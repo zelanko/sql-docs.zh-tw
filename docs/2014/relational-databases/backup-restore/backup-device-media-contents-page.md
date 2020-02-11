@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876690"
 ---
 # <a name="backup-device-media-contents-page"></a>備份裝置 (媒體內容頁面)
@@ -28,7 +28,7 @@ ms.locfileid: "62876690"
   
 -   [檢視邏輯備份裝置的屬性和內容 &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  檢視有關個別媒體、媒體集和備份組的資訊。  
   
  **媒體**  
@@ -55,17 +55,17 @@ ms.locfileid: "62876690"
  **備份組**  
  顯示有關媒體上包含的備份組的資訊。 備份組是成功備份作業的結果，其內容會散發在備份裝置集的媒體上。  
   
-|標頭|值|  
+|頁首|值|  
 |------------|------------|  
 |**名稱**|備份組的名稱。|  
-|**型別**|備份的物件：資料庫檔案，或 *\<空白 >* （針對交易記錄）。|  
-|**元件**|執行的備份類型：完整、 差異或交易記錄檔。|  
+|**型別**|已備份的物件：資料庫、檔案或 *空白>\<* (適用於交易記錄)。|  
+|**元件**|執行的備份類型：完整、差異或交易記錄。|  
 |**Server**|執行備份作業之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的名稱。|  
-|**[資料庫備份]**|已備份資料庫的名稱。|  
+|**Database**|已備份資料庫的名稱。|  
 |**位置**|備份組在磁碟區中的位置。|  
 |**日期**|備份作業完成時的日期和時間，會出現在用戶端的地區設定中。|  
 |**大小**|備份組的大小 (以位元組為單位)。|  
-|**使用者名稱**|執行備份作業的使用者名稱。|  
+|**使用者名稱**|{1}執行備份作業的使用者名稱。{2}|  
 |**到期**|備份組過期的日期和時間。|  
   
 ##  <a name="RelatedTasks"></a> 相關工作  

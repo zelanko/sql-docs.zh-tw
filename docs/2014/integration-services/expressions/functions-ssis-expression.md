@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70cde85aca7b08003d27ee3bd2fc61cbc0a45f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769124"
 ---
 # <a name="functions-ssis-expression"></a>函數 (SSIS 運算式)
@@ -38,7 +38,7 @@ ms.locfileid: "62769124"
   
  運算式語言提供下列數學函數。  
   
-|函數|描述|  
+|函式|描述|  
 |--------------|-----------------|  
 |[ABS &#40;SSIS 運算式&#41;](abs-ssis-expression.md)|傳回數值運算式的絕對正數值。|  
 |[EXP &#40;SSIS 運算式&#41;](exp-ssis-expression.md)|傳回做為指定運算式中 e 之基底的指數。|  
@@ -47,14 +47,14 @@ ms.locfileid: "62769124"
 |[LN &#40;SSIS 運算式&#41;](ln-ssis-expression.md)|傳回數值運算式的自然對數。|  
 |[LOG &#40;SSIS 運算式&#41;](log-ssis-expression.md)|傳回數值運算式以 10 為底的對數。|  
 |[POWER &#40;SSIS 運算式&#41;](power-ssis-expression.md)|傳回數值運算式的乘冪結果。|  
-|[ROUND &#40;SSIS 運算式&#41;](round-ssis-expression.md)|傳回已經進位到指定長度或有效位數的數值運算式。 .|  
+|[ROUND &#40;SSIS 運算式&#41;](round-ssis-expression.md)|傳回已經進位到指定長度或有效位數的數值運算式。 。|  
 |[SIGN &#40;SSIS 運算式&#41;](sign-ssis-expression.md)|傳回數值運算式的正 (+)、負 (-) 或零 (0) 符號。|  
 |[SQUARE &#40;SSIS 運算式&#41;](square-ssis-expression.md)|傳回數值運算式的平方。|  
 |[SQRT &#40;SSIS 運算式&#41;](sqrt-ssis-expression.md)|傳回數值運算式的平方根。|  
   
  運算式評估工具提供下列字串函數。  
   
-|函數|描述|  
+|函式|描述|  
 |--------------|-----------------|  
 |[CODEPOINT &#40;SSIS 運算式&#41;](codepoint-ssis-expression.md)|傳回字元運算式最左邊字元的 Unicode 字碼值。|  
 |[FINDSTRING &#40;SSIS 運算式&#41;](findstring-ssis-expression.md)|傳回運算式中，所指定字元字串出現位置的以 1 為基底的索引。|  
@@ -74,7 +74,7 @@ ms.locfileid: "62769124"
   
  運算式評估工具提供下列日期和時間函數。  
   
-|函數|描述|  
+|函式|描述|  
 |--------------|-----------------|  
 |[DATEADD &#40;SSIS 運算式&#41;](dateadd-ssis-expression.md)|藉由將日期或時間間隔加入至指定的日期，傳回新的 DT_DBTIMESTAMP 值。|  
 |[DATEDIFF &#40;SSIS 運算式&#41;](datediff-ssis-expression.md)|傳回跨越兩個指定日期的日期和時間界線數目。|  
@@ -87,7 +87,7 @@ ms.locfileid: "62769124"
   
  運算式評估工具提供下列 Null 函數。  
   
-|函數|描述|  
+|函式|描述|  
 |--------------|-----------------|  
 |[ISNULL &#40;SSIS 運算式&#41;](null-ssis-expression.md)|依據運算式是否為 Null 來傳回布林結果。|  
 |[NULL &#40;SSIS 運算式&#41;](null-ssis-expression.md)|傳回所要求資料類型的 Null 值。|  

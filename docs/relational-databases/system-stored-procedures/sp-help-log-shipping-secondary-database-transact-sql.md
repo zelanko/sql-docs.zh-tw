@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_secondary_database (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_log_shipping_secondary_database （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 65c4cd3f6ca07f2c3cb35dc7dcbaad373930ecc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68066815"
 ---
-# <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
+# <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   這個預存程序會擷取一或多個次要資料庫的設定。  
@@ -43,9 +43,9 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @secondary_database = ] 'secondary_database'` 是，次要資料庫的名稱。 *secondary_database*已**sysname**，沒有預設值。  
+`[ @secondary_database = ] 'secondary_database'`這是次要資料庫的名稱。 *secondary_database*是**sysname**，沒有預設值。  
   
-`[ @secondary_id = ] 'secondary_id'` 記錄傳送組態中次要伺服器的識別碼。 *secondary_id*已**uniqueidentifier**不能是 NULL。  
+`[ @secondary_id = ] 'secondary_id'`記錄傳送設定中次要伺服器的識別碼。 *secondary_id*是**uniqueidentifier** ，不能是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -55,7 +55,7 @@ sp_help_log_shipping_secondary_database
 |資料行名稱|描述|  
 |-----------------|-----------------|  
 |**secondary_id**|記錄傳送組態中之次要伺服器的識別碼。|  
-|**primary_server**|主要執行個體名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]記錄傳送組態中。|  
+|**primary_server**|記錄傳送組態中之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 主要執行個體的名稱。|  
 |**primary_database**|記錄傳送組態中之主要資料庫的名稱。|  
 |**backup_source_directory**|用於儲存主要伺服器之交易記錄備份檔的目錄。|  
 |**backup_destination_directory**|備份檔要複製到其中的次要伺服器目錄。|  
@@ -63,7 +63,7 @@ sp_help_log_shipping_secondary_database
 |**copy_job_id**|次要伺服器中之複製作業的相關識別碼。|  
 |**restore_job_id**|次要伺服器中之還原作業的相關識別碼。|  
 |**monitor_server**|在記錄傳送組態中，用於做為監視伺服器之 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體的名稱。|  
-|**monitor_server_security_mode**|用於連接到監視伺服器的安全性模式。<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。<br /><br /> 0 =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
+|**monitor_server_security_mode**|用於連接到監視伺服器的安全性模式。<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
 |**secondary_database**|記錄傳送組態中之次要資料庫的名稱。|  
 |**restore_delay**|在還原給定的備份檔之前，次要伺服器等待的時間 (以分鐘為單位)。 預設值是 0 分鐘。|  
 |**restore_all**|如果設為 1，當執行還原作業時，次要伺服器會還原所有可用的交易記錄備份。 否則，它會在還原一個檔案之後停止。|  
@@ -71,7 +71,8 @@ sp_help_log_shipping_secondary_database
 |**disconnect_users**|如果設為 1，當執行還原作業時，會從次要資料庫中斷使用者的連接。 預設值 = 0。|  
 |**block_size**|用來做為備份裝置區塊大小的大小 (以位元組為單位)。|  
 |**buffer_count**|備份或還原作業所用的緩衝區總數。|  
-|**max_transfer_size**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向備份裝置發出的最大輸入或輸出要求大小 (以位元組為單位)。|  
+|**max_transfer_size**|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向備份裝置發出的最大輸入或輸出要求大小 (以位元組為單位)。|  
 |**restore_threshold**|在產生警示之前，還原作業之間所能經歷的時間 (以分鐘為單位)。|  
 |**threshold_alert**|當超出還原臨界值時所產生的警示。|  
 |**threshold_alert_enabled**|決定是否啟用還原臨界值警示。<br /><br /> 1 = 已啟用。<br /><br /> 0 = 已停用。|  
@@ -85,15 +86,15 @@ sp_help_log_shipping_secondary_database
 |**last_restored_latency**|在主要資料庫中建立記錄備份和在次要資料庫中還原這個記錄備份，其間所經歷的時間 (以分鐘為單位)。<br /><br /> 初始值是 NULL。|  
   
 ## <a name="remarks"></a>備註  
- 如果您納入*secondary_database*參數，如果您包含在結果集將包含次要資料庫; 的相關資訊*secondary_id*結果集將包含參數，該次要識別碼相關聯的所有次要資料庫的相關資訊  
+ 如果您包含*secondary_database*參數，結果集會包含該次要資料庫的相關資訊。如果您包含*secondary_id*參數，結果集會包含所有與該次要識別碼相關聯之次要資料庫的資訊。  
   
- **sp_help_log_shipping_secondary_database**必須從執行**主要**次要伺服器上的資料庫。  
+ **sp_help_log_shipping_secondary_database**必須從次要伺服器的**master**資料庫中執行。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
+ [sp_help_log_shipping_secondary_primary &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

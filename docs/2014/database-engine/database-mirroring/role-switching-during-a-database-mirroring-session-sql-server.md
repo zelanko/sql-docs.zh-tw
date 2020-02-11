@@ -20,14 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 184018d0c0973f41e686f9111b9664e12f91cd20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754470"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>資料庫鏡像工作階段期間的角色切換 (SQL Server)
-  在資料庫鏡像工作階段的內容中，主體與鏡像角色通常可以用一種稱為 *「角色切換」* 的程序交換。 在角色切換中，鏡像伺服器將充當主體伺服器的「容錯移轉夥伴」、接替主體角色、復原其資料庫副本，並使其上線以作為新的主體資料庫。 先前的主體伺服器可用時，會擔任鏡像角色，而其資料庫即成為新的鏡像資料庫。 原則上，這些角色可以來回切換，以回應多項失敗或達成管理目的。  
+  在資料庫鏡像會話的內容中，主體和鏡像角色通常會在稱為*角色切換*的進程中互換。 在角色切換中，鏡像伺服器將充當主體伺服器的「容錯移轉夥伴」**、接替主體角色、復原其資料庫副本，並使其上線以作為新的主體資料庫。 先前的主體伺服器可用時，會擔任鏡像角色，而其資料庫即成為新的鏡像資料庫。 原則上，這些角色可以來回切換，以回應多項失敗或達成管理目的。  
   
 > [!NOTE]  
 >  本主題假設您已熟悉資料庫鏡像作業模式。 如需詳細資訊，請參閱 [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)。  
@@ -54,7 +54,7 @@ ms.locfileid: "62754470"
   
      如果見證存在的話，高安全性模式就支援自動容錯移轉。 當見證和鏡像伺服器仍然彼此連接而且資料庫已經同步處理時，自動容錯移轉只會在主體伺服器失效時進行。 如需詳細資訊，請參閱本主題稍後的 [自動容錯移轉](#AutomaticFailover)。  
   
--   **強制服務 (可能遺失資料)**  
+-   **強制服務（可能會遺失資料）**  
   
      高安全性模式 (如果沒有設定見證的話) 和高效能模式下都支援強制服務。 主體伺服器失效後，資料庫擁有者可對鏡像伺服器執行強制服務 (可能遺失資料)，以讓資料庫成為可用狀態。  
   
@@ -75,24 +75,24 @@ ms.locfileid: "62754470"
   
  在角色切換期間，資料庫鏡像無法服務的時間量將依角色切換的類型及其原因而定。 如需詳細資訊，請參閱 [預估角色切換期間的服務中斷時間 &#40;資料庫鏡像&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)的程序交換。  
   
-##  <a name="ManualFailover"></a> Manual Failover  
+##  <a name="ManualFailover"></a>手動容錯移轉  
  手動容錯移轉會中斷用戶端與資料庫之間的連接，並將夥伴的角色反轉過來。 只有高安全性模式支援手動容錯移轉。  
   
   
-###  <a name="AvailabilityDuringUpgrades"></a> 維護升級期間的可用性  
+###  <a name="AvailabilityDuringUpgrades"></a>維護升級期間的可用性  
  資料庫管理員可以使用手動容錯移轉來升級硬體或軟體，而不必犧牲可用性。 若要使用資料庫鏡像進行軟體升級，鏡像伺服器及/或系統必須已經升級。  
   
 > [!NOTE]  
->  資料庫鏡像應該可進行輪流升級，但因為不知道未來是否會有所變更，所以無法保證一定可以進行這類升級。 如需詳細資訊，請參閱 [在升級伺服器執行個體時將鏡像資料庫的停機時間減至最少](upgrading-mirrored-instances.md)。  
+>  資料庫鏡像應該可進行輪流升級，但因為不知道未來是否會有所變更，所以無法保證一定可以進行這類升級。 如需詳細資訊，請參閱 [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md)。  
   
  下圖說明在升級資料庫伺服器執行個體的同時，使用手動容錯移轉來維護資料庫可用性的範例。 升級完成時，系統管理員可以選擇性地容錯移轉回原始的伺服器執行個體。 如果系統管理員想要停止鏡像工作階段，轉而使用別處的鏡像伺服器，這個方法便很有用。 使用這個方法，更新一連串的資料庫伺服器執行個體時，就可以重複使用單一的伺服器執行個體。  
   
- ![規劃的手動容錯移轉](../media/dbm-failovmanuplanned.gif "規劃的手動容錯移轉")  
+ ![已規劃的手動容錯移轉](../media/dbm-failovmanuplanned.gif "已規劃的手動容錯移轉")  
   
-###  <a name="ConditionsForManualFo"></a> 手動容錯移轉所需的條件  
+###  <a name="ConditionsForManualFo"></a>手動容錯移轉所需的條件  
  手動容錯移轉需要將交易安全性設定為 FULL (即為高安全性模式)。 當夥伴已連接而且資料庫已經同步處理後，就會支援手動容錯移轉。  
   
-###  <a name="HowManualFoWorks"></a> 手動容錯移轉如何運作  
+###  <a name="HowManualFoWorks"></a>手動容錯移轉的運作方式  
  手動容錯移轉會起始下列動作順序：  
   
 1.  主體伺服器會中斷用戶端與主體資料庫的連接、將記錄結尾傳送至鏡像伺服器，並在準備切換到鏡像角色時，將鏡像狀態設定為 SYNCHRONIZING。  
@@ -100,7 +100,7 @@ ms.locfileid: "62754470"
 2.  鏡像伺服器會將從主體伺服器接收到最後一筆記錄的記錄序號 (LSN) 記錄下來，做為容錯移轉 LSN。  
   
     > [!NOTE]  
-    >  若要檢視此 LSN，請從 [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql) 選取 **mirroring_failover_lsn** 資料行。  
+    >  若要檢視此 LSN，請從 **sys.database_mirroring &#40;Transact-SQL&#41;** 選取 [mirroring_failover_lsn](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql) 資料行。  
   
 3.  如果在重做佇列中有任何記錄正在等待，則鏡像伺服器會完成鏡像資料庫的向前復原。 所需時間取決於系統的速度、最近的工作負載，以及重做佇列中的記錄量。 針對同步處理作業模式，容錯移轉時間可以藉由限制重做佇列的大小來調節。 但是，這可能會造成主體伺服器變慢，以便鏡像伺服器能夠跟上。  
   
@@ -116,23 +116,23 @@ ms.locfileid: "62754470"
     > [!NOTE]  
     >  新鏡像伺服器重新同步處理資料庫後，就可以再次容錯移轉，但是方向會相反。  
   
- 容錯移轉之後，用戶端必須重新連接到目前的主體資料庫。 如需詳細資訊，請參閱 [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)的程序交換。  
+ 容錯移轉之後，用戶端必須重新連接到目前的主體資料庫。 如需詳細資訊，請參閱本主題稍後的 [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
- **若要初始化手動容錯移轉**  
+ **起始手動容錯移轉**  
   
 -   [手動容錯移轉資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
--   [手動容錯移轉資料庫鏡像工作階段 &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md)。  
+-   [&#40;transact-sql&#41;手動故障切換資料庫鏡像會話](manually-fail-over-a-database-mirroring-session-transact-sql.md)。  
   
-##  <a name="AutomaticFailover"></a> Automatic Failover  
- 只有在高安全性模式下搭配見證執行的資料庫鏡像工作階段才支援自動容錯移轉 (「具有自動容錯移轉的高安全性模式」)。 在具有自動容錯移轉的高安全性模式下，一旦資料庫同步處理後，如果主體資料庫無法使用，就會進行自動容錯移轉。 自動容錯移轉會使鏡像伺服器接替主體伺服器的角色，使其資料庫副本連接成為主體資料庫。 同步處理資料庫的需求可避免容錯移轉期間發生資料遺失的狀況，因為主體資料庫上認可的每一筆交易也會在鏡像資料庫上認可。  
+##  <a name="AutomaticFailover"></a>自動容錯移轉  
+ 只有在高安全性模式下搭配見證執行的資料庫鏡像工作階段才支援自動容錯移轉 (「具有自動容錯移轉的高安全性模式」**)。 在具有自動容錯移轉的高安全性模式下，一旦資料庫同步處理後，如果主體資料庫無法使用，就會進行自動容錯移轉。 自動容錯移轉會使鏡像伺服器接替主體伺服器的角色，使其資料庫副本連接成為主體資料庫。 同步處理資料庫的需求可避免容錯移轉期間發生資料遺失的狀況，因為主體資料庫上認可的每一筆交易也會在鏡像資料庫上認可。  
   
 > [!IMPORTANT]  
 >  為了讓自動容錯移轉能夠提高可靠性，鏡像與主體資料庫必須位於不同的電腦上。  
   
   
   
-###  <a name="ConditionsForAutoFo"></a> 自動容錯移轉所需的條件  
+###  <a name="ConditionsForAutoFo"></a>自動容錯移轉所需的條件  
  自動容錯移轉必須符合下列條件：  
   
 -   資料庫鏡像工作階段必須在高安全性模式下執行而且必須擁有見證。 如需詳細資訊，請參閱 [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)。  
@@ -148,7 +148,7 @@ ms.locfileid: "62754470"
   
      鏡像伺服器偵測主體伺服器錯誤的方式需視其為硬性或軟性錯誤而定。 如需詳細資訊，請參閱 [資料庫鏡像期間可能發生的失敗](possible-failures-during-database-mirroring.md)。  
   
-###  <a name="HowAutoFoWorks"></a> 自動容錯移轉如何運作  
+###  <a name="HowAutoFoWorks"></a>自動容錯移轉的運作方式  
  在前述條件下，自動容錯移轉會起始下列動作順序：  
   
 1.  如果主體伺服器仍在執行，就會將主體資料庫的狀態變更為 DISCONNECTED，並中斷主體資料庫中所有用戶端的連接。  
@@ -168,15 +168,15 @@ ms.locfileid: "62754470"
   
  ![自動容錯移轉](../media/dbm-failovauto1round.gif "自動容錯移轉")  
   
- 一開始，三部伺服器都已連接 (也就是工作階段具有完整的仲裁)。 **Partner_A** 是主體伺服器， **Partner_B** 是鏡像伺服器。 **Partner_A** (或 **Partner_A**上的主體資料庫) 變得無法使用。 見證與 **Partner_B** 兩者皆認定主體已無法使用，且工作階段會重新取得仲裁。 **Partner_B** 會成為主體伺服器，並使其資料庫副本成為新的主體資料庫。 最後， **Partner_A** 重新連接到工作階段，並發現 **Partner_B** 此時已擁有主體角色。 **Partner_A** 會接替鏡像角色。  
+ 一開始，三部伺服器都已連接 (也就是工作階段具有完整的仲裁)。 **Partner_A**是主體伺服器， **Partner_B**是鏡像伺服器。 **Partner_A** （或**Partner_A**上的主體資料庫）變得無法使用。 見證與 **Partner_B** 兩者皆認定主體已無法使用，且工作階段會重新取得仲裁。 **Partner_B**會成為主體伺服器，並使其資料庫副本成為新的主體資料庫。 最後， **Partner_A** 重新連接到工作階段，並發現 **Partner_B** 此時已擁有主體角色。 **Partner_A**接著會採用鏡像角色。  
   
- 容錯移轉之後，用戶端必須重新連接到目前的主體資料庫。 如需詳細資訊，請參閱 [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)的程序交換。  
+ 容錯移轉之後，用戶端必須重新連接到目前的主體資料庫。 如需詳細資訊，請參閱本主題稍後的 [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
 > [!NOTE]  
 >  在容錯移轉發生時，凡是已利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器準備好但尚未認可的交易，都會在資料庫完成容錯移轉後被視為已中止。  
   
-###  <a name="DisableAutoSSMS"></a> 若要停用自動容錯移轉 (SQL Server Management Studio)  
- 開啟 [資料庫屬性] 的 [鏡像] 頁面，並選取下列其中一項來變更作業模式：  
+###  <a name="DisableAutoSSMS"></a>若要停用自動容錯移轉（SQL Server Management Studio）  
+ 開啟 [資料庫屬性] 的 [鏡像]**** 頁面，並選取下列其中一項來變更作業模式：  
   
 -   **不具有自動容錯移轉的高安全性 (同步)**  
   
@@ -189,14 +189,14 @@ ms.locfileid: "62754470"
 ### <a name="to-disable-automatic-failover-using-transact-sql"></a>若要停用自動容錯移轉 (使用 Transact-SQL)  
  在資料庫鏡像工作階段的任何時間點上，資料庫擁有者可以透過關閉見證來停用自動容錯移轉。  
   
- **若要關閉見證**  
+ **關閉見證**  
   
 -   [從資料庫鏡像工作階段移除見證 &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
     > [!NOTE]  
     >  在保有完整交易安全性時關閉見證，會將工作階段置於不含自動容錯移轉的高安全性模式中。  
   
-##  <a name="ForcedService"></a> Forced Service (with Possible Data Loss)  
+##  <a name="ForcedService"></a>強制服務（可能會遺失資料）  
  資料庫鏡像會提供強制服務 (可能遺失資料) 做為損毀復原方法，以便讓您將鏡像伺服器當做暖待命伺服器使用。 只有當主體伺服器在鏡像工作階段中與鏡像伺服器中斷連接時，才能進行強制服務。 由於強制服務會面臨可能遺失資料的風險，所以應該小心並謹慎使用。  
   
  強制服務的支援會根據工作階段的作業模式和狀態而定，如下所示：  
@@ -214,19 +214,19 @@ ms.locfileid: "62754470"
   
   
   
-###  <a name="TypicalCaseFS"></a> 強制服務的一般情況  
+###  <a name="TypicalCaseFS"></a>強制服務的一般情況  
  下圖將說明強制服務的一般情況 (可能遺失資料)。  
   
- ![強制可能遺失資料的服務](../media/dbm-forced-service.gif "強制可能遺失資料的服務")  
+ ![正在強迫有遺失資料之可能的服務](../media/dbm-forced-service.gif "正在強迫有遺失資料之可能的服務")  
   
- 在該圖中，原始的主體伺服器 **Partner_A**無法讓鏡像伺服器 **Partner_B**使用，進而導致鏡像資料庫中斷連接。 在確定用戶端無法使用 **Partner_A** 後，資料庫管理員便在 **Partner_B** 上進行強制服務 (可能遺失資料)。 **Partner_B** 成為主體伺服器，並「公開」資料庫執行 (亦即未鏡像)。 此時，用戶端可以重新連接至 **Partner_B**。  
+ 在該圖中，原始的主體伺服器 **Partner_A**無法讓鏡像伺服器 **Partner_B**使用，進而導致鏡像資料庫中斷連接。 在確定用戶端無法使用 **Partner_A** 後，資料庫管理員便在 **Partner_B** 上進行強制服務 (可能遺失資料)。 **Partner_B**會成為主體伺服器，並在*公開*的資料庫中執行（也就是無鏡像）。 此時，用戶端可以重新連接至 **Partner_B**。  
   
- 當 **Partner_A** 可以使用後，它就會重新連接至新的主體伺服器，並重新加入工作階段和擔任鏡像角色。 鏡像工作階段會立即暫停，而不會與新的鏡像資料庫進行同步處理。 暫停工作階段可讓資料庫管理員決定要繼續進行工作階段 (在極端情況下)，還是移除鏡像並嘗試搶救之前主體資料庫中的資料。 在這個情況中，資料庫管理員選擇繼續進行鏡像。 此時， **Partner_A** 會接管鏡像伺服器的角色並將之前的主體資料庫回復至上次成功同步處理交易的時間點。如果進行強制服務之前，任何已認可的交易未寫入鏡像伺服器的磁碟，這些交易就會遺失。 然後，**Partner_A** 會藉由套用自從之前鏡像伺服器成為新主體伺服器以來在新主體資料庫上進行的所有變更，向前復原新的鏡像資料庫。  
+ 當 **Partner_A** 可以使用後，它就會重新連接至新的主體伺服器，並重新加入工作階段和擔任鏡像角色。 鏡像工作階段會立即暫停，而不會與新的鏡像資料庫進行同步處理。 暫停工作階段可讓資料庫管理員決定要繼續進行工作階段 (在極端情況下)，還是移除鏡像並嘗試搶救之前主體資料庫中的資料。 在這個情況中，資料庫管理員選擇繼續進行鏡像。 此時， **Partner_A** 會接管鏡像伺服器的角色並將之前的主體資料庫回復至上次成功同步處理交易的時間點。如果進行強制服務之前，任何已認可的交易未寫入鏡像伺服器的磁碟，這些交易就會遺失。 **Partner_A**接著會藉由套用在新的主體資料庫上進行的任何變更，向前復原新的鏡像資料庫，因為先前的鏡像伺服器成為新的主體伺服器。  
   
 > [!NOTE]  
 >  雖然高效能模式不需要見證，但是如果設定了見證，則只有在見證目前已連接到鏡像伺服器時，才能進行強制服務。  
   
-###  <a name="FSrisks"></a> 強制服務的風險  
+###  <a name="FSrisks"></a>強制服務的風險  
  您必須了解，強制服務可能會導致資料遺失。 由於鏡像伺服器無法與主體伺服器進行通訊，而且無法保證兩個資料庫會同步處理，所以可能會遺失資料。 此外，強制服務會啟動新的復原分岔。 由於原始的主體資料庫和鏡像資料庫位於不同的復原分岔，所以每個資料庫現在可能會包含其他資料庫沒有的資料：原始的主體資料庫會包含尚未從傳送佇列傳送至之前鏡像資料庫的所有變更 (未傳送記錄)，而之前的鏡像資料庫會包含強制服務之後進行的所有變更。  
   
  如果因為主體伺服器故障而進行強制服務，潛在資料遺失就會根據故障之前是否有任何交易記錄未傳送至鏡像伺服器而定。 在高安全性模式下，只有在鏡像資料庫同步處理後才會發生這種情況。 在高效能模式下，累積未傳送的記錄永遠是可能的。  
@@ -239,7 +239,7 @@ ms.locfileid: "62754470"
   
  如需詳細資訊，請參閱本主題稍後的 [管理潛在資料遺失](#ManageDataLoss)。  
   
-###  <a name="ManageDataLoss"></a> 管理潛在資料遺失  
+###  <a name="ManageDataLoss"></a>管理潛在資料遺失  
  在強制服務之後，一旦之前的主體伺服器可以使用，假設其資料庫未損毀，您就可以嘗試管理潛在資料遺失。 管理潛在資料遺失的可用方法會根據原始的主體伺服器是否已重新連接至夥伴並重新加入鏡像工作階段而定。 假設原始的主體伺服器可以存取新的主體執行個體，就會自動且透明地進行重新連接。  
   
 #### <a name="the-original-principal-server-has-reconnected"></a>原始的主體伺服器已重新連接  
@@ -268,10 +268,10 @@ ms.locfileid: "62754470"
   
      若要使用更新資料庫做為初始主體資料庫來重新建立鏡像，請使用此備份 (以及至少一個後續記錄備份) 來建立新的鏡像資料庫。 移除鏡像之後建立的每個記錄備份都必須套用。 因此，我們建議延遲主體資料庫的其他記錄備份，直到新的鏡像工作階段啟動為止。  
   
-###  <a name="RelatedTasksForFS"></a> 管理強制容錯移轉的相關工作  
- **若要強制執行服務**  
+###  <a name="RelatedTasksForFS"></a>管理強制容錯移轉的相關工作  
+ **強制服務**  
   
--   [在資料庫鏡像工作階段中強制服務 &#40;Transact-SQL&#41;](force-service-in-a-database-mirroring-session-transact-sql.md)。  
+-   [&#40;transact-sql&#41;中強制執行資料庫鏡像會話中的服務](force-service-in-a-database-mirroring-session-transact-sql.md)。  
   
  **若要繼續資料庫鏡像**  
   
@@ -288,9 +288,9 @@ ms.locfileid: "62754470"
 -   [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [預估角色切換期間的服務中斷時間 &#40;資料庫鏡像&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
+ [預估角色切換期間的服務中斷 &#40;資料庫鏡像&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [資料庫鏡像期間可能發生的失敗](possible-failures-during-database-mirroring.md)   
- [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)   
+ [將用戶端連接至資料庫鏡像會話 &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [資料庫鏡像見證](database-mirroring-witness.md)   
  [完整資料庫還原 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [資料庫鏡像作業模式](database-mirroring-operating-modes.md)   

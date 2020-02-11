@@ -20,19 +20,19 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 620ccce9a035139482b2d9b4630bb2242f720af8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103781"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 函數
 
-**合規性**  
- 導入的版本：ODBC 3.0 版的標準合規性：ISO 92  
+**標準**  
+ 引進的版本： ODBC 3.0 標準合規性： ISO 92  
   
  **摘要**  
- **SQLGetDiagField**傳回目前的診斷資料結構 （與指定的控制代碼相關聯），其中包含錯誤、 警告和狀態資訊的記錄欄位的值。  
+ **SQLGetDiagField**會傳回包含錯誤、警告和狀態資訊之診斷資料結構（與指定的控制碼相關聯）之記錄欄位的目前值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +50,7 @@ SQLRETURN SQLGetDiagField(
   
 ## <a name="arguments"></a>引數  
  *HandleType*  
- [輸入]描述診斷所需的控制代碼的型別控制代碼型別識別項。 必須是下列其中之一：  
+ 源控制碼類型識別碼，描述需要診斷的控制碼類型。 必須是下列其中之一：  
   
 -   SQL_HANDLE_DBC  
   
@@ -62,162 +62,162 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_HANDLE_STMT  
   
- 只在驅動程式管理員和驅動程式會使用 SQL_HANDLE_DBC_INFO_TOKEN 控制代碼。 應用程式不應使用此控制代碼型別。 如需 SQL_HANDLE_DBC_INFO_TOKEN 的詳細資訊，請參閱[ODBC 驅動程式中開發連接集區覺察](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)。  
+ SQL_HANDLE_DBC_INFO_TOKEN 控制碼僅供驅動程式管理員和驅動程式使用。 應用程式不應使用此控制碼類型。 如需 SQL_HANDLE_DBC_INFO_TOKEN 的詳細資訊，請參閱[在 ODBC 驅動程式中開發連接集區感知](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)。  
   
- *Handle*  
- [輸入]診斷資料結構所表示的類型的控制代碼*HandleType*。 如果*HandleType*為 SQL_HANDLE_ENV，*處理*可以是共用或取消共用的環境控制代碼。  
+ *圖*  
+ 源*HandleType*所指示之類型的診斷資料結構的控制碼。 如果*HandleType*為 SQL_HANDLE_ENV，則*handle*可以是共用或非共用的環境控制碼。  
   
  *RecNumber*  
- [輸入]指出從中應用程式搜尋資訊的狀態記錄。 狀態記錄編號 1。 如果*Sqlgetdiagfield*引數會指出診斷標頭的任何欄位*RecNumber*會被忽略。 如果沒有，它應該是大於 0。  
+ 源表示應用程式用來搜尋資訊的狀態記錄。 狀態記錄的編號為1。 如果*以*引數指出診斷標頭的任何欄位，則會忽略*RecNumber* 。 如果不是，則應該大於0。  
   
- *DiagIdentifier*  
- [輸入]表示其值是要傳回的診斷欄位。 如需詳細資訊，請參閱 「*Sqlgetdiagfield*引數 」 一節中 「 註解。 」  
+ *以*  
+ 源表示要傳回其值的診斷欄位。 如需詳細資訊，請參閱「批註」中的「*以*引數」一節。  
   
  *DiagInfoPtr*  
- [輸出]若要在其中傳回的診斷資訊的緩衝區的指標。 資料類型而定的值*Sqlgetdiagfield*。 如果*DiagInfoPtr*是整數類型、 應用程式應該使用的緩衝區 SQLULEN 和初始化之前呼叫這個函式，有些驅動程式為 0 的值可能只會寫入較低的 32 位元或 16 位元的緩衝區，並保留較高順序位元不變。  
+ 輸出要傳回診斷資訊之緩衝區的指標。 資料類型取決於*以*的值。 如果*DiagInfoPtr*是整數類型，則在呼叫此函式之前，應用程式應該使用 SQLULEN 的緩衝區，並將值初始化為0，因為某些驅動程式可能只會寫入較低的32位或16位的緩衝區，並不會變更較高的順序位。  
   
- 如果*DiagInfoPtr*為 NULL，就*StringLengthPtr*仍會傳回的總位元組數 （不含字元資料之 null 結束字元） 可用來傳回中指向緩衝區*DiagInfoPtr*。  
+ 如果*DiagInfoPtr*為 Null， *StringLengthPtr*仍會傳回*DiagInfoPtr*所指向的緩衝區中可傳回的位元組總數（不包括字元資料的 Null 終止字元）。  
   
  *BufferLength*  
- [輸入]如果*Sqlgetdiagfield*是 ODBC 定義的診斷和*DiagInfoPtr*指向字元字串或二進位的緩衝區，這個引數應該是長度\* *DiagInfoPtr*. 如果*Sqlgetdiagfield*是 ODBC 定義欄位並\* *DiagInfoPtr*是一個整數， *Columnsize*會被忽略。 如果中的值 *\*DiagInfoPtr*是 Unicode 字串 (呼叫時**SQLGetDiagFieldW**)，則*Columnsize*引數必須是偶數。  
+ 源如果*以*是 ODBC 定義的診斷，而*DiagInfoPtr*指向字元字串或二進位緩衝區，則這個引數應該是\* *DiagInfoPtr*的長度。 如果*以*是 ODBC 定義的欄位，而\* *DiagInfoPtr*是整數，則會忽略*BufferLength* 。 如果* \*DiagInfoPtr*中的值是 Unicode 字串（在呼叫**SQLGetDiagFieldW**時），則*BufferLength*引數必須是偶數。  
   
- 如果*Sqlgetdiagfield*驅動程式定義的欄位，應用程式設定指出欄位給驅動程式管理員性質*Columnsize*引數。 *BufferLength*可以有下列值：  
+ 如果*以*是驅動程式定義的欄位，應用程式會藉由設定*BufferLength*引數來指出欄位對驅動程式管理員的本質。 *BufferLength*可以有下列值：  
   
--   如果*DiagInfoPtr*是字元字串的指標*Columnsize*是 sql_nts; 之字串的長度。  
+-   如果*DiagInfoPtr*是字元字串的指標， *BufferLength*就是字串或 SQL_NTS 的長度。  
   
--   如果*DiagInfoPtr* SQL_LEN_BINARY_ATTR 的結果是二進位緩衝區中，應用程式位置的指標 (*長度*) 中的巨集*Columnsize*。 這會放在負值*Columnsize*。  
+-   如果*DiagInfoPtr*是二進位緩衝區的指標，應用程式會將 SQL_LEN_BINARY_ATTR （*長度*）宏的結果放在*BufferLength*中。 這會將負數值放在*BufferLength*中。  
   
--   如果*DiagInfoPtr*是字元字串或二進位字串，以外的值的指標*Columnsize*應有 SQL_IS_POINTER 的值。  
+-   如果*DiagInfoPtr*是字元字串或二進位字串以外的值指標， *BufferLength*應該會有值 SQL_IS_POINTER。  
   
--   如果 *\*DiagInfoPtr*包含固定長度的資料型別*Columnsize*是 SQL_IS_INTEGER、 SQL_IS_UINTEGER、 SQL_IS_SMALLINT 或 SQL_IS_USMALLINT，視需要。  
+-   如果* \*DiagInfoPtr*包含固定長度的資料類型，則視情況而定， *BufferLength*會 SQL_IS_INTEGER、SQL_IS_UINTEGER、SQL_IS_SMALLINT 或 SQL_IS_USMALLINT。  
   
  *StringLengthPtr*  
- [輸出]在其中傳回的總位元組數 （不包括 null 結束字元所需的位元組數） 緩衝區的指標來傳回在可用\* *DiagInfoPtr*，字元資料。 傳回可用的位元組數目是否大於或等於*Columnsize*中的文字\* *DiagInfoPtr*會被截斷成*Columnsize*減號null 結束字元的長度。  
+ 輸出緩衝區的指標，要在其中傳回字元資料的位元組總數（不包括 null 終止字元所需的位元組數目） \*，以供*DiagInfoPtr*。 如果傳回的位元組數目大於或等於*BufferLength*， \* *DiagInfoPtr*中的文字會被截斷為*BufferLength*減去 null 終止字元的長度。  
   
 ## <a name="returns"></a>傳回值  
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR、 SQL_INVALID_HANDLE，還是 sql_no_data 為止。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、SQL_INVALID_HANDLE 或 SQL_NO_DATA。  
   
 ## <a name="diagnostics"></a>診斷  
- **SQLGetDiagField**不會將本身的診斷記錄。 它會使用下列傳回值報告自己執行的結果：  
+ **SQLGetDiagField**不會為其本身張貼診斷記錄。 它會使用下列傳回值來報告其本身執行的結果：  
   
--   SQL_SUCCESS:此函式會成功地傳回診斷資訊。  
+-   SQL_SUCCESS：函數已成功傳回診斷資訊。  
   
--   SQL_SUCCESS_WITH_INFO:\**DiagInfoPtr*是太小無法容納要求的診斷欄位。 因此，在 [診斷] 欄位的資料已遭截斷。 若要判斷發生截斷，應用程式必須比較*Columnsize*實際的位元組數目，會寫入至 **StringLengthPtr*。  
+-   SQL_SUCCESS_WITH_INFO： \* *DiagInfoPtr*太小，無法保存所要求的診斷欄位。 因此，[診斷] 欄位中的資料會被截斷。 若要判斷是否發生截斷，應用程式必須將*BufferLength*與實際可用的位元組數目（寫入 **StringLengthPtr*）進行比較。  
   
--   SQL_INVALID_HANDLE:所表示的控制代碼*HandleType*並*處理*不是有效的控制代碼。  
+-   SQL_INVALID_HANDLE： *HandleType*和*HANDLE*所指示的控制碼不是有效的控制碼。  
   
--   SQL_ERROR:發生下列其中一項：  
+-   SQL_ERROR：發生下列其中一種情況：  
   
-    -   *Sqlgetdiagfield*引數不是其中一個有效的值。  
+    -   *以*引數不是其中一個有效的值。  
   
-    -   *Sqlgetdiagfield*引數為 SQL_DIAG_CURSOR_ROW_COUNT、 SQL_DIAG_DYNAMIC_FUNCTION、 SQL_DIAG_DYNAMIC_FUNCTION_CODE，還是 SQL_DIAG_ROW_COUNT，但*處理*不是陳述式控制代碼。 （驅動程式管理員會傳回此診斷）。  
+    -   *以*引數已 SQL_DIAG_CURSOR_ROW_COUNT、SQL_DIAG_DYNAMIC_FUNCTION、SQL_DIAG_DYNAMIC_FUNCTION_CODE 或 SQL_DIAG_ROW_COUNT，但*句*柄不是語句控制碼。 （驅動程式管理員會傳回此診斷）。  
   
-    -   *RecNumber*引數為負數或 0 的時機*Sqlgetdiagfield*指示的診斷記錄的欄位。 *RecNumber*會忽略標頭欄位。  
+    -   當*以*指示診斷記錄中的欄位時 *，RecNumber*引數為負數或0。 標頭欄位會忽略*RecNumber* 。  
   
-    -   所要求的值為字元字串和*Columnsize*小於零。  
+    -   要求的值是字元字串，而*BufferLength*小於零。  
   
-    -   當使用非同步通知時，控制代碼的非同步作業未完成。  
+    -   使用非同步通知時，控制碼上的非同步作業並未完成。  
   
--   SQL_NO_DATA 為止：*RecNumber*中指定的控制代碼已存在的診斷記錄的數目大於*處理。* 函式也會傳回 SQL_NO_DATA 任何正*RecNumber*沒有診斷記錄是否*處理*。  
+-   SQL_NO_DATA： *RecNumber*大於 handle 中指定之控制碼所存在的診斷記錄數目 *。* 如果沒有任何適用于*Handle*的診斷記錄，函數也會傳回任何正面*RecNumber*的 SQL_NO_DATA。  
   
 ## <a name="comments"></a>註解  
- 應用程式通常會呼叫**SQLGetDiagField**完成三個目標的其中一個：  
+ 應用程式通常會呼叫**SQLGetDiagField**來完成三個目標的其中一個：  
   
-1.  若要取得特定錯誤或警告資訊，當函式呼叫已傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO (或針對 SQL_NEED_DATA **SQLBrowseConnect**函式)。  
+1.  若要在函式呼叫傳回時，取得特定的錯誤或警告資訊 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO （或**SQLBrowseConnect**函數的 SQL_NEED_DATA）。  
   
-2.  若要判斷資料來源中插入、 刪除或更新作業所執行的呼叫時所影響的資料列數目**SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos** （從 SQL_DIAG_ROW_COUNT 標頭欄位中），或如果此驅動程式可以提供這項資訊判斷存在於目前開啟的資料指標中，資料列數目 (從SQL_DIAG_CURSOR_ROW_COUNT 標頭欄位）。  
+2.  決定在呼叫**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos** （從 SQL_DIAG_ROW_COUNT 標頭欄位）執行插入、刪除或更新作業時，資料來源中受影響的資料列數目，或判斷存在於目前開啟資料指標中的資料列數（如果驅動程式可以提供這項資訊，則為）（從 [SQL_DIAG_CURSOR_ROW_COUNT 標頭] 欄位）。  
   
-3.  若要判斷哪一個函式呼叫中執行了**SQLExecDirect**或是**SQLExecute** （從 SQL_DIAG_DYNAMIC_FUNCTION 和 SQL_DIAG_DYNAMIC_FUNCTION_CODE 標頭欄位）。  
+3.  判斷呼叫**SQLExecDirect**或**SQLExecute** （從 SQL_DIAG_DYNAMIC_FUNCTION 和 SQL_DIAG_DYNAMIC_FUNCTION_CODE 標頭欄位）所執行的函式。  
   
- 任何 ODBC 函數可以張貼，零或多個診斷記錄每次呼叫它時，讓應用程式可以呼叫**SQLGetDiagField**之後的任何 ODBC 函數呼叫。 可以一次儲存的診斷記錄的數目沒有限制。 **SQLGetDiagField**只擷取的診斷資訊最近在指定的診斷資料結構相關聯*處理*引數。 如果應用程式呼叫 ODBC 函數以外**SQLGetDiagField**或是**SQLGetDiagRec**，從先前使用相同的控制代碼呼叫任何診斷資訊都會遺失。  
+ 任何 ODBC 函數每次呼叫時都可以張貼零個或多個診斷記錄，因此應用程式可以在任何 ODBC 函數呼叫之後呼叫**SQLGetDiagField** 。 任何一次可以儲存的診斷記錄數目並無任何限制。 **SQLGetDiagField**只會抓取最近與*Handle*引數中指定之診斷資料結構相關聯的診斷資訊。 如果應用程式呼叫**SQLGetDiagField**或**SQLGETDIAGREC**以外的 ODBC 函數，則會遺失先前呼叫中具有相同控制碼的任何診斷資訊。  
   
- 應用程式可以透過累加掃描所有的診斷記錄*RecNumber*，只要**SQLGetDiagField**都會傳回 SQL_SUCCESS。 狀態記錄的數目被表示 SQL_DIAG_NUMBER 標頭欄位。 若要呼叫**SQLGetDiagField**是標頭和記錄欄位。 應用程式可以呼叫**SQLGetDiagField**一次更新一筆記錄，從擷取的欄位，只要在過渡期間，會將記錄張貼相同的控制代碼尚未呼叫以外診斷函式的函式。  
+ 只要**SQLGetDiagField**傳回 SQL_SUCCESS，應用程式就可以藉由遞增*RecNumber*來掃描所有診斷記錄。 狀態記錄的數目會顯示在 [SQL_DIAG_NUMBER 標頭] 欄位中。 對**SQLGetDiagField**的呼叫在標頭和記錄欄位中是非破壞性的。 應用程式稍後可以再次呼叫**SQLGetDiagField** ，以從記錄中取出欄位，只要未在過渡中呼叫診斷函式以外的函式，就會在相同的控制碼上張貼記錄。  
   
- 應用程式可以呼叫**SQLGetDiagField**在任何時間，唯一的差別 SQL_DIAG_CURSOR_ROW_COUNT 或 SQL_DIAG_ROW_COUNT，將會傳回 SQL_ERROR，如果傳回的任何診斷欄位*處理*不是陳述式控制代碼。 如果未定義，其他診斷欄位，則呼叫**SQLGetDiagField** （假設沒有其他診斷發生） 會傳回 SQL_SUCCESS 而且未定義的值會傳回欄位。  
+ 除了 SQL_DIAG_CURSOR_ROW_COUNT 或 SQL_DIAG_ROW_COUNT 之外，應用程式可以呼叫**SQLGetDiagField**來傳回任何診斷欄位，如果*Handle*不是語句控制碼，則會傳回 SQL_ERROR。 如果未定義任何其他診斷欄位， **SQLGetDiagField**的呼叫將會傳回 SQL_SUCCESS （如果未遇到其他診斷），而且會針對欄位傳回未定義的值。  
   
- 如需詳細資訊，請參閱 <<c0> [ 使用 SQLGetDiagRec 和 SQLGetDiagField](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md)並[實作 SQLGetDiagRec 和 SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md)。  
+ 如需詳細資訊，請參閱[使用 SQLGetDiagRec 和 SQLGetDiagField](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md)和[執行 SQLGetDiagRec 和 SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md)。  
   
- 呼叫不是以非同步方式執行的 API，將會產生 HY010 「 函數順序錯誤 」。 不過，在非同步作業完成之前，無法擷取記錄時發生錯誤。  
+ 呼叫不是以非同步方式執行的 API，將會產生 HY010 「函數順序錯誤」。 不過，在非同步作業完成之前，無法抓取錯誤記錄。  
   
 ## <a name="handletype-argument"></a>HandleType 引數  
- 每個控制代碼類型可以有與其相關聯的診斷資訊。 *HandleType*引數表示的控制代碼型別*處理*。  
+ 每個控制碼類型都可以有相關聯的診斷資訊。 *HandleType*引數會指出*句*柄的控制碼類型。  
   
- 某些標頭和資料錄的欄位無法為傳回環境、 連接、 陳述式，以及描述項控制代碼。 這些控制代碼不適用 欄位會以 「 標頭欄位 」 和 「 記錄欄位 」 後面的章節。  
+ 某些標頭和記錄欄位無法針對環境、連接、語句和描述項控制碼傳回。 欄位不適用的控制碼會在後面的「標頭欄位」和「記錄欄位」章節中指出。  
   
- 如果*HandleType*為 SQL_HANDLE_ENV，*處理*可以是共用或取消共用的環境控制代碼。  
+ 如果*HandleType*為 SQL_HANDLE_ENV，則*handle*可以是共用或非共用的環境控制碼。  
   
- 沒有驅動程式特定標頭的診斷欄位應該與環境控制代碼相關聯。  
+ 沒有任何驅動程式專屬的標頭診斷欄位應與環境控制碼相關聯。  
   
- 只有診斷的標頭欄位所定義的描述項控制代碼是 SQL_DIAG_NUMBER 和 SQL_DIAG_RETURNCODE。  
+ 唯一為描述項控制碼定義的診斷標頭欄位是 SQL_DIAG_NUMBER 和 SQL_DIAG_RETURNCODE。  
   
-## <a name="diagidentifier-argument"></a>Sqlgetdiagfield 引數  
- 這個引數表示所需的診斷資料結構之欄位的識別項。 如果*RecNumber*大於或等於 1，欄位中的資料描述函式所傳回的診斷資訊。 如果*RecNumber*為 0，欄位中的診斷資料結構的標頭，並因此會包含不與特定資訊傳回診斷資訊中，函式呼叫的相關資料。  
+## <a name="diagidentifier-argument"></a>以引數  
+ 這個引數會指出診斷資料結構所需之欄位的識別碼。 如果*RecNumber*大於或等於1，則欄位中的資料會描述函數所傳回的診斷資訊。 如果*RecNumber*為0，則欄位會在診斷資料結構的標頭中，因此會包含與傳回診斷資訊之函式呼叫相關的資料，而不是特定資訊。  
   
- 驅動程式可以定義驅動程式特定標頭和記錄欄位中的診斷資料結構。  
+ 驅動程式可以在診斷資料結構中定義驅動程式特有的標頭和記錄欄位。  
   
- ODBC 3 *.x*應用程式使用 ODBC 2 *.x*驅動程式將能夠呼叫**SQLGetDiagField**只能搭配*Sqlgetdiagfield*SQL_DIAG_CLASS_ORIGIN、 SQL_DIAG_CLASS_SUBCLASS_ORIGIN、 SQL_DIAG_CONNECTION_NAME、 SQL_DIAG_MESSAGE_TEXT、 SQL_DIAG_NATIVE、 SQL_DIAG_NUMBER、 SQL_DIAG_RETURNCODE、 SQL_DIAG_SERVER_NAME 或 SQL_DIAG_SQLSTATE 的引數。 其他所有的診斷欄位將會傳回 SQL_ERROR。  
+ 使用 ODBC 2.x*驅動程式的 odbc 3.x 應用程式*將** 只能使用 SQL_DIAG_CLASS_ORIGIN、SQL_DIAG_CLASS_SUBCLASS_ORIGIN、SQL_DIAG_CONNECTION_NAME、SQL_DIAG_MESSAGE_TEXT、SQL_DIAG_NATIVE、SQL_DIAG_NUMBER、SQL_DIAG_RETURNCODE、SQL_DIAG_SERVER_NAME 或 SQL_DIAG_SQLSTATE 的*以*引數來呼叫**SQLGetDiagField** 。 所有其他診斷欄位都會傳回 SQL_ERROR。  
   
 ## <a name="header-fields"></a>標頭欄位  
- 下表所列的標頭欄位可以包含在*Sqlgetdiagfield*引數。  
+ 下表所列的標頭欄位可以包含在*以*引數中。  
   
-|DiagIdentifier|傳回類型|傳回值|  
+|以|傳回類型|傳回值|  
 |--------------------|-----------------|-------------|  
-|SQL_DIAG_CURSOR_ROW_COUNT|SQLLEN|此欄位包含資料指標中的資料列的計數。 取決於其語意**SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES2、 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2、 SQL_KEYSET_CURSOR_ATTRIBUTES2 和 SQL_STATIC_CURSOR_ATTRIBUTES2，這表示它的資訊類型資料列計數可供每個資料指標類型 （SQL_CA2_CRC_EXACT 和 SQL_CA2_CRC_APPROXIMATE 位元）。<br /><br /> 此欄位的內容會定義只適用於陳述式控制代碼，之後才**SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**已呼叫。 呼叫**SQLGetDiagField**具有*Sqlgetdiagfield* SQL_DIAG_CURSOR_ROW_COUNT 上一個陳述式以外的控制代碼將會傳回 SQL_ERROR。|  
-|SQL_DIAG_DYNAMIC_FUNCTION|SQLCHAR *|這是描述基礎的函式執行的 SQL 陳述式的字串。 （請參閱"欄位的值動態函數，「 稍後在本節中，針對特定的值）。此欄位的內容會定義只適用於陳述式控制代碼，並只有在呼叫之後**SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**。 呼叫**SQLGetDiagField**具有*Sqlgetdiagfield* SQL_DIAG_DYNAMIC_FUNCTION 上一個陳述式以外的控制代碼將會傳回 SQL_ERROR。 事件之前呼叫，這個欄位的值未定義**SQLExecute**或是**SQLExecDirect**。|  
-|SQL_DIAG_DYNAMIC_FUNCTION_CODE|SQLINTEGER|這是描述基礎的函式所執行的 SQL 陳述式的數字代碼。 （請參閱"值的動態函式欄位，"稍後在本節中，針對特定的值）。此欄位的內容會定義只適用於陳述式控制代碼，並只有在呼叫之後**SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**。 呼叫**SQLGetDiagField**具有*Sqlgetdiagfield* SQL_DIAG_DYNAMIC_FUNCTION_CODE 上一個陳述式以外的控制代碼將會傳回 SQL_ERROR。 事件之前呼叫，這個欄位的值未定義**SQLExecute**或是**SQLExecDirect**。|  
-|SQL_DIAG_NUMBER|SQLINTEGER|可供指定的控制代碼的狀態記錄的數目。|  
-|SQL_DIAG_RETURNCODE|SQLRETURN|函式所傳回的傳回碼。 如需傳回碼的清單，請參閱 <<c0> [ 傳回碼](../../../odbc/reference/develop-app/return-codes-odbc.md)。 驅動程式不需要實作 SQL_DIAG_RETURNCODE;它一律被實作由驅動程式管理員。 如果尚未上呼叫任何函數*處理*，SQL_DIAG_RETURNCODE 就會傳回 SQL_SUCCESS。|  
-|SQL_DIAG_ROW_COUNT|SQLLEN|受到 insert、 delete 或 update 所執行的資料列數目**SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**. 它是由驅動程式定義之後*資料指標規格*已經執行。 此欄位的內容會定義只適用於陳述式控制代碼。 呼叫**SQLGetDiagField**具有*Sqlgetdiagfield* SQL_DIAG_ROW_COUNT 上一個陳述式以外的控制代碼將會傳回 SQL_ERROR。 在此欄位中的資料也會傳回*RowCountPtr*引數**SQLRowCount**。 在此欄位中的資料會重設每 nondiagnostic 函式呼叫之後，而所傳回的資料列計數**SQLRowCount**維持不變，直到陳述式便會設定為已備妥或已配置的狀態。|  
+|SQL_DIAG_CURSOR_ROW_COUNT|SQLLEN|此欄位包含資料指標中的資料列計數。 其語義取決於**SQLGetInfo**資訊類型 SQL_DYNAMIC_CURSOR_ATTRIBUTES2、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2、SQL_KEYSET_CURSOR_ATTRIBUTES2 和 SQL_STATIC_CURSOR_ATTRIBUTES2，這會指出每個資料指標類型（在 SQL_CA2_CRC_EXACT 和 SQL_CA2_CRC_APPROXIMATE 位）中可使用的資料列計數。<br /><br /> 只有在呼叫**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults**之後，才會針對語句控制碼定義此欄位的內容。 在語句控制碼以外，以 SQL_DIAG_CURSOR_ROW_COUNT 的*以*呼叫**SQLGetDiagField** ，將會傳回 SQL_ERROR。|  
+|SQL_DIAG_DYNAMIC_FUNCTION|SQLCHAR|這是描述基礎函數所執行之 SQL 語句的字串。 （如需特定值，請參閱本節稍後的「動態函數位段的值」）。此欄位的內容只會定義給語句控制碼，而且只會在呼叫**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults**之後。 在語句控制碼以外，以 SQL_DIAG_DYNAMIC_FUNCTION 的*以*呼叫**SQLGetDiagField** ，將會傳回 SQL_ERROR。 在呼叫**SQLExecute**或**SQLExecDirect**之前，此欄位的值是未定義的。|  
+|SQL_DIAG_DYNAMIC_FUNCTION_CODE|SQLINTEGER|這是一個數位代碼，用來描述基礎函數所執行的 SQL 語句。 （如需特定值，請參閱本節稍後的「動態函數位段的值」）。此欄位的內容只會定義給語句控制碼，而且只會在呼叫**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults**之後。 在語句控制碼以外，以 SQL_DIAG_DYNAMIC_FUNCTION_CODE 的*以*呼叫**SQLGetDiagField** ，將會傳回 SQL_ERROR。 在呼叫**SQLExecute**或**SQLExecDirect**之前，此欄位的值是未定義的。|  
+|SQL_DIAG_NUMBER|SQLINTEGER|可用於指定控制碼的狀態記錄數目。|  
+|SQL_DIAG_RETURNCODE|SQLRETURN|傳回函式所傳回的程式碼。 如需傳回碼的清單，請參閱傳回[碼](../../../odbc/reference/develop-app/return-codes-odbc.md)。 驅動程式不需要執行 SQL_DIAG_RETURNCODE;它一律由驅動程式管理員執行。 如果尚未在*控制碼*上呼叫函式，則會針對 SQL_DIAG_RETURNCODE 傳回 SQL_SUCCESS。|  
+|SQL_DIAG_ROW_COUNT|SQLLEN|由**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos**所執行的插入、刪除或更新所影響的資料列數目。 它是在執行資料*指標規格*之後定義的驅動程式。 此欄位的內容只會定義給語句控制碼。 在語句控制碼以外，以 SQL_DIAG_ROW_COUNT 的*以*呼叫**SQLGetDiagField** ，將會傳回 SQL_ERROR。 此欄位中的資料也會在**SQLRowCount**的*RowCountPtr*引數中傳回。 此欄位中的資料會在每次 nondiagnostic 函式呼叫之後重設，而**SQLRowCount**所傳回的資料列計數會維持不變，直到語句設定回到備妥或已配置狀態為止。|  
   
 ## <a name="record-fields"></a>記錄欄位  
- 下表所列的記錄欄位可以包含在*Sqlgetdiagfield*引數。  
+ 下表所列的記錄欄位可以包含在*以*引數中。  
   
-|DiagIdentifier|傳回類型|傳回值|  
+|以|傳回類型|傳回值|  
 |--------------------|-----------------|-------------|  
-|SQL_DIAG_CLASS_ORIGIN|SQLCHAR *|字串，表示文件定義此記錄的 SQLSTATE 值的類別部分。 其值為"ISO 9075"的所有 Open Group 和 ISO 呼叫層級介面所定義的 Sqlstate。 對於 ODBC 專屬 Sqlstate （所有這些的 SQLSTATE 類別是 「 IM"），其值是"ODBC 3.0"。|  
-|SQL_DIAG_COLUMN_NUMBER|SQLINTEGER|如果 SQL_DIAG_ROW_NUMBER 欄位是有效的資料列中的數字的資料列集或一組參數，此欄位會包含表示結果集中的資料行編號或參數中的數字的一組參數的值。 結果集資料行數字一律從 1 開始;如果此狀態記錄屬於書籤資料行，則欄位可以是零。 參數編號是從 1 開始。 如果狀態記錄的逸出序列所關聯的資料行數或參數數目，它就會有 SQL_NO_COLUMN_NUMBER 的值。 如果驅動程式無法判斷此記錄相關聯的參數數目的資料行數目，此欄位有 SQL_COLUMN_NUMBER_UNKNOWN 的值。<br /><br /> 此欄位的內容會定義只適用於陳述式控制代碼。|  
-|SQL_DIAG_CONNECTION_NAME|SQLCHAR *|字串，表示連接的診斷記錄與產生的名稱。 此欄位是驅動程式定義。 環境控制代碼相關聯的診斷資料結構，以及任何連線不相關的診斷，則這個欄位會是零長度字串。|  
-|SQL_DIAG_MESSAGE_TEXT|SQLCHAR *|參考用錯誤或警告訊息。 此欄位格式中所述[診斷訊息](../../../odbc/reference/develop-app/diagnostic-messages.md)。 沒有任何診斷訊息文字的最大長度。|  
-|SQL_DIAG_NATIVE|SQLINTEGER|驅動程式/資料來源特有的原生錯誤的程式碼。 如果沒有原生錯誤程式碼，此驅動程式會傳回 0。|  
-|SQL_DIAG_ROW_NUMBER|SQLLEN|此欄位包含資料列中的數字資料列集或與狀態記錄相關聯的參數集合中的參數號碼。 資料列編號和參數的數字開頭為 1。 此欄位有值 SQL_NO_ROW_NUMBER，如果此狀態記錄的逸出序列所關聯的資料列數目或參數數目。 如果這個記錄相關聯的參數數目的資料列數目，則無法判斷驅動程式，此欄位有 SQL_ROW_NUMBER_UNKNOWN 的值。<br /><br /> 此欄位的內容會定義只適用於陳述式控制代碼。|  
-|SQL_DIAG_SERVER_NAME|SQLCHAR *|表示診斷記錄與相關的伺服器名稱的字串。 它等同於呼叫的傳回值**SQLGetInfo** SQL_DATA_SOURCE_NAME 選項。 環境控制代碼相關聯的診斷資料結構和不相關的任何伺服器的診斷，則這個欄位會是零長度字串。|  
-|SQL_DIAG_SQLSTATE|SQLCHAR *|五個字元 SQLSTATE 診斷程式碼。 如需詳細資訊，請參閱 < [Sqlstate](../../../odbc/reference/develop-app/sqlstates.md)。|  
-|SQL_DIAG_SUBCLASS_ORIGIN|SQLCHAR *|具有相同的格式和有效的值為 SQL_DIAG_CLASS_ORIGIN，可識別子類別一部分的 SQLSTATE 程式碼定義的一部分的字串。 下面是"ODBC 3.0"會傳回 ODBC 專屬 SQLSTATE:<br /><br /> 01S00，01S01，01S02 的警告，01S06，01S07，07S01，08S01 以及 21S01，21S02，25S01，25S02，25S03，42S01，42S02，42S11，42S12，42S21，42S22，HY095、 HY097、 HY098、 HY099、 HY100、 HY101、 包含 SQLSTATE=HY105、 HY107、 HY109、 HY110、 HY111、 HYT00、 HYT01、 IM001、 IM002、 IM003、 IM004、 IM005、 IM006，IM007、 IM008、 IM010、 IM011、 IM012。|  
+|SQL_DIAG_CLASS_ORIGIN|SQLCHAR|字串，表示定義此記錄中 SQLSTATE 值之類別部分的檔。 其值為 "ISO 9075"，適用于開放群組和 ISO 呼叫層級介面所定義的所有 SQLSTATEs。 針對 ODBC 特定的 SQLSTATEs （其 SQLSTATE 類別為 "IM" 的所有元件），其值為 "ODBC 3.0"。|  
+|SQL_DIAG_COLUMN_NUMBER|SQLINTEGER|如果 SQL_DIAG_ROW_NUMBER 欄位在資料列集或一組參數中是有效的資料列編號，此欄位會包含代表結果集中之資料行編號的值，或參數集合中的參數編號。 結果集資料行數位一律從1開始;如果此狀態記錄與書簽資料行相關，欄位可以是零。 參數編號從1開始。 如果狀態記錄未與資料行編號或參數編號相關聯，它就會有 SQL_NO_COLUMN_NUMBER 的值。 如果驅動程式無法判斷與此記錄相關聯的資料行編號或參數編號，此欄位的值會是 SQL_COLUMN_NUMBER_UNKNOWN。<br /><br /> 此欄位的內容只會定義給語句控制碼。|  
+|SQL_DIAG_CONNECTION_NAME|SQLCHAR|字串，表示與診斷記錄相關聯的連接名稱。 此欄位為驅動程式定義。 針對與環境控制碼相關聯的診斷資料結構，以及與任何連接無關的診斷，此欄位是長度為零的字串。|  
+|SQL_DIAG_MESSAGE_TEXT|SQLCHAR|錯誤或警告上的參考用訊息。 此欄位的格式如[診斷訊息](../../../odbc/reference/develop-app/diagnostic-messages.md)中所述。 診斷郵件內文沒有最大長度。|  
+|SQL_DIAG_NATIVE|SQLINTEGER|驅動程式/資料來源特定的原生錯誤碼。 如果沒有原生錯誤碼，驅動程式會傳回0。|  
+|SQL_DIAG_ROW_NUMBER|SQLLEN|此欄位包含資料列集中的資料列編號，或參數的參數編號，與狀態記錄相關聯。 資料列編號和參數編號的開頭為1。 如果此狀態記錄未與資料列編號或參數編號相關聯，此欄位的值 SQL_NO_ROW_NUMBER。 如果驅動程式無法判斷與此記錄相關聯的資料列編號或參數編號，此欄位的值會 SQL_ROW_NUMBER_UNKNOWN。<br /><br /> 此欄位的內容只會定義給語句控制碼。|  
+|SQL_DIAG_SERVER_NAME|SQLCHAR|字串，表示與診斷記錄相關聯的伺服器名稱。 這與使用 SQL_DATA_SOURCE_NAME 選項呼叫**SQLGetInfo**時所傳回的值相同。 針對與環境控制碼相關聯的診斷資料結構，以及與任何伺服器無關的診斷，此欄位是長度為零的字串。|  
+|SQL_DIAG_SQLSTATE|SQLCHAR|五個字元的 SQLSTATE 診斷碼。 如需詳細資訊，請參閱[SQLSTATEs](../../../odbc/reference/develop-app/sqlstates.md)。|  
+|SQL_DIAG_SUBCLASS_ORIGIN|SQLCHAR|具有與 SQL_DIAG_CLASS_ORIGIN 相同格式和有效值的字串，可識別 SQLSTATE 程式碼之子類別部分的定義部分。 傳回 "ODBC 3.0" 的 ODBC 特定 SQLSTATES 包括下列各項：<br /><br /> 01S00、01S01、01S02、01S06、01S07、07S01、08S01、21S01、21S02、25S01、25S02、25S03、42S01、42S02、42S11、42S12、42S21、42S22、HY095、HY097、HY098、HY099、HY100、HY101、HY105、HY107、HY109、HY110、HY111、HYT00、HYT01、IM001、IM002、IM003、IM004、IM005、IM006、IM007, IM008, IM010, IM011, IM012.|  
   
-## <a name="values-of-the-dynamic-function-fields"></a>動態函數欄位的值  
- 下表描述套用至每個類型的呼叫所執行的 SQL 陳述式的值 SQL_DIAG_DYNAMIC_FUNCTION 和 SQL_DIAG_DYNAMIC_FUNCTION_CODE **SQLExecute**或**SQLExecDirect**. 驅動程式可以將驅動程式定義的值加入所列。  
+## <a name="values-of-the-dynamic-function-fields"></a>動態函數位段的值  
+ 下表描述適用于**SQLExecute**或**SQLExecDirect**呼叫所執行之每個 SQL 語句類型的 SQL_DIAG_DYNAMIC_FUNCTION 和 SQL_DIAG_DYNAMIC_FUNCTION_CODE 值。 驅動程式可以將驅動程式定義的值新增至列出的值。  
   
-|SQL 陳述式<br /><br /> 執行|值<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION|值<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION_CODE|  
+|SQL 陳述式<br /><br /> 執行| 的值<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION| 的值<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION_CODE|  
 |--------------------------------|-----------------------------------------------|-----------------------------------------------------|  
-|*alter-domain-statement*|「 ALTER 網域 」|SQL_DIAG_ALTER_DOMAIN|  
-|*alter-table-statement*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
-|*assertion-definition*|「 建立判斷提示 」|SQL_DIAG_CREATE_ASSERTION|  
-|*character-set-definition*|「 建立字元集 」|SQL_DIAG_CREATE_CHARACTER_SET|  
-|*collation-definition*|「 建立定序 」|SQL_DIAG_CREATE_COLLATION|  
-|*domainn-definition*|[建立定義域]|SQL_DIAG_CREATE_DOMAIN|
-|*create-index-statement*|「 建立索引 」|SQL_DIAG_CREATE_INDEX|  
-|*create-table-statement*|[建立資料表]|SQL_DIAG_CREATE_TABLE|  
-|*create-view-statement*|[建立檢視]|SQL_DIAG_CREATE_VIEW|  
-|*cursor-specification*|[選取資料指標]|SQL_DIAG_SELECT_CURSOR|  
-|*delete-statement-positioned*|「 動態刪除游標 」|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
-|*delete-statement-searched*|「 刪除的位置 」|SQL_DIAG_DELETE_WHERE|  
-|*drop-assertion-statement*|「 卸除判斷提示 」|SQL_DIAG_DROP_ASSERTION|  
-|*drop-character-set-stmt*|「 卸除字元集 」|SQL_DIAG_DROP_CHARACTER_SET|  
-|*drop-collation-statement*|[卸除定序]|SQL_DIAG_DROP_COLLATION|  
-|*drop-domain-statement*|「 卸除網域 」|SQL_DIAG_DROP_DOMAIN|  
-|*drop-index-statement*|[卸除索引]|SQL_DIAG_DROP_INDEX|  
-|*drop-schema-statement*|[卸除結構描述]|SQL_DIAG_DROP_SCHEMA|  
-|*drop-table-statement*|「 卸除資料表 」|SQL_DIAG_DROP_TABLE|  
-|*drop-translation-statement*|「 卸除轉譯 」|SQL_DIAG_DROP_TRANSLATION|  
-|*drop-view-statement*|「 卸除檢視 」|SQL_DIAG_DROP_VIEW|  
-|*grantstatement*|「 授與 」|SQL_DIAG_GRANT|
-|*insert-statement*|「 插入 」|SQL_DIAG_INSERT|  
-|*ODBC-procedure-extension*|[撥號]|SQL_DIAG_ CALL|  
-|*revoke-statement*|[撤銷]|SQL_DIAG_REVOKE|  
-|*schema-definition*|[建立結構描述]|SQL_DIAG_CREATE_SCHEMA|  
-|*translation-definition*|「 建立翻譯 」|SQL_DIAG_CREATE_TRANSLATION|  
-|*update-statement-positioned*|「 動態更新游標 」|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
-|*update-statement-searched*|「 更新位置 」|SQL_DIAG_UPDATE_WHERE|  
+|*alter-domain 語句*|"ALTER DOMAIN"|SQL_DIAG_ALTER_DOMAIN|  
+|*alter-table 語句*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
+|*判斷提示-定義*|「建立判斷提示」|SQL_DIAG_CREATE_ASSERTION|  
+|*字元集定義*|「建立字元集」|SQL_DIAG_CREATE_CHARACTER_SET|  
+|*定序定義*|「建立定序」|SQL_DIAG_CREATE_COLLATION|  
+|*domainn>-定義*|「建立網域」|SQL_DIAG_CREATE_DOMAIN|
+|*create-index 語句*|「建立索引」|SQL_DIAG_CREATE_INDEX|  
+|*create-table 語句*|"CREATE TABLE"|SQL_DIAG_CREATE_TABLE|  
+|*create-view 語句*|「建立視圖」|SQL_DIAG_CREATE_VIEW|  
+|*資料指標規格*|「選取游標」|SQL_DIAG_SELECT_CURSOR|  
+|*delete 語句-定位*|「動態刪除資料指標」|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
+|*delete 語句-搜尋*|「刪除位置」|SQL_DIAG_DELETE_WHERE|  
+|*drop-判斷提示語句*|「捨棄判斷提示」|SQL_DIAG_DROP_ASSERTION|  
+|*drop-character-set-stmt*|「捨棄字元集」|SQL_DIAG_DROP_CHARACTER_SET|  
+|*drop-定序語句*|「捨棄定序」|SQL_DIAG_DROP_COLLATION|  
+|*drop-domain 語句*|「捨棄網域」|SQL_DIAG_DROP_DOMAIN|  
+|*drop index 語句*|"DROP INDEX"|SQL_DIAG_DROP_INDEX|  
+|*drop 架構語句*|「捨棄架構」|SQL_DIAG_DROP_SCHEMA|  
+|*drop table 語句*|「卸載資料表」|SQL_DIAG_DROP_TABLE|  
+|*drop-轉譯語句*|「捨棄轉譯」|SQL_DIAG_DROP_TRANSLATION|  
+|*drop view 語句*|「捨棄視圖」|SQL_DIAG_DROP_VIEW|  
+|*grantstatement*|把|SQL_DIAG_GRANT|
+|*insert 語句*|插入|SQL_DIAG_INSERT|  
+|*ODBC-程式-延伸模組*|拜訪|SQL_DIAG_ 呼叫|  
+|*revoke 語句*|[|SQL_DIAG_REVOKE|  
+|*架構定義*|「建立架構」|SQL_DIAG_CREATE_SCHEMA|  
+|*轉譯-定義*|「建立翻譯」|SQL_DIAG_CREATE_TRANSLATION|  
+|*更新語句-定位*|「動態更新資料指標」|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
+|*update 語句-搜尋*|「更新位置」|SQL_DIAG_UPDATE_WHERE|  
 |Unknown|*空字串*|SQL_DIAG_UNKNOWN_STATEMENT|  
 
 <!--
@@ -245,40 +245,40 @@ n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
 
 ## <a name="sequence-of-status-records"></a>狀態記錄的順序
 
- 狀態記錄定位順序，根據資料列數目和類型的診斷。 驅動程式管理員會決定最終的順序，在其中傳回它所產生的狀態記錄。 驅動器會決定最終的順序，在其中傳回它所產生的狀態記錄。  
+ 狀態記錄會根據資料列編號和診斷類型放置在序列中。 驅動程式管理員會決定傳回其所產生之狀態記錄的最終順序。 驅動程式會決定傳回其所產生之狀態記錄的最終順序。  
   
- 如果診斷記錄所公佈的驅動程式管理員和驅動程式，就有一個驅動程式管理員負責來排序它們。  
+ 如果驅動程式管理員和驅動程式都同時張貼診斷記錄，驅動程式管理員就會負責排序它們。  
   
- 如果有兩個或多個狀態記錄，記錄的順序取決於第一次資料列數目。 若要判斷資料列的診斷記錄的順序，適用下列規則：  
+ 如果有兩個以上的狀態記錄，記錄的順序會先由資料列編號決定。 下列規則適用于依資料列來判斷診斷記錄的順序：  
   
--   因為 SQL_NO_ROW_NUMBER 會定義為-1，不會對應至任何資料列的記錄會出現在對應到特定的資料列中，記錄之前。  
+-   未對應到任何資料列的記錄會出現在對應到特定資料列的記錄前面，因為 SQL_NO_ROW_NUMBER 定義為-1。  
   
--   因為 SQL_ROW_NUMBER_UNKNOWN 會定義為-2，資料列數目是未知的記錄會出現在所有其他的記錄之前。  
+-   資料列編號未知的記錄會出現在所有其他記錄前面，因為 SQL_ROW_NUMBER_UNKNOWN 定義為-2。  
   
--   屬於特定的資料列的所有記錄，記錄會依照 SQL_DIAG_ROW_NUMBER 欄位中的值。 列出所有錯誤和警告的第一個資料列受到影響，並接著所有錯誤和警告的下一個資料都列受影響，依此類推。  
+-   對於特定資料列相關的所有記錄，記錄都會依照 [SQL_DIAG_ROW_NUMBER] 欄位中的值來排序。 系統會列出受影響的第一個資料列的所有錯誤和警告，然後顯示下一個受影響資料列的所有錯誤和警告，依此類推。  
   
 > [!NOTE]
->  ODBC 3 *.x*驅動程式管理員不會排序狀態記錄診斷的佇列中如果 SQLSTATE 01S01 （資料列中的錯誤） 由 ODBC 2 *.x*驅動程式或如果 SQLSTATE 01S01 （資料列中的錯誤） 由 ODBC3 *.x*驅動程式時**SQLExtendedFetch**稱為或**SQLSetPos**已將其置於使用資料指標上呼叫**SQLExtendedFetch**.  
+>  如果 odbc*2.x 驅動程式*傳回 SQLSTATE 01S01 （row 中的錯誤），或 odbc 3.x 驅動程式傳回 SQLSTATE 01S01 （row 中的錯誤），**或在已**定位**SQLExtendedFetch**的資料指標上呼叫**SQLSetPos** ，則 odbc 3.x*驅動程式*管理員** 不會排序診斷佇列中的狀態記錄。  
   
- 中每個資料列，或所有未對應的資料列或資料列數目是未知，這些記錄或資料列數等於 SQL_NO_ROW_NUMBER 所有這些記錄，列出的第一個記錄取決於使用一組的排序規則。 之後第一筆記錄，會影響資料列的其他記錄的順序是未定義。 應用程式不能假設錯誤之前的警告之後第一筆記錄。 應用程式應該掃描完整的診斷資料結構，以取得成功呼叫函式的完整資訊。  
+ 在每個資料列中，或針對未對應至資料列或資料列數目不明的所有記錄，或針對資料列數等於 SQL_NO_ROW_NUMBER 的所有記錄，會使用一組排序規則來決定第一個列出的記錄。 第一筆記錄之後，不會定義影響資料列之其他記錄的順序。 應用程式無法假設錯誤在第一筆記錄之後的警告前面。 應用程式應該掃描完整的診斷資料結構，以取得函式不成功呼叫的完整資訊。  
   
- 下列規則用來判斷資料列內第一筆記錄。 具有最高順位的記錄是第一筆記錄。 資料錄 （驅動程式管理員、 驅動程式、 閘道和等等） 的來源不是當排名的記錄。  
+ 下列規則是用來判斷資料列中的第一筆記錄。 具有最高等級的記錄是第一筆記錄。 記錄的來源（驅動程式管理員、驅動程式、閘道等）不會在排名記錄時考慮。  
   
--   **錯誤**描述錯誤的狀態記錄都有最高的等級。 下列規則會套用至排序錯誤：  
+-   **錯誤**描述錯誤的狀態記錄具有最高等級。 下列規則適用于排序錯誤：  
   
-    -   表示交易失敗或可能的交易失敗的記錄 outrank 其他所有記錄。  
+    -   指出交易失敗或可能的交易失敗的記錄 outrank 所有其他記錄。  
   
-    -   如果兩個或多筆記錄會描述相同的錯誤狀況，開啟群組 CLI 規格 （透過 HZ 類別 03） 所定義的 Sqlstate outrank ODBC 和驅動程式定義的 Sqlstate。  
+    -   如果有兩個以上的記錄描述相同的錯誤狀況，則 SQLSTATEs 由 Open Group CLI 規格（類別03到 HZ）所定義，會 outrank ODBC 和驅動程式定義的 SQLSTATEs。  
   
--   **實作定義沒有資料值**描述驅動程式定義沒有資料值 （類別 02） 的狀態記錄的第二個最高的等級。  
+-   **執行-未定義任何資料值**描述驅動程式定義的無資料值（類別02）的狀態記錄具有第二個最高等級。  
   
--   **警告**描述警告 （類別 01） 的狀態記錄具有最低順位。 如果兩個或多筆記錄會描述相同的警告狀況，然後警告開啟群組 CLI 規格所定義的 Sqlstate outrank ODBC 定義及驅動程式定義的 Sqlstate。  
+-   **警告**描述警告的狀態記錄（類別01）具有最低的排名。 如果有兩個以上的記錄描述相同的警告條件，則會由 Open Group CLI 規格所定義的警告 SQLSTATEs，outrank ODBC 定義和驅動程式定義的 SQLSTATEs。  
   
 ## <a name="related-functions"></a>相關函數  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
-|取得多個欄位的診斷資料結構|[SQLGetDiagRec 函式](sqlgetdiagrec-function.md)|  
+|取得診斷資料結構的多個欄位|[SQLGetDiagRec 函式](sqlgetdiagrec-function.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)   

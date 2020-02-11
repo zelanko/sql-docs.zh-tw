@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2e1484107e4ee5e7f7f2a10eaa719b5c96c098e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916886"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>記錄傳送交易記錄備份設定
@@ -24,7 +24,7 @@ ms.locfileid: "62916886"
   
  如需記錄傳送概念的說明，請參閱 [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **備份資料夾的網路路徑**  
  在此方塊中輸入備份資料夾的網路共用。 儲存交易記錄備份的本機資料夾必須共用，記錄傳送複製作業才能將這些檔案複製至次要伺服器。 您必須將此網路共用的讀取權限授與 Proxy 帳戶，在此帳戶下，複製作業將會在次要伺服器執行個體上執行。 依預設，這是次要伺服器執行個體的 SQLServerAgent 服務帳戶，但是管理員可以為此作業選擇另一個 Proxy 帳戶。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62916886"
  顯示備份主要資料庫之交易記錄的目前排程。 建立備份作業之前，按一下 [排程...]  即可修改此排程。建立備份作業之後，按一下 [編輯作業...]  即可修改此排程。  
   
 ### <a name="backup-job"></a>備份作業  
- **排程...**  
+ **[排程...]**  
  修改建立 SQL Server Agent 作業時所建立的排程。  
   
  **編輯作業...**  
@@ -67,7 +67,7 @@ ms.locfileid: "62916886"
 |||  
 |-|-|  
 |**使用預設伺服器設定**|按一下即可使用伺服器層級的預設值。<br /><br /> 此預設值是由 [備份壓縮預設]  伺服器組態選項所設定。 有關如何檢視這個選項目前之設定的詳細資訊，請參閱 [檢視或設定備份壓縮預設伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。|  
-|**壓縮備份**|不論目前的伺服器層級預設值為何，按一下即可壓縮備份。<br /><br /> **\*\* 重要事項 \*\*** 根據預設，壓縮會大幅增加 CPU 使用量，而且壓縮程序所耗用的額外 CPU 可能會對並行作業造成不良的影響。 因此，您可能會想要在 [資源管理員](../resource-governor/resource-governor.md)限制 CPU 使用量的工作階段中，建立低優先權的壓縮備份。 如需詳細資訊，請參閱本主題稍後介紹的＜ [使用資源管理員進行備份壓縮，以限制 CPU 使用率 &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)限制的工作階段中，建立低優先權的壓縮備份。|  
+|**壓縮備份**|不論目前的伺服器層級預設值為何，按一下即可壓縮備份。<br /><br /> **\*\* 重要 \*\*** 根據預設，壓縮會大幅增加 CPU 使用量，而且壓縮程序所耗用的額外 CPU 可能會對並行作業造成不良的影響。 因此，您可能會想要在 [資源管理員](../resource-governor/resource-governor.md)限制 CPU 使用量的工作階段中，建立低優先權的壓縮備份。 如需詳細資訊，請參閱本主題稍後介紹的＜ [使用資源管理員進行備份壓縮，以限制 CPU 使用率 &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)限制的工作階段中，建立低優先權的壓縮備份。|  
 |**不要壓縮備份**|不論目前的伺服器層級預設值為何，按一下即可建立未壓縮備份。|  
   
 ## <a name="see-also"></a>另請參閱  

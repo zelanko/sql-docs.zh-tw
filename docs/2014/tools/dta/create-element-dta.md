@@ -1,5 +1,5 @@
 ---
-title: Create 元素 (DTA) |Microsoft Docs
+title: Create 元素（DTA） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ec9ad9569326e4a9b3e890af4b5f909e36e5c5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149484"
 ---
 # <a name="create-element-dta"></a>Create 元素 (DTA)
@@ -48,10 +48,10 @@ ms.locfileid: "63149484"
 |關聯性|元素|  
 |------------------|--------------|  
 |**父元素**|[Recommendation 元素 &#40;DTA&#41;](recommendation-element-dta.md)|  
-|**子元素**|[Index 元素 &#40;DTA&#41;](index-element-dta.md)<br /><br /> `Statistics` 項目 (請參閱[Database Engine Tuning Advisor XML 結構描述](https://schemas.microsoft.com/sqlserver/)資訊)<br /><br /> `Heap` 項目 (請參閱[Database Engine Tuning Advisor XML 結構描述](https://schemas.microsoft.com/sqlserver/)資訊)|  
+|**子元素**|[Index 元素 &#40;DTA&#41;](index-element-dta.md)<br /><br /> `Statistics`元素（如需資訊，請參閱[DATABASE ENGINE TUNING ADVISOR XML 架構](https://schemas.microsoft.com/sqlserver/)）<br /><br /> `Heap`元素（如需資訊，請參閱[DATABASE ENGINE TUNING ADVISOR XML 架構](https://schemas.microsoft.com/sqlserver/)）|  
   
 ## <a name="remarks"></a>備註  
- 在 Database Engine Tuning Advisor XML 結構描述中，這個元素的名稱為 **CreateTypecomplexType** 。 它用來建立使用者指定組態的索引、統計資料和堆積結構。 請勿混淆這個 `Create` 元素與可用來建立檢視 (`CreateViewType`) 或資料分割 (`CreatePType`) 的其他類型。 請參閱[Database Engine Tuning Advisor XML 結構描述](https://schemas.microsoft.com/sqlserver/)如需其他資訊`Create`項目型別。  
+ 在 Database Engine Tuning Advisor XML 結構描述中，這個元素的名稱為 **CreateTypecomplexType** 。 它用來建立使用者指定組態的索引、統計資料和堆積結構。 請勿混淆這個 `Create` 元素與可用來建立檢視 (`CreateViewType`) 或資料分割 (`CreatePType`) 的其他類型。 如需這些其他`Create`元素類型的相關資訊，請參閱[Database Engine Tuning Advisor XML 架構](https://schemas.microsoft.com/sqlserver/)。  
   
 ## <a name="example"></a>範例  
  如需此元素的使用範例，請參閱[含使用者指定組態的 XML 輸入檔範例 &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)。  

@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f600d7bf2515cb77c587e5c9c3d5f8d1db1e343f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097193"
 ---
-# <a name="getreportserverurls-method-wmi-msreportserverinstance"></a>GetReportServerUrls 方法 (WMI MSReportServer_Instance)
+# <a name="getreportserverurls-method-wmi-msreportserver_instance"></a>GetReportServerUrls 方法 (WMI MSReportServer_Instance)
   傳回使用者可用來存取報表伺服器和報表管理員的 URL 清單。  
   
 ## <a name="syntax"></a>語法  
@@ -35,10 +35,10 @@ public void GetReportServerUrls(out string[] applicationName,
 ```  
   
 ## <a name="parameters"></a>參數  
- *ApplicationName[]*  
+ *ApplicationName []*  
  包含已安裝之應用程式的陣列。 值為 `ReportServerWebService` 或 `ReportManager`。  
   
- *URLs[]*  
+ *Url []*  
  包含成功註冊之 URL 的陣列。  
   
  *長度*  
@@ -53,7 +53,7 @@ public void GetReportServerUrls(out string[] applicationName,
  WMI 管理物件所公開的方法是透過 InvokeMethod 函數呼叫的。 如需詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework WMI 文件集中的＜針對管理物件執行方法＞。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 53aa9c9131edce40c62fbfab6899ef7531ffca01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105973"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>在報表中內嵌影像 (報表產生器及 SSRS)
@@ -64,7 +64,7 @@ ms.locfileid: "66105973"
   
 ## <a name="see-also"></a>另請參閱  
  [影像 &#40;報表產生器及 SSRS&#41;](images-report-builder-and-ssrs.md)   
- [加入資料繫結影像 &#40;報表產生器及 SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)   
+ [新增資料繫結影像 &#40;報表產生器及 SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)   
  [影像屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

@@ -13,39 +13,39 @@ ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 40485562c8385e05ced033062563d5c5165218de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922171"
 ---
 # <a name="solutions-for-remote-data-access"></a>遠端資料存取的解決方案
-## <a name="the-issue"></a>此問題  
- ADO 可讓您的應用程式來直接存取及修改資料來源 （有時稱為兩層系統）。 比方說，如果您連接到資料來源，其中包含您的資料，位於直接連接兩層式系統。  
+## <a name="the-issue"></a>問題  
+ ADO 可讓您的應用程式直接存取和修改資料來源（有時也稱為兩層式系統）。 例如，如果您的連接是包含資料的資料來源，這就是兩層系統中的直接連接。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 不過，您可以透過媒介例如 Microsoft® 網際網路資訊服務 (IIS)，間接地存取資料來源。 這種排列方式通常稱為三層式系統。 IIS 是提供有效率的方式，讓本機或用戶端應用程式叫用透過網際網路或近端內部網路的遠端或伺服器上，程式的用戶端/伺服器系統。 伺服器程式取得存取權的資料來源，並選擇性地處理取得的資料。  
+ 不過，您可能會想要透過媒介（例如 Microsoft® Internet Information Services （IIS））間接存取資料來源。 這種安排有時稱為三層式系統。 IIS 是一種用戶端/伺服器系統，可提供有效率的方式，讓本機或用戶端應用程式在網際網路或內部網路上叫用遠端或伺服器的程式。 伺服器程式可取得資料來源的存取權，並選擇性地處理取得的資料。  
   
- 比方說，您的內部網路網頁上包含 Microsoft® Visual Basic Scripting Edition (VBScript)，連接到 IIS 中撰寫的應用程式。 IIS 接著連接到實際的資料來源、 擷取資料、 處理以某種方式，然後傳回您的應用程式的 已處理的資訊。  
+ 例如，您的內部網路網頁包含以 Microsoft® Visual Basic Scripting Edition （VBScript）撰寫的應用程式，它會連接到 IIS。 IIS 接著會連接到實際的資料來源，抓取資料，以某種方式處理它，然後將處理過的資訊傳回到您的應用程式。  
   
- 在此範例中，您的應用程式永遠不會直接連接至資料來源;IIS 沒有。 與 IIS 存取透過 ADO 的資料。  
+ 在此範例中，您的應用程式永遠不會直接連接到資料來源;IIS 已完成。 而且 IIS 會藉由 ADO 來存取資料。  
   
 > [!NOTE]
->  不需要網際網路或近端內部網路為基礎的用戶端/伺服器應用程式 (也就是網頁型)-它可能包含單獨的區域網路上的已編譯程式。 不過，一般的情況下是 Web 應用程式。  
+>  用戶端/伺服器應用程式不一定要以網際網路或內部網路為基礎（也就是以 Web 為基礎），它可能只包含區域網路上已編譯的程式。 不過，一般的情況是以 Web 為基礎的應用程式。  
   
- 因為某些視覺控制項，例如格線、 核取方塊或清單中，可能會使用傳回的資訊，傳回的資訊必須是容易使用的視覺控制項。  
+ 由於某些視覺控制項（例如方格、核取方塊或清單）可能會使用傳回的資訊，因此視覺效果控制項必須很容易使用傳回的資訊。  
   
- 您想要既簡單又有效率應用程式設計介面，支援三層式系統，並傳回資訊做為輕鬆如同它已擷取兩層式系統上。 遠端資料服務 (RDS) 是此介面。  
+ 您想要一個簡單且有效率的應用程式設計介面，它支援三層式系統，並會如同在兩層式系統上被抓取般般地傳回信息。 遠端資料服務（RDS）是這個介面。  
   
 ## <a name="the-solution"></a>方案  
- RDS 定義程式設計模型層的存取和更新資料來源-若要存取透過媒介，例如網際網路資訊服務 (IIS) 中的資料所需的活動序列。 程式設計模型，摘要說明 RDS 的整個功能  
+ RDS 定義了程式設計模型，這是取得存取和更新資料來源所需的活動順序，以透過媒介（例如 Internet Information Services （IIS））取得資料的存取權。 程式設計模型會摘要說明 RDS 的完整功能。  
   
 ## <a name="see-also"></a>另請參閱  
  [基本 RDS 程式設計模型](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   
  [RDS 案例](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [RDS 提供使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
+ [RDS 使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

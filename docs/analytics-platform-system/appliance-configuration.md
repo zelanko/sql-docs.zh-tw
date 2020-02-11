@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401458"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>分析平臺系統的設備設定檢查清單
@@ -24,7 +24,7 @@ ms.locfileid: "74401458"
   
 ## <a name="BeforeTasks"></a>開始之前  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>Prerequisites  
   
 1.  設備必須安裝在資料中心並開啟電源。  
   

@@ -13,13 +13,14 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ccb2689b24914a0a953c1b9f7325cd5aa9c75d0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014115"
 ---
 # <a name="multipolygon"></a>MultiPolygon
+  
   `MultiPolygon` 執行個體是零或多個 `Polygon` 執行個體的集合。  
   
 ## <a name="polygon-instances"></a>多邊形執行個體  
@@ -29,7 +30,7 @@ ms.locfileid: "66014115"
   
  如本圖所示：  
   
--   圖 1 是具有兩個 `Polygon` 元素的 `MultiPolygon` 執行個體。 界限是由兩個外部環形和三個內部環形所定義。  
+-   圖 1 是具有兩個 `MultiPolygon` 元素的 `Polygon` 執行個體。 界限是由兩個外部環形和三個內部環形所定義。  
   
 -   圖 2 是具有兩個 `MultiPolygon` 元素的 `Polygon` 執行個體。 界限是由兩個外部環形和三個內部環形所定義。 這兩個 `Polygon` 元素會在正切點相交。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "66014115"
   
 -   它是空的 `MultiPolygon` 執行個體。  
   
--   組成 `MultiPolygon` 執行個體的所有執行個體都是可接受的 `Polygon` 執行個體。 如需有關已接受`Polygon`執行個體，請參閱[多邊形](../spatial/polygon.md)。  
+-   組成 `MultiPolygon` 執行個體的所有執行個體都是可接受的 `Polygon` 執行個體。 如需已接受`Polygon`之實例的詳細資訊，請參閱[多邊形](../spatial/polygon.md)。  
   
  下列範例會顯示可接受的 `MultiPolygon` 執行個體。  
   
@@ -59,7 +60,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
 ### <a name="valid-instances"></a>有效的執行個體  
  如果 `MultiPolygon` 執行個體是空的 `MultiPolygon` 執行個體或符合下列準則，則為有效的執行個體。  
   
-1.  組成 `MultiPolygon` 執行個體的所有執行個體都是有效的 `Polygon` 執行個體。 有效`Polygon`執行個體，請參閱[多邊形](../spatial/polygon.md)。  
+1.  組成 `MultiPolygon` 執行個體的所有執行個體都是有效的 `Polygon` 執行個體。 如需`Polygon`有效的實例，請參閱[多邊形](../spatial/polygon.md)。  
   
 2.  組成 `Polygon` 執行個體的所有 `MultiPolygon` 執行個體彼此不會重疊。  
   
@@ -72,7 +73,9 @@ DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1,
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` 有效，因為這兩個 `Polygon` 執行個體只在一個相切點接觸。 `@g3` 無效，因為這兩個 `Polygon` 執行個體的內部互相重疊。  
+ 
+  `@g2` 有效，因為這兩個 `Polygon` 執行個體只在一個相切點接觸。 
+  `@g3` 無效，因為這兩個 `Polygon` 執行個體的內部互相重疊。  
   
 ## <a name="examples"></a>範例  
  下列範例示範 `geometry``MultiPolygon` 執行個體的建立作業，並傳回第二個元件的 Well-Known Text (WKT)。  
@@ -91,10 +94,10 @@ SET @g = geometry::Parse('MULTIPOLYGON EMPTY');
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Polygon](../spatial/polygon.md)   
- [STArea &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
- [STCentroid &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type)   
- [STPointOnSurface &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
+ [多邊形](../spatial/polygon.md)   
+ [STArea &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
+ [STCentroid &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type)   
+ [STPointOnSurface &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
  [空間資料 &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)  
   
   

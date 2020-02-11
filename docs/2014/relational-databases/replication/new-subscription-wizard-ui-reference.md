@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ace6059545a4c46e3af279ad7c6104456478801c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022550"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>新增訂閱精靈 (UI 參考)
@@ -24,9 +24,9 @@ ms.locfileid: "63022550"
   
 -   [&#60;AgentName&#62; 代理程式位置](agentname-agent-location.md)  
   
--   [訂閱者](subscribers.md)  
+-   [[發行者屬性]](subscribers.md)  
   
--   [新增非 SQL Server 訂閱者](add-non-sql-server-subscriber.md)  
+-   [加入非 SQL Server 訂閱者](add-non-sql-server-subscriber.md)  
   
 -   [&#60;AgentName&#62; 代理程式安全性](agentname-agent-security.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63022550"
 -   [HOST_NAME 值](host-name-values.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [建立提取訂閱](create-a-pull-subscription.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [訂閱發行集](subscribe-to-publications.md)   
 

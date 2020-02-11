@@ -21,14 +21,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fb26ce238953f9bf4a3472385de6dd1bf5c167d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106252"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>圖表 (報表產生器及 SSRS)
-  當您想要以視覺格式摘要列出資料時，請使用圖表資料區。 圖表能讓您一次就能展示大量的彙總資訊。 在建立圖表之前，務必仔細準備及了解資料，因為這樣將協助您快速有效地設計圖表。 如需詳細資訊，請參閱[將圖表加入至報表 &#40;報表產生器及 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)。 若要立即開始使用圖表，請參閱列、 資料行、 走勢圖和圓形圖教學課程[教學課程&#40;報表產生器&#41;](../report-builder-tutorials.md)或列和圓形圖教學課程[Reporting Services 教學課程&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)。  
+  當您想要以視覺格式摘要列出資料時，請使用圖表資料區。 圖表能讓您一次就能展示大量的彙總資訊。 在建立圖表之前，務必仔細準備及了解資料，因為這樣將協助您快速有效地設計圖表。 如需詳細資訊，請參閱[將圖表加入至報表 &#40;報表產生器及 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)。 若要立即開始使用圖表，請參閱教學課程中的橫條圖、資料行、走勢圖和圓形圖教學課程[&#40;報表產生器&#41;](../report-builder-tutorials.md)或[Reporting Services 教學課程 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)中的橫條圖和圓形圖教學課程。  
   
  下圖顯示圖表中使用的許多不同元素。  
   
@@ -49,10 +49,10 @@ ms.locfileid: "66106252"
   
   
   
-##  <a name="SimilarMatrix"></a> 與矩陣的相似處  
+##  <a name="SimilarMatrix"></a>矩陣的相似處  
  考慮圖表如何運作的其中一種方法是比較圖表與矩陣。  
   
- ![從工具箱新增選取的新矩陣](../media/rs-matrixtemplatenewselected.gif "從工具箱新增選取的新矩陣")  
+ ![從工具箱新增選取的矩陣](../media/rs-matrixtemplatenewselected.gif "從工具箱新增選取的矩陣")  
   
  在概念上，組織是相同的：  
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3dcd239c782f53ec11970e94f89e5acfac982785
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228808"
 ---
 # <a name="configuration-of-a-server-instance-for-always-on-availability-groups-sql-server"></a>設定 AlwaysOn 可用性群組的伺服器執行個體 (SQL Server)
@@ -45,46 +45,46 @@ ms.locfileid: "75228808"
   
 2.  確定伺服器執行個體擁有資料庫鏡像端點。  
   
-##  <a name="RelatedTasks"></a>相關工作  
+##  <a name="RelatedTasks"></a> 相關工作  
  **若要啟用 AlwaysOn 可用性群組**  
   
 -   [啟用和停用 AlwaysOn 可用性群組 &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
  **若要判斷資料庫鏡像端點是否存在**  
   
--   [database_mirroring_endpoints &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
+-   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
  **若要建立資料庫鏡像端點**  
   
 -   [建立 AlwaysOn 可用性群組 &#40;SQL Server PowerShell 的資料庫鏡像端點&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [建立適用于 Windows 驗證的資料庫鏡像端點 &#40;Transact-sql&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [允許資料庫鏡像端點使用 &#40;Transact-sql 的輸出連接憑證&#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
+-   [允許資料庫鏡像端點使用輸出連線的憑證 &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-##  <a name="RelatedContent"></a>相關內容  
+##  <a name="RelatedContent"></a> 相關內容  
   
--   **網路**  
+-   **部落格：**  
   
      [AlwaysON - HADRON 學習系列：具備 HADRON 功能之資料庫的工作者集區使用方式](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 工程師 Blog](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
--   **視頻**  
+-   **影片：**  
   
      [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第 1 部：新一代高可用性解決方案簡介](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第 2 部：使用 AlwaysOn 建立關鍵任務的高可用性方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **白皮書**  
+-   **白皮書：**  
   
      [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [適用于 SQL Server 2012 的 Microsoft 技術白皮書](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft 的 SQL Server 2012 白皮書](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server 客戶諮詢小組白皮書](http://sqlcat.com/)  
+     [SQL Server 客戶諮詢團隊白皮書](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   

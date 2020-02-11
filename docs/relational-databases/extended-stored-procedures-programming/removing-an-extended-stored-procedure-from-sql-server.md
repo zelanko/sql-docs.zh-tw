@@ -16,25 +16,25 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ec61cf630d606977689d3fb3763cce8bd8b705c8
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095440"
 ---
 # <a name="removing-an-extended-stored-procedure-from-sql-server"></a>從 SQL Server 中移除擴充預存程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]請改用 CLR 整合。  
   
- 若要將每個擴充預存程式函數放在使用者定義的擴充預存程式 DLL 中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員必須執行**sp_dropextendedproc**系統預存程式，並指定函式的名稱以及該函式所在的 DLL 名稱。 例如，此命令會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移除位於名為 xp_hello 的 DLL 中的函式**xp_hello**：  
+ 若要將每個擴充預存程式函數放在使用者定義的擴充預存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程式 DLL 中，系統管理員必須執行**sp_dropextendedproc**系統預存程式，並指定函式的名稱以及該函式所在的 DLL 名稱。 例如，此命令會從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]下列位置移除名為 XP_HELLO 的 dll 中的函式**xp_hello**：  
   
 ```  
 sp_dropextendedproc 'xp_hello'  
 ```  
   
- 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]開始， **sp_dropextendedproc**不會卸載系統擴充預存程式。 相反地，系統管理員應該拒絕將擴充預存程式的 EXECUTE 許可權授與**public**角色。  
+ 從開始[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]， **sp_dropextendedproc**不會卸載系統擴充預存程式。 相反地，系統管理員應該拒絕將擴充預存程式的 EXECUTE 許可權授與**public**角色。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  

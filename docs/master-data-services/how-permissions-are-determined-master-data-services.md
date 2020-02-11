@@ -13,10 +13,10 @@ ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d08d65d13aec3812003b8d7d70f700662a592d14
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729191"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>如何決定權限 (Master Data Services)
@@ -49,7 +49,7 @@ ms.locfileid: "73729191"
   
 -   位於較高層級的任何物件會獲得推斷讀取權限。 如需推斷讀取權限的詳細資訊，請參閱 [導覽存取權 &#40;Master Data Services&#41;](../master-data-services/navigational-access-master-data-services.md)。  
   
- 在此範例中，**讀取**權限會指派給實體，而且其屬性 (位於模型結構中較低層級) 會繼承該權限。 模型會提供推斷讀取權限給此實體及其屬性。 模型中的其他實體沒有被指派任何明確權限，而且沒有繼承任何權限，因此會隱含拒絕此實體。  
+ 在此範例中， **讀取** 權限會指派給實體，而且其屬性 (位於模型結構中較低層級) 會繼承該權限。 模型會提供推斷讀取權限給此實體及其屬性。 模型中的其他實體沒有被指派任何明確權限，而且沒有繼承任何權限，因此會隱含拒絕此實體。  
   
  ![mds_conc_inheritance_model](../master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
@@ -69,17 +69,17 @@ ms.locfileid: "73729191"
  ![mds_conc_inheritance_hierarchy](../master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
 ### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>步驟 3：決定屬性與成員權限的交集。  
- 如果有效屬性權限與有效成員權限不同，就必須針對每個個別屬性值決定權限。 如需詳細資訊，請參閱[重疊的模型和成員的權限 &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)。  
+ 如果有效屬性權限與有效成員權限不同，就必須針對每個個別屬性值決定權限。 如需詳細資訊，請參閱 [重疊的模型和成員的權限 &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)。  
   
 ## <a name="permissions-assigned-to-multiple-groups"></a>指派給多個群組的權限  
  如果使用者屬於一個或多個群組，而且權限同時指派給使用者和群組，則工作流程會變得較複雜。  
   
  ![mds_conc_security_group_overlap](../master-data-services/media/mds-conc-security-group-overlap.gif "mds_conc_security_group_overlap")  
   
- 在此情況下，您必須先解析重疊的使用者和群組權限，然後才能比較模型物件與階層成員權限。 如需詳細資訊，請參閱[重疊的使用者和群組的權限 &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)。  
+ 在此情況下，您必須先解析重疊的使用者和群組權限，然後才能比較模型物件與階層成員權限。 如需詳細資訊，請參閱 [重疊的使用者和群組的權限 &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [重疊的使用者和群組的權限 &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
- [重疊的模型和成員的權限 &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [重迭的使用者和群組許可權 &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
+ [重迭的模型和成員許可權 &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

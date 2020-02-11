@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2f92a270bb599c84f5d0b2bd85e713c3f406f81b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479522"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>如何決定權限 (Master Data Services)
@@ -35,7 +35,7 @@ ms.locfileid: "65479522"
   
  ![mds_conc_security_no_overlap](../../2014/master-data-services/media/mds-conc-security-no-overlap.gif "mds_conc_security_no_overlap")  
   
-### <a name="step-1-effective-attribute-permissions-are-determined"></a>步驟 1:決定有效屬性權限。  
+### <a name="step-1-effective-attribute-permissions-are-determined"></a>步驟 1：決定有效屬性權限。  
  下列清單描述的是如何決定有效屬性權限：  
   
 -   指派給模型物件的權限會決定使用者可存取的屬性。  
@@ -44,13 +44,13 @@ ms.locfileid: "65479522"
   
 -   隱含拒絕與實體位於相同層級的任何物件。  
   
--   位於較高層級的任何物件會獲得導覽存取權。 如需有關導覽存取權的詳細資訊，請參閱 <<c0> [ 導覽存取權&#40;Master Data Services&#41;](navigational-access-master-data-services.md)。</c0>  
+-   位於較高層級的任何物件會獲得導覽存取權。 如需導覽存取權的詳細資訊，請參閱[導覽存取 &#40;Master Data Services&#41;](navigational-access-master-data-services.md)。  
   
- 在此範例中，**唯讀**權限指派給實體和其屬性，位於模型結構中較低層級會繼承該權限。 模型會提供導覽存取權給此實體及其屬性。 模型中的其他實體沒有被指派任何明確權限，而且沒有繼承任何權限，因此會隱含拒絕此實體。  
+ 在此範例中，**唯讀**許可權會指派給實體，而且其屬性（位於模型結構中較低層級）會繼承該許可權。 模型會提供導覽存取權給此實體及其屬性。 模型中的其他實體沒有被指派任何明確權限，而且沒有繼承任何權限，因此會隱含拒絕此實體。  
   
  ![mds_conc_inheritance_model](../../2014/master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
-### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>步驟 2:如果已指派階層成員權限，就會決定有效成員權限。  
+### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>步驟 2：如果已指派階層成員權限，就會決定有效成員權限。  
  下列清單描述的是如何決定有效階層成員權限：  
   
 -   指派給階層節點的權限會決定使用者可存取的成員。  
@@ -61,12 +61,12 @@ ms.locfileid: "65479522"
   
 -   隱含拒絕沒有被指派權限而且位於較高層級的任何節點。  
   
- 在此範例中，**唯讀**權限會指派給階層的一個節點，而且位於階層結構中較低層級的節點會繼承該權限。 根目錄沒有被指派權限，因此會隱含拒絕此根目錄。 階層結構中的其他節點沒有被指派任何明確權限，而且沒有繼承任何權限，因此會隱含拒絕此節點。  
+ 在此範例中，**唯讀**許可權會指派給階層中的一個節點，而該許可權會由階層結構中較低層級的節點繼承。 根目錄沒有被指派權限，因此會隱含拒絕此根目錄。 階層結構中的其他節點沒有被指派任何明確權限，而且沒有繼承任何權限，因此會隱含拒絕此節點。  
   
  ![mds_conc_inheritance_hierarchy](../../2014/master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
 ### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>步驟 3：決定屬性與成員權限的交集。  
- 如果有效屬性權限與有效成員權限不同，就必須針對每個個別屬性值決定權限。 如需詳細資訊，請參閱[重疊的模型和成員的權限 &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)。  
+ 如果有效屬性權限與有效成員權限不同，就必須針對每個個別屬性值決定權限。 如需詳細資訊，請參閱 [重疊的模型和成員的權限 &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)。  
   
 ## <a name="permissions-assigned-to-multiple-groups"></a>指派給多個群組的權限  
  如果使用者屬於一個或多個群組，而且權限同時指派給使用者和群組，則工作流程會變得較複雜。  
@@ -76,7 +76,7 @@ ms.locfileid: "65479522"
  在此情況下，您必須先解析重疊的使用者和群組權限，然後才能比較模型物件與階層成員權限。 如需詳細資訊，請參閱 [重疊的使用者和群組的權限 &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [重疊的使用者和群組的權限 &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
- [重疊的模型和成員的權限 &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [重迭的使用者和群組許可權 &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
+ [重迭的模型和成員許可權 &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

@@ -17,77 +17,79 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894782"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>以指令碼工作處理 Excel 檔案
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 Excel 連接管理員、Excel 來源和 Excel 目的地，以處理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 檔案格式試算表中儲存的資料。 本主題所述的技術會使用指令碼工作取得有關可用 Excel 資料庫 (活頁簿檔案) 與資料表 (工作表與具名範圍) 的相關資訊。 您可以輕鬆地修改這些範例，使其可與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB Provider 所支援的其他以檔案為基礎之資料來源搭配使用。  
   
- [設定套件以測試範例](#configuring)  
+ [設定封裝以測試範例](#configuring)  
   
- [範例 1:檢查 Excel 檔案是否存在](#example1)  
+ [Example1：檢查 Excel 檔案是否存在](#example1)  
   
- [範例 2：檢查 Excel 資料表是否存在](#example2)  
+ [範例2：檢查 Excel 資料表是否存在](#example2)  
   
- [範例 3︰取得資料夾中的 Excel 檔案的清單](#example3)  
+ [範例3：取得資料夾中的 Excel 檔案清單](#example3)  
   
- [範例 4︰取得 Excel 檔案中的資料表清單](#example4)  
+ [範例4：取得 Excel 檔案中的資料表清單](#example4)  
   
  [顯示範例的結果](#testing)  
   
 > [!NOTE]  
 >  如果您想要建立可更輕鬆地在多個封裝之間重複使用的工作，請考慮使用此指令碼工作範例中的程式碼做為自訂工作的起點。 如需詳細資訊，請參閱 [開發自訂工作](../extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-##  <a name="configuring"></a> 設定套件以測試範例  
+##  <a name="configuring"></a>設定封裝以測試範例  
  您可以設定單一封裝以測試本主題中的所有範例。 範例使用許多相同的封裝變數與相同的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別。  
   
 #### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>設定封裝與本主題中的範例搭配使用  
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中建立新的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 專案，並開啟預設封裝以進行編輯。  
   
-2.  **變數**。 開啟 [變數]  視窗，並定義下列變數：  
+2.  **變數**。 開啟 [變數]**** 視窗，並定義下列變數：  
   
-    -   類型為 `String` 的 `ExcelFile`。 輸入現有 Excel 活頁簿的完整路徑與檔案名稱。  
+    -   類型為 `ExcelFile` 的 `String`。 輸入現有 Excel 活頁簿的完整路徑與檔案名稱。  
   
-    -   類型為 `String` 的 `ExcelTable`。 輸入以 `ExcelFile` 變數值命名之活頁簿中，現有工作表或具名範圍的名稱。 此值區分大小寫。  
+    -   類型為 `ExcelTable` 的 `String`。 輸入以 `ExcelFile` 變數值命名之活頁簿中，現有工作表或具名範圍的名稱。 此值區分大小寫。  
   
-    -   類型為 `Boolean` 的 `ExcelFileExists`。  
+    -   類型為 `ExcelFileExists` 的 `Boolean`。  
   
-    -   類型為 `Boolean` 的 `ExcelTableExists`。  
+    -   類型為 `ExcelTableExists` 的 `Boolean`。  
   
-    -   類型為 `String` 的 `ExcelFolder`。 輸入含有至少一個 Excel 活頁簿的資料夾完整路徑。  
+    -   類型為 `ExcelFolder` 的 `String`。 輸入含有至少一個 Excel 活頁簿的資料夾完整路徑。  
   
-    -   類型為 `Object` 的 `ExcelFiles`。  
+    -   類型為 `ExcelFiles` 的 `Object`。  
   
-    -   類型為 `Object` 的 `ExcelTables`。  
+    -   類型為 `ExcelTables` 的 `Object`。  
   
-3.  **Imports 陳述式**。 大部分的程式碼範例都需要您在指令碼檔案最上方匯入下列一或兩個 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空間：  
+3.  **Imports 語句**。 大部分的程式碼範例都需要您在指令碼檔案最上方匯入下列一或兩個 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空間：  
   
-    -   `System.IO`，處理檔案系統作業。  
+    -   
+  `System.IO`，處理檔案系統作業。  
   
-    -   `System.Data.OleDb`，開啟 Excel 檔案做為資料來源。  
+    -   
+  `System.Data.OleDb`，開啟 Excel 檔案做為資料來源。  
   
 4.  **參考**。 從 Excel 檔案讀取結構描述資訊的程式碼範例，在指令碼專案中需要有 `System.Xml` 命名空間的參考。  
   
-5.  請使用 [選項]  對話方塊中 [一般]  頁面上的 [指令碼語言]  選項，為指令碼元件設定預設的指令碼語言。 如需相關資訊，請參閱 [General Page](../general-page-of-integration-services-designers-options.md)。  
+5.  請使用 [選項]**** 對話方塊中 [一般]**** 頁面上的 [指令碼語言]**** 選項，為指令碼元件設定預設的指令碼語言。 如需相關資訊，請參閱 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
-##  <a name="example1"></a> 範例 1 描述：檢查 Excel 檔案是否存在  
+##  <a name="example1"></a>範例1描述：檢查 Excel 檔案是否存在  
  此範例會判斷 `ExcelFile` 變數中指定的 Excel 活頁簿檔案是否存在，然後將 `ExcelFileExists` 變數的布林值設定為結果。 您可以為封裝工作流程中的分支使用此布林值。  
   
 #### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
   
-1.  將新的指令碼工作加入封裝，並變更其名稱`ExcelFileExists`。  
+1.  將新的腳本工作加入封裝，並將其名稱變更`ExcelFileExists`為。  
   
-2.  在 [指令碼工作編輯器]  的 [指令碼]  索引標籤上，按一下 **ReadOnlyVariables**，並使用下列其中一項方法輸入屬性值：  
+2.  在 [指令碼工作編輯器]**** 的 [指令碼]**** 索引標籤上，按一下 **ReadOnlyVariables**，並使用下列其中一項方法輸入屬性值：  
   
     -   輸入 `ExcelFile`。  
   
          -或-  
   
-    -   按一下省略符號 ( **...** ) 屬性 欄位中，然後在下一步按鈕**選取變數** 對話方塊中，選取`ExcelFile`變數。  
+    -   按一下屬性欄位旁邊的省略號（**...**）按鈕，然後在 [**選取變數**] 對話方塊中選取`ExcelFile`變數。  
   
 3.  按一下 **ReadWriteVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -95,13 +97,13 @@ ms.locfileid: "62894782"
   
          -或-  
   
-    -   按一下省略符號 ( **...** ) 屬性 欄位中，然後在下一步按鈕**選取變數** 對話方塊中，選取`ExcelFileExists`變數。  
+    -   按一下屬性欄位旁邊的省略號（**...**）按鈕，然後在 [**選取變數**] 對話方塊中選取`ExcelFileExists`變數。  
   
-4.  按一下 [編輯指令碼]  ，以開啟指令碼編輯器。  
+4.  按一下 [編輯指令碼]****，以開啟指令碼編輯器。  
   
 5.  在指令碼檔案最上方加入 `Imports` 命名空間的 `System.IO` 陳述式。  
   
-6.  加入下列程式碼。  
+6.  新增下列程式碼。  
   
 ### <a name="example-1-code"></a>範例 1 程式碼  
   
@@ -144,20 +146,20 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> 範例 2 描述：檢查 Excel 資料表是否存在  
+##  <a name="example2"></a>範例2描述：檢查 Excel 資料表是否存在  
  此範例會判斷 `ExcelTable` 變數中指定的 Excel 工作表或具名範圍是否存在於 `ExcelFile` 變數中指定的 Excel 活頁簿檔案，然後將 `ExcelTableExists` 變數的布林值設定為結果。 您可以為封裝工作流程中的分支使用此布林值。  
   
 #### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
   
-1.  將新的指令碼工作加入封裝，並變更其名稱`ExcelTableExists`。  
+1.  將新的腳本工作加入封裝，並將其名稱變更`ExcelTableExists`為。  
   
-2.  在 [指令碼工作編輯器]  的 [指令碼]  索引標籤上，按一下 **ReadOnlyVariables**，並使用下列其中一項方法輸入屬性值：  
+2.  在 [指令碼工作編輯器]**** 的 [指令碼]**** 索引標籤上，按一下 **ReadOnlyVariables**，並使用下列其中一項方法輸入屬性值：  
   
-    -   型別`ExcelTable`和`ExcelFile`以逗號分隔`.`  
+    -   輸入`ExcelTable`並`ExcelFile`以逗號分隔`.`  
   
          -或-  
   
-    -   按一下省略符號 ( **...** ) 屬性 欄位中，然後在下一步按鈕**選取變數** 對話方塊中，選取`ExcelTable`和`ExcelFile`變數。  
+    -   按一下屬性欄位旁邊的省略號（**...**）按鈕，然後在 [**選取變數**] 對話方塊中，選取`ExcelTable`和`ExcelFile`變數。  
   
 3.  按一下 **ReadWriteVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -165,15 +167,15 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下省略符號 ( **...** ) 屬性 欄位中，然後在下一步按鈕**選取變數** 對話方塊中，選取`ExcelTableExists`變數。  
+    -   按一下屬性欄位旁邊的省略號（**...**）按鈕，然後在 [**選取變數**] 對話方塊中選取`ExcelTableExists`變數。  
   
-4.  按一下 [編輯指令碼]  ，以開啟指令碼編輯器。  
+4.  按一下 [編輯指令碼]****，以開啟指令碼編輯器。  
   
 5.  在指令碼專案中加入 `System.Xml` 組件的參考。  
   
 6.  在指令碼檔案最上方加入 `Imports` 與 `System.IO` 命名空間的 `System.Data.OleDb` 陳述式。  
   
-7.  加入下列程式碼。  
+7.  新增下列程式碼。  
   
 ### <a name="example-2-code"></a>範例 2 程式碼  
   
@@ -251,20 +253,20 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> 範例 3 描述：取得資料夾中的 Excel 檔案清單  
+##  <a name="example3"></a>範例3描述：取得資料夾中的 Excel 檔案清單  
  此範例會使用在 `ExcelFolder` 變數值中指定的資料夾內所找到的 Excel 檔案清單，來填滿陣列，然後將陣列複製到 `ExcelFiles` 變數中。 您可以使用 Foreach From Variable 列舉值來反覆運算陣列中的檔案。  
   
 #### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
   
 1.  將新指令碼工作新增至套件，並將其名稱變更為 **GetExcelFiles**。  
   
-2.  開啟 [指令碼工作編輯器]  的 [指令碼]  索引標籤，並按一下 **ReadOnlyVariables**，然後使用下列其中一項方法輸入屬性值：  
+2.  開啟 [指令碼工作編輯器]**** 的 [指令碼]**** 索引標籤，並按一下 [ReadOnlyVariables]****，然後使用下列其中一項方法輸入屬性值：  
   
     -   輸入 `ExcelFolder`  
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 ([...])  按鈕，然後在 [選取變數]  對話方塊中選取 [ExcelFolder] 變數。  
+    -   按一下屬性欄位旁邊的省略號（**...**）按鈕，然後在 [**選取變數**] 對話方塊中，選取 ExcelFolder 變數。  
   
 3.  按一下 **ReadWriteVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -272,13 +274,13 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 ([...])  按鈕，然後在 [選取變數]  對話方塊中選取 [ExcelFiles] 變數。  
+    -   按一下屬性欄位旁邊的省略號（**...**）按鈕，然後在 [**選取變數**] 對話方塊中，選取 ExcelFiles 變數。  
   
-4.  按一下 [編輯指令碼]  ，以開啟指令碼編輯器。  
+4.  按一下 [編輯指令碼]****，以開啟指令碼編輯器。  
   
 5.  在指令碼檔案最上方加入 `Imports` 命名空間的 `System.IO` 陳述式。  
   
-6.  加入下列程式碼。  
+6.  新增下列程式碼。  
   
 ### <a name="example-3-code"></a>範例 3 程式碼  
   
@@ -323,7 +325,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>替代方案  
  您也可以使用 ForEach 檔案列舉值反覆運算資料夾中的所有 Excel 檔案，以代替使用指令碼工作將 Excel 檔案清單蒐集到陣列中的方式。 如需詳細資訊，請參閱[使用 Foreach 迴圈容器來執行 Excel 檔案和資料表迴圈](../control-flow/foreach-loop-container.md)。  
   
-##  <a name="example4"></a> 範例 4 描述：取得 Excel 檔案中的資料表清單  
+##  <a name="example4"></a>範例4描述：取得 Excel 檔案中的資料表清單  
  此範例會使用在 `ExcelFile` 變數值中指定的 Excel 活頁簿檔案內找到的工作表清單和具名範圍，來填滿陣列，然後將陣列複製到 `ExcelTables` 變數中。 您可以使用 Foreach From Variable 列舉值來反覆運算陣列中的資料表。  
   
 > [!NOTE]  
@@ -333,13 +335,13 @@ public class ScriptMain
   
 1.  將新指令碼工作新增至套件，並將其名稱變更為 **GetExcelTables**。  
   
-2.  開啟 [指令碼工作編輯器]  的 [指令碼]  索引標籤，並按一下 **ReadOnlyVariables**，然後使用下列其中一項方法輸入屬性值：  
+2.  開啟 [指令碼工作編輯器]**** 的 [指令碼]**** 索引標籤，並按一下 **ReadOnlyVariables**，然後使用下列其中一項方法輸入屬性值：  
   
     -   輸入 `ExcelFile`。  
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 ([...])  按鈕，然後在 [選取變數]  對話方塊中選取 [ExcelFile] 變數。  
+    -   按一下屬性欄位旁邊的省略號（**...**）按鈕，然後在 [**選取變數**] 對話方塊中，選取 ExcelFile 變數。  
   
 3.  按一下 **ReadWriteVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -347,15 +349,15 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 ([...])  按鈕，然後在 [選取變數]  對話方塊中選取 [ExcelTables] 變數。  
+    -   按一下屬性欄位旁邊的省略號（**...**）按鈕，然後在 [**選取變數**] 對話方塊中，選取 [exceltables 變數]。  
   
-4.  按一下 [編輯指令碼]  ，以開啟指令碼編輯器。  
+4.  按一下 [編輯指令碼]****，以開啟指令碼編輯器。  
   
 5.  在指令碼專案中，加入 `System.Xml` 命名空間的參考。  
   
 6.  在指令碼檔案最上方加入 `Imports` 命名空間的 `System.Data.OleDb` 陳述式。  
   
-7.  加入下列程式碼。  
+7.  新增下列程式碼。  
   
 ### <a name="example-4-code"></a>範例 4 程式碼  
   
@@ -435,7 +437,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>替代方案  
  您也可以使用 Foreach ADO.NET 結構描述資料列集列舉值，反覆運算在 Excel 活頁簿檔案中的所有資料表 (也就是，工作表與具名範圍)，以代替使用指令碼工作將 Excel 資料表清單蒐集到陣列中的方式。 如需詳細資訊，請參閱[使用 Foreach 迴圈容器來執行 Excel 檔案和資料表迴圈](../control-flow/foreach-loop-container.md)。  
   
-##  <a name="testing"></a> 顯示範例的結果  
+##  <a name="testing"></a>顯示範例的結果  
  如果您已在相同封裝中設定此主題中的每個範例，可以將所有的指令碼工作連接至其他顯示所有範例輸出的指令碼工作。  
   
 #### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>設定指令碼工作以顯示本主題中的範例輸出  
@@ -444,21 +446,21 @@ public class ScriptMain
   
 2.  依序連線這四個範例指令碼工作，好讓每個工作在前一個工作順利完成之後接著執行，然後將第四個範例工作連線至 **DisplayResults** 工作。  
   
-3.  開啟 [指令碼工作編輯器]  中的 **DisplayResults** 工作。  
+3.  開啟 [指令碼工作編輯器]**** 中的 **DisplayResults** 工作。  
   
-4.  在 [指令碼]  索引標籤上，按一下 **ReadOnlyVariables** 並使用下列其中一個方法，新增[設定套件以測試範例](#configuring)中的所有七個變數：  
+4.  在 [指令碼]**** 索引標籤上，按一下 **ReadOnlyVariables** 並使用下列其中一個方法，新增[設定套件以測試範例](#configuring)中的所有七個變數：  
   
     -   輸入每個變數名稱，並以逗號分隔。  
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 ([...])  按鈕，然後在 [選取變數]  對話方塊中選取變數。  
+    -   按一下屬性欄位旁邊的省略號（**...**）按鈕，然後在 [**選取變數**] 對話方塊中選取變數。  
   
-5.  按一下 [編輯指令碼]  ，以開啟指令碼編輯器。  
+5.  按一下 [編輯指令碼]****，以開啟指令碼編輯器。  
   
 6.  在指令碼檔案最上方加入 `Imports` 與 `Microsoft.VisualBasic` 命名空間的 `System.Windows.Forms` 陳述式。  
   
-7.  加入下列程式碼。  
+7.  新增下列程式碼。  
   
 8.  執行封裝並檢查在訊息方塊中顯示的結果。  
   
@@ -541,10 +543,10 @@ public class ScriptMain
 }  
 ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [Excel 連線管理員](../connection-manager/excel-connection-manager.md)   
- [使用 Foreach 迴圈容器來執行 Excel 檔案和資料表迴圈](../control-flow/foreach-loop-container.md)  
+ [使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表](../control-flow/foreach-loop-container.md)  
   
   

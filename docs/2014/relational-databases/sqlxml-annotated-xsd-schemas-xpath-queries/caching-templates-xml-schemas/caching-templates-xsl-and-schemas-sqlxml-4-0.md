@@ -1,5 +1,5 @@
 ---
-title: 快取範本、 XSL 和結構描述 (SQLXML 4.0) |Microsoft Docs
+title: 快取範本、XSL 和架構（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82b943a170c42010b650033841f6612338d99119
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013244"
 ---
 # <a name="caching-templates-xsl-and-schemas-sqlxml-40"></a>快取範本、XSL 和結構描述 (SQLXML 4.0)
@@ -29,13 +29,13 @@ ms.locfileid: "66013244"
  本節中的主題提供有關快取的詳細資訊。  
   
 ## <a name="in-this-section"></a>本節內容  
- [範本快取&#40;SQLXML 4.0&#41;](template-caching-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;的範本快取](template-caching-sqlxml-4-0.md)  
  描述並提供範本快取的登錄機碼。  
   
- [XSL 快取&#40;SQLXML 4.0&#41;](xsl-caching-sqlxml-4-0.md)  
+ [XSL Caching &#40;SQLXML 4.0&#41;](xsl-caching-sqlxml-4-0.md)  
  描述並提供 XSL 快取的登錄機碼。  
   
- [結構描述快取&#40;SQLXML 4.0&#41;](schema-caching-sqlxml-4-0.md)  
+ [架構快取 &#40;SQLXML 4.0&#41;](schema-caching-sqlxml-4-0.md)  
  討論與結構描述快取相關的 SQLXML 並行安裝問題，並提供結構描述快取的登錄機碼。  
   
   

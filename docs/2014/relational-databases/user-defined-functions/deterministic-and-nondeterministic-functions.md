@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5463ac19caf9a82e48dd59c4ba05873587b74324
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714725"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定性與非決定性函數
@@ -46,14 +46,14 @@ ms.locfileid: "62714725"
 |ATN2|FLOOR|SIN|  
 |CEILING|ISNULL|SQUARE|  
 |COALESCE|ISNUMERIC|SQRT|  
-|COS|LOG|TAN|  
-|COT|LOG10|YEAR|  
-|DATALENGTH|MONTH||  
+|COS|記錄|TAN|  
+|COT|LOG10|年|  
+|DATALENGTH|月||  
 |DATEADD|NULLIF||  
   
  下列函數並非永遠是具決定性函數，但若是以決定性的方式來指定，則可用於索引檢視表或計算資料行的索引。  
   
-|函數|註解|  
+|函式|註解|  
 |--------------|--------------|  
 |所有彙總函式|除非為 OVER 與 ORDER BY 子句所指定，否則所有彙總函式都具有決定性。 如需這些函數的清單，請參閱[彙總函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/aggregate-functions-transact-sql)。|  
 |CAST|除非搭配 `datetime`、`smalldatetime` 或 `sql_variant` 使用，否則為決定性函數。|  

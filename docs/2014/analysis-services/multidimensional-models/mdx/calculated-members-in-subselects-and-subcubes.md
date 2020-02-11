@@ -1,5 +1,5 @@
 ---
-title: 子選擇和 Subcube 中導出成員 |Microsoft Docs
+title: 子選擇和 Subcube 中的匯出成員 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074787"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>子選擇和 Subcube 中的導出成員
   在舊版，子選擇或 Subcube 中不允許使用導出成員。 但是從 SQL Server 2008 開始，您可以使用導出成員，並透過連接屬性啟用。 此外，SQL Server 2008 R2 也導入了子選擇和 Subcube 中導出成員的新行為。  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>子選擇和 Subcube 中的導出成員  
- `SubQueries`中的連接字串屬性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或`DBPROPMSMDSUBQUERIES`中的屬性[支援的 XMLA 屬性&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)定義的行為或允許導出成員或導出在子選擇或 subcube 上的設定。 在本文的內容中，除非另有說明，否則子選擇同時指子選擇和 Subcube。  
+ 中`SubQueries` <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>的連接字串屬性或支援`DBPROPMSMDSUBQUERIES`的 XMLA 屬性中的屬性[&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)會在子選擇或 subcube 上定義匯出成員或匯出集的行為或額度。 在本文的內容中，除非另有說明，否則子選擇同時指子選擇和 Subcube。  
   
  SubQueries 屬性允許下列值。  
   
@@ -81,7 +81,7 @@ Where [Measures].[Reseller Sales Amount]
 |-|-|-|-|-|-|  
 ||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
 |All Geographies|(Null)|(Null)|(Null)|(Null)|(Null)|  
-|United States|(Null)|(Null)|(Null)|(Null)|(Null)|  
+|美國|(Null)|(Null)|(Null)|(Null)|(Null)|  
 |Washington|(Null)|(Null)|(Null)|(Null)|(Null)|  
 |Seattle Metro Agg|$2,383,545.69|$291,248.93|$763,557.02|$915,832.36|$412,907.37|  
   
@@ -107,7 +107,7 @@ Where [Measures].[Reseller Sales Amount]
 |-|-|-|-|-|-|  
 ||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
 |All Geographies|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
-|United States|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
+|美國|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
 |Oregon|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
 |Portland|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
 |97205|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
@@ -124,6 +124,6 @@ Where [Measures].[Reseller Sales Amount]
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [查詢中的子選擇](subselects-in-queries.md)   
- [支援的 XMLA 屬性 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
+ [&#40;XMLA&#41;支援的 XMLA 屬性](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768444"
 ---
 # <a name="working-with-images-with-the-script-task"></a>以指令碼工作處理影像
@@ -47,7 +47,7 @@ ms.locfileid: "62768444"
   
 1.  建立名為 `CurrentImageFile` 的字串變數，並將其值設定為現有影像檔的路徑與檔案名稱。  
   
-2.  在上**指令碼**頁**指令碼工作編輯器**，新增`CurrentImageFile`變數`ReadOnlyVariables`屬性。  
+2.  在 [**腳本工作編輯器**] 的 [**腳本**] 頁面上`CurrentImageFile` ，將變數`ReadOnlyVariables`加入至屬性。  
   
 3.  在指令碼專案中，設定 `System.Drawing` 命名空間的參考。  
   
@@ -57,9 +57,9 @@ ms.locfileid: "62768444"
   
 1.  在 Foreach 迴圈容器中置放指令碼工作。  
   
-2.  在 **Foreach 迴圈編輯器** 的 [集合] 頁面上，將 [Foreach 檔案列舉值] 選取為列舉值，以及指定來源檔案的路徑與檔案遮罩，例如 "*.bmp"。  
+2.  在 **Foreach 迴圈編輯器** 的 [集合]  頁面上，將 [Foreach 檔案列舉值]  選取為列舉值，以及指定來源檔案的路徑與檔案遮罩，例如 "*.bmp"。  
   
-3.  在 [變數對應] 頁面上，將 `CurrentImageFile` 變數對應至索引 0。 這個變數會在每次反覆運算列舉值時，將目前的檔案名稱傳遞給指令碼工作。  
+3.  在 [變數對應]  頁面上，將 `CurrentImageFile` 變數對應至索引 0。 這個變數會在每次反覆運算列舉值時，將目前的檔案名稱傳遞給指令碼工作。  
   
     > [!NOTE]  
     >  除了列在用於單一影像檔之程序的步驟之外，這是額外的步驟。  
@@ -158,7 +158,7 @@ End Function
   
 2.  另外建立 `MaxThumbSize` 整數變數並指派以像素為單位的值，例如 100。  
   
-3.  在上**指令碼**頁面**指令碼工作編輯器**，將這兩個變數加入`ReadOnlyVariables`屬性。  
+3.  在 [**腳本工作編輯器**] 的 [**腳本**] 頁面上，將這`ReadOnlyVariables`兩個變數加入至屬性。  
   
 4.  在指令碼專案中，設定 `System.Drawing` 命名空間的參考。  
   
@@ -168,9 +168,9 @@ End Function
   
 1.  在 Foreach 迴圈容器中置放指令碼工作。  
   
-2.  在 **Foreach 迴圈編輯器**的 [集合] 頁面上，將 [Foreach 檔案列舉值] 選取為 [列舉值]，以及指定來源檔案的路徑與檔案遮罩，例如 "*.jpg"。  
+2.  在 **Foreach 迴圈編輯器**的 [集合]  頁面上，將 [Foreach 檔案列舉值]  選取為 [列舉值]  ，以及指定來源檔案的路徑與檔案遮罩，例如 "*.jpg"。  
   
-3.  在 [變數對應] 頁面上，將 `CurrentImageFile` 變數對應至索引 0。 這個變數會在每次反覆運算列舉值時，將目前的檔案名稱傳遞給指令碼工作。  
+3.  在 [變數對應]  頁面上，將 `CurrentImageFile` 變數對應至索引 0。 這個變數會在每次反覆運算列舉值時，將目前的檔案名稱傳遞給指令碼工作。  
   
     > [!NOTE]  
     >  除了列在用於單一影像檔之程序的步驟之外，這是額外的步驟。  
@@ -289,6 +289,6 @@ bool ThumbnailCallback()
   
 ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
   

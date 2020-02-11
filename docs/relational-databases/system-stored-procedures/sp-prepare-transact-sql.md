@@ -1,5 +1,5 @@
 ---
-title: sp_prepare (Transact SQL) |Microsoft Docs
+title: sp_prepare （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2018
 ms.prod: sql
@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: acadb311dac786d9f1c5dbcc86fac9b2609fb959
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085800"
 ---
-# <a name="spprepare-transact-sql"></a>sp_prepare (Transact SQL)
+# <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-準備參數化[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式，並傳回陳述式*處理*執行。  `sp_prepare` 叫用指定 ID = 11 中的表格式資料流 (TDS) 封包。  
+準備參數化[!INCLUDE[tsql](../../includes/tsql-md.md)]語句並傳回執行的語句*控制碼*。  `sp_prepare` 的叫用方式是在表格式資料流 (TDS) 封包中指定 ID = 11。  
   
  ![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,17 +39,17 @@ sp_prepare handle OUTPUT, params, stmt, options
 ```  
   
 ## <a name="arguments"></a>引數  
- *控制代碼*  
- 這是 SQL Server 產生*備妥控制代碼*識別項。 *處理*是必要的參數與**int**傳回值。  
+ *圖*  
+ 這是 SQL Server 產生的*備妥控制碼*識別碼。 *handle*是具有**int**傳回值的必要參數。  
   
- *params*  
- 識別參數化的陳述式。 *Params*變數的定義會替代陳述式中的參數標記。 *params*是必要的參數呼叫**ntext**， **nchar**，或**nvarchar**輸入值。 如果陳述式未參數化，則輸入 NULL 值。  
+ *化*  
+ 識別參數化的陳述式。 變數的*params*定義會取代語句中的參數標記。 *params*是針對**Ntext**、 **Nchar**或**Nvarchar**輸入值呼叫的必要參數。 如果陳述式未參數化，則輸入 NULL 值。  
   
- *stmt*  
- 定義資料指標結果集。 *Stmt*為必要參數，呼叫**ntext**， **nchar**，或**nvarchar**輸入值。  
+ *把*  
+ 定義資料指標結果集。 *Stmt*參數是必要的，而且會呼叫**Ntext**、 **Nchar**或**Nvarchar**輸入值。  
   
- *options*  
- 傳回資料指標結果集資料行描述的選擇性參數。 *選項*需要下列的整數輸入的值：  
+ *選項*  
+ 傳回資料指標結果集資料行描述的選擇性參數。 *選項*需要下列 int 輸入值：  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -67,7 +67,7 @@ EXEC sp_execute @P1, N'tempdb', N'ONLINE';
 EXEC sp_unprepare @P1;  
 ```
 
-B. 下列範例會準備在 AdventureWorks2016 資料庫中，陳述式，並稍後執行它使用的控制代碼。
+B. 下列範例會準備 AdventureWorks2016 資料庫中的語句，並在稍後使用控制碼執行它。
 
 ```sql
 -- Prepare query
@@ -93,7 +93,7 @@ GO
 (1 row affected)
 ```
 
-然後應用程式會執行兩次才予以捨棄已備妥計劃使用控制代碼值 1 的查詢。
+然後，應用程式會在捨棄備妥的計畫之前，使用控制碼值1執行查詢兩次。
 
 ```sql
 EXEC sp_execute 1, 49879;  

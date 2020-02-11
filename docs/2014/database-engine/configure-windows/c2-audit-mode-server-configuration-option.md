@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0233f6c40e15fd4f612002854477d98068901b15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786667"
 ---
 # <a name="c2-audit-mode-server-configuration-option"></a>C2 稽核模式伺服器組態選項
@@ -35,7 +35,7 @@ ms.locfileid: "62786667"
 > [!IMPORTANT]  
 >  C2 稽核模式會將大量的事件資訊儲存到記錄檔，因此該記錄檔會快速成長。 如果儲存記錄檔的資料目錄已用盡空間， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將自行關閉。 如果將稽核設為自動啟動，您必須以 **-f** 旗標 (略過稽核) 重新啟動執行個體，或為稽核記錄釋放額外的磁碟空間。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="example"></a>範例  

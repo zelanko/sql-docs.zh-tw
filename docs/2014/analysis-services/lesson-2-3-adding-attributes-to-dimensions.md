@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079025"
 ---
 # <a name="adding-attributes-to-dimensions"></a>將屬性加入至維度
@@ -26,19 +26,19 @@ ms.locfileid: "66079025"
   
 #### <a name="to-add-attributes"></a>加入屬性  
   
-1.  針對 [客戶] 維度開啟維度設計師。 若要這樣做，請在方案總管的 [維度]  節點中，按兩下 [客戶]  維度。  
+1.  針對 [客戶] 維度開啟維度設計師。 若要這樣做，請在方案總管的 [維度]**** 節點中，按兩下 [客戶]**** 維度。  
   
-2.  在 [屬性]  窗格中，注意由 Cube 精靈所建立的 [客戶索引鍵] 和 [地理位置索引鍵] 屬性。  
+2.  在 [屬性]**** 窗格中，注意由 Cube 精靈所建立的 [客戶索引鍵] 和 [地理位置索引鍵] 屬性。  
   
-3.  在 [維度結構]  索引標籤的工具列上，確定用來檢視 [資料來源檢視]  窗格中資料表的 [顯示比例] 圖示設為 100%。  
+3.  在 [維度結構]**** 索引標籤的工具列上，確定用來檢視 [資料來源檢視]**** 窗格中資料表的 [顯示比例] 圖示設為 100%。  
   
-4.  將下列資料行，從 [資料來源檢視]  窗格中的 [客戶]  資料表拖曳至 [屬性]  窗格：  
+4.  將下列資料行，從 [資料來源檢視]**** 窗格中的 [客戶]**** 資料表拖曳至 [屬性]**** 窗格：  
   
     -   **BirthDate**  
   
     -   **MaritalStatus**  
   
-    -   **Gender**  
+    -   **性別**  
   
     -   **EmailAddress**  
   
@@ -56,19 +56,19 @@ ms.locfileid: "66079025"
   
     -   **NumberCarsOwned**  
   
-    -   **Phone**  
+    -   **來電**  
   
     -   **DateFirstPurchase**  
   
     -   **CommuteDistance**  
   
-5.  將下列資料行，從 [資料來源檢視]  窗格中的 [地理位置]  資料表拖曳至 [屬性]  窗格：  
+5.  將下列資料行，從 [資料來源檢視]**** 窗格中的 [地理位置]**** 資料表拖曳至 [屬性]**** 窗格：  
   
     -   **City**  
   
-    -   **StateProvinceName**  
+    -   **[Stateprovincename]**  
   
-    -   **EnglishCountryRegionName**  
+    -   **Englishcountryregionname]**  
   
     -   **PostalCode**  
   
@@ -78,13 +78,13 @@ ms.locfileid: "66079025"
   
 #### <a name="to-add-attributes"></a>加入屬性  
   
-1.  針對 [產品] 維度開啟維度設計師。 按兩下方案總管中的 [產品]  維度。  
+1.  針對 [產品] 維度開啟維度設計師。 按兩下方案總管中的 [產品]**** 維度。  
   
-2.  在 [屬性]  窗格中，注意由 Cube 精靈所建立的 [產品金鑰] 屬性。  
+2.  在 [屬性]**** 窗格中，注意由 Cube 精靈所建立的 [產品金鑰] 屬性。  
   
-3.  在 [維度結構]  索引標籤的工具列上，確定用來檢視 [資料來源檢視]  窗格中資料表的 [顯示比例] 圖示設為 100%。  
+3.  在 [維度結構]**** 索引標籤的工具列上，確定用來檢視 [資料來源檢視]**** 窗格中資料表的 [顯示比例] 圖示設為 100%。  
   
-4.  將下列資料行，從 [資料來源檢視]  窗格中的 [產品]  資料表拖曳至 [屬性]  窗格：  
+4.  將下列資料行，從 [資料來源檢視]**** 窗格中的 [產品]**** 資料表拖曳至 [屬性]**** 窗格：  
   
     -   **StandardCost**  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66079025"
   
     -   **SizeRange**  
   
-    -   **Weight**  
+    -   **權**  
   
     -   **DaysToManufacture**  
   
@@ -108,15 +108,15 @@ ms.locfileid: "66079025"
   
     -   **DealerPrice**  
   
-    -   **類別**  
+    -   **課堂**  
   
-    -   **樣式**  
+    -   **Style**  
   
     -   **ModelName**  
   
-    -   **StartDate**  
+    -   **開始**  
   
-    -   **EndDate**  
+    -   **終止**  
   
     -   **狀態**  
   
@@ -126,6 +126,6 @@ ms.locfileid: "66079025"
  [檢閱 Cube 和維度屬性](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [維度屬性 (Attribute) 屬性 (Property) 參考](multidimensional-models/dimension-attribute-properties-reference.md)  
+ [維度屬性 (attribute) 屬性 (property) 參考](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

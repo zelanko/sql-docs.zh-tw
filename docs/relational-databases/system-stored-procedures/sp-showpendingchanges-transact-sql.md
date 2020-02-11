@@ -16,10 +16,10 @@ ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6b09069cb5289e28d978a4f3b3483e14e63cebb2
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632749"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
@@ -43,17 +43,17 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @destination_server = ] 'destination_server'` 是套用所複寫之變更的伺服器名稱。 *destination_server*是**sysname**，預設值是 Null。  
+`[ @destination_server = ] 'destination_server'`這是套用所複寫之變更的伺服器名稱。 *destination_server*是**sysname**，預設值是 Null。  
   
-`[ @publication = ] 'publication'` 是發行集的名稱。 *發行*集是**sysname**，預設值是 Null。 當指定*發行*集時，結果只限于指定的發行集。  
+`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是 Null。 當指定*發行*集時，結果只限于指定的發行集。  
   
-`[ @article = ] 'article'` 是發行項的名稱。 發行項是**sysname**，預設*值是 Null* 。 當*指定了發行*項時，結果只限于指定的發行項。  
+`[ @article = ] 'article'`這是發行項的名稱。 發行項是**sysname**，預設*值是 Null* 。 當*指定了發行*項時，結果只限于指定的發行項。  
   
-`[ @show_rows = ] 'show_rows'` 指定結果集是否包含有關暫止變更的更多特定資訊，預設值為**0**。 如果指定了**1**的值，結果集會包含 is_delete 和 rowguid 資料行。  
+`[ @show_rows = ] 'show_rows'`指定結果集是否包含有關暫止變更的更多特定資訊，預設值為**0**。 如果指定了**1**的值，結果集會包含 is_delete 和 rowguid 資料行。  
   
 ## <a name="result-set"></a>結果集  
   
-|資料行名稱|資料類型|說明|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |destination_server|**sysname**|正要複寫變更所在的伺服器名稱。|  
 |pub_name|**sysname**|發行集的名稱。|  
@@ -62,8 +62,8 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 |article_name|**sysname**|引發變更之資料表的發行項名稱。|  
 |pending_deletes|**int**|等候複寫的刪除數目。|  
 |pending_ins_and_upd|**int**|等候複寫的插入和更新數目。|  
-|is_delete|**bit**|表示暫止變更是否為刪除。 值為**1**表示變更為刪除。 @show_rows的值必須為**1** 。|  
-|rowguid|**uniqueidentifier**|識別所變更之資料列的 GUID。 @show_rows的值必須為**1** 。|  
+|is_delete|**bit**|表示暫止變更是否為刪除。 值為**1**表示變更為刪除。 需要的值@show_rows為**1** 。|  
+|rowguid|**uniqueidentifier**|識別所變更之資料列的 GUID。 需要的值@show_rows為**1** 。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
@@ -77,7 +77,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
   
  當針對發行項所*指定的發行*項不屬於針對發行集所指定的發行集時 *，* 會傳回0的計數做為 pending_deletes 和 pending_ins_and_upd。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  只有系統管理員 (sysadmin) 固定伺服器角色或 db_owner 固定資料庫角色的成員，才能夠執行 sp_showpendingchanges。  
   
 ## <a name="see-also"></a>另請參閱  

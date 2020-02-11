@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6cbfac91613c2374e42da5b33e75ed5cade2bcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913755"
 ---
-# <a name="mssqlserver5235"></a>MSSQLSERVER_5235
+# <a name="mssqlserver_5235"></a>MSSQLSERVER_5235
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|5235|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC4_ERRORLOG_SUMMARY_PREMATURE_TERMINATION|  
-|訊息文字|USER_NAME 執行的 [EMERGENCY] DBCC DBCC_COMMAND_DETAILS 因為錯誤狀態 ERROR_STATE 而異常結束。 經過時間：HOURS 小時 MINUTES 分 SECONDS 秒。|  
+|訊息文字|USER_NAME 執行的 [EMERGENCY] DBCC DBCC_COMMAND_DETAILS 因為錯誤狀態 ERROR_STATE 而異常結束。 經過時間: HOURS 小時 MINUTES 分 SECONDS 秒。|  
   
 ## <a name="explanation"></a>說明  
  這是當執行命令時發生非預期終止錯誤時，DBCC 列印到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔的摘要訊息。 訊息中報告的錯誤狀態定義未預期終止的類型。  

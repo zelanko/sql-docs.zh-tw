@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8030a0005f0f5b949a3eecd12d73f3a3aa709c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876861"
 ---
 # <a name="back-up-database-backup-options-page"></a>備份資料庫 (備份選項頁面)
@@ -33,7 +33,7 @@ ms.locfileid: "62876861"
 >  您可以定義資料庫維護計畫來建立資料庫備份。 如需詳細資訊，請參閱[維護計劃](../maintenance-plans/maintenance-plans.md)和[使用維護計畫精靈](../maintenance-plans/use-the-maintenance-plan-wizard.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您可以按下 [指令碼]  按鈕，然後選取指令碼的目的地，以產生相對應的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](/sql/t-sql/statements/backup-transact-sql) 指令碼。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您可以按下 [指令碼][!INCLUDE[tsql](../../includes/tsql-md.md)][ 按鈕，然後選取指令碼的目的地，以產生相對應的 ](/sql/t-sql/statements/backup-transact-sql)**BACKUP** 指令碼。  
   
 ## <a name="options"></a>選項。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62876861"
   
 |||  
 |-|-|  
-|**After**|指定必須經過多少天之後，這個備份組才會逾期而能夠覆寫。 這個值可以介於 0 到 99999 日之間；值為 0 日意指備份組永遠不會過期。<br /><br /> 備份逾期的預設值是設定在 [預設備份媒體保留期限 (以天為單位)]  選項中的值。 若要存取，請以滑鼠右鍵按一下 [物件總管] 中的伺服器名稱並選取 [屬性]  ；然後按一下 [伺服器屬性]  對話方塊的 [資料庫設定]  頁面。|  
+|**之後**|指定必須經過多少天之後，這個備份組才會逾期而能夠覆寫。 這個值可以介於 0 到 99999 日之間；值為 0 日意指備份組永遠不會過期。<br /><br /> 備份逾期的預設值是設定在 [預設備份媒體保留期限 (以天為單位)]  選項中的值。 若要存取，請以滑鼠右鍵按一下 [物件總管] 中的伺服器名稱並選取 [屬性]  ；然後按一下 [伺服器屬性]  對話方塊的 [資料庫設定]  頁面。|  
 |**開啟**|指定備份組過期而可以被覆寫的特定日期。|  
   
 ### <a name="compression"></a>壓縮  
@@ -65,7 +65,7 @@ ms.locfileid: "62876861"
 |||  
 |-|-|  
 |**使用預設伺服器設定**|按一下即可使用伺服器層級的預設值。<br /><br /> 此預設值是由 [備份壓縮預設]  伺服器組態選項所設定。 有關如何檢視這個選項目前之設定的詳細資訊，請參閱 [檢視或設定備份壓縮預設伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。|  
-|**壓縮備份**|不論目前的伺服器層級預設值為何，按一下即可壓縮備份。<br /><br /> **\*\* 重要 \*\*** 根據預設，壓縮會大幅增加 CPU 使用量，而且壓縮程序所耗用的額外 CPU 可能會對並行作業造成不良的影響。 因此，您可能會想要以建立低優先權的壓縮備份，其工作階段中 [Resource Governor](../resource-governor/resource-governor.md)會限制 CPU 使用量。 如需詳細資訊，請參閱本主題稍後介紹的＜ [使用資源管理員進行備份壓縮，以限制 CPU 使用率 &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)限制的工作階段中，建立低優先權的壓縮備份。|  
+|**壓縮備份**|不論目前的伺服器層級預設值為何，按一下即可壓縮備份。<br /><br /> **\*\* 重要 \*\*** 根據預設，壓縮會大幅增加 CPU 使用量，而且壓縮程序所耗用的額外 CPU 可能會對並行作業造成不良的影響。 因此，您可能會想要在由[資源管理員](../resource-governor/resource-governor.md)所限制之 CPU 使用量的工作階段中建立低優先權的壓縮備份。 如需詳細資訊，請參閱本主題稍後介紹的＜ [使用資源管理員進行備份壓縮，以限制 CPU 使用率 &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)限制的工作階段中，建立低優先權的壓縮備份。|  
 |**不要壓縮備份**|不論目前的伺服器層級預設值為何，按一下即可建立未壓縮備份。|  
   
 ### <a name="encryption"></a>加密  
@@ -77,7 +77,7 @@ ms.locfileid: "62876861"
   
 -   AES 256  
   
--   Triple DES  
+-   三重 DES  
   
 > [!TIP]  
 >  如果選擇附加至現有的備份集，則會停用加密選項。  

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 38c29f8d70b3cc72baf81e2ae23082fe270ba573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874032"
 ---
 # <a name="set-or-change-the-database-collation"></a>設定或變更資料庫定序
@@ -31,9 +31,9 @@ ms.locfileid: "62874032"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要使用下列項目設定或變更資料庫定序：**  
+-   **若要設定或變更資料庫定序，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -57,11 +57,12 @@ ms.locfileid: "62874032"
   
     -   預存程序與使用者定義函數的任何現有 `char`、`varchar`、`text`、`nchar`、`nvarchar`，或 `ntext` 參數和純量傳回值，都會變更為新定序。  
   
-    -   `char`、`varchar`、`text`、`nchar`、`nvarchar`，或 `ntext` 系統資料類型，以及以這些系統資料類型為基礎的所有使用者定義資料類型，都會變更為新的預設定序。  
+    -   
+  `char`、`varchar`、`text`、`nchar`、`nvarchar`，或 `ntext` 系統資料類型，以及以這些系統資料類型為基礎的所有使用者定義資料類型，都會變更為新的預設定序。  
   
 -   您可以使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 陳述式的 COLLATE 子句，變更在使用者資料庫中建立的任何新物件的定序。 此陳述式不會變更現有使用者自訂資料表中的資料行定序。 您可以使用 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)的 COLLATE 子句進行變更。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  CREATE DATABASE  
@@ -76,11 +77,11 @@ ms.locfileid: "62874032"
   
 1.  在 [物件總管]  中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，展開該執行個體，然後展開 [資料庫]  。  
   
-2.  如果您要建立新資料庫，以滑鼠右鍵按一下 **[資料庫]** ，然後按一下 **[新增資料庫]** 。 如果不要預設定序，請按一下 **[選項]** 頁面，然後從 **[定序]** 下拉式清單中選取定序。  
+2.  如果您要建立新資料庫，以滑鼠右鍵按一下 **[資料庫]** ，然後按一下 **[新增資料庫]**。 如果不要預設定序，請按一下 **[選項]** 頁面，然後從 **[定序]** 下拉式清單中選取定序。  
   
-     或者，如果資料庫已經存在，以滑鼠右鍵按一下所要的資料庫，然後按一下 **[屬性]** 。 按一下 **[選項]** 頁面，然後從 **[定序]** 下拉式清單中選取定序。  
+     或者，如果資料庫已經存在，以滑鼠右鍵按一下所要的資料庫，然後按一下 **[屬性]**。 按一下 **[選項]** 頁面，然後從 **[定序]** 下拉式清單中選取定序。  
   
-3.  完成後，請按一下 **[確定]** 。  
+3.  完成後，請按一下 **[確定]**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -135,15 +136,15 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [定序與 Unicode 支援](collation-and-unicode-support.md)   
- [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
- [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [SQL Server 定序名稱 &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
- [Windows 定序名稱 &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)   
+ [fn_helpcollations &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
+ [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [SQL Server 定序名稱 &#40;Transact-sql&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
+ [Windows 定序名稱 &#40;Transact-sql&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)   
  [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations)   
- [定序優先順序 &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql)   
- [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
- [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [定序優先順序 &#40;Transact-sql&#41;](/sql/t-sql/statements/collation-precedence-transact-sql)   
+ [CREATE TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)   
+ [建立資料庫 &#40;SQL Server Transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
   

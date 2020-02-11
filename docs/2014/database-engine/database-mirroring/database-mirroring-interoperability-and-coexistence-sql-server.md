@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2f38e7bac91c4d65e9c6209d693a598466096069
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807304"
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>資料庫鏡像：互通性與共存性 (SQL Server)
   資料庫鏡像可與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的下列功能或元件搭配使用：  
   
--   [AlwaysOn 容錯移轉叢集執行個體 （SQL Server 容錯移轉叢集）](database-mirroring-and-sql-server-failover-cluster-instances.md)  
+-   [AlwaysOn 容錯移轉叢集執行個體 (SQL Server 容錯移轉叢集)](database-mirroring-and-sql-server-failover-cluster-instances.md)  
   
--   [異動資料擷取與變更追蹤](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)  
+-   [變更資料捕獲（和變更追蹤）](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)  
   
 -   [資料庫快照集](../../relational-databases/databases/database-snapshots-sql-server.md)  
   

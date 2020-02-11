@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c843a74b831315c98deda9a9d6fb0c3a463bc5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083407"
 ---
 # <a name="mining-structure-columns"></a>採礦結構資料行
@@ -32,19 +32,19 @@ ms.locfileid: "66083407"
   
  採礦結構資料行的定義必須包含下列資訊：  
   
--   **識別碼**：資料行，通常與名稱相同的唯一名稱。 在您建立採礦結構之後無法變更識別碼，但是可以變更名稱。  
+-   **識別碼**：資料行的唯一名稱，通常與名稱相同。 在您建立採礦結構之後無法變更識別碼，但是可以變更名稱。  
   
--   **名稱**：名稱或別名資料行中。  
+-   **名稱**：資料行的名稱或別名。  
   
--   **內容**:描述資料為離散或連續的列舉。  
+-   **內容**：描述資料為離散或連續的列舉。  
   
--   **類型**：列舉型別，表示一般資料類型。  
+-   **類型**：表示一般資料類型的列舉。  
   
--   **發佈**:列舉型別描述預期的值分佈。 如果資料行是連續的，便包括分佈。  
+-   **散發**：描述預期值分佈的列舉。 如果資料行是連續的，便包括分佈。  
   
--   **模型旗標**:列舉，指出如何處理遺失值等。 也可以在採礦模型上定義模型旗標，但是這些模型旗標與結構資料行上使用的旗標不一樣。  
+-   **模型旗標**：表示如何處理遺漏值等等的列舉。 也可以在採礦模型上定義模型旗標，但是這些模型旗標與結構資料行上使用的旗標不一樣。  
   
--   **繫結**:指定來源資料的屬性。  
+-   系**結：指定**來源資料的屬性。  
   
  協力廠商演算法也可以包括可在採礦結構資料行上定義的自訂屬性。  
   
@@ -56,16 +56,16 @@ ms.locfileid: "66083407"
 |主題|連結|  
 |-----------|-----------|  
 |描述您可以用於定義採礦結構資料行的資料類型。|[資料類型 &#40;資料採礦&#41;](data-types-data-mining.md)|  
-|描述可供採礦結構資料行內包含之每一個資料類型使用的內容類型。 內容類型相依於資料類型。 內容類型會在模型層級指派，而且會決定模型使用資料行資料的方式。|[內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)|  
-|介紹巢狀資料表的概念，並說明如何將巢狀資料表當做採礦結構資料行加入至資料來源。|[分類資料行 &#40;資料採礦&#41;](classified-columns-data-mining.md)|  
-|列出並說明您可以在採礦結構資料行上設定的分佈屬性，以便指定資料行中預期的值分佈。|[資料行分佈 &#40;資料採礦&#41;](column-distributions-data-mining.md)|  
-|說明分隔 (有時稱為「資料收納」  ) 的概念，並描述 Analysis Services 為分隔連續數值資料所提供的方法。|[分隔方法 &#40;資料採礦&#41;](discretization-methods-data-mining.md)|  
-|描述您可以在採礦結構資料行上設定的模型旗標。|[模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)|  
-|描述分類資料行，這是一種特殊類型的資料行，可用來讓採礦結構資料行之間產生關聯。|[分類資料行 &#40;資料採礦&#41;](classified-columns-data-mining.md)|  
+|描述可供採礦結構資料行內包含之每一個資料類型使用的內容類型。 內容類型相依於資料類型。 內容類型會在模型層級指派，而且會決定模型使用資料行資料的方式。|[&#40;資料採礦&#41;的內容類型](content-types-data-mining.md)|  
+|介紹巢狀資料表的概念，並說明如何將巢狀資料表當做採礦結構資料行加入至資料來源。|[已分類的資料行 &#40;資料採礦&#41;](classified-columns-data-mining.md)|  
+|列出並說明您可以在採礦結構資料行上設定的分佈屬性，以便指定資料行中預期的值分佈。|[資料採礦&#41;的資料行發行 &#40;](column-distributions-data-mining.md)|  
+|說明分隔 (有時稱為「資料收納」**) 的概念，並描述 Analysis Services 為分隔連續數值資料所提供的方法。|[&#40;資料採礦&#41;的離散化方法](discretization-methods-data-mining.md)|  
+|描述您可以在採礦結構資料行上設定的模型旗標。|[資料採礦&#41;的模型旗標 &#40;](modeling-flags-data-mining.md)|  
+|描述分類資料行，這是一種特殊類型的資料行，可用來讓採礦結構資料行之間產生關聯。|[已分類的資料行 &#40;資料採礦&#41;](classified-columns-data-mining.md)|  
 |學習加入及修改採礦結構資料行。|[採礦結構工作和使用說明](mining-structure-tasks-and-how-tos.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦結構 &#40;Analysis Services - 資料採礦&#41;](mining-structures-analysis-services-data-mining.md)   
+ [&#40;Analysis Services 的採礦結構-資料採礦&#41;](mining-structures-analysis-services-data-mining.md)   
  [採礦模型資料行](mining-model-columns.md)  
   
   

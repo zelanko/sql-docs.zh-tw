@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401154"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>授與平行處理資料倉儲的 T-sql 許可權
@@ -246,7 +246,7 @@ GO
 若要建立管理員登入，請參閱[固定伺服器角色](pdw-permissions.md#fixed-server-roles)。  
   
 ## <a name="see-also"></a>另請參閱
-[建立登入](../t-sql/statements/create-login-transact-sql.md)  
+[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
 [建立使用者](../t-sql/statements/create-user-transact-sql.md)  
-[建立角色](../t-sql/statements/create-role-transact-sql.md)  
+[CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
 [載入](load-overview.md)  

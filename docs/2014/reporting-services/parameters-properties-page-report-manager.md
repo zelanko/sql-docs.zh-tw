@@ -1,5 +1,5 @@
 ---
-title: 參數屬性頁面 （報表管理員） |Microsoft Docs
+title: 參數屬性頁面（報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 866fe023ff6ca2fe83264d65319618c5def0749a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108123"
 ---
 # <a name="parameters-properties-page-report-manager"></a>參數屬性頁面 (報表管理員)
@@ -22,7 +22,7 @@ ms.locfileid: "66108123"
   
  發行報表之前，在報表定義中指定參數。 發行報表之後，您可以修改某些參數屬性值。 您可修改的值隨著報表中參數的定義方式而改變。 例如，如果定義參數為統計值清單，您可以選擇不同的統計值作為預設值，但不可在清單新增或移除數值。 同樣地，如果參數是以查詢為基礎，則在發行之前，會先在報表中定義該查詢的所有項目 (包括所使用的資料集、是否允許 Null 或空白的值，以及是否提供預設值)。  
   
-## <a name="navigation"></a>巡覽  
+## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-parameters-properties-page"></a>若要開啟參數屬性頁面  
@@ -31,9 +31,9 @@ ms.locfileid: "66108123"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該報表的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該報表的 [一般] 屬性頁面。  
   
-4.  選取 **[參數]** 索引標籤。如果看不到 **[參數]** 索引標籤，表示報表中沒有包含參數。  
+4.  選取 [**參數**] 索引標籤。如果看不到 [**參數**] 索引標籤，報表就不會包含參數。  
   
 ## <a name="options"></a>選項。  
  **參數名稱**  
@@ -42,7 +42,7 @@ ms.locfileid: "66108123"
  **資料類型**  
  指定參數的資料型別。  
   
- **預設值**  
+ **有預設值**  
  選取此核取方塊以指定參數是否具有預設值。 選取此核取方塊將啟用 **[預設值]**。 如果報表參數接受 Null 值，它也會啟用 **[Null]** 。 如果沒有選取 **[有預設值]** ，您就必須在報表執行時隱藏此值，或提示使用者提供值。  
   
  **預設值**  
@@ -69,7 +69,7 @@ ms.locfileid: "66108123"
  提供顯示在參數文字方塊旁邊的文字字串。 這個字串提供標籤或描述性文字。 字串長度沒有限制。 較長的文字字串會在提供的空間中自動換行。  
   
 ## <a name="see-also"></a>另請參閱  
- [一般屬性頁面，報表 &#40;報表管理員&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [一般屬性頁面、報表 &#40;報表管理員&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

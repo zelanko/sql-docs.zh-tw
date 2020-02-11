@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cafef8a5b702b6df4475d34e9395bb12bc9461fb
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400980"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Master 資料庫-平行處理資料倉儲
@@ -42,7 +42,7 @@ SQL Server PDW master 資料庫會儲存設備層級的登入資訊和資料庫�
   
 ## <a name="related-tasks"></a>相關工作  
   
-|工作|描述|  
+|Task|描述|  
 |--------|---------------|  
 |建立 master 的完整備份。|範例：<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />如需詳細資訊，請參閱[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)。|  
 |還原 master 資料庫|若要還原 master 資料庫，請使用 Configuration Manager 工具中的 [[還原 Master 資料庫](restore-the-master-database.md)] 頁面。|  
