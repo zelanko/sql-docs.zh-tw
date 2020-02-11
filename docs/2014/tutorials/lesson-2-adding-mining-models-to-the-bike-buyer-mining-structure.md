@@ -1,5 +1,5 @@
 ---
-title: 第 2 課：將採礦模型加入 Bike Buyer 採礦結構 |Microsoft Docs
+title: 第2課：將採礦模型新增至自行車購買者採礦結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: de65fb7a85154f607cd8f266faec4621cdc41476
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63131734"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>第 2 課：將採礦模型新增至自行車買主採礦結構
-  在這一課，您將兩個採礦模型加入 Bike Buyer 採礦結構中建立[第 1 課：建立自行車買主採礦結構](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)。 這些採礦模型可讓您使用一個模型探索資料，使用另一個模型建立預測。  
+# <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>第 2 課：將採礦模型加入 Bike Buyer 採礦結構中
+  在這一課，您會將兩個採礦模型新增至您在[第1課：建立自行車購買者採礦結構](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)中建立的自行車購買者採礦結構。 這些採礦模型可讓您使用一個模型探索資料，使用另一個模型建立預測。  
   
- 若要瀏覽如何潛在客戶可以按其特性分類，您會建立基礎的採礦模型[Microsoft 群集演算法](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)。 在下一課，您將採索此演算法如何尋找共用類似特性的客戶叢集。 例如，您會發現某些客戶很可能成為鄰居、使用自行車通勤，並具有類似的教育背景。 您可以利用這些叢集，進一步了解不同客戶彼此的關係，並使用此資訊來建立一個以特定客戶群為目標的行銷策略。  
+ 若要探索潛在客戶如何依其特性分類，您將建立以[Microsoft 群集演算法](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)為基礎的採礦模型。 在下一課，您將採索此演算法如何尋找共用類似特性的客戶叢集。 例如，您會發現某些客戶很可能成為鄰居、使用自行車通勤，並具有類似的教育背景。 您可以利用這些叢集，進一步了解不同客戶彼此的關係，並使用此資訊來建立一個以特定客戶群為目標的行銷策略。  
   
- 為了預測潛在客戶是否可能購買自行車，您將建立採礦模型，根據[Microsoft Decision Trees Algorithm](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)。 此演算法會查看與每一位潛在客戶相關聯的資訊，並尋找在預測其是否會購買自行車時有用的特性。 然後它會比較之前的自行車買主與新的潛在客戶的特性值，以判斷新的潛在客戶是否有可能購買自行車。  
+ 若要預測潛在客戶是否可能購買自行車，您將建立以[Microsoft 決策樹演算法](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)為基礎的採礦模型。 此演算法會查看與每一位潛在客戶相關聯的資訊，並尋找在預測其是否會購買自行車時有用的特性。 然後它會比較之前的自行車買主與新的潛在客戶的特性值，以判斷新的潛在客戶是否有可能購買自行車。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE 陳述式  
- 若要將採礦模型加入採礦結構，您使用[ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)陳述式。 陳述式中的程式碼可分成下列各部份：  
+ 若要將採礦模型加入至「採礦結構」，您可以使用[ALTER 採礦結構 &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)語句。 陳述式中的程式碼可分成下列各部份：  
   
 -   識別採礦結構  
   
@@ -61,7 +61,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- 如需命名的物件，在 DMX 中的資訊，請參閱[識別碼&#40;DMX&#41;](/sql/dmx/identifiers-dmx)。  
+ 如需在 DMX 中命名物件的詳細資訊，請參閱[dmx&#41;&#40;的識別碼](/sql/dmx/identifiers-dmx)。  
   
  接下來幾行的程式碼定義採礦結構中將由採礦模型使用的資料行：  
   
@@ -78,7 +78,7 @@ ADD MINING MODEL [<mining model name>]
 ) USING <algorithm name>( <algorithm parameters> )  
 ```  
   
- 如需您可以調整之演算法參數的詳細資訊，請參閱[Microsoft Decision Trees Algorithm](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)並[Microsoft 群集演算法](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)。  
+ 如需您可以調整之演算法參數的詳細資訊，請參閱[Microsoft 決策樹演算法](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)和[microsoft 群集演算法](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)。  
   
  您可以使用下列語法來指定採礦模型中要用於預測的資料行：  
   
@@ -86,7 +86,7 @@ ADD MINING MODEL [<mining model name>]
 <mining model column> PREDICT  
 ```  
   
- 程式碼的最後一行是選擇性的，可定義在定型及測試模型時所套用的篩選。 如需如何將篩選套用至採礦模型的詳細資訊，請參閱[採礦模型的篩選&#40;Analysis Services-Data Mining&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
+ 程式碼的最後一行是選擇性的，可定義在定型及測試模型時所套用的篩選。 如需如何將篩選套用至採礦模型的詳細資訊，請參閱[&#40;Analysis Services 資料採礦&#41;的採礦模型篩選](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
   
 ## <a name="lesson-tasks"></a>課程工作  
  您將在這一課執行下列工作：  
@@ -102,7 +102,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-a-decision-tree-mining-model"></a>若要加入決策樹採礦模型  
   
-1.  在**物件總管] 中**，以滑鼠右鍵按一下執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查詢**，然後按一下**DMX**以開啟 [查詢編輯器及新的空白查詢。  
+1.  在**物件總管**中，以滑鼠右鍵按一下的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]實例，指向 [追加**查詢**]，然後按一下 [ **DMX** ] 以開啟 [查詢編輯器] 和新的空白查詢。  
   
 2.  將 ALTER MINING STRUCTURE 陳述式的一般範例複製到空白查詢中。  
   
@@ -112,7 +112,7 @@ ADD MINING MODEL [<mining model name>]
     <mining structure name>   
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     [Bike Buyer]  
@@ -124,7 +124,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model name>   
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     Decision Tree  
@@ -136,7 +136,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model columns>,  
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     (  
@@ -164,7 +164,7 @@ ADD MINING MODEL [<mining model name>]
     USING <algorithm name>( <algorithm parameters> )   
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     Using Microsoft_Decision_Trees  
@@ -197,18 +197,18 @@ ADD MINING MODEL [<mining model name>]
     WITH DRILLTHROUGH  
     ```  
   
-7.  在 **檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
+7.  **在 [檔案**] 功能表上，按一下 [**將 DMXQuery1 另存為**]。  
   
-8.  在 [**另存新檔**] 對話方塊中，瀏覽至適當的資料夾，並將檔案命名`DT_Model.dmx`。  
+8.  在 [**另存**新檔] 對話方塊中，流覽至適當的資料夾，並`DT_Model.dmx`將檔案命名為。  
   
-9. 在工具列上，按一下**Execute**  按鈕。  
+9. 在工具列上，按一下 [**執行**] 按鈕。  
   
 ## <a name="adding-a-clustering-mining-model-to-the-structure"></a>將群集採礦模型加入結構中  
  現在可以將採礦模型加入以 [!INCLUDE[msCoName](../includes/msconame-md.md)] 群組演算法為基礎的 Bike Buyer 採礦結構中。 因為群集採礦模型將使用採礦結構中定義的所有資料行，所以您可以利用捷徑，以省略採礦資料行之定義的方式，將此模型加入結構中。  
   
 #### <a name="to-add-a-clustering-mining-model"></a>若要加入群集採礦模型  
   
-1.  在**物件總管] 中**，以滑鼠右鍵按一下執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查詢**，然後按一下**DMX**若要開啟 [查詢編輯器以及新的空白查詢。  
+1.  在**物件總管**中，以滑鼠右鍵按一下的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]實例，指向 [追加**查詢**]，然後按一下 [ **DMX** ] 開啟 [查詢編輯器] 和新的空白查詢。  
   
 2.  將 ALTER MINING STRUCTURE 陳述式的一般範例複製到空白查詢中。  
   
@@ -218,7 +218,7 @@ ADD MINING MODEL [<mining model name>]
     <mining structure name>   
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     [Bike Buyer]  
@@ -230,7 +230,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model>   
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     Clustering Model  
@@ -251,7 +251,7 @@ ADD MINING MODEL [<mining model name>]
     USING <algorithm name>( <algorithm parameters> )  
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     USING Microsoft_Clustering  
@@ -265,11 +265,11 @@ ADD MINING MODEL [<mining model name>]
     USING Microsoft_Clustering   
     ```  
   
-7.  在 **檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
+7.  **在 [檔案**] 功能表上，按一下 [**將 DMXQuery1 另存為**]。  
   
-8.  在 [**另存新檔**] 對話方塊中，瀏覽至適當的資料夾，並將檔案命名`Clustering_Model.dmx`。  
+8.  在 [**另存**新檔] 對話方塊中，流覽至適當的資料夾，並`Clustering_Model.dmx`將檔案命名為。  
   
-9. 在工具列上，按一下**Execute**  按鈕。  
+9. 在工具列上，按一下 [**執行**] 按鈕。  
   
  在下一課，您將處理模型和採礦結構。  
   

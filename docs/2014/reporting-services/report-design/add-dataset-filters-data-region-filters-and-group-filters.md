@@ -1,5 +1,5 @@
 ---
-title: 新增資料集篩選、 資料區域篩選和群組篩選 （報表產生器及 SSRS） |Microsoft Docs
+title: 新增資料集篩選、資料區域篩選和群組篩選（報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0baf05aa9c38882aea1423fa56c2d7eb0ea940be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106624"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>新增資料集篩選、資料區篩選和群組篩選 (報表產生器及 SSRS)
@@ -47,29 +47,29 @@ ms.locfileid: "66106624"
   
 -   **圖表資料區中的數列或類別目錄群組：** 當您想要針對群組運算式包含或排除特定值來控制要在圖表中顯示哪些值時，請設定數列或類別目錄群組的篩選。  
   
-##  <a name="FilterEquations"></a> 了解篩選方程式  
+##  <a name="FilterEquations"></a>瞭解篩選方程式  
  在執行階段，報表處理器會將值轉換成指定的資料類型，然後使用指定的運算子來比較運算式和值。 下列清單將描述篩選方程式的每個部分：  
   
--   **運算式** ：定義您要篩選的項目。 一般而言，這是資料集欄位。  
+-   **運算式**定義您要篩選的內容。 一般而言，這是資料集欄位。  
   
--   **資料類型** ：指定報表處理器在執行階段評估篩選方程式時要使用的資料類型。 您所選取的資料類型必須是報表定義結構描述所支援的其中一種資料類型。  
+-   **資料類型**指定當報表處理器在執行時間評估篩選方程式時，所要使用的資料類型。 您所選取的資料類型必須是報表定義結構描述所支援的其中一種資料類型。  
   
--   **運算子** ：定義如何比較篩選方程式的兩個部分。  
+-   **運算子**定義如何比較篩選方程式的兩個部分。  
   
--   `Value` 定義要用於比較的運算式。  
+-   `Value`定義要在比較中使用的運算式。  
   
  下列各節將描述篩選方程式的每個部分。  
   
-### <a name="expression"></a>運算式  
- 當報表處理器在執行階段評估篩選方程式時，運算式和值的資料類型必須相同。 您針對 [運算式]  選取的欄位資料類型是由用來從資料來源中擷取資料的資料處理延伸模組或資料提供者所決定。 您輸入運算式的資料型別`Value`取決於[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]預設值。 資料類型的選擇是由支援報表定義的資料類型所決定。 資料提供者可能會將資料庫的值轉換成 CLR 類型。  
+### <a name="expression"></a>運算是  
+ 當報表處理器在執行階段評估篩選方程式時，運算式和值的資料類型必須相同。 您針對 [運算式]**** 選取的欄位資料類型是由用來從資料來源中擷取資料的資料處理延伸模組或資料提供者所決定。 您輸入的`Value`運算式資料類型是由[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]預設值所決定。 資料類型的選擇是由支援報表定義的資料類型所決定。 資料提供者可能會將資料庫的值轉換成 CLR 類型。  
   
 ### <a name="data-type"></a>資料類型  
  若要讓報表處理器比較兩個值，其資料類型必須相同。 下表將列出 CLR 資料類型與報表定義資料類型之間的對應。 您從資料來源中擷取的資料可能會在它是報表資料時轉換成不同的資料類型。  
   
-|**報表定義結構描述資料類型**|**CLR 類型**|  
+|**報表定義架構資料類型**|**CLR 類型**|  
 |--------------------------------------------|-----------------------|  
 |`Boolean`|`Boolean`|  
-|`DateTime`|`DateTime`、 `DateTimeOffset`|  
+|`DateTime`|`DateTime`, `DateTimeOffset`|  
 |`Integer`|`Int16`, `Int32`, `UInt16`, `Byte`, `SByte`|  
 |`Float`|`Single`, `Double`, `Decimal`|  
 |`Text`|`String`, `Char`, `GUID`, `Timespan`|  
@@ -81,16 +81,16 @@ ms.locfileid: "66106624"
   
 |運算子|動作|  
 |--------------|------------|  
-|**Equal、Like、NotEqual、GreaterThan、GreaterThanOrEqual、LessThan、LessThanOrEqual**|比較運算式與單一值。|  
+|**等於、Like、NotEqual、GreaterThan、GreaterThanOrEqual、LessThan、LessThanOrEqual**|比較運算式與單一值。|  
 |**TopN、BottomN**|比較運算式與單一 `Integer` 值。|  
 |**TopPercent、BottomPercent**|比較運算式與單一 `Integer` 或 `Float` 值。|  
 |**介於**|測試運算式是否位於 (包含) 兩個值之間。|  
-|**In**|測試運算式是否包含在一組值之中。|  
+|**在**|測試運算式是否包含在一組值之中。|  
   
 ### <a name="value"></a>值  
  Value 運算式會指定篩選方程式的最終部分。 報表處理器會將評估的運算式轉換成您所指定的資料類型，然後評估整個篩選方程式，以便判斷在 [運算式] 中指定的資料是否通過篩選。  
   
- 若要轉換成不是標準 CLR 資料類型的資料類型，您必須修改運算式，以便明確轉換成資料類型。 在 [運算式]  對話方塊中，您可以使用列於 [一般函數]  之 [轉換]  底下的轉換函數。 例如，若為代表在 `ListPrice` 資料來源上儲存成 **money** 資料類型之資料的欄位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，資料處理延伸模組就會將欄位值傳回成 <xref:System.Decimal> 資料類型。 若要將篩選設定成僅使用報表貨幣中大於 **$50000.00** 的值，請使用運算式 `=CDec(50000.00)`，將此值轉換成十進位。  
+ 若要轉換成不是標準 CLR 資料類型的資料類型，您必須修改運算式，以便明確轉換成資料類型。 在 [運算式]**** 對話方塊中，您可以使用列於 [一般函數]**** 之 [轉換]**** 底下的轉換函數。 例如，若為代表在 `ListPrice` 資料來源上儲存成 **money** 資料類型之資料的欄位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，資料處理延伸模組就會將欄位值傳回成 <xref:System.Decimal> 資料類型。 若要將篩選設定成僅使用報表貨幣中大於 **$50000.00** 的值，請使用運算式 `=CDec(50000.00)`，將此值轉換成十進位。  
   
  這個值也可以包含參數參考，以便允許使用者以互動方式選取要篩選的值。  
   

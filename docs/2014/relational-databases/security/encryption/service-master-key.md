@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 6a802cfadfa48c7dbba7479ca169daedf70fe8b9
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957132"
 ---
 # <a name="service-master-key"></a>服務主要金鑰
@@ -25,18 +25,17 @@ ms.locfileid: "74957132"
   
  重新產生或還原服務主要金鑰包括解密與重新加密完整的加密階層。 除非該金鑰已經洩密，才應該在資源需求低的時段，排程進行此項會耗用大量資源的作業。  
   
- 
-  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 是使用 AES 加密演算法來保護服務主要金鑰 (SMK) 及資料庫主要金鑰 (DMK)。 與舊版中使用的 3DES 相比，AES 是一種較新的加密演算法。 將 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 執行個體升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 之後，應該會重新產生 SMK 和 DMK，以將主要金鑰升級至 AES。 如需重新產生 SMK 的詳細資訊，請參閱 [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-service-master-key-transact-sql) 和 [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)。  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 是使用 AES 加密演算法來保護服務主要金鑰 (SMK) 及資料庫主要金鑰 (DMK)。 與舊版中使用的 3DES 相比，AES 是一種較新的加密演算法。 將 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 執行個體升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 之後，應該會重新產生 SMK 和 DMK，以將主要金鑰升級至 AES。 如需重新產生 SMK 的詳細資訊，請參閱 [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-service-master-key-transact-sql) 和 [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)。  
   
 ## <a name="best-practice"></a>最佳做法  
  備份服務主要金鑰，然後在一個安全且位於異地的位置存放此金鑰備份。  
   
 ## <a name="related-tasks"></a>相關工作  
- [備份服務主要金鑰 &#40;Transact-sql&#41;](/sql/t-sql/statements/backup-service-master-key-transact-sql)  
+ [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-service-master-key-transact-sql)  
   
- [&#40;Transact-sql&#41;還原服務主要金鑰](/sql/t-sql/statements/restore-service-master-key-transact-sql)  
+ [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-service-master-key-transact-sql)  
   
- [&#40;Transact-sql&#41;更改服務主要金鑰](/sql/t-sql/statements/alter-service-master-key-transact-sql)  
+ [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-service-master-key-transact-sql)  
   
 ## <a name="see-also"></a>另請參閱  
  [加密階層](encryption-hierarchy.md)  

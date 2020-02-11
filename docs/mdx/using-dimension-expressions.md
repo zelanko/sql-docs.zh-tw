@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0373bbda2d0c97946f15e048b7cc49175ca66669
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097157"
 ---
 # <a name="using-dimension-expressions"></a>使用維度運算式
@@ -20,7 +20,7 @@ ms.locfileid: "68097157"
 
   當您在多維度運算式 (MDX) 中傳遞參數給函數時，您通常會使用維度和階層運算式來傳回階層中的成員、集合或 tuple。  
   
- 維度運算式只能是簡單運算式，因為它們是物件識別碼。 請參閱[運算式&#40;MDX&#41; ](../mdx/expressions-mdx.md)以了解簡單和複雜運算式。  
+ 維度運算式只能是簡單運算式，因為它們是物件識別碼。 如需簡單和複雜運算式的說明，請參閱[&#40;MDX&#41;的運算式](../mdx/expressions-mdx.md)。  
   
 ## <a name="dimension-expressions"></a>維度運算式  
  維度運算式包含維度識別碼或維度函數。  
@@ -37,7 +37,7 @@ ms.locfileid: "68097157"
   
  `FROM [Adventure Works]`  
   
- 維度識別碼會以*Dimension_Name*在 backus-naur form，BNF 標記法中用來描述 MDX 陳述式。  
+ 在用來描述 MDX 語句的 BNF 標記法中，維度識別碼會顯示為*Dimension_Name* 。  
   
 ## <a name="hierarchy-expressions"></a>階層運算式  
  同樣地，階層運算式包含階層識別碼或階層函數。 下列範例示範階層運算式 [Date].[Calendar] 連同 .Levels 和 .Count 函數的使用，以傳回 Date 維度之 Calendar 階層中的層級數目：  
@@ -58,9 +58,9 @@ ms.locfileid: "68097157"
   
  `FROM [Adventure Works]`  
   
- 階層識別碼會以*Dimension_Name.Hierarchy_Name*在 backus-naur form，BNF 標記法中用來描述 MDX 陳述式。  
+ 階層識別碼會顯示為*Dimension_Name.* 在用來描述 MDX 語句的 BNF 標記法中 Hierarchy_Name。  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
+ [MDX&#41;&#40;的運算式](../mdx/expressions-mdx.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0eff6dca788744b93d2d6d4a0a7175764e263f71
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952539"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>執行帳戶 (SSRS 原生模式)
@@ -26,7 +26,7 @@ ms.locfileid: "71952539"
   
 -   當報表伺服器連接到另一個伺服器，以擷取報表中所參考的外部影像檔或其他資源時。  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式。  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式。  
   
  設定這個帳戶是選擇性的，但若未設定此帳戶，當您使用外部影像及連接某些資料來源時，將會受到限制。 擷取外部影像檔時，報表伺服器會檢查是否可以建立匿名連接。 如果連接有密碼保護，報表伺服器便會使用自動報表處理帳戶連接到遠端伺服器。 擷取報表的資料時，報表伺服器會模擬目前使用者、提示使用者提供認證、使用預存認證，或如果資料來源連接指定認證類型為 **[無]** 時，則會使用自動處理帳戶。 報表伺服器不允許系統在連接到其他電腦時，委派或模擬其服務帳戶認證，因此如果沒有其他認證可以使用，報表伺服器就必須使用自動處理帳戶。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "71952539"
  選取此項目來指定帳戶。  
   
  **帳戶**  
- 輸入 Windows 網域使用者帳戶。 請使用此格式：*網域\<<使用者帳戶\\\>* 。  
+ 輸入 Windows 網域使用者帳戶。 請使用此格式： * \<網域\\><使用者\>帳戶*。  
   
  **密碼**  
  輸入密碼。  
@@ -53,8 +53,8 @@ ms.locfileid: "71952539"
  重新輸入密碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 組態管理員 F1 說明主題&#40;SSRS 原生&#41;模式](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Reporting Services 組態管理員 &#40;SSRS 原生模式的 F1 說明主題&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [將加密的報表伺服器資料儲存 &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
   
   

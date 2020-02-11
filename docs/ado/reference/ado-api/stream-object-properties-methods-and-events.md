@@ -1,5 +1,5 @@
 ---
-title: Stream 物件屬性、 方法和事件 |Microsoft Docs
+title: Stream 物件屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,21 +13,21 @@ ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 326019b8e870739954c059475d851dbac62e0b57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930672"
 ---
-# <a name="stream-object-properties-methods-and-events"></a>Stream 物件屬性、 方法和事件
+# <a name="stream-object-properties-methods-and-events"></a>Stream 物件屬性、方法和事件
 ## <a name="properties"></a>屬性  
- [Charset 屬性](../../../ado/reference/ado-api/charset-property-ado.md)  
+ [字元集屬性](../../../ado/reference/ado-api/charset-property-ado.md)  
   
  [EOS 屬性](../../../ado/reference/ado-api/eos-property.md)  
   
  [LineSeparator 屬性](../../../ado/reference/ado-api/lineseparator-property-ado.md)  
   
- [模式屬性](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Mode 屬性](../../../ado/reference/ado-api/mode-property-ado.md)  
   
  [Position 屬性](../../../ado/reference/ado-api/position-property-ado.md)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "67930672"
   
  [WriteText 方法](../../../ado/reference/ado-api/writetext-method.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>事件  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

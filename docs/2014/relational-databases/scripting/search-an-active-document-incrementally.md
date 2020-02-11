@@ -15,22 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9334e4d44663f5d0637d6933eb7a72eae74d4a84
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243653"
 ---
 # <a name="search-an-active-document-incrementally"></a>以累加方式搜尋作用中的文件
   您可以輸入文字，以累加方式來搜尋單一文件或視窗。 搜尋作業會反白顯示第一組符合文件或視窗中之累加搜尋期間所輸入之字元的字元。 累加搜尋會自動搜尋文件或視窗內的所有文字，不過，隱藏的文字除外。  
   
- 對於 **[大小寫須相符]** 選項，累加搜尋會使用上一次搜尋的準則。 例如，如果您利用 [檔案中尋找]**** 對話方塊搜尋了多個檔案，且選取 [大小寫須相符]****，您下次累加搜尋時，搜尋會區分大小寫。  
+ 對於 **[大小寫須相符]** 選項，累加搜尋會使用上一次搜尋的準則。 例如，如果您利用 [檔案中尋找]  對話方塊搜尋了多個檔案，且選取 [大小寫須相符]  ，您下次累加搜尋時，搜尋會區分大小寫。  
   
 ### <a name="to-search-incrementally"></a>累加搜尋  
   
 1.  開啟您要搜尋的檔案或視窗。  
   
-2.  在 **[編輯]** 功能表上，指向 **[進階]**，再按一下 **[累加搜尋]**。  
+2.  在 **[編輯]** 功能表上，指向 **[進階]** ，再按一下 **[累加搜尋]** 。  
   
      此時游標圖示會改成含箭頭 (表示搜尋方向) 的雙筒望遠鏡，狀態列會顯示「累加搜尋」。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "75243653"
   
 ## <a name="see-also"></a>另請參閱  
  [搜尋和取代](search-and-replace.md)   
- [以互動方式搜尋檔](search-documents-interactively.md)   
- [使用結果清單搜尋檔](search-documents-using-results-lists.md)   
+ [以互動方式搜尋文件](search-documents-interactively.md)   
+ [使用結果清單搜尋文件](search-documents-using-results-lists.md)   
  [使用萬用字元搜尋文字](search-text-with-wildcards.md)   
- [使用正則運算式搜尋文字](search-text-with-regular-expressions.md)  
+ [使用規則運算式搜尋文字](search-text-with-regular-expressions.md)  
   
   

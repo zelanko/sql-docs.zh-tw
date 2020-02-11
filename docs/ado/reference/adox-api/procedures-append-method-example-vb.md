@@ -1,5 +1,5 @@
 ---
-title: Procedures Append 方法範例 (VB) |Microsoft Docs
+title: 程式 Append 方法範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8bacc5dc2d55fb335358ab9ca34248f8e322811a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965429"
 ---
 # <a name="procedures-append-method-example-vb"></a>Procedures Append 方法範例 (VB)
-下列程式碼示範如何使用[命令](../../../ado/reference/ado-api/command-object-ado.md)物件並[程序](../../../ado/reference/adox-api/procedures-collection-adox.md)集合[附加](../../../ado/reference/adox-api/append-method-adox-procedures.md)基礎資料來源中建立新的程序的方法。  
+下列程式碼示範如何使用[Command](../../../ado/reference/ado-api/command-object-ado.md)物件和 Procedure 集合[Append](../../../ado/reference/adox-api/append-method-adox-procedures.md)方法，在基礎資料來源中建立新的[程式](../../../ado/reference/adox-api/procedures-collection-adox.md)。  
   
 ```  
 ' BeginCreateProcedureVB  
@@ -74,8 +74,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ActiveConnection 屬性 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Append 方法 (ADOX Procedures)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Catalog 物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [程序物件 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [ActiveConnection 屬性（ADOX）](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
+ [Append 方法（ADOX 程式）](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Catalog 物件（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Procedure 物件（ADOX）](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Procedures 集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

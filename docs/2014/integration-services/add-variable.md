@@ -1,5 +1,5 @@
 ---
-title: 加入變數 |Microsoft Docs
+title: 新增變數 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6799bc899a7e65082d83398f79996bea8d9dd2d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061790"
 ---
 # <a name="add-variable"></a>加入變數
-  使用 [加入變數]  對話方塊，即可指定新變數的屬性。  
+  使用 [加入變數]**** 對話方塊，即可指定新變數的屬性。  
   
 ## <a name="options"></a>選項。  
  **容器**  
@@ -31,14 +31,14 @@ ms.locfileid: "66061790"
  **名稱**  
  鍵入變數名稱。  
   
- **Namespace**  
+ **命名空間**  
  指定變數的命名空間。 依預設，使用者定義變數是在 **User** 命名空間中。  
   
- **值類型**  
+ **實值型別**  
  選取資料類型。  
   
- **值**  
- 鍵入值。 此值必須與 [值類型]  選項中所指定的資料類型相容。  
+ **ReplTest1**  
+ 鍵入值。 此值必須與 [值類型]**** 選項中所指定的資料類型相容。  
   
  **唯讀**  
  選取即可使變數成為唯讀的。  

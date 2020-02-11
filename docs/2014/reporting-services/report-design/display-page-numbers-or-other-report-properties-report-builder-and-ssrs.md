@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8530a13af0e0ae6f1b769adcaa7cb6e9a3fbc0ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106040"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>顯示頁碼或其他報表屬性 (報表產生器及 SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66106040"
   
 -   報表資料夾  
   
--   報表名稱  
+-   報告名稱  
   
 -   報表伺服器 URL  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66106040"
   
 -   使用者識別碼  
   
--   語言  
+-   Language  
   
  您可能會想要針對頁碼，在數字前面加入 "Page" 一詞。 您可能也會想要顯示總頁數。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66106040"
   
 1.  以滑鼠右鍵按一下包含 [&PageNumber] 的文字方塊，然後按一下 [運算式]  。  
   
-     [設定運算式對象：  值] 文字方塊包含運算式 =Globals!PageNumber。  
+     [設定運算式對象: 值]  文字方塊包含運算式 =Globals!PageNumber。  
   
 2.  將游標放在等號 (=) 之後，然後輸入 `"Page " &`。  
   

@@ -15,15 +15,15 @@ ms.assetid: 300d387d-be03-4be3-8c7c-6caf56d678ce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: abe6a9bf7f2f336ffe612057dd6db05f74b4adea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044959"
 ---
 # <a name="odbc-component-files"></a>ODBC 元件檔案
-ODBC 桌面資料庫驅動程式 4.0 的每個元件所需的 ODBC 驅動程式檔案。  
+Odbc 驅動程式檔案是 ODBC 桌面資料庫驅動程式4.0 的每個元件所需的檔案。  
   
- 某些檔案需要多個元件。 如果您想要轉散發 ODBC 桌面資料庫驅動程式，與您的商業應用程式的任何這些檔案必須可轉散發。  
+ 有一個以上的元件需要一些檔案。 如果您想要將任何 ODBC 桌面資料庫驅動程式與您的商業應用程式轉散發，則必須重新發佈這些檔案。  
   
- 這些檔案會安裝在 \Windows\System 目錄中適用於 Windows 95 或更新版本中，或 \Windows\System32 目錄或更新版本的 Windows NT 3.51 和 Windows 2000 中。 如果 ODBC 檔案先前已安裝在不同的目錄，請確定您使用較新的 \Windows\System （或 System32） 中的檔案目錄。
+ 這些檔案會安裝在適用于 Windows 95 或更新版本的 \Windows\System 目錄，或是在 Windows NT 3.51 或更新版本和 Windows 2000 的 \Windows\System32 目錄中。 如果先前已在不同的目錄中安裝 ODBC 檔案，請確定您使用的是 \Windows\System （或 System32）目錄中較新的檔案。

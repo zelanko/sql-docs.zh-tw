@@ -1,5 +1,5 @@
 ---
-title: 一般屬性頁面、 報表組件 （報表管理員） |Microsoft Docs
+title: 一般屬性頁面、報表元件（報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa3f8b6ec0cd81f1a29ea3262bd3ec52dd8158ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109092"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>一般屬性頁面、報表組件 (報表管理員)
@@ -22,7 +22,7 @@ ms.locfileid: "66109092"
   
  您無法從報表管理員檢視或變更報表組件的外觀和功能。 若要變更設計，您必須使用撰寫工具來開啟及修改設計，然後將該設計重新發行至伺服器。  
   
-## <a name="navigation"></a>巡覽  
+## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-properties-page-for-a-report-part"></a>開啟報表組件的屬性頁面  
@@ -31,10 +31,10 @@ ms.locfileid: "66109092"
   
 2.  將滑鼠停留在該報表組件上方，然後按下拉式箭號。  
   
-3.  在下拉式清單中，按一下 **[管理]** ， 就會開啟 [一般] 屬性頁面。  
+3.  在下拉式清單中，按一下 **[管理]**， 就會開啟 [一般] 屬性頁面。  
   
 ## <a name="options"></a>選項。  
- **修改的日期**  
+ **修改日期**  
  上次在伺服器上修改報表組件屬性的日期和時間，或是新版本報表組件發行至伺服器的日期和時間。 唯讀。  
   
  **修改者**  
@@ -43,7 +43,7 @@ ms.locfileid: "66109092"
  **建立日期**  
  報表組件最初發行至伺服器的日期和時間。 唯讀。  
   
- **所建立**  
+ **建立者**  
  最初建立報表組件的使用者名稱。 唯讀。  
   
  **大小**  
@@ -61,14 +61,14 @@ ms.locfileid: "66109092"
  **型別**  
  報表組件的類型。 唯讀。  
   
- **Apply**  
- 儲存變更。  
+ **套用**  
+ 儲存您的變更。  
   
  **刪除**  
  從報表伺服器資料庫中移除報表組件。 從伺服器刪除報表組件不會防止已加入該報表組件的現有報表轉譯。  
   
- **[移動]**  
- 按一下以開啟 [移動項目] 頁面，可在報表伺服器資料夾階層之中移動報表組件。 如需詳細資訊，請參閱 <<c0> [ 移動項目頁面&#40;報表管理員&#41;](../../2014/reporting-services/move-items-page-report-manager.md)。</c0>  
+ **移動**  
+ 按一下以開啟 [移動項目] 頁面，可在報表伺服器資料夾階層之中移動報表組件。 如需詳細資訊，請參閱[&#40;報表管理員&#41;中移動專案頁面](../../2014/reporting-services/move-items-page-report-manager.md)。  
   
  **下載**  
  擷取報表組件定義複本，以儲存成 .rsc 檔。 .rsc 檔可以上傳至報表伺服器資料夾，或用來取代在報表伺服器資料夾中的現有報表組件。  
@@ -77,9 +77,9 @@ ms.locfileid: "66109092"
  以 .rsc 檔中不同的定義取代報表組件定義。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理報表組件](report-design/managing-report-parts.md)   
+ [管理報表元件](report-design/managing-report-parts.md)   
  [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [內容頁面 &#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [[內容] 頁面 &#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [報表組件 &#40;報表產生器及 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
  [報表產生器中的報表組件和資料集](report-data/report-parts-and-datasets-in-report-builder.md)  

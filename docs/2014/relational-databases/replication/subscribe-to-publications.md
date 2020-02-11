@@ -25,16 +25,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3aa122e19d890b0b994e4403dcc59b3131571d7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629687"
 ---
 # <a name="subscribe-to-publications"></a>訂閱發行集
   訂閱是指要求一份發行集中的資料和資料庫物件。 訂閱會定義將收到的發行集，以及收到的位置和時間。 規劃訂閱時，請考慮要執行代理程式處理的位置。 您選擇的訂閱類型會控制代理程式執行的位置。 若為發送訂閱，則「合併代理程式」或「散發代理程式」會在「散發者」執行；若為提取訂閱，則代理程式會在「訂閱者」執行。 建立訂閱之後，就不能變更訂閱的類型。  
   
-|訂閱|特性|使用時機|  
+|訂用帳戶|特性|使用時機|  
 |------------------|---------------------|--------------|  
 |發送訂閱|在發送訂閱中，「訂閱者」不需發出請求，「發行者」便會將變更傳播給「訂閱者」。 變更可以在需要時發散給「訂閱者」，或是根據排程發散給「訂閱者」。 「散發代理程式」或「合併代理程式」是在「散發者」中執行。|通常是連續或根據定期排程進行資料同步。<br /><br /> 發行集需要近乎即時移動資料。<br /><br /> 即使「散發者」的處理器額外負荷較高，也不會影響效能。<br /><br /> 最常搭配快照和異動複寫使用。|  
 |提取訂閱|在提取訂閱中，「訂閱者」必須請求傳送「發行者」中的變更。 提取訂閱允許使用者在「訂閱者」中判斷何時要同步資料變更。 「散發代理程式」或「合併代理程式」是在「訂閱者」中執行。|資料通常是在需要時或根據排程進行同步處理，而不是持續進行。<br /><br /> 發行集擁有大量「訂閱者」，且 (或) 其需要過多資源，而無法在「散發者」執行所有代理程式。<br /><br /> 「訂閱者」是獨立的、中斷的以及/或機動的。 「訂閱者」將決定其連接及同步變更的時機。<br /><br /> 最常搭配合併複寫使用。|  
@@ -64,7 +64,7 @@ ms.locfileid: "62629687"
   
  **若要建立發送訂閱**  
   
- [Create a Push Subscription](create-a-push-subscription.md)  
+ [建立發送訂閱](create-a-push-subscription.md)  
   
  **若要檢視或修改發送訂閱屬性**  
   
@@ -72,14 +72,14 @@ ms.locfileid: "62629687"
   
  **若要刪除發送訂閱**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[刪除發送訂閱](delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[刪除發送訂閱](delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  刪除訂閱並不會移除「訂閱者」中已發行的物件。  
   
  **若要建立提取訂閱**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[建立提取訂閱](create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[建立提取訂閱](create-a-pull-subscription.md)  
   
  **若要檢視或修改提取訂閱屬性**  
   

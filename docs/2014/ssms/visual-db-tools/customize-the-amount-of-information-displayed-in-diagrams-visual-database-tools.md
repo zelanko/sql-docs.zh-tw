@@ -1,5 +1,5 @@
 ---
-title: 自訂圖表 (Visual Database Tools) 中顯示的資訊量 |Microsoft Docs
+title: 自訂圖表中顯示的資訊量（Visual Database Tools） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a15613c61db7469b242bbd5b76e5d1e51912e6be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270554"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>自訂圖表中顯示的資料數量 (Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "63270554"
   
  選項有：  
   
--   Standard  
+-   標準  
   
 -   資料行名稱  
   
@@ -35,7 +35,7 @@ ms.locfileid: "63270554"
   
 -   僅顯示名稱  
   
--   自訂  
+-   Custom  
   
 -   修改自訂  
   

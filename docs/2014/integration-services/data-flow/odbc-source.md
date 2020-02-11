@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d125a725a9e1c0cab34c7066fd9554ef0099d6e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901103"
 ---
 # <a name="odbc-source"></a>ODBC 來源
@@ -51,7 +51,7 @@ ms.locfileid: "62901103"
 ## <a name="extract-options"></a>擷取選項  
  ODBC 來源以 [批次]  或 [逐列]  模式操作。 所用的模式是由 **FetchMethod** 屬性所決定。 下列清單描述這些模式。  
   
--   **批次**：元件會根據所見的 ODBC 提供者功能，嘗試使用最有效率的擷取方法。 對於最新型的 ODBC 提供者，這是 SQLFetchScroll 與陣列繫結搭配使用 (陣列大小是由 **BatchSize** 屬性所決定)。 如果您選取 [批次]  ，而提供者不支援此方法，ODBC 目的地會自動切換為**逐列**模式。  
+-   **批次**：元件會根據所見的 ODBC 提供者功能，嘗試使用最有效率的提取方法。 對於最新型的 ODBC 提供者，這是 SQLFetchScroll 與陣列繫結搭配使用 (陣列大小是由 **BatchSize** 屬性所決定)。 如果您選取 [批次]  ，而提供者不支援此方法，ODBC 目的地會自動切換為**逐列**模式。  
   
 -   **逐列**：元件會使用 SQLFetch，一次擷取一個資料列。  
   
@@ -94,6 +94,6 @@ ms.locfileid: "62901103"
   
 -   [使用 ODBC 來源來擷取資料](odbc-source.md)  
   
--   [ODBC Source Custom Properties](odbc-source-custom-properties.md)  
+-   [ODBC 來源自訂屬性](odbc-source-custom-properties.md)  
   
   

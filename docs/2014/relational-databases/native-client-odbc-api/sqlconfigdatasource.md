@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource | Microsoft Docs
+title: SQLConfigDataSource |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 155d70856ae46a83f07ecd9c5c6848ee74f813dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067702"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援各種[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特有的關鍵字/值配對的資料來源組態屬性字串。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式支援資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]源設定屬性字串的各種特定關鍵字/值配對。  
   
- 如需提供的關鍵字的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式，請參閱[搭配 SQL Server Native Client 使用連接字串關鍵字](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+ 如需[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式中可用的關鍵字清單，請參閱搭配[使用連接字串關鍵字與 SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLConfigDataSource 函式](https://go.microsoft.com/fwlink/?LinkId=59337)   

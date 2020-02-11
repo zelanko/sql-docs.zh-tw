@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2565eb2be68c1e964b82d46d9aa8fc9f39a01f70
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165020"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>在同步處理期間執行指令碼 (複寫 Transact-SQL 程式設計)
@@ -32,7 +32,7 @@ ms.locfileid: "74165020"
   
 2.  將指令碼檔案儲存到可由發行集之快照集代理程式存取的位置。  
   
-3.  在發行集資料庫的發行者上，執行 [sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql)。 指定 **\@發行**集、在步驟2中為 **\@SCRIPTFILE**建立完整 UNC 路徑的指令檔名，以及 **\@skiperror**的下列其中一個值：  
+3.  在發行集資料庫的發行者上，執行 [sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql)。 針對** \@scriptfile**指定** \@發行**集、在步驟2中為其建立完整 UNC 路徑的指令檔名，以及** \@skiperror**的下列其中一個值：  
   
     -   **0** - 如果遇到錯誤，代理程式將會停止執行指令碼。  
   

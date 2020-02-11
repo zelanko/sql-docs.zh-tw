@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c43cb42cffba31f20b0e9717204f5475b5bb156d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012079"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>大量匯入或大量匯出的資料格式 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "66012079"
 ##  <a name="ComponentsAndConcepts"></a> 大量匯入或匯出的資料格式  
  下表根據資料的呈現方式和作業的來源或目標，指出一般適合使用的資料格式。  
   
-|運算|原生|Unicode 原生|字元|Unicode 字元|  
+|作業|原生|Unicode 原生|字元|Unicode 字元|  
 |---------------|------------|--------------------|---------------|-----------------------|  
 |使用不含任何擴充或雙位元組字集 (DBCS) 字元的資料檔，在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間進行大量傳送資料。 除非已使用格式檔案，否則必須以相同的方式定義這些資料表。|是<sup>1</sup>|-|-|-|  
 |若為 `sql_variant` 資料行，使用原生資料格式是最佳方法，因為原生資料格式會保留每個 `sql_variant` 值的中繼資料，但字元或 Unicode 格式則不會。|是|-|-|-|  
@@ -41,7 +41,7 @@ ms.locfileid: "66012079"
 |將資料大量匯出至文字檔，以便使用於另一個程式之中。|-|-|是|-|  
 |使用含有 Unicode 資料但不含擴充或 DBCS 字元的資料檔，在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間進行大量傳送資料。|-|-|-|是|  
   
- <sup>1</sup>大量匯出資料最快的方法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用時**bcp**。  
+ <sup>1</sup>使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **bcp**時，從大量匯出資料的最快方法。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   

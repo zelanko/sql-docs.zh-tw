@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d0e7f4d0c1b8f6e4b1f4442c9b3ae6538b0eabef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250561"
 ---
 # <a name="merge-replication"></a>合併式複寫
@@ -39,7 +39,8 @@ ms.locfileid: "63250561"
   
  合併式複寫是由「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照集代理程式」與「合併代理程式」所實作。 如果發行集未經篩選或使用靜態篩選，則「快照集代理程式」會建立單一快照集。 如果發行集使用參數化篩選，則「快照集代理程式」會為資料的各資料分割建立快照集。 「合併代理程式」會將初始快照集套用至「訂閱者」。 另外這會合併建立初始快照集之後在「發行者」或「訂閱者」端發生的累加資料變更，並且偵測是否發生任何衝突，並根據您設定的規則加以解決。  
   
- 若要追蹤變更，合併式複寫 (和具有佇列更新訂閱的異動複寫) 必須可以唯一地識別每個已發行資料表中的每個資料列。 若要完整此操作，合併式複寫會將資料行 `rowguid` 加入至每個資料表 (除非資料表已經擁有的資料行是包含 `uniqueidentifier` 屬性集的 `ROWGUIDCOL` 資料類型 (在此情況下將使用此資料行))。 如果從發行集卸除資料表，`rowguid` 資料行會遭到移除；如果現有資料行是用來進行追蹤，則不會移除資料行。 篩選不得包含複寫識別資料列所使用的 `rowguidcol`。 `newid()` 函數的提供是為了當做 `rowguid` 資料行的預設值，不過客戶可以提供每個資料列的 GUID (如有需要)。 但是，請勿提供值 00000000-0000-0000-0000-000000000000。  
+ 若要追蹤變更，合併式複寫 (和具有佇列更新訂閱的異動複寫) 必須可以唯一地識別每個已發行資料表中的每個資料列。 若要完整此操作，合併式複寫會將資料行 `rowguid` 加入至每個資料表 (除非資料表已經擁有的資料行是包含 `uniqueidentifier` 屬性集的 `ROWGUIDCOL` 資料類型 (在此情況下將使用此資料行))。 如果從發行集卸除資料表，`rowguid` 資料行會遭到移除；如果現有資料行是用來進行追蹤，則不會移除資料行。 篩選不得包含複寫識別資料列所使用的 `rowguidcol`。 
+  `newid()` 函數的提供是為了當做 `rowguid` 資料行的預設值，不過客戶可以提供每個資料列的 GUID (如有需要)。 但是，請勿提供值 00000000-0000-0000-0000-000000000000。  
   
  下圖顯示合併複寫中使用的元件。  
   

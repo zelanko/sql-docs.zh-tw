@@ -14,23 +14,23 @@ ms.assetid: 184c795a-c2e8-4d20-9902-12e60b2f0e45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e2ed50ac3f9e914953abdd64907199a5f978af2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915464"
 ---
 # <a name="driver-tasks"></a>驅動程式工作
-特定驅動程式所執行的工作包括：  
+驅動程式執行的特定工作包括：  
   
--   連接到與中斷連接資料來源。  
+-   連接到資料來源並中斷其連線。  
   
--   檢查函式不會檢查驅動程式管理員的錯誤。  
+-   檢查驅動程式管理員未檢查的函數錯誤。  
   
--   起始交易;這是向應用程式。  
+-   起始交易;這對應用程式而言是透明的。  
   
--   正在提交至資料來源，以便執行的 SQL 陳述式。 驅動程式必須修改以 DBMS 專用 SQL; 的 ODBC SQL這通常是限制為取代具有特定 DBMS 的 SQL ODBC 所定義的逸出子句。  
+-   正在將 SQL 語句提交至資料來源以供執行。 驅動程式必須將 ODBC SQL 修改為 DBMS 特定的 SQL;這通常僅限於以 DBMS 特定的 SQL 取代 ODBC 所定義的 escape 子句。  
   
--   將資料傳送到和從資料來源，包括轉換資料類型所指定的應用程式擷取資料。  
+-   將資料傳送至資料來源，並從中抓取資料，包括轉換應用程式所指定的資料類型。  
   
--   對應至 ODBC Sqlstate 的 DBMS 特定錯誤。
+-   將 DBMS 特有的錯誤對應至 ODBC SQLSTATEs。

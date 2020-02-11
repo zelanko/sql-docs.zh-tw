@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab4f9b06758d29ff1f988f37b95ce92206f34d39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107680"
 ---
 # <a name="save-a-report-to-a-sharepoint-library-report-builder"></a>將報表儲存至 SharePoint 文件庫 (報表產生器)
@@ -24,7 +24,7 @@ ms.locfileid: "66107680"
   
 ### <a name="to-save-a-report-to-a-sharepoint-site"></a>若要將報表儲存至 SharePoint 網站  
   
-1.  在報表產生器的按鈕中，按一下 **[儲存]** 。 [另存為 \<報表項目>  ]  對話方塊隨即開啟。  
+1.  在報表產生器的按鈕中，按一下 **[儲存]** 。 [另存為 **報表項目>** _]\<_ 對話方塊隨即開啟。  
   
     > [!NOTE]  
     >  如果您重新儲存報表，報表會自動重新儲存到之前的位置。 使用 [另存新檔]  選項可變更位置。  

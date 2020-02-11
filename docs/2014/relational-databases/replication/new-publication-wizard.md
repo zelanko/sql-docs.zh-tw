@@ -44,13 +44,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a76bb95fb3689e6dc7f6de71373152ce36ebd14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022573"
 ---
-# <a name="new-publication-wizard"></a>New Publication Wizard
+# <a name="new-publication-wizard"></a>新增發行集精靈
   此章節提供有關新增發行集精靈之下列頁面的資訊。  
   
 -   [Oracle 發行者](oracle-publisher.md)  

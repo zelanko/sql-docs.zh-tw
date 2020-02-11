@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48a335f4cf3dc3990cbcf6bbf68e82ce76a9e54f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759349"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
@@ -29,9 +29,9 @@ SNAC （或 SQL Server Native Client）是一種詞彙，可交換用來參考 O
 > 如需詳細資訊及下載 SNAC 或 ODBC 驅動程式，請參閱[SNAC 生命週期說明的 blog 文章](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)。
 > 如需 ODBC Driver for SQL Server 的詳細資訊，請參閱[Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。  
 
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]（SQL Server native Client 的最後一個可用版本）所發行之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 功能的資訊：
+ 隨附[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]的 native client 功能的資訊，SQL Server native client 的最後一個可用版本：
 
--   [SQL Server Native Client 支援 LocalDB](../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
+-   [SQL Server Native Client 對 LocalDB 的支援](../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
 
 -   [中繼資料探索](../../relational-databases/native-client/features/metadata-discovery.md)  
 
@@ -41,13 +41,13 @@ SNAC （或 SQL Server Native Client）是一種詞彙，可交換用來參考 O
 
 -   [存取擴充事件記錄檔中的診斷資訊](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 支援在 Windows 7 SDK 中新增至標準 ODBC 的三項功能：  
+Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的 odbc 支援在 WINDOWS 7 SDK 中新增至標準 odbc 的三項功能：  
 
 -   連接相關作業的非同步執行。 如需詳細資訊，請參閱[非同步執行](https://go.microsoft.com/fwlink/?LinkID=191493)。  
 
 -   C 資料類型擴充性。 如需詳細資訊，請參閱[ODBC 中的 C 資料類型](https://go.microsoft.com/fwlink/?LinkID=191495)。  
 
-     為了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中支援這項功能，如果您的應用程式，SQLGetDescField 可以傳回**SQL_C_SS_TIME2** （適用于**時間**類型）或**SQL_C_SS_TIMESTAMPOFFSET** （適用于**datetimeoffset**），而不是**SQL_C_BINARY**使用 ODBC 3.8。 如需詳細資訊，請參閱[資料類型對 ODBC 日期和時間改善的支援](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)。  
+     若要在 Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中支援這項功能，如果您的應用程式使用 ODBC 3.8，SQLGetDescField 可以傳回**SQL_C_SS_TIME2** （適用于**時間**類型）或**SQL_C_SS_TIMESTAMPOFFSET** （適用于**datetimeoffset**），而不是**SQL_C_BINARY**。 如需詳細資訊，請參閱[資料類型對 ODBC 日期和時間改善的支援](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)。  
 
 -   多次呼叫具有小型緩衝區的**SQLGetData** ，以取出大型參數值。 如需詳細資訊，請參閱[使用 SQLGetData 抓取輸出參數](https://go.microsoft.com/fwlink/?LinkID=191494)。  
 

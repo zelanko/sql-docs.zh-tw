@@ -19,20 +19,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 818f78cd0b38aba0a7201eb28f49eb573ba32672
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770672"
 ---
 # <a name="sql-server-destination"></a>SQL Server 目的地
   SQL Server 目的地會連接到本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，並大量載入資料到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表和檢視中。 如果封裝會存取遠端伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，您就無法在這種封裝中使用 SQL Server 目的地。 反之，這種封裝應該使用 OLE DB 目的地。 如需詳細資訊，請參閱 [OLE DB Destination](ole-db-destination.md)。  
   
-## <a name="permissions"></a>Permissions  
- 使用者必須擁有「建立全域物件」權限，才能執行包含 SQL Server 目的地的封裝。 您可以使用「本機安全性原則」工具 (從 [系統管理工具] 功能表中開啟) 將此權限授與使用者。 如果您在執行使用 SQL Server 目的地的封裝時收到錯誤訊息，請確定執行該封裝的帳戶是否擁有「建立全域物件」權限。  
+## <a name="permissions"></a>權限  
+ 使用者必須擁有「建立全域物件」權限，才能執行包含 SQL Server 目的地的封裝。 您可以使用「本機安全性原則」工具 (從 [系統管理工具]**** 功能表中開啟) 將此權限授與使用者。 如果您在執行使用 SQL Server 目的地的封裝時收到錯誤訊息，請確定執行該封裝的帳戶是否擁有「建立全域物件」權限。  
   
 ## <a name="bulk-inserts"></a>大量插入  
- 如果您嘗試使用 SQL Server 目的地將資料大量載入遠端 SQL Server 資料庫，可能會看到類似下列的錯誤訊息：「有 OLE DB 記錄可用。 來源:"Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult:0x80040E14 描述:"無法大量載入，因為無法開啟 SSIS 檔案對應物件 'Global\DTSQLIMPORT '。 作業系統錯誤碼 2 (系統找不到指定的檔案)。 請確定是透過 Windows 安全性存取本機伺服器」。  
+ 如果您嘗試使用 SQL Server 目的地將資料大量載入遠端 SQL Server 資料庫，可能會看到類似下面這樣的錯誤訊息：「有 OLE DB 記錄可用」。 來源："Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 描述: 「無法大量載入，因為無法開啟 SSIS 檔案對應物件 'Global\DTSQLIMPORT」。 作業系統錯誤碼 2 (系統找不到指定的檔案)。 請確定是透過 Windows 安全性存取本機伺服器」。  
   
  與「大量插入」工作一樣，SQL Server 目的地也可以對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行相同的高速資料插入；不過，透過使用 SQL Server 目的地，在資料載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，封裝可以將轉換套用到資料行資料。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62770672"
   
  如需大量載入選項的詳細資訊，請參閱 [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)。  
   
-#### <a name="performance-improvements"></a>效能改進  
+#### <a name="performance-improvements"></a>效能改善  
  若要提升大量插入以及大量插入作業期間存取資料表資料的效能，您應該變更預設選項，如下：  
   
 -   大量匯入作業期間不驗證目標資料表或檢視的條件約束。  
@@ -83,19 +83,20 @@ ms.locfileid: "62770672"
   
  此目的地使用 OLE DB 連接管理員連接到資料來源，且連接管理員會指定要使用的 OLE DB 提供者。 如需相關資訊，請參閱 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案還會提供資料來源物件，您可以從中建立 OLE DB 連接管理員。 這樣就可以向 SQL Server 目的地提供資料來源和資料來源檢視。  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案還會提供資料來源物件，您可以從中建立 OLE DB 連接管理員。 這樣就可以向 SQL Server 目的地提供資料來源和資料來源檢視。  
   
  SQL Server 目的地有一個輸入。 它不支援錯誤輸出。  
   
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可以在 [SQL Server 目的地編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
+ 如需可以在 [SQL Server 目的地編輯器]**** 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [SQL 目的地編輯器 &#40;連線管理員頁面&#41;](../sql-destination-editor-connection-manager-page.md)  
   
--   [SQL 目的地編輯器 &#40;對應頁面&#41;](../sql-destination-editor-mappings-page.md)  
+-   [[SQL 目的地編輯器 &#40;對應] 頁面&#41;](../sql-destination-editor-mappings-page.md)  
   
--   [SQL 目的地編輯器 &#40;進階頁面&#41;](../sql-destination-editor-advanced-page.md)  
+-   [[SQL 目的地編輯器] &#40;[Advanced] 頁面&#41;](../sql-destination-editor-advanced-page.md)  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
@@ -121,7 +122,7 @@ ms.locfileid: "62770672"
   
 -   msdn.microsoft.com 上的技術文章： [資料載入效能指南](https://go.microsoft.com/fwlink/?LinkId=233700)。  
   
--   simple-talk.com 上的技術文件： [Using SQL Server Integration Services to Bulk Load Data](https://go.microsoft.com/fwlink/?LinkId=233701)。  
+-   simple-talk.com 上的技術文件： [Using SQL Server Integration Services to Bulk Load Data](https://go.microsoft.com/fwlink/?LinkId=233701)(使用 SQL Server Integration Services 大量載入資料)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流程](data-flow.md)  

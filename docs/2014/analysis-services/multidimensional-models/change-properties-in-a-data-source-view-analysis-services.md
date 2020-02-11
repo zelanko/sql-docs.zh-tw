@@ -1,5 +1,5 @@
 ---
-title: 變更屬性中的資料來源檢視 (Analysis Services) |Microsoft Docs
+title: 變更資料來源視圖中的屬性（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a508cbfb3d5a348fa07e33b686359f5f0d5531a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076740"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>變更資料來源檢視的屬性 (Analysis Services)
@@ -53,7 +53,7 @@ ms.locfileid: "66076740"
 |SchemaRestriction|指定對於從資料來源擷取之結構描述的限制 (如果有的話)。 依預設，不會有任何結構描述限制存在。|  
   
 ## <a name="viewing-or-changing-datatable-properties"></a>檢視或變更 DataTable 屬性  
- **[DataTable]** 屬性是資料來源檢視中資料表、檢視和具名查詢的屬性， 將任何物件加入到資料來源檢視時，會設定這些屬性。 下表列出並描述資料來源檢視中 **[DataTable]** 物件的屬性。  
+ **DataTable**屬性是資料來源視圖中資料表、視圖和命名查詢的屬性。 將任何物件加入到資料來源檢視時，會設定這些屬性。 下表列出並描述資料來源檢視中 **[DataTable]** 物件的屬性。  
   
 |屬性|描述|  
 |--------------|-----------------|  
@@ -67,20 +67,20 @@ ms.locfileid: "66076740"
 |TableType|指定資料表、檢視表或具名查詢的資料表類型。 無法編輯這個屬性。|  
   
 ## <a name="viewing-or-changing-datacolumn-properties"></a>檢視或變更 DataColumn 屬性  
- **[DataColumn]** 屬性是資料來源檢視中資料表、檢視表及具名查詢內資料行的屬性， 當任何物件加入到資料來源檢視 (從基礎資料表或檢視、具名查詢，或是具名計算所定義)，便會設定這些屬性。 下表列出並描述資料來源檢視中 **[DataColumn]** 物件的屬性。  
+ **DataColumn**屬性是資料來源視圖中資料表、視圖和命名查詢中的資料行屬性。 當任何物件加入到資料來源檢視 (從基礎資料表或檢視、具名查詢，或是具名計算所定義)，便會設定這些屬性。 下表列出並描述資料來源檢視中 **[DataColumn]** 物件的屬性。  
   
 |屬性|描述|  
 |--------------|-----------------|  
 |AllowNull|根據基礎資料表、值或具名查詢中的資料行來指定資料行的 Null 屬性。 無法編輯這個屬性。|  
 |DataType|根據基礎資料表、值或具名查詢中的資料行來指定資料行的資料類型。 無法直接編輯這個屬性， 但是，如果您需要變更資料表或檢視中資料行的資料類型，請使用會將此資料行轉換成所需資料類型的具名查詢來取代此資料表。|  
-|DateTimeMode|指定 **[DateTime]** 資料行的日期序列化格式； 預設值為 **[UnspecifiedLocal]** 。 可以編輯這個屬性。|  
+|DateTimeMode|指定 **[DateTime]** 資料行的日期序列化格式； 預設值為 **[UnspecifiedLocal]**。 可以編輯這個屬性。|  
 |描述|指定資料行的描述。 如果基礎資料庫資料行具有儲存為擴充屬性的描述，就會出現這個值。 您可以編輯這個屬性。|  
 |FriendlyName|對資料表或檢視中的資料行指定讓使用者更容易了解的名稱，或是指定與主題領域更有相關性的名稱。 依預設，資料表或檢視中資料行的 **[FriendlyName]** 屬性會與該資料行的 **[Name]** 屬性相同。 當根據資料表或檢視中的資料行來定義屬性時，OLAP 和資料採礦物件會使用 **[FriendlyName]** 屬性。 您可以編輯這個屬性。|  
 |長度|根據基礎資料表或檢視中資料行內的資料來指定資料行的最大長度。|  
 |名稱|指定基礎資料行的名稱，或是具名計算的名稱。 當根據具名計算來定義屬性時，OLAP 和資料採礦物件會使用 **[Name]** 屬性。 只有在具名計算中才可以編輯這個屬性。|  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的資料來源檢視](data-source-views-in-multidimensional-models.md)   
- [在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [多維度模型中的資料來源視圖](data-source-views-in-multidimensional-models.md)   
+ [在資料來源視圖設計工具中使用圖表 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

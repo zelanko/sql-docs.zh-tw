@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 94d3160fe372fafb666ed451d207301b86d119d9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: eb7f7b271c49922698058e396b69b91444c5b65a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725201"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74901851"
 ---
 # <a name="create-data-features-using-t-sql"></a>使用 T-SQL 建立資料特徵
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "73725201"
 
 在下一個步驟中，您將瞭解如何使用這些資料特徵，透過 Python 建立和定型機器學習服務模型。
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>後續步驟
 
 [使用 T-SQL 定型及儲存 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 

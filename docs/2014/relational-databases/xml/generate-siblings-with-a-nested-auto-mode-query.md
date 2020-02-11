@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287363"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>使用巢狀 AUTO 模式查詢產生同層級
@@ -66,7 +66,7 @@ FOR XML AUTO, TYPE
   
 -   查詢 `SalesOrder` 子句中指定的資料列集 `FROM`。 結果是具有一或多個 <`SalesOrder`> 元素的 XML。  
   
--   指定 `AUTO` 模式和 `TYPE` 指示詞。 `AUTO` 模式會將查詢結果轉換成 XML，而`TYPE`指示詞會傳回結果做`xml`型別。  
+-   指定 `AUTO` 模式和 `TYPE` 指示詞。 `AUTO`模式會將查詢結果轉換為 XML，而`TYPE`指示詞會以`xml`類型傳回結果。  
   
 -   包括以逗號分隔的兩個巢狀 `SELECT` 陳述式。 第一個巢狀 `SELECT` 陳述式會擷取銷售訂單資訊、標頭及詳細資料，而第二個巢狀 `SELECT` 陳述式會擷取銷售人員資訊。  
   
@@ -144,7 +144,8 @@ FOR XML AUTO, TYPE
   
 -   先前的查詢已加入 `FROM` 子句中。 查詢結果會以資料表傳回。 請注意新增的 `XmlCol` 別名。  
   
--   `SELECT` 子句會對 `XmlCol` 子句中傳回的 `FROM` 指定 XQuery。 `query()` 資料類型的 `xml` 方法則用來指定 XQuery。 如需詳細資訊，請參閱 [query&#40;&#41; 方法 &#40;xml 資料類型&#41;](/sql/t-sql/xml/query-method-xml-data-type)。  
+-   `SELECT` 子句會對 `XmlCol` 子句中傳回的 `FROM` 指定 XQuery。 
+  `query()` 資料類型的 `xml` 方法則用來指定 XQuery。 如需詳細資訊，請參閱 [query&#40;&#41; 方法 &#40;xml 資料類型&#41;](/sql/t-sql/xml/query-method-xml-data-type)。  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  

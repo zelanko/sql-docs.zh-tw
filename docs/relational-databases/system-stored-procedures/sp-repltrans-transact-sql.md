@@ -1,5 +1,5 @@
 ---
-title: sp_repltrans (Transact-sql) |Microsoft Docs
+title: sp_repltrans （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 738e2322-335b-44fa-820e-f31c02743978
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 40477973efebac9a484e89e7627f0996285b430b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68770856"
 ---
 # <a name="sp_repltrans-transact-sql"></a>sp_repltrans (Transact-SQL)
@@ -37,19 +37,19 @@ sp_repltrans
 ```  
   
 ## <a name="result-sets"></a>結果集  
- **sp_repltrans**會傳回其執行所在之發行集資料庫的相關資訊, 可讓您查看目前未散發的交易 (交易記錄檔中尚未傳送至「散發者」的交易)。 結果集會顯示每項交易的第一個和最後一個記錄的記錄序號。 **sp_repltrans**與[sp_replcmds &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)類似, 但不會傳回交易的命令。  
+ **sp_repltrans**會傳回從中執行之發行集資料庫的相關資訊，讓您可以查看目前尚未散發的交易（交易記錄檔中剩餘尚未傳送給「散發者」的交易）。 結果集會顯示每項交易的第一個和最後一個記錄的記錄序號。 **sp_repltrans**類似于[sp_replcmds &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) ，但不會傳回交易的命令。  
   
 ## <a name="remarks"></a>備註  
  **sp_repltrans**用於異動複寫中。  
   
- 非[!INCLUDE[msCoName](../../includes/msconame-md.md)]發行者不支援 sp_repltrans。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者不支援**sp_repltrans** 。  
   
-## <a name="permissions"></a>Permissions  
- 只有**系統管理員 (sysadmin** ) 固定伺服器角色或**db_owner**固定資料庫角色的成員, 才能夠執行**sp_repltrans**。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_repltrans**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repldone &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

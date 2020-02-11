@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 94c533392a824bf14b2b6f8f5ef57674a9a8c440
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781294"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>如何：將資料列插入至 Geography 資料行 (ODBC)
@@ -27,10 +27,10 @@ ms.locfileid: "73781294"
   
  此範例不適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 如需空間儲存體的詳細資訊，請參閱[ &#40;空間&#41;資料 SQL Server](../../relational-databases/spatial/spatial-data-sql-server.md)。  
+ 如需空間儲存體的詳細資訊，請參閱[空間資料 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)。  
   
 ## <a name="example"></a>範例  
- 第一個（[!INCLUDE[tsql](../../includes/tsql-md.md)]）程式代碼清單會建立此範例所使用的資料表。  
+ 第一個（ [!INCLUDE[tsql](../../includes/tsql-md.md)]）程式代碼清單會建立此範例所使用的資料表。  
   
  使用 odbc32.lib 和 user32.lib 編譯第二個 (C++) 程式碼清單。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73781294"
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
- 第三個（[!INCLUDE[tsql](../../includes/tsql-md.md)]）程式代碼清單會刪除此範例所使用的資料表。  
+ 第三個[!INCLUDE[tsql](../../includes/tsql-md.md)]（）程式代碼清單會刪除此範例所使用的資料表。  
   
 ```sql
 use tempdb  

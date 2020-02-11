@@ -16,23 +16,24 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40a621af401b33394b996468c581e85e3635355c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137604"
 ---
-# <a name="extended-stored-procedures-programmer39s-reference"></a>擴充預存程序程式設計人員&#39;參考
+# <a name="extended-stored-procedures-programmer39s-reference"></a>擴充預存程式程式設計人員&#39;s 參考
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 擴充預存程序 API (先前為開發式資料服務的一部分) 提供伺服器架構的應用程式開發介面 (API)，以擴充 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 API 包含用來建置應用程式的 C 和 C++ 函數和巨集。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]擴充預存程式 API （先前為 Open 資料服務的一部分）會提供以伺服器為基礎的應用程式開發介面（ [!INCLUDE[msCoName](../../includes/msconame-md.md)] API），以擴充[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能。 API 包含用來建置應用程式的 C 和 C++ 函數和巨集。  
   
  隨著 CLR 整合之類的更新和更強大技術的出現，擴充預存程序的需求也大致被取代。  
   
 > [!IMPORTANT]  
->  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
+>  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
 ## <a name="in-this-section"></a>本節內容  
   

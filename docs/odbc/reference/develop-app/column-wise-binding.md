@@ -1,5 +1,5 @@
 ---
-title: 資料行取向繫結 |Microsoft Docs
+title: 資料行取向的系結 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f91dca1ac20173f9c10b4a52adf292e7abc45d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083377"
 ---
 # <a name="column-wise-binding"></a>資料行取向的繫結
-當使用資料行取向的繫結，應用程式繫結一或兩個，或在某些情況下的三個陣列傳回資料的每個資料行。 第一個陣列保存資料值，而第二個陣列包含長度/指標緩衝區。 指標和長度的值可以儲存在個別的緩衝區的 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 的描述項欄位設為不同的值;如果這麼做，會繫結的第三個陣列。 每個陣列包含資料列集內有資料列的項目數。  
+使用資料行取向系結時，應用程式會系結其中一個或兩個，或在某些情況下，將陣列系結至要傳回資料的每個資料行。 第一個陣列會保存資料值，而第二個數組則保留長度/指標緩衝區。 指標和長度值可以藉由將 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 描述項欄位設定為不同的值，儲存在不同的緩衝區中;如果這樣做，則會系結第三個數組。 每個陣列包含的元素數目與資料列集中的資料列數相同。  
   
- 應用程式宣告，它會使用資料行取向的繫結 SQL_ATTR_ROW_BIND_TYPE 陳述式屬性，以決定資料列集的緩衝區，而不是參數的繫結型別設定緩衝區。 驅動程式會傳回後續項目，每個陣列中的每個資料列的資料。 下圖顯示如何以資料行繫結的運作方式。  
+ 應用程式會宣告它使用資料行取向的系結搭配 SQL_ATTR_ROW_BIND_TYPE 語句屬性，這會決定資料列集緩衝區的系結類型，而不是參數集緩衝區。 驅動程式會在每個陣列的後續元素中傳回每個資料列的資料。 下圖顯示資料行取向系結的運作方式。  
   
- ![資料行&#45;的三個資料行的相關繫結](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![三個數據行的資料行&#45;取向系結](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
- 比方說，下列程式碼會將繫結 10 個元素陣列的 OrderID、 銷售人員，以及狀態的資料行：  
+ 例如，下列程式碼會將10個元素的陣列系結至「訂單」、「銷售人員」和「狀態」資料行：  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

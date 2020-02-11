@@ -1,5 +1,5 @@
 ---
-title: sp_mergearticlecolumn & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_mergearticlecolumn （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff669af64b6aed312481264127d69eee1ad674e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078164"
 ---
-# <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
+# <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   進行合併式發行集的垂直資料分割。 這個預存程序執行於發行集資料庫的發行者端。  
@@ -43,33 +43,33 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
   
-`[ @article = ] 'article'` 是發行集中發行項名稱。 *發行項*已**sysname**，沒有預設值。  
+`[ @article = ] 'article'`這是發行集中的發行項名稱。 *文章*是**sysname**，沒有預設值。  
   
-`[ @column = ] 'column'` 識別要在其中建立垂直資料分割資料行。 *資料行*已**sysname**，預設值是 NULL。 如果是 NULL 和 `@operation = N'add'`，依預設，會將來源資料表中所有的資料行加入至發行項。 *資料行*不能是 NULL 時*操作*設定為**卸除**。 若要從發行項排除資料行，請執行**sp_mergearticlecolumn**並指定*資料行*並`@operation = N'drop'`要移除的每一個資料行從指定*文章*.  
+`[ @column = ] 'column'`識別要在其上建立垂直資料分割的資料行。 資料*行*是**sysname**，預設值是 Null。 如果是 NULL 和 `@operation = N'add'`，依預設，會將來源資料表中所有的資料行加入至發行項。 當*operation*設定為**drop**時，資料*行*不可以是 Null。 若要從發行項中排除資料**** 行，請執行 sp_mergearticlecolumn `@operation = N'drop'`並指定資料*行*，並將每個資料行從指定的發行*項中移除。*  
   
-`[ @operation = ] 'operation'` 這是複寫狀態。 *作業*已**nvarchar(4)** ，預設值是 ADD。 **新增**標示複寫的資料行。 **卸除**清除資料行。  
+`[ @operation = ] 'operation'`這是複寫狀態。 *operation*是**Nvarchar （4）**，預設值是 ADD。 [**加入**] 會標示要複寫的資料行。 **drop**會清除資料行。  
   
-`[ @schema_replication = ] 'schema_replication'` 指定合併代理程式執行時，將傳播結構描述變更。 *schema_replication*已**nvarchar(5)** ，預設值是 FALSE。  
+`[ @schema_replication = ] 'schema_replication'`指定當合併代理程式執行時，將傳播架構變更。 *schema_replication*是**Nvarchar （5）**，預設值是 FALSE。  
   
 > [!NOTE]  
->  只有**假**支援*schema_replication*。  
+>  *Schema_replication*只支援**FALSE** 。  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 啟用或停用使快照集失效的能力。 *force_invalidate_snapshot*已**位元**，預設值是**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`啟用或停用使快照集失效的能力。 *force_invalidate_snapshot*是**bit**，預設值是**0**。  
   
- **0**指定合併發行項的變更不會使快照集失效。  
+ **0**指定合併發行項的變更不會使快照集無效。  
   
- **1**指定合併發行項的變更可能使快照集失效，如果這種情況下，值為**1**提供將出現新的快照集的權限。  
+ **1**指定合併發行項的變更可能會導致快照集無效，如果是這種情況， **1**的值會提供新快照集的許可權。  
   
-`[ @force_reinit_subscription = ]force_reinit_subscription_` 啟用或停用重新初始化訂閱的能力。 *force_reinit_subscription*是 bit，預設值是**0**。  
+`[ @force_reinit_subscription = ]force_reinit_subscription_`啟用或停用訂用帳戶重新初始化能力的功能。 *force_reinit_subscription*是位，預設值是**0**。  
   
  **0**指定合併發行項的變更不會使訂閱重新初始化。  
   
- **1**指定合併發行項的變更可能使訂閱重新初始化時，如果這種情況下，值為**1**提供發生之訂閱重新初始化的權限。  
+ **1**指定合併發行項的變更可能會使訂閱重新初始化，如果是這種情況， **1**值會提供將進行訂閱重新初始化的許可權。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
  **sp_mergearticlecolumn**用於合併式複寫中。  
@@ -83,8 +83,8 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-mergearticlecolumn-tr_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_mergearticlecolumn**。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_mergearticlecolumn**。  
   
 ## <a name="see-also"></a>另請參閱  
  [定義和修改合併發行項之間的聯結篩選](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   

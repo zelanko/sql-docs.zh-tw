@@ -1,5 +1,5 @@
 ---
-title: 記錄採礦模型 （資料採礦適用於 Excel 的增益集） |Microsoft Docs
+title: 記載採礦模型（適用于 Excel 的資料採礦增益集） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,30 +16,30 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081593"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>記錄採礦模型 (適用於 Excel 的資料採礦增益集)
-  ![文件模型按鈕、 資料採礦功能區](media/dmc-docmodel.gif "文件模型按鈕、 資料採礦功能區")  
+  ![資料採礦功能區中的文件模型按鈕](media/dmc-docmodel.gif "資料採礦功能區中的文件模型按鈕")  
   
- **文件模型**精靈會建立一份報告，提供您已建立的採礦模型的實用資訊。 您可以藉由記錄所建立的模型來追蹤產生模型所使用之資料的來源、取得處理模型時間的其他相關資訊，以及追蹤影響模型結果的參數變更。  
+ [**檔模型**] wizard 會建立一份報表，提供有關您已建立之採礦模型的實用資訊。 您可以藉由記錄所建立的模型來追蹤產生模型所使用之資料的來源、取得處理模型時間的其他相關資訊，以及追蹤影響模型結果的參數變更。  
   
 ## <a name="using-the-document-model-wizard"></a>使用文件模型精靈  
   
 1.  按一下 [**資料採礦**] 索引標籤。  
   
-2.  在 **模型使用方式**群組中，按一下**文件模型**。  
+2.  在 [**模型使用**方式] 群組中，按一下 [**檔模型**]。  
   
-3.  在 **選取模型** 對話方塊中，選取報表，在其上的模型，然後按一下**下一步**。 您必須執行**文件模型**分別為每個模型，您想要記載的精靈。  
+3.  在 [**選取模型**] 對話方塊中，選取要報告的模型，然後按 **[下一步]**。 您必須針對想要記載的每個模型，分別執行 [**檔模型**]。  
   
-4.  在 **選取 文件詳細資料**對話方塊方塊中，選擇其中一個選項：**填妥資訊**或是**摘要資訊**。  
+4.  在 [**選取檔詳細資料**] 對話方塊中，選擇下列兩個選項的其中一個： [**完整資訊**] 或 [**摘要資訊**]。  
   
-5.  按一下 **[完成]** 。  
+5.  按一下 [完成]  。  
   
-6.  精靈會自動建立新的工作表，其中包含指定的報表稱為**模型文件**，  
+6.  Wizard 會自動建立新的工作表，其中包含指定的報表，標題為**Model 檔**，  
   
 ## <a name="understanding-the-report"></a>了解報表  
  當您建立記錄資料採礦模型的報表時，您可以建立摘要報表 (其中含有包含模型之名稱和描述的基本資訊)，或完整報表 (其中包含基礎結構的相關詳細資料，以及採礦模型的相關進階資訊)。  
@@ -55,9 +55,9 @@ ms.locfileid: "66081593"
   
 ||||  
 |-|-|-|  
-|**中繼資料**|模型名稱<br /><br /> 模型描述<br /><br /> 演算法名稱<br /><br /> 上次處理的日期||  
+|**中繼資料**|模型名稱<br /><br /> 模型說明<br /><br /> 演算法名稱<br /><br /> 上次處理的日期||  
 |**模型結果**|關聯|項目集的計數<br /><br /> 規則的計數|  
-||群集|叢集的計數<br /><br /> 每個叢集的支援|  
+||叢集|叢集的計數<br /><br /> 每個叢集的支援|  
 ||決策樹|樹狀結構數目<br /><br /> 每個樹狀結構中的節點數目|  
 ||線性迴歸|樹狀結構數目 (永遠為 1)<br /><br /> 節點數目 (永遠為 1)|  
 ||貝氏機率分類|重要的屬性|  
@@ -75,9 +75,9 @@ ms.locfileid: "66081593"
 ||離散資料行|通過的計數<br /><br /> 失敗的計數<br /><br /> 對數分數<br /><br /> 增益|  
   
 > [!NOTE]  
->  您可以記錄 SQL Server Analysis Services 支援的任何模型類型。 因此，此資料表會列出使用「資料表分析工具」或使用「資料採礦用戶端」之精靈無法建立的一些模型類型。 不過，您可以建立所有模型類型使用**進階資料採礦查詢編輯器**。 如需詳細資訊，請參閱 <<c0> [ 查詢&#40;SQL Server 資料採礦增益集&#41;](query-sql-server-data-mining-add-ins.md)。</c0>  
+>  您可以記錄 SQL Server Analysis Services 支援的任何模型類型。 因此，此資料表會列出使用「資料表分析工具」或使用「資料採礦用戶端」之精靈無法建立的一些模型類型。 不過，您可以使用 [ **Advanced Data 挖掘查詢編輯器**] 來建立所有模型類型。 如需詳細資訊，請參閱[SQL Server 資料採礦增益集&#41;的查詢 &#40;](query-sql-server-data-mining-add-ins.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [部署及調整採礦模型&#40;資料採礦適用於 Excel 的增益集&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
+ [&#40;適用于 Excel 的資料採礦增益集部署和調整採礦模型&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
   
   

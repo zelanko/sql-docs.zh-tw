@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2365ec137329675e2cd88e7f5bf7e1781aa3308f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280486"
 ---
 # <a name="arguments-for-external-tools"></a>外部工具的引數
@@ -31,9 +31,9 @@ ms.locfileid: "63280486"
 |**項目目錄**|$(ItemDir)|目前來源的目錄 (定義為磁碟機 + 路徑)；如果非來源窗格在作用中，便是空白。|  
 |**項目檔案名稱**|$(ItemFilename)|目前來源的檔案名稱 (定義為檔案名稱)；如果非來源窗格在作用中，便是空白。|  
 |**項目副檔名**|$(ItemExt)|目前來源的副檔名。|  
-|**目前這一行** <sup>1</sup>|$(CurLine)|在編輯器中，游標所在的目前這一行位置。|  
-|**目前的資料行**1|$(CurCol)|在編輯器中，游標所在的目前資料行位置。|  
-|**目前的文字**1|$(CurText)|目前的文字 (在目前游標位置之下的文字，如果選擇了某單行，便是這一行)。|  
+|**目前第** <sup>1</sup>行|$(CurLine)|在編輯器中，游標所在的目前這一行位置。|  
+|**目前資料行**1|$(CurCol)|在編輯器中，游標所在的目前資料行位置。|  
+|**目前文字**1|$(CurText)|目前的文字 (在目前游標位置之下的文字，如果選擇了某單行，便是這一行)。|  
 |**目標路徑**|$(TargetPath)|目標的完整檔案名稱 (定義為磁碟機 + 路徑 + 檔案名稱)。|  
 |**目標目錄**|$(TargetDir)|目標的目錄。|  
 |**目標名稱**|$(TargetName)|目標的檔案名稱。|  
@@ -43,7 +43,7 @@ ms.locfileid: "63280486"
 |**方案目錄**|$(SolutionDir)|目前方案的目錄 (定義為磁碟機 + 路徑)。|  
 |**方案檔案名稱**|$(SolutionFileName)|目標方案的檔案名稱 (定義為磁碟機 + 路徑 + 檔案名稱)。|  
   
- <sup>1</sup>目前這一行、 目前的資料行或目前的文字為基礎的資料指標的位置，在文字編輯器中 [狀態] 列中所示。  
+ <sup>1</sup>目前這一行、目前的資料行或目前的文字是以文字編輯器中游標的位置為基礎，如狀態列所示。  
   
 ## <a name="see-also"></a>另請參閱  
  [外部工具對話方塊](external-tools-dialog-box.md)   

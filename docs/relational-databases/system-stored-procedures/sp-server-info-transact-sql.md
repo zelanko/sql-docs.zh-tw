@@ -1,5 +1,5 @@
 ---
-title: sp_server_info (Transact-sql) |Microsoft Docs
+title: sp_server_info （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7409dcee64c7867b8811a282be71070923d48aa1
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68702848"
 ---
-# <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
+# <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
@@ -40,7 +40,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @attribute_id = ] 'attribute_id'`這是屬性的整數識別碼。 *attribute_id*是**int**, 預設值是 Null。  
+`[ @attribute_id = ] 'attribute_id'`這是屬性的整數識別碼。 *attribute_id*是**int**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
@@ -50,32 +50,32 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**ATTRIBUTE_ID**|**int**|屬性的識別碼。|  
-|**ATTRIBUTE_NAME**|**varchar(** 60 **)**|屬性名稱。|  
-|**ATTRIBUTE_VALUE**|**varchar(** 255 **)**|屬性目前的設定。|  
+|**ATTRIBUTE_NAME**|**Varchar （** 60 **）**|屬性名稱。|  
+|**ATTRIBUTE_VALUE**|**Varchar （** 255 **）**|屬性目前的設定。|  
   
  下表列出各個屬性。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]ODBC 用戶端程式庫目前在連接時使用屬性**1**、 **2**、 **18**、 **22**和**500** 。  
   
 |ATTRIBUTE_ID|ATTRIBUTE_NAME 描述|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
 |**1**|DBMS_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x.xx.xxxx*|  
-|**10**|OWNER_TERM|owner|  
-|**11**|TABLE_TERM|table|  
+|**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x. xx. xxxx*|  
+|**十大**|OWNER_TERM|owner|  
+|**11**|TABLE_TERM|資料表|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  
-|**13**|TABLE_LENGTH<br /><br /> 指定資料表名稱的最大字元數目。|128|  
+|**十三**|TABLE_LENGTH<br /><br /> 指定資料表名稱的最大字元數目。|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> 指定資料表限定詞 (三部份資料表名稱的第一部份) 名稱的最大長度。|128|  
-|**15**|COLUMN_LENGTH<br /><br /> 指定資料行名稱的最大字元數目。|128|  
-|**16**|IDENTIFIER_CASE<br /><br /> 指定資料庫 (系統目錄中的物件案例) 中的使用者自訂名稱 (資料表名稱、資料行名稱、預存程序名稱)。|SENSITIVE|  
+|**次**|COLUMN_LENGTH<br /><br /> 指定資料行名稱的最大字元數目。|128|  
+|**1600**|IDENTIFIER_CASE<br /><br /> 指定資料庫 (系統目錄中的物件案例) 中的使用者自訂名稱 (資料表名稱、資料行名稱、預存程序名稱)。|SENSITIVE|  
 |**17**|TX_ISOLATION<br /><br /> 指定伺服器假設的初始交易隔離等級，它對應於 SQL-92 所定義的隔離等級。|2|  
 |**18**|COLLATION_SEQ<br /><br /> 指定這部伺服器的字元集排序。|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**19**|SAVEPOINT_SUPPORT<br /><br /> 指定基礎 DBMS 是否支援具名儲存點。|Y|  
 |**20**|MULTI_RESULT_SETS<br /><br /> 指定基礎資料庫或閘道本身是否支援多個結果集 (可以透過閘道傳送多個陳述式，將多個結果集傳回用戶端)。|Y|  
-|**22**|ACCESSIBLE_TABLES<br /><br /> 指定在**sp_tables**中, 閘道是否只傳回資料表、views 等等, 這是由目前使用者存取的 (也就是至少具有資料表 SELECT 許可權的使用者)。|Y|  
+|**22**|ACCESSIBLE_TABLES<br /><br /> 指定在**sp_tables**中，閘道是否只傳回資料表、views 等等，這是由目前使用者存取的（也就是至少具有資料表 SELECT 許可權的使用者）。|Y|  
 |**100**|USERID_LENGTH<br /><br /> 指定使用者名稱的最大字元數目。|128|  
-|**101**|QUALIFIER_TERM<br /><br /> 指定資料表限定詞的 DBMS 供應商詞彙 (三部份名稱的第一部份)。|database|  
+|**101**|QUALIFIER_TERM<br /><br /> 指定資料表限定詞的 DBMS 供應商詞彙 (三部份名稱的第一部份)。|[資料庫]|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> 指定基礎 DBMS 是否支援具名交易。|Y|  
 |**103**|SPROC_AS_LANGUAGE<br /><br /> 指定預存程序是否可作為語言事件來執行。|Y|  
-|**104**|ACCESSIBLE_SPROC<br /><br /> 指定在**sp_stored_procedures**中, 閘道是否只傳回目前使用者可執行檔預存程式。|Y|  
+|**104**|ACCESSIBLE_SPROC<br /><br /> 指定在**sp_stored_procedures**中，閘道是否只會傳回目前使用者可執行檔預存程式。|Y|  
 |**105**|MAX_INDEX_COLS<br /><br /> 指定 DBMS 索引中的最大資料行數目。|16|  
 |**106**|RENAME_TABLE<br /><br /> 指定是否可以重新命名資料表。|Y|  
 |**107**|RENAME_COLUMN<br /><br /> 指定是否可以重新命名資料行。|Y|  
@@ -90,11 +90,11 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ## <a name="remarks"></a>備註  
  **sp_server_info**會傳回 ODBC 中**SQLGetInfo**所提供的資訊子集。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要結構描述的 SELECT 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄預存&#40;程式 transact-sql&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄預存程式](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

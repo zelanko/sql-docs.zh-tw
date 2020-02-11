@@ -13,13 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103402"
 ---
 # <a name="report-server-http-log"></a>報表伺服器 HTTP 記錄
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器 HTTP 記錄檔會保留報表伺服器所處理之每個 HTTP 要求與回應的記錄。 由於要求溢位和逾時錯誤不會送達報表伺服器，因此它們不會記錄在記錄檔中。  
   
  HTTP 記錄預設是不啟用的。 若要啟用 HTTP 記錄，請修改 **ReportingServicesService.exe.config** 組態檔，以在安裝中使用這項功能。  
@@ -35,7 +36,7 @@ ms.locfileid: "66103402"
 |**檔案建立和保留**|當您在組態檔中啟用 HTTP 記錄、重新啟動此服務，然後報表伺服器處理 HTTP 要求之後，系統就會建立 HTTP 記錄。 如果您設定了這些設定，但卻沒有看見記錄檔，請開啟報表或啟動報表伺服器應用程式 (例如「報表管理員」) 來產生 HTTP 要求，以便建立此檔案。<br /><br /> 記錄檔的新執行個體會在報表伺服器的每個服務重新啟動和後續 HTTP 要求之後建立。<br /><br /> 根據預設，追蹤記錄的上限為 32 MB，並且會在 14 天之後遭到刪除。|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>設定報表伺服器 HTTP 記錄的設定  
- 若要設定報表伺服器 HTTP 記錄，請使用 [記事本] 來修改 **ReportingServicesService.exe.config** 檔。 此組態檔位於 \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin 資料夾中。  
+ 若要設定報表伺服器 HTTP 記錄檔，請使用 [記事本] 修改**ReportingServicesService** 。 此組態檔位於 \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin 資料夾中。  
   
  若要啟用 HTTP 伺服器，請將 `http:4` 加入 ReportingServicesService.exe.config 檔的 RStrace 區段。 所有其他 HTTP 記錄檔項目是選擇性的。 下列範例包含所有設定，因此您可以將整個區段貼入 RStrace 區段，然後刪除不需要的設定。  
   
@@ -54,12 +55,12 @@ ms.locfileid: "66103402"
 ```  
   
 ## <a name="log-file-fields"></a>記錄檔欄位  
- 下表將描述記錄中提供的欄位。 此欄位清單是可設定的。您可以透過 `HTTPTraceSwitches` 組態設定，指定要包含的欄位。 **預設**資料行可讓您指定是否欄位會包含在記錄檔自動是否您未指定`HTTPTraceSwitches`。  
+ 下表將描述記錄中提供的欄位。 此欄位清單是可設定的。您可以透過 `HTTPTraceSwitches` 組態設定，指定要包含的欄位。 [**預設**] 資料行指定如果您未指定`HTTPTraceSwitches`，欄位是否會自動包含在記錄檔中。  
   
 |欄位|描述|預設|  
 |-----------|-----------------|-------------|  
-|HttpTraceFileName|此為選擇性的值。 預設值為 ReportServerServiceHTTP_。 如果您想要使用不同的檔案命名慣例 (例如，當您要將記錄檔儲存至集中位置時，若要包含伺服器名稱)，可以指定不同的值。|是|  
-|HTTPTraceSwitches|此為選擇性的值。 如果您指定了此欄位，就可以使用逗號分隔的格式來設定記錄檔中使用的欄位。|否|  
+|HttpTraceFileName|此為選用值。 預設值為 ReportServerServiceHTTP_。 如果您想要使用不同的檔案命名慣例 (例如，當您要將記錄檔儲存至集中位置時，若要包含伺服器名稱)，可以指定不同的值。|是|  
+|HTTPTraceSwitches|此為選用值。 如果您指定了此欄位，就可以使用逗號分隔的格式來設定記錄檔中使用的欄位。|否|  
 |Date|活動發生的日期。|否|  
 |Time|活動發生的時間。|否|  
 |ClientIp|存取報表伺服器之用戶端的 IP 位址。|是|  

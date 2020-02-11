@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 784c08ea9a251587d156de9f2d209308c6fda5e7
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781685"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---add-a-data-source"></a>設定 SQL Server ODBC 驅動程式 - 新增資料來源
@@ -29,11 +29,11 @@ ms.locfileid: "73781685"
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>使用 ODBC 管理員加入資料來源  
   
-1.  從 [**控制台**] 中，存取 [系統**管理工具**]，然後按 [ **odbc 資料來源（64位）** ] 或 **[odbc 資料來源（32位）** ]。 或者，您可以叫用 odbcad32.exe。  
+1.  從 [**控制台**] 中，存取 [系統**管理工具**]，然後按 [ **odbc 資料來源（64位）** ] 或 **[odbc 資料來源（32位）**]。 或者，您可以叫用 odbcad32.exe。  
   
 2.  按一下 [**使用者 DSN**]、[**系統 DSN**] 或 [檔案**DSN** ] 索引標籤，然後按一下 [**新增**]。  
   
-3.  按一下 [ **SQL Server**]，然後按一下 **[完成]** 。  
+3.  按一下 [ **SQL Server**]，然後按一下 **[完成]**。  
   
 4.  完成 [**建立新的資料來源以 SQL Server** Wizard] 中的步驟。  
   
@@ -46,6 +46,6 @@ ms.locfileid: "73781685"
 1.  在連接字串中使用 SAVEFILE = file_name 參數來呼叫[SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) 。 如果連接成功，ODBC 驅動程式會利用 SAVEFILE 參數所指向位置中的連接參數建立檔案資料來源。  
   
 ## <a name="see-also"></a>另請參閱  
-[刪除資料來源&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)    
+[刪除 &#40;ODBC&#41;的資料來源](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)    
   
   

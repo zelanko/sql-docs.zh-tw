@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee7d1aba2b468c8aa0420bbacc76aea652ae7556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828662"
 ---
 # <a name="ado-net-custom-properties"></a>ADO NET 自訂屬性
@@ -28,7 +28,7 @@ ms.locfileid: "62828662"
 |-------------------|---------------|-----------------|  
 |CommandTimeout|String|一個值，指定 SQL 命令逾時之前的秒數。值為 0 表示此命令永遠不會逾時。|  
 |SqlCommand|String|ADO NET 來源用來擷取資料的 SQL 陳述式。<br /><br /> 載入封裝時，您可以使用 ADO NET 來源即將使用的 SQL 陳述式，以動態方式更新此屬性。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../expressions/integration-services-ssis-expressions.md)和[在封裝中使用屬性運算式](../expressions/use-property-expressions-in-packages.md)。|  
-|AllowImplicitStringConversion|布林|指出是否會發生下列情況的值：<br /><br /> 如果外部中繼資料類型與屬於字串 (DT_WSTR 或 DT_NTEXT) 的輸出資料行類型之間具有不符項目，就不會產生驗證錯誤。<br /><br /> 將外部中繼資料類型隱含轉換成輸出資料行所使用的字串資料類型。<br /><br /> <br /><br /> 預設值為 TRUE。<br /><br /> 如需詳細資訊，請參閱 [ADO NET 來源](ado-net-source.md)。|  
+|AllowImplicitStringConversion|Boolean|指出是否會發生下列情況的值：<br /><br /> 如果外部中繼資料類型與屬於字串 (DT_WSTR 或 DT_NTEXT) 的輸出資料行類型之間具有不符項目，就不會產生驗證錯誤。<br /><br /> 將外部中繼資料類型隱含轉換成輸出資料行所使用的字串資料類型。<br /><br /> <br /><br /> 預設值為 TRUE。<br /><br /> 如需詳細資訊，請參閱 [ADO NET 來源](ado-net-source.md)。|  
   
  ADO NET 來源的輸出和輸出資料行沒有任何自訂屬性。  
   
@@ -42,8 +42,8 @@ ms.locfileid: "62828662"
   
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
-|BatchSize|Integer|傳送給伺服器之批次內的資料列數。 值為 **0** 表示批次大小與內部緩衝區大小相符。 這個屬性的預設值為 **0**。|  
-|CommandTimeout|Integer|逾時之前 SQL 命令可以執行的秒數上限。值為 **0** 指出無限的時間。 這個屬性的預設值為 **0**。|  
+|BatchSize|整數|傳送給伺服器之批次內的資料列數。 值為 **0** 表示批次大小與內部緩衝區大小相符。 這個屬性的預設值為 **0**。|  
+|CommandTimeout|整數|逾時之前 SQL 命令可以執行的秒數上限。值為 **0** 指出無限的時間。 這個屬性的預設值為 **0**。|  
 |TableOrViewName|String|目的地資料表或檢視的名稱。|  
   
  如需詳細資訊，請參閱 [ADO NET 目的地](ado-net-destination.md)。  

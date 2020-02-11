@@ -1,5 +1,5 @@
 ---
-title: bcp_moretext | Microsoft Docs
+title: bcp_moretext |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83142e83ba04328ddf025e0a2f16ff18ad947075
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62688847"
 ---
-# <a name="bcpmoretext"></a>bcp_moretext
+# <a name="bcp_moretext"></a>bcp_moretext
   將長的變動長度資料類型值的一部分傳送給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="syntax"></a>語法  
@@ -50,7 +50,7 @@ pData
  這是已啟用大量複製的 ODBC 連接控制代碼。  
   
  *cbData*  
- 是從所參考的資料複製到 SQL Server 資料的位元組數字*pData*。 SQL_NULL_DATA 的值表示 NULL。  
+ 這是要從*pData*所參考的資料中，複製到 SQL Server 的資料位元組數目。 SQL_NULL_DATA 的值表示 NULL。  
   
  *pData*  
  這是要傳送給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之支援的長型、變動長度資料區塊的指標。  
@@ -59,19 +59,19 @@ pData
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 此函式可以用於搭配[bcp_bind](bcp-bind.md)並[bcp_sendrow](bcp-sendrow.md) long、 可變長度的資料將值複製到 SQL Server，在幾個較小的區塊。 **bcp_moretext**可以搭配具有下列的 SQL Server 資料類型的資料行： `text`， `ntext`， `image`， `varchar(max)`， `nvarchar(max)`， `varbinary(max)`，使用者定義型別 (UDT) 和 XML。 **bcp_moretext**不支援資料轉換，提供的資料必須符合目標資料行的資料類型。  
+ 此函式可與[bcp_bind](bcp-bind.md)和[bcp_sendrow](bcp-sendrow.md)搭配使用，以將長的可變長度資料值複製到數個較社區塊中的 SQL Server。 **bcp_moretext**可以與具有下列 SQL Server 資料類型的資料行搭配使用： `text`、 `ntext`、 `image`、 `varchar(max)`、 `nvarchar(max)`、 `varbinary(max)`、使用者定義型別（UDT）和 XML。 **bcp_moretext**不支援資料轉換，所提供的資料必須符合目標資料行的資料類型。  
   
- 如果**bcp_bind**呼叫具有非 Null *pData*所支援的資料型別參數**bcp_moretext**，`bcp_sendrow`會傳送整個資料值，不論長度。 如果，不過， **bcp_bind**有 NULL *pData*支援的資料類型的參數**bcp_moretext**可立即在成功傳回時從之後複製資料`bcp_sendrow`表示已處理的資料存在任何繫結資料行。  
+ 如果針對**bcp_moretext**支援的資料類型，以非 null 的*pData*參數來呼叫**bcp_bind** ， `bcp_sendrow`就會傳送整個資料值，而不論長度為何。 不過，如果**bcp_bind**針對支援的資料類型具有 Null *pData*參數，則在成功傳回後，可以使用**bcp_moretext**來立即複製資料， `bcp_sendrow`表示已處理任何具有資料的已系結資料行。  
   
- 如果您使用**bcp_moretext**傳送一個支援的資料類型資料行的資料列中，您也必須使用它來傳送資料列中的所有其他支援的資料類型資料行。 不能略過任何資料行。 支援的資料類型為 SQLTEXT、SQLNTEXT、SQLIMAGE、SQLUDT 和 SQLXML。 如果此資料行分別為 varchar(max)、nvarchar(max) 或 varbinary(max)，則 SQLCHARACTER、SQLVARCHAR、SQNCHAR、SQLBINARY 和 SQLVARBINARY 也會列入這個類別目錄。  
+ 如果您使用**bcp_moretext**在資料列中傳送一個支援的資料類型資料行，您也必須使用它來傳送資料列中所有其他支援的資料類型資料行。 不能略過任何資料行。 支援的資料類型為 SQLTEXT、SQLNTEXT、SQLIMAGE、SQLUDT 和 SQLXML。 如果此資料行分別為 varchar(max)、nvarchar(max) 或 varbinary(max)，則 SQLCHARACTER、SQLVARCHAR、SQNCHAR、SQLBINARY 和 SQLVARBINARY 也會列入這個類別目錄。  
   
- 呼叫**bcp_bind**或是[bcp_collen](bcp-collen.md)設定所有的資料部分複製到 SQL Server 資料行的總長度。 嘗試傳送更多的位元組，比對的呼叫中所指定的 SQL Server **bcp_bind**或`bcp_collen`會產生錯誤。 此錯誤，就會發生，例如使用應用程式中`bcp_collen`來設定適用於 SQL Server 的可用資料的長度`text`資料行，為 4500，然後呼叫**bcp_moretext**五次同時表示每次呼叫資料緩衝區長度是 1000 個位元組。  
+ 呼叫**bcp_bind**或[bcp_collen](bcp-collen.md)會設定要複製到 SQL Server 資料行之所有資料部分的總長度。 嘗試傳送 SQL Server 超過呼叫中所指定的位元組數， **bcp_bind**或`bcp_collen`產生錯誤。 例如，在用`bcp_collen`來將 SQL Server `text`資料行的可用資料長度設定為4500的應用程式中，呼叫**bcp_moretext**五次，並在每次呼叫中指出資料緩衝區長度為1000個位元組時，就會發生此錯誤。  
   
- 如果複製的資料列都包含一個以上的長型、 變動長度資料行， **bcp_moretext**序數編號最低其資料的資料行，後面跟著 [下一步] 的第一個傳送最低序數編號的資料行，依此類推。 更正預期資料的總長度設定是很重要的一件事。 除了使用長度設定以外，沒有任何方法可以指示大量複製已經收到資料行的所有資料。  
+ 如果複製的資料列包含一個以上的長時間可變長度資料行， **bcp_moretext**首先會將其資料傳送到最低的序數編號資料行，後面接著下一個最低的序數編號資料行，依此類推。 更正預期資料的總長度設定是很重要的一件事。 除了使用長度設定以外，沒有任何方法可以指示大量複製已經收到資料行的所有資料。  
   
- 當`var(max)`值傳送到伺服器，使用 bcp_sendrow 和 bcp_moretext，不需要呼叫 bcp_collen 來設定資料行長度。 相反地，僅限這些類型的值便會終止呼叫 bcp_sendrow 長度為零。  
+ 當`var(max)`使用 bcp_sendrow 和 bcp_moretext 將值傳送至伺服器時，不需要呼叫 bcp_collen 來設定資料行長度。 相反地，針對這些類型，值會藉由呼叫長度為零的 bcp_sendrow 來終止。  
   
- 應用程式通常會呼叫`bcp_sendrow`並**bcp_moretext**內迴圈，用來傳送資料的資料列數目。 以下是如何執行此動作包含兩個資料表概述`text`資料行：  
+ 應用程式通常會`bcp_sendrow`在迴圈內呼叫並**bcp_moretext** ，以傳送多個資料列。 以下概述如何針對包含兩個`text`資料行的資料表執行這項操作：  
   
 ```  
 while (there are still rows to send)  
@@ -91,7 +91,7 @@ bcp_moretext(hdbc, 0, NULL);
 ```  
   
 ## <a name="example"></a>範例  
- 此範例示範如何使用**bcp_moretext**具有**bcp_bind**和`bcp_sendrow`:  
+ 這個範例示範如何使用**bcp_moretext**搭配**bcp_bind**和`bcp_sendrow`：  
   
 ```  
 // Variables like henv not specified.  

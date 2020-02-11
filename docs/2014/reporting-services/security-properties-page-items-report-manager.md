@@ -1,5 +1,5 @@
 ---
-title: 安全性屬性頁面，項目 （報表管理員） |Microsoft Docs
+title: 安全性屬性頁面，專案（報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ad98fe533caefa937d969754fa1278354e5c6e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102155"
 ---
 # <a name="security-properties-page-items-report-manager"></a>安全性屬性頁面，項目 (報表管理員)
@@ -24,7 +24,7 @@ ms.locfileid: "66102155"
   
  安全性設定是由根資料夾繼承至子資料夾和那些資料夾內的項目。 除非您明確地中斷繼承的安全性，否則子資料夾和項目會繼承父項目的安全性內容。 如果您為階層中間的資料夾重新定義安全性原則，所有其子項目 (包括子資料夾) 都會採用新的安全性設定。  
   
-## <a name="navigation"></a>巡覽  
+## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-security-page-for-an-item"></a>若要開啟項目的安全性頁面  
@@ -39,7 +39,7 @@ ms.locfileid: "66102155"
   
     -   按一下 **[管理]** 開啟項目的 [一般] 屬性頁面。 然後，選取 **[安全性]** 索引標籤。  
   
- **編輯項目安全性**  
+ **編輯專案安全性**  
  按一下即可變更定義目前項目安全性的方式。 如果您編輯資料夾的安全性，您的變更將套用至目前資料夾及其任何子資料夾的內容。  
   
  [首頁] 資料夾不可使用此按鈕。  
@@ -47,10 +47,10 @@ ms.locfileid: "66102155"
  編輯項目安全性時，可以使用下列按鈕。  
   
  **刪除**  
- 選取您要刪除的群組或使用者名稱旁的核取方塊，然後按一下 **[刪除]** 。 如果它是留下的唯一角色指派，或是定義報表伺服器之安全性基準的內建角色指派 (例如，「Built-in\Administrators」)，則無法將其刪除。 刪除角色指派不會刪除群組或使用者帳戶或角色定義。  
+ 選取您要刪除的群組或使用者名稱旁的核取方塊，然後按一下 **[刪除]**。 如果它是留下的唯一角色指派，或是定義報表伺服器之安全性基準的內建角色指派 (例如，「Built-in\Administrators」)，則無法將其刪除。 刪除角色指派不會刪除群組或使用者帳戶或角色定義。  
   
  **新增角色指派**  
- 按一下即可開啟 [新增角色指派] 頁面，可用來建立目前項目的其他角色指派。 如需詳細資訊，請參閱[新增角色指派：編輯角色指派頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)。  
+ 按一下即可開啟 [新增角色指派] 頁面，可用來建立目前項目的其他角色指派。 如需詳細資訊，請參閱[新增角色指派：編輯角色指派頁面 &#40;報表管理員&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)。  
   
  **還原為父安全性**  
  按一下即可將安全性設定重設為直屬父資料夾的安全性設定。 如果報表伺服器資料夾階層中都未打破繼承，則使用最上層資料夾 [首頁] 的安全性設定。  

@@ -1,5 +1,5 @@
 ---
-title: 系統資訊架構 Views (Transact-sql) |Microsoft Docs
+title: 系統資訊架構 Views （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2019
 ms.prod: sql
@@ -19,17 +19,18 @@ ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9767c68f80c133a31c5ca33053731a399f1048db
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68670568"
 ---
-# <a name="system-information-schema-views-transact-sql"></a>系統資訊架構 Views (Transact-sql)
+# <a name="system-information-schema-views-transact-sql"></a>系統資訊架構 Views （Transact-sql）
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-資訊結構描述檢視是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用來取得中繼資料的方法之一。 資訊結構描述檢視提供一種與內部系統資料表無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中繼資料檢視。 資訊結構描述檢視使應用程式在基礎系統資料表有了重大變更的情況下，仍然能夠正確運作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所包含的資訊結構描述檢視符合 INFORMATION_SCHEMA 的 ISO 標準定義。
+資訊結構描述檢視是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用來取得中繼資料的方法之一。 資訊結構描述檢視提供一種與內部系統資料表無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中繼資料檢視。 資訊結構描述檢視使應用程式在基礎系統資料表有了重大變更的情況下，仍然能夠正確運作。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所包含的資訊結構描述檢視符合 INFORMATION_SCHEMA 的 ISO 標準定義。
 
 > [!IMPORTANT]
 > 資訊結構描述檢視的某些變更會造成無法與舊版相容。 特定檢視的主題會描述這些變更。
@@ -41,7 +42,7 @@ ms.locfileid: "68670568"
 |資料庫|目錄|
 |結構描述|結構描述|
 |Object|Object|
-|使用者自訂資料類型|Domain|
+|使用者自訂資料類型|網域|
 
 這個名稱對應慣例適用於下列與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISO 相容的檢視。
 
@@ -60,7 +61,7 @@ ms.locfileid: "68670568"
 
 另外，部分檢視也會包含不同資料類別的參考，如字元資料或二進位資料。
 
-當您參考資訊結構描述檢視時，您必須使用包含 `INFORMATION_SCHEMA` 結構描述名稱的限定名稱。 例如:
+當您參考資訊結構描述檢視時，您必須使用包含 `INFORMATION_SCHEMA` 結構描述名稱的限定名稱。 例如：
 
 ```sql
 SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_DEFAULT
@@ -70,6 +71,6 @@ WHERE TABLE_NAME = N'Product';
 
 ## <a name="see-also"></a>另請參閱
 
-- [系統檢視表&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)
+- [&#40;Transact-sql&#41;的系統檢視](../../relational-databases/system-views/replication-views-transact-sql.md)
 - [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
 - [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) 

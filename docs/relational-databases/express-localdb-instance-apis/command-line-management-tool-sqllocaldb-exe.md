@@ -1,5 +1,5 @@
 ---
-title: 命令列管理工具：SqlLocalDB.exe | Microsoft Docs
+title: 命令列管理工具： SqlLocalDB .exe |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: a41daed808b51df59ba80e0113b84e46c501c9b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126951"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>命令列管理工具：SqlLocalDB.exe
@@ -28,7 +28,7 @@ ms.locfileid: "68126951"
 ## <a name="sqllocaldb-options"></a>SqlLocalDB 選項  
  SqlLocalDB 支援下列選項。  
   
-|選項|用途|  
+|選項|作用|  
 |------------|------------------|  
 |`-?`|列印說明文字。|  
 |`create\|c "instance name" [version-number] [-s]`|以指定的名稱和版本建立新的 LocalDB 執行個體。<br /><br /> 如果省略 [version-number] 參數，預設為 SqlLocalDB 組建版本。<br /><br /> -s 會啟動新建立的 LocalDB 執行個體。|  
@@ -43,7 +43,7 @@ ms.locfileid: "68126951"
 |||  
 |`trace\|t on\|off`|開啟及關閉追蹤。|  
   
- SqlLocalDB 會將空格視為分隔符號；你必須使用引號括住包含空格和特殊字元的執行個體名稱。 例如:  
+ SqlLocalDB 會將空格視為分隔符號；你必須使用引號括住包含空格和特殊字元的執行個體名稱。 例如：  
   
  `SqlLocalDB create "My instance name with spaces"`  
   

@@ -1,5 +1,5 @@
 ---
-title: 預覽選取的資料表 (SSAS) |Microsoft Docs
+title: 預覽選取的資料表（SSAS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a0f168dabd237fe685eb90d2caeeba0db4eed97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070714"
 ---
 # <a name="preview-selected-table-ssas"></a>預覽選取的資料表 (SSAS)
-  **[資料表匯入精靈]** 的這個頁面可讓您預覽選定資料表中的資料、選取要併入資料匯入的資料行，以及在選取的資料行中篩選資料。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]** 。  
+  
+  **[資料表匯入精靈]** 的這個頁面可讓您預覽選定資料表中的資料、選取要併入資料匯入的資料行，以及在選取的資料行中篩選資料。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
   
  並非資料表中的所有資料列都會顯示。 但是，您設定的篩選將會在匯入期間套用至資料表中的所有資料。  
   
@@ -32,7 +33,7 @@ ms.locfileid: "66070714"
  **資料行標頭中的核取方塊**  
  選取核取方塊可將資料行納入資料匯入作業。 清除核取方塊可從資料匯入作業排除資料行。  
   
- **資料行標頭中的向下箭頭按鈕**  
+ **資料行標頭中的向下箭號按鈕**  
  篩選資料行中的資料。  
   
  **清除資料列篩選**  

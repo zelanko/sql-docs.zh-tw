@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 93b5666bd2d57fb0a8ffae435818a02ba152217c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484121"
 ---
 # <a name="managing-a-domain"></a>管理定義域
@@ -44,11 +44,11 @@ ms.locfileid: "65484121"
   
 |||  
 |-|-|  
-|針對具有特定資料類型的資料欄位建立語意表示法、指定如何擴展定義域，以及設定定義域輸出的格式|[建立網域](../../2014/data-quality-services/create-a-domain.md)|  
-|將定義域連結到另一個定義域，讓它共用相同的設定與值|[建立連結的網域](../../2014/data-quality-services/create-a-linked-domain.md)|  
+|針對具有特定資料類型的資料欄位建立語意表示法、指定如何擴展定義域，以及設定定義域輸出的格式|[建立定義域](../../2014/data-quality-services/create-a-domain.md)|  
+|將定義域連結到另一個定義域，讓它共用相同的設定與值|[建立連結的定義域](../../2014/data-quality-services/create-a-linked-domain.md)|  
 |將參考資料服務附加至單一或複合定義域|[將定義域或複合定義域附加至參考資料](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
-|變更或增加知識庫中的值|[變更網域值](../../2014/data-quality-services/change-domain-values.md)|  
-|使用驗證和標準化規則|[建立網域規則](../../2014/data-quality-services/create-a-domain-rule.md)|  
+|變更或增加知識庫中的值|[變更定義域值](../../2014/data-quality-services/change-domain-values.md)|  
+|使用驗證和標準化規則|[建立定義域規則](../../2014/data-quality-services/create-a-domain-rule.md)|  
 |使用關聯來更正屬於定義域值之一部分的詞彙|[建立以詞彙為主的關聯](../../2014/data-quality-services/create-term-based-relations.md)|  
 |完成、關閉或取消定義域管理活動|[結束定義域管理活動](../../2014/data-quality-services/end-the-domain-management-activity.md)|  
   
@@ -56,8 +56,8 @@ ms.locfileid: "65484121"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|藉由執行知識探索以及以互動方式管理知識來建立知識庫|[建置知識庫](../../2014/data-quality-services/building-a-knowledge-base.md)|  
+|藉由執行知識探索以及以互動方式管理知識來建立知識庫|[建立知識庫](../../2014/data-quality-services/building-a-knowledge-base.md)|  
 |將知識匯入知識庫或是從知識庫匯出知識。|[匯入和匯出知識](../../2014/data-quality-services/importing-and-exporting-knowledge.md)|  
-|建立複合定義域，並將知識加入至定義域。|[管理複合網域](../../2014/data-quality-services/managing-a-composite-domain.md)|  
+|建立複合定義域，並將知識加入至定義域。|[管理複合定義域](../../2014/data-quality-services/managing-a-composite-domain.md)|  
   
   

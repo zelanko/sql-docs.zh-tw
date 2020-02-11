@@ -1,5 +1,5 @@
 ---
-title: 建立追蹤範本 (SQL Server Profiler) |Microsoft Docs
+title: 建立追蹤範本（SQL Server Profiler） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f37369821585845d63bd4d416b1868364045680f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255773"
 ---
 # <a name="create-a-trace-template-sql-server-profiler"></a>建立追蹤範本 (SQL Server Profiler)
@@ -48,11 +48,11 @@ ms.locfileid: "63255773"
   
     -   若要加入篩選，在 **[編輯篩選]** 對話方塊中按一下資料行名稱，然後指定篩選準則。 您也可以用滑鼠右鍵按一下資料行名稱，然後按一下 [編輯資料行篩選]  以啟動 [編輯篩選]  對話方塊。 按一下 **[確定]** 以加入篩選。  
   
-8.  按一下 **[儲存].**  
+8.  按一下 [儲存]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [指定追蹤檔案的事件及資料行 &#40;SQL Server Profiler&#41;](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
- [從執行中追蹤衍生範本 &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)   
+ [從執行中的追蹤衍生範本 &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [從追蹤檔案或追蹤資料表衍生範本 &#40;SQL Server Profiler&#41;](derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [SQL Server Profiler 範本和權限](sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](sql-server-profiler.md)  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_valid_use_hints (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_exec_valid_use_hints （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2016
 ms.prod: sql
@@ -19,29 +19,29 @@ ms.assetid: 65d50589-39c2-4046-92b6-0c4587d8c593
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c6fcaa491f7d42e255ed329a8e16798437aa2c7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936797"
 ---
-# <a name="sysdmexecvalidusehints-transact-sql"></a>sys.dm_exec_valid_use_hints & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdm_exec_valid_use_hints-transact-sql"></a>sys.databases dm_exec_valid_use_hints （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-傳回[USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)支援提示名稱。 它會列出每個資料列的一個提示名稱。  
+傳回[使用提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)支援的提示名稱。 它會針對每個資料列列出一個提示名稱。  
   
-您可以使用此 DMV，查看所有支援的提示之下的 USE HINT 標記法的清單。  
+使用此 DMV 來查看使用提示標記法底下所有支援的提示清單。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|此提示的名稱。|
+|NAME|**sysname**|提示的名稱。|
 
-請參閱[查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)如需每個提示的描述。
+如需每個提示的說明，請參閱[查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)。
 
-中導入[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。
+在 SP1 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]中引進。
   
 ## <a name="see-also"></a>另請參閱  
     
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [與資料庫相關動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [資料庫相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
 

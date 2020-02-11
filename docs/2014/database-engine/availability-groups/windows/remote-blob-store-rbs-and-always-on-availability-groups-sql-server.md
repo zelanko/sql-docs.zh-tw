@@ -1,5 +1,5 @@
 ---
-title: 遠端 Blob 存放區 (RBS) 及 AlwaysOn 可用性群組 (SQL Server) |Microsoft Docs
+title: 遠端 Blob 存放區（RBS）和 AlwaysOn 可用性群組（SQL Server） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32b2ab48c3406c9820ca264a1cef236a041a5924
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814549"
 ---
 # <a name="remote-blob-store-rbs-and-alwayson-availability-groups-sql-server"></a>遠端 BLOB 存放區 (RBS) 及 AlwaysOn 可用性群組 (SQL Server)
@@ -46,7 +46,7 @@ ms.locfileid: "62814549"
 -   [使用 FILESTREAM 提供者設定遠端 BLOB 儲存 (RBS) (SharePoint 2010)](https://blogs.msdn.com/b/mvpawardprogram/archive/2012/04/02/configure-remote-blob-storage-rbs-with-the-filestream-provider-sharepoint-2010.aspx) (部落格)  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 用戶端連接性&#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md)   
+ [AlwaysOn 用戶端連線性 &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md)   
  [遠端 Blob 存放區 &#40;RBS&#41; &#40;SQL Server&#41;](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
   
   

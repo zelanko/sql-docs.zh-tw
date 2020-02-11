@@ -11,13 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9282fce8e0004495ae8c10b0b3f75fec205d6b34
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782811"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>使用 Windows PowerShell 的 PowerPivot 組態
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包括您可以用來設定 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安裝的 Windows PowerShell 指令程式。 若要使用 PowerShell 完整設定安裝，需要使用 SharePoint 指令程式和 PowerPivot for SharePoint 指令程式。 大部分組態都可以使用其中一項 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工具來完成。 如需這些工具的詳細資訊，請參閱[PowerPivot 組態工具](power-pivot-configuration-tools.md)。  
   
 > [!IMPORTANT]  
@@ -27,11 +28,11 @@ ms.locfileid: "72782811"
  您可以建立 Windows PowerShell (.ps1) 檔案，將組態工作自動化。 如果您需要可以在任何伺服器上執行的指令碼式安裝和設定步驟，建議使用此方法。 您可以需要此種指令碼做為災難復原計畫的一部分，才能在發生硬體故障時重建伺服器。  
   
 ## <a name="view-a-list-of-the-powerpivot-cmdlets-on-a-server"></a>在伺服器上檢視 PowerPivot 指令程式的清單  
- 若要查看 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Cmdlet 的內容和範例，請參閱[PowerPivot for SharePoint 的 PowerShell 參考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)。  
+ 若要查看[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Cmdlet 的內容和範例，請參閱[PowerPivot for SharePoint 的 PowerShell 參考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)。  
   
  使用 PowerShell 檢視 PowerPivot 指令程式的清單：  
   
-1.  使用 [以系統管理員身分執行] 選項，開啟 SharePoint 管理命令介面。  
+1.  使用 [以系統管理員身分執行]**** 選項，開啟 SharePoint 管理命令介面。  
   
 2.  輸入下列命令：  
   
@@ -39,7 +40,7 @@ ms.locfileid: "72782811"
     Get-Help *powerpivot*  
     ```  
   
-     您應該查看在指令程式名稱中包含 PowerPivot 的指令程式清單。 例如 `Get-PowerPivotServiceApplication`。 可用的指令程式數目取決於您使用的 Analysis Services 版本。  
+     您應該查看在指令程式名稱中包含 PowerPivot 的指令程式清單。 例如 `Get-PowerPivotServiceApplication` 。 可用的指令程式數目取決於您使用的 Analysis Services 版本。  
   
     -   SQL Server 2012 SP1 Analysis Services 伺服器附帶的 10 個指令程式是在 SharePoint 模式和 SharePoint 2013 中進行設定。 2012 SP1 版使用新的架構，允許 Analysis Server 從 SharePoint 伺服器陣列外部執行，而且所需的 Windows PowerShell 指令程式管理更少。  
   
@@ -62,7 +63,7 @@ ms.locfileid: "72782811"
 ## <a name="enable-powerpivot-cmdlets-on-a-server"></a>在伺服器上啟用 PowerPivot 指令程式  
  在您安裝 PowerPivot for SharePoint 並部署伺服器陣列方案之後，可以使用 PowerPivot 指令程式。 這些方案會在您執行 PowerPivot 組態工具時部署。 請依照下列步驟啟用指令程式：  
   
-1.  使用 [以系統管理員身分執行] 選項，開啟 SharePoint 管理命令介面。  
+1.  使用 [以系統管理員身分執行]**** 選項，開啟 SharePoint 管理命令介面。  
   
 2.  執行第一個 Cmdlet：  
   
@@ -78,11 +79,11 @@ ms.locfileid: "72782811"
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-4.  關閉視窗。 再次使用 [以系統管理員身分執行] 選項重新開啟該視窗。  
+4.  關閉視窗。 再次使用 [以系統管理員身分執行]**** 選項重新開啟該視窗。  
   
 ## <a name="related-content"></a>相關內容  
- [管理中心的 PowerPivot 伺服器管理和設定](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [管理中心的 PowerPivot 伺服器管理和組態](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
- [PowerPivot 設定工具](power-pivot-configuration-tools.md)  
+ [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)  
   
  [PowerPivot for SharePoint 的 PowerShell 參考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  

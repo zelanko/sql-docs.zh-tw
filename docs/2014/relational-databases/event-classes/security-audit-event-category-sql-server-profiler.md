@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f2f854c7a6dbd0d1ab569f87bf053a5b9f45058
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044208"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit 事件類別目錄 (SQL Server Profiler)
-  **安全性稽核** 事件類別目錄包含安全性稽核事件。  
+  **Security audit**事件類別目錄包含安全性 audit 事件。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63044208"
 |[Audit Database Operation 事件類別](audit-database-operation-event-class.md)|表示已發生各種作業，例如檢查點或訂閱查詢通知。|  
 |[Audit Database Principal Impersonation 事件類別](audit-database-principal-impersonation-event-class.md)|表示已在資料庫範圍內發生模擬。|  
 |[Audit Database Principal Management 事件類別](audit-database-principal-management-event-class.md)|表示已在資料庫中建立、改變或卸除主體。|  
-|[Audit Database Scope GDR 事件類別](audit-database-scope-gdr-event-class.md)|表示使用者已在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中發出陳述式權限的 GRANT、REVOKE 或 DENY。|  
+|[Audit Database Scope GDR 事件類別](audit-database-scope-gdr-event-class.md)|表示使用者已在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發出語句許可權的 GRANT、REVOKE 或 DENY。|  
 |[稽核 DBCC 事件類別](audit-dbcc-event-class.md)|表示已發出 DBCC 命令。|  
 |[稽核全文檢索事件類別](audit-fulltext-event-class.md)|指出發生全文檢索事件。|  
 |[Audit Login Change Password 事件類別](audit-login-change-password-event-class.md)|表示使用者已變更其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入密碼。|  

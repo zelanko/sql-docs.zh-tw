@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 647fa27d872829a60d32c0cdc7686938ae796f2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770374"
 ---
 # <a name="create-relationships"></a>建立關聯性
@@ -27,7 +27,7 @@ ms.locfileid: "62770374"
   
  若要深入了解使用 **[建立關聯性]** 對話方塊的轉換，請參閱＜ [Fuzzy Lookup Transformation](lookup-transformation.md)＞、＜ [Lookup Transformation](lookup-transformation.md)＞和＜ [Term Lookup Transformation](term-lookup-transformation.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **輸入資料行**  
  從可用的輸入資料行清單中選取。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62770374"
  當您使用模糊比對時，如果所有含模糊相符類型的資料行都具有足夠的相似度，則這些資料列就會被視為重複。 若要從模糊比對取得較佳的結果，您可以指定某些資料行應使用完全相符而非模糊比對。 例如，若您知道特定資料行沒有錯誤或不一致性，您就可以在該資料行指定完全相符，使得此資料行中只有包含相同值的資料列才會被視為可能重複。 這可在其他資料行增加模糊比對的精確度。  
   
  **比較旗標**  
- 如需字串比較選項的相關資訊，請參閱 [比較字串資料](../comparing-string-data.md)。  
+ 如需字串比較選項的資訊，請參閱 [比較字串資料](../comparing-string-data.md)。  
   
  **最小相似度**  
  藉由使用滑桿，在資料行層級設定相似度臨界值。 這個值愈接近 1，則查閱值與來源值就必須愈相似，才能認定它們相符。 增加臨界值可以改善比對的速度，因為需要考慮的候選記錄比較少。  

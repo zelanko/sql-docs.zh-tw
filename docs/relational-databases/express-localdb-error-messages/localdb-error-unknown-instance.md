@@ -10,20 +10,20 @@ ms.assetid: 67bca4f1-915d-46d4-9293-3742c16930a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ed44a434d8c66075c8281bb7ae1f645a189a0da6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010979"
 ---
-# <a name="localdberrorunknowninstance"></a>LOCALDB_ERROR_UNKNOWN_INSTANCE
+# <a name="localdb_error_unknown_instance"></a>LOCALDB_ERROR_UNKNOWN_INSTANCE
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|263|  
 |事件來源|SQL Server 本機資料庫執行階段 12.0|  
 |元件|本機資料庫執行階段 API|  

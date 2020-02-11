@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f7f71e75d2afd12de9ff381bdc61b739eb192db
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782471"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>建立、改變和移除索引
@@ -25,7 +25,7 @@ ms.locfileid: "72782471"
  您可以指定 <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Index> 屬性，以在 XML 資料行上建立索引。  
   
 ## <a name="examples"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 VISUAL BASIC SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 VISUAL BASIC SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 Visual Studio .Net 中建立 VISUAL C&#35; SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>在 Visual Basic 中建立非叢集的複合索引  
  這個程式碼範例示範如何建立複合的非叢集索引。 如果是複合索引，請在索引中加入一個以上的資料行。 如果是非叢集索引，請將 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> 屬性設為 `False`。  
@@ -353,5 +353,5 @@ $i.IndexedColumns.Add($ic)
 $i.Create()  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.SqlServer.Management.Smo.Index>  

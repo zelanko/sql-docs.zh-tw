@@ -16,13 +16,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6269474edbde55f1ebf506bfbd5599f5c3287bc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250784"
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server、可用性複本
+  
   **SQLServer:Availability Replica** 效能物件含有效能計數器，會報告 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中 AlwaysOn 可用性群組內可用性複本的資訊。 所有可用性複本效能計數器皆適用於主要複本和次要複本，並附有可以反映本機複本的傳送/接收計數器。 在大部分情況下，主要複本會傳送大部分資料，而次要複本會接收資料。 但次要複本會將 ACK 及一些其他背景流量傳送至主要複本。 請注意，在給定可用性複本上，有些計數器會顯示零值，這取決於本機複本目前的角色 (主要或次要) 而定。  
   
 |計數器名稱|描述|  
@@ -38,8 +39,8 @@ ms.locfileid: "63250784"
 |**Sends to Transport/sec**|每秒透過網路傳送至遠端可用性複本的實際 AlwaysOn 訊息數目。 在主要複本上，這是傳送至次要複本的訊息數目。 在次要複本上，這是傳送至主要複本的訊息數目。|  
   
 ## <a name="see-also"></a>另請參閱  
- [監視資源使用狀況 &#40;系統監視器&#41;](monitor-resource-usage-system-monitor.md)   
+ [監視資源使用量 &#40;系統監視器&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server、資料庫複本](sql-server-database-replica.md)   
- [AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
+ [AlwaysOn Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

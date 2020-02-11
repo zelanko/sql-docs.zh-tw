@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 26420df466860677f22d39d57133568a2f02bc68
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952013"
 ---
 # <a name="virtual-directory-has-unsupported-authentication-method-upgrade-advisor"></a>虛擬目錄具有不支援的驗證方法 (Upgrade Advisor)
@@ -24,7 +24,7 @@ ms.locfileid: "71952013"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式。|  
   
 ## <a name="component"></a>元件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
@@ -34,7 +34,7 @@ ms.locfileid: "71952013"
   
 -   匿名  
   
--   Digest  
+-   摘要  
   
 -   .NET Passport  
   
@@ -44,6 +44,6 @@ ms.locfileid: "71952013"
  若要繼續進行升級，請在 IIS 中針對 ReportServer 和 Reports 虛擬目錄修改驗證方法。 如需有關在 IIS 中修改驗證方法的詳細資訊，請參閱 IIS 文件集。 在您針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 虛擬目錄修改驗證方法之後，請重新執行 Upgrade Advisor 來確認沒有其他升級問題。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 升級問題&#40;upgrade Advisor&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [&#40;Upgrade Advisor Reporting Services 升級問題&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

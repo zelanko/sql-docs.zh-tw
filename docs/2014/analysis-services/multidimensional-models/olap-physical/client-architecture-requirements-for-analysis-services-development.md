@@ -18,18 +18,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e91e1c7a1586c0b2aff3630bfd8a9a6cd60ef53c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889578"
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Analysis Services 開發的用戶端架構需求
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]瘦用戶端架構。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]計算引擎完全以伺服器為基礎, 因此會在伺服器上解析所有查詢。 所以，每一個查詢只需要用戶端和伺服器之間單次往返，使得查詢越來越複雜時可擴充效能。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援瘦用戶端[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]架構。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]計算引擎完全以伺服器為基礎，因此會在伺服器上解析所有查詢。 所以，每一個查詢只需要用戶端和伺服器之間單次往返，使得查詢越來越複雜時可擴充效能。  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的原生通訊協定是 XML for Analysis (XML/A)。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 為用戶端應用程式提供數個資料存取介面，但所有這些元件均使用 XML for Analysis 與 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體進行通訊。  
+ 
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的原生通訊協定是 XML for Analysis (XML/A)。 
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 為用戶端應用程式提供數個資料存取介面，但所有這些元件均使用 XML for Analysis 與 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體進行通訊。  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 提供數個不同的提供者，來支援不同的程式設計語言。 提供者與 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器的通訊方式，是透過 Internet Information Services (IIS)，經由 TCP/IP 或 HTTP 來傳送和接收 SOAP 封包中的 XML for Analysis。 HTTP 連接使用 IIS 具現化的 COM 物件，叫作資料幫浦，做為 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料的導管。 資料幫浦絕不會檢查 HTTP 資料流所包含的基礎資料，任何基礎資料結構也不可以供資料程式庫本身的任何程式碼使用。  
+ 
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 提供數個不同的提供者，來支援不同的程式設計語言。 提供者與 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器的通訊方式，是透過 Internet Information Services (IIS)，經由 TCP/IP 或 HTTP 來傳送和接收 SOAP 封包中的 XML for Analysis。 HTTP 連接使用 IIS 具現化的 COM 物件，叫作資料幫浦，做為 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料的導管。 資料幫浦絕不會檢查 HTTP 資料流所包含的基礎資料，任何基礎資料結構也不可以供資料程式庫本身的任何程式碼使用。  
   
  ![Analysis Services 的邏輯用戶端架構](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-clientarch9.gif "Analysis Services 的邏輯用戶端架構")  
   
@@ -44,16 +47,19 @@ ms.locfileid: "68889578"
 |.NET 語言|ADO MD.NET|  
 |任何支援 SOAP 的語言|XML for Analysis|  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 含有一個 Web 架構，具有可供小型和大型組織部署的完全可擴充中介層。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 為 Web 服務提供廣泛的中介層支援。 OLE DB for OLAP 和 ADO MD 支援 ASP 應用程式, ADOMD.NET 支援 ASP.NET 應用程式。 下圖所說明的中間層可擴充至許多並行使用者。  
+ 
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 含有一個 Web 架構，具有可供小型和大型組織部署的完全可擴充中介層。 
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 為 Web 服務提供廣泛的中介層支援。 OLE DB for OLAP 和 ADO MD 支援 ASP 應用程式，ADOMD.NET 支援 ASP.NET 應用程式。 下圖所說明的中間層可擴充至許多並行使用者。  
   
- ![中介層架構的邏輯圖表](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-midtierarch9.gif "中介層架構的邏輯圖表")  
+ ![中間層架構的邏輯圖表](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-midtierarch9.gif "中間層架構的邏輯圖表")  
   
  用戶端和中介層應用程式兩者都可以直接與 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 進行通訊，而毋需使用提供者。 用戶端和中介層應用程式可經由 TCP/IP、HTTP 或 HTTPS，在 SOAP 封包中傳送 XML for Analysis。 可使用任何支援 SOAP 的語言，撰寫用戶端程式碼。 此案例中的通訊由 Internet Information Services (IIS) 使用 HTTP 來管理最簡單，不過，也需要撰寫程式碼來使用 TCP/IP 直接連接到伺服器。 這是 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的最精簡型用戶端方案。  
   
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>表格式或 SharePoint 模式下的 Analysis Services  
  在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中，伺服器可以在表格式資料庫及發行至 SharePoint 網站之 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿的 xVelocity 記憶體內部分析引擎 (VertiPaq) 模式下啟動。  
   
- [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 是建立及查詢分別使用 SharePoint 或表格式模式之記憶體中資料庫唯一支援的用戶端環境。 使用 excel 和[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]工具所建立的內嵌 PowerPivot 資料庫是包含在 excel 活頁簿中, 而且會儲存為 excel .xlsx 檔案的一部分。  
+ 
+  [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 是建立及查詢分別使用 SharePoint 或表格式模式之記憶體中資料庫唯一支援的用戶端環境。 使用 Excel 和[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]工具所建立的內嵌 PowerPivot 資料庫是包含在 excel 活頁簿中，而且會儲存為 excel .xlsx 檔案的一部分。  
   
  不過，如果您將儲存在傳統 Cube 的資料匯入 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿中，活頁簿就可以使用此資料。 如果另一個 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿已發行至 SharePoint 網站，您也可以從該活頁簿匯入資料。  
   
@@ -61,14 +67,14 @@ ms.locfileid: "68889578"
 >  當您使用 Cube 做為 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿的資料來源時，從 Cube 取得的資料是定義為 MDX 查詢；不過資料是以扁平化快照集方式匯入。 您無法以互動方式使用資料或從 Cube 重新整理資料。  
   
 ### <a name="interfaces-for-powerpivot-client"></a>PowerPivot 用戶端的介面  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]使用 Analysis Services 所建立的介面和語言, 與活頁簿內的 xVelocity 記憶體中分析引擎 (VertiPaq) 儲存引擎互動:AMO 和 ADOMD.NET, 以及 MDX 和 XMLA。 在增益集內，透過類似 Excel 的公式語言，即資料分析運算式 (DAX)，來定義量值。 DAX 運算式內嵌於傳送至同處理序伺服器的 XMLA 訊息。  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]使用 Analysis Services 的已建立介面和語言，在活頁簿中與 xVelocity 的記憶體中分析引擎（VertiPaq）儲存引擎互動： AMO 和 ADOMD.NET，以及 MDX 和 XMLA。 在增益集內，透過類似 Excel 的公式語言，即資料分析運算式 (DAX)，來定義量值。 DAX 運算式內嵌於傳送至同處理序伺服器的 XMLA 訊息。  
   
 ### <a name="providers"></a>提供者  
- 和 Excel [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]之間的通訊使用 MSOLAP OLEDB 提供者 (版本 11.0)。 在 MSOLAP 提供者內，有四個不同的模組 (或傳輸) 可用於用戶端和伺服器之間傳送訊息。  
+ 和 Excel [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]之間的通訊使用 MSOLAP OLEDB 提供者（版本11.0）。 在 MSOLAP 提供者內，有四個不同的模組 (或傳輸) 可用於用戶端和伺服器之間傳送訊息。  
   
  **TCP/IP**用於一般的用戶端-伺服器連接。  
   
- **HTTP**用於透過 SSAS 資料幫浦服務的 HTTP 連接, 或呼叫 SharePoint PowerPivot Web 服務 (WS) 元件。  
+ **HTTP**用於透過 SSAS 資料幫浦服務的 HTTP 連接，或呼叫 SharePoint PowerPivot Web 服務（WS）元件。  
   
  **INPROC**用來連接到同進程引擎。  
   

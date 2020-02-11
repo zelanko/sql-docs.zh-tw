@@ -11,13 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f75298a4701f15a1fc0f3f471bf7628f4a7030c1
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782646"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
+  
   [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 包含 Analysis Services PowerShell (SQLAS) 提供者和指令程式，讓您可以使用 Windows PowerShell 來導覽、管理和查詢 Analysis Services 物件。  
   
  Analysis Services PowerShell 是由下列項目所構成：  
@@ -33,7 +34,7 @@ ms.locfileid: "72782646"
   
  [支援的 Analysis Services 版本和模式](#bkmk_vers)  
   
- [驗證需求和安全性考慮](#bkmk_auth)  
+ [驗證需求與安全性考量](#bkmk_auth)  
   
  [Analysis Services PowerShell 工作](#bkmk_tasks)  
 
@@ -46,16 +47,16 @@ ms.locfileid: "72782646"
   
  您必須安裝包含 SQL Server PowerShell (SQLPS) 模組與用戶端程式庫的 SQL Server 功能。 最簡單的安裝方式是安裝 SQL Server Management Studio，其中就會自動包含 PowerShell 功能與用戶端程式庫。 SQL Server PowerShell (SQLPS) 模組包含所有 SQL Server 功能的 PowerShell 提供者和指令程式，包括 SQLASCmdlets 模組和 SQLAS 提供者 (用於導覽 Analysis Services 物件階層)。  
   
- 您必須先匯入**SQLPS**模組，才能使用 `SQLAS` 提供者和 Cmdlet。 SQLAS 提供者是 `SQLServer` 提供者的延伸。 匯入 SQLPS 模組的方式有許多種。 如需詳細資訊，請參閱 [匯入 SQLPS 模組](../../2014/database-engine/import-the-sqlps-module.md)。  
+ 您必須先匯入**SQLPS**模組，才能使用`SQLAS`提供者和 Cmdlet。 SQLAS 提供者是`SQLServer`提供者的延伸模組。 匯入 SQLPS 模組的方式有許多種。 如需詳細資訊，請參閱 [匯入 SQLPS 模組](../../2014/database-engine/import-the-sqlps-module.md)。  
   
  您必須啟用遠端管理和檔案共用，才能從遠端存取 Analysis Services 執行個體。 如需詳細資訊，請參閱本主題中的[啟用遠端系統管理](#bkmk_remote)。  
   
-##  <a name="bkmk_vers"></a> Analysis Services 的支援版本和模式  
+##  <a name="bkmk_vers"></a>支援的 Analysis Services 版本和模式  
  目前，在 Windows Server 2008 R2、Windows Server 2008 SP1 或 Windows 7 上執行的任何 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Analysis Services 版本都支援 Analysis Services PowerShell。  
   
  下表顯示不同內容中 Analysis Services PowerShell 的可用性。  
   
-|內容|PowerShell 功能可用性|  
+|Context|PowerShell 功能可用性|  
 |-------------|-------------------------------------|  
 |多維度執行個體與資料庫|支援本機和遠端管理。<br /><br /> 合併資料分割需要本機連接。|  
 |表格式執行個體與資料庫|支援本機和遠端管理。<br /><br /> 如需詳細資訊，請參閱8月2011的 blog，瞭解如何[使用 PowerShell 管理表格式模型](https://go.microsoft.com/fwlink/?linkID=227685)。|  
@@ -76,13 +77,13 @@ ms.locfileid: "72782646"
   
  -Credential 參數會接受可指定使用者名稱和密碼的 PSCredential 物件。 在 Analysis Services PowerShell 中，-Credential 參數適用于向 Analysis Services 發出連線要求的 Cmdlet，而不是在現有連接的內容中執行的 Cmdlet。 提出連接連接要求的指令程式包括 Invoke-ASCmd、Backup-ASDatabase 和 Restore-ASDatabase。 在這些 Cmdlet 中，可以使用-Credential 參數，假設符合下列準則：  
   
-1.  伺服器會設定成 HTTP 存取，也就是說，IIS 會處理連接、讀取使用者名稱和密碼，並在連接到 Analysis Services 時模擬該使用者識別。 如需詳細資訊，請參閱[設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)。  
+1.  伺服器會設定成 HTTP 存取，也就是說，IIS 會處理連接、讀取使用者名稱和密碼，並在連接到 Analysis Services 時模擬該使用者識別。 如需詳細資訊，請參閱 [設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)(Microsoft BI 驗證及識別委派)。  
   
 2.  針對 Analysis Services HTTP 存取建立的 IIS 虛擬目錄會設定成基本驗證。  
   
 3.  認證物件所提供的使用者名稱和密碼會解析 Windows 使用者識別。 Analysis Services 會以目前使用者的身分使用此識別。 如果使用者不是 Windows 使用者，或缺少執行所要求之作業的足夠權限，則要求將會失敗。  
   
- 若要建立認證物件，您可以使用 Get-Credential 指令程式，向操作員收集認證。 接著，您可以在命令中使用連接至 Analysis Services 的認證物件。 下列範例將說明其中一個方法。 在此範例中，連接是針對 HTTP 存取所設定的本機實例（`SQLSERVER:\SQLAS\HTTP_DS`）。  
+ 若要建立認證物件，您可以使用 Get-Credential 指令程式，向操作員收集認證。 接著，您可以在命令中使用連接至 Analysis Services 的認證物件。 下列範例將說明其中一個方法。 在此範例中，連接是針對 HTTP 存取所設定`SQLSERVER:\SQLAS\HTTP_DS`的本機實例（）。  
   
 ```powershell
 $cred = Get-Credential adventureworks\dbadmin  
@@ -93,7 +94,7 @@ Invoke-ASCmd -Inputfile:"c:\discoverconnections.xmla" -Credential:$cred
   
  請記住，您在 PowerShell 中所提供的認證、查詢和命令會原封不動地傳遞至傳輸層。 在指令碼中加入敏感內容會增加惡意插入攻擊的風險。  
   
- **提供密碼做為 Microsoft. Secure 字串物件**  
+ **當做 Microsoft.Secure.String 物件提供密碼**  
   
  有些作業 (例如備份與還原) 支援您在命令中提供密碼時所啟用的加密選項。 提供密碼會向 Analysis Services 發出加密或解密備份檔的訊號。 在 Analysis Services 中，此密碼會當做安全的字串物件具現化。 下列範例說明如何在執行階段向操作員收集密碼。  
   
@@ -116,9 +117,9 @@ Remove-Variable -Name pwd
   
  本節將描述使用 Analysis Services PowerShell 的一般工作。  
   
--   [載入 Analysis Services 提供者和 Cmdlet](#bkmk_load)  
+-   [載入 Analysis Services 提供者和指令程式](#bkmk_load)  
   
--   [啟用遠端系統管理](#bkmk_remote)  
+-   [啟用遠端管理](#bkmk_remote)  
   
 -   [連接到 Analysis Services 物件](#bkmk_connect)  
   
@@ -156,9 +157,9 @@ Remove-Variable -Name pwd
   
 5.  依序開啟 [電腦設定]、[系統管理範本]、[網路]、[網路連線]、[Windows 防火牆] 和 [網域設定檔]。  
   
-6.  按兩下 [ **Windows 防火牆：允許輸入遠端系統管理例外**]，選取 [**已啟用**]，然後按一下 **[確定]** 。  
+6.  按兩下 [ **Windows 防火牆：允許輸入遠端系統管理例外**]，選取 [**已啟用**]，然後按一下 **[確定]**。  
   
-7.  按兩下 [ **Windows 防火牆：允許輸入檔案及印表機共用例外**]，選取 [**已啟用**]，然後按一下 **[確定]** 。  
+7.  按兩下 [ **Windows 防火牆：允許輸入檔案及印表機共用例外**]，選取 [**已啟用**]，然後按一下 **[確定]**。  
   
 8.  在具有用戶端工具的本機電腦上，使用下列 Cmdlet 來確認遠端系統管理，並以實際的伺服器名稱取代*遠端伺服器名稱*的預留位置。 如果 Analysis Services 安裝成預設執行個體，請省略執行個體名稱。 您先前必須匯入 SQLPS 模組，才能讓此命令運作。  
   
@@ -199,9 +200,9 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  ![Analysis Services 的 HTTP 連接](media/ssas-powershell-httpconnection.gif "Analysis Services 的 HTTP 連接")  
   
- 如果您使用本主題中的指示來設定伺服器以進行 HTTP 存取，HTTP 連接會很有用：在[Internet Information Services &#40;IIS&#41; 8.0 上設定 Analysis Services 的 HTTP 存取](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ 如果您使用本主題中的指示設定伺服器以進行 HTTP 存取，HTTP 連線會很有用： [Internet Information Services &#40;IIS&#41; 8.0 設定 Http 存取 Analysis Services](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- 假設 http://localhost/olap/msmdpump.dll的伺服器 URL，連接看起來可能如下所示：  
+ 假設的伺服器 URL 為http://localhost/olap/msmdpump.dll，連接看起來可能如下所示：  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  
@@ -234,19 +235,22 @@ Restart-Service mssqlserverolapservice
 ###  <a name="bkmk_help"></a>取得 Analysis Services PowerShell 的說明  
  您可以使用下列任何指令程式來確認指令程式可用性，並且取得有關服務、處理序和物件的詳細資訊。  
   
-1.  `Get-Help` 會傳回 Analysis Services 指令程式的內建說明，包括範例：  
+1.  
+  `Get-Help` 會傳回 Analysis Services 指令程式的內建說明，包括範例：  
   
     ```powershell
     Get-Help invoke-ascmd -Examples  
     ```  
   
-2.  `Get-Command` 會傳回十一個 Analysis Services PowerShell 指令程式的清單：  
+2.  
+  `Get-Command` 會傳回十一個 Analysis Services PowerShell 指令程式的清單：  
   
     ```powershell
     Get-Command -module SQLASCmdlets  
     ```  
   
-3.  `Get-Member` 會傳回服務或處理序的屬性或方法。  
+3.  
+  `Get-Member` 會傳回服務或處理序的屬性或方法。  
   
     ```powershell
     Get-Service mssqlserverolapservice | Get-Member -Type Property  
@@ -260,14 +264,16 @@ Restart-Service mssqlserverolapservice
     Get-Process msmdsrv | Get-Member -Type Property  
     ```  
   
-4.  `Get-Member` 也可以搭配 SQLAS 提供者來指定伺服器執行個體，以便傳回物件的屬性或方法 (例如，伺服器物件的 AMO 方法)。  
+4.  
+  `Get-Member` 也可以搭配 SQLAS 提供者來指定伺服器執行個體，以便傳回物件的屬性或方法 (例如，伺服器物件的 AMO 方法)。  
   
     ```
     PS SQLSERVER:\sqlas\localhost\default > $serverObj = New-Object Microsoft.AnalysisServices.Server  
     PS SQLSERVER:\sqlas\localhost\default > $serverObj = | Get-Member -Type Method  
     ```  
   
-5.  `Get-PSdrive` 會傳回目前已安裝的提供者清單。 如果您匯入了 SQLPS 模組，就會在清單中看見 `SQLServer` 提供者 (SQLAS 屬於 SQLServer 提供者的一部分，永遠不會個別出現在清單中)：  
+5.  
+  `Get-PSdrive` 會傳回目前已安裝的提供者清單。 如果您匯入了 SQLPS 模組，就會在清單中看見 `SQLServer` 提供者 (SQLAS 屬於 SQLServer 提供者的一部分，永遠不會個別出現在清單中)：  
   
     ```powershell
     Get-PSDrive  
@@ -276,6 +282,6 @@ Restart-Service mssqlserverolapservice
 ## <a name="see-also"></a>另請參閱  
  [安裝 SQL Server PowerShell](../database-engine/install-windows/install-sql-server-powershell.md)   
  [使用 PowerShell 管理表格式模型（blog）](https://go.microsoft.com/fwlink/?linkID=227685)   
- [設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [在 Internet Information Services &#40;IIS&#41; 8.0 上設定 Analysis Services 的 HTTP 存取](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

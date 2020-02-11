@@ -11,10 +11,10 @@ ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 859eb2c829b7d6f35aa39cb2301a4a380c0d039e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729622"
 ---
 # <a name="create-a-changeset-master-data-services"></a>建立變更集 (Master Data Services)
@@ -31,29 +31,29 @@ ms.locfileid: "73729622"
   
 ## <a name="to-create-a-local-changeset"></a>建立本機變更集  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下總管。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下總管****。  
   
-2.  按一下 [實體] 功能表中的實體。  
+2.  按一下 [實體] **** 功能表中的實體。  
   
-3.  在右窗格中，選取 [變更集]，然後按一下 [建立]。  
+3.  在右窗格中，選取 [變更集]****，然後按一下 [建立]****。  
   
-4.  輸入變更集的名稱，然後按一下 [儲存]。  
+4.  輸入變更集的名稱，然後按一下 [儲存]****。  
   
      在模型內的變更集名稱必須是唯一的。  
   
 ## <a name="to-create-a-changeset-for-approval"></a>建立變更集以進行核准  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下總管。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下總管****。  
   
-2.  按一下 [實體] 功能表中的實體。  
+2.  按一下 [實體] **** 功能表中的實體。  
   
-3.  對實體進行變更，然後按一下 [確定]。  
+3.  對實體進行變更，然後按一下 [確定]****。  
   
-4.  [選擇變更集] 對話方塊隨即顯示。  
+4.  **[選擇變更集**] 對話方塊隨即顯示。  
   
-5.  按一下 [新增]，並輸入變更集的名稱，然後按一下 [儲存]。 在模型內的變更集名稱必須是唯一的。  
+5.  按一下 [新增]****，並輸入變更集的名稱，然後按一下 [儲存]****。 在模型內的變更集名稱必須是唯一的。  
   
-6.  若要使用現有的變更集，請按一下 [現有]，並從清單中選擇變更集。 只能使用已開啟或已拒絕狀態的變更集。  
+6.  若要使用現有的變更集，請按一下 [現有]****，並從清單中選擇變更集。 只能使用已開啟或已拒絕狀態的變更集。  
   
 ## <a name="next-steps"></a>後續步驟  
  [套用及更新變更集 &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  

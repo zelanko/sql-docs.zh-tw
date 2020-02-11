@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241212"
 ---
 # <a name="retrieve-and-query-xml-data"></a>擷取及查詢 XML 資料
@@ -40,7 +40,7 @@ FROM T1
   
  結果為 `<doc/>`。  
   
- 將 XML 資料儲存於 `xml` 資料類型執行個體內時，不會保留 XML 宣告 (例如 `<?xml version='1.0'?>`)。 這是原廠設定。 XML 宣告 （） 和其屬性 (版本/編碼/stand-alone) 之後會遺失資料會轉換成類型`xml`。 XML 宣告會被視為 XML 剖析器的指示詞。 XML 資料會當做 ucs-2 儲存於內部。 XML 執行個體中的所有其他 PI 都會保留下來。  
+ 將 XML 資料儲存於 `<?xml version='1.0'?>` 資料類型執行個體內時，不會保留 XML 宣告 (例如 `xml`)。 這是原廠設定。 XML 宣告（）及其屬性（版本/編碼/獨立）在資料轉換成類型`xml`之後會遺失。 XML 宣告會被視為 XML 剖析器的指示詞。 XML 資料會當做 ucs-2 儲存於內部。 XML 執行個體中的所有其他 PI 都會保留下來。  
   
   
 ### <a name="order-of-attributes"></a>屬性順序  
@@ -87,19 +87,19 @@ GO
   
   
 ##  <a name="query"></a> 設定必要查詢選項  
- 查詢時`xml`類型資料行或變數使用`xml`必須設定資料類型方法，下列選項，如所示。  
+ 使用`xml`資料`xml`類型方法查詢類型資料行或變數時，必須設定下列選項，如下所示。  
   
 |SET 選項|必要值|  
 |-----------------|---------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNINGS|ON|  
-|ARITHABORT|ON|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
+|ANSI_NULLS|開啟|  
+|ANSI_PADDING|開啟|  
+|ANSI_WARNINGS|開啟|  
+|ARITHABORT|開啟|  
+|CONCAT_NULL_YIELDS_NULL|開啟|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|QUOTED_IDENTIFIER|開啟|  
   
- 如果選項未設定所示，查詢和修改`xml`資料類型方法將會失敗。  
+ 如果未將選項設定為如所示，則查詢和`xml`修改資料類型方法將會失敗。  
   
   
 ## <a name="see-also"></a>另請參閱  

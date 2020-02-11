@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2b5bb55452333014aa3ccf5a797d19667dca753
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244890"
 ---
 # <a name="edit-a-breakpoint-location"></a>編輯中斷點位置
@@ -27,18 +27,18 @@ ms.locfileid: "75244890"
   
 #### <a name="to-edit-a-breakpoint-location"></a>若要編輯中斷點位置  
   
-1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點圖像，然後按一下快速鍵功能表上的 [位置]****。  
+1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點圖像，然後按一下快速鍵功能表上的 [位置]  。  
   
-     - 或者 -  
+     -或-  
   
-     在 [中斷點]**** 視窗中，以滑鼠右鍵按一下中斷點圖像，然後按一下快速鍵功能表上的 [位置]****。  
+     在 [中斷點]  視窗中，以滑鼠右鍵按一下中斷點圖像，然後按一下快速鍵功能表上的 [位置]  。  
   
-2.  在 [檔案中斷點]**** 對話方塊中，編輯 [檔案]**** 以指定新的檔案、編輯 [行]**** 以指定新的行，或編輯 [字元]**** 以指定該行中的新位置。 如果您所指定的新檔案已經開啟在 [查詢編輯器] 視窗中，中斷點就會移至該編輯器視窗。 如果該檔案尚未開啟，系統就會開啟新的編輯器視窗、載入該檔案，而且中斷點會移至新的位置。  
+2.  在 [檔案中斷點]  對話方塊中，編輯 [檔案]  以指定新的檔案、編輯 [行]  以指定新的行，或編輯 [字元]  以指定該行中的新位置。 如果您所指定的新檔案已經開啟在 [查詢編輯器] 視窗中，中斷點就會移至該編輯器視窗。 如果該檔案尚未開啟，系統就會開啟新的編輯器視窗、載入該檔案，而且中斷點會移至新的位置。  
   
-     偵錯 ** 時，[允許原始程式碼與原始版本不同]**[!INCLUDE[tsql](../../includes/tsql-md.md)] 選項沒有任何作用。  
+     偵錯  **時，[允許原始程式碼與原始版本不同]** [!INCLUDE[tsql](../../includes/tsql-md.md)] 選項沒有任何作用。  
   
 ## <a name="see-also"></a>另請參閱  
  [指定叫用計數](specify-a-hit-count.md)   
  [指定中斷點動作](specify-a-breakpoint-action.md)   
  [指定中斷點條件](specify-a-breakpoint-condition.md)   
- [指定中斷點篩選準則](specify-a-breakpoint-filter.md)  
+ [指定中斷點篩選條件](specify-a-breakpoint-filter.md)  

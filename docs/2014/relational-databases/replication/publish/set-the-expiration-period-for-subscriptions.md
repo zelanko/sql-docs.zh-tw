@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 663de184c811291c4b583ddbaf2fb6862097c54f
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882171"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>設定訂閱的逾期期限
@@ -33,7 +33,7 @@ ms.locfileid: "73882171"
   
 -   **若要設定訂閱的逾期期限，請使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73882171"
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>設定快照式或交易式發行集之訂閱的逾期期限  
   
-1.  在發行者上，執行 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)。 為 **\@retention** 指定所要的訂閱逾期期限 (以小時為單位)。 預設的逾期期限為 336 小時。 如需詳細資訊，請參閱 [Create a Publication](create-a-publication.md)。  
+1.  在發行者上，執行 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)。 為 **\@retention** 指定所要的訂閱逾期期限 (以小時為單位)。 預設的逾期期限為 336 小時。 如需詳細資訊，請參閱[建立發行集](create-a-publication.md)。  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>設定合併式發行集之訂閱的逾期期限  
   
@@ -75,11 +75,11 @@ ms.locfileid: "73882171"
   
     -   **3** = 年  
   
-     預設的逾期期限為 14 天。 如需詳細資訊，請參閱 [Create a Publication](create-a-publication.md)。  
+     預設的逾期期限為 14 天。 如需詳細資訊，請參閱[建立發行集](create-a-publication.md)。  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>變更快照式或交易式發行集之訂閱的逾期期限  
   
-1.  在發行者上，執行 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)。 為property **指定 \@retention**，並為 **\@value** 指定新的訂閱逾期期限 (以小時為單位)。  
+1.  在發行者上，執行 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)。 為  property **指定 \@retention**，並為 **\@value** 指定新的訂閱逾期期限 (以小時為單位)。  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>變更合併式發行集之訂閱的逾期期限  
   
@@ -93,12 +93,12 @@ ms.locfileid: "73882171"
   
     -   **3** = 年  
   
-2.  在發行者上，執行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)。 為property **指定 \@retention**，並為 **\@value** 指定新的訂閱逾期期限 (以步驟 1 中保留期限單位為根據的文字)。  
+2.  在發行者上，執行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)。 為  property **指定 \@retention**，並為 **\@value** 指定新的訂閱逾期期限 (以步驟 1 中保留期限單位為根據的文字)。  
   
-3.  (選擇性) 在發行者上，執行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)。 為property **指定 \@retention_period_unit**，並為 **\@value** 指定新的訂閱逾期期限單位。  
+3.  (選擇性) 在發行者上，執行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)。 為  property **指定 \@retention_period_unit**，並為 **\@value** 指定新的訂閱逾期期限單位。  
   
 ## <a name="see-also"></a>另請參閱  
- [複寫系統預存程序概念](../concepts/replication-system-stored-procedures-concepts.md)   
- [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)  
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [訂閱逾期與停用](../subscription-expiration-and-deactivation.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 第 1 課：Database Engine Tuning Advisor 中的基本導覽 | Microsoft Docs
+title: 課程 1：Database Engine Tuning Advisor 中的基本導覽 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fb0e6219d06b83de9311099189dd1cbab31dd2f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63010752"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>第 1 課：Database Engine Tuning Advisor 中的基本導覽

@@ -19,10 +19,10 @@ ms.assetid: 83afa0ca-707e-4468-a888-228268ed4e10
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 090236bd5e0bd0429985ff9c54039a576950ec84
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75322091"
 ---
 # <a name="mspeer_conflictdetectionconfigrequest-transact-sql"></a>MSpeer_conflictdetectionconfigrequest (Transact-SQL)
@@ -34,14 +34,14 @@ ms.locfileid: "75322091"
 |-----------------|---------------|-----------------|  
 |id|**int**|識別衝突組態要求。 [MSpeer_conflictdetectionconfigresponse](../../relational-databases/system-tables/mspeer-conflictdetectionconfigresponse-transact-sql.md)中的 request_id 資料行使用此值。|  
 |publication|**sysname**|起始衝突組態要求的發行集名稱。|  
-|sent_date|**從中**|起始衝突組態要求的日期和時間。|  
+|sent_date|**datetime**|起始衝突組態要求的日期和時間。|  
 |timeout|**int**|程序應該等候所有對等項目傳回衝突資訊的時間量。|  
-|modified_date|**從中**|完成階段的日期和時間。|  
+|modified_date|**datetime**|完成階段的日期和時間。|  
 |progress_phase|**Nvarchar （32）**|使用下列其中一個值，識別處理的目前階段：<br /><br /> 已啟動<br /><br /> 瀏覽拓撲<br /><br /> 正在收集狀態<br /><br /> 已收集狀態|  
-|phase_timed_out|**一些**|指出目前階段是否已逾時。|  
+|phase_timed_out|**bit**|指出目前階段是否已逾時。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [&#40;Transact-sql&#41;的複寫視圖](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [複寫檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

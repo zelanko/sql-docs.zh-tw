@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3e8fc0f770d8763ccb330b3c7588a97604d876e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762840"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell 提供者
@@ -33,7 +33,8 @@ ms.locfileid: "62762840"
 ## <a name="the-sql-server-powershell-hierarchy"></a>SQL Server PowerShell 階層  
  可以在階層中表示資料或物件模型的產品會使用 Windows PowerShell 提供者來公開階層。 這個階層是使用與 Windows 檔案系統所使用之磁碟機和路徑結構類似的結構公開。  
   
- 每個 Windows PowerShell 提供者都會實作一或多個磁碟機， 每一個磁碟機都是相關物件階層的根節點。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會實作 SQLSERVER: 磁碟機。 該提供者也會針對 SQLSERVER: 磁碟機定義一組主要資料夾。 每個資料夾及其子資料夾都代表可使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件模型存取的一組物件。 當您將焦點放在以其中一個主資料夾為開頭之路徑的子資料夾上時，就可以使用相關聯物件模型中的方法，針對此節點所表示的物件來執行動作。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 提供者實作的 Windows PowerShell 資料夾列在下表中。  
+ 每個 Windows PowerShell 提供者都會實作一或多個磁碟機， 每一個磁碟機都是相關物件階層的根節點。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會實作 SQLSERVER: 磁碟機。 該提供者也會針對 SQLSERVER: 磁碟機定義一組主要資料夾。 每個資料夾及其子資料夾都代表可使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件模型存取的一組物件。 當您將焦點放在以其中一個主資料夾為開頭之路徑的子資料夾上時，就可以使用相關聯物件模型中的方法，針對此節點所表示的物件來執行動作。 
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 提供者實作的 Windows PowerShell 資料夾列在下表中。  
   
 |資料夾|SQL Server 物件模型命名空間|物件|  
 |------------|---------------------------------------|-------------|  
@@ -58,7 +59,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
   
  路徑中的集合節點會與相關聯物件模型中的集合類別產生關聯。 物件名稱節點會與相關聯物件模型中的物件類別產生關聯，如下表所示。  
   
-|`Path`|SMO 類別|  
+|Path|SMO 類別|  
 |----------|---------------|  
 |SQLSERVER:\SQL\MyComputer\DEFAULT\Databases|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
 |SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
@@ -70,7 +71,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |描述如何使用 Windows PowerShell 指令程式導覽路徑中的節點，而且至少每個節點都會取得該節點的物件清單。|[導覽 SQL Server PowerShell 路徑](navigate-sql-server-powershell-paths.md)|  
 |描述如何使用 SMO 方法和屬性，針對透過路徑中的節點所代表的物件來報告和執行工作。 同時描述如何取得該節點的 SMO 方法和屬性清單。|[使用 SQL Server PowerShell 路徑](work-with-sql-server-powershell-paths.md)|  
 |描述如何將 SMO 統一資源名稱 (URN) 轉換為 SQL Server 提供者路徑。|[將 URN 轉換成 SQL Server 提供者路徑](../database-engine/convert-urns-to-sql-server-provider-paths.md)|  
-|描述如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者來開啟 SQL Server 驗證連接。 提供者預設會使用的 Windows 驗證連接是使用執行 Windows PowerShell 工作階段之 Windows 帳戶的認證來進行。|[管理 Database Engine PowerShell 中的驗證](manage-authentication-in-database-engine-powershell.md)|  
+|描述如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者來開啟 SQL Server 驗證連接。 提供者預設會使用的 Windows 驗證連接是使用執行 Windows PowerShell 工作階段之 Windows 帳戶的認證來進行。|[管理資料庫引擎 PowerShell 中的驗證](manage-authentication-in-database-engine-powershell.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell](sql-server-powershell.md)  

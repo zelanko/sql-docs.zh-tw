@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807453"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>資料庫鏡像和複寫 (SQL Server)
@@ -71,11 +71,11 @@ ms.locfileid: "62807453"
   
 3.  為鏡像設定散發。 將鏡像名稱指定為「發行者」，並指定主體所用的相同「散發者」和快照集資料夾。 例如，如果您以預存程序設定複寫，請在「散發者」端執行 [sp_adddistpublisher](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) ，然後在鏡像上執行 [sp_adddistributor](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) 。 針對 **sp_adddistpublisher**：  
   
-    -   將 **@publisher** 參數的值設定為鏡像的網路名稱。  
+    -   將**@publisher**參數的值設定為鏡像的網路名稱。  
   
-    -   將 **@working_directory** 參數的值設定為主體所用的快照集資料夾。  
+    -   將**@working_directory**參數的值設定為主體所使用的快照集資料夾。  
   
-4.  指定 **-PublisherFailoverPartner** 代理程式參數的鏡像名稱。 下列代理程式需要使用這個參數在容錯移轉後識別鏡像：  
+4.  指定 **-PublisherFailoverPartner**代理程式參數的鏡像名稱。 下列代理程式需要使用這個參數在容錯移轉後識別鏡像：  
   
     -   快照集代理程式 (針對所有發行集)。  
   
@@ -85,19 +85,20 @@ ms.locfileid: "62807453"
   
     -   合併代理程式 (針對合併訂閱)  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (replisapi.dll：適用於使用 Web 同步處理來進行同步處理的合併訂閱)  
+    -   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (replisapi.dll：適用於使用 Web 同步處理來進行同步處理的合併訂閱)  
   
     -   SQL Merge ActiveX Control (針對與控制項同步處理的合併訂閱)  
   
      「散發代理程式」和 Distribution ActiveX Control 沒有這個參數，因為它們並未連接到「發行者」。  
   
-     代理程式參數變更會在代理程式下次啟動時生效。 如果代理程式連續執行，則必須停止代理程式，然後重新啟動它。 您可以在代理程式設定檔中或從命令提示字元指定參數。 如需詳細資訊，請參閱：  
+     代理程式參數變更會在代理程式下次啟動時生效。 如果代理程式連續執行，則必須停止代理程式，然後重新啟動它。 您可以在代理程式設定檔中或從命令提示字元指定參數。 如需詳細資訊，請參閱  
   
-    -   [檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [查看及修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     建議您將 **-PublisherFailoverPartner** 加入代理程式設定檔，然後在設定檔中指定鏡像名稱。 例如，如果您要設定使用預存程序的複寫：  
+     我們建議您將 **-PublisherFailoverPartner**新增至代理程式設定檔，然後在設定檔中指定鏡像名稱。 例如，如果您要設定使用預存程序的複寫：  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  
@@ -121,7 +122,7 @@ ms.locfileid: "62807453"
 ## <a name="maintaining-a-mirrored-publication-database"></a>維護鏡像發行集資料庫  
  維護鏡像發行集資料庫基本上與維護非鏡像資料庫相同，不過請注意下列事項：  
   
--   管理和監視必須在使用中伺服器端發生。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，發行集只會出現在使用中伺服器的 [本機發行集]  資料夾下。 例如，如果您容錯移轉至鏡像，則發行集會在鏡像端顯示，而不會再顯示於主體端。 如果資料庫容錯移轉至鏡像，您可能需要手動重新整理 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和複寫監視器，才能反映出變更。  
+-   管理和監視必須在使用中伺服器端發生。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，發行集只會出現在使用中伺服器的 [本機發行集]**** 資料夾下。 例如，如果您容錯移轉至鏡像，則發行集會在鏡像端顯示，而不會再顯示於主體端。 如果資料庫容錯移轉至鏡像，您可能需要手動重新整理 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和複寫監視器，才能反映出變更。  
   
 -   複寫監視器會同時在主體和鏡像的物件樹中顯示「發行者」節點。 如果主體為使用中伺服器，則發行集資訊只會顯示在「複寫監視器」的主體節點下。  
   
@@ -133,9 +134,9 @@ ms.locfileid: "62807453"
   
 -   當使用預存程序或 Replication Management Objects (RMO) 在鏡像端管理複寫時，在您指定「發行者」名稱的情況下，您必須指定在其上啟用資料庫以供複寫的執行個體名稱。 若要決定適當的名稱，請使用 [publishingservername](/sql/t-sql/functions/replication-functions-publishingservername)函數。  
   
-     在完成發行集資料庫的鏡像後，儲存在鏡像資料庫中的複寫中繼資料會與儲存在主體資料庫中的中繼資料相同。 因此，對於在主體端啟用以供複寫的發行集資料庫而言，儲存在鏡像端系統資料表中的「發行者」執行個體名稱是主體的名稱，而不是鏡像的名稱。 如果發行集資料庫容錯移轉至鏡像，這會影響複寫組態和維護。 例如，如果您要在容錯移轉後於鏡像端設定使用預存程序的複寫，且您想要將提取訂閱加入在主體端啟用的發行集資料庫，則必須為 **@publisher** 或 **sp_addmergepullsubscription** 的 **@publisher**。  
+     在完成發行集資料庫的鏡像後，儲存在鏡像資料庫中的複寫中繼資料會與儲存在主體資料庫中的中繼資料相同。 因此，對於在主體端啟用以供複寫的發行集資料庫而言，儲存在鏡像端系統資料表中的「發行者」執行個體名稱是主體的名稱，而不是鏡像的名稱。 如果發行集資料庫容錯移轉至鏡像，這會影響複寫組態和維護。 例如，如果您要在容錯移轉之後使用鏡像上的預存程式來設定複寫，而且您想要將提取訂閱加入在主體上啟用的發行集資料庫，則必須指定主體名稱，而不是**@publisher** **sp_addpullsubscription**或**sp_addmergepullsubscription**參數的鏡像名稱。  
   
-     如果您在容錯移轉至鏡像後於鏡像端啟用發行集資料庫，則儲存在系統資料表中的「發行者」執行個體名稱是鏡像的名稱；在此情況下，您應該為 **@publisher** 參數指定鏡像的名稱。  
+     如果您在容錯移轉至鏡像後於鏡像端啟用發行集資料庫，則儲存在系統資料表中的「發行者」實例名稱是鏡像的名稱;在此情況下，您會使用**@publisher**參數的鏡像名稱。  
   
     > [!NOTE]  
     >  在某些情況下 (例如 **sp_addpublication**)，只有非 **@publisher** @publisher[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 參數，此時，該參數便與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫鏡像不相關。  
@@ -158,7 +159,7 @@ ms.locfileid: "62807453"
 |--------------------|------------------------------------------------------------|  
 |具有自動容錯移轉的高安全性模式|如果鏡像無法使用，則「記錄讀取器代理程式」會傳播命令至散發資料庫。 待鏡像回復連接，且具備主體的所有交易後，主體才能容錯移轉至鏡像。|  
 |高效能模式|如果鏡像無法使用，則主體資料庫會以公開方式執行 (也就是沒有鏡像)。 不過，「記錄讀取器代理程式」只會複寫鏡像上所儲存的交易。 如果強制執行服務，且鏡像伺服器承擔主體的角色，則「記錄讀取器代理程式」會對鏡像發生作用，並開始收取新的交易。<br /><br /> 請注意，如果鏡像落後主體，則複寫延遲將會增加。|  
-|沒有自動容錯移轉的高安全性模式|所有經過認可的交易一定會存到鏡像的磁碟上。 「記錄讀取器代理程式」只會複寫在鏡像上強化的交易。 如果鏡像無法使用，則主體不會允許在資料庫上有進一步的活動；因此，「記錄讀取器代理程式」便沒有交易可複寫。|  
+|不具有自動容錯移轉的高安全性模式|所有經過認可的交易一定會存到鏡像的磁碟上。 「記錄讀取器代理程式」只會複寫在鏡像上強化的交易。 如果鏡像無法使用，則主體不會允許在資料庫上有進一步的活動；因此，「記錄讀取器代理程式」便沒有交易可複寫。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 複寫](../../relational-databases/replication/sql-server-replication.md)   

@@ -1,5 +1,5 @@
 ---
-title: 檢視方塊 （Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
+title: 透視圖（Cube 設計工具）（Analysis Services-多維度資料） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8bc2e3bd77b0a5a7454bd136b7a0dc485180ba28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072017"
 ---
 # <a name="perspectives-cube-designer-analysis-services---multidimensional-data"></a>檢視方塊 (Cube 設計師) (Analysis Services - 多維度資料)
   使用 Cube 設計師中的 **[檢視方塊]** 索引標籤，即可為選取的 Cube 建立和修改檢視方塊。  
   
- **[檢視方塊]** 索引標籤包含下列窗格：  
+ 
+  **[檢視方塊]** 索引標籤包含下列窗格：  
   
 ## <a name="panes"></a>窗格  
  **工具列**  
  使用工具列來執行索引標籤上的一般動作。  
   
  **檢視方塊詳細資料**  
- 使用 [檢視方塊詳細資料]  窗格，即可為選取的 Cube 建立和修改檢視方塊。  
+ 使用 [檢視方塊詳細資料]**** 窗格，即可為選取的 Cube 建立和修改檢視方塊。  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視方塊](multidimensional-models-olap-logical-cube-objects/perspectives.md)  

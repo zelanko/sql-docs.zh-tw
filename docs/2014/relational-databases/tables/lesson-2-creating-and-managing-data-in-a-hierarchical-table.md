@@ -1,5 +1,5 @@
 ---
-title: 第 2 課：建立及管理階層式資料表中的資料 |Microsoft Docs
+title: 第 2 課：在階層式資料表中建立與管理資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4553d98faf18c00fff6ad90a09d0ee9071a71d32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659930"
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>第 2 課：在階層式資料表中建立與管理資料
@@ -32,7 +32,7 @@ ms.locfileid: "62659930"
   
 -   [使用階層式方法重新排列階層式資料表中的資料順序](lesson-2-4-reordering-data-in-a-hierarchical-table-using-hierarchical-methods.md)  
   
--   [摘要：管理階層式資料表中的資料](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
+-   [摘要：在階層式資料表中管理資料](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [使用 hierarchyid 資料類型建立資料表](lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md)  

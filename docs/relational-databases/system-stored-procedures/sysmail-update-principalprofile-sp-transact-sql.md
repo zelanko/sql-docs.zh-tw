@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_principalprofile_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_update_principalprofile_sp （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dd9644253302c6a577c6cc3923bb3a9e3a0d8c0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037386"
 ---
-# <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
+# <a name="sysmail_update_principalprofile_sp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   更新主體與設定檔之間關聯的資訊。  
@@ -41,18 +41,18 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @principal_id = ] principal_id` 資料庫使用者或角色中的識別碼**msdb**要變更之關聯的資料庫。 *principal_id*已**int**，預設值是 NULL。 任一*principal_id*或是*principal_name*必須指定。  
+`[ @principal_id = ] principal_id`要變更之關聯的**msdb**資料庫中，資料庫使用者或角色的識別碼。 *principal_id*是**int**，預設值是 Null。 必須指定*principal_id*或*principal_name* 。  
   
-`[ @principal_name = ] 'principal_name'` 資料庫使用者或角色的名稱**msdb**要更新之關聯的資料庫。 *principal_name*已**sysname**，預設值是 NULL。 任一*principal_id*或是*principal_name*可能指定。  
+`[ @principal_name = ] 'principal_name'`要更新之關聯的**msdb**資料庫中，資料庫使用者或角色的名稱。 *principal_name*是**sysname**，預設值是 Null。 可以指定*principal_id*或*principal_name* 。  
   
-`[ @profile_id = ] profile_id` 若要變更關聯的設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
+`[ @profile_id = ] profile_id`要變更之關聯的設定檔識別碼。 *profile_id*是**int**，預設值是 Null。 必須指定*profile_id*或*profile_name* 。  
   
-`[ @profile_name = ] 'profile_name'` 若要變更關聯的設定檔的名稱。 *profile_name*已**sysname**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
+`[ @profile_name = ] 'profile_name'`要變更之關聯的設定檔名稱。 *profile_name*是**sysname**，預設值是 Null。 必須指定*profile_id*或*profile_name* 。  
   
-`[ @is_default = ] 'is_default'` 為此設定檔是否為資料庫使用者的預設設定檔。 資料庫使用者只能有一個預設設定檔。 *is_default*已**元**，沒有預設值。  
+`[ @is_default = ] 'is_default'`這是指此設定檔是否為資料庫使用者的預設設定檔。 資料庫使用者只能有一個預設設定檔。 *is_default*是**bit**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
  None  
@@ -60,19 +60,19 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ## <a name="remarks"></a>備註  
  這個預存程序會變更指定的設定檔是否為資料庫使用者之預設設定檔的情況。 資料庫使用者只能有一個預設私人設定檔。  
   
- 關聯的主體名稱時**公開金鑰**關聯的主體識別碼是否**0**，這個預存程序變更公用設定檔。 只能有一個預設公用設定檔。  
+ 當關聯的主體名稱為**public** ，或關聯的主體識別碼為**0**時，這個預存程式會變更公用設定檔。 只能有一個預設公用設定檔。  
   
- 當 **\@is_default**是 '**1**' 且主體為多個設定檔相關聯，指定的設定檔會成為主體的預設設定檔。 先前是預設設定檔的設定檔仍會關聯於這個主體，但已不再是預設設定檔。  
+ 當** \@is_default**為 '**1**'，且主體與一個以上的設定檔相關聯時，指定的設定檔會成為主體的預設設定檔。 先前是預設設定檔的設定檔仍會關聯於這個主體，但已不再是預設設定檔。  
   
- 預存程序**sysmail_update_principalprofile_sp**處於**msdb**資料庫中，擁有者**dbo**結構描述。 此程序必須利用三部分名稱來執行，如果目前的資料庫不是**msdb**。  
+ 預存程式**sysmail_update_principalprofile_sp**在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱來執行此程式。  
   
-## <a name="permissions"></a>Permissions  
- 執行此程序預設值，成員的權限**sysadmin**固定的伺服器角色。  
+## <a name="permissions"></a>權限  
+ 此程式的執行許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
- **A.將設定檔設為資料庫的預設公用設定檔**  
+ **A. 將設定檔設為資料庫的預設公用設定檔**  
   
- 下列範例會將設定檔`General Use Profile`若要在使用者的預設公用設定檔**msdb**資料庫。  
+ 下列範例會將設定檔`General Use Profile`設為**msdb**資料庫中之使用者的預設公用設定檔。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  
@@ -81,9 +81,9 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
     @is_default = '1';  
 ```  
   
- **B.將設定檔設為使用者的預設私人設定檔**  
+ **B. 將設定檔設為使用者的預設私人設定檔**  
   
- 下列範例會將設定檔`AdventureWorks Administrator`是主體的預設設定檔`ApplicationUser`中**msdb**資料庫。 這個設定檔必須已關聯於這個主體。 先前是預設設定檔的設定檔仍會關聯於這個主體，但已不再是預設設定檔。  
+ 下列範例會將設定檔`AdventureWorks Administrator`設為`ApplicationUser` **msdb**資料庫中主體的預設設定檔。 這個設定檔必須已關聯於這個主體。 先前是預設設定檔的設定檔仍會關聯於這個主體，但已不再是預設設定檔。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  
@@ -94,7 +94,7 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
   
 ## <a name="see-also"></a>另請參閱  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Database Mail 組態物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Database Mail 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail 設定物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Database Mail 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

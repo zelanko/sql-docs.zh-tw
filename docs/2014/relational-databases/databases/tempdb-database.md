@@ -16,24 +16,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916880"
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
-  **tempdb** 系統資料庫是全域資源，適用於所有連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的使用者，且可用來保留下列項目：  
+  **Tempdb**系統資料庫是全域資源，可供所有連接到實例的使用者使用，並用於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]保存下列各項：  
   
 -   明確建立的暫存使用者物件 (例如：全域或本機暫存資料表、暫存預存程序、資料表變數或資料指標)。  
   
--   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]所建立的內部物件 (例如，儲存多工緩衝處理或排序之中繼結果集的工作資料表)。  
+-   
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]所建立的內部物件 (例如，儲存多工緩衝處理或排序之中繼結果集的工作資料表)。  
   
 -   由資料庫中的資料修改交易所產生的資料列版本，該資料庫採用使用資料列版本設定隔離的讀取認可或快照集隔離交易。  
   
 -   由以下這類功能的資料修改交易所產生的資料列版本：線上索引作業、Multiple Active Result Set (MARS) 和 AFTER 觸發程序。  
   
- **tempdb** 中的作業會以最低限度記錄。 這可讓您回復交易。 每次啟動**時都會重新建立** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，這樣系統永遠會以乾淨的資料庫複本啟動。 連接中斷時會自動卸除暫存資料表與預存程序，且系統關閉時所有連接都會停止。 因此， **tempdb** 中的任何資料都不會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一個工作階段儲存到其他的工作階段。 **tempdb**不允許進行備份和還原作業。  
+ 
+  **tempdb** 中的作業會以最低限度記錄。 這可讓您回復交易。 **** 每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]啟動時都會重新建立 tempdb，如此一來，系統一律會從資料庫的乾淨複本開始。 連接中斷時會自動卸除暫存資料表與預存程序，且系統關閉時所有連接都會停止。 因此， **tempdb**中的任何專案都不會從的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一個會話儲存到另一個。 **Tempdb**不允許備份和還原作業。  
   
 ## <a name="physical-properties-of-tempdb"></a>tempdb 的實體屬性  
  下表列示 **tempdb** 資料和記錄檔的初始組態值。 對於不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這些檔案的大小稍有不同。  
@@ -43,7 +45,7 @@ ms.locfileid: "62916880"
 |主要資料|tempdev|tempdb.mdf|以百分之 10 的比例自動成長，直到磁碟全滿|  
 |Log|templog|templog.ldf|以 10% 的比例自動成長，最大至 2 TB|  
   
- 大小**tempdb**可能會影響系統效能。 例如，如果**tempdb**大小太小，可能是系統處理太成長佔用資料庫，以支援您每次您啟動的工作負載需求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以增加的大小，以避免額外的負荷**tempdb**。  
+ **Tempdb**的大小可能會影響系統的效能。 例如，如果**tempdb**的大小太小，則在每次啟動[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，自動成長資料庫以支援您的工作負載需求時，系統處理可能會太過佔用。 您可以藉由增加**tempdb**的大小來避免此額外負荷。  
   
 ## <a name="performance-improvements-in-tempdb"></a>tempdb 中的效能改進  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，會以下列方式改進 **tempdb** 效能：  
@@ -54,13 +56,13 @@ ms.locfileid: "62916880"
   
 -   會減少 **tempdb** 的記錄負擔。 這會減少 **tempdb** 記錄檔的磁碟 I/O 頻寬耗用量。  
   
--   配置混合的頁面中的演算法**tempdb**已獲得改善。  
+-   已改善在**tempdb**中配置混合頁面的演算法。  
   
 ### <a name="moving-the-tempdb-data-and-log-files"></a>移動 tempdb 資料和記錄檔  
- 若要移動 **tempdb** 資料和記錄檔，請參閱 [移動系統資料庫](system-databases.md)。  
+ 若要移動**tempdb**資料和記錄檔，請參閱[移動系統資料庫](system-databases.md)。  
   
 ### <a name="database-options"></a>資料庫選項  
- 下表列出 **tempdb** 資料庫中每個資料庫選項的預設值，以及這些選項是否可以修改。 若要檢視這些選項目前的設定，請參閱 [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 目錄檢視。  
+ 下表列出**tempdb**資料庫中每個資料庫選項的預設值，以及是否可以修改選項。 若要檢視這些選項目前的設定，請參閱 [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 目錄檢視。  
   
 |資料庫選項|預設值|可以修改|  
 |---------------------|-------------------|---------------------|  
@@ -71,9 +73,9 @@ ms.locfileid: "62916880"
 |ANSI_WARNINGS|OFF|是|  
 |ARITHABORT|OFF|是|  
 |AUTO_CLOSE|OFF|否|  
-|AUTO_CREATE_STATISTICS|ON|是|  
+|AUTO_CREATE_STATISTICS|開啟|是|  
 |AUTO_SHRINK|OFF|否|  
-|AUTO_UPDATE_STATISTICS|ON|是|  
+|AUTO_UPDATE_STATISTICS|開啟|是|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|是|  
 |CHANGE_TRACKING|OFF|否|  
 |CONCAT_NULL_YIELDS_NULL|OFF|是|  
@@ -81,14 +83,14 @@ ms.locfileid: "62916880"
 |CURSOR_DEFAULT|GLOBAL|是|  
 |資料庫可用性選項|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|否<br /><br /> 否<br /><br /> 否|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|是|  
-|DB_CHAINING|ON|否|  
+|DB_CHAINING|開啟|否|  
 |ENCRYPTION|OFF|否|  
 |NUMERIC_ROUNDABORT|OFF|是|  
 |PAGE_VERIFY|CHECKSUM (新安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。<br /><br /> NONE (升級的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。|是|  
-|PARAMETERIZATION|SIMPLE|是|  
+|PARAMETERIZATION|簡單|是|  
 |QUOTED_IDENTIFIER|OFF|是|  
 |READ_COMMITTED_SNAPSHOT|OFF|否|  
-|RECOVERY|SIMPLE|否|  
+|RECOVERY|簡單|否|  
 |RECURSIVE_TRIGGERS|OFF|是|  
 |Service Broker 選項|ENABLE_BROKER|是|  
 |TRUSTWORTHY|OFF|否|  
@@ -96,7 +98,7 @@ ms.locfileid: "62916880"
  如需這些資料庫選項的描述，請參閱 [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
   
 ## <a name="restrictions"></a>限制  
- 下列作業不能在 **tempdb** 資料庫上執行：  
+ 無法在**tempdb**資料庫上執行下列作業：  
   
 -   加入檔案群組。  
   
@@ -104,13 +106,13 @@ ms.locfileid: "62916880"
   
 -   變更定序。 預設定序是伺服器定序。  
   
--   變更資料庫擁有者。 **tempdb** 是由 **sa**擁有。  
+-   變更資料庫擁有者。 **tempdb**是由**sa**所擁有。  
   
 -   建立資料庫快照集。  
   
 -   卸除資料庫。  
   
--   從資料庫卸除 **guest** 使用者。  
+-   從資料庫卸載**來賓**使用者。  
   
 -   啟用異動資料擷取。  
   
@@ -128,7 +130,7 @@ ms.locfileid: "62916880"
   
 -   將資料庫或主要檔案群組設定為 READ_ONLY。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  任何使用者都可以在 tempdb 中建立暫時物件。 除非收到其他權限，否則使用者只能存取自己的物件。 您可以撤銷 tempdb 的連接權限來阻止使用者使用 tempdb，不過不建議您這樣做，因為有些常式作業需要使用 tempdb。  
   
 ## <a name="related-content"></a>相關內容  

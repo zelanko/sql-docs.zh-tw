@@ -1,5 +1,5 @@
 ---
-title: 教學課程 （報表產生器） |Microsoft Docs
+title: 教學課程（報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3859dbf74d1def19b5f3aad405a884ae607fbca3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107964"
 ---
 # <a name="tutorials-report-builder"></a>教學課程 (報表產生器)
@@ -40,10 +40,10 @@ ms.locfileid: "66107964"
  [教學課程：格式化文字 &#40;報表產生器&#41;](tutorial-format-text-report-builder.md)  
  請遵循此教學課程中的步驟，了解可讓您格式化報表內的文字之眾多方式的其中幾種。  
   
- [教學課程：將直條圖新增至報表 &#40;報表產生器&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
+ [教學課程：將直條圖加入至報表 &#40;報表產生器&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
  請遵循這個教學課程中的步驟來學習如何將含有移動平均的直條圖加入至報表。  
   
- [教學課程：將圓形圖新增至報表 &#40;報表產生器&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
+ [教學課程：將圓形圖加入至報表 &#40;報表產生器&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
  請遵循此教學課程中的步驟，了解如何在報表中加入圓形圖。  
   
  [教學課程：將橫條圖新增至報表 &#40;報表產生器&#41;](tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
@@ -52,13 +52,13 @@ ms.locfileid: "66107964"
  [教學課程：將走勢圖新增至報表 &#40;報表產生器&#41;](tutorial-add-a-sparkline-to-your-report-report-builder.md)  
  請遵循這個教學課程中的步驟來學習如何建立矩陣，然後將一組走勢圖加入至矩陣。  
   
- [教學課程：將 KPI 新增至報表 &#40;報表產生器&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
+ [教學課程：將 KPI 加入至報表 &#40;報表產生器&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
  請遵循此教學課程中的步驟，了解如何在報表中加入關鍵效能指標 (KPI)。  
   
  [教學課程：地圖報表 &#40;報表產生器&#41;](tutorial-map-report-report-builder.md)  
  請遵循此教學課程中的步驟，了解如何在報表中加入地圖。  
   
- [教學課程：將參數新增至報表 &#40;報表產生器&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [教學課程：將參數加入至報表 &#40;報表產生器&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)  
  請遵循這個教學課程中的步驟，學習如何使用參數自訂報表的外觀和內容。  
   
  [教學課程：建立鑽研及主報表 &#40;報表產生器&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
@@ -70,6 +70,6 @@ ms.locfileid: "66107964"
 ## <a name="see-also"></a>另請參閱  
  [報表設計檢視 &#40;報表產生器&#41;](report-builder/report-design-view-report-builder.md)   
  [SQL Server 2014 中的報表產生器](report-builder/report-builder-in-sql-server-2016.md)   
- [教學課程：建立快速圖表報表離線&#40;報表產生器&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [教學課程：離線建立快速圖表報表 &#40;報表產生器&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
   
   

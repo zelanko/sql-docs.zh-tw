@@ -16,13 +16,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206966"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server、Deprecated Features 物件
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 SQLServer:Deprecated Features 物件提供了計數器來監視指定為已被取代的功能。 在每一個案例中，此計數器都會提供一個使用計數，列出上一次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後所遇到之已被取代功能的次數。  
   
  下表描述 SQL Server Deprecated Features 計數器執行個體。  
@@ -30,15 +31,15 @@ ms.locfileid: "68206966"
 |SQL Server 已被取代的功能計數器執行個體|描述|  
 |------------------------------------------------------|-----------------|  
 |做為暫存資料表和預存程序名稱的 '#' 和 '##'。|遇到一個不包含 # 以外之任何字元的識別碼。 請至少使用一個其他字元。 每次編譯時發生一次。|  
-|'::' 函數呼叫語法|資料表值函式遇到 :: 函式呼叫語法。 取代`SELECT column_list FROM`  *\< function_name >* `()`。 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)`取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次編譯時發生一次。|  
+|'::' 函數呼叫語法|資料表值函式遇到 :: 函式呼叫語法。 取代為`SELECT column_list FROM` * \< function_name>* `()`。 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)`取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次編譯時發生一次。|  
 |'\@' 和以 '\@\@' 開頭的名稱作為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼|出現了以 \@ 或 \@\@ 開頭的識別碼。 請勿使用 \@ 或 \@\@，或是以 \@\@ 開頭的名稱，作為識別碼。 每次編譯時發生一次。|  
-|ADDING TAPE DEVICE|已被取代的功能 sp_addumpdevice'`tape`' 發現。 Sp_addumpdevice '`disk`' 改為。 每次使用時發生一次。|  
+|ADDING TAPE DEVICE|遇到已被取代的`tape`功能 sp_addumpdevice ' '。 請改用 sp_addumpdevice`disk`' '。 每次使用時發生一次。|  
 |ALL 權限|遇到 GRANT ALL、DENY ALL 或 REVOKE ALL 語法的總次數。 請修改語法來拒絕特定權限。 每次查詢時發生一次。|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|上一次啟動伺服器執行個體之後，已經使用 ALTER DATABASE 的已被取代功能 TORN_PAGE_DETECTION 選項的總次數。 請改用 PAGE_VERIFY 語法。 每次在 DDL 陳述式中使用時發生一次。|  
 |ALTER LOGIN WITH SET CREDENTIAL|遇到已被取代的功能語法 ALTER LOGIN WITH SET CREDENTIAL 或 ALTER LOGIN WITH NO CREDENTIAL。 請改用 ADD 或 DROP CREDENTIAL 語法。 每次編譯時發生一次。|  
 |Azeri_Cyrilllic_90|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。|  
 |Azeri_Latin_90|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。|  
-|BACKUP DATABASE 或 LOG TO TAPE|遇到已被取代的功能 BACKUP { DATABASE &#124; LOG } TO TAPE 或 BACKUP { DATABASE &#124; LOG } TO <磁帶裝置>  。<br /><br /> 請改用 BACKUP { DATABASE &#124; LOG } TO DISK 或 BACKUP { DATABASE &#124; LOG } TO <磁帶裝置>  。 每次使用時發生一次。|  
+|BACKUP DATABASE 或 LOG TO TAPE|遇到已被取代的功能 BACKUP { DATABASE &#124; LOG } TO TAPE 或 BACKUP { DATABASE &#124; LOG } TO <磁帶裝置>**。<br /><br /> 請改用 BACKUP { DATABASE &#124; LOG } TO DISK 或 BACKUP { DATABASE &#124; LOG } TO <磁帶裝置>**。 每次使用時發生一次。|  
 |BACKUP DATABASE 或 LOG WITH MEDIAPASSWORD|遇到了已被取代的功能 BACKUP DATABASE WITH MEDIAPASSWORD 或 BACKUP LOG WITH MEDIAPASSWORD。 請勿使用 WITH MEDIAPASSWORD。|  
 |BACKUP DATABASE 或 LOG WITH PASSWORD|遇到了已被取代的功能 BACKUP DATABASE WITH PASSWORD 或 BACKUP LOG WITH PASSWORD。 請勿使用 WITH PASSWORD。|  
 |COMPUTE [BY]|遇到了 COMPUTE 或 COMPUTE BY 語法。 請重寫查詢，以搭配 ROLLUP 使用 GROUP BY。 每次編譯時發生一次。|  
@@ -70,7 +71,7 @@ ms.locfileid: "68206966"
 |dm_fts_active_catalogs.worker_count|遇到了 sys.dm_fts_active_catalogs 動態管理檢視的 worker_count 資料行。 請避免使用這個資料行。 每當伺服器執行個體偵測到此資料行的參考時，都會發生。|  
 |dm_fts_memory_buffers|dm_fts_memory_buffers 計數器一定會保持為 0，因為 sys.dm_fts_memory_buffers 檢視表的大部分資料行都未被取代。 若要監視已被取代的資料行，請使用資料行特定的計數器：dm_fts_memory_buffers.row_count。|  
 |dm_fts_memory_buffers.row_count|遇到了 [sys.dm_fts_memory_buffers](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql) 動態管理檢視的 row_count 資料行。 請避免使用這個資料行。 每當伺服器執行個體偵測到此資料行的參考時，都會發生。|  
-|具有兩部分名稱的 DROP INDEX|DROP INDEX 語法在 DROP INDEX 中包含了 <資料表名稱>.<索引名稱>  語法格式。 在 DROP INDEX 陳述式中取代為 <索引名稱>  ON <資料表名稱>  的語法。 每次編譯時發生一次。|  
+|具有兩部分名稱的 DROP INDEX|DROP INDEX 語法在 DROP INDEX 中包含了 <資料表名稱>.<索引名稱>** 語法格式。 在 DROP INDEX 陳述式中取代為 <索引名稱>** ON <資料表名稱>** 的語法。 每次編譯時發生一次。|  
 |EXT_CREATE_ALTER_SOAP_ENDPOINT|遇到了 FOR SOAP 選項的 CREATE 或 ALTER ENDPOINT 陳述式。 原生 XML Web Service 已被取代。 請改用 Windows Communications Foundation (WCF) 或 ASP.NET。|  
 |EXT_endpoint_webmethods|遇到 sys.endpoint_webmethods。 原生 XML Web Service 已被取代。 請改用 Windows Communications Foundation (WCF) 或 ASP.NET。|  
 |EXT_soap_endpoints|遇到 sys.soap_endpoints。 原生 XML Web Service 已被取代。 請改用 Windows Communications Foundation (WCF) 或 ASP.NET。|  
@@ -94,7 +95,7 @@ ms.locfileid: "68206966"
 |Hindi|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。 請改用 Indic_General_90。|  
 |沒有括號的 HOLDLOCK 資料表提示。||  
 |IDENTITYCOL|遇到 INDENTITYCOL 語法。 請重寫陳述式來使用 $identity 語法。 每次編譯時發生一次。|  
-|沒有 COUNT_BIG(\*) 的索引檢視表 SELECT 清單|彙總索引檢視表的 SELECT 清單必須包含 COUNT_BIG (\*)。|  
+|沒有 COUNT_BIG(*) 的索引檢視表 SELECT 清單|彙總索引檢視表的 SELECT 清單必須包含 COUNT_BIG (\*)。|  
 |INDEX_OPTION|遇到 CREATE TABLE、ALTER TABLE 或 CREATE INDEX 語法，但是選項周圍沒有括號。 請重寫陳述式來使用目前的語法。 每次查詢時發生一次。|  
 |INDEXKEY_PROPERTY|遇到 INDEXKEY_PROPERTY 語法。 請重寫陳述式來查詢 sys.index_columns。 每次編譯時發生一次。|  
 |間接 TVF 提示|透過檢視表將資料表提示間接套用到多重陳述式資料表值函式 (TVF) 的引動過程，將從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本中移除。|  
@@ -102,7 +103,7 @@ ms.locfileid: "68206966"
 |INSERT_HINTS||  
 |Korean_Wansung_Unicode|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。|  
 |Lithuanian_Classic|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。|  
-|Macedonian|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。 請改用 Macedonian_FYROM_90。|  
+|馬其頓文|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。 請改用 Macedonian_FYROM_90。|  
 |MODIFY FILEGROUP READONLY|遇到了 MODIFY FILEGROUP READONLY 語法。 請重寫陳述式來使用 READ_ONLY 語法。 每次編譯時發生一次。|  
 |MODIFY FILEGROUP READWRITE|遇到了 MODIFY FILEGROUP READWRITE 語法。 請重寫陳述式來使用 READ_WRITE 語法。 每次編譯時發生一次。|  
 |兩部分以上的資料行名稱|查詢在資料行清單中使用了 3 部分或 4 部分的名稱。 請將查詢變更為使用標準的 2 部分相容名稱。 每次編譯時發生一次。|  
@@ -112,14 +113,14 @@ ms.locfileid: "68206966"
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|遇到了已被取代之 sys.numbered_procedure_parameters 的參考。 請勿使用。 每次編譯時發生一次。|  
 |numbered_procedures|遇到了已被取代之 deprecated sys.numbered_procedures 的參考。 請勿使用。 每次編譯時發生一次。|  
-|Oldstyle RAISEERROR|已被取代的 RAISERROR (格式：遇到 RAISERROR 整數字串） 語法。 請使用目前的 RAISERROR 語法重寫陳述式。 每次編譯時發生一次。|  
+|Oldstyle RAISEERROR|遇到了已被取代的 RAISERROR (格式：RAISERROR 整數字串) 語法。 請使用目前的 RAISERROR 語法重寫陳述式。 每次編譯時發生一次。|  
 |隨選連接的 OLEDB。|SQLOLEDB 不是支援的提供者。 請針對隨選連接使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。|  
 |PERMISSIONS|遇到了 PERMISSIONS 內建函數的參考。 請改為查詢 sys.fn_my_permissions。 每次查詢時發生一次。|  
 |ProcNums|遇到了已被取代的 ProcNums 語法。 請重寫陳述式來移除參考。 每次編譯時發生一次。|  
 |READTEXT|遇到 READTEXT 語法。 請重寫應用程式來使用 `varchar(max)` 資料類型及移除 `text` 資料類型語法。 每次查詢時發生一次。|  
-|RESTORE DATABASE 或 LOG WITH DBO_ONLY|RESTORE ...WITH DBO_ONLY 語法。 請改用 RESTORE ...RESTRICTED_USER。|  
-|RESTORE DATABASE 或 LOG WITH MEDIAPASSWORD|RESTORE ...WITH MEDIAPASSWORD 語法。 WITH MEDIAPASSWORD 提供的安全性很弱，應該移除。|  
-|RESTORE DATABASE 或 LOG WITH PASSWORD|RESTORE ...WITH PASSWORD 語法。 WITH PASSWORD 提供的安全性很弱，應該移除。|  
+|RESTORE DATABASE 或 LOG WITH DBO_ONLY|RESTORE .。。遇到 DBO_ONLY 語法。 使用 RESTORE .。。請改為 RESTRICTED_USER。|  
+|RESTORE DATABASE 或 LOG WITH MEDIAPASSWORD|RESTORE .。。遇到 MEDIAPASSWORD 語法。 WITH MEDIAPASSWORD 提供的安全性很弱，應該移除。|  
+|RESTORE DATABASE 或 LOG WITH PASSWORD|RESTORE .。。遇到了 PASSWORD 語法。 WITH PASSWORD 提供的安全性很弱，應該移除。|  
 |從觸發程序傳回結果|每次叫用觸發程序時，都會發生這個事件。 請重寫觸發程序，好讓它不會傳回結果集。|  
 |ROWGUIDCOL|遇到 ROWGUIDCOL 語法。 請重寫陳述式來使用 $rowguid 語法。 每次編譯時發生一次。|  
 |SET ANSI_NULLS OFF|遇到 SET ANSI_NULLS OFF 語法。 請移除這個已被取代的語法。 每次編譯時發生一次。|  
@@ -162,7 +163,7 @@ ms.locfileid: "68206966"
 |sp_control_dbmasterkey_password|sp_control_dbmasterkey_password 預存程序不會檢查主要金鑰是否存在。 這可允許回溯相容性，但是會顯示警告。 這個行為已被取代。 在未來版本中，主要金鑰必須存在，而且預存程序 sp_control_dbmasterkey_password 中使用的密碼必須與用來加密資料庫主要金鑰的其中一個密碼相同。|  
 |sp_create_removable|遇到 sp_create_removable 程序。 請改用 CREATE DATABASE。 每次查詢時發生一次。|  
 |sp_db_vardecimal_storage_format|遇到 `vardecimal` 儲存格式的使用。 請改用資料壓縮。|  
-|sp_dbcmptlevel|遇到 sp_dbcmptlevel 程序。 使用 ALTER DATABASE ...SET COMPATIBILITY_LEVEL。 每次查詢時發生一次。|  
+|sp_dbcmptlevel|遇到 sp_dbcmptlevel 程序。 使用 ALTER DATABASE .。。請改為設定 COMPATIBILITY_LEVEL。 每次查詢時發生一次。|  
 |sp_dbfixedrolepermission|遇到 sp_dbfixedrolepermission 程序。 請勿使用。 每次查詢時發生一次。|  
 |sp_dboption|遇到 sp_dboption 程序。 請改用 ALTER DATABASE 和 DATABASEPROPERTYEX。 每次編譯時發生一次。|  
 |sp_dbremove|遇到 sp_dbremove 程序。 請改用 DROP DATABASE。 每次查詢時發生一次。|  
@@ -251,7 +252,7 @@ ms.locfileid: "68206966"
 |Text in row 資料表選項|遇到 'text in row' 資料表選項的參考。 請改用 sp_tableoption 'large value types out of row'。 每次查詢時發生一次。|  
 |TEXTPTR|遇到 TEXTPTR 函數的參考。 請重寫應用程式來使用 `varchar(max)` 資料類型及移除 `text`、`ntext` 和 `image` 資料類型語法。 每次查詢時發生一次。|  
 |TEXTVALID|遇到 TEXTVALID 函數的參考。 請重寫應用程式來使用 `varchar(max)` 資料類型及移除 `text`、`ntext` 和 `image` 資料類型語法。 每次查詢時發生一次。|  
-|TIMESTAMP|DDL 陳述式中遇到之已被取代的 `timestamp` 資料類型的總次數。 請改用 `rowversion` 資料類型。|  
+|timestamp|DDL 陳述式中遇到之已被取代的 `timestamp` 資料類型的總次數。 請改用 `rowversion` 資料類型。|  
 |UPDATETEXT 或 WRITETEXT|遇到 UPDATETEXT 或 WRITETEXT 陳述式。 請重寫應用程式來使用 `varchar(max)` 資料類型及移除 `text`、`ntext` 和 `image` 資料類型語法。 每次查詢時發生一次。|  
 |USER_ID|遇到 USER_ID 函數的參考。 請改用 DATABASE_PRINCIPAL_ID 函數。 每次編譯時發生一次。|  
 |針對連結的伺服器使用 OLEDB||  
@@ -259,16 +260,16 @@ ms.locfileid: "68206966"
 |XMLDATA|遇到 FOR XML 語法。 針對 RAW 和 AUTO 模式使用 XSD 產生。 明確的模式不會有任何取代項目。 每次編譯時發生一次。|  
 |XP_API|遇到擴充預存程序陳述式。 請勿使用。|  
 |xp_grantlogin|遇到 xp_grantlogin 程序。 請改用 CREATE LOGIN。 每次編譯時發生一次。|  
-|xp_loginconfig|遇到 xp_loginconfig 程序。 請改用 SERVERPROPERTY 的 IsIntegratedSecurityOnly 引數。 每次查詢時發生一次。|  
+|xp_loginConfig|遇到 xp_loginconfig 程序。 請改用 SERVERPROPERTY 的 IsIntegratedSecurityOnly 引數。 每次查詢時發生一次。|  
 |xp_revokelogin|遇到 xp_revokelogin 程序。 請改用 ALTER LOGIN DISABLE 或 DROP LOGIN。 每次編譯時發生一次。|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2014 中已被取代的 Database Engine 功能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ [SQL Server 2014 中已淘汰的資料庫引擎功能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [SQL Server 2014 中已被取代的全文檢索搜尋功能](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
- [Deprecation Announcement 事件類別](../event-classes/deprecation-announcement-event-class.md)   
- [Deprecation Final Support 事件類別](../event-classes/deprecation-final-support-event-class.md)   
- [SQL Server 2014 中已停止的 Database Engine 功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [已停止的 SQL Server 2014 中的全文檢索搜尋功能](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
+ [淘汰公告事件類別](../event-classes/deprecation-announcement-event-class.md)   
+ [淘汰最終支援事件類別](../event-classes/deprecation-final-support-event-class.md)   
+ [SQL Server 2014 中已停止的資料庫引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [SQL Server 2014 中已停止的全文檢索搜尋功能](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
  [使用 SQL Server 物件](use-sql-server-objects.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_create_collector_type (TRANSACT-SQL) |Microsoft Docs
+title: sp_syscollector_create_collector_type （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bd8c82a401f78f4907bb891ede845017c00ac5ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032630"
 ---
-# <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
+# <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  建立資料收集器的收集器型別。 收集器型別是的邏輯包裝[!INCLUDE[ssIS](../../includes/ssis-md.md)]提供實際機制來收集資料，並將它上傳到管理資料倉儲的封裝。  
+  建立資料收集器的收集器型別。 收集器型別是[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝周圍的邏輯包裝函式，可提供實際機制來收集資料，並將它上傳到管理資料倉儲。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,28 +46,28 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @collector_type_uid = ] '*collector_type_uid*'  
- 這是收集器類型的 GUID。 *collector_type_uid 是否*已**uniqueidentifier**而且如果它是的 NULL，它會自動建立並當做 OUTPUT 傳回。  
+ [ @collector_type_uid = ]'*collector_type_uid*'  
+ 這是收集器類型的 GUID。 *collector_type_uid*是**uniqueidentifier** ，而且如果是 Null，則會自動建立並當做輸出傳回。  
   
- [ @name = ] '*name*'  
- 這是收集器類型的名稱。 *名稱*已**sysname**必須加以指定。  
+ [ @name = ]'*name*'  
+ 這是收集器類型的名稱。 *名稱*是**sysname** ，必須指定。  
   
- [ @parameter_schema = ] '*parameter_schema*'  
- 這是此收集器類型的 XML 結構描述。 *parameter_schema*已**xml**預設值是 NULL。  
+ [ @parameter_schema = ]'*parameter_schema*'  
+ 這是此收集器類型的 XML 結構描述。 *parameter_schema*是**xml** ，預設值是 Null。  
   
- [ @parameter_formatter = ] '*parameter_formatter*'  
- 這是用來轉換 XML，以用於收集組屬性頁中的範本。 *parameter_formatter*已**xml**預設值是 NULL。  
+ [ @parameter_formatter = ]'*parameter_formatter*'  
+ 這是用來轉換 XML，以用於收集組屬性頁中的範本。 *parameter_formatter*是**xml** ，預設值是 Null。  
   
- [@collection_package_id = ] *collection_package_id*  
- 這是指向收集組所使用之 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集封裝的本機唯一識別碼。 *collection_package_id*已**uniqueidentifier** ，且需要。  
+ [@collection_package_id = ]*collection_package_id*  
+ 這是指向收集組所使用之 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集封裝的本機唯一識別碼。 *collection_package_id*是**uniqueidentifier** ，而且是必要的。  
   
- [@upload_package_id = ] *upload_package_id*  
- 這是指向收集組所使用之 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 上傳封裝的本機唯一識別碼。 *upload_package_id*已**uniqueidentifier** ，且需要。  
+ [@upload_package_id = ]*upload_package_id*  
+ 這是指向收集組所使用之 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 上傳封裝的本機唯一識別碼。 *upload_package_id*是**uniqueidentifier** ，而且是必要的。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 dc_admin (具有 EXECUTE 權限) 固定資料庫角色中的成員資格，才能執行此程序。  
   
 ## <a name="example"></a>範例  
@@ -110,6 +110,6 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [[資料收集]](../../relational-databases/data-collection/data-collection.md)  
+ [資料收集](../../relational-databases/data-collection/data-collection.md)  
   
   

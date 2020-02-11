@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196837"
 ---
 # <a name="modify-foreign-key-relationships"></a>修改外部索引鍵關聯性
@@ -45,13 +45,15 @@ ms.locfileid: "68196837"
 ###  <a name="Restrictions"></a> 限制事項  
  新的外部索引鍵資料行必須符合其相關主要索引鍵資料行的資料類型和大小，但是例外如下：  
   
--   `char` 資料行或 `sysname` 資料行可以與 `varchar` 資料行相關聯。  
+-   
+  `char` 資料行或 `sysname` 資料行可以與 `varchar` 資料行相關聯。  
   
--   `binary` 資料行可以與 `varbinary` 資料行相關聯。  
+-   
+  `binary` 資料行可以與 `varbinary` 資料行相關聯。  
   
 -   別名資料類型可以與其基底類型相關聯。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
@@ -69,10 +71,10 @@ ms.locfileid: "68196837"
      **選取的關聯性**  
      列出現有的關聯性。 選取關聯性，在右邊方格中顯示其屬性。 如果清單是空的，表示此資料表沒有定義關聯性。  
   
-     **[加入]**  
+     **加入**  
      建立新的關聯性。 [ **資料表及資料行規格** ] 必須在關聯性生效之前設定。  
   
-     **Delete**  
+     **刪除**  
      在 [選取的關聯性]  清單中刪除選取的關聯性。 若要刪除加入的關聯性，請使用此按鈕移除該關聯性。  
   
      **一般類別目錄**  
@@ -139,7 +141,7 @@ ms.locfileid: "68196837"
   
     -   **設為預設值** ：如果資料表的所有外部索引鍵資料行都具有為其所定義的預設值，就可以將值設為資料行所定義的預設值。  
   
-4.  在 [檔案]  功能表上，按一下 [儲存]  _table name_。  
+4.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改外部索引鍵**  
