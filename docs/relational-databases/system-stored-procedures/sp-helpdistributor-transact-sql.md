@@ -16,16 +16,16 @@ ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8333e805c50f4b8084f8463877c361917097b547
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70745387"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  列出有關散發者、散發資料庫、工作目錄和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用者帳戶的資訊。 這個預存程序執行於發行集資料庫或任何資料庫的發行者端。  
+  列出散發者、散發資料庫、工作目錄和[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用者帳戶的相關資訊。 這個預存程序執行於發行集資料庫或任何資料庫的發行者端。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,63 +49,63 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @distributor = ] 'distributor' OUTPUT` 是散發者的名稱。 散發者是**sysname**，預設值是 **%** ，這是唯一會傳回結果集的值。  
+`[ @distributor = ] 'distributor' OUTPUT`這是散發者的名稱。 散發者是**sysname**，預設值是**%**，這是唯一會傳回結果集的值。  
   
-`[ @distribdb = ] 'distribdb' OUTPUT` 是散發資料庫的名稱。 *distribdb*是**sysname**，預設值是 **%** ，這是唯一會傳回結果集的值。  
+`[ @distribdb = ] 'distribdb' OUTPUT`這是散發資料庫的名稱。 *distribdb*是**sysname**，預設值是**%**，這是唯一會傳回結果集的值。  
   
-`[ @directory = ] 'directory' OUTPUT` 是工作目錄。 *目錄*是**Nvarchar （255）** ，預設值是 **%** ，這是唯一會傳回結果集的值。  
+`[ @directory = ] 'directory' OUTPUT`是工作目錄。 *目錄*是**Nvarchar （255）**，預設值是**%**，這是唯一會傳回結果集的值。  
   
-`[ @account = ] 'account' OUTPUT` 是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者帳戶。 *帳戶*是**Nvarchar （255）** ，預設值是 **%** ，這是唯一會傳回結果集的值。  
+`[ @account = ] 'account' OUTPUT`是[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者帳戶。 *帳戶*是**Nvarchar （255）**，預設值是**%**，這是唯一會傳回結果集的值。  
   
-`[ @min_distretention = ] _min_distretentionOUTPUT` 是最小散發保留期限（以小時為單位）。 *min_distretention*是**int**，預設值是 **-1**。  
+`[ @min_distretention = ] _min_distretentionOUTPUT`這是最小散發保留期限（以小時為單位）。 *min_distretention*是**int**，預設值是 **-1**。  
   
-`[ @max_distretention = ] _max_distretentionOUTPUT` 是最大散發保留期限（以小時為單位）。 *max_distretention*是**int**，預設值是 **-1**。  
+`[ @max_distretention = ] _max_distretentionOUTPUT`這是最大散發保留期限（以小時為單位）。 *max_distretention*是**int**，預設值是 **-1**。  
   
-`[ @history_retention = ] _history_retentionOUTPUT` 是歷程記錄保留期限（以小時為單位）。 *history_retention*是**int**，預設值是 **-1**。  
+`[ @history_retention = ] _history_retentionOUTPUT`這是記錄保留期限（以小時為單位）。 *history_retention*是**int**，預設值是 **-1**。  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` 是歷程記錄清除代理程式的名稱。 *history_cleanupagent*是**Nvarchar （100）** ，預設值是 **%** ，這是唯一會傳回結果集的值。  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT`這是記錄清除代理程式的名稱。 *history_cleanupagent*是**Nvarchar （100）**，預設值是**%**，這是唯一會傳回結果集的值。  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` 是散發清除代理程式的名稱。 *distrib_cleanupagent*是**Nvarchar （100）** ，預設值是 **%** ，這是唯一會傳回結果集的值。  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT`這是散發清除代理程式的名稱。 *distrib_cleanupagent*是**Nvarchar （100）**，預設值是**%**，這是唯一會傳回結果集的值。  
   
-`[ @publisher = ] 'publisher'` 是發行者的名稱。 *publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，預設值是 Null。  
   
-`[ @local = ] 'local'` 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否應該取得本機伺服器值。 *local*是**Nvarchar （5）** ，預設值是 Null。  
+`[ @local = ] 'local'`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指是否應該取得本機伺服器值。 *local*是**Nvarchar （5）**，預設值是 Null。  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` 是發出遠端程序呼叫的伺服器名稱。 *rpcsrvname*是**sysname**，預設值是 **%** ，這是唯一會傳回結果集的值。  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT`這是發出遠端程序呼叫的伺服器名稱。 *rpcsrvname*是**sysname**，預設值是**%**，這是唯一會傳回結果集的值。  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT` 是發行者的發行者類型。 *publisher_type*是**sysname**，預設值是 **%** ，這是唯一會傳回結果集的值。  
+`[ @publisher_type = ] 'publisher_type' OUTPUT`這是發行者的發行者類型。 *publisher_type*是**sysname**，預設值是**%**，這是唯一會傳回結果集的值。  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|[名稱]|描述|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**伺服器**|**sysname**|散發者的名稱。|  
 |**散發資料庫**|**sysname**|散發資料庫的名稱。|  
 |**directory**|**nvarchar(255)**|工作目錄的名稱。|  
 |**帳戶**|**nvarchar(255)**|Windows 使用者帳戶的名稱。|  
-|**最低 distrib.exe 保留期**|**int**|最小散發保留期限。|  
-|**最大 distrib.exe 保留期**|**int**|最大散發保留期限。|  
-|**記錄保留期**|**int**|記錄保留期限。|  
-|**歷程記錄清除代理程式**|**Nvarchar （100）**|記錄清除代理程式的名稱。|  
-|**散發清除代理程式**|**Nvarchar （100）**|散發清除代理程式的名稱。|  
-|**rpc 伺服器名稱**|**sysname**|遠端或本機散發者的名稱。|  
-|**rpc 登入名稱**|**sysname**|對遠端散發者的遠端程序呼叫所用的登入。|  
-|**發行者類型**|**sysname**|發行者的類型；它可以是下列項目之一：<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE 閘道**|  
+|**min distrib retention**|**int**|最小散發保留期限。|  
+|**max distrib retention**|**int**|最大散發保留期限。|  
+|**history retention**|**int**|記錄保留期限。|  
+|**history cleanup agent**|**Nvarchar （100）**|記錄清除代理程式的名稱。|  
+|**distribution cleanup agent**|**Nvarchar （100）**|散發清除代理程式的名稱。|  
+|**rpc server name**|**sysname**|遠端或本機散發者的名稱。|  
+|**rpc login name**|**sysname**|對遠端散發者的遠端程序呼叫所用的登入。|  
+|**發行者類型**|**sysname**|發行者的類型；它可以是下列項目之一：<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **sp_helpdistributor**用於所有類型的複寫中。  
   
  如果在執行**sp_helpdistributor**時指定了一或多個輸出參數，則所有設為 Null 的輸出參數都會在結束時指派值，而且不會傳回任何結果集。 如果未指定任何輸出參數，就會傳回結果集。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  下列結果集資料行或輸出參數會傳回給發行者端的**系統管理員（sysadmin** ）固定伺服器角色的成員，以及發行集資料庫的**db_owner**固定資料庫角色：  
   
 |結果集資料行|輸出參數|  
 |-----------------------|----------------------|  
-|account|**\@帳戶**|  
+|帳戶|**\@帳戶**|  
 |min distrib retention|**\@min_distretention**|  
 |max distrib retention|**\@max_distretention**|  
 |history retention|**\@history_retention**|  
@@ -115,20 +115,20 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
  下列結果集資料行會傳回給在散發者端的發行集之發行集存取清單中的使用者：  
   
--   directory  
+-   目錄  
   
  下列結果集資料行會傳回給所有使用者。  
   
 |結果集資料行|輸出參數|  
 |-----------------------|----------------------|  
-|distributor|**\@散發者**|  
+|distributor|**\@伺服器**|  
 |distribution database|**\@distribdb**|  
 |rpc server name|**\@rpcsrvname**|  
 |publisher type|**\@publisher_type**|  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistpublisher &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
+ [sp_adddistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
   
   
