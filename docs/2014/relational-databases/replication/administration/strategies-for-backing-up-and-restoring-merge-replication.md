@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62688907"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>備份與還原合併式複寫的策略
@@ -30,7 +30,7 @@ ms.locfileid: "62688907"
 -   每個訂閱者端的訂閱資料庫    
 -   發行者、散發者及所有訂閱者端的 **master** 與 **msdb** 系統資料庫。 這些資料庫應與其他每個及相關的複寫資料庫同時備份。 例如，在您備份發行集資料庫的同時，在發行者端備份 **master** 與 **msdb** 資料庫。 還原發行集資料庫時，請確定 **master** 與 **msdb** 資料庫的複寫組態與設定和發行集資料庫一致。  
   
- 如果您執行一般記錄備份，就必須在記錄備份中擷取任何複寫相關的變更。 如果您沒有執行記錄備份，每當與複寫相關的設定有所變更，就應該執行備份。 如需相關資訊，請參閱 [需要更新之備份的常見動作](common-actions-requiring-an-updated-backup.md)。  
+ 如果您執行一般記錄備份，就必須在記錄備份中擷取任何複寫相關的變更。 如果您沒有執行記錄備份，每當與複寫相關的設定有所變更，就應該執行備份。 如需相關資訊，請參閱 [Common Actions Requiring an Updated Backup](common-actions-requiring-an-updated-backup.md)。  
   
  選擇下面詳述的方法之一，以備份與還原發行集資料庫，然後遵循為散發資料庫與訂閱資料庫列出的建議。  
   
@@ -51,12 +51,12 @@ ms.locfileid: "62688907"
   
 -   如果發行集未篩選，您可以透過與最新的「訂閱者」進行同步處理，使發行集資料庫處於最新狀態。  
   
--   如果發行集已篩選，則可能無法使發行集資料庫處於最新狀態。 請思考一下一個已進行資料分割的資料表，其中資料分割方式使得每個訂閱只會收到下列單一地區的客戶資料：北區、東區、南區及西區。 如果每個資料分割至少有一個「訂閱者」，則與每個資料分割的「訂閱者」進行同步處理就可使發行集資料庫處於最新狀態。 不過，如果在「西區」資料分割中的資料未複寫到任何「訂閱者」(舉例來說)，則「發行者」端的此資料將無法處於最新狀態。  
+-   如果發行集已篩選，則可能無法使發行集資料庫處於最新狀態。 請考慮進行資料分割的資料表，這樣可以使每個訂閱僅接收單一地區 (「北區」、「南區」、「東區」和「西區」) 客戶資料。 如果每個資料分割至少有一個「訂閱者」，則與每個資料分割的「訂閱者」進行同步處理就可使發行集資料庫處於最新狀態。 不過，如果在「西區」資料分割中的資料未複寫到任何「訂閱者」(舉例來說)，則「發行者」端的此資料將無法處於最新狀態。  
   
 > [!IMPORTANT]  
 >  同步處理發行集資料庫與訂閱資料庫，可能會導致發行的資料表還原到的時間點比從備份處還原的其他未發行的資料表的時間點要新。  
   
- 如果同步處理的「訂閱者」執行的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本早於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，則訂閱不可是匿名的，而必須是客訂閱或主訂閱 (在之前的版本中稱為本機訂閱與全域訂閱)。  
+ 如果同步處理的「訂閱者」所執行的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本早於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，則訂閱不可是匿名的，而必須是客訂閱或主訂閱 (在之前的版本中稱為本機訂閱與全域訂閱)。  
   
  若要同步處理訂閱，請參閱＜ [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) ＞和＜ [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md)＞。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62688907"
   
  若要設定發行集保留期限，請參閱[設定訂閱的逾期期限](../publish/set-the-expiration-period-for-subscriptions.md)。  
   
- 若要同步處理訂閱，請參閱＜ [同步處理發送訂閱](../synchronize-a-push-subscription.md) ＞和＜ [同步處理提取訂閱](../synchronize-a-pull-subscription.md) ＞。  
+ 若要同步處理訂閱，請參閱＜ [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) ＞和＜ [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md)＞。  
   
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>備份與還原重新發行資料庫  
  當資料庫從「發行者」來訂閱資料並轉而將相同的資料發行至其他訂閱資料庫時，該資料庫便是一個重新發行集資料庫。 還原重新發行的資料庫時，請遵循本主題中＜備份與還原發行集資料庫＞以及＜備份與還原訂閱資料庫＞兩節所描述的指導方針。  

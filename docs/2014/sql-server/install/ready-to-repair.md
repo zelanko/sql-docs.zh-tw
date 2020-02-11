@@ -1,5 +1,5 @@
 ---
-title: 已完成修復準備 |Microsoft Docs
+title: 準備修復 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d1dcc44c8d9892bb6dee31b5cebd4be73037cf0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093295"
 ---
 # <a name="ready-to-repair"></a>已完成修復準備工作
   [已完成修復準備工作] 頁面會提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式之修復程序的摘要。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  這個頁面含有下列選項：  
   
--   若要繼續安裝，請按一下 **[修復]** 。  
+-   若要繼續安裝，請按一下 **[修復]**。  
   
--   若要變更安裝設定，請按 **[上一步]** 。  
+-   若要變更安裝設定，請按 **[上一步]**。  
   
--   若要結束安裝程式，請按一下 **[取消]** 。  
+-   若要結束安裝，請按一下 [**取消**]  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視與讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
