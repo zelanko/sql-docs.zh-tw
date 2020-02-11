@@ -10,20 +10,20 @@ ms.assetid: 12adc059-ad8e-4bc9-9693-79cc3e7eaff0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a85e9253eab47e445943e2d0a49972bd86f4b1b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127011"
 ---
-# <a name="localdberrorversionrequestednotinstalled"></a>LOCALDB_ERROR_VERSION_REQUESTED_NOT_INSTALLED
+# <a name="localdb_error_version_requested_not_installed"></a>LOCALDB_ERROR_VERSION_REQUESTED_NOT_INSTALLED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|273|  
 |事件來源|SQL Server 本機資料庫執行階段 12.0|  
 |元件|本機資料庫執行階段 API|  

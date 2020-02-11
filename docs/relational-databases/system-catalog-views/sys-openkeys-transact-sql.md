@@ -1,5 +1,5 @@
 ---
-title: sys.openkeys & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.openkeys （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f1ef2a7b5bdff79c3d12441f09ab2a05439f7a61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125384"
 ---
 # <a name="sysopenkeys-transact-sql"></a>sys.openkeys (Transact-SQL)
@@ -40,9 +40,9 @@ ms.locfileid: "68125384"
 |**key_name**|**sysname**|金鑰的名稱。 在資料庫中，這是唯一的。|  
 |**key_guid**|**varbinary**|金鑰的 GUID。 在資料庫中，這是唯一的。|  
 |**opened_date**|**datetime**|開啟金鑰的日期和時間。|  
-|**status**|**int**|如果金鑰在中繼資料中為有效則為 1。 如果在中繼資料中找不到金鑰則為 0。|  
+|**狀態**|**int**|如果金鑰在中繼資料中為有效則為 1。 如果在中繼資料中找不到金鑰則為 0。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  

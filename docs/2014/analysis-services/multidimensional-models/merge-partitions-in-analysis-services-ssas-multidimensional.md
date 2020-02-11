@@ -1,5 +1,5 @@
 ---
-title: 合併 Analysis Services (SSAS-多維度) 中的資料分割 |Microsoft Docs
+title: 合併 Analysis Services 中的資料分割（SSAS-多維度） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,35 +14,35 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073653"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>在 Analysis Services 中合併分割區 (SSAS - 多維度)
   您可以合併現有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的資料分割，以合併相同量值群組中之多個資料分割的事實資料。  
   
- [常見的案例](#bkmk_Scenario)  
+ [常見案例](#bkmk_Scenario)  
   
  [需求](#bkmk_prereq)  
   
- [合併分割區之後更新分割區來源](#bkmk_Where)  
+ [在合併分割區之後更新分割區來源](#bkmk_Where)  
   
- [依事實資料表或具名查詢分割分割區的特殊考量](#bkmk_fact)  
+ [依事實資料表或命名查詢分割之資料分割的特殊考慮](#bkmk_fact)  
   
  [如何使用 SSMS 合併分割區](#bkmk_partitionSSMS)  
   
- [如何使用 XMLA 合併分割區](#bkmk_partitionsXMLA)  
+ [如何使用 XMLA 合併資料分割](#bkmk_partitionsXMLA)  
   
-##  <a name="bkmk_Scenario"></a> 常見的案例  
+##  <a name="bkmk_Scenario"></a>常見案例  
  針對分割區使用的單一最常見組態，牽涉到跨時間維度的資料分離。 視專案特定的商務需求而定，與每個分割區相關聯的時間資料粒度會有所不同。 例如，分割可能是依年份，並依月份分割最近的年份，再加上使用中之月份的個別分割區。 使用中月份分割區會定期顯示新資料。  
   
  當使用中的月份完成時，該分割區會合併回年初至今分割區中的月份，然後繼續進行。 在年份結束時，就會形成完整的新年度分割區。  
   
  如此案例所示，合併分割區可成為定期執行的例行工作，以提供漸進的方法來合併及組織歷程記錄資料。  
   
-##  <a name="bkmk_prereq"></a> 需求  
+##  <a name="bkmk_prereq"></a>滿足  
  只能合併符合下列所有準則的分割區：  
   
 -   它們有相同的量值群組。  
@@ -66,7 +66,7 @@ ms.locfileid: "66073653"
   
  若要建立未來適合進行合併的分割區，當您在分割區精靈中建立分割區時，您可以選擇從 Cube 的另一個分割區來複製彙總設計。 這樣可以確保這些分割區具有相同的彙總設計。 進行合併時，來源分割區的彙總會與目標分割區中的彙總結合。  
   
-##  <a name="bkmk_Where"></a> 合併分割區之後更新分割區來源  
+##  <a name="bkmk_Where"></a>在合併分割區之後更新分割區來源  
  分割區會依查詢 (例如用於處理資料之 SQL 查詢的 WHERE 子句) 分割，或依資料表或具名查詢分割，以提供資料給分割區。 分割區的 `Source` 屬性指出分割區繫結至查詢或資料表。  
   
  當您合併分割區時，會合併分割區的內容，但不會更新 `Source` 屬性以反映其他分割區的範圍。 這表示如果您後續重新處理保留其原始 `Source` 的分割區，會從該分割區取得不正確的資料。 分割區會錯誤地在父層級彙總資料。 下列範例說明此行為。  
@@ -75,7 +75,7 @@ ms.locfileid: "66073653"
   
  假設您有包含關於 3 種飲料產品之資訊的 Cube。 其有 3 個使用相同事實資料表的分割區。 這些分割區已依產品分割。 資料分割 1 包含關於 [ColaFull] 的資料，資料分割 2 包含關於 [ColaDecaf] 的資料，資料分割 3 包含關於 [ColaDiet] 的資料。 如果資料分割 3 合併到資料分割 2，則所產生的資料分割 (資料分割 2) 中的資料是正確的，且 Cube 資料是精確的。 不過，在處理資料分割 2 時，其內容可能是由產品層級之成員的父成員來決定。 這個父成員 [SoftDrinks] 也包含資料分割 1 的產品 [ColaFull]。 處理資料分割 2 時會將所有飲料的資料載入資料分割，包括 [ColaFull] 在內。 於是 Cube 會包含 [ColaFull] 的重複資料，並傳回不正確資料給使用者。  
   
- **方案**  
+ **解決方案**  
   
  解決方法是更新 `Source` 屬性，您可以調整 WHERE 子句或具名查詢，或者手動合併基礎事實資料表中的資料，以在分割區範圍擴充的情況下，確保後續處理正確。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66073653"
   
  合併分割區之後，請務必檢查 `Source` 以確認篩選對於合併的資料是正確的。 如果您的分割區一開始包含 Q1、Q2 和 Q3 的歷程記錄資料，且您現在想合併 Q4，則必須調整篩選以加入 Q4。 否則，分割區的後續處理將產生錯誤的結果。 此結果對於 Q4 而言將不正確。  
   
-##  <a name="bkmk_fact"></a> 依事實資料表或具名查詢分割分割區的特殊考量  
+##  <a name="bkmk_fact"></a>依事實資料表或命名查詢分割之資料分割的特殊考慮  
  除了查詢之外，也可依資料表或具名查詢分割分割區。 如果來源分割區和目標分割區使用資料來源或資料來源檢視中的相同事實資料表，`Source` 屬性會在合併分割區之後生效。 它會指定適合結果分割區的事實資料表資料。 由於事實資料表中已存在結果分割區所需的事實，因此不需要修改 `Source` 屬性。  
   
  使用多個事實資料表或具名查詢中資料的分割區需要執行額外的工作。 您必須手動將來源分割區的事實資料表中的事實，合併到目標分割區的事實資料表。  
@@ -110,34 +110,34 @@ ms.locfileid: "66073653"
   
  事實資料表可以在合併分割區之前或之後合併。 然而，只有在兩個作業都完成後，彙總才能正確地代表基礎事實。 當使用者未連接到包含這些分割區的 Cube 時，建議您合併存取不同事實資料表的 HOLAP 或 ROLAP 分割區。  
   
-##  <a name="bkmk_partitionSSMS"></a> 如何使用 SSMS 合併分割區  
+##  <a name="bkmk_partitionSSMS"></a>如何使用 SSMS 合併分割區  
   
 > [!IMPORTANT]  
 >  合併分割區之前，請先複製資料篩選資訊 (通常是根據 SQL 查詢篩選的 WHERE 子句)。 在完成合併之後，您應該更新包含累積事實資料之分割區的 Partition Source 屬性。  
   
-1.  在物件總管中，展開包含您要合併的資料分割之 Cube 的 [量值群組] 節點，然後展開 [資料分割]，再以滑鼠右鍵按一下合併作業的目標或目的地資料分割。 例如，如果您要將季度事實資料移至儲存年度事實資料的分割區，請選取包含年度事實資料的分割區。  
+1.  在物件總管中，展開包含您要合併的資料分割之 Cube 的 [量值群組]**** 節點，然後展開 [資料分割]****，再以滑鼠右鍵按一下合併作業的目標或目的地資料分割。 例如，如果您要將季度事實資料移至儲存年度事實資料的分割區，請選取包含年度事實資料的分割區。  
   
-2.  按一下 [**合併資料分割**以開啟**合併資料分割\<分割區名稱 >** ] 對話方塊。  
+2.  按一下 [**合併**資料分割]，開啟 [**合併資料分割\<分割區名稱>** ] 對話方塊。  
   
-3.  在 [來源資料分割] 下，選取要與目標資料分割合併之每個來源資料分割旁的核取方塊，然後按一下 [確定]。  
+3.  在 [來源資料分割]**** 下，選取要與目標資料分割合併之每個來源資料分割旁的核取方塊，然後按一下 [確定]****。  
   
     > [!NOTE]  
     >  當來源合併到目標分割區之後，會立即刪除來源分割區。 完成合併之後，請重新整理 [分割區] 資料夾以更新其內容。  
   
-4.  以滑鼠右鍵按一下包含累積資料的資料分割，然後選取 [屬性]。  
+4.  以滑鼠右鍵按一下包含累積資料的資料分割，然後選取 [屬性]****。  
   
-5.  開啟`Source`屬性並修改 WHERE 子句，使其包含剛才合併的分割區資料。 請記得，`Source`屬性不會自動更新。 如果您重新處理而未先更新`Source`，您可能無法取得所有預期的資料。  
+5.  開啟`Source`屬性並修改 WHERE 子句，使其包含剛才合併的分割區資料。 回想一下， `Source`此屬性不會自動更新。 如果您重新處理而未先`Source`更新，您可能無法取得所有預期的資料。  
   
-##  <a name="bkmk_partitionsXMLA"></a> 如何使用 XMLA 合併分割區  
+##  <a name="bkmk_partitionsXMLA"></a>如何使用 XMLA 合併資料分割  
  如需詳細資訊，請參閱此主題：[合併資料分割 &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [處理 Analysis Services 物件](processing-analysis-services-objects.md)   
- [資料分割 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [建立及管理本機資料分割 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [建立及管理遠端資料分割 &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   
+ [分割區 &#40;Analysis Services 多維度資料&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [建立和管理本機資料分割 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
+ [建立和管理遠端資料分割 &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   
  [設定分割區回寫](set-partition-writeback.md)   
- [可寫入的資料分割](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [可寫入的磁碟分割](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [設定維度及分割區的字串存放區](configure-string-storage-for-dimensions-and-partitions.md)  
   
   

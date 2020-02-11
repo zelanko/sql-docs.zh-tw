@@ -1,5 +1,5 @@
 ---
-title: sys.server_event_session_actions (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases server_event_session_actions （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 50ba26f679dd6a3040dea242127661bf7d954a5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124934"
 ---
-# <a name="sysservereventsessionactions-transact-sql"></a>sys.server_event_session_actions (Transact-SQL)
+# <a name="sysserver_event_session_actions-transact-sql"></a>sys.server_event_session_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   針對事件工作階段之每個事件的每個動作傳回資料列。  
@@ -36,11 +36,11 @@ ms.locfileid: "68124934"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件工作階段的識別碼。 不可為 Null。|  
 |event_id|**int**|事件的識別碼。 這個識別碼在事件工作階段物件中是唯一的。 不可為 Null。|  
-|name|**sysname**|動作的名稱。 可為 Null。|  
-|封裝|**sysname**|包含此事件之事件封裝的名稱。 可為 Null。|  
+|NAME|**sysname**|動作的名稱。 可為 Null。|  
+|套件|**sysname**|包含此事件之事件封裝的名稱。 可為 Null。|  
 |module|**sysname**|包含此事件之模組的名稱。 可為 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ## <a name="remarks"></a>備註  
@@ -48,7 +48,7 @@ ms.locfileid: "68124934"
   
 ||||  
 |-|-|-|  
-|來源|若要|關聯性|  
+|從|至|關聯性|  
 |sys.server_event_session_actions.event_session_id|sys.sys.server_event_sessions.event_session_id|多對一|  
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|多對一|  
   
