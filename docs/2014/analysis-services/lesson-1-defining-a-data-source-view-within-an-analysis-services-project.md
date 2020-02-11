@@ -1,5 +1,5 @@
 ---
-title: 第 1 課：定義資料來源檢視中的 Analysis Services 專案 |Microsoft Docs
+title: 第1課：在 Analysis Services 專案中定義資料來源視圖 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d4d24f9049c2fd68e827664ecb07393262d8bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079213"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>第 1 課：在 Analysis Services 專案內定義資料來源檢視
@@ -41,9 +41,9 @@ ms.locfileid: "66079213"
   
 ## <a name="see-also"></a>另請參閱  
  [建立 Analysis Services 專案 &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)   
- [支援的資料來源&#40;SSAS 多維度&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
- [多維度模型中的資料來源檢視](multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [&#40;SSAS 多維度&#41;支援的資料來源](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
+ [多維度模型中的資料來源視圖](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Analysis Services 教學課程案例](analysis-services-tutorial-scenario.md)   
- [多維度模型化 &#40;Adventure Works 教學課程&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [多維度模型化 &#40;的艾德作品教學課程&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

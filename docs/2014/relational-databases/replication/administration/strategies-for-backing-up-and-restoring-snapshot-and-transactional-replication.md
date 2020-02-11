@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210779"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>備份與還原快照式和異動複寫的策略
@@ -117,7 +117,7 @@ ms.locfileid: "68210779"
   
          如需如何執行散發代理程式的詳細資訊，請參閱[啟動及停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 與[複寫代理程式可執行檔概念](../concepts/replication-agent-executables-concepts.md)。  
   
-         如需如何確認命令的詳細資訊，請參閱[檢視複寫的命令和散發資料庫中的其他資訊&#40;Replication TRANSACT-SQL Programming&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md)並[檢視資訊並執行的工作，使用 「 複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+         如需如何驗證命令的詳細資訊，請參閱在[散發資料庫中查看複寫的命令和其他資訊 &#40;複寫 transact-sql 程式設計&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)和[使用複寫監視器來查看資訊及執行](../monitor/view-information-and-perform-tasks-replication-monitor.md)工作。  
   
     2.  從「發行者」、「散發者」及「訂閱者」端移除複寫組態，然後重新建立組態。 重新建立訂閱時，請指定「訂閱者」已經擁有該資料。 還原即可完成。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "68210779"
   
          如需如何執行散發代理程式的詳細資訊，請參閱[啟動及停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 與[複寫代理程式可執行檔概念](../concepts/replication-agent-executables-concepts.md)。  
   
-         如需如何確認命令的詳細資訊，請參閱[檢視複寫的命令和散發資料庫中的其他資訊&#40;Replication TRANSACT-SQL Programming&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md)並[檢視資訊並執行的工作，使用 「 複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+         如需如何驗證命令的詳細資訊，請參閱在[散發資料庫中查看複寫的命令和其他資訊 &#40;複寫 transact-sql 程式設計&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)和[使用複寫監視器來查看資訊及執行](../monitor/view-information-and-perform-tasks-replication-monitor.md)工作。  
   
     2.  使用 [tablediff 公用程式](../../../tools/tablediff-utility.md) 或其他工具來手動同步化發行者與訂閱者。 如此可讓您從訂閱資料庫中，復原沒有包含在發行集資料庫備份中的資料。 移至步驟 c。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "68210779"
   
          如需有關如何指定訂閱者已經擁有該資料的詳細資訊，請參閱＜ [Initialize a Subscription Manually](../initialize-a-subscription-manually.md)＞。  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>發行集資料庫：具有更新訂閱的異動複寫  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>發行集資料庫：具有可更新訂閱的異動複寫  
   
 1.  還原最新的發行集資料庫備份。 移至步驟 2。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "68210779"
   
      如需如何執行散發代理程式的詳細資訊，請參閱[啟動及停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 與[複寫代理程式可執行檔概念](../concepts/replication-agent-executables-concepts.md)。  
   
-     如需如何確認命令的詳細資訊，請參閱[檢視複寫的命令和散發資料庫中的其他資訊&#40;Replication TRANSACT-SQL Programming&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md)並[檢視資訊並執行的工作，使用 「 複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     如需如何驗證命令的詳細資訊，請參閱在[散發資料庫中查看複寫的命令和其他資訊 &#40;複寫 transact-sql 程式設計&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)和[使用複寫監視器來查看資訊及執行](../monitor/view-information-and-perform-tasks-replication-monitor.md)工作。  
   
 3.  如要使用佇列更新訂閱，請連接到各訂閱者，並從訂閱資料庫的 [MSreplication_queue &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msreplication-queue-transact-sql) 資料表中刪除所有資料列。 移至步驟 4。  
   
@@ -205,19 +205,19 @@ ms.locfileid: "68210779"
   
     1.  在資料庫 **B** 上重新建立發行集。移至步驟 b。  
   
-    2.  重新建立資料庫 **B** 的發行集之資料庫 **A**的訂閱，指定該訂閱應使用備份 ( **sp_addsubscription** 之 **@sync_type** 參數的 [initialize with backup](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)值) 來初始化。 移至步驟 c。  
+    2.  在資料庫**A**的發行集上，重新建立資料庫**B**的訂閱，指定應使用備份來初始化訂閱（ [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)的參數的值為 [ **@sync_type** **initialize with backup** ]）。 移至步驟 c。  
   
-    3.  重新建立資料庫 **A** 的發行集之資料庫 **B**的訂閱，指定「訂閱者」已擁有資料 ( **sp_addsubscription** 之 **@sync_type** 參數的 [initialize with backup](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)值) 來初始化。 移至步驟 8。  
+    3.  重新建立資料庫**B**的發行集之資料庫**A**的訂閱，指定「訂閱者」已擁有資料（**僅限** **@sync_type** [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)的參數的 replication 支援值）。 移至步驟 8。  
   
 8.  執行散發代理程式，以便同步處理資料庫 **A** 和 **B** 中的訂閱。如果已發行資料表中有任何識別資料行，則移至步驟 9。 若為否，請移至步驟 10。  
   
 9. 還原之後，您針對資料庫 **A** 中的每一個資料表指派的識別範圍也會在資料庫 **B** 中使用。請確保還原的資料庫 **B** 已接收到來自失敗資料庫 **B** 中已傳播至資料庫 **A** 和資料庫 **C** 的所有變更；然後為每個資料表的識別範圍重設種子資料。  
   
-    1.  在資料庫 [B](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) 中還原資料庫 **B** ，並擷取輸出參數 **@request_id** ＞。 移至步驟 b。  
+    1.  在資料庫**B**上執行[sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) ，並取出 output **@request_id**參數。 移至步驟 b。  
   
     2.  依預設，「散發代理程式」設定為連續執行；因此 Token 應該會自動傳送到所有的節點。 如果散發代理程式並非以連續模式執行，請執行代理程式。 如需詳細資訊，請參閱[複寫代理程式可執行檔概念](../concepts/replication-agent-executables-concepts.md)或[啟動和停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)。 移至步驟 c。  
   
-    3.  在資料庫 [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)，提供步驟 b 中所擷取的 **@request_id** 值。 請稍候，直到所有節點都指示已經收到對等要求為止。 移至步驟 d。  
+    3.  執行[sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)，提供在**@request_id**步驟 b 中取得的值。 請稍候，直到所有節點都指示已經收到對等要求為止。 移至步驟 d。  
   
     4.  使用 [DBCC CHECKIDENT](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql) 重設資料庫 **B** 上每個資料表的種子資料，以確保使用適當的範圍。 移至步驟 10。  
   
@@ -229,11 +229,11 @@ ms.locfileid: "68210779"
   
     1.  停止點對點拓撲中已發行資料表上的所有活動。 移至步驟 b。  
   
-    2.  在資料庫 [B](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) 中還原資料庫 **B** ，並擷取輸出參數 **@request_id** ＞。 移至步驟 c。  
+    2.  在資料庫**B**上執行[sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) ，並取出 output **@request_id**參數。 移至步驟 c。  
   
     3.  依預設，「散發代理程式」設定為連續執行；因此 Token 應該會自動傳送到所有的節點。 如果散發代理程式並非以連續模式執行，請執行代理程式。 移至步驟 d。  
   
-    4.  在資料庫 [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)，提供步驟 b 中所擷取的 **@request_id** 值。 請稍候，直到所有節點都指示已經收到對等要求為止。 移至步驟 e。  
+    4.  執行[sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)，提供在**@request_id**步驟 b 中取得的值。 請稍候，直到所有節點都指示已經收到對等要求為止。 移至步驟 e。  
   
     5.  重新建立資料庫 **C** 的發行集之資料庫 **B**的訂閱，指定「訂閱者」已具有資料。 移至步驟 b。  
   
@@ -243,7 +243,7 @@ ms.locfileid: "68210779"
   
     1.  在資料庫 **B**中查詢 [MSpeer_lsns](/sql/relational-databases/system-tables/mspeer-lsns-transact-sql) 資料表，以擷取資料庫 **B** 已從資料庫 **C**所接收之最新交易的記錄序號。  
   
-    2.  重新建立資料庫 **B** 的發行集之資料庫 **C**的訂閱，指定該訂閱應依據 LSN ( **sp_addsubscription** 之 **@sync_type** 參數的 [initialize with backup](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)值) 來初始化。 移至步驟 b。  
+    2.  在資料庫**C**的發行集上，重新建立資料庫**B**的訂閱，指定應根據 LSN 初始化訂閱（ [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)之**@sync_type**參數的**initialize from lsn**值）。 移至步驟 b。  
   
     3.  重新建立資料庫 **B** 的發行集之資料庫 **C**的訂閱，指定「訂閱者」已具有資料。 移至步驟 13。  
   
@@ -321,7 +321,7 @@ ms.locfileid: "68210779"
   
 2.  還原最新一次訂閱資料庫備份。 移至步驟 3。  
   
-3.  如果訂閱資料庫僅包含發送訂閱，請移至步驟 4。 如果訂閱資料庫包含任何提取訂閱，請詢問下列問題：是最新的訂用帳戶資訊？ 資料庫包含所有在失敗時所設定的資料表和選項嗎？ 如果是，則移至步驟 4。 如果否，請重新初始化該項訂閱。 復原即可完成。  
+3.  如果訂閱資料庫僅包含發送訂閱，請移至步驟 4。 如果訂閱資料庫包含任何提取訂閱，請詢問下列問題：訂閱資訊是最新的嗎？ 資料庫包含所有在失敗時所設定的資料表和選項嗎？ 如果是，則移至步驟 4。 如果否，請重新初始化該項訂閱。 復原即可完成。  
   
 4.  若要同步處理「訂閱者」，請執行「散發代理程式」。 復原即可完成。  
   
@@ -350,7 +350,7 @@ ms.locfileid: "68210779"
  [備份及還原複寫的資料庫](back-up-and-restore-replicated-databases.md)   
  [[設定散發]](../configure-distribution.md)   
  [發行資料和資料庫物件](../publish/publish-data-and-database-objects.md)   
- [訂閱發行集](../subscribe-to-publications.md)   
+ [Subscribe to Publications](../subscribe-to-publications.md)   
  [初始化訂閱](../initialize-a-subscription.md)   
  [同步處理資料](../synchronize-data.md)  
   

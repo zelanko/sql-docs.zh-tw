@@ -12,10 +12,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9669686d0163b9ce1c362e7cdf2814c7a95bfaa8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727110"
 ---
 # <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>教學課程：使用 SQL Server 機器學習服務在 Python 中建立模型以分類客戶
@@ -31,7 +31,7 @@ ms.locfileid: "73727110"
 > * 執行叢集
 > * 分析結果
 
-在[第一部分](python-clustering-model.md)，您已安裝必要條件並還原範例資料庫。
+在[第一部分](python-clustering-model.md)中，您已安裝必要條件並還原範例資料庫。
 
 在[第二部分](python-clustering-model-prepare-data.md)，您已了解如何準備 SQL 資料庫中的資料，以執行叢集。
 

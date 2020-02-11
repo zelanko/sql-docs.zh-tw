@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298624"
 ---
 # <a name="use-column-sets"></a>使用資料行集
@@ -25,7 +25,7 @@ ms.locfileid: "63298624"
   
  當資料表中的資料行數目很大，而且個別操作資料行很麻煩時，您應該考慮使用資料行集。 當應用程式在擁有許多資料行的資料表上使用資料行集來選取及插入資料時，可能會看到一些效能上的改善。 但是，當資料表中的資料行上定義許多索引時，資料行集的效能可能會降低。 這是因為執行計畫所需的記憶體數量增加的緣故。  
   
- 若要定義資料行集，請在 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 或 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 陳述式中使用 *<資料行集名稱>* FOR ALL_SPARSE_COLUMNS 關鍵字。  
+ 若要定義資料行集，請在 *CREATE TABLE* 或 [ALTER TABLE](/sql/t-sql/statements/create-table-transact-sql) 陳述式中使用 [<資料行集名稱>](/sql/t-sql/statements/alter-table-transact-sql) FOR ALL_SPARSE_COLUMNS 關鍵字。  
   
 ## <a name="guidelines-for-using-column-sets"></a>使用資料行集的指導方針  
  使用資料行集時，請考慮下列指導方針：  
@@ -106,10 +106,11 @@ GO
   
  在此範例中， `i`資料行未指定任何值，但是插入了 `0` 的值。  
   
-## <a name="using-the-sqlvariant-data-type"></a>使用 sql_variant 資料類型  
- `sql_variant` 資料類型可以儲存多種不同的資料類型，例如 `int`、`char` 和 `date`。 資料行集會將與 `sql_variant` 值相關的資料類型資訊 (如地區設定、有效位數和地區設定資訊) 輸出為產生之 XML 資料行內的屬性。 如果您嘗試在自訂產生的 XML 陳述式內提供這些屬性當做資料行集上插入或更新作業的輸入，某些屬性會是必要的，而且其中一些屬性會指派預設值。 下表列出當未提供值時，伺服器所產生的資料類型和預設值。  
+## <a name="using-the-sql_variant-data-type"></a>使用 sql_variant 資料類型  
+ 
+  `sql_variant` 資料類型可以儲存多種不同的資料類型，例如 `int`、`char` 和 `date`。 資料行集會將與 `sql_variant` 值相關的資料類型資訊 (如地區設定、有效位數和地區設定資訊) 輸出為產生之 XML 資料行內的屬性。 如果您嘗試在自訂產生的 XML 陳述式內提供這些屬性當做資料行集上插入或更新作業的輸入，某些屬性會是必要的，而且其中一些屬性會指派預設值。 下表列出當未提供值時，伺服器所產生的資料類型和預設值。  
   
-|資料類型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大長度|有效位數|小數位數|  
+|資料類型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大長度|Precision|調整|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |`char`, `varchar`, `binary`|-1|'Default'|0|0|8000|不適用**|不適用|  
 |`nvarchar`|-1|'Default'|0|0|4000|不適用|不適用|  
@@ -118,10 +119,11 @@ GO
 |`datetime2`|不適用|不適用|不適用|不適用|不適用|不適用|7|  
 |`datetime offset`|不適用|不適用|不適用|不適用|不適用|不適用|7|  
 |`datetime`, `date`, `smalldatetime`|不適用|不適用|不適用|不適用|不適用|不適用|不適用|  
-|`money`、 `smallmoney`|不適用|不適用|不適用|不適用|不適用|不適用|不適用|  
+|`money`, `smallmoney`|不適用|不適用|不適用|不適用|不適用|不適用|不適用|  
 |`time`|不適用|不適用|不適用|不適用|不適用|不適用|7|  
   
- \*  localeID -1 表示預設地區設定。 英文地區設定是 1033。  
+ 
+  \*  localeID -1 表示預設地區設定。 英文地區設定是 1033。  
   
  **  不適用 = 在資料行集上的選取作業期間，沒有任何值是這些屬性的輸出。 當提供給插入或更新作業內資料行集的 XML 表示中的呼叫端指定這個屬性的值時，將會產生錯誤。  
   

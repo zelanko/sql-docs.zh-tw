@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889228"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services 與 AlwaysOn 可用性群組
@@ -28,9 +28,9 @@ ms.locfileid: "68889228"
   
  使用支援表格式資料流 (TDS) 通訊協定 7.4 版或更新版本的資料提供者，例如 SQL Server Native Client 11.0 或 .NET Framework 4.02 的 Data Provider for SQL Server。  
   
- **(適用於唯讀工作負載)** 。 您必須設定唯讀連接的次要複本角色，可用性群組必須具有路由清單，且 Analysis Services 資料來源中的連接必須指定可用性群組接聽程式。 本主題將提供指示。  
+ **（適用于唯讀工作負載）**。 您必須設定唯讀連接的次要複本角色，可用性群組必須具有路由清單，且 Analysis Services 資料來源中的連接必須指定可用性群組接聽程式。 本主題將提供指示。  
   
-##  <a name="bkmk_UseSecondary"></a> 檢查清單：僅針對唯讀作業使用次要複本  
+##  <a name="bkmk_UseSecondary"></a>檢查清單：針對唯讀作業使用次要複本  
  除非 Analysis Services 解決方案包含回寫，否則您可以設定資料來源連接使用可讀取的次要複本。 如果具有快速網路連接，次要複本的資料延遲會很低，因此提供與主要複本幾乎相同的資料。 透過使用次要複本進行 Analysis Services 作業，您可以降低主要複本的讀寫競爭，並更善用可用性群組中的次要複本。  
   
  預設允許與主要複本之間的讀寫和讀取意圖的存取，但是不允許連接次要複本。 次要複本的唯讀用戶端連接需要進行其他組態設定。 這些組態設定需要設定次要複本的屬性，以及執行定義唯讀路由清單的 T-SQL 指令碼。 使用下列程序，以確保您已經執行這兩個步驟。  
@@ -47,17 +47,17 @@ ms.locfileid: "68889228"
   
 2.  依序展開 **[AlwaysOn 高可用性]** 節點和 **[可用性群組]** 節點。  
   
-3.  按一下要變更複本的可用性群組。 展開 **[可用性複本]** 。  
+3.  按一下要變更複本的可用性群組。 展開 **[可用性複本]**。  
   
-4.  以滑鼠右鍵按一下次要複本，然後按一下 [屬性]。  
+4.  以滑鼠右鍵按一下次要複本，然後按一下 [屬性]****。  
   
 5.  在 **[可用性複本屬性]** 對話方塊中，變更次要角色的連接存取，如下所示：  
   
-    -   在 [可讀取次要] 下拉式清單中，選取 [僅限讀取意圖]。  
+    -   在 [可讀取次要]**** 下拉式清單中，選取 [僅限讀取意圖]****。  
   
-    -   在 **[主要角色的連接]** 下拉式清單中，選取 **[允許所有連接]** 。 這是預設值。  
+    -   在 **[主要角色的連接]** 下拉式清單中，選取 **[允許所有連接]**。 這是預設值。  
   
-    -   或者，在 **[可用性模式]** 下拉式清單中，選取 **[同步認可]** 。 不需要這個步驟，但是進行設定可確保主要與次要複本之間的資料同位。  
+    -   或者，在 **[可用性模式]** 下拉式清單中，選取 **[同步認可]**。 不需要這個步驟，但是進行設定可確保主要與次要複本之間的資料同位。  
   
          規劃的容錯移轉也需要這個屬性。 如果您要執行規劃的手動容錯移轉以進行測試，請將主要與次要複本的 **[可用性模式]** 同時設為 **[同步認可]** 。  
   
@@ -118,40 +118,40 @@ ms.locfileid: "68889228"
 ##  <a name="bkmk_ssasAODB"></a>使用 AlwaysOn 可用性資料庫建立 Analysis Services 資料來源  
  本節說明如何建立連接至可用性群組中某個資料庫的 Analysis Services 資料來源。 您可以使用這些說明，設定主要複本 (預設) 或您根據上一節步驟所設定之可讀取次要複本的連接。 AlwaysOn 組態設定及在用戶端設定的連接屬性，決定使用主要或次要複本。  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 的 Analysis Services 多維度和資料採礦模型專案中，以滑鼠右鍵按一下 [資料來源]，然後選取 [新增資料來源]。 按一下 **[新增]** 建立新的資料來源。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 的 Analysis Services 多維度和資料採礦模型專案中，以滑鼠右鍵按一下 [資料來源]****，然後選取 [新增資料來源]****。 按一下 **[新增]** 建立新的資料來源。  
   
-     或者，針對表格式模型專案，按一下 [模型] 功能表，然後按一下 **[從資料來源匯入]** 。  
+     或者，針對表格式模型專案，按一下 [模型] 功能表，然後按一下 **[從資料來源匯入]**。  
   
 2.  在 [連接管理員] 的 [提供者] 中，選擇支援表格式資料流 (TDS) 通訊協定的提供者。 SQL Server Native Client 11.0 支援這個通訊協定。  
   
-3.  在 [連接管理員] 的 [伺服器名稱] 中，輸入 *「可用性群組接聽程式」* (Availability Group Listener) 的名稱，然後選擇群組中可用的資料庫。  
+3.  在 [連接管理員] 的 [伺服器名稱] 中，輸入 *「可用性群組接聽程式」*(Availability Group Listener) 的名稱，然後選擇群組中可用的資料庫。  
   
      若是讀寫要求，可用性群組接聽程式會將用戶端連接重新導向至主要複本，如果在連接字串中指定讀取意圖，則會重新導向至次要複本。 由於複本角色在容錯移轉期間會變更 (主要變成次要，而次要變成主要)，因此請務必指定接聽程式據以重新導向用戶端連接。  
   
      若要確定可用性群組接聽程式的名稱，您可以詢問資料庫管理員，或連接至可用性群組中的執行個體並檢視其 AlwaysOn 可用性組態。 在下面的螢幕擷取畫面中，可用性群組接聽程式為 **AdventureWorks2**。  
   
-     ![Management Studio 中的 AlwaysOn 可用性資料夾](../../media/ssas-alwaysoninfoinssms.png "Management Studio 中的 AlwaysOn 可用性資料夾")  
+     ![Management Studio 中的 AlwaysOn 可用性群組資料夾](../../media/ssas-alwaysoninfoinssms.png "Management Studio 中的 AlwaysOn 可用性群組資料夾")  
   
 4.  同樣在 [連接管理員] 中，按一下左邊功能窗格中的 **[全部]** ，以檢視資料提供者的屬性方格。  
   
-     如果將唯讀用戶端連線設定為次要複本，請將 [應用程式的意圖] 設為 [READONLY]。 否則，請保留 **[READWRITE]** 預設值，將連接重新導向至主要複本。  
+     如果將唯讀用戶端連線設定為次要複本，請將 [應用程式的意圖]**** 設為 [READONLY]****。 否則，請保留 **[READWRITE]** 預設值，將連接重新導向至主要複本。  
   
-5.  在 [模擬資訊] 中，選取 [使用特定的 Windows 使用者名稱和密碼]，然後輸入至少具有資料庫之 **db_datareader** 權限的 Windows 網域使用者帳戶。  
+5.  在 [模擬資訊] 中，選取 [使用特定的 Windows 使用者名稱和密碼]****，然後輸入至少具有資料庫之 **db_datareader** 權限的 Windows 網域使用者帳戶。  
   
-     請勿選擇 **[使用目前使用者的認證]** 或 **[繼承]** 。 您可以選擇 **[使用服務帳戶]** ，但是該帳戶必須具有資料庫的讀取權限。  
+     請勿選擇 **[使用目前使用者的認證]** 或 **[繼承]**。 您可以選擇 **[使用服務帳戶]**，但是該帳戶必須具有資料庫的讀取權限。  
   
      完成資料來源並關閉 [資料來源精靈]。  
   
 6.  將 **MultiSubnetFailover=Yes** 加入連接字串，以提供更快的使用中伺服器偵測及連線。 如需有關這個屬性的詳細資訊，請參閱＜ [高可用性/災害復原的 SQL Server Native Client 支援](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)＞。  
   
-     這個屬性不會在屬性方格中顯示。 若要新增屬性，請以滑鼠右鍵按一下資料來源，然後選擇 [檢視程式碼]。 將 `MultiSubnetFailover=Yes` 新增至連接字串。  
+     這個屬性不會在屬性方格中顯示。 若要新增屬性，請以滑鼠右鍵按一下資料來源，然後選擇 [檢視程式碼]****。 將 `MultiSubnetFailover=Yes` 新增至連接字串。  
   
  現在您已經定義資料來源。 您可以接著繼續建立模型，請從資料來源檢視開始，或在表格式模型中建立關聯性。 如果您必須從可用性資料庫擷取資料 (例如在您準備處理或部署解決方案時)，您可以測試組態，確認可從次要複本存取資料。  
   
-##  <a name="bkmk_test"></a> 測試組態  
+##  <a name="bkmk_test"></a>測試設定  
  在您設定次要複本並在 Analysis Services 中建立資料來源連接之後，即可確認處理及查詢命令是否已重新導向至次要複本。 您也可以執行規劃的手動容錯移轉，以確認這個案例的復原計劃。  
   
-#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>步驟 1：確認資料來源連線已重新導向至次要複本  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>步驟 1：確認資料來源連接已重新導向至次要複本  
   
 1.  啟動 SQL Server Profiler 並連接至裝載次要複本的 SQL Server 執行個體。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "68889228"
   
 2.  在 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]中，開啟包含您要測試之資料來源連接的 Analysis Services 專案或解決方案。 確定資料來源指定可用性群組接聽程式，而不是群組中的執行個體。  
   
-     這個步驟很重要。 如果指定伺服器執行個體名稱，則不會路由至次要複本。  
+     此步驟很重要。 如果指定伺服器執行個體名稱，則不會路由至次要複本。  
   
 3.  排列應用程式視窗，以並排檢視 SQL Server Profiler 和 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 。  
   
@@ -182,26 +182,26 @@ ms.locfileid: "68889228"
   
 3.  從 Analysis Services 執行處理或查詢命令。 由於您已經設定唯讀連接的資料來源，因此您應該會看到這個命令在次要複本上執行。  
   
-4.  在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中，連接至次要複本。  
+4.  在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]中，連接至次要複本。  
   
 5.  依序展開 **[AlwaysOn 高可用性]** 節點和 **[可用性群組]** 節點。  
   
-6.  以滑鼠右鍵按一下要容錯移轉的可用性群組，然後選取 [容錯移轉] 命令。 這會啟動 [容錯移轉可用性群組精靈]。 使用精靈選擇複本，以做為新的主要複本。  
+6.  以滑鼠右鍵按一下要容錯移轉的可用性群組，然後選取 [容錯移轉]**** 命令。 這會啟動 [容錯移轉可用性群組精靈]。 使用精靈選擇複本，以做為新的主要複本。  
   
 7.  確認容錯移轉成功：  
   
     -   在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]中，展開可用性群組以檢視 (主要) 與 (次要) 指定。 之前為主要複本的執行個體現在會變成次要複本。  
   
-    -   檢視儀表板以判斷是否偵測到任何健全狀況問題。 以滑鼠右鍵按一下可用性群組，然後選取 [顯示儀表板]。  
+    -   檢視儀表板以判斷是否偵測到任何健全狀況問題。 以滑鼠右鍵按一下可用性群組，然後選取 [顯示儀表板]****。  
   
 8.  等候一到兩分鐘，在後端完成容錯移轉。  
   
 9. 重複 Analysis Services 解決方案中的處理或查詢命令，然後在 SQL Server Profiler 中並排檢視追蹤。 您應該會看到執行處理的其他執行個體現在成為新的次要複本。  
   
-##  <a name="bkmk_whathappens"></a> 容錯移轉之後會發生什麼情況  
+##  <a name="bkmk_whathappens"></a>容錯移轉之後會發生什麼事  
  在容錯移轉期間，次要複本會轉換到主要角色，而先前的主要複本會轉換到次要角色。 所有用戶端連線會終止，可用性群組接聽程式的擁有權會隨主要複本角色移至新的 SQL Server 執行個體，且接聽程式端點會繫結到新執行個體的虛擬 IP 位址和 TCP 連接埠。 如需詳細資訊，請參閱本主題稍後的 [關於可用性複本的用戶端連接存取 &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md))。  
   
- 如果在處理期間發生容錯移轉，Analysis Services 的記錄檔或輸出視窗中會發生下列錯誤：「OLE DB 錯誤：OLE DB 或 ODBC 錯誤：通訊連結失敗；08S01；TPC 提供者：遠端主機已強制關閉一個現有連線。 ; 08S01。」  
+ 如果在處理期間發生容錯移轉，Analysis Services 的記錄檔或輸出視窗中會發生下列錯誤：「OLE DB 錯誤: OLE DB 或 ODBC 錯誤: 通訊連結失敗; 08S01; TPC 提供者: 遠端主機已強制關閉一個現有連線。 ; 08S01。」  
   
  如果您稍候幾分鐘再試一次，應該可以解決這個錯誤。 如果將可用性群組正確設定為可讀取的次要複本，當您重試處理時，會繼續在新的次要複本上處理。  
   
@@ -214,13 +214,13 @@ ms.locfileid: "68889228"
   
  如果設定連接一律存取可讀取的次要複本，現在就必須設定使用主要複本之 READWRITE 連接的新連接。  
   
- 若要執行這項操作，請在 Analysis Services 模型中建立其他資料來源，以支援讀寫連接。 建立其他資料來源時，請使用您在唯讀連線中指定的相同接聽程式名稱和資料庫，但不要修改 [應用程式的意圖]，保留支援 READWRITE 連線的預設值。 您現在可以將以讀寫資料來源為基礎的新事實或維度資料表新增至資料來源檢視，然後啟用新資料表的回寫功能。  
+ 若要執行這項操作，請在 Analysis Services 模型中建立其他資料來源，以支援讀寫連接。 建立其他資料來源時，請使用您在唯讀連線中指定的相同接聽程式名稱和資料庫，但不要修改 [應用程式的意圖]****，保留支援 READWRITE 連線的預設值。 您現在可以將以讀寫資料來源為基礎的新事實或維度資料表新增至資料來源檢視，然後啟用新資料表的回寫功能。  
   
 ## <a name="see-also"></a>另請參閱  
  [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [使用中次要：可讀取的&#40;次要複本 AlwaysOn 可用性群組&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [AlwaysOn 可用性群組&#40;SQL Server 操作問題的 AlwaysOn 原則&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
- [建立資料來源 &#40;SSAS 多維度&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
- [啟用維度回寫](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
+ [使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [AlwaysOn 可用性群組 &#40;SQL Server 的操作問題 AlwaysOn 原則&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
+ [建立 &#40;SSAS 多維度&#41;的資料來源](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+ [[啟用維度回寫]](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
   
   

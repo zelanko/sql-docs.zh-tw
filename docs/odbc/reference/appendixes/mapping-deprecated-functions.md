@@ -1,5 +1,5 @@
 ---
-title: 對應已被取代的函式 |Microsoft Docs
+title: 對應已淘汰的函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,20 +18,20 @@ ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990707"
 ---
 # <a name="mapping-deprecated-functions"></a>對應已淘汰的函式
-本節說明如何已被取代的函式會對應由 ODBC *3.x*以確保回溯相容性的 ODBC 驅動程式管理員*3.x*可搭配 ODBC 驅動程式*2.x*應用程式。 驅動程式管理員會執行這項對應，而不論應用程式版本。 因為每個 ODBC *2.x*下列清單中的函式會對應到對應的 ODBC *3.x*函式中的 ODBC 呼叫時*3.x*驅動程式，ODBC *3.x*驅動程式不需要實作 ODBC *2.x*函式。  
+本節說明 ODBC 3.x 驅動程式管理員如何對應已淘汰的函式，以確保*與 odbc 2.x* *應用程式*搭配使用的 odbc *3.x 驅動程式*具有回溯相容性。 無論應用程式的版本為何，驅動程式管理員都會執行此對應。 由於下列清單中的每個 ODBC 2.x 函數在 ODBC 3.x 驅動程式中呼叫時，都會對應到相對應的 ODBC 3.x 函式，因此，ODBC 3.x*驅動程式不*需要** 執行 odbc 2.x ** *函數。* **  
   
- ODBC 驅動程式時，會觸發在清單中的對應*3.x*驅動程式和驅動程式不支援要對應的函式。  
+ 當*驅動程式是 ODBC 3.x*驅動程式，而驅動程式不支援正在對應的函式時，就會觸發清單中的對應。  
   
- 下表列出所有重複的功能，在 ODBC 中引進*3.x*。  
+ 下表*列出 ODBC 3.x*中引進的所有重複功能。  
   
-|ODBC *2.x*函式|ODBC *3.x*函式|  
+|ODBC *2.x*函數|ODBC *3.x*函數|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
@@ -41,7 +41,7 @@ ms.locfileid: "67990707"
 |**SQLError**|**SQLGetDiagRec**|  
 |**SQLFreeConnect**|**SQLFreeHandle**|  
 |**SQLFreeEnv**|**SQLFreeHandle**|  
-|**SQLFreeStmt**具有*選項*SQL_DROP 的|**SQLFreeHandle**|  
+|具有 SQL_DROP*選項*的**SQLFreeStmt**|**SQLFreeHandle**|  
 |**SQLGetConnectOption**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**SQLGetStmtAttr**|  
 |**SQLParamOptions**|**SQLSetStmtAttr**|  
@@ -51,9 +51,9 @@ ms.locfileid: "67990707"
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] 即使此函式不存在於 ODBC *2.x*，它會在 Open Group 和 ISO 標準中。  
+ [1] 即使此函式不存在*于 ODBC 2.x 中，* 它仍是開放式群組和 ISO 標準。  
   
- [2] 這是 ODBC 1.0 函式。  
+ [2] 這是 ODBC 1.0 函數。  
   
  此章節包含下列主題。  
   

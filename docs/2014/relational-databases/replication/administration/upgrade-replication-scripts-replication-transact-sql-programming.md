@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd3f6498cbfb4ef8cf38e27879d619472a6693ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210768"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>升級複寫指令碼 (複寫 Transact-SQL 程式設計)
@@ -36,23 +36,23 @@ ms.locfileid: "68210768"
   
 -   **sp_addpublication_snapshot**:  
   
-     現在當您執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) 時，應該以 **@job_login** 和 **@job_password** 提供 Windows 認證，以建立在散發者端執行快照集代理程式的作業。  
+     您現在應該提供 Windows 認證做為**@job_login** ， **@job_password**並在執行[sp_addpublication_snapshot &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) ，以建立快照集代理程式在散發者端執行時所用的作業。  
   
 -   **sp_addpushsubscription_agent**：  
   
-     現在應該執行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) 以明確地新增作業並提供 Windows 認證 ( **@job_login** 和 **@job_password** )，藉此在散發者端執行散發代理程式作業。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，這項作業會在建立發送訂閱時自動完成。  
+     您現在應該執行[sp_addpushsubscription_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)以明確地加入作業，並提供在「散發者」**@job_login**端**@job_password**執行散發代理程式作業的 Windows 認證（和）。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，這項作業會在建立發送訂閱時自動完成。  
   
 -   **sp_addmergepushsubscription_agent**：  
   
-     現在應該執行 [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql) 以明確地新增作業並提供 Windows 認證 ( **@job_login** 和 **@job_password** )，藉此在散發者端執行合併代理程式作業。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，這項作業會在建立發送訂閱時自動完成。  
+     您現在應該執行[sp_addmergepushsubscription_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)以明確地加入作業，並提供在「散發者」**@job_login**端**@job_password**執行合併代理程式作業的 Windows 認證（和）。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，這項作業會在建立發送訂閱時自動完成。  
   
 -   **sp_addpullsubscription_agent**：  
   
-     現在當您執行 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) 時，應該以 **@job_login** 和 **@job_password** 提供 Windows 認證，以建立在訂閱者端執行散發代理程式的作業。  
+     您現在應該提供 Windows 認證做為**@job_login** ， **@job_password**並在執行[sp_addpullsubscription_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) ，以建立在訂閱者端執行散發代理程式的作業。  
   
 -   **sp_addmergepullsubscription_agent**：  
   
-     現在當您執行 [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) 時，應該以 **@job_login** 和 **@job_password** 提供 Windows 認證，以建立在訂閱者端執行合併代理程式的作業。  
+     您現在應該提供 Windows 認證做為**@job_login** ， **@job_password**並在執行[sp_addmergepullsubscription_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) ，以建立在訂閱者端執行合併代理程式的作業。  
   
 -   **sp_addlogreader_agent**：  
   
@@ -62,26 +62,26 @@ ms.locfileid: "68210768"
   
      現在應該執行 [sp_addqreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql) 以手動新增作業並提供 Windows 認證，藉此在散發者端執行佇列讀取器代理程式。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，這項作業會在建立支援佇列更新的交易式發行集時自動完成。  
   
- 在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]所導入的安全性模型中，複寫代理程式一定會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] @job_name **@job_name** @job_login **@job_password** 。 如需有關在執行複寫代理程式作業時所使用 Windows 帳戶之需求的資訊，請參閱＜ [Replication Agent Security Model](../security/replication-agent-security-model.md)＞。  
+ 在[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]中導入的安全性模型中，複寫代理程式一律會使用和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **@job_name** **@job_password**中提供的認證，透過 Windows 驗證連接到的本機實例。 如需有關在執行複寫代理程式作業時所使用 Windows 帳戶之需求的資訊，請參閱＜ [Replication Agent Security Model](../security/replication-agent-security-model.md)＞。  
   
 > [!IMPORTANT]  
 >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果將認證儲存在指令碼檔案中，請確定該檔案本身受到安全保護。  
   
 ### <a name="to-upgrade-scripts-that-configure-a-snapshot-or-transactional-publication"></a>若要升級設定快照式或交易式發行集的指令碼  
   
-1.  在現有指令碼的 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 之前，於發行集資料庫的發行者端執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)。 指定「Windows 認證」，「記錄讀取器代理程式」執行時會將該認證用於 **@job_name** @job_login **@job_password** 。 如果代理程式會在與「發行者」時連接時使用「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證」，則也必須指定 **@publisher_security_mode** 的值 **@publisher_security_mode** ，以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] @publisher_login **@publisher_login** @job_login **@publisher_password** 。 如此會建立發行集資料庫的「記錄讀取器代理程式」作業。  
+1.  在現有指令碼的 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 之前，於發行集資料庫的發行者端執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)。 指定用來**@job_name**執行和**@job_password**之記錄讀取器代理程式的 Windows 認證。 如果代理程式在連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]到發行者時將使用驗證，您也必須為**@publisher_security_mode**指定**0**的值，並針對[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **@publisher_login**和**@publisher_password**指定登入資訊。 如此會建立發行集資料庫的「記錄讀取器代理程式」作業。  
   
     > [!NOTE]  
     >  只有交易式發行集才需要這個步驟，快照式發行集不需要。  
   
-2.  (選擇性) 在 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 之前，於散發資料庫的散發者端執行 [sp_addqreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql)。 指定「Windows 認證」，「佇列讀取器代理程式」執行時會將該認證用於 **@job_name** @job_login **@job_password** 。 如此會為「散發者」建立「佇列讀取器代理程式」作業。  
+2.  (選擇性) 在 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 之前，於散發資料庫的散發者端執行 [sp_addqreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql)。 指定用來**@job_name**執行和**@job_password**之佇列讀取器代理程式的 Windows 認證。 如此會為「散發者」建立「佇列讀取器代理程式」作業。  
   
     > [!NOTE]  
     >  只有支援佇列更新訂閱者的交易式發行集才需要這個步驟。  
   
 3.  (選擇性) 更新 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 的執行，以針對實作新複寫功能的參數設定預設以外的值。  
   
-4.  在 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 之後，於發行集資料庫的發行者端執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 指定 **@publication** 和「Windows 認證」，「快照集代理程式」執行時會將該認證用於 **@job_name** @job_login **@job_password** 。 如果代理程式會在與「發行者」時連接時使用「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證」，則也必須指定 **@publisher_security_mode** 的值 **@publisher_security_mode** ，以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] @publisher_login **@publisher_login** @job_login **@publisher_password** 。 這麼做會為發行集建立快照集代理程式作業。  
+4.  在 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 之後，於發行集資料庫的發行者端執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 指定**@publication**和用來執行**@job_name**和**@job_password**之快照集代理程式的 Windows 認證。 如果代理程式在連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]到發行者時將使用驗證，您也必須為**@publisher_security_mode**指定**0**的值，並針對[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **@publisher_login**和**@publisher_password**指定登入資訊。 這麼做會為發行集建立快照集代理程式作業。  
   
 5.  (選擇性) 更新 [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 的執行，以針對實作新複寫功能的參數設定預設以外的值。  
   
@@ -89,15 +89,15 @@ ms.locfileid: "68210768"
   
 1.  在執行建立訂閱的預存程序之後，請務必執行建立「散發代理程式」作業的預存程序，以同步處理訂閱。 您使用的預存程序將依照訂閱類型而定。  
   
-    -   如果是提取訂閱，則請更新 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) 的執行，以提供 Windows 認證，在訂閱者端執行的散發代理程式會將該認證用於 **@job_name** 和 **@job_password** 。 此項作業會在執行 [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)之後完成。 如需詳細資訊，請參閱 [建立提取訂閱](../create-a-pull-subscription.md)。  
+    -   針對提取訂閱，更新[sp_addpullsubscription_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)的執行，以提供在**@job_name**和**@job_password**的「訂閱者」端執行散發代理程式時所使用的 Windows 認證。 此項作業會在執行 [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)之後完成。 如需詳細資訊，請參閱 [建立提取訂閱](../create-a-pull-subscription.md)。  
   
-    -   如果是發送訂閱，請在發行者端執行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定 **@subscriber** 、 **@subscriber_db** 、 **@publication** 、「Windows 認證」等 (在「散發者」端執行的「散發代理程式」會將該認證用於 **@job_name** @job_login **@job_password** )，以及此代理程式作業的排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](../specify-synchronization-schedules.md)。 此項作業會在執行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)之後完成。 如需詳細資訊，請參閱 [Create a Push Subscription](../create-a-push-subscription.md)。  
+    -   如果是發送訂閱，請在發行者端執行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定**@subscriber**、 **@subscriber_db**、 **@publication**、用來**@job_name**在和**@job_password**之散發者端執行散發代理程式的 Windows 認證，以及此代理程式作業的排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](../specify-synchronization-schedules.md)。 此項作業會在執行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)之後完成。 如需詳細資訊，請參閱 [建立發送訂閱](../create-a-push-subscription.md)。  
   
 ### <a name="to-upgrade-scripts-that-configure-a-merge-publication"></a>若要升級設定合併式發行集的指令碼  
   
 1.  (選擇性) 在現有的指令碼中，更新 [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) 的執行，以針對實作新複寫功能的參數設定預設以外的值。  
   
-2.  在 [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) 之後，於發行集資料庫的發行者端執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 指定 **@publication** 和「Windows 認證」，「快照集代理程式」執行時會將該認證用於 **@job_name** @job_login **@job_password** 。 如果代理程式會在與「發行者」時連接時使用「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證」，則也必須指定 **@publisher_security_mode** 的值 **@publisher_security_mode** ，以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] @publisher_login **@publisher_login** @job_login **@publisher_password** 。 這麼做會為發行集建立快照集代理程式作業。  
+2.  在 [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) 之後，於發行集資料庫的發行者端執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 指定**@publication**和用來執行**@job_name**和**@job_password**之快照集代理程式的 Windows 認證。 如果代理程式在連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]到發行者時將使用驗證，您也必須為**@publisher_security_mode**指定**0**的值，並針對[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **@publisher_login**和**@publisher_password**指定登入資訊。 這麼做會為發行集建立快照集代理程式作業。  
   
 3.  (選擇性) 更新 [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的執行，以針對實作新複寫功能的參數設定預設以外的值。  
   
@@ -105,9 +105,9 @@ ms.locfileid: "68210768"
   
 1.  在執行建立訂閱的預存程序之後，請務必執行建立「合併代理程式」作業的預存程序，以同步處理訂閱。 您使用的預存程序將依照訂閱類型而定。  
   
-    -   如果是提取訂閱，則請更新 [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) 的執行，以提供 Windows 認證，在訂閱者端執行的合併代理程式會將該認證用於 **@job_name** 和 **@job_password** 。 此項作業會在執行 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)之後完成。 如需詳細資訊，請參閱 [建立提取訂閱](../create-a-pull-subscription.md)。  
+    -   針對提取訂閱，更新[sp_addmergepullsubscription_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)的執行，以提供在**@job_name**和**@job_password**的「訂閱者」端執行合併代理程式時所使用的 Windows 認證。 此項作業會在執行 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)之後完成。 如需詳細資訊，請參閱 [建立提取訂閱](../create-a-pull-subscription.md)。  
   
-    -   如果是發送訂閱，請在發行者端執行 [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)。 指定 **@subscriber** 、 **@subscriber_db** 、 **@publication** 、「Windows 認證」等 (在「散發者」端執行的「合併代理程式」會將該認證用於 **@job_name** @job_login **@job_password** )，以及此代理程式作業的排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](../specify-synchronization-schedules.md)。 此項作業會在執行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)之後完成。 如需詳細資訊，請參閱 [建立發送訂閱](../create-a-push-subscription.md)。  
+    -   如果是發送訂閱，請在發行者端執行 [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)。 指定**@subscriber**、 **@subscriber_db**、 **@publication**、用來執行散發者之合併代理程式的**@job_name** Windows 認證**@job_password**，以及此代理程式作業的排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](../specify-synchronization-schedules.md)。 此項作業會在執行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)之後完成。 如需詳細資訊，請參閱 [建立發送訂閱](../create-a-push-subscription.md)。  
   
 ## <a name="example"></a>範例  
  下列的 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 指令碼範例會針對 Product 資料表建立交易式發行集。 此發行集支援立即更新，且使用佇列更新做為容錯移轉。 為了利於閱讀，已經移除了預設的參數。  

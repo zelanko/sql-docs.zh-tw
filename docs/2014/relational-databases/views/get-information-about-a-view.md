@@ -22,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211647"
 ---
 # <a name="get-information-about-a-view"></a>取得檢視的資訊
-  您可以透過使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，取得 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢視定義或屬性的相關資訊。 您可能需要查看檢視的定義才能了解如何從來源資料表衍生出資料；或是查看檢視所定義的資料。  
+  您可以透過使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，取得 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中檢視定義或屬性的相關資訊。 您可能需要查看檢視的定義才能了解如何從來源資料表衍生出資料；或是查看檢視所定義的資料。  
   
 > [!IMPORTANT]  
 >  如果變更檢視所參考的物件名稱，就必須修改檢視，使其文字反映新的名稱。 因此，在重新命名物件前，應先顯示物件的相依性，以判斷是否有任何檢視會受預期的變更所影響。  
@@ -48,7 +48,7 @@ ms.locfileid: "68211647"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  使用 `sp_helptext` 傳回檢視的定義，需要 **Public** 角色的成員資格。 使用 `sys.sql_expression_dependencies` 尋找檢視的所有相依性，需要資料庫的 VIEW DEFINITION 權限和資料庫之 `sys.sql_expression_dependencies` 的 SELECT 權限。 系統物件定義是公開可見的，就像 SELECT OBJECT_DEFINITION 中傳回的定義一樣。  
@@ -63,7 +63,7 @@ ms.locfileid: "68211647"
   
      下列屬性會在 **[檢視屬性]** 對話方塊中顯示。  
   
-     **[資料庫備份]**  
+     **Database**  
      包含此檢視之資料庫的名稱。  
   
      **Server**  
@@ -112,7 +112,7 @@ ms.locfileid: "68211647"
      **Database Name**  
      包含此檢視之資料庫的名稱。  
   
-     **描述**  
+     **說明**  
      目前檢視的簡要描述。  
   
      **結構描述**  

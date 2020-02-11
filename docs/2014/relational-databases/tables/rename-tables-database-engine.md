@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3fc62dc5f0e716273df257aba7fdc137391d3055
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196736"
 ---
 # <a name="rename-tables-database-engine"></a>重新命名資料表 (Database Engine)
@@ -36,7 +36,7 @@ ms.locfileid: "68196736"
   
      [安全性](#Security)  
   
--   **若要使用下列項目來重新命名資料表：**  
+-   **若要重新命名資料表，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68196736"
 ###  <a name="Restrictions"></a> 限制事項  
  重新命名資料表不會自動重新命名該資料表的參考。 您必須手動修改任何參考重新命名之資料表的物件。 例如，如果您重新命名了資料表，而且觸發程序參考該資料表，您就必須修改觸發程序來反映新的資料表名稱。 在重新命名資料表之前，請使用 [sys.sql_expression_dependencies](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql) 列出其相依性。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
@@ -56,15 +56,15 @@ ms.locfileid: "68196736"
   
 #### <a name="to-rename-a-table"></a>重新命名資料表  
   
-1.  在物件總管中，以滑鼠右鍵按一下想要重新命名的資料表，然後從快速鍵功能表選擇 [設計]  。  
+1.  在物件總管中，以滑鼠右鍵按一下想要重新命名的資料表，然後從快速鍵功能表選擇 [設計]****。  
   
-2.  從 **[檢視]** 功能表中選擇 **[屬性]** 。  
+2.  從 **[檢視]** 功能表中選擇 **[屬性]**。  
   
 3.  在 **[屬性]** 視窗中的 **[名稱]** 值欄位中，輸入資料表的新名稱。  
   
 4.  若要取消這個動作，請在離開這個欄位之前按 ESC 鍵。  
   
-5.  從 [檔案]  功能表中，選擇 [儲存 _table name_]  。  
+5.  從 [檔案 **] 功能表中，選擇 [** **儲存**_資料表名稱_]。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

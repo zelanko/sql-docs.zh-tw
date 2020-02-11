@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f84f4fcc8a6dde7dcf9f556a72c2599356e231f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067534"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>選取不符合某值的資料列 (Visual Database Tools)
@@ -27,9 +27,9 @@ ms.locfileid: "63067534"
   
 ### <a name="to-find-rows-that-do-not-match-a-value"></a>若要尋找不符合值的資料列  
   
-1.  如果尚未這麼做，請將想要在搜尋條件中使用的資料行或運算式新增至[準則窗格](visual-database-tools.md)中。  
+1.  如果您尚未這麼做，請將您想要在搜尋條件中使用的資料行或運算式新增至 [[準則] 窗格](visual-database-tools.md)。  
   
-2.  尋找包含想要搜尋之資料行或運算式的資料列，然後在 [篩選條件]  方格資料行中輸入 NOT 運算子，後面再加上搜尋值。  
+2.  尋找包含想要搜尋之資料行或運算式的資料列，然後在 [篩選條件]**** 方格資料行中輸入 NOT 運算子，後面再加上搜尋值。  
   
  例如，若要尋找 `products` 資料表中產品代碼資料行不是以 "A," 為開頭的所有資料列，則可以輸入如下所示的搜尋條件：  
   
@@ -38,7 +38,7 @@ NOT LIKE 'A%'
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [輸入規則值中搜尋&#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+ [&#40;Visual Database Tools 輸入搜尋值的規則&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [指定搜尋準則 &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

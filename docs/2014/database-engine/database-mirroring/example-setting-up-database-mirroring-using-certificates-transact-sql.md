@@ -1,5 +1,5 @@
 ---
-title: 範例設定資料庫鏡像使用憑證 (TRANSACT-SQL) |Microsoft Docs
+title: 範例：使用憑證設定資料庫鏡像 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,25 +16,25 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806749"
 ---
-# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>範例設定資料庫鏡像使用憑證 & Amp;#40;transact-SQL&AMP;#41
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>範例：使用憑證設定資料庫鏡像 (Transact-SQL)
   此範例會顯示使用以憑證為基礎的驗證建立資料庫鏡像工作階段所需的所有階段。 此主題中的範例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 除非您可保證網路的安全無虞，否則建議您對資料庫鏡像連接使用加密。  
   
  將憑證複製到另一個系統時，請使用安全複製方法。 務必將您所有的憑證小心保管。  
   
-##  <a name="ExampleH2"></a> 範例  
+##  <a name="ExampleH2"></a>實例  
  下列範例示範必須針對位於 HOST_A 的一個夥伴完成什麼動作。 此範例中的兩個夥伴都是三個電腦系統中的預設伺服器執行個體。 兩個伺服器執行個體在不受信任的 Windows 網域上執行，因此必須有憑證驗證。  
   
  由 HOST_A 取得初始主體角色，而由 HOST_B 取得鏡像角色。  
   
  使用憑證設定資料庫鏡像包含四個一般階段，其中三個階段 (1、2 和 4) 將由這則範例示範。 這些階段如下：  
   
-1.  [設定傳出連接](#ConfiguringOutboundConnections)  
+1.  [設定輸出連接](#ConfiguringOutboundConnections)  
   
      這個範例會說明下列作業的步驟：  
   
@@ -60,8 +60,8 @@ ms.locfileid: "62806749"
   
 4.  [設定鏡像夥伴](#ConfigureMirroringPartners)  
   
-###  <a name="ConfiguringOutboundConnections"></a> 設定傳出連接  
- **若要設定傳出連接設定的 Host_A**  
+###  <a name="ConfiguringOutboundConnections"></a>設定輸出連接  
+ **設定輸出連接的 Host_A**  
   
 1.  在 master 資料庫上，若有需要，請建立資料庫主要索引鍵。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62806749"
   
 5.  使用任何安全複製方法，將 C:\HOST_A_cert.cer 複製到 HOST_B。  
   
- **若要設定傳出連接設定的 Host_B**  
+ **設定輸出連接的 Host_B**  
   
 1.  在 master 資料庫上，若有需要，請建立資料庫主要索引鍵。  
   
@@ -152,8 +152,8 @@ ms.locfileid: "62806749"
   
  如需詳細資訊，請參閱 [允許資料庫鏡像端點使用輸出連線的憑證 &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)。  
   
-###  <a name="ConfigureInboundConnections"></a> 設定傳入連接  
- **若要設定傳入連接設定的 Host_A**  
+###  <a name="ConfigureInboundConnections"></a>設定傳入連接  
+ **設定輸入連接的 Host_A**  
   
 1.  在 HOST_A 上建立 HOST_B 的登入。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "62806749"
     GO  
     ```  
   
- **若要設定傳入連接設定的 Host_B**  
+ **設定輸入連接的 Host_B**  
   
 1.  在 HOST_B 上建立 HOST_A 的登入。  
   
@@ -227,7 +227,7 @@ ms.locfileid: "62806749"
 ### <a name="creating-the-mirror-database"></a>建立鏡像資料庫  
  如需有關如何建立鏡像資料庫的資訊，請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
-###  <a name="ConfigureMirroringPartners"></a> 設定鏡像夥伴  
+###  <a name="ConfigureMirroringPartners"></a>設定鏡像夥伴  
   
 1.  在 HOST_B 的鏡像伺服器執行個體上，設定 HOST_A 上的伺服器執行個體為夥伴 (設定初始主體伺服器執行個體)。 以有效網路位址取代 `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024`。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](specify-a-server-network-address-database-mirroring.md)。  
   
@@ -257,7 +257,7 @@ ms.locfileid: "62806749"
     ```  
   
     > [!NOTE]  
-    >  如果您想要在具有自動容錯移轉的高安全性模式下執行，保持交易安全性設定為 FULL （預設值），並執行第二個 SET PARTNER 後儘快新增見證 **' *`partner_server`* '** 陳述式。 請注意，必須先為傳入與傳出設定見證。  
+    >  如果您想要在具有自動容錯移轉的高安全性模式下執行，請保持交易安全性設定為 FULL （預設設定），並在執行第二個 set PARTNER **'*`partner_server`*'** 語句後儘快新增見證。 請注意，必須先為傳入與傳出設定見證。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
@@ -269,16 +269,16 @@ ms.locfileid: "62806749"
   
 -   [角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
--   [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md) (SQL Server)  
+-   在[另一個伺服器實例上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md) （SQL Server）  
   
 -   [疑難排解資料庫鏡像組態 &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [指定伺服器網路位址 &#40;資料庫鏡像&#41;](specify-a-server-network-address-database-mirroring.md)   
  [資料庫鏡像端點 &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [針對資料庫鏡像端點使用憑證 &#40;Transact-sql&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

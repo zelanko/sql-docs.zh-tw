@@ -1,5 +1,5 @@
 ---
-title: 國際支援 (Visual FoxPro ODBC Driver) |Microsoft Docs
+title: 國際支援（Visual FoxPro ODBC Driver） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,25 +19,25 @@ ms.assetid: cd3fab32-13f1-4a86-abc4-5e18667669fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e987c224f2d716fcab3bf898b1cb276e922e48ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085497"
 ---
 # <a name="international-support-visual-foxpro-odbc-driver"></a>國際支援 (Visual FoxPro ODBC Driver)
-Microsoft Visual FoxPro ODBC Driver 支援：  
+Microsoft Visual FoxPro ODBC 驅動程式支援：  
   
--   雙位元組字元集 (DBCS)  
+-   雙位元組字集（DBCS）  
   
--   多個定序順序  
+-   多個排序次序  
   
- 定序的順序會定義*排序次序*Visual FoxPro 資料表或資料庫中儲存的資料。 根據預設，此驅動程式被設定為使用支援您的作業系統的語言版本的定序序列。  
+ 排序次序會定義儲存在 Visual FoxPro 資料表或資料庫中的資料*排序次序*。 根據預設，驅動程式會設定為使用支援作業系統語言版本的定序序列。  
   
- 如需支援的定序順序的清單，請參閱 <<c0> [ 設定定序](../../odbc/microsoft/set-collate-command.md)。  
+ 如需支援的定序序列清單，請參閱[SET COLLATE](../../odbc/microsoft/set-collate-command.md)。  
   
-## <a name="locale"></a>地區設定 (locale)  
- 對應至指定的語言和國家/地區的資訊集。 地區設定會指出特定的設定，例如小數分隔符號，日期和時間格式字元排序順序。  
+## <a name="locale"></a>地區設定  
+ 對應至指定語言和國家/地區的資訊集。 地區設定會指出特定的設定，例如小數分隔符號、日期和時間格式，以及字元排序次序。  
   
 ## <a name="sort-order"></a>排序次序 (sort order)  
- 排序次序納入不同的排序規則*地區設定*s，可讓您正確地排序這些語言中的資料。 Visual FoxPro，在目前的排序順序會決定結果的字元運算式比較和記錄出現在中編製索引，或排序資料表的順序。
+ 排序次序會併入不同*地區*設定的排序規則，讓您能夠正確地排序這些語言的資料。 在 Visual FoxPro 中，目前的排序次序會決定字元運算式比較的結果，以及記錄在索引或已排序資料表中的顯示順序。

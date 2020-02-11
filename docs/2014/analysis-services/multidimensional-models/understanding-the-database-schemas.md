@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811051"
 ---
 # <a name="understanding-the-database-schemas"></a>了解資料庫結構描述
@@ -43,7 +43,7 @@ ms.locfileid: "68811051"
 ## <a name="dimension-tables"></a>維度資料表  
  針對每個維度，結構描述產生精靈會產生要包含在主題領域資料庫裡的維度資料表。 維度資料表的結構，取決於設計資料表所依據之維度時的選擇。  
   
- [資料行]  
+ 資料行  
  針對做為維度資料表基礎之維度中每個屬性的相關聯繫結 (例如每個屬性 (Attribute) 之 `KeyColumns`、`NameColumn`、`ValueColumn`、`CustomRollupColumn`、`CustomRollupPropertiesColumn` 和 `UnaryOperatorColumn` 屬性 (Property) 的繫結)，精靈會產生一個資料行。  
   
  關聯性  
@@ -63,7 +63,7 @@ ms.locfileid: "68811051"
 ## <a name="fact-tables"></a>事實資料表  
  針對 Cube 中的每個量值群組，結構描述產生精靈會產生要包含在主題領域資料庫裡的一個事實資料表。 事實資料表的結構，取決於設計資料表所依據之量值群組時的選擇，以及在量值群組與任何內含維度之間建立的關聯性。  
   
- [資料行]  
+ 資料行  
  精靈會為每個量值產生一個資料行，不過使用 `Count` 彙總函式的量值除外。 這些量值在事實資料表中不需要有對應的資料行。  
   
  精靈也會在量值群組上，針對每個一般維度關聯性的每個資料粒度屬性資料行，產生一個資料行；也會針對與此資料表做為基礎的量值群組，有事實維度關聯性的維度之每個屬性的相關聯繫結，產生一或多個資料行 (如果適用的話)。  
@@ -71,7 +71,7 @@ ms.locfileid: "68811051"
  關聯性  
  精靈會為每個一般維度關聯性，產生從事實資料表到維度資料表之資料粒度屬性的一個關聯性。 如果資料粒度是以維度資料表的索引鍵屬性為基礎，會在資料庫和資料來源檢視中建立關聯性。 如果資料粒度是以另一個屬性為基礎，則只會在資料來源檢視中建立關聯性。  
   
- 如果您選擇在嚮導中產生索引, 則會為每個關聯性資料行產生非叢集索引。  
+ 如果您選擇在嚮導中產生索引，則會為每個關聯性資料行產生非叢集索引。  
   
  條件約束  
  不會在事實資料表上產生主索引鍵。  
@@ -82,7 +82,8 @@ ms.locfileid: "68811051"
  針對量值群組中需要翻譯資料行的任何屬性，精靈會產生另一個資料表來保存已翻譯值。 精靈也會為每一種必要的語言，建立個別資料行。  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>資料類型轉換和預設長度  
- 在所有情況下, 架構產生嚮導都會忽略資料類型, 但使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar`資料類型的資料行除外。 `wchar` 資料大小會直接翻譯成 `nvarchar` 資料類型。 但是，如果使用 `wchar` 大小指定的資料行長度大於 4000 個位元組，結構描述產生精靈就會產生錯誤。  
+ 在所有情況下，架構產生嚮導都會忽略資料類型，但使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar`資料類型的資料行除外。 
+  `wchar` 資料大小會直接翻譯成 `nvarchar` 資料類型。 但是，如果使用 `wchar` 大小指定的資料行長度大於 4000 個位元組，結構描述產生精靈就會產生錯誤。  
   
  如果資料項目 (例如屬性的繫結) 沒有指定的長度，則會針對資料行使用下表中所列的預設長度。  
   
@@ -95,7 +96,7 @@ ms.locfileid: "68811051"
 |UnaryOperatorColumn|1|  
   
 ## <a name="see-also"></a>另請參閱  
- [了解累加式產生](understanding-incremental-generation.md)   
+ [瞭解累加式產生](understanding-incremental-generation.md)   
  [管理對資料來源檢視及資料來源所做的變更](manage-changes-to-data-source-views-and-data-sources.md)  
   
   

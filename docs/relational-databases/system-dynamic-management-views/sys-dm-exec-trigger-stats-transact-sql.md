@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_trigger_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_exec_trigger_stats （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -21,67 +21,67 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 65e54b90fa036e738f2e1e6a28498559051011a5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262206"
 ---
-# <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
+# <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回快取觸發程序的彙總效能統計資料。 此檢視會針對每個觸發程序包含一個資料列，而且資料列的存留期間與觸發程序維持快取狀態的時間一樣長。 從快取中移除觸發程序時，對應的資料列也會從這個檢視中刪除。 此時，效能統計資料 SQL 追蹤事件會引發類似**sys.dm_exec_query_stats**。  
+  傳回快取觸發程序的彙總效能統計資料。 此檢視會針對每個觸發程序包含一個資料列，而且資料列的存留期間與觸發程序維持快取狀態的時間一樣長。 從快取中移除觸發程序時，對應的資料列也會從這個檢視中刪除。 此時，就會引發效能統計資料 SQL 追蹤事件 (與 **sys.dm_exec_query_stats** 很相似)。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|觸發程序所在的資料庫識別碼。|  
 |**object_id**|**int**|觸發程序的物件識別碼。|  
-|**type**|**char(2)**|物件的類型：<br /><br /> TA = 組件 (CLR) 觸發程序<br /><br /> TR = SQL 觸發程序|  
-|**Type_desc**|**nvarchar(60)**|物件類型的描述：<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
-|**sql_handle**|**varbinary(64)**|這可用來將查詢中相互關聯**sys.dm_exec_query_stats**從執行的此觸發程序內。|  
-|**plan_handle**|**varbinary(64)**|記憶體中計畫的識別碼。 這個識別碼是暫時性的，只有當計畫留在快取時才會保留。 此值可搭配**sys.dm_exec_cached_plans**動態管理檢視。|  
+|**type**|**char （2）**|物件的類型：<br /><br /> TA = 組件 (CLR) 觸發程序<br /><br /> TR = SQL 觸發程序|  
+|**Type_desc**|**Nvarchar （60）**|物件類型的描述：<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
+|**sql_handle**|**Varbinary （64）**|這可以用來與從這個觸發程式內執行的**dm_exec_query_stats**中的查詢相互關聯。|  
+|**plan_handle**|**Varbinary （64）**|記憶體中計畫的識別碼。 這個識別碼是暫時性的，只有當計畫留在快取時才會保留。 這個值可與**sys.databases dm_exec_cached_plans**動態管理檢視搭配使用。|  
 |**cached_time**|**datetime**|在快取中加入觸發程序的時間。|  
 |**last_execution_time**|**datetime**|上次執行觸發程序的時間。|  
-|**execution_count**|**bigint**|從上次編譯以來被執行觸發程序的次數。|  
-|**total_worker_time**|**bigint**|CPU 時間，以百萬分之一秒為單位，編譯以來執行這個觸發程序所耗用的總金額。|  
-|**last_worker_time**|**bigint**|觸發程序上次執行所耗用的 CPU 時間 (以微秒為單位)。|  
-|**min_worker_time**|**bigint**|最大 CPU 時間，以百萬分之一秒為單位，此觸發程序在單次執行期間曾耗用。|  
-|**max_worker_time**|**bigint**|最大 CPU 時間，以百萬分之一秒為單位，此觸發程序在單次執行期間曾耗用。|  
-|**total_physical_reads**|**bigint**|編譯以來執行所執行的此觸發程序的實體讀取總數。|  
-|**last_physical_reads**|**bigint**|實體讀取數執行最後一個觸發程序執行的時間。|  
-|**min_physical_reads**|**bigint**|此觸發程序在單次執行期間曾執行的實體讀取的最小數目。|  
-|**max_physical_reads**|**bigint**|此觸發程序在單次執行期間曾執行的實體讀取次數的數目上限。|  
-|**total_logical_writes**|**bigint**|編譯以來執行所執行的此觸發程序的邏輯寫入總數。|  
-|**last_logical_writes**|**bigint**|邏輯寫入數執行最後一個觸發程序執行的時間。|  
-|**min_logical_writes**|**bigint**|此觸發程序在單次執行期間曾執行的邏輯寫入的最小數目。|  
-|**max_logical_writes**|**bigint**|此觸發程序在單次執行期間曾執行的邏輯寫入的數目上限。|  
-|**total_logical_reads**|**bigint**|編譯以來執行所執行的此觸發程序的邏輯讀取總數。|  
-|**last_logical_reads**|**bigint**|邏輯讀取數執行最後一個觸發程序執行的時間。|  
-|**min_logical_reads**|**bigint**|此觸發程序在單次執行期間曾執行的邏輯讀取次數的最小數目。|  
-|**max_logical_reads**|**bigint**|此觸發程序在單次執行期間曾執行的邏輯讀取次數的數目上限。|  
-|**total_elapsed_time**|**bigint**|已耗用時間總計，以百萬分之一秒為單位，此觸發程序完成執行。|  
-|**last_elapsed_time**|**bigint**|這個觸發程序最近完成執行經歷的時間 (以微秒為單位)。|  
-|**min_elapsed_time**|**bigint**|最小耗用時間 （毫秒），此觸發程序的任何已完成執行。|  
-|**max_elapsed_time**|**bigint**|耗用時間上限，以百萬分之一秒為單位，任何在完成執行的此觸發程序。| 
-|**total_spills**|**bigint**|編譯以來執行此觸發程序溢出的頁面總數。<br /><br /> **適用於**：從開始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**last_spills**|**bigint**|頁數溢出最後一個觸發程序執行的時間。<br /><br /> **適用於**：從開始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**min_spills**|**bigint**|此觸發程序曾經有在單次執行期間溢出的頁面最小數目。<br /><br /> **適用於**：從開始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**max_spills**|**bigint**|此觸發程序曾經有在單次執行期間溢出的頁面數目上限。<br /><br /> **適用於**：從開始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**total_page_server_reads**|**bigint**|編譯以來執行所執行的此觸發程序的網頁伺服器讀取總數。<br /><br /> **適用於**：Azure SQL Database 的超大規模|  
-|**last_page_server_reads**|**bigint**|最後一個觸發程序執行的時間執行的網頁伺服器讀取數目。<br /><br /> **適用於**：Azure SQL Database 的超大規模|  
-|**min_page_server_reads**|**bigint**|網頁伺服器的最小數目會讀取此觸發程序，在單次執行期間曾執行。<br /><br /> **適用於**：Azure SQL Database 的超大規模|  
-|**max_page_server_reads**|**bigint**|網頁伺服器的最大數目會讀取此觸發程序，在單次執行期間曾執行。<br /><br /> **適用於**：Azure SQL Database 的超大規模|  
+|**execution_count**|**Bigint**|觸發程式從上次編譯以來執行的次數。|  
+|**total_worker_time**|**Bigint**|這個觸發程式在編譯以來執行所耗用的 CPU 時間總量（以微秒為單位）。|  
+|**last_worker_time**|**Bigint**|觸發程序上次執行所耗用的 CPU 時間 (以微秒為單位)。|  
+|**min_worker_time**|**Bigint**|此觸發程式在單次執行期間曾耗用的最大 CPU 時間（以微秒為單位）。|  
+|**max_worker_time**|**Bigint**|此觸發程式在單次執行期間曾耗用的最大 CPU 時間（以微秒為單位）。|  
+|**total_physical_reads**|**Bigint**|這個觸發程式在編譯以來執行所執行的實體讀取總數。|  
+|**last_physical_reads**|**Bigint**|上次執行觸發程式時所執行的實體讀取數。|  
+|**min_physical_reads**|**Bigint**|此觸發程式在單次執行期間曾執行的最小實體讀取數。|  
+|**max_physical_reads**|**Bigint**|此觸發程式在單次執行期間曾執行的最大實體讀取數。|  
+|**total_logical_writes**|**Bigint**|這個觸發程式在編譯以來執行所執行的邏輯寫入總數。|  
+|**last_logical_writes**|**Bigint**|上次執行觸發程式時所執行的邏輯寫入數。|  
+|**min_logical_writes**|**Bigint**|此觸發程式在單次執行期間曾執行的最小邏輯寫入數。|  
+|**max_logical_writes**|**Bigint**|此觸發程式在單次執行期間曾執行的最大邏輯寫入數。|  
+|**total_logical_reads**|**Bigint**|這個觸發程式在編譯以來執行所執行的邏輯讀取總數。|  
+|**last_logical_reads**|**Bigint**|上次執行觸發程式時所執行的邏輯讀取數。|  
+|**min_logical_reads**|**Bigint**|此觸發程式在單次執行期間曾執行的最小邏輯讀取數。|  
+|**max_logical_reads**|**Bigint**|此觸發程式在單次執行期間曾執行的最大邏輯讀取數。|  
+|**total_elapsed_time**|**Bigint**|此觸發程式完成執行的總時間（以微秒為單位）。|  
+|**last_elapsed_time**|**Bigint**|這個觸發程序最近完成執行經歷的時間 (以微秒為單位)。|  
+|**min_elapsed_time**|**Bigint**|此觸發程式完成執行所經歷的最小時間（以微秒為單位）。|  
+|**max_elapsed_time**|**Bigint**|此觸發程式已完成執行的最大耗用時間（以微秒為單位）。| 
+|**total_spills**|**Bigint**|此觸發程式在編譯以來執行所溢出的總頁數。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**last_spills**|**Bigint**|上次執行觸發程式時所溢出的頁面數目。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**min_spills**|**Bigint**|此觸發程式在單次執行期間曾發生的最小頁數。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**max_spills**|**Bigint**|此觸發程式在單次執行期間曾溢出的最大頁面數目。<br /><br /> **適用于**：從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**total_page_server_reads**|**Bigint**|這個觸發程式在編譯以來執行所執行的頁面伺服器讀取總數。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
+|**last_page_server_reads**|**Bigint**|上次執行觸發程式時所執行的頁面伺服器讀取數目。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
+|**min_page_server_reads**|**Bigint**|此觸發程式在單次執行期間曾執行的最小頁面伺服器讀取數。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
+|**max_page_server_reads**|**Bigint**|這個觸發程式在單次執行期間曾執行的最大頁面伺服器讀取數。<br /><br /> **適用于**： Azure SQL Database 超大規模資料庫|  
 
   
 ## <a name="remarks"></a>備註  
- 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，動態管理檢視不可以公開可能會影響資料庫內含項目的資訊或公開有關使用者可存取之其他資料庫的資訊。 若要避免公開此資訊，每個資料列，其中包含不屬於連接租用戶的資料會被篩選掉。  
+ 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，動態管理檢視不可以公開可能會影響資料庫內含項目的資訊或公開有關使用者可存取之其他資料庫的資訊。 為避免公開此資訊，包含不屬於連接租使用者之資料的每個資料列都會被篩選掉。  
 
 完成查詢時，會更新檢視中的統計資料。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
 
-在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
   
 ## <a name="examples"></a>範例  
  下列範例會傳回平均經過時間所識別之前五項觸發程序的相關資訊。  
@@ -97,10 +97,10 @@ ORDER BY [total_worker_time] DESC;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[執行相關動態管理檢視和函式&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
-[sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
-[sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
-[sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
+[執行相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+[dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+[dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+[dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
 [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
   

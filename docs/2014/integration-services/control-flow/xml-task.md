@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232731"
 ---
 # <a name="xml-task"></a>XML 工作
@@ -46,7 +46,7 @@ ms.locfileid: "75232731"
   
  如果來源是變數，則指定的變數會包含 XML 文件的路徑。  
   
- 如果來源是「檔案」連接管理員，則指定的「檔案」連接管理員會提供來源資訊。 「檔案」連接管理員會在 XML 工作以外另行設定，並在 XML 工作中參考。 「檔案」連接管理員的連接字串會指定 XML 檔案的路徑。 如需詳細資訊，請參閱[File Connection Manager](../connection-manager/file-connection-manager.md)。  
+ 如果來源是「檔案」連接管理員，則指定的「檔案」連接管理員會提供來源資訊。 「檔案」連接管理員會在 XML 工作以外另行設定，並在 XML 工作中參考。 「檔案」連接管理員的連接字串會指定 XML 檔案的路徑。 如需相關資訊，請參閱 [File Connection Manager](../connection-manager/file-connection-manager.md)。  
   
  可以設定 XML 工作，以將作業結果儲存到變數或檔案。 如果儲存到檔案，XML 工作則使用「檔案」連接管理員來存取此檔案。 您也可以將差異作業產生的 Diffgram 結果儲存到檔案和變數。  
   
@@ -57,8 +57,8 @@ ms.locfileid: "75232731"
 |---------------|-----------------|  
 |Diff|比較兩份 XML 文件。 差異作業使用來源 XML 文件做為基底文件，將其與第二個 XML 文件相比較，偵測兩者的差異，並將差異寫入 XML Diffgram 文件。 此作業包含用於自訂比較的屬性。|  
 |合併|合併兩份 XML 文件。 「合併」作業使用來源 XML 文件做為基底文件，將第二個文件的內容加入此基底文件。 此作業可以指定基底文件中的合併位置。|  
-|修補程式|將差異作業的輸出 (稱為 Diffgram 文件) 套用到 XML 文件，以新建包含 Diffgram 文件內容的父文件。|  
-|驗證|針對「文件類型定義」(DTD) 或「XML 結構描述定義」(XSD) 結構描述來驗證 XML 文件。|  
+|Patch|將差異作業的輸出 (稱為 Diffgram 文件) 套用到 XML 文件，以新建包含 Diffgram 文件內容的父文件。|  
+|Validate|針對「文件類型定義」(DTD) 或「XML 結構描述定義」(XSD) 結構描述來驗證 XML 文件。|  
 |XPath|執行 XPath 查詢和評估。|  
 |XSLT|在 XML 文件上執行 XSL 轉換。|  
   
@@ -84,7 +84,7 @@ ms.locfileid: "75232731"
 ### <a name="xpath-operation"></a>XPath 作業  
  可以將 XPath 作業設定為使用不同類型的 XPath 功能。  
   
--   選取 [評估]**** 選項以實作 XPath 函數，例如 sum()。  
+-   選取 [評估]  選項以實作 XPath 函數，例如 sum()。  
   
 -   選取 **[節點清單]** 選項，將選取的節點當做 XML 片段傳回。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "75232731"
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>XML 工作上可用的自訂記錄訊息  
  下表描述 XML 工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../custom-messages-for-logging.md)。  
   
-|記錄檔項目|描述|  
+|記錄項目|描述|  
 |---------------|-----------------|  
 |`XMLOperation`|提供有關工作執行之作業的資訊。|  
   
@@ -121,7 +121,7 @@ ms.locfileid: "75232731"
   
 -   [[XML 工作編輯器] &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [使用 XML 工作驗證 XML](xml-task.md)  
+-   [以 XML 工作驗證 XML](xml-task.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

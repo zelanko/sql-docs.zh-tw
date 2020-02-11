@@ -1,5 +1,5 @@
 ---
-title: sp_columns (TRANSACT-SQL) |Microsoft Docs
+title: sp_columns （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2016
 ms.prod: sql
@@ -19,13 +19,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070349"
 ---
-# <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
+# <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回目前環境中所能查詢之指定物件的資料行資訊。  
@@ -45,53 +45,53 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ \@table_name = ] object` 是用來傳回目錄資訊之物件的名稱。 *物件*可以是資料表、 檢視或其他物件，例如資料表值函式的資料行。 *物件*已**nvarchar(384)** ，沒有預設值。 支援萬用字元的模式比對。  
+`[ \@table_name = ] object`這是用來傳回目錄資訊之物件的名稱。 *物件*可以是資料表、view 或其他具有資料行的物件，例如資料表值函式。 *物件*是**Nvarchar （384）**，沒有預設值。 支援萬用字元的模式比對。  
   
-`[ \@table_owner = ] owner` 是用來傳回目錄資訊的物件擁有者。 *擁有者*已**nvarchar(384)** ，預設值是 NULL。 支援萬用字元的模式比對。 如果*擁有者*未指定，套用基礎 dbms 的預設物件可見性規則。  
+`[ \@table_owner = ] owner`這是用來傳回目錄資訊之物件的物件擁有者。 *owner*是**Nvarchar （384）**，預設值是 Null。 支援萬用字元的模式比對。 如果未指定*owner* ，則會套用基礎 DBMS 的預設物件可見度規則。  
   
- 如果目前使用者擁有一個含有指定名稱的物件，就會傳回該物件的資料行。 如果*擁有者*未指定且目前使用者並未擁有具有指定的物件*物件*， **sp_columns**尋找具有指定之物件*物件*資料庫擁有者所擁有。 如果存在，就會傳回該物件的資料行。  
+ 如果目前使用者擁有一個含有指定名稱的物件，就會傳回該物件的資料行。 如果未指定*owner* ，且目前使用者並未擁有具有指定之*物件*的物件， **sp_columns**會尋找具有資料庫擁有者所擁有之指定*物件*的物件。 如果存在，就會傳回該物件的資料行。  
   
-`[ \@table_qualifier = ] qualifier` 是物件限定詞的名稱。 *限定詞*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分命名物件 (_限定詞_ **。** _擁有者_ **。** _名稱_)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表物件之資料庫環境的伺服器名稱。  
+`[ \@table_qualifier = ] qualifier`這是物件辨識符號的名稱。 *限定詞*是**sysname**，預設值是 Null。 各種 DBMS 產品都支援三部分的物件命名（辨識_符號_**。**_擁有_者 **。**_名稱_）。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，這個資料行代表資料庫名稱。 在某些產品中，它代表物件之資料庫環境的伺服器名稱。  
   
-`[ \@column_name = ] column` 是單一資料行，並可在需要時，則只有一個目錄資訊資料行。 *資料行*已**nvarchar(384)** ，預設值是 NULL。 如果*資料行*是未指定，會傳回所有資料行。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*資料行*代表的資料行名稱，如下所示**syscolumns**資料表。 支援萬用字元的模式比對。 若要有最大交互操作能力，閘道用戶端應該只採用 SQL-92 標準模式比對 (% 和 _ 萬用字元)。  
+`[ \@column_name = ] column`是單一資料行，而且只有在目錄資訊的一個資料行需要時才會使用。 資料*行*是**Nvarchar （384）**，預設值是 Null。 如果未指定資料*行*，則會傳回所有資料行。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，資料*行*代表**syscolumns**資料表中所列出的資料行名稱。 支援萬用字元的模式比對。 若要有最大交互操作能力，閘道用戶端應該只採用 SQL-92 標準模式比對 (% 和 _ 萬用字元)。  
   
-`[ \@ODBCVer = ] ODBCVer` 是要使用之 ODBC 的版本。 *ODBCVer*已**int**，預設值是 2。 這表示 ODBC 2。 有效值是 2 或 3。 如需 2 和 3 版之間行為差異，請參閱 ODBC **SQLColumns**規格。  
+`[ \@ODBCVer = ] ODBCVer`這是正在使用的 ODBC 版本。 *ODBCVer*是**int**，預設值是2。 這表示 ODBC 2。 有效值是 2 或 3。 如需版本2和3之間的行為差異，請參閱 ODBC **SQLColumns**規格。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
   
 ## <a name="result-sets"></a>結果集  
- **Sp_columns**目錄預存程序相當於**SQLColumns** ODBC 中。 傳回的結果都會按照**TABLE_QUALIFIER**， **TABLE_OWNER**，並**TABLE_NAME**。  
+ **Sp_columns**目錄預存程式相當於 ODBC 中的**SQLColumns** 。 傳回的結果會依**TABLE_QUALIFIER**、 **TABLE_OWNER**和**TABLE_NAME**排序。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|物件限定詞名稱。 這個欄位可以是 NULL。|  
 |**TABLE_OWNER**|**sysname**|物件擁有者名稱。 這個欄位一律會傳回值。|  
 |**TABLE_NAME**|**sysname**|物件名稱。 這個欄位一律會傳回值。|  
-|**COLUMN_NAME**|**sysname**|資料行名稱，每個資料行**TABLE_NAME**傳回。 這個欄位一律會傳回值。|  
-|**DATA_TYPE**|**smallint**|ODBC 資料類型的整數碼。 如果這是無法對應於 ODBC 類型的資料類型，它就是 NULL。 原生資料型別名稱都會傳入**TYPE_NAME**資料行。|  
+|**COLUMN_NAME**|**sysname**|資料行名稱，針對每個傳回的**TABLE_NAME**資料行。 這個欄位一律會傳回值。|  
+|**DATA_TYPE**|**smallint**|ODBC 資料類型的整數碼。 如果這是無法對應於 ODBC 類型的資料類型，它就是 NULL。 原生資料類型名稱會在**TYPE_NAME**資料行中傳回。|  
 |**TYPE_NAME**|**sysname**|代表資料類型的字串。 基礎 DBMS 提供這個資料類型名稱。|  
-|**PRECISION**|**int**|有效位數的數目。 傳回值**精確度**資料行是在基底為 10。|  
-|**LENGTH**|**int**|傳送資料的大小。<sup>1</sup>|  
-|**SCALE**|**smallint**|小數點右側的位數。|  
+|**精密**|**int**|有效位數的數目。 **PRECISION**資料行的傳回值以基底10為底數。|  
+|**長**|**int**|資料的傳輸大小。<sup>1</sup>|  
+|**尺度**|**smallint**|小數點右側的位數。|  
 |**RADIX**|**smallint**|數值資料類型的基底。|  
-|**可為 NULL**|**smallint**|指定 Null 屬性。<br /><br /> 1 = 可能是 NULL。<br /><br /> 0 = 非 NULL。|  
-|**註解**|**varchar(254)**|這個欄位一律會傳回 NULL。|  
+|**Null**|**smallint**|指定 Null 屬性。<br /><br /> 1 = 可能是 NULL。<br /><br /> 0 = 非 NULL。|  
+|**標記**|**Varchar （254）**|這個欄位一律會傳回 NULL。|  
 |**COLUMN_DEF**|**nvarchar(4000)**|資料行的預設值。|  
-|**SQL_DATA_TYPE**|**smallint**|SQL 資料類型出現在描述子之 TYPE 欄位時的值。 這個資料行是相同**DATA_TYPE**資料行，除了**datetime**和 SQL-92**間隔**資料型別。 這個資料行一律會傳回值。|  
-|**SQL_DATETIME_SUB**|**smallint**|子類型代碼**datetime**和 SQL-92**間隔**資料型別。 其他資料類型的這個資料行都會傳回 NULL。|  
+|**SQL_DATA_TYPE**|**smallint**|SQL 資料類型出現在描述子之 TYPE 欄位時的值。 除了**datetime**和 SQL-92 **interval**資料類型之外，此資料行與**DATA_TYPE**資料行相同。 這個資料行一律會傳回值。|  
+|**SQL_DATETIME_SUB**|**smallint**|**Datetime**和 SQL-92 **interval**資料類型的子類型代碼。 其他資料類型的這個資料行都會傳回 NULL。|  
 |**CHAR_OCTET_LENGTH**|**int**|字元或整數資料類型資料行的最大長度 (以位元組為單位)。 其他所有資料類型的這個資料行都會傳回 NULL。|  
 |**ORDINAL_POSITION**|**int**|資料行在物件中的序數位置。 物件中的第一個資料行是 1。 這個資料行一律會傳回值。|  
-|**IS_NULLABLE**|**varchar(254)**|物件中資料行的 Null 屬性。 遵照 ISO 規則來決定 Null 屬性。 ISO SQL 標準 DBMS 無法傳回空字串。<br /><br /> YES = 資料行可以包括 NULLS。<br /><br /> NO = 資料行不能包括 NULLS。<br /><br /> 如果 Null 屬性不明，這個資料行會傳回長度為零的字串。<br /><br /> 傳回的值，這個資料行是針對傳回的值不同**NULLABLE**資料行。|  
-|**SS_DATA_TYPE**|**tinyint**|擴充預存程序所用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。|  
+|**IS_NullABLE**|**Varchar （254）**|物件中資料行的 Null 屬性。 遵照 ISO 規則來決定 Null 屬性。 ISO SQL 標準 DBMS 無法傳回空字串。<br /><br /> YES = 資料行可以包括 NULLS。<br /><br /> NO = 資料行不能包括 NULLS。<br /><br /> 如果 Null 屬性不明，這個資料行會傳回長度為零的字串。<br /><br /> 為此資料行傳回的值與**可為 null**資料行傳回的值不同。|  
+|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]擴充預存程式所使用的資料類型。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。|  
   
- <sup>1</sup>如需詳細資訊，請參閱 Microsoft ODBC 文件。  
+ <sup>1</sup>如需詳細資訊，請參閱 Microsoft ODBC 檔集。  
   
-## <a name="permissions"></a>Permissions  
- 需要結構描述的 SELECT 和 VIEW DEFINITION 權限。  
+## <a name="permissions"></a>權限  
+ 需要架構的 SELECT 和 VIEW DEFINITION 許可權。  
   
 ## <a name="remarks"></a>備註  
- **sp_columns**遵循分隔識別碼的需求。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
+ **sp_columns**會遵循分隔識別碼的需求。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回指定之資料表的資料行資訊。  
@@ -114,8 +114,8 @@ EXEC sp_columns @table_name = N'DimEmployee',
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_tables &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
- [目錄預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [sp_tables &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄預存程式](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

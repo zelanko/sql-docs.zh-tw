@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d87430c64bac133523d7001a88a894bb3985a5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211671"
 ---
 # <a name="modify-data-through-a-view"></a>透過檢視修改資料
@@ -32,7 +32,7 @@ ms.locfileid: "68211671"
   
      [安全性](#Security)  
   
--   **若要透過檢視修改資料表資料使用：**  
+-   **使用下列方法，透過檢視修改資料表資料：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68211671"
   
 -   請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql) 中的＜可更新的檢視＞一節。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  根據執行的動作，需要目標資料表的 UPDATE、INSERT 或 DELETE 權限。  
@@ -53,13 +53,13 @@ ms.locfileid: "68211671"
   
 #### <a name="to-modify-table-data-through-a-view"></a>透過檢視修改資料表資料  
   
-1.  在 **[物件總管]** 中，展開包含檢視的資料庫，然後展開 **[檢視]** 。  
+1.  在 **[物件總管]** 中，展開包含檢視的資料庫，然後展開 **[檢視]**。  
   
-2.  以滑鼠右鍵按一下檢視，然後選取 [編輯前 200 個資料列]  。  
+2.  以滑鼠右鍵按一下檢視，然後選取 [編輯前 200 個資料列]****。  
   
 3.  您可能需要修改 **[SQL]** 窗格中的 SELECT 陳述式，才能傳回要修改的資料列。  
   
-4.  在 **[結果]** 窗格中，尋找要變更或刪除的資料列。 若要刪除資料列，請以滑鼠右鍵按一下此資料列，然後選取 [刪除]  。 若要變更一個或多個資料行中的資料，請修改資料行中的資料。  
+4.  在 **[結果]** 窗格中，尋找要變更或刪除的資料列。 若要刪除資料列，請以滑鼠右鍵按一下此資料列，然後選取 [刪除]****。 若要變更一個或多個資料行中的資料，請修改資料行中的資料。  
   
     > [!IMPORTANT]  
     >  如果檢視參考多個基底資料表，就不能刪除資料列。 您只可以更新屬於單一基底資料表的資料行。  

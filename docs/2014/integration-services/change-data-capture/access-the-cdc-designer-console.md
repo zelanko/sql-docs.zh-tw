@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c552ef16cc2f9502a365ba09c7f8868eccd53396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836080"
 ---
 # <a name="access-the-cdc-designer-console"></a>存取 CDC 設計工具主控台
@@ -32,11 +32,11 @@ ms.locfileid: "62836080"
  輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在的伺服器名稱。  
   
 ### <a name="authentication"></a>驗證  
- 選取下列其中一項：  
+ 選取下列其中一個：  
   
 -   **Windows 驗證**  
   
--   **SQL Server 驗證**：如果您選取這個選項，您必須針對您所連線之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的使用者輸入 [登入]  和 [密碼]  。  
+-   **SQL Server 驗證**：如果您選取這個選項，必須針對您所連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的使用者輸入**登入**和**密碼**。  
   
  此登入擁有的資料庫角色必須允許存取 MSXCDCDB 資料庫。 建議最好讓此登入也能存取正在使用的其他任何資料庫，否則使用者將無法檢視這些資料庫中的資料。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62836080"
  **進階**  
  按一下 [進階]  ，並在必要時，於 [進階連接屬性] 對話方塊中輸入其他任何連接屬性。  
   
- 如需 [進階連接屬性] 對話方塊的資訊，請參閱[進階連接屬性](advanced-connection-properties.md)。  
+ 如需 [進階連接屬性] 對話方塊的資訊，請參閱 [進階連接屬性](advanced-connection-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 連接所需的 CDC 設計工具權限](sql-server-connection-required-permissions-for-the-cdc-designer.md)  

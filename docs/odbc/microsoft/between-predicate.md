@@ -14,10 +14,10 @@ ms.assetid: 0cc7464b-d788-4720-98d8-411e1169185f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1a0ac99729966acdcb03c2aab0175c34bba0c08a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138121"
 ---
 # <a name="between-predicate"></a>BETWEEN 述詞
@@ -27,6 +27,6 @@ ms.locfileid: "68138121"
 expression1 BETWEEN expression2 AND expression3  
 ```  
   
- 傳回，則為 true 才*expression1*大於或等於*expression2*並*expression1*小於或等於*expression3*.  
+ 只有當*運算式*值大於或等於*運算式*2，且*運算式*2 小於或等於*expression3*時，才會傳回 true。  
   
- 此語法的語意為桌面資料庫驅動程式和 Microsoft Jet 引擎不同。 在 Microsoft Jet SQL 中， *expression2*可能會大於*expression3*使陳述式會傳回 TRUE，只有當*expression1*大於或等於*expression3*，並*expression1*小於或等於*expression2*。
+ 對於桌面資料庫驅動程式和 Microsoft Jet 引擎而言，此語法的語義不同。 在 Microsoft Jet SQL 中，*運算式*2 可以大於*expression3* ，如此一來，只有當*運算式*值大於或等於*expression3*，且*運算式*2 小於或等於*運算式*2 時，語句才會傳回 TRUE。

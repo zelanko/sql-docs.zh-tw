@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_transactions_snapshot (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_tran_transactions_snapshot （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -21,22 +21,22 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b91ac554186c37b2e074dd3faded49a01259222e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262692"
 ---
-# <a name="sysdmtrantransactionssnapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
+# <a name="sysdm_tran_transactions_snapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回虛擬資料表**sequence_number**時每個快照集交易啟動。 此檢視傳回的資訊可以協助您執行下列工作：  
+  針對每個快照集交易啟動時作用中的交易，傳回**sequence_number**的虛擬資料表。 此檢視傳回的資訊可以協助您執行下列工作：  
   
 -   尋找目前作用中快照集交易的數目。  
   
 -   識別特定快照集交易所忽略的資料修改。 快照集交易啟動時作用中交易進行的所有資料修改 (包括該交易認可之後所做的修改) 都會被快照集交易忽略。  
   
- 例如，請考慮從下列的輸出**sys.dm_tran_transactions_snapshot**:  
+ 例如，請考慮下列來自 sys.databases 的輸出**dm_tran_transactions_snapshot**：  
   
 ```  
 transaction_sequence_num snapshot_id snapshot_sequence_num  
@@ -52,7 +52,8 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
 60                       3           60  
 ```  
   
- `transaction_sequence_num` 資料行識別目前快照集交易的交易序號 (XSN)。 輸出中顯示兩個序號：`59` 和 `60`。 `snapshot_sequence_num` 資料行識別每個快照集交易啟動時作用中交易的交易序號。  
+ `transaction_sequence_num`資料行會識別目前快照集交易的交易順序（XSN）編號。 輸出中顯示兩個序號：`59` 和 `60`。 
+  `snapshot_sequence_num` 資料行識別每個快照集交易啟動時作用中交易的交易序號。  
   
  輸出中顯示快照集交易 XSN-59 啟動時，有兩個作用中交易 XSN-57 和 XSN-58 正在執行。 如果 XSN-57 或 XSN-58 進行資料修改，XSN-59 會忽略這些變更，並使用資料列版本設定來維護資料庫的交易一致檢視。  
   
@@ -69,17 +70,17 @@ dm_tran_transactions_snapshot
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**transaction_sequence_num**|**bigint**|快照集交易的交易序號 (XSN)。|  
+|**transaction_sequence_num**|**Bigint**|快照集交易的交易序號 (XSN)。|  
 |**snapshot_id**|**int**|在使用資料列版本設定之讀取認可之下啟動的每一個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的快照集識別碼。 這個值可用來產生資料庫的交易一致檢視，該資料庫支援在使用資料列版本設定之讀取認可快照集下面執行的每一項查詢。|  
-|**snapshot_sequence_num**|**bigint**|當快照集交易啟動時作用中交易的交易序號。|  
+|**snapshot_sequence_num**|**Bigint**|當快照集交易啟動時作用中交易的交易序號。|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>權限
 
-在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
   
 ## <a name="remarks"></a>備註  
- 當快照集交易啟動時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會記錄當時作用中的所有交易。 **sys.dm_tran_transactions_snapshot**報告所有目前使用中的快照集交易的這項資訊。  
+ 當快照集交易啟動時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會記錄當時作用中的所有交易。 **dm_tran_transactions_snapshot**報告目前所有作用中快照集交易的這種資訊。  
   
  每一項交易都由交易開始時指派的交易序號所識別。 交易是在 BEGIN TRANSACTION 或 BEGIN WORK 陳述式執行時啟動。 不過，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會隨著在 BEGIN TRANSACTION 或 BEGIN WORK 陳述式之後存取資料的第一個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式執行時指派交易序號。 交易序號以 1 遞增。  
   

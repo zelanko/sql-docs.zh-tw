@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900557"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊群組轉換
@@ -69,7 +69,7 @@ ms.locfileid: "62900557"
  此轉換有一個輸入和一個輸出。 它不支援錯誤輸出。  
   
 ## <a name="row-comparison"></a>資料列比較  
- 設定模糊群組轉換時，您可以指定轉換在比較轉換輸入中的資料列時所使用的比較演算法。 如果您將 Exhaustive 屬性設定為`true`，則轉換會比較輸入中的資料列輸入中的每個資料列。 此比較演算法可產生更精確的結果，但很可能會讓轉換的執行速度更慢，除非輸入中的資料列數目較小。 若要避免效能問題，建議您將 Exhaustive 屬性設為`true`僅在封裝開發期間。  
+ 設定模糊群組轉換時，您可以指定轉換在比較轉換輸入中的資料列時所使用的比較演算法。 如果您將 [詳盡] 屬性`true`設為，則轉換會比較輸入中的每個資料列與輸入中的每個其他資料列。 此比較演算法可產生更精確的結果，但很可能會讓轉換的執行速度更慢，除非輸入中的資料列數目較小。 為避免效能問題，建議您只在封裝開發期間將詳盡`true`的屬性設定為。  
   
 ## <a name="temporary-tables-and-indexes"></a>暫存資料表和索引  
  在執行階段，「模糊群組」轉換會在轉換連接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中建立暫存物件，例如資料表和索引 (它們的大小可能相當大)。 資料表和索引的大小與轉換輸入中的資料列數目和「模糊群組」轉換所建立的 Token 數目成正比。  
@@ -81,17 +81,17 @@ ms.locfileid: "62900557"
 ## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>模糊群組轉換的組態  
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可在 [模糊群組轉換編輯器]  對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
+ 如需可在 [模糊群組轉換編輯器]**** 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [模糊群組轉換編輯器 &#40;連線管理員索引標籤&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [[模糊群組轉換編輯器] &#40;[連接管理員] 索引標籤&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [模糊群組轉換編輯器 &#40;資料行索引標籤&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [[模糊群組轉換編輯器] &#40;[資料行] 索引標籤&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [模糊群組轉換編輯器 &#40;進階索引標籤&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [[模糊群組轉換編輯器] &#40;[Advanced] 索引標籤&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [轉換自訂屬性](transformation-custom-properties.md)  
   

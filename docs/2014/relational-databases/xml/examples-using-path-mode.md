@@ -1,5 +1,5 @@
 ---
-title: 範例:使用 PATH 模式 | Microsoft Docs
+title: 範例：使用 PATH 模式 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287776"
 ---
-# <a name="examples-using-path-mode"></a>範例:使用 PATH 模式
+# <a name="examples-using-path-mode"></a>範例：使用 PATH 模式
   以下範例說明使用 PATH 模式從 SELECT 查詢產生 XML。 這些查詢中有許多是針對自行車製造指示的 XML 文件所指定，這些文件是儲存在 ProductModel 資料表的 Instructions 資料行中。  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>指定簡單 PATH 模式查詢  
@@ -200,7 +200,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- 以下是部份結果。 因為查詢指定 ManuInstr 做為資料行名稱，所傳回的 XML`query()`方法會包裝在 <`ManuInstr`> 標記中，如下所示：  
+ 以下是部份結果。 因為查詢會將 ManuInstr 指定為數據行名稱，所以`query()`方法所傳回的 XML 會包裝在 <`ManuInstr`> 標記中，如下所示：  
   
  `<Root>`  
   
@@ -315,7 +315,7 @@ FOR XML PATH('ProductModelData');
   
 -   第一個巢狀 `SELECT` 使用 `data()` 做為資料行名稱，以傳回 ProductID 的清單。 因為查詢在 `FOR XML PATH`中將空字串指定為資料列元素名稱，所以不會產生元素。 值清單會改指派給 `ProductID` 屬性。  
   
--   第二個巢狀 `SELECT` 會擷取產品型號中的產品名稱。 它會產生包裝在 <`ProductNames`> 元素中的 <`ProductName`> 元素，因為查詢會將 `ProductNames` 指定為資料行名稱。  
+-   第二個巢狀 `SELECT` 會擷取產品型號中的產品名稱。 它會產生包裝在 <`ProductName`> 元素中的 <`ProductNames`> 元素，因為查詢會將 `ProductNames` 指定為資料行名稱。  
   
  以下是部份結果：  
   
@@ -393,7 +393,7 @@ FOR XML PATH ('Translation')
 GO  
 ```  
   
- 加入至 <`English`> 元素的 `@xml:lang` 屬性是在預先定義的 xml 命名空間中定義。  
+ 加入至 <`@xml:lang`> 元素的 `English` 屬性是在預先定義的 xml 命名空間中定義。  
   
  以下是結果：  
   

@@ -1,5 +1,5 @@
 ---
-title: 將複製資料行轉換編輯器 |Microsoft Docs
+title: 複製資料行轉換編輯器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03d8cdb35372ed9850f3329f26e2647e018d9583
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060297"
 ---
 # <a name="copy-column-transformation-editor"></a>複製資料行轉換編輯器
@@ -29,7 +29,7 @@ ms.locfileid: "66060297"
 > [!NOTE]  
 >  如果只是將所有的來源資料複製到目的地時，就可能不需要使用複製資料行轉換。 在某些不需要進行資料轉換的狀況下，可以將來源直接連接到目的地。 在這些狀況下，最好使用「SQL Server 匯入和匯出精靈」為您建立封裝。 稍後可依需要來增強和重新設定封裝。 如需詳細資訊，請參閱＜ [SQL Server Import and Export Wizard](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **可用的輸入資料行**  
  使用核取方塊來選取要複製的資料行。 您的選取範圍會將輸入資料行加入下列資料表中。  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: facde89ad6b476fa01b34badce10dd3cae52ecac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68186121"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>在連接伺服器之後自動啟動追蹤 (SQL Server Profiler)
@@ -26,7 +26,7 @@ ms.locfileid: "68186121"
   
 ### <a name="to-start-a-trace-automatically-after-connecting-to-a-server-with-sql-server-profiler"></a>若要在使用 SQL Server Profiler 連接到伺服器之後自動啟動追蹤  
   
-1.  在 [ **工具** ] 功能表上按一下 [ **選項**]。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
 2.  選取 [進行連接後立即啟動追蹤]  核取方塊。  
   

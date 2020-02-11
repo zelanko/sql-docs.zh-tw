@@ -1,5 +1,5 @@
 ---
-title: C 轉換為 SQL：位元 |Microsoft Docs
+title: C 到 SQL：位 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ ms.assetid: 267c9fa9-599e-4ee6-b51b-0cae43f09183
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8cc5e26b30816d0989dca90566a1a5de008b71c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019417"
 ---
-# <a name="c-to-sql-bit"></a>C 轉換為 SQL：bit
-位元 ODBC C 資料類型的識別項是：  
+# <a name="c-to-sql-bit"></a>C 到 SQL：位元
+Bit ODBC C 資料類型的識別碼為：  
   
  SQL_C_BIT  
   
- 下表顯示 ODBC SQL 位元 C 資料可能會轉換成的資料類型。 如需資料行和資料表中的詞彙說明，請參閱 <<c0> [ 轉換將資料從 C 到 SQL 資料類型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
+ 下表顯示可能轉換位 C 資料的 ODBC SQL 資料類型。 如需資料表中的資料行和詞彙的說明，請參閱將[資料從 C 轉換成 SQL 資料類型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
   
-|SQL 型別識別項|測試|SQLSTATE|  
+|SQL 類型識別碼|測試|SQLSTATE|  
 |-------------------------|----------|--------------|  
 |SQL_CHAR SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR<br /><br /> SQL_WCHAR SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|None|n/a|  
 |SQL_DECIMAL SQL_NUMERIC<br /><br /> SQL_TINYINT SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT<br /><br /> SQL_REAL SQL_FLOAT<br /><br /> SQL_DOUBLE|None|n/a|  
 |SQL_BIT|None|n/a|  
   
- 驅動程式將資料轉換的位元 C 資料類型時，會忽略長度/指標值，並假設資料緩衝區的大小，是位元 C 資料類型的大小。 傳入的長度/指標值無效*Strlen_or_ind&lt*中的引數**SQLPutData**並使用指定的緩衝區中*StrLen_or_IndPtr*引數中**SQLBindParameter**。 使用指定的資料緩衝區*DataPtr*中的引數**SQLPutData**並*ParameterValuePtr*中的引數**SQLBindParameter**.
+ 從 bit C 資料類型轉換資料時，驅動程式會忽略長度/指標值，並假設資料緩衝區的大小是位 C 資料類型的大小。 長度/指標值會傳入**SQLPutData**中的*StrLen_or_Ind*引數，以及在**SQLBindParameter**中使用*StrLen_or_IndPtr*引數指定的緩衝區。 資料緩衝區會使用**SQLPutData**中的*DataPtr*引數和**SQLBindParameter**中的*ParameterValuePtr*引數來指定。

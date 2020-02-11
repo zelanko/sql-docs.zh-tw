@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_keymappings (TRANSACT-SQL) |Microsoft Docs
+title: sp_fulltext_keymappings （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ef8bd6cfbcc10fa0625b4925da618ab275331a32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124235"
 ---
-# <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
+# <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
-  傳回文件識別碼 (DocId) 和全文檢索索引鍵值之間的對應。 DocId 資料行包含值**bigint**對應至特定全文檢索索引鍵值全文檢索索引資料表中的整數。 滿足搜尋條件的 DocId 值會從全文檢索引擎傳送至 Database Engine，在此處會將這些值對應到正在查詢之基底資料表中的全文檢索索引鍵值。 全文檢索索引鍵資料行是資料表單一資料行上需要的唯一索引。  
+  傳回文件識別碼 (DocId) 和全文檢索索引鍵值之間的對應。 DocId 資料行包含對應到全文檢索索引資料表中的特定全文檢索索引鍵值之**Bigint**整數的值。 滿足搜尋條件的 DocId 值會從全文檢索引擎傳送至 Database Engine，在此處會將這些值對應到正在查詢之基底資料表中的全文檢索索引鍵值。 全文檢索索引鍵資料行是資料表單一資料行上需要的唯一索引。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,13 +43,13 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 #### <a name="parameters"></a>參數  
  *table_id*  
- 這是全文檢索索引資料表的物件識別碼。 如果指定了無效*table_id*，則會傳回錯誤。 如需取得資料表的物件識別碼資訊，請參閱 < [OBJECT_ID &#40;TRANSACT-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)。  
+ 這是全文檢索索引資料表的物件識別碼。 如果您指定了不正確*table_id*，就會傳回錯誤。 如需取得資料表之物件識別碼的詳細資訊，請參閱[OBJECT_ID &#40;transact-sql&#41;](../../t-sql/functions/object-id-transact-sql.md)。  
   
  *docid*  
  這是對應至索引鍵值的內部文件識別碼 (DocId)。 無效的 *docid* 值不會傳回任何結果。  
   
- *索引鍵*  
- 這是來自指定資料表的全文檢索索引鍵值。 無效的 *key* 值不會傳回任何結果。 全文檢索索引鍵值的相關資訊，請參閱[管理全文檢索索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
+ *擊鍵*  
+ 這是來自指定資料表的全文檢索索引鍵值。 無效的 *key* 值不會傳回任何結果。 如需全文檢索索引鍵值的詳細資訊，請參閱[管理全文檢索索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
   
 > [!IMPORTANT]  
 >  如需有關使用一個、兩個或三個參數的詳細資訊，請參閱本主題稍後的「備註」。  
@@ -61,26 +61,26 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|DocId|**bigint**|這是對應至索引鍵值的內部文件識別碼 (DocId) 資料行。|  
+|DocId|**Bigint**|這是對應至索引鍵值的內部文件識別碼 (DocId) 資料行。|  
 |Key|*|這是來自指定資料表的全文檢索索引鍵值。<br /><br /> 如果對應資料表中沒有任何的全文檢索索引鍵，就會傳回空白的資料列集。|  
   
- <sup>*</sup> 索引鍵的資料類型是相同基底資料表中全文檢索索引鍵資料行的資料類型。  
+ <sup>*</sup>索引鍵的資料類型與基表中全文檢索索引鍵資料行的資料類型相同。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  這個函數是公用的，而且不需要任何特殊權限。  
   
 ## <a name="remarks"></a>備註  
  下表說明使用一個、兩個或三個參數的效果。  
   
-|此參數清單|具有此結果...|  
+|此參數清單 .。。|具有此結果 .。。|  
 |--------------------------|----------------------|  
-|*table_id*|只與叫用時*table_id*參數，sp_fulltext_keymappings 會傳回所有的全文檢索索引鍵 (Key) 值從指定的基底資料表，以及對應至每個索引鍵相關聯的 DocId。 這包含暫止刪除的索引鍵。<br /><br /> 這個函數對於多項問題的疑難排解很有用。 當選取的全文檢索索引鍵並非整數資料類型時，此函數特別適合用來查看全文檢索索引內容。 這項作業涉及聯結的結果的 sp_fulltext_keymappings **sys.dm_fts_index_keywords_by_document**。 如需詳細資訊，請參閱 < [sys.dm_fts_index_keywords_by_document &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)。<br /><br /> 不過，一般而言，建議您在可能的情況下，使用指定特定全文檢索索引鍵或 DocId 的參數來執行 sp_fulltext_keymappings。 以這種方式作業的效率，要比傳回整個索引鍵對應高得多，特別是在處理大型資料表時，因為在這種情況下，傳回整個索引鍵對應的效能成本可能相當高。|  
-|*table_id*， *docid*|如果只有*table_id*並*docid*都有指定， *docid*必須為 nonNULL 且指定的資料表中指定的有效 DocId。 此函數非常適合用來隔離基底資料表的自訂全文檢索索引鍵 (對應至特定全文檢索索引的 DocId)。|  
-|*table_id*(NULL)*金鑰*|如果有三個參數，第二個參數必須是 NULL，並*金鑰*必須為 nonNULL 且指定有效的全文檢索關鍵值從指定的資料表。 此函數非常適合用來隔離對應至基底資料表的特定自訂全文檢索索引鍵的 DocId。|  
+|*table_id*|當叫用*table_id*參數時，sp_fulltext_keymappings 會從指定的基表傳回所有全文檢索索引鍵（索引鍵）值，以及對應至每個索引鍵的 DocId。 這包含暫止刪除的索引鍵。<br /><br /> 這個函數對於多項問題的疑難排解很有用。 當選取的全文檢索索引鍵並非整數資料類型時，此函數特別適合用來查看全文檢索索引內容。 這牽涉到將 sp_fulltext_keymappings 的結果與**sys. dm_fts_index_keywords_by_document**的結果聯結在一起。 如需詳細資訊，請參閱[dm_fts_index_keywords_by_document &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)。<br /><br /> 不過，一般而言，建議您在可能的情況下，使用指定特定全文檢索索引鍵或 DocId 的參數來執行 sp_fulltext_keymappings。 以這種方式作業的效率，要比傳回整個索引鍵對應高得多，特別是在處理大型資料表時，因為在這種情況下，傳回整個索引鍵對應的效能成本可能相當高。|  
+|*table_id*、 *docid*|如果只指定了*table_id*和*docid* ， *docid*必須為非 null，並在指定的資料表中指定有效的 docid。 此函數非常適合用來隔離基底資料表的自訂全文檢索索引鍵 (對應至特定全文檢索索引的 DocId)。|  
+|*table_id*、Null、 *key*|如果有三個參數，則第二個參數必須為 Null，而且索引*鍵*必須為非 null，並從指定的資料表指定有效的全文檢索索引鍵值。 此函數非常適合用來隔離對應至基底資料表的特定自訂全文檢索索引鍵的 DocId。|  
   
  若有下列任何情況就會傳回錯誤：  
   
--   指定了無效*table_id*。  
+-   您指定了不正確*table_id*。  
   
 -   資料表未建立全文檢索索引。  
   
@@ -89,13 +89,13 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="examples"></a>範例  
   
 > [!NOTE]  
->  本節中的範例會使用 `Production.ProductReview` 範例資料庫的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表。 您可以藉由執行針對提供的範例來建立這個索引`ProductReview`資料表中[CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)。  
+>  本節中的範例會使用 `Production.ProductReview` 範例資料庫的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表。 您可以藉由執行`ProductReview` [CREATE 全文檢索索引 &#40;transact-sql&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)中針對資料表所提供的範例，來建立此索引。  
   
 ### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. 取得所有索引鍵和 DocId 值  
- 下列範例會使用[DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md)陳述式來建立區域變數`@table_id`，並將指定的識別碼`ProductReview`做為其值的資料表。 此範例會執行**sp_fulltext_keymappings**指定`@table_id`如*table_id*參數。  
+ 下列範例會使用[DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md)語句來建立區域變數， `@table_id`以及指派`ProductReview`資料表的識別碼做為其值。 此範例會**** 執行 sp_fulltext_keymappings `@table_id`指定*table_id*參數的。  
   
 > [!NOTE]  
->  使用**sp_fulltext_keymappings**只有*table_id*參數是適用於小型資料表。  
+>  僅使用*table_id*參數的**sp_fulltext_keymappings**適用于小型資料表。  
   
 ```  
 USE AdventureWorks2012;  
@@ -117,10 +117,10 @@ GO
 |`4`|`4`|`4`|  
   
 ### <a name="b-obtaining-the-docid-value-for-a-specific-key-value"></a>B. 取得特定索引鍵值的 DocId 值  
- 下列範例會使用 DECLARE 陳述式來建立區域變數 `@table_id`，以及指派 `ProductReview` 資料表的識別碼當做其值。 此範例會執行**sp_fulltext_keymappings**指定`@table_id`如*table_id*參數，則為 NULL *docid*參數，以及 4 個*金鑰*參數。  
+ 下列範例會使用 DECLARE 陳述式來建立區域變數 `@table_id`，以及指派 `ProductReview` 資料表的識別碼當做其值。 此範例會**** 執行 sp_fulltext_keymappings `@table_id`指定*table_id*參數、 *docid*參數為 Null，而索引*鍵*參數為4。  
   
 > [!NOTE]  
->  使用**sp_fulltext_keymappings**只有*table_id*參數適用於小型資料表。  
+>  僅搭配適用于小型資料表的*table_id* parameteris 使用**sp_fulltext_keymappings** 。  
   
 ```  
 USE AdventureWorks2012;  
@@ -139,6 +139,6 @@ GO
 |`4`|`4`|`4`|  
   
 ## <a name="see-also"></a>另請參閱  
- [全文檢索搜尋和語意搜尋預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [&#40;Transact-sql&#41;的全文檢索搜尋和語義搜尋預存程式](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

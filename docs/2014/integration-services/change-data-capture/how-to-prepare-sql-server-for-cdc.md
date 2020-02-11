@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d0b936b0d48696491e71aa6ad4ea573b898f33c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836037"
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>如何為 CDC 準備 SQL Server
@@ -22,7 +22,7 @@ ms.locfileid: "62836037"
   
  以下描述如何使用 CDC 服務組態主控台針對 Oracle 異動資料擷取來準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 這個程序會建立 MSXDBCDC 資料庫，並定義所需的資料表、預存程序和其他必要成品。  
   
- 為 Oracle CDC 準備 SQL Server 是由 Oracle CDC 服務管理員所執行。 如需有關 CDC 服務管理員角色的詳細資訊，請參閱 <<c0> [ 變更 Data Capture Service for Oracle by Attunity 的使用者角色](user-roles.md)。  
+ 為 Oracle CDC 準備 SQL Server 是由 Oracle CDC 服務管理員所執行。 如需 CDC 服務系統管理員角色的詳細資訊，請參閱[適用於 Oracle 的異動資料擷取服務的使用者角色（依 Attunity](user-roles.md)）。  
   
 ### <a name="to-enable-sql-server-for-cdc"></a>若要為 CDC 啟用 SQL Server  
   
@@ -30,15 +30,15 @@ ms.locfileid: "62836037"
   
 2.  從左窗格中選取 **[動作]** 窗格中的 **[本機 CDC 服務]** ，然後按一下 **[準備 SQL Server]** 。  
   
-     您也可以用滑鼠右鍵按一下 [Local CDC Services (本機 CDC 服務)]  ，然後選取 [Prepare SQL Server (準備 SQL Server)]  。  
+     您也可以用滑鼠右鍵按一下 [本機 CDC 服務]  ，並選取 [準備 SQL Server]  。  
   
 3.  請在 [為 Oracle CDC 準備 SQL Server 執行個體] 對話方塊中輸入必要的資訊。 如需有關如何在此對話方塊中輸入必要資訊的詳細資訊，請參閱＜ [Prepare SQL Server for CDC](prepare-sql-server-for-cdc.md)＞。  
   
      若要為 Oracle CDC 準備 SQL Server 執行個體，登入必須擁有 MSXDBCDC 資料庫的寫入權限。 請輸入擁有 MSXDBCDC 資料庫寫入權限之登入的認證，例如 `sysasmin` 角色的成員。  
   
- **注意**：您可以按一下 [檢視指令碼]  ，檢視設定指令碼的唯讀版本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員可以將此指令碼複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理主控台來編輯和執行 (必要的話)。  
+ **注意**：您可以按一下 [檢視指令碼]  ，檢視安裝指令碼的唯讀版本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員可以將此指令碼複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理主控台來編輯和執行 (必要的話)。  
   
 ## <a name="see-also"></a>另請參閱  
- [為 CDC 準備 SQL Server](prepare-sql-server-for-cdc.md)  
+ [準備 SQL Server 以使用 CDC](prepare-sql-server-for-cdc.md)  
   
   

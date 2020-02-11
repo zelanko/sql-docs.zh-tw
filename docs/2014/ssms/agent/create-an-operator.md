@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3a5414e845d8e625c852d628bf0d965432bc72a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63136422"
 ---
 # <a name="create-an-operator"></a>建立操作員
-  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定使用者，以接收 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的通知。  
+  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]，在中設定使用者，以接收 Agent 作業的通知。  
   
  **本主題內容**  
   
@@ -33,9 +33,9 @@ ms.locfileid: "63136422"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要使用下列項目建立操作員：**  
+-   **若要使用下列程式建立操作員：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -45,13 +45,14 @@ ms.locfileid: "63136422"
   
 ###  <a name="Restrictions"></a> 限制事項  
   
--   呼叫器和 **net send** 選項會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未來版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
+-   在未來版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，將會從 Agent 移除 [呼機] 和 [ **net send** ] 選項。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
   
 -   請注意，必須設定 SQL Server Agent 使用 Database Mail，才能將電子郵件及呼叫器通知傳送給操作員。 如需詳細資訊，請參閱＜ [指派警示給操作員](assign-alerts-to-an-operator.md)＞。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一種簡單的圖形方式供您管理各項作業，建議您利用這個方式來建立和管理作業基礎結構。  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一種簡單的圖形方式供您管理各項作業，建議您利用這個方式來建立和管理作業基礎結構。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才可以建立操作員。  
@@ -64,7 +65,7 @@ ms.locfileid: "63136422"
   
 2.  按一下加號展開 **[SQL Server Agent]** 。  
   
-3.  以滑鼠右鍵按一下 [操作員]  資料夾，然後選取 [新增操作員]  。  
+3.  以滑鼠右鍵按一下 [操作員]**** 資料夾，然後選取 [新增操作員]****。  
   
      下列選項可從 **[新增操作員]** 對話方塊的 **[一般]** 頁面取得：  
   
@@ -77,22 +78,22 @@ ms.locfileid: "63136422"
      **電子郵件名稱**  
      指定操作員的電子郵件地址。  
   
-     **Net Send 位址**  
+     **Net send 位址**  
      指定用於 **net send**的位址。  
   
-     **呼叫器電子郵件名稱**  
+     **呼機電子郵件名稱**  
      指定操作員呼叫器所用的電子郵件地址。  
   
-     **傳呼待命排程**  
+     **呼機待命排程**  
      設定呼叫器使用中的時間。  
   
-     **星期一至星期日**  
+     **星期一-星期日**  
      選取呼叫器使用中的日子。  
   
-     **工作日開始**  
+     **Workday 開始**  
      選取時間，在該時間之後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 就會傳送訊息給呼叫器。  
   
-     **工作日結束**  
+     **Workday 結束**  
      選取時間，在該時間之後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 就不再傳送訊息給呼叫器。  
   
      下列選項可從 **[新增操作員]** 對話方塊的 **[通知]** 頁面取得：  
@@ -100,7 +101,7 @@ ms.locfileid: "63136422"
      **警示**  
      檢視執行個體中的警示。  
   
-     **作業**  
+     **工作**  
      檢視執行個體中的作業。  
   
      **警示清單**  
@@ -109,16 +110,16 @@ ms.locfileid: "63136422"
      **作業清單**  
      列出執行個體中的作業。  
   
-     **電子郵件**  
+     **位址**  
      使用電子郵件通知此操作員。  
   
-     **呼叫器**  
+     **尋呼**  
      將電子郵件傳送至呼叫器位址，來通知此操作員。  
   
      **Net send**  
      使用 **net send**通知此操作員。  
   
-4.  完成建立新的操作員後，請按一下 **[確定]** 。  
+4.  完成建立新的操作員後，請按一下 **[確定]**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -147,6 +148,6 @@ ms.locfileid: "63136422"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 < [sp_add_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-operator-transact-sql)。  
+ 如需詳細資訊，請參閱[sp_add_operator &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-operator-transact-sql)。  
   
   

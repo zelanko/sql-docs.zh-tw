@@ -1,5 +1,5 @@
 ---
-title: 在 90 或之後的相容性模式中包含 TOP 的檢視中不會支援 WITH CHECK OPTION |Microsoft Docs
+title: 在90或更新版本的相容性模式中包含 TOP 的視圖中不支援 WITH CHECK OPTION |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 254969e6201795e2f4ae512e03be26419b71d866
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66090995"
 ---
 # <a name="with-check-option-is-not-supported-in-views-that-contain-top-in-90-or-later-compatibility-modes"></a>在 90 或之後的相容性模式中，在包含 TOP 的檢視中不支援 WITH CHECK OPTION
@@ -27,10 +27,10 @@ ms.locfileid: "66090995"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>更正動作  
- 當您升級時，使用者資料庫會維持其相容性模式。 在您將資料庫相容性模式變更為 100 或之後以前，如果需要透過檢視進行資料修改，請修改使用 WITH CHECK OPTION 和 TOP 的檢視。 如需詳細資訊，請參閱 < [sp_dbcmptlevel &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbcmptlevel-transact-sql)。  
+ 當您升級時，使用者資料庫會維持其相容性模式。 在您將資料庫相容性模式變更為 100 或之後以前，如果需要透過檢視進行資料修改，請修改使用 WITH CHECK OPTION 和 TOP 的檢視。 如需詳細資訊，請參閱[sp_dbcmptlevel &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-dbcmptlevel-transact-sql)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
+ [資料庫引擎升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新的&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

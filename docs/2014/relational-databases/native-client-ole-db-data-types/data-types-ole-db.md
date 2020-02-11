@@ -1,5 +1,5 @@
 ---
-title: 資料型別 (OLE DB) |Microsoft Docs
+title: 資料類型（OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9371f053f95754cdcb7107559f9e0bc3eca2e9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062136"
 ---
 # <a name="data-types-ole-db"></a>資料類型 (OLE DB)
-  若要執行[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式並處理結果使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，您必須知道如何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到繫結時，OLE DB 資料類型的資料類型參數或資料行中資料列集，以及它使用**ITableDefinition**介面來建立的資料表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  若要[!INCLUDE[tsql](../../includes/tsql-md.md)]使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供者來執行語句並處理結果，您必須知道[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供者在系結[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料列集中的參數或資料行時，如何將資料類型對應到 OLE DB 的資料類型，以及當它使用**ITableDefinition**介面[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在中建立資料表時。  
   
 ## <a name="in-this-section"></a>本節內容  
   

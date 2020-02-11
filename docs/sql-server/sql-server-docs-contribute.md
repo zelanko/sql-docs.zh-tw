@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68693193"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何參與編輯 SQL Server 文件集
@@ -79,7 +79,7 @@ ms.locfileid: "68693193"
 
 [sql-docs](https://github.com/MicrosoftDocs/sql-docs) 存放區會使用數個標準的資料夾來組織內容。
 
-| 資料夾 | Description |
+| 資料夾 | 描述 |
 |---|---|
 | [docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs) | 包含所有已發佈的 SQL Server 內容。 子資料夾會以邏輯方式組織內容的不同區域。 |
 | [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) | 包含 include 檔案。 這些檔案是可能在一或多個其他主題中包含的內容區塊。 |

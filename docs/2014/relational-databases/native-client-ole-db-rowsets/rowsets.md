@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c78f634f78cdcd970c1d731071a291930cf00ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206647"
 ---
 # <a name="rowsets"></a>資料列集
   資料列集是一組資料列，其中包含資料的資料行。 資料列集是能讓所有 OLE DB 資料提供者公開表格形式結果集資料的核心物件。  
   
- 取用者使用 **IDBCreateSession::CreateSession** 方法建立工作階段之後，就可以使用工作階段上的 **IOpenRowset** 或 **IDBCreateCommand** 介面建立資料列集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援這兩種介面。 此處描述這兩種方法。  
+ 取用者使用 **IDBCreateSession::CreateSession** 方法建立工作階段之後，就可以使用工作階段上的 **IOpenRowset** 或 **IDBCreateCommand** 介面建立資料列集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者同時支援這兩個介面。 此處描述這兩種方法。  
   
 -   呼叫 **IOpenRowset::OpenRowset** 方法來建立資料列集。  
   
@@ -54,9 +54,9 @@ ms.locfileid: "68206647"
   
 -   [資料列集和 SQL Server 資料指標](rowsets-and-sql-server-cursors.md)  
   
--   [擷取資料列](fetching-rows.md)  
+-   [提取資料列](fetching-rows.md)  
   
--   [使用 IRow 擷取單一資料列](fetching-a-single-row-with-irow.md)  
+-   [使用 IRow 來提取單一資料列](fetching-a-single-row-with-irow.md)  
   
 -   [書籤](bookmarks.md)  
   

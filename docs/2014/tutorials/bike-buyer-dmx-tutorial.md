@@ -1,5 +1,5 @@
 ---
-title: Bike Buyer DMX 教學課程 |Microsoft Docs
+title: 自行車購買者 DMX 教學課程 |Microsoft Docs
 ms.custom: ''
 ms.date: 10/19/2018
 ms.prod: sql-server-2014
@@ -17,19 +17,21 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140534"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Bike Buyer DMX 教學課程
   您將在此教學課程中學會如何使用資料採礦延伸模組 (DMX) 查詢語言，來建立、培訓和探索採礦模型。 您將使用這些採礦模型來建立預測，以判斷客戶是否要購買自行車。  
   
- 這些採礦模型將從 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 範例資料庫中包含的資料來建立，該資料庫儲存了虛構公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的資料。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨國製造公司。 該公司製造金屬類及複合型自行車，並銷售到北美、歐洲及亞洲的商業市場。 公司的基地位於美國華盛頓州的 Bothell 市，有 290 位員工，另外還有數個區域銷售團隊，分別位於國際銷售市場所在地。  
+ 這些採礦模型將從 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 範例資料庫中包含的資料來建立，該資料庫儲存了虛構公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的資料。 
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨國製造公司。 該公司製造金屬類及複合型自行車，並銷售到北美、歐洲及亞洲的商業市場。 公司的基地位於美國華盛頓州的 Bothell 市，有 290 位員工，另外還有數個區域銷售團隊，分別位於國際銷售市場所在地。  
   
 ## <a name="tutorial-scenario"></a>教學課程案例  
- [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 決定要建立自訂應用程式，使用資料採礦功能來擴大其資料分析。 自訂應用程式的目標是要能夠：  
+ 
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 決定要建立自訂應用程式，使用資料採礦功能來擴大其資料分析。 自訂應用程式的目標是要能夠：  
   
 -   以潛在客戶的特性做為輸入，並預測他們是否會購買自行車。  
   
@@ -39,17 +41,19 @@ ms.locfileid: "63140534"
   
  此外，行銷部門要求能夠將現有客戶依特性分類，例如居住地、子女人數及通勤距離。 他們想知道是否能使用群集來幫助鎖定特定客戶群。 這需要其他採礦模型。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供數個工具，可用來完成這些工作：  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供數個用來完成這些工作的工具：  
   
 -   DMX 查詢語言  
   
--   [Microsoft 決策樹演算法](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)而[Microsoft 群集演算法](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)  
+-   [Microsoft 決策樹演算法](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)和[microsoft 群集演算法](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的查詢編輯器  
+-   中的查詢編輯器[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
   
- 資料採礦延伸模組 (DMX) 是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的一種查詢語言，您可以使用它來建立及處理採礦模型。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 決策樹演算法建立可用來預測某人是否會購買自行車的模型。 產生的模型可以用個別使用者或客戶資料表做為輸入。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 群集演算法可依共用特性建立客戶群組。 此教學課程的目標是要提供用於自訂應用程式的 DMX 指令碼。  
+ 資料採礦延伸模組 (DMX) 是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的一種查詢語言，您可以使用它來建立及處理採礦模型。 
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] 決策樹演算法建立可用來預測某人是否會購買自行車的模型。 產生的模型可以用個別使用者或客戶資料表做為輸入。 
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] 群集演算法可依共用特性建立客戶群組。 此教學課程的目標是要提供用於自訂應用程式的 DMX 指令碼。  
   
- **如需詳細資訊：＜＞**[資料採礦方案](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **如需詳細資訊：** [資料採礦解決方案](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>採礦結構和採礦模型  
  開始建立 DMX 陳述式之前，一定要先了解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用來建立採礦模型的主要物件。 資料採礦結構是定義資料網域 (從中建立採礦模型) 的資料結構。 單一採礦結構可包含共用相同網域的多個採礦模型。 採礦模型會將採礦模型演算法套用至以採礦結構表示的資料。  
@@ -68,13 +72,13 @@ ms.locfileid: "63140534"
  ALTER MINING STRUCTURE  
  使用此陳述式將採礦模型加入已存在於伺服器上的採礦結構中。 如果您想要建立包含數個不同採礦模型的採礦結構，則此陳述式很有幫助。 您要在單一採礦結構中加入不止一個採礦模型，有幾個原因。 例如，您可以建立數個使用不同演算法的採礦模型，看看哪一個最好用。 您可以建立數個使用相同演算法的採礦模型，但每一個採礦模型要設定不同的參數，以找出參數的最佳設定。  
   
- 如需詳細資訊，請參閱 < [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)。  
+ 如需詳細資訊，請參閱[ALTER &#40;DMX&#41;的採礦結構](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)。  
   
  因為您要建立包含數個採礦模型的採礦結構，所以您將使用此教學課程的第二個方法。  
   
- **如需詳細資訊**  
+ **詳細資訊**  
   
- [資料採礦延伸模組&#40;DMX&#41;參考](/sql/dmx/data-mining-extensions-dmx-reference)，[了解 DMX Select 陳述式](/sql/dmx/understanding-the-dmx-select-statement)，[結構和使用方式的 DMX 預測查詢](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
+ [資料採礦延伸模組 &#40;dmx&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference)，瞭解 Dmx 預測查詢[的 dmx Select 語句](/sql/dmx/understanding-the-dmx-select-statement)、[結構和使用](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)方式  
   
 ## <a name="what-you-will-learn"></a>學習內容  
  這個教學課程分成下列課程：  
@@ -82,7 +86,7 @@ ms.locfileid: "63140534"
  [第 1 課：建立自行車買主採礦結構](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
  在這一課，您將學會如何使用 `CREATE` 陳述式來建立採礦結構。  
   
- [第 2 課：將採礦模型加入 Bike Buyer 採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [第 2 課：將採礦模型加入 Bike Buyer 採礦結構中](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
  在這一課，您將學會如何使用 `ALTER` 陳述式將採礦模型加入至採礦結構。  
   
  [第 3 課：處理自行車買主採礦結構](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
@@ -99,15 +103,16 @@ ms.locfileid: "63140534"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)][!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)]， [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]，或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]、 [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)]、 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]或[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫。 為了加強安全性，系統預設不會安裝範例資料庫。 若要安裝的正式範例資料庫[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請瀏覽[Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417)頁面，然後選取您想要安裝的資料庫...  
+-   
+  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫。 為了加強安全性，系統預設不會安裝範例資料庫。 若要安裝的[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]正式範例資料庫，請造訪[Microsoft SQL 範例資料庫](https://go.microsoft.com/fwlink/?LinkId=88417)頁面，並選取您要安裝的資料庫。  
   
 > [!NOTE]  
->  當檢閱教學課程時，我們建議您將新增**下一個主題**並**上一個主題**文件檢視器工具列的按鈕。  
+>  當您查看教學課程時，建議您將 **[下一個主題]** 和 [**上一個主題**] 按鈕新增至 [檔檢視器] 工具列。  
   
 ## <a name="see-also"></a>另請參閱  
  [購物籃 DMX 教學課程](../../2014/tutorials/market-basket-dmx-tutorial.md)   
- [基本資料採礦教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ [資料採礦基本教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
   

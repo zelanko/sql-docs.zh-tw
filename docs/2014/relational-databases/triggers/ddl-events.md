@@ -15,17 +15,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c9c90dbb072ace600258edfb4ff13f99ecadf188
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196516"
 ---
 # <a name="ddl-events"></a>DDL 事件
   下表列出可用以引發 DDL 觸發程序或事件通知的 DDL 事件。 請注意，每個事件都會對應到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或預存程序，且陳述式語法已修改為在關鍵字之間加上了底線字元 (_)。  
   
 > [!IMPORTANT]  
->  執行類似 DDL 作業的系統預存程序也可以引發 DDL 觸發程序和事件通知。 請測試 DDL 觸發程序和事件通知，以判斷它們對執行之系統預存程序的回應。 例如，CREATE TYPE 陳述式與 **sp_addtype** 預存程序都會引發基於 CREATE_TYPE 事件而建立的 DDL 觸發程序或事件通知。  
+>  執行類似 DDL 作業的系統預存程序也可以引發 DDL 觸發程序和事件通知。 請測試 DDL 觸發程序和事件通知，以判斷它們對執行之系統預存程序的回應。 例如，CREATE TYPE 陳述式與 **sp_addtype** 預存程序都會引發在 CREATE_TYPE 事件上建立的 DDL 觸發程序或事件通知。  
   
 ## <a name="ddl-statements-that-have-server-or-database-scope"></a>具有伺服器或資料庫範圍的 DDL 陳述式  
  可以建立 DDL 觸發程序或事件通知，以便在下列事件發生於此觸發程序或事件通知建立所在的資料庫內或是伺服器執行個體的任何地方時，可引發此觸發程序或事件通知來進行回應。  

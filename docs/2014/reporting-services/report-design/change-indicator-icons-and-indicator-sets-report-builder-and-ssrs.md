@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37f3b93019a837ac5521c52e9ceb5f58f3e39b5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106366"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>變更指標圖示和指標集合 (報表產生器及 SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供預先設定的指標集合，這些集合可能不會一直有效地描述您的資料並在已傳遞的報表中正常運作。 本主題提供變更指標圖示外觀，以及變更指標集合以加入不同、更多或更少之指標圖示的程序。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供預先設定的指標集合，這個指標集合在已傳遞的報表中可能不一定會有效地描述您的資料，運作也不一定良好。 本主題提供變更指標圖示外觀，以及變更指標集合以加入不同、更多或更少之指標圖示的程序。  
   
  您可以使用運算式來設定選項，如色彩。 如需詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66106366"
   
 2.  按一下左窗格中的 **[值和狀態]** 。  
   
-3.  按一下 **[加入]** 。 指標隨即使用預設圖示與 [無色彩]  選項新增。  
+3.  按一下 [新增]  。 指標隨即使用預設圖示與 [無色彩]  選項新增。  
   
      設定指標使用您想要的圖示和色彩。 本主題稍早的程序描述執行這項操作的步驟。  
   

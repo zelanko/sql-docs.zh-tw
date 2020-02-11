@@ -1,5 +1,5 @@
 ---
-title: 函式一致性 |Microsoft Docs
+title: 函數一致性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,40 +16,40 @@ ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 45eb427b660496430334633b5d43ee8989211c0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069748"
 ---
 # <a name="function-conformance"></a>函式一致性
-下表指出這是妥善定義的每個 ODBC 函式，一致性層級。  
+下表指出每個 ODBC 函式的一致性層級，其中已妥善定義此功能。  
   
-|函數|一致性層級|  
+|函式|一致性層級|  
 |--------------|-----------------------|  
 |**SQLAllocHandle**|核心|  
 |**SQLBindCol**|核心|  
-|**SQLBindParameter**|Core[1]|  
+|**SQLBindParameter**|核心 [1]|  
 |**SQLBrowseConnect**|層級 1|  
 |**SQLBulkOperations**|層級 1|  
-|**SQLCancel**|Core[1]|  
+|**SQLCancel**|核心 [1]|  
 |**SQLCloseCursor**|核心|  
-|**SQLColAttribute**|Core[1]|  
+|**SQLColAttribute**|核心 [1]|  
 |**SQLColumnPrivileges**|層級 2|  
 |**SQLColumns**|核心|  
 |**SQLConnect**|核心|  
 |**SQLCopyDesc**|核心|  
 |**SQLDataSources**|核心|  
-|**SQLDescribeCol**|Core[1]|  
+|**SQLDescribeCol**|核心 [1]|  
 |**SQLDescribeParam**|層級 2|  
 |**SQLDisconnect**|核心|  
 |**SQLDriverConnect**|核心|  
 |**SQLDrivers**|核心|  
-|**SQLEndTran**|Core[1]|  
+|**SQLEndTran**|核心 [1]|  
 |**SQLExecDirect**|核心|  
 |**SQLExecute**|核心|  
 |**SQLFetch**|核心|  
-|**SQLFetchScroll**|Core[1]|  
+|**SQLFetchScroll**|核心 [1]|  
 |**SQLForeignKeys**|層級 2|  
 |**SQLFreeHandle**|核心|  
 |**SQLFreeStmt**|核心|  
@@ -76,18 +76,18 @@ ms.locfileid: "68069748"
 |**SQLProcedures**|層級 1|  
 |**SQLPutData**|核心|  
 |**SQLRowCount**|核心|  
-|**SQLSetConnectAttr**|Core[2]|  
+|**SQLSetConnectAttr**|核心 [2]|  
 |**SQLSetCursorName**|核心|  
-|**SQLSetDescField**|Core[1]|  
+|**SQLSetDescField**|核心 [1]|  
 |**SQLSetDescRec**|核心|  
-|**SQLSetEnvAttr**|Core[2]|  
+|**SQLSetEnvAttr**|核心 [2]|  
 |**SQLSetPos**|層級 1 [1]|  
-|**SQLSetStmtAttr**|Core[2]|  
-|**SQLSpecialColumns**|Core[1]|  
+|**SQLSetStmtAttr**|核心 [2]|  
+|**SQLSpecialColumns**|核心 [1]|  
 |**SQLStatistics**|核心|  
 |**SQLTablePrivileges**|層級 2|  
 |**SQLTables**|核心|  
   
- [1] 重要的功能，此函式可只能在較高的一致性層級。  
+ [1] 此函式的重要功能僅適用于較高的一致性層級。  
   
- [2] 將某些屬性設定為非預設值是根據一致性層級而定。 如需詳細資訊，請參閱下一步 區段中，[屬性一致性](../../../odbc/reference/develop-app/attribute-conformance.md)。
+ [2] 將某些屬性設定為非預設值取決於一致性層級。 如需詳細資訊，請參閱下一節[屬性一致性](../../../odbc/reference/develop-app/attribute-conformance.md)。

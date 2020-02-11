@@ -1,5 +1,5 @@
 ---
-title: Microsoft Full-text Engine for SQL Server 不會載入預設的不帶正負號的第三方元件 |Microsoft Docs
+title: 適用于 SQL Server 的 Microsoft 全文檢索引擎不會預設載入未簽署的協力廠商元件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fe7f1359b55f2a488a58c37b9f3045a31dbc0778
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095160"
 ---
 # <a name="the-microsoft-full-text-engine-for-sql-server-will-not-load-unsigned-third-party-components-by-default"></a>Microsoft Full-Text Engine for SQL Server 預設不會載入未簽署的協力廠商元件
@@ -30,9 +30,9 @@ ms.locfileid: "66095160"
  升級之後，[!INCLUDE[msCoName](../../includes/msconame-md.md)] Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設不會載入目前安裝在伺服器上的協力廠商篩選，例如 PDF 篩選。  
   
 ## <a name="corrective-action"></a>更正動作  
- 若要載入的協力廠商篩選，您必須設定*load_os_resource*並關閉*verify_signature*該執行個體上。  
+ 若要載入協力廠商篩選，您必須設定*load_os_resource* ，並關閉該實例上的*verify_signature* 。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用升級建議程式](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [使用 Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

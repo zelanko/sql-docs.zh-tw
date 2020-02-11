@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 737e8ebfd96d98bff9ed144db33189e141dc0cfd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107773"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>列印報表 (報表產生器及 SSRS)
   將報表儲存至報表伺服器之後，您就可以從瀏覽器、報表管理員或任何用來檢視所匯出報表的應用程式，檢視及列印報表。 儲存報表之前，您可以在預覽報表時將它列印出來。  
   
- 當您列印報表時，可以指定所要使用的紙張大小。 紙張大小會決定報表中的頁數及哪些報表資料適合每一頁的大小。 紙張大小只會影響以強制分頁轉譯器所轉譯的報表：PDF、影像和列印。 設定紙張大小對於其他轉譯器沒有任何作用。 如需詳細資訊，請參閱[轉譯行為 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
+ 當您列印報表時，可以指定所要使用的紙張大小。 紙張大小會決定報表中的頁數及哪些報表資料適合每一頁的大小。 紙張大小只會影響以硬分頁轉譯器所轉譯的報表：PDF、影像和列印。 設定紙張大小對於其他轉譯器沒有任何作用。 如需詳細資訊，請參閱[轉譯行為 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
   
  您可以從報表管理員中的報表檢視器工具列或報表產生器中的預覽，將報表匯出到手動分頁轉譯器，或是按一下 [列印] 按鈕來列印報表的複本。 您可能需要設定紙張大小或是其他版面設定屬性。 使用 **[報表屬性]** 對話方塊可變更版面設定屬性，包括紙張大小。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66107773"
   
 ### <a name="to-print-a-report-from-a-web-browser-application"></a>若要從網頁瀏覽器應用程式列印報表  
   
-1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)。  
+1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)。  
   
 2.  在報表管理員中，導覽到您要列印的報表。 開啟報表。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "66107773"
   
 ## <a name="see-also"></a>另請參閱  
  [列印報表 &#40;報表產生器及 SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
- [匯出報表&#40;報表產生器及 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [匯出報表 &#40;報表產生器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [報表屬性對話方塊、版面設定 &#40;報表產生器&#41;](../report-properties-dialog-box-page-setup-report-builder.md)   
  [報表設計檢視 &#40;報表產生器&#41;](report-design-view-report-builder.md)  
   

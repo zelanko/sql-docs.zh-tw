@@ -1,5 +1,5 @@
 ---
-title: NextRecordset 方法 (ADO) |Microsoft Docs
+title: NextRecordset 方法（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,14 +18,14 @@ ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c7af4f5d217670ab23e71a3c53ccd5cf7944b0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932039"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset 方法 (ADO)
-清除目前[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)物件，並傳回下一步**資料錄集**前移透過一系列的命令。  
+藉由推進一系列命令，清除目前的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，並傳回下一個**記錄集**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,33 +35,33 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 傳回**資料錄集**物件。 在語法模型中， *recordset1*並*recordset2*可以是相同**資料錄集**物件，或者您可以使用不同的物件。 當使用個別**資料錄集**物件，重設**ActiveConnection**原始屬性**資料錄集**(*recordset1*)之後**NextRecordset**已呼叫會產生錯誤。  
+ 傳回**記錄集**物件。 在語法模型中， *recordset1*和*recordset2*可以是相同的**記錄集**物件，或者您可以使用不同的物件。 使用個別的**記錄集**物件時，在呼叫**NextRecordset**之後，重設原始**記錄集**（*recordset1*）上的**ActiveConnection**屬性將會產生錯誤。  
   
 #### <a name="parameters"></a>參數  
  *RecordsAffected*  
- 選擇性。 A**長**變數提供者會傳回目前的作業影響的記錄數目。  
+ 選擇性。 **長**變數，提供者會傳回目前作業所影響的記錄數目。  
   
 > [!NOTE]
->  這個參數只會傳回作業; 所影響的記錄數目它不會用來產生 select 陳述式傳回的記錄計數**資料錄集**。  
+>  此參數只會傳回受作業影響的記錄數目;它不會從用來產生**記錄集**的 select 語句傳回記錄計數。  
   
 ## <a name="remarks"></a>備註  
- 使用**NextRecordset**方法，以傳回結果的複合命令陳述式中的下一個命令，或傳回多個結果的預存程序。 如果您開啟**資料錄集**物件會根據複合命令陳述式 (例如，"選取\*從 table1;選取\*從 table2 」) 使用[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法[命令](../../../ado/reference/ado-api/command-object-ado.md)或[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法**資料錄集**，ADO 執行第一個命令，並傳回結果*資料錄集*。 若要存取之陳述式中的後續命令的結果，請呼叫**NextRecordset**方法。  
+ 您可以使用**NextRecordset**方法，傳回復合命令語句或傳回多個結果之預存程式的下一個命令的結果。 如果您根據複合命令語句開啟**記錄集**物件（例如，"SELECT \* FROM table1;SELECT \* FROM table2 "）在[命令](../../../ado/reference/ado-api/command-object-ado.md)上使用[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法或在**記錄集**上使用[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法，ADO 只會執行第一個命令，並將結果傳回至*記錄集*。 若要存取語句中後續命令的結果，請呼叫**NextRecordset**方法。  
   
- 只要有其他結果，**資料錄集**包含複合陳述式不在中斷連線，或可跨處理序界限封送處理**NextRecordset**方法將繼續傳回**資料錄集**物件。 如果傳回的資料列的命令執行成功，但會傳回任何記錄，傳回**資料錄集**物件將會開啟但空的。 在此情況下，藉由確認測試[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)並[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)屬性都 **，則為 True**。 如果非資料列傳回命令執行成功，會傳回**Recordset**物件將會關閉，您可以藉由測試確認[狀態](../../../ado/reference/ado-api/state-property-ado.md)屬性**資料錄集**. 有沒有更多的結果，當*資料錄集*將會設定為*Nothing*。  
+ 只要有其他結果，而且包含複合陳述式的**記錄集**不會在進程界限之間中斷連接或封送處理， **NextRecordset**方法就會繼續傳回**記錄集**物件。 如果資料列傳回的命令執行成功，但未傳回任何記錄，則傳回的**記錄集**物件將會開啟，但會是空的。 藉由確認[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)和[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)屬性皆為**True**來測試此案例。 如果未傳回資料列的命令成功執行，則會關閉傳回的**記錄集**物件，您可以藉由測試**記錄集**上的[State](../../../ado/reference/ado-api/state-property-ado.md)屬性來進行驗證。 當沒有其他結果時，會將*記錄集*設定為 [*無*]。  
   
- **NextRecordset**方法並不適用於已中斷連接**Recordset**物件，其中[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)已設為**Nothing**(Microsoft Visual Basic 中) 或 NULL （在其他語言）。  
+ **NextRecordset**方法無法在已中斷連線的**記錄集**物件上使用，其中[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)已設定為 [**無**] （在 Microsoft Visual Basic 中）或 Null （以其他語言）。  
   
- 在立即更新模式中進行編輯時，呼叫**NextRecordset**方法會產生錯誤; 呼叫[更新](../../../ado/reference/ado-api/update-method.md)或是[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法第一次。  
+ 如果在立即更新模式中進行編輯，呼叫**NextRecordset**方法會產生錯誤;先呼叫[Update](../../../ado/reference/ado-api/update-method.md)或[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法。  
   
- 若要傳入的複合陳述式中的多個命令的參數，來填入[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)集合，或藉由傳遞陣列與原始**開啟**或是**Execute**呼叫時，參數必須在其對應的命令，命令序列中相同的順序在集合或陣列。 您必須完成所有結果都讀取前都讀取輸出參數值。  
+ 若要藉由填滿[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)集合，或傳遞具有原始**Open**或**Execute**呼叫的陣列，在複合陳述式中傳遞多個命令的參數，參數的順序必須與命令序列中各自的命令位於集合或陣列中。 您必須先完成讀取所有結果，然後再讀取輸出參數值。  
   
- 您的 OLE DB 提供者會決定在複合陳述式中的每個命令執行時。 [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)，比方說，收到的複合陳述式批次中執行所有命令。 產生**資料錄集**當您呼叫時，只會傳回**NextRecordset**。  
+ 您的 OLE DB 提供者會判斷複合陳述式中每個命令的執行時間。 例如，[適用于 SQL Server 的 Microsoft OLE DB 提供者](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)會在接收復合語句時，執行批次中的所有命令。 當您呼叫**NextRecordset**時，只會傳回所產生的**記錄集**。  
   
- 不過，其他提供者可能會執行下一個命令陳述式中稱為 NextRecordset 之後，才。 對於這些提供者，如果您明確地關閉**資料錄集**ADO 永遠不會執行剩餘的命令物件之前先逐步完成整個命令陳述式。  
+ 不過，在呼叫 NextRecordset 之後，其他提供者可能只會在語句中執行下一個命令。 對於這些提供者，如果您在逐步執行整個命令語句之前明確關閉**記錄集**物件，ADO 就不會執行其餘的命令。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [NextRecordset 方法範例 (VB)](../../../ado/reference/ado-api/nextrecordset-method-example-vb.md)   
+ [NextRecordset 方法範例（VB）](../../../ado/reference/ado-api/nextrecordset-method-example-vb.md)   
  [NextRecordset 方法範例 (VC++)](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)   

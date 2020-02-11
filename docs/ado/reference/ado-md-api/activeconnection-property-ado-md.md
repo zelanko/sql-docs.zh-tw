@@ -1,5 +1,5 @@
 ---
-title: ActiveConnection 屬性 (ADO MD) |Microsoft Docs
+title: ActiveConnection 屬性（ADO MD） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,51 +18,51 @@ ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae0b32385b98ac1b48688a7f89bbd7c91842a106
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911589"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection 屬性 (ADO MD)
-指出哪一個 ado[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件目前的資料格集，或目前所屬的目錄。  
+指出目前的儲存格或目錄目前所屬的 ADO[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**Variant** ，其中包含定義連接字串或**連線**物件。 預設值是空的。  
+ 設定或傳回包含定義連接或**連接**物件之字串的**Variant** 。 預設值是空的。  
   
 ## <a name="remarks"></a>備註  
- 您可以將此屬性設定為有效的 ADO**連線**物件或有效的連接字串。 當這個屬性設定為連接字串時，此提供者建立新**連線**物件使用這個定義，並開啟連接。  
+ 您可以將此屬性設定為有效的 ADO**連接**物件或有效的連接字串。 當這個屬性設定為連接字串時，提供者會使用此定義來建立新的**連接**物件，並開啟連接。  
   
- 如果您使用*ActiveConnection*引數[開啟](../../../ado/reference/ado-md-api/open-method-ado-md.md)方法來開啟[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)物件**ActiveConnection**屬性繼承的引數的值。  
+ 如果您使用[open](../../../ado/reference/ado-md-api/open-method-ado-md.md)方法的*ActiveConnection*引數來開啟「[集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)」物件，則**ActiveConnection**屬性會繼承引數的值。  
   
- 設定**ActiveConnection**屬性[類別目錄](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)物件**Nothing**釋放相關聯的資料，包括中的資料[CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)集合，以及任何相關[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)，[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)，[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)，並[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)物件。 關閉**連接**物件，用來開啟**類別目錄**已設定相同的效果**ActiveConnection**屬性設**Nothing**.  
+ 將[目錄](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)物件的**ActiveConnection**屬性**設定為不**會釋出相關聯的資料，包括[CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)集合中的[資料，以及](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)任何相關的[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)、階層、[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)和[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)物件。 關閉用來開啟**目錄**的**連接**物件，其效果與將**ActiveConnection**屬性設定為 [**無**] 相同。  
   
- 變更預設資料庫所參考的連接**ActiveConnection**屬性**類別目錄**物件會導致無效的內容**目錄**。  
+ 變更**目錄**物件的**ActiveConnection**屬性所參考之連接的預設資料庫，會使**目錄**的內容失效。  
   
- 如果您嘗試變更，會發生錯誤**ActiveConnection**屬性為開啟**資料格集**物件。  
+ 如果您嘗試變更開啟的**儲存格集**物件的**ActiveConnection**屬性，就會發生錯誤。  
   
 > [!NOTE]
->  在 Visual Basic 中，請務必使用**設定**設定時的關鍵字**ActiveConnection**屬性設**連接**物件。 如果您省略**設定**關鍵字，您將會實際設定**ActiveConnection**屬性等於**連接**物件的預設屬性， **ConnectionString**。 程式碼能夠運作;不過，您將建立資料來源，可能會有負面效能影響的其他連接。  
+>  在 Visual Basic 中，請記得在將**ActiveConnection**屬性設定為**連接**物件時，使用**Set**關鍵字。 如果您省略**Set**關鍵字，實際上您會將**ActiveConnection**屬性設定為等於**Connection**物件的 default 屬性**ConnectionString**。 程式碼會正常執行;不過，您將建立與資料來源的額外連接，這可能會對效能造成負面影響。  
   
- 時使用的 MSOLAP 資料提供者，資料來源連接字串中設定為伺服器名稱，並設定為目錄名稱的初始目錄，從資料來源。 若要連接到 cube 檔案從伺服器中斷連線，將位置設定的完整路徑。CUB 檔案。 在任一情況下，設定提供者的提供者名稱。 例如，下列字串會使用 MSOLAP 提供者來連接到名為的伺服器上名為 Bobs 影片存放區目錄**Servername**:  
+ 使用 MSOLAP 資料提供者時，請將連接字串中的資料來源設定為伺服器名稱，並將初始目錄設定為數據源中的目錄名稱。 若要連接到與伺服器中斷連接的 cube 檔案，請將 [位置] 設定為的完整路徑。.CUB 檔案。 不論是哪一種情況，請將提供者設定為提供者名稱。 例如，下列字串會使用 MSOLAP 提供者，連接到名為**Servername**之伺服器上名為 bobs-machine 的目錄：  
   
 ```  
 "Data Source=Servername;Initial Catalog=Bobs Video Store;Provider=msolap"  
 ```  
   
- 下列字串會連線到本機 cube 檔案的位置 C:\MSDASDK\samples\oledb\olap\data\bobsvid.cub:  
+ 下列字串會連接到位置 C:\MSDASDK\samples\oledb\olap\data\bobsvid.cub 的本機 cube 檔案：  
   
 ```  
 "Location=C:\MSDASDK\samples\oledb\olap\data\bobsvid.cub;Provider=msolap"  
 ```  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
   
 |||  
 |-|-|  
 |[Catalog 物件 (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[Cellset 物件 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [Cellset 範例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [格集範例（VB）](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
+ [Connection 物件（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Open 方法 (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)

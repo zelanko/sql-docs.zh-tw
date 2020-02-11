@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 1dd66834788896e6952a0352eb2a19fd1a828513
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245957"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
@@ -33,7 +33,7 @@ ms.locfileid: "75245957"
   
 |資料行|資料類型|描述|  
 |-------------|---------------|-----------------|  
-|end_time|**從中**|UTC 時間會指出目前報告間隔的結束。|  
+|end_time|**datetime**|UTC 時間會指出目前報告間隔的結束。|  
 |avg_cpu_percent|**decimal （5，2）**|平均運算使用率，以服務層限制的百分比計算。|  
 |avg_data_io_percent|**decimal （5，2）**|平均資料 i/o 使用率，以服務層限制的百分比表示。 如需超大規模資料庫資料庫，請參閱[資源使用量統計資料中的資料 IO](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)。|  
 |avg_log_write_percent|**decimal （5，2）**|平均交易記錄寫入（以 MBps 為單位），以服務層限制的百分比表示。|  

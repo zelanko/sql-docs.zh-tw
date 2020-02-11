@@ -1,5 +1,5 @@
 ---
-title: 自訂呼叫順序 (SybaseToSQL) |Microsoft Docs
+title: 自訂呼叫順序（SybaseToSQL） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,21 +12,21 @@ ms.assetid: 47f160ce-f8f2-489e-9c3a-690c9fa25259
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 68aaaf9db4b2376a1c950bc4c2b463bd2b7b6391
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029330"
 ---
 # <a name="customizing-calls-order-sybasetosql"></a>自訂呼叫順序 (SybaseToSQL)
-在此步驟中，您選取要測試的物件將會在其中叫用的順序。  
+在此步驟中，您會選取要叫用之物件的叫用順序。  
   
 ## <a name="customizing-order"></a>自訂順序  
-使用按鈕放頂端方格中，要將物件放在正確的順序物件的清單。 或者，您可以使用按鈕出現在正確的何時會變成選取的資料列。  
+使用放在方格頂端的按鈕和物件清單，以正確的順序放置物件。 或者，當資料列被選取時，您可以使用右邊出現的按鈕。  
   
-## <a name="next-step"></a>下一個步驟  
-[完成測試案例準備&#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
+## <a name="next-step"></a>後續步驟  
+[完成測試案例準備 &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[測試移轉的資料庫物件&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[&#40;SybaseToSQL&#41;測試遷移的資料庫物件](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

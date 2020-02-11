@@ -1,5 +1,5 @@
 ---
-title: 疑難排解記憶體最佳化雜湊索引常見效能問題 |Microsoft Docs
+title: 針對記憶體優化雜湊索引的常見效能問題進行疑難排解 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62842533"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>疑難排解記憶體最佳化雜湊索引的常見效能問題
   本主題將焦點放在疑難排解以及解決與雜湊索引相關的常見問題。  
   
 ## <a name="search-requires-a-subset-of-hash-index-key-columns"></a>搜尋需要雜湊索引鍵資料行的子集  
- **問題：** 雜湊索引需要所有的索引鍵資料行的值，以計算雜湊值，並在雜湊表中找出對應的資料列。 因此，如果查詢只包含 WHERE 子句中索引鍵子集的等號比較述詞，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法使用索引搜尋找出對應 WHERE 子句中述詞的資料列。  
+ **問題：** 雜湊索引需要所有索引鍵資料行的值，才能計算雜湊值，並在雜湊表中找出對應的資料列。 因此，如果查詢只包含 WHERE 子句中索引鍵子集的等號比較述詞，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法使用索引搜尋找出對應 WHERE 子句中述詞的資料列。  
   
  相反地，只要索引鍵資料行是索引中的前置資料行，像是磁碟非叢集索引和記憶體最佳化非叢集索引這類已排序索引就可支援在這些資料行的子集上進行索引搜尋。  
   
- **徵兆：** 這會導致效能變差，做為[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]需要執行完整資料表掃描，而不是索引搜尋，通常是較快速的作業。  
+ **徵兆：** 這會導致效能降低，因為[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]需要執行完整資料表掃描，而不是索引搜尋，這通常是較快速的作業。  
   
- **如何疑難排解：** 除了效能降低，查詢計劃的檢查將會顯示掃描而不是索引搜尋。 如果查詢相當簡單，則查詢文字和索引定義的檢查也會指出搜尋需要索引鍵資料行的子集。  
+ **如何進行疑難排解：** 除了效能降低之外，查詢計劃的檢查會顯示掃描，而不是索引搜尋。 如果查詢相當簡單，則查詢文字和索引定義的檢查也會指出搜尋需要索引鍵資料行的子集。  
   
  請考慮下列資料表和查詢：  
   
@@ -48,7 +48,7 @@ WITH (MEMORY_OPTIMIZED = ON)
   
  資料表的兩個資料行 (o_id、od_id) 上有雜湊索引，而查詢在 (o_id) 上有等號比較述詞。 由於查詢只會在索引鍵資料行的子集上擁有等號比較述詞，因此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法使用 PK_od 執行索引搜尋作業，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 必須改為轉換成完整索引掃描。  
   
- **因應措施：** 有許多種可行的因應措施。 例如：  
+ 因應措施 **：** 有一些可能的因應措施。 例如：  
   
 -   重建索引做為非叢集類型，而不是非叢集雜湊。 記憶體最佳化非叢集索引已經過排序，因此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以在前置索引鍵資料行上執行索引搜尋。 範例產生的主索引鍵定義會是 `constraint PK_od primary key nonclustered`。  
   

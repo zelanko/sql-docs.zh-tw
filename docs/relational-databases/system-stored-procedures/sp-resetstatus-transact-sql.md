@@ -1,5 +1,5 @@
 ---
-title: sp_resetstatus (TRANSACT-SQL) |Microsoft Docs
+title: sp_resetstatus （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: b892727f-ea3b-4b94-88d9-f2386ad4962c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1a9f4346116e94957cce16307d70c69a13942b5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68129626"
 ---
-# <a name="spresetstatus-transact-sql"></a>sp_resetstatus (Transact-SQL)
+# <a name="sp_resetstatus-transact-sql"></a>sp_resetstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   重設質疑資料庫的狀態。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)改。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用[ALTER database](../../t-sql/statements/alter-database-transact-sql.md) 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,8 +42,8 @@ sp_resetstatus [ @dbname = ] 'database'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @dbname=] '*資料庫*'  
- 這是要重設的資料庫名稱。 *資料庫*已**sysname**，沒有預設值。  
+ [ @dbname= ]'*資料庫*'  
+ 這是要重設的資料庫名稱。 *資料庫*是**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -53,7 +53,7 @@ sp_resetstatus [ @dbname = ] 'database'
   
  資料庫會因為許多原因而變成可疑。 可能的原因包括作業系統拒絕存取資料庫資源，以及一個或多個資料庫檔案無法使用或損毀。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要系統管理員 (sysadmin) 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
@@ -65,6 +65,6 @@ EXEC sp_resetstatus 'AdventureWorks2012';
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

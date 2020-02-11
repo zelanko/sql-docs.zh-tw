@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e9e19d6d6453acedff16e46dbd2d90d92a3b9587
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211829"
 ---
 # <a name="modify-primary-keys"></a>修改主索引鍵
@@ -37,7 +37,7 @@ ms.locfileid: "68211829"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
@@ -52,14 +52,14 @@ ms.locfileid: "68211829"
   
 3.  完成下表中的動作：  
   
-    |若要|請依照下列步驟：|  
+    |至|請依照下列步驟：|  
     |--------|------------------------|  
     |重新命名主索引鍵|在 [ **名稱** ] 方塊中輸入新的名稱。 確定新名稱不會與 [選取的主索引鍵/唯一索引鍵或索引]  清單中的名稱重複。|  
     |設定叢集選項|若要建立主索引鍵的叢集索引，請選取 [建立成 CLUSTERED]  ，然後從下拉式清單方塊中選取選項。 每個資料表只能存在一個叢集索引。 如果您的索引無法使用此選項，則必須先清除現有叢集索引的這個設定。<br /><br /> 如果沒有選取此選項，就會建立唯一非叢集索引。|  
     |定義填滿因數|展開 **[填滿規格]** 類別目錄，然後在 **[填滿因數]** 方塊中輸入 0 到 100 的整數。 如需填滿因數的詳細資訊以及使用方法，請參閱 [指定索引的填滿因素](../indexes/specify-fill-factor-for-an-index.md)。|  
     |變更資料行順序|選取 [資料行]  ，然後按一下屬性右邊的省略符號 **(…)** 。 在  **[索引資料行]** 對話方塊中，從主索引鍵移除資料行。 然後將資料行以所要的順序加回去。 若要從索引鍵移除資料行，只要從 **[資料行]** 名稱清單中移除資料行名稱即可。|  
   
-4.  在 [檔案]  功能表上，按一下 [儲存]  _table name_。  
+4.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改主索引鍵**  

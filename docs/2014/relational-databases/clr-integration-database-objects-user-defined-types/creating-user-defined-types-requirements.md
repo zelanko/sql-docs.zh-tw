@@ -1,5 +1,5 @@
 ---
-title: 使用者定義型別需求 |Microsoft Docs
+title: 使用者定義類型需求 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,21 +21,21 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919665"
 ---
 # <a name="user-defined-type-requirements"></a>使用者定義型別需求
-  建立使用者定義型別 (UDT)，在安裝時，您必須做數個重要的設計決策[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 對於大部分的 UDT 而言，雖然將 UDT 當做類別來建立也是一種選擇，但是建議將 UDT 當做結構來建立。 UDT 定義必須符合建立 UDT 的規格，才能讓它使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊。  
+  建立要安裝在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的使用者定義型別（UDT）時，您必須進行幾項重要的設計決策。 對於大部分的 UDT 而言，雖然將 UDT 當做類別來建立也是一種選擇，但是建議將 UDT 當做結構來建立。 UDT 定義必須符合建立 UDT 的規格，才能讓它使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊。  
   
 ## <a name="requirements-for-implementing-udts"></a>實作 UDT 的需求  
  若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行，UDT 必須實作 UDT 定義中的下列需求：  
   
  UDT 必須指定 `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`。 雖然 `System.SerializableAttribute` 是選擇性使用的，但仍建議使用。  
   
--   UDT 必須藉由建立公用 `System.Data.SqlTypes.INullable` ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 中為 `static`) `Shared` 方法，在類別或結構中實作 `Null` 介面。 依預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能夠辨識 Null。 若要讓在 UDT 中執行的程式碼能夠辨識 Null 值，此為必要選項。  
+-   UDT 必須藉由建立公用 `System.Data.SqlTypes.INullable` (`static` Visual Basic 中為 `Shared`) [!INCLUDE[msCoName](../../includes/msconame-md.md)] 方法，在類別或結構中實作 `Null` 介面。 依預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能夠辨識 Null。 若要讓在 UDT 中執行的程式碼能夠辨識 Null 值，此為必要選項。  
   
 -   UDT 必須包含可支援從物件字串表示法進行剖析的公用 `static` (或 `Shared`) `Parse` 方法，以及轉換為物件字串表示法的公用 `ToString` 方法。  
   
@@ -45,15 +45,17 @@ ms.locfileid: "62919665"
   
 -   一個 UDT 物件必須僅有一個序列化。 如果序列化或還原序列化常式識別一個以上的特定物件表示法，則驗證會失敗。  
   
--   `SqlUserDefinedTypeAttribute.IsByteOrdered` 必須是 `true`，才能按照位元組順序比較資料。 如果沒有實作 IComparable 介面，而且 `SqlUserDefinedTypeAttribute.IsByteOrdered` 是 `false`，位元組順序比較就會失敗。  
+-   
+  `SqlUserDefinedTypeAttribute.IsByteOrdered` 必須是 `true`，才能按照位元組順序比較資料。 如果沒有實作 IComparable 介面，而且 `SqlUserDefinedTypeAttribute.IsByteOrdered` 是 `false`，位元組順序比較就會失敗。  
   
 -   以類別定義的 UDT 必須具有不使用引數的公用建構函式。 您可以選擇性地建立其他多載類別建構函式。  
   
 -   UDT 必須將資料元素公開為公用欄位或屬性程序。  
   
--   公用名稱長度不得超過 128 個字元，而且必須符合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中所定義的識別碼命名規則[資料庫識別碼](../databases/database-identifiers.md)。  
+-   公用名稱的長度不能超過128個字元，而且必須符合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [資料庫識別碼](../databases/database-identifiers.md)中所定義之識別碼的命名規則。  
   
--   `sql_variant` 資料行無法包含 UDT 的執行個體。  
+-   
+  `sql_variant` 資料行無法包含 UDT 的執行個體。  
   
 -   因為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 類型系統不會從 UDT 辨識繼承階層，所以無法從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取繼承成員。 不過，結構化類別時可以使用繼承，並可以在型別的 Managed 程式碼實作中呼叫此類方法。  
   
@@ -67,24 +69,28 @@ ms.locfileid: "62919665"
 >  儘管伺服器不會使用它來執行比較，但您可以選擇性地實作能夠公開單一方法 `System.IComparable` 的 `CompareTo` 介面。 在需要對 UDT 值進行精確比較或排序的情況下，將會在用戶端上使用它。  
   
 ## <a name="native-serialization"></a>原生序列化  
- 若要為 UDT 選擇正確的序列化屬性，必須視您嘗試建立的 UDT 型別而定。 `Native` 序列化格式使用很簡單的結構，其可以讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將有效率的 UDT 原生表示法儲存在磁碟上。 如果 UDT 是簡單的，並且僅包含下列型別的欄位，則建議使用 `Native` 格式：  
+ 若要為 UDT 選擇正確的序列化屬性，必須視您嘗試建立的 UDT 型別而定。 
+  `Native` 序列化格式使用很簡單的結構，其可以讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將有效率的 UDT 原生表示法儲存在磁碟上。 如果 UDT 是簡單的，並且僅包含下列型別的欄位，則建議使用 `Native` 格式：  
   
- **bool**，**位元組**， **sbyte**，**簡短**， **ushort**， **int**， **uint**，**長**， **ulong**， **float**， **double**， **SqlByte**，**SqlInt16**， **SqlInt32**， **SqlInt64**， **SqlDateTime**， **SqlSingle**， **SqlDouble**， **SqlMoney**， **SqlBoolean**  
+ **bool**、 **byte**、 **sbyte**、 **short**、 **ushort**、 **int**、 **uint**、 **long**、 **ulong**、 **float**、 **double**、 **SqlByte**、 **SqlInt16**、 **SqlInt32**、 **SqlInt64**、 **SqlDateTime**、 **SqlSingle**、 **SqlDouble**、 **SqlMoney**、 **SqlBoolean**  
   
- 組成上述類型之欄位的實值類型十分適合`Native`格式，例如`structs`Visual C# 中，(或`Structures`如 Visual Basic 中)。 例如，使用 `Native` 序列化格式指定的 UDT 可能包含也使用 `Native` 格式指定之其他 UDT 的欄位。 如果 UDT 定義較為複雜，且包含不在上面清單中的資料型別，則必須改為指定 `UserDefined` 序列化格式。  
+ 由上述型別的欄位所組成的實值型別是適合`Native`的格式，例如`structs` Visual c # 中的（ `Structures`或 Visual Basic 中的已知）。 例如，使用 `Native` 序列化格式指定的 UDT 可能包含也使用 `Native` 格式指定之其他 UDT 的欄位。 如果 UDT 定義較為複雜，且包含不在上面清單中的資料型別，則必須改為指定 `UserDefined` 序列化格式。  
   
- `Native` 格式具有下列需求：  
+ 
+  `Native` 格式具有下列需求：  
   
 -   型別不可指定 `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.MaxByteSize` 的值。  
   
 -   所有欄位都必須為可序列化。  
   
--   如果 UDT 是以類別而非以結構來定義，`System.Runtime.InteropServices.StructLayoutAttribute` 就必須指定為 `StructLayout.LayoutKindSequential`。 此屬性可以控制資料欄位的實體配置，並用於強制以成員出現的順序對成員進行配置。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用此屬性來判定具有多個值之 UDT 的欄位順序。  
+-   如果 UDT 是以類別而非以結構來定義，`System.Runtime.InteropServices.StructLayoutAttribute` 就必須指定為 `StructLayout.LayoutKindSequential`。 此屬性可以控制資料欄位的實體配置，並用於強制以成員出現的順序對成員進行配置。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用此屬性來判定具有多個值之 UDT 的欄位順序。  
   
- 使用已定義之 UDT 的範例`Native`序列化，請參閱在 Point UDT [< 類型](creating-user-defined-types-coding.md)。  
+ 如需以`Native`序列化定義之 udt 的範例，請參閱撰寫[使用者定義類型的程式碼](creating-user-defined-types-coding.md)中的 Point udt。  
   
 ## <a name="userdefined-serialization"></a>UserDefined 序列化  
- `UserDefined` 屬性的 `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 格式設定可讓開發人員完全控制二進位格式。 將 `Format` 屬性指定為 `UserDefined` 時，您必須在程式碼中進行下列動作：  
+ 
+  `UserDefined` 屬性的 `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 格式設定可讓開發人員完全控制二進位格式。 將 `Format` 屬性指定為 `UserDefined` 時，您必須在程式碼中進行下列動作：  
   
 -   指定選擇性的 `IsByteOrdered` 屬性。 預設值是 `false`。  
   
@@ -92,27 +98,30 @@ ms.locfileid: "62919665"
   
 -   藉由實作 `Read` 介面，撰寫程式碼以實作 UDT 的 `Write` 及 `System.Data.Sql.IBinarySerialize` 方法。  
   
- 使用已定義之 UDT 的範例`UserDefined`序列化，請參閱 < Currency UDT > [< 類型](creating-user-defined-types-coding.md)。  
+ 如需以`UserDefined`序列化定義之 udt 的範例，請參閱[編碼使用者定義類型](creating-user-defined-types-coding.md)中的 Currency udt。  
   
 > [!NOTE]  
 >  UDT 欄位必須使用原生序列化，或保存下來進行索引。  
   
 ## <a name="serialization-attributes"></a>序列化屬性  
- 屬性會決定如何使用序列化來建構 UDT 的儲存表示，並將 UDT 以傳值方式傳輸到用戶端。 建立 UDT 時，您必須指定 `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`。 `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 屬性表示類別為 UDT，並指定該 UDT 的儲存。 您可以選擇性地指定 `Serializable` 屬性，但是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不需要執行這項動作。  
+ 屬性會決定如何使用序列化來建構 UDT 的儲存表示，並將 UDT 以傳值方式傳輸到用戶端。 建立 UDT 時，您必須指定 `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`。 
+  `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 屬性表示類別為 UDT，並指定該 UDT 的儲存。 您可以選擇性地指定 `Serializable` 屬性，但是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不需要執行這項動作。  
   
- `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 具有下列屬性。  
+ 
+  `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 具有下列屬性。  
   
  `Format`  
  指定序列化格式，其可以為 `Native` 或 `UserDefined`，這必須視 UDT 的資料類型而定。  
   
  `IsByteOrdered`  
- 決定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何在 UDT 上執行二進位比較的 `Boolean` 值。  
+ 決定 `Boolean` 如何在 UDT 上執行二進位比較的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值。  
   
  `IsFixedLength`  
  表示此 UDT 的所有執行個體是否為相同長度。  
   
  `MaxByteSize`  
- 執行個體的大小最大值 (位元組)。 您必須使用 `MaxByteSize` 序列化格式指定 `UserDefined`。 如果 UDT 已指定使用者定義的序列化，對此 UDT 而言，`MaxByteSize` 是指 UDT 在其序列化形式 (由使用者所定義) 的總大小。 `MaxByteSize` 的值必須在 1 到 8000 的範圍內，或設定為 -1，表示 UDT 大於 8000 個位元組 (總大小不得超過 LOB 大小的上限)。 以一個具有 10 個字元字串之屬性的 UDT (`System.Char`) 為例。 當 UDT 使用 BinaryWriter 序列化時，序列化字串的大小總計會是 22 個位元組：2 個位元組，每個 Unicode utf-16 字元，乘以字元，加上 2 個控制項的數目上限個位元組的序列化二進位資料流所造成的負擔。 因此，在決定 `MaxByteSize` 的值時，必須考慮序列化 UDT 的總大小：以二進位形式序列化資料的大小，加上序列化所耗用的位元組。  
+ 執行個體的大小最大值 (位元組)。 您必須使用 `MaxByteSize` 序列化格式指定 `UserDefined`。 如果 UDT 已指定使用者定義的序列化，對此 UDT 而言，`MaxByteSize` 是指 UDT 在其序列化形式 (由使用者所定義) 的總大小。 
+  `MaxByteSize` 的值必須在 1 到 8000 的範圍內，或設定為 -1，表示 UDT 大於 8000 個位元組 (總大小不得超過 LOB 大小的上限)。 以一個具有 10 個字元字串之屬性的 UDT (`System.Char`) 為例。 當 UDT 使用 BinaryWriter 序列化時，序列化字串的總大小是 UDT 個位元組：每個 Unicode 2-16 字元兩個位元組，乘以字元的最大數目，再加上序列化二進位資料流所造成的兩個控制位元組負擔。 因此，在決定 `MaxByteSize` 的值時，必須考慮序列化 UDT 的總大小：以二進位形式序列化資料的大小，加上序列化所耗用的位元組。  
   
  `ValidationMethodName`  
  用於驗證 UDT 執行個體之方法的名稱。  
@@ -140,18 +149,20 @@ ms.locfileid: "62919665"
   
 -   小於 (\<)  
   
--   大於或等於 (> =)  
+-   大於或等於 (>=)  
   
--   小於或等於 (< =)  
+-   小於或等於 (<=)  
   
 ### <a name="implementing-nullability"></a>實作 Null 屬性  
- 除了必須正確地指定組件的屬性外，您的類別還必須能夠支援 Null 屬性。 載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 UDT 可辨識 Null，但是為了讓 UDT 能夠辨識 Null 值，此類別必須實作 `INullable` 介面。 如需詳細資訊和如何在 UDT 中實作 null 屬性的範例，請參閱[< 類型](creating-user-defined-types-coding.md)。  
+ 除了必須正確地指定組件的屬性外，您的類別還必須能夠支援 Null 屬性。 載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 UDT 可辨識 Null，但是為了讓 UDT 能夠辨識 Null 值，此類別必須實作 `INullable` 介面。 如需詳細資訊以及如何在 UDT 中執行 null 屬性的範例，請參閱撰寫[使用者定義類型](creating-user-defined-types-coding.md)的程式碼。  
   
 ### <a name="string-conversions"></a>字串轉換  
- 若要支援字串與 UDT 的來回轉換，則必須在您的類別中提供 `Parse` 方法及 `ToString` 方法。 `Parse` 方法允許將字串轉換成 UDT。 它必須宣告為 `static` (或 Visual Basic 中的 `Shared`)，並採用型別 `System.Data.SqlTypes.SqlString` 的參數。 如需詳細資訊和如何實作的範例`Parse`並`ToString`方法，請參閱[< 類型](creating-user-defined-types-coding.md)。  
+ 若要支援字串與 UDT 的來回轉換，則必須在您的類別中提供 `Parse` 方法及 `ToString` 方法。 
+  `Parse` 方法允許將字串轉換成 UDT。 它必須宣告為 `static` (或 Visual Basic 中的 `Shared`)，並採用型別 `System.Data.SqlTypes.SqlString` 的參數。 如需如何執行`Parse`和`ToString`方法的詳細資訊和範例，請參閱撰寫[使用者定義類型](creating-user-defined-types-coding.md)的程式碼。  
   
 ## <a name="xml-serialization"></a>XML 序列化  
- UDT 必須藉由符合 XML 序列化合約，來支援 `xml` 資料類型間的轉換。 `System.Xml.Serialization` 命名空間包含用於將物件序列化為 XML 格式文件或資料流的類別。 您可以選擇使用 `xml` 介面 (該介面可提供 XML 序列化和還原序列化的自訂格式)，以便實作 `IXmlSerializable` 序列化。  
+ UDT 必須藉由符合 XML 序列化合約，來支援 `xml` 資料類型間的轉換。 
+  `System.Xml.Serialization` 命名空間包含用於將物件序列化為 XML 格式文件或資料流的類別。 您可以選擇使用 `xml` 介面 (該介面可提供 XML 序列化和還原序列化的自訂格式)，以便實作 `IXmlSerializable` 序列化。  
   
  除了能夠執行 UDT 到 `xml` 的明確轉換外，XML 序列化還可讓您：  
   

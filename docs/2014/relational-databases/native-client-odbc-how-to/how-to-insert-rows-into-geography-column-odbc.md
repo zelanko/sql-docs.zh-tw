@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將資料列插入至 Geography 資料行 (ODBC) |Microsoft Docs
+title: 如何：將資料列插入 Geography 資料行（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206816"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>HOW TO：將資料列插入 Geography 資料行 (ODBC)
-  此範例會使用 2 個不同的繫結 (SQLCCHAR 和 SQLCBINARY)，從 WellKnownBinary (WKB) 在具有地理資料行的資料表中插入兩個資料列， 然後再從該資料表選取一個資料列，並使用:: stastext （) 來顯示它。WKB 是 0x01010000000700ECFAD03A4C4001008000B5DF07C0，而且應用程式列印至主控台：點 (56.4595-2.9842)。  
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>如何：將資料列插入至 Geography 資料行 (ODBC)
+  此範例會使用 2 個不同的繫結 (SQLCCHAR 和 SQLCBINARY)，從 WellKnownBinary (WKB) 在具有地理資料行的資料表中插入兩個資料列， 然後再從該資料表選取一個資料列，並使用 ::STAsText() 加以顯示。WKB 是 0x01010000000700ECFAD03A4C4001008000B5DF07C0，而且該應用程式會列印至主控台：POINT(56.4595 -2.9842)。  
   
  此範例不需要 ODBC 資料來源，但依預設，範例會在 SQL Server 的本機執行個體上執行。  
   
  此範例不適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 如需有關空間儲存體的詳細資訊，請參閱 <<c0> [ 空間資料&#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)。</c0>  
+ 如需空間儲存體的詳細資訊，請參閱[空間資料 &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)。  
   
 ## <a name="example"></a>範例  
  第一個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的資料表。  

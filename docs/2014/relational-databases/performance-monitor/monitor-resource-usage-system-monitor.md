@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032107"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>監視資源使用狀況 (系統監視器)
@@ -69,9 +69,9 @@ ms.locfileid: "63032107"
   
 -   磁碟活動  
   
--   處理器使用情形  
+-   處理器使用率  
   
--   記憶體使用狀況  
+-   記憶體使用量  
   
  監視正在執行系統監視器的電腦，可能會稍微影響電腦的效能； 因此，您可將「系統監視器」資料記錄到另一個磁碟 (或電腦)，以減少對受監視電腦的影響，或從遠端電腦執行「系統監視器」。 請只監視有興趣的計數器。 如果您監視太多計數器，系統會將資源使用狀況負擔加入監視處理序，並且會影響正在監視的電腦之效能。  
   
@@ -86,6 +86,6 @@ ms.locfileid: "63032107"
 |描述如何建立警示，讓它在達到系統監視器計數器的臨界值時引發。|[建立 SQL Server 資料庫警示](create-a-sql-server-database-alert.md)|  
 |描述如何建立圖表、警示、記錄與報表，以監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。|[建立圖表、警示、記錄和報表](create-charts-alerts-logs-and-reports.md)|  
 |列出系統監視器用以監視電腦中正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之活動的物件與計數器。|[使用 SQL Server 物件](use-sql-server-objects.md)|  
-|列出系統監視器用以監視記憶體中 OLTP 活動的物件與計數器。|[XTP&#40;記憶體內部 OLTP&#41;效能計數器](../../integration-services/performance/performance-counters.md)|  
+|列出系統監視器用以監視記憶體中 OLTP 活動的物件與計數器。|[XTP &#40;記憶體內部 OLTP&#41; 效能計數器](../../integration-services/performance/performance-counters.md)|  
   
   

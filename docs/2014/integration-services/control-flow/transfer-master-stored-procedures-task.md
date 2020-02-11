@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b7cef1e64ab9c499c52ac3bbc0364a05bfcc812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829487"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>傳送主要預存程序工作
@@ -34,7 +34,7 @@ ms.locfileid: "62829487"
   
 -   略過重複的預存程序。  
   
- 在執行階段，「傳送主要預存程序」工作會使用兩個 SMO 連接管理員，連接到來源和目的地伺服器。 SMO 連結管理員會在「傳送主要預存程序」工作以外另行設定，然後在「傳送主要預存程序」工作中參考。 存取伺服器時，SMO 連接管理員會指定要使用的伺服器和驗證模式。 如需相關資訊，請參閱 [SMO Connection Manager](../connection-manager/smo-connection-manager.md)。  
+ 在執行階段，「傳送主要預存程序」工作會使用兩個 SMO 連接管理員，連接到來源和目的地伺服器。 SMO 連結管理員會在「傳送主要預存程序」工作以外另行設定，然後在「傳送主要預存程序」工作中參考。 存取伺服器時，SMO 連接管理員會指定要使用的伺服器和驗證模式。 如需詳細資訊，請參閱 [SMO Connection Manager](../connection-manager/smo-connection-manager.md)。  
   
 ## <a name="transferring-stored-procedures-between-instances-of-sql-server"></a>在 SQL Server 的執行個體之間傳送預存程序  
  「傳送主要預存程序」工作可支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來源及目的地。  
@@ -64,7 +64,7 @@ ms.locfileid: "62829487"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [傳送主要預存程序工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [傳送主要預存程式工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [傳送主要預存程序工作編輯器 &#40;預存程序頁面&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d948a9edfafdbf39bd8ee5c512fb77814cb7adf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62837254"
 ---
 # <a name="high-availability-support"></a>高可用性支援
@@ -24,7 +24,7 @@ ms.locfileid: "62837254"
   
 -   Oracle CDC 服務可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 叢集執行個體，如此一來，它就可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體容錯移轉到另一個叢集節點時復原。 在建立 Oracle CDC 服務時，Oracle CDC 服務電腦管理員只需要指定與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 叢集執行個體的連接資訊。  
   
--   Oracle CDC 服務可使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**AlwaysOn** 資料庫鏡像功能。 此支援要求 MSXDBCDC 與所有 CDC 資料庫位於相同的可用性群組中。 它也需要 Oracle CDC 服務電腦管理員，以指定適當**AlwaysOn**連接資訊給[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可用性群組 (例如，連接屬性`Failover_Partner and Network=dbmssocn`)。 這樣可讓 CDC 服務在容錯移轉之後，自動繼續資料庫次要複寫的處理。  
+-   Oracle CDC 服務可使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**AlwaysOn** 資料庫鏡像功能。 此支援要求 MSXDBCDC 與所有 CDC 資料庫位於相同的可用性群組中。 它也會要求 Oracle CDC 服務電腦系統管理員指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可用性群組的適當`Failover_Partner and Network=dbmssocn` **AlwaysOn**連接資訊（例如，連接屬性）。 這樣可讓 CDC 服務在容錯移轉之後，自動繼續資料庫次要複寫的處理。  
   
 -   Oracle CDC 服務可設定為 Windows 容錯移轉叢集上的一般服務資源 (與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一起或分開)，這樣 CDC 對叢集的容錯移轉和退讓處理就會很輕鬆。 若要將 Oracle CDC 服務設定為容錯移轉叢集中的資源，系統管理員必須將 Oracle CDC 服務設定為容錯移轉叢集上每一個節點中的一般服務資源。  
   

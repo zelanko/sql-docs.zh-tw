@@ -15,56 +15,56 @@ ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02e8aabf808ebf11f2e241fc7d330f794dbb0112
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002114"
 ---
 # <a name="core-interface-conformance"></a>核心介面一致性
-所有的 ODBC 驅動程式必須提供至少核心層級介面一致性。 中大部分的泛型具互通性的應用程式所需的核心層級的功能，因為驅動程式可以使用這類應用程式。 ISO CLI 規格中定義的功能，並開啟群組 CLI 規格中定義的 nonoptional 功能，也對應中的核心層級的功能。 核心層級介面符合標準的 ODBC 驅動程式可讓應用程式執行下列各項：  
+所有 ODBC 驅動程式都必須展現至少核心層級的介面一致性。 由於核心層級中的功能是大部分一般互通應用程式所需的功能，因此驅動程式可以使用這類應用程式。 核心層級中的功能也會對應至 ISO CLI 規格中定義的功能，以及「開啟群組 CLI」規格中所定義的 nonoptional 功能。 符合核心層級介面的 ODBC 驅動程式可讓應用程式執行下列所有動作：  
   
--   配置和釋放所有類型的控制代碼，藉由呼叫**SQLAllocHandle**並**SQLFreeHandle**。  
+-   藉由呼叫**SQLAllocHandle**和**SQLFreeHandle**，配置並釋放所有類型的控制碼。  
   
--   使用所有形式的**SQLFreeStmt**函式。  
+-   使用**SQLFreeStmt**函數的所有形式。  
   
--   將結果集資料行，藉由呼叫繫結**SQLBindCol**。  
+-   藉由呼叫**SQLBindCol**來系結結果集資料行。  
   
--   處理動態參數，包括藉由呼叫的參數，僅會以輸入方向，陣列**SQLBindParameter**並**SQLNumParams**。 (輸出方向中的參數是功能在 203[層級 2 介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)。)  
+-   藉由呼叫**SQLBindParameter**和**SQLNumParams**，僅在輸入方向處理動態參數（包括參數陣列）。 （輸出方向的參數是[層級2介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的功能203）。  
   
--   指定的繫結位移。  
+-   指定系結位移。  
   
--   使用資料執行對話方塊中，包含要呼叫**SQLParamData**並**SQLPutData**。  
+-   使用 [資料執行中] 對話方塊，其中涉及對**SQLParamData**和**SQLPutData**的呼叫。  
   
--   管理資料指標和資料指標名稱，請呼叫**SQLCloseCursor**， **SQLGetCursorName**，並**SQLSetCursorName**。  
+-   藉由呼叫**SQLCloseCursor**、 **SQLGetCursorName**和**SQLSetCursorName**來管理資料指標和資料指標名稱。  
   
--   取得結果集的存取權的描述 （中繼資料），藉由呼叫**SQLColAttribute**， **SQLDescribeCol**， **SQLNumResultCols**，和**SQLRowCount**. (使用以擷取書籤中繼資料的資料行編號 0 上的這些函式是功能在 204[層級 2 介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)。)  
+-   藉由呼叫**SQLColAttribute**、 **SQLDescribeCol**、 **SQLNumResultCols**和**SQLRowCount**，取得結果集的描述（中繼資料）存取權。 （在資料行編號0上使用這些函數，以取得[第2層介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的功能204。）  
   
--   呼叫目錄函數來查詢資料字典**SQLColumns**， **SQLGetTypeInfo**， **SQLStatistics**，以及**SQLTables**。  
+-   藉由呼叫目錄函數**SQLColumns**、 **SQLGetTypeInfo**、 **SQLStatistics**和**SQLTables**來查詢資料字典。  
   
-     驅動程式不需要支援的資料庫資料表和檢視表的多部分名稱。 (如需詳細資訊，請參閱中的功能 101[層級 1 介面一致性](../../../odbc/reference/develop-app/level-1-interface-conformance.md)功能中的 201[層級 2 介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)。)不過，某些功能的 SQL-92 規格，例如限定資料行和索引的名稱是多部分命名語法類似。 ODBC 功能的存在清單不是導入的 SQL-92 到這些層面的新選項。  
+     驅動程式不需要支援資料庫資料表和 views 的多部分名稱。 （如需詳細資訊，請參閱[層級1介面一致性](../../../odbc/reference/develop-app/level-1-interface-conformance.md)中的功能101和[層級2介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的功能201）。不過，SQL-92 規格的某些功能（例如資料行限定性和索引名稱）在語法上相當於多部分命名。 ODBC 功能的目前清單並不是為了在 SQL-92 的這些層面引進新的選項。  
   
--   管理資料來源和連線，請呼叫**SQLConnect**， **SQLDataSources**， **SQLDisconnect**，以及**SQLDriverConnect**。 取得有關驅動程式，不論哪一個 ODBC 層級支援，藉由呼叫**SQLDrivers**。  
+-   藉由呼叫**SQLConnect**、 **SQLDataSources**、 **SQLDisconnect**和**SQLDriverConnect**來管理資料來源和連接。 藉由呼叫**SQLDrivers**，取得驅動程式的相關資訊，不論它們支援哪個 ODBC 層級。  
   
--   準備和執行 SQL 陳述式，呼叫**SQLExecDirect**， **SQLExecute**，並**SQLPrepare**。  
+-   藉由呼叫**SQLExecDirect**、 **SQLExecute**和**SQLPREPARE**來準備和執行 SQL 語句。  
   
--   擷取結果集的一個資料列或多個資料列，僅會以正向方向，藉由呼叫**SQLFetch**或來電 800-659-3579 **SQLFetchScroll**具有*Sqlfetchscroll*引數設定為 SQL_FETCH_NEXT。  
+-   藉由呼叫**SQLFetch**或呼叫**SQLFetchScroll**並將*FetchOrientation*引數設定為 SQL_FETCH_NEXT，只提取結果集的一個資料列或多個資料列。  
   
--   取得繫結的資料行在部分，藉由呼叫**SQLGetData**。  
+-   藉由呼叫**SQLGetData**，取得部分中未系結的資料行。  
   
--   取得目前的值的所有屬性，藉由呼叫**SQLGetConnectAttr**， **SQLGetEnvAttr**，並**SQLGetStmtAttr**，並將所有屬性都設定為其預設值和某些屬性設定為非預設值，藉由呼叫**SQLSetConnectAttr**， **SQLSetEnvAttr**，並**SQLSetStmtAttr**。  
+-   藉由呼叫**SQLGetConnectAttr**、 **SQLGetEnvAttr**和**SQLGetStmtAttr**，取得所有屬性的目前值，並將所有屬性設為其預設值，並藉由呼叫**SQLSetConnectAttr**、 **SQLSetEnvAttr**和**SQLSetStmtAttr**，將某些屬性設定為非預設值。  
   
--   管理特定欄位的描述元，藉由呼叫**SQLCopyDesc**， **SQLGetDescField**， **SQLGetDescRec**， **SQLSetDescField**，並**SQLSetDescRec**。  
+-   藉由呼叫**SQLCopyDesc**、 **SQLGetDescField**、 **SQLGetDescRec**、 **SQLSetDescField**和**SQLSetDescRec**來操作描述項的特定欄位。  
   
--   取得診斷資訊，請藉由呼叫**SQLGetDiagField**並**SQLGetDiagRec**。  
+-   藉由呼叫**SQLGetDiagField**和**SQLGetDiagRec**來取得診斷資訊。  
   
--   偵測驅動程式功能，藉由呼叫**SQLGetFunctions**並**SQLGetInfo**。 此外，偵測它傳送至資料來源，藉由呼叫之前的 SQL 陳述式所做的任何文字替換作業的結果**SQLNativeSql**。  
+-   藉由呼叫**SQLGetFunctions**和**SQLGetInfo**來偵測驅動程式功能。 此外，也會藉由呼叫**SQLNativeSql**，在將 SQL 語句傳送至資料來源之前，偵測任何文字替換的結果。  
   
--   使用的語法**SQLEndTran**認可的交易。 核心層級驅動程式不需要支援，則為 true 的交易;因此，應用程式不能指定 SQL_ROLLBACK 也 SQL_AUTOCOMMIT_OFF SQL_ATTR_AUTOCOMMIT 連接屬性。 (如需詳細資訊，請參閱中的功能 109[層級 2 介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)。)  
+-   使用**SQLEndTran**的語法來認可交易。 核心層級的驅動程式不需要支援真正的交易;因此，應用程式無法為 SQL_ATTR_AUTOCOMMIT 連接屬性指定 SQL_ROLLBACK 或 SQL_AUTOCOMMIT_OFF。 （如需詳細資訊，請參閱[層級2介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的功能109）。  
   
--   呼叫**SQLCancel**取消資料在執行對話方塊並在多執行緒環境中，若要取消 ODBC 函式正在執行 」，另一個執行緒。 核心層級介面一致性不會要求的非同步執行的函式或使用支援**SQLCancel**取消非同步執行的 ODBC 函式。 平台和 ODBC 驅動程式都不需要是多執行緒的驅動程式同時執行獨立的活動。 不過，在多執行緒環境中，ODBC 驅動程式必須是安全執行緒。 從應用程式要求的序列化是符合標準方式來實作此規格中，即使它可能會產生嚴重的效能問題。  
+-   呼叫**SQLCancel**以取消資料執行中的對話方塊，並在多執行緒環境中取消在另一個執行緒中執行的 ODBC 函數。 核心層級介面一致性不會強制支援非同步執行函式，也不會使用**SQLCancel**來取消以非同步方式執行的 ODBC 函數。 平臺或 ODBC 驅動程式都不需要多執行緒，驅動程式也可以同時執行獨立的活動。 不過，在多執行緒環境中，ODBC 驅動程式必須是安全線程。 來自應用程式的要求序列化是執行此規格的一致方式，即使它可能會造成嚴重的效能問題也一樣。  
   
--   取得 SQL_BEST_ROWID 資料列識別資料行的資料表，藉由呼叫**SQLSpecialColumns**。 (支援 SQL_ROWVER 是功能在 208[層級 2 介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)。)  
+-   藉由呼叫**SQLSpecialColumns**，取得資料表的 SQL_BEST_ROWID 資料列識別資料行。 （支援 SQL_ROWVER 是[層級2介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的功能208）。  
   
     > [!IMPORTANT]  
-    >  ODBC 驅動程式必須實作的函式中的核心介面一致性層級。
+    >  ODBC 驅動程式必須實作用於核心介面一致性層級中的函式。

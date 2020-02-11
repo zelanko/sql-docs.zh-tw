@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137523"
 ---
 # <a name="implement-sql-server-agent-security"></a>實作 SQL Server Agent 安全性
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 讓資料庫管理員可以在只具有執行作業步驟所需權限的安全內容中執行每個作業步驟，此權限由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 決定。 若要設定特定作業步驟的權限，請建立具有必要權限的 Proxy，然後將該 Proxy 指派給作業步驟。 您可以將 Proxy 指派給多個作業步驟。 對於要求相同權限的作業步驟，可以使用相同的 Proxy。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 可讓資料庫管理員在只具有執行作業步驟所需許可權的安全性內容中執行每個作業步驟，這是由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy 決定。 若要設定特定作業步驟的權限，請建立具有必要權限的 Proxy，然後將該 Proxy 指派給作業步驟。 您可以將 Proxy 指派給多個作業步驟。 對於要求相同權限的作業步驟，可以使用相同的 Proxy。  
   
  下一節將解釋您必須授與使用者哪些資料庫角色，他們才能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來建立或執行作業。  
   
@@ -36,11 +36,14 @@ ms.locfileid: "63137523"
   
 -   **SQLAgentOperatorRole**  
   
- 這些角色儲存在 **msdb** 資料庫中。 根據預設，沒有任何使用者隸屬於這些資料庫角色的成員。 您必須明確授與這些角色的成員資格。 **系統管理員** 固定伺服器角色的成員使用者對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 具有完整的存取權，完全不需要是這些固定資料庫角色的成員，就能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent。 若使用者不是這些資料庫角色或 **系統管理員** 角色的成員，當他們使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，將無法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Agent 節點。  
+ 這些角色會儲存在**msdb**資料庫中。 根據預設，沒有任何使用者隸屬於這些資料庫角色的成員。 您必須明確授與這些角色的成員資格。 
+  **系統管理員** 固定伺服器角色的成員使用者對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 具有完整的存取權，完全不需要是這些固定資料庫角色的成員，就能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent。 若使用者不是這些資料庫角色或 **系統管理員** 角色的成員，當他們使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，將無法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Agent 節點。  
   
  這些資料庫角色的成員可以檢視與執行自己所擁有的物件，並建立以現有 Proxy 帳戶身分執行的作業步驟。 如需上述每個角色所關聯之特定權限的詳細資訊，請參閱＜ [SQL Server Agent 固定資料庫角色](sql-server-agent-fixed-database-roles.md)＞。  
   
- **系統管理員** 固定伺服器角色的成員有權建立、修改與刪除 Poxy 帳戶。 **系統管理員** 角色的成員有權建立以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶 (此帳戶是用於啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的帳戶)。  
+ 
+  **系統管理員** 固定伺服器角色的成員有權建立、修改與刪除 Poxy 帳戶。 
+  **系統管理員** 角色的成員有權建立以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶 (此帳戶是用於啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的帳戶)。  
   
 ## <a name="guidelines"></a>指導方針  
  請依照下列指導方針來改進 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 實作的安全性。  
@@ -65,18 +68,18 @@ ms.locfileid: "63137523"
   
 -   ACE 取決於 SSDP 所擁有的下列設定 DLL，因為 ACE 會呼叫 DLL 的這些 API：  
   
-    -   **SCO** - Microsoft.SqlServer.Configuration.Sco.dll，包括虛擬帳戶的新 SCO 驗證  
+    -   **Sco** -SqlServer，包括虛擬帳戶的新 SCO 驗證  
   
-    -   **叢集** - Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **Cluster** -Microsoft SqlServer. cluster .dll  
   
-    -   **SFC** - Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
+    -   **SFC** -microsoft.sqlserver.configuration.sqlconfigbase.dll 的 .dll  
   
-    -   **延伸模組** - Microsoft.SqlServer.Configuration.ConfigExtension.dll  
+    -   **延伸**模組-microsoft.sqlserver.configuration.configextension.dll .dll  
   
 ## <a name="see-also"></a>另請參閱  
  [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)   
- [sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)   
+ [sp_addrolemember &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)   
+ [sp_droprolemember &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)   
  [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

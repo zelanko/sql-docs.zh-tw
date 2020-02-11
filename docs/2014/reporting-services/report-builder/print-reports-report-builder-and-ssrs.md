@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7f916e8acf45c822439a116bc5ad1ff40a11d2de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107700"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>列印報表 (報表產生器及 SSRS)
@@ -46,10 +46,10 @@ ms.locfileid: "66107700"
  描述如何列印已匯出至另一個應用程式的報表。  
   
  [列印報表 &#40;報表產生器及 SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
- 提供逐步指示，說明如何列印報表、如何控制頁面邊界，以及如何指定強制分頁轉譯器轉譯的報表紙張大小：PDF、影像或列印。  
+ 提供逐步指示，說明如何列印報表、如何控制頁面邊界，以及如何針對手動分頁轉譯器 (PDF、影像或列印) 所轉譯的報表指定紙張大小。  
   
 ## <a name="see-also"></a>另請參閱  
- [匯出報表&#40;報表產生器及 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [匯出報表 &#40;報表產生器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [頁首和頁尾 &#40;報表產生器及 SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [影像 &#40;報表產生器及 SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  

@@ -1,5 +1,5 @@
 ---
-title: 建立伺服器連線檔案 (SybaseToSQL) |Microsoft Docs
+title: 建立伺服器連接檔案（SybaseToSQL） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ece41e157ddad4f62a041d8e06dde073f681d274
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029365"
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>建立伺服器連線檔案 (SybaseToSQL)
-伺服器一節的指令碼檔案或不同的伺服器連線檔案中，可以指定伺服器的資訊。 伺服器連接檔案的命令列參數即`-c <serverconnectionfile>`。 如果存在於指令碼檔案與伺服器連線檔案相同的伺服器識別碼，則會視為在指令碼檔案中的伺服器定義。  
+您可以在腳本檔案的 [伺服器] 區段中，或在個別的伺服器連接檔案中指定伺服器資訊。 伺服器連接檔案的命令列參數是、 `-c <serverconnectionfile>`。 如果腳本檔案和伺服器連接檔案中同時出現相同的伺服器識別碼，則會考慮腳本檔案中的伺服器定義。  
   
-**範例:**  
+**實例**  
   
 ```  
 1.<!--Sample of server connection file commands -->  
@@ -101,11 +101,11 @@ ms.locfileid: "68029365"
 </sql-server>  
 ```  
   
-## <a name="server-connection-file-validation"></a>伺服器連線檔案驗證  
-使用者可以輕鬆地驗證他/她伺服器連線檔案對結構描述定義檔**S2SSConsoleScriptServersSchema.xsd**可用 [結構描述] 資料夾中。  
+## <a name="server-connection-file-validation"></a>伺服器連接檔案驗證  
+使用者可以針對 [架構] 資料夾中提供的架構定義檔**S2SSConsoleScriptServersSchema** ，輕鬆地驗證其伺服器連接檔案。  
   
-## <a name="next-step"></a>下一個步驟  
-操作主控台的下一個步驟是[執行 SSMA 主控台&#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
+## <a name="next-step"></a>後續步驟  
+操作主控台的下一個步驟是[執行 SSMA 主控台，&#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [執行 SSMA 主控台](executing-the-ssma-console-sybasetosql.md)  

@@ -1,5 +1,5 @@
 ---
-title: 第 3 課：將完整資料庫備份寫入 Azure Blob 儲存體服務 |Microsoft Docs
+title: 第3課：將完整資料庫備份寫入 Azure Blob 儲存體服務 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1d5a749c61a3bc97de841e1149dd1539cbc990f2
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70153470"
 ---
 # <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>第 3 課：將完整資料庫備份寫入 Azure Blob 儲存體服務
@@ -27,9 +27,9 @@ ms.locfileid: "70153470"
   
 2.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的執行個體。  
   
-3.  在 [標準] 功能表列上，按一下 **[新增查詢]** 。  
+3.  在 [標準] 功能表列上，按一下 **[新增查詢]**。  
   
-4.  將下列範例複製並貼入查詢視窗中、視需要修改，然後按一下 **[執行]** 。  
+4.  將下列範例複製並貼入查詢視窗中、視需要修改，然後按一下 **[執行]**。  
   
     ```  
     BACKUP DATABASE[AdventureWorks2012]   
@@ -44,6 +44,6 @@ ms.locfileid: "70153470"
 5.  在 [物件總管] 中，連接到 Azure 儲存體。 瀏覽並尋找容器以及新建立的備份檔案。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 4 課：從完整資料庫備份](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)執行還原。  
+ [第4課：從完整資料庫備份執行還原](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)。  
   
   

@@ -14,10 +14,10 @@ ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b717c350bae35606dcf0aae09610c085ccff1767
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75240162"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Microsoft.VisualBasic.dll 中不允許的型別和成員
@@ -65,14 +65,14 @@ ms.locfileid: "75240162"
 |Microsoft.VisualBasic.Interaction.MsgBox()|UI|  
 |Microsoft.VisualBasic.Logging.AspLog|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Logging.FileLogTraceListener..ctor()|ExternalProcessMgmt|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|同步處理|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Dispose()|同步處理|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush()|同步處理|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.GetSupportedAttributes()|同步處理|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData()|同步處理|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent()|同步處理|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Write()|同步處理|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine()|同步處理|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Dispose()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.GetSupportedAttributes()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Write()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine()|Synchronization|  
 |Microsoft.VisualBasic.Logging.Log|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.ClipboardProxy|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.FileSystemProxy|ExternalProcessMgmt|  

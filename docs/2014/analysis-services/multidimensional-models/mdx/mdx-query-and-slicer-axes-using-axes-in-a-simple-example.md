@@ -1,5 +1,5 @@
 ---
-title: 使用簡單的範例 (MDX) 中的查詢與交叉分析篩選器軸 |Microsoft Docs
+title: 在簡單的範例中使用查詢和交叉分析篩選器軸（MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53f48d8f23ef8809f9392b1a2c7ede65239e4985
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074032"
 ---
 # <a name="using-query-and-slicer-axes-in-a-simple-example-mdx"></a>在簡單的範例中使用查詢及 Slicer 軸 (MDX)
@@ -29,7 +29,8 @@ ms.locfileid: "66074032"
 ## <a name="the-query"></a>查詢  
  查詢是要提供一個矩陣，在此矩陣中，Packages 量值可以在路徑與時間之間交叉比較。  
   
- 在下列的 MDX 查詢範例中，Route 與 Time 階層是查詢座標軸，而 Measures 維度則是 Slicer 軸。 [Members](/sql/mdx/members-set-mdx) 函數指出 MDX 將會使用階層或層級的成員建構集合。 使用 `Members` 函數代表您不需要在 MDX 查詢中，明確地陳述特定階層或層級的每個成員。  
+ 在下列的 MDX 查詢範例中，Route 與 Time 階層是查詢座標軸，而 Measures 維度則是 Slicer 軸。 
+  [Members](/sql/mdx/members-set-mdx) 函數指出 MDX 將會使用階層或層級的成員建構集合。 使用 `Members` 函數代表您不需要在 MDX 查詢中，明確地陳述特定階層或層級的每個成員。  
   
 ```  
 SELECT  
@@ -49,6 +50,6 @@ WHERE ( [Measures].[Packages] )
   
 ## <a name="see-also"></a>另請參閱  
  [指定查詢座標軸的內容 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
- [指定 Slicer 軸的內容 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [指定交叉分析篩選器軸的內容 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

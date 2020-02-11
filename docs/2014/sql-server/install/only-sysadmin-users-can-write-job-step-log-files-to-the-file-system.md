@@ -1,5 +1,5 @@
 ---
-title: 只有系統管理員使用者可以寫入檔案系統的作業步驟記錄檔 |Microsoft Docs
+title: 只有系統管理員（sysadmin）使用者可以將作業步驟記錄檔寫入檔案系統 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,25 +15,26 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84d04729e2f4c00c5d127a706727567c44855cd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093675"
 ---
 # <a name="only-sysadmin-users-can-write-job-step-log-files-to-the-file-system"></a>只有系統管理員 (sysadmin) 使用者可以將作業步驟記錄檔寫入檔案系統
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 會選擇性地為每個作業步驟寫入記錄。  
   
 ## <a name="component"></a>元件  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式  
   
 ## <a name="description"></a>描述  
- 在  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式可以寫入檔案系統中的成員所擁有的作業的記錄檔**sysadmin**固定的伺服器角色。 如果作業擁有者不是隸屬**sysadmin**角色，以及是否已啟用 proxy 帳戶，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式可以寫入至檔案系統記錄檔所使用的 proxy 帳戶的認證。  
+ 在[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，Agent 可以針對系統**管理員（sysadmin** ）固定伺服器角色的成員所擁有的作業，將記錄寫入檔案系統。 如果作業擁有者不是**系統管理員（sysadmin** ）角色的成員，而且 proxy 帳戶已啟用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，Agent 就可以使用 proxy 帳戶的認證，將記錄寫入檔案系統。  
   
- 您升級時，不是成員的使用者所擁有的作業之後的**sysadmin**固定的伺服器角色可以不會再記錄檔寫入檔案系統。 相反地，這些使用者可以選擇將其記錄檔寫入中的資料表**msdb**資料庫。 成員**sysadmin**角色仍可以寫入至檔案系統的記錄檔。  
+ 升級之後，不是**系統管理員（sysadmin** ）固定伺服器角色成員之使用者所擁有的作業，就無法再將記錄寫入檔案系統。 相反地，這些使用者可以選取選項，將其記錄寫入**msdb**資料庫中的資料表。 **系統管理員（sysadmin** ）角色的成員仍然可以將記錄檔寫入檔案系統。  
   
 ## <a name="corrective-action"></a>更正動作  
- 您升級時，不是成員的使用者所擁有的作業之後的**sysadmin**角色將會繼續執行，但將不會建立記錄檔。 若要將作業步驟記錄至資料表，而不是成員的使用者的**sysadmin**角色必須手動更新他們的工作。  
+ 升級之後，不屬於**系統管理員（sysadmin** ）角色成員的使用者所擁有的工作將會繼續執行，但不會建立記錄。 若要將作業步驟記錄到資料表，非**系統管理員（sysadmin** ）角色成員的使用者必須手動更新其作業。  
   
  如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜建立作業＞、＜建立作業步驟＞和＜處理多個作業步驟＞主題。  
   

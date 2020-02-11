@@ -14,13 +14,13 @@ ms.assetid: 949a860d-6579-4218-882e-8c061688dd87
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d41cd744d39113c556c4ee8bc17411b7992e596
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002146"
 ---
 # <a name="copying-descriptors"></a>複製描述項
-**SQLCopyDesc**呼叫函式可將有一個描述項欄位複製到另一個描述元。 只有應用程式描述項或 IPD，但不是屬於 IRD，可以複製欄位。 欄位可以從任何類型的描述元複製。 只有在來源和目標的描述項所定義的欄位都會複製。 **SQLCopyDesc**不會複製 SQL_DESC_ALLOC_TYPE 欄位中，因為無法變更的描述元的配置類型。 複製的欄位覆寫現有的欄位。  
+呼叫**SQLCopyDesc**函數，將一個描述元的欄位複製到另一個描述項。 欄位只能複製到應用程式描述元或 IPD，但不能複製到 IRD。 可以從任何類型的描述項複製欄位。 只會複製為來源和目標描述元定義的欄位。 **SQLCopyDesc**不會複製 SQL_DESC_ALLOC_TYPE 欄位，因為無法變更描述項的配置類型。 複製的欄位會覆寫現有的欄位。  
   
- 上一個陳述式控制代碼 ARD 可做為另一個陳述式控制代碼上 APD。 這可讓應用程式複製資料表，而不複製應用程式層級的資料之間的資料列。 若要這樣做，資料列描述項所描述的資料表擷取的資料列會重複使用為 INSERT 陳述式中的參數的參數描述元。 SQL_MAX_CONCURRENT_ACTIVITIES 資訊型別必須是大於 1，這項作業才會成功。
+ 一個語句控制碼上的 ARD 可作為另一個語句控制碼上的 APD。 這可讓應用程式在資料表之間複製資料列，而不需要在應用層級複製資料。 若要這樣做，描述資料表之提取資料列的資料列描述元會重複使用，做為 INSERT 語句中參數的參數描述元。 SQL_MAX_CONCURRENT_ACTIVITIES 資訊類型必須大於1，此作業才會成功。

@@ -1,5 +1,5 @@
 ---
-title: 使用資料表值參數 (OLE DB) |Microsoft Docs
+title: 使用資料表值參數（OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee2ff452e8544e37977e46055fdb9b32af877366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206676"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>使用資料表值參數 (OLE DB)
-  此範例適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本。 此範例會執行下列各項：  
+  此範例適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本。 此範例會執行下列動作：  
   
 -   使用動態探索，透過 IOpenRowset::OpenRowset 建立資料表值參數。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68206676"
   
 -   顯示 SQLNCLI11 錯誤的錯誤處理。  
   
- 如需有關資料表值參數的詳細資訊，請參閱 < [Parameters &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)。  
+ 如需資料表值參數的詳細資訊，請參閱[資料表值參數 &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)。  
   
 ## <a name="example"></a>範例  
  第一個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的資料庫。  

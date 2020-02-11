@@ -1,5 +1,5 @@
 ---
-title: 利用 CommandStream 屬性執行範本檔案 |Microsoft Docs
+title: 使用 CommandStream 屬性執行範本檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f0d753c7e56f4ae90a2b156ee8d521518d0029a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010904"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>利用 CommandStream 屬性執行範本檔案
-  此範例說明如何指定 SQL 或 XPath 查詢所組成的範本檔案，利用 CommandStream 屬性的 SqlXmlCommand 物件。 在此應用程式，FileStreamobject 會針對命令檔案開啟，而檔案資料流指派為執行 CommandStream。  
+  這個範例說明如何使用 SqlXmlCommand 物件的 CommandStream 屬性來指定由 SQL 或 XPath 查詢所組成的範本檔案。 在此應用程式中，會開啟命令檔的 FileStreamobject，並將檔案資料流程指派為執行的 CommandStream。  
   
- 在下列範例中，CommandType 屬性會指定為 SqlXmlCommandType.Template （而非作為 TemplateFile)。  
+ 在下列範例中，CommandType 屬性指定為 SqlXmlCommandType （而不是 TemplateFile）。  
   
  這是 XML 範本範例：  
   
@@ -82,7 +82,7 @@ class Test
   
 1.  將這個範例所提供的 XML 範本 (TemplateFile.xml) 儲存在資料夾中。  
   
-2.  將此範例中提供的 C# 程式碼 (DocSample.cs) 儲存到儲存結構描述的相同資料夾中 (如果您將檔案儲存在不同的資料夾中，您將需要編輯程式碼，然後為對應的結構描述指定適當的目錄路徑)。  
+2.  將此範例中提供的 C# 程式碼 (DocSample.cs) 儲存到儲存結構描述的相同資料夾中  (如果您將檔案儲存在不同的資料夾中，您將需要編輯程式碼，然後為對應的結構描述指定適當的目錄路徑)。  
   
 3.  編譯程式碼。 若要在命令提示字元下編譯程式碼，請使用：  
   

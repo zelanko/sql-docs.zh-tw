@@ -1,5 +1,5 @@
 ---
-title: 延隔時間 (DMX) |Microsoft Docs
+title: Lag （DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 170e2f8b565f8b3d9d5e385b2bba9f183e743ace
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008353"
 ---
 # <a name="lag-dmx"></a>Lag (DMX)
@@ -31,7 +31,7 @@ Lag()
  interger 類型的純量值。  
   
 ## <a name="remarks"></a>備註  
- 如果**延隔時間**函式會使用 KEY TIME 資料行位於巢狀資料表模型，該函式必須位於子 select 陳述式。  
+ 如果在索引鍵時間資料行位於嵌套資料表中的模型上使用**Lag**函數，此函數必須位於語句的子選取範圍內。  
   
 ## <a name="examples"></a>範例  
  下列範例傳回前 12 個月用來培訓模型之資料內的案例。  
@@ -42,8 +42,8 @@ WHERE Lag() < 12
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦延伸模組&#40;DMX&#41;函式參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [DMX&#41;的函數 &#40;](../dmx/functions-dmx.md)   
+ [&#40;DMX&#41;的一般預測函數](../dmx/general-prediction-functions-dmx.md)  
   
   

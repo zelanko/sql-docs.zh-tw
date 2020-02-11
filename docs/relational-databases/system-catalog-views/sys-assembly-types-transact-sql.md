@@ -1,5 +1,5 @@
 ---
-title: sys.assembly_types (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases assembly_types （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8a5358b75da914919cb4db567dc7eae6ad8617f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68118114"
 ---
-# <a name="sysassemblytypes-transact-sql"></a>sys.assembly_types (Transact-SQL)
+# <a name="sysassembly_types-transact-sql"></a>sys.assembly_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  針對由 CLR 組件所定義的每個使用者定義型別，各包含一個資料列。 下列**sys.assembly_types**出現在繼承的資料行清單 (請參閱[sys.types &#40;-&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) 之後**rule_object_id**。  
+  針對由 CLR 組件所定義的每個使用者定義型別，各包含一個資料列。 下列**sys. assembly_types**會出現在繼承的資料行清單中（請參閱**rule_object_id**後的[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)）。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -38,14 +38,14 @@ ms.locfileid: "68118114"
 |**assembly_class**|**sysname**|定義這個類型的組件內的類別名稱。|  
 |**is_binary_ordered**|**bit**|排列這個類型的位元組，相當於在該類型利用比較運算子來排序。|  
 |**is_fixed_length**|**bit**|類型長度一律與 max_length 一樣。|  
-|**prog_id**|**nvarchar(40)**|COM 所看到的類型 ProgID。|  
+|**prog_id**|**Nvarchar （40）**|COM 所看到的類型 ProgID。|  
 |**assembly_qualified_name**|**nvarchar(4000)**|組件限定的類型名稱。 這個名稱是採用適合傳遞到 Type.GetType() 的格式。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [純量類型目錄檢視&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)  
+ [純量類型目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)  
   
   

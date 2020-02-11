@@ -1,5 +1,5 @@
 ---
-title: external_library_files (Transact-sql) |Microsoft Docs
+title: sys.databases external_library_files （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2019
 ms.prod: sql
@@ -19,22 +19,22 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d7af0a7fcb639ae3beab6216e77f9b7b95a398da
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68471089"
 ---
-# <a name="sysexternallibraryfiles-transact-sql"></a>external_library_files (Transact-sql)  
+# <a name="sysexternal_library_files-transact-sql"></a>sys.external_library_files (Transact-SQL)  
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 列出組成外部程式庫之每個檔案的資料列。
 
 |資料行名稱 |資料類型 |描述|
 |------|------|-----|
-|external_library_id | ssNoversion |外部程式庫物件的識別碼。 |
-|content |varbinary(max) |外部程式庫檔案成品的內容。 |
-|platform.object |TINYINT |安裝 SQL Server 之主機平臺的識別碼。 |
+|external_library_id | int |外部程式庫物件的識別碼。 |
+|內容 |varbinary(max) |外部程式庫檔案成品的內容。 |
+|平台 |tinyint |安裝 SQL Server 之主機平臺的識別碼。 |
 |platform_desc | nvarchar(60) |主機平臺的名稱。 有效的值為 ' WINDOWS '、' LINUX '。 |
 
 ### <a name="see-also"></a>另請參閱  

@@ -13,16 +13,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8f18e047b11bee4093ce7a6e494c1ae1bf3d0ada
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483379"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>排除商務規則 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您不想要永久刪除商務規則，但是也不想使用它來驗證資料時，可排除此商務規則。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -31,27 +31,27 @@ ms.locfileid: "65483379"
   
 ### <a name="to-exclude-a-business-rule"></a>若要排除商務規則  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
-2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]** 。  
+2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]**。  
   
-3.  在 [商務規則維護]  頁面上，選取 [模型]  清單中的模型。  
+3.  在 [商務規則維護]**** 頁面上，選取 [模型]**** 清單中的模型。  
   
-4.  從 [實體]  清單中選取實體。  
+4.  從 [實體]**** 清單中選取實體。  
   
-5.  從**的成員型別**清單中，選取 成員類型。  
+5.  從 [**成員類型**] 清單中，選取成員的類型。  
   
-6.  從 [屬性]  清單中，選取屬性或保留預設值 [全部]  。  
+6.  從 [屬性]**** 清單中，選取屬性或保留預設值 [全部]****。  
   
-7.  在方格中，商務規則中，資料列中選取 [中] 核取方塊**排除**資料行。 中的值**狀態**資料行是**排除暫止**。  
+7.  在方格中，于商務規則的資料列中，選取 [**排除**] 資料行中的核取方塊。 [**狀態**] 資料行中的值為 [**排除暫**止]。  
   
-8.  按一下 [發行商務規則]  。  
+8.  按一下 [發行商務規則]****。  
   
-9. 在確認對話方塊中按一下 **[確定]** 。 中的值**狀態**資料行是**排除**。  
+9. 在確認對話方塊中按一下 **[確定]**。 [**狀態**] 資料行中的值已**排除**。  
   
 ## <a name="see-also"></a>另請參閱  
  [刪除商務規則 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)   
- [建立及發行商務規則 &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
+ [建立和發佈商務規則 &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [商務規則 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

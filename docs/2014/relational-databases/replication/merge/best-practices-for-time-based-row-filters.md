@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210719"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>以時間為基礎之資料列篩選的最佳做法
@@ -26,7 +26,7 @@ ms.locfileid: "68210719"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- 使用這種類型的篩選時，通常假設合併代理程式執行時一律會發生兩件事：滿足這個篩選的資料列會複寫至訂閱者，以及不再滿足這個篩選的資料列會從訂閱者端清除 (如需有關使用篩選`HOST_NAME()`，請參閱 < [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)。)然而，不論您為資料所定義的資料列篩選為何，合併式複寫只能複寫和清除自上次同步處理後已變更的資料。  
+ 使用這種類型的篩選時，通常假設合併代理程式執行時一律會發生兩件事：滿足這個篩選的資料列會複寫至訂閱者，以及不再滿足這個篩選的資料列會從訂閱者端清除 （如需使用`HOST_NAME()`進行篩選的詳細資訊，請參閱[參數化資料列篩選器](parameterized-filters-parameterized-row-filters.md)）。不過，合併式複寫只會複寫和清除自從上次同步處理後已變更的資料，不論您如何定義該資料的資料列篩選。  
   
  若要合併式複寫處理資料列，資料列中的資料必須滿足資料列篩選，並且自上次同步處理後必須已變更。 在 **SalesOrderHeader** 資料表的案例中， **OrderDate** 是在插入資料列時所輸入的。 資料列會如預期複寫至訂閱者，因為插入動作是資料變更。 然而，如果訂閱者端有不再滿足篩選的資料列 (超過七天以上的訂單資料列)，除非這些資料列因其他原因而更新，否則不會從訂閱者端移除。  
   
@@ -60,7 +60,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**複寫**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|1|  
-|2|Dinner|112|2006-10-10|0|  
+|2|正餐|112|2006-10-10|0|  
 |3|Party|112|2006-10-11|0|  
 |4|Wedding|112|2006-10-12|0|  
   
@@ -84,7 +84,7 @@ GO
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**複寫**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|0|  
-|2|Dinner|112|2006-10-10|1|  
+|2|正餐|112|2006-10-10|1|  
 |3|Party|112|2006-10-11|1|  
 |4|Wedding|112|2006-10-12|1|  
   

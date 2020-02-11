@@ -1,5 +1,5 @@
 ---
-title: sp_create_plan_guide_from_handle (TRANSACT-SQL) |Microsoft Docs
+title: sp_create_plan_guide_from_handle （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 15fa1de65ada904ecf4b93947e1e9e9f818fd0d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a5e4ad5d6f3d0b2e35633694d65e58dd782cc3ba
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68108670"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75688260"
 ---
-# <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
+# <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   從計畫快取中的查詢計畫建立一個或多個計畫指南。 您可以使用這個預存程序來確保查詢最佳化工具永遠針對指定的查詢，使用特定的查詢計畫。 如需有關計畫指南的詳細資訊，請參閱 [計畫指南](../../relational-databases/performance/plan-guides.md)。  
@@ -34,23 +34,22 @@ ms.locfileid: "68108670"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'  
     , [ @plan_handle = ] plan_handle  
     , [ [ @statement_start_offset = ] { statement_start_offset | NULL } ]  
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @name = ] N'*plan_guide_name*'  
- 計畫指南的名稱。 計畫指南名稱僅限於目前的資料庫。 *plan_guide_name*必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)且開頭不能是數字符號 （#）。 最大長度*plan_guide_name*為 124 個字元。  
+ [ @name = ]N '*plan_guide_name*'  
+ 計畫指南的名稱。 計畫指南名稱僅限於目前的資料庫。 *plan_guide_name*必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且開頭不能是數位記號（#）。 *Plan_guide_name*的最大長度是124個字元。  
   
- [ @plan_handle = ] *plan_handle*  
- 識別工作負載中的批次。 *plan_handle*已**varbinary(64)** 。 *plan_handle*可以取自[sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)動態管理檢視。  
+ [ @plan_handle = ]*plan_handle*  
+ 識別工作負載中的批次。 *plan_handle*為**Varbinary （64）**。 *plan_handle*可以從[sys.databases dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)動態管理檢視取得。  
   
- [ @statement_start_offset = ] { *statement_start_offset* | NULL } ]  
- 識別指定的批次內的陳述式的開始位置*plan_handle*。 *statement_start_offset*已**int**，預設值是 NULL。  
+ [ @statement_start_offset = ]{ *statement_start_offset* |Null}]  
+ 識別語句在指定*plan_handle*的批次中的開始位置。 *statement_start_offset*是**int**，預設值是 Null。  
   
- 陳述式位移會對應中的 statement_start_offset 資料行[sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)動態管理檢視。  
+ 語句位移會對應至 [ [dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)動態管理] 視圖中的 [statement_start_offset] 資料行。  
   
  指定 NULL 時，或者未指定陳述式位移時，系統會使用指定之計畫控制代碼的查詢計畫，在批次中建立每個陳述式的計畫指南。 所產生之計畫指南相當於使用 USE PLAN 查詢提示強制使用特定之計畫的計畫指南。  
   
@@ -58,15 +57,15 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  並非所有陳述式類型都可以建立計畫指南。 如果無法在批次中建立陳述式的計畫指南，預存程序會忽略該陳述式，並繼續批次中的下一個陳述式。 如果有陳述式在相同批次中多次發生，會啟用最後發生之陳述式的計畫，而且會停用該陳述式之前的計畫。 如果批次中沒有陳述式可用於計畫指南，則會發生錯誤 10532，而且陳述式將會失敗。 建議您一律從 sys.dm_exec_query_stats 動態管理檢視取得計畫控制代碼以防止發生這個錯誤的可能性。  
   
 > [!IMPORTANT]  
->  sp_create_plan_guide_from_handle 會根據出現在計畫快取中的計畫，建立計畫指南。 也就是說，批次文字、[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式與 XML 執行程序表都是從計畫快取逐字元取得 (包括傳遞至查詢的任何常值)，並放入所產生的計畫指南中。 這些文字字串可能包含之後會儲存到資料庫之中繼資料中的機密資訊。 具有適當權限的使用者可以使用 sys.plan_guides 目錄檢視中檢視此資訊並**計畫指南屬性** 對話方塊中的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 為確保機密資訊不會透過計畫指南而遭到揭露，建議您檢閱從計畫快取建立的計畫指南。  
+>  sp_create_plan_guide_from_handle 會根據出現在計畫快取中的計畫，建立計畫指南。 也就是說，批次文字、[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式與 XML 執行程序表都是從計畫快取逐字元取得 (包括傳遞至查詢的任何常值)，並放入所產生的計畫指南中。 這些文字字串可能包含之後會儲存到資料庫之中繼資料中的機密資訊。 具有適當許可權的使用者可以使用的 [plan_guides 目錄] 視圖和 [**計劃指南屬性**] 對話方塊來查看這項[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]資訊。 為確保機密資訊不會透過計畫指南而遭到揭露，建議您檢閱從計畫快取建立的計畫指南。  
   
 ## <a name="creating-plan-guides-for-multiple-statements-within-a-query-plan"></a>針對查詢計畫內的多個陳述式建立計畫指南  
  諸如 sp_create_plan_guide、sp_create_plan_guide_from_handle 等會從計畫快取移除目標批次或模組的快取計畫。 這個動作的目的在於確保所有使用者都開始使用新的計畫指南。 針對單一查詢計畫內的多個陳述式建立計畫指南時，您可以在明確交易中建立所有計畫指南，藉以延後移除快取中的計畫。 此方法可讓計畫保留在快取中，直到異動完成並建立每個指定陳述式的計畫指南為止。 請參閱範例 B。  
   
-## <a name="permissions"></a>Permissions  
- 需要 VIEW SERVER STATE 權限。 此外，使用 sp_create_plan_guide_from_handle 建立的每個計畫指南都需要個別的權限。 若要建立類型為 OBJECT 的計畫指南，需要所參考物件的 ALTER 權限。 若要建立類型為 SQL 或 TEMPLATE 的計畫指南，需要目前資料庫的 ALTER 權限。 若要判斷將要建立的計畫指南類型，請執行下列查詢：  
+## <a name="permissions"></a>權限  
+ 需要 `VIEW SERVER STATE` 權限。 此外，使用 sp_create_plan_guide_from_handle 建立的每個計畫指南都需要個別的權限。 若要建立 OBJECT 類型的計劃指南， `ALTER`需要參考物件的許可權。 若要建立類型為 SQL 或 TEMPLATE 的計劃指南`ALTER` ，需要目前資料庫的許可權。 若要判斷將要建立的計畫指南類型，請執行下列查詢：  
   
-```  
+```sql  
 SELECT cp.plan_handle, sql_handle, st.text, objtype   
 FROM sys.dm_exec_cached_plans AS cp  
 JOIN sys.dm_exec_query_stats AS qs ON cp.plan_handle = qs.plan_handle  
@@ -121,12 +120,12 @@ GO
  [!code-sql[PlanGuides#Create_From_Handle2](../../relational-databases/system-stored-procedures/codesnippet/tsql/sp-create-plan-guide-fro_1.sql)]  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
- [計畫指南](../../relational-databases/performance/plan-guides.md)   
- [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
- [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
+ [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+ [計劃指南](../../relational-databases/performance/plan-guides.md)   
+ [sp_create_plan_guide &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [dm_exec_text_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
+ [sp_control_plan_guide &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
   
   

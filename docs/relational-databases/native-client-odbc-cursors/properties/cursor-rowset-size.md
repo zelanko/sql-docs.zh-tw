@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5188b87e91725e2d0e86337261fc1f915189ff19
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784247"
 ---
 # <a name="cursor-rowset-size"></a>資料指標資料列集大小
@@ -48,7 +48,7 @@ SQLSetStmtAttr(m_hstmt, SQL_ATTR_ROW_ARRAY_SIZE, (SQLPOINTER)uwRowsetSize, SQL_I
   
  [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md)也可以用來從區塊資料指標取出資料行資料。 由於**SQLGetData**會一次處理一個資料列，因此在呼叫**SQLGetData**之前，必須先呼叫**SQLSetPos** ，將資料列集中的特定資料列設定為目前的資料列。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式使用資料列集來提供優化，以快速取得整個結果集。 若要使用此優化，請在呼叫**SQLExecDirect**或**SQLExecute**時，將資料指標屬性設定為其預設值（順向、唯讀、資料列集大小 = 1）。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會設定預設的結果集。 若要在不捲動的情況下將結果傳送到用戶端時，這種做法比伺服器資料指標有效率。 在執行陳述式之後，請增加資料列集大小，並使用資料行取向或資料列取向的繫結。 這可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用預設結果集，將結果資料列有效率地傳送給用戶端，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會從用戶端上的網路緩衝區持續提取資料列。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會使用資料列集來提供優化，以快速取得整個結果集。 若要使用此優化，請在呼叫**SQLExecDirect**或**SQLExecute**時，將資料指標屬性設定為其預設值（順向、唯讀、資料列集大小 = 1）。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會設定預設的結果集。 若要在不捲動的情況下將結果傳送到用戶端時，這種做法比伺服器資料指標有效率。 在執行陳述式之後，請增加資料列集大小，並使用資料行取向或資料列取向的繫結。 這可[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]讓您使用預設結果集，將結果資料列有效率地傳送給客戶[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]端，而 Native client ODBC 驅動程式會從用戶端上的網路緩衝區持續提取資料列。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料指標屬性](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  

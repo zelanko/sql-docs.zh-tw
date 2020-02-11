@@ -1,5 +1,5 @@
 ---
-title: sp_helpfile (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpfile （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7b60f4929bd537089c05211cc3ecc548b82b6307
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67943490"
 ---
-# <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
+# <a name="sp_helpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回目前資料庫之相關檔案的實體名稱和屬性。 請利用這個預存程序來判斷伺服器所要附加或卸離的檔案名稱。  
@@ -39,7 +39,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @filename = ] 'name'` 這是目前資料庫中的任何檔案邏輯名稱。 *名稱*已**sysname**，預設值是 NULL。 如果*名稱*是未指定，會傳回目前資料庫中的所有檔案的屬性。  
+`[ @filename = ] 'name'`這是目前資料庫中任何檔案的邏輯名稱。 *name*是**sysname**，預設值是 Null。 如果未指定*name* ，則會傳回目前資料庫中所有檔案的屬性。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -49,15 +49,15 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|邏輯檔案名稱。|  
-|**fileid**|**smallint**|檔案的數值識別碼。 如果不會傳回*名稱*指定 *。*|  
-|**filename**|**nchar(260)**|實體檔案名稱。|  
-|**filegroup**|**sysname**|檔案所屬的檔案群組。<br /><br /> NULL = 檔案是記錄檔。 它永遠不在檔案群組中。|  
-|**size**|**nvarchar(15)**|檔案大小 (以 KB 為單位)。|  
-|**maxsize**|**nvarchar(15)**|檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
-|**成長**|**nvarchar(15)**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。<br /><br /> 0 = 檔案是固定大小，不會成長。|  
-|**使用方式**|**varchar(9)**|對於資料檔，這個值是 **'僅限資料'** 的值是記錄檔**僅限記錄'** 。|  
+|**fileid**|**smallint**|檔案的數值識別碼。 如果已指定*name* ，則不會傳回 *。*|  
+|**名稱**|**Nchar （260）**|實體檔案名稱。|  
+|**檔案群組**|**sysname**|檔案所屬的檔案群組。<br /><br /> NULL = 檔案是記錄檔。 它永遠不在檔案群組中。|  
+|**容量**|**Nvarchar （15）**|檔案大小 (以 KB 為單位)。|  
+|**maxsize**|**Nvarchar （15）**|檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
+|**growth**|**Nvarchar （15）**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。<br /><br /> 0 = 檔案是固定大小，不會成長。|  
+|**實例**|**Varchar （9）**|針對資料檔案，此值為「**僅限資料**」，而記錄檔的值為「**僅限記錄**」。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  
@@ -71,11 +71,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
- [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sp_helpfilegroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
+ [database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料庫檔案與檔案群組](../../relational-databases/databases/database-files-and-filegroups.md)  
   

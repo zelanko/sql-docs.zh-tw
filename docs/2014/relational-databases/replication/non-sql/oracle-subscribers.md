@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022230"
 ---
 # <a name="oracle-subscribers"></a>Oracle 訂閱者
@@ -31,7 +31,7 @@ ms.locfileid: "63022230"
   
 1.  在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」上安裝並設定 Oracle 用戶端網路軟體及 Oracle OLE DB 提供者，以便「散發者」可與「Oracle 訂閱者」建立連接。 Oracle 用戶端網路軟體應為最新的可用版本。 Oracle 建議使用者安裝最新版本的用戶端軟體。 因此用戶端軟體的版本通常比資料庫軟體的版本還要新。 安裝該軟體最直接的方法是使用 Oracle Client 磁碟上的 Oracle Universal Installer。 在 Oracle Universal Installer 中，您將提供下列資訊：  
   
-    |[資訊]|描述|  
+    |資訊|描述|  
     |-----------------|-----------------|  
     |Oracle Home|這是到 Oracle 軟體之安裝目錄的路徑。 接受預設路徑 (C:\oracle\ora90 或類似路徑) 或輸入其他路徑。 如需有關 Oracle Home 的詳細資訊，請參閱本主題後面的「Oracle Home 的注意事項」。|  
     |Oracle Home 名稱|Oracle Home 路徑的別名。|  
@@ -103,8 +103,8 @@ ms.locfileid: "63022230"
 |`char(1-2000)`|CHAR(1-2000)|  
 |`char(2001-4000)`|VARCHAR2(2001-4000)|  
 |`char(4001-8000)`|CLOB|  
-|`date`|DATE|  
-|`datetime`|DATE|  
+|`date`|日期|  
+|`datetime`|日期|  
 |`datetime2(0-7)`|適用於 Oracle 9 和 Oracle 10 的 TIMESTAMP(7)；適用於 Oracle 8 的 VARCHAR(27)|  
 |`datetimeoffset(0-7)`|適用於 Oracle 9 和 Oracle 10 的 TIMESTAMP(7) WITH TIME ZONE；適用於 Oracle 8 的 VARCHAR(34)|  
 |`decimal(1-38, 0-38)`|NUMBER(1-38, 0-38)|  
@@ -124,7 +124,7 @@ ms.locfileid: "63022230"
 |`nvarchar(1001-4000)`|NCLOB|  
 |`nvarchar(max)`|NCLOB|  
 |`real`|real|  
-|`smalldatetime`|DATE|  
+|`smalldatetime`|日期|  
 |`smallint`|NUMBER(5,0)|  
 |`smallmoney`|NUMBER(10,4)|  
 |`sql_variant`|N/A|  
@@ -143,7 +143,7 @@ ms.locfileid: "63022230"
 |`xml`|NCLOB|  
   
 ## <a name="see-also"></a>另請參閱  
- [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
+ [非 SQL Server 訂閱者](non-sql-server-subscribers.md)   
  [訂閱發行集](../subscribe-to-publications.md)  
   
   

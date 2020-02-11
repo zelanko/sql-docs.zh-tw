@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b8df31e5fc0d7c0f06db477b13f1d13445e9472
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097118"
 ---
-# <a name="instancename-property-wmi-msreportserverinstance"></a>InstanceName 屬性 (WMI MSReportServer_Instance)
+# <a name="instancename-property-wmi-msreportserver_instance"></a>InstanceName 屬性 (WMI MSReportServer_Instance)
   在特定電腦上傳回報表伺服器執行個體的名稱。 唯讀。  
   
 ## <a name="syntax"></a>語法  
@@ -45,7 +45,7 @@ public string InstanceName;
  [MSReportServer_ConfigurationSetting 類別](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_Instance 成員](msreportserver-instance-members.md)  

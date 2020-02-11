@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 56148cca72ca9561219a9ea14025b0bd0f2204b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206575"
 ---
 # <a name="modify-a-partition-scheme"></a>修改資料分割配置
@@ -39,7 +39,7 @@ ms.locfileid: "68206575"
 ###  <a name="Restrictions"></a> 限制事項  
  只要是 ALTER PARTITION SCHEME 影響所及的檔案群組都必須在線上。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  您可以使用下列權限來執行 ALTER PARTITION SCHEME：  
@@ -53,7 +53,7 @@ ms.locfileid: "68206575"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要修改資料分割配置：**  
   
- 您無法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來執行這項特定動作。 若要修改資料分割配置，您必須先刪除此配置，然後再使用 [建立資料分割精靈] 來建立具有所需屬性的新配置。 如需詳細資訊，請參閱 <<c0> [ 建立資料分割資料表和索引使用 SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure)下方**建立 Partitioned Tables and Indexes**。  
+ 您無法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來執行這項特定動作。 若要修改資料分割配置，您必須先刪除此配置，然後再使用 [建立資料分割精靈] 來建立具有所需屬性的新配置。 如需詳細資訊，請參閱**create 資料分割資料表和索引**底下的[使用 SQL Server Management Studio 建立資料分割資料表和索引](create-partitioned-tables-and-indexes.md#SSMSProcedure)。  
   
 #### <a name="to-delete-a-partition-scheme"></a>若要刪除資料分割配置  
   

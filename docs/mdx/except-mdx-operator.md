@@ -1,5 +1,5 @@
 ---
-title: '- （除外）(MDX) |Microsoft Docs'
+title: '- 但是（MDX） |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: cf0121d1be3cd2943a801f3c72ca4952b70ec681
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139075"
 ---
-# <a name="except-mdx-operator"></a>Except 運算子 (MDX)
+# <a name="except-mdx-operator"></a>Except （MDX）運算子
 
 
   執行集合運算，傳回兩個集合間的差異、移除重複的成員。  
@@ -35,7 +35,7 @@ Set_Expression - Set_Expression
  集合包含的成員不由兩個指定的參數共用。  
   
 ## <a name="remarks"></a>備註  
- **-（例外）** 運算子在功能上等於[除了](../mdx/except-mdx-function.md)函式。  
+ **-（Except）** 運算子的功能等同于[Except](../mdx/except-mdx-function.md)函數。  
   
 ## <a name="examples"></a>範例  
  以下範例示範此運算子的用法：  
@@ -52,6 +52,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Mdx 運算子參考 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

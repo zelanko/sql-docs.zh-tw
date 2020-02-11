@@ -1,5 +1,5 @@
 ---
-title: sp_enum_login_for_proxy (TRANSACT-SQL) |Microsoft Docs
+title: sp_enum_login_for_proxy （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: ee6b6a701d4ff81863973c4c8e098bd9ed49c967
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124676"
 ---
-# <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
+# <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
@@ -42,14 +42,14 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'name'` 名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主體、 登入、 伺服器角色或**msdb**要列出 proxy 的資料庫角色。 檔案名**nvarchar(256)** ，預設值是 NULL。  
+`[ @name = ] 'name'`要列出 proxy 的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主體、登入、伺服器角色或**msdb**資料庫角色的名稱。 名稱是**Nvarchar （256）**，預設值是 Null。  
   
-`[ @proxy_id = ] id` 要列出資訊的 proxy 之 proxy 識別碼。 *Proxy_id*是**int**，預設值是 NULL。 任一*識別碼*或*proxy_name*可能指定。  
+`[ @proxy_id = ] id`要列出資訊之 proxy 的 proxy 識別碼。 *Proxy_id*是**int**，預設值是 Null。 可以指定*識別碼*或*proxy_name* 。  
   
-`[ @proxy_name = ] 'proxy_name'` 要列出資訊的 proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 任一*識別碼*或*proxy_name*可能指定。  
+`[ @proxy_name = ] 'proxy_name'`要列出資訊之 proxy 的名稱。 *Proxy_name*是**sysname**，預設值是 Null。 可以指定*識別碼*或*proxy_name* 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -58,20 +58,20 @@ sp_enum_login_for_proxy
 |**proxy_id**|**int**|Proxy 識別碼。|  
 |**proxy_name**|**sysname**|Proxy 的名稱。|  
 |**name**|**sysname**|關聯的安全性主體名稱。|  
-|**flags**|**int**|安全性主體的類型。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入<br /><br /> **1** = 固定的系統角色<br /><br /> **2** = 資料庫角色中的**msdb**|  
+|**旗幟**|**int**|安全性主體的類型。<br /><br /> ****  =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入<br /><br /> **1** = 固定系統角色<br /><br /> **2** = **msdb**中的資料庫角色|  
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>備註  
- 當未不提供任何參數時， **sp_enum_login_for_proxy**列出每個 proxy 執行個體中的所有登入資訊。  
+ 未提供任何參數時， **sp_enum_login_for_proxy**會列出每個 proxy 之實例中所有登入的相關資訊。  
   
- 當提供 proxy 識別碼或 proxy 名稱時， **sp_enum_login_for_proxy**列出有權存取 proxy 的登入。 提供登入名稱時， **sp_enum_login_for_proxy**登入具有 proxy 的存取權的清單。  
+ 當提供 proxy 識別碼或 proxy 名稱時， **sp_enum_login_for_proxy**會列出可存取 proxy 的登入。 當提供登入名稱時， **sp_enum_login_for_proxy**會列出該登入有權存取的 proxy。  
   
  當同時提供 Proxy 資訊和登入名稱時，如果指定的登入有權存取指定的 Proxy，結果集會傳回一個資料列。  
   
- 這個預存程序位於**msdb**。  
+ 這個預存程式位於**msdb**中。  
   
-## <a name="permissions"></a>Permissions  
- 此程序預設值，成員的執行權限**sysadmin**固定的伺服器角色。  
+## <a name="permissions"></a>權限  
+ 此程式的執行許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
   
@@ -99,8 +99,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_help_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)   
- [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
+ [sp_help_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)   
+ [sp_grant_login_to_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
+ [sp_revoke_login_from_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   

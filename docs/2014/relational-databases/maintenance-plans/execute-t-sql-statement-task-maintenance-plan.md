@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aac0c6b837fcd25b0e1f06344a2745c68b05dea3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206030"
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>執行 T-SQL 陳述式工作 (維護計畫)
-  使用 [執行 T-SQL 陳述式工作]  對話方塊，即可將您選擇的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式加入此維護計畫，來自訂維護計畫。  
+  使用 [**執行 T-sql 語句**工作] 對話方塊，即可將您選擇的語句加入[!INCLUDE[tsql](../../includes/tsql-md.md)]此維護計畫，以自訂您的維護計畫。  
   
 ## <a name="options"></a>選項。  
  **[連接]**  
@@ -31,13 +31,14 @@ ms.locfileid: "68206030"
  **新增**  
  建立新的伺服器連接，以便執行此工作時使用。 下面會描述 **[新增連接]** 對話方塊。  
   
- **執行逾時**  
+ **執行時間輸出**  
  在逾時之前，等候工作完成的時間 (秒數) (結束工作)。  
   
- **T-SQL 陳述式**  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 要執行的陳述式。  
+ **T-sql 語句**  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 要執行的陳述式。  
   
- **檢視 T-SQL**  
+ **View T-sql**  
  根據選取的選項，檢視此工作在伺服器上執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
 > [!NOTE]  
@@ -53,11 +54,11 @@ ms.locfileid: "68206030"
  **[重新整理]**  
  重新整理可用的伺服器清單。  
   
- **輸入要登入到伺服器的資訊**  
+ **輸入資訊以登入伺服器**  
  指定如何對伺服器進行驗證。  
   
  **使用 Windows 整合式安全性**  
- 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的執行個體。  
+ 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證連接到的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]實例。  
   
  **使用特定的使用者名稱和密碼**  
  使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 驗證，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 無法使用此選項。  

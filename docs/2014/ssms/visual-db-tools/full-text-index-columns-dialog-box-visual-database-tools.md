@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ece0e6856f43e2296fb0feab4abe38ffbba568b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028325"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>全文檢索索引資料行對話方塊 (Visual Database Tools)
   這個對話方塊會列出 [資料表設計工具] 開啟的資料表中，參與全文檢索索引的資料行。 若要存取這個對話方塊，請在資料表設計工具中的資料表上按一下滑鼠右鍵、選擇 [全文檢索索引]  ，然後在 [全文檢索索引]  對話方塊中，依序按一下想要檢視或編輯的資料行索引、右側方格的 [資料行]  欄位，再按一下省略符號 ( **...** )。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **資料行**  
  顯示參與全文檢索索引之資料行的名稱。 若要加入資料行，請按一下第一個空的資料格，然後從下拉式清單中選擇資料行。 只可以存取資料類型為文字基礎或影像的資料行。  
   

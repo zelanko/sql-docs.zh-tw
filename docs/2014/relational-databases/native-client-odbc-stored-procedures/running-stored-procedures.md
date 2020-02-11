@@ -1,5 +1,5 @@
 ---
-title: 執行預存程序 |Microsoft Docs
+title: 執行預存程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6bdf66ed9214a151886caedcf2247935a07f7811
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206736"
 ---
 # <a name="running-stored-procedures"></a>執行預存程序
-  預存程序是一種儲存在資料庫中的可執行物件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援：  
+  預存程序是一種儲存在資料庫中的可執行物件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援  
   
 -   預存程序：  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68206736"
   
      擴充預存程序可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中未提供的 C 和 C++ 功能。  
   
-     如需如何呼叫預存程序的範例，請參閱 <<c0> [ 程序傳回碼和輸出參數&#40;ODBC&#41;](../native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)。</c0>  
+     如需如何呼叫預存程式的範例，請參閱[&#40;ODBC&#41;處理傳回碼和輸出參數](../native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -67,6 +67,6 @@ ms.locfileid: "68206736"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
- [執行預存程序的使用說明主題&#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
+ [執行預存程式的 how to 主題 &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   
   

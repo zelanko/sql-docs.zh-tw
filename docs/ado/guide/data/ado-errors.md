@@ -13,14 +13,14 @@ ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2c357384a3de683c05b2922149e2b61630881922
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926206"
 ---
-# <a name="ado-run-time-errors"></a>執行階段錯誤
-ADO 錯誤會回報到您的程式中，為執行階段錯誤。 您可以使用您的程式語言的錯誤捕捉機制來攔截並處理它們。 例如，在 Visual Basic 中使用**On Error**陳述式。 在視覺效果C++，這取決於您用來存取 ADO 程式庫的方法。 有了 #import，使用**try / catch**區塊。 否則，C++程式設計人員必須明確地擷取物件時發生錯誤，藉由呼叫**GetErrorInfo**。 下列 Visual Basic sub 程序示範如何捕捉 ADO 錯誤：
+# <a name="ado-run-time-errors"></a>ADO 執行階段錯誤
+ADO 錯誤會回報給您的程式，做為執行階段錯誤。 您可以使用程式設計語言的「錯誤捕捉」機制來加以攔截和處理。 例如，在 Visual Basic 中，使用**On Error**語句。 在 Visual C++ 中，這取決於您用來存取 ADO 程式庫的方法。 利用 #import，請使用**try-catch**區塊。 否則，c + + 程式設計人員必須藉由呼叫**GetErrorInfo**來明確取得錯誤物件。 下列 Visual Basic sub 程式示範如何捕捉 ADO 錯誤：
 
 ```
 ' BeginErrorHandlingVB01
@@ -78,7 +78,7 @@ End Sub
 ' EndErrorHandlingVB01
 ```
 
- 這**Form_Load**事件程序刻意建立錯誤嘗試開啟相同**連線**物件兩次。 第二次**開啟**呼叫方法，就會啟動錯誤處理常式。 在此情況下錯誤屬於類型**adErrObjectOpen**，因此錯誤處理常式繼續程式執行前顯示下列訊息：
+ 這個**Form_Load**事件程式會嘗試開啟相同的**連接**物件兩次，以刻意建立錯誤。 第二次呼叫**Open**方法時，會啟用錯誤處理常式。 在此情況下，錯誤的類型為**adErrObjectOpen**，因此錯誤處理常式會在繼續執行程式之前顯示下列訊息：
 
 ```
 Error #3705: Operation is not allowed when the object is open.
@@ -86,15 +86,15 @@ Error reported by: ADODB.Connection
 Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
 ```
 
- 錯誤訊息會包含每個 Visual Basic 所提供的資訊片段**Err**物件除了**LastDLLError**這裡不適用的值。 錯誤號碼會告訴您發生了什麼錯誤。 描述可用於在其中您不想自行處理錯誤的情況。 您只可以將它傳遞給使用者。 雖然您通常會想要使用您的應用程式的自訂訊息，您不能預期每項錯誤;描述會提供一些線索，所發生的錯誤。 範例程式碼中所報告的錯誤**連線**物件。 您會看到物件的型別或程式設計識別碼-不是變數的名稱。
+ 錯誤訊息包含 Visual Basic **Err**物件所提供的每一項資訊，但**LastDLLError**值除外，此處不適用。 錯誤號碼會告訴您發生了哪個錯誤。 當您不想要自行處理錯誤時，描述會很有用。 您可以直接將它傳遞給使用者。 雖然您通常會想要使用針對應用程式自訂的訊息，但您不能預期每個錯誤;描述會提供一些線索，說明發生錯誤的原因。 在範例程式碼中，**連接**物件報告了錯誤。 您會在這裡看到物件的類型或程式設計識別碼-不是變數名稱。
 
 > [!NOTE]
->  Visual Basic **Err**物件只會包含最常見的錯誤相關資訊。 ADO**錯誤**的集合**連線**物件包含一個**錯誤**最近的 ADO 作業所引發的每個錯誤的物件。 使用**錯誤**集合而非**Err**物件，以處理多個錯誤。 如需詳細資訊**錯誤**集合，請參閱[提供者錯誤](../../../ado/guide/data/provider-errors.md)。 不過，如果無法有效**連接**物件， **Err**物件是 ADO 錯誤的相關資訊的唯一來源。
+>  Visual Basic **Err**物件只包含最新錯誤的相關資訊。 **連接**物件的 ADO **Errors**集合針對最近 ADO 作業引發的每個錯誤，各包含一個**錯誤**物件。 使用**Errors**集合，而不是**Err**物件來處理多個錯誤。 如需有關**錯誤**集合的詳細資訊，請參閱[提供者錯誤](../../../ado/guide/data/provider-errors.md)。 不過，如果沒有有效的**連接**物件，則**ERR**物件是 ADO 錯誤相關資訊的唯一來源。
 
- 何種作業都有可能造成 ADO 錯誤？ 常見的 ADO 錯誤可能是開啟物件，例如**連接**或是**資料錄集**、 嘗試更新資料，或呼叫方法或您的提供者不支援的屬性。
+ 哪種作業可能會造成 ADO 錯誤？ 常見的 ADO 錯誤可能牽涉到開啟物件，例如**連接**或**記錄集**、嘗試更新資料，或呼叫提供者不支援的方法或屬性。
 
- OLE DB 錯誤也可以傳遞至您的應用程式中的執行階段錯誤**錯誤**集合。
+ OLE DB 錯誤也可以當做**錯誤**集合中的執行階段錯誤，傳遞至您的應用程式。
 
- 下列主題提供有關 ADO 錯誤的詳細資訊。
+ 下列主題提供 ADO 錯誤的詳細資訊。
 
 -   [ADO 錯誤參考](../../../ado/guide/data/ado-error-reference.md)

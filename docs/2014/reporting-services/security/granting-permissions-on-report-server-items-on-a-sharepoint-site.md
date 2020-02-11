@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa11481ed3c446becf2519a2ed149867456ac94a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101930"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>授與 SharePoint 網站上報表伺服器項目的權限
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 提供內建的安全性功能，可用來授與從 SharePoint 網站和文件庫存取報表伺服器項目的權限。 如果您已經指定權限給使用者，則在設定 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 與報表伺服器之間的整合設定之後，那些使用者就能立即存取報表伺服器項目和作業。 您可以使用現有權限來上傳報表定義和其他文件、檢視報表、建立訂閱和管理項目。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPF2010](../../includes/spf2010-md.md)]提供內建的安全性功能，可讓您用來授與從 SharePoint 網站和文件庫存取之報表伺服器專案的存取權。 如果您已經指定權限給使用者，則在設定 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 與報表伺服器之間的整合設定之後，那些使用者就能立即存取報表伺服器項目和作業。 您可以使用現有權限來上傳報表定義和其他文件、檢視報表、建立訂閱和管理項目。  
   
  如果您未指定權限，或是不熟悉 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]中的安全性功能，請依照下列方針進行：  
   
@@ -42,11 +42,13 @@ ms.locfileid: "66101930"
   
 -   安全物件包括網站、清單、文件庫、資料夾和文件。  
   
--   權限是可執行特定工作的授權。 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 提供 33 種預先定義的權限，可合併成為權限等級。  
+-   權限是可執行特定工作的授權。 
+  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 提供 33 種預先定義的權限，可合併成為權限等級。  
   
 -   權限等級是可授與使用者或 SharePoint 群組的安全性實體物件 (例如網站、文件庫、清單、資料夾、項目或文件) 權限集合。 它相當於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的角色定義。 預先定義的權限等級有 5 個。 您可以進行自訂或視需要建立新的。  
   
--   SharePoint 群組是您可以在 SharePoint 網站上建立的使用者群組，以管理站台的權限或提供站台成員的電子郵件通訊群組清單。 SharePoint 群組包含 Windows 使用者和群組帳戶，或使用者登入 (如果您是使用表單驗證)。 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 提供三個群組。 您可以進行自訂或視需要建立新的。  
+-   SharePoint 群組是您可以在 SharePoint 網站上建立的使用者群組，以管理站台的權限或提供站台成員的電子郵件通訊群組清單。 SharePoint 群組包含 Windows 使用者和群組帳戶，或使用者登入 (如果您是使用表單驗證)。 
+  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 提供三個群組。 您可以進行自訂或視需要建立新的。  
   
 -   權限繼承讓子網站、清單、文件庫和項目能夠繼承上層網站的安全性設定。 您可以使用繼承的權限來存取儲存在 SharePoint 文件庫中的報表伺服器項目。 使用權限繼承和預先定義的 SharePoint 群組有助於簡化您的部署，並可立即存取大部分報表伺服器作業。  
   
@@ -58,7 +60,8 @@ ms.locfileid: "66101930"
  伺服器管理員和網站集合管理員可以設定選項，以決定其他網站擁有者能否設定權限。 依您擁有的不同權限等級，您或許無法建立或自訂 SharePoint 群組或權限等級。  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>使用預先定義的 SharePoint 群組和權限等級  
- [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 產品文件中的建議事項建議您使用標準 SharePoint 群組 (它們是「 *Site name* **擁有者**, *Site name* **成員**」和「 *Site name* **訪客**」)，並於網站層級指定權限。 受您指定權限的大部分使用者應該是「 *Site name* **訪客** 」或「 *Site name* **成員** 」群組的成員。 上層網站的權限會由整個網站階層繼承。 您可以針對需要其他限制的特定項目，中斷其權限繼承。  
+ 
+  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 產品文件中的建議事項建議您使用標準 SharePoint 群組 (它們是「 *Site name* **擁有者**, *Site name* **成員**」和「 *Site name* **訪客**」)，並於網站層級指定權限。 受您指定權限的大部分使用者應該是「 *Site name* **訪客** 」或「 *Site name* **成員** 」群組的成員。 上層網站的權限會由整個網站階層繼承。 您可以針對需要其他限制的特定項目，中斷其權限繼承。  
   
  下列 SharePoint 群組具有下列預先定義的權限等級：  
   
@@ -66,7 +69,9 @@ ms.locfileid: "66101930"
   
 -   「 **成員** 」群組具有「參與」等級權限，讓群組成員能夠檢視網頁、編輯項目、提交變更核准、加入清單項目和刪除清單項目。  
   
--   [訪客]  群組具有「讀取」層級權限，讓群組成員能夠檢視網頁、清單項目和文件。  
+-   
+  **
+  ** [訪客] 群組具有「讀取」層級權限，讓群組成員能夠檢視網頁、清單項目和文件。  
   
  SharePoint 群組具有可立即存取許多報表伺服器作業的權限等級。 如果您覺得內建的安全性設定無法提供您需要的存取層級，您可以建立自訂群組或權限等級。  
   
@@ -91,7 +96,7 @@ ms.locfileid: "66101930"
  提供指示，以建立有權可啟動報表產生器和設定模型項目安全性的新 SharePoint 群組。 本主題也包含有關為任何報表伺服器項目或作業設定自訂權限的一般指導方針。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [在 sharepoint 網站上設定報表伺服器專案的許可權 &#40;SharePoint 整合模式中的 Reporting Services&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Reporting Services 安全性與保護](reporting-services-security-and-protection.md)  
   
   
