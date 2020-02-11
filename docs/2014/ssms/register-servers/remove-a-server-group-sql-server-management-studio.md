@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 00ddaf35a859c0d95172e240537f825b3e9e8b1a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251802"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>移除伺服器群組 (SQL Server Management Studio)
@@ -30,11 +30,11 @@ ms.locfileid: "75251802"
   
 #### <a name="to-remove-a-server-group"></a>若要移除伺服器群組  
   
-1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器群組，然後按一下 [刪除]****。  
+1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器群組，然後按一下 [刪除]  。  
   
-2.  在 **[刪除確認]** 對話方塊中按一下 **[是]**。  
+2.  在 **[刪除確認]** 對話方塊中按一下 **[是]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [將已註冊的伺服器或已註冊的伺服器群組移 &#40;SQL Server Management Studio&#41;](move-a-registered-server-or-registered-server-group.md)  
+ [移動已註冊的伺服器或已註冊的伺服器群組 &#40;SQL Server Management Studio&#41;](move-a-registered-server-or-registered-server-group.md)  
   
   

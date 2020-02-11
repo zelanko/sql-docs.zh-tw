@@ -14,15 +14,15 @@ ms.assetid: deb80efa-ad1f-4ea5-b334-9817cd279e5c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 419e338a5e96821606dc26a53a4fccecbc72ae3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125531"
 ---
 # <a name="consistency-check"></a>一致性檢查
-一致性檢查會驅動程式自動執行應用程式在設定 SQL_DESC_DATA_PTR 欄位 APD、 ARD，或 IPD 時。 每當設定此欄位時，驅動程式會檢查的 SQL_DESC_TYPE 欄位的值，而且適用於同一筆記錄中的 SQL_DESC_TYPE 欄位的值有效且一致。  
+每當應用程式設定 APD、ARD 或 IPD 的 SQL_DESC_DATA_PTR 欄位時，驅動程式就會自動執行一致性檢查。 每當設定此欄位時，驅動程式會檢查 [SQL_DESC_TYPE] 欄位的值，以及適用于相同記錄中 [SQL_DESC_TYPE] 欄位的值是否有效且一致。  
   
- 通常未設定 SQL_DESC_DATA_PTR 欄位的 IPD;不過，應用程式可以先註冊才能強制執行一致性檢查的 IPD 欄位。 IPD 的 SQL_DESC_DATA_PTR 欄位設定為值並非實際儲存，而且無法擷取由呼叫**SQLGetDescField**或是**SQLGetDescRec**; 此設定只對強制一致性檢查。 無法在 IRD 上執行一致性檢查。  
+ IPD 的 SQL_DESC_DATA_PTR 欄位通常不會設定;不過，應用程式可以這樣做，以強制執行 IPD 欄位的一致性檢查。 IPD 的 SQL_DESC_DATA_PTR 欄位設定為的值實際上並不會儲存，而且無法藉由呼叫**SQLGetDescField**或**SQLGetDescRec**來抓取;此設定只會用來強制執行一致性檢查。 無法在 IRD 上執行一致性檢查。  
   
- 如需有關一致性檢查的詳細資訊，請參閱 < [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)。
+ 如需一致性檢查的詳細資訊，請參閱[SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)。

@@ -15,16 +15,16 @@ ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 529b71540b4abde5fce868975fcbf2749e31dc8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135544"
 ---
 # <a name="using-block-cursors"></a>使用區塊資料指標
-內建的區塊資料指標支援 ODBC 3。*x*。 **SQLFetch**所以只可用於與多資料列提取呼叫在 ODBC 3 時。*x*; 如果 ODBC 2。*x*應用程式會呼叫**SQLFetch**，它會開啟僅有單一資料列、 順向資料指標。 當 ODBC 3。*x*應用程式會呼叫**SQLFetch** ODBC 2。*x*驅動程式，它會傳回單一資料列的驅動程式支援，除非**SQLExtendedFetch**。 如需詳細資訊，請參閱 <<c0> [ 區塊資料指標、 可捲動的資料指標和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)在 < 附錄 g:為了與舊版相容的驅動程式指導方針。  
+區塊資料指標的支援內建在 ODBC 3 中。*x*。 在 ODBC 3 中呼叫**SQLFetch**時，只能用於多資料列提取。*x*;如果是 ODBC 2。*x*應用程式會呼叫**SQLFetch**，它只會開啟單一資料列的順向資料指標。 當 ODBC 3 時。*x*應用程式會呼叫 ODBC 2 中的**SQLFetch** 。*x*驅動程式，它會傳回單一資料列，除非驅動程式支援**SQLExtendedFetch**。 如需詳細資訊，請參閱附錄 G：驅動程式方針中的[區塊資料指標、可滾動游標和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)。  
   
- 若要使用區塊資料指標，應用程式設定的資料列集大小、 繫結資料列集的緩衝區 （如前一節所述），選擇性地設定 SQL_ATTR_ROWS_FETCHED_PTR 和 sql_attr_row_status_ptr 設定陳述式屬性，並呼叫**SQLFetch**或是**SQLFetchScroll**來提取資料列的區塊。 應用程式可以變更資料列集大小，並將新的資料列集緩衝區繫結 (藉由呼叫**SQLBindCol**或指定的繫結位移) 甚至已經提取資料列之後。  
+ 若要使用區塊資料指標，應用程式會設定資料列集大小、系結資料列集緩衝區（如上一節所述），選擇性地設定 SQL_ATTR_ROWS_FETCHED_PTR 和 SQL_ATTR_ROW_STATUS_PTR 語句屬性，並呼叫**SQLFetch**或**SQLFetchScroll**來提取資料列區塊。 即使在提取資料列之後，應用程式也可以變更資料列集大小，並系結新的資料列集緩衝區（藉由呼叫**SQLBindCol**或指定系結位移）。  
   
  此章節包含下列主題。  
   

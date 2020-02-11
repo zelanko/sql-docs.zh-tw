@@ -11,10 +11,10 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727785"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 的新功能
@@ -25,19 +25,19 @@ ms.locfileid: "73727785"
   
  如需如何在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 中整理資料的概觀，請參閱 [Master Data Services 概觀](../master-data-services/master-data-services-overview-mds.md)。 
   
- 若要安裝 Master Data Services、設定資料庫和網站，以及部署範例模型，請參閱 [Master Data Services 概觀 (MDS)](../master-data-services/master-data-services-overview-mds.md)。  
+ **若要安裝 Master Data Services、設定資料庫和網站，以及部署範例模型，請參閱** [MASTER DATA SERVICES 總覽（MDS）](../master-data-services/master-data-services-overview-mds.md)。  
   
  **下載**  
   
--   若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 。  
+-   若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往  **[評估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**。  
   
--   有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 來加速已安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虛擬機器。  
+-   有 Azure 帳戶嗎？  然後前往**[這裡](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 來加速[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]已安裝的虛擬機器。  
   
 ##  <a name="improved-performance"></a>改良的效能  
   
  效能增強功能可讓您建立更大的模型、更有效率地載入資料，以及獲得更佳的整體效能。 這包括改進了 Microsoft Excel 增益集的效能，可降低資料載入時間，並可讓增益集能處理較大型的實體。  
   
- 如需 Microsoft Excel 增益集的詳細資訊，請參閱 [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)。  
+ 如需 Microsoft Excel 增益集的詳細資訊，請參閱 [適用於 Microsoft Excel 的 Master Data Services 增益集](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)。  
   
  下列改良功能包括在內。  
   
@@ -74,13 +74,13 @@ ms.locfileid: "73727785"
   
 ##  <a name="improved-security"></a>已改善安全性  
   
- 新的進階使用者函數權限，可讓使用者或群組與 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]先前版本的伺服器管理員擁有相同的權限。 進階使用者權限可以指派給多個使用者與群組。 在先前版本中，原先安裝了 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 的使用者，即為伺服器管理員，而且很難將此權限轉移給另一個使用者或群組。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
+ 新的進階使用者函數權限，可讓使用者或群組與 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]先前版本的伺服器管理員擁有相同的權限。 進階使用者權限可以指派給多個使用者與群組。 在先前版本中，原先安裝了 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 的使用者，即為伺服器管理員，而且很難將此權限轉移給另一個使用者或群組。 如需詳細資訊，請參閱[功能區域許可權 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
  使用者現已可在模型層級明確地獲派系統管理員權限。 這表示如果使用者稍後才獲派模型樹狀子目錄 (例如實體層級) 的權限，他並不會失去此系統管理員權限。  
   
  在此版本的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，我們藉由引進下列新的權限，來提供更多權限層級：讀取、建立、更新與刪除。 例如，具有更新權限的使用者現已可更新主要資料，而無須建立或刪除資料。 當您授與使用者建立、更新或刪除的權限時，使用者會自動獲派讀取權限。 您也可以合併讀取、建立、更新與刪除權限。  
   
- 當您升級至 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]時，舊有權限會轉換成新的權限，如下表所示。  
+ 當您升級至 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 時，舊有權限會轉換成新的權限，如下表所示。  
   
 |先前版本中的權限|新的權限|  
 |------------------------------------|--------------------|  
@@ -133,11 +133,11 @@ ms.locfileid: "73727785"
 -   [安全性 &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
 
 ## <a name="business-rule-improvements"></a>商務規則的改進
- **管理商務規則 (適用於 Excel 的 MDS 增益集)**  
+ **管理商務規則（適用于 Excel 的 MDS 增益集）**  
   
  您可以在適用於 Excel 的 Master Data Services 增益集中，管理商務規則 (像是建立與編輯商務規則)。 商務規則可用於驗證資料。  
  
- **商務規則延伸模組**  
+ **Business Rules Extension**  
   
  您可以套用使用者定義的 SQL 指令碼，來擴充商務規則條件與動作。 SQL 函數可用作為條件。 SQL 預存程序可用作為動作。 如需詳細資訊，請參閱[商務規則延伸模組 &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)。 
  
@@ -145,7 +145,7 @@ ms.locfileid: "73727785"
   
  MDS 中的商務規則管理體驗，已全盤重新設計以改善使用體驗。 如需有關此功能的詳細資訊，請參閱[商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)。  
   
- **已從適用於 Excel 的 MDS 增益集移除商務規則管理功能**  
+ **已從適用于 Excel 的 MDS 增益集移除商務規則管理功能**  
   
  因為我們重新設計了有關商務規則管理功能的體驗，所以已從適用於 Excel 的 MDS 增益集中將其移除。    
 
@@ -167,7 +167,7 @@ ms.locfileid: "73727785"
   
  透過修改對應的實體成員的方式，可編輯多對多關聯性。 如需詳細資訊，請參閱[在衍生階層中顯示多對多關聯性 &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)。  
  
- **已改進衍生階層管理體驗**  
+ **已改善衍生階層管理體驗**  
   
  MDS 中的衍生階層管理體驗已經過改良。 如需有關此功能的詳細資訊，請參閱[建立衍生階層 &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)。  
   
@@ -201,7 +201,7 @@ ms.locfileid: "73727785"
   
  **合併衝突**  
   
- 如果您嘗試發佈已由另一位使用者變更的資料，則該發佈將會失敗並會出現衝突錯誤。 若要解決此錯誤，可以執行合併衝突，然後重新發佈所做的變更。 如需詳細資訊，請參閱 [合併衝突 (Master Data Services)](../master-data-services/merge-conflicts-master-data-services.md) 和 [合併衝突 (適用於 Excel 的 MDS 增益集)](../master-data-services/microsoft-excel-add-in/merge-conflicts-mds-add-in-for-excel.md)。  
+ 如果您嘗試發佈已由另一位使用者變更的資料，則該發佈將會失敗並會出現衝突錯誤。 若要解決此錯誤，可以執行合併衝突，然後重新發佈所做的變更。 如需詳細資訊，請參閱[合併衝突 (Master Data Services)](../master-data-services/merge-conflicts-master-data-services.md) 和[合併衝突 (適用於 Excel 的 MDS 增益集)](../master-data-services/microsoft-excel-add-in/merge-conflicts-mds-add-in-for-excel.md)。  
   
  **變更集**  
   
@@ -211,19 +211,19 @@ ms.locfileid: "73727785"
   
  在此版本中，您現已可檢視及管理模型和版本的所有變更。 也可以在每次需要核准的實體發生變更集狀態變更時，收到電子郵件通知。 如需詳細資訊，請參閱[管理變更集 &#40;Master Data Services&#41;](../master-data-services/manage-changesets-master-data-services.md) 和[通知 &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)。  
   
- **檢視及管理修訂歷程記錄**  
+ **查看和管理修訂歷程記錄**  
   
  您可依實體和依成員來檢視及管理修訂記錄。 如果您有更新的權限，可以將成員復原回先前的版本。 如需詳細資訊，請參閱[成員修訂歷程記錄 &#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md)。  
  
 ## <a name="tool-and-sample-improvements"></a>工具和範例的改進 
   
- **在適用於 Excel 的 MDS 增益集中儲存或開啟查詢檔案**  
+ **在適用于 Excel 的 MDS 增益集中儲存或開啟查詢檔案**  
   
- 您可以從實體總管頁面上按一下 [Excel] ，儲存查詢檔案的捷徑。 或是可以在適用於 Excel 的 MDS 增益集中，開啟儲存在電腦上的查詢檔案。 使用 QueryOpener 應用程式可開啟已儲存的檔案。 如需詳細資訊，請參閱[捷徑查詢檔案 &#40;適用於 Excel 的 MDS 增益集&#41;](../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)。  
+ 您可以從實體總管頁面上按一下 [Excel] **** ，儲存查詢檔案的捷徑。 或是可以在適用於 Excel 的 MDS 增益集中，開啟儲存在電腦上的查詢檔案。 使用 QueryOpener 應用程式可開啟已儲存的檔案。 如需詳細資訊，請參閱[捷徑查詢檔案 &#40;適用於 Excel 的 MDS 增益集&#41;](../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)。  
   
  查詢檔案內含來自檔案總管頁面的篩選與階層資訊。  
    
- **已更新模型部署封裝範例**  
+ **已更新的範例模型部署套件**  
   
  為支援新的案例，已更新了封裝範例。 如需詳細資訊，請參閱 [SQL Server 範例：模型部署封裝 (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
 
@@ -233,5 +233,5 @@ ms.locfileid: "73727785"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2016 版本支援的 Master Data Services 和 Data Quality Services 功能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
- [取代的 Master Data Services 功能](../master-data-services/deprecated-master-data-services-features.md)  
+ [已淘汰的 Master Data Services 功能](../master-data-services/deprecated-master-data-services-features.md)  
  [已停止的 Master Data Services 功能](../master-data-services/discontinued-master-data-services-features.md)

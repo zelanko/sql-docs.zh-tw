@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196434"
 ---
 # <a name="create-indexed-views"></a>建立索引檢視表
@@ -42,10 +42,10 @@ ms.locfileid: "68196434"
   
 5.  在檢視表上建立唯一的叢集索引。  
   
-###  <a name="Restrictions"></a> 需要索引檢視表的 SET 選項  
- 如果在查詢執行時有不同的使用中 SET 選項，則評估相同的運算式可能會在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中產生不同的結果。 例如，將 SET 選項 CONCAT_NULL_YIELDS_NULL 設為 ON 之後，運算式 **'** abc **'** + NULL 會傳回 NULL 值。 不過，將 CONCAT_NULL_YIEDS_NULL 設為 OFF 之後，相同的運算式則會產生 **'** abc **'** 。  
+###  <a name="Restrictions"></a>索引視圖的必要 SET 選項  
+ 如果在查詢執行時有不同的使用中 SET 選項，則評估相同的運算式可能會在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中產生不同的結果。 例如，將 SET 選項 CONCAT_NULL_YIELDS_NULL 設為 ON 之後，運算式 **'** abc **'** + NULL 會傳回 NULL 值。 不過，將 CONCAT_NULL_YIEDS_NULL 設為 OFF 之後，相同的運算式則會產生 **'** abc **'**。  
   
- 若要確定檢視表可以正確地維護並傳回一致的結果，索引檢視表需要數個 SET 選項的固定值。 下表中的 SET 選項必須設定中顯示的值為**RequiredValue**發生下列狀況時的資料行：  
+ 若要確定檢視表可以正確地維護並傳回一致的結果，索引檢視表需要數個 SET 選項的固定值。 當下列情況發生時，您必須將下表中的 SET 選項設定為**RequiredValue**資料行中顯示的值：  
   
 -   建立檢視表和檢視表的後續索引。  
   
@@ -57,13 +57,13 @@ ms.locfileid: "68196434"
   
     |Set 選項|必要值|預設伺服器值|預設<br /><br /> OLE DB 與 ODBC 值|預設<br /><br /> DB-Library 值|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS*|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
+    |ANSI_NULLS|開啟|開啟|開啟|OFF|  
+    |ANSI_PADDING|開啟|開啟|開啟|OFF|  
+    |ANSI_WARNINGS*|開啟|開啟|開啟|OFF|  
+    |ARITHABORT|開啟|開啟|OFF|OFF|  
+    |CONCAT_NULL_YIELDS_NULL|開啟|開啟|開啟|OFF|  
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+    |QUOTED_IDENTIFIER|開啟|開啟|開啟|OFF|  
   
      *將 ANSI_WARNINGS 設為 ON 會將 ARITHABORT 隱含地設為 ON。  
   
@@ -86,11 +86,11 @@ ms.locfileid: "68196434"
   
 -   當您建立索引時，IGNORE_DUP_KEY 選項必須設定為 OFF (預設值)。  
   
--   在檢視定義中，兩部分名稱 _schema_ **.** _tablename_ 必須參考資料表。  
+-   資料表必須以兩部分名稱_schema_來參考 **。** view 定義中的_tablename_ 。  
   
 -   檢視中所參考的使用者自訂函數，必須使用 WITH SCHEMABINDING 選項來建立。  
   
--   檢視中參考的任何使用者定義函數，必須以兩部分名稱參考 _schema_ **.** _function_。  
+-   在此視圖中參考的任何使用者定義函數，都必須由兩部分名稱_schema_所參考 **。**_函數_。  
   
 -   使用者自訂函數的資料存取屬性必須是 NO SQL，而外部存取屬性必須是 NO。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68196434"
   
 -   用於檢視定義中的 CLR 函數和 CLR 使用者定義型別的方法必須有下表所示的屬性。  
   
-    |屬性|附註|  
+    |屬性|注意|  
     |--------------|----------|  
     |DETERMINISTIC = TRUE|必須明確宣告為 Microsoft .NET Framework 方法的屬性。|  
     |PRECISE = TRUE|必須明確宣告為 .NET Framework 方法的屬性。|  
@@ -116,15 +116,15 @@ ms.locfileid: "68196434"
     |COUNT|ROWSET 函數 (OPENDATASOURCE、OPENQUERY、OPENROWSET 和 OPENXML)|OUTER 聯結 (LEFT、RIGHT 或 FULL)|  
     |衍生資料表 (藉由在 FROM 子句中指定 SELECT 陳述式定義)|自我聯結|使用 SELECT \* 或 SELECT *table_name** 指定資料行。|  
     |DISTINCT|STDEV、STDEVP、VAR、VARP 或 AVG|通用資料表運算式 (CTE)|  
-    |`float`\*`text`， `ntext`， `image`， `XML`，或`filestream`資料行|子查詢|OVER 子句，其中包含次序或彙總視窗函數|  
-    |全文檢索述詞 (CONTAIN、FREETEXT)|SUM 函數，參考可為 Null 值的運算式|ORDER BY|  
+    |`float`\*、 `text`、 `ntext`、 `image`、 `XML`或`filestream`資料行|子查詢|OVER 子句，其中包含次序或彙總視窗函數|  
+    |全文檢索述詞 (CONTAIN、FREETEXT)|SUM 函數，參考可為 Null 值的運算式|排序依據|  
     |CLR 使用者定義彙總函式|頂端|CUBE、ROLLUP 或 GROUPING SETS 運算子|  
     |MIN、MAX|UNION、EXCEPT 或 INTERSECT 運算子|TABLESAMPLE|  
     |資料表變數|OUTER APPLY 或 CROSS APPLY|PIVOT、UNPIVOT|  
     |疏鬆資料行集合|內嵌或多重陳述式資料表值函式|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*索引檢視表可以包含`float`資料行; 不過，這類資料行不能併入叢集的索引鍵中。  
+     \*索引視圖可以包含`float`資料行;不過，這類資料行不能包含在叢集索引鍵中。  
   
 -   如果有 GROUP BY，VIEW 定義必須包含 COUNT_BIG(*)，且不能包含 HAVING。 GROUP BY 限制只適用於索引檢視表定義。 即使索引檢視表不符合這些 GROUP BY 限制，查詢還是可以在它的執行計畫中使用索引檢視表。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "68196434"
   
  非 Unicode 字元資料與定序之間的隱含轉換也是視為非決定性的。  
   
-###  <a name="Considerations"></a> 考量  
+###  <a name="Considerations"></a>考量  
  索引檢視表中資料行的 **large_value_types_out_of_row** 選項設定是繼承基底資料表中對應的資料行設定。 此值可透過 [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)設定。 由運算式形成的資料行其預設值為 0。 這表示大數值類型是以資料列的方式儲存。  
   
  可以在分割區資料表上建立索引檢視表，且索引檢視表本身也可以分割。  
@@ -146,7 +146,7 @@ ms.locfileid: "68196434"
   
  您可以停用資料表與檢視的索引。 停用資料表的叢集索引時，也會停用與資料表相關之檢視的索引。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  至少必須有資料庫中的 CREATE VIEW 權限，以及正在建立之檢視表所在之結構描述的 ALTER 權限。  
@@ -215,9 +215,9 @@ ms.locfileid: "68196434"
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
- [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)   
- [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
- [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
+ [SET ARITHABORT &#40;Transact-sql&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)   
+ [設定 CONCAT_Null_YIELDS_Null &#40;Transact-sql&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
+ [設定 NUMERIC_ROUNDABORT &#40;Transact-sql&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)  
   
   

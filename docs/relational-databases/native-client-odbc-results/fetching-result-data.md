@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6ecaeed10c5903b50d848a42ff3b12ee96ebeaf5
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779139"
 ---
 # <a name="fetching-result-data"></a>提取結果資料
@@ -53,17 +53,18 @@ ms.locfileid: "73779139"
   
  處理將資料移入或移出程式變數（例如**SQLGetData**、 **SQLBindCol**和[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)）的 ODBC 函數，支援隱含的資料類型轉換。 例如，如果應用程式將整數資料行繫結至字元字串程式變數，驅動程式會先自動將資料從整數轉換為字元，然後再將其放入程式變數中。  
   
- 在應用程式中進行的資料轉換應該降至最低。 出非需要進行資料轉換才能讓應用程式完成處理，否則，應用程式應該將資料行和參數繫結至相同資料類型的程式變數。 不過，如果資料必須從一種類型轉換為另一種類型，讓驅動程式執行轉換比在應用程式中進行轉換還要有效率。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式一般只會直接將資料從網路緩衝區轉換到應用程式的變數。 要求驅動程式執行資料轉換會強制驅動程式緩衝處理資料，並使用 CPU 循環轉換資料。  
+ 在應用程式中進行的資料轉換應該降至最低。 出非需要進行資料轉換才能讓應用程式完成處理，否則，應用程式應該將資料行和參數繫結至相同資料類型的程式變數。 不過，如果資料必須從一種類型轉換為另一種類型，讓驅動程式執行轉換比在應用程式中進行轉換還要有效率。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式一般只會直接將資料從網路緩衝區轉換到應用程式的變數。 要求驅動程式執行資料轉換會強制驅動程式緩衝處理資料，並使用 CPU 循環轉換資料。  
   
  除了**text**、 **Ntext**和**image**資料以外，程式變數應該夠大，以保存從資料行傳入的資料。 如果應用程式嘗試擷取結果集資料，並將其放入太小而無法容納它的變數中，驅動程式會產生警告。 這會強迫驅動程式為訊息配置記憶體，而且驅動程式和應用程式都必須花費 CPU 循環來處理訊息並進行錯誤處理。 應用程式應該配置夠大的變數來容納要擷取的資料，或使用選取清單中的 SUBSTRING 函數來縮減資料行在結果集中的大小。  
   
  使用 SQL_C_DEFAULT 來指定 C 變數的類型時請務必小心。 SQL_C_DEFAULT 指定 C 變數的類型必須符合資料行或參數的 SQL 資料類型。 如果為**Ntext**、 **Nchar**或**Nvarchar**資料行指定了 SQL_C_DEFAULT，則會將 Unicode 資料傳回給應用程式。 如果尚未撰寫應用程式的程式碼來處理 Unicode 資料，這可能會導致各種問題。 **Uniqueidentifier** （SQL_GUID）資料類型可能會發生相同類型的問題。  
   
- **text**、 **Ntext**和**image**資料通常太大，無法放入單一程式變數中，而且通常會使用**SQLGetData** （而非**SQLBindCol**）進行處理。 使用伺服器資料指標時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會經過優化，而不會在提取資料列時傳送未系結之**text**、 **Ntext**或**image**資料行的資料。 在應用程式發出資料行的**SQLGetData**之前，不會實際從伺服器抓取**text**、 **Ntext**或**image**資料。  
+ **text**、 **Ntext**和**image**資料通常太大，無法放入單一程式變數中，而且通常會使用**SQLGetData** （而非**SQLBindCol**）進行處理。 使用伺服器資料指標時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會經過優化，而不會在提取資料列時傳送未系結之**text**、 **Ntext**或**image**資料行的資料。 在應用程式發出資料行的**SQLGetData**之前，不會實際從伺服器抓取**text**、 **Ntext**或**image**資料。  
   
  這種優化可以套用至應用程式，如此一來，當使用者在游標上向上和向下滾動時，就不會顯示**text**、 **Ntext**或**image**資料。 在使用者選取資料列之後，應用程式可以呼叫**SQLGetData**來取出**text**、 **Ntext**或**image**資料。 這會儲存使用者未選取之任何資料列的**text**、 **Ntext**或**image**資料傳輸，而且可以節省非常大量資料的傳輸。  
   
 ## <a name="see-also"></a>另請參閱  
- [處理結果&#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [&#40;ODBC&#41;處理結果](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

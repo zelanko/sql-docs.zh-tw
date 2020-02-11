@@ -1,5 +1,5 @@
 ---
-title: SortOrderEnum | Microsoft Docs
+title: SortOrderEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,19 +16,19 @@ ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 012e8d1dde25021aa0eb8c0bac740e9213596485
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965187"
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
-指定索引的資料行的排序順序。  
+指定索引資料行的排序次序。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adSortAscending**|1|預設值。 資料行的排序順序為遞增。|  
-|**adSortDescending**|2|資料行的排序順序為遞減排列。|  
+|**adSortAscending**|1|預設。 資料行的排序次序為遞增。|  
+|**adSortDescending**|2|資料行的排序次序為遞減。|  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [SortOrder 屬性 (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)

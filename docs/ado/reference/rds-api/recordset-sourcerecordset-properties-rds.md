@@ -1,5 +1,5 @@
 ---
-title: Recordset、 SourceRecordset 屬性 (RDS) |Microsoft Docs
+title: Recordset、SourceRecordset 屬性（RDS） |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +14,19 @@ ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f0cca4735e65ce5d96d431fa455181de921e4474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963576"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Recordset、SourceRecordset 屬性 (RDS)
-指出**資料錄集**從自訂商務物件傳回的物件。  
+表示從自訂商務物件傳回的**記錄集**物件。  
   
- **適用於：** [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ **適用于：** [DATACONTROL 物件（RDS）](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,26 +38,26 @@ Recordset = DataControl.Recordset
   
 #### <a name="parameters"></a>參數  
  *DataControl*  
- 物件變數，表示[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件。  
+ 代表 RDS 的物件變數[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件。  
   
- *Recordset*  
- 物件變數，表示**資料錄集**物件。  
+ *資料錄集*  
+ 代表**記錄集**物件的物件變數。  
   
 ## <a name="remarks"></a>備註  
- 您可以設定**SourceRecordset**屬性設[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)從自訂商務物件傳回。  
+ 您可以將**SourceRecordset**屬性設定為自訂商務物件所傳回的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
- 這些內容可讓應用程式以處理透過自訂的處理序的繫結程序。 接到包裝在一個資料列集**Recordset** ，讓您可以直接與互動**資料錄集**、 執行動作，例如設定屬性，或逐一**資料錄集**.  
+ 這些屬性可讓應用程式透過自訂進程來處理系結進程。 它們會接收包裝在**記錄集中**的資料列集，讓您可以直接與**記錄集**互動，執行設定屬性或逐一查看**記錄集**的動作。  
   
- 您可以設定**SourceRecordset**屬性或讀取**資料錄集**指令碼在執行階段的屬性。  
+ 您可以在執行時間的腳本程式碼中，設定**SourceRecordset**屬性或讀取**記錄集**屬性。  
   
- **SourceRecordset**是唯寫屬性，相對於**資料錄集**屬性，這是唯讀的屬性。  
+ **SourceRecordset**是一個僅限寫入的屬性，與**記錄集**屬性相反，這是唯讀屬性。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Recordset 和 SourceRecordset 屬性範例 (VBScript)](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)   
- [CreateRecordset 方法 (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
+ [Recordset 和 SourceRecordset 屬性範例（VBScript）](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)   
+ [CreateRecordset 方法（RDS）](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
  [Query 方法 (RDS)](../../../ado/reference/rds-api/query-method-rds.md)
 
 

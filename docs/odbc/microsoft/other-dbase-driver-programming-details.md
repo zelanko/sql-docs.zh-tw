@@ -15,15 +15,15 @@ ms.assetid: 1bb9b727-66e8-49e8-9a6b-587ad6217031
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f0fb1fb9a4c0130ac62f9b4cf0b621f1673b7e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135754"
 ---
 # <a name="other-dbase-driver-programming-details"></a>其他 dBASE 驅動程式的程式設計詳細資料
 > [!NOTE]  
->  本節中的 dBASE 驅動程式專屬資訊 ODBC 函式和其他程式設計的詳細資料。 如需函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本節提供有關 ODBC 函數和其他程式設計詳細資料的 dBASE 驅動程式特定資訊。 如需函式的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
   
  本節包含下列主題：  
   
@@ -47,4 +47,4 @@ ms.locfileid: "68135754"
   
 -   [SQLTransact (dBASE 驅動程式)](../../odbc/microsoft/sqltransact-dbase-driver.md)  
   
--   [dBASE Indexes (dBASE Driver)](../../odbc/microsoft/dbase-indexes.md)
+-   [dBASE 索引（dBASE 驅動程式）](../../odbc/microsoft/dbase-indexes.md)

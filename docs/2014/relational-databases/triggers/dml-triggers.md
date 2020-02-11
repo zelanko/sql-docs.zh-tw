@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196512"
 ---
 # <a name="dml-triggers"></a>DML 觸發程序
@@ -54,22 +54,22 @@ ms.locfileid: "68196512"
   
  下表比較 AFTER 與 INSTEAD OF 觸發程序的功能。  
   
-|函數|AFTER 觸發程序|INSTEAD OF 觸發程序。|  
+|函式|AFTER 觸發程序|INSTEAD OF 觸發程序。|  
 |--------------|-------------------|------------------------|  
 |適用性|資料表|資料表與檢視|  
 |每個資料表或檢視的數量|每個觸發動作 (UPDATE、DELETE 與 INSERT) 有多個|每個觸發動作 (UPDATE、DELETE 與 INSERT) 各一個|  
 |串聯參考|沒有限制|INSTEAD OF UPDATE 及 DELETE 觸發程序不允許用於串聯參考完整性條件約束的目標資料表。|  
-|執行|之後：<br /><br /> 條件約束處理<br />宣告性參考動作<br />**inserted** 與 **deleted** 資料表建立<br />觸發動作|之前：條件約束處理<br /><br /> 位置：觸發動作<br /><br /> 之後：  **inserted** 與 **deleted** 資料表建立|  
+|執行|之後：<br /><br /> 條件約束處理<br />宣告性參考動作<br />**inserted** 與 **deleted** 資料表建立<br />觸發動作|之前：條件約束處理<br /><br /> 取代：觸發動作<br /><br /> 之後：  **inserted** 與 **deleted** 資料表建立|  
 |執行順序|可指定第一和最後一個執行|不適用|  
-|`varchar(max)``nvarchar(max)`，並`varbinary(max)`中的資料行參考**插入**並**刪除**資料表|Allowed|Allowed|  
-|`text``ntext`，並`image`中的資料行參考**插入**並**刪除**資料表|不允許|Allowed|  
+|`varchar(max)`已`nvarchar(max)`**插入**和`varbinary(max)` **已刪除**之資料表中的、和資料行參考|允許|允許|  
+|`text`已`ntext`**插入**和`image` **已刪除**之資料表中的、和資料行參考|不允許|允許|  
   
  CLR 觸發程序  
  CLR 觸發程序可以是 AFTER 或 INSTEAD OF 觸發程序。 CLR 觸發程序也可以是 DDL 觸發程序。 CLR 觸發程序不執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序，而是執行以 Managed 程式碼撰寫的一個或多個方法，這些方法是在 .NET Framework 中建立並在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中上傳的組件成員。  
   
 ## <a name="related-tasks"></a>相關工作  
   
-|工作|主題|  
+|Task|主題|  
 |----------|-----------|  
 |描述如何建立 DML 觸發程序。|[建立 DML 觸發程序](create-dml-triggers.md)|  
 |描述如何建立 CLR 觸發程序。|[建立 CLR 觸發程序](create-clr-triggers.md)|  

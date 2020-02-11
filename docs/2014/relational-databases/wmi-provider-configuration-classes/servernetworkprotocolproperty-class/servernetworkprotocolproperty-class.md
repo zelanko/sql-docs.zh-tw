@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 39d0a86147d40bb4f2eaf85dbf5b9ae92bfe540d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62642904"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>ServerNetworkProtocolProperty 類別
-  [ServerNetworkProtocolProperty 類別] servernetworkprotocolproperty-class.md) 代表伺服器網路通訊協定的屬性。  
+  [ServerNetworkProtocolProperty 類別] ServerNetworkProtocolProperty-class.md）代表伺服器網路通訊協定的屬性。  
   
- 使用 [ServerNetworkProtocolProperty 類別] servernetworkprotocolproperty-class.md)，您可以執行下列工作：  
+ 使用 [ServerNetworkProtocolProperty 類別] ServerNetworkProtocolProperty-class.md），您可以執行下列工作：  
   
 -   檢查目前屬性所屬的通訊協定。  
   
@@ -41,6 +41,6 @@ ms.locfileid: "62642904"
 -   設定目前屬性的旗標。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定伺服器網路通訊協定和網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [設定伺服器網路通訊協定與網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

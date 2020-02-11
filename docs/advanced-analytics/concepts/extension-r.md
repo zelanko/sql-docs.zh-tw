@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 98ef57702b01a3f32babd6b0ac9b64fb3c22e9ea
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727656"
 ---
 # <a name="r-language-extension-in-sql-server"></a>SQL Server 中的 R 語言延伸模組
@@ -33,10 +33,10 @@ SQL Server 不會修改基底 R 可執行檔，但您必須使用安裝程式所
 
 Microsoft 為平行和分散式工作負載新增的 R 套件包含下列程式庫。
 
-| 程式庫 | Description |
+| 程式庫 | 描述 |
 |---------|-------------|
 | [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 支援資料來源物件和資料探索、操作、轉換和視覺化。 RevoScaleR 支援建立遠端計算內容，以及各種可調整的機器學習模型，例如 **rxLinMod**。 API 已經最佳化，可分析因過大而無法納入記憶體的資料集，以及執行分散在數個核心或處理器上的計算。 RevoScaleR 套件也支援 .XDF 檔案格式，以便更快速移動和儲存用於分析的資料。 XDF 格式會使用單欄式儲存體、具可攜性，且可用來從各種來源載入然後操作資料，包括文字、SPSS 或 ODBC 連線。 |
-| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 包含已針對速度和精確度最佳化的機器學習演算法，以及用於處理文字和影像的內嵌轉換。 如需詳細資訊，請參閱 [SQL Server 中的 MicrosoftML](../r/ref-r-microsoftml.md)。 | 
+| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 包含已針對速度和正確性最佳化的機器學習演算法，以及適用於處理文字和影像的內嵌轉換。 如需詳細資訊，請參閱 [SQL Server 中的 MicrosoftML](../r/ref-r-microsoftml.md)。 | 
 
 ## <a name="using-r-in-sql-server"></a>在 SQL Server 中使用 R
 
@@ -63,9 +63,9 @@ Microsoft 為平行和分散式工作負載新增的 R 套件包含下列程式�
 2. 啟動控制板服務會啟動適當的啟動器；在此案例中為 RLauncher。
 3. RLauncher 啟動外部 R 處理序。
 4. BxlServer 會與 R 執行階段協調來管理 SQL Server 資料交換與工作結果的儲存。
-5. SQL Satellite 會管理相關工作的通訊，並與 SQL Server 一同處理。
+5. SQL Satellite 會管理與 SQL Server 之間相關工作和處理序的通訊。
 6. BxlServer 會使用 SQL Satellite 來與 SQL Server 進行狀態和結果的通訊。
-7. SQL Server 會取得結果並關閉相關工作和處理序。
+7. SQL Server 會取得結果，並關閉相關工作和處理序。
 
 ### <a name="r-scripts-executed-from-a-remote-client"></a>從遠端用戶端執行的 R 指令碼
 
@@ -81,9 +81,9 @@ Microsoft 為平行和分散式工作負載新增的 R 套件包含下列程式�
 6. RLauncher 會呼叫安裝在 SQL Server 電腦上 R 執行階段的執行個體。
 7. 結果會傳回 BxlServer。
 8. 由 SQL Satellite 管理與 SQL Server 的通訊，並清理相關的工作物件。
-9. SQL Server 將結果傳遞回用戶端。
+9. SQL Server 將結果傳回至用戶端。
 
 ## <a name="see-also"></a>另請參閱
 
-+ [SQL Server 的擴充性架構](extensibility-framework.md)
++ [SQL Server 中的擴充性架構](extensibility-framework.md)
 + [SQL Server 的 Python 和機器學習延伸模組](extension-python.md)

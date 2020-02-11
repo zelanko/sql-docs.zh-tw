@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721803"
 ---
 # <a name="replication-programming-concepts"></a>複寫程式設計概念
@@ -120,7 +120,7 @@ ms.locfileid: "62721803"
   
 2.  除了銷售應用程式所需的一般資料存取之外，此應用程式應該允許銷售人員按一下按鈕，視需要同步處理提取訂閱。 既然銷售代表將會安裝和執行應用程式，因此它也需要能夠在用戶端設定訂閱並套用初始快照集。 否則，應用程式將使用 Windows 提供的基礎結構來感應無線連接，以便在偵測到連接時，自動同步處理訂閱。  
   
-3.  當連接到發行者時，請遵循所有的複寫安全性指導方針，包括 Windows 驗證與虛擬的私人網路 (VPN)。 如果實作 Web 同步處理，請使用安全通訊端層 (SSL) 連接。 如需詳細資訊，請參閱[設定 Web 同步處理](../configure-web-synchronization.md)。  
+3.  當連接到發行者時，請遵循所有的複寫安全性指導方針，包括 Windows 驗證與虛擬的私人網路 (VPN)。 如果實作 Web 同步處理，請使用安全通訊端層 (SSL) 連接。 如需詳細資訊，請參閱 [Configure Web Synchronization](../configure-web-synchronization.md)。  
   
 4.  為了利用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的功能，應用程式是使用 Managed 程式碼語言來開發。  
   

@@ -1,5 +1,5 @@
 ---
-title: Intersect (MDX) |Microsoft Docs
+title: Intersect （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f253dad526c509edff5c837b61ae2faae07d5758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105362"
 ---
 # <a name="intersect-mdx"></a>Intersect (MDX)
@@ -35,9 +35,9 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **Intersect**函式會傳回兩個集合的交集。 根據預設，交叉兩個集合之前，此函數會將兩個集合內的重複項移除。 這兩個指定的集合必須具有相同的維度性。  
+ **Intersect**函數會傳回兩個集合的交集。 根據預設，交叉兩個集合之前，此函數會將兩個集合內的重複項移除。 這兩個指定的集合必須具有相同的維度性。  
   
- 選擇性**所有**旗標會保留重複項目。 如果**所有**指定，則**Intersect**函式會如往常一樣，與照常的項目，並也會交叉第二個集合中有相符重複第一個集合中的每個重複。 這兩個指定的集合必須具有相同的維度性。  
+ 選擇性的**ALL**旗標會保留重複的專案。 如果指定**ALL** ， **Intersect**函式會如往常地與 nonduplicated 專案相交，同時也會交集第一個集合中的每個重複專案，後者在第二個集合中具有相符的重複專案。 這兩個指定的集合必須具有相同的維度性。  
   
 ## <a name="example"></a>範例  
  下列查詢會傳回同時出現在指定的兩個集合中的成員，即 2003 和 2004 年這兩項：  
@@ -73,6 +73,6 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  `[Adventure Works]`  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

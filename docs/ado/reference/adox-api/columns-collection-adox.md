@@ -1,5 +1,5 @@
 ---
-title: 資料行集合 (ADOX) |Microsoft Docs
+title: Columns 集合（ADOX） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,41 +19,41 @@ ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc3686ac69d7afeeebec14939a42e073f796b1ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966849"
 ---
 # <a name="columns-collection-adox"></a>Columns 集合 (ADOX)
-包含所有[資料行](../../../ado/reference/adox-api/column-object-adox.md)資料表、 索引或索引鍵的物件。  
+包含資料表、索引或索引鍵的所有資料[行](../../../ado/reference/adox-api/column-object-adox.md)物件。  
   
 ## <a name="remarks"></a>備註  
- [Append](../../../ado/reference/adox-api/append-method-adox-columns.md)方法**資料行**集合都是唯一的 ADOX。 您可以：  
+ 資料**行**集合的[APPEND](../../../ado/reference/adox-api/append-method-adox-columns.md)方法對於 ADOX 而言是唯一的。 您可以：  
   
--   將新的資料行加入至集合**Append**方法。  
+-   使用**Append**方法，將新的資料行加入至集合。  
   
- 其餘的屬性和方法是標準的 ADO 集合。 您可以：  
+ 其餘的屬性和方法都是 ADO 集合的標準。 您可以：  
   
--   存取集合中具有資料行[項目](../../../ado/reference/ado-api/item-property-ado.md)屬性。  
+-   使用[Item](../../../ado/reference/ado-api/item-property-ado.md)屬性存取集合中的資料行。  
   
--   傳回集合中具有包含資料行數[計數](../../../ado/reference/ado-api/count-property-ado.md)屬性。  
+-   傳回具有[Count](../../../ado/reference/ado-api/count-property-ado.md)屬性之集合中包含的資料行數目。  
   
--   從集合移除資料行[刪除](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法。  
+-   使用[Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法，從集合中移除資料行。  
   
--   更新以反映目前的資料庫結構描述集合中的物件[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)方法。  
+-   更新集合中的物件，以使用[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法來反映目前資料庫的架構。  
   
 > [!NOTE]
->  將附加時，會發生錯誤**資料行**要**資料行**集合[索引](../../../ado/reference/adox-api/index-object-adox.md)如果**資料行**不存在於[表格](../../../ado/reference/adox-api/table-object-adox.md)已經附加至[資料表](../../../ado/reference/adox-api/tables-collection-adox.md)集合。  
+>  如果**資料行不**存在於已附加至[資料表](../../../ado/reference/adox-api/tables-collection-adox.md)集合的[資料表](../../../ado/reference/adox-api/table-object-adox.md)中，將**資料行附加至**[索引](../../../ado/reference/adox-api/index-object-adox.md)的資料**行**集合時，將會發生錯誤。  
   
  本章節包含下列主題。  
   
 -   [Columns 集合屬性、方法和事件](../../../ado/reference/adox-api/columns-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Columns 和 Tables Append 方法、 Name 屬性範例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Connection Close 方法、 Table Type 屬性範例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Keys Append 方法、 索引鍵的型別、 RelatedColumn、 RelatedTable 和 UpdateRule 屬性範例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [ParentCatalog 屬性範例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [SortOrder 屬性範例 (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
+ [Columns 和 Tables Append 方法、Name 屬性範例（VB）](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Connection Close 方法、Table Type 屬性範例（VB）](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [Keys Append 方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule 屬性範例（VB）](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [ParentCatalog 屬性範例（VB）](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
+ [SortOrder 屬性範例（VB）](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Column 物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

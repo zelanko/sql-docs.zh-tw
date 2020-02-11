@@ -1,5 +1,5 @@
 ---
-title: 測試使用者&#39;的許可權
+title: 測試使用者&#39;s 許可權
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2890487c4bbdf23ca4f1d7fa13aa15764f8029d8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728868"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>測試使用者的權限 (Master Data Services)
@@ -25,11 +25,11 @@ ms.locfileid: "73728868"
   
 ### <a name="to-test-a-users-security"></a>測試使用者的安全性  
   
-1.  在 Internet Explorer 7 及更新版本中，依序按一下 **[工具]** 、 **[網際網路選項]** 和 **[安全性]** 索引標籤。  
+1.  在 Internet Explorer 7 及更新版本中，依序按一下 **[工具]**、 **[網際網路選項]** 和 **[安全性]** 索引標籤。  
   
 2.  依序按一下 **[近端內部網路]** 和 **[自訂等級]** 按鈕。  
   
-3.  在 **[使用者驗證]** 區段中，選擇 **[提示輸入使用者名稱及密碼]** 。  
+3.  在 **[使用者驗證]** 區段中，選擇 **[提示輸入使用者名稱及密碼]**。  
   
 4.  下次您開啟瀏覽器視窗時，將提示您輸入使用者名和密碼。  
   

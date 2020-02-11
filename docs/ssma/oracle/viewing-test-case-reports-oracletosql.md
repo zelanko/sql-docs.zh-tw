@@ -1,5 +1,5 @@
 ---
-title: 檢視測試案例報表 (OracleToSQL) |Microsoft Docs
+title: 查看測試案例報表（OracleToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,39 +10,39 @@ ms.assetid: 8da14323-9dd6-4019-bf79-3e8b972a9bc0
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 75ce91d7948b53522f6ac861a078f8f902b23ab7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086794"
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>檢視測試案例報表 (OracleToSQL)
-測試案例報表會顯示測試驗證結果和一般測試的資訊。 如果測試失敗，也會顯示已驗證的物件中的任何不相符資料的相關資訊。  
+測試案例報表會顯示測試驗證結果和一般測試資訊。 在測試失敗的情況下，也會顯示已驗證物件中任何不相符資料的相關資訊。  
   
 ## <a name="report-structure"></a>報表結構  
 報表的頂端會顯示這些統計資料：  
   
--   已測試的物件和測試已順利完成的物件數目的總數。  
+-   已測試物件的總數，以及測試成功的物件數目。  
   
--   資料表和成功比對的外部索引鍵的數目和已驗證的資料表和外部索引鍵的總數。  
+-   已驗證的資料表和外鍵的總數，以及成功符合的資料表和外鍵數目。  
   
--   開始時間、 結束時間的測試案例和執行所花費的總時間。  
+-   測試案例的開始時間、結束時間，以及執行所花費的總時間。  
   
-報表的其餘部分會顯示四個類別的資訊：  
+報表的其餘部分會顯示四個類別中的資訊：  
   
 **必要條件錯誤**  
-顯示在發生任何錯誤**必要條件步驟。** 通常，它會略過。  
+顯示**必要條件步驟**中發生的任何錯誤。 通常會略過。  
   
-**初始化**  
-顯示執行狀態**成功**或是**失敗**。  
+**初始**  
+將執行狀態顯示為**成功**或**失敗**。  
   
-**測試物件的結果**  
-結果 （成功或失敗） 和 SSMA 軟體測試人員偵測到失敗時不相符的比較。  
+**測試物件結果**  
+比較結果（成功或失敗），以及 SSMA 測試器在失敗時所偵測到的不相符。  
   
-**最終處理**  
-顯示執行狀態**成功**或是**失敗**。  
+**完成**  
+將執行狀態顯示為**成功**或**失敗**。  
   
 ## <a name="see-also"></a>另請參閱  
-[執行測試案例&#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[測試移轉的資料庫物件&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[&#40;OracleToSQL&#41;執行測試案例](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[&#40;OracleToSQL&#41;測試遷移的資料庫物件](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

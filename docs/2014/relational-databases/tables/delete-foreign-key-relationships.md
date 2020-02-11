@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 919a0c9eb96021ccd7495579cda9756bcdde3194
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761440"
 ---
 # <a name="delete-foreign-key-relationships"></a>刪除外部索引鍵關聯性
@@ -28,7 +28,7 @@ ms.locfileid: "62761440"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法刪除外部索引鍵條件約束：**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62761440"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
@@ -47,11 +47,11 @@ ms.locfileid: "62761440"
   
 #### <a name="to-delete-a-foreign-key-constraint"></a>若要刪除外部索引鍵條件約束  
   
-1.  在 **[物件總管]** 中，展開含有條件約束的資料表，然後展開 **[索引鍵]**。  
+1.  在 **[物件總管]** 中，展開含有條件約束的資料表，然後展開 **[索引鍵]** 。  
   
-2.  以滑鼠右鍵按一下條件約束，然後按一下 [刪除]。  
+2.  以滑鼠右鍵按一下條件約束，然後按一下 [刪除]  。  
   
-3.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]**。  
+3.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -59,9 +59,9 @@ ms.locfileid: "62761440"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  

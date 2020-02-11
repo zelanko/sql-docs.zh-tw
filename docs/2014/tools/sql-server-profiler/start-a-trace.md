@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c53c039d6194edbc37438ef30ac4fef0113ae87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211031"
 ---
 # <a name="start-a-trace"></a>啟動追蹤
@@ -44,7 +44,7 @@ ms.locfileid: "68211031"
 >  使用現有的追蹤時，您可以檢視屬性，但是不能修改屬性。 若要修改屬性，請停止或暫停追蹤。  
   
 ## <a name="see-also"></a>另請參閱  
- [在連接伺服器之後自動啟動追蹤 &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [連接到伺服器 &#40;SQL Server Profiler 後，自動啟動追蹤&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
  [暫停追蹤 &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)   
  [停止追蹤 &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)   
  [清除追蹤視窗 &#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)   

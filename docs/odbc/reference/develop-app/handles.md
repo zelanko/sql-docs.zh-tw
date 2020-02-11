@@ -1,5 +1,5 @@
 ---
-title: 處理 |Microsoft Docs
+title: 控制碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d31d36f315291d6826712771d0e3b6b1d8fbc496
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139044"
 ---
 # <a name="handles"></a>處理
-控點是不透明，32 位元的值，識別特定的項目;在 ODBC 中，此項目可以是環境、 連接、 陳述式或描述元。 當應用程式呼叫**SQLAllocHandle**、 驅動程式管理員] 或 [驅動程式會建立指定型別的新項目和其控制代碼傳回應用程式。 稍後在應用程式會使用控制代碼呼叫 ODBC 函數時，找出該項目。 驅動程式與驅動程式管理員使用控點來尋找相關項目資訊。  
+控制碼是不透明的32位值，用來識別特定的專案;在 ODBC 中，這個專案可以是環境、連接、語句或描述項。 當應用程式呼叫**SQLAllocHandle**時，驅動程式管理員或驅動程式會建立指定類型的新專案，並將其控制碼傳回給應用程式。 應用程式稍後會在呼叫 ODBC 函式時，使用控制碼來識別該專案。 驅動程式管理員和驅動程式會使用此控制碼來尋找專案的相關資訊。  
   
- 例如，下列程式碼會使用兩個陳述式控制代碼 (*hstmtOrder*並*hstmtLine*) 來識別要在其中建立結果集的銷售訂單與銷售訂單行號的陳述式。 稍後，它會使用這些控制代碼來識別哪一個結果集擷取的資料。  
+ 例如，下列程式碼會使用兩個語句控制碼（*hstmtOrder*和*hstmtLine*）來識別要在其上建立銷售訂單和銷售訂單行號之結果集的語句。 之後，它會使用這些控制碼來識別要從中提取資料的結果集。  
   
 ```  
 SQLHSTMT      hstmtOrder, hstmtLine; // Statement handles.  
@@ -71,21 +71,21 @@ while ((rc = SQLFetch(hstmtOrder)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmtOrder);  
 ```  
   
- 控點是有意義，才能建立; ODBC 元件也就是說，驅動程式管理員可以解譯驅動程式管理員控制代碼，而且驅動程式可以解譯它自己的控制代碼。  
+ 控制碼只對建立它們的 ODBC 元件有意義;也就是說，只有驅動程式管理員可以解讀驅動程式管理員控制碼，而只有驅動程式可以解讀自己的控制碼。  
   
- 例如，假設上述範例中的驅動程式配置來儲存陳述式的相關資訊的結構，並傳回陳述式控制代碼與此結構的指標。 當應用程式呼叫**SQLPrepare**，它會通過的 SQL 陳述式，而且陳述式控制代碼用於銷售訂單的行號。 驅動程式會將 SQL 陳述式傳送到資料來源，準備好，並傳回存取計劃識別碼。 驅動程式會使用控制代碼來尋找要儲存此識別項的結構。  
+ 例如，假設上述範例中的驅動程式會配置結構來儲存語句的相關資訊，並將此結構的指標傳回做為語句控制碼。 當應用程式呼叫**SQLPrepare**時，它會傳遞 SQL 語句和用於銷售訂單行號的語句控制碼。 驅動程式會將 SQL 語句傳送至資料來源，以準備它並傳回存取計畫識別碼。 驅動程式會使用控制碼來尋找要儲存此識別碼的結構。  
   
- 稍後，當應用程式會呼叫**SQLExecute**來產生特定的銷售訂單的行號的結果集，它會傳遞相同的控制代碼。 驅動程式會使用控制代碼從結構中擷取的存取 」 計劃識別碼。 它會將識別碼傳送至資料來源，告訴它這還打算執行。  
+ 之後，當應用程式呼叫**SQLExecute**來產生特定銷售訂單的行號結果集時，它會傳遞相同的控制碼。 驅動程式會使用此控制碼來抓取結構中的存取計畫識別碼。 它會將識別碼傳送至資料來源，告訴它要執行的計畫。  
   
- ODBC 有兩個層級的控制代碼：驅動程式管理員控制代碼和驅動程式的控制代碼。 呼叫 ODBC 函數，因為它在驅動程式管理員會呼叫這些函式時，應用程式會使用驅動程式管理員控制代碼。 驅動程式管理員會使用此控制代碼來尋找對應的驅動程式控制代碼，並使用驅動程式的控制代碼，驅動程式中呼叫函數時。 如需驅動程式和驅動程式管理員控制代碼的使用方式的範例，請參閱 <<c0> [ 在連線程序中的驅動程式管理員角色](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)。  
+ ODBC 有兩個層級的控制碼：驅動程式管理員控制碼和驅動程式控制碼。 應用程式會在呼叫 ODBC 函式時使用驅動程式管理員控制碼，因為它會在驅動程式管理員中呼叫這些函數。 驅動程式管理員會使用此控制碼來尋找對應的驅動程式控制碼，並在呼叫驅動程式中的函式時使用驅動程式控制碼。 如需如何使用驅動程式與驅動程式管理員控制碼的範例，請參閱[連接程式中的驅動程式管理員角色](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)。  
   
- 有兩個層級的控制代碼是 ODBC 架構; 的成品在大部分情況下，不相關應用程式或驅動程式。 雖然通常是沒有理由這麼做，就可以判斷驅動程式的控制代碼藉由呼叫應用程式**SQLGetInfo**。  
+ 有兩個層級的控制碼是 ODBC 架構的成品，在大部分情況下，它與應用程式或驅動程式無關。 雖然通常沒有理由這麼做，但應用程式可以藉由呼叫**SQLGetInfo**來判斷驅動程式控制碼。  
   
  此章節包含下列主題。  
   
 -   [環境控制代碼](../../../odbc/reference/develop-app/environment-handles.md)  
   
--   [連接控制代碼](../../../odbc/reference/develop-app/connection-handles.md)  
+-   [連線控制代碼](../../../odbc/reference/develop-app/connection-handles.md)  
   
 -   [陳述式控制代碼](../../../odbc/reference/develop-app/statement-handles.md)  
   

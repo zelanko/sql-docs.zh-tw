@@ -1,5 +1,5 @@
 ---
-title: 從移轉的必要條件是記錄傳送至 AlwaysOn 可用性群組 (SQL Server) |Microsoft Docs
+title: 從記錄傳送遷移至 AlwaysOn 可用性群組（SQL Server）的必要條件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 865e8d720e9977f582ac5ae8a0e75d995fc82629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789548"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>從記錄傳送移轉至 AlwaysOn 可用性群組的必要條件 (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "62789548"
   
 -   [相關內容](#RelatedContent)  
   
-##  <a name="AGPrereqsRealAddress"></a> 可用性群組必要條件  
+##  <a name="AGPrereqsRealAddress"></a>可用性群組必要條件  
  若要允許備份作業在可用性群組的主要複本上執行，請使用下列 AlwaysOn 可用性群組備份設定：  
   
 |屬性|設定|  
@@ -50,7 +50,7 @@ ms.locfileid: "62789548"
   
  [設定可用性複本的備份 &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="LogShipPrereqs"></a> 記錄傳送必要條件  
+##  <a name="LogShipPrereqs"></a>記錄傳送必要條件  
   
 -   記錄傳送主要資料庫必須位於主控可用性群組之初始/目前主要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上。  
   
@@ -66,12 +66,12 @@ ms.locfileid: "62789548"
   
  **如需詳細資訊：＜＞**  
   
- [Converting a logshipping configuration to Availability Group](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (將記錄傳送組態轉換成可用性群組) (SQL Server 部落格)  
+ 將[記錄傳送設定轉換成可用性群組](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)（SQL Server 的 blog）  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
  **記錄傳送**  
   
--   [升級記錄傳送到 SQL Server 2014 &#40;Transact SQL&#41;](../../log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+-   [將記錄傳送升級至 SQL Server 2014 &#40;Transact-sql&#41;](../../log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
 -   [移除記錄傳送 &#40;SQL Server&#41;](../../log-shipping/remove-log-shipping-sql-server.md)  
   
@@ -93,9 +93,9 @@ ms.locfileid: "62789548"
   
 -   **部落格：**  
   
-     [Converting a logshipping configuration to Availability Group](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
+     [將記錄傳送設定轉換成可用性群組](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
   
-     [將記錄傳送主要資料庫和次要資料庫加入至現有的可用性群組](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
+     [將記錄傳送主資料庫和次要資料庫加入至現有的可用性群組](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
   
      [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62789548"
   
 -   **白皮書：**  
   
-     [Migration Guide:移轉至 AlwaysOn 可用性群組從先前的部署結合資料庫鏡像與記錄傳送](https://msdn.microsoft.com/library/jj635217)  
+     [移轉指南：從結合資料庫鏡像與記錄傳送的先前部署移轉至 AlwaysOn 可用性群組](https://msdn.microsoft.com/library/jj635217)  
   
      [Microsoft 的 SQL Server 2012 白皮書](https://msdn.microsoft.com/library/hh403491.aspx)  
   
@@ -111,7 +111,7 @@ ms.locfileid: "62789548"
   
 ## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../../log-shipping/about-log-shipping-sql-server.md)   
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [監視可用性群組 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_primary_database (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_log_shipping_primary_database （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5af11c14c7b0bf3b8e32d503c4b77e59623ce9ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68140451"
 ---
-# <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
+# <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   設定記錄傳送組態的主要資料庫，其中包括備份作業、本機監視記錄，以及遠端監視記錄。  
@@ -55,47 +55,47 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @database = ] 'database'` 是記錄傳送主要資料庫的名稱。 *資料庫*已**sysname**，沒有預設值，不能是 NULL。  
+`[ @database = ] 'database'`這是記錄傳送主資料庫的名稱。 *資料庫*是**sysname**，沒有預設值，而且不能是 Null。  
   
-`[ @backup_directory = ] 'backup_directory'` 是主要伺服器上備份資料夾的路徑。 *backup_directory*已**nvarchar(500)** ，沒有預設值，不能是 NULL。  
+`[ @backup_directory = ] 'backup_directory'`這是主伺服器上備份檔案夾的路徑。 *backup_directory*是**Nvarchar （500）**，沒有預設值，而且不能是 Null。  
   
-`[ @backup_share = ] 'backup_share'` 是主要伺服器上備份目錄的網路路徑。 *backup_share*已**nvarchar(500)** ，沒有預設值，不能是 NULL。  
+`[ @backup_share = ] 'backup_share'`這是主伺服器上備份目錄的網路路徑。 *backup_share*是**Nvarchar （500）**，沒有預設值，而且不能是 Null。  
   
-`[ @backup_job_name = ] 'backup_job_name'` 是將備份複製到備份資料夾之主要伺服器上的 SQL Server Agent 作業的名稱。 *backup_job_name*已**sysname**不能是 NULL。  
+`[ @backup_job_name = ] 'backup_job_name'`這是將備份複製到備份檔案夾之主伺服器上 SQL Server Agent 作業的名稱。 *backup_job_name*是**sysname** ，不能是 Null。  
   
-`[ @backup_retention_period = ] backup_retention_period` 這是時間的以分鐘為單位，將記錄備份檔儲存在備份目錄中主要伺服器上長度。 *backup_retention_period*已**int**，沒有預設值，不能是 NULL。  
+`[ @backup_retention_period = ] backup_retention_period`這是在主伺服器的備份目錄中保留記錄備份檔案的時間長度（以分鐘為單位）。 *backup_retention_period*是**int**，沒有預設值，而且不能是 Null。  
   
-`[ @monitor_server = ] 'monitor_server'` 是監視伺服器的名稱。 *Monitor_server*已**sysname**，沒有預設值，不能是 NULL。  
+`[ @monitor_server = ] 'monitor_server'`這是監視伺服器的名稱。 *Monitor_server*是**sysname**，沒有預設值，而且不能是 Null。  
   
-`[ @monitor_server_security_mode = ] monitor_server_security_mode` 用來連接到監視伺服器的安全性模式。  
+`[ @monitor_server_security_mode = ] monitor_server_security_mode`用來連接到監視伺服器的安全性模式。  
   
  1 = Windows 驗證。  
   
- 0 =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 *monitor_server_security_mode&lt*已**元**不能是 NULL。  
+ 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 *monitor_server_security_mode*是**bit** ，不能是 Null。  
   
-`[ @monitor_server_login = ] 'monitor_server_login'` 是用來存取監視伺服器的使用者名稱。  
+`[ @monitor_server_login = ] 'monitor_server_login'`這是用來存取監視伺服器之帳戶的使用者名稱。  
   
-`[ @monitor_server_password = ] 'monitor_server_password'` 這是帳戶的用來存取監視伺服器密碼。  
+`[ @monitor_server_password = ] 'monitor_server_password'`這是用來存取監視伺服器之帳戶的密碼。  
   
-`[ @backup_threshold = ] backup_threshold` 是一段時間，以分鐘為單位，在之前的最後一個備份之後*threshold_alert*就會引發錯誤。 *backup_threshold*已**int**，預設值是 60 分鐘的時間。  
+`[ @backup_threshold = ] backup_threshold`這是在引發*threshold_alert*錯誤之前，最後一次備份之後的時間長度（以分鐘為單位）。 *backup_threshold*是**int**，預設值是60分鐘。  
   
-`[ @threshold_alert = ] threshold_alert` 是，要在超出備份臨界值時產生警示。 *threshold_alert*已**int**，預設值是 14,420。  
+`[ @threshold_alert = ] threshold_alert`這是超過備份臨界值時所引發的警示。 *threshold_alert*是**int**，預設值是14420。  
   
-`[ @threshold_alert_enabled = ] threshold_alert_enabled` 指定是否可以警示時引發*backup_threshold*超過。 預設值零 (0) 表示警示已停用，而且將不會引發。 *threshold_alert_enabled*已**元**。  
+`[ @threshold_alert_enabled = ] threshold_alert_enabled`指定超出*backup_threshold*時是否會引發警示。 預設值零 (0) 表示警示已停用，而且將不會引發。 *threshold_alert_enabled*為**位**。  
   
-`[ @history_retention_period = ] history_retention_period` 這是時間的以分鐘為單位中保留記錄長度。 *history_retention_period*已**int**，預設值是 NULL。 若未指定，則使用 14420。  
+`[ @history_retention_period = ] history_retention_period`這是保留記錄的時間長度（以分鐘為單位）。 *history_retention_period*是**int**，預設值是 Null。 若未指定，則使用 14420。  
   
-`[ @backup_job_id = ] backup_job_id OUTPUT` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與主要伺服器上的備份作業相關聯的代理程式作業識別碼。 *backup_job_id*已**uniqueidentifier**不能是 NULL。  
+`[ @backup_job_id = ] backup_job_id OUTPUT`與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主伺服器上的備份作業相關聯的代理程式作業識別碼。 *backup_job_id*是**uniqueidentifier** ，不能是 Null。  
   
-`[ @primary_id = ] primary_id OUTPUT` 記錄傳送組態的主要資料庫的識別碼。 *primary_id*已**uniqueidentifier**不能是 NULL。  
+`[ @primary_id = ] primary_id OUTPUT`記錄傳送設定之主資料庫的識別碼。 *primary_id*是**uniqueidentifier** ，不能是 Null。  
   
-`[ @backup_compression = ] backup_compression_option` 指定是否要使用記錄傳送組態[備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 只有在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (或更新版本) 中才支援這個參數。  
+`[ @backup_compression = ] backup_compression_option`指定記錄傳送設定是否使用[備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 只有在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (或更新版本) 中才支援這個參數。  
   
  0 = 已停用。 永遠不會壓縮記錄備份。  
   
  1 = 已啟用。 一定會壓縮記錄備份。  
   
- 2 = 使用的設定[檢視或設定 backup compression default 伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。 這是預設值。  
+ 2 = 使用 View 的設定，[或設定備份壓縮預設伺服器設定選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。 這是預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -104,20 +104,20 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  None  
   
 ## <a name="remarks"></a>備註  
- **sp_add_log_shipping_primary_database**必須從執行**主要**主要伺服器上的資料庫。 這個預存程序會執行下列功能：  
+ **sp_add_log_shipping_primary_database**必須從主伺服器的**master**資料庫中執行。 這個預存程序會執行下列功能：  
   
-1.  會產生主要識別碼，並在資料表中加入主要資料庫的項目**log_shipping_primary_databases**使用提供的引數。  
+1.  產生主要識別碼，並使用提供的引數，在資料表中加入主資料庫的專案**log_shipping_primary_databases** 。  
   
 2.  為停用的主要資料庫建立備份作業。  
   
-3.  設定中的備份作業識別碼**log_shipping_primary_databases**備份作業的作業識別碼的項目。  
+3.  將**log_shipping_primary_databases**專案中的備份作業識別碼設定為備份作業的作業識別碼。  
   
-4.  在資料表中加入本機監視記錄**log_shipping_monitor_primary**主要伺服器上使用提供的引數。  
+4.  使用提供的引數，在主伺服器上**log_shipping_monitor_primary**的資料表中加入本機監視記錄。  
   
-5.  如果監視伺服器不是從主要伺服器，新增一項監視記錄在**log_shipping_monitor_primary**監視伺服器使用提供的引數。  
+5.  如果監視伺服器與主伺服器不同，請使用提供的引數，在監視伺服器的**log_shipping_monitor_primary**中新增監視記錄。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="examples"></a>範例  
  這個範例會在記錄傳送組態中，加入 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫來做為主要資料庫。  

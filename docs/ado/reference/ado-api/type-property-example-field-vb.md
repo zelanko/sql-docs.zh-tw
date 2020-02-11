@@ -1,5 +1,5 @@
 ---
-title: 輸入屬性範例 (Field) (VB) |Microsoft Docs
+title: Type 屬性範例（Field）（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ab43149a0e938be4359203b0da750b04a82b545
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936686"
 ---
 # <a name="type-property-example-field-vb"></a>Type 屬性範例 (Field) (VB)
-此範例示範[型別](../../../ado/reference/ado-api/type-property-ado.md)屬性的值來顯示對應的常數名稱[型別](../../../ado/reference/ado-api/type-property-ado.md)屬性的所有[欄位](../../../ado/reference/ado-api/field-object.md)中的物件***員工***資料表。 FieldType 函式，才能執行此程序。  
+這個範例會示範[type](../../../ado/reference/ado-api/type-property-ado.md)屬性，方法是顯示常數的名稱，其對應至***Employees***資料表中所有[Field](../../../ado/reference/ado-api/field-object.md)物件的[Type](../../../ado/reference/ado-api/type-property-ado.md)屬性值。 需要 FieldType 函數才能執行此程式。  
   
 ```  
 'BeginTypeFieldVB  

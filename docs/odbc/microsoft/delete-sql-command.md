@@ -13,16 +13,16 @@ ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 79a9c9a86e290f568f205a7e7678122f9089a7e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096336"
 ---
 # <a name="delete---sql-command"></a>DELETE - SQL 命令
-將標示為要刪除的記錄。  
+標示要刪除的記錄。  
   
- Visual FoxPro ODBC Driver 支援原生 Visual FoxPro 語言語法，此命令。 驅動程式專屬資訊，請參閱 < 備註 >。  
+ Visual FoxPro ODBC 驅動程式支援此命令的原生 Visual FoxPro 語言語法。 如需驅動程式特定的資訊，請參閱備註。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,23 +33,23 @@ DELETE FROM [DatabaseName!]TableName
 ```  
   
 ## <a name="arguments"></a>引數  
- 從 [ *DatabaseName ！* ]*TableName*  
- 指定的記錄標示為刪除的資料表。  
+ FROM [ *DatabaseName！*]*TableName*  
+ 指定記錄已標示為要刪除的資料表。  
   
- *DatabaseName ！* 指定如果包含的資料庫不是與資料來源所指定的資料庫包含資料表的資料庫名稱。 您必須包含的資料庫，如果資料庫不是與資料來源所指定的資料庫包含之資料表的名稱。 之後的資料庫名稱和資料表名稱之前，請包含驚嘆號 （！） 分隔符號。  
+ *名稱!* 如果包含的資料庫不是與資料來源一起指定的資料庫，則指定包含資料表的資料庫名稱。 如果資料庫不是使用資料來源所指定的資料庫，您就必須加入包含資料表的資料庫名稱。 在資料庫名稱後面和資料表名稱前面加上驚嘆號（！）分隔符號。  
   
- 何處*FilterCondition1*[AND&#124;或者*FilterCondition2*...]  
- 指定 Visual FoxPro 標記為要刪除特定記錄。  
+ 其中*FilterCondition1*[AND &#124; OR *FilterCondition2*...]  
+ 指定 Visual FoxPro 只標示要刪除的特定記錄。  
   
- *FilterCondition*指定記錄標示為刪除時必須符合的準則。 您可以包含篩選條件所要連接 AND 或 OR 運算子。 您也可以使用 NOT 運算子來反轉邏輯運算式的值，或者您可以使用**空**（) 來檢查是否有空白的欄位。  
+ *FilterCondition*指定記錄必須符合才能標示為刪除的準則。 您可以視需要包含多個篩選準則，並使用 AND 或 OR 運算子來連接它們。 您也可以使用 NOT 運算子來反轉邏輯運算式的值，也可以使用**empty**（）來檢查空白欄位。  
   
 ## <a name="remarks"></a>備註  
- 如果設定刪除設為 ON，標示為要刪除的記錄會忽略包含某個範圍的所有命令。  
+ 如果 [設定已刪除] 設定為 [開啟]，則包含範圍的所有命令都會忽略標記為刪除的記錄。  
   
- 刪除-SQL 的使用記錄鎖定在標記為要刪除資料表中的多筆記錄時開啟的共用存取。 這會減少記錄競爭情況，在多使用者的情況下，但可能會降低效能。 為達最佳效能，開啟獨佔使用的資料表。  
+ DELETE-SQL 會在針對共用存取所開啟的資料表中標記多個要刪除的記錄時，使用記錄鎖定。 這可減少多使用者情況的記錄爭用，但可能會降低效能。 為了達到最大效能，請開啟資料表以供獨佔使用。  
   
 ## <a name="driver-remarks"></a>驅動程式備註  
- 當您的應用程式傳送至資料來源的 ODBC SQL 陳述式刪除時，則 Visual FoxPro ODBC Driver 會將命令轉換 Visual FoxPro 刪除命令，無需進行翻譯。  
+ 當您的應用程式將 ODBC SQL 語句 DELETE 傳送到資料來源時，Visual FoxPro ODBC 驅動程式會將命令轉換成 Visual FoxPro DELETE 命令，而不會轉譯。  
   
 ## <a name="see-also"></a>另請參閱  
  [SET DELETED 命令](../../odbc/microsoft/set-deleted-command.md)

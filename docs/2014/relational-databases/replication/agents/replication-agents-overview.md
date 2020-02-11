@@ -25,10 +25,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41775a529d34aa5ca457f92c9d26e327b74705ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721910"
 ---
 # <a name="replication-agents-overview"></a>複寫代理程式概觀
@@ -49,7 +49,7 @@ ms.locfileid: "62721910"
 ## <a name="distribution-agent"></a>散發代理程式  
  「散發代理程式」(Distribution Agent) 可搭配快照式複寫和異動複寫來使用。 它可將初始快照集套用至「訂閱者」，並將散發資料庫中的交易移至「訂閱者」。 「散發代理程式」在發送訂閱的「散發者」端或是提取訂閱的「訂閱者」端執行。 如需詳細資訊，請參閱 [Replication Distribution Agent](replication-distribution-agent.md)。  
   
-## <a name="merge-agent"></a>[合併代理程式]  
+## <a name="merge-agent"></a>合併代理程式  
  「合併代理程式」(Merge Agent) 可搭配合併式複寫使用。 它可將初始快照集套用到「訂閱者」，移動並使累加的資料變更一致。 每個合併訂閱都有其「合併代理程式」，以連接「發行者」和「訂閱者」，並更新這兩者。 「合併代理程式」在發送訂閱的「散發者」端或是提取訂閱的「訂閱者」端執行。 依預設，「合併代理程式」將變更從「訂閱者」上傳到「發行者」，然後再將變更從「發行者」下載至「訂閱者」。 如需詳細資訊，請參閱 [Replication Merge Agent](replication-merge-agent.md)。  
   
 ## <a name="queue-reader-agent"></a>佇列讀取器代理程式  

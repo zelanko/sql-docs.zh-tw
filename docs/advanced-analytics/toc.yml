@@ -1,6 +1,6 @@
 - name: SQL Server 機器學習服務文件
   href: ../advanced-analytics/index.yml
-- name: 歡迎使用 SQL Server >
+- name: SQL Server 文件 >
   href: ../sql-server/index.yml
 - name: 概觀
   expanded: true
@@ -47,11 +47,11 @@
   items:
     - name: Python
       items:
-        - name: 建立 Python 指令碼
+        - name: 執行 Python 指令碼
           href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
-        - name: 處理資料類型和物件
+        - name: 資料結構與物件
           href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-        - name: 撰寫 Python 函式
+        - name: Python 函式
           href: ../advanced-analytics/tutorials/quickstart-python-functions.md
         - name: 訓練模型並為其評分
           href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
@@ -59,9 +59,9 @@
       items:
         - name: 建立 R 指令碼
           href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
-        - name: 處理資料類型和物件
+        - name: 資料類型與物件
           href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
-        - name: 撰寫 R 函式
+        - name: R 函式
           href: ../advanced-analytics/tutorials/quickstart-r-functions.md
         - name: 訓練模型並為其評分
           href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
@@ -117,7 +117,7 @@
               href: ../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md
             - name: 2. 資料探索
               href: ../advanced-analytics/tutorials/sqldev-explore-and-visualize-the-data.md
-            - name: 3. 特徵工程
+            - name: 3. 特徵設計
               href: ../advanced-analytics/tutorials/sqldev-create-data-features-using-t-sql.md
             - name: 4. 定型及部署
               href: ../advanced-analytics/tutorials/sqldev-train-and-save-a-model-using-t-sql.md
@@ -131,7 +131,7 @@
               href: ../advanced-analytics/tutorials/walkthrough-view-and-summarize-data-using-r.md
             - name: 3. 圖形和繪圖
               href: ../advanced-analytics/tutorials/walkthrough-create-graphs-and-plots-using-r.md
-            - name: 4. 特徵工程
+            - name: 4. 特徵設計
               href: ../advanced-analytics/tutorials/walkthrough-create-data-features.md
             - name: 5. 建立及儲存模型
               href: ../advanced-analytics/tutorials/walkthrough-build-and-save-the-model.md
@@ -139,36 +139,36 @@
               href: ../advanced-analytics/tutorials/walkthrough-deploy-and-use-the-model.md
         - name: RevoScaleR 深入探討
           items:
-            - name: 1. 簡介
+            - name: 簡介
               href: ../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
-            - name: 2. 建立資料庫與權限
+            - name: 1. 建立資料庫與權限
               href: ../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md
-            - name: 3. 建立 RxSqlServerData 物件
+            - name: 2. 建立 RxSqlServerData 物件
               href: ../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
-            - name: 4. 查詢及修改資料
+            - name: 3. 查詢及修改資料
               href: ../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md
-            - name: 5. 定義計算內容
+            - name: 4. 定義計算內容
               href: ../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md
-            - name: 6. 計算摘要統計資料
+            - name: 5. 計算摘要統計資料
               href: ../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md
-            - name: 7. 將資料視覺化
+            - name: 6. 顯現資料
               href: ../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md
-            - name: 8. 建立模型
+            - name: 7. 建立模型
               href: ../advanced-analytics/tutorials/deepdive-create-models.md
-            - name: 9. 為新資料評分
+            - name: 8. 為新資料評分
               href: ../advanced-analytics/tutorials/deepdive-score-new-data.md
-            - name: 10. 轉換資料
+            - name: 9. 轉換資料
               href: ../advanced-analytics/tutorials/deepdive-transform-data-using-r.md
-            - name: 11. 使用 rxImport 載入資料
+            - name: 10. 使用 rxImport 載入資料
               href: ../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md
-            - name: 12. 使用 rxDataStep 建立資料表
+            - name: 11. 使用 rxDataStep 建立資料表
               href: ../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
-            - name: 13. 執行區塊化分析
+            - name: 12. 執行區塊化分析
               href: ../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
-            - name: 14. 在 SQL Server 與 XDF 檔案之間移動資料
+            - name: 13. 使用 XDF 檔案移動資料
               href: ../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
-            - name: 15. 使用 rxExec 傳送自訂 R
-              href: ../advanced-analytics/tutorials/r-tutorial-custom-r-functions.md
+            - name: 14. 使用 rxExec 傳送自訂 R
+              href: ../advanced-analytics/tutorials/deepdive-custom-r-functions-using-rxexec.md
     - name: 範例資料
       items:
         - name: 航空公司資料集
@@ -189,9 +189,9 @@
       href: ../advanced-analytics/concepts/extension-python.md
     - name: R 延伸模組
       href: ../advanced-analytics/concepts/extension-r.md
-    - name: Security
+    - name: 安全性
       href: ../advanced-analytics/concepts/security.md
-- name: 使用說明指南
+- name: 操作指南
   items:
     - name: 連線
       items:
@@ -243,21 +243,35 @@
           items:
             - name: 取得 Python 套件資訊
               href: ../advanced-analytics/package-management/python-package-information.md
-            - name: 安裝 Python 套件
+            - name: 使用 sqlmlutils 安裝
               href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
+            - name: 使用 Python 工具進行安裝
+              href: ../advanced-analytics/package-management/install-python-packages-standard-tools.md
         - name: 安裝新的 R 套件
           items:
             - name: 取得 Python 資訊
               href: ../advanced-analytics/package-management/r-package-information.md
-            - name: 安裝 R 套件
+            - name: 使用 R 工具進行安裝
+              href: ../advanced-analytics/package-management/install-r-packages-standard-tools.md
+            - name: 使用 sqlmlutils 安裝
               href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
+            - name: 使用 T-SQL 進行安裝
+              href: ../advanced-analytics/package-management/install-r-packages-with-tsql.md
+            - name: 使用 RevoScaleR
+              items:
+                - name: 使用 RevoScaleR 進行安裝
+                  href: ../advanced-analytics/package-management/install-r-packages-with-revoscaler.md
+                - name: 啟用遠端 R 管理
+                  href: ../advanced-analytics/package-management/r-package-how-to-enable-or-disable.md
+                - name: 同步 R 套件
+                  href: ../advanced-analytics/package-management/package-install-uninstall-and-sync.md
             - name: 建立 miniCRAN 存放庫
               href: ../advanced-analytics/package-management/create-a-local-package-repository-using-minicran.md
             - name: 使用 R 套件的祕訣
               href: ../advanced-analytics/package-management/tips-for-using-r-packages.md
     - name: 系統管理
       items:
-        - name: 監視器
+        - name: 監視
           items:
             - name: 使用 SSMS 報告來監視
               href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md
@@ -277,7 +291,7 @@
               href: ../advanced-analytics/administration/resource-governor.md
             - name: 建立資源集區
               href: ../advanced-analytics/administration/create-external-resource-pool.md
-    - name: Security
+    - name: 安全性
       items:
         - name: 授與使用者權限
           href: ../advanced-analytics/security/user-permission.md

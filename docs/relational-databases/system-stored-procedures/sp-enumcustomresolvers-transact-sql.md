@@ -1,5 +1,5 @@
 ---
-title: sp_enumcustomresolvers & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_enumcustomresolvers （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 361a0d8e47372612eddf40cdf1663df2e70da0a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124634"
 ---
-# <a name="spenumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-SQL)
+# <a name="sp_enumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回所有可用的商務邏輯處理常式，以及在散發者端登錄的自訂解析程式清單。 這個預存程序執行於任何資料庫的發行者端。  
@@ -37,7 +37,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @distributor = ] 'distributor'` 是自訂解析程式所在的散發者的名稱。 *散發者*已**sysname**，預設值是 NULL。 *這個參數已被取代，將在未來版本中移除。*  
+`[ @distributor = ] 'distributor'`這是自訂解析程式所在的散發者名稱。 散發*者是* **sysname**，預設值是 Null。 *這個參數已被取代，未來的版本將會移除它。*  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -45,24 +45,24 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 |-----------------|---------------|-----------------|  
 |**article_resolver**|**nvarchar(255)**|商務邏輯處理常式或衝突解析程式的易記名稱。|  
 |**resolver_clsid**|**nvarchar(50)**|COM 型解析程式的類別識別碼 (CLSID)。 如果是商務邏輯處理常式，這個資料行會傳回零 CLSID 值。|  
-|**is_dotnet_assembly**|**bit**|指出是否為商務邏輯處理常式的登錄。<br /><br /> **0** = COM 型衝突解析程式<br /><br /> **1** = 商務邏輯處理常式|  
+|**is_dotnet_assembly**|**bit**|指出是否為商務邏輯處理常式的登錄。<br /><br /> **0** = 以 COM 為基礎的衝突解決器<br /><br /> **1** = 商務邏輯處理常式|  
 |**dotnet_assembly_name**|**nvarchar(255)**|實作商務邏輯處理常式之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 組件的名稱。|  
 |**dotnet_class_name**|**nvarchar(255)**|這是覆寫 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 來實作商務邏輯處理常式的類別名稱。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
  **sp_enumcustomresolvers**用於合併式複寫中。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色並**db_owner**固定的資料庫角色可以執行**sp_enumcustomresolvers**。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色和**db_owner**固定資料庫角色的成員，才能夠執行**sp_enumcustomresolvers**。  
   
 ## <a name="see-also"></a>另請參閱  
- [為合併發行項實作商務邏輯處理常式](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
+ [執行合併發行項的商務邏輯處理常式](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [針對合併發行項實作自訂衝突解析程式](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
- [sp_lookupcustomresolver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
- [sp_unregistercustomresolver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
+ [sp_lookupcustomresolver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
+ [sp_unregistercustomresolver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

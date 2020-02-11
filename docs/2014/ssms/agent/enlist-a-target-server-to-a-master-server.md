@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f3d0d91de95e82fcd174aa9290e208afda5bef91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211399"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>將目標伺服器編列至主要伺服器
@@ -32,7 +32,7 @@ ms.locfileid: "68211399"
   
  **本主題內容**  
   
--   **若要編列目標伺服器，使用：**  
+-   **若要登錄目標伺服器，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68211399"
   
 1.  在 **[物件總管]** 中，展開設定為主要伺服器的伺服器。  
   
-2.  以滑鼠右鍵按一下 **[SQL Server Agent]** ，指向 **[多伺服器管理]** ，然後按一下 **[新增目標伺服器]** 。  
+2.  以滑鼠右鍵按一下 **[SQL Server Agent]**，指向 **[多伺服器管理]**，然後按一下 **[新增目標伺服器]**。  
   
 3.  完成「目標伺服器精靈」，精靈將引導您完成此程序。  
   
@@ -54,9 +54,9 @@ ms.locfileid: "68211399"
   
 #### <a name="to-enlist-a-target-server"></a>若要編列目標伺服器  
   
-1.  使用 `sp_msx_enlist` 預存程序。  如需詳細資訊，請參閱 < [sp_msx_enlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)  
+1.  使用 `sp_msx_enlist` 預存程序。  如需詳細資訊，請參閱[sp_msx_enlist &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)  
   
-##  <a name="PowerShellProcedure"></a> 使用 SQL Server Management Objects (SMO)  
+##  <a name="PowerShellProcedure"></a>使用 SQL Server 管理物件（SMO）  
   
 ## <a name="see-also"></a>另請參閱  
  [將整個企業的管理自動化](automated-administration-across-an-enterprise.md)  

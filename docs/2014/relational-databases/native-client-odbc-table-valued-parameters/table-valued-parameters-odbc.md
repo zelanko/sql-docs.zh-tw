@@ -1,5 +1,5 @@
 ---
-title: 資料表值參數 (ODBC) |Microsoft Docs
+title: 資料表值參數（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31ed60f10f12bbc11037a64caa50802360b919de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467298"
 ---
 # <a name="table-valued-parameters-odbc"></a>資料表值參數 (ODBC)
   ODBC 對資料表值參數的支援可讓用戶端應用程式有效率地將參數化資料傳送給伺服器，其方式是使用一個呼叫來傳送多個資料列給伺服器。  
   
- 如需資料表值參數在伺服器上的資訊，請參閱[使用資料表值參數&#40;資料庫引擎&#41;](../tables/use-table-valued-parameters-database-engine.md)。  
+ 如需伺服器上資料表值參數的詳細資訊，請參閱[使用資料表值參數 &#40;資料庫引擎&#41;](../tables/use-table-valued-parameters-database-engine.md)。  
   
  在 ODBC 中，這是您可以將資料表值參數傳送給伺服器的兩種方式：  
   
--   SQLExecDirect 或 SQLExecute 呼叫時，所有資料表值參數資料可以都是在記憶體中。 如果資料表值中有多個資料列，這些資料會儲存在陣列中。  
+-   呼叫 SQLExecDirect 或 SQLExecute 時，所有資料表值參數資料都可以在記憶體中。 如果資料表值中有多個資料列，這些資料會儲存在陣列中。  
   
--   SQLExecDirect 或 SQLExecute 呼叫時，應用程式可以指定資料執行的是資料表值參數。 在此情況下，可以在批次中提供資料表值的資料列，或是一次一個來減少記憶體需求。  
+-   呼叫 SQLExecDirect 或 SQLExecute 時，應用程式可以指定資料表值參數的資料執行中。 在此情況下，可以在批次中提供資料表值的資料列，或是一次一個來減少記憶體需求。  
   
  第一個選項可讓預存程序封裝更多商務邏輯。 例如，將其他項目當做資料表值參數傳遞時，單一預存程序可封裝整個訂單輸入交易。 這個選項非常有效率，因為只需要單一次往返伺服器。 另外，您也可以使用不同程序來個別處理訂單標頭和訂單項目，這樣需要在用戶端與伺服器之間有更多的程式碼和更複雜的合約。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62467298"
  描述應用程式要如何針對預備好的程序呼叫取得中繼資料。  
   
  [其他資料表值參數中繼資料](additional-table-valued-parameter-metadata.md)  
- 描述如何使用 SQLProcedureColumns、 SQLTables 和 SQLColumns 擷取的資料表值參數的中繼資料。  
+ 描述如何使用 SQLProcedureColumns、SQLTables 和 SQLColumns 來取得資料表值參數的中繼資料。  
   
  [資料表值參數資料轉換及其他錯誤和警告](table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  描述如何處理有關資料表值參數資料行值的錯誤。  
@@ -79,6 +79,6 @@ ms.locfileid: "62467298"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
- [資料表值參數&#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)  
+ [資料表值參數 &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

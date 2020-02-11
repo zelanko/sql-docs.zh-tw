@@ -1,5 +1,5 @@
 ---
-title: Delete 方法 (ADOX Collections) |Microsoft Docs
+title: Delete 方法（ADOX 集合） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -31,14 +31,14 @@ ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be2aa91cf27d7dc12d3cd0c1e0bf719bd43797ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966439"
 ---
 # <a name="delete-method-adox-collections"></a>Delete 方法 (ADOX Collections)
-從集合移除的物件。  
+從集合中移除物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,14 +49,14 @@ Collection.Delete Name
   
 #### <a name="parameters"></a>參數  
  *名稱*  
- A **Variant**指定之名稱或序數位置 （索引），要刪除的物件。  
+ **Variant** ，指定要刪除之物件的名稱或序數位置（索引）。  
   
 ## <a name="remarks"></a>備註  
- 如果發生錯誤，將*名稱*不存在於集合中。  
+ 如果該*名稱*不存在於集合中，就會發生錯誤。  
   
- 針對[資料表](../../../ado/reference/adox-api/tables-collection-adox.md)並[使用者](../../../ado/reference/adox-api/users-collection-adox.md)集合，會發生錯誤，如果提供者不支援刪除的資料表或使用者，分別。 針對[程序](../../../ado/reference/adox-api/procedures-collection-adox.md)並[檢視](../../../ado/reference/adox-api/views-collection-adox.md)集合**刪除**如果提供者不支援保存的命令將會失敗。  
+ 對於[資料表](../../../ado/reference/adox-api/tables-collection-adox.md)和[使用者](../../../ado/reference/adox-api/users-collection-adox.md)集合，如果提供者不支援分別刪除資料表或使用者，就會發生錯誤。 針對[程式](../../../ado/reference/adox-api/procedures-collection-adox.md)和[Views](../../../ado/reference/adox-api/views-collection-adox.md)集合，如果提供者不支援持續性命令，**刪除**將會失敗。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
   
 ||||  
 |-|-|-|  
@@ -65,5 +65,5 @@ Collection.Delete Name
 |[Users 集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[Views 集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
   
 ## <a name="see-also"></a>另請參閱  
- [Procedures Delete 方法範例 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
+ [程式 Delete 方法範例（VB）](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Views Delete 方法範例 (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)

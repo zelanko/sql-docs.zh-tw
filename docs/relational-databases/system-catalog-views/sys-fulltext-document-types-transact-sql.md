@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_document_types & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.databases fulltext_document_types （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e60f977c220d14680499ca12a4884e912587b7b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133845"
 ---
-# <a name="sysfulltextdocumenttypes-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
+# <a name="sysfulltext_document_types-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   針對可用於全文檢索索引作業的每一種文件類型，各傳回一個資料列。 每一個資料列都代表在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中註冊的 IFilter 介面。  
@@ -35,13 +35,13 @@ ms.locfileid: "68133845"
  
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**document_type**|**sysname**|支援之文件類型的副檔名。<br /><br /> 這個值可以用來找出將會用於全文檢索索引類型的資料行的篩選器**varbinary （max)** 或是**映像**。|  
+|**document_type**|**sysname**|支援之文件類型的副檔名。<br /><br /> 此值可用來識別將在**Varbinary （max）** 或**image**類型之資料行的全文檢索索引期間使用的篩選。|  
 |**class_id**|**uniqueidentifier**|支援副檔名之 IFilter 類別的 GUID。|  
-|**path**|**nvarchar(260)**|通往 IFilter DLL 的路徑。 路徑，只會顯示的成員**serveradmin**固定的伺服器角色。|  
-|**version**|**sysname**|IFilter DLL 的版本。|  
-|**manufacturer**|**sysname**|IFilter 製造廠的名稱。<br /><br /> 注意:只記載為製造商[!INCLUDE[msCoName](../../includes/msconame-md.md)]上支援[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|  
+|**路徑名**|**nvarchar(260)**|通往 IFilter DLL 的路徑。 只有**serveradmin**固定伺服器角色的成員才看得到該路徑。|  
+|**版本**|**sysname**|IFilter DLL 的版本。|  
+|**manufacturer**|**sysname**|IFilter 製造廠的名稱。<br /><br /> 注意：僅支援隨附製造商[!INCLUDE[msCoName](../../includes/msconame-md.md)]的檔。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  

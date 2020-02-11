@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637912"
 ---
 # <a name="install-and-configure-semantic-search"></a>安裝及設定語意搜尋
@@ -26,7 +26,7 @@ ms.locfileid: "73637912"
 ## <a name="installing-semantic-search"></a>安裝語意搜尋  
   
 ###  <a name="HowToCheckInstalled"></a>如何：檢查是否已安裝語義搜尋  
- 查詢 **SERVERPROPERTY &#40;Transact-SQL&#41;** 中繼資料函數的 [IsFullTextInstalled](/sql/t-sql/functions/serverproperty-transact-sql) 屬性。  
+ 查詢 [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql) 中繼資料函數的 **IsFullTextInstalled** 屬性。  
   
  傳回值 1 表示已安裝全文檢索搜尋和語意搜尋；傳回值 0 表示未安裝這兩個搜尋。  
   
@@ -36,9 +36,9 @@ GO
 ```  
   
 ###  <a name="BasicsSemanticSearch"></a>如何：安裝語義搜尋  
- 若要安裝語意搜尋，請在安裝期間選取 [要安裝的功能] 頁面上的 [搜尋的全文檢索和語意擷取]。  
+ 若要安裝語意搜尋，請在安裝期間選取 [要安裝的功能]**** 頁面上的 [搜尋的全文檢索和語意擷取]****。  
   
- 統計語意搜尋相依於全文檢索搜尋。 這兩個選擇性功能會同時安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 統計語意搜尋相依於全文檢索搜尋。 這兩個選擇性功能會同時安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="installing-or-removing-the-semantic-language-statistics-database"></a>安裝或移除語意語言統計資料庫  
  語意搜尋的其他外部相依性稱為語意語言統計資料庫。 此資料庫包含語意搜尋所需的語意語言模型。 單一語意語言統計資料庫會包含支援語意索引之所有語言的語言模型。  
@@ -61,7 +61,7 @@ GO
   
     -   在 **安裝媒體上，找到名稱為** SemanticLanguageDatabase.msi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 Windows Installer 套件。 找到 32 位元或 64 位元版本的 Installer 套件 (視目標系統而定)。 包含資料夾名稱可識別檔案的 32 位元或 64 位元版本；這兩種版本的檔案名稱本身相同。  
   
-    -   要從 Microsoft 下載安裝程式套件[嗎？SQL Server？？](https://go.microsoft.com/fwlink/?LinkID=296743)[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 下載中心上的2014語意語言統計資料] 頁面。  
+    -   要從 Microsoft 下載安裝程式套件[嗎？SQL Server？？2014語意語言統計資料](https://go.microsoft.com/fwlink/?LinkID=296743)] 頁面上[!INCLUDE[msCoName](../../../includes/msconame-md.md)]的 [下載中心]。  
   
 2.  執行 **SemanticLanguageDatabase.msi** Windows Installer 套件，以擷取資料庫和記錄檔。  
   
@@ -74,8 +74,8 @@ GO
 > [!IMPORTANT]  
 >  擷取語意語言統計資料庫時，會將有限權限指派給檔案系統中預設位置的資料庫檔案和記錄檔。 因此，如果您將資料庫保留在預設位置，則可能沒有附加資料庫的權限。 如果在嘗試附加資料庫時發生錯誤，請適當地移動檔案、檢查及修正檔案系統權限。  
   
- **2.附加語意語言統計資料庫。**  
- 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]FOR ATTACH[ 語法呼叫 ](/sql/t-sql/statements/create-database-sql-server-transact-sql)CREATE DATABASE &#40;SQL Server Transact-SQL&#41; **，將資料庫附加至**  執行個體。 如需詳細資訊，請參閱[資料庫卸離和附加 &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)。  
+ **2. 附加語義語言統計資料庫。**  
+ 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]FOR ATTACH[ 語法呼叫 ](/sql/t-sql/statements/create-database-sql-server-transact-sql)CREATE DATABASE &#40;SQL Server Transact-SQL&#41;**，將資料庫附加至 ** 執行個體。 如需詳細資訊，請參閱[資料庫卸離和附加 &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)。  
   
  資料庫名稱預設是 **semanticsdb**。 您可以選擇性地在附加資料庫時提供該資料庫不同的名稱。 您在後續步驟註冊資料庫時，必須提供此名稱。  
   
@@ -89,7 +89,7 @@ GO
   
  此程式碼範例假設您已將資料庫從其預設位置移到新位置。  
   
- **3.註冊語意語言統計資料庫。**  
+ **3. 註冊語義語言統計資料庫。**  
  呼叫 [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql) 預存程序，並在附加資料庫時提供您為資料庫命名的名稱。  
   
 ```sql  

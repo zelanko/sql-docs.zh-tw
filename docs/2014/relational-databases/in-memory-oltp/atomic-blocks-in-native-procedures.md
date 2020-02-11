@@ -11,14 +11,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467278"
 ---
 # <a name="atomic-blocks"></a>不可部分完成的區塊
-  `BEGIN ATOMIC` 是 ANSI SQL 標準的一部分。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只有在最上層原生編譯預存程序才支援不可部分完成的區塊。  
+  
+  `BEGIN ATOMIC` 是 ANSI SQL 標準的一部分。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只有在最上層原生編譯預存程序才支援不可部分完成的區塊。  
   
 -   每個原生編譯預存程序剛好包含一個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式區塊。 這是 ATOMIC 區塊。  
   
@@ -31,7 +33,7 @@ ms.locfileid: "62467278"
   
  如果工作階段上沒有使用中交易，`BEGIN ATOMIC` 將會開始新的交易。 如果區塊範圍之外未擲回任何例外狀況，此交易將會在區塊結尾認可。 如果區塊擲回例外狀況 (也就是說，未在區塊內捕捉及處理例外狀況)，交易將會回復。 如果交易橫跨單一不可部分完成的區塊 (單一原生編譯的預存程序)，您就不需要撰寫明確的 `BEGIN TRANSACTION` 和 `COMMIT` 或 `ROLLBACK` 陳述式。  
   
- 原生編譯的預存程序支援 `TRY`、`CATCH` 和 `THROW` 建構用於錯誤處理。 不支援 `RAISERROR`。  
+ 原生編譯的預存程序支援 `TRY`、`CATCH` 和 `THROW` 建構用於錯誤處理。 `RAISERROR`不受支援。  
   
  下列範例說明使用不可部分完成的區塊和原生編譯預存程序處理錯誤的行為：  
   
@@ -123,17 +125,19 @@ ORDER BY c1
 GO  
 ```  
   
- 記憶體最佳化資料表特有的以下錯誤訊息會毀滅交易。 如果發生在不可部分完成的區塊的範圍，將會造成交易中止：10772、 41301、 41302、 41305、 41325、 41332 和 41333。  
+ 記憶體最佳化資料表特有的以下錯誤訊息會毀滅交易。 如果發生在不可部分完成的區塊範圍內，將會造成交易中止：10772、41301、41302、41305、41325、41332 和 41333。  
   
 ## <a name="session-settings"></a>工作階段設定  
  當編譯預存程序時，將會修復不可部分完成的區塊內的工作階段設定。 某些設定可以使用 `BEGIN ATOMIC` 來指定，而其他設定則一律固定為相同的值。  
   
- `BEGIN ATOMIC` 需要以下選項：  
+ 
+  `BEGIN ATOMIC` 需要以下選項：  
   
 |必要設定|描述|  
 |----------------------|-----------------|  
 |`TRANSACTION ISOLATION LEVEL`|支援的值為 `SNAPSHOT`、`REPEATABLEREAD` 和 `SERIALIZABLE`。|  
-|`LANGUAGE`|判斷日期和時間格式及系統訊息。 [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) 中的所有語言和別名都受到支援。|  
+|`LANGUAGE`|判斷日期和時間格式及系統訊息。 
+  [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) 中的所有語言和別名都受到支援。|  
   
  以下是選擇性設定：  
   
@@ -141,22 +145,22 @@ GO
 |----------------------|-----------------|  
 |`DATEFORMAT`|所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期格式都受到支援。 當指定時，`DATEFORMAT` 會覆寫與 `LANGUAGE` 相關聯的預設日期格式。|  
 |`DATEFIRST`|當指定時，`DATEFIRST` 會覆寫與 `LANGUAGE` 相關聯的預設值。|  
-|`DELAYED_DURABILITY`|支援的值為`OFF`和`ON`。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易認可可能是完全持久、預設值或延遲的持久。如需詳細資訊，請參閱[控制交易持久性](../logs/control-transaction-durability.md)。|  
+|`DELAYED_DURABILITY`|支援的值為 `OFF` 和 `ON`。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]交易認可哥能是完全持久、預設值或延遲的持久。如需詳細資訊，請參閱[控制交易持久性](../logs/control-transaction-durability.md)。|  
   
  對於所有原生編譯預存程序中所有不可部分完成的區塊，下列 SET 選項都有相同的系統預設值：  
   
 |Set 選項|不可部分完成的區塊的系統預設值|  
 |----------------|--------------------------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNING|ON|  
-|ARITHABORT|ON|  
+|ANSI_NULLS|開啟|  
+|ANSI_PADDING|開啟|  
+|ANSI_WARNING|開啟|  
+|ARITHABORT|開啟|  
 |ARITHIGNORE|OFF|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
+|CONCAT_NULL_YIELDS_NULL|開啟|  
 |IDENTITY_INSERT|OFF|  
-|NOCOUNT|ON|  
+|NOCOUNT|開啟|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|QUOTED_IDENTIFIER|開啟|  
 |ROWCOUNT|0|  
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> 未捕捉到的例外狀況會造成不可部分完成的區塊回復，但是並不會造成交易中止，除非錯誤會毀滅交易。|  

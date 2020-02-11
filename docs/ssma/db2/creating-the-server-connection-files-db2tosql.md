@@ -1,5 +1,5 @@
 ---
-title: 建立伺服器連線檔案 (DB2ToSQL) |Microsoft Docs
+title: 建立伺服器連接檔案（DB2ToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,14 +10,14 @@ ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 484b9e12d53d22160358d873ddb2a3dc60d0977e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67989809"
 ---
-# <a name="creating-the-server-connection-files-db2tosql"></a>建立伺服器連線檔案 (DB2ToSQL)
-伺服器一節的指令碼檔案或不同的伺服器連線檔案中，可以指定伺服器的資訊。 伺服器連接檔案的命令列參數即`-c <serverconnectionfile>`。 如果存在於指令碼檔案與伺服器連線檔案相同的伺服器識別碼，則會視為在指令碼檔案中的伺服器定義。  
+# <a name="creating-the-server-connection-files-db2tosql"></a>建立伺服器連接檔案（DB2ToSQL）
+您可以在腳本檔案的 [伺服器] 區段中，或在個別的伺服器連接檔案中指定伺服器資訊。 伺服器連接檔案的命令列參數是、 `-c <serverconnectionfile>`。 如果腳本檔案和伺服器連接檔案中同時出現相同的伺服器識別碼，則會考慮腳本檔案中的伺服器定義。  
   
 **範例：1**  
   
@@ -73,8 +73,8 @@ ms.locfileid: "67989809"
 </sql-server>  
 ```  
   
-## <a name="next-step"></a>下一個步驟  
-操作主控台的下一個步驟是[執行 SSMA 主控台&#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
+## <a name="next-step"></a>後續步驟  
+操作主控台的下一個步驟是[執行 SSMA 主控台，&#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [執行 SSMA 主控台](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  

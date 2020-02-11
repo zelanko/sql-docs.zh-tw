@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca820a8f7f916aa473bdd527e24a9549b7c5195e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467581"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns (或 IRow::Open) 和 ISequentialStream 來提取資料行
   您可以使用 `ISequentialStream` 介面來繫結或擷取大型資料。 若為繫結資料行，狀態旗標 DBSTATUS_S_TRUNCATED 會指出資料是否遭到截斷。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns (或 IRow::Open) 和 ISequentialStream 來提取資料行  
   
@@ -35,11 +35,12 @@ ms.locfileid: "62467581"
   
 3.  使用 `IRow::Open()` 或 `IRow::GetColumns()` 來提取資料行資料。  
   
-    -   `IRow::Open()` 可用來開啟資料列的 `ISequentialStream`。 指定 DBGUID_STREAM，表示資料行包含二進位資料的資料流 (然後 `IStream` 或 `ISequentialStream` 就可用來讀取資料行中的資料)。  
+    -   
+  `IRow::Open()` 可用來開啟資料列的 `ISequentialStream`。 指定 DBGUID_STREAM，表示資料行包含二進位資料的資料流 (然後 `IStream` 或 `ISequentialStream` 就可用來讀取資料行中的資料)。  
   
-    -   如果`IRow::GetColumns()`使用時， **pData** DBCOLUMNACCESS 結構中的項目設定為指向資料流物件。  
+    -   如果`IRow::GetColumns()`使用了，DBCOLUMNACCESS 結構的**pData**元素會設定為指向資料流程物件。  
   
-4.  使用**ISequentialStream::Read()** 重複到指定的位元組數目讀入取用者緩衝區。  
+4.  重複使用**ISequentialStream：： read （）** ，將指定的位元組數目讀入取用者緩衝區中。  
   
 ## <a name="example"></a>範例  
  此範例會示範如何使用 IRow 提取單一資料列。 在此範例中，系統會從資料列一次擷取一個資料行。 此範例會說明 IRow::Open() 以及 IRow::GetColumns() 的使用方式。 為了讀取資料行的資料，此範例會使用 ISequentialStream::Read。  

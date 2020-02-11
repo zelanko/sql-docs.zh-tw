@@ -1,5 +1,5 @@
 ---
-title: MSpublicationthresholds (TRANSACT-SQL) |Microsoft Docs
+title: MSpublicationthresholds （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -18,27 +18,27 @@ ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2bf5659dc8a5a440b764b3264556359205646d75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088517"
 ---
 # <a name="mspublicationthresholds-transact-sql"></a>MSpublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSpublicationthresholds**資料表用來追蹤發行集，每個受監視的臨界值的其中一個資料列的複寫效能標準。 這份資料表儲存在散發資料庫中。  
+  **MSpublicationthresholds**資料表是用來追蹤發行集的複寫效能計量，每個監視的臨界值都有一個資料列。 這份資料表儲存在散發資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**publication_id**|**int**|識別設定臨界值的發行集。|  
-|**metric_id**|**int**|識別複寫效能標準中所定義要監視[MSreplmonthresholdmetrics](../../relational-databases/system-tables/msreplmonthresholdmetrics-transact-sql.md)系統資料表。|  
+|**metric_id**|**int**|識別[MSreplmonthresholdmetrics](../../relational-databases/system-tables/msreplmonthresholdmetrics-transact-sql.md)系統資料表中所定義之受監視的複寫效能標準。|  
 |**value**|**sql_variant**|被監視之標準的臨界值。|  
-|**shouldalert**|**bit**|值為**1**指出當標準超過定義的臨界值時，會產生警示。|  
-|**isenabled**|**bit**|值為**1**指示，啟用這個複寫效能標準的監視。|  
+|**shouldalert**|**bit**|值為**1**時，表示當計量超出定義的閾值時，應該產生警示。|  
+|**isenabled**|**bit**|值為**1**表示已針對此複寫效能標準啟用監視。|  
   
 ## <a name="see-also"></a>另請參閱  
- [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_repl_articles (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_repl_articles （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 07dc611371cbff373fb60036c8c16da6656a8de1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088596"
 ---
-# <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
+# <a name="sysdm_repl_articles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳送有關在複寫拓撲中以發行項發行之資料庫物件的資訊。  
@@ -35,44 +35,44 @@ ms.locfileid: "68088596"
 |**artcache_table_address**|**varbinary(8)**|已發行之資料表發行項的快取資料表結構的記憶體中位址。|  
 |**artcache_schema_address**|**varbinary(8)**|已發行之資料表發行項的快取發行項結構描述結構的記憶體中位址。|  
 |**artcache_article_address**|**varbinary(8)**|已發行之資料表發行項的快取發行項結構的記憶體中位址。|  
-|**artid&lt**|**bigint**|唯一識別這份資料表內的每一個項目。|  
-|**artfilter**|**bigint**|用來水平篩選發行項之預存程序的識別碼。|  
-|**artobjid**|**bigint**|已發行物件的識別碼。|  
-|**artpubid**|**bigint**|發行集所屬發行集的識別碼。|  
-|**artstatus**|**tinyint**|發行項選項和狀態的位元遮罩，它可能是一或多個這些值的位元邏輯 OR 結果：<br /><br /> **1** = 發行項在使用。<br /><br /> **8** = 包含 INSERT 陳述式中的資料行名稱。<br /><br /> **16** = 使用參數化陳述式。<br /><br /> **24** = 同時包含 INSERT 陳述式中的資料行名稱，並使用參數化陳述式。<br /><br /> 例如，對於使用參數化陳述式的使用中發行項，這個資料行的值是 17。 0 值表示發行項不在使用中，且未定義任何其他屬性。|  
-|**arttype**|**tinyint**|發行項類型：<br /><br /> **1** = 記錄式發行項。<br /><br /> **3** = 含有手動篩選的記錄式發行項。<br /><br /> **5** = 含有手動檢視的記錄式發行項。<br /><br /> **7** = 含有手動篩選和手動檢視的記錄式發行項。<br /><br /> **8** = 預存程序執行。<br /><br /> **24** = 可序列化的預存程序執行。<br /><br /> **32** = 預存程序 （僅限結構描述）。<br /><br /> **64** = 檢視 （僅限結構描述）。<br /><br /> **128** = 函式 （僅限結構描述）。|  
-|**wszArtdesttable**|**nvarchar(514)**|目的地的已發行物件名稱。|  
-|**wszArtdesttableowner**|**nvarchar(514)**|目的地的已發行物件擁有者。|  
-|**wszArtinscmd**|**nvarchar(510)**|用於插入的命令或預存程序。|  
+|**artid**|**Bigint**|唯一識別這份資料表內的每一個項目。|  
+|**artfilter**|**Bigint**|用來水平篩選發行項之預存程序的識別碼。|  
+|**artobjid**|**Bigint**|已發行物件的識別碼。|  
+|**artpubid**|**Bigint**|發行集所屬發行集的識別碼。|  
+|**artstatus**|**tinyint**|發行項選項和狀態的位元遮罩，它可能是一或多個這些值的位元邏輯 OR 結果：<br /><br /> **1** = 發行項在使用中。<br /><br /> **8** = 在 INSERT 語句中包含資料行名稱。<br /><br /> **16** = 使用參數化語句。<br /><br /> **24** = 在 INSERT 語句中包含資料行名稱，並使用參數化語句。<br /><br /> 例如，對於使用參數化陳述式的使用中發行項，這個資料行的值是 17。 0 值表示發行項不在使用中，且未定義任何其他屬性。|  
+|**arttype**|**tinyint**|發行項類型：<br /><br /> **1** = 以記錄為基礎的發行項。<br /><br /> **3** = 含有手動篩選的記錄式發行項。<br /><br /> **5** = 具有手動視圖的記錄式發行項。<br /><br /> **7** = 以記錄為基礎的發行項，具有手動篩選和手動視圖。<br /><br /> **8** = 預存程式執行。<br /><br /> **24** = 可序列化預存程式執行。<br /><br /> **32** = 預存程式（僅限架構）。<br /><br /> **64** = View （僅限架構）。<br /><br /> **128** = 函數（僅限架構）。|  
+|**wszArtdesttable**|**Nvarchar （514）**|目的地的已發行物件名稱。|  
+|**wszArtdesttableowner**|**Nvarchar （514）**|目的地的已發行物件擁有者。|  
+|**wszArtinscmd**|**Nvarchar （510）**|用於插入的命令或預存程序。|  
 |**cmdTypeIns**|**int**|用於插入預存程序的呼叫語法，它可以是下列值之一。<br /><br /> **1** = 呼叫<br /><br /> **2** = SQL<br /><br /> **3** = 無<br /><br /> **7** = 未知|  
-|**wszArtdelcmd**|**nvarchar(510)**|用於刪除的命令或預存程序。|  
+|**wszArtdelcmd**|**Nvarchar （510）**|用於刪除的命令或預存程序。|  
 |**cmdTypeDel**|**int**|用於刪除預存程序的呼叫語法，它可以是下列值之一。<br /><br /> **0** = XCALL<br /><br /> **1** = 呼叫<br /><br /> **2** = SQL<br /><br /> **3** = 無<br /><br /> **7** = 未知|  
-|**wszArtupdcmd**|**nvarchar(510)**|用於更新的命令或預存程序。|  
+|**wszArtupdcmd**|**Nvarchar （510）**|用於更新的命令或預存程序。|  
 |**cmdTypeUpd**|**int**|用於更新預存程序的呼叫語法，它可以是下列值之一。<br /><br /> **0** = XCALL<br /><br /> **1** = 呼叫<br /><br /> **2** = SQL<br /><br /> **3** = 無<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = 未知|  
-|**wszArtpartialupdcmd**|**nvarchar(510)**|用於部分更新的命令或預存程序。|  
+|**wszArtpartialupdcmd**|**Nvarchar （510）**|用於部分更新的命令或預存程序。|  
 |**cmdTypePartialUpd**|**int**|用於部分更新預存程序的呼叫語法，它可以是下列值之一。<br /><br /> **2** = SQL|  
 |**numcol**|**int**|用於垂直篩選發行項之資料分割中的資料行數目。|  
-|**artcmdtype**|**tinyint**|目前複寫的命令類型，它可以是下列值之一。<br /><br /> **1** = 插入<br /><br /> **2** = 刪除<br /><br /> **3** = 更新<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = 無<br /><br /> **6** = 僅供內部使用<br /><br /> **7** = 僅供內部使用<br /><br /> **8** = 部分 UPDATE|  
-|**artgeninscmd**|**nvarchar(510)**|以發行項包含的資料行為基礎之 INSERT 命令範本。|  
-|**artgendelcmd**|**nvarchar(510)**|DELETE 命令範本可包含發行項所包含的主索引鍵或資料行，隨著使用的呼叫語法而不同。|  
-|**artgenupdcmd**|**nvarchar(510)**|UPDATE 命令範本可包含主索引鍵、更新的資料行或完整資料行清單，隨著使用的呼叫語法而不同。|  
-|**artpartialupdcmd**|**nvarchar(510)**|部分 UPDATE 命令範本，它包含主索引鍵和更新的資料行。|  
-|**artupdtxtcmd**|**nvarchar(510)**|UPDATETEXT 命令範本，它包含主索引鍵和更新的資料行。|  
-|**artgenins2cmd**|**nvarchar(510)**|在並行快照集處理期間，重新調整發行項時使用的 INSERT 命令範本。|  
-|**artgendel2cmd**|**nvarchar(510)**|在並行快照集處理期間，重新調整發行項時使用的 DELETE 命令範本。|  
+|**artcmdtype**|**tinyint**|目前複寫的命令類型，它可以是下列值之一。<br /><br /> **1** = 插入<br /><br /> **2** = 刪除<br /><br /> **3** = 更新<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = 無<br /><br /> **6** = 僅供內部使用<br /><br /> **7** = 僅供內部使用<br /><br /> **8** = 部分更新|  
+|**artgeninscmd**|**Nvarchar （510）**|以發行項包含的資料行為基礎之 INSERT 命令範本。|  
+|**artgendelcmd**|**Nvarchar （510）**|DELETE 命令範本可包含發行項所包含的主索引鍵或資料行，隨著使用的呼叫語法而不同。|  
+|**artgenupdcmd**|**Nvarchar （510）**|UPDATE 命令範本可包含主索引鍵、更新的資料行或完整資料行清單，隨著使用的呼叫語法而不同。|  
+|**artpartialupdcmd**|**Nvarchar （510）**|部分 UPDATE 命令範本，它包含主索引鍵和更新的資料行。|  
+|**artupdtxtcmd**|**Nvarchar （510）**|UPDATETEXT 命令範本，它包含主索引鍵和更新的資料行。|  
+|**artgenins2cmd**|**Nvarchar （510）**|在並行快照集處理期間，重新調整發行項時使用的 INSERT 命令範本。|  
+|**artgendel2cmd**|**Nvarchar （510）**|在並行快照集處理期間，重新調整發行項時使用的 DELETE 命令範本。|  
 |**fInReconcile**|**tinyint**|指出在並行快照集處理期間，目前是否重新調整發行項。|  
 |**fPubAllowUpdate**|**tinyint**|指出發行集是否允許更新訂閱。|  
-|**intPublicationOptions**|**bigint**|指定其他發行選項的點陣圖，位元選項值如下：<br /><br /> **0x1** -啟用對等複寫。<br /><br /> **0x2** -只發行本機變更。<br /><br /> **0x4** -已啟用針對非 SQL Server 訂閱者。|  
+|**intPublicationOptions**|**Bigint**|指定其他發行選項的點陣圖，位元選項值如下：<br /><br /> **0x1** -啟用點對點複寫。<br /><br /> **0x2** -只發行本機變更。<br /><br /> **0x4** -啟用非 SQL Server 的訂閱者。|  
   
-## <a name="permissions"></a>Permissions  
- 需要 VIEW DATABASE STATE 權限在發行集資料庫上的呼叫**dm_repl_articles**。  
+## <a name="permissions"></a>權限  
+ 需要發行集資料庫的 VIEW DATABASE STATE 許可權，才能呼叫**dm_repl_articles**。  
   
 ## <a name="remarks"></a>備註  
  只對目前載入複寫發行項快取中的複寫資料庫物件傳回這項資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [複寫相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
+ [複寫相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   
 

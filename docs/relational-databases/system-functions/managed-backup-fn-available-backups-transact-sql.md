@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_available_backups & Amp;&#40;transact-SQL&AMP;&#41; |Microsoft Docs
+title: managed_backup. fn_available_backups （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1c7bb6e33dfd2ee6640e9588011d3686a72a0188
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68140674"
 ---
-# <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup.fn_available_backups & Amp;&#40;transact-SQL&AMP;&#41;
+# <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup. fn_available_backups （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   傳回指定資料庫之可用備份檔案的資料表，內含 0、1 或更多資料列。 傳回的備份檔案是 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 建立的備份。  
@@ -42,7 +42,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
   
 ##  <a name="Arguments"></a> 引數  
  @database_name  
- 資料庫的名稱。 @database_name是 NVARCHAR(512)。  
+ 資料庫的名稱。 @database_name是 NVARCHAR （512）。  
   
 ## <a name="table-returned"></a>傳回的資料表  
  資料表已啟用唯一的叢集條件約束 (database_guid、backup_start_date、first_lsn 和 backup_type)。   
@@ -52,7 +52,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|備份檔案的 URL。|  
-|backup_type|NVARCHAR(6)|'DB' 表示資料庫備份，'LOG' 的記錄備份|  
+|backup_type|NVARCHAR （6）|' DB ' 用於資料庫備份「記錄」以進行記錄備份|  
 |expiration_date|DATETIME|此檔案預期要刪除的日期。 這會根據復原資料庫的能力設定為指定保留期限內的時間點。|  
 |database_guid|UNIQUEIDENTIFIER|指定資料庫的 GUID 值。  此 GUID 會唯一識別資料庫。|  
 |first_lsn|NUMERIC(25, 0)|備份組中第一個或最舊記錄檔記錄的記錄序號。 可以是 NULL。|  
@@ -63,18 +63,18 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 |last_recovery_fork_id|UNIQUEIDENTIFIER|結尾復原分岔的識別碼。|  
 |first_recovery_fork_id|UNIQUEIDENTIFIER|起始復原分岔的識別碼。 對於資料備份而言，first_recovery_fork_guid 等於 last_recovery_fork_guid。|  
 |fork_point_lsn|NUMERIC(25, 0)|如果 first_recovery_fork_id 不等於 last_recovery_fork_id，這就是分岔點的記錄序號。 否則，這個值是 NULL。|  
-|availability_group_guid|UNIQUEIDENTIFIER|如果資料庫是 Alwayson 資料庫，這會是可用性群組的 GUID。 否則，這個值是 NULL。|  
+|availability_group_guid|UNIQUEIDENTIFIER|如果資料庫是 Always On 資料庫，這就是可用性群組的 GUID。 否則，這個值是 NULL。|  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功) 或 1 (失敗)。  
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
- 需要**選取**這個函式上的權限。  
+### <a name="permissions"></a>權限  
+ 需要此函數的**SELECT**許可權。  
   
 ## <a name="examples"></a>範例  
- 下列範例會列出所有可用備份透過[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]資料庫 'MyDB'  
+ 下列範例會列出所有[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]針對資料庫 ' MyDB ' 備份的可用備份  
   
 ```  
 SELECT *   
@@ -83,7 +83,7 @@ FROM managed_backup.fn_available_backups ('MyDB')
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Managed 的 Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
+ [SQL Server 受管理的備份至 Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
  [從儲存在 Microsoft Azure 的備份還原](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
   
   
