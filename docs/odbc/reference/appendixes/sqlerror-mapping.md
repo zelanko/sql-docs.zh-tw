@@ -14,14 +14,14 @@ ms.assetid: 802ac711-7e5d-4152-9698-db0cafcf6047
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f24a305c2f22ef4cfacbbe4bcbcf498eab648f1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064469"
 ---
 # <a name="sqlerror-mapping"></a>SQLError 對應
-當應用程式呼叫**SQLError**透過 ODBC *3.x*驅動程式，會呼叫  
+當應用程式*透過 ODBC 3.x 驅動程式呼叫* **SQLError**時，呼叫  
   
 ```  
 SQLError(henv, hdbc, hstmt, szSqlState, pfNativeError, szErrorMsg, cbErrorMsgMax, pcbErrorMsg)   
@@ -33,4 +33,4 @@ SQLError(henv, hdbc, hstmt, szSqlState, pfNativeError, szErrorMsg, cbErrorMsgMax
 SQLGetDiagRec(HandleType, Handle, RecNumber, szSqlstate, pfNativeErrorPtr, szErrorMsg, cbErrorMsgMax, pcbErrorMsg)  
 ```  
   
- 具有*HandleType*將設定為 SQL_HANDLE_ENV、 利用 SQL_HANDLE_DBC 或利用 SQL_HANDLE_STMT，視需要的引數和*處理*引數設定中的值為*henv*， *hdbc*，或*hstmt*視需要。 *RecNumber*引數的判斷，驅動程式管理員。
+ 視情況，將*HandleType*引數設定為 SQL_HANDLE_ENV、SQL_HANDLE_DBC 或 SQL_HANDLE_STMT 的值，並適當地將*HANDLE*引數設定為*henv*、 *hdbc*或*hstmt*中的值。 *RecNumber*引數是由驅動程式管理員所決定。

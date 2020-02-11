@@ -1,5 +1,5 @@
 ---
-title: 專案設定 （載入系統物件） (DB2ToSQL) |Microsoft Docs
+title: 專案設定（載入系統物件）（DB2ToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,39 +10,39 @@ ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5c12a2ddb97c6d599e5adfc57277e0a5f64288e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060195"
 ---
-# <a name="project-settingsloading-system-objects-db2tosql"></a>專案設定 （載入系統物件） (DB2ToSQL)
-正在載入系統物件的頁數**專案設定** 對話方塊可讓您指定的 DB2 系統物件 SSMA 會將轉換和載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+# <a name="project-settingsloading-system-objects-db2tosql"></a>專案設定（載入系統物件）（DB2ToSQL）
+[**專案設定**] 對話方塊的 [載入系統物件] 頁面，可讓您指定 SSMA 轉換和載入的 DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]系統物件。  
   
-[載入系統物件] 窗格位於**專案設定**並**預設專案設定**對話方塊：  
+[載入系統物件] 窗格可在 [**專案設定**] 和 [**預設專案設定**] 對話方塊中使用：  
   
--   若要指定所有的 SSMA 專案設定**工具**功能表上，選取**預設專案設定**，選取 移轉專案類型，則需要可以檢視或變更設定**移轉的目標版本**下拉式清單按一下**一般**在底部的左的窗格中，然後按一下**載入系統物件**。  
+-   若要指定所有 SSMA 專案的設定，請在 [**工具**] 功能表上，選取 [**預設專案設定**]，選取 [遷移專案類型]，在左窗格底部的 [遷移] [**目標版本**] 下拉 [一般] 下方，按一下 **[一般**]，然後按一下 [**載入系統物件**]。  
   
--   若要指定目前的專案中，設定**工具**功能表上，選取**專案設定**，按一下 **一般**底部的左窗格中，然後按一下  **載入系統物件**。  
+-   若要指定目前專案的設定，請在 [**工具**] 功能表上，選取 [**專案設定**]，按一下左窗格底部的 **[一般**]，然後按一下 [**載入系統物件**]。  
   
 ## <a name="default-settings"></a>預設值  
-系統物件的轉換會耗用系統資源，並花的時間。 若要改善效能，SSMA 只選取最常使用的系統物件，如下列清單所示：  
+轉換系統物件會耗用系統資源，而且需要一些時間。 為了改善效能，SSMA 只會選取最常使用的系統物件，如下列清單所示：  
   
--   SYS.DBMS_OUTPUT  
+-   SYS.DATABASES.DBMS_OUTPUT  
   
--   SYS.DBMS_PIPE  
+-   SYS.DATABASES.DBMS_PIPE  
   
--   SYS.DBMS_UTILITY  
+-   SYS.DATABASES.DBMS_UTILITY  
   
--   SYS。標準  
+-   SYS.DATABASES.常用  
   
--   SYS.UTL_FILE  
+-   SYS.DATABASES.UTL_FILE  
   
--   SYS.DBMS_LOB  
+-   SYS.DATABASES.DBMS_LOB  
   
--   SYS.DBMS_SQL  
+-   SYS.DATABASES.DBMS_SQL  
   
--   SYS.DBMS_SESSION  
+-   SYS.DATABASES.DBMS_SESSION  
   
-如果您的 DB2 物件參考其他的系統物件，您應該選取這些物件。 如果您未選取 DB2 資料庫物件所參考的系統物件，SSMA 會報告轉換錯誤。 如果您收到因遺漏的系統物件的轉換錯誤，請在這個對話方塊中選取遺失的物件。 接著，您可以重複視需要轉換。  
+如果您的 DB2 物件參考其他系統物件，您應該選取這些物件。 如果您未選取 DB2 資料庫物件所參考的系統物件，SSMA 會報告轉換錯誤。 如果您收到因遺漏系統物件所造成的轉換錯誤，請在此對話方塊中選取遺漏的物件。 然後您可以視需要重複轉換。  
   

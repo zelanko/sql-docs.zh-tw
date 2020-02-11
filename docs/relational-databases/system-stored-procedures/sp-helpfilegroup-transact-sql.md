@@ -1,5 +1,5 @@
 ---
-title: sp_helpfilegroup (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpfilegroup （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6fe9798b6a9f560621eba9806e25081f72e316c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122540"
 ---
-# <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
+# <a name="sp_helpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回目前資料庫之相關檔案群組的名稱和屬性。  
@@ -39,7 +39,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @filegroupname = ] 'name'` 這是目前資料庫中的任何檔案群組邏輯名稱。 *名稱*已**sysname**，預設值是 NULL。 如果*名稱*未指定，則列出目前資料庫中的所有檔案群組，並顯示只有第一個結果集的結果集一節所示。  
+`[ @filegroupname = ] 'name'`這是目前資料庫中任何檔案群組的邏輯名稱。 *name*是**sysname**，預設值是 Null。 如果未指定*name* ，則會列出目前資料庫中的所有檔案群組，而且只會顯示 [結果集] 區段中所顯示的第一個結果集。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -52,18 +52,18 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |**groupid**|**smallint**|數值檔案群組識別碼。|  
 |**filecount**|**int**|檔案群組中的檔案數目。|  
   
- 如果*名稱*已指定，會傳回一個資料列群組中的每個檔案。  
+ 如果指定*name* ，則會傳回檔案群組中每個檔案的一個資料列。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|檔案群組中該檔案的邏輯名稱。|  
 |**fileid**|**smallint**|數值檔案識別碼。|  
-|**filename**|**nchar(260)**|檔案的實體名稱 (包含目錄路徑在內)。|  
-|**size**|**nvarchar(15)**|檔案大小 (以 KB 為單位)。|  
-|**maxsize**|**nvarchar(15)**|檔案的大小上限。<br /><br /> 這是檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
-|**成長**|**nvarchar(15)**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。<br /><br /> 0 = 檔案是固定大小，不會成長。|  
+|**名稱**|**Nchar （260）**|檔案的實體名稱 (包含目錄路徑在內)。|  
+|**容量**|**Nvarchar （15）**|檔案大小 (以 KB 為單位)。|  
+|**maxsize**|**Nvarchar （15）**|檔案的大小上限。<br /><br /> 這是檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
+|**growth**|**Nvarchar （15）**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。<br /><br /> 0 = 檔案是固定大小，不會成長。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  
@@ -79,7 +79,7 @@ GO
 ```  
   
 ### <a name="b-returning-all-files-in-a-filegroup"></a>B. 傳回檔案群組中所有的檔案  
- 下列範例會傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫的 `PRIMARY` 檔案群組中之所有檔案的相關資訊。  
+ 下列範例會傳回 `PRIMARY` 範例資料庫的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 檔案群組中之所有檔案的相關資訊。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -89,11 +89,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sp_helpfile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料庫檔案與檔案群組](../../relational-databases/databases/database-files-and-filegroups.md)  
   

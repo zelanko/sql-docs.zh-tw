@@ -1,5 +1,5 @@
 ---
-title: SQL 轉換為 C：時間戳記 |Microsoft Docs
+title: SQL 到 C：時間戳記 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -15,39 +15,39 @@ ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee3852c688f495d54eb07ca9c2866ac17a1f5a1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68118838"
 ---
-# <a name="sql-to-c-timestamp"></a>SQL 轉換為 C：時間戳記
+# <a name="sql-to-c-timestamp"></a>SQL 到 C：時間戳記
 
-時間戳記的 ODBC SQL 資料類型的識別項是下列項目：
+時間戳記 ODBC SQL 資料類型的識別碼如下：
 
 - SQL_TYPE_TIMESTAMP  
 
-下表顯示 ODBC C 資料類型可以轉換為時間戳記的 SQL 資料。 如需資料行和資料表中的詞彙說明，請參閱 <<c0> [ 轉換將資料從 SQL 到 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)。  
+下表顯示可以轉換時間戳記 SQL 資料的 ODBC C 資料類型。 如需資料表中的資料行和詞彙的說明，請參閱將[資料從 SQL 轉換成 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)。  
 
 |C 類型識別碼|測試|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > 字元位元組長度<br /><br /> 20 < = *Columnsize* < = 字元位元組長度<br /><br /> *BufferLength* < 20|Data<br /><br /> 截斷的資料 [b]<br /><br /> 未定義|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > 字元長度<br /><br /> 20 < = *Columnsize* < = 字元長度<br /><br /> *BufferLength* < 20|Data<br /><br /> 截斷的資料 [b]<br /><br /> 未定義|以字元為單位的資料長度<br /><br /> 以字元為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|Data<br /><br /> 未定義|以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|時間戳記的時間部分為零 [a]<br /><br /> 時間戳記的時間部分為非零值 [a]|Data<br /><br /> 截斷的資料 [c]|6[f]<br /><br /> 6[f]|n/a<br /><br /> 01S07|  
-|SQL_C_TYPE_TIME|時間戳記的小數秒數部分為零 [a]<br /><br /> 時間戳記的小數秒數部分為非零值 [a]|資料 [d]<br /><br /> 截斷的資料 [d]、 [e]|6[f]<br /><br /> 6[f]|n/a<br /><br /> 01S07|  
-|SQL_C_TYPE_TIMESTAMP|不會被截斷的小數秒數部分的時間戳記 [a]<br /><br /> 會被截斷的小數秒數部分的時間戳記，[a]|資料 [e]<br /><br /> 截斷的資料 [e]|16[f]<br /><br /> 16[f]|n/a<br /><br /> 01S07|  
+|SQL_C_CHAR|*BufferLength* > 字元位元組長度<br /><br /> 20 <= *BufferLength* <= 字元位元組長度<br /><br /> *BufferLength* < 20|資料<br /><br /> 截斷的資料 [b]<br /><br /> 未定義|資料長度（以位元組為單位）<br /><br /> 資料長度（以位元組為單位）<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > 字元長度<br /><br /> 20 <= *BufferLength* <= 字元長度<br /><br /> *BufferLength* < 20|資料<br /><br /> 截斷的資料 [b]<br /><br /> 未定義|資料長度（以字元為單位）<br /><br /> 資料長度（以字元為單位）<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|資料 <的位元組長度 = *BufferLength*<br /><br /> 資料 > *BufferLength*的位元組長度|資料<br /><br /> 未定義|資料長度（以位元組為單位）<br /><br /> 未定義|n/a<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|時間戳記的時間部分為零 [a]<br /><br /> Timestamp 的時間部分是非零的 [a]|資料<br /><br /> 截斷的資料 [c]|6 [f]<br /><br /> 6 [f]|n/a<br /><br /> 01S07|  
+|SQL_C_TYPE_TIME|時間戳記的小數秒部分為零 [a]<br /><br /> 時間戳記的小數秒部分是非零的 [a]|資料 [d]<br /><br /> 截斷的資料 [d]，[e]|6 [f]<br /><br /> 6 [f]|n/a<br /><br /> 01S07|  
+|SQL_C_TYPE_TIMESTAMP|時間戳記的小數秒部分不會截斷 [a]<br /><br /> 時間戳記的小數秒部分已截斷 [a]|資料 [e]<br /><br /> 截斷的資料 [e]|16 [f]<br /><br /> 16 [f]|n/a<br /><br /> 01S07|  
 
- [a] 的值*Columnsize*會忽略這項轉換。 驅動程式會假設大小 **TargetValuePtr*是 C 資料類型的大小。  
+ [a] 這項轉換會忽略*BufferLength*的值。 驅動程式假設 **TargetValuePtr*的大小是 C 資料類型的大小。  
   
- [b] 的小數秒數時間戳記會被截斷。  
+ [b] 時間戳記的小數秒數已截斷。  
   
- [c] 時間部分的時間戳記會被截斷。  
+ [c] 時間戳記的時間部分會被截斷。  
   
- [時間戳記 d] 的日期部分會被忽略。  
+ [d] 已忽略時間戳記的日期部分。  
   
- [截斷時間戳記 e] 的小數秒數部分。  
+ [e] 時間戳記的小數秒部分已截斷。  
   
- [f] 這是對應的 C 資料類型的大小。  
+ [f] 這是對應 C 資料類型的大小。  
 
-當時間戳記的 SQL 資料轉換成 C 字元資料時，產生的字串是在 「*yyyy*-*mm*-*dd* *hh*:*公釐*:*ss*[。*f...* ]"格式，其中最多九個數字可用於小數秒數。 此格式不會受到 Windows® 國家/地區設定。 （除了小數位數和小數秒數，整個格式必須使用，不論時間戳記 SQL 資料類型的有效位數。）
+當時間戳 SQL 資料轉換成字元 C 資料時，產生的字串會是 "*yyyy*-*mm*-*dd* *hh*：*mm*：*ss*[。*f ...*] "格式，最多可以使用9位數的小數秒數。 此格式不會受到 Windows®國家（地區）設定的影響。 （小數點和小數秒除外，不論 timestamp SQL 資料類型的有效位數為何，都必須使用整個格式）。

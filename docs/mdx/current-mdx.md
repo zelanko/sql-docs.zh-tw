@@ -1,5 +1,5 @@
 ---
-title: 目前 (MDX) |Microsoft Docs
+title: 目前（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 821d517419b90df44b7943a1e0edde12ef667b6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68047117"
 ---
 # <a name="current-mdx"></a>Current (MDX)
@@ -32,15 +32,15 @@ Set_Expression.Current
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 在反覆運算期間的每個步驟，進行運算的 Tuple 就是目前的 Tuple。 **目前**函式會傳回那個 tuple。 只有在集合上反覆運算時，這個函數才是有效的。  
+ 在反覆運算期間的每個步驟，進行運算的 Tuple 就是目前的 Tuple。 **目前**的函式會傳回該元組。 只有在集合上反覆運算時，這個函數才是有效的。  
   
- 逐一查看集合的 MDX 函數包括[產生](../mdx/generate-mdx.md)函式。  
+ 逐一查看集合的 MDX 函數包括[產生](../mdx/generate-mdx.md)函數。  
   
 > [!NOTE]  
 >  這個函數只能搭配已命名的集合 (使用集合別名或定義命名集) 使用。  
   
 ## <a name="examples"></a>範例  
- 下列範例示範如何使用**目前**函式內**產生**:  
+ 下列範例示範如何在**產生**的內使用**目前**的函式：  
   
  `WITH`  
   
@@ -67,6 +67,6 @@ Set_Expression.Current
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

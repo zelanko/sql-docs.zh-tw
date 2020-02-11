@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_sql_requests (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_pdw_sql_requests （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -13,35 +13,35 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: bca9930ef51de28c8059223c93ea0bb2651f971d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68089150"
 ---
-# <a name="sysdmpdwsqlrequests-transact-sql"></a>sys.dm_pdw_sql_requests (Transact-SQL)
+# <a name="sysdm_pdw_sql_requests-transact-sql"></a>sys.databases dm_pdw_sql_requests （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  在查詢中保留需所有 SQL Server 查詢分佈的詳細資訊，做為 SQL 步驟的一部分。  
+  保存所有 SQL Server 查詢散發的相關資訊，做為查詢中 SQL 步驟的一部分。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar(32)**|此 SQL 的查詢分佈所屬之查詢的唯一識別碼。<br /><br /> request_id、 step_index 和 distribution_id 形成這個檢視的索引鍵。|請參閱中的 request_id [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
-|step_index|**int**|此分佈是一部分的查詢步驟的索引。<br /><br /> request_id、 step_index 和 distribution_id 形成這個檢視的索引鍵。|請參閱中的 step_index [sys.dm_pdw_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)。|  
-|pdw_node_id|**int**|執行此查詢分佈之節點的唯一識別碼。|請參閱中的 node_id [sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)。|  
-|distribution_id|**int**|執行此查詢分佈分布的唯一識別碼。<br /><br /> request_id、 step_index 和 distribution_id 形成這個檢視的索引鍵。|請參閱中的 distribution_id [sys.pdw_distributions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)。 設定為-1，在節點範圍內，未散發的範圍內執行的要求。|  
-|status|**nvarchar(32)**|查詢發佈目前狀態。|暫止、 執行、 失敗、 已取消、 完成、 中止 CancelSubmitted|  
-|error_id|**nvarchar(36)**|如果有的話，此查詢散發相關聯錯誤的唯一識別碼。|請參閱中的 error_id [sys.dm_pdw_errors &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)。 如果沒有發生錯誤，請設為 NULL。|  
-|start_time|**datetime**|查詢發佈開始時間執行。|此查詢發佈較小或等於目前的時間和大於或等於查詢步驟的 start_time 已屬於|  
-|end_time|**datetime**|在此查詢散發完成執行、 已取消，或失敗的時間。|大於或等於開始時間，或進行中或已排入佇列的查詢分佈是否設為 NULL。|  
-|total_elapsed_time|**int**|表示已執行的查詢分佈，以毫秒為單位的時間。|大於或等於 0。 差異的 start_time 和 end_time 完成、 失敗或已取消查詢散發套件。<br /><br /> 如果 total_elapsed_time 超過整數的最大值，total_elapsed_time 仍是最大值。 這種情況會產生警告 」 的最大值已超過 」。<br /><br /> 以毫秒為單位的最大值相當於 24.8 天。|  
-|row_count|**bigint**|變更或讀取此查詢分佈的資料列數目。|不變更或不傳回資料，例如 CREATE TABLE 和 DROP TABLE 作業為-1。|  
-|spid|**int**|執行查詢的散發套件的 SQL Server 執行個體上的工作階段識別碼。||  
-|command|**nvarchar(4000)**|此查詢散發的命令的完整文字。|任何有效查詢或要求的字串。|  
+|request_id|**Nvarchar （32）**|此 SQL 查詢散發所屬之查詢的唯一識別碼。<br /><br /> request_id、step_index 和 distribution_id 會形成此視圖的索引鍵。|請參閱[dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)中的 request_id。|  
+|step_index|**int**|此散發所屬之查詢步驟的索引。<br /><br /> request_id、step_index 和 distribution_id 會形成此視圖的索引鍵。|請參閱[dm_pdw_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)中的 step_index。|  
+|pdw_node_id|**int**|執行此查詢散發所在節點的唯一識別碼。|請參閱[dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)中的 node_id。|  
+|distribution_id|**int**|執行此查詢散發之散發的唯一識別碼。<br /><br /> request_id、step_index 和 distribution_id 會形成此視圖的索引鍵。|請參閱[pdw_distributions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)中的 distribution_id。 針對在節點範圍（而不是散發範圍）執行的要求，設定為-1。|  
+|status|**Nvarchar （32）**|查詢散發的目前狀態。|暫止，執行中，失敗，已取消，完成，已中止，CancelSubmitted|  
+|error_id|**Nvarchar （36）**|與此查詢散發相關聯之錯誤的唯一識別碼（如果有的話）。|請參閱[dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)中的 error_id。 如果未發生錯誤，則設為 Null。|  
+|start_time|**datetime**|查詢散發開始執行的時間。|小於或等於目前的時間，且大於或等於此查詢散發所屬之查詢步驟的 start_time|  
+|end_time|**datetime**|此查詢散發完成執行、已取消或失敗的時間。|大於或等於開始時間，如果查詢散發正在進行中或已排入佇列，則設為 Null。|  
+|total_elapsed_time|**int**|代表查詢散發的執行時間（以毫秒為單位）。|大於或等於0。 等於 [已完成]、[失敗] 或 [已取消] 查詢散發的 start_time 和 end_time 差異。<br /><br /> 如果 total_elapsed_time 超過整數的最大值，total_elapsed_time 會繼續成為最大值。 此狀況會產生「已超過最大值」的警告。<br /><br /> 最大值（以毫秒為單位）相當於24.8 天。|  
+|row_count|**Bigint**|此查詢散發變更或讀取的資料列數目。|-1 適用于不會變更或傳回資料的作業，例如 CREATE TABLE 和 DROP TABLE。|  
+|spid|**int**|執行查詢散發之 SQL Server 實例上的會話識別碼。||  
+|命令|**nvarchar(4000)**|此查詢散發的完整命令文字。|任何有效的查詢或要求字串。|  
   
- 這份檢視所保留的最大資料列的相關資訊，請參閱中的 [中繼資料] 區段[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主題。  
+ 如需此視圖所保留之最大資料列的詳細資訊，請參閱[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主題中的 Metadata 一節。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲和平行處理資料倉儲動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL 資料倉儲和平行處理資料倉儲動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

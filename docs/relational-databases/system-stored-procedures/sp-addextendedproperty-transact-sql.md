@@ -1,5 +1,5 @@
 ---
-title: sp_addextendedproperty (TRANSACT-SQL) |Microsoft Docs
+title: sp_addextendedproperty （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68072693"
 ---
-# <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
+# <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   將新的擴充屬性加入資料庫物件中。  
@@ -54,38 +54,40 @@ sp_addextendedproperty
   
 ## <a name="arguments"></a>引數  
  [ @name ] = {'*property_name*'}  
- 這是要加入的屬性名稱。 *property_name*已**sysname**不能是 NULL。 名稱也可包含空白或非英數字元字串，以及二進位值。  
+ 這是要加入的屬性名稱。 *property_name*是**sysname** ，不能是 Null。 名稱也可包含空白或非英數字元字串，以及二進位值。  
   
- [ @value=] {'*值*'}  
- 這是與屬性相關聯的值。 *值*已**sql_variant**，預設值是 NULL。 *value* 的大小不能超過 7,500 個位元組。  
+ [ @value= ]{'*value*'}  
+ 這是與屬性相關聯的值。 *value*是**SQL_variant**，預設值是 Null。 
+  *value* 的大小不能超過 7,500 個位元組。  
   
- [ @level0type=] {'*level0_object_type&lt*'}  
- 這是層級 0 物件的類型。 *level0_object_type&lt*已**varchar(128)** ，預設值是 NULL。  
+ [ @level0type= ]{'*level0_object_type*'}  
+ 這是層級 0 物件的類型。 *level0_object_type*是**Varchar （128）**，預設值是 Null。  
   
  有效輸入如下：ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE、PLAN GUIDE 和 NULL。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將 USER 指定為層級 1 類型物件擴充屬性中之層級 0 類型的功能，將在未來的 版本中移除。 請改用 SCHEMA 做為層級 0 類型。 例如，在資料表上定義擴充屬性時，請指定資料表的結構描述代替使用者名稱。 將 TYPE 指定為層級 0 類型的功能，將在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中移除。 如果是 TYPE，請使用 SCHEMA 當做層級 0 類型，並使用 TYPE 當做層級 1 類型。  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將 USER 指定為層級 1 類型物件擴充屬性中之層級 0 類型的功能，將在未來的 版本中移除。 請改用 SCHEMA 做為層級 0 類型。 例如，在資料表上定義擴充屬性時，請指定資料表的結構描述代替使用者名稱。 將 TYPE 指定為層級 0 類型的功能，將在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中移除。 如果是 TYPE，請使用 SCHEMA 當做層級 0 類型，並使用 TYPE 當做層級 1 類型。  
   
- [ @level0name=] {'*level0_object_name&lt*'}  
- 這是所指定之層級 0 物件類型的名稱。 *level0_object_name&lt*已**sysname**預設值是 NULL。  
+ [ @level0name= ]{'*level0_object_name*'}  
+ 這是所指定之層級 0 物件類型的名稱。 *level0_object_name*是**sysname** ，預設值是 Null。  
   
- [ @level1type=] {'*level1_object_type&lt*'}  
- 這是層級 1 物件的類型。 *level1_object_type&lt*已**varchar(128)** ，預設值是 NULL。 有效輸入如下，彙總、 預設、 函式、 LOGICAL FILE NAME、 程序、 佇列、 規則、 序列、 同義字、 資料表、 TABLE_TYPE、 類型、 檢視、 XML SCHEMA COLLECTION 和 NULL。    
- [ @level1name=] {'*level1_object_name&lt*'}  
- 這是所指定之層級 1 物件類型的名稱。 *level1_object_name&lt*已**sysname**，預設值是 NULL。  
+ [ @level1type= ]{'*level1_object_type*'}  
+ 這是層級 1 物件的類型。 *level1_object_type*是**Varchar （128）**，預設值是 Null。 有效的輸入為 AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SEQUENCE、同義字、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 Null。    
+ [ @level1name= ]{'*level1_object_name*'}  
+ 這是所指定之層級 1 物件類型的名稱。 *level1_object_name*是**sysname**，預設值是 Null。  
   
- [ @level2type=] {'*level2_object_type&lt*'}  
- 這是層級 2 物件的類型。 *level2_object_type&lt*已**varchar(128)** ，預設值是 NULL。 有效輸入如下：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
+ [ @level2type= ]{'*level2_object_type*'}  
+ 這是層級 2 物件的類型。 *level2_object_type*是**Varchar （128）**，預設值是 Null。 有效輸入如下：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
   
- [ @level2name=] {'*level2_object_name&lt*'}  
- 這是所指定之層級 2 物件類型的名稱。 *level2_object_name&lt*已**sysname**，預設值是 NULL。  
+ [ @level2name= ]{'*level2_object_name*'}  
+ 這是所指定之層級 2 物件類型的名稱。 *level2_object_name*是**sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 為了指定擴充的屬性，在物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫分為三個層級：0、 1 和 2。 層級 0 是最高層級，且定義為包含在資料庫範圍的物件。 層級 1 物件包含在結構描述或使用者範圍中，層級 2 物件包含在層級 1 物件中。 任何這些層級的物件都可以定義擴充屬性。  
+ 為了指定擴充屬性， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的物件分為三種層級：0、1 和 2。 層級 0 是最高層級，且定義為包含在資料庫範圍的物件。 層級 1 物件包含在結構描述或使用者範圍中，層級 2 物件包含在層級 1 物件中。 任何這些層級的物件都可以定義擴充屬性。  
   
  對一個層級中物件的參考必須用擁有或包含其較高層級物件的名稱來限定。 例如，當您將擴充屬性加入至資料表資料行 (層級 2) 時，您也必須指定包含該資料行的資料表名稱 (層級 1) 和包含該資料表的結構描述 (層級 0)。  
   
@@ -93,15 +95,15 @@ sp_addextendedproperty
   
  擴充屬性不得用於系統物件、使用者自訂資料庫範圍外的物件，或未列在引數中做為有效輸入的物件。  
   
- 記憶體最佳化資料表上不允許擴充的屬性。  
+ 記憶體優化資料表上不允許擴充屬性。  
   
 ## <a name="replicating-extended-properties"></a>複寫擴充屬性  
  只在發行者與訂閱者之間的初始同步處理中複寫擴充屬性。 如果您在初始同步處理之後加入或修改擴充屬性，就不會複寫這項變更。 如需如何複寫資料庫物件的詳細資訊，請參閱[發行資料和資料庫物件](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
   
-## <a name="schema-vs-user"></a>結構描述與。使用者  
- 不建議您在將擴充屬性套用至資料庫物件時指定 USER 當做層級 0 類型，因為這會造成名稱解析模稜兩可。 例如，假設使用者 Mary 擁有兩個結構描述 (Mary 和 MySchema)，而這兩個結構描述都包含一個名為 MyTable 的資料表。 如果 Mary 將擴充的屬性加入至 MyTable 資料表，並指定 **@level0type = N'USER'** ，  **@level0name = Mary**，並不清楚哪一個資料表擴充的屬性會套用。 為了維持回溯相容性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將套用屬性至包含在名為 Mary 之結構描述中的資料表。  
+## <a name="schema-vs-user"></a>結構描述與使用者  
+ 不建議您在將擴充屬性套用至資料庫物件時指定 USER 當做層級 0 類型，因為這會造成名稱解析模稜兩可。 例如，假設使用者 Mary 擁有兩個結構描述 (Mary 和 MySchema)，而這兩個結構描述都包含一個名為 MyTable 的資料表。 如果 Mary 將擴充屬性加入至 MyTable 資料表，並指定** @level0type = N'USER '**， ** @level0name = Mary**，則不會清楚指出擴充屬性套用至哪一個資料表。 為了維持回溯相容性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將套用屬性至包含在名為 Mary 之結構描述中的資料表。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  db_owner 和 db_ddladmin 固定資料庫角色的成員可將擴充屬性加入至任何物件，但下列為例外狀況：db_ddladmin 不能將屬性加入至資料庫本身或加入至使用者或角色。  
   
  使用者可將擴充屬性加入至他們擁有的物件或他們具有 ALTER 或 CONTROL 權限的物件。  
@@ -109,7 +111,8 @@ sp_addextendedproperty
 ## <a name="examples"></a>範例  
   
 ### <a name="a-adding-an-extended-property-to-a-database"></a>A. 將擴充屬性加入至資料庫  
- `'Caption'` 下列範例將一個含有 `'AdventureWorks2012 Sample OLTP Database'` 值的屬性名稱 `AdventureWorks2012` 加入至 範例資料庫。  
+ 
+  `'Caption'` 下列範例將一個含有 `'AdventureWorks2012 Sample OLTP Database'` 值的屬性名稱 `AdventureWorks2012` 加入至 範例資料庫。  
   
 ```  
 USE AdventureWorks2012;  
@@ -121,7 +124,8 @@ EXEC sp_addextendedproperty
 ```  
   
 ### <a name="b-adding-an-extended-property-to-a-column-in-a-table"></a>B. 將擴充屬性加入至資料表中的資料行  
- `PostalCode` 下列範例將標題屬性加入至 `Address`資料表中的 資料行。  
+ 
+  `PostalCode` 下列範例將標題屬性加入至 `Address`資料表中的 資料行。  
   
 ```  
 USE AdventureWorks2012;  
@@ -136,7 +140,8 @@ GO
 ```  
   
 ### <a name="c-adding-an-input-mask-property-to-a-column"></a>C. 將輸入遮罩屬性加入至資料行  
- `99999 or 99999-9999 or #### ###`下列範例將 ' `PostalCode` ' 輸入遮罩屬性加入至 `Address`資料表中的 資料行。  
+ 
+  `99999 or 99999-9999 or #### ###`下列範例將 ' `PostalCode` ' 輸入遮罩屬性加入至 `Address`資料表中的 資料行。  
   
 ```  
 USE AdventureWorks2012;  
@@ -150,7 +155,8 @@ GO
 ```  
   
 ### <a name="d-adding-an-extended-property-to-a-filegroup"></a>D. 將擴充屬性加入至檔案群組  
- `PRIMARY` 下列範例會將擴充屬性加入至  檔案群組中。  
+ 
+  `PRIMARY` 下列範例會將擴充屬性加入至  檔案群組中。  
   
 ```  
 USE AdventureWorks2012;  
@@ -163,7 +169,8 @@ GO
 ```  
   
 ### <a name="e-adding-an-extended-property-to-a-schema"></a>E. 將擴充屬性加入至結構描述  
- `HumanResources` 下列範例會將擴充屬性加入至  結構描述中。  
+ 
+  `HumanResources` 下列範例會將擴充屬性加入至  結構描述中。  
   
 ```  
 USE AdventureWorks2012;  
@@ -176,7 +183,8 @@ EXECUTE sys.sp_addextendedproperty
 ```  
   
 ### <a name="f-adding-an-extended-property-to-a-table"></a>F. 將擴充屬性加入至資料表  
- `Address` 下列範例會將擴充屬性加入至 `Person` 結構描述中的  資料表。  
+ 
+  `Address` 下列範例會將擴充屬性加入至 `Person` 結構描述中的  資料表。  
   
 ```  
 USE AdventureWorks2012;  
@@ -236,9 +244,9 @@ EXEC sys.sp_addextendedproperty
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys.fn_listextendedproperty &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [sp_updateextendedproperty &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
+ [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [fn_listextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sp_updateextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
   
   

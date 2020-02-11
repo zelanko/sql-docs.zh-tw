@@ -22,13 +22,13 @@ ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a308225e96c740680b2df243f35cac216f53e3e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024298"
 ---
-# <a name="indexcol-transact-sql"></a>INDEX_COL (Transact-SQL)
+# <a name="index_col-transact-sql"></a>INDEX_COL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回索引資料行名稱。 如果是 XML 索引，則傳回 NULL。  
@@ -59,7 +59,7 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  *key_id*  
  這是索引鍵資料行位置。 *key_ID* 是 **int**。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **nvarchar (128** **)**  
   
 ## <a name="exceptions"></a>例外狀況  
@@ -69,7 +69,7 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-indexcol-to-return-an-index-column-name"></a>A. 利用 INDEX_COL 傳回索引資料行名稱  
+### <a name="a-using-index_col-to-return-an-index-column-name"></a>A. 利用 INDEX_COL 傳回索引資料行名稱  
  下列範例會傳回 `PK_SalesOrderDetail_SalesOrderID_LineNumber` 索引中兩個索引鍵資料行的資料行名稱。  
   
 ```  

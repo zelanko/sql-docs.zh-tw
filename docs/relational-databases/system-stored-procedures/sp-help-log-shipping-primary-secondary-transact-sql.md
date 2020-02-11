@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_primary_secondary (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_log_shipping_primary_secondary （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d1c93bb6fecea955e139688b1a8f4f2c1dccc75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68066817"
 ---
-# <a name="sphelplogshippingprimarysecondary-transact-sql"></a>sp_help_log_shipping_primary_secondary (Transact-SQL)
+# <a name="sp_help_log_shipping_primary_secondary-transact-sql"></a>sp_help_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   這個預存程序會傳回給定主要資料庫的所有次要資料庫的相關資訊。  
@@ -40,7 +40,7 @@ sp_help_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @primary_database = ] 'primary_database'` 是主要伺服器上名稱。 *primary_database&lt*已**sysname**，沒有預設值。  
+`[ @primary_database = ] 'primary_database'`這是主伺服器上的資料庫名稱。 *primary_database*是**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -49,17 +49,17 @@ sp_help_log_shipping_primary_secondary
   
 |資料行名稱|描述|  
 |-----------------|-----------------|  
-|**secondary_server**|第二個執行個體名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]記錄傳送組態中。|  
+|**secondary_server**|記錄傳送設定[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中之次要實例的名稱。|  
 |**secondary_database**|記錄傳送組態中之次要資料庫的名稱。|  
   
 ## <a name="remarks"></a>備註  
- **sp_help_log_shipping_primary_secondary**必須從執行**主要**主要伺服器上的資料庫。  
+ **sp_help_log_shipping_primary_secondary**必須從主伺服器的**master**資料庫中執行。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="examples"></a>範例  
- 此範例說明如何利用**sp_help_log_shipping_primary_secondary**擷取一份次要資料庫相關聯的主要資料庫[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]。  
+ 這個範例說明如何使用**sp_help_log_shipping_primary_secondary**來抓取與主資料庫[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]相關聯的次要資料庫清單。  
   
 ```  
 EXECUTE master.dbo.sp_help_log_shipping_primary_secondary @primary_database=N'AdventureWorks';  

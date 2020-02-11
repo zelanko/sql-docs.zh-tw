@@ -1,5 +1,5 @@
 ---
-title: sys.fn_cdc_increment_lsn (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases fn_cdc_increment_lsn （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a482acb22ad535e44d6ceb06a20474945a477e58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046375"
 ---
-# <a name="sysfncdcincrementlsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
+# <a name="sysfn_cdc_increment_lsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   根據指定的記錄序號 (LSN)，傳回序列中的下一個 LSN。  
@@ -43,17 +43,17 @@ sys.fn_cdc_increment_lsn ( lsn_value )
   
 ## <a name="arguments"></a>引數  
  *lsn_value*  
- LSN 值。 *lsn_value*已**binary(10)** 。  
+ LSN 值。 *lsn_value*為**binary （10）**。  
   
 ## <a name="return-type"></a>傳回類型  
- **binary(10)**  
+ **binary （10）**  
   
 ## <a name="remarks"></a>備註  
  此函數傳回的 LSN 值永遠大於指定的值，而且這兩個值之間不存在任何 LSN 值。  
   
  若要有系統地查詢一段時間內變更資料的資料流，您可以定期重複查詢函數呼叫，而且每次都指定新的查詢間隔，以便限定查詢所傳回的變更。 為了協助確保不會遺失任何資料，通常會使用上一個查詢的上限來產生後續查詢的下限。 由於查詢間隔是封閉的間隔，因此新的下限必須大於先前的上限，但是必須夠小，才能確保沒有任何變更的 LSN 值介於這個值與舊的上限之間。 sys.fn_cdc_increment_lsn 函數可用於取得這個值。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 public 資料庫角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
@@ -71,9 +71,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.fn_cdc_decrement_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [fn_cdc_decrement_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md)   
+ [cdc. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [cdc. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
  [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [關於異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   

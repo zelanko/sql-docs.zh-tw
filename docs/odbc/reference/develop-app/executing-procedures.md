@@ -1,5 +1,5 @@
 ---
-title: 執行程序 |Microsoft Docs
+title: 執行程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98c36f02bde63862748eef14a8cbae063ca4e472
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069947"
 ---
 # <a name="executing-procedures"></a>執行程序
-ODBC 定義標準逸出序列執行程序。 如需此順序和使用它的程式碼範例的語法，請參閱[程序呼叫](../../../odbc/reference/develop-app/procedure-calls.md)。  
+ODBC 會定義執行程式的標準 escape 順序。 如需此順序的語法，以及使用它的程式碼範例，請參閱[程序呼叫](../../../odbc/reference/develop-app/procedure-calls.md)。  
   
- 若要執行的程序，應用程式會執行下列動作：  
+ 若要執行程式，應用程式會執行下列動作：  
   
-1.  設定任何參數的值。 如需詳細資訊，請參閱 <<c0> [ 陳述式參數](../../../odbc/reference/develop-app/statement-parameters.md)稍後這一節。  
+1.  設定任何參數的值。 如需詳細資訊，請參閱本節稍後的[語句參數](../../../odbc/reference/develop-app/statement-parameters.md)。  
   
-2.  呼叫**SQLExecDirect**並將它傳遞為字串，包含執行程序的 SQL 陳述式。 此陳述式可以使用 ODBC 或 DBMS 專屬的語法; 所定義的逸出序列使用的 DBMS 特定語法的陳述式不具互通性。  
+2.  呼叫**SQLExecDirect** ，並將包含執行程式之 SQL 語句的字串傳遞給它。 這個語句可以使用 ODBC 或 DBMS 特定語法所定義的 escape 序列;使用 DBMS 特定語法的語句無法互通。  
   
-3.  當**SQLExecDirect**呼叫時，驅動程式：  
+3.  呼叫**SQLExecDirect**時，驅動程式：  
   
-    -   擷取目前的參數值，並將它們轉換為必要。 如需詳細資訊，請參閱 <<c0> [ 陳述式參數](../../../odbc/reference/develop-app/statement-parameters.md)稍後這一節。  
+    -   抓取目前的參數值，並視需要加以轉換。 如需詳細資訊，請參閱本節稍後的[語句參數](../../../odbc/reference/develop-app/statement-parameters.md)。  
   
-    -   呼叫資料來源中的程序，並將它傳送的已轉換的參數值。 驅動程式如何呼叫程序是特定驅動程式。 比方說，它可能會修改 SQL 陳述式來使用資料來源的 SQL 文法，並提交執行時，此陳述式，或它可能會呼叫程序中直接使用 DBMS 的資料流通訊協定中定義的遠端程序呼叫 (RPC) 機制。  
+    -   呼叫資料來源中的程式，並將轉換後的參數值傳送給它。 驅動程式的呼叫方式是驅動程式特有的。 例如，它可能會修改 SQL 語句，以使用資料來源的 SQL 文法並提交此語句來執行，或者它可能會使用在 DBMS 的資料流程通訊協定中定義的遠端程序呼叫（RPC）機制直接呼叫程式。  
   
-    -   傳回的任何輸入/輸出或輸出參數的值或程序的傳回值，假設此程序成功。 處理所有其他結果 （資料列計數和結果集） 產生程序之後，可能無法使用這些值。 如果程序失敗，驅動程式會傳回任何錯誤。
+    -   傳回任何輸入/輸出或輸出參數的值，或程式傳回值，假設程式成功。 在處理常式所產生的所有其他結果（資料列計數和結果集）之後，才可以使用這些值。 如果程式失敗，驅動程式會傳回任何錯誤。

@@ -20,18 +20,18 @@ ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbd8df72bcb0e76c8abcc3d738c2ff8da61a7bfe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039480"
 ---
 # <a name="sqlvaliddsn-function"></a>SQLValidDSN 函式
-**合規性**  
- 導入的版本：ODBC 2.0  
+**標準**  
+ 引進的版本： ODBC 2。0  
   
  **摘要**  
- **SQLValidDSN**名稱新增至 系統資訊之前會檢查長度和有效的資料來源的名稱。  
+ **SQLValidDSN**會先檢查資料來源名稱的長度和有效性，再將名稱新增至系統資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,28 +43,28 @@ BOOL SQLValidDSN(
   
 ## <a name="arguments"></a>引數  
  *lpszDSN*  
- [輸入]要檢查名稱的資料來源。  
+ 源要檢查的資料來源名稱。  
   
 ## <a name="returns"></a>傳回值  
- 如果資料來源名稱無效，函式會傳回 TRUE。 如果資料來源名稱無效，或函式呼叫失敗，它會傳回 FALSE。  
+ 如果資料來源名稱有效，此函數會傳回 TRUE。 如果資料來源名稱無效或函數呼叫失敗，則會傳回 FALSE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLValidDSN**會傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 A  *\*pfErrorCode*會傳回只函式呼叫失敗時，不傳回 FALSE，因為資料來源名稱無效。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的此函式。  
+ 當**SQLValidDSN**傳回 FALSE 時，可以藉由呼叫**SQLInstallerError**來取得相關聯* \*的 pfErrorCode*值。 只有在函式呼叫失敗時，才會傳回* \*pfErrorCode* ，如果因為資料來源名稱無效而傳回 FALSE，則不會傳回。 下表列出可由**SQLInstallerError**傳回的* \*pfErrorCode*值，並在此函式的內容中說明每一個值。  
   
 |*\*pfErrorCode*|錯誤|描述|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|一般的安裝程式錯誤|發生錯誤，其中沒有特定的安裝程式錯誤。|  
-|ODBC_ERROR_OUT_OF_MEM|記憶體不足|由於記憶體不足，安裝程式無法執行函式。|  
+|ODBC_ERROR_GENERAL_ERR|一般安裝程式錯誤|發生錯誤，但沒有特定的安裝程式錯誤。|  
+|ODBC_ERROR_OUT_OF_MEM|記憶體不足|因為記憶體不足，所以安裝程式無法執行函數。|  
   
 ## <a name="comments"></a>註解  
- **SQLValidDSN**驅動程式會呼叫[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)檢查資料來源名稱的長度，以及資料來源名稱中的個別字元的有效性。 它會檢查名稱的長度是否大於 SQL_MAX_DSN_LENGTH，Sqlext.h 中所定義。 (也會藉由檢查資料來源名稱的長度[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)。)**SQLValidDSN**會檢查任何下列無效的字元是否包含在資料來源名稱：  
+ **SQLValidDSN**是由驅動程式的[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)呼叫，以檢查資料來源名稱的長度和資料來源名稱中的個別字元有效性。 它會檢查名稱的長度是否大於 SQL_MAX_DSN_LENGTH （如 Sqlext.h 中所定義）。 （ [SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)也會檢查資料來源名稱的長度）。**SQLValidDSN**會檢查資料來源名稱中是否包含下列其中一個不正確字元：  
   
  [ ] { } ( ) , ; ? * = ! \@ \  
   
 ## <a name="related-functions"></a>相關函數  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
-|新增、 修改或移除資料來源|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) （在安裝程式 DLL 中）|  
-|新增、 修改或移除資料來源|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
-|系統資訊寫入資料來源名稱|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|
+|加入、修改或移除資料來源|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) （在安裝程式 DLL 中）|  
+|加入、修改或移除資料來源|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
+|將資料來源名稱寫入系統資訊|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|

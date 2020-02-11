@@ -1,5 +1,5 @@
 ---
-title: WillChangeField 和 FieldChangeComplete 事件 (ADO) |Microsoft Docs
+title: WillChangeField 和 FieldChangeComplete 事件（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +20,14 @@ ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7484e2a57925cc22c83456c244dc67aded5cefd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67945886"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField 和 FieldChangeComplete 事件 (ADO)
-**WillChangeField**暫止的作業變更一個或多個值之前，會呼叫事件[欄位](../../../ado/reference/ado-api/field-object.md)中的物件[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 **FieldChangeComplete**事件會被呼叫一或多個值後面**欄位**物件已變更。  
+在暫止的作業變更[記錄集中](../../../ado/reference/ado-api/recordset-object-ado.md)一個或多個[欄位](../../../ado/reference/ado-api/field-object.md)物件的值之前，會呼叫**WillChangeField**事件。 **FieldChangeComplete**事件會在一或多個**欄位**物件的值變更後呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,31 +39,31 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>參數  
  *cFields*  
- A**長**表示數目**欄位**中的物件*欄位*。  
+ **Long** ，表示*欄位*中的**欄位**物件數目。  
   
  *欄位*  
- 針對**WillChangeField**，則*欄位*參數是陣列**變體**，其中包含**欄位**與原始值的物件。 針對**FieldChangeComplete**，則*欄位*參數是陣列**變體**包含**欄位**值已變更的物件.  
+ 針對**WillChangeField**， *Fields*參數是**variant**的陣列，其中包含具有原始值的**欄位**物件。 針對**FieldChangeComplete**， *Fields*參數是**variant**的陣列，其中包含具有已變更值的**欄位**物件。  
   
  *pError*  
- [錯誤](../../../ado/reference/ado-api/error-object.md)物件。 它說明如果發生錯誤的值*adStatus*是**adStatusErrorsOccurred**; 否則它不會設定。  
+ [錯誤](../../../ado/reference/ado-api/error-object.md)物件。 它會描述*adStatus*的值為**adStatusErrorsOccurred**時所發生的錯誤。否則不會設定。  
   
  *adStatus*  
  [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)狀態值。  
   
- 當**WillChangeField**是呼叫，此參數設為**adStatusOK**如果造成事件的作業已順利完成。 它會設定為**adStatusCantDeny**如果此事件不能要求取消暫止的作業。  
+ 當呼叫**WillChangeField**時，如果造成事件的作業成功，此參數會設定為**adStatusOK** 。 如果此事件無法要求取消暫止的作業，則會設定為**adStatusCantDeny** 。  
   
- 當**FieldChangeComplete**是呼叫，此參數設為**adStatusOK**如果造成事件的作業已順利完成，或**adStatusErrorsOccurred**如果作業失敗。  
+ 當呼叫**FieldChangeComplete**時，如果造成事件的作業成功，此參數會設定為**adStatusOK** ，如果作業失敗，則設為**adStatusErrorsOccurred** 。  
   
- 再**WillChangeField**傳回，這個參數設定為**adStatusCancel**要求取消的暫止的作業。  
+ 在**WillChangeField**傳回之前，請將此參數設定為**adStatusCancel** ，以要求取消暫止的作業。  
   
- 再**FieldChangeComplete**傳回，這個參數設定為**adStatusUnwantedEvent**以避免後續的通知。  
+ 在**FieldChangeComplete**傳回之前，請將此參數設定為**adStatusUnwantedEvent** ，以防止後續的通知。  
   
  *pRecordset*  
- A**資料錄集**物件。 **資料錄集**如發生此事件。  
+ **記錄集**物件。 發生此事件的**記錄集**。  
   
 ## <a name="remarks"></a>備註  
- A **WillChangeField**或是**FieldChangeComplete**設定時，可能會發生事件[值](../../../ado/reference/ado-api/value-property-ado.md)屬性，並呼叫[更新](../../../ado/reference/ado-api/update-method.md)方法欄位和值的陣列參數。  
+ 設定[Value](../../../ado/reference/ado-api/value-property-ado.md)屬性並使用欄位和值陣列參數呼叫[Update](../../../ado/reference/ado-api/update-method.md)方法時，可能會發生**WillChangeField**或**FieldChangeComplete**事件。  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [ADO 事件模型範例（VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)

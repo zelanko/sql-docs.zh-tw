@@ -1,5 +1,5 @@
 ---
-title: 步驟 1：連接到資料來源 |Microsoft Docs
+title: 步驟1：連接到資料來源 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ ms.assetid: 84298664-4523-4149-b821-7b2e42c85281
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80f2dfc05d9d27f60aca414ee0abd13e13b3ea65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68114267"
 ---
-# <a name="step-1-connect-to-the-data-source"></a>步驟 1：連線至資料來源
-任何應用程式的第一個步驟是連接到資料來源。 這個階段中，包括它需要，函式會在下圖中顯示。  
+# <a name="step-1-connect-to-the-data-source"></a>步驟 1：連線到資料來源
+任何應用程式的第一個步驟是連接到資料來源。 下圖顯示此階段，包括其所需的功能。  
   
- ![連接到 ODBC 應用程式中的資料來源](../../../odbc/reference/develop-app/media/pr11.gif "pr11")  
+ ![連接至 ODBC 應用程式中的資料來源](../../../odbc/reference/develop-app/media/pr11.gif "pr11")  
   
- 連接到資料來源的第一個步驟是載入驅動程式管理員，並配置環境控制代碼**SQLAllocHandle**。 如需詳細資訊，請參閱 <<c0> [ 配置環境處理](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)。  
+ 連接到資料來源的第一個步驟是載入驅動程式管理員，並使用**SQLAllocHandle**配置環境控制碼。 如需詳細資訊，請參閱配置[環境控制碼](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)。  
   
- 接著，應用程式註冊其符合藉由呼叫的 ODBC 的版本**SQLSetEnvAttr** SQL_ATTR_APP_ODBC_VER 環境屬性。 如需詳細資訊，請參閱 <<c0> [ 宣告應用程式的 ODBC 版本](../../../odbc/reference/develop-app/declaring-the-application-s-odbc-version.md)並[回溯相容性與標準相容性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。  
+ 然後，應用程式會使用 SQL_ATTR_APP_ODBC_VER 環境屬性呼叫**SQLSetEnvAttr** ，以註冊它所符合的 ODBC 版本。 如需詳細資訊，請參閱宣告[應用程式的 ODBC 版本](../../../odbc/reference/develop-app/declaring-the-application-s-odbc-version.md)和回溯[相容性和標準合規](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)性。  
   
- 接下來，應用程式配置連接控制代碼**SQLAllocHandle** ，並連接到資料來源**SQLConnect**， **SQLDriverConnect**，或**SQLBrowseConnect**。 如需詳細資訊，請參閱 <<c0> [ 配置連接處理](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md)並[建立的連接](../../../odbc/reference/develop-app/establishing-a-connection.md)。  
+ 接下來，應用程式會使用**SQLAllocHandle**配置連接控制碼，並使用**SQLConnect**、 **SQLDriverConnect**或**SQLBrowseConnect**連接至資料來源。 如需詳細資訊，請參閱配置[連接控制碼](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md)和[建立連接](../../../odbc/reference/develop-app/establishing-a-connection.md)。  
   
- 接著，應用程式設定任何連接屬性，例如是否要以手動方式認可交易。 如需詳細資訊，請參閱 <<c0> [ 連接屬性](../../../odbc/reference/develop-app/connection-attributes.md)。
+ 然後，應用程式會設定任何連接屬性，例如是否手動認可交易。 如需詳細資訊，請參閱[連接屬性](../../../odbc/reference/develop-app/connection-attributes.md)。

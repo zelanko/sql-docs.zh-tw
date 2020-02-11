@@ -1,5 +1,5 @@
 ---
-title: sys.extended_procedures (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases extended_procedures （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,28 +20,28 @@ ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 350c8eeec6a88bf2fad3a3461675696ae75ab8e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054335"
 ---
-# <a name="sysextendedprocedures-transact-sql"></a>sys.extended_procedures (Transact-SQL)
+# <a name="sysextended_procedures-transact-sql"></a>sys.extended_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  包含擴充預存程序，是使用每個物件的資料列**sys.objects.type** = X。由於擴充預存程序安裝**主要**資料庫中，它們才看得見從該資料庫內容。 從選取**sys.extended_procedures**任何其他的資料庫內容中的檢視會傳回空的結果集。  
+  針對屬於擴充預存程式的每個物件，各包含一個資料列，其中具有**sys.databases。 type** = X。因為擴充預存程式是安裝在**master**資料庫中，所以只會顯示在該資料庫內容中。 從任何其他資料庫內容中的**sys.databases extended_procedures**視圖進行選取，將會傳回空的結果集。  
 
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**\<從 sys.objects 繼承的資料行 >**||如需這個檢視所繼承的資料行的清單，請參閱 < [j &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|**\<繼承自 sys.databases 的資料行>**||如需此視圖所繼承之資料行的清單，請參閱[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**dll_name**|**nvarchar(260)**|這個擴充預存程序之 DLL 的名稱，其中包括路徑。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

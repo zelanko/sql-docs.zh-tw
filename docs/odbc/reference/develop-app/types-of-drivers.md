@@ -1,5 +1,5 @@
 ---
-title: 類型的驅動程式 |Microsoft Docs
+title: 驅動程式的類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,49 +16,49 @@ ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ea99ec6a5b0a76ce0647e3681a4cf919d3f086b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087768"
 ---
 # <a name="types-of-drivers"></a>驅動程式的類型
 ODBC 驅動程式可以分類如下：  
   
--   **32 位元 ODBC 2。**  
-     **_x_驅動程式**的 32 位元驅動程式會：  
+-   **32位 ODBC 2。**  
+     ** _x_驅動程式**A 32 位驅動程式：  
   
-    -   匯出只 ODBC *2.x*函式。  
+    -   只*匯出 ODBC 2.x*函數。  
   
-    -   顯示 ODBC *2.x*行為的行為變更。  
+    -   展示行為*變更的 ODBC 2.x*行為。  
   
--   **ISO 和開啟群組相容的驅動程式**的 32 位元驅動程式會：  
+-   **ISO 和開放式群組相容的驅動程式**32位驅動程式：  
   
-    -   開啟 群組或 ISO CLI 文件中所述的所有函式會將匯出。 這會在 ODBC 中包含一些已被取代的函式。  
+    -   匯出開啟的群組或 ISO CLI 檔中記載的所有函式。 這會包含一些在 ODBC 中被取代的函式。  
   
-    -   表現的行為變更的 ODBC 3.0 行為。  
+    -   展示行為變更的 ODBC 3.0 行為。  
   
-    -   不一定會透過 ODBC 3.0 驅動程式管理員。  
+    -   不一定會經過 ODBC 3.0 驅動程式管理員。  
   
--   **ODBC 3.0 驅動程式**的 32 位元驅動程式會：  
+-   **ODBC 3.0 驅動程式**32位驅動程式：  
   
-    -   減去 ODBC 3.0 中的匯出唯一函式已取代函式。  
+    -   只匯出 ODBC 3.0 中的函式減去已被取代的函式。  
   
-    -   能夠發生 ODBC *2.x*行為上的變更，而言，ODBC 3.0 行為根據 SQL_ATTR_APP_ODBC_VERSION 環境屬性。  
+    -   可以根據 SQL_ATTR_APP_ODBC_VERSION 環境屬性，來提供 ODBC *2.x 行為或 odbc 3.0*行為（關於行為變更）。  
   
--   **ODBC 3.5 （含） 以後 ANSI 的驅動程式**的 32 位元驅動程式會：  
+-   **ODBC 3.5 （或更新版本） ANSI 驅動程式**32位驅動程式：  
   
-    -   減去 ODBC 3.5 中的匯出唯一函式已取代函式。  
+    -   只匯出 ODBC 3.5 中的函式減去已被取代的函式。  
   
-    -   能夠發生 ODBC *2.x*行為或 ODBC 3.0 行為上的變更，而言，ODBC 3.5 行為根據 SQL_ATTR_APP_ODBC_VERSION 環境屬性。  
+    -   可以根據 SQL_ATTR_APP_ODBC_VERSION 環境屬性，來提供 ODBC *2.x 行為或 odbc 3.0 行為，* 或 odbc 3.5 行為（關於行為變更）。  
   
--   **ODBC 3.5 （含） 以後 Unicode 驅動程式**的 32 位元驅動程式會：  
+-   **ODBC 3.5 （或更新版本） Unicode 驅動程式**32位驅動程式：  
   
     -   支援 ODBC 3.5 ANSI 驅動程式的所有功能。  
   
-    -   將匯出所有 ODBC 字串 Api 的 Unicode 的版本。  
+    -   匯出所有 ODBC 字串 Api 的 Unicode 版本。  
   
-    -   可以儲存及處理資料來源上的 Unicode 資料。  
+    -   可以在資料來源上儲存和處理 Unicode 資料。  
   
 > [!NOTE]  
->  16 位元 ODBC 驅動程式無法直接與 ODBC *3.x*驅動程式管理員。 但是，它可能是 16 位元驅動程式，才能使用 2.0 的 ODBC 驅動程式管理員，這後續 thunk 達*3.x*驅動程式管理員。
+>  16位 ODBC 驅動程式將無法直接*與 ODBC 3.X*驅動程式管理員搭配使用。 不過，16位驅動程式可能會與 2.0 ODBC 驅動程式管理員搭配使用，而這也是一種可轉型為*3.X 驅動程式管理員的方式*。

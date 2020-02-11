@@ -13,10 +13,10 @@ ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b70622ea038b61883ce7a5307a558a5667139fb1
-ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74491969"
 ---
 # <a name="odbcconfexe"></a>ODBCCONF.CONVERT.EXE
@@ -41,7 +41,7 @@ ODBCCONF [switches] action
 ## <a name="remarks"></a>備註  
  可用的參數如下：  
   
-|參數|描述|  
+|Switch|描述|  
 |------------|-----------------|  
 |/A {*action*}|指定動作。<br /><br /> 如果只指定一個動作，則/a 是選擇性的。|  
 |/?|顯示 ODBCCONF 的使用方式。CONVERT.EXE.|  
@@ -66,4 +66,4 @@ ODBCCONF [switches] action
 |SETFILEDSNDIR|當 HKEY_LOCAL_MACHINE \SOFTWARE\ODBC\ODBC. 時INI\ODBC 檔案 DSN\DefaultDSNDir 不存在，SETFILEDSNDIR 動作會建立該檔案，並為其指派位於 HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\CurrentVersion\CommonFilesDir 的值，並附加 \ODBC\Data 來源。<br /><br /> 位於 HKEY_LOCAL_MACHINE \SOFTWARE\ODBC\ODBC. 的值INI\ODBC File DSN\DefaultDSNDir 指定 ODBC 資料來源管理員在建立以檔案為基礎的資料來源時所使用的預設位置。<br /><br /> 例如：<br /><br /> /A {SETFILEDSNDIR}|  
   
 ## <a name="see-also"></a>另請參閱  
- [Microsoft 開放式資料庫連接（ODBC）](../odbc/microsoft-open-database-connectivity-odbc.md)
+ [Microsoft 開放式資料庫連接 (ODBC)](../odbc/microsoft-open-database-connectivity-odbc.md)

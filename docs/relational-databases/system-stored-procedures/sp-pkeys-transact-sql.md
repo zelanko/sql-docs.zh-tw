@@ -1,5 +1,5 @@
 ---
-title: sp_pkeys (TRANSACT-SQL) |Microsoft Docs
+title: sp_pkeys （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8ed0e041a6aa36027613059f16f3902bdb664aeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056420"
 ---
-# <a name="sppkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
+# <a name="sp_pkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回目前環境中單一資料表的主索引鍵資訊。  
@@ -42,16 +42,16 @@ sp_pkeys [ @table_name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @table_name= ] '*name*'  
- 是要傳回資訊的資料表。 *名稱*已**sysname**，沒有預設值。 不支援萬用字元的模式比對。  
+ [ @table_name= ]'*name*'  
+ 這是要傳回信息的資料表。 *名稱*是**sysname**，沒有預設值。 不支援萬用字元的模式比對。  
   
- [ @table_owner= ] '*owner*'  
- 指定已指定資料表的資料表擁有者。 *擁有者*已**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 如果*擁有者*未指定，套用基礎 dbms 的預設資料表可見性規則。  
+ [ @table_owner= ]「*擁有*者」  
+ 指定已指定資料表的資料表擁有者。 *owner*是**sysname**，預設值是 Null。 不支援萬用字元的模式比對。 如果未指定*owner* ，則會套用基礎 DBMS 的預設資料表可見度規則。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定之名稱的資料表，就會傳回該資料表的資料行。 如果*擁有者*未指定且目前使用者並未擁有指定的資料表*名稱*，此程序會尋找具有指定的資料表*名稱*所擁有資料庫擁有者。 如果資料表存在，就會傳回這份資料表的資料行。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定之名稱的資料表，就會傳回該資料表的資料行。 如果未指定*擁有*者，而且目前使用者並未擁有具有指定*名稱*的資料表，這個程式就會尋找資料庫擁有者所擁有之指定*名稱*的資料表。 如果資料表存在，就會傳回這份資料表的資料行。  
   
- [ @table_qualifier=] '*限定詞*'  
- 這是資料表限定詞。 *限定詞*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (_限定詞_ **。** _擁有者_ **。** _名稱_)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+ [ @table_qualifier= ]'*限定詞*'  
+ 這是資料表限定詞。 *限定詞*是**sysname**，預設值是 Null。 各種 DBMS 產品都支援三部分的資料表命名（辨識_符號_**。**_擁有_者 **。**_名稱_）。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
@@ -70,9 +70,9 @@ sp_pkeys [ @table_name = ] 'name'
 ## <a name="remarks"></a>備註  
  sp_pkeys 會傳回 PRIMARY KEY 條件約束所明確定義之資料行的相關資訊。 由於不是所有系統都支援明確具名的主索引鍵，因此，閘道實作者會判斷主索引鍵的構成要素。 請注意，主索引鍵一詞是指資料表的邏輯主索引鍵。 依照預期，列為邏輯主索引鍵的每個索引鍵都會定義一個唯一索引。 sp_statistics 也會傳回這個唯一索引。  
   
- Sp_pkeys 預存程序相當於 ODBC 中的 SQLPrimaryKeys。 傳回的結果依 TABLE_QUALIFIER、TABLE_OWNER、TABLE_NAME 和 KEY_SEQ 來排序。  
+ sp_pkeys 預存程序相當於 ODBC 中的 SQLPrimaryKeys。 傳回的結果依 TABLE_QUALIFIER、TABLE_OWNER、TABLE_NAME 和 KEY_SEQ 來排序。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要結構描述的 SELECT 權限。  
   
 ## <a name="examples"></a>範例  
@@ -86,7 +86,7 @@ EXEC sp_pkeys @table_name = N'Department'
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會擷取 `DimAccount` 資料庫之 `AdventureWorksPDW2012` 資料表的主索引鍵。 它會傳回零個資料列，表示資料表沒有主索引鍵。  
+ 下列範例會擷取 `DimAccount` 資料庫之 `AdventureWorksPDW2012` 資料表的主索引鍵。 它會傳回零個數據列，表示資料表沒有主鍵。  
   
 ```  
 -- Uses AdventureWorks  
@@ -95,7 +95,7 @@ EXEC sp_pkeys @table_name = N'DimAccount;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄預存程式](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

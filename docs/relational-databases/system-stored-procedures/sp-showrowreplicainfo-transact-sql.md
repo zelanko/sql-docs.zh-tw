@@ -1,5 +1,5 @@
 ---
-title: sp_showrowreplicainfo (TRANSACT-SQL) |Microsoft Docs
+title: sp_showrowreplicainfo （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032889"
 ---
-# <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
+# <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   顯示有關資料表中之資料列的資訊，用來作為合併式複寫的發行項。 這個預存程序執行於發行集資料庫的發行者端。  
@@ -40,13 +40,13 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @ownername = ] 'ownername'` 是資料表擁有者名稱。 *ownername*已**sysname**，預設值是 NULL。 如果資料庫包含多份同名資料表，但每一份都有不同的擁有者，便可以利用這個參數來區分資料表。  
+`[ @ownername = ] 'ownername'`這是資料表擁有者的名稱。 *ownername*是**sysname**，預設值是 Null。 如果資料庫包含多份同名資料表，但每一份都有不同的擁有者，便可以利用這個參數來區分資料表。  
   
-`[ @tablename = ] 'tablename'` 是包含傳回的資訊的資料列名稱。 *tablename*已**sysname**，預設值是 NULL。  
+`[ @tablename = ] 'tablename'`這是要傳回信息的資料列所在之資料表的名稱。 *tablename*是**sysname**，預設值是 Null。  
   
-`[ @rowguid = ] rowguid` 是資料列的唯一識別碼。 *rowguid*已**uniqueidentifier**，沒有預設值。  
+`[ @rowguid = ] rowguid`這是資料列的唯一識別碼。 *rowguid*是**uniqueidentifier**，沒有預設值。  
   
-`[ @show = ] 'show'` 決定要在結果集中傳回資料的量。 *顯示*已**nvarchar(20)** 兩者的預設值。 如果**資料列**，就會傳回資料列版本資訊。 如果**資料行**，就會傳回資料行版本資訊。 如果**兩者**、 資料列，並傳回資料行資訊。  
+`[ @show = ] 'show'`決定要在結果集中傳回的資訊量。 *show*是**Nvarchar （20）** ，預設值是 BOTH。 如果是**row**，則只會傳回資料列版本資訊。 如果資料**行**，則只會傳回資料行版本資訊。 如果**同時**傳回，則會傳回資料列和資料行資訊。  
   
 ## <a name="result-sets-for-row-information"></a>資料列資訊的結果集  
   
@@ -54,11 +54,11 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|建立資料列版本項目之主控資料庫的伺服器名稱。|  
 |**db_name**|**sysname**|建立這個項目的資料庫名稱。|  
-|**db_nickname**|**binary(6)**|建立這個項目的資料庫暱稱。|  
-|**version**|**int**|項目的版本。|  
-|**current_state**|**nvarchar(9)**|傳回資料列目前狀態的相關資訊。<br /><br /> **y** -資料列的資料代表資料列的目前狀態。<br /><br /> **n** -資料列的資料不代表資料列的目前狀態。<br /><br /> **\<n/a >** -不適用。<br /><br /> **\<不明 >** -無法判定目前的狀態。|  
-|**rowversion_table**|**nchar(17)**|指出是否將資料列版本儲存在[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)資料表或[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)資料表。|  
-|**註解**|**nvarchar(255)**|這個資料列版本項目的其他相關資訊。 這個欄位通常是空的。|  
+|**db_nickname**|**二進位（6）**|建立這個項目的資料庫暱稱。|  
+|**版本**|**int**|項目的版本。|  
+|**current_state**|**Nvarchar （9）**|傳回資料列目前狀態的相關資訊。<br /><br /> **y** -row 資料代表資料列的目前狀態。<br /><br /> **n** -row 資料不代表資料列的目前狀態。<br /><br /> n/a>-不適用。 ** \< **<br /><br /> 未知的>-無法判斷目前的狀態。 ** \< **|  
+|**rowversion_table**|**Nchar （17）**|指出資料列版本是否儲存在[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)資料表或[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)資料表中。|  
+|**加以**|**nvarchar(255)**|這個資料列版本項目的其他相關資訊。 這個欄位通常是空的。|  
   
 ## <a name="result-sets-for-column-information"></a>資料行資訊的結果集  
   
@@ -66,19 +66,19 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|建立資料行版本項目之主控資料庫的伺服器名稱。|  
 |**db_name**|**sysname**|建立這個項目的資料庫名稱。|  
-|**db_nickname**|**binary(6)**|建立這個項目的資料庫暱稱。|  
-|**version**|**int**|項目的版本。|  
+|**db_nickname**|**二進位（6）**|建立這個項目的資料庫暱稱。|  
+|**版本**|**int**|項目的版本。|  
 |**colname**|**sysname**|資料行版本項目所代表之發行項資料行的名稱。|  
-|**註解**|**nvarchar(255)**|這個資料行版本項目的其他相關資訊。 這個欄位通常是空的。|  
+|**加以**|**nvarchar(255)**|這個資料行版本項目的其他相關資訊。 這個欄位通常是空的。|  
   
 ## <a name="result-set-for-both"></a>這兩者的結果集  
- 如果該值**兩者**為選擇*顯示*，則會傳回資料列和資料行的結果集。  
+ 如果為*show*選擇了**這兩個**值，則會傳回資料列和資料行結果集。  
   
 ## <a name="remarks"></a>備註  
  **sp_showrowreplicainfo**用於合併式複寫中。  
   
-## <a name="permissions"></a>Permissions  
- **sp_showrowreplicainfo**的成員，才可執行**db_owner**固定的資料庫角色，發行集資料庫，或發行集資料庫之發行集存取清單 (PAL) 的成員。  
+## <a name="permissions"></a>權限  
+ **sp_showrowreplicainfo**只能由發行集資料庫上**db_owner**固定資料庫角色的成員或發行集資料庫之發行集存取清單（PAL）的成員執行。  
   
 ## <a name="see-also"></a>另請參閱  
  [偵測及解決合併式複寫衝突](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

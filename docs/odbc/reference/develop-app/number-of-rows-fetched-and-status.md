@@ -1,5 +1,5 @@
 ---
-title: 擷取的資料列的數目和狀態 |Microsoft Docs
+title: 提取的資料列數目和狀態 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: a069b979-5108-4905-932f-8ae8e7905ff2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc1f556873221faa3f86c5272120a786f6f25025
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086327"
 ---
 # <a name="number-of-rows-fetched-and-status"></a>擷取的資料列數目和狀態
-如果尚未設定 SQL_ATTR_ROWS_FETCHED_PTR 陳述式屬性，它會指定傳回的呼叫所提取的資料列數目的緩衝區**SQLFetch**或是**SQLFetchScroll**，和錯誤資料列。 （此數字是沒有狀態 SQL_ROW_NO_ROWS 的所有資料列計數）。在呼叫之後**SQLBulkOperations**或是**SQLSetPos**，緩衝區會包含由函式執行大量作業所影響的資料列數目。 如果尚未設定 sql_attr_row_status_ptr 設定陳述式屬性， **SQLFetch**或是**SQLFetchScroll**會傳回*資料列狀態陣列，* 以提供每個狀態傳回的資料列。 這兩個這些欄位所指向的緩衝區配置應用程式及驅動程式所填入。 應用程式必須確定這些指標保持有效，直到關閉資料指標。  
+如果已設定 SQL_ATTR_ROWS_FETCHED_PTR 語句屬性，它會指定一個緩衝區，傳回**SQLFetch**或**SQLFetchScroll**的呼叫所提取的資料列數，以及錯誤的資料列。 （此數目是所有沒有狀態 SQL_ROW_NO_ROWS 的資料列計數）。呼叫**SQLBulkOperations**或**SQLSetPos**之後，緩衝區會包含受到函數執行之大量作業影響的資料列數目。 如果已設定 SQL_ATTR_ROW_STATUS_PTR 語句屬性， **SQLFetch**或**SQLFetchScroll**會傳回資料*列狀態陣列，* 以提供每個傳回資料列的狀態。 這些欄位所指向的兩個緩衝區都會由應用程式佈建，並由驅動程式填入。 應用程式必須確保這些指標保持有效，直到資料指標關閉為止。  
   
- 資料列狀態陣列狀態中的項目是否已更新是否成功，擷取每個資料列加入，或刪除，因為它一次擷取，以及提取資料列時發生錯誤。 如果**SQLFetch**或**SQLFetchScroll**時發生錯誤擷取一個資料列的多資料列的資料列集，或如果**SQLBulkOperations**具有*作業* SQL_FETCH_BY_BOOKMARK 引數而發生錯誤時執行大量擷取、 SQL_ROW_ERROR 資料列狀態陣列中設定對應的值、 持續擷取資料列，以及會傳回 SQL_SUCCESS_WITH_INFO。 如需有關錯誤處理和資料列狀態陣列的詳細資訊，請參閱 < [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)並[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)函式描述。
+ 資料列狀態陣列中的專案會指出每個資料列是否已成功提取、是否已在上次提取之後更新、加入或刪除，以及是否在提取資料列時發生錯誤。 如果**SQLFetch**或**SQLFetchScroll**在抓取多資料列資料列集的一個資料列時發生錯誤，或如果**SQLBulkOperations**的*Operation*引數 SQL_FETCH_BY_BOOKMARK 在執行大量提取時發生錯誤，它會將資料列狀態陣列中對應的值設定為 SQL_ROW_ERROR、繼續提取資料列，然後傳回 SQL_SUCCESS_WITH_INFO。 如需有關錯誤處理和資料列狀態陣列的詳細資訊，請參閱[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)和[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)函數描述。

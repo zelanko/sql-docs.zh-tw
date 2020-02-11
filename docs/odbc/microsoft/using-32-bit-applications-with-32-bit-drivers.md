@@ -1,5 +1,5 @@
 ---
-title: 使用 32 位元應用程式與 32 位元驅動程式 |Microsoft Docs
+title: 使用32位應用程式搭配32位驅動程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,33 +14,33 @@ ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b4d14cc65b31a0641149ace931efe46c914ad1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088160"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>搭配使用 32 位元應用程式與 32 位元驅動程式
-您可以執行 32 位元應用程式與 32 位元驅動程式。 32 位元應用程式和 32 位元驅動程式會使用 Win32® API。  
+您可以使用32位驅動程式執行32位應用程式。 32位應用程式和32位驅動程式會使用 Win32® API。  
   
-## <a name="architecture"></a>Architecture  
- 下圖顯示如何為 32 位元應用程式與 32 位元驅動程式通訊。 應用程式會呼叫 32 位元驅動程式管理員，也就會呼叫 32 位元驅動程式。  
+## <a name="architecture"></a>架構  
+ 下圖顯示32位應用程式如何與32位驅動程式通訊。 應用程式會呼叫32位驅動程式管理員，進而呼叫32位驅動程式。  
   
- ![如何 32&#45;位元應用程式與 32 通訊&#45;位元驅動程式](../../odbc/microsoft/media/sdka6.gif "sdka6")  
+ ![32&#45;位應用程式如何與 32&#45;位驅動程式通訊](../../odbc/microsoft/media/sdka6.gif "sdka6")  
   
 > [!IMPORTANT]  
->  請勿在 WindowsNT/windows 2000 上使用 32 位元 thunk 安裝程式 DLL。 雖然有相同的檔案名稱，因為 32 位元安裝程式 DLL，它會是不同的 DLL。  
+>  請勿在 WindowsNT/Windows2000 上使用32位的 Thunking 安裝程式 DLL。 雖然它與32位安裝程式 DLL 具有相同的檔案名，但它是不同的 DLL。  
   
 ## <a name="administration"></a>系統管理  
- 您可以使用 ODBC 資料來源管理員來管理資料來源的 32 位元驅動程式。 若要開啟 ODBC 管理員，在執行 Windows 2000 的電腦上，開啟 Windows 控制台中，按兩下**系統管理工具**，然後按兩下**資料來源 (ODBC)** 。 在電腦上執行舊版的 Microsoft Windows，名為圖示**32 位元 ODBC**簡稱**ODBC**。  
+ 您可以使用 [ODBC 資料來源管理員] 來管理32位驅動程式的資料來源。 若要在執行 Windows 2000 的電腦上開啟 ODBC 系統管理員，請開啟 Windows [控制台]，按兩下 [系統**管理工具**]，然後按兩下 **[資料來源（ODBC）**]。 在執行舊版 Microsoft Windows 的電腦上，此圖示的名稱為**32 位 ODBC**或單純的**odbc**。  
   
 ## <a name="components"></a>元件  
- ODBC 元件包含下列檔案來執行 32 位元驅動程式的 32 位元應用程式。 這些元件是在 \Redist 目錄中。  
+ ODBC 元件包含下列檔案，可執行具有32位驅動程式的32位應用程式。 這些元件位於 \Redist 目錄中。  
   
-|[檔案名稱]|描述|  
+|檔案名稱|描述|  
 |---------------|-----------------|  
-|Odbc32.dll|32 位元驅動程式管理員|  
-|Odbccp32.dll|32 位元安裝程式 DLL|  
-|Odbcad32.exe|32 位元 ODBC 管理員程式|  
-|Odbcinst.hlp|安裝程式說明檔|  
-|Msvcrt40.dll|C 執行階段程式庫|
+|Odbc32.lib .dll|32位驅動程式管理員|  
+|Odbccp32 .dll|32位安裝程式 DLL|  
+|Odbcad32.exe .exe|32位 ODBC 系統管理員程式|  
+|Odbcinst .hlp|安裝程式說明檔|  
+|Msvcrt40 .dll|C 執行時間程式庫|

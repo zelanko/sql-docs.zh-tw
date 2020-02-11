@@ -1,5 +1,5 @@
 ---
-title: (transact-sql) |Microsoft Docs
+title: sysssislog （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d837049f36e4f7925f8e62a18987f51235f19c14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029615"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  針對封裝或它們的工作和容器在執行階段所產生的每個記錄項目，各包含一個資料列。 當您安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 時，會在 msdb 資料庫中建立這份資料表。 如果您將記錄工作設定成記錄到不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中，就會在指定的資料庫中建立這種格式的 sysssislog 資料表。  
+  針對封裝或它們的工作和容器在執行階段所產生的每個記錄項目，各包含一個資料列。 當您安裝[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]時，會在 msdb 資料庫中建立此資料表。 如果您將記錄工作設定成記錄到不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中，就會在指定的資料庫中建立這種格式的 sysssislog 資料表。  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 此資料表中寫入記錄項目**僅**套件時使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄提供者。  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]只有當封裝使用記錄提供者時，**才**會[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]寫入此資料表中的記錄專案。  
   
   
 |資料行名稱|資料類型|描述|  
@@ -39,7 +39,7 @@ ms.locfileid: "68029615"
 |event|**sysname**|產生記錄項目的事件名稱。|  
 |computer|**nvarchar**|產生記錄項目時，封裝執行所在的電腦。|  
 |! 運算子之後|**nvarchar**|產生記錄項目的封裝之執行者的使用者名稱。|  
-|來源|**nvarchar**|此封裝內產生記錄項目的可執行檔名稱。|  
+|source|**nvarchar**|此封裝內產生記錄項目的可執行檔名稱。|  
 |sourceid|**uniqueidentifier**|此封裝內產生記錄項目之可執行檔的 GUID。|  
 |executionid|**uniqueidentifier**|產生記錄項目之可執行檔執行個體的 GUID。|  
 |starttime|**datetime**|封裝開始執行的時間。|  

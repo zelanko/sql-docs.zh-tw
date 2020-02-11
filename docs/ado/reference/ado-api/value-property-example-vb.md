@@ -1,5 +1,5 @@
 ---
-title: 值屬性範例 (VB) |Microsoft Docs
+title: Value 屬性範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ebc1b9fcd12f17679787985d5653de01ebbdd435
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938787"
 ---
 # <a name="value-property-example-vb"></a>Value 屬性範例 (VB)
-此範例示範[值](../../../ado/reference/ado-api/value-property-ado.md)屬性[欄位](../../../ado/reference/ado-api/field-object.md)並[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件顯示欄位和屬性值的***員工***資料表。  
+這個範例會藉由顯示***employee 資料表的***欄位和屬性值，來示範具有[field](../../../ado/reference/ado-api/field-object.md)和[property](../../../ado/reference/ado-api/property-object-ado.md)物件的[Value](../../../ado/reference/ado-api/value-property-ado.md)屬性。  
   
 ```  
 'BeginValueVB  
@@ -102,5 +102,5 @@ End Sub
   
 ## <a name="see-also"></a>另請參閱  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
- [Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
+ [Property 物件（ADO）](../../../ado/reference/ado-api/property-object-ado.md)   
  [Value 屬性 (ADO)](../../../ado/reference/ado-api/value-property-ado.md)

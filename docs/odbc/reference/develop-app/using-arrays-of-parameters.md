@@ -14,42 +14,42 @@ ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf6b5127bac7aedf9e67918d38020c73a4afe186
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079605"
 ---
 # <a name="using-arrays-of-parameters"></a>使用參數陣列
-若要使用的應用程式會呼叫的參數陣列**SQLSetStmtAttr**具有*屬性*則 sql_attr_paramset_size 會以指定的參數集數目的引數。 它會呼叫**SQLSetStmtAttr**具有*屬性*SQL_ATTR_PARAMS_PROCESSED_PTR 指定變數的位址中驅動程式可傳回的處理，參數集數目的引數包括錯誤設定。 它會呼叫**SQLSetStmtAttr**具有*屬性*SQL_ATTR_PARAM_STATUS_PTR 指向用來傳回每個資料列的參數值的狀態資訊的陣列引數。 驅動程式會儲存在結構中的陳述式會維護這些位址。  
+若要使用參數陣列，應用程式會使用 SQL_ATTR_PARAMSET_SIZE 的*屬性*引數來呼叫**SQLSetStmtAttr** ，以指定參數集的數目。 它會使用 SQL_ATTR_PARAMS_PROCESSED_PTR 的*屬性*引數來呼叫**SQLSetStmtAttr** ，以指定變數的位址，而驅動程式可以在其中傳回已處理的參數集數目，包括錯誤集合。 它會使用 SQL_ATTR_PARAM_STATUS_PTR 的*屬性*引數來呼叫**SQLSetStmtAttr** ，以指向要在其中傳回每個參數值資料列之狀態資訊的陣列。 驅動程式會將這些位址儲存在它為語句維護的結構中。  
   
 > [!NOTE]  
->  在 ODBC 2。*x*， **SQLParamOptions**呼叫來指定多個參數的值。 在 ODBC 3。*x*，來呼叫**SQLParamOptions**已取代呼叫**SQLSetStmtAttr**設定則 sql_attr_paramset_size 會和 SQL_ATTR_PARAMS_PROCESSED_ARRAY 屬性.  
+>  在 ODBC 2 中。已呼叫*x*， **SQLParamOptions**為參數指定多個值。 在 ODBC 3 中。*x*，對**SQLParamOptions**的呼叫已被**SQLSetStmtAttr**的呼叫所取代，以設定 SQL_ATTR_PARAMSET_SIZE 和 SQL_ATTR_PARAMS_PROCESSED_ARRAY 屬性。  
   
- 然後再執行陳述式，應用程式會設定每個繫結陣列的每個元素的值。 當執行陳述式時，驅動程式會使用它來擷取參數值，並將它們傳送至資料來源所儲存的資訊可能的話，驅動程式應該傳送這些值做為陣列。 雖然使用參數陣列的最佳實作陣列與資料來源的單一呼叫中執行的所有參數的 SQL 陳述式中，這項功能目前不廣泛適用於 Dbms。 不過，驅動程式可以模擬它執行 SQL 陳述式多次，每個都具有單一參數集。  
+ 在執行語句之前，應用程式會設定每個系結陣列的每個元素的值。 執行語句時，驅動程式會使用它所儲存的資訊來抓取參數值，並將它們傳送至資料來源。可能的話，驅動程式應該將這些值當做陣列來傳送。 雖然使用參數陣列的最佳做法，是藉由對資料來源的單一呼叫執行包含陣列中所有參數的 SQL 語句，這項功能目前不會在 Dbms 中廣泛提供。 不過，驅動程式可以藉由多次執行 SQL 語句來模擬它，每個都有一組參數。  
   
- 應用程式使用的參數陣列之前，必須確定它們受到應用程式所使用的驅動程式。 有兩種方式可以執行此動作：  
+ 在應用程式使用參數陣列之前，必須先確定應用程式所使用的驅動程式支援它們。 作法有二：  
   
--   只要使用驅動程式已知能支援的參數陣列。 應用程式可以硬式編碼的名稱，這些驅動程式，或指示使用者可以使用這些驅動程式。 自訂應用程式和垂直應用程式通常使用一組有限的驅動程式。  
+-   僅使用已知支援參數陣列的驅動程式。 應用程式可以將這些驅動程式的名稱硬式編碼，或指示使用者只使用這些驅動程式。 自訂應用程式和垂直應用程式通常會使用一組有限的驅動程式。  
   
--   在執行階段檢查的參數陣列的支援。 如果可將 SQL_ATTR_PARAMSET_SIZE 陳述式屬性的值大於 1，驅動程式將支援參數陣列。 泛型應用程式和垂直應用程式常用的參數陣列的支援在執行階段檢查。  
+-   檢查執行時間的參數陣列支援。 如果可以將 SQL_ATTR_PARAMSET_SIZE 語句屬性設定為大於1的值，則驅動程式支援參數的陣列。 一般應用程式和垂直應用程式通常會在執行時間檢查參數陣列的支援。  
   
- 您可以藉由呼叫判斷資料列計數和參數化的執行中的結果集的可用性**SQLGetInfo**使用 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 選項。 針對**插入**，**更新**，並**刪除**陳述式，SQL_PARAM_ARRAY_ROW_COUNTS 選項指出是否要為個別的資料列計數 （一個用於每個參數集）可用 (SQL_PARC_BATCH) 或資料列的計數是否會彙總到一個 (SQL_PARC_NO_BATCH)。 針對**選取**陳述式，SQL_PARAM_ARRAY_SELECTS 選項會指出結果集是否可用於每個參數 (SQL_PAS_BATCH) 集，或只有一個結果集是否可用 (SQL_PAS_NO_BATCH)。 如果驅動程式不允許使用參數陣列來執行的結果集產生陳述式，SQL_PARAM_ARRAY_SELECTS 傳回 SQL_PAS_NO_SELECT。 是否可以與其他類型的陳述式，使用參數陣列，特別是因為使用這些陳述式中的參數會是資料來源特有的且會遵循 ODBC SQL 文法，這是來源特有的資料。  
+ 在參數化執行中，資料列計數和結果集的可用性可以藉由使用 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 選項來呼叫**SQLGetInfo**來判斷。 針對**INSERT**、 **UPDATE**和**DELETE**語句，SQL_PARAM_ARRAY_ROW_COUNTS 選項會指出個別資料列計數（每個參數集一個）是否可用（SQL_PARC_BATCH），或資料列計數是否匯總成一個（SQL_PARC_NO_BATCH）。 對於**SELECT**語句，SQL_PARAM_ARRAY_SELECTS 選項會指出每一組參數（SQL_PAS_BATCH）是否有可用的結果集，或是否只有一個可用的結果集（SQL_PAS_NO_BATCH）。 如果驅動程式不允許以參數陣列執行結果集產生的語句，SQL_PARAM_ARRAY_SELECTS 會傳回 SQL_PAS_NO_SELECT。 它是特定資料來源，不論參數陣列是否可以搭配其他類型的語句使用，尤其是因為在這些語句中使用參數會是資料來源特有的，而且不會遵循 ODBC SQL 文法。  
   
- SQL_ATTR_PARAM_OPERATION_PTR 陳述式屬性所指陣列可用來忽略的參數資料列。 若陣列項目設定為 SQL_PARAM_IGNORE，一組參數對應至該項目會從排除**SQLExecute**或是**SQLExecDirect**呼叫。 配置及填入應用程式和驅動程式讀取 SQL_ATTR_PARAM_OPERATION_PTR 屬性所指陣列。 如果擷取的資料列做為輸入參數，值的資料列狀態陣列可用參數作業陣列中。  
+ SQL_ATTR_PARAM_OPERATION_PTR 語句屬性所指向的陣列可以用來忽略參數的資料列。 如果陣列的元素設定為 SQL_PARAM_IGNORE，則會從**SQLExecute**或**SQLExecDirect**呼叫中排除對應至該元素的參數集合。 由應用程式佈建並填入 SQL_ATTR_PARAM_OPERATION_PTR 屬性所指向的陣列，並由驅動程式讀取。 如果將提取的資料列當做輸入參數使用，則可以在參數作業陣列中使用資料列狀態陣列的值。  
   
 ## <a name="error-processing"></a>錯誤處理  
- 如果在執行陳述式時發生錯誤，執行函式會傳回錯誤，並將資料列數的變數設定為包含錯誤的資料列數目。 是否所有資料列只不過執行設定 「 錯誤時，或設定 「 錯誤時是否所有資料列 （但不是能晚於） 之前執行，它就會是資料來源特有。 因為它處理的參數集時，驅動程式會設定目前正在處理的資料列數目 SQL_ATTR_PARAMS_PROCESSED_PTR 陳述式屬性所指定的緩衝區。 如果所有設定除了執行設定 「 錯誤時，驅動程式將設定這個緩衝區則 sql_attr_paramset_size 會處理所有資料列之後。  
+ 如果在執行語句時發生錯誤，執行函數會傳回錯誤，並將資料列編號變數設定為包含錯誤的資料列數目。 不論是否執行錯誤集以外的所有資料列，或是否執行錯誤集之前的所有資料列（但不是之後），它都是資料來源特有的。 由於它會處理參數集，因此驅動程式會將 SQL_ATTR_PARAMS_PROCESSED_PTR 語句屬性所指定的緩衝區設定為目前正在處理的資料列數目。 如果已執行除了錯誤集以外的所有集合，驅動程式會在處理所有資料列之後，將此緩衝區設定為 SQL_ATTR_PARAMSET_SIZE。  
   
- 如果尚未設定 SQL_ATTR_PARAM_STATUS_PTR 陳述式屬性， **SQLExecute**或是**SQLExecDirect**會傳回*參數狀態陣列，* 其中提供的狀態每個參數集。 參數狀態陣列是由應用程式配置，並填入驅動程式。 其項目會指出是否 SQL 陳述式執行成功的參數資料列，或是否正在處理的參數集時，發生錯誤。 發生錯誤時，驅動程式 SQL_PARAM_ERROR 參數狀態陣列中設定對應的值，並傳回 SQL_SUCCESS_WITH_INFO。 應用程式可以檢查狀態陣列來判斷哪些資料列已處理。 使用資料列數目，應用程式可以經常更正錯誤並繼續處理。  
+ 如果已設定 SQL_ATTR_PARAM_STATUS_PTR 語句屬性， **SQLExecute**或**SQLExecDirect**會傳回*參數狀態陣列，* 它會提供每個參數集的狀態。 參數狀態陣列是由應用程式佈建，並由驅動程式填入。 其元素會指出 SQL 語句是否已針對參數的資料列成功執行，或在處理參數集時是否發生錯誤。 如果發生錯誤，驅動程式會將參數狀態陣列中對應的值設定為 SQL_PARAM_ERROR 並傳回 SQL_SUCCESS_WITH_INFO。 應用程式可以檢查狀態陣列，以判斷哪些資料列已處理。 使用資料列編號，應用程式通常可以更正錯誤並繼續處理。  
   
- 使用參數狀態陣列的方式取決於呼叫所傳回的 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 選項**SQLGetInfo**。 針對**插入**，**更新**，並**刪除**陳述式，參數狀態陣列填入狀態資訊，如果 SQL_PARC_BATCH 會傳回 SQL_PARAM_ARRAY_ROW_COUNTS，但如果 SQL_PARC_NO_BATCH 會傳回。 針對**選取**陳述式，參數狀態陣列填入如果 SQL_PAS_BATCH 會傳回 SQL_PARAM_ARRAY_SELECT，但不是會傳回 SQL_PAS_NO_BATCH 或 SQL_PAS_NO_SELECT。  
+ 參數狀態陣列的使用方式取決於**SQLGetInfo**的呼叫所傳回的 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 選項。 針對**INSERT**、 **UPDATE**和**DELETE**語句，如果 SQL_PARAM_ARRAY_ROW_COUNTS 傳回 SQL_PARC_BATCH，參數狀態陣列就會填入狀態資訊，但如果傳回 SQL_PARC_NO_BATCH 則不會。 對於**SELECT**語句，如果 SQL_PARAM_ARRAY_SELECT 傳回 SQL_PAS_BATCH，則會填入參數狀態陣列，但如果傳回 SQL_PAS_NO_BATCH 或 SQL_PAS_NO_SELECT 則不會。  
   
-## <a name="data-at-execution-parameters"></a>資料在執行中參數  
- 如果任何長度/指標陣列中的值為 SQL_DATA_AT_EXEC 或結果的 SQL_LEN_DATA_AT_EXEC (*長度*) 巨集，這些值的資料會傳送具有**SQLPutData**以一般方式。 此程序的下列層面請特殊註解，因為它們不是明顯：  
+## <a name="data-at-execution-parameters"></a>資料執行中參數  
+ 如果長度/指標陣列中的任何值 SQL_DATA_AT_EXEC，或 SQL_LEN_DATA_AT_EXEC （*長度*）宏的結果，則會以一般方式以**SQLPutData**傳送這些值的資料。 此程式的下列層面會擲出特殊的批註，因為它們並不容易察覺：  
   
--   當驅動程式會傳回 SQL_NEED_DATA 時，它必須設定資料列數字變數的位址，它需要資料的資料列。 如所示的單一值的情況下，應用程式不能做出任何假設驅動程式會在其中要求單一參數集內的參數值的順序。 如果資料在執行中參數的執行中發生錯誤，SQL_ATTR_PARAMS_PROCESSED_PTR 陳述式屬性所指定的緩衝區會設定為在其發生錯誤，所指定之資料列狀態陣列中的資料列的狀態資料列數目SQL_ATTR_PARAM_STATUS_PTR 陳述式屬性設定為 SQL_PARAM_ERROR 和呼叫**SQLExecute**， **SQLExecDirect**， **SQLParamData**，或**SQLPutData**會傳回 SQL_ERROR。 如果未定義此緩衝區的內容，則**SQLExecute**， **SQLExecDirect**，或**SQLParamData**傳回 SQL_STILL_EXECUTING。  
+-   當驅動程式傳回 SQL_NEED_DATA 時，它必須將資料列編號變數的位址設定為它需要資料的資料列。 如同單一值的情況，應用程式無法對驅動程式將在單一參數集內要求參數值的順序做出任何假設。 如果執行資料執行中的參數時發生錯誤，則 SQL_ATTR_PARAMS_PROCESSED_PTR 語句屬性所指定的緩衝區會設定為發生錯誤之資料列的數目，SQL_ATTR_PARAM_STATUS_PTR 語句屬性所指定之資料列狀態陣列中的資料列狀態會設定為 SQL_PARAM_ERROR，而**SQLExecute**、 **SQLExecDirect**、 **SQLParamData**或**SQLPutData**的呼叫會傳回 SQL_ERROR。 如果**SQLExecute**、 **SQLExecDirect**或**SQLParamData**傳回 SQL_STILL_EXECUTING，此緩衝區的內容會是未定義的。  
   
--   因為此驅動程式不會解譯中的值*ParameterValuePtr*引數**SQLBindParameter**資料在執行中參數，如果應用程式提供的指標陣列，如**SQLParamData**不擷取並傳回此陣列項目的應用程式。 相反地，它會傳回純量值的應用程式有提供。 這表示所傳回的值**SQLParamData**才會不足以指定參數為其應用程式需要將資料傳送，應用程式也需要考慮目前的資料列數目。  
+-   因為驅動程式不會針對資料執行中參數解讀**SQLBindParameter**的*ParameterValuePtr*引數中的值，所以如果應用程式提供陣列的指標， **SQLParamData**就不會將此陣列的元素解壓縮並傳回給應用程式。 相反地，它會傳回應用程式所提供的純量值。 這表示**SQLParamData**所傳回的值不足以指定應用程式需要傳送資料的參數;應用程式也需要考慮目前的資料列數目。  
   
-     當只有一些參數陣列的項目是資料在執行中參數時，應用程式必須通過陣列中的地址*ParameterValuePtr*其中包含所有參數的項目。 這個陣列會被解譯通常不是資料在執行中參數的參數。 資料在執行參數值， **SQLParamData**提供給應用程式，通常無法用來識別資料驅動程式會要求在此情況下，一律為陣列的位址。
+     當只有部分參數陣列的元素是資料執行中參數時，應用程式必須在包含所有參數之專案的*ParameterValuePtr*中傳遞陣列的位址。 此陣列會針對不是資料執行中參數的參數，正常地加以解讀。 針對資料執行中的參數， **SQLParamData**提供給應用程式的值（通常可用來識別驅動程式在此情況下所要求的資料）一律是陣列的位址。

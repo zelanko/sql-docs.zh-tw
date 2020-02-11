@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_backup_db_config (TRANSACT-SQL) |Microsoft Docs
+title: managed_backup. fn_backup_db_config （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a23f8eb64ae99b999cdf6b16f1c888383a88c147
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067786"
 ---
-# <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
+# <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup. fn_backup_db_config （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   將 0、1 或更多資料列和[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態設定一起傳回。 針對指定的資料庫傳回 1 個資料列，或是傳回執行個體上以[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]設定之所有資料庫的資訊。  
@@ -44,7 +44,7 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
   
 ##  <a name="Arguments"></a> 引數  
  @db_name  
- 資料庫的名稱。 @db_name參數是 **SYSNAME**。 如果將空字串或 NULL 值傳遞給此參數，則會傳回 SQL Server 執行個體上所有資料庫的相關資訊。  
+ 資料庫的名稱。 @db_name參數為**SYSNAME**。 如果將空字串或 NULL 值傳遞給此參數，則會傳回 SQL Server 執行個體上所有資料庫的相關資訊。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
@@ -57,18 +57,18 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
 |credential_name|SYSNAME|用來驗證儲存體帳戶之 SQL 認證的名稱。 NULL 值表示未設定 SQL 認證。|  
 |retention_days|INT|目前的保留期限 (以天為單位)。 NULL 值表示從未設定此資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|  
 |is_managed_backup_enabled|INT|指出目前是否已啟用此資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 值 1 表示目前已啟用[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]，值 0 表示已停用此資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|  
-|storage_url|NVARCHAR(1024)|儲存體帳戶的 URL。|  
-|Encryption_algorithm|NCHAR(20)|傳回加密備份時所使用的目前加密演算法。|  
+|storage_url|NVARCHAR （1024）|儲存體帳戶的 URL。|  
+|Encryption_algorithm|NCHAR （20）|傳回加密備份時所使用的目前加密演算法。|  
 |Encryptor_type|NCHAR(15)|傳回加密程式設定：憑證或非對稱金鑰。|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|憑證或非對稱金鑰的名稱。|  
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
- 需要的成員資格**db_backupoperator**資料庫角色**ALTER ANY CREDENTIAL**權限。 使用者不應被拒絕**VIEW ANY DEFINITION**權限。  
+### <a name="permissions"></a>權限  
+ 需要具有**ALTER ANY CREDENTIAL**許可權之**db_backupoperator**資料庫角色中的成員資格。 使用者不應被拒絕**VIEW ANY DEFINITION**許可權。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]'TestDB' 的組態  
+ 下列範例會傳回 ' [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] TestDB ' 的設定  
   
  針對每個程式碼片段，請在語言屬性欄位中選取 'tsql'。  
   

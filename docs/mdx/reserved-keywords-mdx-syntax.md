@@ -1,5 +1,5 @@
 ---
-title: 保留的關鍵字 （MDX 語法） |Microsoft Docs
+title: 保留關鍵字（MDX 語法） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d88e78e49a52919ff710cd123ab2b25022aa5d1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037064"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>保留的關鍵字 (MDX 語法)
 
 
-  Analysis Services 會保留獨佔使用的特定關鍵字。 如需保留關鍵字的清單，請參閱 < [MDX 保留字](../mdx/mdx-reserved-words.md)。  
+  Analysis Services 保留特定關鍵字供其獨佔使用。 如需保留的關鍵字清單，請參閱[MDX 保留字](../mdx/mdx-reserved-words.md)。  
   
  保留關鍵字會遵循這些指導方針：  
   
@@ -29,6 +29,6 @@ ms.locfileid: "68037064"
 -   使用會避免用到保留關鍵字的命名慣例。 如果物件名稱必須看起來像保留關鍵字，您可移除子音或母音。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 語法元素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Mdx 語法元素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

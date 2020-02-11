@@ -1,5 +1,5 @@
 ---
-title: RDS 程式碼在 Visual Basic 中的範例 |Microsoft Docs
+title: Visual Basic 中的 RDS 程式碼範例 |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,20 +16,20 @@ ms.assetid: d9cb84a1-4ec2-4d41-8f92-dec2e17cde67
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 292f963ef1534cb9eb70e1e5a73d5f86af264181
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963772"
 ---
 # <a name="rds-code-examples-in-visual-basic"></a>Visual Basic 中的 RDS 程式碼範例
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 若要了解如何使用 RDS 屬性，在 Visual Basic 中撰寫時，使用下列程式碼範例。  
+ 使用下列程式碼範例，瞭解如何在 Visual Basic 中撰寫時使用 RDS 屬性。  
   
 > [!NOTE]
->  您的程式碼編輯器中，貼上整個程式碼範例中的，從以 End Sub，子。 如果使用部分的範例，或遺失段落格式時，此範例可能無法正確執行。  
+>  將完整的程式碼範例（從 Sub 到 End Sub）貼入程式碼編輯器中。 如果使用部分範例或遺失段落格式，則此範例可能無法正確執行。  
   
 ## <a name="properties"></a>屬性  
   

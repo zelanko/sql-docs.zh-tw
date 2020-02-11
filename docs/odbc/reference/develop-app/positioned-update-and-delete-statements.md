@@ -1,5 +1,5 @@
 ---
-title: 定位的 Update 和 Delete 陳述式 |Microsoft Docs
+title: 定位 Update 和 Delete 語句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,40 +16,40 @@ ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b37bdfae5f97a453477768aca39b801c06c0701
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68023289"
 ---
 # <a name="positioned-update-and-delete-statements"></a>定點更新和刪除陳述式
-應用程式可以更新或刪除目前的資料列結果集定位的 update 或 delete 陳述式。 定位的 update 和 delete 陳述式都受到某些資料來源，但並非全部。 若要判斷是否位於資料來源支援更新，以及 delete 陳述式，呼叫應用程式**SQLGetInfo**搭配 SQL_DYNAMIC_CURSOR_ATTRIBUTES1 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、 SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1*資訊類型*（取決於資料指標類型）。 請注意，ODBC 資料指標程式庫會模擬定位的 update 和 delete 陳述式。  
+應用程式可以使用定位 update 或 delete 語句來更新或刪除結果集中目前的資料列。 某些資料來源支援定位的 update 和 delete 語句，但並非全部。 若要判斷資料來源是否支援定位 update 和 delete 語句，應用程式會使用 SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* （視游標的類型而定）來呼叫**SQLGetInfo** 。 請注意，ODBC 資料指標程式庫會模擬定位的 update 和 delete 語句。  
   
- 若要使用定位的 update 或 delete 陳述式，應用程式必須建立結果集**選取用於更新**陳述式。 此陳述式的語法是：  
+ 若要使用定位的 update 或 delete 語句，應用程式必須使用**SELECT FOR update**語句來建立結果集。 此語句的語法為：  
   
- **SELECT** [**ALL** &#124; **DISTINCT**] *select-list*  
+ **選取**[**所有**&#124;**相異**]*選取清單*  
   
- **從** *資料表參考清單*  
+ **從***資料表參考清單*  
   
- [**何處** *搜尋條件*]  
+ [**WHERE** *搜尋條件*]  
   
- **FOR UPDATE OF** [*資料行名稱*[ **，** *資料行名稱*]...]  
+ **針對**[資料*行名稱*[，資料**** *行名稱*] 的更新]  
   
- 接著，應用程式會將游標置於要更新或刪除的資料列。 它可以執行這項操作藉由呼叫**SQLFetchScroll**擷取資料列集包含所需的資料列，然後呼叫**SQLSetPos**將資料列集資料指標置於該資料列上。 接著，應用程式不同的陳述式，比使用結果集的陳述式上，執行定位的 update 或 delete 陳述式。 這些陳述式的語法是：  
+ 然後，應用程式會將資料指標置於要更新或刪除的資料列上。 它可以藉由呼叫**SQLFetchScroll**來抓取包含所需資料列的資料列集，並呼叫**SQLSetPos**將資料列集資料指標放置在該資料列上，來達到此目的 然後，應用程式會在不同的語句上執行定位的 update 或 delete 語句，而不是結果集所使用的語句。 這些語句的語法如下：  
   
- **更新** *資料表名稱*  
+ **更新***資料表-名稱*  
   
- **設定** *資料行識別碼*  **=** {*運算式* &#124; **NULL**}  
+ **設定**資料*行識別碼* **=** {*expression* &#124; **Null**}  
   
- [ **，** *資料行識別碼*  **=** {*運算式* &#124; **NULL**}]...  
+ [**，** 資料*行識別碼* **=** {*expression* &#124; **Null**}] .。。  
   
- **WHERE CURRENT OF** *資料指標名稱*  
+ **其中目前的**資料*指標名稱*  
   
- **DELETE FROM** *資料表名稱* **WHERE CURRENT OF** *資料指標名稱*  
+ **從***資料表名稱*中刪除**目前的**資料*指標名稱*  
   
- 請注意，這些陳述式需要資料指標名稱。 應用程式可以指定資料指標名稱，與**SQLSetCursorName**執行建立結果的陳述式設定，或可以自動讓資料來源之前先建立資料指標時產生資料指標名稱。 在後者的情況下，應用程式會擷取此資料指標名稱，以用於定位的 update 和 delete 陳述式藉由呼叫**SQLGetCursorName**。  
+ 請注意，這些語句需要資料指標名稱。 應用程式可以在執行用來建立結果集的語句之前，使用**SQLSetCursorName**來指定資料指標名稱，或可讓資料來源在建立資料指標時自動產生資料指標名稱。 在後者的情況下，應用程式會藉由呼叫**SQLGetCursorName**，抓取這個資料指標名稱以用於定位 update 和 delete 語句。  
   
- 例如，下列程式碼可讓使用者捲動 [客戶] 資料表並刪除客戶資料錄或更新其地址和電話號碼。 它會呼叫**SQLSetCursorName**來指定資料指標名稱，然後才會建立客戶的結果集，並使用三個陳述式控制代碼： *hstmtCust*針對結果集*hstmtUpdate*定位的 update 陳述式，並*hstmtDelete*定位的 delete 陳述式。 雖然程式碼可以將不同的變數繫結至定位的 update 陳述式的參數，它會更新資料列集的緩衝區，並將這些緩衝區的元素繫結。 這可防止與更新的資料同步處理的資料列集緩衝區。  
+ 例如，下列程式碼可讓使用者流覽 Customers 資料表，並刪除客戶記錄或更新其位址和電話號碼。 它會呼叫**SQLSetCursorName**來指定資料指標名稱，然後再建立客戶的結果集，並使用三個語句控制碼：結果集的*hstmtCust* 、用於定位 update 語句的*hstmtUpdate* ，以及*hstmtDelete*的定位 delete 語句。 雖然程式碼可以將不同的變數系結至定位 update 語句中的參數，但它會更新資料列集緩衝區，並系結這些緩衝區的元素。 這會讓資料列集緩衝區與更新的資料保持同步。  
   
 ```  
 #define POSITIONED_UPDATE 100  

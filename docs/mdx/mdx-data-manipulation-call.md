@@ -1,5 +1,5 @@
 ---
-title: CALL 陳述式 (MDX) |Microsoft Docs
+title: CALL 語句（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: de74590ac4c43a9141c0ab2092babf41ffd23ba5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106306"
 ---
 # <a name="mdx-data-manipulation---call"></a>MDX 資料操作 - CALL
@@ -42,15 +42,15 @@ CALL SP_Name
  提供 Cube 名稱的有效字串 Cube 運算式。  
   
 ## <a name="remarks"></a>備註  
- **呼叫**陳述式會執行指定已註冊預存程序，選擇性地包括指定的預存程序的一或多個引數。 **呼叫**陳述式是只能搭配傳回空值的預存程序使用。 此陳述式無法與 MDX 運算式內的其他函數或運算子組合。 傳回值的已註冊預存程序可以直接在 MDX 運算式內呼叫，而且可與其他 MDX 函數與運算子組合。  
+ **CALL**語句會執行指定的已註冊預存程式，並選擇性地包含指定預存程式的一個或多個引數。 **CALL**語句僅適用于傳回空白的預存程式。 此陳述式無法與 MDX 運算式內的其他函數或運算子組合。 傳回值的已註冊預存程序可以直接在 MDX 運算式內呼叫，而且可與其他 MDX 函數與運算子組合。  
   
  如果沒有指定 Cube，陳述式會在目前 Cube 上執行預存程序。  
   
 > [!NOTE]  
->  如果預存程序未登錄在用戶端**呼叫**陳述式嘗試呼叫預存程序的執行個體從[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
+>  如果預存程式未在用戶端上註冊，則**call**語句會嘗試從的實例呼叫預存程式[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 資料操作陳述式&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [使用預存程序 &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)  
+ [Mdx&#41;&#40;mdx 資料動作陳述式](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [使用預存程式 &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.fn_cdc_get_max_lsn (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases fn_cdc_get_max_lsn （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c51a69eb3604b937b9bf2aaf9a09aa383f2c1490
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046447"
 ---
-# <a name="sysfncdcgetmaxlsn-transact-sql"></a>sys.fn_cdc_get_max_lsn (Transact-SQL)
+# <a name="sysfn_cdc_get_max_lsn-transact-sql"></a>sys.fn_cdc_get_max_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回的最大記錄序號 (LSN) 中的 start_lsn 資料行從[cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)系統資料表。 您可以使用這個函數，針對任何擷取執行個體傳回異動資料擷取時間表的高端點。  
+  從[cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)系統資料表中的 start_lsn 資料行傳回最大記錄序號（LSN）。 您可以使用這個函數，針對任何擷取執行個體傳回異動資料擷取時間表的高端點。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,15 +41,15 @@ ms.locfileid: "68046447"
 sys.fn_cdc_get_max_lsn ()  
 ```  
   
-## <a name="return-types"></a>傳回類型  
- **binary(10)**  
+## <a name="return-types"></a>傳回型別  
+ **binary （10）**  
   
 ## <a name="remarks"></a>備註  
- 此函式的 start_lsn 資料行中傳回的最大 LSN [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)資料表。 因此，它就是變更傳播至資料庫變更資料表時，由擷取處理序所處理的最後一個 LSN。 此外，它會當做所有時間表 (與針對資料庫定義的擷取執行個體相關聯) 的高端點使用。  
+ 此函數會傳回[cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)資料表的 start_lsn 資料行中的最大 LSN。 因此，它就是變更傳播至資料庫變更資料表時，由擷取處理序所處理的最後一個 LSN。 此外，它會當做所有時間表 (與針對資料庫定義的擷取執行個體相關聯) 的高端點使用。  
   
  此函數通常是用來取得查詢間隔的適當高端點。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 public 資料庫角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
@@ -77,7 +77,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [fn_cdc_get_min_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
  [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

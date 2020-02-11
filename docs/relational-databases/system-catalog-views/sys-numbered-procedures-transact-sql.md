@@ -1,5 +1,5 @@
 ---
-title: sys.numbered_procedures (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases numbered_procedures （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d0fa4c5ef671d643f85fa2a1a2d0caa62d00d86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68102306"
 ---
-# <a name="sysnumberedprocedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
+# <a name="sysnumbered_procedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  針對建立為編號程序的每個 SQL Server 預存程序，各包含一個資料列。 這並不會顯示基底 (數字 = 1) 預存程序的一個資料列。 基底的預存程序的項目可以檢視中找到這類**sys.objects**並**sys.procedures**。  
+  針對建立為編號程序的每個 SQL Server 預存程序，各包含一個資料列。 這並不會顯示基底 (數字 = 1) 預存程序的一個資料列。 基底預存程式的專案可以在如**sys.databases**和**sys.databases**等視圖中找到。  
   
 > [!IMPORTANT]  
 >  編號程序已被取代。 不再使用編號程序。 當編譯使用這份目錄檢視的查詢時，會引發 DEPRECATION_ANNOUNCEMENT 事件。  
@@ -39,16 +39,16 @@ ms.locfileid: "68102306"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|預存程序的物件識別碼。|  
 |**procedure_number**|**smallint**|這個程序在物件內的編號，大於或等於 2。|  
-|**定義**|**nvarchar(max)**|定義這個程序的 SQL Server 文字。<br /><br /> NULL = 已加密。|  
+|**清晰**|**nvarchar(max)**|定義這個程序的 SQL Server 文字。<br /><br /> NULL = 已加密。|  
   
 > [!NOTE]  
 >  編號程序並不支援 XML 和 CLR 參數。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

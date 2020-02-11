@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_profileaccount_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_help_profileaccount_sp （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c4f0ceb580ddc7538dd1ea98b9e08a82cd8d35b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044491"
 ---
-# <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
+# <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   列出與一個或多個 Database Mail 設定檔相關聯的帳戶。  
@@ -43,16 +43,16 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @profile_id = ] profile_id` 是清單的設定檔的設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
+`[ @profile_id = ] profile_id`這是要列出之設定檔的設定檔識別碼。 *profile_id*是**int**，預設值是 Null。 必須指定*profile_id*或*profile_name* 。  
   
-`[ @profile_name = ] 'profile_name'` 是清單的設定檔的設定檔名稱。 *profile_name*已**sysname**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
+`[ @profile_name = ] 'profile_name'`這是要列出之設定檔的設定檔名稱。 *profile_name*是**sysname**，預設值是 Null。 必須指定*profile_id*或*profile_name* 。  
   
-`[ @account_id = ] account_id` 這是帳戶識別碼清單。 *account_id*已**int**，預設值是 NULL。 當*account_id*並*account_name*都是 NULL，會列出設定檔中的所有帳戶。  
+`[ @account_id = ] account_id`這是要列出的帳戶識別碼。 *account_id*是**int**，預設值是 Null。 當*account_id*和*ACCOUNT_NAME*都是 Null 時，會列出設定檔中的所有帳戶。  
   
-`[ @account_name = ] 'account_name'` 是要列出名稱。 *account_name*已**sysname**，預設值是 NULL。 當*account_id*並*account_name*都是 NULL，會列出設定檔中的所有帳戶。  
+`[ @account_name = ] 'account_name'`這是要列出的帳戶名稱。 *account_name*是**sysname**，預設值是 Null。 當*account_id*和*ACCOUNT_NAME*都是 Null 時，會列出設定檔中的所有帳戶。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
  傳回含下列資料行的結果集。  
@@ -67,15 +67,15 @@ sysmail_help_profileaccount_sp
 |**sequence_number**|**int**|帳戶在設定檔內的序號。|  
   
 ## <a name="remarks"></a>備註  
- 若未*profile_id*或是*profile_name*指定，此預存程序會傳回執行個體中的每個設定檔的資訊。  
+ 當未指定*profile_id*或*profile_name*時，這個預存程式會傳回實例中每個設定檔的資訊。  
   
- 預存程序**sysmail_help_profileaccount_sp**處於**msdb**資料庫中，擁有者**dbo**結構描述。 此程序必須利用三部分名稱來執行，如果目前的資料庫不是**msdb**。  
+ 預存程式**sysmail_help_profileaccount_sp**在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱來執行此程式。  
   
-## <a name="permissions"></a>Permissions  
- 執行此程序預設值，成員的權限**sysadmin**固定的伺服器角色。  
+## <a name="permissions"></a>權限  
+ 此程式的執行許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
- **A.依名稱列出特定設定檔帳戶**  
+ **A. 依名稱列出特定設定檔的帳戶**  
   
  下列範例會顯示如何指定設定檔名稱來列出 `AdventureWorks Administrator` 設定檔的資訊。  
   
@@ -93,7 +93,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **B.特定的設定檔依設定檔識別碼列出的帳戶**  
+ **B. 依設定檔識別碼列出特定設定檔的帳戶**  
   
  下列範例會顯示如何指定設定檔的設定檔識別碼來列出 `AdventureWorks Administrator` 設定檔的資訊。  
   
@@ -111,7 +111,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **C.列出所有設定檔的帳戶**  
+ **C. 列出所有設定檔帳戶**  
   
  下列範例會顯示如何列出執行個體中之所有設定檔的帳戶。  
   
@@ -132,7 +132,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 ## <a name="see-also"></a>另請參閱  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [建立 Database Mail 帳戶](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Database Mail 組態物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Database Mail 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail 設定物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Database Mail 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

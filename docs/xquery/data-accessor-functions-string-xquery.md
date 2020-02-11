@@ -1,5 +1,5 @@
 ---
-title: 字串函數 (XQuery) |Microsoft Docs
+title: string 函數（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038937"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>資料存取子函式 - string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  傳回的值 *$arg*表示為字串。  
+  傳回以字串表示的 *$arg*值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,21 +41,21 @@ fn:string($arg as item()?) as xs:string
   
 ## <a name="remarks"></a>備註  
   
--   如果 *$arg*是空的序列，會傳回長度為零的字串。  
+-   如果 *$arg*是空的序列，則會傳回長度為零的字串。  
   
--   如果 *$arg*是一個節點，函式傳回的字串值使用字串值存取子所取得的節點。 這定義在 W3C XQuery 1.0 及 XPath 2.0 Data Model 規格中。  
+-   如果 *$arg*是節點，此函數會傳回使用字串值存取子所取得之節點的字串值。 這定義在 W3C XQuery 1.0 及 XPath 2.0 Data Model 規格中。  
   
--   如果 *$arg*是不可部分完成的值，函式會傳回相同的字串轉換為運算式所傳回**xs: string**， *$arg*，明時除外。  
+-   如果 *$arg*是不可部分完成的值，此函式會傳回運算式轉換成**xs： string**， *$arg*的相同字串，除非另有說明。  
   
--   如果類型 *$arg*是**xs: anyuri**，URI 會轉換成字串，而不需要逸出特殊字元。  
+-   如果 *$arg*的類型為**xs： ANYURI**，則 URI 會轉換成字串，而不會將特殊字元轉義。  
   
--   實行中， **fn: string**沒有引數僅適用於內容相依述詞的內容中。 具體而言，它只能在括號 ([ ]) 內使用。  
+-   沒有引數的 Inthis 執行、 **fn： string （）** 只能用於內容相依述詞的內容中。 具體而言，它只能在括號 ([ ]) 內使用。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的 AdventureWorks 資料庫。  
+ 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存在 AdventureWorks 資料庫的各種**xml**類型資料行中。  
   
 ### <a name="a-using-the-string-function"></a>A. 使用字串函數  
- 下列查詢會擷取 <`Features`> 子元素節點 <`ProductDescription`> 項目。  
+ 下列查詢會抓取 <`Features` `ProductDescription`> 元素的 <> 子項目節點。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -79,7 +79,7 @@ WHERE ProductModelID=19
 </PD:Features>  
 ```  
   
- 如果您指定**string （)** 函式，您會收到指定的節點的字串值。  
+ 如果您指定**string （）** 函式，就會收到指定節點的字串值。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -98,7 +98,7 @@ These are the product highlights.
 ```  
   
 ### <a name="b-using-the-string-function-on-various-nodes"></a>B. 在不同節點上使用字串函數  
- 在以下範例中，XML 執行個體會指定給一個 xml 類型變數。 指定查詢以說明套用的結果**string （)** 對不同節點。  
+ 在以下範例中，XML 執行個體會指定給一個 xml 類型變數。 系統會指定查詢，以說明將**string （）** 套用至各種節點的結果。  
   
 ```  
 declare @x xml  
@@ -145,6 +145,6 @@ This is a comment
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [針對 xml 資料類型的 XQuery 函式](../xquery/xquery-functions-against-the-xml-data-type.md)  
+ [針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

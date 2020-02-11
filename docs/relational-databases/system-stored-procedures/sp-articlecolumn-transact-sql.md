@@ -1,5 +1,5 @@
 ---
-title: sp_articlecolumn & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_articlecolumn （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: acbbd043080b107a5d545408fabe271d62015e54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105082"
 ---
-# <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
+# <a name="sp_articlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   用來指定發行項所包括的資料行，以垂直篩選已發行之資料表的資料。 這個預存程序執行於發行集資料庫的發行者端。  
@@ -47,62 +47,62 @@ sp_articlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'` 是包含此發行項的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'`這是包含本文的發行集名稱。 *發行*集是**sysname**，沒有預設值。  
   
-`[ @article = ] 'article'` 是發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
+`[ @article = ] 'article'`這是發行項的名稱。 *文章*是**sysname**，沒有預設值。  
   
-`[ @column = ] 'column'` 是要加入或卸除的資料行的名稱。 *資料行*已**sysname**，預設值是 NULL。 如果是 NULL，就會發行所有資料行。  
+`[ @column = ] 'column'`這是要加入或卸載的資料行名稱。 資料*行*是**sysname**，預設值是 Null。 如果是 NULL，就會發行所有資料行。  
   
-`[ @operation = ] 'operation'` 指定是否要加入或卸除發行項中的資料行。 *作業*已**nvarchar(5)** ，預設值是 add。 **新增**標示複寫的資料行。 **卸除**會取消標示資料行。  
+`[ @operation = ] 'operation'`指定是否要在發行項中加入或卸載資料行。 *operation*是**Nvarchar （5）**，預設值是 add。 [**加入**] 會標示要複寫的資料行。 **drop**會取消資料行的標記。  
   
-`[ @refresh_synctran_procs = ] refresh_synctran_procs` 指定是否支援立即更新訂閱的預存程序會重新產生以符合複寫的資料行數目。 *refresh_synctran_procs*已**位元**，預設值是**1**。 如果**1**，預存程序會重新產生。  
+`[ @refresh_synctran_procs = ] refresh_synctran_procs`指定是否重新產生支援立即更新訂閱的預存程式，以符合複寫的資料行數目。 *refresh_synctran_procs*是**bit**，預設值是**1**。 如果是**1**，就會重新產生預存程式。  
   
-`[ @ignore_distributor = ] ignore_distributor` 指出是否此預存程序執行而不需要連線到散發者。 *ignore_distributor*已**位元**，預設值是**0**。 如果**0**、 發行，必須啟用資料庫和發行項快取重新整理以反映新的資料行所複寫的發行項。 如果**1**，可讓發行項的資料行是要卸除之發行項的未發行的資料庫中，只用於修復的情況。  
+`[ @ignore_distributor = ] ignore_distributor`指出此預存程式是否在未連接到散發者的情況下執行。 *ignore_distributor*是**bit**，預設值是**0**。 如果是**0**，就必須啟用資料庫以供發行，而且應該重新整理髮行項快取，以反映發行項所複寫的新資料行。 如果是**1**，則允許卸載位於未發行之資料庫中的發行項的發行項資料行;只能在復原情況中使用。  
   
-`[ @change_active = ] change_active` 可讓您修改中有訂用帳戶的發行集的資料行。 *change_active*已**int**預設值是**0**。 如果**0**，不會修改資料行。 如果**1**，可以加入或從作用中有訂用帳戶的發行項中卸除資料行。  
+`[ @change_active = ] change_active`允許修改具有訂閱之發行集的資料行。 *change_active*是**int** ，預設值是**0**。 如果是**0**，則不會修改資料行。 如果是**1**，則可以從具有訂閱的使用中發行項加入或卸載資料行。  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 認可這個預存程序所採取的動作可能會使現有的快照集。 *force_invalidate_snapshot*已**位元**，預設值是**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`認可這個預存程式所採取的動作可能會使現有的快照集失效。 *force_invalidate_snapshot*是**bit**，預設值是**0**。  
   
  **0**指定發行項的變更不會使快照集失效。 如果預存程序偵測到變更需要新的快照集，就會發生錯誤，且不會進行任何變更。  
   
- **1**指定發行項的變更可能使快照集失效，如果有現有的訂閱需要新的快照集，提供權限來標示為已棄用之現有快照集和產生新的快照集。  
+ **1**指定發行項的變更可能會導致快照集無效，如果有現有的訂閱需要新的快照集，則會提供要標示為已淘汰之現有快照集的許可權，並產生新的快照集。  
   
- [ **@force_reinit_subscription =** ] *force_reinit_subscription*  
- 認可這個預存程序所採取的動作可能需要重新初始化現有的訂閱。 *force_reinit_subscription*已**位元**，預設值是**0**。  
+ [**@force_reinit_subscription =** ]*force_reinit_subscription*  
+ 認可這個預存程序所採取的動作可能需要重新初始化現有的訂閱。 *force_reinit_subscription*是**bit**，預設值是**0**。  
   
- **0**指定發行項的變更不會使訂閱重新初始化。 如果預存程序偵測到變更需要重新初始化訂閱，就會發生錯誤，且不會進行任何變更。 **1**指定發行項的變更會使現有的訂閱重新初始化，並提供發生之訂閱重新初始化的權限。  
+ **0**指定發行項的變更不會使訂閱重新初始化。 如果預存程序偵測到變更需要重新初始化訂閱，就會發生錯誤，且不會進行任何變更。 **1**指定發行項的變更會使現有的訂閱重新初始化，並提供將發生之訂閱重新初始化的許可權。  
   
-`[ @publisher = ] 'publisher'` 指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
+`[ @publisher = ] 'publisher'`指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  *發行者*不應使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
+>  *發行者*不應用於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
   
-`[ @internal = ] 'internal'` 僅供內部使用。  
+`[ @internal = ] 'internal'`僅供內部使用。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_articlecolumn**用於快照式複寫和異動複寫。  
+ **sp_articlecolumn**用於快照式複寫和異動複寫中。  
   
- 您可以使用篩選的取消訂閱發行項**sp_articlecolumn**。  
+ 只有取消訂閱的發行項可以使用**sp_articlecolumn**進行篩選。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articlecolumn-transac_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_articlecolumn**。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_articlecolumn**。  
   
 ## <a name="see-also"></a>另請參閱  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
- [定義及修改資料行篩選](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
+ [定義和修改資料行篩選](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
  [篩選發行的資料](../../relational-databases/replication/publish/filter-published-data.md)   
- [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articleview &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
- [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helparticlecolumns &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
+ [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_articleview &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
+ [sp_changearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [sp_droparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_helparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

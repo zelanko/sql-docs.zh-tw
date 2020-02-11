@@ -1,5 +1,5 @@
 ---
-title: 間隔和數值資料類型的指導方針 |Microsoft Docs
+title: 間隔和數值資料類型的方針 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 28a879a1-666e-4183-b731-d36b584d5d86
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ced117b492a366d69e72a5780f8091627ede7921
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041650"
 ---
 # <a name="guidelines-for-interval-and-numeric-data-types"></a>間隔和數值資料類型的方針
-下列各節來解決間隔和數值資料類型。  
+下列各節會解決 interval 和 numeric 資料類型。  
   
 -   [間隔資料類型](../../../odbc/reference/appendixes/interval-data-types.md)  
   

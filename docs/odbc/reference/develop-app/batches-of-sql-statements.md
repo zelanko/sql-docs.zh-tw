@@ -1,5 +1,5 @@
 ---
-title: SQL 陳述式的批次 |Microsoft Docs
+title: SQL 語句的批次 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f7264b17c13d6b66bf1be24da81e96a4ca3e8a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122825"
 ---
 # <a name="batches-of-sql-statements"></a>SQL 陳述式的批次
-批次的 SQL 陳述式是一組兩個或多個 SQL 陳述式或單一的 SQL 陳述式具有一組兩個或多個 SQL 陳述式相同的效果。 在某些實作中，會將整個批次陳述式執行之前未提供任何結果。 這通常會較有效率，比個別提交陳述式，因為通常可降低網路流量，而且資料來源有時可以最佳化執行 SQL 陳述式的批次。 在其他實作中，呼叫**SQLMoreResults**觸發的批次中的下一個陳述式。 ODBC 支援下列類型的批次：  
+SQL 語句的批次是兩個或多個 SQL 語句或單一 SQL 語句的群組，與兩個或多個 SQL 語句的群組具有相同的效果。 在某些實現中，整個批次語句會在任何可用的結果之前執行。 這通常比單獨提交語句更有效率，因為網路流量通常會降低，而且資料來源有時可以優化 SQL 語句批次的執行。 在其他執行中，呼叫**SQLMoreResults**會觸發批次中下一個語句的執行。 ODBC 支援下列批次類型：  
   
--   **明確的批次** *明確的批次*是以分號 （;） 分隔的兩個或多個 SQL 陳述式。 例如，下列批次的 SQL 陳述式會開啟新的銷售訂單。 這需要將 Orders 與 程式行的資料表中插入資料列。 請注意最後一個陳述式之後沒有任何分號。  
+-   **明確批次***明確批次*是以分號（;) 分隔的兩個或多個 SQL 語句。 例如，下列 SQL 語句批次會開啟新的銷售訂單。 這需要將資料列插入 Orders 和 Lines 資料表。 請注意，最後一個語句後面沒有分號。  
   
     ```  
     INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  
@@ -39,7 +39,7 @@ ms.locfileid: "68122825"
        VALUES (2002, 4, 412, 500)  
     ```  
   
--   **程序**如果程序包含一個以上的 SQL 陳述式，它會被視為 SQL 陳述式的批次。 例如，下列 SQL Server 專屬的陳述式會建立傳回包含客戶和結果集，列出該客戶所有開啟銷售訂單資訊的結果集的程序：  
+-   **程式**如果套裝程式含一個以上的 SQL 語句，就會被視為 SQL 語句的批次。 例如，下列 SQL Server 特定的語句會建立一個傳回結果集的程式，其中包含客戶的相關資訊，以及列出該客戶所有開放式銷售訂單的結果集：  
   
     ```  
     CREATE PROCEDURE GetCustInfo (@CustomerID INT) AS  
@@ -48,18 +48,18 @@ ms.locfileid: "68122825"
           WHERE CustID = @CustomerID AND Status = 'OPEN'  
     ```  
   
-     **CREATE PROCEDURE**陳述式本身不是批次的 SQL 陳述式。 不過，它會建立程序是批次的 SQL 陳述式。 沒有分號分隔的兩個**選取**陳述式因為 **CREATE PROCEDURE** 陳述式是 SQL Server 特定的而且 SQL Server 不需要分號來分隔多個陳述式 **CREATE PROCEDURE** 陳述式。  
+     **CREATE PROCEDURE**語句本身不是 SQL 語句的批次。 不過，它所建立的程式是 SQL 語句的批次。 這兩個**SELECT**語句不會以分號分隔，因為**create procedure**語句專屬於 SQL Server，而且 SQL Server 不需要分號來分隔**CREATE procedure**語句中的多個語句。  
   
--   **參數陣列**參數陣列可以搭配參數化的 SQL 陳述式，以執行大量作業的有效方法。 例如，使用參數陣列，使用下列**插入**陳述式，以插入幾行的資料表中的多個資料列，執行只有單一 SQL 陳述式時：  
+-   **參數陣列**參數陣列可以與參數化 SQL 語句搭配使用，以做為執行大量作業的有效方式。 例如，參數陣列可以搭配下列**insert**語句使用，以在執行單一 SQL 語句時，將多個資料列插入至行資料表：  
   
     ```  
     INSERT INTO Lines (OrderID, Line, PartID, Quantity)  
        VALUES (?, ?, ?, ?)  
     ```  
   
-     如果資料來源不支援參數陣列，此驅動程式可以模擬它們執行 SQL 陳述式，針對每個參數集執行一次。 如需詳細資訊，請參閱[陳述式參數](../../../odbc/reference/develop-app/statement-parameters.md)並[參數值的陣列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)稍後這一節。  
+     如果資料來源不支援參數陣列，驅動程式可以針對每個參數集執行一次 SQL 語句來模擬它們。 如需詳細資訊，請參閱本節稍後的[語句參數](../../../odbc/reference/develop-app/statement-parameters.md)和[參數值的陣列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)。  
   
- 以互通的方式，不能混合不同類型的批次。 也就是應用程式如何判斷執行明確的批次包含程序的結果呼叫明確的批次所使用的參數，陣列，並使用參數陣列的程序呼叫是特定驅動程式。  
+ 不同類型的批次無法以互通方式混合使用。 也就是說，應用程式如何判斷執行包含程序呼叫之明確批次的結果、使用參數陣列的明確批次，以及使用參數陣列的程序呼叫，都是驅動程式特有的。  
   
  此章節包含下列主題。  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xe_map_values (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_xe_map_values （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,30 +20,30 @@ ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6eb770951e48f7145311fb75de18a17236a09d7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090324"
 ---
-# <a name="sysdmxemapvalues-transact-sql"></a>sys.dm_xe_map_values (Transact-SQL)
+# <a name="sysdm_xe_map_values-transact-sql"></a>sys.dm_xe_map_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回內部數值索引鍵與人們可讀取之文字的對應。  
  
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(256)**|對應的名稱。 在本機系統，名稱是唯一的。 不可為 Null。|  
+|NAME|**nvarchar(256)**|對應的名稱。 名稱在本機系統中是唯一的。 不可為 Null。|  
 |object_package_guid|**uniqueidentifier**|包含對應之封裝的 GUID。 不可為 Null。|  
 |map_key|**int**|內部索引鍵值。 不可為 Null。|  
-|map_value|**nvarchar(3072)**|索引鍵值的描述。 不可為 Null。|  
+|map_value|**Nvarchar （3072）**|索引鍵值的描述。 不可為 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ### <a name="relationship-cardinalities"></a>關聯性基數  
   
-|來源|若要|關聯性|  
+|從|至|關聯性|  
 |----------|--------|------------------|  
 |dm_xe_map_values.object_package_guid<br /><br /> dm_xe_map_values.name|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|多對一| 
   

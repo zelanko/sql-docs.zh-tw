@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_system_memory_consumers & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.databases dm_xtp_system_memory_consumers （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 83e9368b562a7ac200171dc814830b21d677770a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090089"
 ---
-# <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
+# <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  報告 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的系統層級記憶體取用者。 （如果配置系統執行緒內容中），這些取用者的記憶體來自預設集區 （當配置的使用者執行緒內容中） 或內部集區。  
+  報告 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的系統層級記憶體取用者。 這些取用者的記憶體來自預設集區（當配置是在使用者執行緒的內容中）或來自內部集區（如果配置是在系統執行緒的內容中）。  
   
 ```  
 -- system memory consumers @ instance  
@@ -37,16 +37,16 @@ select * from sys.dm_xtp_system_memory_consumers
   
  如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
-|資料行名稱|type|描述|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
-|memory_consumer_id|**bigint**|記憶體取用者的內部識別碼。|  
-|memory_consumer_type|**int**|整數，代表類型的記憶體取用者具有下列值之一：<br /><br /> 0-它應該不會顯示。 彙總兩個以上取用者的記憶體使用量。<br /><br /> 1-對應：追蹤系統對應的記憶體耗用量。<br /><br /> 2-VARHEAP:追蹤可變長度堆積的記憶體耗用量。<br /><br /> 4-IO 分頁集區：追蹤用於 IO 作業之系統分頁集區的記憶體耗用量。|  
-|memory_consumer_type_desc|**nvarchar(16)**|記憶體取用者類型的描述：<br /><br /> 0-它應該不會顯示。<br /><br /> 1-對應<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|記憶體取用者執行個體的描述：<br /><br /> VARHEAP: <br />系統堆積。 一般用途。 目前只用來配置記憶體回收工作項目。<br />-或-<br />對應堆積。 當對應清單中包含的項目數達到預先決定的上限時 (通常大約 5,000 個項目)，對應就會加以使用。<br /><br /> PGPOOL:針對 IO 系統集區，有會是三個不同的大小：系統 4k 分頁集區、 系統 64 K 分頁集區和系統 256k 分頁集區。|  
-|lookaside_id|**bigint**|執行緒本機、對應記憶體提供者的識別碼。|  
-|pagepool_id|**bigint**|執行緒本機、分頁集區記憶體提供者的識別碼。|  
-|allocated_bytes|**bigint**|保留給此取用者的位元組數。|  
-|used_bytes|**bigint**|這個取用者使用的位元組。 只適用於 varheap 記憶體取用者。|  
+|memory_consumer_id|**Bigint**|記憶體取用者的內部識別碼。|  
+|memory_consumer_type|**int**|整數，表示具有下列其中一個值的記憶體取用者類型：<br /><br /> 0-不應該顯示。 彙總兩個以上取用者的記憶體使用量。<br /><br /> 1-對應：追蹤系統對應的記憶體耗用量。<br /><br /> 2-VARHEAP：追蹤可變長度堆積的記憶體耗用量。<br /><br /> 4-IO 分頁集區：追蹤用於 IO 作業之系統分頁集區的記憶體耗用量。|  
+|memory_consumer_type_desc|**Nvarchar （16）**|記憶體取用者類型的描述：<br /><br /> 0-不應該顯示。<br /><br /> 1-對應<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
+|memory_consumer_desc|**Nvarchar （64）**|記憶體取用者執行個體的描述：<br /><br /> VARHEAP <br />系統堆積。 一般用途。 目前只用來配置記憶體回收工作項目。<br />-或-<br />對應堆積。 當對應清單中包含的項目數達到預先決定的上限時 (通常大約 5,000 個項目)，對應就會加以使用。<br /><br /> PGPOOL：對於 IO 系統集區，有三種不同的大小：系統4K 分頁集區、系統 64 K 分頁集區，以及系統 256 K 分頁集區。|  
+|lookaside_id|**Bigint**|執行緒本機、對應記憶體提供者的識別碼。|  
+|pagepool_id|**Bigint**|執行緒本機、分頁集區記憶體提供者的識別碼。|  
+|allocated_bytes|**Bigint**|保留給此取用者的位元組數。|  
+|used_bytes|**Bigint**|這個取用者使用的位元組。 只適用於 varheap 記憶體取用者。|  
 |allocation_count|**int**|配置的數目。|  
 |partition_count|**int**|僅供內部使用。|  
 |sizeclass_count|**int**|僅供內部使用。|  
@@ -54,7 +54,7 @@ select * from sys.dm_xtp_system_memory_consumers
 |max_sizeclass|**int**|僅供內部使用。|  
 |memory_consumer_address|**varbinary**|取用者的內部位址。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ## <a name="user-scenario"></a>使用者案例  
@@ -105,6 +105,6 @@ total_allocated_MB   total_used_MB
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體最佳化的資料表動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [&#40;Transact-sql&#41;的記憶體優化資料表動態管理檢視](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   
