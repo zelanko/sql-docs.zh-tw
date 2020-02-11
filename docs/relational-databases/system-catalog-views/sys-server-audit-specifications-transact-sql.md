@@ -1,5 +1,5 @@
 ---
-title: sys.server_audit_specifications (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases server_audit_specifications （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,28 +20,28 @@ ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6a3c6522218702b52c075ef5ce8088057fc7662b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125012"
 ---
-# <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
+# <a name="sysserver_audit_specifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含有關伺服器執行個體上 SQL Server 稽核內之伺服器稽核規格的資訊。 如需 SQL Server Audit 的詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|伺服器規格的名稱。|  
-|**server_specification_id**|**整數**|識別碼**server_specification**。|  
-|**create_date**|**Datetime**|建立稽核伺服器規格的日期。|  
-|**modified_date**|**Datetime**|上次修改稽核伺服器規格的日期。|  
+|**name**|**Sysname**|伺服器規格的名稱。|  
+|**server_specification_id**|**Int**|**Server_specification**的識別碼。|  
+|**create_date**|**從中**|建立稽核伺服器規格的日期。|  
+|**modified_date**|**從中**|上次修改稽核伺服器規格的日期。|  
 |**is_state_enabled**|**tinyint**|稽核規格狀態：<br /><br /> 0-已停用<br /><br /> 1-已啟用|  
 |**audit_GUID**|**uniqueidentifier**|包含這個規格之稽核的 GUID。 用在伺服器啟動期間列舉成員伺服器稽核規格時。|  
   
-## <a name="permissions"></a>Permissions  
- 具有主體**ALTER ANY SERVER AUDIT**或是**VIEW ANY DEFINITION**權限可以存取這份目錄檢視。 此外，不應拒絕主體**VIEW ANY DEFINITION**權限。  
+## <a name="permissions"></a>權限  
+ 具有**ALTER ANY SERVER AUDIT**或**VIEW any DEFINITION**許可權的主體可存取此目錄檢視。 此外，主體不得被拒絕**VIEW ANY DEFINITION**許可權。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   

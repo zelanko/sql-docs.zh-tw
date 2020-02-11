@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f12b66fd895b7a7b90103fd1bed1eb51597c669a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483171"
 ---
 # <a name="delete-a-model-master-data-services"></a>刪除模型 (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65483171"
 > [!NOTE]  
 >  完成這個程序時，模型中所有版本的所有物件和所有資料都會永久刪除。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -35,17 +35,17 @@ ms.locfileid: "65483171"
   
 ### <a name="to-delete-a-model"></a>若要刪除模型  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
-2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[模型]** 。  
+2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[模型]**。  
   
-3.  在 **模型維護**頁面上，選取您想要刪除之模型的資料列。  
+3.  在 [**模型維護**] 頁面上，選取您想要刪除之模型的資料列。  
   
-4.  按一下 **刪除選取的模型**。  
+4.  按一下 [**刪除選取的模型**]。  
   
-5.  在確認對話方塊中按一下 **[確定]** 。  
+5.  在確認對話方塊中按一下 **[確定]**。  
   
-6.  在另一個確認對話方塊中按一下 [確定]  。  
+6.  在另一個確認對話方塊中按一下 [確定]****。  
   
 ## <a name="see-also"></a>另請參閱  
  [模型 &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   

@@ -16,18 +16,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 919bd28a82171068349e4019bb1bd5c190d08cd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63213912"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>從 SQL Server 資料表中移除資料行
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**itabledefinition:: Dropcolumn**函式。 如此可讓取用者從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中移除資料行。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**ITableDefinition：:D ropcolumn**函數。 如此可讓取用者從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中移除資料行。  
   
- 取用者指定為 Unicode 字元字串中的資料表名稱 *pwszName* 隸屬 *uName* 聯集 *pTableID* 參數。 *EKind* 隸屬 *pTableID* 必須是 DBKIND_NAME。  
+ 取用者會在 *pTableID* 參數中，將資料表名稱指定為 *uName* 聯集 *pwszName* 成員中的 Unicode 字元字串。 
+  *pTableID* 的 *eKind* 成員必須是 DBKIND_NAME。  
   
- 取用者表示中的資料行名稱 *pwszName* 隸屬 *uName* 聯集 *Ekind* 參數。 資料行名稱是一個 Unicode 字元字串。 *EKind* 隸屬 *Ekind* 必須是 DBKIND_NAME。  
+ 取用者會在*pColumnID*參數中，指出*uName*聯集之*pwszName*成員中的資料行名稱。 資料行名稱是一個 Unicode 字元字串。 
+  *pColumnID* 的 *eKind* 成員必須是 DBKIND_NAME。  
   
 ## <a name="example"></a>範例  
   

@@ -17,10 +17,10 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fdcf5a9dcd462562886c7815b500c43145b749a3
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75322223"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "75322223"
 
   變更發行集的監視臨界值標準。 這個預存程序用來監視複寫，執行於散發資料庫的散發者端。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [transact-sql 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -57,7 +57,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |值|描述|  
 |-----------|-----------------|  
 |**0**|交易式發行集。|  
-|**sha-1**|快照式發行集。|  
+|**1**|快照式發行集。|  
 |**2**|合併式發行集。|  
 |NULL (預設值)|複寫試圖判斷發行集類型。|  
   
@@ -65,9 +65,9 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 |值|度量名稱|  
 |-----------|-----------------|  
-|**sha-1**|**到期**-監視交易式發行集的訂閱是否即將到期。|  
+|**1**|**到期**-監視交易式發行集的訂閱是否即將到期。|  
 |**2**|**延遲**-監視交易式發行集之訂閱的效能。|  
-|**4gb**|**mergeexpiration** -監視合併式發行集的訂閱是否即將到期。|  
+|**4**|**mergeexpiration** -監視合併式發行集的訂閱是否即將到期。|  
 |**第**|**mergeslowrunduration** -監視透過低頻寬（撥號）連接進行合併同步處理的持續時間。|  
 |**6**|**mergefastrunduration 利用**-監視透過高頻寬區域網路（LAN）連接進行合併同步處理的持續時間。|  
 |**utf-7**|**mergefastrunspeed 利用**-監視透過高頻寬（LAN）連接進行合併同步處理的同步處理速率。|  

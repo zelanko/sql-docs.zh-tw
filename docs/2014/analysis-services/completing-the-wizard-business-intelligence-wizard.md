@@ -1,5 +1,5 @@
 ---
-title: 正在完成精靈 （商業智慧精靈） |Microsoft Docs
+title: 正在完成嚮導（商業智慧 Wizard） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbfbcdae5d16ac631dddda9aa79c85a359afefb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087750"
 ---
 # <a name="completing-the-wizard-business-intelligence-wizard"></a>正在完成精靈 (商業智慧精靈)
   使用 **[正在完成精靈]** 頁面，即可檢閱完成商業智慧精靈時將做的變更。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **變更**  
- 顯示已經對 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案中之物件所做的變更。  
+ 顯示已對[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案中的物件所做的變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [商業智慧精靈 F1 說明](business-intelligence-wizard-f1-help.md)   
- [Cube 設計師&#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [維度設計師&#40;Analysis Services-多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [商業智慧 Wizard F1 說明](business-intelligence-wizard-f1-help.md)   
+ [Cube 設計工具 &#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [維度設計師 &#40;Analysis Services 多維資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

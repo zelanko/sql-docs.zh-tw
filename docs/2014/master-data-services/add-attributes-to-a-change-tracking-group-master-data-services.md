@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8e700942f9cebc08241cf4e159dceedc7d515a94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480119"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>將屬性加入至變更追蹤群組 (Master Data Services)
@@ -27,51 +27,51 @@ ms.locfileid: "65480119"
 > [!NOTE]  
 >  將屬性加入至變更追蹤群組之後，當屬性值變更時， [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的屬性會標示為已變更。 建立商務規則，以根據變更來執行動作。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
 -   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
--   屬性必須存在，才能加入至變更追蹤群組。 如需詳細資訊，請參閱[建立文字屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)。  
+-   屬性必須存在，才能加入至變更追蹤群組。 如需詳細資訊，請參閱 [建立文字屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)(管理員 (Master Data Services))。  
   
 ### <a name="to-add-attributes-to-a-change-tracking-group"></a>若要將屬性加入至變更追蹤群組  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
-2.  在上**模型總管**頁面上，從功能表列指向**管理**，按一下 **實體**。  
+2.  在 [**模型瀏覽器**] 頁面上，從功能表列指向 [**管理**]，然後按一下 [**實體**]。  
   
 3.  在 **[實體維護]** 頁面上，選取 **[模型]** 清單中的模型。  
   
 4.  針對要追蹤屬性值的實體選取資料列。  
   
-5.  按一下 **[編輯選取的實體]** 。  
+5.  按一下 **[編輯選取的實體]**。  
   
 6.  在 **[編輯實體]** 頁面上：  
   
-    -   如果屬性是在分葉成員**屬性的分葉**窗格中，選取屬性，然後按一下**編輯分葉屬性**。  
+    -   如果是分葉成員的屬性，請在 [分**葉屬性**] 窗格中選取屬性，然後按一下 [**編輯分葉屬性**]。  
   
-    -   如果屬性是合併成員，在**合併屬性**窗格中，選取屬性，然後按一下**編輯合併屬性**。  
+    -   如果是合併成員的屬性，請在 [**合併屬性**] 窗格中選取屬性，然後按一下 [**編輯合併屬性**]。  
   
-    -   如果屬性是集合，在**集合屬性**窗格中，選取屬性，然後按一下**編輯集合屬性**。  
+    -   如果是集合的屬性，請在 [**集合屬性**] 窗格中選取屬性，然後按一下 [**編輯集合屬性**]。  
   
-7.  選取 [啟用變更追蹤]  核取方塊。  
+7.  選取 [啟用變更追蹤]**** 核取方塊。  
   
-8.  在 [變更追蹤群組]  方塊中，輸入群組的編號。  
+8.  在 [變更追蹤群組]**** 方塊中，輸入群組的編號。  
   
-9. 按一下 **[儲存屬性]** 。  
+9. 按一下 **[儲存屬性]**。  
   
-10. 按一下 **[實體維護]** 頁面上的 **[儲存實體]** 。  
+10. 按一下 **[實體維護]** 頁面上的 **[儲存實體]**。  
   
 11. 重複此程序，加入要包含在群組中的所有屬性。 對群組中的每個屬性，使用相同的變更追蹤群組編號。  
   
 ## <a name="next-steps"></a>後續步驟  
   
--   [根據屬性值變更來起始動作 &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
+-   [根據屬性值變更起始動作 &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [建立文字屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   
- [建立網域屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+ [建立 &#40;Master Data Services&#41;的文字屬性](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   
+ [建立以網域為基礎的屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   
