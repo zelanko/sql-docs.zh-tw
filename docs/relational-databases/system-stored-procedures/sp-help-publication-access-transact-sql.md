@@ -1,5 +1,5 @@
 ---
-title: sp_help_publication_access (Transact-sql) |Microsoft Docs
+title: sp_help_publication_access （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7c562c039b65f99f1d3d9915f0dd00b93dc95860
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68770986"
 ---
-# <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
+# <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   傳回發行集所有已授與之登入的清單。 這個預存程序執行於發行集資料庫的發行者端。  
@@ -40,17 +40,17 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是要存取的發行集名稱。 *發行*集是**sysname**, 沒有預設值。  
+`[ @publication = ] 'publication'`這是要存取的發行集名稱。 *發行*集是**sysname**，沒有預設值。  
   
-`[ @return_granted = ] 'return_granted'`這是登入識別碼。 *return_granted*是**bit**, 預設值是1。 如果指定**0** , 且[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用驗證, 就會傳回出現在發行者端但不在散發者端的可用登入。 如果指定**0** , 且使用 Windows 驗證, 則會傳回未在發行者或散發者端明確拒絕存取的登入。  
+`[ @return_granted = ] 'return_granted'`這是登入識別碼。 *return_granted*是**bit**，預設值是1。 如果指定**0** ，且[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用驗證，就會傳回出現在發行者端但不在散發者端的可用登入。 如果指定**0** ，且使用 Windows 驗證，則會傳回未在發行者或散發者端明確拒絕存取的登入。  
   
-`[ @login = ] 'login'`這是標準安全性登入識別碼。 *login*是**sysname**, 預設值 **%** 是。  
+`[ @login = ] 'login'`這是標準安全性登入識別碼。 *login*是**sysname**，預設值是**%**。  
   
-`[ @initial_list = ] initial_list`指定是否要傳回具有發行集存取權的所有成員, 或只傳回在新成員加入清單之前有存取權的成員。 *initial_list*是 bit, 預設值是**0**。  
+`[ @initial_list = ] initial_list`指定是否要傳回具有發行集存取權的所有成員，或只傳回在新成員加入清單之前有存取權的成員。 *initial_list*是 bit，預設值是**0**。  
   
- **1**會傳回**系統管理員 (sysadmin** ) 固定伺服器角色之所有成員的資訊, 在建立發行集時, 在散發者端具有有效的登入, 以及目前的登入。  
+ **1**會傳回**系統管理員（sysadmin** ）固定伺服器角色之所有成員的資訊，在建立發行集時，在散發者端具有有效的登入，以及目前的登入。  
   
- **0**傳回在散發者端具有有效登入的**系統管理員 (sysadmin** ) 固定伺服器角色之所有成員的資訊, 以及發行集存取清單中不屬於系統管理員 (sysadmin) 的所有使用者固定伺服器角色。  
+ **0**會傳回**系統管理員（sysadmin** ）固定伺服器角色之所有成員的資訊，而該散發者具有發行集建立時存在之散發者的有效登入，以及發行集存取清單中不屬於**系統管理員（sysadmin** ）固定伺服器角色的所有使用者。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -61,19 +61,19 @@ sp_help_publication_access [ @publication = ] 'publication'
 |**Isntgroup**|**int**|**0** = 登入不是 Windows 群組。<br /><br /> **1** = 登入是 Windows 群組。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** (成功) 或**1** (失敗)  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
  **sp_help_publication_access**用於所有類型的複寫中。  
   
- 當結果集中的**Isntname**和**Isntgroup**都是**0**時, 會假設登入為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入。  
+ 當結果集中的**Isntname**和**Isntgroup**都是**0**時，會假設登入為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入。  
   
-## <a name="permissions"></a>Permissions  
- 只有**系統管理員 (sysadmin** ) 固定伺服器角色或**db_owner**固定資料庫角色的成員, 才能夠執行**sp_help_publication_access**。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_help_publication_access**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [sp_revoke_publication_access &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+ [sp_grant_publication_access &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

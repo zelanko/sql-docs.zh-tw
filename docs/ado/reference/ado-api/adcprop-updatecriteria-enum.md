@@ -1,5 +1,5 @@
 ---
-title: ADCPROP_UPDATECRITERIA_ENUM | Microsoft Docs
+title: ADCPROP_UPDATECRITERIA_ENUM |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,30 +16,30 @@ ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 12d960e8fcd5e1f27ea8198ce52e080f6fddf7c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921410"
 ---
-# <a name="adcpropupdatecriteriaenum"></a>ADCPROP_UPDATECRITERIA_ENUM
-指定哪些欄位可用來偵測衝突，開放式資料來源之資料列更新期間[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
+# <a name="adcprop_updatecriteria_enum"></a>ADCPROP_UPDATECRITERIA_ENUM
+指定哪些欄位可以在使用[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的資料來源的開放式更新期間，用來偵測衝突。  
   
- 使用這些常數**資料錄集**"**更新準則**」 中參考的動態屬性[ADO 動態屬性索引](../../../ado/reference/ado-api/ado-dynamic-property-index.md)和記載於[Microsoft OLE DB 的資料指標服務](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)文件。  
+ 請使用這些常數搭配**記錄集**「**更新準則**」動態屬性，這會在[ADO 動態屬性索引](../../../ado/reference/ado-api/ado-dynamic-property-index.md)中參考，並記載于 OLE DB 檔的[Microsoft 資料指標服務](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)中。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adCriteriaAllCols**|1|如果已變更的資料列的資料來源的任何資料行，會偵測衝突。|  
-|**adCriteriaKey**|0|偵測到衝突，如果索引鍵的資料行的資料來源的資料列已變更，這表示已刪除資料列。|  
-|**adCriteriaTimeStamp**|3|偵測到衝突，如果時間戳記的資料來源的資料列已變更，這表示已存取之資料列之後**資料錄集**取得。|  
-|**adCriteriaUpdCols**|2|偵測到衝突，如果任何資料來源的資料行的資料列，對應至已更新欄位**資料錄集**已變更。|  
+|**adCriteriaAllCols**|1|如果資料來源資料列的任何資料行已變更，便會偵測衝突。|  
+|**adCriteriaKey**|0|如果資料來源資料列的索引鍵資料行已變更，即會偵測到衝突，這表示已刪除該資料列。|  
+|**adCriteriaTimeStamp**|3|如果資料來源資料列的時間戳記已變更，即會偵測到衝突，這表示在取得**記錄集**之後，已經存取過該資料列。|  
+|**adCriteriaUpdCols**|2|當對應至**記錄集**之更新欄位的資料來源資料行的任何資料行已變更時，會偵測到衝突。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- 封裝： **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
+ Package： **.com. wfc. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums.AdcPropUpdateCriteria.ALLCOLS|  
-|AdoEnums.AdcPropUpdateCriteria.KEY|  
-|AdoEnums.AdcPropUpdateCriteria.TIMESTAMP|  
+|AdoEnums. AdcPropUpdateCriteria. KEY|  
+|AdoEnums. AdcPropUpdateCriteria. TIMESTAMP|  
 |AdoEnums.AdcPropUpdateCriteria.UPDCOLS|

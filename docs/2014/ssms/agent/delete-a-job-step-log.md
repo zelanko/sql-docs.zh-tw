@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd6cefd41ea223b91445042ff3cee9090074feeb
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783187"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
@@ -29,9 +29,9 @@ ms.locfileid: "72783187"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要使用下列項目刪除 SQL Server Agent 作業步驟記錄：**  
+-   **若要使用下列內容刪除 SQL Server Agent 作業步驟記錄檔：**  
   
      [Transact-SQL](#SSMS)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72783187"
   
 ###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  除非您是系統管理員 ( **sysadmin** ) 固定伺服器角色的成員，否則您只能修改您所擁有的作業。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
@@ -55,7 +55,7 @@ ms.locfileid: "72783187"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 [SQL Server Agent]，展開 [作業]，以滑鼠右鍵按一下要修改的作業，然後按一下 [屬性]。  
+2.  展開 [SQL Server Agent]****，展開 [作業]****，以滑鼠右鍵按一下要修改的作業，然後按一下 [屬性]****。  
   
 3.  在 **[作業屬性]** 對話方塊中，刪除選取的作業步驟。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "72783187"
   
 2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```sql
     -- removes the job step log for step 2 in the job Weekly Sales Data Backup  

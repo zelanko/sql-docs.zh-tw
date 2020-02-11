@@ -1,5 +1,5 @@
 ---
-title: 第 4 課：以程式設計方式更新報表定義 |Microsoft Docs
+title: 第4課：以程式設計方式更新報表定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 703643f2c51ec86090cb03ba7089080dfe416620
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137459"
 ---
 # <a name="lesson-4-update-the-report-definition-programmatically"></a>第 4 課：以程式設計方式更新報表定義
@@ -22,7 +22,7 @@ ms.locfileid: "63137459"
   
 ### <a name="to-update-the-report-definition"></a>更新報表定義  
   
-1.  取代 UpdateReportDefinition() 方法，在 Program.cs 檔案中的程式碼 (如 Module1.vb [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 為下列程式碼：  
+1.  以下列程式碼取代 Program.cs 檔案（中的 Module1 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]）中 UpdateReportDefinition （）方法的程式碼：  
   
     ```csharp  
     private void UpdateReportDefinition()  
@@ -88,9 +88,9 @@ ms.locfileid: "63137459"
     ```  
   
 ## <a name="next-lesson"></a>下一課  
- 在下一課中，會將已更新的報表定義存回報表伺服器上。 請參閱[第 5 課：將報表定義發行到報表伺服器](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)。  
+ 在下一課中，會將已更新的報表定義存回報表伺服器上。 請參閱[第5課：將報表定義發行到報表伺服器](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用從 RDL 結構描述產生的類別更新報表&#40;SSRS 教學課程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
+ [使用從 RDL 架構產生的類別更新報表 &#40;SSRS 教學課程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
   
   

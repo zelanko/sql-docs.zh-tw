@@ -10,10 +10,10 @@ ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 40482e599244f0e5102195cd0e34c3718a06d149
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258445"
 ---
 # <a name="managing-a-domain"></a>管理定義域
@@ -46,7 +46,7 @@ ms.locfileid: "75258445"
   
 |||  
 |-|-|  
-|針對具有特定資料類型的資料欄位建立語意表示法、指定如何擴展定義域，以及設定定義域輸出的格式|[建立網域](../data-quality-services/create-a-domain.md)|  
+|針對具有特定資料類型的資料欄位建立語意表示法、指定如何擴展定義域，以及設定定義域輸出的格式|[建立定義域](../data-quality-services/create-a-domain.md)|  
 |將定義域連結到另一個定義域，讓它共用相同的設定與值|[建立連結的定義域](../data-quality-services/create-a-linked-domain.md)|  
 |將參考資料服務附加至單一或複合定義域|[將定義域或複合定義域附加至參考資料](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
 |變更或增加知識庫中的值|[變更定義域值](../data-quality-services/change-domain-values.md)|  

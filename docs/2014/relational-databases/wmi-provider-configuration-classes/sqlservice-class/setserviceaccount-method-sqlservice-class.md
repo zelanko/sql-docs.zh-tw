@@ -1,5 +1,5 @@
 ---
-title: SetServiceAccount 方法 （SqlService 類別） |Microsoft Docs
+title: SetServiceAccount 方法（SqlService 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 65f9c926a75ae4d64e54d6f600aba2a70f0482cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63218100"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>SetServiceAccount 方法 (SqlService 類別)
@@ -40,7 +40,7 @@ ServiceStartName , ServiceStartPassword
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
+ *目標*  
  表示此服務的 [SqlService 類別](sqlservice-class.md) 物件。  
   
 #### <a name="parameters"></a>參數  
@@ -49,15 +49,16 @@ ServiceStartName , ServiceStartPassword
   
 -   如果帳戶屬於內建網域，可以指定 \Username。  
   
--   如果指定 NULL，則服務會以登入**LocalSystem**帳戶。  
+-   如果指定了 Null，服務就會以**LocalSystem**帳戶的身分登入。  
   
- 核心或系統層級的驅動程式，如*StartName*包含驅動程式的物件名稱，\FileSystem\Rdr 或 \Driver\Xns，I/O 系統用來載入裝置驅動程式。 如果指定了 NULL，將會根據類似 DWDOM\Admin 的服務名稱，使用 I/O 系統所建立的預設物件名稱來執行驅動程式。  
+ 若是核心或系統層級的驅動程式， *StartName*會包含驅動程式物件名稱（\FileSystem\Rdr 或 \driver\xns)），以供 i/o 系統用來載入設備磁碟機。 如果指定了 NULL，將會根據類似 DWDOM\Admin 的服務名稱，使用 I/O 系統所建立的預設物件名稱來執行驅動程式。  
   
  *ServiceStartPassword*  
- 指定密碼中的帳戶名稱的字串值*StartName*參數。 如果您不要變更密碼，請指定 NULL。 如果此服務沒有密碼，請指定空字串。  
+ 字串值，指定*StartName*參數中帳戶名稱的密碼。 如果您不要變更密碼，請指定 NULL。 如果此服務沒有密碼，請指定空字串。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- `uint32` 值，如果已成功修改此服務為 0，如果不支援要求則為 1。 任何其他數字表示發生錯誤。  
+ 
+  `uint32` 值，如果已成功修改此服務為 0，如果不支援要求則為 1。 任何其他數字表示發生錯誤。  
   
 ## <a name="remarks"></a>備註  
   

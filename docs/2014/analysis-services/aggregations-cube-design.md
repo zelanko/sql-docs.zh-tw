@@ -1,5 +1,5 @@
 ---
-title: 彙總 （Cube 設計） |Microsoft Docs
+title: 匯總（Cube 設計） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,28 +11,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35c862d89d5f98bee968f0e980c784e35c43e74d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062660"
 ---
 # <a name="aggregations-cube-design"></a>彙總 (Cube 設計)
   使用 Cube 設計師中的 **[彙總]** 索引標籤，即可建立和修改彙總設計。  
   
- **[彙總]** 索引標籤包含下列窗格：  
+ 
+  **[彙總]** 索引標籤包含下列窗格：  
   
 ## <a name="panes"></a>窗格  
  **工具列**  
  使用工具列來執行索引標籤上的一般動作。  
   
  **標準檢視**  
- 使用 [標準檢視]  窗格即可建立和修改彙總設計。  
+ 使用 [標準檢視]**** 窗格即可建立和修改彙總設計。  
   
- **進階的檢視**  
- 使用 [進階檢視]  窗格即可建立和修改彙總。 這個檢視應該只能供進階使用者使用。  
+ **進階檢視**  
+ 使用 [進階檢視]**** 窗格即可建立和修改彙總。 這個檢視應該只能供進階使用者使用。  
   
 ## <a name="see-also"></a>另請參閱  
- [Cube 設計師&#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)  
+ [Cube 設計工具 &#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

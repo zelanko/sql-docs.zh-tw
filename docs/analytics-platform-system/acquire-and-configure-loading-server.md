@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef49bb86c8e16600f2ff1bf2d1c7a92ecc5af964
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401480"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>取得及設定平行處理資料倉儲的載入伺服器
@@ -86,7 +86,7 @@ ms.locfileid: "74401480"
 --> 
   
 ## <a name="Step5"></a>步驟5：開始載入  
-您現在已準備好開始載入資料。 如需詳細資訊，請參閱：  
+您現在已準備好開始載入資料。 如需詳細資訊，請參閱  
   
 1.  [dwloader 命令列載入工具](dwloader.md)  
   
