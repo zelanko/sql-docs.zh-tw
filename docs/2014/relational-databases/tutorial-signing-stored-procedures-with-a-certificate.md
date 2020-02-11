@@ -1,5 +1,5 @@
 ---
-title: 教學課程：簽署憑證的預存程序 |Microsoft Docs
+title: 教學課程：使用憑證簽署預存程序 | Microsoft 文件
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524091"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>教學課程：使用憑證簽署預存程序
@@ -48,7 +48,7 @@ ms.locfileid: "62524091"
  此範例會在每個程式碼區塊中各行附上說明。 若要複製整個範例，請參閱本教學課程結尾處的＜ [完整範例](#CompleteExample) ＞一節。  
   
 ## <a name="1-configure-the-environment"></a>1.設定環境  
- 為了設定範例的初步內容，請在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中開啟新查詢，然後執行下列程式碼以開啟 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫。 這段程式碼會將資料庫內容變更為 `AdventureWorks2012`，再建立新的伺服器登入和資料庫使用者帳戶 (`TestCreditRatingUser`)，並且使用了密碼。  
+ 為了設定範例的初步內容，請在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中開啟新查詢，然後執行下列程式碼以開啟 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫。 這段程式碼會將資料庫內容變更為 `AdventureWorks2012` ，再建立新的伺服器登入和資料庫使用者帳戶 (`TestCreditRatingUser`)，並且使用了密碼。  
   
 ```  
 USE AdventureWorks2012;  
@@ -192,7 +192,7 @@ GO
   
  如需 REVERT 陳述式的詳細資訊，請參閱 [REVERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/revert-transact-sql)。  
   
-##  <a name="CompleteExample"></a> 完整的範例  
+##  <a name="CompleteExample"></a>完整範例  
  本節顯示完整的範例程式碼。  
   
 ```  

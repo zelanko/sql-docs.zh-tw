@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07c5118c654faccea2d9bab01040ce17b1d5699a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232465"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>步驟 2：加入和設定 Foreach 迴圈容器
@@ -39,11 +39,11 @@ ms.locfileid: "75232465"
   
 1.  在 SQL Server Data Tools**** 中，請按一下 [控制流程]**** 索引標籤。  
   
-2.  在 [SSIS 工具箱]**** 中，展開 [容器]****，然後將 [Foreach 迴圈容器]**** 拖曳至 [控制流程]**** 索引標籤的設計介面中。  
+2.  在 [SSIS 工具箱]  中，展開 [容器]  ，然後將 [Foreach 迴圈容器]  拖曳至 [控制流程]  索引標籤的設計介面中。  
   
 3.  以滑鼠右鍵按一下剛新增的 [Foreach 迴圈容器]****，並選取 [編輯]****。  
   
-4.  在 [ **Foreach 迴圈編輯器**] 對話方塊的 [**一般**] 頁面上， **** 針對 [名稱`Foreach File in Folder`] 輸入。 按一下 [確定]****。  
+4.  在 [ **Foreach 迴圈編輯器**] 對話方塊的 [**一般**] 頁面上， **** 針對 [名稱`Foreach File in Folder`] 輸入。 按一下 [確定]  。  
   
 5.  以滑鼠右鍵按一下 [Foreach 迴圈] 容器，按一下 [**屬性**]，然後在 [屬性視窗`LocaleID`中，確認屬性是設為 [**英文（美國）**]。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "75232465"
   
 2.  按一下 [集合]****。  
   
-3.  在 [集合]**** 頁面上，選取 [Foreach 檔案列舉值]****。  
+3.  在 [集合]  頁面上，選取 [Foreach 檔案列舉值]  。  
   
 4.  在 [列舉值組態]**** 群組中，按一下 [瀏覽]****。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "75232465"
     > [!IMPORTANT]  
     >  變數名稱會區分大小寫。  
   
-4.  按一下 [確定]****。  
+4.  按一下 [確定]  。  
   
 5.  再按一下 [確定]**** 來結束 [Foreach 迴圈編輯器]**** 對話方塊。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "75232465"
 -   將 [**解壓縮範例貨幣資料**] 資料流程工作拖曳至 [Foreach 迴圈] 容器`Foreach File in Folder`現在已重新命名。  
   
 ## <a name="next-lesson-task"></a>下一課的工作  
- [步驟3：修改一般檔案連線管理員](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+ [步驟 3：修改一般檔案連接管理員](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Foreach 迴圈容器](control-flow/foreach-loop-container.md)   
- [在封裝中使用變數](use-variables-in-packages.md)  
+ [在套件中使用變數](use-variables-in-packages.md)  
   

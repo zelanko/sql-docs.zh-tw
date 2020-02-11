@@ -1,5 +1,5 @@
 ---
-title: 資料庫快照集與 AlwaysOn 可用性群組 (SQL Server) |Microsoft Docs
+title: 具有 AlwaysOn 可用性群組（SQL Server）的資料庫快照集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cba02aa87e800391ffba3c791c1ee4341462c3f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814654"
 ---
 # <a name="database-snapshots-with-alwayson-availability-groups-sql-server"></a>資料庫快照集與 AlwaysOn 可用性群組 (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "62814654"
  如果裝載資料庫快照集的可用性複本容錯移轉，資料庫快照集會保留在其建立所在的伺服器執行個體上。 使用者可以在容錯移轉後繼續使用快照集。如果效能是您的環境中的顧慮，我們建議您只在設定為手動容錯移轉模式的次要複本所裝載的次要資料庫上建立資料庫快照集。  如果您曾經將可用性群組手動容錯移轉到此次要複本，則可以在其他次要複本上建立一組新的資料庫快照集，將用戶端重新導向至這些新的資料庫快照集，並且從目前主要資料庫上卸除所有資料庫快照集。  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [資料庫快照集 &#40;SQL Server&#41;](../../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   

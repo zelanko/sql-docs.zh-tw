@@ -1,5 +1,5 @@
 ---
-title: 修改應用程式以接受來自 sysperfinfo.cntr_value 的 bigint 值 |Microsoft Docs
+title: 修改應用程式，以預期來自 sysperfinfo 的 Bigint 值。 cntr_value |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ced1e07b5423dcdc7c13d24e8528a2b6ac240aaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093946"
 ---
-# <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntrvalue"></a>修改應用程式以接受來自 sysperfinfo.cntr_value 的 bigint 值
-  sysperfinfo 會傳回`bigint`cntr_value 資料行的值。  
+# <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntr_value"></a>修改應用程式以接受來自 sysperfinfo.cntr_value 的 bigint 值
+  sysperfinfo 會傳回`bigint` cntr_value 資料行的值。  
   
 ## <a name="component"></a>元件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
@@ -33,7 +33,7 @@ ms.locfileid: "66093946"
 >  sysperfinfo 是相容性檢視。 您應該改用 sys.dm_os_performance_counter 動態管理檢視。  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
+ [資料庫引擎升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新的&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b1882c04d4aacd76b59cb952781205edac84012
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914803"
 ---
-# <a name="mssqlserver2533"></a>MSSQLSERVER_2533
+# <a name="mssqlserver_2533"></a>MSSQLSERVER_2533
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|2533|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC_PAGE_WAS_NOT_SEEN|  
-|訊息文字|資料表錯誤：頁面 P_ID 配置給物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID （類型 TYPE） 找不到。 頁面可能無效，或標頭中的配置單位識別碼不正確。|  
+|訊息文字|資料表錯誤: 看不到配置給物件識別碼 O_ID 的頁面 P_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE)。 頁面可能無效，或標頭中的配置單位識別碼不正確。|  
   
 ## <a name="explanation"></a>說明  
  已將某個頁面配置給配置單位識別碼 (*A_ID*)，但是該頁面的標頭中沒有這個配置單位識別碼。 標頭中有另一個配置單位識別碼。 如果頁面標頭中的配置單位識別碼適用於有效的物件，頁面上可能會出現相符的 MSSQLEngine_2534 錯誤。  

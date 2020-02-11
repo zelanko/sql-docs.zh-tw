@@ -1,5 +1,5 @@
 ---
-title: 訂用帳戶，同步處理記錄 （合併訂閱，SQL Server 2005 和更新版本） |Microsoft Docs
+title: 訂閱、同步處理歷程記錄（合併訂閱、SQL Server 2005 和更新版本） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38bc4d44b988192be76ed613f52793dc2e8daefc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629707"
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2005-and-later"></a>訂閱，同步處理記錄 (合併訂閱，SQL Server 2005 和更新的版本)
@@ -26,7 +26,7 @@ ms.locfileid: "62629707"
 ## <a name="options"></a>選項。  
  從 **[檢視]** 功能表中選取要檢視的合併代理程式工作階段，再於 **[合併代理程式工作階段]** 方格中選取特定的工作階段。 有關這個工作階段的詳細資訊，會顯示在標示為 **[在選取的工作階段中處理的發行項]** 的方格中。  
   
- **[檢視]**  
+ **檢視**  
  選取要檢視的合併代理程式工作階段。  
   
  **狀態**  
@@ -34,7 +34,7 @@ ms.locfileid: "62629707"
   
 -   錯誤  
   
--   已完成  
+-   Completed  
   
 -   正在重試  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62629707"
  **錯誤訊息**  
  如果工作階段結束時發生錯誤，這個欄位會顯示合併代理程式記錄的最後一個錯誤訊息。 如果工作階段結束時沒有錯誤，這個欄位會是空白。  
   
- **發行項**  
+ **文章**  
  發行集內每個發行項的名稱，以及整個發行集的下列處理階段：  
   
 -   **初始化**。 這是指合併代理程式的啟動；而不是涉及套用快照集的訂閱之初始化。  
@@ -80,7 +80,7 @@ ms.locfileid: "62629707"
  **Inserts**  
  在所選取工作階段的此階段中插入之資料列數。  
   
- **Updates**  
+ **更新**  
  在所選取工作階段的此階段中更新之資料列數。  
   
  **Deletes**  

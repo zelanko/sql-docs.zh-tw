@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c7676d046a504a6f230df7a1352e791802ce7b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288265"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
@@ -108,7 +108,7 @@ FOR XML AUTO
   
 ## <a name="see-also"></a>另請參閱  
  [FOR XML 子句的基本語法](basic-syntax-of-the-for-xml-clause.md)   
- [使用 FOR XML 的 RAW 模式](use-raw-mode-with-for-xml.md)   
+ [搭配 FOR XML 使用 RAW 模式](use-raw-mode-with-for-xml.md)   
  [搭配 FOR XML 使用 AUTO 模式](use-auto-mode-with-for-xml.md)   
  [搭配 FOR XML 使用 EXPLICIT 模式](use-explicit-mode-with-for-xml.md)   
  [搭配 FOR XML 使用 PATH 模式](use-path-mode-with-for-xml.md)   

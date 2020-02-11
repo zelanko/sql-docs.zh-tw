@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ecb72ee0cb9d6e94a672f46ed523096ac4cc096e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900154"
 ---
 # <a name="export-column-transformation"></a>匯出資料行轉換
@@ -32,7 +32,7 @@ ms.locfileid: "62900154"
 ## <a name="append-and-truncate-options"></a>附加和截斷選項  
  下表說明附加和截斷選項的設定影響結果的方式。  
   
-|附加|截斷|檔案存在|結果|  
+|附加|Truncate|檔案存在|結果|  
 |------------|--------------|-----------------|-------------|  
 |False|False|否|轉換會建立新檔案，並將資料寫入檔案。|  
 |True|False|否|轉換會建立新檔案，並將資料寫入檔案。|  
@@ -55,17 +55,17 @@ ms.locfileid: "62900154"
     > [!NOTE]  
     >  BOM 只有在資料未附加至現有檔案，且資料類型為 DT_NTEXT 時才寫入。  
   
- 轉換使用成對的輸入資料行：一個資料行包含檔案名稱，另一個資料行則包含資料。 資料集中的每一個資料列都可指定不同的檔案。 當轉換處理資料列時，會將資料插入指定的檔案中。 在執行階段，轉換會建立檔案 (如果檔案不存在)，然後將資料寫入這些檔案中。 要寫入的資料的資料類型必須為 DT_TEXT、DT_NTEXT 或 DT_IMAGE。 如需詳細資訊，請參閱 [Integration Services 資料類型](../integration-services-data-types.md)。  
+ 轉換使用成對的輸入資料行：一個資料行包含一個檔案名稱，另一個資料行則包含資料。 資料集中的每一個資料列都可指定不同的檔案。 當轉換處理資料列時，會將資料插入指定的檔案中。 在執行階段，轉換會建立檔案 (如果檔案不存在)，然後將資料寫入這些檔案中。 要寫入的資料的資料類型必須為 DT_TEXT、DT_NTEXT 或 DT_IMAGE。 如需詳細資訊，請參閱 [Integration Services 資料類型](../integration-services-data-types.md)。  
   
  這個轉換有一個輸入、一個輸出與一個錯誤輸出。  
   
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可在 [匯出資料行轉換編輯器]  對話方塊中設定之屬性的詳細資訊，請參閱[匯出資料行轉換編輯器 &#40;資料行頁面&#41;](../../export-column-transformation-editor-columns-page.md)。  
+ 如需可在 [匯出資料行轉換編輯器]**** 對話方塊中設定之屬性的詳細資訊，請參閱[匯出資料行轉換編輯器 &#40;資料行頁面&#41;](../../export-column-transformation-editor-columns-page.md)。  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [轉換自訂屬性](transformation-custom-properties.md)  
   

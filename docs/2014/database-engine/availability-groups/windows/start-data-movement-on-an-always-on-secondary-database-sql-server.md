@@ -1,5 +1,5 @@
 ---
-title: 啟動資料移動於 AlwaysOn 次要資料庫 (SQL Server) |Microsoft Docs
+title: 在 AlwaysOn 次要資料庫上啟動資料移動（SQL Server） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0626ce7dee34ed21aad3e902e3c3f555f27ab97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62813552"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>於 AlwaysOn 次要資料庫啟動資料移動 (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "62813552"
   
          **如需詳細資訊：＜＞**  
   
-         [從移轉的必要條件是記錄傳送至 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+         [從記錄傳送遷移至 AlwaysOn 可用性群組 &#40;SQL Server 的必要條件&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
          [設定可用性複本的備份 &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -61,6 +61,6 @@ ms.locfileid: "62813552"
 -   [使用將資料庫加入至可用性群組精靈 &#40;SQL Server Management Studio&#41;](availability-group-add-database-to-group-wizard.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

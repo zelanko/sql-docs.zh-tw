@@ -1,5 +1,5 @@
 ---
-title: 使用資料在執行中參數 (ODBC) |Microsoft Docs
+title: 使用資料執行中參數（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d69ec20d919110ce241aa38bcfb22069a20d53a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206799"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>使用資料執行中參數 (ODBC)
@@ -25,7 +25,7 @@ ms.locfileid: "68206799"
   
 1.  當呼叫 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 將程式緩衝區繫結至陳述式參數時：  
   
-    -   最後一個參數中，使用 SQL_LEN_DATA_AT_EXEC (*長度*)，*長度*是總長度`text`， `ntext`，或`image`參數資料，以位元組為單位。  
+    -   針對最後一個參數，使用 SQL_LEN_DATA_AT_EXEC （*長度*），其中*length*是`text`、 `ntext`或`image`參數資料的總長度（以位元組為單位）。  
   
     -   使用程式定義之參數識別碼的 `rgbValue` (第八個參數)。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68206799"
 ## <a name="example"></a>範例  
  此範例顯示如何使用 SQLParamData 和 SQLPutData 讀取 SQL_LONG 變數字元資料。 IA64 不支援此範例。  
   
- 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫 (您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案) 首頁下載 AdventureWorks 範例資料庫)。此資料來源必須以作業系統提供的 ODBC 驅動程式為基礎 (驅動程式名稱為 "SQL Server")。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
+ 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫  （您可以從[Microsoft SQL Server 範例和 [社區專案](https://go.microsoft.com/fwlink/?LinkID=85384)] 首頁下載 AdventureWorks 範例資料庫）。此資料來源必須以作業系統所提供的 ODBC 驅動程式為基礎（驅動程式名稱為 "SQL Server"）。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
@@ -222,6 +222,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 text 和 image 資料行使用說明主題&#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
+ [管理 text 和 image 資料行如何 &#40;ODBC&#41;的 how to 主題](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
   
   

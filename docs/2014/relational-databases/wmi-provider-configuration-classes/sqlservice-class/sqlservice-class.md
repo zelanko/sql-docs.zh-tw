@@ -19,18 +19,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c48db11ae347d1fb1c2a393e440aebb0c80def54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912120"
 ---
 # <a name="sqlservice-class"></a>SqlService 類別
-  [SqlService 類別](sqlservice-class.md)代表的執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務。  
+  [SqlService 類別](sqlservice-class.md)代表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務的實例。  
   
- [SqlService 類別](sqlservice-class.md)用來以程式設計方式管理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務。 具有[SqlService 類別](sqlservice-class.md)物件時，您可以執行下列工作：  
+ [SqlService 類別](sqlservice-class.md)是用來以程式設計方式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理服務。 使用[SqlService 類別](sqlservice-class.md)物件，您可以執行下列工作：  
   
--   連接到服務。  
+-   連線至服務。  
   
 -   修改用來連接服務的帳戶和密碼。  
   

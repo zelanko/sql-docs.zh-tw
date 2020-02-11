@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4fde67fc6b38e81c7367ee1e298439810b0b35c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754564"
 ---
 # <a name="principal-server-instance-configure-database-mirroring-security-wizard"></a>主體伺服器執行個體 (設定資料庫鏡像安全性精靈)
@@ -28,11 +28,11 @@ ms.locfileid: "62754564"
   
 -   [啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>選項  
- **主體伺服器執行個體**  
+## <a name="options"></a>選項。  
+ **主體伺服器實例**  
  因為 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的資料庫鏡像一律從主體伺服器設定，所以目前的伺服器執行個體一律為主體伺服器執行個體。  
   
- **接聽程式通訊埠**  
+ **接聽程式埠**  
  此選項的行為會視此伺服器執行個體的鏡像端點是否存在，如下：  
   
 -   如果這個伺服器執行個體沒有接聽程式通訊埠，在 **[通訊埠]** 文字方塊中就會顯示通訊埠編號 5022。 您可以使用任何可用的通訊埠編號，例如 7022。  
@@ -45,15 +45,15 @@ ms.locfileid: "62754564"
  **端點名稱**  
  如果這個伺服器執行個體存在有鏡像端點，該端點名稱會顯示於此處。 如果端點不存在，您可以指定端點名稱。  
   
- **透過此端點傳送的資料要加密**  
- 依預設，加密為已啟用。 當已啟用時，加密為必須的 (不只是支援的)，並且所有的加密選項都使用預設值。 如需詳細資訊，請參閱 [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)的相關資訊。  
+ **加密透過此端點傳送的資料**  
+ 依預設，加密為已啟用。 當已啟用時，加密為必須的 (不只是支援的)，並且所有的加密選項都使用預設值。 如需詳細資訊，請參閱 [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)。  
   
  若要停用加密，請清除該核取方塊。 若要重新啟用加密，請選取該核取方塊。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫鏡像端點 &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [資料庫屬性 &#40;鏡像頁面&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [建立適用于 Windows 驗證的資料庫鏡像端點 &#40;Transact-sql&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
  [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   

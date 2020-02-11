@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1cb5f1f4bcc3a3e796cc99b4da7f14e5a5976b93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874088"
 ---
 # <a name="enabling-clr-integration"></a>啟用 CLR 整合
-  預設會停用 Common Language Runtime (CLR) 整合功能，且為了使用 CLR 整合所實作的物件，必須啟用這個功能。 若要啟用 CLR 整合，請使用**clr 已啟用**選項**sp_configure**預存程序：  
+  預設會停用 Common Language Runtime (CLR) 整合功能，且為了使用 CLR 整合所實作的物件，必須啟用這個功能。 若要啟用 CLR 整合，請使用**sp_configure**預存程式的**clr enabled**選項：  
   
 ```  
   
@@ -35,20 +35,20 @@ RECONFIGURE;
 GO  
 ```  
   
- 您可以藉由設定停用 CLR 整合**clr 已啟用**選項設為 0。 當您停用 CLR 整合時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會停止執行所有 CLR 常式，並卸載所有應用程式網域。  
+ 您可以將**clr enabled**選項設定為0，以停用 clr 整合。 當您停用 CLR 整合時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會停止執行所有 CLR 常式，並卸載所有應用程式網域。  
   
 > [!NOTE]  
->  若要啟用 CLR 整合，您必須有 ALTER SETTINGS 伺服器層級權限，其中的成員會隱含地擁有**sysadmin**並**serveradmin**固定伺服器角色。  
+>  若要啟用 CLR 整合，您必須擁有 ALTER SETTINGS 伺服器層級許可權，這會由**sysadmin**和**serveradmin**固定伺服器角色的成員隱含持有。  
   
 > [!NOTE]  
->  啟動伺服器時，以大量記憶體及大量處理器設定的電腦可能無法載入 SQL Server 的 CLR 整合功能。 若要解決此問題，請使用，伺服器啟動 **-gmemory_to_reserve** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務啟動選項，並指定夠大的記憶體值。 如需詳細資訊，請參閱 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
+>  啟動伺服器時，以大量記憶體及大量處理器設定的電腦可能無法載入 SQL Server 的 CLR 整合功能。 若要解決此問題，請使用 **-gmemory_to_reserve** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務啟動選項來啟動伺服器，並指定夠大的記憶體值。 如需詳細資訊，請參閱 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   
 > [!NOTE]  
 >  輕量型共用不支援 Common Language Runtime (CLR) 的執行。 在啟用 CLR 整合以前，您必須停用輕量型共用。 如需詳細資訊，請參閱 [輕量型共用伺服器組態選項](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
- [CLR 已啟用伺服器組態選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
+ [clr 已啟用伺服器設定選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
  [伺服器層級角色](../security/authentication-access/server-level-roles.md)  

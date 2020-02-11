@@ -1,5 +1,5 @@
 ---
-title: sp_delete_database_firewall_rule (Azure SQL Database) |Microsoft Docs
+title: sp_delete_database_firewall_rule （Azure SQL Database） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2017
 ms.service: sql-database
@@ -19,16 +19,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 660405e7e7592557422e43655c35ec27c194aad3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130677"
 ---
-# <a name="spdeletedatabasefirewallrule-azure-sql-database"></a>sp_delete_database_firewall_rule (Azure SQL Database)
+# <a name="sp_delete_database_firewall_rule-azure-sql-database"></a>sp_delete_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  移除資料庫層級防火牆設定，從您[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 資料庫防火牆規則可以設定和刪除 master 資料庫，以及使用者資料庫上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。   
+  從中移除資料庫層級防火牆設定[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 您可以針對 master 資料庫和上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]的使用者資料庫，設定及刪除資料庫防火牆規則。   
   
  
 ## <a name="syntax"></a>語法  
@@ -40,13 +40,13 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
   
 ## <a name="arguments"></a>引數  
  `[@name =] [N]'name'`  
- 要移除的資料庫層級防火牆設定的名稱。 *名稱*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** ，沒有預設值。 Unicode 識別碼`N`都是選擇性的[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 
+ 要移除的資料庫層級防火牆設定的名稱。 *名稱*為**Nvarchar （128）** ，沒有預設值。 Unicode 識別碼`N`對[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]而言是選擇性的。 
   
-## <a name="permissions"></a>Permissions  
- 只有伺服器層級主體登入建立的佈建程序或 Azure Active Directory 主體指派為系統管理員可以刪除資料庫層級防火牆規則。  
+## <a name="permissions"></a>權限  
+ 只有由布建程式所建立的伺服器層級主體登入或指派為系統管理員的 Azure Active Directory 主體，才可以刪除資料庫層級防火牆規則。  
   
 ## <a name="example"></a>範例  
- 下列範例會移除資料庫層級防火牆設定，稱為`Example DB Setting 1`。
+ 下列範例會移除名為`Example DB Setting 1`的資料庫層級防火牆設定。
   
 ```  
 -- Remove database-level firewall setting  
@@ -56,10 +56,10 @@ EXECUTE sp_delete_database_firewall_rule N'Example DB Setting 1';
   
 ## <a name="see-also"></a>另請參閱  
  [Azure SQL Database 防火牆](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [如何：設定防火牆設定 (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [如何：設定防火牆設定（Azure SQL Database）](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)   
- [sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
+ [database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
   
   
 

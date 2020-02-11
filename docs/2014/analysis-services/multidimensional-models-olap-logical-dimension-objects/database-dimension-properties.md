@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d55ecc81d9ae71b33e068b2d1d68ea1775ed6c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62728492"
 ---
 # <a name="database-dimension-properties"></a>資料庫維度屬性
-  在  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，維度的特性由維度，根據各種維度屬性的設定和屬性或階層維度所包含的中繼資料定義。 下表描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的維度屬性。  
+  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，維度的特性是由維度的中繼資料所定義，根據各種維度屬性的設定，以及維度所包含的屬性或階層。 下表描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的維度屬性。  
   
 |屬性|描述|  
 |--------------|-----------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "62728492"
 |`MiningModelID`|包含與資料採礦維度相關之採礦模型的識別碼。 只有在維度是採礦模型維度時，才可使用這個屬性。|  
 |`Name`|指定維度的名稱。|  
 |`ProactiveCaching`|定義維度的主動式快取設定。|  
-|`ProcessingGroup`|指定處理群組。 值為 ByAttribute 或 ByTable。 預設值是 `ByAttribute`。|  
+|`ProcessingGroup`|指定處理群組。 值為 ByAttribute 或 ByTable。 預設值為 `ByAttribute`。|  
 |`ProcessingMode`|指出是否應在處理期間或處理之後，進行索引和彙總 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。|  
 |`ProcessingPriority`|決定背景作業期間之維度的處理優先權 (例如，延遲彙總、索引或叢集)。|  
 |`Source`|識別維度所繫結的資料來源檢視。|  
@@ -49,12 +49,12 @@ ms.locfileid: "62728492"
 |`WriteEnabled`|指出是否可以使用維度回寫 (受限於安全性權限)。|  
   
 > [!NOTE]  
->  如需有關如何設定 ErrorConfiguration 和 UnknownMember 屬性值，當使用 null 值和其他資料完整性議題的詳細資訊，請[Analysis Services 2005 中處理資料完整性問題](https://go.microsoft.com/fwlink/?LinkId=81891)。  
+>  如需在使用 null 值和其他資料完整性問題時設定 ErrorConfiguration 和 UnknownMember 屬性值的詳細資訊，請參閱[處理 Analysis Services 2005 中的資料完整性問題](https://go.microsoft.com/fwlink/?LinkId=81891)。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性和屬性階層](attributes-and-attribute-hierarchies.md)   
  [使用者階層](user-hierarchies.md)   
  [維度關聯性](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [維度 &#40;Analysis Services-多維度資料 &#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [維度 &#40;Analysis Services 多維資料&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9222253c884fdf3cfa52d283f250580a02a9f7ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62523754"
 ---
-# <a name="delete-a-sql-server-agent-proxy"></a>刪除 SQL Server Agent Proxy
+# <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
   此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中刪除 [!INCLUDE[tsql](../../includes/tsql-md.md)]Agent Proxy 帳戶。  
   
  **本主題內容**  
@@ -30,9 +30,9 @@ ms.locfileid: "62523754"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要使用下列項目刪除 SQL Server Agent Proxy 帳戶：**  
+-   **若要使用下列內容刪除 SQL Server Agent proxy 帳戶：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62523754"
   
 ###  <a name="Restrictions"></a> 限制事項  
   
--   當您刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶時，請確定該 Proxy 未參考任何作用中的作業步驟。 若要檢查是否有任何作業步驟參考該 Proxy，請以滑鼠右鍵按一下該 Proxy，選取 [屬性]  ，然後選取 [<Proxy 名稱> Proxy 帳戶屬性]   對話方塊中的 [參考]  頁面。 如果刪除一個 Proxy， **[刪除物件]** 對話方塊中有個選項，可以重新指派該 Proxy 使用的所有作業步驟。  
+-   當您刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶時，請確定該 Proxy 未參考任何作用中的作業步驟。 若要檢查是否有任何作業步驟參考該 proxy，請以滑鼠右鍵按一下該 proxy，選取 [**屬性**]，然後在 [ _Proxy_name_**proxy 帳戶屬性**] 對話方塊中，選取 [**參考**] 頁面。 如果刪除一個 Proxy， **[刪除物件]** 對話方塊中有個選項，可以重新指派該 Proxy 使用的所有作業步驟。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 使用認證來儲存 Windows 使用者帳戶的相關資訊。 認證中所指定的使用者，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行的電腦上必須要有「以批次工作登入」的權限。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62523754"
   
 -   如果使用者的登入身分可以存取 Proxy，或者使用者隸屬於可存取 Proxy 的角色，該使用者就可以使用作業步驟中的 Proxy。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  只有 **sysadmin** 固定伺服器角色的成員才能建立、修改或刪除 Proxy 帳戶。  
@@ -65,9 +65,9 @@ ms.locfileid: "62523754"
   
 3.  按一下加號展開 **[Proxy]** 資料夾。  
   
-4.  按一下加號，展開包含要刪除之 Proxy 帳戶的子系統 (例如 [ActiveX Script]  )。  
+4.  按一下加號，展開包含要刪除之 Proxy 帳戶的子系統 (例如 [ActiveX Script]****)。  
   
-5.  以滑鼠右鍵按一下您要刪除的 Proxy 帳戶，然後選取 [刪除]  。  
+5.  以滑鼠右鍵按一下您要刪除的 Proxy 帳戶，然後選取 [刪除]****。  
   
 6.  在 **[刪除物件]** 對話方塊中，確認已選取正確的 Proxy 帳戶。 核取 **[重新指派給]** 核取方塊，將參考此 Proxy 帳戶的工作步驟重新指派給另一個帳戶。  
   
@@ -92,6 +92,6 @@ ms.locfileid: "62523754"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 < [sp_delete_proxy &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql)。  
+ 如需詳細資訊，請參閱[sp_delete_proxy &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql)。  
   
   

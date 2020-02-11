@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767030"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>使用檢查點來重新啟動封裝
@@ -59,7 +59,7 @@ ms.locfileid: "62767030"
 |CheckpointUsage|指定是否使用檢查點。|  
 |SaveCheckpoints|指出封裝是否儲存檢查點。 必須將此屬性設為 True，才能從失敗點重新啟動封裝。|  
   
- 此外，您必須設定 FailPackageOnFailure 屬性為`true`為適用於您想要識別封裝中的所有容器重新啟動點。  
+ 此外，您必須針對封裝中要識別`true`為重新啟動點的所有容器，將 FailPackageOnFailure 屬性設定為。  
   
  可以使用 ForceExecutionResult 屬性來測試封裝中檢查點的使用。 將工作或容器的 ForceExecutionResult 設為 [Failure]，可以模擬即時失敗。 當重新執行封裝時，會重新執行失敗的工作和容器。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62767030"
 |`IfExists`|指定如果存在檢查點檔案，就使用該檔案。 如果存在檢查點檔案，則封裝會從上一個執行失敗點重新啟動，否則，封裝會從封裝工作流程的開始點執行。|  
   
 > [!NOTE]  
->  **上的 /CheckPointing** dtexec 選項相當於設定`SaveCheckpoints`之封裝的屬性`True`，和`CheckpointUsage`屬性設為 Always。 如需詳細資訊，請參閱 [dtexec Utility](dtexec-utility.md)。  
+>  Dtexec 的 **/checkpointing on**選項相當於將封裝的`SaveCheckpoints`屬性設定為`True`，並將`CheckpointUsage`屬性設為 Always。 如需詳細資訊，請參閱 [dtexec Utility](dtexec-utility.md)。  
   
 ## <a name="securing-checkpoint-files"></a>保護檢查點檔案  
  封裝等級保護並不包括檢查點檔案的保護，因此您必須個別保護這些檔案。 檢查點資料只能儲存在檔案系統中，而且您應該使用作業系統存取控制清單 (ACL) 來保護儲存檔案之位置或資料夾的安全。 請務必保護檢查點檔案的安全，因為它們包含有關封裝狀態的資訊，包括變數目前的值。 例如，變數包含的資料錄集可能具有許多私密資料 (例如電話號碼) 的資料列。 如需詳細資訊，請參閱 [對封裝使用之檔案的存取權](../access-to-files-used-by-packages.md)。  

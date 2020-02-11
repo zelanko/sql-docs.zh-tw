@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc207c4c1bc7ddc2c7c4f590622e04a0f7739375
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62698735"
 ---
 # <a name="get-information-about-dml-triggers"></a>取得關於 DML 觸發程序的詳細資訊
@@ -31,7 +31,7 @@ ms.locfileid: "62698735"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要取得 DML 觸發程序的相關資訊，使用：**  
   
@@ -41,14 +41,14 @@ ms.locfileid: "62698735"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  **sys.sql.modules**、 **sys.object**、 **sys.triggers**、 **sys.events**、 **sys.trigger_events**  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md)。  
   
  OBJECT_DEFINITION、OBJECTPROPERTY、 **sp_helptext**  
- 需要 **public** 角色的成員資格。 凡具有下列任一權限的物件擁有者或承授者，都看得到使用者物件的定義：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。 **db_owner**、 **db_ddladmin**和 **db_securityadmin** 固定資料庫角色的成員隱含地擁有這些權限。  
+ 需要 **public** 角色的成員資格。 凡具有 ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION 任一權限的物件擁有者或被授與者，都看得到使用者物件的定義。 **db_owner**、 **db_ddladmin**和 **db_securityadmin** 固定資料庫角色的成員隱含地擁有這些權限。  
   
  **sys.sql_expression_dependencies**  
  需要資料庫的 VIEW DEFINITION 權限和資料庫之 **sys.sql_expression_dependencies** 的 SELECT 權限。 依預設，SELECT 權限只授與 **db_owner** 固定資料庫角色的成員。 當 SELECT 和 VIEW DEFINITION 權限授與其他使用者時，被授與者就可以檢視資料庫中的所有相依性。  
@@ -71,9 +71,9 @@ ms.locfileid: "62698735"
   
 3.  展開 [觸發程序]  ，以滑鼠右鍵按一下您要的觸發程序，然後按一下 [檢視相依性]  。  
   
-4.  在 [物件相依性]  視窗中，若要檢視相依於 DML 觸發程序的物件，請選取 [相依於 \<DML 觸發程序名稱> 的物件]  。 物件會出現在 **[相依性]** 區域中。  
+4.  在 [物件相依性]  視窗中，若要檢視相依於 DML 觸發程序的物件，請選取 [相依於 **DML 觸發程序名稱> 的物件]\<** 。 物件會出現在 **[相依性]** 區域中。  
   
-     若要檢視 DML 所相依的物件，請選取 [\<DML 觸發程序名稱> 所相依的物件]  。 物件會出現在 **[相依性]** 區域中。 展開每個節點，查看所有物件。  
+     若要檢視 DML 所相依的物件，請選取 [**DML 觸發程序名稱> 所相依的物件]\<** 。 物件會出現在 **[相依性]** 區域中。 展開每個節點，查看所有物件。  
   
 5.  若要取得出現在 **[相依性]** 區域中之物件的相關資訊，請按一下該物件。 **[選取的物件]** 欄位的 **[名稱]** 、 **[類型]** 和 **[相依性類型]** 方塊中會提供資訊。  
   

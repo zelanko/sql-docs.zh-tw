@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1026f4c20042a9aec24256238190dd1a230bda42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833588"
 ---
 # <a name="cache-connection-manager"></a>快取連接管理員
@@ -51,9 +51,9 @@ ms.locfileid: "62833588"
   
  如需可在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 設計師中設定之屬性的詳細資訊，請參閱 [快取連線管理員編輯器](../cache-connection-manager-editor.md)。  
   
- 如需如何以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../building-packages-programmatically/adding-connections-programmatically.md)。  
+ 如需如何以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和[以程式設計方式新增連線](../building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
- [使用快取連接管理員以完整快取模式實作查閱轉換](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+ [使用快取連線管理員以完整快取模式實作查閱轉換](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
   

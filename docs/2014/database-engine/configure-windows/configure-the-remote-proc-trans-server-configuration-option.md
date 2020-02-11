@@ -14,14 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 106f4ca8951200110349809065b35ba65a7f8411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811332"
 ---
 # <a name="configure-the-remote-proc-trans-server-configuration-option"></a>設定 remote proc trans 伺服器組態選項
-  此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote proc trans [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **remote proc trans** 選項有助於保護透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 交易的伺服器對伺服器程序的動作。  
+  此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote proc trans [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 
+  **remote proc trans** 選項有助於保護透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 交易的伺服器對伺服器程序的動作。  
   
  將 **remote proc trans** 的值設為 1，可提供 MS DTC 協調分散式交易來保護交易的 ACID (不可部分完成的、一致的、隔離的和持久的) 屬性。 在此選項設為 1 之後開始的工作階段會繼承此組態設定做為其預設值。  
   
@@ -36,15 +37,15 @@ ms.locfileid: "62811332"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **使用下列方法設定 remote proc trans 選項：**  
+-   **若要設定 remote proc 交易選項，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：** [設定 remote proc trans 選項之後](#FollowUp)  
+-   待處理 **：**[設定 remote proc 交易選項之後](#FollowUp)    
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -54,9 +55,9 @@ ms.locfileid: "62811332"
   
 ###  <a name="Recommendations"></a> 建議  
   
--   此選項主要是針對使用遠端預存程序的應用程式提供舊版 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的相容性。 請使用參考連結的伺服器 (使用 [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)定義的) 之分散式查詢，而不要發出遠端預存程序呼叫。  
+-   針對使用遠端預存程式的應用程式， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供與舊版的相容性。 請使用參考連結的伺服器 (使用 [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)定義的) 之分散式查詢，而不要發出遠端預存程序呼叫。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
@@ -79,7 +80,7 @@ ms.locfileid: "62811332"
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `remote proc trans` 選項的值設定為 `1`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 [ `remote proc trans` ] 選項的值設定為 `1`。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -93,7 +94,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 後續操作：設定 remote proc trans 選項之後  
+##  <a name="FollowUp"></a>待處理：設定 remote proc 交易選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

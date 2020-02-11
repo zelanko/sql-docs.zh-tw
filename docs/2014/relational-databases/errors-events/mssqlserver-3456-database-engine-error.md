@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2077d736f15787fe35a4a18d5c03dbd9ddd36a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914286"
 ---
-# <a name="mssqlserver3456"></a>MSSQLSERVER_3456
+# <a name="mssqlserver_3456"></a>MSSQLSERVER_3456
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|3456|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|REC_REDOLSNMISMATCH|  
-|訊息文字|無法重做資料庫 '%.*ls' (資料庫識別碼 %d) 中頁面 %S_PGID 上交易識別碼 %S_XID 的記錄 %S_LSN。 頁面：LSN = %S_LSN，類型 = %ld。 記錄:OpCode = %ld，內容 %ld，PrevPageLSN: %S_LSN。 請從資料庫的備份還原或修復資料庫。|  
+|訊息文字|無法重做資料庫 '%.*ls' (資料庫識別碼 %d) 中頁面 %S_PGID 上交易識別碼 %S_XID 的記錄 %S_LSN。 頁面: LSN = %S_LSN，類型 = %ld。 記錄: OpCode = %ld，內容 %ld，PrevPageLSN: %S_LSN。 請從資料庫的備份還原或修復資料庫。|  
   
 ## <a name="explanation"></a>說明  
  還原作業無法重做交易記錄。 這個錯誤已經將資料庫置於 SUSPECT 狀態。 主要檔案群組以及可能還有其他檔案群組都有疑問，而且可能已損毀。 資料庫在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動期間無法復原，因此無法使用。 需要使用者動作來解決問題。  
@@ -43,8 +43,8 @@ ms.locfileid: "62914286"
  如需此 3456 錯誤發生原因的詳細資訊，請檢查 Windows 事件記錄檔，尋找指出特定失敗的先前錯誤。 適當的使用者動作取決於 Windows 事件記錄檔中的資訊指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤是由暫時性狀況或永久性失敗所造成。 如需為錯誤 3456 疑難排解之使用者動作的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》。  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [DBCC CHECKDB &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
  [完整資料庫還原 &#40;簡單復原模式&#41;](../backup-restore/complete-database-restores-simple-recovery-model.md)   
  [MSSQLSERVER_824](mssqlserver-824-database-engine-error.md)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  

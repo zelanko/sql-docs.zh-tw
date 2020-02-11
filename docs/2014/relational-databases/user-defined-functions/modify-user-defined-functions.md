@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 77fbdc3bf2f579d585a802d5ed137cfe2a149c2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196456"
 ---
 # <a name="modify-user-defined-functions"></a>修改使用者定義函數
@@ -45,7 +45,7 @@ ms.locfileid: "68196456"
   
 -   將 Transact-SQL 函數變更為 CLR 函數，反之亦然。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要函數或結構描述的 ALTER 權限。 如果此函數指定使用者定義型別，則需要該型別的 EXECUTE 權限。  
@@ -70,7 +70,7 @@ ms.locfileid: "68196456"
   
 5.  在查詢視窗中，對 ALTER FUNCTION 陳述式進行必要的變更。  
   
-6.  在 [檔案]  功能表上，按一下 [儲存 _function_name_]  。  
+6.  在 [檔案]  功能表上，按一下 [儲存 **function_name**]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

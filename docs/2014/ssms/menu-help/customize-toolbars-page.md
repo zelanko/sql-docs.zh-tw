@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f16133abfa0d16e4b5614bdfefa5cf7c163516e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470005"
 ---
 # <a name="customize-toolbars-page"></a>自訂 (工具列頁面)
@@ -32,7 +32,7 @@ ms.locfileid: "62470005"
  **新增**  
  顯示 [新增工具列]  對話方塊，讓您能夠建立和命名自訂工具列。  
   
- **Rename**  
+ **重新命名**  
  顯示 [重新命名工具列]  對話方塊，讓您僅能變更自訂工具列的名稱。  
   
  **刪除**  

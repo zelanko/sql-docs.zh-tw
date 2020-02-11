@@ -1,5 +1,5 @@
 ---
-title: Create a Cross-Domain Rule
+title: 建立跨定義域規則
 ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -13,13 +13,13 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 070ef5db87ac28b59f01e3927f876f9c757e6caa
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245466"
 ---
-# <a name="create-a-cross-domain-rule"></a>Create a Cross-Domain Rule
+# <a name="create-a-cross-domain-rule"></a>建立跨定義域規則
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -33,14 +33,14 @@ ms.locfileid: "75245466"
   
  跨定義域規則會在只影響單一定義域的所有簡單規則之後納入考量。 只有當某個值通過單一定義域規則 (如果存在的話) 時，才會套用跨定義域規則。 您必須先定義所有要執行規則的複合定義域和單一定義域，然後才能執行規則。  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a>要求  
+###  <a name="Prerequisites"></a> 必要條件  
  若要建立跨定義域規則，您必須已經建立並開啟複合定義域。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_administrator 角色，才能建立跨定義域規則。  
   
 ##  <a name="Create"></a>建立跨定義域規則  

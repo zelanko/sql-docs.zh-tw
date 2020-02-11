@@ -1,5 +1,5 @@
 ---
-title: sys.service_contracts (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases service_contracts （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: 787dd47e-4210-439d-9c4a-57a727a0dbd8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28339ce24b1398ce2645e04b8a6352f2b4f598d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68132856"
 ---
-# <a name="sysservicecontracts-transact-sql"></a>sys.service_contracts (Transact-SQL)
+# <a name="sysservice_contracts-transact-sql"></a>sys.service_contracts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   這份目錄檢視會針對資料庫中的每份合約，各包含一個資料列。  
@@ -37,7 +37,7 @@ ms.locfileid: "68132856"
 |**service_contract_id**|**int**|合約的識別碼。 不是 NULLABLE。|  
 |**principal_id**|**int**|擁有這份合約的資料庫主體識別碼。 NULLABLE。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
   

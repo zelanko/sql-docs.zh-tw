@@ -10,10 +10,10 @@ ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4a789386fbbef91590ec025787e47c7655753a3b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251738"
 ---
 # <a name="data-quality-client-application"></a>Data Quality Client 應用程式
@@ -39,12 +39,12 @@ ms.locfileid: "75251738"
   
 |內容描述|主題|  
 |-------------------------|-----------|  
-|描述如何使用 DQS 中的知識文庫和定義域。|[DQS 知識庫和定義域](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
-|描述如何在 DQS 中清理資料。|[資料清理](../data-quality-services/data-cleansing.md)|  
+|描述如何使用 DQS 中的知識文庫和定義域。|[DQS 知識庫與定義域](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
+|描述如何在 DQS 中清理資料。|[Data Cleansing](../data-quality-services/data-cleansing.md)|  
 |描述如何在 DQS 中執行比對。|[資料比對](../data-quality-services/data-matching.md)|  
-|描述如何管理 DQS。|[DQS 管理](../data-quality-services/dqs-administration.md)|  
+|描述如何管理 DQS。|[dqs 管理](../data-quality-services/dqs-administration.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [Data Quality Client 主畫面](../data-quality-services/data-quality-client-home-screen.md)  
+ [Data Quality Client 首頁畫面](../data-quality-services/data-quality-client-home-screen.md)  
   
   

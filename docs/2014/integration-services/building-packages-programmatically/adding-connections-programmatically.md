@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1258797d76df49a2622335ee798120632706c78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772219"
 ---
 # <a name="adding-connections-programmatically"></a>以程式設計方式加入連接
@@ -41,7 +41,7 @@ ms.locfileid: "62772219"
   
  `ConnectionManagerAdoNetClass cmado = cm.InnerObject as ConnectionManagerAdoNet;`  
   
- 這會將 Managed 連接管理員物件轉換為它的基礎連接物件。 如果您是使用 C++，會呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件的 `QueryInterface` 方法，而且會要求基礎連接物件的介面。  
+ 這會將 Managed 連接管理員物件轉換為它的基礎連接物件。 如果您是使用 C++，會呼叫 `QueryInterface` 物件的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 方法，而且會要求基礎連接物件的介面。  
   
  下表列出包含在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的連接管理員。 以及用在 `package.Connections.Add("xxx")` 陳述式中的字串。 如需所有連線管理員的清單，請參閱 [Integration Services &#40;SSIS&#41; 連線](../connection-manager/integration-services-ssis-connections.md)。  
   
@@ -209,10 +209,10 @@ End Class
 ## <a name="external-resources"></a>外部資源  
  carlprothman.net 上的技術文章：[連接字串](https://go.microsoft.com/fwlink/?LinkId=220743)。  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
- [Integration Services &#40;SSIS&#41; 連線](../connection-manager/integration-services-ssis-connections.md)   
- [建立連線管理員](../create-connection-managers.md)  
+ [Integration Services &#40;SSIS&#41; 連接](../connection-manager/integration-services-ssis-connections.md)   
+ [建立連接管理員](../create-connection-managers.md)  
   
   

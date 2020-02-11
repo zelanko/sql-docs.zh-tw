@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5dfc0aa145f106fc57c25a6249b928ee27ab4b87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757198"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>檢視或設定遠端伺服器連接選項 (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "62757198"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目檢視或設定遠端伺服器連接選項：**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62757198"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  執行 **sp_serveroption** 需要伺服器的 ALTER ANY LINKED SERVER 權限。  
@@ -51,7 +51,7 @@ ms.locfileid: "62757198"
   
 1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]  。  
   
-2.  在 [SQL Server 屬性 - \<伺服器名稱>] **** 對話方塊中，按一下 [連線]  。  
+2.  在 [SQL Server 屬性 - **伺服器名稱\<]******>** 對話方塊中，按一下 [連線]****。  
   
 3.  檢閱 **[連接]** 頁面上的 **[遠端伺服器連接]** 設定，並視需要加以修改。  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_scriptdynamicupdproc (TRANSACT-SQL) |Microsoft Docs
+title: sp_scriptdynamicupdproc （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 67ba388871720ff804063f27a378b838d300baf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126385"
 ---
-# <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
+# <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   產生建立動態更新預存程序的 CREATE PROCEDURE 陳述式。 自訂預存程序內的 UPDATE 陳述式是根據指示要變更的資料行之 MCALL 語法來動態建置的。 如果訂閱資料表的索引數目在成長，且所變更的資料行數目不多，請使用這個預存程序。 這個預存程序執行於發行集資料庫的發行者端。  
@@ -37,19 +37,19 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @artid = ] artid` 這是發行項識別碼。 *artid&lt*已**int**，沒有預設值。  
+`[ @artid = ] artid`這是發行項識別碼。 *artid*是**int**，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
- 傳回結果集，其中包含單一**nvarchar(4000)** 資料行。 這個結果集形成用來建立自訂預存程序的完整 CREATE PROCEDURE 陳述式。  
+ 傳回由單一**Nvarchar （4000）** 資料行所組成的結果集。 這個結果集形成用來建立自訂預存程序的完整 CREATE PROCEDURE 陳述式。  
   
 ## <a name="remarks"></a>備註  
  **sp_scriptdynamicupdproc**用於異動複寫中。 預設 MCALL 指令碼邏輯包括 UPDATE 陳述式內的所有資料行，且利用點陣圖來判斷已變更的資料行。 如果資料行並未變更，資料行會重設為其本身，這通常不會有問題。 如果資料行已建立索引，就會進行額外的處理。 動態方法只包括已變更的資料行，這會提供最佳的 UPDATE 字串。 不過，當建立動態 UPDATE 陳述式時，會在執行階段進行額外的處理。 我們建議您測試動態和靜態方法，然後再選擇最佳方案。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_scriptdynamicupdproc**。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_scriptdynamicupdproc**。  
   
 ## <a name="examples"></a>範例  
- 這個範例會建立一篇文章 (使用*artid&lt*設為**1**) 上**作者**資料表中**pubs**資料庫，並指定更新陳述式是執行的自訂程序：  
+ 這個範例會在**pubs**資料庫的**作者**資料表上建立發行項（ *artid*設為**1**），並指定 UPDATE 語句是要執行的自訂程式：  
   
 ```  
 'MCALL sp_mupd_authors'  

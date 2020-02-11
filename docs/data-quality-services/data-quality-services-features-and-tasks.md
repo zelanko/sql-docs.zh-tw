@@ -10,10 +10,10 @@ ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: f2775969aa22b580d40ecd6f8065deb2ed3472c7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251693"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services 功能及工作
@@ -25,20 +25,20 @@ ms.locfileid: "75251693"
  ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")**設計和執行資料品質解決方案**  
  [Data Quality Client 應用程式](../data-quality-services/data-quality-client-application.md)  
   
- [DQS 知識庫和定義域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
+ [DQS 知識庫與定義域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
  [&#40;DQS&#41;的資料品質專案](../data-quality-services/data-quality-projects-dqs.md)  
   
- [資料清理](../data-quality-services/data-cleansing.md)  
+ [Data Cleansing](../data-quality-services/data-cleansing.md)  
   
  [資料比對](../data-quality-services/data-matching.md)  
   
- [DQS 中的參考資料服務](../data-quality-services/reference-data-services-in-dqs.md)  
+ [DQS 中的 Reference Data Services](../data-quality-services/reference-data-services-in-dqs.md)  
   
- [DQS 中的資料分析和通知](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
+ [DQS 中的資料分析與通知](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
   
  ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")**管理資料品質服務**  
- [DQS 管理](../data-quality-services/dqs-administration.md)  
+ [dqs 管理](../data-quality-services/dqs-administration.md)  
   
  [DQS 安全性](../data-quality-services/dqs-security.md)  
   

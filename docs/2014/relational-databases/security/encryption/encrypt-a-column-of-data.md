@@ -14,28 +14,28 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: bd0b5824abfc36923909ce37866b221c0bc830d5
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957197"
 ---
 # <a name="encrypt-a-column-of-data"></a>加密資料行
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中透過對稱加密來加密資料行。  
   
- **本主題中的**  
+ **本主題內容**  
   
 -   **開始之前：**  
   
-     [安全級](#Security)  
+     [安全性](#Security)  
   
 -   [若要使用 Transact-sql 來加密資料行](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  需要下列權限，才能執行以下步驟：  
   
 -   資料庫的 CONTROL 權限。  
@@ -46,15 +46,15 @@ ms.locfileid: "74957197"
   
 -   金鑰的某種權限，而且絕不能被拒絕 VIEW DEFINITION 權限。  
   
-##  <a name="TsqlProcedure"></a>使用 Transact-sql  
+##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>若要使用簡單的對稱加密來加密資料行  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在 [標準]  列上，按一下 [新增查詢] ****。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [**執行**]。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -115,9 +115,9 @@ ms.locfileid: "74957197"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在 [標準]  列上，按一下 [新增查詢] ****。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [**執行**]。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -176,12 +176,12 @@ ms.locfileid: "74957197"
   
  如需詳細資訊，請參閱下列：  
   
--   [建立憑證 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [建立對稱金鑰 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+-   [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
--   [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
+-   [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
   
--   [開啟對稱金鑰 &#40;Transact-sql&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
+-   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
   
   

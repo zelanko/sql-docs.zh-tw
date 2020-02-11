@@ -10,10 +10,10 @@ ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 1fda81ac39233435dbcd0546e452878cc6767b33
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247153"
 ---
 # <a name="manage-a-knowledge-base"></a>管理知識庫
@@ -22,14 +22,14 @@ ms.locfileid: "75247153"
 
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中針對知識庫執行管理功能。 您可以刪除知識庫、解除鎖定知識庫、捨棄知識庫工作、重新命名知識庫，以及顯示其屬性。  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a>要求  
+###  <a name="Prerequisites"></a> 必要條件  
  若要管理知識庫，該知識庫必須已經建立完成，而且它必須已發行 (如果是由另一個人建立) 或關閉 (如果是由您建立)。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能開啟知識庫。  
   
 ##  <a name="Manage"></a>管理知識庫  

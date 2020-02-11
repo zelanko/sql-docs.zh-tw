@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97fa6d01fc4a06825814c8494268ecb668f1da7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108104"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>在 URL 內傳遞報表參數
@@ -26,7 +26,7 @@ ms.locfileid: "66108104"
 > [!IMPORTANT]  
 >  請務必讓 URL 包含 `_vti_bin` Proxy 語法，以便透過 SharePoint 和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP Proxy 路由傳送要求。 此 Proxy 會將某些內容加入至 HTTP 要求，也就是確保針對 SharePoint 模式報表伺服器正確執行報表所需的內容。  
 >   
->  如果您未包含 Proxy 語法，則需要為參數加上前置詞 *rp:*。  
+>  如果您未包含 proxy 語法，則需要在參數前面加上*rp：*。  
   
  所有查詢參數都可以有相對應的報表參數。 您可以傳遞相對應的報表參數，即可傳遞查詢參數。 如需詳細資訊，請參閱[在關聯式查詢設計工具中建立查詢 &#40;報表產生器和 SSRS&#41;](report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)。  
   
@@ -80,7 +80,7 @@ SalesOrderNumber:isnull=true
 > [!NOTE]  
 >  如果報表中包含具有預設值的報表參數，而且 `Prompt` 屬性的值是 `false` (也就是在報表管理員中未選取 [提示使用者] 屬性)，則您無法在 URL 內傳遞該報表參數的值。 這可讓管理員選擇防止使用者加入或修改某些報表參數值。  
   
-##  <a name="bkmk_examples"></a> 其他範例  
+##  <a name="bkmk_examples"></a>其他範例  
  下列 URL 範例包含空格和多個參數。  
   
 -   資料夾名稱 "SQL Server User Education Team" 包含空格，因此 "+" 會取代每個空格。  
@@ -99,7 +99,7 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- 下列 URL 範例會針對原生模式報表伺服器傳遞具有值 "7/1/2005" 的單一參數 *SellStartDate*。  
+ 下列 URL 範例會針對原生模式報表伺服器，傳遞值為 "7/1/2005" 的單一參數*SellStartDate* 。  
   
 ```  
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  

@@ -12,10 +12,10 @@ ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: a982279e06a1968cf80335cd16dd9eb74e458c3e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251772"
 ---
 # <a name="create-term-based-relations"></a>建立以詞彙為主的關聯
@@ -52,14 +52,14 @@ ms.locfileid: "75251772"
   
  如果您將清理程序期間收集到的資料品質知識匯入定義域，TBR 變更的值會當做正確值匯入。  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a>要求  
+###  <a name="Prerequisites"></a> 必要條件  
  若要建立以詞彙為主的關聯，您必須已在 [定義域管理] 活動中開啟定義域。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能建立以詞彙為主的關聯。  
   
 ##  <a name="Create"></a>建立以詞彙為主的關聯  

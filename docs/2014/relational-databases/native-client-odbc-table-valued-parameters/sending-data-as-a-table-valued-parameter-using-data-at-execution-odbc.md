@@ -1,5 +1,5 @@
 ---
-title: 將資料當做資料表值參數，使用在執行資料 (ODBC) 傳送 |Microsoft Docs
+title: 使用資料執行中（ODBC）以資料表值參數的形式傳送資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205459"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>使用資料執行中 (ODBC) 以資料表值參數的方式傳送資料
-  這是類似[全都放在記憶體](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)程序，但使用資料表值參數資料在執行。  
+  這類似于「[全部在記憶體中](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)」程式，但會針對資料表值參數使用「資料執行中」。  
   
- 如需示範資料表值參數的另一個範例，請參閱 <<c0> [ 使用資料表值參數&#40;ODBC&#41;](table-valued-parameters-odbc.md)。</c0>  
+ 如需示範資料表值參數的另一個範例，請參閱[使用資料表值參數 &#40;ODBC&#41;](table-valued-parameters-odbc.md)。  
   
- 在此範例中，呼叫 SQLExecute 或 SQLExecDirect 時，驅動程式會傳回 SQL_NEED_DATA。 接著，應用程式會呼叫 SQLParamData 重複直到驅動程式會傳回 SQL_NEED_DATA 以外的值。 驅動程式會傳回*ParameterValuePtr*通知哪一個參數，它會要求資料的應用程式。 應用程式會呼叫 SQLPutData 提供 SQLParamData 的下一個呼叫之前的參數資料。 SQLPutData 呼叫資料表值參數，表示它已準備好驅動程式 （在此範例中，永遠為 1） 的資料列數目。 當資料表值的所有資料列已傳遞至驅動程式時，SQLPutData 稱為指出有 0 個資料列可供使用。  
+ 在此範例中，當呼叫 SQLExecute 或 SQLExecDirect 時，驅動程式會傳回 SQL_NEED_DATA。 然後，應用程式會重複呼叫 SQLParamData，直到驅動程式傳回 SQL_NEED_DATA 以外的值。 驅動程式會傳回*ParameterValuePtr* ，以通知應用程式要求其資料的參數。 在下一次呼叫 SQLParamData 之前，應用程式會呼叫 SQLPutData 來提供參數資料。 對於資料表值參數，SQLPutData 的呼叫會指出它為驅動程式準備的資料列數目（在此範例中，一律為1）。 當資料表值的所有資料列都已傳遞至驅動程式時，會呼叫 SQLPutData，表示有0個數據列可供使用。  
   
- 您可以在資料表值的資料列內使用資料執行中的值。 SQLParamData 所傳回的值會通知哪一個值，驅動程式需要應用程式。 如同一般的參數值 SQLPutData 可以呼叫一次或多次的字元或二進位資料表值的資料行值。 這樣可以讓應用程式以片段傳遞很大的值。  
+ 您可以在資料表值的資料列內使用資料執行中的值。 SQLParamData 傳回的值會向代理程式更新驅動程式所需的值。 就像一般參數值一樣，可以針對字元或二進位資料表值資料行值，呼叫 SQLPutData 一次或多次。 這樣可以讓應用程式以片段傳遞很大的值。  
   
- SQLPutData 呼叫資料表值時， *DataPtr*用於可用 （在此範例中，永遠為 1） 的資料列數目。 *StrLen_or_IndPtr*必須一律為 0。 當已傳遞資料表值的所有資料列時，呼叫 SQLPutData *DataPtr*值為 0。  
+ 針對資料表值呼叫 SQLPutData 時， *DataPtr*會用於可用的資料列數目（在此範例中，一律為1）。 *StrLen_or_IndPtr*必須一律為0。 一旦傳遞了資料表值的所有資料列，就會以0的*DataPtr*值來呼叫 SQLPutData。  
   
 ## <a name="prerequisite"></a>必要條件  
  此程序假設已在伺服器上執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
@@ -67,7 +67,7 @@ from @Items
     SQLPOINTER ParamId;  
     ```  
   
-2.  繫結參數。 *ColumnSize*為 1，表示最多一個資料列會傳遞一次。  
+2.  繫結參數。 *ColumnSize*是1，表示一次最多會傳遞一個資料列。  
   
     ```  
     // Bind parameters for call to TVPOrderEntryByRow.  
@@ -122,14 +122,14 @@ from @Items
     strcpy_s((char *) CustCode ,sizeof(CustCode), "CUST1"); cbCustCode = SQL_NTS;  
     ```  
   
-5.  呼叫程序。 SQLExecDirect 會傳回 SQL_NEED_DATA，因為資料表值參數是資料在執行中參數。  
+5.  呼叫程序。 SQLExecDirect 會傳回 SQL_NEED_DATA，因為資料表值參數是資料執行中的參數。  
   
     ```  
     // Call the procedure  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-6.  提供資料執行中參數資料。 當傳回 SQLParamData *ParameterValuePtr*資料表值參數，應用程式必須準備資料行的下一個資料列或資料表值的資料列。 然後應用程式會呼叫與 SQLPutData *DataPtr*設為可用 （在此範例中，1） 的資料列數和*StrLen_or_IndPtr*設為 0。  
+6.  提供資料執行中參數資料。 當 SQLParamData 傳回資料表值參數的*ParameterValuePtr*時，應用程式必須為數據表值的下一個資料列或資料列準備資料行。 然後，應用程式會呼叫 SQLPutData，並將*DataPtr*設為可用的資料列數目（在此範例中為1）， *StrLen_or_IndPtr*設定為0。  
   
     ```  
     // Check if parameter data is required, and get the first parameter ID token  
@@ -184,7 +184,7 @@ from @Items
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 此範例示範您可以使用資料列資料流，每次呼叫 SQLPutData，搭配 ODBC TVP，類似於您如何使用 BCP.exe 將資料載入至資料庫的一個資料列。  
+ 這個範例會示範您可以使用 ODBC TVP，針對每個呼叫 SQLPutData 的資料列串流（一個資料列），類似于您可能會使用 BCP 載入資料庫的方式。  
   
  在建立範例之前，請在連接字串中變更伺服器名稱。  
   
@@ -372,7 +372,7 @@ EXIT:
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 此範例示範您可以使用資料列資料流，每次呼叫 SQLPutData，搭配 ODBC TVP，類似於您如何使用 BCP.exe 將資料載入至資料庫的多個資料列。  
+ 這個範例會示範您可以使用 ODBC TVP，每次呼叫 SQLPutData 時，使用資料列串流、多個資料列，類似于您可以如何使用 BCP 將資料載入資料庫中。  
   
  在建立範例之前，請在連接字串中變更伺服器名稱。  
   

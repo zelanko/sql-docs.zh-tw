@@ -13,19 +13,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 479cc0e650c598e0a253caca796b854dc4eb69cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892666"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>選取來源資料表和檢視 (SQL Server 匯入和匯出精靈)
-  使用**選取來源資料表和檢視**頁面以指定的資料表和檢視，以從資料來源複製到目的地。  
+  使用 [**選取來源資料表和資料檢視**] 頁面，即可指定要從資料來源複製到目的地的資料表和 views。  
   
 > [!NOTE]  
->  當您選取 [資料表複製] 選項時，並不必複製資料表中的所有資料行。 選取目的地資料表之後, 按一下 編輯對應，顯示**資料行對應** 對話方塊。 選取  **\<忽略 >** 中**目的地**資料行**資料行對應**對話方塊中，針對您想要跳過的資料行。  
+>  當您選取 [資料表複製] 選項時，並不必複製資料表中的所有資料行。 選取目的地資料表之後，請按一下 [編輯對應] 以顯示 [資料**行**對應] 對話方塊。 針對您要略過的資料行，在 [資料**行**對應] 對話方塊的 [**目的地**] 資料行中，選取** \<[忽略>** ]。  
   
- 若要深入了解此精靈，請參閱[SQL Server 匯入和匯出精靈](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要深入了解啟動精靈，選項和相關的權限，才能成功執行精靈，請參閱[執行 SQL Server 匯入和匯出精靈](start-the-sql-server-import-and-export-wizard.md)。  
+ 若要深入瞭解此嚮導，請參閱[SQL Server 匯入和匯出嚮導](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要瞭解啟動精靈的選項，以及成功執行嚮導所需的許可權，請參閱[執行 SQL Server 匯入和匯出嚮導](start-the-sql-server-import-and-export-wizard.md)。  
   
  「SQL Server 匯入和匯出精靈」的用途在於將資料從來源複製到目的地。 這個精靈也可以為您建立目的地資料庫和目的地資料表。 不過，如果您必須複製多個資料庫或資料表，或複製其他種類的資料庫物件，則應該改用「複製資料庫精靈」。 如需詳細資訊，請參閱 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
@@ -39,15 +39,15 @@ ms.locfileid: "62892666"
  從每個來源資料表的清單中選取目的地資料表。  
   
 > [!NOTE]  
->  如果此時在精靈中暫停，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或其他工具在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中建立目的地資料表，並不能立刻在可用的目的地資料表清單中看到新的資料表。 若要重新整理目的地資料表清單，請退後兩頁要**選擇目的地**頁面上，重新選取目的地資料庫，然後再次前進到**選取來源資料表和檢視**。  
+>  如果此時在精靈中暫停，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或其他工具在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中建立目的地資料表，並不能立刻在可用的目的地資料表清單中看到新的資料表。 若要重新整理目的地資料表清單，請將兩個頁面移至 [**選擇目的地**] 頁面上，再次選取目的地資料庫，然後再次前進到 [**選取來源資料表和資料檢視]**。  
   
 ### <a name="other-options"></a>其他選項  
  **編輯對應**  
- 使用**資料行對應**對話方塊來指定要接收來源資料的目的地資料行。 您可以透過選取複製的資料行子集\<忽略 > 中**目的地**資料行**資料行對應**對話方塊中，針對您想要跳過的資料行。  
+ 使用 [資料**行**對應] 對話方塊，即可指定要接收來源資料的目的地資料行。 您可以針對想要略過的資料行\<，在 [資料**行**對應] 對話方塊的 [**目的地**] 資料行中，選取 [忽略>]，只複製資料行的子集。  
   
  **預覽**  
- 預覽中的來源資料**預覽資料**對話方塊中，確認之前執行匯入或匯出。 **預覽資料**對話方塊會顯示最多 200 個資料列。  
+ 在執行匯入或匯出之前，預覽 [**預覽資料**] 對話方塊中的來源資料以進行驗證。 [**預覽資料**] 對話方塊會顯示多達200個數據列。  
   
- 預覽資料之後，您可能會想要變更已針對資料來源和目的地選取的選項。 若要進行這些變更，請在 [選取來源資料表和檢視]  頁面上，按 [上一步]  返回先前的頁面，如此您就可以在其中變更選項。  
+ 預覽資料之後，您可能會想要變更已針對資料來源和目的地選取的選項。 若要進行這些變更，請在 [選取來源資料表和檢視]**** 頁面上，按一下 [上一步]**** 返回先前的頁面，如此您就可以在其中變更選項。  
   
   

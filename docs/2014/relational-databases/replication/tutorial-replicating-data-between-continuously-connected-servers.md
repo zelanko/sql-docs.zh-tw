@@ -1,5 +1,5 @@
 ---
-title: 教學課程：連接的伺服器持續複寫之間的資料 |Microsoft Docs
+title: 教學課程：在連續連接的伺服器之間複寫資料 | Microsoft 文件
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655389"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>教學課程：在連續連接的伺服器之間複寫資料
@@ -28,7 +28,7 @@ ms.locfileid: "62655389"
  本教學課程告訴您如何使用異動複寫，從一個資料庫將資料發行到另一個資料庫。 第 1 課告訴您如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立發行集。 接下來的課程會告訴您，如何建立及驗證訂閱，以及如何測量延遲。  
   
 ## <a name="requirements"></a>需求  
- 本教學課程是特別提供給熟悉基本資料庫作業但對複寫經驗有限的使用者。 本教學課程需要您完成上一個教學課程： [準備伺服器進行複寫](tutorial-preparing-the-server-for-replication.md)。  
+ 本教學課程是特別提供給熟悉基本資料庫作業但對複寫經驗有限的使用者。 本教學課程要求您，先完成上一個教學課程 [準備伺服器進行複寫](tutorial-preparing-the-server-for-replication.md)。  
   
  若要使用這個教學課程，系統上必須已安裝下列元件：  
   
@@ -36,11 +36,11 @@ ms.locfileid: "62655389"
   
     -   任何版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，除了 Express ([!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) 或 [!INCLUDE[ssEW](../../includes/ssew-md.md)]以外。 這兩種版本無法做為複寫發行者。  
   
-    -   [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 範例資料庫。 為了加強安全性，依預設，不會安裝範例資料庫。  
+    -   [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]範例資料庫。 為了加強安全性，依預設，不會安裝範例資料庫。  
   
 -   訂閱者伺服器 (目的地)：  
   
-    -   任何版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，除了 [!INCLUDE[ssEW](../../includes/ssew-md.md)]以外。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 在異動複寫中不能是訂閱者。  
+    -   任何版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，除了 [!INCLUDE[ssEW](../../includes/ssew-md.md)]以外。 [!INCLUDE[ssEW](../../includes/ssew-md.md)]在異動複寫中不能是訂閱者。  
   
     > [!NOTE]  
     >  依預設，複寫未安裝在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中。  
@@ -48,15 +48,15 @@ ms.locfileid: "62655389"
 > [!NOTE]  
 >  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，您必須使用 **系統管理員 (sysadmin)** 固定伺服器角色成員的登入，連接到發行者和訂閱者。  
   
- **估計的時間才能完成本教學課程：30 分鐘。**  
+ **完成本教學課程的估計時間：30分鐘。**  
   
 ## <a name="lessons-in-this-tutorial"></a>本教學課程中的課程  
   
--   [第 1 課：使用異動複寫發行資料](lesson-1-publishing-data-using-transactional-replication.md)  
+-   [第1課：使用異動複寫發行資料](lesson-1-publishing-data-using-transactional-replication.md)  
   
--   [第 2 課：建立交易式發行集的訂閱](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
+-   [第2課：建立交易式發行集的訂閱](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
   
--   [第 3 課：驗證訂閱及測量延遲](lesson-3-validating-the-subscription-and-measuring-latency.md)  
+-   [第3課：驗證訂閱並測量延遲](lesson-3-validating-the-subscription-and-measuring-latency.md)  
   
  [開始教學課程](transactional/transactional-replication.md)  
   

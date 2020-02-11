@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 92cd83935ef4cb76c40aae0964100c7b88d847e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771794"
 ---
 # <a name="discovering-data-flow-components-programmatically"></a>以程式設計方式探索資料流程元件
@@ -32,7 +32,7 @@ ms.locfileid: "62771794"
 ## <a name="discovering-components"></a>探索元件  
  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 類別提供 <xref:Microsoft.SqlServer.Dts.Runtime.Application.PipelineComponentInfos%2A> 集合，其中包含每個正確安裝在本機電腦之元件的 <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo> 物件。 每個 <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo> 都包含元件的相關資訊，例如其名稱、描述和建立名稱。 當您將元件加入封裝時，可以使用在 <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> 屬性中傳回的值，以設定 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 屬性。  
   
-## <a name="next-step"></a>下一個步驟  
+## <a name="next-step"></a>後續步驟  
  在探索可用的元件之後，下一個步驟是新增和設定元件，這將在下一主題中討論：[以程式設計方式新增資料流程元件](../building-packages-programmatically/adding-data-flow-components-programmatically.md)。  
   
 ## <a name="sample"></a>範例  
@@ -85,7 +85,7 @@ Module Module1
 End Module  
 ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [以程式設計方式新增資料流程元件](../building-packages-programmatically/adding-data-flow-components-programmatically.md)  

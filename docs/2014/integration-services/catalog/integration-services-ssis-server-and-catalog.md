@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) 伺服器 |Microsoft Docs
+title: Integration Services （SSIS）伺服器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 02966721d1fdfd1c1d3051510e0dd68ed26dcbc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771734"
 ---
 # <a name="integration-services-ssis-server"></a>Integration Services (SSIS) 伺服器
   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中設計和測試封裝之後，可以將含有那些封裝的專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器為主控 `SSISDB` 資料庫之 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體。 資料庫會儲存封裝、專案、參數、權限、伺服器屬性與作業歷程記錄等物件。  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器為主控 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 資料庫之 `SSISDB` 的執行個體。 資料庫會儲存封裝、專案、參數、權限、伺服器屬性與作業歷程記錄等物件。  
   
- `SSISDB` 資料庫會透過可供您查詢的公用檢視，公開物件資訊。 此資料庫也會提供預存程序，讓您可加以呼叫來管理物件。  
+ 
+  `SSISDB` 資料庫會透過可供您查詢的公用檢視，公開物件資訊。 此資料庫也會提供預存程序，讓您可加以呼叫來管理物件。  
   
  在您將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器之前，必須先建立 `SSISDB` 目錄。  
   
@@ -37,11 +39,11 @@ ms.locfileid: "62771734"
  您也可以使用 SSIS 和 AlwaysOn 可用性群組提供 SSISDB 及其內容的高可用性。 如需詳細資訊，請參閱 blogs.msdn.com 上這篇 Matt Masson 的部落格文章： [SSIS 與 AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=255873)。  
   
 ##  <a name="ssms"></a> SQL Server Management Studio 中的 Integration Services Server  
- 當您連接到主控 `SSISDB` 資料庫的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體時，您會在 [物件總管] 中看到以下物件：  
+ 當您連接到主控 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 資料庫的 `SSISDB` 執行個體時，您會在 [物件總管] 中看到以下物件：  
   
 -   **SSISDB 資料庫**  
   
-     `SSISDB`下的資料庫會出現**資料庫**在物件總管 節點。 您可以查詢檢視，並呼叫管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器和儲存在伺服器上之物件的預存程序。  
+     `SSISDB`資料庫會出現在 [物件流覽] 的 [**資料庫**] 節點底下。 您可以查詢檢視，並呼叫管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器和儲存在伺服器上之物件的預存程序。  
   
 -   **Integration Services 目錄**  
   

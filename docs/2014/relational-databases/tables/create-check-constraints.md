@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a27b4bf288d6b1e436ba43fc9c1002d03cd9eaf4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736198"
 ---
 # <a name="create-check-constraints"></a>建立檢查條件約束
@@ -30,7 +30,7 @@ ms.locfileid: "62736198"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來建立新的檢查條件約束：**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62736198"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
@@ -74,13 +74,13 @@ ms.locfileid: "62736198"
   
 6.  在 **[資料表設計工具]** 類別目錄中，您可以設定強制執行條件約束的時間。  
   
-    |**若要：**|**請在下列欄位中選取 [是]：**|  
+    |**收件人：**|**請在下列欄位中選取 [是]：**|  
     |-------------|---------------------------------------------|  
     |針對建立條件約束之前存在的資料測試條件約束|**檢查建立或重新啟用時的現有資料**|  
     |每次在此資料表上進行複寫作業時都強制執行條件約束|**強制複寫**|  
     |每次插入或更新此資料表的資料列時都強制執行條件約束|**於 INSERT 及 UPDATE 時強制套用**|  
   
-7.  按一下 [ **關閉**]。  
+7.  按一下 [關閉]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

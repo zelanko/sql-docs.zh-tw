@@ -1,5 +1,5 @@
 ---
-title: 指定多個搜尋條件的一個資料行 (Visual Database Tools) |Microsoft Docs
+title: 針對一個資料行指定多個搜尋條件（Visual Database Tools） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 176d5a6586008d49ece1430ec03e2c54278eebce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62695399"
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>指定單一資料行的多重搜尋條件 (Visual Database Tools)
@@ -83,7 +83,7 @@ WHERE (title LIKE '%Cook%') AND
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [慣例結合搜尋條件，在 [準則] 窗格中&#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [在 [準則] 窗格中合併搜尋條件的慣例 &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [指定搜尋準則 &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

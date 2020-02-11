@@ -19,17 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 94025942a6e06f4dfb7b0eeab43487e4a6308e4f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243256"
 ---
 # <a name="connect-to-the-database-engine-with-sqlcmd"></a>使用 sqlcmd 連接至 Database Engine
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援使用 TCP/IP 網路通訊協定（預設值）和具名管道通訊協定來進行用戶端通訊。 如果用戶端是連接到同一部電腦上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，也可以使用共用記憶體通訊協定。 選取通訊協定有三種常見的方法。 
-  **sqlcmd** 公用程式所使用的通訊協定是以下列順序決定：  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援使用 TCP/IP 網路通訊協定 (預設值) 和具名管道通訊協定，來進行用戶端通訊。 如果用戶端是連接到同一部電腦上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，也可以使用共用記憶體通訊協定。 選取通訊協定有三種常見的方法。 **sqlcmd** 公用程式所使用的通訊協定是以下列順序決定：  
   
--   **sqlcmd**使用指定為連接字串一部分的通訊協定，如下所述。  
+-   **sqlcmd** 使用指定為連接字串一部分的通訊協定，如下所述。  
   
 -   如果沒有任何通訊協定指定為連接字串的一部分，則 **sqlcmd** 會使用定義為所連接之別名一部分的通訊協定。 若要設定 **sqlcmd** 透過建立別名來使用特定的網路通訊協定，請參閱[建立或刪除用戶端使用的伺服器別名 #40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)。  
   

@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 21abdf4e5781f179c8168ff02aa611bd7dffd39f
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957156"
 ---
 # <a name="restore-the-service-master-key"></a>還原服務主要金鑰
@@ -26,19 +26,19 @@ ms.locfileid: "74957156"
 > [!WARNING]  
 >  需要還原服務主要金鑰的情況不太可能發生在您身上。 萬一真的碰到了，就應該非常小心地進行。 如需詳細資訊，請參閱 [Back Up the Service Master Key](service-master-key.md)。  
   
- **本主題中的**  
+ **本主題內容**  
   
 -   **開始之前：**  
   
      [限制事項](#Restrictions)  
   
-     [安全級](#Security)  
+     [安全性](#Security)  
   
 -   [若要使用 Transact-sql 還原服務主要金鑰](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a>限制事項  
+###  <a name="Restrictions"></a> 限制事項  
   
 -   當還原服務主要金鑰時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會解密所有已利用目前的服務主要金鑰來加密的金鑰和秘密，然後利用從備份檔案載入的服務主要金鑰來加密它們。  
   
@@ -49,12 +49,12 @@ ms.locfileid: "74957156"
 > [!CAUTION]  
 >  服務主要金鑰是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密階層的根。 服務主要金鑰會直接或間接維護樹狀結構中之所有其他金鑰的安全。 如果在強制還原作業進行期間某相依金鑰無法解密，由該金鑰維護其安全的資料便會遺失。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  需要伺服器的 CONTROL SERVER 權限。  
   
-##  <a name="SSMSProcedure"></a>使用 Transact-sql  
+##  <a name="SSMSProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-restore-the-service-master-key"></a>若要還原服務主要金鑰  
   
@@ -62,9 +62,9 @@ ms.locfileid: "74957156"
   
 2.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-3.  在 [標準]  列上，按一下 [新增查詢] ****。  
+3.  在標準列上，按一下 **[新增查詢]** 。  
   
-4.  將下列範例複製並貼入查詢視窗中，然後按一下 [**執行**]。  
+4.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- Restores the service master key from a backup file.  

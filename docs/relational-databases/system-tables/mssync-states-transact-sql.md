@@ -1,5 +1,5 @@
 ---
-title: MSsync_states (TRANSACT-SQL) |Microsoft Docs
+title: MSsync_states （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: b25e17e1-7718-432e-a442-c4946741d474
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7bc81e41299041b50e53074cd4a133c6bd9c0cf9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016515"
 ---
-# <a name="mssyncstates-transact-sql"></a>MSsync_states (Transact-SQL)
+# <a name="mssync_states-transact-sql"></a>MSsync_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSsync_states**資料表會追蹤哪一個發行集仍在並行快照集模式。 這份資料表儲存在散發資料庫中。  
+  **MSsync_states**資料表會追蹤哪個發行集仍在並行快照集模式中。 這份資料表儲存在散發資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -36,9 +36,9 @@ ms.locfileid: "68016515"
 |**publication_id**|**int**|發行集的識別碼。|  
   
 ## <a name="see-also"></a>另請參閱  
- [將系統資料表對應至系統檢視表&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Integration Services 資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)   
- [備份與還原資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [將系統資料表對應至系統檢視 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Integration Services 資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)   
+ [備份和還原資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [記錄傳送資料表 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)  
   
   

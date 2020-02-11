@@ -12,10 +12,10 @@ ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 90937a98bb409c6f17bc542183cd024f408d71f2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257757"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>使用複合定義域中的值關聯
@@ -24,14 +24,14 @@ ms.locfileid: "75257757"
 
   此主題描述如何檢視在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知識探索程序期間針對複合定義域找到的值組合。 這個頁面會顯示值組合出現的次數。 複合定義域不支援值管理，所以您無法針對這些值執行任何作業。  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a>要求  
+###  <a name="Prerequisites"></a> 必要條件  
  若要檢視值關聯，您必須已建立及開啟複合定義域。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能檢視複合定義域中的值關聯。  
   
 ##  <a name="Use"></a>視圖值關聯  

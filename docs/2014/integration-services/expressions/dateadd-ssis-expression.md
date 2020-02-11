@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3c744d3f28bc27373f3dc9798ba591848d4b720e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769345"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (SSIS 運算式)
@@ -58,7 +58,7 @@ DATEADD(datepart, number, date)
 |Weekday|dw, w|  
 |Hour|Hh|  
 |Minute|mi, n|  
-|第二個|ss, s|  
+|Second|ss, s|  
 |Millisecond|Ms|  
   
  *number* 引數必須在剖析運算式時提供。 這個引數可以是常數或變數。 您不可使用資料行的值，因為這些值在剖析運算式時並非已知。  

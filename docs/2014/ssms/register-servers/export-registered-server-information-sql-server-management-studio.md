@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 2d5dcbaf6f478d3cb637c72ada8bee2bb2a088d2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244602"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>匯出已註冊的伺服器資訊 (SQL Server Management Studio)
@@ -35,7 +35,7 @@ ms.locfileid: "75244602"
   
 #### <a name="to-export-registered-server-information"></a>匯出已註冊的伺服器資訊  
   
-1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器群組，然後按一下 [匯出]****。  
+1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器群組，然後按一下 [匯出]  。  
   
     > [!NOTE]  
     >  您可以匯出個別伺服器、整個已註冊的伺服器樹狀目錄，或已註冊的伺服器樹狀目錄之子集。  
@@ -48,9 +48,9 @@ ms.locfileid: "75244602"
      伺服器群組僅會顯示目前已註冊的伺服器樹狀目錄的伺服器群組。  
   
      **匯出檔案**  
-     在文字方塊中鍵入匯出檔案的名稱，或使用瀏覽按鈕 (**...**) 以找出用戶端電腦上的匯出檔案。 如果您選取現有的檔案，則已註冊的伺服器資訊會附加至該檔案。 使用 .regsrvr 副檔名。 如果您要提供已註冊的伺服器資訊給其他使用者或另一部電腦使用，您可以將檔案儲存在網路上。 其他使用者就可以存取檔案，並匯入部分或全部已註冊的伺服器資訊。 如果您選取現有的檔案作為匯出檔案，則伺服器註冊資訊會覆寫該檔案的內容。  
+     在文字方塊中鍵入匯出檔案的名稱，或使用瀏覽按鈕 ( **...** ) 以找出用戶端電腦上的匯出檔案。 如果您選取現有的檔案，則已註冊的伺服器資訊會附加至該檔案。 使用 .regsrvr 副檔名。 如果您要提供已註冊的伺服器資訊給其他使用者或另一部電腦使用，您可以將檔案儲存在網路上。 其他使用者就可以存取檔案，並匯入部分或全部已註冊的伺服器資訊。 如果您選取現有的檔案作為匯出檔案，則伺服器註冊資訊會覆寫該檔案的內容。  
   
-     **不要在匯出檔案中包含使用者名稱和密碼**  
+     **不要在匯出檔案中包含使用者名稱與密碼**  
      匯出檔案時排除使用者名稱。  
   
     > [!IMPORTANT]  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ccc7b96f4275b09b90b8120813b93f860ec07b9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871056"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>檢視或變更資料庫的相容性層級
@@ -28,7 +28,7 @@ ms.locfileid: "62871056"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法檢視或變更資料庫的相容性層級：**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62871056"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
@@ -59,7 +59,7 @@ ms.locfileid: "62871056"
   
      目前的相容性層級會顯示在 **[相容性層級]** 清單方塊中。  
   
-5.  若要變更相容性層級，請從清單中選取其他選項。 這些選項包括 [SQL Server 2008 (100)]  、[SQL Server 2012 (110)]  或 [SQL Server 2014 (120)]  。  
+5.  若要變更相容性層級，請從清單中選取其他選項。 這些選項包括 [SQL Server 2008 (100)]****、[SQL Server 2012 (110)]**** 或 [SQL Server 2014 (120)]****。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -86,7 +86,7 @@ GO
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會變更的相容性層級[!INCLUDE[ssSampleDBobject](../../includes/sssql14-md.md)]。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會變更的相容性層[!INCLUDE[ssSampleDBobject](../../includes/sssql14-md.md)]級。  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  

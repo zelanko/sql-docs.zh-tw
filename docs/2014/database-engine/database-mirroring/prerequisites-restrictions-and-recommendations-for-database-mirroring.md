@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9763385093db6e649e60ab7a6be74f8f28466e1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754604"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>資料庫鏡像的必要條件、限制和建議事項
@@ -30,10 +30,11 @@ ms.locfileid: "62754604"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。  
   
- 本主題描述設定資料庫鏡像的必要條件和建議事項。 如需資料庫鏡像的簡介，請參閱[資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)。  
+ 本主題描述設定資料庫鏡像的必要條件和建議事項。 如需資料庫鏡像的簡介，請參閱 [資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁碟儲存格式在 64 位元與 32 位元環境下都相同。 因此，資料庫鏡像工作階段可以結合 32 位元環境下執行的伺服器執行個體與 64 位元環境下執行的伺服器執行個體。  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁碟儲存格式在 64 位元與 32 位元環境下都相同。 因此，資料庫鏡像工作階段可以結合 32 位元環境下執行的伺服器執行個體與 64 位元環境下執行的伺服器執行個體。  
   
 
   
@@ -51,7 +52,7 @@ ms.locfileid: "62754604"
 -   兩個夥伴 (亦即，主體伺服器和鏡像伺服器) 必須都在執行相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本。 見證 (如果有的話) 可在任一版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上執行，只要該版本支援資料庫鏡像。  
   
     > [!NOTE]  
-    >  您可以將做為鏡像工作階段夥伴的伺服器執行個體升級為最新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 [在升級伺服器執行個體時將鏡像資料庫的停機時間減至最少](upgrading-mirrored-instances.md)。  
+    >  您可以將做為鏡像工作階段夥伴的伺服器執行個體升級為最新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md)。  
   
 -   資料庫必須使用完整復原模式。 簡單與大量記錄復原模式不支援資料庫鏡像。 因此，鏡像資料庫的大量作業永遠都是完整記錄作業。 如需復原模式的相關資訊，請參閱[復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
@@ -125,7 +126,7 @@ ms.locfileid: "62754604"
   
 ## <a name="see-also"></a>另請參閱  
  [設定資料庫鏡像 &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
- [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [疑難排解資料庫鏡像組態 &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   

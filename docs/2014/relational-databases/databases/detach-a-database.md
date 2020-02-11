@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 050220781f484b4a9e595551496d7e58c06f954c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871953"
 ---
 # <a name="detach-a-database"></a>卸離資料庫
@@ -31,7 +31,7 @@ ms.locfileid: "62871953"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目卸離資料庫：**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62871953"
 ###  <a name="Restrictions"></a> 限制事項  
  如需限制事項的清單，請參閱 [資料庫卸離與附加 &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)中卸離資料庫。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 db_owner 固定資料庫角色中的成員資格。  
@@ -78,21 +78,21 @@ ms.locfileid: "62871953"
      依預設，卸離作業會保留與該資料庫關聯的所有全文檢索目錄。 若要移除這些全文檢索目錄，請清除 **[保留全文檢索目錄]** 核取方塊。 只有當您從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升級資料庫時，才會出現這個選項。  
   
      **狀態**  
-     顯示下列狀態其中之一：[就緒]  或 [未就緒]  。  
+     顯示下列狀態其中之一： **就緒** 或 **未就緒**。  
   
-     **Message**  
+     **訊息**  
      **[訊息]** 資料行可以顯示有關資料庫的資訊，如下所示：  
   
     -   當資料庫涉及複寫時， **[狀態]** 為 **[尚未備妥]** 且 **[訊息]** 資料行會顯示 **[資料庫已複寫]** 。  
   
-    -   當資料庫有一或多個作用中連線**狀態**是**未就緒**並**訊息**資料行會顯示 _< 使用中連接數目>_ **使用**-例如：[1 個使用中的連線]  。 您必須選取 **[卸除連接]** 中斷任何使用中的連接之後，才能卸離資料庫。  
+    -   當資料庫有一或多個使用中的連線時，[狀態]  為 [未就緒]  且 [訊息]  資料行顯示 [<使用中連線數目> 個使用中的連線]   ，例如：[1 個使用中的連線]  。 您必須選取 **[卸除連接]** 中斷任何使用中的連接之後，才能卸離資料庫。  
   
      若要取得有關訊息的詳細資訊，請按一下超連結文字，以開啟活動監視器。  
   
 4.  當您準備卸離資料庫時，請按一下 **[確定]** 。  
   
 > [!NOTE]  
->  重新整理檢視之前，仍可在 [物件總管] 的 **[資料庫]** 節點中看見最新卸離的資料庫。 您可以重新整理隨時檢視：按一下 [物件總管] 窗格中，並從功能表列選取**檢視**，然後**重新整理**。  
+>  重新整理檢視之前，仍可在 [物件總管] 的 **[資料庫]** 節點中看見最新卸離的資料庫。 您可以隨時重新整理檢視：按一下 [物件總管] 窗格，並從功能表列選取 **[檢視]** ，然後選取 **[重新整理]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -109,7 +109,7 @@ EXEC sp_detach_db 'AdventureWorks2012', 'true';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫卸離與附加 &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
+ [資料庫卸離和附加 &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   
   
