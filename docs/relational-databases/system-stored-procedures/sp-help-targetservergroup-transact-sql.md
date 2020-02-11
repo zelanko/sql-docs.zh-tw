@@ -1,5 +1,5 @@
 ---
-title: sp_help_targetservergroup (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_targetservergroup （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 63a3d9daa48bb98408c3f0d9b8282e8083849cf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085082"
 ---
-# <a name="sphelptargetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
+# <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   列出指定群組中的所有目標伺服器。 如果未指定任何群組，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回所有目標伺服器群組的相關資訊。  
@@ -40,10 +40,10 @@ sp_help_targetservergroup
 ```  
   
 ## <a name="argument"></a>引數  
-`[ @name = ] 'name'` 是要傳回資訊的目標伺服器群組名稱。 *名稱*已**sysname**，預設值是 NULL。  
+`[ @name = ] 'name'`這是要傳回信息的目標伺服器組名。 *name*是**sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -52,8 +52,8 @@ sp_help_targetservergroup
 |**servergroup_id**|**int**|伺服器群組的識別碼|  
 |**name**|**sysname**|伺服器群組的名稱|  
   
-## <a name="permissions"></a>Permissions  
- 若要執行此程序的權限預設為**sysadmin**固定的伺服器角色。  
+## <a name="permissions"></a>權限  
+ 執行此程式的許可權預設為**系統管理員（sysadmin** ）固定伺服器角色。  
   
 ## <a name="examples"></a>範例  
   
@@ -81,9 +81,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
- [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
- [sp_update_targetservergroup &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
+ [sp_add_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
+ [sp_delete_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
+ [sp_update_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 新增資料來源 (ODBC) |Microsoft Docs
+title: 加入資料來源（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,32 +13,32 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c050efd2f309ccec76b80fd24b519e7d2389e4ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126072"
 ---
 # <a name="add-a-data-source-odbc"></a>加入資料來源 (ODBC)
-  您可以使用 ODBC 管理員，以程式設計方式加入資料來源 (利用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md))，或藉由建立檔案。  
+  您可以使用 ODBC 管理員，以程式設計方式（藉由使用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)）或藉由建立檔案來加入資料來源。  
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>使用 ODBC 管理員加入資料來源  
   
-1.  從**控制台中**，存取**系統管理工具**，然後**資料來源 (ODBC)** 。 或者，您可以叫用 odbcad32.exe。  
+1.  從 [**控制台**] 中，存取 [系統**管理工具**] 和 **[資料來源（ODBC）**]。 或者，您可以叫用 odbcad32.exe。  
   
-2.  按一下 **使用者 DSN**，**系統 DSN**，或**檔案 DSN**索引標籤，然後再按**新增**。  
+2.  按一下 [**使用者 DSN**]、[**系統 DSN**] 或 [檔案**DSN** ] 索引標籤，然後按一下 [**新增**]。  
   
-3.  按一下  **SQL Server**，然後按一下**完成**。  
+3.  按一下 [ **SQL Server**]，然後按一下 **[完成]**。  
   
 4.  完成「建立新的資料來源至 SQL Server」精靈中的步驟。  
   
 ### <a name="to-add-a-data-source-programmatically"></a>以程式設計方式加入資料來源  
   
-1.  呼叫[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)與第二個參數設定為 ODBC_ADD_DSN 或 ODBC_ADD_SYS_DSN。  
+1.  呼叫[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md) ，並將第二個參數設定為 ODBC_ADD_DSN 或 ODBC_ADD_SYS_DSN。  
   
 ### <a name="to-add-a-file-data-source"></a>加入檔案資料來源  
   
-1.  呼叫[SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md)的 savefile = file_name 參數的連接字串中。 如果連接成功，ODBC 驅動程式會利用 SAVEFILE 參數所指向位置中的連接參數建立檔案資料來源。  
+1.  在連接字串中使用 SAVEFILE = file_name 參數來呼叫[SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) 。 如果連接成功，ODBC 驅動程式會利用 SAVEFILE 參數所指向位置中的連接參數建立檔案資料來源。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 SQL Server ODBC 驅動程式的使用說明主題](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  

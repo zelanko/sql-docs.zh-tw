@@ -13,16 +13,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09aea8e66b76103c27bdc44ade4df48a1e505e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021621"
 ---
 # <a name="publication-peer-to-peer-replication"></a>發行集 (點對點複寫)
   **[發行集]** 頁面會顯示已啟用點對點複寫的交易式發行集。 發行集可以在 **[發行集屬性]** 對話方塊的 **[訂閱選項]** 頁面上啟用。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **發行者**  
  顯示您已連接的伺服器。 若要連接到不同的伺服器，請選取 **[尋找 SQL Server 發行者]** 。  
   

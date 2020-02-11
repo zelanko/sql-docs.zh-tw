@@ -1,5 +1,5 @@
 ---
-title: 將參數傳遞給具名命令 |Microsoft Docs
+title: 將參數傳遞給已命名的命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,16 +14,16 @@ ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9799fb3f05871c16cfcd8edb5f2a50c6f7792978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924696"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>傳遞參數給具名命令
-就如同命令的結果會當做傳遞*出*具名命令，也就是參數的變數參數化的命令可以針對已傳入作為*中*具名命令的變數。  
+就像是將命令的結果當做已命名命令的*out*變數傳遞，參數化命令的參數可以*當做變數傳入*至指名的命令。  
   
- 下列程式碼範例會嘗試擷取的所有訂單客戶所下的**CustomerID**取自 Northwind 資料庫中的"ALKFI 」。 值**CustomerID**會在呼叫具名的命令時的時間提供。  
+ 下列程式碼範例會嘗試從 Northwind 資料庫中，取得客戶的**CustomerID**為 "ALKFI" 的所有訂單。 在呼叫指名的命令時，會提供**CustomerID**的值。  
   
 ```  
 Const DS = "MySqlServer"  
@@ -76,21 +76,21 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
- 請注意，所有輸入的參數必須在前面的任何輸出變數和參數資料類型必須符合或可以轉換為所對應的欄位。 下列陳述式：  
+ 請注意，所有輸入參數都必須在任何輸出變數之前，而參數的資料類型必須符合或可以轉換成對應欄位的。 下列語句-  
   
 ```  
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- -因為必要的輸入的參數是的會導致不相符的資料類型的錯誤**字串**型別，而非**整數**型別。  
+ -會導致不相符的資料類型錯誤，因為必要的輸入參數是**字串**類型，而不是**整數**類型。  
   
- 下列呼叫：  
+ 下列呼叫-  
   
 ```  
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- -有效，但會產生空的結果集，因為沒有這類記錄存在於資料庫中。  
+ -有效，但會產生空的結果集，因為資料庫中沒有這類記錄。  
   
 ## <a name="see-also"></a>另請參閱  
  [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

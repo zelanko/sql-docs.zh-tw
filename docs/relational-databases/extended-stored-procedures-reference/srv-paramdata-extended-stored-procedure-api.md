@@ -20,17 +20,18 @@ ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9f8a7f5ebb1b85740735c6070a784423b3258012
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064034"
 ---
 # <a name="srv_paramdata-extended-stored-procedure-api"></a>srv_paramdata (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
  傳回遠端預存程序呼叫參數的值。 此函式已被 **srv_paraminfo** 函式取代。  
   
@@ -57,22 +58,23 @@ n
 ## <a name="returns"></a>傳回值  
  參數值的指標。 如果第 *n* 個參數為 NULL、沒有第 *n* 個參數，或是沒有任何遠端預存程序，會傳回 NULL。 如果參數值為字串，則可能不會以 Null 結束。 請使用 **srv_paramlen** 來判斷字串的長度。  
   
- 如果參數是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的一種，則此函式會傳回下列值。 指標資料包含資料類型的指標是否為有效 (VP)、NULL 或不適用 (N/A)，以及資料所指向的內容。  
+ 如果參數是其中一個[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型，此函數會傳回下列值。 指標資料包含資料類型的指標是否為有效 (VP)、NULL 或不適用 (N/A)，以及資料所指向的內容。  
   
 |新的資料類型|輸入資料長度|  
 |--------------------|-----------------------|  
-|BITN|**NULL：** VP、NULL<br /><br /> **ZERO：** VP、NULL<br /><br /> **>=255：** 不適用<br /><br /> **<255：** 不適用|  
-|BIGVARCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、NULL<br /><br /> **>=255：** VP、255 個字元<br /><br /> **<255：** VP、實際資料|  
-|BIGCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、255 個空格<br /><br /> **>=255：** VP、255 個字元<br /><br /> **<255：** VP、實際資料 + 填補 (最多 255)|  
-|BIGBINARY|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP，255 0x00<br /><br /> **>=255：** VP，255 個位元組<br /><br /> **<255：** VP、實際資料 + 填補 (最多 255)|  
-|BIGVARBINARY|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP，0x00<br /><br /> **>=255：** VP，255 個位元組<br /><br /> **<255：** VP、實際資料|  
-|NCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、255 個空格<br /><br /> **>=255：** VP、255 個字元<br /><br /> **<255：** VP、實際資料 + 填補 (最多 255)|  
-|NVARCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、NULL<br /><br /> **>=255：** VP、255 個字元<br /><br /> **<255：** VP、實際資料|  
-|NTEXT|**NULL：** 不適用<br /><br /> **ZERO：** 不適用<br /><br /> **>=255：** 不適用<br /><br /> **\<255：** 不適用|  
+|BITN|**Null：** VP、Null<br /><br /> **零：** VP、Null<br /><br /> **>= 255：** N/A<br /><br /> **<255：** N/A|  
+|BIGVARCHAR|**Null：** Null、N/A<br /><br /> **零：** VP、Null<br /><br /> **>= 255：** VP，255個字元<br /><br /> **<255：** VP、實際資料|  
+|BIGCHAR|**Null：** Null、N/A<br /><br /> **零：** VP、255空間<br /><br /> **>= 255：** VP，255個字元<br /><br /> **<255：** VP、實際資料 + 填補（最多255）|  
+|BIGBINARY|**Null：** Null、N/A<br /><br /> **零：** VP，255 0x00<br /><br /> **>= 255：** VP，255個位元組<br /><br /> **<255：** VP、實際資料 + 填補（最多255）|  
+|BIGVARBINARY|**Null：** Null、N/A<br /><br /> **零：** VP、0x00<br /><br /> **>= 255：** VP，255個位元組<br /><br /> **<255：** VP、實際資料|  
+|NCHAR|**Null：** Null、N/A<br /><br /> **零：** VP、255空間<br /><br /> **>= 255：** VP，255個字元<br /><br /> **<255：** VP、實際資料 + 填補（最多255）|  
+|NVARCHAR|**Null：** Null、N/A<br /><br /> **零：** VP、Null<br /><br /> **>= 255：** VP，255個字元<br /><br /> **<255：** VP、實際資料|  
+|NTEXT|**Null：** N/A<br /><br /> **零：** N/A<br /><br /> **>= 255：** N/A<br /><br /> ** \<255：** N/A|  
   
- \*   資料不是以 Null 結束；在截斷 >255 個字元的資料時，不會發出警告。  
+ 
+  \*   資料不是以 Null 結束；在截斷 >255 個字元的資料時，不會發出警告。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果您知道參數名稱，可以使用 **srv_paramnumber** 來取得參數數目。 若要判斷參數是否為 NULL，請使用 **srv_paramlen**。  
   
  當遠端預存程序呼叫是用參數進行時，可以依名稱或位置 (未命名) 傳遞參數。 如果遠端預存程序呼叫是藉由一些依名稱傳遞的參數和一些依位置傳遞的參數來進行時，就會發生錯誤。 如果發生錯誤，則仍會呼叫 SRV_RPC 處理常式，但會看來好像沒有參數一般，而且 **srv_rpcparams** 會傳回 0。  
@@ -81,6 +83,6 @@ n
 >  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另請參閱  
- [srv_rpcparams &#40;擴充預存程序 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
+ [srv_rpcparams &#40;擴充預存程式 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

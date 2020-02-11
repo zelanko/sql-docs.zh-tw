@@ -1,5 +1,5 @@
 ---
-title: NonEmptyCrossjoin (MDX) |Microsoft Docs
+title: NonEmptyCrossjoin （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2d152b51e0c1c996e0bb3309e554a70683937493
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088348"
 ---
 # <a name="nonemptycrossjoin-mdx"></a>NonEmptyCrossjoin (MDX)
@@ -38,14 +38,14 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
  有效的數值運算式，會指定要傳回的集合數目。  
   
 ## <a name="remarks"></a>備註  
- **NonEmptyCrossjoin**函式會傳回兩個或多個集合的交叉乘積的集合，排除空的 tuple，但不含基礎事實資料表所提供的資料。 因為如何**NonEmptyCrossjoin**函式的運作，所有導出成員會自動排除。  
+ **NonEmptyCrossjoin**函數會傳回兩個或多個集合的交叉乘積做為集合，但不包括空的元組或元組，而不包含基礎事實資料表所提供的資料。 由於**NonEmptyCrossjoin**函數的運作方式，會自動排除所有匯出成員。  
   
- 如果*計數*未指定，函式交叉聯結所有指定的集合，並從結果集排除空白成員。 如果指定了集合數目，此函數就會由第一個指定的集合開始，交叉聯結指定的集合數目。 **NonEmptyCrossjoin**函式會使用任何剩餘的集合，後續指定集合中指定，但尚未進行交叉聯結以判斷哪些成員被視為非空白交叉聯結結果集中。 **NonEmptyCrossjoin**運作方面**NON_EMPTY_BEHAVIOR**導出量值的設定。  
+ 如果未指定*Count* ，函數會交叉聯結所有指定的集合，並從結果集排除空的成員。 如果指定了集合數目，此函數就會由第一個指定的集合開始，交叉聯結指定的集合數目。 **NonEmptyCrossjoin**函數會使用後續指定集合中指定的任何剩餘集合，但尚未交叉聯結，以判斷產生的交叉聯結集合中哪些成員被視為非空白。 **NonEmptyCrossjoin**函數會遵循匯出量值的**NON_EMPTY_BEHAVIOR**設定。  
   
 > [!IMPORTANT]  
->  這個函數已被取代，您不應該使用它；僅供回溯相容性予以保留。 因此，您應該改用[Exists (MDX)](../mdx/exists-mdx.md)量值群組名稱引數的函式或[NonEmpty (MDX)](../mdx/nonempty-mdx.md)函式。  
+>  這個函數已被取代，您不應該使用它；僅供回溯相容性予以保留。 相反地，您應該使用[Exists （MDX）](../mdx/exists-mdx.md)函數搭配量值組名引數或非[空的（mdx）](../mdx/nonempty-mdx.md)函數。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

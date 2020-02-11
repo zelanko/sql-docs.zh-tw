@@ -1,5 +1,5 @@
 ---
-title: 傳送更新：UpdateBatch 方法 |Microsoft Docs
+title: 傳送更新： UpdateBatch 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 182e444587ce9bb3ca73166fb05dfac2506a39aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924250"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>傳送更新：UpdateBatch 方法
-下列程式碼藉由 LockType 屬性設定為 Adlockpessimistic 和以 adUseClient CursorLocation 批次模式中開啟資料錄集。 它將加入兩筆新記錄和變更在現有的記錄儲存到原始值欄位的值，然後呼叫 UpdateBatch 傳送回資料來源所做的變更。  
+下列程式碼會將 LockType 屬性設為 adLockBatchOptimistic，並將 CursorLocation 設定為 adUseClient，以在批次模式中開啟記錄集。 它會加入兩個新的記錄，並變更現有記錄中的欄位值、儲存原始值，然後呼叫 UpdateBatch 將變更傳回資料來源。  
   
 ## <a name="remarks"></a>備註  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67924250"
 'EndBatchUpdate  
 ```  
   
- 如果您正在編輯目前的記錄，或當您呼叫 UpdateBatch 方法時，請新增新的記錄，ADO 會自動呼叫 Update 方法，再傳輸到提供者的批次的變更時，將任何暫止的變更儲存至目前的記錄。  
+ 如果您要在呼叫 UpdateBatch 方法時編輯目前的記錄或加入新的記錄，ADO 會自動呼叫 Update 方法，將任何暫止的變更儲存至目前的記錄，再將批次變更傳送給提供者。  
   
 ## <a name="see-also"></a>另請參閱  
  [批次模式](../../../ado/guide/data/batch-mode.md)

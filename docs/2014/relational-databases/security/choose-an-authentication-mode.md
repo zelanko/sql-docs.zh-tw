@@ -24,14 +24,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5e06e33048548baad245bee78b9989e9c4cc700b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011336"
 ---
 # <a name="choose-an-authentication-mode"></a>選擇驗證模式
-  在安裝期間，您必須選取 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的驗證模式。 有兩個可能的模式：Windows 驗證模式和混合的模式。 Windows 驗證模式會啟用 Windows 驗證並停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 混合模式會啟用 Windows 驗證及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 Windows 驗證一定可用而且無法停用。  
+  在安裝期間，您必須選取 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的驗證模式。 有兩種可能的模式：Windows 驗證模式和混合模式。 Windows 驗證模式會啟用 Windows 驗證並停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 混合模式會啟用 Windows 驗證及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 Windows 驗證一定可用而且無法停用。  
   
 ## <a name="configuring-the-authentication-mode"></a>設定驗證模式  
  如果您在安裝期間選取混合模式驗證，就必須為名為 sa 的內建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶提供並確認增強式密碼。 sa 帳戶會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行連接。  
@@ -67,7 +67,7 @@ ms.locfileid: "63011336"
   
 1.  在 **[開始]** 功能表上，按一下 **[執行]** 。  
   
-2.  在 [**執行**] 對話方塊中，輸入`secpol.msc`，然後按一下 **[確定]** 。  
+2.  在 [**執行**] 對話方塊中， `secpol.msc`輸入，然後按一下 **[確定]**。  
   
 3.  在 [本機安全性設定]  應用程式中，依序展開 [安全性設定]  和 [帳戶原則]  ，然後按一下 [密碼原則]  。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "63011336"
   
 -   可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援具有混合作業系統的環境，其中 Windows 網域無法驗證所有使用者。  
   
--   可讓使用者從未知或未受信任的網域連接。 例如，既有客戶使用所指派 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入連接來接收訂單狀態的應用程式。  
+-   可讓使用者從未知或未受信任的網域進行連線。 例如，既有客戶使用所指派 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入連接來接收訂單狀態的應用程式。  
   
 -   可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 Web 架構應用程式，其中使用者會建立自己的識別。  
   

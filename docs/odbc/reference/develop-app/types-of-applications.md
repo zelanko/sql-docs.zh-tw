@@ -1,5 +1,5 @@
 ---
-title: 類型的應用程式 |Microsoft Docs
+title: 應用程式類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,66 +17,66 @@ ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70263b98f6b0e933f8b14fbfa74428c77317f462
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087797"
 ---
 # <a name="types-of-applications"></a>應用程式的類型
-ODBC 應用程式分類如下：  
+ODBC 應用程式可以分類如下：  
   
--   **純的 ODBC 2。**  
-     **_x_應用程式**的 32 位元應用程式的：  
+-   **純粹的 ODBC 2。**  
+     ** _x_應用程式**A 32 位應用程式：  
   
-    -   呼叫 ODBC 2。*x*函式 (包括 ODBC 1.0 函式**SQLSetParam**)。 這些包括 ODBC 1。*x*已移植至 32 位元的應用程式。  
+    -   只呼叫 ODBC 2。*x*函數（包括 ODBC 1.0 函數**SQLSetParam**）。 這些包括 ODBC 1。已移植到32位的*x*應用程式。  
   
-    -   必須要有 ODBC 2。*x*有行為變更的功能的行為。 (請參閱[的行為變更](../../../odbc/reference/develop-app/behavioral-changes.md)如需詳細資訊。)  
+    -   預期 ODBC 2。具有行為變更之功能的*x*行為。 （如需詳細資訊，請參閱[行為變更](../../../odbc/reference/develop-app/behavioral-changes.md)）。  
   
-    -   具有未重新編譯 ODBC 3.5 標頭。  
+    -   尚未使用 ODBC 3.5 標頭進行重新編譯。  
   
--   **純的 ODBC 2。**  
-     **_x_重新編譯應用程式**純粹的 ODBC 2。*x*已使用 ODBC 3.5 標頭檔中，重新編譯的應用程式藉由設定 ODBCVER = 0x0250。  
+-   **純粹的 ODBC 2。**  
+     **_x_重新編譯的應用程式**A 單純的 ODBC 2。已使用 ODBC 3.5 標頭檔重新編譯的*x*應用程式，方法是設定 ODBCVER = 0x0250。  
   
--   **純的 ODBC 2。**  
-     **_x_ Unicode 應用程式**純粹的 ODBC 2。*x*重新編譯應用程式與 Unicode 相容，並且使用 SQL_WCHAR 資料類型。  
+-   **純粹的 ODBC 2。**  
+     **_x_ Unicode 應用程式**：純 ODBC 2。已*重新編譯符合*Unicode 標準的應用程式，並使用 SQL_WCHAR 的資料類型。  
   
--   **純的 Open Group 和 ISO**-**相容的 ODBC 應用程式**的 32 位元應用程式的：  
+-   **純開放式群組和符合 ISO**-**規範的 ODBC 應用程式**A 32 位應用程式：  
   
-    -   呼叫 Open Group 或 ISO CLI 標準中定義的函式。 （這些函式可能包含已被取代的 3.0 函式）。  
+    -   呼叫開放式群組或 ISO CLI 標準中定義的函數。 （這些函數可能包含已被取代的3.0 函式）。  
   
     -   不使用 Unicode 資料類型。  
   
-    -   預期有的行為變更的功能的 ODBC 3.0 行為。  
+    -   預期具有行為變更之功能的 ODBC 3.0 行為。  
   
--   **純的 ODBC 3.0 應用程式**的 32 位元應用程式的：  
+-   **純 ODBC 3.0 應用程式**32位應用程式，其：  
   
-    -   會編譯使用 3.0 版的標頭。  
+    -   會使用3.0 標頭進行編譯。  
   
-    -   呼叫任何 ODBC 3.0 函數時，可能包括已被取代。  
+    -   呼叫任何 ODBC 3.0 函數，可能包含已被取代的函式。  
   
-    -   預期有的行為變更的功能的 ODBC 3.0 行為。  
+    -   預期具有行為變更之功能的 ODBC 3.0 行為。  
   
--   **純的 ODBC 3.5 應用程式**32 或 64 位元應用程式的：  
-  
-    -   可能會使用 Unicode 資料類型。  
-  
-    -   呼叫任何 ODBC 3.5 函數時，可能包括已被取代。  
-  
-    -   預期有的行為變更的功能的 ODBC 3.5 行為。  
-  
--   **純 ODBC 3.8 （或更新版本） 應用程式**的 32 位元或 64 位元應用程式的：  
+-   **純 ODBC 3.5 應用程式**32或64位應用程式，其：  
   
     -   可能會使用 Unicode 資料類型。  
   
-    -   呼叫任何 ODBC 3.8 函數時，可能包括已被取代。  
+    -   呼叫任何 ODBC 3.5 函數，可能包含已被取代的函式。  
   
-    -   需要 ODBC 3.8 行為有行為變更的功能。  
+    -   預期具有行為變更之功能的 ODBC 3.5 行為。  
   
--   **取代應用程式**32 或 64 位元應用程式的：  
+-   **單純的 ODBC 3.8 （或更新版本）應用程式**32位或64位應用程式，其：  
   
-    -   重複的功能會實作新行為。  
+    -   可能會使用 Unicode 資料類型。  
   
-    -   使用 ODBC 較新版本，只有在條件式的程式碼中的任何新功能。  
+    -   呼叫任何 ODBC 3.8 函數，可能包含已被取代的函式。  
   
-    -   已經將本身是較早版本的 ODBC 應用程式註冊或已限制條件的程式碼來處理行為的變更。
+    -   預期具有行為變更之功能的 ODBC 3.8 行為。  
+  
+-   **已取代應用程式**32或64位應用程式，其：  
+  
+    -   為重複的功能實行新的行為。  
+  
+    -   只會在條件式程式碼內使用較新版本的 ODBC 中的任何新功能。  
+  
+    -   具有有限的條件式程式碼來處理行為變更，或已將其本身註冊為舊版的 ODBC 應用程式。

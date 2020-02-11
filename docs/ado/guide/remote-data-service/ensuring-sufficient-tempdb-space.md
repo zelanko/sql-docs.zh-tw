@@ -13,47 +13,47 @@ ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe377cd15f2b95577a561e6784f78113b2843d07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922651"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>確認 TempDB 有足夠空間
-如果在處理時所發生的錯誤[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)需要處理在 Microsoft SQL Server 6.5 的空間的物件，您可能需要增加 TempDB 的大小。 (某些查詢需要暫存處理空間; 例如，具有 ORDER BY 子句的查詢需要排序的**資料錄集**，這需要一些暫存空間。)  
+如果在處理需要在 Microsoft SQL Server 6.5 上處理空間的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件時發生錯誤，您可能需要增加 TempDB 的大小。 （有些查詢需要暫時的處理空間; 例如，具有 ORDER BY 子句的查詢需要**記錄集**，這需要一些暫存空間）。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 > [!IMPORTANT]
->  閱讀此程序之前執行的動作，因為它不縮小裝置之後它會展開, 一樣簡單。  
+>  請先閱讀此程式再執行動作，因為它在擴充後並不容易壓縮裝置。  
   
 > [!NOTE]
->  根據預設的 Microsoft SQL Server 7.0 和更新版本、 TempDB 是設定為視需要自動成長。 因此，此程序可能只必須執行早於 7.0 版本的伺服器上。  
+>  根據預設，inMicrosoft SQL Server 7.0 和更新版本，TempDB 會設定為視需要自動成長。 因此，只有在執行7.0 之前版本的伺服器上，才需要執行此程式。  
   
-### <a name="to-increase-the-tempdb-space-on-sql-server-65"></a>若要增加 SQL Server 6.5 的 TempDB 空間  
+### <a name="to-increase-the-tempdb-space-on-sql-server-65"></a>增加 SQL Server 6.5 上的 TempDB 空間  
   
-1.  啟動 Microsoft SQL Server Enterprise Manager、 開啟樹狀結構的伺服器，然後再開啟資料庫裝置的樹狀結構。  
+1.  啟動 Microsoft SQL Server Enterprise 管理員]，開啟伺服器的樹狀目錄，然後開啟 [資料庫裝置] 樹狀目錄。  
   
-2.  選取 （實體） 的裝置，若要擴充，例如 Master，然後按兩下要開啟的裝置**編輯資料庫裝置** 對話方塊。  
+2.  選取要展開的（實體）裝置（例如 [主機]），然後按兩下裝置以開啟 [**編輯資料庫裝置**] 對話方塊。  
   
-     此對話方塊會顯示目前的資料庫使用的空間量。  
+     這個對話方塊會顯示目前的資料庫正在使用多少空間。  
   
-3.  在 **大小**方塊中，增加裝置所需的數量 (例如，50 mb (MB) 的硬碟空間)。  
+3.  在 [**大小**] 方塊中，將裝置增加到所需的數量（例如，硬碟空間 50 mb）。  
   
-4.  按一下 **立即變更**增加，可以展開 （邏輯） 的 TempDB 的空間數量。  
+4.  按一下 [**立即變更**]，以增加（邏輯） TempDB 可以展開的空間量。  
   
-5.  開啟資料庫樹狀目錄中的伺服器上，，然後按兩下**TempDB**來開啟**編輯資料庫** 對話方塊。 **資料庫**索引標籤會列出目前配置給 TempDB 的空間數量 (**的資料大小**)。 根據預設，這會是 2 MB。  
+5.  開啟伺服器上的 [資料庫] 樹狀結構，然後按兩下 [ **TempDB** ] 以開啟 [**編輯資料庫**] 對話方塊。 [**資料庫**] 索引標籤會列出目前配置給 TempDB 的空間量（**資料大小**）。 此值預設為 2 MB。  
   
-6.  底下**大小**群組中，按一下**展開**。 圖形顯示每個實體裝置的可用和已配置的空間。 色彩暗紅色橫條代表可用空間。  
+6.  在 [**大小**] 群組底下，按一下 [**展開**]。 圖表會顯示每個實體裝置上可用和已配置的空間。 以褐紫紅色色彩表示可用空間。  
   
-7.  選取 [**記錄檔裝置**，例如 Master，以顯示可用的大小，以**大小 (MB)** ] 方塊中。  
+7.  選取**記錄裝置**（例如 Master）以顯示 [**大小（MB）** ] 方塊中的可用大小。  
   
-8.  按一下 **現在展開**酃 TempDB 資料庫。  
+8.  按一下 [**立即展開**]，將該空間配置給 TempDB 資料庫。  
   
-     **編輯資料庫**對話方塊會顯示新針對 TempDB 配置大小。  
+     [**編輯資料庫**] 對話方塊會顯示 TempDB 的新配置大小。  
   
- 如需有關本主題的詳細資訊，請搜尋 「 展開資料庫對話方塊。 」 的 Microsoft SQL Server Enterprise Manager 的說明檔  
+ 如需有關此主題的詳細資訊，請在 Microsoft SQL Server Enterprise 管理員說明檔中，搜尋 [展開資料庫] 對話方塊。  
   
 ## <a name="see-also"></a>另請參閱  
  [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)

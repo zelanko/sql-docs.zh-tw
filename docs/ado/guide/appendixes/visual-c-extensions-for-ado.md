@@ -1,5 +1,5 @@
 ---
-title: 視覺化C++延伸模組用於 ADO |Microsoft Docs
+title: 適用于 ADO 的 Visual C++ 延伸模組 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,28 +16,28 @@ ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db11e86ab479ad0df4224d59c3408729fa9903ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926379"
 ---
 # <a name="visual-c-extensions-for-ado"></a>Visual C++ Extensions for ADO
-慣用的程式設計視覺效果的 ADO 方法C++使用 **#import**指示詞中所述[Microsoft Visual C++ ADO 程式設計](../../../ado/guide/appendixes/visual-c-ado-programming.md)。 不過，舊版 ADO 隨附程式設計使用視覺效果的替代方法C++： 視覺效果C++延伸模組。 本節提供這項功能的人必須維護視覺效果C++擴充功能的程式碼，但新的 ADO 程式碼應該使用來撰寫 #**匯入**。
+採用 Visual C++ 的 ADO 程式設計的慣用方法是使用 **#import**指示詞，如[Microsoft Visual C++ ADO 程式設計](../../../ado/guide/appendixes/visual-c-ado-programming.md)中所述。 不過，舊版 ADO 隨附另一個使用 Visual C++ 的程式設計方法： Visual C++ 延伸模組。 本節會針對必須維護 Visual C++ 延伸模組程式碼的人員記載這項功能，但新的 ADO 程式碼應使用 #**import**來撰寫。
 
- 其中一個最沉悶作業 VisualC++程式設計人員臉部 ADO 使用擷取資料時將資料轉換時傳回當做 VARIANT 資料類型到C++資料類型，然後將轉換的資料儲存在類別或結構。 除了很麻煩，擷取C++透過 VARIANT 資料類型的資料會減少效能。
+ Visual C++ 程式設計人員在使用 ADO 來抓取資料時最繁瑣的工作之一，就是將傳回為 VARIANT 資料類型的資料轉換成 c + + 資料類型，然後將轉換的資料儲存在類別或結構中。 除了麻煩外，透過 VARIANT 資料類型來抓取 c + + 資料也會降低效能。
 
- ADO 提供的介面，支援資料擷取到原生 C /C++資料類型而不需要經過 VARIANT，同時也提供 前置處理器巨集，可簡化使用介面。 結果是有彈性的工具更容易使用且具有極佳的效能。
+ ADO 提供的介面可支援在不經過變體的情況下，將資料抓取至原生 C/c + + 資料類型，同時也提供可簡化使用介面的預處理器宏。 結果是彈性的工具，更容易使用且具有良好的效能。
 
- 常見的 C /C++用戶端的案例是要繫結中的資料錄[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)之 c /C++結構或類別，包含原生 C /C++類型。 透過變數時，這牽涉到從 VARIANT 轉換程式碼寫入 C /C++原生型別。 視覺效果C++延伸模組用於 ADO 為目標的視覺效果，讓這個案例更容易C++程式設計人員。
+ 常見的 C/c + + 用戶端案例是將記錄[集](../../../ado/reference/ado-api/recordset-object-ado.md)內的記錄系結至 c/c + + 結構或包含原生 C/c + + 類型的類別。 透過變體時，這牽涉到將轉換程式碼從 VARIANT 寫成 C/c + + 原生類型。 ADO 的 Visual C++ 延伸模組的目標在於讓 Visual C++ 程式設計人員更容易進行這個案例。
 
- 請參閱下列主題來深入了解視覺效果C++延伸模組用於 ADO。
+ 若要深入瞭解 ADO 的 Visual C++ 延伸模組，請參閱下列主題。
 
--   [使用視覺效果C++延伸模組用於 ADO](../../../ado/guide/appendixes/using-visual-c-extensions.md)
+-   [使用 ADO 的 Visual C++ 延伸模組](../../../ado/guide/appendixes/using-visual-c-extensions.md)
 
 -   [Visual C++ Extensions 標題](../../../ado/guide/appendixes/visual-c-extensions-header.md)
 
--   [ADO 使用 VisualC++延伸模組範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)
+-   [具有 Visual C++ 擴充功能的 ADO 範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)
 
 ## <a name="see-also"></a>另請參閱
- [ADO for VisualC++語法索引 com](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [視覺化C++延伸模組範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)[使用視覺效果C++延伸模組](../../../ado/guide/appendixes/using-visual-c-extensions.md) [VisualC++延伸模組標頭](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+ 適用于 COM [Visual C++ 延伸模組範例](../../../ado/guide/appendixes/visual-c-extensions-example.md) [Visual C++ 語法索引的 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [Visual C++ 延伸模組標頭](../../../ado/guide/appendixes/visual-c-extensions-header.md)[使用 Visual C++ 延伸](../../../ado/guide/appendixes/using-visual-c-extensions.md)模組

@@ -15,17 +15,17 @@ ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a78db07f5ba445c54108558b2ff222bd217c2bbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924249"
 ---
 # <a name="service-providers-and-components"></a>服務提供者和元件
-服務提供者是藉由實作擴充原生不支援資料存放區的介面中擴充的資料提供者功能的元件。  
+服務提供者是一種元件，可執行資料存放區原本不支援的擴充介面，藉此擴充資料提供者的功能。  
   
- 通用資料存取提供*元件架構*，可個別、 特製化的元件，才能實作離散組資料庫的功能或 「 服務 」，讓效能較差的存放區上。 因此，而不是強制執行每個資料存放區，以提供自己的擴充功能實作，或強制執行在內部實作的資料庫功能的泛型應用程式，服務元件，提供可以任何應用程式的一般實作存取任何資料存放區時，會使用它。 有些功能由資料存放區，以及一些透過一般的元件以原生方式實作的事實是向應用程式。  
+ 通用資料存取提供一個*元件架構*，可讓個別的特製化元件在不支援的存放區上，執行一組離散的資料庫功能或「服務」。 因此，不會強制每個資料存放區提供自己的擴充功能，或強制一般應用程式在內部實作為資料庫功能，服務元件提供了任何應用程式都可以執行的通用存取任何資料存放區時使用。 事實上，某些功能是由資料存放區以原生方式實作為，而有些則是透過泛型元件，對應用程式而言是透明的。  
   
- 例如，資料指標引擎，例如[OLE DB 的資料指標服務](https://msdn.microsoft.com/57638feb-4ecd-4051-becb-8f828d21cf44)，是可從連續的順向的資料存放區來產生可捲動的資料使用資料的服務元件。 包含其他服務提供者，通常由 ADO [Microsoft OLE DB 持續性提供者 （ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) （適用於將資料儲存至檔案）， [Microsoft Data Shaping Service 的 OLE DB （ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (如階層**資料錄集**)，而[Microsoft OLE DB 遠端服務提供者 （ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) （適用於叫用遠端電腦上的資料提供者）。  
+ 例如，資料指標引擎（例如[OLE DB 的 Cursor 服務](https://msdn.microsoft.com/57638feb-4ecd-4051-becb-8f828d21cf44)）是一種服務元件，可以從連續、順向資料存放區取用資料，以產生可滾動的資料。 ADO 經常使用的其他服務提供者包括[microsoft OLE DB 持續性提供者（Ado 服務提供者）](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) 、適用于[OLE DB 的 Microsoft 資料成形服務（Ado 服務提供者）](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) （適用于階層式**記錄集**），以及[MICROSOFT OLE DB 遠端處理提供者（ado 服務提供者）](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) （用於在遠端電腦上叫用資料提供者）。  
   
- 如需有關服務和資料提供者的詳細資訊，請參閱[附錄 a:提供者](../../../ado/guide/appendixes/appendix-a-providers.md)。
+ 如需服務和資料提供者的詳細資訊，請參閱[附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)。

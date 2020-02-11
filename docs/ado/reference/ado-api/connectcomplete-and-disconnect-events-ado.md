@@ -1,5 +1,5 @@
 ---
-title: ConnectComplete 和 Disconnect 事件 (ADO) |Microsoft Docs
+title: ConnectComplete 和 Disconnect 事件（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +20,14 @@ ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 448270ddf0e8cd7efb5ec39a93d4ff993360730e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919562"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete 和 Disconnect 事件 (ADO)
-**ConnectComplete**連接啟動之後，會呼叫事件。 **中斷連線**連線結束後，會呼叫事件。  
+連接啟動之後，會呼叫**ConnectComplete**事件。 **中斷**線上活動會在連接結束後呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,18 +39,18 @@ Disconnect adStatus, pConnection
   
 #### <a name="parameters"></a>參數  
  *pError*  
- [錯誤](../../../ado/reference/ado-api/error-object.md)物件。 它說明如果發生錯誤的值*adStatus*是**adStatusErrorsOccurred**; 否則它不會設定。  
+ [錯誤](../../../ado/reference/ado-api/error-object.md)物件。 它會描述*adStatus*的值為**adStatusErrorsOccurred**時所發生的錯誤。否則不會設定。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)值，永遠傳回**adStatusOK**。  
+ 一律會傳回**adStatusOK**的[EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)值。  
   
- 當**ConnectComplete**是呼叫，此參數設為**adStatusCancel**如果**WillConnect**事件已經要求取消暫止的連接。  
+ 當呼叫**ConnectComplete**時，如果**WillConnect**事件要求取消暫止的連接，此參數會設定為**adStatusCancel** 。  
   
- 其中一個事件會傳回之前，請將此參數設定為**adStatusUnwantedEvent**以避免後續的通知。 不過，關閉並重新開啟[連線](../../../ado/reference/ado-api/connection-object-ado.md)會引發這些事件，會再次發生。  
+ 在任一個事件傳回之前，請將此參數設定為**adStatusUnwantedEvent** ，以防止後續的通知。 不過，關閉並重新開啟[連接](../../../ado/reference/ado-api/connection-object-ado.md)會導致這些事件再次發生。  
   
  *pConnection*  
- **連線**物件套用此事件。  
+ 套用此事件的**連接**物件。  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [ADO 事件模型範例（VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)

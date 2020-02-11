@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63017102"
 ---
 # <a name="change-an-operator39s-availability"></a>變更操作員的可用性
@@ -36,9 +36,9 @@ ms.locfileid: "63017102"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要使用下列項目變更操作員的可用性：**  
+-   **若要使用下列內容變更操作員的可用性：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63017102"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才可以編輯操作員。  
@@ -57,15 +57,15 @@ ms.locfileid: "63017102"
   
 1.  在 **[物件總管]** 中，按一下加號，展開包含您要啟用或停用操作員的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
 3.  按一下加號展開 **[操作員]** 資料夾。  
   
-4.  以滑鼠右鍵按一下要啟用或停用的操作員並選取 [屬性]，然後按一下 [一般] 索引標籤。  
+4.  以滑鼠右鍵按一下要啟用或停用的操作員並選取 [屬性]****，然後按一下 [一般]**** 索引標籤。  
   
-5.  在 [<操作員名稱> 屬性] 對話方塊中，選取或清除 [已啟用] 核取方塊。  
+5.  在 [ _operator_name_**屬性**] 對話方塊中，選取或清除 [**已啟用**] 核取方塊。  
   
-6.  按一下 [確定] 。  
+6.  按一下 [確定]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -73,9 +73,9 @@ ms.locfileid: "63017102"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- disables the 'Fran??ois Ajenstat' operator  
@@ -88,6 +88,6 @@ ms.locfileid: "63017102"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 < [sp_update_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql)。  
+ 如需詳細資訊，請參閱[sp_update_operator &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql)。  
   
   

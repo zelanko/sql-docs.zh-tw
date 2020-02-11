@@ -1,5 +1,5 @@
 ---
-title: 名為命令 |Microsoft Docs
+title: 命名的命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 928ac3b1d3cd753ded0bcf4337f10a654c9a3dc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924829"
 ---
 # <a name="named-commands"></a>具名命令
-[建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)示範一種方法來執行命令。 還有另一個方法： 您可以把它具名的命令，，，然後呼叫具名命令直接對這**連接**物件 (指派給**ActiveConnection**屬性**命令**物件)。 命名命令表示指派名稱給**名稱**屬性**命令**物件。 例如，套用至物件的  
+[建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)會顯示執行命令的一種方式。 還有另一種方式：您可以將它命名為命令，然後直接在**Connection**物件（指派給**Command**物件的**ActiveConnection**屬性）上呼叫這個名為的命令。 命名命令表示將名稱指派給**命令**物件的**name**屬性。 例如，  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -29,9 +29,9 @@ objCmd.ActiveConnection = objConn
 objConn.GetCustomers objRs  
 ```  
   
- 具名的命令行為會如同它是 「 自訂方法 」 上**連線**物件。 命令的結果會傳回為這個 「 自訂的方法 」 的 out 參數。  
+ 已命名的命令的作用就如同它是**連接**物件上的「自訂方法」。 此命令的結果會當做此「自訂方法」的 out 參數傳回。  
   
- 下列範例會示範這項功能。  
+ 下列範例說明這項功能。  
   
 ```  
 'BeginNamedCmd  

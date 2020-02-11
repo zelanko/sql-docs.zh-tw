@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_alert_job (Transact-SQL) | Microsoft Docs
+title: sp_help_log_shipping_alert_job （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 4d4b4577-c393-4961-b2d3-b56e980b787b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f97139337b117f1f84f41df56114ca7a35b61fc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090028"
 ---
-# <a name="sphelplogshippingalertjob-transact-sql"></a>sp_help_log_shipping_alert_job (Transact-SQL)
+# <a name="sp_help_log_shipping_alert_job-transact-sql"></a>sp_help_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   這個預存程序會從記錄傳送監視器中，傳回警示作業的作業識別碼。  
@@ -46,13 +46,13 @@ sp_help_log_shipping_alert_job
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- 這個預存程序會傳回[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄傳送警示作業的代理程式作業識別碼。 如果沒有任何記錄傳送警示作業存在，它會傳回空的結果集。  
+ 這個預存[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程式會傳回記錄傳送警示作業的 Agent 作業識別碼。 如果沒有任何記錄傳送警示作業存在，它會傳回空的結果集。  
   
 ## <a name="remarks"></a>備註  
- **sp_help_log_shipping_alert_job**必須從執行**主要**監視伺服器上的資料庫。  
+ **sp_help_log_shipping_alert_job**必須從監視伺服器上的**master**資料庫中執行。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

@@ -1,5 +1,5 @@
 ---
-title: 陳述式控制代碼 |Microsoft Docs
+title: 語句控制碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 730ead7bf90af3b6e6906fe184e0fa3312212137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107263"
 ---
 # <a name="statement-handles"></a>陳述式控制代碼
-A*陳述式*最容易想像成 SQL 陳述式，例如**選取\*從員工**。 不過，在陳述式是不只是 SQL 陳述式-它包含所有與該 SQL 陳述式，例如任何結果集的陳述式所建立和執行陳述式中使用的參數相關聯的資訊。 陳述式甚至不必有應用程式定義的 SQL 陳述式。 例如，當目錄函數這類**SQLTables**執行上一個陳述式，它會執行預先定義的 SQL 陳述式會傳回一份資料表的名稱。  
+*語句*最容易被視為 SQL 語句，例如** \* SELECT FROM Employee**。 不過，語句不只是 SQL 語句，它包含與該 SQL 語句相關聯的所有資訊，例如語句所建立的任何結果集，以及執行語句時所使用的參數。 語句甚至不需要有應用程式定義的 SQL 語句。 例如，當在語句上執行諸如**SQLTables**之類的目錄函數時，它會執行可傳回資料表名稱清單的預先定義 SQL 語句。  
   
- 陳述式控制代碼識別每個陳述式。 陳述式是單一連線，與相關聯，而且可以有多個陳述式，在該連接上。 有些驅動程式限制支援; 作用中陳述式的數目選項 SQL_MAX_CONCURRENT_ACTIVITIES **SQLGetInfo**指定驅動程式支援在單一連接的幾個作用中陳述式。 陳述式會定義為*active*如果有暫止的結果，而結果是結果集還是受影響的資料列計數**插入**， **UPDATE**，或**刪除**陳述式或資料傳送至多個呼叫**SQLPutData**。  
+ 每個語句都是由語句控制碼所識別。 語句與單一連接相關聯，而且該連接上可以有多個語句。 有些驅動程式會限制它們所支援的使用中語句數目;**SQLGetInfo**中的 SQL_MAX_CONCURRENT_ACTIVITIES 選項會指定在單一連接上，驅動程式支援多少使用中語句。 如果語句具有暫止的結果，且其結果為結果集或受**INSERT**、 **UPDATE**或**DELETE**語句影響的資料列計數，或正在使用**SQLPutData**的多個呼叫傳送資料，則語句會*定義為使用*中。  
   
- 在一段程式碼來實作 ODBC （驅動程式管理員或驅動程式），陳述式控制代碼會識別包含陳述式的詳細資訊，例如結構：  
+ 在執行 ODBC （驅動程式管理員或驅動程式）的程式碼片段內，語句控制碼會識別包含語句資訊的結構，例如：  
   
--   陳述式的狀態  
+-   語句的狀態  
   
--   目前的陳述式層級診斷  
+-   目前的語句層級診斷  
   
--   應用程式變數的位址繫結至陳述式的參數和結果集資料行  
+-   系結至語句參數和結果集資料行之應用程式變數的位址  
   
--   目前的設定，每個陳述式屬性  
+-   每個語句屬性的目前設定  
   
- 陳述式控制代碼可用於大部分的 ODBC 函式。 值得注意的是，它們用在函式來繫結參數和結果集資料行 (**SQLBindParameter**並**SQLBindCol**)、 準備和執行陳述式 (**SQLPrepare** **SQLExecute**，並**SQLExecDirect**)，擷取中繼資料 (**SQLColAttribute**並**SQLDescribeCol**)，擷取結果 (**SQLFetch**)，並擷取診斷 (**SQLGetDiagField**並**SQLGetDiagRec**)。 它們也會使用目錄函式中 (**SQLColumns**， **SQLTables**等等) 和一些其他功能。  
+ 語句控制碼用於大部分的 ODBC 函式中。 值得注意的是，它們會在函式中用來系結參數和結果集資料行（**SQLBindParameter**和**SQLBindCol**）、準備和執行語句（**SQLPrepare**、 **SQLExecute**和**SQLExecDirect**）、取出中繼資料（**SQLColAttribute**和**SQLDescribeCol**）、提取結果（**SQLFetch**），以及取得診斷（**SQLGetDiagField**和**SQLGetDiagRec**）。 它們也會用於目錄函式（**SQLColumns**、 **SQLTables**等等）和許多其他函數。  
   
- 陳述式控制代碼被配置**SQLAllocHandle**和與釋放**SQLFreeHandle**。
+ 語句控制碼會使用**SQLAllocHandle**配置，並與**SQLFreeHandle**一起釋放。

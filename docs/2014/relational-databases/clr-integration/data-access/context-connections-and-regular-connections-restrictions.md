@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919172"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>一般和內容連接的限制
-  本主題討論中執行的程式碼的相關限制[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]透過內容和一般連接處理序。  
+  本主題討論透過內容和一般連接在[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]進程中執行之程式碼的相關限制。  
   
 ## <a name="restrictions-on-context-connections"></a>內容連接的限制  
  開發應用程式時，請考慮下列適用於內容連接的限制：  
@@ -30,13 +30,16 @@ ms.locfileid: "62919172"
   
 -   內容連接不支援 Multiple Active Result Sets (MARS)。  
   
--   `SqlBulkCopy` 類別無法在內容連接中運作。  
+-   
+  `SqlBulkCopy` 類別無法在內容連接中運作。  
   
 -   不支援在內容連接中更新批次。  
   
--   `SqlNotificationRequest` 無法搭配針對內容連接執行的命令使用。  
+-   
+  `SqlNotificationRequest` 無法搭配針對內容連接執行的命令使用。  
   
--   不支援取消針對內容連接執行的命令。 `SqlCommand.Cancel` 方法會以無訊息的方式忽略此要求。  
+-   不支援取消針對內容連接執行的命令。 
+  `SqlCommand.Cancel` 方法會以無訊息的方式忽略此要求。  
   
 -   當您使用 "context connection=true" 時，無法使用其他連接字串關鍵字。  
   
@@ -47,7 +50,7 @@ ms.locfileid: "62919172"
 ## <a name="restrictions-on-regular-connections"></a>一般連接的限制  
  開發應用程式時，請考慮下列適用於一般連接的限制：  
   
--   不支援針對內部伺服器執行非同步命令。 如果您在命令的連接字串中包含 "async=true"，然後執行此命令，就會導致系統擲回 `System.NotSupportedException`。 此時會出現此訊息：「 在執行時不支援非同步處理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]程序。 」  
+-   不支援針對內部伺服器執行非同步命令。 如果您在命令的連接字串中包含 "async=true"，然後執行此命令，就會導致系統擲回 `System.NotSupportedException`。 此訊息會顯示：「在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序內部執行時，不支援非同步處理」。  
   
 -   不支援 `SqlDependency` 物件。  
   

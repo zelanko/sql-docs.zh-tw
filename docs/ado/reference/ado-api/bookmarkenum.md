@@ -16,31 +16,31 @@ ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69bce043f7c5ce72de37e6e085e57baccd8c4864
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920351"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
-指定的書籤，表示作業應該開始的位置。  
+指定表示作業應開始之位置的書簽。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adBookmarkCurrent**|0|從目前的記錄開始。|  
-|**adBookmarkFirst**|1|在第一筆記錄開始。|  
+|**adBookmarkCurrent**|0|從目前記錄開始。|  
+|**adBookmarkFirst**|1|從第一筆記錄開始。|  
 |**adBookmarkLast**|2|從最後一筆記錄開始。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- 封裝： **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
+ Package： **.com. wfc. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
-|AdoEnums.Bookmark.CURRENT|  
-|AdoEnums.Bookmark.FIRST|  
-|AdoEnums.Bookmark.LAST|  
+|AdoEnums。書簽。目前|  
+|AdoEnums。第一個|  
+|AdoEnums。書簽. LAST|  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
   
 |||  
 |-|-|  

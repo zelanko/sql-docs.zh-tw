@@ -11,17 +11,17 @@ ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 877dda7f387c8574c8ea2e91281b10b7563037b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100657"
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>ODBC 函式和資料指標程式庫
 > [!IMPORTANT]  
->  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
   
- 當連接啟用 ODBC 資料指標程式庫時，驅動程式管理員會呼叫函式，而不是驅動程式中的資料指標程式庫中。 資料指標程式庫執行函式，或是指定的驅動程式中呼叫它。  
+ 當 ODBC 資料指標程式庫已針對連接啟用時，驅動程式管理員會呼叫游標程式庫中的函式，而不是驅動程式中的函數。 資料指標程式庫會執行函數，或在指定的驅動程式中呼叫它。  
   
  此章節包含下列主題。  
   

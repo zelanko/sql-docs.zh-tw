@@ -1,5 +1,5 @@
 ---
-title: 使用連接物件 |Microsoft Docs
+title: 使用 Connection 物件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4f1b867e1870b81641c7cea09d9a8fb3accfcc01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923640"
 ---
 # <a name="using-a-connection-object"></a>使用 Connection 物件
-開始前**連線**物件時，您必須定義有關資料來源和連線類型的特定資訊。 大部分的這項資訊由持有*ConnectionString*的參數[Open 方法](../../../ado/reference/ado-api/open-method-ado-connection.md)上**連接**物件，或由[ConnectionString屬性](../../../ado/reference/ado-api/connectionstring-property-ado.md)上**連線**物件。 連接字串是由單引號括住的值以分號分隔，引數/值組的清單所組成。 例如:  
+開啟**連接**物件之前，您必須定義有關資料來源和連線類型的特定資訊。 這大部分的資訊都是由**connection**物件上[Open 方法](../../../ado/reference/ado-api/open-method-ado-connection.md)的*ConnectionString*參數所持有，或是由**connection**物件上的[connectionstring 屬性](../../../ado/reference/ado-api/connectionstring-property-ado.md)所保留。 連接字串是由以分號分隔的引數/值組清單所組成，其中的值以單引號括住。 例如：  
   
 ```  
 Dim sConn As String  
@@ -29,9 +29,9 @@ sConn = "Provider='SQLOLEDB';Data Source='MySqlServer';" & _
 ```  
   
 > [!NOTE]
->  您也可以指定 ODBC 資料來源名稱 (DSN) 或資料連結 (UDL) 檔案中的連接字串。 如需有關名稱 （dsn） 的詳細資訊，請參閱[管理的資料來源](../../../odbc/admin/managing-data-sources.md)ODBC 程式設計人員參考中。 如需 Udl 的詳細資訊，請參閱[資料連結 API 概觀](https://msdn.microsoft.com/95c180ea-bd4f-4dca-b95a-576afd135bbc)OLE DB 程式設計人員參考中。  
+>  您也可以在連接字串中指定 ODBC 資料來源名稱（DSN）或資料連結（UDL）檔案。 如需有關 Dsn 的詳細資訊，請參閱管理 ODBC 程式設計人員參考中的[資料來源](../../../odbc/admin/managing-data-sources.md)。 如需 Udl 的詳細資訊，請參閱 OLE DB 程式設計人員參考中的[資料連結 API 總覽](https://msdn.microsoft.com/95c180ea-bd4f-4dca-b95a-576afd135bbc)。  
   
- 一般而言，您藉由呼叫，會在建立連線時**Connection.Open**方法，以適當*連接字串*做為其參數。 範例是以下列 Visual Basic 程式碼片段所示：  
+ 一般來說，您可以呼叫**connection. Open**方法來建立連接，並以適當的*連接字串*做為其參數。 範例如下列 Visual Basic 程式碼片段所示：  
   
 ```  
 Dim oConn As ADODB.Connection  
@@ -57,7 +57,7 @@ Set oConn = Nothing
   
 ```  
   
- 以下**oRs.Open**採用**連線**物件 (*oConn*) 變數的值設定為其*ActiveConnection*參數。 此外， **Connection.CursorLocation**屬性的預設值會假設**adUseServer**。 若要與此相反[HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md)上一節的範例。 下列指示會導致執行階段錯誤。  
+ 在此**or 中**，會使用**Connection**物件（*OConn*）變數作為其*ActiveConnection*參數的值。 此外， **CursorLocation**屬性會假設預設值是**adUseServer**。 與上一節中的[HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md)範例相反。 下列指令會導致執行階段錯誤。  
   
 ```  
 oRs.MarshalOptions = adMarshalModifiedOnly  

@@ -13,37 +13,37 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5f28b5d593524288a755f4c9455bba39554d7bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924810"
 ---
 # <a name="namespaces"></a>命名空間
-在 ADO 中的 XML 保存格式會使用下列四個命名空間。  
+ADO 中的 XML 持續性格式會使用下列四個命名空間。  
   
 ## <a name="remarks"></a>備註  
- 在 ADO 中的 XML 保存格式會使用下列四個命名空間。  
+ ADO 中的 XML 持續性格式會使用下列四個命名空間。  
   
-|Prefix|描述|  
+|前置詞|描述|  
 |------------|-----------------|  
-|s|是指 「 XML 資料 」 命名空間包含的項目和屬性，定義目前的資料錄集的結構描述。|  
-|dt|參考的資料型別定義的規格。|  
-|rs|參考的命名空間包含的項目和專屬 ADO 資料錄集屬性的屬性和屬性。|  
-|z|參考目前資料列集的結構描述。|  
+|s|參考「XML 資料」命名空間，其中包含定義目前記錄集之架構的元素和屬性。|  
+|樹|參考資料類型定義規格。|  
+|rs|參考包含 ADO 記錄集屬性和屬性特定專案和屬性的命名空間。|  
+|z|參考目前資料列集的架構。|  
   
- 用戶端應該將它自己的標記加入這些命名空間，如規格所定義。 比方說，用戶端應該不會定義在命名空間中的"urn: schemas-microsoft-microsoft-com:rowset"，然後撰寫出類似 「 rs: MyOwnTag。 」 若要深入了解命名空間，請參閱[W3C Namespaces in XML 建議事項](http://www.w3.org/TR/REC-xml-names/)。  
+ 用戶端不應該將自己的標記新增至這些命名空間，如規格所定義。 例如，用戶端不應將命名空間定義為 "urn：架構-microsoft-com：資料列集"，然後寫出類似 "rs： MyOwnTag" 的專案。 若要深入瞭解命名空間，請參閱[W3C 的 XML 命名空間建議](http://www.w3.org/TR/REC-xml-names/)。  
   
 > [!IMPORTANT]
->  結構描述標記的識別碼必須是"RowsetSchema 」，而且用來參考目前資料列集的結構描述的命名空間必須指向 「 #RowsetSchema。 」  
+>  架構標記的識別碼必須是 "RowsetSchema"，而用來參考目前資料列集之架構的命名空間必須指向 "#RowsetSchema"。  
   
- 請注意-冒號和等號之間的部分為命名空間的前置詞是任意的。  
+ 請注意，命名空間的前置詞（冒號和等號之間的部分）是任意的。  
   
 ```  
 xmlns:rs="urn:schemas-microsoft-com:rowset"  
 ```  
   
- 使用者可以定義這是任何名稱，只要這個名稱固定使用整個 XML 文件。 ADO 永遠會寫出"s，""rs，""dt"，"z，"但這些前置詞名稱不是硬式編碼至載入元件。  
+ 使用者可以將此定義為任何名稱，只要此名稱在整個 XML 檔中一致地使用即可。 ADO 一律會寫出 "s"、"rs"、"dt" 和 "z"，但是這些前置詞名稱並不會硬式編碼到載入元件中。  
   
 ## <a name="see-also"></a>另請參閱  
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)

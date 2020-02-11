@@ -1,5 +1,5 @@
 ---
-title: 項目屬性 (ADO) |Microsoft Docs
+title: Item 屬性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -46,14 +46,14 @@ ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fe7e807fc38d6f1cf6f72e5b19539bb839e9c08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918358"
 ---
 # <a name="item-property-ado"></a>Item 屬性 (ADO)
-依名稱或序數數字，指出集合中的特定成員。  
+以名稱或序數表示集合的特定成員。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,23 +62,23 @@ Set object = collection.Item ( Index )
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 傳回的物件參考。  
+ 傳回物件參考。  
   
 ## <a name="parameters"></a>參數  
- *Index*  
- A **Variant**運算式，其值的名稱或物件在集合中的序號。  
+ *指數*  
+ 會評估為名稱或集合中物件序號的**Variant**運算式。  
   
 ## <a name="remarks"></a>備註  
- 使用**項目**傳回集合中的特定物件的屬性。 如果**項目**對應至的集合中找不到物件*Index*引數，則會發生錯誤。 此外，某些集合不支援具名的物件;對於這些集合中，您必須使用序數編號參考。  
+ 使用**Item**屬性可傳回集合中的特定物件。 如果**專案**在對應至*索引*引數的集合中找不到物件，就會發生錯誤。 此外，某些集合不支援命名物件;對於這些集合，您必須使用序數參考。  
   
- **項目**屬性是所有集合的預設屬性; 因此，下列語法形式是可互換：  
+ **Item**屬性是所有集合的預設屬性;因此，下列語法形式可互換：  
   
 ```  
 collection.Item (Index)  
 collection (Index)  
 ```  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
   
 ||||  
 |-|-|-|  
@@ -91,5 +91,5 @@ collection (Index)
 |[Views 集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
 ## <a name="see-also"></a>另請參閱  
- [Item 屬性範例 (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
+ [Item 屬性範例（VB）](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Item 屬性範例 (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

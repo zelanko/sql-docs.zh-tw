@@ -1,5 +1,5 @@
 ---
-title: ALTER CUBE 陳述式 (MDX) |Microsoft Docs
+title: ALTER CUBE 語句（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 750f8ae7a1b9275bdab734a15134d255916e7d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68098519"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX 資料定義 - ALTER CUBE
 
 
-  改變指定 Cube 的結構，通常用來支援維度回寫。 如需應用程式中使用回寫的詳細資訊，請參閱此部落格文章：[建立回寫應用程式與 Analysis Services （部落格）](https://go.microsoft.com/fwlink/?LinkId=394977)  
+  改變指定 Cube 的結構，通常用來支援維度回寫。 如需在應用程式中使用回寫的詳細資訊，請參閱此 blog 文章：[使用 Analysis Services 建立回寫應用程式（blog）](https://go.microsoft.com/fwlink/?LinkId=394977)  
   
  請注意，並行維度回寫可能會導致死結，其中第一個回寫由於第二個回寫保留共用鎖定而無法認可。 在此情況下，雖然不會產生錯誤，但是也無法進行作業。 最後，這兩個回寫會逾時，而系統會回復變更。  
   
@@ -91,7 +91,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  提供新維度成員之父系名稱的有效字串運算式，若維度成員是建立於根節點，便無法提供。  
   
- *MemberName*  
+ *基*  
  提供成員名稱的有效字串運算式。  
   
  *Key_Value*  
@@ -117,7 +117,7 @@ CELL CALCULATION Calculation_Name
  如果沒有使用 WITH DESCENDANTS 子句，已卸除之成員的子系會成為其父系的子系。 如果使用 WITH DESCENDANTS 子句，同時也會卸除維度資料表中的所有下階及其資料列。  
   
 > [!NOTE]  
->  如需卸除導出的成員、 命名集、 動作和資料格計算，請參閱[DROP MEMBER 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)， [DROP SET 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)，[DROP ACTION 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)，以及[DROP CELL CALCULATION 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)。  
+>  如需卸載匯出成員、命名集、動作和資料格計算的詳細資訊，請參閱[DROP MEMBER 語句 &#40;mdx&#41;](../mdx/mdx-data-definition-drop-member.md)、 [drop SET 語句 &#40;mdx&#41;](../mdx/mdx-data-definition-drop-set.md)、 [drop ACTION 語句 &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)和[DROP cell CALCULATION 語句 &#40;mdx&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)。  
   
 ## <a name="updating-the-default-dimension-member"></a>更新預設維度成員  
  這個子句會更新 Cube 的預設成員，在 MDX 計算指令碼中使用可定義預設成員。 您可以指定資料庫維度、Cube 維度或使用者登入的預設成員。 在工作階段期間，也可以變更預設成員。  
@@ -139,7 +139,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  為所移動的維度成員，提供新父系名稱的有效字串運算式。  
   
- *MemberName*  
+ *基*  
  提供成員名稱的有效字串運算式。  
   
  Unsigned_*整數*  
@@ -151,7 +151,7 @@ CELL CALCULATION Calculation_Name
  UPDATE DIMENSION MEMBER 子句讓您能修改成員屬性，以及與成員相關聯的自訂成員公式。  
   
 ### <a name="arguments"></a>引數  
- *MemberName*  
+ *基*  
  提供成員名稱的有效字串運算式。  
   
  *MDX_Expression*  
@@ -161,9 +161,9 @@ CELL CALCULATION Calculation_Name
  定義導出成員屬性值的有效 MDX 純量運算式。  
   
 ## <a name="creating-a-cell-calculation"></a>建立資料格計算  
- 如需建立使用 ALTER CUBE 陳述式資料格計算的詳細資訊，請參閱[DROP CELL CALCULATION 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)。  
+ 如需使用 ALTER CUBE 語句來建立資料格計算的詳細資訊，請參閱[DROP CELL Calculation 語句 &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 資料定義陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Mdx 資料定義語句 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

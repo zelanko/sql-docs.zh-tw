@@ -15,19 +15,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5a451792e9732bf00e7bf68ce93b42c99b06fa2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912414"
 ---
-# <a name="mssqlserver-2"></a>MSSQLSERVER_-2
+# <a name="mssqlserver_-2"></a>MSSQLSERVER_-2
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|-2|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -42,10 +42,10 @@ ms.locfileid: "62912414"
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)   
- [設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
+ [設定資料庫引擎存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
  [設定用戶端通訊協定](../../database-engine/configure-windows/configure-client-protocols.md)   
  [網路通訊協定和網路程式庫](../../sql-server/install/network-protocols-and-network-libraries.md)   
- [用戶端網路組態](../../database-engine/configure-windows/client-network-configuration.md)   
+ [用戶端網路設定](../../database-engine/configure-windows/client-network-configuration.md)   
  [設定用戶端通訊協定](../../database-engine/configure-windows/configure-client-protocols.md)   
  [啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   

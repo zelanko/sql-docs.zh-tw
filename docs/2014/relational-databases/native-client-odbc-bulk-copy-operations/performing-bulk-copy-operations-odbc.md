@@ -1,5 +1,5 @@
 ---
-title: 執行大量複製作業 (ODBC) |Microsoft Docs
+title: 執行大量複製作業（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 25144e13b4e129209356d0e4e4ebe37f9a3c5d1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200812"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>執行大量複製作業 (ODBC)
@@ -39,12 +39,12 @@ ms.locfileid: "63200812"
      在執行時間必須存在。 sqlncli11.dll 是透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式散發。  
   
 > [!NOTE]  
->  ODBC **SQLBulkOperations**函式沒有任何關聯性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大量複製函數。 應用程式必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專用的大量複製函數才能執行大量複製作業。  
+>  ODBC **SQLBulkOperations**函數與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大量複製函數沒有任何關聯性。 應用程式必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專用的大量複製函數才能執行大量複製作業。  
   
 ## <a name="minimally-logging-bulk-copies"></a>最低限度記錄的大量複製  
  利用完整復原模式，大量載入所執行的所有資料列插入作業都會完整記錄在交易記錄檔中。 對於大型資料載入，這可能會導致交易記錄檔迅速填滿。 在某些情況下，可以用最低限度記錄。 最低限度記錄會降低大量載入作業填滿記錄檔空間的可能性，而且也比完整記錄更有效率。  
   
- 如需使用最低限度記錄的資訊，請參閱[大量匯入採用最低限度記錄的必要條件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+ 如需使用最低限度記錄的詳細資訊，請參閱[大量匯入的最低限度記錄的必要條件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
 ## <a name="remarks"></a>備註  
  在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本中使用 bcp.exe 時，如果在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前沒有錯誤，則可能會看到錯誤。 這是因為在更新版本中，bcp.exe 不再執行隱含資料類型轉換。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前，如果目標資料表有 money 資料類型，則 bcp.exe 會將數值資料轉換為 money 資料類型。 不過，在這種情況下，bcp.exe 只會截斷額外的欄位。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，當檔案和目標資料表之間的資料類型不符時，如果有任何資料必須截斷才能容納到目標資料表，bcp.exe 將會引發錯誤。 若要解決此錯誤，請修正資料以符合目標資料類型。 或者，使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前版本的 bcp.exe。  

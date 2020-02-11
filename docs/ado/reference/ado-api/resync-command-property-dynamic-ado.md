@@ -1,5 +1,5 @@
 ---
-title: 重新同步命令動態屬性 (ADO) |Microsoft Docs
+title: Resync 命令屬性-Dynamic （ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,26 +14,26 @@ ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e81fa9ffb28ba31f50d77cacf372bc24d09787ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917140"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command 動態屬性 (ADO)
-指定使用者所提供的命令字串[Resync](../../../ado/reference/ado-api/resync-method.md)方法來重新整理中所命名的資料表中資料的問題[唯一資料表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)動態屬性。  
+指定使用者提供的命令字串，重新[同步](../../../ado/reference/ado-api/resync-method.md)處理方法會發出此錯誤，以重新整理[唯一資料表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)動態屬性中名為的資料表中的資料。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**字串**命令字串的值。  
+ 設定或傳回**字串**值，這是命令字串。  
   
 ## <a name="remarks"></a>備註  
- [資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件是在多個基底資料表上執行聯結作業的結果。 受影響的資料列相依於*AffectRecords*的參數[重新同步處理](../../../ado/reference/ado-api/resync-method.md)方法。 標準**重新同步處理**方法，就會執行[唯一資料表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)並**重新同步處理命令**沒有設定的屬性。  
+ [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件是在多個基表上執行聯結作業的結果。 受影響的資料列取決於[Resync](../../../ado/reference/ado-api/resync-method.md)方法的*AffectRecords*參數。 如果未設定[唯一的資料表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)和重新**同步命令**屬性，則會執行標準重新**同步**處理方法。  
   
- 命令字串**重新同步處理命令**屬性參數化的命令或預存程序，可唯一識別正在重新整理的資料列，並傳回單一資料列做為資料列包含相同數目和資料行順序重新整理。 命令字串包含每個主要的索引鍵資料行中的參數**唯一資料表**，否則會傳回執行階段錯誤。 參數會自動填入從重新整理的資料列的主索引鍵值。  
+ [重新**同步命令**] 屬性的命令字串是參數化命令或預存程式，可唯一識別要重新整理的資料列，並傳回包含與要重新整理之資料行相同的資料行數目和順序的單一資料列。 命令字串包含**唯一資料表**中每個主鍵資料行的參數。否則，會傳回執行階段錯誤。 這些參數會自動填入要重新整理之資料列中的主鍵值。  
   
- 以下是 SQL 為基礎的兩個範例：  
+ 以下是以 SQL 為基礎的兩個範例：  
   
- 1\) **資料錄集**命令所定義：  
+ 1\) **記錄集**是由命令定義的：  
   
 ```  
 SELECT * FROM Customers JOIN Orders ON   
@@ -42,7 +42,7 @@ SELECT * FROM Customers JOIN Orders ON
    ORDER BY CustomerID  
 ```  
   
- **重新同步處理命令**屬性設定為：  
+ [重新**同步命令**] 屬性設定為：  
   
 ```  
 "SELECT * FROM   
@@ -52,9 +52,9 @@ SELECT * FROM Customers JOIN Orders ON
 WHERE Orders.OrderID = ?"  
 ```  
   
- **唯一資料表**是*訂單*及其主要的索引鍵*OrderID*，參數化。 子 select 提供簡單的方法，以程式設計的方式確保傳回相同的數目和資料行的順序，藉由原始命令。  
+ **唯一資料表**是*訂單*，而其主要*金鑰（即訂單）* 已參數化。 子選取提供簡單的方式，以程式設計方式確保相同的資料行數目和順序會由原始命令傳回。  
   
- 2\) **資料錄集**定義預存程序：  
+ 2\) **記錄集**是由預存程式所定義：  
   
 ```  
 CREATE PROC Custorders @CustomerID char(5) AS   
@@ -63,7 +63,7 @@ Customers.CustomerID = Orders.CustomerID
 WHERE Customers.CustomerID = @CustomerID  
 ```  
   
- **Resync**方法應該執行下列預存程序：  
+ 重新**同步**處理方法應執行下列預存程式：  
   
 ```  
 CREATE PROC CustordersResync @ordid int AS   
@@ -72,15 +72,15 @@ Customers.CustomerID = Orders.CustomerID
 WHERE Orders.ordid  = @ordid  
 ```  
   
- **重新同步處理命令**屬性設定為：  
+ [重新**同步命令**] 屬性設定為：  
   
 ```  
 "{call CustordersResync (?)}"  
 ```  
   
- 同樣地，**唯一資料表**是*訂單*及其主要的索引鍵*OrderID*，參數化。  
+ 同樣地，**唯一資料表**是*Orders* ，而它的主要索引*鍵，則*是參數化的。  
   
- **重新同步處理命令**動態屬性附加至**Recordset**物件[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合時[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**。  
+ 當[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**AdUseClient**時， **Resync 命令**是附加至**記錄集**物件[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合的動態屬性。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

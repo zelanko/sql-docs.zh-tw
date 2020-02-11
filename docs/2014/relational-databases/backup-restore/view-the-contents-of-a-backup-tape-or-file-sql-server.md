@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dfee2d0f32ffaaf73527effdeea13d43b83a39fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921226"
 ---
 # <a name="view-the-contents-of-a-backup-tape-or-file-sql-server"></a>檢視備份磁帶或檔案的內容 (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "62921226"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目檢視備份磁帶或檔案的內容：**  
   
@@ -44,27 +44,27 @@ ms.locfileid: "62921226"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  如需安全性的相關資訊，請參閱 [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本中，取得有關備份組或備份裝置的資訊需要 CREATE DATABASE 權限。 如需詳細資訊，請參閱 [GRANT 資料庫權限 &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-database-permissions-transact-sql)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-the-content-of-a-backup-tape-or-file"></a>檢視備份磁帶或檔案的內容  
   
-1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱展開伺服器樹狀目錄。  
+1.  連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體之後，在物件總管中按一下伺服器名稱，以展開伺服器樹狀目錄。  
   
-2.  展開 **[資料庫]**，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
+2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
-3.  以滑鼠右鍵按一下要備份的資料庫，指向 [工作]，然後按一下 [備份]。 會出現 **[備份資料庫]** 對話方塊。  
+3.  以滑鼠右鍵按一下要備份的資料庫，指向 [工作]  ，然後按一下 [備份]  。 會出現 **[備份資料庫]** 對話方塊。  
   
-4.  在 **[一般]** 頁面的 **[目的地]** 區段中，按一下 **[磁碟]** 或 **[磁帶]**。 在 **[備份至]** 清單方塊中，找出您要的磁碟檔案或磁帶。  
+4.  在 **[一般]** 頁面的 **[目的地]** 區段中，按一下 **[磁碟]** 或 **[磁帶]** 。 在 **[備份至]** 清單方塊中，找出您要的磁碟檔案或磁帶。  
   
-     如果清單方塊中未顯示磁碟檔案或磁帶，按一下 [新增]。 選取檔案名稱或磁帶機。 按一下 [確定]，將其加入 [備份至] 清單方塊。  
+     如果清單方塊中未顯示磁碟檔案或磁帶，按一下 [新增]  。 選取檔案名稱或磁帶機。 按一下 [確定]  ，將其加入 [備份至]  清單方塊。  
   
-5.  在 [備份至] 清單方塊中，選取您要檢視的磁碟或磁帶機路徑，然後按一下 [內容]。 這會開啟 **[裝置內容]** 對話方塊。  
+5.  在 [備份至]  清單方塊中，選取您要檢視的磁碟或磁帶機路徑，然後按一下 [內容]  。 這會開啟 **[裝置內容]** 對話方塊。  
   
 6.  右窗格會針對所選取的磁帶或檔案，顯示其媒體集與備份組的詳細資訊。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62921226"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  使用 [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) 陳述式。 此範例會傳回 `AdventureWorks2012-FullBackup.bak`檔案的相關資訊。  
   

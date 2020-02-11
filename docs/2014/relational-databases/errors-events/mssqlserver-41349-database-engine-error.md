@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c5bd805a6c737862adbfe9fdef507e61d4035eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914014"
 ---
-# <a name="mssqlserver41349"></a>MSSQLSERVER_41349
+# <a name="mssqlserver_41349"></a>MSSQLSERVER_41349
     
 ## <a name="details"></a>詳細資料  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62914014"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|HK_ENCRYPTION_ON|  
-|訊息文字|警告：已針對包含具有永久性 SCHEMA_AND_DATA 之一個或多個記憶體最佳化資料表的資料庫啟用加密。 這些記憶體最佳化資料表中的資料將不會加密。|  
+|訊息文字|警告: 包含一個或多個持久性為 SCHEMA_AND_DATA 之記憶體最佳化資料表的資料庫已啟用加密。 這些記憶體最佳化資料表中的資料將不會加密。|  
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

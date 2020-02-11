@@ -1,5 +1,5 @@
 ---
-title: sp_cycle_errorlog (TRANSACT-SQL) |Microsoft Docs
+title: sp_cycle_errorlog （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c15a36678bf0bd1ff5fc933eb79bff96b6780b60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108342"
 ---
-# <a name="spcycleerrorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
+# <a name="sp_cycle_errorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   關閉目前的錯誤記錄檔，依照類似伺服器重新啟動的方式來循環處理錯誤記錄副檔名的號碼。 新的錯誤記錄包含版本和著作權資訊，還會有一行指出已建立新記錄。  
@@ -39,16 +39,16 @@ sp_cycle_errorlog
 ```  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
  None  
   
 ## <a name="remarks"></a>備註  
- 每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會啟動，目前的錯誤記錄檔已重新命名為**errorlog.1**;**errorlog.1**會變成**errorlog.2**， **errorlog.2**會成為**errorlog.3**，依此類推。 **sp_cycle_errorlog**可讓您循環錯誤記錄檔，不需停止和啟動伺服器。  
+ 每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]啟動時，目前的錯誤記錄檔都會重新命名為錯誤記錄檔 **。 1**;**錯誤**記錄檔。1變成錯誤記錄檔 **。 2**，錯誤記錄檔。 **2**會變成錯誤記錄檔 **。 3**，依此類推。 **sp_cycle_errorlog**可讓您迴圈錯誤記錄檔，而不需要停止和啟動伺服器。  
   
-## <a name="permissions"></a>Permissions  
- 執行權限**sp_cycle_errorlog**的成員僅限於**sysadmin**固定的伺服器角色。  
+## <a name="permissions"></a>權限  
+ **Sp_cycle_errorlog**的執行許可權僅限於**系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
  下列範例會循環處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔。  
@@ -60,6 +60,6 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_cycle_agent_errorlog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md)  
+ [sp_cycle_agent_errorlog &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md)  
   
   

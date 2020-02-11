@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999569"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>在合併同步處理期間執行商務邏輯
@@ -29,7 +29,7 @@ ms.locfileid: "62999569"
   
 -   應用程式開發介面 (API) 參考： <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   有關如何實作商務邏輯處理常式的說明：[為合併發行項實作商務邏輯處理常式](../implement-a-business-logic-handler-for-a-merge-article.md)  
+-   如何實作商務邏輯處理常式的指示：[為合併發行項實作商務邏輯處理常式](../implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## <a name="uses-for-business-logic-handlers"></a>商務邏輯處理常式的使用  
  合併同步處理可以叫用商務邏輯處理常式以執行下列作業：  
@@ -59,7 +59,7 @@ ms.locfileid: "62999569"
      這對於需要覆寫特定資料值或作業的應用程式非常有用。 例如，應用程式可以將資料列刪除轉換至資料列之 **status** 資料行設定為「已刪除」值的特殊更新，然後追蹤執行刪除的用戶端識別。 可用於稽核或工作流程。  
   
 ### <a name="custom-conflict-resolution"></a>自訂衝突解決方案  
- 合併式複寫提供了衝突偵測和解決，可讓您接受預設解決策略或選取自訂的衝突解決方案。 如需詳細資訊，請參閱 [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)中指定合併發行項解析程式。 商務邏輯處理常式可以在處理衝突的資料變更期間叫用，並可執行下列兩個動作之一：  
+ 合併式複寫提供了衝突偵測和解決，可讓您接受預設解決策略或選取自訂的衝突解決方案。 如需詳細資訊，請參閱[Advanced Merge Replication 衝突偵測和解決](advanced-merge-replication-conflict-detection-and-resolution.md)方式。 商務邏輯處理常式可以在處理衝突的資料變更期間叫用，並可執行下列兩個動作之一：  
   
 -   接受預設解決方案  
   
@@ -91,8 +91,8 @@ ms.locfileid: "62999569"
   
 ## <a name="see-also"></a>另請參閱  
  [合併式複寫](merge-replication.md)   
- [Subscribe to Publications](../subscribe-to-publications.md)   
+ [訂閱發行集](../subscribe-to-publications.md)   
  [同步處理資料](../synchronize-data.md)   
- [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)  
+ [合併式複寫的 Web 同步處理](../web-synchronization-for-merge-replication.md)  
   
   

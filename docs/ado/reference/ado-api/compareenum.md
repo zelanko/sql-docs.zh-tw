@@ -16,35 +16,35 @@ ms.assetid: bc8f710d-0621-4673-8d8e-0361e44abed0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c109f90fc023b6fbfeda01c8b4404c42a822c40a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919556"
 ---
 # <a name="compareenum"></a>CompareEnum
-指定兩筆記錄由其書籤的相對位置。  
+指定以書簽表示的兩筆記錄的相對位置。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adCompareEqual**|1|表示書籤相等。|  
-|**adCompareGreaterThan**|2|指出第一個書籤之後，第二個。|  
-|**adCompareLessThan**|0|表示第一個書籤前，第二個。|  
-|**adCompareNotComparable**|4|表示書籤無法進行比較。|  
-|**adCompareNotEqual**|3|指出書籤不相等和不排序。|  
+|**adCompareEqual**|1|表示書簽相等。|  
+|**adCompareGreaterThan**|2|表示第一個書簽在第二個後面。|  
+|**adCompareLessThan**|0|表示第一個書簽在第二個的前面。|  
+|**adCompareNotComparable**|4|表示無法比較書簽。|  
+|**adCompareNotEqual**|3|表示書簽不相等且未排序。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- 封裝： **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
+ Package： **.com. wfc. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
-|AdoEnums.Compare.EQUAL|  
-|AdoEnums.Compare.GREATERTHAN|  
-|AdoEnums.Compare.LESSTHAN|  
-|AdoEnums.Compare.NOTCOMPARABLE|  
-|AdoEnums.Compare.NOTEQUAL|  
+|AdoEnums 等比較|  
+|AdoEnums. Compare. GREATERTHAN|  
+|AdoEnums. Compare. LESSTHAN|  
+|AdoEnums. Compare. NOTCOMPARABLE|  
+|AdoEnums. Compare. NOTEQUAL|  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [CompareBookmarks 方法 (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  

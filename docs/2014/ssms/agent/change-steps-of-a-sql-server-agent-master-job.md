@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1a60d9e5d8569324cc3f68200d4a5a232b930d8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63017582"
 ---
-# <a name="change-steps-of-a-sql-server-agent-master-job"></a>變更 SQL Server Agent 主要作業的步驟
+# <a name="change-steps-of-a-sql-server-agent-master-job"></a>變更 SQL Server Agent Master Job 的步驟
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中變更 SQL Server Agent 主要作業的步驟。  
   
  **本主題內容**  
@@ -26,9 +26,9 @@ ms.locfileid: "63017582"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要使用下列項目來變更 SQL Server Agent 主要作業的步驟：**  
+-   **若要變更 SQL Server Agent 主要作業的步驟，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -37,9 +37,10 @@ ms.locfileid: "63017582"
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Restrictions"></a> 限制事項  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 主要作業無法同時存在於本機和遠端伺服器內。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 主要作業無法同時存在於本機和遠端伺服器內。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  除非您是系統管理員 ( **sysadmin** ) 固定伺服器角色的成員，否則您只能修改您所擁有的作業。 如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
@@ -54,15 +55,15 @@ ms.locfileid: "63017582"
   
 3.  按一下加號展開 **[作業]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您想要修改步驟的作業，然後選取 [屬性]  。  
+4.  以滑鼠右鍵按一下您想要修改步驟的作業，然後選取 [屬性]****。  
   
-5.  在 [作業屬性 -_job_name_]  對話方塊的 [選取頁面]  下，選取 [步驟]  。  
+5.  在 [**作業屬性-**_job_name_ ] 對話方塊的 [**選取頁面**] 底下，選取 [**步驟**]。  
   
-6.  按一下 [**編輯**來開啟**作業步驟屬性-** _<_ ] 對話方塊。 如需有關此對話方塊中可用之選項的詳細資訊，請參閱[作業步驟屬性：新增作業步驟&#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)並[作業步驟屬性：新增作業步驟&#40;進階頁面&#41;](job-step-properties-new-job-step-advanced-page.md)。  
+6.  按一下 [**編輯**]，開啟 [**作業步驟屬性-**_job_step_name_ ] 對話方塊。 如需此對話方塊中可用選項的詳細資訊，請參閱[作業步驟屬性：新增作業步驟 &#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)和[作業步驟屬性：新增作業步驟 &#40;先進頁面&#41;](job-step-properties-new-job-step-advanced-page.md)。  
   
 7.  完成後，請按一下 **[確定]** 。  
   
-8.  在 **作業屬性-** _job_name_  對話方塊中，按一下 **確定**。  
+8.  在 [**作業屬性-**_job_name_ ] 對話方塊中，按一下 **[確定]**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -87,6 +88,6 @@ ms.locfileid: "63017582"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 < [sp_update_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql)。  
+ 如需詳細資訊，請參閱[sp_update_jobstep &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql)。  
   
   

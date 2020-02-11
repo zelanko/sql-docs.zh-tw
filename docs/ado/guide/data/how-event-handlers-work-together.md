@@ -1,5 +1,5 @@
 ---
-title: 事件處理常式一起運作的方式 |Microsoft Docs
+title: 事件處理常式如何共同作業 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,43 +18,43 @@ ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b744dbd464aedbd9b87d22aa74277787fcc3c7a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925046"
 ---
 # <a name="how-event-handlers-work-together"></a>事件處理常式如何協同運作
-除非您在 Visual Basic 中的所有事件處理常式進行程式設計**連接**並**資料錄集**事件必須實作，不論是否是您實際處理的所有事件。 您只需要實作的工作數量取決於您的程式語言。 如需詳細資訊，請參閱 < [ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)。  
+除非您是在 Visual Basic 中進行程式設計，否則必須執行**連接**和**記錄集**事件的所有事件處理常式，不論您是否實際處理所有的事件。 您必須執行的實做工作數量取決於您的程式設計語言。 如需詳細資訊，請參閱[依語言的 ADO 事件](../../../ado/guide/data/ado-event-instantiation-by-language.md)具現化。  
   
 ## <a name="paired-event-handlers"></a>配對的事件處理常式  
- 每個將事件處理常式都有相關聯**完成**事件處理常式。 比方說，當您的應用程式變更欄位的值時，才**WillChangeField**會呼叫事件處理常式。 如果可接受變更，您的應用程式離開**adStatus**參數保持不變，並執行作業。 當作業完成時， **FieldChangeComplete**事件會通知您作業已完成的應用程式。 如果成功， **adStatus**包含**adStatusOK**，否則**adStatus**包含**adStatusErrorsOccurred**和您必須檢查**錯誤**物件來判定錯誤的原因。  
+ 每個事件處理常式都有相關聯的**完整**事件處理常式。 例如，當您的應用程式變更欄位的值時，會呼叫**WillChangeField**事件處理常式。 如果可接受變更，您的應用程式會讓**adStatus**參數保持不變，並執行作業。 當作業完成時， **FieldChangeComplete**事件會通知您的應用程式作業已完成。 如果已順利完成， **adStatus**會包含**adStatusOK**;否則， **adStatus**會包含**adStatusErrorsOccurred** ，而您必須檢查**error**物件，以判斷錯誤的原因。  
   
- 當**WillChangeField**是呼叫，您可能決定不進行變更。 在此情況下，設定**adStatus**到**adStatusCancel。** 在作業取消並**FieldChangeComplete**事件會接收**adStatus**的值**adStatusErrorsOccurred**。 **錯誤**物件包含**adErrOperationCancelled** ，讓您**FieldChangeComplete**處理常式可讓您知道作業已取消。 不過，您需要檢查的值**adStatus**參數，然後再進行變更，因為設定**adStatus**來**adStatusCancel**沒有任何作用，如果參數已設定若要**adStatusCantDeny**程序的項目。  
+ 呼叫**WillChangeField**時，您可能會決定不應進行變更。 在此情況下，請將**adStatus**設定為**adStatusCancel。** 作業已取消，且**FieldChangeComplete**事件收到**adStatusErrorsOccurred**的**adStatus**值。 **Error**物件包含**adErrOperationCancelled** ，讓您的**FieldChangeComplete**處理常式知道作業已取消。 不過，您必須先檢查**adStatus**參數的值，然後再進行變更，因為將**AdStatus**設定為**adStatusCancel**不會有任何作用，因為在程式進入時，參數已設定為**adStatusCantDeny** 。  
   
- 有時作業可能會引發多個事件。 例如，**資料錄集**物件都是成對的事件**欄位**變更並**記錄**變更。 當您的應用程式變更的值**欄位**，則**WillChangeField**會呼叫事件處理常式。 它會決定，可以繼續作業，如果**WillChangeRecord**也會引發事件處理常式。 如果這個處理常式也會允許事件繼續，進行變更， **FieldChangeComplete**並**RecordChangeComplete**會呼叫事件處理常式。 未定義特定作業將事件處理常式會呼叫順序，因此您應該避免撰寫依賴特定順序呼叫處理常式的程式碼。  
+ 有時候作業可能會引發一個以上的事件。 例如，**記錄集**物件具有**欄位**變更和**記錄**變更的成對事件。 當您的應用程式變更**欄位**的值時，會呼叫**WillChangeField**事件處理常式。 如果它判斷作業可以繼續，也會引發**WillChangeRecord**事件處理常式。 如果此處理程式也允許事件繼續，則會進行變更並呼叫**FieldChangeComplete**和**RecordChangeComplete**事件處理常式。 未定義會呼叫特定作業之事件處理常式的順序，因此您應該避免撰寫相依于特定序列中呼叫處理常式的程式碼。  
   
- 在 執行個體時，會引發多個將事件，其中一個事件可能會取消暫止的作業。 例如，當您的應用程式變更的值時，才**欄位**，這兩個**WillChangeField**並**WillChangeRecord**通常會呼叫事件處理常式。 不過，如果作業已取消在第一個事件處理常式，其相關聯**Complete**立即呼叫處理常式**adStatusOperationCancelled**。 絕不會呼叫第二個處理常式。 如果，不過，第一個事件處理常式會允許事件繼續進行，就會呼叫其他事件處理常式。 如果它再取消作業，同時**完成**事件將會呼叫，如先前範例所示。  
+ 在實例中，當多個將引發事件時，其中一個事件可能會取消暫止的作業。 例如，當您的應用程式變更**欄位**的值時，通常會呼叫**WillChangeField**和**WillChangeRecord**事件處理常式。 不過，如果在第一個事件處理常式中取消作業，則會立即使用**adStatusOperationCancelled**來呼叫其相關聯的**完整**處理常式。 不會呼叫第二個處理常式。 不過，如果第一個事件處理常式允許事件繼續，則會呼叫其他事件處理常式。 如果它接著取消作業，則會在先前的範例中呼叫這兩個**完整**的事件。  
   
 ## <a name="unpaired-event-handlers"></a>未配對的事件處理常式  
- 只要狀態傳遞至事件就不會**adStatusCantDeny**，您可以藉由傳回關閉的任何事件的事件通知**adStatusUnwantedEvent**在*狀態*參數。 例如，當您**Complete**第一次時，會呼叫事件處理常式，您可以返回**adStatusUnwantedEvent**。 您接著會只收到**將**事件。 不過，某些事件可以觸發多個原因。 在此情況下，此事件會有*原因*參數。 當您恢復**adStatusUnwantedEvent**，便會停止接收該事件，僅在它們發生該特定原因時的通知。 換句話說，您可能會收到通知的每個可能的原因，可能會觸發此事件。  
+ 只要傳遞至事件的狀態不是**adStatusCantDeny**，您就可以在*status*參數中傳回**adStatusUnwantedEvent** ，以關閉任何事件的事件通知。 例如，當您第一次呼叫**完整**的事件處理常式時，您可以傳回**adStatusUnwantedEvent**。 您之後將**只會收到事件。** 不過，某些事件可能會因為一個以上的原因而觸發。 在此情況下，事件將會有*Reason*參數。 當您傳回**adStatusUnwantedEvent**時，您只會在發生特定原因時，停止接收該事件的通知。 換句話說，您可能會收到觸發事件之每個可能原因的通知。  
   
- 單一**將**事件處理常式很有用，當您想要檢查將會在作業中使用的參數。 您可以修改這些作業參數，或取消作業。  
+ 當您想要檢查將用於作業的參數時 **，單一事件處理常式會很**有用。 您可以修改這些作業參數或取消作業。  
   
- 或者，改變**完成**啟用的事件通知。 當您第一次將事件處理常式呼叫時，傳回**adStatusUnwantedEvent**。 您接著會只收到**完成**事件。  
+ 或者，將 [**完成**事件通知] 保留為 [已啟用]。 當您的第一個事件處理常式被呼叫時，會傳回**adStatusUnwantedEvent**。 您後續只會收到**完整**的事件。  
   
- 單一**完成**事件處理常式可用於管理非同步作業。 每個非同步作業已適當**完成**事件。  
+ 單一**完整**事件處理常式適用于管理非同步作業。 每個非同步作業都有適當的**完整**事件。  
   
- 例如，可能需要很長的時間來填入大型[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 如果適當地撰寫您的應用程式，您可以啟動`Recordset.Open(...,adAsyncExecute)`作業並繼續進行其他處理程序。 您最終將會收到通知的時機**資料錄集**會填入**ExecuteComplete**事件。  
+ 例如，填入大型[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件可能需要很長的時間。 如果您的應用程式已適當寫入，您可以`Recordset.Open(...,adAsyncExecute)`啟動作業並繼續進行其他處理。 當**ExecuteComplete**事件填入**記錄集**時，最後會通知您。  
   
-## <a name="single-event-handlers-and-multiple-objects"></a>單一事件處理常式與多個物件  
- Microsoft Visual C++® 類似的程式設計語言的彈性可讓您有一個事件處理常式處理多個物件的事件。 例如，您可能有一個**中斷連線**事件處理常式處理的數個事件**連線**物件。 如果其中一個連線結束時，**中斷連線**會呼叫事件處理常式。 您無法分辨哪一個連接引發事件，因為事件處理常式物件參數會設定為對應**連線**物件。  
+## <a name="single-event-handlers-and-multiple-objects"></a>單一事件處理常式和多個物件  
+ 程式設計語言（如 Microsoft Visual C++®）的彈性可讓您讓一個事件處理常式處理來自多個物件的事件。 例如，您可能有多個**連接**物件的一個**中斷連接**事件處理常式事件。 如果其中一個連接結束，則會呼叫**中斷連接**事件處理常式。 您可以分辨哪個連接造成事件，因為事件處理常式物件參數會設定為對應的**連接**物件。  
   
 > [!NOTE]
->  無法在 Visual Basic 中使用這項技術，因為該語言可以相互關聯之事件處理常式只有一個物件。  
+>  這項技術無法在 Visual Basic 中使用，因為該語言只能將一個物件與事件處理常式相互關聯。  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
+ [依語言的 ADO 事件具現化](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [事件參數](../../../ado/guide/data/event-parameters.md)   
  [事件的類型](../../../ado/guide/data/types-of-events.md)

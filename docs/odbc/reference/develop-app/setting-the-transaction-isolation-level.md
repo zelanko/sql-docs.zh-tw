@@ -1,5 +1,5 @@
 ---
-title: 設定交易隔離層級 |Microsoft Docs
+title: 設定交易隔離等級 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e59db823f8b84edfb5c92f2d142c8238449e3323
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107584"
 ---
 # <a name="setting-the-transaction-isolation-level"></a>設定交易隔離等級
-若要設定交易隔離等級，應用程式會使用 SQL_ATTR_TXN_ISOLATION 連接屬性。 如果資料來源不支援要求的隔離等級，驅動程式或資料來源可以設定較高的層級。 若要判斷何種交易隔離等級的資料來源支援和哪些預設隔離等級為，則應用程式會呼叫**SQLGetInfo** SQL_TXN_ISOLATION_OPTION 和 SQL_DEFAULT_TXN_ISOLATION 選項分別。  
+若要設定交易隔離等級，應用程式會使用 SQL_ATTR_TXN_ISOLATION 連接屬性。 如果資料來源不支援要求的隔離等級，則驅動程式或資料來源可以設定較高的層級。 為了判斷資料來源支援的交易隔離等級和預設隔離等級為何，應用程式會分別使用 SQL_TXN_ISOLATION_OPTION 和 SQL_DEFAULT_TXN_ISOLATION 選項來呼叫**SQLGetInfo** 。  
   
- 更高層級的交易隔離提供資料庫資料的完整性大部分的保護。 可序列化的交易是保證不會受到其他交易，並因此保證維護資料庫的完整性。  
+ 較高的交易隔離層級可為資料庫資料的完整性提供最大的保護。 可序列化的交易保證不會受到其他交易的影響，因此保證會維持資料庫的完整性。  
   
- 不過，較高層級的交易隔離可能會導致效能變慢，因為這樣會增加應用程式必須等待鎖定釋出資料的機會。 應用程式可以指定較低的層級的隔離，以提升效能，在下列情況：  
+ 不過，較高的交易隔離層級可能會導致效能變慢，因為這會增加應用程式必須等候資料鎖定的機會。 在下列情況下，應用程式可以指定較低的隔離層級來提升效能：  
   
--   當它可以保證沒有其他交易存在，可能會干擾應用程式的交易。 這種情況下只會發生在少數情況下，例如當小型公司中的一個人會維護 dBASE 檔案，其中包含一部電腦上的個人資料，並不會共用這些檔案。  
+-   當可以保證不存在任何其他交易可能會干擾應用程式的交易。 只有在有限的情況下才會發生這種情況，例如當小型公司中的一個人在一部電腦上維護包含人員資料的 dBASE 檔案，而不共用這些檔案時。  
   
--   如果速度是高於精確度和任何錯誤都可能會變小。 例如，假設某公司可讓許多小型的銷售和銷售很少。 估計的所有開啟的銷售總計值的交易可能會安全地使用 Read Uncommitted 隔離等級。 雖然交易會包含訂單正在開啟或關閉而且之後回復，這些會通常相互抵銷和交易可能快多了，因為它不會封鎖每次它遇到這類訂單。  
+-   當速度比精確度更重要，而且任何錯誤都可能很小。 例如，假設某家公司做出許多小型銷售，而大型銷售很罕見。 估計所有開放式銷售的總計值的交易，可能會安全地使用讀取未認可的隔離等級。 雖然交易會包含已開啟或已關閉的訂單，且後續會回復，但這些情況通常會取消彼此，而交易的速度會更快，因為每次遇到這類訂單時，都不會封鎖該交易。  
   
- 如需詳細資訊，請參閱 <<c0> [ 開放式並行存取](../../../odbc/reference/develop-app/optimistic-concurrency.md)。
+ 如需詳細資訊，請參閱[開放式並行](../../../odbc/reference/develop-app/optimistic-concurrency.md)存取。

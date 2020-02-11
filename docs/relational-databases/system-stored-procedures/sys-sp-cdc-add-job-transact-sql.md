@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_add_job (Transact-SQL) | Microsoft Docs
+title: sys.databases sp_cdc_add_job （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7dd10d28855cc4c10f5496c74f1f39a91826052f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106539"
 ---
-# <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
+# <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   建立目前資料庫中的異動資料擷取清除或擷取作業。  
@@ -48,38 +48,38 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_type = ] 'job\_type'` 要加入的作業類型。 *job_type&lt*已**nvarchar(20)** 不能是 NULL。 有效輸入如下 **'capture'** 並 **'cleanup'** 。  
+`[ @job_type = ] 'job\_type'`要加入的作業類型。 *job_type*是**Nvarchar （20）** ，而且不可以是 Null。 有效的輸入為「 **capture** 」和「**清除**」。  
   
-`[ @start_job = ] start_job` 旗標，指出作業是否應該在已加入之後立即啟動。 *start_job*已**元**預設值是 1。  
+`[ @start_job = ] start_job`旗標，指出工作是否應該在新增之後立即啟動。 *start_job*是**bit** ，預設值是1。  
   
-`[ @maxtrans ] = max_trans` 每個掃描循環中處理交易的最大數目。 *max_trans&lt*已**int**預設值是 500。 如果已指定，該值必須是正整數。  
+`[ @maxtrans ] = max_trans`每個掃描迴圈中要處理的交易數目上限。 *max_trans*是**int** ，預設值是500。 如果已指定，該值必須是正整數。  
   
- *max_trans&lt*只適用於擷取作業。  
+ *max_trans*只對 capture 作業有效。  
   
-`[ @maxscans ] = max\_scans_` 若要執行以便從記錄檔中擷取所有資料列的掃描循環的最大數目。 *max_scans*已**int**預設值是 10。  
+`[ @maxscans ] = max\_scans_`要執行的掃描迴圈數目上限，以便從記錄檔中解壓縮所有資料列。 *max_scans*是**int** ，預設值是10。  
   
- *max_scan*只適用於擷取作業。  
+ *max_scan*只對 capture 作業有效。  
   
-`[ @continuous ] = continuous_` 指出擷取作業是連續執行 (1)，或只執行一次 (0)。 *持續*已**元**預設值是 1。  
+`[ @continuous ] = continuous_`指出 capture 作業是連續執行（1），還是只執行一次（0）。 [*連續*] 是**bit** ，預設值是1。  
   
- 當*連續*= 1， [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)作業會掃描記錄並且最多處理 (*max_trans&lt* \* *max_scans*)交易。 然後等待中指定的秒數*polling_interval*再開始下一步 的記錄檔掃描。  
+ 當*連續*= 1 時， [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)作業會掃描記錄，並處理最多（*max_trans* \* *max_scans*）的交易。 然後，它會先等候*polling_interval*中指定的秒數，再開始下一次的記錄檔掃描。  
   
- 當*連續*= 0， **sp_cdc_scan**作業最多會執行*max_scans*掃描的記錄檔中，最多處理*max_trans&lt*交易而且在每次掃描，然後結束。  
+ 當*連續*= 0 時， **sp_cdc_scan**作業會執行到記錄檔的*max_scans*掃描，處理每次掃描期間的*max_trans*交易，然後結束。  
   
- *連續*只適用於擷取作業。  
+ 「*連續*」只對「捕獲」作業有效。  
   
-`[ @pollinginterval ] = polling\_interval_` 記錄掃描循環之間的秒數。 *polling_interval*已**bigint**預設值是 5。  
+`[ @pollinginterval ] = polling\_interval_`記錄掃描迴圈之間的秒數。 *polling_interval*是**Bigint** ，預設值是5。  
   
- *polling_interval*只適用於擷取作業的時機*連續*設為 1。 若已指定，這個值不可能是負值，而且不可能超過 24 小時。 若已指定 0 值，記錄檔掃描之間不會有等待時間。  
+ *polling_interval*只有在*連續*設定為1時，才會對 capture 作業有效。 若已指定，這個值不可能是負值，而且不可能超過 24 小時。 若已指定 0 值，記錄檔掃描之間不會有等待時間。  
   
-`[ @retention ] = retention_` 分鐘數，變更的資料列来保留在變更資料表中。 *保留期*已**bigint**預設值為 4320 （72 小時）。 最大值為 52494800 (100 年)。 如果已指定，該值必須是正整數。  
+`[ @retention ] = retention_`變更資料列要保留在變更資料表中的分鐘數。 *保留期*為**Bigint** ，預設值為4320（72小時）。 最大值為 52494800 (100 年)。 如果已指定，該值必須是正整數。  
   
- *保留*只適用於清除作業。  
+ *保留*僅適用于清除作業。  
   
-`[ @threshold = ] 'delete\_threshold'` 刪除項目可以使用單一陳述式清除刪除的最大數目。 *delete_threshold*已**bigint** 5000 筆的預設值。  
+`[ @threshold = ] 'delete\_threshold'`可以使用單一清除語句來刪除的最大刪除專案數。 *delete_threshold*是**Bigint** ，預設值是5000。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
  None  
@@ -89,12 +89,12 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  由於系統預設會建立清除和擷取作業，因此只有在作業已經明確卸除而且必須重新建立時，這個預存程序才是必要項目。  
   
- 作業名稱是**cdc。** _\<資料庫\_名稱\>_ **\_清除**或**cdc。** _\<資料庫\_名稱\>_ **\_擷取**，其中 *< 資料庫名稱 >* 名稱目前的資料庫。 如果已經存在具有相同名稱的作業，則會將名稱附加以句號 ( **。** ) 後面的唯一識別碼，例如： **cdc。AdventureWorks_capture。A1ACBDED-13FC-428C-8302-10100EF74F52**。  
+ 作業的名稱是**cdc。**_ \_資料庫名稱\>清除或\< _ **cdc。** ** \_ **** _ \_資料庫名稱\>capture，其中<database_name>是目前\<_ 資料庫的名稱。** \_ ** 如果已經存在相同名稱的作業，名稱會附加一個句點（**.**），後面接著一個唯一識別碼，例如： **cdc。AdventureWorks_capture。A1ACBDED-13FC-428C-8302-10100EF74F52**。  
   
- 若要檢視清除或擷取作業的目前組態，請使用[sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)。 若要變更作業的組態，請使用[sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)。  
+ 若要查看清除或 capture 作業的目前設定，請使用[sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)。 若要變更作業的設定，請使用[sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
- 需要的成員資格**db_owner**固定的資料庫角色。  
+## <a name="permissions"></a>權限  
+ 需要**db_owner**固定資料庫角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
   
@@ -121,8 +121,8 @@ EXEC sys.sp_cdc_add_job
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [dbo. cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [關於異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   
