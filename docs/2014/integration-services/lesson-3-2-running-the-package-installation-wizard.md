@@ -1,5 +1,5 @@
 ---
-title: 步驟 2:執行套件安裝精靈 | Microsoft Docs
+title: 步驟 2：執行套件安裝精靈 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891576"
 ---
-# <a name="step-2-running-the-package-installation-wizard"></a>步驟 2:執行封裝安裝精靈
+# <a name="step-2-running-the-package-installation-wizard"></a>步驟 2：執行封裝安裝精靈
   在這項工作中，您會執行「封裝安裝精靈」，將「部署教學課程」專案中的封裝部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的執行個體上。 只有封裝可以安裝在 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的 sysssispackages 資料表中，部署配套所包含的支援檔案則會部署到檔案系統中。  
   
  「封裝安裝精靈」會引導您完成安裝和設定封裝的步驟。 您會將封裝安裝到目的地電腦 (即複製部署配套所使用的電腦) 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體中。 此外，您還會建立一個 C:\DeploymentTutorialInstall 資料夾，讓精靈用來安裝非封裝檔案。  
@@ -42,7 +42,7 @@ ms.locfileid: "62891576"
   
 7.  確認已清除 [依賴伺服器儲存體進行加密]  核取方塊。  
   
-8.  按 **[下一步]** 。  
+8.  按 [下一步]  。  
   
 9. 在 [選取安裝資料夾] 頁面上，按一下 [瀏覽]  。  
   
@@ -81,11 +81,11 @@ ms.locfileid: "62891576"
   
      由於目的地電腦上的環境變數值與開發電腦上的環境變數值不同，因此 [封裝驗證] 頁面上會出現一些警告。 您應該會看到下列這四個警告：  
   
-    -   設定檔："C:\DeploymentTutorial\DataTransferConfig.dtsConfig" 無效。 請檢查組態檔名稱。  
+    -   組態檔名稱 "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" 無效。 請檢查組態檔名稱。  
   
     -   無法載入封裝至少其中一個組態項目。 請檢查組態項目和之前的警告，查看哪個組態失敗的描述。  
   
-    -   設定檔："C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig 無效。 請檢查組態檔名稱。  
+    -   組態檔名稱 "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig" 無效。 請檢查組態檔名稱。  
   
     -   無法載入封裝至少其中一個組態項目。 請檢查組態項目和之前的警告，查看哪個組態失敗的描述。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62891576"
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [步驟 3：測試部署的套件](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
-![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 服務 &#40;SSIS 服務&#41;](service/integration-services-service-ssis-service.md)   
