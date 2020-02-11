@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 098fc44f4a46a821c3e0f6d17d150d34f3d0d967
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913140"
 ---
-# <a name="mssqlserver7914"></a>MSSQLSERVER_7914
+# <a name="mssqlserver_7914"></a>MSSQLSERVER_7914
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|7914|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_REPAIR_ALLOCATION_PAGE_REBUILT|  
-|訊息文字|修復:P_ID 的 PAGE_TYPE 頁面已經重建。|  
+|訊息文字|修復: P_ID 的 PAGE_TYPE 頁面已經重建。|  
   
 ## <a name="explanation"></a>說明  
  這是來自 REPAIR 的參考用訊息，表示已經使用 PFS 頁面資料來重建 GAM 或 SGAM 頁面。  

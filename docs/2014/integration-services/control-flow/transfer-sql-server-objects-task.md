@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b985a1bb818e7b3d3612596bb4e2b7fa6fd393
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829468"
 ---
 # <a name="transfer-sql-server-objects-task"></a>傳送 SQL Server 物件工作
@@ -35,7 +35,7 @@ ms.locfileid: "62829468"
 |檢視|  
 |預存程序|  
 |使用者定義的函式|  
-|預設值|  
+|Defaults|  
 |使用者自訂資料類型|  
 |資料分割函數|  
 |資料分割配置|  
@@ -106,7 +106,7 @@ ms.locfileid: "62829468"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [傳送 SQL Server 物件工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [傳輸 SQL Server 物件工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [傳送 SQL Server 物件工作編輯器 &#40;物件頁面&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
   

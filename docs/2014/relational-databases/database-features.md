@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7cec72a2f70db07e5653d095ce586b50604d6412
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917662"
 ---
 # <a name="database-features"></a>資料庫功能
@@ -27,13 +27,13 @@ ms.locfileid: "62917662"
 |[資料庫](databases/databases.md)|[SQL Server 資料庫的備份與還原](backup-restore/back-up-and-restore-of-sql-server-databases.md)|  
 |[資料表](tables/tables.md)|[序號](sequence-numbers/sequence-numbers.md)|[資料的大量匯入及匯出 &#40;SQL Server&#41;](import-export/bulk-import-and-export-of-data-sql-server.md)|  
 |[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](in-memory-oltp/in-memory-oltp-in-memory-optimization.md)|[DDL 觸發程序](triggers/ddl-triggers.md)|[資料壓縮](data-compression/data-compression.md)|  
-|[[索引]](indexes/indexes.md)|[DML 觸發程序](triggers/dml-triggers.md)|[Transact-SQL 中的 OLE Automation 物件](stored-procedures/ole-automation-objects-in-transact-sql.md)|  
-|[分割資料表與索引](partitions/partitioned-tables-and-indexes.md)|[同義字 &#40;Database Engine&#41;](synonyms/synonyms-database-engine.md)|[事件通知](service-broker/event-notifications.md)|  
+|[索引數](indexes/indexes.md)|[DML 觸發程序](triggers/dml-triggers.md)|[Transact-SQL 中的 OLE Automation 物件](stored-procedures/ole-automation-objects-in-transact-sql.md)|  
+|[資料分割資料表和索引](partitions/partitioned-tables-and-indexes.md)|[同義字 &#40;資料庫引擎&#41;](synonyms/synonyms-database-engine.md)|[事件通知](service-broker/event-notifications.md)|  
 |[檢視](views/views.md)|[XML 資料 &#40;SQL Server&#41;](xml/xml-data-sql-server.md)|[效能的監視與微調](performance/monitor-and-tune-for-performance.md)|  
 |[預存程序 &#40;Database Engine&#41;](stored-procedures/stored-procedures-database-engine.md)|[空間資料 &#40;SQL Server&#41;](spatial/spatial-data-sql-server.md)||  
-|[搜尋&#40;SQL Server&#41;](../database-engine/search-sql-server.md)|[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](blob/binary-large-object-blob-data-sql-server.md)||  
+|[搜尋 &#40;SQL Server&#41;](../database-engine/search-sql-server.md)|[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](blob/binary-large-object-blob-data-sql-server.md)||  
 |[使用者定義的函式](user-defined-functions/user-defined-functions.md)|[資料層應用程式](data-tier-applications/data-tier-applications.md)||  
 |[統計資料](statistics/statistics.md)|[交易記錄 &#40;SQL Server&#41;](logs/the-transaction-log-sql-server.md)||  
-|[計畫指南](performance/plan-guides.md)|[資料庫檢查點&#40;SQL Server&#41;](logs/database-checkpoints-sql-server.md)||  
+|[計畫指南](performance/plan-guides.md)|[資料庫檢查點 &#40;SQL Server&#41;](logs/database-checkpoints-sql-server.md)||  
   
   

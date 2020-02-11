@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22b1c18cba793d5845e2adf92b1dca300911a72f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823795"
 ---
 # <a name="manage-files-with-encoding"></a>利用編碼管理檔案
@@ -42,7 +42,7 @@ ms.locfileid: "62823795"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>利用不同編碼或行尾結束符號類型來儲存檔案  
   
-1.  在上**檔案**功能表上，按一下**儲存\<檔名 > 為**。  
+1.  **在 [檔案**] 功能表上，按一下 [**將檔案名儲存\<> 為**]。  
   
 2.  在 [另存新檔]  對話方塊中，展開 [儲存]  按鈕，再按一下 [使用編碼方式儲存]  。  
   

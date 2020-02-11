@@ -1,5 +1,5 @@
 ---
-title: 全域設定 （編輯器） (AccessToSQL) |Microsoft Docs
+title: 全域設定（編輯器）（AccessToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,20 +10,20 @@ ms.assetid: 5a0abfda-912a-4dfc-acf7-0e0a6cae15c5
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d2c57efc70353d3499096a2faceb55ce21037411
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67986399"
 ---
-# <a name="global-settings-editor-accesstosql"></a>全域設定 （編輯器） (AccessToSQL)
-使用編輯器頁面**全域設定**對話方塊來指定程式碼編輯器視窗的設定。  
+# <a name="global-settings-editor-accesstosql"></a>全域設定（編輯器）（AccessToSQL）
+使用 [**通用設定**] 對話方塊的 [編輯器] 頁面，即可指定程式碼編輯器視窗的設定。  
   
-若要存取編輯器設定] 中，在**工具**功能表上，選取**全域設定**，按一下 [ **GUI**在底部的左的窗格中，然後選取**編輯器**.  
+若要存取編輯器設定，請在 [**工具**] 功能表上，選取 [**通用設定**]，按一下左窗格底部的 [ **GUI** ]，然後選取 [**編輯器**]。  
   
 ## <a name="options"></a>選項。  
 **在編輯器中顯示行號**  
-若要在程式碼編輯器視窗中顯示行號，請選取 **，則為 True**。  
+若要在 [程式碼編輯器] 視窗中顯示行號，請選取 [ **True**]。  
   
-如果您變更此設定時，將選取的程式碼編輯器 視窗，您可能需要重新選取要更新顯示的目前物件。  
+當您變更此設定時，如果選取了 [程式碼編輯器] 視窗，您可能需要重新選擇目前的物件來更新顯示。  
   

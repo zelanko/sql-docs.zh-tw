@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899963"
 ---
 # <a name="use-a-recordset-destination"></a>使用資料錄集目的地
-  資料錄集目的地不會將資料儲存到外部資料來源， 而是將資料儲存到資料類型為 `Object` 之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝變數內儲存的資料錄集記憶體中。 當資料錄集目的地儲存資料之後，您通常要使用具有 Foreach ADO 列舉值的 Foreach 迴圈容器來一次處理資料錄集的一個資料列。 Foreach ADO 列舉值會將目前資料列的每一資料行值儲存到個別封裝變數之中。 接著，您在 Foreach 迴圈容器中設定的工作會讀取這些變數中的值，然後對它們執行一些動作。  
+  資料錄集目的地不會將資料儲存到外部資料來源， 而是將資料儲存到資料類型為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 之 `Object` 封裝變數內儲存的資料錄集記憶體中。 當資料錄集目的地儲存資料之後，您通常要使用具有 Foreach ADO 列舉值的 Foreach 迴圈容器來一次處理資料錄集的一個資料列。 Foreach ADO 列舉值會將目前資料列的每一資料行值儲存到個別封裝變數之中。 接著，您在 Foreach 迴圈容器中設定的工作會讀取這些變數中的值，然後對它們執行一些動作。  
   
  您可以在多種不同情況下使用資料錄集目的地。 以下是一些範例：  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62899963"
   
 #### <a name="to-create-the-project-and-configure-the-variables"></a>建立專案和設定變數  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，建立新的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，建立新的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
 2.  在 [SSIS]  功能表上，選取 [變數]  。  
   
@@ -70,19 +70,23 @@ ms.locfileid: "62899963"
   
     1.  建立名稱為 `BonusRecordset` 的變數，然後將其類型設為 `Object`。  
   
-         `BonusRecordset` 變數會保存資料錄集。  
+         
+  `BonusRecordset` 變數會保存資料錄集。  
   
     2.  建立名稱為 `EmailAddress` 的變數，然後將其類型設為 `String`。  
   
-         `EmailAddress` 變數會保存銷售人員的電子郵件地址。  
+         
+  `EmailAddress` 變數會保存銷售人員的電子郵件地址。  
   
     3.  建立名稱為 `FirstName` 的變數，然後將其類型設為 `String`。  
   
-         `FirstName` 變數會保存銷售人員的名字。  
+         
+  `FirstName` 變數會保存銷售人員的名字。  
   
     4.  建立名稱為 `Bonus` 的變數，然後將其類型設為 `Double`。  
   
-         `Bonus` 變數會保存銷售人員的獎金金額。  
+         
+  `Bonus` 變數會保存銷售人員的獎金金額。  
   
 #### <a name="to-configure-the-connection-managers"></a>設定連接管理員  
   
@@ -96,7 +100,7 @@ ms.locfileid: "62899963"
   
 #### <a name="to-configure-the-data-flow-and-the-recordset-destination"></a>設定資料流程和資料錄集目的地  
   
-1.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [控制流程]  索引標籤上，將資料流程工作加入設計介面。  
+1.  在  **設計師的 [控制流程]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 索引標籤上，將資料流程工作加入設計介面。  
   
 2.  在 [資料流程]  索引標籤上，將 OLE DB 來源加入至資料流程工作，然後開啟 OLE DB 來源編輯器  。  
   
@@ -121,19 +125,19 @@ ms.locfileid: "62899963"
   
 5.  開啟資料錄集目的地編輯器  ，並依照下列設定來設定目的地：  
   
-    1.  在上**元件屬性**索引標籤上，如`VariableName`屬性選取`User::BonusRecordset`。  
+    1.  在 [**元件屬性**] 索引卷`VariableName`標上， `User::BonusRecordset`針對 [屬性] 選取 []。  
   
     2.  在 [輸入資料行]  索引標籤上，選取可用的全部三個資料行。  
   
 #### <a name="to-configure-the-foreach-loop-container-and-run-the-package"></a>設定 Foreach 迴圈容器並執行封裝  
   
-1.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [控制流程]  索引標籤上，加入 Foreach 迴圈容器，並將此容器連接在資料流程工作之後。  
+1.  在  **設計師的 [控制流程]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 索引標籤上，加入 Foreach 迴圈容器，並將此容器連接在資料流程工作之後。  
   
 2.  開啟 Foreach 迴圈編輯器  ，依照下列設定來設定容器：  
   
-    1.  上**集合**頁面上，如**列舉值**，選取**Foreach ADO 列舉值**，以及**ADO 物件來源變數**，選取`User::BonusRecordset`.  
+    1.  在 [**集合**] 頁面上，針對 [**列舉**值] 選取 [ **Foreach ADO 列舉**值]，然後`User::BonusRecordset`針對 [ **ADO 物件來源變數**] 選取 []。  
   
-    2.  在 **變數對應**頁面上，將`User::EmailAddress`到索引 0、`User::FirstName`到索引 1，和`User::Bonus`到索引 2。  
+    2.  在 [**變數**對應] 頁面上`User::EmailAddress` ，對應至索引`User::FirstName` 0、索引1和`User::Bonus`索引2。  
   
 3.  在 [控制流程]  索引標籤上的 Foreach 迴圈容器中，加入傳送郵件工作。  
   
@@ -143,7 +147,7 @@ ms.locfileid: "62899963"
   
     2.  針對 [From]  ，輸入適當的電子郵件地址。  
   
-         如果使用您自己的電子郵件地址，可以確認封裝是否成功執行。 針對由傳送郵件工作傳送到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 虛構銷售人員的郵件，您將會收到無法傳遞的收件者訊息。  
+         如果使用您自己的電子郵件地址，可以確認封裝是否成功執行。 針對由傳送郵件工作傳送到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]虛構銷售人員的郵件，您將會收到無法傳遞的收件者訊息。  
   
     3.  針對 [To]  ，輸入預設的電子郵件地址。  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9666e611b9f0a0a4348cc75a2adb1e8b711c60fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63130266"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>捨棄對查詢所做的變更 (Visual Database Tools)
@@ -29,16 +29,16 @@ ms.locfileid: "63130266"
   
 ### <a name="to-discard-changes-made-to-a-query-definition"></a>若要捨棄對查詢定義所做的變更  
   
-1.  在查詢和檢視表設計工具中開啟查詢時，從 [檔案]  功能表中按一下 [關閉]  。  
+1.  在查詢和檢視表設計工具中開啟查詢時，從 [檔案]**** 功能表中按一下 [關閉]****。  
   
-2.  在 [Microsoft SQL Server Management Studio]  對話方塊中，按一下 [否]  。  
+2.  在 [Microsoft SQL Server Management Studio]**** 對話方塊中，按一下 [否]****。  
   
      查詢定義會回復為上次儲存時的狀態。  
   
 ## <a name="see-also"></a>另請參閱  
- [儲存查詢&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [設計查詢和檢視表的使用說明主題&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [執行基本查詢作業&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
+ [&#40;Visual Database Tools&#41;儲存查詢](visual-database-tools.md)   
+ [設計查詢和觀看 how to 主題 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [使用 &#40;Visual Database Tools 的查詢來執行基本作業&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
  [使用結果窗格中的資料 &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)  
   
   

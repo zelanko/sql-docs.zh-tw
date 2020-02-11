@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2eaaadc4e1cc1f2f360fe3d45e2dea4c082b7b76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915685"
 ---
-# <a name="mssqlserver137"></a>MSSQLSERVER_137
+# <a name="mssqlserver_137"></a>MSSQLSERVER_137
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|137|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -33,13 +33,13 @@ ms.locfileid: "62915685"
 |訊息文字|必須宣告純量變數 "%.*ls"。|  
   
 ## <a name="explanation"></a>說明  
- 當您在 SQL 指令碼中使用某個變數，但卻沒有先宣告該變數時，就會發生這個錯誤。 下列範例會針對 SET 和 SELECT 陳述式傳回錯誤 137，因為未宣告 **@mycol** 。  
+ 當您在 SQL 指令碼中使用某個變數，但卻沒有先宣告該變數時，就會發生這個錯誤。 下列範例會針對 SET 和 SELECT 語句傳回錯誤137，因為**@mycol**未宣告。  
   
  SET @mycol = 'ContactName';  
   
  SELECT @mycol;  
   
- 導致這個錯誤的其中一個更複雜原因包括使用了在 EXECUTE 陳述式外部宣告的變數。 例如，在 SELECT 陳述式中指定的變數 **@mycol** 是 SELECT 陳述式的本機變數。因此，這個變數就位於 EXECUTE 陳述式外部。  
+ 導致這個錯誤的其中一個更複雜原因包括使用了在 EXECUTE 陳述式外部宣告的變數。 例如，select 語句中**@mycol**指定的變數是 select 語句的區域變數;因此，它位於 EXECUTE 語句外部。  
   
  USE AdventureWorks2012;  
   

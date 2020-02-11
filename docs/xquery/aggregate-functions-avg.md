@@ -1,5 +1,5 @@
 ---
-title: avg 函數 (XQuery) |Microsoft Docs
+title: avg 函數（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b659aa13a8704a060be12bb015bd0de0fd126562
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985990"
 ---
 # <a name="aggregate-functions---avg"></a>彙總函式 - avg
@@ -39,36 +39,36 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  不可部份完成值的序列，會計算其平均值。  
   
 ## <a name="remarks"></a>備註  
- 所有類型的不可部份完成值傳遞給**avg （)** 一定要子類型之一的三個內建數值基底類型或 xdt: untypedatomic。 它們不能是混合的類型。 xdt:untypedAtomic 類型的值會被視為 xs:double。 結果**avg （)** 接收傳入的類型，例如 xs: untypedatomic 的 double 類型的基底類型。  
+ 傳遞至**avg （）** 的不可部份完成值之所有類型，都必須是其中一個內建數值基底類型或 Xdt： untypedAtomic 的子類型。 它們不能是混合的類型。 xdt:untypedAtomic 類型的值會被視為 xs:double。 **Avg （）** 的結果會收到傳入類型的基底類型，例如 Xdt： untypedAtomic 的情況下的 xs： double。  
   
  如果輸入是靜態空白，則會隱含空白並引發靜態錯誤。  
   
- **Avg （)** 函式會傳回計算數字的平均值。 例如:  
+ **Avg （）** 函數會傳回計算所得數位的平均值。 例如：  
   
- **sum (** *$arg* **) div 計數 (** *$arg* **)**  
+ **sum （** *$arg* **） div count （** *$arg* **）**  
   
- 如果 *$arg*是空的序列，會傳回空的序列。  
+ 如果 *$arg*是空的序列，則會傳回空的序列。  
   
- 如果 xdt: untypedatomic 值無法轉換成 xs: double，值會忽略輸入序列中 *$arg*。  
+ 如果 xdt： untypedAtomic 值無法轉換為 xs： double，則會在輸入序列中忽略此值 *$arg*。  
   
  在其他所有的情況中，此函數會傳回靜態錯誤。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的 AdventureWorks 資料庫。  
+ 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存在 AdventureWorks 資料庫的各種**xml**類型資料行中。  
   
 ### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A. 使用 avg() XQuery 函數，尋找在製造過程中，工時大於所有工作中心位置平均工時的工作中心位置。  
- 您可以重寫查詢中提供[min 函數 (XQuery)](../xquery/aggregate-functions-min.md)使用**avg （)** 函式。  
+ 您可以重寫[min function （XQuery）](../xquery/aggregate-functions-min.md)中提供的查詢，以使用**avg （）** 函數。  
   
 ## <a name="implementation-limitations"></a>實作限制  
  以下為其限制：  
   
--   **Avg （)** 函式會將所有整數都對應到 xs: decimal。  
+-   **Avg （）** 函數會將所有整數對應到 xs： decimal。  
   
--   **Avg （)** 不支援的 xs: duration 類型值的函式。  
+-   不支援 xs： duration 類型值的**avg （）** 函數。  
   
 -   不支援跨越基底類型界限的混合類型。  
   
 ## <a name="see-also"></a>另請參閱  
- [針對 xml 資料類型的 XQuery 函式](../xquery/xquery-functions-against-the-xml-data-type.md)  
+ [針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

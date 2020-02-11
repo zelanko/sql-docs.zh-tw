@@ -1,5 +1,5 @@
 ---
-title: Microsoft Connector 1.1 for SAP BW F1 說明 |Microsoft Docs
+title: 適用于 SAP BW F1 說明的 Microsoft Connector 1.1 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 80dfa890b16b27ac00218f9e9e7895411c8ac9eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890655"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-f1-help"></a>Microsoft Connector 1.1 for SAP BW F1 說明
@@ -27,7 +27,7 @@ ms.locfileid: "62890655"
   
 ### <a name="sap-bw-connection-manager-f1-help"></a>SAP BW 連接管理員 F1 說明  
   
--   [SAP BW 連接管理員編輯器](sap-bw-connection-manager-editor.md)  
+-   [SAP BW 連線管理員編輯器](sap-bw-connection-manager-editor.md)  
   
 ### <a name="sap-bw-source-f1-help"></a>SAP BW 來源 F1 說明  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62890655"
   
 -   [SAP BW 目的地編輯器 &#40;進階頁面&#41;](data-flow/sap-bw-destination-editor-advanced-page.md)  
   
--   [查閱 InfoPackage](data-flow/look-up-infopackage.md)  
+-   [ InfoPackage](data-flow/look-up-infopackage.md)  
   
 -   [建立新的 InfoObject](data-flow/create-new-infoobject.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: GetPermissions 和 SetPermissions 方法範例 (VB) |Microsoft Docs
+title: GetPermissions 和 SetPermissions 方法範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11250cf591f576052434c641d8c65ba681000666
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966240"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>GetPermissions 和 SetPermissions 方法範例 (VB)
-此範例示範[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)並[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)方法。 下列程式碼可讓系統管理員使用者的 Orders 資料表的完整存取權。  
+這個範例示範[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)和[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)方法。 下列程式碼會將 Orders 資料表的完整存取權提供給系統管理員使用者。  
   
 ```  
 ' BeginGrantPermissionsVB  
@@ -95,8 +95,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Catalog 物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [GetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
- [SetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
- [使用者物件 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
+ [Catalog 物件（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [GetPermissions 方法（ADOX）](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
+ [SetPermissions 方法（ADOX）](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
+ [User 物件（ADOX）](../../../ado/reference/adox-api/user-object-adox.md)   
  [Users 集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

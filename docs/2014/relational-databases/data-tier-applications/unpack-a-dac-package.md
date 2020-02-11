@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14e699be884ff24136b8bae1a744593be86c42ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917988"
 ---
 # <a name="unpack-a-dac-package"></a>解除封裝 DAC 封裝
@@ -29,7 +29,7 @@ ms.locfileid: "62917988"
   
 2.  **若要解除封裝 DAC，請使用下列方式：** [解除封裝資料層應用程式對話方塊](#UnpackDACDial)、[檢查 DAC 套件的內容](#ExamDACPack)  
   
-##  <a name="Security"></a> 安全性  
+##  <a name="Security"></a> Security  
  建議您不要部署來源不明或來源不受信任的 DAC 封裝。 這類 DAC 可能包含惡意程式碼，因此可能會執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述而造成錯誤。 在您使用來源不明或來源不受信任的 DAC 之前，請將它部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的隔離測試執行個體、解除封裝 DAC 並檢查程式碼，例如預存程序或其他使用者定義的程式碼。  
   
 ##  <a name="UnpackDACDial"></a> 解除封裝資料層應用程式對話方塊  

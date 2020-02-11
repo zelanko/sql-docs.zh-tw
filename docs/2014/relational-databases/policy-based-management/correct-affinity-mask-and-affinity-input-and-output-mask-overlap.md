@@ -1,5 +1,5 @@
 ---
-title: 正確的 Affinity Mask 和 Affinity 輸入的輸出遮罩重疊 |Microsoft Docs
+title: 正確的親和性遮罩和相似性輸入輸出遮罩重迭 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3139c864805c7df9220afc9b81d2a242775f4fa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856703"
 ---
-# <a name="correct-affinity-mask-and-affinity-input-output-mask-overlap"></a>正確的 Affinity Mask 和 Affinity 輸入的輸出遮罩重疊
+# <a name="correct-affinity-mask-and-affinity-input-output-mask-overlap"></a>正確的親和性遮罩和相似性輸入輸出遮罩重迭
   這個規則會檢查 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體是否有一或多個指派給搭配 affinity mask 和 affinity I/O mask 選項使用的處理器。 在具有一個以上處理器的電腦中，affinity mask 和 affinity I/O mask 選項是用來指派 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的 CPU。 使用 affinity mask 和 affinity I/O mask 來啟用 CPU 可能會強制處理器過度使用而使效能變慢。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建議  

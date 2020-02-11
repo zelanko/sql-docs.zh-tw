@@ -1,5 +1,5 @@
 ---
-title: 變更組件 |Microsoft Docs
+title: 改變元件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 780b64f59143d3bf2b8ef99e3da6d32a1fe160cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874107"
 ---
 # <a name="altering-an-assembly"></a>變更組件
@@ -30,7 +30,7 @@ ALTER ASSEMBLY SQLCLRTest
 FROM 'C:\MyDBApp\SQLCLRTest.dll'  
 ```  
   
- ALTER ASSEMBLY 不會中斷目前使用組件正在執行的處理序；處理序會繼續執行未變更的組件。 ALTER ASSEMBLY 無法用於變更 Common Language Runtime (CLR) 函數、彙總函式、預存程序和觸發程序的簽章。 新的公用方法可以加入到組件、私用方法可以用任何方式修改，而且只要簽章或屬性沒有變更，就可以修改公用方法。 包含在原生序列化使用者定義型別 (包括資料成員或基底類別) 中的欄位，不能使用 ALTER ASSEMBLY 加以變更。 所有其他變更亦不受支援。 如需詳細資訊，請參閱 < [ALTER ASSEMBLY &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)。  
+ ALTER ASSEMBLY 不會中斷目前使用組件正在執行的處理序；處理序會繼續執行未變更的組件。 ALTER ASSEMBLY 無法用於變更 Common Language Runtime (CLR) 函數、彙總函式、預存程序和觸發程序的簽章。 新的公用方法可以加入到組件、私用方法可以用任何方式修改，而且只要簽章或屬性沒有變更，就可以修改公用方法。 包含在原生序列化使用者定義型別 (包括資料成員或基底類別) 中的欄位，不能使用 ALTER ASSEMBLY 加以變更。 所有其他變更亦不受支援。 如需詳細資訊，請參閱[ALTER ASSEMBLY &#40;transact-sql&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)。  
   
 ## <a name="changing-the-permission-set-of-an-assembly"></a>變更組件的權限集合  
  組件的權限集合也可以使用 ALTER ASSEMBLY 陳述式進行變更。 下列陳述式會將 SQLCLRTest 組件的權限集合變更為 `EXTERNAL_ACCESS`。  
@@ -52,9 +52,9 @@ WITH PERMISSION_SET = EXTERNAL_ACCESS
  `ADD FILE FROM 'C:\Projects\Point\Point.cs' AS PointSource`  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 CLR 整合組件](managing-clr-integration-assemblies.md)   
- [建立組件](creating-an-assembly.md)   
- [卸除組件](dropping-an-assembly.md)   
+ [管理 CLR 整合元件](managing-clr-integration-assemblies.md)   
+ [建立元件](creating-an-assembly.md)   
+ [卸載元件](dropping-an-assembly.md)   
  [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
   

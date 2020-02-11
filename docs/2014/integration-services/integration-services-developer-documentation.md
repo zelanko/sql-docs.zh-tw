@@ -1,5 +1,5 @@
 ---
-title: 開發人員&#39;指南 (Integration Services) |Microsoft Docs
+title: 開發人員&#39;s 指南（Integration Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3fc7c93f8e499fb063e0d01c9132606f3ddfa3f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892395"
 ---
-# <a name="developer39s-guide-integration-services"></a>開發人員&#39;指南 (Integration Services)
+# <a name="developer39s-guide-integration-services"></a>開發人員&#39;s 指南（Integration Services）
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括完全改寫的物件模型，已透過許多功能增強，這使得擴充封包和設計其程式更輕鬆、更彈性且更強大。 開發人員幾乎可以擴充和程式設計 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的每個層面。  
   
  身為 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 開發人員，有兩種主要的方式可進行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的程式設計：  
@@ -72,7 +72,7 @@ ms.locfileid: "62892395"
  [以程式設計方式執行及管理套件](run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  描述如何以程式設計方式列舉、執行和管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  [Integration Services 錯誤和訊息參考](integration-services-error-and-message-reference.md)  
  列出預先定義的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤碼，以及其符號名稱與描述。  
   

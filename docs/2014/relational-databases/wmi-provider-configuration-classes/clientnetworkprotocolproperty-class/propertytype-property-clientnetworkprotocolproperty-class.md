@@ -1,5 +1,5 @@
 ---
-title: PropertyType 屬性 （ClientNetworkProtocolProperty 類別） |Microsoft Docs
+title: PropertyType 屬性（ClientNetworkProtocolProperty 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 244775d3b2a5fe301bd1d5d56803873aae21eaa8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63135933"
 ---
 # <a name="propertytype-property-clientnetworkprotocolproperty-class"></a>PropertyType 屬性 (ClientNetworkProtocolProperty 類別)
-  取得所參考的屬性型別[PropertyIdx 屬性 （ClientNetworkProtocolProperty 類別）](clientnetworkprotocolproperty-class.md)值。  
+  取得[PropertyIdx 屬性（ClientNetworkProtocolProperty 類別）](clientnetworkprotocolproperty-class.md)值所參考的屬性型別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,8 +37,8 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
- A [ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)物件，表示屬性所使用之網路通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端。  
+ *目標*  
+ [ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)物件，代表[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端所使用之網路通訊協定的屬性。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定屬性之類型的 `uint32` 值。  

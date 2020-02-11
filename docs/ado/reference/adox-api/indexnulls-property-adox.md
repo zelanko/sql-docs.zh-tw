@@ -1,5 +1,5 @@
 ---
-title: IndexNulls 屬性 (ADOX) |Microsoft Docs
+title: IndexNulls 屬性（ADOX） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,22 +20,22 @@ ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25a319d81fb3ecde22691f5197e93acb38a5e04a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966009"
 ---
 # <a name="indexnulls-property-adox"></a>IndexNulls 屬性 (ADOX)
-指出允許 null 值，其索引欄位中的記錄是否有索引項目。  
+指出索引欄位中具有 null 值的記錄是否有索引項目。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定，並傳回[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)值。 預設值是**adIndexNullsDisallow**。  
+ 設定並傳回[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)值。 預設值為**adIndexNullsDisallow**。  
   
 ## <a name="remarks"></a>備註  
- 這個屬性是唯讀[Index](../../../ado/reference/adox-api/index-object-adox.md)已經附加到集合的物件。  
+ 這個屬性在已附加至集合的[索引](../../../ado/reference/adox-api/index-object-adox.md)物件上是唯讀的。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Index 物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
 ## <a name="see-also"></a>另請參閱  

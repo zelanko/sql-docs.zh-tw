@@ -1,5 +1,5 @@
 ---
-title: 使用 CHANGE_TRACKING_CONTEXT (TRANSACT-SQL) |Microsoft Docs
+title: WITH CHANGE_TRACKING_CONTEXT （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 90610b8b93d0d03a41c6dbbae6c2a9a4e9678aac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67950929"
 ---
-# <a name="with-changetrackingcontext-transact-sql"></a>WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)
+# <a name="with-change_tracking_context-transact-sql"></a>WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   變更資料時，啟用要指定之變更的內容，例如，訂閱者識別碼。 例如，使用變更追蹤時，應用程式可能想要區分由應用程式本身所做的變更與由應用程式外部對資料所做的變更。  
@@ -41,8 +41,8 @@ WITH CHANGE_TRACKING_CONTEXT ( context )
 ```  
   
 #### <a name="parameters"></a>參數  
- *context*  
- 藉由呼叫應用程式所提供的內容資訊，而且會與變更的變更追蹤資訊儲存在一起。 *內容*已**varbinary(128)** 。  
+ *內容*  
+ 藉由呼叫應用程式所提供的內容資訊，而且會與變更的變更追蹤資訊儲存在一起。 *coNtext*為**Varbinary （128）**。  
   
  這個值可以是常數或變數，但不得為 NULL。  
   

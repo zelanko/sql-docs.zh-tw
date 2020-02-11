@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 578b870128486285a7c31bf9a860b85d170f8771
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786601"
 ---
 # <a name="configure-database-engine-instances-sql-server"></a>設定 Database Engine 執行個體 (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "62786601"
 |----------------------|-----------|  
 |描述各種執行個體組態選項以及如何檢視或變更這些選項。|[伺服器組態選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)|  
 |描述如何檢視及設定執行個體中新資料和記錄檔的預設位置。|[檢視或變更資料及記錄檔的預設位置 &#40;SQL Server Management Studio&#41;](view-or-change-the-default-locations-for-data-and-log-files.md)|  
-|描述如何設定 SQL Server 使用軟體 NUMA。|[設定 SQL Server 使用軟體式 NUMA &#40;SQL Server&#41;](soft-numa-sql-server.md)|  
+|描述如何設定 SQL Server 使用軟體 NUMA。|[將 SQL Server 設定為使用軟體 NUMA &#40;SQL Server&#41;](soft-numa-sql-server.md)|  
 |描述如何將 TCP/IP 通訊埠對應到非統一記憶體存取 (NUMA) 節點相似性。|[將 TCP/IP 通訊埠對應到 NUMA 節點 &#40;SQL Server&#41;](map-tcp-ip-ports-to-numa-nodes-sql-server.md)|  
 |描述如何啟用 Windows 鎖定記憶體中的分頁原則。 此原則決定哪些帳戶可以使用處理序將資料保留在實體記憶體中，以防止系統將資料傳送到磁碟上的虛擬記憶體。|[啟用鎖定記憶體分頁選項 &#40;Windows&#41;](enable-the-lock-pages-in-memory-option-windows.md)|  
   

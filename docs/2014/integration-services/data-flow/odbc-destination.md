@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771024"
 ---
 # <a name="odbc-destination"></a>ODBC 目的地
@@ -31,7 +31,7 @@ ms.locfileid: "62771024"
   
 -   **批次**：在此模式中，ODBC 目的地會根據所見的 ODBC 提供者功能，嘗試使用最有效率的插入方法。 對於最新的 ODBC 提供者，這表示準備含有參數的 INSERT 陳述式，然後使用資料列取向的陣列參數繫結 (陣列大小是由 **BatchSize** 屬性所控制)。 如果您選取 [批次]  ，而提供者不支援此方法，ODBC 目的地會自動切換為**逐列**模式。  
   
--   **逐列**：在此模式中，ODBC 目的地會準備含有參數的 INSERT 陳述式，然後使用 **SQL Execute**，一次插入一個資料列。  
+-   **逐列**：在此模式中，ODBC 目的地會準備含有參數的 INSERT 陳述式，然後使用 **SQL Execute** ，一次插入一個資料列。  
   
 ## <a name="error-handling"></a>錯誤處理  
  ODBC 目的地有錯誤輸出。 此元件的錯誤輸出包含下列輸出資料行：  
@@ -83,6 +83,6 @@ ms.locfileid: "62771024"
   
 -   [使用 ODBC 目的地來載入資料](odbc-destination.md)  
   
--   [ODBC Destination Custom Properties](odbc-destination-custom-properties.md)  
+-   [ODBC 目的地自訂屬性](odbc-destination-custom-properties.md)  
   
   

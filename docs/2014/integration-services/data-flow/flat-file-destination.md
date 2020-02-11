@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f8f566dc04726076dd9eb7c4d91b56f687218d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902442"
 ---
 # <a name="flat-file-destination"></a>一般檔案目的地
@@ -44,9 +44,9 @@ ms.locfileid: "62902442"
   
  如需有關 **[一般檔案來源編輯器]** 對話方塊中可設定屬性的詳細資訊，請按一下下列其中一個主題：  
   
--   [一般檔案目的地編輯器 &#40;連線管理員頁面&#41;](../flat-file-destination-editor-connection-manager-page.md)  
+-   [[一般檔案目的地編輯器] &#40;連線管理員] 頁面&#41;](../flat-file-destination-editor-connection-manager-page.md)  
   
--   [一般檔案目的地編輯器 &#40;對應頁面&#41;](../flat-file-destination-editor-mappings-page.md)  
+-   [[一般檔案目的地編輯器] &#40;對應] 頁面&#41;](../flat-file-destination-editor-mappings-page.md)  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   

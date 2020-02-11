@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a89632ad5502cee9599d1eea6e1cd0a0bebe7d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770984"
 ---
 # <a name="ole-db-source"></a>OLE DB 來源
@@ -42,11 +42,13 @@ ms.locfileid: "62770984"
   
  此來源使用 OLE DB 連接管理員連接到資料來源，且連接管理員會指定要使用的 OLE DB 提供者。 如需相關資訊，請參閱 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案也提供資料來源物件，您可從中建立 OLE DB 連接管理員，並提供資料來源和資料檢視讓 OLE DB 來源使用。  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案也提供資料來源物件，您可從中建立 OLE DB 連接管理員，並提供資料來源和資料檢視讓 OLE DB 來源使用。  
   
  根據 OLE DB 提供者而定，下列限制適用 OLE DB 來源：  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB provider for Oracle 不支援 Oracle 資料類型 BLOB、CLOB、NCLOB、BFILE 或 UROWID，且 OLE DB 來源無法從含有這些資料類型之資料行的資料表擷取資料。  
+-   
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB provider for Oracle 不支援 Oracle 資料類型 BLOB、CLOB、NCLOB、BFILE 或 UROWID，且 OLE DB 來源無法從含有這些資料類型之資料行的資料表擷取資料。  
   
 -   IBM OLE DB DB2 提供者和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB DB2 提供者不支援使用呼叫預存程序的 SQL 命令。 使用這類命令時，OLE DB 來源無法建立資料行中繼資料，結果在資料流程中跟隨 OLE DB 來源的資料流程元件便沒有任何可用的資料行資料，且資料流程執行失敗。  
   
@@ -57,16 +59,16 @@ ms.locfileid: "62770984"
   
  OLE DB 來源使用 OLE DB 連接管理員，以連接到其擷取資料的資料來源。 根據 OLE DB 連接管理員使用的提供者以及連接管理員所連接的關聯式資料庫管理系統 (RDBMS) 而定，參數的命名和列示可能適用不同的規則。 如果從 RDBMS 傳回參數名稱，您可以使用參數名稱，將參數清單中的參數對應到 SQL 陳述式中的參數；否則，參數便會按照它們在參數清單中的序數位置，對應到 SQL 陳述式中的參數。 支援的參數名稱類型會因提供者而不同。 例如，某些提供者要求您必須使用變數或資料行名稱，而某些提供者則要求您使用 0 或 Param0 之類的符號名稱。 如需有關在 SQL 陳述式中使用之參數名稱的資訊，請參考提供者專用的文件集。  
   
- 您在使用 OLE DB 連接管理員時無法使用參數化的子查詢，因為 OLE DB 來源無法透過 OLE DB 提供者衍生參數資訊。 不過，您可以使用運算式來將參數值串連到查詢字串中並設定來源的 SqlCommand 屬性。在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中，則可使用 [OLE DB 來源編輯器]  對話方塊來設定 OLE DB 來源，並在 [設定查詢參數]  對話方塊中將參數對應到變數。  
+ 您在使用 OLE DB 連接管理員時無法使用參數化的子查詢，因為 OLE DB 來源無法透過 OLE DB 提供者衍生參數資訊。 不過，您可以使用運算式來將參數值串連到查詢字串中並設定來源的 SqlCommand 屬性。在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中，則可使用 [OLE DB 來源編輯器]**** 對話方塊來設定 OLE DB 來源，並在 [設定查詢參數]**** 對話方塊中將參數對應到變數。  
   
 ### <a name="specifying-parameters-by-using-ordinal-positions"></a>使用序數位置指定參數  
- 如果沒有傳回任何參數名稱，便會依照參數在 [設定查詢參數]  對話方塊之 [參數]  清單中的列示順序，來控制執行階段中參數所對應的參數標記。 清單中的第一個參數會對應到 SQL 陳述式裡的第一個 ?， 第二個參數則對應到第二個 ?，依此類推。  
+ 如果沒有傳回任何參數名稱，便會依照參數在 [設定查詢參數]**** 對話方塊之 [參數]**** 清單中的列示順序，來控制執行階段中參數所對應的參數標記。 清單中的第一個參數會對應到 SQL 陳述式裡的第一個 ?， 第二個參數則對應到第二個 ?，依此類推。  
   
- 下列 SQL 陳述式會從 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 資料庫的 **Product** 資料表中選取資料列。 [對應]  清單中的第一個參數對應到 **Color** 資料行的第一個參數，第二個參數則對應到 **Size** 資料行。  
+ 下列 SQL 陳述式會從 **資料庫的** Product [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 資料表中選取資料列。 [對應]**** 清單中的第一個參數對應到 **Color** 資料行的第一個參數，第二個參數則對應到 **Size** 資料行。  
   
  `SELECT * FROM Production.Product WHERE Color = ? AND Size = ?`  
   
- 參數名稱無效。 例如，如果參數名稱與它所套用的資料行名稱相同，但並未放在 [參數]  清單中的正確序數位置，則執行階段中發生的參數對應將會使用參數的序數位置，而非參數名稱。  
+ 參數名稱無效。 例如，如果參數名稱與它所套用的資料行名稱相同，但並未放在 [參數]**** 清單中的正確序數位置，則執行階段中發生的參數對應將會使用參數的序數位置，而非參數名稱。  
   
  EXEC 命令通常會要求您使用在程序中提供參數值的變數名稱作為參數名稱。  
   
@@ -77,22 +79,22 @@ ms.locfileid: "62770984"
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
- 預存程序需要有變數 `@StartProductID` 和 `@CheckDate`，才能提供參數值。 參數出現在 [對應]  清單中的順序並無任何影響。 唯一的需求是參數名稱必須符合預存程序中的變數名稱，包括 \@ 符號。  
+ 預存程序需要有變數 `@StartProductID` 和 `@CheckDate`，才能提供參數值。 參數出現在 [對應]**** 清單中的順序並無任何影響。 唯一的需求是參數名稱必須符合預存程序中的變數名稱，包括 \@ 符號。  
   
 ### <a name="mapping-parameters-to-variables"></a>將參數對應至變數  
  參數會對應到在執行階段中提供參數值的變數。 這些變數通常是使用者自訂變數，不過您也可以使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的系統變數。 如果您使用的是使用者自訂變數，請務必將資料類型設定為與對應參數所參考之資料行資料類型相容的類型。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)。  
   
 ## <a name="troubleshooting-the-ole-db-source"></a>疑難排解 OLE DB 來源  
- 您可以記錄 OLE DB 來源對外部資料提供者所執行的呼叫。 您可以使用這項記錄功能，疑難排解 OLE DB 來源執行的從外部資料來源載入資料的作業。 若要記錄 OLE DB 來源對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷]  事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 您可以記錄 OLE DB 來源對外部資料提供者所執行的呼叫。 您可以使用這項記錄功能，疑難排解 OLE DB 來源執行的從外部資料來源載入資料的作業。 若要記錄 OLE DB 來源對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷]**** 事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
 ## <a name="configuring-the-ole-db-source"></a>設定 OLE DB 來源  
  您可以程式設計方式或透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」設定屬性。  
   
- 如需可在 [OLE DB 來源編輯器]  對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
+ 如需可在 [OLE DB 來源編輯器]**** 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [OLE DB 來源編輯器 &#40;連線管理員頁面&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [OLE DB 來源編輯器 &#40;資料行頁面&#41;](../ole-db-source-editor-columns-page.md)  
+-   [OLE DB 來源編輯器 &#40;資料行] 頁面&#41;](../ole-db-source-editor-columns-page.md)  
   
 -   [OLE DB 來源編輯器 &#40;錯誤輸出頁面&#41;](../ole-db-source-editor-error-output-page.md)  
   

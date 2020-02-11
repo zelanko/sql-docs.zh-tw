@@ -1,5 +1,5 @@
 ---
-title: SetEnable 方法 （ServerNetworkProtocol 類別） |Microsoft Docs
+title: SetEnable 方法（ServerNetworkProtocol 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f3dee294e84ebe0fa8577630886ee00255e928ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63055698"
 ---
 # <a name="setenable-method-servernetworkprotocol-class"></a>SetEnable 方法 (ServerNetworkProtocol 類別)
@@ -38,15 +38,16 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
- A [ServerNetworkProtocol 類別](servernetworkprotocol-class.md)物件，表示執行個體所使用的網路通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ *目標*  
+ 代表實例所使用之[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]網路通訊協定的[ServerNetworkProtocol 類別](servernetworkprotocol-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- `uint32` 值，如果已成功修改此服務為 0，如果不支援要求則為 1，以及其他指示錯誤的任何數字。  
+ 
+  `uint32` 值，如果已成功修改此服務為 0，如果不支援要求則為 1，以及其他指示錯誤的任何數字。  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定伺服器網路通訊協定和網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [設定伺服器網路通訊協定與網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

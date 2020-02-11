@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918336"
 ---
 # <a name="management-data-warehouse"></a>管理資料倉儲
@@ -109,7 +109,7 @@ ms.locfileid: "62918336"
   
  如果要取得資料庫資料表資料行的詳細資料類型和內容資訊，請讀取每一個資料表適合之資料收集器預存程序的文件集。  
   
-### <a name="best-practices"></a>最佳作法  
+### <a name="best-practices"></a>最佳做法  
  當使用管理資料倉儲時，我們建議您遵循以下最佳作法：  
   
 -   請勿修改管理資料倉儲資料表的中繼資料，除非您要加入新的收集器型別。  

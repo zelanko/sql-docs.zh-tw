@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b28d7b461d73cb6b65678b385e1572e717420854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914770"
 ---
-# <a name="mssqlserver32042"></a>MSSQLSERVER_32042
+# <a name="mssqlserver_32042"></a>MSSQLSERVER_32042
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|32042|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  

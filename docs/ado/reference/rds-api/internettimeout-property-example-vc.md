@@ -1,5 +1,5 @@
 ---
-title: InternetTimeout 屬性範例 （VC + +） |Microsoft Docs
+title: InternetTimeout 屬性範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7596f9728f7a51a5d28a3c1a19943efff783ac62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963995"
 ---
 # <a name="internettimeout-property-example-vc"></a>InternetTimeout 屬性範例 (VC++)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 此範例示範[InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md)屬性，這存在於[DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)並[DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)物件。 在此情況下， **InternetTimeout**屬性會在示範**DataControl**物件和逾時值設定為 20 秒。  
+ 這個範例會示範[InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md)屬性，其存在於[DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)和「[空間](../../../ado/reference/rds-api/dataspace-object-rds.md)」物件上。 在此情況下， **InternetTimeout**屬性會在**DataControl**物件上示範，而 timeout 會設定為20秒。  
   
 ```cpp
 // BeginInternetTimeoutCpp  

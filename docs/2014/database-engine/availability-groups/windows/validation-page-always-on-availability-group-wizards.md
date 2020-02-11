@@ -1,5 +1,5 @@
 ---
-title: 驗證頁面 （AlwaysOn 可用性群組精靈） |Microsoft Docs
+title: 驗證頁面（AlwaysOn 可用性群組嚮導） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6cf16c8afb363a1b7727b6da3a5f75bf966ab0d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812982"
 ---
 # <a name="validation-page-alwayson-availability-group-wizards"></a>驗證頁面 (AlwaysOn 可用性群組精靈)
-  本說明主題描述 [驗證] 頁面的選項。 本主題適用於 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]和[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此頁面可以驗證環境是否支援您在精靈之先前頁面上所做的所有組態選擇。  
+  本說明主題描述 [驗證]**** 頁面的選項。 本主題適用於 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]和[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此頁面可以驗證環境是否支援您在精靈之先前頁面上所做的所有組態選擇。  
   
-##  <a name="PageOptions"></a> 驗證頁面選項  
+##  <a name="PageOptions"></a>驗證頁面選項  
  **可用性群組驗證的結果。**  
  此方格會顯示每個已完成驗證步驟的結果。 方格資料行如下所示：  
   
@@ -39,8 +39,8 @@ ms.locfileid: "62812982"
 |結果|描述|  
 |------------|-----------------|  
 |**錯誤**|表示驗證步驟失敗。 按一下連結可檢視錯誤訊息。|  
-|**已略過**|表示已略過驗證步驟，因為您的選項不需要驗證。 按一下連結可檢視略過步驟的原因。|  
-|**成功**|表示驗證步驟已順利完成。|  
+|**略**|表示已略過驗證步驟，因為您的選項不需要驗證。 按一下連結可檢視略過步驟的原因。|  
+|「成功」 |表示驗證步驟已順利完成。|  
 |**警告**|表示可用性群組組態可能有問題。  按一下連結可檢視警告訊息。|  
   
  **重新執行驗證**  
@@ -59,6 +59,6 @@ ms.locfileid: "62812982"
  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

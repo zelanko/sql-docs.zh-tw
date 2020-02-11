@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cdf37ab5b61e74ab04b9b58162325b580675c493
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63070778"
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>以遞增或遞減順序排序 (Visual Database Tools)
@@ -34,14 +34,14 @@ ms.locfileid: "63070778"
   
 2.  選擇 [遞增]  或 [遞減]  以指定資料行的排序順序。  
   
- 請注意，使用 [準則窗格] 時，查詢的 UNION 子句會變更，以符合您最近的動作。  
+ 請注意，使用 [準則] 窗格時，查詢的 UNION 子句會變更，以符合您最近的動作。  
   
 > [!NOTE]  
 >  使用多個資料行排序結果時，可使用 [排序次序] 欄位指定資料行相互之間搜尋的順序。 如需詳細資訊，請參閱[排序查詢中的多個資料行 &#40;Visual Database Tools&#41;](sort-multiple-columns-in-queries-visual-database-tools.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [排序及群組查詢結果&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [摘要查詢結果&#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [排序和分組查詢結果 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [&#40;Visual Database Tools&#41;匯總查詢結果](summarize-query-results-visual-database-tools.md)   
  [設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35d8f9cdda7c3b85c77d290f9c793640705438e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815421"
 ---
 # <a name="availability-group-is-offline"></a>可用性群組為離線
@@ -29,7 +29,7 @@ ms.locfileid: "62815421"
 |-|-|  
 |**原則名稱**|可用性群組線上狀態|  
 |**問題**|可用性群組為離線。|  
-|**分類**|**嚴重**|  
+|**類別目錄**|**嚴重**|  
 |**Facet**|可用性群組|  
   
 ## <a name="description"></a>描述  
@@ -73,7 +73,7 @@ ms.locfileid: "62815421"
 -   如果正在進行容錯移轉，請等候容錯移轉完成。  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

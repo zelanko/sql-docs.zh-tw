@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: be894aa43636cc81c9dbd462cb8b5aff55dbcd84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769264"
 ---
 # <a name="-equal-ssis-expression"></a>== (等於) (SSIS 運算式)
-  執行比較來決定兩個運算式是否相等。 運算式評估工具會在執行比較之前，自動轉換許多資料類型。 如需詳細資訊，請參閱 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)。  
+  執行比較來決定兩個運算式是否相等。 運算式評估工具會在執行比較之前，自動轉換許多資料類型。 如需相關資訊，請參閱 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)。  
   
  但是，某些資料類型要求運算式先包含明確轉換，才能成功評估運算式。 如需在資料類型間合法轉換的詳細資訊，請參閱[轉換 &#40;SSIS 運算式&#41;](cast-ssis-expression.md)。  
   
@@ -35,7 +35,7 @@ expression1 == expression2
   
 ## <a name="arguments"></a>引數  
  *expression1, expression2*  
- 任何有效的運算式。  
+ 為任何有效運算式。  
   
 ## <a name="result-types"></a>結果類型  
  DT_BOOL  
@@ -52,7 +52,7 @@ expression1 == expression2
     > [!NOTE]  
     >  字串比較有區分大小寫、腔調字、假名與全半形。  
   
--   **日期、時間或日期/時間** *expression1* 和 *expression2* 都必須評估為下列其中一個資料類型：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **日期、時間或日期/時間** ： *expression1* 和 *expression2* 都必須評估為下列其中一種資料類型：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系統不支援評估為時間資料類型之運算式與評估為日期或日期/時間資料類型之運算式之間的比較。 系統會產生錯誤。  
@@ -81,7 +81,7 @@ expression1 == expression2
   
 -   **二進位** ： *expression1* 和 *expression2* 都必須評估為 DT_BYTES 資料類型。  
   
--   **BLOB** *expression1* 和 *expression2* 都必須評估為相同的二進位大型物件區塊 (BLOB) 資料類型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
+-   **BLOB** ： *expression1* 和 *expression2* 都必須評估為相同的二進位大型物件區塊 (BLOB) 資料類型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
   
  如需有關資料類型的詳細資訊，請參閱＜ [Integration Services Data Types](../data-flow/integration-services-data-types.md)＞。  
   
@@ -103,7 +103,7 @@ ListPrice == 500
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [!= &#40;不等於&#41; &#40;SSIS 運算式&#41;](equal-ssis-expression.md)   
+ [\!= &#40;不等於&#41; &#40;SSIS 運算式&#41;](equal-ssis-expression.md)   
  [運算子優先順序與關聯性](operator-precedence-and-associativity.md)   
  [運算子 &#40;SSIS 運算式&#41;](operators-ssis-expression.md)  
   

@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dcfbbac9eacc96384a723088cf8f20cc939bdc48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900822"
 ---
 # <a name="conditional-split-transformation"></a>條件式分割轉換
-  「條件式分割」轉換可根據資料的內容，將資料列傳送至不同的輸出。 「條件式分割」轉換的實作與程式設計語言中的 CASE 決策結構類似。 轉換會評估運算式，並根據結果將資料列導向指定的輸出。 此轉換亦提供預設輸出，如此一來，即使資料列未符合任何運算式，仍會導向預設輸出。  
+  「條件式分割」轉換可根據資料的內容，將資料列傳送至不同的輸出。 條件式分割轉換的實作類似程式設計語言中的 CASE 決策結構。 轉換會評估運算式，並根據結果將資料列導向指定的輸出。 此轉換也提供預設輸出，因此若某個資料列不符合任何運算式，它會被導向到預設輸出。  
   
 ## <a name="configuration-of-the-conditional-split-transformation"></a>設定條件式分割轉換  
  您可以利用下列方式設定「條件式分割」轉換：  
@@ -56,7 +56,7 @@ ms.locfileid: "62900822"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [轉換自訂屬性](transformation-custom-properties.md)  
   

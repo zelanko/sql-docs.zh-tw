@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2206980d241d3ef0aa683e4f987a4e337a86855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913803"
 ---
-# <a name="mssqlserver41368"></a>MSSQLSERVER_41368
+# <a name="mssqlserver_41368"></a>MSSQLSERVER_41368
     
 ## <a name="details"></a>詳細資料  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62913803"
  如果您存取記憶體最佳化的資料表是透過以 BEGIN TRANSACTION 啟動的明確交易，或是透過 IMPLICIT_TRANSACTIONS 設為 ON 的隱含交易，便不支援 READ COMMITTED 隔離等級。  
   
 ## <a name="user-action"></a>使用者動作  
- 透過明確或隱含 READ COMMITTED 交易存取記憶體最佳化的資料表時，請使用快照集 (SNAPSHOT) 存取資料表。 這可藉由使用資料表提示 WITH (SNAPSHOT) (如需詳細資訊，請參閱 <<c0> [ 指導方針與記憶體最佳化資料表的交易隔離等級](../in-memory-oltp/memory-optimized-tables.md)) 或是將資料庫設定選項 MEMORY_OPTIMIZED_ELEVATE_TO_快照集設為 ON (如需詳細資訊，請參閱 < [ALTER DATABASE SET 選項&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options))。</c0>  
+ 透過明確或隱含 READ COMMITTED 交易存取記憶體最佳化的資料表時，請使用快照集 (SNAPSHOT) 存取資料表。 這可以藉由使用資料表提示與（SNAPSHOT）來完成（如需詳細資訊，請參閱[含記憶體優化資料表的交易隔離等級方針](../in-memory-oltp/memory-optimized-tables.md)），或將資料庫選項設定 MEMORY_OPTIMIZED_ELE加值稅E_TO_SNAPSHOT 為 ON （如需詳細資訊，請參閱[ALTER database SET 選項 &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)）。  
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

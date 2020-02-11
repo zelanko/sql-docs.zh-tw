@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9a7bdca770bccaac50da1ac6a7688eabd335e20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791862"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>可用性群組尚未就緒，無法自動容錯
@@ -29,7 +29,7 @@ ms.locfileid: "62791862"
 |-|-|  
 |**原則名稱**|可用性群組自動容錯移轉整備|  
 |**問題**|可用性群組尚未準備進行自動容錯移轉。|  
-|**分類**|**嚴重**|  
+|**類別目錄**|**嚴重**|  
 |**Facet**|可用性群組|  
   
 ## <a name="description"></a>描述  
@@ -51,7 +51,7 @@ ms.locfileid: "62791862"
 -   使用此原則確認資料處於同步處理狀態而且自動容錯移轉目標為 SYNCHRONIZED，然後解決可用性複本上的問題。  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

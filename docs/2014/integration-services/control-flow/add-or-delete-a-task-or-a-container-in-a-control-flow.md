@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f13db8a1e22c88c4433cd8928479a6ed1af540f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833123"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>在控制流程中加入或刪除工作或容器
@@ -53,7 +53,7 @@ ms.locfileid: "62833123"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在 [方案總管] 中，按兩下封裝將其開啟。 執行下列其中之一：  
+2.  在 [方案總管] 中，按兩下封裝將其開啟。 執行下列其中一個動作：  
   
     -   按一下 [控制流程]  索引標籤，以滑鼠右鍵按一下您要移除的工作或容器，然後按一下 [刪除]  。  
   
@@ -64,6 +64,6 @@ ms.locfileid: "62833123"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](integration-services-tasks.md)   
  [Integration Services 容器](integration-services-containers.md)   
- [[控制流程]](control-flow.md)  
+ [控制流程](control-flow.md)  
   
   

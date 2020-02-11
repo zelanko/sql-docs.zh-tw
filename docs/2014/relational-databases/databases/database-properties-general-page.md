@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 13ec38a90e0acf85dccf87edd94f6efa4cf3dfd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916956"
 ---
 # <a name="database-properties-general-page"></a>資料庫屬性 (一般頁面)
   使用此頁面來檢視或修改選取之資料庫的屬性。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **上次資料庫備份**  
  顯示上一次備份資料庫的日期。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62916956"
  **狀態**  
  顯示資料庫狀態。 如需詳細資訊，請參閱 [Database States](database-states.md)。  
   
- **[擁有者]**  
+ **擁有者**  
  顯示資料庫擁有者的名稱。 可以在 **[檔案]** 頁面上變更擁有者。  
   
  **建立日期**  

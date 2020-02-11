@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810419"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>資料庫管理員的診斷連接
@@ -36,14 +36,14 @@ ms.locfileid: "62810419"
   
 ||  
 |-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
+|**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
   
 ## <a name="connecting-with-dac"></a>連接 DAC  
  依預設，只能從執行於伺服器上的用戶端進行連接。 除非使用 sp_configure 預存程序搭配 [remote admin connections 選項](remote-admin-connections-server-configuration-option.md)來設定網路連接，否則不允許進行網路連接。  
   
  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員 (sysadmin) 角色的成員可以使用 DAC 進行連接。  
   
- DAC 的存取與支援是使用特殊的系統管理員參數 ( **-A** )，透過**sqlcmd**命令提示字元公用程式來執行。 如需使用 **sqlcmd** 的詳細資訊，請參閱[以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 您也可以連接前面加上`admin:`格式的執行個體名稱**sqlcmd-Sadmin:** _< instance_name >。_ 您也可以起始從 DAC[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]藉由連接到查詢編輯器`admin:` \< *instance_name*>。  
+ DAC 的存取與支援是使用特殊的系統管理員參數 ( **-A** )，透過**sqlcmd**命令提示字元公用程式來執行。 如需使用 **sqlcmd** 的詳細資訊，請參閱[以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 您也可以用`admin:` **Sadmin：** _<instance_name>_ 的格式，在實例名稱前面加上前置。 您也可以藉由連接到[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] `admin:` \< *instance_name*>，從查詢編輯器起始 DAC。  
   
 ## <a name="restrictions"></a>限制  
  由於 DAC 僅在少數的情況下才會為了診斷伺服器問題而建立，因此這項連接有某些限制：  
@@ -62,7 +62,7 @@ ms.locfileid: "62810419"
   
     -   RESTORE  
   
-    -   BACKUP  
+    -   備份  
   
 -   只有某些限定的資源必定可透過 DAC 來使用。 請勿使用 DAC 來執行需耗用大量資源的查詢 (例如， 大型資料表上的複雜聯結) 或可能會封鎖的查詢。 如此可防止 DAC 在現有的伺服器問題外衍生出其他問題。 為了避免潛在的封鎖情況，若您必須執行可能會封鎖的查詢，請盡可能在快照隔離等級下執行查詢；否則，請將交易隔離等級設為 READ UNCOMMITTED，並將 LOCK_TIMEOUT 值設為 2000 毫秒之類的短數值。 如此可防止 DAC 工作階段產生封鎖的情形。 但依照 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所處的狀態，DAC 工作階段也可能會遭到閂鎖封鎖。 您可以使用 CNTRL-C 來結束 DAC 工作階段，但不一定能成功。 在這種情況下，重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可能是唯一的選擇。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62810419"
   
 -   查詢目錄檢視。  
   
--   基本 DBCC 命令，例如 DBCC FREEPROCCACHE、DBCC FREESYSTEMCACHE、DBCC DROPCLEANBUFFERS`,` 及 DBCC SQLPERF。 請勿執行需要大量資源的命令，例如 **DBCC** CHECKDB、DBCC DBREINDEX 或 DBCC SHRINKDATABASE。  
+-   基本 DBCC 命令，例如 DBCC FREEPROCCACHE、DBCC FREESYSTEMCACHE、DBCC DROPCLEANBUFFERS`,` 及 DBCC SQLPERF。 請勿執行需要大量資源的命令，例如**dbcc** CHECKDB、dbcc DBREINDEX 或 dbcc SHRINKDATABASE。  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL *\<spid>* 命令。 根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的狀態而定，KILL 命令可能不會每次都成功，這時只能選擇重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是部分一般方針：  
   
@@ -93,11 +93,11 @@ ms.locfileid: "62810419"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在啟動期間動態指定 DAC 通訊埠。 連接到預設執行個體時，DAC 會在連接時避免對 SQL Server Browser 服務使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解析通訊協定 (SSRP) 要求。 它會先透過 TCP 通訊埠 1434 連接。 若失敗，則會發出 SSRP 呼叫以取得通訊埠。 若 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 並未接聽 SSRP 要求，則連接要求會傳回錯誤。 請參閱錯誤記錄檔，以了解 DAC 接聽時所使用的通訊埠編號。 若 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的組態可接受遠端管理連接，DAC 就必須以明確的通訊埠編號起始：  
   
- **sqlcmd-Stcp:** _\<server>,\<port>_  
+ **sqlcmd-Stcp：** _ \<伺服器>、\<埠>_  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會列出 DAC 的通訊埠編號，依預設為 1434。 若將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為只接受本機 DAC 連接，請利用下列命令使用回送配接器進行連接：  
   
- **sqlcmd-S127.0.0.1**,`1434`  
+ **sqlcmd-s 127.0.0.1**、`1434`  
   
 ## <a name="example"></a>範例  
  在此範例中，系統管理員注意到伺服器 `URAN123` 並未回應，而要診斷問題。 為了進行這項作業，使用者啟動 `sqlcmd` 命令提示字元公用程式，並使用 `URAN123` 來表示 DAC，連接到伺服器 `-A` 。  

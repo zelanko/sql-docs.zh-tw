@@ -1,5 +1,5 @@
 ---
-title: 將符合 master 和 model 資料庫的定序的使用者定義資料庫設定 |Microsoft Docs
+title: 設定使用者定義資料庫的定序，使其符合 master 和 model 資料庫的定序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773307"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>將使用者定義資料庫的定序設定為 master 和 model 資料庫的定序
@@ -48,7 +48,7 @@ ms.locfileid: "62773307"
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [Microsoft 知識庫文章 325335](https://go.microsoft.com/fwlink/?linkid=117751)  
+ [Microsoft 知識庫文章325335](https://go.microsoft.com/fwlink/?linkid=117751)  
   
  [如何：從命令提示字元安裝 SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=81585)  
   

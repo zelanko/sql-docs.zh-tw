@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 301a6b6970c03b620783af7ca176de34846557d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900792"
 ---
 # <a name="cache-transform"></a>快取轉換
@@ -51,9 +51,9 @@ ms.locfileid: "62900792"
   
      您可以使用 [快取連線管理員編輯器]  修改資料行資料類型、名稱和其他資料行屬性。  
   
- 您可以透過 [[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 設計師] 設定屬性。 如需可在 [進階編輯器]  對話方塊中設定之屬性的詳細資訊，請參閱[轉換自訂屬性](transformation-custom-properties.md)。  
+ 您可以透過 [ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 設計師] 設定屬性。 如需可在 [進階編輯器]  對話方塊中設定之屬性的詳細資訊，請參閱[轉換自訂屬性](transformation-custom-properties.md)。  
   
- 如需如何設定屬性的詳細資訊，請參閱[設定資料流程元件的屬性](../set-the-properties-of-a-data-flow-component.md)。  
+ 如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 轉換](integration-services-transformations.md)   

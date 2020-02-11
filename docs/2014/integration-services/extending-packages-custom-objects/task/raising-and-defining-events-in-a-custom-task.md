@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af647a446366ea03063ea0deb84603a3f8f90dd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896126"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>引發並在自訂工作中定義事件
@@ -37,13 +37,13 @@ ms.locfileid: "62896126"
  另一組定義在 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面的事件，是由 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 代表工作而引發。 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 會引發在驗證和執行前後發生的事件，而工作會引發在執行和驗證期間發生的事件。  
   
 ## <a name="creating-custom-events"></a>建立自訂事件  
- 自訂工作開發人員可以透過在 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> 方法的覆寫實作中建立新的 <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A>，以定義新自訂事件。 在建立 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> 之後，會使用 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> 方法，將它加入 `EventInfos` 集合。 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> 方法的方法簽章如下所示：  
+ 自訂工作開發人員可以透過在 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> 方法的覆寫實作中建立新的 <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A>，以定義新自訂事件。 在建立 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> 之後，會使用 `EventInfos` 方法，將它加入 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> 集合。 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> 方法的方法簽章如下所示：  
   
  `public void Add(string eventName, string description, bool allowEventHandlers, string[] parameterNames, TypeCode[] parameterTypes, string[] parameterDescriptions);`  
   
  下列程式碼範例會示範自訂工作的 `InitializeTask` 方法，其中建立了兩個自訂事件並設定其屬性。 然後會將新事件加入 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> 集合。  
   
- 第一個自訂事件的 *eventName* 為 "**OnBeforeIncrement**"，而 *description* 為「**更新初始值之後觸發**」。 下一個參數 `true` 值表示此事件應允許建立事件處理常式容器以處理事件。 事件處理常式是提供封裝中結構與工作服務的容器，就像封裝、時序、ForLoop 和 ForEachLoop 等其他容器一樣。 當*allowEventHandlers*參數是`true`，<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>建立物件事件。 為事件定義的任何參數現在可供 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 的變數集合中之 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 使用。  
+ 第一個自訂事件的 *eventName* 為 "**OnBeforeIncrement**"，而 *description* 為「**更新初始值之後觸發**」。 下一個參數 `true` 值表示此事件應允許建立事件處理常式容器以處理事件。 事件處理常式是提供封裝中結構與工作服務的容器，就像封裝、時序、ForLoop 和 ForEachLoop 等其他容器一樣。 當*allowEventHandlers*參數是`true`時， <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>會為事件建立物件。 為事件定義的任何參數現在可供 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 的變數集合中之 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 使用。  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  
@@ -117,7 +117,7 @@ Nothing,  bFireOnBeforeIncrement)
 ```  
   
 ## <a name="sample"></a>範例  
- 下列範例顯示的工作會在 `InitializeTask` 方法中定義自訂事件，將自訂事件加入 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> 集合，然後透過呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A> 方法在其 `Execute` 方法期間引發自訂事件。  
+ 下列範例顯示的工作會在 `InitializeTask` 方法中定義自訂事件，將自訂事件加入 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> 集合，然後透過呼叫 `Execute` 方法在其 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A> 方法期間引發自訂事件。  
   
 ```csharp  
 [DtsTask(DisplayName = "CustomEventTask")]  
@@ -189,7 +189,7 @@ Nothing,  bFireOnBeforeIncrement)
     End Class  
 ```  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 事件處理常式](../../integration-services-ssis-event-handlers.md)   

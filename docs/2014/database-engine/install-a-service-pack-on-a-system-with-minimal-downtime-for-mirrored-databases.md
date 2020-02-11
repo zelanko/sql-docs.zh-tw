@@ -1,5 +1,5 @@
 ---
-title: 在最短停機時間的系統上安裝 Service Pack，為鏡像資料庫 |Microsoft Docs
+title: 在鏡像資料庫停機時間最短的系統上安裝 Service Pack |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779592"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>在鏡像資料庫停機時間最少的情況下於系統上安裝 Service Pack
-  此主題描述如何在您安裝 Service Pack 和 Hotfix 時，將鏡像資料庫的停機時間減至最少。 這個程序牽涉到循序升級參與資料庫鏡像的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 執行個體。 這種形式的更新，這就所謂*輪流更新*，停機時間減少至只有單一容錯移轉。 請注意，高效能模式工作階段中的鏡像伺服器與主體伺服器地理位置遙遠，輪流更新可能不適合。  
+  此主題描述如何在您安裝 Service Pack 和 Hotfix 時，將鏡像資料庫的停機時間減至最少。 這個程序牽涉到循序升級參與資料庫鏡像的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 執行個體。 這種形式的更新（稱為「輪流*更新*」）可將停機時間縮短為只有單一容錯移轉。 請注意，在高效能模式的工作階段中，如果鏡像伺服器與主體伺服器之間的地理位置遙遠，輪流更新可能不適合。  
   
  輪流更新是指由下列階段組成的多階段程序：  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62779592"
   
      **備份資料庫**  
   
-    -   [建立完整資料庫備份 &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
+    -   [&#40;SQL Server&#41;建立完整資料庫備份](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
   
 2.  在每一個主體資料庫上執行 [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) 命令。  
   
@@ -66,21 +66,21 @@ ms.locfileid: "62779592"
   
 1.  如果鏡像工作階段牽涉到見證，我們建議您在執行輪流更新之前，最好先移除該見證。  
   
-     **移除見證**  
+     **若要移除見證**  
   
     -   [從資料庫鏡像工作階段移除見證 &#40;SQL Server&#41;](database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
 ### <a name="to-change-a-session-from-high-performance-mode-to-high-safety-mode"></a>將工作階段從高效能模式變更為高安全性模式  
   
-1.  如果鏡像工作階段是在高效能模式下執行，請在執行輪流更新之前，將作業模式變更為高安全性模式，而沒有自動容錯移轉。 請使用下列其中一個方法：  
+1.  如果鏡像工作階段是在高效能模式下執行，請在執行輪流更新之前，將作業模式變更為高安全性模式，而沒有自動容錯移轉。 使用下列其中一個方法：  
   
-    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性] 對話方塊的[鏡像頁面](../relational-databases/databases/database-properties-mirroring-page.md)，將 [作業模式] 選項變更為 [不具有自動容錯移轉的高安全性 (同步)]。 如需如何存取此頁面的資訊，請參閱[啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)。  
+    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性]**** 對話方塊的**鏡像頁面**，將 [作業模式][](../relational-databases/databases/database-properties-mirroring-page.md) 選項變更為 [不具有自動容錯移轉的高安全性 (同步)]****。 如需如何存取此頁面的資訊，請參閱[啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)。  
   
     -   在 [!INCLUDE[tsql](../includes/tsql-md.md)] 中：將交易安全性設定為 FULL。 如需詳細資訊，請參閱[在資料庫鏡像工作階段中變更交易安全性 &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)。  
   
 ### <a name="to-perform-the-rolling-update"></a>若要執行輪流更新  
   
-1.  若要讓停機時間減至最少，我們的建議如下：藉由更新是在所有鏡像工作階段中目前的鏡像伺服器的任何鏡像夥伴開始輪流更新。 您在此時可能必須更新多個伺服器執行個體。  
+1.  若要讓停機時間減至最少，我們建議您採取以下作法：在所有鏡像工作階段中更新目前為鏡像伺服器的任何鏡像夥伴伺服器，藉以開始輪流更新。 您在此時可能必須更新多個伺服器執行個體。  
   
     > [!NOTE]  
     >  您可以在輪流更新程序的任何時間更新見證。 例如，如果伺服器執行個體在工作階段 1 為鏡像伺服器，而在工作階段 2 為見證，您可以立刻更新此伺服器執行個體。  
@@ -93,11 +93,11 @@ ms.locfileid: "62779592"
   
      在更新之後，伺服器執行個體會自動重新加入它的每一個鏡像工作階段。  
   
-     **執行手動容錯移轉**  
+     **若要執行手動容錯移轉**  
   
     -   [手動容錯移轉資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
-    -   [手動容錯移轉資料庫鏡像工作階段 &#40;Transact-SQL&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md)。  
+    -   [&#40;transact-sql&#41;手動故障切換資料庫鏡像會話](database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md)。  
   
      如需手動容錯移轉如何運作的資訊，請參閱[資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62779592"
 4.  如果有任何伺服器執行個體目前在當做夥伴伺服器的所有鏡像工作階段中為鏡像伺服器，請在該伺服器執行個體上安裝 Service Pack 或 Hotfix。 您在此時可能必須更新多部伺服器。  
   
     > [!IMPORTANT]  
-    >  在複雜鏡像組態中，某些伺服器執行個體在一或多個鏡像工作階段中可能仍然是原始的主體伺服器。 更新相關的所有執行個體之前，請針對這些伺服器執行個體重複步驟 2-4。  
+    >  在複雜鏡像組態中，某些伺服器執行個體在一或多個鏡像工作階段中可能仍然是原始的主體伺服器。 針對這些伺服器實例重複步驟2-4，直到所有相關的實例都更新為止。  
   
 5.  繼續鏡像工作階段。  
   
@@ -123,9 +123,9 @@ ms.locfileid: "62779592"
   
 1.  您可以選擇使用下列其中一個方法來回到高效能模式：  
   
-    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性] 對話方塊的[鏡像頁面](../relational-databases/databases/database-properties-mirroring-page.md)，將 [作業模式] 選項變更為 [高效能 (非同步)]。  
+    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性]**** 對話方塊的**鏡像頁面**，將 [作業模式][](../relational-databases/databases/database-properties-mirroring-page.md) 選項變更為 [高效能 (非同步)]****。  
   
-    -   在 [!INCLUDE[tsql](../includes/tsql-md.md)] 中：使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)將交易安全性設定為 OFF。  
+    -   在[!INCLUDE[tsql](../includes/tsql-md.md)]中：使用[ALTER database](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)將交易安全性設定為 OFF。  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>讓見證回到鏡像工作階段  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62779592"
   
     -   [新增或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-    -   [使用 Windows 驗證新增資料庫鏡像見證 &#40;Transact-SQL&#41;](database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
+    -   [使用 Windows 驗證加入資料庫鏡像見證 &#40;Transact-sql&#41;](database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE 資料庫鏡像 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
@@ -144,6 +144,6 @@ ms.locfileid: "62779592"
  [資料庫鏡像作業模式](database-mirroring/database-mirroring-operating-modes.md)   
  [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
- [檢視鏡像資料庫的狀態 &#40;SQL Server Management Studio&#41;](database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)  
+ [查看鏡像資料庫的狀態 &#40;SQL Server Management Studio&#41;](database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)  
   
   

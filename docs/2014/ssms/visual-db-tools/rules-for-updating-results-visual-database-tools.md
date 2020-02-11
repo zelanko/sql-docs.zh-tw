@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f1814c96a5f58052be6271d2a35c1bbf78f87b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63066476"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>更新結果的規格 (Visual Database Tools)
@@ -38,19 +38,19 @@ ms.locfileid: "63066476"
 |-----------|-----------------------------|  
 |查詢是根據輸出清單中有主索引鍵的一份資料表|能 (不含下列清單)。|  
 |查詢是根據不含唯一索引，也沒有主索引鍵的一份資料表|依照查詢和資料庫而定。 如果有足夠的資訊則可單獨識別出記錄，有些資料庫允許更新。|  
-|查詢是根據未相連結的多份資料表|資料分割|  
-|查詢是根據資料庫中標記為唯讀的資料|資料分割|  
+|查詢是根據未相連結的多份資料表|否。|  
+|查詢是根據資料庫中標記為唯讀的資料|否。|  
 |查詢是根據一份檢視，牽涉無條件約束 (Constraint) 的一份資料表|能 (不含下列清單)。|  
 |查詢是根據一對一關聯性 (One-To-One Relationship) 所連結的資料表|能 (不含下列清單)。|  
 |查詢是根據一對多關聯性 (One-To-Many Relationship) 所連結的資料表|通常可以。|  
-|查詢是根據三份以上的資料表，具有多對多關聯性 (Many-To-Many Relationship)|資料分割|  
+|查詢是根據三份以上的資料表，具有多對多關聯性 (Many-To-Many Relationship)|否。|  
 |查詢是根據未獲得更新使用權限的一份資料表|可刪除但不能更新。|  
 |查詢是根據未獲得刪除使用權限的一份資料表|可更新但不能刪除。|  
-|彙總查詢 (Aggregate Query)|資料分割|  
-|查詢是根據包含總計或彙總函式 (Aggregate Function) 的子查詢 (Subquery)|資料分割|  
-|查詢包含有 DISTINCT 關鍵字，以排除重複的資料列|資料分割|  
-|查詢的 FROM 子句包含使用者自訂的函數，可傳回資料表，而且此使用者自訂的函數並包含多選陳述式|資料分割|  
-|查詢的 FROM 子句包含使用者自訂的內嵌 (Inline) 函數|是的。|  
+|彙總查詢 (Aggregate Query)|否。|  
+|查詢是根據包含總計或彙總函式 (Aggregate Function) 的子查詢 (Subquery)|否。|  
+|查詢包含有 DISTINCT 關鍵字，以排除重複的資料列|否。|  
+|查詢的 FROM 子句包含使用者自訂的函數，可傳回資料表，而且此使用者自訂的函數並包含多選陳述式|否。|  
+|查詢的 FROM 子句包含使用者自訂的內嵌 (Inline) 函數|是。|  
   
  此外，查詢結果中可能有特定的資料行無法更新。 以下的清單是資料行特定類型的摘要，[結果] 窗格不能更新。  
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed5ea8e711fcc3013a682f8c63a01dc042556f40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768834"
 ---
 # <a name="syntax-ssis"></a>語法 (SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "62768834"
 > [!NOTE]  
 >  在舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，當運算式的評估結果具有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型 DT_WSTR 或 DT_STR 時，結果就會具有 4000 個字元的限制。 這項限制已移除。  
   
- 如需使用特定運算子及函數的範例運算式，請參閱下列主題中每個運算子及函數的相關主題：[運算子 &#40;SSIS 運算式&#41;](operators-ssis-expression.md) 和[函式 &#40;SSIS 運算式&#41;](functions-ssis-expression.md)。  
+ 如需使用特定運算子及函數的範例運算式，請參閱下列主題中每個運算子及函數的相關主題：[運算子 &#40;SSIS 運算式&#41;](operators-ssis-expression.md) 和[函數 &#40;SSIS 運算式&#41;](functions-ssis-expression.md)。  
   
  如需使用多個運算子、函數以及識別碼和常值的範例運算式，請參閱 [進階 Integration Services 運算式範例](examples-of-advanced-integration-services-expressions.md)。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62768834"
 ###### <a name="equality-operators"></a>相等運算子  
  運算式評估工具文法描述提供 == 相等運算子。 此運算子相當於 Transact-SQL 中的 = 運算子以及 C# 中的 == 運算子。  
   
-## <a name="functions"></a>函式  
+## <a name="functions"></a>Functions  
  運算式語言包括與 Transact-SQL 函數和 C# 方法類似的日期和時間函數、數學函數以及字串函數。  
   
  其中有少數函數的名稱與 Transact-SQL 函數相同，但是在運算式評估工具中其功能則稍有不同。  

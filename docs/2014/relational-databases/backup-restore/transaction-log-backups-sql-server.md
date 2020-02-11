@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920681"
 ---
 # <a name="transaction-log-backups-sql-server"></a>交易記錄備份 (SQL Server)
@@ -37,10 +37,10 @@ ms.locfileid: "62920681"
   
 -   [相關內容](#RelatedContent)  
   
-##  <a name="LogBackupSequence"></a> 記錄備份順序的運作方式  
+##  <a name="LogBackupSequence"></a>記錄備份順序的運作方式  
  交易記錄備份 *「記錄檔鏈結」* (Log chain) 的順序與資料備份無關。 例如，假設發生以下一連串事件：  
   
-|Time|Event - 事件|  
+|Time|事件|  
 |----------|-----------|  
 |上午 8:00|備份資料庫。|  
 |中午|備份交易記錄。|  

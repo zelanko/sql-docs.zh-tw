@@ -19,22 +19,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902436"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 資料類型
   當資料輸入封裝中的資料流程時，擷取資料的來源會將資料轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 數值資料會指派為數值資料類型、字串資料指派為字元資料類型，而日期則是指派為日期資料類型。 其他資料，例如 GUID 和「二進位大型物件區塊 (BLOB)」也都會被指派適當的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 如果資料的資料類型不能轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型，則會發生錯誤。  
   
- 部分資料流程元件會在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]的 Managed 資料類型之間轉換資料類型。 如需 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 Managed 資料類型間對應的詳細資訊，請參閱 [使用資料流程中的資料類型](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)。  
+ 部分資料流程元件會在[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]資料類型和的 managed 資料類型[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]之間轉換資料類型。 如需 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 Managed 資料類型間對應的詳細資訊，請參閱 [使用資料流程中的資料類型](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)。  
   
  下表列出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 資料表中的某些資料類型具有適用的精確度和小數位數資訊。 如需有效位數和小數位數的詳細資訊，請參閱[有效位數、小數位數和長度 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/precision-scale-and-length-transact-sql)。  
   
 |資料類型|描述|  
 |---------------|-----------------|  
-|DT_BOOL|布林值 (Boolean)。|  
+|DT_BOOL|布林值。|  
 |DT_BYTES|二進位資料值。 長度是變數，且最大長度為 8,000 個位元組。|  
 |DT_CY|貨幣值。 此資料類型是 8 位元且小數位數為 4 的帶正負號的整數，最大有效位數為 19。|  
 |DT_DATE|包含年、月、日、小時、分鐘、秒和小數秒的日期結構。  小數秒的固定有效位數為 7 位數字。<br /><br /> DT_DATE 資料類型需使用 8 位元組的浮點數加以實作。 日期是以累進整數來表示，從 1899 年 12 月 30 日開始，並以午夜做為零時。 小時值則以小數點後數字部分的絕對值來表示。 不過，浮點值不能代表所有實數值；因此，DT_DATE 可以呈現的日期範圍便有所限制。<br /><br /> 另一方面，DT_DBTIMESTAMP 是以內部包含年、月、日、時、分、秒及毫秒等個別欄位的結構來表示， 而且這種資料類型所能呈現的日期範圍具有較寬的限制。|  
@@ -60,14 +60,15 @@ ms.locfileid: "62902436"
 |DT_UI4|四位元組不帶正負號的整數。|  
 |DT_UI8|八位元組不帶正負號的整數。|  
 |DT_WSTR|最大長度為 4000 字元，以 Null 終止的 Unicode 字元字串。 如果資料行值包含額外的 Null 結束字元，字串就會在第一個 Null 出現時被截斷。|  
-|DT_IMAGE|大小上限為 2 的二進位值<sup>31</sup>-1 (2,147,483,647) 個位元組。 .|  
-|DT_NTEXT|最大長度為 2 的 Unicode 字元字串<sup>30</sup> -1 (1,073,741,823) 個字元。|  
-|DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS 字元字串的最大長度為 2<sup>31</sup>-1 (2,147,483,647) 個字元。|  
+|DT_IMAGE|大小上限為 2<sup>31</sup>-1 （2147483647）個位元組的二進位值。 .|  
+|DT_NTEXT|最大長度為 2<sup>30</sup> -1 （1073741823）個字元的 Unicode 字元字串。|  
+|DT_TEXT|最[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]大長度為 2<sup>31</sup>-1 （2147483647）個字元的/MBCS 字元字串。|  
   
 ## <a name="conversion-of-data-types"></a>資料類型的轉換  
  如果資料行中的資料不需要來源資料類型配置的全形字元，您可能需要變更該資料行的資料類型。 在傳送資料時，每個資料列愈窄愈有助於最佳化效能，因為每個資料列愈窄，資料從來源移動到目的地的速度就會愈快。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含完整的一組數值資料類型，以便您可以使資料類型與資料大小密切相符。 例如，如果資料類型為 DT_UI8 之資料列中的值始終是 0 至 3000 之間的整數，則您可以將資料類型變更為 DT_UI2。 同樣地，如果資料類型為 DT_CY 的資料行可以透過改用整數資料類型來滿足封裝資料需求，則您可以將資料類型變更為 DT_I4。  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含完整的一組數值資料類型，以便您可以使資料類型與資料大小密切相符。 例如，如果資料類型為 DT_UI8 之資料列中的值始終是 0 至 3000 之間的整數，則您可以將資料類型變更為 DT_UI2。 同樣地，如果資料類型為 DT_CY 的資料行可以透過改用整數資料類型來滿足封裝資料需求，則您可以將資料類型變更為 DT_I4。  
   
  您可以透過下列方式變更資料行的資料類型：  
   
@@ -105,7 +106,7 @@ ms.locfileid: "62902436"
 ### <a name="converting-datetime-data-types"></a>轉換日期/時間資料類型  
  您也可以變更具有日期/時間資料之資料行的資料類型，以擷取該資料的日期或時間部分。 下表列出將日期/時間資料類型變更為其他日期/時間資料類型的結果。  
   
-#### <a name="converting-from-dtfiletime"></a>從 DT_FILETIME 轉換  
+#### <a name="converting-from-dt_filetime"></a>從 DT_FILETIME 轉換  
   
 |轉換 DT_FILETIME 到|結果|  
 |-----------------------------|------------|  
@@ -118,7 +119,7 @@ ms.locfileid: "62902436"
 |DT_DBTIMESTAMP2|當小數秒值的小數位數大於 DT_DBTIMESTAMP2 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](error-handling-in-data.md)。|  
 |DT_DBTIMESTAMPOFFSET|將 DT_DBTIMESTAMPOFFSET 資料類型中的時區欄位設定為零。<br /><br /> 當小數秒值的小數位數大於 DT_DBTIMESTAMPOFFSET 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](error-handling-in-data.md)。|  
   
-#### <a name="converting-from-dtdate"></a>從 DT_DATE 轉換  
+#### <a name="converting-from-dt_date"></a>從 DT_DATE 轉換  
   
 |轉換 DT_DATE 到|結果|  
 |-------------------------|------------|  
@@ -131,7 +132,7 @@ ms.locfileid: "62902436"
 |DT_DBTIMESTAMP2|轉換資料類型。|  
 |DT_DBTIMESTAMPOFFSET|將 DT_DBTIMESTAMPOFFSET 資料類型中的時區欄位設定為零。|  
   
-#### <a name="converting-from-dtdbdate"></a>從 DT_DBDATE 轉換  
+#### <a name="converting-from-dt_dbdate"></a>從 DT_DBDATE 轉換  
   
 |轉換 DT_DBDATE 到|結果|  
 |---------------------------|------------|  
@@ -144,7 +145,7 @@ ms.locfileid: "62902436"
 |DT_DBTIMESTAMP2|將 DT_DBTIMESTAMP 資料類型中的時間欄位設定為零。|  
 |DT_DBTIMESTAMPOFFSET|將 DT_DBTIMESTAMPOFFSET 資料類型中的時間欄位和時區欄位設定為零。|  
   
-#### <a name="converting-from-dtdbtime"></a>從 DT_DBTIME 轉換  
+#### <a name="converting-from-dt_dbtime"></a>從 DT_DBTIME 轉換  
   
 |轉換 DT_DBTIME 到|結果|  
 |---------------------------|------------|  
@@ -157,7 +158,7 @@ ms.locfileid: "62902436"
 |DT_DBTIMESTAMP2|將 DT_DBTIMESTAMP2 資料類型中的日期欄位設定為目前的日期。|  
 |DT_DBTIMESTAMPOFFSET|將 DT_DBTIMESTAMPOFFSET 資料類型中的日期欄位和時區欄位分別設定為目前的日期和零。|  
   
-#### <a name="converting-from-dtdbtime2"></a>從 DT_DBTIME2 轉換  
+#### <a name="converting-from-dt_dbtime2"></a>從 DT_DBTIME2 轉換  
   
 |轉換 DT_DBTIME2 到|結果|  
 |----------------------------|------------|  
@@ -170,7 +171,7 @@ ms.locfileid: "62902436"
 |DT_DBTIMESTAMP2|將 DT_DBTIMESTAMP2 資料類型中的日期欄位設定為目前的日期。<br /><br /> 當小數秒值的小數位數大於 DT_DBTIMESTAMP2 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](error-handling-in-data.md)。|  
 |DT_DBTIMESTAMPOFFSET|將 DT_DBTIMESTAMPOFFSET 資料類型中的日期欄位和時區欄位分別設定為目前的日期和零。<br /><br /> 當小數秒值的小數位數大於 DT_DBTIMESTAMPOFFSET 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](error-handling-in-data.md)。|  
   
-#### <a name="converting-from-dtdbtimestamp"></a>從 DT_DBTIMESTAMP 轉換  
+#### <a name="converting-from-dt_dbtimestamp"></a>從 DT_DBTIMESTAMP 轉換  
   
 |轉換 DT_DBTIMESTAMP 到|結果|  
 |--------------------------------|------------|  
@@ -183,7 +184,7 @@ ms.locfileid: "62902436"
 |DT_DBTIMESTAMP2|當小數秒值的小數位數大於 DT_DBTIMESTAMP2 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](error-handling-in-data.md)。|  
 |DT_DBTIMESTAMPOFFSET|將 DT_DBTIMESTAMPOFFSET 資料類型中的時區欄位設定為零。<br /><br /> 當小數秒值的小數位數大於 DT_DBTIMESTAMPOFFSET 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](error-handling-in-data.md)。|  
   
-#### <a name="converting-from-dtdbtimestamp2"></a>從 DT_DBTIMESTAMP2 轉換  
+#### <a name="converting-from-dt_dbtimestamp2"></a>從 DT_DBTIMESTAMP2 轉換  
   
 |轉換 DT_DBTIMESTAMP2 到|結果|  
 |---------------------------------|------------|  
@@ -196,7 +197,7 @@ ms.locfileid: "62902436"
 |DT_DBTIMESTAMP2|當小數秒值的小數位數大於目的地 DT_DBTIMESTAMP2 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](error-handling-in-data.md)。|  
 |DT_DBTIMESTAMPOFFSET|將 DT_DBTIMESTAMPOFFSET 資料類型中的時區欄位設定為零。<br /><br /> 當小數秒值的小數位數大於 DT_DBTIMESTAMPOFFSET 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](error-handling-in-data.md)。|  
   
-#### <a name="converting-from-dtdbtimestampoffset"></a>從 DT_DBTIMESTAMPOFFSET 轉換  
+#### <a name="converting-from-dt_dbtimestampoffset"></a>從 DT_DBTIMESTAMPOFFSET 轉換  
   
 |轉換 DT_DBTIMESTAMPOFFSET 到|結果|  
 |--------------------------------------|------------|  
@@ -218,30 +219,30 @@ ms.locfileid: "62902436"
 > [!NOTE]  
 >  您可以使用 SQL Server 資料類型來估計對應 Integration Services date 和 time 資料類型的大小。  
   
-|資料類型|[SQL Server]<br /><br /> (SQLOLEDB; SQLNCLI10)|SQL Server (SqlClient)|Jet|Oracle<br /><br /> (OracleClient)|DB2<br /><br /> (DB2OLEDB)|DB2<br /><br /> (IBMDADB2)|  
+|資料類型|SQL Server<br /><br /> (SQLOLEDB; SQLNCLI10)|SQL Server (SqlClient)|Jet|Oracle<br /><br /> (OracleClient)|DB2<br /><br /> (DB2OLEDB)|DB2<br /><br /> (IBMDADB2)|  
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
-|DT_CY|smallmoney, money|smallmoney, money|Currency||||  
+|DT_CY|smallmoney、money|smallmoney、money|貨幣||||  
 |DT_DATE|||||||  
-|DT_DBDATE|[日期 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[日期 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||日期|日期|日期|  
-|DT_DBTIME||||TIMESTAMP|time|time|  
-|DT_DBTIME2|[時間 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[時間 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
-|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)、[smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)、[smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|Datetime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
-|DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
-|DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
+|DT_DBDATE|[日期 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[日期 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||date|date|date|  
+|DT_DBTIME||||timestamp|time|time|  
+|DT_DBTIME2|[時間 &#40;transact-sql&#41;](/sql/t-sql/data-types/time-transact-sql)（p）|[時間 &#40;transact-sql&#41;](/sql/t-sql/data-types/time-transact-sql) （p）|||||  
+|DT_DBTIMESTAMP|[datetime &#40;transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql)、 [Smalldatetime &#40;transact-sql&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql)、 [Smalldatetime &#40;transact-sql&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|Datetime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
+|DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)||timestamp|timestamp|timestamp|  
+|DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;transact-sql&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)（p）|[datetimeoffset &#40;transact-sql&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) （p）||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
 |DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
-|DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
-|DT_I4|ssNoversion|ssNoversion|長整數||INTEGER|INTEGER|  
-|DT_I8|BIGINT|BIGINT|||bigint|bigint|  
+|DT_I2|smallint|smallint|簡短||SMALLINT|SMALLINT|  
+|DT_I4|int|int|long||INTEGER|INTEGER|  
+|DT_I8|BIGINT|BIGINT|||BIGINT|BIGINT|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|REAL|REAL|Single||real|real|  
-|DT_R8|FLOAT|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
-|DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
-|DT_UI1|TINYINT|TINYINT|Byte||||  
+|DT_R4|real|real|Single||real|real|  
+|DT_R8|FLOAT|FLOAT|DOUBLE|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
+|DT_STR|char, varchar||VarChar||char, varchar|char, varchar|  
+|DT_UI1|tinyint|tinyint|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
 |DT_UI8|||||||  

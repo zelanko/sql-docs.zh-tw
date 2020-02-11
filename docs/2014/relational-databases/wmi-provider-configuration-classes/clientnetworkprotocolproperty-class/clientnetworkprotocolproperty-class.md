@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 05bd3c59428b719e5d292dd3d122e5c8af0b7b79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62826669"
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>ClientNetworkProtocolProperty 類別
-  [ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)表示用戶端網路通訊協定的屬性。  
+  [ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)代表用戶端網路通訊協定的屬性。  
   
- 具有[ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)，您可以執行下列工作：  
+ 使用[ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)，您可以執行下列工作：  
   
 -   設定索引值，以便從屬性清單中選取用戶端網路通訊協定屬性。  
   

@@ -18,10 +18,10 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a79b8399a6b435d4ed8b391b040e4800f1f50405
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67988440"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的唯讀路由
@@ -53,14 +53,14 @@ ms.locfileid: "67988440"
 -   如果要支援唯讀路由的可用性複本為主要複本時，則必須指定 *「唯讀路由清單」* (Read-Only Routing List)。 只有本機複本以主要角色執行時，給定的唯讀路由清單才會生效。 如有必要，您必須各自指定每個複本的這份清單。 一般而言，每份唯讀路由清單皆會包含每一個唯讀路由 URL，並在清單結尾提供本機複本的 URL。  
   
     > [!NOTE]  
-    >  讀取意圖的連接要求會路由至目前主要複本的唯讀路由清單上的第一個可用項目。 不過，唯讀複本之間會支援負載平衡。 如需詳細資訊，請參閱 [設定唯讀複本之間的負載平衡](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)。  
+    >  讀取意圖的連接要求會路由至目前主要複本的唯讀路由清單上的第一個可用項目。 不過，唯讀複本之間會支援負載平衡。 如需詳細資訊，請參閱[設定唯讀複本之間的負載平衡](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)。  
   
 > [!NOTE]  
 >  如需可用性群組接聽程式的相關資訊，以及唯讀路由的詳細資訊，請參閱 [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
   
 ##  <a name="Permissions"></a> 權限  
   
-|工作|權限|  
+|Task|權限|  
 |----------|-----------------|  
 |若要在建立可用性群組時設定複本|需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 |若要修改可用性複本|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
@@ -166,11 +166,11 @@ GO
   
     -   若要設定次要角色的唯讀路由，請指定 **ReadonlyRoutingConnectionUrl"** _url_ **"** 參數。  
   
-         其中， *url* 是路由至複本進行唯讀連接時要使用的連接性完整網域名稱 (FQDN) 和通訊埠。 例如：  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
+         其中， *url* 是路由至複本進行唯讀連接時要使用的連接性完整網域名稱 (FQDN) 和通訊埠。 例如：`-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          如需詳細資訊，請參閱 [Calculating read_only_routing_url for Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)(計算 AlwaysOn 的 read_only_routing_url)。  
   
-    -   若要設定主要角色的連接存取，請指定 **ReadonlyRoutingList"** _server_ **"** [ **,** ...*n* ]，其中 *server* 會識別裝載可用性群組中唯讀次要複本的伺服器執行個體。 例如：  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   若要設定主要角色的連接存取，請指定 **ReadonlyRoutingList"** _server_ **"** [ **,** ...*n* ]，其中 *server* 會識別裝載可用性群組中唯讀次要複本的伺服器執行個體。 例如：`-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  您必須先設定複本的唯讀路由 URL，然後再設定其唯讀路由清單。  

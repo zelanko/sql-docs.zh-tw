@@ -1,5 +1,5 @@
 ---
-title: 第 4 課：加入錯誤流程重新導向 |Microsoft Docs
+title: 第4課：加入錯誤流程重新導向 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 636c199e84eae9bd141bcb33fc5c06f35eac760b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891324"
 ---
-# <a name="lesson-4-adding-error-flow-redirection"></a>第 4 課：新增錯誤流程重新導向
-  為了處理發生在轉換處理序中的錯誤， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一項功能，讓您能夠決定每一個元件和每一個資料行要如何處理無法轉換的資料。 您可以選擇忽略特定資料行的失敗、將整個失敗的資料列重新導向，或僅使該元件失敗。 依預設， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的所有元件都設定為發生錯誤時失敗。 使元件失敗會造成封裝失敗及所有後續處理停止。  
+# <a name="lesson-4-adding-error-flow-redirection"></a>「課程 4：加入錯誤流程重新導向
+  為了處理轉換程式中可能發生的錯誤， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]讓您能夠決定每個元件和每個資料行如何處理無法轉換的資料。 您可以選擇忽略特定資料行的失敗、將整個失敗的資料列重新導向，或僅使該元件失敗。 依預設， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的所有元件都設定為發生錯誤時失敗。 使元件失敗會造成封裝失敗及所有後續處理停止。  
   
  若不要因為失敗而停止封裝執行，則設定及處理在轉換中可能發生的處理錯誤，是不錯的作法。 與其選擇忽略失敗以確保封裝可順利執行，不如將失敗的資料列重新導向至另一個處理路徑，讓資料和錯誤都可以保存、檢查及稍後再重新處理。  
   
- 在這一課，您將建立一份您在開發套件[第 3 課：新增記錄](lesson-3-add-logging-with-ssis.md)。 利用這個新的封裝，您可以建立其中一個範例資料檔的損毀版本。 當您執行封裝時，損毀的檔案將強迫發生處理錯誤。  
+ 在這一課，您會建立您在＜ [Lesson 3: Adding Logging](lesson-3-add-logging-with-ssis.md)＞所開發的封裝副本。 利用這個新的封裝，您可以建立其中一個範例資料檔的損毀版本。 當您執行封裝時，損毀的檔案將強迫發生處理錯誤。  
   
  為了處理錯誤資料，您會加入及設定一般檔案目的地，將在 [查閱貨幣索引鍵] 轉換中找不到查閱值的資料列寫入檔案中。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62891324"
   
 -   [步驟 1：複製第 3 課的套件](lesson-4-1-copying-the-lesson-3-package.md)  
   
--   [步驟 2：建立損毀的檔案](lesson-4-2-creating-a-corrupted-file.md)  
+-   [步驟 2：建立損毀檔案](lesson-4-2-creating-a-corrupted-file.md)  
   
 -   [步驟 3：加入錯誤流程重新導向](lesson-4-3-adding-error-flow-redirection.md)  
   

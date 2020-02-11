@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a1af9aea2b4088c2a8d3753fd55feaa0f43ae6ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811365"
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>設定 scan for startup procs 伺服器組態選項
@@ -28,7 +28,7 @@ ms.locfileid: "62811365"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法設定 scan for startup procs 選項：**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62811365"
   
 -   您可以使用 **sp_configure**來設定這個選項的值；然而如果您使用 **sp_procoption**(用以標示或取消標示自動執行的預存程序)，這個選項的值就會自動設定。 當 **sp_procoption** 用來將第一個預存程序標示為 autoproc 時，這個選項會自動設定為值 1。 當 **sp_procoption** 用來將最後一個預存程序取消標示 autoproc 時，這個選項會自動設定為值 0。 如果您使用 **sp_procoption** 標示和取消標示 autoproc，而且固定在捨棄 autoproc 之前取消其標示，則不需要手動設定這個選項。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  

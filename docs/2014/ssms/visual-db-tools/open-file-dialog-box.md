@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63138880"
 ---
 # <a name="open-file-dialog-box"></a>開啟檔案對話方塊
@@ -25,10 +25,10 @@ ms.locfileid: "63138880"
  若要存取這個對話方塊，請從 [檔案]  功能表選取 [開啟]  ，然後再選擇 [檔案]  。 從其他元素 (例如 [外部工具]  對話方塊) 開啟檔案時，也會出現這個對話方塊。 從 [檔案]  功能表選取 [開啟]  ，然後選擇 [專案/方案]  以開啟相同的 [開啟專案]  對話方塊。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中開啟專案或元件之前，請判斷其程式碼的可信度。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中開啟專案或元件的動作可能會在本機電腦的信任處理序中執行它的程式碼。  
+>  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中開啟專案或元件之前，請判斷其程式碼的可信度。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中開啟專案或元件的動作可能會在本機電腦的信任處理序中執行它的程式碼。  
   
 ## <a name="option"></a>選項  
- **查詢**  
+ **Look in**  
  從這個下拉式功能表找出現有的專案資料夾。 從此清單中選取資料夾會在主窗格中顯示該資料夾的內容。  
   
 ## <a name="my-places-bar"></a>我的位置工作列  

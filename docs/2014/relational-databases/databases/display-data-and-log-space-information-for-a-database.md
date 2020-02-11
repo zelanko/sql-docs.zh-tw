@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4850be4c112f9c0b987d543873cb55af08372455
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917324"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>顯示資料庫的資料和記錄空間資訊
@@ -33,9 +33,9 @@ ms.locfileid: "62917324"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要顯示的資料和記錄檔空間資訊的資料庫，使用：**  
+-   **使用下列方法，顯示資料庫的資料和記錄空間資訊：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62917324"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  執行 **sp_spaceused** 的權限會授與 **public** 角色。 只有 **db_owner** 固定資料庫角色的成員，才能夠指定 **@updateusage** 參數。  
@@ -52,15 +52,15 @@ ms.locfileid: "62917324"
   
 #### <a name="to-display-data-and-log-space-information-for-a-database"></a>若要顯示資料庫的資料和記錄空間資訊  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，然後展開該執行個體。  
+1.  在物件總管中，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，然後展開該執行個體。  
   
 2.  展開 **[資料庫]** 。  
   
-3.  以滑鼠右鍵按一下資料庫，然後依序指向 [報表]  、[標準報表]  ，再按一下 [磁碟使用量]  。  
+3.  以滑鼠右鍵按一下資料庫，然後依序指向 [報表]****、[標準報表]****，再按一下 [磁碟使用量]****。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### <a name="to-display-data-and-log-space-information-for-a-database-by-using-spspaceused"></a>使用 sp_spaceused 顯示資料庫的資料和記錄空間資訊  
+#### <a name="to-display-data-and-log-space-information-for-a-database-by-using-sp_spaceused"></a>使用 sp_spaceused 顯示資料庫的資料和記錄空間資訊  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -75,7 +75,7 @@ EXEC sp_spaceused N'Purchasing.Vendor';
 GO  
 ```  
   
-#### <a name="to-display-data-and-log-space-information-for-a-database-by-querying-sysdatabasefiles"></a>透過查詢 sys.database_files 來顯示資料庫的資料和記錄空間資訊  
+#### <a name="to-display-data-and-log-space-information-for-a-database-by-querying-sysdatabase_files"></a>透過查詢 sys.database_files 來顯示資料庫的資料和記錄空間資訊  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -94,9 +94,9 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
- [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
- [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)   
- [將資料或記錄檔加入資料庫](add-data-or-log-files-to-a-database.md)   
+ [database_files &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
+ [sp_spaceused &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)   
+ [將資料或記錄檔加入至資料庫](add-data-or-log-files-to-a-database.md)   
  [刪除資料庫的資料或記錄檔](delete-data-or-log-files-from-a-database.md)  
   
   

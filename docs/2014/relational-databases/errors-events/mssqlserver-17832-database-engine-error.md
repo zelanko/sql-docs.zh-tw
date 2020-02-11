@@ -16,13 +16,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1280bb44d11ce4f8234d544bf113e796a9c3c85c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915426"
 ---
-# <a name="mssqlserver17832"></a>MSSQLSERVER_17832
+# <a name="mssqlserver_17832"></a>MSSQLSERVER_17832
     
 ## <a name="details"></a>詳細資料  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62915426"
 ## <a name="explanation"></a>說明  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦無法處理用戶端登入封包。 這可能是因為封包的建立方式不正確，或者封包在傳輸期間已損毀。 此外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦的組態也可能會造成這個錯誤。 所列出的 IP 位址就是用戶端電腦的位址。  
   
-### <a name="more-information"></a>[詳細資訊]  
+### <a name="more-information"></a>相關資訊  
  在 Kerberos 環境中使用 Windows 驗證時，用戶端就會接收包含專用權屬性憑證 (PAC) 的 Kerberos Ticket。 此 PAC 包含各種類型的授權資料，包括使用者為所屬成員的群組、使用者擁有的權限，以及哪些原則會套用至使用者。 當此用戶端接收 Kerberos Ticket 時，PAC 中所包含的資訊就會用來產生使用者的存取 Token。 此用戶端會將 Token 呈現給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦，當做登入封包的一部分。  
   
  如果此 Token 的建立方式不正確或者在傳輸期間已損毀，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就無法提供有關問題的其他資訊。  
@@ -51,11 +51,11 @@ ms.locfileid: "62915426"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
- **若要在伺服器電腦上變更 MaxTokenSize**  
+ **變更伺服器電腦上的 MaxTokenSize**  
   
 1.  在 **[開始]** 功能表上，按一下 **[執行]** 。  
   
-2.  型別`regedit`，然後按一下 **[確定]** 。 (如果出現 [使用者帳戶控制]  對話方塊，請按一下 [繼續]  )。  
+2.  輸入`regedit`，然後按一下 **[確定]**。 (如果出現 [使用者帳戶控制]  對話方塊，請按一下 [繼續]  )。  
   
 3.  巡覽至 **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**。  
   

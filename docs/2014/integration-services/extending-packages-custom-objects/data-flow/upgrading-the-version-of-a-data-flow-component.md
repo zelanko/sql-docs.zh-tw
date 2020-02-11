@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 33ea6f845c323a858d1bd89318f2b8e07b734edd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896094"
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>升級資料流程元件的版本
@@ -44,7 +44,7 @@ ms.locfileid: "62896094"
 -   將版本中繼資料設定成元件的目前版本。  
   
 > [!NOTE]  
->  資料流程引擎會在 *pipelineVersion* 參數中將自己的版本號碼傳遞至 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> 方法。 此參數在 1.0 版的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中沒有用處，但是在後續版本中可能會變成有用。  
+>  資料流程引擎會在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A>pipelineVersion*參數中將自己的版本號碼傳遞至* 方法。 此參數在 1.0 版的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中沒有用處，但是在後續版本中可能會變成有用。  
   
  範例程式碼只會使用兩個列舉值，以直接對應至自訂屬性之前的布林值。 使用者可以透過元件的自訂使用者介面、在 [進階編輯器] 中或是以程式設計方式，選取其他可用的列舉值。 如需有關在 [進階編輯器] 中顯示自訂屬性之列舉值的資訊，請參閱[資料流程元件的設計階段方法](design-time-methods-of-a-data-flow-component.md)中的＜建立自訂屬性＞。  
   
@@ -179,6 +179,6 @@ public class PerformUpgradeCS :
 }  
 ```  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
   

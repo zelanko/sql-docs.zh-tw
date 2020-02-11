@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d88e0826617b63638c720f176da84a85d68a7e18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774494"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
@@ -28,7 +28,7 @@ ms.locfileid: "62774494"
   
 ## <a name="primary-server-tables"></a>主要伺服器資料表  
   
-|資料表|描述|  
+|Table|描述|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|儲存警示作業識別碼。 若未設定遠端監視伺服器，則此資料表只會用於主要伺服器。|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|儲存與此主要伺服器關聯之記錄傳送作業的錯誤詳細資料。|  
@@ -53,7 +53,7 @@ ms.locfileid: "62774494"
   
 ## <a name="secondary-server-tables"></a>次要伺服器資料表  
   
-|資料表|描述|  
+|Table|描述|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|儲存警示作業識別碼。 若未設定遠端監視伺服器，則此資料表只會用於次要伺服器。|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|儲存與此次要伺服器關聯之記錄傳送作業的錯誤詳細資料。|  
@@ -82,7 +82,7 @@ ms.locfileid: "62774494"
   
 ## <a name="monitor-server-tables"></a>監視伺服器資料表  
   
-|資料表|描述|  
+|Table|描述|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|儲存警示作業識別碼。|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|儲存記錄傳送作業的錯誤詳細資料。|  

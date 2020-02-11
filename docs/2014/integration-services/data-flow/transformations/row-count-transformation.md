@@ -19,27 +19,27 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d991ee94e04be0ea72450b8e3e4649c339d1c2a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900208"
 ---
 # <a name="row-count-transformation"></a>資料列計數轉換
   「資料列計數」轉換會在資料列通過資料流程時計算其數目，並將最後計數儲存到變數中。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 封裝可使用資料列計數更新指令碼、運算式和屬性運算式中使用的變數 (例如，儲存資料列計數的變數可更新電子郵件訊息中的訊息文字，以便加入資料列數)。「資料列計數」轉換使用的變數必須已存在，且必須在擁有「資料列計數」轉換的資料流程所屬的「資料流程」工作範圍內。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]封裝可以使用資料列計數來更新腳本、運算式和屬性運算式中使用的[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]變數。 (例如，儲存資料列計數的變數可更新電子郵件訊息中的訊息文字，以便加入資料列數)。「資料列計數」轉換使用的變數必須已存在，且必須在擁有「資料列計數」轉換的資料流程所屬的「資料流程」工作範圍內。  
   
  此轉換只會在最後一個資料列傳遞至轉換之後，才使用變數儲存資料列計數值。 因此，變數的值不會及時更新為使用資料流程中包含「資料列計數」轉換的更新值。 您可以在個別的資料流程中使用更新的變數。  
   
  此轉換有一個輸入和一個輸出。 它不支援錯誤輸出。  
   
 ## <a name="configuration-of-the-row-count-transformation"></a>資料列計數轉換的組態  
- 您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [轉換自訂屬性](transformation-custom-properties.md)  
   

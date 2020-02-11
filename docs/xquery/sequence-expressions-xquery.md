@@ -1,5 +1,5 @@
 ---
-title: 序列運算式 (XQuery) |Microsoft 文件
+title: 序列運算式（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,15 +17,16 @@ ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946301"
 ---
 # <a name="sequence-expressions-xquery"></a>序列運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可支援用來建構、篩選和結合項目序列的 XQuery 運算子。 項目可以是不可部份完成值或節點。  
   
 ## <a name="constructing-sequences"></a>建構序列  
@@ -88,7 +89,7 @@ select @x.query('for $i in ((1,2),10,(),(4, 5, 6))
 go  
 ```  
   
- 您可以使用，以計算序列中的項目**fn**函式。  
+ 您可以使用**fn： count （）** 函數來計算序列中的專案。  
   
 ```  
 declare @x xml  
@@ -99,7 +100,7 @@ go
 ```  
   
 ### <a name="example-c"></a>範例 C  
- 下列查詢針對 AdditionalContactInfo 資料行的指定**xml** Contact 資料表中的型別。 這個資料行會儲存其他的連絡資訊，例如一或多個其他的電話號碼、呼叫器號碼和地址。 \<TelephoneNumber >，\<頁面巡覽區 >，且其他節點可以任何位置出現在文件。 此查詢會建構序列，其中包含所有\<telephoneNumber > 子系內容節點，後面接著\<頁面巡覽區 > 子系。 請注意，在 return 運算式 (`($a//act:telephoneNumber, $a//act:pager)`) 中使用逗號序列運算子。  
+ 下列查詢是針對 Contact 資料表中**xml**類型的 AdditionalContactInfo 資料行所指定。 這個資料行會儲存其他的連絡資訊，例如一或多個其他的電話號碼、呼叫器號碼和地址。 \<TelephoneNumber>、 \<呼機> 和其他節點都可以出現在檔中的任何位置。 查詢會建立一個序列，其中包含內容\<節點的所有 telephoneNumber> 子系，後面接著\<分頁> 子系。 請注意，在 return 運算式 (`($a//act:telephoneNumber, $a//act:pager)`) 中使用逗號序列運算子。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -131,7 +132,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>篩選序列  
- 您可以將述詞加入到運算式中，來篩選運算式傳回的序列。 如需詳細資訊，請參閱 <<c0> [ 路徑運算式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)。</c0> 例如，下列查詢會傳回序列，包含三個 <`a`> 元素節點：  
+ 您可以將述詞加入到運算式中，來篩選運算式傳回的序列。 如需詳細資訊，請參閱[&#40;XQuery&#41;的路徑運算式](../xquery/path-expressions-xquery.md)。 例如，下列查詢會傳回三個 <`a`> 元素節點的序列：  
   
 ```  
 declare @x xml  
@@ -151,7 +152,7 @@ SELECT @x.query('/root/a')
 <a />  
 ```  
   
- 若要只擷取 <`a`> 項目具有 attrA 屬性，您可以指定篩選述詞中。 產生的序列將會有一個 <`a`> 項目。  
+ 若 <`a`只要抓取具有 attrA 屬性的> 元素，您可以在述詞中指定篩選準則。 產生的序列只會有一個 <`a`> 元素。  
   
 ```  
 declare @x xml  
@@ -169,7 +170,7 @@ SELECT @x.query('/root/a[@attrA]')
 <a attrA="1">111</a>  
 ```  
   
- 如需如何指定路徑運算式中的述詞的詳細資訊，請參閱[路徑運算式步驟中指定的述詞](../xquery/path-expressions-specifying-predicates.md)。  
+ 如需如何在路徑運算式中指定述詞的詳細資訊，請參閱[在路徑運算式步驟中指定述](../xquery/path-expressions-specifying-predicates.md)詞。  
   
  下列範例會建立一個子樹的序列運算式，然後將篩選套用到序列中。  
   
@@ -187,7 +188,8 @@ set @x = '
 '  
 ```  
   
- `(/a, /b)` 中的運算式會建構一個含有子樹 `/a` 及 `/b` 的序列，運算式並會從產生的序列篩選元素 `<c>`。  
+ 
+  `(/a, /b)` 中的運算式會建構一個含有子樹 `/a` 及 `/b` 的序列，運算式並會從產生的序列篩選元素 `<c>`。  
   
 ```  
 SELECT @x.query('  
@@ -202,7 +204,7 @@ SELECT @x.query('
 <c>C under b</c>  
 ```  
   
- 下列範例會套用述詞篩選。 運算式會尋找項目的 <`a`> 和 <`b`> 項目包含 <`c`>。  
+ 下列範例會套用述詞篩選。 運算式會尋找 <`a`> 的專案， `b`以及包含 <`c`> 元素的 <>。  
   
 ```  
 declare @x xml  
