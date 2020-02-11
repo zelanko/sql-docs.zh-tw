@@ -1,5 +1,5 @@
 ---
-title: sp_changemergearticle & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_changemergearticle （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/09/2015
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 35d1ef721df6f67e4cd5c0f993458238394ac0e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104516"
 ---
-# <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
+# <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   變更合併發行項的屬性。 這個預存程序執行於發行集資料庫的發行者端。  
@@ -42,56 +42,56 @@ sp_changemergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'` 是發行項所在發行集名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'`這是發行項所在的發行集名稱。 *發行*集是**sysname**，沒有預設值。  
   
-`[ @article = ] 'article'` 是要變更的發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
+`[ @article = ] 'article'`這是要變更的發行項名稱。 *文章*是**sysname**，沒有預設值。  
   
-`[ @property = ] 'property'` 這是要變更之給定發行項和發行集屬性。 *屬性*已**nvarchar(30)** ，它可以其中一個值列出資料表中。  
+`[ @property = ] 'property'`這是給定發行項和發行集要變更的屬性。 *property*是**Nvarchar （30）**，它可以是下表所列的其中一個值。  
   
-`[ @value = ] 'value'` 是指定之屬性的新值。 *值*已**nvarchar(1000)** ，它可以其中一個值列出資料表中。  
+`[ @value = ] 'value'`這是指定之屬性的新值。 *value*是**Nvarchar （1000）**，它可以是資料表中所列的其中一個值。  
   
  下表描述發行項的屬性及這些屬性的值。  
   
 |屬性|值|描述|  
 |--------------|------------|-----------------|  
-|**allow_interactive_resolver**|**true**|啟用發行項的互動式解析程式。|  
+|**allow_interactive_resolver**|**真正**|啟用發行項的互動式解析程式。|  
 ||**false**|停用發行項的互動式解析程式。|  
 |**article_resolver**||自訂的發行項解析程式。 只適用於資料表發行項。|  
 |**check_permissions** （點陣圖）|**0x00**|不檢查資料表層級權限。|  
 ||**0x10**|在發行者端套用訂閱者所建立的 INSERT 陳述式之前，先在發行者端檢查資料表層級權限。|  
 ||**0x20**|在發行者端套用訂閱者所建立的 UPDATE 陳述式之前，先檢查發行者端的資料表層級權限。|  
 ||**0x40**|在發行者端套用訂閱者所建立的 DELETE 陳述式之前，先檢查發行者端的資料表層級權限。|  
-|**column_tracking**|**true**|開啟資料行層級追蹤。 只適用於資料表發行項。<br /><br /> 注意:發行資料表與超過 246 個資料行時，無法使用資料行層級追蹤。|  
+|**column_tracking**|**真正**|開啟資料行層級追蹤。 只適用於資料表發行項。<br /><br /> 注意：發行具有超過246個數據行的資料表時，不能使用資料行層級追蹤。|  
 ||**false**|關閉資料行層級追蹤，將衝突偵測保留在資料列層級。 只適用於資料表發行項。|  
-|**compensate_for_errors**|**true**|在同步處理期間，當發生錯誤時，執行補償動作。 如需詳細資訊，請參閱 < [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
-||**false**|不執行補償動作，這是預設行為。 如需詳細資訊，請參閱 < [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。<br /><br /> **\*\* 重要\* \*** 雖然受影響的資料列中的資料可能會顯示為未聚合的表現，只要解決任何錯誤，可以套用變更，聚合資料。 如果發行項的來源資料表已在另一個發行集，則會將值的*compensate_for_errors*必須是兩個發行項相同。|  
+|**compensate_for_errors**|**真正**|在同步處理期間，當發生錯誤時，執行補償動作。 如需詳細資訊，請參閱[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
+||**false**|不執行補償動作，這是預設行為。 如需詳細資訊，請參閱[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。<br /><br /> ** \* \*重要\*事項**雖然受影響資料列中的資料可能會在您解決任何錯誤時出現不一致的情況，但是您可以套用變更並將資料聚合。 如果發行項的來源資料表已經在另一個發行集中發行，則這兩篇文章的*compensate_for_errors*值都必須相同。|  
 |**creation_script**||在訂閱資料庫中，用來建立發行項的選擇性發行項結構描述指令碼的路徑和名稱。|  
-|**delete_tracking**|**true**|複寫 DELETE 陳述式，這是預設行為。|  
-||**false**|不複寫 DELETE 陳述式。<br /><br /> **\*\* 重要\* \*** 設定**delete_tracking**來**false**非聚合狀況，並已刪除的資料列中的結果必須以手動方式移除。|  
-|**description**||發行項的描述項目。|  
-|**destination_owner**||在訂閱資料庫中，如果不是物件的擁有者的名稱**dbo**。|  
-|**identity_range**||**bigint** ，指定如果發行項，指派新識別值時要使用的範圍大小**identityrangemanagementoption**設定為**自動**或**auto_identity_範圍**設定為 **，則為 true**。 只適用於資料表發行項。 如需詳細資訊，請參閱的 < 合併式複寫 > 一節[複寫識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
+|**delete_tracking**|**真正**|複寫 DELETE 陳述式，這是預設行為。|  
+||**false**|不複寫 DELETE 陳述式。<br /><br /> ** \* \*重要\*事項**將**delete_tracking**設定為**false**會導致無法聚合，而且已刪除的資料列必須手動移除。|  
+|**描述**||發行項的描述項目。|  
+|**destination_owner**||訂閱資料庫中物件的擁有者名稱（如果不是**dbo**）。|  
+|**identity_range**||當發行項的**identityrangemanagementoption**設為**auto** ，或**auto_identity_range**設定為**true**時，指定指派新識別值時所要使用之範圍大小的**Bigint** 。 只適用於資料表發行項。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
 |**identityrangemanagementoption**|**手動**|停用自動識別範圍的管理。 利用 NOT FOR REPLICATION 來標示識別欄位，以啟用手動識別範圍的處理。 如需詳細資訊，請參閱[複寫識別資料欄](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
-||**None**|停用所有識別範圍的管理。|  
-|**logical_record_level_conflict_detection**|**true**|如果在邏輯記錄的任何位置進行變更，便會偵測到衝突。 要求**logical_record_level_conflict_resolution**設為 **，則為 true**。|  
-||**false**|會使用預設衝突偵測，依照**column_tracking**。|  
-|**logical_record_level_conflict_resolution**|**true**|用整個優先邏輯記錄來覆寫遺失的邏輯記錄。|  
+||**無**|停用所有識別範圍的管理。|  
+|**logical_record_level_conflict_detection**|**真正**|如果在邏輯記錄的任何位置進行變更，便會偵測到衝突。 要求**logical_record_level_conflict_resolution**必須設定為**true**。|  
+||**false**|預設的衝突偵測會依照**column_tracking**所指定的方式來使用。|  
+|**logical_record_level_conflict_resolution**|**真正**|用整個優先邏輯記錄來覆寫遺失的邏輯記錄。|  
 ||**false**|優先資料列不限於邏輯記錄。|  
 |**partition_options**|**0**|發行項的篩選是靜態的，或不產生每個資料分割的唯一資料子集，也就是「重疊」的資料分割。|  
 ||**1**|資料分割重疊，在訂閱者端進行的 DML 更新並不會變更資料列所屬的資料分割。|  
 ||**2**|發行項的篩選會產生非重疊的資料分割，但多個訂閱者可以接收相同的資料分割。|  
-||**3**|發行項的篩選會產生對每項訂閱而言都是唯一的非重疊資料分割。<br /><br /> 注意:如果您指定的值**3** for **partition_options**，可以只有單一訂用帳戶每個資料分割的該文章中的資料。 如果建立第二項訂閱，將新訂閱的篩選準則解析成現有訂閱的相同資料分割，就會卸除現有的訂閱。|  
-|**pre_creation_command**|**None**|如果訂閱者端已有資料表，就不會採取任何動作。|  
+||**第**|發行項的篩選會產生對每項訂閱而言都是唯一的非重疊資料分割。<br /><br /> 注意：如果您針對**partition_options**指定**3**的值，則該發行項中的每個資料分割都只能有單一訂用帳戶。 如果建立第二項訂閱，將新訂閱的篩選準則解析成現有訂閱的相同資料分割，就會卸除現有的訂閱。|  
+|**pre_creation_command**|**無**|如果訂閱者端已有資料表，就不會採取任何動作。|  
 ||**delete**|根據子集篩選中的 WHERE 子句來發出一項刪除。|  
-||**drop**|在重新建立資料表之前，先卸除資料表。|  
-||**truncate**|截斷目的地資料表。|  
-|**processing_order**||**int** ，指出合併式發行集中的發行項的處理順序。|  
-|**pub_identity_range**||**bigint** ，指定配置到含主訂閱的訂閱者，如果發行項的範圍大小**identityrangemanagementoption**設定為**自動**或**auto_identity_range**設定為 **，則為 true**。 這個識別範圍保留供重新發行訂閱者配置給自己的訂閱者。 只適用於資料表發行項。 如需詳細資訊，請參閱的 < 合併式複寫 > 一節[複寫識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
-|**published_in_tran_pub**|**true**|發行項也在交易式發行集中發行。|  
+||**下拉式**|在重新建立資料表之前，先卸除資料表。|  
+||**各**|截斷目的地資料表。|  
+|**processing_order**||**int** ，指出合併式發行集中之發行項的處理順序。|  
+|**pub_identity_range**||當發行項的**identityrangemanagementoption**設為**auto**或**auto_identity_range**設定為**True****時，指定**配置給訂閱者的範圍大小（如果發行項具有伺服器訂閱）。 這個識別範圍保留供重新發行訂閱者配置給自己的訂閱者。 只適用於資料表發行項。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
+|**published_in_tran_pub**|**真正**|發行項也在交易式發行集中發行。|  
 ||**false**|發行項也不在交易式發行集中發行。|  
-|**resolver_info**||這用來指定自訂解析程式所需要的其他資訊。 部分 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 解析程式需要用於當做解析程式輸入的資料行。 **resolver_info**已**nvarchar(255)** ，預設值是 NULL。 如需詳細資訊，請參閱 [以 COM 為基礎的 Microsoft 解析程式](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。|  
+|**resolver_info**||這用來指定自訂解析程式所需要的其他資訊。 部分 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 解析程式需要用於當做解析程式輸入的資料行。 **resolver_info**是**Nvarchar （255）**，預設值是 Null。 如需詳細資訊，請參閱 [以 COM 為基礎的 Microsoft 解析程式](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。|  
 |**schema_option** （點陣圖）||如需詳細資訊，請參閱本主題稍後的＜備註＞一節。|  
-||**0x00**|停用快照集代理程式指令碼，並使用提供的指令碼**creation_script**。|  
+||**0x00**|停用快照集代理程式的腳本，並使用**creation_script**中提供的腳本。|  
 ||**0x01**|產生物件建立指令碼 (CREATE TABLE、CREATE PROCEDURE 等)。|  
 ||**0x10**|產生對應的叢集索引。|  
 ||**0x20**|在訂閱者端將使用者自訂資料類型轉換成基底資料型別。 如果使用者自訂類型 (UDT) 資料行是主索引鍵的一部分，或者計算資料行參考 UDT 資料行，則當 UDT 資料行中有 CHECK 或 DEFAULT 條件約束時，就不能使用這個選項。|  
@@ -114,61 +114,61 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x400000**|複寫預設繫結|  
 ||**0x800000**|複寫規則繫結|  
 ||**0x1000000**|複寫全文檢索索引|  
-||**0x2000000**|XML 結構描述集合繫結至**xml**不會複寫資料行。|  
-||**0x4000000**|在複寫索引**xml**資料行。|  
+||**0x2000000**|不會複寫系結至**xml**資料行的 xml 架構集合。|  
+||**0x4000000**|複寫**xml**資料行的索引。|  
 ||**0x8000000**|建立訂閱者目前還沒有的任何結構描述。|  
-||**0x10000000**|將轉換**xml**資料行**ntext**訂閱者上。|  
-||**0x20000000**|將大型物件資料類型 (**nvarchar （max)** ， **varchar （max)** ，並**varbinary （max)** ) 中所導入[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]支援的資料類型在  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。|  
+||**0x10000000**|將**xml**資料行轉換為訂閱者上的**Ntext** 。|  
+||**0x20000000**|將中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]引進的大型物件資料類型（ [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] **Nvarchar （max）**、 **Varchar （** max）和**Varbinary （max）**）轉換成所支援的資料類型。|  
 ||**0x40000000**|複寫權限。|  
 ||**0x80000000**|嘗試卸除對於不在發行集中之任何物件的相依性。|  
-||**0x100000000**|使用此選項來複寫 FILESTREAM 屬性，如果同時指定**varbinary （max)** 資料行。 如果您要將資料表複寫至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 訂閱者，請勿指定這個選項。 將具有 FILESTREAM 資料行的資料表複寫[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]不支援訂閱者，不論這個結構描述選項的設定方式。 請參閱相關的選項**0x800000000**。|  
-||**0x200000000**|將日期和時間資料類型轉換 (**日期**，**時間**， **datetimeoffset**，以及**datetime2**) 中所導入[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]資料類型所支援的舊版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+||**0x100000000**|如果 FILESTREAM 屬性是在**Varbinary （max）** 資料行上指定，請使用此選項來進行複寫。 如果您要將資料表複寫至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 訂閱者，請勿指定這個選項。 不論如何設定此架構選項， [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]都不支援將含有 FILESTREAM 資料行的資料表複寫至訂閱者。 請參閱相關的選項**0x800000000**。|  
+||**0x200000000**|將中導[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]入的日期和時間資料類型（**date**、 **time**、 **datetimeoffset**和 datetime2）轉換成舊版所支援的資料類型。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 ||**0x400000000**|複寫資料與索引的壓縮選項。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
-||**0x800000000**|設定這個選項即可將 FILESTREAM 資料儲存在訂閱者端的檔案群組中。 如果沒有設定這個選項，FILESTREAM 資料就會儲存在預設檔案群組中。 複寫不會建立檔案群組。因此，如果您設定這個選項，就必須先建立檔案群組，然後再於訂閱者端套用快照集。 如需如何建立物件，然後再套用快照集的詳細資訊，請參閱[前後執行指令碼之後套用快照集](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 請參閱相關的選項**0x100000000**。|  
-||**0x1000000000**|將 common language runtime (CLR) 使用者定義類型 (Udt) 轉換成**varbinary （max)** 如此 UDT 類型的資料行可以複寫至訂閱者執行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||**0x2000000000**|將轉換**hierarchyid**資料類型**varbinary （max)** 以便類型的資料行**hierarchyid**可以複寫到訂閱者執行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 如需有關如何使用**hierarchyid**資料行在複寫資料表中，請參閱[hierarchyid &#40;-&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
-||**0x4000000000**|複寫資料表上任何已篩選的索引。 如需有關篩選索引的詳細資訊，請參閱[建立篩選的索引](../../relational-databases/indexes/create-filtered-indexes.md)。|  
-||**0x8000000000**|將轉換**地理**並**幾何**資料類型**varbinary （max)** 使這些類型的資料行可以複寫到訂閱者執行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||**0x10000000000**|複寫類型的資料行的索引**地理**並**geometry**。|  
+||**0x800000000**|設定這個選項即可將 FILESTREAM 資料儲存在訂閱者端的檔案群組中。 如果沒有設定這個選項，FILESTREAM 資料就會儲存在預設檔案群組中。 複寫不會建立檔案群組。因此，如果您設定這個選項，就必須先建立檔案群組，然後再於訂閱者端套用快照集。 如需如何在套用快照集之前建立物件的詳細資訊，請參閱[在套用快照集之前和之後執行腳本](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 請參閱相關的選項**0x100000000**。|  
+||**0x1000000000**|將 common language runtime （CLR）使用者定義型別（Udt）轉換成**Varbinary （max）** ，以便將 UDT 類型的資料行複寫至正在執行的[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]訂閱者。|  
+||**0x2000000000**|將**hierarchyid**資料類型轉換成**Varbinary （max）** ，使**hierarchyid**類型的資料行可以複寫至正在執行的訂閱[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]者。 如需如何在複寫資料表中使用**hierarchyid**資料行的詳細資訊，請參閱[hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
+||**0x4000000000**|複寫資料表上任何已篩選的索引。 如需篩選索引的詳細資訊，請參閱[建立篩選的索引](../../relational-databases/indexes/create-filtered-indexes.md)。|  
+||**0x8000000000**|將**geography**和**geometry**資料類型轉換成**Varbinary （max）** ，以便將這些型別的資料行複寫至正在執行的訂閱[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]者。|  
+||**0x10000000000**|複寫**geography**和**geometry**類型之資料行上的索引。|  
 ||NULL|系統會自動產生發行項的有效結構描述選項。|  
-|**status**|**active**|發行資料表的初始處理指令碼在執行中。|  
+|**狀態**|**主動**|發行資料表的初始處理指令碼在執行中。|  
 ||**unsynced**|在下次執行快照集代理程式時，執行發行資料表的初始處理指令碼。|  
-|**stream_blob_columns**|**true**|當複寫二進位大型物件資料行時，使用資料流最佳化。 不過，特定合併式複寫功能，如邏輯記錄，仍能夠防止使用資料流最佳化。 *stream_blob_columns*設為 true 時啟用 FILESTREAM。 這可讓 FILESTREAM 資料的複寫能以最理想的方式執行，並減少記憶體使用量。 若要強制 FILESTREAM 資料表發行項不使用 blob 資料流，將*stream_blob_columns*設為 false。<br /><br /> **\*\* 重要\* \*** 啟用這個記憶體最佳化功能可能會減損合併代理程式的同步處理期間的效能。 只有在複寫包含數 MB 資料的資料行時，才應該使用這個選項。|  
+|**stream_blob_columns**|**真正**|當複寫二進位大型物件資料行時，使用資料流最佳化。 不過，特定合併式複寫功能，如邏輯記錄，仍能夠防止使用資料流最佳化。 啟用 FILESTREAM 時， *stream_blob_columns*設定為 true。 這可讓 FILESTREAM 資料的複寫能以最理想的方式執行，並減少記憶體使用量。 若要強制 FILESTREAM 資料表發行項不使用 blob 資料流程，請將*stream_blob_columns*設定為 false。<br /><br /> ** \* \*重要\*事項**啟用這個記憶體優化可能會在同步處理期間損害合併代理程式的效能。 只有在複寫包含數 MB 資料的資料行時，才應該使用這個選項。|  
 ||**false**|當複寫二進位大型物件資料行時，不使用最佳化。|  
 |**subscriber_upload_options**|**0**|客訂閱在訂閱者端進行的更新沒有任何限制；變更會上傳到發行者。 變更這個屬性可能需要重新初始化現有的訂閱者。|  
 ||**1**|允許客訂閱在訂閱者端進行變更；但它們不會上傳到發行者。|  
 ||**2**|不允許客訂閱在訂閱者端進行變更。|  
-|**subset_filterclause**||指定水平篩選的 WHERE 子句。 只適用於資料表發行項。<br /><br /> **\*\* 重要\* \*** 基於效能考量，我們建議，您不將函數套用至資料行名稱，在參數化資料列篩選子句，例如`LEFT([MyColumn]) = SUSER_SNAME()`。 如果您使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)在篩選子句和覆寫了 HOST_NAME 值中，您可能必須使用轉換資料類型[轉換](../../t-sql/functions/cast-and-convert-transact-sql.md)。 如需有關此案例的最佳作法的詳細資訊，請參閱 「 覆寫 host_name （） 值 」 中[Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。|  
-|**threshold**||用於執行的訂閱者的百分比值[!INCLUDE[ssEW](../../includes/ssew-md.md)]或更早版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 **閾值**控制合併代理程式指派新識別範圍的時機。 當使用 threshold 指定的百分比值，合併代理程式會建立新的識別範圍。 使用的時機**identityrangemanagementoption**設為**自動**或**auto_identity_range**設定為 **，則為 true**。 只適用於資料表發行項。 如需詳細資訊，請參閱的 < 合併式複寫 > 一節[複寫識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
+|**subset_filterclause**||指定水平篩選的 WHERE 子句。 只適用於資料表發行項。<br /><br /> ** \* \*重要\*事項**基於效能考慮，我們建議您不要在參數化資料列篩選器子句（例如）中，將`LEFT([MyColumn]) = SUSER_SNAME()`函數套用至資料行名稱。 如果您在篩選子句中使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)並覆寫 HOST_NAME 值，您可能必須使用[convert](../../t-sql/functions/cast-and-convert-transact-sql.md)來轉換資料類型。 如需有關此案例之最佳做法的詳細資訊，請參閱[參數化資料列篩選器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的「覆寫 HOST_NAME （）值」一節。|  
+|**閾值**||執行[!INCLUDE[ssEW](../../includes/ssew-md.md)]或舊版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者所使用的百分比值。 當合併代理程式指派新的識別範圍時，**臨界值**控制。 當使用 threshold 指定的百分比值，合併代理程式會建立新的識別範圍。 當**identityrangemanagementoption**設定為**auto**或**auto_identity_range**設定為**true**時使用。 只適用於資料表發行項。 如需詳細資訊，請參閱複寫[識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)的「合併式複寫」一節。|  
 |**verify_resolver_signature**|**1**|驗證自訂解析程式的數位簽章來判斷它是否來自信任來源。|  
 ||**0**|不驗證自訂解析程式的數位簽章來判斷它是否來自信任來源。|  
-|NULL (預設值)||傳回支援的值的清單*屬性*。|  
+|NULL (預設值)||傳回*屬性*的支援值清單。|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 認可這個預存程序所採取的動作可能會使現有的快照集。 *force_invalidate_snapshot*已**位元**，預設值是**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`認可這個預存程式所採取的動作可能會使現有的快照集失效。 *force_invalidate_snapshot*是**bit**，預設值是**0**。  
   
- **0**指定合併發行項的變更不會使快照集失效。 如果預存程序偵測到變更需要新的快照集，就會發生錯誤，且不會進行任何變更。  
+ **0**指定合併發行項的變更不會使快照集無效。 如果預存程序偵測到變更需要新的快照集，就會發生錯誤，且不會進行任何變更。  
   
- **1**表示的合併發行項的變更可能使快照集失效，而且如果有現有的訂閱需要新的快照集，提供要標示為已棄用之現有快照集產生新的快照集的權限。  
+ **1**表示合併發行項的變更可能會導致快照集無效，如果有現有的訂閱需要新的快照集，則會提供要標示為已淘汰之現有快照集的許可權，並產生新的快照集。  
   
  請參閱＜備註＞一節，以了解在變更時需要產生新快照集的屬性。  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` 認可這個預存程序所採取的動作可能需要重新初始化現有的訂用帳戶。 *force_reinit_subscription*已**位元**，預設值是**0**。  
+`[ @force_reinit_subscription = ] force_reinit_subscription`認可這個預存程式所採取的動作可能需要重新初始化現有的訂閱。 *force_reinit_subscription*是**bit**，預設值是**0**。  
   
  **0**指定合併發行項的變更不會使訂閱重新初始化。 如果預存程序偵測到變更需要重新初始化現有的訂閱，就會發生錯誤，且不會進行任何變更。  
   
- **1**表示合併發行項的變更會導致現有的訂閱重新初始化，並提供發生之訂閱重新初始化的權限。  
+ **1**表示合併發行項的變更會使現有的訂閱重新初始化，並提供將發生之訂閱重新初始化的許可權。  
   
  請參閱＜備註＞一節，以了解在變更時需要重新初始化所有現有的訂閱之屬性。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
  **sp_changemergearticle**用於合併式複寫中。  
   
- 因為**sp_changemergearticle**用來變更一開始使用指定的發行項屬性[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)，請參閱[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)如需有關這些屬性的詳細資訊。  
+ 因為**sp_changemergearticle**是用來變更一開始使用[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)所指定的發行項屬性，請參閱[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)以取得這些屬性的其他相關資訊。  
   
- 變更下列屬性需要產生新的快照集，而且您必須指定值**1** for *force_invalidate_snapshot*參數：  
+ 變更下列屬性需要產生新的快照集，而且您必須為*force_invalidate_snapshot*參數指定**1**的值：  
   
 -   **check_permissions**  
   
@@ -182,7 +182,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
 -   **subset_filterclause**  
   
- 變更下列屬性需要現有的訂閱重新初始化，而且您必須指定值**1** for *force_reinit_subscription*參數：  
+ 變更下列屬性需要重新初始化現有的訂閱，而且您必須為*force_reinit_subscription*參數指定**1**的值：  
   
 -   **check_permissions**  
   
@@ -206,42 +206,42 @@ sp_changemergearticle [ @publication = ] 'publication'
   
 -   **logical_record_level_conflict_resolution**  
   
- 指定的值是 3 時**partition_options**，都會清除中繼資料，每當合併代理程式執行和資料分割的快照集到期得更快。 當使用這個選項時，您應該考慮啟用訂閱者要求的資料分割快照集。 如需詳細資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
+ 為**partition_options**指定3的值時，每當合併代理程式執行時，就會清除中繼資料，而分割快照集會更快過期。 當使用這個選項時，您應該考慮啟用訂閱者要求的資料分割快照集。 如需詳細資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
- 設定時**column_tracking**屬性，如果資料表已在其他合併式發行集中，追蹤的資料行必須是正在使用此資料表上現有的發行項的值相同。 這個參數只適用於資料表發行項。  
+ 當設定**column_tracking**屬性時，如果資料表已經在其他合併式發行集中發行，則資料行追蹤必須和現有發行項根據此資料表所使用的值相同。 這個參數只適用於資料表發行項。  
   
- 如果多個發行集發行相同的基礎資料表為基礎的發行項，變更**delete_tracking**屬性或**compensate_for_errors**的一個發行項的屬性會導致相同的變更對相同的資料表為基礎的其他文件。  
+ 如果有多個發行集根據相同的基礎資料表來發佈發行項，變更**delete_tracking**屬性或一篇文章的**compensate_for_errors**屬性，會使其他以相同資料表為基礎的文章進行相同的變更。  
   
  如果合併處理序所使用的發行者登入/使用者帳戶並沒有正確的資料表權限，就會將無效的變更記錄為衝突。  
   
- 變更的值時**schema_option**，系統不會執行位元更新。 這表示當您設定**schema_option**使用**sp_changemergearticle**現有位元設定可能會關閉。 若要保留現有的設定，您應該執行[& (Bitwise AND)](../../t-sql/language-elements/bitwise-and-transact-sql.md)的值，您要設定與目前的值之間*schema_option*，這可以透過執行[sp_helpmergearticle](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)。  
+ 變更**schema_option**的值時，系統不會執行位更新。 這表示當您使用**sp_changemergearticle**設定**schema_option**時，可能會關閉現有的位設定。 若要保留現有的設定，您應該在所設定的值和目前的*schema_option*值之間執行[& （位 and）](../../t-sql/language-elements/bitwise-and-transact-sql.md) ，這可以藉由執行[sp_helpmergearticle](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)來判斷。  
   
 > [!CAUTION]  
->  當您許多 （也許數百） 在發行集，與您的發行項執行**sp_changemergearticle**其中一篇文章，可能需要很長的時間才能完成執行。  
+>  當您的發行集中有許多（或許上百個）的文章，而且您對其中一個文章執行**sp_changemergearticle**時，可能需要很長的時間才能完成執行。  
   
 ## <a name="valid-schema-option-table"></a>有效的結構描述選項表  
- 下表描述允許*schema_option*值，取決於發行項類型。  
+ 下表描述允許的*schema_option*值，視發行項類型而定。  
   
 |發行項類型|結構描述選項值|  
 |------------------|--------------------------|  
-|**僅限 func 結構描述**|**0x01**和**0x2000**|  
-|**僅限索引檢視表結構描述**|**0x01**， **0x040**， **0x0100**， **0x2000**， **0x40000**， **0x1000000**，以及**0x200000**|  
-|**僅限程序結構描述**|**0x01**和**0x2000**|  
-|**table**|所有選項。|  
-|**僅限檢視結構描述**|**0x01**， **0x040**， **0x0100**， **0x2000**， **0x40000**， **0x1000000**，以及**0x200000**|  
+|**func schema only**|**0x01**和**0x2000**|  
+|**indexed view schema only**|**0x01**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**和**0x200000**|  
+|**proc schema only**|**0x01**和**0x2000**|  
+|**目錄**|所有選項。|  
+|**view schema only**|**0x01**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**和**0x200000**|  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_changemergearticle](../../relational-databases/replication/codesnippet/tsql/sp-changemergearticle-tr_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_changemergearticle**。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_changemergearticle**。  
   
 ## <a name="see-also"></a>另請參閱  
- [檢視及修改發行項屬性](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
+ [查看和修改發行項屬性](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [變更發行集與發行項屬性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [sp_dropmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
- [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_dropmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
+ [sp_helpmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

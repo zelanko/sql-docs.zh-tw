@@ -14,27 +14,27 @@ ms.assetid: 885b3bea-f4b6-4902-b994-f78a912b612f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab33bfdef2b633cd5a7a3e215a3f6522d8d664ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915705"
 ---
 # <a name="odbc-jet-sqlconfigdatasource-excel-driver"></a>ODBC Jet SQLConfigDataSource (Excel 驅動程式)
 > [!NOTE]  
->  本主題提供 Excel 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主題提供 Excel 驅動程式特有的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
   
- **SQLConfigDataSource**函式，用來新增、 修改或刪除資料來源以動態方式使用下列關鍵字。  
+ 用來以動態方式加入、修改或刪除資料來源的**SQLConfigDataSource**函數會使用下列關鍵字。  
   
 |關鍵字|描述|  
 |-------------|-----------------|  
-|DBQ|Microsoft Excel 驅動程式存取 Microsoft Excel 5.0 或更新版本的檔案時的活頁簿檔案的名稱。<br /><br /> 這會設定為相同的選項**資料庫**在安裝程式 對話方塊中。|  
-|DEFAULTDIR|目錄的路徑規格。<br /><br /> 這會設定為相同的選項**選取目錄**或是**選取活頁簿**在安裝程式 對話方塊中。|  
-|DESCRIPTION|資料來源中資料的說明。<br /><br /> 這會設定為相同的選項**描述**在安裝程式 對話方塊中。|  
+|DBQ|若為 Microsoft Excel 驅動程式，則在存取 Microsoft Excel 5.0 或更新版本的檔案時，為活頁簿檔案的名稱。<br /><br /> 這會在 [安裝程式] 對話方塊中設定與**資料庫**相同的選項。|  
+|DEFAULTDIR|目錄的路徑規格。<br /><br /> 這會將相同的選項設定為 [**選取目錄**]，或在 [安裝] 對話方塊中選取 [活頁**簿**]。|  
+|描述|資料來源中的資料描述。<br /><br /> 這會在 [安裝程式] 對話方塊中設定與 [**描述**] 相同的選項。|  
 |DRIVER|驅動程式 DLL 的路徑規格。|  
-|DRIVERID|驅動程式的整數識別碼。<br /><br /> 534 (Microsoft Excel 3.0)<br /><br /> 278 (Microsoft Excel 4.0)<br /><br /> 22 (Microsoft Excel 5.0/7.0)<br /><br /> 790 (Microsoft Excel 97-2003)|  
-|FIL|檔案類型，例如，Excel 3.0、 Excel 4.0，Excel 5.0、 Excel 7.0、 Excel 97、 Excel 2000 或 Excel 2003。|  
-|FIRSTROWHASNAMES|表示範圍的第一個資料列的儲存格是否包含資料表 (1) 的資料行名稱，或不 (0)。|  
-|於 MAXSCANROWS|若要設定現有的資料為基礎的資料行的資料類型時，要掃描的資料列數目。<br /><br /> 要掃描的資料列，您可以輸入 1 到 16 的數字。 預設值為 8。如果它設定為 0，則會掃描所有資料列。 （限制以外的數字會傳回錯誤）。<br /><br /> 這會設定為相同的選項**要掃描的資料列**在安裝程式 對話方塊中。|  
-|READONLY|若要使檔案成為唯讀的;，則為 TRUE若要讓檔案不是唯讀，則為 FALSE。<br /><br /> 這會設定為相同的選項**Read Only**在安裝程式 對話方塊中。|  
-|執行緒|引擎使用的背景執行緒數目。 Microsoft Access 驅動程式，這個值預設值為 3，但可以變更。 Dbase，MicrosoftExceldriver 此值為 3，且無法變更。<br /><br /> 這會設定為相同的選項**執行緒**在安裝程式 對話方塊中。|
+|DRIVERID|驅動程式的整數識別碼。<br /><br /> 534（Microsoft Excel 3.0）<br /><br /> 278（Microsoft Excel 4.0）<br /><br /> 22（Microsoft Excel 5.0/7.0）<br /><br /> 790（Microsoft Excel 97-2003）|  
+|FIL|檔案類型，例如 Excel 3.0、Excel 4.0、Excel 5.0、Excel 7.0、Excel 97、Excel 2000 或 Excel 2003。|  
+|FIRSTROWHASNAMES|指出範圍的第一個資料列的資料格是否包含資料表的資料行名稱（1）或 not （0）。|  
+|MAXSCANROWS|根據現有的資料來設定資料行的資料類型時，所要掃描的資料列數目。<br /><br /> 可以輸入從1到16的數位，以供要掃描的資料列使用。 值預設為 8;如果設定為0，則會掃描所有資料列。 （超出限制的數位將會傳回錯誤）。<br /><br /> 這會在 [安裝程式] 對話方塊中，設定與**要掃描**的資料列相同的選項。|  
+|READONLY|TRUE 表示將檔案設為唯讀;FALSE 表示讓檔案不是唯讀的。<br /><br /> 這會在 [安裝程式] 對話方塊中設定與 [**唯讀**] 相同的選項。|  
+|串接|要使用之引擎的背景執行緒數目。 若為 Microsoft Access 驅動程式，此值預設為3，但可以變更。 對於 dBASE 而言，MicrosoftExceldriver 此值為3，且無法變更。<br /><br /> 這會在 [安裝程式] 對話方塊中設定與**執行緒**相同的選項。|

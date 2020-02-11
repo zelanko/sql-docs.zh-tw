@@ -34,10 +34,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62631365"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
@@ -53,7 +53,7 @@ ms.locfileid: "62631365"
   
 -   次要 XML 索引  
   
- 在 `xml` 類型資料行上的第一個索引必須是主要的 XML 索引。 使用主要 XML 索引時，可支援下列次要索引類型：PATH、VALUE 和 PROPERTY。 視查詢類型而定，這些次要索引可協助改善查詢效能。  
+ 在 `xml` 類型資料行上的第一個索引必須是主要的 XML 索引。 使用主要 XML 索引時，可支援下列次要索引類型：PATH、VALUE 及 PROPERTY。 視查詢類型而定，這些次要索引可協助改善查詢效能。  
   
 > [!NOTE]  
 >  除非您已正確設定資料庫選項來處理 `xml` 資料類型一起運作，否則無法建立或修改 XML 索引。 如需詳細資訊，請參閱 [使用 XML 資料行進行全文檢索搜尋](use-full-text-search-with-xml-columns.md)。  
@@ -97,13 +97,13 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `//ContactRecord/PhoneNumber` 只知道最後兩個步驟  
   
- 或  
+ OR  
   
 -   `/Book/*/Title` 於運算式的中間指定了萬用字元 (`*`)。  
   
  查詢處理器會使用主要 XML 索引來進行包含 [xml 資料類型方法](/sql/t-sql/xml/xml-data-type-methods) 的查詢，並從主要索引本身傳回純量值或 XML 子樹。 (這個索引會儲存重新建構 XML 執行個體的所有必要資訊)。  
   
- 例如，下列查詢會傳回摘要資訊儲存在`CatalogDescription``xml`類型資料行中的`ProductModel`資料表。 此查詢只會針對目錄描述也儲存 <`Features`> 描述的產品型號傳回其 <`Summary`> 資訊。  
+ 例如，下列查詢會傳回儲存在`CatalogDescription``xml` `ProductModel`資料表之類型資料行中的摘要資訊。 此查詢只會針對目錄描述也儲存 <`Summary`> 描述的產品型號傳回其 <`Features`> 資訊。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
@@ -141,7 +141,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   `/root/Location` 其僅指定路徑  
   
- 或  
+ OR  
   
 -   `/root/Location/@LocationID[.="10"]` 其中同時指定了路徑與節點值。  
   
@@ -166,9 +166,9 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `//author[LastName="someName"]`，其中您知道 <`LastName`> 元素的值，但是 <`author`> 父系可存在於任何位置。  
   
--   在 `/book[@* = "someValue"]` 中，查詢會尋找某些屬性中包含值 `"someValue"` 的 <`book`> 元素。  
+-   在 `/book[@* = "someValue"]` 中，查詢會尋找某些屬性中包含值 `book` 的 <`"someValue"`> 元素。  
   
- 下列查詢會從 `ContactID` 資料表傳回 `Contact` 。 `WHERE`子句可指定篩選值中尋找`AdditionalContactInfo``xml`類型資料行。 如果對應的其他連絡資訊 XML 二進位大型物件包含特定的電話號碼，就會傳回連絡識別碼。 因為 <`telephoneNumber`> 元素有可能出現在 XML 的任何位置，所以路徑運算式會指定 descendent-or-self 軸。  
+ 下列查詢會從 `ContactID` 資料表傳回 `Contact` 。 `WHERE`子句會指定一個篩選準則，以尋找`AdditionalContactInfo``xml`類型資料行中的值。 如果對應的其他連絡資訊 XML 二進位大型物件包含特定的電話號碼，就會傳回連絡識別碼。 因為 <`telephoneNumber`> 元素有可能出現在 XML 的任何位置，所以路徑運算式會指定 descendent-or-self 軸。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -183,7 +183,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  在此情況下，雖然已得知 <`number`> 的搜尋值，但它有可能以 <`telephoneNumber`> 元素的子系出現在 XML 執行個體中的任何位置。 此類的查詢可從以特定值為基礎的索引查閱獲益。  
   
 ### <a name="property-secondary-index"></a>PROPERTY 次要索引  
- 從個別 XML 執行個體擷取一或多個值的查詢可從 PROPERTY 索引獲益。 當您擷取物件屬性使用時，就會發生此情況**value （)** 方法`xml`型別，且當已知物件的主索引鍵值。  
+ 從個別 XML 執行個體擷取一或多個值的查詢可從 PROPERTY 索引獲益。 當您使用`xml`類型的**value （）** 方法，以及已知物件的主鍵值時，就會發生這種情況。  
   
  PROPERTY 索引是建立在主要 XML 索引的資料行 (PK、Path 以及節點值) 上，在主要 XML 索引中 PK 是基底資料表的主索引鍵。  
   
@@ -198,7 +198,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 本主題稍後所述的差異，除了建立 XML 索引上`xml`類型資料行是類似於建立索引，非`xml`類型資料行。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 陳述式可用以建立及管理 XML 索引：  
+ 除了本主題稍後所述的差異之外，在`xml`類型資料行上建立 XML 索引與在非`xml`類型資料行上建立索引類似。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 陳述式可用以建立及管理 XML 索引：  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   

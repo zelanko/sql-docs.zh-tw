@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c77ae94a7b8c5760d14dcb3fed2af40573549d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103754"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
@@ -88,16 +88,16 @@ ms.locfileid: "66103754"
   
 5.  儲存檔案。  
   
-6.  檢查追蹤記錄檔，以便確認錯誤並未發生。 如果您看見錯誤狀況，表示某項設定或其值的指定內容不正確。 請檢閱＜ [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) ＞，以便取得導致錯誤發生之任何設定的有效值。 如需如何檢視追蹤記錄的詳細資訊，請參閱[報表伺服器服務追蹤記錄](report-server-service-trace-log.md)。  
+6.  檢查追蹤記錄檔，以便確認錯誤並未發生。 如果您看見錯誤狀況，表示某項設定或其值的指定內容不正確。 請檢閱＜ [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) ＞，以便取得導致錯誤發生之任何設定的有效值。 如需如何檢視追蹤記錄的詳細資訊，請參閱 [報表伺服器服務追蹤記錄](report-server-service-trace-log.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [RSReportServer 組態檔](rsreportserver-config-configuration-file.md)   
+ [Rsreportserver.config 設定檔](rsreportserver-config-configuration-file.md)   
  [ReportingServicesService 設定檔](reportingservicesservice-configuration-file.md)   
  [RSReportDesigner 組態檔](rsreportdesigner-configuration-file.md)   
  [部署資料處理延伸模組](../extensions/data-processing/deploying-a-data-processing-extension.md)   
  [部署傳遞延伸模組](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [部署轉譯延伸模組](../extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [如何：部署自訂報表項目](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
+ [如何：部署自訂報表專案](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
  [Reporting Services 設定檔](reporting-services-configuration-files.md)  
   
   

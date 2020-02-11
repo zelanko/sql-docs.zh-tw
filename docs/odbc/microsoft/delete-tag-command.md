@@ -1,5 +1,5 @@
 ---
-title: DELETE TAG 命令 |Microsoft Docs
+title: 刪除標記命令 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 576e7e10d9d6f5c7e8616f57bde2dfed05503eae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68112075"
 ---
 # <a name="delete-tag-command"></a>DELETE TAG 命令
-從複合的索引 (.cdx) 檔案中移除的標記。  
+從複合索引（. cdx）檔案移除標記或標記。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,16 +33,16 @@ DELETE TAG ALL [OF CDXFileName]
 ```  
   
 ## <a name="arguments"></a>引數  
- *TagName1*OF *CDXFileName1*[， *TagName2*[OF *CDXFileName2*]]...  
- 指定標籤上，從複合的索引檔中移除。 您可以包括一份以逗號分隔的標記名稱，以刪除標記刪除多個標記。 如果具有相同名稱的兩個或多個標記存在於開啟索引檔案，您可以移除標記從特定索引的檔案包括 OF *CDXFileName*。  
+ *TagName1**CDXFileName1*[， *TagName2*[of *CDXFileName2*]] .。。  
+ 指定要從複合索引檔案中移除的標記。 您可以藉由包含以逗號分隔的標記名稱清單，以刪除包含一個刪除標記的多個標記。 如果開啟的索引檔案中有兩個或多個具有相同名稱的標記，您可以藉由包含*CDXFileName*，從特定的索引檔移除標記。  
   
- 所有 [OF *CDXFileName*]  
- 移除是複合的索引檔中的每個標記。 如果目前的資料表有結構化的複合索引檔案，會從索引檔案中移除所有標記、 索引檔案會從磁碟、 刪除和指出相關聯的結構化複合索引檔案存在的資料表的標頭中的旗標會都移除。 所有搭配 OF *CDXFileName*移除從開啟的複合索引檔案結構複合的索引檔以外的所有標記。  
+ ALL [of *CDXFileName*]  
+ 從複合索引檔案中移除每個標記。 如果目前的資料表具有結構化複合索引檔案，則會從索引檔案中移除所有標記、刪除磁片中的索引檔案，以及資料表標頭中的旗標，指出相關聯的結構複合索引檔是否已移除。 使用 ALL 搭配*CDXFileName* ，從結構化複合索引檔案以外的開放式複合索引檔案移除所有標記。  
   
 ## <a name="remarks"></a>備註  
- 索引，以建立的複合的索引檔案包含對應到索引項的標記。 刪除標記用來從開啟的複合索引檔案中移除的標記。 您可以刪除僅標記，從複合的索引在目前的工作區中開啟的檔案。 如果您移除所有標記從複合的索引檔案時，會從磁碟刪除檔案。  
+ 以 INDEX 建立的複合索引檔案包含對應至索引項目的標記。 DELETE 標記用來從開啟的複合索引檔案移除標記或標記。 您只能刪除在目前工作區中開啟之複合索引檔案的標記。 如果您從複合索引檔案中移除所有標記，則會從磁片中刪除該檔案。  
   
- Visual FoxPro 會尋找第一個標籤中的結構化的複合索引檔案 （如果有開啟）。 如果標記不在結構化的複合索引檔案，Visual FoxPro 接著會尋找其他開啟的複合索引檔案中的標記。  
+ Visual FoxPro 會先查看結構化複合索引檔案中的標記（如果有開啟）。 如果標記不在結構化複合索引檔案中，則 Visual FoxPro 會在其他開啟的複合索引檔案中尋找標記。  
   
 ## <a name="see-also"></a>另請參閱  
  [INDEX 命令](../../odbc/microsoft/index-command.md)

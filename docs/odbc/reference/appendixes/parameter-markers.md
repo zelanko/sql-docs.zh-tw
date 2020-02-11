@@ -14,29 +14,29 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.openlocfilehash: acb8d5f9687798bc0efa514ee8646b16140fcd36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100578"
 ---
 # <a name="parameter-markers"></a>參數標記
-根據 SQL-92 規格中，應用程式無法將參數標記放在下列位置。 如需更完整的清單，請參閱 SQL-92 規格。  
+根據 SQL-92 規格，應用程式無法將參數標記放在下列位置。 如需更完整的清單，請參閱 SQL-92 規格。  
   
--   在 **選取**清單  
+-   在**選取**清單中  
   
--   為 雙向*運算式*在*比較述詞*  
+-   做為*比較*述詞中的兩個*運算式*  
   
--   當做二元運算子的兩個運算元  
+-   做為二元運算子的兩個運算元  
   
--   做為的第一個和第二個運算元**BETWEEN**作業  
+-   當做**BETWEEN**運算的第一個和第二個運算元  
   
--   做為第一個和第三個運算元的**BETWEEN**作業  
+-   當做**BETWEEN**運算的第一個和第三個運算元  
   
--   當做運算式，而第一個值**IN**作業  
+-   同時做為**IN**運算的運算式和第一個值  
   
--   運算元是一元的 + 或-作業  
+-   做為一元 + 或-運算的運算元  
   
--   做為引數*集函式參考*  
+-   當做*集合函數參考*的引數  
   
- 如需有關參數標記的詳細資訊，請參閱 SQL-92 規格。 如需有關參數的詳細資訊，請參閱 <<c0> [ 陳述式參數](../../../odbc/reference/develop-app/statement-parameters.md)。
+ 如需參數標記的詳細資訊，請參閱 SQL-92 規格。 如需參數的詳細資訊，請參閱[語句參數](../../../odbc/reference/develop-app/statement-parameters.md)。

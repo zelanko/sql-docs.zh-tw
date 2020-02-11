@@ -15,27 +15,27 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bfaaea1b07c17fbf5c47bbcccf20a3ca55862123
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278207"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中對於 Database Engine 功能的行為變更
   本主題描述 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中的行為變更。 行為變更會影響 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 功能的運作或互動方式 (相較於舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])。  
   
-## <a name="SQL14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中的行為變更  
+## <a name="SQL14"></a>中的行為變更[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，針對包含超過特定長度 (超過 4020 個字元) 之字串的 XML 文件進行查詢，可能會傳回不正確的結果。 在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中，這類查詢會傳回正確的結果。  
   
-## <a name="Denali"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中的行為變更  
+## <a name="Denali"></a>中的行為變更[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>中繼資料探索  
- [!INCLUDE[ssDE](../includes/ssde-md.md)] 開頭的改良 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 可讓 SQLDescribeCol 取得比舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中 SQLDescribeCol 傳回的預期結果更精確的描述。 如需詳細資訊，請參閱[中繼資料探索](../relational-databases/native-client/features/metadata-discovery.md)。  
+ 中的[!INCLUDE[ssDE](../includes/ssde-md.md)]改良功能， [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]可讓 SQLDescribeCol 取得比舊版的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]SQLDescribeCol 所傳回的預期結果更精確的描述。 如需詳細資訊，請參閱[中繼資料探索](../relational-databases/native-client/features/metadata-discovery.md)。  
   
- 在不實際執行查詢的情況下，用來判斷回應格式的[SET set fmtonly](/sql/t-sql/statements/set-fmtonly-transact-sql)選項會取代為[sp_describe_first_result_set &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)、 [sp_describe_undeclared_parameters &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql)、 [ &#40;sys.databases dm_exec_describe_first_result_set transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)和 sys.databases。 [dm_exec_describe_first_result_set_for_object &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)。  
+ 用來判斷回應格式而不實際執行查詢的[SET set fmtonly](/sql/t-sql/statements/set-fmtonly-transact-sql)選項，會取代為[sp_describe_first_result_set &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)、 [sp_describe_undeclared_parameters &#40;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql)transact-sql&#41;，以及[dm_exec_describe_first_result_set &#40;transact-sql ](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)&#41;[中 dm_exec_describe_first_result_set_for_object](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)的 transact-sql &#40;。  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>編寫 SQL Server Agent 工作之指令碼時的行為變更  
- 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，如果您透過從現有的作業複製指令碼來建立新的作業，新的作業可能會對現有的作業產生不良的影響。 若要使用現有作業中的腳本建立新作業，請手動刪除參數 *\@schedule_uid*這通常是在現有作業中建立作業排程之區段的最後一個參數。 這將會為新的作業建立新的獨立排程，而不會影響現有的作業。  
+ 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，如果您透過從現有的作業複製指令碼來建立新的作業，新的作業可能會對現有的作業產生不良的影響。 若要使用現有作業中的腳本建立新作業，請手動刪除參數* \@schedule_uid*這通常是在現有作業中建立作業排程之區段的最後一個參數。 這將會為新的作業建立新的獨立排程，而不會影響現有的作業。  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>CLR 使用者定義函數和方法的常數摺疊  
  在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，下列使用者定義的 CLR 物件現在是可摺疊的：  
@@ -71,23 +71,23 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
 -- returns GEOMETRYCOLLECTION EMPTY  
 ```  
   
- 若要判斷空間物件是否為空白，請呼叫[STIsEmpty &#40;geometry 資料類型&#41; ](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type)方法。  
+ 若要判斷空間物件是否為空白，請呼叫[STIsEmpty &#40;Geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type)方法。  
   
 ### <a name="log-function-has-new-optional-parameter"></a>LOG 函數有新的選擇性參數  
- `LOG` 函數現在有選擇性的*基底*參數。 如需詳細資訊，請參閱[LOG &#40;transact-sql&#41;](/sql/t-sql/functions/log-transact-sql)。  
+ `LOG`函數現在有選擇性的*基底*參數。 如需詳細資訊，請參閱[LOG &#40;transact-sql&#41;](/sql/t-sql/functions/log-transact-sql)。  
   
 ### <a name="statistics-computation-during-partitioned-index-operations-has-changed"></a>分割區索引作業期間的統計資料計算已變更  
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 並不會在建立或重建分割區索引之後掃描資料表中所有的資料列建立統計資料。{2} 反之，查詢最佳化工具會使用預設的採樣演算法來產生統計資料。 升級具有分割區索引的資料庫之後，可能會注意到這些索引之長條圖資料的差異。 此行為變更可能不會影響查詢效能。 如果要在掃描資料表中所有資料列時取得分割區索引的統計資料，請使用 CREATE STATISTICS 或 UPDATE STATISTICS 搭配 FULLSCAN 子句。  
+ 在[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中，當建立或重建資料分割索引時，不會藉由掃描資料表中的所有資料列來建立統計資料。 反之，查詢最佳化工具會使用預設的採樣演算法來產生統計資料。 升級具有分割區索引的資料庫之後，可能會注意到這些索引之長條圖資料的差異。 此行為變更可能不會影響查詢效能。 如果要在掃描資料表中所有資料列時取得分割區索引的統計資料，請使用 CREATE STATISTICS 或 UPDATE STATISTICS 搭配 FULLSCAN 子句。  
   
 ### <a name="data-type-conversion-by-the-xml-value-method-has-changed"></a>XML value 方法的資料類型轉換已變更  
- `value`資料類型之 `xml`方法的內部行為已變更。{3} 此方法會針對 XML 執行 XQuery 並傳回指定之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料類型的純量值。 xs 類型必須轉換為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料類型。 以前 `value` 方法會在內部將來源值轉換為 xs:string，然後將 xs:string 轉換為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料類型。 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中，下列情況下會略過 xs:string 的轉換：  
+ `xml`資料類型之`value`方法的內部行為已變更。 此方法會針對 XML 執行 XQuery 並傳回指定之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料類型的純量值。 xs 類型必須轉換為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料類型。 以前 `value` 方法會在內部將來源值轉換為 xs:string，然後將 xs:string 轉換為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料類型。 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中，下列情況下會略過 xs:string 的轉換：  
   
 |來源 XS 資料類型|目的地 SQL Server 資料類型|  
 |-------------------------|--------------------------------------|  
-|byte<br /><br /> short<br /><br /> 整數<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|tinyint<br /><br /> SMALLINT<br /><br /> 整數<br /><br /> bigint<br /><br /> DECIMAL<br /><br /> numeric|  
-|DECIMAL|DECIMAL<br /><br /> numeric|  
-|Float|real|  
-|double|Float|  
+|byte<br /><br /> short<br /><br /> int<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|tinyint<br /><br /> smallint<br /><br /> int<br /><br /> BIGINT<br /><br /> decimal<br /><br /> NUMERIC|  
+|decimal|decimal<br /><br /> NUMERIC|  
+|FLOAT|real|  
+|double|FLOAT|  
   
  可以略過中繼轉換時，新行為會提高效能。 但在資料類型轉換失敗時，您會看到不同於從中繼 xs:string 值轉換時所引發的錯誤訊息。 例如，如果 value 方法無法將 `int` 值 100000 轉換為 `smallint`，以前的錯誤訊息是：  
   
@@ -101,12 +101,12 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  當您執行 SELECT * from T FOR XML ... 時，如果您使用 sqlcmd 搭配 XML 模式（： XML ON 命令），則會發生行為變更。  
   
 ### <a name="dbcc-checkident-revised-message"></a>DBCC CHECKIDENT 修訂的訊息  
- 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中，DBCC CHECKIDENT 命令所傳回的訊息只有在與重新植入*new_reseed_value*來變更目前的識別值時，才會變更。 新訊息是「正在檢查識別資訊：目前的識別值 '\<目前的識別值」 > '。 DBCC 的執行已經完成。 如果 DBCC 印出錯誤訊息，請連絡您的系統管理員」。  
+ 在[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中，DBCC CHECKIDENT 命令所傳回的訊息只有在與重新植入*new_reseed_value*變更目前的識別值一起使用時才會變更。 新訊息是「正在檢查識別資訊：目前的識別值\<' 目前的識別值>」。 DBCC 的執行已經完成。 如果 DBCC 印出錯誤訊息，請連絡您的系統管理員」。  
   
- 在舊版中，訊息是「正在檢查識別資訊：目前的識別值 '\<目前的識別值」 > '，目前的資料行值 '\<目前的資料行值 > '。 DBCC 的執行已經完成。 如果 DBCC 印出錯誤訊息，請連絡您的系統管理員」。 搭配 NORESEED 指定了 DBCC CHECKIDENT，但沒有第二個參數或沒有 reseed 值時，訊息保持不變。 如需詳細資訊，請參閱 [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)。  
+ 在舊版中，訊息是「正在檢查識別資訊：目前的識別值\<' 目前的識別值> '，目前的\<資料行值「目前的資料行值>」。 DBCC 的執行已經完成。 如果 DBCC 印出錯誤訊息，請連絡您的系統管理員」。 搭配 NORESEED 指定了 DBCC CHECKIDENT，但沒有第二個參數或沒有 reseed 值時，訊息保持不變。 如需詳細資訊，請參閱 [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)。  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>XML 資料類型上之 exist() 函數的行為已變更  
- 將具有 null 值的 XML 資料類型與0（零）進行比較時，**存在（）** 函數的行為已變更。 請設想下列範例：  
+ 將具有 null 值的 XML 資料類型與0（零）進行比較時，**存在（）** 函數的行為已變更。 請考慮下列範例：  
   
 ```xml  
 DECLARE @test XML;  

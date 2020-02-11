@@ -1,5 +1,5 @@
 ---
-title: sp_helplinkedsrvlogin (TRANSACT-SQL) |Microsoft Docs
+title: sp_helplinkedsrvlogin （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1728b3e5d4cd3189a8d9a01a8b72ecedaf7cb6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122455"
 ---
-# <a name="sphelplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
+# <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   提供對特定連結伺服器 (用於分散式查詢與遠端預存程序) 所定義登入對應的相關資訊。  
@@ -40,9 +40,9 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @rmtsrvname = ] 'rmtsrvname'` 是登入對應所套用的連結伺服器的名稱。 *rmtsrvname&lt*已**sysname**，預設值是 NULL。 如果是 NULL，會傳回對所有連結伺服器 (定義於執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本機電腦中) 定義的所有登入對應。  
+`[ @rmtsrvname = ] 'rmtsrvname'`這是登入對應所套用的連結伺服器名稱。 *rmtsrvname*是**sysname**，預設值是 Null。 如果是 NULL，會傳回對所有連結伺服器 (定義於執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本機電腦中) 定義的所有登入對應。  
   
-`[ @locallogin = ] 'locallogin'` 已[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是對應至連結伺服器的本機伺服器登入*rmtsrvname&lt*。 *locallogin*已**sysname**，預設值是 NULL。 NULL 可讓您指定在定義的所有登入對應*rmtsrvname&lt*會傳回。 如果不是 NULL 的對應*locallogin*要*rmtsrvname&lt*必須已經存在。 *locallogin*可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 使用者。 必須以直接方式或透過其被授與存取權限之 Windows 群組的成員資格，來授與 Windows 使用者存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的權限。  
+`[ @locallogin = ] 'locallogin'`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機伺服器上的登入，其對應至連結的伺服器*rmtsrvname*。 *locallogin*是**sysname**，預設值是 Null。 Null 指定傳回*rmtsrvname*上定義的所有登入對應。 如果不是 Null，則*locallogin*至*rmtsrvname*的對應必須已經存在。 *locallogin*可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 使用者。 必須以直接方式或透過其被授與存取權限之 Windows 群組的成員資格，來授與 Windows 使用者存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的權限。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -53,13 +53,13 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 |-----------------|---------------|-----------------|  
 |**連結的伺服器**|**sysname**|連結伺服器名稱。|  
 |**本機登入**|**sysname**|對應所套用的本機登入。|  
-|**自我對應**|**smallint**|0 =**本機登入**對應至**遠端登入**當連接到**連結的伺服器**。<br /><br /> 1 =**本機登入**會對應至相同的登入和密碼連接到**連結的伺服器**。|  
-|**遠端登入**|**sysname**|在 登入名稱**LinkedServer**對應至**LocalLogin**時**IsSelfMapping**為 0。 如果**IsSelfMapping**為 1，這**RemoteLogin**是 NULL。|  
+|**Is Self Mapping**|**smallint**|0 = 當連接到**連結的伺服器**時，**本機登**入會對應到**遠端登入**。<br /><br /> 1 = 連接到**連結的伺服器**時，**本機登**入會對應到相同的登入和密碼。|  
+|**Remote Login**|**sysname**|當**IsSelfMapping**為0時， **LinkedServer**上對應至**LocalLogin**的登入名稱。 如果**IsSelfMapping**是1， **REMOTELOGIN**會是 Null。|  
   
 ## <a name="remarks"></a>備註  
- 刪除登入對應之前，請使用**sp_helplinkedsrvlogin**來判斷所涉及的連結的伺服器。  
+ 在刪除登入對應之前，請使用**sp_helplinkedsrvlogin**來判斷相關的連結伺服器。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  不檢查任何權限。  
   
 ## <a name="examples"></a>範例  
@@ -124,9 +124,9 @@ Sales            Mary          0               sa
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_droplinkedsrvlogin &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
+ [sp_droplinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

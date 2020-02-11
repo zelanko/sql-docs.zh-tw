@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: be19f42fa5e8a154d8f29e359b6a52395c6504d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104033"
 ---
 # <a name="configure-report-builder-access"></a>設定報表產生器的存取
-  報表產生器是一個隨選報表工具，它會與設定原生模式或 SharePoint 整合模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器一起安裝。  
+  報表產生器是隨選報表工具，它會與設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]為原生模式或 SharePoint 整合模式的報表伺服器一起安裝。  
   
  報表產生器的存取權會因下列因素而異：  
   
@@ -34,10 +34,11 @@ ms.locfileid: "66104033"
   
  若要使用報表產生器，您必須具有要使用的已發行報表模型。  
   
-## <a name="prerequisites"></a>先決條件  
- 並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中都可使用報表產生器。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+## <a name="prerequisites"></a>Prerequisites  
+ 並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中都可使用報表產生器。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
- 用戶端電腦必須已經安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供了執行 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 應用程式的基礎結構。  
+ 用戶端電腦必須[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]安裝2.0。 
+  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供了執行 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 應用程式的基礎結構。  
   
  您必須使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 或更新版本。  
   
@@ -71,71 +72,71 @@ ms.locfileid: "66104033"
   
 1.  啟動 Management Studio，然後連接到報表伺服器。  
   
-2.  開啟 [安全性]  資料夾。  
+2.  開啟 [安全性]**** 資料夾。  
   
-3.  開啟 [系統角色]  資料夾。  
+3.  開啟 [系統角色]**** 資料夾。  
   
-4.  以滑鼠右鍵按一下 [系統管理員]  ，然後選取 [屬性]  。  
+4.  以滑鼠右鍵按一下 [系統管理員]****，然後選取 [屬性]****。  
   
-5.  選取 [執行報表定義]  ，然後按一下 [確定]  。  
+5.  選取 [執行報表定義]****，然後按一下 [確定]****。  
   
-6.  以滑鼠右鍵按一下 [系統使用者]  ，然後選取 [屬性]  。  
+6.  以滑鼠右鍵按一下 [系統使用者]****，然後選取 [屬性]****。  
   
-7.  選取 [執行報表定義]  ，然後按一下 [確定]  。  
+7.  選取 [執行報表定義]****，然後按一下 [確定]****。  
   
-8.  開啟 [角色]  資料夾。  
+8.  開啟 [角色]**** 資料夾。  
   
-9. 以滑鼠右鍵按一下 [瀏覽器]  ，然後選取 [屬性]  。  
+9. 以滑鼠右鍵按一下 [瀏覽器]****，然後選取 [屬性]****。  
   
-10. 選取 [檢視模型]  ，然後按一下 [確定]  。  
+10. 選取 [檢視模型]****，然後按一下 [確定]****。  
   
-11. 以滑鼠右鍵按一下 [內容管理員]  ，然後選取 [屬性]  。  
+11. 以滑鼠右鍵按一下 [內容管理員]****，然後選取 [屬性]****。  
   
-12. 選取 [檢視模型]  、[管理模型]  、[取用報表]  ，然後按一下 [確定]  。  
+12. 選取 [檢視模型]****、[管理模型]****、[取用報表]****，然後按一下 [確定]****。  
   
-13. 以滑鼠右鍵按一下 [發行者]  ，然後選取 [屬性]  。  
+13. 以滑鼠右鍵按一下 [發行者]****，然後選取 [屬性]****。  
   
-14. 選取 [管理模型]  ，然後按一下 [確定]  。  
+14. 選取 [管理模型]****，然後按一下 [確定]****。  
   
 15. 如果報表產生器角色不存在，請建立該角色：  
   
-    1.  開啟 [安全性]  資料夾。  
+    1.  開啟 [安全性]**** 資料夾。  
   
-    2.  以滑鼠右鍵按一下 [角色]  ，並選取 [新增角色]  。  
+    2.  以滑鼠右鍵按一下 [角色]****，並選取 [新增角色]****。  
   
     3.  在 [名稱] 中，輸入 **報表產生器**。  
   
     4.  在 [描述] 中，輸入角色的描述，好讓報表管理員中的使用者知道這個角色的目的。  
   
-    5.  新增下列工作：**取用報表**，**檢視的報表**，**檢視模型**，**檢視資源**，**檢視資料夾**，以及**管理個別訂閱**s。  
+    5.  新增下列工作：[取用報表]****、[檢視報表]****、[檢視模型]****、[檢視資源]****、[檢視資料夾]**** 及 [管理個別訂閱]****。  
   
-    6.  按一下 [確定]  ，儲存角色。  
+    6.  按一下 [確定]****，儲存角色。  
   
 #### <a name="to-create-role-assignments-that-grant-access-to-report-builder"></a>建立角色指派來授與報表產生器的存取權  
   
 1.  啟動報表管理員。  
   
-2.  按一下 **[站台設定]** 。  
+2.  按一下 **[站台設定]**。  
   
 3.  按一下 **[安全性]** 。  
   
-4.  如果您想要設定報表產生器存取的使用者或群組已經有角色指派，請按一下 [編輯]  。  
+4.  如果您想要設定報表產生器存取的使用者或群組已經有角色指派，請按一下 [編輯]****。  
   
-     否則請按一下 [新增角色指派]  。 在群組或使用者中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。  
+     否則請按一下 [新增角色指派]****。 在群組或使用者中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。  
   
-5.  選取 [系統使用者]  ，然後按一下 [確定]  。  
+5.  選取 [系統使用者]****，然後按一下 [確定]****。  
   
-6.  按一下 [首頁]  。  
+6.  按一下 [首頁]****。  
   
-7.  按一下 [資料夾設定]  索引標籤。  
+7.  按一下 [資料夾設定]**** 索引標籤。  
   
-8.  按一下 [安全性]  索引標籤。  
+8.  按一下 **[安全性]** 索引標籤。  
   
-9. 如果您想要設定報表產生器存取的使用者或群組已經有角色指派，請按一下 [編輯]  。  
+9. 如果您想要設定報表產生器存取的使用者或群組已經有角色指派，請按一下 [編輯]****。  
   
-     否則請按一下 [新增角色指派]  。 在群組或使用者中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。  
+     否則請按一下 [新增角色指派]****。 在群組或使用者中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。  
   
-10. 選取 [報表產生器]  ，然後按一下 [套用]  。  
+10. 選取 [報表產生器]****，然後按一下 [套用]****。  
   
 11. 重複上述步驟，以便建立或修改其他使用者或群組的角色指派。  
   
@@ -159,13 +160,13 @@ ms.locfileid: "66104033"
 |---------------------------------------|--------------------------------------------------------------------|  
 |交涉 (預設值)<br /><br /> NTLM (預設值)|在 Windows 整合式安全性之下，如果用戶端和伺服器部署在相同的網域中、使用者使用有權存取報表產生器的網域帳戶來登入用戶端電腦，而且報表伺服器有設定 Windows 驗證時，來自 ClickOnce 和報表產生器的已驗證要求通常會成功。<br /><br /> 要求成功是因為 ClickOnce 以及與報表伺服器的瀏覽器連接具有相同的使用者識別。<br /><br /> 如果使用者使用 [執行身分] 開啟 Internet Explorer 而且指定了非預設的認證，要求將會失敗。 如果報表伺服器上的使用者工作階段是在特定的帳戶之下建立，而且 ClickOnce 會在不同的帳戶下執行，則報表伺服器將會拒絕檔案的存取。|  
 |Kerberos|使用報表產生器所需的 Internet Explorer 並不會直接支援 Kerberos。|  
-|基本驗證|ClickOnce 不支援基本驗證。 ClickOnce 將不會在驗證標頭中編寫用於指定基本驗證的要求， 也不會傳遞認證或是提示使用者提供認證。 您可以啟用報表產生器應用程式檔案的匿名存取來解決這些問題。<br /><br /> 如果您啟用報表產生器應用程式檔案的匿名存取，要求將會成功，因為報表伺服器會忽略驗證標頭。 如需如何啟用報表產生器匿名存取的詳細資訊，請參閱 [設定報表伺服器上的基本驗證](../security/configure-basic-authentication-on-the-report-server.md)。<br /><br /> 在 ClickOnce 擷取應用程式檔案之後，報表產生器會開啟與報表伺服器的個別連接。 使用者必須重新輸入認證，才能讓報表產生器連接報表伺服器。 報表產生器不會從 Internet Explorer 或 ClickOnce 收集認證。<br /><br /> 如果報表伺服器有設定基本驗證，而且您並未啟用報表產生器程式檔案的匿名存取，要求將會失敗。 要求失敗是因為 ClickOnce 會在它的要求中指定 Windows 整合式安全性。 如果報表伺服器有設定基本驗證，伺服器將會拒絕要求，因為它會指定無效的安全性封裝，而且它會缺少報表伺服器所預期的認證。<br /><br /> 此外，如果報表伺服器設定為使用 SharePoint 整合模式，而且 SharePoint 網站使用基本驗證，則當使用者嘗試使用 ClickOnce 在用戶端電腦上安裝報表產生器時，會出現 401 錯誤。 發生這個狀況的原因是 SharePoint 會使用 Cookie 讓使用者在工作階段期間維持驗證狀態，但是 ClickOnce 不支援 Cookie。 當使用者啟動 ClickOnce 應用程式 (例如報表產生器) 時，應用程式不會讓 Cookie 通過 SharePoint，因此 SharePoint 會拒絕存取並傳回 401 錯誤。<br /><br /> 您可以嘗試下列其中一個選項來解決這個問題：<br /><br /> 選取 **記住我的密碼**選項時提供您的使用者認證。<br /><br /> 針對 SharePoint 網站集合啟用匿名存取。<br /><br /> 設定環境，讓使用者不提供認證。 例如，在內部網路環境中，您可能會將 SharePoint 伺服器設定為屬於某個工作群組，然後在本機電腦上建立使用者帳戶。|  
-|自訂|當您設定報表伺服器使用自訂驗證時，報表伺服器上會啟用匿名存取，而且會接受要求而不執行驗證檢查。<br /><br /> 在 ClickOnce 擷取應用程式檔案之後，報表產生器會開啟與報表伺服器的個別連接。 使用者必須重新輸入認證，才能讓報表產生器連接報表伺服器。 報表產生器不會從 Internet Explorer 或 ClickOnce 收集認證。|  
+|基本驗證|ClickOnce 不支援基本驗證。 ClickOnce 將不會在驗證標頭中編寫用於指定基本驗證的要求， 也不會傳遞認證或是提示使用者提供認證。 您可以啟用報表產生器應用程式檔案的匿名存取來解決這些問題。<br /><br /> 如果您啟用報表產生器應用程式檔案的匿名存取，要求將會成功，因為報表伺服器會忽略驗證標頭。 如需如何啟用報表產生器匿名存取的詳細資訊，請參閱 [設定報表伺服器上的基本驗證](../security/configure-basic-authentication-on-the-report-server.md)。<br /><br /> 在 ClickOnce 擷取應用程式檔案之後，報表產生器會開啟與報表伺服器的個別連接。 使用者必須重新輸入認證，才能讓報表產生器連接報表伺服器。 報表產生器不會從 Internet Explorer 或 ClickOnce 收集認證。<br /><br /> 如果報表伺服器有設定基本驗證，而且您並未啟用報表產生器程式檔案的匿名存取，要求將會失敗。 要求失敗是因為 ClickOnce 會在它的要求中指定 Windows 整合式安全性。 如果報表伺服器有設定基本驗證，伺服器將會拒絕要求，因為它會指定無效的安全性封裝，而且它會缺少報表伺服器所預期的認證。<br /><br /> 此外，如果報表伺服器設定為使用 SharePoint 整合模式，而且 SharePoint 網站使用基本驗證，則當使用者嘗試使用 ClickOnce 在用戶端電腦上安裝報表產生器時，會出現 401 錯誤。 發生這個狀況的原因是 SharePoint 會使用 Cookie 讓使用者在工作階段期間維持驗證狀態，但是 ClickOnce 不支援 Cookie。 當使用者啟動 ClickOnce 應用程式 (例如報表產生器) 時，應用程式不會讓 Cookie 通過 SharePoint，因此 SharePoint 會拒絕存取並傳回 401 錯誤。<br /><br /> 您可以嘗試下列其中一個選項來解決這個問題：<br /><br /> 當您提供使用者認證時，請選取 [**記住我的密碼**] 選項。<br /><br /> 針對 SharePoint 網站集合啟用匿名存取。<br /><br /> 設定環境，讓使用者不提供認證。 例如，在內部網路環境中，您可能會將 SharePoint 伺服器設定為屬於某個工作群組，然後在本機電腦上建立使用者帳戶。|  
+|Custom|當您設定報表伺服器使用自訂驗證時，報表伺服器上會啟用匿名存取，而且會接受要求而不執行驗證檢查。<br /><br /> 在 ClickOnce 擷取應用程式檔案之後，報表產生器會開啟與報表伺服器的個別連接。 使用者必須重新輸入認證，才能讓報表產生器連接報表伺服器。 報表產生器不會從 Internet Explorer 或 ClickOnce 收集認證。|  
   
 ## <a name="see-also"></a>另請參閱  
  [使用報表伺服器驗證](../security/authentication-with-the-report-server.md)   
- [規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
- [啟動報表產生器&#40;報表產生器&#41;](../report-builder/start-report-builder.md)   
+ [規劃 Reporting Services 和 Power View 瀏覽器支援 &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
+ [開始報表產生器 &#40;報表產生器&#41;](../report-builder/start-report-builder.md)   
  [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   
  [連接至 Management Studio 中的報表伺服器](../tools/connect-to-a-report-server-in-management-studio.md)   
  [報表伺服器系統屬性](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  

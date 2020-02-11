@@ -13,26 +13,26 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 9ae4a5009c33067dcb5db2d26ff3e287b31b8768
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71118128"
 ---
 # <a name="query-options-pages-f1-help"></a>查詢選項頁面 F1 說明
 
 此章節包含 **中** [查詢選項] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]頁面的 F1 說明主題。
 
-[Analysis Services 查詢執行選項&#40;一般頁面&#41;](analysis-services-query-execution-options-general-page.md)
+[Analysis Services 查詢執行選項 &#40;一般頁面&#41;](analysis-services-query-execution-options-general-page.md)
 
-[Analysis Services 查詢結果&#40;一般頁面&#41;](../../2014/database-engine/analysis-services-query-results-general-page.md)
+[Analysis Services 查詢結果 &#40;一般頁面&#41;](../../2014/database-engine/analysis-services-query-results-general-page.md)
 
-[查詢選項執行&#40;[Advanced] 頁面&#41;](../../2014/database-engine/query-options-execution-advanced-page.md)
+[查詢選項執行 &#40;Advanced Page&#41;](../../2014/database-engine/query-options-execution-advanced-page.md)
 
-[查詢選項執行&#40;ANSI 頁面&#41;](../../2014/database-engine/query-options-execution-ansi-page.md)
+[查詢選項執行 &#40;ANSI 頁面&#41;](../../2014/database-engine/query-options-execution-ansi-page.md)
 
-[查詢選項執行&#40;一般頁面&#41;](../../2014/database-engine/query-options-execution-general-page.md)
+[查詢選項執行 &#40;一般頁面&#41;](../../2014/database-engine/query-options-execution-general-page.md)
   
-[查詢選項結果&#40;格線頁&#41;](../../2014/database-engine/query-options-results-grid-page.md)
+[查詢選項結果 &#40;格線頁&#41;](../../2014/database-engine/query-options-results-grid-page.md)
 
-[查詢選項結果&#40;文字頁面&#41;](../../2014/database-engine/query-options-results-text-page.md)
+[查詢選項結果 &#40;文字頁面&#41;](../../2014/database-engine/query-options-results-text-page.md)

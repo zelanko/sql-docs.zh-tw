@@ -1,6 +1,6 @@
 ---
-title: SQL Server 2014 docs 受到 |Microsoft Docs
-description: SQL Server 2014 的 Microsoft 文件將年 7 月 2018，從 MSDN 文件上的此移動。
+title: SQL Server 2014 檔正在移動 |Microsoft Docs
+description: SQL Server 2014 的 Microsoft 檔將于7月2018日之前（從 MSDN 到這裡）移至這裡。
 author: mightypen
 manager: craigg
 ms.prod: sql-server-2014
@@ -10,45 +10,45 @@ ms.date: 04/26/2018
 ms.author: genemi
 ms.reviewer: sudeepk
 ms.openlocfilehash: 205e0a1ee6f93a11c471154534f460d9fa379d33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473636"
 ---
 # <a name="documentation-for-sql-server-2014-is-moving-to-docs"></a>SQL Server 2014 的文件即將移往 Docs
 
-本文說明 Microsoft 的 SQL Server 2014 文件文章即將移。 於 2018 年 4 月年底，正在寫入這篇文章，並移動會在 2018 年 7 月之前發生。
+本文將說明即將推出的 Microsoft SQL Server 2014 檔文章。 本文將于2018年4月晚寫入，而移動會在2018年7月之前進行。
 
-## <a name="links-to-sql-server-2014-documentation-on-msdn"></a>MSDN 上的 SQL Server 2014 文件的連結
+## <a name="links-to-sql-server-2014-documentation-on-msdn"></a>MSDN 上 SQL Server 2014 檔的連結
 
-下列連結是 SQL Server 2014 文件，Microsoft 已儲存在其*MSDN*網站。 之前在 2018 年 7 月，Microsoft 將其新移動這些文件文章*Docs*網站：
+下列連結是 Microsoft 儲存在其*MSDN*網站的 SQL Server 2014 檔。 在2018年7月之前，Microsoft 會將這些檔文章移*至新的*檔網站：
 
 - *SQL Server 2014*
     - [https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx](https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx)
 
-- *SQL Server 2014 的線上叢書*
+- *SQL Server 2014 的《線上叢書》*
     - [https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 
-MSDN 是針對 initialism *Microsoft Developer Network*。
+MSDN 是*Microsoft Developer Network*的 initialism。
 
 
-## <a name="redirectors"></a>重新導向器
+## <a name="redirectors"></a>反過來
 
-過時的 MSDN HTTP 位址仍適用於移動後的最少幾年。 重新導向器會攔截 MSDN 要求，並將其對應的新位址，在 Docs 上轉送。不過，移動之後，下列項目會是 true:
+過去幾年後，已淘汰的 MSDN HTTP 位址將繼續正常執行。 重新導向程式會攔截 MSDN 要求，並將其轉送到檔上的新對應位址。不過，在移動之後，下列專案將會是 true：
 
-- 它會直接瀏覽至 Docs 的新 HTTP 位址運作更好。
-- Bing 和 Google 的編目程式會開始為取消列入，並略過舊的 MSDN 位址。
+- 最好是使用直接流覽至檔的新 HTTP 位址。
+- Bing 和 Google 爬網會開始 delist，並略過舊的 MSDN 位址。
 
 
-## <a name="after-the-move"></a>在移動之後
+## <a name="after-the-move"></a>移動之後
 
-若要在移動之後*Docs*，根 SQL Server 2014 文件文章的位址會是：
+移至檔之後 *，根*SQL Server 2014 檔文章的位址將會是：
 
 - [https://docs.microsoft.com/sql/?view=sql-server-2014](https://docs.microsoft.com/sql/?view=sql-server-2014)
 
 
 ## <a name="related-links"></a>相關連結
 
-- [SQL Server 2016 和更新版本的根文件文章](https://docs.microsoft.com/sql/?view=sql-server-2016)
+- [SQL Server 2016 和更新版本的根檔文章](https://docs.microsoft.com/sql/?view=sql-server-2016)
 

@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 33f9329031c589c533277b1e681ea1cb7bae49b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098134"
 ---
-# <a name="reserveurl-method-wmi-msreportserverconfigurationsetting"></a>ReserveURL 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="reserveurl-method-wmi-msreportserver_configurationsetting"></a>ReserveURL 方法 (WMI MSReportServer_ConfigurationSetting)
   加入給定應用程式的 URL 保留項目。  
   
 ## <a name="syntax"></a>語法  
@@ -36,7 +36,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
 ```  
   
 ## <a name="parameters"></a>參數  
- *應用程式*  
+ *Application*  
  要保留 URL 之應用程式的名稱。  
   
  *URLString*  
@@ -55,14 +55,15 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  傳回 *HRESULT* ，指出方法呼叫成功或失敗。 值為 0 表示方法呼叫成功。錯誤碼則表示呼叫不成功。  
   
 ## <a name="remarks"></a>備註  
- *UrlString* 不包含虛擬目錄名稱。 [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) 方法是針對該目的提供的。  
+ *UrlString*不包含虛擬目錄名稱。 
+  [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) 方法是針對該目的提供的。  
   
  URL 保留項目是針對目前的 Windows 服務帳戶所建立的。 變更 Windows 服務帳戶需要手動更新所有 URL 保留項目。  
   
  這個方法會導致所有應用程式網域進行硬式回收。 在此作業完成之後，應用程式網域就會重新啟動。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

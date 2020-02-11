@@ -17,10 +17,10 @@ ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 715ceb531f2334f4cf9580c630d922f45faae74e
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252066"
 ---
 # <a name="syssp_rda_get_rpo_duration-transact-sql"></a>sys.databases sp_rda_get_rpo_duration （Transact-sql）
@@ -44,14 +44,14 @@ sp_rda_get_rpo_duration @durationinhours output
  *\@durationinhours*    
   這是 SQL Server 保留目前已啟用 Stretch 之資料庫的已遷移資料的時數（非 null 整數值）。    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>權限    
  需要 db_owner 許可權。    
     
-## <a name="remarks"></a>Remarks    
- 藉由執行[sys.databases sp_rda_set_rpo_duration &#40;的 transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)來變更值。    
+## <a name="remarks"></a>備註    
+ 藉由執行[sys.databases sp_rda_set_rpo_duration &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)來變更值。    
     
 ## <a name="see-also"></a>另請參閱    
- [sp_rda_set_rpo_duration &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
+ [sp_rda_set_rpo_duration &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
  [還原已啟用 Stretch 的資料庫（Stretch Database）](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)    
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)    
     

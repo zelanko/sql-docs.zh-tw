@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a00b07bb54d30d4e1db49cf2db70dec8286b27e0
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798288"
 ---
 # <a name="create-a-schedule"></a>Create a Schedule
@@ -27,9 +27,9 @@ ms.locfileid: "72798288"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要使用下列項目建立排程：**  
+-   **若要建立排程，請使用：**  
   
      [Transact-SQL](#SSMS)  
   
@@ -48,21 +48,21 @@ ms.locfileid: "72798288"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **[SQL Server Agent]** 、以滑鼠右鍵按一下 **[作業]** ，然後選取 **[管理排程]** 。  
+2.  展開 **[SQL Server Agent]**、以滑鼠右鍵按一下 **[作業]**，然後選取 **[管理排程]**。  
   
-3.  在 **[管理排程]** 對話方塊中，按一下 **[新增]** 。  
+3.  在 **[管理排程]** 對話方塊中，按一下 **[新增]**。  
   
 4.  在 **[名稱]** 方塊中，輸入新排程的名稱。  
   
 5.  如果您不想要讓排程在建立之後立即生效，請清除 **[已啟用]** 核取方塊。  
   
-6.  針對 **[排程類型]** ，選取下列其中一項：  
+6.  針對 **[排程類型]**，選取下列其中一項：  
   
-    -   若要在 CPU 達到閒置條件時啟動此作業，請按一下 **[只要 CPU 閒置就啟動]** 。  
+    -   若要在 CPU 達到閒置條件時啟動此作業，請按一下 **[只要 CPU 閒置就啟動]**。  
   
-    -   如果您想要重複執行排程，按一下 **[重複執行]** 。 若要設定重複執行的排程，請完成對話方塊上的 **[頻率]** 、 **[每日頻率]** 和 **[持續時間]** 群組。  
+    -   如果您想要重複執行排程，按一下 **[重複執行]**。 若要設定重複執行的排程，請完成對話方塊上的 **[頻率]**、 **[每日頻率]** 和 **[持續時間]** 群組。  
   
-    -   如果您想要讓排程只執行一次，請按一下 **[執行一次]** 。 若要設定 **[執行一次]** 排程，請完成對話方塊上的 **[僅發生一次]** 群組。  
+    -   如果您想要讓排程只執行一次，請按一下 **[執行一次]**。 若要設定 **[執行一次]** 排程，請完成對話方塊上的 **[僅發生一次]** 群組。  
   
 ##  <a name="TSQL"></a> 使用 Transact-SQL  
   
@@ -72,7 +72,7 @@ ms.locfileid: "72798288"
   
 2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```sql
     -- creates a schedule named RunOnce.   
@@ -91,6 +91,6 @@ ms.locfileid: "72798288"
  如需詳細資訊，請參閱[sp_add_schedule &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)。  
   
 ##  <a name="SMO"></a>使用 SQL Server 管理物件  
- **建立排程**  
+ **若要建立排程**  
   
  透過所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell，使用 `JobSchedule` 類別。 如需詳細資訊，請參閱 [SQL Server 管理物件 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  

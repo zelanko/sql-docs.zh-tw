@@ -1,5 +1,5 @@
 ---
-title: sys.time_zone_info & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.databases time_zone_info （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2018
 ms.prod: sql
@@ -19,26 +19,26 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 69bfcbb7e1eeaf6b456a2e10d1f3bfcc581c3d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106697"
 ---
-# <a name="systimezoneinfo-transact-sql"></a>sys.time_zone_info (Transact-SQL)
+# <a name="systime_zone_info-transact-sql"></a>sys.databases time_zone_info （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  傳回支援的時區資訊。 在電腦上安裝所有的時區會儲存在下列登錄區：  
+  傳回支援時區的相關資訊。 電腦上安裝的所有時區都儲存在下列登錄區中：  
 `KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`.  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Windows 標準格式的時區名稱。 比方說， **cen。澳洲標準時間**或是**歐洲中部標準時間**。|  
-|**current_utc_offset**|**nvarchar(12)**|目前的 UTC 的位移。 例如， **+ 01:00**或是 **-07:00**。|  
-|**is_currently_dst**|**bit**|如果目前觀察日光節約時間，則為 true。|  
+|**name**|**sysname**|採用 Windows 標準格式的時區名稱。 例如，**澳大利亞中部標準時間**或**中歐標準時間**。|  
+|**current_utc_offset**|**Nvarchar （12）**|UTC 的目前位移。 例如， **+ 01:00**或 **-07:00**。|  
+|**is_currently_dst**|**bit**|如果目前觀察日光節約時間，則為 True。|  
   
 ## <a name="see-also"></a>另請參閱  
- [GETUTCDATE &#40;Transact-SQL&#41;](../../t-sql/functions/getutcdate-transact-sql.md)   
- [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
- [日期和時間資料類型與函式 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
- [伺服器範圍組態目錄檢視&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)  
+ [GETUTCDATE &#40;Transact-sql&#41;](../../t-sql/functions/getutcdate-transact-sql.md)   
+ [在時區 &#40;Transact-sql&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
+ [日期和時間資料類型和函數 &#40;Transact-sql&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
+ [&#40;Transact-sql&#41;的伺服器範圍設定目錄檢視](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)  

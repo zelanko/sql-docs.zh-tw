@@ -13,17 +13,17 @@ ms.assetid: 38975059-b346-410f-bb27-326f3f7bbf39
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 168b7b5ef6f8b88a39dbbb0942cf1520adf261e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086035"
 ---
 # <a name="translation-dlls"></a>轉譯 DLL
-通常，應用程式和資料來源會將資料儲存數個不同的字元集。 ODBC 會提供可讓驅動程式，將資料從一個設為另一個的字元轉譯的一般機制。 其中包含實作的轉譯函式的 DLL **SQLDriverToDataSource**並**SQLDataSourceToDriver**，由將轉譯的資料來源之間流動的所有資料驅動程式呼叫和驅動程式。 這個 DLL 可以寫入應用程式開發人員，驅動程式開發人員，或第三方。  
+應用程式和資料來源通常會將資料儲存在不同的字元集中。 ODBC 提供了一種泛型機制，可讓驅動程式將資料從一個字元集轉譯成另一組。 其中包含的 DLL 會執行轉譯函式**SQLDriverToDataSource**和**SQLDataSourceToDriver**，而驅動程式會呼叫這些函式來轉譯資料來源和驅動程式之間流動的所有資料。 這個 DLL 可以由應用程式開發人員、驅動程式開發人員或協力廠商撰寫。  
   
- 轉譯 DLL 特定資料來源可以指定該資料來源; 的系統資訊如需詳細資訊，請參閱 <<c0> [ 資料來源規格子機碼](../../../odbc/reference/install/data-source-specification-subkeys.md)。 它也可以設定在執行階段使用 SQL_ATTR_TRANSLATE_DLL 和 SQL_ATTR_TRANSLATE_OPTION 連接屬性。  
+ 特定資料來源的轉譯 DLL 可以在該資料來源的系統資訊中指定;如需詳細資訊，請參閱[資料來源規格](../../../odbc/reference/install/data-source-specification-subkeys.md)子機碼。 您也可以在執行時間使用 SQL_ATTR_TRANSLATE_DLL 和 SQL_ATTR_TRANSLATE_OPTION 連接屬性來設定它。  
   
- 轉譯選項是一個可以解譯只能由特定的轉譯 DLL 的值。 比方說，如果轉譯 DLL 將不同的字碼頁之間轉譯，選項可能會讓應用程式和資料來源所使用的字碼頁的數字。 沒有要使用的轉譯選項翻譯 DLL 的需求。  
+ 翻譯選項是只能由特定轉譯 DLL 來解讀的值。 例如，如果翻譯 DLL 在不同的字碼頁之間轉譯，則選項可能會提供應用程式和資料來源所使用的字碼頁數目。 翻譯 DLL 不需要使用轉譯選項。  
   
- 之後在指定 DLL 的翻譯，驅動程式會載入它，並呼叫它來轉譯應用程式與資料來源之間流動的所有資料。 這包括所有的 SQL 陳述式和字元參數傳送至資料來源，以及從資料來源擷取的所有字元都會、 字元中繼資料，例如資料行名稱和錯誤訊息。 連線資料不會進行轉譯，因為應用程式已連接到資料來源之後，直到沒有載入轉譯 DLL。
+ 指定翻譯 DLL 之後，驅動程式會將它載入，並呼叫它來轉譯應用程式與資料來源之間流動的所有資料。 這包括所有要傳送到資料來源的 SQL 語句和字元參數，以及所有字元結果、字元中繼資料（例如資料行名稱），以及從資料來源抓取的錯誤訊息。 連接資料不會轉譯，因為在應用程式連接到資料來源之前，不會載入轉譯 DLL。

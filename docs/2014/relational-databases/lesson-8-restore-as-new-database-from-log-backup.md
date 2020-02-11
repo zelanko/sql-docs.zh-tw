@@ -11,20 +11,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 464961600f69f14a2b66515a75906c0fd4af3f82
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175352"
 ---
 # <a name="lesson-9-restore-a-database-from-azure-storage"></a>第 9 課： 從 Azure 儲存體還原資料庫
-  在這一課, 您將瞭解如何將資料庫備份檔案從 Azure 儲存體還原到資料庫, 此資料庫位於內部部署或 Azure 中的虛擬機器。 進行這一課並不需要完成第 4、5、6、7 和 8 課。  
+  在這一課，您將瞭解如何將資料庫備份檔案從 Azure 儲存體還原到資料庫，此資料庫位於內部部署或 Azure 中的虛擬機器。 進行這一課並不需要完成第 4、5、6、7 和 8 課。  
   
  這個課程假設您已完成下列步驟：  
   
 -   您已在來源電腦上建立資料庫。  
   
--   您已使用[SQL Server 備份和還原與 Azure Blob 儲存體服務](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 功能, 在 Azure 儲存體中建立資料庫的備份 (.bak)。 請注意，您將需要在這個步驟中建立另一個 SQL Server 認證。 這個認證會使用儲存體帳戶金鑰。  
+-   您已使用[SQL Server 備份和還原與 Azure Blob 儲存體服務](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)] 功能，在 Azure 儲存體中建立資料庫的備份（.bak）。 請注意，您將需要在這個步驟中建立另一個 SQL Server 認證。 這個認證會使用儲存體帳戶金鑰。  
   
 -   您有 Azure 儲存體帳戶。  
   
@@ -32,9 +32,9 @@ ms.locfileid: "70175352"
   
 -   您已在容器上建立具有讀取、寫入和列出權限的原則。 您也已經產生 SAS 金鑰。  
   
--   您已在電腦上建立 SQL Server 認證, 以 Azure 儲存體整合功能。 請注意，這個認證需要共用存取簽章 (SAS) 金鑰。  
+-   您已在電腦上建立 SQL Server 認證，以 Azure 儲存體整合功能。 請注意，這個認證需要共用存取簽章 (SAS) 金鑰。  
   
- 若要從 Azure 儲存體還原資料庫, 您可以依照下列步驟執行:  
+ 若要從 Azure 儲存體還原資料庫，您可以依照下列步驟執行：  
   
 1.  啟動 SQL Server Management Studio。 連接到預設執行個體。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "70175352"
   
 3.  將下列完整指令碼複製並貼入查詢視窗中。 視需要修改腳本。  
   
-     **注意：** 您會執行`RESTORE`語句, 將 Azure 儲存體中的資料庫備份 (.bak) 還原到另一部電腦中的資料庫實例。  
+     **注意：** 您會執行`RESTORE`語句，將 Azure 儲存體中的資料庫備份（.bak）還原到另一部電腦中的資料庫實例。  
   
     ```sql  
   
@@ -95,6 +95,6 @@ ms.locfileid: "70175352"
   
     ```  
   
- **教學課程結束:Azure 儲存體服務中 SQL Server 資料檔案**  
+ **教學課程結束：在 Azure 儲存體服務中 SQL Server 資料檔案**  
   
   

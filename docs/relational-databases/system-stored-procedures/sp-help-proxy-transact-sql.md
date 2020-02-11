@@ -1,5 +1,5 @@
 ---
-title: sp_help_proxy (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_proxy （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085282"
 ---
-# <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
+# <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   列出一或多個 Proxy 的資訊。  
@@ -43,11 +43,11 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @proxy_id = ] id` 要列出資訊的 proxy 之 proxy 識別碼。 *Proxy_id*是**int**，預設值是 NULL。 任一*識別碼*或*proxy_name*可能指定。  
+`[ @proxy_id = ] id`要列出資訊之 proxy 的 proxy 識別碼。 *Proxy_id*是**int**，預設值是 Null。 可以指定*識別碼*或*proxy_name* 。  
   
-`[ @proxy_name = ] 'proxy_name'` 要列出資訊的 proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 任一*識別碼*或*proxy_name*可能指定。  
+`[ @proxy_name = ] 'proxy_name'`要列出資訊之 proxy 的名稱。 *Proxy_name*是**sysname**，預設值是 Null。 可以指定*識別碼*或*proxy_name* 。  
   
-`[ @subsystem_name = ] 'subsystem_name'` 要列出 proxy 的子系統名稱。 *Subsystem_name*是**sysname**，預設值是 NULL。 當*subsystem_name*指定，則*名稱*也必須指定。  
+`[ @subsystem_name = ] 'subsystem_name'`要列出 proxy 的子系統名稱。 *Subsystem_name*是**sysname**，預設值是 Null。 當指定*subsystem_name*時，也必須指定*名稱*。  
   
  下表列出每個子系統的值。  
   
@@ -57,18 +57,18 @@ sp_help_proxy
 |CmdExec|作業系統 (CmdExec)|  
 |快照式|複寫快照集代理程式|  
 |LogReader|複寫記錄讀取器代理程式|  
-|Distribution|複寫散發代理程式|  
-|合併式|Replication Merge Agent|  
+|散發|複寫散發代理程式|  
+|合併|Replication Merge Agent|  
 |QueueReader|複寫佇列讀取器代理程式|  
 |ANALYSISQUERY|Analysis Services 命令|  
 |ANALYSISCOMMAND|Analysis Services 查詢|  
-|Dts|SSIS 封裝執行|  
+|Dts|SSIS 套件執行|  
 |PowerShell|PowerShell 指令碼|  
   
-`[ @name = ] 'name'` 名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要列出 proxy 的登入。 檔案名**nvarchar(256)** ，預設值是 NULL。 當*名稱*指定，則*subsystem_name*也必須指定。  
+`[ @name = ] 'name'`要列出 proxy 的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入名稱。 名稱是**Nvarchar （256）**，預設值是 Null。 當指定*name*時，也必須指定*subsystem_name* 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -77,24 +77,24 @@ sp_help_proxy
 |**proxy_id**|**int**|Proxy 識別碼。|  
 |**name**|**sysname**|Proxy 的名稱。|  
 |**credential_identity**|**sysname**|Proxy 相關認證的 Microsoft Windows 網域名稱和使用者名稱。|  
-|**enabled**|**tinyint**|是否啟用這個 Proxy。 { **0** = 未啟用， **1** = 啟用}|  
-|**description**|**nvarchar(1024)**|這個 Proxy 的描述。|  
-|**user_sid**|**varbinary(85)**|這個 Proxy 的 Windows 使用者之 Windows 安全性識別碼。|  
+|**後**|**tinyint**|是否啟用這個 Proxy。 { **0** = 未啟用， **1** = 已啟用}|  
+|**描述**|**nvarchar(1024)**|這個 Proxy 的描述。|  
+|**user_sid**|**Varbinary （85）**|這個 Proxy 的 Windows 使用者之 Windows 安全性識別碼。|  
 |**credential_id**|**int**|這個 Proxy 的相關認證識別碼。|  
 |**credential_identity_exists**|**int**|credential_identity 是否存在。 { 0 = 不存在，1 = 存在 }|  
   
 ## <a name="remarks"></a>備註  
- 當未不提供任何參數時， **sp_help_proxy**列出執行個體中的所有 proxy 的資訊。  
+ 未提供任何參數時， **sp_help_proxy**會列出實例中所有 proxy 的資訊。  
   
- 若要判斷哪些登入 proxy 可用於指定的子系統，指定*名稱*並*subsystem_name*。 當未提供這些引數時， **sp_help_proxy**列出指定的登入可能會存取，且可用於指定之子系統的 proxy。  
+ 若要判斷登入可用於指定子系統的 proxy，請指定*name*和*subsystem_name*。 當提供這些引數時， **sp_help_proxy**會列出指定的登入可能會存取的 proxy，以及可用於指定子系統的 proxy。  
   
-## <a name="permissions"></a>Permissions  
- 依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 **msdb** 資料庫的 **SQLAgentOperatorRole** 固定資料庫角色。  
+## <a name="permissions"></a>權限  
+ 根據預設，**系統管理員（sysadmin** ）固定伺服器角色的成員可以執行此預存程式。 其他使用者必須被授與 **msdb** 資料庫的 **SQLAgentOperatorRole** 固定資料庫角色。  
   
- 如需詳細資訊**SQLAgentOperatorRole**，請參閱[SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
+ 如需**SQLAgentOperatorRole**的詳細資訊，請參閱[SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
 > [!NOTE]  
->  **Credential_identity**並**credential_identity**只會傳回資料行中時的結果集的成員**sysadmin**執行這個預存程序。  
+>  只有在**系統管理員（sysadmin** ）的成員執行此預存程式時，才會在結果集中傳回**credential_identity**和**user_sid**資料行。  
   
 ## <a name="examples"></a>範例  
   
@@ -122,8 +122,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Agent 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
+ [SQL Server Agent 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [sp_delete_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
   
   

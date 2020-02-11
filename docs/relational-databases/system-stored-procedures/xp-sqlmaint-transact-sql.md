@@ -1,5 +1,5 @@
 ---
-title: xp_sqlmaint (TRANSACT-SQL) |Microsoft Docs
+title: xp_sqlmaint （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9948767ca0eca5721207079f978987142653e9c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091914"
 ---
-# <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
+# <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  呼叫**sqlmaint**公用程式字串，包含**sqlmaint**參數。 **Sqlmaint**公用程式會執行一組一個或多個資料庫上的維護作業。  
+  使用包含**sqlmaint**參數的字串來呼叫**sqlmaint**公用程式。 **Sqlmaint**公用程式會在一或多個資料庫上執行一組維護作業。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -43,17 +43,17 @@ xp_sqlmaint 'switch_string'
   
 ## <a name="arguments"></a>引數  
  **'** *switch_string* **'**  
- 這字串，包含**sqlmaint**公用程式參數。 參數和值必須用空格分隔。  
+ 這是包含**sqlmaint**公用程式參數的字串。 參數和值必須用空格分隔。  
   
- **-嗎？** 參數不是適用於**xp_sqlmaint**。  
+ **-？** 參數對**xp_sqlmaint**無效。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 無。 如果傳回錯誤**sqlmaint**公用程式會失敗。  
+ 無。 如果**sqlmaint**公用程式失敗，則傳回錯誤。  
   
 ## <a name="remarks"></a>備註  
- 如果使用 SQL Server 驗證，登入使用者呼叫此程序 **-U"***login_id***"** 並 **-P"***密碼***"** 參數前面會加上*switch_string*之前執行。 如果使用者使用 Windows 驗證登入時*switch_string*不會變更至傳遞**sqlmaint**。  
+ 如果這個程式是由使用 SQL Server Authentication 登入的使用者所呼叫，則在執行之前，會在*switch_string*前面加上 **-U "***login_id***"** 和 **-P "***password***"** 參數。 如果使用者是使用 Windows 驗證登入，則會傳遞*switch_string* ，而不會變更為**sqlmaint**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  

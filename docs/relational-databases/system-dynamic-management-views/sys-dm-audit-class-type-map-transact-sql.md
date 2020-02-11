@@ -1,5 +1,5 @@
 ---
-title: sys.dm_audit_class_type_map (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_audit_class_type_map （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,25 +19,25 @@ ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ae1c39d5c3ddc36f4ca3007cf9e17c2543055b85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68099206"
 ---
-# <a name="sysdmauditclasstypemap-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
+# <a name="sysdm_audit_class_type_map-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  傳回一個資料表，它會將稽核記錄檔中的 class_type 欄位對應到 sys.dm_audit_actions 中的 class_desc 欄位。 如需詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]稽核，請參閱 < [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+  傳回一個資料表，它會將稽核記錄檔中的 class_type 欄位對應到 sys.dm_audit_actions 中的 class_desc 欄位。 如需有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 的詳細資訊，請參閱[SQL Server audit &#40;資料庫引擎&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
 
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**class_type**|**char(2)**|所稽核之實體的類別類型。 對應到寫入稽核記錄檔，並由傳回之 class_type **get_audit_file （)** 函式。 不可為 Null。|  
-|**class_type_desc**|**nvarchar(120)**|可稽核的實體名稱。 不可為 Null。|  
-|**securable_class_desc**|**nvarchar(120)**|對應到正在稽核之 class_type 的安全性實體物件。 如果 class_type 未對應到安全性實體物件，則為 NULL。 可以與 sys.dm_audit_actions 中的 class_desc 產生關聯。|  
+|**class_type**|**char （2）**|所稽核之實體的類別類型。 對應至寫入到 audit 記錄檔的 class_type，並由**get_audit_file （）** 函數傳回。 不可為 Null。|  
+|**class_type_desc**|**Nvarchar （120）**|可稽核的實體名稱。 不可為 Null。|  
+|**securable_class_desc**|**Nvarchar （120）**|對應到正在稽核之 class_type 的安全性實體物件。 如果 class_type 未對應到安全性實體物件，則為 NULL。 可以與 sys.dm_audit_actions 中的 class_desc 產生關聯。|  
   
-## <a name="permissions"></a>Permissions  
- 主體必須具有**選取**權限。 根據預設值，這會授與給 Public。  
+## <a name="permissions"></a>權限  
+ 主體必須具有**SELECT**許可權。 根據預設值，這會授與給 Public。  
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
@@ -58,7 +58,7 @@ ms.locfileid: "68099206"
  [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
  [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
  [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys.dm_audit_class_type_map](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+ [sys. dm_audit_class_type_map](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [建立伺服器稽核與伺服器稽核規格](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

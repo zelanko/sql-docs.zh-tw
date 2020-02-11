@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638754"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 擴充事件封裝
@@ -77,9 +77,9 @@ ms.locfileid: "62638754"
 |詞彙|定義|  
 |----------|----------------|  
 |管理|管理事件所針對的主要目標是使用者、管理員和支援人員。 在管理通道中找到的事件會指出問題，並列出定義完善的方案，供管理員做為採取動作之依據。 管理事件的一個範例就是應用程式無法連接到印表機。 這些事件不是會完善記載下來，就是有與其相關的訊息來告訴讀者該做什麼事情來修正問題。|  
-|作業|作業事件是用來分析及診斷問題或出現次數， 這些事件可用來觸發以問題或出現次數為根據的工具或工作。 在系統中新增或移除印表機時即為作業事件的一個範例。|  
+|運作|作業事件是用來分析及診斷問題或出現次數， 這些事件可用來觸發以問題或出現次數為根據的工具或工作。 在系統中新增或移除印表機時即為作業事件的一個範例。|  
 |分析|分析事件的發行量很大， 這些事件會描述程式作業，而且通常用於效能調查。|  
-|偵錯|偵錯事件只能由開發人員使用，以便診斷問題進行偵錯。<br /><br /> 注意:偵錯通道中的事件會傳回內部實作特定狀態資料。 事件所傳回的結構描述和資料在 SQL Server 的未來版本中可能會改變或變得無效。 因此，偵錯通道中的事件在 SQL Server 的未來版本中可能會改變或被移除，恕不另行通知。|  
+|偵錯|偵錯事件只能由開發人員使用，以便診斷問題進行偵錯。<br /><br /> 注意： Debug 通道中的事件會傳回內部執行特定的狀態資料。 事件所傳回的結構描述和資料在 SQL Server 的未來版本中可能會改變或變得無效。 因此，偵錯通道中的事件在 SQL Server 的未來版本中可能會改變或被移除，恕不另行通知。|  
   
  **關鍵字**  
   
@@ -139,9 +139,9 @@ where name = 'keyword_map'
   
 -   event  
   
--   action  
+-   動作  
   
--   target  
+-   目標  
   
 -   pred_source  
   
@@ -216,6 +216,6 @@ where name = 'lock_mode'
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 擴充的事件工作階段](sql-server-extended-events-sessions.md)   
  [SQL Server 擴充的事件引擎](sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md)  
+ [SQL Server 擴充的事件目標](../../database-engine/sql-server-extended-events-targets.md)  
   
   

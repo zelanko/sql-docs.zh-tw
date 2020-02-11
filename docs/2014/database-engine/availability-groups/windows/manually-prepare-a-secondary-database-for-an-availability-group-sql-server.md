@@ -19,17 +19,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 927d0fd7b108718daffe86a6534ca40492429d34
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797647"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>針對可用性群組手動準備次要資料庫 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中準備 AlwaysOn 可用性群組的次要資料庫。 準備次要資料庫需要進行兩個步驟：(1) 使用 RESTORE WITH NORECOVERY，將主要資料庫的最新資料庫備份和後續記錄備份還原至裝載次要複本的每個伺服器執行個體，以及 (2) 將還原的資料庫聯結至可用性群組。  
   
 > [!TIP]  
->  如果您有現有的記錄傳送組態，您可能可以將記錄傳送主要資料庫連同其一個或多個次要資料庫，一併轉換成 AlwaysOn 主要資料庫和一個或多個 AlwaysOn 次要資料庫。 如需詳細資訊，請參閱[從記錄傳送遷移至 AlwaysOn 可用性群組&#40;SQL Server&#41;的必要條件](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)。  
+>  如果您有現有的記錄傳送組態，您可能可以將記錄傳送主要資料庫連同其一個或多個次要資料庫，一併轉換成 AlwaysOn 主要資料庫和一個或多個 AlwaysOn 次要資料庫。 如需詳細資訊，請參閱[從記錄傳送遷移至 AlwaysOn 可用性群組 &#40;SQL Server&#41;的必要條件](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)。  
   
 -   **開始之前：**  
   
@@ -39,9 +39,9 @@ ms.locfileid: "72797647"
   
      [安全性](#Security)  
   
--   **若要使用下列項目來準備次要資料庫：**  
+-   **若要準備次要資料庫，請使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -49,11 +49,11 @@ ms.locfileid: "72797647"
   
 -   [相關備份和還原工作](#RelatedTasks)  
   
--   **後續操作** [準備次要資料庫之後](#FollowUp)  
+-   **後續操作：** [準備次要資料庫之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件和限制  
+###  <a name="Prerequisites"></a>必要條件和限制  
   
 -   請確定您規劃放置資料庫的系統已配備具有足夠空間來保存次要資料庫的磁碟機。  
   
@@ -74,19 +74,19 @@ ms.locfileid: "72797647"
 -   準備次要資料庫之前，我們強烈建議您針對可用性群組中的資料庫暫停排程的記錄備份，直到次要複本的初始化完成為止。  
   
 ###  <a name="Security"></a> Security  
- 備份資料庫時， [TRUSTWORTHY 資料庫屬性](../../../relational-databases/security/trustworthy-database-property.md) 將設為 OFF。 因此，新還原資料庫上的 TRUSTWORTHY 一律為 OFF。  
+ 備份資料庫時，[可信任的[資料庫] 屬性](../../../relational-databases/security/trustworthy-database-property.md)會設定為 [關閉]。 因此，新還原資料庫上的 TRUSTWORTHY 一律為 OFF。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  BACKUP DATABASE 和 BACKUP LOG 權限預設為 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)。  
   
- 當還原的資料庫不存在伺服器執行個體上時，RESTORE 陳述式就需要 CREATE DATABASE 權限。 如需詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
+ 當還原的資料庫不存在伺服器執行個體上時，RESTORE 陳述式就需要 CREATE DATABASE 權限。 如需詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)備份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 > [!NOTE]  
 >  如果主控主要複本的伺服器執行個體和主控次要複本的每個執行個體之間的備份和還原檔案路徑相同，則您應該可以使用 [新增可用性群組精靈](use-the-availability-group-wizard-sql-server-management-studio.md)、 [將複本加入至可用性群組精靈](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)或 [將資料庫加入至可用性群組精靈](availability-group-add-database-to-group-wizard.md)建立次要資料庫。  
   
- **若要準備次要資料庫**  
+ **準備次要資料庫**  
   
 1.  除非您已經擁有主要資料庫的最新資料庫備份，否則請建立新的完整或差異資料庫備份。 最佳作法是將這個備份和任何後續記錄備份放置於建議的網路共用。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "72797647"
   
 3.  在裝載次要複本的伺服器執行個體上，還原主要資料庫的完整資料庫備份 (並選擇性地還原差異備份)，接著還原任何後續記錄備份。  
   
-     在 [**還原 DATABASEOptions** ] 頁面上，選取 [**讓資料庫保持不運作，且不回復未認可的交易]。可以還原其他交易記錄。（RESTORE WITH NORECOVERY）** 。  
+     在 [**還原 DATABASEOptions** ] 頁面上，選取 [**讓資料庫保持不運作，且不回復未認可的交易]。可以還原其他交易記錄。（RESTORE WITH NORECOVERY）**。  
   
      如果主要資料庫與次要資料庫的檔案路徑不同 (例如，主要資料庫位於磁碟機 'F:' 而裝載次要複本的伺服器執行個體缺少 F: 磁碟機)，請在您的 WITH 子句中加入 MOVE 選項。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "72797647"
 > [!NOTE]  
 >  如需如何執行這些備份和還原作業的相關資訊，請參閱本節稍後的 [相關備份和還原工作](#RelatedTasks)。  
   
-###  <a name="RelatedTasks"></a> 相關備份和還原工作  
+###  <a name="RelatedTasks"></a>相關備份和還原工作  
  **若要建立資料庫備份**  
   
 -   [建立完整資料庫備份 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
@@ -114,9 +114,9 @@ ms.locfileid: "72797647"
   
 -   [備份交易記錄 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
- **若要還原備份**  
+ **還原備份**  
   
--   [還原資料庫備份&#40;SQL Server Management Studio&#41;](../../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [還原資料庫備份 &#40;SQL Server Management Studio&#41;](../../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
 -   [還原差異資料庫備份 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)  
   
@@ -125,10 +125,10 @@ ms.locfileid: "72797647"
 -   [將資料庫還原到新位置 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- **若要準備次要資料庫**  
+ **準備次要資料庫**  
   
 > [!NOTE]  
->  如需這個程序的範例，請參閱本主題前面的[範例 (Transact-SQL)](#ExampleTsql)。  
+>  如需這個程序的範例，請參閱本主題前面的 [範例 (Transact-SQL)](#ExampleTsql)。  
   
 1.  除非您擁有主要資料庫的最新完整備份，否則請連接到裝載主要複本的伺服器執行個體，並且建立完整資料庫備份。 最佳作法是將這個備份和任何後續記錄備份放置於建議的網路共用。  
   
@@ -144,9 +144,9 @@ ms.locfileid: "72797647"
 4.  若要完成次要資料庫的組態設定，您必須將次要資料庫聯結至可用性群組。 如需詳細資訊，請參閱[將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
 > [!NOTE]  
->  如需如何執行這些備份和還原作業的相關資訊，請參閱本主題稍後的[相關備份和還原工作](#RelatedTasks)。  
+>  如需如何執行這些備份和還原作業的相關資訊，請參閱本主題稍後的 [相關備份和還原工作](#RelatedTasks)。  
   
-###  <a name="ExampleTsql"></a> Transact-SQL 範例  
+###  <a name="ExampleTsql"></a>Transact-sql 範例  
  下列範例會準備次要資料庫。 這個範例會使用 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 範例資料庫，依預設採用簡單復原模式。  
   
 1.  若要使用 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 資料庫，請將它修改為使用完整復原模式：  
@@ -177,7 +177,7 @@ ms.locfileid: "72797647"
   
 4.  使用 RESTORE WITH NORECOVERY，將完整備份還原至裝載次要複本的伺服器執行個體。 還原命令需視主要與次要資料庫的路徑是否相同而定。  
   
-    -   **若路徑相同：**  
+    -   **如果路徑相同：**  
   
          在裝載次要複本的電腦上，依照下列方式還原完整備份：  
   
@@ -188,14 +188,14 @@ ms.locfileid: "72797647"
         GO  
         ```  
   
-    -   **若路徑不同：**  
+    -   **如果路徑不同：**  
   
          如果次要資料庫的路徑與主要資料庫的路徑不同 (例如，磁碟機代號不同)，則建立次要資料庫時，還原作業中必須包含 MOVE 子句。  
   
         > [!IMPORTANT]  
         >  如果主要與次要資料庫的路徑名稱不同，您將無法加入檔案。 這是因為接收加入檔案作業的記錄時，次要複本的伺服器執行個體會嘗試將新檔案放在主要資料庫所使用的相同路徑中。  
   
-         例如，下列命令會還原位於 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]預設執行個體資料目錄 (C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA) 中之主要資料庫的備份。 「還原資料庫」作業必須將資料庫移至名為（*AlwaysOn1*）之遠端 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 實例的資料目錄，它會在另一個叢集節點上裝載次要複本。 其中，資料和記錄檔會還原至*C:\Program FILES\MICROSOFT SQL Server\MSSQL12。ALWAYSON1\MSSQL\DATA*目錄。 此還原作業會使用 WITH NORECOVERY，將次要資料庫保留在還原資料庫中。  
+         例如，下列命令會還原位於 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]預設執行個體資料目錄 (C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA) 中之主要資料庫的備份。 還原資料庫作業必須將資料庫移至[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]名為（*AlwaysOn1*）之遠端實例的資料目錄，其裝載另一個叢集節點上的次要複本。 其中，資料和記錄檔會還原至*C:\Program FILES\MICROSOFT SQL Server\MSSQL12。ALWAYSON1\MSSQL\DATA*目錄。 此還原作業會使用 WITH NORECOVERY，將次要資料庫保留在還原資料庫中。  
   
         ```sql
         RESTORE DATABASE MyDB1  
@@ -243,7 +243,7 @@ ms.locfileid: "72797647"
     ```  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
- **若要準備次要資料庫**  
+ **準備次要資料庫**  
   
 1.  如果您需要建立主要資料庫的最新備份，請變更目錄 (`cd`) 為裝載主要複本的伺服器執行個體。  
   
@@ -254,15 +254,15 @@ ms.locfileid: "72797647"
 4.  若要還原每個主要資料庫的資料庫和記錄備份，請使用 `restore-SqlDatabase` 指令程式，並指定 `NoRecovery` 還原參數。 如果在裝載主要複本的電腦和裝載目標次要複本的電腦之間有檔案路徑差異，也要使用 `RelocateFile` 還原參數。  
   
     > [!NOTE]  
-    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱＜ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)＞。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
 5.  若要完成次要資料庫的組態設定，您必須將它聯結至可用性群組。 如需詳細資訊，請參閱[將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
- **若要設定和使用 SQL Server PowerShell 提供者**  
+ **若要設定及使用 SQL Server PowerShell 提供者**  
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
-###  <a name="ExamplePSscript"></a> 範例備份與還原指令碼和命令  
+###  <a name="ExamplePSscript"></a>範例備份與還原腳本和命令  
  下列 PowerShell 命令會將完整資料庫備份和交易記錄備份至網路共用，並且從該共用還原這些備份。 此範例會假設還原資料庫的目標檔案路徑與備份資料庫的檔案路徑相同。  
   
 ```powershell
@@ -276,12 +276,12 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -N
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"
 ```  
   
-##  <a name="FollowUp"></a> 後續操作：準備次要資料庫之後  
- 若要完成次要資料庫的組態設定，您必須將新還原的資料庫聯結至可用性群組。 如需詳細資訊，請參閱[將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
+##  <a name="FollowUp"></a>後續操作：準備次要資料庫之後  
+ 若要完成次要資料庫的組態設定，您必須將新還原的資料庫聯結至可用性群組。 如需詳細資訊，請參閱 [將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE 引數 &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [針對失敗的新增檔案作業進行&#40;疑難排解 AlwaysOn 可用性群組&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+ [針對失敗的新增檔案作業進行疑難排解 &#40;AlwaysOn 可用性群組&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  

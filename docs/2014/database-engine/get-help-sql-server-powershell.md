@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 705512f54feae3bf60317c18b8c260ef484abebc
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797882"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
@@ -30,26 +30,29 @@ ms.locfileid: "72797882"
  如需 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cmdlet 和提供者的概觀，請參閱 [SQL Server PowerShell](../powershell/sql-server-powershell.md)。  
   
 ### <a name="help-in-the-windows-powershell-environment"></a>Windows PowerShell 環境中的説明  
- 您可以使用 **Get-Help** Cmdlet，在 Windows PowerShell 環境中取得說明。 **Get-Help** 提供 Windows PowerShell 語言的基本說明，以及 Windows PowerShell 中可用的各種 Cmdlet 和提供者。  
+ 您可以使用 **Get-Help** Cmdlet，在 Windows PowerShell 環境中取得說明。 **Get-help**提供 windows powershell 語言的基本說明，以及 windows powershell 中可用的各種 Cmdlet 和提供者。  
   
  如需使用 **Get-Help**之方式的詳細資訊，請參閱 [Get-Help：取得說明](https://go.microsoft.com/fwlink/?LinkId=102136)。  
   
 ### <a name="sql-server-powershell-provider-help"></a>SQL Server PowerShell 提供者說明  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供者實作 SQLSERVER 虛擬磁碟機上的數個資料夾，例如 SQLSERVER:\SQL 和 SQLSERVER:\DAC 資料夾。 每一個資料夾都會與一個 SQL Server 管理能力物件模型有關聯。 雖然您可以列出與 SQL Server 路徑中每個節點相關聯的方法和屬性，但是無法在 PowerShell 環境中取得它們的說明。 如需含有相關聯程式設計參考連結之資料夾的表格，請參閱 [SQL Server PowerShell 提供者](../powershell/sql-server-powershell-provider.md)。  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供者實作 SQLSERVER 虛擬磁碟機上的數個資料夾，例如 SQLSERVER:\SQL 和 SQLSERVER:\DAC 資料夾。 每一個資料夾都會與一個 SQL Server 管理能力物件模型有關聯。 雖然您可以列出與 SQL Server 路徑中每個節點相關聯的方法和屬性，但是無法在 PowerShell 環境中取得它們的說明。 如需含有相關聯程式設計參考連結之資料夾的表格，請參閱 [SQL Server PowerShell 提供者](../powershell/sql-server-powershell-provider.md)。  
   
 ### <a name="invoke-sqlcmd-help"></a>Invoke-Sqlcmd 說明  
- **Invoke-Sqlcmd** Cmdlet 會採用 **sqlcmd** 公用程式可執行的任何查詢或指令碼檔案作為輸入。 您可以使用 **Get-Help** 取得有關 **Invoke-Sqlcmd** 和其參數的資訊，但是不包含 **sqlcmd** 查詢的 **Get-Help** 。  
+ 
+  **Invoke-Sqlcmd** Cmdlet 會採用 **sqlcmd** 公用程式可執行的任何查詢或指令碼檔案作為輸入。 您可以使用 **Get-Help** 取得有關 **Invoke-Sqlcmd** 和其參數的資訊，但是不包含 **sqlcmd** 查詢的 **Get-Help** 。  
   
- *-Query* 或 *-QueryFromFile* 輸入可包含：  
+ 
+  *-Query* 或 *-QueryFromFile* 輸入可包含：  
   
--   **sqlcmd** 變數和命令。 如需這些變數和命令的資訊，請參閱 [sqlcmd 公用程式](../tools/sqlcmd-utility.md)的＜備註＞一節。  
+-   **sqlcmd**變數和命令。 如需這些變數和命令的資訊，請參閱 [sqlcmd 公用程式](../tools/sqlcmd-utility.md)的＜備註＞一節。  
   
 -   [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式。 如需 [!INCLUDE[tsql](../includes/tsql-md.md)] 語言的詳細資訊，請參閱 [Transact-SQL 參考 &#40;Database Engine&#41;](/sql/t-sql/language-reference)。  
   
 -   XQuery 陳述式。 如需 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 所支援之 XQuery 語言的詳細資訊，請參閱 [XQuery 語言參考 &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)。  
   
 ## <a name="get-help-for-a-sql-server-cmdlet"></a>取得 SQL Server Cmdlet 的説明  
- **取得 Cmdlet 的説明**  
+ **取得 Cmdlet 的說明**  
   
 -   指定 Cmdlet 的名稱以及要傳回的說明層級，以執行 Get-Help。  
   

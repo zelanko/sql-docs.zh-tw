@@ -1,5 +1,5 @@
 ---
-title: 步驟 5：DataControl 設為可用 （RDS 教學課程） |Microsoft Docs
+title: 步驟5： DataControl 可供使用（RDS 教學課程） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,21 +13,21 @@ ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1202a25c603b5dd4f9a824b031b5af91f5940052
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922050"
 ---
-# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>步驟 5：DataControl 會設為可用 (RDS 教學課程)
-傳回**資料錄集**物件是可供使用。 您可以檢查、 瀏覽，或進行編輯，就像其他任何**資料錄集**。 您可以執行與**資料錄集**取決於您的環境。 Visual Basic 和 VisualC++有可用的視覺控制項**資料錄集**直接或間接與啟用的資料控制項的協助。  
+# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>步驟 5：將 DataControl 設為可用 (RDS 教學課程)
+傳回的**記錄集**物件可供使用。 您可以像處理任何其他**記錄集**一樣，檢查、流覽或編輯它。 您可以對**記錄集**執行哪些動作取決於您的環境。 Visual Basic 和 Visual C++ 具有視覺控制項，可直接或間接以啟用資料控制的輔助來使用**記錄集**。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 例如，如果您要在 Microsoft Internet Explorer 中顯示網頁，您可能想要顯示**資料錄集**物件視覺控制項中的資料。 在網頁上的視覺控制項不能存取**資料錄集**直接物件。 不過，他們可以存取**Recordset**物件傳遞[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)。 **Rds。DataControl**根據視覺效果會成為可控制其[SourceRecordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)屬性設定為**資料錄集**物件。  
+ 例如，如果您在 Microsoft Internet Explorer 中顯示網頁，您可能會想要在視覺控制項中顯示**記錄集**物件資料。 網頁上的視覺控制項無法直接存取**記錄集**物件。 不過，他們可以透過 RDS 存取**記錄集**物件[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)。 **RDS。** 當視覺控制項的[SourceRecordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)屬性設定為**記錄集**物件時，DataControl 就會變成可用。  
   
- 視覺控制項物件必須具有其**DATASRC**參數設為**rds。DataControl**，並將其**DATAFLD**屬性設定為**資料錄集**物件欄位 （資料行）。  
+ 視覺效果控制項物件的**DATASRC**參數必須設定為**RDS。DataControl**，並將其**DATAFLD**屬性設定為**記錄集**物件欄位（資料行）。  
   
  在本教學課程中，設定**SourceRecordset**屬性：  
   
@@ -44,5 +44,5 @@ Sub RDSTutorial5()
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [步驟 6：變更傳送到伺服器 （RDS 教學課程）](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
+ [步驟6：將變更傳送到伺服器（RDS 教學課程）](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
  [RDS 教學課程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

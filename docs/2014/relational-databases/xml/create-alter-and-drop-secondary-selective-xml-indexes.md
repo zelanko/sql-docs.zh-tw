@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b96e0bb7f28349e4d0b0ed5225f9b29e58de982f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637843"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>建立、修改和卸除次要選擇性 XML 索引
@@ -22,9 +22,9 @@ ms.locfileid: "62637843"
   
 ##  <a name="create"></a> 建立次要選擇性 XML 索引  
   
-### <a name="how-to-create-a-secondary-selective-xml-index"></a>HOW TO：建立次要選擇性 XML 索引  
+### <a name="how-to-create-a-secondary-selective-xml-index"></a>如何：建立次要選擇性 XML 索引  
  **使用 Transact-SQL 建立次要選擇性 XML 索引**  
- 透過呼叫 CREATE XML INDEX 陳述式的方式建立次要選擇性 XML 索引。 如需詳細資訊，請參閱 [CREATE XML INDEX&#40;選擇性 XML 索引&#41;] (~ / t-sql/statements/create-xml-index-selective-xml-indexes。  
+ 透過呼叫 CREATE XML INDEX 陳述式的方式建立次要選擇性 XML 索引。 如需詳細資訊，請參閱 [建立 XML 索引 &#40;選擇性 XML 索引&#41;] （~/t-sql/statements/create-xml-index-selective-xml-indexes。  
   
  **範例**  
   
@@ -44,11 +44,11 @@ FOR
 ##  <a name="alter"></a> 修改次要選擇性 XML 索引  
  次要選擇性 XML 索引不支援 ALTER 陳述式。 若要變更次要選擇性 XML 索引，請卸除現有的索引並重新建立。  
   
-### <a name="how-to-alter-a-secondary-selective-xml-index"></a>HOW TO：修改次要選擇性 XML 索引  
+### <a name="how-to-alter-a-secondary-selective-xml-index"></a>如何：修改次要選擇性 XML 索引  
  **使用 Transact-SQL 修改次要選擇性 XML 索引**  
  1.  透過呼叫 DROP INDEX 陳述式的方式卸除現有的次要選擇性 XML 索引。 如需詳細資訊，請參閱 [DROP INDEX &#40;選擇性 XML 索引&#41;](../indexes/indexes.md)。  
   
-2.  透過呼叫 CREATE XML INDEX 陳述式的方式重新建立具有所需選項的索引。 如需詳細資訊，請參閱 [CREATE XML INDEX&#40;選擇性 XML 索引&#41;] (~ / t-sql/statements/create-xml-index-selective-xml-indexes。  
+2.  透過呼叫 CREATE XML INDEX 陳述式的方式重新建立具有所需選項的索引。 如需詳細資訊，請參閱 [建立 XML 索引 &#40;選擇性 XML 索引&#41;] （~/t-sql/statements/create-xml-index-selective-xml-indexes。  
   
  **範例**  
   
@@ -69,7 +69,7 @@ FOR
   
 ##  <a name="drop"></a> 卸除次要選擇性 XML 索引  
   
-### <a name="how-to-drop-a-secondary-selective-xml-index"></a>HOW TO：卸除次要選擇性 XML 索引  
+### <a name="how-to-drop-a-secondary-selective-xml-index"></a>如何：卸除次要選擇性 XML 索引  
  **使用 Transact-SQL 卸除次要選擇性 XML 索引**  
  透過呼叫 DROP INDEX 陳述式的方式卸除次要選擇性 XML 索引。 如需詳細資訊，請參閱 [DROP INDEX &#40;選擇性 XML 索引&#41;](../indexes/indexes.md)。  
   

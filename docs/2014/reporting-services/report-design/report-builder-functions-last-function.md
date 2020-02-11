@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fcaad5c420af766d6c43bd5d57adeb6ce444257f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105256"
 ---
 # <a name="last-function-report-builder-and-ssrs"></a>Last 函數 (報表產生器及 SSRS)
@@ -41,9 +41,11 @@ Last(expression, scope)
  由運算式的類型決定。  
   
 ## <a name="remarks"></a>備註  
- `Last` 函數會在指定的範圍已套用所有排序和篩選之後，以一組資料傳回最後的值。  
+ 
+  `Last` 函數會在指定的範圍已套用所有排序和篩選之後，以一組資料傳回最後的值。  
   
- `Last` 函數無法在群組篩選運算式中使用目前 (預設) 範圍以外的範圍。  
+ 
+  `Last` 函數無法在群組篩選運算式中使用目前 (預設) 範圍以外的範圍。  
   
  您也可以在頁首中使用 `Last`，從頁面的 `ReportItems` 集合傳回最後一個值，以產生會顯示頁面上第一個及最後一個項目的字典樣式標題。  
   
@@ -55,7 +57,7 @@ Last(expression, scope)
   
 -   巢狀彙總的*Scope* 不得為資料集的名稱。  
   
--   *運算式*不得包含`First`， `Last`， `Previous`，或`RunningValue`函式。  
+-   *運算式*不能包含`First`、 `Last`、 `Previous`或`RunningValue`函數。  
   
 -   *Expression* 不得包含指定 *recursive*的巢狀彙總。  
   

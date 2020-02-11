@@ -15,26 +15,26 @@ ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5e50e8128bb80b290e7610d9cc846dd3e148e398
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68118633"
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync 函式
-**合規性**  
- 導入的版本：ODBC 3.8  
+**標準**  
+ 引進的版本： ODBC 3。8  
   
- 標準的合規性：None  
+ 標準合規性：無  
   
  **摘要**  
- **SQLCompleteAsync**可用來判斷何時非同步函式已完成使用任一個通知或輪詢為基礎的處理。 如需有關非同步作業的詳細資訊，請參閱 <<c0> [ 非同步執行](../../../odbc/reference/develop-app/asynchronous-execution.md)。  
+ **SQLCompleteAsync**可以用來判斷非同步函式何時使用以通知或輪詢為基礎的處理完成。 如需非同步作業的詳細資訊，請參閱[非同步執行](../../../odbc/reference/develop-app/asynchronous-execution.md)。  
   
- **SQLCompleteAsync**僅實作在 ODBC 驅動程式管理員。  
+ **SQLCompleteAsync**只會在 ODBC 驅動程式管理員中執行。  
   
- 在通知基礎的非同步處理模式中， **SQLCompleteAsync**必須驅動程式管理員會產生將用於通知的事件物件之後呼叫。 **SQLCompleteAsync**完成非同步處理和非同步函式會產生傳回碼。  
+ 在以通知為基礎的非同步處理模式中，必須在驅動程式管理員引發用於通知的事件物件之後呼叫**SQLCompleteAsync** 。 **SQLCompleteAsync**完成非同步處理，且非同步函式會產生傳回碼。  
   
- 在輪詢基礎的非同步處理模式中， **SQLCompleteAsync**呼叫原始的非同步函式，而不需要原始的非同步函式呼叫中指定的引數的替代方案。 **SQLCompleteAsync**可用不論是否啟用 ODBC 資料指標程式庫。  
+ 在以輪詢為基礎的非同步處理模式中， **SQLCompleteAsync**是呼叫原始非同步函式的替代方法，而不需要在原始的非同步函式呼叫中指定引數。 不論是否已啟用 ODBC 資料指標程式庫，都可以使用**SQLCompleteAsync** 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,32 +48,32 @@ SQLRETURN SQLCompleteAsync(
   
 ## <a name="arguments"></a>引數  
  *HandleType*  
- [輸入]正在處理的控制代碼上可用來完成非同步的型別。 有效值為利用 SQL_HANDLE_DBC 或 SQL_HANDLE_STMT。  
+ 源要在其上完成非同步處理的控制碼類型。 有效的值為 SQL_HANDLE_DBC 或 SQL_HANDLE_STMT。  
   
- *Handle*  
- [輸入]控制代碼可用來完成非同步處理。 如果*處理*不是有效的控制代碼所指定型別的*HandleType*， **SQLCompleteAsync**傳回 SQL_INVALID_HANDLE。  
+ *圖*  
+ 源要在其上完成非同步處理的控制碼。 如果*handle*不是*HandleType*所指定之類型的有效控制碼， **SQLCompleteAsync**會傳回 SQL_INVALID_HANDLE。  
   
- 如果*處理*不是有效的控制代碼所指定型別的*HandleType*， **SQLCompleteAsync**傳回 SQL_INVALID_HANDLE。  
+ 如果*handle*不是*HandleType*所指定之類型的有效控制碼， **SQLCompleteAsync**會傳回 SQL_INVALID_HANDLE。  
   
  *AsyncRetCodePtr*  
- [輸出]將包含非同步 API 的傳回碼的緩衝區指標。 如果*AsyncRetCodePtr*為 NULL，就**SQLCompleteAsync**會傳回 SQL_ERROR。  
+ 輸出緩衝區的指標，將包含非同步 API 的傳回碼。 如果*AsyncRetCodePtr*為 Null，則**SQLCompleteAsync**會傳回 SQL_ERROR。  
   
 ## <a name="returns"></a>傳回值  
- SQL_SUCCESS、 SQL_ERROR、 sql_no_data 之後或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_ERROR、SQL_NO_DATA 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
- 如果**SQLCompleteAsync**傳回 SQL_SUCCESS，應用程式應該獲得所指向緩衝區的非同步函式的傳回碼*AsyncRetCodePtr*。 相關聯的 SQLSTATE，如果有的話，可由呼叫**SQLGetDiagRec**具有*HandleType* SQL_HANDLE_STMT 和陳述式控制代碼或*HandleType*的 SQL_HANDLE_DBC 和連接控制代碼。 這些診斷記錄是相關聯的非同步函式不正確**SQLCompleteAsync**函式。  
+ 如果**SQLCompleteAsync**傳回 SQL_SUCCESS，應用程式應該從*AsyncRetCodePtr*所指向的緩衝區取得非同步函式的傳回碼。 如果有相關聯的 SQLSTATE，您可以呼叫**SQLGetDiagRec**與 SQL_HANDLE_STMT *HandleType*和語句控制碼，或是 SQL_HANDLE_DBC 和連接控制碼的*HandleType* ，來取得關聯的（如果有的話）。 這些診斷記錄會與非同步函式相關聯，而不是與這個**SQLCompleteAsync**函數關聯。  
   
- **SQLCompleteAsync**傳回 SQL_SUCCESS，表示以外的程式碼**SQLCompleteAsync**不會正確地進行呼叫。 **SQLCompleteAsync**在此情況下將會公佈任何診斷記錄。 可能的傳回碼如下：  
+ **SQLCompleteAsync**會傳回 SQL_SUCCESS 以外的程式碼，以指出未正確呼叫**SQLCompleteAsync** 。 在此情況下， **SQLCompleteAsync**不會張貼任何診斷記錄。 可能的傳回碼如下：  
   
--   SQL_INVALID_HANDLE:所表示的控制代碼*HandleType*並*處理*不是有效的控制代碼。  
+-   SQL_INVALID_HANDLE： *HandleType*和*HANDLE*所指示的控制碼不是有效的控制碼。  
   
--   SQL_ERROR:*AsyncRetCodePtr*是 NULL，或控制代碼上未啟用非同步處理。  
+-   SQL_ERROR： *AsyncRetCodePtr*是 Null，或未在控制碼上啟用非同步處理。  
   
--   SQL_NO_DATA 為止：在通知模式的非同步作業不在進行中或驅動程式管理員未收到通知的應用程式。 在輪詢模式中，非同步作業不是進行中。  
+-   SQL_NO_DATA：在通知模式中，非同步作業不在進行中，或驅動程式管理員尚未通知應用程式。 在輪詢模式中，非同步作業不在進行中。  
   
 ## <a name="comments"></a>註解  
- 在輪詢基礎的非同步處理模式中， *AsyncRetCodePtr*可能是 SQL_STILL_EXECUTING 時**SQLCompleteAsync**都會傳回 SQL_SUCCESS。 應用程式應該繼續輪詢直到*AsyncRetCodePtr*不 SQL_STILL_EXECUTING。 在通知基礎的非同步處理模式中， *AsyncRetCodePtr*絕對不會 SQL_STILL_EXECUTING。  
+ 在以輪詢為基礎的非同步處理模式中， *AsyncRetCodePtr*可能會在**SQLCompleteAsync**傳回 SQL_SUCCESS 時 SQL_STILL_EXECUTING。 應用程式應該持續輪詢，直到*AsyncRetCodePtr*不 SQL_STILL_EXECUTING 為止。 在以通知為基礎的非同步處理模式中， *AsyncRetCodePtr*永遠不會 SQL_STILL_EXECUTING。  
   
 ## <a name="see-also"></a>另請參閱  
  [非同步執行 (輪詢方法)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

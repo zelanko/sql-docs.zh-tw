@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797808"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>導覽 SQL Server PowerShell 路徑
@@ -23,9 +23,10 @@ ms.locfileid: "72797808"
 ## <a name="before-you-begin"></a>開始之前  
  Windows PowerShell 實作指令程式以導覽路徑結構，而路徑結構代表 PowerShell 提供者所支援物件的階層。 在您導覽至路徑中的節點時，可以使用其他 Cmdlet 來執行目前物件的基本作業。 由於 Cmdlet 會經常被使用，所以具有簡短、標準的別名。 也有一組別名會將指令程式對應到類似的命令提示字元命令，而且有另一組別名適用於 UNIX Shell 命令。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會實作提供者指令程式的子集，如下表所示。  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會實作提供者指令程式的子集，如下表所示。  
   
-|指令程式|標準的別名|cmd 別名|UNIX Shell 別名|描述|  
+|Cmdlet|標準的別名|cmd 別名|UNIX Shell 別名|描述|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|取得目前的節點。|  
 |`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|變更目前的節點。|  

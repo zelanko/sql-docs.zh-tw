@@ -1,5 +1,5 @@
 ---
-title: DELETE 陳述式限制 |Microsoft Docs
+title: DELETE 子句限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: 084761fe-e65b-4f38-ba4f-69884b2a7700
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eb2587f733f5042436144f7865627fee576e3d9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096316"
 ---
 # <a name="delete-statement-limitations"></a>DELETE 陳述式限制
-DELETE 陳述式不支援 Microsoft Excel 或文字驅動程式。 請注意，文字驅動程式支援 INSERT 陳述式。  
+Microsoft Excel 或文字驅動程式不支援 DELETE 子句。 請注意，Text 驅動程式支援 INSERT 語句。  
   
- DBASE 驅動程式不支援封裝資料表來移除 「 刪除 」 值。  
+ DBASE 驅動程式不支援封裝資料表來移除「已刪除」的值。  
   
- Paradox 驅動程式從資料表刪除資料列，資料表必須有唯一的索引 （Paradox 主索引鍵）。
+ 若要讓 Paradox 驅動程式從資料表中刪除資料列，資料表必須有唯一的索引（Paradox 主鍵）。

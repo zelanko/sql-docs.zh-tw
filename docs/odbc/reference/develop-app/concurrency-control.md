@@ -1,5 +1,5 @@
 ---
-title: 並行存取控制 |Microsoft Docs
+title: 並行控制 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7c541bf28c1d4c7ec2e2041201bd7c168625bb34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083266"
 ---
-# <a name="concurrency-control"></a>並行存取控制
-*並行*是兩個交易的能力，在此同時，使用相同的資料和增加的交易隔離通常是並行減少。 這是因為交易隔離通常會實作鎖定的資料列，而且多個資料列被鎖住，因為較少的交易可以完成而不被鎖定的資料列至少要暫時封鎖。 雖然並行減少一般認為需要維護資料庫的完整性較高交易隔離等級的取捨，它具有使用資料指標的高的讀取/寫入活動成為互動式應用程式中的問題。  
+# <a name="concurrency-control"></a>並行控制
+*並行*存取是兩筆交易同時使用相同資料的能力，而增加的交易隔離通常會降低並行。 這是因為交易隔離通常是藉由鎖定資料列來執行，而當鎖定更多資料列時，可以在不被鎖定資料列暫時封鎖的情況下完成較少的交易。 雖然降低並行通常是為了維護資料庫完整性所需的較高交易隔離等級而被視為取捨，但是在具有使用資料指標的高讀取/寫入活動的互動式應用程式中，可能會造成問題。  
   
- 例如，假設應用程式執行的 SQL 陳述式**選取 \*從訂單**。 它會呼叫**SQLFetchScroll**來捲動結果設定，並可讓使用者更新，請刪除或插入訂單。 使用者更新、 刪除或插入訂單之後，應用程式就會認可交易。  
+ 例如，假設應用程式執行**從 Orders 選取\* **的 SQL 語句。 它會呼叫**SQLFetchScroll**以在結果集附近進行滾動，並允許使用者更新、刪除或插入訂單。 在使用者更新、刪除或插入訂單之後，應用程式會認可交易。  
   
- 如果隔離等級是 Repeatable Read，交易可能會為根據的實作方式-鎖定所傳回的每個資料列**SQLFetchScroll**。 如果隔離等級為 Serializable，交易可能會鎖定整個 Orders 資料表。 在任一情況下，交易認可或回復時，才釋放其鎖定。 因此如果使用者耗費太多時間來閱讀訂單和很短的時間更新、 刪除或插入，交易可以輕鬆地鎖定大量的資料列，讓其他使用者無法使用。  
+ 如果隔離等級是可重複讀取的，則交易可能會根據其實作為方式來鎖定**SQLFetchScroll**所傳回的每個資料列。 如果隔離等級是可序列化的，交易可能會鎖定整個 Orders 資料表。 不論是哪一種情況，交易都會在認可或回復時釋放其鎖定。 因此，如果使用者花很多時間來閱讀和更新、刪除或插入訂單，交易就可以輕鬆地鎖定大量的資料列，讓其他使用者無法使用它們。  
   
- 即使資料指標是唯讀的且應用程式可讓使用者讀取只有現有的訂單，這會是問題。 在此情況下，應用程式認可交易，並釋放鎖定，它會呼叫**SQLCloseCursor** （在自動認可模式） 或**SQLEndTran** （在手動認可模式）。  
+ 即使資料指標是唯讀的，而且應用程式允許使用者唯讀取現有的訂單，這也是問題。 在此情況下，應用程式會在呼叫**SQLCloseCursor** （處於自動認可模式）或**SQLEndTran** （在手動認可模式中）時，認可交易，並釋放鎖定。  
   
  此章節包含下列主題。  
   
 -   [並行類型](../../../odbc/reference/develop-app/concurrency-types.md)  
   
--   [開放式並行](../../../odbc/reference/develop-app/optimistic-concurrency.md)
+-   [開放式並行存取](../../../odbc/reference/develop-app/optimistic-concurrency.md)

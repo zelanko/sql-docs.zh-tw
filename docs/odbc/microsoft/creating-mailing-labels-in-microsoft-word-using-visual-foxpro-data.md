@@ -1,5 +1,5 @@
 ---
-title: 建立郵件使用 Visual FoxPro 資料的 Microsoft Word 中的標籤 |Microsoft Docs
+title: 使用 Visual FoxPro 資料在 Microsoft Word 中建立郵件標籤 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,43 +17,43 @@ ms.assetid: c901b60c-9f84-407a-b3d1-b4d301a71370
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73880171493555a7d30e5c0c5419d02338961e9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096519"
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>使用 Visual FoxPro 資料在 Microsoft Word 中建立郵件標籤
-您可以使用 Visual FoxPro 資料在 Microsoft Word 中，Windows 95 或 Windows 98 的文件。 比方說，您可以從 Visual FoxPro 資料表中儲存的客戶資訊建立郵寄標籤。  
+您可以在 Windows 95 或 Windows 98 檔的 Microsoft Word 中使用 Visual FoxPro 資料。 例如，您可能會想要從儲存在 Visual FoxPro 資料表中的客戶資訊建立郵寄標籤。  
   
 ### <a name="to-create-mailing-labels"></a>建立郵件標籤  
   
-1.  在 Microsoft Word 中，建立新的空白文件。  
+1.  在 Microsoft Word 中，建立新的空白檔。  
   
-2.  從 [工具] 功能表中，選擇 [合併]。  
+2.  從 [工具] 功能表中，選擇 [合併列印]。  
   
-3.  在 合併列印中，選擇 建立，然後選取郵寄標籤。  
+3.  在合併列印 Helper 中，選擇 [建立]，然後選取 [郵件標籤]。  
   
-4.  主要的文件，選擇 使用中視窗。  
+4.  在 [主要檔] 下，選擇 [使用中視窗]。  
   
-5.  資料來源 下選擇取得資料，然後選取開啟資料來源。  
+5.  在 [資料來源] 底下，選擇 [取得資料]，然後選取 [開啟資料來源]。  
   
-6.  在開啟資料來源] 對話方塊中，選擇 [MS 查詢。  
+6.  在 [開啟資料來源] 對話方塊中，選擇 [MS 查詢]。  
   
-7.  在 [選取資料來源] 對話方塊中，選取 Visual FoxPro 資料來源，然後按一下使用。  
+7.  在 [選取資料來源] 對話方塊中，選取一個 Visual FoxPro 資料來源，然後按一下 [使用]。  
   
-8.  如果您的資料來源來存取資料庫所包含的資料表，請從 [加入資料表] 對話方塊中選取資料表。 Microsoft 查詢會顯示在上半部的查詢設計工具中加入的資料表。  
+8.  如果資料來源存取的資料庫包含資料表，請從 [加入資料表] 對話方塊中選取資料表。 Microsoft Query 會在查詢設計工具的上半部顯示加入的資料表。  
   
-9. 選取查詢的欄位拖曳到資料表中較低的設計工具 的下半部。  
+9. 選取查詢的欄位，方法是將其從資料表拖曳至設計工具的下半部。  
   
-10. 從 檔案 功能表中，選擇 將資料傳回至 Microsoft Word。 Microsoft 查詢關閉時，與您所選取的資料可供使用合併列印文件中。  
+10. 從 [檔案] 功能表中，選擇 [將資料傳回給 Microsoft Word]。 Microsoft Query 會關閉，而您選取的資料可用於合併列印檔。  
   
-11. 主要的文件，請選擇 [安裝]。  
+11. 在 [主要檔] 下，選擇 [設定]。  
   
-12. 在標籤選項 對話方塊中，選取您想要，然後按一下 確定 的印表機及標籤資訊。  
+12. 在 [標籤選項] 對話方塊中，選取您想要的印表機和標籤資訊，然後按一下 [確定]。  
   
-13. 在建立標籤 對話方塊中，選取您想要列印在郵寄標籤上，然後按一下 確定 的欄位。  
+13. 在 [建立標籤] 對話方塊中，選取您想要在郵件標籤上列印的欄位，然後按一下 [確定]。  
   
-14. 在合併的協助程式，在 合併的資料與文件，按一下 合併。  
+14. 在 [合併列印協助程式] 中的 [與檔合併資料] 底下，按一下 [合併]。  
   
-15. 在 [合併] 對話方塊中，選取您想要的選項然後按一下 [合併]。
+15. 在 [合併] 對話方塊中，選取您想要的選項，然後按一下 [合併]。

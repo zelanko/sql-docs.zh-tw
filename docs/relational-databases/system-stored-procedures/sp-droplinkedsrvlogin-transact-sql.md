@@ -1,5 +1,5 @@
 ---
-title: sp_droplinkedsrvlogin (TRANSACT-SQL) |Microsoft Docs
+title: sp_droplinkedsrvlogin （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff6abaef6fc19a1bc646aab7ff30e4fcf6e13380
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097660"
 ---
-# <a name="spdroplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
+# <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   移除在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之本機伺服器的登入與連結伺服器的登入之間的現有對應。  
@@ -40,21 +40,21 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @rmtsrvname = ] 'rmtsrvname'` 連結的伺服器名稱，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入對應所套用。 *rmtsrvname&lt*已**sysname**，沒有預設值。 *rmtsrvname&lt*必須已經存在。  
+`[ @rmtsrvname = ] 'rmtsrvname'`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入對應所套用的連結伺服器名稱。 *rmtsrvname*是**sysname**，沒有預設值。 *rmtsrvname*必須已經存在。  
   
-`[ @locallogin = ] 'locallogin'` 已[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是對應至連結伺服器的本機伺服器登入*rmtsrvname&lt*。 *locallogin*已**sysname**，沒有預設值。 對應*locallogin*要*rmtsrvname&lt*必須已經存在。 如果是 NULL，所建立的預設對應**sp_addlinkedserver**，它會對應至登入連結的伺服器上的本機伺服器上的所有登入已刪除。  
+`[ @locallogin = ] 'locallogin'`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本機伺服器上的登入，其對應至連結的伺服器*rmtsrvname*。 *locallogin*是**sysname**，沒有預設值。 *Locallogin*至*rmtsrvname*的對應必須已經存在。 如果是 Null，則會刪除**sp_addlinkedserver**所建立的預設對應（將本機伺服器上的所有登入對應到連結伺服器上的登入）。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 在本機伺服器時的現有對應刪除登入後，使用所建立的預設對應**sp_addlinkedserver**當它連接至連結的伺服器代表該登入。 若要變更預設對應，請使用**sp_addlinkedsrvlogin**。  
+ 當登入的現有對應被刪除時，本機伺服器會使用**sp_addlinkedserver**在代表該登入連接到連結伺服器時所建立的預設對應。 若要變更預設對應，請使用**sp_addlinkedsrvlogin**。  
   
- 如果也會刪除預設對應，僅有明確獲得登入對應至連結的伺服器，使用的登入**sp_addlinkedsrvlogin**，連結的伺服器可以存取。  
+ 如果預設的對應也已刪除，則只有已明確指定登入對應到連結伺服器的登入（使用**sp_addlinkedsrvlogin**）可以存取連結的伺服器。  
   
- **sp_droplinkedsrvlogin**無法從使用者定義交易內執行。  
+ **sp_droplinkedsrvlogin**無法從使用者自訂交易內執行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要伺服器的 ALTER ANY LOGIN 權限。  
   
 ## <a name="examples"></a>範例  
@@ -75,7 +75,7 @@ EXEC sp_droplinkedsrvlogin 'Accounts', NULL;
   
 ## <a name="see-also"></a>另請參閱  
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

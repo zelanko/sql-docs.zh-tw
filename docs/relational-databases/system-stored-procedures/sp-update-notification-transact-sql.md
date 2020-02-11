@@ -1,5 +1,5 @@
 ---
-title: sp_update_notification (TRANSACT-SQL) |Microsoft Docs
+title: sp_update_notification （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 35cfa3aeda8e296cd1a85a0e8a098aaddac90954
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084859"
 ---
-# <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
+# <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   更新警示通知的通知方法。  
@@ -43,32 +43,32 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @alert_name = ] 'alert'` 此通知相關聯的警示名稱。 *警示*已**sysname**，沒有預設值。  
+`[ @alert_name = ] 'alert'`與此通知相關聯的警示名稱。 *警示*為**sysname**，沒有預設值。  
   
-`[ @operator_name = ] 'operator'` 發生警示時通知操作員。 *運算子*已**sysname**，沒有預設值。  
+`[ @operator_name = ] 'operator'`會在警示發生時收到通知的操作員。 *運算子*是**sysname**，沒有預設值。  
   
-`[ @notification_method = ] notification` 通知操作員的方法。 *通知*已**tinyint**，沒有預設值，它可以是下列其中一個或多個這些值。  
+`[ @notification_method = ] notification`用來通知操作員的方法。 *通知*是**Tinyint**，沒有預設值，而且可以是下列其中一個或多個值。  
   
 |值|描述|  
 |-----------|-----------------|  
 |**1**|電子郵件|  
 |**2**|呼叫器|  
 |**4**|**net send**|  
-|**7**|所有方法|  
+|**utf-7**|所有方法|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_update_notification**必須從執行**msdb**資料庫。  
+ **sp_update_notification**必須從**msdb**資料庫中執行。  
   
- 您可以更新並沒有使用指定的所需的位址資訊之操作員的通知*notification_method*。 如果傳送電子郵件訊息或呼叫器通知失敗，會在 Microsoft SQL Server Agent 錯誤記錄中報告這項失敗。  
+ 您可以使用指定的*notification_method*來更新沒有必要位址資訊之操作員的通知。 如果傳送電子郵件訊息或呼叫器通知失敗，會在 Microsoft SQL Server Agent 錯誤記錄中報告這項失敗。  
   
-## <a name="permissions"></a>Permissions  
- 若要執行這個預存程序，使用者必須授與**sysadmin**固定的伺服器角色。  
+## <a name="permissions"></a>權限  
+ 若要執行這個預存程式，使用者必須被授與**系統管理員（sysadmin** ）固定伺服器角色。  
   
 ## <a name="examples"></a>範例  
- 下列範例會修改傳送至通知的通知方法`François Ajenstat`警示`Test Alert`。  
+ 下列範例會針對警示`François Ajenstat` `Test Alert`傳送給的通知，修改通知方法。  
   
 ```  
 USE msdb ;  
@@ -82,9 +82,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
+ [sp_add_notification &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_help_notification &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

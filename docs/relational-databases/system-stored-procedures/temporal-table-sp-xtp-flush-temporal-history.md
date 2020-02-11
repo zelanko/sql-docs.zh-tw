@@ -19,13 +19,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5c579d8d31daff1b03db4c82bcd33642c02f85c5
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251274"
 ---
-# <a name="sp_xtp_flush_temporal_history-transact-sql"></a>sp_xtp_flush_temporal_history & Amp;&#40;transact-SQL&AMP;&#41;
+# <a name="sp_xtp_flush_temporal_history-transact-sql"></a>sp_xtp_flush_temporal_history （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   叫用資料排清工作，將所有認可的資料列從記憶體內部臨時表移至磁片記錄資料表。  
@@ -48,9 +48,9 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
  目前或時態表的名稱  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 0（成功）或 > 0 （失敗）  
+ 0（成功）或 >0 （失敗）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 db_owner 許可權。  
   
 ## <a name="see-also"></a>另請參閱  

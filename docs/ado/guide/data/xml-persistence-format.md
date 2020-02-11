@@ -1,5 +1,5 @@
 ---
-title: XML 保存格式 |Microsoft Docs
+title: XML 持續性格式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,16 +13,16 @@ ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e2d1c30546a8466ba9950f31cffdfb9447bd89ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923383"
 ---
 # <a name="xml-persistence-format"></a>XML 保存格式
-ADO 使用 utf-8 編碼方式，它會保存為 XML 資料流。  
+ADO 會針對它保存的 XML 資料流程使用 UTF-8 編碼。  
   
- ADO XML 格式會分成兩個區段，後面接著資料區段的結構描述一節。 以下是從 Northwind 資料庫的貨運公司 資料表的範例 XML 檔案。 下列範例將討論各種組件的 xml。  
+ ADO XML 格式分成兩個區段，一個是架構區段，後面接著資料區段。 以下是 Northwind 資料庫的「貨主」資料表的範例 XML 檔案。 下列範例會討論 XML 的各個部分。  
   
 ## <a name="remarks"></a>備註  
   
@@ -64,11 +64,11 @@ xmlns:z="#RowsetSchema">
 </xml>  
 ```  
   
- 結構描述會顯示宣告的命名空間、 結構描述 區段中和 資料 區段。 結構描述區段包含定義資料列、 即貨運公司編號、 CompanyName 和電話。  
+ 架構會顯示命名空間、架構區段和資料區段的宣告。 [架構] 區段包含資料列、ShipperID、公司名稱和電話的定義。  
   
- 結構描述定義符合[W3C XML 資料的規格](http://www.w3.org/TR/1998/NOTE-XML-data/)並可在 （雖然驗證不會發生在 Internet Explorer 5） 完整驗證。 XML 資料是目前唯一支援的結構描述的格式資料錄集的持續性。  
+ 架構定義符合[W3C XML 資料規格](http://www.w3.org/TR/1998/NOTE-XML-data/)，而且可以完整驗證（雖然 Internet Explorer 5 不會進行驗證）。 XML-資料是目前唯一支援的記錄集持續性架構格式。  
   
- 資料區段會有三個資料列包含貨運公司的相關資訊。 空的資料列集，[資料] 區段可能是空的但\<rs： 資料 > 標記必須存在。 沒有資料，您可以簡單地撰寫標記速記\<rs： 資料 / >。 加上"rs"任何標記表示它是在 urn: schemas-microsoft 所定義的命名空間-microsoft-com:rowset。  
+ Data 區段有三個數據列，其中包含有關貨主的資訊。 如果是空的資料列集，data 區段可能是空的\<，但是 rs： data> 標記必須存在。 在沒有資料的情況下，您可以將標記速記\<撰寫為單純的 rs： data/>。 任何前面加上 "rs" 的標記都會指出它位於 urn：架構-microsoft-com：資料列集所定義的命名空間中。  
   
 ## <a name="see-also"></a>另請參閱  
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)

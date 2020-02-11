@@ -13,19 +13,19 @@ ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc79bb5d12b53938e3e2ef1c531fd03b0002ed78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093827"
 ---
 # <a name="setup-program"></a>安裝程式
-> **注意：** 從 Windows XP 和 Windows Server 2003、windows **ODBC 會包含在 Windows 作業系統中**。 您只明確應該安裝在舊版 Windows 上的 ODBC。  
+> **注意：** 從 Windows XP 和 Windows Server 2003 開始， **ODBC 包含在 windows 作業系統中**。 您只應該在舊版 Windows 上明確安裝 ODBC。  
   
- 使用者執行安裝程式，以啟動安裝程序。 安裝程式會寫入應用程式或驅動程式開發人員。 除了安裝 ODBC 元件，它可以安裝其他軟體。 例如，應用程式開發人員可能會使用相同的安裝程式來安裝 ODBC 元件並安裝他們的應用程式。  
+ 使用者執行安裝程式以啟動安裝程式。 安裝程式是由應用程式或驅動程式開發人員所撰寫。 除了安裝 ODBC 元件之外，它還可以安裝其他軟體。 例如，應用程式開發人員可能會使用相同的安裝程式來安裝 ODBC 元件，並安裝其應用程式。  
   
- 開發人員可以從頭開始撰寫安裝程式，使用 Microsoft® Windows® SDK 安裝程式公用程式或來自其他廠商的安裝程式軟體。 這可讓開發人員安裝程式的外觀與風格的完整控制。 安裝程式可以撰寫程式來安裝其他軟體，例如 ODBC 應用程式。 如需有關 Windows SDK 安裝程式公用程式的詳細資訊，請參閱 Windows SDK 文件。  
+ 開發人員可以從頭開始撰寫安裝程式，使用 Microsoft® Windows® SDK 安裝公用程式或其他廠商的安裝軟體。 如此一來，這些開發人員就可以完全掌控安裝程式的外觀與風格。 您可以撰寫安裝程式來安裝其他軟體，例如 ODBC 應用程式。 如需 Windows SDK 安裝程式公用程式的詳細資訊，請參閱 Windows SDK 檔。  
   
- 在安裝中有多少工作實際上是由安裝程式，取決於哪些函數它在安裝程式 DLL 的呼叫。 安裝程式 DLL 包含安裝個別的 ODBC 元件的函式。 安裝程式只會呼叫**SQLInstallDriverManager**， **SQLInstallDriverEx**，或**SQLInstallTranslatorEx**在安裝程式 DLL 來擷取的路徑元件是安裝，並將元件的相關資訊新增至登錄的目錄。 這些函式不實際將複製的檔案;安裝程式會使用這些函式的引數中的資訊。  
+ 安裝程式實際完成多少安裝，取決於它在安裝程式 DLL 中呼叫的功能。 安裝程式 DLL 包含用來安裝個別 ODBC 元件的函式。 安裝程式只會呼叫安裝程式 DLL 中的**SQLInstallDriverManager**、 **SQLInstallDriverEx**或**SQLInstallTranslatorEx** ，以抓取要安裝元件的目錄路徑，並將元件的相關資訊新增至登錄。 這些函數並不會實際複製檔案;安裝程式會使用這些函式之引數中的資訊來執行這項工作。  
   
- 安裝程式 DLL 也包含函式來移除 ODBC 元件。 安裝程式呼叫**SQLRemoveDriverManager**， **SQLRemoveDriver**，或**SQLRemoveTranslator**在安裝程式 DLL 來遞減元件的使用方式中的計數登錄和元件的新使用計數降至 0，如果從登錄中移除所有元件的相關資訊。 這些函式不會移除元件的檔案安裝程式會如果新的使用方式計數降至 0。
+ 安裝程式 DLL 也包含可移除 ODBC 元件的函式。 安裝程式會在安裝程式 DLL 中呼叫**SQLRemoveDriverManager**、 **SQLRemoveDriver**或**SQLRemoveTranslator** ，以遞減元件在登錄中的使用計數，如果元件的新使用量計數降為0，則從登錄中移除元件的所有相關資訊。 這些函數實際上不會移除元件的檔案;如果新的使用計數降到0，則安裝程式會執行此步驟。

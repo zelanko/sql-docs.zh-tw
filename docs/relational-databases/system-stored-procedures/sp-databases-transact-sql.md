@@ -1,5 +1,5 @@
 ---
-title: sp_databases (TRANSACT-SQL) |Microsoft Docs
+title: sp_databases （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c338fb8057c2d58727f18e0bb69e2fa825e71559
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108329"
 ---
-# <a name="spdatabases-transact-sql"></a>sp_databases (Transact-SQL)
+# <a name="sp_databases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   列出在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的資料庫，或可利用資料庫閘道來存取的資料庫。  
@@ -45,16 +45,16 @@ sp_databases
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**DATABASE_NAME**|**sysname**|資料庫的名稱。 在  [!INCLUDE[ssDE](../../includes/ssde-md.md)]，這個資料行代表資料庫名稱中所儲存**sys.databases**目錄檢視。|  
+|**DATABASE_NAME**|**sysname**|資料庫名稱。 在中[!INCLUDE[ssDE](../../includes/ssde-md.md)]，這個資料行代表儲存在**sys.databases**目錄檢視中的資料庫名稱。|  
 |**DATABASE_SIZE**|**int**|資料庫的大小 (以 KB 為單位)。|  
-|**註解**|**varchar(254)**|對於 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，這個欄位一律會傳回 NULL。|  
+|**標記**|**Varchar （254）**|對於 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，這個欄位一律會傳回 NULL。|  
   
 ## <a name="remarks"></a>備註  
  傳回的資料庫名稱可用來作為 USE 陳述式中的參數，以變更目前資料庫的內容。  
   
- **sp_databases**有沒有對等項目在開放式資料庫連接 (ODBC)。  
+ **sp_databases**在開放式資料庫連接（ODBC）中沒有對等的。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 CREATE DATABASE、ALTER ANY DATABASE 或 VIEW ANY DEFINITION 權限，且必須擁有資料庫的存取權限。 無法拒絕 VIEW ANY DEFINITION 權限。  
   
 ## <a name="examples"></a>範例  
@@ -67,7 +67,7 @@ EXEC sp_databases;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [HAS_DBACCESS &#40;Transact SQL&#41;](../../t-sql/functions/has-dbaccess-transact-sql.md)  
+ [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [HAS_DBACCESS &#40;Transact-sql&#41;](../../t-sql/functions/has-dbaccess-transact-sql.md)  
   
   

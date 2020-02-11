@@ -1,5 +1,5 @@
 ---
-title: sp_set_session_context & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_set_session_coNtext （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2019
 ms.prod: sql
@@ -19,16 +19,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a57bf4acff6f8d0d08f86852de5ecc0411211c67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104396"
 ---
-# <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (Transact-SQL)
+# <a name="sp_set_session_context-transact-sql"></a>sp_set_session_coNtext （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-工作階段內容中設定的索引鍵 / 值組。  
+在會話內容中設定索引鍵/值組。  
   
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -42,34 +42,34 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @key=] N'key'  
- 正在設定的類型的索引鍵**sysname**。 最大的金鑰大小為 128 個位元組。  
+ [ @key= ]N'key'  
+ 要設定的索引鍵，屬於**sysname**類型。 金鑰大小上限為128個位元組。  
   
- [ @value= ] 'value'  
- 所指定的索引鍵類型的值**sql_variant**。 將值設定為 NULL，就會釋出記憶體。 大小上限是 8,000 位元組。  
+ [ @value= ]value  
+ 指定之索引鍵的值，其類型為**SQL_variant**。 將值設為 Null 會釋出記憶體。 大小上限是 8,000 位元組。  
   
- [ @read_only= ] { 0 | 1 }  
- 類型的旗標**元**。 如果是 1，然後指定的索引鍵的值無法變更一次這個邏輯連接。 如果您可以變更為 0 （預設值），則會將值。  
+ [ @read_only= ]{0 | 1}  
+ **Bit**類型的旗標。 如果是1，則無法在此邏輯連接上再次變更指定之索引鍵的值。 如果為0（預設值），則可以變更此值。  
   
-## <a name="permissions"></a>Permissions  
- 任何使用者可以設定他們的工作階段的工作階段內容。  
+## <a name="permissions"></a>權限  
+ 任何使用者都可以設定其會話的會話內容。  
   
 ## <a name="remarks"></a>備註  
- 像其他預存程序，唯一的常值和變數 （不是運算式或函式呼叫） 可以是當做參數傳遞。  
+ 和其他預存程式一樣，只有常值和變數（非運算式或函式呼叫）可以當做參數來傳遞。  
   
- 工作階段內容的大小總計是限制為 1 MB。 如果您設定值，會導致超過此限制時，陳述式將會失敗。 您可以監視整體記憶體使用量[sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。  
+ 會話內容的總大小限制為 1 MB。 如果您設定的值會導致超過此限制，則語句會失敗。 您可以監視 sys.databases 中的整體記憶體使用量[dm_os_memory_objects &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。  
   
- 您可以藉由查詢監視整體的記憶體使用量[sys.dm_os_memory_cache_counters &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) ，如下所示： `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
+ 您可以藉由查詢[sys.databases dm_os_memory_cache_counters &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md)監視整體記憶體使用量，如下所示：`SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
 ## <a name="examples"></a>範例  
- 下列範例示範如何設定，然後再將 工作階段內容的索引鍵，名為值是英文的語言。  
+ 下列範例顯示如何設定，然後傳回名為 language 且值為英文的會話內容索引鍵。  
   
 ```  
 EXEC sys.sp_set_session_context @key = N'language', @value = 'English';  
 SELECT SESSION_CONTEXT(N'language');  
 ```  
   
- 下列範例示範如何使用選擇性的唯讀旗標。  
+ 下列範例示範選擇性唯讀旗標的用法。  
   
 ```  
 EXEC sys.sp_set_session_context @key = N'user_id', @value = 4, @read_only = 1;  
@@ -77,7 +77,7 @@ EXEC sys.sp_set_session_context @key = N'user_id', @value = 4, @read_only = 1;
   
 ## <a name="see-also"></a>另請參閱  
  [CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
- [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md)   
+ [SESSION_CONTEXT &#40;Transact-sql&#41;](../../t-sql/functions/session-context-transact-sql.md)   
  [資料列層級安全性](../../relational-databases/security/row-level-security.md)   
  [CONTEXT_INFO  &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)   
  [SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)  

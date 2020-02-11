@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dbee99748718d88ce678d78cfa64849f8e5bbc5d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982168"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "73982168"
  DROP INDEX 陳述式不會套用在定義 PRIMARY KEY 或 UNIQUE 條件約束所建立的索引上。 若要移除條件約束和對應的索引，請搭配 DROP CONSTRAINT 子句來使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)。  
   
 > [!IMPORTANT]
->  在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `<drop_backward_compatible_index>` 所定義的語法。 請避免在新的開發工作中使用這個語法，並規劃修改目前在使用這個語法的應用程式。 請改用 `<drop_relational_or_xml_index>` 下所指定的語法。 您無法利用與舊版相容的語法來卸除 XML 索引。  
+>  在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `<drop_backward_compatible_index>` 所定義的語法。 請避免在新的開發工作中使用這個語法，並規劃修改目前在使用這個語法的應用程式。 請改用 `<drop_relational_or_xml_index>` 下所指定的語法。 您無法利用與舊版相容的語法來卸除 XML 索引。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -162,7 +162,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
  指定在索引作業期間，查詢和資料修改是否能夠使用基礎資料表和相關聯的索引。 預設值為 OFF。  
   
- ON  
+ 開啟  
  不保留長期資料表鎖定。 這使得基礎資料表的查詢或更新能夠繼續運作。  
   
  OFF  
@@ -217,7 +217,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 > [!NOTE]
 >  在此內容中，default 不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，如 MOVE TO **"** default **"** 或 MOVE TO **[** default **]** 。 如果指定了 "default"，目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當卸除非叢集索引時，會從中繼資料移除索引定義，從資料庫檔案中移除索引資料頁面 (B 型樹狀目錄)。 當卸除叢集索引時，會從中繼資料移除索引定義，且會將叢集索引分葉層級所儲存的資料列儲存在未排序的結果資料表 (堆積) 中。 索引先前所佔用的所有空間都會重新取得。 之後，任何資料庫物件都可以使用這個空間。  
   
  如果索引所在的檔案群組離線或設為唯讀，便無法卸除索引。  

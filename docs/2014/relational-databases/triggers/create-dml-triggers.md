@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 10399a26335912a9370aa21a386f58d04d04321e
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796385"
 ---
 # <a name="create-dml-triggers"></a>建立 DML 觸發程序
@@ -34,7 +34,7 @@ ms.locfileid: "72796385"
 ### <a name="limitations-and-restrictions"></a>限制事項  
  如需與建立 DML 觸發程序相關之限制事項的清單，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 權限  
  需要建立觸發程序之資料表或檢視的 ALTER 權限。  
   
 ##  <a name="Procedures"></a> 如何建立 DML 觸發程序  
@@ -48,27 +48,27 @@ ms.locfileid: "72796385"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  依序展開 [資料庫]、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫、[資料表] 和 **Purchasing.PurchaseOrderHeader** 資料表。  
+2.  依序展開 [資料庫]  、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫、[資料表]  和 **Purchasing.PurchaseOrderHeader** 資料表。  
   
-3.  以滑鼠右鍵按一下 [觸發程序]，然後選取 [新增觸發程序]。  
+3.  以滑鼠右鍵按一下 [觸發程序]  ，然後選取 [新增觸發程序]  。  
   
-4.  在 **[查詢]** 功能表上，按一下 **[指定範本參數的值]** 。 您也可以按 (Ctrl-Shift-M) 開啟 [指定範本參數的值] 對話方塊。  
+4.  在 **[查詢]** 功能表上，按一下 **[指定範本參數的值]** 。 您也可以按 (Ctrl-Shift-M) 開啟 [指定範本參數的值]  對話方塊。  
   
 5.  在 **[指定範本參數的值]** 對話方塊中，為顯示的參數輸入下列值。  
   
-    |參數|[值]|  
+    |參數|值|  
     |---------------|-----------|  
     |作者|*您的名字*|  
     |建立日期|*今天的日期*|  
-    |[描述]|先檢查供應商信用評等，再允許插入含有該供應商的新採購單。|  
-    |Schema_Name|Purchasing|  
+    |描述|先檢查供應商信用評等，再允許插入含有該供應商的新採購單。|  
+    |Schema_Name|購買|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|從清單中移除 UPDATE 和 DELETE。|  
   
-6.  按一下 **[確定]** 。  
+6.  按一下 [確定]  。  
   
-7.  在 [查詢編輯器] 中，將 `-- Insert statements for trigger here` 註解取代為下列陳述式：  
+7.  在 [查詢編輯器]  中，將 `-- Insert statements for trigger here` 註解取代為下列陳述式：  
   
     ```sql  
     IF @@ROWCOUNT = 1  
@@ -92,11 +92,11 @@ ms.locfileid: "72796385"
     END;  
     ```  
   
-8.  若要驗證語法是否有效，請在 [查詢] 功能表上按一下 [剖析]。 如果傳回錯誤訊息，請比較陳述式與上列資訊，並視需要進行更正，然後重複此步驟。  
+8.  若要驗證語法是否有效，請在 [查詢]  功能表上按一下 [剖析]  。 如果傳回錯誤訊息，請比較陳述式與上列資訊，並視需要進行更正，然後重複此步驟。  
   
-9. 若要建立 DML 觸發程序，請在 [查詢] 功能表中按一下 [執行]。 DML 觸發程序會建立為資料庫中的物件。  
+9. 若要建立 DML 觸發程序，請在 [查詢]  功能表中按一下 [執行]  。 DML 觸發程序會建立為資料庫中的物件。  
   
-10. 若要查看物件總管中所列的 DML 觸發程序，請以滑鼠右鍵按一下 [觸發程序]，然後選取 [重新整理]。  
+10. 若要查看物件總管中所列的 DML 觸發程序，請以滑鼠右鍵按一下 [觸發程序]  ，然後選取 [重新整理]  。  
   
  [開始之前](#Top)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "72796385"
   
 2.  在 **[檔案]** 功能表中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。 此範例會建立與上面相同的預存 DML 觸發程序。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會建立與上面相同的預存 DML 觸發程序。  
   
     ```sql
     -- Trigger valid for multirow and single row inserts  

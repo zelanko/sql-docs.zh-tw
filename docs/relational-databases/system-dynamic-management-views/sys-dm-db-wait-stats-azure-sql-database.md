@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_wait_stats (Azure SQL Database) |Microsoft Docs
+title: sys. dm_db_wait_stats （Azure SQL Database） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-database
@@ -20,13 +20,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090869"
 ---
-# <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
+# <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   傳回作業期間執行的執行緒所遇到之所有等候的相關資訊。 您可以使用這份彙總檢視來診斷 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的效能問題，以及特定查詢和批次的效能問題。  
@@ -35,11 +35,11 @@ ms.locfileid: "68090869"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar(60)**|等候類型的名稱。 如需詳細資訊，請參閱 <<c0> [ 等候的類型](#WaitTypes)稍後在本主題中。|  
-|waiting_tasks_count|**bigint**|這個等候類型的等候次數。 這個計數器是從每次開始等候時逐量遞增計算。|  
-|wait_time_ms|**bigint**|這個等候類型的總等候時間 (以毫秒為單位)。 這個時間包括 signal_wait_time_ms 在內。|  
-|max_wait_time_ms|**bigint**|這個等候類型的等候時間上限。|  
-|signal_wait_time_ms|**bigint**|從等候執行緒接獲訊號到開始執行的時間。|  
+|wait_type|**Nvarchar （60）**|等候類型的名稱。 如需詳細資訊，請參閱這個主題稍後的＜[等候的類型](#WaitTypes)＞。|  
+|waiting_tasks_count|**Bigint**|這個等候類型的等候次數。 這個計數器是從每次開始等候時逐量遞增計算。|  
+|wait_time_ms|**Bigint**|這個等候類型的總等候時間 (以毫秒為單位)。 這個時間包括 signal_wait_time_ms 在內。|  
+|max_wait_time_ms|**Bigint**|這個等候類型的等候時間上限。|  
+|signal_wait_time_ms|**Bigint**|從等候執行緒接獲訊號到開始執行的時間。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -59,10 +59,10 @@ ms.locfileid: "68090869"
   
 -   這些統計資料一經過 SQL Database 容錯移轉事件後就不會保存，而且所有的資料都是從上次重設統計資料之後開始累加計算。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要伺服器的 VIEW DATABASE STATE 權限。  
   
-##  <a name="WaitTypes"></a> 等候的類型  
+##  <a name="WaitTypes"></a>等候的類型  
  資源等候  
  當工作者要求存取無法使用的資源時 (因為該資源正被另一個工作者使用中，因此還不能使用)，會發生資源等候的情形。 鎖定、閂鎖、網路和磁碟 I/O 等候，都是資源等候的範例。 鎖定和閂鎖等候是對同步處理物件的等候。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68090869"
   
  雖然執行緒已經不在等候中，執行緒也不必立即開始執行。 因為這類執行緒會先置於可執行之工作者的佇列上，而且必須等候排程器執行某個配量才行。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]等候時間計數器**bigint**值，並因此不太一樣計數器換用為在舊版的對等計數器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]等候時間計數器中是**Bigint**值，因此不容易在舊版中做為對等計數器的計數器變換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  下表列出工作會遇到的等候類型。  
   
@@ -89,8 +89,8 @@ ms.locfileid: "68090869"
 |AUDIT_LOGINCACHE_LOCK|當控制特殊快取之存取權的鎖定上存在等候時發生。 此快取包含哪些稽核要用來稽核登入稽核動作群組的相關資訊。|  
 |AUDIT_ON_DEMAND_TARGET_LOCK|當用來確保稽核相關「擴充事件」目標之單一初始化的鎖定上存在等候時發生。|  
 |AUDIT_XE_SESSION_MGR|當用來同步處理稽核相關「擴充事件」工作階段之啟動和停止的鎖定上存在等候時發生。|  
-|BACKUP|當工作被當做備份處理的一部分而加以封鎖時發生。|  
-|BACKUP_OPERATOR|在工作等候磁帶掛載時發生。 若要檢視磁帶狀態，請查詢[sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)。 如果掛載作業沒有暫止，這個等候類型可能就表示磁帶機發生硬體問題。|  
+|備份|當工作被當做備份處理的一部分而加以封鎖時發生。|  
+|BACKUP_OPERATOR|在工作等候磁帶掛載時發生。 若要檢視磁帶狀態，請查詢 [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)。 如果掛載作業沒有暫止，這個等候類型可能就表示磁帶機發生硬體問題。|  
 |BACKUPBUFFER|當備份工作正在等候資料，或者等候儲存資料的緩衝區時發生。 除非當工作正在等候磁帶掛載，否則這個類型並非標準類型。|  
 |BACKUPIO|當備份工作正在等候資料，或者等候儲存資料的緩衝區時發生。 除非當工作正在等候磁帶掛載，否則這個類型並非標準類型。|  
 |BACKUPTHREAD|在工作等候備份工作完成時發生。 等候時間可能會很長，從幾分鐘到數小時都可能。 如果等候的工作是在 I/O 處理序中，這個類型就不表示發生問題。|  
@@ -124,17 +124,17 @@ ms.locfileid: "68090869"
 |CLR_TASK_START|在等候 CLR 工作完成啟動時發生。|  
 |CLRHOST_STATE_ACCESS|在等候取得 CLR 主控資料結構之獨佔存取權的情況下發生。 這種等候類型會在設定或終止 CLR 執行階段時發生。|  
 |CMEMTHREAD|當工作在安全執行緒記憶體物件待命時發生。 如果有多個工作嘗試從同一個記憶體物件配置記憶體而導致競爭情形時，等候時間可能會增加。|  
-|CXPACKET|在同步處理查詢處理器交換重複時發生。 如果這個等候類型的競爭情形已經成為問題時，不妨考慮降低平行處理的程度。|  
+|CXPACKET |在同步處理查詢處理器交換重複時發生。 如果這個等候類型的競爭情形已經成為問題時，不妨考慮降低平行處理的程度。|  
 |CXROWSET_SYNC|在平行範圍掃描期間發生。|  
 |DAC_INIT|當專用管理員連接正在初始化時發生。|  
 |DBMIRROR_DBM_EVENT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |DBMIRROR_DBM_MUTEX|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |DBMIRROR_EVENTS_QUEUE|當資料庫鏡像在等候處理事件時發生。|  
-|DBMIRROR_SEND|當工作在網路層等候通訊積存清除，以傳送訊息時發生。 它指出通訊層已經開始多載，並影響到資料庫鏡像資料輸送量。|  
+|DBMIRROR_SEND |當工作在網路層等候通訊積存清除，以傳送訊息時發生。 它指出通訊層已經開始多載，並影響到資料庫鏡像資料輸送量。|  
 |DBMIRROR_WORKER_QUEUE|指出資料庫鏡像工作者工作正在等候其他工作。|  
-|DBMIRRORING_CMD|當工作在等候記錄排清到磁碟時發生。 這個等候狀態預期會保留一段很長的時間。|  
-|DEADLOCK_ENUM_MUTEX|當死結監視器和 sys.dm_os_waiting_tasks 嘗試確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 沒有同時執行多個死結搜尋時發生。|  
-|DEADLOCK_TASK_SEARCH|在此資源上的等候時間如果很長，表示伺服器正在 sys.dm_os_waiting_tasks 之上執行查詢，而這些查詢則造成死結監視器無法執行死結搜尋。 只有死結監視器才會使用這種等候類型。 在 sys.dm_os_waiting_tasks 之上的查詢會使用 DEADLOCK_ENUM_MUTEX。|  
+|DBMIRRORING_CMD |當工作在等候記錄排清到磁碟時發生。 這個等候狀態預期會保留一段很長的時間。|  
+|DEADLOCK_ENUM_MUTEX |當死結監視器和 sys.dm_os_waiting_tasks 嘗試確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 沒有同時執行多個死結搜尋時發生。|  
+|DEADLOCK_TASK_SEARCH |在此資源上的等候時間如果很長，表示伺服器正在 sys.dm_os_waiting_tasks 之上執行查詢，而這些查詢則造成死結監視器無法執行死結搜尋。 只有死結監視器才會使用這種等候類型。 在 sys.dm_os_waiting_tasks 之上的查詢會使用 DEADLOCK_ENUM_MUTEX。|  
 |DEBUG|在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR 針對內部同步處理進行偵錯時發生。|  
 |DISABLE_VERSIONING|當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 輪詢版本交易管理員，看看最早使用中交易的時間戳記，是否晚於狀態開啟改變時的時間戳記時發生。 如果是這樣，則表示所有在 ALTER DATABASE 陳述式執行之前所啟動的快照集交易，已經全部完成了。 這個等候狀態是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用 ALTER DATABASE 陳述式停用版本控制時所使用。|  
 |DISKIO_SUSPEND|當外部備份在使用中時，工作正在等候存取檔案時發生。 這是針對每個等候中的使用者處理序所報告。 如果超過每個使用者處理序五次時，可能表示外部備份花了太多時間才完成。|  
@@ -142,24 +142,25 @@ ms.locfileid: "68090869"
 |DLL_LOADING_MUTEX|在等候 XML 剖析器 DLL 載入時發生一次。|  
 |DROPTEMP|卸除暫存物件時，如果前一次的嘗試失敗，就會在兩次嘗試之間發生這種等候類型。 等候持續時間將以指數方式，隨著每一次的卸除嘗試失敗而增加。|  
 |DTC|當工作在服務管理狀態轉移所用的事件時發生。 這個狀態可以控制在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 收到 MS DTC 服務已經無法使用的通知之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散式交易協調器 (MS DTC) 交易何時復原。<br /><br /> 這個狀態也可以描述當 MS DTC 交易的認可是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 起始，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在等候 MS DTC 認可完成時，正在等候中的工作。|  
-|DTC_ABORT_REQUEST|當工作階段在等候接收 MS DTC 交易的擁有權時，在 MS DTC 工作者工作階段發生。 MS DTC 擁有交易之後，工作階段就可以回復該交易。 通常，工作階段會等候另一個使用該交易的工作階段。|  
-|DTC_RESOLVE|當復原工作在等候跨資料庫交易中的 master 資料庫，讓工作得以查詢交易結果時發生。|  
-|DTC_STATE|當工作在保護您對內部 MS DTC 全域狀態物件所做變更的事件待命時發生。 這個狀態的保留時間很短。|  
+|DTC_ABORT_REQUEST |當工作階段在等候接收 MS DTC 交易的擁有權時，在 MS DTC 工作者工作階段發生。 MS DTC 擁有交易之後，工作階段就可以回復該交易。 通常，工作階段會等候另一個使用該交易的工作階段。|  
+|DTC_RESOLVE |當復原工作在等候跨資料庫交易中的 master 資料庫，讓工作得以查詢交易結果時發生。|  
+|DTC_STATE |當工作在保護您對內部 MS DTC 全域狀態物件所做變更的事件待命時發生。 這個狀態的保留時間很短。|  
 |DTC_TMDOWN_REQUEST|當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接收 MS DTC 服務無法使用的通知時，在 MS DTC 工作者工作階段發生。 首先，工作者會等候 MS DTC 復原處理序啟動。 接著，工作者會等候取得他所處理的分散式交易結果。 除非與 MS DTC 服務的連接已經重新建立，否則這項作業會繼續進行。|  
-|DTC_WAITFOR_OUTCOME|當復原工作在等候 MS DTC 開始解析準備交易時發生。|  
-|DUMP_LOG_COORDINATOR|當主要工作正在等候子工作產生資料時發生。 這個狀態通常不會發生。 如果等候時間很長，就表示發生了非預期的封鎖。 您最好調查一下子工作。|  
+|DTC_WAITFOR_OUTCOME |當復原工作在等候 MS DTC 開始解析準備交易時發生。|  
+|DUMP_LOG_COORDINATOR |當主要工作正在等候子工作產生資料時發生。 這個狀態通常不會發生。 如果等候時間很長，就表示發生了非預期的封鎖。 您最好調查一下子工作。|  
 |DUMPTRIGGER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |EC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |EE_PMOLOCK|在陳述式執行期間同步處理某些類型的記憶體配置時發生。|  
 |EE_SPECPROC_MAP_INIT|在同步處理內部程序雜湊表的建立時發生。 這個等候只可能會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體開始之後初次存取雜湊表時發生。|  
-|ENABLE_VERSIONING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在宣告資料庫可以轉移到允許快照集隔離的狀態之前，等候這個資料庫中所有的更新交易完成時發生。 這個狀態是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用 ALTER DATABASE 陳述式啟用快照集隔離時所使用。|  
+|ENABLE_VERSIONING|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在宣告資料庫可以轉移到允許快照集隔離的狀態之前，等候這個資料庫中所有的更新交易完成時發生。 這個狀態是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用 ALTER DATABASE 陳述式啟用快照集隔離時所使用。|  
 |ERROR_REPORTING_MANAGER|在同步處理多個並行錯誤記錄檔的初始化時發生。|  
 |EXCHANGE|在平行查詢期間同步處理查詢處理器交換重複時發生。|  
-|EXECSYNC|平行查詢期間在與交換重複無關之區域的查詢處理器中進行同步處理時發生。 這類區域的範例包括點陣圖、大型二進位物件 (LOB) 和多工緩衝處理重複。 LOB 可能會經常使用這個等候狀態。|  
+|EXECSYNC |平行查詢期間在與交換重複無關之區域的查詢處理器中進行同步處理時發生。 這類區域的範例包括點陣圖、大型二進位物件 (LOB) 和多工緩衝處理重複。 LOB 可能會經常使用這個等候狀態。|  
 |EXECUTION_PIPE_EVENT_INTERNAL|在透過連接內容傳送的批次執行產生者與取用者部分之間同步處理期間發生。|  
 |FAILPOINT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|FCB_REPLICA_READ|在同步處理快照集 (或 DBCC 所建立的暫時快照集) 疏鬆檔案的讀取作業時發生。|  
-|FCB_REPLICA_WRITE|在同步處理將資料頁發送或提取到快照集 (或 DBCC 所建立的暫時快照集) 疏鬆檔案時發生。|  
+|FCB_REPLICA_READ |在同步處理快照集 (或 DBCC 所建立的暫時快照集) 疏鬆檔案的讀取作業時發生。|  
+|FCB_REPLICA_WRITE |在同步處理將資料頁發送或提取到快照集 (或 DBCC 所建立的暫時快照集) 疏鬆檔案時發生。|  
 |FS_FC_RWLOCK|當 FILESTREAM 記憶體回收行程等候進行下列其中一項作業時發生：<br /><br /> 停用記憶體回收 (由備份和還原所使用)。<br /><br /> 執行一次 FILESTREAM 記憶體回收行程的循環。|  
 |FS_GARBAGE_COLLECTOR_SHUTDOWN|當 FILESTREAM 記憶體回收行程正在等候清除工作完成時發生。|  
 |FS_HEADER_RWLOCK|當系統等候取得 FILESTREAM 資料容器之 FILESTREAM 標頭的存取權來讀取或更新 FILESTREAM 標頭檔 (Filestream.hdr) 內容時發生。|  
@@ -172,11 +173,11 @@ ms.locfileid: "68090869"
 |FT_RESTART_CRAWL|在全文檢索搜耙必須從最後一個已知的恰當起點重新啟動以便從暫時性失敗中復原時發生。 等候可讓目前正在處理該母體擴展的工作者工作得以完成或結束目前的步驟。|  
 |FULLTEXT GATHERER|在同步處理全文檢索作業時發生。|  
 |GUARDIAN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|HTTP_ENUMERATION|在啟動以列舉 HTTP 端點來啟動 HTTP 時發生。|  
+|HTTP_ENUMERATION |在啟動以列舉 HTTP 端點來啟動 HTTP 時發生。|  
 |HTTP_START|在連接等候 HTTP 完成初始化時發生。|  
 |IMPPROV_IOWAIT|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 等候大量載入 I/O 完成時發生。|  
 |INTERNAL_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|IO_AUDIT_MUTEX|在同步處理追蹤事件緩衝區時發生。|  
+|IO_AUDIT_MUTEX |在同步處理追蹤事件緩衝區時發生。|  
 |IO_COMPLETION|在等候 I/O 作業完成時發生。 這種等候類型通常代表非資料頁面 I/O。 資料頁面 I/O 完成等候會顯示為 PAGEIOLATCH_* 等候。|  
 |IO_QUEUE_LIMIT|當 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的非同步 IO 佇列有太多 IO 暫止時發生。 這種等候類型會封鎖嘗試發出另一個 IO 的工作，直到 IO 等候的數目下降到低於臨界值。 臨界值與指派給資料庫的 DTU 成正比。|  
 |IO_RETRY|當讀取或寫入磁碟等 I/O 作業由於資源不足而失敗，然後重試時發生。|  
@@ -185,62 +186,63 @@ ms.locfileid: "68090869"
 |KTM_ENLISTMENT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |KTM_RECOVERY_MANAGER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |KTM_RECOVERY_RESOLUTION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|LATCH_DT|在等候 DT (終結) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 sys.dm_os_latch_stats 中提供 LATCH_* 等候的清單。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。|  
-|LATCH_EX|在等候 EX (獨佔) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 sys.dm_os_latch_stats 中提供 LATCH_* 等候的清單。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。|  
-|LATCH_KP|在等候 KP (保留) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 sys.dm_os_latch_stats 中提供 LATCH_* 等候的清單。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。|  
-|LATCH_NL|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|LATCH_SH|在等候 SH (共用) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 sys.dm_os_latch_stats 中提供 LATCH_* 等候的清單。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。|  
-|LATCH_UP|在等候 UP (更新) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 sys.dm_os_latch_stats 中提供 LATCH_* 等候的清單。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。|  
-|LAZYWRITER_SLEEP|在延遲寫入器工作暫止時發生。 這是等候中的背景工作所花的時間。 如果您要尋找使用者拋錨點，就不要考慮這個狀態。|  
-|LCK_M_BU|當工作在等候取得大量更新 (BU) 鎖定時發生。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_IS|當工作在等候取得意圖共用 (IS) 鎖定時發生。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_IU|當工作在等候取得意圖更新 (IU) 鎖定時發生。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_IX|當工作在等候取得意圖獨佔 (IX) 鎖定時發生。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_RIn_NL|當工作在等候取得目前索引鍵值的 NULL 鎖定，以及目前索引鍵和前一個索引鍵之間的插入範圍鎖定時發生。 索引鍵的 NULL 鎖定是一個立即釋放鎖定。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_RIn_S|當工作在等候取得目前索引鍵值的共用鎖定，以及目前索引鍵和前一個索引鍵之間的插入範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_RIn_U|工作在等候取得目前索引鍵值的更新鎖定，以及目前索引鍵和前一個索引鍵之間的插入範圍鎖定。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_RIn_X|當工作在等候取得目前索引鍵值的獨佔鎖定，以及目前索引鍵和前一個索引鍵之間的插入範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_RS_S|當工作在等候取得目前索引鍵值的共用鎖定，以及目前索引鍵和前一個索引鍵之間的共用範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_RS_U|當工作在等候取得目前索引鍵值的更新鎖定，以及目前索引鍵和前一個索引鍵之間的更新範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_RX_S|當工作在等候取得目前索引鍵值的共用鎖定，以及目前索引鍵和前一個索引鍵之間的獨佔範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_RX_U|當工作在等候取得目前索引鍵值的更新鎖定，以及目前索引鍵和前一個索引鍵之間的獨佔範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_RX_X|當工作在等候取得目前索引鍵值的獨佔鎖定，以及目前索引鍵和前一個索引鍵之間的獨佔範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_S|當工作在等候取得共用鎖定時發生。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_SCH_M|當工作在等候取得結構描述修改鎖定時發生。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_SCH_S|當工作在等候取得結構描述共用鎖定時發生。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_SIU|當工作在等候取得共用意圖更新鎖定時發生。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_SIX|當工作在等候取得共用意圖獨佔鎖定時發生。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_U|當工作在等候取得更新鎖定時發生。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_UIX|當工作在等候取得更新意圖獨佔鎖定時發生。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_X|當工作在等候取得獨佔鎖定時發生。 如需鎖定相容性矩陣，請參閱[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LATCH_DT |在等候 DT (終結) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 sys.dm_os_latch_stats 中提供 LATCH_* 等候的清單。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。|  
+|LATCH_EX |在等候 EX (獨佔) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 sys.dm_os_latch_stats 中提供 LATCH_* 等候的清單。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。|  
+|LATCH_KP |在等候 KP (保留) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 sys.dm_os_latch_stats 中提供 LATCH_* 等候的清單。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。|  
+|LATCH_NL |[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|LATCH_SH |在等候 SH (共用) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 sys.dm_os_latch_stats 中提供 LATCH_* 等候的清單。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。|  
+|LATCH_UP |在等候 UP (更新) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 sys.dm_os_latch_stats 中提供 LATCH_* 等候的清單。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。|  
+|LAZYWRITER_SLEEP |在延遲寫入器工作暫止時發生。 這是等候中的背景工作所花的時間。 如果您要尋找使用者拋錨點，就不要考慮這個狀態。|  
+|LCK_M_BU |當工作在等候取得大量更新 (BU) 鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_IS|當工作在等候取得意圖共用 (IS) 鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_IU|當工作在等候取得意圖更新 (IU) 鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_IX |當工作在等候取得意圖獨佔 (IX) 鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RIn_NL |當工作在等候取得目前索引鍵值的 NULL 鎖定，以及目前索引鍵和前一個索引鍵之間的插入範圍鎖定時發生。 索引鍵的 NULL 鎖定是一個立即釋放鎖定。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RIn_S |當工作在等候取得目前索引鍵值的共用鎖定，以及目前索引鍵和前一個索引鍵之間的插入範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RIn_U |工作在等候取得目前索引鍵值的更新鎖定，以及目前索引鍵和前一個索引鍵之間的插入範圍鎖定。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RIn_X |當工作在等候取得目前索引鍵值的獨佔鎖定，以及目前索引鍵和前一個索引鍵之間的插入範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RS_S |當工作在等候取得目前索引鍵值的共用鎖定，以及目前索引鍵和前一個索引鍵之間的共用範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RS_U |當工作在等候取得目前索引鍵值的更新鎖定，以及目前索引鍵和前一個索引鍵之間的更新範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RX_S |當工作在等候取得目前索引鍵值的共用鎖定，以及目前索引鍵和前一個索引鍵之間的獨佔範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RX_U |當工作在等候取得目前索引鍵值的更新鎖定，以及目前索引鍵和前一個索引鍵之間的獨佔範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RX_X |當工作在等候取得目前索引鍵值的獨佔鎖定，以及目前索引鍵和前一個索引鍵之間的獨佔範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_S |當工作在等候取得共用鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_SCH_M |當工作在等候取得結構描述修改鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_SCH_S |當工作在等候取得結構描述共用鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_SIU |當工作在等候取得共用意圖更新鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_SIX |當工作在等候取得共用意圖獨佔鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_U |當工作在等候取得更新鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_UIX |當工作在等候取得更新意圖獨佔鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_X |當工作在等候取得獨佔鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
 |LOG_RATE_GOVERNOR|發生在資料庫正在等待配額寫入記錄中時。|  
-|LOGBUFFER|當工作在等候記錄緩衝區的空間來儲存記錄時發生。 如果這個值一直居高不下，可能表示記錄裝置趕不上伺服器產生的記錄量。|  
+|LOGBUFFER |當工作在等候記錄緩衝區的空間來儲存記錄時發生。 如果這個值一直居高不下，可能表示記錄裝置趕不上伺服器產生的記錄量。|  
 |LOGGENERATION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|LOGMGR|當工作在關閉資料庫時，於關閉記錄之前等候任何未完成的記錄 I/O 完成時發生。|  
-|LOGMGR_FLUSH|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|LOGMGR |當工作在關閉資料庫時，於關閉記錄之前等候任何未完成的記錄 I/O 完成時發生。|  
+|LOGMGR_FLUSH |[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |LOGMGR_QUEUE|在記錄寫入器工作等候工作要求時發生。|  
-|LOGMGR_RESERVE_APPEND|當工作在等候記錄截斷清出記錄空間，讓工作寫入新記錄時發生。 請考慮增加受影響之資料庫的記錄檔案大小，以縮短這個等候時間。|  
-|LOWFAIL_MEMMGR_QUEUE|在等候記憶體變成可供使用的狀態時發生。|  
-|MSQL_DQ|在工作等候分散式查詢作業完成時發生。 這種等候類型可用來偵測潛在的 Multiple Active Result Set (MARS) 應用程式死結。 等候會隨著分散式查詢呼叫的完成而結束。|  
-|MSQL_XACT_MGR_MUTEX|當工作在等候取得工作階段交易管理員的擁有權，以執行工作階段層級交易作業時發生。|  
+|LOGMGR_RESERVE_APPEND |當工作在等候記錄截斷清出記錄空間，讓工作寫入新記錄時發生。 請考慮增加受影響之資料庫的記錄檔案大小，以縮短這個等候時間。|  
+|LOWFAIL_MEMMGR_QUEUE |在等候記憶體變成可供使用的狀態時發生。|  
+|MSQL_DQ |在工作等候分散式查詢作業完成時發生。 這種等候類型可用來偵測潛在的 Multiple Active Result Set (MARS) 應用程式死結。 等候會隨著分散式查詢呼叫的完成而結束。|  
+|MSQL_XACT_MGR_MUTEX |當工作在等候取得工作階段交易管理員的擁有權，以執行工作階段層級交易作業時發生。|  
 |MSQL_XACT_MUTEX|在同步處理交易使用量時發生。 要求必須先取得 Mutex，才能使用交易。|  
-|MSQL_XP|當工作在等候擴充預存程序結束時發生。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用這個等候狀態來偵測可能發生的 MARS 應用程式死結。 這個等候會隨著擴充預存程序呼叫的結束而停止。|  
+|MSQL_XP |當工作在等候擴充預存程序結束時發生。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用這個等候狀態來偵測可能發生的 MARS 應用程式死結。 這個等候會隨著擴充預存程序呼叫的結束而停止。|  
 |MSSEARCH|在使用全文檢索搜尋呼叫時發生。 這個等候會隨著全文檢索作業的完成而結束。 這並不表示發生競爭情況，而是指出全文檢索作業的持續時間。|  
 |NET_WAITFOR_PACKET|當連接在網路讀取期間等候網路封包時發生。|  
 |OLEDB|當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider 時發生。 這個等候類型不用於同步處理， 而會指出呼叫 OLE DB 提供者的持續時間。|  
 |ONDEMAND_TASK_QUEUE|在背景工作等候高優先權的系統工作要求時發生。 如果等候時間很長，表示沒有高優先權的要求需要處理，而且應該不會造成任何問題。|  
-|PAGEIOLATCH_DT|當工作在位於 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是終結模式。 如果等候時間很長，表示磁碟子系統有問題。|  
-|PAGEIOLATCH_EX|當工作在位於 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是獨佔模式。 如果等候時間很長，表示磁碟子系統有問題。|  
-|PAGEIOLATCH_KP|當工作在位於 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是保留模式。 如果等候時間很長，表示磁碟子系統有問題。|  
-|PAGEIOLATCH_NL|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|PAGEIOLATCH_SH|當工作在位於 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是共用模式。 如果等候時間很長，表示磁碟子系統有問題。|  
-|PAGEIOLATCH_UP|當工作在位於 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是更新模式。 如果等候時間很長，表示磁碟子系統有問題。|  
-|PAGELATCH_DT|當工作不是在 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是終結模式。|  
-|PAGELATCH_EX|當工作不是在 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是獨佔模式。|  
-|PAGELATCH_KP|當工作不是在 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是保留模式。|  
-|PAGELATCH_NL|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|PAGELATCH_SH|當工作不是在 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是共用模式。|  
-|PAGELATCH_UP|當工作不是在 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是更新模式。|  
+|PAGEIOLATCH_DT |當工作在位於 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是終結模式。 如果等候時間很長，表示磁碟子系統有問題。|  
+|PAGEIOLATCH_EX |當工作在位於 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是獨佔模式。 如果等候時間很長，表示磁碟子系統有問題。|  
+|PAGEIOLATCH_KP |當工作在位於 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是保留模式。 如果等候時間很長，表示磁碟子系統有問題。|  
+|PAGEIOLATCH_NL |[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|PAGEIOLATCH_SH |當工作在位於 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是共用模式。 如果等候時間很長，表示磁碟子系統有問題。|  
+|PAGEIOLATCH_UP |當工作在位於 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是更新模式。 如果等候時間很長，表示磁碟子系統有問題。|  
+|PAGELATCH_DT |當工作不是在 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是終結模式。|  
+|PAGELATCH_EX |當工作不是在 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是獨佔模式。|  
+|PAGELATCH_KP |當工作不是在 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是保留模式。|  
+|PAGELATCH_NL |[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|PAGELATCH_SH |當工作不是在 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是共用模式。|  
+|PAGELATCH_UP |當工作不是在 I/O 要求中的緩衝區閂鎖待命時發生。 閂鎖要求是更新模式。|  
 |PARALLEL_BACKUP_QUEUE|在序列化 RESTORE HEADERONLY、RESTORE FILELISTONLY 或 RESTORE LABELONLY 所產生的輸出時發生。|  
 |PREEMPTIVE_ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_AUDIT_ACCESS_EVENTLOG|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業系統 (SQLOS) 排程器切換到先佔式模式，以便將稽核事件寫入 Windows 事件記錄檔時發生。|  
@@ -250,17 +252,17 @@ ms.locfileid: "68090869"
 |PREEMPTIVE_CLOSEBACKUPVDIDEVICE|當 SQLOS 排程器切換到先佔式模式，以便關閉虛擬備份裝置時發生。|  
 |PREEMPTIVE_CLUSAPI_CLUSTERRESOURCECONTROL|當 SQLOS 排程器切換到先佔式模式，以便執行 Windows 容錯移轉叢集作業時發生。|  
 |PREEMPTIVE_COM_COCREATEINSTANCE|當 SQLOS 排程器切換到先佔式模式，以便建立 COM 物件時發生。|  
-|PREEMPTIVE_HADR_LEASE_MECHANISM|Always On 可用性群組租用管理員排程 CSS 診斷。|  
+|PREEMPTIVE_HADR_LEASE_MECHANISM|適用于 CSS 診斷的 Always On 可用性群組租用管理員排程。|  
 |PREEMPTIVE_SOSTESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_STRESSDRIVER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PRINT_ROLLBACK_PROGRESS|用於使用者處理序在已經使用 ALTER DATABASE 終止子句加以轉換的資料庫中結束時等候。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。|  
 |PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|在背景工作正在等候接收 (經由輪詢) Windows Server 容錯移轉叢集通知的背景工作終止時發生。  僅供內部使用。|  
-|PWAIT_HADR_CLUSTER_INTEGRATION|附加、 取代和/或移除作業正在等候擷取 Alwayson 內部清單 （例如網路、 網路位址或可用性群組接聽程式的清單） 的寫入鎖定。  僅供內部使用。|  
-|PWAIT_HADR_OFFLINE_COMPLETED|Alwayson 卸除可用性群組作業正在等候目標可用性群組離線，然後再終結 Windows Server 容錯移轉叢集的物件。|  
-|PWAIT_HADR_ONLINE_COMPLETED|Alwayson 建立或容錯移轉可用性群組作業正在等候目標可用性群組上線。|  
-|PWAIT_HADR_POST_ONLINE_COMPLETED|Alwayson 卸除可用性群組作業正在等候先前命令中排程任何背景工作終止。 例如，可能會存在將可用性資料庫轉換成主要角色的背景工作。 DROP AVAILABILITY GROUP DDL 必須等候此背景工作終止，才能避免競爭情形。|  
+|PWAIT_HADR_CLUSTER_INTEGRATION|[附加]、[取代] 和/或 [移除] 作業正在等候抓取 Always On 內部清單（例如網路、網路位址或可用性群組接聽程式的清單）的寫入鎖定。  僅供內部使用。|  
+|PWAIT_HADR_OFFLINE_COMPLETED|Always On drop 可用性群組作業正在等候目標可用性群組離線，然後再終結 Windows Server 容錯移轉叢集物件。|  
+|PWAIT_HADR_ONLINE_COMPLETED|Always On 建立或容錯移轉可用性群組作業正在等候目標可用性群組上線。|  
+|PWAIT_HADR_POST_ONLINE_COMPLETED|Always On drop 可用性群組作業正在等候先前命令中排程的任何背景工作終止。 例如，可能會存在將可用性資料庫轉換成主要角色的背景工作。 DROP AVAILABILITY GROUP DDL 必須等候此背景工作終止，才能避免競爭情形。|  
 |PWAIT_HADR_WORKITEM_COMPLETED|等候非同步工作完成之執行緒的內部等候。 這是預期的等候，而且可供 CSS 使用。|  
 |PWAIT_MD_LOGIN_STATS|在登入統計資料的中繼資料中執行內部同步處理期間發生。|  
 |PWAIT_MD_RELATION_CACHE|在資料表或索引的中繼資料中執行內部同步處理期間發生。|  
@@ -269,13 +271,13 @@ ms.locfileid: "68090869"
 |PWAIT_METADATA_LAZYCACHE_RWLOCk|在中繼資料快取及資料表中的重複索引或統計資料中執行內部同步處理期間發生。|  
 |QPJOB_KILL|指出非同步自動統計資料更新開始執行時，已被 KILL 的呼叫所取消。 終止執行緒已經暫停，正在等候它開始接聽 KILL 命令。 其值最好少於一秒。|  
 |QPJOB_WAITFOR_ABORT|指出非同步自動統計資料更新在執行時，已被 KILL 的呼叫所取消。 雖然這項更新已經完成了，但卻被暫停到終止執行緒訊息協調完成為止。 這種狀態雖然很平常，卻很少見，而且為時甚短。 其值最好少於一秒。|  
-|QRY_MEM_GRANT_INFO_MUTEX|當查詢執行記憶體管理試圖控制靜態授與資訊清單的存取時發生。 這個狀態會列出目前已授與和等候中之記憶體要求的相關資訊。 這個狀態是一種簡單的存取控制狀態。 這個狀態應該不會有長時間的等候。 如果沒有釋出這個 Mutex，所有新的記憶體使用查詢都會停止回應。|  
+|QRY_MEM_GRANT_INFO_MUTEX |當查詢執行記憶體管理試圖控制靜態授與資訊清單的存取時發生。 這個狀態會列出目前已授與和等候中之記憶體要求的相關資訊。 這個狀態是一種簡單的存取控制狀態。 這個狀態應該不會有長時間的等候。 如果沒有釋出這個 Mutex，所有新的記憶體使用查詢都會停止回應。|  
 |QUERY_ERRHDL_SERVICE_DONE|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |QUERY_EXECUTION_INDEX_SORT_EVENT_OPEN|在離線建立索引建置平行執行時，以及排序中的不同工作者執行緒同步處理排序檔存取作業時的某些情況中發生。|  
-|QUERY_NOTIFICATION_MGR_MUTEX|在同步處理查詢通知管理員中的記憶體回收佇列時發生。|  
-|QUERY_NOTIFICATION_SUBSCRIPTION_MUTEX|在同步處理查詢通知中交易的狀態時發生。|  
-|QUERY_NOTIFICATION_TABLE_MGR_MUTEX|在查詢通知管理員內執行內部同步處理時發生。|  
-|QUERY_NOTIFICATION_UNITTEST_MUTEX|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|QUERY_NOTIFICATION_MGR_MUTEX |在同步處理查詢通知管理員中的記憶體回收佇列時發生。|  
+|QUERY_NOTIFICATION_SUBSCRIPTION_MUTEX |在同步處理查詢通知中交易的狀態時發生。|  
+|QUERY_NOTIFICATION_TABLE_MGR_MUTEX |在查詢通知管理員內執行內部同步處理時發生。|  
+|QUERY_NOTIFICATION_UNITTEST_MUTEX |[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |QUERY_OPTIMIZER_PRINT_MUTEX|在同步處理查詢最佳化工具診斷輸出生產作業時發生。 只有在依照 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 產品支援部門的指示啟用診斷設定時，才會發生這種等候類型。|  
 |QUERY_TRACEOUT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |QUERY_WAIT_ERRHDL_SERVICE|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -324,7 +326,8 @@ ms.locfileid: "68090869"
 |SOS_SCHEDULER_YIELD|在工作主動產生排程器以供其他工作執行時發生。 在這段等候期間，該工作將等候系統更新其配量。|  
 |SOS_SMALL_PAGE_ALLOC|在配置和釋放某些記憶體物件所管理的記憶體期間發生。|  
 |SOS_STACKSTORE_INIT_MUTEX|在同步處理內部存放區初始化時發生。|  
-|SOS_SYNC_TASK_ENQUEUE_EVENT|在以同步的方式啟動工作時發生。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中大部分的工作都是以非同步方式啟動，使用這種方式時，將工作要求放在工作佇列上之後，控制權便會立即交還給啟動器。|  
+|SOS_SYNC_TASK_ENQUEUE_EVENT|在以同步的方式啟動工作時發生。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中大部分的工作都是以非同步方式啟動，使用這種方式時，將工作要求放在工作佇列上之後，控制權便會立即交還給啟動器。|  
 |SOS_VIRTUALMEMORY_LOW|在記憶體配置等候資源管理員釋放虛擬記憶體時發生。|  
 |SOSHOST_EVENT|在主控的元件 (例如 CLR) 等候 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件同步處理物件時發生。|  
 |SOSHOST_INTERNAL|在同步處理主控元件 (例如 CLR) 使用的記憶體管理員回撥時發生。|  

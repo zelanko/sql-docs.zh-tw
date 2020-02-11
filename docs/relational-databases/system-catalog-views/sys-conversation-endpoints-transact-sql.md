@@ -1,5 +1,5 @@
 ---
-title: sys.conversation_endpoints (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases conversation_endpoints （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,16 @@ ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 16d29272e4229ac93b3dd5b1eaf5502a07fb0a2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68109545"
 ---
-# <a name="sysconversationendpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
+# <a name="sysconversation_endpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談的每一端都是以交談端點來代表。 這份目錄檢視會針對資料庫中的每個交談端點，各包含一資料列。  
   
 |資料行名稱|資料類型|描述|  
@@ -40,8 +41,9 @@ ms.locfileid: "68109545"
 |conversation_group_id|**uniqueidentifier**|這個交談所屬之交談群組的識別碼。 不是 NULLABLE。|  
 |service_id|**int**|交談這一端的服務識別碼。 不是 NULLABLE。|  
 |lifetime|**datetime**|這個交談的到期日期/時間。 不是 NULLABLE。|  
-|state|**char(2)**|交談的目前狀態。 不是 NULLABLE。 它是下列項目之一：<br /><br /> 因此已開始傳出。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已處理此交談的 BEGIN CONVERSATION，但尚未傳送任何訊息。<br /><br /> SI 已起始傳入。 另一個執行個體已啟動與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新交談，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尚未完全收到第一則訊息。 如果第一個訊息被分割，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到訊息的順序不正確，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就可能會建立處於此狀態的交談。 然而，如果收到交談的第一次傳輸包含完整的第一則訊息，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會建立 CO (交談) 狀態的交談。<br /><br /> CO 常用的交談。 已建立交談，且交談兩端可以傳送訊息。 一般服務的大部分通訊都發生在這個狀態的交談中。<br /><br /> DI： 已中斷傳入。 交談的遠端發出了 END CONVERSATION。 交談會保留在這個狀態中，直到交談的本機端發出 END CONVERSATION 為止。 應用程式可能仍會接收交談的訊息。 由於交談的遠端已經結束交談，所以應用程式無法在此交談中傳送訊息。 當應用程式發出 END CONVERSATION 時，交談會移到 CD (已關閉) 狀態。<br /><br /> 執行已中斷傳出。 交談的本機端發出了 END CONVERSATION。 交談會保留在這個狀態中，直到交談的遠端收到 END CONVERSATION 為止。 應用程式無法傳送或接收交談的訊息。 當交談的遠端認可 END CONVERSATION 時，交談會移到 CD (已關閉) 狀態。<br /><br /> ER 時發生錯誤。 這個端點發生錯誤。 錯誤訊息會放在應用程式佇列中。 如果應用程式佇列是空的，這表示應用程式已耗用錯誤訊息。<br /><br /> 關閉的 CD。 交談端點已不在使用中。|  
-|state_desc|**nvarchar(60)**|端點交談狀態的描述。 此資料行為 NULLABLE。 它是下列項目之一：<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **常用的交談**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **關閉**<br /><br /> **ERROR**|  
+|state|**char （2）**|交談的目前狀態。 不是 NULLABLE。 值為下列其中之一：<br /><br /> 所以已開始輸出。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已處理此交談的 BEGIN CONVERSATION，但尚未傳送任何訊息。<br /><br /> SI：已開始傳出。 另一個執行個體已啟動與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新交談，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尚未完全收到第一則訊息。 如果第一個訊息被分割，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到訊息的順序不正確，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就可能會建立處於此狀態的交談。 然而，如果收到交談的第一次傳輸包含完整的第一則訊息，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會建立 CO (交談) 狀態的交談。<br /><br /> 共同交談。 已建立交談，且交談兩端可以傳送訊息。 一般服務的大部分通訊都發生在這個狀態的交談中。<br /><br /> DI 已中斷連線的輸入。 交談的遠端發出了 END CONVERSATION。 交談會保留在這個狀態中，直到交談的本機端發出 END CONVERSATION 為止。 應用程式可能仍會接收交談的訊息。 由於交談的遠端已經結束交談，所以應用程式無法在此交談中傳送訊息。 當應用程式發出 END CONVERSATION 時，交談會移到 CD (已關閉) 狀態。<br /><br /> DO：已中斷傳出。 交談的本機端發出了 END CONVERSATION。 交談會保留在這個狀態中，直到交談的遠端收到 END CONVERSATION 為止。 應用程式無法傳送或接收交談的訊息。 當交談的遠端認可 END CONVERSATION 時，交談會移到 CD (已關閉) 狀態。<br /><br /> ER：錯誤。 這個端點發生錯誤。 錯誤訊息會放在應用程式佇列中。 如果應用程式佇列是空的，這表示應用程式已耗用錯誤訊息。<br /><br /> CD：已關閉。 交談端點已不在使用中。|  
+|state_desc|**Nvarchar （60）**|端點交談狀態的描述。 此資料行為 NULLABLE。 值為下列其中之一：<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **常用交談**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **已**<br /><br /> **糾錯**|  
 |far_service|**nvarchar(256)**|交談遠端的服務名稱。 不是 NULLABLE。|  
 |far_broker_instance|**nvarchar(128)**|交談遠端的 Broker 執行個體。 NULLABLE。|  
 |principal_id|**int**|憑證用於對話本機端之主體的識別碼。 不是 NULLABLE。|  
@@ -50,19 +52,19 @@ ms.locfileid: "68109545"
 |inbound_session_key_identifier|**uniqueidentifier**|這個對話之傳入加密金鑰的識別碼。 不是 NULLABLE。|  
 |security_timestamp|**datetime**|本機工作階段金鑰的建立時間。 不是 NULLABLE。|  
 |dialog_timer|**datetime**|這個對話之交談計時器傳送 DialogTimer 訊息的時間。 不是 NULLABLE。|  
-|send_sequence|**bigint**|傳送順序中下一個訊息編號。 不是 NULLABLE。|  
-|last_send_tran_id|**binary(6)**|上一次傳送訊息之交易的內部交易識別碼。 不是 NULLABLE。|  
-|end_dialog_sequence|**bigint**|結束對話訊息的序號。 不是 NULLABLE。|  
-|receive_sequence|**bigint**|訊息接收順序中預期的下一個訊息編號。 不是 NULLABLE。|  
+|send_sequence|**Bigint**|傳送順序中下一個訊息編號。 不是 NULLABLE。|  
+|last_send_tran_id|**二進位（6）**|上一次傳送訊息之交易的內部交易識別碼。 不是 NULLABLE。|  
+|end_dialog_sequence|**Bigint**|結束對話訊息的序號。 不是 NULLABLE。|  
+|receive_sequence|**Bigint**|訊息接收順序中預期的下一個訊息編號。 不是 NULLABLE。|  
 |receive_sequence_frag|**int**|訊息接收順序中預期的下一個訊息片段編號。 不是 NULLABLE。|  
-|system_sequence|**bigint**|這個對話最後一個系統訊息的序號。 不是 NULLABLE。|  
-|first_out_of_order_sequence|**bigint**|這個對話在次序不對的訊息中第一則訊息的序號。 不是 NULLABLE。|  
-|last_out_of_order_sequence|**bigint**|這個對話在次序不對的訊息中最後一則訊息的序號。 不是 NULLABLE。|  
+|system_sequence|**Bigint**|這個對話最後一個系統訊息的序號。 不是 NULLABLE。|  
+|first_out_of_order_sequence|**Bigint**|這個對話在次序不對的訊息中第一則訊息的序號。 不是 NULLABLE。|  
+|last_out_of_order_sequence|**Bigint**|這個對話在次序不對的訊息中最後一則訊息的序號。 不是 NULLABLE。|  
 |last_out_of_order_frag|**int**|這個對話在次序不對的片段中最後一則訊息的序號。 不是 NULLABLE。|  
 |is_system|**bit**|如果這是系統對話，便是 1。 不是 NULLABLE。|  
-|priority|**tinyint**|指派給這個交談端點的交談優先權。 不是 NULLABLE。|  
+|優先順序|**tinyint**|指派給這個交談端點的交談優先權。 不是 NULLABLE。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
   

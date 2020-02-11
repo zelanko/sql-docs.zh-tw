@@ -1,5 +1,5 @@
 ---
-title: 本機名稱-從-QName (XQuery) |Microsoft Docs
+title: 本地名稱-從-QName （XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 765d412b9f3f0395a9bca6fd52c74135ddde3ff4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004565"
 ---
 # <a name="functions-related-to-qnames---local-name-from-qname"></a>與 QNames 相關的函式 - local-name-from-QName
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回 xs: ncname，表示本機的組件所指定的 QName *$arg*。 結果是空的序列，如果 *$arg*是空的序列。  
+  傳回 xs： NCNAME，代表 *$arg*所指定之 QName 的本機部分。 如果 *$arg*是空的序列，則結果會是空的序列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,15 +38,15 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  應該擷取本機名稱的來源 QName。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫。  
+ 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存**** 在資料庫的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]各種 XML 類型資料行中。  
   
- 下列範例會使用**local-name-from-qname （)** 函式來擷取區域名稱和命名空間 URI 的組件從 QName 類型值。 本範例將執行下列動作：  
+ 下列範例會使用**本機名稱 from-qname （）** 函數，從 qname 類型值抓取區功能變數名稱稱和命名空間 URI 部分。 本範例將執行下列動作：  
   
 -   建立 XML 結構描述集合。  
   
 -   建立資料表以及 xml 類型資料行。 xml 類型是使用 XML 結構描述集合來設定其類型。  
   
--   在資料表中儲存範例 XML 執行個體。 使用**query （)** 從執行個體擷取 QName 類型值的本機名稱部分執行的 xml 資料類型，查詢運算式的方法。  
+-   在資料表中儲存範例 XML 執行個體。 使用 xml 資料類型的**query （）** 方法時，會執行查詢運算式，以從實例中抓取 QName 類型值的本機名稱部分。  
   
 ```sql
 DROP TABLE T  
@@ -76,6 +76,6 @@ FROM T
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [與 QNames 相關的函式&#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+ [與 QNames &#40;XQuery&#41;相關的函數](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

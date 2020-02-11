@@ -1,5 +1,5 @@
 ---
-title: sp_createstats (TRANSACT-SQL) |Microsoft Docs
+title: sp_createstats （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e0bb7d109323f4eb4a33181ab45b4b17d15faf54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108607"
 ---
-# <a name="spcreatestats-transact-sql"></a>sp_createstats (Transact-SQL)
+# <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  呼叫[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)還不是統計資料物件中的第一個資料行的資料行上建立單一資料行統計資料的陳述式。 建立單一資料行統計資料會增加長條圖的數目，而且可能會改善基數估計值、查詢計劃和查詢效能。 統計資料物件的第一個資料行具有長條圖，但其他資料行則沒有長條圖。  
+  呼叫[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)語句，針對不是 STATISTICS 物件中第一個資料行的資料行建立單一資料行統計資料。 建立單一資料行統計資料會增加長條圖的數目，而且可能會改善基數估計值、查詢計劃和查詢效能。 統計資料物件的第一個資料行具有長條圖，但其他資料行則沒有長條圖。  
   
- 當查詢執行時間很重要而且無法等候查詢最佳化工具產生單一資料行統計資料時，sp_createstats 對於效能評定等應用程式會很有用。 在大部分情況下，它不需要使用 sp_createstats;查詢最佳化工具產生單一資料行統計資料，以便改善查詢計劃的時機**AUTO_CREATE_STATISTICS**選項是否開啟。  
+ 當查詢執行時間很重要而且無法等候查詢最佳化工具產生單一資料行統計資料時，sp_createstats 對於效能評定等應用程式會很有用。 在大部分情況下，不需要使用 sp_createstats。當**AUTO_CREATE_STATISTICS**選項為 on 時，查詢最佳化工具會視需要產生單一資料行統計資料，以便改善查詢計劃。  
   
- 如需統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。 如需有關產生單一資料行統計資料的詳細資訊，請參閱 < **AUTO_CREATE_STATISTICS**選項[ALTER DATABASE SET 選項&#40;-&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
+ 如需統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。 如需產生單一資料行統計資料的詳細資訊，請參閱[ALTER DATABASE SET Options &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)中的**AUTO_CREATE_STATISTICS**選項。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,13 +48,13 @@ sp_createstats
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @indexonly = ] 'indexonly'` 只有位於現有索引並不是任何索引定義中的第一個資料行的資料行建立統計資料。 **indexonly**已**char(9)** 。 預設值是 NO。  
+`[ @indexonly = ] 'indexonly'`只在現有索引中的資料行上建立統計資料，而不是任何索引定義中的第一個資料行。 **indexonly**是**char （9）**。 預設值是 NO。  
   
-`[ @fullscan = ] 'fullscan'` 會使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)陳述式搭配**FULLSCAN**選項。 **fullscan**已**char(9)** 。  預設值是 NO。  
+`[ @fullscan = ] 'fullscan'`使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)語句搭配**FULLSCAN**選項。 **fullscan**是**char （9）**。  預設值是 NO。  
   
-`[ @norecompute = ] 'norecompute'` 會使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)陳述式搭配**NORECOMPUTE**選項。 **norecompute**已**char(12)** 。  預設值是 NO。  
+`[ @norecompute = ] 'norecompute'`使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)語句搭配**NORECOMPUTE**選項。 **norecompute**是**char （12）**。  預設值是 NO。  
   
-`[ @incremental = ] 'incremental'` 會使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)陳述式搭配**INCREMENTAL = ON**選項。 **累加**已**char(12)** 。  預設值是 NO。  
+`[ @incremental = ] 'incremental'`使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)語句搭配**增量 = ON**選項。 **增量**為**char （12）**。  預設值是 NO。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -63,11 +63,11 @@ sp_createstats
  每個新的統計資料物件都與建立時所在的資料行具有相同的名稱。  
   
 ## <a name="remarks"></a>備註  
- sp_createstats 不會建立或更新現有的統計資料物件，第一個資料行的資料行的統計資料 這包括建立索引、 具有使用 AUTO_CREATE_STATISTICS 選項所產生的單一資料行統計資料的資料行和使用 CREATE STATISTICS 陳述式建立的統計資料的第一個資料行的統計資料的第一個資料行。 sp_createstats 不會停用的索引的第一個資料行上建立統計資料，除非該資料行用於其他已啟用索引。 sp_createstats 不會包含已停用叢集索引的資料表上建立統計資料。  
+ sp_createstats 不會建立或更新現有統計資料物件中第一個資料行的統計資料， 這包括針對索引所建立之統計資料的第一個資料行、以 AUTO_CREATE_STATISTICS 選項產生之單一資料行統計資料的資料行，以及使用 CREATE STATISTICS 語句所建立之統計資料的第一個資料行。 sp_createstats 不會在已停用索引的第一個資料行上建立統計資料，除非另一個已啟用的索引中使用該資料行。 sp_createstats 不會在具有已停用之叢集索引的資料表上建立統計資料。  
   
- 當此資料表包含資料行集時，sp_createstats 就不會建立疏鬆資料行的統計資料。 如需有關資料行集和疏鬆資料行的詳細資訊，請參閱 <<c0> [ 使用資料行集](../../relational-databases/tables/use-column-sets.md)並[使用疏鬆資料行](../../relational-databases/tables/use-sparse-columns.md)。  
+ 當此資料表包含資料行集時，sp_createstats 就不會建立疏鬆資料行的統計資料。 如需資料行集和稀疏資料行的詳細資訊，請參閱[使用資料行集](../../relational-databases/tables/use-column-sets.md)和[使用稀疏資料行](../../relational-databases/tables/use-sparse-columns.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 db_owner 固定資料庫角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
@@ -90,12 +90,12 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [統計資料](../../relational-databases/statistics/statistics.md)   
- [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
+ [&#40;Transact-sql&#41;建立統計資料](../../t-sql/statements/create-statistics-transact-sql.md)   
  [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
- [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229014"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組 (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "75229014"
  可用性群組會在可用性複本層級容錯移轉。 容錯移轉不是因資料庫問題 (例如資料庫因為資料檔案遺失而變得可疑、資料庫刪除或交易記錄損毀) 而造成的。  
   
   
-##  <a name="Benefits"></a>各種  
+##  <a name="Benefits"></a> 優點  
  
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 提供了一組豐富的選項，可改善資料庫可用性並實現改善的資源使用方式。 關鍵元件如下：  
   
@@ -142,7 +142,7 @@ ms.locfileid: "75229014"
   
 -   [記錄傳送](../../log-shipping/about-log-shipping-sql-server.md)  
   
--   [遠端 Blob 存放區（RBS）](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
+-   [遠端 Blob 存放區 (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
   
 -   [複寫](../../install-windows/install-sql-server-replication.md)  
   
@@ -155,27 +155,27 @@ ms.locfileid: "75229014"
 > [!WARNING]  
 >  如需搭配使用其他功能的限制和限制的[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]相關資訊，請參閱[Always On 可用性群組：互通性;SQL Server;](always-on-availability-groups-interoperability-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a>相關工作  
+##  <a name="RelatedTasks"></a> 相關工作  
   
 -   [具有 Always On 可用性群組的消費者入門;SQL Server;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a>相關內容  
+##  <a name="RelatedContent"></a> 相關內容  
   
--   **網路**  
+-   **部落格：**  
   
      [SQL Server Always On 小組 Blog：官方 SQL Server AlwaysOn 小組的 Blog](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 工程師 Blog](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
--   **視頻**  
+-   **影片：**  
   
-     [Microsoft SQL Server 代碼名稱 "Denali" Always On 系列，第1部分：新一代高可用性解決方案簡介](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali" AlwaysOn Series,Part 1: Introducing the Next Generation High Availability Solution (Microsoft SQL Server 代碼 "Denali" AlwaysOn 系列第一部分：新一代高可用性解決方案簡介)](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server 程式碼名稱 "Denali" Always On 系列，第2部分：使用 AlwaysOn 建立要徑任務的高可用性解決方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **白皮書**  
+-   **白皮書：**  
   
-     [Microsoft SQL Server Always On 高可用性和嚴重損壞修復的解決方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
   
   

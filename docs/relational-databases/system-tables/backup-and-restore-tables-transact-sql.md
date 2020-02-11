@@ -1,5 +1,5 @@
 ---
-title: 備份與還原資料表 (TRANSACT-SQL) |Microsoft Docs
+title: 備份和還原資料表（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b70edcd7a8dec126816af944ed81516cb260f40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091888"
 ---
 # <a name="backup-and-restore-tables-transact-sql"></a>備份及還原資料表 (Transact-SQL)

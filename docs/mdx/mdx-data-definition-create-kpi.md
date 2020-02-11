@@ -1,5 +1,5 @@
 ---
-title: CREATE KPI 陳述式 (MDX) |Microsoft Docs
+title: CREATE KPI 語句（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e2380f72fe8a5faf9dc5504e56941f724b1bd159
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68098407"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX 資料定義 - CREATE KPI
@@ -50,7 +50,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |屬性識別碼|意義|  
 |-------------------------|-------------|  
 |GOAL|傳回數值的有效 MDX 運算式。|  
-|STATUS|傳回數值的有效 MDX 運算式。|  
+|狀態|傳回數值的有效 MDX 運算式。|  
 |STATUS_GRAPHIC|定義將由用戶端應用程式所使用之一組相片影像的字串。|  
 |TREND|傳回數值的有效 MDX 運算式。|  
 |TREND_GRAPHIC|定義將由用戶端應用程式所使用之一組相片影像的字串。|  
@@ -58,44 +58,44 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |CURRENT_TIME_MEMBER|傳回時間維度之成員的有效 MDX 運算式。 CURRENT_TIME_MEMBER 會針對所有相對的時間函數設定參考點|  
 |PARENT_KPI|指定父 KPI 名稱的字串。|  
 |CAPTION|用戶端應用程式當做 KPI 標題使用的字串。|  
-|DISPLAY_FOLDER|指定用戶端應用程式顯示之 KPI 所在顯示資料夾路徑的字串。 資料夾層級的分隔符號是由用戶端應用程式所定義。 工具和所提供的用戶端[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，反斜線 (\\) 為層級分隔符號。 若要針對已定義的成員提供多個顯示資料夾，請使用分號 (;) 來分隔資料夾|  
+|DISPLAY_FOLDER|指定用戶端應用程式顯示之 KPI 所在顯示資料夾路徑的字串。 資料夾層級的分隔符號是由用戶端應用程式所定義。 針對所提供的工具和客戶[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]端，反斜線\\（）為層級分隔符號。 若要針對已定義的成員提供多個顯示資料夾，請使用分號 (;) 來分隔資料夾|  
 |ASSOCIATED_MEASURE_GROUP|指定所有 MDX 計算應參考之量值群組名稱的字串。|  
   
- GOAL、STATUS 和 TREND 屬性的值是應在 -1 和 1 之間評估的 MDX 運算式。 不過，用戶端應用程式會定義這些屬性的實際值範圍。 當您使用的工具和所提供的用戶端[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]來瀏覽 Kpi 時，小於-1 的值會被視為-1，而大於 1 的值會被視為 1。  
+ GOAL、STATUS 和 TREND 屬性的值是應在 -1 和 1 之間評估的 MDX 運算式。 不過，用戶端應用程式會定義這些屬性的實際值範圍。 當您使用所提供的工具和客戶[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]端來流覽 kpi 時，小於-1 的值會被視為-1，而大於1的值會被視為1。  
   
  STATUS_GRAPHIC 和 TREND_GRAPHIC 都是用戶端應用程式用來識別要顯示之影像正確集合的字串值。 這些字串也會定義顯示函數的行為。 此行為包括要顯示之狀態的數目 (這通常是奇數)，以及要用於這些每個狀態的影像。  
   
 ### <a name="kpi-graphics-in-sql-server-data-tools"></a>SQL Server 資料工具中的 KPI 圖形  
- 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，KPI 圖形可以有三個或五個狀態。 下表針對每個狀態定義的值。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，KPI 圖形可以有三個或五個狀態。 下表定義每個狀態的值。  
   
 |KPI 圖形的狀態數目|這些狀態的值|  
 |--------------------------------------|---------------------------|  
-|3|不良 = -1 到 -0.5<br /><br /> 確定 = 0.4999 的-0.4999<br /><br /> 良好 = 0.50 到 1|  
+|3|不良 = -1 到 -0.5<br /><br /> OK =-0.4999 到0.4999<br /><br /> 良好 = 0.50 到 1|  
 |5|不良 = -1 到 -0.75<br /><br /> 危險 = -0.7499 到 -0.25<br /><br /> 沒有問題 = -0.2499 到 0.2499<br /><br /> 上升 = 0.25 到 0.7499<br /><br /> 良好 = 0.75 到 1|  
   
 > [!NOTE]  
 >  對於反向量測計或反向狀態箭頭之類的某些圖形，範圍會被反轉。 也就是說，-1 為良好，而 1 為不良。  
   
- 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，KPI 圖形的名稱可以判斷圖形有三種還是五種狀態。 下表列出使用狀況、 名稱，以及狀態數目，[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]與其 KPI 圖形關聯。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，KPI 圖形的名稱可以判斷圖形有三種還是五種狀態。 下表列出使用方式、名稱，以及與其 KPI 圖形[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]相關聯的狀態數目。  
   
 |圖形的用法|KPI 圖形的名稱|狀態的數目|  
 |--------------------|-------------------------|----------------------|  
-|[狀態]|圖形|3|  
-|[狀態]|號誌燈|3|  
-|[狀態]|道路標誌|3|  
-|[狀態]|量測計|3|  
-|[狀態]|反向量測計|5|  
-|[狀態]|溫度計|3|  
-|[狀態]|圓柱|3|  
-|[狀態]|笑臉|3|  
-|[狀態]|變異箭頭|3|  
+|狀態|圖形|3|  
+|狀態|號誌燈|3|  
+|狀態|道路標誌|3|  
+|狀態|量測計|3|  
+|狀態|反向量測計|5|  
+|狀態|溫度計|3|  
+|狀態|圓柱|3|  
+|狀態|臉部|3|  
+|狀態|變異箭頭|3|  
 |趨勢|標準箭頭|3|  
 |趨勢|狀態箭頭|3|  
 |趨勢|反向狀態箭頭|5|  
-|趨勢|笑臉|3|  
+|趨勢|臉部|3|  
   
 ## <a name="see-also"></a>另請參閱  
- [DROP KPI 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-drop-kpi.md)   
- [MDX 資料定義陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [DROP KPI 語句 &#40;MDX&#41;](../mdx/mdx-data-definition-drop-kpi.md)   
+ [Mdx 資料定義語句 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

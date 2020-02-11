@@ -1,5 +1,5 @@
 ---
-title: sys.tcp_endpoints (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases tcp_endpoints （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,27 +20,27 @@ ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7e4b711a7d36e7677f6f32b87ff4c696db231730
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68116726"
 ---
-# <a name="systcpendpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
+# <a name="systcp_endpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  針對系統中每個 TCP 端點，各包含一個資料列。 所描述的端點**sys.tcp_endpoints**提供要授與及撤銷連接權限的物件。 顯示的通訊埠及 IP 位址相關資訊不會用來設定通訊協定，而且可能與實際的通訊協定組態不相符。 若要檢視及設定通訊協定，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。  
+  針對系統中每個 TCP 端點，各包含一個資料列。 Sys 所描述的端點**tcp_endpoints**提供物件來授與及撤銷連接許可權。 顯示的通訊埠及 IP 位址相關資訊不會用來設定通訊協定，而且可能與實際的通訊協定組態不相符。 若要檢視及設定通訊協定，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。  
   
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**< 繼承的資料行 >**||繼承資料行從[sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)。|  
-|**port**|ssNoversion|端點正在接聽的通訊埠編號。 不可為 Null。|  
+|**< 繼承的資料行>**||從[sys.databases](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)繼承資料行。|  
+|**移植**|int|端點正在接聽的通訊埠編號。 不可為 Null。|  
 |**is_dynamic_port**|bit|1 = 通訊埠編號是以動態方式指派。<br /><br /> 不可為 Null。|  
-|**ip_address**|**nvarchar(45)**|由 LISTENER_IP 子句指定的接聽程式 IP 位址。 可為 Null。|  
+|**ip_address**|**Nvarchar （45）**|由 LISTENER_IP 子句指定的接聽程式 IP 位址。 可為 Null。|  
   
 ## <a name="remarks"></a>備註  
- 執行以下查詢來收集有關端點和連接的資訊。 沒有目前連接或沒有 TCP 連接的端點將以 NULL 值顯示。 新增**何處**子句`WHERE des.session_id = @@SPID`來傳回目前連接相關資訊。  
+ 執行以下查詢來收集有關端點和連接的資訊。 沒有目前連接或沒有 TCP 連接的端點將以 NULL 值顯示。 加入**WHERE**子句`WHERE des.session_id = @@SPID` ，以傳回目前連接的相關資訊。  
   
 ```  
 SELECT des.login_name, des.host_name, program_name,  dec.net_transport, des.login_time,   
@@ -55,11 +55,11 @@ LEFT JOIN sys.dm_exec_connections AS dec
    ON des.session_id = dec.session_id;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [端點目錄檢視&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
+ [端點目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   
   
