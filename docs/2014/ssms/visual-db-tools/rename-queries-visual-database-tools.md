@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab0a4af42a6137a78d1d884d7f00dd37911f9ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316843"
 ---
 # <a name="rename-queries-visual-database-tools"></a>重新命名查詢 (Visual Database Tools)
@@ -32,7 +32,7 @@ ms.locfileid: "63316843"
 3.  為查詢輸入新名稱，然後按下 ENTER。  
   
 ## <a name="see-also"></a>另請參閱  
- [設計查詢和檢視表的使用說明主題&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [設計查詢和觀看 how to 主題 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [使用查詢執行基本作業 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

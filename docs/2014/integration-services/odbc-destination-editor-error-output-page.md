@@ -1,5 +1,5 @@
 ---
-title: ODBC 目的地編輯器 （錯誤輸出頁面） |Microsoft Docs
+title: ODBC 目的地編輯器（錯誤輸出頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 972357372fe6d0281aedb57d49dd8d50682085b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057194"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>ODBC 目的地編輯器 (錯誤輸出頁面)
@@ -39,7 +39,7 @@ ms.locfileid: "66057194"
 ### <a name="inputoutput"></a>輸入/輸出  
  檢視資料來源的名稱。  
   
-### <a name="column"></a>「資料行」  
+### <a name="column"></a>資料行  
  未使用。  
   
 ### <a name="error"></a>錯誤  
@@ -61,7 +61,7 @@ ms.locfileid: "66057194"
  您可以使用下列選項來設定 ODBC 目的地處理錯誤和截斷的方式。  
   
 ### <a name="fail-component"></a>失敗元件  
- 當發生錯誤或截斷時，資料流程工作將失敗。 這是預設行為。  
+ 當發生錯誤或截斷時，資料流程工作將失敗。 此為預設行為。  
   
 ### <a name="ignore-failure"></a>忽略失敗  
  忽略錯誤或截斷。  

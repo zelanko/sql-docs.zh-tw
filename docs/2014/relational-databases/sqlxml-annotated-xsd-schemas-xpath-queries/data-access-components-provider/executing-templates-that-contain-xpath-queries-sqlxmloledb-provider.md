@@ -1,5 +1,5 @@
 ---
-title: 執行包含 XPath 查詢 （SQLXMLOLEDB 提供者） 的範本 |Microsoft Docs
+title: 執行包含 XPath 查詢的範本（SQLXMLOLEDB 提供者） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c4b5d51597f41b5355acd4995aaf7f988ed53a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013093"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>執行包含 XPath 查詢的範本 (SQLXMLOLEDB 提供者)
@@ -34,16 +34,16 @@ ms.locfileid: "66013093"
   
 -   對應結構描述  
   
- 在此範例 ADO 應用程式中，XML 範本，其中包含 XPath 查詢 （根） 針對所述的 XSD 對應結構描述 (MySchema.xml) 指定[執行 XPath 查詢&#40;SQLXMLOLEDB 提供者&#41;](executing-xpath-queries-sqlxmloledb-provider.md).  
+ 在此範例 ADO 應用程式中，由 XPath 查詢（root）所組成的 XML 範本是針對 XSD 對應架構（MySchema）所指定，在[&#40;SQLXMLOLEDB 提供者&#41;中執行 XPath 查詢](executing-xpath-queries-sqlxmloledb-provider.md)中所述。  
   
- 此對應結構描述屬性會提供執行 XPath 查詢針對 XSD 對應結構描述。 基底路徑屬性會提供對應結構描述的檔案路徑。  
+ 對應架構屬性會提供執行 XPath 查詢所針對的 XSD 對應架構。 [基底路徑] 屬性會提供對應架構的檔案路徑。  
   
  ClientSideXML 屬性設定為 True。 因此，XML 文件會在用戶端上產生。  
   
  在應用程式中，會直接指定 XPath 查詢。 因此，必須包含 Dialect {5d531cb2-e6ed-11d2-b252-00c04f681b71}。  
   
 > [!NOTE]  
->  在程式碼中，您必須於連接字串內提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此外，這個範例會指定針對資料提供者使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) (需要安裝其他網路用戶端軟體)。 如需詳細資訊，請參閱 < [SQL Server Native Client 的系統需求](../../native-client/system-requirements-for-sql-server-native-client.md)。  
+>  在程式碼中，您必須於連接字串內提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此外，這個範例會指定針對資料提供者使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) (需要安裝其他網路用戶端軟體)。 如需詳細資訊，請參閱[SQL Server Native Client 的系統需求](../../native-client/system-requirements-for-sql-server-native-client.md)。  
   
 ```  
 Option Explicit  

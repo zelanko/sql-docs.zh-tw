@@ -18,13 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 51369c321b8463c009027664e555a059522e1d23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014346"
 ---
 # <a name="sqlxml-40-data-access-components"></a>SQLXML 4.0 Data Access Components
+  
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 包含三個資料提供者，可針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的資料庫插入及擷取 XML 資料：  
   
 -   SQLXMLOLEDB 提供者  
@@ -33,14 +34,14 @@ ms.locfileid: "66014346"
   
 -   SQLXML Managed 類別  
   
-     可在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 內公開 SQLXML 功能。 如需詳細資訊，請參閱 < [SQLXML Managed 類別](../net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)。  
+     可在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 內公開 SQLXML 功能。 如需詳細資訊，請參閱[SQLXML Managed 類別](../net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)。  
   
 -   SQL Server Native Client (SQLNCLI11)  
   
      可透過擴充及補足目前版本之 Microsoft Data Access Components (MDAC) 的新資料存取技術來公開 SQLXML 4.0 功能。 SQLNCLI11 為 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中導入的功能提供完整的支援。 如需詳細資訊，請參閱 [SQL Server Native Client 程式設計](../../native-client/sql-server-native-client-programming.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
- [SQLXMLOLEDB 提供者&#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md)  
+ [SQLXMLOLEDB 提供者 &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md)  
  說明 SQLXMLOLEDB 提供者並說明其用法。  
   
   

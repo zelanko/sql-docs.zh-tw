@@ -1,5 +1,5 @@
 ---
-title: 資料分割處理目的地編輯器 （進階頁面） |Microsoft Docs
+title: 資料分割處理目的地編輯器（Advanced Page） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: de7c84a463d15e3260cc64c53ba1f82c6808dd93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056780"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>資料分割處理目的地編輯器 (進階頁面)
@@ -29,9 +29,9 @@ ms.locfileid: "66056780"
 > [!NOTE]  
 >  此處描述的工作不適用於 Analysis Services 表格式模型。  您無法針對表格式模型，將輸入資料行對應至資料分割資料行。 您可以改用 Analysis Services 執行 DDL 工作 ( [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md) ) 來處理資料分割。  
   
-## <a name="options"></a>選項  
- **使用預設錯誤組態。**  
- 指定是否要使用預設的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 錯誤處理。 依預設，此值為 `True`。  
+## <a name="options"></a>選項。  
+ **使用預設錯誤設定。**  
+ 指定是否要使用預設的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 錯誤處理。 根據預設，此值為 `True`。  
   
  **索引鍵錯誤動作**  
  指定如何處理具有無法接受之索引鍵值的記錄。  
@@ -48,10 +48,10 @@ ms.locfileid: "66056780"
  指定發生錯誤時，應該停止處理。  
   
  **錯誤數目**  
- 如果您已選取 [發生錯誤時停止]  ，請指定處理應該停止的錯誤臨界值。  
+ 如果您已選取 [發生錯誤時停止]****，請指定處理應該停止的錯誤臨界值。  
   
- **發生錯誤時要執行的動作**  
- 如果您已選取 [發生錯誤時停止]  ，請指定到達錯誤臨界值時要採取的動作。  
+ **錯誤時的動作**  
+ 如果您已選取 [發生錯誤時停止]****，請指定到達錯誤臨界值時要採取的動作。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -94,14 +94,14 @@ ms.locfileid: "66056780"
 |**ReportAndContinue**|報告錯誤並繼續處理。|  
 |**ReportAndStop**|報告錯誤並停止處理。|  
   
- **錯誤記錄路徑**  
+ **錯誤記錄檔路徑**  
  輸入錯誤記錄檔的路徑，或者使用瀏覽 **(...)** 按鈕來選取目的地。  
   
- **瀏覽 (...)**  
+ **流覽（...）**  
  選取錯誤記錄的路徑。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [資料分割處理目的地編輯器 &#40;對應頁面&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)  
+ [分割區處理目的地編輯器 &#40;對應頁面&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)  
   
   

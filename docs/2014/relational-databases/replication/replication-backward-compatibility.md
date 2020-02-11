@@ -19,17 +19,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ddbf842839e917477269c0de7886055d585a196c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250492"
 ---
 # <a name="replication-backward-compatibility"></a>複寫回溯相容性
-  「回溯相容性」一節中的主題描述 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫版本之間行為上的變更。 如果您要升級，或是複寫拓撲中有不只一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，則一定要了解回溯相容性。  
+  「回溯相容性」一節中的主題描述複寫版本[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之間行為上的變更。 如果您要升級，或是複寫拓撲中有不只一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，則一定要了解回溯相容性。  
   
  [SQL Server 複寫中已被取代的功能](deprecated-features-in-sql-server-replication.md)  
- 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中為了與舊版相容而保留的複寫功能，將在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本中遭到移除。  
+ 為了與舊版相容而保留[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]的複寫功能，將在未來的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中移除。  
   
  [SQL Server 複寫中的重大變更](breaking-changes-in-sql-server-replication.md)  
  需要對應用程式做一些改變的複寫功能變更。  
