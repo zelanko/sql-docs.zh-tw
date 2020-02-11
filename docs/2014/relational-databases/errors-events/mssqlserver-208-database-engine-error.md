@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b87a950c29cf202124e27b319eb56fb6a6e1857d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914913"
 ---
-# <a name="mssqlserver208"></a>MSSQLSERVER_208
+# <a name="mssqlserver_208"></a>MSSQLSERVER_208
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|208|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -70,8 +70,8 @@ ms.locfileid: "62914913"
 -   使用者是否擁有存取物件的權限。 若要確認使用者對物件擁有的權限，請使用 **Has_Perms_By_Name** 系統函數。  
   
 ## <a name="see-also"></a>另請參閱  
- [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)   
- [中繼資料可見性組態](../security/metadata-visibility-configuration.md)   
+ [使用 &#40;Transact-sql&#41;](/sql/t-sql/language-elements/use-transact-sql)   
+ [中繼資料可見度設定](../security/metadata-visibility-configuration.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/has-perms-by-name-transact-sql)  
   
   

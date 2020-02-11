@@ -1,5 +1,5 @@
 ---
-title: 工作 17：檢閱 SSIS 封裝的 DQS 清理專案建立 |Microsoft Docs
+title: 工作17：查看 SSIS 封裝所建立的 DQS 清理專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 285eae7ea20d5919fa73bd0d514c755fe73d9de0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484717"
 ---
 # <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>工作 17：檢閱 SSIS 封裝所建立的 DQS 清理專案
@@ -22,39 +22,39 @@ ms.locfileid: "65484717"
   
 1.  啟動**Data Quality Client**。  
   
-2.  按一下 **活動監控**中**管理**窗格。  
+2.  按一下 [系統**管理**] 窗格中的 [**活動監控**]。  
   
-3.  排序依據清單**活動開始時間**以查看最新的記錄。  
+3.  依據 [**活動開始時間**] 排序清單，以查看最新的記錄。  
   
-4.  請注意，您會看到以下列格式的專案名稱：**CleanseAndCurate.Cleanse Supplier Data.GUID**。  
+4.  請注意，您會看到專案的名稱，格式如下： **cleanseandcurate.cleanse supplier data.guid。清理供應商資料. GUID**。  
   
-     ![DQS 清理專案建立的 SSIS 封裝](../../2014/tutorials/media/et-reviewingdqscpcreatedbythessispackage.jpg "SSIS 封裝所建立的 DQS 清理專案")  
+     ![SSIS 封裝建立的 DQS 清理專案](../../2014/tutorials/media/et-reviewingdqscpcreatedbythessispackage.jpg "SSIS 封裝建立的 DQS 清理專案")  
   
-5.  請注意，中的值**為使用**欄位是**Active**。  
+5.  請注意，[ **Is active** ] 欄位中的值為 [**作用中]。**  
   
-6.  按一下 [ **Profiler** ] 索引標籤以查看 SSIS 封裝執行清理活動的分析工具統計資料的下方窗格中。  
+6.  按一下**底部**窗格中的 [分析工具] 索引標籤，以查看 SSIS 封裝執行之清理活動的 Profiler 統計資料。  
   
-7.  按一下 **關閉** 以關閉**管理**螢幕。  
+7.  按一下 [**關閉**] 以關閉 [**管理**] 畫面。  
   
-8.  中的主頁面**DQS 用戶端**，按一下**開啟資料品質專案**中**資料品質專案**窗格。  
+8.  在**DQS 用戶端**的主頁面中，按一下 [**資料品質**專案] 窗格中的 [**開啟資料品質專案**]。  
   
-9. 在專案清單中，選取 SSIS DQS 清理元件所建立的專案。 專案的名稱應該採用格式：**CleanseAndCurate.Cleanse Supplier Data.GUID (紅色）** 。 您可能需要根據清單排序**建立日期**資料行並尋找最新的記錄。  
+9. 在專案清單中，選取 SSIS DQS 清理元件所建立的專案。 專案的名稱應採用下列格式： **cleanseandcurate.cleanse supplier data.guid。清理供應商資料。 GUID （以紅色表示）**。 您可能需要根據 [**建立日期] 資料**行來排序清單，並尋找最新的記錄。  
   
-10. 按一下 [下一步]  。  
+10. 按 [下一步]  。  
   
-11. **管理和檢視結果**頁面應該很熟悉從您稍早在本教學課程中執行互動式清理。  
+11. 從您稍早在本教學課程中進行的互動式清理，您應該不熟悉 [**管理] 和 [查看結果**] 頁面。  
   
 12. 檢閱清理結果。 您也可以執行互動式清理，並在下一頁將結果匯出到 Excel 檔案或資料庫。  
   
-13. 按一下 [下一步]  。 在此**匯出** 頁面上，您可以將結果匯出到 excel 檔案中，CSV 檔案，或 SQL database。  
+13. 按 [下一步]  。 在此**匯出**頁面中，您可以將結果匯出至 excel 檔案、CSV 檔案或 SQL 資料庫。  
   
-14. 按一下 **完成**完成的活動。  
+14. 按一下 **[完成]** 以完成活動。  
   
-15. 中的主頁面**DQS 用戶端**，按一下**活動監控**中**管理**窗格。  
+15. 在**DQS 用戶端**的主頁面中，按一下 [系統**管理**] 窗格中的 [**活動監控**]。  
   
-16. 請注意，值**IsActive**欄位為**結束**現在。  
+16. 請注意，專案的 [ **IsActive** ] 欄位的值現在已**結束**。  
   
-## <a name="next-step"></a>下一個步驟  
+## <a name="next-step"></a>後續步驟  
  [結論](../../2014/tutorials/conclusion.md)  
   
   

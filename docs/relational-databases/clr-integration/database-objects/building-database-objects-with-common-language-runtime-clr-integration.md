@@ -18,10 +18,10 @@ ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 902685dcf1f8c743453285820faa67bb70830614
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258347"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>利用 Common Language Runtime (CLR) 整合建置資料庫物件
@@ -64,13 +64,13 @@ ms.locfileid: "75258347"
  [CLR 使用者定義函數](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
  描述如何實作與使用各種類型的 CLR 函數：資料表值函式、純量函數，以及使用者定義彙總函式。  
   
- [CLR 使用者定義類型](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [CLR 使用者定義型別](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  描述如何實作及使用 CLR 使用者定義型別。  
   
- [CLR 預存程式](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
+ [CLR 預存程序](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
  描述如何實作及使用 CLR 預存程序。  
   
- [CLR 觸發程式](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
+ [CLR 觸發程序](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
  描述如何實作及使用 CLR 觸發程序。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b42fdb9d53a4aa0444a98ee311000fb1c2929ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62756161"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>手動容錯移轉資料庫鏡像工作階段 (SQL Server Management Studio)
@@ -26,7 +26,7 @@ ms.locfileid: "62756161"
   
  在手動容錯移轉期間，會針對發生容錯移轉的資料庫互換主體伺服器和鏡像伺服器角色。 鏡像資料庫變成主體資料庫，而主體資料庫變成鏡像。 例如，下表顯示手動容錯移轉如何互換這兩個鏡像夥伴 ( `SQLDBENGINE0_1` 和 `SQLDBENGINE0_2`) 的角色。  
   
-|[伺服器]|容錯移轉前|容錯移轉後|  
+|伺服器|容錯移轉前|容錯移轉後|  
 |------------|---------------------|--------------------|  
 |`SQLDBENGINE0_1`|PRINCIPAL|MIRROR|  
 |`SQLDBENGINE0_2`|MIRROR|PRINCIPAL|  
