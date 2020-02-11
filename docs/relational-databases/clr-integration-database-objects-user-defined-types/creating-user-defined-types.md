@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f08067c55110b801cd989e0be1c9fbc6955cb61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54aa7db3d2c2ea0d268874f0d59c3096b8e1a0ae
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028276"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76911082"
 ---
 # <a name="creating-user-defined-types"></a>建立使用者定義型別
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   若要建立可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中安裝的使用者定義型別 (UDT)，您必須先以其中一種受支援的 .NET Framework 程式語言 (例如 Visual C# 或 Visual Basic)，建立符合建立 UDT 之規格的類別。 然後，您就可以將此類別編譯為可載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的動態連結程式庫 (DLL)。 您也可以使用 Visual Studio 來建立和部署 UDT。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，執行 Common Language Runtime (CLR) 程式碼的功能預設為 OFF。 來啟用 CLR，請使用**sp_configure**系統預存程序，如下列所示[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式：  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，執行 Common Language Runtime (CLR) 程式碼的功能預設為 OFF。 您可以使用**sp_configure**系統預存程式來啟用 CLR，如下列[!INCLUDE[tsql](../../includes/tsql-md.md)]語句所示：  
   
 ```  
 sp_configure 'clr enabled', 1  
@@ -40,9 +40,9 @@ Reconfigure
  示範建立使用者定義型別所涉及的程式碼撰寫技巧。  
   
 ## <a name="example"></a>範例  
- 下列程式碼清單會定義 Point UDT，詳細資料中所述[< 類型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)。  
+ 下列程式代碼清單會定義 Point UDT，這在撰寫[使用者定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)別時有詳細的說明。  
   
- 藉由安裝 CLR 範例，可取得本節所討論之其他範例的完整程式碼清單。 如需有關安裝這些範例的指示，請參閱[SQL Server Database Engine 範例](https://msftengprodsamples.codeplex.com/)。  
+ 藉由安裝 CLR 範例，可取得本節所討論之其他範例的完整程式碼清單。 如需有關安裝這些範例的指示，請參閱[SQL Server 資料庫引擎範例](https://msftengprodsamples.codeplex.com/)。  
   
  C#  
   
@@ -84,7 +84,7 @@ public struct Point : INullable
     public override string ToString()  
     {  
         // Since InvokeIfReceiverIsNull defaults to 'true'  
-        // this test is unneccesary if Point is only being called  
+        // this test is unnecessary if Point is only being called  
         // from SQL.  
         if (this.IsNull)  
             return "NULL";  
@@ -233,7 +233,7 @@ Imports System.Text
     ' Use StringBuilder to provide string representation of UDT.  
     Public Overrides Function ToString() As String  
         ' Since InvokeIfReceiverIsNull defaults to 'true'  
-        ' this test is unneccesary if Point is only being called  
+        ' this test is unnecessary if Point is only being called  
         ' from SQL.  
         If Me.IsNull Then  
             Return "NULL"  

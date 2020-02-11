@@ -1,5 +1,5 @@
 ---
-title: 移轉查詢計劃 |Microsoft Docs
+title: 遷移查詢計劃 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779110"
 ---
 # <a name="migrate-query-plans"></a>移轉查詢計劃
@@ -26,7 +26,7 @@ ms.locfileid: "62779110"
   
  若要在升級之前建立計畫指南，請遵循以下步驟：  
   
-1.  使用記錄的每個關鍵任務查詢目前的計劃[sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)預存程序，和在 USE PLAN 查詢提示中指定的查詢計劃。  
+1.  使用[sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)預存程式，並在 USE plan 查詢提示中指定查詢計劃，記錄每個任務關鍵性查詢的目前計畫。  
   
 2.  確認此計畫指南已套用到查詢。  
   
@@ -41,16 +41,16 @@ ms.locfileid: "62779110"
 ## <a name="example"></a>範例  
  下列範例會示範如何藉由建立計畫指南來為查詢記錄升級前計畫。  
   
-### <a name="step-1-collect-the-plan"></a>步驟 1:收集計畫  
+### <a name="step-1-collect-the-plan"></a>步驟 1：收集計畫  
  計畫指南中所記錄的查詢計劃必須使用 XML 格式。 XML 格式的查詢計劃可透過下列方式來產生：  
   
 -   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
   
 -   [SET STATISTICS XML](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
--   查詢的 query_plan 資料行[sys.dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql)動態管理函數。  
+-   查詢[sys.databases dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql)動態管理函數的 query_plan 資料行。  
   
--   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md)， [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)，和[Showplan XML For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md)事件類別。  
+-   查詢[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]編譯事件類別的執行程式表[xml](../../relational-databases/event-classes/showplan-xml-event-class.md)、執行程式表 xml[統計資料設定檔](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)和顯示[計畫 xml](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) 。  
   
  下列範例會藉由查詢動態管理檢視來為 `SELECT City, StateProvinceID, PostalCode FROM Person.Address ORDER BY PostalCode DESC;` 陳述式收集查詢計畫。  
   
@@ -65,7 +65,7 @@ SELECT query_plan
 GO  
 ```  
   
-### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>步驟 2:建立計畫指南以強制執行計劃  
+### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>步驟 2：建立計畫指南以強制計畫  
  在計畫指南中使用 XML 格式的查詢計畫 (由上述的任何一個方法取得)，可在 sp_create_plan_guide 的 OPTION 子句中所指定的 USE PLAN 查詢提示內，以字串常值的形式複製並貼上查詢計畫。  
   
  在 XML 計畫本身內，以第二個引號逸出計畫中所出現的引號 (')，然後再建立計畫指南。 例如，含有 `WHERE A.varchar = 'This is a string'` 的計畫必須將程式碼修改為 `WHERE A.varchar = ''This is a string''` 而加以逸出。  
@@ -88,12 +88,12 @@ EXECUTE sp_create_plan_guide
 GO  
 ```  
   
-### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>步驟 3：確認計畫指南已套用至查詢  
+### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>步驟 3：確認此計畫指南已套用到查詢  
  再次執行此查詢，並檢查所產生的查詢計劃。 您應該會發現此計畫符合您在計畫指南中所指定的計畫。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [查詢提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
+ [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [查詢提示 &#40;Transact-sql&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
  [計畫指南](../../relational-databases/performance/plan-guides.md)  
   
   

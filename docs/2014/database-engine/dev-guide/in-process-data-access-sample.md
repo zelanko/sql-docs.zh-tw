@@ -11,19 +11,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d44c980c7535b05d462d55e6f2aa1e87bf68c98
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637746"
 ---
 # <a name="in-process-data-access-sample"></a>同處理序資料存取範例
+  
   `InProcessDataAccess` 範例包含許多簡單的函數，這些函數會示範 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR 同處理序資料存取提供者的各種功能。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站[免費取得 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站[免費取得 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
   
 -   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](https://go.microsoft.com/fwlink/?linkid=62796)取得 AdventureWorks 資料庫  
   
@@ -52,7 +54,7 @@ ms.locfileid: "73637746"
   
 -   AdventureWorks 資料庫必須安裝在您所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。  
   
--   如果您不是所使用之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實例的系統管理員，則必須讓系統管理員授與您**CreateAssembly**許可權，才能完成安裝。  
+-   如果您不是所使用之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例的系統管理員，則必須讓系統管理員授與您**CreateAssembly**許可權，才能完成安裝。  
   
 ## <a name="building-the-sample"></a>建立範例  
   
@@ -355,7 +357,7 @@ EXTERNAL NAME [InProcDA].[DataAccessDemo].[SendReaderToClient];
 GO  
 ```  
   
- 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] （`test.sql`）會執行此範例中定義的預存程式和函式，藉以測試範例。  
+ 下列[!INCLUDE[tsql](../../includes/tsql-md.md)] （`test.sql`）會執行此範例中定義的預存程式和函式，藉以測試範例。  
   
 ```  
 USE AdventureWorks;  
@@ -411,6 +413,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [通用語言執行平台 &#40;CLR&#41; 整合的使用案例和範例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Common Language Runtime &#40;CLR&#41; 整合的使用案例和範例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

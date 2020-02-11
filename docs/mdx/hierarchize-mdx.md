@@ -1,5 +1,5 @@
 ---
-title: Hierarchize (MDX) |Microsoft Docs
+title: Hierarchize （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8ab2c866f201c53684c316282a143b4f672cb8e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105428"
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize (MDX)
@@ -32,14 +32,14 @@ Hierarchize(Set_Expression [ , POST ] )
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **Hierarchize**函式會將指定集合的成員組織成階層式順序。 此函數永遠會保留重複項。  
+ **Hierarchize**函數會將指定集合的成員組織成階層式的順序。 此函數永遠會保留重複項。  
   
--   如果**POST**未指定，此函數會排序其自然的順序中的層級中的成員。 未指定其他排序條件時，它們的自然順序就是階層中成員的預設順序。 子成員會直接跟隨在父成員後面。  
+-   如果未指定**POST** ，函式會依其自然順序來排序層級中的成員。 未指定其他排序條件時，它們的自然順序就是階層中成員的預設順序。 子成員會直接跟隨在父成員後面。  
   
--   如果**POST**指定，則**Hierarchize**函式排序中使用自訂的順序的層級的成員。 換言之，子成員會在其父系之前。  
+-   如果指定了**post** ， **Hierarchize**函數會使用後置的順序來排序層級中的成員。 換言之，子成員會在其父系之前。  
   
 ## <a name="example"></a>範例  
- 下列範例會在 Canada 成員向上鑽研。 **Hierarchize**函式用來組織階層的順序，指定的集合成員所需**DrillUpMember**函式。  
+ 下列範例會在 Canada 成員向上鑽研。 **Hierarchize**函數是用來以階層順序組織指定的集合成員，這是**DrillUpMember**函數所需的。  
   
 ```  
 SELECT DrillUpMember   
@@ -58,7 +58,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- 下列範例會傳回的總和`Measures.[Order Quantity]`成員，在中含括之 2003 年的第九個月彙總`Date`維度中，從**Adventure Works** cube。 **PeriodsToDate**函式會定義 tuple 集合的彙總函式運作中。 **Hierarchize**函式會將組織從階層式順序的 [產品] 維度的成員指定集合的成員。  
+ 下列範例會從「**艾德公司**」 `Measures.[Order Quantity]` cube 傳回成員的總和（在`Date`維度中包含的前9個月2003匯總）。 **PeriodsToDate**函數會在集合中定義彙總函式操作所在的元組。 **Hierarchize**函數會以階層順序組織產品維度中指定成員集合的成員。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  
@@ -86,6 +86,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

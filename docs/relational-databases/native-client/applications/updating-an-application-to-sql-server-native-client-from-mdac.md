@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8f6b7efd8d97f63e93061cbef1a54e1df3146d2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243791"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>從 MDAC 將應用程式更新至 SQL Server Native Client
@@ -103,17 +103,17 @@ ms.locfileid: "75243791"
   
     -   終止  
   
-    -   Backup   
+    -   Backup  
   
 -   當 MDAC 應用程式連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中導入的資料類型將會以 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 相容的資料類型形式出現，如下表所示。  
   
     |SQL Server 2005 類型|SQL Server 2000 類型|  
     |--------------------------|--------------------------|  
-    |**Varchar （max）**|**文字**|  
-    |**Nvarchar （max）**|**Ntext**|  
-    |**Varbinary （max）**|**包**|  
-    |**udt**|**Varbinary**|  
-    |**stl**|**Ntext**|  
+    |**varchar(max)**|**text**|  
+    |**nvarchar(max)**|**ntext**|  
+    |**varbinary(max)**|**image**|  
+    |**udt**|**varbinary**|  
+    |**stl**|**ntext**|  
   
      此類型對應會影響資料行中繼資料傳回的值。 例如，**文字**資料行的大小上限為2147483647，但[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client ODBC 會將**Varchar （max）** 資料行的大小上限報告為 SQL_SS_LENGTH_UNLIMITED，而[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client OLE DB 會將**Varchar （max）** 資料行的大小上限報告為2147483647或-1，視平臺而定。  
   
@@ -129,6 +129,6 @@ ms.locfileid: "75243791"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 MDAC 都可使用資料列版本設定來支援讀取認可的交易隔離，但是只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 可支援快照集交易隔離  (在程式設計的詞彙中，使用資料列版本設定的讀取認可交易隔離與讀取認可的交易相同)。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 SQL Server Native Client 建立應用程式](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [使用 SQL Server Native Client 建置應用程式](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

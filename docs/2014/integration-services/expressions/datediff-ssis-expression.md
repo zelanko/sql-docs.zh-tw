@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b42115278e6866063639c7ce2fc596749ad2d39f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898083"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (SSIS 運算式)
@@ -46,7 +46,7 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="remarks"></a>備註  
  下表列出運算式評估工具所辨識的日期部份與縮寫。  
   
-|datepart|縮寫|  
+|日期部份|縮寫|  
 |--------------|-------------------|  
 |Year|yy, yyyy|  
 |Quarter|qq, q|  
@@ -57,7 +57,7 @@ DATEDIFF(datepart, startdate, endate)
 |Weekday|dw, w|  
 |Hour|Hh|  
 |Minute|mi, n|  
-|第二個|ss, s|  
+|Second|ss, s|  
 |Millisecond|Ms|  
   
  如果任何引數為 Null，則 DATEDIFF 會傳回 Null 結果。  
@@ -81,7 +81,7 @@ DATEDIFF("dd", (DT_DBTIMESTAMP)"8/1/2003", (DT_DBTIMESTAMP)"8/8/2003")
 DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())  
 ```  
   
- 此範例會傳回 **ModifiedDate** 資料行中的日期與 **YearEndDate** 變數之間的星期數。 如果**YearEndDate**具有`date`資料類型沒有明確的轉型是必要項。  
+ 此範例會傳回 **ModifiedDate** 資料行中的日期與 **YearEndDate** 變數之間的星期數。 如果**YearEndDate**具有`date`資料類型，則不需要明確轉換。  
   
 ```  
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  

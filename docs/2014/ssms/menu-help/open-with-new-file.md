@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240143"
 ---
 # <a name="open-with-new-file"></a>開啟方式 (新增檔案)
@@ -29,14 +29,14 @@ ms.locfileid: "63240143"
  **開啟**  
  按一下 [開啟]  即可在選取的編輯器中開啟文件。  
   
- **[加入]**  
+ **加入**  
  按一下此按鈕即可將程式新增至 [選取要開啟的程式]  清單中。 您可以在 [程式名稱]  欄位中鍵入檔案路徑，或按一下 [瀏覽]  瀏覽至程式的位置。 在 [易記名稱]  中輸入要顯示在 [選取要開啟的程式]  清單中的程式名稱。  
   
  **移除**  
  若要移除程式，請選取程式然後按一下 [移除]  。  
   
  **設定為預設值**  
- 若要指定所選之檔案類型的預設編輯器 (如果適用的話，還有其語言編碼選項)，請從 [選取要開啟的程式]  清單中選擇程式，然後按一下 [設定為預設值]  。 下次您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 開啟此檔案類型時，就會在新的預設編輯器中開啟文件。  
+ 若要指定所選之檔案類型的預設編輯器 (如果適用的話，還有其語言編碼選項)，請從 [選取要開啟的程式]  清單中選擇程式，然後按一下 [設定為預設值]  。 下次您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]開啟此檔案類型時，就會在新的預設編輯器中開啟文件。  
   
 > [!NOTE]  
 >  在 [選取要開啟的程式]  的程式清單中，所選之檔案類型的預設編輯器名稱後面會接著 [(預設)]  。  

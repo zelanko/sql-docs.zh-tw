@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705516"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>在物件總管中管理事件工作階段
@@ -36,7 +36,7 @@ ms.locfileid: "62705516"
  如需有關建立「擴充事件」工作階段的詳細資訊，請參閱＜ [Create an Extended Events Session](../../database-engine/create-an-extended-events-session.md)＞。  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>啟動或停止擴充事件工作階段  
- 您可以啟動或停止 「 擴充事件工作階段，透過**查詢編輯器**使用`ALTER EVENT SESSION`陳述式，或使用**擴充事件**節點**物件總管 中**.  
+ 您`ALTER EVENT SESSION`可以使用語句，或使用**物件總管**的 [**擴充事件**] 節點，透過**查詢編輯器**啟動或停止「擴充事件」會話。  
   
  當您停止事件工作階段時，此工作階段不再列為 sys.dm_xe_sessions 動態管理檢視 (DMV) 中的使用中工作階段。 但是，工作階段定義會保持不變，而且您可以重新啟動工作階段。 若要完全移除工作階段定義，您必須刪除工作階段。  
   
@@ -96,7 +96,7 @@ STATE = STOP
   
 4.  展開 **[範本]** 下拉式方塊。  
   
-5.  按一下 [\<檔案來源 …>開啟]  ，然後巡覽至您想要匯入的工作階段 (XML 檔案)。  
+5.  按一下 [**檔案來源 …>開啟]\<** ，然後巡覽至您想要匯入的工作階段 (XML 檔案)。  
   
  此工作階段會顯示在 **[工作階段]** 節點底下。 根據預設，工作階段不會啟動。  
   
@@ -128,7 +128,7 @@ STATE = STOP
  當您刪除事件工作階段時，便會移除所有組態資訊，而且工作階段定義不會再出現在 sys.server_event_sessions 目錄檢視中。  
   
 > [!NOTE]  
->  system_health 和 AlwaysOn_health 隨附[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 請勿刪除它們。 system_health 預設為啟用 (如需詳細資訊，請參閱 [使用 system_health 工作階段](use-the-ssms-xe-profiler.md))。 AlwaysOn_health 預設為關閉。 這些工作階段會收集可用於診斷效能問題的資料。  
+>  system_health 和 AlwaysOn_health 包含在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];請勿將它們刪除。 system_health 預設為啟用 (如需詳細資訊，請參閱 [使用 system_health 工作階段](use-the-ssms-xe-profiler.md))。 AlwaysOn_health 預設為關閉。 這些工作階段會收集可用於診斷效能問題的資料。  
   
  若要刪除「擴充事件」工作階段，您必須擁有 ALTER ANY EVENT SESSION 權限。  
   

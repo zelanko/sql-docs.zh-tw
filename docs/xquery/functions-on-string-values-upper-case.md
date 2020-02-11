@@ -1,5 +1,5 @@
 ---
-title: upper-case 函數 (XQuery) |Microsoft Docs
+title: 大寫函數（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004612"
 ---
 # <a name="functions-on-string-values---upper-case"></a>字串值的相關函式 - upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  此函式中的每個字元的轉換 *$arg*成大寫對等。 Microsoft Windows Unicode 字碼元素的二進位大小寫轉換會指定字元如何轉換成大寫。 這項標準與 Unicode 標準字碼元素標準的對應不同。  
+  此函式會將 *$arg*中的每個字元轉換為其大小寫相等。 Microsoft Windows Unicode 字碼元素的二進位大小寫轉換會指定字元如何轉換成大寫。 這項標準與 Unicode 標準字碼元素標準的對應不同。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,12 +42,12 @@ fn:upper-case($arg as xs:string?) as xs:string
 |*$arg*|要轉換成大寫的字串值。|  
   
 ## <a name="remarks"></a>備註  
- 如果值 *$arg*是會傳回空的零長度字串。  
+ 如果 *$arg*的值是空的，則會傳回長度為零的字串。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. 將字串變更為大寫  
- 下列範例會變更輸入的字串 ' abcDEF ！@4' 為大寫。  
+ 下列範例會變更輸入字串 ' abcDEF！@4' 到大寫的大小寫。  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
@@ -119,6 +119,6 @@ where CatalogDescription.exist('
  `</Prod>`  
   
 ## <a name="see-also"></a>另請參閱  
- [針對 xml 資料類型的 XQuery 函式](../xquery/xquery-functions-against-the-xml-data-type.md)  
+ [針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

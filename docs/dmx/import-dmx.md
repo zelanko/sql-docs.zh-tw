@@ -1,5 +1,5 @@
 ---
-title: 匯入 (DMX) |Microsoft Docs
+title: 匯入（DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2141a4f8ccc6e34ec3010ad3ce8e8e3789d09132
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892748"
 ---
 # <a name="import-dmx"></a>IMPORT (DMX)
@@ -28,7 +28,7 @@ IMPORT FROM <filename>
 ```  
   
 ## <a name="arguments"></a>引數  
- *filename*  
+ *名稱*  
  包含要匯入檔案之名稱與位置的字串。  
   
 ## <a name="remarks"></a>備註  
@@ -44,10 +44,10 @@ IMPORT FROM 'C:\TEMP\Association_NEW.dmb'
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦延伸&#40;模組&#41; DMX 資料定義語句](../dmx/dmx-statements-data-definition.md)   
- [資料採礦延伸&#40;模組&#41; DMX 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸&#40;模組&#41; DMX 語句參考](../dmx/data-mining-extensions-dmx-statements.md)   
- [匯出&#40;DMX&#41;](../dmx/export-dmx.md)   
+ [資料採礦延伸模組 &#40;DMX&#41; 資料定義語句](../dmx/dmx-statements-data-definition.md)   
+ [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
+ [資料採礦延伸模組 &#40;DMX&#41; 語句參考](../dmx/data-mining-extensions-dmx-statements.md)   
+ [匯出 &#40;DMX&#41;](../dmx/export-dmx.md)   
  [匯出及匯入資料採礦物件](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
   
   

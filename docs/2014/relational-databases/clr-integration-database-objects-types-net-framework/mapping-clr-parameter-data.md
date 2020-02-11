@@ -27,10 +27,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 17eeefbe125722c666f9f56394028da8c66a66b3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232284"
 ---
 # <a name="mapping-clr-parameter-data"></a>對應 CLR 參數資料
@@ -42,43 +42,43 @@ ms.locfileid: "75232284"
 |`bigint`|`SqlInt64`|**Int64、可\<為 null 的 int64>**|  
 |`binary`|`SqlBytes, SqlBinary`|`Byte[]`|  
 |`bit`|`SqlBoolean`|**布林值、\<可為 null 的布林值>**|  
-|`char`|無|無|  
-|`cursor`|無|無|  
+|`char`|None|None|  
+|`cursor`|None|None|  
 |`date`|`SqlDateTime`|**DateTime、可\<為 null 的 datetime>**|  
 |`datetime`|`SqlDateTime`|**DateTime、可\<為 null 的 datetime>**|  
-|`datetime2`|無|**DateTime、可\<為 null 的 datetime>**|  
+|`datetime2`|None|**DateTime、可\<為 null 的 datetime>**|  
 |`DATETIMEOFFSET`|`None`|**DateTimeOffset、可\<為 null 的 datetimeoffset>**|  
 |`decimal`|`SqlDecimal`|**十進位、可\<為 null 的十進位>**|  
 |`float`|`SqlDouble`|**Double、可\<為 null 的 double>**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography`是在與 SQL Server 一起安裝，而且可以從[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](https://www.microsoft.com/download/details.aspx?id=53164)下載的類型 .dll 中定義。|無|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry`是在與 SQL Server 一起安裝，而且可以從[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](https://www.microsoft.com/download/details.aspx?id=53164)下載的類型 .dll 中定義。|無|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId`是在與 SQL Server 一起安裝，而且可以從[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](https://www.microsoft.com/download/details.aspx?id=53164)下載的類型 .dll 中定義。|無|  
-|`image`|無|無|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography`是在與 SQL Server 一起安裝，而且可以從[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](https://www.microsoft.com/download/details.aspx?id=53164)下載的類型 .dll 中定義。|None|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry`是在與 SQL Server 一起安裝，而且可以從[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](https://www.microsoft.com/download/details.aspx?id=53164)下載的類型 .dll 中定義。|None|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId`是在與 SQL Server 一起安裝，而且可以從[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](https://www.microsoft.com/download/details.aspx?id=53164)下載的類型 .dll 中定義。|None|  
+|`image`|None|None|  
 |`int`|`SqlInt32`|**Int32、可\<為 null 的 int32>**|  
 |`money`|`SqlMoney`|**十進位、可\<為 null 的十進位>**|  
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
-|`ntext`|無|無|  
+|`ntext`|None|None|  
 |`numeric`|`SqlDecimal`|**十進位、可\<為 null 的十進位>**|  
 |`nvarchar`|`SqlChars, SqlString`<br /><br /> 
   `SQLChars` 比較適合資料傳輸和存取，而 `SQLString` 比較適合執行 String 作業。|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char、String、Char []、可\<為 null 的 Char>**|  
 |`real`|
   `SqlSingle` (`SqlSingle` 的範圍，但大於 `real`)|**單一、可\<為 null 的單一>**|  
-|`rowversion`|無|`Byte[]`|  
+|`rowversion`|None|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16、可\<為 null 的 int16>**|  
 |`smallmoney`|`SqlMoney`|**十進位、可\<為 null 的十進位>**|  
-|`sql_variant`|無|`Object`|  
-|`table`|無|無|  
-|`text`|無|無|  
-|`time`|無|**TimeSpan、可\<為 null 的 timespan>**|  
-|`timestamp`|無|無|  
+|`sql_variant`|None|`Object`|  
+|`table`|None|None|  
+|`text`|None|None|  
+|`time`|None|**TimeSpan、可\<為 null 的 timespan>**|  
+|`timestamp`|None|None|  
 |`tinyint`|`SqlByte`|**Byte、可\<為 null 的 byte>**|  
 |`uniqueidentifier`|`SqlGuid`|**Guid、可\<為 null 的 guid>**|  
-|`User-defined type(UDT)`|無|繫結到相同組件或相依組件中之使用者定義型別的相同類別。|  
-|**Varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  
+|`User-defined type(UDT)`|None|繫結到相同組件或相依組件中之使用者定義型別的相同類別。|  
+|**varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  
 |`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**byte、Byte []、可\<為 null 的 byte>**|  
-|`varchar`|無|無|  
-|`xml`|`SqlXml`|無|  
+|`varchar`|None|None|  
+|`xml`|`SqlXml`|None|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>利用 Out 參數自動轉換資料類型  
  CLR 方法可以利用 `out` 修飾詞 (Microsoft Visual C#) 或 `<Out()> ByRef` (Microsoft Visual Basic) 標示輸入參數，以便將資訊傳回到呼叫程式碼或程式。如果輸入參數在 `System.Data.SqlTypes` 命名空間中為 CLR 資料類型，而且呼叫程式會將其對等的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型指定為輸入參數，當 CLR 方法傳回資料類型時，會自動進行類型轉換。  
@@ -112,8 +112,8 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR 資料類型 (SQL Server)**|**SQL Server 資料類型**|  
-|`Decimal`|smallmoney|  
-|`SqlMoney`|smallmoney|  
+|`Decimal`|SMALLMONEY|  
+|`SqlMoney`|SMALLMONEY|  
 |`Decimal`|money|  
 |`DateTime`|smalldatetime|  
 |`SQLDateTime`|smalldatetime|  

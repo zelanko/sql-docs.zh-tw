@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3bd621890bad3bc42fb2d4d5289d71efcbdbcc2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721658"
 ---
 # <a name="initialize-a-subscription-manually"></a>手動初始化訂閱
@@ -31,7 +31,7 @@ ms.locfileid: "62721658"
 -   例如，若在複製資料和結構描述到訂閱者的時間，與手動初始化訂閱的時間之間，使用異動複寫發行的資料庫上有活動，則此活動所導致的變更可能不會複寫到訂閱者。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 透過將結構描述 (通常是資料) 複製到訂閱資料庫的方式，手動初始化發行集的訂閱。 結構描述和資料應與發行集資料庫相符。 然後在「新增訂閱精靈」的 **[初始化訂閱]** 頁面中指定訂閱不需要結構描述和資料。 如需有關存取這個精靈的詳細資訊，請參閱＜ [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md) ＞與＜ [Create a Pull Subscription](create-a-pull-subscription.md)中手動初始化訂閱。  
+ 透過將結構描述 (通常是資料) 複製到訂閱資料庫的方式，手動初始化發行集的訂閱。 結構描述和資料應與發行集資料庫相符。 然後在「新增訂閱精靈」的 **[初始化訂閱]** 頁面中指定訂閱不需要結構描述和資料。 如需有關存取這個精靈的詳細資訊，請參閱＜ [不使用快照集初始化交易式訂閱](initialize-a-transactional-subscription-without-a-snapshot.md) ＞與＜ [建立提取訂閱](create-a-pull-subscription.md)中手動初始化訂閱。  
   
  您初次同步處理訂閱時，會將複寫所需的物件和中繼資料複製到訂閱資料庫。  
   
@@ -48,19 +48,19 @@ ms.locfileid: "62721658"
   
 1.  確定訂閱資料庫上有結構描述和資料存在。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
   
-2.  在發行集資料庫的「發行者」上，執行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication** 、 **@subscriber** ，並針對 **@destination_db** 指定在訂閱者上包含已發行資料的資料庫名稱、針對 **@subscription_type** 指定 **@subscription_type** 的值及針對 **@sync_type** 指定 **@sync_type** 中手動初始化訂閱。 如需詳細資訊，請參閱 [建立提取訂閱](create-a-pull-subscription.md)。  
+2.  在發行集資料庫的「發行者」上，執行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定**@publication**、 **@subscriber**、在訂閱者上包含已發行資料的**@destination_db**資料庫名稱、的**提取**值**@subscription_type**，以及僅適用于**@sync_type**的複寫**支援**值。 如需詳細資訊，請參閱 [建立提取訂閱](create-a-pull-subscription.md)。  
   
 3.  在訂閱者上，執行 [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)。 如需更新訂閱，請參閱＜ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)＞。  
   
 4.  在訂閱者上，執行 [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 如需詳細資訊，請參閱 [建立提取訂閱](create-a-pull-subscription.md)。  
   
-5.  啟動散發代理程式，以傳送複寫物件以及從發行者下載最新的變更。 如需相關資訊，請參閱 [同步處理提取訂閱](synchronize-a-pull-subscription.md)。  
+5.  啟動散發代理程式，以傳送複寫物件以及從發行者下載最新的變更。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)。  
   
 #### <a name="to-manually-initialize-a-push-subscription-to-a-transactional-publication"></a>手動初始化交易式發行集的發送訂閱  
   
 1.  確定訂閱資料庫上有結構描述和資料存在。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
   
-2.  在發行集資料庫的「發行者」上，執行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 針對 **@destination_db** 指定在訂閱者上包含已發行資料的資料庫名稱、針對 **@subscription_type** 指定 **@subscription_type** 的值及針對 **@sync_type** 指定 **@sync_type** 中手動初始化訂閱。 如需更新訂閱，請參閱＜ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)＞。  
+2.  在發行集資料庫的「發行者」上，執行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 在訂閱者上，指定包含已發行資料的**@destination_db**資料庫名稱、的**push**值**@subscription_type**，以及僅適用于**@sync_type**的複寫**支援**值。 如需更新訂閱，請參閱＜ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)＞。  
   
 3.  在發行集資料庫的「發行者」上，執行 [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 如需詳細資訊，請參閱 [建立發送訂閱](create-a-push-subscription.md)。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "62721658"
   
 1.  確定訂閱資料庫上有結構描述和資料存在。 這項處理可以藉由在訂閱者上還原發行集資料庫的備份來完成。  
   
-2.  在發行者上，執行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)。 指定 **@publication** 、 **@subscriber** 、 **@subscriber_db** 的值及針對 **@subscription_type** 指定 **@subscription_type** 中手動初始化訂閱。 如此會註冊提取訂閱。  
+2.  在發行者上，執行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)。 指定**@publication**、 **@subscriber**、 **@subscriber_db**和的**pull**值**@subscription_type**。 如此會註冊提取訂閱。  
   
-3.  在包含已發行資料之資料庫的訂閱者上，執行 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)。 針對 **@sync_type** 指定 **@sync_type** 中手動初始化訂閱。  
+3.  在包含已發行資料之資料庫的訂閱者上，執行 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)。 針對 **@sync_type** 指定 **@sync_type**中手動初始化訂閱。  
   
 4.  在訂閱者上，執行 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。 如需詳細資訊，請參閱 [建立提取訂閱](create-a-pull-subscription.md)。  
   
@@ -82,14 +82,14 @@ ms.locfileid: "62721658"
   
 1.  確定訂閱資料庫上有結構描述和資料存在。 這項處理可以藉由在訂閱者上還原發行集資料庫的備份來完成。  
   
-2.  在發行集資料庫的發行者上，執行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)。 針對 **@subscriber_db** 指定在訂閱者上包含已發行資料的資料庫名稱、針對 **@subscription_type** 指定 **@subscription_type** 的值及針對 **@sync_type** 指定 **@sync_type** 中手動初始化訂閱。  
+2.  在發行集資料庫的發行者上，執行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)。 在訂閱者上，指定包含已發行資料的**@subscriber_db**資料庫名稱、的**push**值**@subscription_type**，以及的**none**值。 **@sync_type**  
   
 3.  在發行集資料庫的「發行者」上，執行 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)。 如需詳細資訊，請參閱 [建立發送訂閱](create-a-push-subscription.md)。  
   
 4.  啟動合併代理程式，以傳送複寫物件以及從發行者下載最新的變更。 如需詳細資訊，請參閱 [同步處理發送訂閱](synchronize-a-push-subscription.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)   
+ [不使用快照集初始化交易式訂閱](initialize-a-transactional-subscription-without-a-snapshot.md)   
  [備份及還原複寫的資料庫](administration/back-up-and-restore-replicated-databases.md)   
  [複寫安全性最佳作法](security/replication-security-best-practices.md)  
   

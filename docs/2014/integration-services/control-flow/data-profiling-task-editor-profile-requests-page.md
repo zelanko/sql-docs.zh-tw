@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6deb484f6e213e7089c3aef272ebaebeba13a913
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832062"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
@@ -40,7 +40,7 @@ ms.locfileid: "62832062"
 ### <a name="requests-pane-options"></a>要求窗格選項  
  此要求窗格具有下列選項：  
   
- **[檢視]**  
+ **檢視**  
  選取要檢視已經針對此工作設定的所有設定檔，還是僅檢視其中一個設定檔。  
   
  要求窗格中的資料行會根據您所選取的 **[檢視]** 而變更。 如需有關每個資料行的詳細資訊，請參閱下一節「要求窗格資料行」。  
@@ -82,14 +82,14 @@ ms.locfileid: "62832062"
  **連線管理員**  
  顯示連接至來源資料庫的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員。  
   
- **[要求識別碼]**  
+ **要求識別碼**  
  顯示要求的識別碼。 一般而言，您不需要變更自動產生的值。  
   
 #### <a name="columns-common-to-the-five-individual-column-profiles"></a>五個個別資料行設定檔通用的資料行  
  **[資料表或檢視表]**  
  顯示包含選取之資料行的資料表或檢視表。  
   
- **[資料行]**  
+ **資料行**  
  顯示選取以便分析的資料行。  
   
 #### <a name="columns-specific-to-the-candidate-key-profile"></a>候選索引鍵設定檔特有的資料行  

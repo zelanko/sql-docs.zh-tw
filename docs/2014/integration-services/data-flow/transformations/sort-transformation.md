@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dba1f3598abb8877721ff77d3dabcc8af8e0b94a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899881"
 ---
 # <a name="sort-transformation"></a>排序轉換
@@ -32,7 +32,7 @@ ms.locfileid: "62899881"
  「排序」轉換包括一組比較選項，用來定義轉換處理資料行中字串資料的方式。 如需詳細資訊，請參閱 [Comparing String Data](../comparing-string-data.md)。  
   
 > [!NOTE]  
->  「排序」轉換排序 GUID 時，與 ORDER BY 子句在 Transact-SQL 中排序的方式不同。 「排序」轉換會排序以 A-F 開頭之 GUID 前，以 0-9 開頭的 GUID，而在 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 中實作的 ORDER BY 子句則以不同的方式排序。 如需詳細資訊，請參閱 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)。  
+>  「排序」轉換排序 GUID 時，與 ORDER BY 子句在 Transact-SQL 中排序的方式不同。 「排序」轉換會排序以 A-F 開頭之 GUID 前，以 0-9 開頭的 GUID，而在 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]中實作的 ORDER BY 子句則以不同的方式排序。 如需詳細資訊，請參閱 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)。  
   
  「排序」轉換亦可在執行排序時移除重複的資料列。 重複的資料列為擁有相同排序索引鍵值的資料列。 排序索引鍵值是根據使用的字串比較選項所產生，也就是說，不同的常值字串可能擁有相同的排序索引鍵值。 轉換會將輸入資料行中，擁有不同值但排序索引鍵相同的資料列視為重複。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62899881"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [轉換自訂屬性](transformation-custom-properties.md)  
   

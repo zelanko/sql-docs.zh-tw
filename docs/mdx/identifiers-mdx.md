@@ -1,5 +1,5 @@
 ---
-title: 識別碼 (MDX) |Microsoft Docs
+title: 識別碼（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891214"
 ---
 # <a name="identifiers-mdx"></a>識別碼 (MDX)
@@ -44,7 +44,7 @@ ms.locfileid: "68891214"
   
     -   底線 (_)。  
   
-3.  識別碼絕不能是 MDX 保留關鍵字。 MDX 中的保留關鍵字不區分大小寫。 如需詳細資訊, 請參閱[保留&#40;關鍵字&#41;MDX 語法](../mdx/reserved-keywords-mdx-syntax.md)。  
+3.  識別碼絕不能是 MDX 保留關鍵字。 MDX 中的保留關鍵字不區分大小寫。 如需詳細資訊，請參閱[&#40;MDX 語法&#41;的保留關鍵字](../mdx/reserved-keywords-mdx-syntax.md)。  
   
 4.  不允許內嵌的空格或特殊字元。  
   
@@ -79,11 +79,12 @@ ms.locfileid: "68891214"
   
 -   當物件名稱或名稱的一部份使用保留關鍵字時。  
   
-     建議您不要使用保留關鍵字作為物件名稱。 從舊版升級的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫可能包含識別碼, 其中包含舊版中未保留的字組, 但現在已保留。 您可以使用分隔識別碼參考物件，直到您變更了物件的識別碼。  
+     建議您不要使用保留關鍵字作為物件名稱。 從舊版升級的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫可能包含識別碼，其中包含舊版中未保留的字組，但現在已保留。 您可以使用分隔識別碼參考物件，直到您變更了物件的識別碼。  
   
 -   當物件名稱使用未列為限定識別碼的字元時。  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 允許分隔識別碼使用目前字碼頁中的任何字元。 不過，於物件名稱任意使用特殊字元，會使 MDX 陳述式和指令碼難以讀懂和維護。  
+     
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 允許分隔識別碼使用目前字碼頁中的任何字元。 不過，於物件名稱任意使用特殊字元，會使 MDX 陳述式和指令碼難以讀懂和維護。  
   
 ### <a name="formatting-rules-for-delimited-identifiers"></a>分隔識別碼的格式化規則  
  分隔識別碼的主體可以包含目前字碼頁中的任何字元組合，包括分隔字元本身在內。 如果分隔識別碼的主體包含分隔字元，就需要特殊的處理：  
@@ -123,8 +124,8 @@ ms.locfileid: "68891214"
  此外，前例中的 Measures 識別碼已經進行分隔，以示範如何分隔多個識別碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 語言參考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
- [MDX 語法元素&#40;mdx&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Mdx 語言參考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 查詢基本概念 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
+ [Mdx 語法元素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

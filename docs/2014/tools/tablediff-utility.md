@@ -19,16 +19,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68185962"
 ---
 # <a name="tablediff-utility"></a>tablediff 公用程式
+  
   **tablediff** 公用程式用來比較兩份資料表之資料的非聚合狀況，當進行複寫拓撲中之非聚合狀況的疑難排解時，它尤其有用。 您可以在命令提示字元之下，或在批次檔中，利用這個公用程式來執行下列工作：  
   
--   在扮演複寫簽發者之 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的來源資料表，與扮演複製訂閱者的一或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的目的地資料表之間，每個資料列做比較。  
+-   做為複寫發行者之[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]實例中的來源資料表，與做為複寫訂閱者之[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]一個或多個實例的目的地資料表之間的資料列比較。  
   
 -   執行快速比較，只比較資料列計數和結構描述。  
   
@@ -76,8 +77,8 @@ ms.locfileid: "68185962"
  [ **-?** ]  
  傳回支援的參數清單。  
   
- **-sourceserver** *source_server_name*[ **\\** _instance_name_]  
- 這是來源伺服器的名稱。 指定_來源\_伺服器\_名稱_預設執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定_來源\_伺服器\_名稱_ **\\** _執行個體\_名稱_的具名執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** *source_server_name*[**\\**_instance_name_]  
+ 這是來源伺服器的名稱。 指定預設實例的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]_來源\_\_伺服器名稱_。 針對的已命名實例指定_\_來源\_伺服器名稱_**\\**_\_實例名稱。_ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  **-sourcedatabase** *source_database*  
  這是來源資料庫的名稱。  
@@ -100,8 +101,8 @@ ms.locfileid: "68185962"
  **-sourcelocked**  
  在比較期間，來源資料表以 TABLOCK 和 HOLDLOCK 資料表提示鎖定。  
   
- **-destinationserver** *destination_server_name*[ **\\** _執行個體\_名稱_]  
- 這是目的地伺服器的名稱。 指定 *預設執行個體的* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定_目的地\_伺服器\_名稱_ **\\** _執行個體\_名稱_的具名執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** *destination_server_name*[**\\**_實例\_名稱_]  
+ 這是目的地伺服器的名稱。 指定 *預設執行個體的* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 針對的已命名實例指定_\_目的地\_伺服器名稱_**\\**_\_實例名稱。_ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  **-destinationdatabase** *subscription_database*  
  這是目的地資料庫的名稱。  
@@ -112,7 +113,7 @@ ms.locfileid: "68185962"
  **-destinationschema** *destination_schema_name*  
  目的地資料表的結構描述擁有者。 依預設，資料表擁有者假設為 dbo。  
   
- **-destinationpassword** *destination_password*  
+ **-」 destinationpassword** *destination_password*  
  這是用來連接使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證之目的地伺服器的登入密碼。  
   
 > [!IMPORTANT]  
@@ -125,7 +126,7 @@ ms.locfileid: "68185962"
  在比較期間，目的地資料表以 TABLOCK 和 HOLDLOCK 資料表提示鎖定。  
   
  **-b** *large_object_bytes*  
- 這是用來進行下列大型物件資料類型之資料行比較的位元組數目，其中包括：`text`、`ntext`、`image`、`varchar(max)`、`nvarchar(max)` 和 `varbinary(max)`。 *large_object_bytes* 預設為資料行的大小。 不比較任何超出 *large_object_bytes* 的資料。  
+ 這是用來進行下列大型物件資料類型之資料行比較的位元組數目，其中包括：`text`、`ntext`、`image`、`varchar(max)`、`nvarchar(max)` 和 `varbinary(max)`。 *large_object_bytes*預設為數據行的大小。 不比較任何超出 *large_object_bytes* 的資料。  
   
  **-bf**  *number_of_statements*  
  這是使用 [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 選項時要寫入目前 **指令碼檔案中的** 陳述式數目。 當 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式數目超出 *number_of_statements*時，會建立新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼檔案。  
@@ -164,12 +165,12 @@ ms.locfileid: "68185962"
   
 |值|描述|  
 |-----------|-----------------|  
-|**0**|成功|  
+|**0**|Success|  
 |**1**|嚴重錯誤|  
 |**2**|資料表差異|  
   
 ## <a name="remarks"></a>備註  
- **tablediff** 公用程式不能與非[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 伺服器一起使用。  
+ **Tablediff**公用程式不能與非[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]伺服器一起使用。  
   
  具有 `sql_variant` 資料類型資料行的資料表不受支援。  
   
@@ -177,8 +178,8 @@ ms.locfileid: "68185962"
   
 |來源資料類型|目的地資料類型|  
 |----------------------|---------------------------|  
-|`tinyint`|`smallint`、`int` 或 `bigint`|  
-|`smallint`|`int` 或 `bigint`|  
+|`tinyint`|`smallint`、 `int`或`bigint`|  
+|`smallint`|`int`或`bigint`|  
 |`int`|`bigint`|  
 |`timestamp`|`varbinary`|  
 |`varchar(max)`|`text`|  
@@ -202,7 +203,7 @@ ms.locfileid: "68185962"
   
 -   `timestamp`  
   
--   **xml**  
+-   **stl**  
   
 -   `text`  
   
@@ -210,7 +211,7 @@ ms.locfileid: "68185962"
   
 -   `image`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  若要比較資料表，您必須具有所比較之資料表物件的 SELECT ALL 權限。  
   
  若要使用 **-et** 選項，您必須是 db_owner 固定資料庫角色的成員，或至少具有訂閱資料庫中的 CREATE TABLE 權限，或目的地伺服器之目的地擁有者結構描述的 ALTER 權限。  
