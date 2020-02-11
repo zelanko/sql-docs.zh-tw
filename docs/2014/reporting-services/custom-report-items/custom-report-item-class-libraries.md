@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264886"
 ---
 # <a name="custom-report-item-class-libraries"></a>自訂報表項目類別庫
@@ -63,7 +63,7 @@ ms.locfileid: "63264886"
 |`OnPaint`|在回應 `Paint` 事件時呼叫。|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- 這是用於識別自訂報表項目類型的屬性。 名稱必須符合的值 <`Name`> 屬性`ReportItem`在報表設計師組態檔中的項目。  
+ 這是用於識別自訂報表項目類型的屬性。 此名稱必須符合報表設計師設定檔中`Name` `ReportItem`元素的 <> 屬性值。  
   
 #### <a name="public-methods"></a>公用方法  
   
@@ -81,7 +81,8 @@ ms.locfileid: "63264886"
 |`LocalizedNameAttribute`|建構 LocalizedNameAttribute 物件。|  
   
 ### <a name="microsoftreportdesigneradornment"></a>Microsoft.ReportDesigner.Adornment  
- `Adornment` 類別會由自訂報表項目設計階段元件用於在設計介面主要矩形之外提供區域。 這些區域可以處理使用者介面事件，例如按一下滑鼠和拖放作業等。  
+ 
+  `Adornment` 類別會由自訂報表項目設計階段元件用於在設計介面主要矩形之外提供區域。 這些區域可以處理使用者介面事件，例如按一下滑鼠和拖放作業等。  
   
 #### <a name="public-methods"></a>公用方法  
   

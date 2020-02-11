@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 387613e12af3435a2a8eb9e3f630f61acaf28a8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479995"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>建立檔案屬性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立檔案屬性，以使用檔案來擴展屬性值。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -34,42 +34,42 @@ ms.locfileid: "65479995"
   
 ### <a name="to-create-a-file-attribute"></a>若要建立檔案屬性  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
-2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[實體]** 。  
+2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[實體]**。  
   
 3.  在 **[實體維護]** 頁面上，選取 **[模型]** 清單中的模型。  
   
 4.  針對要建立屬性的實體選取資料列。  
   
-5.  按一下 **[編輯選取的實體]** 。  
+5.  按一下 **[編輯選取的實體]**。  
   
 6.  在 **[編輯實體]** 頁面上：  
   
-    -   如果是分葉成員的屬性，則按一下 **[分葉成員屬性]** 窗格中的 **[加入分葉屬性]** 。  
+    -   如果是分葉成員的屬性，則按一下 **[分葉成員屬性]** 窗格中的 **[加入分葉屬性]**。  
   
-    -   如果是合併成員的屬性，則按一下 **[合併成員屬性]** 窗格中的 **[加入合併屬性]** 。  
+    -   如果是合併成員的屬性，則按一下 **[合併成員屬性]** 窗格中的 **[加入合併屬性]**。  
   
-    -   如果是集合的屬性，則按一下 **[集合屬性]** 窗格中的 **[加入集合屬性]** 。  
+    -   如果是集合的屬性，則按一下 **[集合屬性]** 窗格中的 **[加入集合屬性]**。  
   
-7.  在 **加入屬性**頁面上，選取**檔案**選項。  
+7.  在 [**加入屬性**] 頁面上，選取 [檔案 **] 選項。**  
   
 8.  在 **[名稱]** 方塊中，輸入屬性的名稱。 如需不應該當做屬性名稱使用的字詞清單，請參閱[保留字 &#40;Master Data Services&#41;](../../2014/master-data-services/reserved-words-master-data-services.md)。  
   
 9. 在 **[顯示像素寬度]** 方塊中，輸入要在 **[總管]** 方格中顯示的屬性資料行寬度。  
   
-10. 從**副檔名**清單中，選取其中一個或多個檔案類型，使用者可以上傳，或保留預設值 (*。\*) 允許所有檔案類型。  
+10. 從 [**副檔名**] 清單中，選取使用者可上傳的一或多個檔案類型，或保留預設值（\**.）以允許所有檔案類型。  
   
 11. (選擇性) 選取 **[啟用變更追蹤]** 以追蹤屬性群組的變更。 如需詳細資訊，請參閱[將屬性加入至變更追蹤群組 &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。  
   
-12. 按一下 **[儲存屬性]** 。  
+12. 按一下 **[儲存屬性]**。  
   
-13. 按一下 **[實體維護]** 頁面上的 **[儲存實體]** 。  
+13. 按一下 **[實體維護]** 頁面上的 **[儲存實體]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
- [變更屬性名稱&#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
- [建立網域屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [建立文字屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
+ [Master Data Services &#40;的屬性&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
+ [變更屬性名稱 &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
+ [建立以網域為基礎的屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [建立 &#40;Master Data Services&#41;的文字屬性](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
   
   

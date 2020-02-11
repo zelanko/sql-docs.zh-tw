@@ -1,5 +1,5 @@
 ---
-title: 發行至 MDS （MDS 增益集適用於 Excel） 從 Excel 資料 |Microsoft Docs
+title: 將資料從 Excel 發行至 MDS （適用于 Excel 的 MDS 增益集） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffb122b96182b1079c95adf13d26c9a4949f6ddf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478798"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>將資料從 Excel 發行至 MDS (適用於 Excel 的 MDS 增益集)
@@ -24,7 +24,7 @@ ms.locfileid: "65478798"
 >  -   當您發行變更時，系統會刪除 MDS 管理之資料格的註解。  
 > -   MDS 管理的資料格中不支援公式。 MDS 管理之資料格中的公式會處理為文字值。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
@@ -35,22 +35,22 @@ ms.locfileid: "65478798"
   
 ### <a name="to-publish-data-to-the-mds-repository"></a>若要將資料發行至 MDS 儲存機制  
   
-1.  按一下 [發行和驗證] 群組中的 [發行]。  
+1.  按一下 [發行和驗證]**** 群組中的 [發行]****。  
   
-2.  選擇性。 如果顯示 [發行並註解] 對話方塊，請選擇要針對所有更新共用相同的註解，還是個別註解每個變更。  
+2.  選擇性。 如果顯示 [發行並註解]**** 對話方塊，請選擇要針對所有更新共用相同的註解，還是個別註解每個變更。  
   
-3.  選擇性。 選取 [不要再顯示這個對話方塊] 核取方塊。 未來，您隨時都可以透過選擇 [設定] 並選取 [發行時顯示發行和註解對話方塊] 核取方塊，顯示此對話方塊。  
+3.  選擇性。 選取 [不要再顯示這個對話方塊]**** 核取方塊。 未來，您隨時都可以透過選擇 [設定]**** 並選取 [發行時顯示發行和註解對話方塊]**** 核取方塊，顯示此對話方塊。  
   
-4.  按一下 [發行]。  
+4.  按一下 **[發行]**。  
   
 > [!NOTE]  
->  如果您要將新的成員 (資料列) 加入至工作表，但是無法順利將它們發行至 MDS 儲存機制，表示您可能沒有工作表中所有屬性的 [更新] 權限。 在 [檢閱] 索引標籤上，按一下 [變更] 群組中的 [取消保護工作表]，再次嘗試發行。  
+>  如果您要將新的成員 (資料列) 加入至工作表，但是無法順利將它們發行至 MDS 儲存機制，表示您可能沒有工作表中所有屬性的 [更新]**** 權限。 在 [檢閱]**** 索引標籤上，按一下 [變更]**** 群組中的 [取消保護工作表]****，再次嘗試發行。  
   
 ## <a name="next-steps"></a>後續步驟  
- [套用商務規則 &#40;適用於 Excel 的 MDS 增益集&#41;](apply-business-rules-mds-add-in-for-excel.md)  
+ [套用商務規則 &#40;適用于 Excel 的 MDS 增益集&#41;](apply-business-rules-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [發行資料&#40;MDS 增益集的 Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   
- [驗證資料 &#40;適用於 Excel 的 MDS 增益集&#41;](validating-data-mds-add-in-for-excel.md)  
+ [發行資料 &#40;適用于 Excel 的 MDS 增益集&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   
+ [驗證適用于 Excel 的 MDS 增益集&#41;的資料 &#40;](validating-data-mds-add-in-for-excel.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f90a3e23dfd22d18d527db73fd0270723f2c44a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100282"
 ---
 # <a name="document-outline"></a>文件大綱
@@ -24,7 +24,7 @@ ms.locfileid: "66100282"
   
  如果看不到 [文件大綱] 視窗，請在 [檢視]  功能表上，按一下 [其他視窗]  ，然後按一下 [文件大綱]  。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **全部展開**  
  按一下以展開階層中的所有節點。  
   

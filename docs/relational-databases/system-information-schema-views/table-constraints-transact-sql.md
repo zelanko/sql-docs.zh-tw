@@ -1,5 +1,5 @@
 ---
-title: TABLE_CONSTRAINTS (TRANSACT-SQL) |Microsoft Docs
+title: TABLE_CONSTRAINTS （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,37 +20,37 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 05580f7687d61557325ae720ea8e638f9186a867
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078438"
 ---
-# <a name="tableconstraints-transact-sql"></a>TABLE_CONSTRAINTS (Transact-SQL)
+# <a name="table_constraints-transact-sql"></a>TABLE_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   針對目前資料庫中的每個資料表條件約束，各傳回一個資料列。 這個資訊結構描述檢視會傳回目前使用者有權限的物件之相關資訊。  
   
- 若要從這些檢視擷取資訊，請指定 完整格式的名稱**INFORMATION_SCHEMA。** _view_name_。  
+ 若要從這些視圖中取出資訊，請指定 INFORMATION_SCHEMA 的完整名稱 **。**_view_name_。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|條件約束限定詞。|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|包含條件約束之結構描述的名稱。<br /><br /> <strong>\*\* 重要\* \*</strong> 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**CONSTRAINT_CATALOG**|**Nvarchar （** 128 **）**|條件約束限定詞。|  
+|**CONSTRAINT_SCHEMA**|**Nvarchar （** 128 **）**|包含條件約束之結構描述的名稱。<br /><br /> <strong> \* \*重要\*事項</strong>請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**CONSTRAINT_NAME**|**sysname**|條件約束名稱。|  
-|**TABLE_CATALOG**|**nvarchar(** 128 **)**|資料表限定詞。|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含資料表的結構描述名稱。<br /><br /> <strong>\*\* 重要\* \*</strong> 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**TABLE_CATALOG**|**Nvarchar （** 128 **）**|資料表限定詞。|  
+|**TABLE_SCHEMA**|**Nvarchar （** 128 **）**|包含資料表的結構描述名稱。<br /><br /> <strong> \* \*重要\*事項</strong>請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**TABLE_NAME**|**sysname**|資料表名稱。|  
-|**其中**|**varchar (** 11 **)**|條件約束的類型：<br /><br /> CHECK<br /><br /> UNIQUE<br /><br /> PRIMARY KEY<br /><br /> FOREIGN KEY|  
-|**IS_DEFERRABLE**|**varchar(** 2 **)**|指定條件約束檢查是否可以延後。 一律傳回 NO。|  
-|**INITIALLY_DEFERRED**|**varchar(** 2 **)**|指定一開始時是否延遲條件約束檢查。 一律傳回 NO。|  
+|**CONSTRAINT_TYPE**|**Varchar （** 11 **）**|條件約束的類型：<br /><br /> CHECK<br /><br /> UNIQUE<br /><br /> PRIMARY KEY<br /><br /> FOREIGN KEY|  
+|**IS_DEFERRABLE**|**Varchar （** 2 **）**|指定條件約束檢查是否可以延後。 一律傳回 NO。|  
+|**INITIALLY_DEFERRED**|**Varchar （** 2 **）**|指定一開始時是否延遲條件約束檢查。 一律傳回 NO。|  
   
 ## <a name="see-also"></a>另請參閱  
- [系統檢視表&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [資訊結構描述檢視&#40;Transact SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.key_constraints &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
- [sys.check_constraints &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統檢視](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [資訊架構視圖 &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [key_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
+ [check_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ac2b8ca912f02aecc5e1b3e76d04d84b501db89b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253490"
 ---
 # <a name="remove-joins-visual-database-tools"></a>移除聯結 (Visual Database Tools)
@@ -36,8 +36,8 @@ ms.locfileid: "63253490"
  查詢和檢視設計工具會移除聯結線，並隨即變更 [SQL 窗格](sql-pane-visual-database-tools.md)中的陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
- [自動聯結資料表&#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)   
- [手動聯結資料表&#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)   
+ [自動聯結資料表 &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)   
+ [手動聯結資料表 &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)   
  [使用聯結查詢 &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
   
   

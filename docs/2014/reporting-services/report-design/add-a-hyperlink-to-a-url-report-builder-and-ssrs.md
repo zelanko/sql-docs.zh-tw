@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa7b0d32a62e5e2d729e05c88b892ccaffc0fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106820"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>將超連結加入到 URL (報表產生器及 SSRS)
@@ -23,22 +23,22 @@ ms.locfileid: "66106820"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 您也可以在您和您的使用者有權使用報表伺服器之 URL 要求進行檢視的任何報表伺服器上指定報表的 URL。 例如，您可以指定報表，並在使用者最初檢視報表時為他們隱藏文件引導模式。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中 [Reporting Services 文件集](https://go.microsoft.com/fwlink/?linkid=121312)的 [URL 存取 &#40;SSRS&#41;](../url-access-ssrs.md)。  
+ 您也可以在您和您的使用者有權使用報表伺服器之 URL 要求進行檢視的任何報表伺服器上指定報表的 URL。 例如，您可以指定報表，並在使用者最初檢視報表時為他們隱藏文件引導模式。 如需詳細資訊，請參閱《[ 線上叢書》中 ](../url-access-ssrs.md)Reporting Services 文件集[的 ](https://go.microsoft.com/fwlink/?linkid=121312)URL 存取 &#40;SSRS&#41;[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  您可以將 URL 的超連結加入到具有 **[動作]** 屬性的任何項目，例如報表中的文字方塊、影像或導出數列。 當使用者按一下該報表項目時，就會發生您定義的動作。 如需詳細資訊，請參閱[動作屬性對話方塊 &#40;報表產生器及 SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md) 和[指定外部項目的路徑 &#40;報表產生器及 SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   
- 若要快速開始作業，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../tutorial-format-text-report-builder.md)。  
+ 若要快速開始使用，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../tutorial-format-text-report-builder.md)。  
   
 > [!NOTE]  
->  繫結至資料集欄位的連結可能很容易受到惡意竄改。 如需詳細資訊，請參閱 msdn.microsoft.com 上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][ 線上叢書](https://go.microsoft.com/fwlink/?LinkId=154888)中的[保護報表和資源的安全](../security/secure-reports-and-resources.md)。  
+>  繫結至資料集欄位的連結可能很容易受到惡意竄改。 如需詳細資訊，請參閱 msdn.microsoft.com 上《 [線上叢書》](../security/secure-reports-and-resources.md) 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][保護報表和資源的安全](https://go.microsoft.com/fwlink/?LinkId=154888) 。  
   
 ### <a name="to-add-a-hyperlink"></a>若要加入超連結  
   
-1.  在報表設計檢視中，以滑鼠右鍵按一下要加入連結的文字方塊、影像或圖表，然後按一下 **[屬性]** 。  
+1.  在報表設計檢視中，以滑鼠右鍵按一下要加入連結的文字方塊、影像或圖表，然後按一下 **[屬性]**。  
   
-2.  在 [屬性] 對話方塊中，按一下 **[動作]** 。  
+2.  在 [屬性] 對話方塊中，按一下 **[動作]**。  
   
-3.  選取 **[移至 URL]** 。 此對話方塊中會出現這個選項的其他區段。  
+3.  選取 **[移至 URL]**。 此對話方塊中會出現這個選項的其他區段。  
   
 4.  在 **[選取 URL]** 中，輸入或選取 URL 或是評估為 URL 的運算式，或者按下拉式箭號，再按一下含有 URL 之欄位的名稱。  
   

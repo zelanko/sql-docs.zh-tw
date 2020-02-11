@@ -13,24 +13,24 @@ ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71afc3c0bac0ea64285c450640d96fe5f5d709b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064967"
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (資料指標程式庫)
 > [!IMPORTANT]  
->  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
   
- 本主題討論使用**SQLBindCol**資料指標程式庫中的函式。 如需一般資訊**SQLBindCol**，請參閱[SQLBindCol 函式](../../../odbc/reference/syntax/sqlbindcol-function.md)。  
+ 本主題討論如何在資料指標程式庫中使用**SQLBindCol**函數。 如需有關**SQLBindCol**的一般資訊，請參閱[SQLBindCol 函數](../../../odbc/reference/syntax/sqlbindcol-function.md)。  
   
- 應用程式配置資料指標程式庫，來傳回在目前資料列集的一或多個緩衝區。 它會呼叫**SQLBindCol**一或多次，以將這些緩衝區繫結至結果集。  
+ 應用程式會為數據指標程式庫配置一個或多個緩衝區，以傳回中目前的資料列集。 它會呼叫**SQLBindCol**一次或多次，以將這些緩衝區系結至結果集。  
   
- 應用程式可以呼叫**SQLBindCol**重新繫結結果集資料行之後就叫做**SQLExtendedFetch**， **SQLFetch**，或**SQLFetchScroll**，只要 C 資料類型、 資料行大小和小數位數的繫結的資料行維持不變。 應用程式不需要關閉資料指標重新繫結至不同的地址的資料行。  
+ 應用程式可以呼叫**SQLBindCol** ，以便在呼叫**SQLExtendedFetch**、 **SQLFetch**或**SQLFetchScroll**之後重新系結結果集資料行，只要 C 資料類型、資料行大小和系結資料行的小數位數保持不變即可。 應用程式不需要關閉資料指標，即可將資料行重新系結至不同的位址。  
   
- 資料指標程式庫支援 SQL_ATTR_ROW_BIND_OFFSET_PTR 陳述式將屬性設定為使用繫結的位移。 (**SQLBindCol**並沒有為此重新繫結進行呼叫。)如果資料指標程式庫搭配 ODBC *3.x*驅動程式繫結位移並不使用的時機**SQLFetch**呼叫。 如果，則會使用繫結位移**SQLFetch**搭配 ODBC 資料指標程式庫時，會呼叫*2.x*驅動程式因為**SQLFetch**會接著對應至**SQLExtendedFetch**。  
+ 資料指標程式庫支援將 SQL_ATTR_ROW_BIND_OFFSET_PTR 語句屬性設定為使用系結位移。 （不需要呼叫**SQLBindCol** ，就會發生此重新系結）。如果資料指標程式庫*與 ODBC 3.x*驅動程式搭配使用，則在呼叫**SQLFetch**時，不會使用系結位移。 當資料指標程式庫*與 ODBC 2.x*驅動程式搭配使用時，如果呼叫**SQLFetch** ，就會使用系結位移，因為**SQLFetch**會接著對應至**SQLExtendedFetch**。  
   
- 資料指標程式庫支援呼叫**SQLBindCol**繫結的書籤資料行。  
+ 資料指標程式庫支援呼叫**SQLBindCol**來系結書簽資料行。  
   
- 使用 ODBC 時*2.x*驅動程式，資料指標程式庫會傳回 SQLSTATE HY090 （無效的字串或緩衝區長度） 時**SQLBindCol**稱為未設為值的書籤資料行的緩衝區長度等於 4。 使用 ODBC 時*3.x*驅動程式，資料指標程式庫可讓任何大小的緩衝區。
+ 使用*ODBC 2.x*驅動程式時，當呼叫**SQLBindCol**時，資料指標程式庫會傳回 SQLSTATE HY090 （不正確字串或緩衝區長度），以將書簽資料行的緩衝區長度設定為不等於4的值。 使用*ODBC 3.x*驅動程式時，資料指標程式庫可讓緩衝區成為任何大小。

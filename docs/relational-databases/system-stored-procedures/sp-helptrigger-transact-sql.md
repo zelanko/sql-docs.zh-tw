@@ -1,5 +1,5 @@
 ---
-title: sp_helptrigger (TRANSACT-SQL) |Microsoft Docs
+title: sp_helptrigger （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1e6244443fc1f6ba7d83376226fedd56563e0d39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68048225"
 ---
-# <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
+# <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回在目前資料庫之指定資料表定義的 DML 觸發程序類型。 sp_helptrigger 無法搭配 DDL 觸發程序。 查詢[系統預存程序](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)目錄檢視。  
+  傳回在目前資料庫之指定資料表定義的 DML 觸發程序類型。 sp_helptrigger 不能與 DDL 觸發程式搭配使用。 請改為查詢[系統預存程式](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)目錄檢視。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,9 +41,9 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @tabname = ] 'table'` 是要傳回觸發程序資訊的目前資料庫中資料表的名稱。 *表格*已**nvarchar(776)** ，沒有預設值。  
+`[ @tabname = ] 'table'`這是目前資料庫中傳回觸發程式資訊的資料表名稱。 *table*是**Nvarchar （776）**，沒有預設值。  
   
-`[ @triggertype = ] 'type'` 是要傳回相關資訊的 DML 觸發程序的類型。 *型別*已**char(6)** ，預設值是 NULL，而且可以是下列值之一。  
+`[ @triggertype = ] 'type'`這是要傳回相關資訊的 DML 觸發程式類型。 *類型*是**char （6）**，預設值是 Null，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -68,8 +68,8 @@ sp_helptrigger [ @tabname = ] 'table'
 |**isinsteadof**|**int**|1=INSTEAD OF 觸發程序<br /><br /> 0=不是 INSTEAD OF 觸發程序|  
 |**trigger_schema**|**sysname**|觸發程序所屬的結構描述名稱。|  
   
-## <a name="permissions"></a>Permissions  
- 需要[中繼資料可見性組態](../../relational-databases/security/metadata-visibility-configuration.md)資料表的權限。  
+## <a name="permissions"></a>權限  
+ 需要資料表的[中繼資料可見度](../../relational-databases/security/metadata-visibility-configuration.md)設定許可權。  
   
 ## <a name="examples"></a>範例  
  下列範例會執行 `sp_helptrigger` 以產生 `Person.Person` 資料表上的觸發程序資訊。  
@@ -81,7 +81,7 @@ EXEC sp_helptrigger 'Person.Person';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ca57d34a3dda2880f3882d1940c6852af0729fb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482734"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>重疊的模型和成員的權限 (Master Data Services)
@@ -26,9 +26,9 @@ ms.locfileid: "65482734"
   
  如果成員擁有的權限與其對應模型物件的權限不同，則會套用下列規則：  
   
--   **[拒絕]** 會覆寫所有其他的權限。  
+-   [**拒絕**] 會覆寫所有其他許可權。  
   
--   **唯讀**會覆寫**更新**。  
+-   **唯讀**覆寫**更新**。  
   
  下圖顯示當屬性權限與成員權限不同時，個別屬性值的哪些權限會生效。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65482734"
   
  在 **[階層成員]** 索引標籤上，衍生階層中的 Mountain Bikes 子類別目錄節點已被指派 **[更新]** 權限。  
   
- 結果：在 [總管]  中，使用者擁有 Mountain Bikes 節點中所有成員全部屬性值的 [更新]  權限。 系統會隱藏所有其他成員和屬性。  
+ 結果：在 **[總管]** 中，使用者擁有 Mountain Bikes 節點中所有成員之所有屬性值的 **[更新]** 權限。 系統會隱藏所有其他成員和屬性。  
   
  ![mds_conc_overlap_model_example_1](../../2014/master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
@@ -50,25 +50,25 @@ ms.locfileid: "65482734"
   
  在 **[模型]** 索引標籤上，Subcategory 屬性已被指派 **[更新]** 權限。  
   
- 在 **階層成員**索引標籤上，衍生階層中的 Mountain Bikes 子類別目錄節點已被明確指派**唯讀**權限。  
+ 在 [階層**成員**] 索引標籤上，衍生階層中的 [山區自行車子類別目錄] 節點會明確指派 [**唯讀**] 許可權。  
   
- 結果：在 **總管**，使用者擁有**唯讀**Mountain Bikes 節點中成員之 Subcategory 屬性值的權限。 系統會隱藏所有其他成員和屬性。  
+ 結果：在**Explorer**中，使用者對 [山區自行車] 節點中成員的子類別屬性值具有 [**唯讀**] 許可權。 系統會隱藏所有其他成員和屬性。  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
 ## <a name="example-3"></a>範例 3  
  ![mds_conc_overlap_model_3](../../2014/master-data-services/media/mds-conc-overlap-model-3.gif "mds_conc_overlap_model_3")  
   
- 在 **模型**索引標籤上，Subcategory 屬性已**唯讀**指派權限。  
+ 在 [**模型**] 索引標籤上，[子類別目錄] 屬性已獲指派 [**唯讀**] 許可權。  
   
  在 **[階層成員]** 索引標籤上，衍生階層中的 Mountain Bikes 子類別目錄已被明確指派 **[更新]** 權限。  
   
- 結果：在 **總管**，使用者擁有**唯讀**屬性值的權限。 系統會隱藏所有其他成員和屬性。  
+ 結果：在 [ **Explorer**] 中，使用者擁有屬性值的 [**唯讀**] 許可權。 系統會隱藏所有其他成員和屬性。  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
 ## <a name="see-also"></a>另請參閱  
- [如何決定權限 &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
- [重疊的使用者和群組的權限 &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
+ [如何判斷許可權 &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
+ [重迭的使用者和群組許可權 &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

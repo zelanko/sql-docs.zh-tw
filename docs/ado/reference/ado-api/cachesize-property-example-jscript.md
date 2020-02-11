@@ -1,5 +1,5 @@
 ---
-title: CacheSize 屬性範例 (JScript) |Microsoft Docs
+title: CacheSize 屬性範例（JScript） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 3675f641-b4b1-48ff-ba33-8d9ea064cd04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ac48cd3397905a3ab0d14d65006cbd4a7656555b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920262"
 ---
 # <a name="cachesize-property-example-jscript"></a>CacheSize 屬性範例 (JScript)
-這個範例會使用[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)屬性以顯示作業的效能差異執行，而 30 記錄快取。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**CacheSizeJS.asp**。  
+這個範例會使用[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)屬性來顯示使用和不含30筆記錄快取所執行之作業的效能差異。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**CacheSizeJS。**  
   
 ```  
 <!-- BeginCacheSizeJS -->  
@@ -149,5 +149,5 @@ body {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [CacheSize 屬性 (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
+ [CacheSize 屬性（ADO）](../../../ado/reference/ado-api/cachesize-property-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

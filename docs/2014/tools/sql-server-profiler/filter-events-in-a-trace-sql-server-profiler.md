@@ -1,5 +1,5 @@
 ---
-title: 篩選事件追蹤 (SQL Server Profiler) |Microsoft Docs
+title: 篩選追蹤中的事件（SQL Server Profiler） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 851fd1c1f3249a36af6de66aaa374088fab1c1ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298173"
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>篩選追蹤中的事件 (SQL Server Profiler)
@@ -32,15 +32,15 @@ ms.locfileid: "63298173"
   
      **[事件選取範圍]** 索引標籤包含方格控制項。 方格控制項是包含每一個可追蹤事件類別的資料表。 資料表針對每個事件類別包含一個資料列。 事件類別可能會依您所連接的伺服器類型與版本而稍有不同。 事件類別在方格的 [事件]  資料行中識別，並依事件類別目錄分組。 其餘資料行會列出可針對每個事件類別傳回的資料行。  
   
-2.  按一下 [資料行篩選]。   
+2.  按一下 [資料**行篩選]。**  
   
-     [編輯篩選]  對話方塊隨即顯示。 您可以使用 [編輯篩選]  對話方塊包含的比較運算子清單，篩選追蹤中的事件。  
+     [編輯篩選]**** 對話方塊隨即顯示。 您可以使用 [編輯篩選]**** 對話方塊包含的比較運算子清單，篩選追蹤中的事件。  
   
 3.  若要套用篩選，請按一下比較運算子，再輸入篩選要用的值。  
   
 4.  按一下 [確定]  。  
   
- **考量因素：**  
+ **考量**  
   
 -   如果在 [事件選取範圍] 索引標籤的 **StartTime** 與 **EndTime** 資料行上，設定篩選條件，請確定：  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63298173"
   
          -或-  
   
-    -   已在 **[一般選項]** 對話方塊中，核取 **[使用地區設定來顯示日期和時間值]** 。 若要檢視 **[一般選項]** 對話方塊，請在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **[工具]** 功能表上，按一下 **[選項]** 。  
+    -   在 [**一般選項**] 對話方塊中，核取 [**使用地區設定來顯示日期和時間值**]。 若要檢視 **[一般選項]** 對話方塊，請在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **[工具]** 功能表上，按一下 **[選項]**。  
   
          -且-  
   

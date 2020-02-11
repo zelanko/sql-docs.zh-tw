@@ -15,13 +15,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: af5bbc51420d8f32144bc91f687ae58b86d10d52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479409"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>衍生階層 (Master Data Services)
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 衍生階層衍生自已存在於模型中實體之間的網域屬性關聯性。  
   
  您可以建立衍生階層，以反白顯示模型中任何現有的網域屬性關聯性。  
@@ -78,14 +79,14 @@ ms.locfileid: "65479409"
   
 ## <a name="related-content"></a>相關內容  
   
--   [網域屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [以網域為基礎的屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
 -   [明確階層 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
 -   [遞迴階層 &#40;Master Data Services&#41;](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [具有明確頂層的衍生階層 &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [具有明確大寫的衍生階層 &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
--   [集合 &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+-   [&#40;Master Data Services 的集合&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   

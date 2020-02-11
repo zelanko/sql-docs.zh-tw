@@ -13,14 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ac9f9882724e9ba0341bf11af948c948070e6774
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282251"
 ---
 # <a name="authorization-in-reporting-services"></a>Reporting Services 中的授權
-  授權這項程序可決定是否應該將要求的存取權類型授與某個識別，允許其對於報表伺服器資料庫中特定資源進行存取。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用以角色為基礎的授權架構，會根據應用程式的使用者角色指派，將使用者存取權授與指定的資源。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的安全性延伸模組包含授權元件的實作，是用以在使用者通過報表伺服器上的驗證之後，授與存取權給他們。 當使用者透過 SOAP API 與透過 URL 存取，嘗試在系統上或是報表伺服器項目執行作業時，就會叫用授權。 這麼做，可以透過安全性延伸模組介面**IAuthorizationExtension**。 如前所述，您所部署的任何延伸模組都會自 **IExtension** 繼承基底介面。 **IExtension**並**IAuthorizationExtension**屬於**Microsoft.ReportingServices.Interfaces**命名空間。  
+  授權這項程序可決定是否應該將要求的存取權類型授與某個識別，允許其對於報表伺服器資料庫中特定資源進行存取。 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用以角色為基礎的授權架構，會根據應用程式的使用者角色指派，將使用者存取權授與指定的資源。 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的安全性延伸模組包含授權元件的實作，是用以在使用者通過報表伺服器上的驗證之後，授與存取權給他們。 當使用者透過 SOAP API 與透過 URL 存取，嘗試在系統上或是報表伺服器項目執行作業時，就會叫用授權。 這可以透過安全性延伸模組介面**IAuthorizationExtension**來達成。 如前所述，您所部署的任何延伸模組都會自 **IExtension** 繼承基底介面。 **IExtension**和**IAuthorizationExtension**是**microsoft.reportingservices.interfaces.dll**命名空間的成員。  
   
 ## <a name="checking-access"></a>檢查存取  
  在授權中，任何自訂安全性實作的關鍵在於存取檢查，這個檢查是實作在 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> 方法之中。 每次使用者嘗試在報表伺服器上執行作業時，就會呼叫 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A>。 每個作業類型都會多載 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> 方法。 若是資料夾作業，存取檢查的範例可能如下所示：  
@@ -68,7 +70,8 @@ public bool CheckAccess(
  使用 Web 服務 <xref:ReportService2010.ReportingService2010.SetPolicies%2A> 與 <xref:ReportService2010.ReportingService2010.SetSystemPolicies%2A> 方法來建立安全性描述項。  
   
 ### <a name="authorization-flow"></a>授權流程  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 授權是由目前設定成在伺服器上執行的安全性延伸模組來控制。 授權是以角色為基礎，並受限於 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安全性架構提供的權限與作業。 下圖描述授權使用者的程序，以便在報表伺服器資料庫中的項目上操作：  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 授權是由目前設定成在伺服器上執行的安全性延伸模組來控制。 授權是以角色為基礎，並受限於 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安全性架構提供的權限與作業。 下圖描述授權使用者的程序，以便在報表伺服器資料庫中的項目上操作：  
   
  ![Reporting Services 安全性授權流程](../../media/rosettasecurityextensionauthorizationflow.gif "Reporting Services 安全性授權流程")  
   

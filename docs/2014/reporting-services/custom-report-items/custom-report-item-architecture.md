@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a053eb55547da9030eebe9036667cca2e14606f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264944"
 ---
 # <a name="custom-report-item-architecture"></a>自訂報表項目架構
@@ -34,7 +34,7 @@ ms.locfileid: "63264944"
   
 ## <a name="see-also"></a>另請參閱  
  [建立自訂報表項目執行階段元件](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   
- [建立自訂報表項目設計階段元件](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
+ [建立自訂報表專案設計階段元件](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
  [如何：部署自訂報表項目](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

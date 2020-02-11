@@ -1,5 +1,5 @@
 ---
-title: sp_describe_first_result_set & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_describe_first_result_set （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2018
 ms.prod: sql
@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053055"
 ---
-# <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
+# <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  第一個可能結果集傳回的中繼資料[!INCLUDE[tsql](../../includes/tsql-md.md)]批次。 如果批次沒有傳回任何結果，就會傳回空的結果集。 如果引發錯誤[!INCLUDE[ssDE](../../includes/ssde-md.md)]無法判別將透過執行靜態分析來執行的第一個查詢的中繼資料。 動態管理檢視[sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)傳回的相同資訊。  
+  傳回[!INCLUDE[tsql](../../includes/tsql-md.md)]批次第一個可能結果集的中繼資料。 如果批次沒有傳回任何結果，就會傳回空的結果集。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]無法判斷第一個查詢的中繼資料（藉由執行靜態分析來執行），就會引發錯誤。 動態管理檢視[sys.databases dm_exec_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)會傳回相同的資訊。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +42,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ \@tsql = ] 'Transact-SQL_batch'` 一或多個[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)** 或是**nvarchar （max)** 。  
+`[ \@tsql = ] 'Transact-SQL_batch'`一或多[!INCLUDE[tsql](../../includes/tsql-md.md)]個語句。 *交易 SQL_batch*可以是**Nvarchar （***n***）** 或**Nvarchar （max）**。  
   
-`[ \@params = ] N'parameters'` \@params 參數提供的宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，也就是類似於 sp_executesql。 參數可能**nvarchar （n)** 或是**nvarchar （max)** 。  
+`[ \@params = ] N'parameters'`\@params 會提供[!INCLUDE[tsql](../../includes/tsql-md.md)]批次參數的宣告字串，類似于 sp_executesql。 參數可以是**Nvarchar （n）** 或**Nvarchar （max）**。  
   
- 是一個字串，其中包含已內嵌在的所有參數的定義[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch&lt*。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 陳述式中指定的每個參數必須定義在\@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或陳述式中的批次不包含參數， \@params 並非必要。 這個參數的預設值是 NULL。  
+ 這是一個字串，其中包含已內嵌在[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*中之所有參數的定義。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 語句中指定的每個參數都必須在\@params 中定義。 如果語句[!INCLUDE[tsql](../../includes/tsql-md.md)]中的語句或批次不包含參數， \@則不需要 params。 這個參數的預設值是 NULL。  
   
-`[ \@browse_information_mode = ] tinyint` 指定是否傳回其他索引鍵資料行和來源資料表資訊。 如果設定為 1，就會分析每個查詢，如同查詢上包含 FOR BROWSE 選項一樣。 會傳回其他索引鍵資料行和來源資料表資訊。  
+`[ \@browse_information_mode = ] tinyint`指定是否傳回其他索引鍵資料行和來源資料表資訊。 如果設定為 1，就會分析每個查詢，如同查詢上包含 FOR BROWSE 選項一樣。 會傳回其他索引鍵資料行和來源資料表資訊。  
   
 -   如果設為 0，則不會傳回資訊。  
   
@@ -57,75 +57,75 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 -   如果設定為 2，就會分析每個查詢，如同查詢用於準備或執行資料指標一樣。 這會傳回檢視表名稱做為來源資料行資訊。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **sp_describe_first_result_set**一律會傳回狀態零成功。 如果此程序擲回錯誤，而且程序被當做 RPC 來呼叫，傳回的狀態會填入 sys.dm_exec_describe_first_result_set 之 error_type 資料行中所述的錯誤類型。 如果程序是從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 所呼叫，即使發生錯誤，傳回值也永遠是零。  
+ **sp_describe_first_result_set**一律會在成功時傳回零的狀態。 如果程式擲回錯誤，並將程式稱為 RPC，則傳回狀態會填入 dm_exec_describe_first_result_set 的 error_type 資料行中所述的錯誤類型。 如果程序是從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 所呼叫，即使發生錯誤，傳回值也永遠是零。  
   
 ## <a name="result-sets"></a>結果集  
  這個通用的中繼資料會當做結果集來傳回，而結果中繼資料中的每個資料行都會有一個資料列。 每個資料列都會使用下一節所描述的格式來描述資料行的類型和 Null 屬性。 如果每個控制項路徑都沒有第一個陳述式，就會傳回具有零個資料列的結果集。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**is_hidden**|**位元 NOT NULL**|指出資料行是為了用來瀏覽資訊而加入的額外資料行，且不會實際顯示在結果集中。|  
-|**column_ordinal**|**int NOT NULL**|包含資料行在結果集中的序數位置。 第一個資料行的位置會指定為 1。|  
-|**name**|**sysname 為 NULL**|如果可以判別名稱，則包含資料行名稱。 否則，它將會包含 NULL。|  
-|**is_nullable**|**位元 NOT NULL**|如果資料行允許 NULL 則包含值 1，如果資料行不允許 NULL 則包含 0，此外，如果無法判別資料行是否允許 NULL，則為 1。|  
-|**system_type_id**|**int NOT NULL**|包含 sys.types 中所指定的資料行的資料類型的 system_type_id。 針對 CLR 類型，即使 system_type_name 資料行將傳回 NULL，這個資料行將會傳回值 240。|  
-|**system_type_name**|**nvarchar(256) NULL**|包含名稱和引數 (例如長度、有效位數、小數位數)，已指定給資料行的資料類型。 如果資料類型是使用者定義的別名類型，這裡就會指定基礎系統類型。 如果它是 CLR 使用者定義類型，這個資料行就會傳回 NULL。|  
-|**max_length**|**smallint 非 NULL**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或**xml**。<br /><br /> 針對**文字**資料行**max_length**值會是 16，或是所設定的值**sp_tableoption 'text in row'** 。|  
-|**有效位數**|**tinyint NOT NULL**|如果以數值為基礎，就是資料行的有效位數。 否則傳回 0。|  
-|**scale**|**tinyint NOT NULL**|如果是以數值為基礎，便是資料行的小數位數。 否則傳回 0。|  
-|**collation_name**|**sysname 為 NULL**|如果是以字元為基礎，便是資料行的定序名稱。 否則，便傳回 NULL。|  
+|**is_hidden**|**位 NOT Null**|指出資料行是為了用來瀏覽資訊而加入的額外資料行，且不會實際顯示在結果集中。|  
+|**column_ordinal**|**int NOT NULL**|包含資料行在結果集中的序數位置。 第一個資料行的位置將會指定為1。|  
+|**name**|**sysname Null**|如果可以判別名稱，則包含資料行名稱。 否則，它將會包含 NULL。|  
+|**is_nullable**|**位 NOT Null**|如果資料行允許 NULL 則包含值 1，如果資料行不允許 NULL 則包含 0，此外，如果無法判別資料行是否允許 NULL，則為 1。|  
+|**system_type_id**|**int NOT NULL**|包含 sys.databases 中所指定之資料行的資料類型 system_type_id。 針對 CLR 類型，即使 system_type_name 資料行將傳回 NULL，這個資料行將會傳回值 240。|  
+|**system_type_name**|**Nvarchar （256） Null**|包含名稱和引數 (例如長度、有效位數、小數位數)，已指定給資料行的資料類型。 如果資料類型是使用者定義的別名類型，這裡就會指定基礎系統類型。 如果它是 CLR 使用者定義類型，這個資料行就會傳回 NULL。|  
+|**max_length**|**Smallint NOT Null**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**Varchar （max）**、 **Nvarchar （max）**、 **Varbinary （max）** 或**xml**。<br /><br /> 若為**文字**資料行， **max_length**值會是16，或**sp_tableoption ' text in row '** 所設定的值。|  
+|**有效位數**|**Tinyint NOT Null**|如果以數值為基礎，就是資料行的有效位數。 否則傳回 0。|  
+|**尺度**|**Tinyint NOT Null**|如果是以數值為基礎，便是資料行的小數位數。 否則傳回 0。|  
+|**collation_name**|**sysname Null**|如果是以字元為基礎，便是資料行的定序名稱。 否則，便傳回 NULL。|  
 |**user_type_id**|**int NULL**|針對 CLR 和別名類型，會如同 sys.types 中所指定，包含資料行資料類型的 user_type_id。 否則，便為 NULL。|  
-|**user_type_database**|**sysname 為 NULL**|針對 CLR 和別名類型，會包含定義類型之資料庫的名稱。 否則，便為 NULL。|  
-|**user_type_schema**|**sysname 為 NULL**|針對 CLR 和別名類型，會包含定義類型之結構描述的名稱。 否則，便為 NULL。|  
-|**user_type_name**|**sysname 為 NULL**|針對 CLR 和別名類型，會包含類型的名稱。 否則，便為 NULL。|  
+|**user_type_database**|**sysname Null**|針對 CLR 和別名類型，會包含定義類型之資料庫的名稱。 否則，便為 NULL。|  
+|**user_type_schema**|**sysname Null**|針對 CLR 和別名類型，會包含定義類型之結構描述的名稱。 否則，便為 NULL。|  
+|**user_type_name**|**sysname Null**|針對 CLR 和別名類型，會包含類型的名稱。 否則，便為 NULL。|  
 |**assembly_qualified_type_name**|**nvarchar(4000)**|針對 CLR 類型，會傳回定義類型之組件與類別的名稱。 否則，便為 NULL。|  
 |**xml_collection_id**|**int NULL**|包含 sys.columns 中所指定資料行之資料類型的 xml_collection_id。 如果傳回的類型沒有與 XML 結構描述集合相關聯，這個資料行將傳回 NULL。|  
-|**xml_collection_database**|**sysname 為 NULL**|包含定義與這個類型相關聯之 XML 結構描述集合的資料庫。 如果傳回的類型沒有與 XML 結構描述集合相關聯，這個資料行將傳回 NULL。|  
-|**xml_collection_schema**|**sysname 為 NULL**|包含定義與這個類型相關聯之 XML 結構描述集合的結構描述。 如果傳回的類型沒有與 XML 結構描述集合相關聯，這個資料行將傳回 NULL。|  
-|**xml_collection_name**|**sysname 為 NULL**|包含與這個類型相關聯之 XML 結構描述集合的名稱。 如果傳回的類型沒有與 XML 結構描述集合相關聯，這個資料行將傳回 NULL。|  
-|**is_xml_document**|**位元 NOT NULL**|如果正要傳回的資料類型是 XML，而且該類型保證是完整 XML 文件 (包含根節點)，而不是 XML 片段，則傳回 1， 否則傳回 0。|  
-|**is_case_sensitive**|**位元 NOT NULL**|如果資料行是區分大小寫的字串類型，則傳回 1；否則，便傳回 0。|  
-|**is_fixed_length_clr_type**|**位元 NOT NULL**|如果資料行是固定長度的 CLR 類型，則傳回 1；否則，便傳回 0。|  
-|**source_server**|**sysname**|在這個結果中的資料行所傳回的原始伺服器名稱 (如果它來自遠端伺服器)。 給定的名稱會出現在 sys.servers 中。 如果資料行來自本機伺服器，或是如果無法判別其原始伺服器，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
+|**xml_collection_database**|**sysname Null**|包含定義與這個類型相關聯之 XML 結構描述集合的資料庫。 如果傳回的類型沒有與 XML 結構描述集合相關聯，這個資料行將傳回 NULL。|  
+|**xml_collection_schema**|**sysname Null**|包含定義與這個類型相關聯之 XML 結構描述集合的結構描述。 如果傳回的類型沒有與 XML 結構描述集合相關聯，這個資料行將傳回 NULL。|  
+|**xml_collection_name**|**sysname Null**|包含與這個類型相關聯之 XML 結構描述集合的名稱。 如果傳回的類型沒有與 XML 結構描述集合相關聯，這個資料行將傳回 NULL。|  
+|**is_xml_document**|**位 NOT Null**|如果正要傳回的資料類型是 XML，而且該類型保證是完整 XML 文件 (包含根節點)，而不是 XML 片段，則傳回 1， 否則傳回 0。|  
+|**is_case_sensitive**|**位 NOT Null**|如果資料行是區分大小寫的字串類型，則傳回 1；否則，便傳回 0。|  
+|**is_fixed_length_clr_type**|**位 NOT Null**|如果資料行是固定長度的 CLR 類型，則傳回 1；否則，便傳回 0。|  
+|**source_server**|**sysname**|在這個結果中的資料行所傳回的原始伺服器名稱 (如果它來自遠端伺服器)。 系統會提供名稱，因為它會出現在 sys.databases 中。 如果資料行來自本機伺服器，或是如果無法判別其原始伺服器，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
 |**source_database**|**sysname**|這個結果中的資料行所傳回之原始資料庫名稱。 如果無法判別資料庫，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
 |**source_schema**|**sysname**|這個結果中的資料行所傳回之原始結構描述名稱。 如果無法判別結構描述，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
 |**source_table**|**sysname**|這個結果的資料行所傳回之原始資料表名稱。 如果無法判別資料表，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
 |**source_column**|**sysname**|結果資料行所傳回之原始資料行名稱。 如果無法判別資料行，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
-|**is_identity_column**|**位元 NULL**|如果資料行是識別欄位，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為識別欄位，則傳回 NULL。|  
-|**is_part_of_unique_key**|**位元 NULL**|如果資料行是唯一索引 (包括唯一和主要的條件約束) 的一部分，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為唯一索引的一部分，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
-|**is_updateable**|**位元 NULL**|如果資料行是可更新的，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否可更新，則傳回 NULL。|  
-|**is_computed_column**|**位元 NULL**|如果資料行是計算資料行，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為計算資料行，則傳回 NULL。|  
-|**is_sparse_column_set**|**位元 NULL**|如果資料行是疏鬆資料行，則傳回 1，否則傳回 0。 如果它無法判別資料行是否為疏鬆資料行集的一部分，則傳回 NULL。|  
-|**ordinal_in_order_by_list**|**smallint NULL**|這個資料行在 ORDER BY 清單中的位置。 如果資料行不會顯示在 ORDER BY 清單中，或如果無法唯一判別 ORDER BY 清單，則傳回 NULL。|  
-|**order_by_list_length**|**smallint NULL**|ORDER BY 清單的長度。 如果沒有 ORDER BY 清單，或如果無法唯一判別 ORDER BY 清單，則傳回 NULL。 請注意，這個值會是所傳回的所有資料列相同**sp_describe_first_result_set。**|  
-|**order_by_is_descending**|**smallint NULL**|如果 ordinal_in_order_by_list 不是 NULL， **order_by_is_descending**資料行則報告此資料行的 ORDER BY 子句方向。 否則，它會回報 NULL。|  
+|**is_identity_column**|**位 Null**|如果資料行是識別欄位，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為識別欄位，則傳回 NULL。|  
+|**is_part_of_unique_key**|**位 Null**|如果資料行是唯一索引 (包括唯一和主要的條件約束) 的一部分，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為唯一索引的一部分，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
+|**is_updateable**|**位 Null**|如果資料行是可更新的，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否可更新，則傳回 NULL。|  
+|**is_computed_column**|**位 Null**|如果資料行是計算資料行，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為計算資料行，則傳回 NULL。|  
+|**is_sparse_column_set**|**位 Null**|如果資料行是疏鬆資料行，則傳回 1，否則傳回 0。 如果它無法判別資料行是否為疏鬆資料行集的一部分，則傳回 NULL。|  
+|**ordinal_in_order_by_list**|**Smallint Null**|這個資料行在 ORDER BY 清單中的位置。 如果資料行不會顯示在 ORDER BY 清單中，或如果無法唯一判別 ORDER BY 清單，則傳回 NULL。|  
+|**order_by_list_length**|**Smallint Null**|ORDER BY 清單的長度。 如果沒有 ORDER BY 清單，或如果無法唯一判別 ORDER BY 清單，則傳回 NULL。 請注意，sp_describe_first_result_set 傳回的所有資料列的這個值都相同 **。**|  
+|**order_by_is_descending**|**Smallint Null**|如果 ordinal_in_order_by_list 不是 NULL，**order_by_is_descending** 資料行會回報此資料行的 ORDER BY 子句方向。 否則，它會回報 NULL。|  
 |**tds_type_id**|**int NOT NULL**|供內部使用。|  
 |**tds_length**|**int NOT NULL**|供內部使用。|  
 |**tds_collation_id**|**int NULL**|供內部使用。|  
-|**tds_collation_sort_id**|**tinyint NULL**|供內部使用。|  
+|**tds_collation_sort_id**|**Tinyint Null**|供內部使用。|  
   
 ## <a name="remarks"></a>備註  
- **sp_describe_first_result_set** ，如果此程序傳回的第一個結果集 （假設） 中繼資料批次 A 並且如果該批次 （A） 之後執行然後批次的保證會 (1) 引發最佳化時間錯誤，(2)會引發執行階段錯誤，(3) 會傳回任何結果集，或 (4) 傳回第一個結果集，使用相同的中繼資料所描述**sp_describe_first_result_set**。  
+ **sp_describe_first_result_set**保證如果程式傳回（a 假設）批次 a 的第一個結果集中繼資料，而且後續執行該批次（a），則批次將會引發優化時間錯誤，（2）引發執行階段錯誤、（3）不傳回任何結果集，或（4）傳回具有**sp_describe_first_result_set**所描述之相同中繼資料的第一個結果集。  
   
- 名稱、Null 屬性和資料類型可以不同。 如果**sp_describe_first_result_set**傳回空的結果集，就可以保證批次執行會傳回任何結果集。  
+ 名稱、Null 屬性和資料類型可以不同。 如果**sp_describe_first_result_set**傳回空的結果集，保證批次執行將不會傳回任何結果集。  
   
- 這項保證會假設伺服器上沒有相關的結構描述變更。 在伺服器上的相關結構描述變更不包括建立暫存資料表或資料表之間的時間於批次 A 中的變數， **sp_describe_first_result_set**稱為和期間傳回的結果集的時間執行，包括由批次 b 進行的結構描述變更  
+ 這保證會假設伺服器上沒有相關的架構變更。 伺服器上的相關架構變更不包括在呼叫**sp_describe_first_result_set**的時間，以及在執行期間傳回結果集的時間（包括批次 B 所做的架構變更），在批次中建立臨時表或資料表變數。  
   
- **sp_describe_first_result_set**任何下列的情況下會傳回錯誤。  
+ **sp_describe_first_result_set**在下列任何情況下都會傳回錯誤。  
   
--   如果輸入\@tsql 不是有效[!INCLUDE[tsql](../../includes/tsql-md.md)]批次。 有效性取決於的剖析和分析[!INCLUDE[tsql](../../includes/tsql-md.md)]批次。 決定時，不會考慮任何批次在查詢最佳化期間，或在執行期間造成的錯誤是否[!INCLUDE[tsql](../../includes/tsql-md.md)]批次是否有效。  
+-   如果輸入\@tsql 不是有效[!INCLUDE[tsql](../../includes/tsql-md.md)]的批次。 有效性是藉由剖析和分析[!INCLUDE[tsql](../../includes/tsql-md.md)]批次來判斷。 判斷[!INCLUDE[tsql](../../includes/tsql-md.md)]批次是否有效時，批次在查詢優化期間或執行期間所造成的任何錯誤都不會列入考慮。  
   
--   如果\@參數不是 NULL，並且包含字串不是句法有效的參數宣告字串，或如果它包含的字串，宣告任何參數一次以上。  
+-   如果\@params 不是 Null，而且包含的字串不是語法有效的參數宣告字串，或包含的字串會宣告任何參數一次以上，則為。  
   
--   如果輸入[!INCLUDE[tsql](../../includes/tsql-md.md)]批次中宣告的參數，宣告相同名稱的本機變數\@params。  
+-   如果輸入[!INCLUDE[tsql](../../includes/tsql-md.md)]批次宣告的區域變數與 params 中\@宣告的參數名稱相同。  
   
 -   如果陳述式使用暫存資料表。  
   
 -   查詢包含建立隨後要查詢的永久資料表。  
   
- 如果其他所有檢查已成功，就會將輸入批次內所有可能的控制流程路徑列入考量。 此採用考慮到所有的控制流程陳述式 (GOTO、 IF/ELSE、 WHILE 及[!INCLUDE[tsql](../../includes/tsql-md.md)]TRY/CATCH 區塊) 以及任何程序，動態[!INCLUDE[tsql](../../includes/tsql-md.md)]批次或從輸入批次叫用 EXEC 陳述式時，DDL 陳述式而引發的觸發程序要引發的 DDL 觸發程序或 DML 陳述式會造成要引發的觸發程序，因為上的外部索引鍵條件約束的串聯式動作而遭到修改的資料表或目標資料表上。 在具有許多可能的控制路徑之情況下，有時候，演算將會停止。  
+ 如果其他所有檢查已成功，就會將輸入批次內所有可能的控制流程路徑列入考量。 這會將所有控制流程語句納入考慮（GOTO、IF/ELSE、WHILE 和[!INCLUDE[tsql](../../includes/tsql-md.md)] TRY/CATCH 區塊），以及由 EXEC 語句從輸入[!INCLUDE[tsql](../../includes/tsql-md.md)]批次叫用的任何程式、動態批次或觸發程式、導致 ddl 觸發程式引發的 ddl 語句，或是導致在目標資料表上引發觸發程式的 DML 語句，或因為外鍵條件約束的串聯動作而修改的資料表。 在具有許多可能的控制路徑之情況下，有時候，演算將會停止。  
   
- 針對每個控制流程路徑中，第一個陳述式 （如果有的話），傳回結果集由**sp_describe_first_result_set**。  
+ 針對每個控制流程路徑，傳回結果集的第一個語句（如果有的話）取決於**sp_describe_first_result_set**。  
   
  在單一批次中找到多個可能的第一個陳述式時，其結果可能會在資料行數目、資料行名稱、Null 屬性和資料類型等方面有所不同。 這裡將會詳細說明這些差異的處理方式：  
   
@@ -137,22 +137,22 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 -   如果資料類型不同，將會擲回錯誤，且不會傳回任何結果，除非遇到下列情況：  
   
-    -   **varchar(a)** 要**varchar(a')** 其中 ' >。  
+    -   **Varchar （a）** 到**Varchar （a '）** ，其中 ' >。  
   
-    -   **varchar(a)** 至**varchar （max)**  
+    -   **Varchar （a）** 至**Varchar （max）**  
   
-    -   **nvarchar(a)** 要**nvarchar(a')** 其中 ' >。  
+    -   Nvarchar **（a）** 到**Nvarchar （a '）** ，其中 ' >。  
   
-    -   **nvarchar(a)** 至**nvarchar （max)**  
+    -   Nvarchar **（a）** 到**Nvarchar （max）**  
   
-    -   **varbinary(a)** 要**varbinary(a')** 其中 ' >。  
+    -   **Varbinary （a）** 至**Varbinary （a '）** ，其中 ' >。  
   
-    -   **varbinary(a)** 至**varbinary （max)**  
+    -   Varbinary **（a）** 到**Varbinary （max）**  
   
  **sp_describe_first_result_set**不支援間接遞迴。  
   
-## <a name="permissions"></a>Permissions  
- 需要權限來執行\@tsql 引數。  
+## <a name="permissions"></a>權限  
+ 需要執行\@tsql 引數的許可權。  
   
 ## <a name="examples"></a>範例  
   
@@ -190,7 +190,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|NULL|NULL|NULL|NULL|  
   
@@ -203,7 +203,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
 |1|2|a|dbo|t|a|1|  
@@ -216,7 +216,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  
@@ -255,7 +255,7 @@ ELSE
     SELECT a FROM t2;  
 ```  
   
- 結果：錯誤，類型不相符 (**int**與**smallint**)。  
+ 結果：錯誤，類型不相符（**int**與**Smallint**）。  
   
 #### <a name="column-name-cannot-be-determined"></a>無法判別資料行名稱  
  在第一個可能的結果集中，在相同的變數長度類型、Null 屬性與資料行名稱等情況下，資料行的長度不同：  
@@ -269,7 +269,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- 結果：\<未知的資料行名稱 > **varchar （20) NULL**  
+ 結果： \<未知的資料行名稱> **Varchar （20） Null**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>透過別名強制資料行名稱必須相同  
  與先前相同，但是資料行透過資料行別名而具有相同名稱。  
@@ -283,7 +283,7 @@ ELSE
     SELECT d AS b FROM t2;'  
 ```  
   
- 結果： b **varchar (20) NULL**  
+ 結果： b **Varchar （20） Null**  
   
 #### <a name="error-because-column-types-cannot-be-matched"></a>因為無法比對資料行類型而發生錯誤  
  在不同的第一個可能的結果集中，資料行類型彼此不同。  
@@ -297,7 +297,7 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- 結果：錯誤，類型不相符 (**varchar(10)** 與**nvarchar(10**)。  
+ 結果：錯誤，類型不相符（**Varchar （10）** 與**Nvarchar （10）**）。  
   
 #### <a name="result-set-can-return-an-error"></a>結果集可以傳回錯誤  
  第一個結果集為錯誤或結果集。  
@@ -313,7 +313,7 @@ ELSE
 SELECT e FROM t2; -- Ignored, not a possible first result set.;'  
 ```  
   
- 結果： **intNULL**  
+ 結果： **intNull**  
   
 #### <a name="some-code-paths-return-no-results"></a>部分程式碼路徑沒有傳回任何結果  
  第一個結果集為 Null 或結果集。  
@@ -326,7 +326,7 @@ IF(1=1)
 SELECT a FROM t1;'  
 ```  
   
- 結果： **intNULL**  
+ 結果： **intNull**  
   
 #### <a name="result-from-dynamic-sql"></a>來自動態 SQL 的結果  
  第一個結果集為可探索的動態 SQL，因為本身屬於文字字串。  
@@ -336,7 +336,7 @@ sp_describe_first_result_set @tsql =
 N'EXEC(N''SELECT a FROM t1'');'  
 ```  
   
- 結果： **INT NULL**  
+ 結果： **INT Null**  
   
 #### <a name="result-failure-from-dynamic-sql"></a>來自動態 SQL 的失敗結果  
  第一個結果集因為動態 SQL 而未定義。  
@@ -369,10 +369,10 @@ EXEC(@SQL)
     ); '  
 ```  
   
- 結果：Column1 **bigint NOT NULL**  
+ 結果： Column1 **BIGINT NOT Null**  
   
 #### <a name="error-caused-by-a-ambiguous-result-set"></a>因位結果集模稜兩可而發生錯誤  
- 此範例假設名為 user1 的另一位使用者具有資料行的預設結構描述 s1 中名為 t1 的資料表 ( **int NOT NULL**)。  
+ 這個範例假設名為 user1 的另一個使用者在預設的架構 s1 中，有一個名為 t1 的資料表，其中包含資料行（ **INT NOT Null**）。  
   
 ```  
 sp_describe_first_result_set @tsql =   
@@ -383,7 +383,7 @@ N'
 , @params = N'@p int'  
 ```  
   
- 結果：錯誤。 dbo.t1 或 s1.t1，各自具有不同數目的資料行，可以是 t1。  
+ 結果：錯誤。 t1 可以是 dbo 或 s1，每個都有不同的資料行數目。  
   
 #### <a name="result-even-with-ambiguous-result-set"></a>即使結果集模稜兩可的結果  
  使用與先前範例相同的假設。  
@@ -396,10 +396,10 @@ N'
     SELECT a FROM t1;'  
 ```  
   
- 結果： **int NULL**因為 dbo.t1.a 和 s1.t1.a 都有型別**int**和不同的 null 屬性。  
+ 結果： **INT Null** ，因為 dbo 和 s1. a 都具有類型**int**和不同的 null 屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ [sp_describe_undeclared_parameters &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [dm_exec_describe_first_result_set &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [dm_exec_describe_first_result_set_for_object &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c49b343e9eb04a349219b9a5a752496c9bc0abda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63297580"
 ---
 # <a name="add-related-tables-to-diagrams-visual-database-tools"></a>將相關的資料表加入圖表 (Visual Database Tools)
@@ -28,6 +28,6 @@ ms.locfileid: "63297580"
   
 1.  將有關聯性之資料表加入至資料庫圖表。  
   
-2.  在資料表上按一下滑鼠右鍵，在捷徑功能表中按一下 [新增關聯資料表]。  
+2.  在資料表上按一下滑鼠右鍵，在捷徑功能表中按一下 [新增關聯資料表]  。  
   
   

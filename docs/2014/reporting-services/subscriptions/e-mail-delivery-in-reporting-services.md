@@ -15,20 +15,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68024e36dd5f8188097ebcc673056c1b6d11e59b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100890"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的電子郵件傳遞
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含了電子郵件傳遞延伸模組，可讓您透過電子郵件傳送報表給個別使用者或群組。 您可以透過 Reporting Services 組態管理員並藉由編輯 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態檔，設定電子郵件傳遞延伸模組。  
   
- 若要透過電子郵件散發或接收報表，您可以定義標準訂閱或資料驅動訂閱。 您一次只能訂閱或散發一個報表。 您無法建立在單一電子郵件訊息中傳遞多個報表的訂閱。 如需有關訂用帳戶的詳細資訊，請參閱[建立、 修改和刪除標準訂用帳戶&#40;原生模式的 Reporting Services&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
+ 若要透過電子郵件散發或接收報表，您可以定義標準訂閱或資料驅動訂閱。 您一次只能訂閱或散發一個報表。 您無法建立在單一電子郵件訊息中傳遞多個報表的訂閱。 如需有關訂閱的詳細資訊，請參閱[在原生模式中建立、修改和刪除標準訂閱 &#40;Reporting Services&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式&#124;SharePoint 2010 和 SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Sharepoint 模式 &#124; sharepoint 2010 和 SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式|  
   
 ## <a name="e-mail-delivery-options"></a>電子郵件傳遞選項  
  報表伺服器電子郵件傳遞可以利用下列方式傳遞報表：  
@@ -37,9 +37,9 @@ ms.locfileid: "66100890"
   
 -   在電子郵件訊息的 [主旨:] 傳送通知。 依預設，訂閱定義中的 [主旨:] 包含下列變數，處理訂閱時，會以報表特定資訊取代這些變數：  
   
-     **@ReportName** 指定報表的名稱。  
+     **@ReportName**指定報表的名稱。  
   
-     **@ExecutionTime** 指定報表執行的時間。  
+     **@ExecutionTime**指定報表的執行時間。  
   
      您可以將這些變數與靜態文字結合，或者修改每個訂閱 [主旨:] 中的文字。  
   
@@ -47,14 +47,15 @@ ms.locfileid: "66100890"
   
      如果您的瀏覽器支援 HTML 4.0 與 MHTML，而且您選擇網頁封存轉譯格式，則報表會內嵌為訊息的一部分。 所有其他轉譯格式 (CSV、PDF 等等) 均以附加檔案傳遞報表。 您可以在 RSReportServer 組態檔中停用此功能。  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在傳送報表之前，不會檢查附加檔案或訊息的大小。 如果附加檔案或訊息超過郵件伺服器所允許的上限，將不會傳遞報表。 如果是大型報表，請選擇其他傳遞選項之一 (例如 URL 或通知)。  
+     
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在傳送報表之前，不會檢查附加檔案或訊息的大小。 如果附加檔案或訊息超過郵件伺服器所允許的上限，將不會傳遞報表。 如果是大型報表，請選擇其他傳遞選項之一 (例如 URL 或通知)。  
   
- 您可以設定傳遞選項，來決定建立訂閱時如何傳遞報表。 例如，您若是在訂閱中選取 [包含連結]  ，則電子郵件訊息包含連結到報表的超連結。  
+ 您可以設定傳遞選項，來決定建立訂閱時如何傳遞報表。 例如，您若是在訂閱中選取 [包含連結]****，則電子郵件訊息包含連結到報表的超連結。  
   
 ## <a name="role-based-e-mail-settings"></a>以角色為基礎的電子郵件設定  
  您訂閱報表時所使用的電子郵件傳遞設定，會依您的角色包含的是「管理個別訂閱」工作或「管理所有訂閱」工作而異。  
   
-|工作|可用的設定|  
+|Task|可用的設定|  
 |----------|------------------------|  
 |管理個別訂閱|顯示讓使用者可自動化並傳遞報表給自己的欄位。 在此模式下，接受電子郵件別名的欄位無法使用。|  
 |管理所有訂閱|顯示支援全域散發的欄位，包括 [收件者:]、[副本:]、[密件副本:] 和 [回覆至:] 欄位，提供更多方式傳送報表給更多訂閱者。 電子郵件別名欄位的可用性是透過 RSReportServer 組態檔設定定義。|  
@@ -71,18 +72,18 @@ ms.locfileid: "66100890"
   
  如需如何設定原生模式報表伺服器的詳細資訊，請參閱下列內容：  
   
--   [為電子郵件傳遞設定報表伺服器&#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+-   [針對 &#40;SSRS Configuration Manager 的電子郵件傳遞設定報表伺服器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
 -   [電子郵件設定-Configuration Manager &#40;SSRS 原生模式&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
  如需如何設定 SharePoint 模式報表伺服器的詳細資訊，請參閱下列內容：  
   
--   [設定 Reporting Services 服務應用程式的電子郵件 &#40;SharePoint 2010 和 SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [&#40;SharePoint 2010 和 SharePoint 2013 設定 Reporting Services 服務應用程式的電子郵件&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [工作和權限](../security/tasks-and-permissions.md)   
  [訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [資料驅動訂閱](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [角色指派](../security/role-assignments.md)  
   
   

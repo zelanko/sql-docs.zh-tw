@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobcount (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_jobcount （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1f874aa26001b7d595f319a59d5c116907aa096e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054959"
 ---
-# <a name="sphelpjobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
+# <a name="sp_help_jobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   提供排程所附加的作業數目。  
@@ -41,12 +41,12 @@ sp_help_jobcount
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @schedule_id = ] schedule_id` 要列出的排程識別碼。 *schedule_id*已**int**，沒有預設值。 任一*schedule_id*或是*schedule_name&lt*可能指定。  
+`[ @schedule_id = ] schedule_id`要列出的排程識別碼。 *schedule_id*是**int**，沒有預設值。 可以指定*schedule_id*或*schedule_name* 。  
   
-`[ @schedule_name = ] 'schedule_name'` 要列出的排程名稱。 *schedule_name&lt*已**sysname**，沒有預設值。 任一*schedule_id*或是*schedule_name&lt*可能指定。  
+`[ @schedule_name = ] 'schedule_name'`要列出的排程名稱。 *schedule_name*是**sysname**，沒有預設值。 可以指定*schedule_id*或*schedule_name* 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
  傳回下列結果集：  
@@ -58,8 +58,8 @@ sp_help_jobcount
 ## <a name="remarks"></a>備註  
  這個程序會列出附加至指定排程的作業數目。  
   
-## <a name="permissions"></a>Permissions  
- 依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
+## <a name="permissions"></a>權限  
+ 根據預設，**系統管理員（sysadmin** ）固定伺服器角色的成員可以執行此預存程式。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
   
 -   **SQLAgentUserRole**  
   
@@ -69,7 +69,7 @@ sp_help_jobcount
   
  如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有成員**sysadmin**可以檢視由他人所擁有的作業計數。  
+ 只有**系統管理員（sysadmin** ）的成員可以查看其他人所擁有之作業的計數。  
   
 ## <a name="examples"></a>範例  
  下列範例會列出附加至 `NightlyJobs` 排程的作業數目。  
@@ -84,10 +84,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Agent 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+ [SQL Server Agent 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

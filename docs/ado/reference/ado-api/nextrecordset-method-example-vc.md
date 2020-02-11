@@ -1,5 +1,5 @@
 ---
-title: NextRecordset 方法範例 （VC + +） |Microsoft Docs
+title: NextRecordset 方法範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec37df7c37c8117dfdda99faabd746ccd8c3d69f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932020"
 ---
 # <a name="nextrecordset-method-example-vc"></a>NextRecordset 方法範例 (VC++)
-這個範例會使用[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法，以檢視中使用複合命令陳述式組成的三個不同的資料錄集的資料**選取**陳述式。  
+這個範例會使用[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法來查看記錄集中的資料，其中使用由三個不同**SELECT**語句所組成的複合命令語句。  
   
 ```  
 // BeginNextRecordsetCpp.cpp  

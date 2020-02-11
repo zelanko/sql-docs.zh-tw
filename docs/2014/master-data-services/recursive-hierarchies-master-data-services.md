@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0ebe093973174fe1e245ced134888d3e10417467
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478844"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>遞迴階層 (Master Data Services)
@@ -46,7 +46,7 @@ ms.locfileid: "65478844"
   
 -   衍生階層不能包含一個以上的遞迴關聯性。 但是可以擁有其他衍生關聯性 (例如，包含遞迴經理與員工關聯性的衍生階層也可以擁有國家 (地區) 與經理及員工與商店的關聯性)。  
   
--   不能指派成員權限 (在 [階層成員]  索引標籤上) 給遞迴階層中的成員。  
+-   不能指派成員權限 (在 [階層成員]**** 索引標籤上) 給遞迴階層中的成員。  
   
 -   遞迴階層不能包含循環關聯性。 例如，如果 Sandeep 是 Katherine 的經理，Katherine 不能做為 Sandeep 的經理。 此外，Katherine 不能管理她自己。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65478844"
   
 ## <a name="related-content"></a>相關內容  
   
--   [網域屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [以網域為基礎的屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
 -   [衍生階層 &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   

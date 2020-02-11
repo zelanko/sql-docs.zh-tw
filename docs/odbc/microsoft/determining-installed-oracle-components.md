@@ -13,19 +13,19 @@ ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0567e38d34b9400dcaf6b170d821aa0e5fd0e263
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079016"
 ---
 # <a name="determining-installed-oracle-components"></a>判斷已安裝的 Oracle 元件
 > [!IMPORTANT]  
->  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用所提供的 ODBC 驅動程式。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 Oracle 所提供的 ODBC 驅動程式。  
   
- 若要判斷您的系統 （和其版本） 上安裝的 Oracle 元件，請瀏覽 Oracle 主目錄下的 \Orainst 目錄。 開啟下列文字檔的其中一個：Nt.rgs、 Win95.rgs 或 Win98.rgs。  
+ 若要判斷系統上所安裝的 Oracle 元件（及其版本），請流覽至 Oracle 主目錄底下的 \Orainst 目錄。 開啟下列其中一個文字檔： Nt .rgs、Win95 或 Win98。  
   
- 檔案格式會類似於下列各項：  
+ 檔案格式如下所示：  
   
 ```  
 0 ntinstall     all    "orainst"  "3.3.1.0.0C"  "Oracle Installer"  
@@ -37,4 +37,4 @@ ms.locfileid: "68079016"
 69 w32plus80    all    "plus80"   "8.0.5.0.0"   "SQL*Plus"  
 ```  
   
- .Rgs 檔案也包含安裝資訊和每個元件的描述。
+ .Rgs 檔案也包含每個元件的安裝資訊和說明。

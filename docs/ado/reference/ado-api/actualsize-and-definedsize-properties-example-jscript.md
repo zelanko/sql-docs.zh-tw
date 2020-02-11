@@ -1,5 +1,5 @@
 ---
-title: ActualSize 和 DefinedSize 屬性範例 (JScript) |Microsoft Docs
+title: ActualSize 和 DefinedSize 屬性範例（JScript） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b465f5e567262aead6ffe73f696968d736b472eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921502"
 ---
 # <a name="actualsize-and-definedsize-properties-example-jscript"></a>ActualSize 和 DefinedSize 屬性範例 (JScript)
-這個範例會使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)並[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)来顯示的已定義的大小和實際大小 欄位的屬性。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**ActualSizeJS.asp**。  
+這個範例會使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)和[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)屬性，顯示欄位的定義大小和實際大小。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**ActualSizeJS。**  
   
 ```  
 <!-- BeginActualSizeJS -->  
@@ -131,6 +131,6 @@ body {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ActualSize 屬性 (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
+ [ActualSize 屬性（ADO）](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [DefinedSize 屬性](../../../ado/reference/ado-api/definedsize-property.md)   
  [Field 物件](../../../ado/reference/ado-api/field-object.md)

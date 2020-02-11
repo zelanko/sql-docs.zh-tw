@@ -22,14 +22,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9b5ca361cbfb5de42341fad8625f10d7ce3c2fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099805"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 公用程式 (SSRS)
-  擷取、還原、建立和刪除「用來保護機密報表伺服器資料，以免遭到未獲授權的存取」之對稱金鑰。 另外，這個公用程式也用來將報表伺服器執行個體聯結在向外延展部署中。 「報表伺服器向外延展部署」  是指共用單一報表伺服器資料庫的多個報表伺服器執行個體。  
+  擷取、還原、建立和刪除「用來保護機密報表伺服器資料，以免遭到未獲授權的存取」之對稱金鑰。 另外，這個公用程式也用來將報表伺服器執行個體聯結在向外延展部署中。 「報表伺服器向外延展部署」** 是指共用單一報表伺服器資料庫的多個報表伺服器執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66099805"
   
  此引數沒有取得值。 不過，命令列必須包括其他引數，才能選取要套用的金鑰所在的檔案。 您可以指定的引數包括 `-f` 和 `-p`。  
   
- **-d**  
+ **-d.ddd...e**  
  刪除所有對稱金鑰執行個體及報表伺服器資庫中所有已加密的資料。 此引數沒有取得值。  
   
  `-s`  
@@ -75,17 +75,17 @@ ms.locfileid: "66099805"
  `-j`  
  設定遠端報表伺服器執行個體來共用本機報表伺服器執行個體所用的報表伺服器資料庫。  
   
- **-r**  <安裝識別碼>   
- 移除特定報表伺服器執行個體的對稱金鑰資訊，因而從向外延展部署中移除報表伺服器。 <安裝識別碼>  是一個 GUID 值，可在 RSReportserver.config 檔中找到它。  
+ **-r**  *installationID*  
+ 移除特定報表伺服器執行個體的對稱金鑰資訊，因而從向外延展部署中移除報表伺服器。 <安裝識別碼>** 是一個 GUID 值，可在 RSReportserver.config 檔中找到它。  
   
- `-f`  *檔案*  
+ `-f`  *文字檔*  
  指定儲存了對稱金鑰備份副本之檔案的完整路徑。  
   
  若為 **rskeymgmt -e**，對稱金鑰會寫入您指定的檔案中。  
   
  若為 **rskeymgmt -a**，便會將檔案中所儲存的對稱金鑰值套用在報表伺服器執行個體上。  
   
- `-p`  *password*  
+ `-p`  *許可權*  
  (`-f` 需要這個引數) 指定用來備份或套用對稱金鑰的密碼。 這個值不能空白。  
   
  `-i`  
@@ -100,13 +100,13 @@ ms.locfileid: "66099805"
  `-u`  *useraccount*  
  指定要聯結至向外延展部署中之遠端電腦的管理員帳戶。 如果未指定帳戶，就會使用目前使用者的認證。  
   
- `-v`  *password*  
+ `-v`  *許可權*  
  (`-u` 需要這個引數) 指定要聯結至向外延展部署中之遠端電腦的管理員帳戶密碼。  
   
- **-t**  <追蹤>   
+ **-t**  *追蹤*  
  在追蹤記錄中，輸出錯誤訊息。 此引數沒有取得值。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  您必須是執行這套工具的本機管理員，且您必須在主控報表伺服器之電腦的本機環境中執行它。 rskeymgmt 公用程式會使用本機報表伺服器 Windows 執行個體 (這個公用程式無法連接報表伺服器 Windows 服務的遠端執行個體，因此，您無法利用它來管理遠端報表伺服器執行個體的加密金鑰)。  
   
 > [!NOTE]  
@@ -147,9 +147,9 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  報表伺服器向外延展部署是指多個報表伺服器執行個體共用相同報表伺服器資料庫的部署模型。 對稱金鑰儲存在報表伺服器資料庫中的任何報表伺服器執行個體，都可以使用報表伺服器資料庫。 例如，如果報表伺服器資料庫包含三個報表伺服器執行個體的金鑰資訊，這三個執行個體都會被視為相同向外延展部署的成員。  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>在相同電腦上聯結報表伺服器執行個體  
- 您可以從安裝在相同電腦上的多個報表伺服器執行個體中建立向外延展部署。 如果您要聯結的報表伺服器執行個體是安裝在本機，請不要設定 `-u` 和 `-v` 引數。 只有當您從遠端電腦聯結執行個體時，才要使用 `-u` 和 `-v` 引數。 如果您指定的引數時，您會收到下列錯誤：「 使用者認證無法用於本機連接。 」  
+ 您可以從安裝在相同電腦上的多個報表伺服器執行個體中建立向外延展部署。 如果您要聯結的報表伺服器執行個體是安裝在本機，請不要設定 `-u` 和 `-v` 引數。 只有當您從遠端電腦聯結執行個體時，才要使用 `-u` 和 `-v` 引數。 如果您指定這些引數，會出現下列錯誤：「使用者認證無法用於本機連接。」  
   
- 下列範例說明使用多個本機執行個體建立向外延展部署的語法。 在此範例中，<`initializedinstance`> 是已初始化為使用報表伺服器資料庫中，執行個體的名稱和 <`newinstance`> 是您想要新增至部署的執行個體名稱：  
+ 下列範例說明使用多個本機執行個體建立向外延展部署的語法。 在此範例中， `initializedinstance` <> 是已初始化來使用報表伺服器資料庫的實例名稱，而 <`newinstance`> 是您想要加入至部署之實例的名稱：  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  
@@ -165,19 +165,20 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>檔案位置  
- Rskeymgmt.exe 位於 **\<*磁碟機*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** 或 **\<*磁碟機*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn**。 您可以從檔案系統上的任何資料夾執行此公用程式。  
+ Rskeymgmt 位於** \<*磁片磁碟機*>： \Program Files\Microsoft SQL Server\110\Tools\Binn**或** \<*磁片磁碟機*>： \Program Files （x86） \Microsoft SQL Server\110\Tools\Binn**。 您可以從檔案系統上的任何資料夾執行此公用程式。  
   
 ## <a name="remarks"></a>備註  
  報表伺服器會加密預存的認證和連接資訊。 資料的加密使用公開金鑰和對稱金鑰。 報表伺服器資料庫必須具備有效的金鑰，報表伺服器才能夠執行。 您可以使用 **rskeymgmt** 來備份、刪除或還原金鑰。 如果金鑰無法還原，這個工具可用來刪除已無法使用的加密內容。  
   
- **rskeymgmt** 公用程式用來管理安裝期間或初始化期間所定義的金鑰組。 它利用遠端程序呼叫 (RPC) 端點來連接本機報表伺服器 Windows 服務。 報表伺服器 Windows 服務必須在執行中，這個公用程式才能運作。  
+ 
+  **rskeymgmt** 公用程式用來管理安裝期間或初始化期間所定義的金鑰組。 它利用遠端程序呼叫 (RPC) 端點來連接本機報表伺服器 Windows 服務。 報表伺服器 Windows 服務必須在執行中，這個公用程式才能運作。  
   
  如需加密金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 設定管理員&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md) 和[初始化報表伺服器 &#40;SSRS 設定管理員&#41;](../install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定原生模式報表伺服器向外延展部署 &#40;SSRS 設定管理員&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [報表伺服器命令提示字元公用程式 &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [&#40;SSRS&#41;的報表伺服器命令提示字元公用程式](report-server-command-prompt-utilities-ssrs.md)   
  [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

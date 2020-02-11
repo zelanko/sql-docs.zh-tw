@@ -1,5 +1,5 @@
 ---
-title: 可捲動資料指標類型 |Microsoft Docs
+title: 可滾動的資料指標類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,28 +14,28 @@ ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 210b66a800670f033508f903b18778f88ddd4c8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061630"
 ---
 # <a name="scrollable-cursor-types"></a>可捲動的資料指標類型
-四種類型的可捲動資料指標是靜態、 動態、 索引鍵集驅動和混合。 靜態資料指標偵測到幾乎不需要變更，但會相對較低廉，實作。 動態資料指標偵測到的所有變更，但很難實作。 索引鍵集驅動和混合的資料指標居於兩者之間，可以偵測大部份的變更，但較少的費用比動態資料指標。  
+這四種類型的可滾動資料指標為靜態、動態、索引鍵集驅動和混合。 靜態資料指標會偵測到幾個或沒有變更，但執行的成本相對較低。 動態資料指標會偵測所有變更，但執行成本高昂。 索引鍵集驅動和混合資料指標之間的差異在於偵測大部分的變更，但代價比動態資料指標少。  
   
- 下列詞彙用來定義每一種可捲動資料指標的特性：  
+ 下列詞彙可用來定義每個可滾動資料指標類型的特性：  
   
--   **自己的更新、 刪除和插入。** 更新、 刪除和插入資料指標，不論是透過呼叫來進行**SQLBulkOperations**或是**SQLSetPos**或定位更新或刪除陳述式。  
+-   **自己的更新、刪除和插入。** 藉由呼叫**SQLBulkOperations**或**SQLSetPos** ，或使用定位 update 或 delete 語句，來更新、刪除和插入資料指標。  
   
--   **其他更新、 刪除和插入。** 更新、 刪除和不資料指標，包括所進行的其他作業相同交易中所進行的 insert、 透過其他的交易，以及所做的其他應用程式。  
+-   **其他更新、刪除和插入。** 不是由資料指標所進行的更新、刪除和插入，包括在相同交易中由其他作業所建立的資料、透過其他交易所建立的資料，以及其他應用程式所建立的資料。  
   
--   **成員資格。** 在結果集中的資料列集。  
+-   **所屬.** 結果集中的資料列集合。  
   
--   **順序。** 資料指標所傳回資料列順序。  
+-   **即可.** 資料指標傳回資料列的順序。  
   
--   **值。** 在結果集中的每個資料列中的值。  
+-   **閾值.** 結果集中每個資料列的值。  
   
- 如需有關如何更新、 刪除和插入資料的資訊，請參閱[更新資料概觀](../../../odbc/reference/develop-app/updating-data-overview.md)。  
+ 如需有關如何更新、刪除和插入資料的詳細資訊，請參閱[更新資料總覽](../../../odbc/reference/develop-app/updating-data-overview.md)。  
   
  此章節包含下列主題。  
   

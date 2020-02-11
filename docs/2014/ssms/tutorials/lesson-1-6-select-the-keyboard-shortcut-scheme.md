@@ -11,26 +11,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0aada3a83a29a921584a204f51695e6598131e0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63312556"
 ---
 # <a name="select-the-keyboard-shortcut-scheme"></a>選取鍵盤快速鍵配置
   除了標準 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 鍵盤配置，您可以設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用與 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]相容的鍵盤配置。  
   
-## <a name="changing-to-the-includevsdev10longincludesvs-dev10-long-mdmd-keyboard-scheme"></a>變更為 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] 鍵盤配置  
+## <a name="changing-to-the-includevs_dev10_longincludesvs-dev10-long-mdmd-keyboard-scheme"></a>變更為 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] 鍵盤配置  
   
-#### <a name="to-apply-includevsdev10longincludesvs-dev10-long-mdmd-compatible-keyboard-scheme"></a>若要套用 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] 相容的鍵盤配置  
+#### <a name="to-apply-includevs_dev10_longincludesvs-dev10-long-mdmd-compatible-keyboard-scheme"></a>若要套用 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] 相容的鍵盤配置  
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-2.  展開 [環境]  ，再按一下 [鍵盤]  。  
+2.  展開 [環境]****，再按一下 [鍵盤]****。  
   
-3.  在 [鍵盤配置]  清單中，選取 [Visual Studio 2010 相容]  ，再按一下 [確定]  。  
+3.  在 [鍵盤配置]**** 清單中，選取 [Visual Studio 2010 相容]****，再按一下 [確定]****。  
   
-4.  如果您想要使用新的鍵盤配置，請按一下 [確定]  ，否則按一下 [取消]  。  
+4.  如果您想要使用新的鍵盤配置，請按一下 [確定]****，否則按一下 [取消]****。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [設定啟動選項](lesson-1-7-set-the-startup-options.md)  

@@ -1,5 +1,5 @@
 ---
-title: SQL Server、 訊息代理程式和 DBM Transport 物件 |Microsoft Docs
+title: SQL Server、Broker 和 DBM Transport 物件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b0347c7f7e19ae5500f8c5be100ef2d0dc663784
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250733"
 ---
 # <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server 的 Broker 和 DBM Transport 物件
@@ -38,9 +38,9 @@ ms.locfileid: "63250733"
 |**Message Fragment P8 Sends/sec**|此計數器會報告每秒透過網路傳送優先順序 8 訊息片段的數目。|  
 |**Message Fragment P9 Sends/sec**|此計數器會報告每秒透過網路傳送優先順序 9 訊息片段的數目。|  
 |**Message Fragment P10 Sends/sec**|此計數器會報告每秒透過網路傳送優先順序 10 訊息片段的數目。|  
-|**訊息片段傳送大小平均**|此計數器會報告透過網路傳送訊息片段的平均大小。|  
+|**Message Fragment Send Size Avg**|此計數器會報告透過網路傳送訊息片段的平均大小。|  
 |**Message Fragment Sends/sec**|此計數器會報告每秒透過網路傳送所有優先順序訊息片段的數目。|  
-|**接收的訊息片段/sec**|此計數器會報告每秒透過網路接收訊息片段的數目。|  
+|**Msg Fragment Receives/sec**|此計數器會報告每秒透過網路接收訊息片段的數目。|  
 |**Msg Fragment Recv Size Avg**|此計數器會報告透過網路接收訊息片段的平均大小。|  
 |**Open Connection Count**|此計數器會報告 Service Broker 目前已開啟的網路連接數目。|  
 |**Pending Bytes for Recv I/O**|此計數器會報告已從網路接收，但尚未放到佇列中或尚未捨棄的訊息片段之位元組數目。|  
@@ -50,7 +50,7 @@ ms.locfileid: "63250733"
 |**Receive I/O Bytes Total**|此計數器會報告 Service Broker 端點與「資料庫鏡像」端點透過網路接收的位元組總數目。|  
 |**Receive I/O bytes/sec**|此計數器會報告 Service Broker 端點與「資料庫鏡像」端點透過網路每秒接收的位元組數目。|  
 |**Receive I/O Len Avg**|此計數器會報告傳輸接收作業的平均位元組數目。|  
-|**接收 i/o 數目/秒**|此計數器會報告 Service Broker / DBM 傳輸層每秒已完成的傳輸接收 I/O 作業數目。 請注意傳輸接收作業可能包含一個以上的訊息片段。|  
+|**Receive I/Os/second**|此計數器會報告 Service Broker / DBM 傳輸層每秒已完成的傳輸接收 I/O 作業數目。 請注意傳輸接收作業可能包含一個以上的訊息片段。|  
 |**Send I/O Bytes Total**|這個計數器會報告 Service Broker 端點和資料庫鏡像端點透過網路傳送的位元組總數。|  
 |**Send I/O bytes/sec**|這個計數器會報告 Service Broker 端點和資料庫鏡像端點透過網路每秒傳送的位元組數目。|  
 |**Send I/O Len Avg**|此計數器會報告每個傳輸傳送作業的平均位元組大小。 請注意傳輸傳送作業可能包含一個以上的訊息片段。|  

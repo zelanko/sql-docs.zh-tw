@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8019f762d6d80ced2688f0e93f7ad0e0a29bd3f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63313014"
 ---
 # <a name="print-dialog-box"></a>列印對話方塊
@@ -32,7 +32,7 @@ ms.locfileid: "63313014"
  **型別**  
  識別所選印表機。  
   
- **位置**  
+ **其中**  
  識別所選印表機的位置以及所使用的印表機連接埠。  
   
  **註解**  

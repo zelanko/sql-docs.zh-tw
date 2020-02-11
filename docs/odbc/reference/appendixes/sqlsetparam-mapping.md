@@ -14,14 +14,14 @@ ms.assetid: 022dfbc0-8d18-4c35-8a28-d9eb16063188
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c8d2d567f899c30dfe91cd35445956cd6214da9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125546"
 ---
 # <a name="sqlsetparam-mapping"></a>SQLSetParam 對應
-**SQLSetParam**頂端的對應會繼續**SQLBindParameter**如 ODBC 2。*x*。 即使在概念上類似於**SQLBindParam**，則驅動程式管理員不會對應**SQLSetParam**來**SQLBindParam**。 這是因為某些現有的 ODBC 2。*x*驅動程式使用的特殊值*Columnsize* (SQL_SETPARAM_VALUE_MAX) 驅動程式管理員時，產生對應**SQLSetParam**頂端**SQLBindParameter**來判斷呼叫 1 時。*x* ODBC 應用程式。  
+**SQLSetParam**會繼續在**SQLBindParameter**之上對應，如同 ODBC 2 中的一樣。*x*。 雖然它在概念上類似于**SQLBindParam**，但驅動程式管理員並不會將**SQLSetParam**對應至**SQLBindParam**。 這是因為某些現有的 ODBC 2。*x*驅動程式會使用*BufferLength* （SQL_SETPARAM_VALUE_MAX）的特殊值，而驅動程式管理員會在將**SQLSetParam**對應到**SQLBindParameter**上時產生它，以判斷它是由1所呼叫的時間。*x* ODBC 應用程式。  
   
  呼叫  
   
@@ -29,7 +29,7 @@ ms.locfileid: "68125546"
 SQLSetParam(hstmt, ipar, fCType, fSqlType, cbColDef, ibScale, rgbValue, pcbValue)  
 ```  
   
- 將會產生下列：  
+ 會產生下列結果：  
   
 ```  
 SQLBindParameter(StatementHandle, ParameterNumber, SQL_PARAM_INPUT_OUTPUT, ValueType, ParameterType, ColumnSize, DecimalDigits, ParameterValuePtr, SQL_SETPARAM_VALUE_MAX, StrLen_or_IndPtr)  

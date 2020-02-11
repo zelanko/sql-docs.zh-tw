@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32b46265b5da376bc974b55c48bf54bad88917d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102170"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>設定報表伺服器的基本驗證
@@ -38,7 +38,7 @@ ms.locfileid: "66102170"
   
 1.  在文字編輯器中開啟 RSReportServer.config。  
   
-     檔案位於 \microsoft *\<磁碟機 >:* \Program Files\Microsoft SQL Server\MSRS12。MSSQLSERVER\Reporting Services\ReportServer。  
+     檔案位於* \<磁片磁碟機>：* \Program Files\Microsoft SQL Server\MSRS12。MSSQLSERVER\Reporting Services\reportserver。  
   
 2.  尋找 <`Authentication`>。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66102170"
           </AuthenticationTypes>  
     ```  
   
-4.  貼上現有的項目，如 <`Authentication`>。  
+4.  將它貼到 <`Authentication`> 的現有專案上。  
   
      如果您使用多個驗證類型，請只加入 `RSWindowsBasic` 元素，而不要刪除 `RSWindowsNegotiate`、`RSWindowsNTLM` 或 `RSWindowsKerberos` 的項目。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66102170"
   
      請注意，您無法搭配其他驗證類型使用 `Custom`。  
   
-5.  取代空白值 <`Realm`> 或 <`DefaultDomain`> 適用於您環境的值。  
+5.  以適用于您環境`Realm`的值取代`DefaultDomain` <> 或 <> 的空白值。  
   
 6.  儲存檔案。  
   
@@ -84,11 +84,13 @@ ms.locfileid: "66102170"
 ## <a name="rswindowsbasic-reference"></a>RSWindowsBasic 參考  
  當您設定基本驗證時，可以指定下列元素。  
   
-|元素|必要項|有效的值|  
+|元素|必要|有效值|  
 |-------------|--------------|------------------|  
-|LogonMethod|是<br /><br /> 如果您未指定值，將會使用 3。|`2` = 網路登入，用於驗證純文字密碼的高效能伺服器。<br /><br /> `3` = 純文字登入，可將登入認證保存在隨著每個 HTTP 要求傳送的驗證封裝中，以便在連接至網路中的其他伺服器時，允許伺服器模擬使用者。 (預設值)<br /><br /> 注意:中不支援值 0 （用於互動式登入） 和 1 （用於批次登入） [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]。|  
-|Realm|選擇性|指定資源分割區，其中包含用於控制組織中受保護資源之存取權的授權和驗證功能。|  
-|DefaultDomain|選擇性|指定伺服器用以驗證使用者的網域。 雖然這個值是選擇性的，但是如果您省略它，報表伺服器將使用電腦名稱當做網域。 如果電腦是網域的成員，該網域就是預設網域。 如果您在網域控制站上安裝了報表伺服器，則使用的網域就是電腦所控制的網域。|  
+|LogonMethod|是<br /><br /> 如果您未指定值，將會使用 3。|
+  `2` = 網路登入，用於驗證純文字密碼的高效能伺服器。<br /><br /> 
+  `3` = 純文字登入，可將登入認證保存在隨著每個 HTTP 要求傳送的驗證封裝中，以便在連接至網路中的其他伺服器時，允許伺服器模擬使用者。 (預設值)<br /><br /> 注意： [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]中不支援值 0 (用於互動式登入) 和 1 (用於批次登入)。|  
+|Realm|選用|指定資源分割區，其中包含用於控制組織中受保護資源之存取權的授權和驗證功能。|  
+|DefaultDomain|選用|指定伺服器用以驗證使用者的網域。 雖然這個值是選擇性的，但是如果您省略它，報表伺服器將使用電腦名稱當做網域。 如果電腦是網域的成員，該網域就是預設網域。 如果您在網域控制站上安裝了報表伺服器，則使用的網域就是電腦所控制的網域。|  
   
 ## <a name="enabling-anonymous-access-to-report-builder-application-files"></a>啟用對報表產生器應用程式檔案的匿名存取  
  報表產生器會使用 ClickOnce 技術，將應用程式檔案下載及安裝到用戶端電腦上。 當它在用戶端電腦上啟動時，ClickOnce 應用程式啟動器將會針對報表伺服器電腦上的其他應用程式檔案發出要求。 如果報表伺服器有設定基本驗證，ClickOnce 應用程式啟動器將無法通過驗證檢查，因為它不支援基本驗證。  
@@ -101,7 +103,7 @@ ms.locfileid: "66102170"
   
 -   將 `IsReportBuilderAnonymousAccessEnabled` 元素加入到 RSReportServer.config，並將它設定為 `True`。 當您儲存檔案之後，報表伺服器會建立報表產生器的新端點。 端點用於內部存取程式檔案，而且在程式碼內不會有可使用的程式設計介面。 擁有個別的端點可讓報表產生器在報表伺服器服務處理序界限下，於它自己的應用程式定義域內執行。  
   
--   您可以選擇指定最低權限帳戶，在與報表伺服器不同的安全性內容之下處理要求。 這個帳戶會變成匿名帳戶，以便在報表伺服器上存取報表產生器檔案。 此帳戶會設定 ASP.NET 工作處理序內執行緒的識別。 該執行緒內執行的要求會傳遞給報表伺服器，而不需執行驗證檢查。 這個帳戶相當的 iusr_<\<機器 > 啟用匿名存取和模擬時，處理帳戶在網際網路資訊服務 (IIS)，用來設定 ASP.NET 背景工作角色的安全性內容。 若要指定此帳戶，請將它加入報表產生器 Web.config 檔中。  
+-   您可以選擇指定最低權限帳戶，在與報表伺服器不同的安全性內容之下處理要求。 這個帳戶會變成匿名帳戶，以便在報表伺服器上存取報表產生器檔案。 此帳戶會設定 ASP.NET 工作處理序內執行緒的識別。 該執行緒內執行的要求會傳遞給報表伺服器，而不需執行驗證檢查。 此帳戶相當於 Internet Information Services （IIS\<）中的 IUSR_ 機> 帳戶，可在啟用匿名存取和模擬時，用來設定 ASP.NET 工作者進程的安全性內容。 若要指定此帳戶，請將它加入報表產生器 Web.config 檔中。  
   
  如果您想要啟用對報表產生器程式檔案的匿名存取，報表伺服器必須設定基本驗證。 如果報表伺服器沒有設定成基本驗證，嘗試啟用匿名存取時，會出現錯誤。  
   
@@ -137,7 +139,7 @@ ms.locfileid: "66102170"
   
      若您包含 Web.config 檔，則驗證模式必須設定為 `Windows`。  
   
-     `Identity impersonate` 可以是 `True` 或 `False`。  
+     `Identity impersonate`可以是`True`或`False`。  
   
     -   如果您不希望 ASP.NET 讀取安全性 Token，請將它設定為 `False`。 此要求將會在報表伺服器服務的安全性內容中執行。  
   
@@ -156,7 +158,7 @@ ms.locfileid: "66102170"
 8.  重新啟動報表伺服器。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表伺服器應用程式的應用程式網域](../report-server/application-domains-for-report-server-applications.md)   
+ [報表伺服器應用程式的應用程式域](../report-server/application-domains-for-report-server-applications.md)   
  [Reporting Services 安全性與保護](reporting-services-security-and-protection.md)  
   
   

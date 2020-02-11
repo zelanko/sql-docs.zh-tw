@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9483e9a545d01196ad3d8f614a2135150ed47036
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480018"
 ---
 # <a name="configure-email-notifications-master-data-services"></a>設定電子郵件通知 (Master Data Services)
@@ -27,7 +27,7 @@ ms.locfileid: "65480018"
   
 1.  在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中的 **[資料庫]** 頁面上，選取您的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。  
   
-2.  在 **[系統設定]** 區段中，按一下 **[建立設定檔]** 。  
+2.  在 **[系統設定]** 區段中，按一下 **[建立設定檔]**。  
   
 3.  完成所有必要的欄位。 如需詳細資訊，請參閱[建立 Database Mail 設定檔和帳戶對話方塊 &#40;Master Data Services 組態管理員&#41;](../../2014/master-data-services/create-database-mail-profile-and-account-dialog-box.md)。  
   
@@ -38,11 +38,12 @@ ms.locfileid: "65480018"
   
 ## <a name="next-steps"></a>後續步驟  
   
--   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中有一些設定會影響通知。 您可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中或直接在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫 [系統設定] 資料表中調整這些設定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](system-settings-master-data-services.md)。  
+-   
+  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中有一些設定會影響通知。 您可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中或直接在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫 [系統設定] 資料表中調整這些設定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](system-settings-master-data-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [通知 &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)   
- [疑難排解電子郵件通知 (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)   
+ [疑難排解電子郵件通知（Master Data Services）](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)   
  [設定商務規則來傳送通知 &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

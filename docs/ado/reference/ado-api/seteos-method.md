@@ -17,14 +17,14 @@ ms.assetid: 707c18ca-6a56-4970-bbd6-ae1fb86a0b8a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 357778765f0c7ac59d924518340ca34226853fc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916918"
 ---
 # <a name="seteos-method"></a>SetEOS 方法
-設定為資料流結尾的位置。  
+設定為數據流結尾的位置。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,12 +34,12 @@ Stream.SetEOS
 ```  
   
 ## <a name="remarks"></a>備註  
- **SetEOS**的值更新[EOS](../../../ado/reference/ado-api/eos-property.md)屬性，藉由目前[位置](../../../ado/reference/ado-api/position-property-ado.md)資料流結尾。 任何位元組或字元之後的目前位置會被截斷。  
+ **SetEOS**會藉由將目前[位置](../../../ado/reference/ado-api/position-property-ado.md)設為數據流的結尾，來更新[EOS](../../../ado/reference/ado-api/eos-property.md)屬性的值。 在目前位置之後的任何位元組或字元都會被截斷。  
   
- 因為[撰寫](../../../ado/reference/ado-api/write-method.md)， [WriteText](../../../ado/reference/ado-api/writetext-method.md)，並[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)不會截斷任何額外的值，在現有**Stream**物件時，您可以截斷這些藉由設定與新的資料流結尾位置的字元或位元組**SetEOS**。  
+ 由於[Write](../../../ado/reference/ado-api/write-method.md)、 [WriteText](../../../ado/reference/ado-api/writetext-method.md)和[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)不會截斷現有**資料流程**物件中的任何額外值，因此您可以藉由設定新的資料流程結束位置與**SetEOS**來截斷這些位元組或字元。  
   
 > [!CAUTION]
->  如果您設定**EOS**到實際的資料流結束前的位置，您將遺失所有資料之後的新**EOS**位置。  
+>  如果您將**EOS**設定為數據流的實際結尾之前的位置，您將會遺失新的**EOS**位置之後的所有資料。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

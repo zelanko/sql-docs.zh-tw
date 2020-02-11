@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01cbf00850c5dd57e7ca1575a1a0cb826c009714
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101456"
 ---
 # <a name="tasks-and-permissions"></a>工作和權限
@@ -38,7 +38,7 @@ ms.locfileid: "66101456"
 ## <a name="system-and-item-level-tasks"></a>系統和項目層級工作  
  工作分成兩個類別目錄：系統層級和項目層級。 角色可以包括僅來自單一類別目錄的工作。 下表描述每一種類別目錄的工作。  
   
-|Category|描述|  
+|類別|描述|  
 |--------------|-----------------|  
 |[項目層級工作](tasks-and-permissions-item-level-tasks.md)|在資料夾、報表、報表模型和資源等受到報表伺服器管理之項目上執行的動作。<br /><br /> 項目層級工作的範圍為報表伺服器資料夾命名空間。 您透過報表伺服器上的資料夾，或者透過 URL 存取的所有項目，都受到包含項目層級工作之角色指派的保護。|  
 |[系統層級工作](tasks-and-permissions-system-level-tasks.md)|在系統層級執行的動作，例如管理作業或可以用於許多項目的共用排程。 系統層級工作的範圍是在報表伺服器資料夾命名空間以外。|  

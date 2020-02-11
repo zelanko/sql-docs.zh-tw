@@ -1,5 +1,5 @@
 ---
-title: 選擇資料表配置 |Microsoft Docs
+title: 選擇資料表版面配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 916ea06221ffd6ff33427a26870cd3005ec79e67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109845"
 ---
 # <a name="choose-the-table-layout"></a>選擇資料表配置
   使用報表精靈的這個頁面，即可選取報表中的資料表配置。  
   
-## <a name="options"></a>選項  
- **Stepped**  
+## <a name="options"></a>選項。  
+ **階梯狀**  
  建立每個欄位包含一個資料行的報表，讓群組欄位顯示在詳細資料欄位資料行左邊的群組首中。 這種資料表沒有群組尾。  
   
- **Block**  
+ **總匯**  
  建立每個欄位包含一個資料行的報表，讓群組欄位顯示在每個群組的第一個詳細資料列中。 只有在同時選取 **[包含小計]** 時，此資料表類型才會有群組尾。  
   
- **包含小計**  
+ **[包含小計]**  
  選擇此選項即可在報表的數值欄位中包含小計。 如果選取 **[階梯狀]** ，小計就會放置在群組首資料列中。 如果選取 **[區塊]** ，小計就會顯示在群組尾資料列中。  
   
  **啟用向下鑽研**  

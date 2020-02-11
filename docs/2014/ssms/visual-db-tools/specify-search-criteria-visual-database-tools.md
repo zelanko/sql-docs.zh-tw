@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52b569ba68e6693c5b720e118a4500e2e768b3dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63277117"
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>指定搜尋準則 (Visual Database Tools)
@@ -75,10 +75,10 @@ ms.locfileid: "63277117"
  說明如何建立子查詢或巢狀查詢。  
   
 ## <a name="related-sections"></a>相關章節  
- [執行查詢的基本作業 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
+ [使用查詢執行基本作業 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
  提供最常見查詢工作之主題及步驟的連結。  
   
- [查詢類型 &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)  
+ [查詢的類型 &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)  
  提供可說明所支援查詢類型之主題的連結。  
   
  [排序及分組查詢結果 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)  

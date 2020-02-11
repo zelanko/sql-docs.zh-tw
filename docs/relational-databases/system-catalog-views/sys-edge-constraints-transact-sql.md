@@ -1,5 +1,5 @@
 ---
-title: sys.edge_constraints (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases edge_constraints （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 09/17/2018
 ms.prod: sql
@@ -21,32 +21,32 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5dc2e47c49dc9d639489426fceab0b848c9def3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079322"
 ---
-# <a name="sysedge_constraints-transact-sql"></a>sys.edge_constraints & Amp;&#40;transact-SQL&AMP;&#41;
+# <a name="sysedge_constraints-transact-sql"></a>sys.databases edge_constraints （Transact-sql）
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-包含每個物件，會有邊緣條件約束的一個資料列。 
+針對每個做為邊緣條件約束的物件，各包含一個資料列。 
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**\<從 sys.objects 繼承的資料行 >**||如需這個檢視所繼承的資料行的清單，請參閱 < [j &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
-|**is_disabled**|**bit**|1 = 條件約束停用的邊緣。<br /><br /> 0 = 已啟用條件約束的邊緣。|  
-|**is_not_trusted**|**bit**|1 = 條件約束尚未驗證系統的邊緣。<br /><br /> 0 = 系統已通過驗證條件約束的邊緣。|  
-|**delete_referential_action**|**tinyint**|此邊緣條件約束定義的參考動作。<br /><br />0 = 沒有動作。|  
-|**delete_referential_action_desc**|**nvarchar(60)**|此邊緣條件約束定義的參考動作的描述。<br /><br />NO_ACTION|  
-|**is_system_named**|**bit**|1 = 條件約束名稱已由系統產生的邊緣。<br /><br />0 = 條件約束名稱由使用者所提供的邊緣。|  
+|**\<繼承自 sys.databases 的資料行>**||如需此視圖所繼承之資料行的清單，請參閱[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|**is_disabled**|**bit**|1 = 邊緣條件約束是 disbled。<br /><br /> 0 = 已啟用邊緣條件約束。|  
+|**is_not_trusted**|**bit**|1 = 邊緣條件約束尚未被系統驗證。<br /><br /> 0 = Edge 條件約束已由系統驗證。|  
+|**delete_referential_action**|**tinyint**|在此邊緣條件約束上定義的參考動作。<br /><br />0 = 沒有動作。|  
+|**delete_referential_action_desc**|**Nvarchar （60）**|在此邊緣條件約束上定義之參考動作的描述。<br /><br />NO_ACTION|  
+|**is_system_named**|**bit**|1 = 邊緣條件約束名稱由系統產生。<br /><br />0 = 邊緣條件約束名稱是由使用者提供。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [查詢 SQL Server 系統目錄常見問題集](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [查詢 SQL Server 系統目錄 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

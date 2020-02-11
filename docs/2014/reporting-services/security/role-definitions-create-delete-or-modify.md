@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 066c69298126cbc635d388d75659b98dcff95917
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101812"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>建立、刪除或修改角色 (Management Studio)
@@ -30,7 +30,7 @@ ms.locfileid: "66101812"
   
  若要建立、修改或刪除角色，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 您只能刪除未使用的角色。  
   
- 若要將使用者和群組指派至您所建立的角色，請使用報表管理員。 如需這些預先定義角色的詳細資訊，請參閱 [將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](grant-user-access-to-a-report-server.md)。  
+ 若要將使用者和群組指派至您所建立的角色，請使用報表管理員。 如需詳細資訊，請參閱[將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](grant-user-access-to-a-report-server.md)。  
   
 > [!NOTE]  
 >  如果報表伺服器是針對 SharePoint 整合模式所設定，而且您已連接至與報表伺服器整合的 SharePoint 網站，就可以檢視並修改權限等級，以便控制報表伺服器內容和作業的存取權。  
@@ -41,11 +41,11 @@ ms.locfileid: "66101812"
   
 2.  展開安全性資料夾。  
   
-3.  如果您要建立項目層級角色定義，請以滑鼠右鍵按一下 [角色]  ，然後指向 [新增角色]  。  
+3.  如果您要建立項目層級角色定義，請以滑鼠右鍵按一下 [角色]****，然後指向 [新增角色]****。  
   
-     如果您要建立系統層級角色定義，請以滑鼠右鍵按一下 [系統角色]  ，然後指向 [新增系統角色]  。  
+     如果您要建立系統層級角色定義，請以滑鼠右鍵按一下 [系統角色]****，然後指向 [新增系統角色]****。  
   
-4.  為角色輸入唯一的名稱。 名稱至少必須包含一個字元。 它也可以包括空格和特定符號，但不得包括下列字元：; ? : \@ & = +，$ / * \< > |"或 /。  
+4.  為角色輸入唯一的名稱。 名稱至少必須包含一個字元。 它也可以包括空格和特定符號，但不得包括下列字元：; ? ： \@ & = +，$/* \< > |"或/。  
   
 5.  選擇性地輸入描述。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，此描述僅會出現在本頁面上。 透過報表管理員檢視此項目的使用者，可以在該工具中看到此描述。  
   
@@ -59,25 +59,25 @@ ms.locfileid: "66101812"
   
 2.  展開安全性資料夾。  
   
-3.  若要刪除或修改項目層級的角色定義，請展開 [角色] 資料夾。 執行下列其中之一：  
+3.  若要刪除或修改項目層級的角色定義，請展開 [角色] 資料夾。 執行下列其中一項：  
   
-    1.  若要刪除角色定義，請以滑鼠右鍵按一下項目，然後按一下 [刪除]  。 就會顯示 **[刪除物件]** 對話方塊。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    1.  若要刪除角色定義，請以滑鼠右鍵按一下項目，然後按一下 [刪除]****。 就會顯示 **[刪除物件]** 對話方塊。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-    2.  若要修改角色定義，請以滑鼠右鍵按一下項目，然後按一下 [屬性]  。 就會顯示 **[使用者角色屬性]** 對話方塊的 [一般] 頁面。  
+    2.  若要修改角色定義，請以滑鼠右鍵按一下項目，然後按一下 [屬性]****。 就會顯示 **[使用者角色屬性]** 對話方塊的 [一般] 頁面。  
   
-         選取這個角色的成員可以執行的工作，然後按一下 **[確定]** 。  
+         選取這個角色的成員可以執行的工作，然後按一下 **[確定]**。  
   
-4.  若要刪除或修改系統層級角色定義，請展開 [系統角色]  資料夾。 執行下列其中之一：  
+4.  若要刪除或修改系統層級角色定義，請展開 [系統角色]  資料夾。 執行下列其中一項：  
   
-    1.  若要刪除系統角色定義，請以滑鼠右鍵按一下項目，然後按一下 [刪除]  。 就會顯示 **[刪除物件]** 對話方塊。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    1.  若要刪除系統角色定義，請以滑鼠右鍵按一下項目，然後按一下 [刪除]****。 就會顯示 **[刪除物件]** 對話方塊。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-    2.  若要修改系統角色定義，請以滑鼠右鍵按一下項目，然後按一下 [屬性]  。 就會顯示 **[系統角色屬性]** 對話方塊的 [一般] 頁面。  
+    2.  若要修改系統角色定義，請以滑鼠右鍵按一下項目，然後按一下 [屬性]****。 就會顯示 **[系統角色屬性]** 對話方塊的 [一般] 頁面。  
   
          選取這個角色的成員可以執行的工作，然後按一下 **[確定]** 來套用變更。  
   
 ## <a name="see-also"></a>另請參閱  
  [連接至 Management Studio 中的報表伺服器](../tools/connect-to-a-report-server-in-management-studio.md)   
- (create-and-manage-role-assignments.md)   
- [SQL Server Management Studio 中的 Reporting Services &#40;SSRS&#41;](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ （create-and-manage-role-assignments.md）   
+ [SQL Server Management Studio &#40;SSRS&#41;中的 Reporting Services](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

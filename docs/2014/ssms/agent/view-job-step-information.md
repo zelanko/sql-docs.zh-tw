@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8123a523a0fa5212b4c0ffc8d98c6a90aef3396c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245925"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
@@ -29,9 +29,9 @@ ms.locfileid: "63245925"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要使用下列項目檢視作業步驟資訊：**  
+-   **若要使用下列內容來查看作業步驟資訊：**  
   
      [Transact-SQL](#SSMS)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63245925"
 ###  <a name="Restrictions"></a> 限制事項  
  若作業步驟已設定為將輸出寫入資料表或檔案，且作業已至少執行一次，您就可以在 **[作業步驟屬性]** 對話方塊的 **[進階]** 頁面上檢視其輸出。 當作業或作業步驟被刪除後，輸出記錄檔也會自動刪除。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  若您不是 **系統管理員 (sysadmin)** 固定伺服器角色的成員，就只能檢視您所擁有的作業。 此角色的成員可檢視所有作業與作業步驟詳細資料。  
@@ -51,11 +51,11 @@ ms.locfileid: "63245925"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  依序展開 [SQL Server Agent]  和 [作業]  、以滑鼠右鍵按一下包含要檢視之作業步驟的作業，然後按一下 [屬性]  。  
+2.  依序展開 [SQL Server Agent]**** 和 [作業]****、以滑鼠右鍵按一下包含要檢視之作業步驟的作業，然後按一下 [屬性]****。  
   
 3.  在 **[作業屬性]** 對話方塊中，按一下 **[步驟]** 頁面。  
   
-4.  按一下所要檢視的作業步驟，再按一下 **[編輯]** 。  
+4.  按一下所要檢視的作業步驟，再按一下 **[編輯]**。  
   
 5.  在 **[作業步驟屬性]** 對話方塊的 **[一般]** 頁面上，您可以檢視作業步驟的類型及其功能。  
   

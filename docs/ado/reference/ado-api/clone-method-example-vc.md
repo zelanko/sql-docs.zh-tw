@@ -1,5 +1,5 @@
 ---
-title: Clone 方法範例 （VC + +） |Microsoft Docs
+title: Clone 方法範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5ecdbf24ea70da0e16d05e4d866c0b2f0f9470c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919978"
 ---
 # <a name="clone-method-example-vc"></a>Clone 方法範例 (VC++)
-這個範例會使用[複製品](../../../ado/reference/ado-api/clone-method-ado.md)方法建立的複本[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)然後讓每個複本的記錄指標放在個別的使用者。  
+這個範例會使用[Clone](../../../ado/reference/ado-api/clone-method-ado.md)方法來建立[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的複本，然後讓使用者獨立放置每個複本的記錄指標。  
   
 ```  
 // BeginCloneCpp.cpp  

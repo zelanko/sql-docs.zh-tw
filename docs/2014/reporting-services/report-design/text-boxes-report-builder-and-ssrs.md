@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb96831c54a67a6ea74ca984cb346dcaaf50a335
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104624"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>文字方塊 (報表產生器及 SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "66104624"
 > [!NOTE]  
 >  如果將報表資料集欄位值直接拖曳到報表設計介面，或報表設計介面上的文字方塊，則您在執行報表時，只能看到結果集中的第一個值。 若要查看欄位的所有值，則必須將欄位拖曳到資料表或矩陣中的資料格。 如此一來，當您執行報表時，將會看到該欄位中的所有值。  
   
- 若要以自由形式配置顯示重複的文字，請在清單資料區中放置一個文字方塊。 當您想要重複多個值的形式時，請使用清單，例如，客戶發票表單會針對每個客戶重複一次。 如需詳細資訊，請參閱 <<c0> [ 列出&#40;報表產生器及 SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。</c0>  
+ 若要以自由形式配置顯示重複的文字，請在清單資料區中放置一個文字方塊。 當您想要重複多個值的形式時，請使用清單，例如，客戶發票表單會針對每個客戶重複一次。 如需詳細資訊，請參閱[&#40;報表產生器和 SSRS&#41;清單](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
   
  當您想要控制文字方塊配置和最後一個文字方塊下的空白字元時，使用矩形容器。 如需詳細資訊，請參閱[矩形和線條 &#40;報表產生器及 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66104624"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GrowShrinkTextBox"></a> 文字方塊的擴張和縮小  
+##  <a name="GrowShrinkTextBox"></a>增加和縮小文字方塊  
  根據預設，文字方塊是固定的大小。 您可以讓文字方塊根據其內容垂直縮小或擴張。 如需詳細資訊，請參閱 [允許文字方塊擴張或縮小 &#40;報表產生器及 SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)(建立發票和表單的清單)。  
   
 ## <a name="orienting-a-text-box"></a>指定文字方塊的方向  
@@ -53,16 +53,16 @@ ms.locfileid: "66104624"
   
  方向是在文字方塊上設定，並套用至方塊中的所有文字。 您無法針對文字方塊的各個部分指定不同的方向。  
   
- 若要快速地開始變更文字方向，請參閱一節中有關旋轉文字[教學課程：格式化文字 &#40;報表產生器&#41;](../tutorial-format-text-report-builder.md)。 如需詳細資訊，請參閱 <<c0> [ 設定文字方塊方向&#40;報表產生器及 SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)。</c0>  
+ 若要快速地開始變更文字方向，請參閱[教學課程：將文字格式化 &#40;報表產生器&#41;](../tutorial-format-text-report-builder.md)中的旋轉文字一節。 如需詳細資訊，請參閱[&#40;報表產生器和 SSRS&#41;設定文字方塊方向](set-text-box-orientation-report-builder-and-ssrs.md)。  
   
 ##  <a name="HowTo"></a> 如何主題  
- [加入、移動或刪除文字方塊 &#40;報表產生器及 SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
+ [加入、移動或刪除文字方塊 &#40;報表產生器和 SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
  [格式化文字方塊中的文字 &#40;報表產生器及 SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
- [設定文字方塊方向 &#40;報表產生器及 SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
+ [將文字方塊方向設定 &#40;報表產生器和 SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
   
- [允許文字方塊擴張或縮小 &#40;報表產生器及 SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
+ [允許文字方塊擴大或縮小 &#40;報表產生器和 SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   

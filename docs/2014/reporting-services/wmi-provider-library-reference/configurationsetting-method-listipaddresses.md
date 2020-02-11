@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e406b42346e936fe72c70e5cb13b75ffb3f1f8fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098315"
 ---
-# <a name="listipaddresses-method-wmi-msreportserverconfigurationsetting"></a>ListIPAddresses 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="listipaddresses-method-wmi-msreportserver_configurationsetting"></a>ListIPAddresses 方法 (WMI MSReportServer_ConfigurationSetting)
   列出報表伺服器電腦的 IP 位址。  
   
 ## <a name="syntax"></a>語法  
@@ -37,10 +37,10 @@ public void ListIPAddresses (out string[] IPAddress,
 ```  
   
 ## <a name="parameters"></a>參數  
- *IPAddress[]*  
+ *IPAddress []*  
  [out] 電腦的 IP 位址清單。  
   
- *IPVersion[]*  
+ *IPVersion []*  
  [out] IP 位址的版本。  
   
  *IsDhcpEnabled[]*  
@@ -56,12 +56,12 @@ public void ListIPAddresses (out string[] IPAddress,
  傳回 *HRESULT* ，指出方法呼叫成功或失敗。 值為 0 表示方法呼叫成功。錯誤碼則表示呼叫不成功。  
   
 ## <a name="remarks"></a>備註  
- *IPVersion* 字串為 V4 或 V6。  
+ *IPVersion*字串為 V4、V6。  
   
- 如果*IsDhcpEnabled*是`True`，則*IPAddress*是動態的。 它就不應該用於 SSL 繫結。  
+ 如果*IsDhcpEnabled*為`True`，則*IPAddress*是動態的。 它就不應該用於 SSL 繫結。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

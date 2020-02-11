@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1d190d55c45530adde1b41658c975bbfc19c0b91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482630"
 ---
 # <a name="navigational-access-master-data-services"></a>導覽存取權 (Master Data Services)
@@ -42,6 +42,6 @@ ms.locfileid: "65482630"
  當您指派權限給集合時，您可以讀取或更新名稱、程式碼、描述和擁有者識別碼。 您也可以讀取模型名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [如何決定權限 &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)  
+ [如何判斷許可權 &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)  
   
   

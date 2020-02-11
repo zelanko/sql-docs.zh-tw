@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482568"
 ---
 # <a name="reserved-words-master-data-services"></a>保留字 (Master Data Services)
@@ -36,20 +36,20 @@ ms.locfileid: "65482568"
   
 -   [成員](#members)  
   
-##  <a name="models"></a> 模型  
+##  <a name="models"></a>機型  
  如果您建立一個名稱設定為 **Name**的模型，請勿選取 **[建立與模型同名的實體]** ，因為 **Name** 無法用於實體的名稱。  
   
-##  <a name="entities"></a> 實體  
+##  <a name="entities"></a>條目  
  您無法針對實體名稱使用 **Name** 或 **Code**。  
   
-##  <a name="exhierarchies"></a> 明確階層  
+##  <a name="exhierarchies"></a>明確階層  
  您無法針對明確階層名稱使用 **Name** 或 **Code**。  
   
-##  <a name="attributes"></a> 屬性  
+##  <a name="attributes"></a>特性  
   
 -   **ID**  
   
--   **[字碼]**  
+-   **程式碼**  
   
 -   **名稱**  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65482568"
   
 -   **Version_ID**  
   
-##  <a name="members"></a> 成員  
+##  <a name="members"></a>屬於  
  對於成員而言，您無法針對 **[Code]** 屬性值使用 **MDMMemberStatus** 或 **ROOT** 。  
   
 ## <a name="see-also"></a>另請參閱  

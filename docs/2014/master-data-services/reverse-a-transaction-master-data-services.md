@@ -13,16 +13,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3a7e3496d005ded5fa935db828501a71c922c261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478828"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>反轉交易 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，系統管理員可以在需要復原動作時，反轉交易。 交易的範例包括屬性值變更、階層移動或成員刪除。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
   
@@ -30,22 +30,22 @@ ms.locfileid: "65478828"
   
 ### <a name="to-reverse-a-transaction"></a>若要反轉交易  
   
-1.  在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]首頁上，按一下 [版本管理]  。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，按一下 [版本管理]****。  
   
-2.  在功能表列上，按一下 [交易]  。  
+2.  在功能表列上，按一下 [交易]****。  
   
-3.  在 [交易]  頁面上，選取 [模型]  清單中的模型。  
+3.  在 [交易]**** 頁面上，選取 [模型]**** 清單中的模型。  
   
 4.  從 **[版本]** 清單中選取版本。  
   
 5.  針對您想要反轉的交易，按一下方格中的資料列。  
   
-6.  按一下 [反轉交易]  。  
+6.  按一下 [反轉交易]****。  
   
-7.  在確認對話方塊中按一下 **[確定]** 。 如此就會將另一個交易加入至方格，以便記錄反轉的交易。  
+7.  在確認對話方塊中按一下 **[確定]**。 如此就會將另一個交易加入至方格，以便記錄反轉的交易。  
   
 ## <a name="see-also"></a>另請參閱  
  [交易 &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)   
- [重新啟用成員或集合 &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
+ [&#40;Master Data Services 重新啟用成員或集合&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
   

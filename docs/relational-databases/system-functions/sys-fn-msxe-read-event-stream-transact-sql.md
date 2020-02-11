@@ -1,5 +1,5 @@
 ---
-title: sys.fn_MSxe_read_event_stream (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases fn_MSxe_read_event_stream （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 5edb1162-625a-41e0-8ec9-1edc8ab9a74a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 886b874aeee47f71eb8b50dba27fdfdf8ea45c62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68082696"
 ---
-# <a name="sysfnmsxereadeventstream-transact-sql"></a>sys.fn_MSxe_read_event_stream (Transact-SQL)
+# <a name="sysfn_msxe_read_event_stream-transact-sql"></a>sys.fn_MSxe_read_event_stream (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   擴充事件提供擴充事件使用者介面 (UI) 內部使用的資料表值函式 (TVF)。 資料表並不包含客戶可用的資料。  
@@ -56,8 +56,8 @@ sys.fn_MSxe_read_event_stream ( session_name)
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|type|**整數 (4)**|事件類型。 不可為 Null。|  
-|data|**映像 (16)**|事件影像資料。 可為 Null。|  
+|type|**Integer (4)**|事件類型。 不可為 Null。|  
+|data|**Image (16)**|事件影像資料。 可為 Null。|  
   
 ## <a name="see-also"></a>另請參閱  
  [擴充的事件動態管理檢視](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   

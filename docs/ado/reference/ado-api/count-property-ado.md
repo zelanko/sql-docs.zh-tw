@@ -1,5 +1,5 @@
 ---
-title: Count 屬性 (ADO) |Microsoft Docs
+title: Count 屬性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,26 +16,26 @@ ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 292a4a8c26b3b10aa47fcbe7046a5897f601ed9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919359"
 ---
 # <a name="count-property-ado"></a>Count 屬性 (ADO)
-指出集合中的物件數目。  
+表示集合中的物件數目。  
   
 ## <a name="return-value"></a>傳回值  
- 傳回**長**值。  
+ 傳回**Long**值。  
   
 ## <a name="remarks"></a>備註  
- 使用**計數**屬性來判斷指定的集合中有多少物件。  
+ 使用**Count**屬性來判斷指定集合中有多少物件。  
   
- 因為集合的成員，編號從 0 開始，您應該一律撰寫程式碼迴圈的零的成員開始和結束值是**計數**減 1 的屬性。 如果您使用 Microsoft Visual Basic，而且想要迴圈集合的成員，而不檢查**計數**屬性，請使用**每個...下一步**命令。  
+ 因為集合成員的編號是以零開始，所以您應該一律以零成員開頭的程式碼，並以**Count**屬性的值減1來結束。 如果您使用 Microsoft Visual Basic，而且想要對集合的成員執行迴圈，而不檢查**Count**屬性，請使用**For each .。。下一個**命令。  
   
- 如果**計數**屬性為零，集合中沒有任何物件。  
+ 如果**Count**屬性為零，則集合中沒有任何物件。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
   
 ||||  
 |-|-|-|  
@@ -48,6 +48,6 @@ ms.locfileid: "67919359"
 |[Views 集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
 ## <a name="see-also"></a>另請參閱  
- [Count 屬性範例 (VB)](../../../ado/reference/ado-api/count-property-example-vb.md)   
- [Count 屬性範例 （VC + +）](../../../ado/reference/ado-api/count-property-example-vc.md)   
+ [Count 屬性範例（VB）](../../../ado/reference/ado-api/count-property-example-vb.md)   
+ [Count 屬性範例（VC + +）](../../../ado/reference/ado-api/count-property-example-vc.md)   
  [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: 欄位集合 (ADO) |Microsoft Docs
+title: Fields 集合（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,32 +18,32 @@ ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9c9216ee655e371633837c5653ebac56fac1a782
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918710"
 ---
 # <a name="fields-collection-ado"></a>Fields 集合 (ADO)
-包含所有[欄位](../../../ado/reference/ado-api/field-object.md)的物件[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)或是[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件。  
+包含[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)或[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件的所有[欄位](../../../ado/reference/ado-api/field-object.md)物件。  
   
 ## <a name="remarks"></a>備註  
- A **Recordset**物件具有**欄位**組成的集合**欄位**物件。 每個**欄位**物件中的資料行對應**資料錄集**。 您可以填入**欄位**集合，再開啟**資料錄集**藉由呼叫[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)集合上的方法。  
+ **記錄集**物件具有由**欄位**物件組成的**Fields**集合。 每個**Field**物件都會對應至**記錄集**內的資料行。 您可以在集合上呼叫[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法，先填入**Fields**集合，然後再開啟**記錄集**。  
   
 > [!NOTE]
->  請參閱**欄位**如需如何使用的更詳細說明的物件主題**欄位**物件。  
+>  如需如何使用**欄位**物件的詳細說明，請參閱**Field**物件主題。  
   
- **欄位**集合中有[附加](../../../ado/reference/ado-api/append-method-ado.md)方法，它部份建立，並將**欄位**物件加入至集合，以及**更新**方法，這個方法會完成任何新增或刪除。  
+ **Fields**集合具有[Append](../../../ado/reference/ado-api/append-method-ado.md)方法，它會 provisionally 建立**欄位**物件並將其加入至集合，並使用**Update**方法來完成任何新增或刪除。  
   
- A**記錄**物件具有可以使用編製索引的兩個特殊欄位[FieldEnum](../../../ado/reference/ado-api/fieldenum.md)常數。 一個常數存取欄位，其中包含的預設資料流**記錄**，和其他存取包含的絕對 URL 字串的欄位**記錄**。  
+ **記錄**物件有兩個特殊欄位，可以使用[FieldEnum](../../../ado/reference/ado-api/fieldenum.md)常數來編制索引。 一個常數存取包含**記錄**之預設資料流程的欄位，另一個則存取包含**記錄**之絕對 URL 字串的欄位。  
   
- 某些提供者 (例如[Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) 可能會填入**欄位**子集的可用欄位的集合**記錄**或是**資料錄集**。 不會將其他欄位加入至集合，直到第一次參考依名稱或由您的程式碼編製索引。  
+ 某些提供者（例如， [Microsoft OLE DB 提供者用於網際網路發行](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)）可能會在**fields**集合中填入**記錄**或**記錄集**可用欄位的子集。 其他欄位將不會新增至集合，直到第一次以名稱參考，或由您的程式碼編制索引為止。  
   
- 如果您嘗試參考不存在的欄位名稱，新**欄位**物件將會附加至**欄位**集合[狀態](../../../ado/reference/ado-api/status-property-ado-field.md)的**adFieldPendingInsert**。 當您呼叫[更新](../../../ado/reference/ado-api/update-method.md)，ADO 會建立新的欄位。 在您的資料來源中如果您的提供者所允許的。  
+ 如果您嘗試依名稱參考不存在的欄位，新的**欄位**物件將會附加至 [**欄位**] 集合，其[狀態](../../../ado/reference/ado-api/status-property-ado-field.md)為 [ **adFieldPendingInsert**]。 當您呼叫[Update](../../../ado/reference/ado-api/update-method.md)時，如果您的提供者允許，ADO 將會在您的資料來源中建立新的欄位。  
   
  本章節包含下列主題。  
   
--   [欄位集合屬性、 方法和事件](../../../ado/reference/ado-api/fields-collection-properties-methods-and-events.md)  
+-   [Fields 集合屬性、方法和事件](../../../ado/reference/ado-api/fields-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)

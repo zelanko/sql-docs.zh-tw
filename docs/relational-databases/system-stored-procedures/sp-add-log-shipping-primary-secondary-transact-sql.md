@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_primary_secondary (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_log_shipping_primary_secondary （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1b3ea170f07eaea32306e0453d492e510062c9b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046267"
 ---
-# <a name="spaddlogshippingprimarysecondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-SQL)
+# <a name="sp_add_log_shipping_primary_secondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   這個預存程序會在主要伺服器上加入次要資料庫項目。  
@@ -42,11 +42,11 @@ sp_add_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @primary_database = ] 'primary_database'` 是主要伺服器上名稱。 *primary_database&lt*已**sysname**，沒有預設值。  
+`[ @primary_database = ] 'primary_database'`這是主伺服器上的資料庫名稱。 *primary_database*是**sysname**，沒有預設值。  
   
-`[ @secondary_server = ] 'secondary_server',` 是次要伺服器的名稱。 *secondary_server*已**sysname**，沒有預設值。  
+`[ @secondary_server = ] 'secondary_server',`這是次要伺服器的名稱。 *secondary_server*是**sysname**，沒有預設值。  
   
-`[ @secondary_database = ] 'secondary_database'` 是，次要資料庫的名稱。 *secondary_database*已**sysname**，沒有預設值。  
+`[ @secondary_database = ] 'secondary_database'`這是次要資料庫的名稱。 *secondary_database*是**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -55,13 +55,13 @@ sp_add_log_shipping_primary_secondary
  None  
   
 ## <a name="remarks"></a>備註  
- **sp_add_log_shipping_primary_secondary**必須從執行**主要**主要伺服器上的資料庫。  
+ **sp_add_log_shipping_primary_secondary**必須從主伺服器的**master**資料庫中執行。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="examples"></a>範例  
- 此範例說明如何利用**sp_add_log_shipping_primary_secondary**以新增次要資料庫的項目**LogShipAdventureWorks**到次要伺服器 flatiron。  
+ 這個範例說明如何使用**sp_add_log_shipping_primary_secondary** ，將次要資料庫**LogShipAdventureWorks**的專案加入至次要伺服器 flatiron 中。  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_primary_secondary   

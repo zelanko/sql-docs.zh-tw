@@ -1,5 +1,5 @@
 ---
-title: sp_dbmmonitorresults (TRANSACT-SQL) |Microsoft Docs
+title: sp_dbmmonitorresults （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e46116111e9f1e85cdaad48e9742e62fba187e74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899164"
 ---
-# <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
+# <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   從儲存資料庫鏡像監視記錄的狀態資料表傳回受監視資料庫的狀態資料列，並讓您選擇此程序是否要事前取得最新的狀態。  
@@ -60,11 +60,11 @@ sp_dbmmonitorresults database_name
   
  5 = 最後兩天的資料列  
   
- 6 = 過去的 100 個資料列  
+ 6 = 最後100個數據列  
   
- 7 = 最後 500 資料列  
+ 7 = 最後500個數據列  
   
- 8 = 最後 1,000 資料列  
+ 8 = 最後1000個數據列  
   
  9 = 最後 1,000,000 個資料列  
   
@@ -73,7 +73,7 @@ sp_dbmmonitorresults database_name
   
  0 = 不要更新資料庫的狀態。 只會使用最後兩個資料列來計算結果，而資料列的存在時間是依狀態資料表於何時重新整理而定。  
   
- 1 = 資料庫狀態更新藉由呼叫**sp_dbmmonitorupdate**計算結果之前。 不過，如果在前 15 秒或使用者已更新狀態資料表不屬於**sysadmin**固定伺服器角色**sp_dbmmonitorresults**執行時不會更新狀態。  
+ 1 = 在計算結果之前，藉由呼叫**sp_dbmmonitorupdate**來更新資料庫的狀態。 不過，如果狀態資料表在前15秒內已更新，或使用者不是**系統管理員（sysadmin** ）固定伺服器角色的成員，則**sp_dbmmonitorresults**執行而不更新狀態。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
@@ -100,13 +100,13 @@ sp_dbmmonitorresults database_name
 |**local_time**|**datetime**|更新這個資料列時本機伺服器執行個體上的系統時間。|  
   
 ## <a name="remarks"></a>備註  
- **sp_dbmmonitorresults**內容中，才可以執行**msdb**資料庫。  
+ **sp_dbmmonitorresults**只能在**msdb**資料庫的內容中執行。  
   
-## <a name="permissions"></a>Permissions  
- 需要的成員資格**sysadmin**固定的伺服器角色或在**dbm_monitor**固定的資料庫角色中**msdb**資料庫。 **Dbm_monitor**角色可讓其成員，以檢視資料庫鏡像狀態，但不是加以更新，但無法檢視或設定資料庫鏡像事件。  
+## <a name="permissions"></a>權限  
+ 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格，或**msdb**資料庫中的**dbm_monitor**固定資料庫角色。 **Dbm_monitor**角色可讓其成員查看資料庫鏡像狀態，但不會加以更新，但不會查看或設定資料庫鏡像事件。  
   
 > [!NOTE]  
->  第一次**sp_dbmmonitorupdate**執行時，它會建立**dbm_monitor**固定的資料庫角色中**msdb**資料庫。 成員**sysadmin**固定的伺服器角色可以新增任何使用者到**dbm_monitor**固定的資料庫角色。  
+>  第一次執行**sp_dbmmonitorupdate**時，它會在**msdb**資料庫中建立**dbm_monitor**固定資料庫角色。 **系統管理員（sysadmin** ）固定伺服器角色的成員可以將任何使用者加入至**dbm_monitor**固定資料庫角色。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回在前兩個小時期間記錄的資料列，而不會更新資料庫的狀態。  
@@ -118,10 +118,10 @@ EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;
   
 ## <a name="see-also"></a>另請參閱  
  [監視資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorchangemonitoring &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
- [sp_dbmmonitoraddmonitoring &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
- [sp_dbmmonitordropmonitoring &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
- [sp_dbmmonitorhelpmonitoring &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
+ [sp_dbmmonitorchangemonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
+ [sp_dbmmonitoraddmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
+ [sp_dbmmonitordropmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
+ [sp_dbmmonitorhelpmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
  [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
   

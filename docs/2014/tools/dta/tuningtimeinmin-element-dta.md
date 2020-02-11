@@ -1,5 +1,5 @@
 ---
-title: TuningTimeInMin 元素 (DTA) |Microsoft Docs
+title: TuningTimeInMin 元素（DTA） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63268165"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 元素 (DTA)
@@ -38,7 +38,8 @@ ms.locfileid: "63268165"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|**資料類型和長度**|`unsignedInt`，沒有長度限制。|  
+|**資料類型和長度**|
+  `unsignedInt`，沒有長度限制。|  
 |**預設值**|480 分鐘 (8 小時)。|  
 |**出現次數**|除非指定了 `NumberOfEvents` 元素值，否則，需要這個元素。|  
   

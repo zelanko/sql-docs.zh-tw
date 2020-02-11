@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 72a827e8f15627e986008e57ecb9a180b715a8a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106806"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>將多值參數加入至報表
@@ -44,7 +44,7 @@ ms.locfileid: "66106806"
     ```  
   
     > [!IMPORTANT]  
-    >  如果您未包含在變數周圍的括號，如上所示，報表會無法轉譯，並會顯示 「 必須宣告純量變數 」 錯誤訊息。  
+    >  如果您未如上面所示在變數前後加上括弧，報表將無法轉譯，而且會顯示「必須宣告純量變數」錯誤。  
   
      系統會針對查詢變數自動建立內嵌資料集或共用資料集的資料集參數。 系統會自動針對資料集參數建立報表參數。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66106806"
     ```  
   
     > [!IMPORTANT]  
-    >  如果您未包含在變數周圍的括號，如上所示，報表會無法轉譯，並會顯示 「 必須宣告純量變數 」 錯誤訊息。  
+    >  如果您未如上面所示在變數前後加上括弧，報表將無法轉譯，而且會顯示「必須宣告純量變數」錯誤。  
   
      系統會針對查詢變數自動建立內嵌資料集或共用資料集的資料集參數。 系統會自動針對資料集參數建立報表參數。  
   

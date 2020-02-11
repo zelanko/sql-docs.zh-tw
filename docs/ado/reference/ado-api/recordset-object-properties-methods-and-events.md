@@ -1,5 +1,5 @@
 ---
-title: 資料錄集物件屬性、 方法和事件 |Microsoft Docs
+title: Recordset 物件屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,13 +13,13 @@ ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f84faca18ad1f4f4bf7e036fa4ccbe0335154a63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917337"
 ---
-# <a name="recordset-object-properties-methods-and-events"></a>資料錄集物件屬性、 方法和事件
+# <a name="recordset-object-properties-methods-and-events"></a>Recordset 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
  [AbsolutePage 屬性](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
   
@@ -29,9 +29,9 @@ ms.locfileid: "67917337"
   
  [ActiveConnection 屬性](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
   
- [BOF、 EOF 屬性](../../../ado/reference/ado-api/bof-eof-properties-ado.md)  
+ [BOF、EOF 屬性](../../../ado/reference/ado-api/bof-eof-properties-ado.md)  
   
- [書籤 屬性](../../../ado/reference/ado-api/bookmark-property-ado.md)  
+ [Bookmark 屬性](../../../ado/reference/ado-api/bookmark-property-ado.md)  
   
  [CacheSize 屬性](../../../ado/reference/ado-api/cachesize-property-ado.md)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67917337"
   
  [DataMember 屬性](../../../ado/reference/ado-api/datamember-property.md)  
   
- [資料來源屬性](../../../ado/reference/ado-api/datasource-property-ado.md)  
+ [DataSource 屬性](../../../ado/reference/ado-api/datasource-property-ado.md)  
   
  [EditMode 屬性](../../../ado/reference/ado-api/editmode-property.md)  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67917337"
   
  [Move 方法](../../../ado/reference/ado-api/move-method-ado.md)  
   
- [MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
+ [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
   
  [NextRecordset 方法](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
   
@@ -120,7 +120,7 @@ ms.locfileid: "67917337"
   
  [UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>事件  
  [EndOfRecordset 事件](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
   
  [FetchComplete 事件](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  

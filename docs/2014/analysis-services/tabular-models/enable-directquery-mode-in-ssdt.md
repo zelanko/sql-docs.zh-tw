@@ -1,5 +1,5 @@
 ---
-title: 啟用 DirectQuery 設計模式 (SSAS 表格式) |Microsoft Docs
+title: 啟用 DirectQuery 設計模式（SSAS 表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 965a3a7c1bfa9549793690e92760ce39f147e0d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067200"
 ---
 # <a name="enable-directquery-design-mode-ssas-tabular"></a>啟用 DirectQuery 設計模式 (SSAS 表格式)
@@ -36,11 +36,11 @@ ms.locfileid: "66067200"
   
 2.  在 [物件總管] 中，按兩下 Model.bim 檔案。  
   
-3.  在 [**屬性**] 窗格中，變更屬性， **DirectQueryMode**至**上**。  
+3.  在 [**屬性**] 窗格中，將屬性**DirectQueryMode**變更為**On**。  
   
-4.  如果沒有錯誤，在 Visual Studio 中，開啟**錯誤清單**並且解決阻礙模型切換為 DirectQuery 模式的任何問題。  
+4.  如果發生錯誤，請在 Visual Studio 中開啟**錯誤清單**，並解決會導致模型無法切換至 DirectQuery 模式的任何問題。  
   
 ## <a name="see-also"></a>另請參閱  
- [DirectQuery 模式 &#40;SSAS 表格式&#41;](directquery-mode-ssas-tabular.md)  
+ [&#40;SSAS 表格式&#41;的 DirectQuery 模式](directquery-mode-ssas-tabular.md)  
   
   

@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 12ba4a2d03e98d5f2dac79917e23a93c0a24cdb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481213"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>Web 組態頁面 (Master Data Services 組態管理員)
@@ -26,7 +26,7 @@ ms.locfileid: "65481213"
   
 |控制項名稱|描述|  
 |------------------|-----------------|  
-|**網站**|建立新網站、選取預設網站，或選取其他可用的網站 (如有列出)。 此清單會顯示本機電腦上的 Internet Information Services (IIS) 中所定義的網站。 建立新網站時，會自動建立新的 Web 應用程式。 選取預設或其他現有的網站時，您必須手動建立應用程式。|  
+|**網址**|建立新網站、選取預設網站，或選取其他可用的網站 (如有列出)。 此清單會顯示本機電腦上的 Internet Information Services (IIS) 中所定義的網站。 建立新網站時，會自動建立新的 Web 應用程式。 選取預設或其他現有的網站時，您必須手動建立應用程式。|  
 |**Web 應用程式**|選取要進行組態設定的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式。 這個方塊只會顯示選定網站中的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式。<br /><br /> 如果沒有顯示任何項目，按一下 **[建立應用程式]** 來建立網站。|  
 |**建立應用程式**|開啟 **[建立 Web 應用程式]** 對話方塊，您可以從這個對話方塊建立選定網站中的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式。 只有當選取的網站沒有任何根 Web 應用程式設定為 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式時，這個按鈕才會啟用。|  
   
@@ -34,9 +34,9 @@ ms.locfileid: "65481213"
   
 |控制項名稱|描述|  
 |------------------|-----------------|  
-|**Select**|開啟 **[連接到伺服器]** 對話方塊，您可以從這裡連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，並選取要與選定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 應用程式產生關聯的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 資料庫。|  
-|**SQL Server 執行個體**|顯示主控 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的選定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 執行個體名稱。 在您連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體並選取資料庫之前，這會是空白的。|  
-|**[資料庫備份]**|顯示與選定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 應用程式相關聯的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 資料庫名稱。 在您連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體並選取資料庫之前，這會是空白的。|  
+|**請**|開啟 **[連接到伺服器]** 對話方塊，您可以從這裡連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，並選取要與選定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 應用程式產生關聯的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 資料庫。|  
+|**SQL Server 實例**|顯示主控 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的選定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 執行個體名稱。 在您連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體並選取資料庫之前，這會是空白的。|  
+|**Database**|顯示與選定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 應用程式相關聯的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 資料庫名稱。 在您連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體並選取資料庫之前，這會是空白的。|  
   
 ## <a name="enable-dqs-integration"></a>啟用 DQS 整合  
   
@@ -45,9 +45,9 @@ ms.locfileid: "65481213"
 |**啟用與 Data Quality Services 的整合**|選取此選項可啟用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]中所提供的 Data Quality 功能。 如需相關資訊，請參閱 [啟用 Data Quality Services 與 Master Data Services 的整合](install-windows/enable-data-quality-services-integration-with-master-data-services.md)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [設定 Master Data Services 資料庫和網站](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
- [Web 應用程式需求&#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
+ [設定 Master Data Services 的資料庫和網站](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [&#40;Master Data Services&#41;的 Web 應用程式需求](install-windows/web-application-requirements-master-data-services.md)   
  [建立主資料管理員 Web 應用程式 &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
- [MDS 2014 與 「 服務無法使用 」 錯誤](https://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
+ [MDS 2014 和「服務無法使用」錯誤](https://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
   
   

@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ede290f794ab61dac62c39bc47b80516385474fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097960"
 ---
-# <a name="setsecureconnectionlevel-method-wmi-msreportserverconfigurationsetting"></a>SetSecureConnectionLevel 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="setsecureconnectionlevel-method-wmi-msreportserver_configurationsetting"></a>SetSecureConnectionLevel 方法 (WMI MSReportServer_ConfigurationSetting)
   設定報表伺服器的安全連接層級。  
   
 ## <a name="syntax"></a>語法  
@@ -41,7 +41,7 @@ public void SetSecureConnectionLevel(Int32 Level,
 ```  
   
 ## <a name="parameters"></a>參數  
- *Level*  
+ *層級*  
  代表安全連接層級的整數值。  
   
  *HRESULT*  
@@ -53,12 +53,12 @@ public void SetSecureConnectionLevel(Int32 Level,
 ## <a name="remarks"></a>備註  
  呼叫時，報表伺服器的 SecureConnectionLevel 屬性會設定為指定的值。 值為 0 時，表示 SSL 為關閉狀態。 值大於或等於 1 時，表示 SSL 為開啟狀態。  
   
--   當設定值時，變更報表伺服器組態檔中的 SecureConnectionLevel 項目，而`URLRoot`組態檔中的項目會設定為使用"https://"，如果指定*層級*大於或如果，等於 1 或"http://"指定*層級*為 0。  
+-   設定值時，報表伺服器設定檔中的 SecureConnectionLevel 元素會變更，而且如果指定的`URLRoot` *層級*大於或等於1，則設定檔中的元素會設定為使用 "HTTPs://"，如果指定的*層級*為0，則為 "HTTP://"。  
   
  在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]中，SecureConnectionLevel 會變成 on/off 開關，預設值為 0。 對於大於或等於 1，且通過 SetSecureConnectionLevel 方法 API 的任何值，都會將 SSL 視為開啟狀態，並且在 rsreportserver.config 檔案中據此設定組態屬性 SecureConnectionLevel。 基於回溯相容性，仍然允許使用值 2 和 3。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

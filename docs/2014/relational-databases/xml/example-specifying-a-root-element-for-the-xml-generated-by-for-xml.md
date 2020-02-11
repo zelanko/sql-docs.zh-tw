@@ -1,5 +1,5 @@
 ---
-title: 範例為 FOR XML 產生的 XML 指定根元素 | Microsoft Docs
+title: 範例：為 FOR XML 產生的 XML 指定根項目 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 97b1a4ecc9cfbe0f9f8b793cddc788baf81a2200
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288381"
 ---
-# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>範例為 FOR XML 產生的 XML 指定根元素
+# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>範例：為 FOR XML 產生的 XML 指定根元素
   藉由在 `ROOT` 查詢中指定 `FOR XML` 選項，您可以要求在產生的 XML 中傳回單一的最上層元素，如下列查詢所示。 為 `ROOT` 指示詞所指定的引數會提供根元素的名稱。  
   
 ## <a name="example"></a>範例  
@@ -46,6 +46,6 @@ go
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 FOR XML 的 RAW 模式](use-raw-mode-with-for-xml.md)  
+ [搭配 FOR XML 使用 RAW 模式](use-raw-mode-with-for-xml.md)  
   
   

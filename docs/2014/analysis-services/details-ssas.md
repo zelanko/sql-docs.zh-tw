@@ -1,5 +1,5 @@
 ---
-title: 詳細資料 (SSAS) |Microsoft Docs
+title: 詳細資料（SSAS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6642024b7283c0302d58e77d7657844c27178f41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081820"
 ---
 # <a name="details-ssas"></a>詳細資料 (SSAS)
-  **[資料表匯入精靈]** 的這個頁面可讓您檢視成功或失敗之資料匯入作業的相關資訊。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]** 。  
+  
+  **[資料表匯入精靈]** 的這個頁面可讓您檢視成功或失敗之資料匯入作業的相關資訊。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
   
   

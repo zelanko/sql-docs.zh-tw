@@ -16,27 +16,27 @@ ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 68aaa0bfb8aa72c9e94a8b5db65768fe85895f0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917745"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
-指定是否[參數](../../../ado/reference/ado-api/parameter-object.md)代表輸入的參數、 輸出參數、 既是輸入和一個 output 參數或從預存程序的傳回值。  
+指定[參數](../../../ado/reference/ado-api/parameter-object.md)是否代表輸入參數、輸出參數、輸入和輸出參數，或預存程式的傳回值。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adParamInput**|1|預設值。 指出該參數代表輸入的參數。|  
-|**adParamInputOutput**|3|指出該參數代表輸入和輸出的參數。|  
-|**adParamOutput**|2|指出參數表示輸出參數。|  
-|**adParamReturnValue**|4|指出參數代表傳回的值。|  
-|**adParamUnknown**|0|表示未知的參數方向。|  
+|**adParamInput**|1|預設。 表示參數代表輸入參數。|  
+|**adParamInputOutput**|3|表示參數同時代表輸入和輸出參數。|  
+|**adParamOutput**|2|表示參數表示輸出參數。|  
+|**adParamReturnValue**|4|表示參數代表傳回值。|  
+|**adParamUnknown**|0|指出參數方向不明。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- 封裝： **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
+ Package： **.com. wfc. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums.ParameterDirection.INPUT|  
 |AdoEnums.ParameterDirection.INPUTOUTPUT|  
@@ -44,7 +44,7 @@ ms.locfileid: "67917745"
 |AdoEnums.ParameterDirection.RETURNVALUE|  
 |AdoEnums.ParameterDirection.UNKNOWN|  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
   
 |||  
 |-|-|  

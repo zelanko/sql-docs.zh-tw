@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bfaad65431cc71c8fa7a6ec5ba24e13fa7692e99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099226"
 ---
 # <a name="rsaccesseddenied---reporting-services-error"></a>rsAccessedDenied - Reporting Services 錯誤
@@ -24,7 +24,7 @@ ms.locfileid: "66099226"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; SharePoint 模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式 &#124; SharePoint 模式|  
   
 -   如果在直接透過 URL 存取報表伺服器時發生錯誤，則例外狀況會對應到 HTTP 401 錯誤。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "66099226"
 ## <a name="see-also"></a>另請參閱  
  [角色指派](../security/role-assignments.md)   
  [在原生模式報表伺服器上授與權限](../security/granting-permissions-on-a-native-mode-report-server.md)   
- [角色與權限 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)  
+ [角色和許可權 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)  
   
   

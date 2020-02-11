@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_object_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_db_xtp_object_stats （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e14d5162c15f38cf741ceead94c2bacb230c42a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043169"
 ---
-# <a name="sysdmdbxtpobjectstats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_object_stats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   報告自從上一次資料庫重新啟動之後，受到每個 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 物件上的作業所影響的資料列數。 不論交易是否認可還是已經回復，執行此作業時都會更新統計資料。  
@@ -42,18 +42,18 @@ ms.locfileid: "68043169"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|object_id|**bigint**|物件的識別碼。|  
-|row_insert_attempts|**bigint**|上一次資料庫重新啟動之後，由認可和中止的交易插入資料表中的資料列數。|  
-|row_update_attempts|**bigint**|上一次資料庫重新啟動之後，由認可和中止的交易在資料表中更新的資料列數。|  
-|row_delete_attempts|**bigint**|上一次資料庫重新啟動之後，由認可和中止的交易從資料表中刪除的資料列數。|  
-|write_conflicts|**bigint**|上一次資料庫重新啟動之後發生的寫入衝突數目。|  
-|unique_constraint_violations|**bigint**|上一次資料庫重新啟動之後發生的唯一條件約束違規數目。|  
+|object_id|**Bigint**|物件的識別碼。|  
+|row_insert_attempts|**Bigint**|上一次資料庫重新啟動之後，由認可和中止的交易插入資料表中的資料列數。|  
+|row_update_attempts|**Bigint**|上一次資料庫重新啟動之後，由認可和中止的交易在資料表中更新的資料列數。|  
+|row_delete_attempts|**Bigint**|上一次資料庫重新啟動之後，由認可和中止的交易從資料表中刪除的資料列數。|  
+|write_conflicts|**Bigint**|上一次資料庫重新啟動之後發生的寫入衝突數目。|  
+|unique_constraint_violations|**Bigint**|上一次資料庫重新啟動之後發生的唯一條件約束違規數目。|  
 |object_address|**varbinary(8)**|僅供內部使用。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要目前資料庫的 VIEW DATABASE STATE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體最佳化的資料表動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [&#40;Transact-sql&#41;的記憶體優化資料表動態管理檢視](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

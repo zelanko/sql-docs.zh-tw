@@ -1,5 +1,5 @@
 ---
-title: 完成映像進度 |Microsoft Docs
+title: 完成影像進度 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 322fa77d7d8620de87aaf862242da3c5c83126cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096336"
 ---
 # <a name="complete-image-progress"></a>完成映像進度
-  使用**完成映像進度**頁[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈，以監視狀態[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]映像完成安裝。 完成此步驟之後，這個頁面將會列出每個已設定和完成之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能的狀態。  
+  使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈的 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **完成映射進度**] 頁面來監視映射自動完成設定的狀態。 完成此步驟之後，這個頁面將會列出每個已設定和完成之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能的狀態。  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視與讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  

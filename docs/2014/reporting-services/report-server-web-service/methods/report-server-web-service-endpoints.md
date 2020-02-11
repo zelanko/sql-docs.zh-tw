@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 976e8452e50d293fb8125bfbdde1bd17a8f3be07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283493"
 ---
 # <a name="report-server-web-service-endpoints"></a>報表伺服器 Web 服務端點
@@ -65,7 +65,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
   
 |Proxy 端點|描述|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|提供 API 以管理設定為 SharePoint 整合模式的報表伺服器。 **注意：** 此端點中已過時[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]。|  
+|<xref:ReportService2006>|提供 API 以管理設定為 SharePoint 整合模式的報表伺服器。 **注意：** 這個端點在中[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]已被取代。|  
 |<xref:ReportService2010>|提供 API 以管理設定為原生模式或 SharePoint 整合模式的報表伺服器。|  
 |<xref:ReportExecution2005>|提供 API 來執行及導覽報表。|  
 |<xref:ReportServiceAuthentication>|提供 API，在 SharePoint Web 應用程式有設定表單驗證時，針對報表伺服器來驗證使用者。|  

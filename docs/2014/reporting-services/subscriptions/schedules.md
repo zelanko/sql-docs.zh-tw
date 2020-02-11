@@ -18,26 +18,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12096cd9269718f9eb75ca4fcbd1dbc11e25e6c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100745"
 ---
-# <a name="schedules"></a>[排程]
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供共用排程和報表特定排程來協助您控制報表的處理和散發。 這兩種排程類型之間的差異是定義、儲存和管理它們的方式。 兩種排程類型的內部建構則相同。 所有排程都會指定一個循環類型：每月、每週或每日。 在循環類型內，您可以設定發生事件之頻率的間隔和範圍。 不論您是建立共用排程還是報表特定排程，循環模式的類型和指定這些模式的方式相同。  
+# <a name="schedules"></a>排程
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供 共用排程 和 報表特定排程 來協助您控制報表的處理和散發。 這兩種排程類型之間的差異是定義、儲存和管理它們的方式。 兩種排程類型的內部建構則相同。 所有排程都會指定一個循環類型：每月、每週或每日。 在循環類型內，您可以設定發生事件之頻率的間隔和範圍。 不論您是建立共用排程還是報表特定排程，循環模式的類型和指定這些模式的方式相同。  
   
  本主題內容：  
   
--   [您可以執行排程](#bkmk_whatyoucando)  
+-   [您可以使用排程執行的工作](#bkmk_whatyoucando)  
   
--   [比較共用排程與報表特定排程](#bkmk_compare)  
+-   [比較共用和報表特定排程](#bkmk_compare)  
   
 -   [設定資料來源](#bkmk_configuredatasources)  
   
 -   [儲存認證和處理帳戶](#bkmk_credentials)  
   
--   [如何排程與傳遞處理器的運作](#bkmk_how_scheduling_works)  
+-   [排程和傳遞處理的運作方式](#bkmk_how_scheduling_works)  
   
 -   [伺服器相依性](#bkmk_serverdependencies)  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66100745"
 ##  <a name="bkmk_credentials"></a> 儲存認證和處理帳戶  
  您使用排程的方式會視您的角色指派的工作而定。 如果您要使用預先定義的角色，屬於內容管理員和系統管理員的使用者就可以建立和管理任何排程。 如果您使用自訂角色指派，角色指派就必須包括支援排程作業的工作。  
   
-|動作|包括這個工作|原生模式預先定義的角色|SharePoint 模式群組|  
+|作法|包括這個工作|原生模式預先定義的角色|SharePoint 模式群組|  
 |----------------|-----------------------|----------------------------------|----------------------------|  
 |建立、修改或刪除共用排程|管理共用排程|系統管理員|擁有者|  
 |選取共用排程|檢視共用排程|系統使用者|成員|  
@@ -128,7 +128,7 @@ ms.locfileid: "66100745"
  Reporting Services 會針對所有排程的作業維護事件佇列， 也會定期輪詢此佇列，以檢查是否有新的事件。 依預設，每隔 10 秒鐘會掃描一次佇列。 您可以變更此間隔，其方式是在 RSReportServer.config 檔中修改 `PollingInterval`、`IsNotificationService` 和 `IsEventService` 組態設定。 SharePoint 模式也會將 RSreporserver.config 用於這些設定，而且這些值會套用到所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 如需詳細資訊，請參閱 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)。  
   
 ##  <a name="bkmk_serverdependencies"></a> 伺服器相依性  
- 排程與傳遞處理器需要啟動報表伺服器服務與 SQL Server Agent。 排程與傳遞處理功能必須透過啟用`ScheduleEventsAndReportDeliveryEnabled`的屬性**Reporting Services 的介面區組態**中原則式管理 facet。 SQL Server Agent 與報表伺服器服務都必須執行，排程的作業才會發生。  
+ 排程與傳遞處理器需要啟動報表伺服器服務與 SQL Server Agent。 排程和傳遞處理功能必須透過以原則為基礎`ScheduleEventsAndReportDeliveryEnabled`的管理中的**Reporting Services facet 介面區**設定的屬性來啟用。 SQL Server Agent 與報表伺服器服務都必須執行，排程的作業才會發生。  
   
 > [!NOTE]  
 >  您可以使用 **[Reporting Services 的介面區組態]** Facet，暫時或永久地停止排程的作業。 您可以建立與部署自訂傳遞擴充模組，但排程與傳遞處理器無法藉由本身擴充。 您無法變更它管理事件與通知的方式。 如需有關關閉功能的詳細資訊，請參閱＜ **Turn Reporting Services Features On or Off** ＞的＜ [排程的事件和傳遞](../report-server/turn-reporting-services-features-on-or-off.md)＞一節。  

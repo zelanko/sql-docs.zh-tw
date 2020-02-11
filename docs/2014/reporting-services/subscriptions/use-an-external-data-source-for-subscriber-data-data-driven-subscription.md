@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c8dfb41890049918799bb3638f52dc222fc5dcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100634"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>使用外部資料來源以取得訂閱者資料 (資料驅動訂閱)
@@ -60,7 +60,7 @@ ms.locfileid: "66100634"
 -   報表伺服器將在結果集內為每一個資料列建立報表傳遞。 如果結果集是由三百個資料列組成，則報表伺服器將會嘗試傳遞三百個報表。  
   
 ## <a name="setting-delivery-options-using-variable-data-from-a-subscriber-database"></a>使用訂閱者資料庫的變數資料建立傳遞選項  
- 您可以使用訂閱者資料庫中的資料，自訂每一個收件者的傳遞選項。 所使用的傳遞延伸模組種類會決定可用的選項。 如果您使用報表伺服器電子郵件傳遞延伸模組，則查詢應包含每一個訂閱者的電子郵件別名。 如果您使用檔案共用傳遞，訂閱者資料應包含可用來建立訂閱者特定報表檔案或提供傳遞目的地的值。 如需詳細資訊，請參閱 < [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md)並[Reporting Services 中的電子郵件傳遞](e-mail-delivery-in-reporting-services.md)。  
+ 您可以使用訂閱者資料庫中的資料，自訂每一個收件者的傳遞選項。 所使用的傳遞延伸模組種類會決定可用的選項。 如果您使用報表伺服器電子郵件傳遞延伸模組，則查詢應包含每一個訂閱者的電子郵件別名。 如果您使用檔案共用傳遞，訂閱者資料應包含可用來建立訂閱者特定報表檔案或提供傳遞目的地的值。 如需詳細資訊，請參閱 Reporting Services 中的檔案[共用傳遞](file-share-delivery-in-reporting-services.md)和[Reporting Services 中的電子郵件傳遞](e-mail-delivery-in-reporting-services.md)。  
   
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>將參數值從訂閱者資料庫傳遞到報表  
  如果正在建立參數化報表的資料驅動訂閱，則可以使用可變個數參數值來自訂每份報表的輸出。 例如，訂閱者資料庫可能包含可用來篩選報表資料的員工識別碼、雇用日期、職稱和辦公室位置資訊。 如果報表接受以這些或其他可用的資料行資料為基礎的參數，您就可以將參數對應到適當的資料行。  
@@ -79,7 +79,7 @@ ms.locfileid: "66100634"
  如果您做了其中的任一變更，就必須更新訂閱。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立、 修改及刪除資料驅動訂閱](data-driven-subscriptions.md)   
+ [建立、修改和刪除資料驅動訂閱](data-driven-subscriptions.md)   
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)  
   

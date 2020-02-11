@@ -11,18 +11,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cf8a8310abf9173f613549ef7f2776fc33ea690c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481269"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>使用 DQSInstaller.exe 匯出及匯入 DQS 知識庫
   若為 DQS 的現有安裝，您可以在 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中將所有知識庫一次匯出到 DQS 備份檔案 (.dqsb)，然後從命令提示字元執行 DQSInstaller.exe 檔案，即可使用此 .dqsb 檔案一次將所有知識庫匯入不同的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 。 如需有關從命令提示字元執行 DQSInstaller.exe 的詳細資訊，請參閱＜ [從命令提示字元執行 DQSInstaller.exe](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) ＞中的＜ [執行 DQSInstaller.exe 完成 Data Quality Server 安裝](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)＞。  
   
- 這項功能可讓您在 *中一次備份所有*[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 知識庫，而不必個別使用 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]將每一個知識庫匯出到 .dqs 檔案。 同樣地，您可以從備份檔案一次將所有  知識庫匯入另一個 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，而不必使用 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]從 .dqs 檔案個別匯入每一個知識庫。 當您在電腦上解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]，然後將它重新安裝在另一部電腦上時，這對於備份和還原知識庫特別有用處。 您可以在現有的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝中輕鬆將所有知識庫匯出到 DQS 備份檔案 (.dqsb)，然後在另一部電腦上安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 之後從備份檔案匯入所有知識庫。  
+ 這項功能可讓您在 *中一次備份所有*[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 知識庫，而不必個別使用 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]將每一個知識庫匯出到 .dqs 檔案。 同樣地，您可以從備份檔案一次將所有 ** 知識庫匯入另一個 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，而不必使用 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]從 .dqs 檔案個別匯入每一個知識庫。 當您在電腦上解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，然後將它重新安裝在另一部電腦上時，這對於備份和還原知識庫特別有用處。 您可以在現有的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝中輕鬆將所有知識庫匯出到 DQS 備份檔案 (.dqsb)，然後在另一部電腦上安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 之後從備份檔案匯入所有知識庫。  
   
-##  <a name="export"></a> 將知識庫匯出到 .dqsb 檔案  
+##  <a name="export"></a>將知識庫匯出至 dqsbackup.dqsb 檔案  
  您可以在任何時間或是解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 時，於現有的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]中匯出所有知識庫。  
   
 -   若要在 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中將所有知識庫匯出到 DQS 備份檔案 (.dqsb)，請從命令提示字元使用 `exportkbs` 參數執行 DQSInstaller.exe，連同您想要匯出知識庫之目標的完整路徑和檔案名稱。 例如，若要將所有知識庫匯出到 C: 磁碟機中的 DQSBackup.dqsb 檔案：  
@@ -43,7 +43,7 @@ ms.locfileid: "65481269"
     > [!NOTE]  
     >  如果當您從命令提示字元使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 參數解除安裝 `uninstall` 時，並未指定 DQS 備份檔案的完整路徑和檔案名稱，則會顯示一則訊息，表示所有知識庫都將遭到刪除，並可讓您選擇是否要繼續解除安裝程序。  
   
-##  <a name="import"></a> 從 .dqsb 檔案匯入知識庫  
+##  <a name="import"></a>從 dqsbackup.dqsb 檔案匯入知識庫  
  完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝後，您可以從 DQS 備份檔 (.dqsb) 匯入所有知識庫。 若要匯入知識庫，您必須擁有有效的 DQS 備份檔案 (.dqsb)。  
   
  從命令提示字元使用 `importkbs` 參數執行 DQSInstaller.exe 檔案，連同您想要匯入知識庫之來源的完整路徑和檔案名稱。 例如，若要從 C: 磁碟機中的 DQSBackup.dqsb 檔案匯入所有知識庫：  
@@ -55,9 +55,9 @@ dqsinstaller.exe -importkbs c:\DQSBackup.dqsb
  如果 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中目前已經存在與您要匯入的知識庫同名的知識庫，則匯入的知識庫名稱將會附加底線 (_)，後面緊接著以 1 開頭的整數值。 例如，如果 "CompanyName" 網域是重複的，則匯入的網域名稱將會是 "CompanyName_1"。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行 DQSInstaller.exe 完成 Data Quality Server 安裝](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
+ [執行 Dqsinstaller.exe 完成 Data Quality Server 安裝](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [安裝 Data Quality Services](install-data-quality-services.md)   
- [將知識庫匯出到 .dqs 檔案](../export-a-knowledge-base-to-a-dqs-file.md)   
+ [將知識庫匯出至 dqs 檔案](../export-a-knowledge-base-to-a-dqs-file.md)   
  [從 .dqs 檔案匯入知識庫](../import-a-knowledge-base-from-a-dqs-file.md)  
   
   

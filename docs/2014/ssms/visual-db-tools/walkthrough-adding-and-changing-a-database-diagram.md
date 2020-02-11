@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：新增與變更資料庫圖表 | Microsoft Docs
+title: 逐步解說：加入與變更資料庫圖表 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273740"
 ---
-# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>逐步解說：新增及變更資料庫圖表
+# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>逐步解說：加入與變更資料庫圖表
   這個逐步解說將說明如何建立與修改資料庫圖表，以及透過資料庫圖表元件對資料庫進行變更。 您將看到如何將資料表加入至圖表、建立資料表之間的關聯性、建立資料行上的條件約束和索引，以及變更您查看每個資料表的資訊層級。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  為了完成這個逐步解說，您需要：  
   
 -   存取含有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 範例資料庫的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  
@@ -44,7 +44,7 @@ ms.locfileid: "63273740"
   
 3.  以滑鼠右鍵按一下 [資料庫圖表] 節點，再選擇 [新增資料庫圖表]  。  
   
-     若資料庫沒有建立圖表所需的物件，便會出現下列訊息：**此資料庫沒有使用資料庫圖表所需的一或多個支援物件。要建立資料庫物件嗎?** 選擇 [ **是**]。  
+     如果資料庫沒有建立圖表所需的物件，便會顯示下列訊息： **此資料庫沒有使用資料庫圖表所需的一或多個支援物件。要建立資料庫物件嗎?** 選擇 [是]  。  
   
      出現 [新增資料表]  對話方塊。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63273740"
   
 1.  以滑鼠右鍵按一下 `Address` 資料表。 在快速鍵功能表上，指向 [資料表檢視]  ，然後按一下 [標準]  。  
   
-     資料表格線會顯示三個資料行：**資料行名稱**、**資料類型**，以及**允許 Null**。  
+     資料表方格會顯示三個資料行：[資料行名稱]  、[資料類型]  和 [允許 Null]  。  
   
 2.  以滑鼠右鍵按一下 `Address` 資料表、按一下 [資料表檢視]  ，再選取 [索引鍵]  。  
   
@@ -70,11 +70,11 @@ ms.locfileid: "63273740"
   
 1.  以滑鼠右鍵按一下現有資料表外側的 [圖表設計工具]，再選擇 [新增資料表]  。  
   
-2.  在 [**選擇名稱**] 對話方塊中，按一下 **[確定]** 接受預設名稱`Table1`。  
+2.  在 [**選擇名稱**] 對話方塊中，按一下 **[確定]** 以接受`Table1`預設名稱。  
   
-     新的資料表格線隨即出現，並顯示三個資料行：**資料行名稱**、**資料類型**，以及**允許 Null**。  
+     隨即出現新的資料表方格，其中會有三個資料行：[資料行名稱]  、[資料類型]  和 [允許 Null]  。  
   
-3.  新增下列資訊以`Table1`:  
+3.  將下列資訊新增至`Table1`：  
   
     |**資料行名稱**|**資料類型**|**允許 Null**|  
     |---------------------|-------------------|---------------------|  
@@ -82,38 +82,39 @@ ms.locfileid: "63273740"
     |`T1col2`|`varchar(50)`|已選取|  
     |`T1col3`|`float`|已選取|  
   
-4.  以滑鼠右鍵按一下 `T1col1`，再選取 [設定主索引鍵]  。  
+4.  以滑鼠右鍵按一下 `T1col1`，再選取 [設定主索引鍵]****。  
   
      資料行名稱旁邊將會出現索引鍵圖示。  
   
-5.  從 [檔案]  功能表中按一下 [儲存 Diagram1]  。  
+5.  從 [檔案]**** 功能表中按一下 [儲存 Diagram1]****。  
   
-6.  在 [**選擇名稱**] 對話方塊中，按一下 **[確定]** 接受預設名稱`Diagram1`。  
+6.  在 [**選擇名稱**] 對話方塊中，按一下 **[確定]** 以接受`Diagram1`預設名稱。  
   
-7.  [儲存]  對話方塊會顯示訊息，表示要將 `Table1` 儲存到資料庫。 按一下 [ **是**]。  
+7.  [儲存]**** 對話方塊會顯示訊息，表示要將 `Table1` 儲存到資料庫。 按一下 [是]  。  
   
 ## <a name="modifying-table-structure"></a>修改資料表結構  
  您可以在圖表設計工具中加入檢查條件約束，以及建立資料表間的關聯性。  
   
 #### <a name="to-create-check-constraints"></a>若要建立檢查條件約束  
   
-1.  在 `Table1` 中，以滑鼠右鍵按一下 `T1col3` 資料列，再選擇 [檢查條件約束]  。  
+1.  在 `Table1` 中，以滑鼠右鍵按一下 `T1col3` 資料列，再選擇 [檢查條件約束]****。  
   
-     此時會出現 [檢查條件約束]  對話方塊。  
+     此時會出現 [檢查條件約束]**** 對話方塊。  
   
-2.  按一下 **[加入]** 。  
+2.  按一下 [新增]  。  
   
-     [選取的檢查條件約束]  清單中會出現新的條件約束，其預設名稱為 `CK_Table1`。  
+     [選取的檢查條件約束]**** 清單中會出現新的條件約束，其預設名稱為 `CK_Table1`。  
   
-3.  選取方格中的 [運算式]  資料列，然後按一下省略符號按鈕。  
+3.  選取方格中的 [運算式]**** 資料列，然後按一下省略符號按鈕。  
   
-     [檢查條件約束運算式]  對話方塊便會出現。  
+     [檢查條件約束運算式]**** 對話方塊便會出現。  
   
-4.  輸入 `T1col3 > 5` ，然後按一下 **[確定]** 。  
+4.  輸入 `T1col3 > 5` ，然後按一下 **[確定]**。  
   
-     `Table1` 現在便會有一項條件約束，規定所有輸入 `T1col3` 的值都必須大於 5。  
+     
+  `Table1` 現在便會有一項條件約束，規定所有輸入 `T1col3` 的值都必須大於 5。  
   
-5.  按一下 [ **關閉**]。  
+5.  按一下 [關閉]  。  
   
 #### <a name="to-create-relationships-between-tables"></a>若要建立資料表之間的關聯性  
   
@@ -130,54 +131,54 @@ ms.locfileid: "63273740"
   
 2.  將 `T2col1` 拖曳到 `T1col1`。  
   
-     會出現兩個對話方塊：背景中的 [外部索引鍵關聯性]  以及前景中的 [資料表與資料行]  。  
+     會出現兩個對話方塊：背景中的 [外部索引鍵關聯性]**** 以及前景中的 [資料表與資料行]****。  
   
-3.  按一下 [確定]  以儲存新的關聯性。  
+3.  按一下 [確定]**** 以儲存新的關聯性。  
   
-4.  再按一下 [確定]  。  
+4.  再按一下 [確定]****。  
   
 ## <a name="creating-indexes"></a>建立索引  
  您可以在大部分的資料類型上建立索引，包括 XML。  
   
 #### <a name="to-create-a-standard-index"></a>若要建立標準索引  
   
-1.  以滑鼠右鍵按一下 `Table1`，再選擇 [索引/索引鍵]  。  
+1.  以滑鼠右鍵按一下 `Table1`，再選擇 [索引/索引鍵]****。  
   
-     [索引/索引鍵]  對話方塊便會出現。  
+     [索引/索引鍵]**** 對話方塊便會出現。  
   
-2.  按一下 **[加入]** 。  
+2.  按一下 [新增]  。  
   
-     [選取的主/唯一索引鍵或索引]  清單中會出現新的索引，其預設名稱類似 `IX_Table1`。  
+     [選取的主/唯一索引鍵或索引]**** 清單中會出現新的索引，其預設名稱類似 `IX_Table1`。  
   
-3.  選取 [資料行]  資料列，然後按一下省略符號按鈕。  
+3.  選取 [資料行]**** 資料列，然後按一下省略符號按鈕。  
   
-     [索引資料行]  對話方塊便會出現。  
+     [索引資料行]**** 對話方塊便會出現。  
   
-4.  按一下 [資料行名稱]  下方的下拉箭頭，然後選取 `T1col2`。  
+4.  按一下 [資料行名稱]**** 下方的下拉箭頭，然後選取 `T1col2`。  
   
     > [!NOTE]  
     >  您選取 `T1col2` 下面的資料格，再選擇另一個資料行名稱，即可將其他資料行加入至這個索引。  
   
-5.  按一下 [確定]  以儲存這個索引。  
+5.  按一下 [確定]**** 以儲存這個索引。  
   
-6.  按一下 [索引/索引鍵]  對話方塊中的 [關閉]  。  
+6.  按一下 [索引/索引鍵]**** 對話方塊中的 [關閉]****。  
   
 #### <a name="to-create-an-xml-index"></a>若要建立 XML 索引  
   
-1.  以滑鼠右鍵按一下 `T2col1`，再選擇 [設定主索引鍵]  。  
+1.  以滑鼠右鍵按一下 `T2col1`，再選擇 [設定主索引鍵]****。  
   
     > [!NOTE]  
     >  加入 XML 索引時，需要將資料表中的另一個資料行設定為叢集主索引鍵。  
   
-2.  以滑鼠右鍵按一下 `Table2` 中的 `T2col3` 資料列，再選取 [XML 索引]  。  
+2.  以滑鼠右鍵按一下 `T2col3` 中的 `Table2` 資料列，再選取 [XML 索引]****。  
   
-     [XML 索引]  對話方塊便會出現。  
+     [XML 索引]**** 對話方塊便會出現。  
   
-3.  按一下 **[加入]** 。  
+3.  按一下 [新增]  。  
   
-     便會將含有預設值的 XML 索引新增至 [選取的 XML 索引]  清單。  
+     便會將含有預設值的 XML 索引新增至 [選取的 XML 索引]**** 清單。  
   
-4.  按一下 [ **關閉**]。  
+4.  按一下 [關閉]  。  
   
     > [!NOTE]  
     >  XML 索引會針對個別資料行建立。 第一個 XML 索引是主索引；任何額外的索引則為次要索引。  
@@ -187,13 +188,13 @@ ms.locfileid: "63273740"
   
 #### <a name="to-save-a-database-diagram"></a>若要儲存資料庫圖表  
   
-1.  在 [檔案]  功能表上選取 [儲存 Diagram1]  。  
+1.  在 [檔案]**** 功能表上選取 [儲存 Diagram1]****。  
   
-     此時會出現 [儲存]  對話方塊。 如果選取了 [受影響資料表的警告]  ，便會列出有關新的或變更的資料表的資訊。  
+     此時會出現 [儲存]**** 對話方塊。 如果選取了 [受影響資料表的警告]****，便會列出有關新的或變更的資料表的資訊。  
   
 2.  按一下 [確定]  。  
   
-3.  如果發生任何錯誤，[儲存後告知]  對話方塊會顯示錯誤及其原因。 修正錯誤並再一次儲存圖表。  
+3.  如果發生任何錯誤，[儲存後告知]**** 對話方塊會顯示錯誤及其原因。 修正錯誤並再一次儲存圖表。  
   
 ## <a name="next-steps"></a>後續步驟  
  這是含有兩個現有的及兩個新的資料表的基本圖表，但是已經具體而微地說明其圖表化現有資料庫或透過視覺化方式建立新結構描述的潛力。 建議您進一步研究的部分包括：  
@@ -207,12 +208,12 @@ ms.locfileid: "63273740"
 -   將圖表複製為點陣圖  
   
 ## <a name="see-also"></a>另請參閱  
- [自訂圖表中顯示的資訊量&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [設定資料庫圖表設計工具&#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
- [將資料表加入圖表&#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
- [在圖表上的資料表之間建立關聯性&#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
+ [自訂圖表中顯示的資訊量 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [設定資料庫關係圖設計工具 &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
+ [將資料表加入至圖表 &#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
+ [在圖表上建立資料表之間的關聯性 &#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
  [建立 XML 索引](../../relational-databases/xml/create-xml-indexes.md)   
- [將資料庫圖表的影像複製到剪貼簿 &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
+ [將資料庫關係圖的影像複製到剪貼簿 &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
  [使用圖表配置 &#40;Visual Database Tools&#41;](work-with-diagram-layout-visual-database-tools.md)  
   
   

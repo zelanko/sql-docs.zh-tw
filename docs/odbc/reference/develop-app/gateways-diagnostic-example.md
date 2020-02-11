@@ -15,25 +15,25 @@ ms.assetid: e0695fac-4593-4b3d-8675-cb8f73dab966
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50476cb92d477bb9a72ac8d4311d24572b0368e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069677"
 ---
 # <a name="gateways-diagnostic-example"></a>閘道診斷範例
-在閘道架構中，驅動程式會將要求傳送至支援 ODBC 的閘道。 閘道會將要求傳送至 DBMS。 因為它是介面驅動程式管理員使用的元件時，驅動程式格式，並傳回引數**SQLGetDiagRec**。  
+在閘道架構中，驅動程式會將要求傳送至支援 ODBC 的閘道。 閘道會將要求傳送至 DBMS。 由於它是與驅動程式管理員介面的元件，因此驅動程式會格式化並傳回**SQLGetDiagRec**的引數。  
   
- 例如，如果 Oracle Microsoft Open Data Services 和 Rdb 如果找不到資料表員工根據 Rdb 的閘道，閘道可能會產生此診斷訊息：  
+ 例如，如果以 Oracle 為基礎的閘道在 Microsoft Open 資料服務上為 Rdb，而如果 Rdb 找不到資料表 EMPLOYEE，閘道可能會產生此診斷訊息：  
   
 ```  
 "[42S02][-1][DEC][ODS Gateway][Rdb]%SQL-F-RELNOTDEF, Table EMPLOYEE is not defined "  
    "in schema."  
 ```  
   
- 資料來源中發生錯誤，因為閘道會加入診斷訊息 ([Rdb]) 的資料來源識別碼的前置詞。 因為閘道所使用的資料來源的元件，它會加入至診斷訊息的前置詞，其供應商 ([DEC]) 和識別項 （[ODS 閘道]）。 它也會加入 SQLSTATE 值和 Rdb 錯誤程式碼的診斷訊息開頭。 這允許它保留它自己的訊息結構的語意，並仍提供驅動程式的 ODBC 診斷資訊。 驅動程式剖析透過閘道連接到的錯誤陳述式的錯誤資訊。  
+ 因為此錯誤發生在資料來源中，所以閘道會將資料來源識別碼（[Rdb]）的前置詞加入至診斷訊息。 因為閘道是與資料來源介面的元件，所以它會將其廠商的首碼（[DEC]）和識別碼（[ODS 閘道]）新增至診斷訊息。 它也會將 SQLSTATE 值和 Rdb 錯誤碼加入至診斷訊息的開頭。 這允許它保留自己的訊息結構的語義，並仍然提供 ODBC 診斷資訊給驅動程式。 驅動程式會剖析閘道附加至 error 語句的錯誤資訊。  
   
- 因為閘道驅動程式介面驅動程式管理員使用的元件，它會使用上述的診斷訊息來格式化，並傳回下列值從**SQLGetDiagRec**:  
+ 因為閘道驅動程式是與驅動程式管理員介面的元件，所以它會使用上述的診斷訊息來格式化，並從**SQLGetDiagRec**傳回下列值：  
   
 ```  
 SQLSTATE:         "42S02"  

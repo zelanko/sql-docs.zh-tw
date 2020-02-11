@@ -13,14 +13,14 @@ ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a946329ad95a2b226f186e571152268baa5f37c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925661"
 ---
 # <a name="data-shaping-example"></a>資料成形範例
-下列資料成形命令示範如何建置一個階層式**Recordset**從**客戶**並**訂單**Northwind 資料庫中的資料表。  
+下列資料成形命令示範如何在 Northwind 資料庫的**Customers**和**Orders**資料表中建立階層式**記錄集**。  
   
 ```  
 SHAPE {SELECT CustomerID, ContactName FROM Customers}   
@@ -28,23 +28,23 @@ APPEND ({SELECT OrderID, OrderDate, CustomerID FROM Orders} AS chapOrders
 RELATE customerID TO customerID)   
 ```  
   
- 此命令用來開啟**資料錄集**物件 (如中所示[Visual Basic 範例中的資料成形](../../../ado/guide/data/visual-basic-example-of-data-shaping.md))，它會建立一個章節 (**chapOrders**) 傳回每一筆記錄從**客戶**資料表。 這一章所組成的子集**Recordset**傳回**訂單**資料表。 **ChapOrders**章節包含有關給定的客戶所下訂單的所有要求的資訊。 在此範例中，一章包含三個資料行：**OrderID**， **OrderDate**，以及**CustomerID**。  
+ 當此命令用來開啟**記錄集**物件（如[Visual Basic 的資料成形範例](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)所示）時，它會針對每個從**Customers**資料表傳回的記錄建立一個章節（**chapOrders**）。 本章包含從**Orders**資料表傳回之**記錄集**的子集。 **ChapOrders**章節包含給定客戶所下訂單的所有要求資訊。 在此範例中，章節包含三個數據行： [**訂單**]、[**訂購日期**] 和 [ **CustomerID**]。  
   
- 前兩個項目的結果的形狀**資料錄集**如下所示：  
+ 結果成形**記錄集**的前兩個專案如下所示：  
   
 |CustomerID|ContactName|OrderID|OrderDate|CustomerID|  
 |----------------|-----------------|-------------|---------------|----------------|  
 |ALFKI|Maria Ander|10643<br /><br /> 10692<br /><br /> 10702<br /><br /> 10835<br /><br /> 10952<br /><br /> 11011|1997-08-25<br /><br /> 1997-10-03<br /><br /> 1997-10-13<br /><br /> 1998-01-15<br /><br /> 1998-03-16<br /><br /> 1998-04-09|ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI|  
 |ANATR|Ana Trujillo|10308<br /><br /> 10625<br /><br /> 10759<br /><br /> 10926|1996-09-18<br /><br /> 1997-08-08<br /><br /> 1997-11-28<br /><br /> 1998-03-04|ANATR<br /><br /> ANATR<br /><br /> ANATR<br /><br /> ANATR|  
   
- 在圖形的命令中，附加用來建立子系**資料錄集**與父代**資料錄集**（如圖形關鍵字討論之後立即傳回提供者特定命令較早的） 由 RELATE 子句。 父系和子系通常在一般具有至少一個資料行：中資料列的資料行的值可以是父的子系的所有資料列中的資料行的值相同。  
+ 在 SHAPE 命令中，APPEND 是用來建立與父**記錄集**相關的子**記錄集**（如同在稍早所討論的 SHAPE 關鍵字之後立即從提供者特定的命令傳回）。 父系和子系通常至少有一個通用的資料行：父系之資料列中的資料行值，與子系中所有資料列的資料行值相同。  
   
- 若要使用圖形命令的第二個方法： 也就是產生父代**資料錄集**從子系**資料錄集**。 中子系的記錄**資料錄集**分組，通常使用 BY 子句和一個資料列加入至父代**資料錄集**子系中每個產生的群組。 如果省略 BY 子句，則子系**Recordset**可形成單一的群組和父代**資料錄集**會包含一個資料列。 這可用來將整個子計算 「 總計 」 彙總**資料錄集**。  
+ 有第二種方式可使用圖形命令，亦即，從子**記錄集**產生父**記錄集**。 子**記錄集**內的記錄會進行分組，通常是使用 by 子句，而一個資料列會加入至子系中每個產生之群組的父**記錄集**。 如果省略 BY 子句，子**記錄集**就會形成單一群組，而父**記錄集**只會包含一個資料列。 這適用于計算整個子**記錄集**的「總計」匯總。  
   
- 圖形命令建構也可讓您以程式設計方式建立形狀**資料錄集**。 然後，您就可以存取的元件**資料錄集**以程式設計方式或透過適當的視覺控制項。 Shape 命令會發出類似任何其他的 ADO 命令文字。 如需詳細資訊，請參閱 <<c0> [ 圖形的一般命令](../../../ado/guide/data/shape-commands-in-general.md)。  
+ 圖形命令結構也可讓您以程式設計方式建立成形的**記錄集**。 接著，您可以透過程式設計方式或適當的視覺效果控制項來存取**記錄集**的元件。 圖形命令的發出方式就像任何其他 ADO 命令文字一樣。 如需詳細資訊，請參閱[一般的圖形命令](../../../ado/guide/data/shape-commands-in-general.md)。  
   
- 不論哪種方式的父**資料錄集**是正確格式，它會包含用來使它關聯的子系的章節資料行**資料錄集**。 如果您想，父代**資料錄集**也可以有子資料列包含彙總 （SUM、 MIN、 MAX 和等等） 的資料行。 父和子系**Recordset**可以有包含的運算式中的資料列上的資料行**資料錄集**，以及資料行是在新的且一開始空白。  
+ 無論父**記錄集**的形成方式為何，它都會包含一個章節資料行，用來將它與子**記錄集**產生關聯。 如果您想要的話，父**記錄集**也可以有資料行包含子資料列上的匯總（加總、最小、最大值等等）。 父系和子**記錄集**都可以有資料行，其中包含**記錄集**內資料列的運算式，以及新的和最初是空的資料行。  
   
- 本章節會繼續進行下列主題。  
+ 本節會繼續進行下列主題。  
   
 -   [Visual Basic 的資料成形範例](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)

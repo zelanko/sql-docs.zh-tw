@@ -42,10 +42,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b1acd9e33865f1f60c1d1134e3173af4e4a562b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076611"
 ---
 # <a name="configure-measure-properties"></a>設定量值屬性
@@ -58,12 +58,13 @@ ms.locfileid: "66076611"
   
 |屬性|定義|  
 |--------------|----------------|  
-|`AggregateFunction`|必要。 決定如何彙總量值。 `Sum` 為預設彙總。 如需詳細資訊，請參閱 [使用彙總函式](use-aggregate-functions.md) 中每個函數的描述。|  
+|`AggregateFunction`|必要。 決定如何彙總量值。 
+  `Sum` 為預設彙總。 如需詳細資訊，請參閱 [使用彙總函式](use-aggregate-functions.md) 中每個函數的描述。|  
 |`DataType`|必要。 指定量值所繫結之基礎事實資料表資料行的資料類型。 這個值預設從來源資料行繼承而來。|  
 |`Description`|提供量值的描述，可以在用戶端應用程式中公開。|  
 |`DisplayFolder`|指定使用者連接到 Cube 時，可在其中看到量值的資料夾。 Cube 具有許多量值時，您可使用顯示資料夾來分類量值，並改進使用者瀏覽經驗。|  
 |`FormatString`|您可使用屬性的 `FormatString` 屬性，來選取用於對使用者顯示量值的格式。<br /><br /> 雖然 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]會提供顯示格式的清單，但您仍可指定清單中未提供的其他格式。 您可以指定在 Microsoft Visual Basic 中有效的任何具名格式或使用者自訂格式。|  
-|`ID`|必要。 顯示量值的唯一識別碼 (ID)。 此屬性是唯讀的。|  
+|`ID`|必要。 顯示量值的唯一識別碼 (ID)。 這個屬性是唯讀的。|  
 |`MeasureExpression`|指定受條件約束的 MDX 運算式來定義量值的值。 運算式會在彙總之前，先在分葉層級求取值，以便於對值進行加權。 例如，在匯率轉換時，銷售金額會以匯率加權。|  
 |`Name`|必要。 指定量值的名稱。|  
 |`Source`|必要。 指定量值所繫結之資料來源檢視中的資料行。 請參閱[資料來源和繫結 &#40;SSAS 多維度&#41;](data-sources-and-bindings-ssas-multidimensional.md)。|  

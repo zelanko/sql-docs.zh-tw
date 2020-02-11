@@ -1,5 +1,5 @@
 ---
-title: 伺服器組態的元素 (DTA) |Microsoft Docs
+title: Configuration （DTA）的 Server 元素 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bc763d621d15f982a2670483683d3862e678c98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283680"
 ---
 # <a name="server-element-for-configuration-dta"></a>組態的 Server 元素 (DTA)
@@ -50,7 +50,7 @@ ms.locfileid: "63283680"
 |**子元素**|[伺服器的 Name 元素 &#40;DTA&#41;](name-element-for-server-dta.md)<br /><br /> [組態的 Database 元素 &#40;DTA&#41;](database-element-for-configuration-dta.md)|  
   
 ## <a name="remarks"></a>備註  
- 您可以指定只有一個`Server`項目`Configuration`項目。 在 **Database Engine Tuning Advisor XML 結構描述** 中，這個元素的名稱為 [ServerTypecomplexType](https://go.microsoft.com/fwlink/?linkid=43100)。 請勿混淆這個 `Server` 元素和 `DTAInput` 元素的子元素。 如需詳細資訊，請參閱 [Server 元素 &#40;DTA&#41;](server-element-dta.md)。  
+ 您只能為`Configuration`元素指定`Server`一個元素。 在 **Database Engine Tuning Advisor XML 結構描述** 中，這個元素的名稱為 [ServerTypecomplexType](https://go.microsoft.com/fwlink/?linkid=43100)。 請勿混淆這個 `Server` 元素和 `DTAInput` 元素的子元素。 如需詳細資訊，請參閱 [Server 元素 &#40;DTA&#41;](server-element-dta.md)。  
   
 ## <a name="example"></a>範例  
  如需使用範例，請參閱[含使用者指定組態的 XML 輸入檔範例 &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)。  

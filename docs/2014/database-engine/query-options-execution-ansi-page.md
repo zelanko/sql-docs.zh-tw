@@ -1,5 +1,5 @@
 ---
-title: 查詢選項執行 （ANSI 頁面） |Microsoft Docs
+title: 查詢選項執行（ANSI 頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d9a8b5dea5ab90137c95c9ddaf609c63532dd5b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089083"
 ---
 # <a name="query-options-execution-ansi-page"></a>查詢選項執行 (ANSI 頁面)
-  使用此頁面來指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 將使用 ISO (ANSI) 標準中所指定的所有或部分設定執行查詢。  
+  使用此頁面來指定[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]將使用 ISO （ANSI）標準中所指定的全部或部分設定來執行查詢。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
- **SET ANSI_DEFAULTS**  
+ **設定 ANSI_DEFAULTS**  
  選取所有的預設 ANSI 設定。 依預設，此方塊無法使用，因為只設定了某些 ISO 設定。  
   
  **SET QUOTED_IDENTIFIER**  

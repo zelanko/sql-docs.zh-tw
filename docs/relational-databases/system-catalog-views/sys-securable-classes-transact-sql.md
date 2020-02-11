@@ -1,5 +1,5 @@
 ---
-title: sys.securable_classes (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases securable_classes （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dffa82d659ab2f36f94d5fecbafeb5c65ba4f05a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135281"
 ---
-# <a name="syssecurableclasses-transact-sql"></a>sys.securable_classes (Transact-SQL)
+# <a name="syssecurable_classes-transact-sql"></a>sys.securable_classes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回安全性實體類別的清單  
@@ -35,9 +35,9 @@ ms.locfileid: "68135281"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**class_desc**|**sysname**|類別的名稱。|  
-|**class**|**int**|類別的數值指定。|  
+|**課堂**|**int**|類別的數值指定。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>範例  

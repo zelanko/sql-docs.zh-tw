@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97e9280512b75aebfccb93c0e11e5402136fa6f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105570"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>在資料區中合併資料格 (報表產生器及 SSRS)
   您可以在資料區域中合併資料格來結合資料格、增進資料區域外觀，或為資料行群組與資料列群組提供橫跨的標籤。  
   
 > [!NOTE]  
->  資料格僅能在資料區域的每個區域內進行合併：邊角、資料行標頭、群組定義 (或資料列標頭) 以及主體。 您無法合併跨越區域界限的資料格。 例如，您無法將資料區邊角區域中的資料格與資料列群組區域中的資料格合併。 如需有關 tablix 區域的詳細資訊，請參閱 <<c0> [ 列出&#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)。</c0>  
+>  資料格僅能在資料區域的每個區域內進行合併：邊角、資料行標頭、群組定義 (或資料列標頭) 以及主體。 您無法合併跨越區域界限的資料格。 例如，您無法將資料區邊角區域中的資料格與資料列群組區域中的資料格合併。 如需 tablix 區域的詳細資訊，請參閱[&#40;報表產生器和 SSRS&#41;清單](tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

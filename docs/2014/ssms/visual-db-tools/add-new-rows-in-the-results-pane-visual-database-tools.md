@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cda813db916faf4819f85d3d09213679fba2eeec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460011"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>在結果窗格中加入新的資料列 (Visual Database Tools)
@@ -54,7 +54,7 @@ ms.locfileid: "63460011"
 -   按一下 ESC 鍵來取消編輯。 如果是在變更過的資料格中按 ESC 鍵，那麼該資料格中的變更會取消。 如果在沒有變更的資料格中按 ESC 鍵，整個資料列的變更都會取消。  
   
 ## <a name="see-also"></a>另請參閱  
- [在 [結果] 窗格中的資料搭配使用&#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
+ [使用 [結果] 窗格中的資料 &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
  [使用查詢執行基本作業 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

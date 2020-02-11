@@ -1,5 +1,5 @@
 ---
-title: sp_primarykeys (TRANSACT-SQL) |Microsoft Docs
+title: sp_primarykeys （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ccae0385ef8c9305f4972ff6dcbd7a7960200370
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056311"
 ---
-# <a name="spprimarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
+# <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回指定的遠端資料表之主索引鍵資料行，每個索引鍵資料行一個資料列。  
@@ -42,13 +42,13 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @table_server = ] 'table_server'_` 是要從中傳回主索引鍵資訊的連結伺服器的名稱。 *table_server&lt*已**sysname**，沒有預設值。  
+`[ @table_server = ] 'table_server'_`這是傳回主鍵資訊的連結伺服器名稱。 *table_server*是**sysname**，沒有預設值。  
   
-`[ @table_name = ] 'table_name'` 是要為其提供主索引鍵資訊的資料表名稱。 *table_name*已**sysname**，預設值是 NULL。  
+`[ @table_name = ] 'table_name'`這是要提供主鍵資訊的資料表名稱。 *table_name*是**sysname**，預設值是 Null。  
   
-`[ @table_schema = ] 'table_schema'` 為資料表的結構描述。 *table_schema*已**sysname**，預設值是 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境中，這相當於資料表擁有者。  
+`[ @table_schema = ] 'table_schema'`這是資料表架構。 *table_schema*是**sysname**，預設值是 Null。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境中，這相當於資料表擁有者。  
   
-`[ @table_catalog = ] 'table_catalog'` 所在目錄的名稱指定*table_name*所在。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境中，這相當於資料庫名稱。 *table_catalog 排列*已**sysname**，預設值是 NULL。  
+`[ @table_catalog = ] 'table_catalog'`這是指定之*table_name*所在的目錄名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境中，這相當於資料庫名稱。 *table_catalog*是**sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
@@ -65,15 +65,15 @@ sp_primarykeys [ @table_server = ] 'table_server'
 |**PK_NAME**|**sysname**|主索引鍵識別碼。 如果不適用於資料來源，便傳回 NULL。|  
   
 ## <a name="remarks"></a>備註  
- **sp_primarykeys**執行查詢的 PRIMARY_KEYS 資料列集**IDBSchemaRowset**對應至 OLE DB 提供者介面*table_server&lt*。 *Table_name*， *table_schema*， *table_catalog 排列*，以及*資料行*參數傳遞給這個介面來限制的資料列傳回此項目。  
+ **sp_primarykeys**是藉由查詢對應至*table_server*之 OLE DB 提供者之**IDBSchemaRowset**介面的 PRIMARY_KEYS 資料列集來執行。 *Table_name*、 *table_schema*、 *table_catalog*和資料行參數會傳遞至這個介面，以限制傳回的資料*列*。  
   
- **sp_primarykeys**會傳回空的結果集，如果指定連結伺服器的 OLE DB 提供者不支援的 PRIMARY_KEYS 資料列集**IDBSchemaRowset**介面。  
+ 如果指定連結伺服器的 OLE DB 提供者不支援**IDBSchemaRowset**介面的 PRIMARY_KEYS 資料列集， **sp_primarykeys**會傳回空的結果集。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要結構描述的 SELECT 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會從 `LONDON1` 伺服器，傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中 `HumanResources.JobCandidate` 資料表的主索引鍵資料行。  
+ 下列範例會從 `LONDON1` 伺服器，傳回 `HumanResources.JobCandidate` 資料庫中 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表的主索引鍵資料行。  
   
 ```  
 EXEC sp_primarykeys @table_server = N'LONDON1',   
@@ -83,14 +83,14 @@ EXEC sp_primarykeys @table_server = N'LONDON1',
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [分散式查詢預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_catalogs &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_column_privileges &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [sp_foreignkeys &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [< sp_indexes &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [idbschemarowset &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [分散式查詢預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [sp_catalogs &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_column_privileges &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_foreignkeys &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_linkedservers &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_tables_ex &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

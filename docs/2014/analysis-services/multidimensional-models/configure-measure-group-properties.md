@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7571457847d8ffb0388608b7d634cc19261a609
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076664"
 ---
 # <a name="configure-measure-group-properties"></a>設定量值群組屬性
@@ -35,10 +35,10 @@ ms.locfileid: "66076664"
 |`EstimatedSize`|指定量值群組的估計大小 (以位元組為單位)。|  
 |`ID`|指定物件的識別碼。|  
 |`IgnoreUnrelatedDimensions`|決定當查詢中包含與量值群組不相關的維度成員時，是否將不相關的維度強制在其最上層。 預設值是 `True`。|  
-|`Name`|量值的名稱。 此屬性是唯讀的。|  
+|`Name`|量值的名稱。 這個屬性是唯讀的。|  
 |`ProactiveCaching`|用於處理重複索引鍵、未知索引鍵、Null 索引鍵、錯誤限制、偵測到錯誤時的動作和錯誤記錄檔的可設定錯誤處理設定。|  
 |`ProcessingMode`|指出在處理期間或處理之後，是否應該進行檢索和彙總。 選項為 Regular 和 LazyAggregations。 LazyAggregations 可以用於將彙總以背景工作方式執行。|  
-|`ProcessingPriority`|決定 Cube 在背景作業 (例如延遲彙總和索引) 期間的處理優先權。 預設值是 **0**。|  
+|`ProcessingPriority`|決定 Cube 在背景作業 (例如延遲彙總和索引) 期間的處理優先權。 預設值為**0**。|  
 |`StorageLocation`|量值群組的檔案系統儲存位置。 如果未指定，則會從包含該量值群組的 Cube 中繼承位置。|  
 |`StorageMode`|量值群組的儲存模式。 可用的值為 MOLAP、ROLAP 或 HOLAP。|  
 |`Type`|指定量值群組的類型。|  
