@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 83ed373fd4fdd38ae5ddd391678b74e3d2e168c9
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401108"
 ---
 # <a name="instant-file-initialization-configuration"></a>立即檔案初始化設定
@@ -48,7 +48,7 @@ ms.locfileid: "74401108"
     > [!WARNING]  
     > 當您關閉立即檔案初始化時，上述針對此功能所討論的安全性考慮，可能仍會套用至啟用立即檔案初始化時所刪除的檔案。  
   
-4.  按一下 **[套用]**。 此變更將會在下次重新開機設備服務時，透過 SQL Server PDW 的 SQL Server 實例傳播。 若要立即重新開機設備服務，請參閱[PDW 服務狀態 &#40;分析平臺系統&#41;](pdw-services-status.md)。  
+4.  按一下 [套用]  。 此變更將會在下次重新開機設備服務時，透過 SQL Server PDW 的 SQL Server 實例傳播。 若要立即重新開機設備服務，請參閱[PDW 服務狀態 &#40;分析平臺系統&#41;](pdw-services-status.md)。  
   
 5.  您可能想要重複上述步驟，做為**備份帳戶**的 [新增] 許可權，以移除 [**執行磁片區維護**工作] 許可權。  
   

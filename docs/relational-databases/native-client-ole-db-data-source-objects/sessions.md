@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a2e5896456f3c4f8074b62f6e1d4707cc7c41d21
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73770810"
 ---
 # <a name="sessions"></a>工作階段
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會話代表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例的單一連接。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會話代表實例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]單一連接。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者需要會話分隔資料來源的交易空間。 所有從特定工作階段物件建立而來的命令物件，都會參與工作階段物件的本機或分散式交易。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "73770810"
   
  在資料來源上建立的其他工作階段物件會依照資料來源的指示，對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體建立本身的連接。 當應用程式釋放對該工作階段所建立物件的所有參考時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的連接就會卸除。  
   
- 下列範例示範如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫：  
+ 下列範例示範如何使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫：  
   
 ```  
 int main()  
@@ -181,7 +181,7 @@ EXIT:
 }  
 ```  
   
- 將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會話物件連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實例，可能會為持續建立和釋放會話物件的應用程式產生顯著的額外負荷。 藉由有效率地管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會話物件，可將額外負荷降到最低。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者應用程式可以藉由在至少一個物件介面上維護參考，讓會話物件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接保持使用中狀態。  
+ 將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會話物件連接到實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可能會為持續建立和釋放會話物件的應用程式產生相當大的負擔。 有效率地管理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會話物件，可將額外負荷降到最低。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者應用程式可以[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]藉由維護至少一個物件介面上的參考，讓會話物件的連接保持使用中狀態。  
   
  例如，維持命令建立物件參考的集區，可以將集區中這些工作階段物件的連接保持為使用中。 在需要工作階段物件時，集區維護程式碼會將有效的 **IDBCreateCommand** 介面指標傳遞到需要該工作階段的應用程式方法。 當應用程式方法不再需要工作階段時，該方法會將介面指標傳回給集區維護程式碼，而不是釋放應用程式對命令建立物件的參考。  
   
@@ -189,6 +189,6 @@ EXIT:
 >  在前述範例中之所以使用 **IDBCreateCommand** 介面，是因為 **ICommand** 介面會實作 **GetDBSession** 方法，這是命令或資料列集範圍中唯一讓物件判斷其建立所在之工作階段的方法。 因此，只有命令物件才可以讓應用程式擷取資料來源物件指標，而其他的工作階段可從該指標建立。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料來源物件&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [資料來源物件 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

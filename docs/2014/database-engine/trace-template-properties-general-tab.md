@@ -1,5 +1,5 @@
 ---
-title: 追蹤範本屬性 （一般索引標籤） |Microsoft Docs
+title: 追蹤範本屬性（一般索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eaed6350c6a6dde394e2ccff1617ac3bab2ba19c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088702"
 ---
 # <a name="trace-template-properties-general-tab"></a>追蹤範本屬性 (一般索引標籤)
-  使用 **[追蹤範本屬性]** 對話方塊的 **[一般]** 索引標籤，以使用下列選項來建立新的追蹤範本。 若要存取此對話方塊，請在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **[檔案]** 功能表上，指向 **[範本]** ，然後按一下 **[新增範本]** 。  
+  使用 **[追蹤範本屬性]** 對話方塊的 **[一般]** 索引標籤，以使用下列選項來建立新的追蹤範本。 若要存取此對話方塊，請在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **[檔案]** 功能表上，指向 **[範本]**，然後按一下 **[新增範本]**。  
   
 ## <a name="options"></a>選項。  
  **選取伺服器類型**  
@@ -31,7 +31,7 @@ ms.locfileid: "66088702"
  **新範本名稱**  
  提供範本的描述性名稱。  
   
- **以現有的範本作為新範本的基礎**  
+ **現有新範本的基礎**  
  使用清單中的範本作為此範本的基礎。 所有選取的事件、資料行與篩選，起初都與現有之範本中的項目相符，然後可以視需要加以修改。  
   
  **作為所選取伺服器類型的預設範本**  

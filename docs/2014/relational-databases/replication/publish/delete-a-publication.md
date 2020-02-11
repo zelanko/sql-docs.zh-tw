@@ -16,20 +16,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa08a7f84cd413f1212cc73d4242b5da70fd33eb
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882283"
 ---
-# <a name="delete-a-publication"></a>Delete a Publication
+# <a name="delete-a-publication"></a>刪除發行集
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來刪除 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的發行集。  
   
  **本主題內容**  
   
 -   **若要刪除發行集，請使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -54,14 +54,14 @@ ms.locfileid: "73882283"
   
 #### <a name="to-delete-a-snapshot-or-transactional-publication"></a>刪除快照式或交易式發行集  
   
-1.  執行下列其中之一：  
+1.  執行下列其中一個動作：  
   
     -   若要刪除單一發行集，請在發行集資料庫的發行者上執行 [sp_droppublication](/sql/relational-databases/system-stored-procedures/sp-droppublication-transact-sql) 。  
   
-    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 為 **\@類型**指定 `tran` 的值。 (選擇性) 如果無法存取散發者，或是資料庫的狀態為可疑或離線，請為force **指定 \@1** 值。 (選擇性) 如果未在發行集資料庫上執行 **sp_removedbreplication\@，請為** [dbname](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 指定資料庫的名稱。  
+    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 `tran` **為\@類型**指定的值。 (選擇性) 如果無法存取散發者，或是資料庫的狀態為可疑或離線，請為  force **指定 \@1** 值。 (選擇性) 如果未在發行集資料庫上執行 **sp_removedbreplication\@，請為** [dbname](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 指定資料庫的名稱。  
   
         > [!NOTE]  
-        >  為force **指定 \@1** 值時，可能會將與複寫有關的發行物件留在資料庫中。  
+        >  為  force **指定 \@1** 值時，可能會將與複寫有關的發行物件留在資料庫中。  
   
 2.  (選擇性) 如果此資料庫沒有任何其他發行集，請執行 [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)，以便使用快照式或異動複寫來停用目前資料庫的發行集。  
   
@@ -69,14 +69,14 @@ ms.locfileid: "73882283"
   
 #### <a name="to-delete-a-merge-publication"></a>刪除合併式發行集  
   
-1.  執行下列其中之一：  
+1.  執行下列其中一個動作：  
   
     -   若要刪除單一發行集，請在發行集資料庫的發行者端執行 [sp_dropmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql)。  
   
-    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 為 **\@類型**指定 `merge` 的值。 (選擇性) 如果無法存取散發者，或是資料庫的狀態為可疑或離線，請為force **指定 \@1** 值。 (選擇性) 如果未在發行集資料庫上執行 **sp_removedbreplication\@，請為** [dbname](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 指定資料庫的名稱。  
+    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 `merge` **為\@類型**指定的值。 (選擇性) 如果無法存取散發者，或是資料庫的狀態為可疑或離線，請為  force **指定 \@1** 值。 (選擇性) 如果未在發行集資料庫上執行 **sp_removedbreplication\@，請為** [dbname](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 指定資料庫的名稱。  
   
         > [!NOTE]  
-        >  為force **指定 \@1** 值時，可能會將與複寫有關的發行物件留在資料庫中。  
+        >  為  force **指定 \@1** 值時，可能會將與複寫有關的發行物件留在資料庫中。  
   
 2.  (選擇性) 如果此資料庫沒有任何其他發行集，請執行 [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)，以便使用合併式複寫來停用目前資料庫的發行集。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "73882283"
  [!code-vb[HowTo#rmo_vb_DropMergePub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropmergepub)]  
   
 ## <a name="see-also"></a>另請參閱  
- [複寫系統預存程序概念](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [發行資料和資料庫物件](publish-data-and-database-objects.md)  
   
   

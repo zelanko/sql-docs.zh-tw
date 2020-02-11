@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399438"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>分析平臺系統中的工作負載管理
@@ -60,7 +60,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
   
 |資源類別|要求重要性|最大記憶體使用量 *|平行存取插槽數（最大值 = 32）|描述|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|預設值|中|400 MB|1|根據預設，每個登入都允許少量的記憶體和並行處理資源來處理其要求。<br /><br />當登入新增至資源類別時，新的類別會優先使用。 從所有資源類別中卸載登入時，登入會還原回預設資源配置。|  
+|預設|中|400 MB|1|根據預設，每個登入都允許少量的記憶體和並行處理資源來處理其要求。<br /><br />當登入新增至資源類別時，新的類別會優先使用。 從所有資源類別中卸載登入時，登入會還原回預設資源配置。|  
 |MediumRC|中|1200 MB|3|可能需要中型資源類別的要求範例：<br /><br />CTAS 具有大型雜湊聯結的作業。<br /><br />選取需要更多記憶體的作業，以避免快取至磁片。<br /><br />將資料載入叢集資料行存放區索引。<br /><br />針對具有10-15 資料行的小型資料表，建立、重建和重新組織叢集資料行存放區索引。|  
 |Largerc|高|2.8 GB|7|可能需要大型資源類別的要求範例：<br /><br />非常大型的 CTAS 作業，具有大量的雜湊聯結或包含大型的匯總，例如大型 ORDER BY 或 GROUP BY 子句。<br /><br />針對雜湊聯結之類的作業，或 ORDER BY 或 GROUP BY 子句之類的匯總，選取需要海量儲存體的作業<br /><br />將資料載入叢集資料行存放區索引。<br /><br />針對具有10-15 資料行的小型資料表，建立、重建和重新組織叢集資料行存放區索引。|  
 |xlargerc|高|8.4 GB|22|超大型資源類別適用于在執行時間需要額外耗用大量資源的要求。|  
@@ -149,9 +149,9 @@ Dmv，其中包含資源類別和資源類別成員的相關資訊。
   
 Dmv，其中包含要求狀態和所需資源的相關資訊：  
   
--   [sys. dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
+-   [sys.dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
   
--   [sys. dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
+-   [sys.dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
   
 從計算節點上的 SQL Server Dmv 公開的相關系統檢視。 如需這些 Dmv 的連結，請參閱 MSDN 上的[SQL Server 動態管理檢視](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   

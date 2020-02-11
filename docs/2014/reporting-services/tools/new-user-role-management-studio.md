@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4b40fa294cb682746fe1b69a5fb03bf841d8e334
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100125"
 ---
 # <a name="new-user-role-management-studio"></a>新增使用者角色 (Management Studio)
@@ -31,14 +31,14 @@ ms.locfileid: "66100125"
  **名稱**  
  鍵入角色定義的名稱。 角色定義名稱在報表伺服器命名空間內必須是唯一的。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 指定名稱時，請勿使用下列字元：  
   
- ; ? : \@ & = + , $ / * \< >  
+ ; ? ： \@ & = +，$/*\< >  
   
  " /  
   
  **說明**  
  鍵入說明如何使用角色的描述，並列舉該角色支援的項目。  
   
- **工作**  
+ **Task**  
  選取可以透過此角色執行的工作。 您無法建立新工作，或修改 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]支援的現有工作。 項目層級角色定義中只能使用項目層級工作。  
   
  **工作描述**  

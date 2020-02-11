@@ -18,10 +18,10 @@ ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52f7a58c854d7081c13cfad606f71044361a02ab
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73962453"
 ---
 # <a name="cdcchange_tables-transact-sql"></a>cdc.change_tables (Transact-SQL)
@@ -29,14 +29,14 @@ ms.locfileid: "73962453"
 
   針對資料庫中的每個變更資料表，各傳回一個資料列。 當來源資料表啟用變更資料擷取時，就會建立變更資料表。 我們建議您不要直接查詢系統資料表。 請改為執行[sys.databases sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)預存程式。  
 
-|資料行名稱|[名稱]|描述|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|變更資料表的識別碼。 在資料庫中，這是唯一的。|  
-|**version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 若為 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，這個資料行一律會傳回 0。|  
+|**版本**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 若為 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，這個資料行一律會傳回 0。|  
 |**source_object_id**|**int**|啟用變更資料擷取之來源資料表的識別碼。|  
 |**capture_instance**|**sysname**|用來命名執行個體專用追蹤物件之擷取執行個體的名稱。 根據預設，此名稱衍生自來源架構名稱加上來源資料表名稱，格式為*schemaname_sourcename*。|  
-|**start_lsn**|**binary(10)**|在變更資料表中查詢變更資料時，代表低端點的記錄序號 (LSN)。<br /><br /> NULL = 尚未建立低端點。|  
-|**end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 若為 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，這個資料行一律會傳回 NULL。|  
+|**start_lsn**|**binary （10）**|在變更資料表中查詢變更資料時，代表低端點的記錄序號 (LSN)。<br /><br /> NULL = 尚未建立低端點。|  
+|**end_lsn**|**binary （10）**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 若為 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，這個資料行一律會傳回 NULL。|  
 |**supports_net_changes**|**bit**|針對變更資料表啟用查詢淨變更的支援。|  
 |**has_drop_pending**|**bit**|擷取處理序收到了來源資料表已經卸除的通知。|  
 |**role_name**|**sysname**|用來限制變更資料之存取權的資料庫角色名稱。<br /><br /> NULL = 不使用角色。|  
@@ -46,6 +46,6 @@ ms.locfileid: "73962453"
 |**partition_switch**|**bit**|指出是否可以針對已啟用變更資料捕獲的資料表執行**ALTER TABLE**的**SWITCH PARTITION**命令。 0 表示已封鎖資料分割切換。 非資料分割的資料表一律傳回 1。|  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.sp_cdc_help_change_data_capture &#40;-SQL&AMP;&#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+ [sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

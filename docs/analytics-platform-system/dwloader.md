@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401170"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>平行處理資料倉儲的 dwloader 命令列載入器
@@ -209,7 +209,7 @@ For more information about this install option, see [Install dwloader Command-Li
 如果發生載入失敗， **dwloader**會儲存無法載入的資料列，而失敗會將失敗資訊描述在名為*load_failure_file_name*的檔案中。 如果此檔案已經存在，dwloader 就會覆寫現有的檔案。 當第一次失敗時，會建立*load_failure_file_name* 。 如果所有資料列都載入成功，則不會建立*load_failure_file_name* 。  
   
 **-fh** *number_header_rows*  
-*Source_data_file_name*開頭要忽略的行（列）數目。 預設值為 0。  
+*Source_data_file_name*開頭要忽略的行（列）數目。 預設值是 0。  
   
 <variable_length_column_options>  
 具有以字元分隔之可變長度資料行的*source_data_file_name*選項。 根據預設， *source_data_file_name*包含可變長度資料行中的 ASCII 字元。  
@@ -224,7 +224,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 |名稱|逸出字元|十六進位字元|  
 |--------|--------------------|-----------------|  
-|Tab 鍵|\t|0x09|  
+|索引標籤|\t|0x09|  
 |回車（CR）|\r|0x0d|  
 |換行字元（LF）|\n|0x0a|  
 |CRLF|\r\n|0x0d0x0a|  

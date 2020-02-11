@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401009"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>將具有 Integration Services 的資料載入平行處理資料倉儲
@@ -56,12 +56,12 @@ PDW 目的地介面卡是一個 Integration Services 元件，可讓您使用 In
 ### <a name="run-from-powershell"></a>從 PowerShell 執行  
 若要從 Windows PowerShell 執行封裝，請使用**dtexec**公用程式：`dtexec /FILE <packagePath>`  
   
-例如，`dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+例如， `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>從 Windows 命令提示字元執行 
 若要從 Windows 命令提示字元執行封裝，請使用**dtexec**公用程式：`dtexec /FILE <packagePath>`  
   
-例如：`dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+例如： `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ## <a name="DataTypes"></a>資料類型  
 當您使用 Integration Services 將資料從資料來源載入 SQL Server PDW 資料庫時，資料會先從來源資料對應到 Integration Services 的資料類型。 這樣可以讓多個資料來源的資料對應至共同的一組資料類型。  
@@ -84,7 +84,7 @@ PDW 目的地介面卡是一個 Integration Services 元件，可讓您使用 In
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL、DT_I1、DT_I2、DT_I4、DT_I8、DT_NUMERIC、DT_UI1、DT_UI2、DT_UI4、DT_UI8|  
 |NVARCHAR|DT_WSTR、DT_STR|  
-|REAL|DT_R4|  
+|real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1、DT_I2、DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -129,7 +129,7 @@ SQL Server PDW 不支援下列 Integration Services 的資料類型：
 ## <a name="GenRemarks"></a>一般備註  
 當 Integration Services 封裝有多個 SQL Server PDW 目的地執行，而其中一個連接已終止時，Integration Services 會停止將資料推送至所有 SQL Server PDW 目的地。  
   
-## <a name="Limits"></a>限制和約束  
+## <a name="Limits"></a>限制事項  
 若為 Integration Services 封裝，相同資料來源的 SQL Server PDW 目的地數目會受限於作用中負載的最大數目。 上限是預先設定的，使用者無法設定。 
 
 <!-- MISSING LINKS
@@ -149,9 +149,9 @@ For the maximum number of loads and queued loads per appliance, see [Minimum and
 ## <a name="Locks"></a>鎖定行為  
 使用 Integration Services 載入資料時，SQL ServerPDW 會使用資料列層級鎖定來更新目的地資料表中的資料。 這表示在更新每個資料列時，都會鎖定其讀取和寫入功能。 將資料載入暫存資料表時，並不會鎖定目的地資料表中的資料列。  
   
-## <a name="Examples"></a>典型  
+## <a name="Examples"></a>範例  
   
-### <a name="Walkthrough"></a>為. 一般檔案中的簡單載入  
+### <a name="Walkthrough"></a>A. 一般檔案中的簡單載入  
 下列逐步解說示範使用 Integration Services 將一般檔案資料載入 SQL Server PDW 設備的簡單資料載入。  這個範例假設已在用戶端電腦上安裝 Integration Services，而且已安裝 SQL Server PDW 目的地，如上所述。  
   
 在此範例中，我們將載入`Orders`具有下列 DDL 的資料表。 `Orders`資料表是`LoadExampleDB`資料庫的一部分。  

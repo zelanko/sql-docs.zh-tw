@@ -15,28 +15,29 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 89e694b18dc27a739a7e1f4d1e0950ef08a01570
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785750"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  當您使用 SQLPutData 來傳送超過65535個位元組的資料（適用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本 4.21 a）或 400 KB 的資料（適用于 SQL Server 6.0 版和更新版本）（適用于 SQL_LONGVARCHAR （**text**）、SQL_WLONGVARCHAR （**Ntext**）或 SQL_LONGVARBINARY （**image**）資料行）時，適用下列限制：  
+  當您使用 SQLPutData 來傳送超過65535個位元組的資料（適用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]于 4.21 a）或 400 KB 的資料（適用于 SQL Server 6.0 和更新版本） SQL_LONGVARCHAR （**text**）、SQL_WLONGVARCHAR （**Ntext**）或 SQL_LONGVARBINARY （**image**）資料行時，適用下列限制：  
   
 -   參考的參數可以是 INSERT 語句中的*insert_value* 。  
   
 -   參考的參數可以是 UPDATE 語句的 SET 子句中的*運算式*。  
   
- 取消 SQLPutData 呼叫的順序，將區塊中的資料提供給執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的伺服器，會在使用6.5 版或更早版本時，造成資料行值的部分更新。 呼叫 SQLCancel 時所參考的**text**、 **Ntext**或**image**資料行，會設定為中繼預留位置值。  
+ 在使用6.5 或更早版本時，取消將區塊中的資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供給執行之伺服器的 SQLPutData 呼叫順序，會造成資料行值的部分更新。 呼叫 SQLCancel 時所參考的**text**、 **Ntext**或**image**資料行，會設定為中繼預留位置值。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不支援連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 版和更早版本。  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不支援連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 版和更早版本。  
   
 ## <a name="diagnostics"></a>診斷  
- 有一個適用于 SQLPutData 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 特定 SQLSTATE：  
+ 有一個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]適用于 SQLPutData 的原生用戶端特定 SQLSTATE：  
   
 |SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
@@ -55,18 +56,18 @@ ms.locfileid: "73785750"
   
  如果*StrLen_Or_Ind*具有 SQL_DEFAULT_PARAM 以外的任何值，或介於0與 SQL_PARAMSET_SIZE 之間的數位（也就是 SQLBindParameter 的*ColumnSize*參數），就會發生錯誤。 此錯誤會使 SQLPutData 傳回 SQL_ERROR：SQLSTATE=HY090，表示「無效的字串或緩衝區長度」。  
   
- 如需資料表值參數的詳細資訊，請參閱[資料表值參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 如需資料表值參數的詳細資訊，請參閱[ODBC&#41;&#40;的資料表值參數](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlputdata-support-for-enhanced-date-and-time-features"></a>增強型日期和時間功能的 SQLPutData 支援  
  日期/時間類型的參數值會依照[從 C 轉換成 SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)中所述的方式進行轉換。  
   
- 如需詳細資訊，請參閱[日期和&#40;時間&#41;改善 ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需詳細資訊，請參閱[ODBC&#41;&#40;的日期和時間改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>大型 CLR UDT 的 SQLPutData 支援  
- **SQLPutData**支援大型 CLR 使用者定義型別（udt）。 如需詳細資訊，請參閱[大型 CLR 使用者定義&#40;類型&#41;ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLPutData**支援大型 CLR 使用者定義型別（udt）。 如需詳細資訊，請參閱[&#40;ODBC&#41;的大型 CLR 使用者定義類型](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLPutData 函數](https://go.microsoft.com/fwlink/?LinkId=59365)   
+ [SQLPutData 函式](https://go.microsoft.com/fwlink/?LinkId=59365)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

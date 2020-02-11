@@ -13,18 +13,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a80526b0f4a1b9f122ff79bbbb5a5a8ac08a2d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62893104"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>建立資料庫 (SQL Server 匯入和匯出精靈)
-  使用**Create Database**頁面，即可定義新的資料庫，為目的地檔案。  
+  使用 [**建立資料庫**] 頁面，即可為目的地檔案定義新的資料庫。  
   
- 這個頁面提供建立新資料庫之可用選項的子集。 若要檢視所有選項，請使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+ 這個頁面提供建立新資料庫之可用選項的子集。 若要查看所有選項，請[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]使用。  
   
- 若要深入了解此精靈，請參閱[SQL Server 匯入和匯出精靈](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要深入了解啟動精靈，選項和相關的權限，才能成功執行精靈，請參閱[執行 SQL Server 匯入和匯出精靈](start-the-sql-server-import-and-export-wizard.md)。  
+ 若要深入瞭解此嚮導，請參閱[SQL Server 匯入和匯出嚮導](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要瞭解啟動精靈的選項，以及成功執行嚮導所需的許可權，請參閱[執行 SQL Server 匯入和匯出嚮導](start-the-sql-server-import-and-export-wizard.md)。  
   
  「SQL Server 匯入和匯出精靈」的用途在於將資料從來源複製到目的地。 這個精靈也可以為您建立目的地資料庫和目的地資料表。 不過，如果您必須複製多個資料庫或資料表，或複製其他種類的資料庫物件，則應該改用「複製資料庫精靈」。 如需詳細資訊，請參閱 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
@@ -32,34 +32,34 @@ ms.locfileid: "62893104"
  **名稱**  
  為目的地 SQL Server 資料庫提供唯一的名稱。 當您命名此資料庫時，請確認有遵循 SQL Server 慣例。  
   
- **資料檔案名稱**  
+ **資料檔名稱**  
  檢視資料檔的名稱。 這是從您在先前提供的資料庫名稱衍生的。  
   
  **記錄檔名稱**  
  檢視記錄檔的名稱。 這是從您在先前提供的資料庫名稱衍生的。  
   
- **初始大小 （資料檔）**  
+ **初始大小 (資料檔)**  
  指定資料檔的初始大小 (以 MB 為單位)。  
   
- **不允許成長 （資料檔）**  
+ **不允許成長 (資料檔)**  
  指出資料檔是否可以成長超過指定的初始大小。  
   
- **成長百分比 （資料檔）**  
+ **成長百分比 (資料檔)**  
  指定資料檔可以成長的百分比。  
   
- **成長大小 （資料檔）**  
+ **成長大小 (資料檔)**  
  指定資料檔可以成長的大小 (以 MB 為單位)。  
   
- **初始大小 （記錄檔）**  
+ **初始大小 (記錄檔)**  
  指定記錄檔的初始大小 (以 MB 為單位)。  
   
- **不允許成長 （記錄檔）**  
+ **不允許成長 (記錄檔)**  
  指出記錄檔是否可以成長超過指定的初始大小。  
   
- **成長百分比 （記錄檔）**  
+ **成長百分比 (記錄檔)**  
  指定記錄檔可以成長的百分比。  
   
- **成長大小 （記錄檔）**  
+ **成長大小 (記錄檔)**  
  指定記錄檔可以成長的大小 (以 MB 為單位)。  
   
   

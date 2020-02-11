@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401368"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>套用 Analytics Platform System Hotfix
@@ -27,7 +27,7 @@ ms.locfileid: "74401368"
 > [!WARNING]  
 > 當設備在使用中時，請勿套用 Analytics Platform System 的「應用程式」。 套用修補程式可能會導致應用裝置節點重新開機。 當設備不在使用中時，應在維護期間套用此修補程式。  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>Prerequisites  
 若要執行這些步驟，您將需要：  
   
 -   具有許可權可存取管理主控台來監視設備狀態的分析平臺系統登入。 <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  

@@ -24,10 +24,10 @@ helpviewer_keywords:
 - rank
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 376438a45d6b104cbf4e66dbdf8e5542cf3fd2c2
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74542056"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
@@ -37,11 +37,11 @@ ms.locfileid: "74542056"
 
 |資料行名稱|資料類型|描述|
 |-----------------|---------------|-----------------|  
-|**class**|**int**|識別分類所在專案的類別。 一定會有值1（表示資料行）|  
+|**課堂**|**int**|識別分類所在專案的類別。 一定會有值1（表示資料行）|  
 |**class_desc**|**Varchar （16）**|分類所在專案的類別描述。 一定會有值*OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|表示包含分類資料行之資料表的識別碼，其對應于 sys.databases all_objects。 object_id|  
 |**minor_id**|**int**|代表分類所在之資料行的識別碼，其對應于 sys.databases. all_columns。 column_id|   
-|**標誌**|**sysname**|指派給敏感度分類的標籤（人類可讀取）|  
+|**label**|**sysname**|指派給敏感度分類的標籤（人類可讀取）|  
 |**label_id**|**sysname**|與標籤相關聯的識別碼，可供資訊保護系統（例如 Azure 資訊保護（AIP））使用|  
 |**information_type**|**sysname**|指派給敏感度分類的資訊類型（人類可讀取）|  
 |**information_type_id**|**sysname**|與資訊類型相關聯的識別碼，可供資訊保護系統（例如 Azure 資訊保護（AIP））使用|  
@@ -78,12 +78,12 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 ## <a name="permissions"></a>權限  
  需要**VIEW ANY 敏感度分類**許可權。 
  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]如需詳細資訊，請參閱[中繼資料可見度](../../relational-databases/security/metadata-visibility-configuration.md)設定。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
 
 ## <a name="see-also"></a>另請參閱  
 
-[加入敏感度分類（Transact-sql）](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+[ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
-[DROP 敏感度分類（Transact-sql）](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
-[SQL 資訊保護入門](https://aka.ms/sqlip)
+[開始使用 SQL 資訊保護](https://aka.ms/sqlip)

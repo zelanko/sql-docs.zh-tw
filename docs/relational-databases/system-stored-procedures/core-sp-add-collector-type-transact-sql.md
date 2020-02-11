@@ -1,5 +1,5 @@
 ---
-title: core.sp_add_collector_type (TRANSACT-SQL) |Microsoft Docs
+title: core. sp_add_collector_type （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 1d981037-2147-464e-a456-7d8e479bce89
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3e0f91b88a9f58ed290183ae48676572204ac98b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078207"
 ---
-# <a name="corespaddcollectortype-transact-sql"></a>core.sp_add_collector_type (Transact-SQL)
+# <a name="coresp_add_collector_type-transact-sql"></a>core.sp_add_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   在管理資料倉儲資料庫的 core.supported_collector_types 檢視表中加入新的項目。 此程序必須在管理資料倉儲資料庫的內容中執行。  
@@ -42,14 +42,14 @@ core.sp_add_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @collector_type_uid = ] '*collector_type_uid*'  
- 收集器類型的 GUID。 *collector_type_uid 是否*已**uniqueidentifier**，沒有預設值。  
+ [ @collector_type_uid = ]'*collector_type_uid*'  
+ 收集器類型的 GUID。 *collector_type_uid*是**uniqueidentifier**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
-## <a name="permissions"></a>Permissions  
- 需要的成員資格**mdw_admin** （具有 EXECUTE 權限） 固定的資料庫角色。  
+## <a name="permissions"></a>權限  
+ 需要**mdw_admin** （具有 EXECUTE 許可權）固定資料庫角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會將一般 T-SQL 查詢收集器型別加入 core.supported_collector_types 檢視表中。 根據預設，一般 T-SQL 查詢收集器型別已經存在。 因此，如果您在預設安裝中執行此程式碼，您將會收到一則訊息，指出此收集器型別已經存在。  

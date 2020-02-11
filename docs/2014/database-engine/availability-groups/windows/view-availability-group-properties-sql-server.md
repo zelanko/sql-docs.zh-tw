@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 102b3defa150707412012d506e0e9e542d80b9a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62813242"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>檢視可用性群組屬性 (SQL Server)
@@ -33,7 +33,7 @@ ms.locfileid: "62813242"
   
 3.  以滑鼠右鍵按一下要檢視其屬性的可用性群組，然後選取 [屬性]  命令。  
   
-4.  在 **[可用性群組屬性]** 對話方塊中，使用 **[一般]** 和 **[備份喜好設定]** 頁面檢視所選可用性群組的屬性，並在某些情況下變更這些屬性。 如需詳細資訊，請參閱 <<c0> [ 可用性群組屬性和新增可用性群組&#40;一般頁面&#41;](availability-group-properties-new-availability-group-general-page.md)並[可用性群組屬性：</c0>新增可用性群組&#40;備份喜好設定頁面&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md)。  
+4.  在 **[可用性群組屬性]** 對話方塊中，使用 **[一般]** 和 **[備份喜好設定]** 頁面檢視所選可用性群組的屬性，並在某些情況下變更這些屬性。 如需詳細資訊，請參閱[可用性群組屬性和新增可用性群組 &#40;一般頁面&#41;](availability-group-properties-new-availability-group-general-page.md) 和[可用性群組屬性：新增可用性群組 &#40;備份喜好設定頁面&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md)。  
   
      使用 **[權限]** 頁面來檢視與可用性群組相關聯的目前登入、角色和明確權限。 如需相關資訊，請參閱 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62813242"
   
 -   [檢視可用性群組接聽程式屬性 &#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)  
   
--   [AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則&#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
+-   [AlwaysOn 可用性群組 &#40;SQL Server 的操作問題 AlwaysOn 原則&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
   
 -   [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
@@ -101,6 +101,6 @@ ms.locfileid: "62813242"
 
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md) [監視可用性群組&#40;-&#41; ](monitor-availability-groups-transact-sql.md) [AlwaysOn 操作問題適用的 AlwaysOn 原則可用性群組&#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md) 
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md) [監視可用性群組 &#40;Transact-sql&#41;](monitor-availability-groups-transact-sql.md) [AlwaysOn 原則，以解決 AlwaysOn 可用性群組 &#40;SQL Server 的操作問題&#41;](always-on-policies-for-operational-issues-always-on-availability.md) 
   
   

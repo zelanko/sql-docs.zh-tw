@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: da389befc45fec755e65426850a7f98fd66d119e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760037"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 使用者定義型別 (OLE DB)
@@ -25,14 +25,15 @@ ms.locfileid: "73760037"
 
   本主題討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中 OLE DB 的變更，以支援大型 Common Language Runtime (CLR) 使用者定義型別 (UDT)。  
   
- 如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中大型 CLR Udt 支援的詳細資訊，請參閱[大型 Clr 使用者定義類型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。 如需範例，請參閱[使用大型 CLR &#40;udt&#41;OLE DB](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)。  
+ 如需 Native Client 中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]大型 clr udt 支援的詳細資訊，請參閱[大型 Clr 使用者定義類型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。 如需範例，請參閱[使用大型 CLR udt &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)。  
   
 ## <a name="data-format"></a>資料格式  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用 ~0 來代表大型物件 (LOB) 類型的無限制大小的值長度。 ~0 也代表大於 8,000 個位元組的 CLR UDT 大小。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用 ~0 來代表大型物件 (LOB) 類型的無限制大小的值長度。 ~0 也代表大於 8,000 個位元組的 CLR UDT 大小。  
   
  下表顯示參數和資料列集內的資料類型對應：  
   
-|SQL Server 資料類型|OLE DB 資料類型|記憶體配置|Value|  
+|SQL Server 資料類型|OLE DB 資料類型|記憶體配置|值|  
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR UDT|DBTYPE_UDT|BYTE[](位元組陣列\)|132 (oledb.h)|  
   
@@ -54,15 +55,15 @@ ms.locfileid: "73760037"
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  透過 **prgParamInfo** 以 DBPARAMINFO 結構所傳回的資訊如下：  
   
-|參數類型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
+|參數類型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
-|DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|"DBTYPE_UDT"|*n*|未定義|未定義|清除|  
-|DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|"DBTYPE_UDT"|~0|未定義|未定義|集合|  
+|DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|"DBTYPE_UDT"|*n*|未定義|未定義|clear|  
+|DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|"DBTYPE_UDT"|~0|未定義|未定義|set|  
   
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  以 DBPARAMBINDINFO 結構所提供的資訊必須與下列相符：  
   
-|參數類型|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
+|參數類型|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|DBTYPE_UDT|*n*|忽略|忽略|如果要使用 DBTYPE_IUNKNOWN 傳遞此參數，則必須設定。|  
 |DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|DBTYPE_UDT|~0|忽略|忽略|忽略|  
@@ -75,12 +76,12 @@ ms.locfileid: "73760037"
   
 |資料行類型|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
-|DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|DBTYPE_UDT|*n*|NULL|NULL|Clear|DB_ALL_EXCEPT_LIKE|n|  
-|DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|DBTYPE_UDT|~0|NULL|NULL|Set|DB_ALL_EXCEPT_LIKE|0|  
+|DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|DBTYPE_UDT|*n*|NULL|NULL|清除|DB_ALL_EXCEPT_LIKE|n|  
+|DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|DBTYPE_UDT|~0|NULL|NULL|設定|DB_ALL_EXCEPT_LIKE|0|  
   
  下列資料行也會針對 UDT 而定義：  
   
-|資料行識別碼|類型|說明|  
+|資料行識別碼|類型|描述|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之目錄的名稱。|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之結構描述的名稱。|  
@@ -92,20 +93,20 @@ ms.locfileid: "73760037"
   
 |參數類型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
-|DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|DBTYPE_UDT|*n*|~0|~0|Clear|  
-|DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|DBTYPE_UDT|~0|~0|~0|Set|  
+|DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|DBTYPE_UDT|*n*|~0|~0|清除|  
+|DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|DBTYPE_UDT|~0|~0|~0|設定|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>COLUMNS 資料列集 (結構描述資料列集)  
  下列資料行值是針對 UDT 類型所傳回：  
   
 |資料行類型|DATA_TYPE|COLUMN_FLAGS、DBCOLUMFLAGS_ISLONG|CHARACTER_OCTET_LENGTH|  
 |-----------------|----------------|-----------------------------------------|------------------------------|  
-|DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|DBTYPE_UDT|Clear|*n*|  
-|DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|DBTYPE_UDT|Set|0|  
+|DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|DBTYPE_UDT|清除|*n*|  
+|DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|DBTYPE_UDT|設定|0|  
   
  下列其他資料行也會針對 UDT 而定義：  
   
-|資料行識別碼|類型|說明|  
+|資料行識別碼|類型|描述|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之目錄的名稱。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之結構描述的名稱。|  
@@ -121,13 +122,13 @@ ms.locfileid: "73760037"
 |繫結資料類型|UDT 到伺服器|非 UDT 到伺服器|從伺服器中的 UDT|從伺服器中的非 UDT|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|支援 (5)|錯誤 (1)|支援 (5)|錯誤 (4)|  
-|DBTYPE_BYTES|支援 (5)|不適用|支援 (5)|不適用|  
-|DBTYPE_WSTR|支援 (2)、(5)|不適用|支援 (3)、(5)、(6)|不適用|  
-|DBTYPE_BSTR|支援 (2)、(5)|不適用|支援 (3)、(5)|不適用|  
-|DBTYPE_STR|支援 (2)、(5)|不適用|支援 (3)、(5)|不適用|  
-|DBTYPE_IUNKNOWN|支援 (6)|不適用|支援 (6)|不適用|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支援 (5)|不適用|支援 (3)、(5)|不適用|  
-|DBTYPE_VARIANT (VT_BSTR)|支援 (2)、(5)|不適用|不適用|不適用|  
+|DBTYPE_BYTES|支援 (5)|N/A|支援 (5)|N/A|  
+|DBTYPE_WSTR|支援 (2)、(5)|N/A|支援 (3)、(5)、(6)|N/A|  
+|DBTYPE_BSTR|支援 (2)、(5)|N/A|支援 (3)、(5)|N/A|  
+|DBTYPE_STR|支援 (2)、(5)|N/A|支援 (3)、(5)|N/A|  
+|DBTYPE_IUNKNOWN|支援 (6)|N/A|支援 (6)|N/A|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支援 (5)|N/A|支援 (3)、(5)|N/A|  
+|DBTYPE_VARIANT (VT_BSTR)|支援 (2)、(5)|N/A|N/A|N/A|  
   
 ### <a name="key-to-symbols"></a>符號的索引鍵  
   
@@ -142,7 +143,7 @@ ms.locfileid: "73760037"
   
  DBTYPE_NULL 和 DBTYPE_EMPTY 可以針對輸入參數而繫結，但是不能針對輸出參數或結果而繫結。 當針對輸入參數來繫結時，狀態必須針對 DBTYPE_NULL 設定為 DBSTATUS_S_ISNULL，或針對 DBTYPE_EMPTY 設定為 DBSTATUS_S_DEFAULT。 DBTYPE_BYREF 不適用於 DBTYPE_NULL 或 DBTYPE_EMPTY。  
   
- DBTYPE_UDT 也可以轉換成 DBTYPE_EMPTY 或 DBTYPE_NULL。 不過，DBTYPE_NULL 和 DBTYPE_EMPTY 不能轉換成 DBTYPE_UDT。 這與 DBTYPE_BYTES 一致。 **ISSCommandWithParameters** 可用來將 UDT 當作參數處理。  
+ DBTYPE_UDT 也可以轉換成 DBTYPE_EMPTY 或 DBTYPE_NULL。 不過，DBTYPE_NULL 和 DBTYPE_EMPTY 不能轉換成 DBTYPE_UDT。 這與 DBTYPE_BYTES 一致。 **ISSCommandWithParameters**是用來將 udt 當做參數來處理。  
   
  OLE DB 核心服務 (**IDataConvert**) 提供的資料轉換不適用於 DBTYPE_UDT。  
   

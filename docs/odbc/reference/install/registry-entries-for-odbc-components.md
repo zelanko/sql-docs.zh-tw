@@ -17,23 +17,23 @@ ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cbee5187a7318e0953ea61d92f7478d83e5afaff
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70009341"
 ---
 # <a name="registry-entries-for-odbc-components"></a>ODBC 元件的登錄項目
 > [!NOTE]  
->  從 Windows XP 和 Windows Server 2003 開始, ODBC 包含在 Windows 作業系統中。 您只應該在舊版 Windows 上明確安裝 ODBC。  
+>  從 Windows XP 和 Windows Server 2003 開始，ODBC 包含在 Windows 作業系統中。 您只應該在舊版 Windows 上明確安裝 ODBC。  
   
- 安裝程式 DLL 會在登錄中維護每個已安裝之 ODBC 元件的相關資訊。 在執行 Microsoft Windows NT 和 Microsoft Windows 95/98 的電腦上, 這項資訊會儲存在登錄中下列機碼下的子機碼中:  
+ 安裝程式 DLL 會在登錄中維護每個已安裝之 ODBC 元件的相關資訊。 在執行 Microsoft Windows NT 和 Microsoft Windows 95/98 的電腦上，這項資訊會儲存在登錄中下列機碼下的子機碼中：  
 
  ```console
  HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\Odbcinst.ini
  ```
 
- 因為 Odbcinst 是 HKEY_LOCAL_MACHINE 樹狀目錄的子機碼, 所以該電腦的所有使用者都可以使用 ODBC 元件的相關資訊。  
+ 因為 Odbcinst 是 HKEY_LOCAL_MACHINE 樹狀目錄的子機碼，所以該電腦的所有使用者都可以使用 ODBC 元件的相關資訊。  
   
  此章節包含下列主題。  
   

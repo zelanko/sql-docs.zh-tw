@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f0853d7db0664e75140c0e5478af19c233a2517
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761716"
 ---
-# <a name="mssqlserver8689"></a>MSSQLSERVER_8689
+# <a name="mssqlserver_8689"></a>MSSQLSERVER_8689
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|8689|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -39,7 +39,7 @@ ms.locfileid: "62761716"
  請確定在 USE PLAN 提示中指定的所有資料庫都存在。  
   
 ## <a name="see-also"></a>另請參閱  
- [查詢提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
+ [查詢提示 &#40;Transact-sql&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
  [計畫指南](../performance/plan-guides.md)  
   
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 583d7617c0620d5d1ec24d60fbf10435a547616d
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401296"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>為分析平臺系統設定不適用的網路介面卡
@@ -53,7 +53,7 @@ ms.locfileid: "74401296"
   
 您在用戶端伺服器上需要有設定網路介面卡許可權的 Windows 帳戶。  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>Prerequisites  
 這些指示假設用戶端伺服器已架裝，並纜線到設備的網路。 如需機架和纜線的指示，請參閱[取得和設定載入伺服器](acquire-and-configure-loading-server.md)。  
   
 ### <a name="general-remarks"></a>一般備註  
@@ -98,7 +98,7 @@ ms.locfileid: "74401296"
   
 ## <a name="Sec2"></a>步驟2：在用戶端伺服器上設定未設定的網路介面卡  
 
-### <a name="notes"></a>附註  
+### <a name="notes"></a>注意  
   
 -   這些步驟說明如何向 AP DNS 伺服器註冊您的伺服器。  
   

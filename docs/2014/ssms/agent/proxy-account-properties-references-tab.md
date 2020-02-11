@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 475acd590d8bbdf43acb1f1a99781b82b475f0aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714558"
 ---
 # <a name="proxy-account-properties-references-tab"></a>Proxy 帳戶屬性 (參考索引標籤)
-  此唯讀頁面會列出參考 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶的作業步驟。  
+  此唯讀頁面會列出參考[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy 帳戶的作業步驟。  
   
 ## <a name="options"></a>選項。  
  **作業名稱**  
@@ -29,7 +29,7 @@ ms.locfileid: "62714558"
  **作業步驟**  
  使用此 Proxy 帳戶之作業中的各作業步驟名稱  
   
- **子系統**  
+ **Subsystem**  
  此 Proxy 帳戶使用的子系統。  
   
 ## <a name="see-also"></a>另請參閱  

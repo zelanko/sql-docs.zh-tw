@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 09dfdb2bfaaadc29a3a70c949380a5e3cd1a0512
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810887"
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>設定 nested triggers 伺服器組態選項
@@ -26,7 +26,7 @@ ms.locfileid: "62810887"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法設定 nested triggers 選項：**  
   
@@ -34,11 +34,11 @@ ms.locfileid: "62810887"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定巢狀觸發程序選項之後](#FollowUp)  
+-   **後續操作：** [設定巢狀觸發程序選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
@@ -47,9 +47,9 @@ ms.locfileid: "62810887"
   
 #### <a name="to-configure-the-nested-triggers-option"></a>設定 nested triggers 選項  
   
-1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
+1.  在物件總管  中，以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
   
-2.  在 [進階] 頁面上，將 [允許觸發程序引發其他觸發程序] 選項設定為 [True] (預設值) 或 [False]。  
+2.  在 **[進階]** 頁面上，將 **[允許觸發程序引發其他觸發程序]** 選項設定為 **[True]** (預設值) 或 **[False]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -57,9 +57,9 @@ ms.locfileid: "62810887"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `nested triggers` 選項的值設定為 `0`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `nested triggers` 選項的值設定為 `0`。  
   
 ```wmimof  
 USE AdventureWorks2012 ;  

@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c37f43e82bdad11909695d5a2799b5065c7cb5b9
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095547"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>建立、改變和移除外部索引鍵
@@ -25,12 +25,12 @@ ms.locfileid: "74095547"
 
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO) 中，外部索引鍵是由 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 物件表示。  
   
- 若要在 SMO 中建立外部索引鍵，您必須在 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 物件的建構函式中，指定會在其上定義外部索引鍵的資料表。 您必須從該資料表至少選取一個資料行做為外部索引鍵。 若要進行這項作業，請建立 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> 物件變數，並指定做為外部索引鍵之資料行的名稱。 然後，指定參考的資料表和參考的資料行。 使用 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> 方法，將資料行加入至**Columns**物件屬性。  
+ 若要在 SMO 中建立外部索引鍵，您必須在 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 物件的建構函式中，指定會在其上定義外部索引鍵的資料表。 您必須從該資料表至少選取一個資料行做為外部索引鍵。 若要進行這項作業，請建立 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> 物件變數，並指定做為外部索引鍵之資料行的名稱。 然後，指定參考的資料表和參考的資料行。 使用<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A>方法，即可將資料行加入至**Columns**物件屬性。  
   
- 代表外鍵的資料行會列在 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 物件的**columns**物件屬性中。 外部索引鍵所參考的主要金鑰是由 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> 屬性表示，該屬性位於 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> 屬性所指定的資料表。  
+ 代表外鍵的資料行會列在<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>物件的**columns**物件屬性中。 外部索引鍵所參考的主要金鑰是由 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> 屬性表示，該屬性位於 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> 屬性所指定的資料表。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>在 Visual Basic 中建立、改變和移除外部索引鍵  
  此程式碼範例示範如何在某個資料表的一個或多個資料行以及另一個資料表的主要索引鍵資料行之間，建立外部索引鍵關聯性。  

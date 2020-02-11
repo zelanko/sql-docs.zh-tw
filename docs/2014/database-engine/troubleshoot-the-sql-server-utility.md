@@ -11,21 +11,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797775"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>疑難排解 SQL Server 公用程式
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式問題的疑難排解可能包括解決 SQL Server 執行個體向 UCP 註冊作業失敗的問題、解決因無法收集資料而導致 UCP 上 Managed 執行個體清單檢視變為灰色圖示的問題、改善效能瓶頸或是解決資源健全狀況的問題。 如需有關減少 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP 所識別之資源健康狀態問題的詳細資訊，請參閱針對[SQL Server 資源健康狀態&#40; &#41;SQL Server 公用程式進行疑難排解](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)。  
+  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式問題的疑難排解可能包括解決 SQL Server 執行個體向 UCP 註冊作業失敗的問題、解決因無法收集資料而導致 UCP 上 Managed 執行個體清單檢視變為灰色圖示的問題、改善效能瓶頸或是解決資源健全狀況的問題。 如需有關減少[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP 所識別之資源健康狀態問題的詳細資訊，請參閱針對[SQL Server 資源健康狀態 &#40;SQL Server 公用程式&#41;進行疑難排解](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)。  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>SQL Server 執行個體向 SQL Server 公用程式註冊的作業失敗  
  如果您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體進行註冊，並且指定隸屬不同於 UCP 所在位置的其他 Active Directory 網域的 Proxy 帳戶，那麼執行個體驗證會順利進行，但是註冊作業會失敗且出現下列錯誤訊息：  
   
  執行 Transact-SQL 陳述式或批次時發生例外狀況。 (Microsoft.SqlServer.ConnectionInfo)  
   
- 其他資訊: 無法獲得關於 Windows NT 群組/使用者 '\<域名稱\帳戶名稱>' 的資訊，錯誤碼 0x5。 (Microsoft SQL Server 錯誤：15404)  
+ 其他資訊: 無法獲得關於 Windows NT 群組/使用者 '\<域名稱\帳戶名稱>' 的資訊，錯誤碼 0x5。 (Microsoft SQL Server，錯誤：15404)  
   
  這個問題可能會在下列範例狀況中發生：  
   
@@ -35,22 +36,23 @@ ms.locfileid: "72797775"
   
 3.  要註冊到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體也是 "Domain_1" 的成員。  
   
-4.  在註冊作業期間，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的實例，以使用 "sa" 進行註冊。 指定 "Domain_2" 的 Proxy 帳戶。  
+4.  在註冊作業期間，連接到的實例， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]以使用 "sa" 進行註冊。 指定 "Domain_2" 的 Proxy 帳戶。  
   
 5.  驗證會成功，但是註冊會失敗。  
   
- 此問題的因應措施是使用上述範例，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的實例，以使用 "sa" 註冊到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式，並從「Domain_1」提供 proxy 帳戶。  
+ 此問題的因應措施是使用上述範例，連接到的實例， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]以使用 "sa" 註冊[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]到公用程式，並從「Domain_1」提供 proxy 帳戶。  
   
 ## <a name="failed-wmi-validation"></a>WMI 驗證失敗  
  如果沒有在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的執行個體上正確設定 WMI，那麼 [建立 UCP] 與 [註冊受管理的執行個體] 作業會顯示警告，但是並不會封鎖作業。 此外，如果您變更 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 帳戶組態而讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 不具備存取必要 WMI 類別的權限，那麼在受影響之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 受管理的執行個體上進行的資料收集，會無法上傳到 UCP。 如此會造成 UCP 中顯示灰色圖示。  
   
- 對於受影響的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]受管理的執行個體，失敗的資料收集會造成 UCP 清單檢視中出現灰色狀態圖示。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 受管理的執行個體中的作業記錄指出 sysutility_mi_collect_and_upload 在步驟 2 失敗 (從 PowerShell 指令碼收集的階段資料)。  
+ 對於受影響的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]受管理的執行個體，失敗的資料收集會造成 UCP 清單檢視中出現灰色狀態圖示。 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 受管理的執行個體中的作業記錄指出 sysutility_mi_collect_and_upload 在步驟 2 失敗 (從 PowerShell 指令碼收集的階段資料)。  
   
  簡化的錯誤訊息如下：  
   
  命令執行已停止因為 Shell 變數 "ErrorActionPreference" 已設定為 [停止: 拒絕存取]。  
   
- 錯誤： \<日期時間（MM/DD/YYYY HH： MM： SS） >：在收集 cpu 屬性時攔截到例外狀況。  WMI 查詢可能已經失敗。  警告。  
+ 錯誤： \<日期-時間（MM/DD/YYYY HH： MM： SS） >：在收集 cpu 屬性時攔截到例外狀況。  WMI 查詢可能已經失敗。  警告。  
   
  若要解決這個問題，請確認下列組態設定：  
   
@@ -96,7 +98,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   WMI 驗證失敗或不受支援。 如需詳細資訊，請參閱本主題稍早的＜WMI 驗證失敗＞一節。  
   
--   重新整理受管理的執行個體清單檢視中的資料，因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式視點中的資料不會自動重新整理。 若要重新整理資料，請以滑鼠右鍵按一下 **[公用程式總管]** 導覽窗格中的 **[受管理的執行個體]** 節點，然後選取 **[重新整理]** ，或是以滑鼠右鍵按一下清單檢視中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體名稱，然後選取 **[重新整理]** 。 請注意，當使用 UCP 註冊 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體之後，最多需要 30 分鐘的時間，資料才會第一次出現在 [公用程式總管] 內容窗格的儀表板和視點內。  
+-   重新整理受管理的執行個體清單檢視中的資料，因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式視點中的資料不會自動重新整理。 若要重新整理資料，請以滑鼠右鍵按一下 **[公用程式總管]** 導覽窗格中的 **[受管理的執行個體]** 節點，然後選取 **[重新整理]**，或是以滑鼠右鍵按一下清單檢視中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體名稱，然後選取 **[重新整理]**。 請注意，當使用 UCP 註冊 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體之後，最多需要 30 分鐘的時間，資料才會第一次出現在 [公用程式總管] 內容窗格的儀表板和視點內。  
   
 -   使用 SQL Server 組態管理員可確認 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體是否在執行中。  
   
@@ -114,23 +116,23 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     1.  在 SSMS 的 **[物件總管]** 中，展開 **[安全性]** 節點，然後展開 **[認證]** 節點。  
   
-    2.  以滑鼠右鍵按一下**UtilityAgentProxyCredential_\<GUID >** 然後選取 **屬性**。  
+    2.  在**UtilityAgentProxyCredential_\<GUID>** 上按一下滑鼠右鍵，然後選取 [**屬性**]。  
   
-    3.  在 [認證屬性] 對話方塊上，視需要更新**UtilityAgentProxyCredential_\<GUID >** 認證的認證。  
+    3.  在 [認證屬性] 對話方塊上，視需要更新**\<UtilityAgentProxyCredential_ GUID>** 認證的認證。  
   
-    4.  按一下 **[確定]** 以確認變更。  
+    4.  按一下 [確認]**** 以確認變更。  
   
 -   TCP/IP 必須在 UCP 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的受管理的執行個體上啟用。 請透過 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員啟用 TCP/IP。  
   
 -   您應該啟動 UCP 上的 SQL Server Browser 服務，並將它設定為自動啟動。 如果您的組織阻止使用 SQL Server Browser 服務，請使用下列步驟讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的受管理的執行個體連接到 UCP：  
   
-    1.  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]之受管理的實例上的 Windows 工作列上，按一下 [**開始**]，然後按一下 [**執行 ...** ]。  
+    1.  在受管理的實例的 Windows 工作列上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，按一下 [**開始**]，然後按一下 [**執行 ...**]。  
   
-    2.  在提供的空間內輸入 "cliconfg.exe"，然後按一下 **[確定]** 。  
+    2.  在提供的空間內輸入 "cliconfg.exe"，然後按一下 **[確定]**。  
   
-    3.  如果系統允許 SQL 用戶端組態公用程式 EXE 啟動，請按一下 **[繼續]** 。  
+    3.  如果系統允許 SQL 用戶端組態公用程式 EXE 啟動，請按一下 **[繼續]**。  
   
-    4.  在 [ **SQL Server 用戶端網路公用程式**] 對話方塊中，選取 [**別名**] 索引標籤，然後按一下 [**新增 ...** ]。  
+    4.  在 [ **SQL Server 用戶端網路公用程式**] 對話方塊中，選取 [**別名**] 索引標籤，然後按一下 [**新增 ...**]。  
   
     5.  在 **[加入網路程式庫組態]** 對話方塊中：  
   
@@ -144,7 +146,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     10. 在 **[通訊埠編號]** 文字方塊中，指定 UCP 接聽的通訊埠編號。  
   
-    11. 按一下 **[確定]** 儲存您的變更。  
+    11. 按一下 [確定]**** 以儲存您的變更。  
   
     12. 針對連接至未啟用 SQL Server Browser 服務之 UCP 的每一個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 受管理的執行個體，重複執行這些步驟。  
   
@@ -154,13 +156,13 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   如果在 Windows Server 2003 電腦上主控 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 受管理的執行個體，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 服務帳戶必須屬於效能監視器使用者安全性群組或本機系統管理員群組。 否則，資料收集將會失敗，並產生拒絕存取錯誤。 若要將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 服務帳戶加入到效能監視器使用者安全性群組，請使用以下步驟：  
   
-    1.  開啟 **[電腦管理]** ，然後展開 **[本機使用者和群組]** ，再展開 **[群組]** 。  
+    1.  開啟 **[電腦管理]**，然後展開 **[本機使用者和群組]**，再展開 **[群組]**。  
   
-    2.  以滑鼠右鍵按一下 **[效能監視器使用者]** ，然後選取 **[加入群組]** 。  
+    2.  以滑鼠右鍵按一下 **[效能監視器使用者]** ，然後選取 **[加入群組]**。  
   
-    3.  按一下 **[新增]** 。  
+    3.  按一下 [新增]  。  
   
-    4.  輸入用來執行 SQL Server Agent 服務的帳戶，然後按一下 **[確定]** 。  
+    4.  輸入用來執行 SQL Server Agent 服務的帳戶，然後按一下 **[確定]**。  
   
     5.  如果將使用者加入至這個群組之前，已經使用 UCP 註冊 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，請重新啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 服務。  
   

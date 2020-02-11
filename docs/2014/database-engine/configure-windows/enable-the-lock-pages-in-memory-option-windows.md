@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6e938e3212e519ab51be1faf3f18e28957ef3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62782276"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>啟用鎖定記憶體分頁選項 (Windows)
@@ -29,7 +29,7 @@ ms.locfileid: "62782276"
   
 ### <a name="to-enable-the-lock-pages-in-memory-option"></a>若要啟用鎖定記憶體分頁選項  
   
-1.  在 **[開始]** 功能表上，按一下 **[執行]** 。 在 **開放**方塊中，輸入`gpedit.msc`。  
+1.  在 **[開始]** 功能表上，按一下 **[執行]** 。 在 [**開啟**] 方塊中`gpedit.msc`，輸入。  
   
 2.  在 [本機群組原則編輯器]  主控台中，依序展開 [電腦設定]  和 [Windows 設定]  。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62782276"
   
 6.  在 [本機安全性設定 - 鎖定記憶體中的分頁]  對話方塊中，按一下 [新增使用者或群組]  。  
   
-7.  在 [選取使用者、服務帳戶或群組]  對話方塊中，加入具有執行 sqlservr.exe 權限的帳戶。  
+7.  在 [選取使用者、服務帳戶或群組]**** 對話方塊中，加入具有執行 sqlservr.exe 權限的帳戶。  
   
 8.  登出後再重新登入以使這項變更生效。  
   

@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb81724c8feb5ca34736b16aeb8f8d65b1018300
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683493"
 ---
 # <a name="getting-started-sql-server-2014"></a>使用者入門 (SQL Server 2014)
@@ -22,11 +22,11 @@ ms.locfileid: "74683493"
   
  [SQL Server 2014 的產品規格](sql-server-2014-product-specifications.md)  
   
- [2014 SQL Server 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)  
+ [SQL Server 2014 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)  
   
  [SQL Server 2014 混合雲端簡介](introduction-to-sql-server-2014-hybrid-cloud.md)  
   
- [SQL Server 2014 的快速入門安裝](quick-start-installation-of-sql-server-2014.md)  
+ [SQL Server 2014 快速入門安裝](quick-start-installation-of-sql-server-2014.md)  
   
  [開始使用 SQL Server 的產品文件集](../2014-toc/index.yml)  
   

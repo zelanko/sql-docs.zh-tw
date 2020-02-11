@@ -1,5 +1,5 @@
 ---
-title: 結構描述元素排除產生 XML 文件使用 sql： 對應 (SQLXML 4.0) |Microsoft Docs
+title: 使用 sql：對應從產生的 XML 檔排除架構元素（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,28 +23,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 865a9af892f948e77aa593d3713766e7860349b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013865"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>使用 sql:mapped 從產生的 XML 文件排除結構描述元素 (SQLXML 4.0)
   XSD 結構描述中的每個元素和屬性都會因為預設對應，而對應到資料庫資料表/檢視表和資料行。 如果您要在 XSD 結構中建立沒有對應到任何資料庫資料表 (檢視表) 或資料行，而且沒有出現在 XML 中的元素，您可以指定 `sql:mapped` 註解。  
   
- 如果無法修改結構描述，或者如果結構描述用於驗證來自其他來源的 XML，而且不包含未儲存在資料庫中的資料，則 `sql:mapped` 註解特別實用。 `sql:mapped` 註解與 `sql:is-constant` 不同之處在於，未對應的元素和屬性不會出現在 XML 文件中。  
+ 如果無法修改結構描述，或者如果結構描述用於驗證來自其他來源的 XML，而且不包含未儲存在資料庫中的資料，則 `sql:mapped` 註解特別實用。 
+  `sql:mapped` 註解與 `sql:is-constant` 不同之處在於，未對應的元素和屬性不會出現在 XML 文件中。  
   
- `sql:mapped` 註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。  
+ 
+  `sql:mapped` 註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。  
   
 ## <a name="examples"></a>範例  
- 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. 指定 sql:mapped 註解  
- 假設您有來自其他來源的 XSD 結構描述。 此 XSD 結構描述組成 **\<Person.Contact >** 項目**ContactID**， **FirstName**， **LastName**，和**HomeAddress**屬性。  
+ 假設您有來自其他來源的 XSD 結構描述。 這個 XSD 架構是** \<由 Person. Contact>** 元素所組成，其中包含**ContactID**、 **FirstName**、 **LastName**和**HomeAddress**屬性。  
   
- 此 XSD 結構描述對應至 AdventureWorks 資料庫中的 Person.Contact 資料表中`sql:mapped`上指定**HomeAddress**屬性，因為 Employees 資料表不會儲存員工的住家地址。 因此，根據對應結構描述指定 XPath 查詢時，此屬性不會對應到資料庫，而且不會在產生的 XML 文件中傳回。  
+ 在將這個 XSD 架構對應到 AdventureWorks 資料庫中的 Person. Contact 資料表時`sql:mapped` ，會在**HomeAddress**屬性上指定，因為 employees 資料表不會儲存員工的主位址。 因此，根據對應結構描述指定 XPath 查詢時，此屬性不會對應到資料庫，而且不會在產生的 XML 文件中傳回。  
   
- 預設的對應發生於其餘的結構描述。 **\<Person.Contact >** 元素會對應至 Person.Contact 資料表中，而所有屬性都會都對應到 Person.Contact 資料表中的相同名稱的資料行。  
+ 預設的對應發生於其餘的結構描述。 Person>元素會對應到 person. contact 資料表，而所有屬性都會對應到 person. contact 資料表中具有相同名稱的資料行。 ** \< **  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -83,7 +85,7 @@ ms.locfileid: "66013865"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 [使用ADO執行SQLXML查詢](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 查詢](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  結果集如下：  
   
@@ -104,6 +106,6 @@ ms.locfileid: "66013865"
  請注意，ContactID、FirstName 和 LastName 存在，但是 HomeAddress 不存在，因為對應結構描述為 `sql:mapped` 屬性指定 0。  
   
 ## <a name="see-also"></a>另請參閱  
- [XSD 元素和屬性對資料表和資料行的預設對應&#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+ [XSD 元素和屬性對資料表和資料行的預設對應 &#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

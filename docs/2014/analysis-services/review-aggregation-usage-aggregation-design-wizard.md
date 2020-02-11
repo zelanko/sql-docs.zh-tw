@@ -1,5 +1,5 @@
 ---
-title: 檢閱彙總使用方式 （彙總設計精靈） |Microsoft Docs
+title: 查看匯總使用方式（匯總設計嚮導） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f52ec05ddadc6bb23968f6b5f8ee7fda9adc65a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070223"
 ---
 # <a name="review-aggregation-usage-aggregation-design-wizard"></a>檢閱彙總使用方式 (彙總設計精靈)
   使用 **[檢閱彙總使用方式]** 頁面，即可設定彙總使用方式設定。  
   
-## <a name="options"></a>選項  
- **預設值**  
+## <a name="options"></a>選項。  
+ **預設**  
  選取此選項，即可將屬性的彙總使用方式設定設為 Default。 透過使用這項設定，設計工具會根據屬性和維度的類型來套用預設規則。  
   
  `Full`  
@@ -39,7 +39,7 @@ ms.locfileid: "66070223"
  選取此選項，即可將所有屬性的彙總使用方式設定都設為 Default。  
   
 ## <a name="see-also"></a>另請參閱  
- [彙總設計精靈 F1 說明](aggregation-design-wizard-f1-help.md)   
- [Analysis Services 精靈&#40;多維度資料&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [匯總設計嚮導 F1 說明](aggregation-design-wizard-f1-help.md)   
+ [Analysis Services 的 &#40;多維度資料的嚮導&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

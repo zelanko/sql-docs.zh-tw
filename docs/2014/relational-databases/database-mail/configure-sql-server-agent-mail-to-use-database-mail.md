@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3c2f5f0be09e9a60997308efd72c360348efc60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872316"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>設定 SQL Server Agent Mail 使用 Database Mail
@@ -27,7 +27,7 @@ ms.locfileid: "62872316"
   
 -   [必要條件](#Prerequisites)  
   
--   [Security](#Security)  
+-   [安全性](#Security)  
   
 -   [使用 SQL Server Management Studio 將 SQL Server Agent 設定為使用 Database Mail](#SSMSProcedure)  
   
@@ -41,11 +41,11 @@ ms.locfileid: "62872316"
   
 -   對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶建立要使用的 Database Mail 帳戶。  
   
--   建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶要使用的 Database Mail 設定檔，並新增使用者至 **msdb** 資料庫中的 **DatabaseMailUserRole** 。  
+-   建立 Database Mail 設定檔 ，供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶使用並將使用者新增至 **msdb** 資料庫中的 **DatabaseMailUserRole** 。  
   
 -   將設定檔設為 **msdb** 資料庫的預設設定檔。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  建立設定檔帳戶以及執行預存程序的使用者，應該是系統管理員 (sysadmin) 固定伺服器角色的成員。  

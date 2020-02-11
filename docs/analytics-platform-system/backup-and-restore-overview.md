@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 75399480879623a39da542c68f036389c645f6ab
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401353"
 ---
 # <a name="backup-and-restore"></a>備份與還原
@@ -82,7 +82,7 @@ PDW 使用 SQL Server 備份技術來備份和還原設備資料庫。 SQL Serve
   
     -   備份只能還原至具有相同或更多計算節點數目的 PDW 應用裝置。  
   
-    -   您不能在執行還原之前變更備份的名稱。 備份目錄的名稱必須符合備份原始名稱的名稱。 備份的原始名稱位於備份目錄內的備份 .xml 檔案中。 若要將資料庫還原成不同的名稱，您可以在 restore 命令中指定新的名稱。 例如：`RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`。  
+    -   您不能在執行還原之前變更備份的名稱。 備份目錄的名稱必須符合備份原始名稱的名稱。 備份的原始名稱位於備份目錄內的備份 .xml 檔案中。 若要將資料庫還原成不同的名稱，您可以在 restore 命令中指定新的名稱。 例如： `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ` 。  
   
 ## <a name="RestoreModes"></a>資料庫還原模式
 

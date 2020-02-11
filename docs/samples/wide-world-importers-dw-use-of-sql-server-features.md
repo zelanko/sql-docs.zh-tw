@@ -11,10 +11,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: dfce2ce4a6f13a25687d668268f532893c1404e0
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056296"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW 使用 SQL Server 特性和功能
@@ -31,11 +31,11 @@ PolyBase 是用來結合 WideWorldImportersDW 的銷售資訊與人口統計的�
 
     EXEC [Application].[Configuration_ApplyPolyBase]
 
-這會建立外部資料表 `dbo.CityPopulationStatistics`，其參考的公用資料集包含位於美國城市的人口資料（裝載于 Azure blob 儲存體中）。 建議您查看預存程式中的程式碼，以瞭解設定程式。 如果您想要在 Azure blob 儲存體中裝載自己的資料，並保護它免于一般公用存取，您將需要執行額外的設定步驟。 下列查詢會傳回來自外部資料集的資料：
+這會建立一個外部資料表`dbo.CityPopulationStatistics`來參考公用資料集，其中包含美國城市的人口資料（裝載于 Azure blob 儲存體中）。 建議您查看預存程式中的程式碼，以瞭解設定程式。 如果您想要在 Azure blob 儲存體中裝載自己的資料，並保護它免于一般公用存取，您將需要執行額外的設定步驟。 下列查詢會傳回來自外部資料集的資料：
 
     SELECT CityID, StateProvinceCode, CityName, YearNumber, LatestRecordedPopulation FROM dbo.CityPopulationStatistics;
 
-若要瞭解哪些城市可能會對進一步擴充感疑問，下列查詢會查看城市的成長率，並傳回具有顯著成長的前100大城市，以及寬世界匯入工具沒有銷售狀態。 此查詢牽涉到遠端資料表 `dbo.CityPopulationStatistics` 和本機資料表 `Dimension.City`之間的聯結，以及涉及本機資料表 `Fact.Sales`的篩選。
+若要瞭解哪些城市可能會對進一步擴充感疑問，下列查詢會查看城市的成長率，並傳回具有顯著成長的前100大城市，以及寬世界匯入工具沒有銷售狀態。 此查詢牽涉到遠端資料表`dbo.CityPopulationStatistics`和本機資料表`Dimension.City`之間的聯結，以及涉及本機資料表`Fact.Sales`的篩選。
 
     WITH PotentialCities
     AS
@@ -79,7 +79,7 @@ PolyBase 是用來結合 WideWorldImportersDW 的銷售資訊與人口統計的�
 
 範例資料庫的資料大小有限，可讓您輕鬆地下載並安裝範例。 不過，若要查看資料行存放區索引的實際效能優點，您會想要使用較大的資料集。
 
-您可以執行下列語句，藉由插入另一個12000000資料列的範例資料來增加 `Fact.Sales` 資料表的大小。 這些資料列會插入2012年，因此不會與 ETL 進程產生干擾。
+您可以執行下列語句，藉由插入另一個 12000000 `Fact.Sales`資料列的範例資料來增加資料表的大小。 這些資料列會插入2012年，因此不會與 ETL 進程產生干擾。
 
     EXECUTE [Application].[Configuration_PopulateLargeSaleTable]
 
@@ -101,14 +101,14 @@ PolyBase 是用來結合 WideWorldImportersDW 的銷售資訊與人口統計的�
 
 資料倉儲中的資料大小可能會變得非常大。 因此，最佳做法是使用資料分割來管理資料庫中大型資料表的儲存體。
 
-所有較大的事實資料表都會依年份進行分割。 唯一的例外狀況是 `Fact.Stock Holdings`，這不是以日期為基礎，而且與其他事實資料表相較之下，資料大小有限。
+所有較大的事實資料表都會依年份進行分割。 唯一的例外是`Fact.Stock Holdings`，它不是以日期為基礎，而且與其他事實資料表相較之下，資料大小有限。
 
-用於所有分割資料表的資料分割函數都是 `PF_Date`的，而且會 `PS_Date`使用的資料分割配置。
+用於所有分割資料表的資料分割函數是`PF_Date`，而使用的資料分割配置是`PS_Date`。
 
-## <a name="in-memory-oltp"></a>In-Memory OLTP
+## <a name="in-memory-oltp"></a>記憶體內部 OLTP
 
 （完整版的範例）
 
-WideWorldImportersDW 會使用 SCHEMA_ONLY 記憶體優化資料表來執行臨時表。 所有 `Integration.`*`_Staging` 資料表都是記憶體優化資料表 SCHEMA_ONLY。
+WideWorldImportersDW 會使用 SCHEMA_ONLY 記憶體優化資料表來執行臨時表。 `Integration.` *所有`_Staging`資料表都是記憶體優化資料表 SCHEMA_ONLY。
 
 SCHEMA_ONLY 資料表的優點是它們不會記錄下來，也不需要任何磁片存取。 這會改善 ETL 程式的效能。 由於不會記錄這些資料表，因此如果失敗，則會遺失其內容。 不過，仍然可以使用資料來源，因此如果發生失敗，ETL 程式就可以重新開機。

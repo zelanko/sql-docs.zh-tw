@@ -11,10 +11,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3845470668e4cffeda7a48ed01c144eb53f671b9
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399424"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System 的新功能，向外延展 MPP 資料倉儲
@@ -77,7 +77,7 @@ AP CU 7.2 支援 TLS 1.2。 用戶端電腦到 AP 和 AP 節點間通訊現在�
 PolyBase 現在可以與 Hadoop 加密區域通訊。 請參閱[設定 Hadoop 安全性](polybase-configure-hadoop-security.md#encryptionzone)所需的 ap 設定變更。
 
 ### <a name="insert-select-maxdop-options"></a>插入-選取 maxdop 選項
-我們新增了一[項功能參數](appliance-feature-switch.md)，可讓您針對插入選取的作業挑選大於1的 maxdop 設定。 您現在可以將 maxdop 設定設定為0、1、2或4。 預設值為 1。
+我們新增了一[項功能參數](appliance-feature-switch.md)，可讓您針對插入選取的作業挑選大於1的 maxdop 設定。 您現在可以將 maxdop 設定設定為0、1、2或4。 預設值是 1。
 
 > [!IMPORTANT]  
 > 增加 maxdop 有時可能會導致較慢的作業或鎖死錯誤。 如果發生這種情況，請將設定變更回 maxdop 1，然後再次嘗試操作。
@@ -129,7 +129,7 @@ AP 支援部分 T-sql [dbcc 命令](https://docs.microsoft.com/sql/t-sql/databas
 ### <a name="bug-fixes"></a>Bug 修正
 我們已使用 AP CU 7.1 升級至 SQL Server 2016 SP2 CU2。 升級會修正下面所述的一些問題。
 
-| 標題 | 描述 |
+| Title | 描述 |
 |:---|:---|
 | **潛在的元組移動器鎖死** |此升級會修正分散式交易和元組移動程式背景執行緒中長期鎖死的可能性。 安裝 CU 7.1 之後，使用 TF634 來停止「元組移動器」做為 SQL Server 啟動參數或全域追蹤旗標的客戶可以安全地移除它。 | 
 | **特定 lag/潛在客戶查詢失敗** |現在已透過這項升級修正了對 CCI 資料表的某些查詢，其中包含會發生錯誤的嵌套延遲/潛在客戶函數。 | 

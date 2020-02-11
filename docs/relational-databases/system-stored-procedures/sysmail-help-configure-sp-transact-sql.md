@@ -18,10 +18,10 @@ ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d07f77c468bb14b28cd003f599bebd636d6f862
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056166"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
@@ -39,29 +39,29 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @parameter_name = ] 'parameter_name'` 要抓取之設定的名稱。 當指定時，會在 **\@parameter_value** OUTPUT 參數中傳回 configuration 設定的值。 當未指定任何 **\@parameter_name**時，這個預存程式會傳回結果集，其中包含實例中的所有 Database Mail 設定設定。  
+`[ @parameter_name = ] 'parameter_name'`要抓取之設定的名稱。 當指定時，會在** \@parameter_value** OUTPUT 參數中傳回 configuration 設定的值。 當未指定任何** \@parameter_name**時，這個預存程式會傳回包含實例中所有 Database Mail 設定的結果集。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 當未指定任何 **\@parameter_name**時，會傳回具有下列資料行的結果集。  
+ 若未** \@指定 parameter_name** ，會傳回具有下列資料行的結果集。  
   
 ||||  
 |-|-|-|  
-|資料行名稱|[名稱]|描述|  
+|資料行名稱|資料類型|描述|  
 |**paramname**|**nvarchar(256)**|組態參數的名稱。|  
 |**paramvalue**|**nvarchar(256)**|組態參數值。|  
-|**description**|**nvarchar(256)**|組態參數的描述。|  
+|**描述**|**nvarchar(256)**|組態參數的描述。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  預存程式**sysmail_help_configure_sp**列出實例目前的 Database Mail 設定。  
   
- 當指定了 **\@parameter_name** ，但未提供 **\@parameter_value**的輸出參數時，這個預存程式不會產生任何輸出。  
+ 當指定了** \@parameter_name** ，但沒有為** \@parameter_value**提供輸出參數時，這個預存程式不會產生任何輸出。  
   
  預存程式**sysmail_help_configure_sp**在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱叫用此程式。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  此程式的執行許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
@@ -88,6 +88,6 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ## <a name="see-also"></a>另請參閱  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Database Mail 預存&#40;程式 transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

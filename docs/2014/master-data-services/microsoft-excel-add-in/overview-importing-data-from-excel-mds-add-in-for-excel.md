@@ -1,5 +1,5 @@
 ---
-title: 發行資料 （MDS 增益集適用於 Excel） |Microsoft Docs
+title: 發行資料（適用于 Excel 的 MDS 增益集） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd5046c9a307f498ffb585c99cba8044c7b18b3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479036"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>發行資料 (適用於 Excel 的 MDS 增益集)
@@ -35,11 +35,11 @@ ms.locfileid: "65479036"
   
 -   雖然刪除項目會儲存成可由管理員反轉的交易，不過您無法註解刪除項目。  
   
--   如果您變更**程式碼**值成員，它不會記錄為交易，及成員的所有先前交易將無法使用。  
+-   如果您變更了某個成員的**Code**值，它就不會記錄為交易，而且該成員的所有先前交易都無法使用。  
   
 -   您可以檢視其他使用者對成員所做的交易。 您也可以檢視自己對成員所做的所有交易，即使您不再擁有特定屬性的權限也一樣。  
   
- 您可以檢視對成員所做的所有交易。 如需詳細資訊，請參閱[檢視成員的所有註解或交易 &#40;適用於 Excel 的 MDS 增益集&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)。  
+ 您可以檢視對成員所做的所有交易。 如需詳細資訊，請參閱 [檢視成員的所有註解或交易 &#40;適用於 Excel 的 MDS 增益集&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)。  
   
 > [!IMPORTANT]  
 >  如果您輸入了超過 500 個字元的註解，系統將自動截斷註解。  
@@ -51,12 +51,12 @@ ms.locfileid: "65479036"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|將資料從使用中工作表發行回 MDS 儲存機制。|[從 Excel 發行資料給 MDS &#40;MDS 增益集的 Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
-|同時從 MDS 儲存機制和工作表中刪除資料列。|[刪除資料列 &#40;適用於 Excel 的 MDS 增益集&#41;](delete-a-row-mds-add-in-for-excel.md)|  
+|將資料從使用中工作表發行回 MDS 儲存機制。|[將 Excel 的資料發行至適用于 Excel 的 mds 增益集 &#40;&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
+|同時從 MDS 儲存機制和工作表中刪除資料列。|[&#40;適用于 Excel 的 MDS 增益集&#41;刪除資料列](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
--   [重新整理資料 &#40;適用於 Excel 的 MDS 增益集&#41;](refreshing-data-mds-add-in-for-excel.md)  
+-   [重新整理適用于 Excel 的 MDS 增益集&#41;的資料 &#40;](refreshing-data-mds-add-in-for-excel.md)  
   
 -   [適用於 Microsoft Excel 的 Master Data Services 增益集](master-data-services-add-in-for-microsoft-excel.md)  
   

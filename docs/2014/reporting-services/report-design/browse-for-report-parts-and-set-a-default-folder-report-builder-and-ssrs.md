@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2dd881c13b2398f3a1783f53190097653d04d78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106454"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>瀏覽報表組件及設定預設資料夾 (報表產生器及 SSRS)
@@ -63,10 +63,10 @@ ms.locfileid: "66106454"
  您不需要重新啟動報表產生器，這項設定也會生效。  
   
 ## <a name="see-also"></a>另請參閱  
- [檢查更新或關閉更新&#40;報表產生器及 SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+ [檢查是否有更新，或關閉 &#40;報表產生器和 SSRS 的更新&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
  [報表組件 &#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [報表產生器中的報表組件和資料集](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [疑難排解報表組件&#40;報表產生器及 SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [&#40;報表產生器和 SSRS&#41;疑難排解報表元件](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [發行與重新發行報表組件 &#40;報表產生器及 SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

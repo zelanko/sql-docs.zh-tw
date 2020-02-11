@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4f911ebf60852fd4ab11c5813fc567deb2d0c87
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75225405"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>設定 Internet Information Services (IIS) 8.0 上 Analysis Services 的 HTTP 存取
@@ -38,7 +38,7 @@ ms.locfileid: "75225405"
   
  這個主題包括下列各節：  
   
--   [簡要](#bkmk_overview)  
+-   [概觀](#bkmk_overview)  
   
 -   [必要條件](#bkmk_prereq)  
   
@@ -65,13 +65,13 @@ ms.locfileid: "75225405"
   
  下表列出您針對不同狀況啟用 HTTP 存取時的其他考量。  
   
-|案例|設定|  
+|狀況|組態|  
 |--------------|-------------------|  
 |相同電腦上的 IIS 和 Analysis Services|這是最簡單的組態，因為它可讓您搭配 NTLM 使用預設組態 (其伺服器名稱為 localhost)、本機 Analysis Services OLE DB 提供者，以及 Windows 整合式安全性。 假設用戶端也位於相同網域，驗證對使用者而言是透明的，您不需要採取其他任何動作。|  
 |不同電腦上的 IIS 和 Analysis Services|針對此拓撲，您必須在 Web 伺服器上安裝 Analysis Services OLE DB 提供者。 您也必須編輯 msmdpump.ini 檔案，以便在遠端電腦上指定 Analysis Services 執行個體的位置。<br /><br /> 此拓撲加入了雙躍點驗證步驟，其中認證必須從用戶端流向 Web 伺服器，然後再流向後端 Analysis Services 伺服器。 如果您要使用 Windows 認證和 NTLM，將會出現錯誤，因為 NTLM 不允許將用戶端認證委派給另一部伺服器。 最常見的方案是搭配安全通訊端層 (SSL) 使用基本驗證，但在存取 MSMDPUMP 虛擬目錄時，這將需要使用者提供使用者名稱和密碼。 更直接的方法可能是啟用 Kerberos 並設定 Analysis Services 限制委派，讓使用者可以用透明的方式存取 Analysis Services。 請參閱 [設定 Analysis Services 進行 Kerberos 限制委派](configure-analysis-services-for-kerberos-constrained-delegation.md) 以取得詳細資訊。<br /><br /> 請考慮要在 Windows 防火牆中解除封鎖哪些通訊埠。 您將需要解除封鎖兩部伺服器上的通訊埠，以便存取 IIS 上的 Web 應用程式，以及遠端伺服器上的 Analysis Services。|  
 |用戶端連接是來自不信任網域或外部網路連接|來自不信任網域的用戶端連接會進一步導入驗證的限制。 根據預設，Analysis Services 使用 Windows 整合式驗證，這種驗證需要使用者與伺服器位於相同網域上。 如果您有從網域外部連接至 IIS 的外部網路使用者，當伺服器設定為使用預設值時，那些使用者會發生連接錯誤。<br /><br /> 因應措施包括，讓外部網路使用者使用網域認證，透過 VPN 連接。 不過，更好的方法可能是在 IIS 網站上啟用基本驗證和 SSL。|  
   
-##  <a name="bkmk_prereq"></a>要求  
+##  <a name="bkmk_prereq"></a> 必要條件  
  本文中的指示假設已設定 IIS 且已安裝 Analysis Services。 Windows Server 2012 隨附 IIS 8.x 以做為伺服器角色，您可以在系統上加以啟用。  
   
  **IIS 8.0 中的額外設定**  
@@ -157,7 +157,7 @@ ms.locfileid: "75225405"
   
      ![新增應用程式對話方塊](../media/ssas-httpaccess-convertedapp.png "新增應用程式對話方塊")  
   
-4.  按一下 [確定]****。 重新整理網站，並注意「OLAP」資料夾現在是在「預設的網站」底下的應用程式。 現在即已建立 MSMDPUMP 檔案的虛擬路徑。  
+4.  按一下 [確定]  。 重新整理網站，並注意「OLAP」資料夾現在是在「預設的網站」底下的應用程式。 現在即已建立 MSMDPUMP 檔案的虛擬路徑。  
   
      ![應用程式轉換後的 OLAP 資料夾](../media/ssas-httpaccess-convertfolderafter.png "應用程式轉換後的 OLAP 資料夾")  
   

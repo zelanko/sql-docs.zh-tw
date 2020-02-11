@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5bbc5e58b95ffb4eebc5dfa0400a566868ae5cba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63165224"
 ---
 # <a name="delivery-extensions-overview"></a>傳遞延伸模組概觀
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 可讓使用者建立和發行報表，一旦建立和發行，就可以傳遞給各個位置。 除此之外，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括數個傳遞延伸模組以及一個傳遞 API，可讓開發人員建立其他的傳遞延伸模組，以進一步擴充在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的傳遞功能。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]可讓使用者建立和發行報表，一旦建立和發行之後，即可傳遞至不同的位置。 除此之外，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括數個傳遞延伸模組以及一個傳遞 API，可讓開發人員建立其他的傳遞延伸模組，以進一步擴充在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的傳遞功能。  
   
  下表列出 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 隨附的傳遞延伸模組。  
   
@@ -47,13 +47,13 @@ Reporting Services 傳遞延伸模組架構
   
 -   安裝報表設計師的部署電腦。  
   
--   已安裝 [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] 或是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 軟體開發套件 (SDK) 的開發電腦。  
+-   已安裝[!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]軟體發展工具組（SDK）的開發電腦。  
   
 -   對 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 特性與功能有深入的了解，特別是訂閱與傳遞。  
   
 -   如果您計劃為報表管理員實作自訂的訂閱使用者介面，需要對 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 與 Web 控制項有深入的了解。  
   
--   [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 語言的開發體驗，例如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 或是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET。  
+-   Visual c # 或[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .net 等語言的開發經驗。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [實作傳遞延伸模組](../delivery-extension/implementing-a-delivery-extension.md)   

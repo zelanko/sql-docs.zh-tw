@@ -19,14 +19,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee7ba55e48f4704c912e92a4d8352e7c891c06b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62989681"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>使用 Reporting Services 安全性原則檔
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會將元件安全性原則資訊儲存在安裝過程中複製到檔案系統的三個組態檔內。 這些組態檔可能會包含 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中程式碼組件之內部使用和使用者定義安全性原則的組合。 這三個組態檔對應中的三個安全性實體元件[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]:報表伺服器和 Windows 服務、 報表管理員 Web 應用程式和報表設計師預覽視窗。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會將元件安全性原則資訊儲存在安裝過程中複製到檔案系統的三個組態檔內。 這些組態檔可能會包含 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中程式碼組件之內部使用和使用者定義安全性原則的組合。 這三個組態檔會對應至 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的三個安全性實體元件：報表伺服器和 Windows 服務、報表管理員 Web 應用程式，以及報表設計師預覽視窗。  
   
 > [!NOTE]  
 >  報表設計師有兩個預覽模式：當在 **DebugLocal** 模式中啟動報表專案時，會啟動預覽索引標籤與快顯預覽視窗。 [預覽]  索引標籤並非安全性實體元件，而且不會套用安全性原則設定。 預覽視窗是用以模擬報表伺服器功能，因此具有原則組態檔，而且您或系統管理員必須修改該檔案，才能在報表設計師中使用自訂組件和自訂延伸模組。  
@@ -36,7 +36,7 @@ ms.locfileid: "62989681"
 ## <a name="policy-files-in-reporting-services"></a>Reporting Services 中的原則檔  
  下表將列出 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的原則組態檔、其位置 (假設是預設安裝)，以及其個別功能。  
   
-|[檔案名稱]|位置 (預設安裝)|描述|  
+|檔案名稱|位置 (預設安裝)|描述|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|報表伺服器原則組態檔。 一旦報表部署至報表伺服器時，這些安全性原則主要會影響報表運算式和自訂組件。 這個原則檔也會影響部署至報表伺服器的自訂資料、傳遞、轉譯和安全性延伸模組。|  
 |rsmgrpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|報表管理員原則組態檔。 這些安全性原則會影響擴充報表管理員的所有組件。例如，自訂傳遞的訂閱使用者介面延伸模組。|  

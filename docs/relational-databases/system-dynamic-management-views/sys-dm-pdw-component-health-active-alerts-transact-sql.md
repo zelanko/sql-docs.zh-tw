@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 90531889d3e510d342ff39abdf069f75f3c371aa
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401716"
 ---
 # <a name="sysdm_pdw_component_health_active_alerts-transact-sql"></a>sys.databases dm_pdw_component_health_active_alerts （Transact-sql）
@@ -31,7 +31,7 @@ ms.locfileid: "74401716"
 |alert_instance_id|**Nvarchar （36）**|識別給定警示的實例。<br /><br /> pdw_node_id、component_id、component_instance_id、alert_id 和 alert_instance_id 會形成此視圖的索引鍵。|NOT NULL|  
 |current_value|**nvarchar(255)**|當警示的類型為 StatusChange 時使用。 這是目前的元件狀態。 針對類型為閾值的警示，其值為 Null。 如需警示類型的清單，請參閱[pdw_health_alerts &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md) 。|NULL|  
 |previous_value|**nvarchar(255)**|當警示的類型為 StatusChange 時使用。 這是先前的元件狀態。 針對類型為閾值的警示，其值為 Null。 如需警示類型的清單，請參閱[pdw_health_alerts &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md) 。|NULL|  
-|create_time|**從中**|產生警示的時間和日期。|NOT NULL|  
+|create_time|**datetime**|產生警示的時間和日期。|NOT NULL|  
   
  如需此視圖所保留之最大資料列的詳細資訊，請參閱中的[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]「最小和最大值」。  
   

@@ -1,5 +1,5 @@
 ---
-title: SetStartMode 方法 （SqlService 類別） |Microsoft Docs
+title: SetStartMode 方法（SqlService 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0b3689c843fbbe7ad845a45aca6bb962f8f0c75e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63061956"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>SetStartMode 方法 (SqlService 類別)
@@ -40,7 +40,7 @@ StartMode
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
+ *目標*  
  表示此服務的 [SqlService 類別](sqlservice-class.md) 物件。  
   
 #### <a name="parameters"></a>參數  
@@ -60,7 +60,8 @@ StartMode
  值 = 4。 Disabled - 無法再啟動服務。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- `uint32` 值，如果已成功修改此服務為 0，如果不支援要求則為 1。 任何其他數字表示發生錯誤。  
+ 
+  `uint32` 值，如果已成功修改此服務為 0，如果不支援要求則為 1。 任何其他數字表示發生錯誤。  
   
 ## <a name="remarks"></a>備註  
   

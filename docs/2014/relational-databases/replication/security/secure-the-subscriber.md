@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960813"
 ---
 # <a name="secure-the-subscriber"></a>保護訂閱者
@@ -31,7 +31,7 @@ ms.locfileid: "62960813"
   
  若要指定提取訂閱的連接資訊，請參閱[建立提取訂閱](../create-a-pull-subscription.md)。  
   
-## <a name="merge-agent"></a>[合併代理程式]  
+## <a name="merge-agent"></a>合併代理程式  
  每個合併訂閱都有其「合併代理程式」，以連接「發行者」和「訂閱者」，並更新這兩者。  
   
  若要指定發送訂閱的連接資訊，請參閱[建立發送訂閱](../create-a-push-subscription.md)。  

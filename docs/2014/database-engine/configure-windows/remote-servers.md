@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809756"
 ---
 # <a name="remote-servers"></a>遠端伺服器
@@ -33,23 +33,26 @@ ms.locfileid: "62809756"
 ## <a name="remote-server-details"></a>遠端伺服器詳細資料  
  遠端伺服器是以配對設定。 若要設定遠端伺服器的配對，請將兩個伺服器都設定成可以相互辨識另一個為遠端伺服器。  
   
- 大部份的情況下，您不需要設定遠端伺服器的組態選項。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在本機和遠端電腦上設定預設值，以允許遠端伺服器的連接。  
+ 大部份的情況下，您不需要設定遠端伺服器的組態選項。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在本機和遠端電腦上設定預設值，以允許遠端伺服器的連接。  
   
- 若要讓遠端伺服器存取可以進行，在本機與遠端電腦上的 [遠端存取] 組態選項都必須設定為 1  (這是預設值)。[遠端存取] 會控制遠端伺服器的登入。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** 預存程序或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]重設此組態選項。 若要重設 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的選項，請使用 [伺服器屬性連接] 頁面的 [允許此伺服器的遠端連接]。 若要存取 [伺服器屬性連接] 頁面，請在物件總管中以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]。 在 [伺服器屬性] 頁面上，按一下 [連接] 頁面。  
+ 若要讓遠端伺服器存取可以進行，在本機與遠端電腦上的 [遠端存取]**** 組態選項都必須設定為 1  (這是預設值)。[遠端存取]**** 會控制遠端伺服器的登入。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** 預存程序或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]重設此組態選項。 若要重設 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的選項，請使用 [伺服器屬性連接]**** 頁面的 [允許此伺服器的遠端連接]****。 若要存取 [伺服器屬性連接]**** 頁面，請在物件總管中以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]****。 在 [伺服器屬性]**** 頁面上，按一下 [連接]**** 頁面。  
   
  您可以從本機伺服器來停用遠端伺服器組態，以防止其配對遠端伺服器上的使用者存取本機伺服器。  
   
 ## <a name="security-for-remote-servers"></a>遠端伺服器的安全性  
- 若要對遠端伺服器啟用遠端程序呼叫 (RPC)，您必須在遠端伺服器上，甚至在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的本機伺服器上，設定登入對應。 依預設，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中會停用 RPC。 此組態以減少其可攻擊介面區來加強伺服器的安全性。 在使用 RPC 之前，您必須先啟用此功能。 如需詳細資訊，請參閱 [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)。  
+ 若要對遠端伺服器啟用遠端程序呼叫 (RPC)，您必須在遠端伺服器上，甚至在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的本機伺服器上，設定登入對應。 依預設，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中會停用 RPC。 此組態以減少其可攻擊介面區來加強伺服器的安全性。 在使用 RPC 之前，您必須先啟用此功能。 如需詳細資訊，請參閱[sp_configure &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)。  
   
 ### <a name="setting-up-the-remote-server"></a>設定遠端伺服器  
  必須在遠端伺服器上設定遠端登入對應。 使用這些對應，遠端伺服器便可將來自指定伺服器之 RPC 連接的內送登入對應到本機登入。 遠端登入對應可使用 **sp_addremotelogin** 預存程序在遠端伺服器上進行設定。  
   
 > [!NOTE]  
->  **不支援** sp_remoteoption  **的** trusted [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]選項。  
+>  
+  **不支援** sp_remoteoption  **的** trusted [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]選項。  
   
 ### <a name="setting-up-the-local-server"></a>設定本機伺服器  
- 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證本機登入，您不需要在本機伺服器上設定登入對應。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用本機登入和密碼來連接至遠端伺服器。 若為 Windows 驗證登入，請在本機伺服器上設定本機登入對應，以定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在建立遠端伺服器之 RPC 連接時所使用的登入與密碼。  
+ 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證本機登入，您不需要在本機伺服器上設定登入對應。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用本機登入和密碼來連接至遠端伺服器。 若為 Windows 驗證登入，請在本機伺服器上設定本機登入對應，以定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在建立遠端伺服器之 RPC 連接時所使用的登入與密碼。  
   
  若為 Windows 驗證所建立的登入，則您必須使用 **sp_addlinkedservlogin** 預存程序，來建立登入名稱與密碼的對應。 這個登入名稱與密碼必須與遠端伺服器所預期的內送登入和密碼相符，如同 **sp_addremotelogin**所建立的一樣。  
   
@@ -57,7 +60,7 @@ ms.locfileid: "62809756"
 >  盡可能使用 Windows 驗證。  
   
 ### <a name="remote-server-security-example"></a>遠端伺服器安全性的範例  
- 請考量這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝： **serverSend** 和 **serverReceive**。 **serverReceive** 的設定是將來自 **serverSend** 的內送登入 (稱為 **Sales_Mary**) 對應到 **serverReceive** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入 (稱為 **Alice**)。 另一個來自 **serverSend** 的內送登入 (稱為 **Joe**)，則會對應到 **serverReceive** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入 (稱為 **Joe**)。  
+ 請考量這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝： **serverSend** 和 **serverReceive**。 **serverReceive**設定為將**serverSend**的傳入登入（稱為**Sales_Mary**）對應到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ServerReceive**中已驗證的登入，稱為**Alice**。 來自**serverSend**的另一個傳入登入（稱為**joe**）會[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]對應到**serverReceive**中已驗證的登入 _（_ 稱為**joe**）。  
   
  下列的 Transact-SQL 程式碼範例會將 `serverSend` 設定為對 `serverReceive` 執行 RPC。  
   
@@ -78,7 +81,8 @@ EXEC sp_addremotelogin 'serverSend', 'Joe', 'Joe';
 GO  
 ```  
   
- 在 `serverSend`上，會針對 Windows 驗證登入 `Sales\Mary` 對應於登入 `Sales_Mary`來建立本機登入對應。 `Joe`不需本機對應，因為預設會使用相同的登入名稱與密碼，且 `serverReceive` 會具有 `Joe`的對應。  
+ 在 `serverSend`上，會針對 Windows 驗證登入 `Sales\Mary` 對應於登入 `Sales_Mary`來建立本機登入對應。 
+  `Joe`不需本機對應，因為預設會使用相同的登入名稱與密碼，且 `serverReceive` 會具有 `Joe`的對應。  
   
 ```  
 --Create a remote server entry for RPCs from serverReceive.  

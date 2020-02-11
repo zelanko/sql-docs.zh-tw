@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056528"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>使用 Data Migration Assistant 升級 SQL Server
@@ -27,13 +27,13 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
 本文提供逐步指示，說明如何將 SQL Server 內部部署升級至 SQL Server 的較新版本，或使用 Data Migration Assistant 在 Azure Vm 上 SQL Server。
 
-## <a name="create-a-new-migration-project"></a>建立新的遷移專案
+## <a name="create-a-new-migration-project"></a>建立新的移轉專案
 
 1. 在左窗格中，依序選取 [**新增**（+）] 和 [**遷移**] 專案類型。
 
 2. 如果您要將內部部署 SQL Server 升級至較新版本的內部部署 SQL Server，請將來源和目標伺服器類型設定為**SQL Server** 。
 
-3. 選取 [建立]。
+3. 選取 [建立]  。
 
    ![建立遷移專案](../dma/media/NewCreate.png)
 
@@ -49,7 +49,7 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
 5. 建議您在 [連線**屬性**] 區段中選取 [**加密連接**]，以加密連接。
 
-6. 按 [下一步]。
+6. 按 [下一步]  。
 
    ![指定來源和目標頁面](../dma/media/SourceTarget.png)
 
@@ -78,9 +78,9 @@ Data Migration Assistant 提供 SQL Server 內部部署的順暢評量，並升�
 
    ![將資料庫備份複製到不同位置的選項](../dma/media/CopyDatabaseDifferentLocation.png)
 
-5. 選取 **[下一步]** 。
+5. 選取 [下一步]  。
 
-Data Migration Assistant 會在備份檔案夾、資料和記錄檔位置上執行驗證。 如果驗證失敗，請修正選項，然後選取 **[下一步]** 。
+Data Migration Assistant 會在備份檔案夾、資料和記錄檔位置上執行驗證。 如果驗證失敗，請修正選項，然後選取 **[下一步]**。
 
 ## <a name="select-logins"></a>選取登入
 
@@ -109,6 +109,6 @@ Data Migration Assistant 會在備份檔案夾、資料和記錄檔位置上執�
 
 ## <a name="see-also"></a>另請參閱
 
-- [Data Migration Assistant （DMA）](../dma/dma-overview.md)
+- [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 - [Data Migration Assistant：設定](../dma/dma-configurationsettings.md)
 - [Data Migration Assistant：最佳做法](../dma/dma-bestpractices.md)

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca0953b9ac191dfb765992f79988f3cc1502dfa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211569"
 ---
 # <a name="add-business-logic-to-xml-data"></a>將商務邏輯加入至 XML 資料
@@ -30,8 +30,8 @@ ms.locfileid: "68211569"
   
 -   您可以撰寫 Transact-SQL 預存程序及函數，以針對您的商業需求開始處理 XML 資料行。  
   
-## <a name="example-applying-xsl-transformation"></a>範例套用 XSL 轉換  
- CLR 函數，請考慮**transformxml （)** 它會接受`xml`資料類型執行個體和儲存在檔案中的 XSL 轉換，將轉換套用至 XML 資料，和結果中傳回已轉換的 XML。 以下是用 C# 來撰寫的基本架構函數：  
+## <a name="example-applying-xsl-transformation"></a>範例：套用 XSL 轉換  
+ 假設有一個 CLR 函數**TransformXml （）** ，它`xml`會接受資料類型實例和儲存在檔案中的 XSL 轉換，將轉換套用至 XML 資料，然後在結果中傳回已轉換的 XML。 以下是用 C# 來撰寫的基本架構函數：  
   
 ```  
 public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {  

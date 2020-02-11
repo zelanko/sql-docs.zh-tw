@@ -10,13 +10,13 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: e1683adfa20851d279e8b8e18a3c767db9e5810d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056268"
 ---
-# <a name="installation-and-configuration"></a>安裝和組態
+# <a name="installation-and-configuration"></a>安裝和設定
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Wide World 匯入 OLTP 資料庫安裝和設定指示。
 
@@ -37,7 +37,7 @@ Wide World 匯入 OLTP 資料庫安裝和設定指示。
 
 [全企業-匯入工具](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
 
-## <a name="install"></a>Install
+## <a name="install"></a>安裝
 
 
 ### <a name="sql-server"></a>SQL Server
@@ -47,9 +47,9 @@ Wide World 匯入 OLTP 資料庫安裝和設定指示。
 1. 開啟 SQL Server Management Studio，並連接到目標 SQL Server 實例。
 2. 以滑鼠右鍵按一下 [**資料庫**] 節點，然後選取 [**還原資料庫**]。
 3. 選取 [**裝置**]，然後按一下 **[...] 按鈕。**
-4. 在對話方塊中，**選取 [備份裝置**]，按一下 [**新增**]，流覽至伺服器檔案系統中的資料庫備份，然後選取備份。 按一下 [確定]。
+4. 在對話方塊中，**選取 [備份裝置**]，按一下 [**新增**]，流覽至伺服器檔案系統中的資料庫備份，然後選取備份。 按一下 [確定]  。
 5. 如有需要，請在 [檔案] 窗格中變更**資料檔案和**記錄檔的目標位置。 請注意，最佳做法是將資料和記錄檔放在不同的磁片磁碟機上。
-6. 按一下 [確定]。 這會起始資料庫還原。 完成之後，您的 SQL Server 實例上會安裝資料庫 WideWorldImporters。
+6. 按一下 [確定]  。 這會起始資料庫還原。 完成之後，您的 SQL Server 實例上會安裝資料庫 WideWorldImporters。
 
 ### <a name="azure-sql-database"></a>Azure SQL Database
 
@@ -63,19 +63,19 @@ Wide World 匯入 OLTP 資料庫安裝和設定指示。
 5. 在 [**資料庫設定**] 底下，將資料庫名稱變更為*WideWorldImporters* ，然後選取要使用的目標版本和服務目標。
 6. 按 **[下一步**]，然後按一下 **[完成]** 開始進行部署。 在 P1 上完成需要幾分鐘的時間。 如果需要較低的定價層，建議您將匯入至新的 P1 資料庫，然後將定價層變更為所需的層級。
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>組態
 
 ### <a name="full-text-indexing"></a>全文檢索索引
 
 範例資料庫可以利用全文檢索索引。 不過，預設不會隨 SQL Server 安裝該功能，您必須在 SQL Server 安裝期間選取它（在 Azure SQL DB 中預設為啟用）。 因此，需要進行後續安裝步驟。
 
 1. 在 SQL Server Management Studio 中，連接到 WideWorldImporters 資料庫，然後開啟新的查詢視窗。
-2. 執行下列 T-sql 命令，以啟用在資料庫中使用全文檢索索引： `EXECUTE Application.Configuration_ApplyFullTextIndexing`
+2. 執行下列 T-sql 命令，以啟用在資料庫中使用全文檢索索引：`EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>SQL Server Audit
 
-適用于： SQL Server
+適用於：SQL Server
 
 在 SQL Server 中啟用審核需要伺服器設定。 若要啟用 WideWorldImporters 範例的 SQL Server audit，請在資料庫中執行下列語句：
 

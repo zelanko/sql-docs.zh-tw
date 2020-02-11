@@ -18,10 +18,10 @@ ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
 ms.openlocfilehash: eb274d4f022a182ac056c190a8626fa48e36511d
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844401"
 ---
 # <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>主動式異地複寫-sp_wait_for_database_copy_sync
@@ -31,7 +31,7 @@ ms.locfileid: "73844401"
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**適用**于： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,10 +41,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [@target_server =]' server_name '  
+ [ @target_server = ]' server_name '  
  主控作用中的次要資料庫的 SQL Database 伺服器名稱。 server_name 是 sysname，沒有預設值。  
   
- [@target_database =]' database_name '  
+ [ @target_database = ] 'database_name'  
  作用中的次要資料庫名稱。 database_name 是 sysname，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -58,10 +58,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
   
 -   互連連接遺失。 **sp_wait_for_database_copy_sync**會在連接逾時後傳回。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  主要資料庫中的任何使用者都可以呼叫這個系統預存程序。 登入必須是同時位於主要和作用中次要資料庫的使用者。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  在**sp_wait_for_database_copy_sync**呼叫之前認可的所有交易都會傳送至作用中次要資料庫。  
   
 ## <a name="examples"></a>範例  
@@ -75,7 +75,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [dm_continuous_copy_status &#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
- [異地複寫動態管理的查看和功能&#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
+ [dm_continuous_copy_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
+ [異地複寫動態管理檢視和功能 &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
   
   

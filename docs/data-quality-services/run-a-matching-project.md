@@ -14,10 +14,10 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 473b30d2dcc4809feece4e6a1cc59e38bb82ac2e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244115"
 ---
 # <a name="run-a-matching-project"></a>執行比對專案
@@ -30,17 +30,17 @@ ms.locfileid: "75244115"
   
  您必須做好比對的準備，方法是建立包含一個或多個比對規則的比對原則，並針對取樣資料執行此原則。 比對專案程序與比對原則程序不同，而且不會使用取自比對專案的相符知識來擴展知識庫。 如需有關建立比對原則的詳細資訊，請參閱＜ [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)＞。  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a>要求  
+###  <a name="Prerequisites"></a> 必要條件  
   
 -   您必須已使用包含一個或多個比對規則的比對原則建立知識庫。  
   
 -   如果要比對的來源資料為 Excel 檔案，則 Microsoft Excel 必須安裝在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 電腦上。 否則，您將無法在對應階段選取此 Excel 檔案。 由 Microsoft Excel 建立的檔案可以具有 .xlsx、.xls 或 .csv 的副檔名。 如果使用 64 位元版本的 Excel，則僅支援 Excel 2003 檔案 (.xls)；Excel 2007 或 2010 檔案 (.xlsx) 不受支援。 如果您使用 64 位元版本的 Excel 2007 或 2010，請將檔案儲存為 .xls 檔案或 .csv 檔案，或是改為安裝 32 位元版本的 Excel。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能執行比對專案。  
   
 ##  <a name="StartingaMatchingProject"></a>第一步：啟動比對專案  

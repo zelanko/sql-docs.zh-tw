@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 5dca3564e8e2ccc83f0968d42c636112880f6e56
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401678"
 ---
 # <a name="syspdw_materialized_view_distribution_properties-transact-sql-preview"></a>sys.databases pdw_materialized_view_distribution_properties （Transact-sql）（預覽）
@@ -28,7 +28,7 @@ ms.locfileid: "74401678"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------| 
 |object_id|**int**|已指定三個屬性之具體化視圖的識別碼。| 
-|distribution_policy |**Tinyint**|2 = 雜湊</br>4 = ROUND_ROBIN|  
+|distribution_policy |**tinyint**|2 = 雜湊</br>4 = ROUND_ROBIN|  
 |distribution_policy_desc |**Nvarchar （60）**|HASH、ROUND_ROBIN|  
  
 ## <a name="permissions"></a>權限

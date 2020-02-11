@@ -1,5 +1,5 @@
 ---
-title: 範例使用 EXPLICIT 模式建構同層級 | Microsoft Docs
+title: 範例：使用 EXPLICIT 模式建構同層級 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4f5ff9f8c153ab80adf5bc19fa5f78f58ddb58b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704731"
 ---
-# <a name="example-constructing-siblings-with-explicit-mode"></a>範例使用 EXPLICIT 模式建構同層級
+# <a name="example-constructing-siblings-with-explicit-mode"></a>範例：使用 EXPLICIT 模式建構同層級
   假設您想要建構提供銷售訂單資訊的 XML。 請注意，<`SalesPerson`> 與 <`OrderDetail`> 元素為同層級。 每個 Order 都有一個 <`OrderHeader`> 元素、一個 <`SalesPerson`> 元素，以及一或多個 <`OrderDetail`> 元素。  
   
 ```  
@@ -32,7 +32,7 @@ ms.locfileid: "62704731"
 <OrderHeader ...</OrderHeader>  
 ```  
   
- 以下 EXPLICIT 模式查詢會建構此 XML。 請注意，查詢會指定 <`OrderHeader`> 元素的 `Tag` 值為 1，<`SalesPerson`> 元素為 2，而 <`OrderDetail`> 元素為 3。 因為 <`SalesPerson`> 及 <`OrderDetail`> 為同層級，所以查詢會指定同樣可識別 <`OrderHeader`> 元素的 `Parent` 標記值 1。  
+ 以下 EXPLICIT 模式查詢會建構此 XML。 請注意，查詢會指定 <`Tag`> 元素的 `OrderHeader` 值為 1，<`SalesPerson`> 元素為 2，而 <`OrderDetail`> 元素為 3。 因為 <`SalesPerson`> 及 <`OrderDetail`> 為同層級，所以查詢會指定同樣可識別 <`Parent`> 元素的 `OrderHeader` 標記值 1。  
   
 ```  
 USE AdventureWorks2012;  

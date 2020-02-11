@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9ee3228eea9970563540be9bc6a4c3b9a3677112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189332"
 ---
 # <a name="edit-an-operator"></a>編輯操作員
@@ -33,7 +33,7 @@ ms.locfileid: "68189332"
   
      [安全性](#Security)  
   
--   **若要使用下列項目編輯操作員：**  
+-   **若要使用下列內容編輯操作員：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -43,13 +43,14 @@ ms.locfileid: "68189332"
   
 ###  <a name="Restrictions"></a> 限制事項  
   
--   呼叫器和 **net send** 選項會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未來版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
+-   在未來版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，將會從 Agent 移除 [呼機] 和 [ **net send** ] 選項。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
   
 -   請注意，必須設定 SQL Server Agent 使用 Database Mail，才能將電子郵件及呼叫器通知傳送給操作員。 如需詳細資訊，請參閱＜ [指派警示給操作員](assign-alerts-to-an-operator.md)＞。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一種簡單的圖形方式供您管理各項作業，建議您利用這個方式來建立和管理作業基礎結構。  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一種簡單的圖形方式供您管理各項作業，建議您利用這個方式來建立和管理作業基礎結構。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才可以編輯操作員。  
@@ -64,15 +65,15 @@ ms.locfileid: "68189332"
   
 3.  按一下加號展開 **[操作員]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您要編輯的操作員，然後選取 [屬性]  。  
+4.  以滑鼠右鍵按一下您要編輯的操作員，然後選取 [屬性]****。  
   
-     如需 [<操作員名稱> 屬性]   對話方塊中之可用選項的詳細資訊，請參閱：  
+     如需 [ _operator_name_**屬性**] 對話方塊中所包含之可用選項的詳細資訊，請參閱：  
   
-    -   [操作員屬性和新的運算子&#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [操作員屬性和 New 運算子 &#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [運算子屬性：New 運算子&#40;通知頁面&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [操作員屬性：新的操作員 &#40;通知頁面&#41;](operator-properties-new-operator-notifications-page.md)  
   
-    -   [操作員屬性 &#40;記錄頁面&#41;](operator-properties-history-page.md)  
+    -   [&#40;歷程記錄頁面中的操作員屬性&#41;](operator-properties-history-page.md)  
   
 5.  完成後，請按一下 **[確定]** 。  
   
@@ -103,6 +104,6 @@ ms.locfileid: "68189332"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 < [sp_update_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql)。  
+ 如需詳細資訊，請參閱[sp_update_operator &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql)。  
   
   

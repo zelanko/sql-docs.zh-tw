@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM 支援 (ODBC) |Microsoft Docs
+title: FILESTREAM 支援（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -14,27 +14,28 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e48619daa350fd5b7a7dc47a9762459fbddc7d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206594"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM 支援 (ODBC)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 支援增強型 FILESTREAM 功能。 如需這項功能的詳細資訊，請參閱[FILESTREAM 支援](../features/filestream-support.md)。 如需示範 ODB 對於 FILESTREAM 之支援的範例，請參閱 <<c0> [ 傳送和接收資料以累加方式與 FILESTREAM &#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)。</c0>  
   
- 傳送和接收`varbinary(max)`大於 2 GB 的值，應用程式必須使用繫結參數與 SQLBindParameter *ColumnSize*設定為`SQL_SS_LENGTH_UNLIMITED`，並設定的內容*StrLen_or_IndPtr*至`SQL_DATA_AT_EXEC`SQLExecDirect 或 SQLExecute 之前。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 支援增強型 FILESTREAM 功能。 如需這項功能的詳細資訊，請參閱[FILESTREAM 支援](../features/filestream-support.md)。 如需示範 FILESTREAM 之 ODB 支援的範例，請參閱[使用 Filestream 以累加方式傳送和接收資料 &#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)。  
   
- 為使用任何資料在執行中參數，資料才會提供使用 SQLParamData 和 SQLPutData。  
+ 若要傳送和`varbinary(max)`接收大於 2 GB 的值，應用程式必須使用 SQLBindParameter，並將*ColumnSize*設定為`SQL_SS_LENGTH_UNLIMITED`來系結參數，並** 將 StrLen_or_IndPtr `SQL_DATA_AT_EXEC`的內容設定為，然後再 SQLExecDirect 或 SQLExecute。  
   
- 您可以呼叫來提取 FILESTREAM 資料行之區塊中的資料，如果資料行未繫結使用 SQLBindCol SQLGetData。  
+ 如同任何資料執行中參數，資料將會隨 SQLParamData 和 SQLPutData 提供。  
   
- 如果它與 SQLBindCol 繫結，您可以更新 FILESTREAM 資料。  
+ 如果資料行未與 SQLBindCol 系結，您可以呼叫 SQLGetData，以區塊方式提取 FILESTREAM 資料行的資料。  
   
- 如果您在繫結的資料行上呼叫 SQLFetch，您會收到 「 資料截斷 」 警告，如果緩衝區不夠大，無法容納整個值。 忽略此警告，並使用 SQLParamData 和 SQLPutData 呼叫更新此繫結的資料行中的資料。 使用 SQLSetPos，如果它與 SQLBindCol 繫結，您可以更新 FILESTREAM 資料。  
+ 如果 FILESTREAM 資料系結至 SQLBindCol，您可以更新它。  
+  
+ 如果您在系結資料行上呼叫 SQLFetch，如果緩衝區不夠大，無法容納整個值，則會收到「資料已截斷」警告。 忽略此警告，並使用 SQLParamData 和 SQLPutData 呼叫來更新此系結資料行中的資料。 如果 FILESTREAM 資料與 SQLBindCol 系結，您可以使用 SQLSetPos 來更新它。  
   
 ## <a name="example"></a>範例  
- FILESTREAM 資料行的行為與 `varbinary(max)` 資料行完全相同，但是沒有大小限制。 它們繫結為 SQL_VARBINARY (SQL_LONGVARBINARY 會搭配 image 資料行使用，而且此類型有一些限制。 例如，sql_longvarbinary 做為輸出參數。)下列範例會示範直接 NTFS 存取 FILESTREAM 資料行。 這些範例會假設下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式碼已在資料庫中執行：  
+ FILESTREAM 資料行的行為與 `varbinary(max)` 資料行完全相同，但是沒有大小限制。 它們繫結為 SQL_VARBINARY  (SQL_LONGVARBINARY 會搭配 image 資料行使用，而且此類型有一些限制。 例如，SQL_LONGVARBINARY connot 做為輸出參數使用）。下列範例會顯示 FILESTREAM 資料行的直接 NTFS 存取。 這些範例會假設下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式碼已在資料庫中執行：  
   
 ```  
 CREATE TABLE fileStreamDocs(  
@@ -99,7 +100,7 @@ ODBCError(henv, hdbc, hstmt, NULL, true); exit(-1);
 }  
 ```  
   
-### <a name="insert"></a>Insert  
+### <a name="insert"></a>插入  
   
 ```  
 void insertFilestream(LPCWSTR srcFilePath) {  

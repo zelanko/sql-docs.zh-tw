@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caeda52d612f4df6672f686e06834de6fef0cc67
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243281"
 ---
 # <a name="search-text-with-wildcards"></a>使用萬用字元搜尋文字
@@ -34,7 +34,7 @@ ms.locfileid: "75243281"
   
  下表說明 **[參考清單]** 中可用的萬用字元。  
   
-|運算式|語法|描述|  
+|運算是|語法|描述|  
 |----------------|------------|-----------------|  
 |任何單一字元|?|符合任何單一字元。|  
 |任何單一位數|#|符合任何單一位數。 例如，7# 符合在 7 後面接著另一個數字的數字，如 71，17 便不符合。|  
@@ -44,4 +44,4 @@ ms.locfileid: "75243281"
   
 ## <a name="see-also"></a>另請參閱  
  [搜尋和取代](search-and-replace.md)   
- [使用正則運算式搜尋文字](search-text-with-regular-expressions.md)  
+ [使用規則運算式搜尋文字](search-text-with-regular-expressions.md)  

@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 92aa65bd2d3aad71f2467efaa7a09f75f20d8f63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032245"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 函數
   傳回指定之版本的所有 SQL Server Express LocalDB 執行個體。  
   
- **標頭檔：** sqlncli.h  
+ **標頭檔：** sqlncli。h  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,10 +40,10 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>參數  
  *pInstanceNames*  
- [輸出]此函式傳回時，包含名稱的具名和預設 LocalDB 執行個體，在使用者的工作站上。  
+ 輸出當此函式傳回時，會包含使用者工作站上已命名和預設 LocalDB 實例的名稱。  
   
  *lpdwNumberOfInstances*  
- [輸入/輸出]輸入時，包含的執行個體名稱中的位置數目*pInstanceNames*緩衝區。 在輸出時，包含使用者工作站上找到的 LocalDB 執行個體數目。  
+ [輸入/輸出]在輸入時，包含*pInstanceNames*緩衝區中實例名稱的位置數目。 輸出時，包含在使用者工作站上找到的 LocalDB 實例數目。  
   
 ## <a name="returns"></a>傳回值  
  S_OK  
@@ -68,10 +68,10 @@ HRESULT LocalDBGetInstances(
  執行個體組態已損毀。  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
- 發生意外的錯誤。 請參閱事件記錄檔，以取得詳細資料。  
+ 發生意外錯誤。 請參閱事件記錄檔，以取得詳細資料。  
   
 ## <a name="remarks"></a>備註  
- 使用 LocalDB API 的程式碼範例，請參閱 < [SQL Server Express LocalDB 參考](../sql-server-express-localdb-reference.md)。  
+ 如需使用 LocalDB API 的程式碼範例，請參閱[SQL Server Express Localdb 參考](../sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Express LocalDB 標頭和版本資訊](sql-server-express-localdb-header-and-version-information.md)  

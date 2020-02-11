@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94c38e6823f0cd52e44da7782bccada780265978
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229394"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解適用於多維度模型的 Power View
@@ -28,7 +28,7 @@ ms.locfileid: "75229394"
   
  ![多維度模型架構的 Power View](../media/daxmd-architecture.gif "多維度模型架構的 Power View")  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  **伺服器需求**  
   
 -   SQL Server 2014 Enterprise 或 Business Intelligence 版本與以多維度模式執行的 Analysis Services。  
@@ -56,9 +56,9 @@ ms.locfileid: "75229394"
 |多維度物件|表格式物件|  
 |-----------------------------|--------------------|  
 |Cube|模型|  
-|Cube 維度|資料表|  
-|維度屬性(索引鍵、名稱)|欄|  
-|量值群組|資料表|  
+|Cube 維度|Table|  
+|維度屬性(索引鍵、名稱)|資料行|  
+|量值群組|Table|  
 |Measure|Measure|  
 |不含量值群組的量值|在名為量值的資料表中|  
 |量值群組 Cube 維度關聯性|關聯性|  

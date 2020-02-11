@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 669983c17792d555a1310e2248c4fb98cee16f9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100334"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>停駐報表設計師中的報表資料窗格 (SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66100334"
   
 ### <a name="to-display-the-report-data-pane"></a>顯示報表資料窗格  
   
--   在 [設計] 檢視中，在**檢視**功能表上，選取**報表資料**。  
+-   在設計檢視的 [ **view** ] 功能表上，選取 [**報表資料**]。  
   
 ### <a name="to-dock-the-report-data-pane"></a>停駐報表資料窗格  
   
@@ -34,16 +34,16 @@ ms.locfileid: "66100334"
   
 ### <a name="to-change-the-report-data-pane-from-a-docked-window-to-a-tabbed-window"></a>將報表資料窗格從停駐視窗變更為索引標籤式視窗  
   
--   以滑鼠右鍵按一下 報表資料 窗格的標題列，然後按一下 **索引標籤式文件**。  
+-   以滑鼠右鍵按一下 [報表資料] 窗格的標題列，然後按一下 [索引標籤**式檔**]。  
   
 ### <a name="to-change-the-report-data-pane-from-a-tabbed-window-to-a-docked-window"></a>將報表資料窗格從索引標籤式視窗變更為停駐視窗  
   
--   以滑鼠右鍵按一下 報表資料 索引標籤，然後按一下 **可停駐**。  
+-   以滑鼠**按右鍵 [** 報表資料] 索引標籤，然後按一下 [可停駐]。  
   
      若要在最近的兩個顯示狀態之間切換，請按兩下 [報表資料] 窗格的標題列。  
   
 ## <a name="see-also"></a>另請參閱  
  [報表資料窗格](../report-data/report-data-pane.md)   
- [報表產生器中的資料連接、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
+ [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

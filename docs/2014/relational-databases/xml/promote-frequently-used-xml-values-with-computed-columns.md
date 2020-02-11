@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195577"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用計算資料行升級常用的 XML 值
@@ -26,9 +26,9 @@ ms.locfileid: "68195577"
  升級的資料行可以是同一資料表中的已計算資料行，也可以是資料表中由使用者維護的另一個資料行。 當單一值從每個 XML 執行個體升級起來時，這就足夠了。 然而，若為多重值的屬性，您就必須為屬性建立個別的資料表，請見下節說明。  
   
 ## <a name="computed-column-based-on-the-xml-data-type"></a>以 xml 資料類型為基礎的計算的資料行  
- 使用使用者定義的函式會叫用，也可以建立計算資料行`xml`資料類型方法。 計算資料行的類型可以是任何 SQL 類型，包括 XML。 下列範例會加以說明。  
+ 您可以使用叫用`xml`資料類型方法的使用者自訂函數來建立計算資料行。 計算資料行的類型可以是任何 SQL 類型，包括 XML。 下列範例會加以說明。  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>範例以 xml 資料類型方法為基礎的計算資料行  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>範例：以 xml 資料類型方法為基礎的計算的資料行  
  針對書籍的 ISBN 號碼來建立使用者自訂函數：  
   
 ```  
@@ -50,7 +50,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  可以用一般的方式來檢索計算的資料行。  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>範例查詢以 xml 資料類型方法為基礎的計算資料行  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>範例：查詢以 xml 資料類型方法為基礎的計算的資料行  
  若要取得 ISBN 為 0-7356-1588-2 的 <`book`>，請：  
   
 ```  
@@ -67,7 +67,7 @@ FROM   T
 WHERE  ISBN = '0-7356-1588-2'  
 ```  
   
- 您可以建立使用者定義函式來傳回`xml`資料類型和計算資料行使用使用者定義函式。 然而，您不能在計算的 XML 資料行上建立 XML 索引。  
+ 您可以使用使用者定義函數來建立使用者定義函數`xml` ，以傳回資料類型和計算資料行。 然而，您不能在計算的 XML 資料行上建立 XML 索引。  
   
 ## <a name="creating-property-tables"></a>建立屬性資料表  
  您可能會想要將某些多重值的屬性從 XML 資料升級至一或多個資料表中、在那些資料表上建立索引，然後再讓您的查詢目標使用那些資料表。 一般案例中都是由少數的屬性來涵蓋大部份的查詢工作負載。 您可以執行下列工作：  
@@ -78,20 +78,20 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   在 XML 資料行上建立觸發程序，以維護屬性資料表。 在觸發程序中執行下列其中之一：  
   
-    -   使用`xml`資料類型方法，例如**nodes （)** 並**value （)** ，進而插入及刪除屬性資料表的資料列。  
+    -   使用`xml`資料類型方法（例如**節點（）** 和**值（）**）來插入和刪除屬性資料表的資料列。  
   
     -   在 Common Language Runtime (CLR) 中建立資料流資料表值函式，以插入及刪除屬性資料表的資料列。  
   
     -   撰寫查詢來讓 SQL 存取屬性資料表，並讓 XML 存取基底資料表中的 XML 資料表，再使用其主索引鍵來聯結這二個資料表。  
   
-### <a name="example-create-a-property-table"></a>範例建立屬性資料表  
+### <a name="example-create-a-property-table"></a>範例：建立屬性資料表  
  舉例來說，假設您要升級作者的名字。 書籍的作者可能不只一個，所以名字是多重值的屬性。 每個名字都是儲存在屬性資料表的不同資料列中。 在屬性資料表中會複製基底資料表的主索引鍵，以供向後聯結。  
   
 ```  
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>範例建立使用者自訂函數，以從 XML 執行個體產生資料列集  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>範例：建立使用者自訂函數，以從 XML 執行個體產生資料列集。  
  下列資料表值函式 udf_XML2Table 可接受主索引鍵值和 XML 執行個體。 它會擷取 <`book`> 元素中所有作者的名字，並傳回主索引鍵的資料列集 (名字配對)。  
   
 ```  
@@ -107,7 +107,7 @@ begin
 end  
 ```  
   
-### <a name="example-create-triggers-to-populate-a-property-table"></a>範例建立觸發程序以填入屬性資料表  
+### <a name="example-create-triggers-to-populate-a-property-table"></a>範例：建立觸發程序來擴展屬性資料表  
  插入觸發程序會在屬性資料表中插入資料列：  
   
 ```  
@@ -154,8 +154,8 @@ begin
 end  
 ```  
   
-### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>範例尋找作者名字相同的 XML 執行個體  
- 查詢可以在 XML 資料行上形成。 或者，可以在屬性資料表中搜尋 "David" 這個名字，然後執行向後聯結基底資料表，以傳回 XML 執行個體。 例如:  
+### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>範例：尋找作者名字相同的 XML 執行個體  
+ 查詢可以在 XML 資料行上形成。 或者，可以在屬性資料表中搜尋 "David" 這個名字，然後執行向後聯結基底資料表，以傳回 XML 執行個體。 例如：  
   
 ```  
 SELECT xCol   
@@ -163,7 +163,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>範例使用 CLR 資料流資料表值函式的解決方案  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>範例：使用 CLR 資料流資料表值函式的解決方案  
  這個解決方案包含下列步驟：  
   
 1.  定義 CLR 類別 SqlReaderBase，在 XML 執行個體上套用路徑運算式，以實作 ISqlReader 並產生資料流資料表值的輸出。  
@@ -172,7 +172,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
   
 3.  使用使用者自訂函數來定義插入、更新及刪除觸發程序，以維護屬性資料表。  
   
- 若要執行此作業，您要先建立資料流 CLR 函數。 `xml`資料類型會公開為 ADO.NET 中的 SqlXml managed 類別，並支援**createreader （)** 傳回 XmlReader 的方法。  
+ 若要執行此作業，您要先建立資料流 CLR 函數。 `xml`資料類型會在 ADO.NET 中公開為 Managed 類別 SqlXml，並支援傳回 XmlReader 的**CreateReader （）** 方法。  
   
 > [!NOTE]  
 >  本節中的範例程式碼使用 XPathDocument 及 XPathNavigator。 它們會強制您將所有 XML 文件載入記憶體。 如果您在應用程式中使用類似的程式碼來處理好幾個大型 XML 文件，此程式碼是無法調整的。 反之，您要讓記憶體配置維持少量，並且盡可能使用資料流介面。 如需有關效能的詳細資訊，請參閱 [CLR 整合的架構](../../database-engine/dev-guide/architecture-of-clr-integration.md)。  
