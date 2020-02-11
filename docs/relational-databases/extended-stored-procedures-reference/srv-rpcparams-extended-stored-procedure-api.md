@@ -20,17 +20,18 @@ ms.assetid: 96a5e6f6-d320-4623-b96e-0a856e3abebb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 34f847d8a20ee52b680e69a28c07539e73c8b499
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68131567"
 ---
 # <a name="srv_rpcparams-extended-stored-procedure-api"></a>srv_rpcparams (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
  傳回目前遠端預存程序的參數數目。  
   
@@ -50,7 +51,7 @@ srvproc
 ## <a name="returns"></a>傳回值  
  遠端預存程序中的參數數目。 如果在遠端預存程序中沒有參數，或者沒有目前的遠端預存程序，則會傳回 -1，並發生資訊錯誤。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此函數會傳回目前遠端預存程序中的參數數目。 它通常會從遠端預存程序呼叫。  
   
  當遠端預存程序呼叫是用參數產生時，該參數可以依名稱或位置 (未命名) 傳遞。 如果遠端預存程序呼叫是藉由一些依名稱傳遞的參數和一些依位置傳遞的參數來進行時，就會發生錯誤。 發生這個錯誤時，會呼叫遠端預存程序處理常式，但是它不會接收參數，而且 **srv_rpcparams** 會傳回 0。  

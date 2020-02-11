@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: bcb0e667424767fd53a5fc7e027e84d512022203
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401087"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>匯入 SCOM 管理元件-Analytics Platform System
@@ -72,7 +72,7 @@ System Center Operations Manager 2007 R2 必須已安裝且正在執行。
   
     ![按一下 [安裝]](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   
-5.  按一下 **關閉**。  
+5.  按一下 [關閉]  。  
   
     ![按一下 [關閉]](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
   

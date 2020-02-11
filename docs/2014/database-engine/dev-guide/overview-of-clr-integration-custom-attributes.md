@@ -1,5 +1,5 @@
 ---
-title: CLR 整合自訂屬性的概觀 |Microsoft Docs
+title: CLR 整合自訂屬性的總覽 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781103"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>CLR 整合自訂屬性的概觀
+  
   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的 Common Language Runtime (CLR) 允許使用描述性的關鍵字 (稱為屬性)。 這些屬性會針對許多元素 (如方法和類別) 提供其他資訊。 屬性會隨著物件的中繼資料儲存在組件中，而且可用來將程式碼描述給其他開發工具知道，或是影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內的執行階段行為。  
   
- 當您向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊 CLR 常式時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會衍生一組有關此常式的屬性。 這些常式屬性會決定該常式的功能，包括是否可以為此常式建立索引。 例如，將 `DataAccess` 屬性設定為 `DataAccessKind.Read` 可讓您從 CLR 函數內的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者資料表存取資料。 下列範例會示範簡單的情況下所在`DataAccess`屬性設定為從使用者資料表的資料存取方便**table1**。  
+ 當您向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊 CLR 常式時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會衍生一組有關此常式的屬性。 這些常式屬性會決定該常式的功能，包括是否可以為此常式建立索引。 例如，將 `DataAccess` 屬性設定為 `DataAccessKind.Read` 可讓您從 CLR 函數內的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者資料表存取資料。 下列範例顯示一個簡單的案例， `DataAccess`其中屬性設定為有助於從使用者資料表**table1**進行資料存取。  
   
 ```csharp  
 using System;  

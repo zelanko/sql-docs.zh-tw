@@ -1,5 +1,5 @@
 ---
-title: 選擇時間計算 （商業智慧精靈） |Microsoft Docs
+title: 選擇時間計算（商業智慧 Wizard） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b94fef660128637ebeb01ea1290ec24ed11b3278
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088080"
 ---
 # <a name="choose-time-calculations-business-intelligence-wizard"></a>選擇時間計算 (商業智慧精靈)
-  使用 [選擇時間計算]  頁面，即可定義針對現有時間階層所建立之新時間計算的解決方式。  
+  使用 [選擇時間計算]**** 頁面，即可定義針對現有時間階層所建立之新時間計算的解決方式。  
   
 ## <a name="options"></a>選項。  
  **使用下列階層來分析時間計算**  
@@ -30,8 +30,8 @@ ms.locfileid: "66088080"
  選取針對選取之階層建立的時間計算。  
   
 ## <a name="see-also"></a>另請參閱  
- [商業智慧精靈 F1 說明](business-intelligence-wizard-f1-help.md)   
- [Cube 設計師&#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [維度設計師&#40;Analysis Services-多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [商業智慧 Wizard F1 說明](business-intelligence-wizard-f1-help.md)   
+ [Cube 設計工具 &#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [維度設計師 &#40;Analysis Services 多維資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

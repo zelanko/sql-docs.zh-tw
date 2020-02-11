@@ -1,5 +1,5 @@
 ---
-title: SQL Server 安裝程式文件的概觀 |Microsoft Docs
+title: SQL Server 安裝檔的總覽 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39d3c0dbd23499072ddd0ca2cd21748d92103c8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093554"
 ---
 # <a name="overview-of-sql-server-setup-documentation"></a>SQL Server 安裝程式文件集的概觀
   您可以在安裝媒體上取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的文件集，也可以透過線上方式取得。  
   
 ## <a name="documentation-available-during-setup"></a>在安裝期間提供的文件集  
- 在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期間，按一下 [安裝精靈] 頁面上的 [說明]  按鈕或按鍵盤上的 F1，即可取得完成作業所需的立即資訊。  
+ 在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期間，按一下 [安裝精靈] 頁面上的 [說明]**** 按鈕或按鍵盤上的 F1，即可取得完成作業所需的立即資訊。  
   
-## <a name="overview-of-includessnoversionincludesssnoversion-mdmd-installation-topics"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝主題概觀  
+## <a name="overview-of-includessnoversionincludesssnoversion-mdmd-installation-topics"></a>
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝主題概觀  
  不論您是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈或命令提示字元來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，都可以閱讀下列章節來進行準備：  
   
 -   [規劃 SQL Server 安裝](../../../2014/sql-server/install/planning-a-sql-server-installation.md)  
@@ -38,13 +39,13 @@ ms.locfileid: "66093554"
   
      描述安裝屬於 Microsoft BI 平台之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能 (包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 及數種用於建立及使用分析資料的用戶端應用程式) 的選項。  
   
--   [升級到 SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
+-   [升級為 SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
   
      描述升級至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的選項  
   
  如果您要安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集，請檢閱下列章節：  
   
--   [AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](../failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
+-   [AlwaysOn 容錯移轉叢集實例（SQL Server）](../failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
 -   [安裝容錯移轉叢集之前](../failover-clusters/install/before-installing-failover-clustering.md)。  
   

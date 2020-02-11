@@ -13,10 +13,10 @@ ms.assetid: dd72220e-a599-465d-8b84-9bb6a7433216
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 82b3762342c30b657f031bd53f89ae7652f5ece8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729440"
 ---
 # <a name="database-configuration-page-master-data-services-configuration-manager"></a>資料庫組態頁面 (Master Data Services 組態管理員)
@@ -28,11 +28,12 @@ ms.locfileid: "73729440"
 ## <a name="current-database"></a>目前的資料庫  
  選取現有的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫或建立您要編輯系統設定的新資料庫。 建立新的資料庫之後將會選取它。  
   
-|控制項名稱|說明|  
+|控制項名稱|描述|  
 |------------------|-----------------|  
-|**SQL Server 執行個體**|顯示選取的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體名稱。 在您連接到執行個體然後選取或建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫之前，這會是空白的。|  
+|**SQL Server 實例**|顯示選取的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體名稱。 在您連接到執行個體然後選取或建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫之前，這會是空白的。|  
 |**Master Data Services 資料庫**|顯示選取之 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的名稱。 在您連接到執行個體然後選取或建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫之前，這會是空白的。|  
-|**Master Data Services 資料庫版本**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫結構描述的版本。|  
+|**Master Data Services 資料庫版本**|
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫結構描述的版本。|  
 |**建立資料庫**|開啟 **[建立資料庫]** 精靈，您可以從此精靈連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，並為該執行個體建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。|  
 |**選取資料庫**|開啟 **[連接到資料庫]** 對話方塊，您可以從此對話方塊連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，並選取 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。|  
 |**升級資料庫**|開啟精靈，供您用來升級指定的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。 只有當指定的資料庫需要升級時，才會啟用這個按鈕。|  
@@ -44,6 +45,6 @@ ms.locfileid: "73729440"
  這些設定可在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中使用，並儲存在資料庫的 [系統設定] 資料表 (mdm.tblSystemSetting)。 如需所有設定的清單，請參閱[系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[Master Data Services 安裝和組態](../master-data-services/master-data-services-installation-and-configuration.md) [資料庫需求 &#40;Master Data Services&#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)  
+[Master Data Services Master Data Services&#41;的安裝和](../master-data-services/master-data-services-installation-and-configuration.md)設定[資料庫需求 &#40;](../master-data-services/install-windows/database-requirements-master-data-services.md)  
   
   

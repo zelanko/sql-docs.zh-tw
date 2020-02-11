@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811064"
 ---
 # <a name="understanding-incremental-generation"></a>了解累加式產生
@@ -62,7 +62,7 @@ ms.locfileid: "68811064"
  加入新物件，例如維度、Cube 或屬性。  
  結構描述產生精靈會加入新物件所對應的基礎物件。  
   
- 如果 [結構描述產生精靈] 因為主題領域資料庫中出現使用者物件，而無法進行必要的變更 (因為 Database Engine 會傳回錯誤)，則 [結構描述產生精靈] 會失敗，並顯示 Database Engine 所傳回的錯誤。 例如, 如果您在嚮導產生資料表之後, 在資料表上建立 primary key 條件約束或非叢集索引, 則「架構產生嚮導」不會卸載該資料表, 因為它並未建立條件約束或索引。  
+ 如果 [結構描述產生精靈] 因為主題領域資料庫中出現使用者物件，而無法進行必要的變更 (因為 Database Engine 會傳回錯誤)，則 [結構描述產生精靈] 會失敗，並顯示 Database Engine 所傳回的錯誤。 例如，如果您在嚮導產生資料表之後，在資料表上建立 primary key 條件約束或非叢集索引，則「架構產生嚮導」不會卸載該資料表，因為它並未建立條件約束或索引。  
   
 ## <a name="supporting-schema-changes"></a>支援結構描述變更  
  當您在主題領域資料庫，或在相關聯資料來源檢視中變更資料表或資料行的屬性時，結構描述產生精靈會如下表所述來處理變更。  
@@ -84,7 +84,7 @@ ms.locfileid: "68811064"
  相反地，如果您將資料來源連接字串，變更為與前一次產生不同的資料庫，則不會產生錯誤。 這時會使用新資料庫，且先前的資料庫不會產生任何變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理對資料來源檢視及資料來源所做的變更](manage-changes-to-data-source-views-and-data-sources.md)   
- [結構描述產生精靈 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+ [管理資料來源視圖和資料來源的變更](manage-changes-to-data-source-views-and-data-sources.md)   
+ [架構產生嚮導 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

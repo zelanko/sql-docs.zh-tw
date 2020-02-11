@@ -10,10 +10,10 @@ ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6357f98627842ab790b494cf1b4a1f9b2110ec9c
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727352"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server 機器學習或 R Server 的升級和安裝常見問題集
@@ -24,7 +24,7 @@ ms.locfileid: "73727352"
 + 某些問題只有在從發行前版本升級時才會發生。 因此，建議您先識別您的版本，再閱讀這些注意事項。 若要取得版本資訊，請在 SQL Server Management Studio 的查詢中執行 `@@VERSION`。
 + 請盡快升級至最新的版本或服務版本，以解決最近版本中已修正的任何問題。
 
-**適用於：** SQL Server 2016 R Services、SQL Server 機器學習服務 (資料庫內)
+**適用範圍：** SQL Server 2016 R Services、SQL Server 機器學習服務 (資料庫內)
 
 ## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>舊版 SQL Server 2016 的需求和限制 
 
@@ -72,7 +72,7 @@ SQL Server 2016 的早期發行版本無法在離線安裝期間，於沒有網�
 
 下列版本已隨 SQL Server 2016 的發行前版本一起安裝。
 
-| 版本 | 建置         |
+| 版本 | Build         |
 |---------|---------------|
 | CTP 3.0 | 13.0.xxx      |
 | CTP 3.1 | 13.0.801.12   |

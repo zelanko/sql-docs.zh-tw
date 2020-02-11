@@ -16,10 +16,10 @@ ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6f9021ec9b71694fc6567db5edf79965e09fd3c0
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304920"
 ---
 # <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
@@ -39,30 +39,30 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publisher = ] 'publisher'` 是發行者的名稱。 *publisher*是**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，沒有預設值。  
   
-`[ @publisher_db = ] 'publisher_db'` 是發行者資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'`這是發行者資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。  
   
-`[ @publication = ] 'publication'` 是發行集的名稱。 *發行*集是**sysname**，預設值是 all，會將所有訂閱標示為重新初始化。  
+`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是 all，會將所有訂閱標示為重新初始化。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **sp_reinitpullsubscription**用於異動複寫中。  
   
  對等異動複寫不支援**sp_reinitpullsubscription** 。  
   
  在下一次執行散發代理程式期間，可以從訂閱者端呼叫**sp_reinitpullsubscription**來重新初始化訂閱。  
   
- 無法從訂閱者重新初始化針對 **\@immediate_sync**的值為**false**所建立之發行集的訂閱。  
+ **針對\@immediate_sync**的值為**false**所建立之發行集的訂閱，無法從訂閱者重新初始化。  
   
  您可以藉由在「訂閱者」端執行**sp_reinitpullsubscription**或在「發行者」端**sp_reinitsubscription**來重新初始化提取訂閱。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_reinitpullsubscription**。  
   
 ## <a name="see-also"></a>另請參閱  

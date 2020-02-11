@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5f77df0a2e5322687f5724e7921932a551d07ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107164"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>報表產生器中的報表組件和資料集
@@ -23,7 +23,7 @@ ms.locfileid: "66107164"
 > [!NOTE]  
 >  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- 在報表內包含資料的另一個方式是使用共用資料集。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)(Dependent Dataset)。  
+ 在報表內包含資料的另一個方式是使用共用資料集。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -63,6 +63,6 @@ ms.locfileid: "66107164"
  [報表設計檢視 &#40;報表產生器&#41;](../report-builder/report-design-view-report-builder.md)   
  [安全性 &#40;報表產生器&#41;](../report-builder/security-report-builder.md)   
  [報表組件 &#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
- [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400719"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>設定 PolyBase 存取 Azure Blob 儲存體中的外部資料
@@ -23,7 +23,7 @@ ms.locfileid: "74400719"
 > [!NOTE]
 > AP 目前僅支援標準一般用途 v1 本機多餘的（LRS） Azure Blob 儲存體。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
  - 訂用帳戶中的 Azure Blob 儲存體。
  - 在 Azure Blob 儲存體中建立的容器。
@@ -177,7 +177,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
   
 ![SSDT 中的 PolyBase 物件](media/polybase/external-tables-datasource.png)  
 
-## <a name="next-steps"></a>接下來的步驟
+## <a name="next-steps"></a>後續步驟
 
 如需有關 PolyBase 的詳細資訊，請參閱[什麼是 PolyBase？](../relational-databases/polybase/polybase-guide.md)。 
 

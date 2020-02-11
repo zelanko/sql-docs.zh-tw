@@ -1,5 +1,5 @@
 ---
-title: 記憶體最佳化資料表變數 |Microsoft Docs
+title: 記憶體優化資料表變數 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/14/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774408"
 ---
 # <a name="memory-optimized-table-variables"></a>記憶體最佳化資料表變數
@@ -36,9 +36,9 @@ ms.locfileid: "62774408"
   
 -   資料表變數可用來模擬以原生方式編譯之預存程序中的資料指標，這樣可協助您在以原生方式編譯的預存程序中避開介面區限制。  
   
- 就像記憶體最佳化資料表一樣， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會為每個記憶體最佳化資料表類型產生 DLL （編譯會叫用建立記憶體最佳化資料表類型時，並不會在用來建立記憶體最佳化資料表變數。）此 DLL 包括存取索引，以及從資料表變數中擷取資料的功能。 根據資料表類型宣告記憶體最佳化資料表變數時，會在使用者工作階段中建立對應至資料表類型之資料表和索引結構的執行個體。 接著就可以透過與磁碟資料表變數相同的方式使用資料表變數。 您可以在資料表變數中插入、更新及刪除資料列，也可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 查詢中使用變數。 您也可以將變數當做資料表值參數 (TVP) 傳遞至以原生方式編譯和解譯的預存程序中。  
+ 就像記憶體最佳化資料表一樣， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會為每個記憶體最佳化資料表類型產生 DLL （編譯是在建立記憶體優化資料表類型時叫用，而不是在用來建立記憶體優化資料表變數時叫用）。此 DLL 包含用來存取索引和從資料表變數中抓取資料的函數。 根據資料表類型宣告記憶體最佳化資料表變數時，會在使用者工作階段中建立對應至資料表類型之資料表和索引結構的執行個體。 接著就可以透過與磁碟資料表變數相同的方式使用資料表變數。 您可以在資料表變數中插入、更新及刪除資料列，也可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 查詢中使用變數。 您也可以將變數當做資料表值參數 (TVP) 傳遞至以原生方式編譯和解譯的預存程序中。  
   
- 下列範例將示範 AdventureWorks 為基礎的記憶體內部 OLTP 範例記憶體最佳化資料表類型 ([SQL Server 2014 記憶體中 OLTP 範例](https://msftdbprodsamples.codeplex.com/releases/view/114491))。  
+ 下列範例顯示 AdventureWorks 型記憶體內部 OLTP 範例中的記憶體優化資料表類型（[SQL Server 2014 記憶體內部 Oltp 範例](https://msftdbprodsamples.codeplex.com/releases/view/114491)）。  
   
 ```sql
 CREATE TYPE Sales.SalesOrderDetailType_inmem
@@ -60,7 +60,8 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
  此範例顯示，記憶體最佳化資料表類型的語法類似於磁碟資料表類型，但是有下列例外狀況：  
   
--   `MEMORY_OPTIMIZED=ON` 指出資料表類型為記憶體最佳化。  
+-   
+  `MEMORY_OPTIMIZED=ON` 指出資料表類型為記憶體最佳化。  
   
 -   類型必須至少有一個索引。 就像在記憶體最佳化資料表中，您可以使用雜湊和非叢集索引。  
   

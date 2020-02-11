@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5f24c78e82d437ab7e2147122c5065f0b7274d5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105226"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet 函數 (報表產生器及 SSRS)
@@ -32,13 +32,13 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>參數  
  *source_expression*  
- (`Variant`) - 在目前範圍中評估並指定要查閱之名稱或索引鍵的運算式。 例如， `=Fields!ID.Value` 。  
+ (`Variant`) - 在目前範圍中評估並指定要查閱之名稱或索引鍵的運算式。 例如： `=Fields!ID.Value` 。  
   
  *destination_expression*  
- (`Variant`) - 針對資料集中的每個資料列評估並指定要比對之名稱或索引鍵的運算式。 例如， `=Fields!CustomerID.Value` 。  
+ (`Variant`) - 針對資料集中的每個資料列評估並指定要比對之名稱或索引鍵的運算式。 例如： `=Fields!CustomerID.Value` 。  
   
  *result_expression*  
- (`Variant`) 會針對資料集中的資料列評估的運算式所在*source_expression* = *destination_expression*，並指定要擷取的值。 例如， `=Fields!PhoneNumber.Value` 。  
+ （`Variant`）針對 dataset 中的資料列評估的運算式，其中*source_expression* = *destination_expression*，並指定要抓取的值。 例如： `=Fields!PhoneNumber.Value` 。  
   
  *資料集 (dataset)*  
  指定報表中資料集名稱的常數。 例如，"ContactInformation"。  
@@ -49,7 +49,8 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="remarks"></a>備註  
  使用 `LookupSet` 可從具有一對多關係之名稱/值組的指定資料集中擷取一組值。 例如，如果是資料表中的客戶識別碼，您可以使用 `LookupSet` 從未繫結至資料區的資料集中，擷取該客戶的所有相關電話號碼。  
   
- `LookupSet` 會執行下列動作：  
+ 
+  `LookupSet` 會執行下列動作：  
   
 -   評估目前範圍中的來源運算式。  
   
@@ -59,11 +60,11 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   傳回結果運算式值的集合。  
   
- 若要從具有一對一關聯性之名稱/值組的資料集中，擷取指定名稱的單一值，請使用 [Lookup 函式 &#40;報表產生器及 SSRS&#41;](report-builder-functions-lookup-function.md)。 若要呼叫`Lookup`針對一組值中，使用[Multilookup 函式&#40;報表產生器及 SSRS&#41;](report-builder-functions-multilookup-function.md)。  
+ 若要從具有一對一關聯性之名稱/值組的資料集中，擷取指定名稱的單一值，請使用 [Lookup 函式 &#40;報表產生器及 SSRS&#41;](report-builder-functions-lookup-function.md)。 若要`Lookup`呼叫一組值，請使用[Multilookup 函數 &#40;報表產生器和 SSRS&#41;](report-builder-functions-multilookup-function.md)。  
   
- 系統會套用下列限制：  
+ 適用以下限制：  
   
--   當套用所有篩選運算式之後，便會評估 `LookupSet`。  
+-   `LookupSet`會在套用所有篩選運算式之後進行評估。  
   
 -   只支援一層的查閱。 來源、目的地或結果運算式不能包含查閱函數的參考。  
   
@@ -71,7 +72,8 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   來源、目的地和結果運算式無法包含報表或群組變數的參考。  
   
--   `LookupSet` 不能當做下列報表項目的運算式使用：  
+-   
+  `LookupSet` 不能當做下列報表項目的運算式使用：  
   
     -   資料來源的動態連接字串。  
   
@@ -101,7 +103,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函數 `Join` 從一組物件建立分隔的字串。 使用逗號當做分隔符號，在單一行中結合這些物件。 在某些轉譯器中，您可能會使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 換行字元 (`vbCrLF`) 當作分隔符號，在新行中列出每一個值。  
   
- 當它用來當做 [值] 屬性文字方塊中，下列運算式會使用`Join`來建立清單。  
+ 當下列運算式當做文字方塊的 Value 屬性使用時，會使用`Join`來建立清單。  
   
 ```  
 =Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  

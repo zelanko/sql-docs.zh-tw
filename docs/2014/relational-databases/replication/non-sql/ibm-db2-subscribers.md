@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022208"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 訂閱者
@@ -31,7 +31,7 @@ ms.locfileid: "63022208"
   
 1.  在散發者上安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2 的最新版本：  
   
-    -   如果您使用的是 [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]，請在 [SQL Server 2008 下載](https://go.microsoft.com/fwlink/?LinkId=149256) 網頁的 **[Related Downloads] (相關下載)** 區段中，按一下最新版 Microsoft SQL Server 2008 功能套件的連結。 在 **[Microsoft SQL Server 2008 Feature Pack]** 網頁上，搜尋 **[Microsoft OLE DB Provider for DB2]** 。  
+    -   如果您使用的是 [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]，請在 [SQL Server 2008 下載](https://go.microsoft.com/fwlink/?LinkId=149256) 網頁的 **[Related Downloads] (相關下載)** 區段中，按一下最新版 Microsoft SQL Server 2008 功能套件的連結。 在 **[Microsoft SQL Server 2008 Feature Pack]** 網頁上，搜尋 **[Microsoft OLE DB Provider for DB2]**。  
   
     -   如果您使用的是 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard，請安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS) 伺服器的最新版本，其中就包含此提供者。  
   
@@ -39,11 +39,11 @@ ms.locfileid: "63022208"
   
 2.  為「訂閱者」建立連接字串。 在任何文字編輯器中都可建立連接字串，但建議您使用「資料存取工具」。 若要在「資料存取工具」中建立字串：  
   
-    1.  依序按一下 **[開始]** 、 **[程式集]** 和 **[DB2 的 Microsoft OLE DB 提供者]** ，然後再按 **[資料存取工具]** 。  
+    1.  依序按一下 **[開始]**、 **[程式集]** 和 **[DB2 的 Microsoft OLE DB 提供者]**，然後再按 **[資料存取工具]**。  
   
     2.  遵循 **[資料存取工具]** 中的步驟提供有關 DB2 伺服器的資訊。 完成工具後，將建立通用資料連結 (UDL) 和相關聯的連接字串 (複寫實際不會使用 UDL，但會用到連接字串)。  
   
-    3.  存取連接字串：以滑鼠右鍵按一下「資料存取工具」中的 UDL，然後選取 **[顯示連接字串]** 。  
+    3.  存取連接字串：以滑鼠右鍵按一下「資料存取工具」中的 UDL，然後選取 **[顯示連接字串]**。  
   
      連接字串類似於 (使用分行符號是為提高可讀性)：  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63022208"
   
      有多種情況下會需要修改指令碼，但最常見的原因是改變資料類型對應。 如需詳細資訊，請參閱本主題中的＜資料類型對應考量＞一節。 如果您修改 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼，請將變更限制為資料類型對應變更 (且指令碼不應包含任何註解)。 如果需要作大量變更，請建立 DB2 指令碼。  
   
-     **若要修改發行項指令碼並做為自訂建立指令碼提供**  
+     **修改發行項腳本並做為自訂建立腳本提供**  
   
     1.  為發行集產生快照集後，瀏覽至發行集的快照集資料夾。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63022208"
   
     5.  執行 sp_changearticle，並指定 *creation_script* 屬性的檔案路徑與名稱。 如需詳細資訊，請參閱 [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)。  
   
-     **若要建立發行項指令碼並做為自訂建立指令碼提供**  
+     **若要建立發行項腳本並做為自訂建立腳本提供**  
   
     1.  使用 DB2 SQL 用語建立發行項指令碼。 確定檔案的第一行為 **bypass_translation**，且該行上除此之外無其他內容。  
   
@@ -106,53 +106,53 @@ ms.locfileid: "63022208"
 |`bit`|SMALLINT|  
 |`char(1-254)`|CHAR(1-254)|  
 |`char(255-8000)`|VARCHAR(255-8000)|  
-|`date`|DATE|  
-|`datetime`|TIMESTAMP|  
+|`date`|日期|  
+|`datetime`|timestamp|  
 |`datetime2(0-7)`|VARCHAR(27)|  
 |`datetimeoffset(0-7)`|VARCHAR(34)|  
 |`decimal(1-31, 0-31)`|DECIMAL(1-31, 0-31)|  
 |`decimal(32-38, 0-38)`|VARCHAR(41)|  
-|`float(53)`|Double|  
+|`float(53)`|DOUBLE|  
 |`float`|FLOAT|  
 |`geography`|IMAGE|  
 |`geometry`|IMAGE|  
 |`hierarchyid`|IMAGE|  
-|`image`|FOR BIT DATA VARCHAR(0)<sup>1</sup>|  
+|`image`|位資料的 VARCHAR （0）<sup>1</sup>|  
 |`into`|INT|  
 |`money`|DECIMAL(19,4)|  
 |`nchar(1-4000)`|VARCHAR(1-4000)|  
-|`ntext`|VARCHAR(0)<sup>1</sup>|  
+|`ntext`|VARCHAR （0）<sup>1</sup>|  
 |`numeric(1-31, 0-31)`|DECIMAL(1-31,0-31)|  
 |`numeric(32-38, 0-38)`|VARCHAR(41)|  
 |`nvarchar(1-4000)`|VARCHAR(1-4000)|  
-|`nvarchar(max)`|VARCHAR(0)<sup>1</sup>|  
+|`nvarchar(max)`|VARCHAR （0）<sup>1</sup>|  
 |`real`|real|  
-|`smalldatetime`|TIMESTAMP|  
+|`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
 |`sql_variant`|N/A|  
 |`sysname`|VARCHAR(128)|  
-|`text`|VARCHAR(0)<sup>1</sup>|  
+|`text`|VARCHAR （0）<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  
 |`timestamp`|CHAR(8) FOR BIT DATA|  
 |`tinyint`|SMALLINT|  
 |`uniqueidentifier`|CHAR(38)|  
 |`varbinary(1-8000)`|VARCHAR(1-8000) FOR BIT DATA|  
 |`varchar(1-8000)`|VARCHAR(1-8000)|  
-|`varbinary(max)`|FOR BIT DATA VARCHAR(0)<sup>1</sup>|  
-|`varchar(max)`|VARCHAR(0)<sup>1</sup>|  
-|`xml`|VARCHAR(0)<sup>1</sup>|  
+|`varbinary(max)`|位資料的 VARCHAR （0）<sup>1</sup>|  
+|`varchar(max)`|VARCHAR （0）<sup>1</sup>|  
+|`xml`|VARCHAR （0）<sup>1</sup>|  
   
- <sup>1</sup>如需詳細資訊，了解對應至 VARCHAR(0) 參閱下一步。  
+ <sup>1</sup>如需對應至 VARCHAR （0）的詳細資訊，請參閱下一節。  
   
 ### <a name="data-type-mapping-considerations"></a>資料類型對應考量  
  複寫至「DB2 訂閱者」時，請考慮下列資料類型對應問題：  
   
--   當對應[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`， `varchar`，`binary`和`varbinary`至 DB2 CHAR、 VARCHAR、 CHAR FOR BIT DATA 及 VARCHAR FOR BIT DATA，分別複寫設定的長度相同的DB2資料類型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]型別。  
+-   將、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` `varchar` `varbinary`和分別對應至 db2 CHAR、Varchar、CHAR for bit data 及 Varchar for bit data 時，複寫會將 db2 資料類型的長度設定為與[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]類型`binary`相同。  
   
      這可使產生的資料表在「訂閱者」端成功建立，只要 DB2 頁面大小條件約束足以容納資料列的大小上限。 確定用於存取 DB2 資料庫的登入，有權限存取擁有足夠大小以容納正複寫至 DB2 之資料表的資料表空間。  
   
--   DB2 可以支援最大 32 千位元組 (KB) 的 VARCHAR 資料行，因此可以將某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件資料行正確對應至 DB2 VARCHAR 資料行。 但是，複寫用於 DB2 的 OLE DB 提供者不支援將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件對應至 DB2 大型物件。 基於這個理由， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`， `varchar(max)`， `ntext`，和`nvarchar(max)`VARCHAR(0) 中對應資料行中產生的建立指令碼。 長度值 0 必須在將指令碼套用至「訂閱者」之前變更為適當值。 如果資料類型長度未變更，則嘗試在「DB2 訂閱者」端建立資料表時，DB2 將產生錯誤 604 (表示資料類型的有效位數或長度屬性無效)。  
+-   DB2 可以支援最大 32 千位元組 (KB) 的 VARCHAR 資料行，因此可以將某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件資料行正確對應至 DB2 VARCHAR 資料行。 但是，複寫用於 DB2 的 OLE DB 提供者不支援將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件對應至 DB2 大型物件。 因此[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text` `varchar(max)`， `ntext`在產生的建立腳本中`nvarchar(max)` ，、、和資料行會對應至 VARCHAR （0）。 長度值 0 必須在將指令碼套用至「訂閱者」之前變更為適當值。 如果資料類型長度未變更，則嘗試在「DB2 訂閱者」端建立資料表時，DB2 將產生錯誤 604 (表示資料類型的有效位數或長度屬性無效)。  
   
      根據您對要複寫之來源資料表的了解，判斷是否適合將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件對應至可變長度的 DB2 項目，並在自訂建立指令碼中指定適當的最大長度。 如需有關指定自訂建立指令碼的資訊，請參閱本主題中＜設定 IBM DB2 訂閱者＞一節中的步驟 5。  
   
@@ -161,12 +161,12 @@ ms.locfileid: "63022208"
   
      如果大型物件資料行沒有適當的對應，請考慮在發行項上使用資料行篩選，以便不複寫資料行。 如需詳細資訊，請參閱[篩選發行的資料](../publish/filter-published-data.md)。  
   
--   複寫時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]`nchar`並`nvarchar`複寫至 DB2 CHAR 和 VARCHAR 時，DB2 類型與使用相同的長度規範[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]型別。 但是，資料類型長度對於產生的 DB2 資料表可能太小。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar`當複寫和`nvarchar`至 db2 CHAR 和 VARCHAR 時，複寫會針對 db2 類型使用與[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]類型相同的長度規範。 但是，資料類型長度對於產生的 DB2 資料表可能太小。  
   
-     在某些 DB2 環境中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`資料項目未限制為單一位元組字元; CHAR 或 VARCHAR 項目的長度必須將此列入考量。 如果需要 *shift in* 和 *shift out* 字元，您還必須考慮到它們。 如果您要複寫具有資料表`nchar`和`nvarchar`資料行，您可能需要在 自訂建立指令碼中指定較大的資料類型最大長度。 如需有關指定自訂建立指令碼的資訊，請參閱本主題中＜設定 IBM DB2 訂閱者＞一節中的步驟 5。  
+     在某些 DB2 環境中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`資料項目不會限制為單一位元組字元;CHAR 或 VARCHAR 專案的長度必須將此納入考慮。 如果需要 *shift in* 和 *shift out* 字元，您還必須考慮到它們。 如果您要複寫具有`nchar`和`nvarchar`資料行的資料表，您可能需要在自訂建立腳本中為資料類型指定較大的最大長度。 如需有關指定自訂建立指令碼的資訊，請參閱本主題中＜設定 IBM DB2 訂閱者＞一節中的步驟 5。  
   
 ## <a name="see-also"></a>另請參閱  
- [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
+ [非 SQL Server 訂閱者](non-sql-server-subscribers.md)   
  [訂閱發行集](../subscribe-to-publications.md)  
   
   

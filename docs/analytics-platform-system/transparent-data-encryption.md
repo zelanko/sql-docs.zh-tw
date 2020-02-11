@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399937"
 ---
 # <a name="transparent-data-encryption"></a>透明資料加密
-您可以採取數個預防措施來協助保護資料庫，例如設定安全系統、加密機密資產，以及建置圍繞資料庫伺服器的防火牆。 不過，在實體媒體（例如磁片磁碟機或備份磁帶）遭竊的案例中，惡意人士可以直接還原或附加資料庫，然後流覽資料。 其中一個解決方案就是將資料庫中的敏感性資料加密，然後使用憑證來保護用來加密資料的金鑰。 如此可防止沒有金鑰的任何人使用資料，但是這種防護類型必須事先規劃。  
+您可以採取數個預防措施來協助保護資料庫，例如設定安全系統、加密機密資產，以及建置圍繞資料庫伺服器的防火牆。 不過，在實體媒體（例如磁片磁碟機或備份磁帶）遭竊的案例中，惡意人士可以直接還原或附加資料庫，然後流覽資料。 一個解決方案是加密資料庫中的敏感性資料，並使用憑證來保護用來加密資料的金鑰。 如此可防止沒有金鑰的任何人使用資料，但是這種防護類型必須事先規劃。  
   
-*透明資料加密*（TDE）會執行資料和交易記錄檔的即時 i/o 加密和解密，以及特殊的 PDW 記錄檔。 加密會使用資料庫加密金鑰 (DEK)，此金鑰會儲存在資料庫開機記錄中，以在復原期間提供可用性。 DEK 是使用儲存在 SQL Server PDW 之 master 資料庫中的憑證來保護的對稱金鑰。 TDE 可以保護「待用」資料，亦即資料和記錄檔。 它提供遵守各種產業中所確立的眾多法律、規定及指導方針的功能。 這項功能可讓軟體發展人員使用 AES 和3DES 加密演算法來加密資料，而不需要變更現有的應用程式。  
+*透明資料加密*（TDE）會執行資料和交易記錄檔的即時 i/o 加密和解密，以及特殊的 PDW 記錄檔。 加密會使用資料庫加密金鑰 (DEK)，此金鑰會儲存在資料庫開機記錄中，以在復原期間提供可用性。 DEK 是使用儲存在 SQL Server PDW 之 master 資料庫中的憑證來保護的對稱金鑰。 TDE 會保護休眠的資料，也就是資料檔和記錄檔。 它提供了與各個不同業界內建立的許多法令、規章和指導方針相符的能力， 這項功能可讓軟體發展人員使用 AES 和3DES 加密演算法來加密資料，而不需要變更現有的應用程式。  
   
 > [!IMPORTANT]  
 > TDE 不會針對在用戶端與 PDW 之間進行的資料提供加密。 如需如何在用戶端與 SQL Server PDW 之間加密資料的詳細資訊，請參閱布建[憑證](provision-certificate.md)。  
@@ -120,7 +120,7 @@ TDE 憑證必須由資料庫主要金鑰來加密，才能由下列陳述式所�
   
 |命令或函數|目的|  
 |-----------------------|-----------|  
-|[建立資料庫加密金鑰](../t-sql/statements/create-database-encryption-key-transact-sql.md)|建立用於加密資料庫的金鑰|  
+|[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|建立用於加密資料庫的金鑰|  
 |[ALTER DATABASE 加密金鑰](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|變更用於加密資料庫的金鑰|  
 |[卸載資料庫加密金鑰](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|移除用於加密資料庫的金鑰。|  
 |[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|說明用來啟用 TDE 的 **ALTER DATABASE** 選項。|  
@@ -131,8 +131,8 @@ TDE 憑證必須由資料庫主要金鑰來加密，才能由下列陳述式所�
 |目錄檢視或動態管理檢視|目的|  
 |-------------------------------------------|-----------|  
 |[sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|顯示資料庫資訊的目錄檢視。|  
-|[sys. 憑證](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|顯示資料庫中之憑證的目錄檢視。|  
-|[sys. dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|動態管理檢視，可提供每個節點的資訊、資料庫中使用的加密金鑰，以及資料庫的加密狀態。|  
+|[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|顯示資料庫中之憑證的目錄檢視。|  
+|[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|動態管理檢視，可提供每個節點的資訊、資料庫中使用的加密金鑰，以及資料庫的加密狀態。|  
   
 ## <a name="permissions"></a>權限  
 TDE 的每一項功能和命令都有個別的權限需求，如同之前所示的表格所述。  
@@ -279,12 +279,12 @@ TDE 的效能影響會因您擁有的資料類型、儲存方式，以及 SQL Se
   
 ## <a name="see-also"></a>另請參閱  
 [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
-[建立主要金鑰](../t-sql/statements/create-master-key-transact-sql.md)  
-[建立資料庫加密金鑰](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
-[備份憑證](../t-sql/statements/backup-certificate-transact-sql.md)  
+[CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
+[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
+[BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [sp_pdw_database_encryption_regenerate_system_keys](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
 [sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
-[sys. 憑證](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
-[sys. dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
+[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
+[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
   

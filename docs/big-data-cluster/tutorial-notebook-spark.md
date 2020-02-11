@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 4acb5c2306064da29d3537fc881dbfc3d312ad2f
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844236"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>教學課程：在 SQL Server 巨量資料叢集上執行範例筆記本
@@ -47,7 +47,7 @@ ms.locfileid: "73844236"
    curl 'https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-loading/transform-csv-files.ipynb' -o transform-csv-files.ipynb
    ```
 
-## <a name="open-the-notebook"></a>開啟筆記本
+## <a name="open-the-notebook"></a>開啟 Notebook
 
 下列步驟說明如何在 Azure Data Studio 中開啟筆記本檔案：
 

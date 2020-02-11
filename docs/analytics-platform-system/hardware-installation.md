@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401118"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>分析平臺系統（AP）設備的硬體安裝
@@ -22,7 +22,7 @@ ms.locfileid: "74401118"
 ## <a name="BeforeMoving"></a>從載入 Dock 移動任何元件之前  
 在您移動、解除封裝或機架任何設備元件之前，請執行下列工作。  
   
-|工作|描述|  
+|Task|描述|  
 |--------|---------------|  
 |確認所有元件都已抵達|使用「物料單」（BOM）來確認所有元件都已抵達，而且位於其在您的資料中心接收 dock 的託盤上。|  
 |確認資料中心符合設備的所有需求|請查看您的 IHV 提供的硬體規格和纜線圖來啟動此工作。 接下來的步驟提供有關機架空間和連線需求的細節。|  
@@ -42,7 +42,7 @@ ms.locfileid: "74401118"
 >   
 > 絕對不要嘗試增益或行動裝置節點或其他大量元件，而不需要協助或適當的設備。 請洽詢您的 IHV 以取得每個元件的權數資訊，讓您可以事先判斷需要哪些協助、設備和工具，才能安全地處理每個元件，而不會造成損害。  
   
-|工作|描述|  
+|Task|描述|  
 |--------|---------------|  
 |確認託盤為層級|開始移動或解除封裝貨之前，請確定它是在層級上。|  
 |從託盤 Unbolt 節點|從託盤頂端開始，從託盤中 unbolt 最上層節點。|  
@@ -54,7 +54,7 @@ ms.locfileid: "74401118"
 ## <a name="AfterMoving"></a>安裝其他元件  
 請使用下列檢查清單來安裝其他元件。  
   
-|工作|描述||  
+|Task|描述||  
 |--------|---------------|-|  
 |打開包裝和機架網路交換器和 Pdu|使用機架圖表將網路交換器和 Pdu 放在機架中的適當位置。||  
 |根據纜線標籤來連接未通過和乙太網路纜線|請參閱纜線圖。 每個纜線的每一端都有一個標籤，以指定需要連線的位置。||  

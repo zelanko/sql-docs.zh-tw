@@ -15,27 +15,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e80d5790f78c83a8a1ff3059e12e0946e206c060
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211459"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>建立 SQL Server Agent 主要作業
-  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的主要作業。  
+  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]，在中建立主要代理程式作業。  
   
  
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Restrictions"></a> 限制事項  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 主要作業的變更必須傳播至所有相關的目標伺服器。 因為目標伺服器最初並未下載作業，直到指定這些目標後才下載，所以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您先完成特定作業的所有作業步驟和作業排程，再指定任何目標伺服器。 否則，您必須執行 **sp_post_msx_operation** 預存程序或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]修改作業，手動要求目標伺服器重新下載已修改的作業。 如需詳細資訊，請參閱 < [sp_update_job &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)或是[修改作業](modify-a-job.md)。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 主要作業的變更必須傳播至所有相關的目標伺服器。 因為目標伺服器最初並未下載作業，直到指定這些目標後才下載，所以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您先完成特定作業的所有作業步驟和作業排程，再指定任何目標伺服器。 否則，您必須執行 **sp_post_msx_operation** 預存程序或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]修改作業，手動要求目標伺服器重新下載已修改的作業。 如需詳細資訊，請參閱[sp_post_msx_operation &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)或[修改作業](modify-a-job.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  具有與 Proxy 相關聯之步驟的散發式作業，而該 Proxy 是在目標伺服器上的 Proxy 帳戶內容下執行 。 請確保符合以下條件，否則與 Proxy 相關聯之作業步驟將不會從主要伺服器下載至目標：  
   
--   登錄子機碼 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName**(REG_DWORD) 設定為 1 (true)。 依預設，這個子機碼設為 0 (False)。  
+-   登錄子機碼**\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\<SQL Server*instance_name*> \sql 伺服器 Agent\AllowDownloadedJobsToMatchProxyName** （REG_DWORD）已設定為1（true）。 依預設，這個子機碼設為 0 (False)。  
   
 -   存在於目標伺服器上的 Proxy 帳戶，而該帳戶名稱與執行作業步驟之主要伺服器上的 Proxy 帳戶名稱相同。  
   
@@ -53,19 +54,19 @@ ms.locfileid: "68211459"
   
 2.  按一下加號展開 **[SQL Server Agent]** 。  
   
-3.  以滑鼠右鍵按一下 [作業]  資料夾，然後選取 [新增作業...]  。  
+3.  以滑鼠右鍵按一下 [**作業**] 資料夾，然後選取 [**新增作業**]。  
   
-4.  在 **[新增作業]** 對話方塊的 **[一般]** 頁面中，修改作業的一般屬性。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業的屬性和新的工作&#40;[一般] 頁&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+4.  在 **[新增作業]** 對話方塊的 **[一般]** 頁面中，修改作業的一般屬性。 如需有關此頁面上可用選項的詳細資訊，請參閱[作業屬性和新增作業 &#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-5.  在 **[步驟]** 頁面上，組織作業步驟。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性： 新的工作&#40;步驟 頁面&#41;](job-properties-new-job-steps-page.md)  
+5.  在 **[步驟]** 頁面上，組織作業步驟。 如需有關此頁面上可用選項的詳細資訊，請參閱[作業屬性：新增作業 &#40;步驟頁面&#41;](job-properties-new-job-steps-page.md)  
   
-6.  在 **[排程]** 頁面上，組織作業的排程。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性：新的工作&#40;排程頁面&#41;](job-properties-new-job-schedules-page.md)  
+6.  在 **[排程]** 頁面上，組織作業的排程。 如需有關此頁面上可用選項的詳細資訊，請參閱[作業屬性：新增作業 &#40;排程頁面&#41;](job-properties-new-job-schedules-page.md)  
   
-7.  在 **[警示]** 頁面上，組織作業的警示。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性：新的工作&#40;警示頁面&#41;](job-properties-new-job-alerts-page.md)  
+7.  在 **[警示]** 頁面上，組織作業的警示。 如需有關此頁面上可用選項的詳細資訊，請參閱[作業屬性：新增作業 &#40;警示頁面&#41;](job-properties-new-job-alerts-page.md)  
   
-8.  在 **[通知]** 頁面上，設定當作業完成時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 要執行的動作。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性：新的工作&#40;通知頁面&#41;](job-properties-new-job-notifications-page.md)。  
+8.  在 **[通知]** 頁面上，設定當作業完成時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 要執行的動作。 如需有關此頁面上可用選項的詳細資訊，請參閱[作業屬性：新增作業 &#40;通知頁面&#41;](job-properties-new-job-notifications-page.md)。  
   
-9. 在 **[目標]** 頁面上，管理作業的目標伺服器。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性：新的工作&#40;為目標頁面&#41;](job-properties-new-job-targets-page.md)。  
+9. 在 **[目標]** 頁面上，管理作業的目標伺服器。 如需有關此頁面上可用選項的詳細資訊，請參閱[工作屬性：新增作業 &#40;目標頁面&#41;](job-properties-new-job-targets-page.md)。  
   
 10. 完成後，請按一下 **[確定]** 。  
   
@@ -117,17 +118,17 @@ ms.locfileid: "68211459"
     GO  
     ```  
   
- 如需詳細資訊，請參閱：  
+ 如需詳細資訊，請參閱  
   
--   [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
+-   [sp_add_job &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   
--   [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
+-   [sp_add_jobstep &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
--   [sp_add_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
+-   [sp_add_schedule &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
   
--   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
+-   [sp_attach_schedule &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
--   [sp_add_jobserver &#40;-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
+-   [sp_add_jobserver &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
   
 
   

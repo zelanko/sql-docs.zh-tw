@@ -17,17 +17,17 @@ ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1fe76ba3926f2883e2518e255eddf0d567134f4d
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70009351"
 ---
 # <a name="registry-entries-for-data-sources"></a>資料來源的登錄項目
 > [!NOTE]  
->  從 Windows XP 和 Windows Server 2003 開始, ODBC 包含在 Windows 作業系統中。 您只應該在舊版 Windows 上明確安裝 ODBC。  
+>  從 Windows XP 和 Windows Server 2003 開始，ODBC 包含在 Windows 作業系統中。 您只應該在舊版 Windows 上明確安裝 ODBC。  
   
- 安裝程式 DLL 會在登錄中維護每個資料來源的相關資訊。 在 Microsoft Windows NT/Windows 2000 和 Microsoft Windows 95/98 中, 這項資訊會儲存在登錄中下列兩個金鑰之一底下的子機碼中:  
+ 安裝程式 DLL 會在登錄中維護每個資料來源的相關資訊。 在 Microsoft Windows NT/Windows 2000 和 Microsoft Windows 95/98 中，這項資訊會儲存在登錄中下列兩個金鑰之一底下的子機碼中：  
 
  ```console
  HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\Odbc.ini  
@@ -37,7 +37,7 @@ ms.locfileid: "70009351"
  HKEY_CURRENT_USER\SOFTWARE\ODBC\Odbc.ini
  ```
 
- 使用哪個索引鍵取決於資料來源是否為*系統資料來源 (* 可供所有使用者使用), 或是僅供目前使用者使用的*使用者資料來源*。 系統資料來源會儲存在 HKEY_LOCAL_MACHINE 樹狀目錄上, 而使用者資料來源則會儲存在 HKEY_CURRENT_USER 樹狀目錄上。 在所有其他方面, 系統資料來源和使用者資料來源都相同。  
+ 使用哪個索引鍵取決於資料來源是否為*系統資料來源（* 可供所有使用者使用），或是僅供目前使用者使用的*使用者資料來源*。 系統資料來源會儲存在 HKEY_LOCAL_MACHINE 樹狀目錄上，而使用者資料來源會儲存在 HKEY_CURRENT_USER 樹狀目錄上。 在所有其他方面，系統資料來源和使用者資料來源都相同。  
   
  此章節包含下列主題。  
   

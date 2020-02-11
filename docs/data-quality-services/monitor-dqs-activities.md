@@ -15,10 +15,10 @@ ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: d9926eb251d109eb8ed9529a4ae739e8a1915b07
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245459"
 ---
 # <a name="monitor-dqs-activities"></a>監控 DQS 活動
@@ -27,14 +27,14 @@ ms.locfileid: "75245459"
 
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中集中監控下列活動：知識探索、定義域管理、比對原則、資料清理、資料比對和 SSIS 清理。  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="LimitationsRestrictions"></a>限制事項  
+###  <a name="LimitationsRestrictions"></a> 限制事項  
  只有擁有 DQS_Main 資料庫之 dqs_administrator 角色的使用者能夠終止活動或停止活動中的處理序。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
   
 -   您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_kb_operator 角色，才能檢視 DQS 活動。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "75245459"
   
 2.  按一下 **[終止選取的活動]** 圖示。 或者，以滑鼠右鍵按一下活動方格中的活動，然後按一下快速鍵功能表中的 **[終止活動]** 。  
   
-3.  此時，系統會顯示一則確認動作的訊息。 按一下 [是]****。  
+3.  此時，系統會顯示一則確認動作的訊息。 按一下 [是]  。  
   
 ##  <a name="Stop"></a>停止 DQS 活動中的進程  
  DQS 系統管理員 (dqs_administrator 角色) 可以停止不屬於 **[SSIS 清理]** 類型之活動中的執行中 (使用中) 處理序。 在 [活動監控] 畫面中停止處理序就相當於在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]的功能區域中停止個別活動內的處理序。 例如，停止清理活動內的電腦輔助清理處理序，或是停止比對活動內的比對處理序。 您無法從 [活動監控] 畫面重新啟動已停止的處理序。 您必須從 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]的個別功能區域重新啟動處理序。 在此情況下，會將額外的資料列新增至 [**活動步驟**] 索引標籤的 [處理常式] 方格中。已停止的進程狀態會持續顯示 [**已停止**]。 若要停止處理序：  
@@ -158,6 +158,6 @@ ms.locfileid: "75245459"
   
 2.  按一下 **[停止選取的處理序]** 圖示。 或者，以滑鼠右鍵按一下活動詳細資料方格中的處理序，然後按一下快速鍵功能表中的 **[停止處理序]** 。  
   
-3.  此時，系統會顯示一則確認動作的訊息。 按一下 [是]****。  
+3.  此時，系統會顯示一則確認動作的訊息。 按一下 [是]  。  
   
   

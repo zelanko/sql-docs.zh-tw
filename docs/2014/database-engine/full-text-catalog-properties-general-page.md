@@ -1,5 +1,5 @@
 ---
-title: 全文檢索目錄屬性 （一般頁面） |Microsoft Docs
+title: 全文檢索目錄屬性（一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779661"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>全文檢索目錄屬性 (一般頁面)
@@ -25,7 +25,7 @@ ms.locfileid: "62779661"
 > [!NOTE]  
 >  對於 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 資料庫而言，全文檢索目錄是參考一組全文檢索索引的邏輯概念。 全文檢索目錄是不屬於任何檔案群組的虛擬物件。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 ### <a name="properties"></a>屬性  
  **預設目錄**  
@@ -34,23 +34,23 @@ ms.locfileid: "62779661"
  **母體擴展狀態**  
  指出目錄的狀態。 可能的值為：  
   
--   **Idle**  
+-   **閒置**  
   
 -   **搜耙進行中**  
   
--   **已暫停**  
+-   **而**  
   
--   **節流處理**  
+-   **調整執行速度**  
   
--   **復原**  
+-   **待**  
   
 -   **關機**  
   
--   **累加母體擴展進行中**  
+-   **遞增擴展進行中**  
   
 -   **正在建立索引**  
   
--   **磁碟已完整暫停**  
+-   **磁片已滿已暫停**  
   
 -   **Change tracking**  
   
@@ -63,19 +63,19 @@ ms.locfileid: "62779661"
  **名稱**  
  全文檢索目錄的名稱。  
   
- **區分腔調字**  
- 檢視或修改目錄是否會區分變音符號，例如波狀符號 ( **~** )、尖重音符號 (**´**) 或母音變化 (**¨**)。 有效值為：  
+ **區分重音**  
+ 查看或修改類別目錄是否區分變音符號，例如波狀符號（**~**）、銳角、重音符號（**́**），或母音（**？**）。 有效值為：  
   
 -   **否**  
   
 -   **是**  
   
--   變音符號標記的相關資訊，請參閱[變音符號](https://www.merriam-webster.com/dictionary/diacritic)Merriam Webster 字典中。  
+-   如需有關變音符號的詳細資訊，請參閱 Merriam-Webster 字典中的[變音符號](https://www.merriam-webster.com/dictionary/diacritic)。  
   
  **上次母體擴展日期**  
  顯示目錄上次擴展的日期。  
   
- **[擁有者]**  
+ **擁有者**  
  全文檢索目錄的擁有者。  
   
  **唯一索引鍵計數**  

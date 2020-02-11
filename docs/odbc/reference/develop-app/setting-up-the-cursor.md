@@ -15,15 +15,15 @@ ms.assetid: b80afb0e-ef2f-408f-86f5-a392edd99a56
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c47e534f069f810948189f2668d4ecdfbfa4ad79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107537"
 ---
 # <a name="setting-up-the-cursor"></a>設定資料指標
-應用程式之前執行的陳述式，建立結果集，可以指定資料指標類型。 它會使用 SQL_ATTR_CURSOR_TYPE 陳述式屬性。 如果應用程式未明確指定類型，就會使用順向資料指標。 若要取得混合式資料指標，指定索引鍵集驅動資料指標的應用程式，但宣告索引鍵集大小小於結果集大小。  
+應用程式可以在執行建立結果集的語句之前，指定資料指標類型。 它會使用 SQL_ATTR_CURSOR_TYPE 語句屬性來執行此工作。 如果應用程式未明確指定類型，則會使用順向資料指標。 若要取得混合資料指標，應用程式會指定索引鍵集驅動資料指標，但是會宣告小於結果集大小的索引鍵集大小。  
   
- 索引鍵集驅動和混合的資料指標，應用程式也可以指定索引鍵集大小。 它會使用 SQL_ATTR_KEYSET_SIZE 陳述式屬性。 如果索引鍵集大小設定為 0，這是預設值，索引鍵集大小設定為結果集大小，且索引鍵集驅動資料指標。 開啟資料指標之後，就可以變更索引鍵集大小。  
+ 針對索引鍵集驅動和混合資料指標，應用程式也可以指定索引鍵集大小。 它會使用 SQL_ATTR_KEYSET_SIZE 語句屬性來執行此工作。 如果索引鍵集大小設定為0（這是預設值），則索引鍵集大小會設定為結果集大小，並使用索引鍵集驅動資料指標。 索引鍵集大小可以在資料指標開啟後變更。  
   
- 應用程式也可以設定資料列集大小;如需詳細資訊，請參閱 <<c0> [ 使用區塊資料指標](../../../odbc/reference/develop-app/using-block-cursors.md)稍早的這一節。
+ 應用程式也可以設定資料列集大小;如需詳細資訊，請參閱本節稍早的[使用區塊資料指標](../../../odbc/reference/develop-app/using-block-cursors.md)。

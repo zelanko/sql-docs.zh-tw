@@ -30,10 +30,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 02872a037e60fa3af58a70d3599b03c61d0cfb5e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257343"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>使用 sql:relationship 指定關聯性 (SQLXML 4.0)
@@ -52,10 +52,10 @@ ms.locfileid: "75257343"
   
  若要提供資料表名稱和必要的聯結資訊，請在**sql： relationship**注釋上指定下列屬性。 這些屬性僅適用于** \<sql： relationship>** 元素：  
   
- **檔案名**  
+ **名稱**  
  指定關聯性的唯一名稱。  
   
- **父**  
+ **父系**  
  指定父關聯 (資料表)。 這是選用的屬性；如果未指定此屬性，會從文件之子階層中的資訊取得父資料表名稱。 如果架構指定兩個使用相同** \<sql： relationship>** 但父元素不同的父子式階層，您就不會在** \<sql： relationship>** 中指定 parent 屬性。 這項資訊是從結構描述的階層中取得。  
   
  **parent-key**  

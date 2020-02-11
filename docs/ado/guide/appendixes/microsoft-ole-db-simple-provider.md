@@ -15,44 +15,44 @@ ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3acdfc7e03115b415e7641047e7621d5ab463e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926600"
 ---
-# <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 簡單提供者概觀
-Microsoft OLE DB 簡單提供者 (OSP) 允許存取的提供者已經使用任何資料的 ADO [OLE DB 簡單提供者 (OSP) 工具組](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)。 簡單的提供者被用來存取需要唯一基本的 OLE DB 支援，例如記憶體中陣列或 XML 文件的資料來源。
+# <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 簡單提供者總覽
+Microsoft OLE DB Simple Provider （OSP）可讓 ADO 存取已使用[OLE DB Simple provider （osp）工具](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)組撰寫提供者的任何資料。 簡單提供者的目的是要存取只需要基本 OLE DB 支援的資料來源，例如記憶體內部陣列或 XML 檔。
 
 ## <a name="connection-string-parameters"></a>連接字串參數
- 若要連接到 OLE DB 範例提供者 DLL，請設定*提供者*引數[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性：
+ 若要連接到 OLE DB 簡單提供者 DLL，請將*提供者*引數設定為[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性，以執行下列動作：
 
 ```vb
 MSDAOSP
 ```
 
- 此值也可以設定或使用讀取[提供者](../../../ado/reference/ado-api/provider-property-ado.md)屬性。
+ 這個值也可以使用[Provider](../../../ado/reference/ado-api/provider-property-ado.md)屬性來設定或讀取。
 
- 您可以連接到已註冊為完整的 OLE DB 提供者所使用的已註冊的提供者的名稱，取決於提供者撰寫人員的簡單提供者。
+ 您可以使用提供者寫入器所決定的已註冊提供者名稱，連接到已註冊為完整 OLE DB 提供者的簡單提供者。
 
 ## <a name="typical-connection-string"></a>一般連接字串
- 此提供者的一般連接字串是：
+ 此提供者的一般連接字串為：
 
 ```vb
 "Provider=MSDAOSP;Data Source=serverName"
 ```
 
- 字串是由這些關鍵字所組成：
+ 此字串包含下列關鍵字：
 
 |關鍵字|描述|
 |-------------|-----------------|
 |**提供者**|指定 SQL Server 的 OLE DB 提供者。|
 |**資料來源**|指定伺服器的名稱。|
 
-## <a name="xml-document-example"></a>XML 文件範例
- OLE DB 簡單提供者 (OSP) 在 MDAC 2.7 或更新版本以及 Windows Data Access Components (Windows DAC) 已增強為支援開啟階層式的 ADO**資料錄集**任意的 XML 檔案。 這些 XML 檔案可能包含 ADO XML 持續性結構描述，但並非必要。 這已實作連接以 OSP **MSXML2.DLL**; 因此**MSXML2.DLL**或更新版本。
+## <a name="xml-document-example"></a>XML 檔範例
+ MDAC 2.7 或更新版本中的 OLE DB 簡單提供者（OSP）和 Windows Data Access Components （Windows DAC）已經過增強，可支援在任意 XML 檔案上開啟階層式 ADO**記錄集**。 這些 XML 檔案可能包含 ADO XML 持續性架構，但不是必要的。 這已經藉由將 OSP 連接到**msxml2.h**來實現;因此需要**msxml2.h**或更新版本。
 
- **Portfolio.xml**用在下列範例中的檔案包含下列樹狀結構：
+ 下列範例中使用的**組合 .xml 檔案**包含下列樹狀結構：
 
 ```console
 Portfolio
@@ -65,9 +65,9 @@ Portfolio
          WebSite
 ```
 
- XML DSO 會使用內建的啟發學習法來將 XML 樹狀結構中的節點轉換成階層式的章節**資料錄集**。
+ XML DSO 會使用內建的啟發學習法，將 XML 樹狀結構中的節點轉換成階層式**記錄集中**的章節。
 
- 使用這些內建的啟發學習法，XML 樹狀結構會轉換成兩個層級階層**資料錄集**的格式如下：
+ 使用這些內建啟發學習法時，XML 樹狀結構會轉換成下列格式的兩層級階層式**記錄集**：
 
 ```console
 Parent Recordset
@@ -76,28 +76,28 @@ Shares, Symbol, Price, $Text
       Company Name, WebSite, $Text
 ```
 
- 請注意 公事包 和 資訊標記不會出現在階層**資料錄集**。 如需 XML DSO 如何將 XML 樹狀結構轉換為階層式的說明**資料錄集**，請參閱下列規則。 在下一節中討論 $Text 資料行。
+ 請注意，「組合」和「資訊」標記不會在階層式**記錄集中**表示。 如需 XML DSO 如何將 XML 樹狀結構轉換成階層式**記錄集**的說明，請參閱下列規則。 下一節將討論 $Text 資料行。
 
-## <a name="rules-for-assigning-xml-elements-and-attributes-to-columns-and-rows"></a>指派的 XML 項目和屬性資料行和資料列的規則
- XML DSO 會遵循的程序指派項目和屬性加入至資料行和資料繫結的應用程式中的資料列。 XML 會模型化為樹狀目錄中包含整個階層的一個標記。 比方說，一本書的 XML 描述可能包含一章標記、 圖標記和區段標記。 在最高的層級會是活頁簿的標記，包含子元素一章，圖中和一節。 當 XML DSO 會對應至資料列和資料行的 XML 項目時，子元素，而不是最上層項目，將會轉換。
+## <a name="rules-for-assigning-xml-elements-and-attributes-to-columns-and-rows"></a>將 XML 元素和屬性指派給資料行和資料列的規則
+ XML DSO 會遵循在資料系結應用程式中將專案和屬性指派給資料行和資料列的程式。 XML 會模型化為具有一個標記的樹狀結構，其中包含整個階層。 例如，書籍的 XML 描述可以包含章節標記、圖示記和區段標記。 最高層級會是 book 標記，其中包含子項目章節、圖和區段。 當 XML DSO 將 XML 元素對應到資料列和資料行時，子項目（而不是最上層專案）會進行轉換。
 
- XML DSO 會使用這個程序，將轉換的子元素：
+ XML DSO 會使用這個程式來轉換子項目：
 
--   每一個子元素和屬性對應到的某些資料行**資料錄集**階層架構中。
+-   每個子項目和屬性都會對應到階層中某個**記錄集**內的資料行。
 
--   資料行名稱會做為子元素或屬性的名稱相同，除非在父項目可具有屬性和子項目具有相同的名稱，在此情況下"！"會附加至子元素的資料行名稱。
+-   資料行的名稱與子專案或屬性的名稱相同，除非父元素具有具有相同名稱的屬性和子專案，在這種情況下，會在子項目的資料行名稱前面加上 "！"。
 
--   每個資料行是*簡單*資料行包含純量值 （通常是字串） 或**Recordset**含有子系的資料行**資料錄集**。
+-   每個資料行都是包含*純*量值（通常是字串）或包含子**記錄集**的**記錄集**資料行。
 
--   資料行對應至屬性一定是簡單的。
+-   對應至屬性的資料行一律是簡單的。
 
--   資料行對應至子元素是**資料錄集**如果子元素有它自己的子元素或屬性 （或兩者），或子元素的父代具有一個以上的執行個體的子元素做為子系的資料行。 否則，資料行是簡單的。
+-   如果子項目有其自己的子項目或屬性（或兩者皆是），或該子項目的父系有一個以上的子項目實例做為子系，則對應至子項目的資料行就是**記錄集**資料行。 否則資料行就很簡單。
 
--   其資料行的子元素 （在不同的父代） 的多個執行個體時，較**資料錄集**資料行若*任何*的執行個體表示**資料錄集**資料行，其資料行是簡單才*所有*執行個體代表簡單的資料行。
+-   當子項目有多個實例時（在不同的父系底下），如果*有任何*實例表示**記錄集**資料行，其資料行就是**記錄集**資料行。只有在*所有*實例都代表一個簡單的資料行時，其資料行才會很簡單。
 
--   所有**資料錄集**有額外的資料行，名為 $Text。
+-   所有**記錄集**都有一個名為 $Text 的額外資料行。
 
- 程式碼所需的建構**資料錄集**如下所示：
+ 建立**記錄集**所需的程式碼如下所示：
 
 ```vb
 Dim adoConn as ADODB.Connection
@@ -111,7 +111,7 @@ adoRS.Open "https://WebServer/VRoot/portfolio.xml, adoConn
 ```
 
 > [!NOTE]
->  使用四個不同的命名慣例，可以指定資料檔案的路徑。
+>  您可以使用四種不同的命名慣例來指定資料檔案的路徑。
 
 ```vb
 'HTTP://
@@ -124,24 +124,24 @@ adoRS.Open "\\ComputerName\ShareName\portfolio.xml", adoConn
 adoRS.Open "C:\Directory\portfolio.xml", adoConn
 ```
 
- 只要**Recordset**已開啟，一般的 ADO**資料錄集**瀏覽命令可用。
+ 一旦開啟**記錄集**，就可以使用一般的 ADO**記錄集**導覽命令。
 
- **資料錄集**產生 OSP 有一些限制：
+ OSP 產生的**記錄集**有一些限制：
 
--   用戶端資料指標 (**adUseClient**) 不支援。
+-   不支援用戶端資料指標（**adUseClient**）。
 
--   階層式**錄**建立任意 XML 無法保存使用**Recordset.Save**。
+-   無法使用**記錄集**保存透過任意 XML 建立的階層式**記錄集**。請儲存。
 
--   **資料錄集**建立 OSP 為唯讀狀態。
+-   使用 OSP 建立的**記錄集**是唯讀的。
 
--   XMLDSO 將額外的資料行的資料 ($Text) 加入至每個**資料錄集**階層架構中。
+-   XMLDSO 會將另一個資料行（$Text）新增至階層中的每個**記錄集**。
 
- 如需有關 OLE DB 簡單提供者的詳細資訊，請參閱 <<c0> [ 建置簡單的提供者](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)。
+ 如需 OLE DB 簡單提供者的詳細資訊，請參閱[建立簡單的提供者](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)。
 
 ## <a name="code-example"></a>程式碼範例
- 下列 Visual Basic 程式碼示範如何開啟任意的 XML 檔案，建構階層式**Recordset**，並以遞迴方式撰寫的每個每一筆記錄**資料錄集**至偵錯視窗。
+ 下列 Visual Basic 程式碼示範如何開啟任意的 XML 檔案、建立階層式**記錄集**，並以遞迴方式將每個**記錄集**的每一筆記錄寫入至 [偵錯工具] 視窗。
 
- 以下是簡單的 XML 檔案，其中包含股票報價。 下列程式碼會使用此檔案以建構兩個層級階層**資料錄集**。
+ 以下是包含股票報價的簡單 XML 檔案。 下列程式碼會使用這個檔案來建立兩層級的階層式**記錄集**。
 
 ```xml
 <portfolio>
@@ -184,7 +184,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 </portfolio>
 ```
 
- 以下是兩個 Visual Basic sub 程序。 建立第一個**資料錄集**並將它傳遞給*WalkHier* sub 程序中，遞迴會逐步引導，階層中向下，撰寫每個**欄位**中每個中的每一筆記錄**資料錄集**至偵錯視窗。
+ 以下是兩個 Visual Basic 的 sub 程式。 第一個程式會建立**記錄集**，並將它傳遞給*WalkHier* sub 程式，這會以遞迴方式向下引導階層，並將每個記錄**集**內每筆記錄中的每個**欄位**寫入至 [debug] 視窗
 
 ```vb
 Private Sub BrowseHierRecordset()

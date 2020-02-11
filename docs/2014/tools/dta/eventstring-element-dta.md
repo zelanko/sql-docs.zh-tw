@@ -1,5 +1,5 @@
 ---
-title: EventString 元素 (DTA) |Microsoft Docs
+title: EventString 元素（DTA） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211110"
 ---
 # <a name="eventstring-element-dta"></a>EventString 元素 (DTA)
@@ -39,13 +39,15 @@ ms.locfileid: "68211110"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`Weight`|選擇性。 針對指定事件來指定查詢加權因數 (重要性因數)。 請利用 `float` 資料類型來指定加權。 例如，`Weight`="100.01"。 `Weight` 所能指定的最小值是 "0"。|  
+|`Weight`|選擇性。 針對指定事件來指定查詢加權因數 (重要性因數)。 請利用 `float` 資料類型來指定加權。 例如，`Weight`="100.01"。 
+  `Weight` 所能指定的最小值是 "0"。|  
   
 ## <a name="element-characteristics"></a>元素特性  
   
 |特性|描述|  
 |--------------------|-----------------|  
-|**資料類型和長度**|`string`，沒有長度限制。|  
+|**資料類型和長度**|
+  `string`，沒有長度限制。|  
 |**預設值**|無。|  
 |**出現次數**|如果未指定任何其他工作負載類型，便需要使用這個元素一次。 您必須指定 `EventString` 父系的 `File`、`Database` 或 `Workload` 子元素，但只能使用一種類型。 例如，如果您利用 `EventString` 元素指定了工作負載，便不能在相同 XML 輸入檔中，同時利用 `File` 元素來指定工作負載。|  
   
@@ -53,7 +55,7 @@ ms.locfileid: "68211110"
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[Workload 元素 &#40;DTA&#41;](workload-element-dta.md)|  
+|**父元素**|[&#40;DTA&#41;的工作負載元素](workload-element-dta.md)|  
 |**子元素**|無。|  
   
 ## <a name="example"></a>範例  

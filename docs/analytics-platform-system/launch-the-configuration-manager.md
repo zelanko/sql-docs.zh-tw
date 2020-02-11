@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401048"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>在 Analytics Platform System 中啟動 Configuration Manager
@@ -21,7 +21,7 @@ ms.locfileid: "74401048"
   
 ## <a name="before-you-begin"></a>開始之前  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>Prerequisites  
 Analytics Platform System**Configuration Manager**只能由設備網域系統管理員執行。 若要執行此工具，您需要設備網域系統管理員的密碼。 若要建立額外的 AP 系統管理員，請參閱[&#40;ap&#41;建立 Ap 網域系統管理員](create-an-aps-domain-administrator-aps.md)。  
   
 ## <a name="Accessing"></a>啟動 Configuration Manager 工具  

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637758"
 ---
 # <a name="create-xml-indexes"></a>建立 XML 索引
@@ -44,7 +44,7 @@ ms.locfileid: "62637758"
   
 -   主要 XML 索引名稱的限制與檢視名稱的限制相同。  
   
- 您無法建立 XML 索引上`xml`資料行在檢視中，輸入上**表格**值的變數`xml`類型資料行，或`xml`類型變數。  
+ 您無法在 view 的`xml`類型資料行、具有`xml`類型資料行的`xml` **資料表**值變數或類型變數上建立 XML 索引。  
   
 -   若要使用 ALTER TABLE ALTER COLUMN 選項，將 `xml` 類型資料行從不具類型變更為具類型的 XML (反之亦然)，則在資料行上就不應存在任何 XML 索引。 如果 XML 索引確實存在，必須在嘗試變更資料行類型前先卸除它。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62637758"
   
  在包含 XML 結構描述類型 **xs:date** 或 **xs:dateTime** (或是這些類型的任何子類型) 值 (該值的年份小於 1) 的 XML 資料類型資料行上建立或重新建立主要 XML 索引時， [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中的索引建立會失敗。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 允許這些值，所以在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中產生之資料庫內建立索引時，可能會發生這個問題。 如需詳細資訊，請參閱 [比較具類型的 XML 與不具類型的 XML](../xml/compare-typed-xml-to-untyped-xml.md)。  
   
-### <a name="example-creating-a-primary-xml-index"></a>範例建立主要 XML 索引  
+### <a name="example-creating-a-primary-xml-index"></a>範例：建立主要 XML 索引  
  在大部分的範例中，都是使用資料表 T (pk INT PRIMARY KEY, xCol XML) 和不具類型的 XML 資料行。 這些都可以用一種直接的方法來擴充成具類型的 XML。 為求簡單明瞭，我們針對 XML 資料執行個體來說明查詢，如下所示：  
   
 ```  
@@ -99,7 +99,7 @@ FROM    sys.xml_indexes;
   
  在 **secondary_type_desc** 資料行中傳回的值可以是 NULL、PATH、VALUE 或 PROPERTY。 對於主要 XML 索引而言，傳回的值是 NULL。  
   
-### <a name="example-creating-secondary-xml-indexes"></a>範例建立次要 XML 索引  
+### <a name="example-creating-secondary-xml-indexes"></a>範例：建立次要 XML 索引  
  下列範例說明如何建立次要 XML 索引。 此範例也會顯示您已建立之 XML 索引的相關資訊。  
   
 ```  

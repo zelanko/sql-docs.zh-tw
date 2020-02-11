@@ -22,14 +22,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 123f0fcececee98826bf70b929a9857bbaff32dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044453"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 組態管理員
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是一個工具，用來管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的相關服務、設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所用的網路通訊協定，以及管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用戶端電腦的網路連接組態。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是一個 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 嵌入式管理單元，您可以從 [開始] 功能表存取它，也可以將它加入任何其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 顯示畫面中。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (mmc.exe) 會在 Windows System32 資料夾中的 SQLServerManager10.msc 檔來開啟[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Configuration Manager。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是一個工具，用來管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的相關服務、設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所用的網路通訊協定，以及管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用戶端電腦的網路連接組態。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是一個 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 嵌入式管理單元，您可以從 [開始] 功能表存取它，也可以將它加入任何其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 顯示畫面中。 [!INCLUDE[msCoName](../includes/msconame-md.md)]管理主控台（mmc.exe）會使用 Windows System32 資料夾中的 Sqlservermanager10.msc 來開啟[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員和 SQL Server Management Studio 利用 Window Management Instrumentation (WMI) 來檢視和變更部份伺服器設定。 WMI 提供統一的方式來協助您連結管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具所要求之登錄作業的 API 呼叫，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員嵌入式管理單元元件的所選 SQL 服務上，它提供了增強的控制和操作功能。 如需設定 WMI 相關權限的相關資訊，請參閱[設定 WMI 在 SQL Server 工具中顯示伺服器狀態](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)。  
   
@@ -37,9 +37,9 @@ ms.locfileid: "63044453"
 >  因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理主控台程式的嵌入式管理單元，而不是獨立的程式，所以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員在較新版本的 Windows 中不會作為應用程式出現。  
 > 
 >  -   **Windows 10**：  
->          若要開啟  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager，請在**起始頁**，輸入 SQLServerManager12.msc (如[!INCLUDE[ssSQL14](../includes/sssql14-md.md)])。 針對先前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，以較小的數字取代 12。 按一下 SQLServerManager12.msc 開啟 Configuration Manager。 組態管理員釘選到起始頁或工作列，SQLServerManager12.msc，以滑鼠右鍵按一下，然後按一下**開啟檔案位置**。 在 Windows 檔案總管 中，SQLServerManager12.msc，以滑鼠右鍵按一下，然後按一下**釘選到開始**或是**釘選到工作列**。  
+>          若要[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]開啟 Configuration Manager，請在 [**開始] 頁面**上輸入 sqlservermanager12.msc （ [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]適用于）。 針對先前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，以較小的數字取代 12。 按一下 SQLServerManager12.msc 即可開啟 Configuration Manager。 若要將 Configuration Manager 釘選到起始頁或工作列，請在 [Sqlservermanager12.msc] 上按一下滑鼠右鍵，然後按一下 [**開啟檔案位置**]。 在 Windows 檔案瀏覽器中，以滑鼠右鍵按一下 [Sqlservermanager12.msc]，然後按一下 [**釘選到開始**] 或 [**釘選到工作列**]。  
 > -   **Windows 8**：  
->          若要開啟  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager，請在**搜尋**快速鍵**應用程式**，型別**SQLServerManager\<版本 >.msc**例如`SQLServerManager12.msc`，然後按下**Enter**。  
+>          若要[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]開啟 Configuration Manager，請在 [**搜尋**] 快速鍵的 [**應用程式**] 下，輸入**SQLServerManager\<version>** `SQLServerManager12.msc`，例如，然後按**enter**。  
   
  若要利用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員來啟動、停止、暫停、繼續或設定另一部電腦中的服務，請參閱[連接至另一部電腦 &#40;SQL Server 組態管理員&#41;](../database-engine/configure-windows/scm-services-connect-to-another-computer.md)。  
   
@@ -61,7 +61,8 @@ ms.locfileid: "63044453"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員可讓您管理伺服器和用戶端網路通訊協定，其中包括強迫加密通訊協定、檢視別名屬性，或啟用/停用通訊協定的功能。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員可讓您建立或移除別名、變更通訊協定的使用順序，或檢視伺服器別名的屬性，其中包括：  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員可讓您建立或移除別名、變更通訊協定的使用順序，或檢視伺服器別名的屬性，其中包括：  
   
 -   伺服器別名 - 用戶端連接之電腦所用的伺服器別名。  
   
@@ -72,7 +73,8 @@ ms.locfileid: "63044453"
  另外， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員也可讓您檢視容錯移轉叢集執行個體的相關資訊，不過，部份啟動和停止服務之類的動作，應該使用叢集管理員。  
   
 ### <a name="available-network-protocols"></a>可用的網路通訊協定  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援共用記憶體、TCP/IP 與具名管道通訊協定。 如需有關選擇網路通訊協定的詳細資訊，請參閱＜ [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)＞。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援 VIA、Banyan VINES Sequenced Packet Protocol (SPP)、多重通訊協定、AppleTalk 或 NWLink IPX/SPX 網路通訊協定。 先前連接這些通訊協定的用戶端必須選取不同的通訊協定，才能連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 您不能利用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員來設定 WinSock Proxy。 若要設定 WinSock Proxy，請參閱您的 ISA 伺服器文件集。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援共用記憶體、TCP/IP 與具名管道通訊協定。 如需有關選擇網路通訊協定的詳細資訊，請參閱＜ [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)＞。 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援 VIA、Banyan VINES Sequenced Packet Protocol (SPP)、多重通訊協定、AppleTalk 或 NWLink IPX/SPX 網路通訊協定。 先前連接這些通訊協定的用戶端必須選取不同的通訊協定，才能連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 您不能利用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員來設定 WinSock Proxy。 若要設定 WinSock Proxy，請參閱您的 ISA 伺服器文件集。  
   
 ## <a name="related-tasks"></a>相關工作  
  [管理服務的如何主題 &#40;SQL Server 組態管理員&#41;](../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)  

@@ -18,10 +18,10 @@ ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c2503e5d3b94b5bc73d9bf2427e0162ba2eda2fe
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304908"
 ---
 # <a name="sp_help_spatial_geography_index_xml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
@@ -47,17 +47,17 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
 ## <a name="arguments"></a>引數  
  請參閱[空間索引預存程式的引數和屬性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
-## <a name="properties"></a>[屬性]  
+## <a name="properties"></a>屬性  
  請參閱[空間索引預存程式的引數和屬性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  必須為使用者指派 PUBLIC 角色才能存取此程序。 需要在伺服器和物件上具有 READ ACCESS 權限。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  包含 NULL 值的屬性不會包含在傳回集合中。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用 `sp_help_spatial_geography_index_xml` 來調查 **\@qs**中指定查詢範例在資料表**geography_col**上定義的空間索引**SIndx_SpatialTable_geography_col2** 。 此範例以 XML 片段傳回指定索引的核心屬性，該片段會顯示所選取屬性的名稱和值。  
+ 下列範例會使用`sp_help_spatial_geography_index_xml`來調查** \@qs**中給定查詢範例的資料表**geography_col**上所定義的空間索引**SIndx_SpatialTable_geography_col2** 。 此範例以 XML 片段傳回指定索引的核心屬性，該片段會顯示所選取屬性的名稱和值。  
   
  然後，會在結果集上執行[XQuery](../../xquery/xquery-basics.md) ，傳回特定屬性。  
   

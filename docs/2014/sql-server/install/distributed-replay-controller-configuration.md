@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay Controller 組態 |Microsoft Docs
+title: Distributed Replay 控制器設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d55d2d759857e07bd655add1b00bccbd2eb4ce2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095516"
 ---
 # <a name="distributed-replay-controller-configuration"></a>Distributed Replay Controller 組態
@@ -26,7 +26,7 @@ ms.locfileid: "66095516"
  **加入目前使用者**  
  按一下此按鈕即可加入您想要授與 Distributed Replay Controller 服務之存取權限的使用者。  
   
- **[加入]**  
+ **加入**  
  按一下此按鈕即可加入 Distributed Replay Controller 服務的存取權限。  
   
  **移除**  

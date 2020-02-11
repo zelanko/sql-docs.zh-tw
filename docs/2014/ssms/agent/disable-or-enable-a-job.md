@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1fa9a2700bd2f6a9ce2b074b1633182fc30c9aa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211410"
 ---
 # <a name="disable-or-enable-a-job"></a>停用或啟用作業
@@ -31,7 +31,7 @@ ms.locfileid: "68211410"
   
      [安全性](#Security)  
   
--   **若要使用下列項目停用或啟用作業：**  
+-   **若要停用或啟用作業，請使用：**  
   
      [Transact-SQL](#SSMS)  
   
@@ -39,20 +39,20 @@ ms.locfileid: "68211410"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-disable-or-enable-a-job"></a>若要停用或啟用作業  
   
-1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
+1.  在**物件總管**中，連接到的實例[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，然後展開該實例。  
   
 2.  展開 **[SQL Server Agent]** 。  
   
-3.  展開 [作業]  ，然後以滑鼠右鍵按一下要停用或啟用的作業。  
+3.  展開 [作業]****，然後以滑鼠右鍵按一下要停用或啟用的作業。  
   
-4.  若要停用作業，請按一下 **[停用]** 。 若要啟用作業，請按一下 **[啟用]** 。  
+4.  若要停用作業，請按一下 **[停用]**。 若要啟用作業，請按一下 **[啟用]**。  
   
 ##  <a name="TSQL"></a> 使用 Transact-SQL  
   
@@ -77,6 +77,6 @@ ms.locfileid: "68211410"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 < [sp_update_job &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)。  
+ 如需詳細資訊，請參閱[sp_update_job &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)。  
   
   

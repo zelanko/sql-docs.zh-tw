@@ -14,10 +14,10 @@ ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 19a9d925b07b83e5ed26b73484cea955773364c6
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728599"
 ---
 # <a name="collections-master-data-services"></a>集合 (Master Data Services)
@@ -39,7 +39,7 @@ ms.locfileid: "73728599"
  當您建立集合時，您會自動列為擁有者。 如果您是管理員，可以視需要建立集合的其他屬性。  
   
 ## <a name="subscription-views-for-collections"></a>集合的訂閱檢視  
- 顯示集合的訂閱檢視有兩種。 [集合屬性] 格式會顯示集合的清單，以及與集合相關的任何屬性 (如描述或擁有者)。 [集合] 格式會顯示所有集合中的所有成員，以及每個成員加權和排序次序。 如需詳細資訊，請參閱 [概觀：匯出資料 &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)。  
+ 顯示集合的訂閱檢視有兩種。 [集合屬性]**** 格式會顯示集合的清單，以及與集合相關的任何屬性 (如描述或擁有者)。 [集合]**** 格式會顯示所有集合中的所有成員，以及每個成員加權和排序次序。 如需詳細資訊，請參閱 [概觀：匯出資料 &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)。  
   
  如果您為某個集合中的特定成員設定加權值，這些值則可以在相關的訂閱檢視中使用。  
   
@@ -47,13 +47,13 @@ ms.locfileid: "73728599"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|建立新集合。|[建立集合 &#40;Master Data Services&#41;](../master-data-services/create-a-collection-master-data-services.md)|  
-|將成員加入至現有的集合。|[將成員加入至集合 &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)|  
+|建立新集合。|[建立 &#40;Master Data Services 的集合&#41;](../master-data-services/create-a-collection-master-data-services.md)|  
+|將成員加入至現有的集合。|[將成員新增至集合 &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
 -   [明確階層 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [概觀：匯出資料 &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
+-   [總覽：匯出資料 &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
   
   

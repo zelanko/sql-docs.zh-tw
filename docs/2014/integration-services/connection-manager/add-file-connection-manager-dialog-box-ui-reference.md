@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e6921a4c54212439cd19c6bf7327f9e57b07a44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833870"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>加入檔案連接管理員對話方塊 UI 參考
@@ -29,7 +29,7 @@ ms.locfileid: "62833870"
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的內建工作和資料流程元件不會使用「多個檔案」連接管理員。 但是，您可以在指令碼工作或指令碼元件中使用這個連接管理員。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **使用類型**  
  指定用於多個檔案連接管理員的檔案類型。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62833870"
  **檔案 / 資料夾**  
  檢視已經使用如下所述的按鈕加入的檔案或資料夾。  
   
- **[加入]**  
+ **加入**  
  使用 [選取檔案]  對話方塊來加入檔案，或使用 [瀏覽資料夾]  對話方塊來加入資料夾。  
   
  **編輯**  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a2037297db3f8a303ffd08fb31241e51505aeff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829478"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>值包含設定檔要求選項 (資料分析工作)
@@ -25,7 +25,7 @@ ms.locfileid: "62829478"
 > [!NOTE]  
 >  本主題所描述的選項會顯示在 **[資料分析工作編輯器]** 的 **[設定檔要求]** 頁面上。 如需此編輯器頁面的詳細資訊，請參閱[資料分析工作編輯器 &#40;設定檔要求頁面&#41;](data-profiling-task-editor-profile-requests-page.md)。  
   
- 如需如何使用資料分析工作的詳細資訊，請參閱[資料分析工作的設定](data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱 [資料設定檔檢視器](data-profile-viewer.md)。  
+ 如需如何使用資料分析工作的詳細資訊，請參閱 [資料分析工作的設定](data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱 [資料設定檔檢視器](data-profile-viewer.md)。  
   
 ## <a name="understanding-the-selection-of-columns-for-the-inclusioncolumns-property"></a>了解 InclusionColumns 屬性之資料行的選擇  
  [值包含設定檔要求]  會計算某個子集中的所有值是否都會出現在超集中。 超集通常是查閱或參考資料表。 例如，地址資料表中的州名資料行就是子集資料表。 這個資料行中的每個二字元州名代碼也應該可在美國郵遞服務州名代碼的資料表 (超集資料表) 中找到。  
@@ -57,11 +57,11 @@ ms.locfileid: "62829478"
   
 -   **一般**  
   
--   **Options**  
+-   **選項**  
   
 ### <a name="data-options"></a>資料選項  
  **ConnectionManager**  
- 選取現有的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，以便使用 .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 來連接至包含要分析之資料表或檢視表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
+ 選取現有的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，以便使用 .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 來連線至包含要分析之資料表或檢視表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
  **SubsetTableOrView**  
  選取要分析的現有資料表或檢視表。  
@@ -91,7 +91,7 @@ ms.locfileid: "62829478"
  如需詳細資訊，請參閱本主題前面的「了解 InclusionColumns 屬性之資料行的選擇」一節。  
   
  **IsWildcard**  
- 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(\*)** 來分析所有資料行，這個選項會設定為 [True]  。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
+ 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(** ) **來分析所有資料行，這個選項會設定為 [True]\*** 。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
   
  **ColumnName**  
  顯示所選取資料行的名稱。 如果您已選取 **(\*)** 來分析所有資料行，這個選項就是空白的。 此選項是唯讀的。  
@@ -100,7 +100,7 @@ ms.locfileid: "62829478"
  選取比較字串值的選項。 這個屬性具有下表中所列的選項。 這個選項的預設值為 **預設值**頁面上。  
   
 > [!NOTE]  
->  當您針對 **ColumnName** 使用 **(\*)** 萬用字元時，**CompareOptions** 就是唯讀的，而且它會設定為 [預設值]  設定。  
+>  當您針對 **ColumnName\* 使用** ( **)** 萬用字元時，**CompareOptions** 就是唯讀的，而且它會設定為 [預設值]  設定。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -121,13 +121,13 @@ ms.locfileid: "62829478"
  **RequestID**  
  輸入描述性名稱，以便識別這個設定檔要求。 一般而言，您不需要變更自動產生的值。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **InclusionThresholdSetting**  
  選取臨界值設定，以便精簡設定檔的輸出。 這個屬性的預設值為 [已指定]  。 如需詳細資訊，請參閱本主題前面的「了解臨界值設定」一節。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**無**|沒有指定臨界值。 不論索引鍵強度為何，系統都會報告此值。|  
+|**None**|沒有指定臨界值。 不論索引鍵強度為何，系統都會報告此值。|  
 |**已指定**|使用 **InclusionStrengthThreshold**中指定的臨界值。 只有當包含強度大於臨界值時，系統才會報告此值。|  
 |**精確**|沒有指定臨界值。 只有當子集值完全包含在超集值中時，系統才會報告包含強度。|  
   
@@ -141,7 +141,7 @@ ms.locfileid: "62829478"
   
 |值|描述|  
 |-----------|-----------------|  
-|**無**|沒有指定臨界值。 不論超集資料行的索引鍵強度為何，系統都會報告包含強度。|  
+|**None**|沒有指定臨界值。 不論超集資料行的索引鍵強度為何，系統都會報告包含強度。|  
 |**已指定**|使用 **SupersetColumnsKeyThreshold**頁面上。 只有當超集資料行的索引鍵強度大於臨界值時，系統才會報告包含強度。|  
 |**精確**|沒有指定臨界值。 只有當超集資料行是超集資料表中的精確索引鍵時，系統才會報告包含強度。|  
   

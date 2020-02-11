@@ -13,10 +13,10 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4b07af028cd0f2385c447c99192ccc50b65c4925
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096124"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 連接管理員
@@ -62,7 +62,7 @@ ms.locfileid: "74096124"
   
 5.  選取 [測試連線]  。 (只會測試您已啟用的連接)。  
   
-6.  按一下 [確定]  以關閉對話方塊。  
+6.  選取 [確定]  關閉對話方塊。  
 
 ## <a name="connect-with-kerberos-authentication"></a>使用 Kerberos 驗證進行連線
 有兩個選項可設定內部部署環境，以便讓您使用 Hadoop 連線管理員搭配 Kerberos 驗證。 您可以選擇較適合您情況的選項。
@@ -90,7 +90,7 @@ ms.locfileid: "74096124"
 
     執行這些命令之後，請重新啟動電腦。
 
-2.  使用 **Ksetup** 命令來確認設定。 輸出看起來應該像下列範例：
+2.  使用 **Ksetup** 命令來確認設定。 輸出看起來應如下列範例所示：
 
     ```
     C:> Ksetup

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a93eed388f494b7d0aeaac127b95bc0d87c76963
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210696"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>使用條件式刪除追蹤最佳化合併式複寫效能
@@ -35,7 +35,8 @@ ms.locfileid: "68210696"
   
 -   行動銷售團隊所使用的應用程式一般都具有資料表，例如 **SalesOrderHeader**、 **SalesOrderDetail** 和 **Product**。 在「訂閱者」端輸入訂單 (通常將資料提供給訂單實行系統)，然後再將其複寫至「發行者」。 許多行動工作者使用含有限儲存的手持式裝置：訂單在「發行者」端接收後，可以在「訂閱者」端刪除。 刪除不會傳播到「發行者」，因為此訂單在系統中仍為使用中訂單。  
   
-     在此狀況下，不會追蹤 **SalesOrderHeader** 和 **SalesOrderDetail** 資料表的刪除。 **Product** 資料表的刪除也不會被追蹤，因為在「發行者」端刪除產品後，刪除會被傳送到「訂閱者」，以使產品清單保持最新。  
+     在此狀況下，不會追蹤 **SalesOrderHeader** 和 **SalesOrderDetail** 資料表的刪除。 
+  **Product** 資料表的刪除也不會被追蹤，因為在「發行者」端刪除產品後，刪除會被傳送到「訂閱者」，以使產品清單保持最新。  
   
 -   應用程式可以將記錄資料儲存在資料表 (例如 **TransactionHistory**，它會定期清除一年前的舊記錄) 中。 資料表可以使用篩選，以便「訂閱者」僅接收當月的交易資料。 儘管「發行者」端每月進行的批次刪除 (即清除舊資料) 與「訂閱者」無關，但依預設它們仍會被追蹤及列舉。  
   
@@ -44,9 +45,9 @@ ms.locfileid: "68210696"
 > [!IMPORTANT]  
 >  如果其他作業在「發行者」端繼續，您必須確定在停用刪除追蹤時，不會發生應傳播給「訂閱者」的刪除。  
   
- **若要指定刪除不被追蹤**  
+ **若要指定不應追蹤刪除**  
   
--   複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式設計：[指定不應該為合併發行項追蹤刪除 &#40;複寫 Transact-SQL 程式設計&#41;](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
+-   複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式設計︰[指定不應該為合併發行項追蹤刪除 &#40;複寫 Transact-SQL 程式設計&#41;](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
   
 ## <a name="see-also"></a>另請參閱  
  [合併式複寫的發行項選項](article-options-for-merge-replication.md)   

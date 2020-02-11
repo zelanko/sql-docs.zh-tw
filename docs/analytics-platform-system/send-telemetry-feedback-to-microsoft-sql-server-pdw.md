@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400366"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>將遙測意見反應傳送給 Microsoft 以分析平臺系統
@@ -110,8 +110,8 @@ Analytics Platform System 具有選擇性的遙測功能，可將管理主控台
   
 執行`Disable-RemoteMonitoring`命令多次並不會有任何傷害。  
   
-## <a name="next-steps"></a>接下來的步驟
-如需詳細資訊，請參閱：
+## <a name="next-steps"></a>後續步驟
+如需詳細資訊，請參閱
 - [使用管理主控台 &#40;分析平臺系統來監視設備&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 - [使用系統檢視 &#40;分析平臺系統來監視設備&#41;](monitor-the-appliance-by-using-system-views.md)  
 - [使用 System Center Operations Manager &#40;分析平臺系統來監視設備&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  

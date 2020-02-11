@@ -19,10 +19,10 @@ ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3807a53921572bbe20b4c459bff34958cbb42001
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304991"
 ---
 # <a name="sp_syscollector_run_collection_set-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
@@ -46,21 +46,21 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @collection_set_id = ] collection_set_id` 是收集組的唯一本機識別碼。 *collection_set_id*是**int** ，而且如果*name*為 Null，則必須有值。  
+`[ @collection_set_id = ] collection_set_id`這是收集組的唯一本機識別碼。 *collection_set_id*是**int** ，而且如果*name*為 Null，則必須有值。  
   
-`[ @name = ] 'name'` 是收集組的名稱。 *name*是**sysname** ，如果*collection_set_id*是 Null，則必須有值。  
+`[ @name = ] 'name'`這是收集組的名稱。 *name*是**sysname** ，如果*collection_set_id*是 Null，則必須有值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  *Collection_set_id*或*名稱*都必須有值，兩者都不能是 Null。  
   
- 這個程式會針對指定的收集組啟動收集和上傳作業，而且如果收集組的 **\@collection_mode**設定為非快取（1），就會立即啟動收集代理程式作業。 如需詳細資訊，請參閱[sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
+ 這個程式會針對指定的收集組啟動收集和上傳作業，而且如果收集組的** \@collection_mode**設定為非快取（1），就會立即啟動收集代理程式作業。 如需詳細資訊，請參閱[sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
   
  sp_sycollector_run_collection_set 也可以用來執行沒有排程的收集組。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要**dc_operator** （具有 EXECUTE 許可權）固定資料庫角色中的成員資格，才能執行此程式。  
   
 ## <a name="example"></a>範例  

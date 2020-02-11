@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_waits (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_pdw_waits （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,32 +13,32 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 476b2f251bd41480962eb9925af6e3619507e791
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088753"
 ---
-# <a name="sysdmpdwwaits-transact-sql"></a>sys.dm_pdw_waits & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdm_pdw_waits-transact-sql"></a>sys.databases dm_pdw_waits （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  保留所有相關資訊的等候執行要求期間發生的狀態，或查詢，其中包括鎖定等候傳輸佇列等等。  
+  保存在執行要求或查詢期間遇到之所有等候狀態的相關資訊，包括鎖定、等待傳輸佇列等。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|wait_id|**bigint**|等候狀態相關聯的唯一數值識別碼。<br /><br /> 此檢視的索引鍵。|跨所有等候系統中是唯一的。|  
-|session_id|**nvarchar(32)**|等候狀態發生所在之工作階段識別碼。|請參閱中的 session_id [sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。|  
-|type|**nvarchar(255)**|此項目所代表的等候類型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|object_type|**nvarchar(255)**|等候受影響的物件型別。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|object_name|**nvarchar(386)**|指定等候受影響之物件的 GUID 或名稱。||  
-|request_id|**nvarchar(32)**|等候狀態發生所在之要求的識別碼。|請參閱中的 request_id [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
+|wait_id|**Bigint**|與等候狀態相關聯的唯一數值識別碼。<br /><br /> 此視圖的索引鍵。|在系統的所有等候中都是唯一的。|  
+|session_id|**Nvarchar （32）**|發生等候狀態之會話的識別碼。|請參閱[dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)中的 session_id。|  
+|type|**nvarchar(255)**|此專案所代表的等候類型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|object_type|**nvarchar(255)**|受等候影響的物件類型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|object_name|**Nvarchar （386）**|受等候影響之指定物件的名稱或 GUID。||  
+|request_id|**Nvarchar （32）**|發生等候狀態之要求的識別碼。|請參閱[dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)中的 request_id。|  
 |request_time|**datetime**|要求等候狀態的時間。||  
-|acquire_time|**datetime**|取得的鎖定或資源的時間。||  
+|acquire_time|**datetime**|取得鎖定或資源的時間。||  
 |state|**nvarchar(50)**|等候狀態的狀態。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|priority|**int**|等候項目的優先順序。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|優先順序|**int**|等待專案的優先順序。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲和平行處理資料倉儲動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
- [sys.dm_pdw_wait_stats &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-wait-stats-transact-sql.md)  
+ [SQL 資料倉儲和平行處理資料倉儲動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
+ [dm_pdw_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-wait-stats-transact-sql.md)  
   
   

@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93cd0c424a5173539eedfa4d53ac93fa04f5962c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100434"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>連接至 Management Studio 中的報表伺服器
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供物件總管，可讓您連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系列中的任何伺服器並以圖形方式瀏覽其內容。 若為 Reporting Services，您可以使用 [物件總管] 來進行下列作業：  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]提供物件總管，可讓您連接至系列中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]任何伺服器，並以圖形方式流覽其內容。 若為 Reporting Services，您可以使用 [物件總管] 來進行下列作業：  
   
 -   啟用報表伺服器功能。  
   
@@ -43,13 +43,13 @@ ms.locfileid: "66100434"
   
 1.  如果 [物件總管] 尚未開啟，請在 [檢視] 功能表中選取它。  
   
-2.  按一下 [連線]  檢視伺服器類型的清單，然後選取 [Reporting Services]  。  
+2.  按一下 **[連接]** 以查看伺服器類型的清單，然後選取 [ **Reporting Services**]。  
   
-3.  在 [連線到伺服器]  對話方塊中，輸入報表伺服器執行個體的名稱。 報表伺服器執行個體名稱以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱為基礎。 根據預設，本機報表伺服器執行個體的執行個體名稱就是電腦名稱。 如果您將報表伺服器安裝為具名執行個體，請使用此語法來指定伺服器：\<伺服器名稱>[\\<執行個體名稱\>]  。  
+3.  在 [連線到伺服器]**** 對話方塊中，輸入報表伺服器執行個體的名稱。 報表伺服器執行個體名稱以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱為基礎。 根據預設，本機報表伺服器執行個體的執行個體名稱就是電腦名稱。 如果您將報表伺服器安裝為已命名的實例，請使用此語法來指定伺服器： * \<servername>\\ [<\>instancename]*。  
   
 4.  選取驗證類型。 如果您要使用 Windows 驗證，就必須使用您的認證進行連接。 如果您選取了 [基本驗證] 或 [表單驗證]，請輸入帳戶和密碼。  
   
-5.  按一下 **[連接]** 。 報表伺服器就會出現在 [物件總管] 中。  
+5.  按一下 [ **連接**]。 報表伺服器就會出現在 [物件總管] 中。  
   
 6.  以滑鼠右鍵按一下伺服器節點，設定伺服器屬性和伺服器預設值。 如需詳細資訊，請參閱[設定報表伺服器屬性 &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)。  
   
@@ -57,58 +57,60 @@ ms.locfileid: "66100434"
   
 1.  如果 [物件總管] 尚未開啟，請在 [檢視] 功能表中選取它。  
   
-2.  按一下 [連線] 檢視伺服器類型的清單，然後選取 [Reporting Services]  。  
+2.  按一下 [連線] 檢視伺服器類型的清單，然後選取 [Reporting Services]****。  
   
-3.  在 [連接到伺服器]  對話方塊中，輸入 SharePoint 網站的 URL。 下列範例說明語法： http://\<web 伺服器 > /sites/\<網站 >。  
+3.  在 [連接到伺服器]**** 對話方塊中，輸入 SharePoint 網站的 URL。 下列範例說明語法： HTTP://\<web server>/sites/\<網站>。  
   
 4.  選取驗證類型。 如果您要使用 Windows 驗證，就必須使用您的認證進行連接。 如果您選取了 [基本驗證] 或 [表單驗證]，請輸入帳戶和密碼。  
   
-5.  按一下 **[連接]** 。 報表伺服器就會出現在 [物件總管] 中。  
+5.  按一下 [ **連接**]。 報表伺服器就會出現在 [物件總管] 中。  
   
 6.  以滑鼠右鍵按一下伺服器節點，設定伺服器屬性和伺服器預設值。 如需詳細資訊，請參閱[設定報表伺服器屬性 &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)。  
   
 ### <a name="to-register-a-report-server"></a>若要註冊報表伺服器  
   
-1.  如果您無法連接至報表伺服器，就表示您沒有存取伺服器的權限或者必須註冊伺服器。 若要註冊此伺服器，請按一下 [檢視] 功能表上的 [已註冊的伺服器]  ，  
+1.  如果您無法連接至報表伺服器，就表示您沒有存取伺服器的權限或者必須註冊伺服器。 若要註冊此伺服器，請按一下 [檢視] 功能表上的 [已註冊的伺服器]****，  
   
 2.  按一下 [Reporting Services] 圖示。  
   
-3.  以滑鼠右鍵按一下 [Reporting Services]  ，指向 [新增]  ，然後按一下 [伺服器註冊]  。 就會顯示 [新增伺服器註冊]  對話方塊。  
+3.  以滑鼠右鍵按一下 [Reporting Services]****，指向 [新增]****，然後按一下 [伺服器註冊]****。 就會顯示 [新增伺服器註冊]**** 對話方塊。  
   
-4.  針對 [伺服器名稱]  ，輸入一個值。 您必須指定的值會因伺服器模式而不同：  
+4.  針對 [伺服器名稱]****，輸入一個值。 您必須指定的值會因伺服器模式而不同：  
   
-    -   若為原生模式報表伺服器，請輸入報表伺服器執行個體的名稱。 報表伺服器執行個體名稱以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱為基礎。 根據預設，本機報表伺服器執行個體的執行個體名稱就是電腦名稱。 如果您將報表伺服器安裝為具名執行個體，請使用此語法來指定伺服器：\<伺服器名稱>[\\<執行個體名稱\>]  。  
+    -   若為原生模式報表伺服器，請輸入報表伺服器執行個體的名稱。 報表伺服器執行個體名稱以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱為基礎。 根據預設，本機報表伺服器執行個體的執行個體名稱就是電腦名稱。 如果您將報表伺服器安裝為已命名的實例，請使用此語法來指定伺服器： * \<servername>\\ [<\>instancename]*。  
   
-    -   若為以 SharePoint 整合模式執行的報表伺服器，要連接的伺服器就是與報表伺服器連接的 SharePoint 網站。 連接至 SharePoint 網站是必要的，如此您才能夠檢視控制報表伺服器內容和作業之存取權的權限等級。 您可以在網站集合中指定任何網站。 下列範例說明語法： http://mysharepointsite 。  
+    -   若為以 SharePoint 整合模式執行的報表伺服器，要連接的伺服器就是與報表伺服器連接的 SharePoint 網站。 連接至 SharePoint 網站是必要的，如此您才能夠檢視控制報表伺服器內容和作業之存取權的權限等級。 您可以在網站集合中指定任何網站。 下列範例說明語法：http://mysharepointsite。  
   
-5.  對於 [驗證]  ，請選取要用於存取 Web 伺服器的驗證模式。 您必須選擇報表伺服器正在使用的驗證模式。  
+5.  對於 [驗證]****，請選取要用於存取 Web 伺服器的驗證模式。 您必須選擇報表伺服器正在使用的驗證模式。  
   
-    -   如果您使用預設的安全性，請選擇 [Windows 驗證]  。  
+    -   如果您使用預設的安全性，請選擇 [Windows 驗證]****。  
   
-    -   如果您安裝並部署了自訂安全性延伸模組，請選擇 [表單驗證]  。  
+    -   如果您安裝並部署了自訂安全性延伸模組，請選擇 [表單驗證]****。  
   
-    -   如果您將報表伺服器設定為使用基本驗證，請選擇 [基本驗證]  。  
+    -   如果您將報表伺服器設定為使用基本驗證，請選擇 [基本驗證]****。  
   
-    -   如果報表伺服器是針對 SharePoint 整合模式所設定，請選擇 [Windows 驗證]  。  
+    -   如果報表伺服器是針對 SharePoint 整合模式所設定，請選擇 [Windows 驗證]****。  
   
-6.  按一下 [測試]  來確認連線。  
+6.  按一下 [測試]**** 來確認連線。  
   
-7.  出現提示時，請按一下 [確定]  ，然後按一下 [儲存]  。  
+7.  出現提示時，請按一下 [確定]****，然後按一下 [儲存]****。  
   
 ## <a name="connection-syntax-and-permissions"></a>連接語法和權限  
  下表將摘要列出執行特定作業所需的連接語法、作業和權限。  
   
- 當您在 [連線到伺服器]  對話方塊中，將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 指定為 [伺服器類型] 時，就可以指定報表伺服器名稱或 Web 服務的端點。  
+ 當您在 [連線到伺服器][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** 對話方塊中，將 ** 指定為 [伺服器類型] 時，就可以指定報表伺服器名稱或 Web 服務的端點。  
   
-|連接至|工作|Permissions|  
+|連接至|工作|權限|  
 |----------------|-----------|-----------------|  
-|原生模式報表伺服器 (當做預設或具名執行個體連接)：<br /><br /> \<伺服器名稱>\<_執行個體><br /><br /> 報表伺服器的連接是透過報表伺服器 WMI 提供者建立的。|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。<br /><br /> 建立和管理共用排程。<br /><br /> 建立、修改或刪除角色定義。|指派給系統管理員角色。|  
-|原生模式報表伺服器 (透過報表伺服器 Web 服務的端點，當做預設或具名執行個體連接)：<br /><br /> http://\<servername>/reportserver<br /><br /> 指定報表伺服器的 URL 會提供連接至報表伺服器的替代方式。|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。<br /><br /> 建立和管理共用排程。<br /><br /> 建立、修改或刪除角色定義。|指派給系統管理員角色。|  
-|SharePoint 整合模式報表伺服器 (透過 SharePoint 網站連接)：<br /><br /> http://\<webserver>/\<SharePointSite>|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。<br /><br /> 建立和管理針對您所連接之網站定義的共用排程。<br /><br /> 檢視針對您所連接之網站定義的權限等級。|您所連接之 SharePoint 網站的完整控制權限等級。|  
-|SharePoint 整合模式報表伺服器 (透過報表伺服器執行個體的名稱連接)：<br /><br /> \<伺服器名稱>\<_執行個體>|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。|與報表伺服器整合之 SharePoint 網站的完整控制權限等級。<br /><br /> 請注意，當您連接至報表伺服器而非 SharePoint 網站時，您可以執行的工作數目會大幅減少。 這是因為報表伺服器只能傳回在報表伺服器資料庫 (而非 SharePoint 組態和內容資料庫) 中儲存或管理的應用程式資料。|  
+|原生模式報表伺服器 (當做預設或具名執行個體連接)：<br /><br /> 
+  \<伺服器名稱>\<_執行個體><br /><br /> 報表伺服器的連接是透過報表伺服器 WMI 提供者建立的。|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。<br /><br /> 建立和管理共用排程。<br /><br /> 建立、修改或刪除角色定義。|指派給系統管理員角色。|  
+|原生模式報表伺服器 (透過報表伺服器 Web 服務的端點，當做預設或具名執行個體連接)：<br /><br /> HTTP://\<servername>/reportserver<br /><br /> 指定報表伺服器的 URL 會提供連接至報表伺服器的替代方式。|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。<br /><br /> 建立和管理共用排程。<br /><br /> 建立、修改或刪除角色定義。|指派給系統管理員角色。|  
+|SharePoint 整合模式報表伺服器 (透過 SharePoint 網站連接)：<br /><br /> HTTP://\<web 伺服器>\</SharePointSite>|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。<br /><br /> 建立和管理針對您所連接之網站定義的共用排程。<br /><br /> 檢視針對您所連接之網站定義的權限等級。|您所連接之 SharePoint 網站的完整控制權限等級。|  
+|SharePoint 整合模式報表伺服器 (透過報表伺服器執行個體的名稱連接)：<br /><br /> 
+  \<伺服器名稱>\<_執行個體>|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。|與報表伺服器整合之 SharePoint 網站的完整控制權限等級。<br /><br /> 請注意，當您連接至報表伺服器而非 SharePoint 網站時，您可以執行的工作數目會大幅減少。 這是因為報表伺服器只能傳回在報表伺服器資料庫 (而非 SharePoint 組態和內容資料庫) 中儲存或管理的應用程式資料。|  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [SQL Server Management Studio 中的 Reporting Services &#40;SSRS&#41;](reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [&#40;SSRS Configuration Manager 設定報表伺服器資料庫連接&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [SQL Server Management Studio &#40;SSRS&#41;中的 Reporting Services](reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

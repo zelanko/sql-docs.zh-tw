@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875676"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>還原交易記錄備份 (SQL Server)
@@ -33,9 +33,9 @@ ms.locfileid: "62875676"
   
 -   **開始之前：**  
   
-     [必要條件](#Prerequisites)  
+     [先決條件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要還原交易記錄備份，使用：**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62875676"
   
          如需交易記錄備份的詳細資訊，請參閱[交易記錄備份 &#40;SQL Server &#41;](transaction-log-backups-sql-server.md) 和[套用交易記錄備份 &#40;SQL Server &#41;](apply-transaction-log-backups-sql-server.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此；因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
@@ -69,7 +69,7 @@ ms.locfileid: "62875676"
   
 #### <a name="to-restore-a-transaction-log-backup"></a>還原交易記錄備份  
   
-1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱展開伺服器樹狀目錄。  
+1.  連線至適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱，以展開伺服器樹狀目錄。  
   
 2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
@@ -96,16 +96,16 @@ ms.locfileid: "62875676"
   
      下表列出方格的各資料行標頭，並描述各標頭的值。  
   
-    |標頭|值|  
+    |頁首|值|  
     |------------|-----------|  
     |**Restore**|選取的核取方塊表示要還原的備份組。|  
     |**名稱**|備份組的名稱。|  
-    |**元件**|備份元件：**資料庫**，**檔案**，或\<空白 > （針對交易記錄）。|  
-    |**[資料庫備份]**|執行備份所涉及的資料庫名稱。|  
+    |**元件**|備份的元件：**資料庫** **檔案**，或 \<空白> (適用於交易記錄)。|  
+    |**Database**|執行備份所涉及的資料庫名稱。|  
     |**開始日期**|備份作業開始的日期和時間，以用戶端的區域設定表示。|  
     |**完成日期**|備份作業完成的日期和時間，以用戶端的區域設定表示。|  
-    |**[第一個 LSN]**|備份組內第一筆交易的記錄序號。 針對檔案備份為空白。|  
-    |**[最後一個 LSN]**|備份組內最後一個交易的記錄序號。 針對檔案備份為空白。|  
+    |**第一個 LSN**|備份組內第一筆交易的記錄序號。 針對檔案備份為空白。|  
+    |**最後一個 LSN**|備份組內最後一個交易的記錄序號。 針對檔案備份為空白。|  
     |**檢查點 LSN**|在建立備份時，最近的檢查點之記錄序號。|  
     |**完整 LSN**|最近的完整資料庫備份之記錄序號。|  
     |**Server**|執行備份作業之 Database Engine 執行個體的名稱。|  
@@ -114,7 +114,7 @@ ms.locfileid: "62875676"
     |**位置**|備份組在磁碟區中的位置。|  
     |**到期**|備份組到期的日期和時間。|  
   
-7.  選取下列其中一項：  
+7.  選取下列其中一個：  
   
     -   **時間點**  
   
@@ -128,14 +128,14 @@ ms.locfileid: "62875676"
   
          下表列出方格的各資料行標頭，並描述各標頭的值。  
   
-        |標頭|值|  
+        |頁首|值|  
         |------------|-----------|  
         |\<空白>|顯示選取標示的核取方塊。|  
         |**交易標示**|在認可交易時，由使用者所指定之標示交易的名稱。|  
         |**日期**|認可交易的日期和時間。 交易日期和時間是依照 **msdbgmarkhistory** 資料表中記錄的顯示，而非依照用戶端電腦的日期和時間。|  
         |**說明**|在認可交易時，由使用者所指定之標示交易的描述 (如果有的話)。|  
         |**LSN**|標示之交易的記錄序號。|  
-        |**[資料庫備份]**|認可標示的交易之資料庫的名稱。|  
+        |**Database**|認可標示的交易之資料庫的名稱。|  
         |**使用者名稱**|認可標示的交易之資料庫使用者的名稱。|  
   
 8.  若要檢視或選取進階選項，請按一下 **[選取頁面]** 窗格中的 **[選項]** 。  
@@ -146,9 +146,9 @@ ms.locfileid: "62875676"
   
          將發行資料庫還原至並非建立該資料庫的伺服器時，就會保留複寫設定。  
   
-         此選項是僅適用於**回復未認可的交易，讓資料庫保持備妥...** 選項 （稍後會說明），這相當於使用還原備份`RECOVERY`選項。  
+         這個選項只能搭配 [**回復未認可的交易，讓資料庫保持備**妥可用 ...] 選項使用（稍後會說明），這相當於使用`RECOVERY`選項還原備份。  
   
-         核取此選項相當於使用`KEEP_REPLICATION`選項[!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE`陳述式。  
+         核取此選項相當於在`KEEP_REPLICATION` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`語句中使用選項。  
   
     -   **還原每個備份之前先提示**  
   
@@ -162,19 +162,19 @@ ms.locfileid: "62875676"
   
          僅有 **db_owner**、 **dbcreator**或 **系統管理員**的成員可以使用還原資料庫。  
   
-         選取此選項相當於使用`RESTRICTED_USER`選項[!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE`陳述式。  
+         核取此選項相當於在`RESTRICTED_USER` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`語句中使用選項。  
   
 10. 針對 **[復原狀態]** 選項，指定資料庫在還原作業之後的狀態。  
   
     -   **回復未認可的交易，讓資料庫保持備妥可用。無法還原其他交易記錄。(RESTORE WITH RECOVERY)**  
   
-         復原資料庫。 此選項相當於`RECOVERY`選項[!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE`陳述式。  
+         復原資料庫。 此選項相當於`RECOVERY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`語句中的選項。  
   
          只有當您沒有任何要還原的記錄檔時，才選擇這個選項。  
   
     -   **讓資料庫保持不運作，且不回復未認可的交易。可以還原其他交易記錄。(RESTORE WITH NORECOVERY)**  
   
-         讓資料庫處於無法復原狀態，也就是 `RESTORING` 的狀態。 此選項相當於使用`NORECOVERY`選項[!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE`陳述式。  
+         讓資料庫處於無法復原狀態，也就是 `RESTORING` 的狀態。 此選項相當於在`NORECOVERY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`語句中使用選項。  
   
          選擇這個選項時，將無法使用 **[保留複寫設定]** 選項。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "62875676"
   
     -   **讓資料庫保持唯讀模式。恢復未認可的交易，但是將恢復動作儲存在檔案中，以便能夠反轉復原結果。(RESTORE WITH STANDBY)**  
   
-         讓資料庫處於待命狀態。 此選項相當於使用`STANDBY`選項[!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE`陳述式。  
+         讓資料庫處於待命狀態。 此選項相當於在`STANDBY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`語句中使用選項。  
   
          您必須指定待命資料庫檔案，才能選擇此選項。  
   
@@ -291,7 +291,7 @@ GO
   
 -   [備份交易記錄 &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
--   [還原資料庫備份&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [還原資料庫備份 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [在完整復原模式下將資料庫還原至失敗點 &#40;Transact-SQL&#41;](restore-database-to-point-of-failure-full-recovery.md)  
   

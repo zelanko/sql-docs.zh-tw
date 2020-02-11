@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d0efc3d22fcba588c1104d716cbab0f26eff374
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811256"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>進度報表：線上索引作業事件類別
-  進度報表：Online Index Operation 事件類別指出在執行建置程序時，線上索引建置作業的進度。  
+  Progress Report: Online Index Operation 事件類別指出在執行建立程序時，線上索引建立作業的進度。  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>進度報表：Online Index Operation 事件類別資料行  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Progress Report: Online Index Operation 事件類別資料行  
   
 |資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -32,13 +32,13 @@ ms.locfileid: "68811256"
 |BigintData1|`bigint`|插入的資料列數目。|52|是|  
 |BigintData2|`bigint`|0 = 序列計畫，否則為平行執行期間的執行緒識別碼。|53|是|  
 |ClientProcessID|`int`|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供用戶端處理序識別碼，這個資料行就會擴展。|9|是|  
-|DatabaseID|`int`|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在追蹤中擷取 ServerName 資料行，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
+|DatabaseID|`int`|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]如果在追蹤中捕捉到 ServerName 資料行，而且伺服器可供使用，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |DatabaseName|`nvarchar`|正在執行使用者陳述式的資料庫名稱。|35|是|  
 |Duration|`bigint`|事件所花費的時間量 (以百萬分之一秒為單位)。|13|是|  
 |EndTime|`datetime`|線上索引作業完成的時間。|15|是|  
 |EventClass|`int`|事件類別 = 190。|27|否|  
 |EventSequence|`int`|要求中的給定事件順序。|51|否|  
-|EventSubClass|`int`|事件子類別的類型。<br /><br /> 1=開始<br /><br /> 2=階段 1 執行開始<br /><br /> 3=階段 1 執行結束<br /><br /> 4=階段 2 執行開始<br /><br /> 5=階段 2 執行結束<br /><br /> 6=插入的資料列計數<br /><br /> 7=完成<br /><br /> 階段1指的是基底物件 (叢集索引或堆積), 如果索引作業只牽涉到一個非叢集索引, 則為。 當索引建立作業牽涉到原始重建加上額外的非叢集索引時, 會使用第2階段。  例如, 如果物件具有叢集索引和數個非叢集索引, ' rebuild all ' 會重建所有索引。 基底物件 (叢集索引) 會在階段1重建, 然後在第2階段重建所有非叢集索引。|21|是|  
+|EventSubClass|`int`|事件子類別的類型。<br /><br /> 1=開始<br /><br /> 2=階段 1 執行開始<br /><br /> 3=階段 1 執行結束<br /><br /> 4=階段 2 執行開始<br /><br /> 5=階段 2 執行結束<br /><br /> 6=插入的資料列計數<br /><br /> 7=完成<br /><br /> 階段 1 指的是基底物件 (叢集索引或堆積)，或者索引作業只包含一個非叢集索引。 當索引建置作業涉及原始重建加上額外的非叢集索引時，便會使用階段 2。  例如，若物件擁有一個叢集索引和數個非叢集索引，'rebuild all' 會重建所有索引。 階段 1 會重建基底物件 (叢集索引)，然後階段 2 會重建所有非叢集索引。|21|是|  
 |GroupID|`int`|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
 |HostName|`nvarchar`|執行用戶端的電腦名稱。 如果用戶端提供主機名稱，這個資料行就會擴展。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |IndexID|`int`|事件所影響之物件的索引識別碼。|24|是|  

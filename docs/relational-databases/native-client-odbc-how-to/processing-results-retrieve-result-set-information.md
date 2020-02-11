@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2d998dd8b4444298ff67abc8369993d17e26f55
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73780331"
 ---
 # <a name="processing-results---retrieve-result-set-information"></a>處理結果 - 擷取結果集資訊
@@ -33,13 +33,13 @@ ms.locfileid: "73780331"
   
     -   呼叫[SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md)以取得結果資料行的相關資訊。  
   
-     或  
+     Or  
   
     -   呼叫[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)以取得結果資料行的特定描述元資訊。  
   
 ## <a name="see-also"></a>另請參閱  
-[處理結果&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)
+[&#40;ODBC&#41;處理結果](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)
 
-[判斷結果集&#40;ODBC 的特性&#41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
+[判斷結果集的特性 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   
   

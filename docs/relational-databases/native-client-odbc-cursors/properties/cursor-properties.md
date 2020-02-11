@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: baa8d826718572051b1d3002bd660605cb6c44a0
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784232"
 ---
 # <a name="cursor-properties"></a>資料指標屬性
@@ -35,6 +35,6 @@ ms.locfileid: "73784232"
 -   [資料指標交易隔離等級](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [使用資料&#40;指標 ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [&#40;ODBC&#41;使用資料指標](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

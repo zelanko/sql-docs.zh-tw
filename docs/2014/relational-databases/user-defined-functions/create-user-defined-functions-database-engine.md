@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211719"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>建立使用者定義函數 (Database Engine)
@@ -34,9 +34,9 @@ ms.locfileid: "68211719"
   
      [安全性](#Security)  
   
--   **若要建立使用者定義函式：**  
+-   **若要建立使用者定義函數：**  
   
-     [建立純量函式](#Scalar)  
+     [建立純量函數](#Scalar)  
   
      [建立資料表值函式](#TVF)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68211719"
   
 -   使用者定義函數無法傳回多個結果集。 如果您需要傳回多個結果集，請使用預存程序。  
   
--   使用者定義函數中限制錯誤處理。 UDF 不支援 TRY...CATCH@ERROR或 RAISERROR。  
+-   使用者定義函數中限制錯誤處理。 UDF 不支援 [嘗試 ...]CATCH @ERROR或 RAISERROR。  
   
 -   使用者定義函數無法呼叫預存程序，但是可以呼叫擴充預存程序。  
   
@@ -76,12 +76,12 @@ ms.locfileid: "68211719"
   
     -   SEND  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料庫中的 CREATE FUNCTION 權限，以及此函數建立所在之結構描述上的 ALTER 權限。 如果此函數指定使用者定義型別，則需要該型別的 EXECUTE 權限。  
   
-##  <a name="Scalar"></a> 純量函數  
+##  <a name="Scalar"></a>純量函數  
  下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中建立多重陳述式純量函數。 這個函數使用了一個輸入值 `ProductID`，並傳回單一資料值，也就是指定產品的彙總存貨量。  
   
 ```  
@@ -115,7 +115,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
   
 ```  
   
-##  <a name="TVF"></a> 資料表值函式  
+##  <a name="TVF"></a>資料表值函式  
  下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中建立內嵌資料表值函式。 這個函數使用了一個輸入參數，也就是客戶 (商店) 識別碼，並傳回 `ProductID`和 `Name`資料行，以及從年初至今將每項產品銷售給商店的彙總銷售額 `YTD Total` 。  
   
 ```  
@@ -193,7 +193,7 @@ FROM dbo.ufn_FindReports(1);
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用者定義的函式](user-defined-functions.md)   
+ [使用者定義函數](user-defined-functions.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   
   

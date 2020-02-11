@@ -1,5 +1,5 @@
 ---
-title: 移除了 web 助理預存程序 |Microsoft Docs
+title: 已移除 Web 助理預存程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8bca81e9e02cf7f2bfed14b05a5842ca52a6d44d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091037"
 ---
 # <a name="web-assistant-stored-procedures-have-been-removed"></a>已經移除了 Web 助理預存程序
@@ -24,7 +24,7 @@ ms.locfileid: "66091037"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>描述  
- Web 助理預存程序**sp_makewebtask**， **sp_dropwebtask**， **sp_runwebtask**，以及**sp_enumcodepages**已移除。  
+ 已移除 Web 助理預存程式**sp_makewebtask**、 **sp_dropwebtask**、 **sp_runwebtask**和**sp_enumcodepages** 。  
   
 ## <a name="corrective-action"></a>更正動作  
  我們建議您改用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。  

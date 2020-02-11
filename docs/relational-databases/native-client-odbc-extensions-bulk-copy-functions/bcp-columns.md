@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d26f288c857cf44a932a91b250074c36453e2482
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782981"
 ---
 # <a name="bcp_columns"></a>bcp_columns
@@ -44,7 +44,7 @@ RETCODE bcp_columns (
  這是已啟用大量複製的 ODBC 連接控制代碼。  
   
  *nColumns*  
- 這是使用者檔案中的資料行總數。 即使您準備要將資料從使用者檔案大量複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表，而不想複製使用者檔案中的所有資料行，仍然必須將*nColumns*設定為使用者檔案資料行的總數。  
+ 這是使用者檔案中的資料行總數。 即使您準備要將資料從使用者檔案大量複製到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表，而不想複製使用者檔案中的所有資料行，還是必須將*nColumns*設定為使用者檔案資料行的總數。  
   
 ## <a name="returns"></a>傳回值  
  SUCCEED 或 FAIL。  

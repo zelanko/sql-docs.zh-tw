@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 286236ec52f1ebb9e1d5639404a48fa91b24aee2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761345"
 ---
 # <a name="working-with-query-notifications"></a>使用查詢通知
@@ -47,7 +47,7 @@ ms.locfileid: "73761345"
   
  通知只會傳送一次。 如果要持續接到資料變更的通知，必須在處理過每個通知之後重新執行查詢，以建立新的訂閱。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 應用程式通常會使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] [receive](../../../t-sql/statements/receive-transact-sql.md)命令來接收通知，以從與通知選項中指定之服務相關聯的佇列讀取通知。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端應用程式通常會使用[!INCLUDE[tsql](../../../includes/tsql-md.md)] [receive](../../../t-sql/statements/receive-transact-sql.md)命令，從與通知選項中指定之服務相關聯的佇列讀取通知，以接收通知。  
   
 > [!NOTE]  
 >  您必須在需要通知的查詢中限定資料表名稱，例如 `dbo.myTable`。 資料表名稱必須使用兩部分的名稱來加以限定。 如果使用三或四部份的名稱，則訂閱無效。  
@@ -70,16 +70,16 @@ CREATE SERVICE myService ON QUEUE myQueue
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援在資料列集修改時使用取用者通知。 使用者會在資料列集修改的每個階段以及嘗試進行任何變更時收到通知。  
   
 > [!NOTE]  
->  使用**ICommand：： Execute**將通知查詢傳遞至伺服器，是使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者來訂閱查詢通知的唯一有效方法。  
+>  使用**ICommand：： Execute**將通知查詢傳遞至伺服器，是使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者來訂閱查詢通知的唯一有效方法。  
   
 ### <a name="the-dbpropset_sqlserverrowset-property-set"></a>DBPROPSET_SQLSERVERROWSET 屬性集  
- 為了透過 OLE DB 支援查詢通知，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會將下列新屬性新增至 DBPROPSET_SQLSERVERROWSET 屬性集。  
+ 為了透過 OLE DB 支援查詢通知， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會將下列新屬性新增至 DBPROPSET_SQLSERVERROWSET 屬性集。  
   
-|名稱|類型|說明|  
+|名稱|類型|描述|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|查詢通知要維持使用中的秒數。<br /><br /> 預設值為 432000 秒 (5 天)。 最小值為 1 秒，最大值為 2^31-1 秒。|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|通知的訊息文字。 這是使用者定義的，而且沒有預先定義的格式。<br /><br /> 根據預設，字串是空的。 您可以使用 1-2000 個字元指定訊息。|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查詢通知選項。 這些是使用 *name*=*value* 語法在字串中指定。 使用者負責建立此服務以及從佇列讀取通知。<br /><br /> 預設為空字串。|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查詢通知選項。 這些是在*名稱*=*值*語法的字串中指定。 使用者負責建立此服務以及從佇列讀取通知。<br /><br /> 預設值是空字串。|  
   
  無論陳述式是以使用者交易或自動認可執行，或者陳述式在其中執行的交易是否已經認可或回復，系統閱永遠都會認可通知訂閱。 伺服器通知會在發生下列任何無效通知條件時觸發：基礎資料或結構描述變更，或達到逾時期限 (視何者為先)。 通知註冊會在觸發之後立刻刪除。 因此在接到通知後，應用程式必須再進行一次訂閱，才能接到進一步的更新。  
   
@@ -107,7 +107,7 @@ RECEIVE * FROM MyQueue
  如需 DBPROPSET_SQLSERVERROWSET 屬性集的詳細資訊，請參閱資料列[集屬性和行為](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驅動程式  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式透過將三個新屬性新增至[SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)和[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)函數，來支援查詢通知：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式透過將三個新屬性新增至[SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)和[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)函數，來支援查詢通知：  
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
   

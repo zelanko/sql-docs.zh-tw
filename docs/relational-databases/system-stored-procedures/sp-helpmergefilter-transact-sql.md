@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergefilter (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpmergefilter （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5a743b03d379276e6842b72e44d346cc1356cf7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68137692"
 ---
-# <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
+# <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回合併篩選的相關資訊。 這個預存程序執行於任何資料庫的發行者端。  
@@ -39,11 +39,11 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
   
-`[ @article = ] 'article'` 是發行項的名稱。 *發行項*已**sysname**，預設值是 **%** ，它會傳回所有發行項的名稱。  
+`[ @article = ] 'article'`這是發行項的名稱。 發行項是**sysname**，預設值是**%** *，* 它會傳回所有發行項的名稱。  
   
-`[ @filtername = ] 'filtername'` 是要傳回的資訊做為篩選條件的名稱。 *filtername*已**sysname**，預設值是 **%** ，傳回所有發行集的發行項上定義的篩選條件的相關資訊。  
+`[ @filtername = ] 'filtername'`這是要傳回信息的篩選器名稱。 *filtername*是**sysname**，預設值是**%**，它會傳回發行項或發行集所定義之所有篩選的相關資訊。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -51,29 +51,29 @@ sp_helpmergefilter [ @publication= ] 'publication'
 |-----------------|---------------|-----------------|  
 |**join_filterid**|**int**|聯結篩選的識別碼。|  
 |**filtername**|**sysname**|篩選的名稱。|  
-|**聯結發行項名稱**|**sysname**|聯結發行項的名稱。|  
-|**join_filterclause**|**nvarchar(2000)**|限定聯結的篩選子句。|  
+|**join article name**|**sysname**|聯結發行項的名稱。|  
+|**join_filterclause**|**Nvarchar （2000）**|限定聯結的篩選子句。|  
 |**join_unique_key**|**int**|聯結是否基於唯一索引鍵。|  
-|**基底資料表的擁有者**|**sysname**|基底資料表的擁有者名稱。|  
-|**基底資料表名稱**|**sysname**|基底資料表的名稱。|  
-|**聯結資料表的擁有者**|**sysname**|聯結到基底資料表中之資料表的擁有者名稱。|  
-|**聯結資料表名稱**|**sysname**|聯結到基底資料表中的資料表名稱。|  
-|**發行項名稱**|**sysname**|聯結到基底資料表中的資料表發行項名稱。|  
+|**base table owner**|**sysname**|基底資料表的擁有者名稱。|  
+|**base table name**|**sysname**|基底資料表的名稱。|  
+|**join table owner**|**sysname**|聯結到基底資料表中之資料表的擁有者名稱。|  
+|**join table name**|**sysname**|聯結到基底資料表中的資料表名稱。|  
+|**article name**|**sysname**|聯結到基底資料表中的資料表發行項名稱。|  
 |**filter_type**|**tinyint**|合併篩選的類型，它可以是下列項目之一：<br /><br /> **1** = 僅聯結篩選<br /><br /> **2** = 邏輯記錄關聯性<br /><br /> **3** = 兩者|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
  **sp_helpmergefilter**用於合併式複寫中。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色並**db_owner**固定的資料庫角色可以執行**sp_helpmergefilter**。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色和**db_owner**固定資料庫角色的成員，才能夠執行**sp_helpmergefilter**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
- [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
+ [sp_addmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
+ [sp_changemergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [sp_dropmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 65dd737f-81ce-479e-8219-7b1b4d8f57c7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b471dd43b2f787824cafe789ff8737a00d98e8da
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660165"
 ---
 # <a name="context-property-securitycertificate-class"></a>Context 屬性 (SecurityCertificate 類別)
@@ -36,7 +36,7 @@ object.Context [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
+ *目標*  
  代表安全性憑證的 [SecurityCertificate 類別](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
@@ -45,6 +45,6 @@ object.Context [= value]
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定伺服器網路通訊協定和網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [設定伺服器網路通訊協定與網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

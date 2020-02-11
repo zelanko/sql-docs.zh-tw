@@ -11,10 +11,10 @@ ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 47ae80a58f32aab4debb7cd4dde60a1ccf2cdb4a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728499"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 建立模型部署封裝
@@ -58,7 +58,7 @@ ms.locfileid: "73728499"
   
  模型必須存在，才能建立其封裝。 如需詳細資訊，請參閱[建立模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)。  
   
- 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
+ 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>若要使用 MDSModelDeploy 建立模型部署封裝  
   
@@ -82,7 +82,7 @@ ms.locfileid: "73728499"
     MDSModelDeploy listservices  
     ```  
   
-     隨即傳回值的清單，例如 `MDS1, Default Web Site, MDS`。 需要此清單中的第一個值 (此案例中為 `MDS1`)，才能部署模型。  
+     隨即傳回值的清單，例如 `MDS1, Default Web Site, MDS`。 此清單中的第一個值 (此案例中為 `MDS1`) 是部署模型所需的項目。  
   
 5.  若要建立包含模型物件和資料的封裝，請輸入下列命令，其中 *ModelName*、 *VersionName*、 *ServiceName*和 *PackageName* 分別是模型、版本、服務和 .pkg 輸出檔的名稱：  
   
@@ -92,7 +92,7 @@ ms.locfileid: "73728499"
   
      如果您不想要包含資料，請勿使用 `-version` 和 `-includedata` 參數。  
   
-6.  按 Enter 鍵。 當成功建立套件之後，隨即顯示一則訊息，表示「MDSModelDeploy 作業已順利完成」。  
+6.  按 Enter。 當成功建立套件之後，隨即顯示一則訊息，表示「MDSModelDeploy 作業已順利完成」。  
   
 ## <a name="next-steps"></a>後續步驟  
   
@@ -100,6 +100,6 @@ ms.locfileid: "73728499"
   
 ## <a name="see-also"></a>另請參閱  
  [模型部署選項 &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)   
- [部署模型 &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
+ [&#40;Master Data Services 部署模型&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

@@ -14,10 +14,10 @@ ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1c66914b4b661ea3485ae0354c267e7682f5a6a2
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728687"
 ---
 # <a name="business-rules-master-data-services"></a>商務規則 (Master Data Services)
@@ -52,7 +52,7 @@ ms.locfileid: "73728687"
   
 4.  **外部動作**  
   
-5.  **使用者定義的動作指令碼**  
+5.  **使用者定義的動作腳本**  
   
  在這些群組中，將會依照從最低到最高的優先順序來套用動作。 例如，四個不同的規則可能有 **[預設值]** 動作。 發生的 **[預設值]** 動作首先取決於 Web UI 中所指定的優先順序。  
   
@@ -69,18 +69,19 @@ ms.locfileid: "73728687"
 -   商務規則不得包含一個以上的 **[啟動工作流程]** 動作。  
   
 ## <a name="system-settings"></a>系統設定  
- [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中有兩項設定會影響商務規則。 您可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中或直接在 [系統設定] 表格中調整這些設定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
+ 
+  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中有兩項設定會影響商務規則。 您可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中或直接在 [系統設定] 表格中調整這些設定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|建立及發行新的商務規則。|[建立及發行商務規則 &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
+|建立及發行新的商務規則。|[建立和發佈商務規則 &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
 |將多個條件加入至商務規則。|[將多個條件新增至商務規則 &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
-|建立商務規則來要求屬性包含值。|[要求屬性值 &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
-|建立商務規則根據屬性值變更來執行動作。|[根據屬性值變更來起始動作 &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
-|建立商務規則，採用使用者定義指令碼作為條件|[商務規則延伸模組 &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|建立商務規則，採用使用者定義指令碼作為動作|[商務規則延伸模組 &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|建立商務規則來要求屬性包含值。|[需要 &#40;Master Data Services 的屬性值&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
+|建立商務規則根據屬性值變更來執行動作。|[根據屬性值變更起始動作 &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|建立商務規則，採用使用者定義指令碼作為條件|[商務規則延伸 &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|建立商務規則，採用使用者定義指令碼作為動作|[商務規則延伸 &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
 |變更現有商務規則的名稱。|[變更商務規則名稱 &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
 |設定 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在套用商務規則時傳送通知。|[設定商務規則來傳送通知 &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
 |將商務規則套用至特定成員。|[根據商務規則驗證特定成員 &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
@@ -89,7 +90,7 @@ ms.locfileid: "73728687"
   
 ## <a name="related-content"></a>相關內容  
   
--   [Master Data Services 概觀 &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
+-   [Master Data Services 總覽 &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
 -   [版本 &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   

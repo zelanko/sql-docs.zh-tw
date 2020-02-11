@@ -1,5 +1,5 @@
 ---
-title: 使用大型 CLR Udt (OLE DB) |Microsoft Docs
+title: 使用大型 CLR Udt （OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9ee8e8eeb7552d9a4c875a64be85b9b7734b1dc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206658"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>使用大型 CLR UDT (OLE DB)
-  此範例會示範如何從結果集中提取具有大型使用者定義型別的資料列。 如需詳細資訊，請參閱 < [Large CLR User-Defined 類型&#40;OLE DB&#41;](../native-client/ole-db/large-clr-user-defined-types-ole-db.md)。 此範例適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本。  
+  此範例會示範如何從結果集中提取具有大型使用者定義型別的資料列。 如需詳細資訊，請參閱[大型 CLR 使用者定義類型 &#40;OLE DB&#41;](../native-client/ole-db/large-clr-user-defined-types-ole-db.md)。 此範例適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本。  
   
 ## <a name="example"></a>範例  
  此範例包含兩個專案， 其中一個專案從 C# 原始程式碼建立組件 (DLL)。 這個組件包含 CLR 類型。 將會在資料庫中加入一個資料表。 資料表中的資料行屬於組件中所定義的類型，根據預設，此範例將會使用 master 資料庫。 第二個專案是原生的 C 應用程式，可從資料表讀取資料。  

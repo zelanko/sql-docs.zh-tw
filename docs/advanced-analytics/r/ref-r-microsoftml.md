@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 450091bba39cf10e551b8da5e62993ca676c64af
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707924"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (SQL Server 中的 R 程式庫)
@@ -31,14 +31,14 @@ ms.locfileid: "73707924"
 **MicrosoftML** 程式庫以 R 3.4.3 為基礎，且只有當您安裝下列其中一個Microsoft 產品或下載項目時才會提供：
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-+ [SQL Server 機器學習服務](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 或更新版本](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R 用戶端](set-up-a-data-science-client.md)
 
 > [!NOTE]
 > 在 SQL Server 2017 中，完整產品發行版本僅適用於 Windows。 在 [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md) 中，**MicrosoftML** 則同時支援 Windows 和 Linux。
 
-## <a name="package-dependencies"></a>套件依存性
+## <a name="package-dependencies"></a>套件相依性
 
 **MicrosoftML** 中的演算法在下列方面倚賴 [RevoScaleR](ref-r-revoscaler.md)：
 
@@ -55,7 +55,7 @@ ms.locfileid: "73707924"
 
 ## <a name="1-machine-learning-algorithms"></a>1-機器學習演算法
 
-| 函數名稱 | Description |
+| 函式名稱 | 描述 |
 |---------------|-------------|
 |[rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees) | FastRank 的實作，MART 梯度提升演算法的有效實作。  |
 |[rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | 使用 [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees) 的隨機樹系與分位數迴歸樹系實作。  |
@@ -69,7 +69,7 @@ ms.locfileid: "73707924"
 
 ## <a name="2-transformation-functions"></a>2-轉換函式
 
-| 函數名稱 | Description |
+| 函式名稱 | 描述 |
 |---------------|-------------|
 |[concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat) | 從多個資料行建立單一向量值資料行的轉換。  |
 |[categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical) | 搭配字典使用類別目錄轉換來建立指標向量。  |
@@ -87,7 +87,7 @@ ms.locfileid: "73707924"
 
 ## <a name="3-scoring-and-training-functions"></a>3-評分與定型函式
 
-| 函數名稱 | Description |
+| 函式名稱 | 描述 |
 |---------------|-------------|
 |[rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict) | 從 SQL Server、使用預存程序或從啟用即時評分功能的 R 程式碼來執行評分程式庫，以提供更快的預測效能。|
 |[rxFeaturize](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfeaturize) | 將資料從輸入資料集轉換至輸出資料集。|
@@ -96,7 +96,7 @@ ms.locfileid: "73707924"
 
 ## <a name="4-loss-functions-for-classification-and-regression"></a>4-分類與迴歸的損失函式
 
-| 函數名稱 | Description |
+| 函式名稱 | 描述 |
 |---------------|-------------|
 |[expLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | 指數分類損失函式的規格。 | 
 |[logLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | 記錄分類損失函式的規格。  |
@@ -107,14 +107,14 @@ ms.locfileid: "73707924"
 
 ## <a name="5-feature-selection-functions"></a>5-功能選取函式
 
-| 函數名稱 | Description |
+| 函式名稱 | 描述 |
 |---------------|-------------|
 |[minCount](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mincount) | 計數模式中特徵選取的規格。 |
 |[mutualInformation](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mutualinformation) | 相互資訊模式中特徵選取的規格。 |
 
 ## <a name="6-ensemble-modeling-functions"></a>6-整體模型化函式
 
-| 函數名稱 | Description |
+| 函式名稱 | 描述 |
 |---------------|-------------|
 |[fastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/fasttrees) | 建立包含可使用 [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble) 將「快速樹狀結構」模型定型之函式名稱與引數的清單。|
 |[fastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | 建立包含可使用 [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble) 將「快速樹系」模型定型之函式名稱與引數的清單。|
@@ -124,14 +124,14 @@ ms.locfileid: "73707924"
 
 ## <a name="7-neural-networking-functions"></a>7-類神經網路函式
 
-| 函數名稱 | Description |
+| 函式名稱 | 描述 |
 |---------------|-------------|
 |[optimizer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | 指定 [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) 機器學習演算法的最佳化演算法。|
 
 
 ## <a name="8-package-state-functions"></a>8-套件狀態函式
 
-| 函數名稱 | Description |
+| 函式名稱 | 描述 |
 |---------------|-------------|
 |[rxHashEnv](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxHashEnv) | 用來儲存全套件狀態的環境物件。 |
 

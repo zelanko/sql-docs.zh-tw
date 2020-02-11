@@ -1,5 +1,5 @@
 ---
-title: 資料行和資料表 Append 方法、 Name 屬性範例 （VC + +） |Microsoft Docs
+title: Columns 和 Tables Append 方法、Name 屬性範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6f6a51569d83e1ac0c8e6be6d756b70ac85ece51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d0807dc58b9e51b593a3ac9ea1375c47b585fce
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966853"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76910518"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Columns 和 Tables Append 方法、Name 屬性範例 (VC++)
 下列程式碼示範如何建立新的資料表。  
@@ -74,7 +74,7 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...."<< endl;  
+      cout << "Error occurred in include files...."<< endl;  
    }  
   
    ::CoUninitialize();  
@@ -82,6 +82,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Append 方法 (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 方法 (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Append 方法（ADOX Columns）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append 方法（ADOX Tables）](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Name 屬性 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)

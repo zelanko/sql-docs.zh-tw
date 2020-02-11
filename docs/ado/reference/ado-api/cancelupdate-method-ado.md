@@ -1,5 +1,5 @@
 ---
-title: CancelUpdate 方法 (ADO) |Microsoft Docs
+title: CancelUpdate 方法（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa9e680e1626311f2cc10aa7c79fb583841fbc38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920119"
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate 方法 (ADO)
-取消的現有或新資料列所做的變更[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)物件，或[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)集合[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件，然後再呼叫[更新](../../../ado/reference/ado-api/update-method.md)方法。  
+在呼叫[Update](../../../ado/reference/ado-api/update-method.md)方法之前，取消對[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的目前或新資料列或[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件的[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合所做的任何變更。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,28 +35,28 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
 ## <a name="remarks"></a>備註  
   
 ## <a name="recordset"></a>資料錄集  
- 使用**CancelUpdate**方法取消目前的資料列所做的變更，或捨棄新加入的資料列。 您無法取消目前的資料列或新的資料列的變更之後您呼叫,**更新**方法，除非所做的變更可以復原與交易的一部分[RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法或組件批次更新。 您可以在批次更新的情況下，取消**更新**具有**CancelUpdate**或是[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法。  
+ 使用**CancelUpdate**方法可取消對目前資料列所做的任何變更，或捨棄新加入的資料列。 您無法在呼叫**Update**方法之後取消對目前資料列或新資料列的變更，除非變更是您可以使用[RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法復原的交易之一部分，或是批次更新的一部分。 在批次更新的情況下，您可以使用**CancelUpdate**或[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法來取消**更新**。  
   
- 如果您要新增新的資料列，當您呼叫**CancelUpdate**方法，目前的資料列會成為之前為目前的資料列[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)呼叫。  
+ 當您呼叫**CancelUpdate**方法時，如果要加入新的資料列，目前的資料列會成為[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)呼叫之前的目前資料列。  
   
- 如果您處於編輯模式，而且想要移出目前的記錄 (例如，藉由使用[移動](../../../ado/reference/ado-api/move-method-ado.md)， [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)，或[關閉](../../../ado/reference/ado-api/close-method-ado.md)方法)，您可以使用**CancelUpdate**取消任何暫止的變更。 若要這樣做，如果更新不能已成功地公佈到資料來源。 例如，嘗試刪除失敗，因為參考完整性違規會導致**Recordset**處於編輯模式，在呼叫之後[刪除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)。  
+ 如果您處於編輯模式，而且想要移出目前的記錄（例如，藉由使用[move](../../../ado/reference/ado-api/move-method-ado.md)、 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)或[Close](../../../ado/reference/ado-api/close-method-ado.md)方法），您可以使用**CancelUpdate**來取消任何暫止的變更。 如果更新無法成功張貼到資料來源，您可能需要執行此動作。 例如，因為參考完整性違規而失敗的嘗試刪除，會在呼叫[delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)之後讓**記錄集**處於編輯模式。  
   
-## <a name="record"></a>記錄  
- **CancelUpdate**方法會取消任何暫止的插入或刪除[欄位](../../../ado/reference/ado-api/field-object.md)物件，並取消擱置中的現有欄位的更新並將它們還原至其原始值。 [狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)屬性中的所有欄位**欄位**集合設為**adFieldOK**。  
+## <a name="record"></a>Record  
+ **CancelUpdate**方法會取消任何暫止的[欄位](../../../ado/reference/ado-api/field-object.md)物件插入或刪除動作，並取消現有欄位的暫止更新，並將它們還原成其原始值。 **Fields**集合中所有欄位的[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)屬性會設定為**adFieldOK**。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
   
 |||  
 |-|-|  
 |[Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [Update 和 CancelUpdate 方法範例 (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
- [Update 和 CancelUpdate 方法範例 （VC + +）](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
- [AddNew 方法 (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [Cancel 方法 (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [Cancel 方法 (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
- [CancelBatch 方法 (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [CancelUpdate 方法 (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
+ [Update 和 CancelUpdate 方法範例（VB）](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
+ [Update 和 CancelUpdate 方法範例（VC + +）](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
+ [AddNew 方法（ADO）](../../../ado/reference/ado-api/addnew-method-ado.md)   
+ [Cancel 方法（ADO）](../../../ado/reference/ado-api/cancel-method-ado.md)   
+ [Cancel 方法（RDS）](../../../ado/reference/rds-api/cancel-method-rds.md)   
+ [CancelBatch 方法（ADO）](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
+ [CancelUpdate 方法（RDS）](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
  [EditMode 屬性](../../../ado/reference/ado-api/editmode-property.md)   
  [Update 方法](../../../ado/reference/ado-api/update-method.md)

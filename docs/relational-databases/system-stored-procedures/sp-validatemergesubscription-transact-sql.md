@@ -16,10 +16,10 @@ ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 932a54323ad8f6ffafbe8ff8f4a7f3c2dc58b0e2
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632982"
 ---
 # <a name="sp_validatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
@@ -40,32 +40,32 @@ sp_validatemergesubscription [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'` 是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
   
-`[ @subscriber = ] 'subscriber'` 是訂閱者的名稱。 *訂閱者*是**sysname**，沒有預設值。  
+`[ @subscriber = ] 'subscriber'`這是訂閱者的名稱。 *訂閱者*是**sysname**，沒有預設值。  
   
-`[ @subscriber_db = ] 'subscriber_db'` 是訂閱資料庫的名稱。 *subscriber_db*是**sysname**，沒有預設值。  
+`[ @subscriber_db = ] 'subscriber_db'`這是訂閱資料庫的名稱。 *subscriber_db*是**sysname**，沒有預設值。  
   
-`[ @level = ] 'level'` 是要執行的驗證類型。 *層級*是**Tinyint**，沒有預設值。 層級可以是下列值之一。  
+`[ @level = ] 'level'`這是要執行的驗證類型。 *層級*是**Tinyint**，沒有預設值。 層級可以是下列值之一。  
   
 |層級值|描述|  
 |-----------------|-----------------|  
 |**1**|僅驗證資料列計數。|  
 |**2**|資料列計數及總和檢查碼驗證。|  
-|**3**|資料列計數及二進位總和檢查碼驗證。|  
+|**第**|資料列計數及二進位總和檢查碼驗證。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **sp_validatemergesubscription**用於合併式複寫中。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_validatemergesubscription**。  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [驗證](../../relational-databases/replication/validate-data-at-the-subscriber.md)複寫的資料   
- [sp_validatemergepublication &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  
+ [驗證複寫的資料](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
+ [sp_validatemergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  
   
   

@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60a96db6a7568c2af22242f10f96e7a2abf13937
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637838"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>安裝單機版報表產生器 (報表產生器)
-  您可以從[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=53613)的 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]] 功能套件安裝報表產生器，或在 [公用資料夾] 之類的位置下載 ReportBuilder3_x86 .msi （報表產生器的 Windows Installer 套件）。  
+  您可以從[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=53613)的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]功能套件安裝報表產生器，或從已下載 ReportBuilder3_x86 .msi （用於報表產生器的 Windows Installer 封裝）的位置（例如公用資料夾）。  
   
  您也可以執行報表產生器的命令列安裝，並提供引數來自訂安裝。 除了標準的 MSI 內建參數以外，您還可以使用報表產生器所提供的自訂參數：RBINSTALLDIR 和 REPORTSERVERURL。 RBINSTALLDIR 會指定報表產生器的根安裝資料夾。 REPORTSERVERURL 會指定報表產生器用來在伺服器上儲存報表的預設報表伺服器。  
   
@@ -45,25 +45,25 @@ ms.locfileid: "73637838"
   
 5.  [Microsoft SQL Server 報表產生器精靈] 隨即啟動。  
   
-6.  在 [**歡迎使用安裝精靈]** 頁面上，按 **[下一步]** 。  
+6.  在 [**歡迎使用安裝精靈]** 頁面上，按 **[下一步]**。  
   
-7.  閱讀 [**授權合約**] 頁面上的合約，然後選取 [**我接受授權合約中的條款**] 選項。 按 [下一步]。  
+7.  閱讀 [**授權合約**] 頁面上的合約，然後選取 [**我接受授權合約中的條款**] 選項。 按 [下一步]  。  
   
-8.  提供您的個人姓名和公司名稱。 按 [下一步]。  
+8.  提供您的個人姓名和公司名稱。 按 [下一步]  。  
   
-9. 在 [**特徵選取**] 頁面上，選擇性地按一下 **[流覽] 或 [** **磁片成本**]。 按 [下一步]。  
+9. 在 [**特徵選取**] 頁面上，選擇性地按一下 **[流覽] 或 [** **磁片成本**]。 按 [下一步]  。  
   
     -   按一下 **[流覽]** 以查看報表產生器的預設位置，並加以更新。  
   
         > [!NOTE]  
-        >  報表產生器的預設安裝資料夾是 \<磁片磁碟機 > Program Files\Microsoft SQL Server。  
+        >  報表產生器的預設安裝資料夾是\<Drive>Program Files\Microsoft SQL Server。  
   
     -   按一下 [**磁片成本**] 以瞭解報表產生器使用多少磁碟空間。  
   
         > [!NOTE]  
         >  如果磁碟區沒有足夠的可用磁碟空間數量，該磁碟區就會反白顯示。  
   
-10. 在 **[預設的目標伺服器]** 頁面上，選擇性地提供目標報表伺服器的 URL (如果它與預設值不同的話)。 按 [下一步]。  
+10. 在 **[預設的目標伺服器]** 頁面上，選擇性地提供目標報表伺服器的 URL (如果它與預設值不同的話)。 按 [下一步]  。  
   
     > [!NOTE]  
     >  如果您計畫在報表產生器連接至報表伺服器時使用它，此時提供伺服器的 URL 比較方便。 不過，當您在報表產生器中工作時，也可以從 [**選項**] 對話方塊執行此動作。  
@@ -78,25 +78,25 @@ ms.locfileid: "73637838"
   
      [Microsoft SQL Server 報表產生器精靈] 隨即啟動。  
   
-3.  在 [**歡迎使用安裝精靈]** 頁面上，按 **[下一步]** 。  
+3.  在 [**歡迎使用安裝精靈]** 頁面上，按 **[下一步]**。  
   
-4.  閱讀 [**授權合約**] 頁面上的合約，然後選取 [**我接受授權合約中的條款**] 選項。 按 [下一步]。  
+4.  閱讀 [**授權合約**] 頁面上的合約，然後選取 [**我接受授權合約中的條款**] 選項。 按 [下一步]  。  
   
-5.  提供您的個人姓名和公司名稱。 按 [下一步]。  
+5.  提供您的個人姓名和公司名稱。 按 [下一步]  。  
   
-6.  在 [**特徵選取**] 頁面上，選擇性地按一下 **[流覽] 或 [** **磁片成本**]。 按 [下一步]。  
+6.  在 [**特徵選取**] 頁面上，選擇性地按一下 **[流覽] 或 [** **磁片成本**]。 按 [下一步]  。  
   
     -   按一下 **[流覽]** 以查看報表產生器的預設位置，並加以更新。  
   
         > [!NOTE]  
-        >  報表產生器的預設安裝資料夾是 \<磁片磁碟機 > Program Files\Microsoft SQL Server。  
+        >  報表產生器的預設安裝資料夾是\<Drive>Program Files\Microsoft SQL Server。  
   
     -   按一下 [**磁片成本**] 以瞭解報表產生器使用多少磁碟空間。  
   
         > [!NOTE]  
         >  如果磁碟區沒有足夠的可用磁碟空間數量，該磁碟區就會反白顯示。  
   
-7.  在 **[預設的目標伺服器]** 頁面上，選擇性地提供目標報表伺服器的 URL (如果它與預設值不同的話)。 按 [下一步]。  
+7.  在 **[預設的目標伺服器]** 頁面上，選擇性地提供目標報表伺服器的 URL (如果它與預設值不同的話)。 按 [下一步]  。  
   
     > [!NOTE]  
     >  如果您計畫在報表產生器連接至報表伺服器時使用它，此時提供伺服器的 URL 比較方便。 不過，當您在報表產生器中工作時，也可以從 [**選項**] 對話方塊執行此動作。  
@@ -111,7 +111,7 @@ ms.locfileid: "73637838"
   
 3.  按一下 [儲存]。  
   
-4.  （選擇性）流覽至要儲存的位置，確認 **另存**新檔 選項是**Windows Installer 封裝**，然後按一下 **儲存**。  
+4.  （選擇性）流覽至要儲存的位置，確認 [**另存**新檔] 選項是**Windows Installer 封裝**]，然後按一下 [**儲存**]。  
   
 5.  在 **[開始]** 功能表上，按一下 **[執行]** 。  
   
@@ -131,6 +131,6 @@ ms.locfileid: "73637838"
   
 ## <a name="see-also"></a>另請參閱  
  [安裝、卸載和報表產生器支援](../install-uninstall-and-report-builder-support.md)   
- [卸載報表產生器&#40;的獨立版本報表產生器&#41;](install-report-builder.md)  
+ [將獨立版本的報表產生器 &#40;報表產生器卸載&#41;](install-report-builder.md)  
   
   

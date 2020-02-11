@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 1a0d50e485f0e8f48de11b2e5a3c27c9f9be047e
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401236"
 ---
 # <a name="create-an-aps-domain-administrator"></a>建立 AP 網域系統管理員
@@ -26,7 +26,7 @@ ms.locfileid: "74401236"
   
 1.  使用現有的設備網域系統管理員帳戶登入作用中的 AD 節點 **（_設備\_網域_-AD01**或**_設備\_網域_-AD02**）。  
   
-2.  在 [開始] 功能表上，按一下 **[執行]**。 在 [**開啟**] 方塊中，輸入**dsa.msc**。 按一下 [確定]****。  
+2.  在 [開始] 功能表上，按一下 **[執行]** 。 在 [**開啟**] 方塊中，輸入**dsa.msc**。 按一下 [確定]  。  
   
 3.  在 [ **Active Directory 使用者和電腦**] 程式中，以滑鼠右鍵按一下 [**使用者**]，指向 [**新增**]，然後按一下 [**使用者**]。  
   
@@ -43,9 +43,9 @@ ms.locfileid: "74401236"
   
 6.  在 [隸屬於]**** 索引標籤上，按一下 [新增]****。  
   
-    輸入**Domain Admins;PdwControlNodeAccess** ，然後按一下 [**檢查名稱**]。 按一下 [確定]****。  
+    輸入**Domain Admins;PdwControlNodeAccess** ，然後按一下 [**檢查名稱**]。 按一下 [確定]  。  
   
-    這會將新的使用者新增至**Domain Admins**群組和**PdwControlNodeAccess**群組。 按一下 [確定]****。  
+    這會將新的使用者新增至**Domain Admins**群組和**PdwControlNodeAccess**群組。 按一下 [確定]  。  
   
 ## <a name="see-also"></a>另請參閱  
 [啟動 Configuration Manager &#40;分析平臺系統&#41;](launch-the-configuration-manager.md)  

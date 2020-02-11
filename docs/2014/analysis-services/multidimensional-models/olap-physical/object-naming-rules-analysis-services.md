@@ -1,5 +1,5 @@
 ---
-title: 物件命名規則 (Analysis Services) |Microsoft Docs
+title: 物件命名規則（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530888"
 ---
 # <a name="object-naming-rules-analysis-services"></a>物件命名規則 (Analysis Services)
@@ -27,11 +27,13 @@ ms.locfileid: "69530888"
   
  雖然您可以手動指定它，但是在建立物件時通常會自動產生 `ID`。 一旦您開始建立模型之後，絕對不要變更 `ID`。 整個模型中的所有物件參考都是根據 `ID`。 因此，變更 `ID` 很容易導致模型損毀。  
   
- `DataSource` 和 `DataSourceView` 物件有顯著的命名慣例例外。 `DataSource` 識別碼可以設定為一個非唯一的點 (.)，當做目前資料庫的參考。 第二個例外狀況為 `DataSourceView`，它會遵守針對 .NET Framework 中的 `DataSet` 物件所定義的命名慣例，其中會使用 `Name` 當做識別碼。  
+ 
+  `DataSource` 和 `DataSourceView` 物件有顯著的命名慣例例外。 
+  `DataSource` 識別碼可以設定為一個非唯一的點 (.)，當做目前資料庫的參考。 第二個例外狀況為 `DataSourceView`，它會遵守針對 .NET Framework 中的 `DataSet` 物件所定義的命名慣例，其中會使用 `Name` 當做識別碼。  
   
  下列規則會套用到 `Name` 和 `ID` 屬性。  
   
--   名稱不區分大小寫。 您不能在相同的資料庫中有名為 "sales" 的 cube, 另一個名稱為 "Sales"。  
+-   名稱不區分大小寫。 您不能在相同的資料庫中有名為 "sales" 的 cube，另一個名稱為 "Sales"。  
   
 -   物件名稱中不允許有任何開頭或尾端空白，但是您可以在名稱中內嵌空白。 開頭和尾端空白會以隱含方式加以修剪。 這同樣適用於物件的 `Name` 和 `ID`。  
   
@@ -44,7 +46,7 @@ ms.locfileid: "69530888"
   
  如果是資料庫相容性設定為 1103 的表格式模型，對於不符合擴充字元要求及某些用戶端應用程式命名慣例的特定物件而言，驗證規則已經鬆綁。 符合這些準則的資料庫受限於比較不嚴謹的驗證規則。 在此情況下，有可能物件名稱包含受限的字元而且依然通過驗證。  
   
- **保留文字**  
+ **保留字**  
   
 -   AUX  
   
@@ -66,15 +68,15 @@ ms.locfileid: "69530888"
   
  下表列出特定物件的無效字元。  
   
-|Object|無效字元|  
+|Object|無效的字元|  
 |------------|------------------------|  
-|`Server`|在命名伺服器物件時要遵守 Windows 伺服器命名慣例。 如需詳細資訊, 請參閱[命名慣例 (Windows)](/windows/desktop/DNS/naming-conventions) 。|  
+|`Server`|在命名伺服器物件時要遵守 Windows 伺服器命名慣例。 如需詳細資訊，請參閱[命名慣例（Windows）](/windows/desktop/DNS/naming-conventions) 。|  
 |`DataSource`| `: / \ * \| ? " () [] {} <>` |  
-|`Level` 或 `Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
-|`Dimension` 或 `Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
+|`Level`或`Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
+|`Dimension`或`Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
 |所有其他物件|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} < >````|  
   
- **例外允許保留的字元時**  
+ **例外狀況：當允許保留的字元時**  
   
  如前所述，具有特定模式和相容性層級的資料庫可以擁有包含保留字元的物件名稱。 如果是允許使用擴充字元的表格式資料庫 (1103 或更高層級)，維度屬性、階層、層級、量值和 KPI 物件名稱可以包含保留字元：  
   
@@ -89,7 +91,7 @@ ms.locfileid: "69530888"
   
 ## <a name="see-also"></a>另請參閱  
  [MDX 保留字](/sql/mdx/mdx-reserved-words)   
- [翻譯&#40;Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
- [XML for Analysis 合規&#40;性 XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
+ [翻譯 &#40;Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
+ [XML for Analysis 相容性 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

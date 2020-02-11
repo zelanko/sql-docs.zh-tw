@@ -1,5 +1,5 @@
 ---
-title: 參數值顯示隱藏的資料集，針對多維度資料 （報表產生器及 SSRS） |Microsoft Docs
+title: 針對多維度資料的參數值顯示隱藏的資料集（報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 92db49f8f6a112f8466fc81527b214bad7252f82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107061"
 ---
 # <a name="show-hidden-datasets-for-parameter-values-for-multidimensional-data-report-builder-and-ssrs"></a>針對多維度資料的參數值顯示隱藏的資料集 (報表產生器及 SSRS)
@@ -39,6 +39,6 @@ ms.locfileid: "66107061"
  [查詢設計工具 &#40;報表產生器&#41;](../query-designers-report-builder.md)   
  [Reporting Services 查詢設計工具](../reporting-services-query-designers.md)   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-datasets-ssrs.md)  
+ [將資料加入報表 &#40;報表產生器和 SSRS&#41;](report-datasets-ssrs.md)  
   
   

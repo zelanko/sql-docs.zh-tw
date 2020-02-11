@@ -15,16 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774741"
 ---
 # <a name="password-expired"></a>密碼已過期
-  當您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證連接到具有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的伺服器，而您提供的密碼正確但是已過期時，就會出現此訊息。 當您使用新的帳戶連接到伺服器，且該帳戶是以 [使用者必須在下次登入時變更密碼]  選項建立時，也會出現此訊息。 使用 [密碼已過期]  對話方塊來變更此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證登入的密碼。  
+  當您[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]驗證連接到伺服器，而且提供的密碼正確但已過期時，就會出現。 當您使用新的帳戶連接到伺服器，且該帳戶是以 [使用者必須在下次登入時變更密碼]**** 選項建立時，也會出現此訊息。 使用 [密碼已過期]**** 對話方塊來變更此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證登入的密碼。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **登入**  
  顯示您使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入。  
   
@@ -38,6 +38,6 @@ ms.locfileid: "62774741"
  [增強式密碼](../relational-databases/security/strong-passwords.md)   
  [選擇驗證模式](../relational-databases/security/choose-an-authentication-mode.md)   
  [變更伺服器驗證模式](configure-windows/change-server-authentication-mode.md)   
- [變更 SQL Server 所使用之帳戶的密碼 &#40;SQL Server 組態管理員&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
+ [變更 SQL Server &#40;SQL Server 組態管理員所使用之帳戶的密碼&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
   
   

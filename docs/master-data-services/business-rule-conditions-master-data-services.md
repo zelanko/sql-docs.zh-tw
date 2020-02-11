@@ -11,10 +11,10 @@ ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ab2b632307f966a0f8e37d290c3cc12d52cda064
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728716"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>商務規則條件 (Master Data Services)
@@ -49,7 +49,7 @@ ms.locfileid: "73728716"
 |**已變更**|選取的屬性自上次商務規則套用到成員之後 **已經變更** 。 您必須指定此屬性所隸屬的變更群組。<br /><br /> 如需變更追蹤群組的詳細資訊，請參閱[將屬性加入至變更追蹤群組 &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。<br /><br /> 此條件適用於文字、數字、日期及連結值。|  
 |**尚未變更**|選取的屬性自上次商務規則套用到成員之後 **尚未變更** 。 您必須指定此屬性所隸屬的變更群組。<br /><br /> 如需變更追蹤群組的詳細資訊，請參閱[將屬性加入至變更追蹤群組 &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。<br /><br /> 此條件適用於文字、數字、日期及連結值。|  
 |**介於**|選取的屬性 **介於** 兩個特定的屬性值之間。<br /><br /> 此條件僅適用於文字、數字及日期值。|  
-|**不是介於**|選取的屬性 **不是介於** 兩個特定屬性值之間。<br /><br /> 此條件僅適用於文字、數字及日期值。|  
+|**不介於**|選取的屬性 **不是介於** 兩個特定屬性值之間。<br /><br /> 此條件僅適用於文字、數字及日期值。|  
   
 > [!NOTE]  
 >  當某個商務規則包含比較兩個值的條件，而且該規則套用到兩個值都是 NULL 的成員時，該成員將無法通過驗證。  
@@ -57,6 +57,6 @@ ms.locfileid: "73728716"
 ## <a name="see-also"></a>另請參閱  
  [商務規則動作 &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)   
  [商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [建立及發行商務規則 &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+ [建立和發佈商務規則 &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   

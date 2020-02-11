@@ -1,5 +1,5 @@
 ---
-title: 自動簽出檔案時編輯 |Microsoft Docs
+title: 在編輯時自動簽出檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0cb5bacaeab817c491ae72018630cf88e62b3b7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791732"
 ---
 # <a name="automatically-check-out-files-upon-edit"></a>在編輯時自動簽出檔案
@@ -27,9 +27,9 @@ ms.locfileid: "62791732"
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-2.  依序展開**原始檔控制**資料夾，然後再按一下**環境**。  
+2.  展開 [**原始檔控制**] 資料夾，然後按一下 [**環境**]。  
   
-3.  在 **編輯**方塊中，選取**自動簽出**，然後按一下**確定**。  
+3.  在**編輯**框中選取 [**自動簽出**]，然後按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
  [簽出檔案](../../2014/database-engine/check-out-files.md)   

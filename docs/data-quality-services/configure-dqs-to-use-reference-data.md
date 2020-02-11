@@ -14,10 +14,10 @@ ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 8dfc5a65659efe71fd3389a770af06f360f980bd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255655"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>設定 DQS 使用參考資料
@@ -31,12 +31,12 @@ ms.locfileid: "75255655"
 
 ## <a name="before-you-begin"></a>開始之前  
   
-###  <a name="Prerequisites"></a>要求  
+###  <a name="Prerequisites"></a> 必要條件  
  若要使用服務商場的參考資料，您必須擁有有效的服務商場帳號金鑰。 如需有關建立 Marketplace 帳戶金鑰的詳細資訊，請參閱[建立您的帳戶](https://go.microsoft.com/fwlink/?LinkId=212936)（https://go.microsoft.com/fwlink/?LinkId=212936)。 您也可以從 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 建立服務商場帳號金鑰，方法是按一下 **首頁畫面中** [管理] **底下的** [組態] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ，然後按一下 **[參考資料]** 索引標籤底下的 **[建立 DataMarket 帳戶識別碼]** 。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_administrator 角色，才能在 DQS 中設定參考資料服務。  
   
 ##  <a name="Marketplace"></a>將 DQS 設定為使用 Marketplace 中的參考資料  
@@ -69,7 +69,7 @@ ms.locfileid: "75255655"
   
     3.  在 **[類別目錄]** 方塊中，輸入新的直接參考資料服務提供者所提供之資料的類別目錄。  
   
-    4.  在 [結構描述] 方塊中，指定可定義要從直接參考資料服務提供者使用之欄位字串 (資料行名稱) 的結構描述。 欄位名稱不能包含空格，而且應該以逗號分隔欄位。 例如：`FirstName, LastName, City, State`。  
+    4.  在 [結構描述] 方塊中，指定可定義要從直接參考資料服務提供者使用之欄位字串 (資料行名稱) 的結構描述。 欄位名稱不能包含空格，而且應該以逗號分隔欄位。 例如： `FirstName, LastName, City, State` 。  
   
     5.  在 **[URI]** 方塊中，輸入直接參考資料服務提供者的 URI。 DQS 中只允許安全的 URI (以 "https://" 開頭的位址)。  
   

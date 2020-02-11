@@ -18,10 +18,10 @@ ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7cb18806ed4f83f34a6436c79c5a89acf68db294
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660227"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>SupportAlias 屬性 (ClientNetworkProtocol 類別)
@@ -36,8 +36,8 @@ object.SupportAlias [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
- 代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端所使用之網路通訊協定的[ClientNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)物件。  
+ *目標*  
+ 代表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端所使用之網路通訊協定的[ClientNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定用戶端網路通訊協定是否支援別名的布林值。  

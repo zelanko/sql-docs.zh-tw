@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_loader_backup_run_details (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases pdw_loader_backup_run_details （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,26 +13,26 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: dead5962987f7fb132f21bb4e3517f7cc9249601
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127651"
 ---
-# <a name="syspdwloaderbackuprundetails-transact-sql"></a>sys.pdw_loader_backup_run_details (Transact-SQL)
+# <a name="syspdw_loader_backup_run_details-transact-sql"></a>sys.databases pdw_loader_backup_run_details （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  包含進一步的詳細的資訊，而不在資訊[sys.pdw_loader_backup_runs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)、 進行中和已完成備份和還原作業中的相關[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]以及進行中並完成備份、 還原及載入作業中的[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。 此資訊在系統重新啟動之後會持續存留。  
+  除了 sys.databases 中的資訊之外，還包含[pdw_loader_backup_runs &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)中的詳細資訊，以及中的進行中[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和已完成的備份和還原作業，以及關於中[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]的持續性和已完成的備份、還原和載入作業。 此資訊在系統重新啟動之後會持續存留。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|run_id|**int**|特定的備份或還原執行的唯一識別碼。<br /><br /> run_id 和 pdw_node_id 形成這個檢視的索引鍵。||  
-|pdw_node_id|**int**|此記錄表格包含詳細資料的應用裝置節點的唯一識別碼。<br /><br /> run_id 和 pdw_node_id 形成這個檢視的索引鍵。|請參閱中的 node_id [sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)。|  
-|status|**nvarchar(16)**|執行目前的狀態。|'已取消'，' 已完成 '，'FAILED'、 '佇列更新'、 'RUNNING'|  
-|start_time|**datetime**|在這個特定的節點作業開始時間。||  
-|end_time|**datetime**|作業結束時間在這個特定的節點，如果有的話。||  
-|total_elapsed_time|**int**|在這個特定的節點執行作業的總時間。|如果 total_elapsed_time 超過整數 （以毫秒為單位的 24.8 天） 的最大值，它會具體化失敗，因為溢位。<br /><br /> 以毫秒為單位的最大值相當於 24.8 天。|  
-|進度|**int**|以百分比表示作業的進度。|0 到 100 之間|  
+|run_id|**int**|特定備份或還原執行的唯一識別碼。<br /><br /> run_id 和 pdw_node_id 形成此視圖的索引鍵。||  
+|pdw_node_id|**int**|此記錄保留詳細資料之應用裝置節點的唯一識別碼。<br /><br /> run_id 和 pdw_node_id 形成此視圖的索引鍵。|請參閱[dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)中的 node_id。|  
+|status|**Nvarchar （16）**|執行的目前狀態。|「已取消」、「已完成」、「失敗」、「已排入佇列」、「執行中」|  
+|start_time|**datetime**|在這個特定節點上開始作業的時間。||  
+|end_time|**datetime**|此特定節點上作業結束的時間（如果有的話）。||  
+|total_elapsed_time|**int**|此特定節點上作業已執行的總時間。|如果 total_elapsed_time 超過整數的最大值（以毫秒為單位的24.8 天），則會造成具體化失敗，因為溢位。<br /><br /> 最大值（以毫秒為單位）相當於24.8 天。|  
+|progress|**int**|以百分比表示的作業進度。|0 到 100|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

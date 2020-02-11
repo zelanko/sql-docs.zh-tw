@@ -1,5 +1,5 @@
 ---
-title: sp_addremotelogin (TRANSACT-SQL) |Microsoft Docs
+title: sp_addremotelogin （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eb45ce1c3e1786eb5a9a3cd630741dd4df773c40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68030965"
 ---
-# <a name="spaddremotelogin-transact-sql"></a>sp_addremotelogin (Transact-SQL)
+# <a name="sp_addremotelogin-transact-sql"></a>sp_addremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   在本機伺服器上加入新的遠端登入識別碼。 此舉可讓遠端伺服器連接及執行遠端程序呼叫。  
@@ -44,25 +44,25 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @remoteserver **=** ] **'** _remoteserver_ **'**  
- 這是遠端登入所套用的遠端伺服器名稱。 *remoteserver*已**sysname**，沒有預設值。 如果只有*remoteserver*指定，則上的所有使用者*remoteserver*會對應至本機伺服器上相同名稱的現有登入。 本機伺服器必須知道這部伺服器。 這是使用 sp_addserver 新增。 當使用者*remoteserver*連線到本機伺服器執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]連線符合他們自己的登入上的本機登入若要執行遠端預存程序， *remoteserver*. *remoteserver*是起始遠端程序呼叫的伺服器。  
+ [ @remoteserver **=** ] **'**_remoteserver_**'**  
+ 這是遠端登入所套用的遠端伺服器名稱。 *remoteserver*是**sysname**，沒有預設值。 如果只指定*remoteserver* ， *remoteserver*上的所有使用者都會對應至本機伺服器上相同名稱的現有登入。 本機伺服器必須知道這部伺服器。 它可以利用 sp_addserver 加入。 當*remoteserver*上的使用者連接到執行的本機伺服器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來執行遠端預存程式時，它們會以本機登入連接，以符合他們在*remoteserver*上的登入。 *remoteserver*是起始遠端程序呼叫的伺服器。  
   
- [ @loginame **=** ] **'** _登入_ **'**  
- 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本機執行個體上的使用者登入識別碼。 *login* 是預設值為 NULL 的 **sysname**。 *登入*必須已存在於本機執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果*登入*指定時，所有使用者*remoteserver*會對應至該特定本機登入。 當使用者*remoteserver*連接到本機執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]連接做為執行遠端預存程序，*登入*。  
+ [ @loginame **=** ] **[**_登_**** 入]  
+ 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本機執行個體上的使用者登入識別碼。 *login*是**sysname**，預設值是 Null。 *登*入必須已經存在於的本機實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上。 如果指定*login* ， *remoteserver*上的所有使用者都會對應到該特定的本機登入。 當*remoteserver*上的使用者連接到的本機實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來執行遠端預存程式時，就會以*登*入的方式連接。  
   
- [ @remotename **=** ] **'** _remote_name_ **'**  
- 這是遠端伺服器上的使用者登入識別碼。 *remote_name*已**sysname**，預設值是 NULL。 *remote_name*必須存在於*remoteserver*。 如果*remote_name*會指定特定的使用者*remote_name*會對應至*登入*本機伺服器上。 當*remote_name*上*remoteserver*連接至本機執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以執行遠端預存程序，它會連接做為*登入*。 登入識別碼*remote_name*可能會不同於在遠端伺服器上，登入識別碼*登入*。  
+ [ @remotename **=** ] **'**_remote_name_**'**  
+ 這是遠端伺服器上的使用者登入識別碼。 *remote_name*是**sysname**，預設值是 Null。 *remote_name*必須存在於*remoteserver*上。 如果指定了*remote_name* ，特定的使用者*remote_name*會對應到本機伺服器上的*登*入。 當*remoteserver*上的*remote_name*連接到的本機實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以執行遠端預存程式時，它會以*登*入的方式連接。 *Remote_name*的登入識別碼可以與遠端伺服器上的登入識別碼（*登*入）不同。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 若要執行分散式的查詢，請使用 sp_addlinkedsrvlogin。  
+ 若要執行分散式查詢，請使用 sp_addlinkedsrvlogin。  
   
- sp_addremotelogin 不能在使用者自訂交易內。  
+ sp_addremotelogin 無法在使用者自訂交易內執行。  
   
-## <a name="permissions"></a>Permissions  
- 只有系統管理員和 securityadmin 固定伺服器角色的成員可以執行 sp_addremotelogin。  
+## <a name="permissions"></a>權限  
+ 只有系統管理員 (sysadmin) 和安全性管理員 (securityadmin) 固定伺服器角色的成員，才能夠執行 sp_addremotelogin。  
   
 ## <a name="examples"></a>範例  
   
@@ -88,15 +88,15 @@ EXEC sp_addremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_dropremotelogin &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_remoteoption &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
- [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
+ [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_dropremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
+ [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_helpremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
+ [sp_helpserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_remoteoption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
+ [sp_revokelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

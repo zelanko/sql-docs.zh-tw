@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198987"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>點對點複寫中的衝突偵測
@@ -86,7 +86,7 @@ ms.locfileid: "68198987"
   
 -   透過讓散發代理程式繼續套用變更，嘗試再次同步處理節點：  
   
-    1.  執行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)： 指定 'p2p_continue_onconflict'@property參數並`true`如@value參數。  
+    1.  執行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)：指定@property參數的 ' p2p_continue_onconflict ' 和`true` @value參數的。  
   
     2.  重新啟動散發代理程式。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "68198987"
         > [!NOTE]  
         >  如果進行這個步驟之後資料出現不一致，您就必須手動更新具有最高優先權之節點上的資料列，然後讓變更從這個節點傳播。 如果拓撲中沒有其他進一步的衝突變更，所有節點都會處於一致狀態。  
   
-    5.  執行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)： 指定 'p2p_continue_onconflict'@property參數並`false`如@value參數。  
+    5.  執行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)：指定@property參數的 ' p2p_continue_onconflict ' 和`false` @value參數的。  
   
 ## <a name="see-also"></a>另請參閱  
  [@loopback_detection](peer-to-peer-transactional-replication.md)  

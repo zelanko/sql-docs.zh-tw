@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd161820fd53d45642848697bce9589a98dec4ca
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401042"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>將資料載入平行處理資料倉儲
@@ -43,11 +43,11 @@ For more information, see [Prepared statements](prepared-statements.md).
   
 ## <a name="related-tasks"></a>相關工作  
   
-|工作|描述|  
+|Task|描述|  
 |--------|---------------|  
 |建立臨時資料庫。|[建立臨時資料庫](staging-database.md)|  
-|使用 Integration Services 載入。|[載入 Integration Services](load-with-ssis.md)|  
-|瞭解 dwloader 的類型轉換。|[Dwloader 的資料類型轉換規則](dwloader-data-type-conversion-rules.md)|  
+|使用 Integration Services 載入。|[使用 Integration Services 載入](load-with-ssis.md)|  
+|瞭解 dwloader 的類型轉換。|[dwloader 的資料類型轉換規則](dwloader-data-type-conversion-rules.md)|  
 |使用 dwloader 載入資料。|[dwloader 命令列載入器](dwloader.md)|  
 |瞭解 INSERT 的類型轉換。|[使用 INSERT 載入資料](load-with-insert.md)|  
  

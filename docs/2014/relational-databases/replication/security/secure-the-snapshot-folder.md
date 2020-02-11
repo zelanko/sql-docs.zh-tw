@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f3612a8b2006978a8098a406a6557d6c9f0f1f7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960472"
 ---
 # <a name="secure-the-snapshot-folder"></a>保護快照集資料夾
@@ -25,7 +25,7 @@ ms.locfileid: "62960472"
 > [!NOTE]  
 >  使用者帳戶控制 (UAC) 可協助管理員管理其較高的使用者權限 (有時也稱為「權限」)  。 在已啟用 UAC 的作業系統上執行時，管理員不會使用其管理權限。 反而會以標準 (非管理員) 使用者的身分執行大部分的動作，只有在必要時才會採用其管理權限。 UAC 可以防止以管理員權限存取快照共用。 因此，您必須針對快照集代理程式、散發代理程式和合併代理程式所使用的 Windows 帳戶，明確地授與快照集共用權限。 即使 Windows 帳戶是管理員群組的成員，也必須這麼做。  
   
- 透過「設定散發精靈」或「新增發行集精靈」設定「散發者」時，快照集資料夾預設為本機路徑：X:\Program Files\Microsoft SQL Server\\ *\<執行個體>* \MSSQL\ReplData。 如果您使用的是遠端「散發者」或提取訂閱，則必須指定 UNC 網路共用 (例如 \\\\<*電腦名稱>* \snapshot) 而不是本機路徑。  
+ 透過 [設定散發精靈] 或 [新增發行集精靈] 設定「散發者」時，快照集資料夾預設為本機路徑：X:\Program Files\Microsoft SQL Server\\ *\<執行個體>* \MSSQL\ReplData。 如果您使用的是遠端「散發者」或提取訂閱，則必須指定 UNC 網路共用 (例如 \\\\<*電腦名稱>* \snapshot) 而不是本機路徑。  
   
  授與快照集資料夾存取權限時，您必須依據存取資料夾的方式授與它們權限。 下列對話方塊索引標籤用於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003：  
   

@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e02e5f55032f7a5d4e11e1ee4c908e84a83e00f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188294"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio 中的自訂報表
-  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，許多物件總管節點會顯示一組由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建立的標準報表。 這些報表會摘要列出經常要求的伺服器資訊。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 開始，管理員就可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 執行在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中建立的自訂報表。  
+  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，許多物件總管節點會顯示一組由 [!INCLUDE[msCoName](../../includes/msconame-md.md)]建立的標準報表。 這些報表會摘要列出經常要求的伺服器資訊。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 開始，管理員就可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 執行在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中建立的自訂報表。  
   
 ## <a name="implementation"></a>實作  
  自訂報表會儲存成報表定義 (.rdl) 檔案，而且這些檔案是使用報表定義語言 (RDL) 所建立的。 RDL 會包含 XML 格式之報表的資料擷取和配置資訊。 RDL 是一種開放式結構描述。 開發人員可以使用其他屬性和元素來擴充 RDL。 報表可以執行報表內的任何有效 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
@@ -32,9 +32,9 @@ ms.locfileid: "68188294"
 ## <a name="running-a-custom-report"></a>執行自訂報表  
  您可以利用下列方式在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中執行自訂報表：  
   
--   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]  ，然後以滑鼠左鍵按一下 [自訂報表]  。 在 [開啟檔案]  對話方塊中，找出包含 .rdl 檔的資料夾，然後開啟適當的報表檔案。  
+-   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]，然後以滑鼠左鍵按一下 [自訂報表]。 在 [開啟檔案] 對話方塊中，找出包含 .rdl 檔的資料夾，然後開啟適當的報表檔案。  
   
--   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]  、指向 [自訂報表]  ，然後從最近使用過的檔案清單中選取自訂報表。  
+-   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]、指向 [自訂報表]，然後從最近使用過的檔案清單中選取自訂報表。  
   
 ## <a name="limitations"></a>限制  
  當您使用自訂報表時，請考量下列限制：  
@@ -60,7 +60,7 @@ ms.locfileid: "68188294"
 ## <a name="managing-custom-reports"></a>管理自訂報表  
  我們建議擁有許多自訂報表的使用者，最好使用具有適當 NTFS 檔案系統權限的檔案系統資料夾來組織這些報表。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  自訂報表會使用目前使用者的權限來執行。 若要防止惡意使用者變更報表所執行的查詢，包含報表檔案之檔案系統資料夾的權限應該要設定為限制存取。  
   
  使用者以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務所使用的帳戶，都需要包含報表檔案之檔案系統資料夾的讀取權。  
@@ -73,7 +73,7 @@ ms.locfileid: "68188294"
 
   
 ## <a name="see-also"></a>另請參閱  
- [將自訂報表加入 Management Studio](add-a-custom-report-to-management-studio.md)   
+ [將自訂報表加入至 Management Studio](add-a-custom-report-to-management-studio.md)   
  [取消隱藏執行自訂報表警告](unsuppress-run-custom-report-warnings.md)   
  [使用自訂報表搭配物件總管節點屬性](use-custom-reports-with-object-explorer-node-properties.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_checkpoint_force_garbage_collection (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases sp_xtp_checkpoint_force_garbage_collection （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 82b35b2b-edbd-44ac-9fc8-80695f2fd1df
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b230fb659b41f16541fd841f1ff8b6f03d19cee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120041"
 ---
-# <a name="sysspxtpcheckpointforcegarbagecollection-transact-sql"></a>sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
+# <a name="syssp_xtp_checkpoint_force_garbage_collection-transact-sql"></a>sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   以記錄序號 (LSN) 標記合併作業中使用的來源檔案，之後不需要用到這些來源檔案時，可進行記憶體回收。 另外也會將相關 LSN 小於記錄截斷點的檔案移至檔案資料流記憶體回收。  
@@ -48,13 +48,13 @@ sys.sp_xtp_checkpoint_force_garbage_collection [[ @dbname=database_name]
 ## <a name="result-set"></a>結果集  
  傳回的資料列包含下列資訊：  
   
-|「資料行」|描述|  
+|資料行|描述|  
 |------------|-----------------|  
 |num_collected_items|指出已移至檔案資料流記憶體回收的檔案數目。 這些檔案的記錄序號 (LSN) 小於記錄截斷點的 LSN。|  
 |num_marked_for_collection_items|指出 LSN 已更新為記錄檔結束 LSN 的記錄檔 blockID 的資料檔案/差異檔案數目。|  
 |last_collected_xact_seqno|傳回上一個對應的 LSN，至此之前的檔案都已移至檔案資料流記憶體回收。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要資料庫擁有者權限。  
   
 ## <a name="sample"></a>範例  

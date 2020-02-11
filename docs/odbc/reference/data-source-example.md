@@ -13,16 +13,16 @@ ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec9eacef6f0bd63eb0aaeac36dc97938297d1f16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135641"
 ---
 # <a name="data-source-example"></a>資料來源範例
-在執行 Microsoft® Windows NT® Server/Windows 2000 Server、 Microsoft Windows NT 工作站/Windows 2000 Professional 或 Microsoft Windows® 95/98，機器資料的電腦上來源資訊會儲存在登錄中。 根據哪一個登錄金鑰的資訊會儲存在中，資料來源就所謂*使用者資料來源*或是*系統資料來源*。 使用者資料來源會儲存在 HKEY_CURRENT_USER 機碼之下，而且僅適用於目前的使用者。 系統資料來源會儲存在 HKEY_LOCAL_MACHINE 機碼之下，而且可由一部電腦上的多個使用者。 它們也可以使用全系統服務，然後取得資料來源的存取權，即使沒有任何使用者登入電腦。 如需有關使用者和系統資料來源的詳細資訊，請參閱 < [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md)。  
+在執行 Microsoft® Windows NT® Server/Windows 2000 Server、Microsoft Windows NT 工作站/Windows 2000 Professional 或 Microsoft Windows®95/98 的電腦上，電腦資料來源資訊會儲存在登錄中。 視資訊儲存所在的登錄機碼而定，資料來源稱為*使用者資料來源*或*系統資料來源*。 使用者資料來源會儲存在 HKEY_CURRENT_USER 金鑰底下，而且僅供目前使用者使用。 系統資料來源會儲存在 HKEY_LOCAL_MACHINE 的索引鍵之下，而且可以由一部電腦上的多個使用者使用。 它們也可以由全系統服務使用，如此一來，即使沒有任何使用者登入電腦，也可以取得資料來源的存取權。 如需有關使用者和系統資料來源的詳細資訊，請參閱[SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md)。  
   
- 假設使用者具有三個使用者資料來源：人員和清查，使用 Oracle DBMS;和薪資、 使用 Microsoft SQL Server DBMS。 資料來源的登錄值可能是：  
+ 假設使用者有三個使用者資料來源：人員和清查，這會使用 Oracle DBMS;並使用 Microsoft SQL Server DBMS 的薪資。 資料來源的登錄值可能是：  
   
 ```  
 HKEY_CURRENT_USER  
@@ -35,7 +35,7 @@ SOFTWARE
                     Payroll : REG_SZ : SQL Server  
 ```  
   
- 它可能是薪資資料來源的登錄值：  
+ 而薪資資料來源的登錄值可能是：  
   
 ```  
 HKEY_CURRENT_USER  

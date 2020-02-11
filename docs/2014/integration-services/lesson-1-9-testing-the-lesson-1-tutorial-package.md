@@ -1,5 +1,5 @@
 ---
-title: 步驟 9：測試第 1 課的教學課程封裝 |Microsoft Docs
+title: 步驟 9：測試第 1 課的教學課程套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767603"
 ---
 # <a name="step-9-testing-the-lesson-1-tutorial-package"></a>步驟 9：測試第 1 課的教學課程封裝
@@ -33,11 +33,11 @@ ms.locfileid: "62767603"
   
  **控制流程**  
   
- ![套件中的控制流程](../../2014/tutorials/media/task9lesson1control.gif "套件中的控制流程")  
+ ![封裝中的控制流程](../../2014/tutorials/media/task9lesson1control.gif "封裝中的控制流程")  
   
  **資料流程**  
   
- ![套件中的資料流程](../../2014/tutorials/media/task9lesson1data.gif "套件中的資料流程")  
+ ![封裝中的資料流程](../../2014/tutorials/media/task9lesson1data.gif "封裝中的資料流程")  
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>若要執行第 1 課的教學課程封裝  
   
@@ -51,6 +51,6 @@ ms.locfileid: "62767603"
  [第 2 課：加入迴圈](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [執行專案和封裝](packages/run-integration-services-ssis-packages.md)  
+ [執行專案和套件](packages/run-integration-services-ssis-packages.md)  
   
   

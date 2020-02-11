@@ -1,5 +1,5 @@
 ---
-title: 間隔資料類型有效位數 |Microsoft Docs
+title: 間隔資料類型精確度 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,19 +19,19 @@ ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3424c58d25be69d2ddc42a3088aa457ebddf1d4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947606"
 ---
 # <a name="interval-data-type-precision"></a>間隔資料類型精確度
-間隔資料類型的有效位數，其中包括間隔開頭有效位數、 間隔精確度和秒數有效位數。  
+間隔資料類型的有效位數包括間隔前置精確度、間隔精確度和秒數有效位數。  
   
- 間隔的開頭欄位是帶正負號的數值。 [前置] 欄位的數字的最大數目取決於呼叫的數量*間隔開頭有效位數，* 這是資料型別宣告的一部分。 例如，宣告：間隔 HOUR(5) 分鐘有間隔開頭有效位數 5;[小時] 欄位可以接受從-99999 到 99999 之間的值。 間隔開頭有效位數欄位中包含 SQL_DESC_DATETIME_INTERVAL_PRECISION 的描述項記錄。  
+ 間隔的前置欄位是帶正負號的數位。 前置欄位的最大位數是由稱為「*間隔前置精確度*」的數量所決定，這是資料類型宣告的一部分。 例如，宣告：間隔小時（5）到分鐘的間隔前置精確度為 5;[小時] 欄位可以接受-99999 到99999之間的值。 間隔前置精確度會包含在描述項記錄的 SQL_DESC_DATETIME_INTERVAL_PRECISION 欄位中。  
   
- 間隔資料類型組成的欄位清單會呼叫*間隔精確度*。 它不數值，因為 「 精確度 」 一詞可能暗示。 間隔類型的有效位數 INTERVAL DAY TO 比方說，第二個是清單日、 小時、 分、 秒。 沒有保存此值的描述項欄位時間間隔有效位數一律取決間隔資料類型。  
+ 間隔資料類型所組成的欄位清單稱為「*間隔精確度*」。 這不是數值，因為「精確度」一詞可能會隱含。 例如，類型 INTERVAL DAY 到 SECOND 的間隔有效位數是清單 DAY、HOUR、MINUTE、SECOND。 沒有包含此值的描述項欄位。間隔有效位數一律可以由 interval 資料類型決定。  
   
- 任何具有第二個欄位間隔資料型別都*秒數有效位數*。 這是允許的秒值的小數部分的十進位數字的數目。 這是不同於其他資料類型，其中的有效位數表示的小數點前面的位數。 間隔資料類型的秒數有效位數是小數點後的數字數目。 比方說，如果秒數有效位數設定為 6，數目 123456，在 [分數] 欄位會解譯為.123456 和數字 1230年會解譯為.001230。 對於其他資料類型，這被指小數位數。 間隔秒數有效位數欄位中包含 SQL_DESC_PRECISION 的描述元。 如果 SQL 間隔值的小數秒數元件的有效位數大於什麼可以保留 C 間隔結構中，它是驅動程式定義 SQL 間隔中的小數秒值會四捨五入或截斷時轉換成 C間隔結構。  
+ 具有第二個欄位的任何間隔資料類型都有*秒有效位數*。 這是秒數值小數部分允許的十進位數。 這與其他資料類型不同，其中 precision 表示小數點前面的位數。 Interval 資料類型的秒數精確度是小數點之後的位數。 例如，如果秒數有效位數設定為6，則 [分數] 欄位中的數位123456會解讀為123456，而數位1230會解讀為. 001230。 對於其他資料類型，這稱為「小數值」。 間隔秒數精確度會包含在描述項的 SQL_DESC_PRECISION 欄位中。 如果 SQL 間隔值的小數秒數部分的有效位數大於 C 間隔結構中可保留的數值，則會定義驅動程式，不論在轉換成 C 時，SQL 間隔中的小數秒值是否四捨五入或截斷。間隔結構。  
   
- SQL_DESC_TYPE 欄位時 SQL_DESC_CONCISE_TYPE 欄位設定為間隔資料類型，設定為 SQL_INTERVAL SQL_DESC_DATETIME_INTERVAL_CODE 設間隔資料類型的程式碼。 SQL_DESC_DATETIME_INTERVAL_PRECISION 欄位會自動設為預設間隔開頭有效位數為 2，，和 SQL_DESC_PRECISION 欄位會自動設為預設的間隔秒數有效位數為 6。 如果其中一個值不適當，應用程式應該明確設定描述項欄位，透過呼叫**SQLSetDescField**。
+ 當 [SQL_DESC_CONCISE_TYPE] 欄位設定為 [間隔] 資料類型時，[SQL_DESC_TYPE] 欄位會設定為 [SQL_INTERVAL]，而 [SQL_DESC_DATETIME_INTERVAL_CODE] 會設定為 [interval] 資料類型的程式碼。 [SQL_DESC_DATETIME_INTERVAL_PRECISION] 欄位會自動設為預設間隔的有效位數2，而 [SQL_DESC_PRECISION] 欄位會自動設為預設的間隔秒數有效位數6。 如果這些值都不適合，應用程式應該透過呼叫**SQLSetDescField**來明確設定描述項欄位。

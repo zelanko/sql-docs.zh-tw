@@ -14,42 +14,42 @@ ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2d48e8c51f8151f8626e971f928a245ba6776c3e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728337"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>刪除屬性 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，如果您想要永久刪除某個屬性以及所有關聯的屬性值，請刪除此屬性。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，如果您想要永久刪除某個屬性以及所有關聯的屬性值，請刪除此屬性。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 ### <a name="to-delete-an-attribute"></a>若要刪除屬性  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
-2.  在 [管理模型] 頁面上，從方格中選取模型，然後按一下 [實體]。  
+2.  在 [**管理模型**] 頁面上，從方格中選取模型，然後按一下 [**實體**]。  
   
-3.  在 [管理實體] 頁面上，選取您要為其建立屬性之實體的資料列。  
+3.  在 [管理實體] **** 頁面上，選取您要為其建立屬性之實體的資料列。  
   
-4.  按一下 **[屬性]** 。  
+4.  按一下 **[屬性]**。  
   
-5.  在 [管理屬性] 頁面上，執行下列其中一項動作。  
+5.  在 [管理屬性]**** 頁面上，執行下列其中一項動作。  
   
-    -   如果是分葉成員的屬性，請選取 [成員類型] 清單方塊的 [分葉] 。  
+    -   如果是分葉成員的屬性，請選取 [成員類型] **** 清單方塊的 [分葉] **** 。  
   
-    -   如果是合併成員的屬性，請選取 [成員類型] 清單方塊的 [合併] 。  
+    -   如果是合併成員的屬性，請選取 [成員類型] **** 清單方塊的 [合併] **** 。  
   
-    -   如果是集合的屬性，請選取 [成員類型] 清單方塊的 [集合] 。  
+    -   如果是集合的屬性，請選取 [成員類型] **** 清單方塊的 [集合] **** 。  
   
 6.  選取要刪除之屬性的資料列。  
   
@@ -58,12 +58,12 @@ ms.locfileid: "73728337"
   
 7.  按一下 **[刪除]** 。  
   
-8.  在確認對話方塊中按一下 **[確定]** 。  
+8.  在確認對話方塊中按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [屬性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [網域屬性 &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
- [建立文字屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [建立網域屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+ [Master Data Services &#40;的屬性&#41;](../master-data-services/attributes-master-data-services.md)   
+ [以網域為基礎的屬性 &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
+ [建立 &#40;Master Data Services&#41;的文字屬性](../master-data-services/create-a-text-attribute-master-data-services.md)   
+ [建立以網域為基礎的屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

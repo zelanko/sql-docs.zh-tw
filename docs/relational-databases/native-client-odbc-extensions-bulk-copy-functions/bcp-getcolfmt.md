@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8c32df055ea1330fb0d1bdd32b2a3860519d2575
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782722"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
@@ -47,7 +47,7 @@ RETCODE bcp_getcolfmt (
  *hdbc*  
  這是已啟用大量複製的 ODBC 連接控制代碼。  
   
- *field*  
+ *欄位*  
  這是擷取屬性的資料行編號。  
   
  *property*  
@@ -68,12 +68,12 @@ RETCODE bcp_getcolfmt (
 ## <a name="remarks"></a>備註  
  資料行格式屬性值列在[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)主題中。 資料行格式屬性值是藉由呼叫**bcp_setcolfmt**函數來設定，而**bcp_getcolfmt**函數則是用來尋找資料行格式屬性值。  
   
- 相較于先前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，連接到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] （或更新版本）伺服器電腦時，可能會發現行為變更。 如需詳細資訊，請參閱[中繼資料探索](../../relational-databases/native-client/features/metadata-discovery.md)。  
+ 相較于舊版[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，連接到（或更新版本）伺服器電腦時，可能會觀察到行為變更。 如需詳細資訊，請參閱[中繼資料探索](../../relational-databases/native-client/features/metadata-discovery.md)。  
   
 ## <a name="bcp_getcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_getcolfmt 對於增強型日期和時間功能的支援  
- 與日期/時間類型的**BCP_FMT_TYPE**屬性搭配使用的類型，會如[針對增強型日期和時間類型&#40;OLE DB 和 ODBC&#41;的大量複製變更](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)中所指定。  
+ 與日期/時間類型的**BCP_FMT_TYPE**屬性搭配使用的類型，會如[針對增強型日期和時間類型的大量複製變更（&#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)中所指定）。  
   
- 如需詳細資訊，請參閱[日期和&#40;時間&#41;改善 ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需詳細資訊，請參閱[ODBC&#41;&#40;的日期和時間改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

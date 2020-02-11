@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9795126f2cd7c39ebd23ed34fde73664388b235f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783852"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>datetime 資料類型從 SQL 轉換成 C
@@ -68,6 +68,6 @@ ms.locfileid: "73783852"
  本主題中的表格描述傳回用戶端之類型與繫結中之類型之間的轉換。 針對輸出參數，如果 SQLBindParameter 中指定的伺服器類型與伺服器上的實際類型不符，則伺服器將會執行隱含轉換，而且傳回用戶端的類型將會與透過 SQLBindParameter 指定的類型相符。 當伺服器的轉換規則與上表中所列的不同時，這可能會導致未預期的轉換結果。 例如，必須提供預設日期時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 1900-1-1 而非目前的日期。  
   
 ## <a name="see-also"></a>另請參閱  
- [ODBC 的日期和&#40;時間改善&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;的日期和時間改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

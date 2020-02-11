@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4398085227952f30e4df7d54ac78c1aef1355173
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62664047"
 ---
 # <a name="brokermessage-classify-event-class"></a>Broker:Message Classify 事件類別
@@ -33,7 +33,7 @@ ms.locfileid: "62664047"
 |**DatabaseID**|**int**|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |**EventClass**|**int**|擷取的事件類別類型。 **Broker:Message Classify** 永遠都是 **141**。|27|否|  
 |**EventSequence**|**int**|此事件的序號。|51|否|  
-|**EventSubClass**|**nvarchar**|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> **本機**：選擇的路由位址為 LOCAL。<br /><br /> **遠端**：選擇的路由具有 LOCAL 以外的位址。<br /><br /> **延遲**：訊息已延遲，原因是因為轉送已停用或沒有符合的路由存在。|21|是|  
+|**EventSubClass**|**nvarchar**|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> **本機**：選擇的路由已處理 LOCAL。<br /><br /> **遠端**：選擇的路由具有本機以外的位址。<br /><br /> **延遲**：訊息已延遲，原因是已停用轉送，或因為沒有相符的路由存在。|21|是|  
 |**FileName**|**nvarchar**|訊息已導向至服務名稱。|36|否|  
 |**GUID**|**uniqueidentifier**|對話的交談識別碼。 此識別碼是以訊息的一部份傳送，並在交談的兩端之間共用。|54|否|  
 |**HostName**|**nvarchar**|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  

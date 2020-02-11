@@ -11,10 +11,10 @@ ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2d7d49233c072a8f23b386b626ee4f30669aaec5
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165963"
 ---
 # <a name="sql-server-express-localdb-reference---error-messages"></a>SQL Server Express LocalDB 參考 - 錯誤訊息
@@ -70,7 +70,7 @@ ms.locfileid: "74165963"
  輸入緩衝區太短，且未要求截斷。  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
- 發生意外的錯誤。 請參閱事件記錄檔，以取得詳細資料。  
+ 發生意外錯誤。 請參閱事件記錄檔，以取得詳細資料。  
   
  [LOCALDB_ERROR_INVALID_INSTANCE_NAME](../../relational-databases/express-localdb-error-messages/localdb-error-invalid-instance-name.md)  
  指定的執行個體名稱無效。  

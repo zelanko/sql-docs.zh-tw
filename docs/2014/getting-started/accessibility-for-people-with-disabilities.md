@@ -22,10 +22,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a653c4b5cd8d6e1bb9b5c826039169a7a5b80278
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683591"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>行動不便人士的協助工具

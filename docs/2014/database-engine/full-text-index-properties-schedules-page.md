@@ -1,5 +1,5 @@
 ---
-title: 全文檢索索引屬性 （排程頁面） |Microsoft Docs
+title: 全文檢索索引屬性（排程頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779028"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>全文檢索索引屬性 (排程頁面)
@@ -46,7 +46,7 @@ ms.locfileid: "62779028"
  按一下即可建立擴展全文檢索索引的新排程。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用全文檢索索引精靈](../relational-databases/search/use-the-full-text-indexing-wizard.md)   
+ [使用全文檢索索引 Wizard](../relational-databases/search/use-the-full-text-indexing-wizard.md)   
  [擴展全文檢索索引](../relational-databases/search/populate-full-text-indexes.md)  
   
   

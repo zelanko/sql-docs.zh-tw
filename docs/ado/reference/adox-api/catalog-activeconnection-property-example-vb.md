@@ -1,5 +1,5 @@
 ---
-title: Catalog ActiveConnection 屬性範例 (VB) |Microsoft Docs
+title: Catalog ActiveConnection 屬性範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4c6d30aeeb650525873669ccd175155c7e69cd0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967113"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Catalog ActiveConnection 屬性範例 (VB)
-設定[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)屬性，以有效的開啟連接的 「 開啟 」 目錄。 從開啟的目錄中，您可以存取包含在該目錄內的結構描述物件。  
+將 [ [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) ] 屬性設為有效的 [開啟連接]，就會「開啟」目錄。 從開啟的目錄中，您可以存取包含在該目錄內的架構物件。  
   
 ```  
 ' BeginOpenConnectionVB  
@@ -59,15 +59,15 @@ End Sub
 ' EndOpenConnectionVB  
 ```  
   
- 設定**ActiveConnection**屬性設為有效的連接字串也 「 開啟 」 目錄。  
+ 將**ActiveConnection**屬性設定為有效的連接字串也會「開啟」目錄。  
   
 ```  
 Attribute VB_Name = "Catalog"  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ActiveConnection 屬性 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog 物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Table 物件 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Tables 集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
+ [ActiveConnection 屬性（ADOX）](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
+ [Catalog 物件（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Table 物件（ADOX）](../../../ado/reference/adox-api/table-object-adox.md)   
+ [Tables 集合（ADOX）](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Type 屬性 (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f273823825cf94da6269a58389f04207ad1c2707
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68190683"
 ---
 # <a name="remove-data-quality-server-objects"></a>移除 Data Quality Server 物件
@@ -36,11 +36,11 @@ ms.locfileid: "68190683"
  您可以滑鼠右鍵按一下物件，然後按一下快速鍵功能表中的 [刪除]  來刪除 SQL Server Management Studio 中的這些物件。  
   
 > [!IMPORTANT]  
->  如果您只要使用 `-uninstall` 命令列參數解除安裝 SQL Server 執行個體中的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]，則在解除安裝過程中將刪除所有 DQS 物件。 您不必在解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]之後手動刪除這些物件。 若要從命令提示字元解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，請在命令提示字元中輸入下列命令，然後按 ENTER：   
+>  如果您只要使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 命令列參數解除安裝 SQL Server 執行個體中的 `-uninstall` ，則在解除安裝過程中將刪除所有 DQS 物件。 您不必在解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]之後手動刪除這些物件。 若要從命令提示字元解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，請在命令提示字元中輸入下列命令，然後按 ENTER：   
 > `dqsinstaller.exe -uninstall`  
   
 ## <a name="uninstall-sql-server-instance-containing-data-quality-server"></a>解除安裝包含資料品質伺服器的 SQL Server 執行個體  
- 如果您要完整解除安裝內含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 執行個體，必須在完成解除安裝程序之後，手動刪除電腦中的 DQS_MAIN、DQS_PROJECTS 及 DQS_STAGING_DATA 資料庫。 針對預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝，DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA 資料庫檔案位於 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA。  
+ 如果您要完整解除安裝內含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]執行個體，必須在完成解除安裝程序之後，手動刪除電腦中的 DQS_MAIN、DQS_PROJECTS 及 DQS_STAGING_DATA 資料庫。 針對預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝，DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA 資料庫檔案位於 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA。  
   
 ## <a name="see-also"></a>另請參閱  
  [解除安裝現有的 SQL Server 執行個體 &#40;Setup&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
