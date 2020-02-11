@@ -15,23 +15,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14f380f510070da1b8fa77f7f5440640ce37452b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856505"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>檢視預存程序的相依性
     
-##  <a name="Top"></a> 本主題描述如何檢視預存程序中的相依性[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]利用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+##  
+  <a name="Top"></a> 本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來檢視 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的預存程序相依性。  
   
--   **開始之前：**[安全性](#Security)  
+-   **開始之前：** [安全性](#Security)  
   
--   **若要檢視的相依性的程序中，使用：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **若要檢視程序的相依性，請使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  系統函數：`sys.dm_sql_referencing_entities`  
@@ -43,7 +44,7 @@ ms.locfileid: "62856505"
  物件目錄檢視：`sys.sql_expression_dependencies`  
  需要資料庫的 VIEW DEFINITION 權限和資料庫之 sys.sql_expression_dependencies 的 SELECT 權限。 根據預設，SELECT 權限只授與 db_owner 固定資料庫角色的成員。 當 SELECT 和 VIEW DEFINITION 權限授與其他使用者時，被授與者就可以檢視資料庫中的所有相依性。  
   
-##  <a name="Procedures"></a> 如何檢視預存程序的相依性  
+##  <a name="Procedures"></a>如何查看預存程式的相依性  
  您可以使用下列其中一項：  
   
 -   [Transact-SQL](#SSMSProcedure)  
@@ -51,22 +52,22 @@ ms.locfileid: "62856505"
 -   [Transact-SQL](#TsqlProcedure)  
   
 ###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- **在物件總管中檢視程序的相依性**  
+ **若要在物件總管中查看程式的相依性**  
   
 1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  依序展開 **[資料庫]**、程序所屬的資料庫，以及 **[可程式性]**。  
+2.  依序展開 **[資料庫]** 、程序所屬的資料庫，以及 **[可程式性]** 。  
   
-3.  展開 [預存程序]，以滑鼠右鍵按一下程序，然後按一下 [檢視相依性]。  
+3.  展開 [預存程序]****，以滑鼠右鍵按一下程序，然後按一下 [檢視相依性]****。  
   
 4.  檢視相依於程序的物件清單。  
   
 5.  檢視程序所相依的物件清單。  
   
-6.  按一下 [確定] 。  
+6.  按一下 [確定]  。  
   
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- **在查詢編輯器中檢視程序的相依性**  
+ **在 [查詢編輯器] 中查看程式的相依性**  
   
  系統函數：`sys.dm_sql_referencing_entities`  
  此函數用來顯示相依於程序的物件。  
@@ -183,8 +184,8 @@ ms.locfileid: "62856505"
   
 ## <a name="see-also"></a>另請參閱  
  [重新命名預存程序](rename-a-stored-procedure.md)   
- [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
- [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
+ [dm_sql_referencing_entities &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
+ [dm_sql_referenced_entities &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql)  
   
   

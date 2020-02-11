@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d1e37f341c0606947b37eb10e8e3123ad410204
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63301321"
 ---
 # <a name="create-views-over-xml-columns"></a>建立 XML 資料行檢視
@@ -59,7 +59,8 @@ ProductID   PName
   
 -   xml 資料類型可以在具體化檢視中建立。 具體化檢視無法以 xml 資料類型方法為基礎， 但是，可以將它轉換成與基底資料表中之 xml 類型資料行不同的 XML 結構描述集合。  
   
--   `xml` 資料類型無法用於「分散式資料分割檢視」。  
+-   
+  `xml` 資料類型無法用於「分散式資料分割檢視」。  
   
 -   針對此檢視執行的 SQL 預測將不會發送到檢視定義的 XQuery 中。  
   
