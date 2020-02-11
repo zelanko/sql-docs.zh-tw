@@ -1,5 +1,5 @@
 ---
-title: 刪除資料來源 (ODBC) |Microsoft Docs
+title: 刪除資料來源（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,27 +13,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff882caf0ce5d9ef7d2e9f059daed89ed4b50d82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126101"
 ---
 # <a name="delete-a-data-source-odbc"></a>刪除資料來源 (ODBC)
-  您可以使用 ODBC 管理員，以程式設計方式刪除資料來源 (利用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md))，或藉由刪除檔案 （如果檔案資料來源名稱）。  
+  您可以使用 ODBC 管理員，以程式設計方式（藉由使用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)）或藉由刪除檔案（如果是檔案資料來源名稱）來刪除資料來源。  
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>使用 ODBC 管理員刪除資料來源  
   
-1.  在**控制台中**，開啟**系統管理工具**，然後按兩下**資料來源 (ODBC)** 。 或者，您也可以從命令提示字元執行 odbcad32.exe。  
+1.  在 [**控制台**] 中，開啟 [系統**管理工具**]，然後按兩下 **[資料來源（ODBC）**]。 或者，您也可以從命令提示字元執行 odbcad32.exe。  
   
-2.  按一下 [**使用者 DSN**，**系統 DSN**，或**檔案 DSN** ] 索引標籤。  
+2.  按一下 [**使用者 DSN**]、[**系統 DSN**] 或 [檔案**DSN** ] 索引標籤。  
   
 3.  按一下要刪除的資料來源。  
   
-4.  按一下 **移除**，然後確認刪除。  
+4.  按一下 [**移除**]，然後確認刪除。  
   
 ## <a name="example"></a>範例  
- 若要以程式設計方式刪除資料來源，請呼叫[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)使用 ODBC_REMOVE_DSN 或 ODBC_REMOVE_SYS_DSN 做為第二個參數。  
+ 若要以程式設計方式刪除資料來源，請使用 ODBC_REMOVE_DSN 或 ODBC_REMOVE_SYS_DSN 做為第二個參數來呼叫[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md) 。  
   
  下列範例會示範如何以程式設計的方式刪除資料來源。  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_log_space_usage (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_db_log_space_usage （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2017
 ms.prod: sql
@@ -21,38 +21,38 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bfa102163012456e9b2660d26cb54dec3d58cfbb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264585"
 ---
-# <a name="sysdmdblogspaceusage-transact-sql"></a>sys.dm_db_log_space_usage (Transact-SQL)
+# <a name="sysdm_db_log_space_usage-transact-sql"></a>sys.databases dm_db_log_space_usage （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-傳回空間供交易記錄的使用方式資訊。 
+傳回交易記錄檔的空間使用量資訊。 
   
 > [!NOTE]
-> 所有交易記錄檔會都結合。  
+> 所有交易記錄檔都會合並在一起。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|資料庫識別碼。|  
-|total_log_size_in_bytes |**bigint** |記錄檔大小  |
-|used_log_space_in_bytes |**bigint** |記錄檔佔用的大小  |     
-|used_log_space_in_percent |**real** |以記錄檔大小總計的百分比表示的記錄檔佔用的大小 |
-|log_space_in_bytes_since_last_backup |**bigint** |最後一個記錄備份之後所使用的空間量 <br />**適用於：** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)]透過[!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|
+|total_log_size_in_bytes |**Bigint** |記錄檔的大小  |
+|used_log_space_in_bytes |**Bigint** |記錄檔的佔用大小  |     
+|used_log_space_in_percent |**即時** |記錄檔大小總計百分比的已佔用大小 |
+|log_space_in_bytes_since_last_backup |**Bigint** |自上一次記錄備份之後所使用的空間量 <br />**適用于：** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)]至[!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|
     
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
 
-在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>A. 判斷的可用記錄檔空間量在 tempdb 中   
-下列查詢會傳回可用的總記錄空間 (mb) 可在 tempdb 中。
+### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>A. 判斷 tempdb 中的可用記錄檔空間量   
+下列查詢會傳回 tempdb 中可用的總可用記錄空間（以 mb 為單位）。
 
 ```sql
 USE tempdb;  
@@ -64,12 +64,12 @@ FROM sys.dm_db_log_space_usage;
   
 ## <a name="see-also"></a>另請參閱  
 [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[與資料庫相關動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)    
-[sys.dm_db_task_space_usage &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
-[sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
-[sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
-[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) 
+[資料庫相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[sys. dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)    
+[dm_db_task_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
+[dm_db_session_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
+[dm_db_log_info &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
+[dm_db_log_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) 
 
 
 

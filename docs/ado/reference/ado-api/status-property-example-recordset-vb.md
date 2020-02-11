@@ -1,5 +1,5 @@
 ---
-title: Status 屬性範例 (Recordset) (VB) |Microsoft Docs
+title: Status 屬性範例（Recordset）（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f1f418ed4c8ac74a023203606ebf3934129525a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916788"
 ---
 # <a name="status-property-example-recordset-vb"></a>Status 屬性範例 (Recordset) (VB)
-這個範例會使用[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)屬性來顯示哪些記錄內修改過的批次作業之前發生的批次更新。  
+這個範例會使用[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)屬性，在批次更新發生之前，顯示批次作業中已修改的記錄。  
   
 ```  
 'BeginStatusRecordsetVB  

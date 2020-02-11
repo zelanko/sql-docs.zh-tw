@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將資料處理延伸模組部署到報表設計師 |Microsoft Docs
+title: 如何：將資料處理延伸模組部署到報表設計師 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 947ad59b8ac20862a8ef6da8ea527e2befb1be57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63164324"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>HOW TO：將資料處理延伸模組部署到報表設計師
+# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>如何：將資料處理延伸模組部署到報表設計師
   報表設計工具在您設計報表時，使用資料處理延伸模組來擷取和處理資料。 您應該將資料處理延伸模組組件部署到報表設計師做為私用組件， 您也需要在報表設計師組態檔 RSReportDesigner.config 中建立項目。  
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>部署資料處理延伸模組組件  
   
 1.  將組件從您的執行位置複製到報表設計師目錄。 報表設計師目錄的預設位置是 C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies。  
   
-2.  在複製組件檔之後，開啟 RSReportDesigner.config 檔。 RSReportDesigner.config 檔案也位於 Report Designer 目錄中。 您需要在資料處理延伸模組組件檔案的組態檔中建立項目。 您可以利用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或簡單的文字編輯器 (如 [記事本]) 開啟設定檔。  
+2.  在複製組件檔之後，開啟 RSReportDesigner.config 檔。 RSReportDesigner.config 檔案也位於 Report Designer 目錄中。 您需要在資料處理延伸模組組件檔案的組態檔中建立項目。 您可以使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]或簡單的文字編輯器（如 [記事本]）開啟設定檔。  
   
 3.  在 RSReportDesigner.config 檔中，找出 **Data** 元素。 應該針對您新建立的資料處理延伸模組，在下列位置建立項目：  
   
@@ -39,13 +39,15 @@ ms.locfileid: "63164324"
     </Extensions>  
     ```  
   
-4.  新增項目，其中包含您資料處理延伸模組**延伸模組**值的項目`Name`， `Type`，和`Visible`屬性。 您的輸入可能如下所示：  
+4.  加入資料處理延伸模組的專案`Name`，其中包括具有、 `Type`和`Visible`屬性值的**extension**元素。 您的輸入可能如下所示：  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
     ```  
   
-     `Name` 的值是資料處理延伸模組的唯一名稱。 `Type` 的值是以逗號分隔的清單，包括實作 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 介面之類別的完整命名空間項目，後面接著組件的名稱 (不包含 .dll 副檔名)。 依預設值，資料處理延伸模組是可見的。 若要隱藏延伸模組從使用者介面，例如報表設計師中，新增`Visible`屬性設定為**延伸模組**項目，並將它設定為`false`。  
+     
+  `Name` 的值是資料處理延伸模組的唯一名稱。 
+  `Type` 的值是以逗號分隔的清單，包括實作 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 介面之類別的完整命名空間項目，後面接著組件的名稱 (不包含 .dll 副檔名)。 依預設值，資料處理延伸模組是可見的。 若要隱藏使用者介面的擴充功能（例如報表設計師），請`Visible`將屬性新增至**extension**元素，並將它`false`設定為。  
   
 5.  最後，針對為延伸模組授與 **FullTrust** 權限的自訂組件，新增程式碼群組。 完成此動作的方法是，將程式碼群組加入預設位於 C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies 中的 rspreviewpolicy.config 檔案。 您的程式碼群組可能如下所示：  
   
@@ -69,13 +71,13 @@ ms.locfileid: "63164324"
   
 #### <a name="to-enable-the-generic-query-designer-for-a-custom-extension"></a>啟用自訂延伸模組的一般查詢設計工具。  
   
--   將下列項目加入至 RSReportDesigner.config 檔名**設計工具**項目，取代`Name`具有您在先前的項目中提供的名稱屬性。  
+-   將下列專案新增至 Rsreportdesigner.config 的**Designer**元素底下，並將`Name`屬性取代為您在先前專案中提供的名稱。  
   
     ```  
     <Extension Name="ExtensionName" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  
     ```  
   
-## <a name="verifying-the-deployment"></a>確認部署  
+## <a name="verifying-the-deployment"></a>驗證部署  
  在您可以確認部署之前，必須在本機電腦上，關閉 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的所有執行個體。 在您已經結束所有目前的工作階段後，您可以確認是否已將您的資料處理延伸模組成功部署至報表設計師，方法是在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中建立新的報表專案。 當您為報表建立新的資料集時，延伸模組應該會包含在可用資料來源類型的清單中。  
   
 ## <a name="see-also"></a>另請參閱  

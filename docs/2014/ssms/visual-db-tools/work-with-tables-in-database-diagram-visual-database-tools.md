@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a5d6fb1ca02bd6c6459476cb1d5830a536780a98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065479"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>使用資料庫圖表中的資料表 (Visual Database Tools)
@@ -43,7 +43,7 @@ ms.locfileid: "63065479"
   
  [繪製自反關聯性 &#40;Visual Database Tools&#41;](draw-reflexive-relationships-visual-database-tools.md)  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  [新增資料表對話方塊 &#40;資料庫設計工具&#41; &#40;Visual Database Tools&#41;](add-table-dialog-box-database-designer-visual-database-tools.md)  
   
 ## <a name="related-sections"></a>相關章節  

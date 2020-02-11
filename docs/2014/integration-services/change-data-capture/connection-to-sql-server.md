@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 09d597cb7776362c44ca53e8d544f66608d8d37c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836998"
 ---
 # <a name="connection-to-sql-server"></a>連接到 SQL Server
@@ -28,13 +28,13 @@ ms.locfileid: "62836998"
  輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在的伺服器名稱。  
   
 ### <a name="authentication"></a>驗證  
- 選取下列其中一項：  
+ 選取下列其中一個：  
   
 -   Windows 驗證  
   
--   **SQL Server 驗證**：如果您選取這個選項，必須針對您所連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的使用者輸入**登入**和**密碼**。  
+-   **SQL Server 驗證**：如果您選取這個選項，您必須針對您所連接之  **中的使用者輸入 [登入]** **和 [密碼]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  按一下箭頭即可檢視要設定的可用選項。 您可以選擇保留這些選項的預設值。 可用的選項如下：  
   
 -   **連接逾時**：輸入此程式在產生逾時錯誤之前，等候連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的時間 (以秒數為單位)。 預設值為 **15**。  

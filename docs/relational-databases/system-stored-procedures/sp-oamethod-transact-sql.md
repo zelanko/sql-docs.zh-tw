@@ -18,10 +18,10 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252199"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
@@ -64,17 +64,17 @@ sp_OAMethod objecttoken , methodname
   
 -   方法在輸出參數中傳回陣列。  
   
-`[ _@parametername = ] parameter[ OUTPUT ]` 是方法參數。 如果指定，*參數*必須是適當資料類型的值。  
+`[ _@parametername = ] parameter[ OUTPUT ]`是方法參數。 如果指定，*參數*必須是適當資料類型的值。  
   
  若要取得輸出參數的傳回值，*參數*必須是適當資料類型的本機變數，而且必須指定**output** 。 如果指定了常數參數，或未指定**output** ，則會忽略來自輸出參數的任何傳回值。  
   
- 如果指定， *parametername*必須是名為參數的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 名稱 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]。 請注意， **@** _parametername_is 不是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的本機變數。 會移除 @ 符號（ **@** ），並將*PARAMETERNAME*傳遞至 OLE 物件做為參數名稱。 您必須在指定好所有位置性參數之後，指定所有具名參數。  
+ 如果指定， *parametername*必須是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]已具名引數的名稱。 請注意**@**，_parametername_is 不[!INCLUDE[tsql](../../includes/tsql-md.md)]是本機變數。 會移除 @ 符號**@**（），並將*PARAMETERNAME*傳遞至 OLE 物件做為參數名稱。 您必須在指定好所有位置性參數之後，指定所有具名參數。  
   
  *n*  
  這是一個預留位置，表示可以指定多個參數。  
   
 > [!NOTE]
->  *\@parametername*可以是已命名的參數，因為它是指定方法的一部分，而且會傳遞至物件。 這個預存程序的其他參數是依照位置來指定，而不是名稱。  
+>  parametername 可以是已命名的參數，因為它是指定方法的一部分，而且會傳遞至物件。 * \@ * 這個預存程序的其他參數是依照位置來指定，而不是名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)，這個數字是 OLE Automation 物件所傳回之 HRESULT 的整數值。  
@@ -92,7 +92,7 @@ sp_OAMethod objecttoken , methodname
   
  當資料行中的所有資料值都共用相同的資料類型時，整個資料行都會使用這個資料類型。 當資料行中的資料值是不同資料類型時，便會根據下表來選擇整個資料行的資料類型。  
   
-||整數|Float|money|datetime|varchar|nvarchar|  
+||int|FLOAT|money|Datetime|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -101,16 +101,16 @@ sp_OAMethod objecttoken , methodname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  您也可以使用**sp_OAMethod**來取得屬性值。  
   
-## <a name="permissions"></a>Permissions  
- 需要**系統管理員（sysadmin** ）固定伺服器角色的成員資格，或直接在這個預存程式上執行許可權。 必須**啟用**`Ole Automation Procedures` 設定，才能使用與 OLE Automation 相關的任何系統程式。  
+## <a name="permissions"></a>權限  
+ 需要**系統管理員（sysadmin** ）固定伺服器角色的成員資格，或直接在這個預存程式上執行許可權。 `Ole Automation Procedures`必須**啟用**設定，才能使用與 OLE Automation 相關的任何系統程式。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-calling-a-method"></a>A. 呼叫方法  
- 下列範例會呼叫先前建立之**SQLServer**物件的 `Connect` 方法。  
+ 下列範例會呼叫先前`Connect`建立之**SQLServer**物件的方法。  
   
 ```  
 EXEC @hr = sp_OAMethod @object, 'Connect', NULL, 'my_server',  
@@ -122,8 +122,8 @@ BEGIN
 END;  
 ```  
   
-### <a name="b-getting-a-property"></a>b. 取得屬性  
- 下列範例會取得 `HostName` 屬性（先前建立的**SQLServer**物件），並將它儲存在本機變數中。  
+### <a name="b-getting-a-property"></a>B. 取得屬性  
+ 下列範例會取得`HostName`屬性（先前建立的**SQLServer**物件），並將它儲存在本機變數中。  
   
 ```  
 DECLARE @property varchar(255);  
@@ -137,7 +137,7 @@ PRINT @property;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE Automation 預存&#40;程式 transact-sql&#41; ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [OLE Automation 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE Automation 範例指令碼](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

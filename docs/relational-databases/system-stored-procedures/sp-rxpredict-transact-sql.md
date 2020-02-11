@@ -17,10 +17,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 38eeb94dad960af3dc0f15921dbba717e819c828
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252035"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
@@ -28,7 +28,7 @@ ms.locfileid: "72252035"
 
 產生給定輸入的預測值，其中包含以二進位格式儲存在 SQL Server 資料庫中的機器學習模型。
 
-以近乎即時的方式，提供 R 和 Python 機器學習模型的評分。 `sp_rxPredict` 是一個預存程式，提供做為[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)和[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)中 `rxPredict` R 函數的包裝函式，以及[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)和[MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)中的[rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python 函式。 它是以C++撰寫，並已針對評分作業特別優化。
+以近乎即時的方式，提供 R 和 Python 機器學習模型的評分。 `sp_rxPredict``rxPredict`是提供做為[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)和[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)中 R 函數包裝函式的預存程式，以及[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)和[MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)中的[rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python 函式。 它是以 c + + 撰寫，並已針對評分作業特別優化。
 
 雖然模型必須使用 R 或 Python 來建立，但在目標資料庫引擎實例上序列化並儲存為二進位格式之後，即使未安裝 R 或 Python 整合，也可以從該資料庫引擎實例取用。 如需詳細資訊，請參閱[使用 sp_rxPredict 的即時評分](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)。
 
@@ -53,14 +53,14 @@ sp_rxPredict  ( @model, @input )
 會傳回分數資料行，以及輸入資料來源中的任何傳遞資料行。
 如果演算法支援產生這類值，則可以傳回額外的分數資料行，例如信賴區間。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 若要啟用預存程式的使用，必須在實例上啟用 SQLCLR。
 
 > [!NOTE]
 > Enabing 此選項有安全性的影響。 如果無法在伺服器上啟用 SQLCLR，請使用替代的執行方式，例如[TRANSACT-SQL PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql?view=sql-server-2017)函數。
 
-使用者需要資料庫的 `EXECUTE` 許可權。
+使用者需要`EXECUTE`資料庫的許可權。
 
 ### <a name="supported-algorithms"></a>支援的演算法
 
@@ -87,7 +87,7 @@ sp_rxPredict  ( @model, @input )
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
-  + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [類別](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
@@ -113,14 +113,14 @@ sp_rxPredict  ( @model, @input )
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
   + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
-  + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
+  + [類別](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
   + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
   
 ### <a name="unsupported-model-types"></a>不支援的模型類型
 
 不支援下列模型類型：
 
-+ 在 RevoScaleR 中使用 `rxGlm` 或 `rxNaiveBayes` 演算法的模型
++ 在 RevoScaleR 中`rxGlm`使用`rxNaiveBayes`或演算法的模型
 + R 中的 PMML 模型
 + 使用其他協力廠商程式庫建立的模型 
 
@@ -135,9 +135,9 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-除了是有效的 SQL 查詢， *\@inputData*中的輸入資料也必須包含與預存模型中的資料行相容的資料行。
+除了做為有效的 SQL 查詢， * \@inputData*中的輸入資料也必須包含與預存模型中的資料行相容的資料行。
 
-`sp_rxPredict` 僅支援下列 .NET 資料行類型： double、float、short、ushort、long、ulong 和 string。 您可能需要在輸入資料中篩選掉不支援的類型，才能使用它來進行即時評分。 
+`sp_rxPredict`僅支援下列 .NET 資料行類型： double、float、short、ushort、long、ulong 和 string。 您可能需要在輸入資料中篩選掉不支援的類型，才能使用它來進行即時評分。 
 
   如需相對應 SQL 類型的詳細資訊，請參閱 [SQL-CLR 類型對應](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping)或[對應 CLR 參數資料](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。
 

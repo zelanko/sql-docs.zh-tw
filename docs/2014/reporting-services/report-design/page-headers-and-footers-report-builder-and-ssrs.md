@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b746f27653f5e8d1c24a584ac19c8fbac05a57c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105525"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>頁首和頁尾 (報表產生器及 SSRS)
@@ -60,9 +60,9 @@ ms.locfileid: "66105525"
 |報表主體中的文字方塊|是|否|  
 |&PageNumber|是|否|  
 |&TotalPages|是|否|  
-|彙總函式|是的。 例如，<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|是的。 例如，<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
-|頁面上項目的欄位集合|間接。 例如，<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|是的。 例如，<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
-|資料繫結影像|間接。 例如， `=ReportItems!TXT_Photo.Value`|是的。 例如，<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
+|彙總函式|是。 例如，<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|是。 例如，<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
+|頁面上項目的欄位集合|間接。 例如，<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|是。 例如，<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
+|資料繫結影像|間接。 例如， `=ReportItems!TXT_Photo.Value`|是。 例如，<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
   
  這個主題的下列各節顯示立即可用的運算式，它們會取得頁首和頁尾中常用的變數資料。 另外，還有一節會說明 Excel 轉譯延伸模組如何處理頁首和頁尾。 如需運算式的詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)。  
   

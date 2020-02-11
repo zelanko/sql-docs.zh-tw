@@ -1,5 +1,5 @@
 ---
-title: Ordinal 屬性 (ADO MD Cell) |Microsoft Docs
+title: Ordinal 屬性（ADO MD 資料格） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,28 +17,28 @@ ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 194b72ce66eb2efdc3a246f24948b01c790f7b8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949370"
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Ordinal 屬性 (ADO MD Cell)
-可唯一識別[儲存格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)資料格集內的位置。  
+在資料格集內依其位置唯一識別資料[格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)。  
   
 ## <a name="return-values"></a>傳回值  
- 傳回**長**整數和處於唯讀狀態。  
+ 傳回**長**整數，而且是唯讀的。  
   
 ## <a name="remarks"></a>備註  
- 儲存格的序數的值可唯一識別資料格集內的儲存格。 就概念而言，資料格會編號資料格集中，好像 cellset *p*-維陣列，其中*p*數目[軸](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)。 資料格會從零以列為主要順序開始進行編號。 以下是計算資料格序數的公式：  
+ 資料格的序數值可唯一識別資料格集內的資料格。 在概念上，資料格集的編號會如同資料格集是一個*p*維陣列，其中*p*是[軸](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)的數目。 資料格的編號是從零開始，以資料列主要順序。 以下是用來計算資料格序數的公式：  
   
- 儲存格的序數的值可以搭配[項目](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)屬性[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)物件，以便快速擷取[儲存格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)。  
+ 資料格的序數值可以搭配資料格[集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)物件的[Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)屬性使用，以快速取出資料[格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Cell 物件 (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Axis 範例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [Cellset 物件 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
- [項目屬性 (ADO MD Cellset)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   
+ [Axis 範例（VBScript）](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+ [格集物件（ADO MD）](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
+ [Item 屬性（ADO MD 格集）](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   
  [Ordinal 屬性 (ADO MD Position)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)

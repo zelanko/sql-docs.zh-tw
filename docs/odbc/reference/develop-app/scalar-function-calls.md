@@ -13,20 +13,20 @@ ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 37209a75c03a051e3def4d26fa0d4e7f85d0e91d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67897752"
 ---
 # <a name="scalar-function-calls"></a>純量函式呼叫
-純量函數會傳回每個資料列的值。 比方說，絕對值的純量函式會採用數值的資料行，做為引數，並傳回資料行中的每個值的絕對值。 呼叫純量函式逸出序列是  
+純量函數會傳回每個資料列的值。 例如，絕對值純量函數會接受數值資料行做為引數，並傳回資料行中每個值的絕對值。 呼叫純量函數的轉義順序為  
   
- **{fn**  _scalar-function_ **}**  
+ **{fn**純量_函數_ **}**    
   
- 何處*純量函數*是其中一個函式中所列[附錄 e:純量函數](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)。 如需純量函式逸出序列的詳細資訊，請參閱[純量函式逸出序列](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md)附錄 c:SQL 文法。  
+ 其中，純量函數是[附錄 E：](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)純量函*式*中所列的其中一個函數。 如需純量函式 escape 序列的詳細資訊，請參閱附錄 C： SQL 文法中的純量[函數 Escape 序列](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md)。  
   
- 例如，下列 SQL 陳述式建立相同的結果集的大寫的客戶名稱。 第一個陳述式會使用逸出序列的語法。 第二個陳述式使用原生的語法來 Ingres OS/2，且不具互通性。  
+ 例如，下列 SQL 語句會建立相同的大寫客戶名稱結果集。 第一個語句使用 escape 序列語法。 第二個語句會針對 OS/2 使用 Ingres 的原生語法，而且無法互通。  
   
 ```  
 SELECT {fn UCASE(Name)} FROM Customers  
@@ -34,21 +34,21 @@ SELECT {fn UCASE(Name)} FROM Customers
 SELECT uppercase(Name) FROM Customers  
 ```  
   
- 應用程式可以混合使用原生的語法的純量函式呼叫和使用 ODBC 語法的純量函式的呼叫。 例如，假設員工資料表中的名稱會儲存為姓氏、 逗號和名字。 下列 SQL 陳述式建立結果集的員工姓氏的 Employee 資料表中。 陳述式使用 ODBC 純量函式**SUBSTRING**和 SQL Server 純量函式**CHARINDEX**和將 SQL 伺服器上才會正確執行。  
+ 應用程式可以混用純量函式的呼叫，以使用原生語法和呼叫使用 ODBC 語法的純量函數。 例如，假設 Employee 資料表中的名稱是以姓氏、逗號和名字的名稱儲存。 下列 SQL 語句會在 Employee 資料表中建立員工姓氏的結果集。 語句使用 ODBC 純量函式**SUBSTRING**和 SQL Server 純量函數**CHARINDEX** ，而且只會在 SQL Server 上執行。  
   
 ```  
 SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers  
 ```  
   
- 應用程式應該使用的最大的互通性**轉換**純量函式，並確認純量函式的輸出所需的類型。 **轉換**函式將資料從一個 SQL 資料類型轉換成指定的 SQL 資料型別。 語法**轉換**函式  
+ 為了達到最大的互通性，應用程式應該使用**CONVERT**純量函數，以確保純量函數的輸出是必要的類型。 **CONVERT**函數會將資料從一個 sql 資料類型轉換成指定的 sql 資料類型。 **CONVERT**函數的語法為  
   
- **CONVERT(** _value_exp_ **,** _data_type_ **)**  
+ **CONVERT （** _value_exp_ **，** _data_type_**）**  
   
- 其中*value_exp*資料行名稱，另一個純量函式或常值，結果並*data_type*符合關鍵字 **#define**所使用的名稱SQL 資料類型識別項中定義[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。 例如，下列 SQL 陳述式會使用**轉換**並確定函式的輸出**CURDATE**函式是日期類型，而不是時間戳記或字元資料：  
+ 其中*value_exp*是資料行名稱、另一個純量函數的結果或常值，而*data_type*則是符合 SQL 資料類型識別碼所使用之 **#define**名稱的關鍵字，如[附錄 D：資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)中所定義。 例如，下列 SQL 語句會使用**CONVERT**函式，確保**CURDATE**函數的輸出是日期，而不是時間戳記或字元資料：  
   
 ```  
 INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  
    VALUES (?, ?, {fn CONVERT({fn CURDATE()}, SQL_DATE)}, ?, ?)  
 ```  
   
- 若要判斷資料來源所支援的純量函式，呼叫應用程式**SQLGetInfo** SQL_CONVERT_FUNCTIONS、 與 SQL_NUMERIC_FUNCTIONS、 SQL_STRING_FUNCTIONS、 SQL_SYSTEM_FUNCTIONS，SQL_TIMEDATE_函式的選項。 若要判斷哪些轉換作業都受到**轉換**函式應用程式會呼叫**SQLGetInfo**搭配任何開頭 SQL_CONVERT 選項。
+ 為了判斷資料來源支援哪些純量函數，應用程式會使用 SQL_CONVERT_FUNCTIONS、SQL_NUMERIC_FUNCTIONS、SQL_STRING_FUNCTIONS、SQL_SYSTEM_FUNCTIONS 和 SQL_TIMEDATE_FUNCTIONS 選項來呼叫**SQLGetInfo** 。 為了判斷**CONVERT**函式支援哪些轉換作業，應用程式會使用以 SQL_CONVERT 開頭的任何選項來呼叫**SQLGetInfo** 。

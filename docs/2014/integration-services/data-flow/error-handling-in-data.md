@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827141"
 ---
 # <a name="error-handling-in-data"></a>處理資料中的錯誤
@@ -46,7 +46,8 @@ ms.locfileid: "62827141"
   
  ![具有錯誤輸出的資料流程](../media/mw-dts-11.gif "具有錯誤輸出的資料流程")  
   
- 除資料行之外，錯誤輸出還包含 **ErrorCode** 和 **ErrorColumn** 資料行。 **ErrorCode** 資料行可以識別錯誤， **ErrorColumn** 包含錯誤資料行的歷程識別碼。 若要檢視這些資料行的中繼資料，請按一下將錯誤輸出連接到資料流程中之下一個元件的路徑。 在某些情況下， **ErrorColumn** 資料行的值會被設定為零。 當錯誤狀況影響整個資料列而非單一資料行時，就會發生這種情況。 其中一個例子是查閱轉換中的查閱失敗時。  
+ 除資料行之外，錯誤輸出還包含 **ErrorCode** 和 **ErrorColumn** 資料行。 
+  **ErrorCode** 資料行可以識別錯誤， **ErrorColumn** 包含錯誤資料行的歷程識別碼。 若要檢視這些資料行的中繼資料，請按一下將錯誤輸出連接到資料流程中之下一個元件的路徑。 在某些情況下， **ErrorColumn** 資料行的值會被設定為零。 當錯誤狀況影響整個資料列而非單一資料行時，就會發生這種情況。 其中一個例子是查閱轉換中的查閱失敗時。  
   
  如需詳細資訊，請參閱 [資料流程](data-flow.md) 和 [Integration Services 路徑](integration-services-paths.md)。  
   
@@ -68,7 +69,7 @@ ms.locfileid: "62827141"
 ## <a name="adding-the-error-description"></a>新增錯誤描述  
  依預設，錯誤輸出會提供數值錯誤碼，且通常包含發生錯誤之資料行的識別碼。 您可以使用「指令碼」元件，利用單行指令碼來呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 介面的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法，以便將錯誤描述包含在其他的資料行中。  
   
- 「指令碼」元件可以加入資料流程之錯誤區段的任何位置，但必須在您想擷取錯誤之資料流程元件的下游；不過這個元件通常是在將錯誤資料列寫入目的地之前才放入。 如此一來指令碼就只會查閱寫入之錯誤資料列的描述。 例如，資料流程的錯誤區段可能會更新某些錯誤，而且不會將這些資料列寫入錯誤目的地。 如需詳細資訊，請參閱 <<c0> [ 增強錯誤輸出指令碼元件使用](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
+ 「指令碼」元件可以加入資料流程之錯誤區段的任何位置，但必須在您想擷取錯誤之資料流程元件的下游；不過這個元件通常是在將錯誤資料列寫入目的地之前才放入。 如此一來指令碼就只會查閱寫入之錯誤資料列的描述。 例如，資料流程的錯誤區段可能會更新某些錯誤，而且不會將這些資料列寫入錯誤目的地。 如需詳細資訊，請參閱[使用腳本元件增強錯誤輸出](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
   
 ### <a name="to-configure-an-error-output"></a>設定錯誤輸出  
   

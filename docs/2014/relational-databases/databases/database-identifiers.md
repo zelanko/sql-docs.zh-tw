@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a492aee19d6b09cb7d227b34648f1ea35d1d95d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762081"
 ---
 # <a name="database-identifiers"></a>資料庫識別碼
-  資料庫物件名稱又稱為識別碼。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每一個物件都具有識別碼。 伺服器、資料庫與資料庫物件 (如資料表、檢視、資料行、索引、觸發程序、程序、條件約束、規則) 都可以有識別碼。 大多數物件都需要識別碼，但對部分物件如條件約束，則是選擇性的需求。  
+  資料庫物件名稱又稱為識別碼。 中的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所有專案都可以有識別碼。 伺服器、資料庫與資料庫物件 (如資料表、檢視、資料行、索引、觸發程序、程序、條件約束、規則) 都可以有識別碼。 大多數物件都需要識別碼，但對部分物件如條件約束，則是選擇性的需求。  
   
  定義物件時會建立物件識別碼。 之後就可以使用識別碼來參考物件。 例如，以下陳述式會建立具有識別碼 `TableX`的資料表，以及具有識別碼 `KeyCol` 與 `Description`的兩個資料行：  
   
@@ -37,7 +37,8 @@ CREATE TABLE TableX
 (KeyCol INT PRIMARY KEY, Description nvarchar(80))  
 ```  
   
- 這個資料表也有一個未命名的條件約束。 `PRIMARY KEY` 條件約束沒有識別碼。  
+ 這個資料表也有一個未命名的條件約束。 
+  `PRIMARY KEY` 條件約束沒有識別碼。  
   
  識別碼的定序會隨定義的層級而不同。 執行個體層級物件 (如登入和資料庫名稱) 的識別碼會被指派執行個體的預設定序。 而資料庫中物件 (如資料表、檢視和資料行名稱) 的識別碼，則會被指派資料庫的預設定序。 例如，在區分大小寫定序的資料庫中，您可以建立名稱相同但大小寫不同的兩個資料表，但在不區分大小寫定序的資料庫中，就不可以建立名稱相同但大小寫不同的兩個資料表。  
   
@@ -96,7 +97,8 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
     -   @ 符號、錢幣符號 ($)、數字符號或底線。  
   
-3.  識別碼不得為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 保留字。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會保留大小寫版本的保留字。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用識別碼時，如果識別碼與上述規則不符，您必須使用雙引號 ("") 或方括號 ([]) 加以分隔。 保留字取決於資料庫相容性層級。 這個層級可以使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) 陳述式加以設定。  
+3.  識別碼不得為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 保留字。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會保留大小寫版本的保留字。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用識別碼時，如果識別碼與上述規則不符，您必須使用雙引號 ("") 或方括號 ([]) 加以分隔。 保留字取決於資料庫相容性層級。 這個層級可以使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) 陳述式加以設定。  
   
 4.  不允許內嵌的空格或特殊字元。  
   
@@ -108,18 +110,18 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
 >  某些有關於一般識別碼格式的規則，取決於資料庫的相容性層級。 您可以使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)來設定這個層級。  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [建立資料庫 &#40;SQL Server Transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql)   
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
- [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql)   
- [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
+ [CREATE PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
+ [CREATE RULE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-rule-transact-sql)   
+ [CREATE TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
+ [DECLARE @local_variable &#40;transact-sql&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
  [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)   
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
- [保留關鍵字 &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)   
+ [&#40;Transact-sql&#41;的保留關鍵字](/sql/t-sql/language-elements/reserved-keywords-transact-sql)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)  
   

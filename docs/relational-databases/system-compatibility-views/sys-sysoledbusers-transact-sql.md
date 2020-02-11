@@ -1,5 +1,5 @@
 ---
-title: sys.sysoledbusers (TRANSACT-SQL) |Microsoft Docs
+title: sysoledbusers （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d7c8b97a04e8b9898a9d49a412c5c6e5a2aa910c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076528"
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
@@ -32,21 +32,21 @@ ms.locfileid: "68076528"
 
     
 > [!IMPORTANT]  
->  將這份 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 系統資料表併入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作為一份檢視的目的，只是為了與舊版相容。 我們建議您改用[目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)改。  
+>  將這份 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 系統資料表併入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作為一份檢視的目的，只是為了與舊版相容。 我們建議您改用[目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。  
   
- 針對指定連結伺服器的每個使用者和密碼對應，各包含一個資料列。 **sysoledbusers**會儲存在**主要**資料庫。  
+ 針對指定連結伺服器的每個使用者和密碼對應，各包含一個資料列。 **sysoledbusers**儲存在**master**資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**smallint**|伺服器的安全性識別碼 (SID)。|  
-|**rmtloginame**|**nvarchar(** 128 **)**|遠端登入名稱， **loginsid**對應至連結**rmtservid**。|  
-|**rmtpassword**|**nvarchar(** 128 **)**|傳回 NULL。|  
-|**loginsid**|**varbinary(** 85 **)**|所要對應的本機登入 SID。|  
-|**status**|**smallint**|如果是 1，則對應應該使用使用者的認證。|  
+|**rmtloginame**|**Nvarchar （** 128 **）**|**Loginsid**對應至連結**rmtservid**的遠端登入名稱。|  
+|**rmtpassword**|**Nvarchar （** 128 **）**|傳回 NULL。|  
+|**loginsid**|**Varbinary （** 85 **）**|所要對應的本機登入 SID。|  
+|**狀態**|**smallint**|如果是 1，則對應應該使用使用者的認證。|  
 |**changedate**|**datetime**|上次變更對應資訊的日期。|  
   
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [&#40;Transact-sql&#41;的相容性檢視](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

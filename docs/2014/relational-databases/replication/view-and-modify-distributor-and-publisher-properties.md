@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68212022"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>檢視及修改散發者和發行者屬性
@@ -45,9 +45,9 @@ ms.locfileid: "68212022"
   
 ###  <a name="Recommendations"></a> 建議  
   
--   對於執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]之前版本的「發行者」， **sysadmin** 固定伺服器角色中的使用者可在 **[訂閱者]** 頁面上註冊「訂閱者」。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]開始，它不再需要明確註冊複寫的「訂閱者」。  
+-   對於執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前版本的「發行者」，**sysadmin** 固定伺服器角色中的使用者可在 [訂閱者]  頁面上註冊「訂閱者」。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]開始，它不再需要明確註冊複寫的「訂閱者」。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  可能的話，會在執行階段提示使用者輸入安全性認證。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -58,13 +58,13 @@ ms.locfileid: "68212022"
   
 2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[散發者屬性]** 。  
   
-3.  檢視和修改 [散發者屬性 - \<散發者>]  對話方塊中的屬性。  
+3.  檢視和修改 [散發者屬性 - **散發者>]\<** 對話方塊中的屬性。  
   
     -   若要檢視和修改散發資料庫的屬性，請按一下對話方塊中 [一般]  頁面上資料庫的屬性按鈕 ( **...** )。  
   
     -   若要檢視和修改與「散發者」相關聯的「發行者」屬性，請按一下對話方塊中 **[發行者]** 頁面上「發行者」的屬性按鈕 ( **[...]** )。  
   
-    -   若要存取複寫代理程式的設定檔，請按一下對話方塊中 **[一般]** 頁面上的 **[設定檔預設值]** 按鈕。 如需詳細資訊，請參閱 [Replication Agent Profiles](agents/replication-agent-profiles.md)。  
+    -   若要存取複寫代理程式的設定檔，請按一下對話方塊中 **[一般]** 頁面上的 **[設定檔預設值]** 按鈕。 如需相關資訊，請參閱 [Replication Agent Profiles](agents/replication-agent-profiles.md)。  
   
     -   若要變更在「發行者」端執行管理預存程序以及在「散發者」端更新資訊時所使用之帳戶的密碼，請在對話方塊中 **[發行者]** 頁面上的 **[密碼]** 和 **[確認密碼]** 方塊內輸入新的密碼。 如需詳細資訊，請參閱[保護散發者](security/secure-the-distributor.md)。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68212022"
   
 2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[發行者屬性]** 。  
   
-3.  檢視及修改中的屬性**發行者屬性-\<發行者 >**  對話方塊。  
+3.  在 [**發行者屬性- \<發行者 >** ] 對話方塊中，查看及修改屬性。  
   
     -   **sysadmin** 固定伺服器角色中的使用者能啟用 **[發行集資料庫]** 頁面上複寫的資料庫。 啟用資料庫不會發行此資料庫；不過，它允許該資料庫之 **db_owner** 固定資料庫角色中的任何使用者在資料庫中建立一個或多個發行集。  
   
@@ -204,6 +204,6 @@ ms.locfileid: "68212022"
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [散發者與發行者資訊指令碼](administration/distributor-and-publisher-information-script.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
- [使用複寫監視器來檢視資訊及執行工作](monitor/view-information-and-perform-tasks-replication-monitor.md)  
+ [使用複寫監視器來查看資訊及執行工作](monitor/view-information-and-perform-tasks-replication-monitor.md)  
   
   
