@@ -1,5 +1,5 @@
 ---
-title: MSmerge_subscriptions (TRANSACT-SQL) |Microsoft Docs
+title: MSmerge_subscriptions （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b00a2e83839724c2b6e5193e2ca08d5c6d3eced9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106307"
 ---
-# <a name="msmergesubscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
+# <a name="msmerge_subscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_subscriptions**資料表包含訂閱者的合併代理程式所服務的每個訂用帳戶的一個資料列。 這份資料表儲存在散發資料庫中。  
+  **MSmerge_subscriptions**資料表會針對訂閱者端之合併代理程式所服務的每個訂閱，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -38,11 +38,11 @@ ms.locfileid: "68106307"
 |**subscriber_db**|**sysname**|訂閱資料庫的名稱。|  
 |**subscription_type**|**int**|訂閱的類型：<br /><br /> 0 = 發送。<br /><br /> 1 = 提取。<br /><br /> 2 = 匿名。|  
 |**sync_type**|**tinyint**|同步處理的類型：<br /><br /> 1 = 自動。<br /><br /> 2 = 不同步。|  
-|**status**|**tinyint**|訂閱的狀態。|  
+|**狀態**|**tinyint**|訂閱的狀態。|  
 |**subscription_time**|**datetime**|加入訂閱的時間。|  
   
 ## <a name="see-also"></a>另請參閱  
- [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 排序屬性範例 (VB) |Microsoft Docs
+title: Sort 屬性範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dec17461f44c9e461a010e8a0bf5cf3fe3bbbd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931027"
 ---
 # <a name="sort-property-example-vb"></a>Sort 屬性範例 (VB)
-這個範例會使用[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[排序](../../../ado/reference/ado-api/sort-property.md)屬性，以重新排序的資料列**資料錄集**衍生自***作者***資料表***Pubs***資料庫。 次要的公用程式常式會列印每個資料列。  
+這個範例會使用[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件[的 Sort](../../../ado/reference/ado-api/sort-property.md)屬性，重新排序衍生自***Pubs***資料庫之***作者***資料表的**記錄集**資料列。 次要公用程式常式會列印每個資料列。  
   
 ```  
 'BeginSortVB  
@@ -103,12 +103,12 @@ End Sub
 'EndSortVB  
 ```  
   
- 這是列印指定的標題，以及指定之內容的第二個公用程式常式**資料錄集**。  
+ 這是列印給定標題的次要公用程式常式，以及指定之**記錄集**的內容。  
   
 ```  
 Attribute VB_Name = "Sort"  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Sort 屬性](../../../ado/reference/ado-api/sort-property.md)

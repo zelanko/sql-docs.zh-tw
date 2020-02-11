@@ -1,5 +1,5 @@
 ---
-title: 父屬性 (ADO MD) |Microsoft Docs
+title: Parent 屬性（ADO MD） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,22 +17,22 @@ ms.assetid: 32c278c1-d8e1-4bb7-9ecd-2fbfdffee34b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2f6d6e03dd3288a5b0ca71bb9e129e1a57abf7c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949323"
 ---
 # <a name="parent-property-ado-md"></a>Parent 屬性 (ADO MD)
-指出目前的父系的成員[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)階層中。  
+表示階層中目前[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)父系的成員。  
   
 ## <a name="return-values"></a>傳回值  
- 傳回[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)物件，並處於唯讀狀態。  
+ 傳回[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)物件，而且是唯讀的。  
   
 ## <a name="remarks"></a>備註  
- 階層 （根） 的高層級的成員有沒有父代。 這個屬性僅支援**成員**屬於物件[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)物件。 從參考這個屬性時，就會發生錯誤**成員**屬於物件[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)物件。  
+ 位於階層最上層（根）的成員沒有父系。 只有屬於[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)物件的**成員**物件才支援這個屬性。 當這個屬性是從屬於[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)物件的**成員**物件參考時，就會發生錯誤。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Member 物件 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
 ## <a name="see-also"></a>另請參閱  

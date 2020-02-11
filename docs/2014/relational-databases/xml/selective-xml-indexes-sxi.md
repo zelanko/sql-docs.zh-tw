@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679819"
 ---
 # <a name="selective-xml-indexes-sxi"></a>選擇性 XML 索引 (SXI)
@@ -123,7 +123,7 @@ FOR
   
 -   索引包含二進位 XS 類型的節點：例如 base64Binary 和 hexBinary。  
   
--   使用結尾包含萬用字元 `*` 的 XPath 運算式指定要編製索引的節點：例如 `/a/b/c/*`、`/a//b/*` 或 `/a/b/*:c`。  
+-   使用結尾包含萬用字元 `*` 的 XPath 運算式指定要索引的節點：例如  `/a/b/c/*`、 `/a//b/*`或 `/a/b/*:c`。  
   
 -   索引子系、屬性或下階以外的任何座標軸。 `//<step>` 案例可做為特殊案例。  
   
@@ -201,7 +201,7 @@ FOR
   
 |||  
 |-|-|  
-|**工作**|**主題**|  
+|**Task**|**主題**|  
 |當您建立或修改選擇性 XML 索引時，指定您要建立索引的節點路徑，以及選用的最佳化提示。|[指定選擇性 XML 索引的路徑和最佳化提示](specify-paths-and-optimization-hints-for-selective-xml-indexes.md)|  
 |建立、修改或卸除選擇性 XML 索引。|[建立、修改和卸除選擇性 XML 索引](create-alter-and-drop-selective-xml-indexes.md)|  
 |建立、修改或卸除次要選擇性 XML 索引。|[建立、修改和卸除次要選擇性 XML 索引](create-alter-and-drop-secondary-selective-xml-indexes.md)|  

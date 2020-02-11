@@ -1,5 +1,5 @@
 ---
-title: 定義參考關聯性及參考的關聯性屬性 |Microsoft Docs
+title: 定義參考的關聯性及參考的關聯性屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00305d00bb3a11cc4237e005a057c70d4c5f3397
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075755"
 ---
 # <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>定義參考的關聯性及參考的關聯性屬性
-  參考維度關聯性是在 Cube 設計師的 [維度使用方式]  索引標籤上定義的。 透過指定下列項目即可定義參考維度關聯性：  
+  參考維度關聯性是在 Cube 設計師的 [維度使用方式]**** 索引標籤上定義的。 透過指定下列項目即可定義參考維度關聯性：  
   
 -   要聯結的中繼維度。 這可以是一般維度或另一個參考維度。  
   

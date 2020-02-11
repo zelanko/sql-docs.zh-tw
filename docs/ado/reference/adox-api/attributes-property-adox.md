@@ -1,5 +1,5 @@
 ---
-title: 屬性的屬性 (ADOX) |Microsoft Docs
+title: Attributes 屬性（ADOX） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,19 +20,19 @@ ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fcd0e70dd9c505b9e2b0752c33b9e768b9127472
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967143"
 ---
 # <a name="attributes-property-adox"></a>Attributes 屬性 (ADOX)
-描述資料行的特性。  
+描述資料行特性。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**長**值。 值會指定資料表所表示的特性[資料行](../../../ado/reference/adox-api/column-object-adox.md)物件。 值可以是組成[ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md)常數。 預設值為零 (**0**)，這是不**adColFixed**也**adColNullable**。  
+ 設定或傳回**Long**值。 值會指定資料[行](../../../ado/reference/adox-api/column-object-adox.md)物件所代表之資料表的特性。 此值可以是[ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md)常數的組合。 預設值為零（**0**），這既不是**adColFixed**也不是**adColNullable**。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
   
 - [Column 物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   

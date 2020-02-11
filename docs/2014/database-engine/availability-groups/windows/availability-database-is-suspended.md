@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 21d788db62fe39b86eb801c028450c16cf845845
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815763"
 ---
 # <a name="availability-database-is-suspended"></a>可用性資料庫已暫停
@@ -29,7 +29,7 @@ ms.locfileid: "62815763"
 |-|-|  
 |**原則名稱**|可用性資料庫暫停狀態|  
 |**問題**|可用性資料庫已暫停。|  
-|**分類**|**警告**|  
+|**類別目錄**|**警告**|  
 |**Facet**|可用性資料庫|  
   
 ## <a name="description"></a>描述  
@@ -49,7 +49,7 @@ ms.locfileid: "62815763"
  繼續資料同步處理。 如果問題仍然存在，請檢查事件記錄檔中的可用性群組，然後診斷為什麼系統暫停資料移動。  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

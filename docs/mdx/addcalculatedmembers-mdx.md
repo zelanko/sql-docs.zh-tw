@@ -1,5 +1,5 @@
 ---
-title: AddCalculatedMembers (MDX) |Microsoft Docs
+title: AddCalculatedMembers （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 982484b729b59a7106b6195e361110c1d4012653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017180"
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers (MDX)
@@ -32,7 +32,7 @@ AddCalculatedMembers(Set_Expression)
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 根據預設，MDX 會在解析集合函數時排除導出成員。 **AddCalculatedMembers**函式會檢查在指定的集合運算式*Set_Expression，* 並包含導出的成員是包含在該集的範圍內之成員的同層級運算式。  
+ 根據預設，MDX 會在解析集合函數時排除導出成員。 **AddCalculatedMembers**函數會檢查 Set_Expression 中指定的集合運算式 *，* 並包含屬於該集合運算式範圍內之成員的的匯出成員。  
   
 > [!NOTE]  
 >  此函數僅能搭配一維的集合運算式使用。  
@@ -50,7 +50,7 @@ SELECT
 FROM [Adventure Works]   
 ```  
   
- 下列範例會傳回`Measures.[Unit Price]`成員，以及中的所有導出成員**量值**維度中，從**Adventure Works** cube。  
+ 除了 [**量值**] `Measures.[Unit Price]`維度中的所有匯出成員之外，下列範例也會從 [**艾德工作**] cube 傳回成員。  
   
 ```  
 SELECT  
@@ -60,6 +60,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

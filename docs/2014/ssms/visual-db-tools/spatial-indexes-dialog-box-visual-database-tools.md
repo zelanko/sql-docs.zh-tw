@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00c5e0017b8d81eaea6960f016e40dbc381e69e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049132"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>空間索引對話方塊 (Visual Database Tools)
@@ -24,11 +24,11 @@ ms.locfileid: "63049132"
   
  如需有關空間索引建立之限制的詳細資訊，請參閱 [空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **選取的空間索引**  
  列出現有的空間索引。 選取索引以顯示其屬性。 如果清單是空的，表示此資料表沒有定義任何空間索引。  
   
- **[加入]**  
+ **加入**  
  建立新的空間索引。  
   
  **刪除**  
@@ -81,7 +81,7 @@ ms.locfileid: "63049132"
  **Y-min**  
  指定週框方塊左下角的 Y 座標。 如果 [鑲嵌式配置]  為 [地理方格]  ，這個屬性就會呈暗灰色。  
   
- **識別**  
+ **身分識別**  
  展開時會顯示 [名稱]  和 [描述]  屬性欄位。  
   
  **(名稱)**  

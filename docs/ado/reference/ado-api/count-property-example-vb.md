@@ -1,5 +1,5 @@
 ---
-title: Count 屬性範例 (VB) |Microsoft Docs
+title: Count 屬性範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5be99b4f43669a14f948cf10ee0b91028907ec0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933366"
 ---
 # <a name="count-property-example-vb"></a>Count 屬性範例 (VB)
-此範例示範[計數](../../../ado/reference/ado-api/count-property-ado.md)屬性中的兩個集合***員工***資料庫。 屬性會取得每個集合中的物件數目，並設定列舉這些集合的迴圈的上限。 列舉，這些集合而不使用的另一種方式**計數**屬性是使用`For Each...Next`陳述式。  
+這個範例會示範在***Employee***資料庫中具有兩個集合的[Count](../../../ado/reference/ado-api/count-property-ado.md)屬性。 屬性會取得每個集合中的物件數目，並設定列舉這些集合之迴圈的上限。 另一個列舉這些集合而不使用**Count**屬性的方法，就是`For Each...Next`使用語句。  
   
 ```  
 'BeginCountVB  

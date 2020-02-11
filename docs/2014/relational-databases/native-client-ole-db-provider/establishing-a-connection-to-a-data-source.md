@@ -1,5 +1,5 @@
 ---
-title: 建立資料來源的連接 |Microsoft Docs
+title: 建立與資料來源的連接 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 263728218fd032c0814d73197cde56fc2d661e9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183744"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>建立資料來源的連接
-  若要存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，取用者必須先建立資料來源物件的執行個體藉由呼叫**CoCreateInstance**方法。 唯一類別識別項 (CLSID) 會識別每個 OLE DB 提供者。 針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，類別識別項為 CLSID_SQLNCLI10。 您也可以使用符號 sqlncli_clsid 符號將會解析為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用您所參考之 sqlncli.h 中的 Native Client OLE DB 提供者。  
+  若要存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，取用者必須先呼叫**CoCreateInstance**方法來建立資料來源物件的實例。 唯一類別識別項 (CLSID) 會識別每個 OLE DB 提供者。 針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，類別識別碼為 CLSID_SQLNCLI10。 您也可以使用符號 SQLNCLI_CLSID，解析為您所參考[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 SQLNCLI 中所使用的 Native Client OLE DB 提供者。  
   
  資料來源物件會公開 **IDBProperties** 介面，取用者可以使用這個介面來提供基本驗證資訊；例如，伺服器名稱、資料庫名稱、使用者識別碼和密碼。 呼叫 **IDBProperties::SetProperties** 方法可設定這些屬性。  
   
@@ -40,7 +40,7 @@ CoCreateInstance(CLSID_SQLNCLI10,
                  (void **) &pIDBInitialize)  
 ```  
   
- 此呼叫**CoCreateInstance**建立與 CLSID_SQLNCLI10 相關聯類別的單一物件 （CSLID 相關聯的資料和將用來建立物件的程式碼）。 IID_IDBInitialize 是介面 (**IDBInitialize**) 識別項的參考，用於與物件進行通訊。  
+ 這個對**CoCreateInstance**的呼叫會建立與 CLSID_SQLNCLI10 相關聯之類別的單一物件（CSLID 與用來建立物件的資料和程式碼相關聯）。 IID_IDBInitialize 是介面 (**IDBInitialize**) 識別項的參考，用於與物件進行通訊。  
   
  以下是初始化與建立資料來源之連接的範例函數。  
   

@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011264"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE Automation 傳回碼與錯誤資訊
-  OLE Automation 系統預存程序將傳回 `int` 傳回碼，這是底下的 OLE Automation 操作所傳回的 HRESULT。 若 HRESULT 為 0 代表成功。 非零的 HRESULT 為十六進位形式 0x800 OLE 錯誤碼*nnnnn*，但若以傳回`int`預存程序傳回碼的 HRESULT 值的形式為 214*nnnnnnn*。  
+  OLE Automation 系統預存程序將傳回 `int` 傳回碼，這是底下的 OLE Automation 操作所傳回的 HRESULT。 若 HRESULT 為 0 代表成功。 非零的 HRESULT 是十六進位格式 0x800*nnnnn*的 OLE 錯誤碼，但當當做預存程式傳回`int`碼中的值傳回時，HRESULT 的格式為 214*nnnnnnn*。  
   
- 例如，若將無效的物件名稱 (SQLDMO。Xyzzy) 給 sp_OACreate 會導致該程序傳回`int`2147221005 的 HRESULT 為 0x800401f3。  
+ 例如，傳遞不正確物件名稱（SQLDMO.H。Sqldmo.xyzzy 傳） sp_OACreate 會使程式`int`傳回2147221005的 HRESULT，其以十六進位0x800401f3。  
   
- 您可以使用 `CONVERT(binary(4), @hresult)` 將 `int` HRESULT 轉換為 `binary` 值。 但是，使用 `CONVERT(char(10), CONVERT(binary(4), @hresult))` 會產生無法讀取的字串，因為 HRESULT 的每個位元組將轉換成一個 ASCII 字元。 您可以使用下列的範例 HexToChar 預存程序，在轉換`int`HRESULT`char`包含可讀取的十六進位字串值。  
+ 您可以使用 `CONVERT(binary(4), @hresult)` 將 `int` HRESULT 轉換為 `binary` 值。 但是，使用 `CONVERT(char(10), CONVERT(binary(4), @hresult))` 會產生無法讀取的字串，因為 HRESULT 的每個位元組將轉換成一個 ASCII 字元。 您可以使用下列範例 HexToChar 預存程式，將`int` HRESULT 轉換成包含`char`可讀取之十六進位字串的值。  
   
 ```  
 USE AdventureWorks2012;  
@@ -76,7 +76,7 @@ SELECT @BinVariable AS BinaryValue,
 GO  
 ```  
   
- 您可以使用下列的預存程序範例 ( **sp_displayoaerrorinfo** )，在某個 OLE Automation 程序傳回非零的 HRESULT 傳回碼時顯示 OLE Automation 錯誤訊息。 這個範例預存程序使用`HexToChar`。  
+ 您可以使用下列的預存程序範例 ( **sp_displayoaerrorinfo** )，在某個 OLE Automation 程序傳回非零的 HRESULT 傳回碼時顯示 OLE Automation 錯誤訊息。 這個範例預存程式`HexToChar`會使用。  
   
 ```  
 CREATE PROCEDURE dbo.sp_DisplayOAErrorInfo  

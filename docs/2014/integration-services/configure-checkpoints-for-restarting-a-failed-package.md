@@ -1,5 +1,5 @@
 ---
-title: 設定檢查點以重新啟動失敗的封裝 |Microsoft Docs
+title: 設定檢查點以重新開機失敗的封裝 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e22e47af568ecf723b54a35fb6b83bd5ce74e333
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060765"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>設定檢查點以重新啟動失敗的封裝
@@ -51,7 +51,7 @@ ms.locfileid: "66060765"
   
     -   以滑鼠右鍵按一下工作或容器，然後按一下 [屬性]  。  
   
-    -   FailPackageOnFailure 屬性設為`True`每個所選工作和容器。  
+    -   針對每個選取的`True`工作和容器，將 FailPackageOnFailure 屬性設定為。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用檢查點來重新啟動封裝](packages/restart-packages-by-using-checkpoints.md)  

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8b6f1fa1697898432479b524659383d81fc8836a
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952627"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>設定報表伺服器資料庫連接 (SSRS 組態管理員)
@@ -42,11 +42,11 @@ ms.locfileid: "71952627"
   
  報表伺服器資料庫為內部元件，只能由報表伺服器存取。 您為報表伺服器資料庫指定的認證和連接資訊是報表伺服器所專用。 要求報表的使用者不需要資料庫權限或是報表伺服器資料庫的資料庫登入。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 `System.Data.SqlClient` 來連接到主控報表伺服器資料庫的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 如果您要使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的本機執行個體，報表伺服器將會使用共用記憶體建立連接。 如果您要使用報表伺服器資料庫的遠端資料庫伺服器，您可能必須根據您使用的版本來啟用遠端連接。 如果您正在使用 Enterprise Edition，預設會啟用 TCP/IP 的遠端連接。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]使用`System.Data.SqlClient`連接到主控報表[!INCLUDE[ssDE](../../includes/ssde-md.md)]伺服器資料庫的。 如果您要使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的本機執行個體，報表伺服器將會使用共用記憶體建立連接。 如果您要使用報表伺服器資料庫的遠端資料庫伺服器，您可能必須根據您使用的版本來啟用遠端連接。 如果您正在使用 Enterprise Edition，預設會啟用 TCP/IP 的遠端連接。  
   
- 若要確認此執行個體可接受遠端連線，請依序按一下 [開始]、[所有程式]、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 [組態工具]，再按一下 [SQL Server 組態管理員]，然後確認每一個服務都已啟用 TCP/IP 通訊協定。  
+ 若要確認此執行個體可接受遠端連線，請依序按一下 [開始]****、[所有程式]****、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 [組態工具]****，再按一下 [SQL Server 組態管理員]****，然後確認每一個服務都已啟用 TCP/IP 通訊協定。  
   
- 當您啟用遠端連接時，也會啟用用戶端和伺服器通訊協定。 若要確認通訊協定已啟用，請依序按一下 **[開始]** 、 **[所有程式]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[組態工具]** 、 **[SQL Server 組態管理員]** 、 **[SQL Server 網路組態]** ，再按一下 **[MSSQLSERVER 的通訊協定]** 。 如需詳細資訊，請參閱《 [線上叢書》中的](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) 啟用或停用伺服器網路通訊協定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 當您啟用遠端連接時，也會啟用用戶端和伺服器通訊協定。 若要確認通訊協定已啟用，請依序按一下 **[開始]**、 **[所有程式]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[組態工具]**、 **[SQL Server 組態管理員]**、 **[SQL Server 網路組態]**，再按一下 **[MSSQLSERVER 的通訊協定]**。 如需詳細資訊，請參閱《 [線上叢書》中的](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) 啟用或停用伺服器網路通訊協定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="defining-a-report-server-database-connection"></a>定義報表伺服器資料庫連接  
  若要設定連接，您必須使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員或 **rsconfig** 命令列公用程式。 報表伺服器需要下列連接資訊：  
@@ -62,7 +62,8 @@ ms.locfileid: "71952627"
  您提供的認證必須被授與對報表伺服器資料庫的存取權。 如果您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，會自動執行此步驟。 如需有關存取資料庫所需權限的詳細資訊，請參閱此主題中的＜資料庫權限＞一節。  
   
 ### <a name="storing-database-connection-information"></a>儲存資料庫連接資訊  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會儲存及加密下列 RSreportserver.config 設定中的連接資訊。 您必須使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具或 rsconfig 公用程式來建立這些設定的加密值。  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會儲存及加密下列 RSreportserver.config 設定中的連接資訊。 您必須使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具或 rsconfig 公用程式來建立這些設定的加密值。  
   
  不過，並不是每種連接類型都需要設定所有的值， 如果您使用預設值（也就是使用服務帳戶來進行連線）來設定連接，<`LogonUser`>、<`LogonDomain`> 和 <`LogonCred`> 將會是空的，如下所示：  
   
@@ -83,7 +84,8 @@ ms.locfileid: "71952627"
   
 -   Windows 使用者帳戶。 如果報表伺服器和報表伺服器資料庫安裝在相同電腦上，您可以使用本機帳戶。 否則，您必須使用網域帳戶。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
 > [!NOTE]  
 >  自訂驗證延伸模組不能用來連接到報表伺服器資料庫。 自訂驗證延伸模組只能用於驗證報表伺服器的主體。 它們對於報表伺服器資料庫的連接，或者提供報表內容之外部資料來源的連接，不會有任何影響。  
@@ -93,7 +95,7 @@ ms.locfileid: "71952627"
 ##### <a name="using-service-accounts-and-integrated-security"></a>使用服務帳戶和整合式安全性  
  您可以使用 Windows 整合式安全性，以透過報表伺服器服務帳戶進行連接。 此帳戶會被授與報表伺服器資料庫的登入權限。 如果您以預設的組態安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，這是安裝程式選擇的預設認證類型。  
   
- 此服務帳戶是信任帳戶，可提供管理報表伺服器資料庫連接的低維護方法。 由於此服務帳戶會使用 Windows 整合式安全性進行連接，因此不需要儲存認證。 但是，如果您接著變更服務帳戶密碼或識別 (例如，從內建帳戶切換到網域帳戶)，請務必使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具進行變更。 此工具會自動更新資料庫權限，以使用修訂過的帳戶資訊。 如需詳細資訊，請參閱[設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
+ 此服務帳戶是信任帳戶，可提供管理報表伺服器資料庫連接的低維護方法。 由於此服務帳戶會使用 Windows 整合式安全性進行連接，因此不需要儲存認證。 但是，如果您接著變更服務帳戶密碼或識別 (例如，從內建帳戶切換到網域帳戶)，請務必使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具進行變更。 此工具會自動更新資料庫權限，以使用修訂過的帳戶資訊。 如需詳細資訊，請參閱《 [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
   
  如果將資料庫連接設定為使用此服務帳戶，則當報表伺服器資料庫位於遠端電腦上時，該帳戶必須具有網路權限。 如果報表伺服器資料庫位於不同的網域、在防火牆後面，或者您使用的是工作群組安全性而非網域安全性，則請勿使用服務帳戶。 您應該改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫使用者帳戶。  
   
@@ -106,9 +108,9 @@ ms.locfileid: "71952627"
 ### <a name="database-permissions"></a>資料庫權限  
  用來連接到報表伺服器資料庫的帳戶被授與下列角色：  
   
--   **ReportServer** 資料庫的 **public** 和 **RSExecRole** 角色。  
+-   **ReportServer**資料庫的**public**和**RSExecRole**角色。  
   
--   **master** 、 **msdb**和 **ReportServerTempDB**資料庫的 **RSExecRole** 角色。  
+-   **Master**、 **msdb**和**ReportServerTempDB**資料庫的**RSExecRole**角色。  
   
  當您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具建立或修改此連接時，會自動授與這些權限。 如果您使用 rsconfig 公用程式，並且為連接指定不同的帳戶，則必須針對該新帳戶更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 您可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具中，建立將會更新報表伺服器之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的指令碼檔案。  
   
@@ -123,7 +125,7 @@ ms.locfileid: "71952627"
   
 ## <a name="see-also"></a>另請參閱  
  [建立報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
+ [管理 Reporting Services 的原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
   
   

@@ -16,16 +16,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2bb9829f49f8ce777e98e3e43191a29466fc8c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093255"
 ---
 # <a name="ready-to-install"></a>安裝準備就緒
   [準備安裝] 頁面會提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式所要安裝或變更之功能的摘要。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  這個頁面含有下列選項：  
   
 -   若要繼續安裝，請按一下 **[安裝]**。  

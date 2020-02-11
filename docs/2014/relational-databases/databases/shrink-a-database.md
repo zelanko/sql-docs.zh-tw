@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916964"
 ---
 # <a name="shrink-a-database"></a>壓縮資料庫
@@ -56,7 +56,7 @@ ms.locfileid: "62916964"
   
     -   除非您有特定的需求，否則請不要將 AUTO_SHRINK 資料庫選項設定為 ON。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 **系統管理員** 固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。  
@@ -65,13 +65,13 @@ ms.locfileid: "62916964"
   
 #### <a name="to-shrink-a-database"></a>若要壓縮資料庫  
   
-1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
+1.  在**物件總管**中，連接到的實例[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，然後展開該實例。  
   
-2.  展開 [資料庫]  ，然後以滑鼠右鍵按一下您要壓縮的資料庫。  
+2.  展開 [**資料庫**]，然後以滑鼠右鍵按一下您要壓縮的資料庫。  
   
-3.  指向 **[工作]** 的 **[壓縮]** ，然後按一下 **[資料庫]** 。  
+3.  指向 **[工作]** 的 **[壓縮]**，然後按一下 **[資料庫]**。  
   
-     **[資料庫]**  
+     **Database**  
      顯示選取之資料庫的名稱。  
   
      **目前配置的空間**  
@@ -80,7 +80,7 @@ ms.locfileid: "62916964"
      **可用空間**  
      顯示選取之資料庫的記錄檔和資料檔中可用空間的總和。  
   
-     **釋放未使用的空間之前，先重新組織檔案**  
+     **釋放未使用的空間之前重新組織檔案**  
      選取這個選項相當於執行 DBCC SHRINKDATABASE 指定目標百分比選項。 清除此選項相當於搭配 TRUNCATEONLY 選項執行 DBCC SHRINKDATABASE。 依預設，開啟對話方塊時並不會選取此選項。 如果選取此選項，使用者必須指定目標百分比選項。  
   
      **壓縮後檔案的最大可用空間**  
@@ -96,19 +96,19 @@ ms.locfileid: "62916964"
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行]  。 這個範例會使用 [DBCC SHRINKDATABASE](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql) 縮小 `UserDB` 資料庫中的資料和記錄檔大小，使資料庫中能有 `10` % 的可用空間。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會使用 [DBCC SHRINKDATABASE](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql) 縮小 `UserDB` 資料庫中的資料和記錄檔大小，使資料庫中能有 `10` % 的可用空間。  
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
   
-##  <a name="FollowUp"></a> 後續操作：壓縮資料庫之後  
+##  <a name="FollowUp"></a>後續操作：壓縮資料庫之後  
  為壓縮檔案所移動的資料可散佈至檔案中的任何可用位置。 如此會造成索引片段，並可能導致大範圍之索引搜尋的查詢效能變慢。 若要消除資料片段，可考慮在壓縮之後重建該檔案的索引。  
   
 ## <a name="see-also"></a>另請參閱  
  [壓縮檔案](shrink-a-file.md)   
- [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
+ [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [database_files &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
  [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
- [DBCC SHRINKFILE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
+ [DBCC SHRINKFILE &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
  [資料庫檔案與檔案群組](database-files-and-filegroups.md)  
   
   

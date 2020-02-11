@@ -1,5 +1,5 @@
 ---
-title: 判斷資料指標的功能 |Microsoft Docs
+title: 判斷資料指標功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ ms.assetid: 35be486c-8f2d-4cec-beb8-df14151abfef
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 14715e40cd99f3f1a03c2ae19e825705a8376e30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68040002"
 ---
 # <a name="determining-cursor-capabilities"></a>判斷資料指標的功能
-中的下列四個選項**SQLGetInfo**說明支援哪些類型的資料指標和其功能為何：  
+**SQLGetInfo**中的下列四個選項描述支援哪些類型的資料指標，以及其功能為何：  
   
--   SQL_CURSOR_SENSITIVITY。 指出資料指標是否為另一個資料指標所做的變更影響。  
+-   SQL_CURSOR_SENSITIVITY。 指出資料指標是否對另一個資料指標所做的變更很敏感。  
   
--   SQL_SCROLL_OPTIONS。 列出支援的資料指標類型 （順向、 靜態、 索引鍵集驅動、 動態的或混合式）。 所有資料來源必須都支援順向資料指標。  
+-   SQL_SCROLL_OPTIONS。 列出支援的資料指標類型（順向、靜態、索引鍵集驅動、動態或混合）。 所有資料來源都必須支援順向資料指標。  
   
--   SQL_DYNAMIC_CURSOR_ATTRIBUTES1、 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、 SQL_KEYSET_CURSOR_ATTRIBUTES1，還是 SQL_STATIC_CURSOR_ATTRIBUTES1 （取決於資料指標類型）。 列出支援可捲動資料指標的 fetch 類型。 中的傳回值的位元對應中擷取的型別**SQLFetchScroll**。  
+-   SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1 （視游標的類型而定）。 列出可滾動資料指標所支援的提取類型。 傳回值中的位會對應到**SQLFetchScroll**中的提取類型。  
   
--   SQL_KEYSET_CURSOR_ATTRIBUTES2 或 SQL_STATIC_CURSOR_ATTRIBUTES2 （取決於資料指標類型）。 列出靜態和索引鍵集驅動資料指標可以偵測到自己的更新、 刪除和插入。  
+-   SQL_KEYSET_CURSOR_ATTRIBUTES2 或 SQL_STATIC_CURSOR_ATTRIBUTES2 （視游標的類型而定）。 列出靜態和索引鍵集導向的資料指標是否可以偵測自己的更新、刪除和插入。  
   
- 應用程式可以判斷在執行階段資料指標的功能藉由呼叫**SQLGetInfo**與這些選項。 這通常是由泛型應用程式。 資料指標的功能也可以判斷在應用程式開發和使用硬式編碼到應用程式。 這通常是垂直和自訂應用程式，但也可以使用用戶端資料指標實作，例如 ODBC 資料指標程式庫的泛型應用程式。
+ 應用程式可以藉由使用這些選項呼叫**SQLGetInfo** ，在執行時間判斷資料指標功能。 這通常是由一般應用程式來完成。 資料指標功能也可以在應用程式開發期間決定，並在應用程式中使用硬式編碼。 這通常是由垂直和自訂應用程式所完成，但也可以由使用用戶端資料指標執行的泛型應用程式來完成，例如 ODBC 資料指標程式庫。

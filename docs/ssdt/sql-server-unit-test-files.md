@@ -1,23 +1,24 @@
 ---
-title: SQL Server 單元測試檔案 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server 單元測試檔案
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cee093c9-b97d-4fb0-b80f-806d071259dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3dcefdc7b229f0d36f3c14349cc4af73c9f8eb2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 45c43cbf392e795eb0f5aee6876ad9e649b09788
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110666"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256329"
 ---
 # <a name="sql-server-unit-test-files"></a>SQL Server 單元測試檔案
+
 如同受控碼的單元測試一樣，SQL Server 單元測試也位於測試專案中。 您可以在 [方案總管]  的測試專案階層架構中，看到組成 SQL Server 單元測試的項目。  
   
 SQL Server 單元測試由多個項目組成，而這些項目又包含在數個檔案中。 下表描述這些彼此互動以形成 SQL Server 單元測試的檔案。  

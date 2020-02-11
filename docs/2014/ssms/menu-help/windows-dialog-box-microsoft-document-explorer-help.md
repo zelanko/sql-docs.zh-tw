@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 169ab149df11de12e5cf5452b0f8176737fb5dba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510010"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>視窗對話方塊 (Microsoft 文件總管說明)
@@ -29,7 +29,7 @@ ms.locfileid: "62510010"
  **路徑**  
  顯示文件的完整路徑。 一般而言，視窗並沒有路徑。  
   
- **Activate**  
+ **啟用**  
  使選取的文件或工具視窗成為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 文件總管中的使用中項目。  
   
  **儲存**  

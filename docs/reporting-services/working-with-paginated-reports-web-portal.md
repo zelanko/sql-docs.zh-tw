@@ -9,10 +9,10 @@ ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0516adde38fc7f6e9cc1b4e20bc9beef76a4df22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68222691"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>使用分頁報表 (Web 入口網站)
@@ -118,7 +118,7 @@ ms.locfileid: "68222691"
   
 若要使用這個選項，您先前必須已針對報表伺服器設定自動執行帳戶。 當認證的其他進程無法使用時，自動執行帳戶就會用來連接至外部資料來源。 如果您指定了這個選項，但是沒有設定帳戶，報表資料來源的連接將會失敗，而且報表處理將不會進行。 如需此帳戶的詳細資訊，請參閱 [設定自動執行帳戶 (SSRS 組態管理員)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
-## <a name="subscriptions"></a>訂閱  
+## <a name="subscriptions"></a>訂用帳戶  
 Reporting Services 訂閱是在特定時間，或是為了回應某個事件時，以您指定的檔案格式所傳遞之報表組態。 例如，在每個星期三將 MonthlySales.rdl 報表以 Microsoft Word 文件儲存至檔案共用。 訂閱可用於排程及自動化報表的傳遞，並可搭配一組特定的報表參數值。 如需詳細資訊，請參閱[使用訂用帳戶](working-with-subscriptions-web-portal.md)。
   
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
@@ -179,7 +179,7 @@ Reporting Services 訂閱是在特定時間，或是為了回應某個事件時�
   
 按一下報表記錄快照集即可檢視該快照集。 報表記錄中顯示的快照集只能以建立日期和時間來區分。 沒有視覺指示可以區分快照集是回應排程而建立或是手動作業所建立。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
 使用 [安全性屬性] 頁面來檢視或修改安全性設定，以決定報表的存取權。 此頁面適用於您有權保護的項目。  
   
 透過指定群組或使用者可執行的工作的角色指派來定義項目的存取權。 角色指派含有一個使用者或群組名稱，以及一個或多個指定工作集合的角色定義。  

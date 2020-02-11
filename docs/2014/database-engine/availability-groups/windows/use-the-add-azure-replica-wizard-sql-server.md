@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90418193ac869641a20f8b0f684fc43dd46712f8
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70176001"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用加入 Azure 複本精靈 (SQL Server)
@@ -28,16 +28,16 @@ ms.locfileid: "70176001"
   
      [安全性](#Security)  
   
--   **使用下列方法加入複本：**  [加入 Azure 複本精靈 (SQL Server Management Studio)](#SSMSProcedure)  
+-   **若要加入複本，請使用：**  [加入 Azure 複本 Wizard （SQL Server Management Studio）](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
- 如果您從未將任何可用性複本新增至可用性群組，請參閱[AlwaysOn 可用性群組&#40;SQL Server&#41;的必要條件、限制和建議](prereqs-restrictions-recommendations-always-on-availability.md)中的「伺服器實例」和「可用性群組和複本」小節。  
+ 如果您從未將任何可用性複本新增至可用性群組，請參閱[AlwaysOn 可用性群組 &#40;SQL Server&#41;的必要條件、限制和建議](prereqs-restrictions-recommendations-always-on-availability.md)中的「伺服器實例」和「可用性群組和複本」小節。  
   
 ###  <a name="Prerequisites"></a> 必要條件  
   
 -   您必須連接到裝載目前主要複本的伺服器執行個體。  
   
--   您必須擁有混合式 IT 環境，其中的內部部署子網路具有 Azure 的站對站 VPN。 如需詳細資訊，請參閱 [在管理入口網站中設定站對站 VPN](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create)。  
+-   您必須擁有混合式 IT 環境，其中的內部部署子網路具有 Azure 的站對站 VPN。 如需詳細資訊，請參閱 [使用 Azure 傳統入口網站建立具有站對站 VPN 連線的虛擬網路](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create)。  
   
 -   您的可用性群組必須包含內部部署可用性複本。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "70176001"
   
 -   **使用完整初始資料同步處理的必要條件** ：您需要指定網路共用，才能讓精靈建立及存取備份。 對於主要複本，用於啟動 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的帳戶必須具有網路共用的讀取與寫入檔案系統權限。 如果是次要複本，此帳戶必須有網路共用的讀取權限。  
   
-     如果您無法使用精靈執行完整初始資料同步處理，則必須手動準備次要資料庫。 您可以在執行精靈前後進行這項作業。 如需詳細資訊，請參閱[針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
+     如果您無法使用精靈執行完整初始資料同步處理，則必須手動準備次要資料庫。 您可以在執行精靈前後進行這項作業。 如需詳細資訊，請參閱 [針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)中的 PowerShell，將次要資料庫聯結至 AlwaysOn 可用性群組。  
   
 ###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  請參閱 [Security](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md#Security)  
   
 ##  <a name="SSMSProcedure"></a> 使用加入 Azure 複本精靈 (SQL Server Management Studio)  
@@ -57,25 +57,25 @@ ms.locfileid: "70176001"
   
 -   [使用可用性群組精靈 &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [使用將複本加入至可用性群組精靈 &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [使用 [將複本加入可用性群組中精靈] &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
  一旦您啟動 [加入 Azure 複本精靈] 之後，請遵循下列步驟進行：  
   
-1.  首先，下載您的 Azure 訂用帳戶的管理憑證。 按一下 **[下載]** 開啟登入頁面。  
+1.  首先，下載您的 Azure 訂用帳戶的管理憑證。 按一下 [下載]  開啟登入頁面。  
   
 2.  在登入頁面中，登入您的 Azure 訂用帳戶。 一旦您登入之後，此精靈就會將管理憑證安裝到本機電腦上。 當您再次使用此精靈時，就會自動載入這個管理憑證。 如果您已下載多個管理憑證，可以按一下 **...** 按鈕選取您想要使用的憑證。  
   
-3.  接著，按一下 **[連接]** ，連接到您的訂用帳戶。 一旦您連線之後，下拉式清單就會填入您的 Azure 參數，例如 [虛擬網路] 和 [虛擬網路子網路]。  
+3.  接著，按一下 **[連接]** ，連接到您的訂用帳戶。 一旦您連線之後，下拉式清單就會填入您的 Azure 參數，例如 [虛擬網路]  和 [虛擬網路子網路]  。  
   
 4.  針對將裝載新次要複本的 Azure VM 指定設定：  
   
-     映像  
+     影像  
      要用於 Azure VM 的 SQL Server 映像名稱  
   
      VM 大小  
      Azure VM 的大小  
   
-     VM 名稱  
+     虛擬機器名稱  
      Azure VM 的 DNS 名稱  
   
      VM 使用者名稱  
@@ -110,8 +110,8 @@ ms.locfileid: "70176001"
 -   [將次要複本加入至可用性群組 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;的必要條件、限制和建議](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性群組 &#40;SQL Server 的必要條件、限制和建議&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [將次要複本加入至可用性群組 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 086065aa79ca6fba7ad84e5b7e7f99f6f462f7dd
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74164904"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
@@ -33,33 +33,33 @@ ms.locfileid: "74164904"
   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的每一個作用中的工作，各傳回一個資料列。 「工作」（task）是 SQL Server 中的基本執行單位。 工作的範例包括查詢、登入、登出和系統工作，例如准刪除清除活動、檢查點活動、記錄寫入器、平行重做活動。 如需有關工作的詳細資訊，請參閱[執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。
   
 > [!NOTE]  
-> 若要從 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼叫此，請使用**dm_pdw_nodes_os_tasks**的名稱。  
+> 若要從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼叫此，請使用**dm_pdw_nodes_os_tasks**的名稱。  
   
-|資料行名稱|[名稱]|描述|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**task_address**|**Varbinary （8）**|物件的記憶體位址。|  
-|**task_state**|**nvarchar(60)**|工作的狀態。 這可以是下列項目之一：<br /><br /> PENDING；等待工作者執行緒。<br /><br /> RUNNABLE：可執行的，但等待接收配量。<br /><br /> RUNNING：目前在排程器上執行。<br /><br /> SUSPENDED：有工作者，但等待事件。<br /><br /> DONE：已完成。<br /><br /> SPINLOOP：卡在微調鎖定中。|  
-|**coNtext_switches_count**|**int**|這項工作已完成的排程器內容切換數目。|  
+|**task_address**|**varbinary(8)**|物件的記憶體位址。|  
+|**task_state**|**Nvarchar （60）**|工作的狀態。 這可以是下列其中一項：<br /><br /> PENDING；等待工作者執行緒。<br /><br /> RUNNABLE：可執行的，但等待接收配量。<br /><br /> RUNNING：目前在排程器上執行。<br /><br /> SUSPENDED：有工作者，但等待事件。<br /><br /> DONE：已完成。<br /><br /> SPINLOOP：卡在微調鎖定中。|  
+|**context_switches_count**|**int**|這項工作已完成的排程器內容切換數目。|  
 |**pending_io_count**|**int**|這項工作執行的實體 I/O 數目。|  
-|**pending_io_byte_count**|**bigint**|這項工作執行之 I/O 的總位元組計數。|  
+|**pending_io_byte_count**|**Bigint**|這項工作執行之 I/O 的總位元組計數。|  
 |**pending_io_byte_average**|**int**|這項工作執行之 I/O 的平均位元組計數。|  
-|**scheduler_id**|**int**|父排程器的識別碼。 這是這項工作之排程器資訊的控制代碼。 如需詳細資訊，請參閱[sys.databases &#40;。 dm_os_schedulers transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。|  
+|**scheduler_id**|**int**|父排程器的識別碼。 這是這項工作之排程器資訊的控制代碼。 如需詳細資訊，請參閱[dm_os_schedulers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。|  
 |**session_id**|**smallint**|與這項工作相關聯的工作階段識別碼。|  
-|**exec_coNtext_id**|**int**|與這項工作相關聯的執行內容識別碼。|  
-|**request_id**|**int**|工作的要求識別碼。 如需詳細資訊，請參閱[sys.databases &#40;。 dm_exec_requests transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
-|**worker_address**|**Varbinary （8）**|執行工作之工作者的記憶體位址。<br /><br /> NULL = 工作正等待工作者執行，或工作剛執行完畢。<br /><br /> 如需詳細資訊，請參閱[sys.databases &#40;。 dm_os_workers transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。|  
-|**host_address**|**Varbinary （8）**|主機的記憶體位址。<br /><br /> 0 = 不會利用主控作業來建立工作。 這可幫助您識別用來建立這項工作的主機。<br /><br /> 如需詳細資訊，請參閱[sys.databases &#40;。 dm_os_hosts transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md)。|  
-|**parent_task_address**|**Varbinary （8）**|做為物件之父系的工作記憶體位址。|  
-|**pdw_node_id**|**int**|**適用于**： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|**exec_context_id**|**int**|與這項工作相關聯的執行內容識別碼。|  
+|**request_id**|**int**|工作的要求識別碼。 如需詳細資訊，請參閱[dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
+|**worker_address**|**varbinary(8)**|執行工作之工作者的記憶體位址。<br /><br /> NULL = 工作正等待工作者執行，或工作剛執行完畢。<br /><br /> 如需詳細資訊，請參閱[dm_os_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。|  
+|**host_address**|**varbinary(8)**|主機的記憶體位址。<br /><br /> 0 = 不會利用主控作業來建立工作。 這可幫助您識別用來建立這項工作的主機。<br /><br /> 如需詳細資訊，請參閱[dm_os_hosts &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md)。|  
+|**parent_task_address**|**varbinary(8)**|做為物件之父系的工作記憶體位址。|  
+|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
   
-## <a name="permissions"></a>Permissions
-在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上，需要 `VIEW SERVER STATE` 許可權。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高階層級上，需要資料庫中的 `VIEW DATABASE STATE` 許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層上，需要**伺服器管理員**或 Azure Active Directory 的系統**管理員**帳戶。   
+## <a name="permissions"></a>權限
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
 
 ## <a name="examples"></a>範例  
   
 ### <a name="a-monitoring-parallel-requests"></a>A. 監視平行要求  
- 對於平行執行的要求，您會看到多個資料列的相同組合（\<**session_id**>、\<**request_id**>）。 使用下列查詢來尋找所有使用中要求的 [設定平行處理原則的[最大程度] 伺服器設定選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
+ 對於平行執行的要求，您會看到多個資料列的相同組合（\<**session_id**>， \< **request_id**>）。 使用下列查詢來尋找所有使用中要求的 [設定平行處理原則的[最大程度] 伺服器設定選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
 > [!NOTE]  
 >  **Request_id**在會話內是唯一的。  
@@ -82,7 +82,7 @@ SELECT
   ORDER BY session_id, request_id;  
 ```  
   
-### <a name="b-associating-session-ids-with-windows-threads"></a>b. 使工作階段識別碼與 Windows 執行緒產生關聯  
+### <a name="b-associating-session-ids-with-windows-threads"></a>B. 使工作階段識別碼與 Windows 執行緒產生關聯  
  您可以使用下列查詢讓工作階段識別碼與 Windows 執行緒識別碼產生關聯。 如此就可以在 Windows 效能監視器中監視執行緒的效能。 下列查詢不會傳回目前睡眠中的工作階段之資訊。  
   
 ```  
@@ -96,7 +96,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[SQL Server 作業系統相關的動態管理 Views &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
+[SQL Server 作業系統相關的動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
 [執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)     
   
 
