@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32498fbed24ddab591745ae1d01c5f123e976114
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108995"
 ---
 # <a name="image-device-information-settings"></a>影像裝置資訊設定
@@ -27,19 +27,21 @@ ms.locfileid: "66108995"
 |-------------|-----------|  
 |**資料行**|為報表所設定的資料行數目。 這個值會覆寫報表的原始設定。|  
 |**ColumnSpacing**|為報表所設定的資料行間距。 這個值會覆寫報表的原始設定。|  
-|`DpiX`|輸出影像的水平解析度。 預設值為 **96**。 適用於`BMP`， `GIF`， `PNG`，和`TIFF`輸出格式。|  
-|`DpiY`|輸出影像的垂直解析度。 預設值為 **96**。 適用於`BMP`， `GIF`， `PNG`，和`TIFF`輸出格式。|  
+|`DpiX`|輸出影像的水平解析度。 預設值為 **96**。 適用于`BMP`、 `GIF`、 `PNG`和`TIFF`輸出格式。|  
+|`DpiY`|輸出影像的垂直解析度。 預設值為 **96**。 適用于`BMP`、 `GIF`、 `PNG`和`TIFF`輸出格式。|  
 |**EndPage**|要轉譯之報表的最後一頁。 預設值為 `StartPage` 的值。|  
 |**MarginBottom**|為報表所設定的下邊界值 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，`1in`)。 這個值會覆寫報表的原始設定。|  
 |**MarginLeft**|為報表所設定的左邊界值 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，`1in`)。 這個值會覆寫報表的原始設定。|  
 |**MarginRight**|為報表所設定的右邊界值 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，`1in`)。 這個值會覆寫報表的原始設定。|  
 |**MarginTop**|為報表所設定的上邊界值 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，`1in`)。 這個值會覆寫報表的原始設定。|  
-|**OutputFormat**|[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) 所支援的輸出格式之一：`BMP`、`EMF`、`GIF`、`JPEG`、`PNG` 或 `TIFF`。|  
+|**OutputFormat**|
+  [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) 所支援的輸出格式之一：`BMP`、`EMF`、`GIF`、`JPEG`、`PNG` 或 `TIFF`。|  
 |**PageHeight**|為報表所設定的頁面高度 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，`11in`)。 這個值會覆寫報表的原始設定。|  
 |**PageWidth**|為報表所設定的頁面寬度 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，`8.5in`)。 這個值會覆寫報表的原始設定。|  
-|**PrintDpiX**|輸出影像的水平解析度。 預設值是 `300`。 適用於增強型中繼檔 (`EMF`) 輸出格式。|  
-|**PrintDpiY**|輸出影像的垂直解析度。 預設值是 `300`。 適用於增強型中繼檔 (`EMF`) 輸出格式。|  
-|`StartPage`|要轉譯之報表的第一頁。 `0` 的值表示轉譯所有頁面。 預設值是 `1`。|  
+|**PrintDpiX**|輸出影像的水平解析度。 預設值是 `300`。 適用于增強型中繼檔`EMF`（）輸出格式。|  
+|**PrintDpiY**|輸出影像的垂直解析度。 預設值是 `300`。 適用于增強型中繼檔`EMF`（）輸出格式。|  
+|`StartPage`|要轉譯之報表的第一頁。 
+  `0` 的值表示轉譯所有頁面。 預設值是 `1`。|  
   
 ## <a name="see-also"></a>另請參閱  
  [將裝置資訊設定傳遞至轉譯延伸模組](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   

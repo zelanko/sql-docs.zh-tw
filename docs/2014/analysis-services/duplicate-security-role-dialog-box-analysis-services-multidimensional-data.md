@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 重複安全性角色對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
+title: Analysis Services 重複安全性角色] 對話方塊（Analysis Services-多維度資料） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 596011e40eb6ed7ca2276da58dbbc1379e5b032c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081502"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>Analysis Services 重複安全性角色對話方塊 (Analysis Services - 多維度資料)
-  使用**Analysis Services 重複安全性角色-\<資料庫名稱 >-\<從角色名稱複製 >**  對話方塊中的[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的現有角色[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫。 在物件總管中以滑鼠右鍵按一下角色並選取 [複製]  ，即可顯示 [複製角色]  對話方塊。  
+  使用中[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的 [ **Analysis Services 重複的\<安全性角色-資料庫\<名稱>-從角色名稱複製>** ] 對話方塊，複製[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫中現有的角色。 在物件總管中以滑鼠右鍵按一下角色並選取 [複製]****，即可顯示 [複製角色]**** 對話方塊。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 |詞彙|定義|  
 |----------|----------------|  
-|**新的角色名稱**|鍵入要建立之新角色的名稱，此角色的成員和權限同於物件總管中選取的角色。|  
+|**新增角色名稱**|鍵入要建立之新角色的名稱，此角色的成員和權限同於物件總管中選取的角色。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [安全性角色 &#40;Analysis Services-多維度資料 &#41;](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+ [Analysis Services 的設計工具和對話方塊 &#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [&#40;Analysis Services 多維度資料的安全性角色&#41;](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

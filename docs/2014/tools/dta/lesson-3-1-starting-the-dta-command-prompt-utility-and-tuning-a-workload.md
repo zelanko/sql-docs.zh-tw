@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf882bc731c8e435de808092e990b35ad23ce57e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110162"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>啟動 dta 命令提示字元公用程式和微調工作負載
@@ -28,7 +28,7 @@ ms.locfileid: "66110162"
   
 ### <a name="to-start-the-dta-command-prompt-utility-and-view-help"></a>若要啟動 dta 命令提示字元公用程式和檢視說明  
   
-1.  在 [開始]  功能表上，依序指向 [所有程式]  和 [附屬應用程式]  ，再按一下 [命令提示字元]  。  
+1.  在 [開始]**** 功能表上，依序指向 [所有程式]**** 和 [附屬應用程式]****，再按一下 [命令提示字元]****。  
   
 2.  在命令提示字元之下，輸入下列字串，再按 ENTER 鍵：  
   
@@ -48,12 +48,14 @@ ms.locfileid: "66110162"
     dta -S YourServerName\YourSQLServerInstanceName -E -D AdventureWorks2012 -if MyScript.sql -s MySession2 -of MySession2OutputScript.sql -ox MySession2Output.xml -fa IDX_IV -fp NONE -fk NONE  
     ```  
   
-     其中 `-S` 指定您的伺服器名稱以及安裝了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 執行個體。 `-E` 設定值指定您要使用執行個體的信任連接，當您利用 Windows 網域帳戶來連接時，適合採用這個方式。 `-D` 設定值指定您要微調的資料庫， `-if` 指定工作負載檔案， `-s` 指定工作階段名稱， `-of` 指定工具要將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建議指令碼寫入其中的檔案， `-ox` 指定工具要將 XML 格式的建議寫入其中的檔案。 最後三個參數依照下列方式來指定微調選項： `-fa IDX_IV` 指定 Database Engine Tuning Advisor 只應考慮加入索引 (叢集和非叢集) 和索引檢視； `-fp NONE` 指定在分析期間，完全不應考慮任何資料分割策略； `-fk NONE` 指定 Database Engine Tuning Advisor 在產生建議時，不需要保留資料庫中任何現有的實體設計結構。  
+     其中 `-S` 指定您的伺服器名稱以及安裝了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 執行個體。 
+  `-E` 設定值指定您要使用執行個體的信任連接，當您利用 Windows 網域帳戶來連接時，適合採用這個方式。 
+  `-D` 設定值指定您要微調的資料庫， `-if` 指定工作負載檔案， `-s` 指定工作階段名稱， `-of` 指定工具要將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建議指令碼寫入其中的檔案， `-ox` 指定工具要將 XML 格式的建議寫入其中的檔案。 最後三個參數依照下列方式來指定微調選項： `-fa IDX_IV` 指定 Database Engine Tuning Advisor 只應考慮加入索引 (叢集和非叢集) 和索引檢視； `-fp NONE` 指定在分析期間，完全不應考慮任何資料分割策略； `-fk NONE` 指定 Database Engine Tuning Advisor 在產生建議時，不需要保留資料庫中任何現有的實體設計結構。  
   
 3.  在 Database Engine Tuning Advisor 微調好工作負載之後，它會顯示一則訊息，指出微調工作階段已順利完成。 您可以利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來開啟 MySession2OutputScript.sql 和 MySession2Output.xml 檔，以檢視微調結果。 另外，您也可以在 Database Engine Tuning Advisor GUI 中開啟 MySession2 微調工作階段，依照 [檢視微調建議](lesson-1-2-viewing-tuning-recommendations.md) 和 [檢視微調報表](lesson-1-3-viewing-tuning-reports.md)中的相同方式來檢視其建議和報表。  
   
-## <a name="summary"></a>總結  
- 您已在命令提示字元之下，利用 **dta** 公用程式完成了簡單工作負載的微調。 這個工具也提供了許多其他微調選項。 如需詳細資訊，請參閱工具說明 (**dta -?** ) 和參考主題 [dta 公用程式](dta-utility.md) 。  
+## <a name="summary"></a>摘要  
+ 您已在命令提示字元之下，利用 **dta** 公用程式完成了簡單工作負載的微調。 這個工具也提供了許多其他微調選項。 如需詳細資訊，請參閱工具說明 (**dta -?**) 和參考主題 [dta 公用程式](dta-utility.md) 。  
   
 ## <a name="after-you-finish-this-tutorial"></a>完成這個教學課程之後  
  完成這個教學課程中的課程之後，請參閱下列主題，以取得有關 Database Engine Tuning Advisor 的詳細資訊：  
@@ -62,7 +64,7 @@ ms.locfileid: "66110162"
   
 -   ＜[dta Utility](dta-utility.md) ＞提供有關命令提示字元公用程式的參考資料，以及可用來控制公用程式作業的選擇性 XML 檔案。  
   
- 若要返回教學課程一開始，請參閱[教學課程：Database Engine Tuning Advisor](tutorial-database-engine-tuning-advisor.md)。  
+ 若要返回教學課程的開頭，請參閱 [教學課程：Database Engine Tuning Advisor](tutorial-database-engine-tuning-advisor.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 教學課程](../../relational-databases/database-engine-tutorials.md)  

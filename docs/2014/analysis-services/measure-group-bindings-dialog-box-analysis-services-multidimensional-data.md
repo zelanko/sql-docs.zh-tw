@@ -1,5 +1,5 @@
 ---
-title: 量值群組繫結對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
+title: 量值群組系結對話方塊（Analysis Services-多維度資料） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d3d04692ac6576e76d2b630fb5cacb4f57db959
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077861"
 ---
 # <a name="measure-group-bindings-dialog-box-analysis-services---multidimensional-data"></a>量值群組繫結對話方塊 (Analysis Services - 多維度資料)
-  使用 [量值群組繫結]  對話方塊，即可針對一般維度關聯性，建立及修改 Cube 維度中之非資料粒度屬性，與量值群組中之資料行之間的直接關聯性；以及從 [定義關聯性]  對話方塊中，指定 Cube 維度中之任何屬性的 Null 處理選項。  
+  使用 [量值群組繫結]**** 對話方塊，即可針對一般維度關聯性，建立及修改 Cube 維度中之非資料粒度屬性，與量值群組中之資料行之間的直接關聯性；以及從 [定義關聯性]**** 對話方塊中，指定 Cube 維度中之任何屬性的 Null 處理選項。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **量值群組資料表**  
  顯示所選取量值群組之事實資料表的名稱。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66077861"
 |**Null 處理**|為屬性選取 Null 處理選項。 如需 Null 處理選項的詳細資訊，請參閱 [NullProcessing 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [定義關聯性對話方塊&#40;Analysis Services-多維度資料&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md)   
- [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [[定義關聯性] 對話方塊 &#40;Analysis Services-多維度資料&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md)   
+ [Analysis Services 的設計工具和對話方塊 &#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

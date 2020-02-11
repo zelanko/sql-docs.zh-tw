@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 90733af47898116236d94c9b9f6ccc6d9fc542ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100870"
 ---
 # <a name="data-driven-subscriptions"></a>資料驅動訂閱
@@ -44,18 +44,18 @@ ms.locfileid: "66100870"
 ## <a name="requirements-for-using-data-driven-subscriptions"></a>使用資料驅動訂閱的需求  
  並非所有版本中都可以使用資料驅動訂閱功能， 您在執行階段可用來擷取訂閱資料的資料來源種類也有一些限制； 下列清單提供有關這些需求的詳細資訊：  
   
--   如需支援資料驅動訂閱功能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本詳細資訊，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
+-   如需支援資料驅動訂閱功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之版本的詳細資訊，請參閱[SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473)（https://go.microsoft.com/fwlink/?linkid=232473)。  
   
--   如果是訂閱資料，請選擇可以提供結構描述資訊給報表伺服器的資料來源； 支援資料來源類型的範例包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料、Oracle、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝資料、ODBC 資料來源和 OLE DB 資料來源。 如需訂閱者資料來源需求的詳細資訊，請參閱 [使用外部資料來源以取得訂閱者資料 &#40;資料驅動訂閱&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
+-   如果是訂閱資料，請選擇可以提供結構描述資訊給報表伺服器的資料來源； 支援的資料來源類型的範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]包括關聯式資料、Oracle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 、封裝資料、ODBC 資料來源，以及 OLE DB 的資料來源。 如需訂閱者資料來源需求的詳細資訊，請參閱 [使用外部資料來源以取得訂閱者資料 &#40;資料驅動訂閱&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
   
 ## <a name="working-with-data-driven-subscriptions"></a>使用資料驅動訂閱  
  下列主題提供有關資料驅動訂閱的詳細資訊。  
   
 |主題|描述|  
 |------------|-----------------|  
-|[建立、修改和刪除資料驅動訂閱](data-driven-subscriptions.md)|說明如何建立、修改或刪除資料驅動訂閱。|  
-|[使用外部資料來源以取得訂閱者資料 &#40;資料驅動訂閱&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|提供有關在資料驅動訂閱所使用之資料來源的資訊。|  
-|[建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)|提供逐步指示，以了解如何建立資料驅動訂閱。|  
+|[Create, Modify, and Delete a Data-Driven Subscription](data-driven-subscriptions.md)|說明如何建立、修改或刪除資料驅動訂閱。|  
+|[使用外部資料源做為訂閱者資料 &#40;資料驅動訂閱&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|提供有關在資料驅動訂閱所使用之資料來源的資訊。|  
+|[&#40;SSRS 教學課程建立資料驅動訂閱&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)|提供逐步指示，以了解如何建立資料驅動訂閱。|  
 |[快取報表 &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)|描述如何使用 Null 傳遞提供者搭配資料驅動訂閱，以預先載入快取。|  
   
 ## <a name="see-also"></a>另請參閱  

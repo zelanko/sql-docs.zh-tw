@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fbb7cbdda657ef59491cfbb2c1651b969d04428
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287723"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>使用 WITH XMLNAMESPACES 將命名空間加入至查詢
@@ -179,7 +179,7 @@ FOR XML PATH('sql:root')
 </sql:root>  
 ```  
   
- 只有 xml 命名空間前置詞，不用在 WITH XMLNAMESPACES 中明確定義就可以使用，如以下 PATH 模式查詢中所示。 同時，若前置詞已經宣告了，就必須將它繫結到命名空間 http://www.w3.org/XML/1998/namespace。 SELECT 子句中指定的名稱會參考不是使用 WITH XMLNAMESPACES 明確定義的 xml 命名空間前置詞。  
+ 只有 xml 命名空間前置詞，不用在 WITH XMLNAMESPACES 中明確定義就可以使用，如以下 PATH 模式查詢中所示。 同時，若前置詞已經宣告了，就必須將它繫結到命名空間 http://www.w3.org/XML/1998/namespace 。 SELECT 子句中指定的名稱會參考不是使用 WITH XMLNAMESPACES 明確定義的 xml 命名空間前置詞。  
   
 ```  
 SELECT 'en'    as "English/@xml:lang",  
@@ -218,7 +218,7 @@ WHERE CatalogDescription.exist('
     ) = 1  
 ```  
   
- 在上一個查詢中，**query()** 及 **exist()** 方法都在其初構中宣告了相同的命名空間。 例如：  
+ 在上一個查詢中， **query()** 及 **exist()** 方法都在其初構中宣告了相同的命名空間。 例如：  
   
 ```  
 declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  

@@ -1,5 +1,5 @@
 ---
-title: 執行個體選取範圍 （升級） |Microsoft Docs
+title: 實例選取範圍（升級） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 922e528fc530064d90e748cc71baba614df59d4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094220"
 ---
 # <a name="instance-selection-upgrade"></a>執行個體選取範圍 (升級)
   使用 [執行個體選取範圍 (升級)] 頁面，即可指定要升級的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  您必須同時升級執行個體的所有元件。 您無法在升級期間加入或移除功能。  
   
   

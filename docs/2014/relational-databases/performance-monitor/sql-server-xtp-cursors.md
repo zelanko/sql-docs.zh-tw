@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b591aa8e89200ca863b1e8196c383c506401fc3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151059"
 ---
 # <a name="xtp-cursors"></a>XTP 資料指標
@@ -38,6 +38,6 @@ ms.locfileid: "63151059"
 |**接觸到的暫訂刪除資料列/秒**|(平均) 每秒資料指標接觸到的將過期資料列數。 如果刪除資料列的交易仍為使用中 (也就是尚未認可或中止)，則資料列即將過期。|  
   
 ## <a name="see-also"></a>另請參閱  
- [XTP&#40;記憶體內部 OLTP&#41;效能計數器](../../integration-services/performance/performance-counters.md)  
+ [XTP &#40;記憶體內部 OLTP&#41; 效能計數器](../../integration-services/performance/performance-counters.md)  
   
   

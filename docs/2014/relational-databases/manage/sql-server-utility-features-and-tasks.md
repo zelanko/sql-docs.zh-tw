@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63190433"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 公用程式的功能與工作
@@ -40,8 +40,8 @@ ms.locfileid: "63190433"
   
 |||  
 |-|-|  
-|**描述**|**主題**|  
-|描述設定伺服器在相同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上執行公用程式和非公用程式收集組的考量。|[在相同 SQL Server 執行個體上執行公用程式和非公用程式收集組的考量事項](run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
+|**說明**|**主題**|  
+|描述設定伺服器在相同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上執行公用程式和非公用程式收集組的考量。|[在相同 SQL Server 執行個體上執行公用程式和非公用程式收集組的考量](run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
 |描述如何建立 SQL Server 公用程式控制點。|[建立 SQL Server 公用程式控制點 &#40;SQL Server 公用程式&#41;](create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |描述如何連接至 SQL Server 公用程式。|[連接至 SQL Server 公用程式](connect-to-a-sql-server-utility.md)|  
 |描述如何使用公用程式控制點來註冊 SQL Server 執行個體。|[註冊 SQL Server 的執行個體 &#40;SQL Server 公用程式&#41;](enroll-an-instance-of-sql-server-sql-server-utility.md)|  

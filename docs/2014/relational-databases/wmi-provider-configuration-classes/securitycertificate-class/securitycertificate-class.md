@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f5d0ddc957cfca8e122920321acc7ccebb70ef72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270764"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate 類別
-  [SecurityCertificate 類別] securitycertificate-class.md) 代表安全性憑證。 憑證是數位簽署的聲明，以便將公開金鑰的值繫結的執行個體[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，這個表格包含對應的私密金鑰。 憑證是從憑證授權單位發出。  
+  [SecurityCertificate 類別] SecurityCertificate-class.md）代表安全性憑證。 憑證是經過數位簽署的語句，會將公開金鑰的值系結至的實例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，以保存對應的私密金鑰。 憑證是從憑證授權單位發出。  
   
- 使用 [SecurityCertificate 類別] securitycertificate-class.md)，您可以執行下列工作：  
+ 使用 [SecurityCertificate 類別] SecurityCertificate-class.md），您可以執行下列工作：  
   
 -   檢視安全性憑證的屬性。  
   

@@ -1,5 +1,5 @@
 ---
-title: ORDER BY 子句中的資料行別名前置詞不可以是資料表別名 |Microsoft Docs
+title: ORDER BY 子句中的資料行別名不能以資料表別名作為前置詞 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f4328c6a70c00766979a13bbcf8dc2b8bd77f42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096323"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>ORDER BY 子句中資料行別名的前置詞不可以是資料表別名
@@ -36,9 +36,10 @@ FROM Person.Contact p
 ORDER BY p.l  
 ```  
   
- [!INCLUDE[ssDEversion10](../../includes/ssdeversion10-md.md)] 不會將 `p.l` 子句中的 `ORDER BY` 比對成資料表中的有效資料行。  
+ 
+  [!INCLUDE[ssDEversion10](../../includes/ssdeversion10-md.md)] 不會將 `p.l` 子句中的 `ORDER BY` 比對成資料表中的有效資料行。  
   
-### <a name="exception"></a>例外狀況  
+### <a name="exception"></a>Exception  
  如果在 ORDER BY 子句中指定的前置資料行別名是指定資料表中的有效資料行名稱，則查詢會在無錯誤的情況下執行。但是，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，陳述式的語意可能不同。 例如，在下列陳述式中指定的資料行別名 (`id`) 是 `sysobjects` 資料表中的有效資料行名稱。 在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中，當該陳述式執行時，`CAST` 作業會在排序結果集之後執行。 這表示 `name` 資料行會用於排序作業中。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中，`CAST` 作業會在排序作業之前進行。 這表示 `id` 資料行會用於排序作業中，並以非預期的順序傳回結果集。  
   
 ```  
@@ -71,7 +72,7 @@ ORDER BY p.LastName
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
+ [資料庫引擎升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新的&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

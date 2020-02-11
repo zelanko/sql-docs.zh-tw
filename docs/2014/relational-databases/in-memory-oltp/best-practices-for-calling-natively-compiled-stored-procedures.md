@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1dbc3dd467aab0cf60cdb255165767fc12a0f518
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156768"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>呼叫原生編譯預存程序的最佳作法
@@ -28,7 +28,7 @@ ms.locfileid: "63156768"
   
  使用原生編譯預存程序的效能優勢，會隨程序所處理的資料列數目和邏輯數量增多而提升。 例如，如果原生編譯預存程序使用下列一個或多個項目，則會展現更佳的效能：  
   
--   彙總。  
+-   彙總：  
   
 -   巢狀迴圈聯結。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63156768"
   
  同樣地，您可以透過相同的 XEvent `hekaton_slow_parameter_passing` 與 `reason=parameter_conversion`，偵測到不相符類型的使用方式。  
   
- 因為在使用記憶體最佳化資料表時必須實作重試邏輯 (在許多案例中)，而且因為您必須避開某些功能限制，所以您可能會想要建立包裝函式解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。 如需範例，請參閱[記憶體最佳化資料表交易的重試邏輯方針](memory-optimized-tables.md)。  
+ 因為在使用記憶體最佳化資料表時必須實作重試邏輯 (在許多案例中)，而且因為您必須避開某些功能限制，所以您可能會想要建立包裝函式解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。 如需範例，請參閱[記憶體優化資料表上交易的重試邏輯方針](memory-optimized-tables.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [原生編譯的預存程序](natively-compiled-stored-procedures.md)  

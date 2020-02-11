@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149800"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
@@ -44,7 +44,8 @@ ms.locfileid: "63149800"
 -   一組遵循檔案換用命名規範的換用追蹤檔案，例如：`<TraceFile>.trc`、`<TraceFile>_1.trc`、`<TraceFile>_2.trc`、`<TraceFile>_3.trc`... `<TraceFile>_n.trc`。  
   
 ### <a name="input-trace-events-and-columns"></a>輸入追蹤事件和資料行  
- 輸入追蹤資料必須包含特定的事件及資料行，如此 Distributed Replay 才可重新執行。 **中的** TSQL_Replay [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 範本包含所有必要的事件和資料，以及額外的資訊。 如需該範本的詳細資訊，請參閱 [重新執行需求](../sql-server-profiler/replay-requirements.md)。  
+ 輸入追蹤資料必須包含特定的事件及資料行，如此 Distributed Replay 才可重新執行。 
+  **中的** TSQL_Replay [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 範本包含所有必要的事件和資料，以及額外的資訊。 如需該範本的詳細資訊，請參閱 [重新執行需求](../sql-server-profiler/replay-requirements.md)。  
   
 > [!WARNING]  
 >  若您未使用 **TSQL_Replay** 範本來擷取輸入追蹤資料，或不符合輸入追蹤資料的需求，可能會收到未預期的重新執行結果。  
@@ -93,7 +94,7 @@ ms.locfileid: "63149800"
   
 -   TextData  
   
--   Application Name  
+-   應用程式名稱  
   
 -   LoginName  
   
@@ -103,11 +104,11 @@ ms.locfileid: "63149800"
   
 -   HostName  
   
--   Binary Data  
+-   二進位資料  
   
 -   SPID  
   
--   Start Time  
+-   開始時間  
   
 -   EndTime  
   
@@ -121,11 +122,11 @@ ms.locfileid: "63149800"
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>作業系統需求  
- 支援執行管理工具以及控制器和用戶端服務的作業系統，與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體相同。 如需詳細資訊，了解哪種支援的作業系統您[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體，請參閱 <<c2> [ 硬體和軟體需求，安裝 SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
+ 支援執行管理工具以及控制器和用戶端服務的作業系統，與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體相同。 如需您[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的實例支援哪些作業系統的詳細資訊，請參閱[安裝 SQL Server 2014 的硬體和軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
  x86 及 x64 作業系統皆支援 Distributed Replay 功能。 若為 x64 架構作業系統，只支援 Windows on Windows (WOW) 模式。  
   
@@ -134,8 +135,10 @@ ms.locfileid: "63149800"
   
 |Distributed Replay 功能|每個重新執行環境的最大安裝數目|  
 |--------------------------------|--------------------------------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 服務|1|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務|16 (實體或虛擬電腦)|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 服務|1|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務|16 (實體或虛擬電腦)|  
 |管理工具|無限制|  
   
 > [!NOTE]  

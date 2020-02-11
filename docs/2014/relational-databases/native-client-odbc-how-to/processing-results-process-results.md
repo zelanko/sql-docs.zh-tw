@@ -1,5 +1,5 @@
 ---
-title: 處理結果 (ODBC) |Microsoft Docs
+title: 處理結果（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21474aed83aac1fe86e2242b1238affa11ae64a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200312"
 ---
 # <a name="process-results-odbc"></a>處理結果 (ODBC)
@@ -58,6 +58,6 @@ ms.locfileid: "63200312"
 >  若要在 [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) 傳回 SQL_NO_DATA 之前取消結果集的處理，請呼叫 [SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [處理結果使用說明主題&#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
+ [處理結果如何 &#40;ODBC&#41;的 how to 主題](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DatabaseToConnect 元素 (DTA) |Microsoft Docs
+title: DatabaseToConnect 元素（DTA） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fef2df598d96b33def41f27345f88226fd4c6b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63185420"
 ---
 # <a name="databasetoconnect-element-dta"></a>DatabaseToConnect 元素 (DTA)
@@ -37,7 +37,8 @@ ms.locfileid: "63185420"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|**資料類型和長度**|`string`，沒有長度限制。|  
+|**資料類型和長度**|
+  `string`，沒有長度限制。|  
 |**預設值**|無。|  
 |**出現次數**|選擇性。 每個 `TuningOptions` 元素可以使用這個元素一次。|  
   

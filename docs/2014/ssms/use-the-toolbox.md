@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280665"
 ---
 # <a name="use-the-toolbox"></a>使用工具箱
@@ -27,7 +27,7 @@ ms.locfileid: "63280665"
   
  [工具箱] 中的項目分組成若干稱為「索引標籤」的區段。 以下是常用的 [工具箱] 工作及其執行方式的參考清單：  
   
-|若要|執行方式|  
+|至|執行方式|  
 |--------|-------------|  
 |開啟 [工具箱]|在 [檢視]  功能表上，按一下 [工具箱]  。|  
 |自動關閉 [工具箱]|開啟 [工具箱]。 在 [視窗]  功能表上，選取 [自動隱藏]  。|  

@@ -11,16 +11,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e016b8fb3986b4fa9431a1d223335affa72d3d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188563"
 ---
 # <a name="monitor-instances-of-sql-server-in-the-sql-server-utility"></a>監視 SQL Server 公用程式中的 SQL Server 執行個體
   
   
-|主題|[資訊]|  
+|主題|資訊|  
 |-----------|-----------------|  
 |[連接至 SQL Server 公用程式](connect-to-a-sql-server-utility.md)|描述檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式儀表板和視點。|  
 |[降低 CPU 使用量原則的雜訊 &#40;SQL Server 公用程式&#41;](reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)|描述在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式監視原則中減少報告雜訊和不必要的違規。|  

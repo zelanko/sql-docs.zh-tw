@@ -1,5 +1,5 @@
 ---
-title: 會導致 (MDX) |Microsoft Docs
+title: 潛在客戶（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: cc4d362fbc7656e9427548a352b32d5d8297071e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905746"
 ---
 # <a name="lead-mdx"></a>Lead (MDX)
@@ -31,19 +31,19 @@ Member_Expression.Lead( Index )
  *Member_Expression*  
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
- *Index*  
+ *指數*  
  指定成員位置數目的有效數值運算式。  
   
 ## <a name="remarks"></a>備註  
  層級內的成員位置是由屬性階層的自然順序決定。 位置的編號是以零為基底。  
   
- 如果指定的開頭是零 (0)，**會導致**函式會傳回指定的成員。  
+ 如果指定的潛在客戶為零（0），則**lead**函數會傳回指定的成員。  
   
- 如果指定的開頭是負數，**會導致**函式會傳回之前的成員。  
+ 如果指定的潛在客戶為負數，則**lead**函數會傳回先前的成員。  
   
- `Lead(1)` 相當於[NextMember](../mdx/nextmember-mdx.md)函式。 `Lead(-1)` 相當於[PrevMember](../mdx/prevmember-mdx.md)函式。  
+ `Lead(1)`相當於[NextMember](../mdx/nextmember-mdx.md)函數。 `Lead(-1)`相當於[PrevMember](../mdx/prevmember-mdx.md)函數。  
   
- **會導致**函數很相似[延隔](../mdx/lag-mdx.md)函式，不同之處在於**延隔時間**函式會尋找以相反方向**導致**函式。 也就是說，`Lead(n)` 相當於 `Lag(-n)`。  
+ **Lead**函數與[lag](../mdx/lag-mdx.md)函數相似，不同之處在于**Lag**函數會以與**Lead**函式相反的方向來尋找。 也就是說，`Lead(n)` 相當於 `Lag(-n)`。  
   
 ## <a name="example"></a>範例  
  下列範例會傳回 2001 年 12 月的值：  
@@ -63,6 +63,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

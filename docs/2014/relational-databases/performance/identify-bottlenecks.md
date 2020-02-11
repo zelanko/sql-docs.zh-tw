@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be8b05a3dc706d23f0e1328f4e8bdd38ed368ede
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150904"
 ---
 # <a name="identify-bottlenecks"></a>找出瓶頸
@@ -54,8 +54,8 @@ ms.locfileid: "63150904"
   
 |可能瓶頸區|對伺服器的影響|  
 |------------------------------|---------------------------|  
-|記憶體使用狀況|如果配置到 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的記憶體或其可用記憶體不足，會使效能降低。 這時必須從磁碟讀取資料，而不是直接從資料快取讀取。 當需要分頁時，Microsoft Windows 作業系統需與磁碟交換資料，因此會進行過度的分頁動作。|  
-|CPU 使用情形|CPU 使用率若長期偏高，表示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢需要進行微調，或需要升級 CPU。|  
+|記憶體使用量|如果配置到 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的記憶體或其可用記憶體不足，會使效能降低。 這時必須從磁碟讀取資料，而不是直接從資料快取讀取。 當需要分頁時，Microsoft Windows 作業系統需與磁碟交換資料，因此會進行過度的分頁動作。|  
+|CPU 使用率|CPU 使用率若長期偏高，表示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢需要進行微調，或需要升級 CPU。|  
 |磁碟輸入/輸出 (I/O)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 可以微調查詢，以減少不必要的 I/O；例如利用索引。|  
 |使用者連線|過多的使用者同時存取伺服器，會造成效能降低。|  
 |封鎖的鎖定|設計錯誤的應用程式會造成鎖定與阻礙同時發生，而導致回應時間變長，以及交易輸送速度變慢。|  

@@ -11,25 +11,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db51298ccadb2dc3ef6b9060bc3d83987bb3c9ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63233150"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>使用 IBCPSession 將 FILESTREAM 資料行讀到檔案中 (OLE DB)
   此範例會使用 IBCPSession 介面將 Filestream 資料行讀到檔案中，並寫入格式檔案。  
   
- 如需有關 filestream 功能的詳細資訊，請參閱 < [FILESTREAM 支援&#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)。  
+ 如需有關 filestream 功能的詳細資訊，請參閱[&#40;OLE DB&#41;的 Filestream 支援](../../native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>範例  
  請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
  使用下列其中一個範例來建立此範例讀取的來源資料表：  
   
--   [使用繫結至 ICommandText 參數的 ISequentialStream 將資料傳送到 FILESTREAM 資料行 &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [使用系結至 ICommandText 參數 &#40;OLE DB 的 ISequentialStream，將資料傳送到 FILESTREAM 資料行&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [使用 IRowsetFastUpload 將資料傳送到 FILESTREAM 資料行 &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [使用 IRowsetFastUpload &#40;OLE DB 將資料傳送到 FILESTREAM 資料行&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  複製第一個程式碼清單並將它貼入名為 ISSHelper.h 的檔案中。  
   

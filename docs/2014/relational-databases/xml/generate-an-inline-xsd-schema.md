@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b6c8233b95f3f95235bb4f618358d4680d3088f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287475"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>產生內嵌 XSD 結構描述
@@ -221,7 +221,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>元素名稱衝突  
  在 FOR XML 中，可以使用相同的名稱來表示兩個子元素。 例如，下列查詢會擷取產品的 ListPrice 和 DealerPrice 值，但此查詢對這兩個資料行指定相同的別名：Price。 因此，產生的資料列集將具有兩個相同名稱的資料行。  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>案例 1：兩個子元素都是非索引鍵資料行且類型相同，並且可以是 NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>案例 1：兩個子元素都是相同類型的非索引鍵之索引資料行，而且可以是 NULL  
  在下列查詢中，兩個子元素都是相同類型的非索引鍵之索引資料行，而且可以是 NULL。  
   
 ```  
@@ -273,9 +273,9 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  請注意內嵌 XSD 結構描述中的下列各項：  
   
--   ListPrice 和 DealerPrice 都屬於相同類型 `money`，而且在資料表中都可以是 NULL。 因此，由於它們可能不會在產生的 XML 中傳回，所以在 <`row`> 元素 (其 minOccurs=0 且 maxOccurs=2) 的複雜類型宣告中，只有一個 <`Price`> 子元素。  
+-   ListPrice 和 DealerPrice 都屬於相同類型 `money`，而且在資料表中都可以是 NULL。 因此，由於它們可能不會在產生的 XML 中傳回，所以在 <`Price`> 元素 (其 minOccurs=0 且 maxOccurs=2) 的複雜類型宣告中，只有一個 <`row`> 子元素。  
   
--   結果，因為 `DealerPrice` 值在資料表中是 NULL，所以只有 `ListPrice` 會做為 <`Price`> 元素傳回。 如果將 `XSINIL` 參數加入 ELEMENTS 指示詞，您會收到兩個元素，它們將對應至 DealerPrice 的 <`Price`> 元素的 `xsi:nil` 值設定為 TRUE。 您也會在內嵌 XSD 結構描述的 <`row`> 複雜類型定義中，接收到兩個 <`Price`> 子元素，這兩個子元素的 `nillable` 屬性都設為 TRUE。 以下片段是部分結果：  
+-   結果，因為 `DealerPrice` 值在資料表中是 NULL，所以只有 `ListPrice` 會做為 <`Price`> 元素傳回。 如果將 `XSINIL` 參數加入 ELEMENTS 指示詞，您會收到兩個元素，它們將對應至 DealerPrice 的 <`xsi:nil`> 元素的 `Price` 值設定為 TRUE。 您也會在內嵌 XSD 結構描述的 <`Price`> 複雜類型定義中，接收到兩個 <`row`> 子元素，這兩個子元素的 `nillable` 屬性都設為 TRUE。 以下片段是部分結果：  
   
  `...`  
   
@@ -313,7 +313,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>案例 2：一個索引鍵資料行和一個非索引鍵資料行且類型相同  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>案例 2：類型相同的索引鍵資料行和非索引鍵之索引資料行  
  下列查詢說明類型相同的索引鍵資料行和非索引鍵之索引資料行。  
   
 ```  
@@ -391,7 +391,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  請注意，在內嵌 XSD 結構描述中，對應於 Col2 的 <`Col`> 元素，其 minOccurs 是設為 0。  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>案例 3：兩個不同類型的元素，且對應的資料行可以是 NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>案例 3：不同類型的兩個元素，及其對應資料行都可以是 NULL  
  下列查詢是針對案例 2 所顯示的範例資料表而指定：  
   
 ```  

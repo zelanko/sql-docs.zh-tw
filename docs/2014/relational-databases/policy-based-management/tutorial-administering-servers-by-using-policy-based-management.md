@@ -1,5 +1,5 @@
 ---
-title: 教學課程：使用原則式管理來管理伺服器 |Microsoft Docs
+title: 教學課程：使用以原則為基礎的管理來管理伺服器 | Microsoft 文件
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63256063"
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>教學課程：使用原則式管理來管理伺服器
+# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>教學課程：使用以原則為基礎的管理來管理伺服器
   歡迎使用「使用以原則為基礎的管理原則來管理伺服器」教學課程。 本教學課程的主要對象是熟悉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 但剛接觸以原則為基礎之管理的使用者。  
   
 ## <a name="what-you-will-learn"></a>學習內容  

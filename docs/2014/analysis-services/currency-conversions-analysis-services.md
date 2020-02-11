@@ -1,5 +1,5 @@
 ---
-title: 貨幣轉換 (Analysis Services) |Microsoft Docs
+title: 貨幣轉換（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,19 +19,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 48bbb9eeacc1e3ba2bd31ef10b47b058f0f57239
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086545"
 ---
 # <a name="currency-conversions-analysis-services"></a>貨幣轉換 (Analysis Services)
-  **[!INCLUDE[applies](../includes/applies-md.md)]**  僅限多維度  
+  **[!INCLUDE[applies](../includes/applies-md.md)]** 僅限多維度  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會使用多維度運算式 (MDX) 指令碼提供的一組功能，在支援多重貨幣的 Cube 中提供貨幣轉換支援。  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會使用多維度運算式 (MDX) 指令碼提供的一組功能，在支援多重貨幣的 Cube 中提供貨幣轉換支援。  
   
 ## <a name="currency-conversion-terminology"></a>貨幣轉換詞彙  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會使用下列詞彙來描述貨幣轉換功能：  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會使用下列詞彙來描述貨幣轉換功能：  
   
  樞紐貨幣  
  在比率量值群組中輸入匯率來轉換的貨幣。  
@@ -68,7 +70,8 @@ ms.locfileid: "66086545"
   
 -   時間維度和比率量值群組之間存在一般維度關聯性。  
   
--   `Type` 屬性也可以設定為 ExchangeRate。 雖然商業智慧精靈使用貨幣和時間維度之間的關聯性來識別可能的比率量值群組，如果將 `Type` 屬性設定為 ExchangeRate，用戶端應用程式就可以更容易地識別比率量值群組。  
+-   
+  `Type` 屬性也可以設定為 ExchangeRate。 雖然商業智慧精靈使用貨幣和時間維度之間的關聯性來識別可能的比率量值群組，如果將 `Type` 屬性設定為 ExchangeRate，用戶端應用程式就可以更容易地識別比率量值群組。  
   
 -   一或多個量值，代表比率量值群組所包含的匯率。  
   
@@ -84,7 +87,7 @@ ms.locfileid: "66086545"
 ## <a name="defining-currency-conversions"></a>定義貨幣轉換  
  您可以使用商業智慧精靈來定義 Cube 的貨幣轉換功能，或使用 MDX 指令碼來手動定義貨幣轉換。  
   
-### <a name="prerequisites"></a>先決條件  
+### <a name="prerequisites"></a>Prerequisites  
  您必須先定義至少一個貨幣維度、至少一個時間維度以及至少一個比率量值群組，才能使用商業智慧精靈來定義 Cube 中的貨幣轉換。 從這些物件中，商業智慧精靈可以擷取資料和中繼資料，這些資料用來建構報表貨幣維度與提供貨幣轉換功能所需的 MDX 指令碼。  
   
 ### <a name="decisions"></a>決策  
@@ -106,8 +109,8 @@ ms.locfileid: "66086545"
 |||||  
 |-|-|-|-|  
 |匯率方向|**多對一**|**一對多**|**多對多**|  
-|**n 個樞紐貨幣至 1 個範例貨幣**|將待轉換的量值乘以本地貨幣的匯率量值，以轉換量值為樞紐貨幣。|將待轉換的量值除以報表貨幣的匯率量值，以轉換量值為報表貨幣。|將待轉換的量值乘以本地貨幣的匯率量值，以轉換量值為樞紐貨幣，再將已轉換的量值除以報表貨幣的匯率量值，以轉換量值為報表貨幣。|  
-|**n 個範例貨幣至 1 個樞紐貨幣**|將待轉換的量值除以本地貨幣的匯率量值，以轉換量值為樞紐貨幣。|將待轉換的量值乘以報表貨幣的匯率量值，以轉換量值為報表貨幣。|將待轉換的量值除以本地貨幣的匯率量值，以轉換量值為樞紐貨幣，再將已轉換的量值乘以報表貨幣的匯率量值，以轉換量值為報表貨幣。|  
+|**n 軸貨幣至1個範例貨幣**|將待轉換的量值乘以本地貨幣的匯率量值，以轉換量值為樞紐貨幣。|將待轉換的量值除以報表貨幣的匯率量值，以轉換量值為報表貨幣。|將待轉換的量值乘以本地貨幣的匯率量值，以轉換量值為樞紐貨幣，再將已轉換的量值除以報表貨幣的匯率量值，以轉換量值為報表貨幣。|  
+|**n 個範例貨幣至1個數據透視貨幣**|將待轉換的量值除以本地貨幣的匯率量值，以轉換量值為樞紐貨幣。|將待轉換的量值乘以報表貨幣的匯率量值，以轉換量值為報表貨幣。|將待轉換的量值除以本地貨幣的匯率量值，以轉換量值為樞紐貨幣，再將已轉換的量值乘以報表貨幣的匯率量值，以轉換量值為報表貨幣。|  
   
  請在商業智慧精靈的 **[設定貨幣轉換選項]** 頁面上選擇匯率方向。 如需設定轉換方向的詳細資訊，請參閱[設定貨幣轉換選項 &#40;商業智慧精靈&#41;](set-currency-conversion-options-business-intelligence-wizard.md)。  
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2005 中，SERVERPROPERTY 會傳回 LCID 屬性的正確結果 |Microsoft Docs
+title: SERVERPROPERTY 會針對 SQL Server 2005 中的 LCID 屬性傳回正確的結果 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 24bb31759ba520f26b8e9af3a6533d8f0feebbe0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092235"
 ---
 # <a name="serverproperty-returns-correct-result-for-lcid-property-in-sql-server-2005"></a>在 SQL Server 2005 中，SERVERPROPERTY 會傳回 LCID 屬性的正確結果
@@ -29,7 +29,7 @@ ms.locfileid: "66092235"
  請修改應用程式以預期 SERVERPROPERTY('LCID') 會傳回對應至伺服器定序的 Windows LCID。  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
+ [資料庫引擎升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新的&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

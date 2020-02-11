@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e1dae21a1a02ea92e6f75a2471a1180e2634b2d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63242882"
 ---
 # <a name="clientsettings-class"></a>ClientSettings 類別
-  [ClientSettings 類別](clientsettings-class.md)代表[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端上的設定。  
+  [ClientSettings 類別](clientsettings-class.md)代表用戶端[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的設定。  
   
  這個類別會啟用程式設計方式的用戶端管理。  
   

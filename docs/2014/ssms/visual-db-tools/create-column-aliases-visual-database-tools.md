@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a6be65da2da5da5c025520314c069258aeb7bfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184358"
 ---
 # <a name="create-column-aliases-visual-database-tools"></a>建立資料行別名 (Visual Database Tools)
@@ -36,9 +36,9 @@ ms.locfileid: "63184358"
 2.  在該資料列的 [別名]  資料行中，輸入別名。 別名必須遵循所有 SQL 的命名慣例。 如果所輸入的別名包含空白字元，[查詢和檢視設計師] 會自動在別名前後加入分隔符號。  
   
 ## <a name="see-also"></a>另請參閱  
- [將資料行加入至查詢&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [排序及群組查詢結果&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [摘要查詢結果&#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [將資料行加入至查詢 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [排序和分組查詢結果 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [&#40;Visual Database Tools&#41;匯總查詢結果](summarize-query-results-visual-database-tools.md)   
  [使用查詢執行基本作業 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

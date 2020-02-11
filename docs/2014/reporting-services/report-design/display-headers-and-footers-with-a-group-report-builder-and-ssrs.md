@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b330b5aedaeff4cf73ad6dca3e88860dde0f90b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106055"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>與群組一起顯示頁首和頁尾 (報表產生器及 SSRS)
@@ -69,8 +69,8 @@ ms.locfileid: "66106055"
 5.  (選擇性) 預覽報表。 在可能的狀況下，報表轉譯器都會將此成員與指定的資料行群組成員保持在一起。  
   
 ## <a name="see-also"></a>另請參閱  
- [Tablix 資料區資料格、 資料列和資料行&#40;報表產生器&#41;和 SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
- [Tablix 資料區的區域&#40;報表產生器及 SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)   
+ [Tablix 資料區域儲存格、資料列和資料行 &#40;報表產生器&#41; 和 SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
+ [Tablix 資料區區域 &#40;報表產生器和 SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)   
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [資料表 &#40;報表產生器及 SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [矩陣 &#40;報表產生器及 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

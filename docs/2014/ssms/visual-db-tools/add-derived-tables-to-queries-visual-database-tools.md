@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f1898dce975655758c52068590dd4c0720c9f67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63311943"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>將衍生資料表加入查詢 (Visual Database Tools)
@@ -34,9 +34,9 @@ ms.locfileid: "63311943"
      隨即加入名稱為 derivedtbl_*N* 的新資料表，衍生資料表的 SELECT 陳述式也加入查詢的 FROM 子句中。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行基本查詢作業&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [建立查詢&#40;Visual Database Tools&#41;](create-queries-visual-database-tools.md)   
- [開啟查詢&#40;Visual Database Tools&#41;](open-queries-visual-database-tools.md)   
+ [使用 &#40;Visual Database Tools 的查詢來執行基本作業&#41;](visual-database-tools.md)   
+ [&#40;Visual Database Tools 建立查詢&#41;](create-queries-visual-database-tools.md)   
+ [&#40;Visual Database Tools 開啟查詢&#41;](open-queries-visual-database-tools.md)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)  
   
   

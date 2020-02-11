@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187098"
 ---
 # <a name="enhance-general-replication-performance"></a>增強一般複寫效能
@@ -33,7 +33,7 @@ ms.locfileid: "63187098"
   
 ## <a name="server-and-network"></a>伺服器和網路  
   
--   設定配置給 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的最小和最大記憶體數量。  
+-   設定配置給[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的最小和最大記憶體數量。  
   
      依預設， [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 將根據可用的系統資源，動態地變更其記憶體需求。 若要避免複寫活動執行期間記憶體可用量過低，請使用 **min server memory** 選項設定最小可用的記憶體。 若要避免作業系統將記憶體分頁部署到光碟，亦可使用 **max server memory** 選項設定最大記憶體數量。 如需詳細資訊，請參閱[伺服器記憶體伺服器組態選項](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "63187098"
   
      LOB 比其他資料行資料類型需要更多儲存空間和處理。 除非您的應用程式需要，否則不要在發行項中包含這些資料行。 資料類型 `text`、`ntext` 和 `image` 已被取代。 若您納入 LOB，建議您分別依序使用資料類型 `varchar(max)`、`nvarchar(max)`、`varbinary(max)`。  
   
-     對於異動複寫，請考慮使用名為 **OLEDB 資料流的散發設定檔**的「散發代理程式」設定檔。 如需詳細資訊，請參閱 [Replication Agent Profiles](../agents/replication-agent-profiles.md)。  
+     對於異動複寫，請考慮使用名為 **OLEDB 資料流的散發設定檔**的「散發代理程式」設定檔。 如需相關資訊，請參閱 [Replication Agent Profiles](../agents/replication-agent-profiles.md)。  
   
 ## <a name="publication-design"></a>發行集設計  
   
@@ -158,12 +158,12 @@ ms.locfileid: "63187098"
   
 -   使用散發代理程式和合併代理程式的 **-UseInprocLoader** 參數 (如果發行的資料表包括 XML 資料行，則不可使用此參數)。 此參數會使代理程式在套用快照集時使用 BULK INSERT 命令。  
   
- 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
+ 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱  
   
 -   [處理複寫代理程式設定檔](../agents/work-with-replication-agent-profiles.md)  
   
--   [檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+-   [查看及修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)的最小和最大記憶體數量。  
+-   複寫[代理程式可執行檔概念](../concepts/replication-agent-executables-concepts.md)。  
   
   

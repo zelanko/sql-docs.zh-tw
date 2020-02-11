@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1c9ea0381b9741831b24c0148013925f781b5e02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478551"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>版本管理功能區域 (主資料管理員)
@@ -27,14 +27,14 @@ ms.locfileid: "65478551"
   
  [鎖定版本 &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)  
   
- [變更版本名稱 &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)  
+ [將版本名稱變更 &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)  
   
  [複製版本 &#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)  
   
  [刪除版本 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-version-master-data-services.md)  
   
 ## <a name="version-flags"></a>版本旗標  
- [建立版本旗標 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)  
+ [建立 &#40;Master Data Services 的版本旗標&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)  
   
  [將旗標指派給版本 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   

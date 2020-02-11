@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150823"
 ---
 # <a name="plan-guides"></a>計畫指南
@@ -33,7 +33,7 @@ ms.locfileid: "63150823"
  您可以建立的計畫指南總數僅限於可用的系統資源。 因此，您應該限制計畫指南，只用於可改善或穩定效能的關鍵任務查詢。 計畫指南不應用來影響已部署之應用程式的大部分查詢負載。  
   
 > [!NOTE]  
->  並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用計劃指南。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 在任何版本中都可以看到計畫指南。 您也可以將包含計畫指南的資料庫附加到任何版本中。 當您將資料庫還原或附加至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的升級版本時，計畫指南仍維持不變。  
+>  並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用計劃指南。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 在任何版本中都可以看到計畫指南。 您也可以將包含計畫指南的資料庫附加到任何版本中。 當您將資料庫還原或附加至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的升級版本時，計畫指南仍維持不變。  
   
 ## <a name="types-of-plan-guides"></a>計畫指南的類型  
  您可以建立下列類型的計畫指南。  
@@ -125,7 +125,7 @@ sp_create_plan_guide
   
  對於以 SQL 或 TEMPLATE 為基礎的計畫指南而言，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會逐字元比較查詢的 @module_or_batch 和 @params 引數值，使兩個值相符。 這表示您必須提供與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在實際批次中所收到的文字完全相符的文字。  
   
- @type = 'SQL' 且 @module_or_batch 設定為 NULL 時，@module_or_batch 的值會設定為值 @stmt。這表示，提供的 *statement_text* 值必須與提交給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的值採用相同的格式 (逐字元)。 不會執行內部轉換來簡化這個比對作業。  
+ 當@type = ' SQL ' 且@module_or_batch設定為 Null 時，的值@module_or_batch會設定為的值。 @stmt這表示，在提交給** 時，必須以與字元相同的格式來[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供 statement_text 的值。 不會執行內部轉換來簡化這個比對作業。  
   
  當一般 (SQL 或 OBJECT) 計畫指南和 TEMPLATE 計畫指南都適用於陳述式時，只會使用一般計畫指南。  
   
@@ -137,7 +137,7 @@ sp_create_plan_guide
   
 ## <a name="related-tasks"></a>相關工作  
   
-|工作|主題|  
+|Task|主題|  
 |----------|-----------|  
 |描述如何建立計畫指南。|[建立新的計畫指南](create-a-new-plan-guide.md)|  
 |描述如何建立參數化查詢的計畫指南。|[建立參數化查詢的計畫指南](create-a-plan-guide-for-parameterized-queries.md)|  
@@ -149,10 +149,10 @@ sp_create_plan_guide
 |描述如何驗證計畫指南。|[升級之後驗證計畫指南](validate-plan-guides-after-upgrade.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
- [sp_control_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
- [sys.plan_guides &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
- [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
+ [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide_from_handle &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
+ [sp_control_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
+ [plan_guides &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
+ [fn_validate_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
   
   

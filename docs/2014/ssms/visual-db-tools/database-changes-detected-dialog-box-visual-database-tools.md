@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0d5850ce71e483ea33bb99972c243140a63da5f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270540"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>偵測到資料庫變更對話方塊 (Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "63270540"
 > [!NOTE]  
 >  雖然您無法復原對於資料表或資料庫圖表所做的變更，但是，在您儲存資料表或圖表之前，這些變更都不會儲存至資料庫中。 您可以選擇 [否]  以捨棄任何未儲存的變更，並關閉所有開啟的圖表，不予以儲存。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **警告差異偵測**  
  指定下次您嘗試儲存資料庫圖表或選取的資料表時，此對話方塊是否出現。 核取表示每次您儲存對於資料庫而言已過期的圖表或資料表時，此對話方塊都會出現。 未核取表示對話方塊不會出現。 依照預設，此方塊為核取。 如果您取消核取此選項，可以在 [選項]  對話方塊中重新核取。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63270540"
  顯示 [另存新檔]  對話方塊，讓您指定包含資料庫變更清單的文字檔位置。  
   
 ## <a name="see-also"></a>另請參閱  
- [協調資料庫圖表與修改的資料庫&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [使用修改過的資料庫協調資料庫關係圖 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [多使用者環境 &#40;Visual Database Tools&#41;](multiuser-environments-visual-database-tools.md)  
   
   

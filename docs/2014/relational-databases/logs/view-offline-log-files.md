@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144594"
 ---
 # <a name="view-offline-log-files"></a>檢視離線記錄檔
@@ -52,7 +52,7 @@ ms.locfileid: "63144594"
   
 -   包含錯誤記錄檔之資料夾的讀取權限。 根據預設，錯誤記錄檔會位於下列路徑 (其中 \<磁碟機>  表示已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的磁碟機，\<執行個體名稱  > 則是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體名稱)：  
   
-     **\<磁碟機 >: \Program Files\Microsoft SQL Server\MSSQL12。\<執行個體名稱 > \MSSQL\Log**  
+     **\<磁片磁碟機>： \Program Files\Microsoft SQL Server\MSSQL12。\<InstanceName> \mssql\log**  
   
  若要確認 WMI 命名空間安全性設定，您可以使用 [WMI 控制] 嵌入式管理單元。  
   
@@ -60,9 +60,9 @@ ms.locfileid: "63144594"
   
 1.  開啟 [WMI 控制] 嵌入式管理單元。 若要這樣做，請根據作業系統執行下列其中一項作業：  
   
-    -   按一下 **開始**，型別`wmimgmt.msc`中**開始搜尋**方塊，然後再按 ENTER 鍵。  
+    -   按一下 [**開始**] `wmimgmt.msc` ，在 [**開始搜尋**] 方塊中輸入，然後按 enter。  
   
-    -   按一下 **開始**，按一下**執行**，型別`wmimgmt.msc`，然後按 ENTER 鍵。  
+    -   依序按一下 [**開始**] 和`wmimgmt.msc`[**執行**]，輸入，然後按 enter。  
   
 2.  根據預設，[WMI 控制] 嵌入式管理單元會管理本機電腦。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63144594"
   
     3.  輸入遠端電腦名稱，然後按一下 [確定]  。  
   
-3.  以滑鼠右鍵按一下 [WMI 控制 (本機)]  或 [WMI 控制 (遠端電腦名稱)]  ，然後按一下 [屬性]  。  
+3.  以滑鼠右鍵按一下 **[Wmi 控制（本機）** ] 或 **[Wmi 控制（***RemoteComputerName***）**]，然後按一下 [**屬性**]。  
   
 4.  在 [WMI Control Properties (WMI 控制內容)]  對話方塊中，按一下 [安全性]  索引標籤。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "63144594"
   
 3.  在主控台樹狀目錄中，找出您想要檢視離線檔案的執行個體。  
   
-4.  執行下列其中之一：  
+4.  執行下列其中一個動作：  
   
     -   如果此執行個體位於 [本機伺服器群組]  底下，請依序展開 [本機伺服器群組]  和伺服器群組 (如果此執行個體是群組成員)，以滑鼠右鍵按一下執行個體，然後按一下 [檢視 SQL Server 記錄檔]  。  
   

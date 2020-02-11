@@ -13,16 +13,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 628e9cb70e17271f34ce9b2c7573e918bd9009bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63186949"
 ---
 # <a name="administrative-password"></a>管理密碼
   如果在此精靈的 **[散發者]** 頁面上為此發行者選取了遠端散發者，您就必須為複寫用於在發行者與散發者之間進行連接的 **distributor_admin** 登入輸入密碼。 密碼必須符合設定散發精靈的 **[散發者密碼]** 頁面上指定的密碼，或是在 **[散發者屬性]** 對話方塊的 **[發行者]** 頁面上指定的密碼。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **密碼**  
  為發行者與遠端散發者之間的連接輸入密碼。  
   

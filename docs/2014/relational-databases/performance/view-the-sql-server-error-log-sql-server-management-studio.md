@@ -17,19 +17,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 494b57b50115b5ed3cf5089448215b89e9422ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150445"
 ---
 # <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>檢視 SQL Server 錯誤記錄檔 (SQL Server Management Studio)
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔包含使用者自訂的事件和特定系統事件。 您可使用此錯誤記錄檔，對與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相關的問題進行疑難排解。  
   
 ### <a name="to-view-the-sql-server-error-log"></a>若要檢視 SQL Server 錯誤記錄檔  
   
-1.  在**物件總管 中**，展開伺服器，展開**管理**，然後展開**SQL Server 記錄檔**。  
+1.  在**物件總管**中，依序展開伺服器和 [**管理**]，然後展開 [ **SQL Server 記錄**]。  
   
-2.  以滑鼠右鍵按一下記錄檔，然後按一下 [檢視 SQL Server 記錄檔]  。  
+2.  以滑鼠右鍵按一下記錄檔，然後按一下 [檢視 SQL Server 記錄檔]****。  
   
   

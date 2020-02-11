@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 15a48d24af5b8781f1ffe8af9a8cca434699f76a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106722"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>加入和修改線條 (報表產生器及 SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66106722"
 3.  若要變更線條屬性，請在設計介面上選取線條，然後在 **[主資料夾]** 索引標籤的 **[框線]** 區段中編輯其屬性。  
   
     > [!NOTE]  
-    >  如果您將線條樣式設定為**Double**和線條的寬度為 1 1/2 pt 或更窄，線條可能不會出現雙線當您在報表產生器、 報表設計師或報表管理員中，會在執行報表時。 當您將報表匯出為其他格式時才會出現雙線，例如 Microsoft Word 及 Acrobat PDF。  
+    >  如果將線條樣式設定為 [**雙**線]，而線條寬度為 1 1/2 pt 或更窄，當您在報表產生器、報表設計師或報表管理員中執行報表時，線條可能不會出現雙線。 當您將報表匯出為其他格式時才會出現雙線，例如 Microsoft Word 及 Acrobat PDF。  
   
 ## <a name="see-also"></a>另請參閱  
  [矩形和線條 &#40;報表產生器及 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  

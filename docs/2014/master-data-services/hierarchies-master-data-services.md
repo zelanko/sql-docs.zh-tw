@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3cf9d0651b1a0ce5bbb49a575aea10723667ee2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479465"
 ---
 # <a name="hierarchies-master-data-services"></a>階層 (Master Data Services)
@@ -30,7 +30,7 @@ ms.locfileid: "65479465"
 ## <a name="what-hierarchies-contain"></a>階層包含的內容  
  每個階層都包含一個或多個實體中的成員。 當您加入、變更或刪除成員時，所有的階層都會更新。 如此可確保資料在所有階層中都是正確的。 階層也有助於確保每個成員只計算一次。  
   
- 如果您要建立成員子集的群組，請考慮使用集合。 如需詳細資訊，請參閱[集合 &#40;Master Data Services&#41;](collections-master-data-services.md)。  
+ 如果您要建立成員子集的群組，請考慮使用集合。 如需詳細資訊，請參閱 [集合 &#40;Master Data Services&#41;](collections-master-data-services.md)。  
   
 ## <a name="kinds-of-hierarchies"></a>階層類型  
  您可以建立多個階層，以不同的方式來檢視及組織成員。 您可以建立：  
@@ -56,7 +56,7 @@ ms.locfileid: "65479465"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|啟用明確階層和集合的實體。|[啟用明確階層和集合的實體&#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|啟用明確階層和集合的實體。|[啟用明確階層和集合的實體 &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |建立明確階層。|[建立明確階層 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
 |建立衍生階層。|[建立衍生階層 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
 |隱藏或刪除現有衍生階層中的層級。|[隱藏或刪除衍生階層中的層級 &#40;Master Data Services&#41;](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
@@ -69,8 +69,8 @@ ms.locfileid: "65479465"
   
 -   [遞迴階層 &#40;Master Data Services&#41;](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [具有明確頂層的衍生階層 &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [具有明確大寫的衍生階層 &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
--   [集合 &#40;Master Data Services&#41;](collections-master-data-services.md)  
+-   [&#40;Master Data Services 的集合&#41;](collections-master-data-services.md)  
   
   

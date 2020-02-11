@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 986e38ef42fe1af2aba8ba1625225a336f29158d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162460"
 ---
 # <a name="create-jobs"></a>建立作業
@@ -27,7 +27,8 @@ ms.locfileid: "63162460"
   
  您可以撰寫作業，讓它在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本機執行個體或是整個企業的多個執行個體上執行。 若要在多個伺服器上執行作業，您必須設定至少一個主要伺服器與一或多個目標伺服器。 如需主要及目標伺服器的詳細資訊，請參閱 [將整個企業的管理自動化](automated-administration-across-an-enterprise.md)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會將作業及作業步驟資訊記錄在作業記錄中。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會將作業及作業步驟資訊記錄在作業記錄中。  
   
 ## <a name="related-tasks"></a>相關工作  
   
@@ -35,14 +36,14 @@ ms.locfileid: "63162460"
 |-|-|  
 |**說明**|**主題**|  
 |描述如何建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。|[建立作業](create-a-job.md)|  
-|描述如何將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的擁有權重新指派給其他使用者。|[Give Others Ownership of a Job](give-others-ownership-of-a-job.md)|  
+|描述如何將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的擁有權重新指派給其他使用者。|[將作業擁有權授與其他人](give-others-ownership-of-a-job.md)|  
 |描述如何設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的作業記錄。|[Set Up the Job History Log](set-up-the-job-history-log.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [管理作業步驟](manage-job-steps.md)   
- [將整個企業的管理自動化](automated-administration-across-an-enterprise.md)   
- [建立及附加排程至作業](create-and-attach-schedules-to-jobs.md)   
- [執行工作](run-jobs.md)   
+ [跨企業進行自動化管理](automated-administration-across-an-enterprise.md)   
+ [建立排程並將其附加至作業](create-and-attach-schedules-to-jobs.md)   
+ [執行作業](run-jobs.md)   
  [檢視或修改作業](view-or-modify-jobs.md)  
   
   

@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d356bc1cb981479de8a4b1baa3bdaaf45b6145ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63260753"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 傳遞延伸模組設定
@@ -41,13 +41,14 @@ ms.locfileid: "63260753"
 |設定|值|  
 |-------------|-----------|  
 |**收件人**|出現在電子郵件訊息的 `To` 之電子郵件地址。 分號會分隔多個電子郵件地址。 必要。|  
-|**CC**|出現在電子郵件訊息的 `Cc` 之電子郵件地址。 分號會分隔多個電子郵件地址。 選擇性。|  
+|**副本**|出現在電子郵件訊息的 `Cc` 之電子郵件地址。 分號會分隔多個電子郵件地址。 選擇性。|  
 |**密件副本**|出現在電子郵件訊息的 `Bcc` 之電子郵件地址。 分號會分隔多個電子郵件地址。 選擇性。|  
 |**ReplyTo**|出現在電子郵件訊息的 `Reply-To` 標頭之電子郵件地址。 值必須是單一電子郵件地址。 選擇性。|  
-|`IncludeReport`|指出在電子郵件傳遞中是否包括報表的值。 `true` 的值指出在電子郵件訊息的本文中所傳遞的報表。|  
+|`IncludeReport`|指出在電子郵件傳遞中是否包括報表的值。 
+  `true` 的值指出在電子郵件訊息的本文中所傳遞的報表。|  
 |**RenderFormat**|要用以產生轉譯報表的轉譯延伸模組名稱。 名稱必須對應至報表伺服器上安裝的其中一個可見的轉譯延伸模組。 如果將 `IncludeReport` 設定為 `true` 的值，則這個值是必要的。|  
-|**優先權**|傳送電子郵件訊息的優先權。 有效值為 `LOW`、`NORMAL` 及 `HIGH`。 預設值是 `NORMAL`。|  
-|**主旨**|電子郵件訊息主旨中的文字。|  
+|**優先順序**|傳送電子郵件訊息的優先權。 有效值是 `LOW`、`NORMAL` 和 `HIGH`。 預設值是 `NORMAL`。|  
+|**主題**|電子郵件訊息主旨中的文字。|  
 |**註解**|文字包括在電子郵件訊息的本文中。|  
 |**IncludeLink**|指出在電子郵件本文中是否包括報表連結的值。|  
   
@@ -56,13 +57,13 @@ ms.locfileid: "63260753"
   
 |設定|值|  
 |-------------|-----------|  
-|**FILENAME**|儲存到磁碟的檔案名稱。|  
+|**名稱**|儲存到磁碟的檔案名稱。|  
 |**FILEEXTN**|指出轉譯報表是否包括副檔名。 值是 `true` 或是 `false`。|  
-|**PATH**|儲存報表的資料夾路徑或是 UNC 檔案共用路徑。|  
+|**路徑名**|儲存報表的資料夾路徑或是 UNC 檔案共用路徑。|  
 |**RENDER_FORMAT**|儲存到磁碟的報表格式。|  
 |**USERNAME**|存取網路資源或磁碟所需的使用者名稱。|  
-|**PASSWORD**|存取網路資源或磁碟所需的密碼。|  
-|**WRITEMODE**|存取磁碟時使用的寫入模式。 有效值為 `None`、`Overwrite` 及 `AutoIncrement`。|  
+|**許可權**|存取網路資源或磁碟所需的密碼。|  
+|**WRITEMODE**|存取磁碟時使用的寫入模式。 有效值是 `None`、`Overwrite` 和 `AutoIncrement`。|  
   
 ## <a name="see-also"></a>另請參閱  
  [技術參考 &#40;SSRS&#41;](../../technical-reference-ssrs.md)   

@@ -1,5 +1,5 @@
 ---
-title: Database 元素 (DTA) 的組態 |Microsoft Docs
+title: Configuration （DTA）的 Database 元素 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fbca62a5d32ed6b7ec30eb5d6dba6a82a2b80c64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298347"
 ---
 # <a name="database-element-for-configuration-dta"></a>組態的 Database 元素 (DTA)
@@ -52,7 +52,7 @@ ms.locfileid: "63298347"
  在 Database Engine Tuning Advisor XML 結構描述中，這個元素的名稱為 **DatabaseTypecomplexType** 。 請勿混淆這個 `Database` 元素與根父系是在 XML 輸入檔頂端之 `Server` 元素的元素。 如需詳細資訊，請參閱[伺服器的 Database 元素 &#40;DTA&#41;](database-element-for-server-dta.md)。  
   
 ## <a name="example"></a>範例  
- 如需使用方式的範例這`Database`項目，請參閱 <<c2> [ 含使用者指定組態的 XML 輸入檔範例&#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)。</c2>  
+ 如需此`Database`元素的使用範例，請參閱[具有使用者指定設定的 XML 輸入檔範例 &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

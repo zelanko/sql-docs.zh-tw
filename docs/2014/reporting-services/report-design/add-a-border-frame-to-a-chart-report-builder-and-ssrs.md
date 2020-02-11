@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6b354cbb09a61e5fdd2444afaff0e6c8e0bb5b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106905"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>將邊框加入至圖表 (報表產生器及 SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66106905"
   
 ## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [格式化圖表 &#40;報表產生器及 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [將斜面、浮凸與紋理樣式加入至圖表 &#40;報表產生器及 SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
+ [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
+ [將斜面、浮凸與紋理樣式新增至圖表 &#40;報表產生器及 SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
   
   

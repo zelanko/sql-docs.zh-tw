@@ -1,5 +1,5 @@
 ---
-title: XTP 交易記錄檔 |Microsoft Docs
+title: XTP 交易記錄 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f49c43eeaf6f5b799d60f500c303227f94452503
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151014"
 ---
 # <a name="xtp-transaction-log"></a>XTP 交易記錄
@@ -28,6 +28,6 @@ ms.locfileid: "63151014"
 |**寫入的記錄檔記錄/秒**|XTP 引擎 (平均) 每秒寫入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄檔的記錄數目。|  
   
 ## <a name="see-also"></a>另請參閱  
- [XTP&#40;記憶體內部 OLTP&#41;效能計數器](../../integration-services/performance/performance-counters.md)  
+ [XTP &#40;記憶體內部 OLTP&#41; 效能計數器](../../integration-services/performance/performance-counters.md)  
   
   

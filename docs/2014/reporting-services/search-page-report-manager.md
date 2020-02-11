@@ -1,5 +1,5 @@
 ---
-title: 搜尋頁面 （報表管理員） |Microsoft Docs
+title: 搜尋頁面（報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12413c103230d8c085a9701e3fb83db15135895a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102254"
 ---
 # <a name="search-page-report-manager"></a>搜尋頁面 (報表管理員)
@@ -24,7 +24,7 @@ ms.locfileid: "66102254"
   
  您無法搜尋報表或模型中的文字。 若要搜尋報表中的特定文字，請使用報表上方的工具列。  
   
-## <a name="navigation"></a>巡覽  
+## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-search-results-page"></a>若要開啟搜尋結果頁面  
@@ -40,7 +40,7 @@ ms.locfileid: "66102254"
 > [!NOTE]  
 >  這個按鈕只有 **[詳細資料檢視]** 才有提供。 不過，您可以將滑鼠停留在某個項目上，然後使用功能表來存取 **[詳細資料檢視]** 或 **[清單檢視]** 中的刪除功能。  
   
- **[移動]**  
+ **移動**  
  按一下即可重新定位項目。 這樣做會開啟 [移動項目] 頁面，如此您就可以在其中選取不同的資料夾位置。  
   
 > [!NOTE]  
@@ -53,12 +53,12 @@ ms.locfileid: "66102254"
   
  不支援布林運算子，例如加號字元 (+)。  
   
- **詳細資料檢視**  
+ **[詳細資料檢視]**  
  按一下即可在清單中顯示 [搜尋結果] 頁面，其中包含有關項目的其他資訊，例如項目類型、名稱、描述、項目所在的資料夾，以及上一次執行項目的時間。 在 **[詳細資料檢視]** 中，您可以使用 **[刪除]** 和 **[移動]** 按鈕來移除和重新定位資料夾中的項目。  
   
  將滑鼠停留在某個項目上，然後按一下下拉箭號，即可開啟下拉式功能表，以便從中存取和設定所選取之項目的屬性。  
   
- **清單檢視**  
+ **清單視圖**  
  按一下即可顯示 [搜尋結果] 頁面，但是沒有 **[詳細資料檢視]** 中的詳細資料。 [清單檢視] 是 [搜尋結果] 頁面開啟時的預設檢視。  
   
  將滑鼠停留在某個項目上，然後按一下下拉箭號，即可開啟下拉式功能表，以便從中存取和設定所選取之項目的屬性。  

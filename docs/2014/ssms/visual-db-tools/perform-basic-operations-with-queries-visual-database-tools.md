@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cca8d20555a2221842a6962081a0880c1a820745
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280575"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>執行查詢的基本作業 (Visual Database Tools)
@@ -87,7 +87,7 @@ ms.locfileid: "63280575"
  [使用查詢和檢視表設計工具操作國際資料 &#40;Visual Database Tools&#41;](use-the-query-and-view-designer-with-international-data-visual-database-tools.md)  
  描述 [查詢和檢視設計師] 所提供可更方便使用國際資料的功能。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  [查詢和檢視表設計工具 &#40;Visual Database Tools&#41;](query-and-view-designer-tools-visual-database-tools.md)  
  描述 [查詢和檢視設計師] 的功能和能力。  
   

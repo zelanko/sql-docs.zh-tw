@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8bcadc041fd1f2c4fd708fbc79ab52d0c0472956
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479571"
 ---
 # <a name="delete-an-entity-master-data-services"></a>刪除實體 (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65479571"
 > [!NOTE]  
 >  實體來自所有版本的成員會永久刪除。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -43,11 +43,11 @@ ms.locfileid: "65479571"
   
 4.  選取要刪除之實體的資料列。  
   
-5.  按一下 [**刪除選取的實體**。  
+5.  按一下 [**刪除選取的實體**]。  
   
 6.  在確認對話方塊中按一下 **[確定]**。  
   
-7.  在另一個確認對話方塊中按一下 [確定]。  
+7.  在另一個確認對話方塊中按一下 [確定]****。  
   
 ## <a name="see-also"></a>另請參閱  
  [實體 &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   

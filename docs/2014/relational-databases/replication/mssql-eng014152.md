@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e14c0d724ba4832dfc0f67deec25308804b82f84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191434"
 ---
-# <a name="mssqleng014152"></a>MSSQL_ENG014152
+# <a name="mssql_eng014152"></a>MSSQL_ENG014152
     
 ## <a name="message-details"></a>訊息詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|14152|  
 |事件來源|MSSQLSERVER|  
 |元件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -46,7 +46,7 @@ ms.locfileid: "63191434"
 ## <a name="user-action"></a>使用者動作  
  如果重試訊息不頻繁，則不需要任何使用者動作。  
   
- 使用 [sp_help_jobstep](/sql/relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql) ，檢視要為指定複寫代理程式重試 **Run agent** 步驟的目前最大次數設定。 您可以使用 **@retry_attempts** 預存程序的 [@retry_attempts](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql) 參數，調整作業步驟重試的次數。  
+ 使用 [sp_help_jobstep](/sql/relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql) ，檢視要為指定複寫代理程式重試 **Run agent** 步驟的目前最大次數設定。 您可以使用**@retry_attempts** [sp_update_jobstep](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql)預存程式的參數來調整作業步驟重試的次數。  
   
  如果重試訊息經常重複出現，請根據導致重試的訊息對此問題進行疑難排解。 請檢查代理程式的訊息記錄，找出必須排程進行重試的原因。 在某些情況下，您可能必須為複寫代理程式啟用更詳細的記錄。 如需有關如何設定複寫記錄的詳細資訊，請參閱 Microsoft 知識庫文件 [312292](https://support.microsoft.com/kb/312292)。  
   

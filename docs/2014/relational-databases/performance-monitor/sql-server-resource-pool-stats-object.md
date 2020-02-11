@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183015"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, Resource Pool Stats 物件
@@ -36,18 +36,18 @@ ms.locfileid: "63183015"
 |Memory grants/sec|在這個資源集區中每秒發生的記憶體授權數目。|  
 |Active memory grants count|目前的記憶體授權總計數。 您也可以在 [sys.dm_exec_query_memory_grants](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql)中取得這項資訊。|  
 |Memory grant timeouts/sec|每秒逾時的記憶體授權數目。|  
-|Active memory grant amount (KB)|目前授與記憶體的總數量 (以 KB 為單位)。 您也可以在 [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql) 中取得這項資訊。|  
+|Active memory grant amount (KB)|目前授與記憶體的總數量 (以 KB 為單位)。 您也可以在 [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql)中取得這項資訊。|  
 |Pending memory grant count|在佇列中暫止之記憶體授權的要求數目。 您也可以在 [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql)中取得這項資訊。|  
 |Max memory (KB)|根據資源集區設定和伺服器狀態，資源集區可擁有的最大記憶體數量 (以 KB 為單位)。|  
 |Used memory (KB)|資源集區所使用的記憶體數量 (以 KB 為單位)。|  
 |Target memory (KB)|根據資源集區設定和伺服器狀態，資源集區正嘗試取得的目標記憶體數量 (以 KB 為單位)。|  
 |磁碟讀取 IO/秒|上一秒從磁碟讀取的作業數目。|  
 |節流的磁碟讀取 IO/秒|上一秒讀取的節流作業數。|  
-|磁碟讀取位元組/秒|上一秒從磁碟讀取的位元組數。|  
+|Disk Read Bytes/sec |上一秒從磁碟讀取的位元組數。|  
 |平均磁碟讀取 IO (毫秒)|從磁碟讀取作業的平均時間 (毫秒)。|  
 |磁碟寫入 IO/秒|上一秒寫入至磁碟的作業數目。|  
 |節流的磁碟寫入 IO/秒|上一秒寫入的節流作業數。|  
-|磁碟寫入位元組/秒|上一秒寫入至磁碟的位元組數。|  
+| Disk Write Bytes/sec|上一秒寫入至磁碟的位元組數。|  
 |平均磁碟寫入 IO (毫秒)|寫入磁碟作業的平均時間 (毫秒)。|  
   
 ## <a name="see-also"></a>另請參閱  

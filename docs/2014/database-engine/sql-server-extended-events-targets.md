@@ -14,13 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7be4c1cc392516ffaf6d1e36fc10b93b517d772
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088873"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
+  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 擴充的事件目標是事件取用者。 目標可以寫入至檔案、在記憶體緩衝區中儲存事件資料，或彙總事件資料。 目標也能夠同步或非同步處理資料。  
   
  擴充的事件設計可保證目標一定會收到事件一次，而且每個工作階段只會收到一次。  
@@ -39,7 +40,7 @@ ms.locfileid: "66088873"
   
      許多種類的事件都是以成對的形式發生，例如鎖定取得和鎖定釋放。 用於判斷指定之配對事件不會發生在相符集合中的時機。 這是非同步目標。  
   
--   [Windows (ETW) 事件追蹤](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
+-   [Windows 事件追蹤 (ETW)](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
   
      用於建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事件與 Windows 作業系統或應用程式事件資料的關聯。 這是同步目標。  
   
@@ -53,7 +54,7 @@ ms.locfileid: "66088873"
   
 ## <a name="see-also"></a>另請參閱  
  [擴充事件](../relational-databases/extended-events/extended-events.md)   
- [SQL Server 擴充事件封裝](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
+ [SQL Server 擴充的事件封裝](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
  [SQL Server 擴充的事件工作階段](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [SQL Server 擴充的事件引擎](../relational-databases/extended-events/sql-server-extended-events-engine.md)  
   

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193337"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>在應用程式的程式碼中使用 FOR XML 結果
@@ -153,25 +153,25 @@ ms.locfileid: "63193337"
   
 ##### <a name="client-side-processing-of-xml-document-mydataisle"></a>XML 文件 MyDataIsle 的用戶端處理  
   
--   **AnnualSales：** 1500000  
+-   **AnnualSales:** 1500000  
   
--   **AnnualRevenue：** 150000  
+-   **AnnualRevenue:** 150000  
   
--   **BankName：** Primary International  
+-   **BankName:** Primary International  
   
--   **BusinessType：** OS  
+-   **BusinessType:** OS  
   
--   **YearOpened：** 1974  
+-   **YearOpened:** 1974  
   
--   **Specialty：** Road  
+-   **Specialty:** Road  
   
--   **SquareFeet：** 38000  
+-   **SquareFeet:** 38000  
   
--   **Brands：** 3  
+-   **Brands:** 3  
   
--   **Internet：** DSL  
+-   **Internet:** DSL  
   
--   **NumberEmployees：** 40  
+-   **NumberEmployees:** 40  
   
  VBScript 訊息方塊會顯示下列由 FOR XML 查詢結果所傳回之原始而未篩選過的 XML 資料島內容。  
   
@@ -201,9 +201,11 @@ ms.locfileid: "63193337"
   
  在此範例中，使用了下列 Microsoft .NET Framework 管理的 API 來完成 FOR XML 查詢結果的傳回和轉譯作業：  
   
-1.  `SqlConnection` 用來開啟 SQL Server 的連接，並以指定之連接字串變數 strConn 的內容為基礎。  
+1.  
+  `SqlConnection` 用來開啟 SQL Server 的連接，並以指定之連接字串變數 strConn 的內容為基礎。  
   
-2.  `SqlDataAdapter` 則做為資料配接器使用，它使用 SQL 連接和指定的 SQL 查詢字串來執行 FOR XML 查詢。  
+2.  
+  `SqlDataAdapter` 則做為資料配接器使用，它使用 SQL 連接和指定的 SQL 查詢字串來執行 FOR XML 查詢。  
   
 3.  執行查詢之後，會呼叫 `SqlDataAdapter.Fill` 方法，並傳遞 `DataSet,` 的執行個體 (MyDataSet)，以便在資料集內填入 FOR XML 查詢的輸出。  
   
@@ -290,7 +292,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml`資料類型支援可讓您要求的 FOR XML 查詢結果傳回成`xml`資料類型，而不是以字串或影像類型資料，方法是指定[TYPE 指示詞](type-directive-in-for-xml-queries.md)。 如果在 FOR XML 查詢中使用了 TYPE 指示詞時，它會提供以程式方式存取 FOR XML 結果 (類似 [在應用程式中使用 XML 資料](use-xml-data-in-applications.md)中所顯示)。  
+>  資料類型支援可讓您藉由指定[type](type-directive-in-for-xml-queries.md)指示詞，要求以`xml`資料類型傳回 FOR XML 查詢的結果，而不是字串或影像類型資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` 如果在 FOR XML 查詢中使用了 TYPE 指示詞時，它會提供以程式方式存取 FOR XML 結果 (類似 [在應用程式中使用 XML 資料](use-xml-data-in-applications.md)中所顯示)。  
   
 ## <a name="see-also"></a>另請參閱  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  

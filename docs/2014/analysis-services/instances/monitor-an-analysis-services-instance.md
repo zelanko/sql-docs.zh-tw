@@ -1,5 +1,5 @@
 ---
-title: 監視 Analysis Services 執行個體 |Microsoft Docs
+title: 監視 Analysis Services 實例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a09984f089a88f90798c2ca8f4c2514c06bc1cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079750"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>監視 Analysis Services 執行個體
-  您可使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或效能監視器 (此應用程式有時稱為 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] PerfMon **) 來監視**的效能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可讓您建立和管理追蹤，並分析和重新執行追蹤結果。 效能監視器會報告伺服器狀態 (透過某些計數器來建立索引)，這些將在下節中討論。  
+  您可使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或效能監視器 (此應用程式有時稱為 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] PerfMon **) 來監視**的效能。 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可讓您建立和管理追蹤，並分析和重新執行追蹤結果。 效能監視器會報告伺服器狀態 (透過某些計數器來建立索引)，這些將在下節中討論。  
   
 > [!NOTE]  
 >  如需監視的詳細資訊，請參閱 [SQL Server 2008 R2 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
@@ -33,12 +34,12 @@ ms.locfileid: "66079750"
   
  [Analysis Services 追蹤事件](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)  
   
- [使用 SQL Server Profiler 監視 Analysis Services](use-sql-server-profiler-to-monitor-analysis-services.md)  
+ [Use SQL Server Profiler to Monitor Analysis Services](use-sql-server-profiler-to-monitor-analysis-services.md)  
   
- [使用 SQL Server 擴充事件&#40;XEvents&#41;若要監視 Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
+ [使用 SQL Server 擴充事件 &#40;XEvents&#41; 監視 Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
- [使用動態管理檢視 &#40;DMV&#41; 監視 Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [使用動態管理檢視 &#40;Dmv&#41; 來監視 Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
- [效能計數器 &#40;SSAS&#41;](performance-counters-ssas.md)  
+ [&#40;SSAS&#41;的效能計數器](performance-counters-ssas.md)  
   
   

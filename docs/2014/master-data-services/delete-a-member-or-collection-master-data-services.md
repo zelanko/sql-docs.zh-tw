@@ -17,24 +17,24 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f3164bca23e709fd434c6ba7850ec21179a076ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479708"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>刪除成員或集合 (Master Data Services)
-  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，刪除您不再需要的成員或集合。 如果您要大量刪除成員，請改用暫存處理序。 如需詳細資訊，請參閱 <<c0> [ 停用或刪除的成員，使用暫存處理序&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)。</c0>  
+  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，刪除您不再需要的成員或集合。 如果您要大量刪除成員，請改用暫存處理序。 如需詳細資訊，請參閱[使用暫存進程停用或刪除成員 &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)。  
   
 > [!NOTE]  
 >  如果某個成員是當做另一個成員的網域屬性值使用，您就無法刪除該成員。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
   
--   對於成員而言，您必須擁有至少**更新**您要刪除的成員的分葉模型物件的權限。  
+-   針對成員，您至少必須擁有要從中刪除成員的分葉模型物件的 [**更新**] 許可權。  
   
 -   針對集合，您必須至少擁有分頁集合物件 **更新** 權限，才能將其刪除。  
   
@@ -44,25 +44,25 @@ ms.locfileid: "65479708"
   
 2.  從 **[版本]** 清單中選取版本。  
   
-3.  按一下 **[總管]** 。  
+3.  按一下 **[總管]**。  
   
 4.  若要刪除：  
   
-    -   分葉成員，請從功能表列指向 [實體]  ，然後按一下包含該成員的實體名稱。  
+    -   分葉成員，請從功能表列指向 [實體]****，然後按一下包含該成員的實體名稱。  
   
-    -   合併成員，請從功能表列指向 [階層]  ，然後按一下包含該成員的階層名稱。 然後按一下階層中包含此成員的節點。  
+    -   合併成員，請從功能表列指向 [階層]****，然後按一下包含該成員的階層名稱。 然後按一下階層中包含此成員的節點。  
   
-    -   集合，請從功能表列指向 [集合]  ，然後按一下包含該集合的實體名稱。  
+    -   集合，請從功能表列指向 [集合]****，然後按一下包含該集合的實體名稱。  
   
 5.  在方格中，按一下要刪除之成員或集合的資料列。  
   
-6.  按一下 [刪除成員]  、[刪除]  或 [刪除集合]  。  
+6.  按一下 [刪除成員]****、[刪除]**** 或 [刪除集合]****。  
   
-7.  在確認對話方塊中按一下 **[確定]** 。  
+7.  在確認對話方塊中按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [重新啟用成員或集合 &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
+ [&#40;Master Data Services 重新啟用成員或集合&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
  [成員 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
- [集合 &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+ [&#40;Master Data Services 的集合&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   

@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d08e9900453fe259d727e202489d728e0dce47e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097881"
 ---
-# <a name="setwindowsserviceidentity-method-wmi-msreportserverconfigurationsetting"></a>SetWindowsServiceIdentity 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="setwindowsserviceidentity-method-wmi-msreportserver_configurationsetting"></a>SetWindowsServiceIdentity 方法 (WMI MSReportServer_ConfigurationSetting)
   讓報表伺服器 Windows 服務以指定之 Windows 使用者的身分執行，並且授與此帳戶足夠的檔案系統權限，以便允許報表伺服器運作。  
   
 ## <a name="syntax"></a>語法  
@@ -57,16 +57,16 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  傳回 *HRESULT* ，指出方法呼叫成功或失敗。 值為 0 表示方法呼叫成功。 非零值則表示已發生錯誤。  
   
 ## <a name="remarks"></a>備註  
- 當*UseBuiltInAccount*參數設為`true`而且報表伺服器正在執行 microsoft[!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]或 Windows XP、 windows 7*名稱*，*網域*，並*密碼*參數都會被忽略，並會使用本機系統帳戶。  
+ 當*UseBuiltInAccount*參數設定為`true` ，而且報表伺服器正在 Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]或 Windows XP 上執行時，會忽略*Name*、 *Domain*和*Password*參數的值，並使用本機系統帳戶。  
   
- 時*UseBuiltInAccount*參數設為`true`和報表伺服器執行 Windows Server 2003*網域*及*密碼*屬性忽略，且 [名稱] 欄位必須包含"Builtin\NetworkService"或"Builtin\System"或"Builtin\LocalService"。  
+ 當*UseBuiltInAccount*參數設定為`true` ，而且報表伺服器在 Windows server 2003 上執行時，會忽略*網域*和*密碼*屬性，而且 [名稱] 欄位必須包含 "Builtin\NetworkService" 或 "Builtin\System" 或 "Builtin\LocalService"。  
   
  SetWindowsServiceIdentity 方法會在報表伺服器安裝目錄中設定檔案與資料夾的檔案權限。  
   
- 中指定的帳戶*帳號*參數需要`LogonAsService`Windows 中的權限。 此方法會將這個權限授與指定的帳戶。  
+ *帳戶*參數中指定的帳號需要`LogonAsService` Windows 中的許可權。 此方法會將這個權限授與指定的帳戶。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

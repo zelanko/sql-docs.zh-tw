@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 90857b24fb467df0292beeb88fb9751e68204d12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63199985"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>資料表值參數的 ODBC SQL 類型
@@ -25,21 +25,21 @@ ms.locfileid: "63199985"
 ## <a name="remarks"></a>備註  
  SQL_SS_TABLE 無法轉換為其他任何 ODBC 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。  
   
- 如果 SQL_SS_TABLE 做為中的 C 資料類型*ValueType*有人 SQLBindParameter 或嘗試的參數為 SQL_SS_TABLE 的應用程式參數描述項 (APD) 記錄中的 SQL_DESC_TYPE 設定時，會傳回 SQL_ERROR，診斷記錄就會產生含有 SQLSTATE sqlstate=hy003 以及 「 無效的應用程式緩衝區類型 」。  
+ 如果在 SQLBindParameter 的*ValueType*參數中使用 SQL_SS_TABLE 做為 C 資料類型，或嘗試將應用程式參數描述項（APD）記錄中的 SQL_DESC_TYPE 設定為 SQL_SS_TABLE，則會傳回 SQL_ERROR，並使用 SQLSTATE = hy003 以及（「不正確應用程式緩衝區類型」）來產生診斷記錄。  
   
- 如果 SQL_DESC_TYPE 在 IPD 記錄中設定為 SQL_SS_TABLE，而且對應的應用程式參數描述項記錄不是 SQL_C_DEFAULT，則會傳回 SQL_ERROR，並產生包含 SQLSTATE=HY003 以及「無效的應用程式緩衝區類型」的診斷記錄。 這可能會發生*ParameterType* SQLSetDescField、 SQLSetDescRec 或 SQLBindParameter。  
+ 如果 SQL_DESC_TYPE 在 IPD 記錄中設定為 SQL_SS_TABLE，而且對應的應用程式參數描述項記錄不是 SQL_C_DEFAULT，則會傳回 SQL_ERROR，並產生包含 SQLSTATE=HY003 以及「無效的應用程式緩衝區類型」的診斷記錄。 SQLSetDescField、SQLSetDescRec 或 SQLBindParameter 的*ParameterType*可能會發生這種情況。  
   
- 如果*TargetType*呼叫 SQLGetData 時，參數為 SQL_SS_TABLE，則會傳回 SQL_ERROR，並將診斷記錄就會產生含有 SQLSTATE sqlstate=hy003 以及 「 無效的應用程式緩衝區類型 」。  
+ 如果在呼叫 SQLGetData 時 SQL_SS_TABLE *TargetType*參數，SQL_ERROR 會傳回，而且會產生含有 SQLSTATE = hy003 以及，「不正確應用程式緩衝區類型」的診斷記錄。  
   
- 資料表值參數資料行無法當做 SQL_SS_TABLE 類型繫結。 如果`SQLBindParameter`以呼叫*ParameterType*設定為 SQL_SS_TABLE，則會傳回 SQL_ERROR，並診斷記錄就會產生含有 SQLSTATE sqlstate=hy004 以及 「 無效的 SQL 資料類型 」。 這也可以利用 SQLSetDescField 和 SQLSetDescRec。  
+ 資料表值參數資料行無法當做 SQL_SS_TABLE 類型繫結。 如果`SQLBindParameter`使用設定為 SQL_SS_TABLE 的*ParameterType*來呼叫，則會傳回 SQL_ERROR，並產生含有 SQLSTATE = HY004，「不正確 SQL 資料類型」的診斷記錄。 SQLSetDescField 和 SQLSetDescRec 也會發生這種情況。  
   
  資料表值參數資料行值與參數和結果資料行的資料轉換選項相同。  
   
- 資料表值參數在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本中僅能是輸入參數。 如果嘗試將 SQL_DESC_PARAMETER_TYPE 設定為透過 SQLBindParameter 或 SQLSetDescField SQL_PARAM_INPUT 以外的值，則會傳回 SQL_ERROR，而且診斷記錄加入陳述式 = 包含 sqlstate=hy105 和訊息 「 無效的參數型別 」。  
+ 資料表值參數在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本中僅能是輸入參數。 如果嘗試將 SQL_DESC_PARAMETER_TYPE 設定為 SQL_PARAM_INPUT via SQLBindParameter 或 SQLSetDescField 以外的值，則會傳回 SQL_ERROR，並將診斷記錄新增至具有 SQLSTATE = HY105 的語句，以及訊息「不正確參數輸入 "。  
   
- 資料表值參數資料行中無法使用 SQL_DEFAULT_PARAM *StrLen_or_IndPtr*，因為資料表值參數不支援每個資料列的預設值。 不過，應用程式會將資料行屬性 SQL_CA_SS_COL_HAS_DEFAULT_VALUE 設定為 1。 這表示資料行的所有資料列都會有預設值。 如果*StrLen_or_IndPtr*會設定為 SQL_DEFAULT_PARAM，SQLExecute 或 SQLExecDirect 會傳回 SQL_ERROR，並將診斷記錄將會加入至陳述式包含 sqlstate=hy090 和 「 無效的字串或緩衝區長度 」 的訊息。  
+ 資料表值參數資料行無法在*StrLen_or_IndPtr*中使用 SQL_DEFAULT_PARAM，因為資料表值參數不支援每個資料列的預設值。 不過，應用程式會將資料行屬性 SQL_CA_SS_COL_HAS_DEFAULT_VALUE 設定為 1。 這表示資料行的所有資料列都會有預設值。 如果*StrLen_or_IndPtr*設定為 SQL_DEFAULT_PARAM，SQLExecute 或 SQLExecDirect 會傳回 SQL_ERROR，而診斷記錄將會加入具有 SQLSTATE = HY090 和訊息「不正確字串或緩衝區長度」的語句中。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料表值參數&#40;ODBC&#41;](table-valued-parameters-odbc.md)  
+ [ODBC&#41;&#40;的資料表值參數](table-valued-parameters-odbc.md)  
   
   

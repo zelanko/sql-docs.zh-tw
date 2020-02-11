@@ -18,21 +18,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2f7a25a4a6a4bb6b8f153a8b04b47aeb542265c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162480"
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
   當您執行線上索引作業時，下列指導方針將適用：  
   
--   叢集必須離線建立索引，重建或卸除基礎資料表包含下列大型物件 (LOB) 資料類型時： `image`， **ntext**，和`text`。  
+-   當基礎資料表包含下列大型物件（LOB）資料類型時，必須離線建立、重建或卸載叢集索引： `image`、 **Ntext**和。 `text`  
   
 -   您無法在線上建立、重建或卸除本機暫存資料表的索引。 此限制不適用於全域暫存資料表上的索引。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用線上索引作業。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用線上索引作業。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  下表顯示可以線上執行的索引作業以及從這些線上作業排除的索引。 也包含其他限制。  
   
@@ -67,11 +67,11 @@ ms.locfileid: "63162480"
   
  儘管我們推薦線上作業，但您應該評估您的環境與特定要求。 離線執行索引作業可能會是最佳方式。 若要達到這種方式，在作業期間，使用者僅能有限地存取資料，但是將更快完成作業且使用較少的資源。  
   
- 在執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多處理器電腦上，索引陳述式可能會如同其他查詢般，使用更多處理器來執行與索引陳述式相關聯的掃描和排序作業。 您可以使用 MAXDOP 索引選項控制線上索引作業專用的處理器數目。 以此方式，您就可以平衡索引作業所使用的資源以及使用者並行所使用的資源。 如需詳細資訊，請參閱 [設定平行索引作業](configure-parallel-index-operations.md)。 如需詳細資訊的 SQL Server 版本支援平行索引作業，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 在執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多處理器電腦上，索引陳述式可能會如同其他查詢般，使用更多處理器來執行與索引陳述式相關聯的掃描和排序作業。 您可以使用 MAXDOP 索引選項控制線上索引作業專用的處理器數目。 以此方式，您就可以平衡索引作業所使用的資源以及使用者並行所使用的資源。 如需詳細資訊，請參閱 [設定平行索引作業](configure-parallel-index-operations.md)。 如需有關支援平行索引作業之 SQL Server 版本的詳細資訊，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  因為索引作業的最終階段會保留 S-lock 或 Sch-M 鎖定，所以在明確的使用者交易 (例如 BEGIN TRANSACTION...COMMIT 區塊) 內執行線上索引作業時要特別小心。 這樣做導致交易完後才執行鎖定，而妨礙使用者進行並行作業。  
   
- 當線上索引重建可搭配 `MAX DOP > 1` 和 `ALLOW_PAGE_LOCKS = OFF` 選項執行時，可能會增加片段。 如需詳細資訊，請參閱 [How It Works:Online Index Rebuild - Can Cause Increased Fragmentation](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx) (運作方式：線上索引重建 - 可能會導致片段增加)。  
+ 當線上索引重建可搭配 `MAX DOP > 1` 和 `ALLOW_PAGE_LOCKS = OFF` 選項執行時，可能會增加片段。 如需詳細資訊，請參閱 [運作方式：線上索引重建 - 可能會導致片段增加](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx)。  
   
 ## <a name="transaction-log-considerations"></a>交易記錄考量因素  
  大規模的索引作業，無論是離線或線上執行，都會產生大量資料負載，而很快就填滿了交易記錄。 若要確定可以回復索引作業，在索引作業完成以前，不能截斷交易記錄；不過，在索引作業期間可以備份此記錄。 因此，在索引作業期間，交易記錄必須有足夠的空間，才能儲存索引作業交易與任何並行使用者交易。 如需詳細資訊，請參閱 [索引作業的交易記錄磁碟空間](transaction-log-disk-space-for-index-operations.md)。  

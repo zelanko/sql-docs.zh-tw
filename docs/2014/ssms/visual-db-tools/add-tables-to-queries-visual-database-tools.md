@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ba3957eb5b0c88396376d615033107b13d0621ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63297859"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>將資料表加入查詢 (Visual Database Tools)
@@ -57,10 +57,10 @@ ms.locfileid: "63297859"
 7.  在 [SQL 窗格]  中，於右括號之後新增別名。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立資料表別名&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [從查詢移除資料表&#40;Visual Database Tools&#41;](remove-tables-from-queries-visual-database-tools.md)   
- [指定搜尋準則&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [摘要查詢結果&#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [&#40;Visual Database Tools 建立資料表別名&#41;](visual-database-tools.md)   
+ [從查詢中移除資料表 &#40;Visual Database Tools&#41;](remove-tables-from-queries-visual-database-tools.md)   
+ [&#40;Visual Database Tools 指定搜尋準則&#41;](specify-search-criteria-visual-database-tools.md)   
+ [&#40;Visual Database Tools&#41;匯總查詢結果](summarize-query-results-visual-database-tools.md)   
  [使用查詢執行基本作業 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3342af1de84e922ce63848c8fdffe5aa30ec309a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150493"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>設定 SQL Server 資料庫警示 (Windows)
@@ -26,29 +26,29 @@ ms.locfileid: "63150493"
   
 ### <a name="to-set-up-a-sql-server-database-alert"></a>若要設定 SQL Server 資料庫警示  
   
-1.  在 [效能] 視窗的巡覽樹狀目錄上，展開 [效能記錄檔及警示]。  
+1.  在 [效能] 視窗的瀏覽樹狀目錄中，展開 [效能記錄檔及警示]****。  
   
-2.  以滑鼠右鍵按一下 [警示]，然後按一下 [New Alert Settings (新增警示設定)]。  
+2.  以滑鼠右鍵按一下 [警示]****，然後按一下 [New Alert Settings (新增警示設定)]****。  
   
-3.  在 [New Alert Settings (新增警示設定)] 對話方塊中，輸入新警示的名稱，然後按一下 [確定]。  
+3.  在 [New Alert Settings (新增警示設定)]**** 對話方塊中，輸入新警示的名稱，然後按一下 [確定]****。  
   
-4.  在新警示對話方塊的 [一般] 索引標籤上，加入 [註解]，按一下 [新增] 將計數器加入警示中。  
+4.  在新警示對話方塊的 [一般]**** 索引標籤上，加入 [註解]****，按一下 [新增]**** 將計數器加入警示中。  
   
      所有警示必須至少要有一個計數器。  
   
-5.  在 [新增計數器] 對話方塊中，從 [效能物件] 清單選取 SQL Server 物件，然後在 [從清單選取計數器] 中選取計數器。  
+5.  在 [新增計數器] 對話方塊中，從 [效能物件]**** 清單選取 SQL Server 物件，然後在 [從清單選取計數器]**** 中選取計數器。  
   
-6.  若要將計數器加入警示中，請按一下 [新增]。 您可以繼續加入計數器，也可以按一下 [關閉] 返回新的警示對話方塊。  
+6.  若要將計數器加入警示中，請按一下 [新增]****。 您可以繼續加入計數器，也可以按一下 [關閉]**** 返回新的警示對話方塊。  
   
-7.  在新的警示對話方塊中，與 [Alert when the value is (達到這個值就發出警示)] 清單中按一下 [超過] 或 [低於]，然後在 [限制] 中輸入臨界值。  
+7.  在新的警示對話方塊中，與 [Alert when the value is (達到這個值就發出警示)]**** 清單中按一下 [超過]**** 或 [低於]****，然後在 [限制]**** 中輸入臨界值。  
   
-     當計數器的值超過或低於臨界值時，就會產生警示 (依據您之前按一下 [超過] 或 [低於] 而定)。  
+     當計數器的值超過或低於臨界值時，就會產生警示 (依據您之前按一下 [超過]**** 或 [低於]**** 而定)。  
   
-8.  在 [Sample data every (依下列週期進行資料取樣)] 方塊中，設定取樣頻率。  
+8.  在 [Sample data every (依下列週期進行資料取樣)]**** 方塊中，設定取樣頻率。  
   
-9. 在 [動作] 索引標籤上，設定每次觸發警示時要採取的行動。  
+9. 在 [動作]**** 索引標籤上，設定每次觸發警示時要採取的行動。  
   
-10. 在 [排程] 索引標籤上，設定警示掃描的開始與停止排程。  
+10. 在 [排程]**** 索引標籤上，設定警示掃描的開始與停止排程。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立 SQL Server 資料庫警示](../performance-monitor/create-a-sql-server-database-alert.md)  

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158807"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>將包含記憶體最佳化資料表的資料庫繫結至資源集區
@@ -41,10 +41,10 @@ ALTER DATABASE IMOLTP_DB ADD FILE( NAME = 'IMOLTP_DB_fg' , FILENAME = 'c:\data\I
 GO  
 ```  
   
-### <a name="determine-the-minimum-value-for-minmemorypercent-and-maxmemorypercent"></a>決定 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的最小值  
+### <a name="determine-the-minimum-value-for-min_memory_percent-and-max_memory_percent"></a>決定 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的最小值  
  判斷出記憶體最佳化資料表的記憶體需求之後，您必須決定所需數量佔可用記憶體的百分比，並將記憶體百分比設定為該值或更高。  
   
- **範例：**   
+ **實例**   
 此範例假設您經過計算後，判斷出記憶體最佳化資料表和索引需要 16 GB 的記憶體。 假設您已獲認可使用 32 GB 的記憶體。  
   
  乍看之下，您似乎必須將 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 設定為 50 (16 等於 32 乘以 50%)。  不過，這樣並不會使您的記憶體最佳化資料表擁有足夠的記憶體。 看看下面表格 ([記憶體最佳化資料表和索引可用的記憶體百分比](#percent-of-memory-available-for-memory-optimized-tables-and-indexes)) 我們得知假設有 32 GB 的認可記憶體時，只有 80% 可用於記憶體最佳化資料表和索引。  因此，最小和最大百分比要依據可用的記憶體來計算，而不是依據認可的記憶體。  
@@ -63,7 +63,7 @@ GO
 ### <a name="create-a-resource-pool-and-configure-memory"></a>建立資源集區和設定記憶體  
  設定記憶體最佳化資料表的記憶體時，應該依據 MIN_MEMORY_PERCENT 規劃容量，而不是依據 MAX_MEMORY_PERCENT。  如需有關 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的詳細資訊，請參閱 [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-pool-transact-sql)。 這樣可以為記憶體最佳化資料提供更可預測的記憶體可用性，因為 MIN_MEMORY_PERCENT 會對其他資源集區造成記憶體壓力，以確保記憶體可被接受。 若要確保記憶體可用，並幫助避免記憶體不足狀況，MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值應相同。 如需以認可記憶體數量為基礎，可用於記憶體最佳化資料表的記憶體百分比，請參閱以下的 [可用記憶體最佳化資料表和索引的記憶體百分比](#percent-of-memory-available-for-memory-optimized-tables-and-indexes) 。  
   
- 請參閱[最佳做法：在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)如需詳細資訊，在 VM 環境中工作時。  
+ 如需有關在 VM 環境下作業的詳細資訊，請參閱 [最佳做法：在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) 。  
   
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼會建立名為 Pool_IMOLTP 的資源集區，而且一半的記憶體可供它使用。  建立集區之後，資源管理員會重新設定為包含 Pool_IMOLTP。  
   
@@ -118,8 +118,8 @@ GO
   
  此時，資料庫已繫結至資源集區。  
   
-## <a name="change-min-memory-percent-and-max-memory-percent-on-an-existing-pool"></a>變更最小記憶體百分比和現有的集區上的最大記憶體百分比  
- 如果您為伺服器另外再加入記憶體，或是您的記憶體最佳化資料表所需的記憶體數量已變更，可能就必須更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 下列步驟將為您示範如何更改資源集區的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 值。 請參閱下一節提供的指引，以得知 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 應該使用哪些值。  請參閱主題[最佳做法：在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)如需詳細資訊。  
+## <a name="change-min-memory-percent-and-max-memory-percent-on-an-existing-pool"></a>變更現有集區上的最小記憶體百分比和最大記憶體百分比  
+ 如果您為伺服器另外再加入記憶體，或是您的記憶體最佳化資料表所需的記憶體數量已變更，可能就必須更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 下列步驟將為您示範如何更改資源集區的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 值。 請參閱下一節提供的指引，以得知 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 應該使用哪些值。  如需詳細資訊，請參閱[最佳做法：在 VM 環境中使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)主題。  
   
 1.  使用 `ALTER RESOURCE POOL` 變更 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。  
   
@@ -142,14 +142,15 @@ GO
 ## <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a>可用於記憶體最佳化資料表和索引的記憶體百分比  
  如果您將具有記憶體最佳化資料表的資料庫和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作負載對應至相同的資源集區，資源管理員就會設定 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 使用的內部臨界值，避免集區的使用者在集區使用量上發生衝突。 一般而言， [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 使用的臨界值大約是 80% 的集區。 下表顯示各種記憶體大小的實際臨界值。  
   
- 您為 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 資料庫建立專用資源集區時，在考量資料列版本和資料成長之後，需要估計記憶體中資料表所需的實體記憶體數量。 估計需要的記憶體之後，請建立資源集區，且其中有一定比例的認可目標記憶體可用於 SQL 執行個體，如 DMV `sys.dm_os_sys_info` 中的 'committed_target_kb' 資料行所反映 (請參閱 [sys.dm_os_sys_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql))。 例如，您可以建立資源集區 P1，其中有 40% 的總記憶體可供執行個體使用。 在此 40% 之中， [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎會取用較小的百分比來儲存 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 資料。  這樣做可確保 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 不會耗用此集區中的所有記憶體。  這個較小的百分比值取決於目標認可的記憶體。 下表描述在 OOM 錯誤引發之前，資源集區 (具名或預設) 中可供 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 資料庫使用的記憶體。  
+ 您為 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 資料庫建立專用資源集區時，在考量資料列版本和資料成長之後，需要估計記憶體中資料表所需的實體記憶體數量。 估計所需的記憶體之後，您可以建立資源集區，其中包含 SQL 實例的認可目標記憶體百分比，如 DMV `sys.dm_os_sys_info`中的資料行 ' committed_target_kb ' 所反映（請參閱[dm_os_sys_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql)）。 例如，您可以建立資源集區 P1，其中有 40% 的總記憶體可供執行個體使用。 在此 40% 之中， [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎會取用較小的百分比來儲存 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 資料。  這樣做可確保 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 不會耗用此集區中的所有記憶體。  這個較小的百分比值取決於目標認可的記憶體。 下表描述在 OOM 錯誤引發之前，資源集區 (具名或預設) 中可供 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 資料庫使用的記憶體。  
   
 |目標認可的記憶體|記憶體中資料表可用的百分比|  
 |-----------------------------|---------------------------------------------|  
 |<= 8 GB|70%|  
 |<= 16 GB|75%|  
 |<= 32 GB|80%|  
-|\<= 96 GB|85%|  
+|
+  \<= 96 GB|85%|  
 |>96 GB|90%|  
   
  例如，如果您的「目標認可的記憶體」為 100 GB，而您估計經記憶體最佳化的資料表和索引需要 60GB 的記憶體，則您可以建立一個 MAX_MEMORY_PERCENT = 67 的資源集區 (需要 60GB / 0.90 = 66.667GB - 四捨五入為 67GB；已安裝 67GB / 100GB = 67%)，確保您的 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 物件擁有所需的 60GB。  
@@ -186,8 +187,8 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
   
 ## <a name="see-also"></a>另請參閱  
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
- [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)   
- [資源管理員](../resource-governor/resource-governor.md)   
+ [sp_xtp_unbind_db_resource_pool &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)   
+ [Resource Governor](../resource-governor/resource-governor.md)   
  [Resource Governor 資源集區](../resource-governor/resource-governor-resource-pool.md)   
  [建立資源集區](../resource-governor/create-a-resource-pool.md)   
  [變更資源集區設定](../resource-governor/change-resource-pool-settings.md)   

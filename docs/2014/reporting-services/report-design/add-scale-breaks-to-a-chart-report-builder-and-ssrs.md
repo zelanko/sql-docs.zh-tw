@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d91c65e49d7afda378fb66d5ce65604b7f9b752e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106525"
 ---
 # <a name="add-scale-breaks-to-a-chart-report-builder-and-ssrs"></a>將刻度斷層加入至圖表 (報表產生器及 SSRS)
@@ -25,16 +25,16 @@ ms.locfileid: "66106525"
 > [!NOTE]  
 >  您無法指定刻度斷層在圖表上的放置位置。 圖表會根據資料集中的值，自行計算資料範圍之間是否有足夠的分隔，以在執行階段於值軸 (Y 軸) 上繪製刻度斷層。  
   
- 具有刻度斷層的圖表範例可從範例報表取得。 如需下載這個範例報表及其他項目的詳細資訊，請參閱 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][報表產生器與報表設計師範例報表](https://go.microsoft.com/fwlink/?LinkId=198283)：  
+ 具有刻度斷層的圖表範例可從範例報表取得。 如需下載此範例報表及其他專案的詳細資訊[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，請參閱[報表產生器和報表設計師範例報表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-enable-scale-breaks-on-the-chart"></a>若要在圖表上啟用刻度斷層  
   
-1.  以滑鼠右鍵按一下垂直軸，然後按一下 [軸屬性]  。 [垂直軸屬性]  對話方塊隨即開啟。  
+1.  以滑鼠右鍵按一下垂直軸，然後按一下 [軸屬性]****。 [垂直軸屬性]**** 對話方塊隨即開啟。  
   
-2.  選取 [啟用刻度斷層]  核取方塊。  
+2.  選取 [啟用刻度斷層]**** 核取方塊。  
   
 ### <a name="to-change-the-style-of-the-scale-break"></a>變更刻度斷層的樣式  
   
@@ -42,13 +42,13 @@ ms.locfileid: "66106525"
   
 2.  以滑鼠右鍵在設計介面上按一下圖表的 Y 軸。 Y 軸物件的屬性 (依預設名為「圖表軸」) 會顯示在 [屬性] 窗格中。  
   
-3.  在 [刻度]  區段中，展開 ScaleBreakStyle 屬性。  
+3.  在 [刻度]**** 區段中，展開 ScaleBreakStyle 屬性。  
   
 4.  變更 ScaleBreakStyle 屬性的值，例如 BreakLineType 和 Spacing。 如需刻度中斷線屬性的詳細資訊，請參閱[將包含多個資料範圍的數列顯示在圖表上 &#40;報表產生器及 SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [軸屬性對話方塊，軸選項 &#40;報表產生器及 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
+ [軸屬性對話方塊、軸選項 &#40;報表產生器及 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
   
   

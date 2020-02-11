@@ -1,5 +1,5 @@
 ---
-title: 如何查詢和檢視設計工具表示聯結 （Visual Database Tools) |Microsoft Docs
+title: 查詢和視圖設計工具表示聯結的方式（Visual Database Tools） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: abd8dd7c3c23a13b1cdff7a2d6f76fb99375a641
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155278"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>查詢和檢視設計工具表示聯結的方式 (Visual Database Tools)
-  如果資料表是聯結的， [查詢和檢視表設計工具](visual-database-tools.md) 將在 [圖表窗格](diagram-pane-visual-database-tools.md) 中以圖形表示該聯結，並在 [SQL 窗格](sql-pane-visual-database-tools.md)中使用 SQL 語法。  
+  如果資料表已聯結，則[查詢和視圖設計](visual-database-tools.md)工具會在 [[圖表] 窗格](diagram-pane-visual-database-tools.md)中以圖形方式表示聯結，並在 [ [SQL] 窗格](sql-pane-visual-database-tools.md)中使用 sql 語法。  
   
 ## <a name="diagram-pane"></a>圖表窗格  
  [查詢和檢視設計師] 會在 [圖表] 窗格中，顯示與聯結相關之資料行之間的聯結線。 查詢和檢視設計師可顯示每個聯結狀況的聯結線。 例如，下列圖示即說明兩個聯結的資料表之間的聯結線：  
@@ -31,7 +31,7 @@ ms.locfileid: "63155278"
   
  如果資料表使用一個以上的聯結條件來進行聯結，查詢和檢視設計師將顯示多重聯結線，如下列範例所示：  
   
- ![使用多個聯結條件來聯結的資料表](../../database-engine/media//dv3w9n1.gif "使用多個聯結條件來聯結的資料表")  
+ ![使用一個以上的聯結條件所聯結的資料表](../../database-engine/media//dv3w9n1.gif "使用一個以上的聯結條件所聯結的資料表")  
   
  如果聯結線並未顯示 (例如，代表資料表或表格化物件的矩形被最小化，或該聯結使用運算式)，查詢和檢視設計師將在代表資料表或表格化物件的矩形標題列上放置聯結線。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "63155278"
   
  聯結線結束部分的符號可表示聯結的類型。 下表即列出聯結的類型和聯結線結束部分所顯示的圖示。  
   
-|**聯結線結束部分所顯示的圖示**|**聯結類型**|  
+|**聯結線結尾處的圖示**|**聯結類型**|  
 |-----------------------------------|----------------------|  
 |![Visual Database Tools 圖示](../../database-engine/media//dv3wbim.gif "Visual Database Tools 圖示")|一對一聯結。|  
 |![Visual Database Tools 圖示](../../database-engine/media//dv3wbin.gif "Visual Database Tools 圖示")|一對多聯結。|  
@@ -58,7 +58,7 @@ ms.locfileid: "63155278"
   
  聯結資料表的語法選項包括：  
   
--   **FROM 子句的 JOIN 限定詞**。   關鍵字 INNER 和 OUTER 將指定聯結類型。 這為 ANSI 92 SQL 的標準語法。  
+-   **From 子句的聯結辨識符號**。   關鍵字 INNER 和 OUTER 將指定聯結類型。 這為 ANSI 92 SQL 的標準語法。  
   
      例如，如果您根據每個資料表中的 `publishers` 資料行來聯結 `pub_info` 和 `pub_id` 資料表，將產生以下 SQL 陳述式：  
   
@@ -70,7 +70,7 @@ ms.locfileid: "63155278"
   
      如果您要建立外部聯結，LEFT OUTER 或 RIGHT OUTER 等字樣將取代 INNER 一字。  
   
--   **WHERE 子句將比較兩個資料表中的資料行**。   如果資料庫不支援 JOIN 語法 (或者您自行輸入該語法)，則將出現 WHERE 子句。 如果在 WHERE 子句中建立聯結，FROM 子句將同時出現這兩個資料表名稱。  
+-   **WHERE 子句會比較兩個數據表中**的資料行。   如果資料庫不支援 JOIN 語法 (或者您自行輸入該語法)，則將出現 WHERE 子句。 如果在 WHERE 子句中建立聯結，FROM 子句將同時出現這兩個資料表名稱。  
   
      例如，下列陳述式即聯結了 `publishers` 和 `pub_info` 資料表。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "63155278"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用聯結查詢&#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
+ [使用 Join 查詢 &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
  [聯結對話方塊 &#40;Visual Database Tools&#41;](join-dialog-box-visual-database-tools.md)  
   
   

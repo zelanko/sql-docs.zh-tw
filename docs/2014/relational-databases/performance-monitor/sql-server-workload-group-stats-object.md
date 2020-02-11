@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06651ffcfee30d538c8ede09914133a2ed818b3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151106"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, Workload Group Stats 物件
@@ -40,7 +40,7 @@ ms.locfileid: "63151106"
 |Active parallel threads|目前平行執行緒使用量的計數。|  
   
 ## <a name="see-also"></a>另請參閱  
- [監視資源使用狀況 &#40;系統監視器&#41;](monitor-resource-usage-system-monitor.md)   
+ [監視資源使用量 &#40;系統監視器&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server, Resource Pool Stats 物件](sql-server-resource-pool-stats-object.md)   
  [資源管理員](../resource-governor/resource-governor.md)  
   

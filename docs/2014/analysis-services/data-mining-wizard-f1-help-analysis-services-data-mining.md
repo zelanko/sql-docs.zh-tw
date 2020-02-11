@@ -1,5 +1,5 @@
 ---
-title: 資料採礦精靈 F1 說明 (Analysis Services-資料採礦) |Microsoft Docs
+title: 資料採礦嚮導 F1 說明（Analysis Services-資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44fd7290f48c995ae9cfc92476f1a33fbdc0e8be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086305"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>資料採礦精靈 F1 說明 (Analysis Services - 資料採礦)
@@ -28,9 +28,10 @@ ms.locfileid: "66086305"
   
 -   採礦模型讓您分析採礦結構中的資料以找出模式，並根據這些模式做預測。 您可以在單一的採礦結構上，根據不同的演算法建立不同類型的採礦模型。  
   
- 如需詳細資訊，請參閱 <<c0> [ 資料採礦精靈 &#40;Analysis Services-Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)。</c0>  
+ 如需詳細資訊，請參閱[資料採礦嚮導 &#40;Analysis Services 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)。  
   
- **[資料採礦精靈]** 會引導您完成下列步驟：  
+ 
+  **[資料採礦精靈]** 會引導您完成下列步驟：  
   
 -   選取要作為採礦模型基礎之資料來源的類型。  
   
@@ -52,32 +53,32 @@ ms.locfileid: "66086305"
   
 -   將資料分割成培訓集和測試集。  
   
--   完成 **[資料採礦精靈]** 。  
+-   完成 **[資料採礦精靈]**。  
   
  在建立採礦結構和選擇性的採礦模型之後，可以使用 **[資料採礦設計師]** 來修改其屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
- [資料採礦設計師](data-mining/data-mining-designer.md)   
- [建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)   
- [選取定義方法&#40;資料採礦精靈&#41;](select-the-definition-method-data-mining-wizard.md)   
- [建立資料採礦結構&#40;資料採礦精靈&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
- [選取 [資料來源檢視]&#40;資料採礦精靈&#41;](select-data-source-view-data-mining-wizard.md)   
- [瀏覽資料來源檢視&#40;資料採礦精靈&#41;](browse-data-source-view-data-mining-wizard.md)   
- [指定資料表類型&#40;資料採礦精靈&#41;](specify-table-types-data-mining-wizard.md)   
- [指定定型資料&#40;資料採礦精靈&#41;](specify-the-training-data-data-mining-wizard.md)   
- [建議相關資料行&#40;資料採礦精靈&#41;](suggest-related-columns-data-mining-wizard.md)   
- [選取來源 Cube 維度&#40;資料採礦精靈&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
- [選取案例索引鍵&#40;資料採礦精靈&#41;](select-the-case-key-data-mining-wizard.md)   
- [選取案例層級資料行&#40;資料採礦精靈&#41;](select-case-level-columns-data-mining-wizard.md)   
- [指定採礦模型資料行使用方式&#40;資料採礦精靈&#41;](specify-mining-model-column-usage-data-mining-wizard.md)   
- [選取量值群組維度&#40;加入新的巢狀的資料表精靈&#41;](select-a-measure-group-dimension-add-new-nested-table-wizard.md)   
- [選取巢狀的資料表索引鍵&#40;加入新的巢狀的資料表精靈&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
- [選取巢狀的資料表資料行&#40;加入新的巢狀的資料表精靈&#41;](select-nested-table-columns-add-new-nested-table-wizard.md)   
- [指定資料行的內容和資料類型&#40;資料採礦精靈&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)   
- [配量來源 Cube&#40;資料採礦精靈&#41;](slice-source-cube-data-mining-wizard.md)   
- [完成精靈&#40;資料採礦精靈&#41;](completing-the-wizard-data-mining-wizard.md)   
- [指定資料行內容和資料類型&#40;資料採礦精靈&#41;](specify-column-content-and-data-type-data-mining-wizard.md)   
- [建立測試集&#40;資料採礦精靈&#41;](create-testing-set-data-mining-wizard.md)  
+ [資料採礦嚮導 &#40;Analysis Services 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [資料採礦設計工具](data-mining/data-mining-designer.md)   
+ [建立關聯式的採礦結構](data-mining/create-a-relational-mining-structure.md)   
+ [選取定義方法 &#40;資料採礦嚮導&#41;](select-the-definition-method-data-mining-wizard.md)   
+ [建立資料採礦結構 &#40;資料採礦嚮導&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
+ [選取資料來源視圖 &#40;資料採礦嚮導&#41;](select-data-source-view-data-mining-wizard.md)   
+ [流覽資料來源視圖 &#40;資料採礦嚮導&#41;](browse-data-source-view-data-mining-wizard.md)   
+ [指定資料表類型 &#40;資料採礦嚮導&#41;](specify-table-types-data-mining-wizard.md)   
+ [指定定型資料 &#40;資料採礦嚮導&#41;](specify-the-training-data-data-mining-wizard.md)   
+ [建議相關資料行 &#40;Data 採集 Wizard&#41;](suggest-related-columns-data-mining-wizard.md)   
+ [選取 [來源 Cube] 維度 &#40;資料採礦嚮導]&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
+ [選取 [資料採礦嚮導] &#40;[案例金鑰]&#41;](select-the-case-key-data-mining-wizard.md)   
+ [選取案例層級資料行 &#40;資料採礦嚮導&#41;](select-case-level-columns-data-mining-wizard.md)   
+ [指定 &#40;資料採礦嚮導&#41;的「採礦模型資料行使用方式」](specify-mining-model-column-usage-data-mining-wizard.md)   
+ [選取量值群組維度 &#40;[加入新的嵌套資料表] Wizard&#41;](select-a-measure-group-dimension-add-new-nested-table-wizard.md)   
+ [選取 [嵌套資料表索引鍵] &#40;[加入新的嵌套資料表 Wizard]&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
+ [選取 [嵌套資料表資料行] &#40;[加入新的嵌套資料表 Wizard]&#41;](select-nested-table-columns-add-new-nested-table-wizard.md)   
+ [指定資料行的內容和資料類型 &#40;[Data] [Wizard]&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)   
+ [配量來源 Cube &#40;資料採礦嚮導&#41;](slice-source-cube-data-mining-wizard.md)   
+ [正在完成 Wizard &#40;資料採礦嚮導&#41;](completing-the-wizard-data-mining-wizard.md)   
+ [指定資料行內容和資料類型 &#40;Data 採集 Wizard&#41;](specify-column-content-and-data-type-data-mining-wizard.md)   
+ [建立測試集 &#40;資料採礦嚮導&#41;](create-testing-set-data-mining-wizard.md)  
   
   

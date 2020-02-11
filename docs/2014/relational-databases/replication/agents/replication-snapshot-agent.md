@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250591"
 ---
 # <a name="replication-snapshot-agent"></a>複寫快照集代理程式
@@ -78,31 +78,31 @@ ms.locfileid: "63250591"
  **-?**  
  列印所有可用的參數。  
   
- **-Publisher** _server_name_[ **\\** _instance_name_]  
- 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。 請針對該伺服器上 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
+ **-Publisher** _server_name_[**\\**_instance_name_]  
+ 這是發行者的名稱。 針對該伺服器[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的預設實例指定 server_name。 在該伺服器上指定的已命名實例_server_name_**\\**_instance_name。_ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
- **-Publication** _發行集_  
+ **-發行**集_發行_集  
  這是發行集的名稱。 只有在發行集設定成隨時都有快照供新的訂閱或重新初始化的訂閱使用時，這個參數才有效。  
   
  **-70Subscribers**  
  如果有任何訂閱者正在執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 版，您就必須使用這個參數。  
   
- **-BcpBatchSize** _bcp_\_ *batch*\_ *size*  
+ **-BcpBatchSize** _bcp_ \_ *批次*\_ *大小*  
  這是要在大量複製作業中傳送的資料列數目。 執行 **bcp in** 作業時，批次大小就是要在單一交易中傳送至伺服器的資料列數目，而且它也是「散發代理程式」記錄 **bcp** 進度訊息之前必須傳送的資料列數目。 執行 **bcp out** 作業時，系統會使用固定批次大小 1000。 值為 0 表示沒有記錄任何訊息。  
   
  **-DefinitionFile** _def_path_and_file_name_  
  這是代理程式定義檔的路徑。 代理程式定義檔包含代理程式的命令列引數。 此檔案的內容會剖析為可執行檔。 請使用雙引號 (") 來指定包含任意字元的引數值。  
   
- **-Distributor** _server_name_[ **\\** _instance_name_]  
- 這是散發者的名稱。 請針對該伺服器上的 *預設執行個體指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 請針對該伺服器上 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
+ **-** 散發者_server_name_[**\\**_instance_name_]  
+ 這是散發者的名稱。 針對** 該伺服器[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的預設實例指定 server_name。 在該伺服器上指定的已命名實例_server_name_**\\**_instance_name。_ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
- **-DistributorDeadlockPriority** [ **-1**|**0**|**1**]  
+ **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
  這是發生死結時散發者之快照集代理程式連接的優先權。 指定這個參數的目的是為了解決快照集產生期間，快照集代理程式與使用者應用程式之間可能會發生的死結。  
   
 |DistributorDeadlockPriority 值|描述|  
 |---------------------------------------|-----------------|  
 |**-1**|在散發者端發生死結時，快照集代理程式以外的應用程式擁有優先權。|  
-|**0** (預設值)|未指派優先權。|  
+|**0** （預設值）|未指派優先權。|  
 |**1**|在散發者端發生死結時，快照集代理程式擁有優先權。|  
   
  **-DistributorLogin** _distributor_login_  
@@ -135,7 +135,7 @@ ms.locfileid: "63250591"
  > [!NOTE]  
  >  定義的 SSL 憑證必須包含 SQL Server 的完整網域名稱才會有效。 為了讓代理程式能在將 -EncryptionLevel 設定為 2 時成功連線，請在本機 SQL Server 上建立別名。 'Alias Name' 參數應為伺服器名稱，且應將 'Server' 參數設為 SQL Server 的完整名稱。
   
- 如需詳細資訊，請參閱 < [SQL Server 複寫安全性](../security/view-and-modify-replication-security-settings.md)。  
+ 如需詳細資訊，請參閱[SQL Server 複寫安全性](../security/view-and-modify-replication-security-settings.md)。  
   
  **-FieldDelimiter** _field_delimiter_  
  這是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量複製資料檔案中標示欄位結尾的字元或字元序列。 預設值是 \n\<x$3>\n。  
@@ -147,23 +147,23 @@ ms.locfileid: "63250591"
 |-------------------------------|-----------------|  
 |**0**|進度訊息會寫入主控台或輸出檔中。 但是，記錄不會記錄在散發資料庫中。|  
 |**1**|一律更新相同狀態的上一個記錄訊息 (啟動、進度、成功等等)。 如果沒有任何具有相同狀態的上一筆記錄存在，便插入新的記錄。|  
-|**2** (預設值)|除非記錄用於閒置訊息或長時間執行作業訊息等事件 (在此情況下，更新之前的記錄)，否則便插入新的記錄。|  
-|**3**|除非記錄用於閒置訊息，否則一律插入新的記錄。|  
+|**2** （預設值）|除非記錄用於閒置訊息或長時間執行作業訊息等事件 (在此情況下，更新之前的記錄)，否則便插入新的記錄。|  
+|**第**|除非記錄用於閒置訊息，否則一律插入新的記錄。|  
   
- **-HRBcpBlocks** _number_of_blocks_  
- 這是在寫入器與讀取器執行緒之間排入佇列的 **bcp** 資料區塊數目。 預設值是 50。 **HRBcpBlocks** 只能搭配 Oracle 發行集使用。  
+ **-Hrbcpblocks 只能** _number_of_blocks_  
+ 這是在寫入器與讀取器執行緒之間排入佇列的 **bcp** 資料區塊數目。 預設值是 50。 **Hrbcpblocks 只能**只會與 Oracle 發行集搭配使用。  
   
 > [!NOTE]  
 >  這個參數是用於從 Oracle 發行者進行 **bcp** 效能的效能微調。  
   
  -**HRBcpBlockSize**_block_size_  
- 這是每個 **bcp** 資料區塊的大小 (以 KB 為單位)。 預設值為 64 KB。 **HRBcpBlocks** 只能搭配 Oracle 發行集使用。  
+ 這是每個 **bcp** 資料區塊的大小 (以 KB 為單位)。 預設值為 64 KB。 **Hrbcpblocks 只能**只會與 Oracle 發行集搭配使用。  
   
 > [!NOTE]  
 >  這個參數是用於從 Oracle 發行者進行 **bcp** 效能的效能微調。  
   
  **-HRBcpDynamicBlocks**  
- 這是指每個 **bcp** 資料區塊的大小是否可以動態地成長。 **HRBcpBlocks** 只能搭配 Oracle 發行集使用。  
+ 這是指每個 **bcp** 資料區塊的大小是否可以動態地成長。 **Hrbcpblocks 只能**只會與 Oracle 發行集搭配使用。  
   
 > [!NOTE]  
 >  這個參數是用於從 Oracle 發行者進行 **bcp** 效能的效能微調。  
@@ -172,18 +172,19 @@ ms.locfileid: "63250591"
  這是將「正在等候後端訊息」記錄至 [MSsnapshot_history](/sql/relational-databases/system-tables/mssnapshot-history-transact-sql) 資料表之前，快照集代理程式等候的時間量 (以秒為單位)。 預設值為 300 秒。  
   
  **-LoginTimeOut** _login_time_out_seconds_  
- 這是登入逾時之前的秒數。  預設值為 15 秒。  
+ 這是登入超時前的秒數。預設值為**15**秒。  
   
  **-MaxBcpThreads** _number_of_threads_  
- 指定可用平行方式執行的大量複製作業數目。 同時存在之執行緒和 ODBC 連接的最大數目是 **MaxBcpThreads** 或散發資料庫之同步處理交易中顯示的大量複製要求數目的較小者。 **MaxBcpThreads** 必須具有大於 **0** 的值而且沒有硬式編碼的上限。 預設值為 **1**。  
+ 指定可用平行方式執行的大量複製作業數目。 同時存在之執行緒和 ODBC 連接的最大數目是 **MaxBcpThreads** 或散發資料庫之同步處理交易中顯示的大量複製要求數目的較小者。 **MaxBcpThreads**必須具有大於**0**的值，而且沒有硬式編碼的上限。 預設值為**1**。  
   
- \- **MaxNetworkOptimization** [ **0**| **1**]  
- 這是指無關的刪除動作是否會傳送至訂閱者。 無關的刪除動作是針對不屬於訂閱者資料分割的資料列傳送至訂閱者的 DELETE 命令。 雖然無關的刪除動作不會影響資料完整性或聚合，但是它們可能會產生不必要的網路流量。 **MaxNetworkOptimization** 的預設值為 **0**。 將 **MaxNetworkOptimization** 設定為 **1** 會盡可能減少無關刪除動作的機會，因而縮減網路流量並擴大網路最佳化。 如果聯結篩選和複雜子集篩選的多重層級存在，將這個參數設定為 **1** 也可能會增加中繼資料的儲存體，而且導致發行者端的效能降低。 您應該仔細地評估複寫拓撲，並且只有在無關刪除動作的網路流量高得無法接受，才將 **MaxNetworkOptimization** 設定為 **1** 。  
+ \-**MaxNetworkOptimization** [ **0**| **1**]  
+ 這是指無關的刪除動作是否會傳送至訂閱者。 無關的刪除動作是針對不屬於訂閱者資料分割的資料列傳送至訂閱者的 DELETE 命令。 雖然無關的刪除動作不會影響資料完整性或聚合，但是它們可能會產生不必要的網路流量。 
+  **MaxNetworkOptimization** 的預設值為 **0**。 將 **MaxNetworkOptimization** 設定為 **1** 會盡可能減少無關刪除動作的機會，因而縮減網路流量並擴大網路最佳化。 如果聯結篩選和複雜子集篩選的多重層級存在，將這個參數設定為 **1** 也可能會增加中繼資料的儲存體，而且導致發行者端的效能降低。 您應該仔細地評估複寫拓撲，並且只有在無關刪除動作的網路流量高得無法接受，才將 **MaxNetworkOptimization** 設定為 **1** 。  
   
 > [!NOTE]
->  只有當合併式發行集的同步處理最佳化選項設定為 **true** ([sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) 的 **@keep_partition_changes** 參數) 時，將這個參數設定為 **1** 才有用。  
+>  只有當合併式發行集的同步處理優化選項設定為**true** （sp_addmergepublication 的**@keep_partition_changes**參數[&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)）時，將此參數設定為**1**才有用。  
   
- **-Output** _output_path_and_file_name_  
+ **-輸出** _output_path_and_file_name_  
  這是代理程式輸出檔的路徑。 如果未提供檔案名稱，輸出將傳送至主控台。 如果指定的檔案名稱存在，輸出就會附加至該檔案。  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
@@ -192,7 +193,7 @@ ms.locfileid: "63250591"
 |OutputVerboseLevel 值|描述|  
 |------------------------------|-----------------|  
 |**0**|僅列印錯誤訊息。|  
-|**1** (預設值)|列印所有進度報表訊息 (預設值)。|  
+|**1** （預設值）|列印所有進度報表訊息 (預設值)。|  
 |**2**|列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。|  
 
  **-PrefetchTables** [ **0**| **1**]  
@@ -213,18 +214,18 @@ ms.locfileid: "63250591"
  指定要用於代理程式參數的代理程式設定檔。 如果 **ProfileName** 為 NULL，就會停用代理程式設定檔。 如果沒有指定 **ProfileName** ，就會使用該代理程式類型的預設設定檔。 如需資訊，請參閱[複寫代理程式設定檔](replication-agent-profiles.md)。  
   
  **-PublisherDB** _publisher_database_  
- 這是發行集資料庫的名稱。 *這個參數不支援 Oracle 發行者*。  
+ 這是發行集資料庫的名稱。 *Oracle 發行者不支援這個參數*。  
   
- **-PublisherDeadlockPriority** [ **-1**|**0**|**1**]  
+ **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
  這是發生死結時發行者之快照集代理程式連接的優先權。 指定這個參數的目的是為了解決快照集產生期間，快照集代理程式與使用者應用程式之間可能會發生的死結。  
   
 |PublisherDeadlockPriority 值|描述|  
 |-------------------------------------|-----------------|  
 |**-1**|在發行者端發生死結時，快照集代理程式以外的應用程式擁有優先權。|  
-|**0** (預設值)|未指派優先權。|  
+|**0** （預設值）|未指派優先權。|  
 |**1**|在發行者端發生死結時，快照集代理程式擁有優先權。|  
   
- **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
  指定參與具有發行集資料庫之資料庫鏡像工作階段的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉夥伴執行個體。 如需詳細資訊，請參閱 [資料庫鏡像和複寫 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
  **-PublisherLogin** _publisher_login_  
@@ -237,7 +238,7 @@ ms.locfileid: "63250591"
  指定發行者的安全性模式。 值為 **0** 表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證 (預設值)，而值為 **1** 則表示 Windows 驗證模式。  
   
  **-QueryTimeOut** _query_time_out_seconds_  
- 這是查詢逾時之前的秒數。預設值是 1800 秒。  
+ 這是查詢超時之前的秒數。預設值為1800秒。  
   
  **-ReplicationType** [ **1**| **2**]  
  指定複寫的類型。 值為 **1** 表示異動複寫，而值為 **2** 則表示合併式複寫。  
@@ -246,15 +247,16 @@ ms.locfileid: "63250591"
  這是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量複製資料檔案中標示資料列結尾的字元或字元序列。 預設值是 \n\<,@g>\n。  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- 這是當執行中並行動態快照集處理序數目到達 [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) 的 **@max_concurrent_dynamic_snapshots** 屬性所設定的限制時，快照集代理程式等候的最大秒數。 如果已到達最大秒數而且快照集代理程式仍然等候中，它就會結束。 值為 0 表示代理程式會永遠等候，不過您可以取消它。  
+ 這是當執行中並行動態快照集進程數目是由**@max_concurrent_dynamic_snapshots** [sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)的屬性所設定的限制時，快照集代理程式等待的最大秒數。 如果已到達最大秒數而且快照集代理程式仍然等候中，它就會結束。 值為 0 表示代理程式會永遠等候，不過您可以取消它。  
   
- \- **UsePerArticleContentsView** _use_per_article_contents_view_  
+ \-**UsePerArticleContentsView** _use_per_article_contents_view_  
  這個參數已被取代，而且是為了回溯相容性才提供支援。  
   
 ## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]  
->  如果您已將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 安裝成在本機系統帳戶而非網域使用者帳戶 (預設值) 底下執行，這項服務就只能存取本機電腦。 如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 底下執行的快照集代理程式設定為使用 Windows 驗證模式，當它登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]時，快照集代理程式就會失敗。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設設定為  驗證。  
+>  如果您已將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 安裝成在本機系統帳戶而非網域使用者帳戶 (預設值) 底下執行，這項服務就只能存取本機電腦。 如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 底下執行的快照集代理程式設定為使用 Windows 驗證模式，當它登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]時，快照集代理程式就會失敗。 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設設定為  驗證。  
   
  若要啟動快照集代理程式，請從命令提示字元執行 **snapshot.exe** 。 如需詳細資訊，請參閱＜ [複寫代理程式可執行檔](../concepts/replication-agent-executables-concepts.md)＞。  
   

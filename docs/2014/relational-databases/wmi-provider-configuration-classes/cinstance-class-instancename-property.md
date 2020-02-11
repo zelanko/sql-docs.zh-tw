@@ -1,5 +1,5 @@
 ---
-title: InstanceName 屬性 （CInstance 類別） |Microsoft Docs
+title: InstanceName 屬性（CInstance 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 309991d7dd187ca40d3eba40d43c0e58692b24bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191379"
 ---
 # <a name="instancename-property-cinstance-class"></a>InstanceName 屬性 (CInstance 類別)
-  取得 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端的執行個體名稱。  
+  取得[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端實例的名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
+ *目標*  
  代表 [用戶端執行個體的](cinstance-class.md) CInstance 類別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

@@ -11,14 +11,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c9603994b0a1e2b57334aba836d4322a5d332c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63199111"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>SQL Server Management Studio 複寫對話方塊
-  此章節包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，可用的複寫對話方塊數目之資訊：  
+  此節包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中可用之一些複寫對話方塊的相關資訊：  
   
 -   [快照集代理程式安全性](snapshot-agent-security.md)  
   

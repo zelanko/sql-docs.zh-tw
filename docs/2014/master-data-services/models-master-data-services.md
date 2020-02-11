@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d202c04a41553b934c175edb7c0afcd907e846e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482541"
 ---
 # <a name="models-master-data-services"></a>模型 (Master Data Services)
@@ -71,7 +71,7 @@ ms.locfileid: "65482541"
 |工作描述|主題|  
 |----------------------|-----------|  
 |建立模型來組織您的主要資料。|[建立模型 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
-|變更現有模型的名稱。|[變更模型名稱&#40;Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)|  
+|變更現有模型的名稱。|[變更模型名稱 &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)|  
 |刪除現有模型。|[刪除模型 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
@@ -80,10 +80,10 @@ ms.locfileid: "65482541"
   
 -   [實體 &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
--   [屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [Master Data Services &#40;的屬性&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
--   [部署模型 &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+-   [&#40;Master Data Services 部署模型&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
--   [模型物件權限 &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
+-   [模型物件使用權限 &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
   
   

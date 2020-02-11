@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c70ec2c669c779e29dfb23ef61ba80865f68b532
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63194983"
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>SQL 註解對話方塊 (Visual Database Tools)
-  這個對話方塊提供可編輯區域，您可在其中撰寫查詢的詳細說明。 若要存取此對話方塊，請在查詢設計工具和檢視表設計師中開啟查詢或檢視表，然後在 [屬性] 視窗中選取 [SQL 註解]，再按一下 [屬性] 欄位右方的省略符號 (**...**)。  
+  這個對話方塊提供可編輯區域，您可在其中撰寫查詢的詳細說明。 若要存取此對話方塊，請在查詢設計工具和檢視表設計師中開啟查詢或檢視表，然後在 [屬性]  視窗中選取 [SQL 註解]  ，再按一下 [屬性] 欄位右方的省略符號 ( **...** )。  
   
 ## <a name="see-also"></a>另請參閱  
  [顯示查詢屬性 &#40;Visual Database Tools&#41;](visual-database-tools.md)  

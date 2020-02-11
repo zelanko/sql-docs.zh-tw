@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155802"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>記憶體最佳化資料表的統計資料
@@ -24,19 +24,19 @@ ms.locfileid: "63155802"
   
  資料表資料通常會隨資料列插入、更新和刪除而變更。 這表示，統計資料需要定期更新。 根據預設，以磁碟為基礎的資料表上的統計資料會在最佳化工具判斷統計資料可能過期時自動更新。  
   
- 根據預設，記憶體最佳化資料表上的統計資料不會更新。 您需要手動更新這些統計資料。 使用[UPDATE STATISTICS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/update-statistics-transact-sql)針對個別資料行、 索引或資料表。 使用[sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)更新的所有使用者和資料庫中的內部資料表的統計資料。  
+ 根據預設，記憶體最佳化資料表上的統計資料不會更新。 您需要手動更新這些統計資料。 針對個別資料行、索引或資料表，請使用[UPDATE STATISTICS &#40;transact-sql&#41;](/sql/t-sql/statements/update-statistics-transact-sql) 。 使用[sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)來更新資料庫中所有使用者和內部資料表的統計資料。  
   
- 使用時[CREATE STATISTICS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql)或[更新統計資料&#40;-&#41;](/sql/t-sql/statements/update-statistics-transact-sql)，您必須指定`NORECOMPUTE`若要停用自動統計資料記憶體最佳化資料表的更新。 對於磁碟為基礎的資料表， [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)只更新統計資料，如果資料表已修改自上次[sp_updatestats &#40;-&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)。 對於記憶體最佳化的資料表，請[sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)一律會產生更新的統計資料。 [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)會是很適合用於記憶體最佳化的資料表中; 否則，您需要知道哪些資料表有重大變更，因此您可以個別更新統計資料。  
+ 當您使用[CREATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)或[UPDATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/update-statistics-transact-sql)時，您必須指定`NORECOMPUTE`來停用記憶體優化資料表的自動統計資料更新。 對於以磁片為基礎的資料表，只有在上次[sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)之後修改資料表時， [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)才會更新統計資料。 對於記憶體優化資料表， [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)一律會產生更新的統計資料。 [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)是記憶體優化資料表的理想選項;否則，您必須知道哪些資料表有重大變更，才能個別更新統計資料。  
   
  可以藉由取樣資料或執行完整掃描來產生統計資料。 取樣的統計資料只會使用資料表資料的取樣來估計資料分佈情形。 完整掃描的統計資料會掃描整個資料表來判斷資料分佈情形。 完整掃描的統計資料通常更正確，但要花較多的時間來計算。 取樣的統計資料收集速度較快。  
   
- 以磁碟為基礎的資料表預設為使用取樣的統計資料。 記憶體最佳化資料表只支援完整掃描統計資料。 使用時[CREATE STATISTICS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql)或[更新統計資料&#40;-&#41;](/sql/t-sql/statements/update-statistics-transact-sql)，您必須指定`FULLSCAN`選項記憶體最佳化資料表。  
+ 以磁碟為基礎的資料表預設為使用取樣的統計資料。 記憶體最佳化資料表只支援完整掃描統計資料。 使用[CREATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)或[&#40;TRANSACT-SQL&#41;更新統計資料](/sql/t-sql/statements/update-statistics-transact-sql)時，您必須指定記憶體優化資料表的`FULLSCAN`選項。  
   
  記憶體最佳化資料表上統計資料的額外考量：  
   
 -   記憶體最佳化資料表上的索引會隨資料表建立。 索引鍵資料行上的統計資料會在資料表為空白時建立。 因此，這些統計資料需要在資料載入資料表後更新。  
   
--   若是原生編譯預存程序，程序中查詢的執行計畫會在編譯程序時最佳化。 這種情況只會在建立程序及伺服器重新啟動時發生，而不會在統計資料更新時發生。 因此，資料表需要包含代表性的資料集，且統計資料需要處於最新狀態，才能建立程序 (如果讓資料庫離線後再次上線，或有任何伺服器重新啟動，則原生編譯的預存程序會重新編譯)。  
+-   若是原生編譯預存程序，程序中查詢的執行計畫會在編譯程序時最佳化。 這種情況只會在建立程序及伺服器重新啟動時發生，而不會在統計資料更新時發生。 因此，資料表需要包含代表性的資料集，且統計資料需要處於最新狀態，才能建立程序  (如果讓資料庫離線後再次上線，或有任何伺服器重新啟動，則原生編譯的預存程序會重新編譯)。  
   
 ## <a name="guidelines-for-statistics-when-deploying-memory-optimized-tables"></a>部署記憶體最佳化資料表時統計資料的方針  
  為確保查詢最佳化工具建立查詢計劃時擁有最新的統計資料，請利用下列五個步驟部署記憶體最佳化資料表：  
@@ -64,11 +64,11 @@ ms.locfileid: "63155802"
   
  若要更新統計資料：  
   
--   使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]要[建立維護計畫](../maintenance-plans/create-a-maintenance-plan.md)使用[更新統計資料工作](../maintenance-plans/update-statistics-task-maintenance-plan.md)  
+-   用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來建立具有[更新統計](../maintenance-plans/update-statistics-task-maintenance-plan.md)資料[工作的維護計畫](../maintenance-plans/create-a-maintenance-plan.md)  
   
 -   或是透過 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼更新統計資料，如下列所討論。  
   
- 若要更新單一記憶體最佳化資料表的統計資料 (*myschema*。 *Mytable*)，執行下列程式碼：  
+ 若要更新單一記憶體優化資料表的統計資料（*myschema*。 *Mytable*），請執行下列腳本：  
   
 ```  
 UPDATE STATISTICS myschema.Mytable WITH FULLSCAN, NORECOMPUTE  
@@ -86,7 +86,7 @@ FROM sys.tables WHERE is_memory_optimized=1
 EXEC sp_executesql @sql  
 ```  
   
- 若要更新資料庫中的所有資料表的統計資料，請執行[sp_updatestats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)。  
+ 若要更新資料庫中所有資料表的統計資料，請執行[sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)。  
   
  下列範例會報告記憶體最佳化資料表的統計資料上次更新時間。 這項資訊可協助您決定是否需要更新統計資料。  
   

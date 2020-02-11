@@ -19,20 +19,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144715"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>寫滿交易記錄疑難排解 (SQL Server 錯誤 9002)
-  本主題將討論對於寫滿交易記錄的可能回應，並建議將來可採用的避免方法。 當交易記錄寫滿時， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 就會發出 9002 錯誤。 此記錄可能會在資料庫處於線上或復原狀態時填滿。 如果此記錄是在資料庫處於線上狀態時填滿，資料庫會保持線上狀態，不過只能讀取而無法更新資料庫。 如果此記錄是在復原期間填滿，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將資料庫標示為 RESOURCE PENDING。 不論是哪一種情況，使用者都必須採取動作，以便提供足夠的記錄空間。  
+  本主題將討論對於寫滿交易記錄的可能回應，並建議將來可採用的避免方法。 當交易記錄寫滿時， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 就會發出 9002 錯誤。 此記錄可能會在資料庫處於線上或復原狀態時填滿。 如果記錄已滿時，資料庫正在線上，則資料庫仍會保持在線上，但只能讀取並無法更新。 如果此記錄是在復原期間填滿，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將資料庫標示為 RESOURCE PENDING。 不論是哪一種情況，使用者都必須採取動作，以便提供足夠的記錄空間。  
   
 ## <a name="responding-to-a-full-transaction-log"></a>寫滿交易記錄的回應  
  寫滿交易記錄的適當回應會部分根據導致記錄填滿的條件而定。 若要探索指定情況下無法進行記錄截斷的原因，請使用 **sys.database** 目錄檢視的 **log_reuse_wait** 和 **log_reuse_wait_desc** 資料行。 如需詳細資訊，請參閱 [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)。 如需可能延遲記錄截斷之其他因素的描述，請參閱[交易記錄 &#40;SQL Server&#41;](the-transaction-log-sql-server.md)。  
   
 > [!IMPORTANT]  
->  如果發生 9002 錯誤，解決此問題之後，資料庫是在復原來復原資料庫使用 ALTER DATABASE *database_name* SET ONLINE。  
+>  如果發生 9002 錯誤時資料庫處於復原狀態，請在解決問題後，使用 ALTER DATABASE *資料庫名稱* SET ONLINE 來復原資料庫。  
   
  寫滿交易記錄的替代回應方式包括：  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63144715"
 > [!IMPORTANT]  
 >  記錄檔絕不可放在壓縮檔案系統上。  
   
- **若要移動記錄檔**  
+ **移動記錄檔**  
   
 -   [移動資料庫檔案](../databases/move-database-files.md)  
   
@@ -92,14 +92,14 @@ ms.locfileid: "63144715"
 ### <a name="adding-a-log-file-on-a-different-disk"></a>在不同的磁碟上加入記錄檔  
  使用 ALTER DATABASE <database_name> ADD LOG FILE，在含有足夠空間的不同磁碟上加入資料庫的新記錄檔。  
   
- **若要加入記錄檔**  
+ **加入記錄檔**  
   
 -   [將資料或記錄檔加入資料庫](../databases/add-data-or-log-files-to-a-database.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [管理交易記錄檔的大小](manage-the-size-of-the-transaction-log-file.md)   
  [交易記錄備份 &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md)   
- [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
+ [sp_add_log_file_recover_suspect_db &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
   
   

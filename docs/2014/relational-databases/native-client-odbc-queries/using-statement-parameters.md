@@ -1,5 +1,5 @@
 ---
-title: 使用陳述式參數 |Microsoft Docs
+title: Using 語句參數 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200241"
 ---
 # <a name="using-statement-parameters"></a>使用陳述式參數
@@ -32,9 +32,9 @@ ms.locfileid: "63200241"
   
 -   增強建構查詢準則時的使用者互動。  
   
--   管理**文字**， **ntext**，並**映像**資料和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特有的 C 資料類型。  
+-   管理**text**、 **Ntext**和**image**資料，以及[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定的 C 資料類型。  
   
- 比方說，**組件**資料表包含名為的資料行**PartID**，**描述**，以及**價格**。 加入某個部分而不含參數時，需要建構如下的 SQL 陳述式：  
+ 例如， **part**資料表具有名為**PartID**、 **Description**和**Price**的資料行。 加入某個部分而不含參數時，需要建構如下的 SQL 陳述式：  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -55,6 +55,6 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
 -   [繫結參數](using-statement-parameters-binding-parameters.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [執行查詢&#40;ODBC&#41;](executing-queries-odbc.md)  
+ [&#40;ODBC&#41;執行查詢](executing-queries-odbc.md)  
   
   

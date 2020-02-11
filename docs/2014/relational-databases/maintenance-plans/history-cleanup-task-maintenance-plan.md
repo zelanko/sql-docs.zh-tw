@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a2b398a9910926ca2ced339395feaf938c31d519
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67412700"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>記錄清除工作 (維護計畫)
@@ -53,7 +53,7 @@ ms.locfileid: "67412700"
 >  受影響的物件數目較為大量時，會多花一些時間才會顯示。  
   
 ## <a name="new-connection-dialog-box"></a>新增連接對話方塊  
- **連接名稱**  
+ **連線名稱**  
  輸入新連接的名稱。  
   
  **選取或輸入伺服器名稱**  

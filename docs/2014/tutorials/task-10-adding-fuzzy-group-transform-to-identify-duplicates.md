@@ -1,5 +1,5 @@
 ---
-title: 工作 10：加入模糊群組轉換來識別重複項目 |Microsoft Docs
+title: 工作10：新增模糊群組轉換以識別重複專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,50 +11,50 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 48e233c6f2c7a55bf2420825b9fb3064db6e89e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481255"
 ---
-# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>工作 10：新增模糊群組轉換來識別重複項
-  在這項工作中，您會將模糊群組轉換加入至資料流程。 模糊群組轉換有助於識別來源資料中的重複項。 請參閱[Fuzzy Grouping Transformation](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)如需詳細資訊。  
+# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>工作 10：加入模糊群組轉換來識別重複項
+  在這項工作中，您會將模糊群組轉換加入至資料流程。 模糊群組轉換有助於識別來源資料中的重複項。 如需詳細資訊，請參閱[模糊群組轉換](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)。  
   
-1.  拖放**模糊群組**轉換**其他轉換**上**SSIS 工具箱**至**資料流程**索引標籤下**結合正確與更正的記錄**。  
+1.  將 [ **SSIS 工具箱**] 的**其他轉換**中的 [**模糊群組**轉換] 拖放到 [**結合正確和更正的記錄**] 底下的 [**資料流程**] 索引標籤。  
   
-2.  以滑鼠右鍵按一下**模糊群組**轉換**資料流程**索引標籤，然後按一下**重新命名**。 型別**分組具有相符識別碼的供應商**然後按**ENTER**。  
+2.  以滑鼠右鍵**按一下 [資料流程**] 索引標籤中的 [**模糊群組**轉換]，然後按一下 [**重新命名**]。 輸入**群組具有相符識別碼的供應商**，然後按**enter**鍵。  
   
-3.  連接**結合正確和已更正的記錄**要**分組具有相符識別碼的供應商**使用藍色連接器。  
+3.  使用藍色連接器，將**正確和已更正的記錄結合**為符合**識別碼的群組供應商**。  
   
-     ![連接至 分組具有相符識別碼的供應商](../../2014/tutorials/media/et-addingfgttoidentifyduplicates-01.jpg "分組具有相符識別碼的供應商的連線")  
+     ![連接有相符識別碼的 [供應商] 群組](../../2014/tutorials/media/et-addingfgttoidentifyduplicates-01.jpg "連接有相符識別碼的 [供應商] 群組")  
   
-4.  按兩下**分組具有相符識別碼的供應商**。  
+4.  按兩下 [**群組具有相符識別碼的供應商**]。  
   
-5.  在 [**模糊群組轉換編輯器**，按一下**新增**旁**OLE DB 連接管理員下拉式清單**以啟動**設定 OLE DB 連接管理員**] 對話方塊。  
+5.  在 [**模糊群組轉換編輯器**] 中，按一下 [ **OLE DB 連接管理員] 下拉式清單**旁邊的 [**新增**]，以啟動 [**設定 OLE DB 連線管理員**] 對話方塊。  
   
-6.  在對話方塊中，按一下**的新**來啟動**連線管理員** 對話方塊。  
+6.  在對話方塊中，按一下 [**新增**] 以啟動 [**連線管理員**] 對話方塊。  
   
-7.  型別 **(local)** 或是**期間**（.） 做為伺服器名稱。  
+7.  在 [伺服器名稱] 中輸入 **（local）** 或**句號**（.）。  
   
-8.  選取  **MDS** for**選取或輸入資料庫名稱**欄位。 要做為 MDS 資料庫的暫存儲存體**模糊群組轉換**。 **模糊群組**轉換需要連接到要建立轉換演算法執行其工作所需的暫存 SQL Server 資料表的 SQL Server 執行個體。 您可以建立資料庫，或使用另一個現有的資料庫供此用途使用。  
+8.  針對 [**選取或輸入資料庫名稱**] 欄位選取 [ **MDS** ]。 您將使用 MDS 資料庫做為**模糊群組轉換**的暫存儲存體。 「**模糊群組**」轉換需要連接到 SQL Server 的實例，以建立轉換演算法執行其工作所需的暫存 SQL Server 資料表。 您可以建立資料庫，或使用另一個現有的資料庫供此用途使用。  
   
-9. 按一下 **測試連接**來測試連線，然後按一下**確定**訊息方塊上。  
+9. 按一下 [**測試連接**] 來測試連接，然後按一下訊息方塊上的 **[確定]** 。  
   
-10. 在 [**連接管理員**] 對話方塊中，按一下**確定**。  
+10. 在 [**連線管理員**] 對話方塊中，按一下 **[確定]**。  
   
-11. 選取 **(local)。MDS** (或**localhost。MDS**) 從**清單中的資料連線**然後按一下 **[確定]** 。  
+11. 選取 **[（本機）]。MDS** （或**localhost。MDS**），從**資料連線清單**中按一下 **[確定]**。  
   
-12. 在 **模糊群組轉換編輯器**，確認 **(local)。MDS**或**localhost。MDS**已選取**OLE DB 連接管理員**。  
+12. 在 [**模糊群組轉換編輯器**] 中，確認 **（本機）。MDS**或**localhost。** 已針對**OLE DB 連線管理員**選取 MDS。  
   
-13. 若要切換**資料行** 索引標籤。  
+13. 切換至 [資料**行**] 索引標籤。  
   
-14. 選取 （核取方塊） **SupplierID_Output**從清單中的**可用的輸入資料行**。 若要設定轉換，請選取在識別重複項時所要使用的輸入資料行。 為了維持單純化，您在此步驟中只會使用 SupplierID。  
+14. 從**可用輸入資料行**的清單中選取 [（核取方塊）] **SupplierID_Output** 。 若要設定轉換，請選取在識別重複項時所要使用的輸入資料行。 為了維持單純化，您在此步驟中只會使用 SupplierID。  
   
      ![模糊群組轉換編輯器](../../2014/tutorials/media/et-addingfgttoidentifyduplicates-02.jpg "模糊群組轉換編輯器")  
   
-15. 按一下  **確定**以關閉**模糊群組轉換編輯器**。  
+15. 按一下 **[確定]** 以關閉 [**模糊群組轉換編輯器**]。  
   
-## <a name="next-step"></a>下一個步驟  
- [工作 11:加入條件式分割轉換來篩選重複項目](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
+## <a name="next-step"></a>後續步驟  
+ [工作 11：加入條件式分割轉換來篩選重複項](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
   
   

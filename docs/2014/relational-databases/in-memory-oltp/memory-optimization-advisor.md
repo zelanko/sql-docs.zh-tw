@@ -14,28 +14,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157997"
 ---
 # <a name="memory-optimization-advisor"></a>記憶體最佳化 Advisor
-  交易效能報告工具 (請參閱＜ [判斷是否應將資料表或預存程序匯出至記憶體中 OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)＞) 會通知您，匯出使用記憶體中 OLTP 時資料庫中哪些資料表有加分效果。 識別您要匯出使用記憶體中 OLTP 的資料表之後，即可使用 Memory Optimization Advisor，協助您將以磁碟為基礎的資料庫資料表移轉到記憶體中 OLTP。  
+  交易效能報告工具 (請參閱＜ [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)＞) 會通知您，匯出使用記憶體中 OLTP 時資料庫中哪些資料表有加分效果。 識別您要匯出使用記憶體中 OLTP 的資料表之後，即可使用 Memory Optimization Advisor，協助您將以磁碟為基礎的資料庫資料表移轉到記憶體中 OLTP。  
   
  開始時，請先連接至執行個體，其中包含以磁碟為基礎的資料庫資料表。 您可連接到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 執行個體。 不過，如果您想要使用 Advisor 執行移轉作業，則必須連接到已啟用 In-Memory OLTP 功能的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 執行個體。 如需有關記憶體中 OLTP 需求的詳細資訊，請參閱＜ [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md)＞。  
   
- 如需移轉方法的資訊，請參閱 [In-Memory OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。  
+ 如需有關遷移方法的詳細資訊，請參閱[記憶體內部 OLTP-一般工作負載模式和遷移考慮](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>使用記憶體最佳化 Advisor 的逐步解說  
- 在 **[物件總管]** 中，以滑鼠右鍵按一下您想要轉換的資料表，然後選取 **[記憶體最佳化 Advisor]** 。 隨即顯示 **[資料表記憶體最佳化 Advisor]** 的歡迎頁面。  
+ 在 **[物件總管]** 中，以滑鼠右鍵按一下您想要轉換的資料表，然後選取 **[記憶體最佳化 Advisor]**。 隨即顯示 **[資料表記憶體最佳化 Advisor]** 的歡迎頁面。  
   
 ### <a name="memory-optimization-checklist"></a>記憶體最佳化檢查清單  
- 按一下 **[資料表記憶體最佳化 Advisor]** 歡迎頁面中的 **[下一步]** 時，即會看到記憶體最佳化檢查清單。 記憶體最佳化的資料表不支援磁碟資料表的全部功能。 記憶體最佳化檢查清單會報告磁碟資料表是否使用任何與記憶體最佳化資料表不相容的功能。 **資料表記憶體最佳化 Advisor** 並不會修改磁碟資料表，以便將其移轉為使用 In-Memory OLTP。 您必須先進行變更才能繼續移轉。 針對每個發現的不相容狀況， **資料表記憶體最佳化 Advisor** 會顯示有助於修改以磁碟為基礎的資料表之相關資訊的連結。  
+ 按一下 **[資料表記憶體最佳化 Advisor]** 歡迎頁面中的 **[下一步]** 時，即會看到記憶體最佳化檢查清單。 記憶體最佳化的資料表不支援磁碟資料表的全部功能。 記憶體最佳化檢查清單會報告磁碟資料表是否使用任何與記憶體最佳化資料表不相容的功能。 
+  **資料表記憶體最佳化 Advisor** 並不會修改磁碟資料表，以便將其移轉為使用 In-Memory OLTP。 您必須先進行變更才能繼續移轉。 針對每個發現的不相容狀況， **資料表記憶體最佳化 Advisor** 會顯示有助於修改以磁碟為基礎的資料表之相關資訊的連結。  
   
  如果您想要保留這些不相容狀況的清單以便規劃移轉，請按一下 **[產生報告]** ，即可產生 HTML 清單。  
   
- 如果資料表沒有不相容的狀況，而且您已使用記憶體中 OLTP 連接到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 執行個體，請按 **[下一步]** 。  
+ 如果資料表沒有不相容的狀況，而且您已使用記憶體中 OLTP 連接到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 執行個體，請按 **[下一步]**。  
   
 ### <a name="memory-optimization-warnings"></a>記憶體最佳化警告  
  在下一頁的記憶體最佳化警告中包含一份問題清單，這些問題對資料表移轉為使用記憶體中 OLTP 並無影響，但卻可能導致其他物件 (例如預存程序或 CLR 函數) 行為失敗或產生非預期的行為。  
@@ -46,7 +47,7 @@ ms.locfileid: "63157997"
   
  可付諸行動的警告會在左邊資料行中出現一個黃色的三角形。 如果有可付諸行動的警告，您應該結束移轉、解決警告，然後重新啟動程序。 如果您沒有解決警告，移轉的資料表可能會導致失敗。  
   
- 按一下 **[產生報告]** 即可產生這些警告的 HTML 報告。 按 **[下一步]** 繼續進行。  
+ 按一下 **[產生報告]** 即可產生這些警告的 HTML 報告。 按 [下一步]  繼續進行。  
   
 ### <a name="review-optimization-options"></a>檢閱最佳化選項  
  下一個畫面可讓您修改選項以便移轉至 In-Memory OLTP：  
@@ -69,7 +70,8 @@ ms.locfileid: "63157997"
  在移轉程序結束時，會使用資料表目前的名稱建立新的記憶體最佳化資料表。 若要避免名稱衝突，您必須重新命名目前的資料表。 您可以在此欄位中變更名稱。  
   
  目前估計的記憶體成本 (MB)  
- 記憶體最佳化 Advisor 會根據磁碟資料表的中繼資料，評估新的記憶體最佳化資料表將取用的記憶體數量。 [記憶體最佳化資料表中的資料表和資料列大小](table-and-row-size-in-memory-optimized-tables.md)中說明資料表大小的計算方式。  
+ 記憶體最佳化 Advisor 會根據磁碟資料表的中繼資料，評估新的記憶體最佳化資料表將取用的記憶體數量。 
+  [記憶體最佳化資料表中的資料表和資料列大小](table-and-row-size-in-memory-optimized-tables.md)中說明資料表大小的計算方式。  
   
  如果未分配足夠的記憶體，移轉程序可能會失敗。  
   
@@ -84,10 +86,10 @@ ms.locfileid: "63157997"
 > [!WARNING]  
 >  只有在您了解非持久性資料表的相關資料遺失風險時，才可選取此選項。  
   
- 按 **[下一步]** ，繼續進行。  
+ 按 **[下一步]**，繼續進行。  
   
 ### <a name="review-primary-key-conversion"></a>檢閱主索引鍵轉換  
- 下一個畫面是 **[檢閱主索引鍵轉換]** 。 記憶體最佳化 Advisor 會偵測資料表中是否有一個或多個主索引鍵，並根據主索引鍵的中繼資料填入資料行的清單。 否則，如果您想要移轉至持久性記憶體最佳化資料表，就必須建立主索引鍵。  
+ 下一個畫面是 **[檢閱主索引鍵轉換]**。 記憶體最佳化 Advisor 會偵測資料表中是否有一個或多個主索引鍵，並根據主索引鍵的中繼資料填入資料行的清單。 否則，如果您想要移轉至持久性記憶體最佳化資料表，就必須建立主索引鍵。  
   
  如果主索引鍵不存在，而且資料表正移轉至非持久性資料表，這個畫面將不會出現。  
   
@@ -110,14 +112,14 @@ ms.locfileid: "63157997"
  選定主索引鍵之後，請按 **[下一步]** 。  
   
 ### <a name="review-index-conversion"></a>檢閱索引轉換  
- 下一頁是 **[檢閱索引轉換]** 。 記憶體最佳化 Advisor 會偵測資料表中是否有一個或多個索引，並填入資料行與資料類型的清單。 您可在 **[檢閱索引轉換]** 頁面中設定的參數，與上一個 **[檢閱主索引鍵轉換]** 頁面類似。  
+ 下一頁是 **[檢閱索引轉換]**。 記憶體最佳化 Advisor 會偵測資料表中是否有一個或多個索引，並填入資料行與資料類型的清單。 您可在 **[檢閱索引轉換]** 頁面中設定的參數，與上一個 **[檢閱主索引鍵轉換]** 頁面類似。  
   
  如果資料表中僅有主索引鍵，而且資料表正移轉至持久性資料表，這個畫面就不會出現。  
   
- 決定資料表中的每個索引之後，請按 **[下一步]** 。  
+ 決定資料表中的每個索引之後，請按 **[下一步]**。  
   
 ### <a name="verify-migration-actions"></a>確認移轉動作  
- 下一頁是 **[確認移轉動作]** 。 若要編寫移轉作業的指令碼，請按一下 **[指令碼]** 產生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 然後您可以修改和執行指令碼。 按一下 **[移轉]** 即可開始資料表移轉。  
+ 下一頁是 **[確認移轉動作]**。 若要編寫移轉作業的指令碼，請按一下 **[指令碼]** 產生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 然後您可以修改和執行指令碼。 按一下 **[移轉]** 即可開始資料表移轉。  
   
  程序完成之後，請重新整理 **[物件總管]** 以查看新的記憶體最佳化資料表和舊的磁碟資料表。 您可保留舊資料表或隨時將其刪除。  
   

@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f292841c227db26f1c518b2eaef896f7ce3570c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191465"
 ---
-# <a name="mssqleng014151"></a>MSSQL_ENG014151
+# <a name="mssql_eng014151"></a>MSSQL_ENG014151
     
 ## <a name="message-details"></a>訊息詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|14151|  
 |事件來源|MSSQLSERVER|  
 |元件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -40,7 +40,7 @@ ms.locfileid: "63191465"
   
 -   重新啟動失敗的代理程式，查看現在執行是否已無錯誤。 如需詳細資訊，請參閱[啟動及停止複寫代理程式 &#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 與[複寫代理程式可執行檔概念](concepts/replication-agent-executables-concepts.md)。  
   
--   請檢查代理程式記錄和作業記錄是否同時發生其他錯誤。 如需有關在「複寫監視器」中檢視代理程式狀態和錯誤詳細資料的資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+-   請檢查代理程式記錄和作業記錄是否同時發生其他錯誤。 如需有關在「複寫監視器」中查看代理程式狀態和錯誤詳細資料的資訊，請參閱[使用複寫監視器來查看資訊及執行](monitor/view-information-and-perform-tasks-replication-monitor.md)工作。  
   
 -   確認在由代理程式存取的電腦之間是否使用基本連接，然後使用類似 [sqlcmd Utility](../../tools/sqlcmd-utility.md)的公用程式連接到各台電腦。 連接時，請使用代理程式建立連接的相同帳戶。 如需各代理程式帳戶所需權限的詳細資訊，請參閱＜ [Replication Agent Security Model](security/replication-agent-security-model.md)＞。  
   
@@ -51,10 +51,10 @@ ms.locfileid: "63191465"
 ## <a name="see-also"></a>另請參閱  
  [複寫代理程式管理](agents/replication-agent-administration.md)   
  [錯誤和事件參考 &#40;複寫&#41;](errors-and-events-reference-replication.md)   
- [複寫散發代理程式](agents/replication-distribution-agent.md)   
- [複寫記錄讀取器代理程式](agents/replication-log-reader-agent.md)   
- [複寫合併代理程式](agents/replication-merge-agent.md)   
+ [Replication Distribution Agent](agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](agents/replication-merge-agent.md)   
  [複寫佇列讀取器代理程式](agents/replication-queue-reader-agent.md)   
- [複寫快照集代理程式](agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
   

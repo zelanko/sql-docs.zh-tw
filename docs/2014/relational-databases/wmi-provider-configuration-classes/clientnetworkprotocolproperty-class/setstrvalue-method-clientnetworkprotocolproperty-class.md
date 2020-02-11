@@ -1,5 +1,5 @@
 ---
-title: SetStrValue 方法 （ClientNetworkProtocolProperty 類別） |Microsoft Docs
+title: SetStrValue 方法（ClientNetworkProtocolProperty 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: fe58a49e707bdca231b488ae207d14bbbfc7cb0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63242539"
 ---
 # <a name="setstrvalue-method-clientnetworkprotocolproperty-class"></a>SetStrValue 方法 (ClientNetworkProtocolProperty 類別)
-  設定所參考之目前屬性的字串值[PropertyIdx 屬性 （ClientNetworkProtocolProperty 類別）](clientnetworkprotocolproperty-class.md)值。  
+  設定[PropertyIdx 屬性（ClientNetworkProtocolProperty 類別）](clientnetworkprotocolproperty-class.md)值所參考之目前屬性的字串值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,8 +40,8 @@ StrValue
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
- A [ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)物件，表示所使用之網路通訊協定屬性[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端。  
+ *目標*  
+ [ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)物件，代表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端所使用之網路通訊協定的屬性。  
   
 #### <a name="parameters"></a>參數  
   

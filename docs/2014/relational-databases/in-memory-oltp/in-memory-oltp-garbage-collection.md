@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a28f2401f11f20f8891dbe71537ce2240a570ed8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158254"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>記憶體中的 OLTP 記憶體回收
@@ -43,6 +43,6 @@ ms.locfileid: "63158254"
  使用者交易在認可之後，會識別與其執行所在之排程器相關聯的所有佇列項目，然後釋出記憶體。 如果排程器上的記憶體回收佇列是空的，則它會搜尋目前 NUMA 節點中所有非空白的佇列。 如果發現交易活動較少且有記憶體不足的壓力，則主要記憶體回收執行緒可從任何佇列進行資料列的記憶體回收。 例如，如果刪除大量資料列之後沒有交易活動，而且沒有記憶體不足的壓力，則在交易活動繼續或發生記憶體不足的壓力之前，將不會對已刪除的資料列進行記憶體回收。  
   
 ## <a name="see-also"></a>另請參閱  
- [為記憶體中的 OLTP 管理記憶體](../../database-engine/managing-memory-for-in-memory-oltp.md)  
+ [為記憶體內部 OLTP 管理記憶體](../../database-engine/managing-memory-for-in-memory-oltp.md)  
   
   

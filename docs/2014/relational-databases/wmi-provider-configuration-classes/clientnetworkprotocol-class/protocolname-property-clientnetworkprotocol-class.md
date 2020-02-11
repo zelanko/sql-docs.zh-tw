@@ -1,5 +1,5 @@
 ---
-title: ProtocolName 屬性 （ClientNetworkProtocol 類別） |Microsoft Docs
+title: ProtocolName 屬性（ClientNetworkProtocol 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 81e1081623b363cdcb9610c83301bd424cb3694d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191959"
 ---
 # <a name="protocolname-property-clientnetworkprotocol-class"></a>ProtocolName 屬性 (ClientNetworkProtocol 類別)
-  取得所指定之目前網路通訊協定的名稱[Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)。  
+  取得[設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)所指定的目前網路通訊協定名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,11 +37,11 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
- A [ClientNetworkProtocol 類別](clientnetworkprotocol-class.md)物件，表示所使用的網路通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端。  
+ *目標*  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)]代表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端所使用之網路通訊協定的[ClientNetworkProtocol 類別](clientnetworkprotocol-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- 指定目前的用戶端名稱的字串值的網路通訊協定參考[SetOrderValue 方法 （ClientNetworkProtocol 類別）](https://technet.microsoft.com/library/ms179295.aspx)。  
+ 字串值，指定[SetOrderValue 方法（ClientNetworkProtocol 類別）](https://technet.microsoft.com/library/ms179295.aspx)所參考之目前用戶端網路通訊協定的名稱。  
   
 ## <a name="remarks"></a>備註  
   

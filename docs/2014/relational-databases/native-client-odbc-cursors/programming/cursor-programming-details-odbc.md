@@ -1,5 +1,5 @@
 ---
-title: 資料指標程式設計詳細資料 (ODBC) |Microsoft Docs
+title: 游標程式設計詳細資料（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9138b9abc8b75107061e794f44341f628e58ac67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63207264"
 ---
 # <a name="cursor-programming-details-odbc"></a>資料指標程式設計詳細內容 (ODBC)
@@ -27,13 +27,13 @@ ms.locfileid: "63207264"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [隱含資料指標轉換&#40;ODBC&#41;](implicit-cursor-conversions-odbc.md)  
+-   [&#40;ODBC&#41;的隱含資料指標轉換](implicit-cursor-conversions-odbc.md)  
   
 -   [使用自動擷取搭配 ODBC 資料指標](using-autofetch-with-odbc-cursors.md)  
   
--   [僅向前快轉資料指標&#40;ODBC&#41;](fast-forward-only-cursors-odbc.md)  
+-   [&#40;ODBC&#41;快速順向資料指標](fast-forward-only-cursors-odbc.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [使用資料指標&#40;ODBC&#41;](../using-cursors-odbc.md)  
+ [&#40;ODBC&#41;使用資料指標](../using-cursors-odbc.md)  
   
   

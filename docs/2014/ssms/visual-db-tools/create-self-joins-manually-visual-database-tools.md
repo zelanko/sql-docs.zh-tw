@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd8e26099ec7152aac08a11b6f7e38550834d248
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184232"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>手動建立自我聯結 (Visual Database Tools)
@@ -125,7 +125,7 @@ Cheryl Carson       Abraham Bennet
 7.  指定查詢的其他選項，例如輸出資料行、搜尋條件和排序順序。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立自我聯結會自動&#40;Visual Database Tools&#41;](create-self-joins-automatically-visual-database-tools.md)   
+ [&#40;Visual Database Tools 自動建立自我聯結&#41;](create-self-joins-automatically-visual-database-tools.md)   
  [使用聯結查詢 &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
   
   

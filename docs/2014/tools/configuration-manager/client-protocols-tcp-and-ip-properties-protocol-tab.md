@@ -1,5 +1,5 @@
 ---
-title: 用戶端通訊協定-TCP 和 IP 屬性 （通訊協定索引標籤） |Microsoft Docs
+title: 用戶端通訊協定-TCP 和 IP 屬性（通訊協定索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: ec3c433c1ce16e35f064910083e7ab9959e4c3bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253787"
 ---
 # <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>用戶端通訊協定 - TCP 和 IP 屬性 (通訊協定索引標籤)
   在「 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」中，您可以使用 **[TCP/IP 內容]** 對話方塊中的 **[通訊協定]** 索引標籤來檢視或指定下列選項。 若要連接到其他通訊埠，請在 **[預設通訊埠]** 方塊內輸入通訊埠編號。 如需連接字串的詳細資訊，請參閱 [使用 TCP/IP 建立有效的連接字串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)。  
   
 ## <a name="options"></a>選項。  
- **[預設通訊埠]**  
+ **預設通訊埠**  
  指定 TCP/IP 網路程式庫嘗試連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的目標執行個體時，要使用的預設通訊埠。 預設的通訊埠值為 1433。  
   
  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的預設執行個體時，用戶端會使用這個值。 如果預設執行個體已設為接聽不同的通訊埠，請將此值變更為該通訊埠編號。  
@@ -42,7 +42,7 @@ ms.locfileid: "63253787"
   
 ## <a name="see-also"></a>另請參閱  
  [選擇網路通訊協定](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
- [新增別名 &#40;別名索引標籤&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)   
- [&#60;Alias&#62; 屬性 &#40;別名索引標籤&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
+ [新別名 &#40;別名] 索引標籤&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)   
+ [&#60;別名&#62; 屬性 &#40;別名] 索引標籤&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
   
   

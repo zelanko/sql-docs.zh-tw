@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a3dfc7b81bf6f6a3ef0b9b74a2d1a78f3e3e1db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200090"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>合併式複寫的 Web 同步處理
@@ -29,11 +29,13 @@ ms.locfileid: "63200090"
   
 -   透過網際網路同步處理來自行動使用者的資料。  
   
--   跨越公司防火牆在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫之間同步處理資料。  
+-   跨公司防火牆[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在資料庫之間同步處理資料。  
   
- 例如，旅行途中的銷售代表可以使用 Web 同步處理。 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]公司有許多銷售代表需要訪問他們所在地區的各店鋪及供應商。 長途旅行時，這些銷售代表會在旅館中停宿，他們需要一個便利的方式可以讓他們在每日結束時上傳銷售資料並下載產品更新。  
+ 例如，旅行途中的銷售代表可以使用 Web 同步處理。 
+  [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]公司有許多銷售代表需要訪問他們所在地區的各店鋪及供應商。 長途旅行時，這些銷售代表會在旅館中停宿，他們需要一個便利的方式可以讓他們在每日結束時上傳銷售資料並下載產品更新。  
   
- [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 的 IT 部門用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對每台可攜式電腦進行了設定，可以讓合併式複寫使用 Web 同步處理。 每台可攜式電腦上的合併代理程式都有一個指向複寫元件的網際網路 URL，這些複寫元件安裝在執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 的電腦上。 這些元件會利用發行者來同步處理訂閱者。 現在每個銷售代表都可以透過任何可用的網際網路連接進行連線，而不需要使用遠端撥號連接，並能夠上傳及下載適當的資料。 網際網路連接使用了「安全通訊端層」(SSL)，因此不需要使用虛擬私人網路 (VPN)。  
+ 
+  [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 的 IT 部門用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對每台可攜式電腦進行了設定，可以讓合併式複寫使用 Web 同步處理。 每台可攜式電腦上的合併代理程式都有一個指向複寫元件的網際網路 URL，這些複寫元件安裝在執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 的電腦上。 這些元件會利用發行者來同步處理訂閱者。 現在每個銷售代表都可以透過任何可用的網際網路連接進行連線，而不需要使用遠端撥號連接，並能夠上傳及下載適當的資料。 網際網路連接使用了「安全通訊端層」(SSL)，因此不需要使用虛擬私人網路 (VPN)。  
   
  如需設定 Web 同步處理所需元件的資訊，請參閱[設定 Web 同步處理](configure-web-synchronization.md)、[針對 Web 同步處理設定 IIS](configure-iis-for-web-synchronization.md) 和[針對 Web 同步處理設定 IIS 7](configure-iis-7-for-web-synchronization.md)。  
   
@@ -49,11 +51,12 @@ ms.locfileid: "63200090"
   
  Web 同步處理是僅用於提取訂閱的選項；因此「合併代理程式」永遠是在訂閱者端執行。 此合併代理程式可以是標準合併代理程式、合併代理程式 ActiveX 控制項，或透過 Replication Management Objects (RMO) 提供同步處理的應用程式。 若要指定執行 IIS 之電腦的位置，請將 **-InternetUrl** 參數用於合併代理程式。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) 在執行 IIS 的電腦上設定，負責處理從發行者和訂閱者傳送到伺服器的訊息。 拓撲中的每個節點都利用「合併式複寫重新調整器」(Replrec.dll) 來處理 XML 資料流。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) 在執行 IIS 的電腦上設定，負責處理從發行者和訂閱者傳送到伺服器的訊息。 拓撲中的每個節點都利用「合併式複寫重新調整器」(Replrec.dll) 來處理 XML 資料流。  
   
  參與 Web 同步處理的所有電腦都需要[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本。  
   
-### <a name="synchronization-process"></a>同步處理  
+### <a name="synchronization-process"></a>同步處理程序  
  同步處理期間會發生下列步驟：  
   
 1.  合併代理程式會在訂閱者端啟動。 此代理程式會執行下列動作：  
@@ -81,7 +84,7 @@ ms.locfileid: "63200090"
 3.  接著，訂閱者端的合併代理程式會接受 HTTPS 回應，並將下載變更套用到訂閱資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
- [Configure Web Synchronization](configure-web-synchronization.md)   
- [Topologies for Web Synchronization](topologies-for-web-synchronization.md)  
+ [設定 Web 同步處理](configure-web-synchronization.md)   
+ [Web 同步處理的拓撲](topologies-for-web-synchronization.md)  
   
   

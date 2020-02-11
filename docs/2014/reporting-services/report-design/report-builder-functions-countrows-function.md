@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3414498d0ce399607ab0faa1a438dad88efc35c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105276"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>CountRows 函數 (報表產生器及 SSRS)
@@ -35,13 +35,15 @@ CountRows(scope, recursive)
  (`String`) 包含要計數之報表項目的資料集、資料區域或群組的名稱。  
   
  *遞迴*  
- (**列舉型別**) 選擇性。 `Simple` (預設值) 或 `RdlRecursive`。 指定是否要以遞迴方式執行彙總。  
+ (**列舉型別**) 選擇性。 
+  `Simple` (預設值) 或 `RdlRecursive`。 指定是否要以遞迴方式執行彙總。  
   
 ## <a name="return-type"></a>傳回類型  
  傳回 `Integer`。  
   
 ## <a name="remarks"></a>備註  
- `CountRows` 會計算指定之範圍中所有資料列的數目，包括具有 Null 值的資料列。  
+ 
+  `CountRows` 會計算指定之範圍中所有資料列的數目，包括具有 Null 值的資料列。  
   
  *scope* 的值不能為運算式，且必須參考目前的範圍或包含範圍。  
   

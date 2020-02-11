@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da26fc9274e68cd5233766af7e7c15550412db38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63254468"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>開啟資料庫圖表 (Visual Database Tools)
@@ -40,7 +40,7 @@ ms.locfileid: "63254468"
 >  只有圖表的擁有人或資料庫的 db_owner 角色成員能開啟圖表。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用資料庫圖表&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [使用資料庫關係圖 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [了解資料庫圖表擁有權 &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)  
   
   

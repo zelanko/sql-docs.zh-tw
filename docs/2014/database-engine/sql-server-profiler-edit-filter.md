@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2828316739e53a94b248a8fffcf020ed16692241
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089774"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler - 編輯篩選
@@ -26,9 +26,9 @@ ms.locfileid: "66089774"
 >  如果是字串類型資料的資料行，篩選準則將會顯示為 LIKE 或 NOT LIKE 字串值。  
   
 ## <a name="see-also"></a>另請參閱  
- [篩選追蹤中的事件&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
- [根據事件結束時間篩選事件&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)   
- [根據事件開始時間篩選事件&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)   
+ [篩選追蹤中的事件 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
+ [根據 &#40;SQL Server Profiler 的事件結束時間來篩選事件&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)   
+ [根據事件開始時間篩選事件 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)   
  [篩選追蹤](../relational-databases/sql-trace/filter-a-trace.md)   
  [使用 SQL Server Profiler 篩選追蹤](../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)  
   

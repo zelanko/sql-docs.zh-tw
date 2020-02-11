@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 249b338148dc762e091d0be47bc081fe87c72fcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162390"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>設定原則式管理的一般屬性
@@ -28,7 +28,7 @@ ms.locfileid: "63162390"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目設定原則式管理：**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63162390"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 PolicyAdministratorRole 固定資料庫角色中的成員資格。  

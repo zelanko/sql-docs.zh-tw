@@ -1,5 +1,5 @@
 ---
-title: 連接到 Microsoft SQL Server Analysis Services (SSAS) |Microsoft Docs
+title: 連接到 Microsoft SQL Server Analysis Services （SSAS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe8eee02d019b5cf68e257b3fac4266a18ead795
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087032"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>連接到 Microsoft SQL Server Analysis Services (SSAS)
-  此頁面**資料表匯入精靈**可讓您指定從 Microsoft SQL Server Analysis Services cube 或 SharePoint 主控的 PowerPivot 活頁簿匯入資料的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]** 。  
+  [**資料表匯入嚮導]** 的這個頁面可讓您指定從 SharePoint 上主控的 Microsoft SQL Server Analysis Services Cube 或 PowerPivot 活頁簿匯入資料的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
   
  若要連接至資料來源，您必須先在電腦上安裝適當的提供者。  
   
@@ -40,14 +40,14 @@ ms.locfileid: "66087032"
   
 -   輸入發行至 SharePoint 之 PowerPivot 活頁簿的 URL。  
   
- **[使用 Windows 驗證]**  
+ **使用 Windows 驗證**  
  指定是否使用 Windows 驗證來連接 SQL Server Analysis Services 伺服器。  
   
  Windows 驗證模式可讓使用者透過 Windows 使用者帳戶連接。 可能的話，請使用 Windows 驗證。  
   
  如果使用 Windows 驗證，目前使用者的認證會在預覽和篩選 [資料表屬性] 視窗和 [匯入精靈] 中的資料時使用。 這些認證不會用來匯入或重新整理資料，而是會使用 [模擬資訊] 頁面上指定的 Windows 認證。  
   
- **[使用 SQL Server 驗證]**  
+ **使用 SQL Server 驗證**  
  指定是否使用 SQL Server 驗證來連接 SQL Server Analysis Services 伺服器。  
   
  使用 SQL Server 驗證時，SQL Server 會查看是否已經設定 SQL Server 登入帳戶，以及指定的密碼是否符合先前記錄的密碼，藉以自行執行驗證。  
@@ -67,7 +67,7 @@ ms.locfileid: "66087032"
  從資料庫清單中選取資料庫。  
   
  **進階**  
- 使用 **[設定進階屬性]** 對話方塊設定其他連接屬性。 如需詳細資訊，請參閱[設定進階屬性 &#40;SSAS&#41;](set-advanced-properties-ssas.md)。  
+ 使用 [**設定高級屬性**] 對話方塊來設定其他連接屬性。 如需詳細資訊，請參閱[設定進階屬性 &#40;SSAS&#41;](set-advanced-properties-ssas.md)。  
   
  **測試連接**  
  嘗試使用目前的設定建立與資料來源之間的連接。 顯示一則訊息，指出連接是否成功。  

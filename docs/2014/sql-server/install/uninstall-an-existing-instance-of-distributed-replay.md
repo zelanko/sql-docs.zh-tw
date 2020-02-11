@@ -1,5 +1,5 @@
 ---
-title: 解除安裝 Distributed Replay 的現有執行個體 |Microsoft Docs
+title: 卸載 Distributed Replay 的現有實例 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 45fddb470ce7bee4dd84cbcc3c656e33d30e3166
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091770"
 ---
 # <a name="uninstall-an-existing-instance-of-distributed-replay"></a>解除安裝 Distributed Replay 的現有執行個體
@@ -28,11 +28,11 @@ ms.locfileid: "66091770"
   
 ### <a name="to-uninstall-an-instance-of-distributed-replay"></a>解除安裝 Distributed Replay 的執行個體  
   
-1.  從**開始**功能表上，按一下**控制台**，然後按兩下**新增或移除程式**。  
+1.  在 [**開始**] 功能表中，按一下 [**控制台**]，然後按兩下 [**新增或移除程式**]。  
   
-     選取 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中**解除安裝或變更程式**] 視窗中，然後在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]] 對話方塊中，按一下 [**移除**。  
+     在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [**卸載或變更程式**] 視窗中選取，然後在對話方塊[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中按一下 [**移除**]。  
   
-2.  請依照下列中的步驟[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]精靈，然後在**選取功能**頁面上，選取您想要移除此項目，然後按一下 [Distributed Replay 元件**下一步]。** 。  
+2.  依照[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]嚮導中的步驟操作，然後在 [**選取功能**] 頁面上，選取您要移除的 Distributed Replay 元件，然後按 **[下一步]**。  
   
 3.  完成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈，解除安裝選取的 Distributed Replay 功能。  
   

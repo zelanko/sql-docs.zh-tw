@@ -1,5 +1,5 @@
 ---
-title: URL 存取與 SOAP 之間選擇 |Microsoft Docs
+title: 在 URL 存取和 SOAP 之間選擇 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,19 +16,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 070d37a1e6ca210694d16ab593e9de40882611f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192987"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>在 URL 存取和 SOAP 之間選擇
-  將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 整合到自訂應用程式頗具挑戰性。 不過，這個挑戰不是程式設計模型或是 API 的複雜性，而是有許多整合它的可能方法。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是從無到有設計為開發人員平台，因此它是以程式設計彈性的考量所建立。 當要做出有關將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表導覽與管理功能整合至現有商務應用程式的重大決定時，彈性便會派上用場。  
+  將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 整合到自訂應用程式頗具挑戰性。 不過，這個挑戰不是程式設計模型或是 API 的複雜性，而是有許多整合它的可能方法。 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是從無到有設計為開發人員平台，因此它是以程式設計彈性的考量所建立。 當要做出有關將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表導覽與管理功能整合至現有商務應用程式的重大決定時，彈性便會派上用場。  
   
  ![Reporting Services 程式設計案例](../../../2014/reporting-services/media/bk-ext-04.gif "Reporting Services 程式設計案例")  
 Reporting Services 程式設計支援廣泛的案例。  
   
- 有兩種方式來整合[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]到自訂應用程式：URL 存取與 Reporting Services SOAP API。 要使用哪個方法取決於多個因素。 在某些情況下，將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 整合到自訂商務應用程式，需要同時使用 URL 存取與 SOAP。 您應該問下列問題：  
+ 將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 整合到自訂應用程式 URL 存取與 Reporting Services SOAP API，有兩種方法。 要使用哪個方法取決於多個因素。 在某些情況下，將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 整合到自訂商務應用程式，需要同時使用 URL 存取與 SOAP。 您應該問下列問題：  
   
 -   您或您的使用者需要哪些類型的企業報表功能？ 您需要簡單的方法以啟動和導覽報表，或者您需要自訂商務解決方案有更進階的報表伺服器管理功能？  
   
@@ -41,7 +42,7 @@ Reporting Services 程式設計支援廣泛的案例。
   
  如需報表工具列的詳細資訊，請參閱 [HTML 檢視器和報表工具列](../html-viewer-and-the-report-toolbar.md)。  
   
- 如需有關 URL 存取的詳細資訊，請參閱 < [URL 存取&#40;SSRS&#41;](../url-access-ssrs.md)。  
+ 如需有關 URL 存取的詳細資訊，請參閱[&#40;SSRS&#41;的 Url 存取](../url-access-ssrs.md)。  
   
  URL 存取對於檢視報表非常有用，但是它並未提供可能對於任何企業報表案例很重要的報表與命名空間管理功能。 在此情況下，建議使用 Reporting Services SOAP API 的廣泛和豐富功能。 透過 SOAP API，您可以管理和部署報表、建立排程、設定伺服器屬性、管理報表伺服器命名空間、建立訂閱等等。 SOAP API 會在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中公開一組完整的管理功能。 SOAP API 也可以透過 API 的 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 方法啟用報表檢視和導覽。 不過，透過 SOAP API 檢視報表，並不會啟用報表工具列的內建檢視功能，也不會自動處理 URL 存取提供的報表互動功能。  
   
@@ -52,9 +53,9 @@ Reporting Services 程式設計支援廣泛的案例。
  如需結合 URL 存取與 Web 服務以提供整合報表的範例，請參閱 [SQL Server Reporting Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   
 ## <a name="see-also"></a>另請參閱  
- [將 Reporting Services 整合到應用程式](../../../2014/reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
+ [將 Reporting Services 整合至應用程式](../../../2014/reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [使用 SOAP 整合 Reporting Services](../application-integration/integrating-reporting-services-using-soap.md)   
- [使用 URL 存取整合 Reporting Services](../application-integration/integrating-reporting-services-using-url-access.md)   
+ [使用 URL 存取來整合 Reporting Services](../application-integration/integrating-reporting-services-using-url-access.md)   
  [技術參考 &#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

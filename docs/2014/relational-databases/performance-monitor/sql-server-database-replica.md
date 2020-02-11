@@ -16,13 +16,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9ea811d8fcc598342781111aa559795888a889b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250766"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server、資料庫複本
+  
   **SQLServer:Database Replica** 效能物件包含的效能計數器會報告 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中 AlwaysOn 可用性群組之次要資料庫的報表資訊。 這個物件只有在裝載次要複本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上才有效。  
   
 |計數器名稱|描述|檢視位置...|  
@@ -43,6 +44,6 @@ ms.locfileid: "63250766"
  [監視資源使用量 &#40;系統監視器&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server、可用性複本](sql-server-availability-replica.md)   
  [SQL Server、Databases 物件](sql-server-databases-object.md)   
- [AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
+ [AlwaysOn Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

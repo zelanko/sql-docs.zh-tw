@@ -23,14 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fcdbfe9f9289ab9cc529d4d37eb27d877dfff3ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150483"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>使用 SQL Server Profiler 建立及測試計畫指南
-  當您建立計畫指南時，可使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來擷取精確的查詢文字，以供使用於 **sp_create_plan_guide** 預存程序的 <陳述式文字>  引數。 這有助於確保計畫指南符合編譯時期的查詢。 在建立計畫指南之後， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 也可用來測試計畫指南實際上是否符合查詢。 一般而言，您應該使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來測試計畫指南，以確認查詢符合您的計畫指南。  
+  當您建立計畫指南時，可使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來擷取精確的查詢文字，以供使用於 *sp_create_plan_guide* 預存程序的 <陳述式文字>  引數。 這有助於確保計畫指南符合編譯時期的查詢。 在建立計畫指南之後， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 也可用來測試計畫指南實際上是否符合查詢。 一般而言，您應該使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來測試計畫指南，以確認查詢符合您的計畫指南。  
   
 ## <a name="capturing-query-text-by-using-sql-server-profiler"></a>使用 SQL Server Profiler 擷取查詢文字  
  如果您執行查詢並使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來擷取與提交至 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]完全相同的文字，您可以建立 SQL 或 TEMPLATE 類型的計畫指南來完全符合查詢文字。 這可確保計畫指南是由查詢最佳化工具使用。  
@@ -66,7 +66,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  在 [記事本] 中開啟批次文字檔，將文字複製到「複製與貼上緩衝區」。  
   
-8.  建立計畫指南，並將所複製的文字貼到 **@stmt**引數所指定的引號內 ( **@stmt** )。 您必須在 **@stmt** 引數中的單引號前加上另一個單引號，以免除所有單引號。 當您插入這些單引號的時候，請小心不要加入或移除任何其他字元。 例如，您必須將 **'** 20000101 **'** 日期常值分隔為 **''** 20000101 **''** 。  
+8.  建立計畫指南，並將所複製的文字貼到 **@stmt**引數所指定的引號內 ( **@stmt** )。 您必須在**@stmt**引數中的單引號前面加上另一個單引號，以將其轉義。 當您插入這些單引號的時候，請小心不要加入或移除任何其他字元。 例如，您必須將 **'** 20000101 **'** 日期常值分隔為 **''** 20000101 **''** 。  
   
  以下是計畫指南：  
   

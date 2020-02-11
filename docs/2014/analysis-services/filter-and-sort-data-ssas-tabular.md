@@ -1,5 +1,5 @@
 ---
-title: 篩選和排序資料 (SSAS 表格式) |Microsoft Docs
+title: 篩選和排序資料（SSAS 表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: faa6198bc9fa42b55be63ec57ff49ed6703ef260
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081254"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>篩選與排序資料 (SSAS 表格式)
@@ -26,7 +26,7 @@ ms.locfileid: "66081254"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[排序資料表中的資料&#40;SSAS 表格式&#41;](tabular-models/sort-data-in-a-table-ssas-tabular.md)排序資料表中的資料|此主題中的工作描述如何依字母或數字排序資料表中的資料。|  
-|[篩選資料表中的資料&#40;SSAS 表格式&#41;](tabular-models/filter-data-in-a-table-ssas-tabular.md)|此主題中的工作描述如何套用自訂篩選，以控制資料列的顯示方式。|  
+|[排序資料表中的資料 &#40;SSAS 表格式&#41;](tabular-models/sort-data-in-a-table-ssas-tabular.md)排序資料表中的資料|此主題中的工作描述如何依字母或數字排序資料表中的資料。|  
+|[篩選資料表中的資料 &#40;SSAS 表格式&#41;](tabular-models/filter-data-in-a-table-ssas-tabular.md)|此主題中的工作描述如何套用自訂篩選，以控制資料列的顯示方式。|  
   
   

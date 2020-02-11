@@ -16,22 +16,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd51a3e4c139c52d6510140324ae042c653377b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250320"
 ---
 # <a name="identity-and-access-control-replication"></a>識別和存取控制 (複寫)
-  驗證是某一實體 (在本文中通常是某台電腦) 驗證另一個實體 (通常是另一台電腦或使用者) 的身分或所代表身分的處理，實體也稱為 *「主體」* 。 授權是向已驗證的主體授與資源 (例如檔案系統中的檔案或是資料庫中的資料表) 存取權的處理。  
+  「驗證」（Authentication）是實體（在此內容中通常是電腦）驗證另一個實體（通常是另一部電腦或使用者）是否為其*宣告者的*處理常式。 授權是向已驗證的主體授與資源 (例如檔案系統中的檔案或是資料庫中的資料表) 存取權的處理。  
   
  複寫安全性使用驗證與授權來控制對複寫資料庫物件，以及複寫處理所涉及的電腦和代理程式的存取權限。 這可透過三種機制來完成：  
   
--   代理程式安全性：複寫代理程式安全性模型允許精確控制複寫代理程式執行並建立連接所使用的帳戶。 如需代理程式安全性模型的詳細資訊，請參閱＜ [Replication Agent Security Model](replication-agent-security-model.md)＞。 如需設定代理程式登入和密碼的資訊，請參閱[管理複寫的登入與密碼](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)。  
+-   代理程式安全性：複寫代理程式安全性模型可讓您更精細地控制複寫代理程式執行和連接所用的帳戶。 如需代理程式安全性模型的詳細資訊，請參閱＜ [Replication Agent Security Model](replication-agent-security-model.md)＞。 如需設定代理程式登入和密碼的資訊，請參閱[管理複寫的登入與密碼](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)。  
   
--   系統管理角色：確定複寫設定、維護及處理所使用的是正確的伺服器和資料庫角色。 如需詳細資訊，請參閱 [Security Role Requirements for Replication](security-role-requirements-for-replication.md)。  
+-   系統管理角色：確定已使用正確的伺服器和資料庫角色進行複寫設定、維護和處理。 如需詳細資訊，請參閱 [Security Role Requirements for Replication](security-role-requirements-for-replication.md)。  
   
--   發行集存取清單 (PAL) 中：透過 PAL 授與發行集存取權限。 PAL 功能類似於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 存取控制清單。 當「訂閱者」連接到「發行者」或「散發者」，並要求存取發行集時，代理程式傳送的驗證資訊會依據 PAL 來進行檢查。 如需 PAL 的詳細資訊和最佳做法，請參閱[保護發行者](secure-the-publisher.md)。  
+-   發行集存取清單（PAL）：透過 PAL 授與發行集的存取權。 PAL 功能類似於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 存取控制清單。 當「訂閱者」連接到「發行者」或「散發者」，並要求存取發行集時，代理程式傳送的驗證資訊會依據 PAL 來進行檢查。 如需 PAL 的詳細資訊和最佳做法，請參閱[保護發行者](secure-the-publisher.md)。  
   
 ## <a name="filtering-published-data"></a>篩選發行的資料  
  除了使用驗證和授權來控制對複寫資料及物件的存取外，複寫還含有兩個選項可用於控制訂閱者端可用的資料：資料行篩選和資料列篩選。 如需篩選的詳細資訊，請參閱[篩選發行的資料](../publish/filter-published-data.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "63250320"
  [複寫代理程式安全性模型](replication-agent-security-model.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
  [SQL Server 複寫安全性](view-and-modify-replication-security-settings.md)   
- [複寫威脅和弱點安全防護](threat-and-vulnerability-mitigation-replication.md)   
+ [複寫威脅和弱點緩和措施](threat-and-vulnerability-mitigation-replication.md)   
 
   
   

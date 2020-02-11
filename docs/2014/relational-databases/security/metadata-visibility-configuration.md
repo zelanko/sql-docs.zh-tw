@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187925"
 ---
 # <a name="metadata-visibility-configuration"></a>中繼資料可見性組態
@@ -43,7 +43,7 @@ GO
   
 |||  
 |-|-|  
-|目錄檢視|[!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 預存程序|  
+|目錄檢視|[!INCLUDE[ssDE](../../includes/ssde-md.md)]**sp_help**預存程式|  
 |公開內建函數的中繼資料|資訊結構描述檢視|  
 |相容性檢視|擴充屬性|  
   
@@ -51,7 +51,8 @@ GO
   
 |||  
 |-|-|  
-|「記錄傳送」系統資料表|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 系統資料表|  
+|「記錄傳送」系統資料表|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 系統資料表|  
 |資料庫維護計畫系統資料表|「備份」系統資料表|  
 |「複寫」系統資料表|複寫和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **sp_help** 預存程序|  
   
@@ -63,7 +64,9 @@ GO
   
 -   發出中繼資料的內建函數 (例如 OBJECTPROPERTYEX) 可能傳回 NULL。  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 預存程序可能只會傳回資料列的子集，或傳回 NULL。  
+-   
+  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 預存程序可能只會傳回資料列的子集，或傳回 NULL。  
   
  SQL 模組 (例如預存程序和觸發程序) 會在呼叫者的安全性內容下執行，因此在中繼資料的存取上受到限制。 例如，在下列的程式碼中，當預存程序嘗試存取資料表 `myTable` 的中繼資料而呼叫者對此資料表沒有任何權限時，將會傳回空的結果集。 若在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則會傳回一個資料列。  
   
@@ -77,7 +80,7 @@ END;
 GO  
 ```  
   
- 若要讓呼叫者能夠檢視中繼資料，您可以在適當範圍 (例如，物件層級、資料庫層級或伺服器層級) 授與呼叫者 VIEW DEFINITION 權限。 因此，在上個範例中，如果呼叫者具有 `myTable` 的 VIEW DEFINITION 權限，預存程序就會傳回一個資料列。 如需詳細資訊，請參閱 [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql) 和[授與資料庫權限 &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-database-permissions-transact-sql)。  
+ 若要讓呼叫者能夠檢視中繼資料，您可以在適當範圍 (例如，物件層級、資料庫層級或伺服器層級) 授與呼叫者 VIEW DEFINITION 權限。 因此，在上個範例中，如果呼叫者具有 `myTable`的 VIEW DEFINITION 權限，預存程序就會傳回一個資料列。 如需詳細資訊，請參閱 [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql) 和[授與資料庫權限 &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-database-permissions-transact-sql)。  
   
  您也可以修改預存程序，使其在擁有者的認證下執行。 若程序擁有者和資料表擁有者是相同的擁有者，就會套用擁有權鏈結，且程序擁有者的安全性內容就可以存取 `myTable`的中繼資料。 在這種狀況下，下列程式碼會將中繼資料的資料列傳回給呼叫者。  
   
@@ -102,11 +105,12 @@ GO
 ## <a name="benefits-and-limits-of-metadata-visibility-configuration"></a>中繼資料可見性組態的優點和限制  
  中繼資料可見性組態在整體安全性計畫中扮演著重要的角色。 但在某些情況中，技術純熟又執意操作的使用者還是能夠強制洩漏某些中繼資料。 我們建議您將中繼資料權限部署為全面防禦中的一環。  
   
- 強制發出錯誤訊息中的中繼資料，理論上是可行的，做法是在查詢中操縱述詞評估的順序。 這種「嘗試與錯誤攻擊」  的可能性不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所特有。 它由關聯式代數所允許的關聯式和交換式轉換所暗示。 您可以限制錯誤訊息所傳回的資訊來減輕此風險。 若要以此方式進一步限制中繼資料的可見性，您可以用追蹤旗標 3625 來啟動伺服器。 此追蹤旗標限制錯誤訊息所顯示的資訊量。 而這有助於防止強制洩漏。 代價是錯誤訊息會簡單一些，用於偵錯時可能會比較困難。 如需詳細資訊，請參閱 [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)和[追蹤旗標 &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
+ 強制發出錯誤訊息中的中繼資料，理論上是可行的，做法是在查詢中操縱述詞評估的順序。 這種「嘗試與錯誤攻擊」** 的可能性不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所特有。 它由關聯式代數所允許的關聯式和交換式轉換所暗示。 您可以限制錯誤訊息所傳回的資訊來減輕此風險。 若要以此方式進一步限制中繼資料的可見性，您可以用追蹤旗標 3625 來啟動伺服器。 此追蹤旗標限制錯誤訊息所顯示的資訊量。 而這有助於防止強制洩漏。 代價是錯誤訊息會簡單一些，用於偵錯時可能會比較困難。 如需詳細資訊，請參閱 [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)和[追蹤旗標 &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
   
  下列的中繼資料不會被強制洩漏：  
   
--   **sys.servers** 的 **provider_string**資料行中儲存的值。 沒有 ALTER ANY LINKED SERVER 權限的使用者在資料行中只會看見 NULL 值。  
+-   
+  **sys.servers** 的 **provider_string**資料行中儲存的值。 沒有 ALTER ANY LINKED SERVER 權限的使用者在資料行中只會看見 NULL 值。  
   
 -   使用者自訂物件 (例如預存程序或觸發程序) 的來源定義。 只有下列任一狀況屬實時，才能看見原始程式碼：  
   
@@ -123,9 +127,11 @@ GO
     |**sys.default_constraints**|**sys.computed_columns**|  
     |**sys.numbered_procedures**||  
   
--   **syscomments** 相容性檢視中的 **ctext** 資料行。  
+-   
+  **syscomments** 相容性檢視中的 **ctext** 資料行。  
   
--   **sp_helptext** 程序的輸出。  
+-   
+  **sp_helptext** 程序的輸出。  
   
 -   資訊結構描述檢視中的下列資料行：  
   
@@ -137,7 +143,8 @@ GO
   
 -   OBJECT_DEFINITION() 函數  
   
--   **sys.sql_logins**的 password_hash 資料行中儲存的值。  沒有 CONTROL SERVER 權限的使用者將在此資料行中看到 NULL 值。  
+-   
+  **sys.sql_logins**的 password_hash 資料行中儲存的值。  沒有 CONTROL SERVER 權限的使用者將在此資料行中看到 NULL 值。  
   
 > [!NOTE]  
 >  內建系統程序和函數的 SQL 定義，可經由 **sys.system_sql_modules** 目錄檢視、 **sp_helptext** 預存程序和 OBJECT_DEFINITION() 函數公開檢視。  
@@ -182,17 +189,17 @@ GO
 |**sys.partition_schemes**|**sys.data_spaces**|  
 |**sys.filegroups**|**sys.destination_data_spaces**|  
 |**sys.database_files**|**sys.allocation_units**|  
-|**sys.partitions**|**sys.messages**|  
-|**sys.schemas**|**sys.configurations**|  
+|**sys.partitions**|**sys. 訊息**|  
+|**sys 架構**|**sys.configurations**|  
 |**sys.sql_dependencies**|**sys.type_assembly_usages**|  
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
 ## <a name="see-also"></a>另請參閱  
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
  [DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql)   
- [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   
- [EXECUTE AS 子句 &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql)   
+ [REVOKE &#40;Transact-sql&#41;](/sql/t-sql/statements/revoke-transact-sql)   
+ [&#40;Transact-sql&#41;執行 AS 子句](/sql/t-sql/statements/execute-as-clause-transact-sql)   
  [目錄檢視 &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
- [相容性檢視 &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
+ [&#40;Transact-sql&#41;的相容性檢視](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
   
   

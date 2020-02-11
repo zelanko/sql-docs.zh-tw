@@ -13,23 +13,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf05de13f0aada12da055f2e9c1e5a3a0db1d1df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195031"
 ---
 # <a name="page-setup-dialog-box"></a>版面設定對話方塊
   您可以選取 [頁面設定]  對話方塊中的選項，自訂您的頁面設計。 提供的選項取決於您針對編輯安裝與啟用的語言。  
   
-## <a name="paper"></a>紙張  
+## <a name="paper"></a>文件  
  **大小**  
  從清單中選取大小。  
   
  **Source**  
  指定要使用的紙張。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 列出可用於所選印表機的來源。  
   
-## <a name="orientation"></a>Orientation  
+## <a name="orientation"></a>方向  
  **縱向**  
  以紙張短邊在頁面頂端的方式列印文件。  
   

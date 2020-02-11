@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3cc249ebfce796d7932e68d993ac98ede867845f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63238382"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit 記錄
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能可讓您稽核伺服器層級和資料庫層級的事件群組和事件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能可讓您稽核伺服器層級和資料庫層級的事件群組和事件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。  
   
  稽核是由零或多個稽核動作項目所組成，這些項目會記錄到稽核 *「目標」* (Target)。 稽核目標可以是二進位檔案、Windows 應用程式事件記錄檔或 Windows 安全性事件記錄檔。 傳送給目標的記錄包含下表所述的元素。  
   
@@ -28,14 +28,14 @@ ms.locfileid: "63238382"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|可稽核的動作引發時的日期/時間。|`datetime2`|是|  
 |**sequence_no**|追蹤單一稽核記錄中太長而無法納入稽核寫入緩衝區內的記錄順序。|`int`|是|  
-|**action_id**|動作的識別碼<br /><br /> 提示：若要使用**action_id**做為述詞必須從字元字串中轉換為數值。 如需詳細資訊，請參閱 [針對 action_id/class_type 述詞篩選 SQL Server Audit](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)。|`varchar(4)`|是|  
-|**succeeded**|指示觸發此事件的動作是否成功|`bit` -1 = 成功，0 = 失敗|是|  
+|**action_id**|動作的識別碼<br /><br /> 提示：若要使用 **action_id** 作為述詞，您必須將它從字元字串轉換為數值。 如需詳細資訊，請參閱 [針對 action_id/class_type 述詞篩選 SQL Server Audit](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)。|`varchar(4)`|是|  
+|**均**|指示觸發此事件的動作是否成功|`bit`-1 = 成功，0 = 失敗|是|  
 |**permission_bitmask**|當適用時，顯示已授與、拒絕或撤銷的權限|`bigint`|否|  
-|**is_column_permission**|指出資料行層級權限的旗標|`bit` -1 = true,0 = False|否|  
+|**is_column_permission**|指出資料行層級權限的旗標|`bit`-1 = True，0 = False|否|  
 |**session_id**|事件發生所在之工作階段的識別碼。|`int`|是|  
 |**server_principal_id**|動作執行所在之登入環境的識別碼。|`int`|是|  
 |**database_principal_id**|動作執行所在之資料庫使用者環境的識別碼。|`int`|否|  
-|**object_ id**|稽核發生所在之實體的主要識別碼。 這包括：<br /><br /> 伺服器物件<br /><br /> 資料庫<br /><br /> 資料庫物件<br /><br /> 結構描述物件|`int`|否|  
+|**object_ 識別碼**|稽核發生所在之實體的主要識別碼。 其中包括：<br /><br /> 伺服器物件<br /><br /> 資料庫<br /><br /> 資料庫物件<br /><br /> 結構描述物件|`int`|否|  
 |**target_server_principal_id**|套用可稽核之動作的伺服器主體。|`int`|是|  
 |**target_database_principal_id**|套用可稽核之動作的資料庫主體。|`int`|否|  
 |**class_type**|稽核發生所在之可稽核的實體類型。|`varchar(2)`|是|  
@@ -49,20 +49,24 @@ ms.locfileid: "63238382"
 |**server_instance_name**|稽核發生所在的伺服器執行個體名稱。 使用標準的 machine\instance 格式。|`nvarchar(120)`|是|  
 |**database_name**|動作發生所在的資料庫環境。|`sysname`|否|  
 |**schema_name**|動作發生所在的結構描述環境。|`sysname`|否|  
-|**object_name**|稽核發生所在之實體的名稱。 這包括：<br /><br /> 伺服器物件<br /><br /> 資料庫<br /><br /> 資料庫物件<br /><br /> 結構描述物件<br /><br /> TSQL 陳述式 (如果有的話)|`sysname`|否|  
-|**陳述式**|TSQL 陳述式 (如果有的話)|`nvarchar(4000)`|否|  
+|**object_name**|稽核發生所在之實體的名稱。 其中包括：<br /><br /> 伺服器物件<br /><br /> 資料庫<br /><br /> 資料庫物件<br /><br /> 結構描述物件<br /><br /> TSQL 陳述式 (如果有的話)|`sysname`|否|  
+|**句**|TSQL 陳述式 (如果有的話)|`nvarchar(4000)`|否|  
 |**additional_information**|有關儲存為 XML 之事件的任何其他資訊。|`nvarchar(4000)`|否|  
   
 ## <a name="remarks"></a>備註  
  某些動作不會填入資料行的值，因為它可能不適用於此動作。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 會將字元欄位的 4000 個字元資料儲存在稽核記錄中。 當從可稽核的動作傳回的 **additional_information** 和 **statement** 值傳回 4000 個以上的字元時， **sequence_no** 資料行會用來將多筆記錄寫入單一稽核動作的稽核報表中，以記錄這些資料。 此程序如下：  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 會將字元欄位的 4000 個字元資料儲存在稽核記錄中。 當從可稽核的動作傳回的 **additional_information** 和 **statement** 值傳回 4000 個以上的字元時， **sequence_no** 資料行會用來將多筆記錄寫入單一稽核動作的稽核報表中，以記錄這些資料。 程序如下：  
   
--   **statement** 資料行分成 4000 個字元。  
+-   
+  **statement** 資料行分成 4000 個字元。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 會寫成具有部分資料之稽核記錄的第一個資料列。 所有其他欄位會在每一個資料列中重複。  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 會寫成具有部分資料之稽核記錄的第一個資料列。 所有其他欄位會在每一個資料列中重複。  
   
--   **sequence_no** 值會遞增。  
+-   
+  **sequence_no** 值會遞增。  
   
 -   重複執行此程序，直到記錄所有資料為止。  
   
@@ -71,9 +75,9 @@ ms.locfileid: "63238382"
 ## <a name="related-content"></a>相關內容  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-transact-sql)  
   
- [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)  
+ [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)  
   
- [DROP SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-audit-transact-sql)  
+ [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-audit-transact-sql)  
   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-specification-transact-sql)  
   

@@ -1,5 +1,5 @@
 ---
-title: 檢視並解決資料衝突，合併式發行集 (SQL Server Management Studio) |Microsoft Docs
+title: 查看和解決合併式發行集的資料衝突（SQL Server Management Studio） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8810377a7e676d4376fca3cc52e73d6c507dbd21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255433"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications-sql-server-management-studio"></a>檢視並解決合併式發行集的資料衝突 (SQL Server Management Studio)
@@ -26,9 +26,9 @@ ms.locfileid: "63255433"
   
  複寫衝突檢視器可以在衝突保留期限指定的時間內使用衝突資料 (預設為 14 天)。 若要設定衝突保留期限，可以：  
   
--   為 [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) 的 **@conflict_retention** 參數指定保留值。  
+-   為[sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)的**@conflict_retention**參數指定保留值。  
   
--   為 **@property** 參數指定 **conflict_retention** 的值，並且為 [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) 的 **@value** 參數指定保留值。  
+-   為**@property**參數指定**conflict_retention**的值，並為[sp_changemergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)指定**@value**保留值。  
   
  依預設，會儲存衝突資訊：  
   
@@ -44,14 +44,14 @@ ms.locfileid: "63255433"
   
 ### <a name="to-view-and-resolve-conflicts-for-merge-publications"></a>若要檢視並解決合併式發行集衝突  
   
-1.  連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的「發行者」(或「訂閱者」，如果適用)，然後展開伺服器節點。  
+1.  連接到中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的「發行者」（或「訂閱者」，如果適用），然後展開伺服器節點。  
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您要檢視衝突的發行集，然後按一下 **[檢視衝突]** 。  
+3.  以滑鼠右鍵按一下您要檢視衝突的發行集，然後按一下 **[檢視衝突]**。  
   
     > [!NOTE]  
-    >  如果將 **conflict_logging** 屬性的值指定為 **'subscriber'** ，就無法使用 **[檢視衝突]** 功能表選項。 若要檢視衝突，請從命令提示字元啟動 ConflictViewer.exe。 ConflictViewer.exe 預設會位於下列目錄中︰Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE。 如需有效的啟動參數清單，請執行 ConflictViewer.exe -?。  
+    >  如果將 **conflict_logging** 屬性的值指定為 **'subscriber'** ，就無法使用 **[檢視衝突]** 功能表選項。 若要檢視衝突，請從命令提示字元啟動 ConflictViewer.exe。 依預設，ConflictViewer.exe 位於下列目錄：Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE。 如需有效的啟動參數清單，請執行 ConflictViewer.exe -?。  
   
 4.  在 **[選取衝突資料表]** 對話方塊中，選取要檢視衝突的資料庫、發行集和資料表。  
   
@@ -61,9 +61,9 @@ ms.locfileid: "63255433"
   
     -   在上方格內選取資料列，以便於下方格的該資料列顯示資訊。  
   
-    -   在上方方格中選取一個或多個資料列，然後按一下 **[移除]** ，這相當於按一下 **[提交成功者]** 按鈕 (不會對資料進行任何變更)。  
+    -   在上方方格中選取一個或多個資料列，然後按一下 **[移除]**，這相當於按一下 **[提交成功者]** 按鈕 (不會對資料進行任何變更)。  
   
-    -   按一下屬性按鈕 ([...]  ) 以檢視更多有關於衝突的資料行資訊。  
+    -   按一下屬性按鈕（**...**），即可查看與衝突有關之資料行的詳細資訊。  
   
     -   在提交資料之前，編輯 **[衝突成功者]** 或 **[衝突失敗者]** 資料行中的資料 (灰色資料行表示資料為唯讀)。  
   
@@ -71,12 +71,12 @@ ms.locfileid: "63255433"
   
     -   按一下 **[提交失敗者]** ，以覆寫解決並將指定為衝突失敗者的值傳播到拓撲中的所有節點。  
   
-    -   選取 **[記錄此衝突的詳細資料]** 即可將衝突資料記錄到檔案中。 若要指定檔案的位置，請指向 **[檢視]** 功能表，然後按一下 **[選項]** 。 輸入值，或按一下瀏覽按鈕 ( **[...]** )，然後導覽至適當的檔案。 按一下 **[確定]** 即可結束 **[選項]** 對話方塊。  
+    -   選取 **[記錄此衝突的詳細資料]** 即可將衝突資料記錄到檔案中。 若要指定檔案的位置，請指向 **[檢視]** 功能表，然後按一下 **[選項]**。 輸入值，或按一下瀏覽按鈕 (**[...]**)，然後導覽至適當的檔案。 按一下 **[確定]** 即可結束 **[選項]** 對話方塊。  
   
 6.  關閉複寫衝突檢視器。  
   
 ## <a name="see-also"></a>另請參閱  
- [進階合併式複寫衝突偵測與解決](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [先進合併式複寫衝突偵測與解決](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [指定合併發行項解析程式](publish/specify-a-merge-article-resolver.md)  
   
   

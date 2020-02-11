@@ -14,19 +14,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: edf6d73edb8c4409f82302c2cdf013f18037e4bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478536"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>根據商務規則驗證特定成員 (Master Data Services)
   如果您想要更新或依照商務規則驗證成員子集，請在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中選擇性地套用商務規則。  
   
 > [!NOTE]  
->  如果您想要將商務規則套用至某版本模型中的所有成員，請參閱[根據商務規則驗證版本 &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)。  
+>  如果您想要將商務規則套用至某版本模型中的所有成員，請參閱 [根據商務規則驗證版本 &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
@@ -39,11 +39,11 @@ ms.locfileid: "65478536"
   
 2.  從 **[版本]** 清單中選取版本。  
   
-3.  按一下 **[總管]** 。  
+3.  按一下 **[總管]**。  
   
 4.  從功能表列指向 **[實體]** ，然後按一下包含要套用規則之成員的實體名稱。  
   
-5.  按一下 [套用商務規則]  。 商務規則只套用至方格中顯示的成員。  
+5.  按一下 [套用商務規則]****。 商務規則只套用至方格中顯示的成員。  
   
 ## <a name="see-also"></a>另請參閱  
  [根據商務規則驗證版本 &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)   

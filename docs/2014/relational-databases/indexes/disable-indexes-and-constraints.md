@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162409"
 ---
 # <a name="disable-indexes-and-constraints"></a>停用索引和條件約束
@@ -39,7 +39,7 @@ ms.locfileid: "63162409"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法停用索引：**  
   
@@ -85,7 +85,7 @@ ms.locfileid: "63162409"
   
 -   建立新的叢集索引可啟用先前停用的非叢集索引。 如需詳細資訊，請參閱 [Enable Indexes and Constraints](enable-indexes-and-constraints.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  若要執行 ALTER INDEX，至少需要資料表或檢視表的 ALTER 權限。  
@@ -127,12 +127,12 @@ ms.locfileid: "63162409"
  顯示建立索引的資料表名稱或檢視名稱。  
   
  **索引類型**  
- 顯示索引的類型：**叢集化**，**非叢集**，**空間**，或**XML**。  
+ 顯示索引的類型：[叢集]  、[非叢集]  、[空間]  或 [XML]  。  
   
  **狀態**  
  顯示停用作業的狀態。 執行之後可能的值：  
   
--   空白  
+-   Blank  
   
      執行之前 **[狀態]** 為空白。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "63162409"
   
      已經開始停用索引，但尚未完成。  
   
--   **成功**  
+-   「成功」   
   
      已成功地完成停用作業。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "63162409"
   
      因為使用者停止作業，所以未成功地完成停用索引。  
   
- **Message**  
+ **訊息**  
  提供停用作業期間錯誤訊息的文字。 在執行期間，會以超連結顯示錯誤。 超連結的文字會描述錯誤的主體。 **[訊息]** 資料行通常寬度不足以讀取完整訊息文字。 取得完整文字有兩種方式：  
   
 -   將滑鼠指標移至訊息資料格上，即可顯示具有錯誤文字的工具提示。  

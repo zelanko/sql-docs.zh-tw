@@ -1,5 +1,5 @@
 ---
-title: 僅向前快轉資料指標 (ODBC) |Microsoft Docs
+title: 僅向前快轉資料指標（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: df3cea50a8800cdca7fe0a5c846bc32556299e0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209786"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>快速順向資料指標 (ODBC)
-  當連接到的執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，則[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式會針對順向、 唯讀資料指標支援效能最佳化。 快速順向資料指標是由驅動程式和伺服器以非常類似於預設結果集的方式在內部實作。 除了具有高效能以外，快速順向資料指標還具有下列特性：  
+  當連接到的實例時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援順向、唯讀資料指標的效能優化。 快速順向資料指標是由驅動程式和伺服器以非常類似於預設結果集的方式在內部實作。 除了具有高效能以外，快速順向資料指標還具有下列特性：  
   
--   [SQLGetData](../../native-client-odbc-api/sqlgetdata.md)不支援。 結果集資料行必須繫結至程式變數。  
+-   不支援[SQLGetData](../../native-client-odbc-api/sqlgetdata.md) 。 結果集資料行必須繫結至程式變數。  
   
--   偵測到資料指標的結尾時，伺服器就會自動關閉資料指標。 應用程式仍然必須呼叫[SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md)或是[SQLFreeStmt](../../native-client-odbc-api/sqlfreestmt.md)(SQL_CLOSE)，但驅動程式不需要關閉要求傳送到伺服器。 這樣可節省透過網路與伺服器之間的往返。  
+-   偵測到資料指標的結尾時，伺服器就會自動關閉資料指標。 應用程式仍然必須呼叫[SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md)或[SQLFreeStmt](../../native-client-odbc-api/sqlfreestmt.md)（SQL_CLOSE），但驅動程式不需要將關閉要求傳送至伺服器。 這樣可節省透過網路與伺服器之間的往返。  
   
- 應用程式會使用驅動程式特有的陳述式屬性 SQL_SOPT_SS_CURSOR_OPTIONS 來要求快速順向資料指標。 設定為 SQL_CO_FFO 時，就會啟用快速順向資料指標，但不啟用自動擷取。 設定為 SQL_CO_FFO_AF 時，則會一併啟用自動擷取選項。 如需有關自動擷取的詳細資訊，請參閱 <<c0> [ 使用自動擷取搭配 ODBC 資料指標](using-autofetch-with-odbc-cursors.md)。  
+ 應用程式會使用驅動程式特有的陳述式屬性 SQL_SOPT_SS_CURSOR_OPTIONS 來要求快速順向資料指標。 設定為 SQL_CO_FFO 時，就會啟用快速順向資料指標，但不啟用自動擷取。 設定為 SQL_CO_FFO_AF 時，則會一併啟用自動擷取選項。 如需自動擷取的詳細資訊，請參閱搭配[ODBC 資料指標使用自動擷取](using-autofetch-with-odbc-cursors.md)。  
   
  包含自動擷取的快速順向資料指標可用來透過與伺服器之間的一次往返，擷取小型結果集。 在這些步驟中， *n*是要傳回的資料列數目：  
   
@@ -37,13 +37,13 @@ ms.locfileid: "63209786"
   
 2.  將 SQL_ATTR_ROW_ARRAY_SIZE 設定為*n* + 1。  
   
-3.  將結果資料行繫結至的陣列*n* + 1 個元素 (為了安全起見如果*n* + 1 個資料列實際上擷取)。  
+3.  將結果資料行系結至*n* + 1 個元素的陣列（如果實際提取*n* + 1 個數據列，則為安全的）。  
   
-4.  開啟資料指標，使用**SQLExecDirect**或是**SQLExecute**。  
+4.  使用**SQLExecDirect**或**SQLExecute**開啟資料指標。  
   
-5.  如果傳回的狀態是 SQL_SUCCESS，然後呼叫**SQLFreeStmt**或是**SQLCloseCursor**來關閉資料指標。 資料列的所有資料都將位於繫結的程式變數中。  
+5.  如果傳回狀態為 SQL_SUCCESS，則呼叫**SQLFreeStmt**或**SQLCloseCursor**來關閉資料指標。 資料列的所有資料都將位於繫結的程式變數中。  
   
- 這些步驟中， **SQLExecDirect**或是**SQLExecute**傳送資料指標開啟要求啟用自動擷取選項。 在收到來自用戶端的單一要求時，伺服器會：  
+ 透過這些步驟， **SQLExecDirect**或**SQLExecute**會傳送已啟用自動擷取選項的資料指標開啟要求。 在收到來自用戶端的單一要求時，伺服器會：  
   
 -   開啟資料指標。  
   
@@ -52,6 +52,6 @@ ms.locfileid: "63209786"
 -   由於資料列集大小設定為結果集的資料列數目加上 1，所以伺服器會偵測資料指標的結尾並關閉資料指標。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料指標程式設計詳細資料&#40;ODBC&#41;](cursor-programming-details-odbc.md)  
+ [ODBC&#41;&#40;的資料指標程式設計詳細資料](cursor-programming-details-odbc.md)  
   
   

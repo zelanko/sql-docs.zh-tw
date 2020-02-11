@@ -11,18 +11,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a709d4badbd270d9ddffedd62ff040e8ca6c628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149477"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>重新執行選項 (Distributed Replay 管理工具)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 管理工具， `DReplay.exe`，是命令列工具，可用來與 distributed 的 replay controller 通訊。 此主題描述 **replay** 命令列選項與對應的語法。  
+  Distributed Replay 管理工具`DReplay.exe`是命令列工具，可讓您用來與 Distributed Replay controller 通訊。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 此主題描述 **replay** 命令列選項與對應的語法。  
   
- **replay** 選項會起始事件重新執行階段，控制器在此階段中會分派重新執行資料給指定的用戶端、啟動分散式重新執行，並同步處理用戶端。 另外，參與重新執行的每個用戶端可以記錄重新執行活動，並在本機上儲存結果追蹤檔案。  
+ 
+  **replay** 選項會起始事件重新執行階段，控制器在此階段中會分派重新執行資料給指定的用戶端、啟動分散式重新執行，並同步處理用戶端。 另外，參與重新執行的每個用戶端可以記錄重新執行活動，並在本機上儲存結果追蹤檔案。  
   
- ![主題連結圖示](../../database-engine/media/topic-link.gif "主題連結圖示") 如需管理工具語法所使用之語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。  
+ ![主題連結圖示](../../database-engine/media/topic-link.gif "主題連結圖示")如需與管理工具語法搭配使用之語法慣例的詳細資訊，請參閱 transact-sql[語法慣例 &#40;transact-sql&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,13 +35,14 @@ ms.locfileid: "63149477"
 ```  
   
 #### <a name="parameters"></a>參數  
- **-m** *controller*  
+ **-m** *控制器*  
  指定控制器的電腦名稱。 您可以使用 "`localhost`" 或 "`.`" 表示本機電腦。  
   
  如果未指定 **-m** 參數，則會使用本機電腦。  
   
  **-d** *controller_working_dir*  
- 指定控制器上儲存中繼檔案的目錄。 **-d** 是必要參數。  
+ 指定控制器上儲存中繼檔案的目錄。 
+  **-d** 是必要參數。  
   
  下列為適用需求：  
   
@@ -58,7 +60,7 @@ ms.locfileid: "63149477"
  未指定 **-o** 參數時，不會產生結果追蹤檔案。 主控台輸出會在重新執行結尾時傳回摘要資訊，但不會提供其他重新執行統計資料。  
   
  **-s** *target_server*  
- 指定分散式工作負載應該針對它重新執行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 目標執行個體。 您必須使用以下格式指定這個參數： **server_name[\instance name]** 。  
+ 指定分散式工作負載應該針對它重新執行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 目標執行個體。 您必須使用以下格式指定這個參數： **server_name[\instance name]**。  
   
  不可使用 "`localhost`" 或 "`.`" 當做目標伺服器。  
   
@@ -66,7 +68,7 @@ ms.locfileid: "63149477"
   
  如果使用了 **-s** 參數，系統會忽略重新執行組態檔之 `<Server>` 區段中的 `<ReplayOptions>` 元素。  
   
- **-w** *clients*  
+ **-w** *用戶端*  
  此必要參數是以逗號分隔的清單 (不含空白)，會指定應該參與分散式重新執行之用戶端的電腦名稱。 不允許 IP 位址。 請注意，用戶端必須已經向控制器註冊。  
   
 > [!NOTE]  
@@ -85,15 +87,20 @@ ms.locfileid: "63149477"
 ## <a name="examples"></a>範例  
  在此範例中，分散式重新執行會從修改過的重新執行組態檔 `DReplay.exe.replay.config`，衍生其大部分的行為。  
   
--   **-m** 參數會指定一個名為 `controller1` 的電腦，作為控制器。 當控制器服務執行於不同的電腦上時，必須指定電腦名稱。  
+-   
+  **-m** 參數會指定一個名為 `controller1` 的電腦，作為控制器。 當控制器服務執行於不同的電腦上時，必須指定電腦名稱。  
   
--   **-d** 參數會指定控制器上中繼檔案的位置， `c:\WorkingDir`。  
+-   
+  **-d** 參數會指定控制器上中繼檔案的位置， `c:\WorkingDir`。  
   
--   **-o** 參數會指定每個指定的用戶端擷取重新執行活動，並將其儲存至結果追蹤檔案。 注意:設定檔中的 `<ResultTrace>` 元素可用來指定是否要記錄資料列計數和結果集。  
+-   
+  **-o** 參數會指定每個指定的用戶端擷取重新執行活動，並將其儲存至結果追蹤檔案。 注意：組態檔中的 `<ResultTrace>` 元素，可用以指定是否應記錄資料列計數與結果集。  
   
--   **-w** 參數會指定 `client1` 到 `client4` 的電腦，參與為分散式重新執行中的用戶端。  
+-   
+  **-w** 參數會指定 `client1` 到 `client4` 的電腦，參與為分散式重新執行中的用戶端。  
   
--   **-c** 參數可用以指向修改過的組態檔 `DReplay.exe.replay.config`。  
+-   
+  **-c** 參數可用以指向修改過的組態檔 `DReplay.exe.replay.config`。  
   
 -   不需要 **-s** 參數，因為重新執行組態檔 `<Server>` 的 `<ReplayOptions>` 元素中，指定了 `DReplay.exe.replay.config`元素。  
   
@@ -126,7 +133,8 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
 </Options>  
 ```  
   
- 若要指定壓力順序模式， `<SequencingMode>` 檔案的 `DReplay.exe.replay.config` 元素要設為等於 `stress`值。 `<ConnectTimeScale>` 和 `<ThinkTimeScale>` 元素設為 `50` 值 (以指定 50%)。 如需有關連接時間和思考時間的詳細資訊，請參閱 [設定 Distributed Replay](configure-distributed-replay.md)。 下列 XML 範例會示範這些變更：  
+ 若要指定壓力順序模式， `<SequencingMode>` 檔案的 `DReplay.exe.replay.config` 元素要設為等於 `stress`值。 
+  `<ConnectTimeScale>` 和 `<ThinkTimeScale>` 元素設為 `50` 值 (以指定 50%)。 如需有關連接時間和思考時間的詳細資訊，請參閱 [設定 Distributed Replay](configure-distributed-replay.md)。 下列 XML 範例會示範這些變更：  
   
 ```  
 <?xml version='1.0'?>  
@@ -149,18 +157,18 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
 </Options>  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  您必須以互動使用者、本機使用者或網域使用者帳戶來執行管理工具。 若要使用本機使用者帳戶，管理工具和控制器必須在同一部電腦上執行。  
   
  如需詳細資訊，請參閱 [Distributed Replay 安全性](distributed-replay-security.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [重新執行追蹤資料](replay-trace-data.md)   
- [檢閱重新執行結果](review-the-replay-results.md)   
+ [檢查重新執行結果](review-the-replay-results.md)   
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [設定 Distributed Replay](configure-distributed-replay.md)   
  [SQL Server Distributed Replay 論壇](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [使用 Distributed Replay 對您的 SQL Server 進行負載測試 - 第 2 部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [使用 Distributed Replay 對您的 SQL Server 進行負載測試 – 第 1 部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [使用 Distributed Replay 對您的 SQL Server 進行負載測試-第2部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [使用 Distributed Replay 對您的 SQL Server 進行負載測試-第1部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

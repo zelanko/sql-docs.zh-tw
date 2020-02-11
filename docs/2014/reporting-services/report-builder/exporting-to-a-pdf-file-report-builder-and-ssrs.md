@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107916"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>匯出至 PDF 檔案 (報表產生器及 SSRS)
   PDF 轉譯延伸模組會將報表轉譯成可在 Adobe Acrobat 與支援 PDF 1.3 之其他協力廠商 PDF 檢視器中開啟的檔案。 雖然 PDF 1.3 與 Adobe Acrobat 4.0 和更新版本相容，但是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 只支援 Adobe Acrobat 6 或更新版本。 轉譯延伸模組不需要 Adobe 軟體就能轉譯報表。 但是，若要檢視或列印 PDF 格式的報表，則需要 PDF 檢視器 (例如 Adobe Acrobat)。  
   
- PDF 轉譯延伸模組支援 ANSI 字元，而且可以從日文、韓文、繁體中文、簡體中文、斯拉夫文、希伯來文和阿拉伯文，轉譯 Unicode 字元 (有特定限制)。 如需有關限制的詳細資訊，請參閱 <<c0> [ 匯出的報表&#40;報表產生器及 SSRS&#41;](export-reports-report-builder-and-ssrs.md)。</c0>  
+ PDF 轉譯延伸模組支援 ANSI 字元，而且可以從日文、韓文、繁體中文、簡體中文、斯拉夫文、希伯來文和阿拉伯文，轉譯 Unicode 字元 (有特定限制)。 如需有關限制的詳細資訊，請參閱[報表產生器和 SSRS&#41;匯出報表 &#40;](export-reports-report-builder-and-ssrs.md)。  
   
  PDF 轉譯器是一種實體頁面轉譯器，因此，其分頁行為與 HTML 和 Excel 之類的其他轉譯器不同。 本主題提供 PDF 轉譯器的特定資訊並描述規則的例外狀況。  
   
@@ -62,10 +62,14 @@ ms.locfileid: "66107916"
   
 |PDF 屬性|來源|  
 |------------------|------------------|  
-|`Title`|`Name` RDL 元素的 `Report` 屬性。|  
-|`Author`|`Author` RDL 元素。|  
-|`Subject`|`Description` RDL 元素。|  
-|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 產品名稱和版本。|  
+|`Title`|
+  `Name` RDL 元素的 `Report` 屬性。|  
+|`Author`|
+  `Author` RDL 元素。|  
+|`Subject`|
+  `Description` RDL 元素。|  
+|`Creator`|
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 產品名稱和版本。|  
 |`Producer`|轉譯延伸模組名稱與版本。|  
 |`CreationDate`|PDF `datetime` 格式的報表執行時間。|  
   
@@ -80,7 +84,7 @@ ms.locfileid: "66107916"
 ### <a name="document-map"></a>文件引導模式  
  如果報表中有任何文件引導模式標籤，就會在 PDF 檔案中加入文件大綱。 每個文件引導模式標籤都會以該標籤在報表中出現的順序，顯示為文件大綱中的一個項目。 在 Acrobat 中，只有在轉譯目標書籤所在頁面時，才會將該書籤加入到文件大綱中。  
   
- 如果只轉譯單一頁面，則不會加入任何文件大綱。 系統會以階層的方式排列文件引導模式，來反映報表中的巢狀層級。 您可以在 Acrobat 的 [書籤] 索引標籤下存取文件大綱。按一下文件大綱內的項目時，會讓文件移至加上書籤的位置。  
+ 如果只轉譯單一頁面，則不會加入任何文件大綱。 系統會以階層的方式排列文件引導模式，來反映報表中的巢狀層級。 [書簽] 索引標籤底下的 Acrobat 可存取檔大綱。按一下 [檔大綱] 中的專案，會使檔移至已加入書簽的位置。  
   
 ### <a name="bookmarks"></a>書籤  
  在 PDF 轉譯中不支援書籤。  
@@ -93,7 +97,7 @@ ms.locfileid: "66107916"
   
   
   
-##  <a name="Compression"></a> 壓縮  
+##  <a name="Compression"></a>程度  
  影像壓縮會以影像的原始檔案類型為基礎。 PDF 轉譯延伸模組預設會壓縮 PDF 檔案。  
   
  若要盡可能保留 PDF 檔案隨附的任何壓縮影像，JPEG 影像會儲存為 JPEG，而其他所有影像類型則會儲存為 BMP。  

@@ -1,5 +1,5 @@
 ---
-title: 建立查詢使用除了資料表的項目 (Visual Database Tools) |Microsoft Docs
+title: 使用資料表以外的專案建立查詢（Visual Database Tools） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6cd83135da7e5c9f4dac9e41ff562551d14ab20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184329"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>使用資料表以外的項目建立查詢 (Visual Database Tools)
@@ -147,6 +147,6 @@ FROM
   
 ```  
   
- "VPA30890F" 是管理人員的 emp_id，您將擷取該管理人員的組織。 如需新增使用者定義函數至查詢的詳細資訊，請參閱[將資料表新增至查詢 &#40;Visual Database Tools&#41;](visual-database-tools.md)。 如需使用者定義函數的完整描述，請參閱[使用者定義函數](../../relational-databases/user-defined-functions/user-defined-functions.md)。  
+ "VPA30890F" 是管理人員的 emp_id，您將擷取該管理人員的組織。 如需新增使用者定義函數至查詢的詳細資訊，請參閱[將資料表新增至查詢 &#40;Visual Database Tools&#41;](visual-database-tools.md)。 如需使用者定義函數的完整描述，請參閱 [使用者定義函數](../../relational-databases/user-defined-functions/user-defined-functions.md)。  
   
   

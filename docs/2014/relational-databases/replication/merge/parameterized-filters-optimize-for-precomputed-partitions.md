@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250553"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>使用預先計算的資料分割最佳化參數化篩選效能
@@ -28,7 +28,7 @@ ms.locfileid: "63250553"
   
  但是，如果「發行者」和「訂閱者」正在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本上執行並使用預先計算的資料分割，則在進行變更時，「發行者」端所有變更的資料分割成員資格會被預先計算並保存。 如此一來，訂閱者與發行者同步處理時，它可以立即啟動來下載與其資料分割相關的變更，不必再經過資料分割評估處理。 當發行集內有大量的變更、訂閱者或發行項時，如此就可以大幅提高效能。  
   
- 除了使用預先計算的資料分割之外，請預先產生快照集並/或允許「訂閱者」在第一次進行同步處理時要求產生並套用快照集。 使用上述一或兩個選項為使用參數化篩選的發行集提供快照集。 如果不指定任何選項，訂閱會使用一系列 SELECT 與 INSERT 陳述式進行初始化，而非使用 **bcp** 公用程式；此處理要慢很多。 如需詳細資訊，請參閱＜ [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)＞。  
+ 除了使用預先計算的資料分割之外，請預先產生快照集並/或允許「訂閱者」在第一次進行同步處理時要求產生並套用快照集。 使用上述一或兩個選項為使用參數化篩選的發行集提供快照集。 如果不指定任何選項，訂閱會使用一系列 SELECT 與 INSERT 陳述式進行初始化，而非使用 **bcp** 公用程式；此處理要慢很多。 如需詳細資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)。  
   
  **使用預先計算的資料分割**  
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7c9e55741c72d624b7149435ced90550135d8b4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63163993"
 ---
 # <a name="implementing-a-datareader-class-for-a-data-processing-extension"></a>為資料處理延伸模組實作 DataReader 類別
@@ -27,7 +27,7 @@ ms.locfileid: "63163993"
   
  在建立 **Command** 類別的執行個體之後，可以呼叫 **Command.ExecuteReader** 從資料來源擷取資料列來建立 **DataReader** 物件。 **DataReader** 實作必須提供兩個基本功能：順向存取執行命令所擷取的結果集，並存取每個資料列中的資料行類型、名稱和值。 用戶端使用 **DataReader** 物件的 **Read** 方法，從查詢結果取得資料列。  
   
- 在報表設計師中，**DataReader** 物件是用以擷取欄位清單以及有關結果集的結構描述資訊。 這是透過實作 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 介面的 **GetName**、**GetValue**、**GetFieldType** 和 **GetOrdinal** 方法來完成。  
+ 在報表設計師中，**DataReader** 物件是用以擷取欄位清單以及有關結果集的結構描述資訊。 這是透過實作 **介面的**GetName **、** GetValue **、** GetFieldType**和**GetOrdinal<xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 方法來完成。  
   
  <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension> 介面可讓您提供有關結果集的特定彙總資訊。 如需範例 **DataReader** 類別實作，請參閱 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
   

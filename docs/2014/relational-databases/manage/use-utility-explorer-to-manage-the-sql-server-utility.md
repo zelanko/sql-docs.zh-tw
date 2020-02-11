@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 232beed45a62ad9cef9f43b122d23cb4d0728a78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191710"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>使用公用程式總管來管理 SQL Server 公用程式
@@ -37,7 +37,7 @@ ms.locfileid: "63191710"
 ### <a name="sql-server-utility-navigation-pane"></a>SQL Server 公用程式導覽窗格  
  [公用程式總管] 導覽窗格會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內提供物件的樹狀檢視 (以公用程式控制點來分組)。 若要展開資料夾，請在 [公用程式總管] 導覽窗格內按一下加號 (+) 或是按兩下 UCP 名稱。 以滑鼠右鍵按一下資料夾或物件來執行一般工作。 樹狀檢視中的節點如下所示：  
   
--   樹狀檢視中的最上層節點為公用程式控制點 (UCP)， 節點名稱會建構為："Utility_Name"(ComputerName\UCP_instance_name)。 如果您沒有 UCP，則必須建立 UCP。 如果您未連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式，必須建立一個連接。 如需詳細資訊，請參閱 [SQL Server 公用程式的功能與工作](sql-server-utility-features-and-tasks.md)。 在樹狀檢視中按一下 UCP 名稱，使用儀表板檢視中的資料來填入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [公用程式總管] 內容窗格。 如需詳細資訊，請參閱[公用程式儀表板 &#40;SQL Server 公用程式&#41;](../../database-engine/utility-dashboard-sql-server-utility.md)。  
+-   樹狀檢視中的最上層節點為公用程式控制點 (UCP)， 此節點名稱建構為："Utility_Name" (ComputerName\UCP_instance_name)。 如果您沒有 UCP，則必須建立 UCP。 如果您未連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式，必須建立一個連接。 如需詳細資訊，請參閱 [SQL Server 公用程式的功能與工作](sql-server-utility-features-and-tasks.md)。 在樹狀檢視中按一下 UCP 名稱，使用儀表板檢視中的資料來填入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [公用程式總管] 內容窗格。 如需詳細資訊，請參閱[公用程式儀表板 &#40;SQL Server 公用程式&#41;](../../database-engine/utility-dashboard-sql-server-utility.md)。  
   
      以滑鼠右鍵按一下 UCP 節點以重新整理儀表板中的資料。  
   

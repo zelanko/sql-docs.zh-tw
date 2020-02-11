@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a4ec4e5d7575fdf5d915c8209999e1285fa79aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144319"
 ---
 # <a name="asynchronous-mode-and-sqlcancel"></a>非同步模式和 SQLCancel
@@ -45,7 +45,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  當應用程式測試是否完成命令時，它會使用相同的驅動程式參數來進行相同的函數呼叫。 如果此驅動程式尚未收到伺服器的回應，它將會再次傳回 SQL_STILL_EXECUTING。 應用程式必須定期測試命令，直到程式碼為 SQL_STILL_EXECUTING 以外的項目為止。 當應用程式取得某個其他傳回碼 (甚至是 SQL_ERROR) 時，它可以判斷出命令已經完成。  
   
- 有時命令會持續一段很長的時間未處理。 如果應用程式需要取消命令而不等候回覆，則可以這麼藉由呼叫**SQLCancel**相同的陳述式以處理與未處理的命令。 這是唯一的時候**SQLCancel**應該使用。 某些程式設計人員使用**SQLCancel**當他們有部分透過處理結果設定，而且想要取消結果集的其餘部分。 [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md)或是[SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md)應該用來取消未完成結果集的其餘部分不**SQLCancel**。  
+ 有時命令會持續一段很長的時間未處理。 如果應用程式需要取消命令而不等待回復，則可以使用與未處理的命令相同的語句控制碼呼叫**SQLCancel**來完成此動作。 這是唯一應該使用**SQLCancel**的時間。 有些程式設計人員會在透過結果集處理部分方式時使用**SQLCancel** ，並想要取消其餘的結果集。 [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md)或[SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md)應該用來取消未完成的結果集的其餘部分，而不是**SQLCancel**。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立 SQL Server Native Client ODBC 驅動程式應用程式](creating-a-driver-application.md)  

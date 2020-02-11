@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4920f5ef2282478f4d12a19b0806cf6ff9632cac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097903"
 ---
-# <a name="databaselogontimeout-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonTimeout 屬性 (WMI MSReportServer_ConfigurationSetting)
+# <a name="databaselogontimeout-property-wmi-msreportserver_configurationsetting"></a>DatabaseLogonTimeout 屬性 (WMI MSReportServer_ConfigurationSetting)
   指定嘗試登入報表伺服器資料庫失敗之前等候的秒數。 值為 **0** 表示無限的等候時間。 唯讀。  
   
 ## <a name="syntax"></a>語法  
@@ -45,7 +45,7 @@ public Int32 DatabaseLogonTimeout;
  [MSReportServer_ConfigurationSetting 類別](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

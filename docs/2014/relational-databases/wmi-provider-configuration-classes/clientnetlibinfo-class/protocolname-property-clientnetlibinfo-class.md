@@ -1,5 +1,5 @@
 ---
-title: ProtocolName 屬性 （ClientNetLibInfo 類別） |Microsoft Docs
+title: ProtocolName 屬性（ClientNetLibInfo 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9931ad6cca3e47f3de324fc1fe7f8f0a5ed67cbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191105"
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>ProtocolName 屬性 (ClientNetLibInfo 類別)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
+ *目標*  
  代表用戶端網路程式庫相關資訊的 [ClientNetLibInfo 類別](clientnetlibinfo-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

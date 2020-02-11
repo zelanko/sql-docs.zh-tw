@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 093d40734b88cc370e0c08a8f9a8b86312409e6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225558"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 功能
@@ -30,7 +30,7 @@ ms.locfileid: "63225558"
  討論自從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client 起的行為變更。  
   
  [使用資料庫鏡像](using-database-mirroring.md)  
- 討論如何[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端支援使用鏡像資料庫，也就是能夠保留的複本或鏡像的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]待命伺服器上的資料庫。  
+ 討論 Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client 如何支援鏡像資料庫的使用，這是在待命伺服器上保留[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫複本或鏡像的功能。  
   
  [執行非同步作業](performing-asynchronous-operations.md)  
  討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支援非同步作業，這是立即傳回而不在呼叫執行緒上封鎖的功能。  
@@ -42,9 +42,9 @@ ms.locfileid: "63225558"
  討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支援 XML 資料類型，這是以 XML 為基礎的資料類型，可以當做資料行類型、變數類型、參數類型或函數傳回類型使用。  
   
  [使用使用者定義型別](using-user-defined-types.md)  
- 討論如何[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端支援使用者定義型別 (UDT)，以擴充 SQL 類型系統，可讓您將物件和自訂資料結構中的儲存[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫。  
+ 討論 Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client 如何支援使用者定義型別（UDT），它可讓您將物件和自訂資料結構儲存在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫中，藉此擴充 SQL 類型系統。  
   
- [使用大型實值型別](using-large-value-types.md)  
+ [使用大數值類型](using-large-value-types.md)  
  討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支援大數值資料類型，也就是大型物件資料類型 (LOB)。  
   
  [以程式設計方式變更密碼](changing-passwords-programmatically.md)  
@@ -57,24 +57,24 @@ ms.locfileid: "63225558"
  討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支援在資料列集修改時使用取用者通知。  
   
  [執行大量複製作業](performing-bulk-copy-operations.md)  
- 討論如何[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端支援大量複製作業，允許的大量資料傳輸，來回[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表或檢視表。  
+ 討論 Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client 如何支援大量複製作業，以允許在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表或視圖中傳入或傳出大量資料。  
   
  [使用加密而不需驗證](using-encryption-without-validation.md)  
  討論如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 加密傳送到伺服器的資料，而不驗證憑證。  
   
- [資料表值參數&#40;SQL Server Native Client&#41;](table-valued-parameters-sql-server-native-client.md)  
+ [資料表值參數 &#40;SQL Server Native Client&#41;](table-valued-parameters-sql-server-native-client.md)  
  討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 對於資料表值參數的支援。  
   
  [大型 CLR 使用者定義型別](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  討論大型 Common Language Runtime (CLR) 使用者定義型別 (UDT) 的支援。  
   
  [FILESTREAM 支援](filestream-support.md)  
- 討論[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]增強型 FILESTREAM 功能的原生用戶端支援。  
+ 討論[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 對增強型 FILESTREAM 功能的支援。  
   
- [用戶端連線中的服務主要名稱 &#40;SPN&#41; 支援](service-principal-name-spn-support-in-client-connections.md)  
+ [用戶端連接中的服務主要名稱 &#40;SPN&#41; 支援](service-principal-name-spn-support-in-client-connections.md)  
  討論如何擴充服務主要名稱 (SPN) 的支援以便跨所有通訊協定進行相互驗證。  
   
- [SQL Server Native Client 支援疏鬆資料行](sparse-columns-support-in-sql-server-native-client.md)  
+ [SQL Server Native Client 中的疏鬆資料行支援](sparse-columns-support-in-sql-server-native-client.md)  
  討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 對疏鬆資料行的支援。  
   
  [日期和時間改善](date-and-time-improvements.md)  
@@ -92,13 +92,13 @@ ms.locfileid: "63225558"
  [存取擴充事件記錄檔中的診斷資訊](accessing-diagnostic-information-in-the-extended-events-log.md)  
  討論可讓您存取信號緩衝區和 XEvents 記錄檔中之診斷資訊的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 及資料追蹤增強功能。  
   
- [SQL Server Native Client 支援 LocalDB](sql-server-native-client-support-for-localdb.md)  
+ [SQL Server Native Client 對 LocalDB 的支援](sql-server-native-client-support-for-localdb.md)  
  討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 對 LocalDB 功能的支援。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 程式設計](../sql-server-native-client-programming.md)   
  [ODBC 的使用說明主題](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
- [OLE DB 的使用說明主題](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)   
+ [OLE DB how to 主題](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)   
  [安裝 SQL Server Native Client](../applications/installing-sql-server-native-client.md)  
   
   

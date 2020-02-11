@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1a57fe5449deeb4445dff3853335b19a62dbc589
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265136"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>建立自訂報表項目設計階段元件
@@ -27,7 +27,7 @@ ms.locfileid: "63265136"
  在程式開發環境中使用設計階段元件所設定的屬性，會由主設計環境序列化和還原序列化，然後儲存為報表定義語言 (RDL) 檔案中的元素。 當報表由報表處理器執行時，使用設計階段元件所設定的屬性會由報表處理器傳遞至自訂報表項目執行階段元件，這個元件會轉譯自訂報表項目，然後將其傳回給報表處理器。  
   
 > [!NOTE]  
->  自訂報表項目設計階段元件會實作為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 元件。 本文件將描述自訂報表項目設計階段元件特定的實作詳細資料。 如需使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 來開發元件的詳細資訊，請參閱 MSDN Library 中的 [Visual Studio 中的元件](https://go.microsoft.com/fwlink/?LinkId=116576)。  
+>  自訂報表項目設計階段元件會實作為 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 元件。 本文件將描述自訂報表項目設計階段元件特定的實作詳細資料。 如需使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 來開發元件的詳細資訊，請參閱 MSDN Library 中的 [Visual Studio 中的元件](https://go.microsoft.com/fwlink/?LinkId=116576)。  
   
  如需完全實作的自訂報表項目的範例，請參閱 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
   
@@ -86,9 +86,9 @@ public override void InitializeNewComponent()
 ```  
   
 ### <a name="modifying-component-properties"></a>修改元件屬性  
- 您可以用數種方式在設計環境中修改 `CustomData` 屬性。 您可以修改任何由設計階段元件所公開的屬性 (Property)，這些屬性都會藉由 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 屬性瀏覽器以 <xref:System.ComponentModel.BrowsableAttribute> 屬性 (Attribute) 標示。 此外，您也可以藉由下列方式修改屬性：將項目拖曳到自訂報表項目的設計介面，或者在設計環境中以滑鼠右鍵按一下控制項，然後選取捷徑功能表的 [屬性]  以顯示自訂屬性視窗。  
+ 您可以用數種方式在設計環境中修改 `CustomData` 屬性。 您可以修改任何由設計階段元件所公開的屬性 (Property)，這些屬性都會藉由 <xref:System.ComponentModel.BrowsableAttribute> 屬性瀏覽器以 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 屬性 (Attribute) 標示。 此外，您也可以藉由下列方式修改屬性：將項目拖曳到自訂報表項目的設計介面，或者在設計環境中以滑鼠右鍵按一下控制項，然後選取捷徑功能表的 [屬性]**** 以顯示自訂屬性視窗。  
   
- 下列程式碼範例顯示套用了 <xref:System.ComponentModel.BrowsableAttribute> 屬性 (Attribute) 的 `Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData` 屬性 (Property)：  
+ 下列程式碼範例顯示套用了 `Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData` 屬性 (Attribute) 的 <xref:System.ComponentModel.BrowsableAttribute> 屬性 (Property)：  
   
 ```csharp  
 [Browsable(true), Category("Data")]  
@@ -184,20 +184,21 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>使用裝飾  
- 自訂報表項目類型也可以實作 `Microsoft.ReportDesigner.Design.Adornment` 類別。 透過裝飾，自訂報表項目控制項可以在設計介面的主要矩形之外提供區域。 這些區域可以處理使用者介面事件，例如按一下滑鼠和拖放作業等。 `Adornment`中所定義的類別[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]`Microsoft.ReportDesigner`命名空間是傳遞實作<xref:System.Windows.Forms.Design.Behavior.Adorner>Windows Form 中找到的類別。 如需完整的文件`Adorner`類別，請參閱[行為服務概觀](https://go.microsoft.com/fwlink/?LinkId=116673)MSDN library 中。 範例程式碼可實作`Microsoft.ReportDesigner.Design.Adornment`類別，請參閱[SQL Server Reporting Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
+ 自訂報表項目類型也可以實作 `Microsoft.ReportDesigner.Design.Adornment` 類別。 透過裝飾，自訂報表項目控制項可以在設計介面的主要矩形之外提供區域。 這些區域可以處理使用者介面事件，例如按一下滑鼠和拖放作業等。 在`Adornment` `Microsoft.ReportDesigner`命名空間中<xref:System.Windows.Forms.Design.Behavior.Adorner> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]定義的類別是在 Windows Forms 中找到之類別的傳遞執行。 如需`Adorner`類別的完整檔，請參閱 MSDN library 中的[行為服務總覽](https://go.microsoft.com/fwlink/?LinkId=116673)。 如需可執行`Microsoft.ReportDesigner.Design.Adornment`類別的範例程式碼，請參閱[SQL Server Reporting Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   
  如需有關在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中進行程式開發和使用 Windows Form 的詳細資訊，請參閱 MSDN Library 中的下列主題：  
   
 -   元件的設計階段屬性  
   
--   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的元件  
+-   
+  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的元件  
   
--   逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項  
+-   逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項  
   
 ## <a name="see-also"></a>另請參閱  
- [自訂報表項目架構](custom-report-item-architecture.md)   
+ [自訂報表專案架構](custom-report-item-architecture.md)   
  [建立自訂報表項目執行階段元件](creating-a-custom-report-item-run-time-component.md)   
- [自訂報表項目類別庫](custom-report-item-class-libraries.md)   
+ [自訂報表專案類別庫](custom-report-item-class-libraries.md)   
  [如何：部署自訂報表項目](how-to-deploy-a-custom-report-item.md)  
   
   

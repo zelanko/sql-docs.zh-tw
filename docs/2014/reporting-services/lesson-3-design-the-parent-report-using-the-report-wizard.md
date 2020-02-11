@@ -1,5 +1,5 @@
 ---
-title: 第 3 課：設計父報表使用報表精靈 |Microsoft Docs
+title: 第 3 課：使用報表精靈設計父報表 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 282c5753b0e1e966d1041944e936d341ed46a30f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108489"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>第 3 課：使用報表精靈設計父報表
@@ -26,22 +26,22 @@ ms.locfileid: "66108489"
   
 2.  以滑鼠右鍵按一下網站，然後選取 [新增項目]  。  
   
-3.  在 **加入新項目**對話方塊中，選取**報表精靈**，輸入報表檔的名稱，然後按一下**新增**。  
+3.  在 [**加入新專案**] 對話方塊中，選取 [**報表 Wizard]**，輸入報表檔案的名稱，然後按一下 [**新增**]。  
   
      這樣會啟動 [報表精靈]。  
   
-4.  在 **資料集屬性**頁面上，於**資料來源**方塊中，選取**DataSet1**您在建立[第 2 課：定義父報表的資料連接和資料表](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)。  
-    [可用資料集]  方塊會自動更新為您如上所建立的 **DataTable**。  
+4.  在 [資料集屬性]**** 頁面的 [資料來源]**** 方塊中，選取您在**第 2 課：定義父報表的資料連線和資料表**中建立的 [DataSet1][](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)。  
+    [可用資料集]**** 方塊會自動更新為您如上所建立的 **DataTable**。  
   
-5.  按一下 [下一步]  。  
+5.  按 [下一步]  。  
   
 6.  在 [排列欄位]  頁面中執行下列操作：  
   
-    1.  從 [可用欄位]  將 **ProductID**、**Name**、**ProductNumber**、**SafetyStockLevel** 和 **ReorderLevel** 拖曳至 [值]  方塊。  
+    1.  從 [可用欄位]**** 將 **ProductID**、**Name**、**ProductNumber**、**SafetyStockLevel** 和 **ReorderLevel** 拖曳至 [值]**** 方塊。  
   
-    2.  按一下箭號旁**sum （productid)** ， **sum （safetystocklevel)** ， **sum （reorderlevel)** 清除**總和**選取項目。  
+    2.  按一下 [ **sum （ProductID）**]、[ **sum （SafetyStockLevel）**]、[sum **（ReorderLevel）** ] 旁的箭號，並清除 [ **sum** ] 選項。  
   
-7.  按一下 [**下一步]** 兩次，然後按一下**完成**以關閉**報表精靈**。  
+7.  按兩次 **[下一步**]，然後按一下 **[完成**] 以關閉**報表精靈**。  
   
      現在您已建立 .rdlc 檔。 此檔案會在報表設計師中開啟。 您設計的 Tablix 現在會顯示於設計介面中。  
   

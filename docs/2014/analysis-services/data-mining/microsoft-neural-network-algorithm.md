@@ -24,19 +24,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a7330fab8b4c0ecdff296e0daa5e529442fd8b94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083864"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-  在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，則[!INCLUDE[msCoName](../../includes/msconame-md.md)]類神經網路演算法會將輸入屬性的每個可能狀態與可預測的屬性，每個可能狀態結合，並使用定型資料來計算機率。 稍後您可以使用這些機率來進行分類或迴歸，依據輸入屬性預測該預測屬性的結果。  
+  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中， [!INCLUDE[msCoName](../../includes/msconame-md.md)]類神經網路演算法會將輸入屬性的每個可能狀態與可預測屬性的每個可能狀態結合，並使用定型資料來電腦率。 稍後您可以使用這些機率來進行分類或迴歸，依據輸入屬性預測該預測屬性的結果。  
   
  以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建構的採礦模型可包含多個網路，視用於輸入和預測的資料行數目或只用於預測的資料行數目而定。 單一採礦模型包含的網路數目，視採礦模型使用的輸入資料行和可預測資料行所包含的狀態數目而定。  
   
 ## <a name="example"></a>範例  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法在分析複雜輸入資料 (例如來自製造程序或商業程序的資料) 或商務問題 (有大量培訓資料可用但很難使用其他演算法來衍生規則) 時很有用。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法在分析複雜輸入資料 (例如來自製造程序或商業程序的資料) 或商務問題 (有大量培訓資料可用但很難使用其他演算法來衍生規則) 時很有用。  
   
  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法的建議狀況包括下列各項：  
   
@@ -51,11 +52,12 @@ ms.locfileid: "66083864"
 -   任何分析許多輸入以及較少輸出之間複雜關聯性的預測模型。  
   
 ## <a name="how-the-algorithm-works"></a>演算法的運作方式  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法會建立最多由三層神經所組成的網路。 這 3 層分別是輸入層、選擇性隱藏層和輸出層。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法會建立最多由三層神經所組成的網路。 這 3 層分別是輸入層、選擇性隱藏層和輸出層。  
   
- **輸入的層：** 輸入的神經會定義資料採礦模型及其機率的所有輸入的屬性值。  
+ **輸入層：** 輸入神經會定義資料採礦模型的所有輸入屬性值及其機率。  
   
- **隱藏的層：** 隱藏神經會接收來自輸入神經的輸入，並提供輸出給輸出神經。 隱藏層是為輸入的各種機率指派加權之處。 加權會對隱藏神經描述特定輸入的相關性或重要性。 指派給輸入的加權越大，該輸入之值的重要性就越大。 加權可以是負數，這表示輸入可以禁止而非喜好特定結果。  
+ **隱藏層：** 隱藏神經會接收來自輸入神經的輸入，並將輸出提供給輸出神經。 隱藏層是為輸入的各種機率指派加權之處。 加權會對隱藏神經描述特定輸入的相關性或重要性。 指派給輸入的加權越大，該輸入之值的重要性就越大。 加權可以是負數，這表示輸入可以禁止而非喜好特定結果。  
   
  **輸出層：** 輸出神經代表資料採礦模型的可預測屬性值。  
   
@@ -90,7 +92,7 @@ ms.locfileid: "66083864"
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 類神經網路演算法技術參考](microsoft-neural-network-algorithm-technical-reference.md)   
- [類神經網路模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [類神經網路模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [類神經網路模型查詢範例](neural-network-model-query-examples.md)   
  [Microsoft 羅吉斯迴歸演算法](microsoft-logistic-regression-algorithm.md)  
   

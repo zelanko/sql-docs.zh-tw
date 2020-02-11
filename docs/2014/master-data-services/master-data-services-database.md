@@ -14,14 +14,15 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6f3c180ed4eef217eb338b3b180c39702a3a89bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479617"
 ---
 # <a name="master-data-services-database"></a>Master Data Services 資料庫
-  此資料庫包含 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統的所有資訊。 它是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 部署的核心。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫：  
+  此資料庫包含 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統的所有資訊。 它是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 部署的核心。 
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫：  
   
 -   儲存 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統所需的設定、資料庫物件和資料。  
   
@@ -35,13 +36,13 @@ ms.locfileid: "65479617"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [分葉成員暫存資料表 &#40;Master Data Services&#41;](leaf-member-staging-table-master-data-services.md)  
+-   [分葉成員臨時表 &#40;Master Data Services&#41;](leaf-member-staging-table-master-data-services.md)  
   
--   [合併成員暫存資料表 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [合併成員臨時表 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
--   [關聯性暫存資料表 &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
+-   [關聯性臨時表 &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   
--   [暫存處理序錯誤 &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)  
+-   [暫存進程錯誤 &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [建立 Master Data Services 資料庫](install-windows/create-a-master-data-services-database.md)   

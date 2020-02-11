@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151205"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
@@ -63,8 +63,9 @@ ms.locfileid: "63151205"
  Database Engine Tuning Advisor 圖形化使用者介面  
  一種易用的介面，可用以指定工作負載，以及選取各種微調選項。  
   
- **dta** 公用程式  
- Database Engine Tuning Advisor 的命令提示字元版本。 **dta** 公用程式的設計，是為了讓您在應用程式和指令碼中使用 Database Engine Tuning Advisor 功能。  
+ **dta**實用  
+ Database Engine Tuning Advisor 的命令提示字元版本。 
+  **dta** 公用程式的設計，是為了讓您在應用程式和指令碼中使用 Database Engine Tuning Advisor 功能。  
   
  工作負載  
  Transact-SQL 指令碼檔案、追蹤檔案或追蹤資料表，內含代表您要微調之資料庫的工作負載。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，您可以將計畫快取指定為工作負載。  
@@ -79,13 +80,13 @@ ms.locfileid: "63151205"
   
 -   無法分析設定為單一使用者模式的資料庫。  
   
--   若您為微調建議所指定的最大磁碟空間超過實際的可用空間，則 Database Engine Tuning Advisor 會使用您所指定的值。 但是，當您執行建議指令碼來實作此項目時，若未先新增更多磁碟空間，指令碼就會失敗。 最大磁碟空間可透過 **dta** 公用程式的 **-B** 選項來指定，或在 [進階微調選項] 對話方塊中輸入值而加以指定。  
+-   若您為微調建議所指定的最大磁碟空間超過實際的可用空間，則 Database Engine Tuning Advisor 會使用您所指定的值。 但是，當您執行建議指令碼來實作此項目時，若未先新增更多磁碟空間，指令碼就會失敗。 最大磁碟空間可透過 **dta** 公用程式的 **-B** 選項來指定，或在 [進階微調選項]**** 對話方塊中輸入值而加以指定。  
   
 -   基於安全性考量，Database Engine Tuning Advisor 無法對位於遠端伺服器中的追蹤資料表，微調其中的工作負載。 若要解決此限制，您可以使用追蹤檔案，而非追蹤資料表，或是將追蹤資料表複製至遠端伺服器。  
   
--   當您使用條件約束 (例如您在使用 **-B** 選項或 [進階微調選項] 對話方塊指定微調建議的最大磁碟空間時，所加諸的條件約束) 時，可能會強制 Database Engine Tuning Advisor 卸除某些現有的索引。 在這種情況下，所產生的 Database Engine Tuning Advisor 建議，可能會導致負面的預期改善。  
+-   當您使用條件約束 (例如您在使用 **-B** 選項或 [進階微調選項]**** 對話方塊指定微調建議的最大磁碟空間時，所加諸的條件約束) 時，可能會強制 Database Engine Tuning Advisor 卸除某些現有的索引。 在這種情況下，所產生的 Database Engine Tuning Advisor 建議，可能會導致負面的預期改善。  
   
--   如果指定條件約束以限制微調時間 (使用 **dta** 公用程式的 **-A** 選項，或勾選 [微調選項] 索引標籤上的 [限制微調時間])，Database Engine Tuning Advisor 可能會超過時間限制，才能產生精確的預期改善，以及針對目前為止所耗用的工作負載部分產生分析報告。  
+-   如果指定條件約束以限制微調時間 (使用 **dta** 公用程式的 **-A** 選項，或勾選 [微調選項]**** 索引標籤上的 [限制微調時間]****)，Database Engine Tuning Advisor 可能會超過時間限制，才能產生精確的預期改善，以及針對目前為止所耗用的工作負載部分產生分析報告。  
   
 -   Database Engine Tuning Advisor 在下列情況下可能不會進行建議：  
   
@@ -106,7 +107,7 @@ ms.locfileid: "63151205"
   
 -   只指定要讓 Database Engine Tuning Advisor 分析的實體資料庫設計結構。 Database Engine Tuning Advisor 有許多選項，但只要指定必要的選項即可。  
   
-## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>xp_msver 擴充預存程序的相依性  
+## <a name="dependency-on-xp_msver-extended-stored-procedure"></a>xp_msver 擴充預存程序的相依性  
  Database Engine Tuning Advisor 依賴 **xp_msver** 擴充預存程序來提供完整的功能。 預設會開啟擴充預存程序。 Database Engine Tuning Advisor 會使用這個擴充預存程序，來提取您要微調的資料庫所在電腦上的處理器數目和可用的記憶體。 如果無法使用 **xp_msver** ，Database Engine Tuning Advisor 會假設執行 Database Engine Tuning Advisor 的電腦之硬體特性。 如果無法取得執行 Database Engine Tuning Advisor 之電腦的硬體特性，將會假設 1 個處理器和 1024 MB 的記憶體。  
   
  此相依性會影響分割的建議，因為所建議的分割數目是根據這兩個值 (處理器的數目和可用的記憶體) 而定。 此外，當您使用測試伺服器來微調實際伺服器時，此相依性也會影響微調結果。 在此案例中，Database Engine Tuning Advisor 會使用 **xp_msver** ，從實際伺服器提取硬體屬性。 在測試伺服器上微調工作負載之後，Database Engine Tuning Advisor 會使用這些硬體屬性來產生建議。 如需詳細資訊，請參閱 [xp_msver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql)。  

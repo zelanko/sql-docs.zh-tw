@@ -1,5 +1,5 @@
 ---
-title: Microsoft 貝氏機率分類演算法 |Microsoft Docs
+title: Microsoft 貝氏貝氏機率分類演算法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b1290e92ecd49a95f250574fb8778a8aa27eb2e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083883"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]貝氏機率分類演算法是根據貝氏的定理和所提供的分類演算法[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用於預測性模型。 貝氏 (Naïve Bayes) 名稱中的 naïve 一字源自此演算法使用 Bayesian 技術但卻沒有考量可能存在的相依性。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]貝氏貝氏機率分類演算法是以貝氏機率分類 ' 定理為基礎的分類演算法，並由[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供以用於預測模型。 貝氏 (Naïve Bayes) 名稱中的 naïve 一字源自此演算法使用 Bayesian 技術但卻沒有考量可能存在的相依性。  
   
  此演算法比其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法更少計算，因此對於快速產生採礦模型來探索輸入資料行和可預測資料行之間的關聯性很有用。 您可以使用此演算法來執行資料的初始瀏覽，然後您可以套用其結果，以其他更多計算和更精確的演算法來建立其他採礦模型。  
   
@@ -55,9 +55,9 @@ ms.locfileid: "66083883"
   
  貝氏機率分類模型的需求如下：  
   
--   **單一索引鍵資料行** ：每個模型都必須包含一個能唯一識別每一筆記錄的數值或文字資料行。 不允許複合的索引鍵。  
+-   **單一索引鍵資料行**每個模型都必須包含一個可唯一識別每一筆記錄的數值或文字資料行。 不允許複合的索引鍵。  
   
--   **輸入資料行**在貝氏機率分類模型中，所有的資料行必須是離散或離散化資料行。 如需有關分隔資料行的資訊，請參閱[離散化方法&#40;資料採礦&#41;](discretization-methods-data-mining.md)。  
+-   **輸入資料行**在貝氏貝氏機率分類模型中，所有資料行都必須是離散或離散化資料行。 如需分隔資料行的相關資訊，請參閱[離散化方法 &#40;資料採礦&#41;](discretization-methods-data-mining.md)。  
   
      對貝氏機率分類模型而言，確保輸入屬性彼此無關也很重要。 當您使用此模型進行預測時，這一點格外重要。  
   
@@ -65,14 +65,14 @@ ms.locfileid: "66083883"
   
      相反地，當您瀏覽模型或資料集來辨識輸入之間的關聯性時，此演算法能夠識別變數之間關聯的功能會很有用。  
   
--   **至少有一個可預期的資料行** ：可預期的屬性必須包含離散或離散化的值。  
+-   **至少一個可預測資料行**可預測的屬性必須包含離散或離散化的值。  
   
      可預期資料行的值可視為輸入。 當您瀏覽新的資料集來尋找資料行之間的關聯性時，這個作法很有用。  
   
 ## <a name="viewing-the-model"></a>檢視模型  
- 若要瀏覽此模型，您可以使用 **[Microsoft 貝氏機率分類檢視器]** 。 檢視器會顯示輸入屬性與可預測屬性間的關聯。 檢視器也會針對每個群集提供詳細的設定檔、區分各個群集的屬性清單以及整個訓練資料集的特性。 如需詳細資訊，請參閱[使用 Microsoft 貝氏機率分類檢視器瀏覽模型](browse-a-model-using-the-microsoft-naive-bayes-viewer.md)。  
+ 若要瀏覽此模型，您可以使用 **[Microsoft 貝氏機率分類檢視器]**。 檢視器會顯示輸入屬性與可預測屬性間的關聯。 檢視器也會針對每個群集提供詳細的設定檔、區分各個群集的屬性清單以及整個訓練資料集的特性。 如需詳細資訊，請參閱 [使用 Microsoft 貝氏機率分類檢視器瀏覽模型](browse-a-model-using-the-microsoft-naive-bayes-viewer.md)。  
   
- 如果您想要知道更多詳細資訊，您可以在 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../microsoft-generic-content-tree-viewer-data-mining.md) 中瀏覽此模型。 如需此模型所儲存之資訊類型的詳細資訊，請參閱[貝式機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)。  
+ 如果您想要知道更多詳細資訊，您可以在 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../microsoft-generic-content-tree-viewer-data-mining.md) 中瀏覽此模型。 如需此模型所儲存之資訊類型的詳細資訊，請參閱 [貝氏機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)。  
   
 ## <a name="making-predictions"></a>進行預測  
  在此模型已培訓之後，結果會儲存成一組模式，供您瀏覽或用來做出預測。  
@@ -92,10 +92,10 @@ ms.locfileid: "66083883"
 -   支援 OLAP 採礦模型的使用。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [特徵選取 &#40;資料採礦&#41;](feature-selection-data-mining.md)   
- [貝式機率分類模型查詢範例](naive-bayes-model-query-examples.md)   
- [貝氏機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
+ [資料採礦演算法 &#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [&#40;資料採礦&#41;的特徵選取](feature-selection-data-mining.md)   
+ [貝氏貝氏機率分類模型查詢範例](naive-bayes-model-query-examples.md)   
+ [適用于貝氏貝氏機率分類模型 &#40;Analysis Services 資料採礦&#41;的採礦模型內容](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
  [Microsoft 貝氏機率分類演算法技術參考](microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   

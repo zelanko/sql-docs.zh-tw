@@ -1,5 +1,5 @@
 ---
-title: 使用資料指標 (ODBC) |Microsoft Docs
+title: 使用資料指標（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb3662bbd1bff6c7c7deb3a8eac61108ea93074a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200482"
 ---
 # <a name="use-cursors-odbc"></a>使用資料指標 (ODBC)
@@ -27,7 +27,7 @@ ms.locfileid: "63200482"
   
      設定 SQL_ATTR_CURSOR_TYPE 和 SQL_ATTR_CONCURRENCY 屬性 (這是慣用的選項)。  
   
-     或  
+     Or  
   
      設定 SQL_CURSOR_SCROLLABLE 和 SQL_CURSOR_SENSITIVITY 屬性。  
   
@@ -37,13 +37,13 @@ ms.locfileid: "63200482"
   
 4.  執行 SQL 陳述式。  
   
-5.  如果使用 WHERE CURRENT OF 子句完成定點更新，而且資料指標名稱沒有隨步驟 3 中的 [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) 提供，可以選擇呼叫 [SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md) 來設定資料指標名稱。  
+5.  如果使用 WHERE CURRENT OF 子句完成定點更新，而且資料指標名稱沒有隨步驟 3 中的 [SQLSetCursorName](../../native-client-odbc-api/sqlgetcursorname.md) 提供，可以選擇呼叫 [SQLGetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) 來設定資料指標名稱。  
   
 6.  呼叫 [SQLNumResultCols](../../native-client-odbc-api/sqlnumresultcols.md) 來取得資料列集中的資料行 (C) 數目。  
   
      使用資料行取向的繫結。  
   
-     \-或-  
+     \- 或 -  
   
      使用資料列取向的繫結。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63200482"
   
      請注意，當結果集包含計算資料列時，每個計算資料列都可以提供為個別的結果集。 這些計算結果集會散佈在一般的資料列內，將一般的資料列分隔成多個結果集。  
   
-9. 您可以選擇使用 SQL_UNBIND 呼叫 [SQLFreeStmt](../../native-client-odbc-api/sqlfreestmt.md)，以釋放任何繫結的資料行緩衝區。  
+9. 或者也可以使用 SQL_UNBIND 呼叫 [SQLFreeStmt](../../native-client-odbc-api/sqlfreestmt.md)，以釋放任何繫結的資料行緩衝區。  
   
 10. 如果有其他可用的結果集，請到步驟 6。  
   
@@ -72,6 +72,6 @@ ms.locfileid: "63200482"
      您可以透過設定 SQL_ATTR_CURSOR_TYPE 和 SQL_ATTR_CONCURRENCY，或是設定 SQL_ATTR_CURSOR_SENSITIVITY 和 SQL_ATTR_CURSOR_SCROLLABLE，控制所使用的資料指標類型。 您不應該混合使用這兩種指定資料指標行為的方法。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用資料指標使用說明主題&#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
+ [使用資料指標的 how to 主題 &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
   
   

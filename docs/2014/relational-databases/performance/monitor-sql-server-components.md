@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9c0534bf3a12aa81a9fc84d0e2c4f82a189748a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150756"
 ---
 # <a name="monitor-sql-server-components"></a>監視 SQL Server 元件
@@ -82,15 +82,16 @@ ms.locfileid: "63150756"
   
 -   Distributed Replay Utility  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 活動監視器  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]活動監視器  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 圖形化顯示計畫  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 圖形化顯示計畫  
   
 -   預存程序  
   
 -   Database Console Commands (DBCC)  
   
--   內建函數  
+-   內建函式  
   
 -   追蹤旗標  
   
@@ -120,11 +121,13 @@ ms.locfileid: "63150756"
   
 3.  儲存擷取的事件資料。  
   
-     儲存擷取的事件資料可讓您稍後分析，或甚至使用 Distributed Replay Utility 或 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來重新執行。 您可將擷取的事件資料儲存到檔案，而檔案可以重新載入到原先建立該檔案的工具中，以進行分析。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 允許將事件資料儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 在建立效能基準時，儲存擷取的事件資料就很重要。 效能基準資料會儲存起來，並在比較最近擷取的事件資料時使用，以判斷效能是否為最佳化。 如需詳細資訊，請參閱 [SQL Server Profiler 範本和權限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)。  
+     儲存擷取的事件資料可讓您稍後分析，或甚至使用 Distributed Replay Utility 或 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來重新執行。 您可將擷取的事件資料儲存到檔案，而檔案可以重新載入到原先建立該檔案的工具中，以進行分析。 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 允許將事件資料儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 在建立效能基準時，儲存擷取的事件資料就很重要。 效能基準資料會儲存起來，並在比較最近擷取的事件資料時使用，以判斷效能是否為最佳化。 如需詳細資訊，請參閱 [SQL Server Profiler 範本和權限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)。  
   
 4.  建立包含指定設定的追蹤範本來擷取事件。  
   
-     追蹤範本中包含事件本身、事件資料和用來擷取資料的篩選等相關規格。 這些範本稍後可以用來監視特定的事件組合，而不需重新定義事件、事件資料與篩選。 例如，如果您要時常監視死結的數目與陷入死結的使用者數目，您可以建立一個定義這些事件、事件資料與事件篩選的範本、儲存範本，然後在下次要監視死結時重新套用此篩選。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會針對這個目的使用追蹤範本。 如需詳細資訊，請參閱[設定追蹤定義預設值 &#40;SQL Server Profiler & #41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md) 和[建立追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)。  
+     追蹤範本中包含事件本身、事件資料和用來擷取資料的篩選等相關規格。 這些範本稍後可以用來監視特定的事件組合，而不需重新定義事件、事件資料與篩選。 例如，如果您要時常監視死結的數目與陷入死結的使用者數目，您可以建立一個定義這些事件、事件資料與事件篩選的範本、儲存範本，然後在下次要監視死結時重新套用此篩選。 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會針對這個目的使用追蹤範本。 如需詳細資訊，請參閱[設定追蹤定義預設值 &#40;SQL Server Profiler & #41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md) 和[建立追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)。  
   
 5.  分析擷取的事件資料。  
   

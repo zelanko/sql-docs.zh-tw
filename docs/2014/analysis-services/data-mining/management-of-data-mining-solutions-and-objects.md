@@ -1,5 +1,5 @@
 ---
-title: 資料採礦方案與物件的管理 |Microsoft Docs
+title: 資料採礦解決方案和物件的管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15574819cf0f0fec0d95fa2353c187cc55091e56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084197"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>資料採礦方案與物件的管理
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供可用於管理現有採礦結構和採礦模型的用戶端工具。 本節說明可以利用每種環境執行的管理作業。  
   
  除了這些工具以外，您也可以透過下列方式來管理資料採礦物件：程式設計方式、使用 AMO，或使用其他連接至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的用戶端，例如適用於 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007 的資料採礦增益集。  
@@ -28,20 +29,21 @@ ms.locfileid: "66084197"
 ## <a name="in-this-section"></a>本章節內容  
  [移動資料採礦物件](moving-data-mining-objects.md)  
   
- [處理需求和考量 &#40;資料採礦&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [&#40;資料採礦&#41;的處理需求和考慮](processing-requirements-and-considerations-data-mining.md)  
   
- [使用 SQL Server Profiler 監視資料採礦 &#40;Analysis Services - 資料採礦&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [使用 SQL Server Profiler 來監視資料採礦 &#40;Analysis Services-資料採礦&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>資料採礦物件的位置  
  已經處理的採礦結構和模型會儲存在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體中。  
   
- 如果您建立的連線[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫中`Immediate`模式時開發資料採礦物件，您所建立的任何物件會立即新增到伺服器工作。 不過，如果在 **[離線]** 模式 (也就是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中作業時的預設值) 中設計資料採礦物件，則您建立的採礦物件在部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體之前，都只是中繼資料容器。 因此，只要您對物件進行變更，就必須將物件重新部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 如需資料採礦架構的詳細資訊，請參閱[實體架構 &#40;Analysis Services - 資料採礦&#41;](physical-architecture-analysis-services-data-mining.md)。  
+ 如果您在開發資料採礦物件[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]時， `Immediate`在模式中建立資料庫的連接，則您所建立的任何物件都會在您工作時立即加入至伺服器。 不過，如果在 **[離線]** 模式 (也就是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中作業時的預設值) 中設計資料採礦物件，則您建立的採礦物件在部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體之前，都只是中繼資料容器。 因此，只要您對物件進行變更，就必須將物件重新部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 如需資料採礦架構的詳細資訊，請參閱[實體架構 &#40;Analysis Services - 資料採礦&#41;](physical-architecture-analysis-services-data-mining.md)。  
   
 > [!NOTE]  
 >  有些用戶端 (例如適用於 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007 的資料採礦增益集) 也可讓您建立工作階段採礦模型和採礦結構，這些用戶端會使用執行個體的連接，但只會將採礦結構和模型儲存在工作階段持續時間的伺服器中。 您仍可以透過用戶端管理這些模型，方法與您管理儲存在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的結構和模型相同，但是在您中斷與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體的連接之後，並不會保存這些物件。  
   
 ## <a name="managing-data-mining-objects-in-sql-server-data-tools"></a>使用 SQL Server 資料工具管理資料採礦物件  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供一些功能，使資料採礦物件的建立、瀏覽和編輯都更為簡易。  
+ 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供一些功能，使資料採礦物件的建立、瀏覽和編輯都更為簡易。  
   
  以下連結提供有關如何使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]修改資料採礦物件的資訊：  
   
@@ -51,7 +53,7 @@ ms.locfileid: "66084197"
   
 -   [變更採礦模型的屬性](change-the-properties-of-a-mining-model.md)  
   
--   [檢視或變更模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)  
+-   [查看或變更 &#40;資料採礦&#41;的模型旗標](modeling-flags-data-mining.md)  
   
 -   [檢視或變更演算法參數](view-or-change-algorithm-parameters.md)  
   
@@ -79,21 +81,21 @@ ms.locfileid: "66084197"
   
 -   <xref:Microsoft.AnalysisServices>  
   
- **限制：** 無。  
+ **限制：** 無.  
   
 ### <a name="data-mining-extensions-dmx"></a>資料採礦延伸模組 (DMX)  
  資料採礦延伸模組 (DMX) 可搭配其他的命令介面 (例如 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 或 ADOMD.Net) 來建立、刪除和查詢採礦結構和採礦模型。  
   
--   [資料採礦延伸模組 &#40;DMX&#41; 資料定義陳述式](/sql/dmx/dmx-statements-data-definition)  
+-   [資料採礦延伸模組 &#40;DMX&#41; 資料定義語句](/sql/dmx/dmx-statements-data-definition)  
   
  **限制：** 有些屬性無法使用 DMX 變更。  
   
 ### <a name="xml-for-analysis-xmla"></a>XML for Analysis (XMLA)  
  XML for Analysis (XMLA) 是適用於所有 Analysis Services 的資料定義語言。 XMLA 讓您能夠控制大多數的資料採礦物件和伺服器作業。 用戶端和伺服器之間的所有管理作業都可以使用 XMLA 執行。 為了便利起見，您可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指令碼語言 (ASSL) 來包裝 XML。  
   
- **限制** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會產生一些僅支援內部使用而不能用於 XMLA DDL 指令碼的 XML 陳述式。  
+ **限制：** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]會產生一些僅支援內部使用的 XMLA 語句，而且不能用在 XML DDL 腳本中。  
   
 ## <a name="see-also"></a>另請參閱  
- [開發人員指南&#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  
+ [開發人員指南 &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  
   
   

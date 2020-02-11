@@ -1,5 +1,5 @@
 ---
-title: 第 1 課：將資料表轉換為階層式結構 |Microsoft Docs
+title: 第 1 課：將資料表轉換為階層式結構 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 66e77d0badf14a804cb82249d03ed552e1f8dcfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205645"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>第 1 課：將資料表轉換為階層式結構
@@ -32,13 +32,13 @@ ms.locfileid: "63205645"
   
 -   [摘要：將資料表轉換為階層式結構](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  本課程需要使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [檢查 Employee 資料表的目前結構](lesson-1-1-examining-the-current-structure-of-the-employee-table.md)  
   
 ## <a name="next-lesson"></a>下一課  
- [第 2 課：建立及管理階層式資料表中的資料](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
+ [第 2 課：在階層式資料表中建立與管理資料](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
   
   

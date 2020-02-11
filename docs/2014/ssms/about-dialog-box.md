@@ -14,16 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe32ce0b356a1c184cd8aba66c9be3d27805f3a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63226218"
 ---
 # <a name="about-dialog-box"></a>關於對話方塊
-  [關於]  對話方塊提供產品資訊，並可讓您存取產品所在之機器的相關資訊。 若為評估版，[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 項目會列出安裝到期前的剩餘天數。 您可以從 [說明]  功能表存取此對話方塊。  
+  [**關於**] 對話方塊提供產品資訊，並可讓您存取產品執行所在電腦的相關資訊。 針對評估複本， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]專案會列出安裝到期前的剩餘天數。 您可以從 [說明]**** 功能表存取此對話方塊。   
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **元件名稱**  
  列出所安裝的每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 項目的名稱。  
   

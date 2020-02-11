@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 811db11aecb5e6c0f4c68d272040aea3f8e38ca4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184534"
 ---
 # <a name="surface-area-configuration"></a>介面區組態
@@ -48,21 +48,21 @@ ms.locfileid: "63184534"
   
 #### <a name="to-configure-surface-area-using-facets"></a>使用 Facet 來設定介面區  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的元件。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的元件。  
   
 2.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後按一下 [Facets]  。  
   
 3.  在 [檢視 Facets]  對話方塊中，展開 [Facet]  清單，並選取適當的 [介面區組態]  Facet ([介面區組態]  、[Analysis Services 的介面區組態]  ，或 [Reporting Services 介面區組態]  )。  
   
-4.  在 **Facet 屬性**區域中，選取您想要用於每個屬性的值。  
+4.  在 **Facet 屬性** 區域中，選取您想要用於每個屬性的值。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
  若要定期檢查 Facet 的組態，請使用以原則為基礎的管理。 如需原則式管理的詳細資訊，請參閱 [使用原則式管理來管理伺服器](../policy-based-management/administer-servers-by-using-policy-based-management.md)。  
   
- 您也可以使用 `sp_configure` 預存程序來設定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 選項。 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
+ 您也可以使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 預存程序來設定 `sp_configure` 選項。 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
- 變更 [!INCLUDE[ssRS](../../includes/ssrs.md)] 的 **EnableIntegrated Security** 屬性時，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的屬性設定。 若要變更 [排程事件和報表傳遞]  屬性以及 [Web 服務和 HTTP 存取]  屬性時，請編輯 **RSReportServer.config** 組態檔。  
+ 變更 **的** EnableIntegrated Security [!INCLUDE[ssRS](../../includes/ssrs.md)]屬性時，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的屬性設定。 若要變更 [排程事件和報表傳遞]  屬性以及 [Web 服務和 HTTP 存取]  屬性時，請編輯 **RSReportServer.config** 組態檔。  
   
 ## <a name="command-prompt-options"></a>命令提示字元選項  
  您可以使用 **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell Cmdlet 以叫用介面區組態原則。 如需詳細資訊，請參閱 [使用 Database Engine Cmdlet](../../database-engine/use-the-database-engine-cmdlets.md)。  

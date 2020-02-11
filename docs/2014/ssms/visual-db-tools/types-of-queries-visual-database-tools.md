@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afcc330c2b87573f766a7b0728662af9de841962
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204589"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>查詢類型 (Visual Database Tools)
@@ -51,7 +51,7 @@ ms.locfileid: "63204589"
  [建立更新查詢 &#40;Visual Database Tools&#41;](create-update-queries-visual-database-tools.md)  
  描述如何建立可更新資料表的查詢。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  [查詢屬性 &#40;Visual Database Tools&#41;](query-properties-visual-database-tools.md)  
  描述設計查詢時可使用的屬性。  
   

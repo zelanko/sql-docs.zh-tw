@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 28e7ee81273d47e285b9903575bdc40ccededbb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151024"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server 的 Wait Statistics 物件
@@ -42,7 +42,7 @@ ms.locfileid: "63151024"
   
  物件中的每個計數器均包含下列執行個體：  
   
-|項目|描述|  
+|Item|描述|  
 |----------|-----------------|  
 |**Average wait time (ms)**|所選取等候類型的平均等候時間。|  
 |**Cumulative wait time (ms) per second**|所選取等候類型的每秒彙總等候時間。|  

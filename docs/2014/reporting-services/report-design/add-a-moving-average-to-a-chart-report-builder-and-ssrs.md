@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 016eeebb679ee16e07a99e44a3740efaae413483
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106833"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>將移動平均加入至圖表 (報表產生器及 SSRS)
@@ -43,6 +43,6 @@ ms.locfileid: "66106833"
 ## <a name="see-also"></a>另請參閱  
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [將空點加入圖表&#40;報表產生器及 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
+ [將空點加入至圖表 &#40;報表產生器和 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
   
   

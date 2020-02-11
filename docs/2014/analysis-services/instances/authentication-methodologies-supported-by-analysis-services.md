@@ -1,5 +1,5 @@
 ---
-title: 支援的 Analysis Services 的驗證方法 |Microsoft Docs
+title: Analysis Services 支援的驗證方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080337"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services 支援的驗證方法
@@ -34,7 +34,7 @@ ms.locfileid: "66080337"
   
  如需 BI 和 Analysis Services 驗證流程的詳細資訊，請參閱 [Microsoft BI Authentication and Identity Delegation](https://go.microsoft.com/fwlink/?LinkID=286576)(Microsoft BI 驗證及識別委派)。  
   
-##  <a name="bkmk_auth"></a> 了解您的驗證替代方案  
+##  <a name="bkmk_auth"></a>瞭解您的驗證替代方案  
  連接到 Analysis Services 資料庫需要 Windows 使用者或群組識別以及相關聯的權限。 此識別可能是一般用途的登入，由需要檢視報表的任何人使用，但是比較可能的案例包含個別使用者的識別。  
   
  表格式或多維度模型通常具有不同的資料存取層級 (依物件或資料本身)，端視提出要求的對象而定。 為了符合此需求，您可以使用 NTLM、Kerberos、EffectiveUserName 或基本驗證。 上述所有技術都會提供一種透過每個連接傳入不同使用者識別的方法。 不過，這些選擇大部分會受限於單躍點限制。 只有含有委派的 Kerberos 允許原始使用者識別跨多個電腦連接流向遠端伺服器上的後端資料存放區。  
@@ -72,7 +72,7 @@ ms.locfileid: "66080337"
   
  只有當您設定 Analysis Services 進行 HTTP 存取，並且使用 IIS 和 msmdpump.dll 來建立連接時，才能使用基本和匿名驗證。 如需詳細資訊，請參閱 [設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](configure-http-access-to-analysis-services-on-iis-8-0.md)(Microsoft BI 驗證及識別委派)。  
   
- **Stored Credentials**  
+ **預存認證**  
   
  大部分中介層應用程式服務都能夠儲存使用者名稱和密碼，然後再用來從下層資料存放區 (例如 Analysis Services 或 SQL Server 關聯式引擎) 擷取資料。 因此，預存認證提供了第五種替代方案，可用於擷取資料。 這種方法的限制包括將使用者名稱和密碼保持在最新狀態的相關維護負擔，以及將單一識別用於連接的作法。 如果您的方案需要原始呼叫端的識別，則預存認證就不會是可行的替代方案。  
   
@@ -80,9 +80,9 @@ ms.locfileid: "66080337"
   
 ## <a name="see-also"></a>另請參閱  
  [使用模擬搭配傳輸安全性](https://go.microsoft.com/fwlink/?LinkId=311727)   
- [設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](configure-http-access-to-analysis-services-on-iis-8-0.md)   
- [設定 Analysis Services 進行 Kerberos 限制委派](configure-analysis-services-for-kerberos-constrained-delegation.md)   
- [為 Analysis Services 執行個體註冊 SPN](spn-registration-for-an-analysis-services-instance.md)   
+ [在 Internet Information Services &#40;IIS&#41; 8.0 上設定 Analysis Services 的 HTTP 存取](configure-http-access-to-analysis-services-on-iis-8-0.md)   
+ [設定 Kerberos 限制委派的 Analysis Services](configure-analysis-services-for-kerberos-constrained-delegation.md)   
+ [Analysis Services 實例的 SPN 註冊](spn-registration-for-an-analysis-services-instance.md)   
  [連接到 Analysis Services](connect-to-analysis-services.md)  
   
   

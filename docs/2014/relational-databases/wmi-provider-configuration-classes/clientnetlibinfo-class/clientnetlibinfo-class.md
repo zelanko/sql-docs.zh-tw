@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f7c2e734fdb332199595a0236d7d86666f4429fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191334"
 ---
 # <a name="clientnetlibinfo-class"></a>ClientNetLibInfo 類別
   [ClientNetLibInfo 類別](clientnetlibinfo-class.md)代表用戶端網路程式庫的相關資訊。  
   
- 用戶端網路程式庫檔案可讓透過網路使用的執行個體通訊的用戶端執行個體[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用特定的網路通訊協定。  
+ 用戶端網路程式庫檔案可讓用戶端實例透過網路與[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用特定網路通訊協定的實例進行通訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)  

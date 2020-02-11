@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 142fd8bf2116d4cc672aeb607938ea8c1c73bf8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097990"
 ---
-# <a name="setemailconfiguration-method-wmi-msreportserverconfigurationsetting"></a>SetEmailConfiguration 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="setemailconfiguration-method-wmi-msreportserver_configurationsetting"></a>SetEmailConfiguration 方法 (WMI MSReportServer_ConfigurationSetting)
   設定報表伺服器用來傳送電子郵件的電子郵件傳遞延伸模組。  
   
 ## <a name="syntax"></a>語法  
@@ -59,12 +59,12 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
  傳回 *HRESULT* ，指出方法呼叫成功或失敗。 值為 0 表示方法呼叫成功。 非零值則表示已發生錯誤。  
   
 ## <a name="remarks"></a>備註  
- 當*SendUsingSMTPServer*參數設為`true`，則**SendUsing**報表伺服器組態檔中的項目會設定為 1。 當*SendUsingSMTPServer*設為`false`，則**SendUsing**未設定項目。  
+ 當*SendUsingSMTPServer*參數設定為`true`時，報表伺服器設定檔中的**SendUsing**專案會設定為1。 當*SendUsingSMTPServer*設定為`false`時，未設定**SendUsing**專案。  
   
  這個方法無法讓使用者將報表伺服器組態檔中的 **SendUsing** 項目設定為 1 以外的值。 若要針對 SMTP 郵件以外的任何項目設定報表伺服器，您必須手動編輯此組態檔。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

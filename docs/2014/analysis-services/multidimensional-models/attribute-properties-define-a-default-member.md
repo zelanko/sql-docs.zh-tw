@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077423"
 ---
 # <a name="define-a-default-member"></a>定義預設成員
@@ -33,17 +33,17 @@ ms.locfileid: "66077423"
  如果屬性階層沒有指定預設成員，而且該屬性階層是可彙總的 (屬性 (Attribute) 上的 `IsAggregatable` 屬性 (Property) 設定為 `True`)，則 (全部) 成員都是預設成員。 如果未指定任何預設成員，且屬性階層是不可彙總的 (屬性 (attribute) 上的 `IsAggregatable` 屬性 (property) 設定為 `False`)，則會從屬性階層的最上層中選取預設成員。  
   
 ## <a name="specifying-the-default-member"></a>指定預設成員  
- 在維度中的每個屬性[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]都有預設成員，您可以指定使用`DefaultMember`屬性的屬性。 如果查詢中不包含屬性，則此設定可用來評估運算式。 如果查詢在維度中指定階層，則會忽略階層中之屬性的預設成員。 如果查詢未在維度中，指定階層`DefaultMember`維度屬性的設定才會生效。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]維度中的每個屬性都有預設成員，您可以使用`DefaultMember`屬性（attribute）來指定它。 如果查詢中不包含屬性，則此設定可用來評估運算式。 如果查詢在維度中指定階層，則會忽略階層中之屬性的預設成員。 如果查詢未在維度中指定階層，則維度屬性的`DefaultMember`設定會生效。  
   
- 如果`DefaultMember`設定的屬性空白且其`IsAggregatable`屬性設定為`True`的預設成員是全部成員。 如果`IsAggregatable`屬性設定為`False`的預設成員是第一個可見層級的第一個成員。  
+ 如果屬性`DefaultMember`的設定為空白，且其`IsAggregatable`屬性設定為`True`，則預設成員為 All 成員。 如果`IsAggregatable`屬性設定為`False`，則預設成員是第一個可見層級的第一個成員。  
   
- `DefaultMember`設定屬性，會套用至屬性所參與的每一個階層。 您不能對維度中的不同階層使用不同設定。 比方說，如果 [1998] 成員是 [Year] 屬性的預設成員，此設定將套用至維度中的每一個階層。 `DefaultMember`設定在此情況下不能 [1998] 在一個階層又 [1997] 在不同的階層架構中。  
+ 屬性`DefaultMember`的設定會套用至屬性所參與的每一個階層。 您不能對維度中的不同階層使用不同設定。 比方說，如果 [1998] 成員是 [Year] 屬性的預設成員，此設定將套用至維度中的每一個階層。 在`DefaultMember`此情況下的設定不能是一個階層中的 [1998] 和不同階層中的 [1997]。  
   
- 如果您為沒有自然彙總之階層的特定層級定義預設成員，則必須定義階層中位於該層級上方之所有層級中的預設成員。 比方說，在階層中 All-國家/地區-氣候，除非您定義國家 （地區） 的預設成員不能定義 climate 的預設成員。 如果沒有這麼做，會產生查詢階段錯誤。  
+ 如果您為沒有自然彙總之階層的特定層級定義預設成員，則必須定義階層中位於該層級上方之所有層級中的預設成員。 例如，在階層的所有國家/地區中，除非您定義國家/地區的預設成員，否則您無法定義氣候的預設成員。 如果沒有這麼做，會產生查詢階段錯誤。  
   
- 若階層中的層級自然彙總，您可以定義階層中任何屬性的預設成員，而不必管階層中的其他屬性。 比方說，如果您在階層中的國家/地區-省-城市，您可以定義縣 （市），例如 [City] 的預設成員。[Montreal] 不必定義 State 或國家/地區的預設成員。  
+ 若階層中的層級自然彙總，您可以定義階層中任何屬性的預設成員，而不必管階層中的其他屬性。 例如，在階層的國家/地區，您可以定義 City 的預設成員，例如 [City]。[蒙特利爾] 未定義州或國家/地區的預設成員。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定屬性階層的 &#40;全部&#41; 層級](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [設定屬性階層的 &#40;所有&#41; 層級](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

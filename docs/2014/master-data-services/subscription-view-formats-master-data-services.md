@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5891e3010645d17d08b13abf30f8fe46594fc1fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478873"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>訂閱檢視格式 (Master Data Services)
@@ -28,13 +28,13 @@ ms.locfileid: "65478873"
 |**合併成員**|包含合併成員及其相關聯的屬性值。|  
 |**集合成員資格**|包含集合清單及其相關聯的屬性值。|  
 |**集合**|包含集合清單、每個集合中的成員以及加權值和排序次序。|  
-|**明確父子**|包含父子格式實體的明確階層結構。|  
+|**明確父系子系**|包含父子格式實體的明確階層結構。|  
 |**明確層級**|包含層級格式實體的明確階層結構。|  
-|**衍生父子 (衍生階層檢視)**|包含父子格式的衍生階層結構。|  
-|**衍生層級 (衍生階層檢視)**|包含層級格式的衍生階層結構。|  
+|**衍生的父子式（衍生階層視圖）**|包含父子格式的衍生階層結構。|  
+|**衍生層級（衍生階層視圖）**|包含層級格式的衍生階層結構。|  
   
 ## <a name="see-also"></a>另請參閱  
- [將資料匯出&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
- [建立訂閱檢視&#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)  
+ [將資料匯出 &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
+ [建立訂閱視圖 &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)  
   
   

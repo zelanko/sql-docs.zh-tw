@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0b24a9c02e38ba8165e015cdf8d1b107e64cbaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193080"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>&lt;xsd:simpleType&gt; 宣告的值
@@ -26,9 +26,9 @@ ms.locfileid: "63193080"
   
 |簡單類型|限制|  
 |-----------------|----------------|  
-|`duration`|年份部分必須是-2 的範圍內<sup>^</sup>31 到 2<sup>^</sup>31-1。 月、日、時、分和秒都必須在 0 到 9999 的範圍之間。 秒的部分在小數點右邊有三個額外的有效位數。|  
-|`dateTime`|時區子欄位中的小時部分必須在 -14 到 +14 的接受範圍內。 年的部分必須在 1 到 9999 的範圍內。 月的部分必須在 1 到 12 的範圍內。 日的部分必須在 1 到 31 的範圍內，而且必須是有效的日曆日期。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會偵測無效的日期及傳回錯誤，例如 1974-02-31，因為 2 月沒有 31 天。<br /><br /> 第二個元件支援 100 奈秒的有效位數。 時區指示為選擇性。<br /><br /> SQL Server 2005 支援 -9999 到 9999 範圍之間的年份。 SQL Server 現在支援更具限制性的年份範圍。 如需詳細資訊，請參閱 [比較具類型的 XML 與不具類型的 XML](compare-typed-xml-to-untyped-xml.md)。|  
-|`date`|年的部分必須在 1 到 9999 的範圍內。 月的部分必須在 1 到 12 的範圍內。 日的部分必須在 1 到 31 的範圍內，而且必須是有效的日曆日期。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會偵測無效的日期及傳回錯誤，例如 1974-02-31，因為 2 月沒有 31 天。<br /><br /> SQL Server 2005 支援 -9999 到 9999 範圍之間的年份。 SQL Server 現在支援更具限制性的年份範圍。 如需詳細資訊，請參閱 [比較具類型的 XML 與不具類型的 XML](compare-typed-xml-to-untyped-xml.md)。|  
+|`duration`|年份部分必須在-2<sup>^</sup>31 到 2<sup>^</sup>31-1 的範圍內。 月、日、時、分和秒都必須在 0 到 9999 的範圍之間。 秒的部分在小數點右邊有三個額外的有效位數。|  
+|`dateTime`|時區子欄位中的小時部分必須在 -14 到 +14 的接受範圍內。 年的部分必須在 1 到 9999 的範圍內。 月的部分必須在 1 到 12 的範圍內。 日的部分必須在 1 到 31 的範圍內，而且必須是有效的日曆日期。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會偵測無效的日期及傳回錯誤，例如 1974-02-31，因為 2 月沒有 31 天。<br /><br /> 第二個元件支援 100 奈秒的有效位數。 時區指示為選擇性。<br /><br /> SQL Server 2005 支援 -9999 到 9999 範圍之間的年份。 SQL Server 現在支援更具限制性的年份範圍。 如需詳細資訊，請參閱[比較具類型的 xml 與](compare-typed-xml-to-untyped-xml.md)不具類型的 xml。|  
+|`date`|年的部分必須在 1 到 9999 的範圍內。 月的部分必須在 1 到 12 的範圍內。 日的部分必須在 1 到 31 的範圍內，而且必須是有效的日曆日期。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會偵測無效的日期及傳回錯誤，例如 1974-02-31，因為 2 月沒有 31 天。<br /><br /> SQL Server 2005 支援 -9999 到 9999 範圍之間的年份。 SQL Server 現在支援更具限制性的年份範圍。 如需詳細資訊，請參閱[比較具類型的 xml 與](compare-typed-xml-to-untyped-xml.md)不具類型的 xml。|  
 |`gYearMonth`|年的部分必須在 -9999 到 9999 的範圍內。|  
 |`gYear`|年的部分必須在 -9999 到 9999 的範圍內。|  
 |`gMonthDay`|月的部分必須在 1 到 12 的範圍內。 日的部分必須在 1 到 31 的範圍內。|  

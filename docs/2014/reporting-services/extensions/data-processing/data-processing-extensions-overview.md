@@ -13,20 +13,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad425c954526fabd6b9b1cf83b42fe5667979c3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63165445"
 ---
 # <a name="data-processing-extensions-overview"></a>資料處理延伸模組概觀
-  在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的資料處理延伸模組，可讓您連接到資料來源並擷取資料。 它們也可當做資料來源與資料集之間的橋樑。 因為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組是依照 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 資料提供者介面子集建立的。  
+  在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的資料處理延伸模組，可讓您連接到資料來源並擷取資料。 它們也可當做資料來源與資料集之間的橋樑。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]資料處理延伸模組會在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]資料提供者介面的子集之後模型化。  
   
  下表列出 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 隨附的資料處理延伸模組。  
   
 |資料處理延伸模組|描述|  
 |-------------------------------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料處理延伸模組|使用 .NET Framework Data Provider for SQL Server 來連線和擷取 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 的資料。|  
+|
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料處理延伸模組|使用 .NET Framework Data Provider for SQL Server 來連線和擷取 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 的資料。|  
 |OLE DB 的資料處理延伸模組|使用 .NET Framework Data Provider for OLE DB。 透過這個延伸模組，報表伺服器可以查詢具有 OLE DB 提供者的資料來源。|  
 |Oracle 的資料處理延伸模組|使用 .NET Framework Data Provider for Oracle。 透過這個延伸模組，報表伺服器可以藉由 Oracle 用戶端連接軟體存取 Oracle 資料來源。|  
 |ODBC 的資料處理延伸模組|使用 .NET Framework Data Provider for ODBC。 透過這個延伸模組，報表伺服器可以存取具有 ODBC 驅動程式之資料庫中的資料。|  
@@ -34,9 +35,11 @@ ms.locfileid: "63165445"
  您可以使用 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 資料處理 API 將自訂資料處理加入報表伺服器。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 為 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的資料提供者提供了內建支援。 如果您已實作完整的資料提供者，就不需要實作 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組。 不過，您應該考慮擴充資料提供者，使其得以涵蓋 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005 的特定功能，例如安全的連接認證與伺服器端的彙總。  
+>  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 為 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的資料提供者提供了內建支援。 如果您已實作完整的資料提供者，就不需要實作 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組。 不過，您應該考慮擴充資料提供者，使其得以涵蓋 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005 的特定功能，例如安全的連接認證與伺服器端的彙總。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 隨附的每個資料處理延伸模組會使用一組共用的介面。 這可確保每個延伸模組都會實作可比較的功能。  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 隨附的每個資料處理延伸模組會使用一組共用的介面。 這可確保每個延伸模組都會實作可比較的功能。  
   
  您可以為自己的資料來源開發資料處理延伸模組，或使用介面來將其他資料處理層加入共同的資料庫基礎結構。 您可以部署自訂資料處理延伸模組，以將資料緊密整合到組織中的現有報表伺服器。 這些自訂資料處理延伸模組也可以做為提供給客戶之自訂報表套件的一部分。  
   
@@ -70,13 +73,13 @@ Reporting Services 資料處理延伸模組架構
   
 -   已安裝報表設計師或報表伺服器的部署電腦。  
   
--   安裝 [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] 或以上版本，或是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 軟體開發套件 (SDK) 的開發電腦。  
+-   已安裝[!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)]或更新版本或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]軟體發展工具組（SDK）的開發電腦。  
   
 -   對 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的特性與功能有深入的了解。  
   
--   對 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 架構、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 資料提供者、ADO.NET DataSet 物件以及常用的 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 介面有深入的了解。  
+-   深入瞭解[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]架構、 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]資料提供者、ADO.NET 資料集物件和通用[!INCLUDE[vstecado](../../../includes/vstecado-md.md)]介面。  
   
--   [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 語言的開發體驗，例如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 或是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET。  
+-   Visual c # 或[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .net 等語言的開發經驗。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 延伸模組](../reporting-services-extensions.md)   

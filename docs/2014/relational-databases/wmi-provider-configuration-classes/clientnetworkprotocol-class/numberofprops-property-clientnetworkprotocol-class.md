@@ -1,5 +1,5 @@
 ---
-title: NumberOfProps 屬性 （ClientNetworkProtocol 類別） |Microsoft Docs
+title: NumberOfProps 屬性（ClientNetworkProtocol 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e0d2245dbba51d69d6dd31fd91044d3efd5b07b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192032"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>NumberOfProps 屬性 (ClientNetworkProtocol 類別)
-  取得用戶端的屬性數目的網路所指定的通訊協定[SetOrderValue 方法 （ClientNetworkProtocol 類別）](clientnetworkprotocol-class.md)。  
+  取得[SetOrderValue 方法（ClientNetworkProtocol 類別）](clientnetworkprotocol-class.md)所指定之用戶端網路通訊協定的屬性數目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,8 +37,8 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
- A [ClientNetworkProtocol 類別](clientnetworkprotocol-class.md)物件，表示所使用的網路通訊協定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端。  
+ *目標*  
+ 代表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端所使用之網路通訊協定的[ClientNetworkProtocol 類別](clientnetworkprotocol-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定用戶端網路通訊協定之屬性數目的 uint32 值  

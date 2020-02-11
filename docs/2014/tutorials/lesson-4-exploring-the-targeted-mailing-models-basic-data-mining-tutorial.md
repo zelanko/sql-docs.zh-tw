@@ -1,5 +1,5 @@
 ---
-title: 第 4 課：探索目標的郵寄模型 （基本資料採礦教學課程） |Microsoft Docs
+title: 第4課：探索目標郵寄模型（基本資料採礦教學課程） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 97db61dc3b9adf2e345957c8e08aa752e51286e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63312144"
 ---
-# <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>第 4 課：探索目標的郵寄模型 （基本資料採礦教學課程）
+# <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>第 4 課：探索目標郵寄模型 (基本資料採礦教學課程)
   處理完專案中的模型之後，您可以瀏覽模型來尋找值得參考的趨勢。 由於模式光看數字可能相當複雜且難以上手，SQL Server 資料採礦提供了一些視覺化工具，可協助您調查資料及了解演算法在資料內探索到的規則和關聯性。 您也可以使用各種精確度測試，在部署模型之前驗證您的資料集或找出執行能力最佳的模型。  
   
- 當您使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]瀏覽模型，您所建立的每個模型中列為**採礦模型檢視器**資料採礦設計師中的索引標籤。 您可以使用檢視器瀏覽模型。 這些檢視器也可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中使用。  
+ 當您使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]來探索模型時，您建立的每個模型都會列在資料採礦設計師的 [**採礦模型檢視器**] 索引標籤中。 您可以使用檢視器瀏覽模型。 這些檢視器也可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中使用。  
   
  您在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中用來建立模型的每個演算法都會傳回不同類型的結果。 因此，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 為每一類型的機器學習模型提供自訂檢視器。  
   
- 如果您想要探查詳細資料，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]也提供了 HTML 檢視器，呼叫**Generic Content Tree Viewer**，會顯示模型資料和任何找不到，以半邊表格格式的模式的詳細的資訊。 如需詳細資訊，請參閱 [使用 Microsoft 一般內容樹狀檢視器瀏覽模型](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)。  
+ 如果您想要深入瞭解詳細資料[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，也會提供稱為「**一般內容樹狀檢視器**」的 HTML 檢視器，其中會以半表格式格式顯示模型資料的詳細資訊，以及找到的任何模式。 如需詳細資訊，請參閱 [使用 Microsoft 一般內容樹狀檢視器瀏覽模型](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)。  
   
  在這一課，您將查看三種模型產生的結果。 每一種模型類型都根據不同的演算法，讓您以不同的角度去了解資料。  
   
@@ -36,25 +36,25 @@ ms.locfileid: "63312144"
   
  請參閱下列主題，深入了解每一種採礦模型檢視器。  
   
--   [瀏覽決策樹模型&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
+-   [流覽決策樹模型 &#40;基本資料採礦教學課程&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
--   [瀏覽群集模型&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
+-   [&#40;基本資料採礦教學課程中探索群集模型&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
--   [瀏覽貝氏機率分類模型&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/exploring-the-naive-bayes-model-basic-data-mining-tutorial.md)  
+-   [探索貝氏貝氏機率分類模型 &#40;基本資料採礦教學課程&#41;](../../2014/tutorials/exploring-the-naive-bayes-model-basic-data-mining-tutorial.md)  
   
- 這三種模型可使用檢視**Generic Content Tree Viewer**，以便擷取公式、 資料值等等。  
+ 這三種模型都可以使用**一般內容樹狀檢視器**來查看，以解壓縮公式、資料值等等。  
   
 ## <a name="first-task-in-lesson"></a>本課程的第一項工作  
- [瀏覽決策樹模型&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
+ [流覽決策樹模型 &#40;基本資料採礦教學課程&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-lesson"></a>上一課  
  [第 3 課：加入及處理模型](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
 ## <a name="next-lesson"></a>下一課  
- [第 5 課：測試模型&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [第5課： &#40;基本資料採礦教學課程來測試模型&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型檢視器工作和使用說明](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [採礦模型檢視器工作和操作說明](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [資料採礦模型檢視器](../../2014/analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

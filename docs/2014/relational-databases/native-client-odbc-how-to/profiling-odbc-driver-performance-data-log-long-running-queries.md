@@ -1,5 +1,5 @@
 ---
-title: 記錄長時間執行的查詢 (ODBC) |Microsoft Docs
+title: 記錄長時間執行的查詢（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,50 +13,50 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13cb285396d63f2b06d004afab4a0ec8c7504fb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200355"
 ---
 # <a name="log-long-running-queries-odbc"></a>記錄長時間執行的查詢 (ODBC)
   此範例會顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式專用選項，用以記錄長時間執行的查詢。 執行時，此範例會建立 Odbcqry.log，其中包含執行超過應用程式設定之間隔的查詢清單。 IA64 不支援此範例。 此範例是針對 ODBC 3.0 版或更新版本所開發。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>使用 ODBC 管理員記錄長時間執行的查詢  
   
-1.  在 **控制台**，按兩下**系統管理工具**，然後按兩下**資料來源 (ODBC)** 。 (或者，您也可以從命令提示字元執行 odbcad32.exe)。  
+1.  在 [**控制台**] 中，按兩下 [系統**管理工具**]，然後按兩下 **[資料來源（ODBC）**]。 (或者，您也可以從命令提示字元執行 odbcad32.exe)。  
   
-2.  按一下 [**使用者 DSN**，**系統 DSN**，或**檔案 DSN** ] 索引標籤。  
+2.  按一下 [**使用者 DSN**]、[**系統 DSN**] 或 [檔案**DSN** ] 索引標籤。  
   
 3.  按一下記錄長時間執行之查詢的資料來源。  
   
-4.  按一下**設定**。  
+4.  按一下 **[設定]**。  
   
-5.  在 Microsoft SQL Server 設定 DSN 精靈，瀏覽至頁面**記錄檔儲存長時間執行的查詢**。  
+5.  在 Microsoft SQL Server 設定 DSN Wizard] 中，流覽至 [**將長時間執行的查詢儲存到記錄**檔] 頁面。  
   
-6.  選取 **記錄檔儲存長時間執行的查詢**。 在方塊中，放置應該記錄其長時間執行查詢之檔案的名稱。 （選擇性） 按一下**瀏覽**來瀏覽檔案系統中的查詢記錄檔。  
+6.  選取 **[將長時間執行的查詢儲存到記錄**檔]。 在方塊中，放置應該記錄其長時間執行查詢之檔案的名稱。 或者，按一下 [**流覽]** 來流覽檔案系統中的查詢記錄檔。  
   
-7.  設定查詢逾時間隔，以毫秒為單位，在**長時間查詢的時間 （毫秒）**  方塊中。  
+7.  在 [**長時間查詢時間（毫秒）** ] 方塊中，設定查詢逾時間隔（以毫秒為單位）。  
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>以程式設計方式記錄長時間執行的查詢資料  
   
-1.  呼叫[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)利用 SQL_COPT_SS_PERF_QUERY_LOG 以及長時間執行的查詢記錄檔的完整路徑和檔案名稱。 例如：  
+1.  使用 SQL_COPT_SS_PERF_QUERY_LOG 以及長時間執行之查詢記錄檔的完整路徑和檔案名來呼叫[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 。 例如：  
   
     ```  
     C:\\Odbcqry.log  
     ```  
   
-2.  呼叫[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) sql_copt_ss_perf_query_interval 會與設為逾時間隔，以毫秒為單位。  
+2.  使用 SQL_COPT_SS_PERF_QUERY_INTERVAL 呼叫[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) ，並將設定為逾時間隔（以毫秒為單位）。  
   
-3.  呼叫[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)利用 SQL_COPT_SS_PERF_QUERY 和 SQL_PERF_START 開始記錄長時間執行的查詢。  
+3.  使用 SQL_COPT_SS_PERF_QUERY 和 SQL_PERF_START 呼叫[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) ，以開始記錄長時間執行的查詢。  
   
-4.  呼叫[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)利用 SQL_COPT_SS_PERF_QUERY 和 SQL_PERF_STOP 停止記錄長時間執行的查詢。  
+4.  使用 SQL_COPT_SS_PERF_QUERY 和 SQL_PERF_STOP 呼叫[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) ，以停止記錄長時間執行的查詢。  
   
 ## <a name="example"></a>範例  
- 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫 (您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案) 首頁下載 AdventureWorks 範例資料庫)。此資料來源必須以作業系統提供的 ODBC 驅動程式為基礎 (驅動程式名稱為 "SQL Server")。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
+ 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫  （您可以從[Microsoft SQL Server 範例和 [社區專案](https://go.microsoft.com/fwlink/?LinkID=85384)] 首頁下載 AdventureWorks 範例資料庫）。此資料來源必須以作業系統所提供的 ODBC 驅動程式為基礎（驅動程式名稱為 "SQL Server"）。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
@@ -216,6 +216,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [分析 ODBC 驅動程式效能的如何主題&#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
+ [分析 ODBC 驅動程式效能的使用說明主題 &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
   
   

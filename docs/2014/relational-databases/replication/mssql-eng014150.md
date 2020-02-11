@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc4e2ecd81b6bf0a6c24aff8e89dc31c95e04625
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191436"
 ---
-# <a name="mssqleng014150"></a>MSSQL_ENG014150
+# <a name="mssql_eng014150"></a>MSSQL_ENG014150
     
 ## <a name="message-details"></a>訊息詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|14150|  
 |事件來源|MSSQLSERVER|  
 |元件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -53,10 +53,10 @@ ms.locfileid: "63191436"
 ## <a name="see-also"></a>另請參閱  
  [複寫代理程式管理](agents/replication-agent-administration.md)   
  [錯誤和事件參考 &#40;複寫&#41;](errors-and-events-reference-replication.md)   
- [複寫散發代理程式](agents/replication-distribution-agent.md)   
- [複寫記錄讀取器代理程式](agents/replication-log-reader-agent.md)   
- [複寫合併代理程式](agents/replication-merge-agent.md)   
+ [Replication Distribution Agent](agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](agents/replication-merge-agent.md)   
  [複寫佇列讀取器代理程式](agents/replication-queue-reader-agent.md)   
- [複寫快照集代理程式](agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
   

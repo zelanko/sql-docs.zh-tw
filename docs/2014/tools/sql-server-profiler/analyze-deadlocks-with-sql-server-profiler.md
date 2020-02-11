@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server Profiler 分析死結 |Microsoft Docs
+title: 使用 SQL Server Profiler 分析鎖死 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,25 +20,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316333"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>使用 SQL Server Profiler 分析死結
   使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可識別死結的原因。 SQL Server 中有兩個或兩個以上的執行緒 (或處理序)，因為某些資源集而產生循環相依性時，就會發生死結。 利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以建立一個用來記錄、重新執行和顯示死結事件的追蹤，以便進行分析。  
   
- 若要追蹤死結事件，請將 **Deadlock graph** 事件類別加入追蹤。 此事件類別會用死結相關處理序和物件的 XML 資料來擴展追蹤中的 **TextData** 資料行。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可將 XML 文件擷取至死結 XML (.xdl) 檔案，您稍後可在 SQL Server Management Studio 中檢視該檔案。 您可以設定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，將 **Deadlock graph** 事件擷取到單一檔案 (其中包含所有的 **Deadlock graph** 事件)，或將各個事件擷取到不同的檔案。 這種擷取可以利用下列任一方法來完成：  
+ 若要追蹤死結事件，請將 **Deadlock graph** 事件類別加入追蹤。 此事件類別會用死結相關處理序和物件的 XML 資料來擴展追蹤中的 **TextData** 資料行。 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可將 XML 文件擷取至死結 XML (.xdl) 檔案，您稍後可在 SQL Server Management Studio 中檢視該檔案。 您可以設定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，將 **Deadlock graph** 事件擷取到單一檔案 (其中包含所有的 **Deadlock graph** 事件)，或將各個事件擷取到不同的檔案。 這種擷取可以利用下列任一方法來完成：  
   
--   在追蹤組態時，使用 [事件擷取設定] 索引標籤。請注意，您需在 [事件選取範圍] 索引標籤上選取 **Deadlock graph** 事件，這個索引標籤才會出現。  
+-   在追蹤設定時間，使用 [**事件] [解壓縮設定**] 索引標籤。請注意，除非您在 [**事件選取範圍**] 索引標籤上選取 [**鎖死圖形**] 事件，否則不會出現此  
   
--   使用 [檔案] 功能表上的 [擷取 SQL Server 事件] 選項。  
+-   使用 [檔案]**** 功能表上的 [擷取 SQL Server 事件]**** 選項。  
   
--   您也可以用滑鼠右鍵按一下特定事件，然後選擇 [擷取事件資料]，以擷取並儲存個別事件。  
+-   您也可以用滑鼠右鍵按一下特定事件，然後選擇 [擷取事件資料]****，以擷取並儲存個別事件。  
   
 ## <a name="deadlock-graphs"></a>死結圖形  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用死結等待圖形 (deadlock wait-for graph) 來描述死結。 死結等待圖形包含處理序節點、資源節點，以及代表處理序與資源之間關聯性的邊緣。 等待圖形的元件定義如下表所示：  
+ 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用死結等待圖形 (deadlock wait-for graph) 來描述死結。 死結等待圖形包含處理序節點、資源節點，以及代表處理序與資源之間關聯性的邊緣。 等待圖形的元件定義如下表所示：  
   
  處理序節點  
  執行工作的執行緒；例如，INSERT、UPDATE 或 DELETE。  
@@ -46,8 +48,8 @@ ms.locfileid: "63316333"
  資源節點  
  資料庫物件；例如，資料表、索引或資料列。  
   
- 邊緣  
- 處理序與資源之間的關聯性。 當處理序等待資源時，會發生 `request` 邊緣； 當資源等待處理序時，則會發生 `owner` 邊緣。 邊緣描述中也會納入鎖定模式， 比方說，**模式︰X**。  
+ Edge  
+ 處理序與資源之間的關聯性。 當處理序等待資源時，會發生 `request` 邊緣； 當資源等待處理序時，則會發生 `owner` 邊緣。 邊緣描述中也會納入鎖定模式， 例如 [模式: X]****。  
   
 ## <a name="deadlock-process-node"></a>死結處理序節點  
  在等待圖形中，處理序節點包含處理序的相關資訊。 下表說明處理序的元件。  

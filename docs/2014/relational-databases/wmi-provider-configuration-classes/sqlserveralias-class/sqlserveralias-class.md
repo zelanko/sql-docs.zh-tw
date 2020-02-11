@@ -19,22 +19,22 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0ffbf733db8cbd672f171773e7b44560686e7d1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63223552"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias 類別
-  [SqlServerAlias 類別](sqlserveralias-class.md)類別代表伺服器連接別名。  
+  [SqlServerAlias 類別](sqlserveralias-class.md)代表伺服器連接別名。  
   
  當以下兩個情況同時發生時，就需要伺服器連接別名。  
   
--   用戶端連接到執行個體[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]透過不是預設網路傳輸的網路傳輸。  
+-   用戶端透過不是預設網路傳輸[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的網路傳輸來連接的實例。  
   
 -   用戶端連接的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體會接聽替代具名管道。  
   
- **注意：** [SqlServerAlias 類別](sqlserveralias-class.md)繼承`Put`從 Provider 類別的方法。 但是，它不會傳回如 `Provider::Put` 方法指示的任何結果。 如需詳細資訊，請參閱 WMI 文件集。  
+ **注意：**[SqlServerAlias 類別](sqlserveralias-class.md)會從 Provider `Put`類別繼承方法。 但是，它不會傳回如 `Provider::Put` 方法指示的任何結果。 如需詳細資訊，請參閱 WMI 文件集。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)  

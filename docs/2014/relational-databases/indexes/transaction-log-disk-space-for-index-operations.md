@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 986f464752f631d55b994469b733a3374a1926a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63161829"
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>索引作業的交易記錄磁碟空間
@@ -41,7 +41,7 @@ ms.locfileid: "63161829"
 4.  不要在外顯交易中執行線上索引作業。 這樣需等到外顯交易結束之後，才能截斷記錄檔。  
   
 ## <a name="related-content"></a>相關內容  
- [索引 DDL 作業的磁碟空間需求](disk-space-requirements-for-index-ddl-operations.md)  
+ [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)  
   
  [索引磁碟空間範例](index-disk-space-example.md)  
   

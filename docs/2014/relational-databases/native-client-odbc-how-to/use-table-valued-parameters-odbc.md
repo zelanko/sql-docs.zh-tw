@@ -1,5 +1,5 @@
 ---
-title: 使用資料表值參數 (ODBC) |Microsoft Docs
+title: 使用資料表值參數（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec4d66af36ff74b5b0a9160529990c9fc52fc961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200274"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>使用資料表值參數 (ODBC)
   此範例示範如何使用資料表值參數插入多個資料列、搭配多個資料行使用資料表值參數、搭配一個伺服器的呼叫使用資料表值參數。  
   
- 如需有關資料表值參數的詳細資訊，請參閱 < [Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。 如需使用資料表值參數的詳細範例，請參閱[ODBC Table-Valued 參數程式設計範例](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)。  
+ 如需資料表值參數的詳細資訊，請參閱[ODBC&#41;&#40;的資料表值參數](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。 如需使用資料表值參數的更多範例，請參閱[ODBC 資料表值參數程式設計範例](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)。  
   
 ## <a name="example"></a>範例  
  您將需要稱為 TVPDemo 的 ODBC 資料來源。 TVPDemo 的預設資料庫可以是您電腦上的任何測試資料庫。 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，此資料來源必須以 ODBC 驅動程式為基礎。  

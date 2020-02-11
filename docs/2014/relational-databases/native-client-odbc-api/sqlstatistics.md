@@ -1,5 +1,5 @@
 ---
-title: SQLStatistics | Microsoft Docs
+title: SQLStatistics |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 509205e0eeb2a913c8fdb4505961b8a3d4965529
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188613"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
-  **SQLStatistics**可以在靜態資料指標上執行。 嘗試執行**SQLStatistics**上可更新 （索引鍵集驅動或動態） 會傳回 SQL_SUCCESS_WITH_INFO，指出資料指標類型已經變更。  
+  **SQLStatistics**可以在靜態資料指標上執行。 嘗試在可更新的（索引鍵集驅動或動態）上執行**SQLStatistics**時，會傳回 SQL_SUCCESS_WITH_INFO 表示資料指標類型已變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLStatistics 函數](https://go.microsoft.com/fwlink/?LinkId=59372)   
+ [SQLStatistics 函式](https://go.microsoft.com/fwlink/?LinkId=59372)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

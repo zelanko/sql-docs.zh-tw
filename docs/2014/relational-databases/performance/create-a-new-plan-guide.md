@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151190"
 ---
 # <a name="create-a-new-plan-guide"></a>建立新的計畫指南
@@ -31,9 +31,9 @@ ms.locfileid: "63151190"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要建立計畫指南中，使用：**  
+-   **使用下列方法建立計畫指南：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63151190"
   
 -   試圖卸除或修改計畫指南所參考的函數、預存程序或 DML 觸發程序，不論是已啟用或已停用，都會造成錯誤。 嘗試卸除定義了觸發程序且被計畫指南參考的資料表也會造成錯誤。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  若要建立類型為 OBJECT 的計畫指南，需要所參考物件的 ALTER 權限。 若要建立類型為 SQL 或 TEMPLATE 的計畫指南，需要目前資料庫的 ALTER 權限。  
@@ -62,7 +62,7 @@ ms.locfileid: "63151190"
   
 1.  按一下加號，展開您要在其中建立計畫指南的資料庫，然後按一下加號展開 **[可程式性]** 資料夾。  
   
-2.  以滑鼠右鍵按一下**計畫指南**資料夾，然後選取**新增計畫指南...** .  
+2.  以滑鼠右鍵按一下 [**計劃指南**] 資料夾，然後選取 [**新增計劃指南**]。  
   
 3.  在 **[新增維護計畫]** 對話方塊中的 **[名稱]** 方塊，輸入計畫指南的名稱。  
   

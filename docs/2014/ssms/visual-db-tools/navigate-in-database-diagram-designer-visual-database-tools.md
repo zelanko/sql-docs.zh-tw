@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e56a15d10bc267e6613d24ff934daf4561831c1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63254454"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>在資料庫圖表設計工具中導覽 (Visual Database Tools)
@@ -29,13 +29,13 @@ ms.locfileid: "63254454"
 |存取 [資料庫圖表] 功能表|ALT+M|  
 |如果可行，在資料表與關聯性之間移動|TAB 或 SHIFT+TAB|  
 |在資料表的資料行之間移動|方向鍵|  
-|從圖表移除已選取的資料表|DELETE|  
+|從圖表移除已選取的資料表|刪除|  
 |從資料庫刪除資料表或關聯性|SHIFT+DELETE|  
 |跨圖表介面移動資料表|CTRL+向上鍵或 CTRL+向下鍵|  
 |向右/向左捲動和向上/向下捲動|PAGE UP/DOWN (垂直)、CTL+PAGE UP/DOWN (水平)|  
 |重新調整資料表與附註的大小|SHIFT+方向鍵|  
 |變更資料表上顯示的資訊量|CTRL+T|  
-|縮放|CTRL+加號鍵或減號鍵|  
+|Zoom|CTRL+加號鍵或減號鍵|  
   
 ## <a name="see-also"></a>另請參閱  
  [設計資料庫圖表 &#40;Visual Database Tools&#41;](visual-database-tools.md)  

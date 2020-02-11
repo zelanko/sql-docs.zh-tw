@@ -14,22 +14,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184318"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>建立外部聯結 (Visual Database Tools)
   在預設狀況下， [查詢和檢視表設計工具](visual-database-tools.md) 會在資料表之間建立內部聯結 (Inner Join)。 內部聯結將刪除不符合其他資料表之資料列的資料列。 然而，外部聯結則至少傳回 FROM 子句提到的一個資料表或檢視，只要這些資料列符合任何 WHERE 或 HAVING 搜尋條件。 若要在不具有符合聯結資料表中資料的結果集中包含資料列，就可以建立外部聯結。  
   
- 在建立外部聯結時，資料表在 SQL 陳述式中出現的順序 (如 SQL 窗格所反映) 非常重要。 您加入的第一個資料表會成為「左」資料表，第二個資料表會成為「右」資料表 (資料表出現在[圖表窗格](diagram-pane-visual-database-tools.md)的實際順序並不重要)。在指定左或右外部聯結時，是指這些資料表加入查詢時的順序，以及它們出現在 [SQL 窗格](sql-pane-visual-database-tools.md)的 SQL 陳述式中的順序。  
+ 在建立外部聯結時，資料表在 SQL 陳述式中出現的順序 (如 SQL 窗格所反映) 非常重要。 您加入的第一個資料表會成為「左」資料表，第二個資料表會成為「右」資料表 (資料表出現在 [圖表窗格](diagram-pane-visual-database-tools.md) 的實際順序並不重要)。在指定左或右外部聯結時，是指這些資料表加入查詢時的順序，以及它們出現在 [SQL 窗格](sql-pane-visual-database-tools.md)的 SQL 陳述式中的順序。  
   
 ### <a name="to-create-an-outer-join"></a>若要建立外部聯結  
   
 1.  自動或手動建立聯結。 如需詳細資訊，請參閱[自動聯結資料表 &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md) 或[手動聯結資料表 &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)。  
   
-2.  在 圖表 窗格中，然後再從選取的聯結線**查詢設計工具** 功能表中，選擇**選取所有資料列\<tablename >** ，其額外選取包含資料表的命令您想要包含的資料列。  
+2.  在 [圖表] 窗格中選取聯結線，然後從 [**查詢設計**工具] 功能表中，選擇 [**選取 Tablename 中的所有資料\<列>**]，選取包含您想要包含其額外資料列之資料表的命令。  
   
     -   選擇第一個資料表以建立左外部聯結。  
   
@@ -58,7 +58,7 @@ WHERE (jobs.job_id IS NULL)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用聯結查詢&#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
+ [使用 Join 查詢 &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
  [聯結對話方塊 &#40;Visual Database Tools&#41;](join-dialog-box-visual-database-tools.md)  
   
   

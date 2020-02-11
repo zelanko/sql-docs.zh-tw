@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1e1bd9fefaf818a3b1499ba3ea8bf761de234666
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107524"
 ---
 # <a name="report-data-f1-help"></a>報表資料 F1 說明
   本節中的主題提供有關選項的資訊，您可在報表設計師中，於可用查詢工具上的資料來源、共用資料來源、資料集及資訊設定這些選項。  
   
- 若要從 **[報表屬性]** 對話方塊中存取這些主題，請按一下 **[說明]** 。  
+ 若要從 **[報表屬性]** 對話方塊中存取這些主題，請按一下 **[說明]**。  
   
 ## <a name="see-also"></a>另請參閱  
  [報表資料 &#40;SSRS&#41;](report-data/report-data-ssrs.md)  
