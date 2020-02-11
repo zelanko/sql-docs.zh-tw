@@ -1,5 +1,5 @@
 ---
-title: 選取執行個體 |Microsoft Docs
+title: 選取實例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5e74eba3479bdc722fdd45c99eb78592d6e8007
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092345"
 ---
 # <a name="select-instance"></a>選取執行個體
   請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 [選取執行個體] 頁面，指定您想要升級到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]執行個體。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  使用選項按鈕指定您要升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和它的共用元件，還是只升級共用元件。 此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的共用元件如下：  
   
 -   管理工具 - 基本  
@@ -39,7 +39,8 @@ ms.locfileid: "66092345"
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
+-   
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
   
 -   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]  
   

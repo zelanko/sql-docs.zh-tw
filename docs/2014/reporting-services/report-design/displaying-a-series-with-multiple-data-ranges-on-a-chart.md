@@ -1,5 +1,5 @@
 ---
-title: 包含多個資料範圍的數列顯示在圖表 （報表產生器及 SSRS） |Microsoft Docs
+title: 在圖表上顯示具有多個資料範圍的數列（報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c226cc9603aa687616d54fa95ee82c7f2b86792
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105999"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>將包含多個資料範圍的數列顯示在圖表上 (報表產生器及 SSRS)
@@ -26,11 +26,11 @@ ms.locfileid: "66105999"
   
  有幾種不同的方式可提升可讀性：  
   
--   **啟用刻度斷層**： 如果您的資料形成兩組或多組資料範圍，請使用刻度斷層來移除範圍之間的間隙。 刻度斷層是在繪圖區上繪製的一道區域線，代表數列中高低值之間的斷層。  
+-   **啟用刻度中斷**。 如果您的資料形成兩組或多組資料範圍，請使用刻度斷層來移除範圍之間的間隙。 刻度斷層是在繪圖區上繪製的一道區域線，代表數列中高低值之間的斷層。  
   
--   **篩選掉不必要的值**： 如果您的資料點蓋住了圖表上所要顯示的重要資料範圍，請使用報表篩選移除不要的點。 如需如何在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中將篩選新增至圖表的詳細資訊，請參閱[新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)。  
+-   **篩選掉不必要的值**。 如果您的資料點蓋住了圖表上所要顯示的重要資料範圍，請使用報表篩選移除不要的點。 如需如何在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中將篩選新增至圖表的詳細資訊，請參閱[新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)。  
   
--   **將每一個資料範圍繪製成個別數列來進行多個數列的比較**： 如果您的資料範圍超過兩個以上，請考慮將資料範圍分割成個別的數列。 如需詳細資訊，請參閱 [圖表上的多個數列 &#40;報表產生器及 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)：  
+-   **繪製每個資料範圍做為多個數列比較的個別數列**。 如果您的資料範圍超過兩個以上，請考慮將資料範圍分割成個別的數列。 如需詳細資訊，請參閱 [圖表上的多個數列 &#40;報表產生器及 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)：  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -58,14 +58,14 @@ ms.locfileid: "66105999"
   
 -   圖表類型為極座標圖、雷達圖、圓形圖、環圈圖、漏斗圖、金字塔圖或任何堆疊圖表。  
   
- 具有刻度斷層的圖表範例可從範例報表取得。 如需下載這個範例報表及其他項目的詳細資訊，請參閱 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][報表產生器與報表設計師範例報表](https://go.microsoft.com/fwlink/?LinkId=198283)：  
+ 具有刻度斷層的圖表範例可從範例報表取得。 如需下載此範例報表及其他專案的詳細資訊[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，請參閱[報表產生器和報表設計師範例報表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
   
 ## <a name="see-also"></a>另請參閱  
- [圖表上的多個數列 &#40;報表產生器及 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [圖表上的多個數列 &#40;報表產生器和 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [圖表中的 3D、浮凸和其他效果 &#40;報表產生器及 SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [軸屬性對話方塊，軸選項 &#40;報表產生器及 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
+ [軸屬性對話方塊、軸選項 &#40;報表產生器及 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
  [收集圓形圖上的小配量 &#40;報表產生器及 SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   

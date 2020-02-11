@@ -1,5 +1,5 @@
 ---
-title: 合併資料分割 (XMLA) |Microsoft Docs
+title: 合併資料分割（XMLA） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f09255372478bdb9956b64283c8b94477598239
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702039"
 ---
 # <a name="merging-partitions-xmla"></a>合併資料分割 (XMLA)
-  如果資料分割有相同的彙總設計與結構，您可以使用來合併資料分割[MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) XML for Analysis (XMLA) 命令。 合併資料分割是管理資料分割時要執行的一項重要的動作，特別是那些包含依日期分割的歷程記錄資料之資料分割。  
+  如果資料分割具有相同的匯總設計與結構，您可以使用 XML for Analysis （XMLA）中的[MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla)命令來合併資料分割。 合併資料分割是管理資料分割時要執行的一項重要的動作，特別是那些包含依日期分割的歷程記錄資料之資料分割。  
   
  例如，財務 Cube 可能使用兩個資料分割：  
   
@@ -34,19 +34,20 @@ ms.locfileid: "62702039"
  兩個資料分割使用不同的儲存設定，但是使用相同的彙總設計。 您不需要在年底時處理跨多年歷程記錄資料的 Cube，只要改用 `MergePartitions` 命令將今年的資料分割合併到往年的資料分割中。 如此便可保存資料，而不需要將時間耗費在 Cube 的完整處理上。  
   
 ## <a name="specifying-partitions-to-merge"></a>指定要合併的資料分割  
- 當`MergePartitions`命令執行時，儲存在指定之來源資料分割的彙總資料[來源](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)屬性中指定的目標資料分割加入[目標](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla)屬性。  
+ 當`MergePartitions`命令執行時，會將儲存在[source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)屬性中指定之來源分割區的匯總資料，加入[目標](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla)屬性中指定的目標資料分割。  
   
 > [!NOTE]  
->  `Source` 屬性可包含一個以上的資料分割物件參考。 不過，`Target` 屬性則不可以。  
+>  
+  `Source` 屬性可包含一個以上的資料分割物件參考。 不過，`Target` 屬性則不可以。  
   
- 為了能夠成功合併，在 `Source` 與 `Target` 中指定的資料分割，必須由相同的量值群組包含，並使用相同的彙總設計。 否則，系統將發生錯誤。  
+ 為了能夠成功合併，在 `Source` 與 `Target` 中指定的資料分割，必須由相同的量值群組包含，並使用相同的彙總設計。 否則便會發生錯誤。  
   
  在 `Source` 中指定的資料分割會在 `MergePartitions` 命令成功完成後刪除。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="description"></a>描述  
- 下列範例會合併中的所有資料分割**Customer Counts**量值群組**Adventure Works** cube 中**Adventure Works DW**範例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的資料庫**Customers_2004**資料分割。  
+ 下列範例會將「**艾德工作」 DW**範例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫中 [ **Customer** count] 量值群組內的所有資料分割，合併到**Customers_2004** **的資料分割**中。  
   
 ### <a name="code"></a>程式碼  
   
