@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b694af5b760ae3c1ead1e4984c35ef61c0fa602
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094341"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>從命令提示字元安裝 Upgrade Advisor
@@ -34,9 +34,9 @@ ms.locfileid: "66094341"
   
 |引數|描述|  
 |--------------|-----------------|  
-|/q[n&#124;b&#124;r&#124;f]|設定使用者介面 (UI) 層級：<br /><br /> n = 沒有 UI<br /><br /> b = 基本 UI (只有進度，沒有提示)<br /><br /> r = 縮減 UI (在安裝結尾顯示對話方塊)<br /><br /> f = 完整 UI|  
-|/L|指定記錄檔選項。 若要記錄所有訊息都*log_file_name*，使用 **-L\*v**_log_file_name_。 若要記錄僅錯誤訊息，請使用`-Le` *log_file_name*。|  
-|ADDLOCAL=ALL&#124; REMOVE=ALL&#124;REINSTALL=ALL|指定要安裝 (ADDLOCAL)、移除 (REMOVE) 或重新安裝 (REINSTALL) Upgrade Advisor。|  
+|/q [n&#124;b&#124;r&#124;f]|設定使用者介面 (UI) 層級：<br /><br /> n = 沒有 UI<br /><br /> b = 基本 UI (只有進度，沒有提示)<br /><br /> r = 縮減 UI (在安裝結尾顯示對話方塊)<br /><br /> f = 完整 UI|  
+|/L|指定記錄檔選項。 若要將所有訊息記錄到*log_file_name*，請使用 **-\*L v**_log_file_name_。 若只要記錄錯誤訊息，請`-Le`使用*log_file_name*。|  
+|ADDLOCAL = ALL&#124; REMOVE = ALL&#124;重新安裝 = 全部|指定要安裝 (ADDLOCAL)、移除 (REMOVE) 或重新安裝 (REINSTALL) Upgrade Advisor。|  
 |UAINSTALLDIR=path|將 Upgrade Advisor 安裝至 path 指定的位置。|  
   
 ## <a name="installation-examples"></a>安裝範例  
@@ -69,6 +69,6 @@ Msiexec.exe /i C:\Downloads\SQLUA.msi /qn REMOVE=ALL
   
 ## <a name="see-also"></a>另請參閱  
  [安裝 Upgrade Advisor](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
- [升級建議程式必要條件](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
+ [Upgrade Advisor 必要條件](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
   
   

@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 55407c52c5fb7bf0c9537eaf8fb7a7d31d2675e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250529"
 ---
 # <a name="scripting-replication"></a>編寫複寫指令碼
-  拓撲中的所有複寫元件都應作為損毀復原計畫的一部份來編寫指令碼，而指令碼也可以用於自動執行重複性工作。 指令碼包含實作已編寫指令碼之複寫元件所必要的 Transact-SQL 系統預存程序，例如，發行集或訂閱。 指令碼可以在精靈中建立 (如新增發行集精靈)，或者可以在建立元件之後，於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立。 您可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 **sqlcmd**，檢視、修改和執行指令碼。 指令碼可以和備份檔案一起儲存，萬一必須重新設定複寫拓撲時即可使用。  
+  拓撲中的所有複寫元件都應作為損毀復原計畫的一部份來編寫指令碼，而指令碼也可以用於自動執行重複性工作。 指令碼包含實作已編寫指令碼之複寫元件所必要的 Transact-SQL 系統預存程序，例如，發行集或訂閱。 您可以在建立元件之後，于 wizard （例如 [新增發行集]） [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或中建立腳本。 您可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 **sqlcmd**，檢視、修改和執行指令碼。 指令碼可以和備份檔案一起儲存，萬一必須重新設定複寫拓撲時即可使用。  
   
  如果對任何屬性進行了變更，則應對該元件重新編寫指令碼。 若您在異動複寫中使用自訂預存程序，每個程序副本會與指令碼同時儲存；若程序變更，則副本必須更新 (程序通常在結構描述變更或改變應用程式需求時進行更新)。 如需自訂程序的詳細資訊，請參閱[指定交易式發行項變更的傳播方式](transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63250529"
 5.  在多個「訂閱者」端執行指令碼以產生需要的提取訂閱。  
   
 ## <a name="script-replication-objects"></a>撰寫複寫物件的指令碼  
- 您可以從複寫精靈或從  中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 如果您從精靈編寫指令碼，可以選擇建立物件並編寫其指令碼，也可以選擇只編寫其指令碼。  
+ 您可以從複寫精靈或從 **** 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 如果您從精靈編寫指令碼，可以選擇建立物件並編寫其指令碼，也可以選擇只編寫其指令碼。  
   
 > [!IMPORTANT]  
 >  所有密碼的指令碼都會編寫為 NULL。 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您將認證儲存在指令碼檔案中，必須保護該檔案免於未經授權的存取。  
@@ -54,9 +54,9 @@ ms.locfileid: "63250529"
   
 -   [設定發行和散發](configure-publishing-and-distribution.md)  
   
--   [Create a Publication](publish/create-a-publication.md)  
+-   [建立發行集](publish/create-a-publication.md)  
   
--   [Create a Push Subscription](create-a-push-subscription.md)  
+-   [建立發送訂閱](create-a-push-subscription.md)  
   
 -   [建立提取訂閱](create-a-pull-subscription.md)  
   
@@ -64,11 +64,11 @@ ms.locfileid: "63250529"
   
 1.  在精靈的 **[精靈動作]** 頁面上，選取適用於精靈的核取方塊：  
   
-    -   **產生含有建立發行集步驟的指令碼檔案**  
+    -   **產生含有建立發行集步驟的腳本檔案**  
   
-    -   **產生含有建立訂閱步驟的指令碼檔案**  
+    -   **產生含有建立訂閱步驟的腳本檔案**  
   
-    -   **產生含有設定散發步驟的指令碼檔案**  
+    -   **產生含有設定散發步驟的腳本檔案**  
   
 2.  指定 **[指令碼檔案屬性]** 頁面上的選項。  
   
@@ -80,28 +80,28 @@ ms.locfileid: "63250529"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾或 **[本機訂閱]** 資料夾。  
   
-3.  以滑鼠右鍵按一下發行集或訂閱，然後按一下 **[產生指令碼]** 。  
+3.  以滑鼠右鍵按一下發行集或訂閱，然後按一下 **[產生指令碼]**。  
   
-4.  指定 [產生 SQL 指令碼 - \<複寫物件>]  對話方塊中的選項。  
+4.  指定 [產生 SQL 指令碼 - **複寫物件>]\<** 對話方塊中的選項。  
   
-5.  按一下 **[編寫指令碼至檔案]** 。  
+5.  按一下 **[編寫指令碼至檔案]**。  
   
-6.  在 **[指令碼檔案位置]** 對話方塊中輸入檔案名稱，然後按一下 **[儲存]** 。 就會顯示狀態訊息。  
+6.  在 **[指令碼檔案位置]** 對話方塊中輸入檔案名稱，然後按一下 **[儲存]**。 就會顯示狀態訊息。  
   
-7.  按一下 **[確定]** ，然後按一下 **[關閉]** 。  
+7.  按一下 **[確定]**，然後按一下 [**關閉**]。  
   
 #### <a name="to-script-multiple-objects-from-management-studio"></a>若要從 Management Studio 編寫多個物件的指令碼  
   
 1.  連接到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的散發者、發行者或訂閱者，然後展開伺服器節點。  
   
-2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[產生指令碼]** 。  
+2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[產生指令碼]**。  
   
 3.  指定 **[產生 SQL 指令碼]** 對話方塊中的選項。  
   
-4.  按一下 **[編寫指令碼至檔案]** 。  
+4.  按一下 **[編寫指令碼至檔案]**。  
   
-5.  在 **[指令碼檔案位置]** 對話方塊中輸入檔案名稱，然後按一下 **[儲存]** 。 就會顯示狀態訊息。  
+5.  在 **[指令碼檔案位置]** 對話方塊中輸入檔案名稱，然後按一下 **[儲存]**。 就會顯示狀態訊息。  
   
-6.  按一下 **[確定]** ，然後按一下 **[關閉]** 。  
+6.  按一下 **[確定]** ，然後按一下 **[關閉]**。  
   
   

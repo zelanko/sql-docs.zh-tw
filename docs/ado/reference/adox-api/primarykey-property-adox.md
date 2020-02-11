@@ -1,5 +1,5 @@
 ---
-title: PrimaryKey 屬性 (ADOX) |Microsoft Docs
+title: PrimaryKey 屬性（ADOX） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,26 +20,26 @@ ms.assetid: 30185312-5e09-4804-852d-e505d660113a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: afd6ad45295ab5a888c3b392adb0019197710e15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965546"
 ---
 # <a name="primarykey-property-adox"></a>PrimaryKey 屬性 (ADOX)
-指出索引是否代表資料表的主索引鍵。  
+指出索引是否代表資料表的主鍵。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定，並傳回**布林**值。  
+ 設定並傳回**布林**值。  
   
 ## <a name="remarks"></a>備註  
  預設值為 **[False]** 。  
   
- 這個屬性是唯讀[Index](../../../ado/reference/adox-api/index-object-adox.md)已經附加到集合的物件。  
+ 這個屬性在已附加至集合的[索引](../../../ado/reference/adox-api/index-object-adox.md)物件上是唯讀的。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Index 物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [PrimaryKey 和 Unique 屬性範例 (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
+ [PrimaryKey 和 Unique 屬性範例（VB）](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
  [Index 物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

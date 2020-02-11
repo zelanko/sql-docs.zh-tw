@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 21731b1b99c29257700393b5b7713a723c35dbac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809530"
 ---
 # <a name="server-properties-database-settings-page"></a>伺服器屬性 (資料庫設定頁面)
   使用此頁面來檢視或修改您的資料庫設定。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **預設索引填滿因數**  
  指定當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用現有的資料建立新索引時，它應該填入每個頁面的程度。 填滿因數會影響效能，因為當頁面填滿之後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就必須花費時間進行頁面的分割。  
   

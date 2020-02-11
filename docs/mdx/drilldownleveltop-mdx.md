@@ -1,5 +1,5 @@
 ---
-title: DrilldownLevelTop (MDX) |Microsoft Docs
+title: DrilldownLevelTop （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 461c91d7261b42b5828e2c515a89e8203f40e357
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68049270"
 ---
 # <a name="drilldownleveltop-mdx"></a>DrilldownLevelTop (MDX)
@@ -45,13 +45,13 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  可將導出成員加入向下鑽研結果的關鍵字。  
   
 ## <a name="remarks"></a>備註  
- 如果指定數值運算式，則**DrilldownLevelTop**函式，會以遞減排序順序，根據值的數值運算式，指定集合中每個成員的子系的子集合上評估成員。 如果沒有指定數值運算式，此函數會根據子成員集合所代表的資料格值 (由查詢內容所決定)，以遞減的順序來排序指定集合中每個成員的子系。  
+ 如果指定了數值運算式， **DrilldownLevelTop**函數會根據子成員集合評估的數值運算式的值，以遞減的順序來排序指定集合中每個成員的子系。 如果沒有指定數值運算式，此函數會根據子成員集合所代表的資料格值 (由查詢內容所決定)，以遞減的順序來排序指定集合中每個成員的子系。  
   
- 完成排序之後， **DrilldownLevelTop**函式會傳回一組包含父成員中指定的子成員數目*計數*具有最高值。  
+ 排序之後， **DrilldownLevelTop**函數會傳回一個集合，其中包含父成員以及 [*計數*] 中以最高值指定的子成員數目。  
   
- **DrilldownLevelTop**函數很相似[DrilldownLevel](../mdx/drilldownlevel-mdx.md)函式，但不包含在指定的層級，每個成員的所有子系**DrilldownLevelTop**函式會傳回子成員的最高數目。  
+ **DrilldownLevelTop**函數與[DrilldownLevel](../mdx/drilldownlevel-mdx.md)函數類似，但不會包含指定層級上每個成員的所有子系，而**DrilldownLevelTop**函式會傳回子成員的最高數目。  
   
- 查詢 XMLA 屬性 MdpropMdxDrillFunctions，可讓您確認伺服器提供鑽研函數; 支援的層級請參閱[支援的 XMLA 屬性&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)如需詳細資訊。  
+ 查詢 XMLA 屬性 MdpropMdxDrillFunctions 可讓您驗證服務器為鑽孔函數提供的支援層級;如需詳細資訊，請參閱[支援的 Xmla 屬性 &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 。  
   
 ## <a name="examples"></a>範例  
  下列範例會根據預設量值來傳回 Product Category 層級的前三個子系。 在 Adventure Works 範例 Cube 中，Accessories 的前三個子系為 Bike Racks、Bike Stands 及 Bottles and Cages。 您可以在 Management Studio 的 MDX 查詢視窗中，導覽至 Products | Product Categories | Members | All Products | Accessories 以檢視完整清單。 您可以增加 Count 引數以傳回更多成員。  
@@ -65,7 +65,7 @@ SELECT DrilldownLevelTop
    FROM [Adventure Works]  
 ```  
   
- 下一個範例說明如何使用**include_calc_members**旗標，用來包含鑽研層級中的導出的成員。 [轉售商訂單計數] 量值包含在**DrilldownLevelTop**陳述式，以確保傳回的值會依該量值排序。  
+ 下一個範例說明如何使用**include_calc_members**旗標，用來在向下切入層級中包含匯出成員。 量值 [轉售商訂單計數] 包含在**DrilldownLevelTop**語句中，以確保傳回值會依照該量值排序。  
   
 ```  
 WITH MEMBER   
@@ -84,6 +84,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>另請參閱  
  [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

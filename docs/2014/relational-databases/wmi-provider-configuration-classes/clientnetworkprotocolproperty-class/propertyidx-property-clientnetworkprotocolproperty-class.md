@@ -1,5 +1,5 @@
 ---
-title: PropertyIdx 屬性 （ClientNetworkProtocolProperty 類別） |Microsoft Docs
+title: PropertyIdx 屬性（ClientNetworkProtocolProperty 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 08a46d5f73c485306be2f6d0b5086f715ebb00d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245112"
 ---
 # <a name="propertyidx-property-clientnetworkprotocolproperty-class"></a>PropertyIdx 屬性 (ClientNetworkProtocolProperty 類別)
-  取得或設定屬性的索引值所參考的屬性陣列中[Properties 屬性 （ClientNetworkProtocol 類別）](../clientnetworkprotocol-class/clientnetworkprotocol-class.md)的[ClientNetworkProtocol 類別](../clientnetworkprotocol-class/clientnetworkprotocol-class.md)物件。  
+  取得或設定屬性（property）陣列中屬性（property）（由[ClientNetworkProtocol 類別](../clientnetworkprotocol-class/clientnetworkprotocol-class.md)物件的[Properties 屬性（ClientNetworkProtocol Class）](../clientnetworkprotocol-class/clientnetworkprotocol-class.md)所參考）的索引值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,8 +37,8 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
- A [ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)物件，表示屬性所使用之網路通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端。  
+ *目標*  
+ [ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)物件，代表[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端所使用之網路通訊協定的屬性。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定目前屬性之陣列索引值的 `uint32` 值。  

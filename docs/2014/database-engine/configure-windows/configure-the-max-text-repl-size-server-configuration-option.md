@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e55268f499069fb6714aa07944997e1e92e7fc23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811552"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>設定 max text repl size 伺服器組態選項
-  此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max text repl size [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **最大文字複寫大小**選項指定的大小上限 （以位元組為單位） `text`， `ntext`， `varchar(max)`， `nvarchar(max)`， `varbinary(max)`， `xml`，和`image`，可以加入資料複寫資料行或擷取的資料行，在單一 INSERT、 UPDATE、 WRITETEXT 或 UPDATETEXT 陳述式中。 預設值為 65536 個位元組。 值為 -1 表示沒有任何大小限制 (除了資料類型所加諸的限制以外)。  
+  此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max text repl size [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 [**最大文字複寫大小** `text`] 選項會指定、 `ntext`、 `varchar(max)`、 `nvarchar(max)`、 `varbinary(max)`、 `xml`和`image`資料的大小上限（以位元組為單位），可以在單一 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 語句中加入至複寫資料行或已捕捉的資料行。 預設值為 65536 個位元組。 值為 -1 表示沒有任何大小限制 (除了資料類型所加諸的限制以外)。  
   
  **本主題內容**  
   
@@ -28,7 +28,7 @@ ms.locfileid: "62811552"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法設定 max text repl size 選項：**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62811552"
   
 -   這個選項適用於異動複寫和異動資料擷取。 當同時針對異動複寫和異動資料擷取設定伺服器時，指定的值會套用到這兩個功能。 快照式複寫與合併式複寫會忽略這個選項。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  

@@ -1,5 +1,5 @@
 ---
-title: 中繼資料 (ODBC) |Microsoft Docs
+title: 中繼資料（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48f2fde8280a4b309c43e292bda452091d46ee02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781227"
 ---
 # <a name="metadata-odbc"></a>中繼資料 (ODBC)
@@ -31,6 +31,6 @@ ms.locfileid: "62781227"
  描述 `SQLColumns` 和 `SQLProcedureColumns` 所傳回的資料行中繼資料，以及 `SQLGetTypeInfo` 所傳回的資料類型中繼資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間改善&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;的日期和時間改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

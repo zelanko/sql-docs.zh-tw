@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) 和 Studio 環境 |Microsoft Docs
+title: Integration Services （SSIS）和 Studio 環境 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7c8f05c1b822cc3cad81ed910b71cb46621554eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892415"
 ---
 # <a name="integration-services-ssis-and-studio-environments"></a>Integration Services (SSIS) 和 Studio 環境
+  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含兩個可搭配 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]使用的 Studio：  
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 可用於開發商務解決方案所需的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 會提供 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，讓您在其中建立封裝。  

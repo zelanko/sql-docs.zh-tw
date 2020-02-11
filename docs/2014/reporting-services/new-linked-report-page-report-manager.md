@@ -1,5 +1,5 @@
 ---
-title: 新增連結的報表頁面 （報表管理員） |Microsoft Docs
+title: 新增連結報表頁面（報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6aab8fc0c8e083181779c13654b0d7d42531e50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108172"
 ---
 # <a name="new-linked-report-page-report-manager"></a>新增連結報表頁面 (報表管理員)
@@ -31,7 +31,7 @@ ms.locfileid: "66108172"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[建立連結報表]** 。  
+3.  在下拉式功能表中，按一下 **[建立連結報表]**。  
   
 ###### <a name="to-open-the-new-linked-report-page-from-the-general-properties-page-of-a-report"></a>若要從報表的一般屬性頁面開啟新增連結報表頁面  
   
@@ -41,24 +41,24 @@ ms.locfileid: "66108172"
   
 3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該報表的 [一般] 屬性頁面。  
   
-4.  在項目工具列中，按一下 **[建立連結報表]** 。  
+4.  在項目工具列中，按一下 **[建立連結報表]**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **名稱**  
- 指定連結報表的名稱。 名稱必須至少包含一個英數字元。 也可以包含空格和特定符號。 不過，您不可以使用 ; ? : \@ & = +，$ / * \< > |"或 / 來指定名稱。  
+ 指定連結報表的名稱。 名稱必須至少包含一個英數字元。 也可以包含空格和特定符號。 不過，您不可以使用 ; ? ： \@ & = +，$/* \< > |"或/指定名稱時。  
   
  **說明**  
  輸入報表內容的描述。 此描述顯示在有權存取此報表的使用者的 [內容] 頁面上。  
   
- **Location**  
+ **位置**  
  指定含有此報表的資料夾路徑。 在預設狀況下，建立的連結報表與基礎報表為同層級。 按一下 **[變更位置]** 即可將連結報表置於不同的資料夾中。  
   
  **確定**  
  按一下 **[確定]** 即可儲存變更，並回到基底報表的 [一般] 屬性頁面。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立連結的報表](reports/create-a-linked-report.md)   
- [一般屬性頁面，報表 &#40;報表管理員&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [建立連結報表](reports/create-a-linked-report.md)   
+ [一般屬性頁面、報表 &#40;報表管理員&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

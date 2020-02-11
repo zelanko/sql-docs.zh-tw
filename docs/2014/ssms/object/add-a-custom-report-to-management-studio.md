@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a860db611154f9f7a130ee6be90dd43a96b50af5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510385"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>將自訂報表加入 Management Studio
@@ -27,7 +27,7 @@ ms.locfileid: "62510385"
   
 1.  按一下 [開始]  、依序指向 [程式集]  和 [Microsoft SQL Server]  ，然後按一下 [SQL Server Data Tools]  。  
   
-2.  在 [檔案]  功能表中，指向 [新增]  ，然後按一下 [專案]  。  
+2.  在 **[檔案]** 功能表上，指向 **[開新檔案]** ，然後按一下 **[專案]** 。  
   
 3.  在 **[專案類型]** 清單中，按一下 **[商業智慧專案]** 。  
   
@@ -61,15 +61,15 @@ ms.locfileid: "62510385"
   
 -   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，以滑鼠右鍵按一下物件總管中的節點、指向 [報表]  ，然後按一下 [自訂報表]  。 在 [開啟檔案]  對話方塊中，找到自訂報表資料夾，並選取 **ConnectionsReport.rdl** 檔案，然後按一下 [開啟]  。  
   
-     第一次從物件總管節點開啟新的自訂報表時，此自訂報表就會新增至該節點快速鍵功能表上 [自訂報表]  底下的最近使用清單。 第一次開啟標準報表時，該報表也會顯示在 [自訂報表]  下之最近使用的清單中。 如果您刪除了某個自訂報表檔，下次選取該項目時，系統就會提示您是否要從最近使用清單中刪除該項目。  
+     第一次從物件總管節點開啟新的自訂報表時，該報表會新增到該節點的快速鍵功能表中，[自訂報表]  下之最近使用的清單中。 第一次開啟標準報表時，該報表也會顯示在 [自訂報表]  下之最近使用的清單中。 如果您刪除了某個自訂報表檔，下次選取該項目時，系統就會提示您是否要從最近使用清單中刪除該項目。  
   
     1.  若要變更最近使用清單中可顯示的檔案數目，請在 [工具]  功能表中，按一下 [選項]  、展開 [環境]  資料夾，然後按一下 [一般]  。  
   
-    2.  調整 [顯示最近使用清單中的檔案]  的數目。  
+    2.  調整 [顯示在最近使用的清單中的檔案數]  中的數目。  
   
 ## <a name="see-also"></a>另請參閱  
  [Management Studio 中的自訂報表](custom-reports-in-management-studio.md)   
- [使用自訂報表搭配物件總管節點屬性](use-custom-reports-with-object-explorer-node-properties.md)   
+ [使用具有物件總管節點屬性的自訂報表](use-custom-reports-with-object-explorer-node-properties.md)   
  [取消隱藏執行自訂報表警告](unsuppress-run-custom-report-warnings.md)   
  [Reporting Services &#40;SSRS&#41;](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

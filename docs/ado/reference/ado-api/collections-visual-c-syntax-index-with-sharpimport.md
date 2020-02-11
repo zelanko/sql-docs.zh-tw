@@ -1,5 +1,5 @@
 ---
-title: '集合 (VisualC++含 #import 語法索引) |Microsoft Docs'
+title: '集合（具有 #import 的 Visual C++ 語法索引） |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,16 +19,16 @@ ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 77a45203c50555168d2cd163c8b97406b8377694
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919890"
 ---
-# <a name="collections-visual-c-syntax-index-with-import"></a>集合 (VisualC++含 #import 語法索引)
-您最好知道集合繼承某些常用的方法和屬性。  
+# <a name="collections-visual-c-syntax-index-with-import"></a>集合（Visual C++ #import 的語法索引）
+知道集合會繼承特定的一般方法和屬性，是非常有用的。  
   
- 所有集合都繼承**計數**屬性並**重新整理**方法，以及所有集合加入**項目**屬性。 **錯誤**集合加入**清除**方法。 **參數**集合繼承**附加**並**刪除**方法，而**欄位**集合加入**Append**，**刪除**，和**更新**方法。  
+ 所有集合都會繼承**Count**屬性和**Refresh**方法，而所有集合都會加入**Item**屬性。 **Errors**集合會加入**Clear**方法。 **Parameters**集合會繼承**append**和**delete**方法，而**Fields**集合則會加入**append**、 **delete**和**Update**方法。  
   
 ## <a name="properties-collection"></a>屬性集合  
   
@@ -97,7 +97,7 @@ PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Errors 集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [參數集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Errors 集合（ADO）](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Fields 集合（ADO）](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Parameters 集合（ADO）](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

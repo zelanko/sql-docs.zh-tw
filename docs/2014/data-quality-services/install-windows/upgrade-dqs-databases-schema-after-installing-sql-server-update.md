@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5a2b13c80c9e6ee83d2713feab5d9839ded4a6d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481267"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>在安裝 SQL Server 更新之後升級 DQS 資料庫結構描述
@@ -27,9 +27,9 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
  升級 DQS 資料庫結構描述並不會影響 DQS 資料庫中的現有資料 (知識庫、資料品質專案及 DQS_STAGING_DATA 資料庫中的匯出結果)。 但是，在您升級 DQS 資料庫結構描述之前必須先備份 DQS 資料庫，以免在結構描述升級期間有任何意外的資料遺失狀況。 如需有關備份 DQS 資料庫的詳細資訊，請參閱 [備份及還原 DQS 資料庫](../backing-up-and-restoring-dqs-databases.md)。  
   
 > [!NOTE]  
->  大部分的 SQL Server 更新都需要升級至 DQS 資料庫結構描述。 如需將需要升級至 DQS 資料庫結構描述之 SQL Server 更新資訊，請參閱圖表中步驟 1.A[升級 DQS:Data Quality Services 上安裝累計更新或 Hotfix 修補](https://go.microsoft.com/fwlink/?LinkID=251565)。  
+>  大部分的 SQL Server 更新都需要升級至 DQS 資料庫結構描述。 如需將需要升級至 DQS 資料庫結構描述之 SQL Server 更新的詳細資訊，請參閱 [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565)(升級 DQS：在 Data Quality Services 上安裝累計更新或 Hotfix 修補) 中步驟 1.A 的圖表。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   您必須以 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 電腦上 Administrator 群組成員的身分登入。  
   
@@ -60,7 +60,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
 ## <a name="next-steps"></a>後續步驟  
  從 Data Quality Client 應用程式登入已升級的資料品質伺服器。  
   
- 如需有關升級 DQS 資料庫結構描述，SQL Server 安裝完成後的更新及相關疑難排解步驟，請參閱[升級 DQS:Data Quality Services 上安裝累計更新或 Hotfix 修補](https://go.microsoft.com/fwlink/?LinkID=251565)。  
+ 如需有關在安裝 SQL Server 更新之後升級 DQS 資料庫結構描述及相關疑難排解步驟的詳細資訊，請參閱 [升級 DQS：在 Data Quality Services 上安裝累計更新或 Hotfix 修補](https://go.microsoft.com/fwlink/?LinkID=251565)。  
   
 ## <a name="see-also"></a>另請參閱  
  [安裝 Data Quality Services](install-data-quality-services.md)   

@@ -13,21 +13,21 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128690"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB 標頭和版本資訊
   SQL Server Express LocalDB 執行個體 API 沒有個別的標頭檔；LocalDB 函數簽章和錯誤碼會定義在 SQL Server Native Client 標頭檔 (sqlncli.h) 中。 若要使用 LocalDB 執行個體 API，您必須在專案中包含 sqlncli.h 標頭檔。  
   
 ## <a name="localdb-versioning"></a>LocalDB 版本設定  
- LocalDB 安裝針對每個主要 SQL Server 版本使用一組二進位檔。 這些 LocalDB 版本會個別進行維護及修補。 這表示使用者必須指定所要使用的 LocalDB 基準版本 (亦即主要 SQL Server 版本)。 .NET Framework 所定義的標準版本格式指定版本，則**System.Version**類別：  
+ LocalDB 安裝針對每個主要 SQL Server 版本使用一組二進位檔。 這些 LocalDB 版本會個別進行維護及修補。 這表示使用者必須指定所要使用的 LocalDB 基準版本 (亦即主要 SQL Server 版本)。 版本是以 .NET Framework **system.web**類別所定義的標準版本格式來指定：  
   
- *major.minor[.build[.revision]]*  
+ *主要. 次要 [. 組建 [. 修訂]]*  
   
- 版本字串的前兩個數字 (*主要*並*次要*) 是必要項目。 版本字串的最後兩個數字 (*建置*並*修訂*) 為選擇性，預設為零，如果使用者離開其。這表示，如果使用者僅指定"12.2"做為 LocalDB 版本號碼，則會被視為使用者指定"12.2.0.0"。  
+ 版本字串（*主要*和*次要*）中的前兩個數字是強制的。 版本字串（*組建*和*修訂*）中的最後兩個數字是選擇性的，而且如果使用者離開，則預設為零。這表示如果使用者僅指定 "12.2" 做為 LocalDB 版本號碼，則會將其視為使用者指定 "12.2.0.0"。  
   
  例如，LocalDB 安裝的版本定義於 MSSQLServer\CurrentVersion 登錄機碼中的 SQL Server 執行個體登錄機碼底下，例如：  
   
@@ -35,16 +35,16 @@ ms.locfileid: "63128690"
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSSQLServer\CurrentVersion: "CurrentVersion"="12.0.2531.0"  
 ```  
   
- 支援在相同的工作站上並存多個 LocalDB 版本。 不過，使用者程式碼一律使用最新可用**SQLUserInstance** DLL 在本機電腦上的連接到 LocalDB 執行個體。  
+ 支援在相同的工作站上並存多個 LocalDB 版本。 不過，使用者程式碼一律會使用本機電腦上最新可用的**Sqluserinstance.dll** DLL 來連接到 LocalDB 實例。  
   
 ## <a name="locating-the-sqluserinstance-dll"></a>尋找 SQLUserInstance DLL  
- 若要找出**SQLUserInstance** DLL 時，用戶端提供者會使用下列登錄機碼：  
+ 為了找出**Sqluserinstance.dll** DLL，用戶端提供者會使用下列登錄機碼：  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- 在此機碼下會列出機碼清單，其中每個機碼各代表電腦上已安裝的每個 LocalDB 版本。 每個這些金鑰使用 LocalDB 版本號碼的格式命名 *\<主要版本 >* 。 *\<次要版本 >* (例如，索引鍵[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]名稱為 12.0)。 在每個版本機碼下會列出 `InstanceAPIPath` 名稱/值組，定義隨該版本安裝之 SQLUserInstance.dll 檔案的完整路徑。 下列範例顯示安裝 LocalDB 11.0 和 12.0 版之電腦的登錄項目：  
+ 在此機碼下會列出機碼清單，其中每個機碼各代表電腦上已安裝的每個 LocalDB 版本。 這些索引鍵的每一個都是以 [ * \<主要版本>*] 格式的 LocalDB 版本號碼來命名。次要版本>（例如，名為12.0 的金鑰[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ）。 * \< * 在每個版本機碼下會列出 `InstanceAPIPath` 名稱/值組，定義隨該版本安裝之 SQLUserInstance.dll 檔案的完整路徑。 下列範例顯示安裝 LocalDB 11.0 和 12.0 版之電腦的登錄項目：  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\12.0]  
@@ -53,7 +53,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
 "InstanceAPIPath"="C:\\Program Files\\Microsoft SQL Server\\120\\LocalDB\\Binn\\SqlUserInstance.dll"]  
 ```  
   
- 用戶端提供者必須尋找所有已安裝的版本和負載之間的最新版本**SQLUserInstance**從相關聯的 DLL 檔案`InstanceAPIPath`值。  
+ 用戶端提供者必須在所有已安裝的版本之間尋找最新**** 版本，並從相關聯`InstanceAPIPath`的值載入 sqluserinstance.dll DLL 檔案。  
   
 ### <a name="wow64-mode-on-64-bit-windows"></a>64 位元 Windows 上的 WOW64 模式  
  LocalDB 的 64 位元安裝包含一組額外的登錄機碼，可讓在 Windows-32-on-Windows-64 (WOW64) 模式下執行的 32 位元應用程式使用 LocalDB。 具體而言，在 64 位元 Windows 上，LocalDB MSI 會建立下列登錄機碼：  
@@ -66,12 +66,12 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
   
 ```  
   
- 64 位元程式讀取`Installed Versions`金鑰會看到指向 64 位元版本的值**SQLUserInstance** DLL，而 32 位元程式 （64 位元 Windows，在 WOW64 模式中執行） 會自動重新導向至`Installed Versions`機碼位於`Wow6432Node`hive。 此機碼包含指向 32 位元版本的值**SQLUserInstance** DLL。  
+ 64- `Installed Versions`讀取金鑰的程式會看到指向64位版本的**sqluserinstance.dll** DLL 的值，而 32-bit 程式（在以 WOW64 模式在64位 Windows 上執行`Installed Versions` ）會自動重新導向至位於`Wow6432Node` hive 底下的機碼。 此機碼包含指向32位版本之**Sqluserinstance.dll** DLL 的值。  
   
-## <a name="using-localdbdefineproxyfunctions"></a>使用 LOCALDB_DEFINE_PROXY_FUNCTIONS  
- LocalDB 執行個體 API 定義名為 LOCALDB_DEFINE_PROXY_FUNCTIONS，會自動探索並載入**SqlUserInstance** DLL。  
+## <a name="using-localdb_define_proxy_functions"></a>使用 LOCALDB_DEFINE_PROXY_FUNCTIONS  
+ LocalDB 實例 API 會定義名為 LOCALDB_DEFINE_PROXY_FUNCTIONS 的常數，以自動探索和載入**Sqluserinstance.dll** DLL。  
   
- 此常數啟用的程式碼區段可實作每個 LocalDB API 的 Proxy。 此 proxy 實作使用常見的函式繫結至在已安裝最新的進入點**SqlUserInstance** DLL，再將轉送要求。  
+ 此常數啟用的程式碼區段可實作每個 LocalDB API 的 Proxy。 Proxy 執行會使用通用函式系結至最新安裝的**Sqluserinstance.dll** DLL 中的進入點，然後轉送要求。  
   
  只有在包含 sqlncli.h 檔案之前，使用者程式碼中已定義常數 LOCALDB_DEFINE_PROXY_FUNCTIONS，才會啟用 Proxy 函數。 此常數應該僅定義於一個來源模組 (.cpp 檔) 中，因為該模組會為所有 API 進入點定義外部函數名稱。 此常數可以實作每個 LocalDB API 的 Proxy。  
   

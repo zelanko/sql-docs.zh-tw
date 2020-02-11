@@ -1,5 +1,5 @@
 ---
-title: 處理 XQuery 中的命名空間 |Microsoft Docs
+title: 在 XQuery 中處理命名空間 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004538"
 ---
 # <a name="handling-namespaces-in-xquery"></a>處理 XQuery 中的命名空間
@@ -49,7 +49,7 @@ WHERE ProductModelID=7
 ...  
 ```  
   
- 請注意，**命名空間**關鍵字用來定義新的命名空間前置詞"AWMI:"。 接著，必須針對所有落在該命名空間範圍中的元素，在查詢中使用此前置詞。  
+ 請注意， **namespace**關鍵字是用來定義新的命名空間前置詞 "AWMI："。 接著，必須針對所有落在該命名空間範圍中的元素，在查詢中使用此前置詞。  
   
 ### <a name="b-declaring-a-default-namespace"></a>B. 宣告預設命名空間  
  在上一個查詢中，已經定義了新的命名空間前置詞。 接著，必須在查詢中使用該前置詞，以選取所要的 XML 結構。 此外，您也可以將命名空間宣告為預設命名空間，如下列修改過的查詢中所示：  
@@ -115,7 +115,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-construction-using-default-namespaces"></a>D. 使用預設命名空間的建構  
- 您也可以定義要用於所建構之 XML 的預設命名空間。 例如，下列查詢會示範如何指定預設命名空間"uri: somenamespace"\\，以使用預設值做為建構，例如本機具名元素`<Result>`項目。  
+ 您也可以定義要用於所建構之 XML 的預設命名空間。 例如，下列查詢會顯示如何指定預設命名空間 "uri： SomeNamespace"\\，做為所建立之本機名稱專案的預設值，例如`<Result>`元素。  
   
 ```  
 SELECT CatalogDescription.query('  

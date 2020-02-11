@@ -1,5 +1,5 @@
 ---
-title: Stream 屬性 |Microsoft Docs
+title: 資料流程屬性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +20,14 @@ ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58bbbc299f13c0d876807476136cede76894bbb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916692"
 ---
 # <a name="stream-property"></a>Stream 屬性
-取得或設定 OLE DB **Stream**物件上的往返**ADOStreamConstruction**物件。  
+取得或設定**ADOStreamConstruction**物件上/的 OLE DB**資料流程**物件。  
   
  讀取/寫入  
   
@@ -40,13 +40,13 @@ HRESULT put_Stream([in] IUnknown* pStream);
   
 ## <a name="parameters"></a>參數  
  *ppStream*  
- OLE DB 指標**Stream**物件。  
+ OLE DB**資料流程**物件的指標。  
   
  *pStream*  
- OLE DB **Stream**物件。  
+ OLE DB**資料流程**物件。  
   
 ## <a name="return-values"></a>傳回值  
- 此屬性的方法會傳回標準的 HRESULT 值。 這包括 S_OK 以及 E_FAIL。  
+ 這個屬性方法會傳回標準的 HRESULT 值。 這包括 S_OK 和 E_FAIL。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [ADOStreamConstruction 介面](../../../ado/reference/ado-api/adostreamconstruction-interface.md)

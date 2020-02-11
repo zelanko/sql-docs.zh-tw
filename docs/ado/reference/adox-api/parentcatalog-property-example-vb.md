@@ -1,5 +1,5 @@
 ---
-title: ParentCatalog 屬性範例 (VB) |Microsoft Docs
+title: ParentCatalog 屬性範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f87a092d20fb15a23e21a7ef9f0094e40eedeb57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965598"
 ---
 # <a name="parentcatalog-property-example-vb"></a>ParentCatalog 屬性範例 (VB)
-下列程式碼示範如何使用[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)屬性來存取提供者特有的屬性，再附加到類別目錄的資料表。 屬性是**AutoIncrement**，Microsoft Jet 資料庫中建立自動遞增欄位。  
+下列程式碼示範如何在將資料表附加至目錄之前，使用[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)屬性來存取提供者特定的屬性。 屬性為**自動遞增**，這會在 Microsoft Jet 資料庫中建立自動遞增欄位。  
   
 ```  
 ' BeginCreateAutoIncrColumnVB  
@@ -84,12 +84,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Append 方法 (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 方法 (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Catalog 物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [資料行物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [資料行集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Name 屬性 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- [ParentCatalog 屬性 (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)   
- [Table 物件 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
+ [Append 方法（ADOX Columns）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append 方法（ADOX Tables）](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Catalog 物件（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Column 物件（ADOX）](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Columns 集合（ADOX）](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Name 屬性（ADOX）](../../../ado/reference/adox-api/name-property-adox.md)   
+ [ParentCatalog 屬性（ADOX）](../../../ado/reference/adox-api/parentcatalog-property-adox.md)   
+ [Table 物件（ADOX）](../../../ado/reference/adox-api/table-object-adox.md)   
  [Type 屬性 (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)

@@ -1,5 +1,5 @@
 ---
-title: OpenSchema 方法範例 (VB) |Microsoft Docs
+title: OpenSchema 方法範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a16979e7993fd1ac86679d054508b837a0a08c68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931897"
 ---
 # <a name="openschema-method-example-vb"></a>OpenSchema 方法範例 (VB)
-這個範例會使用[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法，以顯示每個資料表中的類型與名稱***Pubs***資料庫。  
+這個範例會使用[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法來顯示***Pubs***資料庫中每個資料表的名稱和類型。  
   
 ```  
 'BeginOpenSchemaVB  
@@ -78,7 +78,7 @@ End Sub
 'EndOpenSchemaVB  
 ```  
   
- 這個範例會指定中的 TABLE_TYPE 查詢條件約束**OpenSchema**方法***準則***引數。 如此一來，只檢視的結構描述資訊所述***Pubs***資料庫會傳回。 此範例接著會顯示每個資料表的類型與名稱。  
+ 這個範例會在**OpenSchema**方法***準則***引數中指定 TABLE_TYPE 查詢準則約束。 因此，只會傳回***Pubs***資料庫中所指定之 Views 的架構資訊。 然後，此範例會顯示每個資料表的名稱和類型。  
   
 ```  
 Attribute VB_Name = "OpenSchema"  

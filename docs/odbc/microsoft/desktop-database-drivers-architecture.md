@@ -15,38 +15,38 @@ ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ccd1f14b0cfbcbdbc675a142ebabf11932409832
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071913"
 ---
 # <a name="desktop-database-drivers-architecture"></a>桌面資料庫驅動程式架構
-這些驅動程式專為使用在 Microsoft Windows 95 或更新版本，或 Windows NT 4.0 和 Windows 2000。 支援在 Windows 95 或更新版本; 僅限 32 位元應用程式Windows NT 4.0 和 Windows 2000 支援 16 位元和 32 位元應用程式。  
+這些驅動程式是設計用來在 Microsoft Windows 95 或更新版本，或是 Windows NT 4.0 和 Windows 2000 上使用。 Windows 95 或更新版本僅支援32位應用程式;Windows NT 4.0 和 Windows 2000 支援16位和32位應用程式。  
   
 > [!NOTE]  
->  如要使用這些驅動程式的 ODBC 版本的相關資訊，請參閱*ODBC 程式設計人員參考*，和過去和目前的版本資訊。 這些驅動程式符合所述的區域，除了*ODBC 程式設計人員參考*。  
+>  如需有關要與這些驅動程式搭配使用之 ODBC 版本的資訊，請參閱 ODBC 程式設計*人員參考*，以及過去和目前的版本資訊。 除了已注明的區域之外，這些驅動程式會符合 ODBC 程式設計*人員的參考*。  
   
- ODBC 桌面資料庫驅動程式包含 Microsoft Access、 dBASE、 Microsoft Excel、 Paradox，與文字的 32 位元驅動程式。 無 16 位元驅動程式會包含項目。 （Access 驅動程式是可分開）。  
+ ODBC 桌面資料庫驅動程式包含適用于 Microsoft Access、dBASE、Microsoft Excel、Paradox 和 Text 的32位驅動程式。 不包含16位驅動程式。 （Microsoft FoxPro 的驅動程式可分別使用）。  
   
- 在 Windows 95 或更新版本的應用程式/驅動程式架構是：  
+ Windows 95 或更新版本上的應用程式/驅動程式架構為：  
   
- ![應用程式&#47;驅動程式架構：Windows 95 及更新版本](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
+ ![應用程式&#47;驅動程式架構： Windows 95 和更新版本](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
   
- 不支援這些驅動程式，請在 Windows 95 的 16 位元應用程式使用。  
+ Windows 95 上的16位應用程式不支援使用這些驅動程式。  
   
- 在 Windows NT 4.0 和 Windows 2000 上的應用程式/驅動程式架構是：  
+ Windows NT 4.0 和 Windows 2000 的應用程式/驅動程式架構為：  
   
- ![應用程式&#47;驅動程式架構：NT 4.0 和 Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
+ ![應用程式&#47;驅動程式架構： NT 4.0 和 Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
   
- 桌面資料庫驅動程式是兩層式驅動程式。 在兩層組態中，驅動程式不會執行剖析、 驗證、 最佳化及執行查詢的程序。 相反地，Microsoft Jet 執行這些工作。 它會處理 ODBC API 呼叫，並可做為 SQL 引擎。 Microsoft Jet 已成為不可或缺，分不開部分驅動程式：它隨附的驅動程式，並位於與驅動程式，即使在電腦上的沒有其他應用程式會使用它。  
+ 桌面資料庫驅動程式是兩層式的驅動程式。 在兩層式設定中，驅動程式不會執行剖析、驗證、優化及執行查詢的進程。 相反地，Microsoft Jet 會執行這些工作。 它會處理 ODBC API 呼叫，並作為 SQL 引擎。 Microsoft Jet 已成為分不開的一部分：驅動程式隨附于驅動程式，並與驅動程式一起存放，即使電腦上沒有其他應用程式使用它。  
   
- 桌面資料庫驅動程式包含六個不同的驅動程式-或者，更精確地說，其中一個驅動程式檔案 (Odbcjt32.dll) 的 ODBC[驅動程式管理員](../../odbc/reference/the-driver-manager.md)使用六個不同的方式。 DRIVERID 中的旗標的資料來源的登錄項目會決定 Odbcjt32.dll 中的哪一個驅動程式驅動程式管理員使用。 應用程式會將此旗標傳入的呼叫中所含的連接字串**SQLDriverConnect**。 根據預設，此旗標會是 Microsoft Access 驅動程式的識別碼。  
+ 桌面資料庫驅動程式包含了六種不同的驅動程式，或更精確的一個驅動程式檔案（Odbcjt32 .dll），而 ODBC[驅動程式管理員](../../odbc/reference/the-driver-manager.md)會使用六種不同的方式。 資料來源的登錄專案中的 DRIVERID 旗標會決定驅動程式管理員使用 Odbcjt32 中的哪一個驅動程式。 應用程式會在呼叫**SQLDriverConnect**所包含的連接字串中傳遞此旗標。 根據預設，旗標是 Microsoft Access 驅動程式的識別碼。  
   
- 驅動程式安裝程式檔案會於安裝時期變更 DRIVERID 旗標。 Microsoft Access 驅動程式以外的所有驅動程式會有相關聯的安裝程式 DLL。 當您按一下 **安裝程式**中[Microsoft ODBC 資料來源管理員](../../odbc/admin/odbc-data-source-administrator.md)針對資料來源，ODBC 安裝程式 DLL (Odbcinst.dll) 載入安裝程式 DLL。 安裝程式 DLL 匯出的 ODBC 安裝程式函式**SQLConfigDataSource**。 如果視窗控制代碼傳遞給**SQLConfigDataSource**，此函式會顯示安裝程式視窗，並變更 DRIVERID 旗標，以根據從使用者介面中選取的驅動程式。  
+ 驅動程式安裝檔會在安裝時變更 DRIVERID 旗標。 除了 Microsoft Access 驅動程式以外的所有驅動程式都有相關聯的安裝程式 DLL。 當您在資料來源的[MICROSOFT ODBC 資料來源管理員](../../odbc/admin/odbc-data-source-administrator.md)中按一下 [**設定**] 時，ODBC 安裝程式 dll （Odbcinst）會載入安裝程式 dll。 安裝程式 DLL 會匯出 ODBC 安裝程式函數**SQLConfigDataSource**。 如果將視窗控制碼傳遞給**SQLConfigDataSource**，此函式會顯示安裝視窗，並根據從使用者介面中選取的驅動程式來變更 DRIVERID 旗標。  
   
- 以程式設計方式建立檔案時，要將 NULL 視窗控制代碼傳遞給**SQLConfigDataSource**，和函式會建立資料來源，以動態方式變更 DRIVERID 旗標，根據*lpszDriver*函式呼叫中的引數。  
+ 以程式設計方式建立檔案時，會將 Null 視窗控制碼傳遞至**SQLConfigDataSource**，而函式會動態建立資料來源，並根據函式呼叫中的*lpszDriver*引數變更 DRIVERID 旗標。  
   
- Odbcjt32.dll 實作 Microsoft Jet API 之上的 ODBC 函數。 不過也 ODBC 和 Microsoft Jet 函式之間沒有直接對應。 許多因素，例如資料指標模型和 SQL 對應，避免直接的相互關聯的函式。  
+ Odbcjt32 會在 Microsoft Jet API 之上執行 ODBC 函數。 不過，ODBC 和 Microsoft Jet 函式之間沒有直接的對應。 許多因素（例如資料指標模型和 SQL 對應）會防止函式直接相互關聯。  
   
- ODBC 驅動程式位於 Microsoft Jet 引擎和 ODBC 驅動程式管理員之間。 在應用程式呼叫某些 ODBC 函數會處理由驅動程式管理員，並不會傳遞給驅動程式。 這些函式中，Microsoft Jet 永遠看不到函式呼叫，因為它並沒有直接連線至驅動程式管理員。
+ ODBC 驅動程式位於 Microsoft Jet 引擎和 ODBC 驅動程式管理員之間。 應用程式所呼叫的某些 ODBC 函式會由驅動程式管理員處理，而不會傳遞至驅動程式。 針對這些函式，Microsoft Jet 永遠不會看到函式呼叫，因為它沒有與驅動程式管理員的直接連接。

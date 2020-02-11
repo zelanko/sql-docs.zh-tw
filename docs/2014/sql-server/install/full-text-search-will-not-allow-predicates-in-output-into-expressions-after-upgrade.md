@@ -1,5 +1,5 @@
 ---
-title: 升級之後，全文檢索搜尋將不允許述詞中 OUTPUT INTO 運算式 |Microsoft Docs
+title: 升級之後，全文檢索搜尋將不允許 OUTPUT INTO 運算式中的述詞 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f5a99d7890a470a2026bfc0e972f8b5ae396d893
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095013"
 ---
 # <a name="after-upgrade-full-text-search-will-not-allow-predicates-in-output-into-expression"></a>升級之後，全文檢索搜尋將不允許 OUTPUT INTO 運算式中使用述詞
   當資料庫相容性層級設定為 100 或以上時，OUTPUT 子句中不允許使用全文檢索述詞。  
   
 ## <a name="description"></a>描述  
- 如需有關 OUTPUT 子句的詳細資訊，請參閱 < [OUTPUT 子句&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/output-clause-transact-sql)。  
+ 如需 OUTPUT 子句的詳細資訊，請參閱[&#40;transact-sql&#41;的 Output 子句](/sql/t-sql/queries/output-clause-transact-sql)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   

@@ -15,19 +15,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b3d55dca978b4383a1a28b0103750b42a294095f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912565"
 ---
-# <a name="mssqlserver948"></a>MSSQLSERVER_948
+# <a name="mssqlserver_948"></a>MSSQLSERVER_948
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|948|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -40,6 +40,6 @@ ms.locfileid: "62912565"
  例如，造成這項錯誤的原因可能是在較新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中使用 Vardecimal 儲存格式，然後嘗試在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 之前的版本中附加資料庫檔案。  
   
 ## <a name="user-action"></a>使用者動作  
- 判斷原始伺服器上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 在  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，請以滑鼠右鍵按一下伺服器，然後再按**屬性**或型別`SELECT @@VERSION`在查詢視窗中。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的原始版本開啟資料庫。 檢查 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中原始資料庫上啟用的功能。 修改這些設定，以搭配用來附加資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。  
+ 判斷原始伺服器上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，以滑鼠右鍵按一下伺服器，然後按一下 [**屬性**] `SELECT @@VERSION`或 [在查詢視窗中輸入]。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的原始版本開啟資料庫。 檢查 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中原始資料庫上啟用的功能。 修改這些設定，以搭配用來附加資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。  
   
   

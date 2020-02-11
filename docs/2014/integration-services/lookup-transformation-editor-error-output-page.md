@@ -1,5 +1,5 @@
 ---
-title: 查閱轉換編輯器 （錯誤輸出頁面） |Microsoft Docs
+title: 查閱轉換編輯器（錯誤輸出頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12f1a73c1d21986d2089878bfe9d29dd4450f222
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057863"
 ---
 # <a name="lookup-transformation-editor-error-output-page"></a>查閱轉換編輯器 (錯誤輸出頁面)
@@ -24,7 +24,7 @@ ms.locfileid: "66057863"
   
  若要深入了解查閱轉換，請參閱＜ [Lookup Transformation](data-flow/transformations/lookup-transformation.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **輸入/輸出**  
  檢視輸入的名稱。  
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d6256ad8ee35b17336940d92ee7b0c917cb591ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480089"
 ---
 # <a name="backward-compatibility-master-data-services"></a>回溯相容性 (Master Data Services)
@@ -22,8 +22,8 @@ ms.locfileid: "65480089"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [SQL Server 2014 中淘汰的 Master Data Services 功能](deprecated-master-data-services-features.md)  
+-   [SQL Server 2014 中已被取代的 Master Data Services 功能](deprecated-master-data-services-features.md)  
   
--   [SQL Server 2014 中已中止的 Master Data Services 功能](discontinued-master-data-services-features.md)  
+-   [SQL Server 2014 中已停止的 Master Data Services 功能](discontinued-master-data-services-features.md)  
   
   

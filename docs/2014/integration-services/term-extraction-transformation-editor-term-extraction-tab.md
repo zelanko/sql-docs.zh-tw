@@ -1,5 +1,5 @@
 ---
-title: 詞彙擷取轉換編輯器 （詞彙擷取索引標籤） |Microsoft Docs
+title: 詞彙提取轉換編輯器（詞彙解壓縮索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 37d09aa75c3f6c5dd61b257056127ca76b410487
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055140"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>詞彙擷取轉換編輯器 (詞彙擷取索引標籤)
@@ -33,16 +33,16 @@ ms.locfileid: "66055140"
  **詞彙**  
  提供輸出資料行的名稱，其中將包含所擷取的詞彙。  
   
- **分數**  
+ **Score**  
  提供輸出資料行的名稱，其中將包含每個所擷取詞彙的分數。  
   
  **設定錯誤輸出**  
- 使用 [[設定錯誤輸出]](../../2014/integration-services/configure-error-output.md) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
+ 使用 [設定錯誤輸出](../../2014/integration-services/configure-error-output.md) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [詞彙擷取轉換編輯器 &#40;排除索引標籤&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
- [詞彙擷取轉換編輯器 &#40;進階索引標籤&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
+ [[詞彙解壓縮轉換編輯器] &#40;[排除] 索引標籤&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [[詞彙解壓縮轉換編輯器] &#40;[Advanced] 索引標籤&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
  [詞彙查閱轉換](data-flow/transformations/lookup-transformation.md)  
   
   

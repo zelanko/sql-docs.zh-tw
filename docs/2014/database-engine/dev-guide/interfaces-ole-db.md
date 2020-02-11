@@ -1,5 +1,5 @@
 ---
-title: 介面 (OLE DB) |Microsoft Docs
+title: 介面（OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c3e4d6a7875969e254874fa3dde101d986a9f9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781313"
 ---
 # <a name="interfaces-ole-db"></a>介面 (OLE DB)
-  除了核心 OLE DB 介面提供由 Microsoft Data Access Components (MDAC)， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會實作下列其他的 OLE DB 介面：  
+  除了 Microsoft Data Access Components （MDAC）所提供的核心 OLE DB 介面， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者還會執行下列額外的 OLE DB 介面：  
   
 -   [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)  
   
@@ -47,6 +47,6 @@ ms.locfileid: "62781313"
 -   [ISQLServerErrorInfo &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/isqlservererrorinfo-ole-db.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Native Client &#40;OLE DB&#41;參考](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
+ [SQL Server Native Client &#40;OLE DB&#41; 參考](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
   

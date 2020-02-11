@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ecc6c5ccff5f5ccff8a0625e1adde24aebe2f603
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835174"
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-service"></a>SQL Server 連接所需的 CDC 服務權限
@@ -24,7 +24,7 @@ ms.locfileid: "62835174"
   
  下表描述需要連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各種工作以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入/使用者的必要權限。  
   
-|工作|最小權限|  
+|Task|最低權限|  
 |----------|-------------------------|  
 |準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|`dbcreator` 固定伺服器角色|  
 |建立 Oracle CDC 服務 SQL Server 登入，以供 Oracle CDC 服務使用。|`public` 固定伺服器角色|  
@@ -34,6 +34,6 @@ ms.locfileid: "62835174"
   
 ## <a name="see-also"></a>另請參閱  
  [連接到 SQL Server](connection-to-sql-server.md)   
- [連接到 SQL Server 進行刪除](connection-to-sql-server-for-delete.md)  
+ [連接到 SQL Server 以進行刪除作業](connection-to-sql-server-for-delete.md)  
   
   
