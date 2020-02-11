@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154577"
 ---
 # <a name="databases"></a>資料庫
@@ -42,7 +42,7 @@ ms.locfileid: "70154577"
 |-|-|  
 |[系統資料庫](system-databases.md)|[刪除資料庫的資料或記錄檔](delete-data-or-log-files-from-a-database.md)|  
 |[自主資料庫](contained-databases.md)|[顯示資料庫的資料和記錄空間資訊](display-data-and-log-space-information-for-a-database.md)|  
-|[在 Azure 中 SQL Server 資料檔案](sql-server-data-files-in-microsoft-azure.md)|[增加資料庫的大小](increase-the-size-of-a-database.md)|  
+|[Azure 中的 SQL Server 資料檔案](sql-server-data-files-in-microsoft-azure.md)|[增加資料庫的大小](increase-the-size-of-a-database.md)|  
 |[資料庫檔案與檔案群組](database-files-and-filegroups.md)|[重新命名資料庫](rename-a-database.md)|  
 |[資料庫狀態](database-states.md)|[將資料庫設定為單一使用者模式](set-a-database-to-single-user-mode.md)|  
 |[檔案狀態](file-states.md)|[壓縮資料庫](shrink-a-database.md)|  
@@ -55,7 +55,7 @@ ms.locfileid: "70154577"
 |[刪除資料庫](delete-a-database.md)|[資料庫快照集 &#40;SQL Server&#41;](database-snapshots-sql-server.md)|  
   
 ## <a name="related-content"></a>相關內容  
- [索引](../indexes/indexes.md)  
+ [索引數](../indexes/indexes.md)  
   
  [檢視](../views/views.md)  
   
