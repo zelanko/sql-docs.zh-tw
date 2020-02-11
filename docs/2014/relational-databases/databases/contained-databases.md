@@ -16,13 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917567"
 ---
 # <a name="contained-databases"></a>自主資料庫
+  
   *「自主資料庫」* (Contained Database) 是與其他資料庫和裝載資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體隔離的資料庫。  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以四種方式協助使用者將其資料庫與執行個體隔離。  
   
 -   描述資料庫的中繼資料大多是在資料庫中維護 (加上或取代在 master 資料庫中維護中繼資料)。  
@@ -37,15 +38,15 @@ ms.locfileid: "62917567"
   
  本主題包含下列各節。  
   
--   [部分自主的資料庫概念](#Concepts)  
+-   [部分自主資料庫概念](#Concepts)  
   
--   [內含項目](#containment)  
+-   [抑制](#containment)  
   
 -   [使用部分自主資料庫的優點](#benefits)  
   
 -   [限制](#Limitations)  
   
--   [識別資料庫內含項目](#Identifying)  
+-   [識別資料庫內含專案](#Identifying)  
   
 ##  <a name="Concepts"></a> 部分自主資料庫概念  
  完全自主資料庫包含了定義資料庫所需的所有設定和中繼資料，而且對於已安裝資料庫的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體沒有組態相依性。 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，分隔資料庫與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體既耗時又需要資料庫與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之間關聯性的詳細知識。 部分自主資料庫讓分隔 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的資料庫與其他資料庫變得更容易。  
@@ -152,19 +153,19 @@ ms.locfileid: "62917567"
 ##  <a name="Identifying"></a> 識別資料庫內含項目  
  有兩項工具可協助識別資料庫的內含項目狀態。 [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) 是顯示資料庫中所有可能非內含性實體的檢視。 在執行階段中識別任何實際非內含性實體時，就會發生 database_uncontained_usage 事件。  
   
-### <a name="sysdmdbuncontainedentities"></a>sys.dm_db_uncontained_entities  
+### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  
  這個檢視會顯示資料庫中任何可能的非內含性實體，例如跨越資料庫界限的實體。 這包括可能使用資料庫模型外部之物件的使用者實體。 不過，因為某些實體 (例如，使用動態 SQL 的實體) 的內含項目要等到執行階段才能判斷，所以此檢視可能會顯示一些實際上包含的實體。 如需詳細資訊，請參閱 [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql)。  
   
-### <a name="databaseuncontainedusage-event"></a>database_uncontained_usage 事件  
+### <a name="database_uncontained_usage-event"></a>database_uncontained_usage 事件  
  在執行階段識別非內含性實體時，會發生此 XEvent。 這包括起源自用戶端程式碼的實體。 這個 XEvent 只會針對實際非內含性實體發生。 不過，此事件只會在執行階段中發生。 因此，這個 XEvent 不會識別您尚未執行的任何非內含性使用者實體。  
   
 ## <a name="related-content"></a>相關內容  
- [修改的功能&#40;自主資料庫&#41;](modified-features-contained-database.md)  
+ [修改的功能 &#40;自主資料庫&#41;](modified-features-contained-database.md)  
   
  [自主資料庫定序](contained-database-collations.md)  
   
  [自主資料庫的安全性最佳做法](security-best-practices-with-contained-databases.md)  
   
- [移轉至部分自主資料庫](migrate-to-a-partially-contained-database.md)  
+ [遷移至部分自主資料庫](migrate-to-a-partially-contained-database.md)  
   
   

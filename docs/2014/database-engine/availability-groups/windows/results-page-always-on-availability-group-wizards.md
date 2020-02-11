@@ -1,5 +1,5 @@
 ---
-title: 結果頁面 （AlwaysOn 可用性群組精靈） |Microsoft Docs
+title: 結果頁面（AlwaysOn 可用性群組嚮導） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789009"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>結果頁面 (AlwaysOn 可用性群組精靈)
@@ -37,7 +37,7 @@ ms.locfileid: "62789009"
 |結果|描述|  
 |------------|-----------------|  
 |**錯誤**|表示驗證步驟失敗。 按一下連結可檢視錯誤訊息。|  
-|**成功**|表示驗證步驟已順利完成。|  
+|「成功」 |表示驗證步驟已順利完成。|  
   
 
   
@@ -47,13 +47,13 @@ ms.locfileid: "62789009"
   
 -   [使用 [將複本加入可用性群組中精靈] &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [使用 [將資料庫加入可用性群組中精靈] &#40;SQL Server Management Studio&#41;](availability-group-add-database-to-group-wizard.md)  
+-   [使用將資料庫加入至可用性群組精靈 &#40;SQL Server Management Studio&#41;](availability-group-add-database-to-group-wizard.md)  
   
 -   [使用容錯移轉可用性群組精靈 &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
 
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

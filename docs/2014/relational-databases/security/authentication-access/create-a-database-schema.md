@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3c3747149b23c6217f321eff9d19621189b89b66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011981"
 ---
 # <a name="create-a-database-schema"></a>建立資料庫結構描述
@@ -33,9 +33,9 @@ ms.locfileid: "63011981"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要使用下列項目建立結構描述：**  
+-   **若要建立架構，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63011981"
   
 -   建立資料庫物件時，如果您將有效的網域主體 (使用者或群組) 指定為物件擁有者，則會將該網域主體加入至資料庫做為結構描述。 新的結構描述將由該網域主體所擁有。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
   
@@ -65,16 +65,16 @@ ms.locfileid: "63011981"
   
 2.  展開要建立新資料庫結構描述的資料庫。  
   
-3.  以滑鼠右鍵按一下 [安全性] 資料夾，指向 [新增]，然後選取 [結構描述]。  
+3.  以滑鼠右鍵按一下 [安全性]  資料夾，指向 [新增]  ，然後選取 [結構描述]  。  
   
-4.  在 [結構描述 - 新增] 對話方塊的 [一般] 頁面上，將新結構描述的名稱輸入 [結構描述名稱] 方塊中。  
+4.  在 [結構描述 - 新增]  對話方塊的 [一般]  頁面上，將新結構描述的名稱輸入 [結構描述名稱]  方塊中。  
   
 5.  在 **[結構描述擁有者]** 方塊中，輸入擁有結構描述之資料庫使用者或角色的名稱。 或者，按一下 **[搜尋]** 開啟 **[搜尋角色和使用者]** 對話方塊。  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他選項  
- [結構描述 - 新增] 對話方塊也在其他兩個頁面上提供選項：[權限] 和 [延伸屬性]。  
+ [結構描述 - 新增]  對話方塊也在其他兩個頁面上提供選項： [權限]  和 [擴充屬性]  。  
   
 -   **[權限]** 頁面列出所有可能的安全性實體以及可授與登入的安全性實體權限。  
   
@@ -86,9 +86,9 @@ ms.locfileid: "63011981"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  

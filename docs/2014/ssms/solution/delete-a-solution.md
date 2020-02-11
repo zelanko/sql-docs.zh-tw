@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a16d7565bb36eb7895db94da088927be7595f5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63043943"
 ---
 # <a name="delete-a-solution"></a>刪除方案
@@ -39,7 +39,7 @@ ms.locfileid: "63043943"
   
 ## <a name="see-also"></a>另請參閱  
  [方案總管](solution-explorer.md)   
- [建立新的方案](create-a-new-solution.md)   
+ [建立新的解決方案](create-a-new-solution.md)   
  [建立專案](create-a-project.md)   
  [移除或刪除項目或專案](remove-or-delete-an-item-or-project.md)  
   

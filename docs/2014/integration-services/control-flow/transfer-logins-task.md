@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 805c89c24b0a16051de1d555b484a0870de0cfde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830009"
 ---
 # <a name="transfer-logins-task"></a>傳送登入工作
@@ -68,7 +68,7 @@ ms.locfileid: "62830009"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [傳送登入工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[傳送登入工作編輯器] &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [傳送登入工作編輯器 &#40;登入頁面&#41;](../transfer-logins-task-editor-logins-page.md)  
   

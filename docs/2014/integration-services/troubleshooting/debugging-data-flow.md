@@ -17,20 +17,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fdfaeeb9e8dafe82a1312593df2dd128635b8365
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766191"
 ---
 # <a name="debugging-data-flow"></a>偵錯資料流程
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供許多功能和工具，讓您用來疑難排解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的資料流程。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]而[!INCLUDE[ssIS](../../includes/ssis-md.md)]設計工具組含的功能和工具，可讓您用來疑難排解[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝中的資料流程。  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」會提供資料檢視器。  
+-   
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」會提供資料檢視器。  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 轉換會提供資料列計數。  
+-   
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 轉換會提供資料列計數。  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供執行階段的進度報表。  
+-   
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供執行階段的進度報表。  
   
 ## <a name="data-viewers"></a>資料檢視器  
  資料檢視器可以顯示資料流程中兩個元件之間的資料。 從資料來源擷取資料或資料第一次進入資料流程時、在轉換更新資料之前和之後，以及在資料載入其目的地之前，可以透過資料檢視器來顯示資料。  
@@ -61,7 +64,7 @@ ms.locfileid: "62766191"
   
  下表描述色彩編碼。  
   
-|色彩|描述|  
+|Color|描述|  
 |-----------|-----------------|  
 |無色彩|正在等候由資料流程引擎呼叫。|  
 |黃色|正在執行轉換、擷取資料或載入資料。|  
@@ -69,6 +72,6 @@ ms.locfileid: "62766191"
 |紅色|已執行但發生錯誤。|  
   
 ## <a name="see-also"></a>另請參閱  
- [疑難排解封裝開發的工具](troubleshooting-tools-for-package-development.md)  
+ [套件開發的疑難排解工具](troubleshooting-tools-for-package-development.md)  
   
   

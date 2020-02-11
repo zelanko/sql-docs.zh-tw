@@ -14,16 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de783ffdb5480a9cdebec2380f81e50a9cba11ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815401"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>變更伺服器執行個體的 HADR 叢集內容 (SQL Server)
-  本主題描述如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和更新版本中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 切換 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 執行個體的 HADR 叢集內容。 「HADR 叢集內容」  會決定哪個 Windows Server 容錯移轉叢集 (WSFC) 叢集管理伺服器執行個體所裝載可用性複本的中繼資料。  
+  本主題描述如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和更新版本中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 切換 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 執行個體的 HADR 叢集內容。 「HADR 叢集內容」** 會決定哪個 Windows Server 容錯移轉叢集 (WSFC) 叢集管理伺服器執行個體所裝載可用性複本的中繼資料。  
   
- 僅在跨叢集移轉 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 至新 WSFC 叢集上的 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 執行個體時，才切換 HADR 叢集內容。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的跨叢集移轉支援以最短的可用性群組停機時間升級為 [!INCLUDE[win8](../../../includes/win8-md.md)] 或 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]。 如需詳細資訊，請參閱[針對作業系統升級進行 AlwaysOn 可用性群組的跨叢集移轉](https://msdn.microsoft.com/library/jj873730.aspx)。  
+ 僅在跨叢集移轉 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 至新 WSFC 叢集上的 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 執行個體時，才切換 HADR 叢集內容。 
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的跨叢集移轉支援以最短的可用性群組停機時間升級為 [!INCLUDE[win8](../../../includes/win8-md.md)] 或 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] 。 如需詳細資訊，請參閱[針對作業系統升級進行 AlwaysOn 可用性群組的跨叢集移轉](https://msdn.microsoft.com/library/jj873730.aspx)。  
   
 
   
@@ -52,7 +53,7 @@ ms.locfileid: "62815401"
   
     |複本角色|動作|連結|  
     |------------------|------------|----------|  
-    |主要|讓可用性群組離線。|[讓可用性群組離線 &#40;SQL Server&#41;](../../take-an-availability-group-offline-sql-server.md)|  
+    |Primary|讓可用性群組離線。|[讓可用性群組離線 &#40;SQL Server&#41;](../../take-an-availability-group-offline-sql-server.md)|  
     |次要|從本身的可用性群組移除複本|[將次要複本從可用性群組移除 &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
   
 -   所有同步認可複本都必須是 SYNCHRONIZED，您才能從遠端叢集切換至本機叢集。  
@@ -67,7 +68,7 @@ ms.locfileid: "62815401"
     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com'  
     ```  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
   
@@ -92,7 +93,7 @@ ms.locfileid: "62815401"
   
 2.  使用 [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) 陳述式的 SET HADR CLUSTER CONTEXT 子句，如下所示：  
   
-     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **' *`windows_cluster`* '** |本機}  
+     ALTER SERVER CONFIGURATION SET HADR 叢集內容**=** { **'*`windows_cluster`*'** |本機  
   
      其中  
   
@@ -117,7 +118,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;
   
 
   
-##  <a name="FollowUp"></a> 後續操作：切換可用性複本的叢集內容之後  
+##  <a name="FollowUp"></a>後續操作：切換可用性複本的叢集內容之後  
  新的 HADR 叢集內容會立即生效，不需要重新啟動伺服器執行個體。 HADR 叢集內容設定是持續性的執行個體層級設定，即使伺服器執行個體重新啟動也會保持不變。  
   
  藉由查詢 [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql) 動態管理檢視確認新的 HADR 叢集內容，如下所示：  
@@ -130,7 +131,8 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
  當 HADR 叢集內容切換至新的叢集時：  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體目前裝載的任何可用性複本的中繼資料都會清除。  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體目前裝載的任何可用性複本的中繼資料都會清除。  
   
 -   之前屬於某個可用性複本的所有資料庫現在都會是 RESTORING 狀態。  
   
@@ -156,12 +158,12 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [SQL Server 2012 技術文件](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 小組 Blog：官方 SQL Server AlwaysOn 小組的 Blog](https://blogs.msdn.com/b/sqlalwayson/)  
   
   
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組 (SQL Server)](always-on-availability-groups-sql-server.md) [Windows Server 容錯移轉叢集&#40;WSFC&#41; SQL server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
+ [AlwaysOn 可用性群組（SQL Server）](always-on-availability-groups-sql-server.md) [Windows Server 容錯移轉叢集 &#40;WSFC&#41; 與 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)  
   
   

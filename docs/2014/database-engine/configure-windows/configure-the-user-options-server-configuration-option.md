@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b0588bbc8c21c9946ac72a2db92c593e48973dfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787063"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>設定 user options 伺服器組態選項
@@ -32,7 +32,7 @@ ms.locfileid: "62787063"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目設定 user options 組態選項：**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62787063"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：** [設定 user options 組態選項之後](#FollowUp)  
+-   **後續操作：** [設定使用者選項設定選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62787063"
   
 -   **user options** 中的位元位置與 @@OPTIONS 中的位元位置完全一樣。 每個連接都有它自己的 @@OPTIONS 函數，代表組態環境。 登入 \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，使用者會收到將目前 **user options** 值指派給 @@OPTIONS 的預設環境。 為 **user options** 執行 SET 陳述式會影響工作階段的 @@OPTIONS 函式中的對應值。 在變更這個設定值後建立的連接都會接收新的值。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
@@ -105,7 +105,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> 後續操作：設定 user options 組態選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定使用者選項設定選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b91bff77f3df9e1416837dead0c0261bf6473e34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63070899"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>排序查詢中的多個資料行 (Visual Database Tools)
@@ -24,14 +24,14 @@ ms.locfileid: "63070899"
   
 ### <a name="to-sort-query-results-by-more-than-one-column"></a>若要使用一個以上的資料行排序查詢結果  
   
-1.  在 [準則] 窗格中，針對要排序之資料行按一下 [排序次序] 欄位。  
+1.  在 [準則]  窗格中，針對要排序之資料行按一下 [排序次序]  欄位。  
   
 2.  輸入一個整數，或是從下拉清單中選取整數，以指示此資料行在排序資料行中的次序。  
   
      針對每一個要用來排序結果的資料行重複以上步驟。  
   
 ## <a name="see-also"></a>另請參閱  
- [排序及群組查詢結果&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [排序和分組查詢結果 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [摘要查詢結果 &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)  
   
   

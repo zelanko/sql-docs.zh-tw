@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a99a98fd0d471e8cb0f8ab880ae1a6c55e1b121
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655503"
 ---
 # <a name="regenerate-custom-transactional-procedures-to-reflect-schema-changes"></a>重新產生自訂交易程序以反映結構描述變更
@@ -28,17 +28,17 @@ ms.locfileid: "62655503"
   
 -   第一種方式是使用自訂指令碼程序以取代複寫所使用的預設值：  
   
-    1.  執行 [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)時，確保 **@schema_option** 0x02 位元是 **true**。  
+    1.  [&#40;transact-sql&#41;執行 sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)時，請確定**@schema_option** 0x02 位為**true**。  
   
-    2.  執行 [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) 並為參數 **@type** 指定 'insert'、'update' 或 'delete' 的值，然後為參數 **@value** 指定自訂指令碼程序的名稱。  
+    2.  執行[sp_register_custom_scripting &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) ，並為參數指定 ' insert '、' update ' 或 ' delete ' 的值， **@type**並為參數**@value**指定自訂腳本程式的名稱。  
   
      在下次變更結構描述時，複寫將呼叫此預存程序以為新使用者自訂預存程序的定義編寫指令碼，然後將此程序傳播給每個「訂閱者」。  
   
 -   第二個選項是使用包含新自訂程序定義的指令碼：  
   
-    1.  在執行 [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 時，將 **@schema_option** 0x02 位元設定為 **false**，這樣複寫便不會在「訂閱者」端自動產生自訂程序。  
+    1.  [&#40;transact-sql&#41;執行 sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)時，請將**@schema_option** 0x02 位設定為**false** ，如此複寫就不會在「訂閱者」端自動產生自訂程式。  
   
-    2.  在變更每個結構描述之前，會建立新的指令碼檔案並透過執行 [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) 使用複寫註冊指令碼。 為參數 **@type** 指定 'custom_script' 的值，並為參數 **@value** 。  
+    2.  在變更每個結構描述之前，會建立新的指令碼檔案並透過執行 [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) 使用複寫註冊指令碼。 為參數**@type**指定 ' custom_script ' 的值，並為參數**@value**指定發行者的腳本路徑。  
   
      在下次變更相關結構描述時，此指令碼在相同交易中於每個「訂閱者」上做為 DDL 命令執行。 在變更結構描述後，指令碼將取消註冊。 您必須重新註冊指令碼，以便在隨後變更結構描述後執行該指令碼。  
   

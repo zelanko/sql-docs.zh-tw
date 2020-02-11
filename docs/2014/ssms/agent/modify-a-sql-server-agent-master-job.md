@@ -15,23 +15,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c96977ac3b2ed36ab9709d2af86a0d9f79e8eb73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62653878"
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>修改 SQL Server Agent 主要作業
-  下列主題描述如何修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 主要作業。  
+  下列主題描述如何修改[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 主要作業。  
   
  [Change the Scheduling Details for a SQL Server Agent Master Job](change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
   
  [將步驟加入至 SQL Server Agent 主要作業](../object/add-steps-to-a-sql-server-agent-master-job.md)  
   
- [Change Steps of a SQL Server Agent Master Job](change-steps-of-a-sql-server-agent-master-job.md)  
+ [變更 SQL Server Agent Master Job 的步驟](change-steps-of-a-sql-server-agent-master-job.md)  
   
- [Remove Steps from a SQL Server Agent Master Job](remove-steps-from-a-sql-server-agent-master-job.md)  
+ [從 SQL Server Agent 主要作業中移除步驟](remove-steps-from-a-sql-server-agent-master-job.md)  
   
- [修改與 SQL Server Agent 主要作業相關聯的目標伺服器](modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
+ [修改與 SQL Server Agent 主要作業相關聯的目標伺服器&#40;s&#41;](modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
   
   

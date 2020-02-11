@@ -1,5 +1,5 @@
 ---
-title: sp_procoption & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_procoption （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bc004c611c218324ce2d2d8b764b3ab05cb73e5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67896589"
 ---
-# <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
+# <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   設定或清除自動執行預存程序。 每當啟動一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，就會執行一個設為自動執行的預存程序。  
@@ -41,19 +41,19 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @ProcName = ] 'procedure'` 是用來設定選項的程序的名稱。 *程序*已**nvarchar(776)** ，沒有預設值。  
+`[ @ProcName = ] 'procedure'`這是要設定選項的程式名稱。 程式是**Nvarchar （776）** *，沒有預設*值。  
   
-`[ @OptionName = ] 'option'` 是要設定選項的名稱。 唯一的值 *選項*是**啟動**。  
+`[ @OptionName = ] 'option'`這是要設定的選項名稱。 [*選項*] 的唯一值是 [**啟動**]。  
   
-`[ @OptionValue = ] 'value'` 這是指是否選項設為 on ( **，則為 true**或**上**) 或 [關閉] (**false**或**關閉**)。 *值*已**varchar(12)** ，沒有預設值。  
+`[ @OptionValue = ] 'value'`這是指要將選項設定為 on （**true**或**on**）或 off （**false**或**off**）。 *value*是**Varchar （12）**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或錯誤號碼 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 啟動程序必須處於**主要**資料庫，而且不能包含 INPUT 或 OUTPUT 參數。 預存程序會在所有資料庫皆完成復原時執行時，並會在啟動時記錄「已完成復原操作」訊息。  
+ 啟動程式必須在**master**資料庫中，而且不能包含輸入或輸出參數。 預存程序會在所有資料庫皆完成復原時執行時，並會在啟動時記錄「已完成復原操作」訊息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  

@@ -17,18 +17,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808689"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>轉換非搜尋字伺服器組態選項
-  使用`transform noise words`伺服器組態選項來隱藏錯誤訊息，如果非搜尋字，也就是[停用字詞](../../relational-databases/search/full-text-search.md)，造成的布林運算傳回零個資料列的全文檢索查詢。 若全文檢索查詢使用的 CONTAINS 述詞中，布林運算或 NEAR 運算有包括非搜尋字，則這個選項很有幫助。 下表說明可能的值。  
+  如果非`transform noise words`搜尋字（[停用字詞](../../relational-databases/search/full-text-search.md)）造成全文檢索查詢的布耳運算傳回零個數據列，請使用伺服器設定選項來隱藏錯誤訊息。 若全文檢索查詢使用的 CONTAINS 述詞中，布林運算或 NEAR 運算有包括非搜尋字，則這個選項很有幫助。 下表說明可能的值。  
   
 |值|描述|  
 |-----------|-----------------|  
-|0|不轉換非搜尋字 (或停用字詞)。 當全文檢索查詢包含非搜尋字時，此查詢會傳回零個資料列，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會引發警告。 這是預設行為。<br /><br /> 請注意這項警告是執行階段警告。 因此，如果查詢中的全文檢索子句並未執行，就不會引發此警告。 若為本機查詢，只會引發一則警告，即使有多個全文檢索查詢子句也一樣。 若為遠端查詢，連結的伺服器可能不會轉送錯誤。因此，可能不會引發此警告。|  
+|0|不轉換非搜尋字 (或停用字詞)。 當全文檢索查詢包含非搜尋字時，此查詢會傳回零個資料列，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會引發警告。 此為預設行為。<br /><br /> 請注意，警告是執行時間的警告。 因此，如果查詢中的全文檢索子句並未執行，就不會引發此警告。 若為本機查詢，只會引發一則警告，即使有多個全文檢索查詢子句也一樣。 若為遠端查詢，連結的伺服器可能不會轉送錯誤。因此，可能不會引發此警告。|  
 |1|轉換非搜尋字 (或停用字詞)。 忽略這些字，並評估查詢的其餘部分。<br /><br /> 如果非搜尋字指定在鄰近詞彙中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將其移除。 例如，非搜尋字 `is` 會從 `CONTAINS(<column_name>, 'NEAR (hello,is,goodbye)')`中移除，將搜尋查詢轉換為 `CONTAINS(<column_name>, 'NEAR(hello,goodbye)')`。 請注意， `CONTAINS(<column_name>, 'NEAR(hello,is)')` 只會轉換成 `CONTAINS(<column_name>, hello)` ，因為只有一個有效的搜尋詞彙。|  
   
 ## <a name="effects-of-the-transform-noise-words-setting"></a>轉換非搜尋字設定效果  

@@ -1,5 +1,5 @@
 ---
-title: 批次處理 (Analysis Services) |Microsoft Docs
+title: 批次處理（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076946"
 ---
 # <a name="batch-processing-analysis-services"></a>批次處理 (Analysis Services)
@@ -26,13 +26,13 @@ ms.locfileid: "66076946"
   
  本主題中的程序示範完整處理維度和分割區的步驟。 批次處理也可以包含其他處理選項，如累加式處理。 若要讓這些程序正確運作，必須使用至少包含兩個維度和一個分割區的現有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。  
   
- 本主題包含下列各節：  
+ 這個主題包括下列各節：  
   
- [SQL Server 資料工具中的批次處理](#bkmk_ssdt)  
+ [SQL Server Data Tools 中的批次處理](#bkmk_ssdt)  
   
- [在 Management Studio 中使用 XMLA 執行批次處理](#bkmk_xmla)  
+ [在 Management Studio 中使用 XMLA 的批次處理](#bkmk_xmla)  
   
-##  <a name="bkmk_ssdt"></a> SQL Server 資料工具中的批次處理  
+##  <a name="bkmk_ssdt"></a>SQL Server Data Tools 中的批次處理  
  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中處理物件之前，必須先部署包含該物件的專案。 如需詳細資訊，請參閱[部署 Analysis Services 專案 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)。  
   
 1.  開啟 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。  
@@ -43,33 +43,33 @@ ms.locfileid: "66076946"
   
 4.  按住 Ctrl 鍵，並按一下 **[維度]** 資料夾中列出的每個維度。  
   
-5.  以滑鼠右鍵按一下選取的維度，然後按一下 [處理]  。  
+5.  以滑鼠右鍵按一下選取的維度，然後按一下 [處理]****。  
   
 6.  按住 Ctrl 鍵，並按一下 **[物件清單]** 中列出的每個維度。  
   
-7.  以滑鼠右鍵按一下選取的維度，然後選取 [完整處理]  。  
+7.  以滑鼠右鍵按一下選取的維度，然後選取 [完整處理]****。  
   
-8.  若要自訂批次處理作業，請按一下 **[變更設定]** 。  
+8.  若要自訂批次處理作業，請按一下 **[變更設定]**。  
   
 9. 在 **[處理選項]** 下標示下列設定：  
   
-    -   將 **[處理順序]** 設定為 **[循序]** ，並將 **[交易模式]** 設定為 **[一筆交易]** 。  
+    -   [**處理順序**] 設定為 [**連續**]，而 [**交易模式]** 設定為 [**一筆交易**]。  
   
-    -   將 **[回寫資料表選項]** 設定為 **[使用現有的]** 。  
+    -   **回寫資料表選項**設定為**使用現有**的。  
   
     -   在 **[受影響的物件]** 下，選取 **[處理受影響的物件]** 核取方塊。  
   
-10. 按一下 **[維度索引鍵錯誤]** 索引標籤。確認已選取 **[使用預設錯誤組態]** 。  
+10. 按一下 [**維度索引鍵錯誤**] 索引標籤。請確認已選取 [**使用預設錯誤**設定]。  
   
 11. 按一下 **[確定]** ，關閉 **[變更設定]** 畫面。  
   
 12. 在 **[處理物件]** 畫面中按一下 **[執行]** ，以啟動處理作業。  
   
-13. 當 **[狀態]** 方塊顯示 **[處理成功]** 時，按一下 **[關閉]** 。  
+13. 當 **[狀態]** 方塊顯示 **[處理成功]** 時，按一下 **[關閉]**。  
   
 14. 按一下 **[處理物件]** 畫面上的 **[關閉]** 。  
   
-##  <a name="bkmk_xmla"></a> 在 Management Studio 中使用 XMLA 執行批次處理  
+##  <a name="bkmk_xmla"></a>在 Management Studio 中使用 XMLA 的批次處理  
  您可以建立執行批次處理的 XMLA 指令碼。 首先在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中為每個物件產生 XMLA 指令碼，然後將它們結合為可以互動方式執行或在排程工作內執行的單一 XMLA 查詢。  
   
  如需逐步指示，請參閱 **使用 SQL Server Agent 排程 SSAS 管理工作** 中的 [範例 2](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)  

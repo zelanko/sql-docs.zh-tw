@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 27d5be264fc6e6033997babb4a7aac1e8271a39d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63066306"
 ---
 # <a name="com-based-custom-resolvers"></a>COM-Based Custom Resolvers
@@ -41,7 +41,7 @@ ms.locfileid: "63066306"
  若要指定自訂解析程式，請參閱＜ [指定合併發行項解析程式](../publish/specify-a-merge-article-resolver.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [進階合併式複寫衝突偵測與解決方法](advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [進階合併式複寫衝突偵測與解決](advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Microsoft COM-Based Resolvers](advanced-merge-replication-conflict-com-based-resolvers.md)  
   
   

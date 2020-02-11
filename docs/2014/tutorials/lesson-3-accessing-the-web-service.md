@@ -1,5 +1,5 @@
 ---
-title: 第 3 課：存取 Web 服務 |Microsoft Docs
+title: 第3課：存取 Web 服務 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62653781"
 ---
 # <a name="lesson-3-accessing-the-web-service"></a>第 3 課：存取 Web 服務
@@ -29,7 +29,7 @@ ms.locfileid: "62653781"
   
 ### <a name="to-access-the-web-service"></a>若要存取 Web 服務  
   
-1.  您必須先將 `using` ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中的 `Imports`) 指示詞加入至程式碼檔案，藉以將命名空間加入至 Program.cs 檔案 ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中的 Module1.vb)。 如果您使用這個指示詞，就不需要完全符合命名空間的類型。  
+1.  您必須先將 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] (`using` 中的 `Imports`) 指示詞加入至程式碼檔案，藉以將命名空間加入至 Program.cs 檔案 ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中的 Module1.vb)。 如果您使用這個指示詞，就不需要完全符合命名空間的類型。  
   
 2.  若要完成這個步驟，請在您的程式碼檔案開頭中加入以下的程式碼：  
   
@@ -113,17 +113,17 @@ ms.locfileid: "62653781"
   
 4.  儲存方案。  
   
- 逐步解說範例程式碼會使用 Web 服務的 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 方法來擷取範例報表 Company Sales 2012 的屬性。 <xref:ReportService2010.ReportingService2010.GetProperties%2A>方法會採用兩個引數： 您要擷取屬性資訊和陣列的報表名稱**Property []** 包含您想要擷取其值的屬性名稱的物件。 方法也會傳回的陣列**Property []** 包含名稱和屬性引數中指定的屬性值的物件。  
+ 逐步解說範例程式碼會使用 Web 服務的 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 方法來擷取範例報表 Company Sales 2012 的屬性。 <xref:ReportService2010.ReportingService2010.GetProperties%2A>方法接受兩個引數：您要取得其屬性資訊的報表名稱，以及包含您想要取得其值之屬性名稱的**property []** 物件的陣列。 方法也會傳回**Property []** 物件的陣列，其中包含 properties 引數中指定之屬性的名稱和值。  
   
 > [!NOTE]  
->  如果您提供空**Property []** 陣列屬性引數，會傳回所有可用的屬性。  
+>  如果您為 properties 引數提供空的**Property []** 陣列，則會傳回所有可用的屬性。  
   
  在先前範例中，程式碼使用 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 方法來傳回範例報表 Company Sales 2012 的名稱和描述。 然後程式碼會使用 `foreach` 迴圈，將屬性和值寫入主控台。  
   
  如需有關建立和使用報表伺服器 Web 服務之 Proxy 類別的詳細資訊，請參閱＜ [Creating the Web Service Proxy](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [第 4 課：執行應用程式&#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
- [存取報表伺服器 Web 服務使用 Visual Basic 或 Visual C&#35; &#40;SSRS 教學課程&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ [第4課：執行應用程式 &#40;VB-VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
+ [使用 Visual Basic 或 Visual C&#35; &#40;SSRS 教學課程來存取報表伺服器 Web 服務&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

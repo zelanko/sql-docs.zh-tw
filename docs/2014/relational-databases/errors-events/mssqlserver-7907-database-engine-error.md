@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f2b9006c03ec0d22ab9194c385d95a2829c023e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762407"
 ---
-# <a name="mssqlserver7907"></a>MSSQLSERVER_7907
+# <a name="mssqlserver_7907"></a>MSSQLSERVER_7907
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|7907|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_INVALID_COLUMN_DIRECTORY|  
-|訊息文字|資料表錯誤：分割區識別碼 PN_ID 中的目錄 'DIRECTORY' 不是有效的 Filestream 目錄。|  
+|訊息文字|資料表錯誤: 在分割區識別碼 PN_ID 中的目錄 'DIRECTORY' 不是有效的 Filestream 目錄。|  
   
 ## <a name="explanation"></a>說明  
  資料行目錄的名稱是分割區的關聯式引擎資料行識別碼。 如果無法將資料行目錄名稱轉換成資料行識別碼，則表示該目錄不是有效的資料行目錄。  

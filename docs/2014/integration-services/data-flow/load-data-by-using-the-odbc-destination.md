@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eb0d8dc1c8a60a3546c24e6d7bcd0faa600769bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771064"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>使用 ODBC 目的地來載入資料
@@ -51,7 +51,7 @@ ms.locfileid: "62771064"
 12. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [ODBC 目的地編輯器 &#40;連接管理員頁面&#41;](../odbc-destination-editor-connection-manager-page.md)   
+ [ODBC 目的地編輯器 &#40;連線管理員頁面&#41;](../odbc-destination-editor-connection-manager-page.md)   
  [ODBC 目的地編輯器 &#40;對應頁面&#41;](../odbc-destination-editor-mappings-page.md)   
  [ODBC 來源編輯器 &#40;錯誤輸出頁面&#41;](../odbc-source-editor-error-output-page.md)  
   

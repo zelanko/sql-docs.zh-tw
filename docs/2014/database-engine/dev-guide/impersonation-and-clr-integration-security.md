@@ -17,19 +17,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c32691a065c2bfc43868d6b4105fbf1395a63ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781126"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>模擬和 CLR 整合安全性
-  當 Managed 程式碼存取外部資源時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會自動模擬用來執行常式的目前執行內容。 `EXTERNAL_ACCESS` 和 `UNSAFE` 組件中的程式碼可以明確模擬目前的執行內容。  
+  當 Managed 程式碼存取外部資源時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會自動模擬用來執行常式的目前執行內容。 
+  `EXTERNAL_ACCESS` 和 `UNSAFE` 組件中的程式碼可以明確模擬目前的執行內容。  
   
 > [!NOTE]  
->  如需模擬中行為變更的資訊，請參閱[SQL Server 2014 中的 Database Engine 功能的突破性變更](../breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
+>  如需模擬中行為變更的相關資訊，請參閱[SQL Server 2014 中資料庫引擎功能的重大變更](../breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
   
- 同處理序資料存取提供者會提供應用程式開發介面 `SqlContext.WindowsIdentity`，可用來擷取與目前安全性內容相關聯的 Token。 `EXTERNAL_ACCESS` 和 `UNSAFE` 組件中的 Managed 程式碼可以使用這個方法來擷取此內容並使用 .NET Framework `WindowsIdentity.Impersonate` 方法來模擬該內容。 使用者程式碼明確模擬時適用下列限制：  
+ 同處理序資料存取提供者會提供應用程式開發介面 `SqlContext.WindowsIdentity`，可用來擷取與目前安全性內容相關聯的 Token。 
+  `EXTERNAL_ACCESS` 和 `UNSAFE` 組件中的 Managed 程式碼可以使用這個方法來擷取此內容並使用 .NET Framework `WindowsIdentity.Impersonate` 方法來模擬該內容。 使用者程式碼明確模擬時適用下列限制：  
   
 -   當 Managed 程式碼處於模擬狀態時，不允許同處理序資料存取。 程式碼可以恢復模擬，然後呼叫同處理序資料存取。 請注意，這樣做需要儲存原始 `WindowsImpersonationContext` 方法的傳回值 (`Impersonate` 物件)，以及針對這個 `Undo` 呼叫 `WindowsImpersonationContext` 方法。  
   

@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7b4b7d9d9d153456ca471196c6480465d057e412
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483525"
 ---
 # <a name="change-tracking-master-data-services"></a>變更追蹤 (Master Data Services)
@@ -32,8 +32,8 @@ ms.locfileid: "65483525"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|將屬性加入至變更追蹤群組。|[將屬性加入至變更追蹤群組 &#40;Master Data Services&#41;](add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|建立根據屬性變更來起始動作的商務規則。|[根據屬性值變更來起始動作 &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|將屬性加入至變更追蹤群組。|[將屬性新增至變更追蹤群組 &#40;Master Data Services&#41;](add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|建立根據屬性變更來起始動作的商務規則。|[根據屬性值變更起始動作 &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
@@ -41,6 +41,6 @@ ms.locfileid: "65483525"
   
 -   [商務規則 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
--   [屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [Master Data Services &#40;的屬性&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

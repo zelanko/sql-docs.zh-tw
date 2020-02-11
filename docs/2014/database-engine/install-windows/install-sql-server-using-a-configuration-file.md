@@ -1,5 +1,5 @@
 ---
-title: 安裝 SQL Server 2014 使用組態檔 |Microsoft Docs
+title: 使用設定檔安裝 SQL Server 2014 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775281"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>使用組態檔安裝 SQL Server 2014
@@ -56,7 +56,7 @@ FEATURES=SQL,Tools
     >   
     >  SETUP.exe /UIMODE=Normal /ACTION=INSTALL  
   
-2.  遵循精靈的指示，直到 **[準備安裝]** 頁面。 組態檔的路徑已指定於 **[準備安裝]** 頁面的 [組態檔路徑] 區段中。 如需有關如何安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](install-sql-server-from-the-installation-wizard-setup.md)。</c2>  
+2.  遵循精靈的指示，直到 **[準備安裝]** 頁面。 組態檔的路徑已指定於 **[準備安裝]** 頁面的 [組態檔路徑] 區段中。 如需有關如何安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的詳細資訊，請參閱[install SQL Server 2014 From the 安裝 Wizard &#40;安裝程式&#41;](install-sql-server-from-the-installation-wizard-setup.md)。  
   
 3.  取消安裝程式而不實際完成安裝，即可產生 INI 檔案。  
   
@@ -77,17 +77,17 @@ FEATURES=SQL,Tools
   
 1.  若要在同一部電腦上準備一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體並進行設定。  
   
-    -   從安裝中心的 [進階]  頁面執行 [準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]  ，並擷取備妥的映像組態檔。  
+    -   從安裝中心的 [進階] **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面執行 [準備**  獨立執行個體的映像]  ，並擷取備妥的映像組態檔。  
   
     -   使用相同的準備映像組態檔當做範本，以便準備其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
-    -   從 [安裝中心] 的 [進階]  頁面執行 [完成備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]  ，在電腦上設定備妥的執行個體。  
+    -   從 [安裝中心] 的 [進階] **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面執行 [完成備妥的**  獨立執行個體的映像]  ，在電腦上設定備妥的執行個體。  
   
 2.  若要使用 Windows SysPrep 工具來準備作業系統的映像，包括未設定的已備妥 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
-    -   從 [安裝中心] 的 [進階] 頁面執行 [準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]  ，並擷取備妥的映像組態檔。  
+    -   從 [安裝中心] 的 [進階] 頁面執行 [準備  **獨立執行個體的映像][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ，並擷取備妥的映像組態檔。  
   
-    -   從 [安裝中心] 的 [進階]  頁面執行 [完成備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]  ，但在擷取完成的組態檔之後，在 [準備開始完成]  頁面上取消它。  
+    -   從 [安裝中心] 的 [進階] **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面執行 [完成備妥的**  獨立執行個體的映像]  ，但在擷取完成的組態檔之後，在 [準備開始完成]  頁面上取消它。  
   
     -   完成映像組態檔可以與 Windows 映像儲存在一起，以便自動化已備妥執行個體的組態設定作業。  
   

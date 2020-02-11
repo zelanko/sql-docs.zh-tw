@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 049f6e04dd8d0a81c81a16ee294ffe1c44553095
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762780"
 ---
-# <a name="mssqlserver7903"></a>MSSQLSERVER_7903
+# <a name="mssqlserver_7903"></a>MSSQLSERVER_7903
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|7903|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_ORPHANED_FILE|  
-|訊息文字|資料表錯誤：被遺棄的檔案 'FILE' 找到物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，資料行識別碼 C_ID 的 Filestream 目錄中。|  
+|訊息文字|資料表錯誤: 在物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，資料行識別碼 C_ID 的 Filestream 目錄中找到被遺棄的檔案 'FILE'。|  
   
 ## <a name="explanation"></a>說明  
  在 FILESTREAM 資料行目錄中找到 FILESTREAM 檔案，但是遺漏了分割區中的對應資料行值。  

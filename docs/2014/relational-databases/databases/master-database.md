@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917041"
 ---
 # <a name="master-database"></a>master 資料庫
@@ -38,16 +38,16 @@ ms.locfileid: "62917041"
   
 |資料庫選項|預設值|可以修改|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|否|  
+|ALLOW_SNAPSHOT_ISOLATION|開啟|否|  
 |ANSI_NULL_DEFAULT|OFF|是|  
 |ANSI_NULLS|OFF|是|  
 |ANSI_PADDING|OFF|是|  
 |ANSI_WARNINGS|OFF|是|  
 |ARITHABORT|OFF|是|  
 |AUTO_CLOSE|OFF|否|  
-|AUTO_CREATE_STATISTICS|ON|是|  
+|AUTO_CREATE_STATISTICS|開啟|是|  
 |AUTO_SHRINK|OFF|否|  
-|AUTO_UPDATE_STATISTICS|ON|是|  
+|AUTO_UPDATE_STATISTICS|開啟|是|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|是|  
 |CHANGE_TRACKING|OFF|否|  
 |CONCAT_NULL_YIELDS_NULL|OFF|是|  
@@ -55,14 +55,14 @@ ms.locfileid: "62917041"
 |CURSOR_DEFAULT|GLOBAL|是|  
 |資料庫可用性選項|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|否<br /><br /> 否<br /><br /> 否|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|是|  
-|DB_CHAINING|ON|否|  
+|DB_CHAINING|開啟|否|  
 |ENCRYPTION|OFF|否|  
 |NUMERIC_ROUNDABORT|OFF|是|  
 |PAGE_VERIFY|CHECKSUM|是|  
-|PARAMETERIZATION|SIMPLE|是|  
+|PARAMETERIZATION|簡單|是|  
 |QUOTED_IDENTIFIER|OFF|是|  
 |READ_COMMITTED_SNAPSHOT|OFF|否|  
-|RECOVERY|SIMPLE|是|  
+|RECOVERY|簡單|是|  
 |RECURSIVE_TRIGGERS|OFF|是|  
 |Service Broker 選項|DISABLE_BROKER|否|  
 |TRUSTWORTHY|OFF|是|  
@@ -76,7 +76,7 @@ ms.locfileid: "62917041"
   
 -   變更定序。 預設定序是伺服器定序。  
   
--   變更資料庫擁有者。 **master** 是由 **sa**所擁有。  
+-   變更資料庫擁有者。 **master**是由**sa**所擁有。  
   
 -   建立全文檢索目錄或全文檢索索引。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62917041"
   
 -   卸除資料庫。  
   
--   從資料庫卸除 **guest** 使用者。  
+-   從資料庫卸載**來賓**使用者。  
   
 -   啟用異動資料擷取。  
   

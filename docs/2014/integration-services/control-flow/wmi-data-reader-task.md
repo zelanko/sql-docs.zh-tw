@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12340ae2ba13bf6219cf9940a56eeaa8b995f3e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829491"
 ---
 # <a name="wmi-data-reader-task"></a>WMI 資料讀取器工作
@@ -48,7 +48,7 @@ ms.locfileid: "62829491"
  「WMI 資料讀取器」工作使用 WMI 連接管理員連接到可從中讀取 WMI 資訊的伺服器。 如需相關資訊，請參閱 [WMI Connection Manager](../connection-manager/wmi-connection-manager.md)。  
   
 ## <a name="wql-query"></a>WQL 查詢  
- WQL 是 SQL 用語，其包含的延伸模組可支援 WMI 事件通知和其他 WMI 特定功能。 如需 WQL 的詳細資訊，請參閱 [MSDN Library](https://go.microsoft.com/fwlink/?linkid=7022)中的 Windows Management Instrumentation 文件。  
+ WQL 是 SQL 用語，其包含的延伸模組可支援 WMI 事件通知和其他 WMI 特定功能。 如需有關 WQL 的詳細資訊，請參閱 [MSDN Library](https://go.microsoft.com/fwlink/?linkid=7022)中的 Windows Management Instrumentation 文件集。  
   
 > [!NOTE]  
 >  不同 Windows 版本的 WMI 類別也有所不同。  
@@ -84,7 +84,7 @@ Select * FROM Win32_QuickFixEngineering
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [WMI 資料讀取器工作編輯器 &#40;WMI 選項頁面&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [Wmi 資料讀取器工作編輯器 &#40;WMI 選項頁面&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

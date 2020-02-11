@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb547f3aa1352006b91641727f34ba85ba41dea5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106174"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>控制資料列和資料行標題 (報表產生器及 SSRS)
@@ -38,9 +38,9 @@ ms.locfileid: "66106174"
 ## <a name="understanding-rows-and-columns-in-a-tablix-data-region"></a>了解 Tablix 資料區中的資料列及資料行  
  資料表或矩陣是基礎 Tablix 資料區的範本。 Tablix 資料區具有四個可能的區域：控制向下展開報表之資料列的資料列群組區域、控制橫向展開報表之資料行的資料行群組區域、顯示資料的主體，以及邊角。 若要了解在哪裡設定屬性以控制重複或凍結標頭，了解 Tablix 資料區的兩種表示法相當有協助：  
   
--   **在報表定義中** ：在 Tablix 資料區定義中的每個資料列或資料行都是特定資料列或資料行群組的一個 Tablix 成員。 Tablix 成員是靜態或動態的。 靜態 Tablix 成員都包含標籤或小計，而且會針對每個群組重複一次。 動態 Tablix 成員包含群組值，而且會針對群組的每個唯一值重複一次，也稱為群組執行個體。  
+-   **在報表定義中**Tablix 資料區定義中的每個資料列或資料行都是特定資料列或資料行群組的 tablix 成員。 Tablix 成員是靜態或動態的。 靜態 Tablix 成員都包含標籤或小計，而且會針對每個群組重複一次。 動態 Tablix 成員包含群組值，而且會針對群組的每個唯一值重複一次，也稱為群組執行個體。  
   
--   **在設計介面上** ：在設計介面上，虛線將 Tablix 資料區分為四個區域。 Tablix 資料區中的每個資料格都組織成資料列和資料行。 資料列和資料行與群組 (包括詳細資料群組) 相關聯。 若是選取的 Tablix 資料區，資料列和資料行控點與反白橫條表示群組成員資格。 資料列群組或資料行群組區域中的資料格代表 Tablix 成員的群組標頭。 單一資料列或資料行可以與多個群組產生關聯。  
+-   **在設計介面上**在設計介面上，虛線會將 tablix 資料區分割成四個區域。 Tablix 資料區中的每個資料格都組織成資料列和資料行。 資料列和資料行與群組 (包括詳細資料群組) 相關聯。 若是選取的 Tablix 資料區，資料列和資料行控點與反白橫條表示群組成員資格。 資料列群組或資料行群組區域中的資料格代表 Tablix 成員的群組標頭。 單一資料列或資料行可以與多個群組產生關聯。  
   
      如需詳細資訊，請參閱 [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md) 和 [Tablix 資料區資料格、資料列及資料行 &#40;報表產生器&#41; 及 SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
@@ -57,66 +57,66 @@ ms.locfileid: "66106174"
   
 -   [包含資料列群組和資料列群組區域的資料表](#TableRowGroupsGroupHeader)  
   
--   [包含資料列群組但不含資料列群組區域的資料表](#TableRowGroupsNoGroupHeader)  
+-   [具有資料列群組但沒有資料列群組區域的資料表](#TableRowGroupsNoGroupHeader)  
   
-###  <a name="Matrix"></a> 矩陣  
+###  <a name="Matrix"></a>核准  
  根據預設，一個簡單的矩陣有一個資料列群組和一個資料行群組。 下圖顯示包含以 Category 為基礎之資料列群組，以及以 Geography 為基礎之資料行群組的矩陣：  
   
- ![矩陣、類別目錄資料列和地理資料行群組](../media/rs-basicmatrixdesign.gif "矩陣、類別目錄資料列和地理資料行群組")  
+ ![矩陣、目錄資料列和地理位置資料行群組](../media/rs-basicmatrixdesign.gif "矩陣、目錄資料列和地理位置資料行群組")  
   
  虛線表示四個 Tablix 區域。 資料列群組區域所擁有的資料列群組標頭可控制第一個資料行中的類別標籤。 同樣地，資料行群組區域所擁有的資料行群組標頭可控制第一個資料列中的地理位置標籤。 在預覽中，由於矩陣會橫跨頁面展開，第一個資料列會顯示資料行標題，如下圖所示：  
   
- ![預覽已展開群組的轉譯矩陣](../media/rs-basicmatrixpreview.gif "預覽已展開群組的轉譯矩陣")  
+ ![具有展開群組的轉譯矩陣預覽](../media/rs-basicmatrixpreview.gif "具有展開群組的轉譯矩陣預覽")  
   
  若要在第一個資料列中重複或凍結資料行標題，請在 Tablix 資料區上設定資料行標頭的屬性。 巢狀資料行群組的資料行標頭會自動加入。  
   
  若要在第一個資料行中重複或凍結資料列標題，請在 Tablix 資料區上設定資料列標頭的屬性。 巢狀資料列群組的資料列標頭會自動加入。  
   
- [回頁首](#Top)  
+ [回到頁首](#Top)  
   
-###  <a name="TableNoGroups"></a> 不含資料列群組的資料表  
+###  <a name="TableNoGroups"></a>沒有資料列群組的資料表  
  根據預設，不含群組的簡單資料表包含詳細資料群組。 下圖的資料表顯示類別、訂單號碼，以及銷售資料：  
   
- ![設計，具有一個靜態、一個動態資料列的資料表](../media/rs-tableheaderstaticdesign.gif "設計具有一個靜態、一個動態資料列的資料表")  
+ ![設計，具有一個靜態及動態資料列的資料表](../media/rs-tableheaderstaticdesign.gif "設計，具有一個靜態及動態資料列的資料表")  
   
  資料表僅包含 Tablix 主體區域，因此沒有虛線。 第一個資料列顯示資料行標頭，並代表與群組沒有關聯的靜態 Tablix 成員。 第二個資料列顯示詳細資料，並代表與詳細資料群組相關聯的動態 Tablix 成員。 下圖顯示預覽中的資料表：  
   
- ![預覽，具有一個靜態、一個動態資料列的資料表](../media/rs-tableheaderstaticpreview.gif "預覽具有一個靜態、一個動態資料列的資料表")  
+ ![預覽，具有一個靜態及動態資料列的資料表](../media/rs-tableheaderstaticpreview.gif "預覽，具有一個靜態及動態資料列的資料表")  
   
  若要重複或凍結資料行標題，請在 Tablix 成員上設定屬於 Tablix 資料區定義之靜態資料列的屬性。 若要選取靜態資料列，您必須使用 [群組] 窗格的 [進階] 模式。 下圖顯示 [資料列群組] 窗格：  
   
- ![資料列群組，具有 1 個靜態、1 個動態資料列的資料表](../media/rs-tableheaderstaticgroupingpanedefault.gif "資料列群組，具有 1 個靜態、1 個動態資料列的資料表")  
+ ![資料列群組，具有一個靜態及動態資料列的資料表](../media/rs-tableheaderstaticgroupingpanedefault.gif "資料列群組，具有一個靜態及動態資料列的資料表")  
   
  在 [進階] 模式中，下圖顯示資料表中資料列群組的靜態和動態 Tablix 成員：  
   
- ![資料列群組，預設資料表的進階](../media/rs-tableheaderstaticgroupingpaneadvanced.gif "資料列群組，預設資料表的進階")  
+ ![資料列群組，預設資料表的進階模式](../media/rs-tableheaderstaticgroupingpaneadvanced.gif "資料列群組，預設資料表的進階模式")  
   
  若要重複或凍結 Tablix 成員的資料行標題，請選取標示的靜態資料列 (**Static**)。 [屬性] 窗格會顯示所選 Tablix 成員的屬性。 您可以設定此 Tablix 成員的屬性，藉以控制第一個資料列如何在檢視中重複，或保留在檢視中。  
   
- [回頁首](#Top)  
+ [回到頁首](#Top)  
   
-###  <a name="TableRowGroupsGroupHeader"></a> 包含資料列群組和資料列群組區域的資料表  
+###  <a name="TableRowGroupsGroupHeader"></a>包含資料列群組和資料列群組區域的資料表  
  如果您將資料列群組加入到簡單的資料表中，資料列群組區域就會加入到設計介面上的資料表中。 下圖顯示包含以 Category 為基礎之資料列群組的資料表：  
   
- ![設計，有一個資料列群組和詳細資料的資料表](../media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "設計，有一個資料列群組和詳細資料的資料表")  
+ ![設計，具有一個資料列群組及詳細資料的資料表](../media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "設計，具有一個資料列群組及詳細資料的資料表")  
   
  虛線表示 Tablix 資料列群組區域以及 Tablix 主體區域。 資料列群組區域擁有資料列群組標頭，但是沒有資料行群組標頭。 下圖顯示預覽中的這個資料表：  
   
- ![預覽，有一個資料列群組和詳細資料的資料表](../media/rs-tableheaderdynamicwithgroupheadercellpreview.gif "預覽，有一個資料列群組和詳細資料的資料表")  
+ ![預覽，具有一個資料列群組及詳細資料的資料表](../media/rs-tableheaderdynamicwithgroupheadercellpreview.gif "預覽，具有一個資料列群組及詳細資料的資料表")  
   
  若要重複或凍結資料行標題，請使用與上述範例相同的方法。 下圖顯示 [資料列群組] 窗格的預設檢視：  
   
- ![資料列群組，有動態成員的預設](../media/rs-tableheaderdynamicgroupingpanedefault.gif "資料列群組，有動態成員的預設")  
+ ![資料列群組，動態成員的預設模式](../media/rs-tableheaderdynamicgroupingpanedefault.gif "資料列群組，動態成員的預設模式")  
   
  使用 [資料列群組] 窗格的 **[進階]** 模式顯示 Tablix 成員，如下圖所示：  
   
- ![資料列群組，有靜態群組的進階模式](../media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "資料列群組，有靜態群組的進階模式")  
+ ![資料列群組，靜態成員的進階模式](../media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "資料列群組，靜態成員的進階模式")  
   
- 會列出的 tablix 成員：**Static**、(**Static**)、Category 和 (**Details**)。 包含括號 () 的 Tablix 成員表示沒有對應的群組標頭。 若要重複或凍結資料行標題，請選取最上方的 Static Tablix 成員，然後在 [屬性] 窗格中設定屬性。  
+ 列出的 Tablix 成員： **Static**、(**Static**)、Category 和 (**Details**)。 包含括號 () 的 Tablix 成員表示沒有對應的群組標頭。 若要重複或凍結資料行標題，請選取最上方的 Static Tablix 成員，然後在 [屬性] 窗格中設定屬性。  
   
- [回頁首](#Top)  
+ [回到頁首](#Top)  
   
-###  <a name="TableRowGroupsNoGroupHeader"></a> 包含資料列群組但不含資料列群組區域的資料表  
+###  <a name="TableRowGroupsNoGroupHeader"></a>包含資料列群組和沒有資料列群組區域的資料表  
  資料表可以使用數種方式包含資料列群組，但不含資料列群組區域。 兩個可能的方式包括：  
   
 -   從包含資料列群組和資料列群組區域的資料表開始，然後刪除資料列群組區域的資料行。 僅刪除資料行，但不刪除群組。 例如，您可能想要將資料表格式控制為一個簡單的方格。  
@@ -125,23 +125,23 @@ ms.locfileid: "66106174"
   
  下圖顯示在設計介面上包含資料列群組，但不含資料列群組區域的資料表：  
   
- ![設計，資料表有資料列群組但沒有群組標題](../media/rs-tableheaderdynamicwithnogroupheadercelldesign.gif "設計，資料表有資料列群組但沒有群組標題")  
+ ![設計，具有資料列群組但沒有群組標頭的資料表](../media/rs-tableheaderdynamicwithnogroupheadercelldesign.gif "設計，具有資料列群組但沒有群組標頭的資料表")  
   
  資料表有三個資料列。 第一個資料列包含資料行標頭。 第二個資料列包含群組值和小計。 第三個資料列包含詳細資料。 因為只有一個 Tablix 主體區域，因此沒有虛線。 下圖顯示預覽中的這個資料表：  
   
- ![預覽，資料表有資料列群組但沒有群組標題](../media/rs-tableheaderdynamicwithnogroupheadercellpreview.gif "預覽，資料表有資料列群組但沒有群組標題")  
+ ![預覽，具有資料列群組但沒有群組標頭的資料表](../media/rs-tableheaderdynamicwithnogroupheadercellpreview.gif "預覽，具有資料列群組但沒有群組標頭的資料表")  
   
  若要控制資料列如何在檢視中重複，或保留在檢視中，您必須在 Tablix 成員上設定每個資料列的屬性。 在預設模式下，這個範例與包含資料列群組和群組標頭之資料表的上一個範例沒有什麼不同。 下圖顯示此資料表在預設模式下的 [群組] 窗格：  
   
- ![資料列群組，有動態成員的預設](../media/rs-tableheaderdynamicgroupingpanedefault.gif "資料列群組，有動態成員的預設")  
+ ![資料列群組，動態成員的預設模式](../media/rs-tableheaderdynamicgroupingpanedefault.gif "資料列群組，動態成員的預設模式")  
   
  不過，在進階模式下，此配置結構會顯示一組不同的 Tablix 成員。 下圖顯示此資料表在進階模式下的 [群組] 窗格：  
   
- ![資料列群組，進階，無群組標題。](../media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "資料列群組，進階，無群組標題。")  
+ ![資料列群組，進階，無群組標頭。](../media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "資料列群組，進階，無群組標頭。")  
   
- 在 [資料列群組] 窗格中，會列出下列 tablix 成員：(**Static**)、(Category)、(**Static**) 和 (**Details**)。 若要重複或凍結資料行標題，請選取最上方的 (**Static**) Tablix 成員，然後在 [屬性] 窗格中設定屬性。  
+ 在 [資料列群組] 窗格中，會列出下列 Tablix 成員： (**Static**)、(Category)、(**Static**) 和 (**Details**)。 若要重複或凍結資料行標題，請選取最上方的（**靜態**） tablix 成員，然後在 [屬性] 窗格中設定屬性。  
   
- [回頁首](#Top)  
+ [回到頁首](#Top)  
   
 ## <a name="renderer-support-for-repeating-or-freezing-headers"></a>重複或凍結標頭的轉譯器支援  
  轉譯器對於重複或凍結標頭的支援不同。  
@@ -164,6 +164,6 @@ ms.locfileid: "66106174"
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [清單 &#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [匯出報表&#40;報表產生器及 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [匯出報表 &#40;報表產生器和 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

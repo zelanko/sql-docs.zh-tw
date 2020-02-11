@@ -1,5 +1,5 @@
 ---
-title: (Visual Database Tools) 上的 [準則] 窗格中合併搜尋條件的慣例 |Microsoft Docs
+title: 在準則窗格中合併搜尋條件的慣例（Visual Database Tools） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3a1022770526386640f0ad2aa114a2161ba16dc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140401"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>在條件窗格中合併搜尋條件的慣例 (Visual Database Tools)
@@ -123,9 +123,9 @@ WHERE
   
  一般而言，這些規則指示了 AND 和 OR 子句在 [準則窗格] 中顯示的方式：  
   
--   所有使用 AND 連結的條件都會顯示在 [篩選]  格線欄或同一個 [或...]  資料欄中。  
+-   所有使用 AND 連結的條件都會顯示在 [篩選]**** 格線欄或同一個 [或...]**** 資料欄中。  
   
--   所有使用 OR 連結的條件都會顯示在不同的 [或...]  資料欄中。  
+-   所有使用 OR 連結的條件都會顯示在不同的 [或...]**** 資料欄中。  
   
 -   如果 AND 和 OR 子句合併的邏輯結果是 AND 分散至數個 OR 子句，[準則窗格] 會以需要的次數重複 AND 子句，以明確表示這一點。  
   

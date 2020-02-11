@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96041fa9b632be0162259d72cd4001e9d7defdd5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768454"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>連接到指令碼元件中的資料來源
@@ -50,14 +50,14 @@ ms.locfileid: "62768454"
 > [!IMPORTANT]  
 >  當您在指令碼元件中撰寫 Managed 程式碼時，無法呼叫傳回 Unmanaged 物件之連線管理員的 AcquireConnection 方法，例如 OLE DB 連線管理員與 Excel 連線管理員。 不過，您可以讀取這些連線管理員的 ConnectionString 屬性，而且可以透過使用來自 **System.Data.OleDb** 命名空間的 OLEDB **連接**之連接字串，直接在程式碼中連接至資料來源。  
 >   
->  如果您需要呼叫會傳回 Unmanaged 物件之連線管理員的 AcquireConnection 方法，請使用 ADO.NET 連線管理員。 當您設定 ADO.NET 連接管理員以使用 OLE DB 提供者時，它會透過使用 .NET Framework Data Provider for OLE DB 來連接。 在此情況下，AcquireConnection 方法傳回`System.Data.OleDb.OleDbConnection`而不是 unmanaged 物件。 若要將 ADO.NET 連線管理員設定成與 Excel 資料來源搭配使用，請選取 Microsoft OLE DB Provider for Jet，指定 Excel 活頁簿，然後在 [連線管理員]  對話方塊的 [全部]  頁面上輸入 `Excel 8.0` (針對 Excel 97 和更新的版本)，作為 [擴充屬性]  的值。  
+>  如果您需要呼叫會傳回 Unmanaged 物件之連線管理員的 AcquireConnection 方法，請使用 ADO.NET 連線管理員。 當您設定 ADO.NET 連接管理員以使用 OLE DB 提供者時，它會透過使用 .NET Framework Data Provider for OLE DB 來連接。 在此情況下，AcquireConnection 方法會傳回`System.Data.OleDb.OleDbConnection` ，而不是非受控物件。 若要將 ADO.NET 連線管理員設定成與 Excel 資料來源搭配使用，請選取 Microsoft OLE DB Provider for Jet，指定 Excel 活頁簿，然後在 [連線管理員]`Excel 8.0` **對話方塊的 [全部]** **頁面上輸入** (針對 Excel 97 和更新的版本)，作為 [擴充屬性]  的值。  
   
  如需如何透過指令碼元件使用連線管理員的詳細資訊，請參閱[以指令碼元件建立來源](../../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)和[以指令碼元件建立目的地](../../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)。  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
- [Integration Services &#40;SSIS&#41; 連線](../../connection-manager/integration-services-ssis-connections.md)   
- [建立連線管理員](../../create-connection-managers.md)  
+ [Integration Services &#40;SSIS&#41; 連接](../../connection-manager/integration-services-ssis-connections.md)   
+ [建立連接管理員](../../create-connection-managers.md)  
   
   

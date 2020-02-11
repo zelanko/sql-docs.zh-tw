@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ef8a59c98bc6669a13b5a4ffeb516b4063db23c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915891"
 ---
-# <a name="mssqlserver1205"></a>MSSQLSERVER_1205
+# <a name="mssqlserver_1205"></a>MSSQLSERVER_1205
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|1205|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -33,7 +33,7 @@ ms.locfileid: "62915891"
 |訊息文字|交易 (處理序識別碼 %d) 在 %.*ls 資源上被另一個處理序鎖死，並已被選為死結的犧牲者。 請重新執行該交易。|  
   
 ## <a name="explanation"></a>說明  
- 個別交易上的資源存取順序發生衝突，因而產生死結。 例如：  
+ 在不同交易上以衝突的順序存取資源，而導致鎖死。 例如：  
   
 -   Transaction1 會更新 **Table1.Row1**，而 Transaction2 會更新 **Table2.Row2**。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62915891"
   
 -   由於 Transaction1 正在等候 Transaction2 完成執行，而同時 Transaction2 也在等候 Transaction1 執行完成，因此發生死結。  
   
- 系統將會偵測到這個死結，並選擇其中一個交易做為「犠牲者」，然後發出這則訊息，同時回復犠牲者的交易。  
+ 系統會偵測到此鎖死情形，並且會選擇其中一個涉及的交易來作為「犠牲者」，並發出此訊息：正在復原犧牲者的交易。  
   
 ## <a name="user-action"></a>使用者動作  
  重新執行交易。 您也可以修訂應用程式以避免死結。 您可以重試系統選擇做為犠牲者的交易，而且該交易可能會成功 (依據同時執行的作業而定)。  

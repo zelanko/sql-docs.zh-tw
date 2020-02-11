@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0152594c213196860e80ff5d5267356977404b7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771176"
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC 執行個體
@@ -22,11 +22,11 @@ ms.locfileid: "62771176"
   
  以下描述 Oracle CDC 執行個體所執行的工作：  
   
--   **處理服務啟動驗證**：當啟動時，CDC 執行個體會從 **xdbcdc_config** 資料表載入其設定，並執行一系列的狀態驗證來確保 CDC 執行個體保存的狀態一致而且可以開始處理變更。  
+-   **處理服務啟動驗證**：當啟動時，CDC 執行個體會從 **xdbcdc_config** 資料表載入其組態，並執行一系列的驗證來確保 CDC 執行個體保存的狀態一致而且可以開始處理變更。  
   
--   **準備變更擷取**：當順利通過驗證時，Oracle CDC 執行個體會掃描目前定義的所有擷取執行個體，並準備 變更擷取所需的 Oracle LogMiner 查詢及其他支援結構。 此外，Oracle 執行個體會重新載入上次執行 Oracle CDC 執行個體時所儲存的內部擷取狀態。  
+-   **準備變更擷取**：當順利通過驗證時，Oracle CDC 執行個體會掃描目前定義的所有擷取執行個體，並準備 Oracle LogMiner 查詢及變更擷取所需的其他支援結構。 此外，Oracle 執行個體會重新載入上次執行 Oracle CDC 執行個體時所儲存的內部擷取狀態。  
   
--   **從 Oracle 擷取變更**：Oracle CDC 執行個體會透過 Oracle LogMiner 功能來共用 Oracle 中的變更、根據交易認可排序它們，然後變更交易中的時間並將它們寫入 CDC 資料庫中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 變更資料表。  
+-   **從 Oracle 擷取變更**：Oracle CDC 執行個體會透過 Oracle LogMiner 功能來共用 Oracle 中的變更、根據交易認可加以排序，然後變更交易中的時間並將其寫入 CDC 資料庫中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 變更資料表。  
   
 -   **處理服務關閉**：Oracle CDC 執行個體的生命週期由 Oracle CDC 服務所管理。 當系統要求 Oracle CDC 執行個體關閉時，它會執行以下工作：  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62771176"
   
     -   在個別執行緒中，最長可在 30 秒內盡量將許多記憶體快取的記錄寫入暫存交易資料表中 (從最舊的交易到最新的交易)，然後更新 **xdbcdc_state** 資料表並認可所有變更。  
   
--   **處理設定變更**：系統會通知 Oracle CDC 執行個體有關設定變更的消息 (從 CDC 服務或是藉由偵測 **cdc.xdbcdc_config** 資料表中的新版本)。 大多數的變更不需要重新啟動 Oracle CDC 執行個體 (例如，加入或移除擷取執行個體)。 但是，某些變更 (例如變更 Oracle 連接字串或存取認證) 確實需要重新啟動 CDC 執行個體。  
+-   **處理組態變更**：系統會通知 Oracle CDC 執行個體有關組態變更的消息 (從 CDC 服務或是藉由偵測 **cdc.xdbcdc_config** 資料表中的新版本)。 大多數的變更不需要重新啟動 Oracle CDC 執行個體 (例如，加入或移除擷取執行個體)。 但是，某些變更 (例如變更 Oracle 連接字串或存取認證) 確實需要重新啟動 CDC 執行個體。  
   
 -   **處理復原**：當 Oracle CDC 執行個體啟動時，其內部狀態會從 **xdbcdc_state** 和 **xdbcdc_staged_transactions** 資料表中還原。 還原狀態之後，CDC 執行個體會如往常一樣繼續進行。  
   

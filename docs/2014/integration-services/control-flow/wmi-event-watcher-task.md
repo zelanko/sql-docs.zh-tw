@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829508"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 事件監看員工作
@@ -38,7 +38,7 @@ ms.locfileid: "62829508"
 -   [WMI 資料讀取器工作](wmi-data-reader-task.md)  
   
 ## <a name="wql-queries"></a>WQL 查詢  
- WQL 是 SQL 用語，其包含的延伸模組可支援 WMI 事件通知和其他 WMI 特定功能。 如需 WQL 的詳細資訊，請參閱 [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553)中的 Windows Management Instrumentation 文件。  
+ WQL 是 SQL 用語，其包含的延伸模組可支援 WMI 事件通知和其他 WMI 特定功能。 如需有關 WQL 的詳細資訊，請參閱 [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553)中的 Windows Management Instrumentation 文件集。  
   
 > [!NOTE]  
 >  不同 Windows 版本的 WMI 類別也有所不同。  
@@ -75,9 +75,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   定義工作回應事件的方式。 工作可以根據事件設定為成功或失敗，也可以讓工作只再次監看事件。  
   
--   指定 WMI 查詢逾時後工作採取的行動。您可以記錄逾時及逾時後的狀態，或者引發一個自訂 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 事件，用來指示 WMI 事件逾時，並記錄逾時和逾時狀態。  
+-   指定當 WMI 查詢超時時，工作所採取的動作。您可以記錄超時時間和過期後的狀態，或者引發自訂[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]事件，表示 WMI 事件超時，並記錄超時和超時狀態。  
   
--   定義工作回應逾時的方式。工作可設定為成功或失敗，也可以讓工作只再次監看事件。  
+-   定義工作如何回應超時。工作可以設定為成功或失敗，或工作可以再次監看事件。  
   
 -   指定工作監看事件的次數。  
   
@@ -91,9 +91,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [WMI 事件監看員工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[WMI 事件監看員工作編輯器] &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [WMI 事件監看員工作編輯器 &#40;WMI 選項頁面&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
+-   [Wmi 事件監看員工作編輯器 &#40;WMI 選項頁面&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

@@ -15,16 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774290"
 ---
 # <a name="manage-checkins"></a>管理簽入
   若要變更其他使用者能夠使用的原始檔控制檔案，您必須簽入檔案。 當您簽入檔案時，您建立的版本會複製到原始檔控制提供者中，且會成為檔案的最新版本，有適當權限的使用者通常都可以使用它。  
   
- 使用[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]簽入檔案。 當您需要定期更新原始檔控制存放區，但又需要維護對某一組檔案的控制時，您可以指定您簽入的檔案，對您而言，要維持簽出的狀態。  
+ 用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]來簽入檔案。 當您需要定期更新原始檔控制存放區，但又需要維護對某一組檔案的控制時，您可以指定您簽入的檔案，對您而言，要維持簽出的狀態。  
   
  下表描述此章節的主題。  
   

@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773884"
 ---
 # <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是用於存取、 設定、 管理、 管理和開發的所有元件的整合式的環境[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 SSMS 利用許多豐富的指令碼編輯器來組合一群非常廣泛的圖形工具，使所有開發人員和管理員 (不管他們的技術水準如何) 都能夠存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]（SSMS）是一個整合式環境，可用於存取、設定、管理、管理及開發的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所有元件。 SSMS 利用許多豐富的指令碼編輯器來組合一群非常廣泛的圖形工具，使所有開發人員和管理員 (不管他們的技術水準如何) 都能夠存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  SSMS 將上一版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中所含的 Enterprise Manager、Query Analyzer 與 Analysis Manager 功能，結合在單一環境中。 此外，SSMS 也能夠使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的所有元件，例如 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 及 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 開發人員會感到非常熟悉，資料庫管理員則會得到其中組合了簡單易用的圖形工具及非常豐富的指令碼功能的單一綜合性公用程式。  
   
- 下載並安裝 SSMS [Microsoft Developer Network](https://msdn.microsoft.com/library/dn434042.aspx)。  
+ 從[Microsoft Developer Network](https://msdn.microsoft.com/library/dn434042.aspx)下載並安裝 SSMS。  
   
 ## <a name="in-this-section"></a>本節內容  
  [SQL Server Management Studio 中的功能](features-in-sql-server-management-studio.md)  
@@ -78,6 +78,6 @@ ms.locfileid: "62773884"
  描述您可以用來建立查詢、設計或修改資料庫結構，或是更新資料的 Visual Database Tools。  
   
 ## <a name="see-also"></a>另請參閱  
- [檢視或變更伺服器屬性 &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
+ [查看或變更伺服器屬性 &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
   
   

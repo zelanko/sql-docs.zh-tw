@@ -1,5 +1,5 @@
 ---
-title: 全文檢索目錄屬性 （母體擴展排程頁面） |Microsoft Docs
+title: 全文檢索目錄屬性（擴展排程頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778820"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>全文檢索目錄屬性 (母體擴展排程頁面)

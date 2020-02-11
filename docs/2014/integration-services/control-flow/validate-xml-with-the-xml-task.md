@@ -14,25 +14,25 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76d84c3ea8da6d564db01fba3d02ac15a72fffc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829583"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   驗證 XML 文件，並啟用 XML 工作的 `ValidationDetails` 屬性以取得詳細的錯誤輸出。  
   
- 下列螢幕擷取畫面顯示 [XML 工作編輯器]  ，內含具有豐富錯誤輸出之 XML 驗證所需的設定。  
+ 下列螢幕擷取畫面顯示 [XML 工作編輯器] **** ，內含具有豐富錯誤輸出之 XML 驗證所需的設定。  
   
- ![[XML 工作編輯器] 中的 XML 工作屬性](../media/xmltaskproperties.jpg "[XML 工作編輯器] 中的 XML 工作屬性")  
+ ![XML 工作編輯器中的 XML 工作屬性](../media/xmltaskproperties.jpg "XML 工作編輯器中的 XML 工作屬性")  
   
  在提供 `ValidationDetails` 屬性前，XML 工作所執行的 XML 驗證只會傳回結果為 True 或 False，而不會有錯誤的相關資訊及其位置。 現在，當您將 `ValidationDetails` 設定為 True 時，輸出檔案即涵蓋每項錯誤的詳細資訊，包括行號及位置。 您可以使用此資訊來了解、尋找及修正 XML 文件中的錯誤。  
   
  XML 驗證功能可針對大型 XML 文件和大量的錯誤輕鬆地進行調整。 因為輸出檔案本身是 XML 格式，所以您可以查詢和分析輸出。 例如，如果輸出包含大量錯誤，您可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查詢將錯誤分組 (如本主題所述)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 引進`ValidationDetails`屬性中的[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Service Pack 2。 此屬性也是用於[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]和 SQL Server 2016 中。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] （[!INCLUDE[ssIS](../../includes/ssis-md.md)]）在 Service `ValidationDetails` Pack 2 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引進屬性。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]和中也提供屬性，SQL Server 2016。  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>有效 XML 範例輸出  
  以下範例輸出檔案具有有效 XML 檔案的驗證結果。  
@@ -54,7 +54,8 @@ ms.locfileid: "62829583"
 ```  
   
 ## <a name="sample-output-for-xml-thats-not-valid"></a>無效 XML 範例輸出  
- 以下範例輸出檔案具有含有少量錯誤之 XML 檔案的驗證結果。 \<error> 元素的文字已換行，以增加可讀性。  
+ 以下範例輸出檔案具有含有少量錯誤之 XML 檔案的驗證結果。 
+  \<error> 元素的文字已換行，以增加可讀性。  
   
 ```xml  
   
@@ -116,10 +117,10 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  以下是先前文字所示之第二個範例查詢的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的結果。  
   
- ![在 Management Studio 中群組 XML 錯誤的查詢](../media/queryforxmlerrors.jpg "在 Management Studio 中群組 XML 錯誤的查詢")  
+ ![在 Management Studio 中將 XML 錯誤分組的查詢](../media/queryforxmlerrors.jpg "在 Management Studio 中將 XML 錯誤分組的查詢")  
   
 ## <a name="see-also"></a>另請參閱  
  [XML 工作](xml-task.md)   
- [XML 工作編輯器 &#40;一般頁面&#41;](../xml-task-editor-general-page.md)  
+ [[XML 工作編輯器] &#40;一般頁面&#41;](../xml-task-editor-general-page.md)  
   
   

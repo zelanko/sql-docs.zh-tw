@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015699"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>將資料行加入查詢 (Visual Database Tools)
@@ -40,7 +40,7 @@ ms.locfileid: "63015699"
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>若要針對一個資料表或資料表值物件新增所有資料行  
   
--   在 **圖表窗格**，選取旁邊的核取方塊 **\*（所有資料行）** 。  
+-   在 [**圖表] 窗格**中，選取 [ ** \*（所有資料行）**] 旁邊的核取方塊。  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>若要針對所有資料表和表格化物件 (Table-Structured Object) 新增所有資料表  
   
@@ -51,10 +51,10 @@ ms.locfileid: "63015699"
 3.  在 [屬性] 視窗中，按一下 [輸出全部資料行]  ，然後從下拉式清單中選擇 [是]  或 [否]  。  
   
 ## <a name="see-also"></a>另請參閱  
- [移除查詢結果中的資料行&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [從查詢移除資料行&#40;Visual Database Tools&#41;](remove-columns-from-queries-visual-database-tools.md)   
- [指定搜尋準則&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [摘要查詢結果&#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [從查詢結果中移除資料行 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [從查詢中移除資料行 &#40;Visual Database Tools&#41;](remove-columns-from-queries-visual-database-tools.md)   
+ [&#40;Visual Database Tools 指定搜尋準則&#41;](specify-search-criteria-visual-database-tools.md)   
+ [&#40;Visual Database Tools&#41;匯總查詢結果](summarize-query-results-visual-database-tools.md)   
  [使用查詢執行基本作業 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

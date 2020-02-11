@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8af9ae77562cb8ece9cb23e32c4e4ce216987715
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811122"
 ---
 # <a name="mssql_eng014010"></a>MSSQL_ENG014010
@@ -25,7 +25,7 @@ ms.locfileid: "68811122"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|14010|  
 |事件來源|MSSQLSERVER|  
 |元件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -40,13 +40,13 @@ ms.locfileid: "68811122"
 ## <a name="user-action"></a>使用者動作  
  確認拓撲中的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體均已正確註冊。 若電腦網路名稱和 SQL Server 執行個體名稱不符，則：  
   
--   加入 SQL Server 執行個體名稱做為有效網路名稱。 設定另一可用網路名稱的方法之一，是將它加入本機主機檔案。 本機主機檔案預設位於 WINDOWS\system32\drivers\etc 或 WINNT\system32\drivers\etc。如需詳細資訊，請參閱 Windows 文件集。  
+-   加入 SQL Server 執行個體名稱做為有效網路名稱。 設定另一可用網路名稱的方法之一，是將它加入本機主機檔案。 本機主機檔案預設位於 WINDOWS\system32\drivers\etc 或 WINNT\system32\drivers\etc。如需進一步資訊，請參閱 Windows 文件集。  
   
      例如，若電腦名稱為 comp1，電腦 IP 位址是 10.193.17.129，且執行個體名稱為 inst1/instname，請將下列項目加入主機檔案：  
   
      10.193.17.129 inst1  
   
--   移除複寫，註冊每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後重新建立複寫。 如果非叢集實例的@SERVERNAME @ 值不正確, 請遵循下列步驟:  
+-   移除複寫，註冊每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後重新建立複寫。 如果 @@SERVERNAME 的值對非叢集執行個體並不正確，請遵循下列步驟進行：  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -57,7 +57,7 @@ ms.locfileid: "68811122"
   
      執行 [sp_addserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql) 預存程序之後，您必須重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務，@@SERVERNAME 的變更才能生效。  
   
-     如果 @@SERVERNAME 的值不是正確的非叢集執行個體值，則必須使用叢集管理員變更名稱。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
+     如果 @@SERVERNAME 的值不是正確的非叢集執行個體值，則必須使用叢集管理員變更名稱。 如需詳細資訊，請參閱[AlwaysOn 容錯移轉叢集實例 &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [@@SERVERNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/servername-transact-sql)   

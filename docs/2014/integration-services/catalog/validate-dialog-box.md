@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8380b3ff1502088e0131b182149e90e31d2be42c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771646"
 ---
 # <a name="validate-dialog-box"></a>驗證對話方塊
@@ -60,7 +60,7 @@ ms.locfileid: "62771646"
  **參數**  
  列出參數的名稱  
   
- **值**  
+ **ReplTest1**  
  列出參數值。  
   
  **[連接管理員]** 索引標籤會列出您用來驗證專案或封裝的連接管理員屬性值。  
@@ -76,7 +76,7 @@ ms.locfileid: "62771646"
  **屬性名稱**  
  列出連接管理員屬性的名稱。  
   
- **值**  
+ **ReplTest1**  
  列出指派給連接管理員屬性的值。  
   
   

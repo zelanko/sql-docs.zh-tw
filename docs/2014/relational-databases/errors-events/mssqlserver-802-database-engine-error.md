@@ -1,5 +1,5 @@
 ---
-title: MSSQLSERVER_802 | Microsoft Docs
+title: MSSQLSERVER_802 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c1caf78bedc85f7de7a55b67daee4c227d2a8dd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762360"
 ---
-# <a name="mssqlserver802"></a>MSSQLSERVER_802
+# <a name="mssqlserver_802"></a>MSSQLSERVER_802
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|802|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -40,7 +40,7 @@ ms.locfileid: "62762360"
   
 1.  確認是否有其他應用程式或服務正在耗用此伺服器的記憶體。 重新設定比較不重要的應用程式或服務，以降低其記憶體耗用量。  
   
-2.  開始收集效能監視器計數器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:緩衝區管理員**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:記憶體管理員**。  
+2.  開始收集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Buffer Manager** 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Memory Manager** 的效能監視器計數器。  
   
 3.  檢查下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體組態參數：  
   

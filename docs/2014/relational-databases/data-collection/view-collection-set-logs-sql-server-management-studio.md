@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a68d71c44304d2f57c39d5a32fd57a5efb9617e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918238"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>檢視收集組記錄 (SQL Server Management Studio)
@@ -42,7 +42,7 @@ ms.locfileid: "62918238"
      **[記錄檔檢視器]** 隨即開啟，只顯示您選取之收集組的記錄檔。  
   
 ## <a name="see-also"></a>另請參閱  
- [[資料收集]](data-collection.md)   
+ [資料收集](data-collection.md)   
  [管理資料收集](manage-data-collection.md)  
   
   

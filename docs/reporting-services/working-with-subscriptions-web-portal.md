@@ -9,10 +9,10 @@ ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 786f7391d87799a0822f357e449db21fea0d0f09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68221243"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>處理訂閱 (Web 入口網站)
@@ -50,7 +50,7 @@ ms.locfileid: "68221243"
   
 此選項可供具有進階權限的使用者使用。 如果您要使用預設的安全性，資料驅動訂閱就不可以用於 [我的報表] 資料夾中的報表。  
   
-### <a name="destination"></a>目的地  
+### <a name="destination"></a>Destination  
 選取要用來散發報表的傳遞延伸模組。   
   
 傳遞延伸模組是否可用，取決於該模組是否安裝和設定於報表伺服器。 報表伺服器電子郵件是預設傳遞延伸模組，但您必須先設定它才能夠使用。 檔案共用傳遞不需要進行設定，但您必須先定義共用資料夾，才能加以使用。  

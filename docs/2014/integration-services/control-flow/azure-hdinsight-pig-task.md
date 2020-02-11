@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3da6ce80cc9e7bff25614e8589b4bf85dfc68e81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832704"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Azure HDInsight Pig 工作
@@ -37,8 +37,8 @@ ms.locfileid: "62832704"
   
 5.  有兩個方法可以指定要執行的 Pig 指令碼：
   
-    1.  **內嵌指令碼**：透過在 [輸入指令碼]  對話方塊中輸入要執行的內嵌指令碼，來指定 [指令碼]  欄位。
+    1.  **內嵌指令碼**：透過在 [輸入指令碼]  對話方塊中鍵入要執行的內嵌指令碼，來指定 [指令碼]  欄位。
   
-    2.  **指令檔**：將指令檔上傳至 Azure Blob 儲存體，並指定 **BlobName** 欄位。 如果 blob 不在與 HDInsight 叢集相關聯的預設儲存體帳戶或容器中，則必須指定 [ExternalStorageAccountName]  和 [ExternalBlobContainer]  欄位。 若是外部 blob，請確定它已設定為可公開存取。  
+    2.  **指令檔**：將指令檔上傳至 Azure Blob 儲存體，並指定 [BlobName]  欄位。 如果 blob 不在與 HDInsight 叢集相關聯的預設儲存體帳戶或容器中，則必須指定 [ExternalStorageAccountName]  和 [ExternalBlobContainer]  欄位。 若是外部 blob，請確定它已設定為可公開存取。  
   
      如果指定兩者，則會使用指令檔並忽略內嵌指令碼。

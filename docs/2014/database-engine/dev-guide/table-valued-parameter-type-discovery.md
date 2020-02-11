@@ -13,18 +13,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cf3f7b4d6754902ac38172ffa0e8fc392599d307
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780317"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>資料表值參數類型探索
-  取用者-亦即，用戶端應用程式使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者可以探索每個命令參數的型別，如果命令文字已經提供給 OLE DB 提供者。 知道了資料表值參數的類型之後，取用者就可以針對資料表值參數的每一個個別資料行來探索中繼資料資訊。  
+  取用者（也就是使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者的用戶端應用程式），如果命令文字已提供給 OLE DB 提供者，就可以探索每個命令參數的型別。 知道了資料表值參數的類型之後，取用者就可以針對資料表值參數的每一個個別資料行來探索中繼資料資訊。  
   
- 對於大部分的參數類型支援 icommandwithparameters:: Getparameterinfo 程序參數的型別資訊。 開頭[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，採用使用者定義型別和`xml`資料型別，GetParameterInfo 方法無法滿足此用途因為它不提供使用者定義型別資訊 (名稱、 結構描述，以及透過 ICommandWithParameters 目錄）。 新的介面，ISSCommandWithParameters，被定義為提供擴充的類型資訊。  
+ 大部分參數類型的 ICommandWithParameters：： GetParameterInfo 都支援程式參數的類型資訊。 從開始[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，隨著使用者定義型別和`xml`資料型別的引進，GetParameterInfo 方法並不足以達成此目的，因為無法透過 ICommandWithParameters 提供使用者定義型別資訊（名稱、架構和目錄）。 已定義新介面 ISSCommandWithParameters 來提供擴充類型資訊。  
   
- 資料表值參數，您也使用 ISSCommandWithParameters 介面來探索的詳細的資訊。 用戶端會呼叫 ISSCommandWithParameters::GetParameterInfo 準備命令物件之後。 如果是資料表值參數，DBPARAMINFO 結構的 *wType* 成員會由提供者設定為 DBTYPE_TABLE。 DBPARAMINFO 結構的 *ulParamSize* 欄位具有 ~0 的值。  
+ 對於資料表值參數，您也可以使用 ISSCommandWithParameters 介面來探索詳細資訊。 在準備命令物件之後，用戶端會呼叫 ISSCommandWithParameters：： GetParameterInfo。 如果是資料表值參數，DBPARAMINFO 結構的 *wType* 成員會由提供者設定為 DBTYPE_TABLE。 DBPARAMINFO 結構的 *ulParamSize* 欄位具有 ~0 的值。  
   
  然後取用者會使用 ISSCommandWithParameters::GetParameterProperties 來要求其他屬性 (資料表值參數類型目錄名稱、資料表值參數類型結構描述名稱、資料表值參數類型名稱、資料行排序和預設資料行)。  
   

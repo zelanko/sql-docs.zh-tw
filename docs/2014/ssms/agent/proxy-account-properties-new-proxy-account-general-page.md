@@ -1,5 +1,5 @@
 ---
-title: Proxy 帳戶屬性和新 Proxy 帳戶 （一般頁面） |Microsoft Docs
+title: Proxy 帳戶屬性和新的 Proxy 帳戶（一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650199"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>Proxy 帳戶屬性及新增 Proxy 帳戶 (一般頁面)
-  使用此頁面檢視或變更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 Proxy 帳戶屬性。  
+  使用此頁面來查看或變更[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy 帳戶的屬性。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **Proxy 名稱**  
  鍵入 Proxy 的名稱。  
   
@@ -30,10 +30,10 @@ ms.locfileid: "62650199"
  鍵入 Proxy 的認證名稱。  
   
 > [!NOTE]  
->  提供的認證名稱必須是現有的認證名稱。 如需建立認證的詳細資訊，請參閱[建立認證](../../relational-databases/security/authentication-access/create-a-credential.md)  
+>  提供的認證名稱必須是現有的認證名稱。 如需建立認證的相關資訊，請參閱[建立認證](../../relational-databases/security/authentication-access/create-a-credential.md)  
   
  **...**  
- 啟動 [選取認證]  對話方塊。  
+ 啟動 [選取認證]**** 對話方塊。  
   
  **說明**  
  輸入 Proxy 的描述。  
@@ -41,7 +41,7 @@ ms.locfileid: "62650199"
  **對下列子系統有效**  
  選取 Proxy 帳戶可以存取的子系統。  
   
- **重新指派作業步驟給**  
+ **將作業步驟重新指派給**  
  選取要被重新指派作業步驟的 Proxy。 當撤銷存取 Proxy 先前已存取過的子系統時，會啟用此清單。  
   
 ## <a name="see-also"></a>另請參閱  

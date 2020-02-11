@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dbab24f756498d7427f9961e4176249daac8dfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770944"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>資料分割處理目的地自訂屬性
@@ -25,16 +25,16 @@ ms.locfileid: "62770944"
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
 |ASConnectionString|String|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體的連接字串。|  
-|KeyDuplicate|整數 (列舉)|當 UseDefaultConfiguration 為`False`，該值指出如何處理重複索引鍵錯誤。 可能的值為 `IgnoreError` (0)、`ReportAndContinue` (1) 和 `ReportAndStop` (2)。 此屬性的預設值為 `IgnoreError` (0)。|  
-|KeyErrorAction|整數 (列舉)|當 UseDefaultConfiguration 為`False`，該值指出如何處理索引鍵錯誤。 可能的值為 `ConvertToUnknown` (0) 和 `DiscardRecord` (1)。 此屬性的預設值為 `ConvertToUnknown` (0)。|  
-|[KeyErrorLimit]|Integer|當 UseDefaultConfiguration 為`False`，允許的索引鍵錯誤上限。|  
-|KeyErrorLimitAction|整數 (列舉)|何時 UseDefaultConfiguration `False`，值，指出時要採取的動作`KeyErrorLimit`為止。 可能的值為 `StopLogging` (1) 和 `StopProcessing` (0)。 此屬性的預設值為 `StopProcessing` (0)。|  
-|KeyErrorLogFile|String|當 UseDefaultConfiguration 為`False`，錯誤記錄檔的路徑和檔案名稱。|  
-|KeyNotFound|整數 (列舉)|當 UseDefaultConfiguration 為`False`，該值指出如何處理遺漏索引鍵錯誤。 可能的值為 `IgnoreError` (0)、`ReportAndContinue` (1) 和 `ReportAndStop` (2)。 這個屬性的預設值為 `ReportAndContinue` (1)。|  
-|NullKeyConvertedToUnknown|整數 (列舉)|當 UseDefaultConfiguration 為`False`，指出如何處理 null 索引鍵的值轉換成未知的值。 可能的值為 `IgnoreError` (0)、`ReportAndContinue` (1) 和 `ReportAndStop` (2)。 此屬性的預設值為 `IgnoreError` (0)。|  
-|NullKeyNotAllowed|整數 (列舉)|當 UseDefaultConfiguration 為`False`，指出如何處理不允許的 null 的值。 可能的值為 `IgnoreError` (0)、`ReportAndContinue` (1) 和 `ReportAndStop` (2)。 這個屬性的預設值為 `ReportAndContinue` (1)。|  
+|KeyDuplicate|整數 (列舉)|當 UseDefaultConfiguration 為`False`時，就是指出如何處理重複索引鍵錯誤的值。 可能的值為 `IgnoreError` (0)、`ReportAndContinue` (1) 和 `ReportAndStop` (2)。 此屬性的預設值為 `IgnoreError` (0)。|  
+|KeyErrorAction|整數 (列舉)|當 UseDefaultConfiguration 為`False`時，就是指出如何處理索引鍵錯誤的值。 可能的值為 `ConvertToUnknown` (0) 和 `DiscardRecord` (1)。 此屬性的預設值為 `ConvertToUnknown` (0)。|  
+|[KeyErrorLimit]|整數|當 UseDefaultConfiguration 為`False`時，就是允許的索引鍵錯誤上限。|  
+|KeyErrorLimitAction|整數 (列舉)|當 UseDefaultConfiguration 為`False`時，就是指出到達時`KeyErrorLimit`要採取之動作的值。 可能的值為 `StopLogging` (1) 和 `StopProcessing` (0)。 此屬性的預設值為 `StopProcessing` (0)。|  
+|KeyErrorLogFile|String|當 UseDefaultConfiguration 為`False`時，就是錯誤記錄檔的路徑和檔案名。|  
+|KeyNotFound|整數 (列舉)|當 UseDefaultConfiguration 為`False`時，就是指出如何處理遺漏索引鍵錯誤的值。 可能的值為 `IgnoreError` (0)、`ReportAndContinue` (1) 和 `ReportAndStop` (2)。 這個屬性的預設值為 `ReportAndContinue` (1)。|  
+|NullKeyConvertedToUnknown|整數 (列舉)|當 UseDefaultConfiguration 為`False`時，就是指出如何處理轉換成未知值之 null 索引鍵的值。 可能的值為 `IgnoreError` (0)、`ReportAndContinue` (1) 和 `ReportAndStop` (2)。 此屬性的預設值為 `IgnoreError` (0)。|  
+|NullKeyNotAllowed|整數 (列舉)|當 UseDefaultConfiguration 為`False`時，就是指出如何處理不允許之 null 的值。 可能的值為 `IgnoreError` (0)、`ReportAndContinue` (1) 和 `ReportAndStop` (2)。 這個屬性的預設值為 `ReportAndContinue` (1)。|  
 |ProcessType|整數 (列舉)|轉換所使用的資料分割處理類型。 可能的值為 `ProcessAdd` (1) (累加)、`ProcessFull` (0) 和 `ProcessUpdate` (2)。|  
-|UseDefaultConfiguration|布林|一個值，指定轉換是否要使用預設錯誤組態。 如果此屬性為`False`，轉換會使用這個資料表，包括 KeyDuplicate、 KeyErrorAction 等中所列的錯誤處理自訂屬性的值。|  
+|UseDefaultConfiguration|Boolean|一個值，指定轉換是否要使用預設錯誤組態。 如果此屬性為`False`，轉換會使用此資料表中所列之錯誤處理自訂屬性的值，包括 KeyDuplicate、KeyErrorAction 等等。|  
   
  資料分割處理目的地的輸入和輸入資料行沒有任何自訂屬性。  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 288e4aedc6112640aa511712ad90912b1d41b2fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769366"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (串連) (SSIS 運算式)
@@ -33,7 +33,7 @@ character_expression1 + character_expression2
 ```  
   
 ## <a name="arguments"></a>引數  
- *expression1、expression2*  
+ *expression1, expression2*  
  是任何有效的 DT_STR、DT_WSTR、DT_TEXT、DT_NTEXT 或 DT_IMAGE 資料類型運算式。  
   
 ## <a name="result-types"></a>結果類型  
@@ -44,7 +44,7 @@ character_expression1 + character_expression2
   
  串連 DT_STR 和 DT_WSTR 資料類型會傳回 DT_WSTR 類型的結果。 字串長度是以字元表示的原始字串之長度總和。  
   
- 您只能串連具有字串資料類型 DT_STR 和 DT_WSTR 的資料，或是具有「二進位大型物件區塊」(BLOB) 資料類型 DT_TEXT、DT_NTEXT 和 DT_IMAGE 的資料。 在串連發生前，其他資料類型必須明確轉換成這些資料類型的其中之一。 如需在資料類型間合法轉換的詳細資訊，請參閱 [Cast &#40;SSIS 運算式&#41;](cast-ssis-expression.md)。  
+ 您只能串連具有字串資料類型 DT_STR 和 DT_WSTR 的資料，或是具有「二進位大型物件區塊」(BLOB) 資料類型 DT_TEXT、DT_NTEXT 和 DT_IMAGE 的資料。 在串連發生前，其他資料類型必須明確轉換成這些資料類型的其中之一。 如需在資料類型間合法轉換的詳細資訊，請參閱[轉換 &#40;SSIS 運算式&#41;](cast-ssis-expression.md)。  
   
  兩個運算式的資料類型必須相同，或者其中一個運算式必須隱含轉換成另一個運算式的資料類型。 例如，如果串連 "Order date is " 字串和 **OrderDate** 資料行，則 **OrderDate** 中的值會隱含轉換成字串資料類型。 若要串連兩個數值，這兩個數值都必須明確轉換成字串資料類型。  
   

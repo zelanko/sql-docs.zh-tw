@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 521d40529501d761b8e50300c16a816284109695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770884"
 ---
 # <a name="request-log"></a>要求記錄檔
@@ -32,7 +32,7 @@ ms.locfileid: "62770884"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 來源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 來源。  
+2.  在 [資料流程]  索引標籤上，按兩下 SAP BW 來源。  
   
 3.  在 **[SAP BW 來源編輯器]** 中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62770884"
     > [!NOTE]  
     >  按一下 **[預覽]** 也會開啟 **[預覽]** 對話方塊。 如需有關此對話方塊的詳細資訊，請參閱＜ [Preview](preview.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **Time**  
  顯示記錄事件的時間。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62770884"
 |I|參考資訊。|  
 |A|作業已中止。|  
   
- **Message**  
+ **訊息**  
  顯示與記錄之事件相關聯的訊息文字。  
   
 ## <a name="see-also"></a>另請參閱  

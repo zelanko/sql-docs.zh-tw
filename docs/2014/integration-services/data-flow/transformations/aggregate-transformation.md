@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770634"
 ---
 # <a name="aggregate-transformation"></a>彙總轉換
@@ -30,11 +30,11 @@ ms.locfileid: "62770634"
 ## <a name="operations"></a>作業  
  「彙總」轉換支援下列作業。  
   
-|運算|描述|  
+|作業|描述|  
 |---------------|-----------------|  
 |群組依據|將資料集分割成群組。 任何資料類型的資料行都可用於群組。 如需詳細資訊，請參閱 [GROUP BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql)。|  
 |Sum|加總資料行中的值。 只能加總具有數值資料類型的資料行。 如需詳細資訊，請參閱 [SUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql)。|  
-|平均值|傳回資料行中資料行值的平均。 只能平均具有數值資料類型的資料行。 如需詳細資訊，請參閱 [AVG &#40;Transact-SQL&#41;](/sql/t-sql/functions/avg-transact-sql)。|  
+|Average|傳回資料行中資料行值的平均。 只能平均具有數值資料類型的資料行。 如需詳細資訊，請參閱 [AVG &#40;Transact-SQL&#41;](/sql/t-sql/functions/avg-transact-sql)。|  
 |Count|傳回群組中的項目數。 如需詳細資訊，請參閱 [COUNT &#40;Transact-SQL&#41;](/sql/t-sql/functions/count-transact-sql)。|  
 |計算相異|傳回群組中唯一非 Null 值的數目。|  
 |最小值|傳回群組中的最小值。 如需詳細資訊，請參閱 [MIN &#40;Transact-SQL&#41;](/sql/t-sql/functions/min-transact-sql)。 與 Transact-SQL MIN 函數的不同之處，在於此作業只適用於數值、日期和時間資料類型。|  
@@ -112,13 +112,13 @@ ms.locfileid: "62770634"
   
  如需有關可以在 **[彙總轉換編輯器]** 對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
   
--   [彙總轉換編輯器 &#40;彙總索引標籤&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
+-   [匯總轉換編輯器 &#40;匯總] 索引標籤&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
   
--   [彙總轉換編輯器 &#40;進階索引標籤&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
+-   [匯總轉換編輯器 &#40;[Advanced] 索引標籤&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [轉換自訂屬性](transformation-custom-properties.md)  
   

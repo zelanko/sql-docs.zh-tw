@@ -14,26 +14,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e916fe3b76abfa8773a757cf2779e7d5cbf26b86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810540"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XP 伺服器組態選項
-  使用 [DatabaseMail XP]  選項，可在此伺服器上啟用 Database Mail。 可能值為：  
+  使用 [DatabaseMail XP]  選項，可在此伺服器上啟用 Database Mail。 可能的值包括：  
   
--   **0** 表示無法使用 Database Mail (預設值)。  
+-   **0**表示無法使用 Database Mail （預設值）。  
   
--   **1** 表示可使用 Database Mail。  
+-   **1**表示 Database Mail 可供使用。  
   
  設定立即生效，伺服器不必停止再重新啟動。  
   
  啟用 Database Mail 後，您必須設定 Database Mail 主機資料庫來使用 Database Mail。  
   
- 使用 [Database Mail 組態精靈]  設定 Database Mail，可啟用 **msdb** 資料庫中的 Database Mail 擴充預存程序。 如果您使用 [Database Mail 組態精靈]  ，就不需使用以下的 **sp_configure** 範例。  
+ 使用 [Database Mail 組態精靈]**** 設定 Database Mail，可啟用 **msdb** 資料庫中的 Database Mail 擴充預存程序。 如果您使用 [Database Mail 組態精靈]****，就不需使用以下的 **sp_configure** 範例。  
   
- 將 [Database Mail XP]  選項設為 0，會使 Database Mail 無法啟動。 如果 Database Mail 在該選項設為 0 時仍在執行中，則會繼續執行並傳送郵件，直到 **DatabaseMailExeMinimumLifeTime** 選項所設定的時間才會閒置。  
+ 將 [Database Mail XP]**** 選項設為 0，會使 Database Mail 無法啟動。 如果 Database Mail 在該選項設為 0 時仍在執行中，則會繼續執行並傳送郵件，直到 **DatabaseMailExeMinimumLifeTime** 選項所設定的時間才會閒置。  
   
 ## <a name="examples"></a>範例  
  下列範例會啟用 Database Mail 擴充預存程序。  

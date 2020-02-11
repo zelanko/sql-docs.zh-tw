@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5d57a0783c8af0121169f09622b8e5bd8547d1ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833079"
 ---
 # <a name="wmi-connection-manager"></a>WMI 連接管理員
-  WMI 連接管理員可讓封裝利用 Windows Management Instrumentation (WMI)，來管理企業環境中的資訊。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 Web 服務工作會使用 WMI 連線管理員。  
+  WMI 連接管理員可讓封裝利用 Windows Management Instrumentation (WMI)，來管理企業環境中的資訊。 包含的 Web 服務工作[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]會使用 WMI 連線管理員。  
   
- 當您新增 WMI 連接管理員加入封裝時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]建立連接管理員會解析為 WMI 連接，在執行階段、 設定連接管理員屬性，並將連接管理員加入`Connections`封裝上的集合. 連接管理員的 `ConnectionManagerType` 屬性會設為 `WMI`。  
+ 當您將 WMI 連線管理員加入封裝時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]會建立在執行時間解析為 WMI 連接的連線管理員、設定連線管理員屬性，並將連線管理員加入封裝上`Connections`的集合。 連接管理員的 `ConnectionManagerType` 屬性會設為 `WMI`。  
   
 ## <a name="configuration-of-the-wmi-connection-manager"></a>設定 WMI 連接管理員  
  您可以利用下列方式設定 WMI 連接管理員：  

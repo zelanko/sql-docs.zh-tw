@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b3ee629cd7701d8b06351e8932daac57637b195e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833669"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 連接管理員
@@ -48,7 +48,7 @@ ms.locfileid: "62833669"
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>使用 SSIS 設計師設定來源  
  如需有關可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之 SAP BW 連接管理員屬性的詳細資訊，請按下列主題：  
   
--   [SAP BW 連接管理員編輯器](../sap-bw-connection-manager-editor.md)  
+-   [SAP BW 連線管理員編輯器](../sap-bw-connection-manager-editor.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft Connector 1.1 for SAP BW 元件](../microsoft-connector-for-sap-bw-components.md)  

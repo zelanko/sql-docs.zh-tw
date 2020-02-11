@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cbaa41c75297d62e84cfc808463214d19c4ff8fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126265"
 ---
 # <a name="integrating-reporting-services-using-the-reportviewer-controls"></a>使用 ReportViewer 控制項整合 Reporting Services
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 提供兩個 ReportViewer 控制項將報表檢視功能納入應用程式整合。 一個版本是用於 Windows Form 應用程式，另一個版本則是用於 Web Form 應用程式。 每個控制項都提供類似的功能，但是每個功能都是針對其個別的環境所設計的。 兩個控制項都可以處理已經部署到報表伺服器 (遠端處理模式) 的報表，或是已經複製到尚未安裝 (本機處理模式) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之電腦上的報表。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]提供兩個 ReportViewer 控制項，可將報表檢視功能整合到您的應用程式中。 一個版本是用於 Windows Form 應用程式，另一個版本則是用於 Web Form 應用程式。 每個控制項都提供類似的功能，但是每個功能都是針對其個別的環境所設計的。 這兩個控制項都可以處理已部署至報表伺服器（遠端處理模式）或已複製到尚未安裝（本機處理[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式）之電腦的報表。  
   
  ReportViewer 控制項並未內建支援動態適應具備不同螢幕解析度之不同裝置的功能。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63126265"
  本機處理模式提供替代的方法，可在未安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的情況下檢視和轉譯報表。 與遠端處理不同的是，只有報表伺服器提供的功能子集可在控制項中使用。 在本機處理模式中，資料處理不是由控制項來進行，而是由主機應用程式所實作。 但是，報表處理是由控制項本身所處理。 在本機處理模式中，只能使用 PDF、Excel、Word 和 Image 轉譯延伸模組。  
   
 ## <a name="see-also"></a>另請參閱  
- [將 Reporting Services 整合到應用程式](../application-integration/integrating-reporting-services-into-applications.md)   
- [建立 SSRS 報表，使用 Visual Studio （部落格）](https://jwcooney.com/2015/01/07/ssrs-basics-set-up-visual-studio-to-write-a-new-ssrs-report/)  
+ [將 Reporting Services 整合至應用程式](../application-integration/integrating-reporting-services-into-applications.md)   
+ [使用 Visual Studio 建立 SSRS 報表（Blog）](https://jwcooney.com/2015/01/07/ssrs-basics-set-up-visual-studio-to-write-a-new-ssrs-report/)  
   
   

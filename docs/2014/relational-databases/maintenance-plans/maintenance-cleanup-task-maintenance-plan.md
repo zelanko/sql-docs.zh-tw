@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 175998d210bec502199922831adc3508cc9171a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035705"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>維護清除工作 (維護計畫)
@@ -27,8 +27,8 @@ ms.locfileid: "63035705"
 > [!NOTE]  
 >  維護清除工作不會自動刪除所指定目錄之子資料夾中的檔案。 這項功能可降低利用「維護清除」工作刪除檔案這類惡意攻擊的可能性。 如果您要刪除第一層子資料夾中的檔案，必須選取 [包含第一層的子資料夾]  。  
   
-## <a name="options"></a>選項  
- **連接**  
+## <a name="options"></a>選項。  
+ **[連接]**  
  顯示目前的連接。  
   
  **新增**  
@@ -56,15 +56,15 @@ ms.locfileid: "63035705"
  提供要刪除的檔案副檔名。  
   
  **包含第一層的子資料夾**  
- 從 [資料夾]  底下的第一層子資料夾中，刪除具有 [副檔名]  中所指定之副檔名的檔案。  
+ 從 [資料夾]**** 底下的第一層子資料夾中，刪除具有 [副檔名]**** 中所指定之副檔名的檔案。  
   
- **在工作執行階段依據檔案存在時間刪除檔案**  
- 在 [刪除早於下列時限的檔案]  方塊中提供數字以及時間單位，以指定您要刪除之檔案的最低存在時間。  
+ **在工作執行時間根據檔案的存留期刪除檔案**  
+ 在 [刪除早於下列時限的檔案]**** 方塊中提供數字以及時間單位，以指定您要刪除之檔案的最低存在時間。  
   
- **刪除早於下列時限的檔案**  
+ **刪除早于下列的檔案**  
  提供數字以及時間單位 (日、週、月或年)，以指定您要刪除之檔案的最低存在時間。 存在時間超過指定時間的檔案會遭到刪除。  
   
- **檢視 T-SQL**  
+ **View T-sql**  
  根據選取的選項，檢視此工作在伺服器上執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
 > [!NOTE]  
@@ -80,7 +80,7 @@ ms.locfileid: "63035705"
  **...**  
  選取此項以檢視可用伺服器的清單。  
   
- **輸入要登入到伺服器的資訊**  
+ **輸入資訊以登入伺服器**  
  指定如何對伺服器進行驗證。  
   
  **使用 Windows 整合式安全性**  
@@ -96,6 +96,6 @@ ms.locfileid: "63035705"
  提供驗證時要使用的密碼。 無法使用此選項。  
   
 ## <a name="see-also"></a>另請參閱  
- [中 [物件總管] 之](maintenance-plans.md)  
+ [維護計畫](maintenance-plans.md)  
   
   

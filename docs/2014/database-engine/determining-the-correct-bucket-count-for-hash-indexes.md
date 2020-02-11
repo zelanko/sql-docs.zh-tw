@@ -1,5 +1,5 @@
 ---
-title: 判斷雜湊索引的正確貯體計數 |Microsoft Docs
+title: 判斷雜湊索引的正確值區計數 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754240"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>判斷雜湊索引的正確值區計數
@@ -22,9 +22,9 @@ ms.locfileid: "62754240"
   
  重複的索引鍵可能會因為雜湊索引而降低效能，因為索引鍵會雜湊到相同的貯體，使得貯體的鏈結增加。  
   
- 如需有關非叢集雜湊索引的詳細資訊，請參閱 <<c0> [ 雜湊索引](hash-indexes.md)並[使用記憶體最佳化資料表索引的方針](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 如需有關非叢集雜湊索引的詳細資訊，請參閱＜ [Hash Indexes](hash-indexes.md) ＞和＜ [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)＞。  
   
- 針對記憶體最佳化的資料表上的每個雜湊索引配置一個雜湊表。 所指定的索引配置的雜湊表的大小`BUCKET_COUNT`中的參數[CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql)或[CREATE TYPE &#40;-&#41; ](/sql/t-sql/statements/create-type-transact-sql). 值區計數會於內部四捨五入進位至下一個二的乘冪。 例如，指定值區計數 300,000 將產生實際值區計數 524,288。  
+ 針對記憶體最佳化的資料表上的每個雜湊索引配置一個雜湊表。 配置給索引的雜湊表大小是由`BUCKET_COUNT` [CREATE TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)或[CREATE TYPE &#40;transact-sql&#41;](/sql/t-sql/statements/create-type-transact-sql)中的參數所指定。 值區計數會於內部四捨五入進位至下一個二的乘冪。 例如，指定值區計數 300,000 將產生實際值區計數 524,288。  
   
  如需有關貯體計數的文章和視訊的連結，請參閱 [如何判斷雜湊索引的正確貯體計數 (記憶體內 OLTP)](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/)。  
   
@@ -63,7 +63,7 @@ FROM
  針對 (SpecialOfferID, ProductID) 上的範例索引，此運算為 121317 / 484 = 251。 這表示索引鍵值的平均為 251，因此應該是非叢集索引。  
   
 ## <a name="troubleshooting-the-bucket-count"></a>對值區計數進行疑難排解  
- 若要疑難排解記憶體最佳化資料表中的值區計數問題，請使用[sys.dm_db_xtp_hash_index_stats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql)以取得關於空白貯體和資料列鏈結的長度的統計資料。 下列查詢可用來取得目前資料庫中所有雜湊索引的相關統計資料。 如果資料庫中有大型資料表，則查詢可能需要幾分鐘才能完成。  
+ 若要對記憶體優化資料表中的值區計數問題進行疑難排解，請使用[dm_db_xtp_hash_index_stats sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql)來取得有關空值區和資料列鏈長度的統計資料。 下列查詢可用來取得目前資料庫中所有雜湊索引的相關統計資料。 如果資料庫中有大型資料表，則查詢可能需要幾分鐘才能完成。  
   
 ```sql  
 SELECT   
@@ -82,12 +82,12 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  雜湊索引健全狀況的兩個重要指標為：  
   
  *empty_bucket_percent*  
- *empty_bucket_percent* 指出雜湊索引中的空白貯體數目。  
+ *empty_bucket_percent*指出雜湊索引中的空值區數目。  
   
  如果 *empty_bucket_percent* 小於 10%，表示這個值區計數可能太低。 理想的 *empty_bucket_percent* 應該是 33% 或更高。 若值區計數與索引鍵值相符，則約 1/3 的貯體數目為空白，原因是雜湊散發。  
   
  *avg_chain_length*  
- *avg_chain_length* 指出雜湊值區中資料列鏈結的平均長度。  
+ *avg_chain_length*指出雜湊值區中資料列鏈的平均長度。  
   
  如果 *avg_chain_length* 大於 10，且 *empty_bucket_percent* 大於 10%，則可能有許多重複的索引鍵值，那麼非叢集索引會較為理想。 理想的平均鏈結長度為 1。  
   
@@ -137,13 +137,13 @@ GO
   
  請考慮此資料表上的三個雜湊索引：  
   
--   IX_Status:50%的貯體是空的這是很好。 不過，平均鏈結長度非常高 (65,536)。 這表示有大量重複的值。 因此，這種情況不適合使用非叢集雜湊索引。 應該改用非叢集索引。  
+-   IX_Status：有 50% 的貯體是空的，這是理想的狀況。 不過，平均鏈結長度非常高 (65,536)。 這表示有大量重複的值。 因此，這種情況不適合使用非叢集雜湊索引。 應該改用非叢集索引。  
   
--   IX_OrderSequence:0%的貯體是空的這是過低。 此外，平均鏈結長度為 8。 由於這個索引中的值是唯一的，因此這表示平均有 8 個值對應到每個貯體。 值區計數應該增加。 由於索引鍵擁有 262,144 個唯一值，因此值區計數至少應該為 262,144。 如果預期未來會有所成長，則這個數字應該更高。  
+-   IX_OrderSequence：有 0% 的貯體是空的，這個數字過低。 此外，平均鏈結長度為 8。 由於這個索引中的值是唯一的，因此這表示平均有 8 個值對應到每個貯體。 值區計數應該增加。 由於索引鍵擁有 262,144 個唯一值，因此值區計數至少應該為 262,144。 如果預期未來會有所成長，則這個數字應該更高。  
   
--   主索引鍵索引 (PK__SalesOrder...):有 36%的貯體是空的這是很好。 另外，平均鏈結長度為 1，這也很理想。 不需要變更。  
+-   主鍵索引（PK__SalesOrder ...）：36% 的值區是空的，這是很好的。 另外，平均鏈結長度為 1，這也很理想。 不需要變更。  
   
- 如需對記憶體最佳化雜湊索引的問題進行疑難排解的詳細資訊，請參閱＜ [針對記憶體最佳化雜湊索引常見效能問題進行疑難排解](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)＞。  
+ 如需對記憶體最佳化雜湊索引的問題進行疑難排解的詳細資訊，請參閱＜ [Troubleshooting Common Performance Problems with Memory-Optimized Hash Indexes](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)＞。  
   
 ## <a name="detailed-considerations-for-further-optimization"></a>進一步最佳化的詳細考量  
  本節將概述最佳化值區計數的進一步考量。  
@@ -177,7 +177,7 @@ GO
 -   如果完整索引掃描是主要倚賴效能的作業，請使用接近索引鍵值實際數目的值區計數。  
   
 ### <a name="big-tables"></a>大型資料表  
- 對於大型資料表而言，記憶體使用量可能成為問題。 例如，有 250 萬個資料列的資料表具有 4 個雜湊索引，每個值區計數為十億，雜湊表的負擔是 4 個索引 * 1 億個貯體\*8 個位元組 = 32 gb 的記憶體使用量。 如果針對每個索引選擇的值區計數為 2500 萬，則雜湊表的總負擔將會是 8 GB。 請注意，這除了 8 個位元組記憶體使用量的每個索引加入至每個個別的資料列，也就是在此案例中應配備 8 gb (4 個索引\*8 個位元組\*250 萬個資料列)。  
+ 對於大型資料表而言，記憶體使用量可能成為問題。 例如，具有4個雜湊索引的250000000資料列資料表，每個都有一個值區計數為1000000000，而雜湊表的額外負荷為 4 \*個索引 * 1000000000 值區8個位元組 = 32 gb 的記憶體使用量。 如果針對每個索引選擇的值區計數為 2500 萬，則雜湊表的總負擔將會是 8 GB。 請注意，這是除了8個位元組的記憶體使用量以外，每個索引都會新增至每個個別的資料列，在此案例中\*為 8 \* gb （4索引8個位元組250000000資料列）。  
   
  完整資料表掃描通常不在 OLTP 工作負載的關鍵效能路徑中。 因此，選擇會介於記憶體使用量與點查閱和插入作業的效能之間：  
   

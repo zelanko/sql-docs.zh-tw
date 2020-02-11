@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916944"
 ---
 # <a name="model-database"></a>Model 資料庫
@@ -56,9 +56,9 @@ ms.locfileid: "62916944"
 |ANSI_WARNINGS|OFF|是|  
 |ARITHABORT|OFF|是|  
 |AUTO_CLOSE|OFF|是|  
-|AUTO_CREATE_STATISTICS|ON|是|  
+|AUTO_CREATE_STATISTICS|開啟|是|  
 |AUTO_SHRINK|OFF|是|  
-|AUTO_UPDATE_STATISTICS|ON|是|  
+|AUTO_UPDATE_STATISTICS|開啟|是|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|是|  
 |CHANGE_TRACKING|OFF|否|  
 |CONCAT_NULL_YIELDS_NULL|OFF|是|  
@@ -70,15 +70,15 @@ ms.locfileid: "62916944"
 |ENCRYPTION|OFF|否|  
 |NUMERIC_ROUNDABORT|OFF|是|  
 |PAGE_VERIFY|CHECKSUM|是|  
-|PARAMETERIZATION|SIMPLE|是|  
+|PARAMETERIZATION|簡單|是|  
 |QUOTED_IDENTIFIER|OFF|是|  
 |READ_COMMITTED_SNAPSHOT|OFF|是|  
-|RECOVERY|取決於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]edition<sup>1</sup>|是|  
+|RECOVERY|取決於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本<sup>1</sup>|是|  
 |RECURSIVE_TRIGGERS|OFF|是|  
 |Service Broker 選項|DISABLE_BROKER|否|  
 |TRUSTWORTHY|OFF|否|  
   
- <sup>1</sup>若要確認目前的資料庫的復原模式，請參閱[檢視或變更資料庫的復原模式&#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)或是[sys.databases &#40;-&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup>若要驗證資料庫目前的復原模式，請參閱[View Or Change a Database 的復原模式 &#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)或[sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)。  
   
  如需這些資料庫選項的描述，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)。  
   
@@ -89,11 +89,11 @@ ms.locfileid: "62916944"
   
 -   變更定序。 預設定序是伺服器定序。  
   
--   變更資料庫擁有者。 **model** 是由 **sa**所擁有。  
+-   變更資料庫擁有者。 **model**是由**sa**所擁有。  
   
 -   卸除資料庫。  
   
--   從資料庫卸除 **guest** 使用者。  
+-   從資料庫卸載**來賓**使用者。  
   
 -   啟用異動資料擷取。  
   

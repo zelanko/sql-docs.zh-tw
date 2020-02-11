@@ -1,5 +1,5 @@
 ---
-title: 檢視檔案狀態 |Microsoft Docs
+title: View File Status |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773364"
 ---
 # <a name="view-file-status"></a>檢視檔案狀態
@@ -40,12 +40,12 @@ ms.locfileid: "62773364"
   
 1.  在 [方案總管] 中，選取一個項目。  
   
-2.  在上**檔案**功能表上，指向**原始檔控制**，然後按一下**SourceSafe 屬性**。  
+2.  **在 [檔案**] 功能表上，指向 [原始檔**控制**]，然後按一下 [ **SourceSafe 屬性**]。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定和擷取版本資訊](../../2014/database-engine/set-and-retrieve-version-information.md)   
- [檢視專案記錄](../../2014/database-engine/view-project-history.md)   
- [擷取檔案](../../2014/database-engine/retrieve-files.md)   
+ [設定和抓取版本資訊](../../2014/database-engine/set-and-retrieve-version-information.md)   
+ [視圖專案歷程記錄](../../2014/database-engine/view-project-history.md)   
+ [取出檔案](../../2014/database-engine/retrieve-files.md)   
  [比較檔案](../../2014/database-engine/compare-files.md)  
   
   

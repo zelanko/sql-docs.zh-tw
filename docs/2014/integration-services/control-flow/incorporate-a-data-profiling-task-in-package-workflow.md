@@ -13,20 +13,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831617"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>在封裝工作流程中納入資料分析工作
-  在早期階段中，資料分析和清除並非自動化處理序的候選項目。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，資料分析工作的輸出通常需要進行視覺化分析和人為判斷，才能決定報告的違規項目是否有意義，或是否為過度報告。 甚至在辨識出資料品質問題之後，您仍然必須仔細地全盤規劃，尋求最佳的清除方法。  
+  在早期階段中，資料分析和清除並非自動化處理序的候選項目。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，資料分析工作的輸出通常需要進行視覺化分析和人為判斷，以判斷報告的違規是否有意義或過多。 甚至在辨識出資料品質問題之後，您仍然必須仔細地全盤規劃，尋求最佳的清除方法。  
   
  不過，當資料品質的準則確立之後，您可能會想要自動化資料來源的定期分析與清除作業。 請考慮這些狀況：  
   
--   **在累加式載入之前檢查資料品質**： 您可以使用資料分析工作，針對用於 Customers 資料表之 CustomerName 資料行的新資料計算資料行 Null 比例設定檔。 如果 Null 值的百分比大於 20%，便傳送一則包含設定檔輸出的電子郵件訊息給操作員，然後結束封裝。 否則，便繼續累加式載入。  
+-   **在累加式載入之前檢查資料品質**。 您可以使用資料分析工作，針對用於 Customers 資料表之 CustomerName 資料行的新資料計算資料行 Null 比例設定檔。 如果 Null 值的百分比大於 20%，便傳送一則包含設定檔輸出的電子郵件訊息給操作員，然後結束封裝。 否則，便繼續累加式載入。  
   
--   **符合指定的條件時自動化清除**： 您可以使用資料分析工作，針對 State 資料行 (根據州的查閱資料表) 和 ZIP Code/Postal Code 資料行 (根據郵遞區號的查閱資料表) 計算值包含設定檔。 如果州值的包含強度小於 80%，但是郵遞區號值的包含強度大於 99%，這就代表兩件事。 首先，州的資料不正確。 其次，郵遞區號的資料是正確的。 您可以透過根據目前郵遞區號值執行正確州值的查閱，啟動清除州資料的資料流程工作。  
+-   **當符合指定的條件時，自動清除**。 您可以使用資料分析工作，針對 State 資料行 (根據州的查閱資料表) 和 ZIP Code/Postal Code 資料行 (根據郵遞區號的查閱資料表) 計算值包含設定檔。 如果州值的包含強度小於 80%，但是郵遞區號值的包含強度大於 99%，這就代表兩件事。 首先，州的資料不正確。 其次，郵遞區號的資料是正確的。 您可以透過根據目前郵遞區號值執行正確州值的查閱，啟動清除州資料的資料流程工作。  
   
  在您設有可合併資料流程工作的工作流程之後，就必須了解加入這項工作所需的步驟。 下一節將描述合併資料流程工作的一般程序。 最後兩節則描述如何將資料流程工作直接連接至資料來源，或連接至資料流程的已轉換資料。  
   
@@ -45,12 +45,12 @@ ms.locfileid: "62831617"
   
  將資料分析工作併入封裝的工作流程時，請記住此工作的兩個功能：  
   
--   **工作輸出**： 資料分析工作會根據 DataProfile.xsd 結構描述，以 XML 格式將其輸出寫入檔案或封裝變數中。 因此，如果您想要在封裝的條件式工作流程中使用設定檔結果，就必須查詢 XML 輸出。 您可以輕易地使用 Xpath 查詢語言來查詢這個 XML 輸出。 若要研究這個 XML 輸出的結構，您可以開啟範例輸出檔或結構描述本身。 若要開啟輸出檔或結構描述，您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]、其他 XML 編輯器或文字編輯器 (例如 [記事本])。  
+-   工作**輸出**。 資料分析工作會根據 DataProfile.xsd 結構描述，以 XML 格式將其輸出寫入檔案或封裝變數中。 因此，如果您想要在封裝的條件式工作流程中使用設定檔結果，就必須查詢 XML 輸出。 您可以輕易地使用 Xpath 查詢語言來查詢這個 XML 輸出。 若要研究這個 XML 輸出的結構，您可以開啟範例輸出檔或結構描述本身。 若要開啟輸出檔或架構，您可以使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]、其他 XML 編輯器或文字編輯器（例如 [記事本]）。  
   
     > [!NOTE]  
     >  某些顯示在「資料設定檔檢視器」中的設定檔結果是無法直接在輸出中找到的計算值。 例如，資料行 Null 比例設定檔的輸出包含了資料列總數以及含有 Null 值的資料列數目。 您必須查詢這兩個值，然後計算含有 Null 值的資料列百分比，才能取得資料行 Null 比例。  
   
--   **工作輸入**： 資料分析工作會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中讀取其輸入。 因此，如果您想要分析已經在資料流程中載入並轉換的資料，就必須將記憶體中的資料儲存至臨時資料表。  
+-   工作**輸入**。 資料分析工作會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中讀取其輸入。 因此，如果您想要分析已經在資料流程中載入並轉換的資料，就必須將記憶體中的資料儲存至臨時資料表。  
   
  下列各節會將這個一般工作流程套用至直接來自外部資料來源或從資料流程工作轉換的分析資料。 此外，這些章節也會說明如何處理資料流程工作的輸入和輸出需求。  
   
@@ -102,9 +102,9 @@ ms.locfileid: "62831617"
   
 -   在 **[變數]** 視窗中，加入並設定下列兩個封裝變數：  
   
-    -   輸入名稱， `ProfileConnectionName`，針對其中一個變數，並設定這個變數的類型**字串**。  
+    -   為其中一個變數`ProfileConnectionName`輸入名稱，並將此變數的類型設定為 [**字串**]。  
   
-    -   輸入名稱， `AddressLine2NullRatio`、 其他變數並將設定這個變數的類型**Double**。  
+    -   輸入其他變數的`AddressLine2NullRatio`名稱，並將此變數的類型設定為**Double**。  
   
 ### <a name="configure-the-data-profiling-task"></a>設定資料分析工作  
  您必須以下列方式來設定資料分析工作：  
@@ -142,9 +142,9 @@ ms.locfileid: "62831617"
   
 4.  在 **[指令碼]** 頁面中，選取您慣用的程式語言。 然後，讓這兩個封裝變數可供指令碼使用：  
   
-    1.  針對`ReadOnlyVariables`，選取`ProfileConnectionName`。  
+    1.  針對`ReadOnlyVariables`選取`ProfileConnectionName`[]。  
   
-    2.  針對**ReadWriteVariables**，選取`AddressLine2NullRatio`。  
+    2.  針對 [ **ReadWriteVariables**] `AddressLine2NullRatio`，選取。  
   
 5.  選取 **[編輯指令碼]** 以便開啟指令碼開發環境。  
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3a42d496a59f489238d270fcb6bb17f3e1ff6421
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809002"
 ---
 # <a name="server-properties-security-page"></a>伺服器屬性 (安全性頁面)
@@ -36,7 +36,7 @@ ms.locfileid: "62809002"
 >  變更安全性組態需要重新啟動此服務。 將伺服器驗證變更為 SQL Server 和 Windows 驗證模式時，不會自動啟用 SA 帳戶。 若要使用 SA 帳戶，請使用 ENABLE 選項來執行 [ALTER LOGIN](/sql/t-sql/statements/alter-login-transact-sql) 。  
   
 ## <a name="login-auditing"></a>登入稽核  
- **無**  
+ **None**  
  關閉登入稽核。  
   
  **只限失敗的登入**  
@@ -64,7 +64,7 @@ ms.locfileid: "62809002"
  **密碼**  
  指定 Proxy 帳戶的密碼。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **啟用 C2 稽核追蹤**  
  稽核嘗試存取陳述式和物件的所有事件，並將其記錄在 \MSSQL\Data 目錄下的檔案中 (對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的預設執行個體)，或是記錄在 \MSSQL$*instancename*\Data 目錄下的檔案中 (對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的具名執行個體)。 如需詳細資訊，請參閱 [C2 稽核模式伺服器組態選項](c2-audit-mode-server-configuration-option.md)。  
   

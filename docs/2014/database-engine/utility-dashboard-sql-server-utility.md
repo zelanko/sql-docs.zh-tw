@@ -1,5 +1,5 @@
 ---
-title: 公用程式儀表板 （SQL Server 公用程式） |Microsoft Docs
+title: 公用程式儀表板（SQL Server 公用程式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,26 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773810"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>公用程式儀表板 (SQL Server 公用程式)
-  若要查看 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式儀表板中的資料，請在公用程式總管樹狀目錄中，選取最上方的節點，也就是標示為 "Utility<UCP_Name>\\(ComputerName\UCP)" 的節點。 此儀表板包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式內所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Managed 執行個體及所有資料層應用程式中的摘要和詳細資料。 若要重新整理儀表板中的資料，請以滑鼠右鍵按一下公用程式總管樹狀目錄中的最上方節點，然後選取 [重新整理]  。  
+  若要查看 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式儀表板中的資料，請在公用程式總管樹狀目錄中，選取最上方的節點，也就是標示為 "Utility<UCP_Name>\\(ComputerName\UCP)" 的節點。 此儀表板包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式內所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Managed 執行個體及所有資料層應用程式中的摘要和詳細資料。 若要重新整理儀表板中的資料，請以滑鼠右鍵按一下公用程式總管樹狀目錄中的最上方節點，然後選取 [重新整理]****。  
   
  如需如何建立公用程式控制點的詳細資訊，請參閱 [建立 SQL Server 公用程式控制點 &#40;SQL Server 公用程式&#41;](../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)。 如需如何將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體加入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式的詳細資訊，請參閱 [註冊 SQL Server 的執行個體 &#40;SQL Server 公用程式&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  Managed 執行個體健全狀況  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Managed 執行個體的健全狀態會顯示在 [公用程式總管] 內容窗格的左邊。  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Managed 執行個體的健全狀態會顯示在 [公用程式總管] 內容窗格的左邊。  
   
  Managed 執行個體健全狀況的參數如下：  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的 CPU 使用量。  
+-   
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的 CPU 使用量。  
   
 -   資料庫檔案使用量。  
   
@@ -50,7 +52,7 @@ ms.locfileid: "62773810"
   
  若要建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Managed 執行個體或資料層應用程式的篩選檢視，請按一下 [公用程式儀表板] 中滑動指標旁的使用量類別連結。 例如，如果您按一下 **[公用程式總管內容]** 窗格中的 **[使用量過高的執行個體 CPU]** ，SSMS 便會建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Managed 執行個體的篩選清單檢視，其中包含根據目前原則設定之使用量過高的 CPU。  
   
- 請注意，當您按一下使用量類別連結時，公用程式總管瀏覽窗格中對應的節點後面會加上 [(已篩選)]  ，意即 [受管理的執行個體]  會標示為 [受管理的執行個體 (已篩選) ]  。 若要檢視篩選設定，請以滑鼠右鍵按一下瀏覽窗格中的節點，然後選取 [篩選]  ，再按一下 [篩選設定]  。 若要清除篩選設定，請以滑鼠右鍵按一下瀏覽窗格中的節點，然後選取 [篩選]  ，再按一下 [移除篩選]  。  
+ 請注意，當您按一下使用量類別連結時，公用程式總管瀏覽窗格中對應的節點後面會加上 [(已篩選)]****，意即 [受管理的執行個體]**** 會標示為 [受管理的執行個體 (已篩選) ]****。 若要檢視篩選設定，請以滑鼠右鍵按一下瀏覽窗格中的節點，然後選取 [篩選]****，再按一下 [篩選設定]****。 若要清除篩選設定，請以滑鼠右鍵按一下瀏覽窗格中的節點，然後選取 [篩選]****，再按一下 [移除篩選]****。  
   
  如需檢視個別 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的健全狀態或是檢視或變更原則組態設定的詳細資訊，請參閱[受管理的執行個體詳細資料 &#40;SQL Server 公用程式&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)。  
   
@@ -62,7 +64,8 @@ ms.locfileid: "62773810"
   
  資料層應用程式健全狀況的參數如下：  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的 CPU 使用量。  
+-   
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的 CPU 使用量。  
   
 -   資料庫檔案使用量。  
   
@@ -104,7 +107,7 @@ ms.locfileid: "62773810"
   
 ## <a name="see-also"></a>另請參閱  
  [使用公用程式總管來管理 SQL Server 公用程式](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
- [註冊 SQL Server 執行個體的&#40;SQL Server 公用程式&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
+ [註冊 SQL Server &#40;SQL Server 公用程式的實例&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
  [修改資源健康情況原則定義 &#40;SQL Server 公用程式&#41;](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  
   
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4501bc77a28746de3b0ce97b7b619889093650d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918574"
 ---
 # <a name="set-or-change-the-server-collation"></a>設定或變更伺服器定序
@@ -50,7 +50,7 @@ ms.locfileid: "62918574"
 >  您可以不變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的預設定序，而是針對每個建立的新資料庫指定預設定序。  
   
 ## <a name="see-also"></a>另請參閱  
- [Collation and Unicode Support](collation-and-unicode-support.md)   
+ [定序與 Unicode 支援](collation-and-unicode-support.md)   
  [設定或變更資料庫定序](set-or-change-the-database-collation.md)   
  [設定或變更資料行定序](set-or-change-the-column-collation.md)   
  [重建系統資料庫](../databases/system-databases.md)  

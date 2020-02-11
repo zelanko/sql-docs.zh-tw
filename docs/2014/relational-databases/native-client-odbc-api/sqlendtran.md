@@ -1,5 +1,5 @@
 ---
-title: SQLEndTran | Microsoft Docs
+title: SQLEndTran |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f5425fdc189febd23e9fc61765f4ad56fe484111
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067585"
 ---
 # <a name="sqlendtran"></a>SQLEndTran
-  根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會關閉的陳述式相關聯的資料指標時**SQLEndTran**認可或回復作業。 除非伺服器資料指標是靜態的，否則會關閉它們。 當**SQLEndTran**認可或回復作業，此陳述式相關聯的資料指標的行為取決於所設定的驅動程式專屬ODBC連接屬性SQL_COPT_SS_PRESERVE_CURSORS的值[SQLSetConnectAttr](sqlsetconnectattr.md)。  
+  根據預設，當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLEndTran**認可或回復作業時，Native Client ODBC 驅動程式會關閉語句的相關資料指標。 除非伺服器資料指標是靜態的，否則會關閉它們。 當**SQLEndTran**認可或回復作業時，語句相關資料指標的行為是由驅動程式特定的 ODBC 連接屬性值所決定，SQL_COPT_SS_PRESERVE_CURSORS，由[SQLSetConnectAttr](sqlsetconnectattr.md)設定。  
   
 ## <a name="see-also"></a>另請參閱  
- [ODBC API 實作詳細資料](odbc-api-implementation-details.md)   
- [SQLEndTran 函式](https://go.microsoft.com/fwlink/?LinkId=59342)  
+ [ODBC API 的執行詳細資料](odbc-api-implementation-details.md)   
+ [SQLEndTran 函數](https://go.microsoft.com/fwlink/?LinkId=59342)  
   
   

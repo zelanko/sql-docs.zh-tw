@@ -1,5 +1,5 @@
 ---
-title: 進度頁面 （AlwaysOn 可用性群組精靈） |Microsoft Docs
+title: 進度頁面（AlwaysOn 可用性群組嚮導） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c87b2a3c6ac2156a4d52ece48efa2982bb4ca2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789108"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>進度頁面 (AlwaysOn 可用性群組精靈)
@@ -42,8 +42,8 @@ ms.locfileid: "62789108"
 |結果|描述|  
 |------------|-----------------|  
 |**錯誤**|表示這個步驟的作業發生錯誤。 按一下連結可顯示描述錯誤的訊息對話方塊。|  
-|**進行中 (** *完成百分比* **)**|表示作業目前正在進行，並且估計這個步驟已完成的百分比。|  
-|**成功**|表示這個步驟的作業已順利完成。|  
+|**進行中（** *完成百分比* **）**|表示作業目前正在進行，並且估計這個步驟已完成的百分比。|  
+|「成功」 |表示這個步驟的作業已順利完成。|  
   
  **較少詳細資料**  
  按一下可隱藏進度方格。  
@@ -57,11 +57,11 @@ ms.locfileid: "62789108"
   
 -   [使用 [將複本加入可用性群組中精靈] &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [使用 [將資料庫加入可用性群組中精靈] &#40;SQL Server Management Studio&#41;](availability-group-add-database-to-group-wizard.md)  
+-   [使用將資料庫加入至可用性群組精靈 &#40;SQL Server Management Studio&#41;](availability-group-add-database-to-group-wizard.md)  
   
 -   [使用容錯移轉可用性群組精靈 &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

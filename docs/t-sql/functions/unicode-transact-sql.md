@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 29a9476f5835df326aa34d8ccfc4cc6d22ea7e3f
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68670611"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
@@ -44,10 +44,10 @@ UNICODE ( 'ncharacter_expression' )
 **'** *ncharacter_expression* **'**  
 這是 **nchar** 或 **nvarchar** 運算式。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本與 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，UNICODE 函式會傳回範圍介於 000000 到 00FFFF 之間的 UCS-2 字碼元素，此範圍可代表 Unicode 基本多語平面 (BMP) 中的 65,535 個字元。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，當使用支援[補充字元 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的定序時，UNICODE 會傳回範圍 000000 到 10FFFF 之間的 UTF-16 字碼元素。 如需 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 中 Unicode 支援的詳細資訊，請參閱[定序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn)。 
   
 ## <a name="examples"></a>範例  

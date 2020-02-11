@@ -1,5 +1,5 @@
 ---
-title: 資料指標並行 (ODBC) |Microsoft Docs
+title: 資料指標並行（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3101da05e25cf67fda816bd889393bbebe8be3ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62711453"
 ---
 # <a name="cursor-concurrency-odbc"></a>資料指標並行 (ODBC)
-  資料指標作業跟資料指標類型一樣，會受到應用程式設定之並行選項的影響。 並行選項會設定使用的 SQL_ATTR_CONCURRENCY 選項[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)。 並行類型為：  
+  資料指標作業跟資料指標類型一樣，會受到應用程式設定之並行選項的影響。 並行選項是使用[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)的 SQL_ATTR_CONCURRENCY 選項來設定。 並行類型為：  
   
 -   唯讀 (SQL_CONCUR_READONLY)  
   

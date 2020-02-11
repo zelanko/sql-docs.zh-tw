@@ -16,18 +16,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918993"
 ---
 # <a name="clr-integration-security"></a>CLR 整合安全性
-  安全性模型[!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)]通用語言執行平台 (CLR) 管理及保護不同類型 CLR 及非 CLR 物件內執行的存取權[!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)]陳述式或另一部伺服器上執行的 CLR 物件。 這些物件之間的呼叫稱為連結。 針對這些物件所執行的安全性檢查類型會因所涉及的連結類型而不同。  
+  [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)]通用語言執行平臺（CLR）的安全性模型會管理和保護在[!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)]語句或伺服器中執行的另一個 clr 物件之間，不同類型的 clr 和非 CLR 物件之間的存取。 這些物件之間的呼叫稱為連結。 針對這些物件所執行的安全性檢查類型會因所涉及的連結類型而不同。  
   
  CLR 整合安全性模型具有下列目標：  
   
--   根據預設，執行 managed 使用者程式碼上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 執行可能危害 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 健全性的作業應該透過適當的高層級權限保護。  
+-   根據預設，在上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行 managed 使用者程式碼。 執行可能危害 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 健全性的作業應該透過適當的高層級權限保護。  
   
 -   Managed 使用者程式碼不應該取得資料庫中使用者資料或其他使用者程式碼的未經授權存取權。 使用者定義程式碼應該在叫用它之使用者工作階段的安全性內容底下執行，而且使用該安全性內容的正確權限執行。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62918993"
   
 -   使用者定義程式碼不應該透過在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序中執行，取得系統資源的未經授權存取權。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 的程式碼存取安全性模型。 本節將討論這種結合方法對於安全性的一些優點。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用 CLR 以程式碼存取為基礎的安全性模型。 本節將討論這種結合方法對於安全性的一些優點。  
   
  下表列出本節的主題。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62918993"
  [允許部分信任的呼叫端](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
  討論 Managed 方法叫用其他組件所包含之類別中的方法時所引發的問題。  
   
- [應用程式定義域和 CLR 整合安全性](../../../database-engine/dev-guide/application-domains-and-clr-integration-security.md)  
+ [應用程式網域和 CLR 整合安全性](../../../database-engine/dev-guide/application-domains-and-clr-integration-security.md)  
  描述如何將組件載入應用程式網域中。  
   
 ## <a name="see-also"></a>另請參閱  

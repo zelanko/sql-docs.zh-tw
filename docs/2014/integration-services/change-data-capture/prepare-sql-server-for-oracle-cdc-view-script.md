@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bef06da3e6e1702a713aa2b4ca2e448e7ee461af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771258"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>為 Oracle CDC 檢視指令碼準備 SQL Server
@@ -25,10 +25,10 @@ ms.locfileid: "62771258"
  **另存新檔**  
  將指令碼以文字檔格式儲存在您想要儲存的任何位置。 之後您可以將指令碼貼到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來執行指令碼。  
   
- **[複製]**  
+ **複製**  
  將指令碼複製到剪貼簿。 然後您可以將指令碼貼到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 加以執行，並建立 MSXDBCDC 資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
- [為 CDC 準備 SQL Server](prepare-sql-server-for-cdc.md)  
+ [準備 SQL Server 以使用 CDC](prepare-sql-server-for-cdc.md)  
   
   

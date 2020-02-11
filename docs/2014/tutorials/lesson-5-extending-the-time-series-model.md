@@ -1,5 +1,5 @@
 ---
-title: 第 5 課：擴充時間序列模型 |Microsoft Docs
+title: 第5課：擴充時間序列模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62822060"
 ---
 # <a name="lesson-5-extending-the-time-series-model"></a>第 5 課：擴充時間序列模型
@@ -26,7 +26,7 @@ ms.locfileid: "62822060"
   
  例如，假設您在幾個月以前已經針對現有的銷售資料定型採礦模型。 當您取得新的銷售時，您可能會想要更新銷售預測來併入新的資料。 您可以在一個步驟中完成這項處理，其方式是提供新的銷售數字當做輸入資料，然後根據複合資料集來產生新的預測。  
   
-## <a name="making-predictions-with-extendmodelcases"></a>使用 EXTEND_MODEL_CASES 做出預測  
+## <a name="making-predictions-with-extend_model_cases"></a>使用 EXTEND_MODEL_CASES 做出預測  
  下列是使用 EXTEND_MODEL_CASES 之時間序列預測的一般範例。 第一個範例可讓您從原始模型的最後一個時間步驟開始指定預測數目：  
   
 ```  
@@ -49,7 +49,7 @@ PREDICTION JOIN <source query>
   
 #### <a name="to-create-a-singleton-prediction-query-on-a-time-series-model"></a>若要針對時間序列模型建立單一預測查詢  
   
-1.  中**物件總管**，以滑鼠右鍵按一下執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查詢**，然後按一下**DMX**。  
+1.  在**物件總管**中，以滑鼠右鍵按一下的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]實例，指向 [追加**查詢**]，然後按一下 [ **DMX**]。  
   
      此時會開啟 [查詢編輯器] 且包含新的空白查詢。  
   
@@ -61,7 +61,7 @@ PREDICTION JOIN <source query>
     SELECT [<model columns>,] PredictTimeSeries(<table column reference>, n, EXTEND_MODEL_CASES)   
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     SELECT [Model Region],  
@@ -78,7 +78,7 @@ PREDICTION JOIN <source query>
     FROM <mining model>  
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     FROM [Forecasting_MIXED]  
@@ -90,7 +90,7 @@ PREDICTION JOIN <source query>
     PREDICTION JOIN <source query>  
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     NATURAL PREDICTION JOIN   
@@ -111,7 +111,7 @@ PREDICTION JOIN <source query>
     [WHERE <criteria>]  
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     WHERE [ModelRegion] = 'M200 Europe' OR  
@@ -138,15 +138,15 @@ PREDICTION JOIN <source query>
     [ModelRegion] = 'M200 Pacific'  
     ```  
   
-7.  在 **檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
+7.  **在 [檔案**] 功能表上，按一下 [**將 DMXQuery1 另存為**]。  
   
-8.  在 [**另存新檔**] 對話方塊中，瀏覽至適當的資料夾，並將檔案命名`Singleton_TimeSeries_Query.dmx`。  
+8.  在 [**另存**新檔] 對話方塊中，流覽至適當的資料夾，並`Singleton_TimeSeries_Query.dmx`將檔案命名為。  
   
-9. 在工具列上，按一下**Execute**  按鈕。  
+9. 在工具列上，按一下 [**執行**] 按鈕。  
   
      此查詢會傳回 M200 自行車在歐洲和太平洋地區銷售數量的預測。  
   
-## <a name="understanding-prediction-start-with-extendmodelcases"></a>從 EXTEND_MODEL_CASES 開始了解預測  
+## <a name="understanding-prediction-start-with-extend_model_cases"></a>從 EXTEND_MODEL_CASES 開始了解預測  
  現在您已經根據原始模型建立預測，而且有了新的資料之後，您就可以比較結果來查看更新銷售資料會如何影響預測。 在您這樣做之前，請先檢閱您剛才建立的程式碼，並注意以下事項：  
   
 -   您只為歐洲地區提供新的資料。  
@@ -155,28 +155,28 @@ PREDICTION JOIN <source query>
   
  下表顯示為 M200 Europe 所提供的新值要如何影響預測。 您並未提供 M200 產品在太平洋地區的任何新資料，但是會呈現這個數列進行比較：  
   
- **產品和地區：M200 Europe**  
+ **產品和地區： M200 歐洲**  
   
 |||||  
 |-|-|-|-|  
 |||現有的模型 (`PredictTimeSeries`)|具有更新銷售資料的模型 (具有 `PredictTimeSeries` 的 `EXTEND_MODEL_CASES`)|  
-|M200 Europe|2008 年 7 月 25 日上午 12:00:00|77|10|  
-|M200 Europe|2008 年 8 月 25 日上午 12:00:00|64|15|  
-|M200 Europe|2008 年 9 月 25 日上午 12:00:00|59|72|  
-|M200 Europe|2008 年 10 月 25 日上午 12:00:00|56|69|  
-|M200 Europe|2008 年 11 月 25 日上午 12:00:00|56|68|  
+|M200 Europe|上午 7/25/2008 12:00:00|77|10|  
+|M200 Europe|上午 8/25/2008 12:00:00|64|15|  
+|M200 Europe|上午 9/25/2008 12:00:00|59|72|  
+|M200 Europe|上午 10/25/2008 12:00:00|56|69|  
+|M200 Europe|上午 11/25/2008 12:00:00|56|68|  
 |M200 Europe|12/25/2008 12:00:00 AM|74|89|  
   
- **產品和地區：M200 Pacific**  
+ **產品和地區： M200 太平洋**  
   
 |||||  
 |-|-|-|-|  
 |||現有的模型 (`PredictTimeSeries`)|具有更新銷售資料的模型 (具有 `PredictTimeSeries` 的 `EXTEND_MODEL_CASES`)|  
-|M200 Pacific|2008 年 7 月 25 日上午 12:00:00|41|41|  
-|M200 Pacific|2008 年 8 月 25 日上午 12:00:00|44|44|  
-|M200 Pacific|2008 年 9 月 25 日上午 12:00:00|38|38|  
-|M200 Pacific|2008 年 10 月 25 日上午 12:00:00|41|41|  
-|M200 Pacific|2008 年 11 月 25 日上午 12:00:00|36|36|  
+|M200 Pacific|上午 7/25/2008 12:00:00|41|41|  
+|M200 Pacific|上午 8/25/2008 12:00:00|44|44|  
+|M200 Pacific|上午 9/25/2008 12:00:00|38|38|  
+|M200 Pacific|上午 10/25/2008 12:00:00|41|41|  
+|M200 Pacific|上午 11/25/2008 12:00:00|36|36|  
 |M200 Pacific|12/25/2008 12:00:00 AM|39|39|  
   
  您可以從這些結果看到兩件事：  
@@ -192,7 +192,7 @@ PREDICTION JOIN <source query>
   
 -   要求四個時間配量的預測，其中的起點是 3，而結束點則是時間配量 6。  
   
- 換句話說，如果您的新資料包含 n 個時間配量，而且您要求時間步驟 1 到 n 的預測，預測將會符合新資料的相同期間。 若要取得資料未涵蓋之期間的新預測，您必須在新資料序列之後的時間配量 n+1 上開始預測，或是確定您有要求其他的時間配量。  
+ 換句話說，如果您的新資料包含 n 個時間配量，而且您要求時間步驟1到 n 的預測，則預測將會與新資料的相同期間一致。 若要取得資料未涵蓋之期間的新預測，您必須在新資料序列之後的時間配量 n+1 上開始預測，或是確定您有要求其他的時間配量。  
   
 > [!NOTE]  
 >  當您加入新的資料時，將無法做出歷程記錄預測。  
@@ -218,22 +218,22 @@ WHERE [ModelRegion] = 'M200 Europe'
   
  預測結果從時間配量 3 開始，這是在您提供兩個月的新資料之後。  
   
- **產品和地區：M200 Europe**  
+ **產品和地區： M200 歐洲**  
   
  具有更新資料的模型 (具有 EXTEND_MODEL_CASES 的 PredictTimeSeries)  
   
 ||||  
 |-|-|-|  
-|M200 Europe|2008 年 9 月 25 日上午 12:00:00|72|  
-|M200 Europe|2008 年 10 月 25 日上午 12:00:00|69|  
-|M200 Europe|2008 年 11 月 25 日上午 12:00:00|68|  
+|M200 Europe|上午 9/25/2008 12:00:00|72|  
+|M200 Europe|上午 10/25/2008 12:00:00|69|  
+|M200 Europe|上午 11/25/2008 12:00:00|68|  
 |M200 Europe|12/25/2008 12:00:00 AM|89|  
   
-## <a name="making-predictions-with-replacemodelcases"></a>使用 REPLACE_MODEL_CASES 做出預測  
- 當您想要定型一組案例上的模型，然後將該模型套用到不同的資料數列時，取代模型案例會非常實用。 此案例的詳細逐步解說所示[第 2 課：建立預測狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。  
+## <a name="making-predictions-with-replace_model_cases"></a>使用 REPLACE_MODEL_CASES 做出預測  
+ 當您想要定型一組案例上的模型，然後將該模型套用到不同的資料數列時，取代模型案例會非常實用。 本案例的詳細逐步解說會在[第2課：建立預測案例中顯示 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [時間序列模型查詢範例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
+ [DMX&#41;的 PredictTimeSeries &#40;](/sql/dmx/predicttimeseries-dmx)  
   
   

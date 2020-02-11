@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0af079eaa96fd7925ef361b398cd628641c55a3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770872"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 目的地編輯器 (對應頁面)
-  使用 [SAP BW 目的地編輯器] 的 [對應] 頁面可以將輸入資料行對應至目的地資料行。  
+  使用 [SAP BW 目的地編輯器]  的 [對應]  頁面可以將輸入資料行對應至目的地資料行。  
   
  若要深入了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 目的地，請參閱 [SAP BW 目的地](sap-bw-destination.md)。  
   
@@ -29,16 +29,16 @@ ms.locfileid: "62770872"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 目的地的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件。  
   
-2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 目的地。  
+2.  在 [資料流程]  索引標籤上，按兩下 SAP BW 目的地。  
   
-3.  在 [SAP BW 目的地編輯器] 中，按一下 [對應] 開啟編輯器的 [對應] 頁面。  
+3.  在 [SAP BW 目的地編輯器]  中，按一下 [對應]  開啟編輯器的 [對應]  頁面。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 > [!NOTE]  
 >  如果您不知道設定目的地的所有必要值，可能必須詢問 SAP 系統管理員。  
   
- [SAP BW 目的地編輯器] 的 [對應] 頁面包含兩個區段：  
+ [SAP BW 目的地編輯器]  的 [對應]  頁面包含兩個區段：  
   
 -   上方區段會顯示可用的輸入和目的地資料行，並且讓您建立這兩種資料行類型之間的對應。  
   
@@ -50,12 +50,12 @@ ms.locfileid: "62770872"
  **可用的輸入資料行**  
  檢視可用的輸入資料行清單。  
   
- 若要將輸入資料行對應至目的地資料行，請從 [可用的輸入資料行] 清單中拖曳資料行，並且將該資料行放入 [可用的目的地資料行] 清單中的資料行。  
+ 若要將輸入資料行對應至目的地資料行，請從 [可用的輸入資料行]  清單中拖曳資料行，並且將該資料行放入 [可用的目的地資料行]  清單中的資料行。  
   
  **可用的目的地資料行**  
  檢視可用的目的地資料行清單。  
   
- 若要將輸入資料行對應至目的地資料行，請從 [可用的輸入資料行] 清單中拖曳資料行，並且將該資料行放入 [可用的目的地資料行] 清單中的資料行。  
+ 若要將輸入資料行對應至目的地資料行，請從 [可用的輸入資料行]  清單中拖曳資料行，並且將該資料行放入 [可用的目的地資料行]  清單中的資料行。  
   
  上方區段也具有操作功能表，而且您可以在背景上按一下滑鼠右鍵，即可開啟此功能表。 這個操作功能表包含下列選項：  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62770872"
  **輸入資料行**  
  檢視您已選取的輸入資料行。  
   
- 若要將不同的輸入資料行對應至相同的目的地資料行，請在清單中選取不同的輸入資料行。 若要移除對應，請選取 [\<忽略>]，即可從輸出中排除輸入資料行。  
+ 若要將不同的輸入資料行對應至相同的目的地資料行，請在清單中選取不同的輸入資料行。 若要移除對應，請選取 [**忽略>]\<** ，即可從輸出中排除輸入資料行。  
   
  **目的地資料行**  
  檢視每個可用的目的地資料行，不論該資料行是否已經對應。  

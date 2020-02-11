@@ -1,5 +1,5 @@
 ---
-title: 範例以 XML 的形式擷取產品型號資訊 | Microsoft Docs
+title: 範例：將產品型號資訊當作 XML 來擷取 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b48b333a5619aaad7f7f6af1c6e8cf908ba35bb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704711"
 ---
-# <a name="example-retrieving-product-model-information-as-xml"></a>範例將產品型號資訊當做 XML 來擷取
+# <a name="example-retrieving-product-model-information-as-xml"></a>範例：將產品型號資訊當做 XML 來擷取
   下列查詢會傳回產品型號資訊。 `RAW` 模式是在 `FOR XML` 子句中指定。  
   
 ## <a name="example"></a>範例  
@@ -78,6 +78,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 FOR XML 的 RAW 模式](use-raw-mode-with-for-xml.md)  
+ [搭配 FOR XML 使用 RAW 模式](use-raw-mode-with-for-xml.md)  
   
   

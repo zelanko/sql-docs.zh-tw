@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4146e19c6306cbe83659390605f570561fcc08f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917817"
 ---
 # <a name="database-engine-extended-stored-procedure-programming"></a>資料庫引擎擴充預存程序程式設計
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。 如需詳細資訊，請參閱 [Common Language Runtime &#40;CLR&#41; 整合程式設計概念](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)]請改用 CLR 整合。 如需詳細資訊，請參閱 [Common Language Runtime &#40;CLR&#41; 整合程式設計概念](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] 擴充預存程序 API 所提供的伺服器架構應用程式開發介面 (API) 可用於擴充 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 功能。 此 API 包含用來建置下列類別目錄中之應用程式的 C 和 C++ 函數和巨集：擴充預存程序和閘道應用程式。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]擴充預存程式 API 提供以伺服器為基礎的應用程式開發介面（API）， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]以擴充功能。 此 API 包含用來建置下列類別目錄中之應用程式的 C 和 C++ 函數和巨集：擴充預存程序和閘道應用程式。  
   
  擴充預存程序可讓您使用程式語言 (例如 C 語言) 來建立自己的外部常式。擴充預存程序對使用者而言就和一般的預存程序一樣，而且會以相同的方式執行。 您可以將參數傳遞給擴充預存程序，而它們可以傳回結果及狀態。  
   

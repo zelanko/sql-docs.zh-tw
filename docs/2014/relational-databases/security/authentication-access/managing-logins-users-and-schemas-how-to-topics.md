@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011493"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>管理登入、使用者與結構描述的使用說明主題
@@ -28,14 +28,14 @@ ms.locfileid: "63011493"
   
 -   [建立資料庫使用者](create-a-database-user.md)  
   
--   [建立資料庫結構描述](create-a-database-schema.md)  
+-   [建立資料庫架構](create-a-database-schema.md)  
   
 -   [加入角色](join-a-role.md)  
   
--   [為主體授與權限](grant-a-permission-to-a-principal.md)  
+-   [授與主體的許可權](grant-a-permission-to-a-principal.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [主體 &#40;Database Engine&#41;](principals-database-engine.md)   
+ [主體 &#40;資料庫引擎&#41;](principals-database-engine.md)   
  [保護 SQL Server 的安全](../securing-sql-server.md)  
   
   

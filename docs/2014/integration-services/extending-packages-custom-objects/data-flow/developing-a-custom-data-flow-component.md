@@ -19,14 +19,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6c174fe5cdf1ebe1dbc9b0350a01fb6e8027effa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768964"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>開發自訂資料流程元件
-  資料流程工作是由連接至各種資料來源然後以高速轉換和路由資料的元件組成。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供的可延伸物件模型，讓開發人員建立可在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 及部署的套件中使用的自訂來源、轉換和目的地。 本章節包含將引導您開發自訂資料流程元件的主題。  
+  資料流程工作是由連接至各種資料來源然後以高速轉換和路由資料的元件組成。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]提供可擴充的物件模型，可讓開發人員建立自訂來源、轉換和目的地，以便在[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]和部署的套件中使用。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 本章節包含將引導您開發自訂資料流程元件的主題。  
   
 ## <a name="in-this-section"></a>本節內容  
  [建立自訂資料流程元件](creating-a-custom-data-flow-component.md)  
@@ -38,10 +38,10 @@ ms.locfileid: "62768964"
  [資料流程元件的執行階段方法](run-time-methods-of-a-data-flow-component.md)  
  描述自訂資料流程元件中實作的執行階段方法。  
   
- [執行計劃和緩衝配置](execution-plan-and-buffer-allocation.md)  
+ [執行計劃和緩衝區配置](execution-plan-and-buffer-allocation.md)  
  描述資料流程執行計劃以及資料緩衝區的配置。  
   
- [在資料流程中使用資料類型](working-with-data-types-in-the-data-flow.md)  
+ [使用資料流程中的資料類型](working-with-data-types-in-the-data-flow.md)  
  說明資料流程如何將 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型對應至 .NET Framework Managed 資料類型。  
   
  [驗證資料流程元件](validating-a-data-flow-component.md)  
@@ -56,7 +56,7 @@ ms.locfileid: "62768964"
  [在資料流程元件中記錄和定義記錄項目](logging-and-defining-log-entries-in-a-data-flow-component.md)  
  說明如何建立和寫入自訂記錄項目。  
   
- [在資料流程元件中使用錯誤輸出](using-error-outputs-in-a-data-flow-component.md)  
+ [使用資料流程元件中的錯誤輸出](using-error-outputs-in-a-data-flow-component.md)  
  說明如何將錯誤資料列重新導向至替代輸出。  
   
  [升級資料流程元件的版本](upgrading-the-version-of-a-data-flow-component.md)  
@@ -68,7 +68,7 @@ ms.locfileid: "62768964"
  [開發特定類型的資料流程元件](../../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
  包含開發三種資料流程元件的相關資訊：來源、轉換和目的地。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:Microsoft.SqlServer.Dts.Pipeline>  
  包含用以建立自訂資料流程元件的類別與介面。  
   
@@ -110,10 +110,10 @@ ms.locfileid: "62768964"
  [開發自訂 Foreach 列舉程式](../../extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  討論如何進行自訂列舉值的程式設計。  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
- [擴充資料流程 with the Script Component](../../extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md   
+ [以腳本元件擴充資料流程](../../extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md   
  [比較指令碼解決方案和自訂物件](../../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   
   

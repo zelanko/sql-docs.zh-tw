@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 447b91ee1aa99642647dd1377976feef026b9a08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778949"
 ---
 # <a name="full-text-search-f1-help"></a>全文檢索搜尋 F1 說明
@@ -22,16 +22,16 @@ ms.locfileid: "62778949"
   
 |||  
 |-|-|  
-|[新的全文檢索目錄&#40;一般頁面&#41;](new-full-text-catalog-general-page.md)|[全文檢索索引屬性&#40;排程頁面&#41;](../../2014/database-engine/full-text-index-properties-schedules-page.md)|  
-|[全文檢索目錄屬性&#40;一般頁面&#41;](../../2014/database-engine/full-text-catalog-properties-general-page.md)|[新的全文檢索停用字詞表&#40;一般頁面&#41;](../../2014/database-engine/new-full-text-stoplist-general-page.md)|  
-|[全文檢索目錄屬性&#40;母體擴展排程頁面&#41;](../../2014/database-engine/full-text-catalog-properties-population-schedule-page.md)|[全文檢索停用字詞表屬性](../../2014/database-engine/full-text-stoplist-properties.md)|  
-|[全文檢索目錄屬性&#40;資料表和檢視頁面&#41;](../../2014/database-engine/full-text-catalog-properties-tables-and-views-page.md)|[新增搜尋屬性清單](../../2014/database-engine/new-search-property-list.md)|  
-|[全文檢索索引屬性&#40;一般頁面&#41;](../../2014/database-engine/full-text-index-properties-general-page.md)|[搜尋屬性清單編輯器](../../2014/database-engine/search-property-list-editor.md)|  
-|[全文檢索索引屬性&#40;資料行頁面&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md)||  
+|[新的全文檢索目錄 &#40;一般頁面&#41;](new-full-text-catalog-general-page.md)|[全文檢索索引屬性 &#40;排程] 頁面&#41;](../../2014/database-engine/full-text-index-properties-schedules-page.md)|  
+|[全文檢索目錄屬性 &#40;一般頁面&#41;](../../2014/database-engine/full-text-catalog-properties-general-page.md)|[新的全文檢索停用字詞表 &#40;一般頁面&#41;](../../2014/database-engine/new-full-text-stoplist-general-page.md)|  
+|[全文檢索目錄屬性 &#40;擴展排程頁面&#41;](../../2014/database-engine/full-text-catalog-properties-population-schedule-page.md)|[全文檢索停用字詞表屬性](../../2014/database-engine/full-text-stoplist-properties.md)|  
+|[全文檢索目錄屬性 &#40;資料表和 Views 頁面&#41;](../../2014/database-engine/full-text-catalog-properties-tables-and-views-page.md)|[新增搜尋屬性清單](../../2014/database-engine/new-search-property-list.md)|  
+|[全文檢索索引屬性 &#40;一般頁面&#41;](../../2014/database-engine/full-text-index-properties-general-page.md)|[搜尋屬性清單編輯器](../../2014/database-engine/search-property-list-editor.md)|  
+|[全文檢索索引屬性 &#40;資料行] 頁面&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md)||  
   
 ## <a name="see-also"></a>另請參閱  
  [全文檢索搜尋](../relational-databases/search/full-text-search.md)   
- [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+ [建立全文檢索目錄 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
  [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)  

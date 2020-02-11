@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779133"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>使用 SysPrep 安裝 SQL Server 的考量
@@ -28,7 +28,7 @@ ms.locfileid: "62779133"
   
      這個步驟可讓您完成已備妥之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的組態。 在此步驟中，您可以提供電腦、網路和帳戶特有的資訊。  
   
- 如需有關如何安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 SysPrep，請參閱[SysPrep 安裝 SQL Server 2014 使用](install-sql-server-using-sysprep.md)。  
+ 如需如何使用 SysPrep 安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的詳細資訊，請參閱[使用 sysprep 安裝 SQL Server 2014](install-sql-server-using-sysprep.md)。  
   
 ## <a name="common-uses-for-includessnoversionincludesssnoversion-mdmd-sysprep"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 的常見用法  
  您可依照下列任何方法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 功能：  
@@ -65,7 +65,7 @@ ms.locfileid: "62779133"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當您準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時，也會自動準備瀏覽器與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]寫入器。 當您在完成映像步驟中完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，便會完成這兩個項目。  
   
- 如需有關支援的版本資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 如需支援之版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]詳細資訊，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  您可以執行版本升級，同時設定備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 版本不支援這個選項。  
   

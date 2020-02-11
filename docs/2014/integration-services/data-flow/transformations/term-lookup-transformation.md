@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770314"
 ---
 # <a name="term-lookup-transformation"></a>詞彙查閱轉換
@@ -56,15 +56,15 @@ ms.locfileid: "62770314"
   
  當查閱項目在參考集中包含重疊的詞彙 (即，在一個以上參考記錄中找到子詞彙) 時，「詞彙查閱」轉換只會傳回一個查閱結果。 下列範例顯示查閱項目包含重疊子詞彙時的結果。 此處的重疊子詞彙為 *Windows*，其在兩個參考詞彙中均有找到。 但轉換不會傳回兩個結果，而只會傳回單一參考詞彙 *Windows*。 第二個參考詞彙 *Windows 7 Professional*不會傳回。  
   
-|項目|值|  
+|Item|值|  
 |----------|-----------|  
 |輸入詞彙|Windows 7 Professional|  
 |參考詞彙|Windows、Windows 7 Professional|  
-|輸出|視窗|  
+|輸出|Windows|  
   
  「詞彙查閱」轉換可以比對包含特殊字元的名詞及名詞片語，且參考資料表中的資料可能包含這些字元。 特殊字元如下：%、@、&、$、#、\*、:、;、.、 **,** 、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、" 和 '。  
   
-## <a name="data-types"></a>資料型別  
+## <a name="data-types"></a>資料類型  
  「詞彙查閱」轉換只可以使用具有 DT_WSTR 或 DT_NTEXT 資料類型的資料行。 如果資料行包含文字，但不具有這些資料類型的其中之一，則「資料轉換」可以將具有 DT_WSTR 或 DT_NTEXT 資料類型的資料行加入資料流程，並將資料行值複製至新資料行。 然後，「資料轉換」的輸出可以用作「詞彙查閱」轉換的輸入。 如需詳細資訊，請參閱 [Data Conversion Transformation](data-conversion-transformation.md)。  
   
 ## <a name="configuration-the-term-lookup-transformation"></a>設定詞彙查閱轉換  
@@ -78,11 +78,12 @@ ms.locfileid: "62770314"
   
  InputColumnType 屬性設為 0 或 2 的轉換輸出資料行包含資料行的 CustomLineageID 屬性，其包含上游資料流程元件指派給該資料行的歷程識別碼。  
   
- 「詞彙查閱」轉換會將兩個資料行新增到轉換輸出，以預設的 `Term` 和 `Frequency` 來命名。 `Term` 包含了查閱資料表中的詞彙，而 `Frequency` 包含了參考資料表中的詞彙發生在輸入資料集內的次數。 這些資料行不包含 CustomLineageID 屬性。  
+ 「詞彙查閱」轉換會將兩個資料行新增到轉換輸出，以預設的 `Term` 和 `Frequency` 來命名。 
+  `Term` 包含了查閱資料表中的詞彙，而 `Frequency` 包含了參考資料表中的詞彙發生在輸入資料集內的次數。 這些資料行不包含 CustomLineageID 屬性。  
   
  查閱資料表必須是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 Access 資料庫中的資料表。 如果將「詞彙擷取」轉換的輸出儲存為資料表，不僅可將此資料表用為參考資料表，也可以使用其他資料表。 在您可以使用「詞彙查閱」轉換之前，一般檔案、Excel 活頁簿或其他來源中的文字必須匯入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫或 Access 資料庫。  
   
- 「詞彙查閱」轉換會使用個別 OLE DB 連接，以連接到參考資料表。 如需詳細資訊，請參閱 [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md)。  
+ 「詞彙查閱」轉換會使用個別 OLE DB 連接，以連接到參考資料表。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md)。  
   
  「詞彙查閱」轉換以完全預先快取模式運作。 在執行階段，「詞彙查閱」轉換在處理任何轉換輸入資料列之前，會從參考資料表讀取詞彙，並將其儲存於其私用記憶體中。  
   
@@ -98,11 +99,11 @@ ms.locfileid: "62770314"
   
 -   [詞彙查閱轉換編輯器 &#40;詞彙查閱索引標籤&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
--   [詞彙查閱轉換編輯器 &#40;進階索引標籤&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
+-   [詞彙查閱轉換編輯器 &#40;[Advanced] 索引標籤&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [轉換自訂屬性](transformation-custom-properties.md)  
   

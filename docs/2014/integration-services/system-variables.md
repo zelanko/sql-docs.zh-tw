@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62927221"
 ---
 # <a name="system-variables"></a>系統變數
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一組儲存執行封裝及其物件之資訊的系統變數。 這些變數可以用於運算式及屬性運算式，以自訂封裝、容器、工作及事件處理常式。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]提供一組系統變數，可儲存有關執行中封裝及其物件的資訊。 這些變數可以用於運算式及屬性運算式，以自訂封裝、容器、工作及事件處理常式。  
   
  所有的變數 (系統變數和使用者自訂變數) 都可在「執行 SQL」工作用來將變數對應至參數的參數繫結中使用。  
   
@@ -35,16 +35,16 @@ ms.locfileid: "62927221"
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|[Windows 事件] 物件的控制代碼，可以讓工作發出信號以指出該工作應該停止執行。|  
 |`ContainerStartTime`|Datetime|容器的開始時間。|  
-|**CreationDate**|DateTime|建立封裝的日期。|  
+|**CreationDate**|Datetime|建立封裝的日期。|  
 |`CreatorComputerName`|String|建立封裝的電腦。|  
 |**CreatorName**|String|建立封裝之人員的姓名。|  
 |`ExecutionInstanceGUID`|String|執行封裝之執行個體的唯一識別碼。|  
 |`FailedConfigurations`|String|失敗的封裝組態名稱。|  
-|`IgnoreConfigurationsOnLoad`|布林|指出載入封裝時是否忽略封裝組態。|  
-|**InteractiveMode**|布林|指示封裝是否以互動模式執行。 如果封裝在「[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」中執行，則此屬性設為 `True`。 如果使用執行封裝**DTExec**命令提示字元公用程式的屬性設定為`False`。|  
+|`IgnoreConfigurationsOnLoad`|Boolean|指出載入封裝時是否忽略封裝組態。|  
+|**InteractiveMode**|Boolean|指示封裝是否以互動模式執行。 如果封裝在「[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」中執行，則此屬性設為 `True`。 如果封裝是使用**DTExec**命令提示字元公用程式來執行，則屬性會設定`False`為。|  
 |`LocaleId`|Int32|封裝使用的地區設定。|  
-|**MachineName**|String|執行封裝之電腦的名稱。|  
-|**OfflineMode**|布林|指出封裝是否處於離線模式。 離線模式不會取得與資料來源的連接。|  
+|**名**|String|執行封裝之電腦的名稱。|  
+|**OfflineMode**|Boolean|指出封裝是否處於離線模式。 離線模式不會取得與資料來源的連接。|  
 |**PackageID**|String|封裝的唯一識別碼。|  
 |**PackageName**|String|封裝名稱。|  
 |**StartTime**|Datetime|封裝開始執行的時間。|  
@@ -79,17 +79,17 @@ ms.locfileid: "62927221"
   
 |系統變數|資料類型|描述|事件處理常式|  
 |---------------------|---------------|-----------------|-------------------|  
-|**取消**|布林|指示當發生錯誤、警告或查詢取消時，事件處理常式是否停止執行。|OnError 事件處理常式<br /><br /> OnWarning 事件處理常式<br /><br /> OnQueryCancel 事件處理常式|  
-|**ErrorCode**|Int32|錯誤識別碼。|OnError 事件處理常式<br /><br /> OnInformation 事件處理常式<br /><br /> OnWarning 事件處理常式|  
+|**取消**|Boolean|指示當發生錯誤、警告或查詢取消時，事件處理常式是否停止執行。|OnError 事件處理常式<br /><br /> OnWarning 事件處理常式<br /><br /> OnQueryCancel 事件處理常式|  
+|**錯誤碼**|Int32|錯誤識別碼。|OnError 事件處理常式<br /><br /> OnInformation 事件處理常式<br /><br /> OnWarning 事件處理常式|  
 |**ErrorDescription**|String|錯誤的描述。|OnError 事件處理常式<br /><br /> OnInformation 事件處理常式<br /><br /> OnWarning 事件處理常式|  
-|**ExecutionStatus**|布林|目前執行狀態。|OnExecStatusChanged 事件處理常式|  
+|**ExecutionStatus**|Boolean|目前執行狀態。|OnExecStatusChanged 事件處理常式|  
 |`ExecutionValue`|DBNull|執行值。|OnTaskFailed 事件處理常式|  
 |`LocaleId`|Int32|事件處理常式使用的地區設定。|所有事件處理常式|  
-|**PercentComplete**|Int32|已完成工作的百分比。|OnProgress 事件處理常式|  
+|**百分比**|Int32|已完成工作的百分比。|OnProgress 事件處理常式|  
 |**ProgressCountHigh**|Int32|64 位元值的較高部份，指示 OnProgress 事件處理的作業總數。|OnProgress 事件處理常式|  
 |`ProgressCountLow`|Int32|64 位元值的較低部份，指示 OnProgress 事件處理的作業總數。|OnProgress 事件處理常式|  
 |**ProgressDescription**|String|進度的描述。|OnProgress 事件處理常式|  
-|`Propagate`|布林|指示是否將事件傳播至較高層級的事件處理常式。<br /><br /> 注意:值`Propagate`驗證封裝期間，會忽略變數。<br /><br /> 如果您在子封裝中，將 `Propagate` 設定為 `False`，這就無法防止事件向上擴展到父封裝。|所有事件處理常式|  
+|`Propagate`|Boolean|指示是否將事件傳播至較高層級的事件處理常式。<br /><br /> 注意：驗證封裝期間，會忽略 `Propagate` 變數的值。<br /><br /> 如果您在子封裝中，將 `Propagate` 設定為 `False`，這就無法防止事件向上擴展到父封裝。|所有事件處理常式|  
 |`SourceDescription`|String|事件處理常式中引發事件之可執行檔的描述。|所有事件處理常式|  
 |`SourceID`|String|事件處理常式中引發事件之可執行檔的唯一識別碼。|所有事件處理常式|  
 |**SourceName**|String|事件處理常式中引發事件之可執行檔的名稱。|所有事件處理常式|  

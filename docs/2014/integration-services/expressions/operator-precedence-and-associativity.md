@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 77f98e86a5ac4b03d4a21b0242a2324c61b2081a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768814"
 ---
 # <a name="operator-precedence-and-associativity"></a>運算子優先順序與關聯性
@@ -27,11 +27,11 @@ ms.locfileid: "62768814"
   
 |運算子符號|運算類型|關聯性|  
 |---------------------|-----------------------|-------------------|  
-|( )|運算式|由左至右|  
+|( )|運算是|由左至右|  
 |-、!、~|一元 (Unary)|由右至左|  
 |轉換|一元 (Unary)|由右至左|  
 |*, / ,%|乘法|由左至右|  
-|+, -|加法|由左至右|  
+|+、 -|加法|由左至右|  
 |\<, >, \<=, >=|關聯式|由左至右|  
 |==, !=|等式|由左至右|  
 |&|位元 AND|由左至右|  

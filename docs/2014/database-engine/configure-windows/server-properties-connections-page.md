@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c9d58fb2a5702a2a6c3f5ac74ae970411d887b62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809347"
 ---
 # <a name="server-properties-connections-page"></a>伺服器屬性 (連接頁面)
@@ -71,7 +71,7 @@ ms.locfileid: "62809347"
  針對此窗格中的選項，檢視目前執行中的值。 這些值是唯讀的。  
   
 ## <a name="see-also"></a>另請參閱  
- [選項&#40;查詢執行： SQL Server︰ 進階頁面&#41;](../options-query-execution-sql-server-advanced-page.md)   
+ [&#40;查詢執行的選項： SQL Server： Advanced Page&#41;](../options-query-execution-sql-server-advanced-page.md)   
  [伺服器組態選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

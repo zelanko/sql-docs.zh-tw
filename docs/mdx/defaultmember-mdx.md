@@ -1,5 +1,5 @@
 ---
-title: DefaultMember (MDX) |Microsoft Docs
+title: DefaultMember （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a0b5039ae62eac25d698442d4aeb92ad3c4ebc3a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892904"
 ---
 # <a name="defaultmember-mdx"></a>DefaultMember (MDX)
@@ -35,7 +35,7 @@ Hierarchy_Expression.DefaultMember
  當查詢中並未包含屬性時，會使用屬性的預設成員來評估運算式。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用**DefaultMember**函式搭配**Name**函式, 以傳回「艾德作品」 cube 中目的地貨幣維度的預設成員。 此範例會傳回**US 美元**。 **Name**函數是用來傳回量值的名稱, 而不是量值的預設屬性, 也就是**value**。  
+ 下列範例會使用**DefaultMember**函式搭配**Name**函式，以傳回「艾德作品」 cube 中目的地貨幣維度的預設成員。 此範例會傳回**US 美元**。 **Name**函數是用來傳回量值的名稱，而不是量值的預設屬性，也就是**value**。  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -45,7 +45,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [定義預設成員](https://docs.microsoft.com/analysis-services/multidimensional-models/attribute-properties-define-a-default-member)  
   
   

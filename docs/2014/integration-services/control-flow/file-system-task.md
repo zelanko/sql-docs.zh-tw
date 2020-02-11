@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9a2244c5e6cddbc53ccd3aaec7faaaa3836a923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831743"
 ---
 # <a name="file-system-task"></a>檔案系統工作
@@ -31,7 +31,7 @@ ms.locfileid: "62831743"
 ## <a name="predefined-file-system-operations"></a>預先定義的檔案系統作業  
  「檔案系統」工作包括一組預先定義的作業。 下表描述這些作業。  
   
-|運算|描述|  
+|作業|描述|  
 |---------------|-----------------|  
 |複製目錄|將資料夾從一個位置複製到另一個。|  
 |複製檔案|將檔案從一個位置複製到另一個。|  
@@ -62,7 +62,7 @@ ms.locfileid: "62831743"
   
  如需有關可在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請參閱下列主題：  
   
--   [檔案系統工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[檔案系統工作編輯器] &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   
@@ -75,7 +75,8 @@ ms.locfileid: "62831743"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
 ## <a name="related-tasks"></a>相關工作  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括下載和上傳資料檔以及管理伺服器上目錄的工作。 如需相關資訊，請參閱 [FTP Task](ftp-task.md)。  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括下載和上傳資料檔以及管理伺服器上目錄的工作。 如需相關資訊，請參閱 [FTP Task](ftp-task.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](integration-services-tasks.md)   

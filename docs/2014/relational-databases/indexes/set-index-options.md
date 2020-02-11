@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 24587f27710381ac787fe8045029df681e401af5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63036188"
 ---
 # <a name="set-index-options"></a>設定索引選項
@@ -39,9 +39,9 @@ ms.locfileid: "63036188"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **使用下列方法修改索引的屬性：**  
+-   **若要修改索引的屬性，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63036188"
   
 -   當您使用 ALTER INDEX REBUILD 或 CREATE INDEX WITH DROP_EXISTING 重建索引時，可以設定下列選項：PAD_INDEX、FILLFACTOR、SORT_IN_TEMPDB、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE、ONLINE、ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、MAXDOP 和 DROP_EXISTING (僅限 CREATE INDEX)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。  
@@ -68,17 +68,17 @@ ms.locfileid: "63036188"
   
 2.  按一下加號展開 **[資料表]** 資料夾。  
   
-3.  以滑鼠右鍵按一下要修改索引屬性的資料表，然後選取 [設計]  。  
+3.  以滑鼠右鍵按一下要修改索引屬性的資料表，然後選取 [設計]****。  
   
-4.  在 [資料表設計工具]  功能表上，按一下 [索引/索引鍵]  。  
+4.  在 [**資料表設計工具**] 功能表上，按一下 [**索引/索引鍵**]。  
   
 5.  選取您要修改的索引。 其屬性會在主要方格中顯示。  
   
 6.  變更任何和所有屬性的設定，以自訂索引。  
   
-7.  按一下 [ **關閉**]。  
+7.  按一下 [關閉]  。  
   
-8.  在 [檔案]  功能表上，選取 [儲存 _table_name_]  。  
+8.  **在 [檔案**] 功能表上，選取 [**儲存**_table_name_]。  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>在物件總管中修改索引的屬性  
   
@@ -90,13 +90,13 @@ ms.locfileid: "63036188"
   
 4.  按一下加號展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下要修改其屬性的索引，然後選取 [屬性]  。  
+5.  以滑鼠右鍵按一下要修改其屬性的索引，然後選取 [屬性]****。  
   
-6.  在 **[選取頁面]** 底下，選取 **[選項]** 。  
+6.  在 **[選取頁面]** 底下，選取 **[選項]**。  
   
 7.  變更任何和所有屬性的設定，以自訂索引。  
   
-8.  若要加入、移除或變更索引資料行的位置，請選取 [索引屬性 - _index_name_]  對話方塊中的 [一般]  頁面。 如需相關資訊，請參閱 [Index Properties F1 Help](index-properties-f1-help.md)  
+8.  若要加入、移除或變更索引資料行的位置，請選取 [索引屬性 - **index_name**]** 對話方塊中的 [一般]** __ 頁面。 如需相關資訊，請參閱 [Index Properties F1 Help](index-properties-f1-help.md)  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -146,6 +146,6 @@ ms.locfileid: "63036188"
   
      [!code-sql[IndexDDL#AlterIndex2](../../snippets/tsql/SQL14/tsql/indexddl/transact-sql/alterindex.sql#alterindex2)]  
   
- 如需詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)。  
+ 如需詳細資訊，請參閱[ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)。  
   
   

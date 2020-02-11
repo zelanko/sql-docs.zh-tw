@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62782381"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>當系統管理員遭到鎖定時連接到 SQL Server
@@ -58,12 +58,12 @@ ms.locfileid: "62782381"
   
 4.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員的左窗格中，選取 [SQL Server 服務]  。 在右窗格中，尋找您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體會在電腦名稱後面加上 **(MSSQLSERVER)** 。 具名執行個體會以 [已註冊的伺服器] 中顯示的相同大寫名稱出現)。以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，然後按一下 [屬性]  。  
   
-5.  在 **啟動參數**索引標籤中，於**指定啟動參數**方塊中，輸入`-m`，然後按一下  `Add`。 (這是虛線，然後接著小寫字母 m)。  
+5.  在 [**啟動參數**] 索引標籤的 [**指定啟動參數**] 方塊`-m`中，輸入`Add`，然後按一下。 (這是虛線，然後接著小寫字母 m)。  
   
     > [!NOTE]  
-    >  如果是某些舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則沒有 [啟動參數]  索引標籤。在該情況下，請在 [進階]  索引標籤上，按兩下 [啟動參數]  。 這些參數就會在非常小的視窗中開啟。 請小心不要變更任何現有參數。 在結尾處，加上新的參數 `;-m`，然後按一下 [`OK`] (這是分號，然後接著虛線和小寫字母 m)。  
+    >  如果是某些舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則沒有 [啟動參數]  索引標籤。在該情況下，請在 [進階]  索引標籤上，按兩下 [啟動參數]  。 這些參數就會在非常小的視窗中開啟。 請小心不要變更任何現有參數。 在結尾處，加上新的參數 `;-m`，然後按一下 [`OK`]  (這是分號，然後接著虛線和小寫字母 m)。  
   
-6.  按一下  `OK`，並在之後重新啟動的訊息，以滑鼠右鍵按一下您的伺服器名稱，然後按**重新啟動**。  
+6.  按一下`OK`，然後在要重新開機的訊息之後，以滑鼠右鍵按一下您的伺服器名稱，然後按一下 [**重新開機**]。  
   
 7.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後，您的伺服器即會處於單一使用者模式。 確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 並未執行。 如果已啟動，它將會佔用您的唯一連接。  
   
@@ -74,16 +74,16 @@ ms.locfileid: "62782381"
   
      在某些組態中，SSMS 會嘗試建立許多連接。 多重連接將會失敗，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處於單一使用者模式。 您可以選取下列其中一項動作來執行。 執行下列其中一項動作。  
   
-    1.  使用 Windows 驗證 (包含您的系統管理員認證) 透過 [物件總管] 連接。 依序展開 [安全性]  和 [登入]  ，然後按兩下您自己的登入。 在 **伺服器角色**頁面上，選取`sysadmin`，然後按一下  `OK`。  
+    1.  使用 Windows 驗證 (包含您的系統管理員認證) 透過 [物件總管] 連接。 依序展開 [安全性]  和 [登入]  ，然後按兩下您自己的登入。 在 [**伺服器角色**] 頁面上`sysadmin`，選取，然後`OK`按一下。  
   
-    2.  不透過 [物件總管] 連接，而是使用 Windows 驗證 (包含您的系統管理員認證) 透過查詢視窗連接 (如果您沒有透過 [物件總管] 連接，就只能以這種方式連接)。執行程式碼，如下所示，新增新的 Windows 驗證登入的成員`sysadmin`固定的伺服器角色。 下列範例會加入名為 `CONTOSO\PatK` 的網域使用者。  
+    2.  不透過 [物件總管] 連接，而是使用 Windows 驗證 (包含您的系統管理員認證) 透過查詢視窗連接 （如果您未使用物件總管連接，就只能以這種方式連接）。執行如下所示的程式碼，加入屬於`sysadmin`固定伺服器角色成員的新 Windows 驗證登入。 下列範例會加入名為 `CONTOSO\PatK` 的網域使用者。  
   
         ```  
         CREATE LOGIN [CONTOSO\PatK] FROM WINDOWS;  
         ALTER SERVER ROLE sysadmin ADD MEMBER [CONTOSO\PatK];  
         ```  
   
-    3.  如果您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是以混合驗證模式執行，請使用 Windows 驗證 (包含您的系統管理員認證) 透過查詢視窗連接。 執行如下所示，建立新的程式碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證登入的成員`sysadmin`固定的伺服器角色。  
+    3.  如果您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是以混合驗證模式執行，請使用 Windows 驗證 (包含您的系統管理員認證) 透過查詢視窗連接。 執行如下所示的程式碼，以建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]屬於`sysadmin`固定伺服器角色成員的新驗證登入。  
   
         ```  
         CREATE LOGIN TempLogin WITH PASSWORD = '************';  
@@ -93,7 +93,7 @@ ms.locfileid: "62782381"
         > [!WARNING]  
         >  請將 ************ 取代成增強式密碼。  
   
-    4.  如果您[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以混合驗證模式執行，而您想要重設的密碼`sa`帳戶時，透過使用 Windows 驗證 （其中包含您的系統管理員認證） 的查詢視窗連接。 變更密碼`sa`使用下列語法的帳戶。  
+    4.  如果您[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的是以混合驗證模式執行，而您想要重設`sa`帳戶的密碼，請使用 Windows 驗證（包含您的系統管理員認證）透過查詢視窗連接。 使用下列語法變更`sa`帳戶的密碼。  
   
         ```  
         ALTER LOGIN sa WITH PASSWORD = '************';  
@@ -106,14 +106,14 @@ ms.locfileid: "62782381"
   
 10. 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員的左窗格中，選取 [SQL Server 服務]  。 在右窗格中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，然後按一下 [屬性]  。  
   
-11. 在 **啟動參數**索引標籤**現有參數**方塊中，選取`-m`，然後按一下  `Remove`。  
+11. 在 [**啟動參數**] 索引標籤的 [**現有參數**] `-m`方塊中， `Remove`選取，然後按一下。  
   
     > [!NOTE]  
-    >  如果是某些舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則沒有 [啟動參數]  索引標籤。在該情況下，請在 [進階]  索引標籤上，按兩下 [啟動參數]  。 這些參數就會在非常小的視窗中開啟。 移除`;-m`這是您稍早，新增，然後按一下`OK`。  
+    >  如果是某些舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則沒有 [啟動參數]  索引標籤。在該情況下，請在 [進階]  索引標籤上，按兩下 [啟動參數]  。 這些參數就會在非常小的視窗中開啟。 移除您`;-m`先前加入的，然後按一下`OK`。  
   
 12. 以滑鼠右鍵按一下您的伺服器名稱，然後按一下 [重新啟動]  。  
   
- 現在您應該能夠正常連接與其中一個目前屬於成員的帳戶的`sysadmin`固定的伺服器角色。  
+ 現在，您應該能夠使用其中一個目前是`sysadmin`固定伺服器角色成員的帳戶進行正常連接。  
   
 ## <a name="see-also"></a>另請參閱  
  [以單一使用者模式啟動 SQL Server](start-sql-server-in-single-user-mode.md)   

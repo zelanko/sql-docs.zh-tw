@@ -1,5 +1,5 @@
 ---
-title: 原則評估結果 (AlwaysOn) |Microsoft Docs
+title: 原則評估結果（AlwaysOn） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99f32a970ee8cc3c68da6f4fb150ec36e17bcea1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789078"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>原則評估結果 (AlwaysOn)
@@ -31,8 +31,8 @@ ms.locfileid: "62789078"
   
 |圖示|Severity|  
 |----------|--------------|  
-|![UI 圖示︰錯誤](../../../relational-databases/replication/media/repl-icon-error.gif "UI 圖示︰錯誤")|嚴重|  
-|![UI 圖示︰警告](../../../relational-databases/replication/media/repl-icon-warn.gif "UI 圖示︰警告")|警告|  
+|![UI 圖示：錯誤](../../../relational-databases/replication/media/repl-icon-error.gif "UI 圖示：錯誤")|重大|  
+|![UI 圖示：警告](../../../relational-databases/replication/media/repl-icon-warn.gif "UI 圖示：警告")|警告|  
   
  **說明**  
  此方格會顯示所選問題的簡短說明。  
@@ -44,11 +44,11 @@ ms.locfileid: "62789078"
   
 -   [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
--   [使用 AlwaysOn 原則檢視可用性群組的健全狀況&#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [使用 AlwaysOn 原則來查看可用性群組的健全狀況 &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md) [AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則&#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md) 
+ [AlwaysOn 可用性群組 &#40;的總覽 SQL Server](overview-of-always-on-availability-groups-sql-server.md) AlwaysOn 可用性群組 &#40;SQL Server&#41;[操作問題的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md)&#41; 
   
   

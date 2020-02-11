@@ -14,16 +14,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774773"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>從原始檔控制中開啟方案和專案
-  您可以使用[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]直接從原始檔控制開啟方案或專案。 當您從原始檔控制中開啟方案時，[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境會自動擷取方案的最後版本，將它複製到您指定的位置中。  
+  您可以使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]直接從原始檔控制開啟方案或專案。 當您從原始檔控制中開啟方案時，[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境會自動擷取方案的最後版本，將它複製到您指定的位置中。  
   
- 如果您沒有方案的本機副本，您必須先從原始檔控制中開啟它，之後，才能對它執行原始檔控制作業。 擷取方案的本機副本之後，您不需要再; 從原始檔控制開啟它您可以開啟本機複本，並使用標準的原始檔控制命令，例如**取得最新版本**或是**簽出**，若要執行所需的作業。  
+ 如果您沒有方案的本機副本，您必須先從原始檔控制中開啟它，之後，才能對它執行原始檔控制作業。 在您取得解決方案的本機複本之後，就不需要再從原始檔控制中開啟它。您可以開啟本機複本，並使用標準原始檔控制命令（例如**取得最新版本**或**簽出**）來執行所需的作業。  
   
  下表描述此章節的主題。  
   
@@ -33,6 +33,6 @@ ms.locfileid: "62774773"
 |[從原始檔控制開啟專案](../../2014/database-engine/open-projects-from-source-control.md)|說明如何從原始檔控制中開啟專案，以便簽出和修改專案檔。|  
   
 ## <a name="see-also"></a>另請參閱  
- [將方案與專案新增原始檔控制](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)  
+ [將方案與專案加入原始檔控制](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)  
   
   

@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774181"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>開啟資料表設計工具 (Visual Database Tools)
@@ -29,21 +29,21 @@ ms.locfileid: "62774181"
   
 ### <a name="open-a-new-table"></a>開啟新的資料表  
   
-1.  在物件總管中，以滑鼠右鍵按一下資料庫的 [資料表] 節點，再按一下 [新增資料表]  。  
+1.  在物件總管中，以滑鼠右鍵按一下資料庫的 [資料表] 節點，再按一下 [新增資料表]****。  
   
-     [資料表設計工具]  功能表會新增至主功能表中，而且會開啟設計工具窗格。  
+     [資料表設計工具]**** 功能表會新增至主功能表中，而且會開啟設計工具窗格。  
   
 > [!NOTE]  
 >  如果您連接到 SQL Azure 資料庫，新的資料表選項將會啟動建立資料表範本指令碼。 請編輯參數，然後執行指令碼來建立新的資料表。 如需詳細資訊，請參閱＜ [SQL Azure 概觀](/azure/sql-database/sql-database-technical-overview)＞。  
   
 ### <a name="open-an-existing-table"></a>開啟現有的資料表  
   
-1.  在物件總管中，以滑鼠右鍵按一下資料庫的 [資料表] 節點底下的資料表，再按一下 [修改]  。  
+1.  在物件總管中，以滑鼠右鍵按一下資料庫的 [資料表] 節點底下的資料表，再按一下 [修改]****。  
   
-     [資料表設計工具]  功能表會新增至主功能表中，而且會在設計工具窗格中開啟資料表。  
+     [資料表設計工具]**** 功能表會新增至主功能表中，而且會在設計工具窗格中開啟資料表。  
   
 ## <a name="see-also"></a>另請參閱  
- [設計資料表&#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
+ [設計資料表 &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
  [資料表](../relational-databases/tables/tables.md)  
   
   

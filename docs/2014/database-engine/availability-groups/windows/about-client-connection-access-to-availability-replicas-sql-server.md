@@ -18,16 +18,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789840"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>關於可用性複本的用戶端連接存取 (SQL Server)
   在 AlwaysOn 可用性群組中，您可以設定一個或多個可用性複本，讓它在次要角色之下執行時 (也就是以次要複本的方式執行時)，允許唯讀連接。 以主要角色執行時 (也就是當做主要複本執行時)，您也可以設定每個可用性複本，以允許或排除唯讀連接。  
   
- 若要簡化用戶端對給定可用性群組之主要或次要資料庫的存取，您應該定義可用性群組接聽程式。 根據預設，可用性群組接聽程式會將內送連接導向至主要複本。 不過，您可以將可用性群組設定為支援唯讀路由，讓它的可用性群組接聽程式將讀取意圖應用程式的連接要求重新導向至可讀取的次要複本。 如需詳細資訊，請參閱 [設定可用性群組的唯讀路由 &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)。  
+ 若要簡化用戶端對給定可用性群組之主要或次要資料庫的存取，您應該定義可用性群組接聽程式。 根據預設，可用性群組接聽程式會將內送連接導向至主要複本。 不過，您可以將可用性群組設定為支援唯讀路由，讓它的可用性群組接聽程式將讀取意圖應用程式的連接要求重新導向至可讀取的次要複本。 如需詳細資訊，請參閱本主題稍後的 [設定可用性群組的唯讀路由 &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md))。  
   
  在容錯移轉期間，次要複本會轉換到主要角色，而先前的主要複本會轉換到次要角色。 在容錯移轉過程中，會同時終止主要複本和次要複本的所有用戶端連接。 容錯移轉之後，當用戶端重新連接至可用性群組接聽程式時，接聽程式會將用戶端重新連接至新的主要複本 (但讀取意圖的連接要求除外)。 如果用戶端、裝載新主要複本的伺服器執行個體，以及至少一個可讀取的次要複本上設定了唯讀路由，讀取意圖連接要求會重新導向至支援用戶端所需連接存取類型的次要複本。 為確保容錯移轉後的用戶端經驗沒有失誤，最好同時針對每個可用性複本的次要和主要角色，設定連接存取。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62789840"
   
 -   [主要角色所支援的連接存取類型](#ConnectAccessForPrimary)  
   
--   [連接存取組態如何影響用戶端連接](#HowConnectionAccessAffectsConnectivity)  
+-   [連接存取設定如何影響用戶端連線能力](#HowConnectionAccessAffectsConnectivity)  
   
 -   [相關工作](#RelatedTasks)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62789840"
  不允許任何使用者連接。 次要資料庫不適用於讀取。 這是次要角色的預設行為。  
   
  僅讀取意圖連接  
- 次要資料庫是僅適用於其`Application Intent`連接屬性設定為`ReadOnly`(*讀取意圖的連接*)。  
+ 次要資料庫僅適用于`Application Intent`連接屬性設定為`ReadOnly` （*讀取意圖連接*）的連接。  
   
  如需有關此連接屬性的詳細資訊，請參閱＜ [高可用性/災害復原的 SQL Server Native Client 支援](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)＞。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62789840"
  同時允許與主要資料庫的讀寫和唯讀連接。 這是主要角色的預設行為。  
   
  僅允許讀寫連接  
- 當`Application Intent`連接屬性設定為**ReadWrite**或未設定，允許的連接。 為其連接`Application Intent`連接字串關鍵字設為`ReadOnly`不允許。 僅允許讀寫連接有助於防止客戶錯誤地將讀取意圖的工作負載連接至主要複本。  
+ 當`Application Intent`連接屬性設定為**ReadWrite**或未設定時，允許連接。 不允許`Application Intent`連接字串關鍵字設定為`ReadOnly`的連接。 僅允許讀寫連接有助於防止客戶錯誤地將讀取意圖的工作負載連接至主要複本。  
   
  如需有關此連接屬性的詳細資訊，請參閱＜ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)＞。  
   
@@ -80,13 +80,13 @@ ms.locfileid: "62789840"
   
 |複本角色|複本上支援的連接存取|連接意圖|連接嘗試結果|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|次要|All|讀取意圖、讀寫，或未指定任何連接意圖|成功|  
+|次要|全部|讀取意圖、讀寫，或未指定任何連接意圖|Success|  
 |次要|無 (這是預設的次要行為)。|讀取意圖、讀寫，或未指定任何連接意圖|失敗|  
-|次要|僅限讀取意圖|讀取意圖|成功|  
+|次要|僅限讀取意圖|讀取意圖|Success|  
 |次要|僅限讀取意圖|讀寫，或未指定任何連接意圖|失敗|  
-|主要|全部 (這是預設的主要行為)。|唯讀、讀寫，或未指定任何連接意圖|成功|  
-|主要|讀寫|僅限讀取意圖|失敗|  
-|主要|讀寫|讀寫，或未指定任何連接意圖|成功|  
+|Primary|全部 (這是預設的主要行為)。|唯讀、讀寫，或未指定任何連接意圖|Success|  
+|Primary|讀寫|僅限讀取意圖|失敗|  
+|Primary|讀寫|讀寫，或未指定任何連接意圖|Success|  
   
  如需設定可用性群組接受用戶端連接至其複本的相關資訊，請參閱 [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)。  
   
@@ -97,8 +97,8 @@ ms.locfileid: "62789840"
   
 |複本|認可模式|初始角色|次要角色的連接存取|主要角色的連接存取|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|同步的|主要|None|讀寫|  
-|Replica2|同步的|次要|None|讀寫|  
+|Replica1|同步|Primary|None|讀寫|  
+|Replica2|同步|次要|None|讀寫|  
 |Replica3|非同步的|次要|僅限讀取意圖|讀寫|  
 |Replica4|非同步的|次要|僅限讀取意圖|讀寫|  
   
@@ -118,12 +118,12 @@ ms.locfileid: "62789840"
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 小組 Blog：官方 SQL Server AlwaysOn 小組的 Blog](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [統計資料](../../../relational-databases/statistics/statistics.md)  
   

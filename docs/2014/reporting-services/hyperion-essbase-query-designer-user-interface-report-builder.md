@@ -1,5 +1,5 @@
 ---
-title: Hyperion Essbase 查詢設計工具使用者介面 (報表產生器) |Microsoft Docs
+title: Hyperion Essbase 查詢設計工具使用者介面（報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,15 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7d751b91bf21e30fb910f306c1b37155b209887a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891402"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Hyperion Essbase 查詢設計工具使用者介面 (報表產生器)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會提供圖形化查詢設計工具，可用以建立 [!INCLUDE[extEssbase](../includes/extessbase-md.md)] 資料來源的多維度運算式 (MDX) 查詢。 MDX 圖形化查詢設計工具有兩種模式:設計模式和查詢模式。 每一種模式都會提供 [中繼資料] 窗格，而且您可以透過這個窗格，從資料來源上定義的 Cube 中拖曳成員，以便建立可在處理報表時擷取資料的 MDX 查詢。  
+  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會提供圖形化查詢設計工具，可用以建立 [!INCLUDE[extEssbase](../includes/extessbase-md.md)] 資料來源的多維度運算式 (MDX) 查詢。 MDX 圖形化查詢設計工具有兩種模式：「設計」模式和「查詢」模式。 每一種模式都會提供 [中繼資料] 窗格，而且您可以透過這個窗格，從資料來源上定義的 Cube 中拖曳成員，以便建立可在處理報表時擷取資料的 MDX 查詢。  
   
 > [!IMPORTANT]  
 >  當使用者建立與執行查詢時，可以存取資料來源。 您應該授與資料來源的最小權限，例如唯讀權限。  
@@ -37,7 +38,7 @@ ms.locfileid: "68891402"
   
  下表列出此模式下的窗格。  
   
-|窗格|函數|  
+|窗格|函式|  
 |----------|--------------|  
 |[選取 Cube] 按鈕|顯示目前選取的 Cube。|  
 |[中繼資料] 窗格|顯示 Cube 的階層式清單。|  
@@ -54,11 +55,11 @@ ms.locfileid: "68891402"
   
 |按鈕|描述|  
 |------------|-----------------|  
-|**當成文字編輯**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。 無法用於這種資料來源類型。|  
+|**當做文字編輯**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。 無法用於這種資料來源類型。|  
 |**匯入**|從檔案系統上的報表定義 (.rdl) 檔案匯入現有的查詢。|  
 |![重新整理資料集欄位](media/rsqdicon-refreshfields.gif "重新整理資料集欄位")|重新整理資料來源中的中繼資料。|  
-|![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|顯示 **[導出成員產生器]** 對話方塊。 您可以使用這個對話方塊來建立或編輯導出成員的運算式，包括設定 **[解決順序]** 屬性。|  
-|![切換以顯示空的資料格](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "切換以顯示空的資料格")|在顯示或隱藏 [資料] 窗格中的空白資料格之間切換 (這相當於使用 MDX 中的 NON EMPTY 子句)。|  
+|![加入導出成員](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "加入導出成員")|顯示 **[導出成員產生器]** 對話方塊。 您可以使用這個對話方塊來建立或編輯導出成員的運算式，包括設定 **[解決順序]** 屬性。|  
+|![切換以顯示空資料格](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "切換以顯示空資料格")|在顯示或隱藏 [資料] 窗格中的空白資料格之間切換 (這相當於使用 MDX 中的 NON EMPTY 子句)。|  
 |![自動執行查詢](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "自動執行查詢")|每次進行變更 (例如刪除 [資料] 窗格中的資料行) 時自動執行查詢並顯示結果。 結果會顯示在 [資料] 窗格中。|  
 |![刪除](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "刪除")|從查詢中刪除選取的項目。 您可以使用此按鈕來刪除 [篩選] 窗格中的選取資料列。|  
 |![執行查詢](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "執行查詢")|執行查詢並將結果顯示在 [資料] 窗格中。|  
@@ -72,7 +73,7 @@ ms.locfileid: "68891402"
   
  下表會描述各個窗格的功能。  
   
-|窗格|函數|  
+|窗格|函式|  
 |----------|--------------|  
 |[選取 Cube] 按鈕|顯示目前選取的 Cube。|  
 |[中繼資料/函數] 窗格|顯示索引標籤式的視窗，列出可用來建立查詢文字的可用中繼資料或函數清單。|  
@@ -84,13 +85,13 @@ ms.locfileid: "68891402"
 ### <a name="toolbar-for-the-graphical-query-designer-in-query-mode"></a>查詢模式中的圖形化查詢設計工具工具列  
  查詢設計工具工具列會提供按鈕，協助您使用圖形化介面設計 MDX 查詢。 「設計」模式與「查詢」模式的工具列按鈕完全相同，唯一不同的是在「查詢」模式中未啟用下列按鈕：  
   
--   **當成文字編輯**  
+-   **當做文字編輯**  
   
--   **加入導出成員** (![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **加入匯出成員**（![加入匯出成員](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "加入導出成員")）  
   
--   **顯示空的資料格** (![切換以顯示空的資料格](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "切換以顯示空的資料格"))  
+-   **顯示空白資料格**（![切換以顯示空的資料格](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "切換以顯示空資料格")）  
   
--   **自動執行** (![自動執行查詢](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "自動執行查詢"))  
+-   **自動執行**（![自動執行查詢](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "自動執行查詢")）  
   
 ## <a name="see-also"></a>另請參閱  
  [查詢設計工具 &#40;報表產生器&#41;](../../2014/reporting-services/query-designers-report-builder.md)  

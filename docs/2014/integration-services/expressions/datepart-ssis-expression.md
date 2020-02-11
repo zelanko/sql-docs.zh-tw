@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22225f9a1791185ed78dfc75d92c3dbced7be3ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769335"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (SSIS 運算式)
@@ -31,7 +31,7 @@ DATEPART(datepart, date)
 ```  
   
 ## <a name="arguments"></a>引數  
- *日期部份*  
+ *datepart*  
  這是指定日期中哪一個部分要傳回新值的參數。  
   
  *date*  
@@ -58,7 +58,7 @@ DATEPART(datepart, date)
 |Weekday|dw|  
 |Hour|Hh|  
 |Minute|mi, n|  
-|第二個|ss, s|  
+|Second|ss, s|  
 |Millisecond|Ms|  
   
 ## <a name="ssis-expression-examples"></a>SSIS 運算式範例  

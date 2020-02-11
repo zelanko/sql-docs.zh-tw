@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eaad0a80fd77257c6e79e092733d75c0c8df5df5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827079"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed 事件類別
@@ -36,8 +36,8 @@ ms.locfileid: "62827079"
 |Duration|`bigint`|分類函數使用的時間量 (以百萬分之一秒為單位)。|13|是|  
 |ObjectID|`int`|使用者定義之分類物件的識別碼。|22|是|  
 |CPU|`int`|CPU 使用量 (以毫秒為單位)。|18|是|  
-|Reads|`int`|邏輯讀取的數目。|16|是|  
-|Writes|`int`|邏輯寫入的數目。|17|是|  
+|讀取|`int`|邏輯讀取的數目。|16|是|  
+|寫入|`int`|邏輯寫入的數目。|17|是|  
 |GroupID|`int`|分類工作負載群組的識別碼。|66|是|  
 |錯誤|`int`|如果使用者定義的分類函數無法執行，就是上一個錯誤號碼。|31|是|  
 |State|`int`|上一個錯誤的狀態。|30|是|  
@@ -46,7 +46,7 @@ ms.locfileid: "62827079"
   
 ## <a name="see-also"></a>另請參閱  
  [擴充事件](../extended-events/extended-events.md)   
- [PreConnect:Starting 事件類別](preconnect-starting-event-class.md)   
+ [PreConnect：起始事件類別](preconnect-starting-event-class.md)   
  [資源管理員](../resource-governor/resource-governor.md)  
   
   

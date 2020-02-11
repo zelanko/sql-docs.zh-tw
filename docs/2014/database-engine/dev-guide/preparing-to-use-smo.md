@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ebc622c0adb9fe2422c1cd215de36b6ba79057c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780829"
 ---
 # <a name="preparing-to-use-smo"></a>準備使用 SMO
@@ -25,6 +25,6 @@ ms.locfileid: "62780829"
   
 |||  
 |-|-|  
-|**準備使用 SMO**<br /><br /> -   [語法慣例](../../relational-databases/server-management-objects-smo/smo-syntax-conventions.md)描述這一節中所使用的語法慣例。<br />-   [系統需求](../../../2014/database-engine/dev-guide/system-requirements.md)指定安裝和使用 SMO 的系統需求。<br />-   [檔案和版本號碼](../../relational-databases/server-management-objects-smo/files-and-version-numbers.md)列出 SMO 元件和對應的版本號碼。|-   [安裝 SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)提供安裝 SMO 的指示。|  
+|**準備使用 SMO**<br /><br /> -   [語法慣例](../../relational-databases/server-management-objects-smo/smo-syntax-conventions.md)說明本節中所使用的語法慣例。<br />-   [系統需求](../../../2014/database-engine/dev-guide/system-requirements.md)指定安裝和使用 SMO 的系統需求。<br />-   檔案[和版本號碼](../../relational-databases/server-management-objects-smo/files-and-version-numbers.md)會列出 SMO 元件和對應的版本號碼。|-   [安裝 smo](../../relational-databases/server-management-objects-smo/installing-smo.md)會提供安裝 smo 的指示。|  
   
   

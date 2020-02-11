@@ -21,26 +21,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2e86fff86e24668e7fe6382545e024bed1a4025
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62927063"
 ---
 # <a name="security-overview-integration-services"></a>安全性概觀 (Integration Services)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的安全性包含幾層，提供了豐富且具彈性的安全性環境。 這些安全性階層包括使用數位簽章、封裝屬性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色，以及作業系統權限。 這些安全性功能中，絕大部分都屬於識別與存取控制的類別。  
+  中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的安全性包含數個層級，提供豐富且彈性的安全性環境。 這些安全性階層包括使用數位簽章、封裝屬性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色，以及作業系統權限。 這些安全性功能中，絕大部分都屬於識別與存取控制的類別。  
   
 ## <a name="identity-features"></a>識別功能  
  您可以透過在封裝中實作識別功能，藉以達到下列目標：  
   
- **確定您只會開啟和執行來自信任來源的封裝**。  
+ **請確定您只開啟並執行來自信任來源的封裝**。  
   
  為確保您只開啟和執行來自信任來源的封裝，您必須先識別封裝的來源。 您可以使用憑證簽署封裝，藉以識別來源。 接著，當您開啟或執行封裝時，可以讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 檢查數位簽章是否存在及其有效性。 如需詳細資訊，請參閱 [Identify the Source of Packages with Digital Signatures](identify-the-source-of-packages-with-digital-signatures.md)(使用數位簽章識別封裝來源)。  
   
 ## <a name="access-control-features"></a>存取控制功能  
  您可以透過在封裝中實作識別功能，藉以達到下列目標：  
   
- **確定只有授權的使用者會開啟和執行封裝**。  
+ **確定只有授權的使用者開啟並執行封裝**。  
   
  為確保只有授權的使用者會開啟和執行封裝，您必須控制下列資訊的存取：  
   
@@ -67,7 +67,9 @@ ms.locfileid: "62927063"
 #### <a name="saving-packages-to-the-msdb-database"></a>將封裝儲存到 msdb 資料庫  
  將封裝儲存至 msdb 資料庫有助於提供伺服器、資料庫和資料表層級的安全性。 在 msdb 資料庫中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝是儲存在 sysssispackages 資料表中。 由於這些封裝會分別儲存到 msdb 資料庫中的 sysssispackages 和 sysdtspackages 資料表中，因此，當您備份 msdb 資料庫時，也會自動備份這些封裝。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 套用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料庫層級角色還可以保護儲存在 msdb 資料庫的封裝。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含以下三個固定資料庫層級角色：db_ssisadmin、db_ssisltduser 和 db_ssisoperator，可用於控制封裝的存取權。 讀取器和寫入器角色可以與每個封裝相關聯。 您也可以定義要在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中使用的自訂資料庫層級角色。 這些角色只能在儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中 msdb 資料庫的封裝上實作。 如需詳細資訊，請參閱 [Integration Services 角色 &#40;SSIS 服務&#41;](integration-services-roles-ssis-service.md)。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 套用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料庫層級角色還可以保護儲存在 msdb 資料庫的封裝。 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含以下三個固定資料庫層級角色：db_ssisadmin、db_ssisltduser 和 db_ssisoperator，可用於控制封裝的存取權。 讀取器和寫入器角色可以與每個封裝相關聯。 您也可以定義要在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中使用的自訂資料庫層級角色。 這些角色只能在儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中 msdb 資料庫的封裝上實作。 如需詳細資訊，請參閱 [Integration Services 角色 &#40;SSIS 服務&#41;](integration-services-roles-ssis-service.md)。  
   
 #### <a name="saving-packages-to-the-file-system"></a>將封裝儲存至檔案系統  
  如果您將封裝儲存到檔案系統，而非 msdb 資料庫中，請務必保護封裝檔案和包含封裝檔案的資料夾。  
@@ -75,7 +77,7 @@ ms.locfileid: "62927063"
 ### <a name="controlling-access-to-files-used-by-packages"></a>控制封裝所使用之檔案的存取  
  已設定為使用組態、檢查點和記錄的封裝會產生儲存在封裝之外的資訊。 此資訊可能是機密資訊，應該對其進行保護。 檢查點檔案只能儲存至檔案系統，但組態和記錄檔可以儲存至檔案系統或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料表。 儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的組態和記錄檔受到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性保護，但寫入檔案系統的資訊需要額外的安全性。  
   
- 如需詳細資訊，請參閱 [Access to Files Used by Packages](../access-to-files-used-by-packages.md)(存取封裝所使用的檔案)。  
+ 如需詳細資訊，請參閱 [對封裝使用之檔案的存取權](../access-to-files-used-by-packages.md)。  
   
 #### <a name="storing-package-configurations-securely"></a>安全地儲存封裝組態  
  封裝組態可以儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料表或儲存至檔案系統。  
@@ -87,7 +89,8 @@ ms.locfileid: "62927063"
  如需有關組態的詳細資訊，請參閱＜ [Package Configurations](../package-configurations.md)＞。  
   
 ### <a name="controlling-access-to-the-integration-services-service"></a>控制 Integration Services 服務的存取  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務列出已儲存的封裝。 為防止未經授權的使用者檢視本機與遠端電腦上儲存之封裝的資訊，並藉以得知私人資訊，請限制對執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務之電腦的存取。  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務列出已儲存的封裝。 為防止未經授權的使用者檢視本機與遠端電腦上儲存之封裝的資訊，並藉以得知私人資訊，請限制對執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務之電腦的存取。  
   
  如需詳細資訊，請參閱 [授予 Integration Services 服務的權限](../access-to-the-integration-services-service.md)。  
   
@@ -102,7 +105,7 @@ ms.locfileid: "62927063"
   
 -   [使用數位憑證來簽署封裝](../sign-a-package-by-using-a-digital-certificate.md)  
   
--   [設定或變更套件的保護等級](../set-or-change-the-protection-level-of-packages.md)  
+-   [設定或變更封裝的保護等級](../set-or-change-the-protection-level-of-packages.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

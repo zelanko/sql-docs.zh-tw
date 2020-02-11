@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7053c5cd9780e578697c1bc08e6bb1b0c32ca1f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828877"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>在 SQL Server 資料工具中建立封裝
@@ -37,7 +37,7 @@ ms.locfileid: "62828877"
   
      如果現有的封裝包含您想重複使用的功能，您可以從其他封裝複製及貼上物件，以加快建立控制流程和新封裝內之資料流程的速度。 如需在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中使用複製及貼上功能的詳細資訊，請參閱 [重複使用封裝物件](reuse-of-package-objects.md)。  
   
-     如果您透過複製現有封裝或使用自訂封裝做為範本的方式來建立新封裝，將一併複製現有封裝的名稱和 GUID。 您應該更新這個新封裝的名稱和 GUID，以協助區分新封裝與其複製來源封裝。 例如，如果封裝具有相同的 GUID，在識別記錄資料所屬的封裝時就會發生困難。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [屬性] 視窗，重新產生 `ID` 屬性中的 GUID 並且更新 `Name` 屬性的值。 如需詳細資訊，請參閱 [設定封裝屬性](set-package-properties.md) 和 [dtutil 公用程式](dtutil-utility.md)。  
+     如果您透過複製現有封裝或使用自訂封裝做為範本的方式來建立新封裝，將一併複製現有封裝的名稱和 GUID。 您應該更新這個新封裝的名稱和 GUID，以協助區分新封裝與其複製來源封裝。 例如，如果封裝具有相同的 GUID，在識別記錄資料所屬的封裝時就會發生困難。 您可以使用 `ID` 中的 [屬性] 視窗，重新產生 `Name` 屬性中的 GUID 並且更新 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 屬性的值。 如需詳細資訊，請參閱 [設定封裝屬性](set-package-properties.md) 和 [dtutil 公用程式](dtutil-utility.md)。  
   
 -   使用您指定為範本的自訂封裝。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62828877"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟您要在其中建立封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在方案總管中，以滑鼠右鍵按一下 [SSIS 封裝] 資料夾，然後按一下 [新增 SSIS 封裝]。  
+2.  在方案總管中，以滑鼠右鍵按一下 [SSIS 封裝]**** 資料夾，然後按一下 [新增 SSIS 封裝]****。  
   
 3.  (選擇性) 將控制流程、資料流程工作和事件處理常式加入封裝。 如需詳細資訊，請參閱[控制流程](control-flow/control-flow.md)、[資料流程](data-flow/data-flow.md)和 [Integration Services &#40;SSIS&#41; 事件處理常式](integration-services-ssis-event-handlers.md)。  
   

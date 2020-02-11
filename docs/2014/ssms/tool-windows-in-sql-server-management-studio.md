@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 398a808ab90ab3ea8b97304d4e22865b40cc0ac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661850"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 中的工具視窗
@@ -31,7 +31,7 @@ ms.locfileid: "62661850"
 |[範本總管](template/template-explorer.md)|根據現有的範本來建立查詢。 您也可以建立您的自訂查詢，或變更現有的範本來配合您的狀況。 此工具可從 [檢視]  功能表加以存取。|  
 |[動態說明](sql-server-management-studio-ssms.md)|在您按一下元件或類型程式碼時，顯示一份相關說明主題的清單。|  
   
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的各項工具能夠協同運作。 例如，您可以執行下列動作：  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的各項工具能夠協同運作。 例如，您可以：  
   
 -   利用物件總管來註冊伺服器。  
   

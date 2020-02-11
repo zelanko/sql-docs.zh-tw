@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63016070"
 ---
 # <a name="execute-a-stored-procedure"></a>執行預存程序
@@ -39,7 +39,7 @@ ms.locfileid: "63016070"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要執行預存程序，使用：**  
   
@@ -119,7 +119,7 @@ ms.locfileid: "63016070"
   
     2.  停止某個程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時執行。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  如需詳細資訊，請參閱 [EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-transact-sql) 和 [EXECUTE AS 子句 &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql)。  
   
 ####  <a name="Permissions"></a> 權限  
@@ -149,7 +149,7 @@ ms.locfileid: "63016070"
      **傳遞 Null 值**  
      傳遞 NULL 作為參數的值。  
   
-     **值**  
+     **ReplTest1**  
      呼叫程序時輸入參數的值。  
   
 5.  若要執行預存程序，請按一下 **[確定]** 。  

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 138e5743e18ba6e39aa55aaec6931413dd21175b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781742"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>將 TCP/IP 連接埠對應到 NUMA 節點 (SQL Server)
@@ -48,13 +48,13 @@ ms.locfileid: "62781742"
   
 #### <a name="to-map-a-tcpip-port-to-a-numa-node"></a>若要將 TCP/IP 通訊埠對應到 NUMA 節點  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server 網路組態]  ，然後按一下 [\<執行個體名稱> 的通訊協定]   。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server 網路組態]****，然後按一下 [**執行個體名稱> 的通訊協定]** *\<*。  
   
-2.  在詳細資料窗格中，按兩下 [TCP/IP]  。  
+2.  在詳細資料窗格中，按兩下 [TCP/IP]****。  
   
 3.  在 **[IP 位址]** 索引標籤上，在對應到要設定之 IP 位址的區段中，在 **[TCP 通訊埠]** 方塊中，在通訊埠編號後面以方括號加入 NUMA 節點識別碼中。 例如，對於 TCP 通訊埠 1500 和節點 0、2 和 5，請使用 `1500[37]` 或 `1500[0x25]`。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定 SQL Server 使用軟體式 NUMA &#40;SQL Server&#41;](soft-numa-sql-server.md)  
+ [將 SQL Server 設定為使用軟體 NUMA &#40;SQL Server&#41;](soft-numa-sql-server.md)  
   
   

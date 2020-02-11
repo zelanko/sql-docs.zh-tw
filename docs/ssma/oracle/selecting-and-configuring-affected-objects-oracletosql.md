@@ -1,5 +1,5 @@
 ---
-title: 選取並設定受影響的物件 (OracleToSQL) |Microsoft Docs
+title: 選取並設定受影響的物件（OracleToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,30 +14,30 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266498"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>選取及設定受影響的物件 (OracleToSQL)
-在此頁面中，您可以選取資料表和 SSMA 確認在上一個步驟中選擇之物件的執行結果時，所要比較的外部索引鍵，在其中變更。 此外，您可以自訂的驗證參數。  
+在此頁面中，您可以選取資料表和外鍵，當 SSMA 驗證在上一個步驟中所選物件的執行結果時，應該比較的變更。 此外，您也可以自訂驗證參數。  
   
-## <a name="selection-of-affected-objects"></a>選取受影響的物件  
-在 Oracle 物件樹狀結構，位於視窗的左側，核取的資料表和外部索引鍵，在其中變更應該要比對完全相同。  
+## <a name="selection-of-affected-objects"></a>受影響物件的選取專案  
+在視窗左側的 [Oracle 物件樹狀結構] 中，檢查資料表和外鍵的變更，以進行相同的比較。  
   
-如果 SSMA 軟體測試人員無法驗證任何這些物件，您會看到標示為連結**有些選取的物件包含錯誤**物件樹狀結構下方。 按一下此連結來檢視為什麼無法比較這些物件的原因，並清除選取錯誤的物件。  
+如果 SSMA 測試人員無法驗證任何這些物件，您會在 [物件] 樹狀目錄底下看到標示為 [**某些選取的物件**] 的連結包含錯誤。 按一下此連結可查看無法比較這些物件的原因，以及清除錯誤物件的選取專案。  
   
-## <a name="table"></a>資料表  
-[資料表] 索引標籤包含方格檢視選取的資料表。 方格包含選取之資料表的下列資訊：  
+## <a name="table"></a>Table  
+[資料表] 索引標籤包含所選資料表的方格視圖。 方格包含下列有關所選資料表的資訊：  
   
 -   資料行名稱  
   
 -   資料類型  
   
--   有效位數  
+-   Precision  
   
--   小數位數  
+-   調整  
   
 -   規則  
   
@@ -45,72 +45,72 @@ ms.locfileid: "68266498"
   
 -   身分識別  
   
--   可為 Null  
+-   Nullable  
   
 ## <a name="sql"></a>Sql  
-SQL 索引標籤包含 「 建立資料表 」 中所選取資料表的 SQL。  
+[SQL] 索引標籤包含所選資料表的「建立資料表」 SQL。  
   
-## <a name="data"></a>Data  
-資料索引標籤會顯示選取之資料表中的資料。  
+## <a name="data"></a>資料  
+[資料] 索引標籤會顯示所選資料表中的資料。  
   
 ## <a name="properties"></a>屬性  
-屬性索引標籤會顯示所選資料表的屬性。 下列欄位會出現在 [屬性] 索引標籤：  
+屬性] 索引標籤會顯示選取之資料表的屬性。 下欄欄位會出現在 [屬性] 索引標籤底下：  
   
--   建立或上次修改  
+-   建立或上次修改時間  
   
--   Object Name  
+-   物件名稱  
   
 ## <a name="columns-comparison-settings"></a>資料行比較設定  
-在 建立資料表的資料行的比較規則**資料行比較**頁面。 您可以進行下列設定。  
+在 [資料**行比較**] 頁面上建立資料表資料行的比較規則。 您可以進行下列設定。  
   
-### <a name="use-during-test-comparisons"></a>測試比較期間使用  
-決定這個資料行的測試結果驗證將會參與。  
+### <a name="use-during-test-comparisons"></a>在測試比較期間使用  
+判斷此資料行是否會參與測試結果驗證。  
   
--   如果您選擇 **，則為 True**，SSMA 會比較此資料行的內容之後在 Oracle 上執行測試，SQL Server 中的資料行的內容。 
+-   如果您選擇 [ **True**]，SSMA 會在 Oracle 上執行測試之後，使用 SQL Server 中的資料行內容來比較此資料行的內容。 
   
--   如果您選擇**False**，驗證結果將會排除資料行。  
+-   如果您選擇 [**False**]，則會從結果驗證中排除資料行。  
   
-### <a name="use-custom-scale"></a>使用自訂的小數位數  
-數值資料類型的資料行，您可以設定自訂的縮放比例進行比較。  
+### <a name="use-custom-scale"></a>使用自訂規模  
+對於數值資料類型的資料行，您可以設定比較的自訂小數位數。  
   
--   如果您選擇 **，則為 True**，會捨入數字值，根據**比較擴展**值之前它們進行比較。  
+-   如果您選擇 [ **True**]，則會在比較之前，根據**比較小**數位數值來進位數值。  
   
--   如果您選擇**False**，數字的比較會精確。  
+-   如果您選擇 [**False**]，數值比較將會是精確的。  
   
-### <a name="comparing-scale"></a>比較小數位數  
+### <a name="comparing-scale"></a>比較尺規  
   
--   適用於只有當**使用自訂縮放**選項設定為 **，則為 True**。 這是數值比較的有效位數。  
+-   只有在 [**使用自訂調整**] 選項設定為 [ **True**] 時才可使用。 這是數值比較的有效位數。  
   
 ### <a name="date-time-comparing"></a>日期時間比較  
-定義如何日期/時間值進行比較。  
+定義日期/時間值的比較方式。  
   
--   如果您選取**比較整個日期**，將會執行完整的兩個平台的值比較。  
+-   如果您選取 [**比較整個日期**]，將會執行兩個平臺之值的完整比較。  
   
--   如果您選取**只比較日期**、 組件將被略過的時間。  
+-   如果您選取 [**僅比較日期**]，則會忽略時間部分。  
   
--   如果您選取**只比較時間**、 組件將會忽略日期。  
+-   如果您選取 [**僅比較時間**]，則會忽略日期部分。  
   
--   如果您選取**忽略毫秒**，結果會比較最多秒數。  
+-   如果您選取 [**略過毫秒**]，則會比較最多秒的結果。  
   
--   如果您選取**忽略的日期和毫秒**，結果會是比較，只有時間部分並略過的秒的小數部分。  
+-   如果您選取 [**略過日期和毫秒**]，則只會根據時間部分比較結果，並忽略秒的小數部分。  
   
 ### <a name="ignore-strings-case"></a>忽略字串大小寫  
-控制比較區分大小寫。  
+控制比較的區分大小寫。  
   
--   如果您選擇 **，則為 True**，比較會區分大小寫。  
+-   如果您選擇 [ **True**]，則比較不會區分大小寫。  
   
--   如果您選擇**False**，比較會負責處理字母大小寫。  
+-   如果您選擇 [ **False**]，則比較將會考慮字母大小寫。  
   
 ## <a name="comparing-sql"></a>比較 SQL  
-您可以檢視 SELECT 陳述式上產生的 SSMA Tester**比較 SQL**頁面。 測試人員將會比較這些陳述式逐列為基礎的結果集。 Oracle 結果集的每個下一個資料列應該等於在 SQL Server 中產生的結果集的下一個資料列。
+您可以在 [**比較 SQL** ] 頁面上，查看 SSMA 測試人員所產生的 SELECT 語句。 測試人員會以逐列方式比較這些語句的結果集。 Oracle 結果集的每個下一個資料列都應該等於 SQL Server 中產生之結果集的下一個資料列。
   
-您可以編輯這些 SELECT 陳述式，以提供自訂的驗證。 若要在 Oracle 和 SQL Server 陳述式中，請儲存變更，請使用**套用**對應來源與目標 SQL，下方按鈕。  
+您可以編輯這些 SELECT 語句來提供自訂驗證。 若要儲存 Oracle 和 SQL Server 語句中的變更，請使用來源和目標 SQL 底下**的 [套用**] 按鈕。  
   
-## <a name="next-step"></a>下一個步驟  
-[自訂呼叫順序&#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
+## <a name="next-step"></a>後續步驟  
+[自訂呼叫順序 &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[完成測試案例準備&#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
-[執行測試案例&#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[測試移轉的資料庫物件&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[完成測試案例準備 &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[&#40;OracleToSQL&#41;執行測試案例](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[&#40;OracleToSQL&#41;測試遷移的資料庫物件](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

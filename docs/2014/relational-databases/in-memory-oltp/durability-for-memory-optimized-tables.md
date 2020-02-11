@@ -11,13 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63072745"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>記憶體最佳化資料表的持久性
+  
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 為記憶體最佳化的資料表提供完整的持久性。 當變更記憶體最佳化資料表的交易認可時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (對磁碟基礎的資料表也一樣) 會保證這些變更是永久的 (即使資料庫重新啟動後也會存在)，前提是要提供基礎儲存。 持久性有兩個重要元件：交易記錄及磁碟儲存的保存資料變更。  
   
 ## <a name="transaction-log"></a>交易記錄  
@@ -87,8 +88,9 @@ ms.locfileid: "63072745"
   
  背景執行緒會使用合併原則評估所有已關閉的 CFP，然後起始一項或多項對合格 CFP 的合併要求。 這些合併要求將由離線檢查點執行緒來處理。 系統會定期評估合併原則，以及在檢查點關閉時進行評估。  
   
-### <a name="includesssql14includessssql14-mdmd-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 合併原則  
- [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 實作以下合併原則：  
+### <a name="includesssql14includessssql14-mdmd-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]合併原則  
+ 
+  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 實作以下合併原則：  
   
 -   在考量到已刪除的資料列之後，如果可以合併兩個或多個連續的 CFP，使其產生的資料列數能夠納入 1 個理想大小的 CFP，就會排程進行合併。 CFP 的理想大小會以下列方式決定：  
   
@@ -108,12 +110,12 @@ ms.locfileid: "63072745"
   
  並非所有餘留可用空間的 CFP 都有資格進行合併。 例如，若兩個相鄰的 CFP 都是 60% 已滿，就沒有資格進行合併，而且這些 CFP 各自仍將有 40% 未使用的儲存空間。 最糟的情況是所有 CFP 皆為 50% 已滿，儲存空間利用率只達 50%。 已刪除的資料列可能由於 CFP 沒有資格進行合併而仍存在於儲存體中，但是記憶體內部記憶體回收可能已從記憶體移除已刪除的資料列。 儲存體和記憶體的管理與記憶體回收無關。 使用中 CFP 所佔的儲存空間 (未必所有 CFP 一概更新) 最多可達記憶體中持久性資料表大小的 2 倍。  
   
- 如有需要可以藉由呼叫明確執行手動合併[sys.sp_xtp_merge_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)。  
+ 如有需要，可以藉由呼叫[sys.databases sp_xtp_merge_checkpoint_files &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)明確地執行手動合併。  
   
 ### <a name="life-cycle-of-a-cfp"></a>CFP 的生命週期  
- CPF 解除配置之前會歷經幾個過渡狀態。 在任何給定的時間，Cfp 將處於下列階段之一：預先建立、 建構、 ACTIVE、 MERGE TARGET、 合併來源、 所需的備份/高可用性、 IN TRANSITION TO TOMBSTONE 和標記。 如需這些階段的說明，請參閱 [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)。  
+ CPF 解除配置之前會歷經幾個過渡狀態。 在任何給定的時間，CFP 都會處於以下其中一個階段：已預先建立、建構中、使用中、合併目標、已合併來源、備份/高可用性所需、正在轉換為標記和標記。 如需這些階段的說明，請參閱 [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)。  
   
- 在考量到 CFP 在各個不同階段所佔的儲存空間之後，持久的記憶體最佳化資料表所佔的整體儲存空間可能遠大於該資料表在記憶體中大小的 2 倍。 DMV [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)可查詢來列出所有 Cfp 記憶體最佳化檔案群組中，包括其階段。 將 CFP 從「合併來源」狀態轉換為「標記」狀態且最後為記憶體回收的程序，最多可能會使用五個檢查點，每個檢查點後面都接著交易記錄備份 (如果資料庫有設定完整或大量記錄復原模式)。  
+ 在考量到 CFP 在各個不同階段所佔的儲存空間之後，持久的記憶體最佳化資料表所佔的整體儲存空間可能遠大於該資料表在記憶體中大小的 2 倍。 您可以查詢 DMV [sys. dm_db_xtp_checkpoint_files &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)來列出記憶體優化檔案群組中的所有 cfp，包括其階段。 將 CFP 從「合併來源」狀態轉換為「標記」狀態且最後為記憶體回收的程序，最多可能會使用五個檢查點，每個檢查點後面都接著交易記錄備份 (如果資料庫有設定完整或大量記錄復原模式)。  
   
  您可以手動強制檢查點過後即執行記錄備份以加速記憶體回收，但是這樣將會增加 5 個空的 CFP (5 組資料/差異檔案組，每個資料檔案的大小為 128MB)。 在實際狀況下，做為部分備份策略的自動檢查點和記錄備份，將能在這些階段中順利轉換 CFP，而不需要任何手動介入。 記憶體回收處理序造成的影響是，具有記憶體最佳化資料表的資料庫其儲存體大小可能高於在記憶體中的大小。 CFP 是記憶體中持久性記憶體最佳化資料表大小高達四倍的情形是可能發生的狀況。  
   

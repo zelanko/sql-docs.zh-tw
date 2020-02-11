@@ -1,5 +1,5 @@
 ---
-title: 資料採礦查詢工作編輯器 ([採礦模型] 索引標籤) |Microsoft Docs
+title: 資料採礦查詢工作編輯器（[採礦模型] 索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890778"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>資料採礦查詢工作編輯器 (採礦模型索引標籤)
   使用 **[資料採礦查詢工作]** 對話方塊的 **[採礦模型]** 索引標籤，即可指定要使用的採礦結構和採礦模型。  
   
- 若要深入了解在封裝中實作資料採礦，請參閱 [Data Mining Query Task](control-flow/data-mining-query-task.md) (資料採礦查詢工作) 和 [Data Mining Solutions](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)(資料採礦方案)。  
+ 若要深入了解在封裝中實作資料採礦，請參閱 [資料採礦查詢工作](control-flow/data-mining-query-task.md) 和 [資料採礦方案](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)。  
   
 ## <a name="general-options"></a>一般選項  
  **名稱**  
@@ -33,14 +33,14 @@ ms.locfileid: "68890778"
 > [!NOTE]  
 >  工作名稱在封裝內必須是唯一的。  
   
- **描述**  
+ **說明**  
  輸入資料採礦查詢工作的描述。  
   
 ## <a name="mining-model-tab-options"></a>採礦模型索引標籤選項  
  **[連接]**  
- 在清單中選取 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 連線管理員，或按一下 [新增] 以建立新的連線管理員。  
+ 在清單中選取 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 連線管理員，或按一下 [新增]**** 以建立新的連線管理員。  
   
- **相關主題：** [Analysis Services 連線管理員](connection-manager/analysis-services-connection-manager.md)  
+ **相關主題：**  [Analysis Services 連線管理員](connection-manager/analysis-services-connection-manager.md)  
   
  **新增**  
  建立新的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 連線管理員。  
@@ -55,8 +55,8 @@ ms.locfileid: "68890778"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [資料採礦查詢工作編輯器 &#40;查詢索引標籤&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [資料採礦查詢工作編輯器 &#40;輸出索引標籤&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [[資料採礦查詢工作編輯器] &#40;查詢] 索引標籤&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [資料採礦查詢工作編輯器 &#40;輸出] 索引標籤&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
  [資料採礦設計師](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

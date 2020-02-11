@@ -1,5 +1,5 @@
 ---
-title: 使用 AlwaysOn 儀表板 (SQL Server Management Studio) |Microsoft Docs
+title: 使用 AlwaysOn 儀表板（SQL Server Management Studio） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788725"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Use the AlwaysOn Dashboard (SQL Server Management Studio)
@@ -56,27 +56,27 @@ ms.locfileid: "62788725"
 ###  <a name="Prerequisites"></a> 必要條件  
  您必須連接到裝載可用性群組之主要複本或次要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (伺服器執行個體)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 CONNECT、VIEW SERVER STATE 和 VIEW ANY DEFINITION 權限。  
   
-##  <a name="SSMSProcedure"></a> 若要啟動 AlwaysOn 儀表板  
+##  <a name="SSMSProcedure"></a>啟動 AlwaysOn 儀表板  
   
 1.  在 [物件總管] 中，連接到您想要執行 AlwaysOn 儀表板的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
   
-2.  展開 **[AlwaysOn 高可用性]** 節點、以滑鼠右鍵按一下 **[可用性群組]** 節點，然後按一下 **[顯示儀表板]** 。  
+2.  展開 **[AlwaysOn 高可用性]** 節點、以滑鼠右鍵按一下 **[可用性群組]** 節點，然後按一下 **[顯示儀表板]**。  
   
-###  <a name="DashboardOptions"></a> 若要變更 AlwaysOn 儀表板選項  
- 您可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的 [選項]  對話方塊來設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 儀表板行為，以便進行自動重新整理並且啟用自動定義的 AlwaysOn 原則。  
+###  <a name="DashboardOptions"></a>變更 AlwaysOn 儀表板選項  
+ 您可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的 [選項]**** 對話方塊來設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 儀表板行為，以便進行自動重新整理並且啟用自動定義的 AlwaysOn 原則。  
   
 1.  在 **[工具]** 功能表中，按一下 **[選項]** 。  
   
 2.  若要自動重新整理儀表板，請在 **[選項]** 對話方塊中，選取 **[開啟自動重新整理]** 、輸入重新整理間隔 (以秒為單位)，然後輸入您想要重試連接的次數。  
   
-3.  若要啟用使用者定義的原則，請選取 **[啟用使用者定義 AlwaysOn 原則]** 。  
+3.  若要啟用使用者定義的原則，請選取 **[啟用使用者定義 AlwaysOn 原則]**。  
   
-##  <a name="AvGroupsView"></a> 可用性群組摘要  
+##  <a name="AvGroupsView"></a>可用性群組摘要  
  可用性群組畫面會針對連接之伺服器執行個體裝載複本的每個可用性群組顯示摘要行。 這個窗格會顯示下列資料行。  
   
  **可用性群組名稱**  
@@ -93,7 +93,7 @@ ms.locfileid: "62788725"
 -   **手動**： 表示沒有任何複本處於自動容錯移轉模式。  
   
  **問題**  
- 按一下 [問題]  連結可開啟給定問題的疑難排解文件集。 如需所有 AlwaysOn 原則問題的清單，請參閱 < [AlwaysOn 可用性群組 (SQL Server) 操作問題適用的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md)。  
+ 按一下 [問題]  連結可開啟給定問題的疑難排解文件集。 如需所有 AlwaysOn 原則問題的清單，請參閱[AlwaysOn 可用性群組（SQL Server）操作問題的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md)。  
   
 > [!TIP]  
 >  按一下資料行標題可依照可用性群組、主要執行個體、容錯移轉模式或問題的名稱排序可用性群組資訊。  
@@ -134,7 +134,7 @@ ms.locfileid: "62788725"
 -   **手動**： 表示沒有任何複本處於自動容錯移轉模式。  
   
  **同步處理狀態**  
- 指出次要複本目前是否與主要複本進行同步處理。 預設顯示此資料行。 可能值為：  
+ 指出次要複本目前是否與主要複本進行同步處理。 預設顯示此資料行。 可能的值包括：  
   
 -   **未同步處理**： 複本中的一個或多個資料庫尚未同步處理，或者尚未聯結至可用性群組。  
   
@@ -148,10 +148,10 @@ ms.locfileid: "62788725"
 -   **NULL**： 未知的狀態。 當本機伺服器執行個體無法與 WSFC 容錯移轉叢集通訊 (亦即，本機節點不屬於 WSFC 仲裁的一部分) 時，就會出現這個值。  
   
  **問題**  
- 列出問題名稱。 預設顯示此值。 如需所有 AlwaysOn 原則問題的清單，請參閱 < [AlwaysOn 可用性群組 (SQL Server) 操作問題適用的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md)。  
+ 列出問題名稱。 預設顯示此值。 如需所有 AlwaysOn 原則問題的清單，請參閱[AlwaysOn 可用性群組（SQL Server）操作問題的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md)。  
   
  **可用性模式**  
- 指出您個別針對每個可用性複本所設定的複本屬性。 預設隱藏此值。 可能值為：  
+ 指出您個別針對每個可用性複本所設定的複本屬性。 預設隱藏此值。 可能的值包括：  
   
 -   **非同步**： 次要複本永遠不會變成與主要複本進行同步處理。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "62788725"
  指出用來連接到次要複本的模式。  預設隱藏此值。  
   
  **連接狀態**  
- 指出次要複本目前是否已連接到主要複本。 預設隱藏此資料行。 可能值為：  
+ 指出次要複本目前是否已連接到主要複本。 預設隱藏此資料行。 可能的值包括：  
   
 -   **已中斷連接**： 若為遠端可用性複本，表示它與本機可用性複本已中斷連接。 本機複本對 [已中斷連接] 狀態的回應取決於其角色，如下所示：  
   
@@ -175,7 +175,7 @@ ms.locfileid: "62788725"
 -   **Connected**。 目前連接到本機複本的遠端可用性複本。  
   
  **操作狀態**  
- 指出次要複本的目前操作狀態。 預設隱藏此值。 可能值為：  
+ 指出次要複本的目前操作狀態。 預設隱藏此值。 可能的值包括：  
   
  **0**.暫止容錯移轉  
   
@@ -203,7 +203,7 @@ ms.locfileid: "62788725"
 > [!NOTE]  
 >  如需可用性複本效能計數器的相關資訊，請參閱 [SQLServer，可用性複本](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)。  
   
-##  <a name="AvDbDetails"></a> 若要將可用性群組資訊分組  
+##  <a name="AvDbDetails"></a>若要將可用性群組資訊分組  
  若要將資訊分組，請按一下 **[群組依據]** ，然後選取下列其中一項：  
   
 -   **可用性複本**  
@@ -227,7 +227,7 @@ ms.locfileid: "62788725"
  **同步處理狀態**  
  指出可用性資料庫目前是否與主要複本進行同步處理。 預設顯示此值。 可能的同步處理狀態包括：  
   
--   **未進行同步處理**：  
+-   **未同步**處理。  
   
     -   如果是主要角色，表示資料庫尚未準備好要將其交易記錄與對應的次要資料庫同步處理。  
   
@@ -263,21 +263,21 @@ ms.locfileid: "62788725"
     > [!CAUTION]  
     >  當資料庫處於 INITIALIZING 狀態時，強制容錯移轉至次要複本一定會將資料庫保留在無法啟動的狀態。  
   
- **Failover Readiness**  
- 指出哪個可用性複本可能會在遺失資料或不遺失資料的情況下容錯移轉。 預設顯示此資料行。 可能值為：  
+ **[容錯移轉整備]**  
+ 指出哪個可用性複本可能會在遺失資料或不遺失資料的情況下容錯移轉。 預設顯示此資料行。 可能的值包括：  
   
 -   **資料遺失**  
   
 -   **不遺失資料**  
   
  **問題**  
- 列出問題名稱。 預設顯示此資料行。 可能值為：  
+ 列出問題名稱。 預設顯示此資料行。 可能的值包括：  
   
 -   **警告**： 按一下可顯示臨界值和警告問題。  
   
 -   **關鍵**： 按一下可顯示關鍵問題。  
   
- 如需所有 AlwaysOn 原則問題的清單，請參閱 < [AlwaysOn 可用性群組 (SQL Server) 操作問題適用的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md)。  
+ 如需所有 AlwaysOn 原則問題的清單，請參閱[AlwaysOn 可用性群組（SQL Server）操作問題的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md)。  
   
  **已暫停**  
  指出資料庫 **[已暫停]** 或 **[已繼續]** 。 預設隱藏此值。  
@@ -350,7 +350,7 @@ ms.locfileid: "62788725"
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
--   [使用 AlwaysOn 原則檢視可用性群組的健全狀況&#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [使用 AlwaysOn 原則來查看可用性群組的健全狀況 &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   

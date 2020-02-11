@@ -1,5 +1,5 @@
 ---
-title: 升級及更新可用性群組伺服器，最少停機時間和資料遺失 |Microsoft Docs
+title: 以最短的停機時間和資料遺失，升級及更新可用性群組伺服器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812928"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>在停機時間和資料遺失最少的情況下升級及更新可用性群組伺服器
   當您將伺服器執行個體從 SQL Server 2012 更新或升級至某個 Service Pack 或較新的版本時，您可以透過執行輪流更新或升級，將可用性群組的停機時間減少至只有單一手動容錯移轉的時間。 如果要升級 SQL Server 版本，這稱為輪流升級；如果要以 Hotfix 或 Service Pack 更新目前的 SQL Server 版本，則稱為輪流更新。  
   
- 這個主題僅限討論 SQL Server 升級/更新。 如作業系統相關升級/更新高可用性的 SQL Server 執行個體上執行，請參閱[跨叢集移轉的 AlwaysOn 可用性群組作業系統升級](https://msdn.microsoft.com/library/jj873730.aspx)  
+ 這個主題僅限討論 SQL Server 升級/更新。 如需高可用性 SQL Server 實例執行所在的作業系統相關升級/更新，請參閱[針對作業系統升級 AlwaysOn 可用性群組的跨叢集遷移](https://msdn.microsoft.com/library/jj873730.aspx)  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>AlwaysOn 可用性群組的輪流升級/更新最佳作法  
  當您執行伺服器升級/更新時，應該要觀察以下最佳作法，好讓停機時間及可用性群組的資料遺失情況降至最低：  
@@ -115,9 +115,9 @@ ms.locfileid: "62812928"
   
 |可用性群組|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1|主要|||  
-|AG2||主要||  
-|AG3|||主要|  
+|AG1|Primary|||  
+|AG2||Primary||  
+|AG3|||Primary|  
   
  在您的案例中，可能適合依照以下順序執行負載平衡的輪流升級/更新：  
   
@@ -139,9 +139,9 @@ ms.locfileid: "62812928"
   
 |可用性群組|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1||主要||  
-|AG2|主要|||  
-|AG3|||主要|  
+|AG1||Primary||  
+|AG2|Primary|||  
+|AG3|||Primary|  
   
  根據您的特定實作方式，您的升級/更新路徑可能會有不同，用戶端應用程式遇到的停機時間也可能會有差異。  
   

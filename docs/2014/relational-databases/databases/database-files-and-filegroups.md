@@ -33,21 +33,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d75dee637a5579ca3f189e14333fbf9356623d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917275"
 ---
 # <a name="database-files-and-filegroups"></a>資料庫檔案與檔案群組
   基本上，每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫都有兩個作業系統檔案：資料檔與記錄檔。 資料檔包含諸如資料表、索引、預存程序以及檢視等資料和物件。 記錄檔包含復原資料庫中所有交易必要的資訊。 資料檔可以組成檔案群組，以方便配置及管理。  
   
 ## <a name="database-files"></a>資料庫檔案  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有三種檔案類型，如下表所示。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有三種檔案類型，如下表所示。  
   
 |檔案|描述|  
 |----------|-----------------|  
-|主要|主要資料檔包含資料庫啟動資訊，並指到資料庫中的其他檔案。 使用者資料和物件可儲存於此檔案或次要的資料檔中。 每個資料庫都有一個主要資料檔案。 建議您將主要資料檔的副檔名設為 .mdf。|  
+|Primary|主要資料檔包含資料庫啟動資訊，並指到資料庫中的其他檔案。 使用者資料和物件可儲存於此檔案或次要的資料檔中。 每個資料庫都有一個主要資料檔案。 建議您將主要資料檔的副檔名設為 .mdf。|  
 |次要|次要資料檔是選擇性且使用者自訂的，並可儲存使用者資料。 次要檔可用以將資料分散在多個磁碟上，即透過將每個檔案放在不同的磁碟機上來達成此目的。 此外，若資料庫超過了單一 Windows 檔案的大小上限，您可使用次要資料檔，以容許資料庫繼續成長。<br /><br /> 建議您將次要資料檔的副檔名設為 .ndf。|  
 |交易記錄|交易記錄檔包含了用來復原資料庫的記錄資訊。 每個資料庫至少要有一個記錄檔。 建議的交易記錄檔的副檔名為 .ldf。|  
   
@@ -64,8 +65,8 @@ ms.locfileid: "62917275"
   
 |檔案群組|描述|  
 |---------------|-----------------|  
-|主要|包含主要檔案的檔案群組。 所有的系統資料表都配置於主要檔案群組內。|  
-|使用者自訂|使用者在初次建立資料庫或之後修改資料庫時，特別建立的檔案群組。|  
+|Primary|包含主要檔案的檔案群組。 所有的系統資料表都配置於主要檔案群組內。|  
+|使用者定義|使用者在初次建立資料庫或之後修改資料庫時，特別建立的檔案群組。|  
   
 ### <a name="default-filegroup"></a>預設的檔案群組  
  若在資料庫中建立物件時未指明屬於哪個檔案群組，就會將物件指定至預設的檔案群組。 在任何時候，都只有一個檔案群組指定為預設檔案群組。 在預設檔案群組中的檔案必須夠大，才能容納未配置到其他檔案群組的新物件。  
@@ -77,6 +78,6 @@ ms.locfileid: "62917275"
   
  [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)  
   
- [資料庫卸離和附加 &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)  
+ [資料庫卸離與附加 &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)  
   
   

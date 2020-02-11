@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5c992253304d2a1c493f52a9e24cf569ff29883
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770182"
 ---
 # <a name="xml-source-custom-properties"></a>XML 來源自訂屬性
@@ -24,8 +24,8 @@ ms.locfileid: "62770182"
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|用來存取 XML 資料的模式。|  
-|UseInlineSchema|布林|一個值，指出是否要使用 XML 來源中的內嵌結構描述定義。 此屬性的預設值為 `False`。|  
+|AccessMode|整數|用來存取 XML 資料的模式。|  
+|UseInlineSchema|Boolean|一個值，指出是否要使用 XML 來源中的內嵌結構描述定義。 此屬性的預設值為 `False`。|  
 |XMLData|String|要從中擷取 XML 資料的檔案或變數。<br /><br /> 此屬性的值可以使用屬性運算式指定。|  
 |XMLSchemaDefinition|String|結構描述定義檔 (.xsd) 的路徑和檔案名稱。<br /><br /> 此屬性的值可以使用屬性運算式指定。|  
   

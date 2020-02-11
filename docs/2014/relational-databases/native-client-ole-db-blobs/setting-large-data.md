@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da56cbf334bca884e71469c63429135d6db84953
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140618"
 ---
 # <a name="setting-large-data"></a>設定大型資料
-  使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，您可以藉由將指標傳遞至取用者儲存物件設定 BLOB 資料。  
+  使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，您可以藉由傳遞取用者儲存物件的指標來設定 BLOB 資料。  
   
  取用者會建立包含資料的儲存物件，並將此儲存物件的指標傳遞給提供者。 接著，提供者會從取用者儲存物件讀取資料，並將其寫入到 BLOB 資料行。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63140618"
   
 2.  在 DBPROPSET_ROWSET 屬性群組中設定屬性，讓資料列集可以更新。  
   
-3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每個資料行一個)。 將 DBBINDING 結構中的 *wType* 項目設定為 DBTYPE_IUNKNOWN，並將 *pObject* 項目設定為指向您所建立的 DBOBJECT 結構。  
+3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每個資料行一個)。 將 DBBINDING 結構中的 *wType* 元素設定為 DBTYPE_IUNKNOWN，並將 *pObject* 元素設定為指向您所建立的 DBOBJECT 結構。  
   
 4.  使用繫結資訊，在結構的 DBBINDINGS 陣列中建立存取子。  
   
@@ -718,7 +718,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [BLOB 與 OLE 物件](blobs-and-ole-objects.md)   
- [使用大型實值型別](../native-client/features/using-large-value-types.md)  
+ [Blob 和 OLE 物件](blobs-and-ole-objects.md)   
+ [使用大數值類型](../native-client/features/using-large-value-types.md)  
   
   

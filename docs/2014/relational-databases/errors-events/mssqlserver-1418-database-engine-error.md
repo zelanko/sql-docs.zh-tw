@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7abc0b4dea4df1637b4ba9456dee6a897184f20a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915764"
 ---
-# <a name="mssqlserver1418"></a>MSSQLSERVER_1418
+# <a name="mssqlserver_1418"></a>MSSQLSERVER_1418
     
 ## <a name="details"></a>詳細資料  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62915764"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBM_PARTNERNOTFOUND|  
-|訊息文字|伺服器網路位址 "%.*ls" 無法連上或不存在。 請檢查網路位址名稱，並檢查本機和遠端端點的通訊埠是否可正常運作。|  
+|訊息文字|伺服器網路位址 "%.*ls" 無法連上或不存在。 請檢查網路位址名稱，並檢查本機和遠端端點的連接埠是否可正常運作。|  
   
 ## <a name="explanation"></a>說明  
  伺服器網路端點未回應，因為指定的伺服器網路位址無法連上或不存在。  
@@ -96,9 +96,9 @@ ms.locfileid: "62915764"
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [資料庫鏡像端點 &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   
+ [SERVERPROPERTY &#40;Transact-sql&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   
  [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
- [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)   
+ [database_mirroring_endpoints &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)   
  [疑難排解資料庫鏡像組態 &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   

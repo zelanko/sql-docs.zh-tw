@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67727737"
 ---
-# <a name="mssqlserver1505"></a>MSSQLSERVER_1505
+# <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|1505|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -37,7 +37,7 @@ ms.locfileid: "67727737"
   
  請考慮下列 **Employee** 資料表中的資料：  
   
-|LastName|FirstName|JobTitle|HireDate|  
+|姓氏|名字|JobTitle|HireDate|  
 |--------------|---------------|--------------|--------------|  
 |Walters|Rob|Senior Tool Designer|2004-11-19|  
 |Brown|Kevin|Marketing Assistant|NULL|  
@@ -50,7 +50,7 @@ ms.locfileid: "67727737"
   
  錯誤訊息 1505 會傳回違反唯一性條件約束的第一個資料列。 資料表可能含有其他重複的資料列。 若要尋找所有重複的資料列，請查詢指定的資料表並使用 GROUP BY 和 HAVING 子句來報告重複的資料列。 例如，下列查詢會傳回 **Employee** 資料表中具有重複名字和姓氏的資料列。  
   
- SELECT LastName, FirstName, count(\*) FROM dbo.Employee GROUP BY LastName, FirstName HAVING count(\*) > 1;  
+ 選取 [LastName]、[FirstName\*]、[count] （）（來自 dbo）。Employee GROUP BY LastName，FirstName count （\*） > 1;  
   
 ## <a name="user-action"></a>使用者動作  
  請考慮下列解決方案。  
@@ -59,7 +59,7 @@ ms.locfileid: "67727737"
   
 -   當您選擇唯一索引或條件約束的資料行時，請選取已定義為 NOT NULL 的資料行。 這樣做可以排除多個資料列的索引鍵值包含 NULL 而導致違反唯一性的可能。  
   
--   若重複值是因資料輸入錯誤所造成，請手動更正資料，然後再建立索引或約束條件。 如需有關移除資料表中重複資料列的資訊，請參閱知識庫文件 139444：[如何在 SQL Server 中移除資料表中的重複資料列](https://support.microsoft.com/kb/139444) \(英文\)。  
+-   若重複值是因資料輸入錯誤所造成，請手動更正資料，然後再建立索引或約束條件。 如需在資料表中移除重複資料列的詳細資訊，請參閱知識庫文件 139444：[How to remove duplicate rows from a table in SQL Server](https://support.microsoft.com/kb/139444)(如何在 SQL Server 中移除資料表中的重複資料列)。  
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   

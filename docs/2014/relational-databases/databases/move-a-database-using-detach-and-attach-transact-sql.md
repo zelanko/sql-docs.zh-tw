@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917081"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>使用卸離與附加移動資料庫 (Transact-SQL)
@@ -46,12 +46,12 @@ ms.locfileid: "62917081"
     > [!NOTE]  
     >  如果您嘗試在不指定記錄檔的情形下附加資料庫，附加作業會在其原始位置中尋找記錄檔。 如果原始位置中仍有記錄的副本存在，則會附加該副本。 若要避免使用原始記錄檔，請指定新記錄檔的路徑，或者移除記錄檔的原始副本 (在將記錄檔複製到新位置後)。  
   
-3.  附加複製的檔案。 如需相關資訊，請參閱 [Attach a Database](attach-a-database.md)。  
+3.  附加複製的檔案。 如需詳細資訊，請參閱[連結資料庫](attach-a-database.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會建立一份[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]連線到伺服器執行個體的連接查詢編輯器視窗中執行陳述式。  
+ 下列範例會在 [查詢編輯器] [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]視窗中執行語句的複本，並連接到附加的伺服器實例。  
   
-1.  卸離[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]陳述式：  
+1.  卸離[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]語句：  
   
     ```  
     USE master;  
