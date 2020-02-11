@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f31a95815c3a6c365d179a350846ec6f9a8bb795
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098610"
 ---
-# <a name="backupencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>BackupEncryptionKey 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="backupencryptionkey-method-wmi-msreportserver_configurationsetting"></a>BackupEncryptionKey 方法 (WMI MSReportServer_ConfigurationSetting)
   備份指定之報表伺服器執行個體的加密金鑰。 此加密金鑰會以密碼加密的方式儲存。  
   
 ## <a name="syntax"></a>語法  
@@ -46,7 +46,7 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
  *密碼*  
  用來在傳回加密金鑰之前進行加密的字串。  
   
- *KeyFile[]*  
+ *KeyFile []*  
  [out] 包含已加密之加密金鑰的陣列。  
   
  *長度*  
@@ -62,7 +62,7 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
  傳回 *HRESULT* ，指出方法呼叫成功或失敗。 值為 0 表示方法呼叫成功。 非零值則表示已發生錯誤。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

@@ -22,10 +22,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055962"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>在大量匯入期間保留 Null 或預設值 (SQL Server)
@@ -42,11 +42,11 @@ ms.locfileid: "74055962"
 ## 保留 Null 值<a name="keep_nulls"></a>  
 下列限定詞 (qualifier) 可指定資料檔中的空白欄位，在大量匯入作業期間保留其 Null 值，而不要繼承資料表資料行的預設值 (若有的話)。  若是 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)，根據預設，在大量載入作業中未指定的資料行都會設定為 NULL。
   
-|命令|Qualifier|限定詞類型|  
+|Command|Qualifier|限定詞類型|  
 |-------------|---------------|--------------------|  
 |bcp|-k|Switch|  
 |BULK INSERT|KEEPNULLS\*|引數|  
-|INSERT ...SELECT * FROM OPENROWSET(BULK...)|不適用|不適用|  
+|INSERT ...SELECT * FROM OPENROWSET(BULK...)|N/A|N/A|  
   
 \* 針對 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)，若沒有預設值可用，則必須將資料表資料行定義為允許 Null 值。 
   
@@ -346,7 +346,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
   
 -   [使用 bcp 指定資料檔的前置長度 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
--   [使用 bcp 指定檔案儲存類型 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
+-   [使用 bcp 時指定檔案儲存類型 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
