@@ -1,5 +1,5 @@
 ---
-title: 在 記錄事件視窗中檢視記錄項目 |Microsoft Docs
+title: 在 [記錄事件] 視窗中查看記錄專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed348a4525024052946ac30bfe6ec780ca86a4b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054632"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>檢視記錄事件視窗中的記錄項目
@@ -28,9 +28,9 @@ ms.locfileid: "66054632"
   
 ### <a name="to-view-log-entries"></a>檢視記錄項目  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在 [SSIS]  功能表上，按一下 [記錄事件]  。 您可以將 View.LogEvents 命令對應到您在 [選項]  對話方塊的 [鍵盤]  頁面中所選擇的組合鍵，以選擇性地顯示 [記錄事件]  視窗。  
+2.  在 **[SSIS]** 功能表上，按一下 **記錄事件**。 您可以將 View.LogEvents 命令對應到您在 [選項]  對話方塊的 [鍵盤]  頁面中所選擇的組合鍵，以選擇性地顯示 [記錄事件]  視窗。  
   
 3.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]** 。  
   

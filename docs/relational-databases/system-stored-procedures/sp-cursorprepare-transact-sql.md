@@ -18,10 +18,10 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165908"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
@@ -58,17 +58,17 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 > [!NOTE]  
 >  指定*stmt*值的規則與 sp_cursoropen 相同，唯一的例外是*stmt*字串資料類型必須是**Ntext**。  
   
- *options*  
+ *選項*  
  傳回資料指標結果集資料行描述的選擇性參數。 *選項*需要下列**int**輸入值。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  捲動選項。 *scrollopt*是需要下列其中一個**int**輸入值的選擇性參數。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -90,7 +90,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  並行控制選項。 *ccopt*是需要下列其中一個**int**輸入值的選擇性參數。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (之前稱為 LOCKCC)|  
@@ -104,14 +104,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- 如同*scrollpt*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以從要求的值中指派不同的值。  
+ 如同*scrollpt*， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以從要求的值中指派不同的值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  RPC 狀態參數是下列其中一項：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|0|成功|  
+|0|Success|  
 |0x0001|失敗|  
 |1FF6|無法傳回中繼資料。<br /><br /> 注意：這是因為語句不會產生結果集。例如，它是 INSERT 或 DDL 語句。|  
   
@@ -144,12 +144,12 @@ exec sp_cursorclose @p2
  
  當*stmt*參數化，且*scrollopt* PARAMETERIZED_STMT 值為 ON 時，字串的格式如下所示：  
   
- { *\<本機變數名稱 > * *\<資料類型 >* }[ ,...*n* ]  
+ { * \<本機變數名稱> * *\<資料類型>* }[ ,...*n* ]  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_cursorexecute &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
- [sp_cursoropen &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorunprepare &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
+ [sp_cursorexecute &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorunprepare &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

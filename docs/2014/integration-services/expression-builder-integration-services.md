@@ -1,5 +1,5 @@
 ---
-title: 運算式產生器 (Integration Services) |Microsoft Docs
+title: 運算式產生器（Integration Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 56ab8cb5fbfcd4562aa48ba80a83204a8ca97ad8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058900"
 ---
 # <a name="expression-builder-integration-services"></a>運算式產生器 (Integration Services)
+  
   **[運算式產生器]** 對話方塊提供圖形化使用者介面，用於建立屬性運算式所使用的運算式。 您可以從「 **設計師」中的自訂工作對話方塊，以及從** 中的 [!INCLUDE[ssIS](../includes/ssis-md.md)] [屬性] **視窗，存取** [運算式產生器] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]對話方塊。  
   
  您可以使用 **[運算式產生器]** 對話方塊執行下列工作：  

@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 89e0b57501eb948d0c67a6dc0a055051b7d19b18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481334"
 ---
 # <a name="validation-stored-procedure-master-data-services"></a>驗證預存程序 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，驗證版本，以便將商務規則套用到模型版本中的所有成員。  
   
- 本主題說明如何使用 **mdm.udpValidateModel** 預存程序來驗證資料。 如果您是 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式的管理員，可以改用使用者介面來進行驗證。 如需詳細資訊，請參閱[根據商務規則驗證版本 &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)。  
+ 本主題說明如何使用 **mdm.udpValidateModel** 預存程序來驗證資料。 如果您是 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式的管理員，可以改用使用者介面來進行驗證。 如需詳細資訊，請參閱 [根據商務規則驗證版本 &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)。  
   
 > [!NOTE]  
 >  如果您在暫存處理序完成之前，即叫用驗證，則不會驗證尚未完成暫存的成員。  
@@ -58,7 +58,7 @@ EXECUTE mdm.udpValidateModel @User_ID, @Model_ID, @Version_ID, 1
 |Version_ID|版本識別碼。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料匯入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
+ [資料匯入 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [根據商務規則驗證版本 &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)  
   
   

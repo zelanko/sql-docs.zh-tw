@@ -1,5 +1,5 @@
 ---
-title: 資料分割處理目的地編輯器 （連線管理員頁面） |Microsoft Docs
+title: 資料分割處理目的地編輯器（連線管理員頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44e116ece7460787f272f0b8cc6e99a4300fc728
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056710"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>資料分割處理目的地編輯器 (連接管理員頁面)
@@ -31,16 +31,16 @@ ms.locfileid: "66056710"
   
 ## <a name="options"></a>選項。  
  **[ODBC 目的地編輯器]**  
- 從清單中選取現有的連線管理員，或按一下 [新增]  來建立新的連線。  
+ 從清單中選取現有的連線管理員，或按一下 [新增]**** 來建立新的連線。  
   
  **新增**  
- 使用 [加入 Analysis Services 連接管理員]  對話方塊來建立新的連接。  
+ 使用 [加入 Analysis Services 連接管理員]**** 對話方塊來建立新的連接。  
   
- **可用的資料分割清單**  
+ **可用的磁碟分割清單**  
  選取要處理的資料分割。  
   
  **處理方法**  
- 選取處理方法。 此選項的預設值是 **[完整]** 。  
+ 選取處理方法。 此選項的預設值是 **[完整]**。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "66056710"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [資料分割處理目的地編輯器 &#40;對應頁面&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
- [資料分割處理目的地編輯器 &#40;進階頁面&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [分割區處理目的地編輯器 &#40;對應頁面&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
+ [資料分割處理目的地編輯器 &#40;Advanced Page&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

@@ -13,16 +13,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e8e2d7ca2f6ad28e7e1bd072bdeb238199471ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480114"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>變更商務規則名稱 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當指派的商務規則名稱不符合業務需求時，變更此名稱。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -33,27 +33,27 @@ ms.locfileid: "65480114"
   
 ### <a name="to-change-the-name-of-a-business-rule"></a>若要變更商務規則的名稱  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
-2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]** 。  
+2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]**。  
   
-3.  在 [商務規則維護]  頁面上，選取 [模型]  清單中的模型。  
+3.  在 [商務規則維護]**** 頁面上，選取 [模型]**** 清單中的模型。  
   
-4.  從 [實體]  清單中選取實體。  
+4.  從 [實體]**** 清單中選取實體。  
   
-5.  從**的成員型別**清單中，選取 成員類型。  
+5.  從 [**成員類型**] 清單中，選取成員的類型。  
   
-6.  從 [屬性]  清單中，選取屬性或保留預設值 [全部]  。  
+6.  從 [屬性]**** 清單中，選取屬性或保留預設值 [全部]****。  
   
-7.  在方格中，在 商務規則資料列，按兩下**名稱**欄位。  
+7.  在方格中，按兩下商務規則的資料列中的 [**名稱**] 欄位。  
   
 8.  輸入商務規則的名稱。  
   
 9. 按 ENTER 鍵。  
   
-10. 按一下 [發行商務規則]  。  
+10. 按一下 [發行商務規則]****。  
   
-11. 在確認對話方塊中按一下 **[確定]** 。 規則狀態會變更為 [作用中]  。  
+11. 在確認對話方塊中按一下 **[確定]**。 規則狀態會變更為 [作用中]****。  
   
 ## <a name="see-also"></a>另請參閱  
  [商務規則 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  

@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: a5993a5ba452e3d46709462e75a316dba02f7540
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055965"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>大量匯入資料時保留識別值 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "74055965"
 ## 保留識別值 <a name="keep_identity"></a>  
 若要在將資料列大量匯入資料表時，不讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定識別值，請使用適當的 keep-identity 命令限定詞。  當您指定 keep-identity 限定詞時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用資料檔案中的識別值。  這些限定詞如下：
 
-|命令|Keep-identity 限定詞|限定詞類型|  
+|Command|Keep-identity 限定詞|限定詞類型|  
 |-------------|------------------------------|--------------------|  
 |bcp|-E|Switch|  
 |BULK INSERT|KEEPIDENTITY|引數|  
@@ -320,7 +320,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 2.  [使用 bcp 指定資料檔的前置長度 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
-3.  [使用 bcp 指定檔案儲存類型 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
+3.  [使用 bcp 時指定檔案儲存類型 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
