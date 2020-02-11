@@ -1,5 +1,5 @@
 ---
-title: 全文檢索搜尋和語意搜尋函數 (TRANSACT-SQL) |Microsoft Docs
+title: 全文檢索搜尋和語義搜尋函數（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: a61a3694-7604-4583-962e-fc30f771c6fa
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 58bf5650a5ab06783ad0c889bc3286184a7d73ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042750"
 ---
 # <a name="full-text-search-and-semantic-search-functions-transact-sql"></a>全文檢索搜尋與語意搜尋函數 (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68042750"
  針對包含完全或部分 (較不精確) 符合單一字詞及片語、字詞彼此之間的相似程度或加權相符的資料行，傳回包含零個、一個或多個資料列的資料表。  
   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)  
- 傳回零個、 一個或多個資料列，這些資料行包含的比對意義，並不只是完全相同，在指定的文字值的資料表*freetext_string*。  
+ 傳回零個、一個或多個資料列的資料表，其中包含的值符合指定之*freetext_string*中文字的意義，而不只是確切的用語。  
   
 ## <a name="semantic-search-functions"></a>語意搜尋函數  
  [semantickeyphrasetable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md)  

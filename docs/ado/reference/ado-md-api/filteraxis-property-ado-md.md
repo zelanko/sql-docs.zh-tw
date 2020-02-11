@@ -1,5 +1,5 @@
 ---
-title: FilterAxis 屬性 (ADO MD) |Microsoft Docs
+title: FilterAxis 屬性（ADO MD） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,27 +17,27 @@ ms.assetid: 9c656963-531e-4cd1-b698-d5f42a9b7ba3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d44ac908c04338f80c18699319f75a068370c3e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938450"
 ---
 # <a name="filteraxis-property-ado-md"></a>FilterAxis 屬性 (ADO MD)
-指出目前的篩選資訊[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。  
+表示目前資料[格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)的篩選資訊。  
   
 ## <a name="return-values"></a>傳回值  
- 傳回[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)物件，並處於唯讀狀態。  
+ 會傳回[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)物件，而且是唯讀的。  
   
 ## <a name="remarks"></a>備註  
- 使用**FilterAxis**屬性傳回之維度用於配量的資料的相關資訊。 [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)屬性**軸**傳回交叉分析篩選器的維度數目。 這個座標軸通常會有一個資料列。  
+ 使用**FilterAxis**屬性來傳回用來分割資料之維度的相關資訊。 軸的[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)屬性會傳回**交叉**分析篩選器維度的數目。 此軸通常只有一個資料列。  
   
- **軸**由**FilterAxis**並未包含在[軸](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)集合[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)物件。  
+ **FilterAxis**所傳回的**軸**不包含在 [[儲存格](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)] 物件的 [[軸](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)] 集合中。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Cellset 物件 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Axis 物件 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
- [維度物件 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
+ [Axis 物件（ADO MD）](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
+ [Dimension 物件（ADO MD）](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
  [DimensionCount 屬性 (ADO MD)](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)

@@ -15,14 +15,14 @@ ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9cdf20fa57da4b6085fc0e2fab61a23f3fed83e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039909"
 ---
 # <a name="developing-applications"></a>開發應用程式
-本節包含有關開發使用 ODBC 介面和實作它的驅動程式應用程式的資訊。  
+本節包含開發使用 ODBC 介面的應用程式，以及用來執行它的驅動程式的相關資訊。  
   
  此章節包含下列主題。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68039909"
   
 -   [基本的 ODBC 應用程式步驟](../../../odbc/reference/develop-app/basic-odbc-application-steps.md)  
   
--   [連接至資料來源或驅動程式](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)  
+-   [連線至資料來源或驅動程式](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)  
   
 -   [目錄函式](../../../odbc/reference/develop-app/catalog-functions.md)  
   

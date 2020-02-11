@@ -1,5 +1,5 @@
 ---
-title: 快取轉換編輯器 （對應頁面） |Microsoft Docs
+title: 快取轉換編輯器（對應頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061180"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>快取轉換編輯器 (對應頁面)
@@ -33,12 +33,12 @@ ms.locfileid: "66061180"
  **可用的輸入資料行**  
  檢視可用的輸入資料行清單。 使用拖放作業，即可將可用的輸入資料行對應到目的地資料行。  
   
- 您也可以藉由在 **[可用的輸入資料行]** 資料表中反白顯示資料行，按下功能表鍵，然後選取 **[藉由比對名稱來對應項目]** ，使用鍵盤將輸入資料行對應到目的地資料行。  
+ 您也可以藉由在 **[可用的輸入資料行]** 資料表中反白顯示資料行，按下功能表鍵，然後選取 **[藉由比對名稱來對應項目]**，使用鍵盤將輸入資料行對應到目的地資料行。  
   
  **可用的目的地資料行**  
  檢視可用的目的地資料行清單。 使用拖放作業，即可將可用的目的地資料行對應到輸入資料行。  
   
- 您也可以藉由在 **[可用的目的地資料行]** 資料表中反白顯示資料行，按下功能表鍵，然後選取 **[藉由比對名稱來對應項目]** ，使用鍵盤將輸入資料行對應到目的地資料行。  
+ 您也可以藉由在 **[可用的目的地資料行]** 資料表中反白顯示資料行，按下功能表鍵，然後選取 **[藉由比對名稱來對應項目]**，使用鍵盤將輸入資料行對應到目的地資料行。  
   
  **輸入資料行**  
  檢視在這個主題中稍早選取的輸入資料行。 您可以使用 **[可用的輸入資料行]** 清單來變更對應。  
@@ -47,6 +47,6 @@ ms.locfileid: "66061180"
  檢視每個可用的目的地資料行。  
   
 ## <a name="see-also"></a>另請參閱  
- [快取轉換編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
+ [[快取轉換編輯器] &#40;連線管理員頁面&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

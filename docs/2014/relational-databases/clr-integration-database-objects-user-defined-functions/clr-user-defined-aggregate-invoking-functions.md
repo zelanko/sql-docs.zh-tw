@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919598"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>叫用 CLR 使用者定義彙總函式
@@ -32,11 +32,11 @@ ms.locfileid: "62919598"
   
 -   目前的使用者必須在使用者定義彙總上具有 `EXECUTE` 權限。  
   
--   使用者定義彙總必須可使用叫用兩段式名稱的形式*schema_name.udagg_name*。  
+-   使用者定義匯總必須使用*schema_name. udagg_name*格式的兩部分名稱來叫用。  
   
--   在使用者定義彙總的引數類型必須符合或可隱含地轉換成*input_type*彙總，如中所定義的`CREATE AGGREGATE`陳述式。  
+-   使用者定義匯總的引數類型必須符合或可以隱含地轉換成匯總的*input_type* ，如`CREATE AGGREGATE`語句中所定義。  
   
--   在使用者定義彙總的傳回型別必須符合*return_type*在`CREATE AGGREGATE`陳述式。  
+-   使用者定義匯總的傳回類型必須符合`CREATE AGGREGATE`語句中的*return_type* 。  
   
 ## <a name="example-1"></a>範例 1  
  以下是使用者定義彙總函式的範例，此函數會串連取自資料表之資料行的一組字串值：  
@@ -196,7 +196,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- 一旦您編譯程式碼插入**MyAgg.dll**，您可以註冊中的彙總[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如下所示：  
+ 將程式碼編譯為**myagg.dll 之後**之後，您可以在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]註冊匯總，如下所示：  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  

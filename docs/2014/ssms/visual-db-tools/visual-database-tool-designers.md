@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 773ceb4aedddd6a39df6487bd36b47b83f7fa9a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63227036"
 ---
 # <a name="visual-database-tool-designers"></a>Visual Database Tool 設計工具
@@ -87,8 +87,8 @@ ms.locfileid: "63227036"
 >  這個版本的 Visual Database Tools 不支援 Microsoft SQL Server 7 (含) 之前版本。  
   
 ## <a name="see-also"></a>另請參閱  
- [設計資料庫圖表&#40;Visual Database Tools&#41;](design-database-diagrams-visual-database-tools.md)   
- [設計資料表&#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)   
+ [設計資料庫關係圖 &#40;Visual Database Tools&#41;](design-database-diagrams-visual-database-tools.md)   
+ [設計資料表 &#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)   
  [設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

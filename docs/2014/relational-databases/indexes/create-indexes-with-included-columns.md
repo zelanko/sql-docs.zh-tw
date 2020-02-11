@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156808"
 ---
 # <a name="create-indexes-with-included-columns"></a>建立內含資料行的索引
@@ -47,9 +47,9 @@ ms.locfileid: "63156808"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **使用下列方法建立非索引鍵資料行的索引：**  
+-   **若要建立具有非索引鍵資料行的索引，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "63156808"
   
     -   增加 `varchar`、`nvarchar` 或 `varbinary` 資料行的長度。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
@@ -102,13 +102,13 @@ ms.locfileid: "63156808"
   
 6.  按一下 [索引鍵資料行]  索引標籤底下的 [加入...]  。  
   
-7.  在 [從 _table_name_ 選取資料行]  對話方塊中，選取要加入索引之一或多個資料表資料行的核取方塊。  
+7.  在 [**從**_Table_name_選取資料行] 對話方塊中，選取要加入至索引之資料表資料行的核取方塊。  
   
 8.  按一下 [確定]  。  
   
 9. 按一下 [包含的資料行]  索引標籤底下的 [加入...]  。  
   
-10. 在 [從 _table_name_ 選取資料行]  對話方塊中，選取要加入至索引中作為非索引鍵資料行之資料表資料行的核取方塊。  
+10. 在 [**從**_Table_name_選取資料行] 對話方塊中，選取要加入至索引中做為非索引鍵資料行之資料表資料行或資料行的核取方塊。  
   
 11. 按一下 [確定]  。  
   

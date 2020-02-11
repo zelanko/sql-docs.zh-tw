@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 39b8e065b6b3cbd013089700de07376edc9a656c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770661"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>使用衍生的資料行轉換來衍生資料行值
@@ -44,7 +44,7 @@ ms.locfileid: "62770661"
     > [!NOTE]  
     >  如果運算式無效，則運算式文字會反白顯示，且資料行上的「工具提示」會描述錯誤。  
   
-7.  在 [衍生的資料行]  清單中，選取 [\<以新資料行加入>]  以便將運算式的評估結果寫入新資料行，或選取要以評估結果更新的現有資料行。  
+7.  在 [衍生的資料行]  清單中，選取 [**以新資料行加入>]\<** 以便將運算式的評估結果寫入新資料行，或選取要以評估結果更新的現有資料行。  
   
      如果您選擇使用新資料行， **[衍生的資料行轉換編輯器]** 對話方塊就會依據資料類型、長度、有效位數、小數位數和字碼頁，評估運算式並指派資料類型到資料行。  
   
