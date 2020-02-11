@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2808fd4678da29c037592db4eb23c318259f8390
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106203"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>運算式中的常數 (報表產生器及 SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66106203"
 ## <a name="literal-text"></a>常值文字  
  在運算式中，常值文字是置於雙引號之間的文字。 如果文字是運算式的一部分，則您也可以直接在文字方塊中輸入文字，而不加上雙引號。 如果文字方塊的值不是以等號 (=) 開頭，就會將該文字當做常值文字。 下表顯示若干運算式中的常值文字範例。  
   
-|常數|顯示文字|運算式文字|  
+|持續性|顯示文字|運算式文字|  
 |--------------|------------------|---------------------|  
 |報表執行於：|<\<Expr>>|`="Report run at: " & Globals!ExecutionTime`|  
 |Adventure Works Cycles|Adventure Works Cycles|Adventure Works Cycles|  
@@ -48,7 +48,7 @@ ms.locfileid: "66106203"
 ## <a name="clr-constants"></a>CLR 常數  
  您可以在運算式中使用以 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 類別所定義的常數。 下表顯示系統定義色彩的範例。  
   
-|常數|描述|  
+|持續性|描述|  
 |--------------|-----------------|  
 |MistyRose|當您為以背景色彩為基礎的報表屬性建立運算式時，可以依名稱指定色彩。 有效的名稱會列在 **[運算式]** 對話方塊中。|  
   

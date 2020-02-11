@@ -16,34 +16,34 @@ ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb403cef47f901cdb43bbb32c669ba68aa34913d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078899"
 ---
 # <a name="writing-odbc-3x-drivers"></a>撰寫 ODBC 3.x 驅動程式
-下表會顯示在 ODBC 3 函數支援。*x*驅動程式和 ODBC 應用程式和函式呼叫針對 ODBC 3 時執行的驅動程式管理員中的對應。*x*驅動程式。  
+下表顯示 ODBC 3 中的函數支援。*x*驅動程式和 odbc 應用程式，以及在針對 ODBC 3 呼叫函數時，驅動程式管理員所執行的對應。*x*驅動程式。  
   
-|函數|支援<br /><br /> 藉由<br /><br /> ODBC 3。*x*<br /><br /> 驅動程式？|支援<br /><br /> 藉由<br /><br /> ODBC 3。*x*<br /><br /> 應用程式嗎？|對應/支援<br /><br /> ODBC 3 中。*x*<br /><br /> 驅動程式管理員<br /><br /> ODBC 3。*x*驅動程式？|  
+|函式|支援<br /><br /> 依據<br /><br /> ODBC 3。*x*<br /><br /> driver?|支援<br /><br /> 依據<br /><br /> ODBC 3。*x*<br /><br /> 應用程式?|對應/支援<br /><br /> 由 ODBC 3 所進行。*x*<br /><br /> 驅動程式管理員到<br /><br /> ODBC 3。*x*驅動程式？|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
-|**SQLAllocConnect**|否|No[1]|是|  
-|**SQLAllocEnv**|否|No[1]|是|  
+|**SQLAllocConnect**|否|否 [1]|是|  
+|**SQLAllocEnv**|否|否 [1]|是|  
 |**SQLAllocHandle**|是|是|否|  
-|**SQLAllocStmt**|否|No[1]|是|  
+|**SQLAllocStmt**|否|否 [1]|是|  
 |**SQLBindCol**|是|是|否|  
-|**SQLBindParam**|否|[是] [2]|是|  
+|**SQLBindParam**|否|是 [2]|是|  
 |**SQLBindParameter**|是|是|否|  
 |**SQLBrowseConnect**|是|是|否|  
 |**SQLBulkOperations**|是|是|否|  
 |**SQLCancel**|是|是|否|  
 |**SQLCloseCursor**|是|是|否|  
 |**SQLColAttribute**|是|是|否|  
-|**SQLColAttributes**|No[3]|否|是|  
+|**SQLColAttributes**|否 [3]|否|是|  
 |**SQLColumnPrivileges**|是|是|否|  
 |**SQLColumns**|是|是|否|  
 |**SQLConnect**|是|是|否|  
-|**SQLCopyDesc**|是|是|[是] [4]|  
+|**SQLCopyDesc**|是|是|是 [4]|  
 |**SQLDataSources**|否|是|是|  
 |**SQLDescribeCol**|是|是|否|  
 |**SQLDescribeParam**|是|是|否|  
@@ -51,19 +51,19 @@ ms.locfileid: "68078899"
 |**SQLDriverConnect**|是|是|否|  
 |**SQLDrivers**|否|是|是|  
 |**SQLEndTran**|是|是|否|  
-|**SQLError**|否|No[1]|是|  
+|**SQLError**|否|否 [1]|是|  
 |**SQLExecDirect**|是|是|否|  
 |**SQLExecute**|是|是|否|  
 |**SQLExtendedFetch**|是|否|否|  
 |**SQLFetch**|是|是|否|  
 |**SQLFetchScroll**|是|是|否|  
 |**SQLForeignKeys**|是|是|否|  
-|**SQLFreeConnect**|否|[是] [1]|是|  
-|**SQLFreeEnv**|否|[是] [1]|是|  
+|**SQLFreeConnect**|否|是 [1]|是|  
+|**SQLFreeEnv**|否|是 [1]|是|  
 |**SQLFreeHandle**|是|是|否|  
 |**SQLFreeStmt**|是|是|否|  
 |**SQLGetConnectAttr**|是|是|否|  
-|**SQLGetConnectOption**|No[5]|No[1]|是|  
+|**SQLGetConnectOption**|否 [5]|否 [1]|是|  
 |**SQLGetCursorName**|是|是|否|  
 |**SQLGetData**|是|是|否|  
 |**SQLGetDescField**|是|是|否|  
@@ -71,10 +71,10 @@ ms.locfileid: "68078899"
 |**SQLGetDiagField**|是|是|否|  
 |**SQLGetDiagRec**|是|是|否|  
 |**SQLGetEnvAttr**|是|是|否|  
-|**SQLGetFunctions**|No[6]|是|是|  
+|**SQLGetFunctions**|否 [6]|是|是|  
 |**SQLGetInfo**|是|是|否|  
 |**SQLGetStmtAttr**|是|是|否|  
-|**SQLGetStmtOption**|No[5]|No[1]|是|  
+|**SQLGetStmtOption**|否 [5]|否 [1]|是|  
 |**SQLGetTypeInfo**|是|是|否|  
 |**SQLMoreResults**|是|是|否|  
 |**SQLNativeSql**|是|是|否|  
@@ -89,7 +89,7 @@ ms.locfileid: "68078899"
 |**SQLPutData**|是|是|否|  
 |**SQLRowCount**|是|是|否|  
 |**SQLSetConnectAttr**|是|是|否|  
-|**SQLSetConnectOption**|No[5]|No[1]|是|  
+|**SQLSetConnectOption**|否 [5]|否 [1]|是|  
 |**SQLSetCursorName**|是|是|否|  
 |**SQLSetDescField**|是|是|否|  
 |**SQLSetDescRec**|是|是|否|  
@@ -98,21 +98,21 @@ ms.locfileid: "68078899"
 |**SQLSetParam**|否|否|是|  
 |**SQLSetScrollOption**|是|是|否|  
 |**SQLSetStmtAttr**|是|是|否|  
-|**SQLSetStmtOption**|No[5]|No[1]|是|  
+|**SQLSetStmtOption**|否 [5]|否 [1]|是|  
 |**SQLSpecialColumns**|是|是|否|  
 |**SQLStatistics**|是|是|否|  
 |**SQLTablePrivileges**|是|是|否|  
 |**SQLTables**|是|是|否|  
-|**SQLTransact**|否|No[1]|是|  
+|**SQLTransact**|否|否 [1]|是|  
   
- [1] 此函式已被取代，在 ODBC 3。*x*。 ODBC 3。*x*應用程式不應使用此函式。 不過，開啟 群組或 ISO CLI 相容的應用程式可以呼叫此函式。  
+ [1] 這個函數在 ODBC 3 中已被取代。*x*。 ODBC 3。*x*應用程式不應該使用這個函數。 不過，開放式群組或 ISO CLI 相容的應用程式可以呼叫此函式。  
   
- [2] ODBC 3。*x*應用程式應該改用**SQLBindParameter**而非**SQLBindParam**。 不過，開啟 群組或 ISO CLI 相容的應用程式可以呼叫此函式。  
+ [2] ODBC 3。*x*應用程式應使用**SQLBindParameter** ，而不是**SQLBindParam**。 不過，開放式群組或 ISO CLI 相容的應用程式可以呼叫此函式。  
   
- [3] 的驅動程式撰寫人員應該注意到 ODBC 2。*x*資料行屬性使用，則必須支援 SQL_COLUMN_PRECISION、 SQL_COLUMN_SCALE 和 SQL_COLUMN_LENGTH **SQLColAttribute**。  
+ [3] 驅動程式寫入器應該注意 ODBC 2。*x* SQL_COLUMN_PRECISION、SQL_COLUMN_SCALE 和 SQL_COLUMN_LENGTH 的資料行屬性必須與**SQLColAttribute**支援。  
   
- [4] **SQLCopyDesc**跨屬於不同的驅動程式的連接複製描述項時，則部分實作由驅動程式管理員。 支援所需的驅動程式**SQLCopyDesc**跨兩個自己的連線。 這類函式**SQLDrivers**這會實作完全由驅動程式管理員，不會出現在這份清單。  
+ [4] **SQLCopyDesc**由驅動程式管理員在每個屬於不同驅動程式的連接之間進行複製時，部分執行。 需要驅動程式，以支援兩個其本身連接的**SQLCopyDesc** 。 **SQLDrivers**這類函式（由驅動程式管理員單獨執行）不會顯示在這份清單上。  
   
- [5] 在某些情況下，驅動程式可能需要支援此函式。 如需詳細資訊，請參閱此函式的參考頁面。  
+ [5] 在某些情況下，驅動程式可能需要支援此功能。 如需詳細資訊，請參閱此函式的參考頁面。  
   
- [6] 的驅動程式可以選擇支援**SQLGetFunctions**如果驅動程式所支援的函式集改變連接連接。
+ [6] 如果驅動程式支援的一組函式因連接連線而有所不同，驅動程式可以選擇支援**SQLGetFunctions** 。

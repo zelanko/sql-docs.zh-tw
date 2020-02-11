@@ -1,5 +1,5 @@
 ---
-title: 圖形 COMPUTE 子句 |Microsoft Docs
+title: Shape COMPUTE 子句 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924149"
 ---
 # <a name="shape-compute-clause"></a>Shape COMPUTE 子句
-Shape COMPUTE 子句會產生父代**資料錄集**，其資料行所組成的參考子系**資料錄集**; 選擇性資料行的內容是一章，新的或導出資料行，或對子系執行彙總函式的結果**Recordset**或先前的圖形化**資料錄集**; 以及從子系的任何資料行**資料錄集**中所列選擇性的 BY 子句。  
+Shape COMPUTE 子句會產生父**記錄集**，其資料行是由子**記錄集**的參考所組成;選擇性資料行，其內容為章節、新的或匯出資料行，或是在子**記錄集**或先前已塑造的**記錄集**上執行彙總函式的結果;以及選擇性 BY 子句中所列之子**記錄集**的任何資料行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,60 +33,60 @@ SHAPE child-command [AS] child-alias
 ```  
   
 ## <a name="description"></a>描述  
- 這個子句的部分如下所示：  
+ 此子句的部分如下所示：  
   
- *child-command*  
+ *子命令*  
  包含下列其中一項：  
   
--   查詢命令，在大括號 ("{}")，傳回的子系**資料錄集**物件。 基礎資料提供者發出的命令和其語法取決於該提供者的需求。 這通常是 SQL 語言，雖然 ADO 不需要任何特定的查詢語言。  
+-   大括弧（"{}"）內的查詢命令，會傳回子**記錄集**物件。 此命令會發出給基礎資料提供者，且其語法取決於該提供者的需求。 雖然 ADO 不需要任何特定的查詢語言，但這通常會是 SQL 語言。  
   
--   現有的形狀名稱**資料錄集**。  
+-   現有的形狀**記錄集**名稱。  
   
--   另一個圖形的命令。  
+-   另一個圖形命令。  
   
--   資料表關鍵字，後面加上資料表中的資料提供者的名稱。  
+-   TABLE 關鍵字，後面接著資料提供者中的資料表名稱。  
   
- *child-alias*  
- 用來參考的別名**Recordset**所傳回*子命令。* *子系別名*必要的計算子句中的資料行清單中，且定義父系和子系之間的關聯性**資料錄集**物件。  
+ *子別名*  
+ 用來參考*子命令*所傳回之**記錄集**的別名。 在 COMPUTE 子句的資料行清單中，需要*子別名*，並定義父**記錄集**物件與子 Recordset 物件之間的關聯性。  
   
- *appended-column-list*  
- 在其中每個項目會定義產生的父代中的資料行清單。 每個項目包含的章節資料行、 新的資料行、 導出資料行或在子系的彙總函式所產生的值**資料錄集**。  
+ *附加-資料行清單*  
+ 清單，其中的每個元素會定義所產生之父系中的資料行。 每個元素都包含一個章節資料行、新的資料行、匯出資料行，或子**記錄集**上彙總函式所產生的值。  
   
- *grp-field-list*  
- 資料行清單中的父和子**資料錄集**指定資料列應該如何群組子系中的物件。  
+ *grp-欄位清單*  
+ 父系和子**記錄集**物件中的資料行清單，指定如何在子系中群組資料列。  
   
- 中的每個資料行*grp 欄位清單*沒有對應的資料行中的子系和父系**資料錄集**物件。 每個資料列的父**資料錄集**，則*grp 欄位清單*資料行具有唯一的值和子**資料錄集**父元素所參考資料列僅包含子其資料列*grp 欄位清單*資料行具有相同的父資料列的值。  
+ 對於*grp 欄位清單*中的每個資料行，子系和父**記錄集**物件中都有對應的資料行。 對於父**記錄集中**的每個資料列而言， *grp 欄位清單*資料行都有唯一的值，而父資料列所參考的子**記錄集**只包含*grp 欄位清單*資料行具有相同值的子資料列。  
   
- 如果包含，BY 子句，則子系**資料錄集**的資料列會根據使用的計算子句中的資料行分組。 父代**Recordset**會包含每個群組的子系中的資料列的一個資料列**資料錄集**。  
+ 如果包含 BY 子句，將會根據 COMPUTE 子句中的資料行，將子**記錄集**的資料列分組。 父**記錄集**會針對子**記錄集中**的每個資料列群組，各包含一個資料列。  
   
- 如果省略 BY 子句，則將整個子**Recordset**會被視為單一群組和父代**資料錄集**會包含一個資料列。 該資料列將會參考整個子系**資料錄集**。 省略 BY 子句可讓您透過將整個子計算 「 總計 」 彙總**資料錄集**。  
+ 如果省略 BY 子句，則會將整個子**記錄集**視為單一群組，而且父**記錄集**只會包含一個資料列。 該資料列會參考整個子**記錄集**。 省略 BY 子句可讓您計算整個子**記錄集**的「總計」匯總。  
   
- 例如:  
+ 例如：  
   
 ```  
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
 ```  
   
- 不論哪種方式父**Recordset**形成 （使用計算或使用附加），它會包含用來使它關聯的子系的章節資料行**資料錄集**。 如果您想要父代**資料錄集**也可能包含子資料列包含彙總 （SUM、 MIN、 MAX 和等等） 的資料行。 父和子系**資料錄集**可能包含資料行包含在中的資料列的運算式**資料錄集**，以及資料行的新和一開始空白。  
+ 不論父**記錄集**的形成方式為何（使用 COMPUTE 或使用 APPEND），它都會包含一個章節資料行，用來將它與子**記錄集**產生關聯。 如果您想要的話，父**記錄集**也可以包含子資料列上包含匯總（加總、最小、最大值等等）的資料行。 父系和子**記錄集**都可能包含資料行，其中包含**記錄集**內資料列的運算式，以及新的和最初是空的資料行。  
   
-## <a name="operation"></a>運算  
- *子命令*發給的提供者傳回的子系**資料錄集**。  
+## <a name="operation"></a>作業  
+ *子命令*會發出給提供者，它會傳回子**記錄集**。  
   
- COMPUTE 子句中指定的父資料行**Recordset**，這可能是子系參考**資料錄集**，一或多個彙總、 計算的運算式或新的資料行。 包含 BY 子句時，它所定義的資料行也會附加至父代**資料錄集**。 BY 子句會指定如何在子系的資料列**資料錄集**分組。  
+ COMPUTE 子句會指定父**記錄集**的資料行，這可能是子**記錄集**的參考、一個或多個匯總、一個匯出運算式或新的資料行。 如果有 BY 子句，它所定義的資料行也會附加至父**記錄集**。 BY 子句會指定子**記錄集**資料列的分組方式。  
   
- 例如，假設您有一個資料表，名為人口統計資料，其中包含狀態、 縣 （市），以及擴展的欄位。 （母體擴展中的數字的資料表會提供僅做為範例。）  
+ 例如，假設您有一個名為人口統計的資料表，其中包含 [州]、[縣（市）] 和 [人口] 欄位。 （資料表中的人口資料僅作為範例提供）。  
   
-|State|[縣/市]|母體|  
+|State|City|母體|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|或|Medford|200,000|  
-|或|Portland|400,000|  
-|CA|Los Angeles|800,000|  
-|CA|聖地牙哥|600,000|  
+|OR|Medford|200,000|  
+|OR|Portland|400,000|  
+|CA|洛杉磯|800,000|  
+|CA|San Diego|600,000|  
 |WA|Tacoma|500,000|  
-|或|Corvallis|300,000|  
+|OR|Corvallis|300,000|  
   
- 現在，發出此圖形的命令：  
+ 現在，請發出此圖形命令：  
   
 ```  
 rst.Open  "SHAPE {select * from demographics} AS rs "  & _  
@@ -94,52 +94,52 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
            objConnection  
 ```  
   
- 此命令會開啟形狀**資料錄集**具有兩個層級。 父層級會產生**資料錄集**彙總的資料行 (`SUM(rs.population)`)、 資料行參考子系**資料錄集**(`rs`)，並加入資料行來分組子**Recordset** (`state`)。 子層級時**Recordset**查詢命令傳回 (`select * from demographics`)。  
+ 此命令會開啟具有兩個層級的形狀**記錄集**。 父層級是產生的**記錄集**，其中包含匯總`SUM(rs.population)`資料行（）、參考子**記錄集**（`rs`）的資料行，以及用於分組子**記錄集**（`state`）的資料行。 子層級是查詢命令所傳回的**記錄集**（`select * from demographics`）。  
   
- 子系**資料錄集**詳細資料列會依狀態分組否則不依特定順序。 也就是群組將無法以字母或數字的順序。 如果您想要的父**資料錄集**經過排序，您可以使用**排序資料錄集**方法來排序父**資料錄集**。  
+ 子**記錄集**詳細資料列將會依狀態分組，否則不會以特定順序進行排序。 也就是，群組不會以字母或數位順序排序。 如果您想要排序父**記錄集**，您可以使用**記錄集排序**方法來排序父**記錄集**。  
   
- 您現在可以瀏覽開啟的父**Recordset**並存取子的詳細資料**資料錄集**物件。 如需詳細資訊，請參閱 <<c0> [ 存取階層式資料錄集中的資料列](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)。  
+ 您現在可以導覽已開啟的父**記錄集**，並存取子詳細資料**記錄集**物件。 如需詳細資訊，請參閱[存取階層式記錄集中](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)的資料列。  
   
-## <a name="resultant-parent-and-child-detail-recordsets"></a>結果的父系和子系的詳細資料錄集  
+## <a name="resultant-parent-and-child-detail-recordsets"></a>結果父系和子詳細資料集  
   
 ### <a name="parent"></a>父系  
   
-|SUM (rs。母體擴展）|rs|State|  
+|SUM （rs。人數|rs|State|  
 |---------------------------|--------|-----------|  
-|1,300,000|Child1 參考|CA|  
-|1,200,000|Child2 參考|WA|  
-|1,100,000|Child3 參考|或|  
+|1,300,000|Child1 的參考|CA|  
+|1,200,000|Child2 的參考|WA|  
+|1,100,000|Child3 的參考|OR|  
   
 ## <a name="child1"></a>Child1  
   
-|State|[縣/市]|母體|  
+|State|City|母體|  
 |-----------|----------|----------------|  
-|CA|Los Angeles|800,000|  
-|CA|聖地牙哥|600,000|  
+|CA|洛杉磯|800,000|  
+|CA|San Diego|600,000|  
   
 ## <a name="child2"></a>Child2  
   
-|State|[縣/市]|母體|  
+|State|City|母體|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
-|State|[縣/市]|母體|  
+|State|City|母體|  
 |-----------|----------|----------------|  
-|或|Medford|200,000|  
-|或|Portland|400,000|  
-|或|Corvallis|300,000|  
+|OR|Medford|200,000|  
+|OR|Portland|400,000|  
+|OR|Corvallis|300,000|  
   
 ## <a name="see-also"></a>另請參閱  
- [存取階層式資料錄集中的資料列](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [資料成形概觀](../../../ado/guide/data/data-shaping-overview.md)   
+ [存取階層式記錄集中的資料列](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [資料成形總覽](../../../ado/guide/data/data-shaping-overview.md)   
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
- [正式 Shape 文法](../../../ado/guide/data/formal-shape-grammar.md)   
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [正式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [資料成形所需的提供者](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [Shape APPEND 子句](../../../ado/guide/data/shape-append-clause.md)   
- [一般 shape 命令](../../../ado/guide/data/shape-commands-in-general.md)   
- [Value 屬性 (ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
+ [一般的圖形命令](../../../ado/guide/data/shape-commands-in-general.md)   
+ [Value 屬性（ADO）](../../../ado/reference/ado-api/value-property-ado.md)   
  [Visual Basic for Applications 函式](../../../ado/guide/data/visual-basic-for-applications-functions.md)

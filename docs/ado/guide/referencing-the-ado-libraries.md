@@ -15,17 +15,17 @@ ms.assetid: 573f8f27-babd-4e2f-bf9a-270ee7024975
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a5d11102989e3194f3b878b94610e4802084f97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922997"
 ---
 # <a name="referencing-the-ado-libraries"></a>參考 ADO 程式庫
-封裝為最新版的 ADO *msado15.dll*。 最新版的 ADO MD 與 ADOX 會封裝為*msadom.dll*並*msadox.dll*分別。 根據預設，在安裝這些程式庫 *$installDir*，其中 *$installDir*代表的目錄中的 ADO 程式庫已在電腦安裝的路徑。 若要使用您的應用程式中的 ADO 程式庫，您也必須在應用程式專案中明確參考它們。  
+最新版本的 ADO 封裝為*msado15.dll*。 ADO MD 和 ADOX 的最新版本分別封裝為*msadom*和*msadox*。 這些程式庫預設會安裝在 *$installDir*中，其中 *$installDir*代表電腦上已安裝 ADO 程式庫的目錄路徑。 若要在您的應用程式中使用 ADO 程式庫，您必須在應用程式專案中明確參考它們。  
   
- 參考 ADO 程式庫時可採取的步驟如下：  
+ 以下是您可以用來參考 ADO 程式庫的步驟：  
   
--   [在 Visual Basic 應用程式](../../ado/guide/referencing-the-ado-libraries-in-a-visual-basic-6-application.md)  
+-   [在 Visual Basic 應用程式中](../../ado/guide/referencing-the-ado-libraries-in-a-visual-basic-6-application.md)  
   
--   [在 視覺效果C++應用程式](../../ado/guide/referencing-the-ado-libraries-in-a-visual-c-application.md)
+-   [在 Visual C++ 應用程式中](../../ado/guide/referencing-the-ado-libraries-in-a-visual-c-application.md)

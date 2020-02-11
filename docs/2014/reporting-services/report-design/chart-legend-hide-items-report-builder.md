@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2a9f9364f790e88f119ee46ed17ad2051d23b64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106254"
 ---
 # <a name="hide-legend-items-on-the-chart-report-builder-and-ssrs"></a>隱藏圖表上的圖例項目 (報表產生器及 SSRS)
@@ -35,8 +35,8 @@ ms.locfileid: "66106254"
     >  您無法針對一個群組而不在其他群組中隱藏數列。 如果您已經將欄位加入到 **[數列群組]** 區域，將會隱藏屬於此群組的所有數列。  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化圖表上的圖例 &#40;報表產生器及 SSRS&#41;](chart-legend-formatting-report-builder.md)   
- [格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [在圖表上格式化圖例 &#40;報表產生器及 SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [格式化圖表上的資料點 &#40;報表產生器和 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [變更圖例項目的文字 &#40;報表產生器及 SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [將移動平均新增至圖表 &#40;報表產生器及 SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)   
  [圖例屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)  

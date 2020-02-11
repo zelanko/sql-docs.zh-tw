@@ -16,55 +16,55 @@ ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c37a7385cc3aabb725f86261203d22b5b10c3be6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918869"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 指定造成事件發生的原因。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adRsnAddNew**|1|作業會加入新的記錄。|  
-|**adRsnClose**|9|作業已關閉**資料錄集**。|  
-|**adRsnDelete**|2|作業已刪除的記錄。|  
-|**adRsnFirstChange**|11|作業會對記錄中的第一項變更。|  
-|**adRsnMove**|10|作業移動中的記錄指標**資料錄集**。|  
-|**adRsnMoveFirst**|12|作業移到中的第一筆記錄的記錄指標**資料錄集**。|  
-|**adRsnMoveLast**|15|作業移到中的最後一個記錄的記錄指標**資料錄集**。|  
-|**adRsnMoveNext**|13|作業移至下一筆記錄的記錄指標**資料錄集**。|  
-|**adRsnMovePrevious**|14|作業移到在上一筆記錄的記錄指標**資料錄集**。|  
-|**adRsnRequery**|7|查詢作業[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。|  
-|**adRsnResynch**|8|重新同步處理的作業**資料錄集**與資料庫。|  
-|**adRsnUndoAddNew**|5|作業會回復新記錄的新增。|  
-|**adRsnUndoDelete**|6|作業會反轉記錄的刪除。|  
-|**adRsnUndoUpdate**|4|作業會回復為記錄的更新。|  
-|**adRsnUpdate**|3|作業會更新現有的記錄。|  
+|**adRsnAddNew**|1|作業已加入新的記錄。|  
+|**adRsnClose**|9|作業已關閉**記錄集**。|  
+|**adRsnDelete**|2|作業已刪除記錄。|  
+|**adRsnFirstChange**|11|作業進行第一次的記錄變更。|  
+|**adRsnMove**|10|作業會將記錄指標移動到**記錄集**內。|  
+|**adRsnMoveFirst**|12|作業會將記錄指標移至記錄**集**內的第一筆記錄。|  
+|**adRsnMoveLast**|15|作業會將記錄指標移至記錄**集**內的最後一個記錄。|  
+|**adRsnMoveNext**|13|作業會將記錄指標移至記錄**集**內的下一個記錄。|  
+|**adRsnMovePrevious**|14|作業會將記錄指標移至記錄**集**內的上一個記錄。|  
+|**adRsnRequery**|7|作業會重新查詢[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。|  
+|**adRsnResynch**|8|作業會將**記錄集**與資料庫重新同步處理。|  
+|**adRsnUndoAddNew**|5|作業已反轉加入新記錄。|  
+|**adRsnUndoDelete**|6|作業反轉刪除記錄。|  
+|**adRsnUndoUpdate**|4|作業反轉記錄的更新。|  
+|**adRsnUpdate**|3|作業已更新現有的記錄。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- 封裝： **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
+ Package： **.com. wfc. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
-|AdoEnums.EventReason.ADDNEW|  
-|AdoEnums.EventReason.CLOSE|  
-|AdoEnums.EventReason.DELETE|  
+|AdoEnums. EventReason. ADDNEW|  
+|AdoEnums. EventReason. CLOSE|  
+|AdoEnums. EventReason. DELETE|  
 |AdoEnums.EventReason.FIRSTCHANGE|  
-|AdoEnums.EventReason.MOVE|  
-|AdoEnums.EventReason.MOVEFIRST|  
-|AdoEnums.EventReason.MOVELAST|  
-|AdoEnums.EventReason.MOVENEXT|  
-|AdoEnums.EventReason.MOVEPREVIOUS|  
-|AdoEnums.EventReason.REQUERY|  
-|AdoEnums.EventReason.RESYNCH|  
+|AdoEnums. EventReason. MOVE|  
+|AdoEnums. EventReason. MOVEFIRST|  
+|AdoEnums. EventReason. MOVELAST|  
+|AdoEnums. EventReason. MOVENEXT|  
+|AdoEnums. EventReason. MOVEPREVIOUS|  
+|AdoEnums. EventReason. REQUERY|  
+|AdoEnums. EventReason. 同步|  
 |AdoEnums.EventReason.UNDOADDNEW|  
 |AdoEnums.EventReason.UNDODELETE|  
 |AdoEnums.EventReason.UNDOUPDATE|  
-|AdoEnums.EventReason.UPDATE|  
+|AdoEnums. EventReason. UPDATE|  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
   
 |||  
 |-|-|  

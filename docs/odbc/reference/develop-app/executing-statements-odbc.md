@@ -1,5 +1,5 @@
 ---
-title: 執行陳述式 ODBC |Microsoft Docs
+title: 執行語句 ODBC |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 09063f43-f5f0-4cf0-baa9-12fec8898997
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71f99fadf1b4a0885dd1615de781cbc393c6da33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069937"
 ---
 # <a name="executing-statements-odbc"></a>執行陳述式 ODBC
-ODBC 應用程式執行的 SQL 陳述式執行幾乎所有資料庫存取權。 一般事件序列是配置陳述式控制代碼、 設定任何陳述式屬性、 執行陳述式、 擷取任何結果，並釋放陳述式控制代碼。  
+ODBC 應用程式會藉由執行 SQL 語句來執行幾乎所有資料庫存取。 事件的一般順序是配置語句控制碼、設定任何語句屬性、執行語句、取得任何結果，以及釋放語句控制碼。  
   
  此章節包含下列主題。  
   

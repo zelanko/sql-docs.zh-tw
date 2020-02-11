@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 638ce62d8dd12764681c2b65a271d9ae13bb5d83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189334"
 ---
-# <a name="disable-or-reactivate-an-alert"></a>停用或重新啟動警示
-  此主題描述如何使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中停用或重新啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+# <a name="disable-or-reactivate-an-alert"></a>停用或重新啟用警示
+  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]，在中停用或重新開機 Agent 警示。  
   
  **本主題內容**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68189334"
   
      [安全性](#Security)  
   
--   **若要使用下列項目停用或重新啟動警示：**  
+-   **若要停用或重新開機警示，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68189334"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  依預設， **系統管理員 (sysadmin)** 固定伺服器角色的成員可以編輯警示中的資訊。 其他使用者必須被授與 **msdb** 資料庫的 **SQLAgentOperatorRole** 固定資料庫角色。  
@@ -59,7 +59,7 @@ ms.locfileid: "68189334"
   
 3.  按一下加號展開 **[警示]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您想要啟用的警示，然後選取 [啟用]  。若要停用警示，請以滑鼠右鍵按一下您想要停用的警示，然後選取 [停用]  。  
+4.  以滑鼠右鍵按一下您想要啟用的警示，然後選取 [啟用]****。若要停用警示，請以滑鼠右鍵按一下您想要停用的警示，然後選取 [停用]****。  
   
 5.  畫面上會顯示 **[停用警示]** 或 **[啟用警示]** 對話方塊，並顯示處理的狀態。 完成後，請按一下 **[關閉]** 。  
   
@@ -84,6 +84,6 @@ ms.locfileid: "68189334"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 < [sp_update_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)。  
+ 如需詳細資訊，請參閱[sp_update_alert &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)。  
   
   

@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211201"
 ---
 # <a name="creating-a-login"></a>建立登入
@@ -26,17 +26,18 @@ ms.locfileid: "68211201"
   
 ### <a name="to-create-a-new-windows-account"></a>若要建立新的 Windows 帳戶  
   
-1.  按一下**開始**，按一下**執行**，請在**開啟**方塊中，輸入`%SystemRoot%\system32\compmgmt.msc /s`，然後按一下 **確定**以開啟 電腦管理 程式。  
+1.  按一下 [**開始**]，按一下 [**執行**]，在 [ `%SystemRoot%\system32\compmgmt.msc /s`**開啟**] 方塊中輸入，然後按一下 **[確定]** 以開啟 [電腦管理] 程式。  
   
-2.  在 [系統工具]  底下，展開 [本機使用者和群組]  ，以滑鼠右鍵按一下 [使用者]  ，然後按一下 [新增使用者]  。  
+2.  在 [系統工具]**** 底下，展開 [本機使用者和群組]****，以滑鼠右鍵按一下 [使用者]****，然後按一下 [新增使用者]****。  
   
-3.  在 [使用者名稱]  方塊中輸入 **Mary**。  
+3.  在 [使用者名稱]**** 方塊中輸入 **Mary**。  
   
-4.  在 [密碼]  和 [確認密碼]  方塊中輸入強式密碼，然後按一下 [建立]  ，建立新的本機 Windows 使用者。  
+4.  在 [密碼]**** 和 [確認密碼]**** 方塊中輸入強式密碼，然後按一下 [建立]****，建立新的本機 Windows 使用者。  
   
 ### <a name="to-create-a-login"></a>若要建立登入  
   
-1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的 [查詢編輯器] 視窗中，輸入並執行下列程式碼，並以您的電腦名稱取代 `computer_name` 。 `FROM WINDOWS` 表示 Windows 將會驗證使用者。 選擇性的 `DEFAULT_DATABASE` 引數會將 `Mary` 連接到 `TestData` 資料庫，除非她的連接字串指定要連接到其他資料庫。 這個陳述式採用分號作為 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的選擇性結束符號。  
+1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的 [查詢編輯器] 視窗中，輸入並執行下列程式碼，並以您的電腦名稱取代 `computer_name` 。 
+  `FROM WINDOWS` 表示 Windows 將會驗證使用者。 選擇性的 `DEFAULT_DATABASE` 引數會將 `Mary` 連接到 `TestData` 資料庫，除非她的連接字串指定要連接到其他資料庫。 這個陳述式採用分號作為 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的選擇性結束符號。  
   
     ```  
     CREATE LOGIN [computer_name\Mary]  
@@ -54,7 +55,7 @@ ms.locfileid: "68211201"
  [授與資料庫的存取權](lesson-2-2-granting-access-to-a-database.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
+ [建立登入 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-login-transact-sql)   
  [選擇驗證模式](../relational-databases/security/choose-an-authentication-mode.md)  
   
   

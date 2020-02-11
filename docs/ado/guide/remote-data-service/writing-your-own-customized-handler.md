@@ -14,49 +14,49 @@ ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98e2ec3538de68bffa5b22acc94dda3d81e5c6f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921881"
 ---
 # <a name="writing-your-own-customized-handler"></a>撰寫您自己的自訂處理常式
-您可能想要撰寫您自己的處理常式，如果您是 IIS 伺服器系統管理員，想要支援 RDS，預設值，但更充分掌控使用者的要求和存取權限。  
+如果您是想要使用預設 RDS 支援的 IIS 伺服器系統管理員，但對使用者要求和存取權限有更大的控制，您可能會想要撰寫自己的處理常式。  
   
- MSDFMAP。處理常式會實作**IDataFactoryHandler**介面。  
+ MSDFMAP。處理常式會執行**IDataFactoryHandler**介面。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="idatafactoryhandler-interface"></a>IDataFactoryHandler 介面  
- 此介面有兩種方法， **GetRecordset**並**重新連接**。 這兩種方法需要[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**。  
+ 這個介面有兩種方法： **GetRecordset**和**Reconnect**。 這兩種方法都需要將[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**。  
   
- 這兩種方法不接受引數中的第一個逗號後面出現的 「**處理常式 =** "關鍵字。 例如，`"Handler=progid,arg1,arg2;"`將傳遞的引數字串`"arg1,arg2"`，和`"Handler=progid"`會傳遞 null 引數。  
+ 這兩種方法都會採用出現在 "**Handler =**" 關鍵字中第一個逗號後面的引數。 例如， `"Handler=progid,arg1,arg2;"`會傳遞的引數字串`"arg1,arg2"`，而且`"Handler=progid"`會傳遞 null 引數。  
   
 ## <a name="getrecordset-method"></a>GetRecordset 方法  
- 這個方法會查詢資料來源，並建立新[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件使用提供的引數。 **Recordset**必須以開啟**Adlockpessimistic** ，必須以非同步方式開啟。  
+ 這個方法會查詢資料來源，並使用所提供的引數建立新的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 **記錄集**必須以**adLockBatchOptimistic**開啟，而且不得以非同步方式開啟。  
   
 ### <a name="arguments"></a>引數  
- ***conn***連接字串。  
+ ***conn*** 連接字串。  
   
- ***args***處理常式的引數。  
+ ***args*** 處理常式的引數。  
   
- ***查詢***進行查詢的命令文字。  
+ ***查詢*** 用於進行查詢的命令文字。  
   
- ***ppRS***指標所在**資料錄集**應該傳回。  
+ ***ppRS*** 應傳回**記錄集**的指標。  
   
-## <a name="reconnect-method"></a>重新連線方法  
- 這個方法會更新資料來源。 它會建立新[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，並將給定**資料錄集**。  
+## <a name="reconnect-method"></a>重新連接方法  
+ 這個方法會更新資料來源。 它會建立新的[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，並附加指定的**記錄集**。  
   
 ### <a name="arguments"></a>引數  
- ***conn***連接字串。  
+ ***conn*** 連接字串。  
   
- ***args***處理常式的引數。  
+ ***args*** 處理常式的引數。  
   
- ***Pr*** A**資料錄集**物件。  
+ ***pr*** **記錄集**物件。  
   
-## <a name="msdfhdlidl"></a>msdfhdl.idl  
- 這是介面定義**IDataFactoryHandler**出現在**msdfhdl.idl**檔案。  
+## <a name="msdfhdlidl"></a>msdfhdl .idl  
+ 這是出現在**msdfhdl .idl**檔案中**IDataFactoryHandler**的介面定義。  
   
 ```cpp
 [  
@@ -100,8 +100,8 @@ HRESULT _stdcall GetRecordset(
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [自訂檔案 Connect 區段](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [自訂檔案 Logs 區段](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
+ [自訂檔案連接區段](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [自訂檔案記錄區段](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [自訂檔案 SQL 區段](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [自訂檔案 UserList 區段](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [DataFactory 自訂](../../../ado/guide/remote-data-service/datafactory-customization.md)   

@@ -13,17 +13,17 @@ ms.assetid: 51d643ed-015b-4639-969a-9491d9875aca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0adedfb69cd4a7b5cf195916747687826805e8bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905397"
 ---
 # <a name="sqlsetscrolloptions-desktop-database-drivers"></a>SQLSetScrollOptions (桌面資料庫驅動程式)
-SQL_CONCUR_READ_ONLY 支援正向和靜態資料指標。  
+SQL_CONCUR_READ_ONLY 支援轉送和靜態資料指標。  
   
- 索引鍵集驅動資料指標只支援*fConcurrency* SQL_CONCUR_LOCK 引數。  
+ SQL_CONCUR_LOCK 的*fConcurrency*引數只支援索引鍵集驅動的資料指標。  
   
- *FConcurrency* SQL_CONCUR_ROWVER 引數不支援。  
+ 不支援 SQL_CONCUR_ROWVER 的*fConcurrency*引數。  
   
- 不支援動態資料指標和混合式資料指標。
+ 不支援動態資料指標和混合資料指標。

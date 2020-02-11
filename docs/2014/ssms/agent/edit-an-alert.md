@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f035f9173477a3954a949f9ed27bc6f4f66be741
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211400"
 ---
-# <a name="edit-an-alert"></a>Edit an Alert
-  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中編輯 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示。  
+# <a name="edit-an-alert"></a>編輯警示
+  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]，在中編輯 Agent 警示。  
   
  **本主題內容**  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68211400"
   
      [安全性](#Security)  
   
--   **若要使用下列項目編輯警示：**  
+-   **若要使用下列內容來編輯警示：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68211400"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  依預設， **系統管理員 (sysadmin)** 固定伺服器角色的成員可以編輯警示中的資訊。 其他使用者必須被授與 **msdb** 資料庫的 **SQLAgentOperatorRole** 固定資料庫角色。  
@@ -53,9 +53,9 @@ ms.locfileid: "68211400"
   
 3.  按一下加號展開 **[警示]** 資料夾。  
   
-4.  以滑鼠右鍵按一下要編輯的警示，並且選取 [屬性]  。  
+4.  以滑鼠右鍵按一下要編輯的警示，並且選取 [屬性]****。  
   
-5.  更新 **[一般]** 、 **[回應]** 和 **[選項]** 頁面上的警示屬性。  
+5.  更新 **[一般]**、 **[回應]** 和 **[選項]** 頁面上的警示屬性。  
   
 6.  完成後，請按一下 **[確定]** 。  
   
@@ -80,6 +80,6 @@ ms.locfileid: "68211400"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 < [sp_update_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)。  
+ 如需詳細資訊，請參閱[sp_update_alert &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)。  
   
   

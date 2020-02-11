@@ -1,5 +1,5 @@
 ---
-title: 支援的 ODBC SQL 文法 (Visual FoxPro ODBC Driver) |Microsoft Docs
+title: 支援的 ODBC SQL 文法（Visual FoxPro ODBC Driver） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,29 +19,29 @@ ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 535f2feaf17d2060c1c65e7aba17951bb3339a5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68080060"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>支援的 ODBC SQL 文法 (Visual FoxPro ODBC Driver)
-Microsoft Visual FoxPro ODBC Driver 支援以下功能：  
+Microsoft Visual FoxPro ODBC 驅動程式支援下列各項：  
   
--   所有的 SQL 陳述式和 ODBC 的最小 SQL 文法中的子句  
+-   ODBC 最少 SQL 文法中的所有 SQL 語句和子句  
   
--   其他的 SQL 陳述式，從 ODBC core SQL 文法  
+-   ODBC core SQL 文法中的其他 SQL 語句  
   
- 下表列出支援的驅動程式時，由 ODBC SQL 文法層級的項目。  
+ 下表列出由 ODBC SQL 文法層級驅動程式支援的專案。  
   
-|層級|元素|項目|  
+|層級|元素|Item|  
 |-----------|--------------|----------|  
 |最小值|資料定義語言 (DDL)|CREATE TABLE 和 DROP TABLE|  
-||資料操作語言 (DML)|選取、 插入、 更新和刪除|  
-||運算式|簡單 (例如 A > B + C)|  
-||資料類型|CHAR、 VARCHAR 或 LONG VARCHAR|  
+||資料操作語言 (DML)|SELECT、INSERT、UPDATE 和 DELETE|  
+||運算式|簡單（例如>B + C）|  
+||資料類型|CHAR、VARCHAR 或 LONG VARCHAR|  
   
- 支援的 ODBC SQL 文法，除了 Visual FoxPro ODBC Driver 支援下列 Visual FoxPro 命令的完整的原生 Visual FoxPro 語言語法：  
+ 除了支援的 ODBC SQL 文法之外，Visual FoxPro ODBC 驅動程式還支援下列 Visual FoxPro 命令的完整原生 Visual FoxPro 語言語法：  
   
  [ALTER TABLE](../../odbc/microsoft/alter-table-sql-command.md)  
   
@@ -51,7 +51,7 @@ Microsoft Visual FoxPro ODBC Driver 支援以下功能：
   
  [刪除標記](../../odbc/microsoft/delete-tag-command.md)  
   
- [DROP TABLE](../../odbc/microsoft/drop-table-command.md)  
+ [捨棄資料表](../../odbc/microsoft/drop-table-command.md)  
   
  [INDEX](../../odbc/microsoft/index-command.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 巢狀資料表 (Analysis Services-資料採礦) |Microsoft Docs
+title: 嵌套資料表（Analysis Services 資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 865eea502ecc7e807533b75501634fb6d3356583
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083253"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>巢狀資料表 (Analysis Services - 資料採礦)
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，資料必須當作包含在案例資料表內的一系列案例，傳送至資料採礦演算法。 不過，並非所有的案例都可以由單一資料列描述。 例如，案例可能從兩個資料表衍生：一個資料表包含客戶資訊，而另一個資料表包含客戶購買資訊。 客戶資訊表中的單一客戶在客戶購買資料表中可能有多筆購買項目，所以很難以單一資料列描述資料。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供獨特方法來處理這些情況下，就使用*巢狀資料表*。 下圖展示巢狀資料表的概念。  
+  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，資料必須以案例資料表中包含的一系列案例形式，送到資料採礦演算法。 不過，並非所有的案例都可以由單一資料列描述。 例如，案例可能從兩個資料表衍生：一個資料表包含客戶資訊，而另一個資料表包含客戶購買資訊。 客戶資訊表中的單一客戶在客戶購買資料表中可能有多筆購買項目，所以很難以單一資料列描述資料。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用*嵌套資料表*，提供處理這些案例的唯一方法。 下圖展示巢狀資料表的概念。  
   
- ![兩個資料表使用巢狀的資料表結合](../media/nested-tables.gif "兩個資料表合併使用巢狀的資料表")  
+ ![使用巢狀資料表結合的兩個資料表](../media/nested-tables.gif "使用巢狀資料表結合的兩個資料表")  
   
  在此圖表中，第一個資料表 (父資料表) 包含客戶相關資訊，且每一位客戶有唯一識別碼的關聯。 第二個資料表 (子資料表) 包含每一位客戶的購買資訊。 子資料表中的購買資訊會經由唯一識別碼 **CustomerKey** 資料行，與父資料表產生關聯。 圖表中的第三個資料表會顯示這兩個資料表的結合。  
   
@@ -36,7 +36,8 @@ ms.locfileid: "66083253"
  為了建立巢狀資料表，兩個來源資料表必須包含已定義的關聯性，讓一個資料表中的項目可以與另一個資料表相關。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，您可以在資料來源檢視內定義此關聯性。  
   
 > [!NOTE]  
->  **CustomerKey** 欄位是關聯式索引鍵，用於在資料來源檢視定義內連結案例資料表和巢狀資料表，以及在採礦結構內建立資料行的關聯性。 不過，一般而言，您不應該在建立於該結構上的採礦模型中使用此關聯式索引鍵。 如果關聯式索引鍵資料行只用於聯結資料表，而不會提供對於分析有用的資訊，則通常最好將它從採礦模型內去除。  
+>  
+  **CustomerKey** 欄位是關聯式索引鍵，用於在資料來源檢視定義內連結案例資料表和巢狀資料表，以及在採礦結構內建立資料行的關聯性。 不過，一般而言，您不應該在建立於該結構上的採礦模型中使用此關聯式索引鍵。 如果關聯式索引鍵資料行只用於聯結資料表，而不會提供對於分析有用的資訊，則通常最好將它從採礦模型內去除。  
   
  您可以使用資料採礦延伸模組 (DMX) 或分析管理物件 (AMO)，以程式設計方式來建立巢狀資料表，或使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的資料採礦精靈和資料採礦設計師來建立巢狀資料表。  
   
@@ -66,7 +67,7 @@ ms.locfileid: "66083253"
  如需如何建立及使用模型篩選的詳細資訊，請參閱[採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](mining-models-analysis-services-data-mining.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [採礦結構 &#40;Analysis Services - 資料採礦&#41;](mining-structures-analysis-services-data-mining.md)  
+ [資料採礦演算法 &#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [&#40;Analysis Services 的採礦結構-資料採礦&#41;](mining-structures-analysis-services-data-mining.md)  
   
   

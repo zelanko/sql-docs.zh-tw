@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_alert_job (Transact-SQL) | Microsoft Docs
+title: sp_add_log_shipping_alert_job （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9793b26bbd45e08aa3bc488071bd3b26a3f1cfc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68140460"
 ---
-# <a name="spaddlogshippingalertjob-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
+# <a name="sp_add_log_shipping_alert_job-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  這個預存程序會檢查是否已在這部伺服器上建立警示作業。 如果警示作業不存在，此預存程序會建立警示作業，並將它的作業識別碼，與**log_shipping_monitor_alert**資料表。 依預設，會啟用警示作業，且會每兩分鐘執行一次。  
+  這個預存程序會檢查是否已在這部伺服器上建立警示作業。 如果警示作業不存在，這個預存程式會建立警示作業，並將其作業識別碼新增至**log_shipping_monitor_alert**資料表。 依預設，會啟用警示作業，且會每兩分鐘執行一次。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,7 +40,7 @@ sp_add_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @alert_job_id = ] alert_job_id OUTPUT` [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄傳送警示作業的代理程式作業識別碼。  
+`[ @alert_job_id = ] alert_job_id OUTPUT`記錄[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳送警示作業的代理程式作業識別碼。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -49,13 +49,13 @@ sp_add_log_shipping_alert_job
  None  
   
 ## <a name="remarks"></a>備註  
- **sp_add_log_shipping_alert_job**必須從執行**主要**監視伺服器上的資料庫。  
+ **sp_add_log_shipping_alert_job**必須從監視伺服器上的**master**資料庫中執行。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="examples"></a>範例  
- 此範例示範執行**sp_add_log_shipping_alert_job**來建立警示作業識別碼。  
+ 這個範例會顯示**sp_add_log_shipping_alert_job**的執行，以建立警示作業識別碼。  
   
 ```  
 USE master  

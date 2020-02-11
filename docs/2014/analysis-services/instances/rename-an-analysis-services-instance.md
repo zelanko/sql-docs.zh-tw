@@ -1,5 +1,5 @@
 ---
-title: 重新命名 Analysis Services 執行個體 |Microsoft Docs
+title: 重新命名 Analysis Services 實例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -16,32 +16,34 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079614"
 ---
 # <a name="rename-an-analysis-services-instance"></a>重新命名 Analysis Services 執行個體
-  您可以重新命名現有的執行個體[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用**重新命名執行個體**對話方塊。  
+  您可以使用 [ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **重新命名實例**] 對話方塊來重新命名現有的實例。  
   
 > [!IMPORTANT]  
 >  重新命名執行個體時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instance Rename Tool 會以更高的權限執行，並更新與該執行個體相關聯的 Windows 服務名稱、安全性帳戶，以及登錄項目。 為確保執行這些動作，請務必以本機系統管理員身分執行此工具。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instance Rename Tool 不會修改針對原始執行個體建立的程式資料夾。 請勿修改程式資料夾名稱以符合您要重命名的執行個體。 變更程式資料夾名稱可以防止安裝程式修復或移除安裝。  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instance Rename Tool 不會修改針對原始執行個體建立的程式資料夾。 請勿修改程式資料夾名稱以符合您要重命名的執行個體。 變更程式資料夾名稱可以防止安裝程式修復或移除安裝。  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體重新命名工具不適用於叢集環境。  
+>  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體重新命名工具不適用於叢集環境。  
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>若要重新命名 Analysis Services 的執行個體  
   
-1.  啟動**Instance Rename**工具**asinstancerename.exe**，從 C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio。  
+1.  從 C:\Program Files\Microsoft SQL Server\110\tools\binn\managementstudio 啟動**實例重新命名**工具**asinstancerename**  
   
-2.  在 [重新命名執行個體]  對話方塊的 [要重新命名的執行個體]  清單中，選取您要重新命名的執行個體。  
+2.  在 [重新命名執行個體]**** 對話方塊的 [要重新命名的執行個體]**** 清單中，選取您要重新命名的執行個體。  
   
-3.  在 [新執行個體名稱]  方塊中，輸入執行個體的新名稱。  
+3.  在 [新執行個體名稱]**** 方塊中，輸入執行個體的新名稱。  
   
-4.  確認使用者名稱和密碼正確，然後按一下 [重新命名]  。  
+4.  確認使用者名稱和密碼正確，然後按一下 [重新命名]****。  
   
      Analysis Services 執行個體將會停止，並在名稱變更時重新啟動。  
   
@@ -57,22 +59,22 @@ ms.locfileid: "66079614"
   
      如果您使用虛擬帳戶佈建服務，將需要更新資料庫登入或檔案權限。 虛擬帳戶是以執行個體名稱為基礎，因此，如果您重新命名執行個體，同時也會更新虛擬帳戶。 也就是說，您針對先前的執行個體所建立的任何先前登入或權限都不再有效。  
   
-     下列範例提供說明。 假設您已安裝表格式模式伺服器執行個體名為"Tabular"使用預設虛擬帳戶，導致下列設定：  
+     下列範例提供說明。 假設您使用預設虛擬帳戶，將表格式模式伺服器安裝為名為 "表格式" 的實例，則會產生下列設定：  
   
-    1.  執行個體名稱 =\<伺服器 > \TABULAR  
+    1.  實例名稱 = \<伺服器> \tabular  
   
     2.  服務名稱 = MSOLAP$TABULAR  
   
     3.  虛擬帳戶 = NT Service\ MSOLAP$TABULAR  
   
-     現在假設您重新命名為"TAB2"的執行個體。 名稱變更之後，您的設定現在看起來如下：  
+     現在假設您將實例重新命名為 "TAB2"。 名稱變更之後，您的設定現在看起來如下：  
   
-    1.  Instance name = \<server>\TAB2  
+    1.  實例名稱 = \<伺服器> \tab2  
   
     2.  服務名稱 = MSOLAP$TAB2  
   
     3.  虛擬帳戶 = NT Service\ MSOLAP$TAB2  
   
-     如您所見，先前授與"NT Service\ MSOLAP$ TABULAR"的資料庫和檔案權限已不再有效。 若要確保工作和服務所執行的作業執行之前，現在會需要新的資料庫和檔案權限授與"NT Service\ MSOLAP$TAB2"。  
+     如您所見，先前授與 "NT Service \ MSOLAP $ 表格式" 的資料庫和檔案許可權已不再有效。 若要確保服務所執行的工作和作業如之前一樣執行，您現在需要將新的資料庫和檔案許可權授與 "NT Service \ MSOLAP $ TAB2"。  
   
   

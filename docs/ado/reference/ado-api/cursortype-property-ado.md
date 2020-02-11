@@ -1,5 +1,5 @@
 ---
-title: CursorType 屬性 (ADO) |Microsoft Docs
+title: CursorType 屬性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,46 +16,46 @@ ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4dc881b96a1e2641d4946340c9462455197f2043
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919249"
 ---
 # <a name="cursortype-property-ado"></a>CursorType 屬性 (ADO)
-表示使用中的資料指標類型[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
+表示[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件中使用的資料指標類型。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回[CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)值。 預設值是**adOpenForwardOnly**。  
+ 設定或傳回[CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)值。 預設值為**adOpenForwardOnly**。  
   
 ## <a name="remarks"></a>備註  
- 使用**CursorType**屬性來指定資料指標開啟時，應使用的型別**資料錄集**物件。  
+ 使用**CursorType**屬性來指定開啟**記錄集**物件時應使用的資料指標類型。  
   
- 只有設定為**adOpenStatic**時，支援[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**。 如果設定不支援的值，則不會產生錯誤;設定支援的最接近**CursorType**將改為使用。  
+ 如果[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**，則只支援**adOpenStatic**的設定。 如果設定了不支援的值，則不會產生任何錯誤。將改用最接近的支援**CursorType** 。  
   
- 如果提供者不支援要求的資料指標類型，它可能會傳回另一個資料指標類型。 **CursorType**屬性會變更以符合實際的資料指標類型的使用時機[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件已經開啟。 若要確認傳回的資料指標的特定功能，請使用[支援](../../../ado/reference/ado-api/supports-method.md)方法。 在您關閉之後**資料錄集**，則**CursorType**屬性還原成其原始設定。  
+ 如果提供者不支援要求的資料指標類型，它可能會傳回另一個資料指標類型。 當[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件開啟時， **CursorType**屬性將會變更，以符合實際使用的資料指標類型。 若要確認所傳回資料指標的特定功能，請使用[支援](../../../ado/reference/ado-api/supports-method.md)方法。 關閉**記錄集**之後， **CursorType**屬性會還原為其原始設定。  
   
- 下圖顯示提供者功能 (由**支援**方法常數) 所需的每個資料指標類型。  
+ 下圖顯示每個資料指標類型所需的提供者功能（由**支援**的方法常數所識別）。  
   
-|此 CursorType 的記錄集|支援的方法必須為 true，則傳回所有這些常數|  
+|適用于此 CursorType 的記錄集|支援方法的所有常數都必須傳回 True|  
 |----------------------------------------|---------------------------------------------------------------------|  
 |**adOpenForwardOnly**|無|  
-|**adOpenKeyset**|**adBookmark**， **adHoldRecords**， **adMovePrevious**， **adResync**|  
+|**adOpenKeyset**|**adBookmark**、 **adHoldRecords**、 **adMovePrevious**、 **adResync**|  
 |**adOpenDynamic**|**adMovePrevious**|  
-|**adOpenStatic**|**adBookmark**， **adHoldRecords**， **adMovePrevious**， **adResync**|  
+|**adOpenStatic**|**adBookmark**、 **adHoldRecords**、 **adMovePrevious**、 **adResync**|  
   
 > [!NOTE]
->  雖然**支援**(**adUpdateBatch**) 可能是動態且順向資料指標，則為 true，適用於批次更新，您應該使用 keyset 或 static 資料指標。 設定[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)屬性設**Adlockpessimistic**並**CursorLocation**屬性設**adUseClient**啟用資料指標OLE DB 所需的批次更新的服務。  
+>  雖然針對動態和順向資料指標的**支援**（**adUpdateBatch**）可能是 true，但對於批次更新，您應該使用索引鍵集或靜態資料指標。 將[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)屬性設為**adLockBatchOptimistic** ，並將**CursorLocation**屬性設定為**adUseClient** ，以針對批次更新所需的 OLE DB 啟用資料指標服務。  
   
- **CursorType**屬性是讀取/寫入時**資料錄集**開啟時，會關閉，且為唯讀狀態。  
+ 當**記錄集**關閉時， **CursorType**屬性是讀取/寫入，而當它開啟時則為唯讀。  
   
 > [!NOTE]
->  **遠端資料服務使用量**用戶端上使用時**資料錄集**物件**CursorType**屬性設為只有**adOpenStatic**。  
+>  **遠端資料服務使用量**在用戶端**記錄集**物件上使用時， **CursorType**屬性只能設定為**adOpenStatic**。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [CursorType、 LockType、 和 EditMode 屬性範例 (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
- [CursorType、 LockType、 和 EditMode 屬性範例 （VC + +）](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
+ [CursorType、LockType 和 EditMode 屬性範例（VB）](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
+ [CursorType、LockType 和 EditMode 屬性範例（VC + +）](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [Supports 方法](../../../ado/reference/ado-api/supports-method.md)

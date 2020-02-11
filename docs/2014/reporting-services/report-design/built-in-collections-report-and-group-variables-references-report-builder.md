@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfedde2b9bdeff831029f2f3916f28bec480d659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106400"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>報表和群組變數集合參考 (報表產生器及 SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66106400"
   
 -   **讀寫使用** ：設定一次某個值，然後在報表工作階段中序列化該值。 變數的讀寫選項會比在報表定義的程式碼區塊中使用靜態變數提供更好的替代方案。  
   
-     當您清除**唯讀**選項可寫入的屬性變數將變數設為`true`。 若要更新運算式的值，請使用 SetValue 方法，例如， `=Variables!MyVariable.SetValue("123")`。  
+     當您清除變數的**唯讀**選項時，變數的可寫入屬性會設定為`true`。 若要更新運算式的值，請使用 SetValue 方法，例如， `=Variables!MyVariable.SetValue("123")`。  
   
     > [!NOTE]  
     >  您無法控制報表處理器初始化變數，或評估更新變數之運算式的時間。 系統未定義變數初始化的執行順序。  

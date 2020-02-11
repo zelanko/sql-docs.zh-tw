@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 257df5742c2f8dec7d48c6d3afb4d6c6373d058c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106885"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>將圖表加入至報表 (報表產生器及 SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "66106885"
   
  將圖表資料區加入至報表最簡單的方式就是執行新增圖表精靈。 該精靈提供直條圖、折線圖、圓形圖、橫條圖和區域圖。 您也可以透過手動方式，加入上述圖表以及其他的圖表類型。  
   
- 將圖表資料區加入至設計介面之後，您可以將數值和非數值資料的報表資料集欄位拖曳到圖表的 [圖表資料] 窗格。 按一下圖表以顯示 [圖表資料] 窗格及其三個區域：數列群組、類別目錄群組和值。  
+ 將圖表資料區加入至設計介面之後，您可以將數值和非數值資料的報表資料集欄位拖曳到圖表的 [圖表資料] 窗格。 按一下圖表即可顯示 [圖表資料] 窗格，其中包含三個區域：[數列群組]、[類別群組] 和 [值]。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -42,7 +42,7 @@ ms.locfileid: "66106885"
   
 ### <a name="to-add-a-chart-to-a-report"></a>若要將圖表加入至報表  
   
-1.  建立報表，並定義資料集。 如需詳細資訊，請參閱 <<c0> [ 將資料加入至報表&#40;報表產生器及 SSRS&#41;](../report-data/report-datasets-ssrs.md)。</c0>  
+1.  建立報表，並定義資料集。 如需詳細資訊，請參閱[將資料加入報表 &#40;報表產生器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)。  
   
 2.  在 [插入]  索引標籤上，按一下 [圖表]  ，然後按一下 [插入圖表]  。  
   

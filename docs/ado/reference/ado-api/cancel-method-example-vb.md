@@ -1,5 +1,5 @@
 ---
-title: Cancel 方法範例 (VB) |Microsoft Docs
+title: Cancel 方法範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4274c51be7bc2d94ca26312b246176bd58d197f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920189"
 ---
 # <a name="cancel-method-example-vb"></a>Cancel 方法範例 (VB)
-這個範例會使用[取消](../../../ado/reference/ado-api/cancel-method-ado.md)方法來取消上一個執行的命令[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件的連接是否忙碌中。  
+這個範例會使用[cancel](../../../ado/reference/ado-api/cancel-method-ado.md)方法來取消在連線物件上執行的命令（[如果連接忙碌](../../../ado/reference/ado-api/connection-object-ado.md)中）。  
   
 ```  
 'BeginCancelVB  
@@ -103,5 +103,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Cancel 方法 (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
+ [Cancel 方法（ADO）](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

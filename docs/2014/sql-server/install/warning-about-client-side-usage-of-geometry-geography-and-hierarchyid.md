@@ -1,5 +1,5 @@
 ---
-title: 有關用戶端使用 GEOMETRY、 GEOGRAPHY 和 HIERARCHYID 的警告 |Microsoft Docs
+title: 有關用戶端使用 GEOMETRY、GEOGRAPHY 和 HIERARCHYID 的警告 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,34 +11,38 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091093"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>有關用戶端使用 GEOMETRY、GEOGRAPHY 和 HIERARCHYID 的警告
-  組件**Microsoft.SqlServer.Types.dll**，其中包含空間資料類型，具有已從 10.0 版升級為 11.0 版。 當某些條件成立時，參考這個組件的自訂應用程式可能會失敗。  
+  包含空間資料類型的元件已從版本10.0 升級到11.0 版。（此 **.dll**）。 當某些條件成立時，參考這個組件的自訂應用程式可能會失敗。  
   
 ## <a name="component"></a>元件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>描述  
- 組件**Microsoft.SqlServer.Types.dll**，其中包含空間資料類型，具有已從 10.0 版升級為 11.0 版。 當下列條件成立時，參考這個組件的自訂應用程式可能會失敗。  
+ 包含空間資料類型的元件已從版本10.0 升級到11.0 版。（此 **.dll**）。 當下列條件成立時，參考這個組件的自訂應用程式可能會失敗。  
   
--   當您移動自訂的應用程式從電腦所在[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]所在的電腦只安裝[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]是安裝，應用程式會失敗，因為參考的 10.0 版**SqlTypes**組件不存在。 您可能會收到下列錯誤訊息：`"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
+-   當您將自訂應用程式從安裝的電腦[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]移至只[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安裝了的電腦時，應用程式將會失敗，因為參考的10.0 版**SqlTypes**元件不存在。 您可能會收到下列錯誤訊息：`"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
--   當您參考**SqlTypes**組件 11.0 版，也安裝了 10.0 版，您可能會看到此錯誤訊息： `"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
+-   當您參考**SqlTypes**元件版本11.0，而且也安裝了10.0 版時，您可能會看到此錯誤訊息：`"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   
--   當您參考**SqlTypes**組件 11.0 版從以.NET 3.5、 4 或 4.5 為目標的自訂應用程式，應用程式會失敗，因為 SqlClient 依照設計載入的組件 10.0 版。 當應用程式呼叫下列其中一個方法時，就會發生這項失敗：  
+-   當您從以 .NET 3.5、4或4.5 為目標的自訂應用程式參考**SqlTypes**元件版本11.0 時，應用程式將會失敗，因為 SqlClient 的設計會載入版本10.0 的元件。 當應用程式呼叫下列其中一個方法時，就會發生這項失敗：  
   
-    -   `GetValue` 類別的 `SqlDataReader` 方法  
+    -   
+  `GetValue` 類別的 `SqlDataReader` 方法  
   
-    -   `GetValues` 類別的 `SqlDataReader` 方法  
+    -   
+  `GetValues` 類別的 `SqlDataReader` 方法  
   
-    -   `SqlDataReader` 類別的括號索引運算子 []  
+    -   
+  `SqlDataReader` 類別的括號索引運算子 []  
   
-    -   `ExecuteScalar` 類別的 `SqlCommand` 方法  
+    -   
+  `ExecuteScalar` 類別的 `SqlCommand` 方法  
   
 ## <a name="corrective-action"></a>更正動作  
  您可以使用下列其中一個方法來解決這個問題：  
@@ -83,8 +87,8 @@ ms.locfileid: "66091093"
 -   您可以在連接字串中針對 "Type System Version" 屬性指定 "SQL Server 2012" 值，強制 SqlClient 載入組件 11.0 版，藉以解決此問題。 此連接字串屬性僅適用於 .NET 4.5 和更新版本。  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md
+ [資料庫引擎升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新的&#93;](sql-server-2014-upgrade-advisor.md
 )  
   
   

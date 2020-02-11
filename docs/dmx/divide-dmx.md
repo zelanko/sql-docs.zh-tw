@@ -1,5 +1,5 @@
 ---
-title: （除法）(DMX) |Microsoft Docs
+title: 拆分（DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 17f1233310ce8b070e12fbf25dca0e256ff34664
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070743"
 ---
 # <a name="divide-dmx"></a>(除) (DMX)
@@ -28,7 +28,7 @@ Dividend / Divisor
 ```  
   
 #### <a name="parameters"></a>參數  
- *被除數*  
+ *股利*  
  有效的資料採礦延伸模組 (DMX) 運算式，會傳回數值。  
   
  *除數*  
@@ -43,10 +43,10 @@ Dividend / Divisor
  兩個運算式的資料類型必須相同，或者其中一個運算式必須可以用隱含方式轉換為另一個運算式的資料類型。 如果除數評估為 Null 值，運算子就會引發錯誤。 如果除數與被除數都評估為 Null 值，運算子就會傳回 Null 值。  
   
 ## <a name="see-also"></a>另請參閱  
- [算術運算子&#40;DMX&#41;](../dmx/operators-arithmetic.md)   
- [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [運算子&#40;DMX&#41;](../dmx/operators-dmx.md)   
- [將&#40;SSIS 運算式&#41;](../integration-services/expressions/divide-ssis-expression.md)   
- [&#40;將&#41; &#40;TRANSACT-SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
+ [&#40;DMX&#41;的算術運算子](../dmx/operators-arithmetic.md)   
+ [DMX&#41; Operator Reference &#40;的資料採礦延伸模組](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [DMX&#41;&#40;的運算子](../dmx/operators-dmx.md)   
+ [除法 &#40;SSIS 運算式&#41;](../integration-services/expressions/divide-ssis-expression.md)   
+ [&#40;除&#41; &#40;Transact-sql&#41;](../t-sql/language-elements/divide-transact-sql.md)  
   
   

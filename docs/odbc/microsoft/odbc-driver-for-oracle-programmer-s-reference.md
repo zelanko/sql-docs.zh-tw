@@ -1,5 +1,5 @@
 ---
-title: ODBC Driver for Oracle 程式設計&#39;參考 |Microsoft Docs
+title: ODBC Driver for Oracle 程式設計人員&#39;s 參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4fe50584664d625040753a666cf7ebdf0c25ab11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915786"
 ---
-# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>ODBC Driver for Oracle 程式設計&#39;參考
+# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>ODBC Driver for Oracle 程式設計人員&#39;s 參考
 > [!IMPORTANT]  
->  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用所提供的 ODBC 驅動程式。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 Oracle 所提供的 ODBC 驅動程式。  
   
- 本章節包含下列主題：  
+ 本節包含下列主題：  
   
 -   [連接字串格式和屬性](../../odbc/microsoft/connection-string-format-and-attributes.md)  
   
--   [連接選項](../../odbc/microsoft/connect-options.md)  
+-   [連線選項](../../odbc/microsoft/connect-options.md)  
   
 -   [陳述式選項](../../odbc/microsoft/statement-options.md)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67915786"
   
 -   [使用索引鍵集驅動資料指標的限制](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)  
   
--   [ODBC Driver for Oracle 預存程序](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
+-   [Oracle 預存程式的 ODBC 驅動程式](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
   
 -   [ODBC Driver for Oracle 錯誤訊息](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
   

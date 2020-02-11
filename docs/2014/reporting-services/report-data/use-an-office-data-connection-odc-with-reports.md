@@ -1,5 +1,5 @@
 ---
-title: 使用 Office 資料連線 (.odc) 報表 (SharePoint 整合模式的 Reporting Services) |Microsoft Docs
+title: 搭配報表使用 Office 資料連線（.odc）（SharePoint 整合模式中的 Reporting Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 983f60396f48e488b20e25f18751f615ded799ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106954"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>搭配報表使用 Office 資料連線 (.odc) (SharePoint 整合模式的 Reporting Services)
@@ -58,7 +58,7 @@ ms.locfileid: "66106954"
   
 4.  選取 [Microsoft OLE DB Provider for SQL Server]  ，然後按一下 [下一步]  。  
   
-5.  輸入伺服器的名稱 (根據預設，此名稱為電腦的網路名稱) 以及具備有效登入和資料庫權限的使用者帳戶。 按一下 [下一步]  。  
+5.  輸入伺服器的名稱 (根據預設，此名稱為電腦的網路名稱) 以及具備有效登入和資料庫權限的使用者帳戶。 按 [下一步]  。  
   
 6.  選取資料庫，然後按一下 [確定]  關閉 [資料連結]  對話方塊。  
   

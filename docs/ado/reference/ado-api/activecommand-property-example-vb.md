@@ -1,5 +1,5 @@
 ---
-title: ActiveCommand 屬性範例 (VB) |Microsoft Docs
+title: ActiveCommand 屬性範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d97f655c89c07f7866fbdee6aab236f942b5499c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921685"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand 屬性範例 (VB)
-此範例示範[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)屬性。  
+這個範例會示範[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)屬性。  
   
- 有一個副程式[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)物件，其**ActiveCommand**屬性用來顯示命令文字和參數，建立**資料錄集**。  
+ 副程式會提供一個[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，其**ActiveCommand**屬性會用來顯示建立**記錄集**的命令文字和參數。  
   
 ```  
 'BeginActiveCommandVB  
@@ -90,9 +90,9 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- **ActiveCommandXprint**常式提供只**資料錄集**物件，但它必須列印命令文字和參數，建立**資料錄集**。 因為可以完成這**Recordset**物件的**ActiveCommand**屬性會產生相關聯[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  
+ **ActiveCommandXprint**常式只會提供一個**記錄集**物件，但是它必須列印建立**記錄集**的命令文字和參數。 這可以完成，因為**Recordset**物件的**ActiveCommand**屬性會產生相關聯的[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  
   
- **命令**物件的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)屬性會產生建立參數化的命令**資料錄集**。 **命令**物件的[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)集合產生的已取代為命令的參數預留位置的值 (" **？** ")。  
+ **Command**物件的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)屬性會產生建立**記錄集**的參數化命令。 **命令**物件的[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)集合所產生的值會取代為命令的參數預留位置（"**？**"）。  
   
  最後，會列印錯誤訊息或作者的名稱和識別碼。  
   
@@ -121,6 +121,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ActiveCommand 屬性 (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [ActiveCommand 屬性（ADO）](../../../ado/reference/ado-api/activecommand-property-ado.md)   
+ [Command 物件（ADO）](../../../ado/reference/ado-api/command-object-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
