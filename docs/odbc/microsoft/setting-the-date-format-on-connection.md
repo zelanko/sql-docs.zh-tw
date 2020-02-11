@@ -1,5 +1,5 @@
 ---
-title: 在連接上設定的日期格式 |Microsoft Docs
+title: 設定連接的日期格式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: ba0d5123-db52-448b-8e19-b7647ce4b361
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3075893d37a401110afbecacc68e452425ad684b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063460"
 ---
 # <a name="setting-the-date-format-on-connection"></a>設定連線的日期格式
 > [!IMPORTANT]  
->  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用所提供的 ODBC 驅動程式。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 Oracle 所提供的 ODBC 驅動程式。  
   
- 新版的 Microsoft ODBC Driver for Oracle 不會自動設定 Oracle 的日期欄位的日期格式。 先前的驅動程式連線時，它使用`ALTER SESSION SET NLS_DATE_FORMAT ='YYYY-MM-DD HH:MI:SS'`。  
+ 新版本的 Microsoft ODBC Driver for Oracle 不會自動設定 Oracle date 欄位的日期格式。 先前當驅動程式連線時，會`ALTER SESSION SET NLS_DATE_FORMAT ='YYYY-MM-DD HH:MI:SS'`使用它。  
   
- 若要設定的日期格式，請呼叫改變工作階段設定，然後再執行 插入。 例如:  
+ 若要設定日期格式，請呼叫 ALTER SESSION SET，然後執行插入。 例如：  
   
 ```  
 conn.Execute "ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD HH:MI:SS' "  

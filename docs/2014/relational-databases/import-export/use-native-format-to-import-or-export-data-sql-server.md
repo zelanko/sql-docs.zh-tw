@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2e91899172dfc6d640df0c33c77e32de3c1c21c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011655"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用原生格式匯入或匯出資料 (SQL Server)
@@ -55,14 +55,15 @@ ms.locfileid: "66011655"
   
      bcp 公用程式使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部二進位資料格式，將資料表中的非字元資料寫入資料檔。  
   
--   `char` 或 `varchar` 資料  
+-   
+  `char` 或 `varchar` 資料  
   
-     每個開頭`char`或是`varchar`欄位中， **bcp**加入前置長度。  
+     在每個`char`或`varchar`欄位的開頭， **bcp**都會加入前置長度。  
   
     > [!IMPORTANT]  
-    >  使用原生模式時，依預設，**bcp** 公用程式會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的字元轉換為 OEM 字元，然後再將它們複製到資料檔。 **bcp** 公用程式會將資料檔中的字元轉換為 ANSI 字元，然後再將它們大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 在進行這些轉換期間，可能會遺失擴充字元。 如有擴充字元，請使用 Unicode 原生格式或指定字碼頁。  
+    >  使用原生模式時， **bcp**公用程式預設會將中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的字元轉換為 OEM 字元，然後再將它們複製到資料檔案。 **Bcp**公用程式會先將資料檔案中的字元轉換為 ANSI 字元，然後再將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]它們大量匯入資料表中。 在進行這些轉換期間，可能會遺失擴充字元。 如有擴充字元，請使用 Unicode 原生格式或指定字碼頁。  
   
--   `sql_variant` 資料  
+-   `sql_variant`data  
   
      如果 `sql_variant` 資料以原生格式資料檔儲存為 SQLVARIANT，則資料會維持它所有的特性。 用來記錄每一個資料值的資料類型的中繼資料，會與資料值一起儲存。 中繼資料是用來以目的地 `sql_variant` 資料行中相同的資料類型，重新建立資料值。  
   
@@ -71,16 +72,16 @@ ms.locfileid: "66011655"
      如需資料轉換的詳細資訊，請參閱[資料類型轉換 &#40;Database Engine&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)。  
   
 ## <a name="command-options-for-native-format"></a>原生格式的命令選項  
- 您可以將原生格式資料匯入資料表，方法是使用 **bcp**、BULK INSERT 或 INSERT ...SELECT \* FROM OPENROWSET(BULK...)。若是 **bcp** 命令或 BULK INSERT 陳述式，您可以在命令列上指定資料格式。 針對 INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式，您必須在格式檔案中指定資料格式。  
+ 您可以使用**bcp**、BULK INSERT 或 INSERT ...，將原生格式資料匯入資料表中。SELECT \* FROM OPENROWSET （BULK ...）。對於**bcp**命令或 BULK INSERT 語句，您可以在命令列上指定資料格式。 對於 INSERT...SELECT * FROM OPENROWSET(BULK...) 陳述式，您必須在格式檔案中指定資料格式。  
   
  下列命令列選項支援原生格式：  
   
-|命令|選項|描述|  
+|Command|選項|描述|  
 |-------------|------------|-----------------|  
-|**bcp**|**-n**|會導致**bcp**公用程式來使用原生資料類型的資料。<sup>1</sup>|  
-|BULK INSERT|DATAFILETYPE **='** native **'**|使用資料的原生或 widenative 資料類型。 請注意，如果利用了格式檔案指定資料類型，就不需要 DATAFILETYPE。|  
+|**in**|**-n**|使**bcp**公用程式使用資料的原生資料類型。<sup>1</sup>|  
+|BULK INSERT|DATAFILETYPE **= '** native **'**|使用資料的原生或 widenative 資料類型。 請注意，如果利用了格式檔案指定資料類型，就不需要 DATAFILETYPE。|  
   
- <sup>1</sup>載入原生 ( **-n**) 與舊版相容的格式資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端，使用 **-V**切換。 如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
+ <sup>1</sup>若要將原生（**-n**）資料載入與舊版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端相容的格式，請使用 **-V**參數。 如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
  如需詳細資訊，請參閱 [bcp 公用程式](../../tools/bcp-utility.md)、[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 或 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)。  
   
@@ -157,10 +158,10 @@ GO
 -   [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 公用程式](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [資料類型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [sql_variant &#40;Transact-SQL&#41;](/sql/t-sql/data-types/sql-variant-transact-sql)   
+ [SQL_variant &#40;Transact-sql&#41;](/sql/t-sql/data-types/sql-variant-transact-sql)   
  [從舊版 SQL Server 匯入原生與字元格式資料](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  

@@ -1,5 +1,5 @@
 ---
-title: 複寫、 變更追蹤、 異動資料擷取和 AlwaysOn 可用性群組 (SQL Server) |Microsoft Docs
+title: 複寫、變更追蹤、變更資料捕獲和 AlwaysOn 可用性群組（SQL Server） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814054"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>複寫、變更追蹤、變更資料擷取和 AlwaysOn 可用性群組 (SQL Server)
@@ -27,19 +27,19 @@ ms.locfileid: "62814054"
   
  
   
-##  <a name="Overview"></a> AlwaysOn 可用性群組的複寫概觀  
+##  <a name="Overview"></a>AlwaysOn 可用性群組上的複寫總覽  
   
 ###  <a name="PublisherRedirect"></a> 發行者重新導向  
  當發行的資料庫能夠感知 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]時，提供發行資料庫之代理程式存取權的散發者就會使用 redirected_publishers 項目來設定。 這些項目會重新導向原本設定的發行者/資料庫配對，並利用可用性群組接聽程式名稱來連接到發行者和發行資料庫。 透過可用性群組接聽程式名稱所建立的連接將會在容錯移轉時失敗。 在容錯移轉之後，當複寫代理程式重新啟動時，連接將自動重新導向至新的主要複本。  
   
- 在 AlwaysOn 可用性群組中，次要資料庫不能是發行者。 當複寫與 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]結合時，不支援重新發行。  
+ 在 AlwaysOn 可用性群組中，次要資料庫不能是發行者。 當複寫與 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 結合時，不支援重新發行。  
   
  如果發行的資料庫是可用性群組的成員，而且發行者已重新導向，它就必須重新導向至與可用性群組相關聯的可用性群組接聽程式名稱。 它可能不會重新導向至明確節點。  
   
 > [!NOTE]  
 >  在容錯移轉到次要複本之後，複寫監視器就無法調整 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行執行個體的名稱，而且會繼續在原始主要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體名稱之下顯示複寫資訊。 在容錯移轉之後，便無法使用複寫監視器輸入追蹤 Token，但是可以在複寫監視器中看到在新的發行者端使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]輸入的追蹤 Token。  
   
-###  <a name="Changes"></a> 支援 AlwaysOn 可用性群組之複寫代理程式的一般變更  
+###  <a name="Changes"></a>複寫代理程式的一般變更，以支援 AlwaysOn 可用性群組  
  三個複寫代理程式已修改成支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 記錄讀取器、快照集和合併代理程式已修改成查詢重新導向發行者的散發資料庫，並且使用傳回的可用性群組接聽程式名稱來連接到資料庫發行者 (如果已宣告重新導向發行者的話)。  
   
  根據預設，當代理程式查詢散發者以判斷原始發行者是否已重新導向時，會驗證重新導向目前目標的適用性，然後才將重新導向的主機傳回至代理程式。 這是建議的行為。 不過，如果代理程式啟動太頻繁，與驗證預存程序相關的負擔成本可能太高。 新命令列參數 *BypassPublisherValidation*已加入至記錄讀取器、快照集和合併代理程式。 使用此參數時，重新導向的主機會立即傳回至代理程式，而略過驗證預存程序的執行。  
@@ -59,7 +59,7 @@ ms.locfileid: "62814054"
   
      追蹤旗標 1448 可讓複寫記錄讀取器向前移動，即使非同步次要複本尚未認可收到變更也一樣。 即使這個追蹤旗標已啟用，記錄讀取器一定會等候同步次要複本。 記錄讀取器不會超過同步次要複本的最小認可。 這個追蹤旗標會套用至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體，而不只套用至可用性群組、可用性資料庫或記錄讀取器執行個體。 這個追蹤旗標會立即生效，不必重新啟動。 您可以事先或在非同步次要複本失敗時啟動它。  
   
-###  <a name="StoredProcs"></a> 支援 AlwaysOn 的預存程序  
+###  <a name="StoredProcs"></a>支援 AlwaysOn 的預存程式  
   
 -   **sp_redirect_publisher**  
   
@@ -109,9 +109,9 @@ ms.locfileid: "62814054"
     ```  
   
     > [!NOTE]  
-    >  您應該在容錯移轉前於所有可能的容錯移轉目標上建立這些作業，並且將它們標示為停用，直到主機上的可用性複本變成新的主要複本為止。 當本機資料庫變成次要資料庫時，在舊主要資料庫上執行的 CDC 作業也應該停用。 若要停用和啟用作業，請使用 [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql) 的 *@enabled* 選項。 如需有關建立 CDC 作業的詳細資訊，請參閱 [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)支援複寫、異動資料擷取 (CDC) 和變更追蹤 (CT)。  
+    >  您應該在容錯移轉前於所有可能的容錯移轉目標上建立這些作業，並且將它們標示為停用，直到主機上的可用性複本變成新的主要複本為止。 當本機資料庫變成次要資料庫時，在舊主要資料庫上執行的 CDC 作業也應該停用。 若要停用和啟用作業， *@enabled*請使用[sp_update_job &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)的選項。 如需有關建立 CDC 作業的詳細資訊，請參閱 [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)支援複寫、異動資料擷取 (CDC) 和變更追蹤 (CT)。  
   
--   **將 CDC 角色加入 AlwaysOn 主要資料庫複本**  
+-   **將 CDC 角色加入至 AlwaysOn 主要資料庫複本**  
   
      當資料表啟用 CDC 時，有可能將資料庫角色與擷取執行個體建立關聯。 如果指定了角色，希望使用 CDC 資料表值函式來存取資料表變更的使用者必須不只有追蹤資料表資料行的選取存取權，也必須是具名角色的成員。 如果指定的角色尚未存在，則會建立角色。 當資料庫角色自動加入至 AlwaysOn 主要資料庫時，這些角色也會傳播至可用性群組的次要資料庫。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "62814054"
   
      雖然在許多情況下用戶端應用程式一定會要連接到目前的主要複本，但這不是利用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的唯一方法。 如果可用性群組設定為支援可讀取的次要複本，則也可以從次要節點收集變更資料。  
   
-     已設定可用性群組時，與 SECONDARY_ROLE 關聯的 ALLOW_CONNECTIONS 屬性會用來指定支援的次要存取類型。 如果設定為 ALL，則會允許次要的所有連接，但只有需要唯讀存取的連接會成功。 如果設定為 READ_ONLY，則需要在建立次要資料庫的連接時指定唯讀意圖，連接才會成功。 如需詳細資訊，請參閱[設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)。  
+     已設定可用性群組時，與 SECONDARY_ROLE 關聯的 ALLOW_CONNECTIONS 屬性會用來指定支援的次要存取類型。 如果設定為 ALL，則會允許次要的所有連接，但只有需要唯讀存取的連接會成功。 如果設定為 READ_ONLY，則需要在建立次要資料庫的連接時指定唯讀意圖，連接才會成功。 如需詳細資訊，請參閱 [設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)。  
   
      您可以使用下列查詢，以判斷是否需要唯讀意圖以連接到可讀取次要複本。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "62814054"
   
      可用性群組接聽程式名稱或明確節點名稱都可用於找出次要複本。 如果使用可用性群組接聽程式名稱，則存取會導向至任何合適的次要複本。  
   
-     當`sp_addlinkedserver`用來建立連結的伺服器，以存取次要複本時， *@datasrc* 參數會用於可用性群組接聽程式名稱或明確伺服器名稱，而 *@provstr* 參數用來指定唯讀意圖。  
+     當`sp_addlinkedserver`用來建立連結的伺服器以存取次要複本時， *@datasrc*參數會用於可用性群組接聽程式名稱或明確伺服器名稱，而*@provstr*參數則是用來指定唯讀意圖。  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -173,7 +173,7 @@ ms.locfileid: "62814054"
      一般而言，若要讓用戶端存取位於 AlwaysOn 可用性群組之成員資料庫的變更資料，您應該使用網域登入。 為確保在容錯移轉後持續存取變更資料，網域使用者需要所有支援可用性群組複本之主機的存取權限。 如果將資料庫使用者加入至主要複本的資料庫，而此使用者已與網域登入相關聯，則此資料庫使用者會傳播至次要資料庫並繼續與指定的網域登入相關聯。 如果新資料庫使用者與 SQL Server 驗證登入相關聯，則次要資料庫的使用者會傳播但沒有登入。 雖然相關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證登入可用來存取原本定義資料庫使用者所在之主要資料庫的變更資料，但該節點是唯一可存取的節點。 此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證登入無法存取任何次要資料庫的資料，也無法存取資料庫使用者定義所在之原始資料庫以外的任何新主要資料庫的資料。  
   
 ###  <a name="CT"></a> 變更追蹤  
- 啟用變更追蹤 (CT) 的資料庫可以屬於 AlwaysOn 可用性群組的一部分。 不需要進行其他組態設定。 使用 CDC 資料表值函式 (TVF) 存取變更資料表資料的變更追蹤用戶端應用程式，需要在容錯移轉後找出主要複本的功能。 如果用戶端應用程式透過可用性群組接聽程式名稱進行連接，連接要求一律會適當導向至目前的主要複本。  
+ 啟用變更追蹤 (CT) 的資料庫可以屬於 AlwaysOn 可用性群組的一部分。 不需要任何其他設定。 使用 CDC 資料表值函式 (TVF) 存取變更資料表資料的變更追蹤用戶端應用程式，需要在容錯移轉後找出主要複本的功能。 如果用戶端應用程式透過可用性群組接聽程式名稱進行連接，連接要求一律會適當導向至目前的主要複本。  
   
 > [!NOTE]  
 >  變更追蹤資料必須一律從主要複本取得。 嘗試存取次要複本的變更資料會導致下列錯誤：  
@@ -185,26 +185,26 @@ ms.locfileid: "62814054"
 ##  <a name="Prereqs"></a> 使用複寫的必要條件、限制和考量  
  本節描述使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]來部署複寫的考量，包括必要條件、限制和建議。  
   
-### <a name="prerequisites"></a>先決條件  
+### <a name="prerequisites"></a>Prerequisites  
   
 -   當使用異動複寫，而且發行集資料庫是在可用性群組時，發行者和散發者都必須至少執行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 訂閱者可以使用較低層級的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 -   當使用合併式複寫，而且發行集資料庫是在可用性群組時：  
   
-    -   推入的訂用帳戶：「 發行者 」 和 「 散發者 」 必須至少執行[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
+    -   發送訂閱：發行者和散發者都必須至少執行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
   
-    -   提取訂閱：發行者、 散發者 」 和 「 訂閱者 」 資料庫必須至少在[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 這是因為訂閱者的合併代理程式必須知道可用性群組如何容錯移轉到次要複本。  
+    -   提取訂閱：發行者、散發者和訂閱者資料庫必須至少是在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 這是因為訂閱者的合併代理程式必須知道可用性群組如何容錯移轉到次要複本。  
   
 -   不支援將散發資料庫放置到可用性群組上。  
   
--   發行者執行個體必須滿足參與 AlwaysOn 可用性群組所需的所有必要條件。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
+-   發行者執行個體必須滿足參與 AlwaysOn 可用性群組所需的所有必要條件。 如需詳細資訊[，請參閱 AlwaysOn 可用性群組 &#40;SQL Server&#41;的必要條件、限制和建議](prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 ### <a name="restrictions"></a>限制  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]所支援的複寫組合：  
   
 |||||  
 |-|-|-|-|  
-||**發行者**|**散發者** <sup>3</sup>|**訂閱者**|  
+||**發行者**|**** 散發者<sup>3</sup>|**訂閱者**|  
 |**異動**|是<sup>1</sup>|否|是<sup>2</sup>|  
 |**P2P**|否|否|否|  
 |**合併式**|是|否|是<sup>2</sup>|  
@@ -212,9 +212,9 @@ ms.locfileid: "62814054"
   
  <sup>1</sup>不包含雙向和相互異動複寫的支援。  
   
- <sup>2</sup>容錯移轉至複本資料庫是手動程序。 沒有提供自動容錯移轉。  
+ <sup>2</sup>容錯移轉至複本資料庫是手動程式。 沒有提供自動容錯移轉。  
   
- <sup>3</sup>散發者資料庫不支援搭配[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]或資料庫鏡像。  
+ <sup>3</sup>散發者資料庫不支援搭配[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]或資料庫鏡像使用。  
   
 ### <a name="considerations"></a>考量  
   
@@ -227,13 +227,13 @@ ms.locfileid: "62814054"
 ##  <a name="RelatedTasks"></a> 相關工作  
  **複寫**  
   
--   [設定 AlwaysOn 可用性群組 (SQL Server) 的複寫](always-on-availability-groups-sql-server.md)  
+-   [設定 AlwaysOn 可用性群組的複寫 (SQL Server)](always-on-availability-groups-sql-server.md)  
   
--   [維護 AlwaysOn 發行集資料庫&#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
+-   [維護 AlwaysOn 發行集資料庫 &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
 -   [複寫管理常見問題集](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
- **Change data capture**  
+ **變更資料擷取**  
   
 -   [啟用和停用異動資料擷取 &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)  
   
@@ -250,10 +250,10 @@ ms.locfileid: "62814054"
 -   [使用變更追蹤 &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [複寫訂閱者及 AlwaysOn 可用性群組&#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
- [必要條件、 限制和建議，AlwaysOn 可用性群組的&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性群組：互通性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
+ [複寫訂閱者及 AlwaysOn 可用性群組 &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性群組 &#40;SQL Server 的必要條件、限制和建議&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性群組：互通性（SQL Server）](always-on-availability-groups-interoperability-sql-server.md) [AlwaysOn 容錯移轉叢集實例（SQL Server）](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [關於異動資料擷取 &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [關於變更追蹤 &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [SQL Server 複寫](../../../relational-databases/replication/sql-server-replication.md)   

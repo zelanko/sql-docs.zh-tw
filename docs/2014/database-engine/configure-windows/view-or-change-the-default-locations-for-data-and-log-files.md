@@ -1,5 +1,5 @@
 ---
-title: 檢視或變更預設位置，資料和記錄檔 (SQL Server Management Studio) |Microsoft Docs
+title: 查看或變更資料和記錄檔的預設位置（SQL Server Management Studio） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06d17a4feaec0db614f61fb7761b37ea415efc24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808707"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>檢視或變更資料及記錄檔的預設位置 (SQL Server Management Studio)
@@ -29,18 +29,18 @@ ms.locfileid: "62808707"
   
      [建議](#Recommendations)  
   
--   **若要檢視或變更資料和記錄檔的預設位置使用：**  
+-   **使用下列方法檢視或變更資料和記錄檔的預設位置：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
--   **後續操作：** [變更預設位置](#FollowUp)  
+-   **後續操作：**  [變更預設位置](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Recommendations"></a> 建議  
  保護資料檔和記錄檔的最佳作法是確定它們受到存取控制清單 (ACL) 所保護。 ACL 應該設在建立這些檔案所在的根目錄下。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
   
@@ -48,17 +48,17 @@ ms.locfileid: "62808707"
   
 #### <a name="to-view-or-change-the-default-locations-for-database-files"></a>若要檢視或變更資料庫檔案的預設位置  
   
-1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]  。  
+1.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後按一下 **[屬性]**。  
   
 2.  在左面板中，按一下 **[資料庫設定]** 頁面。  
   
 3.  在 **[資料庫預設位置]** 中，您可以檢視新資料檔和新記錄檔的目前預設位置。 若要變更預設位置，在 **[資料]** 或 **[記錄]** 欄位中輸入新的預設路徑名稱，或按一下 [瀏覽] 按鈕來尋找並選取路徑名稱。  
   
-##  <a name="FollowUp"></a> 後續操作：變更預設位置之後  
+##  <a name="FollowUp"></a>後續操作：變更預設位置之後  
  您必須停止然後啟動 SQL Server 服務以完成變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [建立資料庫 &#40;SQL Server Transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [建立資料庫](../../relational-databases/databases/create-a-database.md)  
   
   

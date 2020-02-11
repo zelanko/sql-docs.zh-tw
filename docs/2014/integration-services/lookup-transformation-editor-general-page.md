@@ -1,5 +1,5 @@
 ---
-title: 查閱轉換編輯器 （一般頁面） |Microsoft Docs
+title: 查閱轉換編輯器（一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cb83e95bd13b566f46386cf10676ee882a954762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057835"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>查閱轉換編輯器 (一般頁面)
@@ -31,16 +31,16 @@ ms.locfileid: "66057835"
  **部分快取**  
  在查閱轉換執行期間產生參考資料集。 將參考資料集中具有相符項目的資料列，以及在資料集中沒有相符項目的資料列載入到快取。  
   
- **沒有快取**  
+ **無快取**  
  在查閱轉換執行期間產生參考資料集。 沒有資料會載入到快取。  
   
- **快取連接管理員**  
+ **快取連線管理員**  
  將查閱轉換設定為使用快取連接管理員。 只有在選取 [完整快取] 選項時，才能使用這個選項。  
   
- **[無快取]**  
+ **OLE DB 連線管理員**  
  將查閱轉換設定為使用 OLE DB 連接管理員。  
   
- **指定如何處理無相符項目的資料列**  
+ **指定如何處理無相符專案的資料列**  
  選取選項以處理沒有至少符合參考資料集中一個項目的資料列。  
   
  當您選取 **[將資料列重新導向無相符結果輸出]** 時，資料列會重新導向無相符結果輸出，且不當做錯誤處理。 無法使用 **[查閱轉換編輯器]** 對話方塊的 **[錯誤輸出]** 頁面上的 **[錯誤]** 選項。  
@@ -51,10 +51,10 @@ ms.locfileid: "66057835"
  blogs.msdn.com 上的部落格文章： [查閱快取模式](https://go.microsoft.com/fwlink/?LinkId=219518)  
   
 ## <a name="see-also"></a>另請參閱  
- [Cache Connection Manager](connection-manager/cache-connection-manager.md)   
+ [快取連線管理員](connection-manager/cache-connection-manager.md)   
  [查閱轉換編輯器 &#40;連接頁面&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [查閱轉換編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [查閱轉換編輯器 &#40;進階頁面&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [查閱轉換編輯器 &#40;Advanced Page&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
  [查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
   
   

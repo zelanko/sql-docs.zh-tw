@@ -14,23 +14,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f880dcacbd4571c188d0368a0378a89c45787af2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011719"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>使用格式檔案略過資料欄位 (SQL Server)
   資料檔所包含的欄位，可以比資料表中的資料行數多。 此主題描述如何將資料表資料行對應到相對的資料欄位並忽略多餘欄位，藉以修改非 XML 格式檔案與 XML 格式檔案，讓資料檔能容納更多欄位。  
   
 > [!NOTE]  
->  您可以透過下列項目，使用非 XML 或 XML 格式檔案，將資料檔大量匯入至資料表：**bcp** 命令、BULK INSERT 陳述式或 INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式。 如需詳細資訊，請參閱[使用格式檔案大量匯入資料 &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)。  
+>  可以使用非 XML 或 XML 格式檔案，將資料檔案大量匯入資料表，方法是使用**bcp**命令、BULK INSERT 語句或 INSERT .。。SELECT * FROM OPENROWSET （BULK ...）語句。 如需詳細資訊，請參閱[使用格式檔案大量匯入資料 &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)。  
   
 ## <a name="sample-data-file-and-table"></a>範例資料檔與資料表  
  此主題中的修改格式檔案的範例是以下列資料表與資料檔為基礎。  
   
 ### <a name="sample-table"></a>範例資料表  
- 此範例需要在 `myTestSkipField` 結構描述底下的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫中建立一個名為 `dbo` 的資料表。 若要建立這個資料表，請在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器中執行下列程式碼：  
+ 此範例需要在 `myTestSkipField` 結構描述底下的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫中建立一個名為 `dbo` 的資料表。 若要建立此資料表， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]請在 [查詢編輯器] 中執行下列程式碼：  
   
 ```  
 USE AdventureWorks2012;  
@@ -66,7 +66,8 @@ GO
 ## <a name="non-xml-format-file-for-more-data-fields"></a>使用非 XML 格式檔案以取得更多資料欄位  
  下列格式檔案 `myTestSkipField.fmt` 會將 `myTestSkipField-c.dat` 中的欄位對應至 `myTestSkipField` 資料表的資料行。 格式檔案使用字元資料格式。 若要略過資料行對應，就必須將其資料行順序值變更為 0，如格式檔案中的 `ExtraField` 資料行所示。  
   
- `myTestSkipField.fmt` 格式檔案包含下列資訊：  
+ 
+  `myTestSkipField.fmt` 格式檔案包含下列資訊：  
   
 ```  
 9.0  
@@ -102,7 +103,8 @@ GO
   
  下列格式檔案 `myTestSkipField.xml` 會將 `myTestSkipField-c.dat` 中的欄位對應至 `myTestSkipField` 資料表的資料行。 格式檔案使用字元資料格式。  
   
- `myTestSkipField.xml` 格式檔案包含下列資訊：  
+ 
+  `myTestSkipField.xml` 格式檔案包含下列資訊：  
   
 ```  
 <?xml version="1.0"?>  
@@ -142,10 +144,10 @@ GO
 >  如需 XML 結構描述語法的相關資訊以及 XML 格式檔案的其他範例，請參閱[XML 格式檔案 &#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 公用程式](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [使用格式檔案略過資料表資料行 &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
- [使用格式檔案將資料表資料行對應至資料檔欄位 &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+ [使用格式檔案將資料表資料行對應至資料檔案欄位 &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
   

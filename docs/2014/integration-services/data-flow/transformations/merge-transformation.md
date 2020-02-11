@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 741ea39f6a60d7c9f52fb901a1b038a352e948b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770413"
 ---
 # <a name="merge-transformation"></a>合併轉換
@@ -56,7 +56,7 @@ ms.locfileid: "62770413"
 ## <a name="configuration-of-the-merge-transformation"></a>合併轉換的組態  
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需可在 [合併轉換編輯器]  對話方塊中設定之屬性的詳細資訊，請參閱[合併轉換編輯器](../../merge-transformation-editor.md)。  
+ 如需可在 [合併轉換編輯器]**** 對話方塊中設定之屬性的詳細資訊，請參閱[合併轉換編輯器](../../merge-transformation-editor.md)。  
   
  如需可以用程式設計的方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   

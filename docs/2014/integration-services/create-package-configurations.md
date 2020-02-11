@@ -1,5 +1,5 @@
 ---
-title: 建立封裝組態 |Microsoft Docs
+title: 建立套件設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -19,22 +19,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060171"
 ---
 # <a name="create-package-configurations"></a>Create Package Configurations
-  使用 [封裝組態組合管理] 對話方塊和「封裝組態精靈」，可以建立封裝組態。 若要存取這些工具，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [SSIS] 功能表中，按一下 [封裝組態]。  
+  使用 [封裝組態組合管理]**** 對話方塊和「封裝組態精靈」，可以建立封裝組態。 若要存取這些工具，請在 ** 的 [SSIS]**** 功能表中，按一下 [封裝組態]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
 > [!NOTE]  
->  您也可以按一下 [組態] 屬性旁邊的省略符號按鈕，藉以存取 [封裝組態組合管理]。 [組態] 屬性會顯示在封裝的屬性視窗中。  
+>  您也可以按一下 [設定 **] 屬性旁的省略號**按鈕，以存取 [**套件設定召集人**]。 [組態] 屬性會顯示在封裝的屬性視窗中。  
   
 > [!NOTE]  
->  組態可用於封裝部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型讓您能將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 如需有關部署模型的詳細資訊，請參閱＜ [部署專案和封裝](packages/deploy-integration-services-ssis-projects-and-packages.md)＞。  
+>  組態可用於封裝部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型讓您能將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)＞。  
   
- 在 [封裝組態組合管理] 對話方塊中，您可啟用封裝以使用組態、加入和刪除組態，以及設定載入組態的慣用順序。  
+ 在 [封裝組態組合管理]**** 對話方塊中，您可啟用封裝以使用組態、加入和刪除組態，以及設定載入組態的慣用順序。  
   
 > [!NOTE]  
 >  以喜好的順序載入封裝組態時，組態會根據 **[封裝組態組合管理]** 對話方塊中清單顯示的順序 (由上而下) 依序載入。 不過，在執行階段，封裝組態可能不會以喜好的順序載入。 特別是，父封裝組態會在其他類型的組態後面載入。  
@@ -42,7 +42,7 @@ ms.locfileid: "66060171"
 > [!NOTE]  
 >  如果多個組態設定同一物件屬性，則在執行階段會使用上次載入的值。  
   
- 從 [封裝組態組合管理] 對話方塊執行 [封裝組態精靈]，以逐步引導您建立組態。 若要執行 [封裝組態精靈]，請在 [封裝組態組合管理] 對話方塊中加入新的組態，或編輯現有的組態。 在精靈頁面上，選擇組態類型、選取是要直接存取組態還是使用環境變數，並選取要在組態中儲存的屬性。  
+ 從 [封裝組態組合管理]**** 對話方塊執行 [封裝組態精靈]，以逐步引導您建立組態。 若要執行 [封裝組態精靈]，請在 [封裝組態組合管理]**** 對話方塊中加入新的組態，或編輯現有的組態。 在精靈頁面上，選擇組態類型、選取是要直接存取組態還是使用環境變數，並選取要在組態中儲存的屬性。  
   
  下列範例會顯示 [封裝組態精靈] 的 [正在完成精靈] 頁面上所顯示之變數及封裝的目標屬性：  
   
@@ -66,18 +66,18 @@ ms.locfileid: "66060171"
   
  "\Package" 代表根目錄，而句號 (.) 則會分隔物件，這些物件會定義組態所更新之屬性的路徑。 變數及屬性的值是以方括號括住。 不論封裝名稱，組態中一律會使用 Package 這個詞彙；然而，路徑中的所有其他物件都會使用它們的使用者自訂名稱。  
   
- 在精靈完成後，新組態會加入 [封裝組態組合管理] 對話方塊中的組態清單。  
+ 在精靈完成後，新組態會加入 [封裝組態組合管理]**** 對話方塊中的組態清單。  
   
 > [!NOTE]  
->  「封裝組態精靈」的最後一頁，也就是 [正在完成精靈] 頁面，會列出組態中的目標屬性。 如果您想要在執行封裝時使用 **dtexec** 命令提示公用程式來更新屬性，可以執行封裝組態精靈來產生代表屬性路徑的字串，然後再將這些字串複製並貼到命令提示字元視窗中，以便搭配 **dtexec** 的設定選項使用。  
+>  「封裝組態精靈」的最後一頁，也就是 [正在完成精靈] 頁面，會列出組態中的目標屬性。 如果您想要在執行封裝時使用 **dtexec** 命令提示公用程式來更新屬性，可以執行封裝組態精靈來產生代表屬性路徑的字串，然後再將這些字串複製並貼到命令提示字元視窗中，以便搭配 **dtexec**的設定選項使用。  
   
- 下表描述 [封裝組態組合管理] 對話方塊中組態清單中的資料行。  
+ 下表描述 [封裝組態組合管理]**** 對話方塊中組態清單中的資料行。  
   
-|「資料行」|描述|  
+|資料行|描述|  
 |------------|-----------------|  
-|**組態名稱**|組態的名稱。|  
-|**組態類型**|組態類型。|  
-|**組態字串**|組態的位置。 此位置可以是路徑、環境變數、登錄機碼、父封裝變數名稱或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的資料表。|  
+|**設定名稱**|組態的名稱。|  
+|**設定類型**|組態類型。|  
+|**設定字串**|組態的位置。 此位置可以是路徑、環境變數、登錄機碼、父封裝變數名稱或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的資料表。|  
 |**目標物件**|具有擁有組態之屬性的物件名稱。 如果組態為 XML 組態檔，則資料行是空白的，因為該組態可更新多個物件。|  
 |**目標屬性**|屬性的名稱。 如果組態寫入 XML 組態檔或 SQL Server 資料表，則資料行是空白的，因為該組態可更新多個物件。|  
   
@@ -87,38 +87,38 @@ ms.locfileid: "66060171"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，按一下 [控制流程]、[資料流程]、[事件處理常式] 或 [封裝總管] 索引標籤。  
+3.  在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，按一下 [控制流程]****、[資料流程]****、[事件處理常式]**** 或 [封裝總管]**** 索引標籤。  
   
-4.  在 [SSIS] 功能表上，按一下 [封裝組態]。  
+4.  在 [SSIS]  功能表上，按一下 [封裝組態]  。  
   
-5.  在 [封裝組態組合管理] 對話方塊中，選取 [啟用封裝組態]，然後按一下 [加入]。  
+5.  在 [封裝組態組合管理]**** 對話方塊中，選取 [啟用封裝組態]****，然後按一下 [加入]****。  
   
-6.  在 [封裝組態精靈] 頁面的歡迎頁面上，按 [下一步]。  
+6.  在 [封裝組態精靈] 頁面的歡迎頁面上，按 [下一步]****。  
   
 7.  在 [選取組態類型] 頁面上，指定組態類型，然後設定與組態類型相關聯的屬性。 如需詳細資訊，請參閱 [封裝組態精靈 UI 參考](../../2014/integration-services/package-configuration-wizard-ui-reference.md)。  
   
-8.  在 [選取要匯出的屬性] 頁面上，選取要併入組態之封裝物件的屬性。 如果組態類型僅支援一個屬性，此精靈頁面的標題將為 [選取目標屬性]。 如需詳細資訊，請參閱[封裝組態精靈 UI 參考](../../2014/integration-services/package-configuration-wizard-ui-reference.md)。  
+8.  在 [選取要匯出的屬性] 頁面上，選取要併入組態之封裝物件的屬性。 如果組態類型僅支援一個屬性，此精靈頁面的標題將為 [選取目標屬性]。 如需詳細資訊，請參閱 [封裝組態精靈 UI 參考](../../2014/integration-services/package-configuration-wizard-ui-reference.md)。  
   
     > [!NOTE]  
-    >  只有 [XML 組態檔] 和 [SQL Server] 組態類型支援在組態中併入多個屬性。  
+    >  只有 [XML 組態檔]**** 和 [SQL Server]**** 組態類型支援在組態中併入多個屬性。  
   
-9. 在 [正在完成精靈] 頁面上，輸入組態的名稱，然後按一下 [完成]。  
+9. 在 [正在完成精靈] 頁面上，輸入組態的名稱，然後按一下 [完成]****。  
   
-10. 檢視 [封裝組態組合管理] 對話方塊中的組態。  
+10. 檢視 [封裝組態組合管理]**** 對話方塊中的組態。  
   
-11. 按一下 [ **關閉**]。  
+11. 按一下 [關閉]  。  
   
 ## <a name="external-resources"></a>外部資源  
   
--   msdn.microsoft.com 上的技術文件： [了解 Integration Services 封裝組態](https://go.microsoft.com/fwlink/?LinkId=165643)  
+-   msdn.microsoft.com 上的技術文件： [Understanding Integration Services Package Configurations](https://go.microsoft.com/fwlink/?LinkId=165643)(了解 Integration Services 封裝組態)  
   
--   部落格文章[程式碼-封裝組態建立套件](https://go.microsoft.com/fwlink/?LinkId=217663)， www.sqlis.com 上。  
+-   Www.sqlis.com 上的 Blog 專案，[以程式碼套件設定建立封裝](https://go.microsoft.com/fwlink/?LinkId=217663)。  
   
--   部落格文章[API 範例-以程式設計方式將組態檔加入封裝](https://go.microsoft.com/fwlink/?LinkId=217664)，blogs.msdn.com 上。  
+-   Blog 專案， [API 範例-在 blogs.msdn.com 上以程式設計方式將設定檔新增至套件](https://go.microsoft.com/fwlink/?LinkId=217664)。  
   
 ## <a name="see-also"></a>另請參閱  
- [封裝組態](../../2014/integration-services/package-configurations.md)   
- [封裝部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
+ [套件設定](../../2014/integration-services/package-configurations.md)   
+ [&#40;SSIS&#41;的套件部署](packages/legacy-package-deployment-ssis.md)   
  [以程式設計方式使用變數](building-packages-programmatically/working-with-variables-programmatically.md)  
   
   

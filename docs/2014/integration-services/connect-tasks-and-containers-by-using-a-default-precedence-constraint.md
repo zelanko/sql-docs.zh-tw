@@ -1,5 +1,5 @@
 ---
-title: 使用預設的優先順序條件約束連接工作和容器 |Microsoft Docs
+title: 使用預設的優先順序條件約束來連接工作和容器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e5c0ad2405c0d62b703dcb7fa668837e7e47386
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060424"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>使用預設的優先順序條件約束來連接工作和容器
@@ -34,11 +34,11 @@ ms.locfileid: "66060424"
   
 2.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-3.  在 [選項]  對話方塊中，展開 [商業智慧設計師]  ，然後展開 [Integration Services 設計師]  。  
+3.  在 [選項]**** 對話方塊中，展開 [商業智慧設計師]****，然後展開 [Integration Services 設計師]****。  
   
-4.  按一下 [控制流程自動連接]  ，然後選取 [依預設，將新形狀連接到選取的形狀]  。  
+4.  按一下 [控制流程自動連接]****，然後選取 [依預設，將新形狀連接到選取的形狀]****。  
   
-5.  在下拉式清單中，選擇 [在新形狀使用「失敗」條件約束]  或 [在新形狀使用「完成」條件約束]  。  
+5.  在下拉式清單中，選擇 [在新形狀使用「失敗」條件約束]**** 或 [在新形狀使用「完成」條件約束]****。  
   
 6.  按一下 [確定]  。  
   
@@ -50,13 +50,13 @@ ms.locfileid: "66060424"
   
 3.  按一下 **[控制流程]** 索引標籤。  
   
-4.  在 [控制流程]  索引標籤的設計介面上，按一下工作或容器，然後將其連接子拖曳到您要套用優先順序條件約束的可執行檔。  
+4.  在 [控制流程]**** 索引標籤的設計介面上，按一下工作或容器，然後將其連接子拖曳到您要套用優先順序條件約束的可執行檔。  
   
 5.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [優先順序條件約束](control-flow/precedence-constraints.md)   
- [使用快顯功能表設定優先順序條件約束的值](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
+ [使用快捷方式功能表來設定優先順序條件約束的值](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
  [設定優先順序條件約束的屬性](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)   
  [在優先順序條件約束中使用運算式](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
   

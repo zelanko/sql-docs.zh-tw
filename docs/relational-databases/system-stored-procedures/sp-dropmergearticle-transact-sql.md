@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergearticle (TRANSACT-SQL) |Microsoft Docs
+title: sp_dropmergearticle （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/02/2016
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 751f99cad3a2064dce366a90905918075cb697a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056486"
 ---
-# <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
+# <a name="sp_dropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   從合併式發行集中移除發行項。 這個預存程序執行於發行集資料庫的發行者端。  
@@ -43,38 +43,38 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'` 是要卸除發行項的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'`這是要卸載發行項的發行集名稱。 *發行*集是**sysname**，沒有預設值。  
   
-`[ @article = ] 'article'` 是要從給定的發行集卸除的發行項的名稱。 *發行項*已**sysname**，沒有預設值。 如果**所有**，移除指定的合併式發行集的所有現有發行項。 即使*一文*是**所有**，發行集仍必須先卸除個別發行項。  
+`[ @article = ] 'article'`這是要從指定發行集中卸載的發行項名稱。 *文章*是**sysname**，沒有預設值。 如果是**all**，就會移除指定之合併式發行集中的所有現有文章。 *即使發行項*是**全部**的，仍然必須與發行項分開卸載發行集。  
   
-`[ @ignore_distributor = ] ignore_distributor` 指出是否要將此預存程序執行而不需要連線到散發者。 *ignore_distributor*已**位元**，預設值是**0**。  
+`[ @ignore_distributor = ] ignore_distributor`指出是否在未連接到散發者的情況下執行此預存程式。 *ignore_distributor*是**bit**，預設值是**0**。  
   
-`[ @reserved = ] reserved` 是保留供日後使用。 *保留*已**nvarchar(20)** ，預設值是 NULL。  
+`[ @reserved = ] reserved`保留供日後使用。 *reserved*是**Nvarchar （20）**，預設值是 Null。  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 啟用或停用使快照集失效的能力。 *force_invalidate_snapshot*已**位元**，預設值**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`啟用或停用使快照集失效的能力。 *force_invalidate_snapshot*是**bit**，預設值是**0**。  
   
- **0**指定合併發行項的變更不會使快照集失效。  
+ **0**指定合併發行項的變更不會使快照集無效。  
   
- **1**表示合併發行項的變更可能使快照集失效，如果這種情況下，值為**1**提供將出現新的快照集的權限。  
+ **1**表示合併發行項的變更可能會導致快照集無效，如果發生這種情況， **1**值會提供新快照集的許可權。  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` 認可卸除發行項需要重新初始化現有的訂用帳戶。 *force_reinit_subscription*已**位元**，預設值是**0**。  
+`[ @force_reinit_subscription = ] force_reinit_subscription`認可卸載發行項需要重新初始化現有的訂閱。 *force_reinit_subscription*是**bit**，預設值是**0**。  
   
- **0**指定卸除發行項不會不會使訂閱重新初始化。  
+ **0**指定卸載發行項並不會重新初始化訂閱。  
   
- **1**表示卸除發行項會使現有的訂閱重新初始化，並提供發生之訂閱重新初始化的權限。  
+ **1**表示卸載發行項會使現有的訂閱重新初始化，並提供將發生之訂閱重新初始化的許可權。  
   
-`[ @ignore_merge_metadata = ] ignore_merge_metadata` 僅供內部使用。  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata`僅供內部使用。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_dropmergearticle**用於合併式複寫中。 如需有關卸除發行項的詳細資訊，請參閱 <<c0> [ 新增和卸除現有發行集中的發行項](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
+ **sp_dropmergearticle**用於合併式複寫中。 如需有關卸載發行項的詳細資訊，請參閱[在現有發行集中加入和](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)卸載發行項。  
   
- 執行**sp_dropmergearticle**從發行集中卸除的發行項不會移除該物件從發行集資料庫或從訂閱資料庫對應的物件。 必要的話，請利用 `DROP <object>` 來手動移除這些物件。  
+ 執行**sp_dropmergearticle**從發行集卸載發行項並不會從發行集資料庫中移除物件，也不會從訂閱資料庫中移除對應的物件。 必要的話，請利用 `DROP <object>` 來手動移除這些物件。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_dropmergearticle**。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_dropmergearticle**。  
   
 ## <a name="example"></a>範例  
   
@@ -156,10 +156,10 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [刪除發行項](../../relational-databases/replication/publish/delete-an-article.md)   
- [在現有發行集中加入和卸除發行項](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
- [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [在現有發行集中加入和卸載發行項](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
+ [sp_addmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_changemergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+ [sp_helpmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

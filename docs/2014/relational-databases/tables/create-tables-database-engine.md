@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761583"
 ---
 # <a name="create-tables-database-engine"></a>建立資料表 (Database Engine)
@@ -29,9 +29,9 @@ ms.locfileid: "62761583"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要建立的資料表，請使用：**  
+-   **若要使用下列項目來建立資料表：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62761583"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料庫的 CREATE TABLE 權限以及用以建立資料表之結構描述的 ALTER 權限。  
@@ -52,11 +52,11 @@ ms.locfileid: "62761583"
   
 #### <a name="to-create-a-table-with-table-designer"></a>若要使用資料表設計工具建立資料表  
   
-1.  在 **[物件總管]** ，連接至包含要修改的資料庫的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。  
+1.  在 **[物件總管]**，連接至包含要修改的資料庫的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。  
   
 2.  在 **[物件總管]** 中，展開 **[資料庫]** 節點，然後展開將包含新資料表的資料庫。  
   
-3.  在物件總管中，以滑鼠右鍵按一下資料庫的 [資料表]  節點，然後按一下 [新增資料表]  。  
+3.  在物件總管中，以滑鼠右鍵按一下資料庫的 [資料表]**** 節點，然後按一下 [新增資料表]****。  
   
 4.  輸入資料行名稱，選擇資料類型，然後選擇是否允許讓每個資料行都是 null，如下圖所示。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62761583"
   
 5.  若要指定資料行的其他屬性，例如識別或計算資料行值，請按一下資料行，然後在資料行屬性索引標籤中選擇適當的屬性。 如需資料行屬性的詳細資訊，請參閱[資料表資料行屬性 &#40;SQL Server Management Studio&#41;](table-column-properties-sql-server-management-studio.md)。  
   
-6.  若要指定資料行做為主索引鍵，請以滑鼠右鍵按一下資料行並選取 [設定主索引鍵]  。 如需詳細資訊，請參閱 [Create Primary Keys](../tables/create-primary-keys.md)。  
+6.  若要指定資料行做為主索引鍵，請以滑鼠右鍵按一下資料行並選取 [設定主索引鍵]****。 如需詳細資訊，請參閱 [Create Primary Keys](../tables/create-primary-keys.md)。  
   
 7.  若要建立外部索引鍵關聯性、檢查條件約束或索引，請在 [資料表設計工具] 窗格中按一下滑鼠右鍵並選取清單中的物件，如下圖所示。  
   
@@ -72,17 +72,17 @@ ms.locfileid: "62761583"
   
      如需有關這些物件的詳細資訊，請參閱＜ [Create Foreign Key Relationships](../tables/create-foreign-key-relationships.md)＞、＜ [Create Check Constraints](../tables/create-check-constraints.md) ＞和＜ [Indexes](../indexes/indexes.md)＞。  
   
-8.  依預設，此資料表包含在 **dbo** 結構描述中。 若要為資料表指定不同的結構描述，請在 [資料表設計工具] 窗格中按一下滑鼠右鍵並選取 [屬性]  ，如下圖所示。 從 [結構描述]  下拉式清單中選取適當的結構描述。  
+8.  依預設，此資料表包含在 **dbo** 結構描述中。 若要為資料表指定不同的結構描述，請在 [資料表設計工具] 窗格中按一下滑鼠右鍵並選取 [屬性]****，如下圖所示。 從 [結構描述]**** 下拉式清單中選取適當的結構描述。  
   
      ![Specifyatableschema](../../database-engine/media/specifyatableschema.gif "Specifyatableschema")  
   
      如需有關結構描述的詳細資訊，請參閱＜ [Create a Database Schema](../security/authentication-access/create-a-database-schema.md)＞。  
   
-9. 從 [檔案]  功能表中，選擇 [儲存]  *table name*。  
+9. 從 [檔案 **] 功能表中，選擇 [** **儲存***資料表名稱*]。  
   
-10. 在 **[選擇名稱]** 對話方塊中，輸入資料表的名稱，然後按一下 **[確定]** 。  
+10. 在 **[選擇名稱]** 對話方塊中，輸入資料表的名稱，然後按一下 **[確定]**。  
   
-11. 若要檢視新的資料表，在 **[物件總管]** ，展開 **[資料表]** 節點並按 **F5** 重新整理物件清單。 新的資料表就會在資料表清單中顯示。  
+11. 若要檢視新的資料表，在 **[物件總管]**，展開 **[資料表]** 節點並按 **F5** 重新整理物件清單。 新的資料表就會在資料表清單中顯示。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -1,6 +1,6 @@
 ---
-title: 擷取數值資料使用 SQL_NUMERIC_STRUCT |Microsoft Docs
-description: C /C++使用 ODBC 藉由使用 SQL_NUMERIC_STRUCT，相關 SQL_C_NUMERIC 擷取 SQL Server 數值資料類型。
+title: 使用 SQL_NUMERIC_STRUCT 取出數值資料 |Microsoft Docs
+description: 使用 ODBC 的 c/c + + 會使用與 SQL_C_NUMERIC 相關的 SQL_NUMERIC_STRUCT 來抓取 SQL Server 數值資料類型。
 editor: ''
 ms.prod: sql
 ms.technology: ''
@@ -11,27 +11,27 @@ ms.date: 07/13/2017
 ms.author: genemi
 author: MightyPen
 ms.openlocfilehash: 296a6bd9b5e0ab64fe7ecc7d78924a02e5fda9cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057194"
 ---
-# <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>擷取數值資料的 SQL\_數值\_結構
+# <a name="retrieve-numeric-data-with-sql_numeric_struct"></a>使用 SQL\_數值\_結構取出數值資料
 
-本文說明如何從 SQL Server ODBC 驅動程式時使用的數字的資料擷取至數字的結構。 它也會說明如何取得正確的值，使用特定的有效位數、 小數點位數的值。
+本文描述如何從 SQL Server ODBC 驅動程式中，將數值資料取出成數值結構。 它也會說明如何使用特定的精確度和小數位數值來取得正確的值。
 
-此資料類型允許直接處理數值資料的應用程式。 2003 年周圍 ODBC 3.0 引進了新的 ODBC C 資料類型，由**SQL\_C\_數值**。 此資料類型是自 2017 年起仍然相關。
+此資料類型可讓應用程式直接處理數值資料。 在2003年，odbc 3.0 引進了**\_SQL c\_數值**所識別的新 odbc C 資料類型。 此資料類型仍然與2017相關。
 
-使用 C 緩衝區擁有的類型定義**SQL\_數值\_結構**。 此結構具有儲存有效位數、 小數位數、 符號和值的數值資料的欄位。 值本身會儲存為放大的整數，最左邊的位置中，最小顯著性位元組開頭。 
+使用的 C 緩衝區具有**\_SQL 數值\_結構**的類型定義。 這個結構的欄位可用於儲存數值資料的有效位數、小數位數、正負號和數值。 值本身會儲存為相應的整數，且最小的位元組是從最左邊的位置開始。 
 
-發行項[C 資料類型](c-data-types.md)提供的格式和使用 SQL 的詳細資訊\_數值\_結構。 通常[附錄 D](appendix-d-data-types.md) ODBC 3.0 程式設計人員參考的討論 資料類型。
-
-
-## <a name="sqlnumericstruct-overview"></a>SQL\_數值\_結構概觀
+[C 資料類型](c-data-types.md)一文提供有關 SQL\_數值\_結構的格式和使用的詳細資訊。 ODBC 3.0 程式設計人員參考的[附錄 D](appendix-d-data-types.md)通常會討論資料類型。
 
 
-SQL\_數值\_結構中定義 sqltypes.h 標頭檔，如下所示：
+## <a name="sql_numeric_struct-overview"></a>SQL\_數值\_結構總覽
+
+
+SQL\_數值\_結構定義于 sqltypes 標頭檔中，如下所示：
 
 
 ```c
@@ -46,22 +46,22 @@ typedef struct tagSQL_NUMERIC_STRUCT
 ```
 
             
-數字的結構的有效位數和小數位數欄位永遠不會用於從應用程式，只能用於從驅動程式應用程式的輸出的輸入。
+數值結構的有效位數和小數位數位段永遠不會用於應用程式的輸入，只用于從驅動程式輸出到應用程式。
 
-驅動程式會使用 （驅動程式定義） 的預設有效位數和預設小數位數 (0) 時將資料傳回至應用程式。 應用程式指定有效位數和小數位數的值，除非驅動程式會假設預設值，且會截斷數值資料的小數部分。
+此驅動程式會在每次將資料傳回給應用程式時，使用預設精確度（驅動程式定義）和預設小數位數（0）。 除非應用程式指定有效位數和小數位數的值，否則驅動程式會假設預設值，並截斷數值資料的小數部分。
 
-## <a name="sqlnumericstruct-code-sample"></a>SQL\_數值\_結構程式碼範例
+## <a name="sql_numeric_struct-code-sample"></a>SQL\_數值\_結構程式碼範例
 
-此程式碼範例示範如何以：
+此程式碼範例示範如何：
 
-- 設定有效位數。
-- 設定小數位數。
-- 擷取正確的值。 
+- 設定精確度。
+- 設定尺規。
+- 取得正確的值。 
 
 > [!Note]
-> 您提供這篇文章中的程式碼的使用是自行承擔風險。 
+> 您在本文中所提供的程式碼所使用的任何功能，都是您自己的風險。 
 >
-> Microsoft 會提供這些程式碼範例，「 現狀 」 不含任何瑕疵責任擔保、 明示或默示擔保，包括但不是限於適售性和/或適合某特定用途之默示擔保責任。
+> Microsoft 提供這些程式碼範例，但不含任何明示或默示的擔保，包括但不限於適售性和（或）適合特定用途的默示擔保。
 
 ```c
 #include <stdio.h>
@@ -213,7 +213,7 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ```
 
 
-### <a name="interim-results"></a>暫時的結果：
+### <a name="interim-results"></a>過渡結果：
 
 
 ```console
@@ -226,17 +226,17 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ```
 
 
-在數值結構中，[值] 欄位會是 16 個元素的字元陣列。 比方說，25.212 調整 25212 和小數位數為 3。 這個數字會以十六進位格式是 627 c。
+在數值結構中，val 欄位是16個元素的字元陣列。 例如，25.212 會調整為25212，而小數值則為3。 在十六進位格式中，這個數位會是627C。
 
-驅動程式會傳回下列項目：
+驅動程式會傳回下列專案：
 
-- 7c，這是對等的字元 ' |'（使用管線傳送） 中的字元陣列的第一個元素。
-- 相當於 62，也就是 'b' 的第二個項目。
-- 陣列元素的餘數包含零，因此，緩衝區會包含 ' | b\0'。
+- 7C 的對等字元，也就是 ' | '字元陣列的第一個元素中的（管道）。
+- 等同于62，也就是第二個元素中的 ' b '。
+- 陣列元素的餘數包含零，因此緩衝區包含 ' | b\0 '。
 
-現在所面臨的挑戰是要建構放大的整數，從這個字串陣列。 對應至兩個十六進位數字的字串中的每個字元，輸入最小顯著性數字 (LSD) 及最大有效位數 (MSD)。 無法產生放大的整數值乘以每一個數字 (LSD & MSD)，具有 16，從 1 開始的多個。
+現在的挑戰是要從這個字串陣列中，建立相應縮小的整數。 字串中的每個字元都對應到兩個十六進位數位，也就是最低有效位數（LSD）和最重要的數位（MSD）。 從1開始，可以將每個數位（LSD & MSD）與16的倍數相乘來產生縮放的整數值。
 
-實作小小的位元組由小到大模式轉換成放大的整數的程式碼。 它是由應用程式開發人員實作這項功能。 下列程式碼範例是其中一個有許多可能的方法。
+程式碼，可從極小的 endian 模式轉換成相應的整數。 應用程式開發人員可自行決定是否要執行這種功能。 下列程式碼範例只是其中一種可能的方法。
 
 
 ```c
@@ -262,22 +262,22 @@ long strtohextoval()
 ```
 
 
-### <a name="applies-to-versions"></a>適用於版本
+### <a name="applies-to-versions"></a>適用于版本
 
 
-上述 SQL 的相關資訊\_數值\_結構適用於下列的產品版本：
+關於 SQL\_數值\_結構的上述資訊適用于下列產品版本：
 
-- Microsoft ODBC Driver for Microsoft SQL Server 3.7
-- Microsoft Data Access Components 2.1
-- Microsoft Data Access Components 2.5
-- Microsoft Data Access Components 2.6
-- Microsoft Data Access Components 2.7
-
-
-## <a name="sqlcnumeric-overview"></a>SQL\_C\_數值的概觀
+- Microsoft ODBC Driver for Microsoft SQL Server 3。7
+- Microsoft Data Access Components 2。1
+- Microsoft Data Access Components 2。5
+- Microsoft Data Access Components 2。6
+- Microsoft Data Access Components 2。7
 
 
-下列範例程式示範如何將 SQL\_C\_數字 123.45 插入資料表。 在資料表中，資料行定義為數值或小數位數、 有效位數 5，與具有 scale 2。
+## <a name="sql_c_numeric-overview"></a>SQL\_C\_數值總覽
+
+
+下列範例程式說明如何使用 SQL\_C\_數值，方法是將123.45 插入資料表。 在資料表中，資料行會定義為數值或十進位，且有效位數為5，而資料行則是小數位數2。
 
 您用來執行此程式的 ODBC 驅動程式必須支援 ODBC 3.0 功能。
 

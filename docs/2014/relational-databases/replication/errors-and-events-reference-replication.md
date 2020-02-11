@@ -17,16 +17,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721325"
 ---
 # <a name="errors-and-events-reference-replication"></a>錯誤和事件參考 (複寫)
   文件集的這一部分包含導致與複寫相關的許多錯誤之原因和解決方案的資訊。  
   
-|錯誤|Message|  
+|錯誤|訊息|  
 |-----------|-------------|  
 |[MSSQL_ENG002601](mssql-eng002601.md)|無法以唯一索引 '%.\*ls' 在物件 '%.*ls' 中插入重複的索引鍵資料列。|  
 |[MSSQL_ENG002627](mssql-eng002627.md)|違反 %ls 條件約束 '%.*ls'。 無法在物件 '%.\*ls' 中插入重複的索引鍵。|  
@@ -48,7 +48,7 @@ ms.locfileid: "62721325"
 |[MSSQL_ENG014160](mssql-eng014160.md)|已設定針對發行集[%s]的臨界值[%s:%s] 此發行集的一個或多個訂閱已經到期。|  
 |[MSSQL_ENG014161](mssql-eng014161.md)|已設定針對發行集[%s]的臨界值[%s:%s] 請確定記錄讀取器和散發代理程式正在執行，而且符合延遲需求。|  
 |[MSSQL_ENG014162](mssql-eng014162.md)|已設定針對發行集[%s]的臨界值[%s:%s] 請確定合併代理程式正在執行，而且符合預期需求。|  
-|[MSSQL_ENG014163](mssql-eng014163.md)|已設定臨界值 [%s:%s]\(針對發行集 [%s])。 請確定合併代理程式正在執行，而且符合預期需求。|  
+|[MSSQL_ENG014163](mssql-eng014163.md)|已設定針對發行集[%s]的臨界值[%s:%s] 請確定合併代理程式正在執行，而且符合預期需求。|  
 |[MSSQL_ENG014164](mssql-eng014164.md)|已設定針對發行集[%s]的臨界值[%s:%s] 請確定合併代理程式正在執行，而且符合預期需求。|  
 |[MSSQL_ENG014165](mssql-eng014165.md)|已設定針對發行集[%s]的臨界值[%s:%s] 請確定合併代理程式正在執行，而且符合預期需求。|  
 |[MSSQL_ENG018456](mssql-eng018456.md)|使用者 '%.*ls'.%.\*ls 登入失敗|  
@@ -76,7 +76,7 @@ ms.locfileid: "62721325"
 |MSSQL_ENG021642。 請參閱 [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md)。|異質性發行者需要已連結伺服器。 已經存在名稱為 '%s' 的連結伺服器。 請移除連結的伺服器或選擇其他發行者名稱。|  
 |MSSQL_ENG021663。 請參閱 [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md)。|找不到有效的來源資料表 [%s].[%s] 主索引鍵。|  
 |MSSQL_ENG021684。 請參閱 [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md)。|與 Oracle 發行者 '%s' 管理者登入相關聯的權限不足。|  
-|[MSSQL_ENG021797](mssql-eng021797.md)|'%s' 必須是有效的 Windows 登入，格式：'MACHINE\Login' 或 'DOMAIN\Login'。 請參閱 '%s' 的文件集。|  
+|[MSSQL_ENG021797](mssql-eng021797.md)|'%s' 必須是有效的 Windows 登入，其格式為：'MACHINE\Login' 或 'DOMAIN\Login'。 請參閱 '%s' 的文件集。|  
 |[MSSQL_ENG021798](mssql-eng021798.md)|在繼續進行之前，必須先經由 '%s' 將 '%s' 代理程式作業加入。 請參閱 '%s' 的文件集。|  
 |[MSSQL_REPL020011](mssql-repl020011.md)|該處理無法執行 '%1' (在 '%2')。|  
 |[MSSQL_REPL027056](mssql-repl027056.md)|合併處理無法變更生成集記錄 '%1'。 執行疑難排解時，以詳細資訊記錄重新啟動同步處理，並指定要寫入的輸出檔案。|  

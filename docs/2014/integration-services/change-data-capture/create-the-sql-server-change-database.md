@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72785cffa01da7bf00248d442b1d3ce4103c45a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771364"
 ---
 # <a name="create-the-sql-server-change-database"></a>建立 SQL Server 變更資料庫
@@ -31,20 +31,20 @@ ms.locfileid: "62771364"
   
  如需有關在 [連接到 SQL Server] 對話方塊中輸入資料的詳細資訊，請參閱＜ [SQL Server Connection for Instance Creation](sql-server-connection-for-instance-creation.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **Oracle CDC 執行個體**  
  輸入以下有關您建立之 CDC 執行個體的資訊。  
   
 -   **名稱**：輸入新服務的名稱。 這也會是新的變更資料庫的名稱。  
   
--   **描述**：輸入新執行個體的描述，協助您識別該執行個體。 這是選擇性的。  
+-   **描述**：輸入新執行個體的描述，幫助您識別該執行個體。 這是選擇性的。  
   
  **SQL Server 變更資料庫**  
  此區段是用來建立資料庫。  
   
 1.  **變更資料庫**：新的變更資料庫的名稱。 此資料庫的名稱與您提供給執行個體的名稱相同。 這個唯讀欄位會顯示資料庫的完整路徑。  
   
-2.  **建立資料庫**：按一下 [建立資料庫]  ，即可建立資料庫。  
+2.  **建立資料庫**：按一下 **[建立資料庫]** ，即可建立資料庫。  
   
      若要建立資料庫，登入必須擁有 `sysasmin` 伺服器角色。 如需詳細資訊，請參閱上述的安全性注意事項。  
   

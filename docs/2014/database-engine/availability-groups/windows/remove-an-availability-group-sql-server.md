@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4227b0af8453a40e9dd63b4aef170d52f8115b2
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782932"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>移除可用性群組 (SQL Server)
@@ -36,9 +36,9 @@ ms.locfileid: "72782932"
   
      [安全性](#Security)  
   
--   **使用下列方法刪除可用性群組：**  
+-   **若要刪除可用性群組，請使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "72782932"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制與建議  
+###  <a name="Restrictions"></a>限制與建議  
   
 -   當可用性群組已上線時，從次要複本刪除它會導致主要複本轉換為 RESTORING 狀態。 因此，如果可能的話，只能從裝載主要複本的伺服器執行個體中移除可用性群組。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72782932"
   
 ###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。 若要卸除本機伺服器執行個體所未裝載的可用性群組，您需要該可用性群組的 CONTROL SERVER 權限或 CONTROL 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -72,13 +72,13 @@ ms.locfileid: "72782932"
   
 3.  此步驟取決於您要刪除多個可用性群組或只要刪除一個可用性群組，如下所示：  
   
-    -   若要刪除多個可用性群組 (其主要複本位於連接的伺服器執行個體上)，請使用 [物件總管詳細資料] 窗格，檢視及選取要刪除的所有可用性群組。 如需詳細資訊，請參閱[使用物件總管詳細資料監視可用性群組 &#40;SQL Server Management Studio&#41;](use-object-explorer-details-to-monitor-availability-groups.md)。  
+    -   若要刪除多個可用性群組 (其主要複本位於連接的伺服器執行個體上)，請使用 [物件總管詳細資料]**** 窗格，檢視及選取要刪除的所有可用性群組。 如需詳細資訊，請參閱[使用物件總管詳細資料監視可用性群組 &#40;SQL Server Management Studio&#41;](use-object-explorer-details-to-monitor-availability-groups.md)。  
   
     -   若要刪除單一可用性群組，請在 **[物件總管]** 窗格或 **[物件總管詳細資料]** 窗格中選取它。  
   
-4.  以滑鼠右鍵按一下一或多個選取的可用性群組，然後選取 [刪除] 命令。  
+4.  以滑鼠右鍵按一下一或多個選取的可用性群組，然後選取 [刪除]**** 命令。  
   
-5.  在 **[移除可用性群組]** 對話方塊中，刪除所有列出的可用性群組，按一下 **[確定]** 。 如果您不要移除所有列出的可用性群組，請按一下 **[取消]** 。  
+5.  在 **[移除可用性群組]** 對話方塊中，刪除所有列出的可用性群組，按一下 **[確定]**。 如果您不要移除所有列出的可用性群組，請按一下 **[取消]**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要刪除可用性群組**  
@@ -113,16 +113,16 @@ ms.locfileid: "72782932"
     ```  
   
     > [!NOTE]  
-    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱＜ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)＞。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
- **若要設定和使用 SQL Server PowerShell 提供者**  
+ **若要設定及使用 SQL Server PowerShell 提供者**  
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [How It Works: DROP AVAILABILITY GROUP Behaviors](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (運作方式：DROP AVAILABILITY GROUP 行為) (CSS SQL Server 工程師部落格)  
+-   [運作方式： DROP AVAILABILITY GROUP 行為](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx)（CSS SQL Server 工程師 blog）  
   
 ## <a name="see-also"></a>另請參閱  
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [建立及設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)  

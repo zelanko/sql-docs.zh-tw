@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812294"
 ---
 # <a name="change-server-authentication-mode"></a>變更伺服器驗證模式
@@ -31,7 +31,7 @@ ms.locfileid: "62812294"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目變更伺服器驗證模式：**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62812294"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  sa 帳戶是已知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶，而且經常是惡意使用者的攻擊目標。 除非您的應用程式需要，否則請勿啟用 sa 帳戶。 請務必針對 sa 登入使用一個增強式密碼。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -58,7 +58,7 @@ ms.locfileid: "62812294"
   
 #### <a name="to-enable-the-sa-login"></a>若要啟用 sa 登入  
   
-1.  在 物件總管 中，展開**安全性**、 展開 登入、 以滑鼠右鍵按一下`sa`，然後按一下**屬性**。  
+1.  在物件總管中，依序展開 [**安全性**] 和 [ `sa`登入]，以滑鼠**按右鍵，** 然後按一下 [內容]。  
   
 2.  在 **[一般]** 頁面上，您可能需要為登入建立並確認密碼。  
   
@@ -85,6 +85,6 @@ ms.locfileid: "62812294"
  [增強式密碼](../../relational-databases/security/strong-passwords.md)   
  [SQL Server 安裝的安全性考量](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
- [當系統管理員遭鎖定在外時連線到 SQL Server](connect-to-sql-server-when-system-administrators-are-locked-out.md)  
+ [當系統管理員遭到鎖定時連接到 SQL Server](connect-to-sql-server-when-system-administrators-are-locked-out.md)  
   
   

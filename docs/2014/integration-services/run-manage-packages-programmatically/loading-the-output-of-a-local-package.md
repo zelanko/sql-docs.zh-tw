@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 199a50885e9c01a7027d56f223c7f2248f087998
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72988216"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>載入本機封裝的輸出
-  使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 將輸出儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地時，或使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]System.IO**命名空間，將輸出儲存到一般檔案目的地時，用戶端應用程式可以讀取** 套件的輸出。 但用戶端應用程式也可直接從記憶體讀取封裝的輸出，而無須在程序中間執行保存資料的步驟。 此解決方案的關鍵在於 `Microsoft.SqlServer.Dts.DtsClient` 命名空間，其中包含來自**system.web**命名空間之 `IDbConnection`、`IDbCommand`和**IDbDataParameter**介面的特殊實機。 預設會在 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** 中安裝 Microsoft.SqlServer.Dts.DtsClient.dll 組件。  
+  使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 將輸出儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地時，或使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]System.IO** 命名空間，將輸出儲存到一般檔案目的地時，用戶端應用程式可以讀取 ** 套件的輸出。 但用戶端應用程式也可直接從記憶體讀取封裝的輸出，而無須在程序中間執行保存資料的步驟。 此解決方案的關鍵在於`Microsoft.SqlServer.Dts.DtsClient`命名空間，其中包含來自**system.web**命名空間的`IDbConnection`、 `IDbCommand`和**IDbDataParameter**介面的特製化執行。 預設會在 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** 中安裝 Microsoft.SqlServer.Dts.DtsClient.dll 組件。  
   
 > [!NOTE]  
 >  本主題所述之程序需要將資料流程工作與任何父物件的 DelayValidation 屬性，設定成其預設值 **False**。  
@@ -36,16 +36,16 @@ ms.locfileid: "72988216"
   
 1.  在封裝中，設定 DataReader 目的地以接收您要讀到用戶端應用程式中的輸出。 給 DataReader 目的地一個描述性名稱，因為您稍後將在用戶端應用程式中使用這個名稱。 記下 DataReader 目的地的名稱。  
   
-2.  在開發專案中，藉由尋找**DtsClient**的元件來設定 `Microsoft.SqlServer.Dts.DtsClient` 命名空間的參考。 此組件預設安裝在 **C:\Program Files\Microsoft SQL Server\100\DTS\Binn** 中。 使用C# `Using` 或 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports` 語句，將命名空間匯入您的程式碼中。  
+2.  在開發專案中，藉由尋找**DtsClient**的`Microsoft.SqlServer.Dts.DtsClient`元件來設定命名空間的參考。 此組件預設安裝在 **C:\Program Files\Microsoft SQL Server\100\DTS\Binn** 中。 使用 c # `Using`或[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports`語句，將命名空間匯入您的程式碼中。  
   
-3.  在您的程式碼中，使用包含**dtexec**執行封裝所需之命令列參數的連接字串，建立類型 `DtsClient.DtsConnection` 的物件。 如需詳細資訊，請參閱 [dtexec Utility](../packages/dtexec-utility.md)。 然後使用此連接字串開啟連接。 您也可以使用 **dtexecui** 公用程式，以視覺化方式建立所需的連接字串。  
+3.  在您的程式碼中，使用連接`DtsClient.DtsConnection`字串建立類型的物件，其中包含**dtexec**執行封裝所需的命令列參數。 如需詳細資訊，請參閱 [dtexec Utility](../packages/dtexec-utility.md)。 然後使用此連接字串開啟連接。 您也可以使用 **dtexecui** 公用程式，以視覺化方式建立所需的連接字串。  
   
     > [!NOTE]  
     >  範例程式碼透過使用 `/FILE <path and filename>` 語法示範從檔案系統載入封裝。 不過，您也可以使用 `/SQL <package name>` 語法從 MSDB 資料庫載入封裝，或是使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 語法從 `/DTS \<folder name>\<package name>` 封裝存放區載入。  
   
 4.  建立類型為 `DtsClient.DtsCommand` 的物件，以使用先前建立的 `DtsConnection` 並將其 `CommandText` 屬性設定為封裝中的 DataReader 目的地名稱。 然後呼叫命令物件的 `ExecuteReader` 方法，將封裝結果載入新的 DataReader。  
   
-5.  您可以選擇性地使用 `DtsDataParameter` 物件上的 `DtsCommand` 物件集合，間接地參數化封裝輸出，以便將值傳遞給定義在封裝中的變數。 您可以在封裝中使用這些變數做為查詢參數，或在運算式中加以運用，藉此影響傳回 DataReader 目的地的結果。 您必須在**DtsClient**命名空間的封裝中定義這些變數，才能將它們與用戶端應用程式中的 `DtsDataParameter` 物件搭配使用。 （您可能需要按一下 [**變數**] 視窗中的 [**選擇變數資料行**] 工具列按鈕，以顯示 [**命名空間**] 資料行）。在您的用戶端程式代碼中，當您將 `DtsDataParameter` 新增至 `DtsCommand`的 `Parameters` 集合時，請省略變數名稱中的 DtsClient 命名空間參考。 例如：  
+5.  您可以選擇性地使用 `DtsDataParameter` 物件上的 `DtsCommand` 物件集合，間接地參數化封裝輸出，以便將值傳遞給定義在封裝中的變數。 您可以在封裝中使用這些變數做為查詢參數，或在運算式中加以運用，藉此影響傳回 DataReader 目的地的結果。 您必須在**DtsClient**命名空間的封裝中定義這些變數，才能將它們與用戶端`DtsDataParameter`應用程式中的物件搭配使用。 （您可能需要按一下 [**變數**] 視窗中的 [**選擇變數資料行**] 工具列按鈕，以顯示 [**命名空間**] 資料行）。在您的用戶端程式代碼中， `DtsDataParameter`當您`Parameters`將加入至`DtsCommand`的集合時，請省略變數名稱中的 DtsClient 命名空間參考。 例如：  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  
@@ -63,13 +63,13 @@ ms.locfileid: "72988216"
 ## <a name="example"></a>範例  
  下列範例執行的封裝，會計算單一彙總值並將值儲存到 DataReader 目的地，然後從 DataReader 讀取這個值，並在 Windows Form 的文字方塊中顯示值。  
   
- 將封裝的輸出載入用戶端應用程式時，不需要使用參數。 如果您不想要使用參數，可以在**DtsClient**命名空間中省略變數的使用，並省略使用 `DtsDataParameter` 物件的程式碼。  
+ 將封裝的輸出載入用戶端應用程式時，不需要使用參數。 如果您不想要使用參數，可以在**DtsClient**命名空間中省略變數的使用，並省略使用`DtsDataParameter`物件的程式碼。  
   
 #### <a name="to-create-the-test-package"></a>建立測試封裝  
   
 1.  建立新的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 範例程式碼使用 "DtsClientWParamPkg.dtsx" 做為封裝的名稱。  
   
-2.  在 DtsClient 命名空間中加入 String 類型的變數。 範例程式碼使用 Country 做為變數的名稱 (您可能需要按一下 [變數] 視窗中的 [選擇變數資料行] 工具列按鈕，才會顯示 [命名空間] 資料行)。  
+2.  在 DtsClient 命名空間中加入 String 類型的變數。 範例程式碼使用 Country 做為變數的名稱  (您可能需要按一下 [變數]**** 視窗中的 [選擇變數資料行]**** 工具列按鈕，才會顯示 [命名空間]**** 資料行)。  
   
 3.  加入連接至 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫的 OLE DB 連接管理員。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "72988216"
     SELECT * FROM Sales.vIndividualCustomer WHERE CountryRegionName = ?  
     ```  
   
-6.  按一下 [`Parameters`]，然後在 [**設定查詢參數**] 對話方塊中，將查詢中的單一輸入參數（parameter0 對應）對應至 DtsClient：： Country 變數。  
+6.  按一下`Parameters` ，然後在 [**設定查詢參數**] 對話方塊中，將查詢中的單一輸入參數（Parameter0 對應）對應到 DtsClient：： Country 變數。  
   
 7.  將彙總轉換加入資料流程，然後將 OLE DB 來源的輸出連接到轉換。 開啟 [匯總轉換編輯器]，並將它設定為在所有輸入資料行（*）上執行「計算所有」作業，並使用別名 CustomerCount 輸出匯總值。  
   
@@ -93,15 +93,15 @@ ms.locfileid: "72988216"
   
 1.  建立新的 Windows Form 應用程式。  
   
-2.  藉由流覽至 **%PROGRAMFILES%\MICROSOFT SQL Server\100\DTS\Binn**中相同名稱的元件，加入 `Microsoft.SqlServer.Dts.DtsClient` 命名空間的參考。  
+2.  藉由流覽至`Microsoft.SqlServer.Dts.DtsClient` **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**中相同名稱的元件，加入命名空間的參考。  
   
 3.  將下列範例程式碼複製並貼入表單的程式碼模組。  
   
-4.  視需要修改 `dtexecArgs` 變數的值，使其包含**dtexec**執行封裝所需的命令列參數。 範例程式碼會從檔案系統載入封裝。  
+4.  視需要修改`dtexecArgs`變數的值，使其包含**dtexec**執行封裝所需的命令列參數。 範例程式碼會從檔案系統載入封裝。  
   
-5.  視需要修改 `dataReaderName` 變數的值，使其包含封裝中 DataReader 目的地的名稱。  
+5.  視需要修改`dataReaderName`變數的值，使其包含封裝中 DataReader 目的地的名稱。  
   
-6.  在表單上放置按鈕與文字方塊。 範例程式碼會使用 `btnRun` 做為按鈕的名稱，並 `txtResults` 做為文字方塊的名稱。  
+6.  在表單上放置按鈕與文字方塊。 範例程式碼會`btnRun`使用做為按鈕的名稱，以及`txtResults`做為文字方塊的名稱。  
   
 7.  執行應用程式，然後按一下按鈕。 在簡短地暫停封裝執行之後，您應該會在表單的文字方塊中，看到封裝計算的彙總值 (加拿大的客戶計數)。  
   
@@ -293,11 +293,11 @@ namespace DtsClientWParamCS
 }  
 ```  
   
-![Integration Services 圖示（小型）](../media/dts-16.gif "Integration Services 圖示（小）")**與 Integration Services 保持最**新狀態<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [流覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [了解本機與遠端執行之間的差異](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
- [以程式設計方式載入和執行本機套件](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
+ [以程式設計方式載入和執行本機封裝](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [以程式設計方式載入和執行遠端套件](../run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  
   
   

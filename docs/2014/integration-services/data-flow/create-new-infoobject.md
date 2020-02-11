@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c57974bc671802d3ade3263d8650883683c846e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827913"
 ---
 # <a name="create-new-infoobject"></a>建立新的 InfoObject
@@ -120,7 +120,7 @@ ms.locfileid: "62827913"
 ### <a name="attributes-list"></a>屬性清單  
  **[屬性]** 清單會顯示您所建立之 InfoObject 的屬性。 **[屬性]** 清單具有下列資料行標題：  
   
- **[InfoObject]**  
+ **InfoObject**  
  檢視 InfoObject 的名稱。  
   
  **說明**  
@@ -139,12 +139,12 @@ ms.locfileid: "62827913"
 ### <a name="attributes-options"></a>屬性選項  
  使用下列選項可以針對您所建立的 InfoObject 加入和移除屬性：  
   
- **[加入]**  
+ **加入**  
  加入現有的 InfoObject 做為屬性。  
   
  若要加入現有的 InfoObject，請按一下 [加入]，然後使用 **[查閱 InfoObject]** 對話方塊來尋找 InfoObject。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up InfoObject](look-up-infoobject.md)＞。  
   
- **[新增]**  
+ **新增**  
  加入新的 InfoObject 做為屬性。  
   
  若要建立並加入新的 InfoObject，請按一下 [新增]，然後使用 **[建立新的 InfoObject]** 對話方塊的新執行個體來建立新的 InfoObject。  

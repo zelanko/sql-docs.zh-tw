@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d480fe510b6d2e252faefaae13d7dd3776c8ec5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774882"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>監視記錄傳送 (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "62774882"
   
  您可以查詢這些資料表來監視記錄傳送工作階段的狀態。 例如，若要知道記錄傳送的狀態，請檢查備份作業、複製作業及還原作業的狀態和記錄。 您可以查詢下列監視資料表，以檢視特定的記錄傳送記錄和錯誤詳細資料。  
   
-|資料表|描述|  
+|Table|描述|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|儲存警示作業識別碼。|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|儲存記錄傳送作業的錯誤明細。 您可以查詢此資料表來查看代理程式工作階段的錯誤。 您可以選擇依每個錯誤的記錄日期和時間來排序。 每個錯誤都會被記錄成一個例外狀況序列，而多重錯誤 (序列) 會依每項代理程式工作階段來記錄。|  

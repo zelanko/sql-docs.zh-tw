@@ -15,13 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1cee588e7db1e219f3d2810e29bb77a68a21b7ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780839"
 ---
 # <a name="sql-server-driver-extensions"></a>SQL Server 驅動程式延伸模組
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會實作驅動程式特有的函數，以便允許 ODBC 應用程式存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。  
   
 ## <a name="in-this-section"></a>本節內容  
@@ -29,6 +30,6 @@ ms.locfileid: "62780839"
 -   [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Native Client &#40;ODBC&#41;參考](../../../2014/database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
+ [SQL Server Native Client &#40;ODBC&#41; 參考](../../../2014/database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
   
   

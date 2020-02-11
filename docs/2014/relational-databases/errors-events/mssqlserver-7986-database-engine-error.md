@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bac8c34542f6c398541e69b690c11d364d37096d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761763"
 ---
-# <a name="mssqlserver7986"></a>MSSQLSERVER_7986
+# <a name="mssqlserver_7986"></a>MSSQLSERVER_7986
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|7986|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_PRE_CHECKS_CROSS_OBJECT_LINKAGE|  
-|訊息文字|系統資料表預先檢查:物件識別碼 O_ID 有跨物件鏈結發生問題。 頁面 P_ID1 指向位於配置單位識別碼 A_ID1 (應該為 A_ID2) 中的 P_ID2。 由於無法修復的錯誤，檢查陳述式已經結束。|  
+|訊息文字|系統資料表預先檢查: 物件識別碼 O_ID 有跨物件的鏈結。 頁面 P_ID1 指向位於配置單位識別碼 A_ID1 (應該為 A_ID2) 中的 P_ID2。 由於無法修復的錯誤，檢查陳述式已經結束。|  
   
 ## <a name="explanation"></a>說明  
  DBCC CHECKDB 的第一階段是針對關鍵的系統資料表，執行資料頁的基本檢查。 如果找到任何錯誤，由於無法修復錯誤，因此 DBCC CHECKDB 會立即結束。 指定物件資料層級中頁面 *P_ID1* 的下一頁指標指向位於不同物件的頁面 *P_ID2*。  

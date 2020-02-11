@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9830334843fd2c350091f7dc2af5493141bcfb1
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874442"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>預估角色切換期間的服務中斷時間 (資料庫鏡像)
@@ -48,18 +48,18 @@ ms.locfileid: "70874442"
 >  如果在交易期間建立了索引或資料表之後又變更，而發生容錯移轉，容錯移轉的時間會比平常更久。  例如，在下列一系列作業期間發生容錯移轉，會增加容錯移轉時間：BEGIN TRANSACTION、在資料表上 CREATE INDEX 和 SELECT INTO 資料表。 在這種交易期間，仍有增加容錯移轉時間的可能性，直到以 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 陳述式完成它為止。  
   
 ### <a name="the-redo-queue"></a>重做佇列  
- 向前恢復資料庫涉及套用目前在鏡像伺服器上重做佇列中的記錄。 「重做佇列」包含已寫入鏡像伺服器上的磁碟，但尚未在鏡像資料庫上向前復原的記錄檔記錄。  
+ 向前恢復資料庫涉及套用目前在鏡像伺服器上重做佇列中的記錄。 「重做佇列」** 包含已寫入鏡像伺服器上的磁碟，但尚未在鏡像資料庫上向前復原的記錄檔記錄。  
   
  資料庫的容錯移轉時間取決於鏡像伺服器向前恢復重做佇列中記錄的速度，而這主要又是由系統硬體與目前工作負載所決定。 主體資料庫有可能會變得很忙碌，使主體伺服器以比向前恢復記錄檔更快的速度，將記錄檔轉送到鏡像伺服器。 在此情況下，當鏡像伺服器向前恢復重做佇列中的記錄時，容錯移轉可能花費很多時間。 若要了解重做佇列的目前大小，請使用資料庫鏡像效能物件中的 **Redo Queue** 計數器。 如需詳細資訊，請參閱 [SQL Server 的 Database Mirroring 物件](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)。  
   
 ### <a name="estimating-the-failover-redo-rate"></a>預估容錯移轉重做速率  
- 您可利用生產資料庫的測試複本，測量向前復原記錄檔記錄所需的時間量 (「重做速率」)。  
+ 您可以使用生產資料庫的測試複本來測量向前復原記錄檔記錄所需的時間量（「*重做速率*」）。  
   
  預估容錯移轉期間之向前恢復時間的方法，取決於重做階段期間鏡像伺服器所使用的執行緒數目。 執行緒的數目取決下列：  
   
 -   在 [!INCLUDE[ssStandard](../../includes/ssstandard-md.md)]中，鏡像伺服器永遠會使用單一執行緒來向前復原資料庫。  
   
--   在 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)]中，少於五個 CPU 之電腦上的鏡像伺服器也只會使用單一執行緒。 如果有五個以上的 CPU，鏡像伺服器會在容錯移轉期間，將其向前復原作業散發到多個執行緒 (也稱為「平行重做」)。 平行重做已完成最佳化，針對每四個 CPU 使用一個執行緒。  
+-   在 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 中，少於五個 CPU 之電腦上的鏡像伺服器也只會使用單一執行緒。 如果有五個以上的 CPU，鏡像伺服器會在容錯移轉期間，將其向前復原作業散發到多個執行緒 (也稱為「平行重做」**)。 平行重做已完成最佳化，針對每四個 CPU 使用一個執行緒。  
   
 #### <a name="estimating-the-single-threaded-redo-rate"></a>預估單一執行緒的重做速率  
  對於單一執行緒重做，在容錯移轉期間向前恢復鏡像資料庫所花費的時間，大約與記錄備份還原要向前恢復相同數量的記錄相同。 若要預估容錯移轉時間，請在您要執行鏡像的環境中建立測試資料庫。 然後，從實際資料庫中取得記錄備份。 若要計算該記錄備份的重做速率，請計時您在測試資料庫上還原記錄備份 WITH NORECOVERY 的時間長度。  

@@ -18,22 +18,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff9340d7c9fb768f9e057d00868a9e238421a5f4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798198"
 ---
-# <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
-  此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]中設定通知選項，以便讓 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 將與作業有關的通知傳送給操作員。  
+# <a name="notify-an-operator-of-job-status"></a>通知操作員作業狀態
+  本[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]主題描述如何使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 SQL Server 管理物件，在中設定通知選項，讓[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可以將有關作業的通知傳送給操作員。  
   
  **本主題內容**  
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要使用下列項目通知操作員作業狀態：**  
+-   **若要使用下列各項來通知操作員作業狀態：**  
   
      [Transact-SQL](#SSMS)  
   
@@ -52,33 +52,33 @@ ms.locfileid: "72798198"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  依序展開 [SQL Server Agent] 和 [作業]、以滑鼠右鍵按一下要編輯的作業，然後選取 [屬性]。  
+2.  依序展開 [SQL Server Agent]**** 和 [作業]****、以滑鼠右鍵按一下要編輯的作業，然後選取 [屬性]****。  
   
 3.  在 **[作業屬性]** 對話方塊中，選取 **[通知]** 頁面。  
   
-4.  如果您想以電子郵件通知操作員，請核取 [電子郵件]、從清單選取操作員，然後選取下列其中一個選項：  
+4.  如果您想以電子郵件通知操作員，請核取 [電子郵件]****、從清單選取操作員，然後選取下列其中一個選項：  
   
-    -   **[當作業成功時]** 即可在作業順利完成時，通知操作員。  
+    -   **當**作業成功完成時，通知操作員。  
   
-    -   **[當作業失敗時]** 會在作業未順利完成時通知操作員。  
+    -   **當作業失敗時**，當作業未成功完成時，通知操作員。  
   
-    -   **[作業完成時]** 可在無論完成狀態為何，都通知操作員。  
+    -   **當作業完成時**，不論完成狀態為何，都會通知操作員。  
   
-5.  如果您想以呼叫器來通知操作員，請核取 **[呼叫器]** 、從清單選取操作員，然後選取下列其中一個選項：  
+5.  如果您想以呼叫器來通知操作員，請核取 **[呼叫器]**、從清單選取操作員，然後選取下列其中一個選項：  
   
-    -   **[當作業成功時]** 即可在作業順利完成時，通知操作員。  
+    -   **當**作業成功完成時，通知操作員。  
   
-    -   **[當作業失敗時]** 會在作業未順利完成時通知操作員。  
+    -   **當作業失敗時**，當作業未成功完成時，通知操作員。  
   
-    -   **[作業完成時]** 可在無論完成狀態為何，都通知操作員。  
+    -   **當作業完成時**，不論完成狀態為何，都會通知操作員。  
   
-6.  如果您想以網路傳送的方式來通知操作員，請核取 **[網路傳送]** 、從清單選取操作員，然後選取下列其中一個選項：  
+6.  如果您想以網路傳送的方式來通知操作員，請核取 **[網路傳送]**、從清單選取操作員，然後選取下列其中一個選項：  
   
-    -   **[當作業成功時]** 即可在作業順利完成時，通知操作員。  
+    -   **當**作業成功完成時，通知操作員。  
   
-    -   **[當作業失敗時]** 會在作業未順利完成時通知操作員。  
+    -   **當作業失敗時**，當作業未成功完成時，通知操作員。  
   
-    -   **[作業完成時]** 可在無論完成狀態為何，都通知操作員。  
+    -   **當作業完成時**，不論完成狀態為何，都會通知操作員。  
   
 ##  <a name="TSQL"></a> 使用 Transact-SQL  
   
@@ -88,7 +88,7 @@ ms.locfileid: "72798198"
   
 2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```sql
     -- adds an e-mail notification for the specified alert (Test Alert).  

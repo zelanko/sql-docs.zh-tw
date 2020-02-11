@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e97aed3a5a4f5b49e482479b58928d2092a314f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773783"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>使用非叢集資料行存放區索引
@@ -24,18 +24,18 @@ ms.locfileid: "62773783"
   
  如需有關叢集資料行存放區索引的詳細資訊，請參閱＜ [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md)＞。  
   
-## <a name="contents"></a>目錄  
+## <a name="contents"></a>內容  
   
 -   [建立非叢集資料行存放區索引](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#load)  
   
 -   [變更非叢集資料行存放區索引中的資料](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)  
   
-##  <a name="load"></a> 建立非叢集資料行存放區索引  
- 要將資料載入非叢集資料行存放區索引，先將資料載入至傳統的資料列存放區資料表儲存為堆積或叢集索引，然後再使用[建立資料行存放區索引&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)來建立資料行存放區索引。  
+##  <a name="load"></a>建立非叢集資料行存放區索引  
+ 若要將資料載入非叢集資料行存放區索引，請先將資料載入至儲存為堆積或叢集索引的傳統 rowstore 資料表，然後使用 Create 資料行存放區[索引 &#40;transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)來建立資料行存放區索引。  
   
- ![將資料載入至資料行存放區索引](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "資料載入資料行存放區索引")  
+ ![將資料載入資料行存放區索引](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "將資料載入資料行存放區索引")  
   
-##  <a name="change"></a> 變更非叢集資料行存放區索引中的資料  
+##  <a name="change"></a>變更非叢集資料行存放區索引中的資料  
  一旦您在資料表上建立非叢集資料行存放區索引，就無法直接修改該資料表中的資料。 使用 INSERT、UPDATE、DELETE 或 MERGE 的查詢將會失敗，並傳回錯誤訊息。 若要加入或修改資料表中的資料，您可以執行下列其中一項操作：  
   
 -   停用資料行存放區索引。 然後您就可以更新資料表中的資料。 如果您停用資料行存放區索引，您可以在完成更新資料時重建資料行存放區索引。 例如：  
@@ -46,7 +46,7 @@ ms.locfileid: "62773783"
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
     ```  
   
--   卸除資料行存放區索引、 更新資料表，並再重新建立與建立資料行存放區索引的資料行存放區索引。 例如：  
+-   卸載資料行存放區索引、更新資料表，然後使用 CREATE 資料行存放區索引重新建立資料行存放區索引。 例如：  
   
     ```  
     DROP INDEX mycolumnstoreindex ON mytable  

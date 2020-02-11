@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781067"
 ---
 # <a name="links-in-clr-integration-security"></a>CLR 整合安全性中的連結
@@ -32,7 +32,7 @@ ms.locfileid: "62781067"
  資料表存取連結會對應至擷取或修改資料表、檢視表或資料表值函式中的值。 它們與引動過程連結類似，但它們在 SELECT、INSERT、UPDATE 及 DELETE 權限方面具有更精細的存取控制。  
   
 ## <a name="gated-links"></a>閘門守護式連結  
- 閘門守護式連結表示在執行期間，一旦建立了物件關聯性，就不會檢查該物件關聯性兩端的權限。 兩個物件之間的閘門守護式的連結時 (例如，物件**x**和物件**y**)，物件的權限**y**和其他物件從物件存取**y**只檢查物件的建立時間**x**。 在物件的建立時間**x**，`REFERENCE`上檢查權限**y**的擁有者對**x**。 在執行階段 (例如，當某人呼叫物件**x**)，根據檢查沒有權限**y**或它以靜態方式參考其他物件。 在執行時，將適當的權限檢查對物件**x**本身。  
+ 閘門守護式連結表示在執行期間，一旦建立了物件關聯性，就不會檢查該物件關聯性兩端的權限。 當兩個物件之間有閘道連結時（例如，物件**x**和物件**y**），物件**y**的許可權和從物件**y**存取的其他物件，只會在物件**x**的建立時間進行檢查。 在物件**x**的建立時間， `REFERENCE`會針對**x**的擁有者檢查**y**的許可權。 在執行時（例如，當有人呼叫物件**x**時），並不會針對**y**或其他以靜態方式參考的物件檢查許可權。 在執行時間，將會針對物件**x**本身檢查適當的許可權。  
   
  閘門守護式連結一定會搭配兩個物件之間的中繼資料相依性使用。 這個中繼資料相依性就是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄中建立的關聯性，只要其他相依的物件存在，就可防止物件被卸除。  
   

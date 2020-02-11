@@ -18,10 +18,10 @@ ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304801"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
@@ -42,53 +42,53 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @class = ] 'class'` 要要求之資訊的類別。 *class*為**Varchar （8）** ，預設值為**JOB**。 *類別*可以是下列其中一個值。  
+`[ @class = ] 'class'`關於所要求資訊的類別。 *class*為**Varchar （8）**，預設值為**JOB**。 *類別*可以是下列其中一個值。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**任務**|提供作業類別目錄的相關資訊。|  
 |**消息**|提供警示類別目錄的相關資訊。|  
 |**操作**|提供操作員類別目錄的相關資訊。|  
   
-`[ @type = ] 'type'` 要求的資訊所屬的類別目錄類型。 *type*是**Varchar （12）** ，預設值是 Null，它可以是下列值之一。  
+`[ @type = ] 'type'`所要求之資訊所屬的類別目錄類型。 *type*是**Varchar （12）**，預設值是 Null，它可以是下列值之一。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|**LOCAL**|本機作業類別目錄。|  
-|**多伺服器**|多伺服器作業類別目錄。|  
-|**NONE**|**作業**以外類別的分類。|  
+|**本機**|本機作業類別目錄。|  
+|**MULTI -SERVER**|多伺服器作業類別目錄。|  
+|**無**|**作業**以外類別的分類。|  
   
-`[ @name = ] 'name'` 所要求之資訊所屬的類別目錄名稱。 *name*是**sysname**，預設值是 Null。  
+`[ @name = ] 'name'`所要求之資訊所屬的類別目錄名稱。 *name*是**sysname**，預設值是 Null。  
   
-`[ @suffix = ] suffix` 指定結果集中的**category_type**資料行是否為識別碼或名稱。 *尾碼*是**bit**，預設值是**0**。 **1**會將**category_type**顯示為名稱， **0**則會顯示為識別碼。  
+`[ @suffix = ] suffix`指定結果集中的**category_type**資料行是否為識別碼或名稱。 *尾碼*是**bit**，預設值是**0**。 **1**會將**category_type**顯示為名稱， **0**則會顯示為識別碼。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 當 **\@尾碼**為**0**時， **sp_help_category**會傳回下列結果集：  
+ 當** \@尾碼**為**0**時， **sp_help_category**會傳回下列結果集：  
   
-|資料行名稱|[名稱]|描述|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|類別目錄識別碼|  
 |**category_type**|**tinyint**|類別目錄類型：<br /><br /> **1** = 本機<br /><br /> **2** = 多伺服器<br /><br /> **3** = 無|  
-|**name**|**sysname**|類別目錄名稱|  
+|**name**|**sysname**|類別名稱|  
   
- 當 **\@尾碼**為**1**時， **sp_help_category**會傳回下列結果集：  
+ 當** \@尾碼**為**1**時， **sp_help_category**會傳回下列結果集：  
   
-|資料行名稱|[名稱]|描述|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|類別目錄識別碼|  
 |**category_type**|**sysname**|類別目錄的類型。 其中一個**本機**、**多伺服器**或**無**|  
-|**name**|**sysname**|類別目錄名稱|  
+|**name**|**sysname**|類別名稱|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **sp_help_category**必須從**msdb**資料庫中執行。  
   
  如果未指定任何參數，結果集會提供所有作業類別目錄的相關資訊。  
   
-## <a name="permissions"></a>Permissions  
- 依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
+## <a name="permissions"></a>權限  
+ 根據預設，**系統管理員（sysadmin** ）固定伺服器角色的成員可以執行此預存程式。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
   
 -   **SQLAgentUserRole**  
   
@@ -112,7 +112,7 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-### <a name="b-returning-alert-information"></a>b. 傳回警示資訊  
+### <a name="b-returning-alert-information"></a>B. 傳回警示資訊  
  下列範例會傳回「複寫警示」類別目錄的相關資訊。  
   
 ```  
@@ -126,9 +126,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_category &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

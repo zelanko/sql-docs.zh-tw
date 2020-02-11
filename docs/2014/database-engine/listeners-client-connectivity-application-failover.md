@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5ee2879bc0ef94d8abee20032c83a74d00696ef2
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797835"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>可用性群組接聽程式、用戶端連接及應用程式容錯移轉 (SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "72797835"
   
  如果一或多個[可讀取的次要複本](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)設定為唯讀路由，主要複本的讀取意圖用戶端連接會重新導向至可讀取的次要複本。 此外，如果主要複本在某個 SQL Server 執行個體上離線，而且在另一個 SQL Server 執行個體上新的主要複本變為上線，可用性群組接聽程式會將用戶端連接到新的主要複本。  
   
- 如需可用性群組接聽程式的詳細資訊，請參閱[建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
+ 如需可用性群組接聽程式的詳細資訊，請參閱 [建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
  
   
@@ -84,7 +84,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  您仍然可以選擇直接參考主要或次要複本的 SQL Server 執行個體名稱，而不使用可用性群組接聽程式名稱，不過如果選擇這樣做，便無法享有新連接自動導向至目前主要複本的好處。  此外，也無法享有唯讀路由的好處。  
   
 ##  <a name="ConnectToSecondary"></a> 使用接聽程式連接到唯讀次要複本 (唯讀路由)  
- 「唯讀路由」是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的功能，可將對可用性群組接聽程式的內送連接路由至設為允許唯讀工作負載的次要複本。 只有在下列條件成立時，參考可用性群組接聽程式名稱的內送連接才會自動路由至唯讀複本：  
+ 「唯讀路由」  是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的功能，可將對可用性群組接聽程式的內送連接路由至設為允許唯讀工作負載的次要複本。 只有在下列條件成立時，參考可用性群組接聽程式名稱的內送連接才會自動路由至唯讀複本：  
   
 -   至少一個次要複本設定為唯讀存取，而且每個唯讀次要複本和主要複本都設定為支援唯讀路由。 如需詳細資訊，請參閱本節稍後的 [若要將可用性複本設定為唯讀路由](#ConfigureARsForROR)。  
   
@@ -118,7 +118,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- 在這個連接字串範例中，用戶端嘗試連接到通訊埠 1433 (如果可用性群組接聽程式是在 1433 上接聽，也可以省略此通訊埠編號) 上名為 `AGListener` 的可用性群組接聽程式。  連接字串的 `ApplicationIntent` 屬性設定為 `ReadOnly`，使其成為*讀取意圖的連接字串*。  如果沒有此設定，伺服器就不會嘗試唯讀路由連接。  
+ 在這個連接字串範例中，用戶端嘗試連接到通訊埠 1433 (如果可用性群組接聽程式是在 1433 上接聽，也可以省略此通訊埠編號) 上名為 `AGListener` 的可用性群組接聽程式。  連接字串將`ApplicationIntent`屬性設定為`ReadOnly`，使其成為*讀取意圖的連接字串*。  如果沒有此設定，伺服器就不會嘗試唯讀路由連接。  
   
  可用性群組的主要資料庫會處理內送唯讀路由要求，並嘗試找出已聯結至主要複本並設定為唯讀路由的線上唯讀複本。  用戶端會從主要複本伺服器接收連接資訊，並連接到已識別的唯讀複本。  
   
@@ -144,7 +144,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  當使用資料庫鏡像連接字串時，用戶端可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 或 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 用戶端提供的連接字串至少必須提供一個伺服器執行個體名稱，也就是 *「初始夥伴名稱」* ，以識別一開始裝載您打算連接之可用性複本的伺服器執行個體。 此連接字串也可以選擇性地提供另一個伺服器執行個體的名稱，也就是 *「容錯移轉夥伴名稱」* (Failover Partner Name)，以識別一開始將次要複本裝載為容錯移轉夥伴名稱的伺服器執行個體。  
   
- 如需資料庫鏡像連接字串的詳細資訊，請參閱[將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
+ 如需資料庫鏡像連接字串的詳細資訊，請參閱 [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
 ##  <a name="CCBehaviorOnFailover"></a> 容錯移轉時用戶端連接的行為  
  當可用性群組發生容錯移轉時，對可用性群組的現有持續連線會終止，而且用戶端必須建立新連接，才能繼續使用相同的主要資料庫或唯讀次要資料庫。  在伺服器端發生容錯移轉時，對可用性群組的連接可能會失敗，而強制用戶端連接重試連接，直到主要資料庫恢復上線為止。  
@@ -157,7 +157,8 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 > [!NOTE]  
 >  對於可用性群組接聽程式以及 SQL Server 容錯移轉叢集執行名稱的單一和多重子網路連接，建議使用此設定。  啟用此選項會增加額外的最佳化，甚至在單一子網路案例也一樣。  
   
- `MultiSubnetFailover` 連接選項只適用於 TCP 網路通訊協定，而且只在連接到可用性群組接聽程式時以及任何虛擬網路名稱連接到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 時才受支援。  
+ 
+  `MultiSubnetFailover` 連接選項只適用於 TCP 網路通訊協定，而且只在連接到可用性群組接聽程式時以及任何虛擬網路名稱連接到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 時才受支援。  
   
  可啟用多重子網路容錯移轉之 ADO.NET 提供者 (System.Data.SqlClient) 的連接字串範例如下：  
   
@@ -165,7 +166,8 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
 ```  
   
- `MultiSubnetFailover` 連接選項應該設為 `True`，即使可用性群組只跨越單一子網路也一樣。  這可讓您將新用戶端預先設定為支援子網路的未來跨越，而不需要在未來變更用戶端連接字串，此外也會最佳化單一子網路容錯移轉的容錯移轉效能。  雖然 `MultiSubnetFailover` 連接選項不是必要，但是它提供更快子網路容錯移轉的好處。  這是因為用戶端驅動程式會嘗試對與可用性群組平行相關的每個 IP 位址開啟 TCP 通訊端。  用戶端驅動程式會等候第一個成功回應的 IP，一旦回應，就會將它用於連接。  
+ 
+  `MultiSubnetFailover` 連接選項應該設為 `True`，即使可用性群組只跨越單一子網路也一樣。  這可讓您將新用戶端預先設定為支援子網路的未來跨越，而不需要在未來變更用戶端連接字串，此外也會最佳化單一子網路容錯移轉的容錯移轉效能。  雖然 `MultiSubnetFailover` 連接選項不是必要，但是它提供更快子網路容錯移轉的好處。  這是因為用戶端驅動程式會嘗試對與可用性群組平行相關的每個 IP 位址開啟 TCP 通訊端。  用戶端驅動程式會等候第一個成功回應的 IP，一旦回應，就會將它用於連接。  
   
 ##  <a name="SSLcertificates"></a> 可用性群組接聽程式和 SSL 憑證  
  連接到可用性群組接聽程式時，如果參與的 SQL Server 執行個體同時使用 SSL 憑證和工作階段加密，連接的用戶端驅動程式需要支援 SSL 憑證中的主體替代名稱，才能強制加密。  我們已計劃針對 ADO.NET (SqlClient)、Microsoft JDBC 和 SQL Native Client (SNAC)，提供 SQL Server 驅動程式對憑證主體替代名稱的支援。  
@@ -188,11 +190,11 @@ SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
 ```  
   
- 如需有關為 SQL Server 手動註冊 SPN 的詳細資訊，請參閱＜ [Register a Service Principal Name for Kerberos Connections](configure-windows/register-a-service-principal-name-for-kerberos-connections.md)＞。  
+ 如需有關為 SQL Server 手動註冊 SPN 的詳細資訊，請參閱＜ [註冊 Kerberos 連接的服務主體名稱](configure-windows/register-a-service-principal-name-for-kerberos-connections.md)＞。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
--   [AlwaysOn 用戶端&#40;連線性 SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
+-   [AlwaysOn 用戶端連線性 &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
   
 -   [建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
@@ -206,15 +208,15 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [適用于高可用性和嚴重損壞修復的 Microsoft SQL Server AlwaysOn 解決方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Introduction to the Availability Group Listener](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (可用性群組接聽程式簡介) (SQL Server AlwaysOn 團隊部落格)  
+-   [可用性群組](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx)接聽程式簡介（SQL Server AlwaysOn 小組的 blog）  
   
 -   [SQL Server AlwaysOn 小組 Blog：官方 SQL Server AlwaysOn 小組的 Blog](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
- [AlwaysOn 用戶端&#40;連線性 SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
- [關於可用性複本的用戶端連接存取 &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- 作用中[次要資料庫：可&#40;讀取&#41;的次要複本 AlwaysOn 可用性群組](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 用戶端連線性 &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
+ [關於可用性複本的用戶端連線存取 &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
+ [使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)

@@ -13,18 +13,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18318775c63cd7126686154dec2ee1f02733763f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060640"
 ---
 # <a name="configure-error-output"></a>設定錯誤輸出
-  使用 [設定錯誤輸出]  對話方塊，即可為支援錯誤輸出的資料流程轉換設定錯誤處理選項。  
+  使用 [設定錯誤輸出]**** 對話方塊，即可為支援錯誤輸出的資料流程轉換設定錯誤處理選項。  
   
  若要深入了解如何使用錯誤輸出，請參閱[處理資料中的錯誤](data-flow/error-handling-in-data.md)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **輸入或輸出**  
  檢視輸出的名稱。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66060640"
  **將這個值設定到選取的資料格**  
  指定發生錯誤或截斷時要對所有選取之資料格採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **Apply**  
+ **套用**  
  將錯誤處理選項套用至選取的資料格。  
   
 ## <a name="see-also"></a>另請參閱  

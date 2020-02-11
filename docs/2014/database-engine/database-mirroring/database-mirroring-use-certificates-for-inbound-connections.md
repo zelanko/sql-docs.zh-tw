@@ -1,5 +1,5 @@
 ---
-title: 允許資料庫鏡像端點使用憑證進行輸入連線 (TRANSACT-SQL) |Microsoft Docs
+title: 允許資料庫鏡像端點使用傳入連接的憑證（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3f70ddfc241a902a59dff989323a75b17f7af55e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807556"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>允許資料庫鏡像端點使用傳入連接的憑證 (Transact-SQL)
-  此主題描述設定伺服器執行個體，以使用憑證來驗證資料庫鏡像之傳入連接的步驟。 在設定傳入連接之前，您必須先在每一個伺服器執行個體上設定傳出連接。 如需詳細資訊，請參閱[允許資料庫鏡像端點使用傳出連接的憑證 &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)。  
+  此主題描述設定伺服器執行個體，以使用憑證來驗證資料庫鏡像之傳入連接的步驟。 在設定傳入連接之前，您必須先在每一個伺服器執行個體上設定傳出連接。 如需詳細資訊，請參閱 [允許資料庫鏡像端點使用輸出連線的憑證 &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)。  
   
  設定傳入連接的程序，包括下列一般步驟：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62807556"
   
  下列程序將詳細說明這些步驟。 對於每個步驟，此程序會提供在名為 HOST_A 的系統上設定伺服器執行個體的範例。 隨附的「範例」部分則針對名為 HOST_B 系統上的另一個伺服器執行個體示範相同的步驟。  
   
-### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-hosta"></a>設定 (HOST_A 上) 傳入鏡像連接的伺服器執行個體  
+### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-host_a"></a>設定 (HOST_A 上) 傳入鏡像連接的伺服器執行個體  
   
 1.  為其他系統建立登入。  
   
@@ -157,16 +157,16 @@ GO
   
  如需建立鏡像資料庫的相關資訊，包括 Transact-SQL 範例在內，請參閱[準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
- 如需建立高效能模式工作階段的 Transact-SQL 範例，請參閱[範例：使用憑證設定資料庫鏡像 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
+ 如需建立高效能模式工作階段的 Transact-SQL 範例，請參閱 [範例：使用憑證設定資料庫鏡像 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  將憑證複製到另一個系統時，請使用安全複製方法。 務必將您所有的憑證小心保管。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [GRANT 端點權限 &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
  [設定加密鏡像資料庫](set-up-an-encrypted-mirror-database.md)   
  [資料庫鏡像端點 &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [為資料庫鏡像組態疑難排解 &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
+ [疑難排解資料庫鏡像組態 &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   

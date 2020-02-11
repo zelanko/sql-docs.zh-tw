@@ -1,5 +1,5 @@
 ---
-title: 使用從 RDL 結構描述 （SSRS 教學課程） 產生的類別更新報表 |Microsoft Docs
+title: 使用從 RDL 架構產生的類別更新報表（SSRS 教學課程） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,21 +15,21 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 313a5268b754089d4ca8964328d53cb23ec6edd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62746112"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>使用 RDL 結構描述產生的類別更新報表 (SSRS 教學課程)
-  本教學課程說明如何使用 XML 結構描述定義工具 (Xsd.exe) 來產生類別，可讓您序列化和還原序列化報表定義檔案 （.rdl 和.rdlc） 搭配[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer>類別。  
+  本教學課程說明如何使用 XML 架構定義工具（xsd.exe）來產生類別，讓您可以使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer>類別來序列化和還原序列化報表定義檔案（.rdl 和 .rdlc）。  
   
 ## <a name="what-you-will-learn"></a>學習內容  
  這個教學課程進行期間，您將完成下列活動：  
   
--   建立應用程式使用[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)]主控台應用程式專案範本。  
+-   使用 [ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]主控台應用程式] 專案範本建立應用程式。  
   
--   從使用您建立報表定義語言 (RDL) 結構描述產生類別**xsd**工具。  
+-   使用**xsd**工具，從報表定義語言（RDL）架構產生類別。  
   
 -   連接到報表伺服器，並擷取報表定義。  
   
@@ -47,23 +47,23 @@ ms.locfileid: "62746112"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
   
 -   足以存取及發行報表至報表伺服器所在電腦之報表伺服器 Web 服務的權限。  
   
 -   安裝到 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 執行個體的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 範例資料庫。  
   
--   安裝在您報表伺服器中的報表。 本教學課程使用範例報表 Company Sales 2012。 如需有關範例報表的詳細資訊，請參閱 < [SQL Server Reporting Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
+-   安裝在您報表伺服器中的報表。 本教學課程使用範例報表 Company Sales 2012。 如需範例報表的詳細資訊，請參閱[SQL Server Reporting Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   
 > [!NOTE]  
->  安裝期間不會自動安裝範例，但是您可在任何時間加以安裝。 有關範例的詳細資訊，請參閱[SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887)。  
+>  安裝期間不會自動安裝範例，但是您可在任何時間加以安裝。 如需範例的詳細資訊，請參閱[SQL Server 產品範例](https://go.microsoft.com/fwlink/?LinkId=182887)。  
   
- **完成這個教學課程的估計時間：** 30 分鐘  
+ **完成本教學課程的估計時間：** 30 分鐘  
   
 ## <a name="tasks"></a>工作  
  [第 1 課：建立 RDL 結構描述 Visual Studio 專案](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
   
- [第 2 課：使用 xsd 工具的 RDL 結構描述產生類別](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
+ [第 2 課：使用 xsd 工具，從 RDL 結構描述產生類別](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
   
  [第 3 課：從報表伺服器載入報表定義](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62746112"
   
  [第 5 課：將報表定義發行到報表伺服器](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
   
- [第 6 課：執行 RDL 結構描述應用程式&#40;VB C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
+ [第6課：執行 RDL 架構應用程式 &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [報表定義語言 &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  

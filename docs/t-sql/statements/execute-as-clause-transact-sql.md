@@ -26,10 +26,10 @@ ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2dfba9eef86ab77ec114bc74712d9573fb5e4c48
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155063"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 子句 (Transact-SQL)
@@ -105,7 +105,7 @@ DDL Triggers with Database Scope
   
  *login_name* 不可以是群組、角色、憑證、金鑰或內建帳戶，例如 NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 如何評估模組內參考物件的權限，會隨著呼叫物件和所參考物件之間的擁有權鏈結而不同。 在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，擁有權鏈結是唯一可以避免授與參考物件存取權給呼叫使用者的方法。  
   
  擁有權鏈結具有下列限制：  
@@ -184,7 +184,7 @@ GO
   
  若要以指定的執行內容來檢視模組定義，請使用 [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 目錄檢視。  
   
-## <a name="best-practice"></a>最佳作法  
+## <a name="best-practice"></a>最佳做法  
  指定一個登入或使用者，它具有執行在模組中定義的作業時所需要的最低權限。 例如，除非需要這些權限，否則不要指定資料庫擁有者帳戶。  
   
 ## <a name="permissions"></a>權限  

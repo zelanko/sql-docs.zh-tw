@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b038c1132cf8c1ccd31da2a5a1e2a600f2505624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011962"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam 範例資料表 (SQL Server)
@@ -27,13 +27,14 @@ ms.locfileid: "66011962"
 > [!NOTE]  
 >  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的其中一個範例資料庫。  
   
- **myTeam** 資料表包含下列資料行。  
+ 
+  **myTeam** 資料表包含下列資料行。  
   
-|「資料行」|資料類型|Null 屬性|描述|  
+|資料行|資料類型|Null 屬性|描述|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|`smallint`|非 Null|資料列的主索引鍵。 小組某個成員的員工識別碼。|  
 |**名稱**|`nvarchar(50)`|非 Null|小組某個成員的名稱。|  
-|**Title**|`nvarchar(50)`|可為 Null|小組中工作的員工之職稱。|  
+|**Title** (標題)|`nvarchar(50)`|Nullable|小組中工作的員工之職稱。|  
 |**背景**|`nvarchar(50)`|非 Null|資料列上次更新的日期和時間。 (預設值)|  
   
  **若要建立 HumanResources.myTeam**  

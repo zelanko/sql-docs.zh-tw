@@ -1,5 +1,5 @@
 ---
-title: 詞彙擷取轉換編輯器 （排除索引標籤） |Microsoft Docs
+title: 詞彙提取轉換編輯器（排除索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b1032a0fc11ab07069309b7053e756d28329b77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055232"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>詞彙擷取轉換編輯器 (排除索引標籤)
@@ -30,11 +30,11 @@ ms.locfileid: "66055232"
  **使用排除詞彙**  
  藉由指定包含排除詞彙的資料行，指出是否要在詞彙擷取期間排除特定詞彙。 如果您選擇要排除詞彙，就必須指定下列來源屬性。  
   
- **[無快取]**  
- 選取現有的 OLE DB 連線管理員，或按一下 [新增]  來建立新的連接。  
+ **OLE DB 連線管理員**  
+ 選取現有的 OLE DB 連線管理員，或按一下 [新增]**** 來建立新的連接。  
   
  **新增**  
- 使用 [設定 OLE DB 連線管理員]  對話方塊，來建立新的資料庫連接。  
+ 使用 [設定 OLE DB 連線管理員]**** 對話方塊，來建立新的資料庫連接。  
   
  **資料表或檢視**  
  選取包含排除詞彙的資料表或檢視。  
@@ -43,12 +43,12 @@ ms.locfileid: "66055232"
  選取包含排除詞彙之資料表或檢視中的資料行。  
   
  **設定錯誤輸出**  
- 使用 [[設定錯誤輸出]](../../2014/integration-services/configure-error-output.md) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
+ 使用 [設定錯誤輸出](../../2014/integration-services/configure-error-output.md) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [詞彙擷取轉換編輯器 &#40;詞彙擷取索引標籤&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [詞彙擷取轉換編輯器 &#40;進階索引標籤&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
+ [[詞彙解壓縮轉換編輯器] &#40;[詞彙] [提取] 索引標籤&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [[詞彙解壓縮轉換編輯器] &#40;[Advanced] 索引標籤&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
  [詞彙查閱轉換](data-flow/transformations/lookup-transformation.md)  
   
   

@@ -15,27 +15,32 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 715a60d4a6f4a138a71e7de6095234a9e0d2a461
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782204"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>使用 SQL Server Agent 排程自動管理工作
   在 SMO 中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 是由下列物件表示：  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer> 物件具有三個作業、警示和運算子的集合。  
+-   
+  <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer> 物件具有三個作業、警示和運算子的集合。  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCollection> 物件表示呼叫器、電子郵件地址和網路傳送操作員的清單，在發生事件時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 會自動加以通知。  
+-   
+  <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCollection> 物件表示呼叫器、電子郵件地址和網路傳送操作員的清單，在發生事件時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 會自動加以通知。  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCollection> 物件表示系統事件或效能條件之類情況的清單，這些情況都受到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的監視。  
+-   
+  <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCollection> 物件表示系統事件或效能條件之類情況的清單，這些情況都受到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的監視。  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCollection> 物件就稍微複雜一點， 它表示會在指定排程執行的多重步驟工作的清單。 步驟和排程資訊會儲存在 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobStep> 和 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobSchedule> 物件中。  
+-   
+  <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCollection> 物件就稍微複雜一點， 它表示會在指定排程執行的多重步驟工作的清單。 步驟和排程資訊會儲存在 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobStep> 和 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobSchedule> 物件中。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 物件位於 <xref:Microsoft.SqlServer.Management.Smo.Agent> 命名空間中。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 物件位於 <xref:Microsoft.SqlServer.Management.Smo.Agent> 命名空間中。  
   
 ## <a name="examples"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 VISUAL BASIC SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 VISUAL BASIC SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 Visual Studio .Net 中建立 VISUAL C&#35; SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 1.  如果程式使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent，則您必須包含 `Imports` 陳述式來限定 Agent 命名空間。 將陳述式插入至其他 `Imports` 陳述式之後、在應用程式中的任何宣告之前，例如：  
   
@@ -168,7 +173,8 @@ $jbsch.Create();
   
  **ObjectName |CounterName |實例 |ComparisionOp |CompValue**  
   
- 警示通知需要有操作員。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 類型需要使用方括號，因為 `operator` 是 Visual Basic 關鍵字。  
+ 警示通知需要有操作員。 
+  <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 類型需要使用方括號，因為 `operator` 是 Visual Basic 關鍵字。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBAgent3](SMO How to#SMO_VBAgent3)]  -->  
   
@@ -177,7 +183,8 @@ $jbsch.Create();
   
  **ObjectName |CounterName |實例 |ComparisionOp |CompValue**  
   
- 警示通知需要有操作員。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 類型需要使用方括號，因為 `operator` 是 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 關鍵字。  
+ 警示通知需要有操作員。 
+  <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 類型需要使用方括號，因為 `operator` 是 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 關鍵字。  
   
 ```csharp
 {  
@@ -210,7 +217,8 @@ $jbsch.Create();
   
  **ObjectName |CounterName |實例 |ComparisionOp |CompValue**  
   
- 警示通知需要有操作員。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 類型需要使用方括號，因為 `operator` 是 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 關鍵字。  
+ 警示通知需要有操作員。 
+  <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 類型需要使用方括號，因為 `operator` 是 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 關鍵字。  
   
 ```powershell
 #Get a server object which corresponds to the default instance  

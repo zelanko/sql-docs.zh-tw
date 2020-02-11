@@ -1,5 +1,5 @@
 ---
-title: Tuple |Microsoft Docs
+title: 元組 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5025d76d439933f7392d55661ca52d3f33992db8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073771"
 ---
 # <a name="tuples"></a>Tuples
@@ -40,7 +40,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  當您在查詢中指定集合 (此處由單一 Tuple 組成) 的座標軸時，必須先指定資料行軸的集合，然後指定資料列軸的集合。 資料行軸也可以用 *axis(0)* 或僅僅 *0* 的方式來代表。 如需 MDX 查詢的詳細資訊，請參閱[基本 MDX 查詢 &#40;MDX&#41;](mdx-query-the-basic-query.md)。  
+>  當您在查詢中指定集合 (此處由單一 Tuple 組成) 的座標軸時，必須先指定資料行軸的集合，然後指定資料列軸的集合。 資料行軸也可以用 *axis(0)* 或僅僅 *0*的方式來代表。 如需 MDX 查詢的詳細資訊，請參閱[基本 MDX 查詢 &#40;MDX&#41;](mdx-query-the-basic-query.md)。  
   
 ### <a name="tuples-as-values-or-member-references"></a>Tuple 做為值或成員參考  
  您可以在查詢中使用 Tuple，來傳回 Tuple 所參考之資料格的值，如上述範例所示。 或者，您也可以在運算式中使用 Tuple，明確參考 Tuple 中指定的成員。 查詢或運算式可以利用會傳回或取用 Tuple 的函數。 Tuple 可以用來參考 Tuple 所指定之資料格的值，或在函數中使用時用來指定成員組合。  
@@ -63,9 +63,9 @@ FROM [Adventure Works]
 >  屬性成員可以其成員名稱或成員索引鍵代表。 在上述範例中，您可以將參考值從 [CY 2004] 取代成 &[2004]。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 的關鍵概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [MDX 中的重要概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Cube 空間](cube-space.md)   
  [自動存在](autoexists.md)   
- [使用成員、 Tuple 及集合 &#40;MDX &#41;](working-with-members-tuples-and-sets-mdx.md)  
+ [使用成員、元組和集合 &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)  
   
   

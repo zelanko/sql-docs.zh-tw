@@ -14,13 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 790e02374fe209576c963c5f1e9c6e63e8e2d16b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779786"
 ---
 # <a name="features-in-sql-server-management-studio"></a>SQL Server Management Studio 中的功能
+  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 包括下列一般功能：  
   
 -   支援 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的大部分管理工作。  
@@ -43,14 +44,16 @@ ms.locfileid: "62779786"
   
 -   線上社群的說明整合。  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的教學課程，可協助您使用許多新功能，當下提升您的生產力。  
+-   
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的教學課程，可協助您使用許多新功能，當下提升您的生產力。  
   
 -   能夠進行篩選和自動重新整理的新活動監視器。  
   
 -   整合式 Database Mail 介面。  
   
 ## <a name="new-scripting-capabilities"></a>新增指令碼功能  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的程式碼編輯器元件包含用來撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)]、MDX、DMX 和 XML/A 指令碼的整合式指令碼編輯器。 它的功能如下：  
+ 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的程式碼編輯器元件包含用來撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)]、MDX、DMX 和 XML/A 指令碼的整合式指令碼編輯器。 它的功能如下：  
   
 -   在工作時即時存取相關資訊的動態說明。  
   
@@ -64,10 +67,12 @@ ms.locfileid: "62779786"
   
 -   方案和指令碼專案的整合式原始檔控制，支援儲存和維護隨著時間而進展的指令碼副本。  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] MDX 陳述式的 IntelliSense 支援。  
+-   
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] MDX 陳述式的 IntelliSense 支援。  
   
 ## <a name="object-explorer-features"></a>物件總管功能  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的物件總管元件是用來檢視和管理所有伺服器類型之物件的整合式工具。 它的功能如下：  
+ 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的物件總管元件是用來檢視和管理所有伺服器類型之物件的整合式工具。 它的功能如下：  
   
 -   依名稱、結構描述或日期的全部或一部分來篩選。  
   
@@ -78,7 +83,8 @@ ms.locfileid: "62779786"
  如需詳細資訊，請參閱 [物件總管](../ssms/object/object-explorer.md)。  
   
 ## <a name="extensibility"></a>擴充性  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 會根據 Visual Studio 隔離 Shell 來建構，該隔離 Shell 原本就支援擴充性 (增益集/外掛程式)。 挖掘 Visual Studio 擴充性服務來呈現 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]內的自訂功能是可行的，但是這樣的擴充性不受支援。  
+ 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 會根據 Visual Studio 隔離 Shell 來建構，該隔離 Shell 原本就支援擴充性 (增益集/外掛程式)。 挖掘 Visual Studio 擴充性服務來呈現 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]內的自訂功能是可行的，但是這樣的擴充性不受支援。  
   
  有些使用者和協力廠商已開發 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的延伸模組。 雖然我們不阻止這樣做，但請記住，我們不支援這類擴充性，因此可能會有向後/向前相容性問題。 Microsoft 不會發行擴充 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的文件。 不過，確實社群部落格和範例程式碼，您可以加以運用。  
   

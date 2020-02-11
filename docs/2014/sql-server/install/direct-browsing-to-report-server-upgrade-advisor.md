@@ -11,29 +11,29 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 6945828b2eba829c32d717c13393c9fbda4fc43e
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952215"
 ---
 # <a name="direct-browsing-to-report-server-upgrade-advisor"></a>直接瀏覽報表伺服器 (Upgrade Advisor)
-  Upgrade Advisor 偵測到您目前安裝的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 正在直接流覽至報表伺服器虛擬目錄。  
+  Upgrade Advisor 偵測到您目前的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]安裝正在直接流覽至報表伺服器虛擬目錄。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 模式。|  
   
 ## <a name="component"></a>元件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>描述  
- Upgrade Advisor 偵測到您目前安裝的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 正在直接流覽至報表伺服器虛擬目錄，例如**HTTP://\<server name >/ReportServer**。 在目前 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本中不支援。  
+ Upgrade Advisor 偵測到您目前的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]安裝正在直接流覽至報表伺服器虛擬目錄，例如**HTTP://\<伺服器名稱>/reportserver**。 在目前 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本中不支援。  
   
 > [!NOTE]  
 >  此規則是警告，升級未遭到封鎖。  
   
 ## <a name="corrective-action"></a>更正動作  
- 使用文件庫的 SharePoint 使用者介面流覽，或使用**HTTP://\<server name >/sharepoint site >/_vti_bin/reportserver**。  
+ 使用文件庫的 SharePoint 使用者介面流覽，或使用**HTTP://\<伺服器名稱>/sharepoint 網站>/_vti_bin/reportserver**。  
   
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e046aef7cd5fb4049b4bfb92c99272f625224c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670471"
 ---
 # <a name="delete-queries-visual-database-tools"></a>刪除查詢 (Visual Database Tools)
@@ -39,9 +39,9 @@ ms.locfileid: "62670471"
 >  如果您只想將查詢從專案中移除，但不想刪除它，請按一下 [移除]  。 如此您便可於稍後在查詢資料夾上按一下滑鼠右鍵並選擇 [新增項目]  ，以重新尋找及加入查詢。  
   
 ## <a name="see-also"></a>另請參閱  
- [清除查詢結果&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [捨棄對查詢所做的變更&#40;Visual Database Tools&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
- [設計查詢和檢視表的使用說明主題&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [&#40;Visual Database Tools&#41;清除查詢結果](visual-database-tools.md)   
+ [捨棄對查詢所做的變更 &#40;Visual Database Tools&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
+ [設計查詢和觀看 how to 主題 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [使用查詢執行基本作業 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7fe9955ba4f20c4a20e24d99924adce7ff0d992a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828142"
 ---
 # <a name="comparing-string-data"></a>比較字串資料
@@ -63,7 +63,7 @@ ms.locfileid: "62828142"
  您也可以指定「一般檔案」連接管理員和「多個一般檔案」連接管理員的地區設定。  
   
 ## <a name="setting-comparison-options"></a>設定比較選項  
- 地區設定會提供比較字串資料的基本規則。 例如，地區設定指定字母表中每個字母的排序位置。 但是，這些規則對某些轉換執行的比較來說可能並不夠，而且 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 還支援一組超越地區設定之比較規則的進階比較選項。 這些比較選項可在資料行層級進行設定。 例如，其中一個比較選項可讓您忽略非空格字元。 此選項的效果會忽略變音符號，例如腔調，使得"a"和"å"相同供比較。  
+ 地區設定會提供比較字串資料的基本規則。 例如，地區設定指定字母表中每個字母的排序位置。 但是，這些規則對某些轉換執行的比較來說可能並不夠，而且 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 還支援一組超越地區設定之比較規則的進階比較選項。 這些比較選項可在資料行層級進行設定。 例如，其中一個比較選項可讓您忽略非空格字元。 此選項的作用是忽略像是輔色的符號，這會使 "a" 和 "å" 與比較目的相同。  
   
  下表描述比較選項和排序樣式。  
   

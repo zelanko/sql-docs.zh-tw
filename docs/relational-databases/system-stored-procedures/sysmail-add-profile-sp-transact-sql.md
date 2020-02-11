@@ -18,10 +18,10 @@ ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a4bd7f90688d61f9ecee487d553393e38bed82e3
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70211275"
 ---
 # <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
@@ -41,19 +41,19 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @profile_name = ] 'profile\_name'` 新設定檔的名稱。 *profile_name*是**sysname**，沒有預設值。  
+`[ @profile_name = ] 'profile\_name'`新設定檔的名稱。 *profile_name*是**sysname**，沒有預設值。  
  
    > [!NOTE]
    > 必須呼叫使用 Azure SQL 受控執行個體 SQL 代理程式的設定檔名稱**AzureManagedInstance_dbmail_profile**
   
-`[ @description = ] 'description'` 新設定檔的選擇性描述。 *描述*是**Nvarchar （256）** ，沒有預設值。  
+`[ @description = ] 'description'`新設定檔的選擇性描述。 *描述*是**Nvarchar （256）**，沒有預設值。  
   
-`[ @profile_id = ] _new\_profile\_id OUTPUT` 會傳回新設定檔的識別碼。 *new_profile_id*是**int**，預設值是 Null。  
+`[ @profile_id = ] _new\_profile\_id OUTPUT`傳回新設定檔的識別碼。 *new_profile_id*是**int**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  Database Mail 設定檔會保存任意數目的 Database Mail 帳戶。 Database Mail 預存程序可以利用這個程序所產生的設定檔名稱或設定檔識別碼來參考設定檔。 如需將帳戶新增至設定檔的詳細資訊，請參閱[sysmail_add_profileaccount_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)。  
   
  設定檔名稱和描述可以使用預存程式**sysmail_update_profile_sp**進行變更，而設定檔識別碼在設定檔的生命週期內會保持不變。  
@@ -62,11 +62,11 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
   
  預存程式**sysmail_add_profile_sp**在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱來執行此程式。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  此程式的執行許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
- **答：建立新的設定檔**  
+ **A. 建立新的設定檔**  
   
  下列範例會建立名稱為 `AdventureWorks Administrator` 的新 Database Mail 設定檔。  
   
@@ -95,6 +95,6 @@ SELECT @profileId ;
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [建立 Database Mail 帳戶](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Database Mail 設定物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Database Mail 預存&#40;程式 transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

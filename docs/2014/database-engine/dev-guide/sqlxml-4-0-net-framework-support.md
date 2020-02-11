@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0.NET Framework 支援 |Microsoft Docs
+title: SQLXML 4.0 .NET Framework 支援 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99973fe28d18dc28a0d6690567eb3923e74eb812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780511"
 ---
 # <a name="sqlxml-40-net-framework-support"></a>SQLXML 4.0 .NET Framework 支援
+  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 支援的功能可讓您撰寫應用程式以便從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體存取 XML 資料、將資料置於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 環境、處理資料，以及將更新傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 本節記載 .NET Framework 支援功能並提供其用法的範例。  
   
 ## <a name="in-this-section"></a>本節內容  
@@ -35,6 +36,6 @@ ms.locfileid: "62780511"
  描述如何搭配 .NET Framework 使用 SQLXML 大量載入。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行大量載入 XML 資料的&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [執行 XML 資料的大量載入 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

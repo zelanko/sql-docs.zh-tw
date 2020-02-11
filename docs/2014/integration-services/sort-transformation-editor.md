@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: becd97e843909a5d7bc181dfdf1060988836ee3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055486"
 ---
 # <a name="sort-transformation-editor"></a>排序轉換編輯器
@@ -26,14 +26,14 @@ ms.locfileid: "66055486"
   
  若要深入了解排序轉換，請參閱＜ [Sort Transformation](data-flow/transformations/sort-transformation.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **可用的輸入資料行**  
  使用核取方塊來指定要排序的資料行。  
   
  **名稱**  
  檢視每個可用輸入資料行的名稱。  
   
- **通過**  
+ **Ssh**  
  指出排序的輸出中是否包含資料行。  
   
  **輸入資料行**  

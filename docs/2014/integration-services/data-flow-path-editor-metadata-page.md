@@ -1,5 +1,5 @@
 ---
-title: 資料流程路徑編輯器 （中繼資料頁面） |Microsoft Docs
+title: 資料流程路徑編輯器（中繼資料頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0a1897ded7e3d266d701bd4a587c03c252105bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059993"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>資料流程路徑編輯器 (中繼資料頁面)
-  使用 [資料流程路徑編輯器]  對話方塊的 [中繼資料]  頁面，即可檢視路徑資料行的中繼資料。  
+  使用 [資料流程路徑編輯器]**** 對話方塊的 [中繼資料]**** 頁面，即可檢視路徑資料行的中繼資料。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **路徑中繼資料**  
  列出資料行中繼資料。 按一下資料行標題來排序資料行資料。  
   
@@ -34,10 +34,10 @@ ms.locfileid: "66059993"
  **資料類型**  
  列出資料行的資料類型。  
   
- **有效位數**  
+ **Precision**  
  列出數值中的位數。  
   
- **小數位數**  
+ **調整**  
  列出數值中之小數點右邊的位數。  
   
  **長度**  
@@ -58,13 +58,13 @@ ms.locfileid: "66059993"
  **來源元件**  
  列出是資料行來源的資料流程元件。  
   
- **複製至剪貼簿**  
+ **複製到剪貼簿**  
  將資料行中繼資料複製到剪貼簿。 依預設，所有中繼資料列都會加以複製，就像依目前顯示的順序加以排序一般。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料流程路徑編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
- [資料流程路徑編輯器&#40;資料檢視器頁面&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
+ [[資料流程路徑編輯器] &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [資料檢視器頁面 &#40;的資料流程路徑編輯器&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [資料流程](data-flow/data-flow.md)   
- [在套件中使用註釋](use-annotations-in-packages.md)  
+ [使用封裝中的註解](use-annotations-in-packages.md)  
   
   

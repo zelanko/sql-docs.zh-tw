@@ -1,5 +1,5 @@
 ---
-title: Collations and Code Pages |Microsoft Docs
+title: 定序和字碼頁 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786733"
 ---
 # <a name="collations-and-code-pages"></a>定序和字碼頁
+  
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] 對於記憶體最佳化的資料表中 (var)Char 資料行支援的字碼頁以及用於索引和原生編譯預存程序中支援的定序有一些限制。  
   
  (var)char 值的字碼頁會判斷字元與資料表中儲存的位元組表示法之間的對應。 例如，在 Windows Latin 1 字碼頁 (也就是 1252；[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設值) 中，字元 'a' 對應到 0x61 位元組。  
@@ -82,7 +83,7 @@ GO
   
 -   原生編譯的預存程序中的所有運算式和排序作業都必須使用 BIN2 定序。 其含意為，所有的比較與排序作業都是根據字元的 Unicode 字碼指標 (二進位表示法)。 例如，所有排序都區分大小寫 ('Z' 排列在 'a' 之前)。 如有需要，請使用解譯的 [!INCLUDE[tsql](../includes/tsql-md.md)] 進行不區分大小寫的排序和比較。  
   
--   原生編譯的預存程序中不支援 UTF-16 資料截斷。 這表示該 n (var) char (*n*) 的值無法轉換成 n (var) char 類型 (*我*)，如果*我* < *n*的話定序具有 _SC 屬性。 例如，以下範例不受支援：  
+-   原生編譯的預存程序中不支援 UTF-16 資料截斷。 這*表示如果定* < 序具有 _SC*屬性，則*n （var） char （*n*）值無法轉換成類型 n （var） char （*i*）。 例如，以下範例不受支援：  
   
     ```sql  
     -- column definition using an _SC collation  
@@ -96,7 +97,7 @@ GO
   
      使用大到足以避免截斷的類型來宣告變數。  
   
- 下列範例顯示 In-Memory OLTP 中定序限制的部分影響及因應措施。 此範例使用上面指定的 Employees 資料表。 此範例會列出所有員工。 請注意在 LastName 中，因為使用二進位定序，所以大寫名稱會排在小寫前面。 因此，'Thomas' 會排在 'nolan' 前面，因為大寫字母具有較低的字碼指標。 FirstName 具有不區分大小寫的定序。 因此，排序是根據英文字母，而不是字元的字碼指標。  
+ 下列範例顯示 In-Memory OLTP 中定序限制的部分影響及因應措施。 此範例使用上面指定的 Employees 資料表。 這個範例會列出所有員工。 請注意在 LastName 中，因為使用二進位定序，所以大寫名稱會排在小寫前面。 因此，'Thomas' 會排在 'nolan' 前面，因為大寫字母具有較低的字碼指標。 FirstName 具有不區分大小寫的定序。 因此，排序是根據英文字母，而不是字元的字碼指標。  
   
 ```sql  
 -- insert a number of values  

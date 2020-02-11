@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0a0789ebd9a5aa4bd10605d69afa59a586ce75b2
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70155538"
 ---
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
@@ -32,20 +32,20 @@ ms.locfileid: "70155538"
 
   **注意：這僅適用于 Azure SQL Database V11。**  
   
- 列出 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器上的資料庫數目、類型和持續時間。  
+ 列出[!INCLUDE[ssSDS](../../includes/sssds-md.md)]伺服器上資料庫的數目、類型和持續時間。  
   
  [ **Sys.databases database_usage** ] 視圖包含下列資料行。  
   
-|Column Name|描述|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
 |time|使用事件發生的日期。|  
 |sku|資料庫的服務層級類型： **Web**、 **Business**、 **Basic**、 **Standard**、 **Premium**|  
 |quantity|當天存在之 SKU 類型資料庫的數目上限。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  此視圖的唯讀存取權可供所有具有連接到**master**資料庫之許可權的使用者使用。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **Database_usage** view 會針對訂閱的每一天傳回一個資料列。  
   
 ## <a name="see-also"></a>另請參閱  

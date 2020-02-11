@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012726"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>選擇建立全文檢索索引時的語言
@@ -36,7 +36,8 @@ ms.locfileid: "66012726"
  本節提供斷詞工具與字幹分析器的簡介，並且討論了全文檢索搜尋如何使用資料行層級語言的 LCID。  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>斷詞工具與字幹分析器的簡介  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本包含全新系列的斷詞工具與字幹分析器，這些工具明顯比先前 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 所提供的工具更好。  
+ 
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本包含全新系列的斷詞工具與字幹分析器，這些工具明顯比先前 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 所提供的工具更好。  
   
 > [!NOTE]  
 >  Microsoft Natural Language Group (MS NLG) 已實作而且支援這些新的語言元件。  
@@ -49,7 +50,7 @@ ms.locfileid: "66012726"
   
 -   安全性  
   
-     在預設會啟用新的斷詞工具[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]這點受惠於語言元件的安全性改善。 我們強烈建議您應該簽署外部元件 (例如，斷詞工具和篩選)，以便改善 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的整體安全性和健全性。 您可以設定全文檢索來確認這些元件是否已簽署，方法如下所示：  
+     [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]由於語言元件中的安全性改進，預設會啟用新的斷詞工具。 我們強烈建議您應該簽署外部元件 (例如，斷詞工具和篩選)，以便改善 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的整體安全性和健全性。 您可以設定全文檢索來確認這些元件是否已簽署，方法如下所示：  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -61,7 +62,7 @@ ms.locfileid: "66012726"
   
 -   大部分語言的斷詞工具都已包含在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中而且預設已啟用。  
   
- 如需語言的清單[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]包括斷詞工具和字幹分析器，請參閱 < [sys.fulltext_languages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)。  
+ 如需[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]包含斷詞工具和字幹分析器的語言清單，請參閱[fulltext_languages &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)。  
   
 
   
@@ -108,7 +109,7 @@ ms.locfileid: "66012726"
 ##  <a name="type"></a> 資料行類型對全文檢索搜尋的影響  
  選擇語言時的另一個考量與呈現資料的方式有關。 對於儲存在 `varbinary(max)` 資料行以外的資料而言，系統不會執行特殊篩選。 相反地，文字可以其原始格式傳送，而不會受限於文字分隔元件。  
   
- 此外，斷詞工具主要設計成處理一般撰寫內容。 所以，如果您的文字上有任何類型的標記 (如 HTML)，則在編製索引和搜尋語言時可能會不夠精確。 在於的情況下，您有兩個選擇慣用的方法是將文字資料儲存在`varbinary(max)`資料行，然後指示其文件類型，以進行篩選。 如果不使用這個選項，您可以考慮使用中性斷詞工具，而且若可行的話，請將標記資料 (例如 HTML 中的 'br') 加入至非搜尋字清單。  
+ 此外，斷詞工具主要設計成處理一般撰寫內容。 所以，如果您的文字上有任何類型的標記 (如 HTML)，則在編製索引和搜尋語言時可能會不夠精確。 在此情況下，您有兩個選擇：慣用的方法是將文字資料儲存在`varbinary(max)`資料行中，並指示其檔案類型，以便進行篩選。 如果不使用這個選項，您可以考慮使用中性斷詞工具，而且若可行的話，請將標記資料 (例如 HTML 中的 'br') 加入至非搜尋字清單。  
   
 > [!NOTE]  
 >  當您指定中性語言時，以語言為基礎的字根檢索功能將不會發生作用。  

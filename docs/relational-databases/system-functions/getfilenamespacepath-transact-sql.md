@@ -18,10 +18,10 @@ ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 42e3cd2c0431a1d23f3d67f7f1e983421b9b1e9a
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278329"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "72278329"
 ```  
   
 ## <a name="arguments"></a>引數  
- *column-name*  
+ *資料行名稱*  
  FileTable 中 VARBINARY （MAX） **file_stream**資料行的資料行名稱。  
   
  資料*行名稱*值必須是有效的資料行名稱。 它不可以是運算式，或是從其他資料類型之資料行轉換或轉型的值。  
@@ -45,15 +45,15 @@ ms.locfileid: "72278329"
  *is_full_path*  
  指定傳回相對路徑或絕對路徑的整數運算式。 *is_full_path*可以具有下列其中一個值：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|**0**|傳回資料庫層級目錄內的相對路徑。<br /><br /> 這是預設值。|  
+|**0**|傳回資料庫層級目錄內的相對路徑。<br /><br /> 這是預設值|  
 |**1**|傳回以 `\\computer_name` 開始的完整 UNC 路徑。|  
   
- *\@選項*  
- 定義路徑之伺服器元件格式化方式的整數運算式。 *\@選項*可以有下列其中一個值：  
+ *\@件*  
+ 定義路徑之伺服器元件格式化方式的整數運算式。 選項可以有下列其中一個值： * \@ *  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|傳回轉換成 NetBIOS 格式的伺服器名稱，例如：<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> 這是預設值。|  
 |**1**|在不轉換的情況下傳回伺服器名稱，例如：<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -73,7 +73,7 @@ ms.locfileid: "72278329"
   
  這個邏輯路徑不會直接對應到實體 NTFS 路徑。 FILESTREAM 的檔案系統篩選器驅動程式和 FILESTREAM 代理程式會將它轉譯成實體路徑。 邏輯路徑與實體路徑之間的這個分隔可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新組織內部資料，而不會影響路徑的有效性。  
   
-## <a name="best-practices"></a>最佳作法  
+## <a name="best-practices"></a>最佳做法  
  若要讓程式碼和應用程式獨立於目前的電腦和資料庫之外，請避免撰寫依賴絕對檔案路徑的程式碼。 相反地，請在執行時間使用**FileTableRootPath**和**GetFileNamespacePath**函數來取得檔案的完整路徑，如下列範例所示。 根據預設， **GetFileNamespacePath** 函數會傳回資料庫根路徑之下的檔案相對路徑。  
   
 ```sql  
@@ -86,7 +86,7 @@ SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 ## <a name="examples"></a>範例  
  下列範例示範如何呼叫**GetFileNamespacePath**函數，以取得 FileTable 中檔案或目錄的 UNC 路徑。  
@@ -102,6 +102,6 @@ WHERE Name = N'document.docx';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 FileTables 中的目錄與路徑](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
+ [使用 FileTable 中的目錄與路徑](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

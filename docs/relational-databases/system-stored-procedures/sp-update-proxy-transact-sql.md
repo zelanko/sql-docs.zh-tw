@@ -19,10 +19,10 @@ ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ec6c40abd080c86722565762fab3b4f9d30bd0c0
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305312"
 ---
 # <a name="sp_update_proxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
@@ -47,31 +47,31 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @proxy_id = ] id` 要變更之 proxy 的 proxy 識別碼。 *Proxy_id*是**int**，預設值是 Null。  
+`[ @proxy_id = ] id`要變更之 proxy 的 proxy 識別碼。 *Proxy_id*是**int**，預設值是 Null。  
   
-`[ @proxy_name = ] 'proxy_name'` 要變更的 proxy 名稱。 *Proxy_name*是**sysname**，預設值是 Null。  
+`[ @proxy_name = ] 'proxy_name'`要變更之 proxy 的名稱。 *Proxy_name*是**sysname**，預設值是 Null。  
   
-`[ @credential_name = ] 'credential_name'` proxy 的新認證名稱。 *Credential_name*是**sysname**，預設值是 Null。 可以指定*credential_name*或*credential_id* 。  
+`[ @credential_name = ] 'credential_name'`Proxy 的新認證名稱。 *Credential_name*是**sysname**，預設值是 Null。 可以指定*credential_name*或*credential_id* 。  
   
-`[ @credential_id = ] credential_id` proxy 的新認證識別碼。 *Credential_id*是**int**，預設值是 Null。 可以指定*credential_name*或*credential_id* 。  
+`[ @credential_id = ] credential_id`Proxy 的新認證識別碼。 *Credential_id*是**int**，預設值是 Null。 可以指定*credential_name*或*credential_id* 。  
   
-`[ @new_name = ] 'new_name'` proxy 的新名稱。 *New_name*是**sysname**，預設值是 Null。 當提供時，程式會將 proxy 的名稱變更為*new_name*。 當這個引數是 NULL 時，Proxy 的名稱會維持不變。  
+`[ @new_name = ] 'new_name'`Proxy 的新名稱。 *New_name*是**sysname**，預設值是 Null。 當提供時，程式會將 proxy 的名稱變更為*new_name*。 當這個引數是 NULL 時，Proxy 的名稱會維持不變。  
   
-`[ @enabled = ] is_enabled` 是 proxy 是否已啟用。 *Is_enabled*旗標是**Tinyint**，預設值是 Null。 當*is_enabled*為**0**時，不會啟用 proxy，作業步驟也不能使用。 當這個引數是 NULL 時，Proxy 的狀態會維持不變。  
+`[ @enabled = ] is_enabled`這是指是否啟用 proxy。 *Is_enabled*旗標是**Tinyint**，預設值是 Null。 當*is_enabled*為**0**時，不會啟用 proxy，作業步驟也不能使用。 當這個引數是 NULL 時，Proxy 的狀態會維持不變。  
   
-`[ @description = ] 'description'` proxy 的新描述。 *描述*是**Nvarchar （512）** ，預設值是 Null。 當這個引數是 NULL 時，Proxy 的描述會維持不變。  
+`[ @description = ] 'description'`Proxy 的新描述。 *描述*是**Nvarchar （512）**，預設值是 Null。 當這個引數是 NULL 時，Proxy 的描述會維持不變。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
-## <a name="remarks"></a>Remarks  
- 必須指定 **\@proxy_name**或 **\@proxy_id** 。 如果同時指定了兩個引數，這兩個引數都必須參考相同的 Proxy，否則，預存程序會失敗。  
+## <a name="remarks"></a>備註  
+ 必須指定** \@proxy_name**或** \@proxy_id** 。 如果同時指定了兩個引數，這兩個引數都必須參考相同的 Proxy，否則，預存程序會失敗。  
   
- 您必須指定 **\@credential_name**或 **\@credential_id** ，才能變更 proxy 的認證。 如果同時指定了兩個引數，這兩個引數必須參考相同的認證，否則，預存程序會失敗。  
+ 必須指定** \@credential_name**或** \@credential_id** ，才能變更 proxy 的認證。 如果同時指定了兩個引數，這兩個引數必須參考相同的認證，否則，預存程序會失敗。  
   
  這個程序會變更 Proxy，但不會變更 Proxy 的存取權。 若要變更 proxy 的存取權，請使用**sp_grant_login_to_proxy**並**sp_revoke_login_from_proxy**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  只有**系統管理員（sysadmin** ）固定安全性角色的成員，才能夠執行此程式。  
   
 ## <a name="examples"></a>範例  
@@ -88,11 +88,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Agent 預存&#40;程式 transact-sql&#41; ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [執行 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)   
- [sp_add_proxy &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
- [sp_grant_login_to_proxy &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_revoke_login_from_proxy &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
+ [SQL Server Agent 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [實行 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)   
+ [sp_add_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [sp_delete_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
+ [sp_grant_login_to_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
+ [sp_revoke_login_from_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   

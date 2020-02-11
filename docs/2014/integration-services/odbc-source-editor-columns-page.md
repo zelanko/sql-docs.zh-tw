@@ -1,5 +1,5 @@
 ---
-title: ODBC 來源編輯器 （資料行頁面） |Microsoft Docs
+title: ODBC 來源編輯器（資料行頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bfda61e5a57dabd62289f32d04d6367695b070b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057164"
 ---
 # <a name="odbc-source-editor-columns-page"></a>ODBC 來源編輯器 (資料行頁面)
@@ -29,11 +29,11 @@ ms.locfileid: "66057164"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，開啟具有 ODBC 來源的 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 封裝。  
   
-2.  在 [資料流程]  索引標籤中，按兩下 ODBC 來源。  
+2.  在 [資料流程]  索引標籤上，按兩下 ODBC 來源。  
   
 3.  在 **[ODBC 來源編輯器]** 中，按一下 **[資料行]** 。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 ### <a name="available-external-columns"></a>可用的外部資料行  
  資料來源中可用的外部資料行清單。 您無法使用此資料表來加入或刪除資料行。 請從來源選取要使用的資料行。 選取的資料行就會依照選取的順序加入至 **[外部資料行]** 清單。  
@@ -47,7 +47,7 @@ ms.locfileid: "66057164"
  為每個輸出資料行輸入唯一的名稱。 預設值為選取的外部 (來源) 資料行的名稱；不過，您也可以選擇任何唯一的、描述性的名稱。 輸入的名稱就會顯示在 SSIS 設計師中。  
   
 ## <a name="see-also"></a>另請參閱  
- [ODBC 來源編輯器 &#40;連接管理員頁面&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
+ [ODBC 來源編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
  [ODBC 來源編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   

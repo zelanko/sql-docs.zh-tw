@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d5e85a3685804fa834c9a92887a46c72b7cb69a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811312"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>預設追蹤已啟用伺服器組態選項
@@ -27,7 +27,7 @@ ms.locfileid: "62811312"
 > [!WARNING]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用擴充事件。  
   
-## <a name="purpose"></a>用途  
+## <a name="purpose"></a>目的  
  預設追蹤可為資料庫管理員提供疑難排解協助，確定他們有必要的記錄檔資料，能在問題發生的第一時間進行診斷。  
   
 ## <a name="viewing"></a>檢視  
@@ -35,7 +35,7 @@ ms.locfileid: "62811312"
   
  如需使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler 來檢視此追蹤檔案的詳細資訊，請參閱[開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>範例：  
  以下陳述式可開啟預設位置中的預設追蹤記錄檔：  
   
 ```  

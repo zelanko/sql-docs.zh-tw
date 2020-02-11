@@ -1,5 +1,5 @@
 ---
-title: 將查詢參數對應至變數，在執行 SQL 工作 |Microsoft Docs
+title: 在執行 SQL 工作中將查詢參數對應至變數 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057800"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>在執行 SQL 工作中將查詢參數對應到變數
@@ -38,7 +38,7 @@ ms.locfileid: "66057800"
   
 3.  按一下 **[控制流程]** 索引標籤。  
   
-4.  如果封裝尚未包含執行 SQL 工作，則會加入一個執行 SQL 工作至封裝的控制流程。 如需詳細資訊，請參閱[加入或刪除工作或容器中的控制流程](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  如果封裝尚未包含執行 SQL 工作，則會加入一個執行 SQL 工作至封裝的控制流程。 如需詳細資訊，請參閱[在控制流程中加入或刪除工作或容器](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
 5.  按兩下執行 SQL 工作。  
@@ -47,7 +47,7 @@ ms.locfileid: "66057800"
   
     -   使用直接輸入，並在 SQLStatement 屬性中輸入 SQL 命令。  
   
-    -   使用直接輸入，按一下 [建立查詢]  ，然後使用「查詢產生器」提供的圖形工具來建立 SQL 命令。  
+    -   使用直接輸入，按一下 [建立查詢]****，然後使用「查詢產生器」提供的圖形工具來建立 SQL 命令。  
   
     -   使用檔案連接，然後參考包含 SQL 命令的檔案。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66057800"
   
      您在參數化 SQL 陳述式中使用的參數標記，需視「執行 SQL」工作所使用的連接類型而定。  
   
-    |連接類型|參數標記|  
+    |連線類型|參數標記|  
     |---------------------|----------------------|  
     |ADO|?|  
     |ADO.NET 和 SQLMOBILE|@\<參數名稱>|  
@@ -64,7 +64,7 @@ ms.locfileid: "66057800"
   
      下表依照連接管理員類型列出 SELECT 命令的範例。 參數會在 WHERE 子句中提供篩選值。 這些範例使用 SELECT，從 **中的** Product [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)] 資料表傳回 **ProductID** 大於及小於兩個參數所指定之值的產品。  
   
-    |連接類型|SELECT 語法|  
+    |連線類型|SELECT 語法|  
     |---------------------|-------------------|  
     |EXCEL、ODBC 和 OLEDB|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
     |ADO|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
@@ -72,26 +72,26 @@ ms.locfileid: "66057800"
   
      如需使用參數搭配預存程序的範例，請參閱[執行 SQL 工作中的參數和傳回碼](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)。  
   
-7.  按一下 [參數對應]  。  
+7.  按一下 [參數對應]****。  
   
-8.  若要加入參數對應，請按一下 [加入]  。  
+8.  若要加入參數對應，請按一下 [加入]****。  
   
-9. 在 [參數名稱]  方塊中提供名稱。  
+9. 在 [參數名稱]**** 方塊中提供名稱。  
   
      您所使用的參數名稱需視「執行 SQL」工作所使用的連接類型而定。  
   
-    |連接類型|參數名稱|  
+    |連線類型|參數名稱|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, ...|  
     |ADO.NET 和 SQLMOBILE|@\<參數名稱>|  
     |ODBC|1, 2, 3, ...|  
     |EXCEL 和 OLE DB|0, 1, 2, 3, ...|  
   
-10. 從 [變數名稱]  清單中，選取一個變數。 如需詳細資訊，請參閱[加入、刪除、變更封裝中使用者定義變數的範圍](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)。  
+10. 從 [變數名稱]**** 清單中，選取一個變數。 如需詳細資訊，請參閱[加入、刪除、變更封裝中使用者定義變數的範圍](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)。  
   
-11. 在 [方向]  清單中，指定參數是輸入、輸出還是傳回值。  
+11. 在 [方向]**** 清單中，指定參數是輸入、輸出還是傳回值。  
   
-12. 在 [資料類型]  清單中，設定參數的資料類型。  
+12. 在 [資料類型]**** 清單中，設定參數的資料類型。  
   
     > [!IMPORTANT]  
     >  參數的資料類型必須與變數的資料類型相容。  
@@ -105,7 +105,7 @@ ms.locfileid: "66057800"
   
 ## <a name="see-also"></a>另請參閱  
  [執行 SQL 工作](control-flow/execute-sql-task.md)   
- [參數和傳回碼中執行 SQL 工作](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
+ [執行 SQL 工作中的參數和傳回碼](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
  [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)  
   
   

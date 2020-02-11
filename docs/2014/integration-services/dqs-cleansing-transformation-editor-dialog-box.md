@@ -1,5 +1,5 @@
 ---
-title: DQS 清理轉換編輯器 對話方塊 |Microsoft Docs
+title: DQS 清理轉換編輯器對話方塊 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059423"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>DQS 清理轉換編輯器對話方塊
@@ -54,7 +54,7 @@ ms.locfileid: "66059423"
  針對連接的資料來源選取現有的 DQS 知識庫。 如需有關 DQS 知識庫的詳細資訊，請參閱＜ [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)＞。  
   
  **加密連接**  
- 指定是否要加密連接，以便加密 DQS 伺服器之間的資料傳輸和[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。  
+ 指定是否要加密連接，以便加密 DQS 伺服器與[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]之間的資料傳輸。  
   
  **可用的定義域**  
  針對選取的知識庫列出可用的定義域。 定義域有二種類型：單一定義域以及包含兩個或多個單一定義域的複合定義域。  
@@ -111,7 +111,7 @@ ms.locfileid: "66059423"
  指出是否要輸出從現有參考資料提供者收到的其他資料。 如需詳細資訊，請參閱 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)。  
   
  **附加的資料結構描述**  
- 指出是否要輸出資料結構描述。 如需詳細資訊，請參閱 <<c0> [ 將定義域或複合定義域附加至參考資料](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)。  
+ 指出是否要輸出資料結構描述。 如需詳細資訊，請參閱[將定義域或複合定義域附加至參考資料](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)。  
   
 ##  <a name="manager"></a> 設定 DQS 清理連接管理員對話方塊中的選項  
  **伺服器名稱**  
@@ -126,7 +126,7 @@ ms.locfileid: "66059423"
   
 2.  以滑鼠右鍵按一下連接區域、按一下 [新增連接]  ，然後按一下 [DQS]  。  
   
-3.  按一下 **[加入]** 。  
+3.  按一下 [新增]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [將資料品質規則套用至資料來源](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  

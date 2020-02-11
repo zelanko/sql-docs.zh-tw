@@ -21,14 +21,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c56cd6ee0e2a52ca523a9273e3c705eab2540191
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797616"
 ---
 # <a name="dimension-relationships"></a>維度關聯性
-  維度使用方式會定義 Cube 維度和 Cube 內量值群組之間的關聯性。 Cube 維度是在特定 Cube 中使用之資料庫維度的執行個體。 Cube 可以，而且經常會，具有與量值群組沒有直接關聯的 Cube 維度，但可能會透過其他維度或量值群組，間接地與此量值群組相關。 當您將資料庫維度或量值群組加入至 cube 時，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會嘗試藉由檢查 cube 的資料來源視圖中的維度資料表與事實資料表之間的關聯性，以及檢查關聯性，來判斷維度的使用方式。在維度的屬性之間。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會自動設定其可偵測到之關聯性的維度使用方式設定。  
+  維度使用方式會定義 Cube 維度和 Cube 內量值群組之間的關聯性。 Cube 維度是在特定 Cube 中使用之資料庫維度的執行個體。 Cube 可以，而且經常會，具有與量值群組沒有直接關聯的 Cube 維度，但可能會透過其他維度或量值群組，間接地與此量值群組相關。 當您將資料庫維度或量值群組加入至 cube 時[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，會嘗試藉由檢查 cube 的資料來源視圖中的維度資料表與事實資料表之間的關聯性，以及檢查維度中屬性之間的關聯性，來判斷維度的使用方式。 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會自動設定其可偵測到之關聯性的維度使用方式設定。  
   
  維度與量值群組之間的關聯性，是由維度和參與關聯性的事實資料表所組成的，而資料粒度屬性則會指定特定量值群組中之維度的資料粒度。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "72797616"
   
  參考維度關聯性代表在雪花式結構描述設計中，維度資料表與事實資料表之間的關聯性。 當您在雪花式結構描述中連接維度資料表時，可以使用多份資料表中的資料行來定義單一維度；或者根據不同的維度資料表來定義個別的維度，然後使用參考維度關聯性設定來定義這些維度之間的連結。 下圖顯示一個名為**InternetSales**的事實資料表，以及一個雪花式架構中名為**Customer**和**Geography**的兩個維度資料表。  
   
- ![邏輯架構，參考的維度關聯性](../../analysis-services/dev-guide/media/as-refdim-schema1.gif "邏輯架構，參考的維度關聯性")  
+ ![邏輯結構描述，參考的維度關聯性](../../analysis-services/dev-guide/media/as-refdim-schema1.gif "邏輯結構描述，參考的維度關聯性")  
   
  您可以使用**Customer**資料表做為維度主資料表，並將**Geography**資料表當做相關資料表來建立維度。 接著，在維度和 InternetSales 量值群組之間定義一般關聯性。  
   
@@ -55,9 +56,9 @@ ms.locfileid: "72797616"
  如需參考關聯性的詳細資訊，請參閱[定義參考的關聯性和參考的關聯性屬性](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
   
 ## <a name="fact-dimension-relationships"></a>事實維度關聯性  
- 事實維度 (一般稱為變質維度) 是從事實資料表內的屬性資料行 (而非從維度資料表內的屬性資料行) 建構而來的標準維度。 有時候會將有用的維度資料儲存在事實資料表中，以減少資料的重複。 例如，下圖顯示 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 範例資料庫中的**FactResellerSales**事實資料表。  
+ 事實維度 (一般稱為變質維度) 是從事實資料表內的屬性資料行 (而非從維度資料表內的屬性資料行) 建構而來的標準維度。 有時候會將有用的維度資料儲存在事實資料表中，以減少資料的重複。 例如，下圖顯示[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]範例資料庫中的**FactResellerSales**事實資料表。  
   
- ![事實資料表中的資料行可以支援維度](../../analysis-services/dev-guide/media/as-factdim.gif "事實資料表中的資料行可以支援維度")  
+ ![事實資料表中的資料行可支援維度](../../analysis-services/dev-guide/media/as-factdim.gif "事實資料表中的資料行可支援維度")  
   
  此資料表所包含的屬性資訊，不但有零售商所發出的訂單產品線，還有關於訂單本身的資訊。 上圖中所圈出的屬性會識別**FactResellerSales**資料表中可用來當做維度屬性的資訊。 在此情況下，還有另外兩項資訊，即轉售商發出的貨運追蹤編號和訂單號碼，是由 CarrierTrackingNumber 和 CustomerPONumber 屬性資料行來表示。 這項資訊很有趣-例如，使用者對於在單一追蹤號碼下出貨的所有訂單，一定會有興趣查看匯總資訊，例如產品成本總計。 但沒有維度，也無法組織或彙總這兩個屬性的資料。  
   
@@ -74,16 +75,16 @@ ms.locfileid: "72797616"
 ## <a name="many-to-many-dimension-relationships"></a>多對多維度關聯性  
  在大部分維度中，每一個事實只會聯結到一個維度成員，且單一維度成員可與多個事實相關聯。 在關聯式資料庫詞彙中，這稱為「一對多關聯性」。 然而，將單一事實聯結至多個維度成員，是很有用的。 例如，銀行客戶可以有多個帳戶 (支票、儲蓄、信用卡和投資帳戶)，而一個帳戶可以有聯合或多個擁有者。 從這樣的關聯性建構的客戶維度，就會有多個與單一帳戶交易相關的成員。  
   
- ![邏輯架構/多對多維度關聯性](../../analysis-services/dev-guide/media/as-many-dimension1.gif "邏輯架構/多對多維度關聯性")  
+ ![邏輯結構描述/多對多維度關聯性](../../analysis-services/dev-guide/media/as-many-dimension1.gif "邏輯結構描述/多對多維度關聯性")  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可讓您定義維度與事實資料表之間的多對多關聯性。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]可讓您定義維度與事實資料表之間的多對多關聯性。  
   
 > [!NOTE]  
 >  若要支援多對多維度關聯性，資料來源檢視必須在所有相關資料表之間建立外部索引鍵關聯性 (如上圖所示)。 否則，當您在 [維度設計師] 的 [**維度使用**方式] 索引標籤中建立關聯性時，將無法選取正確的中繼量值群組。  
   
  如需多對多關聯性的詳細資訊，請參閱[定義多對多關聯性和多對多關聯性屬性](../multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)。  
   
-## <a name="see-also"></a>請參閱  
- [維度 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>另請參閱  
+ [維度 &#40;Analysis Services 多維資料&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

@@ -15,22 +15,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a97fd3892e74b16c844867f88bc7d72fedc46d20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720379"
 ---
-# <a name="modify-the-target-servers-for-a-job"></a>Modify the Target Servers for a Job
-  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中變更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的目標伺服器。  
+# <a name="modify-the-target-servers-for-a-job"></a>修改作業的目標伺服器
+  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]，在中變更 Agent 作業的目標伺服器。  
   
  **本主題內容**  
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要修改作業的目標伺服器，使用：**  
+-   **若要修改作業的目標伺服器，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -38,10 +38,10 @@ ms.locfileid: "62720379"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
- 依預設，只有系統管理員 (sysadmin) 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須獲得授與 msdb 資料庫的下列其中一個 SQL Server Agent 固定資料庫角色：  
+ 根據預設，系統管理員固定伺服器角色的成員可執行此預存程序。 其他使用者必須獲得授與 msdb 資料庫的下列其中一個 SQL Server Agent 固定資料庫角色：  
   
 1.  `SQLAgentUserRole`  
   
@@ -55,11 +55,11 @@ ms.locfileid: "62720379"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  依序展開 [SQL Server Agent]  和 [作業]  、以滑鼠右鍵按一下某個作業，然後按一下 [屬性]  。  
+2.  依序展開 [SQL Server Agent]**** 和 [作業]****、以滑鼠右鍵按一下某個作業，然後按一下 [屬性]****。  
   
-3.  在 [作業屬性]  對話方塊中，選取 [目標]  頁面，然後按一下 [目標本機伺服器]  或 [目標多個伺服器]  。  
+3.  在 [作業屬性]**** 對話方塊中，選取 [目標]**** 頁面，然後按一下 [目標本機伺服器]**** 或 [目標多個伺服器]****。  
   
-     如果選擇 **[目標多個伺服器]** ，請選取伺服器名稱左邊的方塊，以指定要做為作業目標的伺服器。 至於不要做為作業目標的伺服器，請確認已取消選取其核取方塊。  
+     如果選擇 **[目標多個伺服器]**，請選取伺服器名稱左邊的方塊，以指定要做為作業目標的伺服器。 至於不要做為作業目標的伺服器，請確認已取消選取其核取方塊。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -82,7 +82,7 @@ GO
   
 ```  
   
- 如需詳細資訊，請參閱 < [sp_add_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)。  
+ 如需詳細資訊，請參閱[sp_add_jobserver &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)。  
   
 ## <a name="see-also"></a>另請參閱  
  [將整個企業的管理自動化](automated-administration-across-an-enterprise.md)  

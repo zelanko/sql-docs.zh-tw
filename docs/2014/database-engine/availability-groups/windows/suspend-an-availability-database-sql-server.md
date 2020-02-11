@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c428d9141acfaca3e8ec7876e62b733c30ec161
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797958"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>暫止可用性資料庫 (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "72797958"
   
 |暫停的資料庫|暫停命令的效果|  
 |------------------------|-------------------------------|  
-|次要資料庫|只有本機次要資料庫會暫停，而且其同步處理狀態會變成 NOT SYNCHRONIZING。 其他次要資料庫不受影響。 暫停的資料庫會停止接收和套用資料 (記錄檔記錄)，並且開始落後於主要資料庫。 可讀取次要複本上的現有連接會保持可用狀態。 在資料移動繼續執行之前，不允許可讀取次要複本上已暫停之資料庫的新連接。<br /><br /> 主要資料庫仍然可用。 如果您暫停每個對應的次要資料庫，則主要資料庫會公開執行。<br /><br /> **\*\* 重要事項 \*\*** 次要資料庫暫停期間，所對應之主要資料庫的傳送佇列將會累積未傳送的交易記錄檔記錄。 次要複本的連接會傳回在資料移動暫停時可用的資料。|  
+|次要資料庫|只有本機次要資料庫會暫停，而且其同步處理狀態會變成 NOT SYNCHRONIZING。 其他次要資料庫不受影響。 暫停的資料庫會停止接收和套用資料 (記錄檔記錄)，並且開始落後於主要資料庫。 可讀取次要複本上的現有連接會保持可用狀態。 在資料移動繼續執行之前，不允許可讀取次要複本上已暫停之資料庫的新連接。<br /><br /> 主要資料庫仍然可用。 如果您暫停每個對應的次要資料庫，則主要資料庫會公開執行。<br /><br /> ** \* \*重要\*事項**當次要資料庫暫停時，對應主資料庫的傳送佇列將會累積未傳送的交易記錄檔記錄。 次要複本的連接會傳回在資料移動暫停時可用的資料。|  
 |主要資料庫|主要資料庫會停止將資料移動到每個連接的次要資料庫。 主要資料庫會繼續以公開模式執行。 主要資料庫仍然可供用戶端使用，而可讀取次要資料庫上的現有連接仍然可以使用，並且可以建立新連接。|  
   
 > [!NOTE]  
@@ -47,9 +47,9 @@ ms.locfileid: "72797958"
   
      [安全性](#Security)  
   
--   **若要使用下列項目暫停資料庫：**  
+-   **若要暫停資料庫，請使用：**  
   
--   [SQL Server Management Studio](#SSMSProcedure)  
+-   [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "72797958"
   
 ###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
   
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
@@ -86,9 +86,9 @@ ms.locfileid: "72797958"
   
 3.  展開可用性群組。  
   
-4.  展開 [可用性資料庫] 節點，以滑鼠右鍵按一下資料庫，然後按一下 [暫停進行資料移動]。  
+4.  展開 [可用性資料庫]**** 節點，以滑鼠右鍵按一下資料庫，然後按一下 [暫停進行資料移動]****。  
   
-5.  在 **[暫停資料移動]** 對話方塊中，按一下 **[確定]** 。  
+5.  在 **[暫停資料移動]** 對話方塊中，按一下 **[確定]**。  
   
      [物件總管] 會透過變更資料庫圖示以顯示暫停指標，指出資料庫已暫停。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "72797958"
   
 2.  使用下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr)陳述式暫停資料庫：  
   
-     ALTER DATABASE *database_name* SET HADR SUSPEND  
+     ALTER DATABASE *database_name*設定 HADR 暫止  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要暫停資料庫**  
@@ -118,13 +118,13 @@ ms.locfileid: "72797958"
     ```  
   
     > [!NOTE]  
-    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱＜ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)＞。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
- **若要設定和使用 SQL Server PowerShell 提供者**  
+ **若要設定及使用 SQL Server PowerShell 提供者**  
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
+##  <a name="FollowUp"></a>後續操作：避免填滿交易記錄  
  一般而言，在資料庫上執行自動檢查點時，交易記錄會在下一個記錄備份之後，截斷至該檢查點。 但在次要資料庫暫停時，所有目前的記錄檔記錄仍在主要資料庫作用中。 如果交易記錄已填滿 (因為已達到最大值，或者伺服器執行個體用盡空間)，資料庫就不能再執行其他更新。  
   
  若要避免這個問題，您應該執行下列其中一項工作：  
@@ -135,14 +135,14 @@ ms.locfileid: "72797958"
   
 -   移除次要資料庫。 如需詳細資訊，請參閱[將次要資料庫從可用性群組移除 &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md)。  
   
- **若要對寫滿交易記錄進行疑難排解**  
+ **若要針對完整交易記錄進行疑難排解**  
   
--   [為寫滿交易記錄疑難排解 &#40;SQL Server 錯誤 9002&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+-   [寫滿交易記錄疑難排解 &#40;SQL Server 錯誤 9002&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
 -   [繼續可用性資料庫 &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [繼續可用性資料庫 &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  

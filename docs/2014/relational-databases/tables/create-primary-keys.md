@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1203872d92c1b9d424cfe457437cbde16b8e2120
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761513"
 ---
 # <a name="create-primary-keys"></a>建立主索引鍵
@@ -28,9 +28,9 @@ ms.locfileid: "62761513"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **使用下列方法建立主索引鍵：**  
+-   **若要使用下列各項建立主鍵：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62761513"
   
 -   PRIMARY KEY 條件約束內所定義的所有資料行，都必須定義成 NOT NULL。 如果未指定 Null 屬性，參與 PRIMARY KEY 條件約束的所有資料行，其 Null 屬性都會設成 NOT NULL。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  建立具有主索引鍵的新資料表，需要資料庫中的 CREATE TABLE 權限及建立資料表的結構描述之 ALTER 權限。  
@@ -55,11 +55,11 @@ ms.locfileid: "62761513"
   
 #### <a name="to-create-a-primary-key"></a>若要建立主索引鍵  
   
-1.  在物件總管 中，以滑鼠右鍵按一下要加入唯一條件約束的資料表，然後按一下 [設計]  。  
+1.  在物件總管 中，以滑鼠右鍵按一下要加入唯一條件約束的資料表，然後按一下 [設計]****。  
   
 2.  在 **[資料表設計工具]** 中，按一下要定義為主索引鍵的資料庫資料行的資料列選取器。 若要選取多個資料行，請按住 CTRL 鍵，同時按一下其他資料行的資料列選取器。  
   
-3.  在資料行的資料列選取器中，按一下滑鼠右鍵，然後選取 [設定主索引鍵]  。  
+3.  在資料行的資料列選取器中，按一下滑鼠右鍵，然後選取 [設定主索引鍵]****。  
   
 > [!CAUTION]  
 >  若要重新定義主索引鍵，必須在建立新的主索引鍵前，先刪除所有現有主索引鍵的關聯性。 出現訊息警告您，這個程序中會自動刪除現有的關聯性。  
@@ -95,7 +95,7 @@ ms.locfileid: "62761513"
   
 2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會建立資料表並在 `TransactionID` 資料行上定義主索引鍵。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會建立資料表並在 `TransactionID`資料行上定義主索引鍵。  
   
     ```  
     USE AdventureWorks2012;  

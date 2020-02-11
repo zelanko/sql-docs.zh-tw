@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 51784663fdfec66f851bed479184ae21170a3681
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62664004"
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>Broker:Forwarded Message Sent 事件類別
@@ -47,11 +47,11 @@ ms.locfileid: "62664004"
 |ObjectId|`int`|在轉寄訊息時，轉寄訊息的存留時間值。|22|否|  
 |ObjectName|`nvarchar`|轉寄訊息的訊息識別碼。|34|否|  
 |OwnerName|`nvarchar`|將訊息導向的 Broker 識別碼。|37|否|  
-|RoleName|`nvarchar`|交談控制代碼的角色。 它是下列項目之一：<br /><br /> 起始端。 此 Broker 起始了交談。<br /><br /> Target。 此 Broker 是交談的目標。|38|否|  
+|RoleName|`nvarchar`|交談控制代碼的角色。 值為下列其中之一：<br /><br /> 起始端。 此 Broker 起始了交談。<br /><br /> Target。 此 Broker 是交談的目標。|38|否|  
 |ServerName|`nvarchar`|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |SPID|`int`|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|成功|`int`|在轉寄處理序期間所耗用的時間量。|23|否|  
+|Success|`int`|在轉寄處理序期間所耗用的時間量。|23|否|  
 |TargetLoginName|`nvarchar`|此執行個體要傳送訊息的網路位址。 請注意這個位址有可能與訊息的最終目的地不同。|42|否|  
 |TargetUserName|`nvarchar`|訊息的起始端服務名稱。|39|否|  
 |TransactionID|`bigint`|系統指派的交易識別碼。|4|否|  

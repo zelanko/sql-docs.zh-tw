@@ -1,5 +1,5 @@
 ---
-title: 使用資料型別識別項 |Microsoft Docs
+title: 使用資料類型識別碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ ms.assetid: 467e0c0c-a818-4737-8a24-3d8e15c7e162
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b5e9fea64986bf595676540d74bb87a6e62521c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070010"
 ---
 # <a name="using-data-type-identifiers"></a>使用資料類型識別碼
-應用程式會將資料型別識別項用於兩種方式： 來描述驅動程式，其緩衝區，以及擷取的結果集從驅動程式，好讓它們可以判斷要用來儲存資料緩衝處理的 C 類型相關的中繼資料。 應用程式呼叫下列函式，執行下列工作：  
+應用程式會以兩種方式使用資料類型識別碼：將其緩衝區描述到驅動程式，並從驅動程式抓取結果集的相關中繼資料，讓它們能夠判斷要用來儲存資料的 C 緩衝區類型。 應用程式會呼叫下列函式來執行這些工作：  
   
--   **SQLBindParameter**， **SQLBindCol**，以及**SQLGetData** -來描述應用程式緩衝區的 C 資料類型。  
+-   **SQLBindParameter**、 **SQLBindCol**和**SQLGetData** -描述應用程式緩衝區的 C 資料類型。  
   
--   **SQLBindParameter** -來描述 SQL 資料類型的動態參數。  
+-   **SQLBindParameter** -描述動態參數的 SQL 資料類型。  
   
--   **SQLColAttribute**並**SQLDescribeCol** -以擷取結果集資料行的 SQL 資料類型。  
+-   **SQLColAttribute**和**SQLDescribeCol** -取得結果集資料行的 SQL 資料類型。  
   
--   **SQLDescribeParameter** -擷取 SQL 資料類型的參數。  
+-   **SQLDescribeParameter** -取得參數的 SQL 資料類型。  
   
--   **SQLColumns**， **SQLProcedureColumns**，以及**SQLSpecialColumns** -擷取 SQL 資料類型的各種不同的結構描述資訊  
+-   **SQLColumns**、 **SQLProcedureColumns**和**SQLSpecialColumns** -用來捕獲各種架構資訊的 SQL 資料類型  
   
--   **SQLGetTypeInfo** -擷取一份支援的資料類型  
+-   **SQLGetTypeInfo** -取得支援的資料類型清單  
   
- 資料型別識別項會儲存在 SQL_DESC_CONCISE_TYPE 欄位描述元。 描述元函式**SQLSetDescField**並**SQLSetDescRec**可以搭配適當的類型來執行上述清單中所列的工作。 如需詳細資訊，請參閱 < [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。
+ 資料類型識別碼會儲存在描述項的 SQL_DESC_CONCISE_TYPE 欄位中。 描述項函式**SQLSetDescField**和**SQLSetDescRec**可以與適當的類型搭配使用，以執行上述清單中所列的工作。 如需詳細資訊，請參閱[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。

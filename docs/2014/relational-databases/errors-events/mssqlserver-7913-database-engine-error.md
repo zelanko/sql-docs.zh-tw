@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f15575b5a410fdc2430d4914b3c2bc0456f54158
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762304"
 ---
-# <a name="mssqlserver7913"></a>MSSQLSERVER_7913
+# <a name="mssqlserver_7913"></a>MSSQLSERVER_7913
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|7913|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_REPAIR_EXTENT_DEALLOCATED|  
-|訊息文字|修復:範圍 P_ID 已經從物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID （類型 TYPE） 取消配置。|  
+|訊息文字|修復: 範圍 P_ID 已經從物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE) 取消配置。|  
   
 ## <a name="explanation"></a>說明  
  這是來自 REPAIR 的參考用訊息，表示某個範圍已經從指定的物件取消配置。  

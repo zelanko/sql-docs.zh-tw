@@ -21,14 +21,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f090cd6dbfaa0194bc02af581fc4765fca9eac0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768974"
 ---
 # <a name="developing-a-custom-destination-component"></a>開發自訂目的地元件
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 讓開發人員能夠撰寫可連線至任何自訂資料來源並在其中儲存資料的自訂目的地元件。 當您必須連接至無法使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 隨附的其中一個現有來源元件所存取的資料來源時，自訂目的地元件就很有用。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]讓開發人員能夠撰寫可連接到任何自訂資料來源並在其中儲存資料的自訂目的地[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]元件。 當您必須連接至無法使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 隨附的其中一個現有來源元件所存取的資料來源時，自訂目的地元件就很有用。  
   
  目的地元件具有一或多個輸入與零個輸出。 在設計階段中，它們會建立並設定連接，並且從外部資料來源中讀取資料行中繼資料。 在執行期間，它們會連接至外部資料來源，並且將從資料流程的上游元件收到的資料列加入至外部資料來源。 如果外部資料來源在執行此元件之前就存在，目的地元件也必須確定此元件收到之資料行的資料類型與外部資料來源之資料行的資料類型相符。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62768974"
  實作目的地元件的設計階段功能包括指定外部資料來源的連接，以及驗證元件是否已正確設定。 根據定義，目的地元件具有一個輸入，而且可能具有一個錯誤輸出。  
   
 ### <a name="creating-the-component"></a>建立元件  
- 目的地元件會使用在封裝中定義的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件，連接至外部資料來源。 目的地元件會將元素新增至 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 集合，以向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具和元件的使用者指出其連線管理員的需求。 這個集合有兩個目的：首先，它會向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師通告連接管理員的需求。然後，在使用者已選取或建立連接管理員之後，它會在封裝中保留元件所使用之連接管理員的參考。 將 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 新增至集合時，[進階編輯器]  會顯示 [連線屬性]  索引標籤，提示使用者在套件中選取或建立連線以供元件使用。  
+ 目的地元件會使用在封裝中定義的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件，連接至外部資料來源。 目的地元件會將元素新增至 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 集合，以向 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 設計工具和元件的使用者指出其連線管理員的需求。 這個集合有兩個目的：首先，它會向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師通告連接管理員的需求。然後，在使用者已選取或建立連接管理員之後，它會在封裝中保留元件所使用之連接管理員的參考。 將 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 新增至集合時，[進階編輯器]**** 會顯示 [連線屬性]**** 索引標籤，提示使用者在套件中選取或建立連線以供元件使用。  
   
  下列程式碼範例會顯示 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 的實作，它加入輸入並將 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 物件加入至 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>。  
   
@@ -101,7 +101,8 @@ End Namespace
 ```  
   
 ### <a name="connecting-to-an-external-data-source"></a>連接到外部資料來源  
- 在將連接加入至 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 之後，就可覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 方法以建立外部資料來源的連接。 這個方法會在設計階段和執行階段呼叫。 元件必須建立一個連接，以便連至執行階段連接所指定的連接管理員，之後再連至外部資料來源。 一旦建立連接之後，元件就應該在內部快取連接，然後在呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> 時釋放此連接。 開發人員會覆寫這個方法，並在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 期間釋放元件建立的連接。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 這兩個方法是在設計階段與執行階段呼叫的。  
+ 在將連接加入至 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 之後，就可覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 方法以建立外部資料來源的連接。 這個方法會在設計階段和執行階段呼叫。 元件必須建立一個連接，以便連至執行階段連接所指定的連接管理員，之後再連至外部資料來源。 一旦建立連接之後，元件就應該在內部快取連接，然後在呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> 時釋放此連接。 開發人員會覆寫這個方法，並在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 期間釋放元件建立的連接。 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 這兩個方法是在設計階段與執行階段呼叫的。  
   
  下列程式碼範例會顯示一個元件，它在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 方法中連接至 ADO.NET 連接，然後在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> 方法中關閉此連接。  
   
@@ -481,7 +482,7 @@ Namespace BlobDst
 End Namespace  
 ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [開發自訂來源元件](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)   

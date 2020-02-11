@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b6665165d3b50ef4ac73be2d530a018c0ef5d86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771564"
 ---
 # <a name="cdc-instance-deployment-script"></a>CDC 執行個體部署指令碼
@@ -33,10 +33,10 @@ ms.locfileid: "62771564"
  **另存新檔**  
  將指令碼以文字檔格式儲存在您想要儲存的任何位置。 您可以將包含指令碼的檔案複製到其他任何伺服器上，並在該處執行。  
   
- **[複製]**  
+ **複製**  
  將指令碼複製到剪貼簿。 然後您可以將指令碼貼到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或任何文字編輯器中，於日後執行指令碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [為 CDC 準備 SQL Server](prepare-sql-server-for-cdc.md)  
+ [準備 SQL Server 以使用 CDC](prepare-sql-server-for-cdc.md)  
   
   

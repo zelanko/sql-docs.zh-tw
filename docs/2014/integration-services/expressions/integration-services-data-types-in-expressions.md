@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769100"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>運算式中的 Integration Services 資料類型
@@ -47,7 +47,8 @@ ms.locfileid: "62769100"
 > [!NOTE]  
 >  布林值是邏輯值，而非數字。 雖然布林值可以在某些環境下顯示為數字，但不會儲存為數字，而且不同的程式設計語言將布林值表示成數值的方式各有不同，.NET Framework 方法也是如此。  
 >   
->  例如，Visual Basic 提供的轉換函數會將 `True` 轉換為 -1；然而 .NET Framework 中的 `System.Convert.ToInt32` 方法會將 `True` 轉換為 +1。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 運算式語言則會將 `True` 轉換為 -1。  
+>  例如，Visual Basic 提供的轉換函數會將 `True` 轉換為 -1；然而 .NET Framework 中的 `System.Convert.ToInt32` 方法會將 `True` 轉換為 +1。 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 運算式語言則會將 `True` 轉換為 -1。  
 >   
 >  若要避免錯誤或非預期結果，您所撰寫的程式碼不應該以特定數值表示 `True` 和 `False`。 您應該盡可能將布林變數的使用限制在當初所設計的邏輯值上。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "62769100"
   
 -   [== &#40;等於&#41; &#40;SSIS 運算式&#41;](equal-ssis-expression.md)  
   
--   [\!= &#40;不等於&#41; &#40;SSIS 運算式&#41;](unequal-ssis-expression.md)  
+-   [！ = &#40;SSIS 運算式&#41; &#40;不相等&#41;](unequal-ssis-expression.md)  
   
 -   [&#62; &#40;大於&#41; &#40;SSIS 運算式&#41;](greater-than-ssis-expression.md)  
   
@@ -78,9 +79,11 @@ ms.locfileid: "62769100"
 ## <a name="requirements-for-data-used-in-expressions"></a>運算式中所用資料的需求  
  運算式評估工具支援所有的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型。 不過，根據運算和函數而定，運算元和引數會需要特定資料類型。 運算式評估工具對於運算式中使用的資料，有下列資料類型需求的規定︰  
   
--   **邏輯**運算中使用的運算元評估結果必須為布林。 例如，ColumnA > 1&&ColumnB < 2。  
+-   
+  **邏輯** 運算中使用的運算元評估結果必須為布林。 例如，ColumnA > 1&&ColumnB < 2。  
   
--   **數學**運算中使用的運算元評估結果必須為數值。 例如，23.75 * 4。  
+-   
+  **數學** 運算中使用的運算元評估結果必須為數值。 例如，23.75 * 4。  
   
 -   比較運算中使用的運算元 (例如邏輯和等式運算) 必須評估為相容的資料類型。  
   

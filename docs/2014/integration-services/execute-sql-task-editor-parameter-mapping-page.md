@@ -1,5 +1,5 @@
 ---
-title: 執行 SQL 工作編輯器 （參數對應頁面） |Microsoft Docs
+title: 執行 SQL 工作編輯器（參數對應頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7508324be0bef23ba0590bb181135512d75701e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059034"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>執行 SQL 工作編輯器 (參數對應頁面)
-  使用 [執行 SQL 工作編輯器]  對話方塊的 [參數對應]  頁面，即可將變數對應到 SQL 陳述式中的參數。  
+  使用 [執行 SQL 工作編輯器]**** 對話方塊的 [參數對應]**** 頁面，即可將變數對應到 SQL 陳述式中的參數。  
   
  若要了解這項工作，請參閱[執行 SQL 工作](control-flow/execute-sql-task.md)和[執行 SQL 工作中的參數和傳回碼](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **變數名稱**  
- 按一下 [新增]  新增參數對應之後，請從清單中選取系統或使用者定義變數，或按一下 [\<新增變數...>]  以使用 [新增變數]  對話方塊新增新的變數。  
+ 按一下 [新增]**** 新增參數對應之後，請從清單中選取系統或使用者定義變數，或按一下 [\<新增變數...>]**** 以使用 [新增變數]**** 對話方塊新增新的變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)  
   
@@ -50,16 +50,16 @@ ms.locfileid: "66059034"
   
  此設計可確保提供者能為可變長度的參數值配置足夠的空間。  
   
- **[加入]**  
+ **加入**  
  按一下即可加入參數對應。  
   
  **移除**  
- 在清單中選取參數對應，然後按一下 [移除]  。  
+ 在清單中選取參數對應，然後按一下 [移除]****。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [執行 SQL 工作編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
- [執行 SQL 工作編輯器&#40;結果集頁面&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   
+ [&#40;一般頁面&#41;執行 SQL 工作編輯器](general-page-of-integration-services-designers-options.md)   
+ [[執行 SQL 工作編輯器] &#40;[結果集] 頁面&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   
  [Transact-SQL 參考 &#40;Database Engine&#41;](/sql/t-sql/language-reference)  
   
   

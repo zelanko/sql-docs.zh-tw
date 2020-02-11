@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 245ae929b9a267f06b675b9380760f3db6067d1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809052"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>以單一使用者模式啟動 SQL Server
@@ -36,7 +36,7 @@ ms.locfileid: "62809052"
   
  以單一使用者模式啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的物件總管可能會失敗，因為它需要一個以上的連接才能進行某些作業。 若要在單一使用者模式下管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，僅透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的查詢編輯器連接來執行 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，或使用 [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)。  
   
- 搭配 **qlcmd** 或 **使用** -m [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]選項時，您可以限制只連接到指定的用戶端應用程式。 例如， **-m"sqlcmd"** 會將連接限制為單一連接，而且該連接必須具有 **sqlcmd** 用戶端程式的識別。 當您在單一使用者模式下啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而且有未知的用戶端應用程式佔用唯一可用的連接時，請使用這個選項。 若要透過 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的查詢編輯器進行連接，請使用 **-m"Microsoft SQL Server Management Studio - Query"** 。  
+ 當您搭配**sqlcmd**或[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]使用 **-m**選項時，可以限制與指定之用戶端應用程式的連接。 例如， **-m "sqlcmd"** 會將連接限制為單一連接，而且該連接必須將自己識別為**sqlcmd**用戶端程式。 當您在單一使用者模式下啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而且有未知的用戶端應用程式佔用唯一可用的連接時，請使用這個選項。 若要透過 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的查詢編輯器進行連接，請使用 **-m"Microsoft SQL Server Management Studio - Query"**。  
   
 > [!IMPORTANT]  
 >  請勿將這個選項當做安全性功能使用。 用戶端應用程式會提供用戶端應用程式名稱，而且可能會在連接字串中提供假的名稱。  
@@ -55,14 +55,14 @@ ms.locfileid: "62809052"
   
 4.  從叢集管理員或是容錯移轉叢集管理主控台確認 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源依然為離線狀態。  
   
-5.  連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]現在使用下列命令，並執行必要的操作：SQLCMD -E -S\<servername>.  
+5.  現在使用下列命令連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並執行必要作業：SQLCMD -E -S\<伺服器名稱>。  
   
 6.  當此操作完成之後，關閉命令提示字元，並透過叢集管理員將 SQL 和其他資源帶回線上。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動、停止或暫停 SQL Server Agent 服務](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
  [資料庫管理員的診斷連接](diagnostic-connection-for-database-administrators.md)   
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
+ [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)   
  [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [Database Engine 服務啟動選項](database-engine-service-startup-options.md)  

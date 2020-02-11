@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44b583c062280cb080228d7db3bd24a312a350fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768534"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>新增自訂工作中的偵錯支援
@@ -33,7 +33,7 @@ ms.locfileid: "62768534"
   
  自訂工作開發人員可以使用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 介面及其父介面 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>，以利用此架構建立自訂中斷點目標。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 介面會定義執行階段引擎與工作之間的互動，以建立和管理自訂中斷點位置或目標。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 介面提供執行階段引擎呼叫的方法與屬性，通知工作暫停或是繼續其執行。  
   
- 中斷點位置或目標是在工作執行中可以暫停處理的點。 使用者可以從 [設定中斷點] 對話方塊中的可用中斷點位置選取。 例如，除了預設中斷點選項之外，[Foreach 迴圈容器] 提供 [在迴圈的每一次反覆運算開始時中斷] 選項。  
+ 中斷點位置或目標是在工作執行中可以暫停處理的點。 使用者可以從 [設定中斷點]  對話方塊中的可用中斷點位置選取。 例如，除了預設中斷點選項之外，[Foreach 迴圈容器] 提供 [在迴圈的每一次反覆運算開始時中斷] 選項。  
   
  當工作在執行期間到達中斷點目標時，它會評估中斷點目標以決定是否啟用中斷點。 這指出使用者希望在該中斷點停止執行。 如果啟用中斷點，工作會將 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> 事件引發至執行階段引擎。 執行階段引擎會呼叫目前在封裝中執行的每項工作之 `Suspend` 方法以回應事件。 當執行階段呼叫已暫停工作的 `ResumeExecution` 方法時，工作執行會繼續。  
   
@@ -87,7 +87,8 @@ End Function
 ```  
   
 ## <a name="idtssuspend-interface"></a>IDTSSuspend 介面  
- <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 介面會定義當執行階段引擎暫停或是繼續工作的執行時，該引擎呼叫的方法。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 介面是由 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 介面實作，而且自訂工作通常會覆寫其 `Suspend` 與 `ResumeExecution` 方法。 當執行階段引擎從工作收到 `OnBreakpointHit` 事件時，它會呼叫每個執行中工作的 `Suspend` 方法，以通知工作暫停。 當用戶端繼續執行時，執行階段引擎會呼叫已暫停工作的 `ResumeExecution` 方法。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 介面會定義當執行階段引擎暫停或是繼續工作的執行時，該引擎呼叫的方法。 
+  <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 介面是由 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 介面實作，而且自訂工作通常會覆寫其 `Suspend` 與 `ResumeExecution` 方法。 當執行階段引擎從工作收到 `OnBreakpointHit` 事件時，它會呼叫每個執行中工作的 `Suspend` 方法，以通知工作暫停。 當用戶端繼續執行時，執行階段引擎會呼叫已暫停工作的 `ResumeExecution` 方法。  
   
  暫停和繼續工作執行需要暫停和繼續工作的執行緒。 在 Managed 程式碼中，您使用 .NET Framework 之 `ManualResetEvent` 命名空間中的 `System.Threading` 類別，來執行這項動作。  
   
@@ -340,7 +341,7 @@ Public Sub Suspend()
 End Sub  
 ```  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [偵錯控制流程](../../troubleshooting/debugging-control-flow.md)  

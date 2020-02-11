@@ -20,18 +20,18 @@ ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d58fe69e487b4f61384f9bd146b17c6d9ada9ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061467"
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>SQLGetPrivateProfileString 函式
-**合規性**  
- 導入的版本：ODBC 2.0  
+**標準**  
+ 引進的版本： ODBC 2。0  
   
  **摘要**  
- **SQLGetPrivateProfileString**取得一份名稱的值或系統資訊的值相對應的資料。  
+ **SQLGetPrivateProfileString**會取得值的名稱清單，或對應到系統資訊值的資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,41 +48,41 @@ int SQLGetPrivateProfileString(
   
 ## <a name="arguments"></a>引數  
  *lpszSection*  
- [輸入]指向以 null 終止的字串，指定包含索引鍵名稱的區段。 如果這個引數為 NULL，函式會將所有的區段名稱中的檔案複製到提供的緩衝區中。  
+ 源指向以 null 終止的字串，指定包含索引鍵名稱的區段。 如果這個引數為 Null，函數會將檔案中的所有區段名稱複製到提供的緩衝區。  
   
  *lpszEntry*  
- [輸入]指向以 null 結尾字串，包含其相關聯的字串是要擷取的索引鍵名稱。 如果這個引數為 NULL，所有索引鍵名稱在指定之區段*lpszSection*引數會複製到所指定的緩衝區*RetBuffer*引數。  
+ 源指向以 null 終止的字串，其中包含要抓取其相關聯字串的索引鍵名稱。 如果這個引數為 Null，則*lpszSection*引數所指定之區段中的所有索引鍵名稱都會複製到*RetBuffer*引數所指定的緩衝區。  
   
  *lpszDefault*  
- [輸入]指向以 null 結束的字串，指定預設值，指定索引鍵，如果在初始設定檔案中找不到索引鍵。 這個引數不能是 NULL。  
+ 源指向以 null 終止的字串，如果在初始化檔中找不到索引鍵，則會指定給定索引鍵的預設值。 這個引數不可以是 Null。  
   
  *RetBuffer*  
- [輸出]指向接收擷取的字串的緩衝區。  
+ 輸出指向接收已抓取字串的緩衝區。  
   
  *cbRetBuffer*  
- [輸入]指定的大小，以字元為單位所指向的緩衝區*RetBuffer*引數。  
+ 源指定*RetBuffer*引數所指向之緩衝區的大小（以字元為單位）。  
   
  *lpszFilename*  
- [輸入]指向以 null 結束的字串之名稱的初始設定檔案。 如果這個引數不包含檔案的完整路徑，預設會搜尋目錄。  
+ 源指向以 null 終止的字串，其名稱為初始化檔。 如果這個引數不包含檔案的完整路徑，則會搜尋預設目錄。  
   
 ## <a name="returns"></a>傳回值  
- **SQLGetPrivateProfileString**傳回整數值，指出讀取的字元數。  
+ **SQLGetPrivateProfileString**會傳回一個整數值，指出讀取的字元數。  
   
 ## <a name="diagnostics"></a>診斷  
- 當呼叫**SQLGetPrivateProfileString**失敗，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的此函式。  
+ 呼叫**SQLGetPrivateProfileString**失敗時，可以藉由呼叫**SQLInstallerError**來取得相關聯* \*的 pfErrorCode*值。 下表列出可由**SQLInstallerError**傳回的* \*pfErrorCode*值，並在此函式的內容中說明每一個值。  
   
 |*\*pfErrorCode*|錯誤|描述|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|一般的安裝程式錯誤|發生錯誤，其中沒有特定的安裝程式錯誤。|  
-|ODBC_ERROR_OUT_OF_MEM|記憶體不足|由於記憶體不足，安裝程式無法執行函式。|  
+|ODBC_ERROR_GENERAL_ERR|一般安裝程式錯誤|發生錯誤，但沒有特定的安裝程式錯誤。|  
+|ODBC_ERROR_OUT_OF_MEM|記憶體不足|因為記憶體不足，所以安裝程式無法執行函數。|  
   
 ## <a name="comments"></a>註解  
- **SQLGetPrivateProfileString**做為 Microsoft Windows/Windows 2000 的連接埠驅動程式和驅動程式安裝程式 Dll 從 Microsoft® Windows® 簡單的方式。 若要呼叫**GetPrivateProfileString** Odbc.ini 檔案的設定檔字串應取代該擷取呼叫**SQLGetPrivateProfileString**。 **SQLGetPrivateProfileString** Win32® API 來擷取要求之的名稱的值或系統資訊中的 Odbc.ini 子機碼值相對應的資料中呼叫函式。  
+ **SQLGetPrivateProfileString**是用來將驅動程式和驅動程式安裝 Dll 從 Microsoft® Windows®移植到 MICROSOFT windows NT®/Windows 2000 的簡單方式。 從 Odbc .ini 檔案抓取設定檔字串的**GetPrivateProfileString**呼叫，應取代為**SQLGetPrivateProfileString**的呼叫。 **SQLGetPrivateProfileString**會呼叫 WIN32® API 中的函式，以抓取與系統資訊的 Odbc 子機碼值對應的值或資料的要求名稱。  
   
- 設定模式 (所設定的**SQLSetConfigMode**) 表示列出資料來源名稱值的 Odbc.ini 項目中的系統資訊。 如果資料來源名稱 （組態模式是 USERDSN_ONLY） 「 使用者 DSN，函式會讀取 HKEY_CURRENT_USER 中的 Odbc.ini 項目。 如果 DSN 是系統 DSN (SYSTEMDSN_ONLY)，函式會讀取在 HKEY_LOCAL_MACHINE 的 Odbc.ini 項目。 如果 BOTHDSN 組態模式，HKEY_CURRENT_USER 時嘗試，而且如果失敗，會使用 HKEY_LOCAL_MACHINE。  
+ 設定模式（如**SQLSetConfigMode**所設定）表示在系統資訊中列出 DSN 值的 Odbc .ini 專案。 如果 DSN 是使用者 DSN （設定模式是 USERDSN_ONLY），則函式會從 HKEY_CURRENT_USER 中的 Odbc 專案讀取。 如果 DSN 是系統 DSN （SYSTEMDSN_ONLY），函式會從 HKEY_LOCAL_MACHINE 中的 Odbc 專案讀取。 如果設定模式是 BOTHDSN，則會嘗試 HKEY_CURRENT_USER，如果失敗，則會使用 HKEY_LOCAL_MACHINE。  
   
 ## <a name="related-functions"></a>相關函數  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
 |將值寫入系統資訊|[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060224"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
@@ -25,7 +25,7 @@ ms.locfileid: "66060224"
   
  建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案之封裝部署公用程式的方法是先設定建立部署公用程式的建立程序，然後再建立專案。 建立專案時，會自動併入專案中所有的封裝和封裝組態。 若要部署專案的其他檔案 (例如讀我檔案)，請將檔案放置在 **專案的** [Miscellaneous] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 資料夾中。 建立專案時，會自動併入這些檔案。  
   
- 您可以不同的方式設定每一個專案部署。 在建立專案和建立封裝部署公用程式之前，您可以設定部署公用程式上的屬性，以自訂在專案中部署封裝的方式。 例如，可以指定在部署專案時是否可以更新封裝組態。 若要存取 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的屬性，請以滑鼠右鍵按一下專案，然後按一下 [屬性]  。  
+ 您可以不同的方式設定每一個專案部署。 在建立專案和建立封裝部署公用程式之前，您可以設定部署公用程式上的屬性，以自訂在專案中部署封裝的方式。 例如，可以指定在部署專案時是否可以更新封裝組態。 若要存取 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的屬性，請以滑鼠右鍵按一下專案，然後按一下 [屬性]****。  
   
  下表列出部署公用程式屬性。  
   
@@ -43,11 +43,11 @@ ms.locfileid: "66060224"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟包含要為其建立封裝部署公用程式之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的方案。  
   
-2.  以滑鼠右鍵按一下專案，然後按一下 [屬性]  。  
+2.  以滑鼠右鍵按一下專案，然後按一下 [屬性]****。  
   
-3.  在 [\<專案名稱> 屬性頁]  對話方塊中，按一下 [部署公用程式]  。  
+3.  在 [ ** \<專案名稱]> [屬性頁**] 對話方塊中，按一下 [**部署公用程式**]。  
   
-4.  若要部署封裝時更新封裝組態，請設定**AllowConfigurationChanges**至`True`。  
+4.  若要在部署套件時更新封裝設定， **** 請將`True`AllowConfigurationChanges 設為。  
   
 5.  將 `CreateDeploymentUtility` 設定為 `True`。  
   
@@ -55,14 +55,14 @@ ms.locfileid: "66060224"
   
 7.  按一下 [確定]  。  
   
-8.  在方案總管中，以滑鼠右鍵按一下專案，然後按一下 [建立]  。  
+8.  在方案總管中，以滑鼠右鍵按一下專案，然後按一下 [建立]****。  
   
 9. 檢視 **[輸出]** 視窗中的建立進度和建立錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
- [封裝組態](../../2014/integration-services/package-configurations.md)   
- [建立封裝組態](../../2014/integration-services/create-package-configurations.md)   
+ [套件設定](../../2014/integration-services/package-configurations.md)   
+ [建立套件設定](../../2014/integration-services/create-package-configurations.md)   
  [使用部署公用程式來部署封裝](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
- [封裝部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+ [&#40;SSIS&#41;的套件部署](packages/legacy-package-deployment-ssis.md)  
   
   

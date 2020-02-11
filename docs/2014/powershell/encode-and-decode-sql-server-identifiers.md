@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 373b2b9d90512293e1776d06ab5797faaf47a210
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797766"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>編碼及解碼 SQL Server 識別碼
   SQL Server 分隔識別碼有時會包含 Windows PowerShell 路徑中不支援的字元。 編碼這些字元的十六進位值，就可以指定這些字元。  
   
-1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
+1.  **開始之前：**[限制](#LimitationsRestrictions)事項    
   
-2.  **To process special characters:**  [Encoding an Identifier](#EncodeIdent), [Decoding an Identifier](#DecodeIdent)  
+2.  **若要處理特殊字元：**  [編碼識別碼](#EncodeIdent)、[解碼識別碼](#DecodeIdent)  
   
 ## <a name="before-you-begin"></a>開始之前  
  Windows PowerShell 路徑名稱中不支援的字元可以表示或編碼為 "%" 字元，後面緊接著代表此字元之位元模式的十六進位值，就像是 " **%** xx"。 編碼一定可以用來處理 Windows PowerShell 路徑中不支援的字元。  
@@ -30,11 +30,12 @@ ms.locfileid: "72797766"
  **Encode-SqlName** Cmdlet 會將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼作為輸入。 它會輸出一個字串，其中包含編碼為 "%xx" 之 Windows PowerShell 語言不支援的所有字元。 **Decode-SqlName** Cmdlet 會將編碼的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼作為輸入，並傳回原始識別碼。  
   
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
- `Encode-Sqlname` 和 `Decode-Sqlname` Cmdlet 只能編碼或解碼 SQL Server 分隔識別碼中允許的字元，但在 PowerShell 路徑中則不予支援。 下列為 **Encode-SqlName** 所編碼和 **Decode-SqlName**所解碼的字元：  
+ 
+  `Encode-Sqlname` 和 `Decode-Sqlname` Cmdlet 只能編碼或解碼 SQL Server 分隔識別碼中允許的字元，但在 PowerShell 路徑中則不予支援。 下列為 **Encode-SqlName** 所編碼和 **Decode-SqlName**所解碼的字元：  
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
-|**字元**|\ |/|：|%|\<|>|*|?|[|]|&#124;|  
+|**字元**|\ |/|:|%|\<|>|*|?|[|]|&#124;|  
 |**十六進位編碼**|%5C|%2F|%3A|%25|%3C|%3E|%2A|%3F|%5B|%5D|%7C|  
   
 ##  <a name="EncodeIdent"></a> 編碼識別碼  
@@ -62,7 +63,8 @@ Set-Location (Encode-SqlName "Table:Test")
 ##  <a name="DecodeIdent"></a> 解碼識別碼  
  **解碼 PowerShell 路徑中的 SQL Server 識別碼**  
   
- `Decode-Sqlname` Cmdlet 可用來將十六進位編碼取代為該編碼所代表的字元。  
+ 
+  `Decode-Sqlname` Cmdlet 可用來將十六進位編碼取代為該編碼所代表的字元。  
   
 ### <a name="examples-decoding"></a>範例 (解碼)  
  此範例會傳回 "Table:Test"：  

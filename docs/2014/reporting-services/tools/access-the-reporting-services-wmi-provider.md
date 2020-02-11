@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: efbe03a4aab65f792b352eeb5b6c5130c4c32335
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783209"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>存取 Reporting Services WMI 提供者
@@ -32,10 +32,10 @@ ms.locfileid: "72783209"
 > [!IMPORTANT]  
 >  從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版開始，只有原生模式報表伺服器才支援 WMI 提供者。 SharePoint 模式報表伺服器可以透過 SharePoint 管理中心頁面和 PowerShell 指令碼管理。  
   
-|類別|Namespace|描述|  
+|類別|命名空間|描述|  
 |-----------|---------------|-----------------|  
-|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\ RS_ *\<e a >* \v11|提供用戶端連接至已安裝之報表伺服器所需的基本資訊。|  
-|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\ RS_ *\<e a >* \v11\Admin|代表報表伺服器執行個體的安裝與執行階段參數。 這些參數是儲存在報表伺服器的組態檔中。<br /><br /> **\*\* 重要事項 \*\*** 這個類別只能透過管理權限存取。|  
+|MSReportServer_Instance|root\microsoft\sqlserver\reportserver\ RS_*\<e a>* \v11|提供用戶端連接至已安裝之報表伺服器所需的基本資訊。|  
+|MSReportServer_ConfigurationSetting|root\microsoft\sqlserver\reportserver\ RS_*\<e a>* \v11\Admin|代表報表伺服器執行個體的安裝與執行階段參數。 這些參數是儲存在報表伺服器的組態檔中。<br /><br /> **\*\* 重要事項 \*\*** 這個類別只能透過管理權限存取。|  
   
  針對每一個報表伺服器執行個體會建立上述每一個類別的執行個體。 您可以使用任何 Microsoft 或協力廠商工具來存取報表伺服器公開的 WMI 物件，包括 .NET Framework 本身公開的 WMI 程式開發介面。 本主題描述如何存取及使用 WMI 類別執行個體搭配 PowerShell 命令 [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx)。  
   
@@ -88,4 +88,4 @@ $rsconfig.GetAdminSiteUrl()
   
 ## <a name="see-also"></a>另請參閱
  [Reporting Services WMI 提供者程式庫參考 &#40;SSRS&#41;](../wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
- [RSReportServer 設定檔](../report-server/rsreportserver-config-configuration-file.md)  
+ [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)  

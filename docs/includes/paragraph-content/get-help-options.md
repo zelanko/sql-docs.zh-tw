@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 01525143197146f8d4c34734d7333d651d93b840
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451840"
----
 ## <a name="info_tipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) 取得說明
 
 - [UserVoice：有任何協助改進 SQL Server 的建議嗎？](https://feedback.azure.com/forums/908035-sql-server)

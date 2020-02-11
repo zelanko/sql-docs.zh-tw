@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0881624f421cba5bda5d2b0ba8f9d3732efd2497
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059272"
 ---
 # <a name="excel-connection-manager-editor"></a>Excel 連接管理員編輯器
@@ -29,15 +29,15 @@ ms.locfileid: "66059272"
 > [!NOTE]  
 >  您不能連接到受密碼保護的 Excel 檔案。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **Excel 檔案路徑**  
  輸入現有或新的 Excel 活頁簿檔案 (.xls) 的路徑和檔案名稱。  
   
 > [!WARNING]  
->  **Excel 目的地編輯器**會自動建立 Excel 檔案，當您選取**Excel 連接**指向新/非現存檔案，然後按一下**新增**的**Excel 工作表名稱**。  
+>  當您選取指向新的/不存在檔案的**Excel 連接**，然後針對**Excel 工作表的 [名稱**] 按一下 [**新增**] 時，[ **Excel 目的地編輯器**] 會自動建立 excel 檔案。  
   
  **瀏覽**  
- 使用 [開啟]  對話方塊導覽至 Excel 檔存在的資料夾，或您要建立新的檔案。  
+ 使用 [**開啟**] 對話方塊，即可流覽至 excel 檔案所在的資料夾，或您要建立新檔案的位置。  
   
  **Excel 版本**  
  指定用於建立檔案的 Microsoft Excel 版本。  
@@ -45,15 +45,15 @@ ms.locfileid: "66059272"
 |選項|描述|  
 |------------|-----------------|  
 |Excel 97-2003|檔案是使用 Excel 97 或更新版本建立的。|  
-|Excel 3.0|使用 Excel 3.0 建立檔案。|  
-|Excel 4.0|檔案是使用 Excel 4.0 建立的。|  
-|Excel 5.0|檔案是使用 Excel 95 (7.0) 建立的。|  
+|Excel 3。0|檔案是使用 Excel 3.0 所建立。|  
+|Excel 4。0|檔案是使用 Excel 4.0 建立的。|  
+|Excel 5。0|檔案是使用 Excel 95 (7.0) 建立的。|  
   
  **第一個資料列有資料行名稱**  
  指定選取之工作表中資料的第一個資料列是否包含資料行名稱。 此選項的預設值是 **[True]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [使用 Foreach 迴圈容器來執行 Excel 檔案和資料表迴圈](control-flow/foreach-loop-container.md)  
+ [使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表](control-flow/foreach-loop-container.md)  
   
   

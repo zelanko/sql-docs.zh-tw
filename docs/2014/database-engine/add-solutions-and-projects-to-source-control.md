@@ -1,5 +1,5 @@
 ---
-title: 將方案和專案加入原始檔控制 |Microsoft Docs
+title: 將方案和專案加入至原始檔控制 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62792088"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>將方案與專案加入原始檔控制
@@ -31,10 +31,10 @@ ms.locfileid: "62792088"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[將方案新增原始檔控制](../../2014/database-engine/add-solutions-to-source-control.md)|描述您可以加入的專案類型，以及提供如何將方案加入原始檔控制的指示。|  
-|[將專案新增原始檔控制](../../2014/database-engine/add-projects-to-source-control.md)|提供如何將專案加入方案的指示。|  
+|[將方案加入原始檔控制](../../2014/database-engine/add-solutions-to-source-control.md)|描述您可以加入的專案類型，以及提供如何將方案加入原始檔控制的指示。|  
+|[將專案加入原始檔控制中](../../2014/database-engine/add-projects-to-source-control.md)|提供如何將專案加入方案的指示。|  
   
 ## <a name="see-also"></a>另請參閱  
- [從原始檔控制開啟方案和專案](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)  
+ [從原始檔控制中開啟方案和專案](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)  
   
   

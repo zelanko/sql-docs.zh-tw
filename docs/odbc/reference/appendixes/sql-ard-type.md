@@ -1,5 +1,5 @@
 ---
-title: SQL_ARD_TYPE | Microsoft Docs
+title: SQL_ARD_TYPE |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: 8d87ca10-f955-4284-8689-e9f4cc31e7ae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 802040851259a8537fabcd3cc0da1afdf9b8dbe0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057049"
 ---
-# <a name="sqlardtype"></a>SQL_ARD_TYPE
-SQL_ARD_TYPE 型別識別項用來表示緩衝區中的資料將會 ARD SQL_DESC_CONCISE_TYPE 欄位中指定之類型。 中輸入 SQL_ARD_TYPE *TargetType*呼叫的引數**SQLGetData**而不是特定資料類型並可讓應用程式變更的資料緩衝區的輸入變更的描述元欄位。 這個值會繫結的資料型別 *\*TargetValuePtr*緩衝區描述項欄位。 (的呼叫中未輸入 SQL_ARD_TYPE **SQLBindCol**或是**SQLBindParameter**因為的繫結的緩衝區類型已經繫結至 SQL_DESC_TYPE 和 SQL_DESC_CONCISE_TYPE 欄位，而且可以變更隨時變更這些欄位。）  
+# <a name="sql_ard_type"></a>SQL_ARD_TYPE
+SQL_ARD_TYPE 類型識別碼是用來指出緩衝區中的資料將會是 ARD 的 [SQL_DESC_CONCISE_TYPE] 欄位中所指定的類型。 SQL_ARD_TYPE 是在呼叫**SQLGetData** （而非特定資料類型）的*TargetType*引數中輸入，並可讓應用程式藉由變更描述元欄位來變更緩衝區的資料類型。 這個值會將* \*TargetValuePtr*緩衝區的資料類型與描述項欄位結合。 （SQL_ARD_TYPE 不會在呼叫**SQLBindCol**或**SQLBindParameter**時進入，因為系結緩衝區的類型已經系結至 SQL_DESC_TYPE 和 SQL_DESC_CONCISE_TYPE 欄位，而且可以隨時變更其中一個欄位來加以變更）。  
   
- SQL_ARD_TYPE 型別識別項可以用來指定非預設值開頭的有效位數的秒數有效位數的間隔資料類型，並輸入 SQL_C_NUMERIC 資料的有效位數和小數位數的值。 如需詳細資訊，請參閱 <<c0> [ 覆寫預設前置和間隔資料類型的秒數有效位數](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)並[覆寫預設的有效位數和小數位數數字的資料類型](../../../odbc/reference/appendixes/overriding-default-precision-and-scale-for-numeric-data-types.md)稍後在本附錄中。
+ SQL_ARD_TYPE 類型識別碼可以用來指定預設值，以取得間隔資料類型的前置精確度和秒精確度，以及 SQL_C_NUMERIC 資料類型的有效位數和小數位數值。 如需詳細資訊，請參閱本附錄稍後的覆[寫間隔資料類型的預設前置和秒](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)有效位數和覆[寫數值資料類型的預設精確度和小數位](../../../odbc/reference/appendixes/overriding-default-precision-and-scale-for-numeric-data-types.md)數。
