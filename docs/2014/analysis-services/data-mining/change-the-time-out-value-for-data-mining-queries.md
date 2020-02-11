@@ -1,5 +1,5 @@
 ---
-title: 變更針對資料採礦查詢的逾時值 |Microsoft Docs
+title: 變更資料採礦查詢的超時值 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 640d07115e2a071bb5d57e87955c11670f4c38b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085884"
 ---
 # <a name="change-the-time-out-value-for-data-mining-queries"></a>針對資料採礦查詢變更逾時值
@@ -35,7 +35,7 @@ ms.locfileid: "66085884"
 3.  按一下 **[查詢逾時]** 文字方塊，並輸入秒數的值。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦查詢工作和使用說明](data-mining-query-tasks-and-how-tos.md)   
+ [資料採礦查詢工作和操作說明](data-mining-query-tasks-and-how-tos.md)   
  [資料採礦查詢](data-mining-queries.md)  
   
   

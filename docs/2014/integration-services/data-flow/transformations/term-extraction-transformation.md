@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899931"
 ---
 # <a name="term-extraction-transformation"></a>詞彙擷取轉換
@@ -44,7 +44,7 @@ ms.locfileid: "62899931"
   
  「詞彙擷取」轉換會為其擷取的每個詞彙產生一個分數。 此分數可以是 TFIDF 值或原始頻率，表示正規化詞彙在輸入中出現的次數。 在任何一種情況下，分數都會由大於 0 的實數來表示。 例如，TFIDF 分數可能是值 0.5，而頻率則可能是類似 1.0 或 2.0 的值。  
   
- 「詞彙擷取」轉換的輸出僅包含兩個資料行。 一個資料行包含擷取的詞彙，另一資料行則包含分數。 資料行的預設名稱是**詞彙**和`Score`。 因為輸入中的文字資料行可能包含多個詞彙，所以「詞彙擷取」轉換的輸出一般比輸入擁有更多的資料列。  
+ 「詞彙擷取」轉換的輸出僅包含兩個資料行。 一個資料行包含擷取的詞彙，另一資料行則包含分數。 資料行的預設名稱是**Term**和`Score`。 因為輸入中的文字資料行可能包含多個詞彙，所以「詞彙擷取」轉換的輸出一般比輸入擁有更多的資料列。  
   
  如果將擷取的詞彙寫入資料表，則它們可以被其他查閱轉換 (例如「詞彙查閱」、「模糊查閱」和「查閱」轉換) 使用。  
   
@@ -171,17 +171,17 @@ ms.locfileid: "62899931"
   
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可在 [詞彙擷取轉換編輯器]  對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
+ 如需可在 [詞彙擷取轉換編輯器]**** 對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
   
--   [詞彙擷取轉換編輯器 &#40;詞彙擷取索引標籤&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [[詞彙解壓縮轉換編輯器] &#40;[詞彙] [提取] 索引標籤&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [詞彙擷取轉換編輯器 &#40;排除索引標籤&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [[詞彙解壓縮轉換編輯器] &#40;[排除] 索引標籤&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [詞彙擷取轉換編輯器 &#40;進階索引標籤&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [[詞彙解壓縮轉換編輯器] &#40;[Advanced] 索引標籤&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [轉換自訂屬性](transformation-custom-properties.md)  
   

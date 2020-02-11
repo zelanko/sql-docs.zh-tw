@@ -1,5 +1,5 @@
 ---
-title: 多維度模型化 （Adventure Works 教學課程） |Microsoft Docs
+title: 多維度模型化（艾德作品教學課程） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 174d4ab61cf56f4916babb1639e110162d20e6fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077574"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>多維度模型化 (Adventure Works 教學課程)
@@ -36,7 +36,7 @@ ms.locfileid: "66077574"
   
  案例描述隨附此教學課程，讓您可以更了解這些課程的內容。 如需詳細資訊，請參閱＜ [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md)＞。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要完成這個教學課程的所有課程，您將需要範例資料、範例專案檔及軟體。 如需如何尋找及安裝這個教學課程之必要條件的指示，請參閱＜ [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](install-sample-data-and-projects.md)＞。  
   
  另外還要具備下列權限才能順利完成這個教學課程：  
@@ -48,23 +48,23 @@ ms.locfileid: "66077574"
 ## <a name="lessons"></a>課程  
  這個教學課程包括下列課程。  
   
-|課程|估計完成時間|  
+|課程|預估完成時間|  
 |------------|--------------------------------|  
-|[第 1 課：定義資料來源檢視中的 Analysis Services 專案](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 分鐘|  
+|[第 1 課：在 Analysis Services 專案內定義資料來源檢視](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 分鐘|  
 |[第 2 課：定義和部署 Cube](lesson-2-defining-and-deploying-a-cube.md)|30 分鐘|  
-|[第 3 課：修改量值、 屬性和階層](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 分鐘|  
-|[第 4 課：定義進階的屬性和維度屬性](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 分鐘|  
-|[第 5 課：定義維度和量值群組之間的關聯性](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 分鐘|  
+|[第 3 課：修改量值、屬性和階層](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 分鐘|  
+|[第 4 課：定義進階屬性和維度屬性](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 分鐘|  
+|[第 5 課：在維度和量值群組之間定義關聯性](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 分鐘|  
 |[第 6 課：定義計算](lesson-6-defining-calculations.md)|45 分鐘|  
-|[第 7 課：定義關鍵效能指標&#40;Kpi&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 分鐘|  
+|[第7課：定義 &#40;Kpi 的關鍵效能指標&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 分鐘|  
 |[第 8 課：定義動作](lesson-8-defining-actions.md)|30 分鐘|  
 |[第 9 課：定義檢視方塊和翻譯](lesson-9-defining-perspectives-and-translations.md)|30 分鐘|  
-|[第 10 課：定義系統管理角色](lesson-10-defining-administrative-roles.md)|15 分鐘|  
+|[第 10 課：定義管理角色](lesson-10-defining-administrative-roles.md)|15 分鐘|  
   
 > [!NOTE]  
 >  您將在此教學課程中建立的 Cube 資料庫是簡化的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多維度模型專案版本，此專案是 Adventure Works 範例資料庫的一部分，可在 codeplex 網站下載。 Adventure Works 多維度資料庫的教學課程版本經過簡化，更著重在您想要立即熟練的特定技巧上。 完成此教學課程之後，請考慮自行瀏覽多維度模型專案，以更了解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多維度模型。  
   
-## <a name="next-step"></a>下一個步驟  
- 若要開始本教學課程，請繼續進行第 1 課：[第 1 課：定義資料來源檢視中的 Analysis Services 專案](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)。  
+## <a name="next-step"></a>後續步驟  
+ 若要開始本教學課程，請繼續進行第一課： [Lesson 1: Defining a Data Source View within an Analysis Services Project](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)。  
   
   

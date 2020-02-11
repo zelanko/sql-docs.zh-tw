@@ -1,5 +1,5 @@
 ---
-title: 瀏覽 Cube |Microsoft Docs
+title: 流覽 Cube |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 910bb7a425e62221dce932392e1aedfaa401a992
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078975"
 ---
 # <a name="browsing-the-cube"></a>瀏覽 Cube
-  部署 Cube 之後，您就可以在 [Cube 設計師] 的 [瀏覽器]  索引標籤上檢視 Cube 資料，以及在 [維度設計師] 的 [瀏覽器]  索引標籤上檢視維度資料。 瀏覽 Cube 和維度資料是累加地檢查工作的一種方式。 您可以在物件經處理之後，驗證對屬性、關聯性和其他物件所做的細微變更是否達到期望的效果。 由於 [瀏覽器] 索引標籤用於檢視 Cube 和維度資料，因此該索引標籤會根據您要瀏覽的物件，提供不同的功能。  
+  部署 Cube 之後，您就可以在 [Cube 設計師] 的 [瀏覽器]**** 索引標籤上檢視 Cube 資料，以及在 [維度設計師] 的 [瀏覽器]**** 索引標籤上檢視維度資料。 瀏覽 Cube 和維度資料是累加地檢查工作的一種方式。 您可以在物件經處理之後，驗證對屬性、關聯性和其他物件所做的細微變更是否達到期望的效果。 由於 [瀏覽器] 索引標籤用於檢視 Cube 和維度資料，因此該索引標籤會根據您要瀏覽的物件，提供不同的功能。  
   
  若是維度，[瀏覽器] 索引標籤會提供一種方式，以檢視成員或導覽一直到分葉節點的階層。 假設您已經將翻譯加入至模型中，便可以不同語言瀏覽維度資料。  
   
@@ -28,20 +28,20 @@ ms.locfileid: "66078975"
   
 ### <a name="to-browse-the-deployed-cube"></a>瀏覽已部署的 Cube  
   
-1.  針對 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [產品] 維度，切換至 [維度設計師]  。 若要這樣做，請在方案總管的 [維度]  節點中，按兩下 [產品]  維度。  
+1.  針對 ** 中的 [產品] 維度，切換至 [維度設計師]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 若要這樣做，請在方案總管的 [維度]**** 節點中，按兩下 [產品]**** 維度。  
   
-2.  按一下 **瀏覽器**索引標籤，顯示**所有**隸屬`Product Key`屬性階層。 在第 3 課，您將定義 [產品] 維度的使用者階層，以便瀏覽此維度。  
+2.  按一下 [**瀏覽器**] 索引卷**** 標，顯示`Product Key`屬性階層的 [全部] 成員。 在第 3 課，您將定義 [產品] 維度的使用者階層，以便瀏覽此維度。  
   
-3.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，切換至 [Cube 設計師]  。 若要這樣做，請在方案總管的 [Cube]  節點中，按兩下 [Analysis Services 教學課程]  Cube。  
+3.  在 ** 中，切換至 [Cube 設計師]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 若要這樣做，請在方案總管的 [Cube]**** 節點中，按兩下 [Analysis Services 教學課程]**** Cube。  
   
-4.  選取 [瀏覽器]  索引標籤，然後按一下設計師工具列上的重新連接  圖示。  
+4.  選取 [瀏覽器]**** 索引標籤，然後按一下設計師工具列上的重新連接**** 圖示。  
   
-     設計師的左窗格會顯示 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 中的物件。 [瀏覽器]  索引標籤的右側具有兩個窗格：上面的窗格是 [篩選]  窗格，而下面的窗格是 [資料]  窗格。 在後續課程中，您將使用 Cube 瀏覽器來進行分析。  
+     設計師的左窗格會顯示 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 中的物件。 [瀏覽器]**** 索引標籤的右側具有兩個窗格：上面的窗格是 [篩選]**** 窗格，而下面的窗格是 [資料]**** 窗格。 在後續課程中，您將使用 Cube 瀏覽器來進行分析。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 3 課：修改量值、 屬性和階層](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [第 3 課：修改量值、屬性和階層](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 查詢編輯器 &#40;Analysis Services - 多維度資料&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
+ [MDX 查詢編輯器 &#40;Analysis Services-多維度資料&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f32462ef33af50a08cd933ed5c1a04c4efaa17de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835760"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>連接到 Oracle 來源資料庫
@@ -36,7 +36,7 @@ ms.locfileid: "62835760"
   
 -   **Windows 驗證**：選取此選項可使用目前的 Windows 網域認證。 只有當設定 Oracle 資料庫使用 Windows 驗證時，才可使用這個選項。  
   
--   **Oracle 驗證**：如果您選取這個選項，您必須在您所連接的 Oracle 資料庫中鍵入使用者的 [使用者名稱]  和 [密碼]  。  
+-   **Oracle 驗證**：如果您選取這個選項，您必須在您所連接的 Oracle 資料庫中輸入使用者的 **[使用者名稱]** 和 **[密碼]** 。  
   
 > [!NOTE]
 >  使用者必須擁有 Oracle 資料庫中授與的以下權限，才能成為記錄採礦使用者。  

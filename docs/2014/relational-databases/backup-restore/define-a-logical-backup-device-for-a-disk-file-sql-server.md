@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0ae32391bd2f10525b89015272d11bcdb6468298
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877833"
 ---
 # <a name="define-a-logical-backup-device-for-a-disk-file-sql-server"></a>定義磁碟檔案的邏輯備份裝置 (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "62877833"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目定義磁碟檔案的邏輯備份裝置：**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62877833"
   
 -   我們建議備份磁碟應該與資料庫資料和記錄磁碟使用不同的磁碟。 為了確保您可以在資料或記錄磁碟故障時存取備份，這樣做有其必要。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 **diskadmin** 固定伺服器角色的成員資格。  
@@ -63,7 +63,7 @@ ms.locfileid: "62877833"
   
 #### <a name="to-define-a-logical-backup-device-for-a-disk-file"></a>定義磁碟檔案的邏輯備份裝置  
   
-1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱展開伺服器樹狀目錄。  
+1.  連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體之後，在物件總管中按一下伺服器名稱，以展開伺服器樹狀目錄。  
   
 2.  展開 [伺服器物件]  ，然後以滑鼠右鍵按一下 [備份裝置]  。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62877833"
   
 6.  若要定義新裝置，請按一下 **[確定]** 。  
   
- 若要備份至這個新裝置，請將它加入 [備份資料庫]  ([一般]  ) 對話方塊中的 [備份至:]  欄位。 如需詳細資訊，請參閱 [建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)中建立差異資料庫備份。  
+ 若要備份至這個新裝置，請將它加入 [備份資料庫]  \([一般]  ) 對話方塊中的 [備份至:]  欄位。 如需詳細資訊，請參閱 [建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)中建立差異資料庫備份。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

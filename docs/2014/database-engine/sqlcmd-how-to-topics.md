@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd9f9a5b786c5e1a928655276641e841cb3f43c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089595"
 ---
 # <a name="sqlcmd-how-to-topics"></a>sqlcmd 使用說明主題
-  您可利用 [sqlcmd 公用程式](../tools/sqlcmd-utility.md) 在命令提示字元處、於 SQLCMD 模式的 [查詢編輯器] 中、在 Windows 指令碼檔案中，或是在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業的作業系統 (Cmd.exe) 作業步驟中，輸入 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式、系統程序與指令碼檔案。  
+  [Sqlcmd 公用程式](../tools/sqlcmd-utility.md)可讓您[!INCLUDE[tsql](../includes/tsql-md.md)]在命令提示字元處、在 Sqlcmd 模式的 [查詢編輯器] 中、在 Windows 腳本檔案中，或是在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業的作業系統（cmd.exe）作業步驟中，輸入語句、系統程式和腳本檔案。  
   
 ## <a name="related-tasks"></a>相關工作  
  下列主題討論如何使用 [sqlcmd Utility](../tools/sqlcmd-utility.md)：  

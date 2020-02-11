@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bbcea29ad75eb84b9c8099e5998e307ecbd7943c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62895027"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>以指令碼工作查詢 Active Directory
@@ -37,13 +37,13 @@ ms.locfileid: "62895027"
   
 1.  建立三個字串變數 `email`、`name` 和 `title`。 輸入有效的公司電子郵件地址做為 `email` 變數值。  
   
-2.  在上**指令碼**頁**指令碼工作編輯器**，新增`email`變數`ReadOnlyVariables`屬性。  
+2.  在 [**腳本工作編輯器**] 的 [**腳本**] 頁面上`email` ，將變數`ReadOnlyVariables`加入至屬性。  
   
 3.  將 `name` 與 `title` 變數加入 `ReadWriteVariables` 屬性。  
   
 4.  在指令碼專案中，加入 `System.DirectoryServices` 命名空間的參考。  
   
-5.  . 在您的程式碼中，使用 `Imports` 陳述式匯入 `DirectoryServices` 命名空間。  
+5.  。 在您的程式碼中，使用 `Imports` 陳述式匯入 `DirectoryServices` 命名空間。  
   
 > [!NOTE]  
 >  若要順利執行這個指令碼，您的公司必須在其網路上使用 Active Directory，並儲存這個範例所使用的員工資訊。  
@@ -110,6 +110,6 @@ public void Main()
   
 -   social.technet.microsoft.com 上的技術文件：[Processing Active Directory Information in SSIS](https://go.microsoft.com/fwlink/?LinkId=199588) (在 SSIS 中處理 Active Directory 資訊)  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
   

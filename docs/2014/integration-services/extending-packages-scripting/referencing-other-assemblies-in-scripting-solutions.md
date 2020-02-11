@@ -25,17 +25,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a6f942e1afe40467e331519f276b360f87f9a6da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894732"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>參考指令碼解決方案中的其他組件
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別庫提供指令碼開發人員一組強大的工具，以實作 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的自訂功能。 指令碼工作和指令碼元件也可以使用自訂 Managed 組件。  
+  類別庫提供腳本開發人員一組強大的工具，讓您在封裝中[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]執行自訂功能。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 指令碼工作和指令碼元件也可以使用自訂 Managed 組件。  
   
 > [!NOTE]  
->  若要讓您的封裝能夠使用 Web 服務中的物件和方法，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 所提供的 [加入 Web 參考]  命令。 在舊版的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，您必須產生 Proxy 類別以使用 Web 服務。  
+>  若要讓您的封裝能夠使用 Web 服務中的物件和方法，請使用 Tools for Applications （VSTA [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ）中提供的 [**加入 Web 參考**] 命令。 在舊版的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，您必須產生 Proxy 類別以使用 Web 服務。  
   
 ## <a name="using-a-managed-assembly"></a>使用 Managed 組件  
  若要讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在設計階段尋找 Managed 組件，您必須執行下列步驟：  
@@ -47,7 +47,7 @@ ms.locfileid: "62894732"
   
 2.  加入 Managed 組件的參考。  
   
-     若要加入參考，請在 VSTA 中，於 [加入參考]  對話方塊的 [瀏覽]  索引標籤上，找到並加入 Managed 組件。  
+     若要加入參考，請在 VSTA 中，於 [加入參考]**** 對話方塊的 [瀏覽]**** 索引標籤上，找到並加入 Managed 組件。  
   
  若要 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在執行階段尋找 Managed 組件，您必須執行下列步驟：  
   
@@ -62,27 +62,27 @@ ms.locfileid: "62894732"
   
  這個清單說明幾個較常使用的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別：  
   
--   `System.Data` 包含 ADO.NET 架構。  
+-   `System.Data`包含 ADO.NET 架構。  
   
--   `System.IO` 提供介面給檔案系統和資料流。  
+-   `System.IO`提供檔案系統和資料流程的介面。  
   
--   `System.Windows.Forms` 提供表單建立。  
+-   `System.Windows.Forms`提供表單建立。  
   
--   `System.Text.RegularExpressions` 使用規則運算式中提供的類別。  
+-   `System.Text.RegularExpressions`提供用來處理正則運算式的類別。  
   
--   `System.Environment` 傳回本機電腦、 目前使用者以及電腦和使用者設定的相關資訊。  
+-   `System.Environment`傳回本機電腦、目前使用者以及電腦與使用者設定的相關資訊。  
   
--   `System.Net` 提供網路通訊。  
+-   `System.Net`提供網路通訊。  
   
--   `System.DirectoryServices` 公開 Active Directory。  
+-   `System.DirectoryServices`公開 Active Directory。  
   
--   `System.Drawing` 提供大量的影像操作程式庫。  
+-   `System.Drawing`提供大量的影像操作程式庫。  
   
--   `System.Threading` 可讓多執行緒的程式設計。  
+-   `System.Threading`啟用多執行緒程式設計。  
   
  如需有關 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的相細資訊，請參閱 MSDN Library。  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用指令碼擴充套件](extending-packages-with-scripting.md)  

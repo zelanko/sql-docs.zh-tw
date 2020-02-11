@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876179"
 ---
 # <a name="online-restore-sql-server"></a>線上還原 (SQL Server)
@@ -54,17 +54,17 @@ ms.locfileid: "62876179"
     > [!NOTE]  
     >  上述資訊也同樣適用於每個離線檔案。  
   
--   比較特殊的情況是，在發出第一個還原陳述式時仍在線上，但之後因該還原陳述式而自動離線的讀取/寫入檔案。 在此情況下，您必須在第一個「還原順序」  (此順序中包含一或多個可還原、向前復原及復原資料的 RESTORE 陳述式) 期間進行記錄備份。 一般而言，必須在還原所有完整備份之後，而且在復原資料之前進行這個記錄備份。 不過，如果特定的檔案群組有多個檔案備份，則記錄備份最晚的時間點是在檔案群組離線之後的時間。 這個資料還原後的記錄備份會擷取檔案離線時的時間點。 資料還原後的記錄備份是必要的，因為 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 無法使用線上記錄進行線上還原。  
+-   比較特殊的情況是，在發出第一個還原陳述式時仍在線上，但之後因該還原陳述式而自動離線的讀取/寫入檔案。 在此情況下，您必須在第一個「還原順序」**(此順序中包含一或多個可還原、向前復原及復原資料的 RESTORE 陳述式) 期間進行記錄備份。 一般而言，必須在還原所有完整備份之後，而且在復原資料之前進行這個記錄備份。 不過，如果特定的檔案群組有多個檔案備份，則記錄備份最晚的時間點是在檔案群組離線之後的時間。 這個資料還原後的記錄備份會擷取檔案離線時的時間點。 資料還原後的記錄備份是必要的，因為 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 無法使用線上記錄進行線上還原。  
   
     > [!NOTE]  
     >  此外，您也可以在還原順序之前手動使檔案離線。 如需詳細資訊，請參閱本主題稍後的「使資料庫或檔案離線」。  
   
-##  <a name="taking_db_or_file_offline"></a> 使資料庫或檔案離線  
+##  <a name="taking_db_or_file_offline"></a>讓資料庫或檔案離線  
  如果您不想要使用線上還原，則可以使用下列其中一個方法先讓資料庫離線，再來啟動還原順序：  
   
 -   在任何復原模式下，您可以使用下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 陳述式，讓資料庫離線：  
   
-     ALTER DATABASE *database_name* SET OFFLINE  
+     ALTER DATABASE *database_name*設定離線  
   
 -   或者，也可以在完整復原模式下強制檔案或分頁還原離線，方法是使用下列 [BACKUP LOG](/sql/t-sql/statements/backup-transact-sql) 陳述式，將資料庫置於正在還原狀態：  
   
@@ -87,7 +87,7 @@ ms.locfileid: "62876179"
   
 -   [範例：僅限於部分檔案群組的分次還原 &#40;完整復原模式&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [範例：線上還原讀取/寫入檔案 &#40;完整復原模式&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [範例：線上還原讀寫檔案 &#40;完整復原模式&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
 -   [範例：線上還原唯讀檔案 &#40;完整復原模式&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c34cbfd2ea88d863239c068300c65531fd19f5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085883"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>變更採礦模型的屬性
@@ -25,32 +25,32 @@ ms.locfileid: "66085883"
   
  下列模型屬性具有可用於建立運算式或設定複雜模型屬性的進階編輯器。 下列屬性提供：  
   
--   `Filter` 屬性：會開啟[資料集篩選器或模型篩選器對話方塊](../data-set-filter-or-model-filter-dialog-box.md)。  
+-   `Filter`屬性：開啟 [[資料集篩選器] 或 [模型篩選器] 對話方塊](../data-set-filter-or-model-filter-dialog-box.md)。  
   
--   `AlgorithmParameters` 屬性：會開啟[演算法參數對話方塊&#40;採礦模型檢視&#41;](../algorithm-parameters-dialog-box-mining-models-view.md)。  
+-   `AlgorithmParameters`屬性：開啟 [[演算法參數] 對話方塊 &#40;[採礦模型] View&#41;](../algorithm-parameters-dialog-box-mining-models-view.md)。  
   
  如需如何在採礦模型中設定屬性的資訊，請參閱 [採礦模型資料行](mining-model-columns.md)。  
   
 ### <a name="to-change-the-properties-of-a-mining-model"></a>若要變更採礦模型的屬性  
   
-1.  在資料採礦設計師的 [採礦模型]  索引標籤中，以滑鼠右鍵按一下包含採礦模型名稱的資料行標題，或方格中包含採礦演算法名稱的資料列，然後選取 [屬性]  。  
+1.  在資料採礦設計師的 [採礦模型]**** 索引標籤中，以滑鼠右鍵按一下包含採礦模型名稱的資料行標題，或方格中包含採礦演算法名稱的資料列，然後選取 [屬性]****。  
   
-2.  在畫面右側的 [屬性]  視窗中，反白顯示對應到您要變更之屬性的值，然後輸入新值。  
+2.  在畫面右側的 [屬性]**** 視窗中，反白顯示對應到您要變更之屬性的值，然後輸入新值。  
   
      您在設計師中選取其他元素時，新值就會生效。  
   
 ### <a name="to-change-the-properties-of-a-mining-model-column"></a>變更採礦模型資料行的屬性  
   
-1.  在資料採礦設計師的 [採礦模型]  索引標籤中，以滑鼠右鍵按一下採礦結構資料行和採礦模型交集方格中的資料格，然後選取 [屬性]  。  
+1.  在資料採礦設計師的 [採礦模型]**** 索引標籤中，以滑鼠右鍵按一下採礦結構資料行和採礦模型交集方格中的資料格，然後選取 [屬性]****。  
   
-2.  在畫面右側的 [屬性]  視窗中，反白顯示對應到您要變更之屬性的值，然後輸入新值。  
+2.  在畫面右側的 [屬性]**** 視窗中，反白顯示對應到您要變更之屬性的值，然後輸入新值。  
   
     > [!NOTE]  
-    >  如果資料行使用方式設為`Ignore`，則**屬性**資料行的視窗為空白。  
+    >  如果 [資料行使用方式] `Ignore`設定為，則資料行的 [**屬性**] 視窗是空白的。  
   
      您在設計師中選取其他元素時，新值就會生效。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型工作和操作說明](mining-model-tasks-and-how-tos.md)  
+ [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)  
   
   

@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42f0b6894bac639d287eb62f9870d7bfd6daba3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62864843"
 ---
-# <a name="mssqleng014160"></a>MSSQL_ENG014160
+# <a name="mssql_eng014160"></a>MSSQL_ENG014160
     
 ## <a name="message-details"></a>訊息詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|14160|  
 |事件來源|MSSQLSERVER|  
 |元件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |符號名稱||  
-|訊息文字|已設定臨界值 [%s:%s] (針對發行集 [%s])。 此發行集的一個或多個訂閱已經到期。|  
+|訊息文字|已設定針對發行集[%s]的臨界值[%s:%s] 此發行集的一個或多個訂閱已經到期。|  
   
 ## <a name="explanation"></a>說明  
  複寫可讓您啟用多個條件的警告。 這包括訂閱即將過期。 如果訂閱在指定 *「保留期限」* 內未執行同步處理，則會使訂閱過期。 如需詳細資訊，請參閱 [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)。  

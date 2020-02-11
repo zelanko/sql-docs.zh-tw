@@ -1,5 +1,5 @@
 ---
-title: 字元對應表轉換編輯器 |Microsoft Docs
+title: 字元對應轉換編輯器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060976"
 ---
 # <a name="character-map-transformation-editor"></a>字元對應表轉換編輯器
@@ -26,7 +26,7 @@ ms.locfileid: "66060976"
   
  若要深入了解字元對應表轉換，請參閱＜ [Character Map Transformation](data-flow/transformations/character-map-transformation.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **可用的輸入資料行**  
  使用此對話方塊來選取要使用字串函數轉換的資料行。 您的選擇會在下面的資料表中出現。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66060976"
 |簡體中文|將繁體中文字元轉換為簡體中文。|  
 |繁體中文|將簡體中文字元轉換為繁體中文。|  
   
- **[輸出別名]**  
+ **輸出別名**  
  輸入每一個輸出資料行的別名。 預設為輸入資料行的名稱，後面接著 **[的副本]** ；但是您也可以選擇任何唯一的描述性名稱。  
   
  **設定錯誤輸出**  

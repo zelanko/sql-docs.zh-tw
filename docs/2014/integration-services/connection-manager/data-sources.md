@@ -13,21 +13,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5fa4a428c1d1f290ceadee19d21f3b8f0b8bd942
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833840"
 ---
 # <a name="data-sources"></a>資料來源
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 包含您可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中使用的設計階段物件：資料來源。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]包含您可以在封裝中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用的設計階段物件：資料來源。  
   
  資料來源物件是連接的參考，且至少包含連接字串和資料來源識別碼。 它也可以包含描述、名稱、使用者名稱和密碼等其他中繼資料。  
   
 > [!NOTE]  
 >  您只能將資料來源加入到設定為使用封裝部署模型的專案。 若專案設定為使用專案部署模型，您就可以使用在專案層級建立的連接管理員來共用連接，取代使用資料來源的方式。  
 >   
->  如需有關部署模型的詳細資訊，請參閱＜ [部署專案和封裝](../packages/deploy-integration-services-ssis-projects-and-packages.md)＞。 如需將專案轉換為專案部署模型的詳細資訊，請參閱[將專案部署至 Integration Services 伺服器](../deploy-projects-to-integration-services-server.md)。  
+>  如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)＞。 如需將專案轉換為專案部署模型的詳細資訊，請參閱 [將專案部署至 Integration Services 伺服器](../deploy-projects-to-integration-services-server.md)。  
   
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中使用資料來源的好處包括：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62833840"
 -   資料來源提供資料來源物件與其封裝參考之間的同步處理。 如果資料來源與參考資料來源的封裝位於同一專案，則資料來源參考的連接字串屬性便會在資料來源變更時自動更新。  
   
 ## <a name="reference-data-sources"></a>參考資料來源  
- 如果要將資料來源物件加入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，請以滑鼠右鍵按一下**方案總管**中的 [資料來源]  資料夾，然後按一下 [新增資料來源]  。 項目會隨即加入至 [資料來源]  資料夾。 如果您要使用在其他專案中建立的資料來源物件，您必須先將物件加入專案。  
+ 如果要將資料來源物件加入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，請以滑鼠右鍵按一下**方案總管**中的 [資料來源]**** 資料夾，然後按一下 [新增資料來源]****。 項目會隨即加入至 [資料來源]**** 資料夾。 如果您要使用在其他專案中建立的資料來源物件，您必須先將物件加入專案。  
   
  如果您要在封裝中使用資料來源物件，可以將參考該資料來源物件的連接管理員新增至封裝中。 在建立封裝控制流程及資料流程之前，或作為建構控制流程或資料流程程序中的一個步驟，將它新增至封裝中。  
   

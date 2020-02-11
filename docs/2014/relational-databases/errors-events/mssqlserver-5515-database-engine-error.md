@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a646852b60cd1d1f59bd35da1d28769dcef3fb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867592"
 ---
-# <a name="mssqlserver5515"></a>MSSQLSERVER_5515
+# <a name="mssqlserver_5515"></a>MSSQLSERVER_5515
     
 ## <a name="details"></a>詳細資料  
   
@@ -36,6 +36,6 @@ ms.locfileid: "62867592"
  無法開啟 FILESTREAM 檔案指定的容器目錄。  
   
 ## <a name="user-action"></a>使用者動作  
- 若要取得錯誤的原因，請參閱特定的 Windows 狀態碼。 如需詳細資訊，請參閱 <<c0> [ 事件和錯誤訊息的支援中心](https://support.microsoft.com/search?query=events%20and%20errors)。  
+ 若要取得錯誤的原因，請參閱特定的 Windows 狀態碼。 如需詳細資訊，請參閱[事件和錯誤訊息支援中心](https://support.microsoft.com/search?query=events%20and%20errors)。  
   
   

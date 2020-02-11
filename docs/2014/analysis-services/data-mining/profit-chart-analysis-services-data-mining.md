@@ -1,5 +1,5 @@
 ---
-title: 收益圖 (Analysis Services-資料採礦) |Microsoft Docs
+title: 收益圖（Analysis Services 資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,31 +17,31 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a64eacb1219e239ad894d9922db5a5032ed525b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083084"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>收益圖 (Analysis Services - 資料採礦)
-  收益圖會顯示與使用採礦模型有關聯的預估獲利率。 例如，假設您的模型來預測在商務案例中連絡哪些客戶公司，應該。 在此情況下，您的收益圖就要加入與執行目標郵寄促銷活動的成本有關的資訊。 然後，您便能在完成的圖表中看到正確鎖定目標客戶相較於隨機連絡客戶的預估收益。  
+  收益圖會顯示與使用採礦模型有關聯的預估獲利率。 例如，假設您的模型會預測公司應該在商務案例中聯繫的客戶。 在此情況下，您的收益圖就要加入與執行目標郵寄促銷活動的成本有關的資訊。 然後，您便能在完成的圖表中看到正確鎖定目標客戶相較於隨機連絡客戶的預估收益。  
   
 ## <a name="build-a-profit-chart"></a>建置收益圖  
  收益圖類似於增益圖。 您首先要建立增益圖，然後再加入成本和收益資訊。  
   
  若要建置收益圖，您必須已有現存的模型。  
   
- 本範例使用的是目標郵寄決策樹模型。 此模型識別了可能購買自行車的客戶。 您可以套用 [收益圖]  來判斷能夠達到最高收益的目標客戶數。  
+ 本範例使用的是目標郵寄決策樹模型。 此模型識別了可能購買自行車的客戶。 您可以套用 [收益圖]**** 來判斷能夠達到最高收益的目標客戶數。  
   
- 如果您還沒有範例模型，您可以使用建立它[83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](../../tutorials/basic-data-mining-tutorial.md)。  
+ 如果您沒有範例模型，可以使用[基本資料採礦教學](../../tutorials/basic-data-mining-tutorial.md)課程來建立。  
   
 1.  開啟採礦精確度圖表產生器。  
   
-    -   在 SQL Server Management Studio 中，以滑鼠右鍵按一下模型，然後選取 [檢視增益圖]  。  
+    -   在 SQL Server Management Studio 中，以滑鼠右鍵按一下模型，然後選取 [檢視增益圖]****。  
   
-    -   在 SQL Server Data Tools 中，開啟您已在其中建立模型的專案，然後按一下 [採礦精確度圖表]  索引標籤。  
+    -   在 SQL Server Data Tools 中，開啟您已在其中建立模型的專案，然後按一下 [採礦精確度圖表]**** 索引標籤。  
   
-2.  在 [輸入選擇]  索引標籤上，選取模型並選擇可預測的屬性值。  
+2.  在 [輸入選擇]**** 索引標籤上，選取模型並選擇可預測的屬性值。  
   
      就這個特定案例而言，您只有興趣知道能準確預測此值的獲利率：[Bike Buyer] =1。  
   
@@ -49,24 +49,24 @@ ms.locfileid: "66083084"
   
 3.  選取要測試的資料集。 針對本範例，請選取測試資料集。  
   
-4.  接著，按一下 [增益圖]  索引標籤。  
+4.  接著，按一下 [增益圖]**** 索引標籤。  
   
      隨即會自動產生增益圖。  
   
-5.  從 [圖表類型]  清單中選取 [收益圖]  ，以將其變更為收益圖。  
+5.  從 [圖表類型]**** 清單中選取 [收益圖]****，以將其變更為收益圖。  
   
-6.  只要您選擇了收益圖作為圖表類型，即會自動開啟 [收益圖設定]  對話方塊。  
+6.  只要您選擇了收益圖作為圖表類型，即會自動開啟 [收益圖設定]**** 對話方塊。  
   
      此對話方塊可協助您指定與目標郵寄促銷活動相關的成本與效益。 針對這些範例中所示的圖表，我們使用下列值：  
   
     |設定|值|註解|  
     |-------------|-----------|--------------|  
-    |**母體**|20,000|設定總目標母體的值<br /><br /> 您的資料庫可能包含許多客戶，但是為了省下郵寄支出，您可以選擇只鎖定最有可能回應的 20,000 名目標客戶。 藉由執行預測查詢，並依預測模型所輸出的機率排序，即可取得這份清單。|  
+    |**人數**|20,000|設定總目標母體的值<br /><br /> 您的資料庫可能包含許多客戶，但是為了省下郵寄支出，您可以選擇只鎖定最有可能回應的 20,000 名目標客戶。 藉由執行預測查詢，並依預測模型所輸出的機率排序，即可取得這份清單。|  
     |**固定成本**|500|輸入為 20,000 人設定目標郵寄促銷活動的單次成本。 這可能包括印刷品，或是設定電子郵件促銷活動的成本。|  
-    |**單位成本**|3|輸入目標郵寄促銷活動的每單位成本。<br /><br /> 這個金額將會乘以小於或等於 20000 的數字，端視模型預測多少客戶為良好潛在客戶而定。|  
-    |**每個別營收**|400|輸入代表預期可從成功的結果獲得的收益或收入金額值。 在此情況下，我們假設每郵寄一購買配件或自行車 $400 美元。<br /><br /> 此金額將會用來預估與高機率案例有關的總收益。|  
+    |**個別成本**|3|輸入目標郵寄促銷活動的每單位成本。<br /><br /> 這個金額將會乘以小於或等於 20000 的數字，端視模型預測多少客戶為良好潛在客戶而定。|  
+    |**每個人的收入**|400|輸入代表預期可從成功的結果獲得的收益或收入金額值。 在此情況下，我們會假設郵寄目錄會導致購買配件或自行車平均 $400。<br /><br /> 此金額將會用來預估與高機率案例有關的總收益。|  
   
-7.  在您設定妥必要的參數之後，按一下 [確定]  。  
+7.  在您設定妥必要的參數之後，按一下 [確定]****。  
   
 8.  圖表隨即更新，以顯示收益曲線。  
   
@@ -75,11 +75,11 @@ ms.locfileid: "66083084"
   
  如下所示，使用收益圖能讓您比較多個模型，只要這些模型都預測相同的離散屬性即可。  
   
- ![收益圖表比較三個模型](../media/dm14-profitchartupdated.gif "收益圖表比較三個模型")  
+ ![比較三個模型的收益圖](../media/dm14-profitchartupdated.gif "比較三個模型的收益圖")  
   
  請注意圖表中的灰色垂直線。 當您按一下並拖曳這條線時，工具提示便會顯示曲線底下於各點位置所包括的目標母體的百分比。  
   
- 隨著您拖曳這條線，[採礦圖例]  也將更新以顯示百分比值、收益分數以及此灰色垂直線上與母體百分比有關的預測機率。  
+ 隨著您拖曳這條線，[採礦圖例]**** 也將更新以顯示百分比值、收益分數以及此灰色垂直線上與母體百分比有關的預測機率。  
   
  例如，若您使用此模型決定要將促銷文宣寄給哪些人，您可能就會根據預測機率而決定以母體的 25% 為目標。不過，圖表的收益曲線底下介於 40% 到 70% 之間的面積最大，表示就算整體百分比回應偏低，郵寄的人數愈多還是能夠獲得愈高的報酬。  
   
@@ -92,9 +92,9 @@ ms.locfileid: "66083084"
 |主題|連結|  
 |------------|-----------|  
 |提供如何為此目標郵寄模型建立增益圖的逐步解說。|[資料採礦基本教學課程](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [使用增益圖測試精確度 &#40;基本資料採礦教學課程&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|說明相關的圖表類型。|[增益圖 &#40;Analysis Services - 資料採礦&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [分類矩陣 &#40;Analysis Services - 資料採礦&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [散佈圖 &#40;Analysis Services - 資料採礦&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|描述採礦模型和採礦結構的交叉驗證。|[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](cross-validation-analysis-services-data-mining.md)|  
-|描述建立增益圖及其他精確度圖表的步驟。|[測試及驗證工作與操作方法 &#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|說明相關的圖表類型。|[增益圖 &#40;Analysis Services-資料採礦&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [分類矩陣 &#40;Analysis Services-資料採礦&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [散佈圖 &#40;Analysis Services-資料採礦&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|描述採礦模型和採礦結構的交叉驗證。|[交叉驗證 &#40;Analysis Services-資料採礦&#41;](cross-validation-analysis-services-data-mining.md)|  
+|描述建立增益圖及其他精確度圖表的步驟。|[測試和驗證工作，以及如何 &#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)   

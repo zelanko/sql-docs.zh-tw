@@ -1,5 +1,5 @@
 ---
-title: 群組屬性成員 （分隔） |Microsoft Docs
+title: 群組屬性成員（離散化） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,18 +23,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3cc874831f9f96c2540d58f2ffe3b89f8c4dc7aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077271"
 ---
 # <a name="group-attribute-members-discretization"></a>群組屬性成員 (分隔)
-  成員群組是系統產生之連續維度成員的集合。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以透過稱為分隔的處理序，將屬性的成員分組成許多成員群組。 階層中的層級包含成員群組或成員，但不會同時包含兩者。 商務使用者瀏覽含有成員群組的層級時，他們會看到成員群組的名稱和資料格值。 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 產生以支援成員群組的成員稱為群組成員，看起來就像一般成員。  
+  成員群組是系統產生之連續維度成員的集合。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，屬性的成員可以透過稱為「離散化」的進程，分組到多個成員群組中。 階層中的層級包含成員群組或成員，但不會同時包含兩者。 商務使用者瀏覽含有成員群組的層級時，他們會看到成員群組的名稱和資料格值。 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 產生以支援成員群組的成員稱為群組成員，看起來就像一般成員。  
   
  屬性 (Attribute) 上的 `DiscretizationMethod` 屬性 (Property)，控制如何將成員群組。  
   
-|`DiscretizationMethod` 設定|描述|  
+|`DiscretizationMethod`設|描述|  
 |--------------------------------------|-----------------|  
 |`None`|顯示成員。|  
 |`Automatic`|請選取最適合代表資料的方法：`EqualAreas` 方法或 `Clusters` 方法。|  
@@ -52,7 +52,8 @@ ms.locfileid: "66077271"
 ## <a name="naming-template"></a>命名範本  
  建立成員群組時，會自動產生成員群組名稱。 除非您指定命名範本，否則會使用預設命名範本。 而在屬性 (Attribute) 之 `Format` 屬性 (Property) 的 `NameColumn` 選項中指定命名範本，即可變更這個命名方法。 也可以針對用於屬性 (Attribute) 之 `Translations` 屬性 (Property) 之資料行繫結的 `NameColumn` 集合中所指定的每個語言，來重新定義不同的命名範本。  
   
- `Format` 設定會使用下列字串運算式，來定義命名範本：  
+ 
+  `Format` 設定會使用下列字串運算式，來定義命名範本：  
   
  `<Naming template> ::= <First definition> [;<Intermediate definition>;<Last definition>]`  
   
@@ -62,13 +63,17 @@ ms.locfileid: "66077271"
   
  `<Last definition> ::= <Name expression>`  
   
- `<First definition>` 參數只適用於分隔方法所產生的第一個，或唯一的一個成員群組。 如果未提供選擇性參數 `<Intermediate definition>` 和 `<Last definition>` ，則會將 `<First definition>` 參數用於針對該屬性所產生的所有量值群組。  
+ 
+  `<First definition>` 參數只適用於分隔方法所產生的第一個，或唯一的一個成員群組。 如果未提供選擇性參數 `<Intermediate definition>` 和 `<Last definition>` ，則會將 `<First definition>` 參數用於針對該屬性所產生的所有量值群組。  
   
- `<Last definition>` 參數只適用於分隔方法所產生的最後一個成員群組。  
+ 
+  `<Last definition>` 參數只適用於分隔方法所產生的最後一個成員群組。  
   
- `<Intermediate bucket name>` 參數適用於分隔方法所產生之第一個或最後一個成員群組以外的每一個成員群組。 如果只產生兩個或更少的成員群組，就會忽略此參數。  
+ 
+  `<Intermediate bucket name>` 參數適用於分隔方法所產生之第一個或最後一個成員群組以外的每一個成員群組。 如果只產生兩個或更少的成員群組，就會忽略此參數。  
   
- `<Bucket name>` 參數是一個字串運算式，其中可以納入一組變數，在其成員群組名稱中代表成員或成員群組資訊：  
+ 
+  `<Bucket name>` 參數是一個字串運算式，其中可以納入一組變數，在其成員群組名稱中代表成員或成員群組資訊：  
   
 |變數|描述|  
 |--------------|-----------------|  

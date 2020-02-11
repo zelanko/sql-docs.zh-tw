@@ -15,24 +15,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ee37bfd2c2ba17377589f8a3e744cc018b9d5775
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870785"
 ---
-# <a name="mssqlserver10060"></a>MSSQLSERVER_10060
+# <a name="mssqlserver_10060"></a>MSSQLSERVER_10060
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|10060|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱||  
-|訊息文字|建立伺服器的連接時發生錯誤。  連接到 SQL Server 時，可能因為在預設的設定下 SQL Server 不允許遠端連接而引起此失敗。 (提供者：TCP 提供者，錯誤: 0 - 連線嘗試失敗，因為連線對象有一段時間並未正確回應，或是連線建立失敗，因為連線的主機無法回應。) (Microsoft SQL Server，錯誤:10060)|  
+|訊息文字|建立伺服器的連接時發生錯誤。  連接到 SQL Server 時，可能因為在預設的設定下 SQL Server 不允許遠端連接而引起此失敗。 (提供者: TCP 提供者，錯誤: 0 - 連線嘗試失敗，因為連線對象有一段時間並未正確回應，或是連線建立失敗，因為連線的主機無法回應。) (Microsoft SQL Server，錯誤: 10060)|  
   
 ## <a name="explanation"></a>說明  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端無法連接到伺服器。 發生這個錯誤的原因，可能是伺服器上的防火牆拒絕連接，或伺服器未設定成接受遠端連接。  
@@ -45,10 +45,10 @@ ms.locfileid: "62870785"
 -   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員工具，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定成接受遠端連接。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
+ [設定資料庫引擎存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
  [設定用戶端通訊協定](../../database-engine/configure-windows/configure-client-protocols.md)   
  [網路通訊協定和網路程式庫](../../sql-server/install/network-protocols-and-network-libraries.md)   
- [用戶端網路組態](../../database-engine/configure-windows/client-network-configuration.md)   
+ [用戶端網路設定](../../database-engine/configure-windows/client-network-configuration.md)   
  [設定用戶端通訊協定](../../database-engine/configure-windows/configure-client-protocols.md)   
  [啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   

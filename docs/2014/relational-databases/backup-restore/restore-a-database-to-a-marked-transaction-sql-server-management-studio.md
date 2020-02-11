@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 919c10372e397f0c2d66d7648363aef7916ec598
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875604"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>還原資料庫至標示的異動 (SQL Server Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "62875604"
   
 ### <a name="to-restore-a-marked-transaction"></a>若要還原標示的交易  
   
-1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱展開伺服器樹狀目錄。  
+1.  連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體之後，在物件總管中按一下伺服器名稱，以展開伺服器樹狀目錄。  
   
 2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
@@ -45,18 +45,18 @@ ms.locfileid: "62875604"
   
      下表列出方格的各資料行標頭，並描述各標頭的值。  
   
-    |標頭|值|  
+    |頁首|值|  
     |------------|-----------|  
     |\<空白>|顯示選取標示的核取方塊。|  
     |**交易標示**|在認可交易時，由使用者所指定之標示交易的名稱。|  
     |**日期**|認可交易的日期和時間。 交易日期和時間是依照 **msdbgmarkhistory** 資料表中記錄的顯示，而非依照用戶端電腦的日期和時間。|  
     |**說明**|在認可交易時，由使用者所指定之標示交易的描述 (如果有的話)。|  
     |**LSN**|標示之交易的記錄序號。|  
-    |**[資料庫備份]**|認可標示的交易之資料庫的名稱。|  
+    |**Database**|認可標示的交易之資料庫的名稱。|  
     |**使用者名稱**|認可標示的交易之資料庫使用者的名稱。|  
   
 ## <a name="see-also"></a>另請參閱  
- [還原資料庫備份&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
+ [還原資料庫備份 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
  [還原交易記錄備份 &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
   

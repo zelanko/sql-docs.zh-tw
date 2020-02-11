@@ -16,26 +16,27 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5ac76e77d1bd5eebd2e796a6a72463564cb3df3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896184"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>使用指令碼元件建立 ODBC 目的地
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，通常會使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目的地與 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for ODBC，將資料儲存到 ODBC 目的地。 不過，您也可以建立在單一封裝中要使用的特定 ODBC 目的地。 若要建立這個特定的 ODBC 目的地，可以使用如下列範例所示的指令碼元件。  
+  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，您通常會使用[!INCLUDE[vstecado](../../includes/vstecado-md.md)]目的地和 odbc 的[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider，將資料儲存到 odbc 目的地。 不過，您也可以建立在單一封裝中要使用的特定 ODBC 目的地。 若要建立這個特定的 ODBC 目的地，可以使用如下列範例所示的指令碼元件。  
   
 > [!NOTE]  
 >  如果您要建立可以更輕鬆地在多個資料流程工作與多個封裝之間重複使用的元件，請考慮使用這個指令碼元件範例中的程式碼，做為自訂資料流程元件的起點。 如需詳細資訊，請參閱 [開發自訂資料流程元件](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何建立一個目的地元件，以使用現有的 ODBC 連線管理員來將資料從資料流程儲存到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。  
+ 下列範例示範如何建立一個目的地元件，以使用現有的 ODBC 連接管理員，將資料從[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料流程儲存到資料表。  
   
- 此範例是[使用指令碼元件建立目的地](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)主題中所示範的自訂 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目的地之修改版本。 不過，在這個範例中，已修改自訂 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目的地以搭配 ODBC 連接管理員使用，並將資料儲存到 ODBC 目的地。 這些修改也包括下列變更：  
+ 此範例是[!INCLUDE[vstecado](../../includes/vstecado-md.md)]使用指令碼元件建立目的地[主題中所示範的自訂 ](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) 目的地之修改版本。 不過，在這個範例中，已修改自訂 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目的地以搭配 ODBC 連接管理員使用，並將資料儲存到 ODBC 目的地。 這些修改也包括下列變更：  
   
 -   您無法從 Managed 程式碼呼叫 ODBC 連接管理員的 `AcquireConnection` 方法，因為它會傳回原生物件。 因此，這個範例使用連接管理員的連接字串以 Managed ODBC [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者直接連到資料來源。  
   
--   `OdbcCommand` 需要位置參數。 參數的位置由命令文字中的問號 (?) 指出 (相較之下，`SqlCommand` 需要具名的參數)。  
+-   
+  `OdbcCommand` 需要位置參數。 參數的位置由命令文字中的問號 (?) 指出  (相較之下，`SqlCommand` 需要具名的參數)。  
   
  此範例使用 **AdventureWorks** 範例資料庫中的 **Person.Address** 資料表。 此範例會透過資料流程傳遞此資料表的第一個資料行與第四個資料行：**int*AddressID*** 和 **nvarchar(30)City** 資料行。 在[開發特定類型的指令碼元件](../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)主題中，這個相同的資料用於來源、轉換和目的地範例中。  
   
@@ -52,15 +53,15 @@ ms.locfileid: "62896184"
   
 3.  將新的指令碼元件加入至資料流程設計師介面，並將它設定為目的地。  
   
-4.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件 (您不需要進行任何轉換，就可以直接將來源連線到目的地。)為了確保這個範例可運作，上游元件的輸出必須至少包含 **AdventureWorks** 範例資料庫中 **Person.Address** 資料表的 **AddressID** 和 **City** 資料行。  
+4.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  （您可以直接將來源連接到目的地，而不需要任何轉換）。為了確保此範例能夠運作，上游元件的輸出至少必須包含**AdventureWorks**範例資料庫之**Person. Address**資料表中的**AddressID**和**City**資料行。  
   
-5.  開啟**指令碼轉換編輯器**。 在 [輸入資料行]  頁面上，選取 [AddressID]  與 [City]  資料行。  
+5.  開啟**指令碼轉換編輯器**。 在 [輸入資料行]**** 頁面上，選取 [AddressID]**** 與 [City]**** 資料行。  
   
-6.  在 [輸入及輸出]  頁面上，以更具描述性的名稱重新命名輸入，例如 **MyAddressInput**。  
+6.  在 [**輸入和輸出**] 頁面上，以更具描述性的名稱重新命名輸入，例如**MyAddressInput**。  
   
-7.  在 [連線管理員]  頁面上，使用 **MyODBCConnectionManager** 之類的描述性名稱，新增或建立 ODBC 連線管理員。  
+7.  在 [連線管理員]**** 頁面上，使用 **MyODBCConnectionManager** 之類的描述性名稱，新增或建立 ODBC 連線管理員。  
   
-8.  在 **指令碼**頁面上，按一下**編輯指令碼**，然後輸入以下所示的指令碼`ScriptMain`類別。  
+8.  在 [**腳本**] 頁面上，按一下 [**編輯腳本**]，然後在`ScriptMain`類別中輸入如下所示的腳本。  
   
 9. 依序關閉指令碼開發環境和**指令碼轉換編輯器**，然後執行此範例。  
   
@@ -165,7 +166,7 @@ ms.locfileid: "62896184"
     }  
     ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用指令碼元件建立目的地](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  

@@ -22,13 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077033"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>備份與還原 Analysis Services 資料庫
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括備份與還原，讓您可以從特定時間點復原資料庫及其物件。 備份與還原也是一種有效的技術，可將資料庫移轉到升級的伺服器、在伺服器之間移動資料庫，或是將資料庫部署到實際伺服器。 如果您還沒有備份計畫，但是您有很重要的資料，就應該盡快設計及實作計畫，以供資料復原之用。  
   
  備份與還原命令是在已部署的 Analysis Services 資料庫上執行。 針對您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的專案和方案，您應該使用原始檔控制來確保您可以復原特定版本的來源檔案，然後為您要使用之原始檔控制系統的儲存機制，建立資料復原計畫。  
@@ -37,7 +38,7 @@ ms.locfileid: "66077033"
   
  自動備份的一個明顯好處，就是資料快照集可以按照自動備份頻率，保持在最新的狀態。 自動排程器可確保不會忘記備份。 還原資料庫也可以自動化，且是複寫資料的好方法，但一定要在您複寫至的執行個體上備份加密金鑰檔案。 同步處理功能是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的複寫專用，但僅針對過期的資料。 此處提到的所有功能可以透過使用者介面、利用 XML/A 命令或透過 AMO 以程式設計方式執行來實作。  
   
- 本主題包含下列各節：  
+ 這個主題包括下列各節：  
   
 -   [準備備份](#bkmk_prep)  
   
@@ -52,7 +53,7 @@ ms.locfileid: "66077033"
   
  還原位置必須具有相同的伺服器類型。 表格式資料庫只能還原到以表格式模式執行的 Analysis Services。 多維度資料庫需要在多維度模式下執行的執行個體。  
   
-##  <a name="bkmk_prep"></a> 準備備份  
+##  <a name="bkmk_prep"></a>準備備份  
  請使用下列檢查清單來準備備份：  
   
 -   檢查將儲存備份檔案的位置。 如果您使用遠端位置，必須將它指定為 UNC 資料夾。 確認您可以存取此 UNC 路徑。  
@@ -63,7 +64,7 @@ ms.locfileid: "66077033"
   
 -   檢查現有檔案是否有相同名稱。 如果同名的檔案已經存在，備份將會失敗，除非您指定覆寫檔案的選項。  
   
-##  <a name="bkmk_cube"></a> 備份多維度或表格式資料庫  
+##  <a name="bkmk_cube"></a>備份多維度或表格式資料庫  
  系統管理員可以將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫備份至單一 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 備份檔 (.abf)，而不用考慮資料庫的大小。 如需逐步指示，請參閱 [如何備份 Analysis Services 資料庫 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) 和 [自動備份 Analysis Services 資料庫 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)。  
   
 > [!NOTE]  
@@ -99,7 +100,7 @@ ms.locfileid: "66077033"
   
  如需備份 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的詳細資訊，請參閱 [備份選項](backup-options.md)。  
   
-##  <a name="bkmk_restore"></a> 還原 Analysis Services 資料庫  
+##  <a name="bkmk_restore"></a>還原 Analysis Services 資料庫  
  管理員可以從一個或多個備份檔案還原 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。  
   
 > [!NOTE]  

@@ -1,5 +1,5 @@
 ---
-title: 擷取 UDT 資料 |Microsoft Docs
+title: 正在抓取 UDT 資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 085b1783214e7f629f1cb91084303edacd151c25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874637"
 ---
 # <a name="retrieving-udt-data"></a>擷取 UDT 資料
@@ -38,7 +38,7 @@ ms.locfileid: "62874637"
  不需藉助用戶端上的 UDT 組件複本，便可從資料表的 UDT 資料行中擷取未經處理的資料。  
   
 > [!NOTE]  
->  **SqlClient**可能無法載入 UDT 版本不相符或其他問題發生時的 UDT。 在此情況下，請使用一般疑難排解機制，判斷呼叫應用程式找不到包含 UDT 之組件的原因。 如需詳細資訊，請閱讀 .NET Framework 文件集中名為＜診斷 Managed 偵錯助理的錯誤＞的主題。  
+>  當 UDT 版本或其他問題不相符時， **SqlClient**可能無法載入 udt。 在此情況下，請使用一般疑難排解機制，判斷呼叫應用程式找不到包含 UDT 之組件的原因。 如需詳細資訊，請閱讀 .NET Framework 文件集中名為＜診斷 Managed 偵錯助理的錯誤＞的主題。  
   
 ## <a name="accessing-udts-with-a-sqldatareader"></a>使用 SqlDataReader 存取 UDT  
  您可以從用戶端程式碼使用 `System.Data.SqlClient.SqlDataReader`，以擷取包含 UDT 資料行的結果集，其會公開為物件的執行個體。  
@@ -157,10 +157,10 @@ static void Main()
 ```  
   
 ## <a name="binding-udts-as-bytes"></a>以位元組繫結 UDT  
- 在某些情況下，您可能要從 UDT 資料行擷取未經處理資料。 可能該型別在本機不可使用，或您不想要具現化 UDT 的執行個體。 您可以讀取的未經處理位元組至位元組陣列，使用**GetBytes**方法`SqlDataReader`。 此方法可將指定資料行位移的位元組資料流，讀取至始於指定緩衝區位移的陣列緩衝區。 另一個選項是使用其中一種**GetSqlBytes**或是**GetSqlBinary**方法，讀取所有的單一作業中的內容。 在任何一種情況中，都不會具現化 UDT 物件，所以您無需設定用戶端組件的 UDT 參考。  
+ 在某些情況下，您可能要從 UDT 資料行擷取未經處理資料。 可能該型別在本機不可使用，或您不想要具現化 UDT 的執行個體。 您可以使用的**GetBytes**方法，將未經處理的位元組讀取到位元組陣列`SqlDataReader`。 此方法可將指定資料行位移的位元組資料流，讀取至始於指定緩衝區位移的陣列緩衝區。 另一個選項是使用其中一個**GetSqlBytes**或**GetSqlBinary**方法，並在單一作業中讀取所有內容。 在任何一種情況中，都不會具現化 UDT 物件，所以您無需設定用戶端組件的 UDT 參考。  
   
 ### <a name="example"></a>範例  
- 此範例示範如何擷取**點**資料當做未經處理位元組到位元組陣列，使用`SqlDataReader`。 該程式碼使用 `System.Text.StringBuilder`，將未經處理位元組轉換成要顯示於主控台視窗的字串表示。  
+ 這個範例會示範如何使用，將**點**資料以未經處理的位元組形式捕獲到`SqlDataReader`位元組陣列。 該程式碼使用 `System.Text.StringBuilder`，將未經處理位元組轉換成要顯示於主控台視窗的字串表示。  
   
 ```vb  
 Option Explicit On  
@@ -266,7 +266,7 @@ class GetRawBytes
 ```  
   
 ### <a name="example-using-getsqlbytes"></a>使用 GetSqlBytes 的範例  
- 此範例示範如何擷取**點**資料當做在單一作業中使用的未經處理位元組**GetSqlBytes**方法。 該程式碼使用 `StringBuilder`，將未經處理位元組轉換成要顯示於主控台視窗的字串表示。  
+ 這個範例示範如何使用**GetSqlBytes**方法，在單一作業中以原始位元組形式抓取**點**資料。 該程式碼使用 `StringBuilder`，將未經處理位元組轉換成要顯示於主控台視窗的字串表示。  
   
 ```vb  
 Option Explicit On  
@@ -374,7 +374,7 @@ class GetRawBytes
  在 ADO.NET 程式碼中，UDT 可以同時當做輸入及輸出參數使用。  
   
 ## <a name="using-udts-in-query-parameters"></a>在查詢參數中使用 UDT  
- 設定 `SqlParameter` 物件的 `System.Data.SqlClient.SqlCommand` 時，可以使用 UDT 做為參數值。 對 `SqlDbType.Udt` 集合呼叫 `SqlParameter` 方法時，可使用 `Add` 物件的 `Parameters` 列舉型別表示參數是 UDT。 `UdtTypeName`的屬性`SqlCommand`物件來指定 UDT 的完整的名稱在資料庫中*database.schema_name.object_name*語法。 儘管並非必須如此，但使用完整名稱可消除程式碼的模稜兩可性。  
+ 設定 `SqlParameter` 物件的 `System.Data.SqlClient.SqlCommand` 時，可以使用 UDT 做為參數值。 對 `SqlDbType.Udt` 集合呼叫 `SqlParameter` 方法時，可使用 `Add` 物件的 `Parameters` 列舉型別表示參數是 UDT。 `SqlCommand`物件`UdtTypeName`的屬性是用來指定資料庫中 UDT 的完整名稱，使用*schema_name. object_name*語法。 儘管並非必須如此，但使用完整名稱可消除程式碼的模稜兩可性。  
   
 > [!NOTE]  
 >  UDT 組件的本機複本必須可讓用戶端專案使用。  

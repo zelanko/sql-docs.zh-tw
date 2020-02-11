@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833808"
 ---
 # <a name="flat-file-connection-manager"></a>一般檔案連接管理員
@@ -30,18 +30,18 @@ ms.locfileid: "62833808"
  「一般檔案」連接管理員僅可存取一個檔案。 若要參考多個檔案，請使用「多個一般檔案」連接管理員，而非「一般檔案」連接管理員。 如需詳細資訊，請參閱 [Multiple Flat Files Connection Manager](multiple-flat-files-connection-manager.md)。  
   
 ## <a name="column-length"></a>資料行長度  
- 依預設，「一般檔案」連接管理員會將字串資料行的長度設定成 50 個字元。 在 [一般檔案連接管理員編輯器]  對話方塊中，您可以評估取樣資料，並自動調整這些資料行的長度，以避免資料遭截斷或超出資料行寬度。 此外，除非接著在一般檔案來源或轉換中調整資料行長度，否則字串資料行在整個資料流程中的資料行長度將維持不變。 如果這些字串資料行對應到較窄的目的地資料行，使用者介面中將會出現警告。 此外，執行階段中也可能發生因為資料截斷所產生的錯誤。 若要避免錯誤或資料截斷，您可以調整資料行的大小，使其與一般檔案連接管理員、一般檔案來源或轉換中的目的地資料行相容。 若要修改輸出資料行的長度，您設定`Length`上的輸出資料行的屬性**輸入與輸出屬性**索引標籤**進階編輯器** 對話方塊。  
+ 依預設，「一般檔案」連接管理員會將字串資料行的長度設定成 50 個字元。 在 [一般檔案連接管理員編輯器]**** 對話方塊中，您可以評估取樣資料，並自動調整這些資料行的長度，以避免資料遭截斷或超出資料行寬度。 此外，除非接著在一般檔案來源或轉換中調整資料行長度，否則字串資料行在整個資料流程中的資料行長度將維持不變。 如果這些字串資料行對應到較窄的目的地資料行，使用者介面中將會出現警告。 此外，執行階段中也可能發生因為資料截斷所產生的錯誤。 若要避免錯誤或資料截斷，您可以調整資料行的大小，使其與一般檔案連接管理員、一般檔案來源或轉換中的目的地資料行相容。 若要修改輸出資料行的長度，您可以`Length`在 [**進階編輯器**] 對話方塊的 [**輸入與輸出屬性**] 索引標籤上，設定輸出資料行的屬性。  
   
  如果在加入及設定使用「一般檔案」連接管理員的一般檔案來源之後，在該連接管理員中更新資料行長度，您就不需要手動調整一般檔案來源中輸出資料行的大小。 在您開啟 **[一般檔案來源]** 對話方塊時，一般檔案來源會提供一個用來同步化資料行中繼資料的選項。  
   
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>設定一般檔案連接管理員  
- 當您新增一般檔案連接管理員加入封裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]建立連接管理員，會解析為在執行階段的一般檔案連接、 設定一般檔案 」 連接屬性，以及將一般檔案連接管理員加入`Connections`封裝的集合。  
+ 當您將「一般檔案」連線管理員加入封裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]時，會建立在執行時間解析為「一般檔案」連接的連線管理員、設定「一般檔案」連接屬性，並將「一般檔案`Connections` 」連接管理員加入封裝的集合。  
   
  連接管理員的 `ConnectionManagerType` 屬性會設為 `FLATFILE`。  
   
  根據預設，「一般檔案」連接管理員一律會檢查未加引號之資料中的資料列分隔符號，並在找到資料列分隔符號時開始一個新資料列。 這可讓連接管理員正確地剖析資料列缺少資料行欄位的檔案。  
   
- 在某些情況下，停用此功能可能會提升封裝效能。 您可以藉由設定 「 一般檔案連接管理員屬性停用此功能**AlwaysCheckForRowDelimiters**至`False`。  
+ 在某些情況下，停用此功能可能會提升封裝效能。 您可以藉由將「一般檔案」連接管理員屬性**alwayscheckforrowdelimiters 設定]** 設定為來`False`停用這項功能。  
   
  您可以利用下列方式設定「一般檔案」連接管理員：  
   
@@ -61,9 +61,9 @@ ms.locfileid: "62833808"
   
  您可以針對一般檔案連接管理員來設定 ConnectionString 屬性，其方式是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [屬性] 視窗中指定運算式。 為避免驗證錯誤，請執行下列操作。  
   
--   當您使用運算式指定檔案時，請在 [一般檔案連接管理員編輯器]  的 [檔案名稱]  方塊中加入檔案路徑。  
+-   當您使用運算式指定檔案時，請在 [一般檔案連接管理員編輯器]**** 的 [檔案名稱]**** 方塊中加入檔案路徑。  
   
--   在「一般檔案」連接管理員上將 **DelayValidation** 屬性設定為 [True]  。  
+-   在「一般檔案」連接管理員上將 **DelayValidation** 屬性設定為 [True]****。  
   
  您可以透過具有「一般檔案」目的地的「一般檔案」連接管理員，使用運算式在執行階段建立檔案名稱。  
   
@@ -71,13 +71,13 @@ ms.locfileid: "62833808"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [一般檔案連線管理員編輯器 &#40;[一般]頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [一般檔案連線管理員編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [一般檔案連線管理員編輯器 &#40;[資料行] 頁面&#41;](../flat-file-connection-manager-editor-columns-page.md)  
+-   [一般檔案連接管理員編輯器 &#40;資料行] 頁面&#41;](../flat-file-connection-manager-editor-columns-page.md)  
   
--   [一般檔案連線管理員編輯器 &#40;[進階] 頁面&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
+-   [一般檔案連線管理員編輯器 &#40;Advanced Page&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
   
--   [一般檔案連接管理員編輯器 &#40;[預覽] 頁面&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+-   [&#40;預覽頁面的一般檔案連線管理員編輯器&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../building-packages-programmatically/adding-connections-programmatically.md)。  
   

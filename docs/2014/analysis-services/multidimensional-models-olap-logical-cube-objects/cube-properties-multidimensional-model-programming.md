@@ -32,10 +32,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727644"
 ---
 # <a name="cube-properties"></a>Cube 屬性
@@ -44,7 +44,7 @@ ms.locfileid: "62727644"
 > [!NOTE]  
 >  有些屬性是在建立 Cube 時自動設定，且無法變更。  
   
- 如需如何設定 cube 屬性的詳細資訊，請參閱[Cube 設計工具&#40;Analysis Services-多維度資料&#41;](../cube-designer-analysis-services-multidimensional-data.md)。  
+ 如需如何設定 cube 屬性的詳細資訊，請參閱[Cube 設計師 &#40;Analysis Services 多維度資料&#41;](../cube-designer-analysis-services-multidimensional-data.md)。  
   
 |屬性|描述|  
 |--------------|-----------------|  
@@ -58,19 +58,19 @@ ms.locfileid: "62727644"
 |`Language`|指定 Cube 的預設語言識別碼。|  
 |`Name`|指定 Cube 的使用者易記名稱。|  
 |`ProactiveCaching`|定義 Cube 的主動式快取設定。|  
-|`ProcessingMode`|指出在處理期間或處理之後，是否應該進行檢索和彙總。 選項**定期**或`lazy`。|  
-|`ProcessingPriority`|決定 Cube 在背景作業 (例如延遲彙總和索引) 期間的處理優先權。 預設值是 **0**。|  
-|`ScriptCacheProcessingMode`|指出在處理期間或處理之後是否應建立指令碼快取。 選項**定期**和`lazy`。|  
+|`ProcessingMode`|指出在處理期間或處理之後，是否應該進行檢索和彙總。 選項為**** [一般`lazy`] 或 []。|  
+|`ProcessingPriority`|決定 Cube 在背景作業 (例如延遲彙總和索引) 期間的處理優先權。 預設值為**0**。|  
+|`ScriptCacheProcessingMode`|指出在處理期間或處理之後是否應建立指令碼快取。 選項為**一般**和`lazy`。|  
 |`ScriptErrorHandlingMode`|決定錯誤處理。 選項為 `IgnoreNone` 或 `IgnoreAll`。|  
 |`Source`|顯示用於 Cube 的資料來源檢視。|  
 |`StorageLocation`|指定 Cube 的檔案系統儲存位置。 如果未指定，會從包含 Cube 物件的資料庫中繼承位置。|  
-|`StorageMode`|指定 Cube 的儲存模式。 值為`MOLAP`， `ROLAP`，或 `HOLAP``.`|  
+|`StorageMode`|指定 Cube 的儲存模式。 值為`MOLAP`、 `ROLAP`或。`HOLAP``.`|  
 |`Visible`|決定 Cube 的可見性。|  
   
 > [!NOTE]  
->  如需有關如何設定 ErrorConfiguration 屬性的值，當使用 null 值和其他資料完整性議題的詳細資訊，請[Analysis Services 2005 中處理資料完整性問題](https://go.microsoft.com/fwlink/?LinkId=81891)。  
+>  如需在使用 null 值和其他資料完整性問題時設定 ErrorConfiguration 屬性值的詳細資訊，請參閱[處理 Analysis Services 2005 中的資料完整性問題](https://go.microsoft.com/fwlink/?LinkId=81891)。  
   
 ## <a name="see-also"></a>另請參閱  
- [主動式快取&#40;資料分割&#41;](partitions-proactive-caching.md)  
+ [主動式快取 &#40;分割區&#41;](partitions-proactive-caching.md)  
   
   

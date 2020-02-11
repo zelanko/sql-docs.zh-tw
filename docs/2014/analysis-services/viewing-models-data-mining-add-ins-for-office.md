@@ -1,5 +1,5 @@
 ---
-title: 檢視模型 （資料採礦適用於 Office 的增益集） |Microsoft Docs
+title: 查看模型（適用于 Office 的資料採礦增益集） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9fbd8b24b490123c337c9f7510899da12bcae749
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065533"
 ---
 # <a name="viewing-models-data-mining-add-ins-for-office"></a>檢視模型 (適用於 Office 的資料採礦增益集)
@@ -27,17 +27,17 @@ ms.locfileid: "66065533"
   
 -   在 Excel 中使用每個精靈所產生的圖表。  
   
-     [瀏覽模型，在 Excel 中的&#40;SQL Server 資料採礦增益集&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+     [在 Excel 中流覽模型 &#40;SQL Server 資料採礦增益集&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
 -   使用 Visio 資料採礦圖形來建立互動式簡報。  
   
-     [在 Visio 中檢視資料採礦模型&#40;資料採礦增益集&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
+     [在 Visio 中查看資料採礦模型 &#40;資料採礦增益集&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
--   使用**文件模型**精靈產生的模型的中繼資料和模型的內容摘要。  
+-   使用 [**檔模型**] wizard 來產生模型中繼資料和模型內容的摘要。  
   
-     [記錄採礦模型&#40;資料採礦適用於 Excel 的增益集&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
+     [記載 &#40;適用于 Excel 的資料採礦增益集&#41;的採礦模型](documenting-mining-models-data-mining-add-ins-for-excel.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [查詢&#40;SQL Server 資料採礦增益集&#41;](query-sql-server-data-mining-add-ins.md)  
+ [查詢 &#40;SQL Server 資料採礦增益集&#41;](query-sql-server-data-mining-add-ins.md)  
   
   

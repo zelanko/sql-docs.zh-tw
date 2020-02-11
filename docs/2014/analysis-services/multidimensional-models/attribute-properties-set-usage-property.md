@@ -14,26 +14,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: def616b09e6d5378257c3e5c377f2724c9d09676
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077170"
 ---
 # <a name="set-usage-property"></a>設定 Usage 屬性
-  您可以在維度設計師中使用 [維度結構]  檢視來設定屬性的使用方式，您可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 存取此設計師工具。  
+  您可以在維度設計師中使用 [維度結構]**** 檢視來設定屬性的使用方式，您可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 存取此設計師工具。  
   
- 當您設定屬性的使用方式，要等到您處理維度之後，所做的變更才會生效。 如需詳細資訊，請參閱 <<c0> [ 多維度模型物件處理](processing-a-multidimensional-model-analysis-services.md)。  
+ 當您設定屬性的使用方式，要等到您處理維度之後，所做的變更才會生效。 如需詳細資訊，請參閱多[維度模型物件處理](processing-a-multidimensional-model-analysis-services.md)。  
   
 ### <a name="to-set-usage-for-an-attribute"></a>若要設定屬性的使用方式  
   
-1.  在方案總管中，以滑鼠右鍵按一下維度，然後按一下 [開啟]  。  
+1.  在方案總管中，以滑鼠右鍵按一下維度，然後按一下 [開啟]****。  
   
-     依預設，[維度結構]  檢視就會開啟。  
+     依預設，[維度結構]**** 檢視就會開啟。  
   
-2.  在 [屬性]  中，以滑鼠右鍵按一下您要設定使用方式的屬性，指向 [設定屬性使用方式]  ，然後按下列其中一個選項：  
+2.  在 [屬性]**** 中，以滑鼠右鍵按一下您要設定使用方式的屬性，指向 [設定屬性使用方式]****，然後按下列其中一個選項：  
   
-    -   **一般**  
+    -   **常用**  
   
     -   **索引鍵**  
   

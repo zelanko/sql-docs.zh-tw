@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b30322bb48cfff6e0bca092d72aa9d5ad0990948
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875067"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>將檔案還原到新位置 (SQL Server)
@@ -33,7 +33,7 @@ ms.locfileid: "62875067"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目將檔案還原到新位置：**  
   
@@ -49,11 +49,11 @@ ms.locfileid: "62875067"
   
 -   在明確或隱含的交易中，不允許使用 RESTORE。  
   
--   在完整或大量記錄復原模式下，您必須先備份使用中的交易記錄 (也稱為記錄的結尾)，才能還原檔案。 如需詳細資訊，請參閱 [備份交易記錄 &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)中還原檔案與檔案群組。  
+-   在完整或大量記錄復原模式下，您必須先備份使用中的交易記錄 (也稱為記錄的結尾)，才能還原檔案。 如需詳細資訊，請參閱 [備份交易記錄 &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)資料庫還原至新位置，並選擇性地重新命名資料庫。  
   
 -   若要還原加密的資料庫，您必須能夠存取之前用來加密資料庫的憑證或非對稱金鑰。 如果沒有該憑證或非對稱金鑰，就無法還原資料庫。 因此，只要需要備份，就必須保留用來加密資料庫加密金鑰的憑證。 如需詳細資訊，請參閱 [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在，RESTORE 權限預設為 **系統管理員 (sysadmin)** 和 **資料庫建立者 (dbcreator)** 固定伺服器角色的成員以及資料庫的擁有者 (**dbo**) (對 FROM DATABASE_SNAPSHOT 選項而言，資料庫一律存在)。  
@@ -88,15 +88,15 @@ ms.locfileid: "62875067"
     |-----------------|------------|  
     |**Restore**|選取的核取方塊會指出要還原的備份組。|  
     |**名稱**|備份組的名稱。|  
-    |**檔案類型**|指定備份中的資料類型：**資料**，**記錄檔**，或**Filestream 資料**。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料]  檔案中。|  
-    |**型別**|執行的備份類型：[完整]  、[差異]  或 [交易記錄]  。|  
+    |**檔案類型**|指定備份中的資料類型： **[資料]** 、 **[記錄檔]** 或 **[檔案資料流資料]** 。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料]  檔案中。|  
+    |**型別**|執行的備份類型： **[完整]** 、 **[差異]** 或 **[交易記錄]** 。|  
     |**Server**|執行備份作業的 Database Engine 執行個體名稱。|  
     |**檔案邏輯名稱**|檔案的邏輯名稱。|  
-    |**[資料庫備份]**|備份作業中所含的資料庫名稱。|  
+    |**Database**|備份作業中所含的資料庫名稱。|  
     |**開始日期**|備份作業開始時的日期和時間，會出現在用戶端的地區設定中。|  
     |**完成日期**|備份作業完成時的日期和時間，會出現在用戶端的地區設定中。|  
     |**大小**|備份組的大小 (以位元組為單位)。|  
-    |**使用者名稱**|執行備份作業的使用者名稱。|  
+    |**使用者名稱**|{1}執行備份作業的使用者名稱。{2}|  
   
 6.  在 **[選取頁面]** 窗格中，按一下 **[選項]** 頁面。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "62875067"
     |資料行標頭|值|  
     |-----------------|------------|  
     |**原始檔案名稱**|來源備份檔案的完整路徑。|  
-    |**檔案類型**|指定備份中的資料類型：**資料**，**記錄檔**，或**Filestream 資料**。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料]  檔案中。|  
+    |**檔案類型**|指定備份中的資料類型： **[資料]** 、 **[記錄檔]** 或 **[檔案資料流資料]** 。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料]  檔案中。|  
     |**還原成**|還原資料庫檔案的完整路徑。 若要指定新的還原檔案，請按一下文字方塊並編輯建議的路徑與檔案名稱。 變更 **[還原成]** 資料行中的路徑或檔案名稱相當於使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 陳述式中的 MOVE 選項。|  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
@@ -165,7 +165,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [還原資料庫備份&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
+ [還原資料庫備份 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [使用備份與還原複製資料庫](../databases/copy-databases-with-backup-and-restore.md)   
  [還原檔案和檔案群組 &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  

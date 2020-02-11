@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873099"
 ---
 # <a name="data-tier-applications"></a>資料層應用程式
@@ -98,7 +98,7 @@ ms.locfileid: "62873099"
 ## <a name="backup-package-bacpac"></a>備份封裝 (.bacpac)  
  BACPAC 是封裝資料庫結構描述和資料庫中所儲存之資料的成品。 BACPAC 是副檔名為 .bacpac 的 Windows 檔案。 類似於 DACPAC，BACPAC 檔案格式是開放式；BACPAC 的結構描述內容與 DACPAC 的結構描述內容相同。 資料是以 JSON 格式儲存。  
   
- DACPAC 和 BACPAC 相似，但它們以不同的案例為目標。 DACPAC 專注於擷取及部署架結構描述，包括升級現有資料庫。 主要使用案例 DACPAC 是將嚴格定義的結構描述部署至開發、 測試，生產環境中，然後反向： 擷取實際執行的結構描述，並將它套用到上一步 測試和開發環境。  
+ DACPAC 和 BACPAC 相似，但它們以不同的案例為目標。 DACPAC 專注於擷取及部署架結構描述，包括升級現有資料庫。 DACPAC 的主要使用案例是將嚴格定義的架構部署至開發、測試和生產環境，以及反向：捕捉生產的架構，並將它套用至測試和開發環境。  
   
  另一方面，BACPAC 專注於擷取結構描述和資料。 BACPAC 是資料庫備份的邏輯對等項目，並不能用來升級現有資料庫。 BACPAC 的主要使用案例是將資料庫從某個伺服器移至另個伺服器 (或從本機伺服器移至雲端)，以及以開放式格式封存現有資料庫。  
   
@@ -108,9 +108,9 @@ ms.locfileid: "62873099"
   
 -   **IMPORT** - 使用者可以將結構描述和資料匯入主機伺服器中的新資料庫。  
   
- 下列資料庫管理工具支援這兩個功能：Server Management Studio、 SQL Azure 管理入口網站和 DACFx API。  
+ 這些功能都受到資料庫管理工具支援：Server Management Studio、SQL Azure 管理入口網站和 DACFx API。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  您必須是 `dbmanager` 角色的成員或被指派 `CREATE DATABASE` 權限，才能建立資料庫，包括部署 DAC 封裝來建立資料庫。 您必須是 `dbmanager` 角色的成員或被指派 `DROP DATABASE` 權限，才能卸除資料庫。  
   
 ## <a name="data-tier-application-tasks"></a>資料層應用程式工作  
@@ -125,8 +125,8 @@ ms.locfileid: "62873099"
 |描述如何使用 DAC 封存檔案 (.bacpac) 執行 DAC 的邏輯還原，或將 DAC 移轉至另一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的執行個體。|[匯入 BACPAC 檔案以建立新的使用者資料庫](import-a-bacpac-file-to-create-a-new-user-database.md)|  
 |描述如何匯入 BACPAC 檔案，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內建立新的使用者資料庫。|[從資料庫中擷取 DAC](extract-a-dac-from-a-database.md)|  
 |描述如何將現有的資料庫升級為 DAC 執行個體。 DAC 定義會建立並儲存在系統資料庫中。|[將資料庫註冊為 DAC](register-a-database-as-a-dac.md)|  
-|描述如何先檢閱 DAC 封裝的內容以及 DAC 升級要執行的動作，再於實際執行系統中使用該封裝。|[驗證 DAC 套件](validate-a-dac-package.md)|  
-|描述如何先將 DAC 封裝的內容放入資料庫管理員可以檢閱 DAC 作用的資料夾，再將它部署至實際伺服器。|[解除封裝 DAC 套件](unpack-a-dac-package.md)|  
+|描述如何先檢閱 DAC 封裝的內容以及 DAC 升級要執行的動作，再於實際執行系統中使用該封裝。|[驗證 DAC 封裝](validate-a-dac-package.md)|  
+|描述如何先將 DAC 封裝的內容放入資料庫管理員可以檢閱 DAC 作用的資料夾，再將它部署至實際伺服器。|[解除封裝 DAC 封裝](unpack-a-dac-package.md)|  
 |描述如何使用精靈來部署現有的資料庫。 精靈會使用 DAC 來執行這種部署。|[使用 DAC 部署資料庫](deploy-a-database-by-using-a-dac.md)|  
   
 ## <a name="see-also"></a>另請參閱  

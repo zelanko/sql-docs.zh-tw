@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c59f74a3e0584ec70eea4832936d7dc08cc74087
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868957"
 ---
-# <a name="mssqlserver21898"></a>MSSQLSERVER_21898
+# <a name="mssqlserver_21898"></a>MSSQLSERVER_21898
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|21898|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -33,7 +33,7 @@ ms.locfileid: "62868957"
 |訊息文字|發行者 '%s' 使用散發資料庫 '%s' 而不是 '%s'，但若要主控發行資料庫 '%s' 必須使用後者。 請在散發者 '%s' 上執行 `sp_changedistpublisher` 以便將發行者所使用的散發資料庫變更為 '%s'。|  
   
 ## <a name="explanation"></a>說明  
- `sp_validate_redirected_publisher` 確認新發行者所使用的散發資料庫是原始發行者所使用的散發資料庫相同的本機散發者端的查詢 msdb.dbo.MSdistpublishers。 當這些資料庫不同時，就會傳回此錯誤，讓發行者不適合當做發行者資料庫的主機。  
+ `sp_validate_redirected_publisher` 會查詢位於本機散發者的 msdb.dbo.MSdistpublishers，以便確認新發行者所使用的散發資料庫是否與原始發行者所使用的散發資料庫相同。 當這些資料庫不同時，就會傳回此錯誤，讓發行者不適合當做發行者資料庫的主機。  
   
 ## <a name="user-action"></a>使用者動作  
  請執行 `sp_changedistpublisher` 預存程序，將新發行者的散發資料庫變更為原始發行者所使用的散發資料庫。  

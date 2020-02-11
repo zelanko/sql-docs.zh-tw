@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52781de1cd4b6309f3ebeb9a2c59ae85b0b32dbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754590"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>暫停或繼續資料庫鏡像工作階段 (SQL Server)
@@ -30,15 +30,15 @@ ms.locfileid: "62754590"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **使用下列方法來執行 ReplaceThisText：**  
+-   **若要 ReplaceThisText，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：** [暫停或繼續資料庫鏡像之後](#FollowUp)  
+-   **後續操作：**  [暫停或繼續資料庫鏡像之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  您可以在任何時候暫停資料庫鏡像工作階段，此工作階段可能會在發生瓶頸時提高效能，而且您可以隨時繼續暫停的工作階段。  
@@ -46,7 +46,7 @@ ms.locfileid: "62754590"
 > [!CAUTION]  
 >  在強制服務之後，當原始主體伺服器重新連接時，便會暫停鏡像。 在這種情況下繼續執行鏡像，很可能會造成原始主體伺服器上的資料遺失。 如需管理潛在資料遺失的資訊，請參閱[資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
@@ -62,13 +62,13 @@ ms.locfileid: "62754590"
   
 3.  以滑鼠右鍵按一下資料庫，選取 [工作]  ，然後按一下 [鏡像]  。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
   
-4.  若要暫停工作階段，請按一下 **[暫停]** 。  
+4.  若要暫停工作階段，請按一下 **[暫停]**。  
   
-     會出現提示字元要求確認；如果您按一下 **[是]** ，工作階段將暫停，然後按鈕將變更為 **[繼續]** 。  
+     會出現提示字元要求確認；如果您按一下 **[是]**，工作階段將暫停，然後按鈕將變更為 **[繼續]**。  
   
      如需暫停工作階段之影響的詳細資訊，請參閱[暫停與繼續資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)。  
   
-5.  若要繼續工作階段，請按一下 **[繼續]** 。  
+5.  若要繼續工作階段，請按一下 **[繼續]**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62754590"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a> 後續操作：暫停或繼續資料庫鏡像之後  
+##  <a name="FollowUp"></a>後續操作：暫停或繼續資料庫鏡像之後  
   
 -   **暫停資料庫鏡像之後**  
   

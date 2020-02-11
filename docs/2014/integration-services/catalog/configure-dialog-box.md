@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9361e08722ae832c9e671cd8b83caa51bddaf4f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836106"
 ---
 # <a name="configure-dialog-box"></a>設定對話方塊
@@ -59,7 +59,7 @@ ms.locfileid: "62836106"
  **名稱**  
  列出參數名稱。  
   
- **Value**  
+ **ReplTest1**  
  列出參數值。 按一下省略符號按鈕，在 **[設定參數值]** 對話方塊中變更此值。  
   
  以下是 **[連接管理員]** 索引標籤中的選項清單。使用此索引標籤可變更連接管理員屬性的值。 SSIS 伺服器上會自動產生屬性的參數。  
@@ -73,7 +73,7 @@ ms.locfileid: "62836106"
  **屬性名稱**  
  列出連接管理員屬性的名稱。  
   
- **值**  
+ **ReplTest1**  
  列出指派給連接管理員屬性的值。 按一下省略符號按鈕，在 **[設定參數值]** 對話方塊中變更此值。 您可以輸入常值、對應包含您要使用之值的環境變數，或使用封裝中的預設值。  
   
 ##  <a name="references"></a> 在參考頁面上設定選項  
@@ -90,7 +90,7 @@ ms.locfileid: "62836106"
  **開啟**  
  按一下以開啟 [環境屬性]  對話方塊。  
   
- **[加入]**  
+ **加入**  
  按一下以加入環境的參考。 在 **[瀏覽環境]** 對話方塊中，按一下環境，然後按一下 **[確定]** 。  
   
  您可以選取 **[SSISDB]** 節點底下的任何專案資料夾中所包含的環境。  

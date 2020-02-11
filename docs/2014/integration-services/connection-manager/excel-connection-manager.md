@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 432d48bbe848d6f66e9f3dae5365abe10d8deb62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833838"
 ---
 # <a name="excel-connection-manager"></a>Excel 連接管理員
-  Excel 連接管理員可讓封裝連接到現有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 活頁簿檔案。 Excel 來源和 Excel 目的地所[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包括使用 Excel 連接管理員。  
+  Excel 連接管理員可讓封裝連接到現有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 活頁簿檔案。 包含的 excel 來源和 excel 目的地[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 excel 連線管理員。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
  當您將 Excel 連接管理員加入封裝時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立一個連接管理員 (該連接管理員在執行階段會被解析為 Excel 連接)、設定連接管理員屬性，並將該連接管理員加入封裝上的 `Connections` 集合。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62833838"
   
  如果 Excel 來源使用 Excel 連接管理員，擷取的資料中便會包含資料行名稱。 如果 Excel 目的地使用 Excel 連接管理員，資料行名稱便會包含在寫入的資料中。  
   
- Excel 連接管理員會使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 及其支援的 Excel ISAM (Indexed Sequential Access Method，索引循序存取方法) 驅動程式，連接和讀寫資料至 Excel 資料來源。 此提供者和驅動程式搭配 Excel 來源和 Excel 目的地使用時的行為相關資訊，請參閱[Excel 來源](../data-flow/excel-source.md)並[Excel 目的地](../data-flow/excel-destination.md)。  
+ Excel 連接管理員會使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 及其支援的 Excel ISAM (Indexed Sequential Access Method，索引循序存取方法) 驅動程式，連接和讀寫資料至 Excel 資料來源。 如需此提供者和驅動程式與 Excel 來源和 Excel 目的地搭配使用時之行為的詳細資訊，請參閱[Excel 來源](../data-flow/excel-source.md)和[excel 目的地](../data-flow/excel-destination.md)。  
   
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62833838"
   
 ## <a name="related-tasks"></a>相關工作  
   
--   [使用 Foreach 迴圈容器來執行 Excel 檔案和資料表迴圈](../control-flow/foreach-loop-container.md)  
+-   [使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表](../control-flow/foreach-loop-container.md)  
   
 -   [使用 SQL Server Integration Services (SSIS) 從 Excel 匯入資料，或將資料匯出至 Excel](../load-data-to-from-excel-with-ssis.md)
   

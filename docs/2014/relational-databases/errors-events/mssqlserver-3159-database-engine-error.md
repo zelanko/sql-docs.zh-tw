@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0373952a28a901519d1d40e92750af3da72f94e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868879"
 ---
-# <a name="mssqlserver3159"></a>MSSQLSERVER_3159
+# <a name="mssqlserver_3159"></a>MSSQLSERVER_3159
     
 ## <a name="details"></a>詳細資料  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62868879"
   
 ## <a name="see-also"></a>另請參閱  
  [將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
- [備份資料庫損毀時的交易記錄檔&#40;SQL Server&#41;](../backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)   
+ [當資料庫損毀 &#40;SQL Server 時，備份交易記錄&#41;](../backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)   
  [備份交易記錄 &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)   
  [結尾記錄備份 &#40;SQL Server&#41;](../backup-restore/tail-log-backups-sql-server.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 資料採礦演算法 （SQL Server 資料採礦增益集） |Microsoft Docs
+title: 資料採礦演算法（SQL Server 資料採礦增益集） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e0bf6c0c1126dff29107636e0956d92d4b314a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086505"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>資料採礦演算法 (SQL Server 資料採礦增益集)
@@ -46,19 +46,19 @@ ms.locfileid: "66086505"
 |Microsoft 類神經網路演算法|尋找多項輸入甚至多項輸出之間隱藏的關聯性。 用於進行探索或預測。<br /><br /> [https://msdn.microsoft.com/library/ms174941.aspx](https://msdn.microsoft.com/library/ms174941.aspx)|  
 |Microsoft 時間序列演算法|使用歷程記錄資料預測未來值。<br /><br /> [https://msdn.microsoft.com/library/ms174923.aspx](https://msdn.microsoft.com/library/ms174923.aspx)|  
   
-## <a name="advanced-options"></a>[進階選項]  
+## <a name="advanced-options"></a>進階選項  
  當您使用適用於 Excel 的資料採礦用戶端時，您可以選擇建立自己的資料採礦結構和模型或是微調演算法的參數。  
   
- [演算法參數&#40;SQL Server 資料採礦增益集&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
+ [SQL Server 資料採礦增益集 &#40;的演算法參數&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
   
  使用這些進階選項自訂模型的方式有兩種：  
   
 -   使用 **[資料採礦查詢]** 精靈建立模型。  
   
--   在 **[資料採礦用戶端]** 中啟動精靈之後，按一下 **[參數]** 。  
+-   在 **[資料採礦用戶端]** 中啟動精靈之後，按一下 **[參數]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [查詢&#40;SQL Server 資料採礦增益集&#41;](query-sql-server-data-mining-add-ins.md)   
- [進階模型化&#40;資料採礦適用於 Excel 的增益集&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
+ [查詢 &#40;SQL Server 資料採礦增益集&#41;](query-sql-server-data-mining-add-ins.md)   
+ [適用于 Excel&#41;的先進模型化 &#40;資料採礦增益集](advanced-modeling-data-mining-add-ins-for-excel.md)  
   
   

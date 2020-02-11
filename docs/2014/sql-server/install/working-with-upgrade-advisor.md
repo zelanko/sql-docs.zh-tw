@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b80e11ffdf12037b466531b0d5b10a2b9f3a2e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66090960"
 ---
 # <a name="working-with-upgrade-advisor"></a>使用 Upgrade Advisor
@@ -33,7 +33,7 @@ ms.locfileid: "66090960"
   
 -   檢視分析的結果。  
   
- Upgrade Advisor 含有一個分析器和一個檢視器。 Upgrade Advisor 分析精靈會分析您所選取的元件。 然後，分析器會針對您必須處理才能升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的問題產生相關的自訂報表。 您可以使用 Upgrade Advisor 報表檢視器來檢視這些自訂報表。 如需有關哪些 Upgrade Advisor 分析所偵測的詳細資訊，請參閱[解決升級問題](../../../2014/sql-server/install/resolving-upgrade-issues.md)。  
+ Upgrade Advisor 含有一個分析器和一個檢視器。 Upgrade Advisor 分析精靈會分析您所選取的元件。 然後，分析器會針對您必須處理才能升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的問題產生相關的自訂報表。 您可以使用 Upgrade Advisor 報表檢視器來檢視這些自訂報表。 如需 Upgrade Advisor 分析所偵測到的詳細資訊，請參閱[解決升級問題](../../../2014/sql-server/install/resolving-upgrade-issues.md)。  
   
  本節中的主題提供 Upgrade Advisor 功能的概觀，以及有關如何使用 Upgrade Advisor 和 Upgrade Advisor 報表的資訊。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "66090960"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[升級建議程式概觀](../../../2014/sql-server/install/overview-of-upgrade-advisor.md)|提供升級程序、Upgrade Advisor 分析精靈和 Upgrade Advisor 報表檢視器的概觀。|  
-|[升級建議程式使用說明主題](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|提供執行常見 Upgrade Advisor 程序的指示。|  
-|[Upgrade Advisor 使用者介面參考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)|包含的主題會顯示如果您按下 F1 鍵，或按一下**協助**Upgrade Advisor 分析精靈頁面上。|  
+|[Upgrade Advisor 的概觀](../../../2014/sql-server/install/overview-of-upgrade-advisor.md)|提供升級程序、Upgrade Advisor 分析精靈和 Upgrade Advisor 報表檢視器的概觀。|  
+|[Upgrade Advisor 使用說明主題](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|提供執行常見 Upgrade Advisor 程序的指示。|  
+|[Upgrade Advisor 使用者介面參考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)|包含當您按下 F1 鍵或在 Upgrade Advisor 分析 Wizard**頁面上按一下**[說明] 時所顯示的主題。|  
   
 ## <a name="see-also"></a>另請參閱  
  [安裝 Upgrade Advisor](../../../2014/sql-server/install/installing-upgrade-advisor.md)   

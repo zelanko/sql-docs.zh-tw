@@ -21,21 +21,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a15edc663d5f855a5aa217400e1c38376e292f4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894589"
 ---
 # <a name="using-variables-in-the-script-task"></a>在指令碼工作中使用變數
   變數讓指令碼工作可以和封裝中的其他物件交換資料。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services-ssis-variables.md)。  
   
- 指令碼工作使用 `Dts` 物件的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 屬性，讀取和寫入封裝中的 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 物件。  
+ 指令碼工作使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 物件的 `Dts` 屬性，讀取和寫入封裝中的 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 物件。  
   
 > [!NOTE]  
->  <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 類別的 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 屬性其類別為 `Object`。 因為指令碼工作已啟用 `Option Strict`，所以您必須在使用它之前將 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 屬性轉換為適當的類型。  
+>  
+  <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 類別的 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 屬性其類別為 `Object`。 因為指令碼工作已啟用 `Option Strict`，所以您必須在使用它之前將 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 屬性轉換為適當的類型。  
   
- 您將現有的變數新增至 [指令碼工作編輯器]  的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A> 與 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> 清單中，讓它們可供自訂指令碼使用。 請記住變數名稱有區分大小寫。 在指令碼中，您可以透過 `Dts` 物件的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 屬性存取兩種類型的變數。 使用 `Value` 屬性讀取和寫入個別變數。 指令碼工作會以透明的方式管理鎖定，因為指令碼會讀取和修改變數值。  
+ 您將現有的變數新增至 [指令碼工作編輯器]<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A><xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> 的 **與** 清單中，讓它們可供自訂指令碼使用。 請記住變數名稱有區分大小寫。 在指令碼中，您可以透過 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 物件的 `Dts` 屬性存取兩種類型的變數。 使用 `Value` 屬性讀取和寫入個別變數。 指令碼工作會以透明的方式管理鎖定，因為指令碼會讀取和修改變數值。  
   
  您可以在程式碼中使用變數之前，先透過 <xref:Microsoft.SqlServer.Dts.Runtime.Variables.Contains%2A> 屬性傳回的 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 集合之 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 方法，檢查變數是否存在。  
   
@@ -46,10 +47,10 @@ ms.locfileid: "62894589"
   
  變數使得在 Foreach 迴圈容器與指令碼工作之間的此通訊變得可能。 在 [Foreach 迴圈編輯器]  的 [變數對應]  頁面上，將變數指派給單一列舉項目所傳回的每個資料項目。 例如，Foreach 檔案列舉值只會傳回在索引 0 的檔案名稱，因此只需要一個變數對應，然而傳回每個資料列中數個資料行的列舉值，需要您將不同的變數對應到在指令碼工作中要使用的每個資料行。  
   
- 列舉的項目對應到變數之後，您必須新增至對應的變數`ReadOnlyVariables`上的屬性**指令碼**頁面**指令碼工作編輯器**將它們提供給您指令碼。 如需處理資料夾中影像檔之 Foreach 迴圈容器中指令碼工作的範例，請參閱[以指令碼工作處理影像](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)。  
+ 將列舉專案對應到變數之後，您必須在 [**腳本工作編輯器**] 的 [ `ReadOnlyVariables` **腳本**] 頁面上，將對應變數加入至屬性，才能讓腳本使用它們。 如需處理資料夾中影像檔之 Foreach 迴圈容器中指令碼工作的範例，請參閱[以指令碼工作處理影像](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)。  
   
 ## <a name="variables-example"></a>變數範例  
- 下列範例示範如何存取和使用指令碼工作中的變數，以決定封裝工作流程的路徑。 此範例假設您已建立名為整數變數`CustomerCount`並`MaxRecordCount`並將它們新增至`ReadOnlyVariables`中的集合**指令碼工作編輯器**。 `CustomerCount` 變數包含要匯入的客戶記錄數目。 如果其值大於 `MaxRecordCount` 的值，指令碼工作會報告失敗。 當因為已超過 `MaxRecordCount` 臨界值而發生失敗時，工作流程的錯誤路徑可以實作任何所需的清除。  
+ 下列範例示範如何存取和使用指令碼工作中的變數，以決定封裝工作流程的路徑。 此範例假設您已建立名`CustomerCount`為和`MaxRecordCount`的整數變數，並將它們`ReadOnlyVariables`加入至 [**腳本工作編輯器**] 中的集合。 `CustomerCount` 變數包含要匯入的客戶記錄數目。 如果其值大於 `MaxRecordCount` 的值，指令碼工作會報告失敗。 當因為已超過 `MaxRecordCount` 臨界值而發生失敗時，工作流程的錯誤路徑可以實作任何所需的清除。  
   
  若要成功地編譯範例，您需要加入 Microsoft.SqlServer.ScriptTask 組件的參考。  
   
@@ -114,10 +115,10 @@ public class ScriptMain
   
 ```  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 變數](../../integration-services-ssis-variables.md)   
- [在封裝中使用變數](../../use-variables-in-packages.md)  
+ [在套件中使用變數](../../use-variables-in-packages.md)  
   
   

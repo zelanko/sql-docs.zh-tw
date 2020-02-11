@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 10ad92286011f6f81fbaff5ab4908007e16bdd45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870948"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>檢視或變更資料庫的屬性
@@ -31,7 +31,7 @@ ms.locfileid: "62870948"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法檢視或變更資料庫的屬性：**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62870948"
   
 -   當 AUTO_CLOSE 是 ON 時， [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 目錄檢視中的某些資料行及 DATABASEPROPERTYEX 函數會傳回 NULL，因為資料庫無法擷取資料。 若要解決這個問題，請執行 USE 陳述式來開啟資料庫。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
@@ -54,9 +54,9 @@ ms.locfileid: "62870948"
   
 #### <a name="to-view-or-change-the-properties-of-a-database"></a>檢視或變更資料庫的屬性  
   
-1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
+1.  在**物件總管**中，連接到的實例[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，然後展開該實例。  
   
-2.  展開 [資料庫]  ，並以滑鼠右鍵按一下要檢視的資料庫，然後按一下 [屬性]  。  
+2.  展開 [資料庫]****，並以滑鼠右鍵按一下要檢視的資料庫，然後按一下 [屬性]****。  
   
 3.  在 **[資料庫屬性]** 對話方塊中，選取一個頁面以檢視對應的資訊。 例如，選取 **[檔案]** 頁面以檢視資料和記錄檔資訊。  
   
@@ -103,16 +103,16 @@ GO
   
 3.  將下列範例複製並貼入查詢視窗中。 此範例判斷 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫上快照集隔離的狀態、變更屬性狀態，然後驗證變更。  
   
-     若要判斷快照集隔離的狀態，請選取第一個 `SELECT` 陳述式並按一下 **[執行]** 。  
+     若要判斷快照集隔離的狀態，請選取第一個 `SELECT` 陳述式並按一下 **[執行]**。  
   
-     若要變更快照集隔離的狀態，請選取 `ALTER DATABASE` 陳述式並按一下 **[執行]** 。  
+     若要變更快照集隔離的狀態，請選取 `ALTER DATABASE` 陳述式並按一下 **[執行]**。  
   
-     若要驗證變更，請選取第二個 `SELECT` 陳述式並按一下 **[執行]** 。  
+     若要驗證變更，請選取第二個 `SELECT` 陳述式並按一下 **[執行]**。  
   
  [!code-sql[DatabaseDDL#AlterDatabase9](../../snippets/tsql/SQL14/tsql/databaseddl/transact-sql/alterdatabase.sql#alterdatabase9)]  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-hadr)   
  [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
  [ALTER DATABASE 資料庫鏡像 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   

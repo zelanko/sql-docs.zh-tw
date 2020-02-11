@@ -1,5 +1,5 @@
 ---
-title: 選項 (文字編輯器：編輯器索引標籤和狀態列頁面） |Microsoft Docs
+title: 選項（文字編輯器：編輯器索引標籤和狀態列頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089236"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>選項 (文字編輯器：編輯器索引標籤和狀態列頁面)
-  [編輯器索引標籤和狀態列]  頁面可讓您自訂 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 查詢編輯器所顯示的資訊。 您可以指定 [查詢編輯器] 視窗的索引標籤和狀態列中顯示的資訊層級，以及狀態列出現在編輯器視窗頂端或底部。  
+  [編輯器索引標籤和狀態列]**** 頁面可讓您自訂 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 查詢編輯器所顯示的資訊。 您可以指定 [查詢編輯器] 視窗的索引標籤和狀態列中顯示的資訊層級，以及狀態列出現在編輯器視窗頂端或底部。  
   
 ## <a name="option-settings-by-editor"></a>依編輯器的選項設定  
  所有 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 編輯器中都可以使用編輯器索引標籤和狀態列，但有不同的功能等級。  
@@ -37,10 +37,10 @@ ms.locfileid: "66089236"
  **無**  
  狀態列不會顯示任何時間資訊。  
   
- **End**  
+ **成品**  
  狀態列會在指令碼執行時顯示目前當日時間。 當指令碼完成時，則會顯示指令碼完成的當日時間。  
   
- **經過**  
+ **總值**  
  狀態列會顯示指令碼已執行的時間長度。 當指令碼完成時，則會顯示執行指令碼所花費的時間。  
   
  **包含資料庫名稱**  
@@ -58,7 +58,7 @@ ms.locfileid: "66089236"
 ## <a name="status-bar-layout-and-colors"></a>狀態列配置和色彩  
  指定查詢編輯器狀態列中項目的色彩。  
   
- **群組連線**  
+ **群組連接**  
  當查詢編輯器有一個以上的連接時，設定狀態列的色彩。  
   
  **單一伺服器連接**  
@@ -67,10 +67,10 @@ ms.locfileid: "66089236"
  **狀態列位置**  
  指定狀態列的位置。 設定如下：  
   
- **頂端**  
+ **返回頁首**  
  狀態列會出現在 [查詢編輯器] 視窗頂端。  
   
- **底部**  
+ **下**  
  狀態列會出現在 [查詢編輯器] 視窗的底部。  
   
 ## <a name="tab-text"></a>索引標籤文字  
@@ -82,7 +82,7 @@ ms.locfileid: "66089236"
  **包含檔案名稱**  
  包含儲存指令碼的檔案名稱。  
   
- **包含資料夾名稱**  
+ **包括資料夾名稱**  
  包含儲存指令碼檔的資料夾路徑。  
   
  **包含登入名稱**  
@@ -92,7 +92,7 @@ ms.locfileid: "66089236"
  包含伺服器名稱。 如果是本機連接，這是執行個體名稱。 如果是遠端連接，這是遠端電腦名稱與執行個體名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [選項&#40;環境：字型和色彩頁面&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
+ [選項 &#40;環境：字型和色彩頁面&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
  [查詢編輯器中的色彩編碼](../relational-databases/scripting/color-coding-in-query-editors.md)  
   
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856508"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>檢視預存程序的定義
@@ -28,11 +28,11 @@ ms.locfileid: "62856508"
   
 -   **開始之前：** [安全性](#Security)  
   
--   **若要檢視的程序中，定義使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **若要檢視程序中的定義，使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  系統預存程序：`sp_helptext`  
@@ -58,9 +58,9 @@ ms.locfileid: "62856508"
   
 2.  依序展開 **[資料庫]** 、程序所屬的資料庫，以及 **[可程式性]** 。  
   
-3.  依序展開**預存程序**，以滑鼠右鍵按一下程序，然後按一下**指令碼預存程序為**，然後按一下下列其中之一：**若要建立**，**變更為**，或**卸除並建立至**。  
+3.  展開 [預存程序]  ，以滑鼠右鍵按一下程序，然後按一下 [產生預存程序的指令碼為]  ，然後按一下下列其中一個項目：[建立為]  、[變更為]  或 [DROP 並 CREATE 至]  。  
   
-4.  選取 **[新增查詢編輯器視窗]** 。 這會顯示程序定義。  
+4.  選取 [新增查詢編輯器視窗]  。 這會顯示程序定義。  
   
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **在查詢編輯器中檢視程序的定義**  

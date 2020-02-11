@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1bedefd277f1be7f44d807e6539097dd24f5ab2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900908"
 ---
 # <a name="raw-file-source"></a>原始檔案來源
@@ -54,7 +54,7 @@ ms.locfileid: "62900908"
 -   sqlservercentral.com 上的部落格文章： [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)(原始檔案太酷了)  
   
 ## <a name="see-also"></a>另請參閱  
- [Raw File Destination](raw-file-destination.md)   
+ [原始檔案目的地](raw-file-destination.md)   
  [資料流程](data-flow.md)  
   
   

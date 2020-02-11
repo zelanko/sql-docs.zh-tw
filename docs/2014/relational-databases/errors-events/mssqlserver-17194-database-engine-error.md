@@ -15,24 +15,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d5425431d465c9bddba23c959aab41cefbfcdd89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915327"
 ---
-# <a name="mssqlserver17194"></a>MSSQLSERVER_17194
+# <a name="mssqlserver_17194"></a>MSSQLSERVER_17194
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|17194|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱||  
-|訊息文字|伺服器無法載入登入所需的 SSL 提供者程式庫，此連接已經關閉。 SSL 可用來加密登入順序或所有通訊，視管理員對伺服器所做的設定而定。 如需有關此錯誤訊息資訊，請參閱線上叢書 》:0xXXXX. [用戶端：11.11.11.11]|  
+|訊息文字|伺服器無法載入登入所需的 SSL 提供者程式庫，此連接已經關閉。 SSL 可用來加密登入順序或所有通訊，視管理員對伺服器所做的設定而定。 請參閱線上叢書，以取得有關此錯誤訊息的資訊：0xXXXX。 [用戶端：11.11.11.11]|  
   
 ## <a name="explanation"></a>說明  
  這個錯誤表示用戶端已經關閉連接。 發生這個錯誤是因為連接逾時期限已到。 錯誤訊息中顯示的值來自作業系統，提供基礎問題的說明。  

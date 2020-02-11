@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9a20d1003e8b87179e2690fa35ad44b50894568
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870577"
 ---
-# <a name="mssqlserver10534"></a>MSSQLSERVER_10534
+# <a name="mssqlserver_10534"></a>MSSQLSERVER_10534
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|10534|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|PG_INVALID_PARAMS|  
-|訊息文字|無法建立計畫指南 ' %。\*ls' 指定的值因為`@params`無效。 請以 *parameter_name parameter_type* 格式指定值，或指定 NULL。|  
+|訊息文字|無法建立計畫指南 '%.\*ls'，因為指定的 `@params` 值無效。 請以 *parameter_name parameter_type* 格式指定值，或指定 NULL。|  
   
 ## <a name="explanation"></a>說明  
  針對 `@params` 指定的值無效。  
@@ -39,8 +39,8 @@ ms.locfileid: "62870577"
  請以 *parameter_name parameter_type* 格式指定值，或指定 NULL。  
   
 ## <a name="see-also"></a>另請參閱  
- [計畫指南](../performance/plan-guides.md)   
- [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [計劃指南](../performance/plan-guides.md)   
+ [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   

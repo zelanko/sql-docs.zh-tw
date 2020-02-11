@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 315d6a4e4bb0d9b28f6f921e0a254fec6e11fdae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900124"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>記錄屬性選項 (緩時變維度精靈)
@@ -24,7 +24,7 @@ ms.locfileid: "62900124"
   
  若要深入了解這個精靈，請參閱＜ [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **使用單一資料行顯示目前與逾期記錄**  
  如果您選擇使用單一資料行來記錄記錄屬性的狀態，則可以使用下列選項：  
   

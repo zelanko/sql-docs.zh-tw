@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9314494230469cca5e8db9926ddf71cb790b96ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080647"
 ---
 # <a name="impersonation-information"></a>模擬資訊
@@ -25,9 +25,9 @@ ms.locfileid: "66080647"
  選取此選項即可讓 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件使用指定之 Windows 使用者帳戶的安全性認證。 指定的認證將用於處理、ROLAP 查詢、非正規繫結、本機 Cube、採礦模型、遠端資料分割、連結物件以及從目標到來源的同步處理。 但如果是資料採礦延伸模組 (DMX) OPENQUERY 陳述式，將忽略這個選項，而且會使用目前使用者的認證。  
   
  **使用者名稱**  
- 輸入選定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件所要使用之使用者帳戶的網域和名稱。 使用下列格式：  
+ 輸入選定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件所要使用之使用者帳戶的網域和名稱。 請使用下列格式：  
   
- *\<網域名稱 >* **\\** *\<使用者帳戶名稱 >*  
+ **\\** * \<功能變數名稱* *>\<使用者帳戶名稱>*  
   
  唯有選取 **[使用特定的使用者名稱和密碼]** 之後，才會啟用此選項。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "66080647"
  **使用目前使用者的認證**  
  選取此選項即可讓 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件使用目前使用者的安全性認證來進行非正規 (out-of-line) 繫結、DMX OPENQUERY、本機 Cube 和採礦模型。 處理、ROLAP 查詢、遠端資料分割、連結物件以及從目標到來源的同步處理不支援此選項。  
   
- **Inherit**  
+ **都會**  
  選取此選項可使用定義於資料庫層級的模擬行為，伺服器管理員已經使用 `DataSourceImpersonation` 資料庫屬性來設定此行為。  
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源](multidimensional-models/data-sources-in-multidimensional-models.md)   
- [支援的資料來源&#40;SSAS 多維度&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [&#40;SSAS 多維度&#41;支援的資料來源](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 採礦模型檢視器工作和使用說明 |Microsoft Docs
+title: 採礦模型檢視器工作和操作說明 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083476"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>採礦模型檢視器工作和使用說明
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的資料採礦設計師包含數個工具，您可以用來瀏覽採礦模型。 下列主題提供逐步指示，教您如何完成在設計師中使用 [採礦模型檢視器]  索引標籤的特定工作。  
+  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的資料採礦設計師包含數個工具，您可以用來瀏覽採礦模型。 下列主題提供逐步指示，教您如何完成在設計師中使用 [採礦模型檢視器]**** 索引標籤的特定工作。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -41,12 +42,12 @@ ms.locfileid: "66083476"
   
 -   [鑽研採礦模型的案例資料](drill-through-to-case-data-from-a-mining-model.md)  
   
--   [檢視時間序列模型的公式 &#40;資料採礦&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [查看時間序列模型的公式 &#40;資料採礦&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
 -   [變更資料採礦檢視器中使用的色彩](change-the-colors-used-in-the-data-mining-viewer.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦基本教學課程](../../tutorials/basic-data-mining-tutorial.md)   
- [採礦模型檢視器 &#40;資料採礦模型設計師&#41;](../mining-model-viewers-data-mining-model-designer.md)  
+ [基本資料採礦教學課程](../../tutorials/basic-data-mining-tutorial.md)   
+ [&#40;資料採礦模型設計工具的採礦模型檢視器&#41;](../mining-model-viewers-data-mining-model-designer.md)  
   
   

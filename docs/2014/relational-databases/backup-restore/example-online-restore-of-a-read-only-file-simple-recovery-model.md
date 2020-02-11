@@ -1,5 +1,5 @@
 ---
-title: 範例線上還原唯讀檔案 （簡單復原模式） |Microsoft Docs
+title: 範例：線上還原唯讀檔案 (簡單復原模式) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ccbb89a7af71545c3b410356b6ab6b101983798d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876148"
 ---
-# <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>範例線上還原讀取/寫入檔案 (簡單復原模式)
+# <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>範例：線上還原唯讀檔案 (簡單復原模式)
   本主題是關於在簡單復原模式下，包含唯讀檔案群組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 在簡單復原模式下，如果有檔案成為唯讀後保留的備份檔案，就可以線上還原唯讀檔案。  
   
  在此範例中，名為 `adb` 的資料庫包含三個檔案群組。 檔案群組 `A` 可讀取/寫入，而檔案群組 `B` 和 `C` 則是唯讀的。 所有的檔案群組一開始都是在線上。 在檔案群組 `B`中，必須還原的是唯讀檔案 `b1`。 資料庫管理員可以使用在檔案成為唯讀後保留的備份進行還原。 檔案群組 `B` 在還原期間會處於離線，但資料庫的其他檔案群組仍會維持線上工作。  
@@ -50,7 +50,7 @@ WITH RECOVERY
   
 -   [範例：僅限於部分檔案群組的分次還原 &#40;完整復原模式&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [範例：線上還原讀取/寫入檔案 &#40;完整復原模式&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [範例：線上還原讀寫檔案 &#40;完整復原模式&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
 -   [範例：線上還原唯讀檔案 &#40;完整復原模式&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   

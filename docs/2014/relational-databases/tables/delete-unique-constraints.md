@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8225039ece914c461af34f5344350227d6a39cdc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761147"
 ---
 # <a name="delete-unique-constraints"></a>刪除唯一的條件約束
@@ -30,7 +30,7 @@ ms.locfileid: "62761147"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來刪除唯一條件約束：**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62761147"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
@@ -65,7 +65,7 @@ ms.locfileid: "62761147"
   
 4.  按一下 **[刪除]** 。  
   
-5.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
+5.  在 [檔案]  功能表上，按一下 [儲存「資料表名稱」  ]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

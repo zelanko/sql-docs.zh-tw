@@ -1,5 +1,5 @@
 ---
-title: SetStrValue 方法 （SqlServiceAdvancedProperty 類別） |Microsoft Docs
+title: SetStrValue 方法（SqlServiceAdvancedProperty 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d8cb4bb7aec53ebc28a91cc36add1ae810b08d44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62911842"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>SetStrValue 方法 (SqlServiceAdvancedProperty 類別)
@@ -40,7 +40,7 @@ StrValue
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
+ *目標*  
  代表進階屬性的 [SqlServiceAdvancedProperty 類別](sqlserviceadvancedproperty-class.md) 物件。  
   
 #### <a name="parameters"></a>參數  

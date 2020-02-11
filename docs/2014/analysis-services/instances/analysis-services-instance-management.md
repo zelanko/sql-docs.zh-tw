@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 執行個體管理 |Microsoft Docs
+title: Analysis Services 實例管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac0c6637dd08dc2ea8927853b7a6bf8dccca454d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080345"
 ---
 # <a name="analysis-services-instance-management"></a>Analysis Services 執行個體管理
   Analysis Services 的執行個體是當做作業系統服務執行之 `msmdsrv.exe` 可執行檔的複本。 每一個執行個體與相同伺服器上的其他執行個體之間完全獨立，而且擁有它自己的組態設定、權限、通訊埠、啟動帳戶、檔案儲存體和伺服器模式屬性。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的每一個執行個體都會在所定義之登入帳戶的安全性內容中，以 Windows 服務 Msmdsrv.exe 執行。  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的每一個執行個體都會在所定義之登入帳戶的安全性內容中，以 Windows 服務 Msmdsrv.exe 執行。  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預設執行個體的服務名稱是 MSSQLServerOLAPService。  
+-   
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預設執行個體的服務名稱是 MSSQLServerOLAPService。  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 之每一個具名執行個體的服務名稱是 MSOLAP$InstanceName。  
+-   
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 之每一個具名執行個體的服務名稱是 MSOLAP$InstanceName。  
   
 > [!NOTE]  
->  如果安裝了多個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，安裝程式就會同時安裝重新導向程式服務，這會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務進行整合。 重新導向程式服務會負責將用戶端導向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的適當具名執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務一律會在本機服務帳戶的安全性內容中執行，本機服務帳戶是 Windows 針對不會存取本機電腦外部資源的服務所使用的受限使用者帳戶。  
+>  如果安裝了多個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，安裝程式就會同時安裝重新導向程式服務，這會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務進行整合。 重新導向程式服務會負責將用戶端導向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的適當具名執行個體。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務一律會在本機服務帳戶的安全性內容中執行，本機服務帳戶是 Windows 針對不會存取本機電腦外部資源的服務所使用的受限使用者帳戶。  
   
  多重執行個體表示您可以在相同硬體上安裝多個伺服器執行個體來進行擴充。 尤其對於 Analysis Services 而言，這也表示您可以在相同伺服器上安裝多個執行個體 (每個執行個體都設定為在特定模式下執行) 來支援不同的伺服器模式。  
   
@@ -40,23 +44,23 @@ ms.locfileid: "66080345"
  通常，您必須執行的大部分管理工作不會因模式而改變。 您身為 Analysis Services 系統管理員，可以使用相同的程序和指令碼來管理網路上的任何 Analysis Services 執行個體，不論其安裝方式為何。  
   
 > [!NOTE]  
->  例外狀況是 PowerPivot for SharePoint。 PowerPivot 部署的伺服器管理一定會在 SharePoint 伺服陣列的內容中進行。 PowerPivot 與其他伺服器模式不同之處在於它永遠都是單一執行個體，而且一定會透過 SharePoint 管理中心或 PowerPivot 組態工具來管理。 雖然可在 SQL Server Management Studio 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中連接到 PowerPivot for SharePoint，但是不需要這樣做。 SharePoint 伺服器陣列包含的基礎結構會同步處理伺服器狀態及監視伺服器可用性。 使用其他工具可能會干擾這些作業。 如需有關 PowerPivot 伺服器管理的詳細資訊，請參閱 < [PowerPivot for SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)。  
+>  例外狀況是 PowerPivot for SharePoint。 PowerPivot 部署的伺服器管理一定會在 SharePoint 伺服陣列的內容中進行。 PowerPivot 與其他伺服器模式不同之處在於它永遠都是單一執行個體，而且一定會透過 SharePoint 管理中心或 PowerPivot 組態工具來管理。 雖然可在 SQL Server Management Studio 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中連接到 PowerPivot for SharePoint，但是不需要這樣做。 SharePoint 伺服器陣列包含的基礎結構會同步處理伺服器狀態及監視伺服器可用性。 使用其他工具可能會干擾這些作業。 如需有關 PowerPivot 服務器管理的詳細資訊，請參閱[PowerPivot for SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
   
 |連結|工作描述|  
 |----------|----------------------|  
-|[後續安裝組態 &#40;Analysis Services&#41;](post-install-configuration-analysis-services.md)|描述完成或修改 Analysis Services 安裝的必要工作和選擇性工作。|  
+|[安裝後設定 &#40;Analysis Services&#41;](post-install-configuration-analysis-services.md)|描述完成或修改 Analysis Services 安裝的必要工作和選擇性工作。|  
 |[連接到 Analysis Services](connect-to-analysis-services.md)|描述建立或清除連接時所用的連接字串屬性、用戶端程式庫、驗證方法和步驟。|  
 |[監視 Analysis Services 執行個體](monitor-an-analysis-services-instance.md)|描述用於監視伺服器執行個體的工具和技術，包括如何使用效能監視器和 SQL Server Profiler。|  
-|[在 Analysis Services 中編寫管理工作的指令碼](../script-administrative-tasks-in-analysis-services.md)|說明如何將許多管理工作 (包括處理) 自動化。|  
+|[在 Analysis Services 中編寫管理工作的腳本](../script-administrative-tasks-in-analysis-services.md)|說明如何將許多管理工作 (包括處理) 自動化。|  
 |[Analysis Services 多維度的全球化案例](../globalization-scenarios-for-analysis-services-multiidimensional.md)|說明語言和定序支援、變更這兩個屬性的步驟，以及設定和測試語言和定序行為的秘訣。|  
 |[Analysis Services 中的記錄作業](log-operations-in-analysis-services.md)|描述記錄檔並說明如何設定它們。|  
   
 ## <a name="see-also"></a>另請參閱  
- [比較表格式和多維度方案 &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md)   
+ [比較 &#40;SSAS&#41;的表格式和多維度方案](../comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [PowerPivot 組態工具](../power-pivot-sharepoint/power-pivot-configuration-tools.md)   
- [管理中心的 PowerPivot 伺服器管理和組態](../power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [判斷 Analysis Services 執行個體的伺服器模式](determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [管理中心的 PowerPivot 服務器管理和設定](../power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
+ [判斷 Analysis Services 實例的伺服器模式](determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

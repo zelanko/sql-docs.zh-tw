@@ -1,5 +1,5 @@
 ---
-title: 第 8 課：定義動作 |Microsoft Docs
+title: 第8課：定義動作 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,33 +11,34 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8293bb8d1f0465d09b296cbd18702b569f073766
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078233"
 ---
 # <a name="lesson-8-defining-actions"></a>第 8 課：定義動作
   在這一課，您將學會定義 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案中的動作。 動作只是一個儲存在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的多維度運算式 (MDX) 陳述式，可以併入用戶端應用程式中，由使用者啟動。  
   
 > [!NOTE]  
->  此教學課程中，所有課程已完成的專案都可在線上取得。 您可以從先前的課程中使用已完成的專案做為起點，向前跳到任何課程。 [按一下這裡](https://go.microsoft.com/fwlink/?LinkID=221866) ，下載此教學課程隨附的範例專案。  
+>  此教學課程中，所有課程已完成的專案都可在線上取得。 您可以從先前的課程中使用已完成的專案做為起點，向前跳到任何課程。 [按一下這裡](https://go.microsoft.com/fwlink/?LinkID=221866)以下載本教學課程所使用的範例專案。  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援下表所說明的動作類型。  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援下表所說明的動作類型。  
   
 |||  
 |-|-|  
 |CommandLine|在命令提示字元執行命令。|  
 |資料集|將資料集傳回用戶端應用程式。|  
 |鑽研|將 drillthrough 陳述式當做運算式傳回，用戶端會執行這個運算式來傳回資料列集。|  
-|HTML|在網際網路瀏覽器中執行 HTML 指令碼。|  
+|Html|在網際網路瀏覽器中執行 HTML 指令碼。|  
 |專屬|使用不同於此資料表列出的介面來執行作業。|  
-|報表|將一個以 URL 為基礎的參數化要求，提交給報表伺服器，然後將報表傳回用戶端應用程式。|  
+|Report|將一個以 URL 為基礎的參數化要求，提交給報表伺服器，然後將報表傳回用戶端應用程式。|  
 |資料列集|將資料列集傳回用戶端應用程式。|  
 |引數|執行 OLE DB 命令。|  
 |URL|在網際網路瀏覽器中顯示動態網頁。|  
   
- 動作可讓使用者啟動應用程式，或者在所選項目的內容當中執行其他步驟。 如需詳細資訊，請參閱[動作 &#40;Analysis Services - 多維度資料&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md) 和[多維度模型中的動作](multidimensional-models/actions-in-multidimensional-models.md)。  
+ 動作可讓使用者啟動應用程式，或者在所選項目的內容當中執行其他步驟。 如需詳細資訊，請參閱 [動作 &#40;Analysis Services - 多維度資料&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)和 [多維度模型中的動作](multidimensional-models/actions-in-multidimensional-models.md)  
   
 > [!NOTE]  
 >  若要取得動作的範例，請參閱 [計算工具] 窗格中 [範本] 索引標籤上的動作範例，或是 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 範例資料倉儲中的範例。 如需此資料庫的安裝詳細資訊，請參閱 [安裝 Analysis Services 多維度模型化教學課程的範例資料和專案](install-sample-data-and-projects.md)。  
@@ -52,8 +53,8 @@ ms.locfileid: "66078233"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 教學課程案例](analysis-services-tutorial-scenario.md)   
- [多維度模型化&#40;Adventure Works 教學課程&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
- [動作&#40;Analysis Services-多維度資料&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+ [多維度模型化 &#40;的艾德作品教學課程&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [&#40;Analysis Services 多維度資料的動作&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [多維度模型中的動作](multidimensional-models/actions-in-multidimensional-models.md)  
   
   

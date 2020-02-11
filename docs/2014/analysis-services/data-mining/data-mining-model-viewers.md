@@ -19,14 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 659b8c0afd91a60389a2cacf9a3063ff65164dd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085050"
 ---
 # <a name="data-mining-model-viewers"></a>資料採礦模型檢視器
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中定型資料採礦模型之後，您可以瀏覽該模型來尋找值得參考的趨勢。 因為採礦模型的結果很複雜，而且其原始格式不易了解，所以用視覺化方式調查資料通常是了解演算法在資料內探索的規則和關聯性的最簡單方式。  
+  在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]定型資料採礦模型之後，您可以流覽模型來尋找有趣的趨勢。 因為採礦模型的結果很複雜，而且其原始格式不易了解，所以用視覺化方式調查資料通常是了解演算法在資料內探索的規則和關聯性的最簡單方式。  
   
  您用來建立模型的每一個演算法都會傳回不同類型的結果。 因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會為每一個演算法提供個別的檢視器。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中瀏覽採礦模型時，該模型會使用適合它的檢視器顯示在資料採礦設計師的 **[採礦模型檢視器]** 索引標籤上。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66085050"
  描述一般檢視器中可用於所有資料採礦模型的詳細資訊，並提供範例說明如何解譯每種演算法的資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [資料採礦演算法 &#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [資料採礦設計師](data-mining-designer.md)  
   
   

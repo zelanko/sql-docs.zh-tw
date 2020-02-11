@@ -1,5 +1,5 @@
 ---
-title: 升級程序概觀 |Microsoft Docs
+title: 升級程式總覽 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb4bfb2073427d0f48b3d4a7ac7b7ab496299030
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091514"
 ---
 # <a name="upgrade-process-overview"></a>升級程序概觀
@@ -53,8 +53,8 @@ ms.locfileid: "66091514"
 9. 解決任何升級後和移轉問題。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行 Upgrade Advisor&#40;使用者介面&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
+ [正在執行 Upgrade Advisor &#40;使用者介面&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
  [使用報表](../../../2014/sql-server/install/using-reports.md)   
- [使用升級建議程式](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [使用 Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

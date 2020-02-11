@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a4117013b671ee9c5d5acf1fcde94ab382468dc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914476"
 ---
-# <a name="mssqlserver3176"></a>MSSQLSERVER_3176
+# <a name="mssqlserver_3176"></a>MSSQLSERVER_3176
     
 ## <a name="details"></a>詳細資料  
   
@@ -42,8 +42,8 @@ ms.locfileid: "62914476"
  請將資料庫檔案還原到其他位置。 在 RESTORE 陳述式中，使用 WITH MOVE 子句搬移每個檔案。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 開啟 [還原資料庫] 對話方塊，在 [選項]  頁面的 [將資料庫檔案還原為]  方格中變更檔案位置。  
   
 ## <a name="see-also"></a>另請參閱  
- [將資料庫還原到新位置 &#40;SQL Server&#41;](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
- [將檔案還原到新位置&#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)   
+ [將資料庫還原到新的位置 &#40;SQL Server&#41;](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
+ [將檔案還原到新的位置 &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

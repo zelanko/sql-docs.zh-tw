@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7873f616e2a6e9657f2e7c59c745fdab77c9b61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836047"
 ---
 # <a name="edit-instance-properties"></a>編輯執行個體屬性
@@ -42,7 +42,7 @@ ms.locfileid: "62836047"
   
      您也可以用滑鼠右鍵按一下左窗格中的服務，然後選取 [屬性]  。  
   
-### <a name="or"></a>或  
+### <a name="or"></a>OR  
   
 1.  從 CDC 設計工具主控台的左窗格，選取您要使用的服務。  
   

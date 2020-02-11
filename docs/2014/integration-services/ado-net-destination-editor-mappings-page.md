@@ -1,5 +1,5 @@
 ---
-title: ADO NET 目的地編輯器 （對應頁面） |Microsoft Docs
+title: ADO NET 目的地編輯器（對應頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b722be21d3b2e2eb10fbd3cc351553df927dbef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061748"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>ADO NET 目的地編輯器 (對應頁面)
-  使用 [ADO NET 目的地編輯器] 對話方塊的 [對應] 頁面，即可將輸入資料行對應至目的地資料行。  
+  使用 [ADO NET 目的地編輯器]**** 對話方塊的 [對應]**** 頁面，即可將輸入資料行對應至目的地資料行。  
   
  若要深入了解 ADO NET 目的地，請參閱＜ [ADO NET Destination](data-flow/ado-net-destination.md)＞。  
   
@@ -28,11 +28,11 @@ ms.locfileid: "66061748"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟具有 ADO NET 目的地的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤中，按兩下 ADO NET 目的地。  
+2.  在 [資料流程]**** 索引標籤中，按兩下 ADO NET 目的地。  
   
-3.  在 [ADO NET 目的地編輯器] 中，按一下 [對應]。  
+3.  在 [ADO NET 目的地編輯器]**** 中，按一下 [對應]****。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **可用的輸入資料行**  
  檢視可用的輸入資料行清單。 使用拖放作業，即可將資料表中的可用輸入資料行對應到目的地資料行。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66061748"
  檢視可用的目的地資料行清單。 使用拖放作業，即可將資料表中的可用目的地資料行對應到輸入資料行。  
   
  **輸入資料行**  
- 檢視所選取的輸入資料行。 您可以選取 [\<忽略>] 移除對應，排除輸出的資料行。  
+ 檢視所選取的輸入資料行。 您可以選取 [**忽略>]\<** 移除對應，排除輸出的資料行。  
   
  **目的地資料行**  
  檢視每個可用的目的地資料行，不論是否已經對應。  

@@ -1,5 +1,5 @@
 ---
-title: 移除分號下列保留的關鍵字 |Microsoft Docs
+title: 移除保留關鍵字後面的冒號 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce2cfce6e35a95b7a07c17c4d3a2fd8a1b1c2610
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093176"
 ---
 # <a name="remove-colon-following-reserved-keyword"></a>移除保留關鍵字後面的冒號
@@ -31,7 +31,7 @@ ms.locfileid: "66093176"
  在您將資料庫相容性模式變更為 100 或之後以前，請移除保留關鍵字後面的冒號，藉以修改指令碼。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜sp_dbcmptlevel＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
+ [資料庫引擎升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新的&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

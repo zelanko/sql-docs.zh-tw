@@ -1,5 +1,5 @@
 ---
-title: 步驟 4：測試第 5 課的教學課程封裝 |Microsoft Docs
+title: 步驟 4：測試第 5 課的教學課程封裝 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890940"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>步驟 4：測試第 5 課的教學課程封裝
@@ -27,17 +27,17 @@ ms.locfileid: "62890940"
   
  **控制流程**  
   
- ![套件中的控制流程](../../2014/tutorials/media/task4lesson2control.gif "套件中的控制流程")  
+ ![封裝中的控制流程](../../2014/tutorials/media/task4lesson2control.gif "封裝中的控制流程")  
   
  **資料流程**  
   
- ![套件中的資料流程](../../2014/tutorials/media/task9lesson1data.gif "套件中的資料流程")  
+ ![封裝中的資料流程](../../2014/tutorials/media/task9lesson1data.gif "封裝中的資料流程")  
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>若要測試第 5 課的教學課程封裝  
   
 1.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]** 。  
   
-2.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]** 。  
+2.  在封裝完成執行之後，請在 [**調試**程式] 功能表上，按一下 [**停止調試**程式]。  
   
 ## <a name="next-lesson"></a>下一課  
  [第 6 課：搭配專案部署模型使用參數](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

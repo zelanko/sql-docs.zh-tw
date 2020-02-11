@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 18db8cfd54a9df36564d64c0cd94407bfefb21f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914792"
 ---
-# <a name="mssqlserver3151"></a>MSSQLSERVER_3151
+# <a name="mssqlserver_3151"></a>MSSQLSERVER_3151
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|3151|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -36,6 +36,6 @@ ms.locfileid: "62914792"
  這是指出 **master** 資料庫發生各種問題的一般錯誤訊息。  
   
 ## <a name="user-action"></a>使用者動作  
- 檢查錯誤記錄檔以取得詳細資訊。 若要建立可以使用的 **master** 資料庫，請執行 Setup.exe，並指定 REBUILDDATABASE 選項。 如需詳細資訊，請參閱 「 如何：在安裝 SQL Server from the Command"SQL Server 線上叢書。  
+ 檢查錯誤記錄檔以取得詳細資訊。 若要建立可以使用的 **master** 資料庫，請執行 Setup.exe，並指定 REBUILDDATABASE 選項。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的＜如何：從命令提示字元安裝 SQL Server＞。  
   
   

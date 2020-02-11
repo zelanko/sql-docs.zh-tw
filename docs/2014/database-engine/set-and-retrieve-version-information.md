@@ -1,5 +1,5 @@
 ---
-title: 設定和擷取版本資訊 |Microsoft Docs
+title: 設定和抓取版本資訊 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,14 +20,15 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68113c6de003aea94924f6e220373664212becf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843479"
 ---
 # <a name="set-and-retrieve-version-information"></a>設定及擷取版本資訊
-  版本資訊包括原始檔控制檔案的記錄和目前狀態。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 會維護每個原始檔控制檔案的完整歷程，供您追蹤一或多個檔案在時間中的進展。 您也可以利用這項資訊來擷取檔案任何版本的本機副本，或比較任意兩個檔案版本。  
+  版本資訊包括原始檔控制檔案的記錄和目前狀態。 
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 會維護每個原始檔控制檔案的完整歷程，供您追蹤一或多個檔案在時間中的進展。 您也可以利用這項資訊來擷取檔案任何版本的本機副本，或比較任意兩個檔案版本。  
   
  檔案的記錄包括：  
   

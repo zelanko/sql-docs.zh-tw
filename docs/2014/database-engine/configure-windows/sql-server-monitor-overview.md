@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 889e0c5a54477a1532aa9ec2760fad890a671618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755186"
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server 監視器概觀
@@ -29,7 +29,7 @@ ms.locfileid: "62755186"
 > [!NOTE]  
 >  如需這些監視器的詳細資訊，請參閱 [監視複寫](../../relational-databases/replication/monitoring-replication.md) 和 [監視資料庫鏡像 &#40;SQL Server&#41;](../database-mirroring/database-mirroring-sql-server.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
   
 -   複寫監視器  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62755186"
   
 -   資料庫鏡像監視器  
   
-     若要監視資料庫鏡像，您必須是伺服器執行個體上 **sysadmin** 固定伺服器角色或 **dbm_monitor** 固定資料庫角色的成員。 如果您只是其中一個夥伴伺服器執行個體上 **sysadmin** 或 **dbm_monitor** 的成員，則監視器只能連接到該夥伴，不能從其他夥伴那裡擷取資訊。 如需詳細資訊，請參閱 [Database Mirroring Monitor Overview](../database-mirroring/database-mirroring-monitor-overview.md)。  
+     若要監視資料庫鏡像，您必須是伺服器執行個體上 **sysadmin** 固定伺服器角色或 **dbm_monitor** 固定資料庫角色的成員。 如果您只是其中一個夥伴伺服器執行個體上 **系統管理員** 或 **dbm_monitor** 的成員，則監視器只能連接到該夥伴，不能從其他夥伴那裡擷取資訊。 如需詳細資訊，請參閱 [Database Mirroring Monitor Overview](../database-mirroring/database-mirroring-monitor-overview.md)。  
   
 ## <a name="menu-options"></a>功能表選項  
  「SQL Server 監視器」的功能表包含與「SQL Server 監視器」相關的命令。 這個功能表也可以包含選取之模組的命令。  
@@ -50,7 +50,7 @@ ms.locfileid: "62755186"
  **動作**  
  包含導覽樹狀目錄中選取之節點的內容功能表。  
   
- **[執行]**  
+ **Go**  
  包含監視元件的清單：  
   
 -   資料庫鏡像  

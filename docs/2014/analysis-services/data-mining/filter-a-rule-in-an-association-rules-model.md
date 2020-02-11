@@ -1,5 +1,5 @@
 ---
-title: 篩選規則模型中關聯的規則。 |Microsoft Docs
+title: 篩選關聯規則模型中的規則 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,35 +15,36 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b63a6d6da0cb1d489ecac418e2682590ea2164e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084405"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>篩選關聯規則模型中的規則
   您可以在關聯模型中使用篩選，將結果限制為您所感興趣的關聯。 例如，您可以篩選規則，只顯示包含特定產品的規則。  
   
- 在資料採礦設計師中，您可以使用 **關聯規則檢視器 [規則]** [!INCLUDE[msCoName](../../includes/msconame-md.md)] 索引標籤上的控制項來篩選顯示的規則。  您還可以對模型建立查詢，只查看包含特定值的項目集。  
+ 在資料採礦設計師中，您可以使用 **關聯規則檢視器 [規則]**[!INCLUDE[msCoName](../../includes/msconame-md.md)] 索引標籤上的控制項來篩選顯示的規則。  您還可以對模型建立查詢，只查看包含特定值的項目集。  
   
 > [!NOTE]  
 >  這個選項僅適用於使用 Microsoft 關聯分析演算法所建立的採礦模型。  
   
 ### <a name="filter-a-rule-in-an-association-model"></a>篩選關聯模型中的規則  
   
-1.  使用 **[關聯規則檢視器]** 開啟此採礦模型。 若要在 SQL Server Management Studio 中進行這項處理，請以滑鼠右鍵按一下模型名稱，然後選取 **[瀏覽]** 。 若要在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中進行這項處理，請按兩下包含此模型的採礦結構，然後按一下 [資料採礦設計師]  的 [採礦模型檢視器]  索引標籤。  
+1.  使用 **[關聯規則檢視器]** 開啟此採礦模型。 若要在 SQL Server Management Studio 中進行這項處理，請以滑鼠右鍵按一下模型名稱，然後選取 **[瀏覽]**。 若要在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中進行這項處理，請按兩下包含此模型的採礦結構，然後按一下 [資料採礦設計師]**** 的 [採礦模型檢視器]**** 索引標籤。  
   
 2.  按一下 **[關聯規則檢視器]** 的 **[規則]** 索引標籤。  
   
 3.  在 **[篩選規則]** 方塊中輸入規則條件。 例如，規則條件可能是 "Bike Stand"，這也會傳回 "Bike Stands"。  
   
-     **[篩選規則]** 文字方塊會支援 .NET 語言所定義的規則運算式。 因此，您可以使用類似以下的運算式： `((.Helmets.*Fenders.*)|(.*Fenders.*Helmets.*))`。 此運算式會傳回包含 Helmets 和 Fenders 字 (順序不限) 之屬性的任何項目集。  
+     
+  **[篩選規則]** 文字方塊會支援 .NET 語言所定義的規則運算式。 因此，您可以使用類似以下的運算式： `((.Helmets.*Fenders.*)|(.*Fenders.*Helmets.*))`。 此運算式會傳回包含 Helmets 和 Fenders 字 (順序不限) 之屬性的任何項目集。  
   
 4.  在 **[最小機率]** 中，增加機率的值來查看更少的規則，或是降低此值來查看更多的規則。  
   
 5.  在 **[最低重要性]** 中，增加重要性的值來查看更少的規則，或是降低此值來查看更多的規則。  
   
-6.  針對**顯示**，選取下列選項之一：**顯示屬性名稱和值**，**只顯示屬性名稱**，或**只顯示屬性值**。  
+6.  在 **[顯示]** 中，選取下列其中一個選項： **[顯示屬性名稱和值]**、 **[只顯示屬性名稱]** 或 **[只顯示屬性值]**。  
   
 7.  在 **[最大資料列數]** 中，增加這個值來提高符合指定之條件的總規則數，或是降低這個值來限制傳回的規則數。 規則會依據機率來排序，所以您可能會為了機率或重要性而移除符合指定之條件的其他規則。  
   
@@ -59,8 +60,8 @@ ms.locfileid: "66084405"
 -   [關聯模型查詢範例](association-model-query-examples.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)   
- [使用 Microsoft 關聯規則檢視器瀏覽模型](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [第 3 課：建立購物籃狀況&#40;中繼資料採礦教學課程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [採礦模型檢視器工作和操作說明](mining-model-viewer-tasks-and-how-tos.md)   
+ [使用 Microsoft 關聯規則檢視器流覽模型](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [第3課：建立購物籃案例 &#40;中繼資料採礦教學課程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1bef947b8cad04acc69afe005a04747ceb85c3d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691711"
 ---
 # <a name="results-detailed-view-dialog-box"></a>結果詳細檢視對話方塊
   當您使用 **[評估原則]** 對話方塊來執行原則並按一下 **[評估]** 之後，此對話方塊會顯示原則評估的結果。 此對話方塊是唯讀的，而且可幫助您了解哪一個部分的屬性運算式可能失敗。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **AndOr**  
  當有一個以上的屬性運算式存在時，指出屬性運算式為累積或替代式。  
   

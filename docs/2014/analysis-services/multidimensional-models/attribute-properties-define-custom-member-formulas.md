@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 969a8f11926957ae19512e92b68e02d12011dd03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077275"
 ---
 # <a name="define-custom-member-formulas"></a>定義自訂成員公式
@@ -29,32 +29,32 @@ ms.locfileid: "66077275"
   
  屬性 (Attribute) 上的 `CustomRollupColumn` 屬性 (Property) 指定含有屬性 (Attribute) 成員之自訂成員公式的資料行。 如果資料行中的資料列是空的，則會正常傳回成員的資料格值。 如果資料行中的公式無效，則只要擷取使用成員的資料格值時，就會發生執行階段錯誤。  
   
- 在為屬性指定自訂成員公式之前，請確認包含該屬性的維度資料表，或直接相關的資料表中有字串資料行可儲存自訂成員公式。 如果發生這種情況，您可以設定`CustomRollupColumn`屬性的屬性以手動方式或使用商業智慧精靈的設定自訂成員公式增強功能，若要啟用自訂成員公式的屬性。 如需如何使用這項增強功能的詳細資訊，請參閱 [在維度中設定屬性的自訂成員公式](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)。  
+ 在為屬性指定自訂成員公式之前，請確認包含該屬性的維度資料表，或直接相關的資料表中有字串資料行可儲存自訂成員公式。 如果是這種情況，您可以手動設定屬性`CustomRollupColumn`的屬性，或使用商業智慧 Wizard 的 [設定自訂成員公式增強功能]，在屬性上啟用自訂成員公式。 如需如何使用這項增強功能的詳細資訊，請參閱 [在維度中設定屬性的自訂成員公式](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)。  
   
 ## <a name="evaluating-custom-member-formulas"></a>評估自訂成員公式  
  自訂成員公式與導出成員不同。 自訂成員公式是套用至維度資料表中的成員，並只提供成員的值。 相反地，導出成員不是儲存在維度資料表中，而導出成員運算式會定義維度或階層所含之其他成員的資料和中繼資料。  
   
  自訂成員公式覆寫與量值相關聯的彙總函式。 例如，在指定自訂成員公式之前，使用 `Sum` 彙總函式的量值含有 Time 維度下列成員的下列值：  
   
--   2003:2100  
+-   2003: 2100  
   
     -   第 1 季：700  
   
-    -   季 2:500  
+    -   第 2 季：500  
   
-    -   季 3:100  
+    -   第 3 季：100  
   
-    -   Quarter 4:800  
+    -   第 4 季：800  
   
--   2004:1500  
+-   2004: 1500  
   
     -   第 1 季：600  
   
-    -   季 2:200  
+    -   第 2 季：200  
   
-    -   季 3:300  
+    -   第 3 季：300  
   
-    -   Quarter 4:400  
+    -   第 4 季：400  
   
  利用自訂成員公式，成員的值將改由自訂積存公式提供。 例如，可使用以下自訂成員公式，提供 Time 維度之 2004 成員 Quarter 4 子成員的值 450。  
   

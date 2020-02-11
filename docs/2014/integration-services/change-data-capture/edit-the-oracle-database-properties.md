@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9ebad419585de0136708ea85e522f890dceac38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835574"
 ---
 # <a name="edit-the-oracle-database-properties"></a>編輯 Oracle 資料庫屬性
@@ -38,13 +38,13 @@ ms.locfileid: "62835574"
   
 -   **Windows 驗證**：選取此選項可使用目前的 Windows 網域認證。 只有當設定 Oracle 資料庫使用 Windows 驗證時，才可使用這個選項。  
   
--   **Oracle 驗證**：如果您選取這個選項，您必須在您所連接的 Oracle 資料庫中鍵入使用者的 [使用者名稱]  和 [密碼]  。  
+-   **Oracle 驗證**：如果您選取這個選項，您必須在您所連接的 Oracle 資料庫中輸入使用者的 **[使用者名稱]** 和 **[密碼]** 。  
   
  您可以在檢視器中檢視 Oracle 資料庫屬性。 當使用檢視器時，此資訊是唯讀的。 檢視器也包括資料表中擷取的資料行清單。 如需有關如何存取此檢視器的詳細資訊，請參閱＜ [How to Manage a CDC Instance](manage-a-cdc-instance.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [如何從 CDC 設計工具主控台管理 CDC 服務](how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [連接到 Oracle 來源資料庫](connect-to-an-oracle-source-database.md)   
+ [連線到 Oracle 來源資料庫](connect-to-an-oracle-source-database.md)   
  [連接到 Oracle](connect-to-oracle.md)  
   
   

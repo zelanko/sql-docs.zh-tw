@@ -1,5 +1,5 @@
 ---
-title: 鑽研動作表單編輯器 （動作索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
+title: 鑽取操作表單編輯器（動作索引標籤、Cube 設計工具）（Analysis Services 多維度資料） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33d20da736308b4436c40a50b8b01da7445663c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081460"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>鑽研動作表單編輯器 (動作索引標籤，設計師) (Analysis Services - 多維度資料)
@@ -25,22 +25,22 @@ ms.locfileid: "66081460"
 > [!NOTE]  
 >  鑽研動作不再向下鑽研至基礎資料存放區。 鑽研動作存取的資訊，必須是使用維度或階層成員包含在 Cube 模型中的資訊。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **name**  
  鍵入動作的名稱。  
   
  **動作目標**  
- 展開即可檢視 [量值群組成員]  選項。  
+ 展開即可檢視 [量值群組成員]**** 選項。  
   
  **量值群組成員**  
  選取要與鑽研動作建立關聯的量值群組。  
   
- **條件 (選擇性)**  
- 輸入描述選擇性條件的多維度運算式 (MDX) 運算式，搭配 [量值群組成員]  一起使用，進一步限制何時可以使用動作。 此運算式必須傳回布林值，如果此值為 True，則表示可使用該動作。  
+ **條件（選擇性）**  
+ 輸入描述選擇性條件的多維度運算式 (MDX) 運算式，搭配 [量值群組成員]**** 一起使用，進一步限制何時可以使用動作。 此運算式必須傳回布林值，如果此值為 True，則表示可使用該動作。  
   
  從 **[計算工具]** 窗格中，將選取的元素拖曳到這個選項，以包括所選元素的 MDX 語法。  
   
- **鑽研資料行**  
+ **鑽取資料行**  
  展開即可顯示方格，以指出使用者執行此動作時傳回的屬性。  
   
 > [!NOTE]  
@@ -48,26 +48,26 @@ ms.locfileid: "66081460"
   
  方格包含下列資料行：  
   
-|「資料行」|描述|  
+|資料行|描述|  
 |------------|-----------------|  
-|**Dimensions**|選取衍生所傳回屬性的維度。 選取 MEASURES 即可在量值上進行鑽研。|  
+|**維度**|選取衍生所傳回屬性的維度。 選取 MEASURES 即可在量值上進行鑽研。|  
 |**傳回資料行**|從選取的維度中選取執行動作時要傳回的屬性或量值。|  
   
  **其他屬性**  
- 展開以檢視 [預設值]  、[最大資料列數]  、[引動過程]  、[應用程式]  、[描述]  、[標題]  及 [標題是 MDX]  選項。  
+ 展開以檢視 [預設值]****、[最大資料列數]****、[引動過程]****、[應用程式]****、[描述]****、[標題]**** 及 [標題是 MDX]**** 選項。  
   
- **預設值**  
- 選取 [True]  以包含此鑽研動作作為預設鑽研動作，否則，請選取 [False]  。  
+ **預設**  
+ 選取 [True]**** 以包含此鑽研動作作為預設鑽研動作，否則，請選取 [False]****。  
   
- 如果`RETURN`省略子句的 mdx`DRILLTHROUGH`用戶端應用程式中，所執行陳述式[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]評估所有預設鑽研動作執行個體，並執行第一次的預設鑽研傳回非空白集的動作。 如需有關 MDX`DRILLTHROUGH`陳述式，請參閱 < [DRILLTHROUGH 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough)。  
+ 如果從`RETURN`用戶端應用程式所執行`DRILLTHROUGH`的 MDX 語句中省略子句， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]實例就會評估所有預設的鑽取動作，並執行第一個傳回非空白集合的預設「鑽取」動作。 如需 MDX `DRILLTHROUGH`語句的詳細資訊，請參閱[&#40;mdx&#41;](/sql/mdx/mdx-data-manipulation-drillthrough)的「鑽看」語句。  
   
 > [!NOTE]  
 >  此選項用於回溯相容性用途。  
   
- **最大資料列**  
+ **最大資料列數**  
  鍵入鑽研動作要傳回的最大資料列數。 將此選項設定為零或空的值，表示鑽研動作將會傳回該動作擷取的所有資料列給用戶端應用程式。  
   
- **引動過程**  
+ **啟動**  
  選取設定，以指出何時該執行此動作。  
   
 > [!NOTE]  
@@ -77,11 +77,11 @@ ms.locfileid: "66081460"
   
 |值|描述|  
 |-----------|-----------------|  
-|批次|此動作應該當作批次作業的一部份或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 工作來執行。|  
+|Batch|此動作應該當作批次作業的一部份或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 工作來執行。|  
 |互動式|此動作會在使用者叫用動作時執行。|  
 |開啟時|此動作會在第一次開啟 Cube 時執行。|  
   
- **應用程式**  
+ **Application**  
  鍵入可以執行鑽研動作的應用程式名稱。  
   
  您也可以使用此選項來識別哪一個用戶端應用程式最常使用這個動作，以及在快顯功能表的該動作旁邊顯示適當的圖示。  
@@ -92,23 +92,23 @@ ms.locfileid: "66081460"
  **說明**  
  鍵入動作的選擇性描述。  
   
- **標題**  
- 如果 [標題是 MDX]  設為 [False]  ，則請鍵入要顯示在用戶端應用程式中的動作標題。  
+ **Caption**  
+ 如果 [標題是 MDX]**** 設為 [False]****，則請鍵入要顯示在用戶端應用程式中的動作標題。  
   
- 如果 [標題是 MDX]  設定為 [True]  ，則請鍵入會傳回標題字串的多維度運算式 (MDX) 運算式。  
+ 如果 [標題是 MDX]**** 設定為 [True]****，則請鍵入會傳回標題字串的多維度運算式 (MDX) 運算式。  
   
  **標題是 MDX**  
- 選取 [False]  以指出 [標題]  包含一個常值字串，代表要顯示在用戶端應用程式中的動作標題。  
+ 選取 [False]**** 以指出 [標題]**** 包含一個常值字串，代表要顯示在用戶端應用程式中的動作標題。  
   
  選取 **[True]** 以指出 **[標題]** 包含一個會傳回字串的 MDX 運算式，字串代表要顯示在用戶端應用程式中的動作標題。 在動作傳回至用戶端應用程式之前，必須先解析 MDX 運算式。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度運算式 &#40;MDX&#41 參考](/sql/mdx/multidimensional-expressions-mdx-reference)   
- [動作&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
- [工具列&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [動作組合管理&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [計算工具&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
- [動作表單編輯器&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [報表動作表單編輯器&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
+ [&#40;MDX&#41; 參考的多維度運算式](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [&#40;Cube 設計師的動作&#41; &#40;Analysis Services 多維度資料&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [工具列 &#40;動作] 索引標籤，Cube 設計工具&#41; &#40;Analysis Services 多維度資料&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [動作召集人 &#40;動作] 索引標籤、Cube 設計工具&#41; &#40;Analysis Services 多維度資料&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [[計算工具] &#40;[動作] 索引標籤、[Cube 設計師]&#41; &#40;Analysis Services 多維度資料&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [[操作表單編輯器] &#40;[動作] 索引標籤、[Cube 設計師]&#41; &#40;Analysis Services 多維度資料&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [報表操作表單編輯器 &#40;動作] 索引標籤、Cube 設計工具&#41; &#40;Analysis Services 多維度資料&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
   
   

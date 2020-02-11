@@ -1,5 +1,5 @@
 ---
-title: 步驟 1:複製第 5 課套件 |Microsoft Docs
+title: 步驟 1：複製第 5 課套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890754"
 ---
-# <a name="step-1-copying-the-lesson-5-package"></a>步驟 1:複製第 5 課的封裝
+# <a name="step-1-copying-the-lesson-5-package"></a>步驟 1：複製第 5 課的封裝
   在這項工作中，您將為第 5 課所建立的 Lesson 5.dtsx 封裝建立複本。 另外，您也可以將此教學課程中隨附之已完成的第 5 課封裝加入至專案中，然後改為複製該封裝。 在第 6 課其餘的課程中，您將使用這個新的副本。  
   
 ### <a name="to-copy-the-lesson-5-package"></a>若要複製第 5 課的封裝  
@@ -38,7 +38,7 @@ ms.locfileid: "62890754"
   
 7.  在 [屬性] 視窗中，將 Name 屬性更新為第 6 課。  
   
-8.  按一下方塊中的，ID 屬性，然後按一下下拉箭頭，然後按一下 \<產生新的識別碼 >。  
+8.  按一下 ID 屬性的方塊，然後按一下下拉箭號，再按一下\<[產生新的識別碼]>。  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>若要加入已完成的第 5 課封裝  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62890754"
   
 3.  在 [加入現有封裝的副本] 對話方塊的 [封裝位置] 中，選取 [檔案系統]。  
   
-4.  按一下瀏覽 (...) 按鈕，巡覽至電腦上的 Lesson 5.dtsx，然後按一下 [開啟]  。  
+4.  按一下瀏覽 (...) 按鈕，巡覽至電腦上的 Lesson 5.dtsx，然後按一下 [開啟]****。  
   
      若要下載此教學課程的所有課程封裝，請執行下列動作。  
   
@@ -63,6 +63,6 @@ ms.locfileid: "62890754"
      在複製第 5 課封裝之後，如果您目前在方案中已經有之前課程的封裝，請以滑鼠右鍵按一下 1-5 課的每一個封裝，並按一下 [從專案移除]。 當您完成時，您的方案中應該只有 Lesson 6.dtsx。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 2：將專案轉換為專案部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+ [步驟 2：將專案轉換成專案部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

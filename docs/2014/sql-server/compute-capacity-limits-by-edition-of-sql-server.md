@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714758"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server 版本的計算容量限制
@@ -64,13 +64,14 @@ ms.locfileid: "62714758"
   
 -   一個實體處理器可能是由一個或多個核心組成。 實體處理器與處理器封裝或插槽相同。  
   
- 具有多個實體處理器的系統或是具有多核心及/或超執行緒之實體處理器的系統可讓作業系統同時執行多個工作。 每個執行的執行緒都會顯示成邏輯處理器。 例如，如果您有已啟用超執行緒和每個核心的兩個執行緒的兩個四核心處理器的電腦，您會有 16 個邏輯處理器：每個核心的處理器 x 2 執行緒每 2 個處理器 x 4 核心數。 請注意：  
+ 具有多個實體處理器的系統或是具有多核心及/或超執行緒之實體處理器的系統可讓作業系統同時執行多個工作。 每個執行的執行緒都會顯示成邏輯處理器。 例如，如果您有一部具備兩個啟用超執行緒之四核心處理器的電腦，而且每個核心都有兩個執行緒，則總共有 16 個邏輯處理器：2 個處理器 x 4 個核心 (每個處理器) x 2 個執行緒 (每個核心)。 請注意：  
   
 -   來自超執行緒核心之單一執行緒的邏輯處理器計算容量小於來自停用超執行緒之相同核心的邏輯處理器計算容量。  
   
 -   但是，超執行緒核心中 2 個邏輯處理器的計算容量大於停用超執行緒之相同核心的計算容量。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的每個版本都有兩個計算容量限制：  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的每個版本都有兩個計算容量限制：  
   
 1.  插槽的數目上限 (與實體處理器、插槽或處理器封裝相同)。  
   
@@ -80,27 +81,27 @@ ms.locfileid: "62714758"
   
  下表指定每個 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]版本之單一執行個體的計算容量限制：  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|單一執行個體所使用的計算容量上限 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|單一執行個體所使用的計算容量上限 (AS、RS)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]公告|單一執行個體所使用的計算容量上限 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|單一執行個體所使用的計算容量上限 (AS、RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
-|Enterprise Edition:核心授權<sup>1</sup>|作業系統最大值|作業系統最大值|  
-|Developer|作業系統最大值|作業系統最大值|  
-|Evaluation|作業系統最大值|作業系統最大值|  
-|Business Intelligence|限制為 4 個插槽或 16 個核心的較小者|作業系統最大值|  
-|Standard|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|  
+|Enterprise Edition：以核心為基礎的授權<sup>1</sup>|作業系統最大值|作業系統最大值|  
+|開發人員|作業系統最大值|作業系統最大值|  
+|評估|作業系統最大值|作業系統最大值|  
+|商業智慧|限制為 4 個插槽或 16 個核心的較小者|作業系統最大值|  
+|標準|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|  
 |Web|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|  
 |Express|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
 |Express with Tools|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
 |Express with Advanced Services|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
   
- <sup>1</sup> Enterprise Edition，含伺服器 + 用戶端存取授權 (CAL) 授權 （不適用於新的協議） 僅限於最多 20 個核心每[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。 核心伺服器授權模式之下沒有任何限制。  
+ <sup>1</sup> Enterprise Edition （含伺服器 + 用戶端存取許可證（CAL））型授權（不適用於新合約）僅限每個[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]實例最多20個核心。 核心伺服器授權模式之下沒有任何限制。  
   
- 在虛擬化環境中，計算容量限制是以邏輯處理器 (而非核心) 的數目為基礎，因為客體應用程式看不見處理器架構。  例如，如果一部伺服器的四個插槽都插入四核心處理器，而且能夠針對每個核心啟用兩個超執行緒，則在啟用超執行緒的情況下，總共包含 32 個邏輯處理器，但是在停用超執行緒的情況下，只包含 16 個邏輯處理器。 這些邏輯處理器可對應至伺服器上對應至主機伺服器中實體處理器上執行的執行緒該邏輯處理器的虛擬機器計算負載的虛擬機器。  
+ 在虛擬化環境中，計算容量限制是以邏輯處理器 (而非核心) 的數目為基礎，因為客體應用程式看不見處理器架構。  例如，如果一部伺服器的四個插槽都插入四核心處理器，而且能夠針對每個核心啟用兩個超執行緒，則在啟用超執行緒的情況下，總共包含 32 個邏輯處理器，但是在停用超執行緒的情況下，只包含 16 個邏輯處理器。 這些邏輯處理器可對應至伺服器上的虛擬機器，而該邏輯處理器上的虛擬機器計算負載會對應到主機伺服器中實體處理器上的執行執行緒。  
   
  當每個虛擬處理器的效能都很重要時，您可能會想要停用超執行緒。 雖然您可以在 BIOS 設定期間使用處理器的 BIOS 設定來啟用或停用超執行緒，不過這種伺服器範圍的作業通常會影響伺服器上執行的所有工作負載。 因此，建議您分隔在虛擬化環境中執行的工作負載以及實體作業系統環境中可從超執行緒效能提升獲益的工作負載。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2014 的版本和元件](../sql-server/editions-and-components-of-sql-server-2016.md)   
- [SQL Server 2014 各版本所支援的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+ [SQL Server 2014 版本所支援的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [SQL Server 的最大容量規格](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
  [SQL Server 2014 快速入門安裝](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   

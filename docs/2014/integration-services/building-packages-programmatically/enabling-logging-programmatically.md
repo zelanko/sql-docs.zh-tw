@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b83f5842ebb2bb97ebd58142ef69d3a3d153f51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836490"
 ---
 # <a name="enabling-logging-programmatically"></a>以程式設計的方式啟用記錄
@@ -46,12 +46,13 @@ ms.locfileid: "62836490"
 |提供者|描述|ConfigString 屬性|  
 |--------------|-----------------|---------------------------|  
 |SQL Server Profiler|產生可能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler 中擷取和檢視的 SQL 追蹤。 此提供者的預設副檔名為 .trc。|不需要組態。|  
-|[SQL Server]|將事件記錄項目寫入任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的 **sysssislog** 資料表中。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供者需要指定連至資料庫的連接，還須指定目標資料庫名稱。|  
+|SQL Server|將事件記錄項目寫入任何 **資料庫中的**sysssislog[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供者需要指定連至資料庫的連接，還須指定目標資料庫名稱。|  
 |文字檔|將事件記錄項目以逗號分隔值 (CSV) 的格式寫入 ASCII 文字檔。 此提供者的預設副檔名為 .log。|檔案連接管理員的名稱。|  
 |Windows 事件記錄檔|記錄到本機電腦上「應用程式」記錄中的標準 Windows 事件記錄檔。|不需要組態。|  
 |XML 檔案|將事件記錄檔項目寫入 XML 格式化的檔案。 此提供者的預設副檔名為 .xml。|檔案連接管理員的名稱。|  
   
- 透過設定容器的 `EventFilterKind` 與 `EventFilter` 屬性，會將事件包括在事件記錄檔中或排除在外。 `EventFilterKind` 結構包含兩個值：`ExclusionFilter` 與 `InclusionFilter`，它們指出加入 `EventFilter` 的事件是否包括在事件記錄檔中。 接著會指派含有是篩選主旨之事件名稱的字串陣列給 `EventFilter` 屬性。  
+ 透過設定容器的 `EventFilterKind` 與 `EventFilter` 屬性，會將事件包括在事件記錄檔中或排除在外。 
+  `EventFilterKind` 結構包含兩個值：`ExclusionFilter` 與 `InclusionFilter`，它們指出加入 `EventFilter` 的事件是否包括在事件記錄檔中。 接著會指派含有是篩選主旨之事件名稱的字串陣列給 `EventFilter` 屬性。  
   
  下列程式碼允許在封裝上記錄、將文字檔的記錄提供者加入 <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> 集合，並指定將事件清單包括在記錄輸出中。  
   
@@ -114,7 +115,7 @@ Module Module1
 End Module  
 ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)  

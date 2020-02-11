@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server Profiler 建立 SQL 追蹤收集組 (SQL Server Management Studio) |Microsoft Docs
+title: 使用 SQL Server Profiler 來建立 SQL 追蹤收集組（SQL Server Management Studio） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873317"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>使用 SQL Server Profiler 來建立 SQL 追蹤收集組 (SQL Server Management Studio)
@@ -34,7 +34,7 @@ ms.locfileid: "62873317"
   
 ### <a name="create-and-export-a-sql-server-profiler-trace"></a>建立和匯出 SQL Server Profiler 追蹤  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，開啟 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (在 [工具]  功能表上，按一下 [SQL Server Profiler]  )。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (在 [工具]  功能表上，按一下 [SQL Server Profiler]  )。  
   
 2.  在 [連接到伺服器]  對話方塊中，按一下 [取消]  。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62873317"
   
     1.  在篩選清單中，按一下 [持續時間]  。  
   
-    2.  在布林運算子視窗中，依序展開**Greater than 或 equal**節點、 輸入`80`當做值，然後按一下**確定**。  
+    2.  在布林運算子視窗中，展開 [**大於或等於**] 節點，輸入`80`做為值，然後按一下 **[確定]**。  
   
 9. 按一下 **[執行]** 啟動追蹤。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62873317"
   
     2.  展開 [管理]  ，然後展開 [資料收集]  。  
   
-     `SPROC_CollectionSet`收集組會出現在相同的層級**系統資料收集組**節點。 根據預設，此收集組是停用的。  
+     `SPROC_CollectionSet`收集組會與 [**系統資料收集組**] 節點顯示在相同的層級。 根據預設，此收集組是停用的。  
   
 6.  您可以使用 [物件總管] 來編輯 SPROC_CollectionSet 的屬性，例如收集模式和上傳排程。 請遵循您用來處理資料收集器所提供之系統資料收集組的相同程序。  
   

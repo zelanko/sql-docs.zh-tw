@@ -1,5 +1,5 @@
 ---
-title: 效能計數器 (SSAS) |Microsoft Docs
+title: 效能計數器（SSAS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079704"
 ---
 # <a name="performance-counters-ssas"></a>效能計數器 (SSAS)
   使用效能監視器可以透過效能計數器來監視 Microsoft SQL Server Analysis Services (SSAS) 執行個體的效能。  
   
- 效能監視器是追蹤資源使用方式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control (MMC) 嵌入式管理單元。 您可以啟動這個 MMC 嵌入式管理單元，方法是在命令提示字元中輸入 **PerfMon** ，或是從 [控制台] 按一下 **[系統管理工具]** 然後按一下 **[效能監視器]** 。 效能監視器可讓您使用預先定義的物件和計數器來追蹤伺服器和處理序效能與活動，並利用使用者定義的計數器來監視事件。 效能監視器會收集計數而非關於事件的資料，例如，記憶體使用量、使用中交易數目或 CPU 活動。 您也可在特定計數器上設定臨界值，以產生通知操作員的警示。  
+ 效能監視器是追蹤資源使用方式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control (MMC) 嵌入式管理單元。 您可以啟動這個 MMC 嵌入式管理單元，方法是在命令提示字元中輸入 **PerfMon** ，或是從 [控制台] 按一下 **[系統管理工具]** 然後按一下 **[效能監視器]**。 效能監視器可讓您使用預先定義的物件和計數器來追蹤伺服器和處理序效能與活動，並利用使用者定義的計數器來監視事件。 效能監視器會收集計數而非關於事件的資料，例如，記憶體使用量、使用中交易數目或 CPU 活動。 您也可在特定計數器上設定臨界值，以產生通知操作員的警示。  
   
  效能監視器可以監視 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的遠端與本機執行個體。 如需詳細資訊，請參閱 [使用效能監視器](https://technet.microsoft.com/library/cc749115.aspx)。  
   
- 若要查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]可以使用之任何計數器的描述，請在效能監視器中開啟 **[新增計數器]** 對話方塊，並選取效能物件，然後按一下 **[顯示描述]** 。 最重要的計數器有 CPU 使用量、記憶體使用量、磁碟 IO 速率。 建議您從這些重要的計數器開始，當您較為了解可透過監視提升哪些效能時，再移至更詳細的計數器。 如需有關要包含哪些計數器的詳細資訊，請參閱 [SQL Server 2008 R2 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
+ 若要查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]可以使用之任何計數器的描述，請在效能監視器中開啟 **[新增計數器]** 對話方塊，並選取效能物件，然後按一下 **[顯示描述]**。 最重要的計數器有 CPU 使用量、記憶體使用量、磁碟 IO 速率。 建議您從這些重要的計數器開始，當您較為了解可透過監視提升哪些效能時，再移至更詳細的計數器。 如需有關要包含哪些計數器的詳細資訊，請參閱 [SQL Server 2008 R2 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
  計數器已分組，因此您可以更輕鬆地找到相關計數器。  
   
@@ -32,21 +32,21 @@ ms.locfileid: "66079704"
   
 |群組|描述|  
 |-----------|-----------------|  
-|[Cache](#bkmk_Cache)|與 Analysis Services 彙總快取相關的統計資料。|  
-|[連接](#bkmk_Connection)|與 Microsoft Analysis Services 連接相關的統計資料。|  
-|[Data Mining Prediction](#bkmk_DataMiningPrediction)|與處理資料採礦模型相關的統計資料。|  
-|[Data Mining Model Processing](#bkmk_DataMiningModelProcessing)|與根據資料採礦模型建立預測相關的統計資料。|  
+|[高速](#bkmk_Cache)|與 Analysis Services 彙總快取相關的統計資料。|  
+|[[連接]](#bkmk_Connection)|與 Microsoft Analysis Services 連接相關的統計資料。|  
+|[資料採礦預測](#bkmk_DataMiningPrediction)|與處理資料採礦模型相關的統計資料。|  
+|[資料採礦模型處理](#bkmk_DataMiningModelProcessing)|與根據資料採礦模型建立預測相關的統計資料。|  
 |[鎖定](#bkmk_Locks)|與 Microsoft Analysis Services 內部伺服器鎖定相關的統計資料。|  
 |[MDX](#bkmk_MDX)|與 Microsoft Analysis Services MDX 計算相關的統計資料。|  
 |[記憶體](#bkmk_Memory)|與 Microsoft Analysis Services 內部伺服器記憶體相關的統計資料。|  
 |[主動式快取](#bkmk_ProactiveCaching)|與 Microsoft Analysis Services 主動式快取相關的統計資料。|  
-|[Processing Aggregations](#bkmk_ProcAggregations)|與處理 MOLAP 資料檔之彙總相關的統計資料。|  
-|[Processing Indexes](#bkmk_ProcIndexes)|與處理 MOLAP 資料檔之索引相關的統計資料。|  
-|[Processing](#bkmk_Processing)|與處理資料相關的統計資料。|  
-|[Storage Engine Query](#bkmk_StorageEngineQuery)|與 Microsoft Analysis Services 儲存引擎查詢相關的統計資料。|  
-|[Threads](#bkmk_Threads)|與 Microsoft Analysis Services 執行緒相關的統計資料。|  
+|[處理匯總](#bkmk_ProcAggregations)|與處理 MOLAP 資料檔之彙總相關的統計資料。|  
+|[處理索引](#bkmk_ProcIndexes)|與處理 MOLAP 資料檔之索引相關的統計資料。|  
+|[流程](#bkmk_Processing)|與處理資料相關的統計資料。|  
+|[儲存引擎查詢](#bkmk_StorageEngineQuery)|與 Microsoft Analysis Services 儲存引擎查詢相關的統計資料。|  
+|[串接](#bkmk_Threads)|與 Microsoft Analysis Services 執行緒相關的統計資料。|  
   
-###  <a name="bkmk_Cache"></a> Cache  
+###  <a name="bkmk_Cache"></a>高速  
  與 Microsoft Analysis Services 彙總快取相關的統計資料。  
   
 |計數器|描述|  
@@ -68,21 +68,21 @@ ms.locfileid: "66079704"
 |Total filtered iterator cache hits|快取點擊總數，會傳回篩選結果上的索引 Iterator。|  
 |Total filtered iterator cache misses|快取點擊總數，這類叫用因為無法在篩選的結果上建立索引 Iterator，所以必須用篩選的結果建立新的快取。|  
   
-###  <a name="bkmk_Connection"></a> 連接  
+###  <a name="bkmk_Connection"></a>建立  
  與 Microsoft Analysis Services 連接相關的統計資料。  
   
 |計數器|描述|  
 |-------------|-----------------|  
-|Current connections|目前已建立的用戶端連接數目。|  
-|Requests/sec|連接要求的速率。  這些是到達的要求。|  
-|Total requests|連接要求的總計。  這些是到達的要求。|  
-|Successes/sec|成功完成連接的速率。|  
+|目前的連線數|目前已建立的用戶端連接數目。|  
+|個要求/秒|連接要求的速率。  這些是達到的。|  
+|Total requests|連線要求的總計。  這些是達到的。|  
+|Successes/sec|成功完成連線的速率。|  
 |Total successes|連接成功的總計。|  
 |Failures/sec|連接失敗的速率。|  
-|Total failures|嘗試連接失敗的總計。|  
+|Total failures|連線嘗試失敗的總計。|  
 |Current user sessions|目前建立的使用者工作階段數目。|  
   
-###  <a name="bkmk_DataMiningModelProcessing"></a> Data Mining Model Processing  
+###  <a name="bkmk_DataMiningModelProcessing"></a>資料採礦模型處理  
  與 Microsoft Analysis Services 資料採礦模型處理相關的統計資料。  
   
 |計數器|描述|  
@@ -90,7 +90,7 @@ ms.locfileid: "66079704"
 |Cases/sec|處理案例的速率。|  
 |Current models processing|目前正在處理的模型數目。|  
   
-###  <a name="bkmk_DataMiningPrediction"></a> Data Mining Prediction  
+###  <a name="bkmk_DataMiningPrediction"></a>資料採礦預測  
  與 Microsoft Analysis Services 資料採礦預測相關的統計資料。  
   
 |計數器|描述|  
@@ -103,7 +103,7 @@ ms.locfileid: "66079704"
 |總計資料列|資料採礦查詢傳回的資料列總計。|  
 |Total Predictions|伺服器收到的資料採礦預測查詢總數。|  
   
-###  <a name="bkmk_Locks"></a> 鎖定  
+###  <a name="bkmk_Locks"></a>鎖定  
  與 Microsoft Analysis Services 內部伺服器鎖定相關的統計資料。  
   
 |計數器|描述|  
@@ -119,7 +119,7 @@ ms.locfileid: "66079704"
 |Unlock requests/sec|每秒解除鎖定要求的數目。|  
 |Total deadlocks detected|偵測到的死結總數。|  
   
-###  <a name="bkmk_MDX"></a> MDX  
+###  <a name="bkmk_MDX"></a>並用  
  與 Microsoft Analysis Services MDX 計算相關的統計資料。  
   
 |計數器|描述|  
@@ -152,7 +152,7 @@ ms.locfileid: "66079704"
 |Total Autoexist|自動存在執行的總次數。|  
 |Total EXISTING|執行 EXISTING 集合運算的總次數。|  
   
-###  <a name="bkmk_Memory"></a> 記憶體  
+###  <a name="bkmk_Memory"></a>快閃記憶體  
  與 Microsoft Analysis Services 內部伺服器記憶體相關的統計資料。  
   
 |計數器|描述|  
@@ -163,18 +163,18 @@ ms.locfileid: "66079704"
 |Page Pool 8 Lookaside KB|目前在 8KB 對應清單中的記憶體，以 KB 為單位  (備妥供使用的記憶體頁面)。|  
 |Page Pool 1 Alloc KB|從 64KB 分頁集區借用的記憶體大小，以 KB 為單位。  此記憶體會提供給伺服器的其他部分使用。|  
 |Page Pool 1 Lookaside KB|目前在 8KB 對應清單中的記憶體，以 KB 為單位  (備妥供使用的記憶體頁面)。|  
-|Cleaner Current Price|記憶體目前的價格 ($/位元組/時間)，並正規化為 1000。|  
+|清除工具目前價格|記憶體目前的價格 ($/位元組/時間)，並正規化為 1000。|  
 |Cleaner Balance/sec|平衡+壓縮作業的速率。|  
 |Cleaner Memory shrunk KB/sec|壓縮的速率，以 KB/秒為單位。|  
 |Cleaner Memory shrinkable KB|背景清除器將清除的記憶體數量，以 KB 為單位。|  
 |Cleaner Memory nonshrinkable KB|背景清除器將不會清除的記憶體數量，以 KB 為單位。|  
 |Cleaner Memory KB|背景清除器所知道的記憶體數量，以 KB 為單位  (可壓縮的清除器記憶體 + 不可壓縮的清除器記憶體)。|  
-|Memory Usage KB|伺服器處理序用於計算清除器記憶體價格的記憶體使用量。  等於計數器 Process\PrivateBytes 加上記憶體對應的資料大小，忽略 xVelocity 記憶體中分析引擎 (VertiPaq) 在超出 xVelocity 引擎記憶體限制外對應或配置的任何記憶體。|  
+|Memory Usage KB|伺服器處理序用於計算清除器記憶體價格的記憶體使用量。  等於計數器 Process\PrivateBytes 加上記憶體對應的資料大小，忽略 xVelocity 記憶體內部分析引擎 (VertiPaq) 在超出 xVelocity 引擎記憶體限制外對應或配置的任何記憶體。|  
 |Memory Limit Low KB|來自組態檔的記憶體下限。|  
 |Memory Limit High KB|來自組態檔的記憶體上限。|  
 |AggCacheKB|目前配置給彙總快取的記憶體，以 KB 為單位。|  
 |Quota KB|目前的記憶體配額，以 KB 為單位。  記憶體配額也就是指授與使用的記憶體，或是保留的記憶體。|  
-|Quota Blocked|在釋放其他記憶體配額之前，目前已封鎖的配額要求數目。|  
+|封鎖的配額|在釋放其他記憶體配額之前，目前已封鎖的配額要求數目。|  
 |Filestore KB|目前配置給 Filestore 的記憶體 (檔案快取)，以 KB 為單位。|  
 |Filestore Page Faults/sec|Filestore 頁面錯誤的速率。|  
 |Filestore Reads/sec|Filestore 頁面讀取/秒。|  
@@ -227,9 +227,9 @@ ms.locfileid: "66079704"
 |VertiPaq Nonpaged KB|記憶體中引擎所使用的工作集中鎖定的記憶體 (千位元組)。|  
 |VertiPaq Memory-Mapped KB|用於記憶體中資料的可分頁記憶體 (千位元組)。|  
 |Memory Limit Hard KB|組態檔中的固定記憶體限制。|  
-|Memory Limit VertiPaq KB|來自組態檔的記憶體中限制。|  
+|Memory Limit VertiPaq KB|來自組態檔的記憶體內部限制。|  
   
-###  <a name="bkmk_ProactiveCaching"></a> 主動式快取  
+###  <a name="bkmk_ProactiveCaching"></a>主動式快取  
  與 Microsoft Analysis Services 主動式快取相關的統計資料。  
   
 |計數器|描述|  
@@ -239,7 +239,7 @@ ms.locfileid: "66079704"
 |Proactive Caching Begin/sec|主動式快取開始的速率。|  
 |Proactive Caching Completion/sec|主動式快取完成的速率。|  
   
-###  <a name="bkmk_ProcAggregations"></a> Processing Aggregations  
+###  <a name="bkmk_ProcAggregations"></a>處理匯總  
  與 Microsoft Analysis Services 處理 MOLAP 資料檔之彙總相關的統計資料。  
   
 |計數器|描述|  
@@ -253,7 +253,7 @@ ms.locfileid: "66079704"
 |Temp file rows written/sec|將資料列寫入至暫存檔的速率。  彙總超過記憶體限制時會寫入暫存檔。|  
 |Temp file bytes written/sec|將位元組寫入至暫存檔的速率。  彙總超過記憶體限制時會寫入暫存檔。|  
   
-###  <a name="bkmk_ProcIndexes"></a> Processing Indexes  
+###  <a name="bkmk_ProcIndexes"></a>處理索引  
  與 Microsoft Analysis Services 處理 MOLAP 資料檔之索引相關的統計資料。  
   
 |計數器|描述|  
@@ -263,7 +263,7 @@ ms.locfileid: "66079704"
 |Rows/sec|使用從 MOLAP 檔案資料列建立索引的速率。|  
 |總計資料列|來自 MOLAP 檔案、用來建立索引的資料列總計。|  
   
-###  <a name="bkmk_Processing"></a> Processing  
+###  <a name="bkmk_Processing"></a>流程  
  與 Microsoft Analysis Services 處理資料相關的統計資料。  
   
 |計數器|描述|  
@@ -275,7 +275,7 @@ ms.locfileid: "66079704"
 |Rows written/sec|處理期間資料列寫入的速率。|  
 |Total rows written|處理期間資料列寫入的計數。|  
   
-###  <a name="bkmk_StorageEngineQuery"></a> Storage Engine Query  
+###  <a name="bkmk_StorageEngineQuery"></a>儲存引擎查詢  
  與 Microsoft Analysis Services 儲存引擎查詢相關的統計資料。  
   
 |計數器|描述|  
@@ -318,30 +318,30 @@ ms.locfileid: "66079704"
 |Aggregation lookups/sec|彙總查閱率。|  
 |Aggregation hits/sec|彙總叫用率。|  
   
-###  <a name="bkmk_Threads"></a> Threads  
+###  <a name="bkmk_Threads"></a>串接  
  與 Microsoft Analysis Services 執行緒相關的統計資料。  
   
 |計數器|描述|  
 |-------------|-----------------|  
-|Short parsing idle threads|簡短剖析執行緒集區中的閒置執行緒數目。|  
-|Short parsing busy threads|簡短剖析執行緒集區中的忙碌執行緒數目。|  
-|Short parsing job queue length|簡短剖析執行緒集區佇列中的作業數目。|  
+|簡短剖析的閒置執行緒數|簡短剖析執行緒集區中的閒置執行緒數目。|  
+|簡短剖析的忙碌執行緒數|簡短剖析執行緒集區中的忙碌執行緒數目。|  
+|簡短剖析的作業佇列長度|簡短剖析執行緒集區佇列中的作業數目。|  
 |Short parsing job rate|透過簡短剖析執行緒集區的作業速率。|  
-|Long parsing idle threads|完整剖析執行緒集區中的閒置執行緒數目。|  
-|Long parsing busy threads|完整剖析執行緒集區中的忙碌執行緒數目。|  
-|Long parsing job queue length|完整剖析執行緒集區佇列中的作業數目。|  
+|完整剖析的閒置執行緒數|完整剖析執行緒集區中的閒置執行緒數目。|  
+|完整剖析的忙碌執行緒數|完整剖析執行緒集區中的忙碌執行緒數目。|  
+|完整剖析的作業佇列長度|完整剖析執行緒集區佇列中的作業數目。|  
 |Long parsing job rate|透過完整剖析執行緒集區的作業速率。|  
-|Query pool idle threads|查詢執行緒集區中的閒置執行緒數目。|  
+|查詢集區的閒置執行緒數|查詢執行緒集區中的閒置執行緒數目。|  
 |Query pool busy threads|查詢執行緒集區中的忙碌執行緒數目。|  
-|Query pool job queue length|查詢執行緒集區佇列中的作業數目。|  
+|查詢集區的作業佇列長度|查詢執行緒集區佇列中的作業數目。|  
 |Query pool job rate|透過查詢執行緒集區的作業速率。|  
-|Processing pool idle non-I/O threads|處理執行緒集區中專供非 I/O 作業使用的閒置執行緒數目。|  
-|Processing pool busy non-I/O threads|處理執行緒集區中執行非 I/O 作業的執行緒數目。|  
+|處理集區的閒置非 I/O 執行緒數|處理執行緒集區中專供非 I/O 作業使用的閒置執行緒數目。|  
+|處理集區的忙碌非 I/O 執行緒數|處理執行緒集區中執行非 I/O 作業的執行緒數目。|  
 |Processing pool job queue length|處理執行緒集區佇列中的非 I/O 作業數目。|  
 |Processing pool job rate|透過處理執行緒集區的非 I/O 作業速率。|  
-|Processing pool idle I/O job threads|處理執行緒集區中 I/O 作業的閒置執行緒數目。|  
-|Processing pool busy I/O job threads|處理執行緒集區中執行 I/O 作業的執行緒數目。|  
-|Processing pool I/O job queue length|處理執行緒集區佇列中的 I/O 作業數目。|  
+|處理集區的閒置 I/O 作業執行緒數|處理執行緒集區中 I/O 作業的閒置執行緒數目。|  
+|處理集區的忙碌 I/O 作業執行緒數|處理執行緒集區中執行 I/O 作業的執行緒數目。|  
+|處理集區 I/O 作業佇列長度|處理執行緒集區佇列中的 I/O 作業數目。|  
 |Processing pool I/O job completion rate|透過處理執行緒集區的 I/O 作業速率。|  
   
   

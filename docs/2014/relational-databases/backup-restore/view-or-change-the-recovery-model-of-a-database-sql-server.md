@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875085"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>檢視或變更資料庫的復原模式 (SQL Server)
@@ -34,15 +34,15 @@ ms.locfileid: "62875085"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要檢視或變更復原模式的資料庫，使用：**  
+-   **若要使用下列項目檢視或變更資料庫的復原模式：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作建議：** [變更復原模式之後](#FollowUp)  
+-   **後續操作建議：**  [變更復原模式之後](#FollowUp)  
   
 -   [相關工作](#RelatedTasks)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62875085"
 > [!NOTE]  
 >  如果您在大量作業期間切換到完整復原模式，大量作業的記錄將從最小記錄變成完整記錄，反之亦然。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
@@ -72,17 +72,17 @@ ms.locfileid: "62875085"
   
 #### <a name="to-view-or-change-the-recovery-model"></a>檢視或變更復原模式  
   
-1.  連接到適當的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，請在 [物件總管] 中按一下伺服器名稱以展開伺服器樹狀目錄。  
+1.  連接到適當的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，請在物件總管中按一下伺服器名稱以展開伺服器樹狀目錄。  
   
-2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
+2.  展開 [**資料庫**]，然後視資料庫而定，選取使用者資料庫，或展開 [**系統**資料庫] 並選取系統資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，然後按一下 [屬性]  ，這會開啟 [資料庫屬性]  對話方塊。  
+3.  以滑鼠右鍵按一下資料庫，然後按一下 [屬性]****，這會開啟 [資料庫屬性]**** 對話方塊。  
   
-4.  在 **[選取頁面]** 窗格中，按一下 **[選項]** 。  
+4.  在 **[選取頁面]** 窗格中，按一下 **[選項]**。  
   
 5.  目前的復原模式會顯示在 **[復原模式]** 清單方塊中。  
   
-6.  或者，您可以從不同的模式清單中選取來變更復原模式。 這些選擇包括 [完整]  、[大量記錄]  或 [簡單]  。  
+6.  或者，您可以從不同的模式清單中選取來變更復原模式。 這些選擇包括 [完整]****、[大量記錄]**** 或 [簡單]****。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -117,9 +117,9 @@ USE master ;
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> 後續操作建議：變更復原模式之後  
+##  <a name="FollowUp"></a>後續操作建議：變更復原模式之後  
   
--   **在完整模式與大量記錄復原模式之間切換之後**  
+-   **在完整和大量記錄復原模式之間切換之後**  
   
     -   在完成大量作業之後，立即切換回完整復原模式。  
   
@@ -154,17 +154,17 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [建立作業](../../ssms/agent/create-a-job.md)  
   
--   [啟用或停用作業](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [資料庫維護計畫](../maintenance-plans/maintenance-plans.md) (在《 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 線上叢書》中)  
+-   [資料庫維護計畫](../maintenance-plans/maintenance-plans.md)（在[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 《線上叢書》中）  
   
 ## <a name="see-also"></a>另請參閱  
  [復原模式 &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [交易記錄 &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [復原模式 &#40;SQL Server&#41;](recovery-models-sql-server.md)  
   
   

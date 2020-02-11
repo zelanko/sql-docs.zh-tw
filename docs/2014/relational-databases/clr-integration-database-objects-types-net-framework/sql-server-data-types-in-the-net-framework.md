@@ -20,13 +20,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2ca5e816d3068b0607a8ab30e949040df0187db9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874534"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework 的 SQL Server 資料類型
+  
   `SqlTypes` 程式庫是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 基底類別庫的一部分。 其設計為提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中之資料類型具有相同語意及精確度的資料類型。 本主題描述 .NET Framework 程式設計人員的新語意，並介紹 `System.Data.SqlTypes` 程式庫隨附之 `System.Data` 命名空間中實作的類型。  
   
  下表列出本節中的主題。  
@@ -37,7 +38,7 @@ ms.locfileid: "62874534"
  [定序和 CLR 整合資料類型](collation-and-clr-integration-data-types.md)  
  描述如何處理包含 CLR 整合的定序。  
   
- [處理大型物件&#40;LOB&#41; CLR 中的參數](handling-large-object-lob-parameters-in-the-clr.md)  
+ [處理 CLR 中的大型物件 &#40;LOB&#41; 參數](handling-large-object-lob-parameters-in-the-clr.md)  
  描述如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 之間傳遞 LOB 類型。  
   
  [對應 CLR 參數資料](mapping-clr-parameter-data.md)  

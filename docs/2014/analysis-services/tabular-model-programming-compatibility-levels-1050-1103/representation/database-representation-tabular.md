@@ -1,5 +1,5 @@
 ---
-title: 資料庫 Representation(Tabular) |Microsoft Docs
+title: 資料庫標記法（表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 377b85c22d1c6da9f5296d6ad57a86028e022785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757814"
 ---
 # <a name="database-representationtabular"></a>資料庫表示法 (表格式)
@@ -53,7 +53,7 @@ currentCnx.ChangeDatabase("myOtherDatabase");
 ## <a name="database-in-amo"></a>AMO 中的資料庫  
  當您要使用 AMO 管理資料庫物件時，請從 <xref:Microsoft.AnalysisServices.Server> 物件開始著手。 接著在資料庫集合中搜尋您的資料庫，或透過加入資料庫至該集合的方式建立新的資料庫。  
   
- 下列程式碼片段顯示的步驟，連接到伺服器，並建立空白資料庫，請檢查後的資料庫不存在：  
+ 下列程式碼片段顯示在檢查資料庫不存在之後，連接到伺服器並建立空資料庫的步驟：  
   
 ```  
   
@@ -86,6 +86,6 @@ catch (Exception createDBxc)
   
 ```  
   
- 實際了解如何使用 AMO 建立及操作資料庫表示法，請參閱表格式 AMO 2012 範例; 中的原始程式碼特別要檢查以下的原始程式檔：Database.cs。 提供此範例程式碼的用意只是為了支援這裡所說明的邏輯概念，您不應將其用於生產環境。  
+ 若想實際了解如何使用 AMO 建立及操作資料庫表示法，請參閱「表格式 AMO 2012」範例的原始程式碼，特別要檢查以下的原始程式檔：Database.cs。 提供此範例程式碼的用意只是為了支援這裡所說明的邏輯概念，您不應將其用於生產環境。  
   
   

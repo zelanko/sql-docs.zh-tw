@@ -20,23 +20,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 14ead76661b6818ac2daf6a3aa250dddb348745d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876131"
 ---
 # <a name="full-file-backups-sql-server"></a>完整檔案備份 (SQL Server)
   本主題僅與包含多個檔案或檔案群組的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫有關。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中的檔案可個別進行備份和還原。 而且，您可以指定整個檔案群組，而不是個別指定每個構成的檔案。 請注意，如果檔案群組的任何檔案離線 (例如因為檔案正在還原中)，整個檔案群組就會離線，並且無法進行備份。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中的檔案可個別進行備份和還原。 而且，您可以指定整個檔案群組，而不是個別指定每個構成的檔案。 請注意，如果檔案群組的任何檔案離線 (例如因為檔案正在還原中)，整個檔案群組就會離線，並且無法進行備份。  
   
  唯讀檔案群組的檔案備份可以結合部分備份。 部分備份包含所有讀取/寫入檔案群組，以及一個或多個唯讀檔案群組 (選用)。 如需詳細資訊，請參閱[部分備份 &#40;SQL Server&#41;](partial-backups-sql-server.md)。  
   
  檔案備份可以當成差異檔案備份的 *「差異基底」* (Differential base)。 如需詳細資訊，請參閱 [差異備份 &#40;SQL Server&#41;](differential-backups-sql-server.md)。  
   
 > [!NOTE]  
->  完整檔案備份通常稱為「檔案備份」  ，但與「差異檔案備份」  明確對照時除外。  
+>  完整檔案備份通常稱為「檔案備份」**，但與「差異檔案備份」** 明確對照時除外。  
   
  **本主題內容：**  
   
@@ -44,11 +45,11 @@ ms.locfileid: "62876131"
   
 -   [檔案備份的缺點](#Disadvantages)  
   
--   [檔案備份概觀](#Overview)  
+-   [檔案備份總覽](#Overview)  
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 檔案備份的優點  
+##  <a name="Benefits"></a>檔案備份的優點  
  檔案備份提供下列優於資料庫備份的優點：  
   
 -   使用檔案備份可以增加復原的速度，因為這樣可以讓您只還原受損的檔案，而不需要還原資料庫的其餘部分。  
@@ -57,13 +58,13 @@ ms.locfileid: "62876131"
   
 -   比起完整資料庫備份，檔案備份在排程與媒體處理上彈性更大，因為對於大型資料庫，完整資料庫備份會變得難以管理。 對於含有各種更新特性資料的大型資料庫來說，檔案或檔案群組備份的增強彈性也很有用處。  
   
-##  <a name="Disadvantages"></a> 檔案備份的缺點  
+##  <a name="Disadvantages"></a>檔案備份的缺點  
   
 -   相較於完整資料庫備份，檔案備份的主要缺點在於增加管理上的複雜性。 維護和持續追蹤完整的備份組是相當耗時的工作，其耗費成本甚至可能會超過完整資料庫備份的空間需求。  
   
 -   如果損毀的檔案沒有備份，媒體故障將可能造成整個資料庫無法復原。 因此，必須維護一組完整的檔案備份，而在完整/大量記錄復原模式下，則還要備份一個或多個記錄備份，至少涵蓋第一次完整檔案備份和最後一次完整檔案備份之間的間隔。  
   
-##  <a name="Overview"></a> 檔案備份概觀  
+##  <a name="Overview"></a>檔案備份總覽  
  完整檔案備份會備份一個或多個檔案或檔案群組中的所有資料。 根據預設，檔案備份會包含足以將檔案向前復原到備份作業結束的記錄檔記錄。  
   
  對於每一個復原模式來說，備份唯讀檔案或檔案群組都是相同的。 在完整復原模式下，一組完整的完整檔案備份連同足以涵蓋所有檔案備份的記錄備份，就相當於一個完整資料庫備份。  
@@ -87,7 +88,7 @@ ms.locfileid: "62876131"
 >  在完整復原模式下，還原讀取/寫入檔案備份時必須向前復原交易記錄，以確保檔案與資料庫其餘部分的一致性。 為了避免向前復原過多的交易記錄備份，請考慮使用差異檔案備份。 如需詳細資訊，請參閱 [差異備份 &#40;SQL Server&#41;](differential-backups-sql-server.md)。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
- **建立檔案或檔案群組備份**  
+ **若要建立檔案或檔案群組備份**  
   
 -   [備份檔案和檔案群組 &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)  
   
@@ -99,7 +100,7 @@ ms.locfileid: "62876131"
 ## <a name="see-also"></a>另請參閱  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [備份概觀 &#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [備份與還原：互通性與共存性 &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [備份與還原：互通性與共存 &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [差異備份 &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [檔案還原 &#40;簡單復原模式&#41;](file-restores-simple-recovery-model.md)   
  [檔案還原 &#40;完整復原模式&#41;](file-restores-full-recovery-model.md)   

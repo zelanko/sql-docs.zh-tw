@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872052"
 ---
 # <a name="contained-database-collations"></a>自主資料庫定序
-  許多屬性會影響文字資料的排序次序和相等語意，包括區分大小寫、區分腔調字和使用的基底語言。 這些品質會透過資料的定序選擇表達至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需定序本身的更深入討論，請參閱[定序與 Unicode 支援](../collations/collation-and-unicode-support.md)。  
+  許多屬性會影響文字資料的排序次序和相等語意，包括區分大小寫、區分腔調字和使用的基底語言。 這些品質會透過資料的定序選擇表達至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需定序本身的更深入討論，請參閱 [定序與 Unicode 支援](../collations/collation-and-unicode-support.md)。  
   
- 定序不只會套用至儲存在使用者資料表中的資料，還會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所處理的所有文字，包括中繼資料、暫存物件、變數名稱等。在自主及非自主資料庫中，這些項目的處理方式有所不同。 雖然這項變更不會影響許多使用者，不過有助於提供執行個體獨立性和統一性。 但是，這項變更可能也會導致一些混淆，並且導致同時存取包含和非自主資料庫的工作階段發生問題。  
+ 定序不只會套用至儲存在使用者資料表中的資料，還會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所處理的所有文字，包括中繼資料、暫存物件、變數名稱等。在自主及非自主資料庫中，這些項目的處理方式有所不同。 雖然這項變更不會影響許多使用者，不過有助於提供執行個體獨立性和統一性。 但是，這項變更可能也會導致一些混淆，並且導致同時存取包含和非自主資料庫的工作階段發生問題。  
   
  本主題將釐清此變更的內容，並且檢查此變更可能會導致問題的區域。  
   
@@ -58,7 +58,7 @@ mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS
 mycolumn2       Frisian_100_CS_AS  
 ```  
   
- 這段程式碼似乎相當簡單，不過卻引發許多問題。 因為資料行的定序相依於資料表建立所在的資料庫，使用暫存資料表就會儲存在引發問題`tempdb`。 定序`tempdb`通常符合執行個體，不需要符合資料庫定序的定序。  
+ 這段程式碼似乎相當簡單，不過卻引發許多問題。 因為資料行的定序相依于建立資料表所在的資料庫，所以使用儲存在中`tempdb`的臨時表就會發生問題。 的定序`tempdb`通常符合實例的定序，而不需要符合資料庫定序。  
   
 ### <a name="example-2"></a>範例 2  
  例如，假設上述 (中文) 資料庫使用於具有 **Latin1_General** 定序的執行個體上：  
@@ -85,7 +85,8 @@ JOIN #T2
   
  無法解析 equal to 作業中 "Latin1_General_100_CI_AS_KS_WS_SC" 及 "Chinese_Simplified_Pinyin_100_CI_AS" 之間的定序衝突。  
   
- 修正此問題的方法是明確地建立暫時資料表的定序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可提供 `DATABASE_DEFAULT` 子句的 `COLLATE` 關鍵字，以簡化此作業。  
+ 修正此問題的方法是明確地建立暫時資料表的定序。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可提供 `DATABASE_DEFAULT` 子句的 `COLLATE` 關鍵字，以簡化此作業。  
   
 ```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
@@ -111,22 +112,23 @@ AS BEGIN
 END;  
 ```  
   
- 這是相當罕見的函數。 在區分大小寫的定序@ireturn 子句中不能繫結至@I或 @ 」。 在不區分大小寫的 Latin1_General 定序中，@i 會繫結至 @I，而且函數會傳回 1。 但不區分大小寫的土耳其文定序，在@i繫結至 @ 」，而函式會傳回 2。 這在具有不同定序之執行個體之間移動的資料庫上可能會造成破壞。  
+ 這是相當罕見的函數。 在區分大小寫的定序中@i ，return 子句中的無法系結@I至或 @??。 在不區分大小寫的 Latin1_General 定序中，@i 會繫結至 @I，而且函數會傳回 1。 但在不區分大小寫的土耳其文@i定序中，會系結至 @??,，而函式會傳回2。 這在具有不同定序之執行個體之間移動的資料庫上可能會造成破壞。  
   
 ## <a name="contained-databases"></a>自主資料庫  
  因為自主資料庫的設計目標是要讓它們各自獨立，所以必須切斷執行個體和 `tempdb` 定序的相依性。 為了達到此目的，自主資料庫導入了目錄定序的概念。 目錄定序會用於系統中繼資料和暫時性物件。 下面將提供詳細資料。  
   
  在自主資料庫中，目錄定序 **Latin1_General_100_CI_AS_WS_KS_SC**。 對於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上之所有自主資料庫而言，這個定序都相同，而且無法變更。  
   
- 雖然資料庫定序會保留下來，不過只當做使用者資料的預設定序使用。 根據預設，資料庫定序等於模型資料庫定序，但是可以變更使用者已透過`CREATE`或`ALTER DATABASE`命令如同非自主資料庫。  
+ 雖然資料庫定序會保留下來，不過只當做使用者資料的預設定序使用。 根據預設，資料庫定序等於模型資料庫定序，但是使用者可透過`CREATE`或`ALTER DATABASE`命令加以變更，就如同非自主資料庫一樣。  
   
- `CATALOG_DEFAULT` 子句提供了新的關鍵字 `COLLATE`。 在包含和非自主資料庫中，這個關鍵字會當做中繼資料之目前定序的捷徑使用。 也就是說，在非自主資料庫中，`CATALOG_DEFAULT` 將傳回目前資料庫定序，因為中繼資料已在資料庫定序中定序。 在自主資料庫中，這兩個值可能會不同，因為使用者可以變更資料庫定序，讓它不符合目錄定序。  
+ 
+  `CATALOG_DEFAULT` 子句提供了新的關鍵字 `COLLATE`。 在包含和非自主資料庫中，這個關鍵字會當做中繼資料之目前定序的捷徑使用。 也就是說，在非自主資料庫中，`CATALOG_DEFAULT` 將傳回目前資料庫定序，因為中繼資料已在資料庫定序中定序。 在自主資料庫中，這兩個值可能會不同，因為使用者可以變更資料庫定序，讓它不符合目錄定序。  
   
  下表將摘要說明包含和非自主資料庫中各種物件的行為：  
   
 ||||  
 |-|-|-|  
-|**項目**|**非自主資料庫**|**自主資料庫**|  
+|**Item**|**非自主資料庫**|**自主資料庫**|  
 |使用者資料 (預設值)|COLLATE|COLLATE|  
 |暫存資料 (預設值)|TempDB 定序|COLLATE|  
 |中繼資料|DATABASE_DEFAULT / CATALOG_DEFAULT|COLLATE|  
@@ -235,7 +237,7 @@ GO
  無效的物件名稱 '#A'。  
   
 ### <a name="example-3"></a>範例 3  
- 下列範例將說明參考會尋找原本不同的多個相符項目的案例。 首先，我們開始`tempdb`（具有執行個體相同的區分大小寫定序），然後執行下列陳述式。  
+ 下列範例將說明參考會尋找原本不同的多個相符項目的案例。 首先，我們從`tempdb` （與實例具有相同的區分大小寫定序）開始，然後執行下列語句。  
   
 ```  
 USE tempdb;  

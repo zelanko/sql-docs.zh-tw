@@ -1,5 +1,5 @@
 ---
-title: 採礦模型檢視器 （資料採礦模型設計工具） |Microsoft Docs
+title: 採礦模型檢視器（資料採礦模型設計工具） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67cd89f4cf857f11f08f69769ff54a22fd83760f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077735"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>採礦模型檢視器 (資料採礦模型設計師)
@@ -33,8 +33,8 @@ ms.locfileid: "66077735"
  **採礦模型**  
  選擇包含在目前採礦結構中，您要檢視的採礦模型。 採礦模型將會先在其關聯的自訂檢視器中開啟。  
   
- **Viewer**  
- 選擇用來瀏覽選取之採礦模型的檢視器。 這份清單包含 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 為每個採礦模型提供的檢視器、 [!INCLUDE[msCoName](../includes/msconame-md.md)] 採礦內容檢視器，以及任何外掛程式檢視器。  
+ **檢視器**  
+ 選擇用來瀏覽選取之採礦模型的檢視器。 這份清單包含為每[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]個採礦模型提供的檢視器[!INCLUDE[msCoName](../includes/msconame-md.md)] 、挖掘內容檢視器，以及任何外掛程式檢視器。  
   
  下圖顯示相同模型的自訂檢視器和一般檢視器。  
   
@@ -53,45 +53,45 @@ ms.locfileid: "66077735"
   
 -   [使用 Microsoft 關聯規則檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
-    -   [項目集 索引標籤&#40;採礦模型檢視器&#41;](itemsets-tab-mining-model-viewer.md)  
+    -   [專案集索引標籤 &#40;&#41;的 [採礦模型檢視器]](itemsets-tab-mining-model-viewer.md)  
   
-    -   [規則索引標籤&#40;採礦模型檢視器&#41;](rules-tab-mining-model-viewer.md)  
+    -   [[規則] 索引標籤 &#40;&#41;的採礦模型檢視器](rules-tab-mining-model-viewer.md)  
   
-    -   [相依性網路 索引標籤&#40;採礦模型檢視器&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [[相依性網路] 索引標籤 &#40;&#41;的採礦模型檢視器](dependency-network-tab-mining-model-viewer.md)  
   
 ### <a name="microsoft-clustering-algorithm"></a>Microsoft 群集演算法  
   
 -   [使用 Microsoft 叢集檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
-    -   [叢集圖表索引標籤&#40;採礦模型檢視器&#41;](cluster-diagram-tab-mining-model-viewer.md)  
+    -   [[叢集圖表] 索引標籤 &#40;[採礦模型檢視器]&#41;](cluster-diagram-tab-mining-model-viewer.md)  
   
-    -   [叢集設定檔 索引標籤&#40;採礦模型檢視器&#41;](cluster-profiles-tab-mining-model-viewer.md)  
+    -   [[叢集設定檔] 索引標籤 &#40;&#41;的採礦模型檢視器](cluster-profiles-tab-mining-model-viewer.md)  
   
-    -   [叢集特性索引標籤&#40;採礦模型檢視器&#41;](cluster-characteristics-tab-mining-model-viewer.md)  
+    -   [[叢集特性] 索引標籤 &#40;[採礦模型檢視器]&#41;](cluster-characteristics-tab-mining-model-viewer.md)  
   
-    -   [叢集辨識索引標籤&#40;採礦模型檢視器&#41;](cluster-discrimination-tab-mining-model-viewer.md)  
+    -   [&#40;採礦模型檢視器&#41;的 [叢集辨識] 索引標籤](cluster-discrimination-tab-mining-model-viewer.md)  
   
-    -   [採礦圖例對話方塊&#40;採礦模型檢視器&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
+    -   [[挖掘圖例] 對話方塊 &#40;[採礦模型檢視器]&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
 ### <a name="microsoft-decision-tree-algorithm"></a>Microsoft 決策樹演算法  
   
 -   [使用 Microsoft 樹狀檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
-    -   [決策樹索引標籤&#40;採礦模型檢視器&#41;](decision-tree-tab-mining-model-viewer.md)  
+    -   [[決策樹] 索引標籤 &#40;[採礦模型檢視器]&#41;](decision-tree-tab-mining-model-viewer.md)  
   
-    -   [相依性網路 索引標籤&#40;採礦模型檢視器&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [[相依性網路] 索引標籤 &#40;&#41;的採礦模型檢視器](dependency-network-tab-mining-model-viewer.md)  
   
-    -   [採礦圖例對話方塊&#40;採礦模型檢視器&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
+    -   [[挖掘圖例] 對話方塊 &#40;[採礦模型檢視器]&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
 ### <a name="microsoft-linear-regression-algorithm"></a>Microsoft 線性迴歸演算法  
   
 -   [使用 Microsoft 類神經網路檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
-    -   [決策樹索引標籤&#40;採礦模型檢視器&#41;](decision-tree-tab-mining-model-viewer.md)  
+    -   [[決策樹] 索引標籤 &#40;[採礦模型檢視器]&#41;](decision-tree-tab-mining-model-viewer.md)  
   
-    -   [相依性網路 索引標籤&#40;採礦模型檢視器&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [[相依性網路] 索引標籤 &#40;&#41;的採礦模型檢視器](dependency-network-tab-mining-model-viewer.md)  
   
-    -   [採礦圖例對話方塊&#40;採礦模型檢視器&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
+    -   [[挖掘圖例] 對話方塊 &#40;[採礦模型檢視器]&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
 ### <a name="microsoft-logistic-regression-algorithm"></a>Microsoft 羅吉斯迴歸演算法  
   
@@ -101,52 +101,52 @@ ms.locfileid: "66077735"
   
 -   [使用 Microsoft 貝氏機率分類檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
-    -   [相依性網路 索引標籤&#40;採礦模型檢視器&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [[相依性網路] 索引標籤 &#40;&#41;的採礦模型檢視器](dependency-network-tab-mining-model-viewer.md)  
   
-    -   [屬性設定檔 索引標籤&#40;採礦模型檢視器&#41;](attribute-profiles-tab-mining-model-viewer.md)  
+    -   [[屬性設定檔] 索引標籤 &#40;[採礦模型檢視器&#41;](attribute-profiles-tab-mining-model-viewer.md)  
   
-    -   [屬性特性索引標籤&#40;採礦模型檢視器&#41;](attribute-characteristics-tab-mining-model-viewer.md)  
+    -   [[屬性特性] 索引標籤 &#40;[採礦模型檢視器]&#41;](attribute-characteristics-tab-mining-model-viewer.md)  
   
-    -   [屬性辨識索引標籤&#40;採礦模型檢視器&#41;](attribute-discrimination-tab-mining-model-viewer.md)  
+    -   [[屬性辨識] 索引標籤 &#40;[採礦模型檢視器]&#41;](attribute-discrimination-tab-mining-model-viewer.md)  
   
 ### <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm  
   
 -   [使用 Microsoft 類神經網路檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
-    -   [相依性網路 索引標籤&#40;採礦模型檢視器&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [[相依性網路] 索引標籤 &#40;&#41;的採礦模型檢視器](dependency-network-tab-mining-model-viewer.md)  
   
-    -   [類神經網路&#40;採礦模型檢視器&#41;](neural-network-mining-model-viewer.md)  
+    -   [類神經網路 &#40;採礦模型檢視器&#41;](neural-network-mining-model-viewer.md)  
   
-    -   [尋找節點對話方塊&#40;採礦模型檢視器&#41;](find-node-dialog-box-mining-model-viewer.md)  
+    -   [[尋找節點] 對話方塊 &#40;[採礦模型檢視器]&#41;](find-node-dialog-box-mining-model-viewer.md)  
   
 ### <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 時序叢集演算法  
   
 -   [使用 Microsoft 時序叢集檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-    -   [時序群集群集圖表索引標籤&#40;採礦模型檢視器](sequence-clustering-cluster-diagram-tab-mining-model-viewer.md)  
+    -   [時序群集叢集圖表索引標籤 &#40;[採礦模型檢視器]](sequence-clustering-cluster-diagram-tab-mining-model-viewer.md)  
   
-    -   [時序群集叢集設定檔 索引標籤&#40;採礦模型檢視器](sequence-clustering-cluster-profiles-tab-mining-model-viewer.md)  
+    -   [時序群集 [叢集設定檔] 索引標籤 &#40;[採礦模型檢視器]](sequence-clustering-cluster-profiles-tab-mining-model-viewer.md)  
   
-    -   [時序群集群集特性索引標籤&#40;採礦模型檢視器&#41;](sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md)  
+    -   [時序群集叢集特性索引標籤 &#40;採礦模型檢視器&#41;](sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md)  
   
-    -   [時序群集群集辨識索引標籤&#40;採礦模型檢視器&#41;](sequence-clustering-cluster-discrimination-tab-mining-model-viewer.md)  
+    -   [時序群集叢集辨識索引標籤 &#40;採礦模型檢視器&#41;](sequence-clustering-cluster-discrimination-tab-mining-model-viewer.md)  
   
-    -   [時序群集群集轉換索引標籤&#40;採礦模型檢視器&#41;](sequence-clustering-cluster-transition-tab-mining-model-viewer.md)  
+    -   [時序群集 [叢集轉換] 索引標籤 &#40;&#41;的採礦模型檢視器](sequence-clustering-cluster-transition-tab-mining-model-viewer.md)  
   
 ### <a name="microsoft-time-series-algorithm"></a>Microsoft 時間序列演算法  
   
 -   [使用 Microsoft 時間序列檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
-    -   [模型索引標籤&#40;採礦模型檢視器&#41;](model-tab-mining-model-viewers.md)  
+    -   [模型索引標籤 &#40;採礦模型檢視器&#41;](model-tab-mining-model-viewers.md)  
   
-    -   [圖表索引標籤&#40;採礦模型檢視器&#41;](chart-tab-mining-model-viewers.md)  
+    -   [[圖表] 索引標籤 &#40;採礦模型檢視器&#41;](chart-tab-mining-model-viewers.md)  
   
-    -   [採礦圖例對話方塊&#40;採礦模型檢視器&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
+    -   [[挖掘圖例] 對話方塊 &#40;[採礦模型檢視器]&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型檢視&#40;資料採礦模型設計工具&#41;](mining-models-view-data-mining-model-designer.md)   
- [採礦結構 檢視&#40;資料採礦模型設計工具&#41;](mining-structure-view-data-mining-model-designer.md)   
- [採礦精確度圖表設計師&#40;資料採礦&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [預測查詢產生器&#40;資料採礦&#41;](prediction-query-builder-data-mining.md)  
+ [[採礦模型] 視圖 &#40;資料採礦模型設計工具&#41;](mining-models-view-data-mining-model-designer.md)   
+ [&#40;資料採礦模型設計工具的「採礦結構視圖」&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [&#40;資料採礦&#41;的挖掘精確度圖表設計工具](mining-accuracy-chart-designer-data-mining.md)   
+ [預測查詢產生器 &#40;資料採礦&#41;](prediction-query-builder-data-mining.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5f348a7f76f65c19801525967f3ded5c8b0d2d26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835829"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>為 CDC 準備 SQL Server
@@ -26,13 +26,13 @@ ms.locfileid: "62835829"
   
  在 CDC 服務組態主控台中，按一下 [Prepare SQL Server (準備 SQL Server)]  。 如果無法使用這個選項，請確定已在主控台的左窗格選取 [Local CDC Services (本機 CDC 服務)]  。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 ### <a name="server-name"></a>伺服器名稱  
  輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在的伺服器名稱。  
   
 ### <a name="authentication"></a>驗證  
- 選取下列其中一項：  
+ 選取下列其中一個：  
   
 -   **Windows 驗證**  
   
@@ -56,6 +56,6 @@ ms.locfileid: "62835829"
   
 ## <a name="see-also"></a>另請參閱  
  [如何使用 CDC 服務](work-with-cdc-services.md)   
- [如何為 CDC 準備 SQL Server](prepare-sql-server-for-cdc.md)  
+ [如何準備 SQL Server 以使用 CDC](prepare-sql-server-for-cdc.md)  
   
   

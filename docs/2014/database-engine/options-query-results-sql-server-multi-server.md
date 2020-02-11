@@ -1,5 +1,5 @@
 ---
-title: 選項 (查詢結果-SQL Server-多-Server) |Microsoft Docs
+title: 選項（查詢結果-SQL Server-多伺服器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6019a328463d27b4495ae0db70e844eb4e05d747
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089970"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>選項 (查詢結果-SQL Server-多伺服器)
@@ -36,7 +36,7 @@ ms.locfileid: "66089970"
  選取此核取方塊可包含另一個資料行，此資料行所提供的登入是用來連接提供每一個資料列的伺服器。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立中央管理伺服器和伺服器群組&#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
+ [建立中央管理伺服器和伺服器群組 &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
  [同時針對多部伺服器執行陳述式 &#40;SQL Server Management Studio&#41;](../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md)  
   
   

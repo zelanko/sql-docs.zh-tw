@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2fd00fd96fe9b0bf7e1b605d935908970d0c1fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875621"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>在簡單復原模式下還原資料庫備份 (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "62875621"
 > [!IMPORTANT]  
 >  負責還原完整資料庫備份的系統管理員，必須是目前唯一正在使用即將還原之資料庫的人員。  
   
-## <a name="prerequisites-and-recommendations"></a>必要條件和建議  
+## <a name="prerequisites-and-recommendations"></a>先決條件和建議  
   
 -   若要還原加密的資料庫，您必須能夠存取之前用來加密資料庫的憑證或非對稱金鑰。 如果沒有該憑證或非對稱金鑰，就無法還原資料庫。 因此，只要需要備份，就必須保留用來加密資料庫加密金鑰的憑證。 如需詳細資訊，請參閱 [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md)。  
   

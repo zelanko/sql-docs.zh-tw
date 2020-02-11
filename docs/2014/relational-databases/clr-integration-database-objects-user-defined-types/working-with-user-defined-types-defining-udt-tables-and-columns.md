@@ -1,5 +1,5 @@
 ---
-title: 定義 UDT 資料表及資料行 |Microsoft Docs
+title: 定義 UDT 資料表和資料行 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,17 +23,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1b87e497c6610a2d75daa9432246e4f4b4690bab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874452"
 ---
 # <a name="defining-udt-tables-and-columns"></a>定義 UDT 資料表及資料行
-  一旦包含使用者定義的型別 (UDT) 的組件定義中已註冊[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫，它可以用在資料行定義。  
+  一旦包含使用者定義型別（UDT）定義的元件已經在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫中註冊之後，就可以在資料行定義中使用。  
   
 ## <a name="creating-tables-with-udts"></a>建立具有 UDT 的資料表  
- 在資料表中建立 UDT 資料行沒有特殊的語法。 您可以在資料行定義中使用 UDT 名稱，就像它是其中一個內部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型一樣。 下列 CREATE TABLE[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式會建立一個名為資料表**點**，具有名為資料行**識別碼**其定義為`int`身分識別資料行和 \ 資料表的主索引鍵。 第二個資料行稱為**PointValue**，資料類型為**點**。 在此範例中使用的結構描述名稱是**dbo**。 請注意，您必須具有指定結構描述名稱的必要使用權限。 如果省略了結構描述名稱，則會使用資料庫使用者的預設結構描述。  
+ 在資料表中建立 UDT 資料行沒有特殊的語法。 您可以在資料行定義中使用 UDT 名稱，就像它是其中一個內部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型一樣。 下列 CREATE TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)]語句會建立名為**Points**的資料表，其中包含名為**ID**的資料行，該`int`資料行會定義為識別欄位，而是資料表的主鍵。 第二個數據行的名稱為**PointValue**，其資料類型為**Point**。 此範例中使用的架構名稱為**dbo**。 請注意，您必須具有指定結構描述名稱的必要使用權限。 如果省略了結構描述名稱，則會使用資料庫使用者的預設結構描述。  
   
 ```  
 CREATE TABLE dbo.Points   
@@ -47,9 +47,9 @@ CREATE TABLE dbo.Points
   
 -   索引 UDT 運算式。 您可透過 UDT 運算式在保存的計算資料行上建立索引。 UDT 運算式可以是 UDT 的欄位、方法或屬性。 該運算式必須具有決定性，且不能執行資料存取。  
   
- 如需詳細資訊，請參閱 < [clr 使用者定義型別](clr-user-defined-types.md)並[CREATE INDEX &#40;-&#41;](/sql/t-sql/statements/create-index-transact-sql)。  
+ 如需詳細資訊，請參閱[CLR 使用者定義類型](clr-user-defined-types.md)和[CREATE INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/create-index-transact-sql)。  
   
 ## <a name="see-also"></a>另請參閱  
- [在 SQL Server 中使用使用者定義型別](working-with-user-defined-types-in-sql-server.md)  
+ [使用 SQL Server 中的使用者定義型別](working-with-user-defined-types-in-sql-server.md)  
   
   

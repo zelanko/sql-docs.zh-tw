@@ -1,5 +1,5 @@
 ---
-title: StopService 方法 （SqlService 類別） |Microsoft Docs
+title: StopService 方法（SqlService 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 56356fbf40939694a46f08c1cef5edc99049835e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62911669"
 ---
 # <a name="stopservice-method-sqlservice-class"></a>StopService 方法 (SqlService 類別)
@@ -38,11 +38,12 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
+ *目標*  
  表示此服務的 [SqlService 類別](sqlservice-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- `uint32` 值，如果已接受 `ResumeService` 要求為 0，如果不支援要求則為 1，以及其他指示錯誤的任何數字。  
+ 
+  `uint32` 值，如果已接受 `ResumeService` 要求為 0，如果不支援要求則為 1，以及其他指示錯誤的任何數字。  
   
 ## <a name="remarks"></a>備註  
   

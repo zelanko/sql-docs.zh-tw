@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084026"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 群集演算法技術參考
@@ -35,12 +35,13 @@ ms.locfileid: "66084026"
   
  如需有關如何使用叢集模型的詳細資訊，請參閱下列主題：  
   
--   [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [群集模型的模型內容 &#40;Analysis Services-資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
--   [群集模型查詢範例](clustering-model-query-examples.md)  
+-   [叢集模型查詢範例](clustering-model-query-examples.md)  
   
 ## <a name="implementation-of-the-microsoft-clustering-algorithm"></a>Microsoft 群集演算法的實作  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法提供兩種方法來建立群集並將資料點指派給群集。 第一種方法是 *K-means* 演算法，這是一種硬式群集方法。 這代表資料點只能屬於一個群集，而且會針對該群集中每個資料點的成員資格而計算單一機率。 第二種方法是 *Expectation Maximization* (EM) 方法，這是一種軟式群集  方法。 這代表資料點一定屬於多個群集，而且會針對資料點和群集的每個組合而計算機率。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法提供兩種方法來建立群集並將資料點指派給群集。 第一種方法是 *K-means* 演算法，這是一種硬式群集方法。 這代表資料點只能屬於一個群集，而且會針對該群集中每個資料點的成員資格而計算單一機率。 第二種方法是 *Expectation Maximization* (EM) 方法，這是一種軟式群集** 方法。 這代表資料點一定屬於多個群集，而且會針對資料點和群集的每個組合而計算機率。  
   
  您可以設定 *CLUSTERING_METHOD* 參數以選擇要使用的演算法。 預設的群集方法是可擴充的 EM。  
   
@@ -65,8 +66,8 @@ ms.locfileid: "66084026"
   
  如需描述以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法實作之 EM 的技術報告，請參閱 [Scaling EM (Expectation Maximization) Clustering to Large Databases](https://go.microsoft.com/fwlink/?LinkId=45964)(將 EM (Expectation Maximization) 群集擴充為大型資料庫)。  
   
-### <a name="k-means-clustering"></a>K-means 群集  
- K-means 群集是知名的群集成員資格指派方法，作業方式是將群集中項目之間的差異最小化，並將群集之間的距離最大化。 K-means 中的 "means" 是指群集的「距心」  ，這是任意選擇的資料點，在選擇後會反覆調整，直到能代表群集中所有資料點的真正平均值為止。 "k" 則是指用來植入群集程序的任意數目的資料點。 K-means 演算法會計算群集中資料記錄之間的歐氏距離平方 (Squared Euclidean Distance) 以及代表群集平均值的向量，然後在總和達到最小值時聚合於最終的一組 K 群集。  
+### <a name="k-means-clustering"></a>K-Means 叢集  
+ K-means 群集是知名的群集成員資格指派方法，作業方式是將群集中項目之間的差異最小化，並將群集之間的距離最大化。 K-means 中的 "means" 是指群集的「距心」**，這是任意選擇的資料點，在選擇後會反覆調整，直到能代表群集中所有資料點的真正平均值為止。 "k" 則是指用來植入群集程序的任意數目的資料點。 K-means 演算法會計算群集中資料記錄之間的歐氏距離平方 (Squared Euclidean Distance) 以及代表群集平均值的向量，然後在總和達到最小值時聚合於最終的一組 K 群集。  
   
  K-means 演算法會將每個資料點剛好指派給一個群集，而不允許成員資格有任何不確定性。 群集中的成員資格會以與距心的距離來表示。  
   
@@ -75,18 +76,20 @@ ms.locfileid: "66084026"
  1 - P(data point, cluster)  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法不會公開用來計算 K-means 的距離函數，而距離量值則無法用於完成的模型中。 不過，您可以使用預測函數來傳回對應至距離的值，其中距離是計算成屬於群集之資料點的機率。 如需詳細資訊，請參閱 [ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)。  
+>  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法不會公開用來計算 K-means 的距離函數，而距離量值則無法用於完成的模型中。 不過，您可以使用預測函數來傳回對應至距離的值，其中距離是計算成屬於群集之資料點的機率。 如需詳細資訊，請參閱 [ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)。  
   
  K-means 演算法提供兩種資料集取樣的方法：一種是不可擴充的 K-means，這種方法會載入整個資料集，且進行一次群集行程；另一種則是可擴充的 K-means，其中演算法會使用前 50,000 個案例，且只有在需要更多資料才能達到更佳的模型與資料符合度時，才會讀取更多的案例。  
   
 ### <a name="updates-to-the-microsoft-clustering-algorithm-in-sql-server-2008"></a>SQL Server 2008 中的 Microsoft 群集演算法更新  
- 在 SQL Server 2008 中， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法的預設組態已變更為使用內部參數 NORMALIZATION = 1。 正規化是使用 Z-score 統計資料執行，採用常態分佈。 此預設行為變更的意圖是將可能有大範圍和許多極端值之屬性的影響降至最低。 不過，Z-score 正規化可能會在非常態分佈 (例如統一分佈) 上改變群集結果。 若要防止正規化，取得和 SQL Server 2005 中的 K-means 群集演算法相同的行為，您可以使用 [參數設定]  對話方塊加入自訂參數 NORMALIZATION，並將其值設定為 0。  
+ 在 SQL Server 2008 中， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法的預設組態已變更為使用內部參數 NORMALIZATION = 1。 正規化是使用 Z-score 統計資料執行，採用常態分佈。 此預設行為變更的意圖是將可能有大範圍和許多極端值之屬性的影響降至最低。 不過，Z-score 正規化可能會在非常態分佈 (例如統一分佈) 上改變群集結果。 若要防止正規化，取得和 SQL Server 2005 中的 K-means 群集演算法相同的行為，您可以使用 [參數設定]**** 對話方塊加入自訂參數 NORMALIZATION，並將其值設定為 0。  
   
 > [!NOTE]  
 >  NORMALIZATION 參數是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法的內部屬性，不受支援。 一般而言，建議在群集模型中使用正規化，以改善模型結果。  
   
 ## <a name="customizing-the-microsoft-clustering-algorithm"></a>自訂 Microsoft 群集演算法  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 叢集演算法支援數個會影響所產生之採礦模型的行為、效能和精確度的參數。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 叢集演算法支援數個會影響所產生之採礦模型的行為、效能和精確度的參數。  
   
 ### <a name="setting-algorithm-parameters"></a>設定演算法參數  
  下表描述可用於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法的參數。 這些參數對於所產生之採礦模型的效能和精確度都有影響。  
@@ -106,7 +109,7 @@ ms.locfileid: "66084026"
  CLUSTER_COUNT  
  指定演算法要建立的大約群集數目。 如果無法從資料建立大約群集數目，則演算法會盡可能建立最多的群集。 將 CLUSTER_COUNT 設定為 0 會造成演算法使用啟發式決定，對於建立的群集數做出最好的決定。  
   
- 預設值是 10。  
+ 預設值為 10。  
   
  CLUSTER_SEED  
  指定在模型建立的初始階段，用於隨機產生群集的種子號碼。  
@@ -130,12 +133,12 @@ ms.locfileid: "66084026"
   
  減少候選模型的數目可以改善效能，但風險是可能會遺漏某些完善的候選模型。  
   
- 預設值是 10。  
+ 預設值為 10。  
   
  STOPPING_TOLERANCE  
  指定用來決定何時到達聚合以及演算法完成模型建立的值。 當群集機率的整體變更小於 STOPPING_TOLERANCE 參數除以模型大小的比率時，就到達聚合。  
   
- 預設值是 10。  
+ 預設值為 10。  
   
  SAMPLE_SIZE  
  指定如果 CLUSTERING_METHOD 參數設定為可擴充的其中一個群集方法時，演算法在每個行程上使用的案例數目。 將 SAMPLE_SIZE 參數設定為 0 會導致整個資料集群集在單一行程中。 在單一行程中載入整個資料集可能會導致記憶體和效能的問題。  
@@ -147,7 +150,7 @@ ms.locfileid: "66084026"
   
  增加屬性數目可能會使效能顯著下降。  
   
- 預設值是 255。  
+ 預設值為 255。  
   
  MAXIMUM_STATES  
  指定演算法所支援之屬性狀態的最大數目。 如果屬性擁有的狀態數超過最大值，則演算法會使用最常用的狀態，並忽略其餘的狀態。  
@@ -161,16 +164,17 @@ ms.locfileid: "66084026"
   
 |模型旗標|描述|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|資料會被視為擁有兩個可能狀態：遺失，且現有的。 Null 為遺漏值。<br /><br /> 適用於採礦模型資料行。|  
+|MODEL_EXISTENCE_ONLY|資料行將被視為擁有兩個可能狀態：「遺漏」和「現有」。 Null 為遺漏值。<br /><br /> 適用於採礦模型資料行。|  
 |NOT NULL|資料行不得包含 Null 值。 如果 Analysis Services 在模型定型期間遇到 Null 值，將會產生錯誤。<br /><br /> 適用於採礦結構資料行。|  
   
 ## <a name="requirements"></a>需求  
  叢集模型必須包含索引鍵資料行和輸入資料行。 您也可以將輸入資料行定義為可預測的。 設定為 `Predict Only` 的資料行不會用來建立群集。 這些值在群集內的散發是在建立群集之後才計算的。  
   
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)。  
   
-|「資料行」|內容類型|  
+|資料行|內容類型|  
 |------------|-------------------|  
 |輸入屬性|Continuous、Cyclical、Discrete、Discretized、Key、Table 和 Ordered|  
 |可預測屬性|Continuous、Cyclical、Discrete、Discretized、Table 和 Ordered|  
@@ -180,7 +184,7 @@ ms.locfileid: "66084026"
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 群集演算法](microsoft-clustering-algorithm.md)   
- [叢集模型查詢範例](clustering-model-query-examples.md)   
- [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [群集模型查詢範例](clustering-model-query-examples.md)   
+ [群集模型的模型內容 &#40;Analysis Services-資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

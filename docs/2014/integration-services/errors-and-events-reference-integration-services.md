@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899446"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>錯誤和事件參考 (Integration Services)
@@ -42,7 +42,7 @@ ms.locfileid: "62899446"
 |DTS_E_CONNECTIONNOTFOUND|指出封裝無法執行，因為找不到指定的連線管理員。|  
 |DTS_E_CONNECTIONREQUIREDFORMETADATA|指出 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師必須連接到資料來源，才能擷取來源或目的地的新增或更新中繼資料，並指出該設計師無法與資料來源連接。|  
 |DTS_E_MULTIPLECACHEWRITES|指出封裝無法執行，因為某個「快取轉換」轉換正嘗試將資料寫入記憶體中的快取。 不過，另一個「快取轉換」已經寫入記憶體中的快取。|  
-|DTS_E_PRODUCTLEVELTOLOW|指出封裝無法執行，因為尚未安裝正確的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 版本。|  
+|DTS_E_PRODUCTLEVELTOLOW|指出封裝無法執行，因為未安裝適當的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]版本。|  
 |DTS_E_READNOTFILLEDCACHE|指出「查閱」轉換正嘗試從記憶體中的快取讀取資料，同時「快取轉換」轉換正將資料寫入快取。|  
 |DTS_E_UNPROTECTXMLFAILED|指出系統並未將保護的 XML 節點解密。|  
 |DTS_E_WRITEWHILECACHEINUSE|指出「快取轉換」轉換正嘗試將資料寫入記憶體中的快取，同時「查閱」轉換正從記憶體中的快取讀取資料。|  
@@ -51,7 +51,7 @@ ms.locfileid: "62899446"
 ## <a name="events-sqlispackage"></a>事件 (SQLISPackage)  
  如需詳細資訊，請參閱 [Integration Services 封裝所記錄的事件](performance/events-logged-by-an-integration-services-package.md)。  
   
-|Event - 事件|描述|  
+|事件|描述|  
 |-----------|-----------------|  
 |SQLISPackage_12288|指出封裝已經啟動。|  
 |SQLISPackage_12289|指出封裝已順利地完成執行。|  
@@ -65,7 +65,7 @@ ms.locfileid: "62899446"
 ## <a name="events-sqlisservice"></a>事件 (SQLISService)  
  如需詳細資訊，請參閱 [Integration Services 服務所記錄的事件](service/events-logged-by-the-integration-services-service.md)。  
   
-|Event - 事件|描述|  
+|事件|描述|  
 |-----------|-----------------|  
 |SQLISService_256|指出服務即將啟動。|  
 |SQLISService_257|指出服務已經啟動。|  

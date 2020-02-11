@@ -16,23 +16,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755061"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>指定伺服器網路位址 (資料庫鏡像)
   設定資料庫鏡像工作階段時，需要有每一個伺服器執行個體的伺服器網路位址。 伺服器執行個體的伺服器網路位址必須透過提供系統位址和執行個體所接聽的通訊埠編號，以明確識別該執行個體。  
   
- 伺服器執行個體上必須有資料庫鏡像端點，您才能在伺服器網路位址中指定通訊埠。 如需詳細資訊，請參閱 [建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
+ 伺服器執行個體上必須有資料庫鏡像端點，您才能在伺服器網路位址中指定通訊埠。 如需詳細資訊，請參閱[建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
   
   
   
 ##  <a name="Syntax"></a> 伺服器網路位址的語法  
  伺服器網路位址的語法採用下列格式：  
   
- TCP<strong>://</strong> *\<系統位址>* <strong>:<strong> *\<通訊埠>* 
+ TCP：<strong>//</strong>*\<系統-位址>* <strong>：<strong>*\<埠>* 
   
  其中  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62755061"
   
     -   完整網域名稱保證可以運作。 這是在不同位置會有不同格式的本機定義位址字串。 完整網域名稱通常 (但不一定) 都是複合名稱，包含電腦名稱及一系列以句號分隔的網域區段，並採用下列格式：  
   
-         _電腦名稱_ **。** _網域區段_[... **.** _網域區段_]  
+         _電腦名稱_ **.** _網域區段_[... **.** _網域區段_]  
   
          其中 *電腦名稱*是執行伺服器執行個體之電腦的網路名稱，而 *網域區段*[... **.** _網域區段_] 則是伺服器的其餘網域資訊；例如： `localinfo.corp.Adventure-Works.com`。  
   
@@ -108,7 +108,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  若要形成完整的網域名稱，請串連 <主機名稱>  和 <主要 DNS 尾碼>  的值，如下所示：  
   
- <主機名稱>  **.** _<主要 DNS 尾碼>_  
+ _<主機名稱>_ **.** _<主要 DNS 尾碼>_  
   
  例如，IP 組態  
   

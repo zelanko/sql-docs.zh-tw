@@ -1,5 +1,5 @@
 ---
-title: SQLGetFunctions | Microsoft Docs
+title: SQLGetFunctions |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e7dbd69379bd59e75ac39fc5765514ab8e1b4151
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657827"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式介面符合三個已定義的合規性層級 （ISO、 Open Group 和 ODBC 層級 2） 的 odbc。 **SQLGetFunctions**支援所有 ODBC 函數的報表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式介面符合三個針對 ODBC （ISO、Open GROUP 和 odbc level 2）定義的相容性層級。 **SQLGetFunctions**報告[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援所有 ODBC 函數。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLGetFunctions 函數](https://go.microsoft.com/fwlink/?LinkId=59353)   
+ [SQLGetFunctions 函式](https://go.microsoft.com/fwlink/?LinkId=59353)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

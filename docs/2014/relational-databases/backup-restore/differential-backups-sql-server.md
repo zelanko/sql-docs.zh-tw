@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 179e7aaea331ba565ca5afae7bd51754e23b9718
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876184"
 ---
 # <a name="differential-backups-sql-server"></a>差異備份 (SQL Server)
   此備份和還原主題與所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫相關。  
   
- 差異備份是以之前最近一次的完整資料備份為基礎。 差異備份只擷取自那次完整備份以後變更過的資料。 差異備份據以為基礎的完整備份就稱為差異的 *「基底」* (Base)。 完整備份 (不包括僅限複製備份) 可做為一系列差異備份的基底，包括資料庫備份、部分備份及檔案備份。 檔案差異備份的基底備份可以包含在完整備份、檔案備份或部分備份之中。  
+ 差異備份是以先前最近的完整資料備份為基礎。 差異備份只擷取自那次完整備份以後變更過的資料。 差異備份據以為基礎的完整備份就稱為差異的 *「基底」* (Base)。 完整備份 (不包括僅限複製備份) 可做為一系列差異備份的基底，包括資料庫備份、部分備份及檔案備份。 檔案差異備份的基底備份可以包含在完整備份、檔案備份或部分備份之中。  
   
   
 ##  <a name="Benefits"></a> 優點  
@@ -34,7 +34,7 @@ ms.locfileid: "62876184"
   
 -   在完整復原模式下，使用差異備份可減少您必須還原的記錄備份數目。  
   
-##  <a name="Overview"></a> 差異備份概觀  
+##  <a name="Overview"></a>差異備份的總覽  
  差異備份擷取從建立差異基底到建立差異備份已變更之任何 *「範圍」* (Extent) (八個實體連續頁面的集合) 的狀態。 這表示給定差異備份的大小取決於基底之後變更過的資料量。 一般而言，基底愈舊，新的差異備份就會愈大。 在一系列的差異備份中，經常更新的範圍很可能包含每個差異備份中的不同資料。  
   
  下圖說明差異備份的運作方式。 圖中顯示 24 個資料範圍，其中 6 個已經變更。 差異備份只包含這 6 個資料範圍。 差異備份作業必須藉助點陣圖頁面 (此頁面包含每個範圍的一個位元)。 對於基底之後已更新的每個範圍，點陣圖中的位元將設為 1。  
@@ -53,10 +53,11 @@ ms.locfileid: "62876184"
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>使用記憶體最佳化資料表的資料庫差異備份  
  如需差異備份和具有記憶體最佳化資料表之資料庫的資訊，請參閱 [備份含有記憶體最佳化資料表的資料庫](../in-memory-oltp/memory-optimized-tables.md)。  
   
-##  <a name="ReadOnlyDbs"></a> 唯讀資料庫的差異備份  
+##  <a name="ReadOnlyDbs"></a>唯讀資料庫的差異備份  
  若為唯讀資料庫，單獨使用的完整備份會比搭配差異備份一起使用更容易管理。 當資料庫是唯讀時，備份和其他作業無法改變檔案所包含的中繼資料。 因此，差異備份所需的中繼資料，例如差異備份開始的記錄序號 (差異基底 LSN)，會儲存在 **master** 資料庫中。 如果差異基底是在資料庫為唯讀時建立，則差異點陣圖顯示的變更會比基底備份之後實際發生的變更還要多。 備份會讀取這些額外資料，但是不會將它寫入備份，因為 **backupset** 系統資料表中儲存的 [differential_base_lsn](/sql/relational-databases/system-tables/backupset-transact-sql) 是用來判斷在基底之後是否實際變更過資料。  
   
- 重建，還原或卸離後再重新附加唯讀資料庫時，會遺失差異基底資訊。 發生這種情形的原因是， **master** 資料庫與使用者資料庫並未同步。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 無法偵測或防止此問題。 以後的任何差異備份將不會以最近的完整備份為基底，因此可能會產生出人意料的結果。 若要建立新的差異基底，我們建議您建立完整資料庫備份。  
+ 重建，還原或卸離後再重新附加唯讀資料庫時，會遺失差異基底資訊。 發生這種情形的原因是， **master** 資料庫與使用者資料庫並未同步。 
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 無法偵測或防止此問題。 以後的任何差異備份將不會以最近的完整備份為基底，因此可能會產生出人意料的結果。 若要建立新的差異基底，我們建議您建立完整資料庫備份。  
   
 ### <a name="best-practices-for-using-differential-backups-with-a-read-only-database"></a>對唯讀資料庫使用差異備份的最佳作法  
  在建立唯讀資料庫的完整資料庫備份之後，如果您打算建立後續的差異備份，請備份 **master** 資料庫。  

@@ -1,5 +1,5 @@
 ---
-title: Microsoft 羅吉斯迴歸演算法 |Microsoft Docs
+title: Microsoft 羅吉斯回歸演算法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14e86ac2dd32f2a3e1384e08aca597794ee4bc71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083960"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft 羅吉斯迴歸演算法
   羅吉斯迴歸演算法是知名的統計技術，可用來模型化二進位結果。  
   
- 採用不同的學習技術，就可以在統計研究中以各種方式實作邏輯迴歸。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 羅吉斯迴歸演算法已使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法的變化來實作。 雖然此演算法與類神經網路演算法有許多共同特性，但更容易定型。  
+ 採用不同的學習技術，就可以在統計研究中以各種方式實作邏輯迴歸。 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 羅吉斯迴歸演算法已使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法的變化來實作。 雖然此演算法與類神經網路演算法有許多共同特性，但更容易定型。  
   
  羅吉斯迴歸演算法有一個優點，就是它的彈性極高，可使用任何種類的輸入，並支援數種不同的分析工作：  
   
@@ -46,11 +47,11 @@ ms.locfileid: "66083960"
   
  羅吉斯迴歸模型的需求如下：  
   
- **單一索引鍵資料行** ：每個模型都必須包含一個能唯一識別每一筆記錄的數值或文字資料行。 不允許複合的索引鍵。  
+ **單一索引鍵資料行**每個模型都必須包含一個可唯一識別每一筆記錄的數值或文字資料行。 不允許複合的索引鍵。  
   
- **輸入資料行** ：每個模型都至少包含一個輸入資料行，內含用來當做分析因素的值。 您可以依需求擁有任何數量的輸入資料行，但根據每個資料行中的值數目，加入額外的資料行可能會增加培訓模型所需的時間。  
+ **輸入資料行**每個模型都必須包含至少一個輸入資料行，其中包含做為分析因素的值。 您可以依需求擁有任何數量的輸入資料行，但根據每個資料行中的值數目，加入額外的資料行可能會增加培訓模型所需的時間。  
   
- **至少有一個可預測資料行** ：模型至少必須包含一個任何資料類型的可預測資料行，連續數值資料也包括在內。 可預測資料行的值也可用來當做模型的輸入，或者也可以指定只將其用於預測。 巢狀資料表不可用於可預測的資料行，但可用來當做輸入。  
+ **至少一個可預測資料行**模型必須至少包含一個任何資料類型的可預測資料行，包括連續數值資料。 可預測資料行的值也可用來當做模型的輸入，或者也可以指定只將其用於預測。 巢狀資料表不可用於可預測的資料行，但可用來當做輸入。  
   
  如需羅吉斯迴歸模型所支援之內容類型和資料類型的詳細資訊，請參閱 [Microsoft 羅吉斯迴歸演算法技術參考](microsoft-logistic-regression-algorithm-technical-reference.md)的＜需求＞一節。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "66083960"
   
  當您使用 Microsoft 類神經網路檢視器檢視此模型時，Analysis Services 會顯示對特定結果有影響的因素，並依其重要性排序。 您可以選擇要比較的屬性和值。 如需詳細資訊，請參閱 [使用 Microsoft 類神經網路檢視器瀏覽模型](browse-a-model-using-the-microsoft-neural-network-viewer.md)。  
   
- 如果想要知道更多詳細資訊，您可以在 Microsoft 一般內容樹狀檢視器中瀏覽此模型的詳細資料。 羅吉斯迴歸模型的模型內容包含可顯示該模型所用之所有輸入的臨界節點，以及可預測屬性的子網路。 如需詳細資訊，請參閱[羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)。  
+ 如果想要知道更多詳細資訊，您可以在 Microsoft 一般內容樹狀檢視器中瀏覽此模型的詳細資料。 羅吉斯迴歸模型的模型內容包含可顯示該模型所用之所有輸入的臨界節點，以及可預測屬性的子網路。 如需詳細資訊，請參閱 [羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)。  
   
 ## <a name="creating-predictions"></a>建立預測  
  在模型定型之後，您可以針對模型內容建立查詢以取得迴歸係數和其他詳細資料，也可以使用模型來進行預測。  
@@ -79,8 +80,8 @@ ms.locfileid: "66083960"
 -   不支援使用預測模型標記語言 (PMML) 來建立採礦模型。  
   
 ## <a name="see-also"></a>另請參閱  
- [羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)   
- [Microsoft 羅吉斯迴歸演算法技術參考](microsoft-logistic-regression-algorithm-technical-reference.md)   
+ [羅吉斯回歸模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Microsoft 羅吉斯回歸演算法技術參考](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [羅吉斯迴歸模型查詢範例](logistic-regression-model-query-examples.md)  
   
   

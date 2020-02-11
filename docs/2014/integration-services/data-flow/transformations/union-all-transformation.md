@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cfbe5ab3a255367922195594063a1734b8c66b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899871"
 ---
 # <a name="union-all-transformation"></a>聯集全部轉換
@@ -41,9 +41,9 @@ ms.locfileid: "62899871"
 ## <a name="configuration-of-the-union-all-transformation"></a>聯集全部轉換的組態  
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可在 [聯集全部轉換編輯器]  對話方塊中設定之屬性的詳細資訊，請參閱[聯集全部轉換編輯器](../../union-all-transformation-editor.md)。  
+ 如需可在 [聯集全部轉換編輯器]**** 對話方塊中設定之屬性的詳細資訊，請參閱[聯集全部轉換編輯器](../../union-all-transformation-editor.md)。  
   
- 如需可透過程式設計方式設定之屬性的詳細資訊，請參閱[通用屬性](../../common-properties.md)。  
+ 如需可透過程式設計方式設定之屬性的詳細資訊，請參閱 [通用屬性](../../common-properties.md)。  
   
  如需有關如何設定屬性的詳細資訊，請按下列其中一個主題：  
   

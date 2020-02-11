@@ -1,5 +1,5 @@
 ---
-title: 採礦結構 (Analysis Services-資料採礦) |Microsoft Docs
+title: 採礦結構（Analysis Services 資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,24 +22,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083382"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>採礦結構 (Analysis Services - 資料採礦)
   採礦結構定義從中建立採礦模型的資料：此結構會指定來源資料檢視、資料行的數目和類型，並將選用的資料分割指定為定型集和測試集。 單一採礦結構可支援共用相同網域的多個採礦模型。 下列圖表說明資料採礦結構與資料來源及其所構成資料採礦模型間的關聯性。  
   
- ![資料處理： 來源到結構到模型](../media/dmcon-modelarch.gif "資料處理： 來源到結構到模型")  
+ ![資料處理：來源到結構到模型](../media/dmcon-modelarch.gif "資料處理：來源到結構到模型")  
   
  此圖表的採礦結構是根據包含多個資料表或檢視的資料來源而定，這些資料表或檢視則是以 CustomerID 欄位聯結。 其中一個資料表包含客戶的相關資訊，例如地理區域、年齡、收入和性別，而相關的巢狀資料表則包含多個與個別客戶相關的其他資訊，例如該客戶曾購買過的產品。 此圖表顯示可以根據一個採礦結構而建立多個模型，而這些模型可使用此結構的不同資料行。  
   
- **模型 1** 使用 CustomerID、收入、年齡和區域，並根據區域篩選資料。  
+ **模型 1**使用 CustomerID、收入、年齡和區域，並篩選區域中的資料。  
   
- **模型 2** 使用 CustomerID、收入、年齡和區域，並根據年齡篩選資料。  
+ **模型 2**使用 CustomerID、收入、年齡和區域，並篩選年齡的資料。  
   
- **模型 3** 使用 CustomerID、年齡、性別和巢狀資料表，且沒有任何篩選。  
+ **模型 3**使用 CustomerID、年齡、性別和嵌套資料表，而不含任何篩選準則。  
   
  因為這些模型會使用不同的資料行做為輸入，而且其中兩個模型因套用篩選而會對模型中使用的資料進行額外的限制，所以即使模型是以相同的資料為基礎，也可能會產生非常不同的結果。 請注意，所有模型都需要 CustomerID 資料行，因為這是唯一可用來當做案例索引鍵的資料行。  
   
@@ -54,11 +54,11 @@ ms.locfileid: "66083382"
   
 -   定義結構的索引鍵，包括巢狀資料表的索引鍵 (如果適用的話)。  
   
--   指定來源資料是否應分成定型集和測試集。 此步驟是選擇性的。  
+-   指定來源資料是否應分成定型集和測試集。 此為選用步驟。  
   
 -   處理結構。  
   
- 這些步驟在下列章節中有更詳細的說明。  
+ 這些步驟將於下列各節中詳細說明。  
   
 ### <a name="data-sources-for-mining-structures"></a>採礦結構的資料來源  
  當您定義採礦結構時，您會使用現有資料來源檢視中可用的資料行。 資料來源檢視是可讓您合併多個資料來源，以做為單一來源的共用物件。 用戶端應用程式無法檢視原始資料來源，且您可以使用資料來源檢視的屬性修改資料類型、建立彙總或別名資料行。  
@@ -102,10 +102,11 @@ ms.locfileid: "66083382"
   
  如果想要檢視採礦結構中的資料，可以使用資料採礦延伸模組 (DMX) 來建立查詢。 例如， `SELECT * FROM <structure>.CASES` 陳述式會傳回採礦結構中的所有資料。 若要擷取這項資訊，必須已經處理過採礦結構，且必須將處理結果存入快取。  
   
- `SELECT * FROM <model>.CASES` 陳述式會傳回相同的資料行，但是僅針對該特定模型中的案例。 如需詳細資訊，請參閱 [SELECT FROM &#60;structure&#62;.CASES](/sql/dmx/select-from-structure-cases) 和 [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)。  
+ 
+  `SELECT * FROM <model>.CASES` 陳述式會傳回相同的資料行，但是僅針對該特定模型中的案例。 如需詳細資訊，請參閱 [SELECT FROM &#60;structure&#62;.CASES](/sql/dmx/select-from-structure-cases) 和 [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)。  
   
 ## <a name="using-data-mining-models-with-mining-structures"></a>搭配採礦結構使用資料採礦模型  
- 資料採礦模型會將採礦模型演算法套用至以採礦結構表示的資料。 採礦模型是屬於特定採礦結構的物件，且繼承採礦結構所定義的所有屬性值。 此模型可以使用採礦結構包含的所有資料行或資料行子集。 您可以將結構資料行的多個複本加入到結構中。 您也可以將結構資料行的多個複本加入到模型中，然後針對此模型中的每一個結構資料行指派不同的名稱或 *「別名」* (Alias)。 如需為結構資料行建立別名的詳細資訊，請參閱 [建立模型資料行的別名](create-an-alias-for-a-model-column.md) 和 [採礦模型屬性](mining-model-properties.md)。  
+ 資料採礦模型會將採礦模型演算法套用至以採礦結構表示的資料。 採礦模型是屬於特定採礦結構的物件，且繼承採礦結構所定義的所有屬性值。 此模型可以使用採礦結構包含的所有資料行或資料行子集。 您可以將結構資料行的多個複本加入到結構中。 您也可以將結構資料行的多個複本加入到模型中，然後針對此模型中的每一個結構資料行指派不同的名稱或 *「別名」*(Alias)。 如需為結構資料行建立別名的詳細資訊，請參閱 [建立模型資料行的別名](create-an-alias-for-a-model-column.md) 和 [採礦模型屬性](mining-model-properties.md)。  
   
  如需資料採礦模型之結構的詳細資訊，請參閱 [採礦模型 &#40;Analysis Services - 資料採礦&#41;](mining-models-analysis-services-data-mining.md)。  
   
@@ -114,14 +115,14 @@ ms.locfileid: "66083382"
   
 |工作|連結|  
 |-----------|-----------|  
-|使用關聯式採礦結構|[建立新的關聯式採礦結構](create-a-new-relational-mining-structure.md)<br /><br /> [將巢狀資料表新增至採礦結構](add-a-nested-table-to-a-mining-structure.md)|  
+|使用關聯式採礦結構|[建立新的關聯式採礦結構](create-a-new-relational-mining-structure.md)<br /><br /> [將巢狀資料表加入至採礦結構](add-a-nested-table-to-a-mining-structure.md)|  
 |使用以 OLAP Cube 為基礎的採礦結構|[建立新的 OLAP 採礦結構](create-a-new-olap-mining-structure.md)<br /><br /> [篩選採礦結構的來源 Cube](../filter-the-source-cube-for-a-mining-structure.md)|  
-|使用採礦結構中的資料行|[將資料行新增至採礦結構](add-columns-to-a-mining-structure.md)<br /><br /> [從採礦結構中移除資料行](remove-columns-from-a-mining-structure.md)|  
+|使用採礦結構中的資料行|[將資料行加入至採礦結構](add-columns-to-a-mining-structure.md)<br /><br /> [從採礦結構中移除資料行](remove-columns-from-a-mining-structure.md)|  
 |變更或查詢採礦結構屬性和資料|[變更採礦結構的屬性](change-the-properties-of-a-mining-structure.md)|  
 |使用基礎資料來源及更新來源資料|[編輯用於採礦結構的資料來源檢視](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [處理採礦結構](process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫物件 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [採礦模型 &#40;Analysis Services - 資料採礦&#41;](mining-models-analysis-services-data-mining.md)  
+ [資料庫物件 &#40;Analysis Services 多維度資料&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [&#40;Analysis Services 的採礦模型-資料採礦&#41;](mining-models-analysis-services-data-mining.md)  
   
   

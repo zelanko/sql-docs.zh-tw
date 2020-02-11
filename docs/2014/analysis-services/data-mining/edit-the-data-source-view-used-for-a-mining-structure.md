@@ -1,5 +1,5 @@
 ---
-title: 編輯用於採礦結構的資料來源檢視 |Microsoft Docs
+title: 編輯用於採礦結構的資料來源視圖 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec3175fd9979b6b0a781492fb7ae0cde532db366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084520"
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>編輯用於採礦結構的資料來源檢視
@@ -26,11 +26,11 @@ ms.locfileid: "66084520"
   
 ### <a name="to-access-data-source-view-designer-from-the-mining-structure-tab-in-data-mining-designer"></a>若要從採礦結構設計師的採礦結構索引標籤中存取資料來源檢視設計師  
   
--   以滑鼠右鍵按一下 [資料來源檢視]  窗格，並選取 [編輯資料來源檢視]  。  
+-   以滑鼠右鍵按一下 [資料來源檢視]**** 窗格，並選取 [編輯資料來源檢視]****。  
   
-     資料來源檢視設計師會在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的新索引標籤中開啟。  
+     資料來源檢視設計師會在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的新索引標籤中開啟。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦結構工作和操作說明](mining-structure-tasks-and-how-tos.md)  
+ [採礦結構工作和使用說明](mining-structure-tasks-and-how-tos.md)  
   
   
