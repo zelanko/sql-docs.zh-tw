@@ -1,5 +1,5 @@
 ---
-title: sys.server_events (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases server_events （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,31 +20,31 @@ ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3613c3da1138a6ec17394a5b6615d78d0a941e56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133145"
 ---
-# <a name="sysserverevents-transact-sql"></a>sys.server_events (Transact-SQL)
+# <a name="sysserver_events-transact-sql"></a>sys.server_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  針對伺服器層級事件通知或伺服器層級 DDL 觸發程序所引發的每個事件，各包含一個資料列。 資料行**object_id**並**型別**唯一識別伺服器事件。  
+  針對伺服器層級事件通知或伺服器層級 DDL 觸發程序所引發的每個事件，各包含一個資料列。 **Object_id**和**類型**的資料行可唯一識別伺服器事件。  
 
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|引發之伺服器層級事件通知或伺服器層級 DDL 觸發程序的識別碼。|  
 |**type**|**int**|導致事件通知或 DDL 觸發程序引發的事件類型。|  
-|**type_desc**|**nvarchar(60)**|導致 DDL 觸發程序或事件通知引發的事件描述。|  
+|**type_desc**|**Nvarchar （60）**|導致 DDL 觸發程序或事件通知引發的事件描述。|  
 |**event_group_type**|**int**|觸發程序或事件通知建立所在的事件群組，如果未在事件群組上建立則為 null。|  
-|**event_group_type_desc**|**nvarchar(60)**|觸發程序或事件通知建立所在之事件群組的描述，如果未在事件群組上建立則為 null。|  
+|**event_group_type_desc**|**Nvarchar （60）**|觸發程序或事件通知建立所在之事件群組的描述，如果未在事件群組上建立則為 null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

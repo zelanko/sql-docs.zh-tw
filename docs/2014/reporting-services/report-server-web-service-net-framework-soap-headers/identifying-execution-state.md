@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 088090fe1572c0a7fd2f1165c7bf1cd6f7eb6839
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63020245"
 ---
 # <a name="identifying-execution-state"></a>識別執行狀態
@@ -27,7 +27,8 @@ ms.locfileid: "63020245"
   
  工作階段管理需要將 HTTP 要求與從相同工作階段產生的其他舊要求相互關聯。 若沒有工作階段管理，由於 HTTP 通訊協定的無連接與無狀態的本質，這些要求會顯得與報表伺服器 Web 服務不相關。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 並不會公開工作階段狀態的整體概念，例如由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 所公開。 不過，當執行報表時，報表伺服器會以**執行**的形式在方法呼叫之間維護狀態。 執行可讓使用者以數種方式和報表互動，包括從報表伺服器載入報表、設定報表的認證與參數，以及轉譯報表。  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 並不會公開工作階段狀態的整體概念，例如由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 所公開。 不過，當執行報表時，報表伺服器會以**執行**的形式在方法呼叫之間維護狀態。 執行可讓使用者以數種方式和報表互動，包括從報表伺服器載入報表、設定報表的認證與參數，以及轉譯報表。  
   
  在與報表伺服器進行通訊時，用戶端會使用執行來管理報表檢視以及對報表中其他頁面的使用者導覽，並顯示或是隱藏報表的區段。 用戶端應用程式正在執行的每個報表，會有唯一的執行。  
   

@@ -16,24 +16,24 @@ ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 623f9b1f1e8873ddc4819bb8500c11edf09f5f76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919224"
 ---
 # <a name="datamember-property"></a>DataMember 屬性
-表示將會從擷取的資料成員名稱[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)所參考[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)屬性。  
+指出將從[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)屬性所參考之[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)抓取的資料成員名稱。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
  設定或傳回**字串**值。 名稱不區分大小寫。  
   
 ## <a name="remarks"></a>備註  
- 這個屬性用來與資料環境中建立資料繫結控制項。 資料環境維護集合包含的資料 （資料來源） 為具名物件 （資料成員），將會呈現為[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
+ 這個屬性是用來建立資料繫結控制項與資料環境。 資料環境會維護資料（資料來源）集合，其中包含將表示為[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的已命名物件（資料成員）。  
   
- **DataMember**並**DataSource**屬性必須一起使用。  
+ **DataMember**和**DataSource**屬性必須一起使用。  
   
- **DataMember**屬性會決定所指定的物件**DataSource**屬性會表示成**資料錄集**物件。 **資料錄集**必須先關閉物件，這個屬性設定。 如果會產生錯誤**DataMember**屬性未設定之前**DataSource**屬性，或如果**DataMember**名稱無法辨識指定的物件**DataSource**屬性。  
+ **DataMember**屬性會判斷**DataSource**屬性所指定的物件將會表示為**記錄集**物件。 設定此屬性之前，必須先關閉**記錄集**物件。 如果**datamember**屬性未設定于**datasource**屬性之前，或**datasource**屬性中指定的物件無法辨識**datamember**名稱，則會產生錯誤。  
   
 ## <a name="usage"></a>使用量  
   
@@ -43,7 +43,7 @@ rs.DataMember = "Command"     'Name of the rowset to bind to
 Set rs.DataSource = myDE      'Name of the object containing an IRowset  
 ```  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  

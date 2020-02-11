@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e83f539e1ffad77a337fc3e0142379da2ff0f703
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104097"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>設定報表伺服器來進行遠端管理
@@ -34,7 +34,7 @@ ms.locfileid: "66104097"
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要修改防火牆設定，您必須在本機登入，而且必須是本機管理員群組的成員； 您不能透過遠端連接修改遠端電腦的 Windows 防火牆設定。  
   
  如果您想要針對非管理員的使用者啟用遠端管理，必須將遠端啟動權限授與給「分散式元件物件模型」(DCOM) 帳戶。 本主題有提供針對非管理員存取權設定伺服器的指示。  
@@ -60,15 +60,15 @@ ms.locfileid: "66104097"
   
 ### <a name="to-open-ports-in-windows-firewall"></a>在 Windows 防火牆中開啟通訊埠  
   
-1.  [設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。  
+1.  [設定 Windows 防火牆以進行資料庫引擎存取](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。  
   
-2.  [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md)。  
+2.  [設定用於報表伺服器存取的防火牆](configure-a-firewall-for-report-server-access.md)。  
   
 ### <a name="to-configure-remote-connections-to-the-report-server-database"></a>設定與報表伺服器資料庫的遠端連接  
   
 1.  按一下 **[開始]** ，並依序指向 **[程式集]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]** ，然後按一下 **[SQL Server 組態管理員]** 。  
   
-2.  在左窗格中，展開 [SQL Server 網路設定]  ，然後針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體按一下 [通訊協定]  。  
+2.  在左窗格中，展開 [SQL Server 網路設定]  ，然後針對  **的執行個體按一下 [通訊協定]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 3.  在詳細資料窗格中，啟用 TCP/IP 和具名管道通訊協定，然後重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
   
@@ -76,9 +76,9 @@ ms.locfileid: "66104097"
   
 1.  以本機管理員的身分登入您想要啟用遠端管理的電腦。  
   
-2.  如果報表伺服器在 Windows Vista 上執行，以滑鼠右鍵按一下**命令提示字元**，然後選取**系統管理員身分執行**。 如果是其他作業系統，請開啟命令提示字元視窗。  
+2.  如果報表伺服器是在 Windows Vista 上執行，請以滑鼠右鍵按一下 [**命令提示**字元]，然後選取 [以**系統管理員身分執行**]。 如果是其他作業系統，請開啟命令提示字元視窗。  
   
-3.  執行下列命令：  
+3.  執行以下命令：  
   
     ```  
     netsh.exe firewall set service type=REMOTEADMIN mode=ENABLE scope=ALL  
@@ -98,7 +98,7 @@ ms.locfileid: "66104097"
   
 1.  在 [開始] 功能表上，指向 **[系統管理工具]** ，然後按一下 **[元件服務]** 。  
   
-     適用於 Windows Vista [開始] 功能表中，按一下**所有程式**，按一下**執行**，然後輸入`mmc comexp.msc`。  
+     若是 Windows Vista，請在 [開始] 功能表上，依序按一下 [**所有程式**] `mmc comexp.msc`、[**執行**] 和 [輸入]。  
   
 2.  開啟 [元件服務] 資料夾。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66104097"
   
 9. 輸入您的使用者帳戶名稱，然後按一下 **[確定]** 。  
   
-10. 在 [\<使用者或群組> 的權限]  的 [允許]  欄中，選取 [遠端啟動]  和 [遠端啟用]  ，然後按一下 [確定]  。  
+10. 在 [**使用者或群組> 的權限]\<** 的 [允許]  欄中，選取 [遠端啟動]  和 [遠端啟用]  ，然後按一下 [確定]  。  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>針對非管理員設定報表伺服器 WMI 命名空間的權限  
   

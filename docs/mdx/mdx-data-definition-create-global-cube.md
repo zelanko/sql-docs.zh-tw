@@ -1,5 +1,5 @@
 ---
-title: CREATE GLOBAL CUBE 語句 (MDX) |Microsoft Docs
+title: CREATE GLOBAL CUBE 語句（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d678622c67a83c279cce094b849829e668af30cb
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892154"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX 資料定義 - CREATE GLOBAL CUBE
 
 
-  根據伺服器上 Cube 的 Subcube，建立和擴展本機保存的 Cube。 連接到本機保存的 Cube 不需要連接伺服器。 如需本機 cube 的詳細資訊, 請參閱[本機 cube &#40;Analysis Services-&#41;多維度資料](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data)。  
+  根據伺服器上 Cube 的 Subcube，建立和擴展本機保存的 Cube。 連接到本機保存的 Cube 不需要連接伺服器。 如需本機 cube 的詳細資訊，請參閱[本機 cube &#40;Analysis Services 多維度資料&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -104,13 +104,13 @@ FROM source_cube_name (<param list>)
  dimension_name  
  本機 Cube 中維度的名稱。  
   
- From \<dim from 子句 >  
+ FROM \<dim from 子句>  
  只適用於衍生維度定義的有效規格。  
   
  NOT_RELATED_TO_FACTS  
  只適用於衍生維度定義的有效規格。  
   
- \<層級類型 >  
+ \<層級類型>  
  只適用於衍生維度定義的有效規格。  
   
 ## <a name="remarks"></a>備註  
@@ -133,7 +133,7 @@ FROM source_cube_name (<param list>)
   
  CREATE GLOBAL CUBE 陳述式遵守下列規則：  
   
--   CREATE GLOBAL CUBE 陳述式會自動將所有命令 (例如導出量值或動作) 複製到本機 Cube。 如果命令包含明確參考父 Cube 的「多維度運算式」(MDX) 運算式，本機 Cube 就無法執行該命令。 若要避免這個問題, 請在定義命令的 MDX 運算式時, 使用**CURRENTCUBE**關鍵字。 在 MDX 運算式中參考 cube 時, **CURRENTCUBE**關鍵字會使用目前的 cube 內容。  
+-   CREATE GLOBAL CUBE 陳述式會自動將所有命令 (例如導出量值或動作) 複製到本機 Cube。 如果命令包含明確參考父 Cube 的「多維度運算式」(MDX) 運算式，本機 Cube 就無法執行該命令。 若要避免這個問題，請在定義命令的 MDX 運算式時，使用**CURRENTCUBE**關鍵字。 在 MDX 運算式中參考 cube 時， **CURRENTCUBE**關鍵字會使用目前的 cube 內容。  
   
 -   從本機 Cube 檔案中現有的全域 Cube 所建立的全域 Cube，無法儲存在相同的本機 Cube 檔案。 例如，您建立了一個名稱為 SalesLocal1 的全域 Cube，並將此 Cube 儲存到 C:\SalesLocal.cub 檔案。 然後連接到 C:\SalesLocal.cub 檔案並建立第二個名稱為 SalesLocal2 的全域 Cube。 如果您現在嘗試將 SalesLocal2 全域 Cube 儲存到 C:\SalesLocal.cub 檔案，會收到錯誤。 但是，您可以將 SalesLocal2 全域 Cube 儲存到不同的本機 Cube 檔案。  
   
@@ -197,7 +197,7 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 資料定義語句&#40;mdx&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [CREATE SESSION CUBE 語句&#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
+ [Mdx 資料定義語句 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [&#40;MDX&#41;建立會話 CUBE 語句](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

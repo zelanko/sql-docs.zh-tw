@@ -1,5 +1,5 @@
 ---
-title: 權限授與 Integration Services 服務 |Microsoft Docs
+title: 授與 Integration Services 服務的許可權 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 989db1ed792d960b7a0dca22bd82ec8b2f5aa7df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058225"
 ---
 # <a name="grant-permissions-to-integration-services-service"></a>授予 Integration Services 服務的權限
@@ -24,9 +24,9 @@ ms.locfileid: "66058225"
   
 1.  執行 Dcomcnfg.exe。 Dcomcnfg.exe 提供使用者介面，可供修改登錄中的某些設定。  
   
-2.  在 [元件服務] 對話方塊中，展開 [元件服務] > [電腦] > [我的電腦] > [DCOM 組態] 節點。  
+2.  在 [元件服務]**** 對話方塊中，展開 [元件服務] > [電腦] > [我的電腦] > [DCOM 組態] 節點。  
   
-3.  以滑鼠右鍵按一下**Microsoft SQL Server Integration Services 12.0**，然後按一下**屬性**。  
+3.  以滑鼠右鍵按一下**Microsoft SQL Server Integration Services 12.0**，然後按一下 [**屬性**]。  
   
 4.  在 **[安全性]** 索引標籤上，按一下 **[啟動和啟用權限]** 區域中的 **[編輯]** 。  
   

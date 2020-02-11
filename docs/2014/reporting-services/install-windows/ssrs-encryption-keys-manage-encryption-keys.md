@@ -18,13 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4858b9844c4b07d270c615d30089d104bb7ba76a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108725"
 ---
 # <a name="configure-and-manage-encryption-keys-ssrs-configuration-manager"></a>設定和管理加密金鑰 (SSRS 組態管理員)
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用加密金鑰來保護儲存於報表伺服器資料庫中之認證和連線資訊的安全。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可透過用於保護敏感性資料的公開、私密和對稱金鑰組合來支援加密。 當您安裝或設定報表伺服器時，對稱金鑰會在報表伺服器起始設定期間建立，供報表伺服器用來對儲存於報表伺服器中之機密資料進行加密。 公開金鑰和私密金鑰是由作業系統所建立，可用來保護對稱金鑰。 針對負責儲存報表伺服器資料庫中之機密資料的每一個報表伺服器執行個體，建立一組公開金鑰和私密金鑰。  
   
  加密金鑰的管理包括建立對稱金鑰的備份副本，以及了解還原、刪除或變更金鑰的時機和方法。 如果您移轉報表伺服器安裝架構或設定向外延展部署，您必須擁有一份對稱金鑰的備份，才能將其套用於新的安裝架構。  
@@ -51,7 +52,7 @@ ms.locfileid: "66108725"
  [備份與還原 Reporting Services 加密金鑰](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
  說明如何備份加密金鑰，並還原金鑰以復原或移轉報表伺服器安裝。  
   
- [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [將加密的報表伺服器資料儲存 &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
  描述報表伺服器的加密。  
   
  [刪除和重新建立加密金鑰 &#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
@@ -61,6 +62,6 @@ ms.locfileid: "66108725"
  說明如何加入和移除加密金鑰，以控制哪些報表伺服器屬於向外延展部署的一部分。  
   
 ## <a name="see-also"></a>另請參閱  
- [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [將加密的報表伺服器資料儲存 &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

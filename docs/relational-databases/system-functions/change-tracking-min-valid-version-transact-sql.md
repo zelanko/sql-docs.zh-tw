@@ -1,5 +1,5 @@
 ---
-title: CHANGE_TRACKING_MIN_VALID_VERSION (TRANSACT-SQL) |Microsoft Docs
+title: CHANGE_TRACKING_MIN_VALID_VERSION （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -20,16 +20,16 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5bb0baec2284d17d84c7a8c3dddd13de3fa69510
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042940"
 ---
-# <a name="changetrackingminvalidversion-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
+# <a name="change_tracking_min_valid_version-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回的最小版本，適用於取得變更追蹤資訊從指定的資料表，當您使用用戶端[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)函式。  
+  當您使用[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)函數時，傳回用戶端上有效的最小版本，以便在從指定的資料表取得變更追蹤資訊時使用。  
     
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +42,13 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
   
 ## <a name="arguments"></a>引數  
  *table_object_id*  
- 這是資料表的物件識別碼。 *table_object_id*已**int**。  
+ 這是資料表的物件識別碼。 *table_object_id*為**int**。  
   
 ## <a name="return-type"></a>傳回類型  
- **bigint**  
+ **Bigint**  
   
 ## <a name="remarks"></a>備註  
- 若要驗證的值使用此函式*last_sync_version* CHANGETABLE 參數。 如果*last_sync_version*小於會報告此函式，從稍後呼叫 CHANGETABLE 所傳回的結果可能不是有效的值。  
+ 使用此函數來驗證 CHANGETABLE 的*last_sync_version*參數值。 如果*last_sync_version*小於此函數所報告的值，則稍後呼叫 CHANGETABLE 所傳回的結果可能無效。  
   
  CHANGE_TRACKING_MIN_VALID_VERSION 會使用下列資訊判斷傳回值：  
   

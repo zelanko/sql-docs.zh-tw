@@ -1,5 +1,5 @@
 ---
-title: sp_getsubscriptiondtspackagename (TRANSACT-SQL) |Microsoft Docs
+title: sp_getsubscriptiondtspackagename （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f8b8f0a91715a2af0cb794965e2de6ad520cabd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68123926"
 ---
-# <a name="spgetsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename (Transact-SQL)
+# <a name="sp_getsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回在資料傳送給訂閱者之前，用來轉換資料的 Data Transformation Services (DTS) 封裝名稱。 這個預存程序執行於任何資料庫的發行者端。  
@@ -38,12 +38,12 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'` 是發行集名稱。 **'***出版物***'** 是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'`這是發行集的名稱。 **'***發行***'** 是**sysname**，沒有預設值。  
   
-`[ @subscriber = ] 'subscriber'` 是訂閱者的名稱。 *訂閱者*是 sysname，預設值是 NULL。  
+`[ @subscriber = ] 'subscriber'`這是訂閱者的名稱。 *訂閱者*是 sysname，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -52,9 +52,9 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 |**new_package_name**|**sysname**|DTS 封裝的名稱。|  
   
 ## <a name="remarks"></a>備註  
- **sp_getsubscriptiondtspackagename**用於快照式複寫和異動複寫。  
+ **sp_getsubscriptiondtspackagename**用於快照式複寫和異動複寫中。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_getsubscriptiondtspackagename**。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_getsubscriptiondtspackagename**。  
   
   

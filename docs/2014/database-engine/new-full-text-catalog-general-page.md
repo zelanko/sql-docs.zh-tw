@@ -1,5 +1,5 @@
 ---
-title: 新的全文檢索目錄 （一般頁面） |Microsoft Docs
+title: 新增全文檢索目錄（一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62844096"
 ---
 # <a name="new-full-text-catalog-general-page"></a>新增全文檢索目錄 (一般頁面)
@@ -30,15 +30,15 @@ ms.locfileid: "62844096"
  **全文檢索目錄名稱**  
  全文檢索目錄的名稱。  
   
- **[擁有者]**  
+ **擁有者**  
  全文檢索目錄的擁有者。  
   
 ## <a name="options-panel"></a>選項面板  
  **設定為預設目錄**  
  選取即可將此目錄設定為新全文檢索目錄的預設目錄。  
   
- **區分腔調字**  
- 表示目錄會區分或不區分變音符號，例如波狀符號 ( **~** )、尖重音符號 (**´**) 或母音變化 (**¨**)。 如果您選取 **[不區分]** ，在與此全文檢索目錄相關的全文檢索索引中會忽略變音符號。 變音符號標記的相關資訊，請參閱[變音符號記號](https://www.merriam-webster.com/dictionary/diacritic)Merriam Webster 網站中。  
+ **區分重音**  
+ 指出類別目錄是否區分或不區分變音符號，例如波狀符號（**~**）、銳角、重音符號（**́**）或變音符號（**？**）。 如果您選取 **[不區分]**，在與此全文檢索目錄相關的全文檢索索引中會忽略變音符號。 如需有關變音符號的詳細資訊，請參閱 Merriam-Webster 網站中的變[音符號](https://www.merriam-webster.com/dictionary/diacritic)。  
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  

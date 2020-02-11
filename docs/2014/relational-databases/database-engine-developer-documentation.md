@@ -1,5 +1,5 @@
 ---
-title: 開發&#39;人員指南 (資料庫引擎) |Microsoft Docs
+title: 開發人員&#39;s 指南（資料庫引擎） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530954"
 ---
-# <a name="developer39s-guide-database-engine"></a>開發&#39;人員指南 (資料庫引擎)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供一組豐富的工具來開發、管理與控制資料庫應用程式。  
+# <a name="developer39s-guide-database-engine"></a>開發人員&#39;s 指南（資料庫引擎）
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]提供了一組豐富的工具，可用來開發、管理和控制資料庫應用程式。  
   
 ## <a name="in-this-section"></a>本節內容  
  [Common Language Runtime &#40;CLR&#41; 整合程式設計概念](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
@@ -34,7 +34,7 @@ ms.locfileid: "69530954"
  描述最新版的 SQLXML，提供與 SQLXML 3.0 相同的功能以及其他更新來配合 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 所推出的新功能，例如 xml 資料類型。  
   
  [組態管理的 WMI 提供者概念](wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
- 描述搭配適用於 Microsoft Management Console (MMC) 之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員嵌入式管理單元與 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員使用的發行層。 它會提供統一的方式來協助您連結管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員所要求之登錄作業的 API 呼叫，並在選取的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務上，提供增強的控制和操作功能。  
+ 說明與適用于 Microsoft Management Console （MMC [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ）的 Configuration Manager 嵌入式管理單元和[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager 搭配使用的已發佈層。 它會提供統一的方式來協助您連結管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員所要求之登錄作業的 API 呼叫，並在選取的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務上，提供增強的控制和操作功能。  
   
  [伺服器事件的 WMI 提供者概念](wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
  描述如何使用 Windows Management Instrumentation (WMI) 來監視 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體中的事件。  
@@ -42,7 +42,7 @@ ms.locfileid: "69530954"
  [SQL Server 管理物件 &#40;SMO&#41; 程式設計指南](server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
  包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) 的相關資訊，也就是針對管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之所有層面進行程式設計所設計的物件集合相關資訊。  
   
- [Database Engine 擴充預存程序程式設計](database-engine-extended-stored-procedure-programming.md)  
+ [資料庫引擎擴充預存程序程式設計](database-engine-extended-stored-procedure-programming.md)  
  描述如何使用擴充預存程序，以 C 之類的程式語言建立您自己的外部常式。  
   
  [資料收集器程式設計](../database-engine/dev-guide/data-collector-programming.md)  
@@ -53,9 +53,9 @@ ms.locfileid: "69530954"
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦程式設計](../analysis-services/dev-guide/data-mining-programming.md)   
- [開發人員指南&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
- [開發人員指南&#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
- [開發人員指南&#40;複寫&#41;](replication/concepts/replication-developer-documentation.md)   
- [開發人員指南&#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
+ [開發人員指南 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
+ [開發人員指南 &#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
+ [&#40;複寫&#41;的開發人員指南](replication/concepts/replication-developer-documentation.md)   
+ [開發人員指南 &#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
   
   

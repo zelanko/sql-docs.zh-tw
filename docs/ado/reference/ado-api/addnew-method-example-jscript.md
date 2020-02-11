@@ -1,5 +1,5 @@
 ---
-title: AddNew 方法範例 (JScript) |Microsoft Docs
+title: AddNew 方法範例（JScript） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91ed77c7ca8e04e346c87a32d38499a272ff5fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921296"
 ---
 # <a name="addnew-method-example-jscript"></a>AddNew 方法範例 (JScript)
-這個範例會使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法用來建立具有指定名稱的新記錄。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**AddNewJS.asp**。  
+這個範例會使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法，以指定的名稱建立新的記錄。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**AddNewJS。**  
   
 ```  
 <!-- BeginAddNewJS -->  
@@ -135,5 +135,5 @@ body {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [AddNew 方法 (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
+ [AddNew 方法（ADO）](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: 結構描述檢視 |Microsoft Docs
+title: 架構視圖 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: f1dfb3e8-a7bd-46c3-92b6-c19531e8409d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1e2dd512ab529f1fb5d216f4a2e459cd601d40e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67943750"
 ---
 # <a name="schema-views"></a>結構描述檢視
-應用程式在呼叫 ODBC 目錄函數，或使用 INFORMATION_SCHEMA 檢視，可以從 DBMS 擷取中繼資料資訊。 ANSI SQL-92 標準所定義的檢視。  
+應用程式可以藉由呼叫 ODBC 目錄函數或使用 INFORMATION_SCHEMA views，從 DBMS 抓取中繼資料資訊。 這些視圖是由 ANSI SQL-92 標準所定義。  
   
- 如果 DBMS 和驅動程式支援，INFORMATION_SCHEMA 檢視會提供更強大且最完整的方法，擷取中繼資料，比 ODBC 目錄函數所提供。 應用程式可以執行自己的自訂**選取**陳述式是否符合其中一個檢視，可以加入檢視，或可以在檢視上執行聯集。 同時提供更高的公用程式與更廣泛的中繼資料，INFORMATION_SCHEMA 檢視不常受到 DBMS。 這可能會變更為更多的 Dbms 和驅動程式達成與 SQL-92 的相容性。  
+ 如果 DBMS 和驅動程式支援，INFORMATION_SCHEMA views 提供比 ODBC 目錄函數提供更強大且完整的方法來抓取中繼資料。 應用程式可以對其中一個視圖執行自己的自訂**SELECT**語句、可以聯結視圖，或在 views 上執行聯集。 雖然提供更大的公用程式和更廣泛的中繼資料，但 DBMS 不常支援 INFORMATION_SCHEMA 的觀點。 這可能會因為 Dbms 和驅動程式達到 SQL-92 的相容性而變更。  
   
- 若要判斷支援哪些檢視，應用程式會呼叫**SQLGetInfo** SQL_INFO_SCHEMA_VIEWS 選項。 若要從支援的檢視中擷取中繼資料，應用程式執行**選取**陳述式，指定所需的結構描述資訊。
+ 為了判斷支援哪些視圖，應用程式會使用 SQL_INFO_SCHEMA_VIEWS 選項來呼叫**SQLGetInfo** 。 若要從支援的視圖抓取中繼資料，應用程式會執行**SELECT**語句，以指定所需的架構資訊。

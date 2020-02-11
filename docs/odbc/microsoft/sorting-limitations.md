@@ -14,11 +14,11 @@ ms.assetid: 2273e058-f6a3-4fc3-875f-e506cb1015ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91e4851197dd8798641eaf400084694afe667dfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063387"
 ---
 # <a name="sorting-limitations"></a>排序限制
-GROUP BY 子句、 ORDER BY 子句、 SELECT DISTINCT 陳述式或外部聯結中排序索引鍵的最大長度是 255 個位元組;所有的排序索引鍵，排序資料列中的最大長度是 65,500 個位元組。
+GROUP BY 子句、ORDER BY 子句、SELECT DISTINCT 語句或 outer join 中排序索引鍵的最大長度為255個位元組;排序資料列中所有排序索引鍵的最大長度為65500個位元組。

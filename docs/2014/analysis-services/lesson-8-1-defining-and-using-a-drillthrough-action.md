@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493819"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>定義和使用鑽研動作
@@ -24,77 +24,78 @@ ms.locfileid: "69493819"
   
 ## <a name="defining-the-drillthrough-action-properties"></a>定義鑽研動作屬性  
   
-1.  在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 的 [Cube 設計師] 中，按一下 [動作] 索引標籤。  
+1.  在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 的 [Cube 設計師] 中，按一下 [動作]**** 索引標籤。  
   
-     [動作] 索引標籤含有幾個窗格。 該索引標籤的左側具有 [動作組合管理] 窗格和 [計算工具] 窗格。 這兩個窗格右邊的窗格是 [顯示] 窗格，其中包含在 [動作組合管理] 窗格中選取之動作的詳細資料。  
+     [動作]**** 索引標籤含有幾個窗格。 該索引標籤的左側具有 [動作組合管理]**** 窗格和 [計算工具]**** 窗格。 這兩個窗格右邊的窗格是 [顯示]**** 窗格，其中包含在 [動作組合管理]**** 窗格中選取之動作的詳細資料。  
   
-     下圖顯示 [Cube 設計師] 的 [動作] 索引標籤。  
+     下圖顯示 [Cube 設計師] 的 [動作]**** 索引標籤。  
   
-     ![動作索引標籤，Cube 設計師](../../2014/tutorials/media/l8-action1.gif "Cube 設計師 的 [動作] 索引標籤")  
+     ![Cube 設計師的動作索引標籤](../../2014/tutorials/media/l8-action1.gif "Cube 設計師的動作索引標籤")  
   
-2.  在 [動作] 索引標籤的工具列上，按一下 [新增鑽研動作] 按鈕。  
+2.  在 [動作]**** 索引標籤的工具列上，按一下 [新增鑽研動作]**** 按鈕。  
   
      此時，[顯示] 窗格中會出現一個空白的動作範本。  
   
      ![顯示窗格中的空白動作範本](../../2014/tutorials/media/l8-action2.gif "顯示窗格中的空白動作範本")  
   
-3.  在 [**名稱**] 方塊中, 將此動作的名稱`Internet Sales Details Drillthrough Action`變更為。  
+3.  在 [**名稱**] 方塊中，將此動作的名稱`Internet Sales Details Drillthrough Action`變更為。  
   
-4.  在 [量值群組成員] 清單中，選取 [網際網路銷售]。  
+4.  在 [量值群組成員]**** 清單中，選取 [網際網路銷售]****。  
   
-5.  在 [鑽研資料行] 方塊中，從 [維度] 清單中選取 [網際網路銷售訂單的詳細資料]。  
+5.  在 [鑽研資料行]**** 方塊中，從 [維度]**** 清單中選取 [網際網路銷售訂單的詳細資料]****。  
   
-6.  在 [傳回資料行] 清單中，選取 [項目描述] 和 [訂單號碼] 核取方塊，然後按一下 [確定]。 下圖所示範的是，程序此時應該顯示的動作範本。  
+6.  在 [傳回資料行]**** 清單中，選取 [項目描述]**** 和 [訂單號碼]**** 核取方塊，然後按一下 [確定]****。 下圖所示範的是，程序此時應該顯示的動作範本。  
   
-     ![鑽取資料行](../../2014/tutorials/media/l8-action3.gif "方塊鑽取資料行") 方塊  
+     ![鑽研資料行方塊](../../2014/tutorials/media/l8-action3.gif "鑽研資料行方塊")  
   
-7.  展開 [其他屬性] 方塊，如下圖所示。  
+7.  展開 [其他屬性]**** 方塊，如下圖所示。  
   
-     ![其他屬性](../../2014/tutorials/media/l8-action4.gif "方塊其他屬性")方塊  
+     ![其他屬性方塊](../../2014/tutorials/media/l8-action4.gif "其他屬性方塊")  
   
-8.  在 [**最大資料列數**] 方塊中, 輸入`10`。  
+8.  在 [**最大資料列數**] 方塊中，輸入`10`。  
   
-9. 在 [**標題**] 方塊中`Drillthrough to Order Details...`, 輸入。  
+9. 在 [**標題**] 方塊中`Drillthrough to Order Details...`，輸入。  
   
-     這些設定會限制傳回的資料列數，指定在用戶端應用程式功能表中所顯示的標題。 下圖顯示 [其他屬性] 方塊中的這些設定。  
+     這些設定會限制傳回的資料列數，指定在用戶端應用程式功能表中所顯示的標題。 下圖顯示 [其他屬性]**** 方塊中的這些設定。  
   
-     ![其他屬性](../../2014/tutorials/media/l8-action5.gif "方塊其他屬性")方塊  
+     ![其他屬性方塊](../../2014/tutorials/media/l8-action5.gif "其他屬性方塊")  
   
 ## <a name="using-the-drillthrough-action"></a>使用鑽研動作  
   
-1.  在 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
+1.  在 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。  
   
-2.  順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，按一下 [Cube 設計師] 的 [瀏覽器] 索引標籤，然後按一下 [重新連接] 按鈕。  
+2.  順利完成部署之後，針對 ** 教學課程 Cube，按一下 [Cube 設計師] 的 [瀏覽器]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 索引標籤，然後按一下 [重新連接]**** 按鈕。  
   
 3.  啟動 Excel。  
   
-4.  將 [網際網路銷售 - 銷售量] 量值加入 [值] 區域。  
+4.  將 [網際網路銷售 - 銷售量]**** 量值加入 [值] 區域。  
   
-5.  將 客戶地理位置 使用者定義階層從 客戶 維度的 位置 資料夾加入 報表篩選 區域中。  
+5.  將 [客戶地理位置]**** 使用者定義階層從 [客戶]**** 維度的 [位置**** 資料夾加入 [報表篩選]**** 區域中。  
   
-6.  在樞紐分析表的 [客戶地理位置] 中，加入選取單一客戶的篩選。 依序展開 [所有客戶]、[澳大利亞]、[昆士蘭]、[布里斯本]、[4000]，選取 [Adam Powell] 的核取方塊，然後按一下 [確定]。  
+6.  在樞紐分析表的 [客戶地理位置]**** 中，加入選取單一客戶的篩選。 依序展開 [所有客戶]****、[澳大利亞]****、[昆士蘭]****、[布里斯本]****、[4000]****，選取 [Adam Powell]**** 的核取方塊，然後按一下 [確定]****。  
   
-     [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 到 Adam Powell 的產品總銷售會顯示在資料區域中。  
+     
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 到 Adam Powell 的產品總銷售會顯示在資料區域中。  
   
-7.  以滑鼠右鍵按一下銷售量，指向 [其他動作]，然後按一下 [鑽研至訂單詳細資料]。  
+7.  以滑鼠右鍵按一下銷售量，指向 [其他動作]****，然後按一下 [鑽研至訂單詳細資料]****。  
   
-     運送給 Adam Powell 的訂單詳細資料會顯示在 [資料範例檢視器] 中，如下圖所示。 不過，額外附加的詳細資料，有時候是很有用的，例如，訂購日期、截止日期和出貨日期。 在下一個程序中，您要加入這些額外的詳細資料。  
+     運送給 Adam Powell 的訂單詳細資料會顯示在 [資料範例檢視器]**** 中，如下圖所示。 不過，額外附加的詳細資料，有時候是很有用的，例如，訂購日期、截止日期和出貨日期。 在下一個程序中，您要加入這些額外的詳細資料。  
   
-     ![傳送至 Adam Powell 的訂單](../../2014/tutorials/media/l8-action6.gif "傳送至 Adam Powell 的訂單")  
+     ![運送給 Adam Powell 的訂購貨品](../../2014/tutorials/media/l8-action6.gif "運送給 Adam Powell 的訂購貨品")  
   
 8.  關閉 Excel/  
   
 ## <a name="modifying-the-drillthrough-action"></a>修改鑽研動作  
   
-1.  針對 [網際網路銷售訂單的詳細資料] 維度開啟 [維度設計師]。  
+1.  針對 [網際網路銷售訂單的詳細資料]**** 維度開啟 [維度設計師]。  
   
      請注意，這個維度只定義了三個屬性。  
   
-2.  在 [資料來源檢視] 窗格中，以滑鼠右鍵按一下其中一個開放區域，然後按一下 [顯示所有資料表]。  
+2.  在 [資料來源檢視]**** 窗格中，以滑鼠右鍵按一下其中一個開放區域，然後按一下 [顯示所有資料表]****。  
   
-3.  在 [格式] 功能表上，指向 [自動版面配置]，然後按一下 [圖表]。  
+3.  在 [格式]**** 功能表上，指向 [自動版面配置]****，然後按一下 [圖表]****。  
   
-4.  以滑鼠右鍵按一下 [資料來源檢視] 窗格中的開放區域，藉以找出 **InternetSales (dbo.FactInternetSales)** 資料表。 然後，依序按一下 [尋找資料表]、[InternetSales] 和 [確定]。  
+4.  以滑鼠右鍵按一下 [資料來源檢視]**** 窗格中的開放區域，藉以找出 **InternetSales (dbo.FactInternetSales)** 資料表。 然後，依序按一下 [尋找資料表]****、[InternetSales]**** 和 [確定]****。  
   
 5.  根據下列資料行，建立新的屬性：  
   
@@ -104,15 +105,15 @@ ms.locfileid: "69493819"
   
     -   ShipDateKey  
   
-6.  將 [**訂單日期**] 索引鍵屬性`Order Date`的 [**名稱**] 屬性變更為, 然後按一下 [**名稱資料行**] 屬性的 [流覽] 按鈕, 然後在 [名稱資料**行**] 對話方塊中, 選取 [**日期**] 做為來源資料表, 然後選取SimpleDate 做為來源資料行。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  將 [**訂單日期**] 索引鍵`Order Date`屬性的 [**名稱**] 屬性變更為，然後按一下 [**名稱資料行**] 屬性的 [流覽] 按鈕，然後在 [名稱資料**行**] 對話方塊中，選取 [日期] 做為來源資料表，然後選取 [SimpleDate] 做為源**資料**行。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  將 [**到期日期**] 索引鍵屬性的 [ `Due Date`**名稱**] 屬性變更為, 然後使用與 [**訂單日期索引鍵**] 屬性相同的方法, 將此屬性的 [名稱] 資料**行**屬性變更為 [ **SimpleDate (WChar)]。** .  
+7.  將 [**到期日期**] 索引鍵屬性的`Due Date`[**名稱**] 屬性變更為，然後使用與 [**訂單日期索引鍵**] 屬性相同的方法，將此屬性的 [名稱] 資料**行**屬性變更為**SimpleDate （WChar）**。  
   
-8.  將 [出**貨日期索引鍵**] 屬性的 [ `Ship Date`**名稱**] 屬性變更為, 然後將這個屬性的 [名稱] 資料**行**屬性變更為**SimpleDate (WChar)** 。  
+8.  將 [出**貨日期索引鍵**] 屬性的 [ `Ship Date`**名稱**] 屬性變更為，然後將這個屬性的 [名稱] 資料**行**屬性變更為**SimpleDate （WChar）**。  
   
-9. 針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師] 的 [動作] 索引標籤。  
+9. 針對 ** 教學課程 Cube，切換到 [Cube 設計師] 的 [動作]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 索引標籤。  
   
-10. 在 [鑽研資料行] 方塊中，選取核取方塊，以便下列資料行加入 [傳回資料行] 清單，然後按一下 [確定]：  
+10. 在 [鑽研資料行]**** 方塊中，選取核取方塊，以便下列資料行加入 [傳回資料行]**** 清單，然後按一下 [確定]****：  
   
     -   Order Date  
   
@@ -122,31 +123,31 @@ ms.locfileid: "69493819"
   
      下圖所顯示的是這些選取的資料行。  
   
-     ![鑽取資料行](../../2014/tutorials/media/l8-action7.gif "方塊鑽取資料行") 方塊  
+     ![鑽研資料行方塊](../../2014/tutorials/media/l8-action7.gif "鑽研資料行方塊")  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>檢閱修改後的鑽研動作  
   
-1.  在 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
+1.  在 [建立]**** 功能表上，按一下 [部署 Analysis Services 教學課程]****。  
   
-2.  順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換至 [Cube 設計師] 的 [瀏覽器] 索引標籤，然後按一下 [重新連接] 按鈕。  
+2.  順利完成部署之後，針對 ** 教學課程 Cube，切換至 [Cube 設計師] 的 [瀏覽器]**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 索引標籤，然後按一下 [重新連接]**** 按鈕。  
   
 3.  啟動 Excel。  
   
-4.  使用 [值] 區域中的 [網際網路銷售 - 銷售量]，以及報表篩選中的 [客戶地理位置] 重新建立樞紐分析表。  
+4.  使用 [值] 區域中的 [網際網路銷售 - 銷售量]****，以及報表篩選中的 [客戶地理位置]**** 重新建立樞紐分析表。  
   
-     加入從 [所有客戶]、[澳大利亞]、[昆士蘭]、[布里斯本]、[4000]、[Adam Powell] 選取的篩選。  
+     加入從 [所有客戶]****、[澳大利亞]****、[昆士蘭]****、[布里斯本]****、[4000]****、[Adam Powell]**** 選取的篩選。  
   
-5.  按一下 [網際網路銷售 - 銷售量] 資料格，指向 [其他動作]，然後按一下 [鑽研至訂單詳細資料]。  
+5.  按一下 [網際網路銷售 - 銷售量]**** 資料格，指向 [其他動作]****，然後按一下 [鑽研至訂單詳細資料]****。  
   
      傳送給 Adam Powell 的訂購詳細資料會顯示在暫存的工作表中。 這項資料包括項目描述、訂單號碼、訂購日期、截止日期和出貨日期資訊，如下圖所示。  
   
-     ![傳送至 Adam Powell 的訂單](../../2014/tutorials/media/l8-action8.gif "傳送至 Adam Powell 的訂單")  
+     ![運送給 Adam Powell 的訂購貨品](../../2014/tutorials/media/l8-action8.gif "運送給 Adam Powell 的訂購貨品")  
   
 ## <a name="next-lesson"></a>下一課  
- [第9課:定義觀點和翻譯](lesson-9-defining-perspectives-and-translations.md)  
+ [第 9 課：定義檢視方塊和翻譯](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [動作&#40;Analysis Services-多維度資料&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+ [&#40;Analysis Services 多維度資料的動作&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [多維度模型中的動作](multidimensional-models/actions-in-multidimensional-models.md)   
  [維度關聯性](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [定義事實關聯性](lesson-5-2-defining-a-fact-relationship.md)   

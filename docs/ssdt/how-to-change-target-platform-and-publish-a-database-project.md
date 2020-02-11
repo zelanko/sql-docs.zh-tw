@@ -1,11 +1,7 @@
 ---
-title: 如何：變更目標平台及發佈資料庫專案 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 變更目標平台及發佈資料庫專案
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.publish.dialog
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a2dd22b47da751294b60f57aaad246234004e946
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: a2af594db8c4f92028a9a36b8cc54f5f3712c9b4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897361"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241595"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>如何：變更目標平台及發佈資料庫專案
+
 您可以將您的 SQL Server Data Tools (SSDT) 資料庫專案的目標 SQL Server 版本變更為任何支援之 SQL Server (SQL Server 2005、2008、2008 R2、Microsoft SQL Server 2012 或 SQL Azure) 的執行個體。 如此一來，您就可以將資料庫開發工作集中於一個專案，但視需要再將它發行到多個 SQL Server 執行個體。  
   
 SSDT 透過對目標平台的認知以及自動偵測程式碼中的任何錯誤 (例如為即將發行到 SQL Azure 的專案使用未支援的功能)，也讓這項工作變得簡單一些。  

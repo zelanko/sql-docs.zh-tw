@@ -11,10 +11,10 @@ ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 08cb402143cd5290d0f228d2dcab242c3139408a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729251"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>從資料表匯入資料 (Master Data Services)
@@ -29,9 +29,9 @@ ms.locfileid: "73729251"
   
 -   您必須具備權限，才能執行 \< 資料庫中的 stg.udp_\_名稱>_Leaf、stg.udp\<\_名稱>_Consolidated 或 stg.udp\<[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]名稱>_Relationship 預存程序。  
   
--   模型的狀態不得為 [已認可]。  
+-   模型的狀態不得為 [已認可] ****。  
   
- **在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中加入、更新及刪除資料**  
+ **若要加入、更新和刪除資料庫中的[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料**  
   
 1.  準備要匯入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫之適當暫存資料表中的成員，這包括為必要欄位提供值。 如需暫存資料表的概觀，請參閱[概觀︰從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73729251"
   
 2.  開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 並連接到您 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 Database Engine 執行個體。  
   
-     如需詳細資訊，請參閱＜ [SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)＞。  
+     如需詳細資訊，請參閱[SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)。  
   
 3.  使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 [匯入和匯出精靈]，將資料匯入暫存資料表。  
   
@@ -63,11 +63,11 @@ ms.locfileid: "73729251"
   
     -   使用主資料管理的 **整合管理** 功能。  
   
-         在 [暫存批次] 頁面上，從下拉式清單中，選取要接收您所加入之資料的模型，然後按一下 [啟動批次]。 批次處理的狀態會顯示在 [狀態] 欄位中。 如需狀態的詳細資訊，請參閱[匯入狀態 &#40;Master Data Services&#41;](../master-data-services/import-statuses-master-data-services.md)。  
+         在 [暫存批次] **** 頁面上，從下拉式清單中，選取要接收您所加入之資料的模型，然後按一下 [啟動批次] ****。 批次處理的狀態會顯示在 [狀態] **** 欄位中。 如需狀態的詳細資訊，請參閱[匯入狀態 &#40;Master Data Services&#41;](../master-data-services/import-statuses-master-data-services.md)。  
   
          ![主資料管理員中的暫存批次頁面](../master-data-services/media/mds-stagingbatchespage.png "主資料管理員中的暫存批次頁面")  
   
-         暫存程序的啟動間隔，由  **中的 [暫存批次間隔]** [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 設定決定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
+         暫存程序的啟動間隔，由 ** 中的 [暫存批次間隔]**[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 設定決定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
   
 5.  檢視暫存期間發生的錯誤。 如需詳細資訊，請參閱[檢視暫存期間發生的錯誤 &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md) 和[暫存處理序錯誤 &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)。  
   

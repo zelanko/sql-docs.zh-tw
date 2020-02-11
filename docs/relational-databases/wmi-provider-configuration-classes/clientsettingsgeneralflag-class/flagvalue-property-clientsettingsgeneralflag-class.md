@@ -18,10 +18,10 @@ ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6bdcb53b4f9654114e92b6d5bb7154652201da67
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660641"
 ---
 # <a name="flagvalue-property-clientsettingsgeneralflag-class"></a>FlagValue 屬性 (ClientSettingsGeneralFlag 類別)
@@ -36,7 +36,7 @@ object.FlagValue [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
+ *目標*  
  表示伺服器設定之一般旗標的 [ClientSettingsGeneralFlag 類別](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

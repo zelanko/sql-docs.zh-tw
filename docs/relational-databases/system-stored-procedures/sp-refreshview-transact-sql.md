@@ -1,5 +1,5 @@
 ---
-title: sp_refreshview (TRANSACT-SQL) |Microsoft Docs
+title: sp_refreshview （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b8c1b95d8d04e2b11982af14971e43e83db146f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68075767"
 ---
-# <a name="sprefreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
+# <a name="sp_refreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   更新指定非結構描述繫結檢視的中繼資料。 檢視所依賴的基礎物件變更之後，檢視的保存中繼資料也可能會過期。  
@@ -39,15 +39,15 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @viewname = ] 'viewname'` 是檢視的名稱。 *viewname*已**nvarchar**，沒有預設值。 *viewname*可以是多部分識別碼，但只能參考目前資料庫中的檢視。  
+`[ @viewname = ] 'viewname'`這是視圖的名稱。 *viewname*是**Nvarchar**，沒有預設值。 *viewname*可以是多部分識別碼，但只能參考目前資料庫中的 views。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 如果未以 schemabinding 來建立檢視**sp_refreshview**檢視會影響檢視定義的物件進行變更時，應該執行。 否則，在查詢檢視時，可能會產生非預期的結果。  
+ 如果未使用 schemabinding 建立視圖，則會在對視圖中影響視圖定義的物件進行變更時，執行**sp_refreshview** 。 否則，在查詢檢視時，可能會產生非預期的結果。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  必須對檢視具備 ALTER 權限，以及對檢視資料行所參考的 Common Language Runtime (CLR) 使用者自訂類型和 XML 結構描述集合，具備 REFERENCES 權限。  
   
 ## <a name="examples"></a>範例  
@@ -75,9 +75,9 @@ WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
- [sp_refreshsqlmodule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
+ [sp_refreshsqlmodule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
   
   

@@ -14,25 +14,25 @@ ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7ae9cc9066f66d10d94370336e8a46155f1a03c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925731"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>建立和執行簡單的命令
-簡單的命令是指未參數化，而且需要沒有持續性。 有三種方式，來建立和執行簡單的命令。  
+簡單的命令是指未參數化，而且不需要持續性。 有三種方式可以建立和執行簡單的命令。  
   
--   使用**命令**物件  
+-   使用**Command**物件  
   
--   使用**連線**物件  
+-   使用**Connection**物件  
   
--   使用**資料錄集**物件  
+-   使用**記錄集**物件  
   
-## <a name="using-a-command-object"></a>使用命令物件  
- 若要建立簡單的命令，使用**命令**物件，您必須將指派的指示**CommandText**屬性**命令**物件，並設定適當的值**CommandType**屬性。 執行此命令需要開啟連接會指派給**ActiveConnection**屬性**命令**物件，然後呼叫**Execute**方法在 **命令**物件。  
+## <a name="using-a-command-object"></a>使用 Command 物件  
+ 若要使用**command**物件來建立簡單的命令，您必須將指令指派給**Command**物件的**CommandText**屬性，並為**CommandType**屬性設定適當的值。 執行命令需要將開啟的連接指派給**command**物件的**ActiveConnection**屬性，然後呼叫**command**物件上的**Execute**方法。  
   
- 下列程式碼片段顯示使用的基本方法**命令**對資料來源執行命令的物件。 此範例會使用傳回的資料列的命令，並傳回命令執行的結果**資料錄集**物件。  
+ 下列程式碼片段顯示使用**command**物件對資料來源執行命令的基本方法。 這個範例會使用傳回資料列的命令，並以**記錄集**物件的形式傳回命令執行的結果。  
   
 ```  
     'BeginBasicCmd  
@@ -107,8 +107,8 @@ End Function
 'EndNewConnection  
 ```  
   
-## <a name="using-a-recordset-object"></a>使用資料錄集物件  
- 您也可以建立命令做為文字字串和 pa 才**開放**方法**資料錄集**物件時，命令類型 (adCmdText)，以及執行。 下列程式碼片段示範這種情況。  
+## <a name="using-a-recordset-object"></a>使用記錄集物件  
+ 您也可以建立命令做為文字字串，並將它與命令類型（adCmdText）一起在**記錄集**物件上與**Open**方法搭配執行。 下列程式碼片段示範這種情況。  
   
 ```  
   
@@ -146,8 +146,8 @@ objRs.Close
 Set objRs = Nothing  
 ```  
   
-## <a name="using-a-connection-object"></a>使用連接物件  
- 您也可以開啟的連線物件上執行命令。 上述程式碼範例現在會變成這樣：  
+## <a name="using-a-connection-object"></a>使用 Connection 物件  
+ 您也可以在開啟的連線物件上執行命令。 先前的程式碼範例現在變成：  
   
 ```  
 Const DS = "MySqlServer"  

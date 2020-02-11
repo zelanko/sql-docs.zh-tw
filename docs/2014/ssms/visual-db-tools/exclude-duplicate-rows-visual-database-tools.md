@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 63ec11b8575017ffbb3a1b1468ef3150a20326e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028346"
 ---
 # <a name="exclude-duplicate-rows-visual-database-tools"></a>排除重複的資料列 (Visual Database Tools)
@@ -39,7 +39,7 @@ ms.locfileid: "63028346"
     >  如果使用 DISTINCT 關鍵字，您可能無法在 [結果] 窗格中修改結果集。  
   
 ## <a name="see-also"></a>另請參閱  
- [指定搜尋準則&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [&#40;Visual Database Tools 指定搜尋準則&#41;](visual-database-tools.md)   
  [排序及分組查詢結果 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)  
   
   

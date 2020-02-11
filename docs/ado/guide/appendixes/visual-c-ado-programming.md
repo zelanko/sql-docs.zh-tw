@@ -1,5 +1,5 @@
 ---
-title: 視覺化C++ADO 程式設計 |Microsoft Docs
+title: Visual C++ ADO 程式設計 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,32 +16,32 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1890d554367b2a21bcd46a6d2ebddf00013957e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926427"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ ADO 程式設計
-ADO API 參考說明 ADO 應用程式開發介面 (API) 的語法類似到 Microsoft Visual Basic 的功能。 ADO 程式設計人員適用的對象是所有使用者，但採用不同的語言，例如 Visual Basic、 Visual C++ (包含或不含 **#import**指示詞)，和 Visual J + + （與 ADO/WFC 類別封裝）。  
+ADO API 參考會使用類似于 Microsoft Visual Basic 的語法來描述 ADO 應用程式開發介面（API）的功能。 雖然目標物件是所有使用者，但 ADO 程式設計人員會採用各種語言，例如 Visual Basic、Visual C++ （不論是否使用 **#import**指示詞）和 Visual j + + （使用 ADO/WFC 類別套件）。  
 
 > [!NOTE]
-> Microsoft 在 2004 年結束支援的 Visual J + +。
+> Microsoft 已于2004結束對 Visual j + + 的支援。
 
- 若要容納這種多樣性， [ADO for VisualC++語法索引](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)提供視覺效果C++使用的特定語言的語法連結中的功能、 參數、 例外狀況的行為，並依此類推，一般的描述API 參考。  
+ 為了因應這項多樣性， [Visual C++ 語法索引的 ADO](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)提供了 Visual C++ 特定語言的語法，並連結至 API 參考中的功能、參數、例外行為等等的一般描述。  
   
- ADO 是透過 COM （元件物件模型） 介面實作。 不過，這遠比其他特定程式設計語言中使用 COM 的程式設計人員。 比方說，使用 COM 的幾乎所有詳細資料會以隱含方式為處理 Visual Basic 程式設計人員，而 VisualC++程式設計人員必須參加這些詳細資料本身。  
+ ADO 是使用 COM （元件物件模型）介面來執行。 不過，程式設計人員可以更輕鬆地使用特定程式語言中的 COM，而不是其他語言。 例如，幾乎所有使用 COM 的細節都是針對 Visual Basic 程式設計人員隱含處理，而 Visual C++ 程式設計人員必須親自參與這些細節。  
   
- 下列各節摘要說明適用於 C 的詳細資料和C++搭配使用 ADO 程式設計人員和 **#import**指示詞。 它著重於特定 COM 的資料型別 (**Variant**， **BSTR**，並**SafeArray**)，和錯誤處理 (_com_error)。  
+ 下列各節摘要說明使用 ADO 和 **#import**指示詞之 c 和 c + + 程式設計人員的詳細資料。 它著重于 COM （**Variant**、 **BSTR**和**SafeArray**）專屬的資料類型，以及錯誤處理（_com_error）。  
   
 ## <a name="using-the-import-compiler-directive"></a>使用 #import 編譯器指示詞  
- **#Import**視覺化C++編譯器指示詞可簡化使用 ADO 方法和屬性。 指示詞會採用包含類型程式庫，例如 ADO.dll (Msado15.dll)，檔案名稱，並產生包含 typedef 宣告、 介面和列舉的常數的智慧型指標的標頭檔。 每個介面是封裝，或包裝，類別中。  
+ **#Import** Visual C++ 編譯器指示詞可簡化使用 ADO 方法和屬性的作業。 指示詞會採用包含類型程式庫的檔案名，例如 ADO （Msado15.dll），並產生包含 typedef 宣告的標頭檔、介面的智慧型指標，以及列舉的常數。 在類別中，每個介面都會封裝或包裝。  
   
- 類別 （也就是方法或屬性呼叫） 內的每個作業，沒有宣告，以呼叫作業直接 （也就是 「 原始 」 形式的作業），並呼叫未經處理的作業，並擲回的 COM 錯誤，如果作業無法執行 succ 宣告essfully。 如果作業是一個屬性，通常會建立具有語法 Visual Basic 這類作業的替代語法的編譯器指示詞。  
+ 針對類別中的每個作業（也就是方法或屬性呼叫），有一個宣告可直接呼叫作業（也就是作業的「原始」形式），以及一個宣告來呼叫原始作業，並在作業無法執行 succ 時擲回 COM 錯誤essfully. 如果作業是屬性，通常會有一個編譯器指示詞，它會針對具有類似 Visual Basic 語法的運算建立替代語法。  
   
- 作業，以擷取屬性的值有名稱格式，**取得**_屬性_。 設定屬性值的作業有表單的名稱**放**_屬性_。 將指標的屬性值設定為 ADO 物件的作業有表單的名稱**PutRef**_屬性_。  
+ 抓取屬性值的作業具有格式的名稱，也就是**Get**_屬性_。 設定屬性值的作業具有格式、 **Put**_屬性_的名稱。 使用 ADO 物件的指標來設定屬性值的作業，其格式為**PutRef**_屬性_的名稱。  
   
- 您可以取得或設定與呼叫這些表單的屬性：  
+ 您可以使用下列形式的呼叫來取得或設定屬性：  
   
 ```cpp
 variable = objectPtr->GetProperty(); // get property value   
@@ -49,34 +49,34 @@ objectPtr->PutProperty(value);       // set property value
 objectPtr->PutRefProperty(&value);   // set property with object pointer  
 ```
   
-## <a name="using-property-directives"></a>使用屬性指示詞  
- **__Declspec(property...)** 編譯器指示詞是 Microsoft 專有 C 語言擴充功能會宣告用做屬性，將有一個替代語法的函式。 如此一來，您可以設定或取得屬性值的方式類似於 Visual Basic。 比方說，您可以設定，並取得屬性的這種方式：  
+## <a name="using-property-directives"></a>使用 Property 指示詞  
+ **__Declspec （屬性 ...）** 編譯器指示詞是 Microsoft 專有的 C 語言延伸模組，它會宣告用來做為屬性的函式，以具有替代語法。 因此，您可以使用類似于 Visual Basic 的方式來設定或取得屬性的值。 例如，您可以透過這種方式來設定和取得屬性：  
   
 ```cpp
 objectPtr->property = value;        // set property value  
 variable = objectPtr->property;     // get property value  
 ```
   
- 請注意，您不需要程式碼：  
+ 請注意，您不需要撰寫程式碼：  
   
 ```cpp
 objectPtr->PutProperty(value);      // set property value  
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- 編譯器會產生適當**取得** _-_ ，**放**-，或**PutRef**_屬性_呼叫會根據宣告哪些替代語法，因此屬性是否正在讀取或寫入。  
+ 編譯器會根據所宣告的替代語法，以及是否要讀取或寫入屬性，來產生適當的**Get**_-_、 **Put**或**PutRef**_屬性_呼叫。  
   
- **__Declspec(property...)** 編譯器指示詞只能宣告**取得**，**放**，或**取得**並**放**函式的替代語法。 唯讀作業只能有**取得**宣告; 僅限寫入的作業只有**放**宣告; 兩者都讀取和寫入同時擁有的作業**取得**和**put**宣告。  
+ **__Declspec （屬性 ...）** 編譯器指示詞只能宣告**get**、 **put**或**get**和**put**函數的替代語法。 唯讀作業只有**get**宣告;僅限寫入的作業只有**put**宣告;同時為讀取和寫入的作業都有**get**和**put**宣告。  
   
- 只能使用兩個宣告具有此指示詞;不過，每個屬性可能會有三個屬性函式：**取得**_屬性_，**放**_屬性_，並**PutRef**_屬性_。 在此情況下，只有兩種形式的屬性會有替代的語法。  
+ 這個指示詞只能有兩個宣告;不過，每個屬性可能會有三個屬性函數： **Get**_property_、 **Put**_屬性_和**PutRef**_屬性_。 在這種情況下，只有兩種形式的屬性會有替代語法。  
   
- 例如，**命令**物件**ActiveConnection**屬性宣告的替代語法**取得**_ActiveConnection_並**PutRef**_ActiveConnection_。 **PutRef**-語法是不錯的選擇，因為在實務上，您通常想要將開啟**連線**物件 (亦即**連接**物件指標) 在此屬性。 相反地，**資料錄集**物件具有**取得**-，**放**-，以及**PutRef**_ActiveConnection_作業，但沒有替代的語法。  
+ 例如，**命令**物件**ActiveConnection**屬性是以**Get**_ActiveConnection_和**PutRef**_ActiveConnection_的替代語法來宣告。 **PutRef**語法是不錯的選擇，因為在實務上，您通常會想要將開啟的**連接**物件（也就是**連接**物件指標）放在這個屬性中。 另一方面，**記錄集**物件有**Get**-、 **Put**和**PutRef**_ActiveConnection_作業，但沒有替代語法。  
   
-## <a name="collections-the-getitem-method-and-the-item-property"></a>集合、 GetItem 方法，以及項目屬性  
+## <a name="collections-the-getitem-method-and-the-item-property"></a>集合、GetItem 方法和 Item 屬性  
 
- ADO 定義數個集合，包括**欄位**，**參數**，**屬性**，以及**錯誤**。 在視覺效果C++，則**GetItem (_索引_)** 方法，傳回集合的成員。 *索引*已**Variant**，其中值是在集合中，成員的數值索引或字串，包含成員的名稱。  
+ ADO 定義數個集合，包括**欄位**、**參數**、**屬性**和**錯誤**。 在 Visual C++ 中， **GetItem （_index_）** 方法會傳回集合的成員。 *Index*是**Variant**，其值為集合中成員的數值索引，或包含成員名稱的字串。  
   
- **__Declspec(property...)** 編譯器指示詞宣告**項目**屬性，為每個集合有替代語法的基本**GetItem()** 方法。 替代語法會使用方括號，並看起來類似陣列參考。 一般情況下，兩個表單看起來如下所示：  
+ **__Declspec （屬性 ...）** 編譯器指示詞會將**Item**屬性宣告為每個集合基本**GetItem （）** 方法的替代語法。 替代語法會使用方括弧，看起來類似陣列參考。 一般而言，這兩種表單看起來像下面這樣：  
   
 ```cpp
   
@@ -84,9 +84,9 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- 例如，將值指派的欄位**資料錄集**物件，名為 **_rs_** 衍生自**作者**資料表**pubs**資料庫。 使用**item**屬性來存取第三個**欄位**的**資料錄集**物件**欄位**（集合編製索引的集合零，假設名為第三個欄位 **_au\_fname_** )。 然後呼叫**value （)** 方法**欄位**指派字串值的物件。  
+ 例如，將值指派給名為**_rs_** 之**記錄集**物件的欄位，衍生自**pubs**資料庫的**作者**資料表。 使用**Item （）** 屬性存取**記錄集**物件**欄位**集合的第三個**欄位**（集合會從零編制索引，假設第三個欄位命名**_為\_au fname_**）。 然後在**Field**物件上呼叫**Value （）** 方法來指派字串值。  
   
- 這可以表示在 Visual Basic 中以下列四種方法 （Visual basic 獨有的最後兩個表單; 其他語言中沒有對等項目）：  
+ 這可以使用下列四種方式以 Visual Basic 表示（最後兩個表單對 Visual Basic 而言是唯一的，而其他語言則沒有對等專案）：  
   
 ```cpp
 rs.Fields.Item(2).Value = "value"  
@@ -95,49 +95,49 @@ rs(2) = "value"
 rs!au_fname = "value"  
 ```
   
- 視覺效果中的對等項目C++上述前兩個形式會：  
+ 在上述的前兩個表單 Visual C++ 中，對等項是：  
   
 ```cpp
 rs->Fields->GetItem(long(2))->PutValue("value");   
 rs->Fields->GetItem("au_fname")->PutValue("value");  
 ```
   
- -(的替代語法**值**屬性也會顯示)  
+ -或-（也會顯示**Value**屬性的替代語法）  
   
 ```cpp
 rs->Fields->Item[long(2)]->Value = "value";  
 rs->Fields->Item["au_fname"]->Value = "value";  
 ```
   
- 如需逐一查看集合的範例，請參閱 < ADO 參考 > 的 「 ADO 集合 」 一節。  
+ 如需逐一查看集合的範例，請參閱「ADO 參考」的「ADO 集合」一節。  
   
-## <a name="com-specific-data-types"></a>COM 特定資料類型  
- 一般情況下，您在 ADO API 參考中找到任何 Visual Basic 資料型別具有視覺效果C++相等。 這包括標準的資料類型，例如**unsigned char** Visual basic**位元組**，**簡短**如**整數**，和**長**for**長**。 查詢語法 Indexesto 中的看到到底是必要的運算元指定之方法或屬性。  
+## <a name="com-specific-data-types"></a>COM 特有的資料類型  
+ 一般而言，您在 ADO API 參考中找到的任何 Visual Basic 資料類型都有 Visual C++ 對等的。 其中包括標準資料類型（例如不**帶正負**號的 char 用於 Visual Basic 的**位元組**）、**整數**的**** **short** **，以及 long** 。 查看語法 Indexesto，以確切查看給定方法或屬性的運算元所需的內容。  
   
- 此規則的例外狀況是 COM 的特定資料類型：**Variant**， **BSTR**，以及**SafeArray**。  
+ 此規則的例外狀況是 COM 特有的資料類型： **Variant**、 **BSTR**和**SafeArray**。  
   
 ### <a name="variant"></a>變數  
- A **Variant**是結構化的資料類型，其中包含的值成員和資料型別成員。 A **Variant**可能包含各種不同的其他資料類型，包括另一個變數、 BSTR、 布林值、 IDispatch 或 IUnknown 指標、 貨幣、 日期和等等。 COM 也會提供方法，讓您輕鬆地轉換為另一種資料類型。  
+ **Variant**是包含值成員和資料型別成員的結構化資料型別。 **Variant**可以包含各式各樣的其他資料類型，包括另一個 VARIANT、BSTR、Boolean、IDispatch 或 IUnknown 指標、貨幣、日期等等。 COM 也提供方法，讓您輕鬆地將一種資料類型轉換成另一種。  
   
- **_Variant_t**類別會封裝並管理**Variant**資料型別。  
+ **_Variant_t**類別會封裝和管理**variant**資料類型。  
   
- 當 ADO API 參考會指出方法或屬性運算元會採用值時，通常表示值傳入 **_variant_t**。  
+ 當 ADO API 參考指出方法或屬性運算元接受值時，通常表示會在 **_variant_t**中傳遞值。  
   
- 此規則時，明確地真**參數**主題中的 ADO API 參考 區段會顯示一個運算元**Variant**。 其中一個例外是當文件明確說明運算元採用標準的資料型別，例如**長**或是**位元組**，或列舉型別。 另一個例外狀況是運算元時**字串**。  
+ 當 ADO API 參考主題中的**Parameters**區段指出運算元是**Variant**時，此規則會明確成立。 其中一個例外狀況是當檔明確指出運算元採用標準資料類型（例如**Long**或**Byte**）或列舉時。 另一個例外狀況是運算元採用**字串**時。  
   
 ### <a name="bstr"></a>BSTR  
- A **BSTR** (**B**asic **STR**ing) 是結構化的資料類型，其中包含的字元字串和字串的長度。 COM 提供方法來配置、 操作和空閒**BSTR**。  
+ **BSTR** （**B**asic **STR**）是包含字元字串和字串長度的結構化資料類型。 COM 提供配置、操作和釋放**BSTR**的方法。  
   
- **_Bstr_t**類別會封裝並管理**BSTR**資料型別。  
+ **_Bstr_t**類別會封裝和管理**bstr**資料類型。  
   
- ADO API 參考時顯示方法或屬性會採用**字串**的值，表示值的形式 **_bstr_t**。  
+ 當 ADO API 參考指出方法或屬性接受**字串**值時，表示值的格式為 **_bstr_t**。  
   
-### <a name="casting-variantt-and-bstrt-classes"></a>轉型 _variant_t 和 _bstr_t 類別  
- 通常不需要明確的程式碼 **_variant_t**或是 **_bstr_t**中作業的引數。 如果 **_variant_t**或是 **_bstr_t**類別具有符合的資料類型的引數的建構函式，編譯器會產生適當 **_variant_t**或 **_bstr_t**。  
+### <a name="casting-_variant_t-and-_bstr_t-classes"></a>轉換 _variant_t 和 _bstr_t 類別  
+ 通常不需要在作業的引數中明確地將 **_variant_t**或 **_bstr_t**編碼。 如果 **_variant_t**或 **_bstr_t**類別的函式與引數的資料類型相符，則編譯器會產生適當的 **_variant_t**或 **_bstr_t**。  
   
- 不過，如果引數是模稜兩可的也就是符合一個以上的建構函式的引數的資料型別，，您必須使用適當的資料類型來叫用正確的建構函式轉換引數。  
+ 不過，如果引數不明確（也就是引數的資料類型）符合一個以上的函式，您就必須使用適當的資料類型來轉換引數，以叫用正確的處理常式。  
   
- 例如，宣告**Recordset::Open**方法是：  
+ 例如，**記錄集：： Open**方法的宣告為：  
   
 ```cpp
     HRESULT Open (  
@@ -148,34 +148,34 @@ rs->Fields->Item["au_fname"]->Value = "value";
         long Options );  
 ```
   
- `ActiveConnection`引數會參考 **_variant_t**，您可能會撰寫程式碼做為連接字串的指標或開啟這**連接**物件。  
+ 引數會取得 **_variant_t**的參考，您可以將其編碼為連接字串或開啟連線物件的指標。 **** `ActiveConnection`  
   
- 正確 **_variant_t**如果您傳遞一個字串，例如隱含建構 「`DSN=pubs;uid=MyUserName;pwd=MyPassword;`"，或資料指標，例如"`(IDispatch *) pConn`」。  
+ 如果您**** 傳遞 "`DSN=pubs;uid=MyUserName;pwd=MyPassword;`" 之類的字串或指標（例如 "`(IDispatch *) pConn`"），則會隱含地建立正確的 _variant_t。  
   
 > [!NOTE]
->  如果您要連接到資料來源提供者支援 Windows 驗證，您應該指定**Trusted_Connection = yes**或是**Integrated Security = SSPI**而非使用者 ID 和密碼連接字串中的資訊。  
+>  如果您要連接到支援 Windows 驗證的資料來源提供者，您應該在連接字串中指定**Trusted_Connection = yes**或**整合式安全性 = SSPI** ，而不是使用者識別碼和密碼資訊。  
   
- 或您可能會明確撰寫程式碼 **_variant_t**包含指標，例如"`_variant_t((IDispatch *) pConn, true)`」。 轉型， `(IDispatch *)`，解析模稜兩可接受的 IUnknown 介面指標的另一個建構函式。  
+ 或者，您可以明確地將包含指標的 **_variant_t**程式碼`_variant_t((IDispatch *) pConn, true)`，例如 ""。 轉型會`(IDispatch *)`使用另一個接受 IUnknown 介面指標的函式來解析不明確的。  
   
- 很重要，但不常提到 ADO 是 IDispatch 介面的事實。 每當 ADO 物件的指標必須當做傳遞**Variant**，該指標必須轉換為的 IDispatch 介面的指標。  
+ 這是很重要的，但是很少提到，ADO 是 IDispatch 介面。 每當 ADO 物件的指標必須以**Variant**形式傳遞時，該指標必須轉換成 IDispatch 介面的指標。  
   
- 最後這個情況下明確程式碼的第二個布林引數的建構函式的選擇性，預設值的`true`。 這個引數會導致**Variant**建構函式呼叫其**AddRef**（） 方法，會自動呼叫的 ADO 補償 **_variant_t::Release**（） 方法ADO 方法或屬性呼叫完成時。  
+ 最後一個案例會使用的選擇性預設值，以明確的方式，將此函式`true`的第二個布林引數編碼。 這個引數會使**Variant**函式呼叫其**AddRef**（）方法，這會在 ado 方法或屬性呼叫完成時，補償 ado 自動呼叫 **_variant_t：： Release**（）方法。  
   
 ### <a name="safearray"></a>SafeArray  
- A **SafeArray**是結構化的資料類型，其中包含其他資料類型的陣列。 A **SafeArray**稱為*安全*因為它包含每個陣列維度的界限相關資訊，並限制存取陣列項目，這些範圍內。  
+ **SafeArray**是結構化資料類型，其中包含其他資料類型的陣列。 **SafeArray**稱為「*安全*」，因為它包含每個陣列維度之界限的相關資訊，並限制對這些界限內陣列元素的存取。  
   
- 當 ADO API 參考會指出方法或屬性會使用或傳回陣列，表示方法或屬性會使用或傳回**SafeArray**，沒有原生 C /C++陣列。  
+ 當 ADO API 參考指出方法或屬性採用或傳回陣列時，這表示方法或屬性會接受或傳回**SafeArray**，而不是原生 C/c + + 陣列。  
   
- 比方說，第二個參數**連接**物件**OpenSchema**方法需要陣列**Variant**值。 那些**Variant**的值必須傳遞為的項目**SafeArray**，且**SafeArray**必須設定為另一個值**Variant**. 它是其他**Variant**做為第二個引數傳遞**OpenSchema**。  
+ 例如，**連接**物件**OpenSchema**方法的第二個參數需要**Variant**值陣列。 這些**變體**值必須當做**SafeArray**的元素傳遞，而且該**safearray**必須設定為另一個**Variant**的值。 另一個**變體**會當做**OpenSchema**的第二個引數來傳遞。  
   
- 將進一步的範例，第一個引數**尋找**方式**Variant**其值是一維**SafeArray**; 每個選擇性的第一個和第二個引數**AddNew**是一維**SafeArray**; 而傳回的值**GetRows**方法**Variant**其值是二維**SafeArray**。  
+ 如需進一步的範例， **Find**方法的第一個引數是**Variant** ，其值為一維**SafeArray**;**AddNew**的每一個選擇性第一個和第二個引數都是一維**SafeArray**;而**GetRows**方法的傳回值是**Variant** ，其值為二維**SafeArray**。  
   
-## <a name="missing-and-default-parameters"></a>遺漏 」 和 「 預設參數  
- Visual Basic 允許遺失的方法中的參數。 例如， **Recordset**物件**開啟**方法有五個參數，但您可以略過中繼參數並省略尾端的參數。 預設值**BSTR**或是**Variant**會由根據遺失的運算元資料類型。  
+## <a name="missing-and-default-parameters"></a>遺漏和預設參數  
+ Visual Basic 允許方法中遺漏參數。 例如，**記錄集**物件**Open**方法有五個參數，但您可以略過中繼參數，並保留尾端參數。 根據遺漏運算元的資料類型，將會取代預設的**BSTR**或**Variant** 。  
   
- 在 C /C++，必須指定所有的運算元。 如果您想要指定遺失參數資料類型是字串，指定 **_bstr_t**包含 null 的字串。 如果您想要指定遺失參數的資料型別**Variant**，指定 **_variant_t** DISP_E_PARAMNOTFOUND 且類型為 VT_ERROR 的值。 或者，指定對等 **_variant_t**常數**vtMissing**，這由所提供 **#import**指示詞。  
+ 在 C/c + + 中，必須指定所有運算元。 如果您想要指定其資料類型為字串的遺漏參數，請指定包含 null 字串的 **_bstr_t** 。 如果您想要指定資料類型為**Variant**的遺漏參數，請指定值為 DISP_E_PARAMNOTFOUND 的 **_variant_t**和 VT_ERROR 的類型。 或者，指定 **#import**指示詞所提供的對等 **_variant_t**常數**vtMissing**。  
   
- 三種方法是例外狀況的一般用法**vtMissing**。 這些是**Execute**方法**連接**並**命令**物件，而**NextRecordset** 方法**資料錄集**物件。 以下是其簽章：  
+ 有三種方法是一般使用**vtMissing**的例外狀況。 這些是**連接**和**命令**物件的**執行**方法，以及**記錄集**物件的**NextRecordset**方法。 其簽章如下：  
   
 ```cpp
 _RecordsetPtr <A HREF="mdmthcnnexecute.htm">Execute</A>( _bstr_t CommandText, VARIANT * RecordsAffected,   
@@ -185,13 +185,13 @@ _RecordsetPtr <A HREF="mdmthcmdexecute.htm">Execute</A>( VARIANT * RecordsAf
 _RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * RecordsAffected );  // Recordset  
 ```
   
- 參數， *RecordsAffected*並*參數*，都是指標**Variant**。 *參數*是輸入的參數指定的地址**Variant**包含單一參數或陣列的參數，將會修改正在執行的命令。 *RecordsAffected*是一個 output 參數，指定的地址**Variant**、 方法所影響的資料列數目傳回的位置。  
+ 參數（ *RecordsAffected*和*參數*）是**Variant**的指標。 *參數*是一個輸入參數，它會指定包含單一參數的**Variant**位址，或將修改所執行之命令的參數陣列。 *RecordsAffected*是一個輸出參數，可指定**Variant**的位址，其中會傳回受方法影響的資料列數目。  
   
- 在 **命令**物件**Execute**方法，表示 splittunneling 未指定任何參數*參數*為`&vtMissing`（這建議的） 或null 指標 (亦即**NULL**或零 (0))。 如果*參數*設成 null 指標，方法在內部替代的對等**vtMissing**，然後完成此作業。  
+ 在**命令**物件**Execute**方法中，將*參數*設定為`&vtMissing` （建議選項）或 null 指標（也就是**null**或零（0）），以指出未指定任何參數。 如果將*參數*設定為 null 指標，此方法會在內部替代**vtMissing**的對等，然後完成作業。  
   
- 在所有方法，會指出受影響的記錄數目不會傳回藉由設定*RecordsAffected* null 指標。 在此情況下，null 指標不是這麼多遺漏參數做為表示方法應該捨棄受影響的記錄數目。  
+ 在所有方法中，將*RecordsAffected*設定為 null 指標，表示不應傳回受影響的記錄數目。 在此情況下，null 指標不會造成太多遺漏的參數，因為這表示方法應該捨棄受影響的記錄數目。  
   
- 因此，針對這三種方法，它是有效的來撰寫這類程式碼：  
+ 因此，這三種方法的程式碼如下所示：  
   
 ```cpp
 pConnection->Execute("commandText", NULL, adCmdText);   
@@ -200,23 +200,23 @@ pRecordset->NextRecordset(NULL);
 ```
   
 ## <a name="error-handling"></a>錯誤處理  
- 在 COM 中，大部分的作業會傳回 HRESULT 傳回碼指出函數是否已順利完成。 **#Import**指示詞會產生每個 「 原始 」 的方法或屬性周圍的包裝函式程式碼，並檢查傳回的 HRESULT。 如果 HRESULT 指出失敗，包裝函式程式碼會擲回的 COM 錯誤的 HRESULT 傳回碼的呼叫 _com_issue_errorex() 做為引數。 COM 錯誤物件可以陷入**嘗試**-**攔截**區塊。 (為了效率的因素，攔截的參考 **_com_error**物件。)  
+ 在 COM 中，大部分的作業會傳回 HRESULT 傳回碼，指出函數是否已順利完成。 **#Import**指示詞會針對每個「原始」方法或屬性產生包裝函式程式碼，並檢查傳回的 HRESULT。 如果 HRESULT 指出失敗，包裝函式程式碼會呼叫 _com_issue_errorex （）並以 HRESULT 傳回碼做為引數，以擲回 COM 錯誤。 在**try**-**catch**區塊中可以攔截 COM 錯誤物件。 （為了提高效率，請攔截 **_com_error**物件的參考）。  
   
- 請記住，這些是 ADO 錯誤： 有人從 ADO 作業失敗。 基礎提供者所傳回的錯誤會顯示為**錯誤**中的物件**連線**物件**錯誤**集合。  
+ 請記住，這些是 ADO 錯誤：這是因為 ADO 作業失敗所造成。 基礎提供者所傳回的錯誤會顯示為**連接**物件**錯誤**集合中的**錯誤**物件。  
   
- **#Import**指示詞會建立僅限錯誤處理常式方法和 ADO.dll 中宣告的屬性。 不過，您也可以利用這個相同的錯誤處理機制，藉由撰寫您自己的錯誤檢查巨集或內嵌函式。 請參閱主題[VisualC++延伸模組](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)，或如需範例的下列各節中的程式碼。  
+ **#Import**指示詞只會為 ADO 中所宣告的方法和屬性建立錯誤處理常式。 不過，您可以藉由撰寫自己的錯誤檢查宏或內嵌函式，來利用這個相同的錯誤處理機制。 如需範例，請參閱主題、 [Visual C++ 延伸](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)模組或下列各節中的程式碼。  
   
-## <a name="visual-c-equivalents-of-visual-basic-conventions"></a>視覺化C++的 Visual Basic 慣例的對等項目  
- 以下是自動程式碼在 Visual Basic 中，以及視覺效果中的對應項中的 ADO 文件中的數個慣例的摘要C++。  
+## <a name="visual-c-equivalents-of-visual-basic-conventions"></a>Visual Basic 慣例的 Visual C++ 對應項  
+ 以下摘要說明 ADO 檔中的數個慣例，以 Visual Basic 撰寫程式碼，以及它們在 Visual C++ 中的對等專案。  
   
 ### <a name="declaring-an-ado-object"></a>宣告 ADO 物件  
- 在 Visual Basic 中的 ADO 物件的變數 (在此情況下，如**資料錄集**物件) 宣告，如下所示：  
+ 在 Visual Basic 中，ADO 物件變數（在此案例中為**記錄集**物件）會宣告如下：  
   
 ```vb
 Dim rst As ADODB.Recordset  
 ```
   
- 子句中，「`ADODB.Recordset`"，是的 ProgID**資料錄集**登錄中所定義的物件。 新執行個體**記錄**物件宣告，如下所示：  
+ 子句 "`ADODB.Recordset`" 是**記錄**檔物件的 ProgID，如登錄中所定義。 **記錄**物件的新實例會宣告如下：  
   
 ```vb
 Dim rst As New ADODB.Recordset  
@@ -229,13 +229,13 @@ Dim rst As ADODB.Recordset
 Set rst = New ADODB.Recordset  
 ```
   
- 在視覺效果C++，則 **#import**指示詞會產生所有 ADO 物件的智慧型指標類型宣告。 比方說，此變數會指向 **_Recordset**物件屬於型別 **_RecordsetPtr**，並宣告，如下所示：  
+ 在 Visual C++ 中， **#import**指示詞會產生所有 ADO 物件的智慧型指標類型宣告。 例如，指向 **_Recordset**物件的變數屬於 **_RecordsetPtr**類型，且宣告如下：  
   
 ```cpp
 _RecordsetPtr  rs;  
 ```
   
- 此變數會指向的新執行個體 **_Recordset**物件宣告，如下所示：  
+ 指向 **_Recordset**物件之新實例的變數會宣告如下：  
   
 ```cpp
 _RecordsetPtr  rs("ADODB.Recordset");  
@@ -255,25 +255,25 @@ _RecordsetPtr  rs;
 rs.CreateInstance(__uuidof(_Recordset));  
 ```
   
- 在後**CreateInstance**呼叫方法時，變數可用，如下所示：  
+ 呼叫**CreateInstance**方法之後，您可以使用變數，如下所示：  
   
 ```cpp
 rs->Open(...);  
 ```
   
- 請注意，在其中一個案例，「`.`"如同變數是類別的執行個體，使用運算子 (`rs.CreateInstance`)，並在另一個的情況下，"`->`"如同變數是介面的指標，使用運算子 (`rs->Open`)。  
+ 請注意，在其中一種情況`.`下，會使用 "" 運算子，如同變數是類別的實例（`rs.CreateInstance`），而在另一種情況下`->`，則會使用 "" 運算子，如同變數是介面的指標（`rs->Open`）。  
   
- 其中一個變數可以用兩種方式，因為 「`->`」 運算子會多載，以便使其行為類似的介面指標類別的執行個體。 私用類別成員的執行個體變數包含的指標 **_Recordset**介面; 「`->`」 運算子會傳回該指標與傳回的指標存取成員 **_Recordset**物件。  
+ 有兩種方式可以使用一個變數，因為 "`->`" 運算子會多載，讓類別的實例行為就像介面的指標。 執行個體變數的私用類別成員包含 **_Recordset**介面的指標;"`->`" 運算子會傳回該指標;而傳回的指標會存取 **_Recordset**物件的成員。  
   
-### <a name="coding-a-missing-parameter---string"></a>撰寫程式碼遺失參數-字串  
- 當您需要撰寫程式碼遺失**字串**運算元在 Visual Basic 中，您只是省略運算元。 您必須指定的運算元，在視覺效果C++。 程式碼 **_bstr_t**具有值為空字串。  
+### <a name="coding-a-missing-parameter---string"></a>編碼遺失的參數-字串  
+ 當您需要在 Visual Basic 中撰寫遺漏**字串**運算元的程式碼時，您只會省略運算元。 您必須在 Visual C++ 中指定運算元。 以空字串做為值的 **_bstr_t**程式碼。  
   
 ```cpp
 _bstr_t strMissing(L"");  
 ```
   
-### <a name="coding-a-missing-parameter---variant"></a>撰寫程式碼遺失參數-Variant  
- 當您需要撰寫程式碼遺失**Variant**運算元在 Visual Basic 中，您只是省略運算元。 您必須指定所有的運算元，在視覺效果C++。 程式碼遺失**Variant**參數搭配 **_variant_t**設為特殊值，DISP_E_PARAMNOTFOUND，然後 VT_ERROR 的類型。 或者，指定**vtMissing**，這對等的預先定義的常數由所提供 **#import**指示詞。  
+### <a name="coding-a-missing-parameter---variant"></a>撰寫遺漏參數的程式碼-Variant  
+ 當您需要在 Visual Basic 中撰寫遺漏的**Variant**運算元的程式碼時，您只會省略運算元。 您必須在 Visual C++ 中指定所有運算元。 使用設定為特殊值、DISP_E_PARAMNOTFOUND 和類型 VT_ERROR 的 **_variant_t** ，撰寫遺漏**Variant**參數的程式碼。 或者，指定**vtMissing**，這是 **#import**指示詞所提供的對等預先定義常數。  
   
 ```cpp
 _variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR);   
@@ -285,17 +285,17 @@ _variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR); 
 ...vtMissing...;  
 ```
   
-### <a name="declaring-a-variant"></a>宣告變數  
- 在 Visual Basic **Variant**以宣告**Dim**陳述式，如下所示：  
+### <a name="declaring-a-variant"></a>宣告 Variant  
+ 在 Visual Basic 中，會使用**Dim**語句來宣告**Variant** ，如下所示：  
   
 ```vb
 Dim VariableName As Variant  
 ```
   
- 在視覺效果C++，將變數宣告為類型 **_variant_t**。 少數的圖解 **_variant_t**宣告如下所示。  
+ 在 Visual C++ 中，將變數宣告為類型 **_variant_t**。 以下顯示一些示意性 **_variant_t**宣告。  
   
 > [!NOTE]
->  這些宣告只是提供約略的構念的您會在自己的程式碼。 如需詳細資訊，請參閱以下範例中和 Visual C + + 文件。  
+>  這些宣告只是讓您大致瞭解如何在自己的程式中撰寫程式碼。 如需詳細資訊，請參閱下列範例，以及 Visual C + + 檔。  
   
 ```cpp
 _variant_t  VariableName(value);  
@@ -304,8 +304,8 @@ _variant_t  VariableName(value, VT_DATATYPE);
 _variant_t  VariableName(interface * value, bool fAddRef = true);  
 ```
   
-### <a name="using-arrays-of-variants"></a>使用 Variant 的陣列  
- 在 Visual Basic 中的陣列**變化**可以使用自動程式化**Dim**陳述式，或者，您可能會使用**陣列**函式，如下列範例程式碼所示：  
+### <a name="using-arrays-of-variants"></a>使用變體陣列  
+ 在 Visual Basic 中，**變數**陣列可以使用**Dim**語句來編碼，或者您可以使用**Array**函數，如下列範例程式碼所示：  
   
 ```vb
 Public Sub ArrayOfVariants  
@@ -324,14 +324,14 @@ Dim fld As ADODB.Field
 End Sub  
 ```
   
- 下列視覺效果C++範例示範如何使用**SafeArray**搭配 **_variant_t**。  
+ 下列 Visual C++ 範例示範如何使用搭配 **_variant_t**使用的**SafeArray** 。  
   
 #### <a name="notes"></a>注意  
- 下列資訊會對應至程式碼範例中加上註解的區段。  
+ 下列附注對應至程式碼範例中的批註區段。  
   
-1.  同樣地，被定義 TESTHR() 內嵌函式，以善用現有的錯誤處理機制。  
+1.  同樣地，TESTHR （）內嵌函式的定義，是要利用現有的錯誤處理機制。  
   
-2.  您只需要一維陣列，因此您可以使用**SafeArrayCreateVector**，而不是一般用途**SAFEARRAYBOUND**宣告並**SafeArrayCreate**函式。 以下是該程式碼會如下所示使用**SafeArrayCreate**:  
+2.  您只需要一維陣列，因此您可以使用**SafeArrayCreateVector**，而不是一般用途的**SAFEARRAYBOUND**宣告和**SafeArrayCreate**函式。 以下是該程式碼會使用**SafeArrayCreate**的樣子：  
   
     ```cpp
        SAFEARRAYBOUND   sabound[1];  
@@ -340,13 +340,13 @@ End Sub
        pSa = SafeArrayCreate(VT_VARIANT, 1, sabound);  
     ```
   
-3.  列舉常數所識別的結構描述**adSchemaColumns**，四個條件約束資料行相關聯：Table_catalog 排列、 TABLE_SCHEMA、 TABLE_NAME 和 COLUMN_NAME。 因此，陣列**Variant**建立具有四個元素的值。 然後指定條件約束值，對應到第三個資料行名稱，這個值。  
+3.  列舉常數**adSchemaColumns**所識別的架構與四個條件約束資料行相關聯： TABLE_CATALOG、TABLE_SCHEMA、TABLE_NAME 和 COLUMN_NAME。 因此，會建立具有四個元素的**Variant**值陣列。 然後會指定對應至第三個數據行 TABLE_NAME 的條件約束值。  
   
-     **資料錄集**傳回幾個資料行，其中的部分是條件約束資料行所組成。 每個傳回的資料列之條件約束資料行的值必須是對應的條件約束值相同。  
+     傳回的**記錄集**是由數個數據行所組成，其中的子集是條件約束資料行。 每個傳回之資料列的條件約束資料行值，必須與對應的條件約束值相同。  
   
-4.  熟悉**Safearray**可能會很訝異， **SafeArrayDestroy**結束之前未呼叫 （）。 事實上，呼叫**SafeArrayDestroy**（） 在此情況下會導致執行階段例外狀況。 原因是解構函式`vtCriteria`稱之為**VariantClear**（) 時 **_variant_t**超出範圍，會釋放**SafeArray**。 呼叫**SafeArrayDestroy**，而不手動清除 **_variant_t**，會導致解構函式嘗試清除無效**SafeArray**指標。  
+4.  熟悉**safearray**的人可能會驚訝，在結束之前不會呼叫**SafeArrayDestroy**（）。 事實上，在此情況下呼叫**SafeArrayDestroy**（）會導致執行時間例外狀況。 原因是當 **_variant_t**超出範圍時`vtCriteria` ，的析構函式會呼叫**VariantClear**（），這將會釋放**SafeArray**。 呼叫**SafeArrayDestroy**，而不手動清除 **_variant_t**，會導致析構函式嘗試清除不正確**SafeArray**指標。  
   
-     如果**SafeArrayDestroy**所呼叫，程式碼看起來會像這樣：  
+     如果呼叫**SafeArrayDestroy** ，程式碼看起來會像這樣：  
   
     ```cpp
           TESTHR(SafeArrayDestroy(pSa));  
@@ -354,7 +354,7 @@ End Sub
           vtCriteria.parray = NULL;  
     ```
   
-     不過，很容易，可讓 **_variant_t**管理**SafeArray**。  
+     不過，讓 **_variant_t**管理**SafeArray**更為簡單。  
   
 ```cpp
 // Visual_CPP_ADO_Prog_1.cpp  
@@ -413,8 +413,8 @@ int main() {
 }  
 ```
   
-### <a name="using-property-getputputref"></a>使用屬性的 Get/Put/PutRef  
- 在 Visual Basic 中的屬性名稱未限定是否是擷取、 指派，或指派參考。  
+### <a name="using-property-getputputref"></a>使用屬性 Get/Put/PutRef  
+ 在 Visual Basic 中，屬性的名稱不是由抓取、指派或指派參考所限定。  
   
 ```vb
 Public Sub GetPutPutRef  
@@ -433,14 +433,14 @@ cn.Close
 End Sub  
 ```
   
- 此視覺效果C++範例示範**取得**/**放**/**PutRef**_屬性_。  
+ 此 Visual C++ 範例示範**Get**/**Put**/**PutRef**_屬性_。  
   
 #### <a name="notes"></a>注意  
- 下列資訊會對應至程式碼範例中加上註解的區段。  
+ 下列附注對應至程式碼範例中的批註區段。  
   
-1.  這個範例會使用兩種形式的遺漏的字串引數： 明確的常數**strMissing**，以及編譯器用來建立暫時密碼的字串 **_bstr_t** 範圍會存在於**開啟**方法。  
+1.  這個範例使用兩種形式的遺漏字串引數：明確常數、 **strMissing**，以及編譯器將用來建立可在**Open**方法範圍記憶體在之暫時 **_bstr_t**的字串。  
   
-2.  您不需要轉換的運算元`rs->PutRefActiveConnection(cn)`要`(IDispatch *)`運算元的類型已經是因為`(IDispatch *)`。  
+2.  您不需要將的運算元轉換`rs->PutRefActiveConnection(cn)`為`(IDispatch *)` ，因為運算元的類型已經`(IDispatch *)`是。  
   
 ```cpp
 // Visual_CPP_ado_prog_2.cpp  
@@ -482,8 +482,8 @@ int main() {
 }  
 ```
   
-### <a name="using-getitemx-and-itemx"></a>使用 GetItem(x)] 和 [項目 [x]  
- 此 Visual Basic 範例示範的標準和替代語法**項目**（)。  
+### <a name="using-getitemx-and-itemx"></a>使用 GetItem （x）和專案 [x]  
+ 此 Visual Basic 範例示範**Item**（）的標準和替代語法。  
   
 ```vb
 Public Sub GetItemItem  
@@ -503,10 +503,10 @@ rs.Close
 End Sub  
 ```
   
- 此視覺效果C++範例示範**項目**。  
+ 此 Visual C++ 範例示範**專案**。  
   
 > [!NOTE]
->  下列附註與對應的註解程式碼範例中的各節：集合使用的存取時**項目**，索引 **2**，必須先轉換成**長**讓適當的建構函式會叫用。  
+>  下列附注對應至程式碼範例中的批註區段：當使用**專案**來存取集合時，索引**2**必須轉換成**long** ，因此會叫用適當的函式。  
   
 ```cpp
 // Visual_CPP_ado_prog_3.cpp  
@@ -551,19 +551,19 @@ void main() {
 }  
 ```
   
-### <a name="casting-ado-object-pointers-with-idispatch-"></a>轉換與 ADO 物件指標 (IDispatch *)  
- 下列視覺效果C++範例示範如何使用 (IDispatch *) 來轉換 ADO 物件指標。  
+### <a name="casting-ado-object-pointers-with-idispatch-"></a>使用將 ADO 物件指標轉換成（IDispatch *）  
+ 下列 Visual C++ 範例示範如何使用（IDispatch *）來轉換 ADO 物件指標。  
   
 #### <a name="notes"></a>注意  
- 下列資訊會對應至程式碼範例中加上註解的區段。  
+ 下列附注對應至程式碼範例中的批註區段。  
   
-1.  指定開啟**連接**中明確地自動程式化物件**Variant**。 將它與轉換 (IDispatch \*) 以便正確建構函式會叫用。 此外，明確地設定第二個 **_variant_t**的預設值的參數 **，則為 true**，因此物件的參考計數將會是正確的時機**Recordset::Open**作業就會結束。  
+1.  以明確編碼的**Variant**指定開啟的**連接**物件。 將它轉型為\*（IDispatch），以叫用正確的函式。 此外，將第二個 **_variant_t**參數明確設定為預設值**true**，因此當**記錄集：： Open**作業結束時，物件參考計數會是正確的。  
   
-2.  運算式`(_bstr_t)`，不是型別轉換，但 **_variant_t**運算子，它會擷取 **_bstr_t**來自字串**Variant**傳回**值**.  
+2.  運算式`(_bstr_t)`不是轉換，而是 **_variant_t**運算子，會從**Value**傳回的**variant**中解壓縮 **_bstr_t**的字串。  
   
- 運算式`(char*)`，不是型別轉換，但 **_bstr_t**運算子，它會擷取在封裝的字串指標 **_bstr_t**物件。  
+ 運算式`(char*)`不是轉換，而是 **_bstr_t**運算子，會將指標解壓縮到 **_bstr_t**物件中的封裝字串。  
   
- 這段程式碼示範一些有用的行為 **_variant_t**並 **_bstr_t**運算子。  
+ 這段程式碼會示範 **_variant_t**和 **_bstr_t**運算子的一些有用行為。  
   
 ```cpp
 // Visual_CPP_ado_prog_4.cpp  

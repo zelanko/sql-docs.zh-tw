@@ -1,5 +1,5 @@
 ---
-title: Open 和 Close 方法範例 (VBScript) |Microsoft Docs
+title: Open 和 Close 方法範例（VBScript） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,16 +16,16 @@ ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87b2753c989ad2996dc7788bb0820d78b3b9b6ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931911"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Open 和 Close 方法範例 (VBScript)
-這個範例會使用[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)並[關閉](../../../ado/reference/ado-api/close-method-ado.md)方法兩者[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)和[連接](../../../ado/reference/ado-api/connection-object-ado.md)已開啟的物件。  
+這個範例會針對已開啟的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)和[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件使用[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)和[Close](../../../ado/reference/ado-api/close-method-ado.md)方法。  
   
- Active Server Page (ASP) 中使用下列的範例。 使用 **尋找**找出檔案 Adovbs.inc，並將它放在您打算使用的目錄。 剪下並將下列程式碼貼到 [記事本] 或其他文字編輯器，並將它儲存成**OpenVBS.asp**。 您可以在任何瀏覽器中檢視結果。  
+ 在 Active Server Page （ASP）中使用下列範例。 使用 [**尋找**] 找出 Adovbs 檔案，並將它放在您打算使用的目錄中。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器中，然後將它儲存為**OpenVBS。** 您可以在任何瀏覽器中查看結果。  
   
 ```  
 <!-- BeginOpenVBS -->  
@@ -162,8 +162,8 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Close 方法 (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
- [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open 方法 (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open 方法 (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Close 方法（ADO）](../../../ado/reference/ado-api/close-method-ado.md)   
+ [Connection 物件（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Open 方法（ADO Connection）](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Open 方法（ADO Recordset）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

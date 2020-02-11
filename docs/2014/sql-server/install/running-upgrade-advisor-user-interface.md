@@ -1,5 +1,5 @@
 ---
-title: 執行 Upgrade Advisor （使用者介面） |Microsoft Docs
+title: 正在執行 Upgrade Advisor （使用者介面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aecaea9bef359ad24aebbd20dd5e9547497043b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092451"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>執行 Upgrade Advisor (使用者介面)
@@ -30,7 +30,7 @@ ms.locfileid: "66092451"
 > [!IMPORTANT]  
 >  Upgrade Advisor 不會分析 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的遠端執行個體。 若要分析 [!INCLUDE[ssRS](../../includes/ssrs.md)] 執行個體，您必須將 Upgrade Advisor 安裝在已安裝 [!INCLUDE[ssRS](../../includes/ssrs.md)] 的電腦上。  
 >   
->  若要分析[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Integration Services，您必須擁有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]安裝和[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]安裝在同一部電腦上。  
+>  若要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]分析 Integration Services，您必須[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]在同一部[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]電腦上安裝並安裝和。  
   
 ## <a name="running-the-upgrade-advisor-analysis-wizard"></a>執行 Upgrade Advisor 分析精靈  
  執行 Upgrade Advisor 分析精靈具有六個步驟：  
@@ -47,9 +47,9 @@ ms.locfileid: "66092451"
   
 6.  產生升級問題的報表。  
   
- 如需有關 Upgrade Advisor 分析精靈的詳細資訊，請參閱[How to:執行 Upgrade Advisor 分析精靈](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)。  
+ 如需有關 Upgrade Advisor 分析 Wizard 的詳細資訊，請參閱[如何：執行 Upgrade Advisor 分析 wizard](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)。  
   
- 所需的每個步驟的特定資訊，請參閱[Upgrade Advisor 使用者介面參考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)。  
+ 如需每個步驟所需的特定資訊，請參閱[Upgrade Advisor 使用者介面參考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)。  
   
 ## <a name="running-the-upgrade-advisor-report-viewer"></a>執行 Upgrade Advisor 報表檢視器  
  您可以使用 Upgrade Advisor 報表檢視器來檢視 Upgrade Advisor 分析精靈所產生的報表。 載入報表時，您可以依據下列因數來篩選報表的元件：  
@@ -72,12 +72,12 @@ ms.locfileid: "66092451"
   
 -   [如何：篩選報表](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
--   [如何：將報表匯出](../../../2014/sql-server/install/how-to-export-reports.md)  
+-   [如何：匯出報表](../../../2014/sql-server/install/how-to-export-reports.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [如何：執行 Upgrade Advisor 分析精靈](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [如何：執行 Upgrade Advisor 分析嚮導](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Upgrade Advisor 使用者介面參考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [解決升級問題](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [使用升級建議程式](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [使用 Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

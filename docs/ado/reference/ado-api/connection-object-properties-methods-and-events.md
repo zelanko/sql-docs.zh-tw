@@ -1,5 +1,5 @@
 ---
-title: 連接物件屬性、 方法和事件 |Microsoft Docs
+title: Connection 物件屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,13 +13,13 @@ ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd6c95c7c761e2aadf9d42befcd4e2f740877196
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919516"
 ---
-# <a name="connection-object-properties-methods-and-events"></a>連接物件屬性、 方法和事件
+# <a name="connection-object-properties-methods-and-events"></a>Connection 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
  [Attributes 屬性](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67919516"
   
  [IsolationLevel 屬性](../../../ado/reference/ado-api/isolationlevel-property.md)  
   
- [模式屬性](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Mode 屬性](../../../ado/reference/ado-api/mode-property-ado.md)  
   
  [屬性集合](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "67919516"
  [Version 屬性](../../../ado/reference/ado-api/version-property-ado.md)  
   
 ## <a name="methods"></a>方法  
- [BeginTrans、 CommitTrans 和 RollbackTrans 方法](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)  
+ [BeginTrans、CommitTrans 和 RollbackTrans 方法](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)  
   
  [Cancel 方法](../../../ado/reference/ado-api/cancel-method-ado.md)  
   
@@ -60,10 +60,10 @@ ms.locfileid: "67919516"
   
  [OpenSchema 方法](../../../ado/reference/ado-api/openschema-method.md)  
   
-## <a name="events"></a>Events  
- [BeginTransComplete、 CommitTransComplete 和 RollbackTransComplete 事件](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
+## <a name="events"></a>事件  
+ [BeginTransComplete、CommitTransComplete 和 RollbackTransComplete 事件](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
- [ConnectComplete 和 Disconnect 事件](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
+ [ConnectComplete 和中斷線上活動](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
   
  [ExecuteComplete 事件](../../../ado/reference/ado-api/executecomplete-event-ado.md)  
   

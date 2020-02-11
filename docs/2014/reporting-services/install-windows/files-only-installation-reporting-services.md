@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a854de693bce88fcba0de2f1c08e4b0fe296b512
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108836"
 ---
 # <a name="files-only-installation-reporting-services"></a>僅限檔案安裝 (Reporting Services)
-  「僅限檔案安裝」  是指安裝程式會建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 程式檔案的資料夾結構、將檔案複製到磁碟、在本機電腦上註冊報表伺服器服務、設定服務帳戶、授與檔案權限給此服務帳戶，並註冊 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供者的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝。  
+  *僅限檔案安裝*指的是[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]安裝程式會建立[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] program Files 的資料夾結構、將檔案複製到磁片、在本機電腦上註冊報表伺服器服務、設定服務帳戶、授與檔案許可權給服務帳戶，以及註冊[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供者。  
   
- 僅限檔案安裝包含以下[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]功能：報表伺服器服務 （主控報表伺服器 Web 服務、 背景處理應用程式和報表管理員），報表產生器[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態工具和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]命令列公用程式 (rsconfig.exe、 rskeymgmt.exe 和rs.exe)。 它不會套用到類似 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的共用功能。如果您想要安裝這些功能，必須將其指定為個別項目。  
+ 僅限檔案安裝包含以下 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能：報表伺服器服務 (主控報表伺服器 Web 服務、背景處理應用程式和報表管理員)、報表產生器、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令列公用程式 (rsconfig.exe、rskeymgmt.exe 和 rs.exe)。 它不會套用至共用功能（例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]或[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]），如果您想要安裝它們，必須將其指定為個別專案。  
   
  與其他安裝模式相較之下，當安裝程式完成時，在僅限檔案模式下安裝的報表伺服器將不會運作。 您必須使用 [Reporting Services 設定管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md) 進行其他組態設定，才能讓報表伺服器在線上工作。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66108836"
   
  您可以透過命令列或安裝精靈來指定僅限檔案安裝。 下列主題提供逐步指示：  
   
--   [從安裝精靈安裝 SQL Server 2014&#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
+-   [從安裝精靈安裝 SQL Server 2014 &#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
   
 -   [從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
@@ -55,14 +55,14 @@ setup /q /ACTION=install /FEATURES=RS /InstanceName=MSSQLSERVER /RSSVCACCOUNT="N
 ```  
   
 #### <a name="installation-wizard"></a>安裝精靈  
- 當您在 [特徵選取] 頁面中選取 [ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ] 時，安裝程式會提供 [ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態] 頁面，好讓您指定安裝模式。 若要指定僅限檔案安裝，請在 [[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定] 頁面上選取 [安裝但不設定報表伺服器]  。  
+ 當您在 [特徵選取] 頁面中選取 [ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ] 時，安裝程式會提供 [ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態] 頁面，好讓您指定安裝模式。 若要指定僅限檔案安裝，請在 [** 設定] 頁面上選取 [安裝但不設定報表伺服器]**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
 ## <a name="see-also"></a>另請參閱  
- [驗證 Reporting Services 安裝](verify-a-reporting-services-installation.md)   
+ [確認 Reporting Services 安裝](verify-a-reporting-services-installation.md)   
  [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
- [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Reporting Services SharePoint 模式安裝&#40;SharePoint 2010 和 SharePoint 2013&#41;](install-reporting-services-sharepoint-mode.md)   
+ [&#40;SSRS Configuration Manager 設定報表伺服器資料庫連接&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Sharepoint 2010 和 SharePoint 2013 Reporting Services SharePoint 模式安裝 &#40;&#41;](install-reporting-services-sharepoint-mode.md)   
  [安裝 Reporting Services 原生模式報表伺服器](install-reporting-services-native-mode-report-server.md)   
  [Reporting Services 工具](../tools/reporting-services-tools.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sum 函數 (XQuery) |Microsoft Docs
+title: sum 函數（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9e9095fdecf9bdf9782815c8b44c2131313568c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985748"
 ---
 # <a name="aggregate-functions---sum"></a>彙總函式 - sum
@@ -39,16 +39,16 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  將計算其總和之不可部份完成值的順序。  
   
 ## <a name="remarks"></a>備註  
- 所有類型的不可部份完成值傳遞給**sum （)** 一定要相同的基底類型的子類型。 可接受的基底類型為三個內建的數值基底類型或 xdt:untypedAtomic。 xdt:untypedAtomic 類型的值會轉換為 xs:double。 如果沒有混用這些類型，或其他類型的其他值會傳遞，則會引發靜態錯誤。  
+ 所有傳遞至**sum （）** 的不可部份完成數值型別，都必須是相同基底類型的子類型。 可接受的基底類型為三個內建的數值基底類型或 xdt:untypedAtomic。 xdt:untypedAtomic 類型的值會轉換為 xs:double。 如果有混合的這些類型，或如果傳遞其他類型的其他值，就會引發靜態錯誤。  
   
- 結果**sum （)** 接收傳入的類型，例如 xs: double untypedatomic 情況下，基底類型，即使輸入為選擇性空的序列。 如果輸入在靜態上是空的，則結果是 0，並具有靜態和動態的 xs:integer 類型。  
+ **Sum （）** 的結果會收到傳入類型的基底類型，例如 Xdt： untypedAtomic 的案例中的 xs： double，即使輸入是選擇性的，也是空的序列。 如果輸入在靜態上是空的，則結果是 0，並具有靜態和動態的 xs:integer 類型。  
   
- **Sum （)** 函式會傳回數字值的總和。 如果 xdt: untypedatomic 值無法轉換成 xs: double，值將被忽略的輸入的順序，請 *$arg*。 如果輸入是動態計算出的空序列，則會傳回所用基底類型的值 0。  
+ **Sum （）** 函數會傳回數值的總和。 如果 xdt： untypedAtomic 值無法轉換為 xs： double，則會在輸入序列中忽略此值 *$arg*。 如果輸入是動態計算出的空序列，則會傳回所用基底類型的值 0。  
   
  發生溢位或超出範圍的例外狀況時，此函數會傳回執行階段錯誤。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫。  
+ 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存**** 在資料庫的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]各種 XML 類型資料行中。  
   
 ### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A. 使用 sum() XQuery 函數，尋找製造過程中所有工作中心位置的總合併工時數  
  下列查詢會尋找有儲存製造指示的所有產品型號之製造過程中，所有工作中心位置的總工時數。  
@@ -105,19 +105,19 @@ ProductModelID Name                 TotalLaborHours
 ### <a name="implementation-limitations"></a>實作限制  
  以下為其限制：  
   
--   只有單一引數版本的**sum （)** 支援。  
+-   只支援**sum （）** 的單一引數版本。  
   
 -   如果輸入是動態計算出的空序列，則會傳回所用基底類型的值 0，而不是 xs:integer 類型。  
   
--   **Sum （)** 函式會將所有整數都對應到 xs: decimal。  
+-   **Sum （）** 函數會將所有整數對應到 xs： decimal。  
   
--   **Sum （)** 不支援的 xs: duration 類型值的函式。  
+-   不支援 xs： duration 類型值的**sum （）** 函數。  
   
 -   不支援跨越基底類型界限的混合類型。  
   
--   Sum，xs 引發值域錯誤。  
+-   Sum （（xs： double （"INF"），xs： double （"-INF"）））會引發網域錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
- [針對 xml 資料類型的 XQuery 函式](../xquery/xquery-functions-against-the-xml-data-type.md)  
+ [針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

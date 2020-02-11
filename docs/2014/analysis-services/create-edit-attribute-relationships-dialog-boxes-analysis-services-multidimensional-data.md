@@ -1,5 +1,5 @@
 ---
-title: 建立屬性關聯性和編輯屬性關聯性對話方塊 （屬性關聯性設計師索引標籤，維度設計師） (Analysis Services-多維度資料) |Microsoft Docs
+title: 建立屬性關聯性和編輯屬性關聯性對話方塊（屬性關聯性設計工具索引標籤，維度設計師）（Analysis Services 多維度資料） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,36 +13,36 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 544fc09037c0670c7ba44adf7b270e46899621a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086934"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>建立屬性關聯性和編輯屬性關聯性對話方塊 (屬性關聯性設計師索引標籤，維度設計師) (Analysis Services - 多維度資料)
-  使用 [建立屬性關聯性]  對話方塊，即可定義新的屬性關聯性，而使用 [編輯屬性關聯性]  對話方塊，即可變更屬性關聯性。 如需詳細資訊，請參閱 [定義屬性關聯性](multidimensional-models/attribute-relationships-define.md)。  
+  使用 [建立屬性關聯性]**** 對話方塊，即可定義新的屬性關聯性，而使用 [編輯屬性關聯性]**** 對話方塊，即可變更屬性關聯性。 如需詳細資訊，請參閱 [定義屬性關聯性](multidimensional-models/attribute-relationships-define.md)。  
   
- **若要檢視 [建立屬性關聯性] 對話方塊**  
+ **檢視建立屬性關聯性對話方塊**  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下維度即可開啟 [維度設計師]，然後按一下 [屬性關聯性]  索引標籤。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下維度即可開啟維度設計師，然後按一下 [屬性關聯性]**** 索引標籤。  
   
 2.  在工具列上，按一下 [新增屬性關聯性] 圖示。  
   
      -或-  
   
-     在屬性關聯性圖表或 [屬性]  清單中，以滑鼠右鍵按一下屬性，然後按一下 [新增屬性關聯性]  。  
+     在屬性關聯性圖表或 [屬性]**** 清單中，以滑鼠右鍵按一下屬性，然後按一下 [新增屬性關聯性]****。  
   
- **若要檢視 [編輯屬性關聯性] 對話方塊**  
+ **檢視編輯屬性關聯性對話方塊**  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下維度即可開啟 [維度設計師]，然後按一下 [屬性關聯性]  索引標籤。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下維度即可開啟維度設計師，然後按一下 [屬性關聯性]**** 索引標籤。  
   
-2.  在屬性關聯性圖表或 [屬性關聯性]  清單中，以滑鼠右鍵按一下屬性關聯性，然後按一下 [編輯屬性關聯性]  。  
+2.  在屬性關聯性圖表或 [屬性關聯性]**** 清單中，以滑鼠右鍵按一下屬性關聯性，然後按一下 [編輯屬性關聯性]****。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **名稱**  
- 在 [來源屬性]  群組中，指定產生關聯性之來源屬性的名稱。  
+ 在 [來源屬性]**** 群組中，指定產生關聯性之來源屬性的名稱。  
   
- 在 [相關屬性]  群組中，指定關聯性導向之目標屬性的名稱。  
+ 在 [相關屬性]**** 群組中，指定關聯性導向之目標屬性的名稱。  
   
  **成員計數**  
  指定指定之屬性成員的估計數目。  
@@ -51,9 +51,9 @@ ms.locfileid: "66086934"
  指定針對屬性定義的索引鍵資料行。  
   
  **關聯性類型**  
- 指定要建立的關聯性類型：[彈性 (可能隨時間而改變)]  或 [固定 (不會隨時間而改變)]  。  
+ 指定要建立的關聯性類型：[彈性 (可能隨時間而改變)]**** 或 [固定 (不會隨時間而改變)]****。  
   
 ## <a name="see-also"></a>另請參閱  
- [屬性關聯性&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
+ [屬性關聯性 &#40;維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

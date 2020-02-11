@@ -1,5 +1,5 @@
 ---
-title: 警示屬性-新增警示 （一般頁面） |Microsoft Docs
+title: 警示屬性-新增警示（一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062143"
 ---
-# <a name="alert-properties-new-alert-general-page"></a>警示屬性-新增警示 （一般頁面）
-  使用此頁面即可檢視及修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示的一般屬性。  
+# <a name="alert-properties-new-alert-general-page"></a>警示屬性-新增警示（一般頁面）
+  使用此頁面來查看及修改[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示的一般屬性。  
   
 ## <a name="options"></a>選項。  
  **名稱**  
@@ -32,11 +32,11 @@ ms.locfileid: "63062143"
  **型別**  
  選取警示的類型：  
   
--   **SQL Server 事件警示** 會回應 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔中的訊息。  
+-   **SQL Server 事件警示**會回應 Windows 事件記錄[!INCLUDE[msCoName](../../includes/msconame-md.md)]檔中的訊息。  
   
--   **SQL Server 效能條件警示** 會回應效能計數器中的特定條件。  
+-   **SQL Server 效能條件警示**會回應效能計數器中的特定條件。  
   
--   **WMI 事件警示** 會回應 Windows Management Instrumentation (WMI) 事件。  
+-   **WMI 事件警示**會回應 WINDOWS MANAGEMENT INSTRUMENTATION （WMI）事件。  
   
 ## <a name="sql-server-event-alert-options"></a>SQL Server 事件警示選項  
  **資料庫名稱**  
@@ -48,14 +48,14 @@ ms.locfileid: "63062143"
  **Severity**  
  指定此事件會回應具特定嚴重性層級的任何訊息，並指定嚴重性層級。  
   
- **訊息包含下列內容時引發警示**  
+ **訊息包含時引發警示**  
  依特定字串來篩選事件。 若選取此選項，警示就只會回應包含特定字串的事件。  
   
- **訊息文字**  
+ **郵件內文**  
  指定要用來篩選事件的字串。  
   
 ## <a name="sql-server-performance-condition-alerts"></a>SQL Server 效能條件警示  
- **物件**  
+ **Object**  
  指定要監視的效能物件。  
   
  **計數器**  
@@ -64,22 +64,22 @@ ms.locfileid: "63062143"
  **執行個體**  
  指定要監視之計數器的執行個體。  
   
- **發出警示的時機為計數器達**  
- 指定警示要回應的計數器行為。 例如，當 [Free space in tempdb (KB)]  計數器的值低於某個值時，您可能會希望警示針對如此的條件做出回應，或者當 [SQL Compilations/sec]  高於某個值時，您可能會希望警示針對如此的條件做出回應。  
+ **警示 if 計數器**  
+ 指定警示要回應的計數器行為。 例如，當 [Free space in tempdb (KB)]**** 計數器的值低於某個值時，您可能會希望警示針對如此的條件做出回應，或者當 [SQL Compilations/sec]**** 高於某個值時，您可能會希望警示針對如此的條件做出回應。  
   
- **Value**  
+ **ReplTest1**  
  指定計數器的值。  
   
 ## <a name="wmi-event-alert-options"></a>WMI 事件警示選項  
  **命名空間**  
  指定針對 WMI 查詢語言 (WQL) 陳述式使用的命名空間。 僅支援執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 之電腦上的命名空間。  
   
- **[資料集屬性]**  
+ **查詢**  
  指定會識別警示所回應之事件的 WQL 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
  [警示](alerts.md)   
- [伺服器事件的 WMI 提供者使用 WQL](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
+ [搭配伺服器事件的 WMI 提供者使用 WQL](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
  [使用錯誤號碼建立警示](create-an-alert-using-an-error-number.md)   
  [Create an Alert Using Severity Level](create-an-alert-using-severity-level.md)  
   

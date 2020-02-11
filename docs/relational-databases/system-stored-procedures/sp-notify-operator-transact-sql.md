@@ -1,5 +1,5 @@
 ---
-title: sp_notify_operator & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_notify_operator （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 74558320df59414a756e1655bb073e9bf0d7d73c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107984"
 ---
-# <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
+# <a name="sp_notify_operator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   利用 Database Mail 將電子郵件訊息傳送給操作員。  
@@ -47,32 +47,32 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @profile_name = ] 'profilename'` 用來傳送訊息的 Database Mail 設定檔的名稱。 *profilename*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。 如果*profilename*未指定，會使用預設 Database Mail 設定檔。  
+`[ @profile_name = ] 'profilename'`用來傳送訊息之 Database Mail 設定檔的名稱。 *profilename*是**Nvarchar （128）**。 如果未指定*profilename* ，則會使用預設的 Database Mail 設定檔。  
   
-`[ @id = ] id` 若要傳送訊息給操作員識別碼。 *id*已**int**，預設值是 NULL。 其中一個*識別碼*或是*名稱*必須指定。  
+`[ @id = ] id`要傳送訊息的操作員識別碼。 *id*是**int**，預設值是 Null。 必須指定*識別碼*或*名稱*的其中一個。  
   
-`[ @name = ] 'name'` 若要傳送訊息給操作員的名稱。 *名稱*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** ，預設值是 NULL。 其中一個*識別碼*或是*名稱*必須指定。  
+`[ @name = ] 'name'`要傳送訊息的操作員名稱。 *name*是**Nvarchar （128）**，預設值是 Null。 必須指定*識別碼*或*名稱*的其中一個。  
   
-> **注意：** 電子郵件地址必須定義運算子，才能接收訊息。  
+> **注意：** 必須先定義操作員的電子郵件地址，才能接收訊息。  
   
-`[ @subject = ] 'subject'` 電子郵件訊息主旨。 *主旨*已**nvarchar(256)** 沒有預設值。  
+`[ @subject = ] 'subject'`電子郵件訊息的主旨。 *subject*是**Nvarchar （256）** ，沒有預設值。  
   
-`[ @body = ] 'message'` 電子郵件訊息的本文。 *訊息*已**nvarchar （max)** 沒有預設值。  
+`[ @body = ] 'message'`電子郵件訊息的主體。 *訊息*為**Nvarchar （max）** ，沒有預設值。  
   
-`[ @file_attachments = ] 'attachment'` 要附加至電子郵件訊息的檔案名稱。 *附件*已**nvarchar(512)** ，沒有預設值。  
+`[ @file_attachments = ] 'attachment'`要附加至電子郵件訊息的檔案名。 *附件*是**Nvarchar （512）**，沒有預設值。  
   
-`[ @mail_database = ] 'mail_host_database'` 指定郵件主機資料庫的名稱。 *mail_host_database*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。 如果沒有*mail_host_database*指定，則**msdb**預設會使用資料庫。  
+`[ @mail_database = ] 'mail_host_database'`指定郵件主機資料庫的名稱。 *mail_host_database*為**Nvarchar （128）**。 如果未指定*mail_host_database* ，預設會使用**msdb**資料庫。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
  將指定的訊息傳送給指定操作員的電子郵件地址。 如果未設定操作員的電子郵件地址，就會傳回錯誤。  
   
  您必須先設定 Database Mail 和郵件主機資料庫，才能將通知傳給操作員。  
   
-## <a name="permissions"></a>Permissions  
- 依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
+## <a name="permissions"></a>權限  
+ 根據預設，**系統管理員（sysadmin** ）固定伺服器角色的成員可以執行此預存程式。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
   
 -   **SQLAgentUserRole**  
   
@@ -98,9 +98,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Agent 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
+ [SQL Server Agent 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
   
   

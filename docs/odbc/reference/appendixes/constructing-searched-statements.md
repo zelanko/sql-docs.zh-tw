@@ -1,5 +1,5 @@
 ---
-title: 建構搜尋的陳述式 |Microsoft Docs
+title: 建立搜尋的語句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,31 +19,31 @@ ms.assetid: e429254c-c43f-4fbf-98b2-5f1ed53501ff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c8f24fe59da1377ea42900a8f1f0b89eb97125f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019175"
 ---
 # <a name="constructing-searched-statements"></a>建構搜尋的陳述式
 > [!IMPORTANT]  
->  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
   
- 若要支援定位的 update 和 delete 陳述式，資料指標程式庫建構搜尋**更新**或是**刪除**從定位陳述式的陳述式。 若要支援呼叫**SQLGetData**區塊中的資料，資料指標程式庫建構搜尋**選取**陳述式來建立結果集，其中包含目前資料列。 在每個陳述式，**何處**子句列舉傳回 SQL_PRED_SEARCHABLE 或 SQL_PRED_BASIC SQL_DESC_SEARCHABLE 欄位識別項中的每個繫結資料行的快取中儲存的值**SQLColAttribute**。  
+ 為了支援定位的 update 和 delete 語句，資料指標程式庫會從定位語句中，建立搜尋的**update**或**delete**語句。 若要支援在資料區塊中呼叫**SQLGetData** ，資料指標程式庫會建立一個搜尋的**SELECT**語句，以建立包含目前資料列的結果集。 在上述每個語句中， **WHERE**子句會列舉在**SQLColAttribute**中針對 SQL_DESC_SEARCHABLE 欄位識別碼傳回 SQL_PRED_SEARCHABLE 或 SQL_PRED_BASIC 之每個系結資料行的快取中儲存的值。  
   
 > [!CAUTION]  
->  **其中**建構的資料指標程式庫，以識別目前的資料列的子句無法識別的任何資料列、 找出不同的資料列，或識別一個以上的資料列。  
+>  用來識別目前資料列的資料指標程式庫所建立的**WHERE**子句，可能無法識別任何資料列、識別不同的資料列，或識別一個以上的資料列。  
   
- 如果定位的 update 或 delete 陳述式會影響多個資料列，資料指標程式庫會更新資料列狀態陣列，只會針對資料列的資料指標的位置，傳回 SQL_SUCCESS_WITH_INFO 和 SQLSTATE 01001 （資料指標作業衝突）。 如果陳述式不會識別任何資料列，資料指標程式庫不會更新資料列狀態陣列，並傳回 SQL_SUCCESS_WITH_INFO 和 SQLSTATE 01001 （資料指標作業衝突）。 應用程式可以呼叫**SQLRowCount**來判斷已更新或刪除資料列數目。  
+ 如果定位的 update 或 delete 語句會影響一個以上的資料列，則資料指標程式庫只會針對資料指標所在的資料列更新資料列狀態陣列，並傳回 SQL_SUCCESS_WITH_INFO 和 SQLSTATE 01001 （資料指標作業衝突）。 如果語句未識別任何資料列，則資料指標程式庫不會更新資料列狀態陣列，並會傳回 SQL_SUCCESS_WITH_INFO 和 SQLSTATE 01001 （資料指標作業衝突）。 應用程式可以呼叫**SQLRowCount**來判斷已更新或刪除的資料列數目。  
   
- 如果**選取** 子句用來定位資料指標來呼叫**SQLGetData**識別一個以上的資料列**SQLGetData**不保證會傳回正確的資料。 如果它不會識別任何資料列， **SQLGetData**傳回 sql_no_data 為止。  
+ 如果用來定位資料指標以呼叫**SQLGetData**的**SELECT**子句識別一個以上的資料列，則不保證**SQLGetData**會傳回正確的資料。 如果找不到任何資料列， **SQLGetData**就會傳回 SQL_NO_DATA。  
   
- 如果應用程式符合下列指導方針中，**其中**資料指標程式庫所建構的子句應專門用於識別目前的資料列，除非這是不可能的例如當資料來源包含重複資料列。  
+ 如果應用程式符合下列方針，則資料指標程式庫所建立的**WHERE**子句應該唯一識別目前的資料列，但不可能發生這種情況，例如當資料來源包含重複的資料列時。  
   
--   **唯一識別資料列的資料行繫結。** 如果繫結的資料行無法唯一識別資料列，**其中**資料指標程式庫所建構的子句可能會識別多個資料列。 在定位的 update 或 delete 陳述式中，這類子句可能會導致多個要更新或刪除資料列。 在呼叫**SQLGetData**，這類子句可能會導致驅動程式傳回錯誤的資料列的資料。 唯一索引鍵中的所有資料行繫結，可保證唯一識別每個資料列。  
+-   **系結唯一識別資料列的資料行。** 如果系結的資料行不會唯一識別資料列，則資料指標程式庫所建立的**WHERE**子句可能會識別一個以上的資料列。 在定位的 update 或 delete 語句中，這類子句可能會導致更新或刪除一個以上的資料列。 在呼叫**SQLGetData**時，這類子句可能會導致驅動程式傳回錯誤資料列的資料。 將唯一索引鍵中的所有資料行系結，可確保每個資料列都有唯一的識別。  
   
--   **配置資料緩衝區夠大的不截斷，就會發生。** 資料指標程式庫的快取是繫結至結果集的資料列集緩衝區中的值的複本**SQLBindCol**。 如果資料遭到截斷，它會放置在這些緩衝區時，它也會截斷快取中。 A**其中**子句建構從截斷的值可能無法正確識別基礎資料來源中的資料列。  
+-   **配置足以進行截斷的資料緩衝區。** 資料指標程式庫的快取是與**SQLBindCol**系結至結果集之資料列集緩衝區中的值複本。 如果資料放在這些緩衝區時遭到截斷，它也會在快取中被截斷。 從截斷的值所構成的**WHERE**子句可能無法正確識別資料來源中的基礎資料列。  
   
--   **指定非 null 長度為 C 的二進位資料的緩衝區。** 資料指標程式庫配置長度的緩衝區，在其快取才*StrLen_or_IndPtr*中的引數**SQLBindCol**為非 null。 當*TargetType*引數為 SQL_C_BINARY，資料指標程式庫需要建構的二進位資料的長度**其中**子句的資料。 如果沒有任何長度的緩衝區 SQL_C_BINARY 資料行和應用程式會呼叫**SQLGetData**或嘗試執行定位的 update 或 delete 陳述式，此資料指標程式庫會傳回 SQL_ERROR，而且 SQLSTATE SL014 （定位發出要求，並非所有的資料行計數欄位已緩衝處理。）  
+-   **針對二進位 C 資料指定非 null 長度的緩衝區。** 資料指標程式庫只有在**SQLBindCol**中的*StrLen_or_IndPtr*引數為非 null 時，才會在其快取中配置長度緩衝區。 當*TargetType*引數是 SQL_C_BINARY 時，資料指標程式庫會要求二進位資料的長度，以從資料中建立**WHERE**子句。 如果 SQL_C_BINARY 的資料行沒有長度緩衝區，而應用程式呼叫**SQLGetData**或嘗試執行定位的 update 或 delete 語句，則資料指標程式庫會傳回 SQL_ERROR 和 SQLSTATE SL014 （已發出定位要求，而不是所有資料行計數位段已緩衝處理）。  
   
--   **指定非 null 長度的緩衝區，可為 null 的資料行。** 資料指標程式庫配置長度的緩衝區，在其快取才*StrLen_or_IndPtr*中的引數**SQLBindCol**為非 null。 因為 SQL_NULL_DATA 儲存在長度的緩衝區，資料指標程式庫會假設任何長度的緩衝區已指定任何資料行是不可為 null。 如果為 null 的資料行不指定任何長度的資料行，資料指標程式庫會建構**其中**會使用資料行的資料值的子句。 這個子句不會正確地識別資料列。
+-   **針對可為 null 的資料行指定非 null 長度的緩衝區。** 資料指標程式庫只有在**SQLBindCol**中的*StrLen_or_IndPtr*引數為非 null 時，才會在其快取中配置長度緩衝區。 因為 SQL_Null_DATA 儲存在長度緩衝區中，所以資料指標程式庫會假設沒有指定長度緩衝區的任何資料行都是不可為 null。 如果沒有為可為 null 的資料行指定長度資料行，則資料指標程式庫會建立一個**where**子句，該子句會使用資料行的資料值。 這個子句將無法正確識別資料列。

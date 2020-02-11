@@ -1,5 +1,5 @@
 ---
-title: Service Broker 相關的動態管理檢視 (TRANSACT-SQL) |Microsoft Docs
+title: Service Broker 相關的動態管理檢視（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 3253bf60-5ea6-4525-8744-c21070c4df0e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7c47c229c925da14acfd58857d79b46a49deb6de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68023726"
 ---
 # <a name="service-broker-related-dynamic-management-views-transact-sql"></a>Service Broker 相關的動態管理檢視 (Transact-SQL)
@@ -34,6 +34,6 @@ ms.locfileid: "68023726"
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [系統檢視表&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [&#40;Transact-sql&#41;的系統檢視](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

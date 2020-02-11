@@ -1,5 +1,5 @@
 ---
-title: 支援的資料類型 (Visual FoxPro ODBC Driver) |Microsoft Docs
+title: 支援的資料類型（Visual FoxPro ODBC Driver） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ ms.assetid: ab529cc6-d157-4b35-b6f9-6ffd09af098c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e2d23ddc5fdd00db45aee235e96f13a8cf08082a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68080785"
 ---
 # <a name="supported-data-types-visual-foxpro-odbc-driver"></a>支援的資料類型 (Visual FoxPro ODBC Driver)
-透過 ODBC API，以及在 Microsoft 的查詢，會顯示驅動程式支援的資料類型的清單。  
+驅動程式支援的資料類型清單會透過 ODBC API 和 Microsoft Query 來呈現。  
   
-## <a name="data-types-in-c-applications"></a>在 C 應用程式中的資料類型  
- 您可以取得一份資料類型支援使用 Visual FoxPro ODBC Driver [SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md)在 C 中的函式或C++應用程式。  
+## <a name="data-types-in-c-applications"></a>C 應用程式中的資料類型  
+ 您可以使用 C 或 c + + 應用程式中的[SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md)函數，取得 VISUAL FoxPro ODBC 驅動程式所支援的資料類型清單。  
   
-## <a name="data-types-in-applications-using-microsoft-query"></a>應用程式中使用 Microsoft 查詢的資料類型  
- 如果您的應用程式會使用 Microsoft Query Visual FoxPro 資料來源上建立新的資料表，就會顯示 Microsoft Query**新的資料表定義** 對話方塊。 底下**欄位的描述**，則**型別**方塊清單[Visual FoxPro 欄位資料型別](../../odbc/microsoft/visual-foxpro-field-data-types.md)，由單一字元。
+## <a name="data-types-in-applications-using-microsoft-query"></a>使用 Microsoft Query 的應用程式中的資料類型  
+ 如果您的應用程式使用 Microsoft Query 在 Visual FoxPro 資料來源上建立新的資料表，Microsoft Query 會顯示 [**新增資料表定義**] 對話方塊。 [**欄位描述**] 底下的 [**類型**] 方塊會列出以單一字元表示的[Visual FoxPro 欄位資料類型](../../odbc/microsoft/visual-foxpro-field-data-types.md)。

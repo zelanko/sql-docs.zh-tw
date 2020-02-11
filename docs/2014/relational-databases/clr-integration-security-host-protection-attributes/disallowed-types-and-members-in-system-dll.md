@@ -1,5 +1,5 @@
 ---
-title: 型別和成員在 System.dll 中的不允許 |Microsoft Docs
+title: 系統中不允許的類型和成員 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1780f4236c70d8685c1ce2050a08bc305a3f0853
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919674"
 ---
 # <a name="disallowed-types-and-members-in-systemdll"></a>在 System.dll 中不允許的類型和成員
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common language integration (CLR) 程式設計不允許使用型別或成員具有`HostProtectionAttribute`，指定`System.Security.Permissions.HostProtectionResource`列舉值是`ExternalProcessMgmt`， `ExternalThreading`， `MayLeakOnAbort`， `SecurityInfrastructure`， `SelfAffectingProcessMgmnt`，`SelfAffectingThreading`， **SharedState**， `Synchronization`，或`UI`。 下表列出 System.dll 組件的成員和類型，這些成員和類型的主機保護屬性 (HPA) 值不被允許。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通用`HostProtectionAttribute`語言整合（CLR）程式設計不允許使用具有之的類型或成員，其會指定`System.Security.Permissions.HostProtectionResource`具有、 `ExternalProcessMgmt` `ExternalThreading` `MayLeakOnAbort`、、 `SecurityInfrastructure`、 `SelfAffectingProcessMgmnt`、 `SelfAffectingThreading`、 **SharedState**、 `Synchronization`或`UI`值的列舉。 下表列出 System.dll 組件的成員和類型，這些成員和類型的主機保護屬性 (HPA) 值不被允許。  
   
 > [!NOTE]  
->  此清單是根據支援的組件產生的。 如需詳細資訊，請參閱 <<c0> [ 支援的.NET Framework 程式庫](../clr-integration/database-objects/supported-net-framework-libraries.md)。  
+>  此清單是根據支援的組件產生的。 如需詳細資訊，請參閱[支援的 .NET Framework 程式庫](../clr-integration/database-objects/supported-net-framework-libraries.md)。  
   
 |類型或成員|HPA 值|  
 |--------------------|--------------------|  
@@ -282,9 +282,9 @@ ms.locfileid: "62919674"
   
 ## <a name="see-also"></a>另請參閱  
  [主機保護屬性和 CLR 整合程式設計](host-protection-attributes-and-clr-integration-programming.md)   
- [Microsoft.VisualBasic.dll 中不允許的類型和成員](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [在 Microsoft 中不允許的類型和成員](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
  [Mscorlib.dll 中不允許的類型和成員](disallowed-types-and-members-in-mscorlib-dll.md)   
- [System.Data.dll 中不允許的類型和成員](disallowed-types-and-members-in-system-data-dll.md)   
+ [System.object 中不允許的類型和成員](disallowed-types-and-members-in-system-data-dll.md)   
  [System.Core.dll 中不允許的類型和成員](disallowed-types-and-members-in-system-core-dll.md)  
   
   

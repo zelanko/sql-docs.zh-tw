@@ -17,23 +17,23 @@ ms.assetid: 57e08c5f-f3ed-4ecd-8c66-50b83b1031d1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a19856c957ee0c003e934ff8b2632aa28e32d33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918920"
 ---
 # <a name="eos-property"></a>EOS 屬性
-表示目前位置是否在結尾[資料流](../../../ado/reference/ado-api/stream-object-ado.md)。  
+指出目前的位置是否在[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)的結尾。  
   
 ## <a name="return-values"></a>傳回值  
- 傳回**布林**值，指出目前的位置是否位於資料流結尾。 **EOS**會傳回 **，則為 True**有沒有更多的位元組資料流; 它會傳回**False**如果有多個位元組，遵循目前的位置。  
+ 傳回**布林**值，指出目前的位置是否在資料流程的結尾。 如果資料流程中的位元組數不多，則**EOS**會傳回**True** ;如果在目前位置之後有多個位元組，則會傳回**False** 。  
   
- 若要設定資料流位置的結尾，請使用[SetEOS](../../../ado/reference/ado-api/seteos-method.md)方法。 若要判斷目前的位置，請使用[位置](../../../ado/reference/ado-api/position-property-ado.md)屬性。  
+ 若要設定資料流程位置的結尾，請使用[SetEOS](../../../ado/reference/ado-api/seteos-method.md)方法。 若要判斷目前的位置，請使用[position](../../../ado/reference/ado-api/position-property-ado.md)屬性。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [EOS 和 LineSeparator 屬性和 SkipLine 方法範例 (VB)](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)   
+ [EOS 和 LineSeparator 屬性和 SkipLine 方法範例（VB）](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)   
  [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

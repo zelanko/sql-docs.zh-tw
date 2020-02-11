@@ -1,5 +1,5 @@
 ---
-title: 與 SQL Server (ODBC) 通訊 |Microsoft Docs
+title: 與 SQL Server 通訊（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bf07f4e83cb58966b384a4bf0f523b7a1dd3881
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032886"
 ---
 # <a name="communicating-with-sql-server-odbc"></a>與 SQL Server 進行通訊 (ODBC)
-  ODBC 應用程式的執行個體進行通訊[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，必須配置環境和連接處理，並連接到資料來源。 建立連接之後，應用程式可以將查詢傳送到伺服器，並處理任何結果集。 當應用程式使用資料來源完畢時，它會中斷與資料來源的連接，並釋出連接控制代碼。 當應用程式釋出其所有連接控制代碼時，它會釋出環境控制代碼。  
+  若要讓 ODBC 應用程式與的實例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]進行通訊，它必須配置環境和連接控制碼，並連接到資料來源。 建立連接之後，應用程式可以將查詢傳送到伺服器，並處理任何結果集。 當應用程式使用資料來源完畢時，它會中斷與資料來源的連接，並釋出連接控制代碼。 當應用程式釋出其所有連接控制代碼時，它會釋出環境控制代碼。  
   
  應用程式可以連接到任何數目的資料來源。 應用程式可以使用驅動程式與資料來源的組合、相同的驅動程式與資料來源組合，甚至相同驅動程式與相同資料來源的多個連接。  
   
- 您可以下載[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 範例從[SQL Server 下載](https://go.microsoft.com/fwlink/?LinkId=62796)MSDN 上的頁面。  
+ 您可以從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MSDN 上的[SQL Server 下載](https://go.microsoft.com/fwlink/?LinkId=62796)] 頁面下載 Native Client ODBC 範例。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63032886"
   
 -   [SQL Server Native Client ODBC 資料來源](../../integration-services/connection-manager/data-sources.md)  
   
--   [連接到資料來源&#40;ODBC&#41;](connecting-to-a-data-source-odbc.md)  
+-   [連接到 &#40;ODBC&#41;的資料來源](connecting-to-a-data-source-odbc.md)  
   
 -   [從資料來源中斷連接](disconnecting-from-a-data-source.md)  
   

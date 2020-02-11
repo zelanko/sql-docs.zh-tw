@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ec1c7205597224e5fca27942ca25ad4e197ec0d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198406"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>建立伺服器稽核與伺服器稽核規格
@@ -49,7 +49,7 @@ ms.locfileid: "68198406"
   
 -   CREATE SERVER AUDIT 陳述式位於交易的範圍內。 如果回復交易，也會回復此陳述式。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68198406"
      指定在強制處理稽核動作之前經過的時間長度 (以毫秒為單位)。  值為 0 表示同步傳遞。 預設的最小值為 **1000** (1 秒鐘)。 最大值為 2,147,483,647 (2,147,483.647 秒鐘或是 24 天 20 小時 31 分鐘又 23.647 秒鐘)。  
   
      **於稽核記錄失敗時:**  
-     **Continue**  
+     **繼續**  
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 作業繼續進行。 系統不會保留稽核記錄。 稽核會繼續嘗試記錄事件，而且如果失敗狀況已解決，就會恢復稽核。 選取 **[繼續]** 選項會允許可能違反安全性原則的未稽核活動。 當繼續進行 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 作業比維持完整稽核更重要時，請選取此選項。 這是預設選項。  
   
      **關閉伺服器**  
@@ -95,7 +95,7 @@ ms.locfileid: "68198406"
      指定當 [稽核目的地]  為檔案時，要寫入稽核資料的資料夾位置。  
   
      **省略符號 (...)**  
-     會開啟**尋找資料夾-** _server_name_對話方塊來指定檔案路徑，或建立稽核檔案寫入其中的資料夾。  
+     開啟 [**尋找資料夾-**_server_name_ ] 對話方塊，指定檔案路徑或建立用來寫入 audit 檔案的資料夾。  
   
      **稽核檔案最大限制:**  
      **輪用檔案數量上限**  
@@ -152,7 +152,7 @@ ms.locfileid: "68198406"
      **省略符號 (...)**  
      開啟 **[選取物件]** 對話方塊來瀏覽及選取可用的物件 (根據指定的 **[物件名稱]** )。  
   
-3.  完成後，請按一下 **[確定]** 。  
+3.  完成時，請按一下 [確定]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -1,5 +1,5 @@
 ---
-title: 繫結參數 ODBC |Microsoft Docs
+title: 系結參數 ODBC |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,32 +13,32 @@ ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1bc40d4800e7cd013b7ac908400c0492286314e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107629"
 ---
 # <a name="binding-parameters-odbc"></a>繫結參數 ODBC
-SQL 陳述式中的每個參數必須是相關聯，或*繫結，* 給應用程式之前執行的陳述式中的變數。 當應用程式會將變數繫結至參數時，它會描述該變數-位址、 C 資料類型等位，驅動程式。 它也會描述參數本身-SQL 資料類型、 有效位數和等等。 驅動程式會將此資訊儲存在結構中，它會維護該陳述式，並從變數擷取值，陳述式執行時使用的資訊。  
+在執行語句之前，SQL 語句中的每個參數都必須與應用程式中的變數相關*聯或系*結。 當應用程式將變數系結至參數時，它會描述該驅動程式的變數位址、C 資料類型等等。 它也會描述參數本身-SQL 資料類型、有效位數等等。 驅動程式會將這項資訊儲存在它為該語句維護的結構中，並在執行語句時，使用此資訊來抓取變數中的值。  
   
- 參數可以繫結，或在任何時間執行的陳述式之前重新繫結。 如果在執行陳述式之後，會重新繫結參數，直到再次執行陳述式，不會套用繫結。 若要將參數繫結至不同的變數，應用程式只會重新繫結與新的變數; 參數先前的繫結就會自動釋放。  
+ 在執行語句之前，可以隨時系結或重新系結參數。 如果參數在執行語句之後重新系結，則在再次執行語句之前，不會套用系結。 若要將參數系結至不同的變數，應用程式只會將參數重新系結至新的變數。會自動釋放先前的系結。  
   
- 變數在不同的變數繫結至參數，直到所有的參數會藉由呼叫未繫結直到繫結至參數**SQLFreeStmt** SQL_RESET_PARAMS 選項，或直到釋放陳述式。 基於這個理由，必須確定，變數不會釋放之前未繫結之後，這些應用程式。 如需詳細資訊，請參閱 < [Allocating 及釋放緩衝區](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)。  
+ 變數會維持系結至參數，直到不同的變數系結至參數為止，直到所有參數都已解除系結，方法是使用 SQL_RESET_PARAMS 選項呼叫**SQLFreeStmt** ，或在釋放語句之前。 基於這個理由，應用程式必須確定變數不會釋放，直到它們解除系結為止。 如需詳細資訊，請參閱配置[和釋放緩衝區](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)。  
   
- 參數繫結都只是儲存在結構中由陳述式的驅動程式所維護的資訊，因為它們可以依任何順序設定。 它們也是獨立執行的 SQL 陳述式。 例如，假設應用程式繫結三個參數，並接著執行下列 SQL 陳述式：  
+ 因為參數系結只是儲存在語句的驅動程式所維護的結構中的資訊，所以可以依任何順序進行設定。 它們也與執行的 SQL 語句無關。 例如，假設應用程式會系結三個參數，然後執行下列 SQL 語句：  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- 如果應用程式會接著立即執行的 SQL 陳述式  
+ 如果應用程式接著立即執行 SQL 語句  
   
 ```  
 SELECT * FROM Orders WHERE OrderID = ?, OpenDate = ?, Status = ?  
 ```  
   
- 在相同的陳述式控制代碼的參數繫結上**插入**陳述式會使用，因為這些是儲存在陳述式結構中的繫結。 在大部分情況下，這是不良的程式設計做法，而且應該予以避免。 相反地，應用程式應該呼叫**SQLFreeStmt**解除繫結所有舊的參數，然後將新的繫結的 SQL_RESET_PARAMS 選項。  
+ 在相同的語句控制碼上，會使用**INSERT**語句的參數系結，因為這些系結是儲存在語句結構中的系結。 在大部分情況下，這是不佳的程式設計實務，應予以避免。 相反地，應用程式應該使用 SQL_RESET_PARAMS 選項來呼叫**SQLFreeStmt** ，以解除系結所有舊的參數，然後再系結新的參數。  
   
  此章節包含下列主題。  
   

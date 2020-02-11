@@ -14,16 +14,16 @@ ms.assetid: 4bb51845-ee91-4b97-9dd4-2fab977f2aec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: afbd1404cb40408166ecfc59993db7b183ae5ed2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68065010"
 ---
 # <a name="sqlallocenv-mapping"></a>SQLAllocEnv 對應
-當應用程式呼叫**SQLAllocEnv**透過 ODBC *3.x*驅動程式，會呼叫**SQLAllocEnv**(*phenv*) 會對應到**SQLAllocHandle** ，如下所示：  
+當應用程式*透過 ODBC 3.x 驅動程式呼叫* **SQLAllocEnv**時， **SQLAllocEnv**（*Phenv*）的呼叫會對應到**SQLAllocHandle** ，如下所示：  
   
-1.  驅動程式管理員配置環境控制代碼，並傳回應用程式。 此驅動程式管理員會呼叫**SQLSetEnvAttr**設 SQL_OV_ODBC2 SQL_ATTR_ODBC_VERSION 環境屬性。  
+1.  驅動程式管理員會配置環境控制碼，並將它傳回給應用程式。 驅動程式管理員會呼叫**SQLSetEnvAttr** ，將 SQL_ATTR_ODBC_VERSION 環境屬性設定為 SQL_OV_ODBC2。  
   
 2.  當應用程式建立與驅動程式的第一個連接時，驅動程式管理員會呼叫  
   
@@ -31,4 +31,4 @@ ms.locfileid: "68065010"
     SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, OutputHandlePtr)  
     ```  
   
-     在 將驅動程式與*OutputHandlePtr*設為*phenv*。
+     在*OutputHandlePtr*設定為*phenv*的驅動程式中。

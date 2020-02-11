@@ -1,5 +1,5 @@
 ---
-title: 定義查詢參數對話方塊 （報表產生器） |Microsoft Docs
+title: 定義查詢參數對話方塊（報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a66d262efe80c027daf94247482e3bb2826e92a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109355"
 ---
 # <a name="define-query-parameters-dialog-box-report-builder"></a>定義查詢參數對話方塊 (報表產生器)
   使用 **[定義查詢參數]** 對話方塊，即可在設計階段在查詢設計工具中執行查詢以查看範例資料時，指定參數值。 查詢參數會篩選資料來源的資料，並且協助限制報表所處理的資料量。 這些值不會儲存在報表定義中。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **參數名稱**  
  輸入您要使用之查詢參數的名稱。  
   

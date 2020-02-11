@@ -1,5 +1,5 @@
 ---
-title: 組件屬性 （一般頁面） |Microsoft Docs
+title: 元件屬性（一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: cab96fb470e4cc19da0612163f364d6339841985
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68027969"
 ---
 # <a name="assemblies---properties"></a>組件 - 屬性
@@ -30,22 +30,22 @@ ms.locfileid: "68027969"
  鍵入擁有者名稱或結構描述名稱，或者從清單中選取。  
   
  **權限集合**  
- 設定組件的安全性層級。 提供三個安全性層級：**安全**，**外部存取**，以及**Unsafe**存取。  
+ 設定組件的安全性層級。 提供的安全性層級有三種：**安全**、**外部存取**和**不安全**的存取。  
   
  **組件的路徑**  
  鍵入組件檔的路徑。  
   
  **瀏覽**  
- 導覽至您要加入的組件。 按一下 **瀏覽**如果不要輸入組件檔案的路徑。  
+ 導覽至您要加入的組件。 如果您不想要輸入元件檔的路徑，請按一下 **[流覽]** 。  
   
 ## <a name="additional-properties-grid"></a>其他屬性方格  
  **建立日期**  
  顯示建立/註冊組件的日期。  
   
  **強式名稱**  
- 顯示**真**經過數位簽署的組件，如果**False**如果它尚未經過數位簽署。  
+ 如果元件已數位簽署，則顯示**True** ，如果尚未數位簽署，則**為 False** 。  
   
- **版本(Version)**  
+ **版本**  
  顯示組件的版本號碼。  
   
 ## <a name="see-also"></a>另請參閱  

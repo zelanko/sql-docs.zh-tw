@@ -18,10 +18,10 @@ ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 53cd38b80b6884e9be5c41042fac34b68ec2cda0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028363"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR 使用者定義彙總 - 叫用函式
@@ -30,13 +30,13 @@ ms.locfileid: "68028363"
   
  適用下列其他規則：  
   
--   目前的使用者必須擁有**EXECUTE**權限的使用者定義彙總。  
+-   目前使用者必須具有使用者定義匯總的「**執行**」許可權。  
   
--   使用者定義彙總必須可使用叫用兩段式名稱的形式*schema_name.udagg_name*。  
+-   使用者定義匯總必須使用*schema_name. udagg_name*格式的兩部分名稱來叫用。  
   
--   在使用者定義彙總的引數類型必須符合或可隱含地轉換成*input_type*中所定義彙總**CREATE AGGREGATE**陳述式。  
+-   使用者定義匯總的引數類型必須符合或可以隱含地轉換成匯總的*input_type* ，如**CREATE aggregate**語句中所定義。  
   
--   在使用者定義彙總的傳回型別必須符合*return_type*中**CREATE AGGREGATE**陳述式。  
+-   使用者定義匯總的傳回類型必須符合**CREATE aggregate**語句中的*return_type* 。  
   
 ## <a name="example-1"></a>範例 1  
  以下是使用者定義彙總函式的範例，此函數會串連取自資料表之資料行的一組字串值：  
@@ -196,7 +196,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- 一旦您編譯程式碼插入**MyAgg.dll**，您可以註冊中的彙總[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如下所示：  
+ 將程式碼編譯為**myagg.dll 之後**之後，您可以在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]註冊匯總，如下所示：  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -208,7 +208,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不支援使用 /clr:pure 編譯器選項編譯的 Visual C++ 資料庫物件 (例如純量值函式) 執行。  
   
- 因為大部分的彙總，大部分的邏輯是在**Accumulate**方法。 這裡，會傳入做為參數的字串**Accumulate**方法會附加至**StringBuilder**物件初始化**Init**方法。 假設這不是第一次**Accumulate**在呼叫方法，也會附加到逗號**StringBuilder**之前附加傳入的字串。 在計算的工作，結束**Terminate**呼叫方法時，就會傳回**StringBuilder**做為字串。  
+ 如同大部分的匯總，大部分的邏輯都是在**累積**的方法中。 在這裡，當做參數傳遞至**累積**方法的字串會附加至在**Init**方法中初始化的**StringBuilder**物件。 假設這不是第一次呼叫**累積**方法，則在附加傳入的字串之前，也會將逗號附加至**StringBuilder** 。 在計算工作結束時，會呼叫**Terminate**方法，以字串形式傳回**StringBuilder** 。  
   
  例如，請考慮具有下列結構描述的資料表：  
   
@@ -241,7 +241,7 @@ GROUP BY BookID;
 |3|Roberts, Michaels, Steven|  
   
 ## <a name="example-2"></a>範例 2  
- 下列範例示範具有兩個參數的彙總**Accumulate**方法。  
+ 下列範例顯示在**累積**方法上有兩個參數的匯總。  
   
  [C#]  
   

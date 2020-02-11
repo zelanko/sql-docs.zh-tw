@@ -13,19 +13,19 @@ ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2606733b3efc5a9641f8de0f544b3cff7c7e9a31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923346"
 ---
 # <a name="xslt-transformations"></a>XSLT 轉換
-XSLT 可以套用至所產生的 XML，將它轉換成另一種格式。 了解在 ADO 中的 XML 格式，可以協助開發 XSLT 範本可以將它轉換成更方便使用的表單。  
+XSLT 可以套用至產生的 XML，以將它轉換成另一種格式。 瞭解 ADO 中的 XML 格式有助於開發 XSLT 範本，以便將它轉換成更容易使用的表單。  
   
- 例如，您會知道資料錄集的每個資料列會儲存為 rs： 資料元素內的 z： 資料列項目。 同樣地，每個資料錄集的欄位會儲存為此元素的屬性 / 值組。  
+ 例如，您知道記錄集的每個資料列都會儲存為 rs： data 元素內的 z:row 元素。 同樣地，記錄集的每個欄位都會儲存為此元素的屬性/值組。  
   
 ## <a name="remarks"></a>備註  
- 下列 XSLT 指令碼可以套用至的 XML，如上一節所示，將它轉換成 HTML 表格會顯示在瀏覽器中：  
+ 下列 XSLT 腳本可以套用至如上一節所示的 XML，將它轉換成要在瀏覽器中顯示的 HTML 資料表：  
   
 ```  
 <?xml version="1.0" encoding="ISO-8859-1"?>  
@@ -50,7 +50,7 @@ XSLT 可以套用至所產生的 XML，將它轉換成另一種格式。 了解�
 </html>  
 ```  
   
- XSLT 轉換成 HTML 表會顯示每個表格標題以及資料錄集的欄位產生 ADO Save 方法的 XML 資料流。 資料表標題和資料列也會指派不同的字型和色彩。  
+ XSLT 會將 ADO Save 方法所產生的 XML 資料流程轉換成 HTML 資料表，其中顯示記錄集的每個欄位，以及一個資料表標題。 資料表標題和資料列也會被指派不同的字型和色彩。  
   
 ## <a name="see-also"></a>另請參閱  
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)

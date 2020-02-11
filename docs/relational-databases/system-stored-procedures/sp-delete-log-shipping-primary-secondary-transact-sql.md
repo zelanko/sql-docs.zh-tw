@@ -1,5 +1,5 @@
 ---
-title: sp_delete_log_shipping_primary_secondary (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_log_shipping_primary_secondary （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: d6f71a12-f7b1-4a1c-9639-a533b8287b0c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8276a23224495b7bcc69721fd5317d0b2b87821a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68009174"
 ---
-# <a name="spdeletelogshippingprimarysecondary-transact-sql"></a>sp_delete_log_shipping_primary_secondary (Transact-SQL)
+# <a name="sp_delete_log_shipping_primary_secondary-transact-sql"></a>sp_delete_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   移除主要伺服器中之次要資料庫的項目。  
@@ -42,11 +42,11 @@ sp_delete_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @primary_database = ] 'primary_database'` 是主要伺服器上名稱。 *primary_database&lt*已**sysname**，沒有預設值。  
+`[ @primary_database = ] 'primary_database'`這是主伺服器上的資料庫名稱。 *primary_database*是**sysname**，沒有預設值。  
   
-`[ @secondary_server = ] 'secondary_server'` 是次要伺服器的名稱。 *secondary_server*已**sysname**，沒有預設值。  
+`[ @secondary_server = ] 'secondary_server'`這是次要伺服器的名稱。 *secondary_server*是**sysname**，沒有預設值。  
   
-`[ @secondary_database = ] 'secondary_database'` 是，次要資料庫的名稱。 *secondary_database*已**sysname**，沒有預設值。  
+`[ @secondary_database = ] 'secondary_database'`這是次要資料庫的名稱。 *secondary_database*是**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -55,9 +55,9 @@ sp_delete_log_shipping_primary_secondary
  無。  
   
 ## <a name="remarks"></a>備註  
- **sp_delete_log_shipping_primary_secondary**必須從執行**主要**主要伺服器上的資料庫。 這個預存程序會移除從次要資料庫的項目**log_shipping_primary_secondaries**主要伺服器上。  
+ **sp_delete_log_shipping_primary_secondary**必須從主伺服器的**master**資料庫中執行。 這個預存程式會從主伺服器上的**log_shipping_primary_secondaries**中移除次要資料庫的專案。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  

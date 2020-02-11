@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c1a701f1e63877c807964a8d81a829afdc9f7b81
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891618"
 ---
 # <a name="securing-sql-server"></a>保護 SQL Server 的安全
@@ -38,7 +38,7 @@ ms.locfileid: "68891618"
   
  實施實體網路安全性的第一步，是禁止未經授權的使用者接近網路。 下表包含網路安全性資訊的進一步相關資訊。  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)] 以及從網路存取其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|《 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 線上叢書》中的＜設定與保護伺服器環境安全＞|  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68891618"
   
  防火牆也提供了有效實施安全性的方法。 在邏輯上，防火牆具有隔離與限制網路流量的功能，可供您的組織進行設定以強制實施資料安全性原則。 如果您使用防火牆，可對有安全顧慮的重點區域提供阻卻作用，以提高作業系統層級安全性。 下表包含有關如何搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用防火牆的詳細資訊。  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
 |設定要搭配使用的防火牆 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |設定要搭配使用的防火牆 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[針對 SSIS 服務的存取設定 Windows 防火牆](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
@@ -57,13 +57,13 @@ ms.locfileid: "68891618"
   
  介面區縮小是一種停止或停用未使用元件的安全性措施。 介面區縮小可透過提供較少的系統潛在攻擊途徑，以協助提高安全性。 對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的介面區設限，重點事項包括僅授與服務和使用者適當權限，以賦予「最少權限」執行必要的服務。 下表包含服務及系統存取的詳細資訊。  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
 |所需的服務 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)|  
   
  如果您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統使用 Internet Information Services (IIS)，則需要設定其他步驟以保護平台介面的安全。 下表包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Internet Information Services 的相關資訊。  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
 |IIS 安全性 [!INCLUDE[ssEW](../../includes/ssew-md.md)]|《 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 線上叢書》中的＜IIS 安全性＞|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 驗證|[Reporting Services 中的驗證](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)|  
@@ -72,7 +72,7 @@ ms.locfileid: "68891618"
 ### <a name="sql-server-operating-system-files-security"></a>SQL Server 作業系統檔案安全性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用作業系統檔案執行作業及儲存資料。 檔案安全性的最佳作法要求針對這些檔案設定存取限制。 下表包含這些檔案的詳細資訊。  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式檔案|[SQL Server 的預設和具名執行個體的檔案位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
@@ -88,7 +88,7 @@ GO
 ## <a name="principals-and-database-object-security"></a>主體與資料庫物件安全性  
  主體是指已獲授權存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的個人、群組和處理序。 「安全性實體」則是指伺服器、資料庫及資料庫所包含的物件。 這些實體均可各自設定一組權限，以減少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 介面區。 下表包含主體和安全性實體的相關資訊。  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
 |伺服器與資料庫使用者、角色和處理序|[主體 &#40;Database Engine&#41;](authentication-access/principals-database-engine.md)|  
 |伺服器與資料庫物件安全性|[安全性實體](securables.md)|  
@@ -97,7 +97,7 @@ GO
 ### <a name="encryption-and-certificates"></a>加密和憑證  
  加密並不能解決存取控制問題。 但是，若發生存取控制失靈的罕見情形，加密則可限縮資料遺失的風險以增強安全性。 例如，只要資料已加密，即使資料庫主機電腦設定不當而遭惡意使用者取得敏感性資料 (如信用卡號)，失竊的資訊就可能毫無用處。 下表包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中加密的詳細資訊。  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
 |加密階層 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[加密階層](encryption/encryption-hierarchy.md)|  
 |實作安全連接|[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)|  
@@ -105,7 +105,7 @@ GO
   
  憑證是兩部伺服器之間共用的軟體「金鑰」，可透過強化驗證的方式提供安全通訊。 您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立與使用憑證，進而增強物件及連接安全性。 下表包含有關如何搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用憑證的詳細資訊。  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
 |建立使用的憑證 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|  
 |搭配資料庫鏡像使用憑證|[使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
@@ -121,7 +121,7 @@ GO
 ### <a name="sql-server-security-tools-and-utilities"></a>SQL Server 安全性工具和公用程式  
  下表包含可用於設定及管理安全性之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和公用程式的相關資訊。  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
 |連接、設定與控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[使用 SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)|  
 |從命令提示字元連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並執行查詢|[sqlcmd 公用程式](../../tools/sqlcmd-utility.md)|  
@@ -132,7 +132,7 @@ GO
 ### <a name="sql-server-security-catalog-views-and-functions"></a>SQL Server 安全性目錄檢視和函數  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在已針對效能與實用性最佳化的數種檢視和函數中公開安全性資訊。 下表包含安全性檢視和函數的相關資訊。  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性目錄檢視，傳回資料庫層級與伺服器層級的權限、主體、角色等等的相關資訊。 此外，另有若干目錄檢視提供了加密金鑰、憑證與認證的相關資訊。|[安全性目錄檢視 &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性函數，可傳回目前使用者、權限和結構描述的相關資訊。|[安全性函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)|  

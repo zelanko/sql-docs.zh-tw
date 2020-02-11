@@ -1,5 +1,5 @@
 ---
-title: CopyRecord、 CopyTo 和 SaveToFile 方法範例 (VB) |Microsoft Docs
+title: CopyRecord、CopyTo 和 SaveToFile 方法範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b128c935ec0119344a213dbe5289cc8a3cd190fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919360"
 ---
-# <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord、 CopyTo 和 SaveToFile 方法範例 (VB)
-此範例示範如何建立檔案，使用的複本[Stream](../../../ado/reference/ado-api/stream-object-ado.md)或是[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件。 一個複本進行，以適用於網際網路發佈的 Web 資料夾。 其他屬性和方法，顯示包含[Stream 型別](../../../ado/reference/ado-api/type-property-ado-stream.md)，**開啟**， [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)，以及[記錄開啟](../../../ado/reference/ado-api/open-method-ado-record.md)。  
+# <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord、CopyTo 和 SaveToFile 方法範例（VB）
+這個範例示範如何使用[Stream](../../../ado/reference/ado-api/stream-object-ado.md)或[Record](../../../ado/reference/ado-api/record-object-ado.md)物件來建立檔案的複本。 Web 資料夾會進行一份複製以進行網際網路發佈。 顯示的其他屬性和方法包括 [[資料流程類型](../../../ado/reference/ado-api/type-property-ado-stream.md)]、[**開啟**]、[ [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)] 和 [[記錄開啟](../../../ado/reference/ado-api/open-method-ado-record.md)]。  
   
 ```  
 'BeginCopyRecordVB  
@@ -125,12 +125,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [CopyRecord 方法 (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)   
- [CopyTo 方法 (ADO)](../../../ado/reference/ado-api/copyto-method-ado.md)   
- [LoadFromFile 方法 (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   
- [Open 方法 （ADO 記錄）](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Open 方法 (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [CopyRecord 方法（ADO）](../../../ado/reference/ado-api/copyrecord-method-ado.md)   
+ [CopyTo 方法（ADO）](../../../ado/reference/ado-api/copyto-method-ado.md)   
+ [LoadFromFile 方法（ADO）](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   
+ [Open 方法（ADO Record）](../../../ado/reference/ado-api/open-method-ado-record.md)   
+ [Open 方法（ADO Stream）](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+ [Record 物件（ADO）](../../../ado/reference/ado-api/record-object-ado.md)   
  [SaveToFile 方法](../../../ado/reference/ado-api/savetofile-method.md)   
- [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
+ [Stream 物件（ADO）](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Type 屬性 (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)

@@ -25,13 +25,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a56192c7aa54d9b5fe215b8f793d90d6e814238e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929056"
 ---
-# <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
+# <a name="set-deadlock_priority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   指定如果與另一個工作階段發生死結時，目前工作階段繼續處理的相對重要性。  
@@ -66,7 +66,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  **@** *deadlock_intvar*  
  這是指定死結優先權的整數變數。 這個變數必須設成 (-10 至 10) 範圍內的整數值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當兩個工作階段都在等待存取對方所鎖定的資源時，便會出現死結。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體偵測到兩個工作階段發生死結時，它會選擇一個工作階段作為死結犧牲者來解決死結。 此時會回復犧牲者目前的交易，且會向用戶端傳回死結錯誤訊息 1205。 這個工作階段所持有的鎖定會全部釋出，讓其他工作階段繼續作業。  
   
  選擇哪個工作階段作為死結犧牲者，會隨著每個工作階段的死結優先權而不同：  
