@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c29053daaef4e24d89ee92fc4b6653616999205a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62710504"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>儲存資料庫圖表 (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "62710504"
   
 ### <a name="to-save-the-database-diagram"></a>儲存資料庫圖表  
   
-1.  從**檔案**功能表上，選擇**儲存 < *`tablename`* >** 。  
+1.  從 [檔案 **] 功能表中，選擇 [** **儲存*`tablename`*<**]。  
   
 2.  如果這是從未儲存過的新圖表，[另存新檔]  對話方塊便會出現。 輸入圖表的名稱。  
   

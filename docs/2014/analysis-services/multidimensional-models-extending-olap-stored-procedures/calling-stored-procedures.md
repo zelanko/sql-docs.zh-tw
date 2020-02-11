@@ -1,5 +1,5 @@
 ---
-title: 呼叫預存程序 |Microsoft Docs
+title: 呼叫預存程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55569f23ae943e96a495905434bb0d39f2796a63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727754"
 ---
 # <a name="calling-stored-procedures"></a>呼叫預存程序
@@ -65,7 +65,8 @@ SELECT Country.Members on 0, MySproc(Measures.Sales) ON 1 FROM Sales
 ## <a name="calling-stored-procedures-with-the-call-statement"></a>使用 CALL 陳述式呼叫預存程序  
  使用 MDX `Call` 陳述式，可以在 MDX 查詢內容的外部呼叫預存程序。  
   
- 您可使用這個方法具現化預存程序的副作用，或讓應用程式取得預存查詢的結果。 `Call` 陳述式的常見用法，是使用分析管理物件 (AMO) 來執行不會傳回結果的管理功能。 例如，下列命令會呼叫預存程序：  
+ 您可使用這個方法具現化預存程序的副作用，或讓應用程式取得預存查詢的結果。 
+  `Call` 陳述式的常見用法，是使用分析管理物件 (AMO) 來執行不會傳回結果的管理功能。 例如，下列命令會呼叫預存程序：  
   
 ```  
 Call MyStoredProcedure(a,b,c)  
@@ -82,7 +83,7 @@ CALL(MyVoidFunction)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型組件管理](../multidimensional-models/multidimensional-model-assemblies-management.md)   
+ [多維度模型元件管理](../multidimensional-models/multidimensional-model-assemblies-management.md)   
  [定義預存程序](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 矩陣 （報表產生器及 SSRS） |Microsoft Docs
+title: 矩陣（報表產生器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7750cc62d570cc0f7278196cef45ce088823901c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106156"
 ---
 # <a name="matrices-report-builder-and-ssrs"></a>矩陣 (報表產生器及 SSRS)
@@ -24,12 +24,13 @@ ms.locfileid: "66106156"
   
  若要快速地開始使用矩陣，請參閱[教學課程：建立矩陣報表 &#40;報表產生器&#41;](../tutorial-creating-a-matrix-report-report-builder.md)。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 範例報表包括許多使用矩陣的報表。 您可以在報表產生器或報表設計師中瀏覽範例報表的報表定義，或在報表產生器或報表設計師中預覽轉譯的報表，藉以了解矩陣。 如需有關下載範例報表的詳細資訊，請參閱＜ [(SSRS) Reporting Services 範例](https://go.microsoft.com/fwlink/?LinkID=198283)＞。  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 範例報表包括許多使用矩陣的報表。 您可以在報表產生器或報表設計師中瀏覽範例報表的報表定義，或在報表產生器或報表設計師中預覽轉譯的報表，藉以了解矩陣。 如需有關下載範例報表的詳細資訊，請參閱＜ [(SSRS) Reporting Services 範例](https://go.microsoft.com/fwlink/?LinkID=198283)＞。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddingMatrix"></a> 將矩陣加入至您的報表  
+##  <a name="AddingMatrix"></a>將矩陣加入至報表  
  將矩陣從功能區上的 [插入] 索引標籤加入至設計介面。 您可以選擇使用「資料表或矩陣精靈」(包括建立資料來源連接和資料集與設定矩陣) 來加入矩陣，或根據矩陣範本來加入矩陣。  
   
 > [!NOTE]  
@@ -41,19 +42,19 @@ ms.locfileid: "66106156"
   
  當您在設計介面上選取矩陣時，資料列和資料行控制代碼隨即出現，如下圖所示。  
   
- ![從工具箱新增選取的新矩陣](../media/rs-matrixtemplatenewselected.gif "從工具箱新增選取的新矩陣")  
+ ![從工具箱新增選取的矩陣](../media/rs-matrixtemplatenewselected.gif "從工具箱新增選取的矩陣")  
   
  將資料集欄位拖曳到 [群組] 窗格的 [資料列群組] 和 [資料行群組] 區域來加入群組。 您拖曳到資料列群組或資料行群組窗格中的第一個欄位會取代初始的空預設群組。 接著，您可以根據資料，套用每個資料格的格式。  
   
- ![矩陣、類別目錄資料列和地理資料行群組](../media/rs-basicmatrixdesign.gif "矩陣、類別目錄資料列和地理資料行群組")  
+ ![矩陣、目錄資料列和地理位置資料行群組](../media/rs-basicmatrixdesign.gif "矩陣、目錄資料列和地理位置資料行群組")  
   
  在 [預覽] 中，矩陣會展開以顯示資料列群組和資料行群組值。 資料格會顯示摘要值，如下圖所示。  
   
- ![預覽已展開群組的轉譯矩陣](../media/rs-basicmatrixpreview.gif "預覽已展開群組的轉譯矩陣")  
+ ![具有展開群組的轉譯矩陣預覽](../media/rs-basicmatrixpreview.gif "具有展開群組的轉譯矩陣預覽")  
   
  您開始使用的矩陣是以 Tablix 資料區為基礎的範本。 您可以加入巢狀或相鄰的資料列群組或資料行群組，甚至是加入詳細資料列，以便繼續開發您的矩陣設計。 如需詳細資訊，請參閱[探索 Tablix 資料區的彈性 &#40;報表產生器及 SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
   
-##  <a name="AddingParentGroupChild"></a> 將父群組或子群組加入至矩陣中  
+##  <a name="AddingParentGroupChild"></a>將父群組或子群組加入至矩陣  
  若要以單一資料集欄位為基礎加入群組，將欄位從 [報表資料] 窗格拖曳到 [群組] 窗格的適當 [資料列群組] 或 [資料行群組] 區域。 將欄位放到群組階層中，以便將其關聯性設定到現有的群組。 將該欄位放到現有群組的上方來建立父群組，或將其放在現有群組的下方來建立子群組。  
   
  當您將欄位放到 **[群組]** 窗格時，會發生數種狀況：  
@@ -80,8 +81,8 @@ ms.locfileid: "66106156"
   
  如需詳細資訊，請參閱 [總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
-##  <a name="AddingAdjacentGroup"></a> 將相鄰的群組加入到矩陣中  
- 若要以單一資料集欄位為基礎加入相鄰的群組，請使用 [群組] 窗格中的快速鍵功能表。 如需詳細資訊，請參閱 [在資料區中加入或刪除群組 &#40;報表產生器及 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。 下圖顯示以地理位置為基礎的群組與以年份為基礎的相鄰群組。  
+##  <a name="AddingAdjacentGroup"></a>將連續的群組加入至矩陣  
+ 若要以單一資料集欄位為基礎加入相鄰的群組，請使用 [群組] 窗格中的快速鍵功能表。 如需詳細資訊，請參閱[在資料區域中新增或刪除群組 &#40;報表產生器和 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。 下圖顯示以地理位置為基礎的群組與以年份為基礎的相鄰群組。  
   
  ![地理位置和年份的相鄰資料行群組](../media/rs-basicmatrixadjacentgroupsdesign.gif "地理位置和年份的相鄰資料行群組")  
   

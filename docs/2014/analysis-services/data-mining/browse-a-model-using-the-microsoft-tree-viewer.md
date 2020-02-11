@@ -1,5 +1,5 @@
 ---
-title: 瀏覽模型，使用 Microsoft 樹狀檢視器 |Microsoft Docs
+title: 使用 Microsoft 樹狀檢視器來流覽模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,31 +24,34 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f7ac483e0883386f620a654d6257a49fa8baf52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085942"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>使用 Microsoft 樹狀檢視器瀏覽模型
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 樹狀檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法建立的決策樹。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法是同時支援分類與迴歸的混合式決策樹演算法。 因此，您也可以使用這個檢視器來檢視以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法為基礎的模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法可用於離散和連續屬性的預測模型。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)＞。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]樹狀檢視器[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]會顯示以[!INCLUDE[msCoName](../../includes/msconame-md.md)]決策樹演算法建立的決策樹。 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法是同時支援分類與迴歸的混合式決策樹演算法。 因此，您也可以使用這個檢視器來檢視以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法為基礎的模型。 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法可用於離散和連續屬性的預測模型。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)＞。  
   
 > [!NOTE]  
 >  若要檢視有關此模型中所用的方程式及所探索之模式的詳細資訊，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容樹狀檢視器。 如需詳細資訊，請參閱[使用 Microsoft 一般內容樹狀檢視器瀏覽模型](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)。  
   
-##  <a name="BKMK_TabsPanes"></a> 檢視器索引標籤  
- 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中瀏覽採礦模型時，該模型會在適合它的檢視器中，顯示於資料採礦設計師的 **[採礦模型檢視器]** 索引標籤上。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 樹狀檢視器包含下列索引標籤和窗格：  
+##  <a name="BKMK_TabsPanes"></a>檢視器索引標籤  
+ 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中瀏覽採礦模型時，該模型會在適合它的檢視器中，顯示於資料採礦設計師的 **[採礦模型檢視器]** 索引標籤上。 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 樹狀檢視器包含下列索引標籤和窗格：  
   
 -   [決策樹](#BKMK_DecisionTree)  
   
 -   [相依性網路](#BKMK_DependencyNetwork)  
   
--   [採礦圖例](#BKMK_MiningLegend)  
+-   [[挖掘圖例]](#BKMK_MiningLegend)  
   
-###  <a name="BKMK_DecisionTree"></a> 決策樹  
+###  <a name="BKMK_DecisionTree"></a>決策樹  
  當您建立決策樹模型時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會為每一個可預測屬性建立個別樹狀。 您可以從檢視器之 **[決策樹]** 索引標籤的 **[樹狀結構]** 清單中，選取個別樹狀結構來檢視它。  
   
- 決策樹是由一系列的分割所組成，最重要的分割 (由演算法決定) 位於檢視器左邊的 **[全部]** 節點上。 其他分割出現在右邊。 [所有]  節點中的分割最重要，因為它包含資料集內最強的導致分割條件，因此它會導致第一個分割。  
+ 決策樹是由一系列的分割所組成，最重要的分割 (由演算法決定) 位於檢視器左邊的 **[全部]** 節點上。 其他分割出現在右邊。 [所有]**** 節點中的分割最重要，因為它包含資料集內最強的導致分割條件，因此它會導致第一個分割。  
   
  您可以展開或摺疊樹狀結構中的個別節點，以顯示或隱藏在每一個節點之後發生的分割。 您也可以使用 **[決策樹]** 索引標籤上的選項，影響樹狀結構的顯示方式。 使用 **[顯示層級]** 滑桿，來調整樹狀結構所顯示的層級數目。 使用 **[預設展開]** ，來設定模型中所有樹狀結構所顯示的預設層級數目。  
   
@@ -67,16 +70,17 @@ ms.locfileid: "66085942"
  當樹狀是以連續可預測屬性建立時，檢視器會為樹狀中的每一個節點顯示鑽石形圖表，而非長條圖。 此鑽石形圖表有一條線代表屬性的範圍。 鑽石形位於節點的平均值之處，而鑽石形的寬度代表在該節點的屬性變異數。 鑽石形越窄，表示節點所建立的預測愈精確。 檢視器也會顯示迴歸方程式，它是用來決定節點中的分割。  
   
 #### <a name="additional-decision-tree-display-options"></a>其他決策樹顯示選項  
- 針對決策樹模型啟用鑽研之後，您可以在樹狀結構中以滑鼠右鍵按一下節點並選取 [鑽研]  ，來存取支援該節點的培訓案例。 您可以在資料採礦精靈內啟用鑽研，或在 **[採礦模型]** 索引標籤中調整採礦模型上的鑽研屬性。  
+ 針對決策樹模型啟用鑽研之後，您可以在樹狀結構中以滑鼠右鍵按一下節點並選取 [鑽研]****，來存取支援該節點的培訓案例。 您可以在資料採礦精靈內啟用鑽研，或在 **[採礦模型]** 索引標籤中調整採礦模型上的鑽研屬性。  
   
- 您可以使用 **[決策樹]** 索引標籤上的縮放選項來放大或縮小樹狀，或使用 **[調成最適大小]** ，使整個模型調整成檢視器畫面大小。 如果樹狀過大而無法調整成螢幕大小，您可以使用 [導覽]  選項來導覽樹狀。 按一下 **[導覽]** 就會開啟個別導覽視窗，您可以使用它來選取要顯示的模型區段。  
+ 您可以使用 **[決策樹]** 索引標籤上的縮放選項來放大或縮小樹狀，或使用 **[調成最適大小]** ，使整個模型調整成檢視器畫面大小。 如果樹狀過大而無法調整成螢幕大小，您可以使用 [導覽] **** 選項來導覽樹狀。 按一下 **[導覽]** 就會開啟個別導覽視窗，您可以使用它來選取要顯示的模型區段。  
   
  您也可以將樹狀檢視影像複製到剪貼簿，以便將其貼到文件中或貼到影像操作軟體中。 使用 **[複製圖表檢視]** 即可只複製檢視器中可見的樹狀區段，或使用 **[複製整個圖表]** 來複製樹狀中所有展開的節點。  
   
  [回到頁首](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_DependencyNetwork"></a> 相依性網路  
- **[相依性網路]** 會顯示模型中的輸入屬性和可預測屬性之間的相依性。 檢視器左邊的滑桿會有篩選的作用，與相依性程度相關。 如果您降低滑桿，則檢視器中只會顯示最強的連結。  
+###  <a name="BKMK_DependencyNetwork"></a>相依性網路  
+ 
+  **[相依性網路]** 會顯示模型中的輸入屬性和可預測屬性之間的相依性。 檢視器左邊的滑桿會有篩選的作用，與相依性程度相關。 如果您降低滑桿，則檢視器中只會顯示最強的連結。  
   
  當您選取節點時，檢視器會反白顯示該節點特定的相依性。 例如，若您選擇一個可預測的節點，檢視器也會反白顯示每一個可協助預測該可預測節點的節點。  
   
@@ -86,7 +90,7 @@ ms.locfileid: "66085942"
   
  [回到頁首](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_MiningLegend"></a> 採礦圖例  
+###  <a name="BKMK_MiningLegend"></a>[挖掘圖例]  
  當您在決策樹模型中選取節點時， **[採礦圖例]** 會顯示下列資訊：  
   
 -   節點中的案例數目，依可預測屬性的狀態細分。  
@@ -104,10 +108,10 @@ ms.locfileid: "66085942"
  [回到頁首](#BKMK_TabsPanes)  
   
 ## <a name="see-also"></a>另請參閱  
- [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)   
- [採礦模型檢視器 &#40;資料採礦模型設計師&#41;](../mining-model-viewers-data-mining-model-designer.md)   
- [採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)   
- [資料採礦工具。](data-mining-tools.md)   
+ [Microsoft 決策樹演算法](microsoft-decision-trees-algorithm.md)   
+ [&#40;資料採礦模型設計工具的採礦模型檢視器&#41;](../mining-model-viewers-data-mining-model-designer.md)   
+ [採礦模型檢視器工作和操作說明](mining-model-viewer-tasks-and-how-tos.md)   
+ [資料採礦工具](data-mining-tools.md)   
  [資料採礦模型檢視器](data-mining-model-viewers.md)  
   
   

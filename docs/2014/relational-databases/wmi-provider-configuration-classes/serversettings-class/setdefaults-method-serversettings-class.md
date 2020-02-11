@@ -1,5 +1,5 @@
 ---
-title: SetDefaults 方法 （ServerSettings 類別） |Microsoft Docs
+title: SetDefaults 方法（ServerSettings 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: daa5635fc64e46dd8b6ccf6b9ab4cf38dc5d492d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62735891"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>SetDefaults 方法 (ServerSettings 類別)
-  設定執行個體的所有預設值[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]覆寫現有資料的選項。  
+  使用覆寫現有資料的選項，設定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例的所有預設值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,8 +40,8 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
- A [ServerSettings 類別](serversettings-class.md)物件，表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端執行個體。  
+ *目標*  
+ 代表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端實例的[ServerSettings 類別](serversettings-class.md)物件。  
   
 #### <a name="parameters"></a>參數  
   
@@ -55,6 +55,6 @@ OverwriteAll
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定伺服器網路通訊協定和網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [設定伺服器網路通訊協定與網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

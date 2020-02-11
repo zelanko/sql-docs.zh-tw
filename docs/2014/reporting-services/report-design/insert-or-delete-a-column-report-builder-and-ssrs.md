@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e1d5f5d846a690676942e0d4ffcba0475a35595a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105681"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>插入或刪除資料行 (報表產生器及 SSRS)
@@ -29,13 +29,13 @@ ms.locfileid: "66105681"
   
 -   在 [設計] 檢視中，按一下 Tablix 資料區的左上角，如此資料行和資料列控制代碼就會顯示在它的上方和旁邊。  
   
-     如需詳細資料區域的詳細資訊，請參閱[列出&#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)。  
+     如需有關資料區區域的詳細資訊，請參閱[&#40;報表產生器和 SSRS&#41;清單](tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
 ### <a name="to-insert-a-column-in-a-selected-data-region"></a>在選取的資料區中插入資料行  
   
 -   以滑鼠右鍵按一下您想要插入資料行的資料行控制代碼、按一下 [插入資料行]  ，然後按一下 [左方]  或 [右方]  。  
   
-     -或-  
+     -- 或 --  
   
 -   在您想要插入資料列的資料區中，以滑鼠右鍵按一下資料格、按一下 [插入資料行]  ，然後按一下 [左方]  或 [右方]  。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66105681"
   
 -   選取您想要刪除的一或多個資料行、以滑鼠右鍵按一下其中一個選取之資料行的控制代碼，然後按一下 [刪除資料行]  。  
   
-     -或-  
+     -- 或 --  
   
 -   在您想要刪除資料行的資料區中，以滑鼠右鍵按一下資料格，然後按一下 [刪除資料行]  。  
   

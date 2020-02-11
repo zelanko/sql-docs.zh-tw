@@ -1,5 +1,5 @@
 ---
-title: 大量複製資料，使用 IRowsetFastLoad (OLE DB) |Microsoft Docs
+title: 使用 IRowsetFastLoad （OLE DB）進行大量資料複製 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a19029a98daa5411f0e915b62f3c7556cafad97a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655683"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>使用 IRowsetFastLoad 大量複製資料 (OLE DB)
@@ -27,12 +27,12 @@ ms.locfileid: "62655683"
   
  取用者會將其大量複製的需求通知 SQLOLEDB，方法是將 SQLOLEDB 提供者特有的屬性 SSPROP_ENABLEFASTLOAD 設定為 VARIANT_TRUE。 在資料來源上設定該屬性後，取用者會建立 SQLOLEDB 工作階段。 新的工作階段可以讓取用者存取 `IRowsetFastLoad`。  
   
- 完整的範例會示範使用 `IRowsetFastLoad` 將記錄大量複製到資料表中。 在這個範例中，10 筆記錄會加入至資料表 **IRFLTable**。 您必須在資料庫中建立資料表 **IRFLTable**。  
+ 完整的範例會示範使用 `IRowsetFastLoad` 將記錄大量複製到資料表中。 在這個範例中，10 筆記錄會加入至資料表 **IRFLTable**。 您必須在資料庫中建立資料表**IRFLTable** 。  
   
  此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>若要大量複製資料到 SQL Server 資料表中  
   

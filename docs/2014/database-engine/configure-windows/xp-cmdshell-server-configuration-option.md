@@ -15,13 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f4ab373c9827adff6e0138a81b5eaa57d1c4414
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755174"
 ---
-# <a name="xpcmdshell-server-configuration-option"></a>xp_cmdshell 伺服器組態選項
+# <a name="xp_cmdshell-server-configuration-option"></a>xp_cmdshell 伺服器組態選項
   **xp_cmdshell** 選項是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 伺服器組態選項，可讓系統管理員控制 **xp_cmdshell** 擴充預存程序是否可在系統上執行。 根據預設， **xp_cmdshell** 選項會在新安裝上停用，而且可以使用原則式管理或執行 **sp_configure** 系統預存程序來啟用，如下列程式碼範例所示：  
   
 ```  

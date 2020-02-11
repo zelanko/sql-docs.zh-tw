@@ -1,5 +1,5 @@
 ---
-title: 連接到一般檔案 (SSAS) |Microsoft Docs
+title: 連接到一般檔案（SSAS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087355"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>連接到一般檔案 (SSAS)
-  [資料表匯入精靈]  的這個頁面可讓您連接到一般檔案 (.txt)、Tab 分隔的檔案 (.tab) 或逗號分隔的檔案 (.csv)。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]** 。  
+  [資料表匯入精靈]**** 的這個頁面可讓您連接到一般檔案 (.txt)、Tab 分隔的檔案 (.tab) 或逗號分隔的檔案 (.csv)。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
   
  若要連接至一般檔案，您必須先在電腦上安裝適當的 ACE 提供者。 如需詳細資訊，請參閱[支援的資料來源 &#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66087355"
  **瀏覽**  
  導覽至可以使用檔案的位置。  
   
- **Column Separator**  
+ **資料行分隔符號**  
  從可用資料行分隔符號的清單中選取。 請選擇不太可能會在文字中出現的分隔符號。  
   
 |值|描述|  
@@ -52,7 +52,7 @@ ms.locfileid: "66087355"
  **進階**  
  指定一般檔案的編碼方式和地區設定選項。  
   
- **第一個資料列做為資料行的標頭**  
+ **使用第一個資料列做為資料行標頭**  
  指定是否要使用第一個資料列做為目的地資料表的資料行標頭。  
   
  **資料預覽**  
@@ -64,7 +64,7 @@ ms.locfileid: "66087355"
 |選項|描述|  
 |------------|-----------------|  
 |**資料行標頭中的核取方塊**|選取核取方塊可將資料行納入資料匯入作業。 清除核取方塊可從資料匯入作業排除資料行。|  
-|**資料行標頭中的向下箭頭按鈕**|排序及篩選資料行中的資料。|  
+|**資料行標頭中的向下箭號按鈕**|排序及篩選資料行中的資料。|  
   
  **清除資料列篩選**  
  移除已經套用到資料行中資料的所有篩選。  

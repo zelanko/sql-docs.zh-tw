@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 936f037852f39f24690e1cb9af3f63a2cfa2a613
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72781825"
 ---
 # <a name="using-table-and-index-partitioning"></a>使用資料表和索引資料分割
@@ -28,12 +28,13 @@ ms.locfileid: "72781825"
 ## <a name="index-and-table-partitioning"></a>索引和資料表資料分割  
  此功能可以讓索引和資料表資料散佈到資料分割中的多個檔案群組。 資料分割函數會定義資料表的資料列或索引如何依據某些資料行 (稱為分割資料行) 的值對應到資料分割集。 資料分割配置則會將資料分割函數所指定的每個資料分割都對應到檔案群組。 如此您就可以開發出封存策略，讓資料表可以擴充到檔案群組，並進而擴充到實體裝置。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database> 物件包含表示所實作之資料分割函數的 <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> 物件集合，以及描述資料如何對應到檔案群組的 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 物件集合。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Database> 物件包含表示所實作之資料分割函數的 <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> 物件集合，以及描述資料如何對應到檔案群組的 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 物件集合。  
   
  每個 <xref:Microsoft.SqlServer.Management.Smo.Table> 和 <xref:Microsoft.SqlServer.Management.Smo.Index> 物件都會在 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 屬性中指定所使用的資料分割配置，並在 <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection> 中指定資料行。  
   
 ## <a name="example"></a>範例  
- 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 VISUAL BASIC SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)和[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 VISUAL BASIC SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)和[在 Visual Studio .Net 中建立 VISUAL C&#35; SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-basic"></a>在 Visual Basic 中為資料表設定資料分割配置  
  此程式碼範例顯示如何為 `TransactionHistory` 範例資料庫中的 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 資料表建立資料分割函數和資料分割配置。 這些資料分割會以日期區分，用意在於將舊記錄區隔到 `TransactionHistoryArchive` 資料表中。  
@@ -134,5 +135,5 @@ $ps.FileGroups.Add("Fourth")
 $ps.Create()  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料分割資料表和索引](../../partitions/partitioned-tables-and-indexes.md)  

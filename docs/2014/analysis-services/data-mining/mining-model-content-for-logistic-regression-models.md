@@ -1,5 +1,5 @@
 ---
-title: 羅吉斯迴歸模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft Docs
+title: 羅吉斯回歸模型的採礦模型內容（Analysis Services 資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083617"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>羅吉斯迴歸模型的採礦模型內容 (Analysis Services - 資料採礦)
-  本主題描述使用 Microsoft 羅吉斯迴歸演算法的模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
+  本主題描述使用 Microsoft 羅吉斯迴歸演算法的模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-logistic-regression-model"></a>了解羅吉斯迴歸模型的結構  
  羅吉斯迴歸模型是使用 Microsoft 類神經網路演算法建立的，其參數會強迫模型刪除隱藏的節點。 因此，羅吉斯迴歸模型的完整結構幾乎與類神經網路的結構相同：每個模型都有代表模型及其中繼資料的單一父節點，以及一個特殊的臨界統計資料節點 (NODE_TYPE = 24)，提供模型中所使用之輸入的名數性統計資料。  
@@ -31,7 +31,7 @@ ms.locfileid: "66083617"
   
  不過，在羅吉斯迴歸模型中，代表隱藏層的節點是空的，而且沒有子系。 因此，此模型包含代表個別輸出 (NODE_TYPE = 23) 與個別輸入 (NODE_TYPE = 21) 的節點，但是不包含個別的隱藏節點。  
   
- ![內容，羅吉斯迴歸模型的結構](../media/skt-modelcontentstructure-logregc.gif "的羅吉斯迴歸模型內容結構")  
+ ![羅吉斯迴歸模型的模型內容結構](../media/skt-modelcontentstructure-logregc.gif "羅吉斯迴歸模型的模型內容結構")  
   
  根據預設，羅吉斯迴歸模型顯示在 **[Microsoft 類神經網路檢視器]** 中。 您可以利用這個自訂的檢視器，篩選輸入屬性及其值，並以圖形方式查看這些屬性和值如何影響輸出。 檢視器中的工具提示會顯示與每個成對輸入和輸出值相關聯的機率與增益。 如需詳細資訊，請參閱 [使用 Microsoft 類神經網路檢視器瀏覽模型](browse-a-model-using-the-microsoft-neural-network-viewer.md)。  
   
@@ -53,12 +53,12 @@ ms.locfileid: "66083617"
   
 |節點|內容|  
 |----------|-------------|  
-|模型根|空白|  
-|臨界統計資料|空白|  
-|輸入層|空白|  
+|模型根|Blank|  
+|臨界統計資料|Blank|  
+|輸入層|Blank|  
 |輸入節點|輸入屬性名稱|  
-|hidden layer|空白|  
-|輸出層|空白|  
+|hidden layer|Blank|  
+|輸出層|Blank|  
 |輸出節點|輸出屬性名稱|  
   
  NODE_NAME  
@@ -109,12 +109,12 @@ ms.locfileid: "66083617"
   
 |節點|內容|  
 |----------|-------------|  
-|模型根|空白|  
-|臨界統計資料|空白|  
-|輸入層|空白|  
+|模型根|Blank|  
+|臨界統計資料|Blank|  
+|輸入層|Blank|  
 |輸入節點|輸入屬性名稱|  
-|hidden layer|空白|  
-|輸出層|空白|  
+|hidden layer|Blank|  
+|輸出層|Blank|  
 |輸出節點|如果輸出屬性是連續的，則包含輸出屬性的名稱。<br /><br /> 如果輸出屬性是離散或離散化的，則包含輸出屬性的名稱和值。|  
   
  NODE_RULE  
@@ -122,12 +122,12 @@ ms.locfileid: "66083617"
   
 |節點|內容|  
 |----------|-------------|  
-|模型根|空白|  
-|臨界統計資料|空白|  
-|輸入層|空白|  
+|模型根|Blank|  
+|臨界統計資料|Blank|  
+|輸入層|Blank|  
 |輸入節點|包含與 NODE_DESCRIPTION 資料行資訊相同的 XML 片段。|  
-|hidden layer|空白|  
-|輸出層|空白|  
+|hidden layer|Blank|  
+|輸出層|Blank|  
 |輸出節點|包含與 NODE_DESCRIPTION 資料行資訊相同的 XML 片段。|  
   
  MARGINAL_RULE  
@@ -153,12 +153,12 @@ ms.locfileid: "66083617"
  MSOLAP_MODEL_COLUMN  
  |節點|內容|  
 |----------|-------------|  
-|模型根|空白|  
-|臨界統計資料|空白|  
-|輸入層|空白|  
+|模型根|Blank|  
+|臨界統計資料|Blank|  
+|輸入層|Blank|  
 |輸入節點|輸入屬性名稱。|  
-|hidden layer|空白|  
-|輸出層|空白|  
+|hidden layer|Blank|  
+|輸出層|Blank|  
 |輸出節點|輸入屬性名稱。|  
   
  MSOLAP_NODE_SCORE  
@@ -167,7 +167,7 @@ ms.locfileid: "66083617"
  MSOLAP_NODE_SHORT_CAPTION  
  在羅吉斯迴歸模型中，永遠為空白。  
   
-##  <a name="bkmk_NodeIDs"></a> 使用節點名稱與識別碼  
+##  <a name="bkmk_NodeIDs"></a>使用節點名稱和識別碼  
  在羅吉斯迴歸模型中之節點的命名，可提供模型中節點間之關聯性的其他資訊。 下表顯示指派給每層節點之識別碼的慣例。  
   
 |節點類型|節點識別碼的慣例|  
@@ -184,9 +184,9 @@ ms.locfileid: "66083617"
  您可以使用這些識別碼，透過檢視輸出節點的 NODE_DISTRIBUTION 資料表，來判斷輸出屬性如何與特定輸入層屬性產生關聯。 該資料表中的每個資料列都包含一個識別碼，可指回特定的輸入屬性節點。 NODE_DISTRIBUTION 資料表也包含該輸入和輸出配對的係數。  
   
 ## <a name="see-also"></a>另請參閱  
- [Microsoft 羅吉斯迴歸演算法](microsoft-logistic-regression-algorithm.md)   
- [類神經網路模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [羅吉斯迴歸模型查詢範例](logistic-regression-model-query-examples.md)   
+ [Microsoft 羅吉斯回歸演算法](microsoft-logistic-regression-algorithm.md)   
+ [類神經網路模型的採礦模型內容 &#40;Analysis Services 資料採礦&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [羅吉斯回歸模型查詢範例](logistic-regression-model-query-examples.md)   
  [Microsoft 羅吉斯迴歸演算法技術參考](microsoft-logistic-regression-algorithm-technical-reference.md)  
   
   

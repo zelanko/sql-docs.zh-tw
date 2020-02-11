@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2fced98b5844105aa0f333a691cb747656112c10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768922"
 ---
 # <a name="creating-a-custom-connection-manager"></a>建立自訂連接管理員
@@ -43,7 +43,7 @@ ms.locfileid: "62768922"
  透過使用強式名稱金鑰檔案，將兩個專案都設定成簽署將在建立時期產生的組件。  
   
 ### <a name="applying-the-dtsconnection-attribute"></a>套用 DtsConnection 屬性  
- 將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 屬性套用至您已建立的類別，以便將它識別為連接管理員。 此屬性會提供連接管理員的名稱、描述和連接類型等設計階段資訊。 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A>和`Description`屬性會對應至**型別**並`Description`中顯示的資料行**加入 SSIS 連接管理員**] 對話方塊中，也就是顯示時在 [封裝設定連接[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]。  
+ 將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 屬性套用至您已建立的類別，以便將它識別為連接管理員。 此屬性會提供連接管理員的名稱、描述和連接類型等設計階段資訊。 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A>和`Description`屬性會對應至 [**加入 SSIS 連接管理員**] 對話方塊中顯示的**類型**和`Description`資料行，這會在中[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]為封裝設定連接時顯示。  
   
  使用 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> 屬性將連接管理員連結至其自訂使用者介面。 如需取得此屬性所需的公開金鑰權杖，可以使用 **sn.exe -t**，從要用於簽署使用者介面組件的金鑰組 (.snk) 檔案顯示公開金鑰權杖。  
   
@@ -73,7 +73,7 @@ ConnectionManagerBase
 ## <a name="building-deploying-and-debugging-a-custom-connection-manager"></a>建立、部署和偵錯自訂連接管理員  
  在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中建立、部署和偵錯自訂連接管理員的步驟，類似於其他類型的自訂物件所需的步驟。 如需詳細資訊，請參閱[建立、部署和偵錯自訂物件](../building-deploying-and-debugging-custom-objects.md)。  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [撰寫自訂連線管理員的程式碼](coding-a-custom-connection-manager.md)   

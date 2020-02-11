@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f898dbe10a9a7e17c1908a5bf25e86f5a57c7e
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782853"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>使用 AlwaysOn 原則檢視可用性群組的健全狀況 (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "72782853"
   
 ###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要 CONNECT、VIEW SERVER STATE 和 VIEW ANY DEFINITION 權限。  
   
 ##  <a name="SSMSProcedure"></a>使用 AlwaysOn 儀表板  
@@ -43,7 +43,7 @@ ms.locfileid: "72782853"
   
 3.  展開 **[AlwaysOn 高可用性]** 節點。  
   
-     以滑鼠右鍵按一下 [可用性群組] 節點，或展開此節點，然後以滑鼠右鍵按一下特定的可用性群組。  
+     以滑鼠右鍵按一下 [可用性群組]**** 節點，或展開此節點，然後以滑鼠右鍵按一下特定的可用性群組。  
   
 4.  選取 **[顯示儀表板]** 命令。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "72782853"
   
 1.  將目錄切換到 (`cd`) 裝載其中一個可用性複本的伺服器執行個體。 若要檢視可用性群組中所有可用性複本的相關資訊，請用於裝載主要複本的伺服器執行個體。  
   
-2.  使用下列指令程式：  
+2.  使用下列 Cmdlet：  
   
      `Test-SqlAvailabilityGroup`  
      透過評估 SQL Server 原則式管理 (PBM) 原則，評估可用性群組的健全狀況。 您必須擁有 CONNECT、VIEW SERVER STATE 和 VIEW ANY DEFINITION 權限，才能執行這個 Cmdlet。  
@@ -103,27 +103,27 @@ ms.locfileid: "72782853"
     ```  
   
     > [!NOTE]  
-    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱＜ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)＞。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
- **若要設定和使用 SQL Server PowerShell 提供者**  
+ **若要設定及使用 SQL Server PowerShell 提供者**  
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
--   [取得 SQL Server PowerShell 說明](../../../powershell/sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="RelatedContent"></a> 相關內容  
  **SQL Server AlwaysOn Team Blog-使用 PowerShell 監視 AlwaysOn 健全狀況：**  
   
--   [第 1 部：基本指令程式概觀](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
+-   [第1部分：基本 Cmdlet 總覽](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
   
--   [第 2 部：進階指令程式使用](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
+-   [第2部分： Advanced Cmdlet 使用方式](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
   
--   [第 3 部：簡單監控應用程式](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
+-   [第3部分：簡單的監視應用程式](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
   
--   [第 4 部：與 SQL Server Agent 整合](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
+-   [第4部分：與 SQL Server Agent 整合](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
- [可用性群組的管理 &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [管理可用性群組 &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
  [監視可用性群組 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
- [AlwaysOn 可用性群組（SQL Server）操作問題的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md) 
+ [AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則 (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md) 

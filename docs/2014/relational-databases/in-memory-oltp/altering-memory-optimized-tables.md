@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d1ae35d9dae03292edf31cd2b06acf97dc0db0c
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783235"
 ---
 # <a name="altering-memory-optimized-tables"></a>改變記憶體最佳化資料表
@@ -63,13 +63,13 @@ ms.locfileid: "72783235"
     select @permissions  
     ```  
   
-4.  建立資料表的副本，並且從原始資料表將資料複製到資料表副本。 您可以使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)]<sup>1</sup>來建立複本。  
+4.  建立資料表的副本，並且從原始資料表將資料複製到資料表副本。 您可以使用下列[!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>來建立複本。  
   
     ```sql  
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     如果有足夠的可用記憶體，`T_copy` 可以是記憶體優化資料表，讓資料複製更快。<sup>2</sup>  
+     如果有足夠的可用記憶體， `T_copy`可以是記憶體優化資料表，讓資料複製更快。<sup>2</sup>  
   
 5.  卸除參考原始資料表的結構描述繫結物件。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "72783235"
   
 10. 在 `T` 上啟動工作負載。  
   
- <sup>1</sup>請注意，在此範例中，`T_copy` 會保存到磁片中。 如果有 `T` 的備份可用，`T_copy` 可以是暫存或非持久資料表。  
+ <sup>1</sup>請注意`T_copy` ，在此範例中，會保存到磁片。 如果有 `T` 的備份可用，`T_copy` 可以是暫存或非持久資料表。  
   
- <sup>2</sup> `T_copy`必須有足夠的記憶體。 記憶體不會在 `DROP TABLE` 上立即釋放。 如果 `T_copy` 為記憶體最佳化，則必須有足夠的記憶體可供兩個額外的 `T` 副本使用。 如果 `T_copy` 是以磁碟為基礎的資料表，就只需要足夠的記憶體以進行額外一次 `T` 複製，因為卸除舊版 `T` 之後，需讓記憶體回收行程趕上進度。  
+ <sup>2</sup>必須有足夠的記憶體可`T_copy`供。 記憶體不會在 `DROP TABLE` 上立即釋放。 如果 `T_copy` 為記憶體最佳化，則必須有足夠的記憶體可供兩個額外的 `T` 副本使用。 如果 `T_copy` 是以磁碟為基礎的資料表，就只需要足夠的記憶體以進行額外一次 `T` 複製，因為卸除舊版 `T` 之後，需讓記憶體回收行程趕上進度。  
   
 ## <a name="changing-schema-powershell"></a>變更結構描述 (PowerShell)  
  下列 PowerShell 指令碼會藉由撰寫資料庫和相關權限的指令碼，以準備並產生結構描述變更。  
@@ -223,7 +223,7 @@ Write-Host ""
   
  下列 PowerShell 指令碼會執行前述範例中所撰寫的結構描述變更指令碼。 此指令碼會採用資料表做為引數，並執行為該資料表與相關預存程序產生的結構描述變更指令碼。  
   
- 使用方式： execute_schema_change. ps1 *server_name * * db_name`schema_name`table_name*  
+ 使用方式： execute_schema_change. ps1 *server_name * *`schema_name`db_name table_name*  
   
 ```powershell
 # stop execution once an error occurs  
@@ -293,5 +293,5 @@ Write-Host "--done--"
 Write-Host ""  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [Memory-Optimized Tables](memory-optimized-tables.md)  
+## <a name="see-also"></a>另請參閱  
+ [記憶體最佳化資料表](memory-optimized-tables.md)  

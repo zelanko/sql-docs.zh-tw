@@ -11,20 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d2ba009efa61cd4694ca0d008d8885ae7ae6c48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072810"
 ---
 # <a name="test-an-action"></a>測試動作
-  您可使用 Cube 設計師的瀏覽器檢視來測試動作。 您可從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]存取 Cube 設計師。 在建立動作之後，您必須先處理 Cube，才能測試動作。 如需詳細資訊，請參閱 <<c0> [ 多維度模型物件處理](processing-a-multidimensional-model-analysis-services.md)。  
+  您可使用 Cube 設計師的瀏覽器檢視來測試動作。 您可從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]存取 Cube 設計師。 在建立動作之後，您必須先處理 Cube，才能測試動作。 如需詳細資訊，請參閱多[維度模型物件處理](processing-a-multidimensional-model-analysis-services.md)。  
   
 ### <a name="to-test-an-action"></a>測試動作  
   
-1.  開啟含有您要測試之動作的 Cube，然後在 **[檢視]** 底下，按一下 **[瀏覽器]** 。  
+1.  開啟含有您要測試之動作的 Cube，然後在 **[檢視]** 底下，按一下 **[瀏覽器]**。  
   
-2.  將目標物件拖曳到 **[將資料行欄位放置到此處]** 或 **[將資料列欄位放置到此處]** 。  
+2.  將目標物件拖曳到 **[將資料行欄位放置到此處]** 或 **[將資料列欄位放置到此處]**。  
   
 3.  在檢視窗格中，以滑鼠右鍵按一下附加動作的物件 (例如資料格)。 動作名稱即會出現在內容功能表中。  
   

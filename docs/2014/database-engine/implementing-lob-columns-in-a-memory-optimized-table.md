@@ -1,5 +1,5 @@
 ---
-title: 記憶體最佳化資料表中實作 LOB 資料行 |Microsoft Docs
+title: 在記憶體優化資料表中執行 LOB 資料行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778919"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>在記憶體最佳化資料表中實作 LOB 資料行
-  記憶體最佳化的資料表沒有同資料列或大型物件 (LOB) 儲存體 (這項限制已移除，在 SQL Server 2016 及更新版本-請參閱[支援記憶體內部 OLTP 的資料類型](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md))，以及資料列大小限制為 8060 個位元組。 儲存大型二進位或字元字串值可透過下列兩種方式完成：  
+  記憶體優化資料表沒有資料列或大型物件（LOB）儲存體（SQL Server 2016 和更新版本中已移除這項限制-請參閱支援的[記憶體內部 OLTP 資料類型](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)），且資料列大小限制為8060個位元組。 儲存大型二進位或字元字串值可透過下列兩種方式完成：  
   
 -   將 LOB 值分割成多個資料列。  
   

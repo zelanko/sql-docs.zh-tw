@@ -11,24 +11,25 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd865b3bf80c930fe2bb8e23f5ea807717f2b1d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092044"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>SQL Server 2014 Upgrade Advisor
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor 會分析已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的組態，然後產生問題的報表，其中列出您必須解決才能確保升級成功的問題。  
   
- 取得可轉散發套件資料夾中 Upgrade Advisor 安裝檔案 (sqlua.msi) 的安裝媒體，或做為一部分的 [SQL 2014 功能套件下載](https://www.microsoft.com/download/details.aspx?id=42295)。  
+ 取得可轉散發套件資料夾中 Upgrade Advisor 安裝檔案 (sqlua.msi) 的安裝媒體，或當成 [SQL 2014 功能套件下載](https://www.microsoft.com/download/details.aspx?id=42295) 的一部分。  
   
 |主題|描述|  
 |-----------|-----------------|  
-|[安裝升級建議程式](../../../2014/sql-server/install/installing-upgrade-advisor.md)|說明安裝 Upgrade Advisor 的不同方式。|  
-|[使用升級建議程式](../../../2014/sql-server/install/working-with-upgrade-advisor.md)|提供 Upgrade Advisor 功能的概觀、有關如何安裝和使用 Upgrade Advisor 的資訊，以及如何使用 Upgrade Advisor 報表。|  
+|[安裝 Upgrade Advisor](../../../2014/sql-server/install/installing-upgrade-advisor.md)|說明安裝 Upgrade Advisor 的不同方式。|  
+|[使用 Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)|提供 Upgrade Advisor 功能的概觀、有關如何安裝和使用 Upgrade Advisor 的資訊，以及如何使用 Upgrade Advisor 報表。|  
 |[解決升級問題](../../../2014/sql-server/install/resolving-upgrade-issues.md)|針對有關升級的可偵測和無法偵測問題，提供說明和更正動作。|  
   
 ## <a name="see-also"></a>另請參閱  
- [升級為 SQL Server 2014 使用安裝精靈&#40;安裝程式&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [使用安裝精靈 &#40;安裝程式升級至 SQL Server 2014&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755329"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>將用戶端連接至資料庫鏡像工作階段 (SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "62755329"
   
  下圖說明用戶端連接到名為 **Db_1**之鏡像資料庫的初始夥伴 **Partner_A**。 此圖將顯示用戶端提供的初始夥伴名稱可正確識別目前主體伺服器 **Partner_A**。 初始連線嘗試成功，而且資料存取提供者將鏡像伺服器的名稱 (目前是 **Partner_B**) 當作容錯移轉夥伴名稱儲存在本機快取中。 最後，用戶端連接到 **Db_1** 資料庫的主體複本。  
   
- ![如果初始夥伴為主體則連接用戶端](../media/dbm-initial-connection.gif "如果初始夥伴為主體則連接用戶端")  
+ ![初始夥伴為主體時的用戶端連線](../media/dbm-initial-connection.gif "初始夥伴為主體時的用戶端連線")  
   
  例如，初始連接嘗試可能會由於網路錯誤或非使用中的伺服器執行個體而失敗。 由於初始夥伴無法使用，資料存取提供者若嘗試連接到容錯移轉夥伴，則用戶端必須在連接字串中提供容錯移轉夥伴名稱。  
   
@@ -89,7 +89,7 @@ Network=dbnmpntw;
   
  `Server=Partner_A;`  
   
- 中的多個  
+ 或  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -98,7 +98,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  如果連接字串指定了具名執行個體的名稱而非通訊埠，SQL Server Browser 查詢就是必要項目。  
   
- 若要指定 IP 位址和連接埠`Server`屬性會採用下列格式， `Server=` *< p 位址 >* `,` *\<連接埠 >* ，例如：  
+ 若要指定 IP 位址和埠， `Server`屬性會採用下列格式， `Server=` *<ip_address>* `,` * \<埠>*，例如：  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -118,7 +118,7 @@ Server=123.34.45.56,4724;
 >  此字串省略了驗證資訊。  
   
 > [!IMPORTANT]  
->  統合通訊協定前置詞和`Server`屬性 (`Server=tcp:` *\<伺服器名稱 >* ) 與不相容**網路**屬性，並指定中的通訊協定這兩個位置可能會導致錯誤。 因此，我們建議連接字串，指定通訊協定使用**網路**屬性，指定只有中的伺服器名稱`Server`屬性 (`"Network=dbmssocn; Server=` *\<servername>* `"`)。  
+>  將通訊協定前置詞與`Server`屬性（`Server=tcp:`*\<servername>*）結合，與**Network**屬性不相容，而且在兩個位置指定通訊協定可能會導致錯誤。 因此，我們建議連接字串使用**Network**屬性來指定`Server`通訊協定，並在屬性中僅指定伺服器名稱（`"Network=dbmssocn; Server=`*\<servername>* `"`）。  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner 屬性  
  除了初始夥伴名稱以外，用戶端也可以指定容錯移轉夥伴名稱 (應該可識別目前的鏡像伺服器執行個體)。 容錯移轉夥伴是由 Failover Partner 屬性的其中一個關鍵字指定的。 這個屬性的關鍵字會因您所使用的 API 而不同。 下表將列出這些關鍵字：  
@@ -170,9 +170,9 @@ Server=123.34.45.56,4724;
   
  其中 *PreviousRetryTime* 最初是 0。  
   
- 例如，如果使用預設登入逾時期限 15 秒， *LoginTimeout* *= 15*。 在此情況下，前三個重試回合中分配的重試時間如下：  
+ 例如，如果使用預設登入逾時期限 15 秒，*LoginTimeout* *= 15*。 在此情況下，前三個重試回合中分配的重試時間如下：  
   
-|捨入|*RetryTime* 計算|每次嘗試的重試時間|  
+|Round|*RetryTime* 計算|每次嘗試的重試時間|  
 |-----------|-----------------------------|----------------------------|  
 |1|0 **+(** 0.08 **&#42;** 15 **)**|1.2 秒|  
 |2|1.2 **+(** 0.08 **&#42;** 15 **)**|2.4 秒|  

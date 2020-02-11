@@ -13,18 +13,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 487ced9f103fd10a581841595111f01a5710bd15
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952078"
 ---
 # <a name="ip-address-restriction-detected-upgrade-advisor"></a>偵測到 IP 位址限制 (Upgrade Advisor)
-  Upgrade Advisor 在主控報表伺服器或報表管理員虛擬目錄的 IIS 網站上偵測到一個或多個 IP 位址限制。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不會提供 IP 位址限制的原生支援。  
+  Upgrade Advisor 在主控報表伺服器或報表管理員虛擬目錄的 IIS 網站上偵測到一個或多個 IP 位址限制。 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不會提供 IP 位址限制的原生支援。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]自有.|  
   
 ## <a name="component"></a>元件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
@@ -36,6 +37,6 @@ ms.locfileid: "71952078"
  升級之後，請使用 ISA Server、防火牆軟體或其他解決方案來允許或排除特定 IP 位址到報表伺服器的要求。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 升級問題&#40;upgrade Advisor&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [&#40;Upgrade Advisor Reporting Services 升級問題&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

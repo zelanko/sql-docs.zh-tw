@@ -1,5 +1,5 @@
 ---
-title: 處理結果使用說明主題 (ODBC) |Microsoft Docs
+title: 處理結果的使用說明主題（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: acd65a4dfc708c88dd30b6d2e15b189c0d340849
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780793"
 ---
 # <a name="processing-results-how-to-topics-odbc"></a>處理結果使用說明主題 (ODBC)
-  ODBC 應用程式中處理結果牽涉到先決定結果集的特性，然後將資料擷取到程式變數，使用其中一種[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)或是[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
+  在 ODBC 應用程式中處理結果時，必須先決定結果集的特性，然後使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)或[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)，將資料抓取到程式變數中。  
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [擷取結果集資訊&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)  
+-   [&#40;ODBC&#41;中取出結果集資訊](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)  
   
--   [處理結果&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)  
+-   [&#40;ODBC&#41;處理結果](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC 的使用說明主題](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  

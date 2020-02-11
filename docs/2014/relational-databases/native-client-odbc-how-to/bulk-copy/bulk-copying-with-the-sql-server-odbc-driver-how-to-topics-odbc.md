@@ -14,30 +14,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcc35614e156301efa5892d59a09156c189e0fac
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688874"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>利用 SQL Server ODBC 驅動程式進行大量複製的使用說明主題 (ODBC)
   與 Microsoft SQL Server 2005 搭配使用時，SQL Server ODBC 驅動程式支援 DB-LIBRARY API 所支援的相同大量複製函數。  
   
- 如需從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 開始大量複製的重大變更相關資訊，請參閱[執行大量複製&#40;作業&#41;ODBC](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
+ 如需從開始大量複製的重大變更相關資訊[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，請參閱[&#40;ODBC&#41;執行大量複製作業](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [不使用格式檔案的大量&#40;複製 ODBC&#41;](bulk-copy-without-a-format-file-odbc.md)  
+-   [不使用格式檔案進行大量複製 &#40;ODBC&#41;](bulk-copy-without-a-format-file-odbc.md)  
   
--   [大量複製 SELECT 結果集&#40;ODBC&#41;](bulk-copy-a-select-result-set-odbc.md)  
+-   [&#40;ODBC&#41;大量複製 SELECT 結果集](bulk-copy-a-select-result-set-odbc.md)  
   
--   [建立大量複製格式檔案&#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md)  
+-   [建立 &#40;ODBC&#41;的大量複製格式檔案](create-a-bulk-copy-format-file-odbc.md)  
   
--   [使用格式檔案&#40;ODBC 進行大量複製&#41;](bulk-copy-by-using-a-format-file-odbc.md)  
+-   [使用格式檔案進行大量複製 &#40;ODBC&#41;](bulk-copy-by-using-a-format-file-odbc.md)  
   
--   [從程式變數&#40;ODBC 大量資料複製&#41;](bulk-copy-data-from-program-variables-odbc.md)  
+-   [從程式變數大量資料複製 &#40;ODBC&#41;](bulk-copy-data-from-program-variables-odbc.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 的使用說明主題](../odbc-how-to-topics.md)  
   
   

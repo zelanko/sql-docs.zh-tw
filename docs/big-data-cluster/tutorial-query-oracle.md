@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b880e3758481e5b061221bd2753b5a26f01ed856
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71708360"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>教學課程：查詢 SQL Server 巨量資料叢集中的 Oracle
@@ -22,7 +22,7 @@ ms.locfileid: "71708360"
 
 本教學課程示範如何查詢 SQL Server 2019 巨量資料叢集中的 Oracle 資料。 若要執行本教學課程，您要能夠存取 Oracle 伺服器。 如果您無法存取，本教學課程可讓您了解 SQL Server 巨量資料叢集中，外部資料來源的資料虛擬化運作方式。
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您會了解如何：
 
 > [!div class="checklist"]
 > * 為外部 Oracle 資料庫中的資料建立外部資料表。

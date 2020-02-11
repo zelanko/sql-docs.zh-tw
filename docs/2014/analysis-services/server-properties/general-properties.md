@@ -39,16 +39,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069024"
 ---
 # <a name="general-properties"></a>一般屬性
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器屬性。 本主題記載 msmdsrv.ini 檔案中，不包含在特定章節中的伺服器屬性，例如 Security、Network 或 ThreadPool。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  
   
- **適用於：** 多維度與表格式伺服器模式，除非另有指示  
+ **適用物件：** 多維度和表格式伺服器模式（除非另有指示）  
   
 ## <a name="non-specific-category"></a>非特定類別目錄  
  `AdminTimeout`  
@@ -60,7 +61,7 @@ ms.locfileid: "66069024"
  字串屬性，以分隔清單指定在 Analysis Services 對話方塊中可儲存、開啟和尋找檔案時可瀏覽的資料夾。 Analysis Services 服務帳戶對您加入至清單中的所有資料夾，必須有讀取和寫入權限。  
   
  `BackupDir`  
- 字串屬性所識別的名稱。 根據預設，儲存備份檔案的目錄，萬一不指定路徑，Backup 命令的一部分。  
+ 字串屬性，識別預設儲存備份檔案的目錄名稱，在此事件中，不會將路徑指定為 Backup 命令的一部分。  
   
  `CollationName`  
  此為識別伺服器定序的字串屬性。 如需詳細資訊，請參閱[語言和定序 &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)。  
@@ -76,12 +77,14 @@ ms.locfileid: "66069024"
  `CoordinatorCancelCount`  
  此為帶正負號的 32 位元整數屬性，定義伺服器應檢查取消事件是否發生的頻率 (依據內部反覆運算計數)。 降低此數字就能以更高的頻率檢查取消事件，但要耗用一般效能。  
   
- `CoordinatorCancelCount` 在表格式伺服器模式下將會遭到忽略。  
+ 
+  `CoordinatorCancelCount` 在表格式伺服器模式下將會遭到忽略。  
   
  `CoordinatorExecutionMode`  
  此為帶正負號的 32 位元整數屬性，定義伺服器會嘗試的最大平行作業數目，包含處理和查詢作業。 零 (0) 表示伺服器會依據內部演算法決定。 正數表示總計的最大作業數目。 具有反轉符號的負數，表示每個處理器的最大作業數目。  
   
- `CoordinatorExecutionMode` 在表格式伺服器模式下將會遭到忽略。  
+ 
+  `CoordinatorExecutionMode` 在表格式伺服器模式下將會遭到忽略。  
   
  此屬性的預設值為 -4，表示伺服器限制為每個處理器 4 個平行作業。 如需有關此屬性的詳細資訊，請參閱 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
@@ -95,7 +98,7 @@ ms.locfileid: "66069024"
  此為字串屬性，可識別儲存資料的目錄名稱。  
   
  `DeploymentMode`  
- 判斷 Analysis Services 伺服器執行個體的運作內容。 這個屬性被指在對話方塊、 訊息和文件中的 「 伺服器模式 」。 根據您在安裝 Analysis Services 時所選取的伺服器模式，此屬性是由 SQL Server 安裝程式所設定。 此屬性應該僅被視為內部屬性，永遠使用安裝程式所指定的值。  
+ 判斷 Analysis Services 伺服器執行個體的運作內容。 在對話方塊、訊息和檔中，此屬性稱為「伺服器模式」。 根據您在安裝 Analysis Services 時所選取的伺服器模式，此屬性是由 SQL Server 安裝程式所設定。 此屬性應該僅被視為內部屬性，永遠使用安裝程式所指定的值。  
   
  這個屬性的有效值包括：  
   
@@ -131,7 +134,8 @@ ms.locfileid: "66069024"
  如需有關此屬性的詳細資訊，請參閱 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
 > [!IMPORTANT]  
->  `ForceCommitTimeout` 適用於 Cube 處理命令和回寫作業。  
+>  
+  `ForceCommitTimeout` 適用於 Cube 處理命令和回寫作業。  
   
  `IdleConnectionTimeout`  
  整數屬性，指定處於非使用狀態之連接的逾時 (以秒為單位)。  
@@ -153,7 +157,7 @@ ms.locfileid: "66069024"
  此為字串屬性，識別包含伺服器記錄檔的目錄名稱。 這個屬性只適用於當記錄會儲存到磁碟檔案，而非資料庫資料表時 (預設行為)。  
   
  `MaxIdleSessionTimeout`  
- 整數屬性，定義最長閒置工作階段逾時 (以秒為單位)。 預設值為零 (0)，表示工作階段永遠不會逾時。但是，如果伺服器受到資源的條件約束，閒置工作階段仍然會被移除。  
+ 整數屬性，定義最長閒置工作階段逾時 (以秒為單位)。 預設值為零（0），表示會話永遠不會超時。不過，如果伺服器是在資源限制之下，則仍會移除閒置會話。  
   
  `MinIdleSessionTimeout`  
  整數屬性，定義最短閒置工作階段逾時 (以秒為單位)。 預設值是 2700 秒。 此時間過期之後，就允許伺服器結束閒置工作階段，但只有需要記憶體時才會如此做。  
@@ -161,7 +165,7 @@ ms.locfileid: "66069024"
  `Port`  
  整數屬性，定義伺服器接聽用戶端連接的通訊埠編號。 如果沒有設定，伺服器會動態地找到第一個未使用的通訊埠。  
   
- 此屬性的預設值為零 (0)，因而會預設為通訊埠 2383。 如需通訊埠組態的詳細資訊，請參閱＜ [設定 Windows 防火牆以允許 Analysis Services 存取](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)＞。  
+ 此屬性的預設值為零 (0)，因而會預設為通訊埠 2383。 如需通訊埠組態的詳細資訊，請參閱＜ [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)＞。  
   
  `ServerTimeout`  
  整數，定義查詢的逾時 (以秒為單位)。 預設值為 3600 秒 (或 60 分鐘)。 零 (0) 指定任何查詢都不會逾時。  
@@ -177,7 +181,7 @@ ms.locfileid: "66069024"
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 中設定伺服器屬性](server-properties-in-analysis-services.md)   
- [判斷 Analysis Services 執行個體的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [在 Analysis Services 中設定伺服器屬性](server-properties-in-analysis-services.md)   
+ [判斷 Analysis Services 實例的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

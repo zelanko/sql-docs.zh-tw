@@ -1,5 +1,5 @@
 ---
-title: 刪除關聯性 (SSAS 表格式) |Microsoft Docs
+title: 刪除關聯性（SSAS 表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: abe35e51764a7d16c49c8d15d9e2031e0cdabe05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067330"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>刪除關聯性 (SSAS 表格式)
@@ -37,7 +37,7 @@ ms.locfileid: "66067330"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後指向 **[模型檢視]**，再按一下 **[圖表檢視]**。  
   
-2.  以滑鼠右鍵按一下兩個資料表之間的關聯性線條，然後按一下 [刪除]。  
+2.  以滑鼠右鍵按一下兩個資料表之間的關聯性線條，然後按一下 [刪除]****。  
   
 #### <a name="to-delete-a-relationship-by-using-the-manage-relationships-dialog-box"></a>若要使用 [管理關聯性] 對話方塊刪除關聯性  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66067330"
 4.  按一下 **[管理關聯性]** 對話方塊中的 **[關閉]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [關聯性 &#40;SSAS 表格式&#41;](relationships-ssas-tabular.md)   
- [建立兩個資料表之間的關聯性 &#40;SSAS 表格式&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
+ [SSAS 表格式&#41;的關聯性 &#40;](relationships-ssas-tabular.md)   
+ [在 &#40;SSAS 表格式&#41;的兩個數據表之間建立關聯性](create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

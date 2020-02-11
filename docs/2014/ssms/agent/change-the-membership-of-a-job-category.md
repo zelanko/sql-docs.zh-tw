@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5ed0e086f5743f6759ed8b317750eefcb377180
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782793"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>變更作業類別的成員資格
@@ -31,9 +31,9 @@ ms.locfileid: "72782793"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要使用下列項目變更作業類別目錄的成員資格：**  
+-   **若要變更作業類別目錄的成員資格，請使用：**  
   
      [Transact-SQL](#SSMS)  
   
@@ -54,15 +54,15 @@ ms.locfileid: "72782793"
   
 2.  按一下加號展開 **[SQL Server Agent]** 。  
   
-3.  以滑鼠右鍵按一下 [作業] 資料夾，然後選取 [管理作業類別目錄]。  
+3.  以滑鼠右鍵按一下 [作業]**** 資料夾，然後選取 [管理作業類別目錄]****。  
   
-4.  在 [管理作業類別目錄 <伺服器名稱>] 對話方塊中，選取要編輯的作業類別目錄，然後按一下 [檢視作業]。  
+4.  在 [**管理作業類別目錄**_server_name_ ] 對話方塊中，選取您要編輯的作業類別目錄，然後按一下 [**查看作業**]。  
   
 5.  選取 **[顯示所有作業]** 核取方塊。  
   
 6.  若要將作業加入至類別目錄，在主要方格中選取該作業所對應之 **[選取]** 資料行中的核取方塊。 若要移除類別目錄中的作業，請清除該方塊。 完成後，請按一下 **[確定]** 。  
   
-7.  關閉 [管理作業類別目錄 <伺服器名稱>] 對話方塊。  
+7.  關閉 [**管理作業類別目錄**_server_name_ ] 對話方塊。  
   
 ##  <a name="TSQL"></a> 使用 Transact-SQL  
   
@@ -72,7 +72,7 @@ ms.locfileid: "72782793"
   
 2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```sql
     -- adding a new job category to the "NightlyBackups" job  

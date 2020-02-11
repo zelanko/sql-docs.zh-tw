@@ -1,5 +1,5 @@
 ---
-title: 管理模型 （SQL Server 資料採礦增益集） |Microsoft Docs
+title: 管理模型（SQL Server 資料採礦增益集） |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -18,19 +18,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d5f0619e7291cc08b1750c0b35f9639cb7a9872
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078043"
 ---
 # <a name="manage-models-sql-server-data-mining-add-ins"></a>管理模型 (SQL Server 資料採礦增益集)
-  ![管理模型 按鈕，資料採礦功能區](media/dmc-manage.gif "管理模型] 按鈕，[資料採礦功能區")  
+  ![資料採礦功能區中的管理模型按鈕](media/dmc-manage.gif "資料採礦功能區中的管理模型按鈕")  
   
- **管理模型**對話方塊可讓您與現有的採礦模型和採礦結構儲存在互動[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]目前連接的伺服器。 您也可以檢視及管理目前工作階段期間已建立的暫時性結構和模型。 如果您已使用工作階段模型和伺服器上儲存的模型，對話方塊中會顯示這兩種模型。  
+ [**管理模型**] 對話方塊可讓您與目前所連接之[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]伺服器中儲存的現有「採礦模型」和「採礦結構」進行互動。 您也可以檢視及管理目前工作階段期間已建立的暫時性結構和模型。 如果您已使用工作階段模型和伺服器上儲存的模型，對話方塊中會顯示這兩種模型。  
   
 ## <a name="using-the-manage-models-wizard"></a>使用管理模型精靈  
- 當您按一下 **管理模型**，則**管理採礦結構和模型**對話方塊隨即開啟，提供下列功能來管理現有的資料採礦模型和結構的存取權：  
+ 當您按一下 [**管理模型**] 時，會開啟 [**管理採礦結構和模型**] 對話方塊，提供下列功能的存取權來管理現有的資料採礦模型和結構：  
   
 -   重新命名採礦模型或結構  
   
@@ -43,15 +43,15 @@ ms.locfileid: "66078043"
 -   匯出或匯入採礦模型或結構  
   
 > [!NOTE]  
->  您無法使用這個對話方塊建立查詢或模型。 若要建立新的採礦結構，使用其中一種 Excel，或使用資料採礦用戶端所提供的精靈**資料採礦進階查詢編輯器**。  
+>  您無法使用這個對話方塊建立查詢或模型。 若要建立新的採礦結構，請使用適用于 Excel 的資料採礦用戶端中提供的其中一個嚮導，或使用**資料採礦查詢進階編輯器**。  
   
 ### <a name="requirements"></a>需求  
- 若要管理資料採礦模型，您必須先建立與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。 即使您使用儲存在暫存檔中的工作階段模型，還是需要連接。 如需如何建立或變更連線的詳細資訊，請參閱[連接至來源的資料&#40;適用於 Excel 的資料採礦用戶端&#41;](connect-to-source-data-data-mining-client-for-excel.md)。  
+ 若要管理資料採礦模型，您必須先建立與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。 即使您使用儲存在暫存檔中的工作階段模型，還是需要連接。 如需有關如何建立或變更連接的詳細資訊，請參閱[連接到來源資料 &#40;適用于 Excel&#41;的資料採礦用戶端](connect-to-source-data-data-mining-client-for-excel.md)。  
   
- 如果您連接的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體沒有包含任何現有的資料採礦結構或資料採礦模型，您可以使用精靈或此增益集提供的其他工具來建立它們。 您也可以藉由建立新的模型**資料採礦進階查詢編輯器**。  
+ 如果您連接的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體沒有包含任何現有的資料採礦結構或資料採礦模型，您可以使用精靈或此增益集提供的其他工具來建立它們。 您也可以使用**資料採礦模型進階編輯器**建立新的模型。  
   
 ## <a name="see-also"></a>另請參閱  
- [記錄採礦模型&#40;資料採礦適用於 Excel 的增益集&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)   
- [部署及調整採礦模型&#40;資料採礦適用於 Excel 的增益集&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   
+ [記載 &#40;適用于 Excel 的資料採礦增益集&#41;的採礦模型](documenting-mining-models-data-mining-add-ins-for-excel.md)   
+ [&#40;適用于 Excel 的資料採礦增益集部署和調整採礦模型&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   
 
   

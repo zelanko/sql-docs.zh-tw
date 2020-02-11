@@ -1,5 +1,5 @@
 ---
-title: 建立工作階段範圍導出資料格 |Microsoft Docs
+title: 建立會話範圍匯出資料格 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4388ef278c0762184859162dc55f656aae1c9a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074432"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>建立工作階段範圍導出資料格
@@ -73,16 +73,17 @@ FOR String_Expression AS 'MDX_Expression'
    ( CellProperty_Identifier = Scalar_Expression )  
 ```  
   
- `String_Expression` 值包含正交、一維的 MDX 集合運算式的清單，其中的每一項都必須解析成下表列出集合的其中一個類別目錄  
+ 
+  `String_Expression` 值包含正交、一維的 MDX 集合運算式的清單，其中的每一項都必須解析成下表列出集合的其中一個類別目錄  
   
-|Category|描述|  
+|類別|描述|  
 |--------------|-----------------|  
 |空集合|解析成空集合的 MDX 命名集運算式。 在此情況下，導出資料格的範圍是整個 Cube。|  
 |單一成員集合|解析成單一成員集合的 MDX 命名集運算式。|  
-|單一層級成員|解析成單一層級成員的 MDX 命名集運算式。 舉例來說，這*Level_Expression*。`Members` MDX 函數。 若要包含導出的成員，請使用*Level_Expression*。`AllMembers` MDX 函數。<br /><br /> 如需詳細資訊，請參閱 [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx)。|  
-|下階集合|解析為指定成員之下階的 MDX 集合運算式。 舉例來說，這`Descendants`(*Member_Expression*， *Level_Expression*， *Desc_Flag*) MDX 函數。<br /><br /> 如需詳細資訊，請參閱 [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx)。|  
+|單一層級成員|解析成單一層級成員的 MDX 命名集運算式。 *Level_Expression*是其中一個範例。`Members` MDX 函數。 若要包含匯出成員，請使用*Level_Expression*。`AllMembers` MDX 函數。<br /><br /> 如需詳細資訊，請參閱 [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx)。|  
+|下階集合|解析為指定成員之下階的 MDX 集合運算式。 其中一個範例`Descendants`是（*Member_Expression*、 *Level_Expression*、 *Desc_Flag*） MDX 函數。<br /><br /> 如需詳細資訊，請參閱 [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [在 MDX 中建立資料格計算 &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
+ [在 mdx 中建立資料格計算 &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   
